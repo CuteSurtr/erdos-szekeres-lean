@@ -28,6 +28,19 @@ structure CapFrame where
 def CapFrame.spike (F : CapFrame) : Set Point :=
   {p | orient F.a F.b p < 0 ∧ 0 < orient F.b F.c p ∧ orient F.c F.d p < 0}
 
+noncomputable def CapFrame.region (F : CapFrame) (S : Finset Point) : Finset Point := by
+  classical
+  exact S.filter (fun p => p ∈ F.spike)
+
+@[simp] theorem CapFrame.mem_region (F : CapFrame) (S : Finset Point) (p : Point) :
+    p ∈ F.region S ↔ p ∈ S ∧ p ∈ F.spike := by
+  classical
+  simp [region]
+
+theorem CapFrame.region_subset (F : CapFrame) (S : Finset Point) : F.region S ⊆ S := by
+  intro p hp
+  exact (F.mem_region S p).mp hp |>.1
+
 /-- The three remaining signs for inserting p between b and c in the polygon.
 These follow from determinant identities; they are not extra spike axioms. -/
 theorem CapFrame.spike_orientations (F : CapFrame) {p : Point} (hp : p ∈ F.spike) :

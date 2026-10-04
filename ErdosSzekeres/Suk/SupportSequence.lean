@@ -8,6 +8,13 @@ structure ClockwiseAnchors (m : ℕ) where
   point : Fin m → Point
   clockwise : ∀ i j k, i < j → j < k → orient (point i) (point j) (point k) < 0
 
+@[ext] theorem ClockwiseAnchors.ext {m : ℕ} {A B : ClockwiseAnchors m}
+    (h : A.point = B.point) : A = B := by
+  cases A
+  cases B
+  cases h
+  rfl
+
 /-- The four consecutive anchors around the ith support spike. -/
 def ClockwiseAnchors.frame {r : ℕ} (A : ClockwiseAnchors (r + 3)) (i : Fin r) :
     CapFrame where

@@ -11,7 +11,7 @@ here need not be empty: unselected points may lie inside them.
 
 Local validation: `lake build --wfail` passes, and all fifteen core Python tests
 pass (plus four optional Z3 tests locally). The principal geometric lemmas and rational-area bridge were inspected with
-`#print axioms`; CI also audits fifty-two geometric and combinatorial milestones. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
+`#print axioms`; CI also audits seventy-four geometric and combinatorial milestones. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
 The project contains no proof placeholders or additional axioms.
 
 ## Current contents
@@ -41,6 +41,11 @@ The project contains no proof placeholders or additional axioms.
   supporting edges, and nonadjacent caps glue with additive cardinality.
   `FiniteSupport.lean` combines both cases and Dilworth into one geometric
   theorem for a sufficiently populated horizontal support configuration.
+  The extraction bridge is now checked: cup/cap density, alternating anchors,
+  product counting, coarsening of support regions, reflection, and rotation.
+  `FiniteBound.lean` gives an unconditional geometric conclusion under explicit
+  integer inequalities. `IntegerParameters.lean` specializes it to a closed
+  exponential bound with cubic parameters (see `docs/SUK.md`).
   The full asymptotic theorem is a defined proof target, **not yet proved**.
 - `ErdosSzekeres/HMPT/Statement.lean`: precise targets for the final 2020
   coefficient and a strict improvement; these are propositions, not proved bounds.
@@ -102,10 +107,10 @@ five-point threshold. Neither experiment resolves an open case.
 
 ## Current milestone
 
-Fully formalize Suk's 2016 theorem, including the positive-fraction partition,
-support-region geometry, and explicit eventual estimates. See `docs/SUK.md` for
-proved dependencies and remaining obligations. The classical binomial bound is
-now checked for arbitrary real point sets, but is much weaker than Suk's bound.
+Fully formalize Suk's 2016 theorem. The finite geometric proof and a variant
+of the positive-fraction extraction are checked, with explicit exponential
+loss. The remaining bridge compares the integer parameter bound with Suk's
+eventual real exponent and floor convention. See `docs/SUK.md` for details.
 An original improvement must be compared against the final HMPT bound and later
 literature. No new geometric upper bound is claimed here.
 

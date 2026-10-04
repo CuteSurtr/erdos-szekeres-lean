@@ -102,26 +102,58 @@ represented by an axiom, `sorry`, or a theorem whose name disguises assumptions.
 - `Suk/ExtractionCounting.lean`: double counting gives an unconditional density
   bound for convex subsets using the classical theorem. In particular,
   C(N,k) ≤ (# convex k-subsets) C(4^k,k) when N ≥ 4^k and k ≥ 3.
+- `Suk/MonochromaticCounting.lean`, `Suk/HorizontalCounting.lean`, and
+  `Suk/OrderedCounting.lean`: the same double count supplies genuine cups and
+  caps of an x-ordered point set. Increasing enumeration preserves the exact
+  number of subsets, connecting this count to finite families of point sequences.
+- `Suk/AlternatingAnchors.lean` and `Suk/SupportFiber.lean`: the odd interior
+  vertices of a cap lie in support spikes of its even anchors. A fixed anchor
+  sequence supports at most N³ times the product of the interior spike sizes;
+  the N³ factor accounts for three endpoint vertices. Anchor sequences are
+  counted conservatively by N to the number of anchors.
+- `Suk/ProductSelection.lean`, `Suk/SupportCoarsening.lean`, and
+  `Suk/DenseCapExtraction.lean`: a large product forces sufficiently many rich
+  regions. Selecting fewer anchors preserves the required spike inclusions.
+  From a sufficiently dense cap family, the proof extracts k populated interior
+  support regions and k+3 anchors, without an assumed partition theorem.
+- `Suk/Reflection.lean` and `Suk/CoordinateNormalization.lean`: reflection
+  exchanges cups and caps while preserving x-order; rotation gives distinct
+  x-coordinates. Invertible linear maps preserve actual convex n-gons.
+- `Suk/FiniteDensityBound.lean` and `Suk/FiniteBound.lean`: the complete finite
+  proof for arbitrary real point sets in general position. The assumptions are
+  integer inequalities, not a supplied geometric support configuration.
+- `Suk/ExtractionEstimates.lean`, `Suk/ExponentialBound.lean`, and
+  `Suk/IntegerParameters.lean`: integer estimates yield the bound below. The
+  coarse extraction loss is 64(k+5) in the exponent. This is a horizontal
+  cup/cap variant of the Pór–Valtr argument; the literal 32k constant in Suk's
+  Theorem 2.4 has not been formalized.
 - `OrientationGeometry.lean`: determinants versus collinearity; exact rational
   general position transfers to real geometry.
 
 The cups-caps and Dilworth prerequisites reuse attributed CC0 source. See
 `THIRD_PARTY.md`; this work does not claim their proofs as original research.
 
-## Required work still outstanding
+## Checked finite bound and remaining asymptotic step
 
-1. Positive-fraction extraction with explicit exponential constants (Theorem 2.4),
-   especially alternating-anchor selection and support-region geometry. The
-   initial convex-subset counting step is proved; the geometric extraction is not.
-   Source: [Pór–Valtr (2002)](https://link.springer.com/content/pdf/10.1007/s00454-002-2894-1.pdf).
-2. Supply the clockwise anchor sequence from the global positive-fraction
-   extraction, including cup/cap symmetry. Local frames and adjacency now follow
-   from that sequence, including separation for the nonadjacent antichain case.
-3. Integer ceilings, floors and all eventual numerical inequalities; specialize
-   the checked finite support theorem and assemble the
-   unconditional geometric conclusion `Suk.Theorem2016`.
+`cubic_log_bound` proves that, for n ≥ 4, a ≥ 2, and n ≤ a³,
 
-The numerical HMPT experiments in `COUNTING.md` do not discharge these geometric
+```text
+2 ^ (n + a² + a² ceil(log₂(n+a²)) + 64(a(a+1)+5))
+```
+
+points in general position suffice for a convex n-gon. The integer logarithm
+is Lean's `Nat.clog 2 (n+a²)`. This statement has no unproved geometric premises.
+The proof uses k=a(a+1), r=t=a, K=b=a², and an alternating cap of 4k+14 vertices.
+The counting and coarsening approach is based on
+[Pór–Valtr (2002), §2](https://link.springer.com/content/pdf/10.1007/s00454-002-2894-1.pdf),
+with endpoint losses and horizontal symmetry checked explicitly.
+
+Still required: choose a near the real cube root of n, prove the eventual
+comparison of this integer exponent with n + 6 n^(2/3) log₂(n), and transfer the
+bound through the exact natural-floor convention in `Suk.Theorem2016`.
+The finite theorem alone is not a completed proof of that formal target.
+
+The numerical HMPT experiments in `COUNTING.md` do not discharge these remaining
 obligations. Full Suk is the primary milestone; a claimed new bound must also be
 compared against HMPT v3 and more recent literature, not only the 2016 exponent.
 

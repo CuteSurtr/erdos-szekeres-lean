@@ -33,6 +33,34 @@ private theorem supersets_card_le {α : Type*} [DecidableEq α]
       _ = (w \ u) ∪ u := by rw [he]
       _ = w := sdiff_union_of_subset huw
 
+/-- Density from a finite covering family. This form also counts cups and
+caps, so positive-fraction extraction can retain their horizontal ordering. -/
+theorem uniform_family_density {α : Type*} [DecidableEq α]
+    (s : Finset α) (F : Finset (Finset α)) (k m : ℕ)
+    (hkm : k ≤ m) (hm : m ≤ s.card)
+    (hF : ∀ u ∈ F, u ⊆ s ∧ u.card = k)
+    (hcover : ∀ v ∈ s.powersetCard m, ∃ u ∈ F, u ⊆ v) :
+    s.card.choose k ≤ F.card * m.choose k := by
+  classical
+  have hlo : ∀ v ∈ s.powersetCard m,
+      1 ≤ (F.bipartiteAbove (fun v u => u ⊆ v) v).card := by
+    intro v hv
+    obtain ⟨u, hu, huv⟩ := hcover v hv
+    exact Nat.succ_le_iff.mpr (card_pos.mpr ⟨u, (mem_bipartiteAbove _).mpr ⟨hu, huv⟩⟩)
+  have hhi : ∀ u ∈ F,
+      ((s.powersetCard m).bipartiteBelow (fun v u => u ⊆ v) u).card ≤
+        (s.card - k).choose (m - k) := by
+    intro u hu
+    simpa [bipartiteBelow, (hF u hu).2] using supersets_card_le s u m (hF u hu).1
+  have hcount : s.card.choose m ≤ F.card * (s.card - k).choose (m - k) := by
+    simpa only [card_powersetCard, mul_one] using
+      card_mul_le_card_mul (fun v u : Finset α => u ⊆ v) hlo hhi
+  have h := Nat.mul_le_mul_right (m.choose k) hcount
+  rw [Nat.choose_mul hm hkm] at h
+  apply le_of_mul_le_mul_right (a := (s.card - k).choose (m - k)) ?_
+    (Nat.choose_pos (Nat.sub_le_sub_right hm k))
+  simpa [mul_assoc, mul_left_comm, mul_comm] using h
+
 /-- Double counting the incidences between convex k-subsets and all m-subsets.
 This is the first counting step in positive-fraction extraction. -/
 theorem convex_subsets_count (s : Finset Point) (k m : ℕ)
