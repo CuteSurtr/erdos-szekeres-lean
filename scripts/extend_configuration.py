@@ -12,7 +12,7 @@ import hashlib
 from fractions import Fraction
 from itertools import combinations
 import json
-from math import comb, lcm
+from math import comb, gcd, lcm
 from pathlib import Path
 import time
 
@@ -21,6 +21,14 @@ from search import convex_subset, general_position, hull, largest_convex_subset
 
 def line(a, b):
     return (a[1] - b[1], b[0] - a[0], a[0] * b[1] - a[1] * b[0])
+
+
+def primitive_line(a, b):
+    coefficients = line(a, b)
+    divisor = gcd(*coefficients)
+    if not divisor:
+        raise ValueError("Distinct endpoints required")
+    return tuple(c // divisor for c in coefficients)
 
 
 def evaluate(coefficients, x, y, denominator=1):
@@ -33,12 +41,15 @@ def exactly_one_visible(polygon, point):
                for i, a in enumerate(polygon)) == 1
 
 
-def run(source, output, seconds=300, batch_size=128, replace_index=None, fast=False):
+def run(source, output, seconds=300, batch_size=128, replace_index=None, fast=False,
+        integer_move=False):
     import z3
     if output.exists():
         raise FileExistsError(output)
     if seconds < 1 or batch_size < 1:
         raise ValueError("Positive time and batch size required")
+    if integer_move and replace_index is None:
+        raise ValueError("Integer moves are only supported for point replacement")
     data = json.loads(source.read_text())
     points = [tuple(p) for p in data["coordinates"]]
     source_count = len(points)
@@ -55,16 +66,16 @@ def run(source, output, seconds=300, batch_size=128, replace_index=None, fast=Fa
         if not 0 <= replace_index < len(points):
             raise ValueError("Replacement index out of range")
         removed = points.pop(replace_index)
-    lines = {line(a, b) for a, b in combinations(points, 2)}
+    lines = {primitive_line(a, b) for a, b in combinations(points, 2)}
     polygons = []
     for subset in combinations(points, k - 1):
         polygon = hull(subset)
         if len(polygon) == k - 1:
-            edges = [line(a, polygon[(i + 1) % len(polygon)]) for i, a in enumerate(polygon)]
+            edges = [primitive_line(a, polygon[(i + 1) % len(polygon)]) for i, a in enumerate(polygon)]
             polygons.append(edges)
     print(f"Found {len(polygons)} convex {k-1}-gons; starting full-plane extension search", flush=True)
-    x, y = z3.Reals("new_x new_y")
-    solver = z3.SolverFor("QF_LRA")
+    x, y = (z3.Ints if integer_move else z3.Reals)("new_x new_y")
+    solver = z3.SolverFor("QF_LIA" if integer_move else "QF_LRA")
     for coefficients in lines:
         solver.add(evaluate(coefficients, x, y) != 0)
     if removed is not None:
@@ -78,6 +89,7 @@ def run(source, output, seconds=300, batch_size=128, replace_index=None, fast=Fa
               "source": str(source), "source_points": source_count, "fixed_points": len(points), "gon": k,
               "source_sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
               "replaced_index": replace_index,
+              "new_point_domain": "integer lattice" if integer_move else "real plane",
               "input_general_position_verified": True, "input_avoids_gon_verified": True,
               "input_subsets_checked": None if fast else comb(source_count, k),
               "input_check": "exact dynamic program" if fast else "exhaustive subsets",
@@ -97,7 +109,8 @@ def run(source, output, seconds=300, batch_size=128, replace_index=None, fast=Fa
                 result["reason"] = solver.reason_unknown()
             break
         model = solver.model()
-        qx, qy = (Fraction(model.eval(v).as_fraction()) for v in (x, y))
+        qx, qy = (Fraction(model.eval(v).as_long()) if integer_move else
+                  Fraction(model.eval(v).as_fraction()) for v in (x, y))
         denominator = lcm(qx.denominator, qy.denominator)
         qxn, qyn = int(qx * denominator), int(qy * denominator)
         visible = {edge: evaluate(edge, qxn, qyn, denominator) < 0 for edge in all_lines}
@@ -143,5 +156,7 @@ if __name__ == "__main__":
     parser.add_argument("--batch-size", type=int, default=128)
     parser.add_argument("--replace-index", type=int)
     parser.add_argument("--fast", action="store_true", help="Use exact DP for below-threshold fixtures")
+    parser.add_argument("--integer-move", action="store_true")
     args = parser.parse_args()
-    run(args.source, args.output, args.seconds, args.batch_size, args.replace_index, args.fast)
+    run(args.source, args.output, args.seconds, args.batch_size, args.replace_index, args.fast,
+        args.integer_move)

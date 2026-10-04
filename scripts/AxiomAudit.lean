@@ -8,6 +8,7 @@ import ErdosSzekeres
 #print axioms ErdosSzekeres.Suk.AboveBase.le_iff
 #print axioms ErdosSzekeres.Suk.AboveBase.lt_iff
 #print axioms ErdosSzekeres.Suk.AboveBase.incomparable_base_not_collinear
+#print axioms ErdosSzekeres.Suk.AboveBase.line_meets_base
 #print axioms ErdosSzekeres.Suk.transitive_cups_caps
 #print axioms ErdosSzekeres.Suk.consecutive_or_separated
 #print axioms ErdosSzekeres.Suk.convex_subsets_density_exponential

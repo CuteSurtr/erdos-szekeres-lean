@@ -22,8 +22,8 @@ represented by an axiom, `sorry`, or a theorem whose name disguises assumptions.
   endpoints strictly on the same side of their line; no point of the base
   segment is collinear with the pair.
 - `Suk/BaseChart.lean` and `Suk/BaseOrder.lean`: concrete affine normalization
-  for every nondegenerate base; the triangle order and the antichain/base
-  nonintersection property for arbitrary base segments.
+  for every nondegenerate base; the triangle order, antichain/base
+  nonintersection, and chain/base intersection for arbitrary base segments.
 - `Suk/TransitiveColoring.lean`: the upper-bound direction of Theorem 2.3 for
   abstract transitive two-colorings, with actual distinct-vertex cliques. The
   consecutive-path to clique bridge is proved separately from Baek's path theorem.
@@ -45,7 +45,7 @@ The cups-caps and Dilworth prerequisites reuse attributed CC0 source. See
    initial convex-subset counting step is proved; the geometric extraction is not.
    Source: [Pór–Valtr (2002)](https://link.springer.com/content/pdf/10.1007/s00454-002-2894-1.pdf).
 2. The remaining chain separation and cross-region geometry. The base order and
-   antichain/base nonintersection are proved, but this does not yet establish the
+   both base intersection/nonintersection properties are proved, but this does not yet establish the
    needed relations between different support regions.
 3. The nonadjacent antichain case: compatible union of the extracted caps.
 4. The adjacent chain case: orientation transitivity for the actual chain coloring,

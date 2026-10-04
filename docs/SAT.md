@@ -126,3 +126,10 @@ dynamic program on below-threshold fixtures. Any candidate exceeding 2^(k−2)
 points is still checked by exhaustive subsets before reporting success. The
 fast checker is cross-checked against exhaustive enumeration and the known
 32-point fixture; none of these Python computations is currently Lean-certified.
+
+The first rational mutation campaign was superseded after seven completed rounds:
+coordinate numerators reached 189 digits after five successful moves. Campaign 02
+uses `--integer-moves` for replacements to control coefficient growth, while its
+extension attempts still allow any real point. An integer-move UNSAT result only
+excludes replacement on that lattice. Line coefficients are divided by their
+positive gcd, preserving all signs exactly.

@@ -135,4 +135,34 @@ theorem incomparable_base_not_collinear (p q : UpperPoint)
       (mul_nonpos_of_nonneg_of_nonpos (sub_nonneg.mpr ht₁) ha.le)
       (mul_neg_of_pos_of_neg ht hb))
 
+/-- Moving forward in the triangle order moves strictly toward the base. -/
+theorem triangleOrder_height_strict (p q : UpperPoint) (hpq : p < q) :
+    q.val 1 < p.val 1 := by
+  obtain ⟨h₀, h₁⟩ := (triangleOrder_cross_products p q).mp hpq.le
+  have hle : q.val 1 ≤ p.val 1 := by linarith
+  by_contra! hge
+  have hy : p.val 1 = q.val 1 := le_antisymm hge hle
+  have hx : p.val 0 = q.val 0 := by
+    rw [hy] at h₀ h₁
+    have hmul : p.val 0 * q.val 1 = q.val 0 * q.val 1 := by linarith
+    exact mul_right_cancel₀ (ne_of_gt q.property) hmul
+  apply hpq.ne
+  apply UpperPoint.ext
+  ext i
+  fin_cases i <;> assumption
+
+/-- The line through a strictly ordered pair meets the normalized base. -/
+theorem triangleOrder_line_meets_base (p q : UpperPoint) (hpq : p < q) :
+    ∃ t : ℝ, 0 ≤ t ∧ t ≤ 1 ∧ orient p.val q.val ![t, 0] = 0 := by
+  obtain ⟨h₀, h₁⟩ := (triangleOrder_cross_products p q).mp hpq.le
+  have hden : 0 < p.val 1 - q.val 1 := sub_pos.mpr (triangleOrder_height_strict p q hpq)
+  let t := (p.val 1 * q.val 0 - q.val 1 * p.val 0) / (p.val 1 - q.val 1)
+  have ht₀ : 0 ≤ t := div_nonneg (by nlinarith) hden.le
+  have ht₁ : t ≤ 1 := (div_le_one hden).mpr (by nlinarith)
+  refine ⟨t, ht₀, ht₁, ?_⟩
+  have ht : t * (p.val 1 - q.val 1) = p.val 1 * q.val 0 - q.val 1 * p.val 0 :=
+    div_mul_cancel₀ _ (ne_of_gt hden)
+  simp only [orient, Matrix.cons_val_zero, Matrix.cons_val_one]
+  nlinarith
+
 end ErdosSzekeres.Suk

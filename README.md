@@ -11,7 +11,7 @@ here need not be empty: unselected points may lie inside them.
 
 Local validation: `lake build --wfail` passes, and all thirteen Python tests
 pass. The principal geometric lemmas and rational-area bridge were inspected with
-`#print axioms`; CI also audits eleven Suk milestones. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
+`#print axioms`; CI also audits twelve Suk milestones. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
 The project contains no proof placeholders or additional axioms.
 
 ## Current contents

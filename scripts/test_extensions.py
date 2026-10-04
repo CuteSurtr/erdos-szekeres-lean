@@ -2,7 +2,7 @@
 from itertools import combinations, product
 import unittest
 
-from extend_configuration import evaluate, exactly_one_visible, line
+from extend_configuration import evaluate, exactly_one_visible, line, primitive_line
 from search import convex_subset, general_position, hull, largest_convex_subset, orient
 
 
@@ -25,6 +25,11 @@ class ExtensionTests(unittest.TestCase):
             self.assertEqual(evaluate(line(a, b), *q), orient(a, b, q))
             self.assertEqual(evaluate(line(a, b), q[0] * 7, q[1] * 7, 7),
                              orient(a, b, q) * 7)
+            for scale in (1, 1000000):
+                aa, bb, qq = (tuple(scale * v for v in p) for p in (a, b, q))
+                value = evaluate(primitive_line(aa, bb), *qq)
+                self.assertEqual(value > 0, orient(aa, bb, qq) > 0)
+                self.assertEqual(value == 0, orient(aa, bb, qq) == 0)
 
     def test_visible_edge_criterion(self):
         fixtures = (

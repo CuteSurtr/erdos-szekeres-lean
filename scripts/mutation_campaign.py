@@ -22,7 +22,7 @@ def signature(points):
     return hashlib.sha256(signs).hexdigest()
 
 
-def campaign(source, folder, summary, rounds, seconds, seed):
+def campaign(source, folder, summary, rounds, seconds, seed, integer_moves=False):
     folder.mkdir(parents=True, exist_ok=False)
     if summary.exists():
         raise FileExistsError(summary)
@@ -32,13 +32,15 @@ def campaign(source, folder, summary, rounds, seconds, seed):
     seen = {signature(initial["coordinates"])}
     result = {"scope": "bounded exploration of realizable fixed configurations; not exhaustive",
               "source": str(source), "seed": seed, "round_limit": rounds,
+              "integer_moves": integer_moves,
               "seconds_per_solver_call": seconds, "status": "running", "rounds": []}
     started = time.monotonic()
     for step in range(rounds):
         index = rng.randrange(len(initial["coordinates"]))
         print(f"Mutation round {step + 1}/{rounds}: replace point {index}", flush=True)
         moved_path = folder / f"round-{step:03d}-moved.json"
-        moved = run(current, moved_path, seconds, replace_index=index, fast=True)
+        moved = run(current, moved_path, seconds, replace_index=index, fast=True,
+                    integer_move=integer_moves)
         entry = {"round": step, "replacement": index, "mutation": moved}
         if moved["status"] == "sat":
             current = moved_path
@@ -71,7 +73,9 @@ if __name__ == "__main__":
     parser.add_argument("--rounds", type=int, default=20)
     parser.add_argument("--seconds", type=int, default=60)
     parser.add_argument("--seed", type=int, default=20261004)
+    parser.add_argument("--integer-moves", action="store_true")
     args = parser.parse_args()
     if args.rounds < 1 or args.seconds < 1:
         parser.error("Positive round and time limits required")
-    campaign(args.source, args.folder, args.summary, args.rounds, args.seconds, args.seed)
+    campaign(args.source, args.folder, args.summary, args.rounds, args.seconds, args.seed,
+             args.integer_moves)

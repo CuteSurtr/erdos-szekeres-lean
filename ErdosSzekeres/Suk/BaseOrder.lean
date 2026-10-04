@@ -91,4 +91,27 @@ theorem AboveBase.incomparable_base_not_collinear {B : BaseSegment} (p q : Above
   rw [← orient_eq_zero_iff_collinear]
   exact orient_segment_ne_zero_of_same_side _ _ _ _ (p.incomparable_same_side q hpq hqp) hr
 
+/-- A chain pair has the complementary geometry: its line meets the base. -/
+theorem AboveBase.line_meets_base {B : BaseSegment} (p q : AboveBase B)
+    (hpq : p < q) : ∃ r ∈ segment ℝ B.left B.right,
+      Collinear ℝ ({p.val, q.val, r} : Set Point) := by
+  obtain ⟨t, ht₀, ht₁, ht⟩ := triangleOrder_line_meets_base p.normalize q.normalize hpq
+  refine ⟨B.frame ![t, 0], ?_, ?_⟩
+  · have hseg : ![t, 0] ∈ segment ℝ (![0, 0] : Point) ![1, 0] := by
+      refine ⟨1 - t, t, by linarith, ht₀, by ring, ?_⟩
+      ext i
+      fin_cases i <;> simp
+    have hm := Set.mem_image_of_mem B.frame.toAffineMap hseg
+    rw [image_segment] at hm
+    change B.frame ![t, 0] ∈ segment ℝ
+      (baseFrame B.left B.right B.distinct ![0, 0])
+      (baseFrame B.left B.right B.distinct ![1, 0]) at hm
+    simpa only [baseFrame_zero, baseFrame_one] using hm
+  · rw [← orient_eq_zero_iff_collinear]
+    have h := orient_baseFrame B.left B.right B.distinct
+      p.normalize.val q.normalize.val ![t, 0]
+    change orient (B.frame (B.frame.symm p.val)) (B.frame (B.frame.symm q.val))
+      (B.frame ![t, 0]) = _ at h
+    simpa only [AffineEquiv.apply_symm_apply, ht, mul_zero] using h
+
 end ErdosSzekeres.Suk
