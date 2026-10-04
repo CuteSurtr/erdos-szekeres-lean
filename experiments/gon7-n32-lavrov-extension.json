@@ -1,0 +1,35 @@
+{
+  "scope": "one new real point; original coordinates fixed; no grid restriction",
+  "source": "experiments/gon7-n32-lavrov-input.json",
+  "source_points": 32,
+  "gon": 7,
+  "input_general_position_verified": true,
+  "input_avoids_gon_verified": true,
+  "input_subsets_checked": 3365856,
+  "convex_predecessor_polygons": 39648,
+  "verification": "exact Python integers plus Z3; not Lean-certified",
+  "z3_version": "5.1.0",
+  "status": "unsat",
+  "rounds": 29,
+  "polygon_cuts": 3198,
+  "seconds": 29.904481750098057,
+  "smt_formula": ".cache/gon7-n32-lavrov-extension.smt2",
+  "source_sha256": "b8a258f9a645a6fb8600bbcbcd6cef9e806937f116cc2e469575fe69d994b426",
+  "smt_sha256": "02b6462b81d92a6a64272dafa1b0f7cdfb95c3011e4d1af4a3bef236993ba19f",
+  "cross_solver_replay": {
+    "scope": "independent SMT solver replay; not a Lean certificate",
+    "input": ".cache/gon7-n32-lavrov-extension.smt2",
+    "input_sha256": "02b6462b81d92a6a64272dafa1b0f7cdfb95c3011e4d1af4a3bef236993ba19f",
+    "translated": ".cache/gon7-n32-lavrov-cvc5.smt2",
+    "translated_sha256": "91f88b546a71cdd8d241556f852834eeb1e6f766aad82c6c83b1de5e44c3bbfe",
+    "expanded_exactly_one_nodes": 3198,
+    "assertions": 3694,
+    "solver": "cvc5",
+    "version": "1.4.1",
+    "status": "unsat",
+    "seconds": 0.9723249579546973,
+    "responses": [
+      "unsat"
+    ]
+  }
+}

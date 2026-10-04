@@ -9,6 +9,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import shutil
 import subprocess
 import time
 
@@ -25,11 +26,13 @@ def digest(path):
             "sha256": h.hexdigest()}
 
 
-def run(gon, points, seconds, seed, label):
+def run(gon, points, seconds, seed, label, reuse=None, configuration="default"):
     if gon < 3 or points < gon or seconds < 1 or seed < 0:
         raise ValueError("Require points >= gon >= 3, seconds >= 1, seed >= 0")
     if not label or any(c not in "abcdefghijklmnopqrstuvwxyz0123456789-_" for c in label):
         raise ValueError("Label must contain only lowercase letters, digits, '-' and '_'")
+    if configuration not in ("default", "sat", "unsat"):
+        raise ValueError("Unknown solver configuration")
     upstream = ROOT / ".cache/EmptyHexagonLean"
     actual = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=upstream, text=True).strip()
     if actual != UPSTREAM_COMMIT:
@@ -55,13 +58,27 @@ def run(gon, points, seconds, seed, label):
     started = time.monotonic()
     encoder = [str(lake), "env", "lean", "--run", "Geo/RunEncoding.lean",
                "gon", str(gon), str(points), str(out / "variables.txt")]
-    with cnf.open("w") as stream, (out / "encoder.log").open("w") as err:
-        result = subprocess.run(encoder, cwd=upstream / "Lean", env=env,
-                                stdout=stream, stderr=err, timeout=600)
+    if reuse is None:
+        with cnf.open("w") as stream, (out / "encoder.log").open("w") as err:
+            result = subprocess.run(encoder, cwd=upstream / "Lean", env=env,
+                                    stdout=stream, stderr=err, timeout=600)
+        encoding_exit_code = result.returncode
+    else:
+        previous = json.loads(reuse.read_text())
+        if (previous["gon"], previous["points"], previous["upstream_commit"]) != (gon, points, actual):
+            raise ValueError("Reused encoding does not match the requested instance")
+        for key, target in (("cnf", cnf), ("variables", out / "variables.txt")):
+            artifact = previous["artifacts"][key]
+            source = ROOT / artifact["path"]
+            if digest(source)["sha256"] != artifact["sha256"]:
+                raise ValueError(f"Reused {key} hash mismatch")
+            shutil.copyfile(source, target)
+        info["encoding_reused_from"] = str(reuse.resolve().relative_to(ROOT))
+        encoding_exit_code = 0
     info["encoding_seconds"] = time.monotonic() - started
-    if result.returncode:
+    if encoding_exit_code:
         info["status"] = "encoder_failed"
-        info["encoder_exit_code"] = result.returncode
+        info["encoder_exit_code"] = encoding_exit_code
         save()
         raise RuntimeError(f"Encoder failed; inspect {out}")
     with cnf.open() as stream:
@@ -76,7 +93,9 @@ def run(gon, points, seconds, seed, label):
     info["solver_version"] = subprocess.check_output([str(solver), "--version"], text=True).strip()
     info["solver_commit"] = subprocess.check_output(
         ["git", "rev-parse", "HEAD"], cwd=solver.parent.parent, text=True).strip()
-    command = [str(solver), "--no-colors", f"--seed={seed}", "-t", str(seconds), str(cnf), str(proof)]
+    info["solver_configuration"] = configuration
+    command = [str(solver), "--no-colors", f"--{configuration}", f"--seed={seed}",
+               "-t", str(seconds), str(cnf), str(proof)]
     info["solver_command"] = command
     save()
     print(f"{label}: {variables} variables, {clauses} clauses; solver started", flush=True)
@@ -121,5 +140,7 @@ if __name__ == "__main__":
     parser.add_argument("--seconds", type=int, default=60)
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--label", required=True)
+    parser.add_argument("--reuse", type=Path, help="Reuse a hash-checked encoding manifest")
+    parser.add_argument("--configuration", choices=("default", "sat", "unsat"), default="default")
     args = parser.parse_args()
-    run(args.gon, args.points, args.seconds, args.seed, args.label)
+    run(args.gon, args.points, args.seconds, args.seed, args.label, args.reuse, args.configuration)

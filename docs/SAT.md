@@ -63,7 +63,7 @@ Initial known-case regression results:
 | 16 | hexagon | 1,672 | 13,156 | SAT; see realization manifest |
 | 17 | hexagon | 2,069 | 17,668 | UNSAT in about 21 seconds; DRAT verified |
 | 32 | heptagon | 34,817 | 372,233 | SAT; geometric realization unresolved |
-| 33 | heptagon | 38,483 | 424,470 | Search status in `gon7-n33-seed0.json` |
+| 33 | heptagon | 38,483 | 424,470 | First run UNKNOWN after 1,800 seconds |
 
 ## Coordinate realization
 
@@ -95,3 +95,34 @@ heptagons returned UNKNOWN. These do not establish infeasibility, even on that g
 ```sh
 .cache/solver-venv/bin/python scripts/realize_model.py experiments/gon6-n16-seed0.json --joint
 ```
+
+## Reusing encodings and changing solver heuristics
+
+`--reuse` verifies the recorded CNF and variable-map hashes before copying them.
+`--configuration sat` and `--configuration unsat` select CaDiCaL's documented
+heuristic presets; neither changes the mathematical question. Fresh labels
+preserve every run. Two 1,800-second runs use seeds 1 and 2 respectively.
+
+## Full-plane extension and mutation search
+
+`extend_configuration.py` searches for a new point with unrestricted real x,y,
+while all existing coordinates stay fixed. It lazily excludes regions where the
+new point would see exactly one edge of a convex (k−1)-gon. General-position
+constraints exclude every line through an existing pair. SMT formulas are saved
+for replay; these formulas and solver verdicts are not Lean certificates.
+
+The published 32-point data from
+[Misha Lavrov (2017)](https://math.stackexchange.com/questions/2542082/lower-bound-of-erd%C5%91s-szekeres-conjecture)
+was checked over all 3,365,856 seven-subsets. It has 39,648 convex hexagons. A
+3,198-cut extension formula was UNSAT in Z3 and independently UNSAT in cvc5 1.4.1
+(after expanding exactly-one predicates into Boolean formulas). This establishes
+computational evidence of nonextendability of this particular realization, not
+an upper bound for arbitrary 33-point sets.
+
+`--replace-index` removes one point and requires its replacement to change at
+least one orientation relative to the remaining points. `mutation_campaign.py`
+alternates these moves with extension attempts. `--fast` uses an exact O(n^4)
+dynamic program on below-threshold fixtures. Any candidate exceeding 2^(k−2)
+points is still checked by exhaustive subsets before reporting success. The
+fast checker is cross-checked against exhaustive enumeration and the known
+32-point fixture; none of these Python computations is currently Lean-certified.

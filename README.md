@@ -9,9 +9,9 @@ A starting formalization of the convex polygon conjecture:
 is a `Prop` definition, not an assumed axiom or an unfinished theorem. Polygons
 here need not be empty: unselected points may lie inside them.
 
-Local validation: `lake build --wfail` passes, and all ten Python tests
+Local validation: `lake build --wfail` passes, and all thirteen Python tests
 pass. The principal geometric lemmas and rational-area bridge were inspected with
-`#print axioms`: only `propext`, `Classical.choice`, and `Quot.sound` occur.
+`#print axioms`; CI also audits eleven Suk milestones. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
 The project contains no proof placeholders or additional axioms.
 
 ## Current contents
@@ -30,9 +30,14 @@ The project contains no proof placeholders or additional axioms.
 - `ErdosSzekeres/DyadicModel.lean`: telescoping and an exact all-scale coefficient
   inequality for a restricted counting model.
 - `ErdosSzekeres/Suk/`: checked four-point criterion, classical cups-caps bound,
-  Dilworth consequence, and normalized triangle order with antichain separation.
+  Dilworth consequence, transitive-coloring clique bound, arbitrary-base triangle
+  order with antichain separation, region selection and convex-subset counting.
   The full asymptotic theorem is a defined proof target, **not yet proved**.
 - `scripts/search.py`: exact integer-coordinate grid search using convex hulls.
+- `scripts/extend_configuration.py`: full-plane extension and point replacement
+  for fixed realizable configurations, with exact candidate verification.
+- `scripts/mutation_campaign.py`: bounded, recorded exploration of point moves.
+- `scripts/replay_smt.py`: corroboration of extension formulas with cvc5.
 - `scripts/test_search.py`: geometric fixtures and an independent triangle-based
   convexity cross-check over small configurations.
 - `experiments/`: reproducible bounded-search results, explicitly not Lean proofs.

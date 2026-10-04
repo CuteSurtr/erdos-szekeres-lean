@@ -8,3 +8,7 @@ import ErdosSzekeres.Suk.ChainAntichain
 import ErdosSzekeres.Suk.CupsCaps
 import ErdosSzekeres.Suk.Statement
 import ErdosSzekeres.Suk.TriangleOrder
+import ErdosSzekeres.Suk.BaseOrder
+import ErdosSzekeres.Suk.TransitiveColoring
+import ErdosSzekeres.Suk.RegionSelection
+import ErdosSzekeres.Suk.ExtractionCounting
