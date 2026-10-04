@@ -17,3 +17,4 @@ import ErdosSzekeres.Suk.SupportingLines
 import ErdosSzekeres.Suk.TriangleMembership
 import ErdosSzekeres.Suk.Quadrilateral
 import ErdosSzekeres.HMPT.Statement
+import ErdosSzekeres.Suk.AdjacentCaps

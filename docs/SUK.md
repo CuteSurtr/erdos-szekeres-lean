@@ -29,7 +29,7 @@ represented by an axiom, `sorry`, or a theorem whose name disguises assumptions.
   consecutive-path to clique bridge is proved separately from Baek's path theorem.
 - `Suk/ChainColoring.lean`: proves both colors transitive for the actual
   orientation coloring along a triangle-order chain, then extracts cliques.
-  Interpreting the colors as caps relative to neighboring anchors remains open.
+  `BaseOrientation.lean` transports this to every base segment.
 - `Suk/SupportingLines.lean`: strict support lines imply convex independence;
   positively oriented quadruples are in convex position.
 - `Suk/TriangleMembership.lean`: barycentric/halfplane membership equivalence,
@@ -37,8 +37,23 @@ represented by an axiom, `sorry`, or a theorem whose name disguises assumptions.
 - `Suk/Quadrilateral.lean`: all sixteen triple-sign assignments are checked in
   Lean to characterize convex quadrilaterals. Moving the fourth point inside
   the same open cell of the other three pair-lines preserves convex position.
-  This proves the local replacement step used in gluing, but the required
-  same-cell relationships between entire support regions are still missing.
+  This proves the local replacement step used in gluing.
+- `Suk/OrientationClique.lean`: orientation cliques form actual convex polygons;
+  an anchor on the appropriate side of every pair-line can be included.
+- `Suk/SpikeGeometry.lean`: a support spike is defined by three strict
+  halfplanes of four clockwise anchors. Determinant identities prove its other
+  orientation signs and show that the outer-base triangle order implies the
+  middle-edge triangle order.
+- `Suk/ChainCaps.lean`: the chain cups-caps bound produces geometric caps using
+  Suk's middle-edge anchors, although the input order uses the outer base.
+  This extraction currently requires both target cap sizes to be at least three.
+- `Suk/AdjacentSpikes.lean`: ordered pairs leave the entire neighboring spike
+  on one weak side, proved in both directions from the five anchors.
+- `Suk/GlueOrientation.lean` and `Suk/AdjacentCaps.lean`: facing caps from two
+  adjacent chains have a convex union when their total size is at least four.
+  General position is assumed for the selected vertices and shared anchor.
+  Cross-region separation is derived, not assumed. This is the geometric
+  content of Suk's Observation 3.1 in that size range.
 - `Suk/RegionSelection.lean`: if k ≥ t(r+1), either r consecutive indices have
   a chosen property, or there are t pairwise nonadjacent indices without it.
 - `Suk/ExtractionCounting.lean`: double counting gives an unconditional density
@@ -56,14 +71,13 @@ The cups-caps and Dilworth prerequisites reuse attributed CC0 source. See
    especially alternating-anchor selection and support-region geometry. The
    initial convex-subset counting step is proved; the geometric extraction is not.
    Source: [Pór–Valtr (2002)](https://link.springer.com/content/pdf/10.1007/s00454-002-2894-1.pdf).
-2. The remaining chain separation and cross-region geometry. The base order and
-   both base intersection/nonintersection properties are proved, but this does not yet establish the
-   needed relations between different support regions.
+2. Connect the globally extracted support polygon to the checked local spike
+   structures. Adjacent-chain separation is proved; the nonadjacent antichain
+   separation needed in Case 1 remains unfinished.
 3. The nonadjacent antichain case: compatible union of the extracted caps.
-4. The adjacent chain case: identify orientation colors with left/right caps,
-   prove the support-region hypotheses in Observation 3.1, and formalize the
-   iterative growth argument. Orientation transitivity and the local four-point
-   separation/replacement steps are now proved.
+4. The adjacent chain case: formalize the iterative growth argument and handle
+   the terminal small-cap cases carefully. Geometric cap extraction and
+   adjacent-chain gluing are now proved.
 5. Integer ceilings, floors and all eventual numerical inequalities; assemble the
    unconditional geometric conclusion `Suk.Theorem2016`.
 
@@ -83,4 +97,6 @@ A 20-round integer-mutation campaign found 21 orientation signatures and no
 33-point extension. A verified 33-point configuration with exactly one convex
 heptagon reproduces a known benchmark. All seven fixed-coordinate single-vertex
 repairs returned UNSAT. These experiments do not replace the missing geometric
-proofs or exclude coordinated point moves.
+proofs or exclude coordinated point moves. A subsequent fixed-x search ruled
+out all 21 two-vertex vertical repairs within the unique heptagon; moving all
+seven y coordinates together ended UNKNOWN after 300 seconds.

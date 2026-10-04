@@ -158,3 +158,31 @@ The near-miss option is explicit (`--allowed-gons 1`) and produces status
 `near_miss` with `candidate_avoids_gon_verified: false`. It always performs an
 exhaustive final polygon count. Two optional Z3 regression tests distinguish
 zero-allowance UNSAT from the one-polygon near-miss result on five points.
+
+
+## Coordinated vertical repair checkpoint
+
+`scripts/joint_vertical_repair.py` fixes every x coordinate, allows selected y
+coordinates to vary over all real numbers, and adds exact linear-arithmetic
+cuts for observed convex cyclic orders. Each cut rules out a consistently
+positive orientation clique. It does not discretize the permitted y values.
+Candidates passing the dynamic-program screen receive an exhaustive hull check.
+The Python encoder, solver, and verdicts are not Lean-certified; the generic
+orientation-clique implication is proved separately in Lean.
+
+`experiments/joint-pairs-01.json` records all 21 pairs among indices
+`[0,1,2,3,4,22,32]` of the 33-point near miss. Each pair's simultaneous vertical
+repair search returned UNSAT. This excludes only those two y moves with all
+other coordinates fixed, not arbitrary two-point moves. Every pair can be
+reproduced with:
+
+```sh
+python scripts/joint_vertical_repair.py experiments/gon7-n33-near-miss-01.json \
+  --output fresh-output.json --move 0 1 --seconds 60
+```
+
+`experiments/joint-repair-7-01.json` allows all seven listed y coordinates to
+move together. It ended UNKNOWN at 300 seconds after 275 solver calls and
+1,213 convex-cycle cuts. Its timeout does not establish infeasibility. The
+solver checks reproduce SAT on a four-point quadrilateral-avoiding instance
+and UNSAT on a five-point instance, with exact coefficient regression tests.

@@ -123,4 +123,40 @@ theorem convexPosition_four_same_cell (a b c p q : Point)
     convexPosition_four_iff_pair_separation a b c q habc hq₁ hq₂ hq₃]
   simp only [hde.1, hfg.1, hdf.2, heg.2, hef.1, hdg.1]
 
+/-- Three ordered points whose pair-lines all put an anchor on the positive
+side form a convex quadrilateral with it exactly in the positive color. -/
+theorem convexPosition_four_iff_positive_of_anchor (a b c p : Point)
+    (hn : orient a b c ≠ 0) (hab : 0 < orient a b p)
+    (hac : 0 < orient a c p) (hbc : 0 < orient b c p) :
+    ConvexPosition ({a, b, c, p} : Finset Point) ↔ 0 < orient a b c := by
+  rw [convexPosition_four_iff_pair_separation a b c p hn
+    (ne_of_gt hab) (ne_of_gt hac) (ne_of_gt hbc)]
+  constructor
+  · rintro (h | h | h)
+    · exact pos_of_mul_pos_left h.1 hab.le
+    · have ht := mul_pos hab hbc
+      linarith [h.2]
+    · exact pos_of_mul_pos_left h.2 hbc.le
+  · intro h
+    exact Or.inl ⟨mul_pos h hab, mul_pos hac hbc⟩
+
+theorem convexPosition_four_iff_negative_of_anchor (a b c p : Point)
+    (hn : orient a b c ≠ 0) (hab : orient a b p < 0)
+    (hac : orient a c p < 0) (hbc : orient b c p < 0) :
+    ConvexPosition ({a, b, c, p} : Finset Point) ↔ orient a b c < 0 := by
+  rw [convexPosition_four_iff_pair_separation a b c p hn
+    (ne_of_lt hab) (ne_of_lt hac) (ne_of_lt hbc)]
+  constructor
+  · rintro (h | h | h)
+    · by_contra! ht
+      have := mul_nonpos_of_nonneg_of_nonpos ht hab.le
+      linarith [h.1]
+    · have ht := mul_pos_of_neg_of_neg hab hbc
+      linarith [h.2]
+    · by_contra! ht
+      have := mul_nonpos_of_nonneg_of_nonpos ht hbc.le
+      linarith [h.2]
+  · intro h
+    exact Or.inl ⟨mul_pos_of_neg_of_neg h hab, mul_pos_of_neg_of_neg hac hbc⟩
+
 end ErdosSzekeres.Suk

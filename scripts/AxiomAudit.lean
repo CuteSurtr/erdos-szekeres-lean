@@ -19,3 +19,12 @@ import ErdosSzekeres
 #print axioms ErdosSzekeres.Suk.convexPosition_four_of_pair_separation
 #print axioms ErdosSzekeres.Suk.convexPosition_four_iff_pair_separation
 #print axioms ErdosSzekeres.Suk.convexPosition_four_same_cell
+#print axioms ErdosSzekeres.Suk.convexPosition_of_positive_triples
+#print axioms ErdosSzekeres.Suk.convexPosition_insert_of_positive_triples
+#print axioms ErdosSzekeres.Suk.AboveBase.pair_orientation_sides
+#print axioms ErdosSzekeres.Suk.CapFrame.spike_orientations
+#print axioms ErdosSzekeres.Suk.CapFrame.toEdge_lt_of_toOuter_lt
+#print axioms ErdosSzekeres.Suk.CapFrame.chain_caps
+#print axioms ErdosSzekeres.Suk.AdjacentCapFrames.ordered_pair_right
+#print axioms ErdosSzekeres.Suk.AdjacentCapFrames.ordered_pair_left
+#print axioms ErdosSzekeres.Suk.AdjacentCapFrames.glue_caps

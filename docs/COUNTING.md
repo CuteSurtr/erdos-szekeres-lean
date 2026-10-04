@@ -84,5 +84,7 @@ does not establish this target.
 
 The current formal work reaches the local geometric ingredients: the
 four-point separated-pair test and same-cell replacement step in the proof of
-Observation 3.5. The existence and geometry of the spike decomposition remain
-unproved; the library does not yet prove either full Suk or full HMPT.
+Observation 3.5. Local spike orientation, chain cap extraction, and adjacent-chain gluing are
+now proved. The global extraction theorem, nonadjacent antichain geometry and
+asymptotic assembly remain unfinished; the library does not yet prove either
+full Suk or full HMPT.

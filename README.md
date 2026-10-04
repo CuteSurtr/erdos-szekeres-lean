@@ -9,9 +9,9 @@ A starting formalization of the convex polygon conjecture:
 is a `Prop` definition, not an assumed axiom or an unfinished theorem. Polygons
 here need not be empty: unselected points may lie inside them.
 
-Local validation: `lake build --wfail` passes, and all fourteen core Python tests
-pass (plus two optional Z3 tests locally). The principal geometric lemmas and rational-area bridge were inspected with
-`#print axioms`; CI also audits nineteen geometric and combinatorial milestones. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
+Local validation: `lake build --wfail` passes, and all fifteen core Python tests
+pass (plus four optional Z3 tests locally). The principal geometric lemmas and rational-area bridge were inspected with
+`#print axioms`; CI also audits twenty-eight geometric and combinatorial milestones. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
 The project contains no proof placeholders or additional axioms.
 
 ## Current contents
@@ -33,7 +33,8 @@ The project contains no proof placeholders or additional axioms.
   Dilworth consequence, transitive-coloring clique bound, arbitrary-base triangle
   order with antichain separation, geometric chain-color transitivity, region
   selection, convex-subset counting, triangle membership and four-point gluing
-  criteria. The quadrilateral proof exhausts all sixteen orientation-sign cases.
+  criteria. Cap extraction inside actual support spikes and adjacent-chain gluing
+  are now checked. The quadrilateral proof exhausts all sixteen orientation-sign cases.
   The full asymptotic theorem is a defined proof target, **not yet proved**.
 - `ErdosSzekeres/HMPT/Statement.lean`: precise targets for the final 2020
   coefficient and a strict improvement; these are propositions, not proved bounds.
@@ -42,6 +43,8 @@ The project contains no proof placeholders or additional axioms.
 - `scripts/search.py`: exact integer-coordinate grid search using convex hulls.
 - `scripts/extend_configuration.py`: full-plane extension and point replacement
   for fixed realizable configurations, with exact candidate verification.
+- `scripts/joint_vertical_repair.py`: simultaneous point moves with fixed x
+  coordinates, exact linear cuts and exhaustive final candidate checks.
 - `scripts/mutation_campaign.py`: bounded, recorded exploration of point moves.
 - `scripts/replay_smt.py`: corroboration of extension formulas with cvc5.
 - `scripts/test_search.py`: geometric fixtures and an independent triangle-based
