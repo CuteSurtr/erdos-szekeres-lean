@@ -18,3 +18,5 @@ import ErdosSzekeres.Suk.TriangleMembership
 import ErdosSzekeres.Suk.Quadrilateral
 import ErdosSzekeres.HMPT.Statement
 import ErdosSzekeres.Suk.AdjacentCaps
+import ErdosSzekeres.Suk.SupportSequence
+import ErdosSzekeres.Suk.AntichainCaps

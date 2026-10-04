@@ -14,6 +14,16 @@ structure CapFrame where
   acd : orient a c d < 0
   bcd : orient b c d < 0
 
+@[ext] theorem CapFrame.ext {F G : CapFrame}
+    (ha : F.a = G.a) (hb : F.b = G.b) (hc : F.c = G.c) (hd : F.d = G.d) : F = G := by
+  cases F
+  cases G
+  cases ha
+  cases hb
+  cases hc
+  cases hd
+  rfl
+
 /-- Outside the middle edge, inside the two neighboring supporting lines. -/
 def CapFrame.spike (F : CapFrame) : Set Point :=
   {p | orient F.a F.b p < 0 ∧ 0 < orient F.b F.c p ∧ orient F.c F.d p < 0}

@@ -54,6 +54,31 @@ represented by an axiom, `sorry`, or a theorem whose name disguises assumptions.
   General position is assumed for the selected vertices and shared anchor.
   Cross-region separation is derived, not assumed. This is the geometric
   content of Suk's Observation 3.1 in that size range.
+- `Suk/ChainEnumeration.lean` and `Suk/SpikeChain.lean`: finite chains in the
+  actual outer-base order admit strictly increasing enumerations, with exactly
+  the same vertices and cardinality. Adjacent spike point sets are disjoint;
+  gluing caps whose sizes sum to at least n gives an actual n-gon in P.
+- `Suk/CapGrowth.lean`, `Suk/ChainCase.lean`, and `Suk/SupportSequence.lean`:
+  the finite geometric chain case. For n ≥ 4 and K ≥ 3, r consecutive support
+  spikes, each containing a chain of more than 2^(n+K−4) points, force a convex
+  n-gon whenever n ≤ rK. A clockwise sequence of r+3 anchors supplies all local
+  frames and their adjacency. General position and membership in P are explicit.
+  The induction requests sizes min(n,c+K) and max(3,n−c); their sum is at most
+  n+K, so it handles the terminal step without a cap of size one or two.
+  This is a formalized component of Suk's proof, not a new asymptotic bound.
+- `Suk/SpikeSeparation.lean`: the global support sequence implies that a line
+  through an incomparable pair in one spike misses every nonadjacent spike.
+  More precisely, every point of those other spikes lies on the same strict
+  side as the first outer-base endpoint. The proof works on either side of the
+  selected index; it also proves nonadjacent spikes disjoint.
+- `Suk/PairSupports.lean` and `Suk/AntichainCaps.lean`: a local supporting edge
+  at every selected antichain vertex extends to the entire union of nonadjacent
+  parts. The resulting union is convex, its cardinality is the sum of the local
+  cardinalities, and it gives an n-gon once that sum reaches n. The local support
+  condition is explicit: for every p there is q in its own selected part, with
+  p ≠ q, and every other local z lies on the same strict side of pq as the
+  outer-base anchor. Deriving those supports from cups-caps extraction is still
+  outstanding; the theorem does not assert the full antichain case.
 - `Suk/RegionSelection.lean`: if k ≥ t(r+1), either r consecutive indices have
   a chosen property, or there are t pairwise nonadjacent indices without it.
 - `Suk/ExtractionCounting.lean`: double counting gives an unconditional density
@@ -71,14 +96,13 @@ The cups-caps and Dilworth prerequisites reuse attributed CC0 source. See
    especially alternating-anchor selection and support-region geometry. The
    initial convex-subset counting step is proved; the geometric extraction is not.
    Source: [Pór–Valtr (2002)](https://link.springer.com/content/pdf/10.1007/s00454-002-2894-1.pdf).
-2. Connect the globally extracted support polygon to the checked local spike
-   structures. Adjacent-chain separation is proved; the nonadjacent antichain
-   separation needed in Case 1 remains unfinished.
-3. The nonadjacent antichain case: compatible union of the extracted caps.
-4. The adjacent chain case: formalize the iterative growth argument and handle
-   the terminal small-cap cases carefully. Geometric cap extraction and
-   adjacent-chain gluing are now proved.
-5. Integer ceilings, floors and all eventual numerical inequalities; assemble the
+2. Supply the clockwise anchor sequence from the global positive-fraction
+   extraction, including cup/cap symmetry. Local frames and adjacency now follow
+   from that sequence, including separation for the nonadjacent antichain case.
+3. The nonadjacent antichain case: extract the local caps and derive their
+   supporting-edge condition. Their geometric union and cardinality are proved
+   under that explicit local condition.
+4. Integer ceilings, floors and all eventual numerical inequalities; assemble the
    unconditional geometric conclusion `Suk.Theorem2016`.
 
 The numerical HMPT experiments in `COUNTING.md` do not discharge these geometric

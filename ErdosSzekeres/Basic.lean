@@ -27,6 +27,12 @@ theorem HasConvexNGon.card_le {s : Finset Point} {n : ℕ}
   obtain ⟨t, ht, rfl, _⟩ := hs
   exact Finset.card_le_card ht
 
+/-- A convex set of at least n vertices contains a convex n-gon. -/
+theorem ConvexPosition.hasConvexNGon {s : Finset Point} (hs : ConvexPosition s)
+    {n : ℕ} (hn : n ≤ s.card) : HasConvexNGon n s := by
+  obtain ⟨t, hts, ht⟩ := Finset.exists_subset_card_eq hn
+  exact ⟨t, hts, ht, hs.mono hts⟩
+
 /-- The exact-cardinality and at-least-cardinality formulations agree. -/
 theorem forcesConvexNGon_iff_exact (N n : ℕ) :
     ForcesConvexNGon N n ↔
