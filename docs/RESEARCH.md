@@ -116,3 +116,18 @@ hexagon CNFs with independently checked DRAT certificates, and launched the
 unrestricted 33-point heptagon CNF. See the JSON manifests in `experiments/`
 and `docs/COUNTING.md`. These computational results do not close the conversion
 axiom gap described above.
+
+## Frontier computational comparison (checked 2026-10-04)
+
+[Georgiev–Gómez-Serrano–Tao–Wagner, arXiv:2511.02864v3, §6.38](https://arxiv.org/html/2511.02864v3#S6.SS38)
+reports searches through k=8. They recovered configurations of 2^(k−2) points
+with zero convex k-gons and configurations of 2^(k−2)+1 points with exactly one.
+They explicitly report no improved lower bound on this problem. Thus a 33-point
+configuration with one heptagon would be a reproduced benchmark, not a new result.
+A useful next search objective is to reach that near-counterexample and try
+coordinated point moves to eliminate the remaining polygon, with exact validation.
+
+Our current search has two complementary representations: unrestricted abstract
+orientation CNFs, whose SAT models still need realization; and realizable coordinate
+mutations followed by full-plane single-point extension. Failed fixed-configuration
+extensions do not exhaust the configuration space.

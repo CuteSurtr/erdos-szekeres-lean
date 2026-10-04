@@ -27,6 +27,18 @@ represented by an axiom, `sorry`, or a theorem whose name disguises assumptions.
 - `Suk/TransitiveColoring.lean`: the upper-bound direction of Theorem 2.3 for
   abstract transitive two-colorings, with actual distinct-vertex cliques. The
   consecutive-path to clique bridge is proved separately from Baek's path theorem.
+- `Suk/ChainColoring.lean`: proves both colors transitive for the actual
+  orientation coloring along a triangle-order chain, then extracts cliques.
+  Interpreting the colors as caps relative to neighboring anchors remains open.
+- `Suk/SupportingLines.lean`: strict support lines imply convex independence;
+  positively oriented quadruples are in convex position.
+- `Suk/TriangleMembership.lean`: barycentric/halfplane membership equivalence,
+  including both triangle orientations, and the separated-pair quadrilateral test.
+- `Suk/Quadrilateral.lean`: all sixteen triple-sign assignments are checked in
+  Lean to characterize convex quadrilaterals. Moving the fourth point inside
+  the same open cell of the other three pair-lines preserves convex position.
+  This proves the local replacement step used in gluing, but the required
+  same-cell relationships between entire support regions are still missing.
 - `Suk/RegionSelection.lean`: if k ≥ t(r+1), either r consecutive indices have
   a chosen property, or there are t pairwise nonadjacent indices without it.
 - `Suk/ExtractionCounting.lean`: double counting gives an unconditional density
@@ -48,8 +60,10 @@ The cups-caps and Dilworth prerequisites reuse attributed CC0 source. See
    both base intersection/nonintersection properties are proved, but this does not yet establish the
    needed relations between different support regions.
 3. The nonadjacent antichain case: compatible union of the extracted caps.
-4. The adjacent chain case: orientation transitivity for the actual chain coloring,
-   Observation 3.1, and the iterative growth argument.
+4. The adjacent chain case: identify orientation colors with left/right caps,
+   prove the support-region hypotheses in Observation 3.1, and formalize the
+   iterative growth argument. Orientation transitivity and the local four-point
+   separation/replacement steps are now proved.
 5. Integer ceilings, floors and all eventual numerical inequalities; assemble the
    unconditional geometric conclusion `Suk.Theorem2016`.
 
@@ -63,7 +77,10 @@ The 32-point heptagon-avoiding CNF is satisfiable. Its model is not automaticall
 a realizable point set. Joint Boolean/linear-arithmetic searches found and exactly
 verified 8-point pentagon-avoiding and 16-point hexagon-avoiding configurations.
 Five-minute uniform-x-grid searches for 32 and 33 points returned UNKNOWN, not
-UNSAT. The first unrestricted 33-point SAT run ended UNKNOWN after 30 minutes. Two
-additional runs use SAT-focused and UNSAT-focused solver configurations. A separate
-mutation campaign explores realizable 32-point configurations and full-plane
-extensions; these experiments do not replace the missing geometric proofs.
+UNSAT. The first unrestricted 33-point SAT run ended UNKNOWN after 30 minutes. The two
+additional SAT-focused and UNSAT-focused runs also ended UNKNOWN at 30 minutes.
+A 20-round integer-mutation campaign found 21 orientation signatures and no
+33-point extension. A verified 33-point configuration with exactly one convex
+heptagon reproduces a known benchmark. All seven fixed-coordinate single-vertex
+repairs returned UNSAT. These experiments do not replace the missing geometric
+proofs or exclude coordinated point moves.

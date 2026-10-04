@@ -12,3 +12,8 @@ import ErdosSzekeres.Suk.BaseOrder
 import ErdosSzekeres.Suk.TransitiveColoring
 import ErdosSzekeres.Suk.RegionSelection
 import ErdosSzekeres.Suk.ExtractionCounting
+import ErdosSzekeres.Suk.ChainColoring
+import ErdosSzekeres.Suk.SupportingLines
+import ErdosSzekeres.Suk.TriangleMembership
+import ErdosSzekeres.Suk.Quadrilateral
+import ErdosSzekeres.HMPT.Statement

@@ -32,7 +32,7 @@ theorem triangleCoordinates_injective : Function.Injective triangleCoordinates :
 instance : PartialOrder UpperPoint :=
   PartialOrder.lift triangleCoordinates triangleCoordinates_injective
 
-private theorem triangle_mem_of_weights (a b c p : Point) (u v w : ℝ)
+theorem triangle_mem_of_weights (a b c p : Point) (u v w : ℝ)
     (hu : 0 ≤ u) (hv : 0 ≤ v) (hw : 0 ≤ w) (hs : u + v + w = 1)
     (hp : p = u • a + v • b + w • c) :
     p ∈ convexHull ℝ ({a, b, c} : Set Point) := by

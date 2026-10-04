@@ -133,3 +133,28 @@ uses `--integer-moves` for replacements to control coefficient growth, while its
 extension attempts still allow any real point. An integer-move UNSAT result only
 excludes replacement on that lattice. Line coefficients are divided by their
 positive gcd, preserving all signs exactly.
+
+## 2026-10-04 search checkpoint
+
+- All three unrestricted 33-point CNF runs (default, SAT-focused and
+  UNSAT-focused) ended UNKNOWN after 1,800 seconds each. No completed UNSAT
+  certificate or satisfying assignment was obtained.
+- `mutation-campaign-02.json` records 20 integer point replacements, 21
+  orientation signatures including the initial set, and 20 full-real-plane
+  extension searches ending UNSAT. Each UNSAT verdict fixes a particular base.
+- `gon7-n33-near-miss-01.json` records exact integer coordinates for 33 points
+  with precisely one convex heptagon. All 4,272,048 seven-point subsets were
+  checked, as was general position. This reproduces the one-heptagon benchmark
+  reported in [AlphaEvolve, section 6.38](https://arxiv.org/html/2511.02864v3);
+  it is not an improved bound or a counterexample.
+- `near-miss-repair-01.json` identifies the unique forbidden subset as indices
+  `[0, 1, 2, 3, 4, 22, 32]`. Deleting each of these vertices and searching the
+  whole real plane for a replacement produced seven UNSAT verdicts. Points
+  outside this subset cannot remove that heptagon by moving alone. This is
+  solver evidence of resistance to single-point repair, not a Lean certificate
+  and not a statement about simultaneous moves.
+
+The near-miss option is explicit (`--allowed-gons 1`) and produces status
+`near_miss` with `candidate_avoids_gon_verified: false`. It always performs an
+exhaustive final polygon count. Two optional Z3 regression tests distinguish
+zero-allowance UNSAT from the one-polygon near-miss result on five points.

@@ -4,9 +4,15 @@ import unittest
 
 from extend_configuration import evaluate, exactly_one_visible, line, primitive_line
 from search import convex_subset, general_position, hull, largest_convex_subset, orient
+from repair_near_miss import forbidden_subsets
 
 
 class ExtensionTests(unittest.TestCase):
+    def test_near_miss_identification(self):
+        self.assertEqual(forbidden_subsets([(0, 0), (2, 0), (2, 2), (0, 2)], 4),
+                         [(0, 1, 2, 3)])
+        self.assertEqual(forbidden_subsets([(0, 0), (0, 1), (1, 1), (3, 2)], 4), [])
+
     def test_dynamic_program_against_exhaustive(self):
         checked = 0
         for points in combinations(list(product(range(3), repeat=2)), 5):

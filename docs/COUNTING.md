@@ -72,3 +72,17 @@ Next computational priority: reproduce ordinary-polygon known cases with the
 published Lean encoder, retain solver certificates, then measure the 33-point
 instance. A solver's UNSAT verdict and a C proof check are still separate from
 a complete Lean-checked geometric theorem in this repository.
+
+## Precise 2020 target
+
+`HMPT/Statement.lean` now defines the published leading coefficient through
+an epsilon formulation: for every epsilon > 0, an eventual upper bound with
+coefficient 8 sqrt(2)/3 + epsilon. `HMPT.StrictImprovement` asks for some smaller
+nonnegative leading coefficient. These are unproved propositions. Reducing a
+finite numerical surrogate or an unspecified term inside the published o(1)
+does not establish this target.
+
+The current formal work reaches the local geometric ingredients: the
+four-point separated-pair test and same-cell replacement step in the proof of
+Observation 3.5. The existence and geometry of the spike decomposition remain
+unproved; the library does not yet prove either full Suk or full HMPT.

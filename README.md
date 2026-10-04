@@ -9,9 +9,9 @@ A starting formalization of the convex polygon conjecture:
 is a `Prop` definition, not an assumed axiom or an unfinished theorem. Polygons
 here need not be empty: unselected points may lie inside them.
 
-Local validation: `lake build --wfail` passes, and all thirteen Python tests
-pass. The principal geometric lemmas and rational-area bridge were inspected with
-`#print axioms`; CI also audits twelve Suk milestones. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
+Local validation: `lake build --wfail` passes, and all fourteen core Python tests
+pass (plus two optional Z3 tests locally). The principal geometric lemmas and rational-area bridge were inspected with
+`#print axioms`; CI also audits nineteen geometric and combinatorial milestones. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
 The project contains no proof placeholders or additional axioms.
 
 ## Current contents
@@ -31,8 +31,14 @@ The project contains no proof placeholders or additional axioms.
   inequality for a restricted counting model.
 - `ErdosSzekeres/Suk/`: checked four-point criterion, classical cups-caps bound,
   Dilworth consequence, transitive-coloring clique bound, arbitrary-base triangle
-  order with antichain separation, region selection and convex-subset counting.
+  order with antichain separation, geometric chain-color transitivity, region
+  selection, convex-subset counting, triangle membership and four-point gluing
+  criteria. The quadrilateral proof exhausts all sixteen orientation-sign cases.
   The full asymptotic theorem is a defined proof target, **not yet proved**.
+- `ErdosSzekeres/HMPT/Statement.lean`: precise targets for the final 2020
+  coefficient and a strict improvement; these are propositions, not proved bounds.
+- `scripts/repair_near_miss.py`: recorded single-vertex repair attempts on
+  configurations with a small number of forbidden polygons.
 - `scripts/search.py`: exact integer-coordinate grid search using convex hulls.
 - `scripts/extend_configuration.py`: full-plane extension and point replacement
   for fixed realizable configurations, with exact candidate verification.

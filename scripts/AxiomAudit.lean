@@ -12,3 +12,10 @@ import ErdosSzekeres
 #print axioms ErdosSzekeres.Suk.transitive_cups_caps
 #print axioms ErdosSzekeres.Suk.consecutive_or_separated
 #print axioms ErdosSzekeres.Suk.convex_subsets_density_exponential
+#print axioms ErdosSzekeres.Suk.chain_orientation_clique
+#print axioms ErdosSzekeres.Suk.convexPosition_of_strict_supports
+#print axioms ErdosSzekeres.Suk.convexPosition_four_of_positive
+#print axioms ErdosSzekeres.Suk.mem_triangle_iff_orient_products
+#print axioms ErdosSzekeres.Suk.convexPosition_four_of_pair_separation
+#print axioms ErdosSzekeres.Suk.convexPosition_four_iff_pair_separation
+#print axioms ErdosSzekeres.Suk.convexPosition_four_same_cell

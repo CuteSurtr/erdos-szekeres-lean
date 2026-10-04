@@ -42,7 +42,7 @@ def exactly_one_visible(polygon, point):
 
 
 def run(source, output, seconds=300, batch_size=128, replace_index=None, fast=False,
-        integer_move=False):
+        integer_move=False, allowed_gons=0):
     import z3
     if output.exists():
         raise FileExistsError(output)
@@ -50,6 +50,8 @@ def run(source, output, seconds=300, batch_size=128, replace_index=None, fast=Fa
         raise ValueError("Positive time and batch size required")
     if integer_move and replace_index is None:
         raise ValueError("Integer moves are only supported for point replacement")
+    if allowed_gons < 0 or (allowed_gons and replace_index is not None):
+        raise ValueError("A nonnegative polygon allowance is supported only for extension")
     data = json.loads(source.read_text())
     points = [tuple(p) for p in data["coordinates"]]
     source_count = len(points)
@@ -82,7 +84,7 @@ def run(source, output, seconds=300, batch_size=128, replace_index=None, fast=Fa
         # Force a change of orientation pattern, not a tiny move within the old cell.
         solver.add(z3.Or([evaluate(edge, x, y) < 0 if evaluate(edge, *removed) > 0 else
                           evaluate(edge, x, y) > 0 for edge in lines]))
-    constraints, rounds = set(), 0
+    constraints, rounds, observed_violations = set(), 0, []
     result = {"scope": ("replace one point outside its old order-type cell; remaining points fixed"
                         if removed is not None else
                         "one new real point; original coordinates fixed; no grid restriction"),
@@ -90,6 +92,7 @@ def run(source, output, seconds=300, batch_size=128, replace_index=None, fast=Fa
               "source_sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
               "replaced_index": replace_index,
               "new_point_domain": "integer lattice" if integer_move else "real plane",
+              "allowed_convex_gons": allowed_gons,
               "input_general_position_verified": True, "input_avoids_gon_verified": True,
               "input_subsets_checked": None if fast else comb(source_count, k),
               "input_check": "exact dynamic program" if fast else "exhaustive subsets",
@@ -115,23 +118,38 @@ def run(source, output, seconds=300, batch_size=128, replace_index=None, fast=Fa
         qxn, qyn = int(qx * denominator), int(qy * denominator)
         visible = {edge: evaluate(edge, qxn, qyn, denominator) < 0 for edge in all_lines}
         violations = [i for i, edges in enumerate(polygons)
-                      if sum(visible[edge] for edge in edges) == 1][:batch_size]
-        if not violations:
+                      if sum(visible[edge] for edge in edges) == 1]
+        if len(violations) <= allowed_gons:
             candidate = [(a * denominator, b * denominator) for a, b in points] + [(qxn, qyn)]
-            exhaustive = not fast or len(candidate) > 2 ** (k - 2)
-            forbidden = (convex_subset(candidate, k) is not None if exhaustive else
-                         len(largest_convex_subset(candidate)) >= k)
+            exhaustive = bool(allowed_gons) or not fast or len(candidate) > 2 ** (k - 2)
+            actual_count = None
+            if allowed_gons:
+                actual_count = sum(len(hull(subset)) == k for subset in combinations(candidate, k))
+                forbidden = actual_count != len(violations)
+            else:
+                forbidden = (convex_subset(candidate, k) is not None if exhaustive else
+                             len(largest_convex_subset(candidate)) >= k)
             if not general_position(candidate) or forbidden:
                 raise AssertionError("Extension criterion disagrees with exact hull verification")
-            result.update(status="sat", coordinates=candidate,
+            result.update(status="near_miss" if violations else "sat", coordinates=candidate,
+                          convex_gons_count=actual_count if allowed_gons else 0,
                           candidate_check="exhaustive subsets" if exhaustive else "exact dynamic program",
-                          candidate_general_position_verified=True, candidate_avoids_gon_verified=True)
+                          candidate_subsets_checked=comb(len(candidate), k) if exhaustive else None,
+                          candidate_general_position_verified=True,
+                          candidate_avoids_gon_verified=not violations)
             break
-        if any(i in constraints for i in violations):
+        if sum(i in constraints for i in violations) > allowed_gons:
             raise AssertionError("Solver candidate violates an already asserted cut")
-        for i in violations:
-            solver.add(z3.Not(z3.PbEq([(evaluate(edge, x, y) < 0, 1) for edge in polygons[i]], 1)))
+        new_violations = [i for i in violations if i not in constraints][:batch_size]
+        for i in new_violations:
+            predicate = z3.PbEq([(evaluate(edge, x, y) < 0, 1) for edge in polygons[i]], 1)
+            if allowed_gons:
+                observed_violations.append(predicate)
+            else:
+                solver.add(z3.Not(predicate))
             constraints.add(i)
+        if allowed_gons:
+            solver.add(z3.AtMost(*observed_violations, allowed_gons))
         if rounds % 10 == 0:
             print(f"{rounds} rounds, {len(constraints)} polygon cuts", flush=True)
     else:
@@ -157,6 +175,8 @@ if __name__ == "__main__":
     parser.add_argument("--replace-index", type=int)
     parser.add_argument("--fast", action="store_true", help="Use exact DP for below-threshold fixtures")
     parser.add_argument("--integer-move", action="store_true")
+    parser.add_argument("--allowed-gons", type=int, default=0,
+                        help="Near-miss benchmark only; nonzero is not a counterexample")
     args = parser.parse_args()
     run(args.source, args.output, args.seconds, args.batch_size, args.replace_index, args.fast,
-        args.integer_move)
+        args.integer_move, args.allowed_gons)
