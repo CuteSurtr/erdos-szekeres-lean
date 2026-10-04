@@ -1,0 +1,56 @@
+{
+  "scope": "upstream ordinary-polygon CNF; not yet a theorem in our Lean project",
+  "gon": 6,
+  "points": 17,
+  "seed": 0,
+  "time_limit_seconds": 180,
+  "upstream_commit": "3073981d2aa5aa1e399b382e605c0ed12a0b69af",
+  "status": "unsat",
+  "artifacts": {
+    "cnf": {
+      "path": ".cache/sat/gon6-n17-seed0/instance.cnf",
+      "bytes": 245884,
+      "sha256": "0337faee791060837909c011affa61a11ca88a818b887639f95556b5efacb3ad"
+    },
+    "solver_log": {
+      "path": ".cache/sat/gon6-n17-seed0/solver.log",
+      "bytes": 36415,
+      "sha256": "00cbf82a3189c239937ebd84bf3d2466538b40412a07dc7e2e30e73bc0053bee"
+    },
+    "proof": {
+      "path": ".cache/sat/gon6-n17-seed0/proof.drat",
+      "bytes": 36417106,
+      "sha256": "750bf989f652a973184a16c9f13495b26abf2c3cb9ceb985ac18bec9fe489c88"
+    },
+    "checker_log": {
+      "path": ".cache/sat/gon6-n17-seed0/checker.log",
+      "bytes": 466,
+      "sha256": "43ec8a55c855f01ddd53e3bf70d696c97307b6c25082ff6f4c89c50abbcec872"
+    },
+    "variables": {
+      "path": ".cache/sat/gon6-n17-seed0/variables.txt",
+      "bytes": 22782,
+      "sha256": "cd280ec4f96527347d3a2e5b434494c4492358b70381b007c1062fbfca2b1df7"
+    }
+  },
+  "encoding_seconds": 4.541449000011198,
+  "variables": 2069,
+  "clauses": 17668,
+  "solver_version": "3.0.1",
+  "solver_commit": "c60730422e758ef1cebe7aeddf2dda31c996bf04",
+  "solver_command": [
+    "/workspace/erdos-szekeres-lean/.cache/cadical/build/cadical",
+    "--no-colors",
+    "--seed=0",
+    "-t",
+    "180",
+    "/workspace/erdos-szekeres-lean/.cache/sat/gon6-n17-seed0/instance.cnf",
+    "/workspace/erdos-szekeres-lean/.cache/sat/gon6-n17-seed0/proof.drat"
+  ],
+  "solver_seconds": 20.5507195830578,
+  "solver_exit_code": 20,
+  "checker_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+  "drat_verified": true,
+  "verification_scope": "independent C checker; not Lean certificate verification",
+  "reduction_audit": "upstream CNF conversion uses mathlibSorry; not axiom-free"
+}

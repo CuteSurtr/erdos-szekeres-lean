@@ -56,7 +56,13 @@ ordinary convex polygons as well as empty polygons. Relevant files under `Lean/`
 - `Geo/Gon/Encoding.lean`, `Assn.lean`, `TheMainTheorem.lean`: ordinary-polygon SAT reduction.
 
 Its `gon_theorem` assumes UNSAT of the generated CNF and derives a geometric
-upper bound. That hypothesis still requires a checked certificate. The inspected
+upper bound, but **the inspected revision also depends on `mathlibSorry`**, a
+placeholder axiom. A subsequent `#print axioms` audit found it in
+`LeanSAT.PropForm.toICnf_sat`; the geometric `symmetry_breaking` and
+`CanonicalPoints.satisfies_gonEncoding` theorems have only the three standard
+axioms. The placeholder cannot be imported into a fully verified result. Besides
+checking an UNSAT certificate, the conversion lemmas must be repaired or replaced.
+The inspected
 project pins Lean 4.7.0 and LeanSAT v4.7.0, so it is a porting candidate rather
 than a drop-in dependency for our 4.24 project. No upstream source has been
 copied into our tracked files; check licensing and preserve attribution before
@@ -95,7 +101,8 @@ a fixed grid bound.
 
 ## Next proof obligations
 
-1. Prove `orient a b c = 0 ↔ Collinear ℝ {a,b,c}`.
+1. **Done:** `OrientationGeometry.lean` proves
+   `orient a b c = 0 ↔ Collinear ℝ {a,b,c}`, including degenerate triples.
 2. Prove exact orientation tests equivalent to point-in-triangle membership in
    general position, then use Carathéodory for a finite convex-position checker.
 3. Certify the four-point lower-bound witness and the universal five-point theorem.
@@ -103,5 +110,9 @@ a fixed grid bound.
 5. Reproduce n = 5 and n = 6 before budgeting a 33-point search.
 
 The current Python hull algorithm has independent small-instance tests, but no
-Lean soundness theorem. No SAT solver was installed and no 33-point search was
-launched during this initial setup.
+Lean soundness theorem. The subsequent research checkpoint installed local
+CaDiCaL and drat-trim, reproduced UNSAT for the 9-point pentagon and 17-point
+hexagon CNFs with independently checked DRAT certificates, and launched the
+unrestricted 33-point heptagon CNF. See the JSON manifests in `experiments/`
+and `docs/COUNTING.md`. These computational results do not close the conversion
+axiom gap described above.

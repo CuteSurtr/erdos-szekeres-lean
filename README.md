@@ -9,7 +9,7 @@ A starting formalization of the convex polygon conjecture:
 is a `Prop` definition, not an assumed axiom or an unfinished theorem. Polygons
 here need not be empty: unselected points may lie inside them.
 
-Initial local validation: `lake build --wfail` passes, and all four Python tests
+Local validation: `lake build --wfail` passes, and all ten Python tests
 pass. The principal geometric lemmas and rational-area bridge were inspected with
 `#print axioms`: only `propext`, `Classical.choice`, and `Quot.sound` occur.
 The project contains no proof placeholders or additional axioms.
@@ -23,11 +23,21 @@ The project contains no proof placeholders or additional axioms.
   case, and the implication from a geometric counterexample to refutation.
 - `ErdosSzekeres/Orientation.lean`: signed area over a commutative ring, permutation
   and translation identities, and preservation of rational signed area in ℝ.
+- `ErdosSzekeres/OrientationGeometry.lean`: signed area is zero exactly when the
+  triple is collinear, and rational general position transfers to the real plane.
+- `ErdosSzekeres/Counting.lean`: exact binomial budget inequalities, with geometric
+  assumptions kept explicit.
+- `ErdosSzekeres/DyadicModel.lean`: telescoping and an exact all-scale coefficient
+  inequality for a restricted counting model.
 - `scripts/search.py`: exact integer-coordinate grid search using convex hulls.
 - `scripts/test_search.py`: geometric fixtures and an independent triangle-based
   convexity cross-check over small configurations.
 - `experiments/`: reproducible bounded-search results, explicitly not Lean proofs.
 - `docs/RESEARCH.md`: dependency map, references, computational limits and next steps.
+- `docs/COUNTING.md`: final HMPT benchmark, arithmetic experiments, and recent
+  research directions. These experiments have not improved the published bound.
+- `docs/SAT.md`: known-case SAT reproduction, certificate hashes, coordinate
+  realization, and the placeholder-axiom gap found in the upstream CNF conversion.
 
 ## Build
 
@@ -50,7 +60,9 @@ shell configuration. In this checkout, invoke Lake with:
 ELAN_HOME="$PWD/.elan" .elan/bin/lake build
 ```
 
-Python uses only the standard library. No SAT solver is required yet.
+Python uses only the standard library. The core tests do not require a SAT solver.
+Ignored local inspection tools include CaDiCaL, drat-trim, and the pinned
+EmptyHexagonLean development; these are separate from the main Lean dependency.
 
 ## First experiments
 
@@ -65,8 +77,8 @@ five-point threshold. Neither experiment resolves an open case.
 
 ## Next milestone
 
-Connect the determinant computation to Mathlib's `Collinear` and `convexHull`,
-then build a Lean-verified checker for rational witnesses. For universal finite
-cases, assess porting the existing ordinary-polygon SAT reduction in
+Connect the determinant computation to `convexHull` and build a Lean-verified
+checker for rational witnesses; the `Collinear` connection is now proved.
+For universal finite cases, repair or replace the CNF conversion in
 [EmptyHexagonLean](https://github.com/bsubercaseaux/EmptyHexagonLean), starting
-with known cases before attempting 33 points.
+with known cases. The 33-point search runs experimentally alongside this work.

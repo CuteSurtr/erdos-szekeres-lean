@@ -1,0 +1,68 @@
+{
+  "scope": "endpoint-only dyadic model; not a lower bound on ES(n)",
+  "minimum_squared": "128/9",
+  "minimizer": 2,
+  "all_t_proof": "ErdosSzekeres.DyadicModel.two_scales_optimal",
+  "rows": [
+    {
+      "doublings": 1,
+      "squared_exact": "16",
+      "coefficient_approx": 4.0
+    },
+    {
+      "doublings": 2,
+      "squared_exact": "128/9",
+      "coefficient_approx": 3.7712361663282534
+    },
+    {
+      "doublings": 3,
+      "squared_exact": "768/49",
+      "coefficient_approx": 3.958973274443148
+    },
+    {
+      "doublings": 4,
+      "squared_exact": "4096/225",
+      "coefficient_approx": 4.266666666666667
+    },
+    {
+      "doublings": 5,
+      "squared_exact": "20480/961",
+      "coefficient_approx": 4.616398405160856
+    },
+    {
+      "doublings": 6,
+      "squared_exact": "32768/1323",
+      "coefficient_approx": 4.97674106470233
+    },
+    {
+      "doublings": 7,
+      "squared_exact": "458752/16129",
+      "coefficient_approx": 5.333167997106576
+    },
+    {
+      "doublings": 8,
+      "squared_exact": "2097152/65025",
+      "coefficient_approx": 5.679037991647252
+    },
+    {
+      "doublings": 9,
+      "squared_exact": "9437184/261121",
+      "coefficient_approx": 6.011741682974559
+    },
+    {
+      "doublings": 10,
+      "squared_exact": "41943040/1046529",
+      "coefficient_approx": 6.330737681353706
+    },
+    {
+      "doublings": 11,
+      "squared_exact": "184549376/4190209",
+      "coefficient_approx": 6.63649005437016
+    },
+    {
+      "doublings": 12,
+      "squared_exact": "268435456/5589675",
+      "coefficient_approx": 6.929895099196211
+    }
+  ]
+}

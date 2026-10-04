@@ -1,2 +1,5 @@
 import ErdosSzekeres.Basic
 import ErdosSzekeres.Orientation
+import ErdosSzekeres.OrientationGeometry
+import ErdosSzekeres.Counting
+import ErdosSzekeres.DyadicModel
