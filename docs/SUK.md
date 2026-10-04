@@ -1,9 +1,11 @@
 # Full Suk formalization: dependency ledger
 
-Target: Theorem 1.1 of [Suk, arXiv:1604.08657v2](https://arxiv.org/pdf/1604.08657).
-`Suk.Theorem2016` defines the eventual upper bound with coefficient 6 and the
-paper's floor convention. **It is not yet proved.** No missing dependency is
-represented by an axiom, `sorry`, or a theorem whose name disguises assumptions.
+Completed result: Theorem 1.1 of [Suk, arXiv:1604.08657v2](https://arxiv.org/pdf/1604.08657).
+`Suk.theorem2016 : Suk.Theorem2016` proves the eventual upper bound with
+coefficient 6 and the paper's floor convention for arbitrary real point sets
+in general position. The full build and 77-theorem axiom audit pass; only
+`propext`, `Classical.choice`, and `Quot.sound` occur. There are no proof
+placeholders or additional axioms.
 
 ## Checked prerequisites
 
@@ -127,13 +129,17 @@ represented by an axiom, `sorry`, or a theorem whose name disguises assumptions.
   coarse extraction loss is 64(k+5) in the exponent. This is a horizontal
   cup/cap variant of the Pór–Valtr argument; the literal 32k constant in Suk's
   Theorem 2.4 has not been formalized.
+- `Suk/Asymptotic.lean`: takes a=ceil(n^(1/3)) and H=ceil(log₂(n+a²)),
+  bounds the integer exponent by n+6 n^(2/3) log₂(n), transfers the power bound
+  through natural floor, and proves that the necessary cutoffs hold eventually.
+  The final `theorem2016` has no hypotheses.
 - `OrientationGeometry.lean`: determinants versus collinearity; exact rational
   general position transfers to real geometry.
 
 The cups-caps and Dilworth prerequisites reuse attributed CC0 source. See
 `THIRD_PARTY.md`; this work does not claim their proofs as original research.
 
-## Checked finite bound and remaining asymptotic step
+## Checked finite bound and asymptotic assembly
 
 `cubic_log_bound` proves that, for n ≥ 4, a ≥ 2, and n ≤ a³,
 
@@ -148,14 +154,17 @@ The counting and coarsening approach is based on
 [Pór–Valtr (2002), §2](https://link.springer.com/content/pdf/10.1007/s00454-002-2894-1.pdf),
 with endpoint losses and horizontal symmetry checked explicitly.
 
-Still required: choose a near the real cube root of n, prove the eventual
-comparison of this integer exponent with n + 6 n^(2/3) log₂(n), and transfer the
-bound through the exact natural-floor convention in `Suk.Theorem2016`.
-The finite theorem alone is not a completed proof of that formal target.
+The final comparison is checked in `integer_parameters_fit_exponent` whenever
+n ≥ 4, n^(1/3) ≥ 4, and log₂(n) ≥ 100. With a=ceil(n^(1/3)), the proof uses
+a² ≤ 2 n^(2/3), a² ≤ n, H ≤ log₂(n)+2, and a(a+1)+5 ≤ 3a². These estimates
+absorb the coarse extraction constant within Suk's coefficient 6. The
+`coefficient_six_bound` theorem handles the exact natural floor, and divergence
+of the cube root and logarithm gives the eventual statement `theorem2016`.
 
-The numerical HMPT experiments in `COUNTING.md` do not discharge these remaining
-obligations. Full Suk is the primary milestone; a claimed new bound must also be
-compared against HMPT v3 and more recent literature, not only the 2016 exponent.
+This completes Suk's upper-bound result, not every intermediate statement in
+his paper with its original constants. The stronger final HMPT 2020 bound and
+a strict improvement remain unproved here. The numerical experiments in
+`COUNTING.md` are separate evidence and do not establish either result.
 
 ## Recent computational evidence
 

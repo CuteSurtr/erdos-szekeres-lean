@@ -11,7 +11,7 @@ here need not be empty: unselected points may lie inside them.
 
 Local validation: `lake build --wfail` passes, and all fifteen core Python tests
 pass (plus four optional Z3 tests locally). The principal geometric lemmas and rational-area bridge were inspected with
-`#print axioms`; CI also audits seventy-four geometric and combinatorial milestones. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
+`#print axioms`; CI also audits seventy-seven geometric and combinatorial milestones. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
 The project contains no proof placeholders or additional axioms.
 
 ## Current contents
@@ -46,7 +46,9 @@ The project contains no proof placeholders or additional axioms.
   `FiniteBound.lean` gives an unconditional geometric conclusion under explicit
   integer inequalities. `IntegerParameters.lean` specializes it to a closed
   exponential bound with cubic parameters (see `docs/SUK.md`).
-  The full asymptotic theorem is a defined proof target, **not yet proved**.
+  `Asymptotic.lean` proves **Suk's 2016 Theorem 1.1**: for all sufficiently
+  large n, at least floor(2^(n + 6 n^(2/3) log₂ n)) points in general position
+  force a convex n-gon. The theorem is `ErdosSzekeres.Suk.theorem2016`.
 - `ErdosSzekeres/HMPT/Statement.lean`: precise targets for the final 2020
   coefficient and a strict improvement; these are propositions, not proved bounds.
 - `scripts/repair_near_miss.py`: recorded single-vertex repair attempts on
@@ -107,12 +109,14 @@ five-point threshold. Neither experiment resolves an open case.
 
 ## Current milestone
 
-Fully formalize Suk's 2016 theorem. The finite geometric proof and a variant
-of the positive-fraction extraction are checked, with explicit exponential
-loss. The remaining bridge compares the integer parameter bound with Suk's
-eventual real exponent and floor convention. See `docs/SUK.md` for details.
-An original improvement must be compared against the final HMPT bound and later
-literature. No new geometric upper bound is claimed here.
+Suk's 2016 upper bound is now fully proved for arbitrary real point sets in
+general position. The proof includes a variant of positive-fraction extraction,
+the finite chain/antichain argument, integer rounding, and the final eventual
+estimate. See `docs/SUK.md` for the dependency ledger and exact scope.
+
+The research goal now continues toward an improvement over final HMPT 2020.
+Neither that theorem nor a strict improvement has been proved in this repository.
+The completed Suk formalization is not a new published-bound improvement.
 
 The rational witness checker and end-to-end SAT certificate conversion remain
 separate unfinished work; the upstream CNF conversion needs repair before its

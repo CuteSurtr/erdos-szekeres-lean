@@ -74,3 +74,6 @@ import ErdosSzekeres
 #print axioms ErdosSzekeres.Suk.exponential_density_condition
 #print axioms ErdosSzekeres.Suk.finite_exponential_bound
 #print axioms ErdosSzekeres.Suk.cubic_log_bound
+#print axioms ErdosSzekeres.Suk.integer_parameters_fit_exponent
+#print axioms ErdosSzekeres.Suk.coefficient_six_bound
+#print axioms ErdosSzekeres.Suk.theorem2016

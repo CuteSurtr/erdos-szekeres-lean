@@ -12,8 +12,8 @@ noncomputable def exponent (C : ℝ) (n : ℕ) : ℝ :=
 noncomputable def threshold (C : ℝ) (n : ℕ) : ℕ :=
   ⌊(2 : ℝ) ^ exponent C n⌋₊
 
-/-- Theorem 1.1 of arXiv:1604.08657v2 as a proof target.
-This is a proposition definition, not an axiom or a proved theorem. -/
+/-- Theorem 1.1 of arXiv:1604.08657v2, expressed as an eventual upper bound.
+The coefficient-6 instance is proved by `theorem2016` in `Suk/Asymptotic.lean`. -/
 def UpperBoundWithConstant (C : ℝ) : Prop :=
   ∃ n₀ : ℕ, 3 ≤ n₀ ∧ ∀ n : ℕ, n₀ ≤ n → ForcesConvexNGon (threshold C n) n
 

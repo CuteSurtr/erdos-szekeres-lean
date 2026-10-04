@@ -82,9 +82,9 @@ nonnegative leading coefficient. These are unproved propositions. Reducing a
 finite numerical surrogate or an unspecified term inside the published o(1)
 does not establish this target.
 
-The current formal work reaches the local geometric ingredients: the
-four-point separated-pair test and same-cell replacement step in the proof of
-Observation 3.5. Local spike orientation, chain cap extraction, and adjacent-chain gluing are
-now proved. The global extraction theorem, nonadjacent antichain geometry and
-asymptotic assembly remain unfinished; the library does not yet prove either
-full Suk or full HMPT.
+The library now proves Suk's 2016 upper bound end to end in
+`Suk/Asymptotic.lean`, including global extraction, both geometric cases,
+rounding, and the eventual estimate. The four-point separated-pair test and
+same-cell replacement step also provide local ingredients relevant to HMPT's
+Observation 3.5. Full HMPT and a strict improvement remain unproved. See
+`SUK.md` for the completed theorem's dependencies and exact scope.

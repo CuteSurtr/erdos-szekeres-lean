@@ -22,6 +22,11 @@ subfamilies, not a complete resolution. The 2026 paper
 also describes the general conjecture as open. Thus the first open computational
 target is 33 points forcing a convex heptagon.
 
+Formalization milestone: `Suk.theorem2016` now proves Suk's 2016 eventual
+upper bound with coefficient 6, including the complete real geometry and
+floor convention. See `SUK.md`. This reproduces a known theorem; the final
+HMPT 2020 bound and an improvement over it remain research goals.
+
 ## Installed mathematical dependencies
 
 Mathlib is the only direct Lake dependency. Its transitive packages are locked
