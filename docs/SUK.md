@@ -77,8 +77,26 @@ represented by an axiom, `sorry`, or a theorem whose name disguises assumptions.
   cardinalities, and it gives an n-gon once that sum reaches n. The local support
   condition is explicit: for every p there is q in its own selected part, with
   p ≠ q, and every other local z lies on the same strict side of pq as the
-  outer-base anchor. Deriving those supports from cups-caps extraction is still
-  outstanding; the theorem does not assert the full antichain case.
+  outer-base anchor. The extraction bridge below derives this condition.
+- `Suk/HorizontalSpike.lean`: each support spike of a horizontal cap lies
+  strictly between its two middle anchors in x-coordinate. Incomparable pairs
+  have distinct x-coordinates, and their pair-lines put the outer anchor below
+  the line when the pair is ordered from left to right.
+- `Suk/CapSupports.lean` and `Suk/AntichainExtraction.lean`: negative cap triples
+  give local supporting edges. Classical cups-caps extraction in an actual
+  spike antichain either gives an n-gon immediately or a b-point cap with
+  those supports. No local support condition is assumed by the extraction theorem.
+- `Suk/AntichainCase.lean`: the finite geometric antichain case. Pairwise
+  nonadjacent parts Q_i in a horizontal clockwise support sequence give an
+  n-gon if each is a triangle-order antichain with
+  |Q_i| > C(n+b−4,n−2), n ≥ 3, b ≥ 3, and the number of parts times b reaches n.
+- `Suk/SpikeDichotomy.lean` and `Suk/FiniteSupport.lean`: both cases are now
+  assembled. Given n ≥ 4, K,b ≥ 3, n ≤ rK, n ≤ tb, and t(r+1) ≤ k, a horizontal
+  clockwise sequence of k+3 anchors in a general-position ambient set P forces
+  an n-gon whenever each of its k interior spikes contains more than
+  2^(n+K−4) C(n+b−4,n−2) points of P. Dilworth supplies the geometric chains
+  and antichains; region selection chooses the applicable case. The statement
+  assumes the populated support configuration, not an n-gon or a gluing result.
 - `Suk/RegionSelection.lean`: if k ≥ t(r+1), either r consecutive indices have
   a chosen property, or there are t pairwise nonadjacent indices without it.
 - `Suk/ExtractionCounting.lean`: double counting gives an unconditional density
@@ -99,10 +117,8 @@ The cups-caps and Dilworth prerequisites reuse attributed CC0 source. See
 2. Supply the clockwise anchor sequence from the global positive-fraction
    extraction, including cup/cap symmetry. Local frames and adjacency now follow
    from that sequence, including separation for the nonadjacent antichain case.
-3. The nonadjacent antichain case: extract the local caps and derive their
-   supporting-edge condition. Their geometric union and cardinality are proved
-   under that explicit local condition.
-4. Integer ceilings, floors and all eventual numerical inequalities; assemble the
+3. Integer ceilings, floors and all eventual numerical inequalities; specialize
+   the checked finite support theorem and assemble the
    unconditional geometric conclusion `Suk.Theorem2016`.
 
 The numerical HMPT experiments in `COUNTING.md` do not discharge these geometric

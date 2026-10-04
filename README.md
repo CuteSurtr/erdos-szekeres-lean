@@ -11,7 +11,7 @@ here need not be empty: unselected points may lie inside them.
 
 Local validation: `lake build --wfail` passes, and all fifteen core Python tests
 pass (plus four optional Z3 tests locally). The principal geometric lemmas and rational-area bridge were inspected with
-`#print axioms`; CI also audits forty-four geometric and combinatorial milestones. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
+`#print axioms`; CI also audits fifty-two geometric and combinatorial milestones. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
 The project contains no proof placeholders or additional axioms.
 
 ## Current contents
@@ -37,9 +37,10 @@ The project contains no proof placeholders or additional axioms.
   adjacent-chain gluing, growth to n vertices, and terminal small-cap cases.
   Finite-set chains and a clockwise support sequence supply the ordering and
   adjacency data. The quadrilateral proof exhausts all sixteen orientation-sign cases.
-  Antichain pair-lines miss all nonadjacent spikes, and local supporting edges
-  give a convex union with additive cardinality. Extracting caps with those local
-  supports is still required to complete the antichain case.
+  The finite antichain case is also checked: extraction supplies its local
+  supporting edges, and nonadjacent caps glue with additive cardinality.
+  `FiniteSupport.lean` combines both cases and Dilworth into one geometric
+  theorem for a sufficiently populated horizontal support configuration.
   The full asymptotic theorem is a defined proof target, **not yet proved**.
 - `ErdosSzekeres/HMPT/Statement.lean`: precise targets for the final 2020
   coefficient and a strict improvement; these are propositions, not proved bounds.

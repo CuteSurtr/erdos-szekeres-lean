@@ -44,3 +44,11 @@ import ErdosSzekeres
 #print axioms ErdosSzekeres.Suk.convexPosition_of_pair_supports
 #print axioms ErdosSzekeres.Suk.ClockwiseAnchors.convexPosition_union_antichain_caps_of_supports
 #print axioms ErdosSzekeres.Suk.ClockwiseAnchors.hasConvexNGon_union_antichain_caps_of_supports
+#print axioms ErdosSzekeres.Suk.CapFrame.spike_x_bounds
+#print axioms ErdosSzekeres.Suk.CapFrame.incomparable_distinct_x
+#print axioms ErdosSzekeres.Suk.CapFrame.incomparable_anchor_negative
+#print axioms ErdosSzekeres.Suk.pair_supports_of_negative_cap
+#print axioms ErdosSzekeres.Suk.CapFrame.antichain_cup_cap
+#print axioms ErdosSzekeres.Suk.ClockwiseAnchors.antichain_case
+#print axioms ErdosSzekeres.Suk.CapFrame.spike_chain_or_antichain
+#print axioms ErdosSzekeres.Suk.ClockwiseAnchors.finite_support_bound
