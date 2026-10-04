@@ -29,10 +29,15 @@ The project contains no proof placeholders or additional axioms.
   assumptions kept explicit.
 - `ErdosSzekeres/DyadicModel.lean`: telescoping and an exact all-scale coefficient
   inequality for a restricted counting model.
+- `ErdosSzekeres/Suk/`: checked four-point criterion, classical cups-caps bound,
+  Dilworth consequence, and normalized triangle order with antichain separation.
+  The full asymptotic theorem is a defined proof target, **not yet proved**.
 - `scripts/search.py`: exact integer-coordinate grid search using convex hulls.
 - `scripts/test_search.py`: geometric fixtures and an independent triangle-based
   convexity cross-check over small configurations.
 - `experiments/`: reproducible bounded-search results, explicitly not Lean proofs.
+- `docs/SUK.md`: dependency ledger for the full 2016 theorem.
+- `docs/THIRD_PARTY.md`: attribution and licenses for adapted prerequisites.
 - `docs/RESEARCH.md`: dependency map, references, computational limits and next steps.
 - `docs/COUNTING.md`: final HMPT benchmark, arithmetic experiments, and recent
   research directions. These experiments have not improved the published bound.
@@ -75,10 +80,15 @@ These are small regression experiments. Exhausting one grid does not exhaust
 all planar configurations, and the four-point example is below the conjectured
 five-point threshold. Neither experiment resolves an open case.
 
-## Next milestone
+## Current milestone
 
-Connect the determinant computation to `convexHull` and build a Lean-verified
-checker for rational witnesses; the `Collinear` connection is now proved.
-For universal finite cases, repair or replace the CNF conversion in
-[EmptyHexagonLean](https://github.com/bsubercaseaux/EmptyHexagonLean), starting
-with known cases. The 33-point search runs experimentally alongside this work.
+Fully formalize Suk's 2016 theorem, including the positive-fraction partition,
+support-region geometry, and explicit eventual estimates. See `docs/SUK.md` for
+proved dependencies and remaining obligations. The classical binomial bound is
+now checked for arbitrary real point sets, but is much weaker than Suk's bound.
+An original improvement must be compared against the final HMPT bound and later
+literature. No new geometric upper bound is claimed here.
+
+The rational witness checker and end-to-end SAT certificate conversion remain
+separate unfinished work; the upstream CNF conversion needs repair before its
+UNSAT results can become complete Lean proofs. Search timeouts are inconclusive.

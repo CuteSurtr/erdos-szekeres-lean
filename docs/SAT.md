@@ -62,6 +62,7 @@ Initial known-case regression results:
 | 9 | pentagon | 248 | 818 | UNSAT; DRAT verified |
 | 16 | hexagon | 1,672 | 13,156 | SAT; see realization manifest |
 | 17 | hexagon | 2,069 | 17,668 | UNSAT in about 21 seconds; DRAT verified |
+| 32 | heptagon | 34,817 | 372,233 | SAT; geometric realization unresolved |
 | 33 | heptagon | 38,483 | 424,470 | Search status in `gon7-n33-seed0.json` |
 
 ## Coordinate realization
@@ -77,10 +78,20 @@ python3 -m venv .cache/solver-venv
 Following the fixed-abscissa idea discussed in
 [Koshelev–Koshka, §5.2](https://arxiv.org/html/2604.20120v1), fix xᵢ=i (or use
 `--base 2` for exponential abscissae), solve linear inequalities for rational yᵢ,
-and clear their denominators. Our implementation realizes one SAT model at a
-time; the paper also discusses searching across models jointly. The original
+and clear their denominators. By default the implementation realizes one SAT model. With `--joint`, it searches
+the Boolean CNF assignments and rational heights together, retaining the fixed
+x-grid restriction. The original
 CNF assignment, every orientation sign, general position, and absence of the
 forbidden polygon are checked independently using exact Python integers.
 Failure to realize a model on one x-grid does not prove nonrealizability in general.
 Success below a known threshold is a regression witness, not a counterexample
 to the conjecture.
+
+Joint searches found exactly verified integer witnesses with 8 points avoiding
+pentagons and 16 points avoiding hexagons (both uniform and exponential x-grids).
+Five-minute joint searches on the uniform x-grid for 32 and 33 points avoiding
+heptagons returned UNKNOWN. These do not establish infeasibility, even on that grid.
+
+```sh
+.cache/solver-venv/bin/python scripts/realize_model.py experiments/gon6-n16-seed0.json --joint
+```

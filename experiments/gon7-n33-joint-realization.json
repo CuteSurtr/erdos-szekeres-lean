@@ -1,0 +1,12 @@
+{
+  "scope": "all models of the canonical upstream CNF on one fixed x-grid",
+  "source_manifest": "experiments/gon7-n33-seed0.json",
+  "points": 33,
+  "gon": 7,
+  "x_grid_base": 1,
+  "cnf_clauses_independently_checked": null,
+  "z3_version": "5.1.0",
+  "status": "unknown",
+  "seconds": 300.0457781669684,
+  "reason": "timeout"
+}

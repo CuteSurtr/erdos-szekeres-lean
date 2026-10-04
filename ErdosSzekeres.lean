@@ -3,3 +3,8 @@ import ErdosSzekeres.Orientation
 import ErdosSzekeres.OrientationGeometry
 import ErdosSzekeres.Counting
 import ErdosSzekeres.DyadicModel
+import ErdosSzekeres.Suk.FourPoint
+import ErdosSzekeres.Suk.ChainAntichain
+import ErdosSzekeres.Suk.CupsCaps
+import ErdosSzekeres.Suk.Statement
+import ErdosSzekeres.Suk.TriangleOrder

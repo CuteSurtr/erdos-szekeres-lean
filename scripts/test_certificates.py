@@ -28,12 +28,19 @@ class CertificateTests(unittest.TestCase):
             self.assertEqual(read_model(model), {1: False, 2: True, 3: False})
 
     def test_saved_integer_witness(self):
-        path = Path(__file__).resolve().parents[1] / "experiments/gon5-n8-realization.json"
-        result = json.loads(path.read_text())
-        points = [tuple(p) for p in result["coordinates"]]
-        self.assertEqual(len(points), 8)
-        self.assertTrue(general_position(points))
-        self.assertIsNone(convex_subset(points, 5))
+        root = Path(__file__).resolve().parents[1] / "experiments"
+        for filename, size, gon in (
+            ("gon5-n8-realization.json", 8, 5),
+            ("gon5-n8-joint-realization.json", 8, 5),
+            ("gon6-n16-joint-realization.json", 16, 6),
+            ("gon6-n16-joint-base2.json", 16, 6),
+        ):
+            with self.subTest(filename=filename):
+                result = json.loads((root / filename).read_text())
+                points = [tuple(p) for p in result["coordinates"]]
+                self.assertEqual(len(points), size)
+                self.assertTrue(general_position(points))
+                self.assertIsNone(convex_subset(points, gon))
 
 
 if __name__ == "__main__":

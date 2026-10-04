@@ -1,0 +1,82 @@
+{
+  "scope": "all models of the canonical upstream CNF on one fixed x-grid",
+  "source_manifest": "experiments/gon6-n16-seed0.json",
+  "points": 16,
+  "gon": 6,
+  "x_grid_base": 1,
+  "cnf_clauses_independently_checked": 13156,
+  "z3_version": "5.1.0",
+  "status": "sat",
+  "seconds": 0.42838479089550674,
+  "coordinates": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      2070880
+    ],
+    [
+      3,
+      4140836
+    ],
+    [
+      4,
+      6211464
+    ],
+    [
+      5,
+      8252020
+    ],
+    [
+      6,
+      10347080
+    ],
+    [
+      7,
+      12420240
+    ],
+    [
+      8,
+      14504140
+    ],
+    [
+      9,
+      16563134
+    ],
+    [
+      10,
+      18566940
+    ],
+    [
+      11,
+      20628895
+    ],
+    [
+      12,
+      22788920
+    ],
+    [
+      13,
+      24860220
+    ],
+    [
+      14,
+      26931940
+    ],
+    [
+      15,
+      28855680
+    ]
+  ],
+  "general_position": true,
+  "all_orientation_signs_match": true,
+  "forbidden_polygon": null,
+  "exact_witness_verified": true,
+  "verification": "independent exact Python integers; not yet Lean-certified"
+}

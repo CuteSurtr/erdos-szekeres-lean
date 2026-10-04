@@ -54,23 +54,24 @@ def check_cnf(path, model):
     return count
 
 
-def realize(manifest, seconds, base):
+def realize(manifest, seconds, base, joint=False):
     import z3
     root = Path(__file__).resolve().parents[1]
     info = json.loads(manifest.read_text())
-    if info["status"] != "sat":
+    if info["status"] != "sat" and not joint:
         raise ValueError("A SAT result is required")
     out = root / info["artifacts"]["cnf"]["path"]
     folder = out.parent
-    model = read_model(folder / "solver.log")
-    clause_count = check_cnf(out, model)
+    model = None if joint else read_model(folder / "solver.log")
+    clause_count = None if joint else check_cnf(out, model)
+    literals = {i: z3.Bool(f"v{i}") for i in range(1, info["variables"]+1)} if joint else None
     n = info["points"]
     signs = {(0, b, c): True for b, c in combinations(range(1, n), 2)}
     for variable, line in enumerate((folder / "variables.txt").read_text().splitlines(), 1):
         fields = list(map(int, line.split()))
         if fields[:2] == [0, 0]:
             a, b, c = fields[2:]
-            signs[a+1, b+1, c+1] = model[variable]
+            signs[a+1, b+1, c+1] = literals[variable] if joint else model[variable]
     if set(signs) != set(combinations(range(n), 3)):
         raise ValueError("Unexpected orientation variable map")
     if base < 1:
@@ -79,13 +80,33 @@ def realize(manifest, seconds, base):
     ys = [z3.Real(f"y{i}") for i in range(n)]
     solver = z3.Solver()
     solver.set(timeout=seconds * 1000)
+    if joint:
+        clause, batch = [], []
+        with out.open() as stream:
+            for line in stream:
+                if line.startswith(("c", "p")) or not line.strip():
+                    continue
+                for literal in map(int, line.split()):
+                    if literal:
+                        clause.append(literals[literal] if literal > 0 else z3.Not(literals[-literal]))
+                    else:
+                        batch.append(z3.Or(clause))
+                        clause = []
+                        if len(batch) == 2000:
+                            solver.add(batch)
+                            batch = []
+        if clause:
+            raise ValueError("Unterminated DIMACS clause")
+        solver.add(batch)
     solver.add(ys[0] == 0, ys[1] == 0)
     for (a, b, c), positive in signs.items():
         area = (xs[b]-xs[a])*(ys[c]-ys[a]) - (ys[b]-ys[a])*(xs[c]-xs[a])
-        solver.add(area >= 1 if positive else area <= -1)
+        solver.add(z3.If(positive, area >= 1, area <= -1) if joint else
+                   (area >= 1 if positive else area <= -1))
     started = time.monotonic()
     status = solver.check()
-    result = {"scope": "one abstract model and one fixed x-grid",
+    result = {"scope": ("all models of the canonical upstream CNF on one fixed x-grid" if joint
+                        else "one abstract model and one fixed x-grid"),
               "source_manifest": str(manifest.relative_to(root)), "points": n,
               "gon": info["gon"], "x_grid_base": base,
               "cnf_clauses_independently_checked": clause_count,
@@ -93,6 +114,10 @@ def realize(manifest, seconds, base):
               "seconds": time.monotonic() - started}
     if status == z3.sat:
         solution = solver.model()
+        if joint:
+            model = {i: z3.is_true(solution.eval(v, model_completion=True)) for i, v in literals.items()}
+            result["cnf_clauses_independently_checked"] = check_cnf(out, model)
+            signs = {t: (s if isinstance(s, bool) else z3.is_true(solution.eval(s))) for t, s in signs.items()}
         rational = [Fraction(str(solution.eval(y))) for y in ys]
         denominator = lcm(*(y.denominator for y in rational))
         points = [(x, int(y*denominator)) for x, y in zip(xs, rational)]
@@ -116,5 +141,6 @@ if __name__ == "__main__":
     parser.add_argument("manifest", type=Path)
     parser.add_argument("--seconds", type=int, default=60)
     parser.add_argument("--base", type=int, default=1)
+    parser.add_argument("--joint", action="store_true", help="Search over all CNF models and coordinates together")
     args = parser.parse_args()
-    print(json.dumps(realize(args.manifest.resolve(), args.seconds, args.base), indent=2))
+    print(json.dumps(realize(args.manifest.resolve(), args.seconds, args.base, args.joint), indent=2))
