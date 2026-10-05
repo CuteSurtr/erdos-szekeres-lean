@@ -29,3 +29,6 @@ import ErdosSzekeres.HMPT.Entropy
 import ErdosSzekeres.HMPT.Asymptotic
 import ErdosSzekeres.HMPT.MixedCapGeometry
 import ErdosSzekeres.ConvexCycleCuts
+import ErdosSzekeres.OrientationPackets
+import ErdosSzekeres.OmissionCertificates
+import ErdosSzekeres.OmissionPacking

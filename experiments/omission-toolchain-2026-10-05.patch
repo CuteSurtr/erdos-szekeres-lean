@@ -1,0 +1,20 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index d77493e..29cb400 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -2,0 +3,3 @@ project(RoundingSat2)
++if(POLICY CMP0167)
++    cmake_policy(SET CMP0167 OLD)
++endif()
+diff --git a/cmake/soplex_build_and_load.cmake b/cmake/soplex_build_and_load.cmake
+index ef9d720..587360a 100644
+--- a/cmake/soplex_build_and_load.cmake
++++ b/cmake/soplex_build_and_load.cmake
+@@ -21,0 +22 @@ if(NOT EXISTS ${soplex_targets} OR NOT EXISTS ${soplex_config})
++        -DCMAKE_OSX_SYSROOT=${CMAKE_OSX_SYSROOT}
+@@ -37 +38 @@ if(NOT EXISTS ${soplex_targets} OR NOT EXISTS ${soplex_config})
+-    execute_process(COMMAND ${CMAKE_COMMAND} -G "${CMAKE_GENERATOR}" .
++    execute_process(COMMAND ${CMAKE_COMMAND} -G "${CMAKE_GENERATOR}" -DCMAKE_OSX_SYSROOT=${CMAKE_OSX_SYSROOT} .
+@@ -43 +44 @@ if(NOT EXISTS ${soplex_targets} OR NOT EXISTS ${soplex_config})
+-    execute_process(COMMAND ${CMAKE_COMMAND} --build . -j
++    execute_process(COMMAND ${CMAKE_COMMAND} --build . -j4

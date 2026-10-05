@@ -1,5 +1,19 @@
 import ErdosSzekeres
 
+#print axioms ErdosSzekeres.packetValid_iff_eight_patterns
+#print axioms ErdosSzekeres.packetValid_of_xordered
+#print axioms ErdosSzekeres.OmissionCertificates.weighted_capacity_bound
+#print axioms ErdosSzekeres.OmissionCertificates.excludes_budget
+#print axioms ErdosSzekeres.OmissionCertificates.sum_after_fixing
+#print axioms ErdosSzekeres.OmissionCertificates.conditioned_excludes_budget
+#print axioms ErdosSzekeres.OmissionCertificates.CertificateTree.check_sound
+#print axioms ErdosSzekeres.OmissionCertificates.CertificateTree.excludes_of_check
+#print axioms ErdosSzekeres.OmissionCertificates.triangle_excludes_one
+#print axioms ErdosSzekeres.OmissionCertificates.pack_succ
+#print axioms ErdosSzekeres.OmissionCertificates.pack_injective_of_lt
+#print axioms ErdosSzekeres.OmissionCertificates.pack_load
+#print axioms ErdosSzekeres.OmissionCertificates.load_eq_of_packed
+
 #print axioms ErdosSzekeres.hasConvexNGon_of_positive_cycle
 #print axioms ErdosSzekeres.convexCycleCut_of_avoids
 

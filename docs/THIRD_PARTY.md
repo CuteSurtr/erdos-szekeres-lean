@@ -34,3 +34,22 @@ upstream cap-cup theorem gives consecutive-triple paths for arbitrary colorings.
 `Suk/TransitiveColoring.lean` supplies a separate proved path-to-clique bridge
 under transitivity, then derives the clique upper bound needed in Suk's proof.
 No ETV extremal theorem or enumeration certificate is imported.
+
+## Finite octagon search inputs
+
+The omission-row experiments use Michael Schroeder's version-1 archive,
+[*Erdős–Szekeres: Upper Bounds for Convex Heptagons and Octagons*,
+19 September 2026](https://doi.org/10.5281/zenodo.22842891).
+Its data and prose are distributed under CC BY 4.0, its original code under
+MIT, and its Baek port under Apache-2.0. The complete archive remains an ignored
+local inspection dependency; none of its Lean modules is imported.
+
+The source catalogue hashes are recorded in the experiment manifests. Our
+prefix enumeration and stronger-budget tree searches use those catalogues
+and, for tree refinement, extend the published branch trees with newly found
+integer certificates. This is an adaptation of the data, not an endorsement
+by the author. The arithmetic checker and `OmissionCertificates.lean` were
+implemented independently. Their mathematical weighted-capacity argument is
+the one used by the source's omission certificates. See `OMISSION.md` for the
+precise boundary between reproduced data, newly proved lemmas, and unproved
+geometric transfer.

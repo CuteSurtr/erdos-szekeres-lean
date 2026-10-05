@@ -205,3 +205,21 @@ obtained. To reproduce a bounded probe after extracting the verified archive:
   .cache/schroeder-release/es7_es8_bounds_81_319_v1/certificates/balanced.json \
   --output fresh-balanced-probe.json --holes 59 --seconds 180 --seed 1
 ```
+
+The next checkpoint adds an independent integer tree checker, a Lean proof of
+the weighted-capacity inequality, and proof-logging OPB searches. HiGHS reports
+both tighter budgets infeasible numerically; the two 600-second RoundingSat
+runs remained UNKNOWN. Numerical infeasibility is discovery evidence only.
+Exact-leaf tree refinement now saves its unresolved branches for continuation.
+See [`OMISSION.md`](OMISSION.md) for the checked statements, remaining gaps,
+and reproduction commands, and `experiments/omission-2026-10-05.json` for the
+recorded runs. No improved planar upper bound is asserted.
+
+Both stronger-budget trees have since completed and passed exact integer
+replay: 9,862 balanced leaves and 145,474 residual leaves. They establish finite
+occupancy bounds 192 and 123 for the literal row systems. Both full certificates
+are stored compressed in `experiments/`. A proved recursive Lean checker and
+packed-coefficient lemmas now support the next step, but the full concrete
+trees have not yet been evaluated in Lean and the geometric transfer remains
+unformalized here. Thus ES(8) ≤ 317 is a candidate consequence, not a theorem
+claimed by this repository.

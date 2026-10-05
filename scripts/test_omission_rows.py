@@ -1,6 +1,7 @@
 """Finite relaxation controls; none asserts a geometric Erdős–Szekeres result."""
 import importlib.util
 import json
+from itertools import product
 from pathlib import Path
 import tempfile
 import unittest
@@ -24,6 +25,40 @@ class OmissionRowTests(unittest.TestCase):
 
 @unittest.skipUnless(importlib.util.find_spec("z3"), "optional Z3 dependency")
 class OmissionSolverTests(unittest.TestCase):
+    def test_cnf_against_all_original_assignments(self):
+        import z3
+        from omission_cnf import encode, hole_variables
+
+        def check(n, rows, budget, alternatives=None):
+            dimacs = encode(n, rows, budget, alternatives)
+            mapping = hole_variables(dimacs)
+            header = next(s for s in dimacs.splitlines() if s.startswith("p cnf")).split()
+            variables = {i: z3.Bool(f"v{i}") for i in range(1, int(header[2]) + 1)}
+            solver = z3.Solver()
+            for line in dimacs.splitlines():
+                if line.startswith(("c", "p")) or not line.strip():
+                    continue
+                literals = list(map(int, line.split()))
+                self.assertEqual(literals[-1], 0)
+                solver.add(z3.Or([variables[x] if x > 0 else z3.Not(variables[-x])
+                                  for x in literals[:-1]]))
+            for bits in product((False, True), repeat=n):
+                solver.push()
+                for label, variable in mapping.items():
+                    solver.add(variables[variable] == bits[label])
+                missing = [i for i, bit in enumerate(bits) if bit]
+                expected = valid_holes(n, rows, budget, missing) and (alternatives is None or
+                    any(set(s).isdisjoint(missing) for s in alternatives))
+                self.assertEqual(solver.check() == z3.sat, expected)
+                solver.pop()
+
+        for n in range(1, 6):
+            rows = [(list(range(n)), n // 2)]
+            for budget in range(n + 1):
+                check(n, rows, budget)
+                if n >= 3:
+                    check(n, rows + [([0, 2], 1)], budget, [[0, 1], [1, 2]])
+
     def check(self, budget):
         with tempfile.TemporaryDirectory() as folder:
             source, output = (Path(folder)/s for s in ("source.json", "output.json"))

@@ -10,9 +10,9 @@ convex polygon conjecture:
 is a `Prop` definition, not an assumed axiom or an unfinished theorem. Polygons
 here need not be empty: unselected points may lie inside them.
 
-Local validation: `lake build --wfail` passes, and all 22 core Python tests
-pass (plus eleven optional Z3 tests locally). The principal geometric lemmas and rational-area bridge were inspected with
-`#print axioms`; CI also audits 178 geometric, combinatorial, and asymptotic milestones. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
+Local validation: `lake build --wfail` passes, and all 28 core Python tests
+pass (plus twelve optional Z3 tests and one HiGHS test locally). The principal geometric lemmas and rational-area bridge were inspected with
+`#print axioms`; CI also audits 191 geometric, combinatorial, and asymptotic milestones. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
 The project contains no proof placeholders or additional axioms.
 
 ## Current contents
@@ -95,6 +95,19 @@ The project contains no proof placeholders or additional axioms.
 - `scripts/omission_row_probe.py`: bounded Boolean searches on finite omission
   constraints, with exact checks of any returned hole assignment. These
   relaxations do not by themselves supply planar realizations or upper bounds.
+- `OrientationPackets.lean`: the eight allowed four-point orientation patterns
+  and their necessity for x-ordered real points. The finite prefix search uses
+  this condition; its enumeration and rank semantics are not yet certified.
+- `OmissionCertificates.lean`: an exact weighted-capacity inequality, reduction
+  under fixed assignments, and a proved recursive certificate checker.
+  `scripts/omission_tree.py` independently replays
+  both published octagon omission trees using integer arithmetic. The concrete
+  trees, JSON traversal, and geometric transfer are not yet checked in Lean.
+  Proof-logging OPB searches and resumable exact-leaf tree searches are described
+  in `docs/OMISSION.md`. Complete integer certificates now exclude the stronger
+  budgets 59 and 30, giving finite occupancy bounds 192 and 123. Their full Lean
+  evaluation and geometric transfer remain open. `OmissionPacking.lean` proves
+  a faster coefficient check; one actual leaf has passed kernel checking.
 - `scripts/mutation_campaign.py`: bounded, recorded exploration of point moves.
 - `scripts/replay_smt.py`: corroboration of extension formulas with cvc5.
 - `scripts/test_search.py`: geometric fixtures and an independent triangle-based
