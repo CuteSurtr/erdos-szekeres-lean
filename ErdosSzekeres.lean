@@ -23,3 +23,4 @@ import ErdosSzekeres.Suk.AntichainCaps
 import ErdosSzekeres.Suk.FiniteSupport
 import ErdosSzekeres.Suk.IntegerParameters
 import ErdosSzekeres.Suk.Asymptotic
+import ErdosSzekeres.HMPT.ExponentialBound

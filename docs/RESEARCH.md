@@ -27,6 +27,12 @@ upper bound with coefficient 6, including the complete real geometry and
 floor convention. See `SUK.md`. This reproduces a known theorem; the final
 HMPT 2020 bound and an improvement over it remain research goals.
 
+On 2026-10-05, `HMPT.integer_product_bound` completed a finite product-method
+bound for every n ≥ 4 and positive region count. This includes actual geometric
+maxima, adjacent-cap and parity budgets, extraction, and a computable exponent.
+The missing general convex-subset/two-scale bridge and asymptotic optimization
+are recorded in [`HMPT.md`](HMPT.md); the final 2020 coefficient is not claimed.
+
 ## Installed mathematical dependencies
 
 Mathlib is the only direct Lake dependency. Its transitive packages are locked

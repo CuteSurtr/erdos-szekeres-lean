@@ -11,7 +11,7 @@ here need not be empty: unselected points may lie inside them.
 
 Local validation: `lake build --wfail` passes, and all fifteen core Python tests
 pass (plus four optional Z3 tests locally). The principal geometric lemmas and rational-area bridge were inspected with
-`#print axioms`; CI also audits seventy-seven geometric and combinatorial milestones. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
+`#print axioms`; CI also audits ninety-eight geometric and combinatorial milestones. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
 The project contains no proof placeholders or additional axioms.
 
 ## Current contents
@@ -51,8 +51,16 @@ The project contains no proof placeholders or additional axioms.
   force a convex n-gon. The theorem is `ErdosSzekeres.Suk.theorem2016`.
 - `ErdosSzekeres/HMPT/Statement.lean`: precise targets for the final 2020
   coefficient and a strict improvement; these are propositions, not proved bounds.
+- `ErdosSzekeres/HMPT/`: the finite product method is now checked for real point
+  sets, including attained geometric maxima, adjacent and parity cap budgets,
+  product counting, and extraction. `integer_product_bound` gives a computable
+  sufficient exponent for every n ≥ 4 and positive region count. Endpoint and
+  padding losses are explicit; the final 2020 coefficient is still unproved.
+  See `docs/HMPT.md` for the exact formula and remaining dependencies.
 - `scripts/repair_near_miss.py`: recorded single-vertex repair attempts on
   configurations with a small number of forbidden polygons.
+- `scripts/product_bound_search.py`: exact integer search of the proved finite
+  product formula, with independent checks of the original density inequality.
 - `scripts/search.py`: exact integer-coordinate grid search using convex hulls.
 - `scripts/extend_configuration.py`: full-plane extension and point replacement
   for fixed realizable configurations, with exact candidate verification.
@@ -115,7 +123,8 @@ the finite chain/antichain argument, integer rounding, and the final eventual
 estimate. See `docs/SUK.md` for the dependency ledger and exact scope.
 
 The research goal now continues toward an improvement over final HMPT 2020.
-Neither that theorem nor a strict improvement has been proved in this repository.
+The geometric product argument now yields a complete finite upper-bound formula.
+Neither the final 2020 asymptotic theorem nor a strict improvement has been proved.
 The completed Suk formalization is not a new published-bound improvement.
 
 The rational witness checker and end-to-end SAT certificate conversion remain

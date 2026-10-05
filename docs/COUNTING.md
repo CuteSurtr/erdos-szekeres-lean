@@ -1,6 +1,6 @@
 # Counting experiments and the current benchmark
 
-Research checkpoint: 2026-10-04. No new Erdős–Szekeres upper bound is claimed.
+Research checkpoint: 2026-10-05. No improvement over the published bound is claimed.
 
 ## Read the final versions
 
@@ -21,7 +21,11 @@ alone would misidentify an already published improvement as new.
 In the horizontal-chain budget, put mᵢ = cᵢ−1, d = n−2 and
 M = 2(n−1)−k. If Σmᵢ ≤ M, the product is bounded by choose(M+kd,M).
 The Lean theorem `combine_budgets` exposes the extraction, part-size, and budget
-hypotheses explicitly. Their geometric justification is not proved here.
+hypotheses explicitly. The newer `HMPT/` modules derive geometric part-size and
+cap budgets for horizontal support paths, with explicit endpoint and padding
+losses, and combine them with extraction into a complete finite bound. See
+[`HMPT.md`](HMPT.md). The sharper cyclic and two-scale counting bridge used for
+the final published coefficient remains unfinished.
 
 `scripts/counting_experiments.py` compares this compression with coarser
 arithmetic bounds and with balanced allocations under parity budgets. Binomial
@@ -86,5 +90,6 @@ The library now proves Suk's 2016 upper bound end to end in
 `Suk/Asymptotic.lean`, including global extraction, both geometric cases,
 rounding, and the eventual estimate. The four-point separated-pair test and
 same-cell replacement step also provide local ingredients relevant to HMPT's
-Observation 3.5. Full HMPT and a strict improvement remain unproved. See
+Observation 3.5. The finite geometric product method is now checked as well.
+Full HMPT and a strict improvement remain unproved. See
 `SUK.md` for the completed theorem's dependencies and exact scope.
