@@ -1,8 +1,12 @@
-# HMPT product-method formalization
+# HMPT 2020 upper bound in Lean
 
-Checkpoint: 2026-10-05. The finite product argument below is proved for ordinary
-real point sets. **The final HMPT 2020 asymptotic coefficient and a strict
-improvement remain unproved.**
+Checkpoint: 2026-10-05. **The final HMPT 2020 asymptotic coefficient is proved
+for ordinary real point sets** by `ErdosSzekeres.HMPT.theorem2020`. For every
+ε > 0, all sufficiently large n satisfy
+
+    ForcesConvexNGon floor(2^(n + (8√2/3 + ε)√(n log₂ n))) n.
+
+This reproduces the published bound. A strict improvement remains unproved.
 
 The reference is [Holmsen–Mojarrad–Pach–Tardos, final v3, Section 3](https://arxiv.org/pdf/1710.11415).
 The implementation reuses the horizontal support paths from the Suk proof.
@@ -27,6 +31,9 @@ It does not assert the cyclic pseudo-configuration theorem from the paper.
 | `HMPT/FanCounting.lean` | Genuine convex-subset ratio with only the three support-path endpoint choices free |
 | `HMPT/TwoScale.lean` | Telescope the ratios at m+1, 2m+1, 4m+1 and combine with convex-subset density; closed finite bound using Suk |
 | `HMPT/Entropy.lean` | Factorial-sensitive binomial estimate, common logarithmic budget, closed exponent, and exact natural-floor transfer |
+| `HMPT/AsymptoticInput.lean` | Suk's rounded natural input exponent eventually forces the required polygon and has ratio tending to one |
+| `HMPT/ScaleLimits.lean` | Rounded square-root parameter, logarithmic ratios, and the induced Suk input exponent limits |
+| `HMPT/Asymptotic.lean` | Exact normalized budget identity, positive eventual slack, and the final coefficient 8√2/3 with arbitrary ε > 0 |
 
 The actual cap witnesses retain their unpadded sizes. Only the binomial
 parameters are padded to at least two. Thus adjacent and parity budgets are
@@ -145,18 +152,32 @@ the exact threshold floor(2^X), with a unit of slack for exponent rounding.
 There are no numerical experiments or unproved geometric assumptions inside
 these theorems.
 
-## Remaining route to the published coefficient
+## Checked asymptotic optimization
 
-The remaining task is the eventual parameter optimization: choose m close to
-sqrt(n log₂ n)/(2 sqrt(2)), derive d = 4m+o(m) from the proved Suk input, and
-control the logarithmic and rounding remainders in the checked real criterion.
-The expected leading penalty is
+Let S = sqrt(n log₂ n), fix c > 0, and choose m = ceil(cS). The input exponent
+d is ceil(Suk.exponent 6 (4m+1)). Its polygon-forcing property follows from the
+fully proved Suk theorem; it is not an assumed asymptotic estimate.
+The new limit lemmas establish
 
-    (16m² + 2n log₂ n)/(3m),
+    m/S → c,       m/n → 0,
+    d/S → 4c,      d/n → 0,
+    log₂ m / log₂ n → 1/2.
 
-whose optimal coefficient is 8 sqrt(2)/3. This expression explains the intended
-limit; its application to the final eventual theorem still needs a Lean proof.
-Neither the final HMPT coefficient nor a strict improvement is claimed.
+`budgetRatio_identity` relates the normalized expression exactly to the finite
+entropy criterion. After division by n log₂ n, its slack tends to
+
+    3cC − 16c² − 2.
+
+For c = 1/(2 sqrt(2)) and C = 8 sqrt(2)/3 + ε, this limit is positive for
+every ε > 0. The proof simultaneously supplies all eventual positivity, size,
+and input-bound hypotheses, and uses `real_entropy_two_scale_bound` to retain
+the exact floor threshold. Thus `theorem2020 : Theorem2020` has no hypotheses.
+
+The result covers arbitrary finite real point sets in general position. It
+does not formalize the paper's pseudo-configuration or convex-body extensions.
+The theorem and its dependencies are included in the standard-axiom audit.
+
+## Research beyond the published coefficient
 
 A strict improvement needs additional mathematical input beyond this known
 argument. `DyadicModel.two_scales_optimal` excludes an improvement from merely

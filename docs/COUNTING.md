@@ -26,7 +26,8 @@ cap budgets for horizontal support paths, with explicit endpoint and padding
 losses, and combine them with extraction into a complete finite bound. See
 [`HMPT.md`](HMPT.md). Projective normalization also provides a checked one-scale
 bridge from general convex-subset counts, allowing the existing Suk theorem to
-supply the input density. The sharper two-scale ratio estimate remains unfinished.
+supply the input density. The sharper two-scale ratio, entropy estimates, and
+eventual optimization are now proved in `HMPT.theorem2020` for ordinary point sets.
 
 `scripts/counting_experiments.py` compares this compression with coarser
 arithmetic bounds and with balanced allocations under parity budgets. Binomial
@@ -54,9 +55,10 @@ coefficient over x>0 gives
 `ErdosSzekeres/DyadicModel.lean` proves the telescoping inequality and, for every
 integer t≥1, 128(2ᵗ−1)² ≤ 36·4ᵗ·t, with equality at t=2. Thus the minimum
 squared coefficient in this model is 128/9, exactly the published coefficient
-squared. The optimization over real x and the asymptotic geometric reduction
-have not been formalized. This is not a lower bound on ES(n), nor an impossibility
-result for other proof strategies. A stronger argument would have to exploit
+squared. The actual two-scale geometric reduction and its optimal real parameter
+are now formalized in `HMPT/Asymptotic.lean`. The all-scale inequality above is
+still a restricted model, not a lower bound on ES(n) or an impossibility result
+for other proof strategies. A stronger argument would have to exploit
 information discarded by this model, or change the counting framework.
 
 ## Frontier directions under investigation
@@ -78,12 +80,13 @@ published Lean encoder, retain solver certificates, then measure the 33-point
 instance. A solver's UNSAT verdict and a C proof check are still separate from
 a complete Lean-checked geometric theorem in this repository.
 
-## Precise 2020 target
+## Formalized 2020 benchmark
 
 `HMPT/Statement.lean` now defines the published leading coefficient through
 an epsilon formulation: for every epsilon > 0, an eventual upper bound with
-coefficient 8 sqrt(2)/3 + epsilon. `HMPT.StrictImprovement` asks for some smaller
-nonnegative leading coefficient. These are unproved propositions. Reducing a
+coefficient 8 sqrt(2)/3 + epsilon. `HMPT.theorem2020` proves that statement for
+ordinary real point sets. `HMPT.StrictImprovement` asks for some smaller
+nonnegative leading coefficient and remains unproved. Reducing a
 finite numerical surrogate or an unspecified term inside the published o(1)
 does not establish this target.
 
@@ -91,6 +94,8 @@ The library now proves Suk's 2016 upper bound end to end in
 `Suk/Asymptotic.lean`, including global extraction, both geometric cases,
 rounding, and the eventual estimate. The four-point separated-pair test and
 same-cell replacement step also provide local ingredients relevant to HMPT's
-Observation 3.5. The finite geometric product method is now checked as well.
-Full HMPT and a strict improvement remain unproved. See
-`SUK.md` for the completed theorem's dependencies and exact scope.
+Observation 3.5. The geometric product method, convex-subset ratios, entropy
+bound, rounding, and eventual optimization now complete the ordinary-point-set
+HMPT bound. The pseudo-configuration and convex-body extensions are outside
+this development. A strict improvement remains unproved. See `SUK.md` and
+`HMPT.md` for the completed theorems' dependencies and exact scope.

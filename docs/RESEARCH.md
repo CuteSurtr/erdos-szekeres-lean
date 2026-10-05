@@ -24,8 +24,10 @@ target is 33 points forcing a convex heptagon.
 
 Formalization milestone: `Suk.theorem2016` now proves Suk's 2016 eventual
 upper bound with coefficient 6, including the complete real geometry and
-floor convention. See `SUK.md`. This reproduces a known theorem; the final
-HMPT 2020 bound and an improvement over it remain research goals.
+floor convention. See `SUK.md`. `HMPT.theorem2020` now also proves the final
+HMPT coefficient 8√2/3, with arbitrary positive epsilon, for ordinary real
+point sets. These reproduce known theorems; a strict improvement remains a
+research goal.
 
 On 2026-10-05, `HMPT.integer_product_bound` completed a finite product-method
 bound for every n ≥ 4 and positive region count. This includes actual geometric
@@ -34,8 +36,9 @@ The subsequent projective construction closes the one-scale general convex-subse
 bridge and yields `HMPT.suk_bootstrap_bound`. The genuine convex-subset ratio,
 its two-scale composition, the factorial-sensitive entropy bound, and the exact
 natural-floor bridge are now checked. `HMPT.suk_entropy_two_scale_bound` supplies
-a closed exponent. The remaining eventual optimization is recorded in
-[`HMPT.md`](HMPT.md); the final 2020 coefficient is not claimed.
+a closed exponent. The subsequent rounded-parameter limits and exact normalized
+budget argument complete the final eventual theorem. The dependency ledger and
+precise scope are recorded in [`HMPT.md`](HMPT.md).
 
 ## Installed mathematical dependencies
 

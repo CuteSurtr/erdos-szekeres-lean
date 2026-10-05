@@ -15,7 +15,8 @@ def UpperBoundWithLeadingCoefficient (C : ℝ) : Prop :=
   ∀ ε : ℝ, 0 < ε → ∃ n₀ : ℕ, 3 ≤ n₀ ∧
     ∀ n : ℕ, n₀ ≤ n → ForcesConvexNGon (threshold (C + ε) n) n
 
-/-- Target for formalizing the published theorem for ordinary point sets.
+/-- The published theorem for ordinary point sets, proved by `theorem2020` in
+`HMPT/Asymptotic.lean`.
 Pseudo-configurations and convex-body extensions are outside this definition. -/
 def Theorem2020 : Prop := UpperBoundWithLeadingCoefficient publishedCoefficient
 

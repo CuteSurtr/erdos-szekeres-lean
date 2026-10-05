@@ -1,6 +1,7 @@
 # Erdős–Szekeres in Lean
 
-A starting formalization of the convex polygon conjecture:
+A Lean formalization of published upper bounds and computational tools for the
+convex polygon conjecture:
 
 > For every integer n ≥ 3, every set of at least 2^(n−2) + 1 points in the real
 > plane, with no three collinear, contains n points in convex position.
@@ -11,7 +12,7 @@ here need not be empty: unselected points may lie inside them.
 
 Local validation: `lake build --wfail` passes, and all fifteen core Python tests
 pass (plus four optional Z3 tests locally). The principal geometric lemmas and rational-area bridge were inspected with
-`#print axioms`; CI also audits 139 geometric and combinatorial milestones. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
+`#print axioms`; CI also audits 165 geometric, combinatorial, and asymptotic milestones. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
 The project contains no proof placeholders or additional axioms.
 
 ## Current contents
@@ -49,20 +50,24 @@ The project contains no proof placeholders or additional axioms.
   `Asymptotic.lean` proves **Suk's 2016 Theorem 1.1**: for all sufficiently
   large n, at least floor(2^(n + 6 n^(2/3) log₂ n)) points in general position
   force a convex n-gon. The theorem is `ErdosSzekeres.Suk.theorem2016`.
-- `ErdosSzekeres/HMPT/Statement.lean`: precise targets for the final 2020
-  coefficient and a strict improvement; these are propositions, not proved bounds.
+- `ErdosSzekeres/HMPT/Statement.lean`: precise statements for the final 2020
+  coefficient and a strict improvement. The published coefficient is proved by
+  `HMPT.theorem2020`; `StrictImprovement` remains an open proposition.
 - `ErdosSzekeres/HMPT/`: the finite product method is now checked for real point
   sets, including attained geometric maxima, adjacent and parity cap budgets,
   product counting, and extraction. `integer_product_bound` gives a computable
   sufficient exponent for every n ≥ 4 and positive region count. Endpoint and
-  padding losses are explicit; the final 2020 coefficient is still unproved.
-  See `docs/HMPT.md` for the exact formula and remaining dependencies.
+  padding losses are explicit. See `docs/HMPT.md` for the exact formula and
+  complete dependency ledger.
   A projective normalization now connects general convex-subset counts to the
   support paths. `suk_bootstrap_bound` feeds the proved finite Suk result through
   this bridge. The genuine convex-subset ratio and its two-scale composition
   are now proved, as are the factorial-sensitive binomial estimate and the
   exact floor bridge. `suk_entropy_two_scale_bound` gives a closed exponent
-  without binomial coefficients; the final eventual optimization remains.
+  without binomial coefficients. `HMPT/Asymptotic.lean` proves the final 2020
+  coefficient **8√2/3**, with arbitrary positive epsilon and the exact natural
+  floor, for ordinary real point sets. Pseudo-configurations and convex-body
+  extensions are outside this formalization.
 - `scripts/repair_near_miss.py`: recorded single-vertex repair attempts on
   configurations with a small number of forbidden polygons.
 - `scripts/product_bound_search.py`: exact integer search of the proved finite
@@ -128,10 +133,13 @@ general position. The proof includes a variant of positive-fraction extraction,
 the finite chain/antichain argument, integer rounding, and the final eventual
 estimate. See `docs/SUK.md` for the dependency ledger and exact scope.
 
-The research goal now continues toward an improvement over final HMPT 2020.
-The geometric product argument now yields a complete finite upper-bound formula.
-Neither the final 2020 asymptotic theorem nor a strict improvement has been proved.
-The completed Suk formalization is not a new published-bound improvement.
+The final HMPT 2020 upper bound is also proved for ordinary real point sets:
+for every ε > 0 and all sufficiently large n, at least
+floor(2^(n + (8√2/3 + ε)√(n log₂ n))) points in general position force a convex
+n-gon. The theorem is `ErdosSzekeres.HMPT.theorem2020`.
+
+The research goal continues toward a strict improvement. The completed Suk and
+HMPT formalizations reproduce published bounds; no new bound is claimed.
 
 The rational witness checker and end-to-end SAT certificate conversion remain
 separate unfinished work; the upstream CNF conversion needs repair before its
