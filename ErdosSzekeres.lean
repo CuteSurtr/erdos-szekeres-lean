@@ -25,3 +25,4 @@ import ErdosSzekeres.Suk.IntegerParameters
 import ErdosSzekeres.Suk.Asymptotic
 import ErdosSzekeres.HMPT.ExponentialBound
 import ErdosSzekeres.HMPT.BootstrapBound
+import ErdosSzekeres.HMPT.Entropy

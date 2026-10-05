@@ -11,7 +11,7 @@ here need not be empty: unselected points may lie inside them.
 
 Local validation: `lake build --wfail` passes, and all fifteen core Python tests
 pass (plus four optional Z3 tests locally). The principal geometric lemmas and rational-area bridge were inspected with
-`#print axioms`; CI also audits 114 geometric and combinatorial milestones. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
+`#print axioms`; CI also audits 139 geometric and combinatorial milestones. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
 The project contains no proof placeholders or additional axioms.
 
 ## Current contents
@@ -59,7 +59,10 @@ The project contains no proof placeholders or additional axioms.
   See `docs/HMPT.md` for the exact formula and remaining dependencies.
   A projective normalization now connects general convex-subset counts to the
   support paths. `suk_bootstrap_bound` feeds the proved finite Suk result through
-  this bridge; the sharper two-scale ratio estimate is still unfinished.
+  this bridge. The genuine convex-subset ratio and its two-scale composition
+  are now proved, as are the factorial-sensitive binomial estimate and the
+  exact floor bridge. `suk_entropy_two_scale_bound` gives a closed exponent
+  without binomial coefficients; the final eventual optimization remains.
 - `scripts/repair_near_miss.py`: recorded single-vertex repair attempts on
   configurations with a small number of forbidden polygons.
 - `scripts/product_bound_search.py`: exact integer search of the proved finite

@@ -31,9 +31,11 @@ On 2026-10-05, `HMPT.integer_product_bound` completed a finite product-method
 bound for every n ≥ 4 and positive region count. This includes actual geometric
 maxima, adjacent-cap and parity budgets, extraction, and a computable exponent.
 The subsequent projective construction closes the one-scale general convex-subset
-bridge and yields `HMPT.suk_bootstrap_bound`. The missing two-scale ratio estimate
-and asymptotic optimization are recorded in [`HMPT.md`](HMPT.md); the final 2020
-coefficient is not claimed.
+bridge and yields `HMPT.suk_bootstrap_bound`. The genuine convex-subset ratio,
+its two-scale composition, the factorial-sensitive entropy bound, and the exact
+natural-floor bridge are now checked. `HMPT.suk_entropy_two_scale_bound` supplies
+a closed exponent. The remaining eventual optimization is recorded in
+[`HMPT.md`](HMPT.md); the final 2020 coefficient is not claimed.
 
 ## Installed mathematical dependencies
 

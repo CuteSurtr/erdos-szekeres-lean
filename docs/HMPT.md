@@ -23,6 +23,10 @@ It does not assert the cyclic pseudo-configuration theorem from the paper.
 | `HMPT/ProjectedCaps.lean` | A convex polygon minus its leftmost vertex projects to a horizontal cap, retaining every remaining vertex |
 | `HMPT/ConvexCounting.lean` | Count-preserving projection of anchored families and a bound for all convex subsets |
 | `HMPT/BootstrapBound.lean` | Bootstrap any checked ES bound through the product method; a closed corollary uses the proved finite Suk bound |
+| `HMPT/ConvexFan.lean` | Canonical projection anchor and ray ordering; uniqueness from the vertex set and count-preserving fan representations |
+| `HMPT/FanCounting.lean` | Genuine convex-subset ratio with only the three support-path endpoint choices free |
+| `HMPT/TwoScale.lean` | Telescope the ratios at m+1, 2m+1, 4m+1 and combine with convex-subset density; closed finite bound using Suk |
+| `HMPT/Entropy.lean` | Factorial-sensitive binomial estimate, common logarithmic budget, closed exponent, and exact natural-floor transfer |
 
 The actual cap witnesses retain their unpadded sizes. Only the binomial
 parameters are padded to at least two. Thus adjacent and parity budgets are
@@ -60,7 +64,7 @@ parameter. Results for n = 64,128,256,512,1024,2048 are recorded in
 separate Lean kernel certificates, and the search does not assert optimality
 outside its stated range. The symbolic theorem covering every r is audited.
 
-## Remaining route to the published coefficient
+## General convex subsets and two scales
 
 The one-scale general convex-subset bridge is now proved. For the leftmost
 vertex a, the chart is
@@ -87,24 +91,74 @@ Then `integer_bootstrap_bound` proves that 2^E_boot points force a convex n-gon.
 `suk_bootstrap_bound` instantiates the input exponent d with `Suk.cubic_log_bound`,
 so it has only integer parameter hypotheses and no assumed ES theorem.
 
-What remains:
+The sharper ratio is now proved as `convex_family_ratio_bound`:
 
-1. Retain the actual number of smaller convex subsets when counting alternating
-   anchor choices. The target is
+    f_(2r+7) ≤ f_(r+4) N³ B(r,n).
 
-       f_(2r+7) ≤ f_(r+4) N³ B(r,n).
+`ConvexFan.vertices_injective` proves that the original projection anchor and
+alternating retained vertices uniquely determine their ray-slope ordering.
+Counting these choices by actual smaller convex subsets removes the earlier
+tuple-count loss. The three powers of N account for the support-path endpoints.
 
-   This requires proving that the original projection anchor together with the
-   alternating retained vertices determines the relevant fiber. The current
-   proof counts these choices more coarsely by N^(r+4).
-2. Apply that ratio estimate at sizes m+1, 2m+1, and 4m+1, and combine the
-   resulting inequalities with the bootstrapped convex-subset density.
-3. Formalize the sharpened entropy estimates, integer rounding, and eventual
-   optimization giving the coefficient 8√2/3.
-4. A strict improvement needs additional mathematical input beyond this known
-   argument. `DyadicModel.two_scales_optimal` already excludes an improvement
-   from merely adding more doublings in its explicitly restricted model.
+For m ≥ 3, applying the ratio twice gives
 
-No finite parameter search here proves the final asymptotic coefficient. The
-projective construction closes the earlier one-scale counting obstacle; the
-two-scale ratio and asymptotic coefficient still require checked proofs.
+    f_(4m+1) ≤ f_(m+1) N⁶ B(m−3,n) B(2m−3,n)
+             ≤ N^(m+7) B(m−3,n) B(2m−3,n).
+
+Let K = 4m+1, and let 2^d ≥ K be a verified bound forcing a convex K-gon.
+Define P = B(m−3,n) B(2m−3,n). Then `integer_two_scale_bound` proves that
+2^E points force a convex n-gon, where
+
+    E = max(d, 2K, floor(((d+1)K + clog₂ P)/(3m−6))+1).
+
+`suk_two_scale_bound` supplies d from the already proved finite Suk theorem.
+The ratio estimates concern the actual convex-subset counts of arbitrary real
+point sets; coordinate rotation discharges the temporary distinct-x assumption.
+
+## Checked entropy estimate and rounding
+
+`choose_le_four_mul_pow` proves
+
+    choose(N,A) ≤ (4R)^A  whenever N ≤ RA.
+
+The proof uses the exponential-series inequality A^A/A! ≤ exp(A), preserving
+the factorial saving. Consequently, each B(r,n) is at most 2 raised to
+
+    (r+1)(n−1) + 2r + (2(n−1)+r) clog₂(4(r+1)).
+
+Both scales together have the simpler checked budget
+
+    P ≤ 2^[3mn + 6m + (4n+3m) H],   H = clog₂(8m) ≤ log₂ m + 4.
+
+This yields the closed exponent `twoScaleEntropyExponent`:
+
+    E_entropy = max(d, 2K,
+      n + floor(((d+1)K + 6n + 6m + (4n+3m)H)/(3m−6)) + 1).
+
+`suk_entropy_two_scale_bound` proves the corresponding geometric theorem using
+only n ≥ 4, m ≥ 3, a ≥ 2, and K ≤ a³, with
+
+    d = K + a² + clog₂(K+a²)a² + 64(a(a+1)+5).
+
+`real_entropy_two_scale_bound` transfers a sufficient real exponent budget to
+the exact threshold floor(2^X), with a unit of slack for exponent rounding.
+There are no numerical experiments or unproved geometric assumptions inside
+these theorems.
+
+## Remaining route to the published coefficient
+
+The remaining task is the eventual parameter optimization: choose m close to
+sqrt(n log₂ n)/(2 sqrt(2)), derive d = 4m+o(m) from the proved Suk input, and
+control the logarithmic and rounding remainders in the checked real criterion.
+The expected leading penalty is
+
+    (16m² + 2n log₂ n)/(3m),
+
+whose optimal coefficient is 8 sqrt(2)/3. This expression explains the intended
+limit; its application to the final eventual theorem still needs a Lean proof.
+Neither the final HMPT coefficient nor a strict improvement is claimed.
+
+A strict improvement needs additional mathematical input beyond this known
+argument. `DyadicModel.two_scales_optimal` excludes an improvement from merely
+adding more doublings in its explicitly restricted model. It is not a general
+obstruction to other proof strategies.
