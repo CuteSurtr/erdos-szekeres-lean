@@ -10,9 +10,9 @@ convex polygon conjecture:
 is a `Prop` definition, not an assumed axiom or an unfinished theorem. Polygons
 here need not be empty: unselected points may lie inside them.
 
-Local validation: `lake build --wfail` passes, and all eighteen core Python tests
-pass (plus four optional Z3 tests locally). The principal geometric lemmas and rational-area bridge were inspected with
-`#print axioms`; CI also audits 176 geometric, combinatorial, and asymptotic milestones. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
+Local validation: `lake build --wfail` passes, and all 22 core Python tests
+pass (plus eleven optional Z3 tests locally). The principal geometric lemmas and rational-area bridge were inspected with
+`#print axioms`; CI also audits 178 geometric, combinatorial, and asymptotic milestones. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
 The project contains no proof placeholders or additional axioms.
 
 ## Current contents
@@ -84,6 +84,17 @@ The project contains no proof placeholders or additional axioms.
   for fixed realizable configurations, with exact candidate verification.
 - `scripts/joint_vertical_repair.py`: simultaneous point moves with fixed x
   coordinates, exact linear cuts and exhaustive final candidate checks.
+- `scripts/joint_planar_repair.py`: simultaneous moves with both coordinates
+  free, nonlinear real constraints, orientation-checked algebraic rounding,
+  and reusable polygon-exclusion cuts. Ten attempts on six selected pairs of
+  the 33-point near miss ended UNKNOWN. `ConvexCycleCuts.lean` proves the
+  geometric validity of transferred cuts; it does not certify the SMT encoder.
+- `scripts/region_blowup.py`: exact clustered examples attaining the local
+  height–width product and both cups-caps factors, with convex-subset counts.
+  These are experiments on local sharpness, not improved global bounds.
+- `scripts/omission_row_probe.py`: bounded Boolean searches on finite omission
+  constraints, with exact checks of any returned hole assignment. These
+  relaxations do not by themselves supply planar realizations or upper bounds.
 - `scripts/mutation_campaign.py`: bounded, recorded exploration of point moves.
 - `scripts/replay_smt.py`: corroboration of extension formulas with cvc5.
 - `scripts/test_search.py`: geometric fixtures and an independent triangle-based

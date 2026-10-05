@@ -1,5 +1,8 @@
 import ErdosSzekeres
 
+#print axioms ErdosSzekeres.hasConvexNGon_of_positive_cycle
+#print axioms ErdosSzekeres.convexCycleCut_of_avoids
+
 #print axioms ErdosSzekeres.IntegerInterior.mem_triangle
 #print axioms ErdosSzekeres.IntegerInterior.not_convexPosition
 #print axioms ErdosSzekeres.convexPosition_integer_image_of_supports

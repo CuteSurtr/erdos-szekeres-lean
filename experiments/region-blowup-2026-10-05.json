@@ -1,0 +1,406 @@
+{
+  "scope": "Structured examples, not a universal bound or stability theorem",
+  "profiles": [
+    {
+      "parameters": {
+        "left": 2,
+        "right": 2,
+        "inner": 2,
+        "outer": 2
+      },
+      "region_size": 4,
+      "height": 2,
+      "width": 2,
+      "checks": {
+        "general_position": true,
+        "all_points_in_spike": true,
+        "between_groups_chain": true,
+        "within_groups_antichain": true,
+        "vertical_left_attained": true,
+        "vertical_right_attained": true,
+        "vertical_left_maximal": true,
+        "vertical_right_maximal": true,
+        "inner_attained": true,
+        "inner_maximal": true,
+        "outer_attained": true,
+        "outer_maximal": true,
+        "height_width_product_attained": true,
+        "vertical_binomial_attained": true,
+        "horizontal_binomial_attained": true
+      },
+      "largest_local_convex_subset": 4,
+      "largest_ambient_convex_subset": 6,
+      "convex_witness_labels": [
+        0,
+        3,
+        2,
+        5,
+        4,
+        1
+      ],
+      "exhaustive_upper_check": {
+        "gon": 7,
+        "subsets_checked": 8
+      },
+      "coordinate_sha256": "8ac66462445d9d22bc98463e43bfb2c460110e0720b41f5f611f99fe444e2726",
+      "verification": "Exact integer predicates and dynamic programs; small cases exhaustively cross-checked; not Lean-certified"
+    },
+    {
+      "parameters": {
+        "left": 3,
+        "right": 3,
+        "inner": 2,
+        "outer": 2
+      },
+      "region_size": 12,
+      "height": 6,
+      "width": 2,
+      "checks": {
+        "general_position": true,
+        "all_points_in_spike": true,
+        "between_groups_chain": true,
+        "within_groups_antichain": true,
+        "vertical_left_attained": true,
+        "vertical_right_attained": true,
+        "vertical_left_maximal": true,
+        "vertical_right_maximal": true,
+        "inner_attained": true,
+        "inner_maximal": true,
+        "outer_attained": true,
+        "outer_maximal": true,
+        "height_width_product_attained": true,
+        "vertical_binomial_attained": true,
+        "horizontal_binomial_attained": true
+      },
+      "largest_local_convex_subset": 6,
+      "largest_ambient_convex_subset": 6,
+      "convex_witness_labels": [
+        4,
+        7,
+        11,
+        3,
+        2,
+        5
+      ],
+      "exhaustive_upper_check": {
+        "gon": 7,
+        "subsets_checked": 11440
+      },
+      "coordinate_sha256": "fdf3ee1965fbbe1ba1358ce232cbc80881f181d6488cf1e0dca1467853bd8a6a",
+      "verification": "Exact integer predicates and dynamic programs; small cases exhaustively cross-checked; not Lean-certified"
+    },
+    {
+      "parameters": {
+        "left": 3,
+        "right": 3,
+        "inner": 2,
+        "outer": 3
+      },
+      "region_size": 18,
+      "height": 6,
+      "width": 3,
+      "checks": {
+        "general_position": true,
+        "all_points_in_spike": true,
+        "between_groups_chain": true,
+        "within_groups_antichain": true,
+        "vertical_left_attained": true,
+        "vertical_right_attained": true,
+        "vertical_left_maximal": true,
+        "vertical_right_maximal": true,
+        "inner_attained": true,
+        "inner_maximal": true,
+        "outer_attained": true,
+        "outer_maximal": true,
+        "height_width_product_attained": true,
+        "vertical_binomial_attained": true,
+        "horizontal_binomial_attained": true
+      },
+      "largest_local_convex_subset": 7,
+      "largest_ambient_convex_subset": 7,
+      "convex_witness_labels": [
+        5,
+        9,
+        19,
+        20,
+        21,
+        15,
+        6
+      ],
+      "exhaustive_upper_check": {
+        "gon": 8,
+        "subsets_checked": 319770
+      },
+      "coordinate_sha256": "a264903d81f0838209087c06df7401bb6362ce930fc39961859be7a5c45ee37c",
+      "verification": "Exact integer predicates and dynamic programs; small cases exhaustively cross-checked; not Lean-certified"
+    },
+    {
+      "parameters": {
+        "left": 3,
+        "right": 3,
+        "inner": 3,
+        "outer": 3
+      },
+      "region_size": 36,
+      "height": 6,
+      "width": 6,
+      "checks": {
+        "general_position": true,
+        "all_points_in_spike": true,
+        "between_groups_chain": true,
+        "within_groups_antichain": true,
+        "vertical_left_attained": true,
+        "vertical_right_attained": true,
+        "vertical_left_maximal": true,
+        "vertical_right_maximal": true,
+        "inner_attained": true,
+        "inner_maximal": true,
+        "outer_attained": true,
+        "outer_maximal": true,
+        "height_width_product_attained": true,
+        "vertical_binomial_attained": true,
+        "horizontal_binomial_attained": true
+      },
+      "largest_local_convex_subset": 8,
+      "largest_ambient_convex_subset": 8,
+      "convex_witness_labels": [
+        6,
+        15,
+        37,
+        38,
+        39,
+        27,
+        9,
+        8
+      ],
+      "exhaustive_upper_check": null,
+      "coordinate_sha256": "5feb7e146527b8bf39311af6d6fac4a6758aa58894e20ef9935113035dc0b520",
+      "verification": "Exact integer predicates and dynamic programs; small cases exhaustively cross-checked; not Lean-certified"
+    },
+    {
+      "parameters": {
+        "left": 3,
+        "right": 3,
+        "inner": 2,
+        "outer": 5
+      },
+      "region_size": 30,
+      "height": 6,
+      "width": 5,
+      "checks": {
+        "general_position": true,
+        "all_points_in_spike": true,
+        "between_groups_chain": true,
+        "within_groups_antichain": true,
+        "vertical_left_attained": true,
+        "vertical_right_attained": true,
+        "vertical_left_maximal": true,
+        "vertical_right_maximal": true,
+        "inner_attained": true,
+        "inner_maximal": true,
+        "outer_attained": true,
+        "outer_maximal": true,
+        "height_width_product_attained": true,
+        "vertical_binomial_attained": true,
+        "horizontal_binomial_attained": true
+      },
+      "largest_local_convex_subset": 9,
+      "largest_ambient_convex_subset": 9,
+      "convex_witness_labels": [
+        7,
+        13,
+        29,
+        30,
+        31,
+        32,
+        33,
+        23,
+        8
+      ],
+      "exhaustive_upper_check": null,
+      "coordinate_sha256": "320b0026713ea99d196d964f6d77abd6645411e3e8d0b006b701c2fa7d4b56ae",
+      "verification": "Exact integer predicates and dynamic programs; small cases exhaustively cross-checked; not Lean-certified"
+    },
+    {
+      "parameters": {
+        "left": 4,
+        "right": 4,
+        "inner": 2,
+        "outer": 2
+      },
+      "region_size": 40,
+      "height": 20,
+      "width": 2,
+      "checks": {
+        "general_position": true,
+        "all_points_in_spike": true,
+        "between_groups_chain": true,
+        "within_groups_antichain": true,
+        "vertical_left_attained": true,
+        "vertical_right_attained": true,
+        "vertical_left_maximal": true,
+        "vertical_right_maximal": true,
+        "inner_attained": true,
+        "inner_maximal": true,
+        "outer_attained": true,
+        "outer_maximal": true,
+        "height_width_product_attained": true,
+        "vertical_binomial_attained": true,
+        "horizontal_binomial_attained": true
+      },
+      "largest_local_convex_subset": 8,
+      "largest_ambient_convex_subset": 8,
+      "convex_witness_labels": [
+        4,
+        7,
+        13,
+        42,
+        43,
+        37,
+        25,
+        5
+      ],
+      "exhaustive_upper_check": null,
+      "coordinate_sha256": "f25ac5ff51bdd8ea16e815dc2da36895c25fb69bb72c1d8041ea973984951bdd",
+      "verification": "Exact integer predicates and dynamic programs; small cases exhaustively cross-checked; not Lean-certified"
+    },
+    {
+      "parameters": {
+        "left": 4,
+        "right": 4,
+        "inner": 2,
+        "outer": 3
+      },
+      "region_size": 60,
+      "height": 20,
+      "width": 3,
+      "checks": {
+        "general_position": true,
+        "all_points_in_spike": true,
+        "between_groups_chain": true,
+        "within_groups_antichain": true,
+        "vertical_left_attained": true,
+        "vertical_right_attained": true,
+        "vertical_left_maximal": true,
+        "vertical_right_maximal": true,
+        "inner_attained": true,
+        "inner_maximal": true,
+        "outer_attained": true,
+        "outer_maximal": true,
+        "height_width_product_attained": true,
+        "vertical_binomial_attained": true,
+        "horizontal_binomial_attained": true
+      },
+      "largest_local_convex_subset": 9,
+      "largest_ambient_convex_subset": 9,
+      "convex_witness_labels": [
+        5,
+        9,
+        18,
+        61,
+        62,
+        63,
+        54,
+        36,
+        6
+      ],
+      "exhaustive_upper_check": null,
+      "coordinate_sha256": "eaa66cb365cda9d6ba80a69ac1267e8998f2ed8a7e273fa945638ea7c65cf273",
+      "verification": "Exact integer predicates and dynamic programs; small cases exhaustively cross-checked; not Lean-certified"
+    },
+    {
+      "parameters": {
+        "left": 4,
+        "right": 4,
+        "inner": 3,
+        "outer": 3
+      },
+      "region_size": 120,
+      "height": 20,
+      "width": 6,
+      "checks": {
+        "general_position": true,
+        "all_points_in_spike": true,
+        "between_groups_chain": true,
+        "within_groups_antichain": true,
+        "vertical_left_attained": true,
+        "vertical_right_attained": true,
+        "vertical_left_maximal": true,
+        "vertical_right_maximal": true,
+        "inner_attained": true,
+        "inner_maximal": true,
+        "outer_attained": true,
+        "outer_maximal": true,
+        "height_width_product_attained": true,
+        "vertical_binomial_attained": true,
+        "horizontal_binomial_attained": true
+      },
+      "largest_local_convex_subset": 10,
+      "largest_ambient_convex_subset": 10,
+      "convex_witness_labels": [
+        6,
+        15,
+        33,
+        121,
+        122,
+        123,
+        105,
+        69,
+        9,
+        8
+      ],
+      "exhaustive_upper_check": null,
+      "coordinate_sha256": "a0d52468d792aced3f8c69c48120a897aa2649f30cee52c9f949afddd356336b",
+      "verification": "Exact integer predicates and dynamic programs; small cases exhaustively cross-checked; not Lean-certified"
+    },
+    {
+      "parameters": {
+        "left": 4,
+        "right": 4,
+        "inner": 2,
+        "outer": 5
+      },
+      "region_size": 100,
+      "height": 20,
+      "width": 5,
+      "checks": {
+        "general_position": true,
+        "all_points_in_spike": true,
+        "between_groups_chain": true,
+        "within_groups_antichain": true,
+        "vertical_left_attained": true,
+        "vertical_right_attained": true,
+        "vertical_left_maximal": true,
+        "vertical_right_maximal": true,
+        "inner_attained": true,
+        "inner_maximal": true,
+        "outer_attained": true,
+        "outer_maximal": true,
+        "height_width_product_attained": true,
+        "vertical_binomial_attained": true,
+        "horizontal_binomial_attained": true
+      },
+      "largest_local_convex_subset": 11,
+      "largest_ambient_convex_subset": 11,
+      "convex_witness_labels": [
+        7,
+        13,
+        28,
+        99,
+        100,
+        101,
+        102,
+        103,
+        88,
+        58,
+        8
+      ],
+      "exhaustive_upper_check": null,
+      "coordinate_sha256": "1673bfa6bcf30eeae6c16b20049c309bd15053f4bd75f4ea0df2a25ede49f447",
+      "verification": "Exact integer predicates and dynamic programs; small cases exhaustively cross-checked; not Lean-certified"
+    }
+  ],
+  "date": "2026-10-05",
+  "script": "scripts/region_blowup.py",
+  "script_sha256": "65942d9f339eec5ec0070e2075f252729184a254530f54f3a5109ce257f5cc50"
+}

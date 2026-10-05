@@ -186,3 +186,58 @@ move together. It ended UNKNOWN at 300 seconds after 275 solver calls and
 1,213 convex-cycle cuts. Its timeout does not establish infeasibility. The
 solver checks reproduce SAT on a four-point quadrilateral-avoiding instance
 and UNSAT on a five-point instance, with exact coefficient regression tests.
+
+## Joint full-plane repair (2026-10-05)
+
+`scripts/joint_planar_repair.py` allows both real coordinates of selected points
+to move while fixing every other point. Its determinant constraints have degree
+at most two and use Z3's nonlinear real solver. An algebraic model is converted
+to rational coordinates only when every triple keeps its exact nonzero sign;
+clearing denominators then gives integer coordinates. A candidate avoiding the
+target polygon must pass exhaustive convex-hull checking as well as the dynamic
+program. No successful 33-point candidate was obtained.
+
+`experiments/joint-planar-2026-10-05.json` records ten completed, time-limited
+attempts on six pairs. All returned UNKNOWN, including resumed and pooled runs:
+
+| Moving labels | Cuts retained in latest attempt | Latest time limit |
+| --- | --- | --- |
+| 0, 32 | 583 | 180 s |
+| 1, 32 | 424 | 120 s |
+| 2, 32 | 592 | 180 s |
+| 3, 32 | 461 | 120 s |
+| 4, 32 | 421 | 120 s |
+| 22, 32 | 639 | 180 s |
+
+These outcomes establish neither feasibility nor infeasibility. Only these six
+pairs were attempted, and their searches are incomplete. The recorded Z3 reason
+`canceled` arose at the configured time limit. Counts include inherited cuts;
+they are not counts of newly discovered polygons or distinct order types.
+
+The manifest embeds all cut lists, including 1,536 distinct cyclic orders, and
+hashes the original local result and SMT files. `--resume` rebuilds a matching
+inconclusive search from its validated cut list. `--seed-cuts` transfers cycles
+from earlier coordinate searches, even with different moving points. It checks
+the polygon size and label count, rejects malformed cycles, deduplicates cyclic
+rotations, and omits clauses already satisfied by a fixed nonpositive triple.
+
+`ErdosSzekeres.convexCycleCut_of_avoids` proves in Lean that every ordering of
+k distinct labels, for k ≥ 4, has a nonpositive ordered triple in any realization
+avoiding convex k-gons. Therefore these clauses remain necessary after changing
+the coordinate search. This theorem certifies the geometric implication, not
+the Python polynomial construction, SMT translation, or solver verdict.
+
+For a fresh bounded run reusing all recorded cuts:
+
+```sh
+.cache/solver-venv/bin/python scripts/joint_planar_repair.py \
+  experiments/gon7-n33-near-miss-01.json \
+  --output fresh-planar-output.json --move 0 32 --seconds 180 \
+  --seed-cuts experiments/joint-pairs-01.json \
+    experiments/joint-repair-7-01.json experiments/joint-planar-2026-10-05.json
+```
+
+The optional regression suite checks small SAT/UNSAT cases, transfer between
+searches, rejection of malformed resumed cycles, and algebraic-model rounding.
+Independent integer tests compare the generated determinant polynomials with
+direct geometry across coordinate assignments.

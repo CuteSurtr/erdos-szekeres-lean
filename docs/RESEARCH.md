@@ -163,3 +163,45 @@ subset has size 15. [`MIXED_CAPS.md`](MIXED_CAPS.md) records the exact statement
 and proof. The example isolates a failed route; it does not improve the
 published coefficient. The remaining research must establish additional
 compatibility conditions or strengthen another part of the counting argument.
+
+## September 2026 finite-bound preprint
+
+[Michael Schroeder, *Erdős–Szekeres: Upper Bounds for Convex Heptagons and
+Octagons*, version 1, 19 September 2026](https://doi.org/10.5281/zenodo.22842891)
+claims ES(7) ≤ 81, ES(8) ≤ 319, and the sharp restricted ETV value
+M₇(5,6)=25. Its [companion page](https://michaelschroeder.ai/research/ErdosSzekeres/companion)
+discloses native-evaluation dependencies and no external peer review. These
+finite thresholds do not improve the leading coefficient in HMPT's eventual
+bound.
+
+On 2026-10-05 we downloaded the release, matched its published archive SHA-256,
+and verified all 322 manifest entries. We inspected the final real-plane
+statements, the Mathlib convex-independence adapter, and selected cyclic-sign
+and capacity proofs. The release's separate Python octagon checker passed
+locally: 3,849 cyclic families, 23 block maps, and both complete omission trees,
+including rejection controls. This is reproduction of the author's checker,
+not a new independent implementation or a Lean rebuild.
+
+The package pins Lean 4.32.0-rc1 and a different Mathlib revision. We have not
+rebuilt its 208 proof modules or independently replayed its heptagon certificates.
+Nothing from that proof package is imported into our Lean dependency graph.
+The audit record and bounded row experiments are in
+`experiments/schroeder-2026-10-05.json`.
+
+`scripts/omission_row_probe.py` tests the published octagon row systems at one
+additional allowed hole: 59 holes among 252 balanced states, or 30 among 154
+residual states. Excluding either budget would sharpen the corresponding
+finite occupancy bound by one. A successful exclusion would still need its
+own certificate and the full geometric connection; a satisfying row assignment
+need not be geometrically realizable. Thus neither solver output alone proves
+a new ordinary-polygon theorem.
+
+Both budgets were tested with seeds 0 and 1 for 180 seconds each. All four
+attempts returned UNKNOWN. No satisfying hole assignment or exclusion was
+obtained. To reproduce a bounded probe after extracting the verified archive:
+
+```sh
+.cache/solver-venv/bin/python scripts/omission_row_probe.py \
+  .cache/schroeder-release/es7_es8_bounds_81_319_v1/certificates/balanced.json \
+  --output fresh-balanced-probe.json --holes 59 --seconds 180 --seed 1
+```
