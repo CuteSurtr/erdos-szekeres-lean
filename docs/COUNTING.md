@@ -1,5 +1,10 @@
 # Counting experiments and the current benchmark
 
+> Status notice, 2026-10-05: this is a historical research log. New research and
+> certificate batches are stopped at the user's request. The current proved
+> scope is in [README](../README.md), the [paper map](PAPER_MAP.md), and
+> [VALIDATION](VALIDATION.md). Any forward-looking steps below are unexecuted.
+
 Research checkpoint: 2026-10-05. No improvement over the published bound is claimed.
 
 ## Read the final versions

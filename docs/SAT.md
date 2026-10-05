@@ -1,5 +1,10 @@
 # Reproducing the SAT and realization experiments
 
+> Status notice, 2026-10-05: this is a historical research log. New research and
+> certificate batches are stopped at the user's request. The current proved
+> scope is in [README](../README.md), the [paper map](PAPER_MAP.md), and
+> [VALIDATION](VALIDATION.md). Any forward-looking steps below are unexecuted.
+
 The main Lean project has no dependency on the experimental encoder or solver.
 Large CNFs, models and proof files are stored under ignored `.cache/sat/`.
 Small result manifests and SHA-256 hashes are tracked in `experiments/`.

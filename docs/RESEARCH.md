@@ -1,5 +1,10 @@
 # Research and library map
 
+> Status notice, 2026-10-05: this is a historical research log. New research and
+> certificate batches are stopped at the user's request. The current proved
+> scope is in [README](../README.md), the [paper map](PAPER_MAP.md), and
+> [VALIDATION](VALIDATION.md). Any forward-looking steps below are unexecuted.
+
 Initial assessment: 2026-10-04.
 
 ## Mathematical target and status

@@ -1,9 +1,9 @@
-# Full Suk formalization: dependency ledger
+# Suk's real-point upper bound: dependency ledger
 
-Completed result: Theorem 1.1 of [Suk, arXiv:1604.08657v2](https://arxiv.org/pdf/1604.08657).
+Completed result: Theorem 1.1 of [Suk, arXiv:1604.08657v2](https://arxiv.org/pdf/1604.08657v2).
 `Suk.theorem2016 : Suk.Theorem2016` proves the eventual upper bound with
 coefficient 6 and the paper's floor convention for arbitrary real point sets
-in general position. The full build and 77-theorem axiom audit pass; only
+in general position. The full build and current 201-theorem axiom audit pass; only
 `propext`, `Classical.choice`, and `Quot.sound` occur. There are no proof
 placeholders or additional axioms.
 
@@ -162,9 +162,12 @@ absorb the coarse extraction constant within Suk's coefficient 6. The
 of the cube root and logarithm gives the eventual statement `theorem2016`.
 
 This completes Suk's upper-bound result, not every intermediate statement in
-his paper with its original constants. The stronger final HMPT 2020 bound and
-a strict improvement remain unproved here. The numerical experiments in
-`COUNTING.md` are separate evidence and do not establish either result.
+his paper with its original constants. The final HMPT 2020 upper bound is also
+proved for ordinary real point sets; see [HMPT.md](HMPT.md). A strict
+improvement remains unproved. The [paper mapping](PAPER_MAP.md) records the
+precise scope of both formalizations; [VALIDATION.md](VALIDATION.md) links the
+current axiom output. Research is stopped at the user's request. The numerical
+experiments in `COUNTING.md` are separate from these completed proofs.
 
 ## Recent computational evidence
 

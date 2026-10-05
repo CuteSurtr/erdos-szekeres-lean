@@ -6,7 +6,7 @@ import re
 import subprocess
 
 
-def check(lake="lake"):
+def check(lake="lake", output=None):
     root = Path(__file__).resolve().parents[1]
     audit = root / "scripts/AxiomAudit.lean"
     expected = re.findall(r"^#print axioms (\S+)$", audit.read_text(), re.MULTILINE)
@@ -20,10 +20,15 @@ def check(lake="lake"):
         axioms = {x.strip() for x in found.group(1).split(",") if x.strip()}
         if not axioms <= allowed:
             raise RuntimeError(f"Nonstandard axioms in {name}: {axioms - allowed}")
-    print(f"Axiom audit passed for {len(expected)} theorems: only standard Lean axioms.")
+    summary = f"Axiom audit passed for {len(expected)} theorems: only standard Lean axioms."
+    if output is not None:
+        Path(output).write_text(result.stdout.rstrip() + "\n" + summary + "\n")
+    print(summary)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--lake", default="lake")
-    check(parser.parse_args().lake)
+    parser.add_argument("--output", type=Path, help="Save the verified full axiom report")
+    args = parser.parse_args()
+    check(args.lake, args.output)

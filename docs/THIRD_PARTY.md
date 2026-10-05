@@ -53,3 +53,12 @@ implemented independently. Their mathematical weighted-capacity argument is
 the one used by the source's omission certificates. See `OMISSION.md` for the
 precise boundary between reproduced data, newly proved lemmas, and unproved
 geometric transfer.
+
+The generated `experiments/omission-chunked-2026-10-05/Catalog.lean` preserves
+that archive's balanced row indices, supports and demands and adds packed
+integer encodings. `Leaf.lean` uses one newly strengthened certificate leaf.
+The adapted catalog data remains under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/);
+the directory README provides source credit, change descriptions and reproduction
+commands. These generated Lean proof inputs are committed; compiled `.olean`
+files and the upstream inspection checkout are not. No source Lean module from
+the archive has been imported into the finished Suk or HMPT dependency graph.

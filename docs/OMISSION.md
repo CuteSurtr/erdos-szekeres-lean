@@ -1,5 +1,9 @@
 # Exact omission certificates
 
+**Stopped checkpoint, 2026-10-05:** certificate work ended after the chunked
+balanced catalog and the existing single leaf passed Lean. No complete-tree
+batch or geometric-transfer work is running. See [remaining work](ES8_REMAINING.md).
+
 This work investigates the finite octagon systems in Michael Schroeder's
 [*Erdős–Szekeres: Upper Bounds for Convex Heptagons and Octagons*, v1,
 19 September 2026](https://doi.org/10.5281/zenodo.22842891).
@@ -111,7 +115,17 @@ and a no-carry bound recover every column load from a packed equality. On one
 `decide +kernel`, taking 34.2 and 12.8 seconds in separate local runs. These
 are feasibility probes, not controlled benchmarks or complete Lean tree checks.
 The two standalone `.lean` pilot files are saved in `experiments/` and are
-checked separately from the main library's 191-theorem CI audit.
+checked separately from the main library's current 201-theorem CI audit.
+
+The final [chunked checkpoint](../experiments/omission-chunked-2026-10-05/README.md)
+checks all 2,685 balanced row encodings in 21 blocks and checks the existing
+202-row leaf against that catalog. `load_eq_of_sparse_packed` and
+`sparse_list_conditioned_excludes` prove the sparse arithmetic method, while
+`split_excludes` allows separately checked branches to be combined. The final
+leaf's profiler reports 1.72 seconds of kernel type checking; this is not a
+controlled comparison with the earlier wall-clock runs. The complete trees
+remain outside Lean. The generic lemmas are included in the 201-theorem audit;
+the standalone catalog and leaf have their own saved axiom output.
 
 The remaining geometric connection can be identified precisely in the source
 package: `ES8ActualRanks` constructs attained ending-path ranks;

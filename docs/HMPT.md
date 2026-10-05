@@ -6,9 +6,12 @@ for ordinary real point sets** by `ErdosSzekeres.HMPT.theorem2020`. For every
 
     ForcesConvexNGon floor(2^(n + (8√2/3 + ε)√(n log₂ n))) n.
 
-This reproduces the published bound. A strict improvement remains unproved.
+This reproduces the published bound for real points. A strict improvement
+remains unproved, and research has stopped at the user's request. See the
+[paper-to-Lean map](PAPER_MAP.md) for statements outside this scope and the
+[current verification record](VALIDATION.md) for the complete axiom output.
 
-The reference is [Holmsen–Mojarrad–Pach–Tardos, final v3, Section 3](https://arxiv.org/pdf/1710.11415).
+The reference is [Holmsen–Mojarrad–Pach–Tardos, final v3, Section 3](https://arxiv.org/pdf/1710.11415v3).
 The implementation reuses the horizontal support paths from the Suk proof.
 It accounts explicitly for their endpoints and for small or empty regions.
 It does not assert the cyclic pseudo-configuration theorem from the paper.
