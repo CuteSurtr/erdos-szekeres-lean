@@ -13,6 +13,16 @@ import ErdosSzekeres
 #print axioms ErdosSzekeres.OmissionCertificates.pack_injective_of_lt
 #print axioms ErdosSzekeres.OmissionCertificates.pack_load
 #print axioms ErdosSzekeres.OmissionCertificates.load_eq_of_packed
+#print axioms ErdosSzekeres.OmissionCertificates.load_sdiff
+#print axioms ErdosSzekeres.OmissionCertificates.conditioned_excludes_of_full_load
+#print axioms ErdosSzekeres.OmissionCertificates.split_excludes
+#print axioms ErdosSzekeres.OmissionCertificates.array_all_getElem!
+#print axioms ErdosSzekeres.OmissionCertificates.packList_eq_pack
+#print axioms ErdosSzekeres.OmissionCertificates.sparseSum_eq_sum
+#print axioms ErdosSzekeres.OmissionCertificates.load_eq_of_sparse_packed
+#print axioms ErdosSzekeres.OmissionCertificates.sparse_conditioned_excludes
+#print axioms ErdosSzekeres.OmissionCertificates.sum_map_eq_sum_get
+#print axioms ErdosSzekeres.OmissionCertificates.sparse_list_conditioned_excludes
 
 #print axioms ErdosSzekeres.hasConvexNGon_of_positive_cycle
 #print axioms ErdosSzekeres.convexCycleCut_of_avoids

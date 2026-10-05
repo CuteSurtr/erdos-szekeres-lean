@@ -10,6 +10,14 @@ def load {ι ρ : Type*} [Fintype ρ] [DecidableEq ι]
     (support : ρ → Finset ι) (weight : ρ → ℕ) (i : ι) : ℕ :=
   ∑ r, if i ∈ support r then weight r else 0
 
+/-- Removing fixed states only zeros their columns; all other loads are unchanged. -/
+theorem load_sdiff {ι ρ : Type*} [Fintype ρ] [DecidableEq ι]
+    (support : ρ → Finset ι) (weight : ρ → ℕ) (fixed : Finset ι) (i : ι) :
+    load (fun r => support r \ fixed) weight i =
+      if i ∈ fixed then 0 else load support weight i := by
+  classical
+  by_cases hi : i ∈ fixed <;> simp [load, hi]
+
 /-- An exact weighted certificate bounds every Boolean hole assignment.
 The excess term pays for states whose total row weight exceeds the capacity.
 This is purely finite arithmetic; geometric necessity of the rows is separate. -/
@@ -121,12 +129,82 @@ theorem conditioned_excludes_budget {ι ρ : Type*} [Fintype ι] [Fintype ρ]
     rw [sum_remaining]
     omega
 
+/-- A conditioned leaf can be verified with the original column loads. Moving
+the contribution of fixed missing states to the left avoids recomputing row
+intersections. This sufficient test stays sound even if a row's residual demand
+is negative; generators can discard such rows to retain a positive margin. -/
+theorem conditioned_excludes_of_full_load {ι ρ : Type*} [Fintype ι] [Fintype ρ]
+    [DecidableEq ι] (support : ρ → Finset ι) (demand weight : ρ → ℕ)
+    (missing occupied : Finset ι) (capacity budget : ℕ)
+    (hmargin : capacity * (budget - missing.card) +
+        ∑ i, (if i ∈ missing ∪ occupied then 0 else load support weight i - capacity) +
+        ∑ i ∈ missing, load support weight i < ∑ r, weight r * demand r) :
+    ¬ ∃ holes : ι → ℕ, (∀ i, holes i ≤ 1) ∧
+      (∀ r, demand r ≤ ∑ i ∈ support r, holes i) ∧
+      (∑ i, holes i) ≤ budget ∧
+      (∀ i ∈ missing, holes i = 1) ∧ (∀ i ∈ occupied, holes i = 0) := by
+  classical
+  apply conditioned_excludes_budget support demand weight missing occupied capacity budget
+  have transpose : (∑ r, weight r * (support r ∩ missing).card) =
+      ∑ i ∈ missing, load support weight i := by
+    simp only [load]
+    rw [Finset.sum_comm]
+    apply Finset.sum_congr rfl
+    intro r _
+    simp [Finset.inter_comm, Nat.mul_comm]
+  have lower : (∑ r, weight r * demand r) ≤
+      (∑ r, weight r * (demand r - (support r ∩ missing).card)) +
+        ∑ i ∈ missing, load support weight i := by
+    rw [← transpose, ← Finset.sum_add_distrib]
+    apply Finset.sum_le_sum
+    intro r _
+    rw [← Nat.mul_add]
+    exact Nat.mul_le_mul_left _ (by omega)
+  have excess : (∑ i, (load (fun r => support r \ (missing ∪ occupied)) weight i - capacity)) =
+      ∑ i, (if i ∈ missing ∪ occupied then 0 else load support weight i - capacity) := by
+    apply Finset.sum_congr rfl
+    intro i _
+    rw [load_sdiff]
+    split_ifs <;> simp
+  rw [excess]
+  omega
+
 /-- A finite proof tree. The two children of a split cover both Boolean values.
 There are no pending or oracle constructors. -/
 inductive CertificateTree (ι ρ : Type*) where
   | overBudget
   | weighted (capacity : ℕ) (weight : ρ → ℕ)
   | split (i : ι) (zero one : CertificateTree ι ρ)
+
+/-- Combine separately checked subtrees without evaluating their leaves again. -/
+theorem split_excludes {ι ρ : Type*} [Fintype ι] [DecidableEq ι]
+    (support : ρ → Finset ι) (demand : ρ → ℕ) (budget : ℕ)
+    (missing occupied : Finset ι) (i : ι)
+    (hzero : ¬ ∃ holes : ι → ℕ, (∀ j, holes j ≤ 1) ∧
+      (∀ r, demand r ≤ ∑ j ∈ support r, holes j) ∧ (∑ j, holes j) ≤ budget ∧
+      (∀ j ∈ missing, holes j = 1) ∧ (∀ j ∈ insert i occupied, holes j = 0))
+    (hone : ¬ ∃ holes : ι → ℕ, (∀ j, holes j ≤ 1) ∧
+      (∀ r, demand r ≤ ∑ j ∈ support r, holes j) ∧ (∑ j, holes j) ≤ budget ∧
+      (∀ j ∈ insert i missing, holes j = 1) ∧ (∀ j ∈ occupied, holes j = 0)) :
+    ¬ ∃ holes : ι → ℕ, (∀ j, holes j ≤ 1) ∧
+      (∀ r, demand r ≤ ∑ j ∈ support r, holes j) ∧ (∑ j, holes j) ≤ budget ∧
+      (∀ j ∈ missing, holes j = 1) ∧ (∀ j ∈ occupied, holes j = 0) := by
+  rintro ⟨holes, hbool, hrows, hb, hm, hz⟩
+  have hi := hbool i
+  have cases : holes i = 0 ∨ holes i = 1 := by omega
+  rcases cases with h0 | h1
+  · apply hzero
+    refine ⟨holes, hbool, hrows, hb, hm, ?_⟩
+    intro j hj
+    rcases Finset.mem_insert.mp hj with rfl | hj
+    · exact h0
+    · exact hz j hj
+  · apply hone
+    refine ⟨holes, hbool, hrows, hb, ?_, hz⟩
+    intro j hj
+    rcases Finset.mem_insert.mp hj with rfl | hj
+    · exact h1
+    · exact hm j hj
 
 /-- Computable integer checks for a proof tree under a partial assignment. -/
 def CertificateTree.check {ι ρ : Type*} [Fintype ι] [Fintype ρ] [DecidableEq ι]
