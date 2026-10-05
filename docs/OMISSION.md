@@ -96,6 +96,14 @@ integer multipliers only when the replacement leaf still has a strictly
 positive exact margin; both compact trees have minimum margin 1. The original
 and compact certificate hashes and full replay results are in the manifest.
 
+The source author's unmodified `check_octagon_arithmetic.py` independently
+accepts both stronger systems too. Its input format requires children before
+parents, so the tree nodes were renumbered; zero-residual weighted rows were
+also removed to match its signed-residual convention. The underlying states,
+supports, demands, and stronger budgets are unchanged. This secondary replay
+again gives bounds 192 and 123 with minimum margin 1. The format-conversion
+script and report are saved as `experiments/omission-author-replay-2026-10-05.*`.
+
 `OmissionPacking.lean` proves that bounded integer coefficient vectors can be
 checked by packing them into one natural number: uniqueness of base digits
 and a no-carry bound recover every column load from a packed equality. On one
