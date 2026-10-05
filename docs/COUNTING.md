@@ -24,8 +24,9 @@ The Lean theorem `combine_budgets` exposes the extraction, part-size, and budget
 hypotheses explicitly. The newer `HMPT/` modules derive geometric part-size and
 cap budgets for horizontal support paths, with explicit endpoint and padding
 losses, and combine them with extraction into a complete finite bound. See
-[`HMPT.md`](HMPT.md). The sharper cyclic and two-scale counting bridge used for
-the final published coefficient remains unfinished.
+[`HMPT.md`](HMPT.md). Projective normalization also provides a checked one-scale
+bridge from general convex-subset counts, allowing the existing Suk theorem to
+supply the input density. The sharper two-scale ratio estimate remains unfinished.
 
 `scripts/counting_experiments.py` compares this compression with coarser
 arithmetic bounds and with balanced allocations under parity budgets. Binomial

@@ -6,9 +6,9 @@ namespace ErdosSzekeres.HMPT
 /-- Cancel the same factorial on both sides of the density comparison, instead
 of paying a separate factorial bound. This keeps the extraction loss quadratic
 with its original leading coefficient. -/
-theorem density_condition_of_scaled_power {N M L D : ℕ} (hNL : 2 * L ≤ N)
-    (hpow : 2 * D * (2 * M) ^ L < N ^ L) :
-    2 * D * M.choose L < N.choose L := by
+theorem binomial_ratio_lt_of_scaled_power {N M L D : ℕ} (hNL : 2 * L ≤ N)
+    (hpow : D * (2 * M) ^ L < N ^ L) :
+    D * M.choose L < N.choose L := by
   have hlo : N ^ L ≤ 2 ^ L * (L.factorial * N.choose L) := by
     calc
       _ ≤ (2 * (N + 1 - L)) ^ L := Nat.pow_le_pow_left (by omega) L
@@ -18,16 +18,21 @@ theorem density_condition_of_scaled_power {N M L D : ℕ} (hNL : 2 * L ≤ N)
   have hhi : L.factorial * M.choose L ≤ M ^ L := by
     rw [← Nat.descFactorial_eq_factorial_mul_choose]
     exact Nat.descFactorial_le_pow _ _
-  have h : (2 ^ L * L.factorial) * (2 * D * M.choose L) <
+  have h : (2 ^ L * L.factorial) * (D * M.choose L) <
       (2 ^ L * L.factorial) * N.choose L := by
     calc
-      _ = 2 ^ L * (2 * D * (L.factorial * M.choose L)) := by ring
-      _ ≤ 2 ^ L * (2 * D * M ^ L) := Nat.mul_le_mul_left _ (Nat.mul_le_mul_left _ hhi)
-      _ = 2 * D * (2 * M) ^ L := by rw [mul_pow]; ring
+      _ = 2 ^ L * (D * (L.factorial * M.choose L)) := by ring
+      _ ≤ 2 ^ L * (D * M ^ L) := Nat.mul_le_mul_left _ (Nat.mul_le_mul_left _ hhi)
+      _ = D * (2 * M) ^ L := by rw [mul_pow]; ring
       _ < N ^ L := hpow
       _ ≤ 2 ^ L * (L.factorial * N.choose L) := hlo
       _ = _ := by ring
   exact lt_of_mul_lt_mul_left h (Nat.zero_le _)
+
+theorem density_condition_of_scaled_power {N M L D : ℕ} (hNL : 2 * L ≤ N)
+    (hpow : 2 * D * (2 * M) ^ L < N ^ L) :
+    2 * D * M.choose L < N.choose L :=
+  binomial_ratio_lt_of_scaled_power hNL hpow
 
 theorem density_condition_of_power {N L D : ℕ} (hNL : 2 * L ≤ N)
     (hpow : 2 ^ (2 * (L * L) + L + 1) * D < N ^ L) :

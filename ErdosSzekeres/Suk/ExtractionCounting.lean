@@ -12,6 +12,11 @@ noncomputable def convexSubsets (s : Finset Point) (k : ℕ) : Finset (Finset Po
   classical
   exact (s.powersetCard k).filter ConvexPosition
 
+@[simp] theorem mem_convexSubsets {s u : Finset Point} {k : ℕ} :
+    u ∈ convexSubsets s k ↔ u ⊆ s ∧ u.card = k ∧ ConvexPosition u := by
+  classical
+  simp [convexSubsets, and_assoc]
+
 private theorem supersets_card_le {α : Type*} [DecidableEq α]
     (s u : Finset α) (m : ℕ) (hus : u ⊆ s) :
     ((s.powersetCard m).filter (fun v => u ⊆ v)).card ≤
