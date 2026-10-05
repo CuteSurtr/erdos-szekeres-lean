@@ -99,3 +99,15 @@ bound, rounding, and eventual optimization now complete the ordinary-point-set
 HMPT bound. The pseudo-configuration and convex-body extensions are outside
 this development. A strict improvement remains unproved. See `SUK.md` and
 `HMPT.md` for the completed theorems' dependencies and exact scope.
+
+## Mixed-cap strengthening: a checked counterexample
+
+The attempted unconditional addition of a vertical cap and a nonadjacent inner
+cap fails. `MixedCap.mixed_cap_budget_counterexample` gives a 22-point real
+configuration in general position containing all six support anchors, an
+eight-point vertical cap, and an eight-point inner cap. Its largest convex
+subset has exactly 15 vertices. The theorem is checked in Lean; an independent
+Python replay also exhausts all 74,613 sixteen-point subsets. See
+[`MIXED_CAPS.md`](MIXED_CAPS.md) for the coordinates, the 672 triangle certificates,
+and the precise geometric hypotheses. Further mixed constraints would need
+additional compatibility hypotheses beyond these cap sizes and memberships.

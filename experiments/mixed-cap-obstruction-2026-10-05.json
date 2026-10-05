@@ -1,0 +1,221 @@
+{
+  "scope": "Counterexample to unconditional mixed-cap addition; not to Erdős–Szekeres",
+  "anchors": [
+    [
+      0,
+      0
+    ],
+    [
+      10000,
+      -100000
+    ],
+    [
+      20000,
+      -400000
+    ],
+    [
+      30000,
+      -900000
+    ],
+    [
+      40000,
+      -1600000
+    ],
+    [
+      50000,
+      -2500000
+    ]
+  ],
+  "vertical_cap": [
+    [
+      15000,
+      -200000
+    ],
+    [
+      15100,
+      -204899
+    ],
+    [
+      15200,
+      -209796
+    ],
+    [
+      15300,
+      -214691
+    ],
+    [
+      15400,
+      -219584
+    ],
+    [
+      15500,
+      -224475
+    ],
+    [
+      15600,
+      -229364
+    ],
+    [
+      15700,
+      -234251
+    ]
+  ],
+  "inner_cap": [
+    [
+      35000,
+      -1200000
+    ],
+    [
+      35100,
+      -1207001
+    ],
+    [
+      35200,
+      -1214004
+    ],
+    [
+      35300,
+      -1221009
+    ],
+    [
+      35400,
+      -1228016
+    ],
+    [
+      35500,
+      -1235025
+    ],
+    [
+      35600,
+      -1242036
+    ],
+    [
+      35700,
+      -1249049
+    ]
+  ],
+  "frame_indices_zero_based": [
+    0,
+    2
+  ],
+  "checks": {
+    "general_position": true,
+    "distinct_x": true,
+    "clockwise_anchors": true,
+    "vertical_spike": true,
+    "horizontal_spike": true,
+    "vertical_chain_order": true,
+    "left_cap": true,
+    "horizontal_antichain": true,
+    "inner_cap_supports": true,
+    "interior_certificates": true
+  },
+  "inner_support_vertices": [
+    [
+      35100,
+      -1207001
+    ],
+    [
+      35000,
+      -1200000
+    ],
+    [
+      35100,
+      -1207001
+    ],
+    [
+      35200,
+      -1214004
+    ],
+    [
+      35300,
+      -1221009
+    ],
+    [
+      35400,
+      -1228016
+    ],
+    [
+      35500,
+      -1235025
+    ],
+    [
+      35600,
+      -1242036
+    ]
+  ],
+  "interior_certificate_count": 672,
+  "certificate_patterns": [
+    "C[j] lies inside triangle(C[i], C[k], T[t]) for i < j < k",
+    "C[j] lies inside triangle(C[i], A[2], T[t]) for i < j"
+  ],
+  "ambient_cardinality": 22,
+  "cap_cardinality_sum": 16,
+  "maximum_convex_cardinality": 15,
+  "maximum_witness": [
+    [
+      0,
+      0
+    ],
+    [
+      50000,
+      -2500000
+    ],
+    [
+      40000,
+      -1600000
+    ],
+    [
+      35700,
+      -1249049
+    ],
+    [
+      35600,
+      -1242036
+    ],
+    [
+      35500,
+      -1235025
+    ],
+    [
+      35400,
+      -1228016
+    ],
+    [
+      35300,
+      -1221009
+    ],
+    [
+      35200,
+      -1214004
+    ],
+    [
+      35100,
+      -1207001
+    ],
+    [
+      35000,
+      -1200000
+    ],
+    [
+      30000,
+      -900000
+    ],
+    [
+      20000,
+      -400000
+    ],
+    [
+      15700,
+      -234251
+    ],
+    [
+      10000,
+      -100000
+    ]
+  ],
+  "sixteen_subsets_checked": 74613,
+  "sixteen_subsets_total": 74613,
+  "lean_theorem": "ErdosSzekeres.HMPT.MixedCap.mixed_cap_budget_counterexample",
+  "verification": "Exact Python replay; separate Lean proof checks all geometric hypotheses and the cardinality argument"
+}

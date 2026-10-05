@@ -183,3 +183,10 @@ A strict improvement needs additional mathematical input beyond this known
 argument. `DyadicModel.two_scales_optimal` excludes an improvement from merely
 adding more doublings in its explicitly restricted model. It is not a general
 obstruction to other proof strategies.
+
+`MixedCap.mixed_cap_budget_counterexample` also rejects an unconditional mixed
+vertical/inner-cap budget: two nonadjacent eight-point caps, with all support
+anchors included in a 22-point general-position configuration, can avoid a
+convex 16-gon. The largest convex subset has size 15, proved in Lean from exact
+triangle and supporting-edge certificates. See [`MIXED_CAPS.md`](MIXED_CAPS.md).
+This is a counterexample to a proposed lemma, not an improvement of the bound.

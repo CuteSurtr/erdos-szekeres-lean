@@ -10,9 +10,9 @@ convex polygon conjecture:
 is a `Prop` definition, not an assumed axiom or an unfinished theorem. Polygons
 here need not be empty: unselected points may lie inside them.
 
-Local validation: `lake build --wfail` passes, and all fifteen core Python tests
+Local validation: `lake build --wfail` passes, and all eighteen core Python tests
 pass (plus four optional Z3 tests locally). The principal geometric lemmas and rational-area bridge were inspected with
-`#print axioms`; CI also audits 165 geometric, combinatorial, and asymptotic milestones. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
+`#print axioms`; CI also audits 176 geometric, combinatorial, and asymptotic milestones. Only `propext`, `Classical.choice`, and `Quot.sound` occur.
 The project contains no proof placeholders or additional axioms.
 
 ## Current contents
@@ -70,6 +70,13 @@ The project contains no proof placeholders or additional axioms.
   extensions are outside this formalization.
 - `scripts/repair_near_miss.py`: recorded single-vertex repair attempts on
   configurations with a small number of forbidden polygons.
+- `IntegerCertificates.lean` and `HMPT/MixedCap*.lean`: an exact 22-point
+  counterexample to an unconditional mixed-cap budget. Lean checks the geometric
+  hypotheses and proves that its largest convex subset has size 15 despite two
+  cap sizes summing to 16. See `docs/MIXED_CAPS.md`; this rejects a candidate
+  lemma and does not improve the published bound.
+- `scripts/mixed_cap_certificate.py`: independent exhaustive replay of that
+  geometric certificate, with corruption and convex-hull cross-checks.
 - `scripts/product_bound_search.py`: exact integer search of the proved finite
   product formula, with independent checks of the original density inequality.
 - `scripts/search.py`: exact integer-coordinate grid search using convex hulls.
@@ -141,6 +148,8 @@ n-gon. The theorem is `ErdosSzekeres.HMPT.theorem2020`.
 The research goal continues toward a strict improvement. The completed Suk and
 HMPT formalizations reproduce published bounds; no new bound is claimed.
 
-The rational witness checker and end-to-end SAT certificate conversion remain
-separate unfinished work; the upstream CNF conversion needs repair before its
+Integer triangle and supporting-edge certificates now transfer to real geometry,
+including a complete checked avoidance certificate for the mixed-cap example.
+A general rational witness checker and end-to-end SAT certificate conversion
+remain unfinished; the upstream CNF conversion needs repair before its
 UNSAT results can become complete Lean proofs. Search timeouts are inconclusive.

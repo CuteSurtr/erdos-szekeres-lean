@@ -121,8 +121,10 @@ a fixed grid bound.
 
 1. **Done:** `OrientationGeometry.lean` proves
    `orient a b c = 0 ↔ Collinear ℝ {a,b,c}`, including degenerate triples.
-2. Prove exact orientation tests equivalent to point-in-triangle membership in
-   general position, then use Carathéodory for a finite convex-position checker.
+2. **Geometric bridges done:** exact triangle membership and the four-point
+   Carathéodory reduction are proved. `IntegerCertificates.lean` now also checks
+   integer interior and supporting-edge certificates against real convexity.
+   A general rational convex-subset decision procedure remains unfinished.
 3. Certify the four-point lower-bound witness and the universal five-point theorem.
 4. Audit and port the ordinary-polygon SAT reduction and certificate-checking path.
 5. Reproduce n = 5 and n = 6 before budgeting a 33-point search.
@@ -149,3 +151,15 @@ Our current search has two complementary representations: unrestricted abstract
 orientation CNFs, whose SAT models still need realization; and realizable coordinate
 mutations followed by full-plane single-point extension. Failed fixed-configuration
 extensions do not exhaust the configuration space.
+
+## Checked mixed-cap obstruction (2026-10-05)
+
+The Suk and final HMPT upper bounds are fully proved for ordinary real point
+sets. Research toward a stricter bound tested whether vertical and horizontal
+cap sizes admit an additional unconditional additive budget. They do not under
+the tested geometric hypotheses: a Lean-checked 22-point example has two
+nonadjacent eight-point caps and all six support anchors, but its largest convex
+subset has size 15. [`MIXED_CAPS.md`](MIXED_CAPS.md) records the exact statement
+and proof. The example isolates a failed route; it does not improve the
+published coefficient. The remaining research must establish additional
+compatibility conditions or strengthen another part of the counting argument.

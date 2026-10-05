@@ -1,5 +1,17 @@
 import ErdosSzekeres
 
+#print axioms ErdosSzekeres.IntegerInterior.mem_triangle
+#print axioms ErdosSzekeres.IntegerInterior.not_convexPosition
+#print axioms ErdosSzekeres.convexPosition_integer_image_of_supports
+#print axioms ErdosSzekeres.HMPT.MixedCap.convex_subset_card_le
+#print axioms ErdosSzekeres.HMPT.MixedCap.avoids_sixteen
+#print axioms ErdosSzekeres.HMPT.MixedCap.vertical_left_cap
+#print axioms ErdosSzekeres.HMPT.MixedCap.inner_antichain
+#print axioms ErdosSzekeres.HMPT.MixedCap.inner_cap
+#print axioms ErdosSzekeres.HMPT.MixedCap.general_position
+#print axioms ErdosSzekeres.HMPT.MixedCap.contains_fifteen
+#print axioms ErdosSzekeres.HMPT.MixedCap.mixed_cap_budget_counterexample
+
 #print axioms ErdosSzekeres.Suk.classical_upper_bound
 #print axioms ErdosSzekeres.Suk.cups_caps
 #print axioms ErdosSzekeres.Suk.chain_or_antichain
