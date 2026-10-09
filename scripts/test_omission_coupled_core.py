@@ -8,6 +8,9 @@ from pathlib import Path
 
 from check_omission_coupled_core import check_deletions, check_rup
 from check_omission_coupled_second import check_rup as check_second_rup
+from check_omission_coupled_third import check_rup as check_third_rup
+from check_omission_coupled_fourth import check_rup as check_fourth_rup
+from check_omission_coupled_fifth import check_rup as check_fifth_rup
 
 ROOT = Path(__file__).resolve().parents[1]
 class CoupledCoreControls:
@@ -55,6 +58,24 @@ class CoupledSecondCoreTests(CoupledCoreControls, unittest.TestCase):
     artifact = ROOT / 'experiments/omission-coupled-next-2026-10-10'
     replay = staticmethod(check_second_rup)
     steps = 435
+
+
+class CoupledThirdCoreTests(CoupledCoreControls, unittest.TestCase):
+    artifact = ROOT / 'experiments/omission-coupled-demand-two-2026-10-10'
+    replay = staticmethod(check_third_rup)
+    steps = 465
+
+
+class CoupledFourthCoreTests(CoupledCoreControls, unittest.TestCase):
+    artifact = ROOT / 'experiments/omission-coupled-fourth-2026-10-10'
+    replay = staticmethod(check_fourth_rup)
+    steps = 477
+
+
+class CoupledFifthCoreTests(CoupledCoreControls, unittest.TestCase):
+    artifact = ROOT / 'experiments/omission-coupled-fifth-2026-10-10'
+    replay = staticmethod(check_fifth_rup)
+    steps = 339
 
 
 if __name__ == '__main__':

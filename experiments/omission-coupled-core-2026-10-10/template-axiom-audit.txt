@@ -1,0 +1,9 @@
+'ErdosSzekeres.Omission.CoupledTemplate.context_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Omission.CoupledTemplate.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ErdosSzekeres.Omission.CoupledVariants.checked009 : Function.Injective state009 ∧ Compatible state009
+ErdosSzekeres.Omission.CoupledVariants.checked019 : Function.Injective state019 ∧ Compatible state019
+ErdosSzekeres.Omission.CoupledVariants.checked029 : Function.Injective state029 ∧ Compatible state029
+ErdosSzekeres.Omission.CoupledVariants.checked039 : Function.Injective state039 ∧ Compatible state039
+ErdosSzekeres.Omission.CoupledVariants.checked041 : Function.Injective state041 ∧ Compatible state041
+'ErdosSzekeres.Omission.CoupledVariants.checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Omission.CoupledVariants.all_rows' depends on axioms: [propext, Classical.choice, Quot.sound]

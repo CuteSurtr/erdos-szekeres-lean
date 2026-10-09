@@ -30,12 +30,13 @@ propose the multipliers, but Lean rechecks the full integer inequality.
 | --- | ---: | ---: | ---: | --- |
 | Residual, 154 states |30|4,686 leaves|145,474 leaves|Complete: 149 parts, catalog and root|
 | Balanced, 252 states |59|711 leaves|9,862 leaves|Complete: 17 parts, catalog and root|
-| Balanced, 252 states |60|3,954 leaves|No completed previous tree|Build in progress|
+| Balanced, 252 states |60|3,954 leaves|No completed previous tree|Complete: 92 parts, catalog and root|
 
-The first two complete roots have been composed with all geometric prerequisites
-into **`ForcesConvexNGon 317 8`**. The successful complete kernel records and
-source-only archives are saved here. The third remains a candidate for 316
-until its full Lean root and final composition pass.
+The residual30 and balanced60 roots have now been composed with all geometric
+prerequisites into **`ForcesConvexNGon 316 8`**. The earlier complete317 proof
+using balanced59 remains available. All three successful kernel records and
+source-only archives are saved here; no proof obligation remains for either
+closed threshold.
 
 `ResidualCountermodel.lean` is a separate checked result: one explicit 32-hole
 assignment satisfies all 1,187 original rows, all 21 earlier additions, and all

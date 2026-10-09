@@ -1,0 +1,98 @@
+{
+  "status": "kernel-checked",
+  "rows": 35,
+  "support_size": 13,
+  "demand": 1,
+  "intersection_with_first_family": 20,
+  "distinct_union_with_first_family": 57,
+  "roots": [
+    "ErdosSzekeres.Omission.CoupledTemplateSecond.context_impossible",
+    "ErdosSzekeres.Omission.CoupledTemplateSecond.hole_bound",
+    "ErdosSzekeres.Omission.CoupledTemplateSecond.check_sound",
+    "ErdosSzekeres.Omission.CoupledSecondVariants.checked",
+    "ErdosSzekeres.Omission.CoupledSecondVariants.all_rows"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "scope": "Every row is necessary for real residual configurations under the original no6cap/no8gon/noJunction hypotheses. The second core has an independent32-hole witness against all42first-family rows. The combined57-row union has a separate kernel-checked nine-independent/48redundant classification against the frozen original1187+prior45system. No global numerical improvement follows from this alone.",
+  "prerequisites_per_row": {
+    "empty_direction": 37,
+    "domain": 37,
+    "fixed_sign": 116
+  },
+  "method": "The same frozen520-clause LRAT proof is reused with generic state-dependent premises. Named maps are checked through a proved Boolean list-all checker using decide+kernel.",
+  "build": [
+    {
+      "module": "CoupledTemplateSecond",
+      "exit_code": 0,
+      "seconds": 30.633724999963306
+    },
+    {
+      "module": "CoupledTemplateSecondGeometry",
+      "exit_code": 0,
+      "seconds": 2.4805641670245677
+    },
+    {
+      "module": "CoupledTemplateSecondCheck",
+      "exit_code": 0,
+      "seconds": 2.1363018329720944
+    },
+    {
+      "module": "CoupledSecondVariants",
+      "exit_code": 0,
+      "seconds": 143.49750395899173
+    }
+  ],
+  "no_sorry": true,
+  "no_custom_axioms": true,
+  "no_native_decide_or_ofReduceBool": true,
+  "export_commands": [
+    "python3 scripts/export_omission_coupled_template.py --source experiments/omission-coupled-next-2026-10-10/core13.json --core ErdosSzekeres/Omission/CoupledCoreSecond.lean --namespace CoupledTemplateSecond --output ErdosSzekeres/Omission/CoupledTemplateSecond.lean",
+    "python3 scripts/export_omission_coupled_variants.py --source experiments/omission-coupled-next-2026-10-10/template-variants.json --template CoupledTemplateSecond --namespace CoupledSecondVariants --output ErdosSzekeres/Omission/CoupledSecondVariants.lean"
+  ],
+  "sha256": {
+    "ErdosSzekeres/Omission/CoupledTemplateSecond.lean": "f3d9d6d3e24da5d85a6b7ca2da0a2a0243b59af12932df692a74ca73927e95b5",
+    "ErdosSzekeres/Omission/CoupledTemplateSecondGeometry.lean": "2d1c328fb5c83ccfa4674bad6c494a37a87b22fcecbad65ac52df6640e67ff45",
+    "ErdosSzekeres/Omission/CoupledTemplateSecondCheck.lean": "a249d102c2b4465f91288bb728cd4212d75776a91bd0950eab1452950858575d",
+    "ErdosSzekeres/Omission/CoupledSecondVariants.lean": "6f4908847a7ff295c487b504b8be1dff52e5a46efe56f6d28130b959b4594ac3",
+    "scripts/export_omission_coupled_template.py": "e71d28d7fdbfc8622b5bfc493ff35441dfb91b670b06f35862960b7bb7aaa636",
+    "scripts/export_omission_coupled_variants.py": "68822b3e7dfd32bd52976e1ff6068f299b8b258a125993403d79dba88ed77b17",
+    "experiments/omission-coupled-next-2026-10-10/template-variants.json": "f42a278e94365c076ee6a8d855044edd093890a5eb9e68d2603f7714ef6799ba",
+    "experiments/omission-coupled-next-2026-10-10/template-axiom-audit.txt": "3984aa78cb938cb950532c68300578fa31837c4842fb3fe4c30ba5b5f6133128"
+  },
+  "finite_redundancy_review": {
+    "status": "kernel-checked classification of the frozen57-row union",
+    "distinct_union_rows": 57,
+    "cross_family_duplicates": 20,
+    "rows_implied_by_an_original_row": 48,
+    "independent_of_original_1187_prior_45_and_other_56": 9,
+    "first_family_zero_based_indices": [
+      6,
+      7,
+      10,
+      24,
+      25,
+      28,
+      38
+    ],
+    "second_family_zero_based_indices": [
+      8,
+      23
+    ],
+    "witness": "For support S, occupy precisely S and put holes on its complement. Each witness has 141 holes. This establishes row independence without a 32-hole cardinality restriction; it does not prove geometric realizability.",
+    "redundancy_reason": "For every one of the other 48 supports S, some original row R of demand d has |R \\ S| < d. With holes bounded by one, that original row forces at least one hole in S.",
+    "separate_kernel_strictness": "The two core Strictness.lean artifacts prove separation using exactly 32-hole witnesses; the second includes every first-template row among its premises.",
+    "diagnostic_source": "experiments/omission-coupled-union-2026-10-10/exact-check.json",
+    "diagnostic_sha256": "da056a00dadd2976df81df20a58fad80ba653da4526fcd1ccb108a918dad5edf",
+    "kernel_roots": [
+      "ErdosSzekeres.Omission.CoupledUnion.independent_each_selected_row",
+      "ErdosSzekeres.Omission.CoupledUnion.redundant_rows_implied"
+    ],
+    "kernel_record": "experiments/omission-coupled-union-2026-10-10/kernel-check.json",
+    "kernel_record_sha256": "9f2dde3a446e0d4cad1595a04a5e9a242e8f89ba4ee8979980c9eb4ce8893cb0",
+    "scope": "Exactly the original1187rows, prior45geometric rows, and other56members of this frozen57-row union. Later constraints can change which earlier rows are independent."
+  }
+}

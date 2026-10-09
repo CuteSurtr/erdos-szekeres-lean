@@ -1,8 +1,9 @@
 # Review of the geometric boundary and certificate linking
 
-The closed `FinalCover317` composition has now passed the complete gate and
-standard-axiom audit; see `global-cover-317-check.json`. This review explains
-its mathematical boundary. Historical `Final317`/`Final318` routes and stronger
+The closed `FinalCover316` and earlier `FinalCover317` compositions have passed
+the complete gate and standard-axiom audits; see their separate
+`global-cover-316-check.json` and `global-cover-317-check.json` records. This review explains
+their mathematical boundary. Historical `Final317`/`Final318` routes and stronger
 candidate assemblies are distinct and retain their separately stated status.
 
 * `Point` is `Fin 2 → ℝ`. `GeneralPosition` rules out collinearity of every
@@ -26,7 +27,7 @@ candidate assemblies are distinct and retain their separately stated status.
   residual population at most 124. Excluding at most 30 gives at most 123.
 * The root and the strict forcing threshold contribute one point each:
   balanced 192 plus residual 124 permits at most 317 avoiding points and
-  forces an octagon at 318. Residual 123 gives the threshold 317.
+  forces an octagon at 318. Residual 123 gives the threshold 317; balanced 191 plus residual 123 gives 316.
 * Historical fallback catalogs use different packing
   bases. `OmissionResidual124.catalog_matches` checks equality of the
   geometric supports and demands; the exclusion transfer uses precisely
@@ -38,7 +39,8 @@ candidate assemblies are distinct and retain their separately stated status.
   geometric or realizability premise is introduced by these arithmetic cuts.
 * The final source statements have no free population-bound variables or
   arithmetic hypotheses. Their only geometric hypotheses are general
-  position and the asserted cardinality threshold. `FinalCover317` passed
+  position and the asserted cardinality threshold. Both `FinalCover316` and
+  `FinalCover317` passed
   compilation and the final audit, with only `propext`, `Classical.choice`,
   and `Quot.sound`; stronger candidate files still require their own checks.
 

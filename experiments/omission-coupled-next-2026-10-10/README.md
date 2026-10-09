@@ -47,3 +47,39 @@ Schroeder's version-1 archive, 19 September 2026,
 The original data remain CC BY 4.0; see [THIRD_PARTY.md](../../docs/THIRD_PARTY.md)
 for the code licenses and Baek prerequisites. This obstruction is a local
 addition, with no literature priority claim.
+
+## Strictness and related rows
+
+[Strictness.lean](Strictness.lean) proves
+`CoupledCoreSecond.strict_strengthening`: the exact Boolean witness in
+[SecondResidualCountermodel.lean](SecondResidualCountermodel.lean) has 32 holes
+and satisfies all 1,187 original rows, all 45 earlier geometric rows and all
+42 first-template rows, but violates this second core's row.
+`CoupledCoreSecond.countermodel_not_realizable` proves that this missing-state
+set cannot come from an actual configuration with the residual hypotheses.
+
+`CoupledSecondVariants.all_rows`, in
+[CoupledSecondVariants.lean](../../ErdosSzekeres/Omission/CoupledSecondVariants.lean),
+certifies 35 supports using the same refutation and 190 finite compatibility
+checks per support. They share 20 supports with the first family of 42, giving
+**57 distinct necessary constraints** in the two families. This does not claim
+that every row is independent of the others or improve a global numerical bound.
+See [template-validation.json](template-validation.json) and
+[template-axiom-audit.txt](template-axiom-audit.txt).
+
+The compatibility checks use named maps and a Boolean list checker whose
+soundness is proved in Lean. The entire second family checked in about 144
+seconds under the compiler's `-M1200` option; all public audit roots use only
+the three standard axioms listed above.
+
+An exact finite arithmetic review distinguishes distinct supports from new
+information. Of these 57 rows, **48 already follow from an original catalog
+row**. For the remaining nine, complement-of-support witnesses satisfy all
+1,187 original rows, all 45 earlier rows and every other row in this union,
+but violate the selected row. Both parts of this classification are now kernel-checked by
+`CoupledUnion.independent_each_selected_row` and `redundant_rows_implied`;
+see the [union proof bundle](../omission-coupled-union-2026-10-10/README.md).
+Its witnesses have 141 holes; the two separate core strictness theorems above
+use 32-hole witnesses. The classification concerns this frozen 57-row union;
+later constraints can change independence of earlier rows. The exact scope is
+also recorded in the `finite_redundancy_review` field of the template validation.

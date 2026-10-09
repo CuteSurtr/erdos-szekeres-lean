@@ -220,12 +220,39 @@ it does not change the dependency provenance of Suk or HMPT.
 
 ## Coupled residual obstructions — 10 October 2026
 
-The `Omission/Coupled*` modules and the two `omission-coupled-*` artifacts
-retain Schroeder's state numbering and the preceding attributed geometric
-interfaces. Derived state data retain CC BY 4.0 attribution. The local shared
-order/rank/orientation encodings, refutations and actual-owner necessity proofs
-are new additions. `CoupledLrat.lean` invokes Mathlib's Apache-2.0
-`Mathlib.Tactic.Sat.FromLRAT` proof-term generator; it does not vendor that
-implementation or introduce a native-evaluation axiom. CaDiCaL and Z3 were
-used only for untrusted proof discovery and are not committed here. The
-literal derivations are independently replayed and checked by Lean's kernel.
+The `Omission/Coupled*` modules and their experiment bundles retain
+Schroeder's state numbering and the preceding attributed geometric interfaces.
+Derived state data retain CC BY 4.0 attribution to the pinned version-1 archive.
+The local shared order/rank/orientation encodings, finite refutations,
+actual-owner necessity proofs and template extensions are project additions;
+they are not statements attributed to Suk or HMPT, and no literature priority
+or endorsement claim is made.
+
+Five kernel-checked thirteen-state cores are preserved in the
+[first](../experiments/omission-coupled-core-2026-10-10/README.md),
+[second](../experiments/omission-coupled-next-2026-10-10/README.md),
+[third](../experiments/omission-coupled-demand-two-2026-10-10/README.md),
+[fourth](../experiments/omission-coupled-fourth-2026-10-10/README.md) and
+[fifth](../experiments/omission-coupled-fifth-2026-10-10/README.md) bundles.
+Their source snapshots, literal CNF/LRAT certificates, independently replayed
+deletion models and axiom audits document the local changes. The first two
+cores yield families of 42 and 35 supports, whose union has 57 distinct rows.
+The separate [union bundle](../experiments/omission-coupled-union-2026-10-10/README.md)
+contains the checked nine-independent/48-redundant classification against its
+frozen earlier row system. Its Boolean witnesses do not assert realizability.
+
+The third and fourth bundles also preserve three selected third-core variants
+and 24 fourth-core variants, including the fourth core itself. The third bundle
+contains the fourteen-state demand-two theorem, assembled from its new core,
+two credited original cycle rows and an earlier template row. These additions
+reuse the attributed residual-state method and this project's proved geometric
+bridges. They neither replace the earlier provenance nor establish a new
+asymptotic coefficient; the [paper map](PAPER_MAP.md#supplementary-project-results-coupled-residual-obstructions)
+lists their precise theorem names and scope.
+
+[CoupledLrat.lean](../ErdosSzekeres/Omission/CoupledLrat.lean) invokes Mathlib's
+Apache-2.0 `Mathlib.Tactic.Sat.FromLRAT` proof-term generator; it does not vendor
+that implementation or introduce a native-evaluation axiom. CaDiCaL and Z3 were
+used only for untrusted discovery and are not committed here. The literal
+derivations are independently replayed and checked by Lean's kernel. Compiled
+objects and inspection caches remain ignored.

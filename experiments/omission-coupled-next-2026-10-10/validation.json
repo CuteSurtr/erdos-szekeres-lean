@@ -1,5 +1,5 @@
 {
-  "status": "kernel-checked geometric obstruction",
+  "status": "kernel-checked geometric obstruction and finite strictness",
   "support": [
     16,
     25,
@@ -22,7 +22,7 @@
     "no convex 8-gon",
     "existing no 6-cup / 5-cap junction"
   ],
-  "scope": "A second necessary coupled omission row. It excludes the independently replayed second 32-hole abstract witness, which satisfies the first core and all 42 first-template candidates. No exclusion of every 32-hole assignment or improved global ES8 bound follows yet.",
+  "scope": "A second necessary coupled omission row. A kernel-checked32-hole Boolean witness satisfies all1187 original rows, all45 previous additional rows and all42 first-template rows but violates this row. The corresponding actual residual configuration is therefore impossible. No exclusion of every32-hole assignment or improved global ES8 bound follows yet.",
   "proof": {
     "variables": 429,
     "base_clauses": 520,
@@ -42,7 +42,9 @@
     "roots": [
       "ErdosSzekeres.Omission.CoupledCoreSecond.context_impossible",
       "ErdosSzekeres.Omission.CoupledCoreSecond.exists_missing_state",
-      "ErdosSzekeres.Omission.CoupledCoreSecond.hole_bound"
+      "ErdosSzekeres.Omission.CoupledCoreSecond.hole_bound",
+      "ErdosSzekeres.Omission.CoupledCoreSecond.strict_strengthening",
+      "ErdosSzekeres.Omission.CoupledCoreSecond.countermodel_not_realizable"
     ],
     "axioms": [
       "propext",
@@ -64,14 +66,18 @@
     "deletion_scope": "Earlier SAT models are restricted to each final 12-state deletion and all domains, rank growth, fixed signs, packets, convex-four semantics and all 8-subset exclusions are independently replayed. This establishes subset-minimality of this necessary model, not real-point realizability.",
     "check_command": "python3 scripts/check_omission_coupled_second.py",
     "export_command": "python3 scripts/export_omission_coupled_second.py",
-    "export_byte_identical": true
+    "export_byte_identical": true,
+    "clean_strictness_compile": true,
+    "strictness_seconds": 2.1924977500457317,
+    "strictness_catalog_source": ".cache/omission-lean-full/residual/Catalog.lean",
+    "strictness_catalog_sha256": "f94c74ecade3b2714f961cd3ee7826ad0804342886f0e86ab2ca3908f86cb7da"
   },
   "sha256": {
     "ErdosSzekeres/Omission/CoupledCoreSecond.lean": "f906b4b2b49aa2289f726c7aabb4489041bc724666b56016f6174594bca89c88",
     "ErdosSzekeres/Omission/CoupledLrat.lean": "d580eed2b603472df39a5dac3918a09481629b8224a4a03325dd77f6c85f9e51",
     "ErdosSzekeres/Omission/CoupledSecondObstruction.lean": "fb292466fc935896041f4654821d66f2165aff45b03473a34a30842d6a2bcf82",
     "ErdosSzekeres/Omission/CoupledSemantics.lean": "672adbe50764a3c94a00342a4e23f10cac69f257e4e304cf2f5661cf91151f58",
-    "experiments/omission-coupled-next-2026-10-10/axiom-audit.txt": "b9ecd9b1f4fa7f88c7ae4fb150b78aa63a3a64b294c9784950c22a7627d1d7f0",
+    "experiments/omission-coupled-next-2026-10-10/axiom-audit.txt": "6b9b16377f293657f83301e48cb6ebb26180ce534e98776ed5e270d1e34b14ec",
     "experiments/omission-coupled-next-2026-10-10/core13.cnf": "37058f37fb48866a61163cd76cd963eef87b86a5b929658ebd2e81f7fc108647",
     "experiments/omission-coupled-next-2026-10-10/core13.json": "0b823bd1807a68ed56db7dff217260585769238d32f842849302bbe65155079d",
     "experiments/omission-coupled-next-2026-10-10/core13.lrat": "3d0b117c9afa59ff8ca2fc099ec96828742c12fd5beb9d880dda78b3c7d4317f",
@@ -82,6 +88,9 @@
     "scripts/check_omission_coupled_core.py": "e05f7452552109f0588d7ff008aa75641d2887d82cb4dd8635225277bb9ae5fe",
     "scripts/check_omission_coupled_second.py": "cc8f846dc42807879e5a72aefaa637d64a952604ef6a1e9d5375e6eac23c6f33",
     "scripts/export_omission_coupled_core.py": "9468e5db6d2adfcc3e2c303a231406d4a55a76e160a058d534d96681a6790c8f",
-    "scripts/export_omission_coupled_second.py": "ccd8f27f4d00a96ed346884e3eeabfb7a098fe22e3f4c37b6bba7826602fb3fd"
+    "scripts/export_omission_coupled_second.py": "7fa7b79d92a6b6c4233d5071503a491d3f82addbfa044596dbb4e4fde0e72627",
+    "experiments/omission-coupled-next-2026-10-10/Strictness.lean": "b2bb51e39927a904df7821cc378e25d525a6155c049693d138f61fb1e98dab29",
+    "experiments/omission-coupled-next-2026-10-10/SecondResidualCountermodel.lean": "8d454d89c1538707fc57bfd6f0a4dedfeb09e9b67775aa7aec394ea8361727ea",
+    "ErdosSzekeres/Omission/CoupledVariants.lean": "362afa01ccfb71ea96a5de6fc6abd8ef82a2ccfa2d5c2b23432bf6456beb5903"
   }
 }

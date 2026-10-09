@@ -1,13 +1,13 @@
 # Completed residual population bound and geometric transfer
 
 **The residual population bound 123 and the global real-point bound
-`ES(8) ≤ 317` are now checked.** The closed statements
+`ES(8) ≤ 316` are now checked.** The closed statements
 `ErdosSzekeres.Omission.residual_population_123` and
-`ErdosSzekeres.Omission.forces_convex_octagon_317` live in
-[`FinalCover317.lean`](../experiments/omission-global-assembly-2026-10-10/FinalCover317.lean).
-The [complete final record](../experiments/omission-global-assembly-2026-10-10/global-cover-317-check.json)
+`ErdosSzekeres.Omission.forces_convex_octagon_316` live in
+[`FinalCover316.lean`](../experiments/omission-global-assembly-2026-10-10/FinalCover316.lean).
+The [complete final record](../experiments/omission-global-assembly-2026-10-10/global-cover-316-check.json)
 binds all arithmetic, geometry, and catalog bridges; its
-[axiom output](../experiments/omission-global-assembly-2026-10-10/global-cover-317-axioms.txt)
+[axiom output](../experiments/omission-global-assembly-2026-10-10/global-cover-316-axioms.txt)
 reports only `propext`, `Classical.choice`, and `Quot.sound`. See
 [OMISSION_ASSEMBLY.md](OMISSION_ASSEMBLY.md) for the complete reproduction.
 
@@ -21,7 +21,7 @@ The completed arithmetic route derives 402 additional inequalities from the
 original 1,187 rows, then excludes every Boolean hole vector of total at most
 30 with a 4,686-leaf certificate. All 149 proof parts and its root passed Lean.
 The hole identity `sum holes + n = 154` therefore gives `n ≤ 123`. Together
-with balanced population 192, the geometric partition gives threshold 317.
+with balanced population 191, the geometric partition gives threshold 316.
 The older 145,474-leaf direct tree remains partial and is not used by this proof.
 
 All names below are under `ErdosSzekeres.Omission`, except the standalone rows.
@@ -44,7 +44,7 @@ All names below are under `ErdosSzekeres.Omission`, except the standalone rows.
 | Derived arithmetic rows | Standalone `ResidualCoverCuts.lean` | `ResidualCoverCuts.all_rows`: all 402 rounded-cover consequences of the original rows |
 | Complete arithmetic exclusion | Generated `ResidualCoverProof.Root` and its 149 parts | `OmissionResidualCover.excludes_budget`: no feasible vector with at most 30 holes in the 1,589-row system |
 | Exact catalog identification | Standalone `ResidualCoverBridge.lean` | `OmissionResidualCover.base_catalog_matches`, `cut_catalog_matches`, `all_cover_rows`, `exclusion_transfer` |
-| Closed actual bound and global result | Standalone `FinalCover317.lean` | `ErdosSzekeres.Omission.residual_population_123`, `forces_convex_octagon_317`, `convex_octagon_of_card_ge_317` |
+| Closed actual bound and global result | Standalone `FinalCover316.lean` | `ErdosSzekeres.Omission.residual_population_123`, `forces_convex_octagon_316`, `convex_octagon_of_card_ge_316` |
 
 The original `forces_317_of_arithmetic` theorem is a conditional interface:
 the balanced bound and `ExcludesThirtyHoles` imply `ForcesConvexNGon 317 8`.
@@ -77,7 +77,7 @@ The default library build is not counted as a replay of the generated trees.
 Further arithmetic budgets and stronger numerical thresholds remain separate
 candidates until their own complete roots and global statements pass. The
 original geometric transfer is already complete; these candidates do not
-leave an unproved geometric assumption inside the checked 317 result.
+leave an unproved geometric assumption inside the checked 316 result.
 
 The ranks, restricted-state method, block compression and supporting-line
 strategy follow Michael Schroeder's version-1 archive,

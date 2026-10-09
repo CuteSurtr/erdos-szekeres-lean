@@ -46,3 +46,10 @@ import ErdosSzekeres.OrientationConvexity
 import ErdosSzekeres.OrientationObstructions
 import ErdosSzekeres.Omission.CoupledObstruction
 import ErdosSzekeres.Omission.CoupledSecondObstruction
+import ErdosSzekeres.Omission.CoupledVariants
+import ErdosSzekeres.Omission.CoupledSecondVariants
+import ErdosSzekeres.Omission.CoupledDemandTwo
+import ErdosSzekeres.Omission.CoupledFourthObstruction
+import ErdosSzekeres.Omission.CoupledThirdVariants
+import ErdosSzekeres.Omission.CoupledFourthVariants
+import ErdosSzekeres.Omission.CoupledFifthObstruction

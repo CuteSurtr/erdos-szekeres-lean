@@ -1,0 +1,12970 @@
+{
+ "support": [
+  1,
+  4,
+  7,
+  8,
+  11,
+  12,
+  14,
+  16,
+  17,
+  20,
+  23,
+  25,
+  43
+ ],
+ "variables": [
+  [
+   "before",
+   0,
+   1
+  ],
+  [
+   "before",
+   0,
+   2
+  ],
+  [
+   "before",
+   0,
+   3
+  ],
+  [
+   "before",
+   0,
+   4
+  ],
+  [
+   "before",
+   0,
+   5
+  ],
+  [
+   "before",
+   0,
+   6
+  ],
+  [
+   "before",
+   0,
+   7
+  ],
+  [
+   "before",
+   0,
+   8
+  ],
+  [
+   "before",
+   0,
+   9
+  ],
+  [
+   "before",
+   0,
+   10
+  ],
+  [
+   "before",
+   0,
+   11
+  ],
+  [
+   "before",
+   1,
+   3
+  ],
+  [
+   "before",
+   1,
+   5
+  ],
+  [
+   "before",
+   1,
+   6
+  ],
+  [
+   "before",
+   1,
+   8
+  ],
+  [
+   "before",
+   1,
+   10
+  ],
+  [
+   "before",
+   1,
+   11
+  ],
+  [
+   "before",
+   2,
+   4
+  ],
+  [
+   "before",
+   2,
+   5
+  ],
+  [
+   "cup_ge",
+   2,
+   5,
+   2
+  ],
+  [
+   "before",
+   2,
+   7
+  ],
+  [
+   "before",
+   2,
+   8
+  ],
+  [
+   "before",
+   2,
+   9
+  ],
+  [
+   "before",
+   2,
+   10
+  ],
+  [
+   "cap_ge",
+   2,
+   10,
+   4
+  ],
+  [
+   "cup_ge",
+   2,
+   10,
+   2
+  ],
+  [
+   "before",
+   2,
+   11
+  ],
+  [
+   "before",
+   2,
+   12
+  ],
+  [
+   "before",
+   3,
+   5
+  ],
+  [
+   "before",
+   3,
+   6
+  ],
+  [
+   "before",
+   3,
+   8
+  ],
+  [
+   "before",
+   3,
+   10
+  ],
+  [
+   "before",
+   3,
+   11
+  ],
+  [
+   "before",
+   3,
+   12
+  ],
+  [
+   "before",
+   4,
+   5
+  ],
+  [
+   "before",
+   4,
+   7
+  ],
+  [
+   "cap_ge",
+   4,
+   7,
+   2
+  ],
+  [
+   "before",
+   4,
+   8
+  ],
+  [
+   "before",
+   4,
+   9
+  ],
+  [
+   "before",
+   4,
+   10
+  ],
+  [
+   "before",
+   5,
+   7
+  ],
+  [
+   "before",
+   5,
+   8
+  ],
+  [
+   "before",
+   5,
+   9
+  ],
+  [
+   "cup_ge",
+   5,
+   9,
+   6
+  ],
+  [
+   "before",
+   5,
+   10
+  ],
+  [
+   "cap_ge",
+   5,
+   10,
+   4
+  ],
+  [
+   "cup_ge",
+   5,
+   10,
+   2
+  ],
+  [
+   "cup_ge",
+   5,
+   10,
+   3
+  ],
+  [
+   "cup_ge",
+   5,
+   10,
+   4
+  ],
+  [
+   "cup_ge",
+   5,
+   10,
+   5
+  ],
+  [
+   "before",
+   5,
+   11
+  ],
+  [
+   "before",
+   5,
+   12
+  ],
+  [
+   "before",
+   6,
+   8
+  ],
+  [
+   "before",
+   6,
+   10
+  ],
+  [
+   "before",
+   6,
+   11
+  ],
+  [
+   "before",
+   6,
+   12
+  ],
+  [
+   "before",
+   7,
+   9
+  ],
+  [
+   "before",
+   7,
+   10
+  ],
+  [
+   "cap_ge",
+   7,
+   10,
+   3
+  ],
+  [
+   "before",
+   7,
+   12
+  ],
+  [
+   "before",
+   8,
+   9
+  ],
+  [
+   "before",
+   8,
+   10
+  ],
+  [
+   "before",
+   8,
+   11
+  ],
+  [
+   "cap_ge",
+   8,
+   11,
+   2
+  ],
+  [
+   "before",
+   9,
+   10
+  ],
+  [
+   "cap_ge",
+   9,
+   10,
+   4
+  ],
+  [
+   "cup_ge",
+   9,
+   10,
+   2
+  ],
+  [
+   "cup_ge",
+   9,
+   10,
+   3
+  ],
+  [
+   "cup_ge",
+   9,
+   10,
+   4
+  ],
+  [
+   "cup_ge",
+   9,
+   10,
+   5
+  ],
+  [
+   "cup_ge",
+   9,
+   10,
+   6
+  ],
+  [
+   "before",
+   9,
+   11
+  ],
+  [
+   "before",
+   9,
+   12
+  ],
+  [
+   "before",
+   10,
+   11
+  ],
+  [
+   "before",
+   10,
+   12
+  ],
+  [
+   "cap_ge",
+   10,
+   12,
+   2
+  ],
+  [
+   "cap_ge",
+   10,
+   12,
+   3
+  ],
+  [
+   "cap_ge",
+   10,
+   12,
+   4
+  ],
+  [
+   "cup_ge",
+   10,
+   12,
+   2
+  ],
+  [
+   "cup_ge",
+   10,
+   12,
+   3
+  ],
+  [
+   "cup_ge",
+   10,
+   12,
+   4
+  ],
+  [
+   "cup_ge",
+   10,
+   12,
+   5
+  ],
+  [
+   "cup_ge",
+   10,
+   12,
+   6
+  ],
+  [
+   "before",
+   11,
+   12
+  ],
+  [
+   "cap_ge",
+   11,
+   12,
+   3
+  ],
+  [
+   "cap_ge",
+   11,
+   12,
+   4
+  ],
+  [
+   "cup_ge",
+   11,
+   12,
+   2
+  ],
+  [
+   "cup_ge",
+   11,
+   12,
+   3
+  ],
+  [
+   "cup_ge",
+   11,
+   12,
+   4
+  ],
+  [
+   "cup_ge",
+   11,
+   12,
+   5
+  ],
+  [
+   "cup_ge",
+   11,
+   12,
+   6
+  ],
+  [
+   "orientation",
+   0,
+   1,
+   3
+  ],
+  [
+   "orientation",
+   0,
+   1,
+   6
+  ],
+  [
+   "orientation",
+   0,
+   1,
+   8
+  ],
+  [
+   "orientation",
+   0,
+   1,
+   10
+  ],
+  [
+   "orientation",
+   0,
+   1,
+   11
+  ],
+  [
+   "orientation",
+   0,
+   1,
+   12
+  ],
+  [
+   "orientation",
+   0,
+   2,
+   4
+  ],
+  [
+   "orientation",
+   0,
+   2,
+   5
+  ],
+  [
+   "orientation",
+   0,
+   2,
+   7
+  ],
+  [
+   "orientation",
+   0,
+   2,
+   8
+  ],
+  [
+   "orientation",
+   0,
+   2,
+   9
+  ],
+  [
+   "orientation",
+   0,
+   2,
+   10
+  ],
+  [
+   "orientation",
+   0,
+   2,
+   11
+  ],
+  [
+   "orientation",
+   0,
+   2,
+   12
+  ],
+  [
+   "orientation",
+   0,
+   3,
+   6
+  ],
+  [
+   "orientation",
+   0,
+   3,
+   8
+  ],
+  [
+   "orientation",
+   0,
+   3,
+   10
+  ],
+  [
+   "orientation",
+   0,
+   3,
+   11
+  ],
+  [
+   "orientation",
+   0,
+   3,
+   12
+  ],
+  [
+   "orientation",
+   0,
+   4,
+   5
+  ],
+  [
+   "orientation",
+   0,
+   4,
+   7
+  ],
+  [
+   "orientation",
+   0,
+   4,
+   9
+  ],
+  [
+   "orientation",
+   0,
+   4,
+   10
+  ],
+  [
+   "orientation",
+   0,
+   4,
+   12
+  ],
+  [
+   "orientation",
+   0,
+   5,
+   7
+  ],
+  [
+   "orientation",
+   0,
+   5,
+   8
+  ],
+  [
+   "orientation",
+   0,
+   5,
+   9
+  ],
+  [
+   "orientation",
+   0,
+   5,
+   10
+  ],
+  [
+   "orientation",
+   0,
+   5,
+   11
+  ],
+  [
+   "orientation",
+   0,
+   5,
+   12
+  ],
+  [
+   "orientation",
+   0,
+   6,
+   8
+  ],
+  [
+   "orientation",
+   0,
+   6,
+   10
+  ],
+  [
+   "orientation",
+   0,
+   6,
+   11
+  ],
+  [
+   "orientation",
+   0,
+   6,
+   12
+  ],
+  [
+   "orientation",
+   0,
+   7,
+   9
+  ],
+  [
+   "orientation",
+   0,
+   7,
+   10
+  ],
+  [
+   "orientation",
+   0,
+   7,
+   12
+  ],
+  [
+   "orientation",
+   0,
+   8,
+   9
+  ],
+  [
+   "orientation",
+   0,
+   8,
+   10
+  ],
+  [
+   "orientation",
+   0,
+   8,
+   11
+  ],
+  [
+   "orientation",
+   0,
+   8,
+   12
+  ],
+  [
+   "orientation",
+   0,
+   9,
+   10
+  ],
+  [
+   "orientation",
+   0,
+   9,
+   11
+  ],
+  [
+   "orientation",
+   0,
+   9,
+   12
+  ],
+  [
+   "orientation",
+   0,
+   10,
+   11
+  ],
+  [
+   "orientation",
+   0,
+   10,
+   12
+  ],
+  [
+   "orientation",
+   0,
+   11,
+   12
+  ],
+  [
+   "orientation",
+   1,
+   3,
+   6
+  ],
+  [
+   "orientation",
+   1,
+   3,
+   8
+  ],
+  [
+   "orientation",
+   1,
+   3,
+   10
+  ],
+  [
+   "orientation",
+   1,
+   3,
+   11
+  ],
+  [
+   "orientation",
+   1,
+   3,
+   12
+  ],
+  [
+   "orientation",
+   1,
+   5,
+   10
+  ],
+  [
+   "orientation",
+   1,
+   5,
+   12
+  ],
+  [
+   "orientation",
+   1,
+   6,
+   8
+  ],
+  [
+   "orientation",
+   1,
+   6,
+   10
+  ],
+  [
+   "orientation",
+   1,
+   6,
+   11
+  ],
+  [
+   "orientation",
+   1,
+   6,
+   12
+  ],
+  [
+   "orientation",
+   1,
+   8,
+   10
+  ],
+  [
+   "orientation",
+   1,
+   8,
+   11
+  ],
+  [
+   "orientation",
+   1,
+   8,
+   12
+  ],
+  [
+   "orientation",
+   1,
+   10,
+   11
+  ],
+  [
+   "orientation",
+   1,
+   10,
+   12
+  ],
+  [
+   "orientation",
+   1,
+   11,
+   12
+  ],
+  [
+   "orientation",
+   2,
+   4,
+   5
+  ],
+  [
+   "orientation",
+   2,
+   4,
+   7
+  ],
+  [
+   "orientation",
+   2,
+   4,
+   9
+  ],
+  [
+   "orientation",
+   2,
+   4,
+   10
+  ],
+  [
+   "orientation",
+   2,
+   4,
+   12
+  ],
+  [
+   "orientation",
+   2,
+   5,
+   7
+  ],
+  [
+   "orientation",
+   2,
+   5,
+   8
+  ],
+  [
+   "orientation",
+   2,
+   5,
+   9
+  ],
+  [
+   "orientation",
+   2,
+   5,
+   10
+  ],
+  [
+   "orientation",
+   2,
+   5,
+   11
+  ],
+  [
+   "orientation",
+   2,
+   5,
+   12
+  ],
+  [
+   "orientation",
+   2,
+   7,
+   9
+  ],
+  [
+   "orientation",
+   2,
+   7,
+   10
+  ],
+  [
+   "orientation",
+   2,
+   7,
+   12
+  ],
+  [
+   "orientation",
+   2,
+   8,
+   9
+  ],
+  [
+   "orientation",
+   2,
+   8,
+   10
+  ],
+  [
+   "orientation",
+   2,
+   8,
+   11
+  ],
+  [
+   "orientation",
+   2,
+   8,
+   12
+  ],
+  [
+   "orientation",
+   2,
+   9,
+   10
+  ],
+  [
+   "orientation",
+   2,
+   9,
+   11
+  ],
+  [
+   "orientation",
+   2,
+   9,
+   12
+  ],
+  [
+   "orientation",
+   2,
+   10,
+   11
+  ],
+  [
+   "orientation",
+   2,
+   10,
+   12
+  ],
+  [
+   "orientation",
+   2,
+   11,
+   12
+  ],
+  [
+   "orientation",
+   3,
+   5,
+   10
+  ],
+  [
+   "orientation",
+   3,
+   5,
+   12
+  ],
+  [
+   "orientation",
+   3,
+   6,
+   8
+  ],
+  [
+   "orientation",
+   3,
+   6,
+   10
+  ],
+  [
+   "orientation",
+   3,
+   6,
+   11
+  ],
+  [
+   "orientation",
+   3,
+   6,
+   12
+  ],
+  [
+   "orientation",
+   3,
+   8,
+   10
+  ],
+  [
+   "orientation",
+   3,
+   8,
+   11
+  ],
+  [
+   "orientation",
+   3,
+   8,
+   12
+  ],
+  [
+   "orientation",
+   3,
+   10,
+   11
+  ],
+  [
+   "orientation",
+   3,
+   10,
+   12
+  ],
+  [
+   "orientation",
+   3,
+   11,
+   12
+  ],
+  [
+   "orientation",
+   4,
+   5,
+   7
+  ],
+  [
+   "orientation",
+   4,
+   5,
+   9
+  ],
+  [
+   "orientation",
+   4,
+   5,
+   10
+  ],
+  [
+   "orientation",
+   4,
+   5,
+   12
+  ],
+  [
+   "orientation",
+   4,
+   7,
+   9
+  ],
+  [
+   "orientation",
+   4,
+   7,
+   10
+  ],
+  [
+   "orientation",
+   4,
+   7,
+   12
+  ],
+  [
+   "orientation",
+   4,
+   8,
+   10
+  ],
+  [
+   "orientation",
+   4,
+   8,
+   12
+  ],
+  [
+   "orientation",
+   4,
+   9,
+   10
+  ],
+  [
+   "orientation",
+   4,
+   9,
+   12
+  ],
+  [
+   "orientation",
+   4,
+   10,
+   12
+  ],
+  [
+   "orientation",
+   5,
+   7,
+   9
+  ],
+  [
+   "orientation",
+   5,
+   7,
+   10
+  ],
+  [
+   "orientation",
+   5,
+   7,
+   12
+  ],
+  [
+   "orientation",
+   5,
+   8,
+   9
+  ],
+  [
+   "orientation",
+   5,
+   8,
+   10
+  ],
+  [
+   "orientation",
+   5,
+   8,
+   11
+  ],
+  [
+   "orientation",
+   5,
+   8,
+   12
+  ],
+  [
+   "orientation",
+   5,
+   9,
+   10
+  ],
+  [
+   "orientation",
+   5,
+   9,
+   11
+  ],
+  [
+   "orientation",
+   5,
+   9,
+   12
+  ],
+  [
+   "orientation",
+   5,
+   10,
+   11
+  ],
+  [
+   "orientation",
+   5,
+   10,
+   12
+  ],
+  [
+   "orientation",
+   5,
+   11,
+   12
+  ],
+  [
+   "orientation",
+   6,
+   8,
+   10
+  ],
+  [
+   "orientation",
+   6,
+   8,
+   11
+  ],
+  [
+   "orientation",
+   6,
+   8,
+   12
+  ],
+  [
+   "orientation",
+   6,
+   10,
+   11
+  ],
+  [
+   "orientation",
+   6,
+   10,
+   12
+  ],
+  [
+   "orientation",
+   6,
+   11,
+   12
+  ],
+  [
+   "orientation",
+   7,
+   9,
+   10
+  ],
+  [
+   "orientation",
+   7,
+   9,
+   12
+  ],
+  [
+   "orientation",
+   7,
+   10,
+   12
+  ],
+  [
+   "orientation",
+   8,
+   9,
+   10
+  ],
+  [
+   "orientation",
+   8,
+   9,
+   11
+  ],
+  [
+   "orientation",
+   8,
+   9,
+   12
+  ],
+  [
+   "orientation",
+   8,
+   10,
+   11
+  ],
+  [
+   "orientation",
+   8,
+   10,
+   12
+  ],
+  [
+   "orientation",
+   8,
+   11,
+   12
+  ],
+  [
+   "orientation",
+   9,
+   10,
+   11
+  ],
+  [
+   "orientation",
+   9,
+   10,
+   12
+  ],
+  [
+   "orientation",
+   9,
+   11,
+   12
+  ],
+  [
+   "orientation",
+   10,
+   11,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   1,
+   3,
+   6
+  ],
+  [
+   "convex_four",
+   0,
+   1,
+   3,
+   8
+  ],
+  [
+   "convex_four",
+   0,
+   1,
+   3,
+   10
+  ],
+  [
+   "convex_four",
+   0,
+   1,
+   3,
+   11
+  ],
+  [
+   "convex_four",
+   0,
+   1,
+   3,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   1,
+   6,
+   8
+  ],
+  [
+   "convex_four",
+   0,
+   1,
+   6,
+   10
+  ],
+  [
+   "convex_four",
+   0,
+   1,
+   6,
+   11
+  ],
+  [
+   "convex_four",
+   0,
+   1,
+   6,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   1,
+   8,
+   10
+  ],
+  [
+   "convex_four",
+   0,
+   1,
+   8,
+   11
+  ],
+  [
+   "convex_four",
+   0,
+   1,
+   8,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   1,
+   10,
+   11
+  ],
+  [
+   "convex_four",
+   0,
+   1,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   1,
+   11,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   2,
+   4,
+   5
+  ],
+  [
+   "convex_four",
+   0,
+   2,
+   4,
+   7
+  ],
+  [
+   "convex_four",
+   0,
+   2,
+   4,
+   9
+  ],
+  [
+   "convex_four",
+   0,
+   2,
+   4,
+   10
+  ],
+  [
+   "convex_four",
+   0,
+   2,
+   4,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   2,
+   5,
+   7
+  ],
+  [
+   "convex_four",
+   0,
+   2,
+   5,
+   8
+  ],
+  [
+   "convex_four",
+   0,
+   2,
+   5,
+   9
+  ],
+  [
+   "convex_four",
+   0,
+   2,
+   5,
+   10
+  ],
+  [
+   "convex_four",
+   0,
+   2,
+   5,
+   11
+  ],
+  [
+   "convex_four",
+   0,
+   2,
+   5,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   2,
+   7,
+   9
+  ],
+  [
+   "convex_four",
+   0,
+   2,
+   7,
+   10
+  ],
+  [
+   "convex_four",
+   0,
+   2,
+   7,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   2,
+   8,
+   9
+  ],
+  [
+   "convex_four",
+   0,
+   2,
+   8,
+   10
+  ],
+  [
+   "convex_four",
+   0,
+   2,
+   8,
+   11
+  ],
+  [
+   "convex_four",
+   0,
+   2,
+   8,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   2,
+   9,
+   10
+  ],
+  [
+   "convex_four",
+   0,
+   2,
+   9,
+   11
+  ],
+  [
+   "convex_four",
+   0,
+   2,
+   9,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   2,
+   10,
+   11
+  ],
+  [
+   "convex_four",
+   0,
+   2,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   2,
+   11,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   3,
+   6,
+   8
+  ],
+  [
+   "convex_four",
+   0,
+   3,
+   6,
+   10
+  ],
+  [
+   "convex_four",
+   0,
+   3,
+   6,
+   11
+  ],
+  [
+   "convex_four",
+   0,
+   3,
+   6,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   3,
+   8,
+   10
+  ],
+  [
+   "convex_four",
+   0,
+   3,
+   8,
+   11
+  ],
+  [
+   "convex_four",
+   0,
+   3,
+   8,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   3,
+   10,
+   11
+  ],
+  [
+   "convex_four",
+   0,
+   3,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   3,
+   11,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   4,
+   5,
+   7
+  ],
+  [
+   "convex_four",
+   0,
+   4,
+   5,
+   9
+  ],
+  [
+   "convex_four",
+   0,
+   4,
+   5,
+   10
+  ],
+  [
+   "convex_four",
+   0,
+   4,
+   5,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   4,
+   7,
+   9
+  ],
+  [
+   "convex_four",
+   0,
+   4,
+   7,
+   10
+  ],
+  [
+   "convex_four",
+   0,
+   4,
+   7,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   4,
+   9,
+   10
+  ],
+  [
+   "convex_four",
+   0,
+   4,
+   9,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   4,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   5,
+   7,
+   9
+  ],
+  [
+   "convex_four",
+   0,
+   5,
+   7,
+   10
+  ],
+  [
+   "convex_four",
+   0,
+   5,
+   7,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   5,
+   8,
+   9
+  ],
+  [
+   "convex_four",
+   0,
+   5,
+   8,
+   10
+  ],
+  [
+   "convex_four",
+   0,
+   5,
+   8,
+   11
+  ],
+  [
+   "convex_four",
+   0,
+   5,
+   8,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   5,
+   9,
+   10
+  ],
+  [
+   "convex_four",
+   0,
+   5,
+   9,
+   11
+  ],
+  [
+   "convex_four",
+   0,
+   5,
+   9,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   5,
+   10,
+   11
+  ],
+  [
+   "convex_four",
+   0,
+   5,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   5,
+   11,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   6,
+   8,
+   10
+  ],
+  [
+   "convex_four",
+   0,
+   6,
+   8,
+   11
+  ],
+  [
+   "convex_four",
+   0,
+   6,
+   8,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   6,
+   10,
+   11
+  ],
+  [
+   "convex_four",
+   0,
+   6,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   6,
+   11,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   7,
+   9,
+   10
+  ],
+  [
+   "convex_four",
+   0,
+   7,
+   9,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   7,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   8,
+   9,
+   10
+  ],
+  [
+   "convex_four",
+   0,
+   8,
+   9,
+   11
+  ],
+  [
+   "convex_four",
+   0,
+   8,
+   9,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   8,
+   10,
+   11
+  ],
+  [
+   "convex_four",
+   0,
+   8,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   8,
+   11,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   9,
+   10,
+   11
+  ],
+  [
+   "convex_four",
+   0,
+   9,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   9,
+   11,
+   12
+  ],
+  [
+   "convex_four",
+   0,
+   10,
+   11,
+   12
+  ],
+  [
+   "convex_four",
+   1,
+   3,
+   6,
+   8
+  ],
+  [
+   "convex_four",
+   1,
+   3,
+   6,
+   10
+  ],
+  [
+   "convex_four",
+   1,
+   3,
+   6,
+   11
+  ],
+  [
+   "convex_four",
+   1,
+   3,
+   6,
+   12
+  ],
+  [
+   "convex_four",
+   1,
+   3,
+   8,
+   10
+  ],
+  [
+   "convex_four",
+   1,
+   3,
+   8,
+   11
+  ],
+  [
+   "convex_four",
+   1,
+   3,
+   8,
+   12
+  ],
+  [
+   "convex_four",
+   1,
+   3,
+   10,
+   11
+  ],
+  [
+   "convex_four",
+   1,
+   3,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   1,
+   3,
+   11,
+   12
+  ],
+  [
+   "convex_four",
+   1,
+   6,
+   8,
+   10
+  ],
+  [
+   "convex_four",
+   1,
+   6,
+   8,
+   11
+  ],
+  [
+   "convex_four",
+   1,
+   6,
+   8,
+   12
+  ],
+  [
+   "convex_four",
+   1,
+   6,
+   10,
+   11
+  ],
+  [
+   "convex_four",
+   1,
+   6,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   1,
+   6,
+   11,
+   12
+  ],
+  [
+   "convex_four",
+   1,
+   8,
+   10,
+   11
+  ],
+  [
+   "convex_four",
+   1,
+   8,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   1,
+   8,
+   11,
+   12
+  ],
+  [
+   "convex_four",
+   1,
+   10,
+   11,
+   12
+  ],
+  [
+   "convex_four",
+   2,
+   4,
+   5,
+   7
+  ],
+  [
+   "convex_four",
+   2,
+   4,
+   5,
+   9
+  ],
+  [
+   "convex_four",
+   2,
+   4,
+   5,
+   10
+  ],
+  [
+   "convex_four",
+   2,
+   4,
+   5,
+   12
+  ],
+  [
+   "convex_four",
+   2,
+   4,
+   7,
+   9
+  ],
+  [
+   "convex_four",
+   2,
+   4,
+   7,
+   10
+  ],
+  [
+   "convex_four",
+   2,
+   4,
+   7,
+   12
+  ],
+  [
+   "convex_four",
+   2,
+   4,
+   9,
+   10
+  ],
+  [
+   "convex_four",
+   2,
+   4,
+   9,
+   12
+  ],
+  [
+   "convex_four",
+   2,
+   4,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   2,
+   5,
+   7,
+   9
+  ],
+  [
+   "convex_four",
+   2,
+   5,
+   7,
+   10
+  ],
+  [
+   "convex_four",
+   2,
+   5,
+   7,
+   12
+  ],
+  [
+   "convex_four",
+   2,
+   5,
+   8,
+   9
+  ],
+  [
+   "convex_four",
+   2,
+   5,
+   8,
+   10
+  ],
+  [
+   "convex_four",
+   2,
+   5,
+   8,
+   11
+  ],
+  [
+   "convex_four",
+   2,
+   5,
+   8,
+   12
+  ],
+  [
+   "convex_four",
+   2,
+   5,
+   9,
+   10
+  ],
+  [
+   "convex_four",
+   2,
+   5,
+   9,
+   11
+  ],
+  [
+   "convex_four",
+   2,
+   5,
+   9,
+   12
+  ],
+  [
+   "convex_four",
+   2,
+   5,
+   10,
+   11
+  ],
+  [
+   "convex_four",
+   2,
+   5,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   2,
+   5,
+   11,
+   12
+  ],
+  [
+   "convex_four",
+   2,
+   7,
+   9,
+   10
+  ],
+  [
+   "convex_four",
+   2,
+   7,
+   9,
+   12
+  ],
+  [
+   "convex_four",
+   2,
+   7,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   2,
+   8,
+   9,
+   10
+  ],
+  [
+   "convex_four",
+   2,
+   8,
+   9,
+   11
+  ],
+  [
+   "convex_four",
+   2,
+   8,
+   9,
+   12
+  ],
+  [
+   "convex_four",
+   2,
+   8,
+   10,
+   11
+  ],
+  [
+   "convex_four",
+   2,
+   8,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   2,
+   8,
+   11,
+   12
+  ],
+  [
+   "convex_four",
+   2,
+   9,
+   10,
+   11
+  ],
+  [
+   "convex_four",
+   2,
+   9,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   2,
+   9,
+   11,
+   12
+  ],
+  [
+   "convex_four",
+   2,
+   10,
+   11,
+   12
+  ],
+  [
+   "convex_four",
+   3,
+   6,
+   8,
+   10
+  ],
+  [
+   "convex_four",
+   3,
+   6,
+   8,
+   11
+  ],
+  [
+   "convex_four",
+   3,
+   6,
+   8,
+   12
+  ],
+  [
+   "convex_four",
+   3,
+   6,
+   10,
+   11
+  ],
+  [
+   "convex_four",
+   3,
+   6,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   3,
+   6,
+   11,
+   12
+  ],
+  [
+   "convex_four",
+   3,
+   8,
+   10,
+   11
+  ],
+  [
+   "convex_four",
+   3,
+   8,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   3,
+   8,
+   11,
+   12
+  ],
+  [
+   "convex_four",
+   3,
+   10,
+   11,
+   12
+  ],
+  [
+   "convex_four",
+   4,
+   5,
+   7,
+   9
+  ],
+  [
+   "convex_four",
+   4,
+   5,
+   7,
+   10
+  ],
+  [
+   "convex_four",
+   4,
+   5,
+   7,
+   12
+  ],
+  [
+   "convex_four",
+   4,
+   5,
+   9,
+   10
+  ],
+  [
+   "convex_four",
+   4,
+   5,
+   9,
+   12
+  ],
+  [
+   "convex_four",
+   4,
+   5,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   4,
+   7,
+   9,
+   10
+  ],
+  [
+   "convex_four",
+   4,
+   7,
+   9,
+   12
+  ],
+  [
+   "convex_four",
+   4,
+   7,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   4,
+   9,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   5,
+   7,
+   9,
+   10
+  ],
+  [
+   "convex_four",
+   5,
+   7,
+   9,
+   12
+  ],
+  [
+   "convex_four",
+   5,
+   7,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   5,
+   8,
+   9,
+   10
+  ],
+  [
+   "convex_four",
+   5,
+   8,
+   9,
+   11
+  ],
+  [
+   "convex_four",
+   5,
+   8,
+   9,
+   12
+  ],
+  [
+   "convex_four",
+   5,
+   8,
+   10,
+   11
+  ],
+  [
+   "convex_four",
+   5,
+   8,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   5,
+   8,
+   11,
+   12
+  ],
+  [
+   "convex_four",
+   5,
+   9,
+   10,
+   11
+  ],
+  [
+   "convex_four",
+   5,
+   9,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   5,
+   9,
+   11,
+   12
+  ],
+  [
+   "convex_four",
+   5,
+   10,
+   11,
+   12
+  ],
+  [
+   "convex_four",
+   6,
+   8,
+   10,
+   11
+  ],
+  [
+   "convex_four",
+   6,
+   8,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   6,
+   8,
+   11,
+   12
+  ],
+  [
+   "convex_four",
+   6,
+   10,
+   11,
+   12
+  ],
+  [
+   "convex_four",
+   7,
+   9,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   8,
+   9,
+   10,
+   11
+  ],
+  [
+   "convex_four",
+   8,
+   9,
+   10,
+   12
+  ],
+  [
+   "convex_four",
+   8,
+   9,
+   11,
+   12
+  ],
+  [
+   "convex_four",
+   8,
+   10,
+   11,
+   12
+  ],
+  [
+   "convex_four",
+   9,
+   10,
+   11,
+   12
+  ]
+ ],
+ "clauses": [
+  {
+   "original_id": 29,
+   "kind": "empty_direction",
+   "detail": [
+    1,
+    0
+   ],
+   "literals": [
+    1
+   ]
+  },
+  {
+   "original_id": 81,
+   "kind": "empty_direction",
+   "detail": [
+    2,
+    0
+   ],
+   "literals": [
+    2
+   ]
+  },
+  {
+   "original_id": 133,
+   "kind": "empty_direction",
+   "detail": [
+    3,
+    0
+   ],
+   "literals": [
+    3
+   ]
+  },
+  {
+   "original_id": 185,
+   "kind": "empty_direction",
+   "detail": [
+    4,
+    0
+   ],
+   "literals": [
+    4
+   ]
+  },
+  {
+   "original_id": 236,
+   "kind": "empty_direction",
+   "detail": [
+    5,
+    0
+   ],
+   "literals": [
+    5
+   ]
+  },
+  {
+   "original_id": 287,
+   "kind": "empty_direction",
+   "detail": [
+    6,
+    0
+   ],
+   "literals": [
+    6
+   ]
+  },
+  {
+   "original_id": 338,
+   "kind": "empty_direction",
+   "detail": [
+    7,
+    0
+   ],
+   "literals": [
+    7
+   ]
+  },
+  {
+   "original_id": 389,
+   "kind": "empty_direction",
+   "detail": [
+    8,
+    0
+   ],
+   "literals": [
+    8
+   ]
+  },
+  {
+   "original_id": 439,
+   "kind": "empty_direction",
+   "detail": [
+    9,
+    0
+   ],
+   "literals": [
+    9
+   ]
+  },
+  {
+   "original_id": 489,
+   "kind": "empty_direction",
+   "detail": [
+    10,
+    0
+   ],
+   "literals": [
+    10
+   ]
+  },
+  {
+   "original_id": 539,
+   "kind": "empty_direction",
+   "detail": [
+    11,
+    0
+   ],
+   "literals": [
+    11
+   ]
+  },
+  {
+   "original_id": 695,
+   "kind": "empty_direction",
+   "detail": [
+    3,
+    1
+   ],
+   "literals": [
+    12
+   ]
+  },
+  {
+   "original_id": 797,
+   "kind": "empty_direction",
+   "detail": [
+    5,
+    1
+   ],
+   "literals": [
+    13
+   ]
+  },
+  {
+   "original_id": 850,
+   "kind": "empty_direction",
+   "detail": [
+    6,
+    1
+   ],
+   "literals": [
+    14
+   ]
+  },
+  {
+   "original_id": 1052,
+   "kind": "empty_direction",
+   "detail": [
+    10,
+    1
+   ],
+   "literals": [
+    16
+   ]
+  },
+  {
+   "original_id": 1305,
+   "kind": "empty_direction",
+   "detail": [
+    5,
+    2
+   ],
+   "literals": [
+    19
+   ]
+  },
+  {
+   "original_id": 1505,
+   "kind": "empty_direction",
+   "detail": [
+    9,
+    2
+   ],
+   "literals": [
+    23
+   ]
+  },
+  {
+   "original_id": 1654,
+   "kind": "empty_direction",
+   "detail": [
+    12,
+    2
+   ],
+   "literals": [
+    28
+   ]
+  },
+  {
+   "original_id": 1758,
+   "kind": "empty_direction",
+   "detail": [
+    5,
+    3
+   ],
+   "literals": [
+    29
+   ]
+  },
+  {
+   "original_id": 1812,
+   "kind": "empty_direction",
+   "detail": [
+    6,
+    3
+   ],
+   "literals": [
+    30
+   ]
+  },
+  {
+   "original_id": 2018,
+   "kind": "empty_direction",
+   "detail": [
+    10,
+    3
+   ],
+   "literals": [
+    32
+   ]
+  },
+  {
+   "original_id": 2119,
+   "kind": "empty_direction",
+   "detail": [
+    12,
+    3
+   ],
+   "literals": [
+    34
+   ]
+  },
+  {
+   "original_id": 2273,
+   "kind": "empty_direction",
+   "detail": [
+    7,
+    4
+   ],
+   "literals": [
+    36
+   ]
+  },
+  {
+   "original_id": 2327,
+   "kind": "empty_direction",
+   "detail": [
+    8,
+    4
+   ],
+   "literals": [
+    38
+   ]
+  },
+  {
+   "original_id": 2430,
+   "kind": "empty_direction",
+   "detail": [
+    10,
+    4
+   ],
+   "literals": [
+    40
+   ]
+  },
+  {
+   "original_id": 2738,
+   "kind": "empty_direction",
+   "detail": [
+    9,
+    5
+   ],
+   "literals": [
+    43
+   ]
+  },
+  {
+   "original_id": 2809,
+   "kind": "domain",
+   "detail": [
+    10,
+    5,
+    4,
+    2
+   ],
+   "literals": [
+    45,
+    -46,
+    -47,
+    48
+   ]
+  },
+  {
+   "original_id": 2810,
+   "kind": "domain",
+   "detail": [
+    10,
+    5,
+    4,
+    3
+   ],
+   "literals": [
+    45,
+    -46,
+    -48,
+    49
+   ]
+  },
+  {
+   "original_id": 2811,
+   "kind": "domain",
+   "detail": [
+    10,
+    5,
+    4,
+    4
+   ],
+   "literals": [
+    45,
+    -46,
+    -49,
+    50
+   ]
+  },
+  {
+   "original_id": 2890,
+   "kind": "empty_direction",
+   "detail": [
+    12,
+    5
+   ],
+   "literals": [
+    52
+   ]
+  },
+  {
+   "original_id": 3100,
+   "kind": "empty_direction",
+   "detail": [
+    10,
+    6
+   ],
+   "literals": [
+    54
+   ]
+  },
+  {
+   "original_id": 3203,
+   "kind": "empty_direction",
+   "detail": [
+    12,
+    6
+   ],
+   "literals": [
+    56
+   ]
+  },
+  {
+   "original_id": 3360,
+   "kind": "empty_direction",
+   "detail": [
+    10,
+    7
+   ],
+   "literals": [
+    58
+   ]
+  },
+  {
+   "original_id": 3466,
+   "kind": "empty_direction",
+   "detail": [
+    12,
+    7
+   ],
+   "literals": [
+    60
+   ]
+  },
+  {
+   "original_id": 3620,
+   "kind": "empty_direction",
+   "detail": [
+    11,
+    8
+   ],
+   "literals": [
+    63
+   ]
+  },
+  {
+   "original_id": 3744,
+   "kind": "domain",
+   "detail": [
+    10,
+    9,
+    4,
+    2
+   ],
+   "literals": [
+    65,
+    -66,
+    -67,
+    68
+   ]
+  },
+  {
+   "original_id": 3745,
+   "kind": "domain",
+   "detail": [
+    10,
+    9,
+    4,
+    3
+   ],
+   "literals": [
+    65,
+    -66,
+    -68,
+    69
+   ]
+  },
+  {
+   "original_id": 3746,
+   "kind": "domain",
+   "detail": [
+    10,
+    9,
+    4,
+    4
+   ],
+   "literals": [
+    65,
+    -66,
+    -69,
+    70
+   ]
+  },
+  {
+   "original_id": 3747,
+   "kind": "domain",
+   "detail": [
+    10,
+    9,
+    4,
+    5
+   ],
+   "literals": [
+    65,
+    -66,
+    -70,
+    71
+   ]
+  },
+  {
+   "original_id": 3827,
+   "kind": "empty_direction",
+   "detail": [
+    12,
+    9
+   ],
+   "literals": [
+    73
+   ]
+  },
+  {
+   "original_id": 3916,
+   "kind": "domain",
+   "detail": [
+    10,
+    12,
+    2,
+    2
+   ],
+   "literals": [
+    -75,
+    -76,
+    77,
+    -79,
+    80
+   ]
+  },
+  {
+   "original_id": 3917,
+   "kind": "domain",
+   "detail": [
+    10,
+    12,
+    2,
+    3
+   ],
+   "literals": [
+    -75,
+    -76,
+    77,
+    -80,
+    81
+   ]
+  },
+  {
+   "original_id": 3918,
+   "kind": "domain",
+   "detail": [
+    10,
+    12,
+    2,
+    4
+   ],
+   "literals": [
+    -75,
+    -76,
+    77,
+    -81,
+    82
+   ]
+  },
+  {
+   "original_id": 3919,
+   "kind": "domain",
+   "detail": [
+    10,
+    12,
+    2,
+    5
+   ],
+   "literals": [
+    -75,
+    -76,
+    77,
+    -82,
+    83
+   ]
+  },
+  {
+   "original_id": 3920,
+   "kind": "domain",
+   "detail": [
+    10,
+    12,
+    2,
+    6
+   ],
+   "literals": [
+    -75,
+    -76,
+    77,
+    -83
+   ]
+  },
+  {
+   "original_id": 3922,
+   "kind": "domain",
+   "detail": [
+    10,
+    12,
+    3,
+    2
+   ],
+   "literals": [
+    -75,
+    -77,
+    78,
+    -79,
+    80
+   ]
+  },
+  {
+   "original_id": 3923,
+   "kind": "domain",
+   "detail": [
+    10,
+    12,
+    3,
+    3
+   ],
+   "literals": [
+    -75,
+    -77,
+    78,
+    -80,
+    81
+   ]
+  },
+  {
+   "original_id": 3924,
+   "kind": "domain",
+   "detail": [
+    10,
+    12,
+    3,
+    4
+   ],
+   "literals": [
+    -75,
+    -77,
+    78,
+    -81,
+    82
+   ]
+  },
+  {
+   "original_id": 3925,
+   "kind": "domain",
+   "detail": [
+    10,
+    12,
+    3,
+    5
+   ],
+   "literals": [
+    -75,
+    -77,
+    78,
+    -82,
+    83
+   ]
+  },
+  {
+   "original_id": 3926,
+   "kind": "domain",
+   "detail": [
+    10,
+    12,
+    3,
+    6
+   ],
+   "literals": [
+    -75,
+    -77,
+    78,
+    -83
+   ]
+  },
+  {
+   "original_id": 3927,
+   "kind": "domain",
+   "detail": [
+    10,
+    12,
+    4,
+    2
+   ],
+   "literals": [
+    -75,
+    -78,
+    -79,
+    80
+   ]
+  },
+  {
+   "original_id": 3928,
+   "kind": "domain",
+   "detail": [
+    10,
+    12,
+    4,
+    3
+   ],
+   "literals": [
+    -75,
+    -78,
+    -80,
+    81
+   ]
+  },
+  {
+   "original_id": 3929,
+   "kind": "domain",
+   "detail": [
+    10,
+    12,
+    4,
+    4
+   ],
+   "literals": [
+    -75,
+    -78,
+    -81,
+    82
+   ]
+  },
+  {
+   "original_id": 3930,
+   "kind": "domain",
+   "detail": [
+    10,
+    12,
+    4,
+    5
+   ],
+   "literals": [
+    -75,
+    -78,
+    -82,
+    83
+   ]
+  },
+  {
+   "original_id": 3931,
+   "kind": "domain",
+   "detail": [
+    10,
+    12,
+    4,
+    6
+   ],
+   "literals": [
+    -75,
+    -78,
+    -83
+   ]
+  },
+  {
+   "original_id": 3932,
+   "kind": "empty_direction",
+   "detail": [
+    12,
+    10
+   ],
+   "literals": [
+    75
+   ]
+  },
+  {
+   "original_id": 3975,
+   "kind": "domain",
+   "detail": [
+    11,
+    12,
+    3,
+    2
+   ],
+   "literals": [
+    -84,
+    -85,
+    86,
+    -87,
+    88
+   ]
+  },
+  {
+   "original_id": 3976,
+   "kind": "domain",
+   "detail": [
+    11,
+    12,
+    3,
+    3
+   ],
+   "literals": [
+    -84,
+    -85,
+    86,
+    -88,
+    89
+   ]
+  },
+  {
+   "original_id": 3977,
+   "kind": "domain",
+   "detail": [
+    11,
+    12,
+    3,
+    4
+   ],
+   "literals": [
+    -84,
+    -85,
+    86,
+    -89,
+    90
+   ]
+  },
+  {
+   "original_id": 3978,
+   "kind": "domain",
+   "detail": [
+    11,
+    12,
+    3,
+    5
+   ],
+   "literals": [
+    -84,
+    -85,
+    86,
+    -90,
+    91
+   ]
+  },
+  {
+   "original_id": 3979,
+   "kind": "domain",
+   "detail": [
+    11,
+    12,
+    3,
+    6
+   ],
+   "literals": [
+    -84,
+    -85,
+    86,
+    -91
+   ]
+  },
+  {
+   "original_id": 3980,
+   "kind": "domain",
+   "detail": [
+    11,
+    12,
+    4,
+    2
+   ],
+   "literals": [
+    -84,
+    -86,
+    -87,
+    88
+   ]
+  },
+  {
+   "original_id": 3981,
+   "kind": "domain",
+   "detail": [
+    11,
+    12,
+    4,
+    3
+   ],
+   "literals": [
+    -84,
+    -86,
+    -88,
+    89
+   ]
+  },
+  {
+   "original_id": 3982,
+   "kind": "domain",
+   "detail": [
+    11,
+    12,
+    4,
+    4
+   ],
+   "literals": [
+    -84,
+    -86,
+    -89,
+    90
+   ]
+  },
+  {
+   "original_id": 3983,
+   "kind": "domain",
+   "detail": [
+    11,
+    12,
+    4,
+    5
+   ],
+   "literals": [
+    -84,
+    -86,
+    -90,
+    91
+   ]
+  },
+  {
+   "original_id": 3984,
+   "kind": "domain",
+   "detail": [
+    11,
+    12,
+    4,
+    6
+   ],
+   "literals": [
+    -84,
+    -86,
+    -91
+   ]
+  },
+  {
+   "original_id": 3985,
+   "kind": "empty_direction",
+   "detail": [
+    12,
+    11
+   ],
+   "literals": [
+    84
+   ]
+  },
+  {
+   "original_id": 4169,
+   "kind": "growth",
+   "detail": [
+    "cup",
+    0,
+    2,
+    5,
+    1
+   ],
+   "literals": [
+    -2,
+    -19,
+    20,
+    -99
+   ]
+  },
+  {
+   "original_id": 4224,
+   "kind": "growth",
+   "detail": [
+    "cup",
+    0,
+    2,
+    10,
+    1
+   ],
+   "literals": [
+    -2,
+    -24,
+    26,
+    -103
+   ]
+  },
+  {
+   "original_id": 4429,
+   "kind": "growth",
+   "detail": [
+    "cap",
+    0,
+    4,
+    7,
+    1
+   ],
+   "literals": [
+    -4,
+    -36,
+    37,
+    112
+   ]
+  },
+  {
+   "original_id": 4957,
+   "kind": "growth",
+   "detail": [
+    "cap",
+    0,
+    8,
+    11,
+    1
+   ],
+   "literals": [
+    -8,
+    -63,
+    64,
+    131
+   ]
+  },
+  {
+   "original_id": 5210,
+   "kind": "growth",
+   "detail": [
+    "cap",
+    0,
+    10,
+    12,
+    1
+   ],
+   "literals": [
+    -10,
+    -75,
+    76,
+    137
+   ]
+  },
+  {
+   "original_id": 5214,
+   "kind": "growth",
+   "detail": [
+    "cup",
+    0,
+    10,
+    12,
+    1
+   ],
+   "literals": [
+    -10,
+    -75,
+    79,
+    -137
+   ]
+  },
+  {
+   "original_id": 6166,
+   "kind": "order_transitive",
+   "detail": [
+    1,
+    6,
+    11
+   ],
+   "literals": [
+    -14,
+    17,
+    -55
+   ]
+  },
+  {
+   "original_id": 6662,
+   "kind": "growth",
+   "detail": [
+    "cap",
+    1,
+    10,
+    12,
+    1
+   ],
+   "literals": [
+    -16,
+    -75,
+    76,
+    154
+   ]
+  },
+  {
+   "original_id": 7332,
+   "kind": "order_transitive",
+   "detail": [
+    2,
+    4,
+    7
+   ],
+   "literals": [
+    -18,
+    21,
+    -36
+   ]
+  },
+  {
+   "original_id": 7486,
+   "kind": "order_transitive",
+   "detail": [
+    2,
+    5,
+    10
+   ],
+   "literals": [
+    -19,
+    24,
+    -45
+   ]
+  },
+  {
+   "original_id": 7492,
+   "kind": "growth",
+   "detail": [
+    "cup",
+    2,
+    5,
+    10,
+    2
+   ],
+   "literals": [
+    -19,
+    -20,
+    -45,
+    48,
+    -164
+   ]
+  },
+  {
+   "original_id": 7970,
+   "kind": "order_transitive",
+   "detail": [
+    2,
+    9,
+    10
+   ],
+   "literals": [
+    -23,
+    24,
+    -65
+   ]
+  },
+  {
+   "original_id": 7981,
+   "kind": "order_transitive",
+   "detail": [
+    2,
+    9,
+    11
+   ],
+   "literals": [
+    -23,
+    27,
+    -72
+   ]
+  },
+  {
+   "original_id": 8119,
+   "kind": "growth",
+   "detail": [
+    "cup",
+    2,
+    10,
+    12,
+    2
+   ],
+   "literals": [
+    -24,
+    -26,
+    -75,
+    80,
+    -178
+   ]
+  },
+  {
+   "original_id": 9070,
+   "kind": "order_transitive",
+   "detail": [
+    3,
+    6,
+    11
+   ],
+   "literals": [
+    -30,
+    33,
+    -55
+   ]
+  },
+  {
+   "original_id": 9566,
+   "kind": "growth",
+   "detail": [
+    "cap",
+    3,
+    10,
+    12,
+    1
+   ],
+   "literals": [
+    -32,
+    -75,
+    76,
+    190
+   ]
+  },
+  {
+   "original_id": 10634,
+   "kind": "growth",
+   "detail": [
+    "cap",
+    4,
+    7,
+    10,
+    2
+   ],
+   "literals": [
+    -36,
+    -37,
+    -58,
+    59,
+    197
+   ]
+  },
+  {
+   "original_id": 11022,
+   "kind": "growth",
+   "detail": [
+    "cup",
+    4,
+    10,
+    12,
+    1
+   ],
+   "literals": [
+    -40,
+    -75,
+    79,
+    -203
+   ]
+  },
+  {
+   "original_id": 12326,
+   "kind": "order_transitive",
+   "detail": [
+    5,
+    9,
+    10
+   ],
+   "literals": [
+    -43,
+    45,
+    -65
+   ]
+  },
+  {
+   "original_id": 12358,
+   "kind": "growth",
+   "detail": [
+    "cup",
+    5,
+    9,
+    12,
+    6
+   ],
+   "literals": [
+    -43,
+    -44,
+    -73,
+    -213
+   ]
+  },
+  {
+   "original_id": 12470,
+   "kind": "growth",
+   "detail": [
+    "cap",
+    5,
+    10,
+    12,
+    1
+   ],
+   "literals": [
+    -45,
+    -75,
+    76,
+    215
+   ]
+  },
+  {
+   "original_id": 12476,
+   "kind": "growth",
+   "detail": [
+    "cup",
+    5,
+    10,
+    12,
+    3
+   ],
+   "literals": [
+    -45,
+    -48,
+    -75,
+    81,
+    -215
+   ]
+  },
+  {
+   "original_id": 13668,
+   "kind": "order_transitive",
+   "detail": [
+    6,
+    8,
+    11
+   ],
+   "literals": [
+    -53,
+    55,
+    -63
+   ]
+  },
+  {
+   "original_id": 13910,
+   "kind": "order_transitive",
+   "detail": [
+    6,
+    10,
+    11
+   ],
+   "literals": [
+    -54,
+    55,
+    -74
+   ]
+  },
+  {
+   "original_id": 13922,
+   "kind": "growth",
+   "detail": [
+    "cap",
+    6,
+    10,
+    12,
+    1
+   ],
+   "literals": [
+    -54,
+    -75,
+    76,
+    221
+   ]
+  },
+  {
+   "original_id": 15288,
+   "kind": "growth",
+   "detail": [
+    "cap",
+    7,
+    10,
+    2,
+    3
+   ],
+   "literals": [
+    24,
+    25,
+    -58,
+    -59,
+    168
+   ]
+  },
+  {
+   "original_id": 15321,
+   "kind": "growth",
+   "detail": [
+    "cap",
+    7,
+    10,
+    5,
+    3
+   ],
+   "literals": [
+    45,
+    46,
+    -58,
+    -59,
+    205
+   ]
+  },
+  {
+   "original_id": 15354,
+   "kind": "growth",
+   "detail": [
+    "cap",
+    7,
+    10,
+    9,
+    3
+   ],
+   "literals": [
+    -58,
+    -59,
+    65,
+    66,
+    -223
+   ]
+  },
+  {
+   "original_id": 15378,
+   "kind": "growth",
+   "detail": [
+    "cup",
+    7,
+    10,
+    12,
+    1
+   ],
+   "literals": [
+    -58,
+    -75,
+    79,
+    -225
+   ]
+  },
+  {
+   "original_id": 16826,
+   "kind": "growth",
+   "detail": [
+    "cap",
+    8,
+    10,
+    12,
+    1
+   ],
+   "literals": [
+    -62,
+    -75,
+    76,
+    230
+   ]
+  },
+  {
+   "original_id": 16830,
+   "kind": "growth",
+   "detail": [
+    "cup",
+    8,
+    10,
+    12,
+    1
+   ],
+   "literals": [
+    -62,
+    -75,
+    79,
+    -230
+   ]
+  },
+  {
+   "original_id": 16948,
+   "kind": "growth",
+   "detail": [
+    "cap",
+    8,
+    11,
+    12,
+    2
+   ],
+   "literals": [
+    -63,
+    -64,
+    -84,
+    85,
+    231
+   ]
+  },
+  {
+   "original_id": 18278,
+   "kind": "growth",
+   "detail": [
+    "cap",
+    9,
+    10,
+    12,
+    1
+   ],
+   "literals": [
+    -65,
+    -75,
+    76,
+    233
+   ]
+  },
+  {
+   "original_id": 18282,
+   "kind": "growth",
+   "detail": [
+    "cup",
+    9,
+    10,
+    12,
+    1
+   ],
+   "literals": [
+    -65,
+    -75,
+    79,
+    -233
+   ]
+  },
+  {
+   "original_id": 18886,
+   "kind": "growth",
+   "detail": [
+    "cap",
+    10,
+    2,
+    12,
+    4
+   ],
+   "literals": [
+    24,
+    -25,
+    -28,
+    -178
+   ]
+  },
+  {
+   "original_id": 19216,
+   "kind": "growth",
+   "detail": [
+    "cap",
+    10,
+    5,
+    8,
+    4
+   ],
+   "literals": [
+    -42,
+    45,
+    -46,
+    208
+   ]
+  },
+  {
+   "original_id": 19232,
+   "kind": "growth",
+   "detail": [
+    "cup",
+    10,
+    5,
+    9,
+    5
+   ],
+   "literals": [
+    -43,
+    44,
+    45,
+    -50,
+    -211
+   ]
+  },
+  {
+   "original_id": 19249,
+   "kind": "growth",
+   "detail": [
+    "cap",
+    10,
+    5,
+    12,
+    4
+   ],
+   "literals": [
+    45,
+    -46,
+    -52,
+    -215
+   ]
+  },
+  {
+   "original_id": 19739,
+   "kind": "growth",
+   "detail": [
+    "cup",
+    10,
+    9,
+    12,
+    6
+   ],
+   "literals": [
+    65,
+    -71,
+    -73,
+    233
+   ]
+  },
+  {
+   "original_id": 19855,
+   "kind": "growth",
+   "detail": [
+    "cup",
+    10,
+    11,
+    12,
+    1
+   ],
+   "literals": [
+    -74,
+    -84,
+    87,
+    -235
+   ]
+  },
+  {
+   "original_id": 21252,
+   "kind": "growth",
+   "detail": [
+    "cup",
+    11,
+    10,
+    5,
+    1
+   ],
+   "literals": [
+    45,
+    47,
+    74,
+    214
+   ]
+  },
+  {
+   "original_id": 21296,
+   "kind": "growth",
+   "detail": [
+    "cup",
+    11,
+    10,
+    9,
+    1
+   ],
+   "literals": [
+    65,
+    67,
+    74,
+    232
+   ]
+  },
+  {
+   "original_id": 21307,
+   "kind": "growth",
+   "detail": [
+    "cup",
+    11,
+    10,
+    12,
+    1
+   ],
+   "literals": [
+    74,
+    -75,
+    79,
+    235
+   ]
+  },
+  {
+   "original_id": 22887,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    1,
+    3,
+    true
+   ],
+   "literals": [
+    92
+   ]
+  },
+  {
+   "original_id": 22889,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    1,
+    6,
+    true
+   ],
+   "literals": [
+    93
+   ]
+  },
+  {
+   "original_id": 22891,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    1,
+    8,
+    true
+   ],
+   "literals": [
+    94
+   ]
+  },
+  {
+   "original_id": 22892,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    1,
+    10,
+    true
+   ],
+   "literals": [
+    95
+   ]
+  },
+  {
+   "original_id": 22893,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    1,
+    11,
+    true
+   ],
+   "literals": [
+    96
+   ]
+  },
+  {
+   "original_id": 22895,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    2,
+    4,
+    true
+   ],
+   "literals": [
+    98
+   ]
+  },
+  {
+   "original_id": 22896,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    2,
+    5,
+    true
+   ],
+   "literals": [
+    99
+   ]
+  },
+  {
+   "original_id": 22898,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    2,
+    7,
+    true
+   ],
+   "literals": [
+    100
+   ]
+  },
+  {
+   "original_id": 22899,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    2,
+    8,
+    true
+   ],
+   "literals": [
+    101
+   ]
+  },
+  {
+   "original_id": 22900,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    2,
+    9,
+    true
+   ],
+   "literals": [
+    102
+   ]
+  },
+  {
+   "original_id": 22901,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    2,
+    10,
+    true
+   ],
+   "literals": [
+    103
+   ]
+  },
+  {
+   "original_id": 22902,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    2,
+    11,
+    true
+   ],
+   "literals": [
+    104
+   ]
+  },
+  {
+   "original_id": 22903,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    2,
+    12,
+    true
+   ],
+   "literals": [
+    105
+   ]
+  },
+  {
+   "original_id": 22906,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    3,
+    6,
+    true
+   ],
+   "literals": [
+    106
+   ]
+  },
+  {
+   "original_id": 22908,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    3,
+    8,
+    true
+   ],
+   "literals": [
+    107
+   ]
+  },
+  {
+   "original_id": 22909,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    3,
+    10,
+    true
+   ],
+   "literals": [
+    108
+   ]
+  },
+  {
+   "original_id": 22910,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    3,
+    11,
+    true
+   ],
+   "literals": [
+    109
+   ]
+  },
+  {
+   "original_id": 22911,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    4,
+    5,
+    false
+   ],
+   "literals": [
+    -111
+   ]
+  },
+  {
+   "original_id": 22913,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    4,
+    7,
+    false
+   ],
+   "literals": [
+    -112
+   ]
+  },
+  {
+   "original_id": 22915,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    4,
+    9,
+    false
+   ],
+   "literals": [
+    -113
+   ]
+  },
+  {
+   "original_id": 22916,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    4,
+    10,
+    false
+   ],
+   "literals": [
+    -114
+   ]
+  },
+  {
+   "original_id": 22918,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    5,
+    7,
+    true
+   ],
+   "literals": [
+    116
+   ]
+  },
+  {
+   "original_id": 22919,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    5,
+    8,
+    true
+   ],
+   "literals": [
+    117
+   ]
+  },
+  {
+   "original_id": 22920,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    5,
+    9,
+    true
+   ],
+   "literals": [
+    118
+   ]
+  },
+  {
+   "original_id": 22921,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    5,
+    10,
+    true
+   ],
+   "literals": [
+    119
+   ]
+  },
+  {
+   "original_id": 22922,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    5,
+    11,
+    true
+   ],
+   "literals": [
+    120
+   ]
+  },
+  {
+   "original_id": 22923,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    5,
+    12,
+    true
+   ],
+   "literals": [
+    121
+   ]
+  },
+  {
+   "original_id": 22925,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    6,
+    8,
+    true
+   ],
+   "literals": [
+    122
+   ]
+  },
+  {
+   "original_id": 22927,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    6,
+    10,
+    true
+   ],
+   "literals": [
+    123
+   ]
+  },
+  {
+   "original_id": 22928,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    6,
+    11,
+    true
+   ],
+   "literals": [
+    124
+   ]
+  },
+  {
+   "original_id": 22930,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    7,
+    9,
+    false
+   ],
+   "literals": [
+    -126
+   ]
+  },
+  {
+   "original_id": 22931,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    7,
+    10,
+    false
+   ],
+   "literals": [
+    -127
+   ]
+  },
+  {
+   "original_id": 22933,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    8,
+    9,
+    false
+   ],
+   "literals": [
+    -129
+   ]
+  },
+  {
+   "original_id": 22934,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    8,
+    10,
+    false
+   ],
+   "literals": [
+    -130
+   ]
+  },
+  {
+   "original_id": 22935,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    8,
+    11,
+    false
+   ],
+   "literals": [
+    -131
+   ]
+  },
+  {
+   "original_id": 22936,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    8,
+    12,
+    false
+   ],
+   "literals": [
+    -132
+   ]
+  },
+  {
+   "original_id": 22937,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    9,
+    10,
+    true
+   ],
+   "literals": [
+    133
+   ]
+  },
+  {
+   "original_id": 22938,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    9,
+    11,
+    true
+   ],
+   "literals": [
+    134
+   ]
+  },
+  {
+   "original_id": 22939,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    9,
+    12,
+    true
+   ],
+   "literals": [
+    135
+   ]
+  },
+  {
+   "original_id": 22940,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    10,
+    11,
+    true
+   ],
+   "literals": [
+    136
+   ]
+  },
+  {
+   "original_id": 22941,
+   "kind": "fixed_sign",
+   "detail": [
+    0,
+    11,
+    12,
+    false
+   ],
+   "literals": [
+    -138
+   ]
+  },
+  {
+   "original_id": 22950,
+   "kind": "fixed_sign",
+   "detail": [
+    1,
+    3,
+    6,
+    true
+   ],
+   "literals": [
+    139
+   ]
+  },
+  {
+   "original_id": 22952,
+   "kind": "fixed_sign",
+   "detail": [
+    1,
+    3,
+    8,
+    true
+   ],
+   "literals": [
+    140
+   ]
+  },
+  {
+   "original_id": 22953,
+   "kind": "fixed_sign",
+   "detail": [
+    1,
+    3,
+    10,
+    true
+   ],
+   "literals": [
+    141
+   ]
+  },
+  {
+   "original_id": 22954,
+   "kind": "fixed_sign",
+   "detail": [
+    1,
+    3,
+    11,
+    true
+   ],
+   "literals": [
+    142
+   ]
+  },
+  {
+   "original_id": 22960,
+   "kind": "fixed_sign",
+   "detail": [
+    1,
+    5,
+    10,
+    true
+   ],
+   "literals": [
+    144
+   ]
+  },
+  {
+   "original_id": 22961,
+   "kind": "fixed_sign",
+   "detail": [
+    1,
+    5,
+    12,
+    true
+   ],
+   "literals": [
+    145
+   ]
+  },
+  {
+   "original_id": 22963,
+   "kind": "fixed_sign",
+   "detail": [
+    1,
+    6,
+    8,
+    true
+   ],
+   "literals": [
+    146
+   ]
+  },
+  {
+   "original_id": 22965,
+   "kind": "fixed_sign",
+   "detail": [
+    1,
+    6,
+    10,
+    true
+   ],
+   "literals": [
+    147
+   ]
+  },
+  {
+   "original_id": 22966,
+   "kind": "fixed_sign",
+   "detail": [
+    1,
+    6,
+    11,
+    true
+   ],
+   "literals": [
+    148
+   ]
+  },
+  {
+   "original_id": 22968,
+   "kind": "fixed_sign",
+   "detail": [
+    1,
+    8,
+    10,
+    false
+   ],
+   "literals": [
+    -150
+   ]
+  },
+  {
+   "original_id": 22969,
+   "kind": "fixed_sign",
+   "detail": [
+    1,
+    8,
+    11,
+    false
+   ],
+   "literals": [
+    -151
+   ]
+  },
+  {
+   "original_id": 22972,
+   "kind": "fixed_sign",
+   "detail": [
+    1,
+    10,
+    11,
+    true
+   ],
+   "literals": [
+    153
+   ]
+  },
+  {
+   "original_id": 22974,
+   "kind": "fixed_sign",
+   "detail": [
+    2,
+    4,
+    5,
+    false
+   ],
+   "literals": [
+    -156
+   ]
+  },
+  {
+   "original_id": 22975,
+   "kind": "fixed_sign",
+   "detail": [
+    2,
+    4,
+    7,
+    false
+   ],
+   "literals": [
+    -157
+   ]
+  },
+  {
+   "original_id": 22976,
+   "kind": "fixed_sign",
+   "detail": [
+    2,
+    4,
+    9,
+    false
+   ],
+   "literals": [
+    -158
+   ]
+  },
+  {
+   "original_id": 22977,
+   "kind": "fixed_sign",
+   "detail": [
+    2,
+    4,
+    10,
+    false
+   ],
+   "literals": [
+    -159
+   ]
+  },
+  {
+   "original_id": 22979,
+   "kind": "fixed_sign",
+   "detail": [
+    2,
+    5,
+    7,
+    true
+   ],
+   "literals": [
+    161
+   ]
+  },
+  {
+   "original_id": 22980,
+   "kind": "fixed_sign",
+   "detail": [
+    2,
+    5,
+    8,
+    true
+   ],
+   "literals": [
+    162
+   ]
+  },
+  {
+   "original_id": 22981,
+   "kind": "fixed_sign",
+   "detail": [
+    2,
+    5,
+    9,
+    true
+   ],
+   "literals": [
+    163
+   ]
+  },
+  {
+   "original_id": 22982,
+   "kind": "fixed_sign",
+   "detail": [
+    2,
+    5,
+    10,
+    true
+   ],
+   "literals": [
+    164
+   ]
+  },
+  {
+   "original_id": 22983,
+   "kind": "fixed_sign",
+   "detail": [
+    2,
+    5,
+    11,
+    true
+   ],
+   "literals": [
+    165
+   ]
+  },
+  {
+   "original_id": 22984,
+   "kind": "fixed_sign",
+   "detail": [
+    2,
+    5,
+    12,
+    true
+   ],
+   "literals": [
+    166
+   ]
+  },
+  {
+   "original_id": 22986,
+   "kind": "fixed_sign",
+   "detail": [
+    2,
+    7,
+    9,
+    false
+   ],
+   "literals": [
+    -167
+   ]
+  },
+  {
+   "original_id": 22987,
+   "kind": "fixed_sign",
+   "detail": [
+    2,
+    7,
+    10,
+    false
+   ],
+   "literals": [
+    -168
+   ]
+  },
+  {
+   "original_id": 22988,
+   "kind": "fixed_sign",
+   "detail": [
+    2,
+    8,
+    9,
+    false
+   ],
+   "literals": [
+    -170
+   ]
+  },
+  {
+   "original_id": 22989,
+   "kind": "fixed_sign",
+   "detail": [
+    2,
+    8,
+    11,
+    false
+   ],
+   "literals": [
+    -172
+   ]
+  },
+  {
+   "original_id": 22990,
+   "kind": "fixed_sign",
+   "detail": [
+    2,
+    8,
+    12,
+    false
+   ],
+   "literals": [
+    -173
+   ]
+  },
+  {
+   "original_id": 22991,
+   "kind": "fixed_sign",
+   "detail": [
+    2,
+    9,
+    10,
+    true
+   ],
+   "literals": [
+    174
+   ]
+  },
+  {
+   "original_id": 22992,
+   "kind": "fixed_sign",
+   "detail": [
+    2,
+    9,
+    11,
+    true
+   ],
+   "literals": [
+    175
+   ]
+  },
+  {
+   "original_id": 22993,
+   "kind": "fixed_sign",
+   "detail": [
+    2,
+    9,
+    12,
+    true
+   ],
+   "literals": [
+    176
+   ]
+  },
+  {
+   "original_id": 22994,
+   "kind": "fixed_sign",
+   "detail": [
+    2,
+    11,
+    12,
+    false
+   ],
+   "literals": [
+    -179
+   ]
+  },
+  {
+   "original_id": 23000,
+   "kind": "fixed_sign",
+   "detail": [
+    3,
+    5,
+    10,
+    true
+   ],
+   "literals": [
+    180
+   ]
+  },
+  {
+   "original_id": 23001,
+   "kind": "fixed_sign",
+   "detail": [
+    3,
+    5,
+    12,
+    true
+   ],
+   "literals": [
+    181
+   ]
+  },
+  {
+   "original_id": 23003,
+   "kind": "fixed_sign",
+   "detail": [
+    3,
+    6,
+    8,
+    true
+   ],
+   "literals": [
+    182
+   ]
+  },
+  {
+   "original_id": 23005,
+   "kind": "fixed_sign",
+   "detail": [
+    3,
+    6,
+    10,
+    true
+   ],
+   "literals": [
+    183
+   ]
+  },
+  {
+   "original_id": 23006,
+   "kind": "fixed_sign",
+   "detail": [
+    3,
+    6,
+    11,
+    true
+   ],
+   "literals": [
+    184
+   ]
+  },
+  {
+   "original_id": 23008,
+   "kind": "fixed_sign",
+   "detail": [
+    3,
+    8,
+    10,
+    false
+   ],
+   "literals": [
+    -186
+   ]
+  },
+  {
+   "original_id": 23009,
+   "kind": "fixed_sign",
+   "detail": [
+    3,
+    8,
+    11,
+    false
+   ],
+   "literals": [
+    -187
+   ]
+  },
+  {
+   "original_id": 23012,
+   "kind": "fixed_sign",
+   "detail": [
+    3,
+    10,
+    11,
+    true
+   ],
+   "literals": [
+    189
+   ]
+  },
+  {
+   "original_id": 23013,
+   "kind": "fixed_sign",
+   "detail": [
+    4,
+    5,
+    7,
+    true
+   ],
+   "literals": [
+    192
+   ]
+  },
+  {
+   "original_id": 23014,
+   "kind": "fixed_sign",
+   "detail": [
+    4,
+    5,
+    9,
+    true
+   ],
+   "literals": [
+    193
+   ]
+  },
+  {
+   "original_id": 23015,
+   "kind": "fixed_sign",
+   "detail": [
+    4,
+    5,
+    10,
+    true
+   ],
+   "literals": [
+    194
+   ]
+  },
+  {
+   "original_id": 23019,
+   "kind": "fixed_sign",
+   "detail": [
+    4,
+    7,
+    9,
+    false
+   ],
+   "literals": [
+    -196
+   ]
+  },
+  {
+   "original_id": 23020,
+   "kind": "fixed_sign",
+   "detail": [
+    4,
+    7,
+    10,
+    false
+   ],
+   "literals": [
+    -197
+   ]
+  },
+  {
+   "original_id": 23022,
+   "kind": "fixed_sign",
+   "detail": [
+    4,
+    8,
+    10,
+    false
+   ],
+   "literals": [
+    -199
+   ]
+  },
+  {
+   "original_id": 23024,
+   "kind": "fixed_sign",
+   "detail": [
+    4,
+    8,
+    12,
+    false
+   ],
+   "literals": [
+    -200
+   ]
+  },
+  {
+   "original_id": 23025,
+   "kind": "fixed_sign",
+   "detail": [
+    4,
+    9,
+    10,
+    true
+   ],
+   "literals": [
+    201
+   ]
+  },
+  {
+   "original_id": 23029,
+   "kind": "fixed_sign",
+   "detail": [
+    5,
+    7,
+    9,
+    false
+   ],
+   "literals": [
+    -204
+   ]
+  },
+  {
+   "original_id": 23030,
+   "kind": "fixed_sign",
+   "detail": [
+    5,
+    7,
+    10,
+    false
+   ],
+   "literals": [
+    -205
+   ]
+  },
+  {
+   "original_id": 23031,
+   "kind": "fixed_sign",
+   "detail": [
+    5,
+    8,
+    9,
+    false
+   ],
+   "literals": [
+    -207
+   ]
+  },
+  {
+   "original_id": 23032,
+   "kind": "fixed_sign",
+   "detail": [
+    5,
+    8,
+    11,
+    false
+   ],
+   "literals": [
+    -209
+   ]
+  },
+  {
+   "original_id": 23033,
+   "kind": "fixed_sign",
+   "detail": [
+    5,
+    8,
+    12,
+    false
+   ],
+   "literals": [
+    -210
+   ]
+  },
+  {
+   "original_id": 23034,
+   "kind": "fixed_sign",
+   "detail": [
+    5,
+    9,
+    10,
+    true
+   ],
+   "literals": [
+    211
+   ]
+  },
+  {
+   "original_id": 23035,
+   "kind": "fixed_sign",
+   "detail": [
+    5,
+    9,
+    11,
+    true
+   ],
+   "literals": [
+    212
+   ]
+  },
+  {
+   "original_id": 23036,
+   "kind": "fixed_sign",
+   "detail": [
+    5,
+    9,
+    12,
+    true
+   ],
+   "literals": [
+    213
+   ]
+  },
+  {
+   "original_id": 23037,
+   "kind": "fixed_sign",
+   "detail": [
+    5,
+    11,
+    12,
+    false
+   ],
+   "literals": [
+    -216
+   ]
+  },
+  {
+   "original_id": 23039,
+   "kind": "fixed_sign",
+   "detail": [
+    6,
+    8,
+    10,
+    false
+   ],
+   "literals": [
+    -217
+   ]
+  },
+  {
+   "original_id": 23040,
+   "kind": "fixed_sign",
+   "detail": [
+    6,
+    8,
+    11,
+    false
+   ],
+   "literals": [
+    -218
+   ]
+  },
+  {
+   "original_id": 23043,
+   "kind": "fixed_sign",
+   "detail": [
+    6,
+    10,
+    11,
+    true
+   ],
+   "literals": [
+    220
+   ]
+  },
+  {
+   "original_id": 23045,
+   "kind": "fixed_sign",
+   "detail": [
+    7,
+    9,
+    10,
+    true
+   ],
+   "literals": [
+    223
+   ]
+  },
+  {
+   "original_id": 23048,
+   "kind": "fixed_sign",
+   "detail": [
+    8,
+    9,
+    11,
+    true
+   ],
+   "literals": [
+    227
+   ]
+  },
+  {
+   "original_id": 23049,
+   "kind": "fixed_sign",
+   "detail": [
+    8,
+    9,
+    12,
+    true
+   ],
+   "literals": [
+    228
+   ]
+  },
+  {
+   "original_id": 23050,
+   "kind": "fixed_sign",
+   "detail": [
+    8,
+    10,
+    11,
+    true
+   ],
+   "literals": [
+    229
+   ]
+  },
+  {
+   "original_id": 23051,
+   "kind": "fixed_sign",
+   "detail": [
+    8,
+    11,
+    12,
+    false
+   ],
+   "literals": [
+    -231
+   ]
+  },
+  {
+   "original_id": 23052,
+   "kind": "fixed_sign",
+   "detail": [
+    9,
+    11,
+    12,
+    false
+   ],
+   "literals": [
+    -234
+   ]
+  },
+  {
+   "original_id": 25756,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    1,
+    3,
+    6,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -92,
+    -93,
+    -106,
+    -139,
+    236
+   ]
+  },
+  {
+   "original_id": 26172,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    1,
+    3,
+    8,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -92,
+    -94,
+    -107,
+    -140,
+    237
+   ]
+  },
+  {
+   "original_id": 26588,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    1,
+    3,
+    10,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -92,
+    -95,
+    -108,
+    -141,
+    238
+   ]
+  },
+  {
+   "original_id": 26796,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    1,
+    3,
+    11,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -92,
+    -96,
+    -109,
+    -142,
+    239
+   ]
+  },
+  {
+   "original_id": 27004,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    1,
+    3,
+    12,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -92,
+    -97,
+    -110,
+    -143,
+    240
+   ]
+  },
+  {
+   "original_id": 30540,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    1,
+    6,
+    8,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -93,
+    -94,
+    -122,
+    -146,
+    241
+   ]
+  },
+  {
+   "original_id": 30956,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    1,
+    6,
+    10,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -93,
+    -95,
+    -123,
+    -147,
+    242
+   ]
+  },
+  {
+   "original_id": 31164,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    1,
+    6,
+    11,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -93,
+    -96,
+    -124,
+    -148,
+    243
+   ]
+  },
+  {
+   "original_id": 31172,
+   "kind": "packet",
+   "detail": [
+    0,
+    1,
+    6,
+    12,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -1,
+    -14,
+    -56,
+    -93,
+    -97,
+    125,
+    -149
+   ]
+  },
+  {
+   "original_id": 31372,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    1,
+    6,
+    12,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -93,
+    -97,
+    -125,
+    -149,
+    244
+   ]
+  },
+  {
+   "original_id": 32825,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    1,
+    8,
+    10,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -94,
+    -95,
+    130,
+    150,
+    245
+   ]
+  },
+  {
+   "original_id": 33033,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    1,
+    8,
+    11,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -94,
+    -96,
+    131,
+    151,
+    246
+   ]
+  },
+  {
+   "original_id": 33241,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    1,
+    8,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -94,
+    -97,
+    132,
+    152,
+    247
+   ]
+  },
+  {
+   "original_id": 34076,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    1,
+    10,
+    11,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -95,
+    -96,
+    -136,
+    -153,
+    248
+   ]
+  },
+  {
+   "original_id": 34083,
+   "kind": "packet",
+   "detail": [
+    0,
+    1,
+    10,
+    12,
+    true,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    -1,
+    -16,
+    -75,
+    -95,
+    97,
+    -137,
+    -154
+   ]
+  },
+  {
+   "original_id": 34284,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    1,
+    10,
+    12,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -95,
+    -97,
+    -137,
+    -154,
+    249
+   ]
+  },
+  {
+   "original_id": 34292,
+   "kind": "packet",
+   "detail": [
+    0,
+    1,
+    11,
+    12,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -1,
+    -17,
+    -84,
+    -96,
+    -97,
+    138,
+    -155
+   ]
+  },
+  {
+   "original_id": 34489,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    1,
+    11,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -96,
+    -97,
+    138,
+    155,
+    250
+   ]
+  },
+  {
+   "original_id": 36569,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    2,
+    4,
+    5,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -98,
+    -99,
+    111,
+    156,
+    251
+   ]
+  },
+  {
+   "original_id": 36985,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    2,
+    4,
+    7,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -98,
+    -100,
+    112,
+    157,
+    252
+   ]
+  },
+  {
+   "original_id": 37401,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    2,
+    4,
+    9,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -98,
+    -102,
+    113,
+    158,
+    253
+   ]
+  },
+  {
+   "original_id": 37609,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    2,
+    4,
+    10,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -98,
+    -103,
+    114,
+    159,
+    254
+   ]
+  },
+  {
+   "original_id": 37837,
+   "kind": "packet",
+   "detail": [
+    0,
+    4,
+    2,
+    12,
+    false,
+    false,
+    true,
+    false
+   ],
+   "literals": [
+    -4,
+    18,
+    -28,
+    -98,
+    -105,
+    115,
+    -160
+   ]
+  },
+  {
+   "original_id": 38025,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    2,
+    4,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -98,
+    -105,
+    115,
+    160,
+    255
+   ]
+  },
+  {
+   "original_id": 38444,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    2,
+    5,
+    7,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -99,
+    -100,
+    -116,
+    -161,
+    256
+   ]
+  },
+  {
+   "original_id": 38652,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    2,
+    5,
+    8,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -99,
+    -101,
+    -117,
+    -162,
+    257
+   ]
+  },
+  {
+   "original_id": 38860,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    2,
+    5,
+    9,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -99,
+    -102,
+    -118,
+    -163,
+    258
+   ]
+  },
+  {
+   "original_id": 39068,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    2,
+    5,
+    10,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -99,
+    -103,
+    -119,
+    -164,
+    259
+   ]
+  },
+  {
+   "original_id": 39276,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    2,
+    5,
+    11,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -99,
+    -104,
+    -120,
+    -165,
+    260
+   ]
+  },
+  {
+   "original_id": 39484,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    2,
+    5,
+    12,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -99,
+    -105,
+    -121,
+    -166,
+    261
+   ]
+  },
+  {
+   "original_id": 41145,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    2,
+    7,
+    9,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -100,
+    -102,
+    126,
+    167,
+    262
+   ]
+  },
+  {
+   "original_id": 41353,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    2,
+    7,
+    10,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -100,
+    -103,
+    127,
+    168,
+    263
+   ]
+  },
+  {
+   "original_id": 41572,
+   "kind": "packet",
+   "detail": [
+    0,
+    2,
+    7,
+    12,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -2,
+    -21,
+    -60,
+    -100,
+    -105,
+    128,
+    -169
+   ]
+  },
+  {
+   "original_id": 41769,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    2,
+    7,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -100,
+    -105,
+    128,
+    169,
+    264
+   ]
+  },
+  {
+   "original_id": 41977,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    2,
+    8,
+    9,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -101,
+    -102,
+    129,
+    170,
+    265
+   ]
+  },
+  {
+   "original_id": 41988,
+   "kind": "packet",
+   "detail": [
+    0,
+    2,
+    8,
+    10,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -2,
+    -22,
+    -62,
+    -101,
+    -103,
+    130,
+    -171
+   ]
+  },
+  {
+   "original_id": 41997,
+   "kind": "packet",
+   "detail": [
+    0,
+    8,
+    2,
+    10,
+    false,
+    false,
+    true,
+    false
+   ],
+   "literals": [
+    -8,
+    22,
+    -24,
+    -101,
+    -103,
+    130,
+    -171
+   ]
+  },
+  {
+   "original_id": 42185,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    2,
+    8,
+    10,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -101,
+    -103,
+    130,
+    171,
+    266
+   ]
+  },
+  {
+   "original_id": 42393,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    2,
+    8,
+    11,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -101,
+    -104,
+    131,
+    172,
+    267
+   ]
+  },
+  {
+   "original_id": 42601,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    2,
+    8,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -101,
+    -105,
+    132,
+    173,
+    268
+   ]
+  },
+  {
+   "original_id": 42812,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    2,
+    9,
+    10,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -102,
+    -103,
+    -133,
+    -174,
+    269
+   ]
+  },
+  {
+   "original_id": 43020,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    2,
+    9,
+    11,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -102,
+    -104,
+    -134,
+    -175,
+    270
+   ]
+  },
+  {
+   "original_id": 43228,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    2,
+    9,
+    12,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -102,
+    -105,
+    -135,
+    -176,
+    271
+   ]
+  },
+  {
+   "original_id": 43244,
+   "kind": "packet",
+   "detail": [
+    0,
+    2,
+    11,
+    10,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -2,
+    -27,
+    74,
+    -103,
+    -104,
+    -136,
+    177
+   ]
+  },
+  {
+   "original_id": 43261,
+   "kind": "packet",
+   "detail": [
+    0,
+    11,
+    2,
+    10,
+    false,
+    false,
+    true,
+    false
+   ],
+   "literals": [
+    -11,
+    -24,
+    27,
+    -103,
+    -104,
+    -136,
+    177
+   ]
+  },
+  {
+   "original_id": 43436,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    2,
+    10,
+    11,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -103,
+    -104,
+    -136,
+    -177,
+    272
+   ]
+  },
+  {
+   "original_id": 43444,
+   "kind": "packet",
+   "detail": [
+    0,
+    2,
+    10,
+    12,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -2,
+    -24,
+    -75,
+    -103,
+    -105,
+    137,
+    -178
+   ]
+  },
+  {
+   "original_id": 43453,
+   "kind": "packet",
+   "detail": [
+    0,
+    10,
+    2,
+    12,
+    false,
+    false,
+    true,
+    false
+   ],
+   "literals": [
+    -10,
+    24,
+    -28,
+    -103,
+    -105,
+    137,
+    -178
+   ]
+  },
+  {
+   "original_id": 43641,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    2,
+    10,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -103,
+    -105,
+    137,
+    178,
+    273
+   ]
+  },
+  {
+   "original_id": 43643,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    2,
+    10,
+    12,
+    true,
+    true,
+    true,
+    false
+   ],
+   "literals": [
+    -103,
+    -105,
+    -137,
+    178,
+    -273
+   ]
+  },
+  {
+   "original_id": 43644,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    2,
+    10,
+    12,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -103,
+    -105,
+    -137,
+    -178,
+    273
+   ]
+  },
+  {
+   "original_id": 43849,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    2,
+    11,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -104,
+    -105,
+    138,
+    179,
+    274
+   ]
+  },
+  {
+   "original_id": 47388,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    3,
+    6,
+    8,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -106,
+    -107,
+    -122,
+    -182,
+    275
+   ]
+  },
+  {
+   "original_id": 47804,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    3,
+    6,
+    10,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -106,
+    -108,
+    -123,
+    -183,
+    276
+   ]
+  },
+  {
+   "original_id": 48012,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    3,
+    6,
+    11,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -106,
+    -109,
+    -124,
+    -184,
+    277
+   ]
+  },
+  {
+   "original_id": 48220,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    3,
+    6,
+    12,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -106,
+    -110,
+    -125,
+    -185,
+    278
+   ]
+  },
+  {
+   "original_id": 49673,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    3,
+    8,
+    10,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -107,
+    -108,
+    130,
+    186,
+    279
+   ]
+  },
+  {
+   "original_id": 49881,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    3,
+    8,
+    11,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -107,
+    -109,
+    131,
+    187,
+    280
+   ]
+  },
+  {
+   "original_id": 50089,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    3,
+    8,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -107,
+    -110,
+    132,
+    188,
+    281
+   ]
+  },
+  {
+   "original_id": 50924,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    3,
+    10,
+    11,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -108,
+    -109,
+    -136,
+    -189,
+    282
+   ]
+  },
+  {
+   "original_id": 50931,
+   "kind": "packet",
+   "detail": [
+    0,
+    3,
+    10,
+    12,
+    true,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    -3,
+    -32,
+    -75,
+    -108,
+    110,
+    -137,
+    -190
+   ]
+  },
+  {
+   "original_id": 51132,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    3,
+    10,
+    12,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -108,
+    -110,
+    -137,
+    -190,
+    283
+   ]
+  },
+  {
+   "original_id": 51140,
+   "kind": "packet",
+   "detail": [
+    0,
+    3,
+    11,
+    12,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -3,
+    -33,
+    -84,
+    -109,
+    -110,
+    138,
+    -191
+   ]
+  },
+  {
+   "original_id": 51337,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    3,
+    11,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -109,
+    -110,
+    138,
+    191,
+    284
+   ]
+  },
+  {
+   "original_id": 51744,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    4,
+    5,
+    7,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    111,
+    112,
+    -116,
+    -192,
+    285
+   ]
+  },
+  {
+   "original_id": 52160,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    4,
+    5,
+    9,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    111,
+    113,
+    -118,
+    -193,
+    286
+   ]
+  },
+  {
+   "original_id": 52368,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    4,
+    5,
+    10,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    111,
+    114,
+    -119,
+    -194,
+    287
+   ]
+  },
+  {
+   "original_id": 52784,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    4,
+    5,
+    12,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    111,
+    115,
+    -121,
+    -195,
+    288
+   ]
+  },
+  {
+   "original_id": 54445,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    4,
+    7,
+    9,
+    false,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    112,
+    113,
+    126,
+    196,
+    289
+   ]
+  },
+  {
+   "original_id": 54653,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    4,
+    7,
+    10,
+    false,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    112,
+    114,
+    127,
+    197,
+    290
+   ]
+  },
+  {
+   "original_id": 55069,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    4,
+    7,
+    12,
+    false,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    112,
+    115,
+    128,
+    198,
+    291
+   ]
+  },
+  {
+   "original_id": 56112,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    4,
+    9,
+    10,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    113,
+    114,
+    -133,
+    -201,
+    292
+   ]
+  },
+  {
+   "original_id": 56333,
+   "kind": "packet",
+   "detail": [
+    0,
+    4,
+    9,
+    12,
+    false,
+    false,
+    true,
+    false
+   ],
+   "literals": [
+    -4,
+    -39,
+    -73,
+    113,
+    115,
+    -135,
+    202
+   ]
+  },
+  {
+   "original_id": 56528,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    4,
+    9,
+    12,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    113,
+    115,
+    -135,
+    -202,
+    293
+   ]
+  },
+  {
+   "original_id": 56749,
+   "kind": "packet",
+   "detail": [
+    0,
+    4,
+    10,
+    12,
+    false,
+    false,
+    true,
+    false
+   ],
+   "literals": [
+    -4,
+    -40,
+    -75,
+    114,
+    115,
+    -137,
+    203
+   ]
+  },
+  {
+   "original_id": 56750,
+   "kind": "packet",
+   "detail": [
+    0,
+    4,
+    10,
+    12,
+    false,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -4,
+    -40,
+    -75,
+    114,
+    -115,
+    137,
+    203
+   ]
+  },
+  {
+   "original_id": 56752,
+   "kind": "packet",
+   "detail": [
+    0,
+    4,
+    10,
+    12,
+    false,
+    true,
+    true,
+    false
+   ],
+   "literals": [
+    -4,
+    -40,
+    -75,
+    114,
+    -115,
+    -137,
+    203
+   ]
+  },
+  {
+   "original_id": 56941,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    4,
+    10,
+    12,
+    false,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    114,
+    115,
+    137,
+    203,
+    294
+   ]
+  },
+  {
+   "original_id": 58825,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    5,
+    7,
+    9,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -116,
+    -118,
+    126,
+    204,
+    295
+   ]
+  },
+  {
+   "original_id": 59033,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    5,
+    7,
+    10,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -116,
+    -119,
+    127,
+    205,
+    296
+   ]
+  },
+  {
+   "original_id": 59449,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    5,
+    7,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -116,
+    -121,
+    128,
+    206,
+    297
+   ]
+  },
+  {
+   "original_id": 59657,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    5,
+    8,
+    9,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -117,
+    -118,
+    129,
+    207,
+    298
+   ]
+  },
+  {
+   "original_id": 59668,
+   "kind": "packet",
+   "detail": [
+    0,
+    5,
+    8,
+    10,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -5,
+    -42,
+    -62,
+    -117,
+    -119,
+    130,
+    -208
+   ]
+  },
+  {
+   "original_id": 59677,
+   "kind": "packet",
+   "detail": [
+    0,
+    8,
+    5,
+    10,
+    false,
+    false,
+    true,
+    false
+   ],
+   "literals": [
+    -8,
+    42,
+    -45,
+    -117,
+    -119,
+    130,
+    -208
+   ]
+  },
+  {
+   "original_id": 59705,
+   "kind": "packet",
+   "detail": [
+    0,
+    10,
+    8,
+    5,
+    true,
+    false,
+    false,
+    true
+   ],
+   "literals": [
+    -10,
+    42,
+    62,
+    -117,
+    -119,
+    130,
+    208
+   ]
+  },
+  {
+   "original_id": 59865,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    5,
+    8,
+    10,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -117,
+    -119,
+    130,
+    208,
+    299
+   ]
+  },
+  {
+   "original_id": 60073,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    5,
+    8,
+    11,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -117,
+    -120,
+    131,
+    209,
+    300
+   ]
+  },
+  {
+   "original_id": 60281,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    5,
+    8,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -117,
+    -121,
+    132,
+    210,
+    301
+   ]
+  },
+  {
+   "original_id": 60492,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    5,
+    9,
+    10,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -118,
+    -119,
+    -133,
+    -211,
+    302
+   ]
+  },
+  {
+   "original_id": 60700,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    5,
+    9,
+    11,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -118,
+    -120,
+    -134,
+    -212,
+    303
+   ]
+  },
+  {
+   "original_id": 60908,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    5,
+    9,
+    12,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -118,
+    -121,
+    -135,
+    -213,
+    304
+   ]
+  },
+  {
+   "original_id": 60924,
+   "kind": "packet",
+   "detail": [
+    0,
+    5,
+    11,
+    10,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -5,
+    -51,
+    74,
+    -119,
+    -120,
+    -136,
+    214
+   ]
+  },
+  {
+   "original_id": 60928,
+   "kind": "packet",
+   "detail": [
+    0,
+    10,
+    5,
+    11,
+    false,
+    true,
+    true,
+    false
+   ],
+   "literals": [
+    -10,
+    45,
+    -51,
+    -119,
+    -120,
+    -136,
+    -214
+   ]
+  },
+  {
+   "original_id": 60937,
+   "kind": "packet",
+   "detail": [
+    0,
+    10,
+    11,
+    5,
+    true,
+    false,
+    false,
+    true
+   ],
+   "literals": [
+    -10,
+    51,
+    -74,
+    -119,
+    -120,
+    -136,
+    -214
+   ]
+  },
+  {
+   "original_id": 60941,
+   "kind": "packet",
+   "detail": [
+    0,
+    11,
+    5,
+    10,
+    false,
+    false,
+    true,
+    false
+   ],
+   "literals": [
+    -11,
+    -45,
+    51,
+    -119,
+    -120,
+    -136,
+    214
+   ]
+  },
+  {
+   "original_id": 61116,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    5,
+    10,
+    11,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -119,
+    -120,
+    -136,
+    -214,
+    305
+   ]
+  },
+  {
+   "original_id": 61124,
+   "kind": "packet",
+   "detail": [
+    0,
+    5,
+    10,
+    12,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -5,
+    -45,
+    -75,
+    -119,
+    -121,
+    137,
+    -215
+   ]
+  },
+  {
+   "original_id": 61321,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    5,
+    10,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -119,
+    -121,
+    137,
+    215,
+    306
+   ]
+  },
+  {
+   "original_id": 61322,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    5,
+    10,
+    12,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -119,
+    -121,
+    137,
+    -215,
+    -306
+   ]
+  },
+  {
+   "original_id": 61323,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    5,
+    10,
+    12,
+    true,
+    true,
+    true,
+    false
+   ],
+   "literals": [
+    -119,
+    -121,
+    -137,
+    215,
+    -306
+   ]
+  },
+  {
+   "original_id": 61324,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    5,
+    10,
+    12,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -119,
+    -121,
+    -137,
+    -215,
+    306
+   ]
+  },
+  {
+   "original_id": 61529,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    5,
+    11,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -120,
+    -121,
+    138,
+    216,
+    307
+   ]
+  },
+  {
+   "original_id": 62985,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    6,
+    8,
+    10,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -122,
+    -123,
+    130,
+    217,
+    308
+   ]
+  },
+  {
+   "original_id": 63193,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    6,
+    8,
+    11,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -122,
+    -124,
+    131,
+    218,
+    309
+   ]
+  },
+  {
+   "original_id": 63213,
+   "kind": "packet",
+   "detail": [
+    0,
+    8,
+    6,
+    12,
+    false,
+    false,
+    true,
+    false
+   ],
+   "literals": [
+    -8,
+    53,
+    -56,
+    -122,
+    -125,
+    132,
+    -219
+   ]
+  },
+  {
+   "original_id": 63401,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    6,
+    8,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -122,
+    -125,
+    132,
+    219,
+    310
+   ]
+  },
+  {
+   "original_id": 64236,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    6,
+    10,
+    11,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -123,
+    -124,
+    -136,
+    -220,
+    311
+   ]
+  },
+  {
+   "original_id": 64243,
+   "kind": "packet",
+   "detail": [
+    0,
+    6,
+    10,
+    12,
+    true,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    -6,
+    -54,
+    -75,
+    -123,
+    125,
+    -137,
+    -221
+   ]
+  },
+  {
+   "original_id": 64444,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    6,
+    10,
+    12,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -123,
+    -125,
+    -137,
+    -221,
+    312
+   ]
+  },
+  {
+   "original_id": 64452,
+   "kind": "packet",
+   "detail": [
+    0,
+    6,
+    11,
+    12,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -6,
+    -55,
+    -84,
+    -124,
+    -125,
+    138,
+    -222
+   ]
+  },
+  {
+   "original_id": 64461,
+   "kind": "packet",
+   "detail": [
+    0,
+    11,
+    6,
+    12,
+    false,
+    false,
+    true,
+    false
+   ],
+   "literals": [
+    -11,
+    55,
+    -56,
+    -124,
+    -125,
+    138,
+    -222
+   ]
+  },
+  {
+   "original_id": 64649,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    6,
+    11,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -124,
+    -125,
+    138,
+    222,
+    313
+   ]
+  },
+  {
+   "original_id": 65680,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    7,
+    9,
+    10,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    126,
+    127,
+    -133,
+    -223,
+    314
+   ]
+  },
+  {
+   "original_id": 65901,
+   "kind": "packet",
+   "detail": [
+    0,
+    7,
+    9,
+    12,
+    false,
+    false,
+    true,
+    false
+   ],
+   "literals": [
+    -7,
+    -57,
+    -73,
+    126,
+    128,
+    -135,
+    224
+   ]
+  },
+  {
+   "original_id": 66096,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    7,
+    9,
+    12,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    126,
+    128,
+    -135,
+    -224,
+    315
+   ]
+  },
+  {
+   "original_id": 66318,
+   "kind": "packet",
+   "detail": [
+    0,
+    7,
+    10,
+    12,
+    false,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -7,
+    -58,
+    -75,
+    127,
+    -128,
+    137,
+    225
+   ]
+  },
+  {
+   "original_id": 66509,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    7,
+    10,
+    12,
+    false,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    127,
+    128,
+    137,
+    225,
+    316
+   ]
+  },
+  {
+   "original_id": 66733,
+   "kind": "packet",
+   "detail": [
+    0,
+    8,
+    9,
+    10,
+    false,
+    false,
+    true,
+    false
+   ],
+   "literals": [
+    -8,
+    -61,
+    -65,
+    129,
+    130,
+    -133,
+    226
+   ]
+  },
+  {
+   "original_id": 66756,
+   "kind": "packet",
+   "detail": [
+    0,
+    9,
+    8,
+    10,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -9,
+    61,
+    -62,
+    129,
+    130,
+    -133,
+    226
+   ]
+  },
+  {
+   "original_id": 66928,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    8,
+    9,
+    10,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    129,
+    130,
+    -133,
+    -226,
+    317
+   ]
+  },
+  {
+   "original_id": 67136,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    8,
+    9,
+    11,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    129,
+    131,
+    -134,
+    -227,
+    318
+   ]
+  },
+  {
+   "original_id": 67344,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    8,
+    9,
+    12,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    129,
+    132,
+    -135,
+    -228,
+    319
+   ]
+  },
+  {
+   "original_id": 67552,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    8,
+    10,
+    11,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    130,
+    131,
+    -136,
+    -229,
+    320
+   ]
+  },
+  {
+   "original_id": 67565,
+   "kind": "packet",
+   "detail": [
+    0,
+    8,
+    10,
+    12,
+    false,
+    false,
+    true,
+    false
+   ],
+   "literals": [
+    -8,
+    -62,
+    -75,
+    130,
+    132,
+    -137,
+    230
+   ]
+  },
+  {
+   "original_id": 67757,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    8,
+    10,
+    12,
+    false,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    130,
+    132,
+    137,
+    230,
+    321
+   ]
+  },
+  {
+   "original_id": 67758,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    8,
+    10,
+    12,
+    false,
+    false,
+    false,
+    true
+   ],
+   "literals": [
+    130,
+    132,
+    137,
+    -230,
+    -321
+   ]
+  },
+  {
+   "original_id": 67760,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    8,
+    10,
+    12,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    130,
+    132,
+    -137,
+    -230,
+    321
+   ]
+  },
+  {
+   "original_id": 67965,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    8,
+    11,
+    12,
+    false,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    131,
+    132,
+    138,
+    231,
+    322
+   ]
+  },
+  {
+   "original_id": 68000,
+   "kind": "packet",
+   "detail": [
+    0,
+    10,
+    9,
+    11,
+    false,
+    true,
+    true,
+    false
+   ],
+   "literals": [
+    -10,
+    65,
+    -72,
+    -133,
+    -134,
+    -136,
+    -232
+   ]
+  },
+  {
+   "original_id": 68009,
+   "kind": "packet",
+   "detail": [
+    0,
+    10,
+    11,
+    9,
+    true,
+    false,
+    false,
+    true
+   ],
+   "literals": [
+    -10,
+    72,
+    -74,
+    -133,
+    -134,
+    -136,
+    -232
+   ]
+  },
+  {
+   "original_id": 68188,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    9,
+    10,
+    11,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -133,
+    -134,
+    -136,
+    -232,
+    323
+   ]
+  },
+  {
+   "original_id": 68196,
+   "kind": "packet",
+   "detail": [
+    0,
+    9,
+    10,
+    12,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -9,
+    -65,
+    -75,
+    -133,
+    -135,
+    137,
+    -233
+   ]
+  },
+  {
+   "original_id": 68205,
+   "kind": "packet",
+   "detail": [
+    0,
+    10,
+    9,
+    12,
+    false,
+    false,
+    true,
+    false
+   ],
+   "literals": [
+    -10,
+    65,
+    -73,
+    -133,
+    -135,
+    137,
+    -233
+   ]
+  },
+  {
+   "original_id": 68208,
+   "kind": "packet",
+   "detail": [
+    0,
+    10,
+    9,
+    12,
+    false,
+    true,
+    true,
+    false
+   ],
+   "literals": [
+    -10,
+    65,
+    -73,
+    -133,
+    -135,
+    -137,
+    -233
+   ]
+  },
+  {
+   "original_id": 68393,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    9,
+    10,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -133,
+    -135,
+    137,
+    233,
+    324
+   ]
+  },
+  {
+   "original_id": 68394,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    9,
+    10,
+    12,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -133,
+    -135,
+    137,
+    -233,
+    -324
+   ]
+  },
+  {
+   "original_id": 68395,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    9,
+    10,
+    12,
+    true,
+    true,
+    true,
+    false
+   ],
+   "literals": [
+    -133,
+    -135,
+    -137,
+    233,
+    -324
+   ]
+  },
+  {
+   "original_id": 68396,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    9,
+    10,
+    12,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -133,
+    -135,
+    -137,
+    -233,
+    324
+   ]
+  },
+  {
+   "original_id": 68601,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    9,
+    11,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -134,
+    -135,
+    138,
+    234,
+    325
+   ]
+  },
+  {
+   "original_id": 68621,
+   "kind": "packet",
+   "detail": [
+    0,
+    11,
+    10,
+    12,
+    false,
+    false,
+    true,
+    false
+   ],
+   "literals": [
+    -11,
+    74,
+    -75,
+    -136,
+    -137,
+    138,
+    -235
+   ]
+  },
+  {
+   "original_id": 68805,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    10,
+    11,
+    12,
+    true,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    -136,
+    137,
+    138,
+    235,
+    -326
+   ]
+  },
+  {
+   "original_id": 68806,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    10,
+    11,
+    12,
+    true,
+    false,
+    false,
+    true
+   ],
+   "literals": [
+    -136,
+    137,
+    138,
+    -235,
+    326
+   ]
+  },
+  {
+   "original_id": 68809,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    10,
+    11,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -136,
+    -137,
+    138,
+    235,
+    326
+   ]
+  },
+  {
+   "original_id": 68810,
+   "kind": "convex_four",
+   "detail": [
+    0,
+    10,
+    11,
+    12,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -136,
+    -137,
+    138,
+    -235,
+    -326
+   ]
+  },
+  {
+   "original_id": 81708,
+   "kind": "convex_four",
+   "detail": [
+    1,
+    3,
+    6,
+    8,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -139,
+    -140,
+    -146,
+    -182,
+    327
+   ]
+  },
+  {
+   "original_id": 82124,
+   "kind": "convex_four",
+   "detail": [
+    1,
+    3,
+    6,
+    10,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -139,
+    -141,
+    -147,
+    -183,
+    328
+   ]
+  },
+  {
+   "original_id": 82332,
+   "kind": "convex_four",
+   "detail": [
+    1,
+    3,
+    6,
+    11,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -139,
+    -142,
+    -148,
+    -184,
+    329
+   ]
+  },
+  {
+   "original_id": 82540,
+   "kind": "convex_four",
+   "detail": [
+    1,
+    3,
+    6,
+    12,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -139,
+    -143,
+    -149,
+    -185,
+    330
+   ]
+  },
+  {
+   "original_id": 83993,
+   "kind": "convex_four",
+   "detail": [
+    1,
+    3,
+    8,
+    10,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -140,
+    -141,
+    150,
+    186,
+    331
+   ]
+  },
+  {
+   "original_id": 84201,
+   "kind": "convex_four",
+   "detail": [
+    1,
+    3,
+    8,
+    11,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -140,
+    -142,
+    151,
+    187,
+    332
+   ]
+  },
+  {
+   "original_id": 84409,
+   "kind": "convex_four",
+   "detail": [
+    1,
+    3,
+    8,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -140,
+    -143,
+    152,
+    188,
+    333
+   ]
+  },
+  {
+   "original_id": 85244,
+   "kind": "convex_four",
+   "detail": [
+    1,
+    3,
+    10,
+    11,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -141,
+    -142,
+    -153,
+    -189,
+    334
+   ]
+  },
+  {
+   "original_id": 85251,
+   "kind": "packet",
+   "detail": [
+    1,
+    3,
+    10,
+    12,
+    true,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    -12,
+    -32,
+    -75,
+    -141,
+    143,
+    -154,
+    -190
+   ]
+  },
+  {
+   "original_id": 85452,
+   "kind": "convex_four",
+   "detail": [
+    1,
+    3,
+    10,
+    12,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -141,
+    -143,
+    -154,
+    -190,
+    335
+   ]
+  },
+  {
+   "original_id": 85555,
+   "kind": "packet",
+   "detail": [
+    11,
+    1,
+    3,
+    12,
+    true,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    -12,
+    17,
+    -34,
+    -142,
+    -143,
+    -155,
+    191
+   ]
+  },
+  {
+   "original_id": 85657,
+   "kind": "convex_four",
+   "detail": [
+    1,
+    3,
+    11,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -142,
+    -143,
+    155,
+    191,
+    336
+   ]
+  },
+  {
+   "original_id": 95444,
+   "kind": "packet",
+   "detail": [
+    1,
+    5,
+    10,
+    12,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -13,
+    -45,
+    -75,
+    -144,
+    -145,
+    154,
+    -215
+   ]
+  },
+  {
+   "original_id": 97305,
+   "kind": "convex_four",
+   "detail": [
+    1,
+    6,
+    8,
+    10,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -146,
+    -147,
+    150,
+    217,
+    337
+   ]
+  },
+  {
+   "original_id": 97513,
+   "kind": "convex_four",
+   "detail": [
+    1,
+    6,
+    8,
+    11,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -146,
+    -148,
+    151,
+    218,
+    338
+   ]
+  },
+  {
+   "original_id": 97721,
+   "kind": "convex_four",
+   "detail": [
+    1,
+    6,
+    8,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -146,
+    -149,
+    152,
+    219,
+    339
+   ]
+  },
+  {
+   "original_id": 98556,
+   "kind": "convex_four",
+   "detail": [
+    1,
+    6,
+    10,
+    11,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -147,
+    -148,
+    -153,
+    -220,
+    340
+   ]
+  },
+  {
+   "original_id": 98562,
+   "kind": "packet",
+   "detail": [
+    1,
+    6,
+    10,
+    12,
+    true,
+    false,
+    true,
+    false
+   ],
+   "literals": [
+    -14,
+    -54,
+    -75,
+    -147,
+    149,
+    -154,
+    221
+   ]
+  },
+  {
+   "original_id": 98563,
+   "kind": "packet",
+   "detail": [
+    1,
+    6,
+    10,
+    12,
+    true,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    -14,
+    -54,
+    -75,
+    -147,
+    149,
+    -154,
+    -221
+   ]
+  },
+  {
+   "original_id": 98764,
+   "kind": "convex_four",
+   "detail": [
+    1,
+    6,
+    10,
+    12,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -147,
+    -149,
+    -154,
+    -221,
+    341
+   ]
+  },
+  {
+   "original_id": 98969,
+   "kind": "convex_four",
+   "detail": [
+    1,
+    6,
+    11,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -148,
+    -149,
+    155,
+    222,
+    342
+   ]
+  },
+  {
+   "original_id": 101872,
+   "kind": "convex_four",
+   "detail": [
+    1,
+    8,
+    10,
+    11,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    150,
+    151,
+    -153,
+    -229,
+    343
+   ]
+  },
+  {
+   "original_id": 101939,
+   "kind": "packet",
+   "detail": [
+    8,
+    1,
+    10,
+    12,
+    true,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    15,
+    -16,
+    -75,
+    150,
+    -152,
+    -154,
+    -230
+   ]
+  },
+  {
+   "original_id": 102080,
+   "kind": "convex_four",
+   "detail": [
+    1,
+    8,
+    10,
+    12,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    150,
+    152,
+    -154,
+    -230,
+    344
+   ]
+  },
+  {
+   "original_id": 102094,
+   "kind": "packet",
+   "detail": [
+    1,
+    8,
+    11,
+    12,
+    false,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -15,
+    -63,
+    -84,
+    151,
+    -152,
+    155,
+    231
+   ]
+  },
+  {
+   "original_id": 102285,
+   "kind": "convex_four",
+   "detail": [
+    1,
+    8,
+    11,
+    12,
+    false,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    151,
+    152,
+    155,
+    231,
+    345
+   ]
+  },
+  {
+   "original_id": 103129,
+   "kind": "convex_four",
+   "detail": [
+    1,
+    10,
+    11,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -153,
+    -154,
+    155,
+    235,
+    346
+   ]
+  },
+  {
+   "original_id": 111024,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    4,
+    5,
+    7,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    156,
+    157,
+    -161,
+    -192,
+    347
+   ]
+  },
+  {
+   "original_id": 111440,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    4,
+    5,
+    9,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    156,
+    158,
+    -163,
+    -193,
+    348
+   ]
+  },
+  {
+   "original_id": 111648,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    4,
+    5,
+    10,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    156,
+    159,
+    -164,
+    -194,
+    349
+   ]
+  },
+  {
+   "original_id": 111923,
+   "kind": "packet",
+   "detail": [
+    4,
+    2,
+    5,
+    12,
+    true,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    18,
+    -19,
+    -52,
+    156,
+    -160,
+    -166,
+    -195
+   ]
+  },
+  {
+   "original_id": 112064,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    4,
+    5,
+    12,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    156,
+    160,
+    -166,
+    -195,
+    350
+   ]
+  },
+  {
+   "original_id": 113725,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    4,
+    7,
+    9,
+    false,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    157,
+    158,
+    167,
+    196,
+    351
+   ]
+  },
+  {
+   "original_id": 113933,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    4,
+    7,
+    10,
+    false,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    157,
+    159,
+    168,
+    197,
+    352
+   ]
+  },
+  {
+   "original_id": 114158,
+   "kind": "packet",
+   "detail": [
+    2,
+    4,
+    7,
+    12,
+    false,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -18,
+    -36,
+    -60,
+    157,
+    -160,
+    169,
+    198
+   ]
+  },
+  {
+   "original_id": 114349,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    4,
+    7,
+    12,
+    false,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    157,
+    160,
+    169,
+    198,
+    353
+   ]
+  },
+  {
+   "original_id": 115392,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    4,
+    9,
+    10,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    158,
+    159,
+    -174,
+    -201,
+    354
+   ]
+  },
+  {
+   "original_id": 115808,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    4,
+    9,
+    12,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    158,
+    160,
+    -176,
+    -202,
+    355
+   ]
+  },
+  {
+   "original_id": 116221,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    4,
+    10,
+    12,
+    false,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    159,
+    160,
+    178,
+    203,
+    356
+   ]
+  },
+  {
+   "original_id": 116225,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    4,
+    10,
+    12,
+    false,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    159,
+    -160,
+    178,
+    203,
+    -356
+   ]
+  },
+  {
+   "original_id": 118105,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    5,
+    7,
+    9,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -161,
+    -163,
+    167,
+    204,
+    357
+   ]
+  },
+  {
+   "original_id": 118313,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    5,
+    7,
+    10,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -161,
+    -164,
+    168,
+    205,
+    358
+   ]
+  },
+  {
+   "original_id": 118729,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    5,
+    7,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -161,
+    -166,
+    169,
+    206,
+    359
+   ]
+  },
+  {
+   "original_id": 118937,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    5,
+    8,
+    9,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -162,
+    -163,
+    170,
+    207,
+    360
+   ]
+  },
+  {
+   "original_id": 119075,
+   "kind": "packet",
+   "detail": [
+    8,
+    10,
+    2,
+    5,
+    true,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    -19,
+    24,
+    -62,
+    -162,
+    -164,
+    -171,
+    208
+   ]
+  },
+  {
+   "original_id": 119145,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    5,
+    8,
+    10,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -162,
+    -164,
+    171,
+    208,
+    361
+   ]
+  },
+  {
+   "original_id": 119353,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    5,
+    8,
+    11,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -162,
+    -165,
+    172,
+    209,
+    362
+   ]
+  },
+  {
+   "original_id": 119561,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    5,
+    8,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -162,
+    -166,
+    173,
+    210,
+    363
+   ]
+  },
+  {
+   "original_id": 119772,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    5,
+    9,
+    10,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -163,
+    -164,
+    -174,
+    -211,
+    364
+   ]
+  },
+  {
+   "original_id": 119980,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    5,
+    9,
+    11,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -163,
+    -165,
+    -175,
+    -212,
+    365
+   ]
+  },
+  {
+   "original_id": 120188,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    5,
+    9,
+    12,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -163,
+    -166,
+    -176,
+    -213,
+    366
+   ]
+  },
+  {
+   "original_id": 120371,
+   "kind": "packet",
+   "detail": [
+    11,
+    10,
+    2,
+    5,
+    true,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    -19,
+    24,
+    74,
+    -164,
+    -165,
+    177,
+    -214
+   ]
+  },
+  {
+   "original_id": 120396,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    5,
+    10,
+    11,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -164,
+    -165,
+    -177,
+    -214,
+    367
+   ]
+  },
+  {
+   "original_id": 120601,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    5,
+    10,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -164,
+    -166,
+    178,
+    215,
+    368
+   ]
+  },
+  {
+   "original_id": 120604,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    5,
+    10,
+    12,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -164,
+    -166,
+    -178,
+    -215,
+    368
+   ]
+  },
+  {
+   "original_id": 120809,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    5,
+    11,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -165,
+    -166,
+    179,
+    216,
+    369
+   ]
+  },
+  {
+   "original_id": 124960,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    7,
+    9,
+    10,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    167,
+    168,
+    -174,
+    -223,
+    370
+   ]
+  },
+  {
+   "original_id": 125235,
+   "kind": "packet",
+   "detail": [
+    7,
+    2,
+    9,
+    12,
+    true,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    21,
+    -23,
+    -73,
+    167,
+    -169,
+    -176,
+    -224
+   ]
+  },
+  {
+   "original_id": 125376,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    7,
+    9,
+    12,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    167,
+    169,
+    -176,
+    -224,
+    371
+   ]
+  },
+  {
+   "original_id": 125789,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    7,
+    10,
+    12,
+    false,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    168,
+    169,
+    178,
+    225,
+    372
+   ]
+  },
+  {
+   "original_id": 126208,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    8,
+    9,
+    10,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    170,
+    171,
+    -174,
+    -226,
+    373
+   ]
+  },
+  {
+   "original_id": 126416,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    8,
+    9,
+    11,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    170,
+    172,
+    -175,
+    -227,
+    374
+   ]
+  },
+  {
+   "original_id": 126624,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    8,
+    9,
+    12,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    170,
+    173,
+    -176,
+    -228,
+    375
+   ]
+  },
+  {
+   "original_id": 126832,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    8,
+    10,
+    11,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    171,
+    172,
+    -177,
+    -229,
+    376
+   ]
+  },
+  {
+   "original_id": 126840,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    8,
+    10,
+    11,
+    true,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    -171,
+    172,
+    -177,
+    -229,
+    -376
+   ]
+  },
+  {
+   "original_id": 127037,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    8,
+    10,
+    12,
+    false,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    171,
+    173,
+    178,
+    230,
+    377
+   ]
+  },
+  {
+   "original_id": 127040,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    8,
+    10,
+    12,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    171,
+    173,
+    -178,
+    -230,
+    377
+   ]
+  },
+  {
+   "original_id": 127245,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    8,
+    11,
+    12,
+    false,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    172,
+    173,
+    179,
+    231,
+    378
+   ]
+  },
+  {
+   "original_id": 127268,
+   "kind": "packet",
+   "detail": [
+    2,
+    9,
+    10,
+    11,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -23,
+    -65,
+    -74,
+    -174,
+    -175,
+    177,
+    -232
+   ]
+  },
+  {
+   "original_id": 127466,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    9,
+    10,
+    11,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -174,
+    -175,
+    177,
+    -232,
+    -379
+   ]
+  },
+  {
+   "original_id": 127468,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    9,
+    10,
+    11,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -174,
+    -175,
+    -177,
+    -232,
+    379
+   ]
+  },
+  {
+   "original_id": 127476,
+   "kind": "packet",
+   "detail": [
+    2,
+    9,
+    10,
+    12,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -23,
+    -65,
+    -75,
+    -174,
+    -176,
+    178,
+    -233
+   ]
+  },
+  {
+   "original_id": 127673,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    9,
+    10,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -174,
+    -176,
+    178,
+    233,
+    380
+   ]
+  },
+  {
+   "original_id": 127676,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    9,
+    10,
+    12,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -174,
+    -176,
+    -178,
+    -233,
+    380
+   ]
+  },
+  {
+   "original_id": 127881,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    9,
+    11,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -175,
+    -176,
+    179,
+    234,
+    381
+   ]
+  },
+  {
+   "original_id": 128081,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    10,
+    11,
+    12,
+    false,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    177,
+    -178,
+    179,
+    235,
+    -382
+   ]
+  },
+  {
+   "original_id": 128085,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    10,
+    11,
+    12,
+    true,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    -177,
+    178,
+    179,
+    235,
+    -382
+   ]
+  },
+  {
+   "original_id": 128086,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    10,
+    11,
+    12,
+    true,
+    false,
+    false,
+    true
+   ],
+   "literals": [
+    -177,
+    178,
+    179,
+    -235,
+    382
+   ]
+  },
+  {
+   "original_id": 128089,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    10,
+    11,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -177,
+    -178,
+    179,
+    235,
+    382
+   ]
+  },
+  {
+   "original_id": 128090,
+   "kind": "convex_four",
+   "detail": [
+    2,
+    10,
+    11,
+    12,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -177,
+    -178,
+    179,
+    -235,
+    -382
+   ]
+  },
+  {
+   "original_id": 137876,
+   "kind": "packet",
+   "detail": [
+    3,
+    5,
+    10,
+    12,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -29,
+    -45,
+    -75,
+    -180,
+    -181,
+    190,
+    -215
+   ]
+  },
+  {
+   "original_id": 139737,
+   "kind": "convex_four",
+   "detail": [
+    3,
+    6,
+    8,
+    10,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -182,
+    -183,
+    186,
+    217,
+    383
+   ]
+  },
+  {
+   "original_id": 139945,
+   "kind": "convex_four",
+   "detail": [
+    3,
+    6,
+    8,
+    11,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -182,
+    -184,
+    187,
+    218,
+    384
+   ]
+  },
+  {
+   "original_id": 140153,
+   "kind": "convex_four",
+   "detail": [
+    3,
+    6,
+    8,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -182,
+    -185,
+    188,
+    219,
+    385
+   ]
+  },
+  {
+   "original_id": 140988,
+   "kind": "convex_four",
+   "detail": [
+    3,
+    6,
+    10,
+    11,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -183,
+    -184,
+    -189,
+    -220,
+    386
+   ]
+  },
+  {
+   "original_id": 140995,
+   "kind": "packet",
+   "detail": [
+    3,
+    6,
+    10,
+    12,
+    true,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    -30,
+    -54,
+    -75,
+    -183,
+    185,
+    -190,
+    -221
+   ]
+  },
+  {
+   "original_id": 141196,
+   "kind": "convex_four",
+   "detail": [
+    3,
+    6,
+    10,
+    12,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -183,
+    -185,
+    -190,
+    -221,
+    387
+   ]
+  },
+  {
+   "original_id": 141401,
+   "kind": "convex_four",
+   "detail": [
+    3,
+    6,
+    11,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -184,
+    -185,
+    191,
+    222,
+    388
+   ]
+  },
+  {
+   "original_id": 144304,
+   "kind": "convex_four",
+   "detail": [
+    3,
+    8,
+    10,
+    11,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    186,
+    187,
+    -189,
+    -229,
+    389
+   ]
+  },
+  {
+   "original_id": 144371,
+   "kind": "packet",
+   "detail": [
+    8,
+    3,
+    10,
+    12,
+    true,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    31,
+    -32,
+    -75,
+    186,
+    -188,
+    -190,
+    -230
+   ]
+  },
+  {
+   "original_id": 144512,
+   "kind": "convex_four",
+   "detail": [
+    3,
+    8,
+    10,
+    12,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    186,
+    188,
+    -190,
+    -230,
+    390
+   ]
+  },
+  {
+   "original_id": 144526,
+   "kind": "packet",
+   "detail": [
+    3,
+    8,
+    11,
+    12,
+    false,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -31,
+    -63,
+    -84,
+    187,
+    -188,
+    191,
+    231
+   ]
+  },
+  {
+   "original_id": 144717,
+   "kind": "convex_four",
+   "detail": [
+    3,
+    8,
+    11,
+    12,
+    false,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    187,
+    188,
+    191,
+    231,
+    391
+   ]
+  },
+  {
+   "original_id": 145459,
+   "kind": "packet",
+   "detail": [
+    11,
+    3,
+    10,
+    12,
+    true,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    -32,
+    33,
+    -75,
+    -189,
+    -190,
+    -191,
+    235
+   ]
+  },
+  {
+   "original_id": 145561,
+   "kind": "convex_four",
+   "detail": [
+    3,
+    10,
+    11,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -189,
+    -190,
+    191,
+    235,
+    392
+   ]
+  },
+  {
+   "original_id": 147225,
+   "kind": "convex_four",
+   "detail": [
+    4,
+    5,
+    7,
+    9,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -192,
+    -193,
+    196,
+    204,
+    393
+   ]
+  },
+  {
+   "original_id": 147433,
+   "kind": "convex_four",
+   "detail": [
+    4,
+    5,
+    7,
+    10,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -192,
+    -194,
+    197,
+    205,
+    394
+   ]
+  },
+  {
+   "original_id": 147694,
+   "kind": "packet",
+   "detail": [
+    5,
+    4,
+    7,
+    12,
+    false,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    35,
+    -36,
+    -60,
+    -192,
+    195,
+    198,
+    206
+   ]
+  },
+  {
+   "original_id": 147849,
+   "kind": "convex_four",
+   "detail": [
+    4,
+    5,
+    7,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -192,
+    -195,
+    198,
+    206,
+    395
+   ]
+  },
+  {
+   "original_id": 148792,
+   "kind": "packet",
+   "detail": [
+    9,
+    4,
+    10,
+    5,
+    false,
+    true,
+    true,
+    false
+   ],
+   "literals": [
+    39,
+    -40,
+    45,
+    -193,
+    -194,
+    -201,
+    -211
+   ]
+  },
+  {
+   "original_id": 148892,
+   "kind": "convex_four",
+   "detail": [
+    4,
+    5,
+    9,
+    10,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -193,
+    -194,
+    -201,
+    -211,
+    396
+   ]
+  },
+  {
+   "original_id": 149107,
+   "kind": "packet",
+   "detail": [
+    4,
+    5,
+    9,
+    12,
+    true,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    -35,
+    -43,
+    -73,
+    -193,
+    195,
+    -202,
+    -213
+   ]
+  },
+  {
+   "original_id": 149308,
+   "kind": "convex_four",
+   "detail": [
+    4,
+    5,
+    9,
+    12,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -193,
+    -195,
+    -202,
+    -213,
+    397
+   ]
+  },
+  {
+   "original_id": 149717,
+   "kind": "convex_four",
+   "detail": [
+    4,
+    5,
+    10,
+    12,
+    true,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    -194,
+    195,
+    203,
+    215,
+    -398
+   ]
+  },
+  {
+   "original_id": 149721,
+   "kind": "convex_four",
+   "detail": [
+    4,
+    5,
+    10,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -194,
+    -195,
+    203,
+    215,
+    398
+   ]
+  },
+  {
+   "original_id": 154080,
+   "kind": "convex_four",
+   "detail": [
+    4,
+    7,
+    9,
+    10,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    196,
+    197,
+    -201,
+    -223,
+    399
+   ]
+  },
+  {
+   "original_id": 154301,
+   "kind": "packet",
+   "detail": [
+    4,
+    7,
+    9,
+    12,
+    false,
+    false,
+    true,
+    false
+   ],
+   "literals": [
+    -36,
+    -57,
+    -73,
+    196,
+    198,
+    -202,
+    224
+   ]
+  },
+  {
+   "original_id": 154496,
+   "kind": "convex_four",
+   "detail": [
+    4,
+    7,
+    9,
+    12,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    196,
+    198,
+    -202,
+    -224,
+    400
+   ]
+  },
+  {
+   "original_id": 154718,
+   "kind": "packet",
+   "detail": [
+    4,
+    7,
+    10,
+    12,
+    false,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -36,
+    -58,
+    -75,
+    197,
+    -198,
+    203,
+    225
+   ]
+  },
+  {
+   "original_id": 154909,
+   "kind": "convex_four",
+   "detail": [
+    4,
+    7,
+    10,
+    12,
+    false,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    197,
+    198,
+    203,
+    225,
+    401
+   ]
+  },
+  {
+   "original_id": 155965,
+   "kind": "packet",
+   "detail": [
+    4,
+    8,
+    10,
+    12,
+    false,
+    false,
+    true,
+    false
+   ],
+   "literals": [
+    -38,
+    -62,
+    -75,
+    199,
+    200,
+    -203,
+    230
+   ]
+  },
+  {
+   "original_id": 156638,
+   "kind": "packet",
+   "detail": [
+    9,
+    4,
+    10,
+    12,
+    false,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    39,
+    -40,
+    -75,
+    -201,
+    202,
+    203,
+    233
+   ]
+  },
+  {
+   "original_id": 156793,
+   "kind": "convex_four",
+   "detail": [
+    4,
+    9,
+    10,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -201,
+    -202,
+    203,
+    233,
+    402
+   ]
+  },
+  {
+   "original_id": 161288,
+   "kind": "packet",
+   "detail": [
+    9,
+    7,
+    10,
+    5,
+    false,
+    true,
+    true,
+    false
+   ],
+   "literals": [
+    45,
+    57,
+    -58,
+    204,
+    205,
+    -211,
+    -223
+   ]
+  },
+  {
+   "original_id": 161360,
+   "kind": "convex_four",
+   "detail": [
+    5,
+    7,
+    9,
+    10,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    204,
+    205,
+    -211,
+    -223,
+    403
+   ]
+  },
+  {
+   "original_id": 161635,
+   "kind": "packet",
+   "detail": [
+    7,
+    5,
+    9,
+    12,
+    true,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    41,
+    -43,
+    -73,
+    204,
+    -206,
+    -213,
+    -224
+   ]
+  },
+  {
+   "original_id": 161776,
+   "kind": "convex_four",
+   "detail": [
+    5,
+    7,
+    9,
+    12,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    204,
+    206,
+    -213,
+    -224,
+    404
+   ]
+  },
+  {
+   "original_id": 161998,
+   "kind": "packet",
+   "detail": [
+    5,
+    7,
+    10,
+    12,
+    false,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -41,
+    -58,
+    -75,
+    205,
+    -206,
+    215,
+    225
+   ]
+  },
+  {
+   "original_id": 162189,
+   "kind": "convex_four",
+   "detail": [
+    5,
+    7,
+    10,
+    12,
+    false,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    205,
+    206,
+    215,
+    225,
+    405
+   ]
+  },
+  {
+   "original_id": 162193,
+   "kind": "convex_four",
+   "detail": [
+    5,
+    7,
+    10,
+    12,
+    false,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    205,
+    -206,
+    215,
+    225,
+    -405
+   ]
+  },
+  {
+   "original_id": 162608,
+   "kind": "convex_four",
+   "detail": [
+    5,
+    8,
+    9,
+    10,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    207,
+    208,
+    -211,
+    -226,
+    406
+   ]
+  },
+  {
+   "original_id": 162816,
+   "kind": "convex_four",
+   "detail": [
+    5,
+    8,
+    9,
+    11,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    207,
+    209,
+    -212,
+    -227,
+    407
+   ]
+  },
+  {
+   "original_id": 163024,
+   "kind": "convex_four",
+   "detail": [
+    5,
+    8,
+    9,
+    12,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    207,
+    210,
+    -213,
+    -228,
+    408
+   ]
+  },
+  {
+   "original_id": 163054,
+   "kind": "packet",
+   "detail": [
+    5,
+    10,
+    8,
+    11,
+    false,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -45,
+    62,
+    -63,
+    -208,
+    209,
+    -214,
+    -229
+   ]
+  },
+  {
+   "original_id": 163125,
+   "kind": "packet",
+   "detail": [
+    8,
+    11,
+    10,
+    5,
+    false,
+    false,
+    true,
+    false
+   ],
+   "literals": [
+    45,
+    -63,
+    74,
+    -208,
+    209,
+    -214,
+    -229
+   ]
+  },
+  {
+   "original_id": 163232,
+   "kind": "convex_four",
+   "detail": [
+    5,
+    8,
+    10,
+    11,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    208,
+    209,
+    -214,
+    -229,
+    409
+   ]
+  },
+  {
+   "original_id": 163240,
+   "kind": "convex_four",
+   "detail": [
+    5,
+    8,
+    10,
+    11,
+    true,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    -208,
+    209,
+    -214,
+    -229,
+    -409
+   ]
+  },
+  {
+   "original_id": 163309,
+   "kind": "packet",
+   "detail": [
+    8,
+    10,
+    5,
+    12,
+    false,
+    false,
+    true,
+    false
+   ],
+   "literals": [
+    45,
+    -52,
+    -62,
+    208,
+    210,
+    -215,
+    230
+   ]
+  },
+  {
+   "original_id": 163437,
+   "kind": "convex_four",
+   "detail": [
+    5,
+    8,
+    10,
+    12,
+    false,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    208,
+    210,
+    215,
+    230,
+    410
+   ]
+  },
+  {
+   "original_id": 163438,
+   "kind": "convex_four",
+   "detail": [
+    5,
+    8,
+    10,
+    12,
+    false,
+    false,
+    false,
+    true
+   ],
+   "literals": [
+    208,
+    210,
+    215,
+    -230,
+    -410
+   ]
+  },
+  {
+   "original_id": 163439,
+   "kind": "convex_four",
+   "detail": [
+    5,
+    8,
+    10,
+    12,
+    false,
+    false,
+    true,
+    false
+   ],
+   "literals": [
+    208,
+    210,
+    -215,
+    230,
+    -410
+   ]
+  },
+  {
+   "original_id": 163440,
+   "kind": "convex_four",
+   "detail": [
+    5,
+    8,
+    10,
+    12,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    208,
+    210,
+    -215,
+    -230,
+    410
+   ]
+  },
+  {
+   "original_id": 163645,
+   "kind": "convex_four",
+   "detail": [
+    5,
+    8,
+    11,
+    12,
+    false,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    209,
+    210,
+    216,
+    231,
+    411
+   ]
+  },
+  {
+   "original_id": 163761,
+   "kind": "packet",
+   "detail": [
+    10,
+    5,
+    9,
+    11,
+    true,
+    false,
+    false,
+    true
+   ],
+   "literals": [
+    -43,
+    45,
+    -72,
+    -211,
+    -212,
+    -214,
+    -232
+   ]
+  },
+  {
+   "original_id": 163764,
+   "kind": "packet",
+   "detail": [
+    10,
+    5,
+    9,
+    11,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -43,
+    45,
+    -72,
+    -211,
+    -212,
+    214,
+    -232
+   ]
+  },
+  {
+   "original_id": 163843,
+   "kind": "packet",
+   "detail": [
+    11,
+    10,
+    5,
+    9,
+    true,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    -43,
+    45,
+    74,
+    -211,
+    -212,
+    214,
+    -232
+   ]
+  },
+  {
+   "original_id": 163866,
+   "kind": "convex_four",
+   "detail": [
+    5,
+    9,
+    10,
+    11,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -211,
+    -212,
+    214,
+    -232,
+    -412
+   ]
+  },
+  {
+   "original_id": 163868,
+   "kind": "convex_four",
+   "detail": [
+    5,
+    9,
+    10,
+    11,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -211,
+    -212,
+    -214,
+    -232,
+    412
+   ]
+  },
+  {
+   "original_id": 163876,
+   "kind": "packet",
+   "detail": [
+    5,
+    9,
+    10,
+    12,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -43,
+    -65,
+    -75,
+    -211,
+    -213,
+    215,
+    -233
+   ]
+  },
+  {
+   "original_id": 163969,
+   "kind": "packet",
+   "detail": [
+    10,
+    5,
+    9,
+    12,
+    true,
+    false,
+    false,
+    true
+   ],
+   "literals": [
+    -43,
+    45,
+    -73,
+    -211,
+    -213,
+    -215,
+    -233
+   ]
+  },
+  {
+   "original_id": 163971,
+   "kind": "packet",
+   "detail": [
+    10,
+    5,
+    9,
+    12,
+    true,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    -43,
+    45,
+    -73,
+    -211,
+    -213,
+    -215,
+    233
+   ]
+  },
+  {
+   "original_id": 164073,
+   "kind": "convex_four",
+   "detail": [
+    5,
+    9,
+    10,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -211,
+    -213,
+    215,
+    233,
+    413
+   ]
+  },
+  {
+   "original_id": 164281,
+   "kind": "convex_four",
+   "detail": [
+    5,
+    9,
+    11,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -212,
+    -213,
+    216,
+    234,
+    414
+   ]
+  },
+  {
+   "original_id": 164286,
+   "kind": "packet",
+   "detail": [
+    5,
+    10,
+    11,
+    12,
+    false,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -45,
+    -74,
+    -84,
+    214,
+    -215,
+    216,
+    235
+   ]
+  },
+  {
+   "original_id": 164485,
+   "kind": "convex_four",
+   "detail": [
+    5,
+    10,
+    11,
+    12,
+    true,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    -214,
+    215,
+    216,
+    235,
+    -415
+   ]
+  },
+  {
+   "original_id": 164486,
+   "kind": "convex_four",
+   "detail": [
+    5,
+    10,
+    11,
+    12,
+    true,
+    false,
+    false,
+    true
+   ],
+   "literals": [
+    -214,
+    215,
+    216,
+    -235,
+    415
+   ]
+  },
+  {
+   "original_id": 164489,
+   "kind": "convex_four",
+   "detail": [
+    5,
+    10,
+    11,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -214,
+    -215,
+    216,
+    235,
+    415
+   ]
+  },
+  {
+   "original_id": 164490,
+   "kind": "convex_four",
+   "detail": [
+    5,
+    10,
+    11,
+    12,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -214,
+    -215,
+    216,
+    -235,
+    -415
+   ]
+  },
+  {
+   "original_id": 167392,
+   "kind": "convex_four",
+   "detail": [
+    6,
+    8,
+    10,
+    11,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    217,
+    218,
+    -220,
+    -229,
+    416
+   ]
+  },
+  {
+   "original_id": 167459,
+   "kind": "packet",
+   "detail": [
+    8,
+    6,
+    10,
+    12,
+    true,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    53,
+    -54,
+    -75,
+    217,
+    -219,
+    -221,
+    -230
+   ]
+  },
+  {
+   "original_id": 167600,
+   "kind": "convex_four",
+   "detail": [
+    6,
+    8,
+    10,
+    12,
+    false,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    217,
+    219,
+    -221,
+    -230,
+    417
+   ]
+  },
+  {
+   "original_id": 167614,
+   "kind": "packet",
+   "detail": [
+    6,
+    8,
+    11,
+    12,
+    false,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -53,
+    -63,
+    -84,
+    218,
+    -219,
+    222,
+    231
+   ]
+  },
+  {
+   "original_id": 167805,
+   "kind": "convex_four",
+   "detail": [
+    6,
+    8,
+    11,
+    12,
+    false,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    218,
+    219,
+    222,
+    231,
+    418
+   ]
+  },
+  {
+   "original_id": 167809,
+   "kind": "convex_four",
+   "detail": [
+    6,
+    8,
+    11,
+    12,
+    false,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    218,
+    -219,
+    222,
+    231,
+    -418
+   ]
+  },
+  {
+   "original_id": 168649,
+   "kind": "convex_four",
+   "detail": [
+    6,
+    10,
+    11,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -220,
+    -221,
+    222,
+    235,
+    419
+   ]
+  },
+  {
+   "original_id": 170158,
+   "kind": "packet",
+   "detail": [
+    9,
+    7,
+    10,
+    12,
+    false,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    57,
+    -58,
+    -75,
+    -223,
+    224,
+    225,
+    233
+   ]
+  },
+  {
+   "original_id": 170309,
+   "kind": "convex_four",
+   "detail": [
+    7,
+    9,
+    10,
+    12,
+    true,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    -223,
+    224,
+    225,
+    233,
+    -420
+   ]
+  },
+  {
+   "original_id": 170313,
+   "kind": "convex_four",
+   "detail": [
+    7,
+    9,
+    10,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -223,
+    -224,
+    225,
+    233,
+    420
+   ]
+  },
+  {
+   "original_id": 170840,
+   "kind": "packet",
+   "detail": [
+    10,
+    8,
+    11,
+    9,
+    false,
+    true,
+    true,
+    false
+   ],
+   "literals": [
+    62,
+    -63,
+    72,
+    -226,
+    -227,
+    -229,
+    -232
+   ]
+  },
+  {
+   "original_id": 170932,
+   "kind": "convex_four",
+   "detail": [
+    8,
+    9,
+    10,
+    11,
+    false,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    226,
+    -227,
+    -229,
+    -232,
+    -421
+   ]
+  },
+  {
+   "original_id": 170940,
+   "kind": "convex_four",
+   "detail": [
+    8,
+    9,
+    10,
+    11,
+    true,
+    true,
+    true,
+    true
+   ],
+   "literals": [
+    -226,
+    -227,
+    -229,
+    -232,
+    421
+   ]
+  },
+  {
+   "original_id": 170963,
+   "kind": "packet",
+   "detail": [
+    8,
+    10,
+    9,
+    12,
+    true,
+    false,
+    true,
+    true
+   ],
+   "literals": [
+    -62,
+    65,
+    -73,
+    226,
+    -228,
+    230,
+    233
+   ]
+  },
+  {
+   "original_id": 171137,
+   "kind": "convex_four",
+   "detail": [
+    8,
+    9,
+    10,
+    12,
+    false,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    226,
+    -228,
+    230,
+    233,
+    -422
+   ]
+  },
+  {
+   "original_id": 171145,
+   "kind": "convex_four",
+   "detail": [
+    8,
+    9,
+    10,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -226,
+    -228,
+    230,
+    233,
+    422
+   ]
+  },
+  {
+   "original_id": 171146,
+   "kind": "convex_four",
+   "detail": [
+    8,
+    9,
+    10,
+    12,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -226,
+    -228,
+    230,
+    -233,
+    -422
+   ]
+  },
+  {
+   "original_id": 171147,
+   "kind": "convex_four",
+   "detail": [
+    8,
+    9,
+    10,
+    12,
+    true,
+    true,
+    true,
+    false
+   ],
+   "literals": [
+    -226,
+    -228,
+    -230,
+    233,
+    -422
+   ]
+  },
+  {
+   "original_id": 171353,
+   "kind": "convex_four",
+   "detail": [
+    8,
+    9,
+    11,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -227,
+    -228,
+    231,
+    234,
+    423
+   ]
+  },
+  {
+   "original_id": 171361,
+   "kind": "packet",
+   "detail": [
+    8,
+    10,
+    11,
+    12,
+    true,
+    false,
+    false,
+    true
+   ],
+   "literals": [
+    -62,
+    -74,
+    -84,
+    -229,
+    230,
+    231,
+    -235
+   ]
+  },
+  {
+   "original_id": 171364,
+   "kind": "packet",
+   "detail": [
+    8,
+    10,
+    11,
+    12,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -62,
+    -74,
+    -84,
+    -229,
+    -230,
+    231,
+    -235
+   ]
+  },
+  {
+   "original_id": 171373,
+   "kind": "packet",
+   "detail": [
+    8,
+    11,
+    10,
+    12,
+    false,
+    false,
+    true,
+    false
+   ],
+   "literals": [
+    -63,
+    74,
+    -75,
+    -229,
+    -230,
+    231,
+    -235
+   ]
+  },
+  {
+   "original_id": 171405,
+   "kind": "packet",
+   "detail": [
+    10,
+    8,
+    11,
+    12,
+    false,
+    false,
+    true,
+    false
+   ],
+   "literals": [
+    62,
+    -63,
+    -84,
+    -229,
+    -230,
+    231,
+    -235
+   ]
+  },
+  {
+   "original_id": 171406,
+   "kind": "packet",
+   "detail": [
+    10,
+    8,
+    11,
+    12,
+    false,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    62,
+    -63,
+    -84,
+    -229,
+    230,
+    231,
+    235
+   ]
+  },
+  {
+   "original_id": 171408,
+   "kind": "packet",
+   "detail": [
+    10,
+    8,
+    11,
+    12,
+    false,
+    true,
+    true,
+    false
+   ],
+   "literals": [
+    62,
+    -63,
+    -84,
+    -229,
+    230,
+    231,
+    -235
+   ]
+  },
+  {
+   "original_id": 171557,
+   "kind": "convex_four",
+   "detail": [
+    8,
+    10,
+    11,
+    12,
+    true,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    -229,
+    230,
+    231,
+    235,
+    -424
+   ]
+  },
+  {
+   "original_id": 171558,
+   "kind": "convex_four",
+   "detail": [
+    8,
+    10,
+    11,
+    12,
+    true,
+    false,
+    false,
+    true
+   ],
+   "literals": [
+    -229,
+    230,
+    231,
+    -235,
+    424
+   ]
+  },
+  {
+   "original_id": 171561,
+   "kind": "convex_four",
+   "detail": [
+    8,
+    10,
+    11,
+    12,
+    true,
+    true,
+    false,
+    false
+   ],
+   "literals": [
+    -229,
+    -230,
+    231,
+    235,
+    424
+   ]
+  },
+  {
+   "original_id": 171562,
+   "kind": "convex_four",
+   "detail": [
+    8,
+    10,
+    11,
+    12,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -229,
+    -230,
+    231,
+    -235,
+    -424
+   ]
+  },
+  {
+   "original_id": 171677,
+   "kind": "packet",
+   "detail": [
+    11,
+    10,
+    9,
+    12,
+    false,
+    false,
+    true,
+    false
+   ],
+   "literals": [
+    65,
+    -73,
+    74,
+    -232,
+    -233,
+    234,
+    -235
+   ]
+  },
+  {
+   "original_id": 171765,
+   "kind": "convex_four",
+   "detail": [
+    9,
+    10,
+    11,
+    12,
+    true,
+    false,
+    false,
+    false
+   ],
+   "literals": [
+    -232,
+    233,
+    234,
+    235,
+    -425
+   ]
+  },
+  {
+   "original_id": 171766,
+   "kind": "convex_four",
+   "detail": [
+    9,
+    10,
+    11,
+    12,
+    true,
+    false,
+    false,
+    true
+   ],
+   "literals": [
+    -232,
+    233,
+    234,
+    -235,
+    425
+   ]
+  },
+  {
+   "original_id": 171770,
+   "kind": "convex_four",
+   "detail": [
+    9,
+    10,
+    11,
+    12,
+    true,
+    true,
+    false,
+    true
+   ],
+   "literals": [
+    -232,
+    -233,
+    234,
+    -235,
+    -425
+   ]
+  },
+  {
+   "original_id": 171780,
+   "kind": "no_octagon",
+   "detail": [
+    0,
+    1,
+    3,
+    6,
+    8,
+    10,
+    11,
+    12
+   ],
+   "literals": [
+    -236,
+    -237,
+    -238,
+    -239,
+    -240,
+    -241,
+    -242,
+    -243,
+    -244,
+    -245,
+    -246,
+    -247,
+    -248,
+    -249,
+    -250,
+    -275,
+    -276,
+    -277,
+    -278,
+    -279,
+    -280,
+    -281,
+    -282,
+    -283,
+    -284,
+    -308,
+    -309,
+    -310,
+    -311,
+    -312,
+    -313,
+    -320,
+    -321,
+    -322,
+    -326,
+    -327,
+    -328,
+    -329,
+    -330,
+    -331,
+    -332,
+    -333,
+    -334,
+    -335,
+    -336,
+    -337,
+    -338,
+    -339,
+    -340,
+    -341,
+    -342,
+    -343,
+    -344,
+    -345,
+    -346,
+    -383,
+    -384,
+    -385,
+    -386,
+    -387,
+    -388,
+    -389,
+    -390,
+    -391,
+    -392,
+    -416,
+    -417,
+    -418,
+    -419,
+    -424
+   ]
+  },
+  {
+   "original_id": 171786,
+   "kind": "no_octagon",
+   "detail": [
+    0,
+    2,
+    4,
+    5,
+    7,
+    9,
+    10,
+    12
+   ],
+   "literals": [
+    -251,
+    -252,
+    -253,
+    -254,
+    -255,
+    -256,
+    -258,
+    -259,
+    -261,
+    -262,
+    -263,
+    -264,
+    -269,
+    -271,
+    -273,
+    -285,
+    -286,
+    -287,
+    -288,
+    -289,
+    -290,
+    -291,
+    -292,
+    -293,
+    -294,
+    -295,
+    -296,
+    -297,
+    -302,
+    -304,
+    -306,
+    -314,
+    -315,
+    -316,
+    -324,
+    -347,
+    -348,
+    -349,
+    -350,
+    -351,
+    -352,
+    -353,
+    -354,
+    -355,
+    -356,
+    -357,
+    -358,
+    -359,
+    -364,
+    -366,
+    -368,
+    -370,
+    -371,
+    -372,
+    -380,
+    -393,
+    -394,
+    -395,
+    -396,
+    -397,
+    -398,
+    -399,
+    -400,
+    -401,
+    -402,
+    -403,
+    -404,
+    -405,
+    -413,
+    -420
+   ]
+  },
+  {
+   "original_id": 171790,
+   "kind": "no_octagon",
+   "detail": [
+    0,
+    2,
+    5,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "literals": [
+    -257,
+    -258,
+    -259,
+    -260,
+    -261,
+    -265,
+    -266,
+    -267,
+    -268,
+    -269,
+    -270,
+    -271,
+    -272,
+    -273,
+    -274,
+    -298,
+    -299,
+    -300,
+    -301,
+    -302,
+    -303,
+    -304,
+    -305,
+    -306,
+    -307,
+    -317,
+    -318,
+    -319,
+    -320,
+    -321,
+    -322,
+    -323,
+    -324,
+    -325,
+    -326,
+    -360,
+    -361,
+    -362,
+    -363,
+    -364,
+    -365,
+    -366,
+    -367,
+    -368,
+    -369,
+    -373,
+    -374,
+    -375,
+    -376,
+    -377,
+    -378,
+    -379,
+    -380,
+    -381,
+    -382,
+    -406,
+    -407,
+    -408,
+    -409,
+    -410,
+    -411,
+    -412,
+    -413,
+    -414,
+    -415,
+    -421,
+    -422,
+    -423,
+    -424,
+    -425
+   ]
+  }
+ ],
+ "cnf_sha256": "8ecd67786f902a53de6779803442a501ea11309746664a6d3692e576b73c4753",
+ "lrat_sha256": "2ce6d1a6437fe68ceee8616b345b4b873cc3f0ffd83c9cb18e2cbcb6bdcc945e",
+ "exact_python_rup_replay": true,
+ "proof_status": "LRAT awaits Lean kernel checking; geometry-to-CNF remains an explicit separate proof obligation."
+}

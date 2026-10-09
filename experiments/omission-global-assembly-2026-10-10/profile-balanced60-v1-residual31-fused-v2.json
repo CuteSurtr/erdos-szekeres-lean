@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "name": "balanced60-v1-residual31-fused-v2",
+  "bound": 315,
+  "final_module": "FinalCover315B60R31Fused",
+  "balanced": {
+    "namespace": "OmissionBalancedCover60",
+    "module_prefix": "BalancedCover60Proof",
+    "states": 252,
+    "rows": 2905,
+    "budget": 60,
+    "original_rows": 2685,
+    "derived_rows": 220,
+    "cut_module": "BalancedCoverCuts",
+    "cut_namespace": "BalancedCoverCuts",
+    "bridge": "BalancedCover60Bridge",
+    "arithmetic_manifest_sha256": "aae6aaf917b4b990d8440f57692377941a06276c266094ee3de77785fee46485",
+    "cut_manifest_sha256": "97bde4a0388629b9a69a9d5c6afc1bd67bde9048040f6fd95e1ec76b536f904c",
+    "augmented_source_sha256": "405f18f960e2ecb3ba149758ff811fdae5ccc7f8b6373e5ae881b1555f663789"
+  },
+  "residual": {
+    "namespace": "OmissionResidualCover31Fused",
+    "module_prefix": "ResidualCover31FusedProof",
+    "states": 154,
+    "rows": 2295,
+    "budget": 31,
+    "original_rows": 1187,
+    "derived_rows": 1108,
+    "cut_module": "ResidualCoverCutsV2",
+    "cut_namespace": "ResidualCoverCutsV2",
+    "bridge": "ResidualCover31FusedBridge",
+    "arithmetic_manifest_sha256": "177d7087560475e9f93bc1e4235f265f4c54988ac734efe6b5515cfb3875fabd",
+    "cut_manifest_sha256": "b2ec3815fdd54cbb9308ffc70aa26892b90f997bf1b3c5c3c3b79f88495f5a14",
+    "augmented_source_sha256": "c5bc49d588791a6a43e9deba3c4f01af59cf12b781037e69cffb5c2f7735ac61"
+  }
+}

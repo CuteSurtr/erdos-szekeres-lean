@@ -4,7 +4,7 @@ Lean proofs of two published upper bounds for **finite point sets in the real
 plane in general position** (no three distinct points collinear), together with
 separately identified computational research. Polygons need not be empty.
 
-**ES(8) ≤ 317 is now proved in Lean:** every set of at least 317 real planar
+**ES(8) ≤ 316 is now proved in Lean:** every set of at least 316 real planar
 points in general position contains eight points in convex position. The
 finished Suk 2016 and HMPT 2020 asymptotic bounds are also formalized below.
 The Erdős–Szekeres conjecture and an improvement of HMPT's asymptotic
@@ -40,21 +40,21 @@ restricted specializations, and statements not formalized.
 
 ## Completed finite octagon bound — 10 October 2026
 
-The closed theorem is `ErdosSzekeres.Omission.forces_convex_octagon_317 :
-ForcesConvexNGon 317 8`. Its explicit real-point form,
-`ErdosSzekeres.Omission.convex_octagon_of_card_ge_317`, quantifies over every
-finite set `S : Finset (Fin 2 → ℝ)` in general position with `317 ≤ S.card`,
+The closed theorem is `ErdosSzekeres.Omission.forces_convex_octagon_316 :
+ForcesConvexNGon 316 8`. Its explicit real-point form,
+`ErdosSzekeres.Omission.convex_octagon_of_card_ge_316`, quantifies over every
+finite set `S : Finset (Fin 2 → ℝ)` in general position with `316 ≤ S.card`,
 and supplies `T ⊆ S` of cardinality eight with `ConvexIndependent ℝ`.
-Both live in [FinalCover317.lean](experiments/omission-global-assembly-2026-10-10/FinalCover317.lean).
+Both live in [FinalCover316.lean](experiments/omission-global-assembly-2026-10-10/FinalCover316.lean).
 There are no remaining row, arithmetic, coordinate-order or cup/cap assumptions
 on the original point set.
 
 The proof combines the checked projective/root transfer and minimum-slope
-partition with balanced population bound 192 and residual bound 123.
+partition with balanced population bound 191 and residual bound 123.
 The partition's configurations have additional geometric restrictions, all
 proved by the reduction. Their 2,685 balanced and 1,187 residual row constraints
 are established for actual points. Checked rounding cuts compress the arithmetic
-exclusions to 711 and 4,686 leaves. Every leaf, complete tree root, literal
+exclusions to 3,954 and 4,686 leaves. Every leaf, complete tree root, literal
 catalog bridge and final composition has passed Lean with only `propext`,
 `Classical.choice` and `Quot.sound`.
 
@@ -65,7 +65,7 @@ catalog bridge and final composition has passed Lean with only `propext`,
 The omission method, original state catalogs and adapted prerequisites are
 credited to Michael Schroeder's version-1 archive (19 September 2026), which
 claims an octagon threshold of 319. This repository proves the smaller threshold
-317 using stronger arithmetic certificates and ordinary kernel checking.
+316 using stronger arithmetic certificates and ordinary kernel checking.
 That comparison is to the pinned archive, not a claim of literature priority.
 See [provenance and licenses](docs/THIRD_PARTY.md).
 
@@ -89,7 +89,23 @@ The first constraint excludes the preceding 32-hole witness, with that strict
 strengthening also proved in Lean. The [first](experiments/omission-coupled-core-2026-10-10/README.md)
 and [second](experiments/omission-coupled-next-2026-10-10/README.md) proof bundles
 preserve the literal kernel-checked refutations and independent replay controls.
-They do not yet give a smaller global threshold.
+Their compatible families have 42 and 35 checked rows, with 20 shared supports:
+57 distinct constraints in total. The [complete Lean classification](experiments/omission-coupled-union-2026-10-10/README.md)
+proves that 48 follow from original rows and nine are independent additions
+relative to this frozen system.
+
+`Omission.CoupledCoreThird.hole_bound` and
+`Omission.CoupledCoreFourth.hole_bound` and
+`Omission.CoupledCoreFifth.hole_bound` add three more checked obstructions.
+The third and fourth templates supply three and 24 checked variants,
+respectively, through `CoupledThirdVariants.all_rows` and
+`CoupledFourthVariants.all_rows`.
+[CoupledDemandTwo.lean](ErdosSzekeres/Omission/CoupledDemandTwo.lean) proves
+`Omission.CoupledDemandTwo.hole_bound`: at least two states are missing from
+one specified 14-state set. Given the earlier rows, that formulation is
+equivalent to the third obstruction; it is not a second independent discovery.
+These geometric extensions are separate from the completed 316-point
+arithmetic route and do not yet lower its threshold.
 
 [DyadicScale.lean](ErdosSzekeres/HMPT/DyadicScale.lean) extends the finite HMPT
 counting argument to any number of doubling stages.
@@ -104,7 +120,7 @@ Pinned versions: **Lean 4.24.0**, **Mathlib v4.24.0**; dependency revisions are 
 [lake-manifest.json](lake-manifest.json).
 
 The current library passes `lake build --wfail`. The
-[full saved axiom audit](docs/validation/axiom-audit-coupled-2026-10-10.txt) checks **483 named
+[full saved axiom audit](docs/validation/axiom-audit-extensions-2026-10-10.txt) checks **517 named
 theorems**, including both main theorems and their transitive axiom dependencies.
 Only `propext`, `Classical.choice`, and `Quot.sound` are allowed. There is no
 `sorry`, `admit`, `sorryAx`, or `native_decide` in the maintained Lean sources,
@@ -127,14 +143,15 @@ instructions and are not silently counted as default-library CI checks.
 
 ## In-progress research — 10 October 2026
 
-The 316-, 315- and 314-point targets are **not yet proved**. Stronger exact
-arithmetic certificates and their Lean builds are being investigated. A new
-13-state geometric obstruction has a checked propositional core, but its full
-actual-point transfer remains in progress. Neither solver UNSAT output nor a
-partially checked certificate is counted as a completed geometric theorem.
+The 315- and 314-point targets are **not yet proved**. Complete exact arithmetic
+certificates with 22,318 balanced and 50,945 residual leaves are undergoing Lean
+checking. Further geometric constraints are being investigated using explicit
+Boolean witnesses and shared-order/rank/orientation obstructions. Neither solver
+UNSAT output nor a partially checked certificate is counted as a theorem.
 
 The [current work estimate](docs/ES8_REMAINING.md) separates these stronger
-targets from the completed 317-point result. Earlier partial certificates and
+targets from the completed 316-point result. The earlier complete 317-point
+proof and its records remain available. Earlier partial certificates and
 failed searches are retained as dated research records. They do not invalidate
 or replace the complete new proof route. The finished asymptotic theorem still
 has HMPT's published coefficient `8√2/3`.

@@ -1,23 +1,24 @@
 # Parameterized global assembly
 
-**The closed bound `ES(8) ≤ 317` is Lean-checked.**
-[`FinalCover317.lean`](FinalCover317.lean) proves
-`ErdosSzekeres.Omission.forces_convex_octagon_317 : ForcesConvexNGon 317 8`.
-Equivalently, every finite set of at least 317 points in `ℝ²` in general
+**The closed bound `ES(8) ≤ 316` is Lean-checked.**
+[`FinalCover316.lean`](FinalCover316.lean) proves
+`ErdosSzekeres.Omission.forces_convex_octagon_316 : ForcesConvexNGon 316 8`.
+Equivalently, every finite set of at least 316 points in `ℝ²` in general
 position contains eight points in convex position. No arithmetic-certificate,
 population-bound, rational-coordinate, or realizability hypothesis remains.
 
-The [complete final record](global-cover-317-check.json) verifies both
+The [complete final record](global-cover-316-check.json) verifies both
 compressed arithmetic roots, both cut-transfer proofs, all geometric rows,
 both catalog identifications, and the final theorem. The
-[axiom output](global-cover-317-axioms.txt) reports only `propext`,
+[axiom output](global-cover-316-axioms.txt) reports only `propext`,
 `Classical.choice`, and `Quot.sound` for each final root. This is an ordinary
 convex octagon result, not an empty-octagon result or an asymptotic improvement.
 No priority claim for the finite bound is made here.
 
 The older `Final317.lean` source uses a different, unfinished arithmetic
-route; it is not needed by the checked rounded-cover proof. Stronger 316 and
-315 candidates below remain pending their own complete final checks.
+route; it is not needed by the checked rounded-cover proof. The earlier 317
+cover proof remains checked and preserved. Stronger 315 and 314 candidates
+below remain pending their own complete final checks.
 
 ## Checked statements
 
@@ -136,16 +137,17 @@ under CC BY 4.0 and contains 85 generated Lean source files only. The adapted
 geometric library retains Schroeder's MIT notice and Baek's Apache-2.0 notice
 as described in `THIRD_PARTY.md`. All archives are source/data bundles; compiled
 objects remain outside Git. The local `manifest.json` records every packaged
-file hash and distinguishes the checked 317 chain from historical and pending
-alternatives. Absolute paths in check records identify the observed build;
+file hash and distinguishes the checked 316 and 317 chains from historical
+and pending alternatives. Absolute paths in check records identify the observed build;
 their object hashes are evidence, not bundled binaries or portable resume records.
 
-## Compressed arithmetic route
+## Compressed arithmetic routes: checked 317 and 316
 
 The six-hour continuation found exact certificates with 4,686 residual leaves
-and 711 balanced leaves after adjoining 402 and 220 rounded arithmetic rows,
-respectively. These rows must themselves be proved from the original catalogs;
-Python replay alone does not establish the real-point theorem.
+and 711 balanced leaves for 317, followed by 3,954 balanced leaves for 316,
+after adjoining 402 and 220 rounded arithmetic rows, respectively. Both
+cut-transfer modules are proved from the original catalogs. Python replay
+alone does not establish the real-point theorem.
 
 `scripts/omission_balanced_rows.py` copies all 84 balanced geometry blocks
 unchanged and makes `BalancedRows.lean` aggregate their 2,685 row implications.
@@ -180,12 +182,14 @@ catalogs in this command. Their old full roots are not prerequisites of this
 route. Both new compressed roots, both cut-transfer modules, all geometry,
 both catalog equalities, and the closed global statement still are.
 
-The same 220-cut balanced catalog also has an exact 3,954-leaf certificate
-for hole budget 60. To check its stronger global target, use
+The same 220-cut balanced catalog has a complete Lean-checked 3,954-leaf
+certificate for hole budget 60 (92 parts, catalog and root). The complete
+316 assembly and audit are preserved at the top of this document. To
+reproduce it, use
 `--bound 316 --balanced-cover-budget 60` and change the balanced compressed
 arithmetic directory to `.cache/omission-balanced-cover60-linked`.
 The selected sources become `BalancedCover60Bridge.lean` and
-`FinalCover316.lean`, giving populations 191 and 123 if their checks pass.
+`FinalCover316.lean`, giving checked populations 191 and 123.
 
 The older prospective `ResidualCover31Bridge.lean` and `FinalCover315.lean`
 refer to the 402-cut residual catalog. No completed residual31 certificate
@@ -214,3 +218,71 @@ add `--profile experiments/omission-global-assembly-2026-10-10/profile-balanced6
 The checker enforces the exact threshold identity
 `406 - balancedBudget - residualBudget`. Preparing a profile or replaying a
 tree in Python does not establish a stronger global bound.
+
+## Fused leaf proofs: checked optimization, pending production tree
+
+`scripts/omission_fused_export.py` is a separately versioned exporter. Its
+generic helper composes the same packed-column and strict-margin lemmas as the
+original exporter. A single conjunction retains all five arithmetic checks;
+the change removes the intermediate per-leaf load theorem and its repeated
+type checking. The helper is embedded in each new catalog, so the normal
+catalog/part/root checker still binds every proof source and dependency.
+The original exporter and all completed 317 inputs remain unchanged.
+
+The [benchmark and kernel controls](fused-packing-benchmark.json) record a
+same-host comparison of the same 47-leaf part: 132.120 seconds for the original
+proofs and 81.154 seconds for the fused proofs (128.066 versus 79.149 seconds of
+user CPU). Both conclude the same theorem with only standard axioms. Changing
+one packed coefficient from 951 to 952 made Lean reject the proof. A complete
+tiny tree and a second corrupted-leaf control also passed the exporter tests.
+This is a bounded throughput measurement, not a guaranteed whole-build speedup.
+
+The selected production candidate additionally uses a smaller-weight tree with
+22,318 leaves and packing base 524,288. Its frozen export is
+`OmissionBalancedCover61Fused` / `BalancedCover61FusedProof`, with 502 parts and
+the same 3,131 rows and 446-cut transfer. The profile
+`profile-balanced61-fused-v2-residual30-v1.json` pins its exact identities;
+`BalancedCover61FusedBridge.lean` and `FinalCover315B61FusedR30.lean` prepare the
+315 assembly. This candidate remains pending its complete production tree and
+final proof checks. The checked 316 and 317 results remain separately preserved.
+
+## Bounded direct-CNF experiment
+
+A [direct residual31 CNF attempt](direct-residual31-cnf-attempt.json) encoded
+the frozen 2,295-row system without a Z3 translation. Its auxiliary variables
+have explicit prefix-cardinality meanings. Small exhaustive controls checked
+both directions, and the known 32-hole witness satisfied the same encoding at
+budget 32. These are implementation controls, not a Lean encoding theorem.
+
+The budget31 CaDiCaL run returned no SAT or UNSAT conclusion within its bound.
+It was stopped after 582.997 seconds at 498,330,365 bytes of partial LRAT
+(2,110,180 lines). Thus this run did not provide a compact alternative to the
+weighted certificates. The large trace, CNF and literal metadata remain in
+ignored cache; the preserved record contains their hashes and the bounded
+outcome. No semantic Lean transfer or LRAT formalization was started.
+
+The selected residual31 fused certificate has 50,945 exact leaves in 1,216
+parts, packing base 262,144, and the 2,295-row catalog containing 1,108 derived
+cuts. Its frozen namespace and prefix are `OmissionResidualCover31Fused` and
+`ResidualCover31FusedProof`. Exact Python replay completed; its full Lean
+arithmetic root is pending. The 1,108-cut transfer is already kernel checked.
+`ResidualCover31FusedBridge.lean` prepares the exact catalog bridge.
+`FinalCover315B60R31Fused.lean` and `FinalCover314B61FusedR31Fused.lean` prepare
+the corresponding compositions. The profiles
+`profile-balanced60-v1-residual31-fused-v2.json` and
+`profile-balanced61-fused-v2-residual31-fused-v2.json` now pin their exact frozen
+manifest identities. None of these pending assemblies establishes a stronger
+bound until its full arithmetic roots and final Lean theorem pass.
+
+## Bounded part-conjunction prototype
+
+A [later bounded probe](part-conjunction-attempt.json) combined all fused leaf
+checks in a proof part into one conjunction. The 47-leaf version failed
+decidable-instance synthesis after 122.783 seconds, so it yielded no checked
+full-part proof. A four-leaf control passed in 11.879 seconds with standard
+axioms; changing 951 to 952 in one packed coefficient was correctly rejected.
+The earlier individual fused proofs took 81.154 seconds for the same 47 leaves
+and 8.566 seconds for the same four leaves. These historical comparisons have
+different concurrent load and memory settings; they establish no speedup.
+The experiment was stopped, and all production exporters and sources remain
+unchanged.

@@ -1,0 +1,9 @@
+'ErdosSzekeres.Omission.CoupledCoreThird.context_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Omission.CoupledCoreThird.exists_missing_state' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.CoupledCoreThird.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Omission.hole_of_card_deficit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Omission.two_holes_of_deletions' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Omission.CoupledDemandTwo.hole_bound_of_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Omission.CoupledDemandTwo.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

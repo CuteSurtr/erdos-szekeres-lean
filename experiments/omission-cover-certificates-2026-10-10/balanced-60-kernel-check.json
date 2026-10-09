@@ -1,0 +1,1333 @@
+{
+  "scope": "Literal finite row system only; no geometric theorem",
+  "binding": {
+    "manifest": "aae6aaf917b4b990d8440f57692377941a06276c266094ee3de77785fee46485",
+    "lean": "Lean (version 4.24.0, arm64-apple-darwin23.6.0, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)",
+    "inputs": {
+      "lean-toolchain": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434",
+      "lake-manifest.json": "bc21802066bdf7c94b0eb1e7bd3d3389ae0d416c2ed69c6e5dae03e74945c8e7",
+      ".lake/build/lib/lean/ErdosSzekeres/OmissionCertificates.olean": "54394f6a413b31a4a4174b3f1655e7af3568a7f94e849b13353c717399c6bdc9",
+      ".lake/build/lib/lean/ErdosSzekeres/OmissionPacking.olean": "0068fcfb003180c1974bd054b50f9e4ac1a1c8d799bb46df16e93fcea66fe021"
+    }
+  },
+  "fingerprint": "93e2acf1dece5385ba2dc8556330db9d37e82f11ad507bbc02d75708c627c8bb",
+  "modules": {
+    "Catalog": {
+      "exit": 0,
+      "seconds": 76.29,
+      "source_sha256": "90defa1135d7f2d3148c0832484b44ab805473117cc8f6ffb6c158ef8cf4c695",
+      "stdout": "'OmissionBalancedCover60.code_correct' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "c857eeb7305b3a933480427305657dfac544faabd7886ae41fb99ebae07eb233"
+    },
+    "Part00000": {
+      "exit": 0,
+      "seconds": 131.462,
+      "source_sha256": "856e1eb919b541086da32a0db782c9fa2799d7c9d7c3a2e682ab3708b773d816",
+      "stdout": "'OmissionBalancedCover60.node7733' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "5f66294ad1a2a8f1078ac3c174069aa615d58022e75526108413c375b5e4d937"
+    },
+    "Part00001": {
+      "exit": 0,
+      "seconds": 157.303,
+      "source_sha256": "7457f83a9104ec4b31b6f6c074991358ebc66e28a8a73c45e95c15c3b18bd896",
+      "stdout": "'OmissionBalancedCover60.node7734' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "1b9ea342dfba7a75d35b538e241f9d8c541f7d2cffeceeeb064423cb26bbb9b5"
+    },
+    "Part00002": {
+      "exit": 0,
+      "seconds": 105.04,
+      "source_sha256": "675216e7a3597a136de181ca1a1bd5f683a0f826da75df89fa3cd97951a8a5fc",
+      "stdout": "'OmissionBalancedCover60.node7579' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "2edc393d49f9ea5afbb81943106fa9950e01b1e2950b768bb9e0959040634d51"
+    },
+    "Part00003": {
+      "exit": 0,
+      "seconds": 145.92,
+      "source_sha256": "7684443cf30a57a9e3b2b229e474225dddef3c8d15e69f03a399d8e51642c06c",
+      "stdout": "'OmissionBalancedCover60.node7580' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "11a6f2e541b248de53354a36f00790c81611d1fef754b8d4060c51e348f6fec6"
+    },
+    "Part00004": {
+      "exit": 0,
+      "seconds": 105.571,
+      "source_sha256": "7ae53ed41ed9ad45dd0f7f3d55aa869abf658bc1b88e326159368c3274424567",
+      "stdout": "'OmissionBalancedCover60.node7437' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "0dabf0bf326e27550fa35351535cc8ae176067aaef5d7e3f5668095a213d9f07"
+    },
+    "Part00005": {
+      "exit": 0,
+      "seconds": 119.002,
+      "source_sha256": "5a756b2ea97dc114930faeb53e6da4c6ccd41c1b6c2788cd921948953f379f53",
+      "stdout": "'OmissionBalancedCover60.node7438' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "8e465abd9cb6a23a0890876a98bf295039ff14a2477f5276d2a7bf4cab80e00b"
+    },
+    "Part00006": {
+      "exit": 0,
+      "seconds": 101.638,
+      "source_sha256": "d72f0a92b3374415603142ae3504edc9a1b032fcffdb25e210282eda4f5aedb9",
+      "stdout": "'OmissionBalancedCover60.node7291' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "1094583f57de3a1bb38acd403e32fb3b6b7d2df06aefe4328deaf150910c5801"
+    },
+    "Part00007": {
+      "exit": 0,
+      "seconds": 134.298,
+      "source_sha256": "4602f75615f90f893a0c9dc58624a30033219d9e3718f959c565fe0c0a1cfd46",
+      "stdout": "'OmissionBalancedCover60.node7292' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "9ebeb0ac4f44fbbe42d849cb6979eeedab40c4e5d3dd63cb323f59f09572e9d8"
+    },
+    "Part00008": {
+      "exit": 0,
+      "seconds": 117.904,
+      "source_sha256": "70cc749ca9f73b9bd7c95a562669e0ed0c73fc670163f442e7d14a960d3eee0c",
+      "stdout": "'OmissionBalancedCover60.node7159' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "a84a28437c96e56eda19837db6e36b83b0eb83150c6fbbfb30edc9da42630c8e"
+    },
+    "Part00009": {
+      "exit": 0,
+      "seconds": 85.782,
+      "source_sha256": "f8141bb01eb9d5060912bc752ee21338b7c234231410572a33dd183ca32e9143",
+      "stdout": "'OmissionBalancedCover60.node7160' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "925bda6293f5306fd01afe34d50394232430b1627de97ac883a02a2762352564"
+    },
+    "Part00010": {
+      "exit": 0,
+      "seconds": 129.797,
+      "source_sha256": "9c1f500c8a1adcaa40397544495faa51f7fad4c6c26d9f45e51f484898fd09f4",
+      "stdout": "'OmissionBalancedCover60.node7015' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "ce2c6b1aacaea6c18acc92d7553b6301f7e6f5e2d24dc6d1aec1d9633ce13b9c"
+    },
+    "Part00011": {
+      "exit": 0,
+      "seconds": 96.382,
+      "source_sha256": "a748ee1a41766530178f7cd8311af4460d652b661179309c541a3c955d8d2eac",
+      "stdout": "'OmissionBalancedCover60.node7016' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "64c120ccfda47acb7a29a70dc35297a569301e9eae7a012347e71ad9fb8c061a"
+    },
+    "Part00012": {
+      "exit": 0,
+      "seconds": 191.224,
+      "source_sha256": "241e21d51a56465942ba3a829c89b2075a83f5c5263f899a529b2ae7c4bf69dd",
+      "stdout": "'OmissionBalancedCover60.node6775' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "fc3967b44a98eaae169950bdb68f120adce75d679ecfe73cf35bda27f82d73dd"
+    },
+    "Part00013": {
+      "exit": 0,
+      "seconds": 179.087,
+      "source_sha256": "8e8ed8a21bba24f02cd2293304bd06aab8a80e109eaf89826f702a0ba2f5162c",
+      "stdout": "'OmissionBalancedCover60.node6776' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "cf4831920198d7d41eb03ca9e37f51bea28d9bcc2aeff906a7efccb646e2c409"
+    },
+    "Part00015": {
+      "exit": 0,
+      "seconds": 114.687,
+      "source_sha256": "2eff5941f5afb2c10c6f4664c606b039d2fc31f0bdfe5ab711652cbd459d3baf",
+      "stdout": "'OmissionBalancedCover60.node6525' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "0e16e0751b9c5c8ac76da089e5684207c842add6716890f5606f4742e04a5735"
+    },
+    "Part00014": {
+      "exit": 0,
+      "seconds": 182.643,
+      "source_sha256": "3f18653f88ece6613dc8ac656415ead399904a779a7d2ed81f7996a721766e78",
+      "stdout": "'OmissionBalancedCover60.node6523' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "d5e40aa9d32cfb57148aa0bf57baecb506960d547a7ee40bfd52138e13d81254"
+    },
+    "Part00016": {
+      "exit": 0,
+      "seconds": 89.538,
+      "source_sha256": "60f98badcf1f41ab479f40fecad4daa55835000024f654883c4395399a47a8ff",
+      "stdout": "'OmissionBalancedCover60.node6526' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "da7d493af86cc5bbee93a6e0bad02b60308ce33bbd2361e94918c35c55ec7e3f"
+    },
+    "Part00018": {
+      "exit": 0,
+      "seconds": 123.191,
+      "source_sha256": "5b47c99e32dc1ac239b492fceb6cbd416769aaa636de0bd4012a77d21c7981ea",
+      "stdout": "'OmissionBalancedCover60.node6269' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "9a93f103410e6f50a86f90e227a4c6cde642f13c5263039455e5dc4ebdfaf2fa"
+    },
+    "Part00017": {
+      "exit": 0,
+      "seconds": 202.236,
+      "source_sha256": "efdb9ee64ebf5a24703c149598fe4d1b22035b42bc81a8bf75ab747533e6b1dc",
+      "stdout": "'OmissionBalancedCover60.node6267' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "73321af28d8752003e37e60c1c616abee3b4a1af94145187aae529dbb7ba3302"
+    },
+    "Part00019": {
+      "exit": 0,
+      "seconds": 87.857,
+      "source_sha256": "338f69afc3321b23f2fed674fc3f9cf142f1adbb36f02b00793f515b946f1ae0",
+      "stdout": "'OmissionBalancedCover60.node6270' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "71b62232ced356a00c91b3c02592461e3b17babed74cafd19e76fc699f9efea3"
+    },
+    "Part00020": {
+      "exit": 0,
+      "seconds": 123.752,
+      "source_sha256": "4fea1c25f9fe6a084e4c9a14d8806300b94228eaf8e6e52db7bb0cf15e7b02c1",
+      "stdout": "'OmissionBalancedCover60.node6097' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "af42a83c84086368451d46b6757553d68b48257c4f874203d6e8554f21e95708"
+    },
+    "Part00022": {
+      "exit": 0,
+      "seconds": 80.184,
+      "source_sha256": "6da526831f1197b41c5efdd33b75f8ce26d6b52704ee19f452f07f8839837498",
+      "stdout": "'OmissionBalancedCover60.node5961' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "7aca0ff30ba43122325c00f30f4c1a0efb85349d430bd6061f2d94d735538adb"
+    },
+    "Part00021": {
+      "exit": 0,
+      "seconds": 140.337,
+      "source_sha256": "2864fab7c0595cd20b260b95a3cd64bfd5ddf16fc8c7426b7a1184fb48e558ca",
+      "stdout": "'OmissionBalancedCover60.node6098' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "a554e2ac02a614ed00c3c3e28dac56ad8dadc6f0bd21254b066b46937d13893a"
+    },
+    "Part00023": {
+      "exit": 0,
+      "seconds": 140.873,
+      "source_sha256": "6a246a8d9090d3d51f13517d63fd0f1bbbef6695d361f449733a9b8cbf224cd9",
+      "stdout": "'OmissionBalancedCover60.node5962' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "da2b535e7a0ba7d014b4523afba84edef557d7b19be2394ceb9378964a891940"
+    },
+    "Part00024": {
+      "exit": 0,
+      "seconds": 202.391,
+      "source_sha256": "a09c728176c59495a559c371741e048ebfe21bde10058644da75fb750480cc5c",
+      "stdout": "'OmissionBalancedCover60.node5707' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "77da9109a21c46e5da89f8e4574ffe50d1bfdbc07eba077e116f46f1c7d58719"
+    },
+    "Part00025": {
+      "exit": 0,
+      "seconds": 111.667,
+      "source_sha256": "12b0558d7e258928782129a20c20ac444b9f447c78087a4ff48581b9014682e4",
+      "stdout": "'OmissionBalancedCover60.node5709' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "05421bde8583de561069e7e8c578c3429ee6733be5d2ab82821330f8d0ea6e20"
+    },
+    "Part00026": {
+      "exit": 0,
+      "seconds": 87.529,
+      "source_sha256": "18efaa849f63f344f1abd99fc0c78aa8507c61846db6f78e5e08a33bd8513c88",
+      "stdout": "'OmissionBalancedCover60.node5710' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "b38e987282940442a6bdbb3effaebb5c7c5fa216a9a9c797941faeb82a806814"
+    },
+    "Part00027": {
+      "exit": 0,
+      "seconds": 149.578,
+      "source_sha256": "8499bf45267dd1b3f49950f658c91a615f38a49e49ec94433c4502118ab05f51",
+      "stdout": "'OmissionBalancedCover60.node5499' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "d7a4f304066d253ac98b407cf2629c5fb3bf90032c8157877180593a493a923e"
+    },
+    "Part00028": {
+      "exit": 0,
+      "seconds": 155.072,
+      "source_sha256": "ea41ba926cfd0f65269b40c8b64ad038b7d28737a5b3b7013b18f67f47a5405b",
+      "stdout": "'OmissionBalancedCover60.node5500' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "044685ecd49f9b1b9976d264f1c89ba49a855bab67089db303268dd57b83cd60"
+    },
+    "Part00029": {
+      "exit": 0,
+      "seconds": 178.144,
+      "source_sha256": "f4487859e47128262b27a80c7263df2f3103f71f7fb9ae48101ba82978d00bfb",
+      "stdout": "'OmissionBalancedCover60.node5267' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "c2ca4c8ecd5673741b1b55147f3b71a042a6d311556f708ea4f007020f02f1d5"
+    },
+    "Part00030": {
+      "exit": 0,
+      "seconds": 198.71,
+      "source_sha256": "be2e0b1cab4c0578422f10b27f714c249bb23f034fb9f320b3c8497e7d8f6bfa",
+      "stdout": "'OmissionBalancedCover60.node5268' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "0ed250540e46ab8f1850622106dde0d36d03bcba0daa99a2fc76dc0d4da86212"
+    },
+    "Part00031": {
+      "exit": 0,
+      "seconds": 177.189,
+      "source_sha256": "2953a7683222da9b70567ea836f2127bf6ef2b975a8b74c700f5467f00139b0b",
+      "stdout": "'OmissionBalancedCover60.node5063' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "414796da3d26c57db5b07df5802dfe35b56f24f7e241ff94660b87d11417a0d3"
+    },
+    "Part00032": {
+      "exit": 0,
+      "seconds": 181.717,
+      "source_sha256": "1ace28f872adcd5ebbef3baa4f42746b9f3cc291b2d94e5ffbac2e602bc6bcdf",
+      "stdout": "'OmissionBalancedCover60.node5064' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "31432a9a9b7c88c4c0ab61f12259adc5168ed08524f0b5edf839267f37c463e4"
+    },
+    "Part00034": {
+      "exit": 0,
+      "seconds": 73.502,
+      "source_sha256": "e68484c51a1394855ff98fd4c684dbf32c91ac33f28b8f9537e34fc6d0d6003f",
+      "stdout": "'OmissionBalancedCover60.node4894' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "ae2d47ffffdf0806b8b7190603cb7a2789d40fec286389ed390012dfda0974f3"
+    },
+    "Part00033": {
+      "exit": 0,
+      "seconds": 159.433,
+      "source_sha256": "71230f2957d5fda8d2c036372ab4be8c2996eec1a6be2dc09ee520731fe754b4",
+      "stdout": "'OmissionBalancedCover60.node4893' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "7ce158bf622884c583c27b133c9b31ea05b6d63decd6b81dbcc35e61e8fa4bfc"
+    },
+    "Part00036": {
+      "exit": 0,
+      "seconds": 99.125,
+      "source_sha256": "e92609d27fe1757854a557c8f2c2f2099bf8b001e2ac211359619c5329c75ee2",
+      "stdout": "'OmissionBalancedCover60.node4730' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "ad20de7d1110d3547518c7725f8666536ad4f00f001d1ef5543cb08899fda6ba"
+    },
+    "Part00035": {
+      "exit": 0,
+      "seconds": 149.985,
+      "source_sha256": "6cc9b8843c6d179383b833ab713a90b6d700f6b4a564ddcf999aa1f2349e499d",
+      "stdout": "'OmissionBalancedCover60.node4729' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "fc35293123942c809403841ad449d520dc419e6410fc9eaee51c2f184b86f898"
+    },
+    "Part00038": {
+      "exit": 0,
+      "seconds": 92.326,
+      "source_sha256": "06b39d9e5c252d34ff77f4ebe3524cd3cfa7821ec0c28f75ce4a9a5ca263ecfa",
+      "stdout": "'OmissionBalancedCover60.node4572' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "3762158d0a9ab1a0fa4bb540009c0f7efe7ee635f1e5737efe9edacf20dcd122"
+    },
+    "Part00037": {
+      "exit": 0,
+      "seconds": 166.713,
+      "source_sha256": "10f9f0cc75fe1bb3666be8023dcb3f0f558fbd92b0188d74fb3498ca53ba009a",
+      "stdout": "'OmissionBalancedCover60.node4571' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "4287491b3c70f912ceae0c2b4cbc55cc736df1ca92b812836ce5786771fe1038"
+    },
+    "Part00039": {
+      "exit": 0,
+      "seconds": 128.384,
+      "source_sha256": "767fb7872fdff2f21a36e4af8f1d070611b99ef28fb913f440e0267680069965",
+      "stdout": "'OmissionBalancedCover60.node4417' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "1749b8a67795dc4357fed46cccb7ae98d9d7eef6816ba1fbaa145671a056ef9c"
+    },
+    "Part00040": {
+      "exit": 0,
+      "seconds": 96.47,
+      "source_sha256": "d322c60192c12fb00618731ef904cbe7b759cd28ec23b28d0c6a1fb70021c8bc",
+      "stdout": "'OmissionBalancedCover60.node4418' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "c11cf10bf0c0da655193ea4930511fcb4daa765b920c8a28c942e2347de40296"
+    },
+    "Part00041": {
+      "exit": 0,
+      "seconds": 117.051,
+      "source_sha256": "6bb4b5bcdabcd97c1d6f5970edd932816db04933e6a8a1215ce955e8bb586a80",
+      "stdout": "'OmissionBalancedCover60.node4223' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "d72056870a0352517374a21774737445fd272b5d67dd5d2efe6eaa59782abb32"
+    },
+    "Part00042": {
+      "exit": 0,
+      "seconds": 119.867,
+      "source_sha256": "3ec203023a8af3c20014b84fe236fbdabdf9c2d9eefb9c6563f3e23848cd580a",
+      "stdout": "'OmissionBalancedCover60.node4224' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "bfafface00b6bd0b4910635b99b75b4e4e89f460b8963ae6699b620f0eabde3d"
+    },
+    "Part00043": {
+      "exit": 0,
+      "seconds": 94.284,
+      "source_sha256": "b9bfef37ae366a65adfc5292f605378afaba20221f2bc1f0fc9042745201e198",
+      "stdout": "'OmissionBalancedCover60.node4073' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "99d4a36daa9a65ae39b83860ef6de0d26cca1997b7db71fa3d4c3dae236b5d4e"
+    },
+    "Part00044": {
+      "exit": 0,
+      "seconds": 94.883,
+      "source_sha256": "ebbe480eb4f97585505b0203e6a03f5798a979883323107e251a1b2fc73af9a3",
+      "stdout": "'OmissionBalancedCover60.node4074' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "644cc97b98e51d2397ff56ed52f3556aa6892dce3fe59587bcbc2d5f0e14cf00"
+    },
+    "Part00046": {
+      "exit": 0,
+      "seconds": 66.091,
+      "source_sha256": "6bd48a4cb47294aebc9745839766eacb8ef66d79d4995b0085d76ed02bfee44f",
+      "stdout": "'OmissionBalancedCover60.node3944' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "2d764f810c0fab70a5f72bc3b63eb063d20d5054a1775b3f0ed3a9da30780375"
+    },
+    "Part00045": {
+      "exit": 0,
+      "seconds": 88.061,
+      "source_sha256": "3001a23f0679008fdea669a29d9d908ea24e60fc52f25e446ea4798cca598278",
+      "stdout": "'OmissionBalancedCover60.node3943' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "b0c4b7c681daf54fa0458dcf05cdd210599dcfa5050ed2e4a7fa6846e10aa574"
+    },
+    "Part00047": {
+      "exit": 0,
+      "seconds": 140.751,
+      "source_sha256": "b3c57d5a52324615cf22f5ca912550fa19a003516a7c2c62e1d2ca2a2cc6c6fa",
+      "stdout": "'OmissionBalancedCover60.node3832' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "588ca937a6fbc5f3788b3586ebe237af81ef9cd2941e66adf80d8797410d5006"
+    },
+    "Part00048": {
+      "exit": 0,
+      "seconds": 149.324,
+      "source_sha256": "9c968815866c3867c0bfe2339da040729b53304e51d69b8f7c2f75ab25edc1a4",
+      "stdout": "'OmissionBalancedCover60.node3615' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "9bd81d26ff6c3e550c914b170f8776fd79a4967e71b808334a35abdc966243cb"
+    },
+    "Part00049": {
+      "exit": 0,
+      "seconds": 130.881,
+      "source_sha256": "a89b77236a723b14ae1fb0547548f567a93770e8cfddbd5ba27265b79c7aca35",
+      "stdout": "'OmissionBalancedCover60.node3616' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "75f6dee15514e12f8c89b0e0e2f9e6f199ee74cf774d18239a3e086e73c5a501"
+    },
+    "Part00050": {
+      "exit": 0,
+      "seconds": 132.545,
+      "source_sha256": "6dd062f9c6c8649ce2b34b108e7ace768b9636f5cb8b4e4a81ac541fc9c1f5a0",
+      "stdout": "'OmissionBalancedCover60.node3409' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "98fc244691d473db352e67425579fdd0022539fe935cc56e1ecf8333a6402e39"
+    },
+    "Part00051": {
+      "exit": 0,
+      "seconds": 140.492,
+      "source_sha256": "59ca33e7a5375ee588f52213eed4b397c7bd5bfe21f53bf6f71609800130478d",
+      "stdout": "'OmissionBalancedCover60.node3410' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "cfa97be46ecc51623d2d59cebe18ce030c72e8e764457d6473607efd699f17d7"
+    },
+    "Part00052": {
+      "exit": 0,
+      "seconds": 158.157,
+      "source_sha256": "7c164bf8beb35fab66c6c6e1e4456bce94ef9b2a54d0cd3b1111a512856e660f",
+      "stdout": "'OmissionBalancedCover60.node3147' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "b9402e999c5563ab05f90499c50dc3edf8b7b2b77c58dafece76dcb62235e2cf"
+    },
+    "Part00054": {
+      "exit": 0,
+      "seconds": 49.878,
+      "source_sha256": "f14d24a1e73ab574a1c77c97607580c911f796c7590a5d0bca42e0021ca7bd2a",
+      "stdout": "'OmissionBalancedCover60.node3150' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "f8640d1d411cda0059139f2d8a54d0139c5ce460f6dcf75ad31a632c7d7e0cd8"
+    },
+    "Part00053": {
+      "exit": 0,
+      "seconds": 130.03,
+      "source_sha256": "c83b78f24dd884a4a1c96074f09e13108b0d54e26c683da45f601ffed3a8b9f9",
+      "stdout": "'OmissionBalancedCover60.node3149' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "1e73e0f38cf80e1bb2a9b257f2945cc32b7299df08a0604c79b341c4c26ced6c"
+    },
+    "Part00055": {
+      "exit": 0,
+      "seconds": 108.918,
+      "source_sha256": "b4d4938b160b2a235f9d3e6b84ff81d07eb3ab0f5cd386e1770d390846068db4",
+      "stdout": "'OmissionBalancedCover60.node2973' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "d3f09da24289a70cb75f189f7e989aba1dd9b4b0f56dff36c1f92cc5e0a00066"
+    },
+    "Part00056": {
+      "exit": 0,
+      "seconds": 113.543,
+      "source_sha256": "6ab56d7a21a0b972b353fd0b91a035908021fe215d5a333c463facade7ea6754",
+      "stdout": "'OmissionBalancedCover60.node2974' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "06b63a7a308684434896be6728b7983199bc84dd59e2f326bfc108a4192dadab"
+    },
+    "Part00057": {
+      "exit": 0,
+      "seconds": 115.372,
+      "source_sha256": "e72e1ad80a3a03fa3cd19255042685e51e4602175cc58bdf127c2be9f805d4a3",
+      "stdout": "'OmissionBalancedCover60.node2773' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "5e78b7546f55268c80a1a03ca2339e889b4b4bfb62a344f2df92aca970429498"
+    },
+    "Part00058": {
+      "exit": 0,
+      "seconds": 139.641,
+      "source_sha256": "475f90586bf33b8c7d7d5cc7f4d239986e56a12b7f0171855a2ef0622a74d960",
+      "stdout": "'OmissionBalancedCover60.node2774' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "bff205ee1d8342cdacfa06d97437662df92396e4ab53dd68dbc9df68d8d04a1c"
+    },
+    "Part00059": {
+      "exit": 0,
+      "seconds": 163.214,
+      "source_sha256": "e00a23b94cdf1c608ab77b6162c9aaa998e5791801ddaaca7c3b8b41f020a264",
+      "stdout": "'OmissionBalancedCover60.node2561' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "70a651220aec0bbc5fb1e50f79cf098acf717b296c655da1b5864749def815aa"
+    },
+    "Part00060": {
+      "exit": 0,
+      "seconds": 139.364,
+      "source_sha256": "a9fd9a1e6cd88ae68350cd92c3e426dd5f258ec184103497d5cc5da08e2dcb78",
+      "stdout": "'OmissionBalancedCover60.node2562' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "e77028aed46bb25fa5151543caa2f06b0e2e9707163d05076dd9b6f8a8df0dd6"
+    },
+    "Part00061": {
+      "exit": 0,
+      "seconds": 92.702,
+      "source_sha256": "14fde0aca0db917df9ebf6aecbffd7bc197fb84a28fcd29ef6c7bbd52cfa1590",
+      "stdout": "'OmissionBalancedCover60.node2427' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "f57d46d283bf1456e60f8ad17e6078512933be21070527551958ae651f3f6a86"
+    },
+    "Part00062": {
+      "exit": 0,
+      "seconds": 121.612,
+      "source_sha256": "a4ce76fdbc3c2888f5a3d5d6e14c3de31f2a4d5b1d9c737b31aa7d592832e6f6",
+      "stdout": "'OmissionBalancedCover60.node2428' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "9bf1bdd51e8fc74909cc2c04fbeeb82b454b60d852eb023d245792849b93a0f4"
+    },
+    "Part00063": {
+      "exit": 0,
+      "seconds": 128.898,
+      "source_sha256": "15adc2ba6d9f27c3fd18e924b4140d211cb526e067a5b3f01612a52c7cdb090c",
+      "stdout": "'OmissionBalancedCover60.node2289' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "ba66d026b4ad937e0839b1404dadb7da2ecebdfe359fe135967a99465f57d5a9"
+    },
+    "Part00064": {
+      "exit": 0,
+      "seconds": 96.235,
+      "source_sha256": "69aee433f62fdef96c10e4af15e0304cd73857990aff447ec7c21d9311219aaf",
+      "stdout": "'OmissionBalancedCover60.node2290' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "0248837bb3fc6b0697e1f2d03a208d89e5689566a38bd8b6e4a2ec409c86f2d2"
+    },
+    "Part00066": {
+      "exit": 0,
+      "seconds": 109.684,
+      "source_sha256": "b4e48ed78e3d62b36fd46ca196c919ab6dceeec31abee7aec46a3dad4f6ceec3",
+      "stdout": "'OmissionBalancedCover60.node2057' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "146bfd3aaf918b1ffd3cb6a28ec498ffa12261dfa30e5232ec07fca36d3033b4"
+    },
+    "Part00065": {
+      "exit": 0,
+      "seconds": 167.115,
+      "source_sha256": "dd94cb89bf9666b78b9fa1c1d3b950e7734931642bb1311d75142fce8075ed35",
+      "stdout": "'OmissionBalancedCover60.node2055' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "dbd2f0d8f70de66bd675cb48e2f395e4fb7b29a7253b576c26ba2a7d6ffccc73"
+    },
+    "Part00068": {
+      "exit": 0,
+      "seconds": 84.68,
+      "source_sha256": "75b32b49a996357c4c1c35e048aa18003d361cebe2c429736c695ef779f2f6ce",
+      "stdout": "'OmissionBalancedCover60.node1897' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "c2b581d43df5e1049ee546bd648f6752785144475bfb86e1c756d57de523b686"
+    },
+    "Part00067": {
+      "exit": 0,
+      "seconds": 107.858,
+      "source_sha256": "2509493aab0ce40476f6443ad69870e5a8da74b339c0fe0b84bcdd599d4d8259",
+      "stdout": "'OmissionBalancedCover60.node2058' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "9770f11b569d8b21fbf2b2fd2fb57b0e8fa28e9bdf0e20842934e3483b215296"
+    },
+    "Part00070": {
+      "exit": 0,
+      "seconds": 113.255,
+      "source_sha256": "33d5a7e77b6a52ad4372c23e46086797017c473bf6d4d51077dcb1e4a778f558",
+      "stdout": "'OmissionBalancedCover60.node1755' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "ec3eec65c2d03c413e129919a16d9173c5703b648378b6772c7ba177859f6b3f"
+    },
+    "Part00069": {
+      "exit": 0,
+      "seconds": 183.086,
+      "source_sha256": "69bd4e324e56e45a517068bea7b4406c6bf52ab934a61ef7ea986735a704ec33",
+      "stdout": "'OmissionBalancedCover60.node1898' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "451953172dfeae9e133a9fc02988ede88c9ee652cb8a35c2c35be73591501efb"
+    },
+    "Part00071": {
+      "exit": 0,
+      "seconds": 129.12,
+      "source_sha256": "bb2ac9a135c37271eb95f326100debcfba489b070d130f2242b28fded7782e0e",
+      "stdout": "'OmissionBalancedCover60.node1756' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "ffedd5170a80c5c15dea6892751ceed2e3bb343703017abb4e6f2083cbf71f6c"
+    },
+    "Part00072": {
+      "exit": 0,
+      "seconds": 123.814,
+      "source_sha256": "ef4c780560989e622827c7fc48d4757c092269efe633c51e6497bdfab2c9418c",
+      "stdout": "'OmissionBalancedCover60.node1593' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "fcd1a11170475efc3cfc190a62b72a8c40fde1f8ea27ed0345536d997e1967fa"
+    },
+    "Part00073": {
+      "exit": 0,
+      "seconds": 120.327,
+      "source_sha256": "5dfe117fb0089fbac2cb628b7a7e3d7032e40c83069f2a98c6a2215251e81dbf",
+      "stdout": "'OmissionBalancedCover60.node1594' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "d7dcb468292eade9ce920002642ba43c4149e611fcfac7aa54fd0ea4d7693684"
+    },
+    "Part00074": {
+      "exit": 0,
+      "seconds": 163.513,
+      "source_sha256": "6f1dc087fb19a7080cf845e74bfe6ee5abd91134914a3edceb57329690f9e17e",
+      "stdout": "'OmissionBalancedCover60.node1409' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "4ee2b1f49ca50d037f8fdf74532dee08673e446f358152e93f1baf2c2b159386"
+    },
+    "Part00075": {
+      "exit": 0,
+      "seconds": 116.723,
+      "source_sha256": "1928af4bc095ba8d3b61849b94d45b5dceae13d62815d39f306fe5caf1a7217e",
+      "stdout": "'OmissionBalancedCover60.node1410' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "f1fef4c61501ccf47cdf297d7f0a6da78615abbb75a08412b8947e171d7140bc"
+    },
+    "Part00076": {
+      "exit": 0,
+      "seconds": 113.13,
+      "source_sha256": "f66f59621f60faf440c84d20243037c95af9179efc1cdb9b248a48e26e2e5953",
+      "stdout": "'OmissionBalancedCover60.node1211' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "4d03c44b21e7a222c5d8cfcf8e14318a531029954a914edb9be41be6152dace1"
+    },
+    "Part00077": {
+      "exit": 0,
+      "seconds": 155.438,
+      "source_sha256": "472652757fde47e5ed2b91d16178e5e826ae030cc00ee0d4e1985fc8e4bd0a7f",
+      "stdout": "'OmissionBalancedCover60.node1212' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "59610d0685b64c955d458e752a118c844558bca37ca64816fbc0314c9ec9774c"
+    },
+    "Part00078": {
+      "exit": 0,
+      "seconds": 121.605,
+      "source_sha256": "f19a75d3b8fd0976fafe729195efbf7e95ac38d1156b728ec05de128510a7d8a",
+      "stdout": "'OmissionBalancedCover60.node1023' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "3dfd7e530fba08a9d9e55c79e3981bc0b1d5ddd83b4a20f6d19f41c79124cd5d"
+    },
+    "Part00079": {
+      "exit": 0,
+      "seconds": 125.781,
+      "source_sha256": "4b3af0725a05f761dbf1093e2ad529776069f3b23dad8d98df94dad345977b9b",
+      "stdout": "'OmissionBalancedCover60.node1024' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "51d6afd5a766175daa7057ca306201bb9362ef81f8f2ef844c562085dc75cbfd"
+    },
+    "Part00080": {
+      "exit": 0,
+      "seconds": 76.862,
+      "source_sha256": "f8915ba4427beeeeaf0d92823f5c948f5994c1d1d772874a25dfa77c06c04cfd",
+      "stdout": "'OmissionBalancedCover60.node879' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "a09008947e95eeb9371777e367aa58b47dd3ae0d80779387cfabadce27d89803"
+    },
+    "Part00081": {
+      "exit": 0,
+      "seconds": 133.088,
+      "source_sha256": "9539a1f5b6cea8390f2a08961c261ca08e0ebc0a579ee6778ef2e87abede9e36",
+      "stdout": "'OmissionBalancedCover60.node880' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "586177d8fb5a326bcc76df1703652a723d0cb21234cff69bd198c7c8410569b1"
+    },
+    "Part00082": {
+      "exit": 0,
+      "seconds": 154.137,
+      "source_sha256": "b2b27edb6238cc8caab676bf4e7607cb03a7828365649ee621216cb22f60eea9",
+      "stdout": "'OmissionBalancedCover60.node643' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "29a4824255b555446c45572a712c13b101616dbc1350a53d2adb32e2c744bbc2"
+    },
+    "Part00083": {
+      "exit": 0,
+      "seconds": 93.479,
+      "source_sha256": "f0b8138aee108ba5c4df34a5dba9880a7f48c9e69f248b61355ec3528f5069f3",
+      "stdout": "'OmissionBalancedCover60.node645' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "e7bceb6b1f2ed9d46aedcabb52eec65177e15019a10f8291f95338393ee575b1"
+    },
+    "Part00084": {
+      "exit": 0,
+      "seconds": 121.117,
+      "source_sha256": "75b35bcebd81e2ffe67bbec137c6c5bc08d4ed0cdd0de267d5e7f284ee7bc5b9",
+      "stdout": "'OmissionBalancedCover60.node646' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "418f771dd16f95b6b706a3d7063ab6cf4cc47532bc9f13238a2a9edc91dc13e3"
+    },
+    "Part00085": {
+      "exit": 0,
+      "seconds": 102.662,
+      "source_sha256": "1d374d19b054682892a65db2569968e7532f2718a51d0e9334e83bea7d53fe86",
+      "stdout": "'OmissionBalancedCover60.node461' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "a7d8742fbbe5b7ddae163fac955fa1c1c75e6ec1f58502ac2e7b6c93fb7a8754"
+    },
+    "Part00087": {
+      "exit": 0,
+      "seconds": 77.187,
+      "source_sha256": "5e9129df893f33c0d8eedc891df156a4394c2ea8df8a6b662c62158432de0833",
+      "stdout": "'OmissionBalancedCover60.node305' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "8fffc9ac29e3cb2780ebe411cfd414b230087661cff3408b492e9e6e2942a156"
+    },
+    "Part00086": {
+      "exit": 0,
+      "seconds": 149.869,
+      "source_sha256": "a1a8c77f68c16301bc02828dabcab2cb9a223c203fdb1d701da0c9fd2e38f387",
+      "stdout": "'OmissionBalancedCover60.node462' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "0f52bc2f70ba190128a28417220c402e6beb18d7b11b18514fad483e7edce69e"
+    },
+    "Part00089": {
+      "exit": 0,
+      "seconds": 72.607,
+      "source_sha256": "84c39b5a7940b44f2c99f46af1eeccc282e772bd6b0ad26f44835b0d85aa5813",
+      "stdout": "'OmissionBalancedCover60.node15' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "b734c3e16ed5d2b9ee83e1003092aac32a1d8e8146474e0fdd6937ef13f5d98b"
+    },
+    "Part00088": {
+      "exit": 0,
+      "seconds": 128.612,
+      "source_sha256": "e99a3c49b37020aa81e018ca30bd0cd785d0136d3ef1164385b214646d9dfdff",
+      "stdout": "'OmissionBalancedCover60.node306' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "4474495baf099886284c77eeb082f3962566528ab98ab7698b0d6e18734bcf09"
+    },
+    "Part00090": {
+      "exit": 0,
+      "seconds": 151.591,
+      "source_sha256": "aad4c8f3fd56616be2822eef6f8adc85e4ad6d6e1cae9b4e25d417f8145de278",
+      "stdout": "'OmissionBalancedCover60.node17' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "0a92a611ac86cb9d0bdfcf812f5f436e75432c7900410153ccc6f8cebecc417f"
+    },
+    "Part00091": {
+      "exit": 0,
+      "seconds": 163.706,
+      "source_sha256": "f52ddbcd649cd3dd976d4c5b51eef0ab8f5fe3c687be8d04a95f014805b6af5c",
+      "stdout": "'OmissionBalancedCover60.node18' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "9b384489f27336d087acf15af51dfbfaf999ca8a692041ffcf1701767e64d3dc"
+    },
+    "Root": {
+      "exit": 0,
+      "seconds": 5.549,
+      "source_sha256": "22fbdb227c9ded115b5d8a3ec7eef8a4fb6bb4be1b889761e93fe8b53520daff",
+      "stdout": "'OmissionBalancedCover60.excludes_budget' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "7ec3cd8757587d9bc84b91a79d79bc2763f5ff603df485be181bcc04e47238c0"
+    }
+  },
+  "complete": true
+}

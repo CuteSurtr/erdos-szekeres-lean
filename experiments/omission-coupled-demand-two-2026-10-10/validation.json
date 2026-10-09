@@ -1,0 +1,85 @@
+{
+  "status": "kernel-checked",
+  "support": [
+    16,
+    30,
+    39,
+    43,
+    50,
+    53,
+    62,
+    65,
+    68,
+    77,
+    89,
+    91,
+    101
+  ],
+  "atoms": 515,
+  "base_clauses": 578,
+  "derived_rup_steps": 465,
+  "clause_families": {
+    "empty_direction": 40,
+    "domain": 34,
+    "growth": 32,
+    "order_transitive": 12,
+    "fixed_sign": 121,
+    "packet": 89,
+    "convex_four": 246,
+    "no_octagon": 4
+  },
+  "independent_exact_rup_replay": "passed",
+  "independent_complete_deletion_replay": 13,
+  "exporter_byte_identical": true,
+  "root_names": [
+    "ErdosSzekeres.Omission.CoupledCoreThird.context_impossible",
+    "ErdosSzekeres.Omission.CoupledCoreThird.exists_missing_state",
+    "ErdosSzekeres.Omission.CoupledCoreThird.hole_bound",
+    "ErdosSzekeres.Omission.hole_of_card_deficit",
+    "ErdosSzekeres.Omission.two_holes_of_deletions",
+    "ErdosSzekeres.Omission.CoupledDemandTwo.hole_bound_of_rows",
+    "ErdosSzekeres.Omission.CoupledDemandTwo.hole_bound"
+  ],
+  "scope": "Third13-state demand1 obstruction and its14-state demand2 formulation are kernel-checked. The two-hole assembly uses two original cycle rows and first-template row24. The two formulations encode one additional obstruction relative to those earlier rows. No global numeric or asymptotic improvement claimed.",
+  "sha256": {
+    "ErdosSzekeres/Omission/CoupledCoreThird.lean": "b93afbd7455342172816c7a4dcf1ace6f4a8ffa7a7c706cba81231819dc04b92",
+    "ErdosSzekeres/Omission/CoupledThirdObstruction.lean": "9e4f2d3a7ba8af89f9cfa6cae2a5f6da867359f4f09f926dbd0e9548edb9afbc",
+    "scripts/export_omission_coupled_third.py": "62a114d2b50983c229c203019889007cbfc5d51971e9c4e82f85ac7edf559f99",
+    "scripts/check_omission_coupled_third.py": "4475dd2278cbed45375ab745010bfd99150f0b1fdf5017cc5685a156fd070453",
+    "experiments/omission-coupled-demand-two-2026-10-10/core13.lrat": "e5593e68b64975da53df883bc82f9ec0318d03a7e55aaa47f9ec4e29038149f0",
+    "experiments/omission-coupled-demand-two-2026-10-10/discovery-template-match.json": "320022e4c4f33e45b491ddb8f23485b4456419f4cf650f91eb032a54108c48ab",
+    "experiments/omission-coupled-demand-two-2026-10-10/discovery-candidates.json": "9fc80bd37f9d23e434badbe9664d7ac93a5c398f61c1c8ba3428bd113a03c087",
+    "experiments/omission-coupled-demand-two-2026-10-10/core13.cnf": "f7b24922b4453a32f067102df484cf2b0c7ab165a4f1b85dcfbed2a7bbb52970",
+    "experiments/omission-coupled-demand-two-2026-10-10/deletion-witnesses.json.gz": "7fe8ec0c8d153c05d6e8d38b9bf8064c0c5bf9819fd24bc2acb8db357afbd820",
+    "experiments/omission-coupled-demand-two-2026-10-10/core13.smt2.gz": "d5f91becd51ba8d66ac59c5829419c623adbfd54e83406d16a352e42d4dd0a1b",
+    "experiments/omission-coupled-demand-two-2026-10-10/finite-strictness-diagnostic.json": "6bd6887a7ab82daa0a56b9c01dfbf428ccf850bfa9c98df5b328baea9f2e5595",
+    "experiments/omission-coupled-demand-two-2026-10-10/core13.json": "73da4f29298972a051671639c57c2cb3f36dcb17c8de601679dfdbce73025848",
+    "experiments/omission-coupled-demand-two-2026-10-10/discovery-sources.json.gz": "5645577b5deac2458dba430b891b73b363b5b01ab569bdf85d0ed2acef268628",
+    "experiments/omission-coupled-demand-two-2026-10-10/README.md": "bbfb77e6ee97e5c27c71cba4bf3ea2be5c147ff2c47551dd92d816cf28f3111a",
+    "experiments/omission-coupled-demand-two-2026-10-10/discovery-minimal-core.json": "758e1bf6269da95aa3e4ef8ef5a5de954d63765d405562dd3f7293e8216a3a5f",
+    "experiments/omission-coupled-demand-two-2026-10-10/discovery-results.json": "cbe033b1ce80ede9f8c30914ca7e2d968f8634bccff13efc1a42d48f391f9c86",
+    "ErdosSzekeres/Omission/TwoHoleAssembly.lean": "af091945e35f49afd763517b55b75fbc13a350568245d761117bd74e761255c0",
+    "ErdosSzekeres/Omission/CoupledDemandTwo.lean": "fe57d1e3a086e9bafeb55efad7ab5322e03771a491f19f53671a32aecdfa54fa",
+    "experiments/omission-coupled-demand-two-2026-10-10/axiom-audit.txt": "f7fa0ed0df2a6083beb2da1cd1b249119eeff58bfeedf35bfe023088ce75cf7e"
+  },
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "no_sorry": true,
+  "no_custom_axioms": true,
+  "no_native_decide_or_ofReduceBool": true,
+  "lean_build": {
+    "command": "lake build ErdosSzekeres.Omission.CoupledThirdObstruction --wfail",
+    "exit_code": 0,
+    "core_seconds": 44,
+    "wrapper_seconds": 2.3
+  },
+  "two_hole_build": {
+    "command": "lake build ErdosSzekeres.Omission.CoupledDemandTwo --wfail",
+    "exit_code": 0,
+    "final_module_seconds": 2.8,
+    "first_template_lake_trace_rebuilt": true
+  }
+}

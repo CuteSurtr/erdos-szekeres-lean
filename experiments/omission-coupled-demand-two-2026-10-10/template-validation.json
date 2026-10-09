@@ -1,0 +1,46 @@
+{
+  "status": "kernel-checked",
+  "rows": 3,
+  "support_size": 13,
+  "demand": 1,
+  "roots": [
+    "ErdosSzekeres.Omission.CoupledTemplateThird.context_impossible",
+    "ErdosSzekeres.Omission.CoupledTemplateThird.hole_bound",
+    "ErdosSzekeres.Omission.CoupledTemplateThird.check_sound",
+    "ErdosSzekeres.Omission.CoupledThirdVariants.checked",
+    "ErdosSzekeres.Omission.CoupledThirdVariants.all_rows"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "prerequisites_per_row": {
+    "empty_direction": 40,
+    "domain": 34,
+    "fixed_sign": 121
+  },
+  "scope": "Three selected supports, all universally necessary under the standard actual-residual hypotheses. Selection among eight compatible candidates used exact finite separation against the frozen2400-row snapshot; no Lean independence theorem for this selection or numerical bound is claimed.",
+  "build": {
+    "command": "lake build ErdosSzekeres.Omission.CoupledThirdVariants --wfail",
+    "exit_code": 0,
+    "module_seconds": {
+      "CoupledTemplateThird": "38s",
+      "CoupledTemplateThirdCheck": "2.4s",
+      "CoupledTemplateThirdGeometry": "2.7s",
+      "CoupledThirdVariants": "14s"
+    }
+  },
+  "no_sorry": true,
+  "no_custom_axioms": true,
+  "no_native_decide_or_ofReduceBool": true,
+  "sha256": {
+    "ErdosSzekeres/Omission/CoupledTemplateThird.lean": "4680f9309d73250536d1e94bf0b95bcbb60338bf4c342b81d71adbfd3237ac3c",
+    "ErdosSzekeres/Omission/CoupledTemplateThirdGeometry.lean": "4ebcbe9d92e92ed3147db24d55411d55fa3e6010b043b657a9339915b8e9b632",
+    "ErdosSzekeres/Omission/CoupledTemplateThirdCheck.lean": "aff625d5f5efaf8e92704fb581e44174a10a0efb996e838f5a35005c9b5d7a39",
+    "ErdosSzekeres/Omission/CoupledThirdVariants.lean": "29c1aef2cd1742dafa1f0de7749b1bced6d7ab25e8baba3eeca69de5d28c44b9",
+    "experiments/omission-coupled-demand-two-2026-10-10/template-variants.json": "d3303048c59fb8c52fe5c2f6c177dd51fcf7cf1e38c04dc2faf06b0aea5a0eb6",
+    "experiments/omission-coupled-demand-two-2026-10-10/template-selection-diagnostic.json": "477cbf4075ccff4713da8e2f952e7012b97481c517e7486b323b400842d6db6b",
+    "experiments/omission-coupled-demand-two-2026-10-10/template-axiom-audit.txt": "116a136d149ae1c205d5438f66d4a207f434903e7caa3c6a1b1e78034dc5c8be"
+  }
+}

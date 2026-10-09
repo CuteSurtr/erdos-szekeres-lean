@@ -106,13 +106,29 @@ expression over the integer stage count and positive real scale. These are
 supplementary results, not additional claims from HMPT's paper or a stronger
 asymptotic coefficient.
 
-The supplementary `Omission/Coupled*` modules also have no numbered
-counterpart in either paper. `Omission.CoupledCore13.hole_bound` in
-[CoupledObstruction.lean](../ErdosSzekeres/Omission/CoupledObstruction.lean)
-and `Omission.CoupledCoreSecond.hole_bound` in
-[CoupledSecondObstruction.lean](../ErdosSzekeres/Omission/CoupledSecondObstruction.lean)
-each rule out simultaneous occupation of thirteen specified residual states.
-Their common-order, rank and orientation clauses are proved necessary for
-actual real points before applying their kernel-checked finite refutations.
-These strengthen the finite residual model; they do not improve either
-paper's asymptotic statement.
+## Supplementary project results: coupled residual obstructions
+
+These results have no numbered counterpart in Suk or HMPT and are project
+additions, not additional paper formalizations or claims of literature priority.
+The declarations below are in `ErdosSzekeres.Omission`. They concern actual
+residual configurations of real points in general position with strict horizontal
+order, no 6-cap, no convex octagon and no incoming 6-cup/outgoing 5-cap junction.
+Their shared order, rank and orientation clauses are proved necessary before
+applying kernel-checked finite refutations.
+
+| Project result | Lean files and declarations | Checked scope |
+| --- | --- | --- |
+| First thirteen-state core | [CoupledObstruction.lean](../ErdosSzekeres/Omission/CoupledObstruction.lean): `CoupledCore13.hole_bound` | At least one specified state is absent. |
+| Second thirteen-state core | [CoupledSecondObstruction.lean](../ErdosSzekeres/Omission/CoupledSecondObstruction.lean): `CoupledCoreSecond.hole_bound` | At least one specified state is absent. |
+| Third thirteen-state core | [CoupledThirdObstruction.lean](../ErdosSzekeres/Omission/CoupledThirdObstruction.lean): `CoupledCoreThird.hole_bound` | At least one specified state is absent. |
+| Fourth thirteen-state core | [CoupledFourthObstruction.lean](../ErdosSzekeres/Omission/CoupledFourthObstruction.lean): `CoupledCoreFourth.hole_bound` | At least one specified state is absent. |
+| Fifth thirteen-state core | [CoupledFifthObstruction.lean](../ErdosSzekeres/Omission/CoupledFifthObstruction.lean): `CoupledCoreFifth.hole_bound` | At least one specified state is absent. |
+| First and second template families | [CoupledVariants.lean](../ErdosSzekeres/Omission/CoupledVariants.lean): `CoupledVariants.all_rows`; [CoupledSecondVariants.lean](../ErdosSzekeres/Omission/CoupledSecondVariants.lean): `CoupledSecondVariants.all_rows` | 42 and 35 checked supports, with 20 duplicates: **57 distinct rows**. |
+| Classification of that frozen union | [UnionCatalog.lean](../experiments/omission-coupled-union-2026-10-10/UnionCatalog.lean): `CoupledUnion.all_rows`; [Independence.lean](../experiments/omission-coupled-union-2026-10-10/Independence.lean): `CoupledUnion.independent_each_selected_row`; [Redundancy.lean](../experiments/omission-coupled-union-2026-10-10/Redundancy.lean): `CoupledUnion.redundant_rows_implied` | Nine rows are individually independent of the original 1,187 rows, prior 45 additions and other 56 union rows; 48 follow from original rows. Independence witnesses have 141 holes, without a realizability claim. Later additions can change independence. |
+| Third and fourth template families | [CoupledThirdVariants.lean](../ErdosSzekeres/Omission/CoupledThirdVariants.lean): `CoupledThirdVariants.all_rows`; [CoupledFourthVariants.lean](../ErdosSzekeres/Omission/CoupledFourthVariants.lean): `CoupledFourthVariants.all_rows` | Three selected third-core variants and 24 fourth-core variants; the latter include the fourth core itself. |
+| Fourteen-state capacity improvement | [CoupledDemandTwo.lean](../ErdosSzekeres/Omission/CoupledDemandTwo.lean): `CoupledDemandTwo.hole_bound`; [TwoHoleAssembly.lean](../ErdosSzekeres/Omission/TwoHoleAssembly.lean): `two_holes_of_deletions` | At least two of fourteen states are absent, using the third core and earlier rows. This is another formulation of the third obstruction relative to those premises, not a second independent discovery. |
+
+These finite geometric constraints do not by themselves establish a new global
+octagon bound or improve either paper's asymptotic coefficient. Proof inputs,
+axiom audits and discovery provenance are linked from the
+[third-party attribution](THIRD_PARTY.md#coupled-residual-obstructions--10-october-2026).

@@ -1,0 +1,142 @@
+{
+ "scope": "Solver-only demand-two exploration. Known deletion exclusions follow from already checked rows. New UNSAT formulas require exact proof and geometric bridge before any new bound is claimed. SAT assignments are completely replayed necessary-model assignments, not point realizations.",
+ "seconds": 1.8035873339977115,
+ "results": [
+  {
+   "core": 0,
+   "extra": 89,
+   "support": [
+    16,
+    25,
+    30,
+    39,
+    43,
+    50,
+    53,
+    62,
+    65,
+    68,
+    77,
+    89,
+    91,
+    101
+   ],
+   "known_deletions": {
+    "16": 984,
+    "30": 984,
+    "39": 984,
+    "43": 136,
+    "50": 984,
+    "53": 136,
+    "62": 984,
+    "65": 136,
+    "68": 984,
+    "77": 136,
+    "89": 1211,
+    "91": 136,
+    "101": 136
+   },
+   "known_count": 13,
+   "old_demand2": false,
+   "distance": 1,
+   "checks": [
+    {
+     "support": [
+      16,
+      30,
+      39,
+      43,
+      50,
+      53,
+      62,
+      65,
+      68,
+      77,
+      89,
+      91,
+      101
+     ],
+     "size": 13,
+     "packet_constraints": 3087,
+     "status": "unsat",
+     "smt2": "coupled-large-unsat-63c9d162cbb6.smt2",
+     "iterations": 1,
+     "cuts": 18,
+     "solve_seconds": 0.9763782080262899,
+     "total_seconds": 1.7624220830621198,
+     "removed": 25
+    }
+   ],
+   "status": "candidate_demand2"
+  }
+ ],
+ "qualified": [
+  {
+   "core": 0,
+   "extra": 89,
+   "support": [
+    16,
+    25,
+    30,
+    39,
+    43,
+    50,
+    53,
+    62,
+    65,
+    68,
+    77,
+    89,
+    91,
+    101
+   ],
+   "known_deletions": {
+    "16": 984,
+    "30": 984,
+    "39": 984,
+    "43": 136,
+    "50": 984,
+    "53": 136,
+    "62": 984,
+    "65": 136,
+    "68": 984,
+    "77": 136,
+    "89": 1211,
+    "91": 136,
+    "101": 136
+   },
+   "known_count": 13,
+   "old_demand2": false,
+   "distance": 1,
+   "checks": [
+    {
+     "support": [
+      16,
+      30,
+      39,
+      43,
+      50,
+      53,
+      62,
+      65,
+      68,
+      77,
+      89,
+      91,
+      101
+     ],
+     "size": 13,
+     "packet_constraints": 3087,
+     "status": "unsat",
+     "smt2": "coupled-large-unsat-63c9d162cbb6.smt2",
+     "iterations": 1,
+     "cuts": 18,
+     "solve_seconds": 0.9763782080262899,
+     "total_seconds": 1.7624220830621198,
+     "removed": 25
+    }
+   ],
+   "status": "candidate_demand2"
+  }
+ ]
+}

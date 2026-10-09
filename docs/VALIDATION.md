@@ -1,5 +1,37 @@
 # Verification records
 
+## Closed 316-point theorem and expanded geometry — 10 October 2026
+
+The library passes `lake build --wfail` (**3,283 jobs**). The
+[full current audit](validation/axiom-audit-extensions-2026-10-10.txt) checks
+**517 roots**, accepting only `propext`, `Classical.choice`, and `Quot.sound`.
+The [109-test run](validation/extensions-tests-2026-10-10.txt) has 86 passes
+and 23 optional integration/solver skips; all 15 coupled replay and damage
+controls pass. The [source-bound record](validation/extensions-checks-2026-10-10.json)
+identifies this exact checkpoint.
+
+The separate [316-point gate](../experiments/omission-global-assembly-2026-10-10/global-cover-316-check.json)
+is complete, including the final real-point theorem and standard-axiom audit.
+All 972 inputs of that gate and 822 inputs of the earlier 317-point gate were
+rehashed after the library rebuild: none changed. The new balanced arithmetic
+archive contains only 94 regular Lean source files. A scan of all 241 loose
+project Lean sources, including vendored prerequisites and standalone research
+files, finds no proof placeholders, custom axiom declarations or native proofs.
+
+Five coupled core obstructions, the first/second template families, three third
+template variants, 24 fourth template variants, and the 14-state two-hole theorem
+are checked. Separately, all twelve modules of the frozen 57-row union proof
+pass with 203 unchanged inputs. They prove the scoped nine/48 independence and
+redundancy classification; they do not establish a new global bound by themselves.
+
+Remote run `37988107276` was cancelled with build exit code 143; its later checks
+were skipped. The cause is not established. This is distinct from the successful
+local build, audit, finite certificate gate and test run.
+
+The records below are historical checkpoints. Their old statements about
+unfinished 316-point work do not describe the completed theorem above.
+
+
 ## Coupled geometric obstructions — 10 October 2026
 
 The default library passes `lake build --wfail` (**3,259 jobs**) with both

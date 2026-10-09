@@ -1,0 +1,35 @@
+{
+  "scope": "57 deduplicated actual-residual geometric rows; nine individually independent additions and48 redundant rows. No cardinality or realizability claim.",
+  "status": "complete: all twelve Lean modules and standard-axiom audits passed",
+  "namespace": "ErdosSzekeres.Omission.CoupledUnion",
+  "exact_controls": "exact-check.json",
+  "files": {
+    "Independence.lean": "2ef87511e9d18af3bbff9fb068cf7ed2d74debe2e8f844bae5e42e5b2c63becf",
+    "Independent00.lean": "dcd0454fbd7a77ed0abdcdb5e4cd8ad05f5a3f8af24c2a38a09712036dde463e",
+    "Independent01.lean": "06b829d3a4316da10026f7723e581844b1acdcefe9b21b55ecaad93e469b67e6",
+    "Independent02.lean": "8cc7b9af44d72f6ea917625204f4c8e286d90f6a2410ee95429d4dc7044e795b",
+    "Independent03.lean": "4d7131427eef0537100a799984c996a8ec1f9aedf4d8f7ff70fc6d1601aaaf7c",
+    "Independent04.lean": "1db7ab3dd694f8a1c8bd376ebca35027dee015c3d23570a5d96d6a9ab8612788",
+    "Independent05.lean": "10f6cd81b7e1b95bbbd98f543f79daf3be80fccf5f46deaadc436f8d9a6e125b",
+    "Independent06.lean": "fce592befcb15e240d6444a2687c8bd22172699d1df340facf1d8654194d8d20",
+    "Independent07.lean": "84eb8eef644a830fca2669f25b2935974aafa2dc292aa3803d5cf45058021fc2",
+    "Independent08.lean": "45b2837ebc39d546441d6817a1f8a8637037445401bcb712349d5d931d13c4d4",
+    "README.md": "8028afb344cb990145b92ef63f9fa269256e584dd67e67af7397d22406d84c7a",
+    "Redundancy.lean": "651635e535064f4556ce890241f17d56ea63c0068a921445c73ec3cad558a383",
+    "UnionCatalog.lean": "ec8a5ef0eca55e3e722a8b1d5be5428f97540c2a2426b8d081b14079bda0c117",
+    "axiom-audit.txt": "0846da1b9b10f0af97069538a0309736323436c564dff034512648162c63241a",
+    "exact-check.json": "d6b4782a1b01f3ccf75bf23f631bef572b52c9b2cecec620333dabca336b8da7",
+    "kernel-check.json": "9f2dde3a446e0d4cad1595a04a5e9a242e8f89ba4ee8979980c9eb4ce8893cb0"
+  },
+  "tools": {
+    "scripts/check_coupled_union_exact.py": "4ba4f34f34edac51596fc17faa09206f9c367fcff8556b5e81c5227a1090ace2",
+    "scripts/check_coupled_union_lean.py": "833c325374d034b0af0ea7a27e87e1e9c43e0173cfa85220c836fb3269d9bd14"
+  },
+  "complete_roots": [
+    "ErdosSzekeres.Omission.CoupledUnion.all_rows",
+    "ErdosSzekeres.Omission.CoupledUnion.independent_each_selected_row",
+    "ErdosSzekeres.Omission.CoupledUnion.redundant_rows_implied"
+  ],
+  "kernel_check_sha256": "9f2dde3a446e0d4cad1595a04a5e9a242e8f89ba4ee8979980c9eb4ce8893cb0",
+  "input_count": 203
+}
