@@ -1,5 +1,37 @@
 # Verification records
 
+## Additional rows and parameter barrier — 2026-10-10
+
+The library builds with warnings treated as errors (**3,247 jobs**). The
+[new full axiom audit](validation/axiom-audit-research-2026-10-10.txt) passes
+for **453 named roots**, including all nine new maintained results. Only
+`propext`, `Classical.choice` and `Quot.sound` occur. All **70 tests** pass
+with optional solvers and Lean controls enabled; see the
+[test output](validation/research-tests-2026-10-10.txt) and
+[source-bound validation record](validation/research-checks-2026-10-10.json).
+The scan of **163 loose Lean sources** finds no placeholders, custom axioms
+or `native_decide`. Git tracks no cache directories or compiled outputs.
+
+The [separate additional-row artifact](../experiments/omission-additional-rows-2026-10-10/README.md)
+was rebuilt from the preserved catalog and all three source modules. Its
+10 audited roots include the reused catalog, the individual cycle and block
+witness checks, and the combined irredundancy theorem. The maintained geometry
+proves every new row for actual residual configurations; the standalone
+witnesses prove independence as Boolean constraints. Neither asserts a
+stronger cardinality bound. Literal-alignment tests verify the candidate
+data, and negative controls confirm that Lean rejects a reversed cycle and
+collapsed block thresholds.
+
+The [latest residual batch](../experiments/omission-residual-progress-2026-10-10.json)
+adds **40 parts and 1,765 leaves**, with matching source/object hashes and
+standard-axiom reports. Cumulative progress is **470/3,411 parts** and
+**20,028/145,474 leaves**. The record inherits earlier checks through the
+hashed previous checkpoint. The residual root remains unchecked.
+
+The [research report](RESEARCH_2026-10-10.md) records the literature assessment,
+the exact fixed-scale HMPT optimization barrier, and unsuccessful numerical
+and certificate-pruning experiments. No global improvement is claimed.
+
 ## Certificate linking and parallel checks — 2026-10-09
 
 All **67 tests** pass with optional solvers and Lean controls enabled; the

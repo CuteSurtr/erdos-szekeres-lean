@@ -90,3 +90,9 @@ Additional implementation bridges have no separately numbered counterpart:
 (`HMPT.exists_projected_cap`), and [ConvexFan.lean](../ErdosSzekeres/HMPT/ConvexFan.lean)
 (`HMPT.ConvexFan.vertices_injective`). They justify applying the linear support-path
 counting argument to arbitrary real convex subsets. See [HMPT.md](HMPT.md).
+
+The supplementary [ParameterBarrier.lean](../ErdosSzekeres/HMPT/ParameterBarrier.lean)
+has no separately numbered paper counterpart. Its
+`HMPT.positive_leading_slack_iff` and
+`HMPT.budget_eventually_negative_below_published` exactly delimit retuning
+the implemented fixed-scale budget; they do not assert a stronger extremal bound.

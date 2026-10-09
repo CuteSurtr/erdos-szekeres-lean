@@ -182,6 +182,17 @@ The theorem and its dependencies are included in the standard-axiom audit.
 
 ## Research beyond the published coefficient
 
+`ParameterBarrier.lean` now proves the exact identity
+`3cC − 16c² − 2 = 3c(C − 8√2/3) − (4c − √2)²`.
+`positive_leading_slack_iff` shows that some fixed positive scale gives
+positive limiting slack exactly when `C > 8√2/3`.
+`published_slack_nonnegative_iff` identifies the unique boundary scale
+`sqrt(2)/4`; `budget_eventually_negative_below_published` shows that every
+smaller coefficient makes the exact normalized budget eventually negative
+at each fixed positive scale. This is an optimization barrier for this
+implemented family, not an extremal lower bound or a claim that other
+arguments cannot improve the coefficient.
+
 A strict improvement needs additional mathematical input beyond this known
 argument. `DyadicModel.two_scales_optimal` excludes an improvement from merely
 adding more doublings in its explicitly restricted model. It is not a general

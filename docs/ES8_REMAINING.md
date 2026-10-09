@@ -1,6 +1,6 @@
 # ES(8) ≤ 317: remaining work
 
-**Status, 2026-10-09: ES(8) ≤ 317 remains unproved. The geometric reduction is
+**Status, 2026-10-10: ES(8) ≤ 317 remains unproved. The geometric reduction is
 now complete, including all residual cycle and block constraints.** The
 finished Suk and HMPT real-point theorems are independent of this research.
 
@@ -12,6 +12,13 @@ list boundary is proved to form a real convex polygon using supporting lines.
 No geometric row assumption is hidden in `OmissionResidual.all_geometric_rows`.
 See [the residual proof map](OMISSION_RESIDUAL.md) and
 [check records](../experiments/omission-residual-geometry-2026-10-09/README.md).
+
+The latest arithmetic checkpoint is **470/3,411 parts and 20,028/145,474
+leaves**. The [10 October research continuation](RESEARCH_2026-10-10.md) proves
+21 additional geometric rows and their abstract irredundancy. They do not
+replace the unfinished exclusion certificate: the tested root relaxation and
+pruning rules showed no improvement. No additional geometric transfer gap
+has been introduced by these separately proved rows.
 
 | Remaining component | Exact work | Current uncertainty |
 | --- | --- | --- |

@@ -110,13 +110,32 @@ The main standalone theorem is `OmissionResidual.all_geometric_rows`, in the
 [proof map](docs/OMISSION_RESIDUAL.md) separates these completed geometric
 results from the partial arithmetic tree and final certificate assembly.
 
+## Additional proved constraints — 10 October 2026
+
+`Omission.AdditionalResidualRows.all_rows` proves **20 additional cycle rows
+and one block row** for the same actual residual configurations, in
+[AdditionalResidualRows.lean](ErdosSzekeres/Omission/AdditionalResidualRows.lean).
+The standalone `AdditionalResidualStrictness.independent_each_additional_row`
+proves that each excludes an abstract assignment allowed by the old 1,187
+rows and the other 20 additions. Thus they strictly strengthen the finite
+model, though the tested LP and certificate-pruning searches did not improve
+its total population bound. [Proofs and reproduction](experiments/omission-additional-rows-2026-10-10/README.md).
+
+`HMPT.positive_leading_slack_iff`, in
+[ParameterBarrier.lean](ErdosSzekeres/HMPT/ParameterBarrier.lean), proves that
+retuning the fixed positive scale in our existing asymptotic argument yields
+positive limiting slack exactly above `8√2/3`. This identifies a limitation of
+that proof family, not of other possible arguments. The
+[research report](docs/RESEARCH_2026-10-10.md) records the new proofs, unsuccessful
+searches, and assessment of recent primary literature. No priority claim is made.
+
 ## Verification
 
 Pinned versions: **Lean 4.24.0**, **Mathlib v4.24.0**; dependency revisions are in
 [lake-manifest.json](lake-manifest.json).
 
 The current library passes `lake build --wfail`. The
-[full saved axiom audit](docs/validation/axiom-audit-residual-2026-10-09.txt) checks **444 named
+[full saved axiom audit](docs/validation/axiom-audit-research-2026-10-10.txt) checks **453 named
 theorems**, including both main theorems and their transitive axiom dependencies.
 Only `propext`, `Classical.choice`, and `Quot.sound` are allowed. There is no
 `sorry`, `admit`, `sorryAx`, or `native_decide` in the maintained Lean sources,
@@ -137,14 +156,14 @@ of `lake`. `.cache/`, `.lake/`, `.elan/` and compiled outputs are ignored and ar
 not committed. Standalone research certificates have separate reproduction
 instructions and are not silently counted as default-library CI checks.
 
-## In-progress research — resumed 9 October 2026
+## In-progress research — updated 10 October 2026
 
 This material is separate from the finished Suk and HMPT formalizations.
 
 - **Residual omission system:** a complete exact integer certificate gives the
   auxiliary occupancy target 123, with independent arithmetic replays. Lean has
-  checked the first **430 of 3,411 parts**, covering **18,263 of 145,474 leaves**.
-  The [latest partial-build record](experiments/omission-residual-progress-2026-10-09-batch5.json)
+  checked the first **470 of 3,411 parts**, covering **20,028 of 145,474 leaves**.
+  The [latest partial-build record](experiments/omission-residual-progress-2026-10-10.json)
   preserves the successful checks. The residual arithmetic root remains unfinished;
   all geometric row requirements are now proved.
 - **Global finite octagon target:** the balanced geometric theorem, minimum-slope

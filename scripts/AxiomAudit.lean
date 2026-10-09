@@ -452,5 +452,14 @@ import ErdosSzekeres
 #print axioms ErdosSzekeres.Omission.BaekGeometry.boundaryOfGon_inside
 #print axioms ErdosSzekeres.Omission.BaekGeometry.hasNGon_octagon
 #print axioms ErdosSzekeres.Omission.BaekGeometry.geometric_capacity22
+#print axioms ErdosSzekeres.Omission.AdditionalResidualRows.cycles_checked
+#print axioms ErdosSzekeres.Omission.AdditionalResidualRows.block_checked
+#print axioms ErdosSzekeres.Omission.AdditionalResidualRows.cycle_hole_bound
+#print axioms ErdosSzekeres.Omission.AdditionalResidualRows.block_hole_bound
+#print axioms ErdosSzekeres.Omission.AdditionalResidualRows.all_rows
+#print axioms ErdosSzekeres.HMPT.leading_slack_identity
+#print axioms ErdosSzekeres.HMPT.positive_leading_slack_iff
+#print axioms ErdosSzekeres.HMPT.published_slack_nonnegative_iff
+#print axioms ErdosSzekeres.HMPT.budget_eventually_negative_below_published
 #print axioms main
 #print axioms Config.main_lemma

@@ -190,3 +190,16 @@ Lean/Mathlib 4.24. Full license: [APACHE-2.0.txt](APACHE-2.0.txt).
 The general Baek theorem, its 23-point specialization and the real geometric
 interpretation all build and pass the axiom audit. None enters the dependency
 closure of the finished Suk or HMPT main theorem.
+
+## Additional residual rows — 10 October 2026
+
+`Omission/AdditionalResidualRows.lean` and
+`experiments/omission-additional-rows-2026-10-10*` retain the same source state
+numbering and use the credited cycle/compression methods. The 20 cycle rows
+and one block row were discovered locally outside the pinned original row
+list and rechecked by the Lean kernel. Their derived state-index data retains
+CC BY 4.0 attribution to Schroeder's version-1 catalog. The new independence
+proofs use the exact catalog already preserved in the residual geometry
+artifact. No upstream search code is added with these files, and no priority
+or endorsement claim is made. The artifact README gives reproduction and
+distinguishes abstract witnesses from realizable configurations.

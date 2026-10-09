@@ -27,6 +27,7 @@ import ErdosSzekeres.HMPT.ExponentialBound
 import ErdosSzekeres.HMPT.BootstrapBound
 import ErdosSzekeres.HMPT.Entropy
 import ErdosSzekeres.HMPT.Asymptotic
+import ErdosSzekeres.HMPT.ParameterBarrier
 import ErdosSzekeres.HMPT.MixedCapGeometry
 import ErdosSzekeres.ConvexCycleCuts
 import ErdosSzekeres.OrientationPackets
@@ -36,3 +37,4 @@ import ErdosSzekeres.Omission.FirstCycle
 import ErdosSzekeres.Omission.ProjectiveTransfer
 import ErdosSzekeres.Omission.Partition
 import ErdosSzekeres.Omission.BlockGeometry
+import ErdosSzekeres.Omission.AdditionalResidualRows

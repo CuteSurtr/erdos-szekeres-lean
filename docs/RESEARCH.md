@@ -1,9 +1,10 @@
 # Research and library map
 
-> Status notice, 2026-10-05: this is a historical research log. New research and
-> certificate batches are stopped at the user's request. The current proved
-> scope is in [README](../README.md), the [paper map](PAPER_MAP.md), and
-> [VALIDATION](VALIDATION.md). Any forward-looking steps below are unexecuted.
+> Historical log: the 5 October pause was superseded by the user's subsequent
+> requests to resume. The latest continuation is in
+> [RESEARCH_2026-10-10.md](RESEARCH_2026-10-10.md). Current proved scope is in
+> [README](../README.md), the [paper map](PAPER_MAP.md), and
+> [VALIDATION](VALIDATION.md); older forward-looking passages are not proof claims.
 
 Initial assessment: 2026-10-04.
 
