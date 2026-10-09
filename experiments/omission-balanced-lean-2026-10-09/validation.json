@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-09",
+  "scope": "Complete balanced finite row system; no geometric transfer",
+  "original_full_build_date": "2026-10-07",
+  "full_tree_lean_checked": true,
+  "rechecked_today": [
+    "catalog",
+    "root (existing checked part imports)",
+    "occupied_card_le"
+  ],
+  "full_tree_rebuilt_today": false,
+  "states": 252,
+  "rows": 2685,
+  "nodes": 19723,
+  "leaves": 9862,
+  "parts": 898,
+  "hole_budget_excluded": 59,
+  "occupied_card_bound": 192,
+  "source_regeneration_exact": true,
+  "regenerated_source_files": 900,
+  "all_part_and_root_build_reports_verified": true,
+  "standard_axioms_only": true,
+  "axiom_output": "'OmissionBalanced.code_correct' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OmissionBalanced.excludes_budget' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OmissionBalanced.occupied_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "archive_source_scan": {
+    "files": 900,
+    "forbidden_proof_tokens": 0,
+    "custom_axiom_declarations": 0
+  },
+  "toolchain": "leanprover/lean4:v4.24.0",
+  "files": {
+    "Occupancy.lean": "9e3e5782f397889dc273a5516e106689c660c04d74edacd89b3bf5f7679d2404",
+    "README.md": "d269a923e9648769234a3b39963364d88cc2d53618ff5241cb9b1b7fa702fc6c",
+    "axiom-audit-2026-10-09.txt": "7e8c17f7c88292b0ff39a018e0ed72c02f1466d4445368b014dce3f2a6b577a3",
+    "build-results-2026-10-07.jsonl": "4d7691bbe6a0a109e0f426ccc07033248148893a9663d9a5bd4365e2020bcbad",
+    "export.json": "1b08bae3c38ef59060e422bde07f6f96572f53a5b3932015d9e2a68c88cbc5e0",
+    "row-source.json.gz": "9648278b85ab92a7a9ba53a2ae3db16c9abf4d92333b899fffe6c007e50efd92",
+    "sources.tar.gz": "6e0c0dc29159814410797cbe395dfc93bd0fe903bf719ce60933e8f0ecd9a5ca"
+  },
+  "reproduction_scripts": {
+    "scripts/omission_lean_export.py": "303494ee67b6de660c1af3b6d946a9d42bda1df36370e0ef9fb751cdf75c99f1",
+    "scripts/check_omission_lean.py": "89e359da76f68646d9df8bc3b40eef4481a0c2aec0e66c65cd0ffa7ed016642d",
+    "scripts/test_omission_lean_export.py": "0db06d94a19cae66284096ede3975244696d57b1053cd1d0fbb3ca4f24d16fd0"
+  },
+  "library_sources": {
+    "ErdosSzekeres/OmissionCertificates.lean": "02dc4b6f77822dcc632cebb9316ba582ef9feba7e42e8bcd6d633c83035fb9bc",
+    "ErdosSzekeres/OmissionPacking.lean": "e4662aff306b76c0c3957886fe43070581d45bed120c6043943e361ee2cfac3c",
+    "lean-toolchain": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434",
+    "lake-manifest.json": "bc21802066bdf7c94b0eb1e7bd3d3389ae0d416c2ed69c6e5dae03e74945c8e7"
+  },
+  "limitations": [
+    "Literal catalog row necessity is not proved for arbitrary real point sets.",
+    "The residual Lean tree remains incomplete.",
+    "Default CI does not rebuild this large certificate."
+  ],
+  "checks_2026_10_09": {
+    "main_library_build": "passed (3194 jobs)",
+    "main_axiom_audit": "passed (201 theorem roots); output identical to saved 2026-10-05 audit",
+    "python_tests": {
+      "total": 48,
+      "passed": 46,
+      "skipped_optional_lean": 2
+    },
+    "lean_exporter_control_tests": {
+      "total": 7,
+      "passed": 7
+    },
+    "loose_lean_source_scan": {
+      "files": 103,
+      "forbidden_proof_tokens": 0,
+      "custom_axiom_declarations": 0
+    },
+    "tracked_cache_or_compiled_files": 0,
+    "log_hashes": {
+      ".cache/resume-library-build-2026-10-09.log": "c17454886fb7b51705a2240ca64d3e60807dac7c10b183fbaffdedd7fe0fc66b",
+      ".cache/resume-library-axioms-2026-10-09.txt": "9f82061d7713cf9715a4b11bcc2b6a1202f953734fb66846d91cd3788517da09",
+      ".cache/omission-python-tests-2026-10-09.log": "46cbd2d374002b3d826518e22d7ebcec8beea56e050da214e73398dce0d979b2",
+      ".cache/omission-export-tests-2026-10-09.log": "fdc08df482a6b33bf256849f148f891aeaaebf7bec1c8d72aa93af649a75194e"
+    }
+  }
+}

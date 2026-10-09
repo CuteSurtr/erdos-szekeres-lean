@@ -1,8 +1,17 @@
 # Exact omission certificates
 
-**Stopped checkpoint, 2026-10-05:** certificate work ended after the chunked
-balanced catalog and the existing single leaf passed Lean. No complete-tree
-batch or geometric-transfer work is running. See [remaining work](ES8_REMAINING.md).
+**Resumed checkpoint, 2026-10-09:** the complete balanced tree built locally on
+October 7 and has now been recovered and packaged for reproduction. All 9,862
+leaves and the final root passed Lean; a new explicit occupancy corollary proves
+the finite bound 192. The residual tree is incomplete. See the
+[full balanced artifact](../experiments/omission-balanced-lean-2026-10-09/README.md)
+and [remaining work](ES8_REMAINING.md).
+
+The residual checkpoint covers the first **310 of 3,411 proof parts**. Ten
+failed, interrupted or previously unstarted parts were checked sequentially on
+October 9, with all expected axiom reports passing. The remaining parts and the
+root are not checked. The [partial-build record](../experiments/omission-residual-progress-2026-10-09.json)
+distinguishes recovered checks from the fresh retry; it makes no global claim.
 
 This work investigates the finite octagon systems in Michael Schroeder's
 [*Erdős–Szekeres: Upper Bounds for Convex Heptagons and Octagons*, v1,
@@ -67,8 +76,10 @@ A strict violation closes a leaf. A branch splits a previously unassigned
 variable into both Boolean values. The checker rejects reused nodes, missing
 children, unreachable nodes, repeated branch variables, malformed multipliers,
 and nonpositive margins. Pending leaves are explicit and prevent a complete
-UNSAT conclusion. The JSON parser and evaluation of the concrete trees have
-not yet been connected to Lean's proved recursive checker.
+UNSAT conclusion. The JSON parser remains untrusted. For the balanced tree,
+the exporter emits separately checked leaf theorems and composes every branch
+using the proved `split_excludes` lemma. The final concrete exclusion is checked
+without trusting Python parsing, traversal, or arithmetic as proof rules.
 
 ## Search and proof logs
 
@@ -117,14 +128,15 @@ are feasibility probes, not controlled benchmarks or complete Lean tree checks.
 The two standalone `.lean` pilot files are saved in `experiments/` and are
 checked separately from the main library's current 201-theorem CI audit.
 
-The final [chunked checkpoint](../experiments/omission-chunked-2026-10-05/README.md)
+The earlier [chunked checkpoint](../experiments/omission-chunked-2026-10-05/README.md)
 checks all 2,685 balanced row encodings in 21 blocks and checks the existing
 202-row leaf against that catalog. `load_eq_of_sparse_packed` and
 `sparse_list_conditioned_excludes` prove the sparse arithmetic method, while
 `split_excludes` allows separately checked branches to be combined. The final
 leaf's profiler reports 1.72 seconds of kernel type checking; this is not a
-controlled comparison with the earlier wall-clock runs. The complete trees
-remain outside Lean. The generic lemmas are included in the 201-theorem audit;
+controlled comparison with the earlier wall-clock runs. That checkpoint has
+been superseded by the complete balanced proof linked above; the residual tree
+remains incomplete. The generic lemmas are included in the 201-theorem audit;
 the standalone catalog and leaf have their own saved axiom output.
 
 The remaining geometric connection can be identified precisely in the source

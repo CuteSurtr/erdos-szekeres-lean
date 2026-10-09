@@ -1,18 +1,19 @@
-# ES(8) ≤ 317: remaining work at the stopping checkpoint
+# ES(8) ≤ 317: remaining work
 
-**Status, 2026-10-05: not proved. Work has stopped at the user's request.**
+**Status, 2026-10-09: not proved. Certificate work has resumed.**
 The finished Suk and HMPT real-point theorems do not depend on this project.
-This page estimates unfinished work; it is not a plan being executed.
+The geometric work estimated below has not been started as part of this resume.
 
 Two complete exact integer certificates exclude the stronger budgets in the
 literal balanced and residual omission systems, giving occupancy bounds 192
-and 123. Two independent programs replayed them. Lean proves the generic
-arithmetic soundness, all 2,685 balanced row encodings, and one conditional
-202-row leaf. It has not checked both complete certificate trees.
+and 123. Two independent programs replayed them. Lean now checks the complete
+balanced tree, all 2,685 balanced row encodings, and the explicit occupancy
+bound 192. The residual tree remains incomplete. See the
+[balanced proof artifact](../experiments/omission-balanced-lean-2026-10-09/README.md).
 
 | Remaining component | What would be required | Present uncertainty |
 | --- | --- | --- |
-| Complete arithmetic certificates | Check all 9,862 balanced and 145,474 residual leaves, cover every branch, connect the literal source tables to the final finite-system exclusions, and audit the resulting roots. | Runtime, memory and module organization at full scale are unmeasured. One successful leaf is not a full-tree performance guarantee. |
+| Complete arithmetic certificates | Finish the 145,474-leaf residual tree, compose every branch, and audit its final root. The 9,862-leaf balanced tree and its finite occupancy corollary are done. | The balanced 898-part build succeeded. The residual 3,411-part build stopped partway; failed blocks pass with sequential checking, but total remaining runtime is not yet measured. |
 | Real points → states | Define attained ending-path ranks and Ferrers profiles for arbitrary normalized real configurations; prove the catalog covers them and that the owner map is injective. | This exact state encoding has not been connected to this repository's geometry. Source ordering, boundary cases and index conventions require proof. |
 | Geometric necessity of every row | Prove that each balanced cycle constraint follows from octagon avoidance. On the residual side, also prove the restricted-domain cycle constraints and the 23 block constraints using the relevant Baek-style geometric bound. | Arithmetic UNSAT alone does not establish any of these implications. The source proof and its finite enumerations have not been ported or independently checked under this project's trust rules. |
 | Partition and projective transfer | Prove the balanced/residual decomposition, the normalization hypotheses, general-position preservation, convex-polygon pullback and reinsertion of the distinguished root. Then connect the result to `ForcesConvexNGon 317 8`. | Existing HMPT projective lemmas may help, but their applicability to this particular decomposition has not been established. Exact bookkeeping matters. |

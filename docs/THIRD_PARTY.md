@@ -62,3 +62,11 @@ the directory README provides source credit, change descriptions and reproductio
 commands. These generated Lean proof inputs are committed; compiled `.olean`
 files and the upstream inspection checkout are not. No source Lean module from
 the archive has been imported into the finished Suk or HMPT dependency graph.
+
+`experiments/omission-balanced-lean-2026-10-09/row-source.json.gz` preserves the
+upstream balanced JSON byte for byte. Its `sources.tar.gz` contains newly
+generated Lean arithmetic proofs and the same adapted catalog data under
+CC BY 4.0. The directory README credits the author and explains the changes.
+The source bundle contains no compiled objects; all build products remain
+ignored. `scripts/omission_lean_export.py` and `check_omission_lean.py` implement
+the local export and checking workflow; no upstream Lean code is imported.

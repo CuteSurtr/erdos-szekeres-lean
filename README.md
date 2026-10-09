@@ -61,18 +61,22 @@ of `lake`. `.cache/`, `.lake/`, `.elan/` and compiled outputs are ignored and ar
 not committed. Standalone research certificates have separate reproduction
 instructions and are not silently counted as default-library CI checks.
 
-## In-progress research — stopped at the user's request
+## In-progress research — resumed 9 October 2026
 
 This material is separate from the finished Suk and HMPT formalizations.
 
 - **Finite octagon omission systems:** complete exact integer certificates
   improve two auxiliary occupancy bounds from 193 to 192 and from 124 to 123.
-  Two programs replayed the arithmetic. The full trees are **not checked in Lean**,
-  and the connection from arbitrary real configurations to all catalog rows is
+  Two programs replayed the arithmetic. The **complete balanced tree is now
+  checked in Lean**, with `OmissionBalanced.occupied_card_le` proving occupancy
+  at most 192. The residual Lean tree is incomplete. The connection from
+  arbitrary real configurations to all catalog rows is
   **not formalized here**. Consequently **ES(8) ≤ 317 is not a theorem of this repository**.
-- **Final checking checkpoint:** [21 catalog blocks and one conditional leaf](experiments/omission-chunked-2026-10-05/README.md)
-  pass Lean separately. This certifies row encodings and one branch context,
-  not all 155,336 leaves or a global geometric bound.
+- **Current checking checkpoint:** the [complete balanced certificate](experiments/omission-balanced-lean-2026-10-09/README.md)
+  includes 9,862 leaves, 898 proof parts, the final exclusion theorem and its
+  explicit occupancy corollary. Source archives, build reports, axiom output,
+  and reproduction instructions are provided. This supersedes the
+  [earlier one-leaf checkpoint](experiments/omission-chunked-2026-10-05/README.md).
 - **Other retained experiments:** exact-coordinate searches, SAT/SMT attempts and
   a Lean-checked counterexample to a proposed mixed-cap lemma. None improves the
   published geometric upper bounds; timeout results remain inconclusive.
@@ -81,5 +85,5 @@ See [the ES(8) remaining-work estimate](docs/ES8_REMAINING.md),
 [omission certificate record](docs/OMISSION.md), [mixed-cap result](docs/MIXED_CAPS.md),
 [SAT record](docs/SAT.md), and [historical research log](docs/RESEARCH.md).
 The open conjecture and `HMPT.StrictImprovement` are proposition definitions,
-not assumed axioms or unfinished proof declarations. No further research or
-certificate batch is running as part of this checkpoint.
+not assumed axioms or unfinished proof declarations. Research certificates
+remain separate from the completed geometric formalizations.

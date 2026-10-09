@@ -1,0 +1,3805 @@
+{
+  "date": "2026-10-09",
+  "scope": "Partial residual tree only; no global exclusion or geometric theorem",
+  "source_sha256": "bccd12477064d8a490bbe863ae49dbc8d9dfececf7a65426ba36f7537c66293a",
+  "tree_sha256": "0242b57e9f2f921bf0afda493c68606ce041b0ca11694eda5b180eeafda147c9",
+  "export_manifest_sha256": "4de6ce291b08c362022e9843b16b12212444e6e7400b0d53532ebf0563daaf40",
+  "exporter_sha256": "303494ee67b6de660c1af3b6d946a9d42bda1df36370e0ef9fb751cdf75c99f1",
+  "total_parts": 3411,
+  "checked_parts": 310,
+  "total_leaves": 145474,
+  "checked_leaves": 12965,
+  "root_checked": false,
+  "full_tree_lean_checked": false,
+  "new_parts": [
+    "Part00293",
+    "Part00294",
+    "Part00298",
+    "Part00299",
+    "Part00300",
+    "Part00303",
+    "Part00304",
+    "Part00305",
+    "Part00306",
+    "Part00308"
+  ],
+  "all_first_310_parts_checked": true,
+  "previous_build_records": [
+    {
+      "module": "Part00000",
+      "exit": 0,
+      "seconds": 66.28,
+      "max_rss_bytes": 7286882304,
+      "axioms": [
+        "'OmissionResidual.node4' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "f6f32d3705704bfd5e1420f5f738318ba3c016566f4a82d450285d1a19cdc3d8"
+    },
+    {
+      "module": "Part00001",
+      "exit": 0,
+      "seconds": 63.9,
+      "max_rss_bytes": 6957400064,
+      "axioms": [
+        "'OmissionResidual.node13' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "596b0f2a02e13ed4d0380af8950411db1e8dd091faa9aa9016a958696ce2617a"
+    },
+    {
+      "module": "Part00002",
+      "exit": 0,
+      "seconds": 26.38,
+      "max_rss_bytes": 5983453184,
+      "axioms": [
+        "'OmissionResidual.node15' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "6b5ab63c64734a22458ce38b32de0a2d6280b23997c2bb77a0af82ce7b9ae0c9"
+    },
+    {
+      "module": "Part00003",
+      "exit": 0,
+      "seconds": 56.17,
+      "max_rss_bytes": 7164526592,
+      "axioms": [
+        "'OmissionResidual.node18' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "09d42b551b6e5b7e201511e39616a022e68dd0fdd9e6128f7d54d57d82caffea"
+    },
+    {
+      "module": "Part00004",
+      "exit": 0,
+      "seconds": 71.94,
+      "max_rss_bytes": 7495368704,
+      "axioms": [
+        "'OmissionResidual.node22' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "42f3f0ac1cad2c418a5e3f6537395a29a267989e1eb16e958007990645d3fa20"
+    },
+    {
+      "module": "Part00005",
+      "exit": 0,
+      "seconds": 57.7,
+      "max_rss_bytes": 9296887808,
+      "axioms": [
+        "'OmissionResidual.node26' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "06d95c5845d4651f5805b04d7fa716d71a7e41b7af16fe6fa8a76397503a80a8"
+    },
+    {
+      "module": "Part00006",
+      "exit": 0,
+      "seconds": 34.53,
+      "max_rss_bytes": 7928643584,
+      "axioms": [
+        "'OmissionResidual.node29' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "545d3608ca287fe7f7589b3713ce0c25ae67accaf9986e2e7def03772af9ed1a"
+    },
+    {
+      "module": "Part00007",
+      "exit": 0,
+      "seconds": 67.2,
+      "max_rss_bytes": 9344958464,
+      "axioms": [
+        "'OmissionResidual.node37' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "cd8266c6a7b40347e6b53e422f19eb4cbf6eaeba4e304a2ded8af1658e5ebb3e"
+    },
+    {
+      "module": "Part00008",
+      "exit": 0,
+      "seconds": 68.39,
+      "max_rss_bytes": 9073885184,
+      "axioms": [
+        "'OmissionResidual.node43' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "380166cbb572f12f72311f548a2979cde378cfe3d63b955961fd64506c7d882b"
+    },
+    {
+      "module": "Part00009",
+      "exit": 0,
+      "seconds": 39.18,
+      "max_rss_bytes": 7855210496,
+      "axioms": [
+        "'OmissionResidual.node46' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "ac6a2c49d59b8b5f5eb7097f938bf34d1bbf288b4b740dcb663f5a4320da328a"
+    },
+    {
+      "module": "Part00010",
+      "exit": 0,
+      "seconds": 62.4,
+      "max_rss_bytes": 7678476288,
+      "axioms": [
+        "'OmissionResidual.node50' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "c4febe5962bdda7689d9576756c2dfa32472ec8d74c2c14c36747769f27919a8"
+    },
+    {
+      "module": "Part00011",
+      "exit": 0,
+      "seconds": 62.58,
+      "max_rss_bytes": 9096052736,
+      "axioms": [
+        "'OmissionResidual.node55' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "caca4eac5109b1a2959a0ea3c949acb688fddbe7541c98b3ca4a5bddcf66758e"
+    },
+    {
+      "module": "Part00012",
+      "exit": 0,
+      "seconds": 54.21,
+      "max_rss_bytes": 10785865728,
+      "axioms": [
+        "'OmissionResidual.node60' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "f8c88ae5430154ed2bdb64d52f21c71b4e0406ffdbdd07a789898403b5fde261"
+    },
+    {
+      "module": "Part00013",
+      "exit": 0,
+      "seconds": 45.77,
+      "max_rss_bytes": 9774628864,
+      "axioms": [
+        "'OmissionResidual.node63' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "0046e262c28c92c8d5b534bb5e6999072b3802153535fe36b5a1ff53fd4c995d"
+    },
+    {
+      "module": "Part00014",
+      "exit": 0,
+      "seconds": 51.96,
+      "max_rss_bytes": 11342462976,
+      "axioms": [
+        "'OmissionResidual.node64' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "66d992fcb81870e2307ddd5a28f307167b6f8ad81ad727706ab8b65ca0f9766b"
+    },
+    {
+      "module": "Part00015",
+      "exit": 0,
+      "seconds": 26.69,
+      "max_rss_bytes": 7197245440,
+      "axioms": [
+        "'OmissionResidual.node65' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "67205a7f3cab5e0c2bc7e01ec88856061996be35e110379656cbae5f1e00187b"
+    },
+    {
+      "module": "Part00016",
+      "exit": 0,
+      "seconds": 39.43,
+      "max_rss_bytes": 8728363008,
+      "axioms": [
+        "'OmissionResidual.node71' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "c79d71d3d416bc04d85080ba83e516ed68d50dc03f0267285c987b9db63bfe9b"
+    },
+    {
+      "module": "Part00017",
+      "exit": 0,
+      "seconds": 40.69,
+      "max_rss_bytes": 9184149504,
+      "axioms": [
+        "'OmissionResidual.node72' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "bb099a4a37d979bbb05f2d477736abd9c30c48c7904e970258d735ec3b665ed1"
+    },
+    {
+      "module": "Part00018",
+      "exit": 0,
+      "seconds": 44.36,
+      "max_rss_bytes": 9462808576,
+      "axioms": [
+        "'OmissionResidual.node73' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "e0a404150b7b7b65b26476e1c7cd0b37103475eb180db2608a9ab5eac9bf107b"
+    },
+    {
+      "module": "Part00019",
+      "exit": 0,
+      "seconds": 63.66,
+      "max_rss_bytes": 12274679808,
+      "axioms": [
+        "'OmissionResidual.node76' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "397183196159a28e37f6eb7e39354505a26393636a868f90a2db898b731dc769"
+    },
+    {
+      "module": "Part00020",
+      "exit": 0,
+      "seconds": 24.31,
+      "max_rss_bytes": 6760284160,
+      "axioms": [
+        "'OmissionResidual.node77' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "44d90b0a66cae7cadf5fb8fb44d9d3d3bd66957ad2e1f2ce9adf52d2d20ea28d"
+    },
+    {
+      "module": "Part00021",
+      "exit": 0,
+      "seconds": 18.55,
+      "max_rss_bytes": 5510348800,
+      "axioms": [
+        "'OmissionResidual.node79' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "37d93836b596417eebb9d7622e1f8c539a320cb31883547b9401943782b301e0"
+    },
+    {
+      "module": "Part00022",
+      "exit": 0,
+      "seconds": 45.06,
+      "max_rss_bytes": 7980924928,
+      "axioms": [
+        "'OmissionResidual.node82' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "8d2e9aba7534a0f8c6a22a6034a755132bfea3387e98c33ced5051927c3a8b4a"
+    },
+    {
+      "module": "Part00023",
+      "exit": 0,
+      "seconds": 33.86,
+      "max_rss_bytes": 6259572736,
+      "axioms": [
+        "'OmissionResidual.node85' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "d44b44cc34f8e5fe9ccd7fed722207e81ed56d3d84e82f167a655339a7038e57"
+    },
+    {
+      "module": "Part00024",
+      "exit": 0,
+      "seconds": 59.23,
+      "max_rss_bytes": 9411198976,
+      "axioms": [
+        "'OmissionResidual.node87' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "596ca40a3e63f1a2a9c6b9a016a50e6c43ae1e49a51f1d79277a43e8b8fbcb69"
+    },
+    {
+      "module": "Part00025",
+      "exit": 0,
+      "seconds": 57.7,
+      "max_rss_bytes": 9440624640,
+      "axioms": [
+        "'OmissionResidual.node88' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "765bd4a99d24ae13a4bed4f3998bbad2f61615603f7efdeaaf3bc390fb1c81ab"
+    },
+    {
+      "module": "Part00026",
+      "exit": 0,
+      "seconds": 32.54,
+      "max_rss_bytes": 6701989888,
+      "axioms": [
+        "'OmissionResidual.node92' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "7a14a6f14a457e34574dffc1473f5fc46694f312a5300813ade71b19bab7e9cf"
+    },
+    {
+      "module": "Part00027",
+      "exit": 0,
+      "seconds": 34.13,
+      "max_rss_bytes": 6922387456,
+      "axioms": [
+        "'OmissionResidual.node93' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "a5107228d8d4aee6deede13bd1aa8bbd1f4bfdba812b6f3c08ac13b36474c80b"
+    },
+    {
+      "module": "Part00028",
+      "exit": 0,
+      "seconds": 47.11,
+      "max_rss_bytes": 10108813312,
+      "axioms": [
+        "'OmissionResidual.node94' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "42fdddf52a7f27df1e2c49e7712b41679d0f35031678bf54cc12dc35ad3ae05c"
+    },
+    {
+      "module": "Part00029",
+      "exit": 0,
+      "seconds": 31.48,
+      "max_rss_bytes": 8047919104,
+      "axioms": [
+        "'OmissionResidual.node99' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "786ebbf5492ef68b947f3364e4553921b7edd320d53ea3c06e4db253af0ee44c"
+    },
+    {
+      "module": "Part00030",
+      "exit": 0,
+      "seconds": 51.29,
+      "max_rss_bytes": 10679943168,
+      "axioms": [
+        "'OmissionResidual.node102' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "84f910a2a995c2311ae5f9d34a8f6d51232db16900535245aca560bc008a6d65"
+    },
+    {
+      "module": "Part00031",
+      "exit": 0,
+      "seconds": 52.74,
+      "max_rss_bytes": 10120019968,
+      "axioms": [
+        "'OmissionResidual.node108' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "ce2f12f8956bb1cb3a955c1998c90745b1fbebd07fbb32636607bdb0e82a1679"
+    },
+    {
+      "module": "Part00032",
+      "exit": 0,
+      "seconds": 65.99,
+      "max_rss_bytes": 10809688064,
+      "axioms": [
+        "'OmissionResidual.node17121' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "c25ceba29de30773b136759144cb159ea1f3d38aa470ed6ece49038eef02debf"
+    },
+    {
+      "module": "Part00033",
+      "exit": 0,
+      "seconds": 15.13,
+      "max_rss_bytes": 5349244928,
+      "axioms": [
+        "'OmissionResidual.node17122' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "8e0592ebe5d08f020f52f2db93ceab4699f0d336a60967b27ed4d5def97426f0"
+    },
+    {
+      "module": "Part00034",
+      "exit": 0,
+      "seconds": 38.34,
+      "max_rss_bytes": 8218247168,
+      "axioms": [
+        "'OmissionResidual.node115' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "a3f946bcf4cc79ce36bf643c2c36ef32c466fbef18f8d3b6af058a1fa61556a5"
+    },
+    {
+      "module": "Part00035",
+      "exit": 0,
+      "seconds": 58.63,
+      "max_rss_bytes": 11062280192,
+      "axioms": [
+        "'OmissionResidual.node119' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "6581db0da9810b1ee09477b467583bd1759236c97d3bd68d6bbe3419e0f8a875"
+    },
+    {
+      "module": "Part00036",
+      "exit": 0,
+      "seconds": 42.65,
+      "max_rss_bytes": 9519939584,
+      "axioms": [
+        "'OmissionResidual.node122' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "0ff81c94d63f6ff05e5462ca2c51b5b250bd146d8f0ad9bac383bceca60dea50"
+    },
+    {
+      "module": "Part00037",
+      "exit": 0,
+      "seconds": 31.55,
+      "max_rss_bytes": 8341913600,
+      "axioms": [
+        "'OmissionResidual.node126' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "edc4861c258c10344be9a1f329c9ee9fc7ac0f57f62cc5435e6e38b434145d5f"
+    },
+    {
+      "module": "Part00038",
+      "exit": 0,
+      "seconds": 45.88,
+      "max_rss_bytes": 9527181312,
+      "axioms": [
+        "'OmissionResidual.node131' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "7a60f6c1099121836b545a586f18ff8fbc0f1a2a39a6c7c53174e53dbbdff355"
+    },
+    {
+      "module": "Part00039",
+      "exit": 0,
+      "seconds": 47.08,
+      "max_rss_bytes": 9489514496,
+      "axioms": [
+        "'OmissionResidual.node138' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "4a457a71ffba01451f3134ab0d4219ee12cd909cdc5ff140a8d7b2df73a4ca72"
+    },
+    {
+      "module": "Part00040",
+      "exit": 0,
+      "seconds": 63.0,
+      "max_rss_bytes": 9486827520,
+      "axioms": [
+        "'OmissionResidual.node144' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "8fba4cc84728e3dcda8a1be7f2c8c1dbfb48247612779536bcdf55ebaff9ea65"
+    },
+    {
+      "module": "Part00041",
+      "exit": 0,
+      "seconds": 72.53,
+      "max_rss_bytes": 8750415872,
+      "axioms": [
+        "'OmissionResidual.node154' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "35d2735a7200a78fec0de4da8a47a96f654b0d70742095e05e860b9054486e9c"
+    },
+    {
+      "module": "Part00042",
+      "exit": 0,
+      "seconds": 70.75,
+      "max_rss_bytes": 8543633408,
+      "axioms": [
+        "'OmissionResidual.node157' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "514168426e3cd63f97167dddfcecb1513424c4e1dc011f6cf53f429b9c52a55d"
+    },
+    {
+      "module": "Part00043",
+      "exit": 0,
+      "seconds": 42.97,
+      "max_rss_bytes": 6291406848,
+      "axioms": [
+        "'OmissionResidual.node167' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "72ab5f5b2887121f9f907269f938ba4f5c4e146b8e40f06273a44c7cd1771c11"
+    },
+    {
+      "module": "Part00044",
+      "exit": 0,
+      "seconds": 63.66,
+      "max_rss_bytes": 8914993152,
+      "axioms": [
+        "'OmissionResidual.node168' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "3bf58b9b683cee7eb809d0072d836103a53a0bc0b1acb194775efd8e5f5c3a48"
+    },
+    {
+      "module": "Part00045",
+      "exit": 0,
+      "seconds": 26.01,
+      "max_rss_bytes": 6233047040,
+      "axioms": [
+        "'OmissionResidual.node169' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "8dd2a07880d9250bca509b814047ca8f1852f91c0070ffb9461dcc040e49dbff"
+    },
+    {
+      "module": "Part00046",
+      "exit": 0,
+      "seconds": 37.03,
+      "max_rss_bytes": 8888336384,
+      "axioms": [
+        "'OmissionResidual.node173' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "e156ccb4c7d0aba20099a4a779161158f7fc441a34cc80710457825a963c12b6"
+    },
+    {
+      "module": "Part00047",
+      "exit": 0,
+      "seconds": 23.89,
+      "max_rss_bytes": 6887784448,
+      "axioms": [
+        "'OmissionResidual.node18339' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "1c535322d1ba9e097e655b7a53796f76a2b29e90905c936c52d2f952ce589670"
+    },
+    {
+      "module": "Part00048",
+      "exit": 0,
+      "seconds": 52.48,
+      "max_rss_bytes": 11382226944,
+      "axioms": [
+        "'OmissionResidual.node18340' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "eb4eeb78077c026a56793b329245c3ef1515598bd774c451cb1e8a465ff2cb1f"
+    },
+    {
+      "module": "Part00049",
+      "exit": 0,
+      "seconds": 33.29,
+      "max_rss_bytes": 7797899264,
+      "axioms": [
+        "'OmissionResidual.node179' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "3be4b42a66b19ab58d765fd5941e49d8b68e5504546cc941b1ac725908ef3f82"
+    },
+    {
+      "module": "Part00050",
+      "exit": 0,
+      "seconds": 24.94,
+      "max_rss_bytes": 6625001472,
+      "axioms": [
+        "'OmissionResidual.node181' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "e9ac741809da51fe6733223fd23f8bd899f2effd63a635a1708d8fa07bea925a"
+    },
+    {
+      "module": "Part00051",
+      "exit": 0,
+      "seconds": 52.74,
+      "max_rss_bytes": 10553212928,
+      "axioms": [
+        "'OmissionResidual.node186' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "d1b6b66667c08fbc93584f57c02107447a877993c7b37f686d50a5f5f29df5a3"
+    },
+    {
+      "module": "Part00052",
+      "exit": 0,
+      "seconds": 58.97,
+      "max_rss_bytes": 10409754624,
+      "axioms": [
+        "'OmissionResidual.node196' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "73fd556b6003d64ffea56287994872828ebd42f9f4c463ece4952309828b3271"
+    },
+    {
+      "module": "Part00053",
+      "exit": 0,
+      "seconds": 35.27,
+      "max_rss_bytes": 7231602688,
+      "axioms": [
+        "'OmissionResidual.node203' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "f0554a7eaaf1858070b1e568288e242ea7451819680c0df175bf0305d47ac4b9"
+    },
+    {
+      "module": "Part00054",
+      "exit": 0,
+      "seconds": 46.84,
+      "max_rss_bytes": 7915814912,
+      "axioms": [
+        "'OmissionResidual.node209' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "3f02a40a9bd80624b71449c824d03d4ba0f6bee26228024fa5267eed82a533ff"
+    },
+    {
+      "module": "Part00055",
+      "exit": 0,
+      "seconds": 37.51,
+      "max_rss_bytes": 7066271744,
+      "axioms": [
+        "'OmissionResidual.node212' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "afb17e0703c0cbe3e3703a8112214262506f85fd0795f93c43855fc655b1cd64"
+    },
+    {
+      "module": "Part00056",
+      "exit": 0,
+      "seconds": 41.28,
+      "max_rss_bytes": 9598943232,
+      "axioms": [
+        "'OmissionResidual.node220' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "d6e970dd32a3892f99fff2506f34355ca1b501167cd11bce657dd6617758353f"
+    },
+    {
+      "module": "Part00057",
+      "exit": 0,
+      "seconds": 67.79,
+      "max_rss_bytes": 9986441216,
+      "axioms": [
+        "'OmissionResidual.node225' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "bbbaae060865f154b3dac934cbd2598a549994a5f0e6f82f2d61eccb83e1d137"
+    },
+    {
+      "module": "Part00058",
+      "exit": 0,
+      "seconds": 49.18,
+      "max_rss_bytes": 9026093056,
+      "axioms": [
+        "'OmissionResidual.node229' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "84c53a001ab14c359e5fe0537c73d64ec72b4e66617e64c594e1bebd491e0f3c"
+    },
+    {
+      "module": "Part00059",
+      "exit": 0,
+      "seconds": 46.13,
+      "max_rss_bytes": 8671903744,
+      "axioms": [
+        "'OmissionResidual.node232' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "f924a23629e0774cb3c27ad7c00d752178b42402516a310bcf6387e8909af3d4"
+    },
+    {
+      "module": "Part00060",
+      "exit": 0,
+      "seconds": 43.56,
+      "max_rss_bytes": 8405303296,
+      "axioms": [
+        "'OmissionResidual.node237' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "0715cf1c88d6d0052cd80d5d594e1b414ca06983fe4c7aaf84cec5391fa3bb1a"
+    },
+    {
+      "module": "Part00061",
+      "exit": 0,
+      "seconds": 44.89,
+      "max_rss_bytes": 9584525312,
+      "axioms": [
+        "'OmissionResidual.node240' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "86989d5cee87f70a43d2d799ded6aa08563ff3ff9c0bffff97a163f679208a05"
+    },
+    {
+      "module": "Part00062",
+      "exit": 0,
+      "seconds": 35.37,
+      "max_rss_bytes": 8657469440,
+      "axioms": [
+        "'OmissionResidual.node243' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "462b17a50dc0ff038eb5b6bef4294fd906521490227ee5615558667301721822"
+    },
+    {
+      "module": "Part00063",
+      "exit": 0,
+      "seconds": 35.7,
+      "max_rss_bytes": 9224716288,
+      "axioms": [
+        "'OmissionResidual.node244' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "6d45a89e4c5b69fb8b5dcb9f55ab460cd25f79a532ff7248897ec89f88039046"
+    },
+    {
+      "module": "Part00064",
+      "exit": 0,
+      "seconds": 64.18,
+      "max_rss_bytes": 12250578944,
+      "axioms": [
+        "'OmissionResidual.node248' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "cbc031b41ba26a35bbe128e1d562eca5775ae739c7787a671cf56a43b14e2781"
+    },
+    {
+      "module": "Part00065",
+      "exit": 0,
+      "seconds": 47.21,
+      "max_rss_bytes": 10698047488,
+      "axioms": [
+        "'OmissionResidual.node253' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "5413a2fc74f7820bd3a437d159d964451a547b266d281b9af53b107968ddeb5c"
+    },
+    {
+      "module": "Part00066",
+      "exit": 0,
+      "seconds": 29.22,
+      "max_rss_bytes": 7551549440,
+      "axioms": [
+        "'OmissionResidual.node256' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "59cc3db8090a678ffd1562b34f90bbd4cdd88957e51e1ab77b2e3f6618513cde"
+    },
+    {
+      "module": "Part00067",
+      "exit": 0,
+      "seconds": 40.93,
+      "max_rss_bytes": 9163325440,
+      "axioms": [
+        "'OmissionResidual.node261' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "77aff94b0db13dc383ee920bd1bf4aa19aa6c3a76034ab8eb041ff11dd0d6ebc"
+    },
+    {
+      "module": "Part00068",
+      "exit": 0,
+      "seconds": 56.58,
+      "max_rss_bytes": 11594563584,
+      "axioms": [
+        "'OmissionResidual.node274' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "dfe5a761c7172741f5354b73cbb87190b8ebf99e214348c1aa74f6b57eaf59c8"
+    },
+    {
+      "module": "Part00069",
+      "exit": 0,
+      "seconds": 73.08,
+      "max_rss_bytes": 9899229184,
+      "axioms": [
+        "'OmissionResidual.node281' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "8b228c4fc14db52d7b71c7ff12daabddc27df1c8bd56769825c8e93343e79068"
+    },
+    {
+      "module": "Part00070",
+      "exit": 0,
+      "seconds": 44.26,
+      "max_rss_bytes": 8423833600,
+      "axioms": [
+        "'OmissionResidual.node288' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "6cd5397dfbd86ca27f977ce2df81f1c29ec011b8dae3c5af66661a54263f6fbb"
+    },
+    {
+      "module": "Part00071",
+      "exit": 0,
+      "seconds": 66.18,
+      "max_rss_bytes": 8808087552,
+      "axioms": [
+        "'OmissionResidual.node299' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "d8bc5a38cad03f4222fe3921f153ff8be2a7ed57fd6b4027f00401468e375e49"
+    },
+    {
+      "module": "Part00072",
+      "exit": 0,
+      "seconds": 84.46,
+      "max_rss_bytes": 8464891904,
+      "axioms": [
+        "'OmissionResidual.node305' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "6a504d0ad69a396b6df8c7b7f686a6c9ea0eb6b9ae96345e8894fe82596559a9"
+    },
+    {
+      "module": "Part00073",
+      "exit": 0,
+      "seconds": 79.87,
+      "max_rss_bytes": 10847977472,
+      "axioms": [
+        "'OmissionResidual.node313' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "064d994dc21ea1195261550206e2f8f6d5cee146626ed0349e72225bd75892bb"
+    },
+    {
+      "module": "Part00074",
+      "exit": 0,
+      "seconds": 48.8,
+      "max_rss_bytes": 6436356096,
+      "axioms": [
+        "'OmissionResidual.node316' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "15c6f175efe48e129f45f9ceaf8b66845e2d2654027cec5d39b6a75c9aa144a9"
+    },
+    {
+      "module": "Part00075",
+      "exit": 0,
+      "seconds": 70.34,
+      "max_rss_bytes": 10853253120,
+      "axioms": [
+        "'OmissionResidual.node319' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "66c5c310df8020e14bea6a1d57dca29667442169b80f0b3eb31bd139020cf0df"
+    },
+    {
+      "module": "Part00076",
+      "exit": 0,
+      "seconds": 79.81,
+      "max_rss_bytes": 11515183104,
+      "axioms": [
+        "'OmissionResidual.node325' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "f2661f831b6e5062e39e2f4e1c67610b969349d0cf8de81c9d11dd2759c67f7c"
+    },
+    {
+      "module": "Part00077",
+      "exit": 0,
+      "seconds": 40.01,
+      "max_rss_bytes": 8359919616,
+      "axioms": [
+        "'OmissionResidual.node328' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "c93e77bf34f16274bbfc32f6eb54e5c0f0a26422e927099abe461e5336f97135"
+    },
+    {
+      "module": "Part00078",
+      "exit": 0,
+      "seconds": 27.59,
+      "max_rss_bytes": 6982467584,
+      "axioms": [
+        "'OmissionResidual.node330' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "c75632532b6109ffc921f3ea23a89b2c5df2c5f0019a310cac6e21bd3b343462"
+    },
+    {
+      "module": "Part00079",
+      "exit": 0,
+      "seconds": 57.12,
+      "max_rss_bytes": 9557901312,
+      "axioms": [
+        "'OmissionResidual.node331' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "8231c3d6b304a40c6ec16f7ce60ab45d49b0868d299a3a34e6d6e989966d324e"
+    },
+    {
+      "module": "Part00080",
+      "exit": 0,
+      "seconds": 63.27,
+      "max_rss_bytes": 8836792320,
+      "axioms": [
+        "'OmissionResidual.node335' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "9a038b35b22cf329c45e17e675faed789283525ab59316e8199d255dcd34a4a6"
+    },
+    {
+      "module": "Part00081",
+      "exit": 0,
+      "seconds": 85.21,
+      "max_rss_bytes": 9372418048,
+      "axioms": [
+        "'OmissionResidual.node340' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "681ea60a5b36007b6730c02c9dbaff0748e6a385417b98a7b3e41c62106f3d4a"
+    },
+    {
+      "module": "Part00082",
+      "exit": 0,
+      "seconds": 89.9,
+      "max_rss_bytes": 9677897728,
+      "axioms": [
+        "'OmissionResidual.node343' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "68904a4449d8599c39a870f241ee7e35820b5796b10fbf780316541b3b76ba36"
+    },
+    {
+      "module": "Part00083",
+      "exit": 0,
+      "seconds": 37.31,
+      "max_rss_bytes": 6155223040,
+      "axioms": [
+        "'OmissionResidual.node345' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "d57a37dcb2fbbc24598cf73038d6006c77f5fad75b1850a69d459a8f36b9441b"
+    },
+    {
+      "module": "Part00084",
+      "exit": 0,
+      "seconds": 70.22,
+      "max_rss_bytes": 8760066048,
+      "axioms": [
+        "'OmissionResidual.node348' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "6d9e2d026818cc5efa6efb286043fc312ca0ea30fc0ace6c6d5ececac91c9ab7"
+    },
+    {
+      "module": "Part00085",
+      "exit": 0,
+      "seconds": 94.76,
+      "max_rss_bytes": 8912191488,
+      "axioms": [
+        "'OmissionResidual.node357' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "e2f5a5e36252e899e2ff4e2bb09b88db276b4d600438eeb1501f95298d7670c2"
+    },
+    {
+      "module": "Part00086",
+      "exit": 0,
+      "seconds": 78.88,
+      "max_rss_bytes": 8933834752,
+      "axioms": [
+        "'OmissionResidual.node360' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "160884f6b7a4a83aa93a6f7a56d6393d3d26f97fdb82b6468dbe201530c06751"
+    },
+    {
+      "module": "Part00087",
+      "exit": 0,
+      "seconds": 62.97,
+      "max_rss_bytes": 7976517632,
+      "axioms": [
+        "'OmissionResidual.node363' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "ec4303a8e809f8e098ee88a9d6186c82093a11eaf93861d72d77217bd51db67b"
+    },
+    {
+      "module": "Part00088",
+      "exit": 0,
+      "seconds": 72.42,
+      "max_rss_bytes": 9779331072,
+      "axioms": [
+        "'OmissionResidual.node366' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "4c273abeed0773e958b92c1361c4319f2ca3214903b5465d25dff4de82966477"
+    },
+    {
+      "module": "Part00089",
+      "exit": 0,
+      "seconds": 72.72,
+      "max_rss_bytes": 10767679488,
+      "axioms": [
+        "'OmissionResidual.node369' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "3c81b0e8843d5fa0647f21cbe4372aa6d68f7b178d649620ebbfd6bb8d1c88ba"
+    },
+    {
+      "module": "Part00090",
+      "exit": 0,
+      "seconds": 58.63,
+      "max_rss_bytes": 10387570688,
+      "axioms": [
+        "'OmissionResidual.node373' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "e3c8e31e8c21c5af20d2157fdd95d45664dd369dd85bebb81c91cc9ab2e98a1a"
+    },
+    {
+      "module": "Part00091",
+      "exit": 0,
+      "seconds": 44.68,
+      "max_rss_bytes": 9141583872,
+      "axioms": [
+        "'OmissionResidual.node374' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "b22264d81d258ce079d2f032653abba165884d8e8532ecaf0b41d5696751a3d7"
+    },
+    {
+      "module": "Part00092",
+      "exit": 0,
+      "seconds": 68.43,
+      "max_rss_bytes": 13464109056,
+      "axioms": [
+        "'OmissionResidual.node378' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "d269476d6c1624c722d6d37941295b04ece55301cd84ba7ac348d76e99a061f9"
+    },
+    {
+      "module": "Part00093",
+      "exit": 0,
+      "seconds": 37.68,
+      "max_rss_bytes": 9090154496,
+      "axioms": [
+        "'OmissionResidual.node384' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "f7d50c4837c9815738e07282699c03a7fc8c2b131f3baca770b1725321f09651"
+    },
+    {
+      "module": "Part00094",
+      "exit": 0,
+      "seconds": 66.67,
+      "max_rss_bytes": 9518759936,
+      "axioms": [
+        "'OmissionResidual.node385' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "59af1440874a112158511aa26ea0441b6f04292b50b7e1af1656d4994b96e5ed"
+    },
+    {
+      "module": "Part00095",
+      "exit": 0,
+      "seconds": 58.06,
+      "max_rss_bytes": 8450867200,
+      "axioms": [
+        "'OmissionResidual.node386' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "3a8b1b03f065edad3c22de943972433e49ee7dc99ba9fd7ed53307c562932005"
+    },
+    {
+      "module": "Part00096",
+      "exit": 0,
+      "seconds": 45.79,
+      "max_rss_bytes": 7748993024,
+      "axioms": [
+        "'OmissionResidual.node391' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "0cd3df4c4d965b5c42bd59f94c875eef37570e1695918bcfd3dc7bc1b860e8a5"
+    },
+    {
+      "module": "Part00097",
+      "exit": 0,
+      "seconds": 88.31,
+      "max_rss_bytes": 10793533440,
+      "axioms": [
+        "'OmissionResidual.node396' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "525c53a5abea6e70cbc9bbdc6a936b371c732da664bce991d29dd09e71c03d7b"
+    },
+    {
+      "module": "Part00098",
+      "exit": 0,
+      "seconds": 24.09,
+      "max_rss_bytes": 5261246464,
+      "axioms": [
+        "'OmissionResidual.node401' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "ec4c63312ca0fc66773f24a0301d3c43dc5e0897aae49537db1b7857ce430dd5"
+    },
+    {
+      "module": "Part00099",
+      "exit": 0,
+      "seconds": 90.14,
+      "max_rss_bytes": 10079371264,
+      "axioms": [
+        "'OmissionResidual.node404' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "27d34563ba7b593678be930fb373d24c3306665c1a35740d316c842683942df7"
+    },
+    {
+      "module": "Part00100",
+      "exit": 0,
+      "seconds": 87.13,
+      "max_rss_bytes": 10377052160,
+      "axioms": [
+        "'OmissionResidual.node410' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "23ef02132019bcd9654fdad09eecae4bbeb198ac432350066f60f020f66ee063"
+    },
+    {
+      "module": "Part00101",
+      "exit": 0,
+      "seconds": 58.67,
+      "max_rss_bytes": 8181284864,
+      "axioms": [
+        "'OmissionResidual.node413' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "41d2074e0295a80034b92bc1d6c128cd0d66cc074e762be5ad9fd93e0e7b84f8"
+    },
+    {
+      "module": "Part00102",
+      "exit": 0,
+      "seconds": 78.12,
+      "max_rss_bytes": 9403105280,
+      "axioms": [
+        "'OmissionResidual.node418' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "7b1c300f6a1721c4dfe33a72564de46196e11fd45afebcf6afcad1a657fb2f65"
+    },
+    {
+      "module": "Part00103",
+      "exit": 0,
+      "seconds": 67.65,
+      "max_rss_bytes": 11421990912,
+      "axioms": [
+        "'OmissionResidual.node426' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "ecec0470afff34ca23dd68a92170a51cf8d6ac9ab99b58316c676e53c26dbb30"
+    },
+    {
+      "module": "Part00104",
+      "exit": 0,
+      "seconds": 42.39,
+      "max_rss_bytes": 8677572608,
+      "axioms": [
+        "'OmissionResidual.node429' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "04c08ce89528608697d07168795879477a28a7e195006e8d99c07b3638c12c11"
+    },
+    {
+      "module": "Part00105",
+      "exit": 0,
+      "seconds": 49.31,
+      "max_rss_bytes": 9307111424,
+      "axioms": [
+        "'OmissionResidual.node436' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "ec5691319eda67b441d3507d4edf370592e23ed4275cc6906e51adc238df16e7"
+    },
+    {
+      "module": "Part00106",
+      "exit": 0,
+      "seconds": 38.91,
+      "max_rss_bytes": 7923482624,
+      "axioms": [
+        "'OmissionResidual.node439' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "cc21ff3146b1358439a151fa757703f49cb89ba54ef426f31238cf1c0ac7daa2"
+    },
+    {
+      "module": "Part00107",
+      "exit": 0,
+      "seconds": 63.74,
+      "max_rss_bytes": 12383846400,
+      "axioms": [
+        "'OmissionResidual.node443' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "cb07914df713a8cd3474677558bd8984a962a6807c15337ba8a07fa6ab9b60af"
+    },
+    {
+      "module": "Part00108",
+      "exit": 0,
+      "seconds": 33.11,
+      "max_rss_bytes": 7898775552,
+      "axioms": [
+        "'OmissionResidual.node446' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "b0d3053690b6512069eebef8a9c6d7461f0c907dd869beb8772b01fda9f095ef"
+    },
+    {
+      "module": "Part00109",
+      "exit": 0,
+      "seconds": 70.82,
+      "max_rss_bytes": 10311516160,
+      "axioms": [
+        "'OmissionResidual.node457' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "618c2589dfc64927d710e70d98d55453784c79bde1c0ffe36a726fa6a2dd12b4"
+    },
+    {
+      "module": "Part00110",
+      "exit": 0,
+      "seconds": 41.67,
+      "max_rss_bytes": 8684797952,
+      "axioms": [
+        "'OmissionResidual.node461' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "505b518ba9a51327e999977528073ad3e3641cc36ed6f029016112a78917c1a6"
+    },
+    {
+      "module": "Part00111",
+      "exit": 0,
+      "seconds": 86.84,
+      "max_rss_bytes": 10010787840,
+      "axioms": [
+        "'OmissionResidual.node464' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "7db3578c418eb0614007cfdced9dabcba37a74bb03cbecb9c34d77ace506669c"
+    },
+    {
+      "module": "Part00112",
+      "exit": 0,
+      "seconds": 41.58,
+      "max_rss_bytes": 7790411776,
+      "axioms": [
+        "'OmissionResidual.node467' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "d2918f5e8dc6e638ab1f77f230d97b1c4659f8246f5e71e565e087f04ace8c29"
+    },
+    {
+      "module": "Part00113",
+      "exit": 0,
+      "seconds": 100.55,
+      "max_rss_bytes": 10572431360,
+      "axioms": [
+        "'OmissionResidual.node476' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "4d84c99aeb74bab7e538de50a8d25e6bb1b93879531d74ebfe5fa09f04bb76c8"
+    },
+    {
+      "module": "Part00114",
+      "exit": 0,
+      "seconds": 64.26,
+      "max_rss_bytes": 6793428992,
+      "axioms": [
+        "'OmissionResidual.node479' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "87b348be7089a3b3df2671ca4db94838bdcd52318af3c2a28b115123854d212d"
+    },
+    {
+      "module": "Part00115",
+      "exit": 0,
+      "seconds": 95.91,
+      "max_rss_bytes": 9606873088,
+      "axioms": [
+        "'OmissionResidual.node486' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "fec83f07dc121c72b97d033a5c970d3cc479f594a76004619b89d218801e7d15"
+    },
+    {
+      "module": "Part00116",
+      "exit": 0,
+      "seconds": 75.23,
+      "max_rss_bytes": 7992770560,
+      "axioms": [
+        "'OmissionResidual.node495' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "6a02787be2d8c7a406f1ee59dc2afff0bfb3319c620178c0051e5d182a88cf97"
+    },
+    {
+      "module": "Part00117",
+      "exit": 0,
+      "seconds": 66.93,
+      "max_rss_bytes": 10160832512,
+      "axioms": [
+        "'OmissionResidual.node500' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "41d6fd432c3c761791adda9a1117302b9bfd8ca35d8047c389344395d62fc196"
+    },
+    {
+      "module": "Part00118",
+      "exit": 0,
+      "seconds": 48.48,
+      "max_rss_bytes": 8176484352,
+      "axioms": [
+        "'OmissionResidual.node504' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "5cf23bacfbdbf6b8b02e7a6635d3ee3b682fb613ee83d91f25b636e54481f8d0"
+    },
+    {
+      "module": "Part00119",
+      "exit": 0,
+      "seconds": 53.02,
+      "max_rss_bytes": 10986307584,
+      "axioms": [
+        "'OmissionResidual.node507' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "0a24238ef404c495daada6e0fd0369ce7268c8ae4ca0deaedb540b33a3edc98a"
+    },
+    {
+      "module": "Part00120",
+      "exit": 0,
+      "seconds": 50.52,
+      "max_rss_bytes": 10522066944,
+      "axioms": [
+        "'OmissionResidual.node511' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "bff3a6ebb29aa1849de80d5ce66a2c5e782f3ae629f16b6b4c3b7b3b3d0b6bad"
+    },
+    {
+      "module": "Part00121",
+      "exit": 0,
+      "seconds": 47.61,
+      "max_rss_bytes": 9761128448,
+      "axioms": [
+        "'OmissionResidual.node516' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "3393eb12135b1de9a3cdb962cdcb41060b681b43f36e9f666550cd770757f90e"
+    },
+    {
+      "module": "Part00122",
+      "exit": 0,
+      "seconds": 61.79,
+      "max_rss_bytes": 12138496000,
+      "axioms": [
+        "'OmissionResidual.node522' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "deefc000435bc4034dc2742c04576e8ce5959a87c2f7be1dbd42fad1bc0e818a"
+    },
+    {
+      "module": "Part00123",
+      "exit": 0,
+      "seconds": 46.58,
+      "max_rss_bytes": 9373614080,
+      "axioms": [
+        "'OmissionResidual.node523' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "4d5705eb126062d0007e59b312d72907e3217901032201bfe48238d7ba31fe17"
+    },
+    {
+      "module": "Part00124",
+      "exit": 0,
+      "seconds": 40.57,
+      "max_rss_bytes": 9534603264,
+      "axioms": [
+        "'OmissionResidual.node527' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "4f3a0264e351f6d25ed226d528a84a5d74f824139216908333161ec5773c3a39"
+    },
+    {
+      "module": "Part00125",
+      "exit": 0,
+      "seconds": 32.52,
+      "max_rss_bytes": 8439103488,
+      "axioms": [
+        "'OmissionResidual.node530' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "306fe7b72da999fbf0dcd2b3d2a4be085e3188936915c65acfa0d12f6a367b4b"
+    },
+    {
+      "module": "Part00126",
+      "exit": 0,
+      "seconds": 62.19,
+      "max_rss_bytes": 11197579264,
+      "axioms": [
+        "'OmissionResidual.node535' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "0b35ab1a92baaded67a96de2e537779b09613ee592f5e6ca06ecfad394225043"
+    },
+    {
+      "module": "Part00127",
+      "exit": 0,
+      "seconds": 30.04,
+      "max_rss_bytes": 7676084224,
+      "axioms": [
+        "'OmissionResidual.node536' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "c1550e45187a5e8ff515d2aff7a42e237d341d36086eeb69ff1dba0ebb7e4954"
+    },
+    {
+      "module": "Part00128",
+      "exit": 0,
+      "seconds": 62.7,
+      "max_rss_bytes": 9827188736,
+      "axioms": [
+        "'OmissionResidual.node539' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "195f12eea3931c4a80ec44c3e972c18bc0db5d4a7e46bd02e0fe5230cf027a34"
+    },
+    {
+      "module": "Part00129",
+      "exit": 0,
+      "seconds": 39.01,
+      "max_rss_bytes": 7893270528,
+      "axioms": [
+        "'OmissionResidual.node542' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "bd242ea254cc8ae291af0843d1ea3a3396a28d2bcc26223707906f7c7e3237e7"
+    },
+    {
+      "module": "Part00130",
+      "exit": 0,
+      "seconds": 44.27,
+      "max_rss_bytes": 7592919040,
+      "axioms": [
+        "'OmissionResidual.node543' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "81495725b6663331225a272102cc6a61954f20007f64f719a59f6405c7503b46"
+    },
+    {
+      "module": "Part00131",
+      "exit": 0,
+      "seconds": 58.58,
+      "max_rss_bytes": 11602558976,
+      "axioms": [
+        "'OmissionResidual.node545' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "f37547ef4f31172f0db17bb18ed07a7585c8e9b217a8d823c40cb102668ea36d"
+    },
+    {
+      "module": "Part00132",
+      "exit": 0,
+      "seconds": 48.78,
+      "max_rss_bytes": 10365435904,
+      "axioms": [
+        "'OmissionResidual.node546' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "844972b91da0bfe426789faabf0c791ab3ca0a1bf243a3d5f751cfbf8e798e76"
+    },
+    {
+      "module": "Part00133",
+      "exit": 0,
+      "seconds": 45.59,
+      "max_rss_bytes": 9547972608,
+      "axioms": [
+        "'OmissionResidual.node553' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "b06de16aeda55c46ea0a1bd48a0d359cc296e6a1d88be8509112699283dd254f"
+    },
+    {
+      "module": "Part00134",
+      "exit": 0,
+      "seconds": 28.14,
+      "max_rss_bytes": 6955466752,
+      "axioms": [
+        "'OmissionResidual.node556' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "c7767f33fad519a56b698939f3368150a6cc18bfd79d734feb7da91d15a9c402"
+    },
+    {
+      "module": "Part00135",
+      "exit": 0,
+      "seconds": 31.87,
+      "max_rss_bytes": 8272052224,
+      "axioms": [
+        "'OmissionResidual.node558' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "d2bc5b2431b65712da0acc23573ff395395ad70cacf719918445917f2cde9df1"
+    },
+    {
+      "module": "Part00136",
+      "exit": 0,
+      "seconds": 66.06,
+      "max_rss_bytes": 10529062912,
+      "axioms": [
+        "'OmissionResidual.node559' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "385d5831c9a6c5a4a6f0621a9a2865fda08aa4de6d0f0f92daadf501d4c536af"
+    },
+    {
+      "module": "Part00137",
+      "exit": 0,
+      "seconds": 26.95,
+      "max_rss_bytes": 7067058176,
+      "axioms": [
+        "'OmissionResidual.node561' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "b236eded2816fd0627e0054dae20335f87f879f8d5d530b1027ea8fb5b3db36a"
+    },
+    {
+      "module": "Part00138",
+      "exit": 0,
+      "seconds": 46.49,
+      "max_rss_bytes": 8813707264,
+      "axioms": [
+        "'OmissionResidual.node562' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "07053d5c0dcab7077bfb48e746fecd24fcc3355e3cb8c08de2a94cf06badcfc3"
+    },
+    {
+      "module": "Part00139",
+      "exit": 0,
+      "seconds": 50.19,
+      "max_rss_bytes": 8502886400,
+      "axioms": [
+        "'OmissionResidual.node569' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "4fb0ad8652ba48d31e5a56e9a1e5b00844adb7b65205e4ef11ba07ce972905d5"
+    },
+    {
+      "module": "Part00140",
+      "exit": 0,
+      "seconds": 44.9,
+      "max_rss_bytes": 7813742592,
+      "axioms": [
+        "'OmissionResidual.node570' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "c40af795a4dc34f0cfb96f53177614636bee32a687d85951ecb18354ea9ea793"
+    },
+    {
+      "module": "Part00141",
+      "exit": 0,
+      "seconds": 27.34,
+      "max_rss_bytes": 6252904448,
+      "axioms": [
+        "'OmissionResidual.node573' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "5efdfaf35448e4e705fd738a9a0b5b9206789ecaa2745d1ca147cde6f18c4703"
+    },
+    {
+      "module": "Part00142",
+      "exit": 0,
+      "seconds": 23.96,
+      "max_rss_bytes": 6391005184,
+      "axioms": [
+        "'OmissionResidual.node576' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "66174696d8e85dcecbf3809f1bed442f320d2d28e8062728f04fd889373513fb"
+    },
+    {
+      "module": "Part00143",
+      "exit": 0,
+      "seconds": 43.9,
+      "max_rss_bytes": 9072246784,
+      "axioms": [
+        "'OmissionResidual.node579' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "4c2ac17cdf1e7463609f4219567fb79f1514ed27420a624cce46f7c5ab451133"
+    },
+    {
+      "module": "Part00144",
+      "exit": 0,
+      "seconds": 57.45,
+      "max_rss_bytes": 9618964480,
+      "axioms": [
+        "'OmissionResidual.node582' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "6a945b36f45c960e01c2a1e534f912fab86e8ec2ed6137d40252638b21acc4a4"
+    },
+    {
+      "module": "Part00145",
+      "exit": 0,
+      "seconds": 50.51,
+      "max_rss_bytes": 8667496448,
+      "axioms": [
+        "'OmissionResidual.node586' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "0e808ec99744ea6b7f6c45c3c34a76717e036a090a2cb84292a98c943cbc8eaf"
+    },
+    {
+      "module": "Part00146",
+      "exit": 0,
+      "seconds": 39.24,
+      "max_rss_bytes": 7561904128,
+      "axioms": [
+        "'OmissionResidual.node593' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "a1d99a6e9b5c97b697f8ae3235808de87cb3b54ee6bdb2c2faa57634f04b95ac"
+    },
+    {
+      "module": "Part00147",
+      "exit": 0,
+      "seconds": 33.81,
+      "max_rss_bytes": 7103414272,
+      "axioms": [
+        "'OmissionResidual.node596' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "a191c63411486a3576d1eb4a8080a69d4a1380f830b19475098db5964187b156"
+    },
+    {
+      "module": "Part00148",
+      "exit": 0,
+      "seconds": 55.86,
+      "max_rss_bytes": 10450567168,
+      "axioms": [
+        "'OmissionResidual.node602' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "76dd13b3b3699383e0c13c682aafef56bd0aaa2d1d6b2a842f2cd05980ffe4a1"
+    },
+    {
+      "module": "Part00149",
+      "exit": 0,
+      "seconds": 43.27,
+      "max_rss_bytes": 10583785472,
+      "axioms": [
+        "'OmissionResidual.node606' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "91cba94383fee4533f8bd0fd4f529ed8ffa2dba683c6b0265508a83c39dd11f6"
+    },
+    {
+      "module": "Part00150",
+      "exit": 0,
+      "seconds": 26.52,
+      "max_rss_bytes": 7122452480,
+      "axioms": [
+        "'OmissionResidual.node609' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "74b4e7710ec4c84e84e7531481601761e213721f48149c4ac8cb7e218ad677d8"
+    },
+    {
+      "module": "Part00151",
+      "exit": 0,
+      "seconds": 22.74,
+      "max_rss_bytes": 6759104512,
+      "axioms": [
+        "'OmissionResidual.node614' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "cf6de91c3843e0916fe0f1e6b4f295c1c9ea7b693392599a5df61918eb352f48"
+    },
+    {
+      "module": "Part00152",
+      "exit": 0,
+      "seconds": 59.97,
+      "max_rss_bytes": 11005886464,
+      "axioms": [
+        "'OmissionResidual.node621' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "9e6cafcdd0cc43afd187382ff403cde1bc64e2c43f89defdc2835033ece2a220"
+    },
+    {
+      "module": "Part00153",
+      "exit": 0,
+      "seconds": 34.55,
+      "max_rss_bytes": 8488140800,
+      "axioms": [
+        "'OmissionResidual.node624' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "b1a7453bb8d68d5f9d39cce9fffb20f6e64938118df58001bbb7fb805dd6b1ef"
+    },
+    {
+      "module": "Part00154",
+      "exit": 0,
+      "seconds": 46.15,
+      "max_rss_bytes": 8279457792,
+      "axioms": [
+        "'OmissionResidual.node27153' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "21ab9af5b4e268787ea66e5c0162ef16eb39c6e862ec739a72a5e6289ba1a314"
+    },
+    {
+      "module": "Part00155",
+      "exit": 0,
+      "seconds": 32.0,
+      "max_rss_bytes": 7402520576,
+      "axioms": [
+        "'OmissionResidual.node27154' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "a41fab46ee21007c8ba21e0dd41dc0e40ffcdb12801af4b27d0290172c1fed67"
+    },
+    {
+      "module": "Part00156",
+      "exit": 0,
+      "seconds": 46.67,
+      "max_rss_bytes": 9788768256,
+      "axioms": [
+        "'OmissionResidual.node629' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "8676292e4f769a3e08ee96df0378dad9b76ddd2131b094cb4eba862811fc37d3"
+    },
+    {
+      "module": "Part00157",
+      "exit": 0,
+      "seconds": 65.69,
+      "max_rss_bytes": 11739119616,
+      "axioms": [
+        "'OmissionResidual.node632' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "5ef456984eec0dbff54373dd5d3fcb6b0b1ed4545657a23dd4adbc023a397ddb"
+    },
+    {
+      "module": "Part00158",
+      "exit": 0,
+      "seconds": 37.21,
+      "max_rss_bytes": 7920910336,
+      "axioms": [
+        "'OmissionResidual.node636' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "1f7a18860c633af2ec40df4125b1c1db3277df7d17a4fcb6463267ca5209937e"
+    },
+    {
+      "module": "Part00159",
+      "exit": 0,
+      "seconds": 34.46,
+      "max_rss_bytes": 7670464512,
+      "axioms": [
+        "'OmissionResidual.node637' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "46d69f456cd4d37350b79d8428cd5f41ee3834447f5e32ce90914a86a0b30638"
+    },
+    {
+      "module": "Part00160",
+      "exit": 0,
+      "seconds": 34.84,
+      "max_rss_bytes": 7555923968,
+      "axioms": [
+        "'OmissionResidual.node647' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "c8711d358d04e3732c29c9a95fae5d3f1ef5c7742b3741a96ee73a3762c4768d"
+    },
+    {
+      "module": "Part00161",
+      "exit": 0,
+      "seconds": 42.06,
+      "max_rss_bytes": 9636675584,
+      "axioms": [
+        "'OmissionResidual.node652' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "fd441924ccff7d5d604ce7ed1cdce39876fad54ea615d28ed79356f75c0a6929"
+    },
+    {
+      "module": "Part00162",
+      "exit": 0,
+      "seconds": 44.27,
+      "max_rss_bytes": 9946087424,
+      "axioms": [
+        "'OmissionResidual.node656' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "52b3a9d60f91cf780c9b0a52db0a069542a27dab2244342095d0ea1c379e688e"
+    },
+    {
+      "module": "Part00163",
+      "exit": 0,
+      "seconds": 59.0,
+      "max_rss_bytes": 10984325120,
+      "axioms": [
+        "'OmissionResidual.node661' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "379f78e73690e305c1a37b987a0a7f1250e0c502f0e50cbdbf6cbd4fb3351655"
+    },
+    {
+      "module": "Part00164",
+      "exit": 0,
+      "seconds": 48.63,
+      "max_rss_bytes": 9333833728,
+      "axioms": [
+        "'OmissionResidual.node666' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "2e8b800e8560f84a134cbf27d7a913883d741542b421b94b796b7e063928f58c"
+    },
+    {
+      "module": "Part00165",
+      "exit": 0,
+      "seconds": 23.82,
+      "max_rss_bytes": 6469189632,
+      "axioms": [
+        "'OmissionResidual.node669' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "57a2728ccd57bb0ed4f1047093364d092edd72a1493029faa868afff8d80f874"
+    },
+    {
+      "module": "Part00166",
+      "exit": 0,
+      "seconds": 61.59,
+      "max_rss_bytes": 10402627584,
+      "axioms": [
+        "'OmissionResidual.node673' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "aa86f13169d9c59b57250f97721d827f6290bb0c9ec771e862316d3f5197aa4a"
+    },
+    {
+      "module": "Part00167",
+      "exit": 0,
+      "seconds": 34.34,
+      "max_rss_bytes": 8249180160,
+      "axioms": [
+        "'OmissionResidual.node676' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "8e6572537ed03ac17874aef33495831d24dc2a569d516d14119712b1d74992f5"
+    },
+    {
+      "module": "Part00168",
+      "exit": 0,
+      "seconds": 60.32,
+      "max_rss_bytes": 9227878400,
+      "axioms": [
+        "'OmissionResidual.node682' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "ffe573541259439dd7b4afc4dfc7d95693cccc34916007cee904fcaa4e2736b3"
+    },
+    {
+      "module": "Part00169",
+      "exit": 0,
+      "seconds": 53.46,
+      "max_rss_bytes": 8705687552,
+      "axioms": [
+        "'OmissionResidual.node683' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "01d531ca9dde8e39bacb4418d171938eeedec24ff4e6a34e3414cafff621c645"
+    },
+    {
+      "module": "Part00170",
+      "exit": 0,
+      "seconds": 46.57,
+      "max_rss_bytes": 8063107072,
+      "axioms": [
+        "'OmissionResidual.node687' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "319c9bcdb1742b0a86254de74e2766cf50c23d403f08b3b9849b3fee4991b020"
+    },
+    {
+      "module": "Part00171",
+      "exit": 0,
+      "seconds": 46.84,
+      "max_rss_bytes": 10183786496,
+      "axioms": [
+        "'OmissionResidual.node690' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "ac7a8d57dd3a38d9a180d3b1fa6b0e49b540cf241b3c21fc1caf82c48266f1e8"
+    },
+    {
+      "module": "Part00172",
+      "exit": 0,
+      "seconds": 51.83,
+      "max_rss_bytes": 12014108672,
+      "axioms": [
+        "'OmissionResidual.node694' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "5e9e05a690cfc7b65bafd7ec45f7b74bf7f15c8efe3014795d3498591268b366"
+    },
+    {
+      "module": "Part00173",
+      "exit": 0,
+      "seconds": 39.14,
+      "max_rss_bytes": 10035265536,
+      "axioms": [
+        "'OmissionResidual.node697' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "9fd05e401b2ad706d1cbf3d41c14fd34066e968a91cb4cab5fe504962b6bf735"
+    },
+    {
+      "module": "Part00174",
+      "exit": 0,
+      "seconds": 52.94,
+      "max_rss_bytes": 11823071232,
+      "axioms": [
+        "'OmissionResidual.node704' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "b5fa619d4f9f15f52e94a6f627141a122b4c2eb24cc9bdd5836234caba37e070"
+    },
+    {
+      "module": "Part00175",
+      "exit": 0,
+      "seconds": 27.46,
+      "max_rss_bytes": 8040267776,
+      "axioms": [
+        "'OmissionResidual.node705' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "9e35746beb9255757af8cb57e7fd0f752e1cd0cc3edbb6f63593157c09da0c02"
+    },
+    {
+      "module": "Part00176",
+      "exit": 0,
+      "seconds": 46.77,
+      "max_rss_bytes": 11428003840,
+      "axioms": [
+        "'OmissionResidual.node709' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "0da80a871612c599bdca820c95ba03305a9ff742371f232b3af00c85369bbd0b"
+    },
+    {
+      "module": "Part00177",
+      "exit": 0,
+      "seconds": 55.66,
+      "max_rss_bytes": 12012109824,
+      "axioms": [
+        "'OmissionResidual.node713' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "104287b287581f738534f281c3a01b76fdcf432c797bb55996d3fcdf4f03db1c"
+    },
+    {
+      "module": "Part00178",
+      "exit": 0,
+      "seconds": 30.23,
+      "max_rss_bytes": 8206811136,
+      "axioms": [
+        "'OmissionResidual.node716' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "5d08d46013b327b9fada8f96ce1c516fd0aa8d3d64e6d107bc67112ac0f264c0"
+    },
+    {
+      "module": "Part00179",
+      "exit": 0,
+      "seconds": 64.91,
+      "max_rss_bytes": 12145491968,
+      "axioms": [
+        "'OmissionResidual.node724' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "065255964a717ce4ec3275fc5869127d93cbbd3019d976f7d64b7ddf1b0c0138"
+    },
+    {
+      "module": "Part00180",
+      "exit": 0,
+      "seconds": 46.3,
+      "max_rss_bytes": 10279813120,
+      "axioms": [
+        "'OmissionResidual.node729' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "9ff45dc2b08ce35a7e086dc479a18b47998b15aa5fba917af36ebb35c2d25e86"
+    },
+    {
+      "module": "Part00181",
+      "exit": 0,
+      "seconds": 37.56,
+      "max_rss_bytes": 7807614976,
+      "axioms": [
+        "'OmissionResidual.node732' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "538d72b014d370331378e083c05c16324171864e8ca2ca405a45c499fdf085a7"
+    },
+    {
+      "module": "Part00182",
+      "exit": 0,
+      "seconds": 35.8,
+      "max_rss_bytes": 7735214080,
+      "axioms": [
+        "'OmissionResidual.node736' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "ed40767a979c9c052489fce39898ba55167072acda5d02f593fe6d189d8be718"
+    },
+    {
+      "module": "Part00183",
+      "exit": 0,
+      "seconds": 36.21,
+      "max_rss_bytes": 8243347456,
+      "axioms": [
+        "'OmissionResidual.node737' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "6505c5c17adcf7850223c71b02b68d69874e1c40c6f20fc602b39ef4a5ae4205"
+    },
+    {
+      "module": "Part00184",
+      "exit": 0,
+      "seconds": 30.92,
+      "max_rss_bytes": 8406876160,
+      "axioms": [
+        "'OmissionResidual.node739' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "a4154540c869e17309dd022c78a260627f7335041138a57d01d216f98d8cfc7c"
+    },
+    {
+      "module": "Part00185",
+      "exit": 0,
+      "seconds": 58.7,
+      "max_rss_bytes": 12359090176,
+      "axioms": [
+        "'OmissionResidual.node29699' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "d3a860df7c990fc52c09fca4617f8e97faad809602eb6f5dc660e4cd43ee4d2a"
+    },
+    {
+      "module": "Part00186",
+      "exit": 0,
+      "seconds": 21.36,
+      "max_rss_bytes": 6306496512,
+      "axioms": [
+        "'OmissionResidual.node29700' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "7558e8b870429b1ca747287922d8801479150a6736fd734c5b97339f0afa02e2"
+    },
+    {
+      "module": "Part00187",
+      "exit": 0,
+      "seconds": 23.36,
+      "max_rss_bytes": 6778847232,
+      "axioms": [
+        "'OmissionResidual.node742' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "17de9053d2bb04f9cea8982de1729bfdac80148d6a5960a1c8575298bff49414"
+    },
+    {
+      "module": "Part00188",
+      "exit": 0,
+      "seconds": 50.2,
+      "max_rss_bytes": 9528967168,
+      "axioms": [
+        "'OmissionResidual.node29889' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "ed189646d17653e2db3d487bddd0f06fe534b78f0b278685a0f730c1aeecfcdc"
+    },
+    {
+      "module": "Part00189",
+      "exit": 0,
+      "seconds": 18.01,
+      "max_rss_bytes": 5652611072,
+      "axioms": [
+        "'OmissionResidual.node29890' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "b02e652d51a4735956042369cf82c8cca5f414868ecc612aac74afdf84937b93"
+    },
+    {
+      "module": "Part00190",
+      "exit": 0,
+      "seconds": 38.77,
+      "max_rss_bytes": 8386379776,
+      "axioms": [
+        "'OmissionResidual.node745' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "c99a7b211ee5c72ee14b67eb9dfb920515e401615cc80ba367507ecb23f63115"
+    },
+    {
+      "module": "Part00191",
+      "exit": 0,
+      "seconds": 30.52,
+      "max_rss_bytes": 7587790848,
+      "axioms": [
+        "'OmissionResidual.node749' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "70151eb8800a6edff30edf954739437a4838cd7bfb10403849199728a459a402"
+    },
+    {
+      "module": "Part00192",
+      "exit": 0,
+      "seconds": 41.53,
+      "max_rss_bytes": 9647505408,
+      "axioms": [
+        "'OmissionResidual.node750' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "4cd020c9abd8d76a41baf619f2c6998e88ebc62b317013e926c5f8b7c0c2c1bb"
+    },
+    {
+      "module": "Part00193",
+      "exit": 0,
+      "seconds": 57.26,
+      "max_rss_bytes": 12449382400,
+      "axioms": [
+        "'OmissionResidual.node752' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "a8c7cbd038298fad927cc37c3acb8bce188a23ca699a79bd86d94edb22974587"
+    },
+    {
+      "module": "Part00194",
+      "exit": 0,
+      "seconds": 44.36,
+      "max_rss_bytes": 10504699904,
+      "axioms": [
+        "'OmissionResidual.node753' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "1a4ae21cebec76fb5de466e32e0bbf1ae9907debc3967ace597418793b5eee18"
+    },
+    {
+      "module": "Part00195",
+      "exit": 0,
+      "seconds": 20.73,
+      "max_rss_bytes": 6432882688,
+      "axioms": [
+        "'OmissionResidual.node755' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "2a1b7633769c6b79ee5f7203d9087d7b80b528c79ad96f8d68ecc79df94d0a39"
+    },
+    {
+      "module": "Part00196",
+      "exit": 0,
+      "seconds": 27.18,
+      "max_rss_bytes": 7218036736,
+      "axioms": [
+        "'OmissionResidual.node759' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "59508ba36011abaa9e97e6a729c0e9e8f1eb36b25a80ddfd708471adf1843c57"
+    },
+    {
+      "module": "Part00197",
+      "exit": 0,
+      "seconds": 55.83,
+      "max_rss_bytes": 11462033408,
+      "axioms": [
+        "'OmissionResidual.node764' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "531d72cf471feaf566331932945b6559b114bace60b6ce50e1f083214ffa2498"
+    },
+    {
+      "module": "Part00198",
+      "exit": 0,
+      "seconds": 65.39,
+      "max_rss_bytes": 11000283136,
+      "axioms": [
+        "'OmissionResidual.node768' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "e5bf8873f57958f2a6b00d9bdef419df33dcfe011fd062892afd67e9a7500c72"
+    },
+    {
+      "module": "Part00199",
+      "exit": 0,
+      "seconds": 44.48,
+      "max_rss_bytes": 9558491136,
+      "axioms": [
+        "'OmissionResidual.node771' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "40833fac6c632115b78d8330c3aa6135311fc48cbde60c454fe2c303223fec58"
+    },
+    {
+      "module": "Part00200",
+      "exit": 0,
+      "seconds": 20.37,
+      "max_rss_bytes": 6239354880,
+      "axioms": [
+        "'OmissionResidual.node775' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "5139ad56f364182cdd3a8a44dbbcb754c500d66f4100b2c7579b0c0e94d13395"
+    },
+    {
+      "module": "Part00201",
+      "exit": 0,
+      "seconds": 49.12,
+      "max_rss_bytes": 10422976512,
+      "axioms": [
+        "'OmissionResidual.node782' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "f19ff0aaccce5c0546d9cce007e7a123b171d981126191714067ff1e4b4f6169"
+    },
+    {
+      "module": "Part00202",
+      "exit": 0,
+      "seconds": 39.37,
+      "max_rss_bytes": 8869478400,
+      "axioms": [
+        "'OmissionResidual.node787' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "4e9876ced87f020a401947b3ac3da43d285198043f7201a12fc4fe17c1e0457f"
+    },
+    {
+      "module": "Part00203",
+      "exit": 0,
+      "seconds": 27.42,
+      "max_rss_bytes": 7145766912,
+      "axioms": [
+        "'OmissionResidual.node797' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "c935120a74bfde6082c82461b8c3880703a4bf5bd85f6efb2f0af49d52cfd4a1"
+    },
+    {
+      "module": "Part00204",
+      "exit": 0,
+      "seconds": 47.6,
+      "max_rss_bytes": 10738958336,
+      "axioms": [
+        "'OmissionResidual.node800' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "aed62d1735c766fc55f6a894f2be25f7229883cc48996b374019083f8af1230a"
+    },
+    {
+      "module": "Part00205",
+      "exit": 0,
+      "seconds": 38.49,
+      "max_rss_bytes": 9267920896,
+      "axioms": [
+        "'OmissionResidual.node804' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "d0a895071b9c83a7f40268d8fa28bd42cc9c7c83eaf92fb9c284e8a5c8314da6"
+    },
+    {
+      "module": "Part00206",
+      "exit": 0,
+      "seconds": 39.99,
+      "max_rss_bytes": 9837789184,
+      "axioms": [
+        "'OmissionResidual.node805' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "d62b27080310af8e46d6636bddf8720cafa4bec4ac34d65483d57a1721186a94"
+    },
+    {
+      "module": "Part00207",
+      "exit": 0,
+      "seconds": 46.94,
+      "max_rss_bytes": 10426253312,
+      "axioms": [
+        "'OmissionResidual.node806' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "c107eb21876cb78d87c6881a274befb3fba5ff461cfa3468592641699ddb2e35"
+    },
+    {
+      "module": "Part00208",
+      "exit": 0,
+      "seconds": 35.35,
+      "max_rss_bytes": 8666382336,
+      "axioms": [
+        "'OmissionResidual.node810' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "4dac91060c0c766fbbd34e0806e945be3fb2cb4d8f1bd270f93d8105d15e15be"
+    },
+    {
+      "module": "Part00209",
+      "exit": 0,
+      "seconds": 37.15,
+      "max_rss_bytes": 9106440192,
+      "axioms": [
+        "'OmissionResidual.node811' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "9e15fe6ab31447ecb95ba38c3d18548961e45746ad6a69099885be62a3119b9e"
+    },
+    {
+      "module": "Part00210",
+      "exit": 0,
+      "seconds": 45.82,
+      "max_rss_bytes": 10500227072,
+      "axioms": [
+        "'OmissionResidual.node815' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "fec864dec40d091108f044f2db65339e4dada36d04dd39a82abfc0568dc4328a"
+    },
+    {
+      "module": "Part00211",
+      "exit": 0,
+      "seconds": 39.78,
+      "max_rss_bytes": 9187442688,
+      "axioms": [
+        "'OmissionResidual.node822' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "613d4c7ab4246b16157cc7ad2aaad8c8fbcaec00e22f934b4b09fa7f220bbf8c"
+    },
+    {
+      "module": "Part00212",
+      "exit": 0,
+      "seconds": 45.17,
+      "max_rss_bytes": 10594320384,
+      "axioms": [
+        "'OmissionResidual.node825' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "33b03f6095fa2b7ed7bd95dd8ab1e026cca82d3a1833b675dce6d275cca60361"
+    },
+    {
+      "module": "Part00213",
+      "exit": 0,
+      "seconds": 37.15,
+      "max_rss_bytes": 8736505856,
+      "axioms": [
+        "'OmissionResidual.node829' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "a7a0c253bce0763257759ad43cff31472d89e6f5a3dbbd09bef74ac255718155"
+    },
+    {
+      "module": "Part00214",
+      "exit": 0,
+      "seconds": 65.26,
+      "max_rss_bytes": 10229366784,
+      "axioms": [
+        "'OmissionResidual.node833' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "f5594df43354e95d5248d0234d501ae3f5d7bc101736f982175fafce66a5077e"
+    },
+    {
+      "module": "Part00215",
+      "exit": 0,
+      "seconds": 59.32,
+      "max_rss_bytes": 8501248000,
+      "axioms": [
+        "'OmissionResidual.node836' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "8a8f6e16868293d31695b2dd8a0b3349a1f3fcb74481157d3501889fcf2f32b8"
+    },
+    {
+      "module": "Part00216",
+      "exit": 0,
+      "seconds": 63.17,
+      "max_rss_bytes": 7384350720,
+      "axioms": [
+        "'OmissionResidual.node840' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "e5a53d4ed29722df32e821f3c67bf900055bdbd04fec3a8a2f7f63621de1911e"
+    },
+    {
+      "module": "Part00217",
+      "exit": 0,
+      "seconds": 58.87,
+      "max_rss_bytes": 8115961856,
+      "axioms": [
+        "'OmissionResidual.node850' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "f7619cfd880c7cf9ea149d27a921123180e3b1c7d390ba8aa5592f9f2f8c0644"
+    },
+    {
+      "module": "Part00218",
+      "exit": 0,
+      "seconds": 57.45,
+      "max_rss_bytes": 8054996992,
+      "axioms": [
+        "'OmissionResidual.node858' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "b8c2ec60d5064386c0314190afaa11b0807a73e471267541175b310da5e59913"
+    },
+    {
+      "module": "Part00219",
+      "exit": 0,
+      "seconds": 56.42,
+      "max_rss_bytes": 10767712256,
+      "axioms": [
+        "'OmissionResidual.node861' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "c9c2f18d8606e16a563fb851b0494f281a27fca858d433fc002dd5f4f0f5734f"
+    },
+    {
+      "module": "Part00220",
+      "exit": 0,
+      "seconds": 61.45,
+      "max_rss_bytes": 10862362624,
+      "axioms": [
+        "'OmissionResidual.node865' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "214fe4085ad66cf223ebd3858f44688d30c0783374c3b942e15d4264fa7f69aa"
+    },
+    {
+      "module": "Part00221",
+      "exit": 0,
+      "seconds": 25.16,
+      "max_rss_bytes": 7251574784,
+      "axioms": [
+        "'OmissionResidual.node866' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "d140189aefe97b9414d241b51baae618476f58047706a21ba442892aedaad311"
+    },
+    {
+      "module": "Part00222",
+      "exit": 0,
+      "seconds": 53.31,
+      "max_rss_bytes": 8700936192,
+      "axioms": [
+        "'OmissionResidual.node870' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "b0d1f0b651b457cfd1a626b12cdfd8512b8eee739c7c08dd68c2b78f2f5d806c"
+    },
+    {
+      "module": "Part00223",
+      "exit": 0,
+      "seconds": 44.57,
+      "max_rss_bytes": 8116551680,
+      "axioms": [
+        "'OmissionResidual.node871' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "bba6fbae0d558c0176a41fe7669dff63d33cb2539011236977d1180f72f1080d"
+    },
+    {
+      "module": "Part00224",
+      "exit": 0,
+      "seconds": 41.16,
+      "max_rss_bytes": 9031286784,
+      "axioms": [
+        "'OmissionResidual.node878' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "26847e8de4ca93398b6e0e735c4a63297b6ce12677db2f10504ae1b1e1cd62a6"
+    },
+    {
+      "module": "Part00225",
+      "exit": 0,
+      "seconds": 41.8,
+      "max_rss_bytes": 9431957504,
+      "axioms": [
+        "'OmissionResidual.node879' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "8905a2337a65393e473e88236e083664533add15d06aca7b8247a93ab22e8a84"
+    },
+    {
+      "module": "Part00226",
+      "exit": 0,
+      "seconds": 45.5,
+      "max_rss_bytes": 10381983744,
+      "axioms": [
+        "'OmissionResidual.node883' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "6b05fc1eb928fb0944a79b40f4317f6ab66797efff983afbd63dce4f15de02ac"
+    },
+    {
+      "module": "Part00227",
+      "exit": 0,
+      "seconds": 60.67,
+      "max_rss_bytes": 13441335296,
+      "axioms": [
+        "'OmissionResidual.node887' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "9d34bf505a11ced4a5a4b856f83fc045b459d1d8146149bb41db8b2836bd639b"
+    },
+    {
+      "module": "Part00228",
+      "exit": 0,
+      "seconds": 40.05,
+      "max_rss_bytes": 9576415232,
+      "axioms": [
+        "'OmissionResidual.node890' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "065288934df7964bffb58ed36ce5026d3b7bed89872936981fc67e99a555dd28"
+    },
+    {
+      "module": "Part00229",
+      "exit": 0,
+      "seconds": 25.08,
+      "max_rss_bytes": 7039778816,
+      "axioms": [
+        "'OmissionResidual.node892' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "059fc02ec0c9986bec9e3e1af67198495c56f3513814befccb05fe82e7d5fd60"
+    },
+    {
+      "module": "Part00230",
+      "exit": 0,
+      "seconds": 49.93,
+      "max_rss_bytes": 10872979456,
+      "axioms": [
+        "'OmissionResidual.node895' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "fe6baedf5f647aa6c25e9489a932c7457346aec9cc971cd20b64f6ee33a0778d"
+    },
+    {
+      "module": "Part00231",
+      "exit": 0,
+      "seconds": 18.06,
+      "max_rss_bytes": 5989761024,
+      "axioms": [
+        "'OmissionResidual.node897' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "625ff27a6bba36f2673f783a67a39aa81687d7439fcd6bb38b5a10dd253f9203"
+    },
+    {
+      "module": "Part00232",
+      "exit": 0,
+      "seconds": 52.98,
+      "max_rss_bytes": 10412556288,
+      "axioms": [
+        "'OmissionResidual.node901' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "94934faa26c645b4d89c1d12e5d2ac618b2a2e02197e85d738df17ad02d5782d"
+    },
+    {
+      "module": "Part00233",
+      "exit": 0,
+      "seconds": 45.05,
+      "max_rss_bytes": 9133408256,
+      "axioms": [
+        "'OmissionResidual.node905' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "cb060ca027e17097108d342ea1a539cfedd7645fede796042cdda7616d8b54c9"
+    },
+    {
+      "module": "Part00234",
+      "exit": 0,
+      "seconds": 37.49,
+      "max_rss_bytes": 7974715392,
+      "axioms": [
+        "'OmissionResidual.node906' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "bc7000421657fa04f655529a58e9f637b5de4c9f3d6001b4a7b1ba35fe4eff08"
+    },
+    {
+      "module": "Part00235",
+      "exit": 0,
+      "seconds": 45.08,
+      "max_rss_bytes": 9532145664,
+      "axioms": [
+        "'OmissionResidual.node910' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "b4dc831545d83439119a33da52aca38f3a661200391510238c9143fae2f724df"
+    },
+    {
+      "module": "Part00236",
+      "exit": 0,
+      "seconds": 35.33,
+      "max_rss_bytes": 8784576512,
+      "axioms": [
+        "'OmissionResidual.node916' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "b748e1e418859e3ce2289c947772cbcd807a8d4bffec3d6e96c7b124a39045bd"
+    },
+    {
+      "module": "Part00237",
+      "exit": 0,
+      "seconds": 32.93,
+      "max_rss_bytes": 8640249856,
+      "axioms": [
+        "'OmissionResidual.node919' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "8ebfc06eca2c90530150859eabcdb08ad701cd1fd447973a8436193e435f59c5"
+    },
+    {
+      "module": "Part00238",
+      "exit": 0,
+      "seconds": 38.85,
+      "max_rss_bytes": 9369927680,
+      "axioms": [
+        "'OmissionResidual.node922' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "1ab6fa919ab3da26842691d4c2e8e00d71cb264a3863ed6a9f4bf6c3ef0e3eda"
+    },
+    {
+      "module": "Part00239",
+      "exit": 0,
+      "seconds": 44.31,
+      "max_rss_bytes": 10240933888,
+      "axioms": [
+        "'OmissionResidual.node930' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "50a365120be8a91a972bfb67e5d413b09791cde9282261cba02754fb3dcfcacc"
+    },
+    {
+      "module": "Part00240",
+      "exit": 0,
+      "seconds": 26.15,
+      "max_rss_bytes": 7027965952,
+      "axioms": [
+        "'OmissionResidual.node931' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "cef917878c3b6aaef4c3f619cbee74ac654903efd0780de1f85161c9f02a93c1"
+    },
+    {
+      "module": "Part00241",
+      "exit": 0,
+      "seconds": 64.73,
+      "max_rss_bytes": 11039309824,
+      "axioms": [
+        "'OmissionResidual.node936' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "e9273b62399575e993e5fe07d88c1b1e449d9ddf95326b14957320f56b67d5a5"
+    },
+    {
+      "module": "Part00242",
+      "exit": 0,
+      "seconds": 63.47,
+      "max_rss_bytes": 10482040832,
+      "axioms": [
+        "'OmissionResidual.node947' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "ae6d131992c006d7477fd83de9c4d07f1dd8697d3f15968002d108055ebc609e"
+    },
+    {
+      "module": "Part00243",
+      "exit": 0,
+      "seconds": 24.85,
+      "max_rss_bytes": 6892716032,
+      "axioms": [
+        "'OmissionResidual.node950' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "188028e8688f0a1b44d69d9ea9f62ad4677946d3e9ed07508b428203f2c5d6c8"
+    },
+    {
+      "module": "Part00244",
+      "exit": 0,
+      "seconds": 56.61,
+      "max_rss_bytes": 8887894016,
+      "axioms": [
+        "'OmissionResidual.node958' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "57a272b5cbc5bb16c4127637e48cb935cb7d8830627575a676ba756cc12f5fd0"
+    },
+    {
+      "module": "Part00245",
+      "exit": 0,
+      "seconds": 41.98,
+      "max_rss_bytes": 7514193920,
+      "axioms": [
+        "'OmissionResidual.node962' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "18648005607a92165a315da1c8d723ee6b99a2e1abfa5feebb4cf9035bfa4707"
+    },
+    {
+      "module": "Part00246",
+      "exit": 0,
+      "seconds": 34.9,
+      "max_rss_bytes": 6860013568,
+      "axioms": [
+        "'OmissionResidual.node965' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "d73ac726642b1e65a452bdf0d0c3ebf32ffde629cda9bfcddf184379754775ae"
+    },
+    {
+      "module": "Part00247",
+      "exit": 0,
+      "seconds": 71.04,
+      "max_rss_bytes": 12134744064,
+      "axioms": [
+        "'OmissionResidual.node973' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "6fd3e7eceec17d890d4f45c4c94b316babbb3273a0402d2b72a1695575ee3e30"
+    },
+    {
+      "module": "Part00248",
+      "exit": 0,
+      "seconds": 36.9,
+      "max_rss_bytes": 8779677696,
+      "axioms": [
+        "'OmissionResidual.node978' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "f697b0576ce2f8a51556a45bd56576ff5e7bdb6a6f12e8cc3d0ee88aaa0de1c2"
+    },
+    {
+      "module": "Part00249",
+      "exit": 0,
+      "seconds": 35.1,
+      "max_rss_bytes": 8080375808,
+      "axioms": [
+        "'OmissionResidual.node981' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "3927e8a132f82107cf378fc24609f649a8f94058c484ba9d89160cd02a42689a"
+    },
+    {
+      "module": "Part00250",
+      "exit": 0,
+      "seconds": 47.55,
+      "max_rss_bytes": 9462513664,
+      "axioms": [
+        "'OmissionResidual.node982' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "63ca5214f7ca3dad5cf6a85e06e9604df76b7464430480ff62ccaeee5c0014e0"
+    },
+    {
+      "module": "Part00251",
+      "exit": 0,
+      "seconds": 43.78,
+      "max_rss_bytes": 8916893696,
+      "axioms": [
+        "'OmissionResidual.node983' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "674aa0bb0a54e7b1385b1230104d42970f3528b69883aeb65ad93955c9788311"
+    },
+    {
+      "module": "Part00252",
+      "exit": 0,
+      "seconds": 54.34,
+      "max_rss_bytes": 10074013696,
+      "axioms": [
+        "'OmissionResidual.node991' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "ff528e519f4384721ef96031ab8507b5733ad0a558287538260b9d50a554222e"
+    },
+    {
+      "module": "Part00253",
+      "exit": 0,
+      "seconds": 59.22,
+      "max_rss_bytes": 10209116160,
+      "axioms": [
+        "'OmissionResidual.node994' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "e5dd6fb20e04f7d198a4d10df4689e4eedd4a27ac36f89f487330e2995c3648a"
+    },
+    {
+      "module": "Part00254",
+      "exit": 0,
+      "seconds": 58.71,
+      "max_rss_bytes": 11185422336,
+      "axioms": [
+        "'OmissionResidual.node1001' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "d2406f32bc2acf592532dae452c48c81e4de5fcb382c9a13fc4bad8e416786c0"
+    },
+    {
+      "module": "Part00255",
+      "exit": 0,
+      "seconds": 27.13,
+      "max_rss_bytes": 7335919616,
+      "axioms": [
+        "'OmissionResidual.node1004' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "43e853d9d2abdee4893d063670e2e2c3f08404ff27a79fdfcc904a672fbee6ea"
+    },
+    {
+      "module": "Part00256",
+      "exit": 0,
+      "seconds": 48.47,
+      "max_rss_bytes": 10144497664,
+      "axioms": [
+        "'OmissionResidual.node1007' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "b82f244b6cd0fe6abe3dbbe774feb14320728a79a4c11070bc90bbd32c87c51a"
+    },
+    {
+      "module": "Part00257",
+      "exit": 0,
+      "seconds": 24.02,
+      "max_rss_bytes": 6828998656,
+      "axioms": [
+        "'OmissionResidual.node1010' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "568ccff8a40886c444270bf1a1ce6bd8d10fc1cecefc80b5a52d81ab79e9426b"
+    },
+    {
+      "module": "Part00258",
+      "exit": 0,
+      "seconds": 37.37,
+      "max_rss_bytes": 9115926528,
+      "axioms": [
+        "'OmissionResidual.node1020' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "7a96da0068967cfe3b99bc16d865a89a2ed63981e13fc5bd6f8579efc1c51cff"
+    },
+    {
+      "module": "Part00259",
+      "exit": 0,
+      "seconds": 34.6,
+      "max_rss_bytes": 8835956736,
+      "axioms": [
+        "'OmissionResidual.node1021' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "ca9eb4d0035870f0cf8eb19dba8369792ad74b3b31d5538209ebe9e3a1689a95"
+    },
+    {
+      "module": "Part00260",
+      "exit": 0,
+      "seconds": 25.72,
+      "max_rss_bytes": 7041892352,
+      "axioms": [
+        "'OmissionResidual.node1023' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "b9f42e88885de16ea5cf7f75a66060bc7fc1a8bfa75be9755a129dee741f3c24"
+    },
+    {
+      "module": "Part00261",
+      "exit": 0,
+      "seconds": 46.54,
+      "max_rss_bytes": 10448830464,
+      "axioms": [
+        "'OmissionResidual.node1025' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "f87941ef0793c36401be80b2b3aea2f8a05f01b98920c9fbdd821ae8e2026782"
+    },
+    {
+      "module": "Part00262",
+      "exit": 0,
+      "seconds": 25.85,
+      "max_rss_bytes": 6821003264,
+      "axioms": [
+        "'OmissionResidual.node1026' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "68431c003376bd5d240e74194ec74b4074bb31f183073b146d238a3815b7ebb7"
+    },
+    {
+      "module": "Part00263",
+      "exit": 0,
+      "seconds": 31.24,
+      "max_rss_bytes": 7878017024,
+      "axioms": [
+        "'OmissionResidual.node1030' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "922d50e6f0fe389f5fccda2db33e46f9c207696d3c38c46fd842f7eef8873214"
+    },
+    {
+      "module": "Part00264",
+      "exit": 0,
+      "seconds": 53.95,
+      "max_rss_bytes": 10553376768,
+      "axioms": [
+        "'OmissionResidual.node1033' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "9e282641d4f284b6dda5e5308e2962dc9b9cf91948b8f97ec3d2844672468a34"
+    },
+    {
+      "module": "Part00265",
+      "exit": 0,
+      "seconds": 25.68,
+      "max_rss_bytes": 6758252544,
+      "axioms": [
+        "'OmissionResidual.node1034' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "4253eaf73289a426eebf1bdf20471357357a61699158603a4bb6adf3f04c0a64"
+    },
+    {
+      "module": "Part00266",
+      "exit": 0,
+      "seconds": 55.54,
+      "max_rss_bytes": 8489730048,
+      "axioms": [
+        "'OmissionResidual.node1038' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "17f5191f77e6a5bd0ddf1bc51b3b3d08aaa684c4d9ef2dd9dfb340c5e7961f50"
+    },
+    {
+      "module": "Part00267",
+      "exit": 0,
+      "seconds": 64.13,
+      "max_rss_bytes": 8914599936,
+      "axioms": [
+        "'OmissionResidual.node1043' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "e1dd0dd8b23ee7ead28f8a934b8a500b26669bcc77fad9682326b81fdd94ba9f"
+    },
+    {
+      "module": "Part00268",
+      "exit": 0,
+      "seconds": 67.46,
+      "max_rss_bytes": 8298446848,
+      "axioms": [
+        "'OmissionResidual.node1046' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "b7523563f40ada33e4a117bdc0cbefdaa7cf6369e5da31e91f88e36ad626c5b6"
+    },
+    {
+      "module": "Part00269",
+      "exit": 0,
+      "seconds": 70.9,
+      "max_rss_bytes": 8136441856,
+      "axioms": [
+        "'OmissionResidual.node1050' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "03db1b649c9c6950875f0eb805c7d3cf05e3aa5132b85ffefe40dd786abb48de"
+    },
+    {
+      "module": "Part00270",
+      "exit": 0,
+      "seconds": 52.8,
+      "max_rss_bytes": 7713701888,
+      "axioms": [
+        "'OmissionResidual.node1052' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "b27e0235c6feb652d828624be076ece1eb74c8c759d0a6a334f60be6a9719a88"
+    },
+    {
+      "module": "Part00271",
+      "exit": 0,
+      "seconds": 23.86,
+      "max_rss_bytes": 4671537152,
+      "axioms": [
+        "'OmissionResidual.node1053' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "0a773afd10ada7810e87f45ad179051351bbcab6ceddd04d8995a95368c635a9"
+    },
+    {
+      "module": "Part00272",
+      "exit": 0,
+      "seconds": 53.96,
+      "max_rss_bytes": 10456072192,
+      "axioms": [
+        "'OmissionResidual.node1056' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "a5dc3d21eddeaababdf0bae2684807f7030d4b4188c5fab3edf43ffde594fb13"
+    },
+    {
+      "module": "Part00273",
+      "exit": 0,
+      "seconds": 63.45,
+      "max_rss_bytes": 10850992128,
+      "axioms": [
+        "'OmissionResidual.node1063' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "a711a2e685b63b1a10d6977b4fae5a47b449adf0e1154e32133879e4a4a35bfc"
+    },
+    {
+      "module": "Part00274",
+      "exit": 0,
+      "seconds": 33.78,
+      "max_rss_bytes": 8184086528,
+      "axioms": [
+        "'OmissionResidual.node1066' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "8c87d21b5217ad998a8be59577794ba4aa9c319024521c2b5f798b8a75dff6fe"
+    },
+    {
+      "module": "Part00275",
+      "exit": 0,
+      "seconds": 40.88,
+      "max_rss_bytes": 8839692288,
+      "axioms": [
+        "'OmissionResidual.node1071' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "0101fc1b02e3bd144a7dd775c90fb7c1115507d0b988a6a1211a201f3a612612"
+    },
+    {
+      "module": "Part00276",
+      "exit": 0,
+      "seconds": 55.0,
+      "max_rss_bytes": 10266066944,
+      "axioms": [
+        "'OmissionResidual.node1077' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "ea366036934592fd3b57263f8a1bf3a1bd41e323077a22b1591260415f30dc94"
+    },
+    {
+      "module": "Part00277",
+      "exit": 0,
+      "seconds": 52.92,
+      "max_rss_bytes": 10214096896,
+      "axioms": [
+        "'OmissionResidual.node1080' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "6b75157d0d116aeebf747303b91c0263999eab6a772468cf4eb9d827864ee546"
+    },
+    {
+      "module": "Part00278",
+      "exit": 0,
+      "seconds": 66.59,
+      "max_rss_bytes": 12309872640,
+      "axioms": [
+        "'OmissionResidual.node1084' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "0ea176c1c72c0b1cf1ec4201da7377db96101635295e38d224ed6f8e9df9ca50"
+    },
+    {
+      "module": "Part00279",
+      "exit": 0,
+      "seconds": 49.78,
+      "max_rss_bytes": 9936896000,
+      "axioms": [
+        "'OmissionResidual.node1088' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "c4dc9e27e4a1a12e6e321de14a6cdcf11f34f33d1b1893922942437c83b5084a"
+    },
+    {
+      "module": "Part00280",
+      "exit": 0,
+      "seconds": 64.73,
+      "max_rss_bytes": 10663772160,
+      "axioms": [
+        "'OmissionResidual.node1091' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "333f4e0731a74404ae7e11bf5835610f7fcded586a1ab61fe7cc1766aa0e7034"
+    },
+    {
+      "module": "Part00281",
+      "exit": 0,
+      "seconds": 25.46,
+      "max_rss_bytes": 6304120832,
+      "axioms": [
+        "'OmissionResidual.node1093' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "d94957bfc0d4a5defa05cd62f7c8d22ef0eac8b0deadd37ca92584c3102c6b85"
+    },
+    {
+      "module": "Part00282",
+      "exit": 0,
+      "seconds": 51.51,
+      "max_rss_bytes": 8572059648,
+      "axioms": [
+        "'OmissionResidual.node1096' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "6e0b7d24d7399a9e0a63a1c95f083d08ea4cdd5c7b66d0e9e89d4056d1d95581"
+    },
+    {
+      "module": "Part00283",
+      "exit": 0,
+      "seconds": 48.85,
+      "max_rss_bytes": 8925691904,
+      "axioms": [
+        "'OmissionResidual.node1100' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "691d5f871ea39c4b4cc5e858191c8c92a6a7264423acfc6150aeef59f3d10b83"
+    },
+    {
+      "module": "Part00284",
+      "exit": 0,
+      "seconds": 27.11,
+      "max_rss_bytes": 6222118912,
+      "axioms": [
+        "'OmissionResidual.node1101' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "f9a71820c1d4b3d2014f61a9ac72ed6ebc50e243a41a9921fdefbef4f67fa95c"
+    },
+    {
+      "module": "Part00285",
+      "exit": 0,
+      "seconds": 52.42,
+      "max_rss_bytes": 10529210368,
+      "axioms": [
+        "'OmissionResidual.node1109' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "d9db1ad9a91db93a4b6e2c4399998ceb25019429a262f724c4300ee2b07f315a"
+    },
+    {
+      "module": "Part00286",
+      "exit": 0,
+      "seconds": 57.81,
+      "max_rss_bytes": 10366631936,
+      "axioms": [
+        "'OmissionResidual.node1112' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "019a69f26b04770e17f61d98b277bc1bc011730e19ea9554d9e3c00b52c6a2da"
+    },
+    {
+      "module": "Part00287",
+      "exit": 0,
+      "seconds": 39.25,
+      "max_rss_bytes": 8104198144,
+      "axioms": [
+        "'OmissionResidual.node1113' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "d6cb3a1c6a4fa1d90ce5625ab724506720c6f4672c9fd80547a23fca40227a2b"
+    },
+    {
+      "module": "Part00288",
+      "exit": 0,
+      "seconds": 59.64,
+      "max_rss_bytes": 9300131840,
+      "axioms": [
+        "'OmissionResidual.node1117' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "f00669517df743ec132b522d6adf5616b29058441b8f162ff518819659856f3d"
+    },
+    {
+      "module": "Part00289",
+      "exit": 0,
+      "seconds": 64.57,
+      "max_rss_bytes": 9126756352,
+      "axioms": [
+        "'OmissionResidual.node1123' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "83ab98160974023d8612c01dabf8ec8ed6bccda54f6b5cad27c59c65fe054401"
+    },
+    {
+      "module": "Part00290",
+      "exit": 0,
+      "seconds": 60.78,
+      "max_rss_bytes": 10963189760,
+      "axioms": [
+        "'OmissionResidual.node1127' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "8ef0b8e2b00df398eccddd166713a61189bca03f6fa7562d1cc2355a7e2a1cdf"
+    },
+    {
+      "module": "Part00291",
+      "exit": 0,
+      "seconds": 53.58,
+      "max_rss_bytes": 8886927360,
+      "axioms": [
+        "'OmissionResidual.node1134' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "c477e690912a08eaeca2c9df25d7288c850a9b169712fd0f80bc447caf864405"
+    },
+    {
+      "module": "Part00292",
+      "exit": 0,
+      "seconds": 24.65,
+      "max_rss_bytes": 5993431040,
+      "axioms": [
+        "'OmissionResidual.node1137' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "a05d439970e3045e800ee4c3d0340023cdb50a583fd608a5c35b2bcc9d0f2ab9"
+    },
+    {
+      "module": "Part00295",
+      "exit": 0,
+      "seconds": 48.08,
+      "max_rss_bytes": 10045882368,
+      "axioms": [
+        "'OmissionResidual.node1147' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "7fd51dba73d7575eba1db9edaf1862d1a0a4a757bd9ef77209a7956359af071d"
+    },
+    {
+      "module": "Part00296",
+      "exit": 0,
+      "seconds": 25.98,
+      "max_rss_bytes": 6824214528,
+      "axioms": [
+        "'OmissionResidual.node1148' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "4a80ecd43176f89fb082138341f7ebc0f71b5e9293f28863af7c549383c25b0a"
+    },
+    {
+      "module": "Part00297",
+      "exit": 0,
+      "seconds": 76.41,
+      "max_rss_bytes": 14971174912,
+      "axioms": [
+        "'OmissionResidual.node1156' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "e131fcc3691f4f9e31180702504f297b04e1646d8d18cb6396a6384abb964bf7"
+    },
+    {
+      "module": "Part00301",
+      "exit": 0,
+      "seconds": 41.8,
+      "max_rss_bytes": 8938258432,
+      "axioms": [
+        "'OmissionResidual.node1167' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "1ff3f588decd462e018a653929819e476de5bb046063d762618175ea27c5e556"
+    },
+    {
+      "module": "Part00302",
+      "exit": 0,
+      "seconds": 32.97,
+      "max_rss_bytes": 8223211520,
+      "axioms": [
+        "'OmissionResidual.node1170' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "a8831a860fc7a7364c016b158eadc6f809ad152b495cbf9e2409bbfe6efeaa51"
+    },
+    {
+      "module": "Part00307",
+      "exit": 0,
+      "seconds": 27.61,
+      "max_rss_bytes": 7316127744,
+      "axioms": [
+        "'OmissionResidual.node1188' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "852c2702cfd2d9d7e37ca914335e1b26adbb8689775fd6591fd8310e20fc6c1e"
+    },
+    {
+      "module": "Part00309",
+      "exit": 0,
+      "seconds": 25.3,
+      "max_rss_bytes": 7099777024,
+      "axioms": [
+        "'OmissionResidual.node1196' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ],
+      "stdout_tail": "",
+      "stderr_tail": "",
+      "source_sha256": "71be03766ce86b730b2ad0d0c960b907bb1f6f0d21d1870ccf9debfa831ae011"
+    }
+  ],
+  "new_kernel_checks": {
+    "scope": "Literal finite row system only; no geometric theorem",
+    "binding": {
+      "manifest": "4de6ce291b08c362022e9843b16b12212444e6e7400b0d53532ebf0563daaf40",
+      "lean": "Lean (version 4.24.0, arm64-apple-darwin23.6.0, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)",
+      "inputs": {
+        "lean-toolchain": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434",
+        "lake-manifest.json": "bc21802066bdf7c94b0eb1e7bd3d3389ae0d416c2ed69c6e5dae03e74945c8e7",
+        ".lake/build/lib/lean/ErdosSzekeres/OmissionCertificates.olean": "54394f6a413b31a4a4174b3f1655e7af3568a7f94e849b13353c717399c6bdc9",
+        ".lake/build/lib/lean/ErdosSzekeres/OmissionPacking.olean": "0068fcfb003180c1974bd054b50f9e4ac1a1c8d799bb46df16e93fcea66fe021"
+      }
+    },
+    "fingerprint": "2384563fa345ec3ecb49174c42f649aafb84b3374ed4bb49fe7560c471a856b6",
+    "modules": {
+      "Catalog": {
+        "exit": 0,
+        "seconds": 18.525,
+        "source_sha256": "f94c74ecade3b2714f961cd3ee7826ad0804342886f0e86ab2ca3908f86cb7da",
+        "stdout": "'OmissionResidual.code_correct' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr": "",
+        "audited": true,
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "olean_sha256": "2e118ef392822f3543e9901180a3042c53489283d7ca28af39ac74a540b70a80"
+      },
+      "Part00293": {
+        "exit": 0,
+        "seconds": 54.056,
+        "source_sha256": "e16d0f42fd2139df77e1d87fd124fdb6f14b3e016121f18d283f91f621f77dca",
+        "stdout": "'OmissionResidual.node1140' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr": "",
+        "audited": true,
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "olean_sha256": "8174da82f6f3348779784fdfd8530b43259b18ed88f945bc16949b1fcaae9a11"
+      },
+      "Part00294": {
+        "exit": 0,
+        "seconds": 69.174,
+        "source_sha256": "3bf8fbfc49dd9699f85335fa2c7708756cd09163d543208074701c04043c00e6",
+        "stdout": "'OmissionResidual.node1146' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr": "",
+        "audited": true,
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "olean_sha256": "4b3c02682471a643d495dd76d5f76617cfb907657a8fc57193c70b20f534775a"
+      },
+      "Part00298": {
+        "exit": 0,
+        "seconds": 66.674,
+        "source_sha256": "e8bf415f746ca5147f555e1755d3085b5c96e4e157632b6510e08eff5c0d30ea",
+        "stdout": "'OmissionResidual.node1161' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr": "",
+        "audited": true,
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "olean_sha256": "919d4e5b586254c9beb4e3214ff8390e84c2d06ea632301671f65ca6635cb2c5"
+      },
+      "Part00299": {
+        "exit": 0,
+        "seconds": 37.27,
+        "source_sha256": "f53d993ed1472e893407a4469f0773276240a9364f8185c0a707fe795e3afeff",
+        "stdout": "'OmissionResidual.node1163' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr": "",
+        "audited": true,
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "olean_sha256": "61a009e51d650d2a4d9c50d6e953ee87c39566e6469a51f53c9b91965d521535"
+      },
+      "Part00300": {
+        "exit": 0,
+        "seconds": 59.227,
+        "source_sha256": "1503e8757df4a7548df4318ec8aa71634400a6b232f91db74cffacda4f5721d9",
+        "stdout": "'OmissionResidual.node1164' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr": "",
+        "audited": true,
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "olean_sha256": "88df5013c0e3a6d47b76df757a20d6ae2e7f3afc28d92f04746df5f02f59f57b"
+      },
+      "Part00303": {
+        "exit": 0,
+        "seconds": 44.748,
+        "source_sha256": "563531355ad1dc4a977d2f67edd4ba9fb35da1a1226eff6d6b7c87fee963b31d",
+        "stdout": "'OmissionResidual.node1174' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr": "",
+        "audited": true,
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "olean_sha256": "d7b92f845f4e208217aee2a000346e5ad0a7cf49cdf27b970087eae00d23332e"
+      },
+      "Part00304": {
+        "exit": 0,
+        "seconds": 37.782,
+        "source_sha256": "0282b4870014d993e566fdc83833a7765d6330f90a36202ccc7fd9a0bbf307a4",
+        "stdout": "'OmissionResidual.node1177' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr": "",
+        "audited": true,
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "olean_sha256": "4753c226e402a59e0bb5e3e8e124d7c34e796d85ed602277e9068bdf56a5c94b"
+      },
+      "Part00305": {
+        "exit": 0,
+        "seconds": 40.796,
+        "source_sha256": "43aba8570cde919ea223cd1b93d113020e65b3dcf54097a32eb769d238a66e49",
+        "stdout": "'OmissionResidual.node1184' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr": "",
+        "audited": true,
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "olean_sha256": "4ecebbb7105f2fce8f0ef6ad84211748377a7a8794342c679c6e6c491595373d"
+      },
+      "Part00306": {
+        "exit": 0,
+        "seconds": 57.238,
+        "source_sha256": "b1581131cb2a7445c695ef03103020cc087e58c0bf5707b5bf7d65a5b252e2e0",
+        "stdout": "'OmissionResidual.node1185' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr": "",
+        "audited": true,
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "olean_sha256": "a0fc99785e1f33c5716c3858ecdc8450da289d082d984f19021a4e5eb1b99c93"
+      },
+      "Part00308": {
+        "exit": 0,
+        "seconds": 53.476,
+        "source_sha256": "cf7f90b924dc4db91ac9cbc9b0bf7f6da6dde207ddb309b1926df046c2290fa5",
+        "stdout": "'OmissionResidual.node1193' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr": "",
+        "audited": true,
+        "axioms": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "olean_sha256": "cf7245a43fb68e8ada32c6df09822870cedc352327acf1738eda312300aa2384"
+      }
+    },
+    "complete": false
+  },
+  "notes": [
+    "The previous 300 part checks were recovered from October 7-8 local logs.",
+    "Ten failed, interrupted or unstarted nearby parts were checked sequentially with one Lean worker on October 9.",
+    "All remaining parts and the root still need kernel checks. The row geometry is separate."
+  ]
+}
