@@ -143,8 +143,8 @@ This material is separate from the finished Suk and HMPT formalizations.
 
 - **Residual omission system:** a complete exact integer certificate gives the
   auxiliary occupancy target 123, with independent arithmetic replays. Lean has
-  checked the first **360 of 3,411 parts**, covering **15,131 of 145,474 leaves**.
-  The [latest partial-build record](experiments/omission-residual-progress-2026-10-09-batch3.json)
+  checked the first **380 of 3,411 parts**, covering **16,052 of 145,474 leaves**.
+  The [latest partial-build record](experiments/omission-residual-progress-2026-10-09-batch4.json)
   preserves the successful checks. The residual arithmetic root remains unfinished;
   all geometric row requirements are now proved.
 - **Global finite octagon target:** the balanced geometric theorem, minimum-slope

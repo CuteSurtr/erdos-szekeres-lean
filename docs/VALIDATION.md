@@ -27,7 +27,13 @@ preserved.
 
 The [third residual batch](../experiments/omission-residual-progress-2026-10-09-batch3.json)
 adds 30 parts and 1,304 leaves, bringing the checked frontier to **360 parts
-and 15,131 leaves**. This is a partial arithmetic result, not a root exclusion.
+and 15,131 leaves**. This is a partial arithmetic result, not a root exclusion. The
+[fourth batch](../experiments/omission-residual-progress-2026-10-09-batch4.json)
+adds another 20 parts and 921 leaves, including eight independently checked
+parts whose identical prerequisite bindings and output hashes were verified
+before merging their records. The latest frontier is **380 of 3,411 parts**
+and **16,052 of 145,474 leaves**. Across the 45-minute session, 50 parts and
+2,225 leaves were added; the full residual root remains unchecked.
 
 Lean accepts the literal residual cycle and block controls and rejects a
 corrupted cyclic order and collapsed compression thresholds. A further control

@@ -135,7 +135,7 @@ and a no-carry bound recover every column load from a packed equality. On one
 `decide +kernel`, taking 34.2 and 12.8 seconds in separate local runs. These
 are feasibility probes, not controlled benchmarks or complete Lean tree checks.
 The two standalone `.lean` pilot files are saved in `experiments/` and are
-checked separately from the main library's current 201-theorem CI audit.
+checked separately from the main library's then-current 201-theorem CI audit.
 
 The earlier [chunked checkpoint](../experiments/omission-chunked-2026-10-05/README.md)
 checks all 2,685 balanced row encodings in 21 blocks and checks the existing
@@ -148,13 +148,12 @@ been superseded by the complete balanced proof linked above; the residual tree
 remains incomplete. The generic lemmas are included in the 201-theorem audit;
 the standalone catalog and leaf have their own saved axiom output.
 
-The remaining geometric connection can be identified precisely in the source
-package: `ES8ActualRanks` constructs attained ending-path ranks;
-`ES8BalancedStates` and `ES8BalancedCatalog` provide the injective owner map;
-`ES8CycleValidation` and `ES8BalancedGeometry.balanced_bound` discharge the literal
-row constraints for real configurations. The residual side also requires its
-block and cyclic-row geometry. These source modules have been inspected but
-not ported into this project's dependency graph.
+At that early arithmetic checkpoint, the geometric connection was identified
+in `ES8ActualRanks`, `ES8BalancedStates`, `ES8BalancedCatalog`, cycle validation,
+and the residual block argument. Those obligations have since been ported and
+proved: see the [balanced](OMISSION_GEOMETRY.md) and
+[residual](OMISSION_RESIDUAL.md) geometric proof maps. Their current audit and
+standalone records supersede that early inspection-only status.
 
 ## Reproduction
 
