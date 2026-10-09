@@ -126,3 +126,27 @@ the root-cap lemma to every cap size at least three, exposes the actual maps in
 theorem parameter. The standalone `BalancedProjective.lean` adds the cardinality
 composition with the completed balanced bound. The [proof map](OMISSION_PROJECTIVE.md)
 distinguishes these checked statements from the still-unproved global bound.
+
+## Minimum-slope partition — 9 October 2026
+
+Eight further modules under `ErdosSzekeres/Omission/` adapt the same archive's
+MIT proof code, copyright (c) 2026 Michael Schroeder. Every source header credits
+the archive; the complete notice remains in [SCHROEDER-MIT.txt](SCHROEDER-MIT.txt).
+
+| Local module | Source module / adaptation |
+| --- | --- |
+| `PlanarChains.lean` | `ES8PlanarChains.lean`: real-plane four-point identities and bounded chain closure. |
+| `ListGeometry.lean` | List/sign portion of `ES8BaekGeometry.lean`; adds both directions of the bridge to this project's all-triples cup/cap predicates. It does not import the source's Baek capacity theorem. |
+| `MinimumSlope.lean` | `ES8MinimumSlope.lean`: attained minima and strict geometric consequences. |
+| `Subsets.lean` | Reindexing and junction portion of `ES8Subset.lean`; replaces source-specific population imports with local image, avoidance and junction transport. |
+| `CupExtension.lean` | Chord identity and arc strategy from `ES8BoundaryGeometry.lean`; proves a direct all-triples one-point extension using this project's convex-position theorem, without porting the full boundary module. |
+| `SlopePartition.lean` | `ES8SlopePartition.lean`: initial split, junction removal and residual restrictions. The source's final population-bound call is replaced by an explicit local composition. |
+| `ThreeChain.lean` | `ES8ThreeChain.lean`: adapts the case argument to actual `HasConvexNGon`, using the new direct cup/three-cap lemma. |
+| `Partition.lean` | `ES8PartitionComplete.lean`: complete seven-cup exclusion; adds disjointness, exact subset cardinality, an actual-configuration partition theorem and conditional population composition. |
+
+All coordinates, namespaces and imports are adapted to the local Lean/Mathlib
+4.24 library. The residual population estimate is an explicit parameter, not
+an axiom. The standalone `BalancedPartition.lean` supplies the already checked
+balanced bound and adds the necessary 124-point residual condition for a
+putative 317-point counterexample. The source method is credited; these ports
+are not claimed as independently discovered geometric arguments.

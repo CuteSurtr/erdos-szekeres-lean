@@ -32,10 +32,12 @@ Prepend `ErdosSzekeres.Omission.` to the names below.
 There is **no theorem proving `AsymmetricBound 315` yet**. In particular, a
 7-cup is allowed in this remaining obligation. The finished balanced theorem
 requires that there be no 7-cup as well, so it cannot be substituted directly.
-The intended partition would bound the balanced and residual parts by
-`192 + 123 = 315`. Its geometric hypotheses and the residual certificate still
-need proof. The two extra points in the global threshold are exactly the
-deleted root and the strict forcing threshold.
+The [completed partition](OMISSION_PARTITION.md) now proves all the splitting
+and avoidance hypotheses needed to combine balanced and residual bounds as
+`192 + 123 = 315`. The residual bound remains unproved; after importing the
+finished balanced certificate, it is the only remaining population hypothesis.
+The two extra points in the global threshold are exactly the deleted root and
+the strict forcing threshold.
 
 ## Consequence of the completed balanced bound
 

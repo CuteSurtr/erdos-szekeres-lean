@@ -1,9 +1,40 @@
 # Verification records
 
+## Complete geometric partition — 2026-10-09
+
+The main `lake build --wfail` passes with **3,216 jobs**. The
+[current full audit](validation/axiom-audit-partition-2026-10-09.txt) covers
+**350 named roots**, including all 73 public theorems in the eight new partition
+modules. Only `propext`, `Classical.choice` and `Quot.sound` occur. All **55 Python
+tests** pass with the optional solvers and Lean integration controls enabled.
+The separate
+[composition artifact](../experiments/omission-partition-2026-10-09/README.md)
+checks four more theorems against the previously verified balanced certificate.
+
+The complete partition includes actual induced configurations, an exact
+disjoint cover, the three-chain argument, and every avoidance and junction
+restriction. The resulting `OmissionBalanced.forces_317_of_residual_123` still
+has the unproved `Partition.ResidualBound 123` hypothesis. The unconditional
+structural conclusion extracts at least 124 residual chart points from any
+putative octagon-free set of at least 317 real points. Neither theorem proves
+the global bound without the residual population argument.
+
+The validation manifest records the full source inventory, checks the saved
+balanced prerequisite bindings and stores the exact standalone axiom output.
+The large certificate trees are not rebuilt at this checkpoint; their compiled
+objects match the earlier successful check records. Earlier records below
+remain historical and are not overwritten.
+
+The scan covers **127 loose maintained Lean files** with no proof placeholders
+or custom axioms. Git tracks no caches or compiled outputs. The source bindings
+of all 86 balanced geometry checks and their 114 prerequisite inputs match the
+previous successful records; the new manifest also records the adapted
+upstream source hashes.
+
 ## Projective/root transfer — 2026-10-09
 
 The main `lake build --wfail` passes with **3,208 jobs**. The
-[current full audit](validation/axiom-audit-projective-2026-10-09.txt) passes for
+[saved audit](validation/axiom-audit-projective-2026-10-09.txt) passes for
 **277 named roots**, including the eight new projective-transfer theorems.
 Only `propext`, `Classical.choice` and `Quot.sound` occur. All **55 Python tests**
 pass with the optional solvers and Lean integration controls enabled.

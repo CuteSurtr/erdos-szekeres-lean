@@ -66,5 +66,5 @@ The subsequent [projective reduction](OMISSION_PROJECTIVE.md) connects this
 bound to arbitrary real point sets: every octagon-free set of at least 194
 points has a root-deletion chart containing a 7-cup. It also completes the
 conditional transfer from `AsymmetricBound 315` to ES(8) ≤ 317. That population
-hypothesis, including the residual and partition arguments, remains unproved;
-see the [remaining-work record](ES8_REMAINING.md).
+hypothesis is now reduced by the [completed partition](OMISSION_PARTITION.md)
+to the unproved residual bound of 123; see the [remaining-work record](ES8_REMAINING.md).

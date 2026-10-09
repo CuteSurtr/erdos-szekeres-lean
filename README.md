@@ -54,7 +54,7 @@ the stronger arithmetic certificate and local geometric connections are describe
 in the [proof map](docs/OMISSION_GEOMETRY.md) and
 [reproducible artifact](experiments/omission-balanced-geometry-2026-10-09/README.md).
 This subcase's extra cup/cap restrictions cannot be dropped. The residual bound
-and partition argument needed for the global octagon bound are unfinished.
+needed for the global octagon bound is unfinished.
 
 ## Completed projective reduction — 9 October 2026
 
@@ -76,13 +76,30 @@ consequence is checked separately as
 ES(8) ≤ 194. See the [projective proof map](docs/OMISSION_PROJECTIVE.md) and
 [check record](experiments/omission-projective-transfer-2026-10-09/README.md).
 
+## Completed geometric partition — 9 October 2026
+
+`ErdosSzekeres.Omission.Partition.exists_partition` now proves the full
+minimum-slope split into disjoint balanced and residual induced configurations,
+including the three-chain argument and every avoidance restriction. It lives
+in [Partition.lean](ErdosSzekeres/Omission/Partition.lean); the
+[proof map](docs/OMISSION_PARTITION.md) lists all eight supporting modules.
+
+Combining this with the completed balanced certificate proves
+`OmissionBalanced.forces_317_of_residual_123`:
+**`Partition.ResidualBound 123 → ForcesConvexNGon 317 8`**.
+The residual population bound remains unproved. A putative octagon-free set
+of at least 317 points is now proved to supply an actual residual chart subset
+of at least 124 points, with no 6-cap, no octagon and no incoming-six-cup/
+outgoing-five-cap junction. The [standalone artifact](experiments/omission-partition-2026-10-09/README.md)
+checks these compositions separately from the default library.
+
 ## Verification
 
 Pinned versions: **Lean 4.24.0**, **Mathlib v4.24.0**; dependency revisions are in
 [lake-manifest.json](lake-manifest.json).
 
 The current library passes `lake build --wfail`. The
-[full saved axiom audit](docs/validation/axiom-audit-projective-2026-10-09.txt) checks **277 named
+[full saved axiom audit](docs/validation/axiom-audit-partition-2026-10-09.txt) checks **350 named
 theorems**, including both main theorems and their transitive axiom dependencies.
 Only `propext`, `Classical.choice`, and `Quot.sound` are allowed. There is no
 `sorry`, `admit`, `sorryAx`, or `native_decide` in the maintained Lean sources,
@@ -111,9 +128,10 @@ This material is separate from the finished Suk and HMPT formalizations.
   auxiliary occupancy target 123, with independent arithmetic replays. Lean has
   checked the first **330 of 3,411 parts**, covering **13,827 of 145,474 leaves**.
   The residual root and its geometric row requirements remain unfinished.
-- **Global finite octagon target:** the balanced geometric theorem and the
-  projective/root transfer are complete. The residual bound and minimum-slope
-  partition must still establish the remaining `AsymmetricBound 315` hypothesis.
+- **Global finite octagon target:** the balanced geometric theorem, minimum-slope
+  partition and projective/root transfer are complete. The remaining hypothesis
+  is `Partition.ResidualBound 123`, requiring the residual geometry, block
+  capacities and completed arithmetic proof.
   Consequently **ES(8) ≤ 317 is not a theorem of this repository**.
 - **Other retained experiments:** exact-coordinate searches, SAT/SMT attempts and
   a Lean-checked counterexample to a proposed mixed-cap lemma. None improves the
