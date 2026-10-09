@@ -35,3 +35,4 @@ import ErdosSzekeres.OmissionPacking
 import ErdosSzekeres.Omission.FirstCycle
 import ErdosSzekeres.Omission.ProjectiveTransfer
 import ErdosSzekeres.Omission.Partition
+import ErdosSzekeres.Omission.BlockGeometry

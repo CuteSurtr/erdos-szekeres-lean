@@ -1,0 +1,129 @@
+{
+  "scope": "All 1187 residual geometric rows; no arithmetic population bound",
+  "source_sha256": "c116d7be3ca01083334f5daced97ca38cd6155db4c24aef0cece02566ee864fa",
+  "row_source_sha256": "bccd12477064d8a490bbe863ae49dbc8d9dfececf7a65426ba36f7537c66293a",
+  "exporter_sha256": "5d1388dbedda57151f3f5caf788aba6413d76f96e09b29311c5b4b63b4bd7fcb",
+  "block_rows": 23,
+  "total_rows": 1187,
+  "modules": [
+    {
+      "module": "ResidualBlock00973",
+      "row": 973
+    },
+    {
+      "module": "ResidualBlock01165",
+      "row": 1165
+    },
+    {
+      "module": "ResidualBlock01166",
+      "row": 1166
+    },
+    {
+      "module": "ResidualBlock01167",
+      "row": 1167
+    },
+    {
+      "module": "ResidualBlock01168",
+      "row": 1168
+    },
+    {
+      "module": "ResidualBlock01169",
+      "row": 1169
+    },
+    {
+      "module": "ResidualBlock01170",
+      "row": 1170
+    },
+    {
+      "module": "ResidualBlock01171",
+      "row": 1171
+    },
+    {
+      "module": "ResidualBlock01172",
+      "row": 1172
+    },
+    {
+      "module": "ResidualBlock01173",
+      "row": 1173
+    },
+    {
+      "module": "ResidualBlock01174",
+      "row": 1174
+    },
+    {
+      "module": "ResidualBlock01175",
+      "row": 1175
+    },
+    {
+      "module": "ResidualBlock01176",
+      "row": 1176
+    },
+    {
+      "module": "ResidualBlock01177",
+      "row": 1177
+    },
+    {
+      "module": "ResidualBlock01178",
+      "row": 1178
+    },
+    {
+      "module": "ResidualBlock01179",
+      "row": 1179
+    },
+    {
+      "module": "ResidualBlock01180",
+      "row": 1180
+    },
+    {
+      "module": "ResidualBlock01181",
+      "row": 1181
+    },
+    {
+      "module": "ResidualBlock01182",
+      "row": 1182
+    },
+    {
+      "module": "ResidualBlock01183",
+      "row": 1183
+    },
+    {
+      "module": "ResidualBlock01184",
+      "row": 1184
+    },
+    {
+      "module": "ResidualBlock01185",
+      "row": 1185
+    },
+    {
+      "module": "ResidualBlock01186",
+      "row": 1186
+    }
+  ],
+  "lean_checked": false,
+  "files": {
+    "ResidualAllGeometry.lean": "951a8a68798baacb7ce37a43b076302afb04180dfb7fac84e88464e546ab9883",
+    "ResidualBlock00973.lean": "a167e119c0c789a6c46cd9d3f4a2a0d1ac57e7a1ec4aedb4c1f654dd2925a1c1",
+    "ResidualBlock01165.lean": "f2180d68eb923fb49d9422c51ba501b0888c6befc20e23b08b1f0fe7354e9cd8",
+    "ResidualBlock01166.lean": "a40e39f4cd4aaf0211be4fb0768553a09c86fad26796d498b3e9e19ae6544385",
+    "ResidualBlock01167.lean": "30a3e7457f8786d386d3824f0d9772795fa418d44444c12031f40deef2e64fef",
+    "ResidualBlock01168.lean": "45dce30c9baa8012a4dbdeaa9a35a93e836f6de593b1980116213a60ce2863f5",
+    "ResidualBlock01169.lean": "2f40de5811db7cce8db49f778274aa02fa98e739fbe942c655c72e09d38bb8a9",
+    "ResidualBlock01170.lean": "aef973bfbb1abc4bc20a83c53d126a0b1c986b85b37d6247ae163d24fb504042",
+    "ResidualBlock01171.lean": "f9498bb49b42a604056dba0b76d7d5835a7425052527724e273ed2211cbd6706",
+    "ResidualBlock01172.lean": "70a5dc5fba0fa2573cb4bafe7bde316cb25003486da9fa2cc8883944b658c70d",
+    "ResidualBlock01173.lean": "7f39120dfaabeb0577bcc07a1ce064ca87097397519d1ac8a517c871ca514f24",
+    "ResidualBlock01174.lean": "baf1064bd1ef867aa10b3aed3f6723475a4aa6412c9aaae7e1b9e5d631d124e1",
+    "ResidualBlock01175.lean": "1f72a500e1dac9217dc45bae02157873af38f02d2c83cbceeebbdd7f8bec38d6",
+    "ResidualBlock01176.lean": "e25b3a4f96f6143b775d8b0fe759151e95a847a11ac424137d9d2814208350d1",
+    "ResidualBlock01177.lean": "c4440b8172c1298a4dcc45d99dcd670c56c1cbe46faff855993896073b90642a",
+    "ResidualBlock01178.lean": "d7783f2058f68e0a31f69661d13c36324964a51c97fcd97e2855e52904fd4cb6",
+    "ResidualBlock01179.lean": "c85204731a8c864bb0cc8f0f5bed823e1576f6348ae07839f31c8e56f671169c",
+    "ResidualBlock01180.lean": "0a6e1525339ba2af893a096abc1256a322f94739de13a53a3bd611bcc8e53387",
+    "ResidualBlock01181.lean": "4ea4ac1a69db7aa91e47793c5b14d5db17903305d3ce0445a68e9f69c1ba5662",
+    "ResidualBlock01182.lean": "290e10463bb490988acdcbe94bb9983f184716fbfb449cbe4bade998e29bf4e2",
+    "ResidualBlock01183.lean": "4f7b2823b36a19973aa909b6dd5867632686b1a458856bb466631e757e775fba",
+    "ResidualBlock01184.lean": "411fc3acb161f197f14caf07fd626f58d244189cdfc896fd8979b255a790e4cd",
+    "ResidualBlock01185.lean": "b2893e7517ad9adab75d65357e332127eb20770337681a8094d820ed935395c6",
+    "ResidualBlock01186.lean": "68c3f1a2af4e00153ac105b8efa9376bb21eadaf7b2f3cb91485c5b45571e384"
+  }
+}

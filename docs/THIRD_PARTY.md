@@ -33,7 +33,9 @@ style lint warnings in the adapted files. Kernel checking is unchanged. The
 upstream cap-cup theorem gives consecutive-triple paths for arbitrary colorings.
 `Suk/TransitiveColoring.lean` supplies a separate proved path-to-clique bridge
 under transitivity, then derives the clique upper bound needed in Suk's proof.
-No ETV extremal theorem or enumeration certificate is imported.
+The original cups-caps prerequisite did not import the ETV extremal theorem.
+The later residual block port below adds the relevant Baek theorem, with a
+separate proved transfer from its list predicate to real convex polygons.
 
 ## Finite octagon search inputs
 
@@ -150,3 +152,41 @@ an axiom. The standalone `BalancedPartition.lean` supplies the already checked
 balanced bound and adds the necessary 124-point residual condition for a
 putative 317-point counterexample. The source method is credited; these ports
 are not claimed as independently discovered geometric arguments.
+
+## Residual geometry and Baek block bound — 9 October 2026
+
+The following further modules under `ErdosSzekeres/Omission/` adapt the same
+version-1 archive's MIT code, copyright (c) 2026 Michael Schroeder. Source
+headers and [SCHROEDER-MIT.txt](SCHROEDER-MIT.txt) preserve the notice.
+
+| Local module | Source / adaptation |
+| --- | --- |
+| `ResidualRanks.lean` | `ES8ResidualRanks.lean`; adds the bridge from the proved actual no-junction condition to rank witnesses. |
+| `ResidualStates.lean` | `ES8ResidualStates.lean`; kernel enumeration of the 154 restricted profiles. |
+| `ResidualCatalog.lean` | `ES8ResidualCatalog.lean`; exact local owner indexing. |
+| `ResidualDomains.lean` | `ES8ResidualDomains.lean`; actual directed label differences. |
+| `BlockCompression.lean` | `ES8BlockCompression.lean`; finite pairs/growth checks and the two-valued rank argument, omitting the source-specific mask checker. |
+| `BlockGeometry.lean` | `ES8BlockGeometry.lean`; actual capacity and a new finite-set row interface. |
+| `BoundaryGeometry.lean` | `ES8BoundaryGeometry.lean` plus supporting affine-function lemmas from `ES8Geometry.lean`; uses `Fin 2 → ℝ` and proves a general finite polygon conclusion. |
+| `Baek.lean` | `ES8Baek.lean`; specialization of the separately ported Apache-2.0 theorem. |
+| `BaekGeometry.lean` | Remaining boundary-to-polygon portion of `ES8BaekGeometry.lean`, reusing the already maintained list/sign bridge. |
+
+`ResidualCatalogData.lean` preserves the exact source profile order, including
+its trailing zero. Catalog, cycle and block data are CC BY 4.0. The new residual
+exporters retain the source's 1,164 cycle orders and 23 compression records and
+replace evaluation-based validations with kernel checks. The artifact retains
+source hashes, notices, a byte-preserved residual JSON and generated proof sources.
+`ResidualRealization.lean`, `ResidualBoxes.lean` and `ResidualCycleGeometry.lean`
+adapt the local balanced connections to the restricted residual ranks; these
+use the credited source method, not a claimed independent geometric discovery.
+
+The following new modules under `ErdosSzekeres/Vendor/ETV/` port Jineon Baek's
+proof as distributed in the archive, under Apache-2.0:
+`Lib/List/Mirror`, `Config/Mirror`, `Config/Default`, the five `Etv/*` modules,
+`Main/Defs`, `Main/InductionStep`, `Main/Main`, and the five `Main/Lemmas/*`
+modules. Existing vendored files are preserved. Changes redirect imports,
+restore mirror lemmas in a separate module, and adapt sorted-list APIs to
+Lean/Mathlib 4.24. Full license: [APACHE-2.0.txt](APACHE-2.0.txt).
+The general Baek theorem, its 23-point specialization and the real geometric
+interpretation all build and pass the axiom audit. None enters the dependency
+closure of the finished Suk or HMPT main theorem.

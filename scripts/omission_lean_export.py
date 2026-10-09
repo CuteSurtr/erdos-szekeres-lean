@@ -161,9 +161,12 @@ def node_source(index, n, rows, nodes, budget, contexts):
     return lines
 
 
-def export(source, tree, output, namespace="OmissionExport", leaf_limit=16, subtree=None):
+def export(source, tree, output, namespace="OmissionExport", leaf_limit=16, subtree=None,
+           module_prefix=""):
     if not re.fullmatch(r"[A-Za-z][A-Za-z0-9_]*", namespace):
         raise ValueError("Use a simple Lean namespace identifier")
+    if module_prefix and not re.fullmatch(r"[A-Za-z][A-Za-z0-9_]*", module_prefix):
+        raise ValueError("Use a simple Lean module prefix")
     if type(leaf_limit) is not int or leaf_limit < 1:
         raise ValueError("Leaf limit must be positive")
     if output.exists():
@@ -196,7 +199,10 @@ def export(source, tree, output, namespace="OmissionExport", leaf_limit=16, subt
 
     partition(root)
     output.mkdir(parents=True)
-    (output / "Catalog.lean").write_text(catalog_source(
+    sources = output / module_prefix if module_prefix else output
+    sources.mkdir(exist_ok=True)
+    module = lambda name: f"{module_prefix}.{name}" if module_prefix else name
+    (sources / "Catalog.lean").write_text(catalog_source(
         n, rows, base, namespace, source_hash))
     modules = []
     for part, index in enumerate(parts):
@@ -211,13 +217,13 @@ def export(source, tree, output, namespace="OmissionExport", leaf_limit=16, subt
                 collect(nodes[j]["one"])
 
         collect(index)
-        lines = header(["Catalog"], namespace)
+        lines = header([module("Catalog")], namespace)
         for j in postorder:
             if j in selected:
                 lines += node_source(j, n, rows, nodes, budget, contexts)
         lines += [f"#print axioms node{index}", f"end {namespace}"]
-        (output / f"{name}.lean").write_text("\n".join(lines) + "\n")
-    lines = header(modules, namespace)
+        (sources / f"{name}.lean").write_text("\n".join(lines) + "\n")
+    lines = header([module(name) for name in modules], namespace)
     for index in remaining:
         lines += node_source(index, n, rows, nodes, budget, contexts)
     if root == cert["root"]:
@@ -231,19 +237,20 @@ def export(source, tree, output, namespace="OmissionExport", leaf_limit=16, subt
     else:
         lines += [f"#print axioms node{root}"]
     lines.append(f"end {namespace}")
-    (output / "Root.lean").write_text("\n".join(lines) + "\n")
+    (sources / "Root.lean").write_text("\n".join(lines) + "\n")
     report = {"scope": "Literal finite row system only; no geometric theorem",
               "source_sha256": source_hash, "tree_sha256": sha256(tree),
               "exporter_sha256": sha256(Path(__file__)),
               "states": n, "rows": len(rows), "budget": budget, "base": base,
-              "namespace": namespace, "root": root, "full_tree_root": cert["root"],
+              "namespace": namespace, "module_prefix": module_prefix,
+              "root": root, "full_tree_root": cert["root"],
               "exported_leaves": counts[root], "exported_parts": len(parts),
               "parts": [{"module": name, "root": index, "leaves": counts[index]}
                         for name, index in zip(modules, parts)],
               "contexts": {"missing": contexts[root][0], "occupied": contexts[root][1]},
               "python_check": checked,
               "lean_checked": False,
-              "files": {p.name: sha256(p) for p in sorted(output.glob("*.lean"))}}
+              "files": {str(p.relative_to(output)): sha256(p) for p in sorted(sources.glob("*.lean"))}}
     (output / "export.json").write_text(json.dumps(report, indent=2) + "\n")
     return report
 
@@ -256,9 +263,10 @@ if __name__ == "__main__":
     parser.add_argument("--namespace", default="OmissionExport")
     parser.add_argument("--leaf-limit", type=int, default=16)
     parser.add_argument("--subtree", type=int)
+    parser.add_argument("--module-prefix", default="", help="Unique module directory for linking independent proof trees")
     args = parser.parse_args()
     report = export(args.source, args.tree, args.output, args.namespace,
-                    args.leaf_limit, args.subtree)
+                    args.leaf_limit, args.subtree, args.module_prefix)
     print(json.dumps({k: report[k] for k in
                       ("states", "rows", "budget", "base", "exported_leaves", "exported_parts",
                        "lean_checked")}))

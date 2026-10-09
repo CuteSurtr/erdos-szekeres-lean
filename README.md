@@ -93,13 +93,30 @@ of at least 124 points, with no 6-cap, no octagon and no incoming-six-cup/
 outgoing-five-cap junction. The [standalone artifact](experiments/omission-partition-2026-10-09/README.md)
 checks these compositions separately from the default library.
 
+## Completed residual geometric transfer — 9 October 2026
+
+Actual residual configurations now inject into the exact **154-state** catalog.
+The hypotheses are no 6-cap, no convex octagon, and no incoming-six-cup /
+outgoing-five-cap junction. Lean checks the necessity of **all 1,187 rows**:
+1,164 cycle rows and 23 block rows. The block proof includes Baek's combinatorial
+bound and a proved supporting-line transfer to actual real convex polygons.
+
+The main standalone theorem is `OmissionResidual.all_geometric_rows`, in the
+[residual proof artifact](experiments/omission-residual-geometry-2026-10-09/README.md).
+`OmissionResidual.feasible_holes` supplies an actual Boolean hole vector with
+`sum holes + n = 154`. `residual_bound_of_arithmetic` reduces the desired
+`Partition.ResidualBound 123` to the explicit `ExcludesThirtyHoles` statement.
+**That arithmetic statement is still unproved in Lean.** The
+[proof map](docs/OMISSION_RESIDUAL.md) separates these completed geometric
+results from the partial arithmetic tree and final certificate assembly.
+
 ## Verification
 
 Pinned versions: **Lean 4.24.0**, **Mathlib v4.24.0**; dependency revisions are in
 [lake-manifest.json](lake-manifest.json).
 
 The current library passes `lake build --wfail`. The
-[full saved axiom audit](docs/validation/axiom-audit-partition-2026-10-09.txt) checks **350 named
+[full saved axiom audit](docs/validation/axiom-audit-residual-2026-10-09.txt) checks **444 named
 theorems**, including both main theorems and their transitive axiom dependencies.
 Only `propext`, `Classical.choice`, and `Quot.sound` are allowed. There is no
 `sorry`, `admit`, `sorryAx`, or `native_decide` in the maintained Lean sources,
@@ -126,12 +143,14 @@ This material is separate from the finished Suk and HMPT formalizations.
 
 - **Residual omission system:** a complete exact integer certificate gives the
   auxiliary occupancy target 123, with independent arithmetic replays. Lean has
-  checked the first **330 of 3,411 parts**, covering **13,827 of 145,474 leaves**.
-  The residual root and its geometric row requirements remain unfinished.
+  checked the first **360 of 3,411 parts**, covering **15,131 of 145,474 leaves**.
+  The [latest partial-build record](experiments/omission-residual-progress-2026-10-09-batch3.json)
+  preserves the successful checks. The residual arithmetic root remains unfinished;
+  all geometric row requirements are now proved.
 - **Global finite octagon target:** the balanced geometric theorem, minimum-slope
   partition and projective/root transfer are complete. The remaining hypothesis
-  is `Partition.ResidualBound 123`, requiring the residual geometry, block
-  capacities and completed arithmetic proof.
+  is `Partition.ResidualBound 123`, now reduced to the residual arithmetic
+  exclusion and final assembly with distinct generated module names.
   Consequently **ES(8) ≤ 317 is not a theorem of this repository**.
 - **Other retained experiments:** exact-coordinate searches, SAT/SMT attempts and
   a Lean-checked counterexample to a proposed mixed-cap lemma. None improves the

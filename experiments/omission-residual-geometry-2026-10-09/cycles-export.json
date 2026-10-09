@@ -1,0 +1,263 @@
+{
+  "scope": "1164 residual cycle rows only; 23 block rows excluded; no population bound",
+  "source_sha256": "bccd12477064d8a490bbe863ae49dbc8d9dfececf7a65426ba36f7537c66293a",
+  "cycle_source_sha256": "a79dcd5b72a62fd21d47439f8297835e7ed33e7cfeca6408ee18a3ed402a4681",
+  "exporter_sha256": "448fbd1649460041264dd6cc249fbb90cd6da65f20861b1ec1a4de8500aee621",
+  "rows": 1164,
+  "total_rows": 1187,
+  "excluded_rows": [
+    973,
+    1165,
+    1166,
+    1167,
+    1168,
+    1169,
+    1170,
+    1171,
+    1172,
+    1173,
+    1174,
+    1175,
+    1176,
+    1177,
+    1178,
+    1179,
+    1180,
+    1181,
+    1182,
+    1183,
+    1184,
+    1185,
+    1186
+  ],
+  "chunk_size": 32,
+  "modules": [
+    {
+      "module": "ResidualGeometry00000",
+      "start": 0,
+      "end": 32
+    },
+    {
+      "module": "ResidualGeometry00032",
+      "start": 32,
+      "end": 64
+    },
+    {
+      "module": "ResidualGeometry00064",
+      "start": 64,
+      "end": 96
+    },
+    {
+      "module": "ResidualGeometry00096",
+      "start": 96,
+      "end": 128
+    },
+    {
+      "module": "ResidualGeometry00128",
+      "start": 128,
+      "end": 160
+    },
+    {
+      "module": "ResidualGeometry00160",
+      "start": 160,
+      "end": 192
+    },
+    {
+      "module": "ResidualGeometry00192",
+      "start": 192,
+      "end": 224
+    },
+    {
+      "module": "ResidualGeometry00224",
+      "start": 224,
+      "end": 256
+    },
+    {
+      "module": "ResidualGeometry00256",
+      "start": 256,
+      "end": 288
+    },
+    {
+      "module": "ResidualGeometry00288",
+      "start": 288,
+      "end": 320
+    },
+    {
+      "module": "ResidualGeometry00320",
+      "start": 320,
+      "end": 352
+    },
+    {
+      "module": "ResidualGeometry00352",
+      "start": 352,
+      "end": 384
+    },
+    {
+      "module": "ResidualGeometry00384",
+      "start": 384,
+      "end": 416
+    },
+    {
+      "module": "ResidualGeometry00416",
+      "start": 416,
+      "end": 448
+    },
+    {
+      "module": "ResidualGeometry00448",
+      "start": 448,
+      "end": 480
+    },
+    {
+      "module": "ResidualGeometry00480",
+      "start": 480,
+      "end": 512
+    },
+    {
+      "module": "ResidualGeometry00512",
+      "start": 512,
+      "end": 544
+    },
+    {
+      "module": "ResidualGeometry00544",
+      "start": 544,
+      "end": 576
+    },
+    {
+      "module": "ResidualGeometry00576",
+      "start": 576,
+      "end": 608
+    },
+    {
+      "module": "ResidualGeometry00608",
+      "start": 608,
+      "end": 640
+    },
+    {
+      "module": "ResidualGeometry00640",
+      "start": 640,
+      "end": 672
+    },
+    {
+      "module": "ResidualGeometry00672",
+      "start": 672,
+      "end": 704
+    },
+    {
+      "module": "ResidualGeometry00704",
+      "start": 704,
+      "end": 736
+    },
+    {
+      "module": "ResidualGeometry00736",
+      "start": 736,
+      "end": 768
+    },
+    {
+      "module": "ResidualGeometry00768",
+      "start": 768,
+      "end": 800
+    },
+    {
+      "module": "ResidualGeometry00800",
+      "start": 800,
+      "end": 832
+    },
+    {
+      "module": "ResidualGeometry00832",
+      "start": 832,
+      "end": 864
+    },
+    {
+      "module": "ResidualGeometry00864",
+      "start": 864,
+      "end": 896
+    },
+    {
+      "module": "ResidualGeometry00896",
+      "start": 896,
+      "end": 928
+    },
+    {
+      "module": "ResidualGeometry00928",
+      "start": 928,
+      "end": 960
+    },
+    {
+      "module": "ResidualGeometry00960",
+      "start": 960,
+      "end": 992
+    },
+    {
+      "module": "ResidualGeometry00992",
+      "start": 992,
+      "end": 1024
+    },
+    {
+      "module": "ResidualGeometry01024",
+      "start": 1024,
+      "end": 1056
+    },
+    {
+      "module": "ResidualGeometry01056",
+      "start": 1056,
+      "end": 1088
+    },
+    {
+      "module": "ResidualGeometry01088",
+      "start": 1088,
+      "end": 1120
+    },
+    {
+      "module": "ResidualGeometry01120",
+      "start": 1120,
+      "end": 1152
+    },
+    {
+      "module": "ResidualGeometry01152",
+      "start": 1152,
+      "end": 1164
+    }
+  ],
+  "lean_checked": false,
+  "files": {
+    "ResidualCycleIndex.lean": "9760834d9ba43b6365d12aab34feb5b5258a92ec32cc26d06134b593efa17280",
+    "ResidualGeometry.lean": "cb7b9dc9399e30cfea01155a73ff8d34e601df5d2ab04fe0b954f15d6064c31f",
+    "ResidualGeometry00000.lean": "f786cb93845ea95e0b9d21b1af061b8aa25530e1d56cf3ce6b4a7a42795758ae",
+    "ResidualGeometry00032.lean": "f65ae3c8882b57365eeb78a5a58a01259afd9b8e4caaecf0c1da9c2cbbc2ad51",
+    "ResidualGeometry00064.lean": "b366852a9ec3e19f970dd8c2b28d869a377d7af6ae6d305a33c8bf3c95cce69c",
+    "ResidualGeometry00096.lean": "58c22ec395f62008ce0b2f0073f5f2b34996af44a9a8835387ad171aa671fe3c",
+    "ResidualGeometry00128.lean": "6d85c45817475d52bf4bfc4f2a36b63ea42d7e8ddada638c23db06a5a3acdc80",
+    "ResidualGeometry00160.lean": "f5b12b8198ff94810381845487a688588a9086134d9a8c2a6a6b3f40a87f1915",
+    "ResidualGeometry00192.lean": "4db343d37a18a4757b5b836db018eb520f32a4aa8e00ef12dd33e9814c7c2815",
+    "ResidualGeometry00224.lean": "013602378c99783aef4558c0a634123b6890ed637f0d346588906f2fc10f7209",
+    "ResidualGeometry00256.lean": "49392a0619dfcd74be958b20eac16a76e84ba39e3fd5be2e7097076d12122977",
+    "ResidualGeometry00288.lean": "b3aa11ad0779438db87aed8bdbdc4aa945e6f2964469c4e12fc0e0f78c55948b",
+    "ResidualGeometry00320.lean": "b8bf4770810d4f1356dc429059b1fcdaa507341bfc35683eccc08810dd6406fe",
+    "ResidualGeometry00352.lean": "099e6f42372c330a0d28ec135a6c481e36c30dbfaaf005dc3d3c3677210d1661",
+    "ResidualGeometry00384.lean": "430caee899fe4b62c84b2791bdf15a108e330d7118dfafe9e0902bf64abf8893",
+    "ResidualGeometry00416.lean": "ad9df1596f88ebcfa1a19f8bc8ce6ffe49c4f8f68ea89fdaadd0a3e450b6577b",
+    "ResidualGeometry00448.lean": "39d67eb3f7e3a9643e6b95d9b0ed1108527e57555b15d85f4a88b5786a7ce9ca",
+    "ResidualGeometry00480.lean": "682f0f6e8ab4cc2813b72fc6c1e1bf13d2418c772fa6f4dbcd2c0b912e406b0d",
+    "ResidualGeometry00512.lean": "2663046109127def15e3fb80f5be9f86a71af16fec94e22b893beab3900cde2e",
+    "ResidualGeometry00544.lean": "b78d0825d23bf5712e6a4fd736ab82d22ae52ec02b6298f68eed4fdcd7524bbc",
+    "ResidualGeometry00576.lean": "437753ea780f7ffb33982efd736aa13268a1e8eef882717f0ef8442e034b7227",
+    "ResidualGeometry00608.lean": "637a50ab348b92c7679ad0c4f6363b8dfa26cac315fd0a834ad0fd7e46eb5d18",
+    "ResidualGeometry00640.lean": "a43bfc0948bb190b614e2b938ec50d9870a816c18c26c94717b28e785c5f6fba",
+    "ResidualGeometry00672.lean": "19e10cb732bae737c08286f6d704115c276c0f533888b025d76c85092ca40c13",
+    "ResidualGeometry00704.lean": "925f243f81f801df3b172ebc06e31f2694f471b2a10f283a78474d052f2e18cb",
+    "ResidualGeometry00736.lean": "3380999a5c99ec250561e91def56fa3612891179117c8b62e2ff17fb95be9625",
+    "ResidualGeometry00768.lean": "f8201df0b8c9c2473d858fec1349c6c616fdc2714ce23a49f21d249109863818",
+    "ResidualGeometry00800.lean": "0c732be2246e101f815aae792cd81ff6f56894f3cdc6e9f518d1f74c0ae16c5f",
+    "ResidualGeometry00832.lean": "4309f55a390a1372d31f16f43ecc7689d3292cf1600cff1fcd1c7935396f4772",
+    "ResidualGeometry00864.lean": "af869de0ade8ca103044129072a4bac90d477999fa02da20da364c34daf74ed4",
+    "ResidualGeometry00896.lean": "2005645fb6bd3e50047a66f2e08f3852bfc3cf8b2cb05e674c5143d276869217",
+    "ResidualGeometry00928.lean": "72d1d005c4757c5d948fda46a69eb12464a63ebaf624c019ba283332b462163e",
+    "ResidualGeometry00960.lean": "eb77c5037262561956c40948054911bb236f61a13b04506fc0fcd4c3dd186da0",
+    "ResidualGeometry00992.lean": "eeb9909a8f386de7d00057a9b13324dfc603db7e3966c42e152cd48bbab5cc44",
+    "ResidualGeometry01024.lean": "bd3c9a21dd0488cdc7eda4f47f421e654942a147b1adee7887d0fce256754b99",
+    "ResidualGeometry01056.lean": "e719984c48f4767380d89ba5da17132009164255744a8171962e91acfd75434c",
+    "ResidualGeometry01088.lean": "095944b90ab1ba05cae0f111e576f17fc4771ef49f28efc890e51d409eec5134",
+    "ResidualGeometry01120.lean": "578881cc009a68e72a5c000c4414989c66da3df00e217a66546c5e85dcd13a0e",
+    "ResidualGeometry01152.lean": "703b7338c35c4133ebb564d90e93bb4ab0e94000545856b8fae98fc718a3ee74"
+  }
+}

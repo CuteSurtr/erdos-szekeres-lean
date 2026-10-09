@@ -34,13 +34,18 @@ def audit_output(output, expected):
 
 def verify_sources(directory):
     manifest = json.loads((directory / "export.json").read_text())
+    prefix = manifest.get("module_prefix", "")
+    if prefix and not re.fullmatch(r"[A-Za-z][A-Za-z0-9_]*", prefix):
+        raise ValueError("Invalid module prefix")
+    relative = lambda name: f"{prefix}/{name}" if prefix else name
     for name, digest in manifest["files"].items():
-        if not re.fullmatch(r"(?:Catalog|Root|Part[0-9]+)\.lean", name):
+        pattern = (re.escape(prefix) + "/" if prefix else "") + r"(?:Catalog|Root|Part[0-9]+)\.lean"
+        if not re.fullmatch(pattern, name):
             raise ValueError(f"Invalid source name: {name}")
         if sha256(directory / name) != digest:
             raise ValueError(f"Source hash mismatch: {name}")
-    expected = {"Catalog.lean", "Root.lean"} | {
-        p["module"] + ".lean" for p in manifest["parts"]}
+    expected = {relative("Catalog.lean"), relative("Root.lean")} | {
+        relative(p["module"] + ".lean") for p in manifest["parts"]}
     if set(manifest["files"]) != expected:
         raise ValueError("Module list and file manifest disagree")
     return manifest
@@ -50,6 +55,9 @@ def run(directory, modules=None, resume=False, memory=6000):
     directory = directory.resolve()
     repo = Path(__file__).resolve().parents[1]
     manifest = verify_sources(directory)
+    prefix = manifest.get("module_prefix", "")
+    sources = directory / prefix if prefix else directory
+    relative = lambda name: f"{prefix}/{name}" if prefix else name
     namespace = manifest["namespace"]
     theorem = {"Catalog": f"{namespace}.code_correct", **{
         p["module"]: f"{namespace}.node{p['root']}" for p in manifest["parts"]}}
@@ -76,7 +84,7 @@ def run(directory, modules=None, resume=False, memory=6000):
     report = {"scope": manifest["scope"], "binding": binding, "fingerprint": fingerprint,
               "modules": records, "complete": False}
     for name in selected:
-        obj = directory / f"{name}.olean"
+        obj = sources / f"{name}.olean"
         old = records.get(name, {})
         if (resume and old.get("exit") == 0 and old.get("audited") is True
                 and obj.exists() and old.get("olean_sha256") == sha256(obj)):
@@ -84,11 +92,11 @@ def run(directory, modules=None, resume=False, memory=6000):
             continue
         command = ["lean", "-j", "1", "-s", "32768", "-M", str(memory),
                    "--root=" + str(directory),
-                   str(directory / f"{name}.lean"), "-o", str(obj)]
+                   str(sources / f"{name}.lean"), "-o", str(obj)]
         started = time.monotonic()
         result = subprocess.run(command, text=True, capture_output=True, env=env, cwd=repo)
         record = {"exit": result.returncode, "seconds": round(time.monotonic() - started, 3),
-                  "source_sha256": manifest["files"][f"{name}.lean"],
+                  "source_sha256": manifest["files"][relative(f"{name}.lean")],
                   "stdout": result.stdout, "stderr": result.stderr, "audited": False}
         if result.returncode == 0:
             try:

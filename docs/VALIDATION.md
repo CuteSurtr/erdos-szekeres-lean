@@ -1,5 +1,41 @@
 # Verification records
 
+## Complete residual geometric transfer — 2026-10-09
+
+The main `lake build --wfail` passes with **3,245 jobs**. The
+[current full audit](validation/axiom-audit-residual-2026-10-09.txt) covers
+**444 named roots**, including 94 added roots for the residual geometry and
+Baek prerequisite. Only `propext`, `Classical.choice` and `Quot.sound` occur.
+All **63 Python tests** pass with optional solvers and Lean controls enabled.
+
+The separate [residual artifact](../experiments/omission-residual-geometry-2026-10-09/README.md)
+checks **39 cycle modules and 24 block/composition modules**, covering every
+one of the 1,187 residual rows. Three additional reduction theorems are audited.
+`all_geometric_rows` has only actual geometric restrictions as premises;
+`feasible_holes` constructs the complete Boolean hole vector and proves its
+exact cardinality complement. The population bound and global numerical
+conclusion remain conditional on `ExcludesThirtyHoles`.
+
+The artifact manifest verifies all successful prerequisite bindings, generated
+source hashes, compiled output hashes and archived source contents. All 63
+geometric sources reproduce byte for byte. The scan covers **157 loose Lean
+files**, plus the generated archives, with no placeholders or custom axioms.
+Git tracks no cache directories or compiled artifacts. The 13 new geometry
+modules contain 1,433 lines; 16 separately attributed Apache-2.0 modules supply
+the remaining Baek proof dependencies. Earlier immutable artifact records are
+preserved.
+
+The [third residual batch](../experiments/omission-residual-progress-2026-10-09-batch3.json)
+adds 30 parts and 1,304 leaves, bringing the checked frontier to **360 parts
+and 15,131 leaves**. This is a partial arithmetic result, not a root exclusion.
+
+Lean accepts the literal residual cycle and block controls and rejects a
+corrupted cyclic order and collapsed compression thresholds. A further control
+builds two complete small arithmetic trees with distinct module prefixes and
+imports them together. This addresses the exporter's historical module-name
+collision; it does not pretend that production certificates were rebuilt under
+new imports. See the [updated remaining-work estimate](ES8_REMAINING.md).
+
 ## Complete geometric partition — 2026-10-09
 
 The main `lake build --wfail` passes with **3,216 jobs**. The

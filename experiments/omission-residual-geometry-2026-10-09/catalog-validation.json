@@ -1,0 +1,28 @@
+{
+  "scope": "Catalog only; not the arithmetic exclusion",
+  "binding": {
+    "manifest": "4de6ce291b08c362022e9843b16b12212444e6e7400b0d53532ebf0563daaf40",
+    "lean": "Lean (version 4.24.0, arm64-apple-darwin23.6.0, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)",
+    "inputs": {
+      "lean-toolchain": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434",
+      "lake-manifest.json": "bc21802066bdf7c94b0eb1e7bd3d3389ae0d416c2ed69c6e5dae03e74945c8e7",
+      ".lake/build/lib/lean/ErdosSzekeres/OmissionCertificates.olean": "54394f6a413b31a4a4174b3f1655e7af3568a7f94e849b13353c717399c6bdc9",
+      ".lake/build/lib/lean/ErdosSzekeres/OmissionPacking.olean": "0068fcfb003180c1974bd054b50f9e4ac1a1c8d799bb46df16e93fcea66fe021"
+    }
+  },
+  "fingerprint": "2384563fa345ec3ecb49174c42f649aafb84b3374ed4bb49fe7560c471a856b6",
+  "catalog": {
+    "exit": 0,
+    "seconds": 18.525,
+    "source_sha256": "f94c74ecade3b2714f961cd3ee7826ad0804342886f0e86ab2ca3908f86cb7da",
+    "stdout": "'OmissionResidual.code_correct' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+    "stderr": "",
+    "audited": true,
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "olean_sha256": "2e118ef392822f3543e9901180a3042c53489283d7ca28af39ac74a540b70a80"
+  }
+}

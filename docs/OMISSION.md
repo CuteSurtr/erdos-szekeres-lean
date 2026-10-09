@@ -11,12 +11,12 @@ is also complete. The [minimum-slope partition](OMISSION_PARTITION.md) now
 reduces the global target to the residual population bound of 123, which
 remains unproved.
 
-The residual checkpoint now covers the first **330 of 3,411 proof parts**, or
-**13,827 of 145,474 leaves**. The latest 20-part block added 862 checked leaves
-in about 15 minutes. All expected axiom reports passed. The other 3,081 parts
-and the root remain unchecked. The [latest partial-build record](../experiments/omission-residual-progress-2026-10-09-batch2.json)
-links to and preserves the earlier 310-part record; neither claims a residual
-exclusion theorem.
+All **1,187 residual geometric rows** are now proved for actual real
+configurations: 1,164 cycles and 23 blocks, including the real interpretation
+of Baek's bound. See [the residual proof map](OMISSION_RESIDUAL.md). The exact
+hole-vector handoff leaves only the residual arithmetic exclusion and final
+certificate assembly. The current partial-build counts and latest record are
+listed in the main README; the residual root is still unchecked.
 
 This work investigates the finite octagon systems in Michael Schroeder's
 [*Erdős–Szekeres: Upper Bounds for Convex Heptagons and Octagons*, v1,

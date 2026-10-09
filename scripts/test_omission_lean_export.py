@@ -6,6 +6,7 @@ import copy
 import json
 import os
 from pathlib import Path
+import subprocess
 import tempfile
 import unittest
 
@@ -87,6 +88,29 @@ class OmissionLeanExportTests(unittest.TestCase):
 @unittest.skipUnless(os.environ.get("ERDOS_LEAN_EXPORT_TEST") == "1",
                      "optional Lean exporter integration controls")
 class OmissionLeanIntegrationTests(unittest.TestCase):
+    def test_prefixed_trees_link_without_module_collisions(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            folder = Path(tmp)
+            source, tree, _ = control(folder)
+            paths = []
+            for prefix in ("FirstProof", "SecondProof"):
+                out = folder / prefix
+                export(source, tree, out, namespace=prefix, leaf_limit=1,
+                       module_prefix=prefix)
+                self.assertTrue(run(out)["complete"])
+                paths.append(str(out))
+            combined = folder / "Combined.lean"
+            combined.write_text("import FirstProof.Root\nimport SecondProof.Root\n"
+                                "#print axioms FirstProof.excludes_budget\n"
+                                "#print axioms SecondProof.excludes_budget\n")
+            env = dict(os.environ)
+            env["LEAN_PATH"] = os.pathsep.join([*paths, env.get("LEAN_PATH", "")])
+            result = subprocess.run(["lean", str(combined)], env=env,
+                                    text=True, capture_output=True)
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+            for prefix in ("FirstProof", "SecondProof"):
+                audit_output(result.stdout, prefix + ".excludes_budget")
+
     def test_weighted_and_overbudget_trees_compile(self):
         for over_budget in (False, True):
             with self.subTest(over_budget=over_budget), tempfile.TemporaryDirectory() as tmp:

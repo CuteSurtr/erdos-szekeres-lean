@@ -21,3 +21,5 @@ jobs:
         run: ERDOS_LEAN_EXPORT_TEST=1 lake env python3 -m unittest discover -s scripts -p test_omission_lean_export.py -v
       - name: Check geometric cycle with Lean controls
         run: ERDOS_LEAN_EXPORT_TEST=1 lake env python3 -m unittest discover -s scripts -p test_omission_geometry.py -v
+      - name: Check residual cycle and block controls
+        run: ERDOS_LEAN_EXPORT_TEST=1 lake env python3 -m unittest discover -s scripts -p 'test_omission_residual_*.py' -v

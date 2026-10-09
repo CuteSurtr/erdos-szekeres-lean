@@ -1,0 +1,588 @@
+{
+  "scope": "All 1187 residual geometric rows; no arithmetic population bound",
+  "binding": {
+    "manifest": "34edb1aa07d41c64d688341b00c14546da73ab9a30dd8d1f9237b06869d69e43",
+    "lean": "Lean (version 4.24.0, arm64-apple-darwin23.6.0, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)",
+    "inputs": {
+      "/workspace/erdos-szekeres-lean/lean-toolchain": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434",
+      "/workspace/erdos-szekeres-lean/lake-manifest.json": "bc21802066bdf7c94b0eb1e7bd3d3389ae0d416c2ed69c6e5dae03e74945c8e7",
+      "/workspace/erdos-szekeres-lean/.cache/omission-lean-full/residual/export.json": "4de6ce291b08c362022e9843b16b12212444e6e7400b0d53532ebf0563daaf40",
+      "/workspace/erdos-szekeres-lean/.cache/omission-lean-full/residual/Catalog.lean": "f94c74ecade3b2714f961cd3ee7826ad0804342886f0e86ab2ca3908f86cb7da",
+      "/workspace/erdos-szekeres-lean/.cache/omission-lean-full/residual/Catalog.olean": "2e118ef392822f3543e9901180a3042c53489283d7ca28af39ac74a540b70a80",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Basic.olean": "48a2a3f9679b1fed6064449c44183e20a66321ff4c535336756af4cceb49c635",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/ConvexCycleCuts.olean": "af2db20a5873828beb38b0472822d24d03f6b2999b511caf168b3c8795322755",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Counting.olean": "c1c7afa964097ab08314a0d1f5e3a03922c4b7e9891714724125a7d0fd2fd587",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Definitions.olean": "43c755c6f56482de49b57f7f134f8a6407855e00c09ee294d7cacf80aa1f2f3c",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/DyadicModel.olean": "8cd510e0d12a46aa795d8010c7cc22fded9ae39a11ea7ba6cb1391f84aec18f3",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/HMPT/AntichainCapacity.olean": "1f9f51743933ddb7a17d70a6aec44bdc4fcca15d68aa0c9c189898488cd2533d",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/HMPT/Asymptotic.olean": "0f35779c90323f5925fc4901595ceb57defc72e16fec312684c5ee50e96f8d1b",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/HMPT/AsymptoticInput.olean": "9238a725a87da00b765abf754064e112f5dc7ac3b5b779e803917b2e8ea0ee39",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/HMPT/BootstrapBound.olean": "60ada6083bee71c0250b0a41a50b45a8571458779cd8fcb5beaf5c4d3bd06105",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/HMPT/ChainCapacity.olean": "2ebb179300127e2f530d52ee3dfb2322310ff5fb7214024f331af2492d8bd3f1",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/HMPT/ConvexCounting.olean": "d083648a9495254c69eebe925b8131928a594b6aae5eb6ec1ff64dbbcb1e2c26",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/HMPT/ConvexFan.olean": "21484db5b4d7ee19ebbdbfc3a1820e63fdf20b16bfb0114b2a3b34a1c7023a28",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/HMPT/Entropy.olean": "f7b64f13603638081e5b08bcacb92a72f598fea4679ffbbfe5042ae9ac709bff",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/HMPT/ExponentialBound.olean": "db77b57d94d54d700600dc6de383484b30bb5d1665ddcebee39bc730c998ff43",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/HMPT/FanCounting.olean": "76796b05ed18f457cddde8ea9fe5d6ba1a513b2f362a25f2ed1d08640d76b4a0",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/HMPT/FiniteBound.olean": "d6d3fb3555a3a4a884ea6ff843d5afef4b6db5167daf930c13d7b145d3ccca33",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/HMPT/Maxima.olean": "6d783ff218d2f2b2a027d6c491359d3953318036db36b9aff522450d416472db",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/HMPT/MixedCapData.olean": "4c29a1acd6e20d76ffb91898db0c567e05deed1fea9f0913625c67dd51f7bf71",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/HMPT/MixedCapGeometry.olean": "517fa0dd775a0b6136cd5cb9d3c41cde9bea0cf06addb6dc9baa40c7c1320f80",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/HMPT/MixedCapObstruction.olean": "f015d954c9451a8a75c6e87d8826fd2e2a7cd31b503789a68187b86aba824430",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/HMPT/ProjectedCaps.olean": "84cff23fd63fb075126125d9011dc70941f25b73267c961c91eea455222eae80",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/HMPT/Projective.olean": "edf1c09de6134e99265923e179fa7433973df66632bf46070afef9a98f5a9819",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/HMPT/RegionProduct.olean": "22113a2f8cab4f9159e6827e9d2787f67c929cd12b567c5983ac67ea80ec027f",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/HMPT/ScaleLimits.olean": "ae197b69e7a43fa933af0e24d91e54e475f0526004671b65148c34d4c1a217e4",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/HMPT/Statement.olean": "6b739c97d91057bf0356096fe6d0d5adedfc94ea5cb1f9d068af9105c55a3437",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/HMPT/TwoScale.olean": "59c4c788bb4150e59e0a342824796aea210e6d331977c1283bd46cc17d5ca333",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/IntegerCertificates.olean": "2b70d5a0c8cadcf1d922efdd70a82768e1de223fd3967c58cda6a02767d22864",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/ActualRanks.olean": "7e51101c3b413867c6e1310ba6d7fd1034296f4219b5ae669458da285751a936",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/Baek.olean": "0cd1288bff379e3132285f7d3bb949c3914aff9b45f8c5d6b7ea124b95014632",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/BaekGeometry.olean": "831caf55873f6c83678d7713b142cec6571a3fa2a4309db94f8e5915caff4c7d",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/BalancedCatalog.olean": "ae0fd1d9edd687adaadc76f71caecad3dcd60533292b7c58ed2d3f5c5b5b5ce4",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/BalancedCatalogData.olean": "3fa369fd8dbb1f9a35f979339242b363b72371134079fc10393ff039562d334d",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/BalancedStates.olean": "c0aac961e8e475a3cc4b4b0638ef44cba280992f112d0a2ef6bb28d413409793",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/BlockCompression.olean": "376196bafec26de56add285e7578e1dbdf489a17ede92047537daf0e25498d81",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/BlockGeometry.olean": "c825d2489ecdeea3e520436a5f900ee8aa768dc2628be50f489b92b550f74b48",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/BoundaryGeometry.olean": "e36606aa0e87aee760a174524842e6a1cc2960c7f274496021a9156af9c6f97c",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/BoundingBoxes.olean": "c94928c0b6ada720bcf554ace629485dac65ce0ab09e22a62ff3d92e1c9e5861",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/CupExtension.olean": "9e980bfe8f0ff47c4c69f1715df0d92ca40811430479b139f9390cd81d635b45",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/CycleGeometry.olean": "3fedd8abc1aff7596a73186f370899c3eb22321d6beede492d3a9bb4cff4a7ae",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/CycleSigns.olean": "19f08b8e481de8559ef73d75230b6cf2c8063ac403a05498d020de22f1b9b6f8",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/Domains.olean": "e0fe42659feaedbe13b013a3c34819aa2552b7245d9a67cb4c846025d50537c0",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/Ferrers.olean": "b172c95e7d0f7ad696ada5537692dd011547c0c7856d9395a274faba10a6d695",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/FirstCycle.olean": "aac75d59a1d8284a98a4c701e58bd1b962716621f3200490ae1ec7186ba426a6",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/ListGeometry.olean": "c608ced02bda4661830217a696359bde16f378a8ce99c7ab19f38c0d078f925b",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/MinimumSlope.olean": "c848ce20ec681c867bd53e2ff4eec83057468e76ec4b17b6f7604e8cc3e72a73",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/Partition.olean": "64a69edd77ced4cdc2bf4825cd17dbd864d86ce1c97adcf1b2bc493c3f2b0b89",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/PlanarChains.olean": "2833b9ee0d6ca5fef823ce0c7d0ef60d51b0edc711c7aec6917407785469850f",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/ProjectiveTransfer.olean": "07b45a4a300b2c0743df609705a45231bff372af97ae23974cacf9abfaa58998",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/Realization.olean": "700b0e6bb0c69c702c317f1e74cea8052dfac72c9a57bcdd02be0d4054aa5282",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/ResidualBoxes.olean": "3f33a8c376bdfadad095edf9d07aa71d180399e99bc1a9f25c880d36c9e50435",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/ResidualCatalog.olean": "3838e2f2959b6371a2b784fea476c09dab2802b718aec8dc5b48ae6235c8537f",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/ResidualCatalogData.olean": "6c950e8a5a37454a8dd1ec85e297688a708e509dd0346fcf95c365c8ea70c3f7",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/ResidualCycleGeometry.olean": "5822fb67fc5cd8e08eef9f01ff55e87984e5c791d475978d303fe35a6970cc1f",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/ResidualDomains.olean": "18ac328f32870742a3a783cd2a13326c20121d039a3958edd00214905277aed5",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/ResidualRanks.olean": "5e84a17d22164b6fcd65579edc64d6269dca65fd26c6fbd0da6d7f5315c1fb22",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/ResidualRealization.olean": "08aaef410884ab421155c1431d7a6a046b492238a5129ac4a849c61d1f2a711b",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/ResidualStates.olean": "6e20359be326cbc0d71688a36835296e5baefe1cba90ca057a4e1cc8dcc5db58",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/SlopePartition.olean": "309b32ef76c04570cd821938d77b22d4401fc0ed9eafcae11f91dd755f14babe",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/StateInterface.olean": "5cad16ff6deb5c3fc9aedb3a8266fe8a34d1abbbdea2e6eee89bc6bb4de63d57",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/Subsets.olean": "8de56cc4c6225ccebeb3da856b0004ebeb20a2a851d8814445214886181e4d94",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/ThreeChain.olean": "a6c9796bf30b49ad2b6a63d6f02958a017236a5de3d392c941eb15d6e304e1c2",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/OmissionCertificates.olean": "54394f6a413b31a4a4174b3f1655e7af3568a7f94e849b13353c717399c6bdc9",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/OmissionPacking.olean": "0068fcfb003180c1974bd054b50f9e4ac1a1c8d799bb46df16e93fcea66fe021",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Orientation.olean": "8ba26b04f4fc2b4bd72793b21e71f4caf7a7bc09a6705d1df8d039cc34f5ddc2",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/OrientationGeometry.olean": "c70441db6860bef283b5939a4a98fd7e227c7da4ce3844371a70886896ea2db3",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/OrientationPackets.olean": "c2daf9835195d57416fd5ddfc4a5a80aaf8e7f4feee01c789ccca6c80d83ec4e",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/AdjacentCaps.olean": "d18d47e31f0935ba4ec64df7275ac138a46d4f520ad7c7746abc88b54328a49d",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/AdjacentSpikes.olean": "04065a615b7f398f92a9f6ec0e0c61d9eacbe0d4514b360ce62ba0114b9e4322",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/AlternatingAnchors.olean": "ae4d51417f985d556433b46412722ec10a4e1955b51c20e02102cb4be96dbe16",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/AntichainCaps.olean": "b88246cf6815be1673c5ef8eeea9ce3dda5d9e9254c73d096a8b069889e470ff",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/AntichainCase.olean": "5cd975de12c997fdba3f44677509fa33a306f71ace478ab828e1790b271fb06b",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/AntichainExtraction.olean": "8896a64af35bc88869f8cded0f5c4557708e895b4dfacbc07fb1c9dade8239ab",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/Asymptotic.olean": "65590797b36d0ec0d9fc54706f6ca5b7a554a02ce62d735a3e13bc86d8c3d22b",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/BaseChart.olean": "dd4342e1cf74ce00c6d16c987f39155ce95bfd78c315112f1e4edc1c36184c43",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/BaseOrder.olean": "e4f5f0461e8f0196146571b4d97991ffbb23a20cba486c2f1e819deb4e519b58",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/BaseOrientation.olean": "5c616820fef8117c405edd6246ca716e601296b47de2d76f0a8c8ef822836511",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/CapGrowth.olean": "24c45a68369536ddf1fe9d162777eabbfb7b5cbbfaf8fe3652736dcc30b8df6c",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/CapSupports.olean": "ab7e9df037b5d342fc2de25abbe497168134e849d0572e07378276e02d776aa8",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/ChainAntichain.olean": "53959a3d3f0c2830872ffe905419d6f95f8ca1b161bc6fbfc175545fc35db1ec",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/ChainCaps.olean": "1c7f58118c3d2d1d938cc4bc837f7144628c69b25f4a1f379ceffa53d3ab0aa6",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/ChainCase.olean": "1442acf8faa8da939934a18a0663c52fa9e19cd6c06a3c79e8b18ea420a1dd39",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/ChainColoring.olean": "a12764e685fe6e643c97fab98c8e5f52c3330653606df9ec304d5b0411c20139",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/ChainEnumeration.olean": "a5612b7666bcfdf837bad206708c09275a4b6d8f2c0a85450b7360f552756550",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/CoordinateNormalization.olean": "8537e9a052f34c3498b261fc0cb4bf23472a949998452efc726f955a2447f6d1",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/CupsCaps.olean": "ec1734e3fcdb900d83bd00688ae902d1557a115656704a0847b24fc6c82f4005",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/DenseCapExtraction.olean": "eec7b3d745fa69a4010708583a47b8870339dfbcb2c57499af90fba646a63b62",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/ExponentialBound.olean": "e207d6c34b945e05226183a589b009fafcb65830c65ee002c7846be4f3d25b59",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/ExtractionCounting.olean": "19fd3b4c2f93386b3729a8c4701799190d1cc8488dcba832c1cb303459bf29c7",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/ExtractionEstimates.olean": "fcd6dd2290698fdedf9406b2b9873d9c44f708d775839bfdb4abc666cf118a60",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/FiniteBound.olean": "b59ac0d8666f275237fe92d1d6e31f0e9dfd477f0893c3f71bd3b37fab7826bf",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/FiniteDensityBound.olean": "6b8b028bb008655f02ee650ec75558053700f75cec1b5327fc14eba9c386a079",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/FiniteSupport.olean": "081757083684defcebbdbefa88f572bb73fb4c1b3a2a9d6f7dda0b2942e3e354",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/FourPoint.olean": "b9539d220abe18c60acfb845ad35f9cdfc3adac34c15115b657a2acaa10097d9",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/GlueOrientation.olean": "ba6de2ad60148f36def9357d260ad7dfcaccfea0c2bdd18f34432fbb4a09874a",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/HorizontalCounting.olean": "824de151de00470f06389dd0a6f5830a788daf3cc64d0b60eb7eb232746e49fc",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/HorizontalSpike.olean": "15e9b25bb144e31eaa30294d0601d27735963b247e98bb328856e5684f4cb54a",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/IntegerParameters.olean": "d3b5742730d2a03c78d6b258b07ddfae5f2ed1b7b468872c17e1a1928dcf0f8d",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/MonochromaticCounting.olean": "208bdfdff070732d508e6ba448d8a2b29735bb63afca951595d60b620f623772",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/OrderedCounting.olean": "9e76a61672188eecdfdef4c4b4e70d155d44e393767a798a40eef5bc1c3b4a14",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/OrientationClique.olean": "20a909aeb9f6ae00737a4f243215dbb8f51cffd483cdac6e97bb9337a6fadb28",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/PairSupports.olean": "4b983eb152cd8c742a3c6219ba3d00ba6ad01f7e7b54a54958cfd31ac9c55fad",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/ProductSelection.olean": "cde2e7bed78343788317653cd7af0e856a8faf6256942f0ed8b1067034ef098e",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/Quadrilateral.olean": "129078ec6fb9999a27b0bd46949e54d5624003dde09ba1a2a52ab4891591b407",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/Reflection.olean": "a937606aeab7a609f5bfe1a63803caf2178912aa9bc3f48fb3c624fe1889d596",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/RegionSelection.olean": "86b506ac2ac03499b5ee7250ddc8fb0088ac7f6113681968a4ff4ace0b825de3",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/SpikeChain.olean": "429fa1dc46d237973275e89411a0c7fd87847c3a10195d159cc838bb77a114ce",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/SpikeDichotomy.olean": "c1cdb04ea9db2593968f9b75576f845723ac1fd55f3da4cd4e6ee7dc832cde6c",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/SpikeGeometry.olean": "2b1f9a871edf9c19448061d9bb6bbdcd8a0241290bca1c7a1640ec385dd6bb86",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/SpikeSeparation.olean": "2e9d3845b0560e188cf9195cb8747ab4cbdb3d3cf2d27fce60e7aa2ac18d8197",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/Statement.olean": "04f68a38c06ebf845e9a49146e4a2a8251e77bfd3448fe9c3946908441cbb617",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/SupportCoarsening.olean": "9a0437a37a8645de0e705c75355e82ae7c0cfd3bde05cf1ad053458d27c2685f",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/SupportFiber.olean": "b1a0920554dd2fe85bc2a775a1895e96e1a566460101022a47c34ea29bdfcf7a",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/SupportSequence.olean": "97033fa0d01c7aff4c8d2a9b0508032b3ebc850f33a5f92554b242720913eb4e",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/SupportingLines.olean": "95bbffd86640925960a46a9a9925ff894d16aed2fa2d4457297e8442e35d42d0",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/TransitiveColoring.olean": "5af68b638d60db8b4f491dd8d2c5eb9a3b202e5a297f4ccb16ec387f5611418e",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/TriangleMembership.olean": "22abf809c914d89657007f69e68af5005bb98e554337c1a1a6309926025b068a",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/TriangleOrder.olean": "54433a638d7011bc17e2e7a80cb9b73161d3500456b780292dae0dcbf1dcb712",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/DilworthTheorem.olean": "2f67ff8a222792550b29ddd34c493542ae4ef6d2c55159bf23652d3a2365f17e",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Config/Default.olean": "9cefdb5ee620a410f2ba9d87cc7113330dce6c3ba91c58c591f5477412fa2069",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Config/Defs.olean": "6a7b352517518e080146bab601969b67111a5c9e348db4ad886577df8081c24d",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Config/Lemmas.olean": "7df98887d4e612409282ec4d98eb1dd790b25fcfef57ae558d99d40d081a6fb6",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Config/Mirror.olean": "f9b35c2ef1d22e19c819d26d5e8b2bef9c29048f5ceb4e31fda45171f12b2ec6",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Etv/AlphaBeta.olean": "2edbe534f5c1f4f8b73f8b7035db0fe44347076fdfae73e4036f5a85a18e231a",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Etv/Default.olean": "39e3d8eb6cdb9ee637fafc79ffdad4fdc7c3c6e1478da87f7a41687ebdb8af16",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Etv/Defs.olean": "1ac1280d760d62ce5f836a6c2a5078471ebc0d9059e7800bad888e34f9fb8d30",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Etv/Label.olean": "b47e4d86b9c67ccf0782b17bae9262f97e3d87db68a1d2963fa9fe6b1d9285e8",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Etv/Mirror.olean": "d54e4a288f3bda96da292b0c305ba53d77ce93b0f6adab72010ffc5b89cabc2c",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Lib/Core/Rel3.olean": "6f7b1877254d7c0541dd116f3452d6ab8b3ff8ce183d0519cfdc135b885907f6",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Lib/List/Chain3.olean": "376158e6ab1b5891d4f678e826a22391718cec6eefb344a1ccce8e80ae18c9d8",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Lib/List/Default.olean": "ac5f8cd512308acf0820b16df6a84fd01f86809d8b4987e67ee0a666fed97b2d",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Lib/List/Defs.olean": "116643988136bdafe8d4f6e809bfa64eba78b6b2b8727c30ab65d744396e6ba4",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Lib/List/Lemmas.olean": "24b1f524e18d8a3fe4db03501157d2cf4ca123c2d6f47e43237b1d6ede16bc44",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Lib/List/Mirror.olean": "bb8ac878b05640a5c7390adda5f06ef00286130992e06ddbd86eb6e66dceceaa",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Main/CapCup.olean": "2e50d1c792bf530d620df149e2d5c43c66b7d37f70ceb5050e7dd5fb68029881",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Main/Defs.olean": "410e04bfcf07a9454822f3a0adb7c8e5a4d345944fdec5c803d473060ffe9b3e",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Main/InductionStep.olean": "4b6eb12579b087b52e0bd2d685d242f7895f57a4e53e0442b87cfda15fe26ba5",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Main/Lemmas/Default.olean": "c7e041bb442ba34fcebb1cdd6b585a2d31ab61b36932cfa7e7c25b9501bda23d",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Main/Lemmas/InterweavedLacedNgon.olean": "3fdcfbb7ad76c75fddd9f8ed14ac5b1bfe7d081b846e7c9f4789f8a10cf9feba",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Main/Lemmas/JoinN2N2.olean": "5e04674cfb3f1e0aabc32362635617c547dbc6e593513d47472605addd724fff",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Main/Lemmas/JoinN2N3JoinN3N2.olean": "a8a676213837c399dc9581f782ab2db6a1dec9cf51e064a83929318b4efacfa3",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Main/Lemmas/JoinN2N3N2.olean": "db3c11ee982422afda46568d841b2b805f13ae8931a127fd98b20e5b05040104",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Main/Main.olean": "474b280f55f50ae74a7331c2fc33c47df2c44467fd9ef0079e933f700780b8a2",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ErdosSzekeresConvex/ConvexPolygon.olean": "f70ad102fd2428293068679de7b159057dd6b34d3e0f191e2201f4a65f72e3a8",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ErdosSzekeresConvex/CupCap.olean": "07782e5789b0ffb9219960c39455c62ee780e49ffbe8b2c324378b44044d8fa3",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ErdosSzekeresConvex/Orientation.olean": "d8a721e5d9b8af40ad5ef1f8707092a3425d95c90dd1c090bba39636b9f4207b",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ErdosSzekeresConvex/Sorting.olean": "b76e2f343e60367ec2f8b28ad6a44cd7ce65b293721add54e5a18e4e7b1dc501",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/export.json": "501f84f7c6f77bfea8a62424bc583dfa93f28e7ff0b431bbbba8f9a142fedefa",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualCycleIndex.olean": "4ad2d79142af19ae0684464dc616265dd338636d39c7fd2e2aaf5934a750cc20",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry.olean": "9dd5f55a6a3d5e8211d8f0c60b49f37840b52ace1d2eccc03946b006a63527f6",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00000.olean": "6d0186c475b72a8e7f121c70d1013c03e13d1be6be117f51c4e124c7090487fa",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00032.olean": "124d86adf237d654edd75c0077584449c46c237d8b9b21fda1a749eda0a76edc",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00064.olean": "5c473d800bfff46af3a318e2e6048c585945228fa7f44676fcb69a692e60fdc2",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00096.olean": "0ca0b81559352f59e14ccd85c5451132c78305234420d3aefdcde98e55901355",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00128.olean": "40752a23ed06f74ee4d185671784294ae3ba7310ced3b5f840feee7a53b00ce8",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00160.olean": "526770e5a945f3f8a95cace975f7971a51cc9d94056d35de50a3ff605cbec206",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00192.olean": "cf1b548578ea76ff08bfdc7b8ae888394fd61be53ae33ad3c36142fcb37bf9d6",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00224.olean": "26466c0258a05d93199a71fdc8a5bb09361cff2964662adc5151d74676e4b9ed",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00256.olean": "8a9d1cb56584f66bedbd4bf4b28fd6c671ca391e5ece016230d36401ee178dc4",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00288.olean": "2ee82561bbd6b73a9b825edff56edf12c41e3d724cbe6c5e8738953e5613da18",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00320.olean": "61075d56ed73690595c9f72f1fb3d2d0de27aa5499a4511d03a0ba952980edb1",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00352.olean": "0a589e7e92ced985779dfd80f2d6eedb49d96855b55c0ce3d58c22b4684260c8",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00384.olean": "e0c62e7a49c2c34e11f719fd50ed61d45ce8f5b7a12692a808c6b25308204736",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00416.olean": "c523bcb65f3f8a17331a9176fa85082b48b6ee2d8a0c95119a6f1cf3c7e24dce",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00448.olean": "a4a033a4bc7afec0e07c9fecbdd11741ae97a91b2e611652efaa2e43e9b87d1b",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00480.olean": "86d458da614a09d0c769b6eb32fcd0e1fca7519a438644d89f11a854384b292e",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00512.olean": "b70ed94c95c8e0a0ba8246102671726937a35d0e7fa96bae914038064aa1ae3e",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00544.olean": "f0af1acd4017e8db72e190579aa9e4e1ef31084f95773eb061981122b42e14bc",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00576.olean": "7d04dacab7fc5a5c51106356b24431486baf346155a8591c5db3f1ad65216fe0",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00608.olean": "285e0a3ca4cb19ea6bbc4c2f7c12d3fead2f2befd7437c792609d8c3f7d237a2",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00640.olean": "a16d22c419dc444ae85ce25fc0016110e380a64ad6b82de6179a20e0f49b533e",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00672.olean": "8974a595f0101a9d078f40e1c9abed9476a5b065e7c04fb761be3f9485051882",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00704.olean": "104870757209ed96c69cdda2e22a5352b8aa25305058895f5c3f8165f459c51b",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00736.olean": "61f513af955040ebe33aff0c4fc94a976ede9055b8e46581ac5f4cf3a9670eba",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00768.olean": "973942992653a490a988cba8342830573b28d2e419ca065ddd4ff9af87d862c1",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00800.olean": "1af6dff9ae3f75b929ac2a39e9bf71778a5e801aa9caa07e4ebd8d236fe130bb",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00832.olean": "0cfb380d7af428619bde674608c285fc7e609b669ed6f5678b806d91f60a2d2d",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00864.olean": "755250bf34f3db04589cb82dec6d1cb8c8f9fefb5cc9ac78613362d686e9219e",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00896.olean": "fbe135817fbf5399e9c323e47b81bb8c45d6cff3bca2f87d2e5c2b1c33066e39",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00928.olean": "62cde5ffaaad4fcb858b72e43347ca92d47c5f52576edbac884f43ed1c3562c1",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00960.olean": "d6c3b24347131e5b80f26fcdc656c175f6d15e538e3624ca715990793f24c7f8",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry00992.olean": "8538d3e1bae28269a229f3e7c5fb5c27609cd96d22c19eaf6381b5c9e940f843",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry01024.olean": "cf77e88cd007ed3ccbb4e6b822b9a0df5339502ae0146d2b8075e1e41dcbc5da",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry01056.olean": "8c99e5666678176ee5564e6530ccb46a136c322cf6e3259e358732c4e3fc27ca",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry01088.olean": "075c3b0e61c3a24390bd7219efa9ed68d46285ba018934eeaeccb0c3d1cfe420",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry01120.olean": "50667cb3c08c42ba1c1b10dbba2262470e95e1d443dd52ad1310a8c1195507fc",
+      "/workspace/erdos-szekeres-lean/.cache/omission-residual-geometry/ResidualGeometry01152.olean": "f0ddd91c99d5a8a53aaf6b1f3baab46efe45bf12cd26568eeeedd4e6f21edcf5"
+    }
+  },
+  "fingerprint": "537d239458d32515077318d6adb6358b26c42c3cede64e126172419ac0cafa7c",
+  "modules": {
+    "ResidualBlock00973": {
+      "exit": 0,
+      "seconds": 3.836,
+      "source_sha256": "a167e119c0c789a6c46cd9d3f4a2a0d1ac57e7a1ec4aedb4c1f654dd2925a1c1",
+      "stdout": "'OmissionResidual.ResidualBlock00973.row_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": {
+        "OmissionResidual.ResidualBlock00973.row_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "a263ed1be1f316ba557a10be9be8982f56caafcd42f49fac36e54b0b9ac6e6d1"
+    },
+    "ResidualBlock01165": {
+      "exit": 0,
+      "seconds": 3.862,
+      "source_sha256": "f2180d68eb923fb49d9422c51ba501b0888c6befc20e23b08b1f0fe7354e9cd8",
+      "stdout": "'OmissionResidual.ResidualBlock01165.row_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": {
+        "OmissionResidual.ResidualBlock01165.row_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "c983a517c6853136f4b1eed93f39d09811cdaa3a94e27d216001bc6e5afbda3d"
+    },
+    "ResidualBlock01166": {
+      "exit": 0,
+      "seconds": 3.868,
+      "source_sha256": "a40e39f4cd4aaf0211be4fb0768553a09c86fad26796d498b3e9e19ae6544385",
+      "stdout": "'OmissionResidual.ResidualBlock01166.row_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": {
+        "OmissionResidual.ResidualBlock01166.row_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "ab344183bf1aadc0bd9a340c9b9289db443ff97d4fac988cadfc2061758d7a57"
+    },
+    "ResidualBlock01167": {
+      "exit": 0,
+      "seconds": 3.905,
+      "source_sha256": "30a3e7457f8786d386d3824f0d9772795fa418d44444c12031f40deef2e64fef",
+      "stdout": "'OmissionResidual.ResidualBlock01167.row_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": {
+        "OmissionResidual.ResidualBlock01167.row_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "c480731dd1ea1f38cabf6a4aa201d216a88ec9d4edeeb295965b10b194e73b90"
+    },
+    "ResidualBlock01168": {
+      "exit": 0,
+      "seconds": 3.762,
+      "source_sha256": "45dce30c9baa8012a4dbdeaa9a35a93e836f6de593b1980116213a60ce2863f5",
+      "stdout": "'OmissionResidual.ResidualBlock01168.row_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": {
+        "OmissionResidual.ResidualBlock01168.row_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "83095f9fc1e04a29a289611a39ed40e38c4f021930375960895cfb87203c76f4"
+    },
+    "ResidualBlock01169": {
+      "exit": 0,
+      "seconds": 3.893,
+      "source_sha256": "2f40de5811db7cce8db49f778274aa02fa98e739fbe942c655c72e09d38bb8a9",
+      "stdout": "'OmissionResidual.ResidualBlock01169.row_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": {
+        "OmissionResidual.ResidualBlock01169.row_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "93dea508114c83df29e26c27af30d26333232f15ad3ca3856ee4c128c8411841"
+    },
+    "ResidualBlock01170": {
+      "exit": 0,
+      "seconds": 3.883,
+      "source_sha256": "aef973bfbb1abc4bc20a83c53d126a0b1c986b85b37d6247ae163d24fb504042",
+      "stdout": "'OmissionResidual.ResidualBlock01170.row_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": {
+        "OmissionResidual.ResidualBlock01170.row_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "315817770b49fbe4a3428c833121c77e45e7338be0b64cf084662dd8cd345d60"
+    },
+    "ResidualBlock01171": {
+      "exit": 0,
+      "seconds": 3.952,
+      "source_sha256": "f9498bb49b42a604056dba0b76d7d5835a7425052527724e273ed2211cbd6706",
+      "stdout": "'OmissionResidual.ResidualBlock01171.row_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": {
+        "OmissionResidual.ResidualBlock01171.row_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "0c82c3c1c83fba1617510660827ac09da458d9d7ebd2bed48b357da14d5d9354"
+    },
+    "ResidualBlock01172": {
+      "exit": 0,
+      "seconds": 3.809,
+      "source_sha256": "70a5dc5fba0fa2573cb4bafe7bde316cb25003486da9fa2cc8883944b658c70d",
+      "stdout": "'OmissionResidual.ResidualBlock01172.row_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": {
+        "OmissionResidual.ResidualBlock01172.row_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "dc3b69d95a51844a0269a87b72725183d507281560e2722f50046f9e99bf08f3"
+    },
+    "ResidualBlock01173": {
+      "exit": 0,
+      "seconds": 3.878,
+      "source_sha256": "7f39120dfaabeb0577bcc07a1ce064ca87097397519d1ac8a517c871ca514f24",
+      "stdout": "'OmissionResidual.ResidualBlock01173.row_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": {
+        "OmissionResidual.ResidualBlock01173.row_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "469ab174560f4109952d0faab3581623dcf3f9934dba6d434fd3127ce0252f7f"
+    },
+    "ResidualBlock01174": {
+      "exit": 0,
+      "seconds": 3.885,
+      "source_sha256": "baf1064bd1ef867aa10b3aed3f6723475a4aa6412c9aaae7e1b9e5d631d124e1",
+      "stdout": "'OmissionResidual.ResidualBlock01174.row_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": {
+        "OmissionResidual.ResidualBlock01174.row_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "bda86fbc4242c1d2aee607df29fdf6f4da6aab6a98b5df0a5f4e502b2ba1486d"
+    },
+    "ResidualBlock01175": {
+      "exit": 0,
+      "seconds": 4.037,
+      "source_sha256": "1f72a500e1dac9217dc45bae02157873af38f02d2c83cbceeebbdd7f8bec38d6",
+      "stdout": "'OmissionResidual.ResidualBlock01175.row_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": {
+        "OmissionResidual.ResidualBlock01175.row_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "178628f3d8f71d9e18ce42419897f7694a3bd21913fa7c632246692d3f3089c8"
+    },
+    "ResidualBlock01176": {
+      "exit": 0,
+      "seconds": 4.209,
+      "source_sha256": "e25b3a4f96f6143b775d8b0fe759151e95a847a11ac424137d9d2814208350d1",
+      "stdout": "'OmissionResidual.ResidualBlock01176.row_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": {
+        "OmissionResidual.ResidualBlock01176.row_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "5a205413be917d375d5714462f5aafbf7bfe973278b1ec4f1039233129df3a06"
+    },
+    "ResidualBlock01177": {
+      "exit": 0,
+      "seconds": 3.935,
+      "source_sha256": "c4440b8172c1298a4dcc45d99dcd670c56c1cbe46faff855993896073b90642a",
+      "stdout": "'OmissionResidual.ResidualBlock01177.row_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": {
+        "OmissionResidual.ResidualBlock01177.row_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "df2809f831262b9a5bf5eb68797e9ef67c2b93adc79d980bab8d69f41dc0ad61"
+    },
+    "ResidualBlock01178": {
+      "exit": 0,
+      "seconds": 4.02,
+      "source_sha256": "d7783f2058f68e0a31f69661d13c36324964a51c97fcd97e2855e52904fd4cb6",
+      "stdout": "'OmissionResidual.ResidualBlock01178.row_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": {
+        "OmissionResidual.ResidualBlock01178.row_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "1f9978dff57a6d1fb8de32f8c03f14b2900f4a4568b9d25400edc759c53b0f8a"
+    },
+    "ResidualBlock01179": {
+      "exit": 0,
+      "seconds": 4.034,
+      "source_sha256": "c85204731a8c864bb0cc8f0f5bed823e1576f6348ae07839f31c8e56f671169c",
+      "stdout": "'OmissionResidual.ResidualBlock01179.row_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": {
+        "OmissionResidual.ResidualBlock01179.row_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "75783d536ea68d155a37a1191f3c3f0f8674eaaf47159632b4d65301ea60754e"
+    },
+    "ResidualBlock01180": {
+      "exit": 0,
+      "seconds": 3.903,
+      "source_sha256": "0a6e1525339ba2af893a096abc1256a322f94739de13a53a3bd611bcc8e53387",
+      "stdout": "'OmissionResidual.ResidualBlock01180.row_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": {
+        "OmissionResidual.ResidualBlock01180.row_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "b52e30c12f6eb0706b06ffa9d1ff8a02ed1fa248c579d8c96519e8b579a9e88a"
+    },
+    "ResidualBlock01181": {
+      "exit": 0,
+      "seconds": 3.979,
+      "source_sha256": "4ea4ac1a69db7aa91e47793c5b14d5db17903305d3ce0445a68e9f69c1ba5662",
+      "stdout": "'OmissionResidual.ResidualBlock01181.row_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": {
+        "OmissionResidual.ResidualBlock01181.row_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "a6874e6f658b871914325faf13e2573a56d644df95a4c885b67e00758064b3c3"
+    },
+    "ResidualBlock01182": {
+      "exit": 0,
+      "seconds": 3.997,
+      "source_sha256": "290e10463bb490988acdcbe94bb9983f184716fbfb449cbe4bade998e29bf4e2",
+      "stdout": "'OmissionResidual.ResidualBlock01182.row_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": {
+        "OmissionResidual.ResidualBlock01182.row_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "7eea460ff96d00c17a17c2eb513245374a8280da7be8790fd9d4cc3b7433986b"
+    },
+    "ResidualBlock01183": {
+      "exit": 0,
+      "seconds": 4.258,
+      "source_sha256": "4f7b2823b36a19973aa909b6dd5867632686b1a458856bb466631e757e775fba",
+      "stdout": "'OmissionResidual.ResidualBlock01183.row_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": {
+        "OmissionResidual.ResidualBlock01183.row_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "106d2527420ac39023b693cf46addfa6c3298cd7770de267797b675f92600b45"
+    },
+    "ResidualBlock01184": {
+      "exit": 0,
+      "seconds": 3.923,
+      "source_sha256": "411fc3acb161f197f14caf07fd626f58d244189cdfc896fd8979b255a790e4cd",
+      "stdout": "'OmissionResidual.ResidualBlock01184.row_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": {
+        "OmissionResidual.ResidualBlock01184.row_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "f030e79076e1674d32dcdd8ba93ffcdbb334b57a6b32ae255dfc72862ee9ad21"
+    },
+    "ResidualBlock01185": {
+      "exit": 0,
+      "seconds": 4.025,
+      "source_sha256": "b2893e7517ad9adab75d65357e332127eb20770337681a8094d820ed935395c6",
+      "stdout": "'OmissionResidual.ResidualBlock01185.row_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": {
+        "OmissionResidual.ResidualBlock01185.row_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "2eebf497ada03a3e7d1b495414052ae396dd0a25cb41d0765591e68a65a9cc6e"
+    },
+    "ResidualBlock01186": {
+      "exit": 0,
+      "seconds": 4.018,
+      "source_sha256": "68c3f1a2af4e00153ac105b8efa9376bb21eadaf7b2f3cb91485c5b45571e384",
+      "stdout": "'OmissionResidual.ResidualBlock01186.row_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": {
+        "OmissionResidual.ResidualBlock01186.row_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "caafeb89625133397bed1c50887bc9a6be2a4ace447cfb9b5beb02f179b6a930"
+    },
+    "ResidualAllGeometry": {
+      "exit": 0,
+      "seconds": 1.906,
+      "source_sha256": "951a8a68798baacb7ce37a43b076302afb04180dfb7fac84e88464e546ab9883",
+      "stdout": "'OmissionResidual.all_geometric_rows' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": {
+        "OmissionResidual.all_geometric_rows": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "d9ecbec846508c673b43e83786ee4087d0b8b74bfc5eebce38b67f3a8ab4dc58"
+    }
+  },
+  "complete": true
+}

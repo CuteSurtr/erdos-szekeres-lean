@@ -71,9 +71,12 @@ uses the previously checked large balanced certificate and proves:
 
 The middle two statements are **conditional on the unproved residual bound**.
 The last is a necessary condition on a putative counterexample, not its
-exclusion. The residual certificate remains at 330 of 3,411 checked parts;
-the residual state/domain geometry, all residual row proofs and the 23 block
-capacities still need work. See [ES8_REMAINING.md](ES8_REMAINING.md).
+exclusion. The residual arithmetic certificate remains partial. The residual state/domain
+geometry, all 1,164 residual cycle rows and all 23 block capacities are now
+proved in [the residual geometric transfer](OMISSION_RESIDUAL.md). That proof
+reduces the remaining population bound to the explicit arithmetic proposition
+`OmissionResidual.ExcludesThirtyHoles`. The current README and batch records
+give the arithmetic progress; no complete residual root is claimed.
 
 ## Provenance and verification
 
