@@ -20,7 +20,12 @@ from omission_geometry_export import digest
 
 def verify_sources(directory):
     manifest = json.loads((directory / "export.json").read_text())
+    prefix = manifest.get("arithmetic_prefix", "")
+    if prefix and not re.fullmatch(r"[A-Za-z][A-Za-z0-9_]*", prefix):
+        raise ValueError("Invalid arithmetic module prefix")
     expected = {"BalancedGeometry.lean"}
+    if prefix:
+        expected.add("BalancedOccupancy.lean")
     start = 0
     for block in manifest["modules"]:
         name = block["module"]
@@ -41,11 +46,18 @@ def run(directory, arithmetic, resume=False, memory=6000):
     repo = Path(__file__).resolve().parents[1]
     directory, arithmetic = directory.resolve(), arithmetic.resolve()
     manifest = verify_sources(directory)
-    occupancy = repo / "experiments/omission-balanced-lean-2026-10-09/Occupancy.lean"
+    prefix = manifest.get("arithmetic_prefix", "")
+    arithmetic_manifest = json.loads((arithmetic / "export.json").read_text())
+    if arithmetic_manifest.get("module_prefix", "") != prefix:
+        raise ValueError("Geometry and arithmetic module prefixes differ")
+    arithmetic_sources = arithmetic / prefix if prefix else arithmetic
+    occupancy = (directory / "BalancedOccupancy.lean" if prefix else
+                 repo / "experiments/omission-balanced-lean-2026-10-09/Occupancy.lean")
     # Bind resumptions to both source and compiled local prerequisites. Mathlib
     # and toolchain revisions are pinned by the two tracked configuration files.
     inputs = [repo / "lean-toolchain", repo / "lake-manifest.json", occupancy,
-              arithmetic / "export.json", arithmetic / "Catalog.olean", arithmetic / "Root.olean"]
+              arithmetic / "export.json", arithmetic_sources / "Catalog.olean",
+              arithmetic_sources / "Root.olean"]
     inputs += sorted((repo / ".lake/build/lib/lean/ErdosSzekeres").rglob("*.olean"))
     env = dict(os.environ)
     env["LEAN_PATH"] = os.pathsep.join([str(directory), str(arithmetic), env.get("LEAN_PATH", "")])

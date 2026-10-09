@@ -28,7 +28,21 @@ def cycles_from_source(path):
     return [[int(x) for x in row.split()] for row in raw.splitlines()]
 
 
-def export(archive, output, chunk=32):
+def occupancy_source(root_module):
+    """Reuse the checked occupancy proof with only its arithmetic import changed."""
+    if re.fullmatch(r"(?:[A-Za-z][A-Za-z0-9_]*\.)?Root", root_module) is None:
+        raise ValueError('Invalid arithmetic root module')
+    template = (Path(__file__).resolve().parents[1] /
+                'experiments/omission-balanced-lean-2026-10-09/Occupancy.lean')
+    source = template.read_text()
+    if not source.startswith('import Root\n'):
+        raise ValueError('Unexpected occupancy proof template')
+    return source.replace('import Root\n', f'import {root_module}\n', 1)
+
+
+def export(archive, output, chunk=32, arithmetic_prefix=""):
+    if arithmetic_prefix and not re.fullmatch(r'[A-Za-z][A-Za-z0-9_]*', arithmetic_prefix):
+        raise ValueError('Invalid arithmetic module prefix')
     if output.exists():
         raise FileExistsError(output)
     if type(chunk) is not int or chunk < 1:
@@ -45,12 +59,16 @@ def export(archive, output, chunk=32):
         if not 8 <= len(ids) <= 10 or not all(0 <= i < 252 for i in ids):
             raise ValueError('Invalid cycle indices or length')
     output.mkdir(parents=True)
+    module = lambda name: f'{arithmetic_prefix}.{name}' if arithmetic_prefix else name
+    occupancy = 'BalancedOccupancy' if arithmetic_prefix else 'Occupancy'
+    if arithmetic_prefix:
+        (output / 'BalancedOccupancy.lean').write_text(occupancy_source(module('Root')))
     modules = []
     for start in range(0, len(cycles), chunk):
         end = min(start + chunk, len(cycles))
         name = f'Geometry{start:05d}'
         modules.append({'module': name, 'start': start, 'end': end})
-        lines = ['import Catalog', 'import ErdosSzekeres.Omission.CycleGeometry',
+        lines = [f'import {module("Catalog")}', 'import ErdosSzekeres.Omission.CycleGeometry',
                  'open ErdosSzekeres ErdosSzekeres.Omission',
                  f'namespace OmissionBalanced.{name}',
                  'set_option maxRecDepth 100000',
@@ -74,7 +92,7 @@ def export(archive, output, chunk=32):
                   '    c.list_cycle_hole_bound noCap noCup noOctagon (cycle r) valid',
                   '#print axioms row_bound', f'end OmissionBalanced.{name}']
         (output / f'{name}.lean').write_text('\n'.join(lines) + '\n')
-    lines = ['import Root', 'import Occupancy', *(f"import {m['module']}" for m in modules),
+    lines = [f'import {module("Root")}', f'import {occupancy}', *(f"import {m['module']}" for m in modules),
              'open ErdosSzekeres ErdosSzekeres.Omission', 'namespace OmissionBalanced',
              'set_option maxRecDepth 100000', 'set_option maxHeartbeats 10000000',
              'theorem all_geometric_rows {n : ℕ} (c : Configuration n)',
@@ -97,7 +115,8 @@ def export(archive, output, chunk=32):
     (output / 'BalancedGeometry.lean').write_text('\n'.join(lines) + '\n')
     report = {'scope': 'Balanced real configurations avoiding 7-cups, 7-caps and convex octagons',
               'source_sha256': digest(row_source), 'cycle_source_sha256': digest(cycle_source),
-              'exporter_sha256': digest(Path(__file__)), 'rows': 2685, 'chunk_size': chunk,
+              'exporter_sha256': digest(Path(__file__)), 'arithmetic_prefix': arithmetic_prefix,
+              'rows': 2685, 'chunk_size': chunk,
               'modules': modules, 'lean_checked': False,
               'files': {p.name: digest(p) for p in sorted(output.glob('*.lean'))}}
     (output / 'export.json').write_text(json.dumps(report, indent=2) + '\n')
@@ -109,6 +128,8 @@ if __name__ == '__main__':
     parser.add_argument('archive', type=Path)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--chunk', type=int, default=32)
+    parser.add_argument('--arithmetic-prefix', default='',
+                        help='Module prefix used by the separately exported balanced arithmetic')
     args = parser.parse_args()
-    result = export(args.archive, args.output, args.chunk)
+    result = export(args.archive, args.output, args.chunk, args.arithmetic_prefix)
     print(json.dumps({'rows': result['rows'], 'blocks': len(result['modules']), 'lean_checked': False}))

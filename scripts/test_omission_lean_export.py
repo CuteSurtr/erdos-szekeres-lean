@@ -29,6 +29,14 @@ def control(folder, over_budget=False):
 
 
 class OmissionLeanExportTests(unittest.TestCase):
+    def test_invalid_worker_and_memory_limits_fail_before_access(self):
+        for workers in (0, -1, True, 1.5):
+            with self.assertRaisesRegex(ValueError, 'Worker count'):
+                run(Path('unused'), workers=workers)
+        for memory in (0, -1, True, 1.5):
+            with self.assertRaisesRegex(ValueError, 'Memory limit'):
+                run(Path('unused'), memory=memory)
+
     def test_branches_partition_and_manifest(self):
         with tempfile.TemporaryDirectory() as tmp:
             folder = Path(tmp)
@@ -88,6 +96,23 @@ class OmissionLeanExportTests(unittest.TestCase):
 @unittest.skipUnless(os.environ.get("ERDOS_LEAN_EXPORT_TEST") == "1",
                      "optional Lean exporter integration controls")
 class OmissionLeanIntegrationTests(unittest.TestCase):
+    def test_parallel_selected_parts_resume_into_complete_root(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            folder = Path(tmp)
+            source, tree, _ = control(folder)
+            out = folder / 'export'
+            export(source, tree, out, leaf_limit=1)
+            partial = run(out, ['Part00000', 'Part00001', 'Part00000'], workers=2)
+            self.assertFalse(partial['complete'])
+            self.assertEqual(set(partial['modules']), {'Catalog', 'Part00000', 'Part00001'})
+            previous = {k: dict(v) for k, v in partial['modules'].items()}
+            complete = run(out, resume=True, workers=2)
+            self.assertTrue(complete['complete'])
+            self.assertTrue(complete['modules']['Root']['audited'])
+            for name, record in previous.items():
+                self.assertEqual(complete['modules'][name], record)
+            self.assertFalse((out / 'kernel-check.json.tmp').exists())
+
     def test_prefixed_trees_link_without_module_collisions(self):
         with tempfile.TemporaryDirectory() as tmp:
             folder = Path(tmp)
@@ -136,7 +161,8 @@ class OmissionLeanIntegrationTests(unittest.TestCase):
             report["files"][part.name] = sha256(part)
             (out / "export.json").write_text(json.dumps(report))
             with self.assertRaisesRegex(RuntimeError, "Kernel check failed"):
-                run(out)
+                run(out, workers=2)
             record = json.loads((out / "kernel-check.json").read_text())
             self.assertFalse(record["complete"])
             self.assertFalse(record["modules"]["Part00000"]["audited"])
+            self.assertNotIn('Root', record['modules'])
