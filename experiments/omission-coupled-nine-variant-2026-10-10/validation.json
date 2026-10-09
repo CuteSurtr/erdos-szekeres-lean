@@ -1,0 +1,81 @@
+{
+  "complete": true,
+  "toolchain": "Lean 4.24.0; Mathlib v4.24.0",
+  "build": "lake build --wfail:3299 jobs; passed",
+  "axioms": {
+    "ErdosSzekeres.Omission.CoupledTemplateNine.context_impossible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ErdosSzekeres.Omission.CoupledTemplateNine.check_sound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ErdosSzekeres.Omission.CoupledTemplateNine.exists_missing_index": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ErdosSzekeres.Omission.CoupledTemplateNine.hole_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ErdosSzekeres.Omission.CoupledNineVariant.checked": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ErdosSzekeres.Omission.CoupledNineVariant.exists_missing_state": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ErdosSzekeres.Omission.CoupledNineVariant.hole_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "files": {
+    "ErdosSzekeres/Omission/CoupledTemplateNine.lean": {
+      "sha256": "6181ba4a781365c939319738732e590ede4960f16fac38b382964fdd8dd13029",
+      "bytes": 117341
+    },
+    "ErdosSzekeres/Omission/CoupledTemplateNineCheck.lean": {
+      "sha256": "004eb78fc0e5498189fa62f3ed9460d830e3c3c18972cf8980eead8306f7ddb9",
+      "bytes": 1039
+    },
+    "ErdosSzekeres/Omission/CoupledTemplateNineGeometry.lean": {
+      "sha256": "c156cf0bef15c3062cc741efbe78822b20fb4008363c1f7dfb3e0813885951f9",
+      "bytes": 2136
+    },
+    "ErdosSzekeres/Omission/CoupledNineVariant.lean": {
+      "sha256": "0f729cddfc8c16ecf739c728ce609d7984247543163e6bfb5259c50f1039d2fe",
+      "bytes": 1559
+    },
+    "scripts/export_omission_coupled_template_sized.py": {
+      "sha256": "e56aba1530367f07fac5cdff044f6d2f06490dced44a10d168e9278e23c7b3b7",
+      "bytes": 5078
+    },
+    "experiments/omission-coupled-nine-variant-2026-10-10/variant.json": {
+      "sha256": "e406417bf87fb5ef7eb4f0c95e6f90bee5e4d1310c7b0869f370e863112490e9",
+      "bytes": 350
+    },
+    "experiments/omission-coupled-nine-variant-2026-10-10/README.md": {
+      "sha256": "948add0d722d0ee42606ed439c058b274d492e22b4a2af674852d771c840d1c2",
+      "bytes": 1550
+    },
+    "experiments/omission-coupled-nine-variant-2026-10-10/axiom-audit.txt": {
+      "sha256": "d5ed165e9e9cc6770b2c7c30cda29b4679d53512117041aba19c983b3e1fd477",
+      "bytes": 834
+    }
+  },
+  "thirteen_state_export_control": {
+    "byte_identical": true,
+    "existing_source": "ErdosSzekeres/Omission/CoupledTemplateFifth.lean",
+    "sha256": "12ea677d162c3b404298d9ceb24db95800c7cb4f5612f199c6ea0869d554791e"
+  }
+}

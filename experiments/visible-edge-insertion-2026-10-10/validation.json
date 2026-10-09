@@ -1,0 +1,39 @@
+{
+  "complete": true,
+  "scope": "Generic convex-position insertion for finite real planar point sets, using explicit retained supporting-pair lines and separation; finite edge-family corollary with explicit vertex coverage. No hidden general-position, catalog, rank, or avoidance premise. The separate structural nine-state proof has its own validation record.",
+  "roots": [
+    "ErdosSzekeres.VisibleEdgeInsertion.convexPosition_insert_of_retained_pair_supports",
+    "ErdosSzekeres.VisibleEdgeInsertion.convexPosition_insert_of_one_visible_edge"
+  ],
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "command": "ELAN_HOME=\"$PWD/.elan\" .elan/bin/lake env lean -M1000 -o .cache/nine-core-interpretation/VisibleEdgeInsertion.olean .cache/nine-core-interpretation/VisibleEdgeInsertion.lean",
+  "exit_code": 0,
+  "files": {
+    "ErdosSzekeres/VisibleEdgeInsertion.lean": {
+      "sha256": "782df7db4ce9a8b3c2a0abe68d9d309b995d60639d6d89b1cffc628b748007d4",
+      "bytes": 4388
+    },
+    "experiments/visible-edge-insertion-2026-10-10/axiom-audit.txt": {
+      "sha256": "a1121ac213c1a0b0288e06dd645b076c2b49a59635dfc494ec08c689286023f2",
+      "bytes": 286
+    },
+    "experiments/visible-edge-insertion-2026-10-10/nine-core-interpretation.md": {
+      "sha256": "b88f5b512789b81759869399570ec47e94270d7fa5406c8db51239ae712db0fb",
+      "bytes": 8003
+    },
+    "experiments/visible-edge-insertion-2026-10-10/README.md": {
+      "sha256": "be8a8b572111cfc6695c200daed813273f3f55fb28ee42d93f64a5733a6aba87",
+      "bytes": 1562
+    }
+  },
+  "source_promotion": "Unchanged byte-for-byte promotion of the isolated checked source.",
+  "library_check": {
+    "command": "ELAN_HOME=\"$PWD/.elan\" .elan/bin/lake build ErdosSzekeres.VisibleEdgeInsertion",
+    "exit_code": 0,
+    "new_module_build_seconds": 2.0
+  }
+}

@@ -16,6 +16,15 @@ Lean 4.24.0 and their transitive axiom audits report only `propext`,
 beside this README. They assume Boolean holes and the original row inequalities;
 they add no geometric hypothesis.
 
+The second, separately checked catalogs are
+`BalancedCoverCutsV2.all_rows` (446 derived rows) and
+`ResidualCoverCutsV2.all_rows` (1,108 derived rows). Both full transfer proofs
+and their standard-axiom audits are complete. The `*-v2-source.json` files
+contain the entire extended catalogs; `*-v2-cuts.json` contain the exact cut
+DAGs. Their Lean sources, export manifests and complete kernel records are
+preserved here. These larger cut families alone do not establish a stronger
+global octagon bound.
+
 The generic proof is `OmissionCertificates.rounded_cover_cut` in
 [CoverCuts.lean](../../ErdosSzekeres/Omission/CoverCuts.lean). A nonnegative integer
 weighted sum of existing rows, together with the Boolean upper bounds, gives
@@ -31,12 +40,14 @@ propose the multipliers, but Lean rechecks the full integer inequality.
 | Residual, 154 states |30|4,686 leaves|145,474 leaves|Complete: 149 parts, catalog and root|
 | Balanced, 252 states |59|711 leaves|9,862 leaves|Complete: 17 parts, catalog and root|
 | Balanced, 252 states |60|3,954 leaves|No completed previous tree|Complete: 92 parts, catalog and root|
+| Balanced V2, 252 states |61|22,318 leaves|22,112-leaf alternative, not fully Lean checked|Complete: 502 parts, catalog and root|
 
-The residual30 and balanced60 roots have now been composed with all geometric
-prerequisites into **`ForcesConvexNGon 316 8`**. The earlier complete317 proof
-using balanced59 remains available. All three successful kernel records and
-source-only archives are saved here; no proof obligation remains for either
-closed threshold.
+The residual30 and balanced61 roots have been composed with all geometric
+prerequisites into **`ForcesConvexNGon 315 8`**. The earlier complete 316 and
+317 proofs using balanced60 and balanced59 remain available. All four
+successful kernel records and source-only archives are saved here. The
+[complete 315 assembly](../omission-global-assembly-2026-10-10/global-cover-315-check.json)
+retains no unproved arithmetic or geometric hypothesis.
 
 `ResidualCountermodel.lean` is a separate checked result: one explicit 32-hole
 assignment satisfies all 1,187 original rows, all 21 earlier additions, and all
@@ -82,3 +93,42 @@ counted as a Lean proof. See the
 for the original catalog, geometric rows, cut-transfer checks and final gate.
 The workspace-local invocation on this Mac is
 `ELAN_HOME="$PWD/.elan" .elan/bin/lake` in place of `lake`.
+
+To reproduce the V2 transfer sources, retain the same original archive catalogs
+and choose distinct output directories and module names:
+
+```sh
+python3 scripts/omission_cover_export.py "$source_dir/balanced.json" \
+  experiments/omission-cover-certificates-2026-10-10/balanced-v2-cuts.json \
+  --family balanced --module BalancedCoverCutsV2 \
+  --output .cache/reproduce-cover-balanced-v2
+python3 scripts/omission_cover_export.py "$source_dir/residual.json" \
+  experiments/omission-cover-certificates-2026-10-10/residual-v2-cuts.json \
+  --family residual --module ResidualCoverCutsV2 \
+  --output .cache/reproduce-cover-residual-v2
+```
+
+Compare every generated Lean source and augmented-catalog hash with the saved
+V2 manifests, then run `scripts/check_omission_cover_lean.py` against the
+corresponding freshly checked original arithmetic catalog. Export-time
+`lean_checked: false` metadata is retained unchanged; proof completion is
+recorded separately in the complete `*-kernel-check.json` files.
+
+The completed B61 fused export can be regenerated from the preserved extended
+catalog and exact tree. Its exporter chooses packing base 524,288 and emits
+502 proof parts:
+
+```sh
+python3 scripts/omission_fused_export.py \
+  experiments/omission-cover-certificates-2026-10-10/balanced-v2-source.json \
+  experiments/omission-cover-certificates-2026-10-10/balanced-61-fused-tree.json.gz \
+  --output .cache/reproduce-balanced61-fused \
+  --namespace OmissionBalancedCover61Fused \
+  --module-prefix BalancedCover61FusedProof --leaf-limit 64
+lake env python3 scripts/check_omission_lean.py \
+  .cache/reproduce-balanced61-fused --resume --workers 1 --memory 2200
+```
+
+Check the generated export and source hashes against
+`balanced-61-fused-export.json`. Start with one checker worker unless available
+memory has been measured; the final aggregate imports all part objects.

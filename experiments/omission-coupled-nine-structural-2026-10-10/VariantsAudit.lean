@@ -1,0 +1,13 @@
+import ErdosSzekeres.Omission.CoupledNineStructuralVariants
+
+#print axioms ErdosSzekeres.Omission.StructuralNine111.context_impossible_structural
+#print axioms ErdosSzekeres.Omission.StructuralNine111.states_injective
+#print axioms ErdosSzekeres.Omission.StructuralNine111.exists_missing_state
+#print axioms ErdosSzekeres.Omission.StructuralNine111.hole_bound
+#print axioms ErdosSzekeres.Omission.StructuralNineShifted111.context_impossible_structural
+#print axioms ErdosSzekeres.Omission.StructuralNineShifted111.states_injective
+#print axioms ErdosSzekeres.Omission.StructuralNineShifted111.exists_missing_state
+#print axioms ErdosSzekeres.Omission.StructuralNineShifted111.hole_bound
+
+#check @ErdosSzekeres.Omission.StructuralNine111.hole_bound
+#check @ErdosSzekeres.Omission.StructuralNineShifted111.hole_bound

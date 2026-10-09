@@ -1,0 +1,14 @@
+'ErdosSzekeres.Omission.StructuralNine.context_impossible_structural' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.StructuralNine.states_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Omission.StructuralNine.exists_missing_state' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Omission.StructuralNine.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+@ErdosSzekeres.Omission.StructuralNine.exists_missing_state : ∀ {n : ℕ} (c : ErdosSzekeres.Omission.Configuration n)
+  (noCap : ¬c.HasCap 6) (noOctagon : ¬ErdosSzekeres.HasConvexNGon 8 (Finset.image c.point Finset.univ))
+  (noJunction : ErdosSzekeres.Omission.Subsets.NoJunctionOn c.cup (Finset.range n)),
+  ∃ s ∈ ErdosSzekeres.Omission.StructuralNine.support, s ∉ c.residualOccupied noCap noOctagon noJunction
+@ErdosSzekeres.Omission.StructuralNine.hole_bound : ∀ {n : ℕ} (c : ErdosSzekeres.Omission.Configuration n)
+  (noCap : ¬c.HasCap 6) (noOctagon : ¬ErdosSzekeres.HasConvexNGon 8 (Finset.image c.point Finset.univ))
+  (noJunction : ErdosSzekeres.Omission.Subsets.NoJunctionOn c.cup (Finset.range n)),
+  1 ≤ (ErdosSzekeres.Omission.StructuralNine.support \ c.residualOccupied noCap noOctagon noJunction).card

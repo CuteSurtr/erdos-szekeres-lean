@@ -1,5 +1,32 @@
 # Verification records
 
+## Structural geometry and uniform finite saving — 10 October 2026
+
+The complete library passes `lake build --wfail` (**3,301 jobs**). The
+[saved audit](validation/axiom-audit-structural-2026-10-10.txt) checks **571
+named roots**, using only `propext`, `Classical.choice`, and `Quot.sound`.
+The [source-bound record](validation/structural-checks-2026-10-10.json)
+includes every maintained/standalone Lean source and confirms the old 316/317
+global proof inputs remain unchanged.
+
+New results are the second nine-state omission row, its generic template,
+two supporting-edge insertion theorems, six uniform factorial-saving
+declarations, and structural proofs of three nine-state rows. The latter
+include two new supports beyond the original CNF compatibility template.
+All new Lean passed the kernel. The sized template
+exporter also reproduced the prior fifth thirteen-state template byte-for-byte.
+The unchanged 115-test checkpoint below remains the Python-suite evidence;
+no unrelated test rerun is counted as a new result.
+
+The earlier records below describe their respective checkpoints.
+
+The separate [315-point final gate](../experiments/omission-global-assembly-2026-10-10/global-cover-315-check.json)
+is now complete: all eight assembly modules passed, and all 1,795 bound inputs
+were rehashed unchanged. The final ordinary real-point theorem has only the
+three standard axioms. The balanced arithmetic proof contains 22,318 leaves in
+502 parts, plus catalog and root. Full source archives, cut transfers, audits
+and resource measurements are preserved in the global/cover artifacts.
+
 ## Smaller obstructions and finite HMPT refinement — 10 October 2026
 
 The complete library passes `lake build --wfail` (**3,293 jobs**). The

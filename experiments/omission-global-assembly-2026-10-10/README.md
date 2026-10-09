@@ -1,24 +1,24 @@
 # Parameterized global assembly
 
-**The closed bound `ES(8) ≤ 316` is Lean-checked.**
-[`FinalCover316.lean`](FinalCover316.lean) proves
-`ErdosSzekeres.Omission.forces_convex_octagon_316 : ForcesConvexNGon 316 8`.
-Equivalently, every finite set of at least 316 points in `ℝ²` in general
+**The closed bound `ES(8) ≤ 315` is Lean-checked.**
+[`FinalCover315B61FusedR30.lean`](FinalCover315B61FusedR30.lean) proves
+`ErdosSzekeres.Omission.forces_convex_octagon_315 : ForcesConvexNGon 315 8`.
+Equivalently, every finite set of at least 315 points in `ℝ²` in general
 position contains eight points in convex position. No arithmetic-certificate,
 population-bound, rational-coordinate, or realizability hypothesis remains.
 
-The [complete final record](global-cover-316-check.json) verifies both
+The [complete final record](global-cover-315-check.json) verifies both
 compressed arithmetic roots, both cut-transfer proofs, all geometric rows,
 both catalog identifications, and the final theorem. The
-[axiom output](global-cover-316-axioms.txt) reports only `propext`,
+[axiom output](global-cover-315-axioms.txt) reports only `propext`,
 `Classical.choice`, and `Quot.sound` for each final root. This is an ordinary
 convex octagon result, not an empty-octagon result or an asymptotic improvement.
 No priority claim for the finite bound is made here.
 
 The older `Final317.lean` source uses a different, unfinished arithmetic
-route; it is not needed by the checked rounded-cover proof. The earlier 317
-cover proof remains checked and preserved. Stronger 315 and 314 candidates
-below remain pending their own complete final checks.
+route; it is not needed by the checked rounded-cover proof. The earlier 316 and 317
+cover proofs remain checked and preserved. The 314 candidate and alternative
+315 routes below retain their separately stated status.
 
 ## Checked statements
 
@@ -137,7 +137,7 @@ under CC BY 4.0 and contains 85 generated Lean source files only. The adapted
 geometric library retains Schroeder's MIT notice and Baek's Apache-2.0 notice
 as described in `THIRD_PARTY.md`. All archives are source/data bundles; compiled
 objects remain outside Git. The local `manifest.json` records every packaged
-file hash and distinguishes the checked 316 and 317 chains from historical
+file hash and distinguishes the checked 315, 316 and 317 chains from historical
 and pending alternatives. Absolute paths in check records identify the observed build;
 their object hashes are evidence, not bundled binaries or portable resume records.
 
@@ -184,7 +184,8 @@ both catalog equalities, and the closed global statement still are.
 
 The same 220-cut balanced catalog has a complete Lean-checked 3,954-leaf
 certificate for hole budget 60 (92 parts, catalog and root). The complete
-316 assembly and audit are preserved at the top of this document. To
+[316 assembly](global-cover-316-check.json) and
+[axiom audit](global-cover-316-axioms.txt) remain preserved. To
 reproduce it, use
 `--bound 316 --balanced-cover-budget 60` and change the balanced compressed
 arithmetic directory to `.cache/omission-balanced-cover60-linked`.
@@ -196,13 +197,14 @@ refer to the 402-cut residual catalog. No completed residual31 certificate
 on that catalog is available; those sources must not be combined with the
 new 1,108-cut residual catalog.
 
-## Versioned stronger candidates
+## Earlier versioned alternative (not used by the completed 315 proof)
 
-The balanced61 candidate has 22,112 exact leaves on a new 446-cut catalog.
+An earlier balanced61 tree has 22,112 exact leaves on the 446-cut catalog.
 `BalancedCover61Bridge.lean` identifies its 3,131 rows with the original
 2,685 geometric rows and `BalancedCoverCutsV2`'s 446 arithmetic consequences.
 `FinalCover315B61R30.lean` would combine its population 190 with the existing
-residual population 123. These stronger sources are prepared, not yet checked.
+residual population 123. These separate original-export sources remain unverified alternatives; the
+closed 315 theorem uses the fused route below.
 
 The separate `scripts/check_omission_global_profile.py` pins the precise
 arithmetic and cut-transfer manifest hashes in
@@ -219,7 +221,7 @@ The checker enforces the exact threshold identity
 `406 - balancedBudget - residualBudget`. Preparing a profile or replaying a
 tree in Python does not establish a stronger global bound.
 
-## Fused leaf proofs: checked optimization, pending production tree
+## Fused leaf proofs: complete 315 production proof
 
 `scripts/omission_fused_export.py` is a separately versioned exporter. Its
 generic helper composes the same packed-column and strict-margin lemmas as the
@@ -237,14 +239,42 @@ one packed coefficient from 951 to 952 made Lean reject the proof. A complete
 tiny tree and a second corrupted-leaf control also passed the exporter tests.
 This is a bounded throughput measurement, not a guaranteed whole-build speedup.
 
-The selected production candidate additionally uses a smaller-weight tree with
+The completed production proof uses a smaller-weight tree with
 22,318 leaves and packing base 524,288. Its frozen export is
 `OmissionBalancedCover61Fused` / `BalancedCover61FusedProof`, with 502 parts and
 the same 3,131 rows and 446-cut transfer. The profile
 `profile-balanced61-fused-v2-residual30-v1.json` pins its exact identities;
-`BalancedCover61FusedBridge.lean` and `FinalCover315B61FusedR30.lean` prepare the
-315 assembly. This candidate remains pending its complete production tree and
-final proof checks. The checked 316 and 317 results remain separately preserved.
+`BalancedCover61FusedBridge.lean` and `FinalCover315B61FusedR30.lean` implement
+the checked 315 assembly. All 504 arithmetic modules (502 parts, catalog and root) have
+passed Lean. The final profile gate also passed all eight modules and rehashed
+all 1,795 bound inputs unchanged. Its four final roots report only the three
+standard axioms. The earlier checked 316 and 317 results remain preserved.
+
+The [resource record](global-cover-315-resources.json) reports a 161.930-second
+whole-gate run and maximum child-process RSS of 18,582,749,184 bytes on this
+Mac. This is an observed run, not a memory or timing guarantee on another host.
+The source-only B61 archive, complete numeric record, exact tree and full
+446-cut transfer bundle are in the
+[cover artifact](../omission-cover-certificates-2026-10-10/README.md).
+
+To reproduce the completed 315 gate with freshly checked prerequisites, run:
+
+```sh
+lake env python3 scripts/check_omission_global_profile.py \
+  --profile experiments/omission-global-assembly-2026-10-10/profile-balanced61-fused-v2-residual30-v1.json \
+  --output .cache/reproduce-global-cover-315 \
+  --residual-arithmetic .cache/omission-lean-full/residual \
+  --residual-cycles .cache/omission-residual-geometry \
+  --residual-blocks .cache/omission-residual-blocks \
+  --balanced-arithmetic .cache/omission-balanced-linked \
+  --balanced-geometry .cache/omission-balanced-rows-only \
+  --residual-cover-arithmetic .cache/omission-residual-cover-linked \
+  --residual-cover-cuts .cache/omission-cover-transfer-residual \
+  --balanced-cover-arithmetic .cache/omission-balanced-cover61-fused-linked \
+  --balanced-cover-cuts .cache/omission-cover-transfer-balanced-v2
+```
+
+Use the relocation procedure below when paths differ from the preserved build.
 
 ## Bounded direct-CNF experiment
 
@@ -286,3 +316,29 @@ and 8.566 seconds for the same four leaves. These historical comparisons have
 different concurrent load and memory settings; they establish no speedup.
 The experiment was stopped, and all production exporters and sources remain
 unchanged.
+
+## Rebuilding on another host
+
+The archived Lean sources and mathematical data are portable. The saved
+kernel records identify the observed build, including absolute paths and
+platform-specific compiled-object hashes; they are evidence of that run,
+not portable resume records. Rebuild the prerequisites and create fresh
+kernel records on the new host.
+
+The cut-transfer export manifests also contain absolute `source` and
+`certificate` paths. To relocate a preserved family, copy its archived Lean
+source, data and export manifest into a new ignored working directory. In
+that local manifest copy, change only those two path fields, pointing to
+files with the same saved SHA-256 hashes. Verify every generated Lean-source
+hash, certificate hash and augmented-catalog hash against the archived
+family. The remaining manifest content must stay identical. If re-exporting
+sources with the maintained generator, compare their hashes before using
+them; keep the preserved metadata when reproducing an older export format.
+
+Make a local copy of the selected final profile and replace only the
+`cut_manifest_sha256` values with the hashes of these relocated manifest
+copies. Keep the arithmetic-manifest hashes, augmented-source hashes,
+module names, row counts and budgets unchanged. Run the same prerequisite
+checkers and final profile gate with that local profile and fresh records;
+no binding or axiom check is disabled. A successful local run has its own
+profile hash and complete final record.

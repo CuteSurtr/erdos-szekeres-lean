@@ -1,5 +1,5 @@
 {
-  "scope": "Complete balanced59/balanced60/residual30 kernel certificates and cut transfers; separately linked closed316 and317 real-point theorems.",
+  "scope": "Complete balanced59/balanced60/balanced61/residual30 kernel certificates, V1 and V2 cut transfers; separately linked closed315,316 and317 real-point theorems.",
   "source_attribution": {
     "author": "Michael Schroeder",
     "version": "1, 19 September 2026",
@@ -32,6 +32,61 @@
     "residual-source.json": "aed18365e0e9826cfed700fd04a2aaf8a0e491f346b1f68c3887c19ce972ec6c",
     "balanced-60-export.json": "aae6aaf917b4b990d8440f57692377941a06276c266094ee3de77785fee46485",
     "balanced-60-kernel-check.json": "b10f204ed1fd553003b632133aefd9efb42ae4b92fe2a26838a3fb2c10aeb239",
-    "balanced-60-lean-sources.tar.gz": "4cbfdfeea1a9ec8c05a3c86ed332c61d04c7e9b678054ddf42e5f07a9f5204fd"
+    "balanced-60-lean-sources.tar.gz": "4cbfdfeea1a9ec8c05a3c86ed332c61d04c7e9b678054ddf42e5f07a9f5204fd",
+    "balanced-v2-source.json": "acaf6323a2539be869304f42263f80a87db95be1b998e41638dba9bca4d63d72",
+    "balanced-v2-cuts.json": "1fcf436257dd4ce6b648fbcd6718d4a1dedd47913621c1160b6d292fd40fab49",
+    "balanced-v2-cuts-export.json": "50bcb446e8de62b713f3fee4ab314c86505c454d4306a02b4cb9724119b0df4b",
+    "balanced-v2-cuts-kernel-check.json": "e4b7841f642fd04ad9db7d6aafddc70cf31f78bf8c2b883297a98c793103c674",
+    "BalancedCoverCutsV2.lean": "a79cf10030df67ae1cc2d5910a3bac5aedb69eb6e6284cb63b53873ac5bd64dc",
+    "residual-v2-source.json": "c5bc49d588791a6a43e9deba3c4f01af59cf12b781037e69cffb5c2f7735ac61",
+    "residual-v2-cuts.json": "86910488e37e55c92789318055d8647b2e1e6b2a7b61ec2a41126b32d9885c8b",
+    "residual-v2-cuts-export.json": "b2ec3815fdd54cbb9308ffc70aa26892b90f997bf1b3c5c3c3b79f88495f5a14",
+    "residual-v2-cuts-kernel-check.json": "cacd5811ce051a5451a26a212b3e832ba83ded7f524b96eb841624074fb32c9e",
+    "ResidualCoverCutsV2.lean": "46ba1570e1dbc22fb75a31129e4f17d3826afc2dbe7ca27c3742b26869ca3c5b",
+    "README.md": "acad252924a08d9efb9a1d72415509aeb8a51bd2d8a0cefee4d4b2aaf07841b8",
+    "balanced-61-fused-lean-sources.tar.gz": "28aee1f64fb21f9d179893b4dc4616b3b14acfab5c49c53dd7d8a6bd03f78f58",
+    "balanced-61-fused-export.json": "885f898e64683f13e803940691664282dbae8039fe569b049ee520f41cba6412",
+    "balanced-61-fused-kernel-check.json": "c338bac45a3c013d7fbf6360b7e0679c9b14225d32b43803706733193d88ea5f",
+    "balanced-61-fused-tree.json.gz": "d2a0c10b2df72bf238646b4a29287d9b0c55b24f7586a06c1895d6f53a3abfd1"
+  },
+  "version2_cuts": {
+    "balanced": {
+      "complete": true,
+      "original_rows": 2685,
+      "derived_rows": 446,
+      "source": "balanced-v2-source.json",
+      "certificate": "balanced-v2-cuts.json",
+      "lean_source": "BalancedCoverCutsV2.lean",
+      "export_manifest": "balanced-v2-cuts-export.json",
+      "record": "balanced-v2-cuts-kernel-check.json",
+      "root": "BalancedCoverCutsV2.all_rows"
+    },
+    "residual": {
+      "complete": true,
+      "original_rows": 1187,
+      "derived_rows": 1108,
+      "source": "residual-v2-source.json",
+      "certificate": "residual-v2-cuts.json",
+      "lean_source": "ResidualCoverCutsV2.lean",
+      "export_manifest": "residual-v2-cuts-export.json",
+      "record": "residual-v2-cuts-kernel-check.json",
+      "root": "ResidualCoverCutsV2.all_rows"
+    }
+  },
+  "fused_families": {
+    "balanced": {
+      "budget": 61,
+      "source_files": 504,
+      "parts": 502,
+      "leaves": 22318,
+      "arithmetic_complete": true,
+      "cut_transfer_complete": true,
+      "original_rows": 2685,
+      "derived_rows": 446,
+      "rows": 3131,
+      "arithmetic_record": "balanced-61-fused-kernel-check.json",
+      "cut_record": "balanced-v2-cuts-kernel-check.json",
+      "source_archive": "balanced-61-fused-lean-sources.tar.gz"
+    }
   }
 }

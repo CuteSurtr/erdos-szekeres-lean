@@ -1,0 +1,67 @@
+{
+  "complete": true,
+  "scope": "Alternative structural proof of the original nine-state omission row for actual residual real-point configurations. No new global ES threshold. Explicit no-6-cap, no-convex-octagon, and no-junction assumptions.",
+  "roots": [
+    "ErdosSzekeres.Omission.StructuralNine.context_impossible_structural",
+    "ErdosSzekeres.Omission.StructuralNine.states_injective",
+    "ErdosSzekeres.Omission.StructuralNine.exists_missing_state",
+    "ErdosSzekeres.Omission.StructuralNine.hole_bound"
+  ],
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "commands": [
+    "ELAN_HOME=\"$PWD/.elan\" .elan/bin/lake build ErdosSzekeres.Omission.CoupledNineStructural",
+    "ELAN_HOME=\"$PWD/.elan\" .elan/bin/lake env lean -M1000 experiments/omission-coupled-nine-structural-2026-10-10/Audit.lean"
+  ],
+  "exit_codes": [
+    0,
+    0
+  ],
+  "new_module_build_seconds": 5.4,
+  "proof_route": "Shared pair-rank growth, one four-point orientation packet, and visible-edge insertion; no use of the literal nine-state CNF/LRAT theorem.",
+  "support": [
+    33,
+    43,
+    64,
+    68,
+    75,
+    87,
+    91,
+    99,
+    118
+  ],
+  "placeholder_scan": "passed",
+  "files": {
+    "ErdosSzekeres/Omission/CoupledNineStructural.lean": {
+      "sha256": "08baeeaf34bc160f620b8e8b6b9602f0987c6c8fd7d4877bce09ffd6ef47b0c5",
+      "bytes": 15352
+    },
+    "ErdosSzekeres/VisibleEdgeInsertion.lean": {
+      "sha256": "782df7db4ce9a8b3c2a0abe68d9d309b995d60639d6d89b1cffc628b748007d4",
+      "bytes": 4388
+    },
+    "ErdosSzekeres/Omission/CoupledSemantics.lean": {
+      "sha256": "672adbe50764a3c94a00342a4e23f10cac69f257e4e304cf2f5661cf91151f58",
+      "bytes": 17803
+    },
+    "experiments/omission-coupled-nine-structural-2026-10-10/Audit.lean": {
+      "sha256": "1f0425555723c77e68d7a38846ef9d8a4cd2ea69db34ae50d8076b67248029f9",
+      "bytes": 465
+    },
+    "experiments/omission-coupled-nine-structural-2026-10-10/axiom-audit.txt": {
+      "sha256": "94f958acea85a26aeb6c6f8ccf157a3f1e5eba53d6f9269ccbd798042a22c69f",
+      "bytes": 1311
+    },
+    "experiments/omission-coupled-nine-structural-2026-10-10/README.md": {
+      "sha256": "bb4d3e1ef8a1313d2f778c2ec1c3d777ddf66b3b2e3ca96919e3ea3ed4301864",
+      "bytes": 3573
+    },
+    "experiments/omission-coupled-nine-structural-2026-10-10/interpretation.md": {
+      "sha256": "b88f5b512789b81759869399570ec47e94270d7fa5406c8db51239ae712db0fb",
+      "bytes": 8003
+    }
+  }
+}

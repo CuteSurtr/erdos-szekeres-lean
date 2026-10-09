@@ -4,7 +4,7 @@ Lean proofs of two published upper bounds for **finite point sets in the real
 plane in general position** (no three distinct points collinear), together with
 separately identified computational research. Polygons need not be empty.
 
-**ES(8) ≤ 316 is now proved in Lean:** every set of at least 316 real planar
+**ES(8) ≤ 315 is now proved in Lean:** every set of at least 315 real planar
 points in general position contains eight points in convex position. The
 finished Suk 2016 and HMPT 2020 asymptotic bounds are also formalized below.
 The Erdős–Szekeres conjecture and an improvement of HMPT's asymptotic
@@ -40,21 +40,21 @@ restricted specializations, and statements not formalized.
 
 ## Completed finite octagon bound — 10 October 2026
 
-The closed theorem is `ErdosSzekeres.Omission.forces_convex_octagon_316 :
-ForcesConvexNGon 316 8`. Its explicit real-point form,
-`ErdosSzekeres.Omission.convex_octagon_of_card_ge_316`, quantifies over every
-finite set `S : Finset (Fin 2 → ℝ)` in general position with `316 ≤ S.card`,
+The closed theorem is `ErdosSzekeres.Omission.forces_convex_octagon_315 :
+ForcesConvexNGon 315 8`. Its explicit real-point form,
+`ErdosSzekeres.Omission.convex_octagon_of_card_ge_315`, quantifies over every
+finite set `S : Finset (Fin 2 → ℝ)` in general position with `315 ≤ S.card`,
 and supplies `T ⊆ S` of cardinality eight with `ConvexIndependent ℝ`.
-Both live in [FinalCover316.lean](experiments/omission-global-assembly-2026-10-10/FinalCover316.lean).
+Both live in [FinalCover315B61FusedR30.lean](experiments/omission-global-assembly-2026-10-10/FinalCover315B61FusedR30.lean).
 There are no remaining row, arithmetic, coordinate-order or cup/cap assumptions
 on the original point set.
 
 The proof combines the checked projective/root transfer and minimum-slope
-partition with balanced population bound 191 and residual bound 123.
+partition with balanced population bound 190 and residual bound 123.
 The partition's configurations have additional geometric restrictions, all
 proved by the reduction. Their 2,685 balanced and 1,187 residual row constraints
 are established for actual points. Checked rounding cuts compress the arithmetic
-exclusions to 3,954 and 4,686 leaves. Every leaf, complete tree root, literal
+exclusions to 22,318 and 4,686 leaves. Every leaf, complete tree root, literal
 catalog bridge and final composition has passed Lean with only `propext`,
 `Classical.choice` and `Quot.sound`.
 
@@ -65,7 +65,7 @@ catalog bridge and final composition has passed Lean with only `propext`,
 The omission method, original state catalogs and adapted prerequisites are
 credited to Michael Schroeder's version-1 archive (19 September 2026), which
 claims an octagon threshold of 319. This repository proves the smaller threshold
-316 using stronger arithmetic certificates and ordinary kernel checking.
+315 using stronger arithmetic certificates and ordinary kernel checking.
 That comparison is to the pinned archive, not a claim of literature priority.
 See [provenance and licenses](docs/THIRD_PARTY.md).
 
@@ -105,11 +105,13 @@ by `CoupledCoreEleven.hole_bound` and `CoupledCoreNine.hole_bound`; their
 [eleven-state](experiments/omission-coupled-eleven-2026-10-10/README.md) and
 [nine-state](experiments/omission-coupled-nine-2026-10-10/README.md) bundles
 preserve the geometric proofs and independent certificate controls.
+[CoupledNineVariant.lean](ErdosSzekeres/Omission/CoupledNineVariant.lean)
+checks a second nine-state support using the same generic refutation.
 [CoupledDemandTwo.lean](ErdosSzekeres/Omission/CoupledDemandTwo.lean) proves
 `Omission.CoupledDemandTwo.hole_bound`: at least two states are missing from
 one specified 14-state set. Given the earlier rows, that formulation is
 equivalent to the third obstruction; it is not a second independent discovery.
-These geometric extensions are separate from the completed 316-point
+These geometric extensions are separate from the completed 315-point
 arithmetic route and do not yet lower its threshold.
 
 [DyadicScale.lean](ErdosSzekeres/HMPT/DyadicScale.lean) extends the finite HMPT
@@ -131,13 +133,30 @@ the asymptotic coefficient unchanged and carries no novelty claim. The
 [proof artifact](experiments/hmpt-binomial-refinement-2026-10-10/README.md)
 states the formulas, hypotheses and a checked strictness example.
 
+[FactorialSaving.lean](ErdosSzekeres/HMPT/FactorialSaving.lean) makes that
+strictness uniform: whenever the old exponent exceeds its auxiliary floor,
+`HMPT.integer_two_scale_bound_one_bit_smaller` halves the sufficient
+power-of-two threshold using the same auxiliary-polygon input. The
+[precise finite condition and audit](experiments/hmpt-factorial-saving-2026-10-10/README.md)
+are explicit; this does not change the asymptotic coefficient.
+
+[VisibleEdgeInsertion.lean](ErdosSzekeres/VisibleEdgeInsertion.lean) proves
+a reusable convex-polygon insertion lemma: a new point outside one supporting
+edge and inside the others preserves all vertices when the retained edges
+cover them. [CoupledNineStructural.lean](ErdosSzekeres/Omission/CoupledNineStructural.lean)
+uses it to reprove the original nine-state obstruction geometrically, without
+invoking its SAT refutation. The same construction proves two more supports
+in [CoupledNineStructuralVariants.lean](ErdosSzekeres/Omission/CoupledNineStructuralVariants.lean).
+The [structural proof artifact](experiments/omission-coupled-nine-structural-2026-10-10/README.md)
+contains the readable argument and all three checked instances.
+
 ## Verification
 
 Pinned versions: **Lean 4.24.0**, **Mathlib v4.24.0**; dependency revisions are in
 [lake-manifest.json](lake-manifest.json).
 
 The current library passes `lake build --wfail`. The
-[full saved axiom audit](docs/validation/axiom-audit-recovery-2026-10-10.txt) checks **544 named
+[full saved axiom audit](docs/validation/axiom-audit-structural-2026-10-10.txt) checks **571 named
 theorems**, including both main theorems and their transitive axiom dependencies.
 Only `propext`, `Classical.choice`, and `Quot.sound` are allowed. There is no
 `sorry`, `admit`, `sorryAx`, or `native_decide` in the maintained Lean sources,
@@ -160,15 +179,14 @@ instructions and are not silently counted as default-library CI checks.
 
 ## In-progress research — 10 October 2026
 
-The 315- and 314-point targets are **not yet proved**. Complete exact arithmetic
-certificates with 22,318 balanced and 50,945 residual leaves are undergoing Lean
-checking. Further geometric constraints are being investigated using explicit
+The 314-point target is **not yet proved**. Its 22,318-leaf balanced certificate
+is complete; the 50,945-leaf residual certificate is undergoing Lean checking. Further geometric constraints are being investigated using explicit
 Boolean witnesses and shared-order/rank/orientation obstructions. Neither solver
 UNSAT output nor a partially checked certificate is counted as a theorem.
 
 The [current work estimate](docs/ES8_REMAINING.md) separates these stronger
-targets from the completed 316-point result. The earlier complete 317-point
-proof and its records remain available. Earlier partial certificates and
+targets from the completed 315-point result. The earlier complete 316- and 317-point
+proofs and their records remain available. Earlier partial certificates and
 failed searches are retained as dated research records. They do not invalidate
 or replace the complete new proof route. The finished asymptotic theorem still
 has HMPT's published coefficient `8√2/3`.

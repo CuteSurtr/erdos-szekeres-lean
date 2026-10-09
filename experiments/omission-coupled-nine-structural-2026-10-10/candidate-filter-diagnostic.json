@@ -1,0 +1,578 @@
+{
+ "scope": "Unformalized reduced structural schema; finite exact single-row implication filtering only.",
+ "source_sha256": "6335114f2ca980e69260fcc46fc86aedbe49487c9a3ea7c750c6a923df06d334",
+ "remaining": [
+  {
+   "map": [
+    33,
+    43,
+    64,
+    68,
+    75,
+    87,
+    91,
+    99,
+    111
+   ],
+   "implied_by": null,
+   "old_cnf_compatible": false
+  },
+  {
+   "map": [
+    44,
+    53,
+    64,
+    68,
+    75,
+    87,
+    91,
+    99,
+    111
+   ],
+   "implied_by": null,
+   "old_cnf_compatible": false
+  },
+  {
+   "map": [
+    44,
+    53,
+    64,
+    68,
+    75,
+    87,
+    91,
+    99,
+    118
+   ],
+   "implied_by": null,
+   "old_cnf_compatible": true
+  }
+ ],
+ "redundant": [
+  {
+   "map": [
+    33,
+    43,
+    64,
+    25,
+    75,
+    87,
+    68,
+    99,
+    90
+   ],
+   "implied_by": 216,
+   "old_cnf_compatible": false
+  },
+  {
+   "map": [
+    33,
+    43,
+    64,
+    25,
+    75,
+    87,
+    91,
+    99,
+    111
+   ],
+   "implied_by": 985,
+   "old_cnf_compatible": false
+  },
+  {
+   "map": [
+    33,
+    43,
+    64,
+    25,
+    75,
+    87,
+    91,
+    99,
+    118
+   ],
+   "implied_by": 985,
+   "old_cnf_compatible": false
+  },
+  {
+   "map": [
+    33,
+    43,
+    64,
+    25,
+    75,
+    87,
+    91,
+    118,
+    111
+   ],
+   "implied_by": 985,
+   "old_cnf_compatible": false
+  },
+  {
+   "map": [
+    33,
+    43,
+    64,
+    25,
+    75,
+    87,
+    111,
+    99,
+    118
+   ],
+   "implied_by": 985,
+   "old_cnf_compatible": false
+  },
+  {
+   "map": [
+    33,
+    43,
+    64,
+    25,
+    75,
+    99,
+    91,
+    118,
+    111
+   ],
+   "implied_by": 985,
+   "old_cnf_compatible": false
+  },
+  {
+   "map": [
+    33,
+    43,
+    64,
+    25,
+    87,
+    99,
+    91,
+    118,
+    111
+   ],
+   "implied_by": 985,
+   "old_cnf_compatible": false
+  },
+  {
+   "map": [
+    33,
+    43,
+    64,
+    68,
+    75,
+    87,
+    91,
+    99,
+    118
+   ],
+   "implied_by": 2456,
+   "old_cnf_compatible": true
+  },
+  {
+   "map": [
+    33,
+    43,
+    64,
+    68,
+    75,
+    87,
+    111,
+    99,
+    118
+   ],
+   "implied_by": 993,
+   "old_cnf_compatible": true
+  },
+  {
+   "map": [
+    33,
+    43,
+    64,
+    79,
+    75,
+    87,
+    101,
+    99,
+    111
+   ],
+   "implied_by": 993,
+   "old_cnf_compatible": false
+  },
+  {
+   "map": [
+    33,
+    43,
+    64,
+    79,
+    75,
+    87,
+    101,
+    99,
+    118
+   ],
+   "implied_by": 993,
+   "old_cnf_compatible": true
+  },
+  {
+   "map": [
+    33,
+    43,
+    64,
+    79,
+    75,
+    87,
+    111,
+    99,
+    118
+   ],
+   "implied_by": 993,
+   "old_cnf_compatible": true
+  },
+  {
+   "map": [
+    33,
+    43,
+    64,
+    90,
+    75,
+    87,
+    111,
+    99,
+    118
+   ],
+   "implied_by": 993,
+   "old_cnf_compatible": true
+  },
+  {
+   "map": [
+    33,
+    43,
+    64,
+    91,
+    75,
+    87,
+    111,
+    99,
+    118
+   ],
+   "implied_by": 985,
+   "old_cnf_compatible": true
+  },
+  {
+   "map": [
+    33,
+    43,
+    64,
+    101,
+    75,
+    87,
+    111,
+    99,
+    118
+   ],
+   "implied_by": 993,
+   "old_cnf_compatible": true
+  },
+  {
+   "map": [
+    33,
+    43,
+    75,
+    25,
+    87,
+    99,
+    91,
+    118,
+    111
+   ],
+   "implied_by": 985,
+   "old_cnf_compatible": false
+  },
+  {
+   "map": [
+    44,
+    53,
+    64,
+    34,
+    75,
+    87,
+    68,
+    99,
+    90
+   ],
+   "implied_by": 286,
+   "old_cnf_compatible": false
+  },
+  {
+   "map": [
+    44,
+    53,
+    64,
+    34,
+    75,
+    87,
+    91,
+    99,
+    111
+   ],
+   "implied_by": 995,
+   "old_cnf_compatible": false
+  },
+  {
+   "map": [
+    44,
+    53,
+    64,
+    34,
+    75,
+    87,
+    91,
+    99,
+    118
+   ],
+   "implied_by": 995,
+   "old_cnf_compatible": false
+  },
+  {
+   "map": [
+    44,
+    53,
+    64,
+    34,
+    75,
+    87,
+    91,
+    118,
+    111
+   ],
+   "implied_by": 995,
+   "old_cnf_compatible": false
+  },
+  {
+   "map": [
+    44,
+    53,
+    64,
+    34,
+    75,
+    87,
+    111,
+    99,
+    118
+   ],
+   "implied_by": 995,
+   "old_cnf_compatible": false
+  },
+  {
+   "map": [
+    44,
+    53,
+    64,
+    34,
+    75,
+    99,
+    91,
+    118,
+    111
+   ],
+   "implied_by": 995,
+   "old_cnf_compatible": false
+  },
+  {
+   "map": [
+    44,
+    53,
+    64,
+    34,
+    87,
+    99,
+    91,
+    118,
+    111
+   ],
+   "implied_by": 995,
+   "old_cnf_compatible": false
+  },
+  {
+   "map": [
+    44,
+    53,
+    64,
+    68,
+    75,
+    87,
+    111,
+    99,
+    118
+   ],
+   "implied_by": 1007,
+   "old_cnf_compatible": true
+  },
+  {
+   "map": [
+    44,
+    53,
+    64,
+    79,
+    75,
+    87,
+    101,
+    99,
+    111
+   ],
+   "implied_by": 1007,
+   "old_cnf_compatible": false
+  },
+  {
+   "map": [
+    44,
+    53,
+    64,
+    79,
+    75,
+    87,
+    101,
+    99,
+    118
+   ],
+   "implied_by": 1007,
+   "old_cnf_compatible": true
+  },
+  {
+   "map": [
+    44,
+    53,
+    64,
+    79,
+    75,
+    87,
+    111,
+    99,
+    118
+   ],
+   "implied_by": 1007,
+   "old_cnf_compatible": true
+  },
+  {
+   "map": [
+    44,
+    53,
+    64,
+    90,
+    75,
+    87,
+    111,
+    99,
+    118
+   ],
+   "implied_by": 1007,
+   "old_cnf_compatible": true
+  },
+  {
+   "map": [
+    44,
+    53,
+    64,
+    91,
+    75,
+    87,
+    111,
+    99,
+    118
+   ],
+   "implied_by": 995,
+   "old_cnf_compatible": true
+  },
+  {
+   "map": [
+    44,
+    53,
+    64,
+    101,
+    75,
+    87,
+    111,
+    99,
+    118
+   ],
+   "implied_by": 1007,
+   "old_cnf_compatible": true
+  },
+  {
+   "map": [
+    44,
+    53,
+    75,
+    34,
+    87,
+    99,
+    91,
+    118,
+    111
+   ],
+   "implied_by": 995,
+   "old_cnf_compatible": false
+  },
+  {
+   "map": [
+    54,
+    64,
+    75,
+    25,
+    87,
+    99,
+    91,
+    118,
+    111
+   ],
+   "implied_by": 985,
+   "old_cnf_compatible": false
+  },
+  {
+   "map": [
+    54,
+    64,
+    75,
+    33,
+    87,
+    99,
+    101,
+    118,
+    111
+   ],
+   "implied_by": 993,
+   "old_cnf_compatible": false
+  },
+  {
+   "map": [
+    54,
+    64,
+    75,
+    34,
+    87,
+    99,
+    91,
+    118,
+    111
+   ],
+   "implied_by": 995,
+   "old_cnf_compatible": false
+  },
+  {
+   "map": [
+    54,
+    64,
+    75,
+    44,
+    87,
+    99,
+    101,
+    118,
+    111
+   ],
+   "implied_by": 1007,
+   "old_cnf_compatible": false
+  }
+ ]
+}

@@ -1,0 +1,89 @@
+{
+  "complete": true,
+  "scope": "Two additional actual residual nine-state omission rows, proved by explicit instances of the structural visible-edge argument. No further global ES threshold is claimed.",
+  "roots": [
+    "ErdosSzekeres.Omission.StructuralNine111.context_impossible_structural",
+    "ErdosSzekeres.Omission.StructuralNine111.states_injective",
+    "ErdosSzekeres.Omission.StructuralNine111.exists_missing_state",
+    "ErdosSzekeres.Omission.StructuralNine111.hole_bound",
+    "ErdosSzekeres.Omission.StructuralNineShifted111.context_impossible_structural",
+    "ErdosSzekeres.Omission.StructuralNineShifted111.states_injective",
+    "ErdosSzekeres.Omission.StructuralNineShifted111.exists_missing_state",
+    "ErdosSzekeres.Omission.StructuralNineShifted111.hole_bound"
+  ],
+  "supports": [
+    [
+      33,
+      43,
+      64,
+      68,
+      75,
+      87,
+      91,
+      99,
+      111
+    ],
+    [
+      44,
+      53,
+      64,
+      68,
+      75,
+      87,
+      91,
+      99,
+      111
+    ]
+  ],
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "commands": [
+    "ELAN_HOME=\"$PWD/.elan\" .elan/bin/lake build ErdosSzekeres.Omission.CoupledNineStructuralVariants",
+    "ELAN_HOME=\"$PWD/.elan\" .elan/bin/lake env lean -M1000 experiments/omission-coupled-nine-structural-2026-10-10/VariantsAudit.lean"
+  ],
+  "exit_codes": [
+    0,
+    0
+  ],
+  "new_module_build_seconds": 8.4,
+  "source_provenance": "Two explicit copies of the checked structural argument, changing namespaces, state/support identifiers, and descriptive comments; all finite premises are recomputed by ordinary kernel reduction. Original source bytes preserved.",
+  "placeholder_scan": "passed",
+  "search_diagnostic_scope": "Exact finite filtering only; not a Lean independence or compatibility theorem.",
+  "files": {
+    "ErdosSzekeres/Omission/CoupledNineStructuralVariants.lean": {
+      "sha256": "e95c1918d7b5b036f741c6a1932c8e0d53cb26c5c408680c7f7969d9af0693dd",
+      "bytes": 30627
+    },
+    "ErdosSzekeres/Omission/CoupledNineStructural.lean": {
+      "sha256": "08baeeaf34bc160f620b8e8b6b9602f0987c6c8fd7d4877bce09ffd6ef47b0c5",
+      "bytes": 15352
+    },
+    "ErdosSzekeres/VisibleEdgeInsertion.lean": {
+      "sha256": "782df7db4ce9a8b3c2a0abe68d9d309b995d60639d6d89b1cffc628b748007d4",
+      "bytes": 4388
+    },
+    "ErdosSzekeres/Omission/CoupledSemantics.lean": {
+      "sha256": "672adbe50764a3c94a00342a4e23f10cac69f257e4e304cf2f5661cf91151f58",
+      "bytes": 17803
+    },
+    "experiments/omission-coupled-nine-structural-2026-10-10/VariantsAudit.lean": {
+      "sha256": "7b137680f6563540cb7928ca4360efaba74a4f27eaf3049a15e00dc08db80d5e",
+      "bytes": 815
+    },
+    "experiments/omission-coupled-nine-structural-2026-10-10/variants-axiom-audit.txt": {
+      "sha256": "02e6c4ea35fbd4b6297bf8d91e62a51957242f1e8155228db3e0cad6ad7cac2f",
+      "bytes": 1860
+    },
+    "experiments/omission-coupled-nine-structural-2026-10-10/README.md": {
+      "sha256": "bb4d3e1ef8a1313d2f778c2ec1c3d777ddf66b3b2e3ca96919e3ea3ed4301864",
+      "bytes": 3573
+    },
+    "experiments/omission-coupled-nine-structural-2026-10-10/candidate-filter-diagnostic.json": {
+      "sha256": "ef0b4b237c029520a6b6f5eefe273b3bd239f38dc52b5ca0aa0f85efa18cc1f8",
+      "bytes": 6035
+    }
+  }
+}

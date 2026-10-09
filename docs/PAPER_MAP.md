@@ -144,9 +144,19 @@ applying kernel-checked finite refutations.
 | Fifth template family | [CoupledFifthVariants.lean](../ErdosSzekeres/Omission/CoupledFifthVariants.lean): `CoupledFifthVariants.all_rows` | 28 further checked support maps. |
 | Eleven-state core | [CoupledElevenObstruction.lean](../ErdosSzekeres/Omission/CoupledElevenObstruction.lean): `CoupledCoreEleven.hole_bound` | At least one of eleven specified states is absent. |
 | Nine-state core | [CoupledNineObstruction.lean](../ErdosSzekeres/Omission/CoupledNineObstruction.lean): `CoupledCoreNine.hole_bound` | At least one of nine specified states is absent. |
+| Second nine-state support | [CoupledNineVariant.lean](../ErdosSzekeres/Omission/CoupledNineVariant.lean): `CoupledNineVariant.hole_bound` | The same refutation applies after kernel-checking every prerequisite of a new support. No independence claim. |
+| Structural nine-state proof and two further rows | [CoupledNineStructural.lean](../ErdosSzekeres/Omission/CoupledNineStructural.lean): `StructuralNine.hole_bound`; [CoupledNineStructuralVariants.lean](../ErdosSzekeres/Omission/CoupledNineStructuralVariants.lean): `StructuralNine111.hole_bound`, `StructuralNineShifted111.hole_bound` | A geometric proof without invoking the CNF refutation; its two further instances give valid nine-state omission rows. |
 | Fourteen-state capacity improvement | [CoupledDemandTwo.lean](../ErdosSzekeres/Omission/CoupledDemandTwo.lean): `CoupledDemandTwo.hole_bound`; [TwoHoleAssembly.lean](../ErdosSzekeres/Omission/TwoHoleAssembly.lean): `two_holes_of_deletions` | At least two of fourteen states are absent, using the third core and earlier rows. This is another formulation of the third obstruction relative to those premises, not a second independent discovery. |
 
 These finite geometric constraints do not by themselves establish a new global
 octagon bound or improve either paper's asymptotic coefficient. Proof inputs,
 axiom audits and discovery provenance are linked from the
 [third-party attribution](THIRD_PARTY.md#coupled-residual-obstructions--10-october-2026).
+
+Two further project additions have no numbered paper counterpart.
+`ErdosSzekeres.HMPT.integer_two_scale_bound_one_bit_smaller` in
+[FactorialSaving.lean](../ErdosSzekeres/HMPT/FactorialSaving.lean): the finite
+power-of-two threshold can be halved when its counting term exceeds the
+auxiliary floor. [VisibleEdgeInsertion.lean](../ErdosSzekeres/VisibleEdgeInsertion.lean)
+proves `VisibleEdgeInsertion.convexPosition_insert_of_one_visible_edge` for an
+explicit supporting-edge family with retained vertex coverage.

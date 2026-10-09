@@ -1,0 +1,13 @@
+'ErdosSzekeres.Omission.CoupledTemplateNine.context_impossible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.CoupledTemplateNine.check_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Omission.CoupledTemplateNine.exists_missing_index' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.CoupledTemplateNine.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Omission.CoupledNineVariant.checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Omission.CoupledNineVariant.exists_missing_state' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.CoupledNineVariant.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

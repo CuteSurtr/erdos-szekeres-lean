@@ -273,3 +273,11 @@ The [endpoint budget analysis](../experiments/hmpt-endpoint-barrier-2026-10-10/R
 uses the same HMPT coefficient and this repository's explicit entropy budget.
 It introduces no external code and does not attribute an impossibility claim
 to the published paper.
+
+The [uniform factorial saving](../experiments/hmpt-factorial-saving-2026-10-10/README.md)
+and [visible-edge insertion lemma](../experiments/visible-edge-insertion-2026-10-10/README.md)
+are new project proofs using existing attributed prerequisites and Mathlib.
+The [second nine-state support](../experiments/omission-coupled-nine-variant-2026-10-10/README.md)
+reuses the original nine-state refutation with newly checked state-dependent
+premises. Its literal state data retain the same catalog attribution and data
+license. These additions introduce no new third-party code or priority claim.

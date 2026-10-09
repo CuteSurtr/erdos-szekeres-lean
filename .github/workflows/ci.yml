@@ -17,7 +17,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for module in CoupledVariants CoupledSecondVariants CoupledThirdVariants CoupledFourthVariants CoupledFifthVariants CoupledElevenObstruction CoupledNineObstruction; do
+          for module in CoupledVariants CoupledSecondVariants CoupledThirdVariants CoupledFourthVariants CoupledFifthVariants CoupledElevenObstruction CoupledNineVariant; do
             /usr/bin/time -v lake build --wfail "ErdosSzekeres.Omission.$module"
           done
           lake build --wfail

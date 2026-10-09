@@ -58,3 +58,8 @@ import ErdosSzekeres.Omission.CoupledElevenObstruction
 import ErdosSzekeres.HMPT.BinomialRefinement
 import ErdosSzekeres.Omission.CoupledNineObstruction
 import ErdosSzekeres.HMPT.EndpointBarrier
+import ErdosSzekeres.HMPT.FactorialSaving
+import ErdosSzekeres.Omission.CoupledNineVariant
+import ErdosSzekeres.VisibleEdgeInsertion
+import ErdosSzekeres.Omission.CoupledNineStructural
+import ErdosSzekeres.Omission.CoupledNineStructuralVariants

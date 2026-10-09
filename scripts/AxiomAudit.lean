@@ -1,5 +1,34 @@
 import ErdosSzekeres
 
+#print axioms ErdosSzekeres.Omission.StructuralNine.context_impossible_structural
+#print axioms ErdosSzekeres.Omission.StructuralNine.states_injective
+#print axioms ErdosSzekeres.Omission.StructuralNine.exists_missing_state
+#print axioms ErdosSzekeres.Omission.StructuralNine.hole_bound
+#print axioms ErdosSzekeres.Omission.StructuralNine111.context_impossible_structural
+#print axioms ErdosSzekeres.Omission.StructuralNine111.states_injective
+#print axioms ErdosSzekeres.Omission.StructuralNine111.exists_missing_state
+#print axioms ErdosSzekeres.Omission.StructuralNine111.hole_bound
+#print axioms ErdosSzekeres.Omission.StructuralNineShifted111.context_impossible_structural
+#print axioms ErdosSzekeres.Omission.StructuralNineShifted111.states_injective
+#print axioms ErdosSzekeres.Omission.StructuralNineShifted111.exists_missing_state
+#print axioms ErdosSzekeres.Omission.StructuralNineShifted111.hole_bound
+
+#print axioms ErdosSzekeres.HMPT.factorial_ge_two_pow_three_mul_sub
+#print axioms ErdosSzekeres.HMPT.factorial_log_ge_scale_denominator
+#print axioms ErdosSzekeres.HMPT.twoScaleFactorialExponent_lt_of_counting_dominates
+#print axioms ErdosSzekeres.HMPT.self_lt_twoScaleExponent
+#print axioms ErdosSzekeres.HMPT.twoScaleFactorialExponent_lt
+#print axioms ErdosSzekeres.HMPT.integer_two_scale_bound_one_bit_smaller
+#print axioms ErdosSzekeres.Omission.CoupledTemplateNine.context_impossible
+#print axioms ErdosSzekeres.Omission.CoupledTemplateNine.check_sound
+#print axioms ErdosSzekeres.Omission.CoupledTemplateNine.exists_missing_index
+#print axioms ErdosSzekeres.Omission.CoupledTemplateNine.hole_bound
+#print axioms ErdosSzekeres.Omission.CoupledNineVariant.checked
+#print axioms ErdosSzekeres.Omission.CoupledNineVariant.exists_missing_state
+#print axioms ErdosSzekeres.Omission.CoupledNineVariant.hole_bound
+#print axioms ErdosSzekeres.VisibleEdgeInsertion.convexPosition_insert_of_retained_pair_supports
+#print axioms ErdosSzekeres.VisibleEdgeInsertion.convexPosition_insert_of_one_visible_edge
+
 #print axioms ErdosSzekeres.packetValid_iff_eight_patterns
 #print axioms ErdosSzekeres.packetValid_of_xordered
 #print axioms ErdosSzekeres.OmissionCertificates.weighted_capacity_bound

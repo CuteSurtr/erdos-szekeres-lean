@@ -1,0 +1,51 @@
+{
+  "complete": true,
+  "toolchain": "Lean 4.24.0; Mathlib v4.24.0",
+  "build": "lake build --wfail:3301 jobs; passed",
+  "axioms": {
+    "ErdosSzekeres.HMPT.factorial_ge_two_pow_three_mul_sub": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ErdosSzekeres.HMPT.factorial_log_ge_scale_denominator": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ErdosSzekeres.HMPT.twoScaleFactorialExponent_lt_of_counting_dominates": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ErdosSzekeres.HMPT.self_lt_twoScaleExponent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ErdosSzekeres.HMPT.twoScaleFactorialExponent_lt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ErdosSzekeres.HMPT.integer_two_scale_bound_one_bit_smaller": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "files": {
+    "ErdosSzekeres/HMPT/FactorialSaving.lean": {
+      "sha256": "acef75818aff2ca024c2bd63a85978b83fc6fe444a4fd306fe8ef16948574aa6",
+      "bytes": 4386
+    },
+    "experiments/hmpt-factorial-saving-2026-10-10/README.md": {
+      "sha256": "94bc91aff5f9ea179e026150d17bde61916d9d45cc718fd70bfea69cf01712a5",
+      "bytes": 1538
+    },
+    "experiments/hmpt-factorial-saving-2026-10-10/axiom-audit.txt": {
+      "sha256": "0406c0984d2490121d02d5386258422773b10a30b7bce706c6b6eb48757172eb",
+      "bytes": 697
+    }
+  }
+}

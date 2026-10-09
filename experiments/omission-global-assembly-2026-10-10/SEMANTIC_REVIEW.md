@@ -1,8 +1,9 @@
 # Review of the geometric boundary and certificate linking
 
-The closed `FinalCover316` and earlier `FinalCover317` compositions have passed
-the complete gate and standard-axiom audits; see their separate
-`global-cover-316-check.json` and `global-cover-317-check.json` records. This review explains
+The closed `FinalCover315B61FusedR30`, `FinalCover316` and `FinalCover317`
+compositions have passed the complete gate and standard-axiom audits; see
+their separate `global-cover-315-check.json`, `global-cover-316-check.json`
+and `global-cover-317-check.json` records. This review explains
 their mathematical boundary. Historical `Final317`/`Final318` routes and stronger
 candidate assemblies are distinct and retain their separately stated status.
 
@@ -27,20 +28,21 @@ candidate assemblies are distinct and retain their separately stated status.
   residual population at most 124. Excluding at most 30 gives at most 123.
 * The root and the strict forcing threshold contribute one point each:
   balanced 192 plus residual 124 permits at most 317 avoiding points and
-  forces an octagon at 318. Residual 123 gives the threshold 317; balanced 191 plus residual 123 gives 316.
+  forces an octagon at 318. Residual 123 gives threshold 317; balanced 191
+  plus residual 123 gives 316; balanced 190 plus residual 123 gives 315.
 * Historical fallback catalogs use different packing
   bases. `OmissionResidual124.catalog_matches` checks equality of the
   geometric supports and demands; the exclusion transfer uses precisely
   these equalities. Equality of the irrelevant packed codes is not assumed.
-* The checked cover route derives 402 residual and 220 balanced inequalities
+* The checked 315 route derives 402 residual and 446 balanced inequalities
   from the original rows using nonnegative integer sums and Boolean upper
-  bounds. Its two bridges kernel-check every original and added support and
+  bounds. Earlier 316 and 317 routes use the 220-cut balanced family. Its two bridges kernel-check every original and added support and
   demand before transferring the compressed exclusions. No additional
   geometric or realizability premise is introduced by these arithmetic cuts.
 * The final source statements have no free population-bound variables or
   arithmetic hypotheses. Their only geometric hypotheses are general
-  position and the asserted cardinality threshold. Both `FinalCover316` and
-  `FinalCover317` passed
+  position and the asserted cardinality threshold. The three closed sources
+  `FinalCover315B61FusedR30`, `FinalCover316` and `FinalCover317` passed
   compilation and the final audit, with only `propext`, `Classical.choice`,
   and `Quot.sound`; stronger candidate files still require their own checks.
 
@@ -56,4 +58,4 @@ The maintained proof sources reviewed here are `Definitions.lean`,
 `Omission/Realization.lean`, `Omission/ProjectiveTransfer.lean`,
 `Omission/Partition.lean`, and `Omission/PopulationBounds.lean`, together with
 the checked `ResidualReduction`, `ResidualBudgets`, `BalancedBudgets`, both
-cover catalog bridges, and the closed `FinalCover317` source in this directory.
+cover catalog bridges, and the three closed final sources listed above.

@@ -1,17 +1,20 @@
 {
-  "scope": "Closed real-point ForcesConvexNGon 316 8 and earlier 317 checked; other numerical assemblies are separately labeled candidates or historical routes",
+  "scope": "Closed real-point ForcesConvexNGon 315 8 and earlier bounds checked; other numerical assemblies are separately labeled candidates or historical routes",
   "complete_theorems": [
-    "ErdosSzekeres.Omission.balanced_population_191",
+    "ErdosSzekeres.Omission.balanced_population_190",
     "ErdosSzekeres.Omission.residual_population_123",
+    "ErdosSzekeres.Omission.forces_convex_octagon_315",
+    "ErdosSzekeres.Omission.convex_octagon_of_card_ge_315",
+    "ErdosSzekeres.Omission.balanced_population_191",
     "ErdosSzekeres.Omission.forces_convex_octagon_316",
     "ErdosSzekeres.Omission.convex_octagon_of_card_ge_316",
     "ErdosSzekeres.Omission.balanced_population_192",
     "ErdosSzekeres.Omission.forces_convex_octagon_317",
     "ErdosSzekeres.Omission.convex_octagon_of_card_ge_317"
   ],
-  "closed_check_record": "global-cover-316-check.json",
-  "closed_check_sha256": "12d291e56d4066b6b33da3cd2d498b66ef004cf0f0103a5e1f7cf647b3fd2583",
-  "closed_check_input_count": 972,
+  "closed_check_record": "global-cover-315-check.json",
+  "closed_check_sha256": "040305394f595c5cfe79c76d6071437ee214c2d3e87d50839ff5bdc93880ba31",
+  "closed_check_input_count": 1795,
   "standard_axioms": [
     "propext",
     "Classical.choice",
@@ -39,7 +42,6 @@
     "FinalCover315B61R30.lean",
     "FinalCover315B60R31V2.lean",
     "FinalCover314B61R31V2.lean",
-    "FinalCover315B61FusedR30.lean",
     "FinalCover314B61FusedR31Fused.lean",
     "FinalCover315B60R31Fused.lean"
   ],
@@ -67,14 +69,14 @@
     "FinalCover315B61R30.lean": "7058abb5553193088631b6e6d22637a81bf14aa934a236742736fa6ff3b90a44",
     "FinalCover316.lean": "2d098ce7db0e8969f4b9db20a240a418722bad420c2f7a4bd0d7f0cb238cdf08",
     "FinalCover317.lean": "f2790851dcff04fe82d436ee9952e0068a92400491e2ec89cefc722962199065",
-    "README.md": "1282f5a545adf6f739801172c711d81e815b8d1a06a3d83ac61fa4b728c0b2d5",
+    "README.md": "a6a1dfe998a5c9792c72fe98582769083812a6c00ac040423dba9c18072d5737",
     "Residual124Bridge.lean": "3daf429070fca703331d45667c2b6b57e9524a8923901916d1bdb7bfe552b9fd",
     "ResidualBudgets.lean": "703c5593d5ebfc02c6b85fee22d99b0c5689965f35abf4981a9c97a1992829ae",
     "ResidualCover31Bridge.lean": "fdcde238a7fe06d6a5db21168fbb2972c2e839fabe623bad9f32cdc66e9b6a17",
     "ResidualCover31FusedBridge.lean": "0eb571681ebb70c431177ebac8302f15cbe305629b898db66e86b1fcc6dd7bc7",
     "ResidualCover31V2Bridge.lean": "5a017e1222af35e168d542c29ee629e2d4632f59f4aced28799fbbd5504144de",
     "ResidualCoverBridge.lean": "8f65d87133d49b3e50fe767c5778913a69056a15f3931d193d4692ae8b740f7b",
-    "SEMANTIC_REVIEW.md": "0150adb97e6e864cc31ba89bc2517a70cc5ff99088dbb54663e9581bee035d1e",
+    "SEMANTIC_REVIEW.md": "b9e985dd321b4fe1c754b3d95f5fa6dfdab902f89b09e69abe3f60ea90623303",
     "balanced-rows-export.json": "cb274389ac2fdc598cfa40310e4e39dc6939ab712531a65b2814ead1db60ed79",
     "balanced-rows-kernel-check.json": "f5596f3811e81745cc11b297e831201e4626f5ab35913867809b66e59bddf8c5",
     "balanced-rows-sources.tar.gz": "4deb8e250ec312c868140e4e24a5730babc73e10d283c8a43206c30bb920d2ed",
@@ -95,9 +97,17 @@
     "profile-balanced61-v2-residual30-v1-precheck.json": "d3cec6cafaac3dabb51047f84c6b877199ef2f523c59c1b2e95df4b5d97c4969",
     "profile-balanced61-v2-residual30-v1.json": "5e452f8c03dff833f99265bf33f7319874f3c5fc5100ac9331bdbbd09ca15864",
     "residual-29.json.gz": "359fd945e7eee7d2e57edb41daa35ec97c24861467992f06b6105704d8564d3a",
-    "residual124-catalog-check.json": "45ec9f5b9f8dd7c82ce1b09fd2e40daadd0e0069a4019cafde64ecbd0bf96ead"
+    "residual124-catalog-check.json": "45ec9f5b9f8dd7c82ce1b09fd2e40daadd0e0069a4019cafde64ecbd0bf96ead",
+    "global-cover-315-check.json": "040305394f595c5cfe79c76d6071437ee214c2d3e87d50839ff5bdc93880ba31",
+    "global-cover-315-axioms.txt": "e38dfe80342c39465801af267358400f8d20d3ab0b2fd1af0875cd6cf9299009",
+    "global-cover-315-resources.json": "4794dd8a38a573aa7847e361642cd1e6dc3df58c146d1937c451cca5f9310093"
   },
   "prior_closed_checks": [
+    {
+      "record": "global-cover-316-check.json",
+      "sha256": "12d291e56d4066b6b33da3cd2d498b66ef004cf0f0103a5e1f7cf647b3fd2583",
+      "input_count": 972
+    },
     {
       "record": "global-cover-317-check.json",
       "sha256": "74b27a6c22affccb9594e35ae6eb6a03bdb4e9cd20a7ea0222ac4bb39822d0b3",
