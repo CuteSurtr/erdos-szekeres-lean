@@ -33,3 +33,4 @@ import ErdosSzekeres.OrientationPackets
 import ErdosSzekeres.OmissionCertificates
 import ErdosSzekeres.OmissionPacking
 import ErdosSzekeres.Omission.FirstCycle
+import ErdosSzekeres.Omission.ProjectiveTransfer

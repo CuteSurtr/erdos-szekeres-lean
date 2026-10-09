@@ -53,8 +53,28 @@ and adapted prerequisites are credited to Michael Schroeder's version-1 archive;
 the stronger arithmetic certificate and local geometric connections are described
 in the [proof map](docs/OMISSION_GEOMETRY.md) and
 [reproducible artifact](experiments/omission-balanced-geometry-2026-10-09/README.md).
-This subcase's extra cup/cap restrictions cannot be dropped. The residual and
-partition/projective arguments needed for the global octagon bound are unfinished.
+This subcase's extra cup/cap restrictions cannot be dropped. The residual bound
+and partition argument needed for the global octagon bound are unfinished.
+
+## Completed projective reduction — 9 October 2026
+
+Every nonempty octagon-free real set in general position has a root-deletion
+chart with exactly one fewer point, no 7-cap and no convex octagon. The theorem
+`ErdosSzekeres.Omission.exists_cap_free_chart` retains the actual coordinate
+maps; it imposes no coordinate-order assumption on the original set. The key
+geometric lemma proves that a chart 7-cap and its deleted root form an octagon.
+These results live in [ProjectiveTransfer.lean](ErdosSzekeres/Omission/ProjectiveTransfer.lean).
+
+The resulting `forces_317_of_asymmetric_315` proves the conditional implication
+`AsymmetricBound 315 → ForcesConvexNGon 317 8`. **`AsymmetricBound 315` is still
+unproved**: it permits 7-cups, unlike the completed balanced subcase.
+
+Combining the two completed steps also proves that every octagon-free set of
+at least **194 points** has such a chart containing a **7-cup**. This structural
+consequence is checked separately as
+`OmissionBalanced.large_avoiding_set_has_chart_cup`; it does not assert
+ES(8) ≤ 194. See the [projective proof map](docs/OMISSION_PROJECTIVE.md) and
+[check record](experiments/omission-projective-transfer-2026-10-09/README.md).
 
 ## Verification
 
@@ -62,7 +82,7 @@ Pinned versions: **Lean 4.24.0**, **Mathlib v4.24.0**; dependency revisions are 
 [lake-manifest.json](lake-manifest.json).
 
 The current library passes `lake build --wfail`. The
-[full saved axiom audit](docs/validation/axiom-audit-geometry-2026-10-09.txt) checks **269 named
+[full saved axiom audit](docs/validation/axiom-audit-projective-2026-10-09.txt) checks **277 named
 theorems**, including both main theorems and their transitive axiom dependencies.
 Only `propext`, `Classical.choice`, and `Quot.sound` are allowed. There is no
 `sorry`, `admit`, `sorryAx`, or `native_decide` in the maintained Lean sources,
@@ -91,9 +111,9 @@ This material is separate from the finished Suk and HMPT formalizations.
   auxiliary occupancy target 123, with independent arithmetic replays. Lean has
   checked the first **330 of 3,411 parts**, covering **13,827 of 145,474 leaves**.
   The residual root and its geometric row requirements remain unfinished.
-- **Global finite octagon target:** the balanced geometric theorem above is
-  complete, but the residual bound, minimum-slope partition and root-specific
-  projective transfer have not been composed into an arbitrary-real-set theorem.
+- **Global finite octagon target:** the balanced geometric theorem and the
+  projective/root transfer are complete. The residual bound and minimum-slope
+  partition must still establish the remaining `AsymmetricBound 315` hypothesis.
   Consequently **ES(8) ≤ 317 is not a theorem of this repository**.
 - **Other retained experiments:** exact-coordinate searches, SAT/SMT attempts and
   a Lean-checked counterexample to a proposed mixed-cap lemma. None improves the

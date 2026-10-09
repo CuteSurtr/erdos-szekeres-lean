@@ -111,3 +111,18 @@ The new modules are included in the default library and audit; the large
 generated row and arithmetic certificates are checked separately. Neither
 `Suk.theorem2016` nor `HMPT.theorem2020` depends on these adaptations. No
 endorsement by the original author is implied.
+
+## Projective/root transfer — 9 October 2026
+
+`ErdosSzekeres/Omission/ProjectiveTransfer.lean` adapts the root/chart argument
+from the same version-1 archive's `ES8ProjectiveTransfer.lean` and `ES8Final.lean`,
+under MIT, copyright (c) 2026 Michael Schroeder. The complete notice is retained
+in [SCHROEDER-MIT.txt](SCHROEDER-MIT.txt) and attribution appears in the source.
+
+This version uses the existing `HMPT.projectFrom` lemmas, Suk's coordinate
+normalization and this project's finite-set polygon predicate. It generalizes
+the root-cap lemma to every cap size at least three, exposes the actual maps in
+`IsRootDeletionChart`, and leaves the asymmetric population bound as an explicit
+theorem parameter. The standalone `BalancedProjective.lean` adds the cardinality
+composition with the completed balanced bound. The [proof map](OMISSION_PROJECTIVE.md)
+distinguishes these checked statements from the still-unproved global bound.

@@ -6,8 +6,9 @@ point-to-state assignment, all 2,685 geometric rows, and their final composition
 The hypotheses are real general-position points in strict x-order, with no
 7-cup, no 7-cap and no convex octagon. See the
 [geometric proof artifact](../experiments/omission-balanced-geometry-2026-10-09/README.md)
-and [remaining work](ES8_REMAINING.md). The residual and global arguments are
-unfinished.
+and [remaining work](ES8_REMAINING.md). The [projective/root transfer](OMISSION_PROJECTIVE.md)
+is also complete, conditional on the remaining asymmetric population bound.
+The residual bound and partition argument are unfinished.
 
 The residual checkpoint now covers the first **330 of 3,411 proof parts**, or
 **13,827 of 145,474 leaves**. The latest 20-part block added 862 checked leaves
@@ -34,8 +35,9 @@ the checked finite occupancy bound is therefore 192. The residual budget 30
 is also excluded by a complete integer certificate with 145,474 leaves and
 minimum margin 2, giving occupancy 123. With the full published geometric
 reduction, these would imply
-ES(8) ≤ 317 instead of the preprint's 319. **Only the balanced geometric subcase
-is complete. The full reduction and the global numerical target remain unproved.**
+ES(8) ≤ 317 instead of the preprint's 319. **The balanced geometric subcase and
+projective/root transfer are complete. The residual and partition proofs, and
+therefore the global numerical target, remain unproved.**
 This finite target is also distinct from improving HMPT's asymptotic coefficient.
 
 ## What is checked

@@ -274,3 +274,13 @@ import ErdosSzekeres
 #print axioms ErdosSzekeres.Omission.StateInterface.inclusion_forces_order
 #print axioms ErdosSzekeres.Omission.StateInterface.forced_cap
 #print axioms ErdosSzekeres.Omission.StateInterface.forced_cup
+
+-- Actual root-deletion charts and the conditional global transfer.
+#print axioms ErdosSzekeres.Omission.root_cap_polygon
+#print axioms ErdosSzekeres.Omission.exists_configuration
+#print axioms ErdosSzekeres.Omission.Configuration.no_cap_of_projected_image
+#print axioms ErdosSzekeres.Omission.exists_projective_chart
+#print axioms ErdosSzekeres.Omission.exists_cap_free_chart
+#print axioms ErdosSzekeres.Omission.avoiding_card_le_of_asymmetric_bound
+#print axioms ErdosSzekeres.Omission.forces_of_asymmetric_bound
+#print axioms ErdosSzekeres.Omission.forces_317_of_asymmetric_315

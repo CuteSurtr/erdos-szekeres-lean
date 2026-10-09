@@ -62,4 +62,9 @@ or priority claim is made for the strategy.
 The default library includes the components in the table. The generated large
 certificates are separate artifacts with their own check records. Neither
 the finished Suk theorem nor the finished HMPT theorem depends on this work.
-The [remaining-work record](ES8_REMAINING.md) tracks the full ES(8) ≤ 317 target.
+The subsequent [projective reduction](OMISSION_PROJECTIVE.md) connects this
+bound to arbitrary real point sets: every octagon-free set of at least 194
+points has a root-deletion chart containing a 7-cup. It also completes the
+conditional transfer from `AsymmetricBound 315` to ES(8) ≤ 317. That population
+hypothesis, including the residual and partition arguments, remains unproved;
+see the [remaining-work record](ES8_REMAINING.md).

@@ -1,11 +1,39 @@
 # Verification records
 
+## Projective/root transfer — 2026-10-09
+
+The main `lake build --wfail` passes with **3,208 jobs**. The
+[current full audit](validation/axiom-audit-projective-2026-10-09.txt) passes for
+**277 named roots**, including the eight new projective-transfer theorems.
+Only `propext`, `Classical.choice` and `Quot.sound` occur. All **55 Python tests**
+pass with the optional solvers and Lean integration controls enabled.
+
+`ErdosSzekeres.Omission.forces_317_of_asymmetric_315` is conditional on
+`AsymmetricBound 315`, which remains unproved. Its audit certifies that
+conditional statement, not ES(8) ≤ 317. The actual normalization and root-deleted
+chart, cap exclusion, polygon pullback and threshold accounting are complete.
+
+The [separate composition artifact](../experiments/omission-projective-transfer-2026-10-09/README.md)
+also passes Lean and its axiom check:
+
+```text
+'OmissionBalanced.large_avoiding_set_has_chart_cup' depends on axioms: [propext, Classical.choice, Quot.sound]
+```
+
+This proves the 194-point structural consequence in the [projective proof map](OMISSION_PROJECTIVE.md).
+It uses the previously checked balanced arithmetic and geometry objects;
+this checkpoint does not rebuild their large proof trees. Its validation
+manifest records source and object hashes and verifies the saved prerequisite
+bindings. The source scan covers **118 loose maintained Lean files**, with no
+proof placeholders or custom axioms. Git tracks no caches or compiled outputs.
+The earlier records below are preserved as historical checkpoints.
+
 ## Balanced geometry library — 2026-10-09
 
 The main library now includes twelve modules for attained ranks, exact balanced
 state indexing, the actual real-point connection, computed boxes, geometric
 cycle soundness and the first literal row. The main `lake build --wfail` passes
-with **3,207 jobs**. The [full current audit](validation/axiom-audit-geometry-2026-10-09.txt)
+with **3,207 jobs**. The [saved audit](validation/axiom-audit-geometry-2026-10-09.txt)
 passes for **269 named roots**, including 68 new geometry roots. Every transitive
 axiom is among `propext`, `Classical.choice`, and `Quot.sound`; some finite and
 structural results are axiom-free. The audit parser now accepts Lean's explicit
