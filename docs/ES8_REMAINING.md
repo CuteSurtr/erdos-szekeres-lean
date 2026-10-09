@@ -40,8 +40,10 @@ the reduction. Remaining source work is expected to be certificate integration,
 checks and documentation, plausibly hundreds of lines rather than another
 geometric development. The dominant cost is generated-proof checking. At the
 recent serial rate, the unfinished residual tree is on the order of **40–60
-hours of checking on this Mac**, plus a fresh run for whichever family is
-renamed for final linking. The recorded complete balanced run took about 6.7
+hours of checking on this Mac**, plus the balanced rebuild for final linking.
+The full checker will also recheck 300 historically successful residual parts
+that lack current object-hash-bound resume records. The recorded complete
+balanced run took about 6.7
 hours; it is smaller than the full residual tree. These are low-confidence
 planning estimates, not benchmarks or a completion promise. Kernel resource
 failures or an integration bug could increase them. A few days of engineering

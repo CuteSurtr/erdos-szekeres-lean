@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-09",
+  "scope": "Certificate integration tooling and production-chunk import control, not the full residual or global theorem",
+  "tooling_commit": "b7c189bde1ead41f136bf5cfbaf158c6140e5118",
+  "source_sha256": {
+    "scripts/check_omission_lean.py": "2e569b8251a0d604c1b174c03883fd2c7f83c7826916f73b4368d69380562f21",
+    "scripts/check_omission_geometry.py": "3bf6ac2cd92d0d2ca6871a2d70737e9c76c57df415ba25e186454be597d4ed11",
+    "scripts/omission_geometry_export.py": "1002f1d7d2d63c86d4ec8a1531faf6186cb233b1c9bde9755c6cc0ea3c2195e1",
+    "scripts/test_omission_lean_export.py": "fd3954cd5db8c53b3ae4b55f5ac81b93596bff353bde2496a96dc7f00c1831ca",
+    "scripts/test_omission_geometry.py": "af3c39c7d0fa2dcf2c92732b0c47d36bf72375c468ae3520fe70e08a3e870e0f"
+  },
+  "python_tests": {
+    "count": 67,
+    "optional_lean_controls": true,
+    "optional_solvers": true,
+    "result": "pass",
+    "log": "docs/validation/omission-assembly-tests-2026-10-09.txt",
+    "log_sha256": "02f94ab90f051879cdfbd53969dfe8eaedac5917a47ef94af25d62c83430d48b"
+  },
+  "fresh_axiom_audit": {
+    "count": 444,
+    "result": "Axiom audit passed for 444 theorems: only standard Lean axioms.",
+    "saved_full_report": "docs/validation/axiom-audit-residual-2026-10-09.txt",
+    "saved_full_report_sha256": "88646b4b8c724650c79e8a188bb93cc20488ea60ee27f22685d293500ffb9dfe"
+  },
+  "loose_lean_sources_scanned": 158,
+  "placeholder_or_custom_axiom_matches": [],
+  "production_import_control": {
+    "record": "experiments/omission-linked-control-2026-10-09.json",
+    "record_sha256": "912128e5e1b48cdd327f6d82b7a42adc720b7a328c53bb5c3bbce2b8efe58c66",
+    "source_sha256": "15fa65595d66de49d77f6d88cc33b91341d4bc79a3059ebbb1098987e4f598d0",
+    "audited_roots": 4
+  },
+  "full_residual_tree_checked": false,
+  "es8_317_proved": false,
+  "tooling_ci": {
+    "commit": "b7c189bde1ead41f136bf5cfbaf158c6140e5118",
+    "conclusion": "success",
+    "run_id": 37939109114,
+    "url": "https://github.com/CuteSurtr/erdos-szekeres-lean/actions/runs/37939109114"
+  }
+}

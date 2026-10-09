@@ -143,8 +143,8 @@ This material is separate from the finished Suk and HMPT formalizations.
 
 - **Residual omission system:** a complete exact integer certificate gives the
   auxiliary occupancy target 123, with independent arithmetic replays. Lean has
-  checked the first **380 of 3,411 parts**, covering **16,052 of 145,474 leaves**.
-  The [latest partial-build record](experiments/omission-residual-progress-2026-10-09-batch4.json)
+  checked the first **430 of 3,411 parts**, covering **18,263 of 145,474 leaves**.
+  The [latest partial-build record](experiments/omission-residual-progress-2026-10-09-batch5.json)
   preserves the successful checks. The residual arithmetic root remains unfinished;
   all geometric row requirements are now proved.
 - **Global finite octagon target:** the balanced geometric theorem, minimum-slope
@@ -152,6 +152,12 @@ This material is separate from the finished Suk and HMPT formalizations.
   is `Partition.ResidualBound 123`, now reduced to the residual arithmetic
   exclusion and final assembly with distinct generated module names.
   Consequently **ES(8) ≤ 317 is not a theorem of this repository**.
+- **Certificate assembly:** actual balanced and residual proof chunks now import
+  together with audited standard axioms. The fresh `BalancedProof` rebuild has
+  checked its catalog and **72 of 898 parts**. Its root and renamed geometry
+  still need checks; the historical balanced proof remains complete. See the
+  [assembly guide](docs/OMISSION_ASSEMBLY.md) and
+  [fresh rebuild record](experiments/omission-linked-balanced-2026-10-09.json).
 - **Other retained experiments:** exact-coordinate searches, SAT/SMT attempts and
   a Lean-checked counterexample to a proposed mixed-cap lemma. None improves the
   published global geometric upper bounds; timeout results remain inconclusive.

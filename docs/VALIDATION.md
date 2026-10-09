@@ -1,5 +1,46 @@
 # Verification records
 
+## Certificate linking and parallel checks — 2026-10-09
+
+All **67 tests** pass with optional solvers and Lean controls enabled; the
+[saved test output](validation/omission-assembly-tests-2026-10-09.txt) and
+[validation record](validation/omission-assembly-checks-2026-10-09.json)
+identify the checked tooling sources. GitHub validation passed for tooling
+commit `b7c189b`, including the main library build, 444-root audit and Lean
+integration controls. A fresh local audit also passed for all **444 named
+roots**. The scan of **158 loose Lean sources** found no placeholders or
+custom axioms. The additional source is a standalone import control, not a new
+global theorem in the default library.
+
+The parallel arithmetic checker builds the catalog first, checks independent
+parts with one coordinating record writer, and builds the root only after all
+parts succeed. A selected parallel run stays incomplete; resuming a complete
+control tree preserves its existing records and checks the root. A corrupted
+part is rejected and prevents root checking.
+
+The balanced geometry exporter and checker now support a distinct arithmetic
+module prefix, including the occupancy bridge. All **900 arithmetic sources**
+and **86 geometry/occupancy sources** match their historical versions after
+reversing only import-name changes. The
+[fresh balanced rebuild record](../experiments/omission-linked-balanced-2026-10-09.json)
+records the catalog and **72 of 898 parts** checked under their new names;
+it does not relabel historical
+compiled objects as fresh checks. Its root and renamed geometry remain pending.
+
+The [production import control](../experiments/omission-linked-control-2026-10-09.json)
+successfully loads actual balanced `Part00000` and residual `Part00380` in one
+Lean process. Both catalog theorems and both subtree theorems pass their axiom
+audits. This checks coexistence of production proof chunks, not a closed global
+bound. See the [assembly guide](OMISSION_ASSEMBLY.md) for reproduction and the
+remaining full-root composition.
+
+The [fifth residual batch](../experiments/omission-residual-progress-2026-10-09-batch5.json)
+adds **50 parts and 2,211 leaves**. The cumulative documented frontier is now
+**430 of 3,411 parts**, covering **18,263 of 145,474 leaves**. Every new source
+and compiled-output hash matches its successful check record; the earlier
+progress is inherited through the explicitly hashed fourth-batch record.
+The full residual root and the global bound remain unproved.
+
 ## Complete residual geometric transfer — 2026-10-09
 
 The main `lake build --wfail` passes with **3,245 jobs**. The
@@ -31,7 +72,7 @@ and 15,131 leaves**. This is a partial arithmetic result, not a root exclusion. 
 [fourth batch](../experiments/omission-residual-progress-2026-10-09-batch4.json)
 adds another 20 parts and 921 leaves, including eight independently checked
 parts whose identical prerequisite bindings and output hashes were verified
-before merging their records. The latest frontier is **380 of 3,411 parts**
+before merging their records. That checkpoint reached **380 of 3,411 parts**
 and **16,052 of 145,474 leaves**. Across the 45-minute session, 50 parts and
 2,225 leaves were added; the full residual root remains unchecked.
 

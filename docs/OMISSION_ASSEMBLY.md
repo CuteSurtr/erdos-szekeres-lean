@@ -25,6 +25,11 @@ Regeneration on 9 October reproduced all **900 arithmetic sources** and all
 changes. This comparison does not replace fresh compilation. The old compiled
 objects are not renamed or reused as proofs of the new modules.
 
+The [fresh partial rebuild record](../experiments/omission-linked-balanced-2026-10-09.json)
+checks the catalog and first **72 of 898 arithmetic parts** under the new
+module names. The renamed arithmetic root and geometry are not yet checked.
+This rebuild preserves the existing balanced result; it is not a new bound.
+
 ## Reproduce the linked balanced family
 
 Use the pinned toolchain and an extracted copy of Schroeder's version-1
@@ -66,6 +71,12 @@ once. Failed checks cancel queued work and prevent root checking; already
 running checks are allowed to finish. Resume requires matching inputs and
 compiled-output hashes, not just the presence of an object file.
 
+There is a bookkeeping distinction in the residual history: 300 earlier
+successful part checks are preserved in historical logs and progress records
+but lack entries in the current object-hash-bound resume file. Their historical
+checks count toward the documented partial proof progress. A full run of the
+current checker will recheck those parts before reporting a complete tree.
+
 ## Final composition still required
 
 After the residual arithmetic root and renamed balanced family both pass,
@@ -94,3 +105,14 @@ types. They also check partial parallel runs, resume into a complete root,
 missing occupancy sources, mismatched prefixes, and a deliberately corrupted
 arithmetic part. These controls test the integration machinery; they do not
 stand in for the large certificates.
+
+The separate [production import control](../experiments/omission-linked-control-2026-10-09.lean)
+loads actual balanced `Part00000` and residual `Part00380` together, with both
+literal catalogs. Its [check record](../experiments/omission-linked-control-2026-10-09.json)
+audits both catalog theorems and both subtree theorems in that shared import
+environment. This validates coexistence of real proof chunks; the full roots
+remain unchecked together. To reproduce after checking those parts:
+
+```sh
+lake env sh -c 'LEAN_PATH=".cache/omission-balanced-linked:.cache/omission-lean-full/residual:$LEAN_PATH" lean experiments/omission-linked-control-2026-10-09.lean'
+```
