@@ -54,8 +54,8 @@ integer certificates. This is an adaptation of the data, not an endorsement
 by the author. The arithmetic checker and `OmissionCertificates.lean` were
 implemented independently. Their mathematical weighted-capacity argument is
 the one used by the source's omission certificates. See `OMISSION.md` for the
-precise boundary between reproduced data, newly proved lemmas, and unproved
-geometric transfer.
+precise boundary between reproduced data and newly proved lemmas. The
+completed geometric transfer is documented in `OMISSION_RESIDUAL.md`.
 
 The generated `experiments/omission-chunked-2026-10-05/Catalog.lean` preserves
 that archive's balanced row indices, supports and demands and adds packed
@@ -203,3 +203,17 @@ proofs use the exact catalog already preserved in the residual geometry
 artifact. No upstream search code is added with these files, and no priority
 or endorsement claim is made. The artifact README gives reproduction and
 distinguishes abstract witnesses from realizable configurations.
+
+## Compressed complete certificates — 10 October 2026
+
+`experiments/omission-cover-certificates-2026-10-10/` retains the pinned original
+row data inside two augmented JSON catalogs and generated Lean source-only
+archives. These adapted data remain CC BY 4.0 with the author and DOI recorded
+in the artifact README and manifest. The new rounded cuts, stronger-budget
+trees, proof generators and exact checking records document the local changes.
+`experiments/omission-global-assembly-2026-10-10/` preserves the renamed balanced
+geometric sources under the original adaptation's MIT attribution and the
+original fallback residual tree as attributed CC BY 4.0 data. No compiled
+objects or upstream inspection checkout are committed. The complete 317-point
+proof uses these finite inputs and the separately attributed geometric ports;
+it does not change the dependency provenance of Suk or HMPT.

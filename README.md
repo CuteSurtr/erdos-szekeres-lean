@@ -4,9 +4,11 @@ Lean proofs of two published upper bounds for **finite point sets in the real
 plane in general position** (no three distinct points collinear), together with
 separately identified computational research. Polygons need not be empty.
 
-**The Erdős–Szekeres conjecture is not proved or disproved here. ES(8) ≤ 317 and
-an improvement of HMPT's asymptotic coefficient remain unproved.** A restricted
-geometric bound of 192 points is checked below; no priority or best-bound claim
+**ES(8) ≤ 317 is now proved in Lean:** every set of at least 317 real planar
+points in general position contains eight points in convex position. The
+finished Suk 2016 and HMPT 2020 asymptotic bounds are also formalized below.
+The Erdős–Szekeres conjecture and an improvement of HMPT's asymptotic
+coefficient remain open in this project. No priority or best-known-bound claim
 is made.
 
 ## Finished formalizations
@@ -36,98 +38,52 @@ restricted specializations, and statements not formalized.
 - [HMPT proof ledger](docs/HMPT.md): cap budgets, counting ratios, two scales and optimization.
 - [Third-party provenance and licenses](docs/THIRD_PARTY.md): adapted prerequisites and research data.
 
-## Completed balanced geometric subcase — 9 October 2026
+## Completed finite octagon bound — 10 October 2026
 
-For actual real points in general position, ordered by **strictly increasing
-x-coordinates**, absence of a 7-cup, a 7-cap and a convex octagon implies **at
-most 192 points**. Cups and caps require the appropriate sign on every increasing
-triple of the selected points. The exact theorem is
-`OmissionBalanced.real_configuration_bound`, in the separately checked
-[BalancedGeometry.lean](experiments/omission-balanced-geometry-2026-10-09/BalancedGeometry.lean).
-Its hypotheses are geometric; no catalog-row constraints are assumed.
+The closed theorem is `ErdosSzekeres.Omission.forces_convex_octagon_317 :
+ForcesConvexNGon 317 8`. Its explicit real-point form,
+`ErdosSzekeres.Omission.convex_octagon_of_card_ge_317`, quantifies over every
+finite set `S : Finset (Fin 2 → ℝ)` in general position with `317 ≤ S.card`,
+and supplies `T ⊆ S` of cardinality eight with `ConvexIndependent ℝ`.
+Both live in [FinalCover317.lean](experiments/omission-global-assembly-2026-10-10/FinalCover317.lean).
+There are no remaining row, arithmetic, coordinate-order or cup/cap assumptions
+on the original point set.
 
-The proof includes the actual-point state assignment, all **2,685 geometric row
-checks**, and the complete balanced arithmetic certificate. It tightens the
-source archive's balanced-case bound of 193 by one point. The state/cycle method
-and adapted prerequisites are credited to Michael Schroeder's version-1 archive;
-the stronger arithmetic certificate and local geometric connections are described
-in the [proof map](docs/OMISSION_GEOMETRY.md) and
-[reproducible artifact](experiments/omission-balanced-geometry-2026-10-09/README.md).
-This subcase's extra cup/cap restrictions cannot be dropped. The residual bound
-needed for the global octagon bound is unfinished.
+The proof combines the checked projective/root transfer and minimum-slope
+partition with balanced population bound 192 and residual bound 123.
+The partition's configurations have additional geometric restrictions, all
+proved by the reduction. Their 2,685 balanced and 1,187 residual row constraints
+are established for actual points. Checked rounding cuts compress the arithmetic
+exclusions to 711 and 4,686 leaves. Every leaf, complete tree root, literal
+catalog bridge and final composition has passed Lean with only `propext`,
+`Classical.choice` and `Quot.sound`.
 
-## Completed projective reduction — 9 October 2026
+- [Complete assembly record, theorem audit and reproduction](experiments/omission-global-assembly-2026-10-10/README.md).
+- [Arithmetic source archives and exact cut certificates](experiments/omission-cover-certificates-2026-10-10/README.md).
+- [Balanced geometry](docs/OMISSION_GEOMETRY.md), [projective transfer](docs/OMISSION_PROJECTIVE.md), [partition](docs/OMISSION_PARTITION.md) and [residual geometry](docs/OMISSION_RESIDUAL.md).
 
-Every nonempty octagon-free real set in general position has a root-deletion
-chart with exactly one fewer point, no 7-cap and no convex octagon. The theorem
-`ErdosSzekeres.Omission.exists_cap_free_chart` retains the actual coordinate
-maps; it imposes no coordinate-order assumption on the original set. The key
-geometric lemma proves that a chart 7-cap and its deleted root form an octagon.
-These results live in [ProjectiveTransfer.lean](ErdosSzekeres/Omission/ProjectiveTransfer.lean).
+The omission method, original state catalogs and adapted prerequisites are
+credited to Michael Schroeder's version-1 archive (19 September 2026), which
+claims an octagon threshold of 319. This repository proves the smaller threshold
+317 using stronger arithmetic certificates and ordinary kernel checking.
+That comparison is to the pinned archive, not a claim of literature priority.
+See [provenance and licenses](docs/THIRD_PARTY.md).
 
-The resulting `forces_317_of_asymmetric_315` proves the conditional implication
-`AsymmetricBound 315 → ForcesConvexNGon 317 8`. **`AsymmetricBound 315` is still
-unproved**: it permits 7-cups, unlike the completed balanced subcase.
+## Other completed research results
 
-Combining the two completed steps also proves that every octagon-free set of
-at least **194 points** has such a chart containing a **7-cup**. This structural
-consequence is checked separately as
-`OmissionBalanced.large_avoiding_set_has_chart_cup`; it does not assert
-ES(8) ≤ 194. See the [projective proof map](docs/OMISSION_PROJECTIVE.md) and
-[check record](experiments/omission-projective-transfer-2026-10-09/README.md).
+`Omission.AdditionalResidualRows.all_rows` proves 21 additional geometric rows;
+`Omission.GeneralResidualBlocks.all_rows` proves another 24. The former have
+separate row-by-row independence witnesses. A [Lean-checked abstract witness](experiments/omission-cover-certificates-2026-10-10/ResidualCountermodel.lean)
+satisfies all 1,187 original rows and all 45 additions with 32 holes. Thus these
+constraints alone cannot exclude that assignment; no real-point realization
+of it is claimed.
 
-## Completed geometric partition — 9 October 2026
-
-`ErdosSzekeres.Omission.Partition.exists_partition` now proves the full
-minimum-slope split into disjoint balanced and residual induced configurations,
-including the three-chain argument and every avoidance restriction. It lives
-in [Partition.lean](ErdosSzekeres/Omission/Partition.lean); the
-[proof map](docs/OMISSION_PARTITION.md) lists all eight supporting modules.
-
-Combining this with the completed balanced certificate proves
-`OmissionBalanced.forces_317_of_residual_123`:
-**`Partition.ResidualBound 123 → ForcesConvexNGon 317 8`**.
-The residual population bound remains unproved. A putative octagon-free set
-of at least 317 points is now proved to supply an actual residual chart subset
-of at least 124 points, with no 6-cap, no octagon and no incoming-six-cup/
-outgoing-five-cap junction. The [standalone artifact](experiments/omission-partition-2026-10-09/README.md)
-checks these compositions separately from the default library.
-
-## Completed residual geometric transfer — 9 October 2026
-
-Actual residual configurations now inject into the exact **154-state** catalog.
-The hypotheses are no 6-cap, no convex octagon, and no incoming-six-cup /
-outgoing-five-cap junction. Lean checks the necessity of **all 1,187 rows**:
-1,164 cycle rows and 23 block rows. The block proof includes Baek's combinatorial
-bound and a proved supporting-line transfer to actual real convex polygons.
-
-The main standalone theorem is `OmissionResidual.all_geometric_rows`, in the
-[residual proof artifact](experiments/omission-residual-geometry-2026-10-09/README.md).
-`OmissionResidual.feasible_holes` supplies an actual Boolean hole vector with
-`sum holes + n = 154`. `residual_bound_of_arithmetic` reduces the desired
-`Partition.ResidualBound 123` to the explicit `ExcludesThirtyHoles` statement.
-**That arithmetic statement is still unproved in Lean.** The
-[proof map](docs/OMISSION_RESIDUAL.md) separates these completed geometric
-results from the partial arithmetic tree and final certificate assembly.
-
-## Additional proved constraints — 10 October 2026
-
-`Omission.AdditionalResidualRows.all_rows` proves **20 additional cycle rows
-and one block row** for the same actual residual configurations, in
-[AdditionalResidualRows.lean](ErdosSzekeres/Omission/AdditionalResidualRows.lean).
-The standalone `AdditionalResidualStrictness.independent_each_additional_row`
-proves that each excludes an abstract assignment allowed by the old 1,187
-rows and the other 20 additions. Thus they strictly strengthen the finite
-model, though the tested LP and certificate-pruning searches did not improve
-its total population bound. [Proofs and reproduction](experiments/omission-additional-rows-2026-10-10/README.md).
-
-`HMPT.positive_leading_slack_iff`, in
-[ParameterBarrier.lean](ErdosSzekeres/HMPT/ParameterBarrier.lean), proves that
-retuning the fixed positive scale in our existing asymptotic argument yields
-positive limiting slack exactly above `8√2/3`. This identifies a limitation of
-that proof family, not of other possible arguments. The
-[research report](docs/RESEARCH_2026-10-10.md) records the new proofs, unsuccessful
-searches, and assessment of recent primary literature. No priority claim is made.
+[DyadicScale.lean](ErdosSzekeres/HMPT/DyadicScale.lean) extends the finite HMPT
+counting argument to any number of doubling stages.
+`HMPT.positive_dyadic_leading_budget_iff` proves that its explicit idealized
+leading expression becomes positive exactly above `8√2/3`. This is an
+algebraic limitation of this proof family, not a universal barrier to better
+Erdős–Szekeres bounds. See the [research report](docs/RESEARCH_2026-10-10.md).
 
 ## Verification
 
@@ -135,7 +91,7 @@ Pinned versions: **Lean 4.24.0**, **Mathlib v4.24.0**; dependency revisions are 
 [lake-manifest.json](lake-manifest.json).
 
 The current library passes `lake build --wfail`. The
-[full saved axiom audit](docs/validation/axiom-audit-research-2026-10-10.txt) checks **453 named
+[full saved axiom audit](docs/validation/axiom-audit-cover-2026-10-10.txt) checks **475 named
 theorems**, including both main theorems and their transitive axiom dependencies.
 Only `propext`, `Classical.choice`, and `Quot.sound` are allowed. There is no
 `sorry`, `admit`, `sorryAx`, or `native_decide` in the maintained Lean sources,
@@ -156,34 +112,16 @@ of `lake`. `.cache/`, `.lake/`, `.elan/` and compiled outputs are ignored and ar
 not committed. Standalone research certificates have separate reproduction
 instructions and are not silently counted as default-library CI checks.
 
-## In-progress research — updated 10 October 2026
+## In-progress research — 10 October 2026
 
-This material is separate from the finished Suk and HMPT formalizations.
+The 316-, 315- and 314-point targets are **not yet proved**. Stronger exact
+arithmetic certificates and their Lean builds are being investigated. A new
+13-state geometric obstruction has a checked propositional core, but its full
+actual-point transfer remains in progress. Neither solver UNSAT output nor a
+partially checked certificate is counted as a completed geometric theorem.
 
-- **Residual omission system:** a complete exact integer certificate gives the
-  auxiliary occupancy target 123, with independent arithmetic replays. Lean has
-  checked the first **470 of 3,411 parts**, covering **20,028 of 145,474 leaves**.
-  The [latest partial-build record](experiments/omission-residual-progress-2026-10-10.json)
-  preserves the successful checks. The residual arithmetic root remains unfinished;
-  all geometric row requirements are now proved.
-- **Global finite octagon target:** the balanced geometric theorem, minimum-slope
-  partition and projective/root transfer are complete. The remaining hypothesis
-  is `Partition.ResidualBound 123`, now reduced to the residual arithmetic
-  exclusion and final assembly with distinct generated module names.
-  Consequently **ES(8) ≤ 317 is not a theorem of this repository**.
-- **Certificate assembly:** actual balanced and residual proof chunks now import
-  together with audited standard axioms. The fresh `BalancedProof` rebuild has
-  checked its catalog and **72 of 898 parts**. Its root and renamed geometry
-  still need checks; the historical balanced proof remains complete. See the
-  [assembly guide](docs/OMISSION_ASSEMBLY.md) and
-  [fresh rebuild record](experiments/omission-linked-balanced-2026-10-09.json).
-- **Other retained experiments:** exact-coordinate searches, SAT/SMT attempts and
-  a Lean-checked counterexample to a proposed mixed-cap lemma. None improves the
-  published global geometric upper bounds; timeout results remain inconclusive.
-
-See [the ES(8) remaining-work estimate](docs/ES8_REMAINING.md),
-[omission certificate record](docs/OMISSION.md), [mixed-cap result](docs/MIXED_CAPS.md),
-[SAT record](docs/SAT.md), and [historical research log](docs/RESEARCH.md).
-The open conjecture and `HMPT.StrictImprovement` are proposition definitions,
-not assumed axioms or unfinished proof declarations. Research certificates
-remain separate from the completed geometric formalizations.
+The [current work estimate](docs/ES8_REMAINING.md) separates these stronger
+targets from the completed 317-point result. Earlier partial certificates and
+failed searches are retained as dated research records. They do not invalidate
+or replace the complete new proof route. The finished asymptotic theorem still
+has HMPT's published coefficient `8√2/3`.

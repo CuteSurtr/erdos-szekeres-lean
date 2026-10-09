@@ -38,3 +38,9 @@ import ErdosSzekeres.Omission.ProjectiveTransfer
 import ErdosSzekeres.Omission.Partition
 import ErdosSzekeres.Omission.BlockGeometry
 import ErdosSzekeres.Omission.AdditionalResidualRows
+import ErdosSzekeres.Omission.GeneralResidualBlocks
+import ErdosSzekeres.Omission.CoverCuts
+import ErdosSzekeres.Omission.PopulationBounds
+import ErdosSzekeres.HMPT.DyadicScale
+import ErdosSzekeres.OrientationConvexity
+import ErdosSzekeres.OrientationObstructions

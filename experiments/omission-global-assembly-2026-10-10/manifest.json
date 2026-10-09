@@ -1,0 +1,81 @@
+{
+  "scope": "Closed real-point ForcesConvexNGon 317 8 checked; other numerical assemblies are separately labeled candidates or historical routes",
+  "complete_theorems": [
+    "ErdosSzekeres.Omission.balanced_population_192",
+    "ErdosSzekeres.Omission.residual_population_123",
+    "ErdosSzekeres.Omission.forces_convex_octagon_317",
+    "ErdosSzekeres.Omission.convex_octagon_of_card_ge_317"
+  ],
+  "closed_check_record": "global-cover-317-check.json",
+  "closed_check_sha256": "74b27a6c22affccb9594e35ae6eb6a03bdb4e9cd20a7ea0222ac4bb39822d0b3",
+  "closed_check_input_count": 822,
+  "standard_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "provenance": {
+    "author": "Michael Schroeder",
+    "archive_version": "1, 19 September 2026",
+    "doi": "10.5281/zenodo.22842891",
+    "original_catalog_cycle_block_data_license": "CC BY 4.0",
+    "adapted_geometry_code_license": "MIT",
+    "Baek_code_license": "Apache-2.0",
+    "notices": "../../docs/THIRD_PARTY.md",
+    "local_work": "Kernel catalog and arithmetic-cut bridges, population composition, compressed proof assembly, validation gates"
+  },
+  "source_archives": {
+    "balanced-rows-sources.tar.gz": {
+      "source_files": 85,
+      "source_only": true,
+      "export_manifest": "balanced-rows-export.json",
+      "complete_record": "balanced-rows-kernel-check.json"
+    }
+  },
+  "pending_assemblies": [
+    "FinalCover316.lean",
+    "FinalCover315B61R30.lean",
+    "FinalCover315B60R31V2.lean",
+    "FinalCover314B61R31V2.lean"
+  ],
+  "historical_alternative_assemblies": [
+    "Final317.lean",
+    "Final318.lean",
+    "FinalCover315.lean"
+  ],
+  "files": {
+    "BalancedBudgets.lean": "7c6a38dfc4c71a9d256eeb92961b38fd80169322790b08e17cdefcded88a7b11",
+    "BalancedCover60Bridge.lean": "26f3183b5a3217bda0462630d09ad67decda8a73bbe2ed2632aa555514ce69c5",
+    "BalancedCover61Bridge.lean": "444c48e0b17f76ae6b0aaea140423ed64d9adf9255641f9a0b6183a5eaff2fbc",
+    "BalancedCoverBridge.lean": "5fb207dd1f2a608216933b31bcaf3a7edcc2803634d29143f1eb634f05c2193d",
+    "BalancedPopulation.lean": "7caa58ec706a711bdd902f4ae636334f7f4ae3e6d03a990fc1c1c4b7d9021c1d",
+    "ConditionalAudit.lean": "f1e267d71b594e9f0bc56e02cfb949b8b9704c6b9fd72227605a1d2e1efed1a1",
+    "Final317.lean": "0f19cf7ac1cb081f659bcf2b377db41bc885748580b1bc0a8ff0896c86b3d609",
+    "Final318.lean": "936c8da619461be894b3583e1d182e0c87a782a7aa1fbe97f8e19df38566d558",
+    "FinalCover314B61R31V2.lean": "52366dc51a222acc202ec4e55bae6215816e2643703324c2b92bb78241b0544d",
+    "FinalCover315.lean": "8f48f5a05034533bc37a7e263f14104fae625a51c68f3bbbc5af9f2e303a098d",
+    "FinalCover315B60R31V2.lean": "bbbbe7528515af69cb2ad4061ef2600711c286ad79f7a611726f9bad63e48543",
+    "FinalCover315B61R30.lean": "7058abb5553193088631b6e6d22637a81bf14aa934a236742736fa6ff3b90a44",
+    "FinalCover316.lean": "2d098ce7db0e8969f4b9db20a240a418722bad420c2f7a4bd0d7f0cb238cdf08",
+    "FinalCover317.lean": "f2790851dcff04fe82d436ee9952e0068a92400491e2ec89cefc722962199065",
+    "README.md": "0a74a27a71978386aa2c032d47ed7087b454987afd632df781de15754b444ae0",
+    "Residual124Bridge.lean": "3daf429070fca703331d45667c2b6b57e9524a8923901916d1bdb7bfe552b9fd",
+    "ResidualBudgets.lean": "703c5593d5ebfc02c6b85fee22d99b0c5689965f35abf4981a9c97a1992829ae",
+    "ResidualCover31Bridge.lean": "fdcde238a7fe06d6a5db21168fbb2972c2e839fabe623bad9f32cdc66e9b6a17",
+    "ResidualCover31V2Bridge.lean": "5a017e1222af35e168d542c29ee629e2d4632f59f4aced28799fbbd5504144de",
+    "ResidualCoverBridge.lean": "8f65d87133d49b3e50fe767c5778913a69056a15f3931d193d4692ae8b740f7b",
+    "SEMANTIC_REVIEW.md": "a4eb6f0de923ab31de04af98eda40356858c0596e85f07ed46797013fe3c7a2b",
+    "balanced-rows-export.json": "cb274389ac2fdc598cfa40310e4e39dc6939ab712531a65b2814ead1db60ed79",
+    "balanced-rows-kernel-check.json": "f5596f3811e81745cc11b297e831201e4626f5ab35913867809b66e59bddf8c5",
+    "balanced-rows-sources.tar.gz": "4deb8e250ec312c868140e4e24a5730babc73e10d283c8a43206c30bb920d2ed",
+    "conditional-axioms.txt": "70e23f9e5363649db682167f166af18cc43cb29ff78bf7763e1fe55eff4e89bc",
+    "conditional-check.json": "a65689b8dd8e174561fecb7617ed2c583cbd413f0b24d4f36f22a79e7647a7f7",
+    "cover-preliminary-axioms.txt": "63d02505fa5586db873b54f1f38978c83ff5726e1d2221a6b26e7b314f98bbd0",
+    "cover-preliminary-check.json": "971e0ba6c526efc12b9986a1493cce1676ae6e578cdd627dc49818d02c39133b",
+    "global-cover-317-axioms.txt": "aa820ba297dcde40b30d88faaf985d6b2ebd80e0b24b2a9bd9395640d68250c3",
+    "global-cover-317-check.json": "74b27a6c22affccb9594e35ae6eb6a03bdb4e9cd20a7ea0222ac4bb39822d0b3",
+    "profile-balanced61-v2-residual30-v1.json": "5e452f8c03dff833f99265bf33f7319874f3c5fc5100ac9331bdbbd09ca15864",
+    "residual-29.json.gz": "359fd945e7eee7d2e57edb41daa35ec97c24861467992f06b6105704d8564d3a",
+    "residual124-catalog-check.json": "45ec9f5b9f8dd7c82ce1b09fd2e40daadd0e0069a4019cafde64ecbd0bf96ead"
+  }
+}

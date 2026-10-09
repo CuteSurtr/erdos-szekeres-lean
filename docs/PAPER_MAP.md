@@ -96,3 +96,12 @@ has no separately numbered paper counterpart. Its
 `HMPT.positive_leading_slack_iff` and
 `HMPT.budget_eventually_negative_below_published` exactly delimit retuning
 the implemented fixed-scale budget; they do not assert a stronger extremal bound.
+
+The supplementary [DyadicScale.lean](../ErdosSzekeres/HMPT/DyadicScale.lean)
+extends the implementation's Proposition 3.8 replacement to a finite number of
+doubling stages: `HMPT.convex_dyadic_scale_ratio_bound`,
+`HMPT.convex_dyadic_scale_bound`, and `HMPT.dyadic_scale_bound`.
+`HMPT.positive_dyadic_leading_budget_iff` optimizes an explicit leading
+expression over the integer stage count and positive real scale. These are
+supplementary results, not additional claims from HMPT's paper or a stronger
+asymptotic coefficient.

@@ -1,5 +1,12 @@
 # Exact omission certificates
 
+**Current status, 10 October 2026:** the compressed certificate route now proves
+`ES(8) ≤ 317` for ordinary real point sets in general position. See the
+[complete assembly](../experiments/omission-global-assembly-2026-10-10/README.md)
+and [current work boundary](ES8_REMAINING.md). The partial-check descriptions
+below are retained as historical records of the earlier certificate route.
+
+
 **Geometric checkpoint, 2026-10-09:** Lean now proves the balanced actual-point
 bound **192**, including the complete 9,862-leaf arithmetic tree, the injective
 point-to-state assignment, all 2,685 geometric rows, and their final composition.

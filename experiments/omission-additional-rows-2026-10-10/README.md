@@ -4,7 +4,7 @@ The maintained theorem
 `ErdosSzekeres.Omission.AdditionalResidualRows.all_rows` proves 20 cycle
 inequalities and one capacity-22 block inequality for actual residual
 configurations of real points. It is part of the default library build.
-The exact hypotheses are no 6-cap, no convex octagon and no incoming-4-cap /
+The exact hypotheses are no 6-cap, no convex octagon and no incoming-6-cup /
 outgoing-5-cap junction, in a strictly x-ordered general-position configuration.
 
 `AdditionalResidualStrictness.independent_each_additional_row`, in

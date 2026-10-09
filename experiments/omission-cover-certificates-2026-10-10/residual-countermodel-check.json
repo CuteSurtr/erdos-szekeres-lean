@@ -1,0 +1,46 @@
+{
+  "scope": "One abstract 32-hole assignment satisfies all 1187 original and all 45 additional geometric rows. Its 13-state candidate support is occupied. No real-point realization is claimed.",
+  "observed_exit": 0,
+  "complete": true,
+  "axioms": {
+    "ResidualCountermodel.missing_card": [
+      "Quot.sound",
+      "propext"
+    ],
+    "ResidualCountermodel.original_rows": [
+      "Quot.sound",
+      "propext"
+    ],
+    "ResidualCountermodel.prior_additional_rows": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ResidualCountermodel.general_block_rows": [
+      "Quot.sound",
+      "propext"
+    ],
+    "ResidualCountermodel.candidate_occupied": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ResidualCountermodel.allows_thirty_two_holes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "inputs": {
+    "/workspace/erdos-szekeres-lean/.cache/six-hour-primal/lean/ResidualCountermodel.lean": "067846e9ff9a71131914f500002f4ecf217e0d87a1373f804bbbcd9cd4128f1d",
+    "/workspace/erdos-szekeres-lean/.cache/six-hour-primal/lean/ResidualCountermodel.olean": "1fad6088fe6b9266c83c525461d966d949b784d00c9bb5c278cde75716e2d910",
+    "/workspace/erdos-szekeres-lean/.cache/omission-lean-full/residual/Catalog.lean": "f94c74ecade3b2714f961cd3ee7826ad0804342886f0e86ab2ca3908f86cb7da",
+    "/workspace/erdos-szekeres-lean/.cache/omission-lean-full/residual/Catalog.olean": "2e118ef392822f3543e9901180a3042c53489283d7ca28af39ac74a540b70a80",
+    "/workspace/erdos-szekeres-lean/ErdosSzekeres/Omission/AdditionalResidualRows.lean": "299b205ca0d8efe6006fdf67c63894917faee7a4ce67967656a7fd3d16783b1e",
+    "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/AdditionalResidualRows.olean": "0b42ccd98eb3ccc45388699677b2995e82fba3a093a95b2d0aeb4b3b1022aa13",
+    "/workspace/erdos-szekeres-lean/ErdosSzekeres/Omission/GeneralResidualBlocks.lean": "03625e0e42d1d217e7524c4e6a8553c58c637a86cf377084c285b058eed62199",
+    "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/GeneralResidualBlocks.olean": "8a14a5670e05f5a6940aab83deca710d8e4c1119488a61946fc4179b66b1bdb1",
+    "/workspace/erdos-szekeres-lean/lean-toolchain": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434",
+    "/workspace/erdos-szekeres-lean/lake-manifest.json": "bc21802066bdf7c94b0eb1e7bd3d3389ae0d416c2ed69c6e5dae03e74945c8e7"
+  }
+}

@@ -1,5 +1,45 @@
 # Verification records
 
+## Closed 317-point theorem — 10 October 2026
+
+The default library passes `lake build --wfail` (**3,253 jobs**). The
+[complete current axiom audit](validation/axiom-audit-cover-2026-10-10.txt)
+passes for **475 named roots**, including Suk 2016, HMPT 2020, the new cut
+soundness, dyadic counting, block constraints and orientation helpers. Only
+`propext`, `Classical.choice` and `Quot.sound` occur. All **90 Python tests**
+pass with optional solvers and Lean integration controls enabled, with no skips;
+the [full output](validation/cover-tests-2026-10-10.txt) is preserved.
+
+Separately, the [complete global certificate gate](../experiments/omission-global-assembly-2026-10-10/global-cover-317-check.json)
+passes for `ErdosSzekeres.Omission.forces_convex_octagon_317` and its explicit
+real-point form `convex_octagon_of_card_ge_317`. The
+[unabridged final axiom output](../experiments/omission-global-assembly-2026-10-10/global-cover-317-axioms.txt)
+contains only the standard three axioms. The theorem has no unproved geometry,
+arithmetic or literal-row assumptions. It is checked through the separate
+certificate workflow, not silently included in default-library CI.
+
+The new route checks 17 balanced arithmetic parts and 149 residual arithmetic
+parts, both complete roots, 622 derived cuts, all catalog bridges and the
+existing geometric prerequisites. The large older partial trees are not
+needed. Source-only archives, exact check records, and reproduction instructions
+are in the [cover artifact](../experiments/omission-cover-certificates-2026-10-10/README.md)
+and [assembly artifact](../experiments/omission-global-assembly-2026-10-10/README.md).
+After the library rebuild, every library object bound by the successful final
+317 record still had its recorded hash.
+
+A separate six-root audit verifies an abstract 32-hole residual witness against
+all original rows and all 45 additional geometric rows. It is not a real-point
+realization. Stronger 316/315/314 draft assemblies are explicitly unproved.
+
+The [source manifest](validation/source-manifest-cover-2026-10-10.json) records
+the current source inventory and checks. No proof placeholders, native-evaluation
+axioms or custom axioms occur in these maintained finished sources or new
+source archives. Git tracks no cache directories or compiled build artifacts.
+Third-party attribution remains in [THIRD_PARTY.md](THIRD_PARTY.md).
+
+All dated records below are historical checkpoints. Statements there that a
+317-point proof was unfinished describe the earlier state, not the current one.
+
 ## Additional rows and parameter barrier — 2026-10-10
 
 The library builds with warnings treated as errors (**3,247 jobs**). The

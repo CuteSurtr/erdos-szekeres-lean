@@ -1,0 +1,136 @@
+{
+  "scope": "Literal finite row system only; no geometric theorem",
+  "source_sha256": "405f18f960e2ecb3ba149758ff811fdae5ccc7f8b6373e5ae881b1555f663789",
+  "tree_sha256": "c6691543689bda985e3db042c91c82f802ae3c1365b486ec2f975fa3a11b8f52",
+  "exporter_sha256": "af6df59bcab2e2ca68ff6d165314e16cf36a67ec6569da4251442b9c673c9f59",
+  "states": 252,
+  "rows": 2905,
+  "budget": 59,
+  "base": 33554432,
+  "namespace": "OmissionBalancedCover",
+  "module_prefix": "BalancedCoverProof",
+  "root": 0,
+  "full_tree_root": 0,
+  "exported_leaves": 711,
+  "exported_parts": 17,
+  "parts": [
+    {
+      "module": "Part00000",
+      "root": 1175,
+      "leaves": 54
+    },
+    {
+      "module": "Part00001",
+      "root": 1177,
+      "leaves": 38
+    },
+    {
+      "module": "Part00002",
+      "root": 1178,
+      "leaves": 32
+    },
+    {
+      "module": "Part00003",
+      "root": 1033,
+      "leaves": 40
+    },
+    {
+      "module": "Part00004",
+      "root": 1034,
+      "leaves": 32
+    },
+    {
+      "module": "Part00005",
+      "root": 879,
+      "leaves": 41
+    },
+    {
+      "module": "Part00006",
+      "root": 880,
+      "leaves": 37
+    },
+    {
+      "module": "Part00007",
+      "root": 607,
+      "leaves": 55
+    },
+    {
+      "module": "Part00008",
+      "root": 609,
+      "leaves": 36
+    },
+    {
+      "module": "Part00009",
+      "root": 610,
+      "leaves": 44
+    },
+    {
+      "module": "Part00010",
+      "root": 457,
+      "leaves": 34
+    },
+    {
+      "module": "Part00011",
+      "root": 458,
+      "leaves": 42
+    },
+    {
+      "module": "Part00012",
+      "root": 289,
+      "leaves": 26
+    },
+    {
+      "module": "Part00013",
+      "root": 290,
+      "leaves": 59
+    },
+    {
+      "module": "Part00014",
+      "root": 9,
+      "leaves": 61
+    },
+    {
+      "module": "Part00015",
+      "root": 11,
+      "leaves": 33
+    },
+    {
+      "module": "Part00016",
+      "root": 12,
+      "leaves": 47
+    }
+  ],
+  "contexts": {
+    "missing": [],
+    "occupied": []
+  },
+  "python_check": {
+    "nodes": 1421,
+    "leaves": 711,
+    "pending": 0,
+    "complete": true,
+    "minimum_margin": 1
+  },
+  "lean_checked": false,
+  "files": {
+    "BalancedCoverProof/Catalog.lean": "c4b943dbd904b00112ea2aa61d9c2ae2cea62d0ae3cbde78b0f57b812a5e4ce2",
+    "BalancedCoverProof/Part00000.lean": "5edba2d8310cef9d4eb74c8eefab24511a82a685ee76024d07d16df4c139b8a3",
+    "BalancedCoverProof/Part00001.lean": "e5300cf3cc12bca87dbad7a1487699761c1b8488bdeb4fa339ce7e7bbe94227e",
+    "BalancedCoverProof/Part00002.lean": "6e59eb5b16c5191b744a83be77a7fc63c4be3ac77833065652134b04520b424a",
+    "BalancedCoverProof/Part00003.lean": "ce07549b1c2e384733685157f9ecf68e59f8db87fff6852f3beeaba7e36a2f47",
+    "BalancedCoverProof/Part00004.lean": "c86b4d795d091071e1fa1d6ae88c412f45f3cd572a2d5ccc29a68d91f4972447",
+    "BalancedCoverProof/Part00005.lean": "2ee4b5c2974682cd7ba1064e824119c9a4a50270fddbecac805d3dec92d09881",
+    "BalancedCoverProof/Part00006.lean": "adcb58806d58dfb3c5583b0cd8b78e3eb10339697d9c29c8eb31ef50df2b5be5",
+    "BalancedCoverProof/Part00007.lean": "a99e2a766fe48a16e4553d8e1110b15cba731e72983eed101044574b22fc1d00",
+    "BalancedCoverProof/Part00008.lean": "7042bc2088492b347238d50a655ba273846e6c9c2028cf72162a913c0b88cf8c",
+    "BalancedCoverProof/Part00009.lean": "0a77ee453f1a899bc611a02a43055cc1d80edf535b9fe32eb9dff2809f44236a",
+    "BalancedCoverProof/Part00010.lean": "74b96815ae5c12d388c6982902f12ff700a476e49dd7dc6ea91b8da421dfebbf",
+    "BalancedCoverProof/Part00011.lean": "fe954fb309c58159534df711d3e3163706baa0396d6650019119fc0ffb1296fe",
+    "BalancedCoverProof/Part00012.lean": "54fc406e77df1d5010bea08418ef1d0f52eab0bf17bf1566fd1853d4fc39e7ab",
+    "BalancedCoverProof/Part00013.lean": "080bc0eb44992266c0092605f16b79f78d323133e6935decd3a26fec1d572039",
+    "BalancedCoverProof/Part00014.lean": "227a2a642953045c2021cfb97bda878ca24bd4ceebd3ae4ad9ce780cc8063d3f",
+    "BalancedCoverProof/Part00015.lean": "b249218f3d5802a39edbfa4037a1d8052dcfbdcf6eb481e5e4dc09df0a39e7a0",
+    "BalancedCoverProof/Part00016.lean": "363106292cacb3f79407fae1ac4aa66222a667e69af453c7f0a6b3f85cc046a7",
+    "BalancedCoverProof/Root.lean": "fd6100fed9f6b33c84852c5b9feff9a669b0e56930bfdd187147464d04980557"
+  }
+}

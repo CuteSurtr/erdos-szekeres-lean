@@ -1,0 +1,16 @@
+import ResidualBudgets
+
+#print axioms ErdosSzekeres.Omission.Partition.asymmetric_of_bounds
+#print axioms ErdosSzekeres.Omission.Partition.forces_of_population_bounds
+#print axioms ErdosSzekeres.Omission.Partition.avoiding_card_le_of_population_bounds
+#print axioms ErdosSzekeres.Omission.Partition.forces_318_of_population_bounds
+#print axioms ErdosSzekeres.Omission.Partition.forces_317_of_population_bounds
+#print axioms OmissionResidual.excludes_hole_budget_mono
+#print axioms OmissionResidual.residual_bound_of_hole_budget
+#print axioms OmissionResidual.forces_of_hole_budget
+#print axioms OmissionResidual.forces_318_of_twenty_nine_holes
+#print axioms OmissionResidual.forces_317_of_thirty_holes
+
+#check @ErdosSzekeres.Omission.Partition.forces_of_population_bounds
+#check @OmissionResidual.forces_318_of_twenty_nine_holes
+#check @OmissionResidual.forces_317_of_thirty_holes

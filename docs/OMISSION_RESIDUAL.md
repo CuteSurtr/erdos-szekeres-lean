@@ -1,4 +1,15 @@
-# Completed residual geometric transfer
+# Completed residual population bound and geometric transfer
+
+**The residual population bound 123 and the global real-point bound
+`ES(8) ≤ 317` are now checked.** The closed statements
+`ErdosSzekeres.Omission.residual_population_123` and
+`ErdosSzekeres.Omission.forces_convex_octagon_317` live in
+[`FinalCover317.lean`](../experiments/omission-global-assembly-2026-10-10/FinalCover317.lean).
+The [complete final record](../experiments/omission-global-assembly-2026-10-10/global-cover-317-check.json)
+binds all arithmetic, geometry, and catalog bridges; its
+[axiom output](../experiments/omission-global-assembly-2026-10-10/global-cover-317-axioms.txt)
+reports only `propext`, `Classical.choice`, and `Quot.sound`. See
+[OMISSION_ASSEMBLY.md](OMISSION_ASSEMBLY.md) for the complete reproduction.
 
 For an actual `Configuration n` of real points in strict x-order and general
 position, assume no 6-cap, no convex octagon, and no incoming 6-cup/outgoing
@@ -6,10 +17,12 @@ position, assume no 6-cap, no convex octagon, and no incoming 6-cup/outgoing
 the exact 154 residual states. The separately checked artifact proves that its
 occupied states satisfy every one of the 1,187 literal omission rows.
 
-This finishes the residual geometric transfer in the current reduction. It
-does **not** prove that at most 123 states can be occupied. The complete stronger
-integer certificate has been replayed outside Lean; its large Lean tree remains
-partially checked. [Remaining work](ES8_REMAINING.md) gives the precise boundary.
+The completed arithmetic route derives 402 additional inequalities from the
+original 1,187 rows, then excludes every Boolean hole vector of total at most
+30 with a 4,686-leaf certificate. All 149 proof parts and its root passed Lean.
+The hole identity `sum holes + n = 154` therefore gives `n ≤ 123`. Together
+with balanced population 192, the geometric partition gives threshold 317.
+The older 145,474-leaf direct tree remains partial and is not used by this proof.
 
 All names below are under `ErdosSzekeres.Omission`, except the standalone rows.
 
@@ -28,12 +41,22 @@ All names below are under `ErdosSzekeres.Omission`, except the standalone rows.
 | Actual block capacity and omission inequality | `BlockGeometry.lean` | `block_capacity_ranks`, `block_hole_bound` |
 | All literal row implications | Standalone `ResidualGeometry.lean` and `ResidualAllGeometry.lean`, archived in the artifact | `OmissionResidual.all_nonblock_rows`, `OmissionResidual.all_geometric_rows` |
 | Exact arithmetic handoff | Standalone `ResidualReduction.lean` | `OmissionResidual.feasible_holes`, `residual_bound_of_arithmetic`, `forces_317_of_arithmetic` |
+| Derived arithmetic rows | Standalone `ResidualCoverCuts.lean` | `ResidualCoverCuts.all_rows`: all 402 rounded-cover consequences of the original rows |
+| Complete arithmetic exclusion | Generated `ResidualCoverProof.Root` and its 149 parts | `OmissionResidualCover.excludes_budget`: no feasible vector with at most 30 holes in the 1,589-row system |
+| Exact catalog identification | Standalone `ResidualCoverBridge.lean` | `OmissionResidualCover.base_catalog_matches`, `cut_catalog_matches`, `all_cover_rows`, `exclusion_transfer` |
+| Closed actual bound and global result | Standalone `FinalCover317.lean` | `ErdosSzekeres.Omission.residual_population_123`, `forces_convex_octagon_317`, `convex_octagon_of_card_ge_317` |
 
-The last theorem is conditional: the completed balanced bound and an actual
-proof of `ExcludesThirtyHoles` imply `ForcesConvexNGon 317 8`. The arithmetic
-premise is a proposition definition, not an axiom. `feasible_holes` is
-unconditional under the stated residual geometric restrictions and concludes
-`sum holes + n = 154` for a Boolean vector satisfying every literal row.
+The original `forces_317_of_arithmetic` theorem is a conditional interface:
+the balanced bound and `ExcludesThirtyHoles` imply `ForcesConvexNGon 317 8`.
+The arithmetic premise is a proposition definition, not an axiom. Its exact
+hole exclusion is now supplied through the checked compressed root and catalog
+transfer. `OmissionResidual.residual_bound_of_hole_budget`, in
+`ResidualBudgets.lean`, supplies the parameterized population interface used by
+the final assembly. `feasible_holes` is unconditional under the stated residual
+geometric restrictions and concludes `sum holes + n = 154` for a Boolean
+vector satisfying every original literal row. The global theorem derives the
+residual restrictions from its partition; it assumes only general position
+and the cardinality threshold on the original real point set.
 
 The generated cycle checker handles rows below 1165 except row 973. The 23
 block checks handle row 973 and rows 1165–1186. Coverage is proved inside Lean;
@@ -44,8 +67,17 @@ The [artifact](../experiments/omission-residual-geometry-2026-10-09/README.md)
 contains 39 successful cycle-module checks, 24 successful block/composition
 checks, three further reduction theorems, their axiom outputs and hashes.
 Corrupted cyclic order and collapsed block thresholds are both rejected by
-Lean in negative controls. The default library's 444-root audit is recorded
-separately; it does not pretend to compile the large generated certificates.
+Lean in negative controls. That 9 October artifact's 444-root maintained-library
+audit is historical; current library validation is in [VALIDATION.md](VALIDATION.md).
+The [10 October cover artifact](../experiments/omission-cover-certificates-2026-10-10/README.md)
+and [global assembly artifact](../experiments/omission-global-assembly-2026-10-10/README.md)
+preserve the new complete arithmetic and final theorem records separately.
+The default library build is not counted as a replay of the generated trees.
+
+Further arithmetic budgets and stronger numerical thresholds remain separate
+candidates until their own complete roots and global statements pass. The
+original geometric transfer is already complete; these candidates do not
+leave an unproved geometric assumption inside the checked 317 result.
 
 The ranks, restricted-state method, block compression and supporting-line
 strategy follow Michael Schroeder's version-1 archive,

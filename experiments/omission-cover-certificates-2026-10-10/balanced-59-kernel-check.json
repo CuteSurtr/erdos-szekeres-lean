@@ -1,0 +1,283 @@
+{
+  "scope": "Literal finite row system only; no geometric theorem",
+  "binding": {
+    "manifest": "68ff6305ad7e2494040b611bf785af66b5bbfa9d51b3093ba5a5743bbecc1b00",
+    "lean": "Lean (version 4.24.0, arm64-apple-darwin23.6.0, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)",
+    "inputs": {
+      "lean-toolchain": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434",
+      "lake-manifest.json": "bc21802066bdf7c94b0eb1e7bd3d3389ae0d416c2ed69c6e5dae03e74945c8e7",
+      ".lake/build/lib/lean/ErdosSzekeres/OmissionCertificates.olean": "54394f6a413b31a4a4174b3f1655e7af3568a7f94e849b13353c717399c6bdc9",
+      ".lake/build/lib/lean/ErdosSzekeres/OmissionPacking.olean": "0068fcfb003180c1974bd054b50f9e4ac1a1c8d799bb46df16e93fcea66fe021"
+    }
+  },
+  "fingerprint": "db8074291eb9d49af1ee5d8295ff77f53dd94c6127ad3e3ffb4916609fcc1bf0",
+  "modules": {
+    "Catalog": {
+      "exit": 0,
+      "seconds": 79.284,
+      "source_sha256": "c4b943dbd904b00112ea2aa61d9c2ae2cea62d0ae3cbde78b0f57b812a5e4ce2",
+      "stdout": "'OmissionBalancedCover.code_correct' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "5f3362e83c303f2205fe9eed49a167b9a23e69731ea0705e710c093c1b5302e4"
+    },
+    "Part00000": {
+      "exit": 0,
+      "seconds": 169.063,
+      "source_sha256": "5edba2d8310cef9d4eb74c8eefab24511a82a685ee76024d07d16df4c139b8a3",
+      "stdout": "'OmissionBalancedCover.node1175' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "01413ff8c9fd5d030b5259aec754f64064f75174fa94e975fce0d06ab6907da8"
+    },
+    "Part00001": {
+      "exit": 0,
+      "seconds": 120.001,
+      "source_sha256": "e5300cf3cc12bca87dbad7a1487699761c1b8488bdeb4fa339ce7e7bbe94227e",
+      "stdout": "'OmissionBalancedCover.node1177' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "4cec329cb0db8a535e076bf9da3e9d6a3a064307612f7e8c0f029a901606ccb8"
+    },
+    "Part00002": {
+      "exit": 0,
+      "seconds": 96.683,
+      "source_sha256": "6e59eb5b16c5191b744a83be77a7fc63c4be3ac77833065652134b04520b424a",
+      "stdout": "'OmissionBalancedCover.node1178' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "fe375022beecb3d977c8f662de8388db861a0e8e4b044bb73a399ecb5ec4ceb4"
+    },
+    "Part00003": {
+      "exit": 0,
+      "seconds": 119.54,
+      "source_sha256": "ce07549b1c2e384733685157f9ecf68e59f8db87fff6852f3beeaba7e36a2f47",
+      "stdout": "'OmissionBalancedCover.node1033' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "c9dea50073dd4f6223b3303303cf84e15600a5f6dde78d8b144386f22c19492a"
+    },
+    "Part00004": {
+      "exit": 0,
+      "seconds": 106.19,
+      "source_sha256": "c86b4d795d091071e1fa1d6ae88c412f45f3cd572a2d5ccc29a68d91f4972447",
+      "stdout": "'OmissionBalancedCover.node1034' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "7c711159a1afde850650731c00c683943a3e2324ea210b79ae87c3dc0702c36e"
+    },
+    "Part00005": {
+      "exit": 0,
+      "seconds": 130.296,
+      "source_sha256": "2ee4b5c2974682cd7ba1064e824119c9a4a50270fddbecac805d3dec92d09881",
+      "stdout": "'OmissionBalancedCover.node879' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "33a142c801e7d8a3d4bdefbd30e0309fe8089c6f101595cd63f9decdd2b9fb7b"
+    },
+    "Part00006": {
+      "exit": 0,
+      "seconds": 118.094,
+      "source_sha256": "adcb58806d58dfb3c5583b0cd8b78e3eb10339697d9c29c8eb31ef50df2b5be5",
+      "stdout": "'OmissionBalancedCover.node880' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "308b9618cf2a5328b9232278d4338aa71c94a8055dba23f8365ad6fd1a570ca3"
+    },
+    "Part00007": {
+      "exit": 0,
+      "seconds": 168.803,
+      "source_sha256": "a99e2a766fe48a16e4553d8e1110b15cba731e72983eed101044574b22fc1d00",
+      "stdout": "'OmissionBalancedCover.node607' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "cb26b44ed12dd324ffecea424b36a66acf6d4b3d8396774fe033952d6c7a8852"
+    },
+    "Part00008": {
+      "exit": 0,
+      "seconds": 108.612,
+      "source_sha256": "7042bc2088492b347238d50a655ba273846e6c9c2028cf72162a913c0b88cf8c",
+      "stdout": "'OmissionBalancedCover.node609' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "62c2f37fc0b7fbccb44ce061e6e64d3a653c0fa5c027180403d0b2baa6059fe5"
+    },
+    "Part00009": {
+      "exit": 0,
+      "seconds": 134.9,
+      "source_sha256": "0a77ee453f1a899bc611a02a43055cc1d80edf535b9fe32eb9dff2809f44236a",
+      "stdout": "'OmissionBalancedCover.node610' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "f9966b7950263c350ab4ba3177ee47117e2aeac2039804b8a292b13b39b3450a"
+    },
+    "Part00010": {
+      "exit": 0,
+      "seconds": 102.44,
+      "source_sha256": "74b96815ae5c12d388c6982902f12ff700a476e49dd7dc6ea91b8da421dfebbf",
+      "stdout": "'OmissionBalancedCover.node457' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "8a9233831c6779bd87ab6da75f5706409884160c014f67c1f0112f77fa007c54"
+    },
+    "Part00011": {
+      "exit": 0,
+      "seconds": 126.354,
+      "source_sha256": "fe954fb309c58159534df711d3e3163706baa0396d6650019119fc0ffb1296fe",
+      "stdout": "'OmissionBalancedCover.node458' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "0bd92a4776526238aa1d88de5ca2bf4a13a9582ddfdff8157183d68d2395cf6f"
+    },
+    "Part00012": {
+      "exit": 0,
+      "seconds": 77.924,
+      "source_sha256": "54fc406e77df1d5010bea08418ef1d0f52eab0bf17bf1566fd1853d4fc39e7ab",
+      "stdout": "'OmissionBalancedCover.node289' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "5094335c81fca2bf7f22ee9d6c7e9cdb953983bd0b6d8a44cb89bd7159b5fa27"
+    },
+    "Part00013": {
+      "exit": 0,
+      "seconds": 182.907,
+      "source_sha256": "080bc0eb44992266c0092605f16b79f78d323133e6935decd3a26fec1d572039",
+      "stdout": "'OmissionBalancedCover.node290' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "5cf4c701abb435683ef8e1a7c8a14b7bae27c659d42dde6583b34e2b795cd71d"
+    },
+    "Part00014": {
+      "exit": 0,
+      "seconds": 185.41,
+      "source_sha256": "227a2a642953045c2021cfb97bda878ca24bd4ceebd3ae4ad9ce780cc8063d3f",
+      "stdout": "'OmissionBalancedCover.node9' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "22324593e13c3f86c84032c9e2b56aa97fce94b7a2cb92c9ba7bd68b56459c3e"
+    },
+    "Part00015": {
+      "exit": 0,
+      "seconds": 104.841,
+      "source_sha256": "b249218f3d5802a39edbfa4037a1d8052dcfbdcf6eb481e5e4dc09df0a39e7a0",
+      "stdout": "'OmissionBalancedCover.node11' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "205b973b4d5ffd310b98cb903853dc2f64523ba2c9a26d372ace19be3a688c49"
+    },
+    "Part00016": {
+      "exit": 0,
+      "seconds": 148.35,
+      "source_sha256": "363106292cacb3f79407fae1ac4aa66222a667e69af453c7f0a6b3f85cc046a7",
+      "stdout": "'OmissionBalancedCover.node12' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "0564060e91ebba5ba2ae9739ae4b264fd21ebcade444887637e2e77349e81a58"
+    },
+    "Root": {
+      "exit": 0,
+      "seconds": 2.962,
+      "source_sha256": "fd6100fed9f6b33c84852c5b9feff9a669b0e56930bfdd187147464d04980557",
+      "stdout": "'OmissionBalancedCover.excludes_budget' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "4f837da8d2b67bc273d3e6fc43ba264e2ac4de7d19a573e8292c359c399df8db"
+    }
+  },
+  "complete": true
+}

@@ -1,5 +1,14 @@
 # Complete residual geometric row proof
 
+**Historical checkpoint, updated 10 October 2026:** the geometric proof data
+below remain unchanged. Since this 9 October checkpoint, a shorter arithmetic
+certificate and the final composition have passed Lean, proving the residual
+population bound 123 and `ES(8) ≤ 317` for real point sets in general position.
+See the [closed assembly and complete check record](../omission-global-assembly-2026-10-10/README.md)
+and [reproduction guide](../../docs/OMISSION_ASSEMBLY.md). Statements below about
+an unfinished arithmetic premise describe the original checkpoint, not the
+current project status; the archived Lean source comments are retained verbatim.
+
 **All 1,187 residual row implications are checked for actual real points.**
 There are 1,164 cycle rows and 23 block rows. The assumptions are strict
 x-order and general position (the `Configuration` structure), no 6-cap, no

@@ -1,66 +1,48 @@
-# ES(8) ≤ 317: remaining work
+# Finite octagon status and remaining work
 
-**Status, 2026-10-10: ES(8) ≤ 317 remains unproved. The geometric reduction is
-now complete, including all residual cycle and block constraints.** The
-finished Suk and HMPT real-point theorems are independent of this research.
+**10 October 2026: ES(8) ≤ 317 is proved. No geometric transfer or arithmetic
+obligation remains for that theorem.** The former estimate of 40–60 hours for
+the old residual proof tree is superseded by a compressed, completely checked
+certificate route.
 
-The proved steps are the balanced bound 192, the minimum-slope partition,
-projective/root transfer, the residual 154-state encoding, and all 1,187
-residual row implications. The last group comprises 1,164 cycles and 23 blocks.
-For the blocks, the full relevant Baek combinatorial theorem is ported, and its
-list boundary is proved to form a real convex polygon using supporting lines.
-No geometric row assumption is hidden in `OmissionResidual.all_geometric_rows`.
-See [the residual proof map](OMISSION_RESIDUAL.md) and
-[check records](../experiments/omission-residual-geometry-2026-10-09/README.md).
+The closed results are `ErdosSzekeres.Omission.forces_convex_octagon_317` and
+`convex_octagon_of_card_ge_317`, in
+[FinalCover317.lean](../experiments/omission-global-assembly-2026-10-10/FinalCover317.lean).
+The [complete check record](../experiments/omission-global-assembly-2026-10-10/global-cover-317-check.json)
+binds all dependencies and contains successful final axiom reports. It uses
+only the three standard Lean axioms. Its scope is arbitrary finite real planar
+point sets in general position, with no emptiness requirement for the polygon.
 
-The latest arithmetic checkpoint is **470/3,411 parts and 20,028/145,474
-leaves**. The [10 October research continuation](RESEARCH_2026-10-10.md) proves
-21 additional geometric rows and their abstract irredundancy. They do not
-replace the unfinished exclusion certificate: the tested root relaxation and
-pruning rules showed no improvement. No additional geometric transfer gap
-has been introduced by these separately proved rows.
+## What closed the geometric transfer
 
-| Remaining component | Exact work | Current uncertainty |
+The projective chart removes one point and excludes 7-caps. The minimum-slope
+partition gives balanced and residual induced configurations with all needed
+avoidance and junction conditions. Actual attained ranks inject those points
+into the 252- and 154-state catalogs. All 2,685 balanced and 1,187 residual
+constraints are proved for those assignments, including the Baek block bound
+and its supporting-line transfer to convex real polygons.
+
+The checked arithmetic exclusions rule out at most 59 balanced holes and at
+most 30 residual holes, giving populations at most 192 and 123. Thus an
+avoiding original set has at most `192 + 123 + 1 = 316` points. The next integer
+317 is the forcing threshold. No abstract-model realizability assumption is
+used in that implication.
+
+## Stronger research targets, not completed bounds
+
+| Target | Required work | Unknowns and rough size |
 | --- | --- | --- |
-| Residual arithmetic | Finish all 3,411 parts of the 145,474-leaf certificate, compose every branch, and audit the final exclusion of at most 30 holes. | Independent integer replays pass, but a partial Lean build is not a proof of the root. Part sizes and kernel memory/time vary. The current progress is recorded in the README and linked batch records. |
-| Final artifact linking | Finish the fresh `BalancedProof` arithmetic and geometry checks, then compose the two population bounds and audit the closed global theorem. | Historical exports have colliding module names. The balanced exporter and geometry bridge now support a distinct prefix; the complete sources reproduce after import renaming, and fresh checks have begun. Real Lean integration controls pass. See the [assembly and reproduction guide](OMISSION_ASSEMBLY.md). |
-| Final verification and review | Run the closed theorem's axiom audit, verify all generated-source bindings, publish reproduction commands, and inspect the resulting statement and provenance. | No closed `ForcesConvexNGon 317 8` theorem has yet passed. |
+| 316 | Finish the stronger balanced 60-hole exclusion and final composition with the completed residual 30-hole exclusion. | A complete exact 3,954-leaf tree exists; its Lean build is in progress. No new geometric theorem is required. Roughly hours of certificate checking on this machine, subject to kernel resource limits. |
+| 315 | Finish the balanced 61-hole exclusion, its larger cut transfer and final composition with residual 30. | A complete exact 22,112-leaf tree exists. Hundreds of proof parts remain to check; several hours to a day at current observed rates, with compression being explored. This is a planning range, not a promise. |
+| 314 | Also finish a residual 31-hole exclusion and the matching catalog interfaces. | Complete exact trees exist but have tens of thousands of leaves. Compression and full Lean checking dominate the work; roughly a day or more for the current trees. |
+| Stronger geometric constraints | Connect a checked 13-state propositional obstruction to the actual residual point assignment and all finite clause instances. | General semantic lemmas compile, but the full finite transfer is not yet checked. Likely hundreds of lines plus generated finite proof data; its effect on global certificate size or bounds is still unknown. |
 
-The exact remaining arithmetic proposition is `OmissionResidual.ExcludesThirtyHoles`
-in [ResidualReduction.lean](../experiments/omission-residual-geometry-2026-10-09/ResidualReduction.lean):
-there is no Boolean vector on the 154 states satisfying all literal row demands
-with total at most 30. The proved `feasible_holes` theorem converts every actual
-residual configuration into such a vector, with `sum holes + n = 154`.
-`residual_bound_of_arithmetic` therefore proves that this arithmetic exclusion
-implies `Partition.ResidualBound 123`.
+A Lean-checked 32-hole abstract witness satisfies all 1,187 original residual
+rows and all 45 separately added geometric rows. It shows a limitation of that
+finite model. It does not provide a real 122-point residual configuration or
+an Erdős–Szekeres lower bound.
 
-The already checked balanced bound supplies the other part. The completed
-conditional composition is `192 + 123 = 315` chart points, plus one deleted
-root: at most 316 points in an avoiding set, hence a forcing threshold of 317.
-The two extra units are one root and one strict forcing threshold. The
-standalone `forces_317_of_arithmetic` keeps both the separately established
-balanced bound and the still-unproved residual arithmetic argument explicit.
-
-**Revised rough size:** the earlier estimate of thousands of further geometric
-proof lines is obsolete. No unproved geometric lemma remains in this port of
-the reduction. Remaining source work is expected to be certificate integration,
-checks and documentation, plausibly hundreds of lines rather than another
-geometric development. The dominant cost is generated-proof checking. At the
-recent serial rate, the unfinished residual tree is on the order of **40–60
-hours of checking on this Mac**, plus the balanced rebuild for final linking.
-The full checker will also recheck 300 historically successful residual parts
-that lack current object-hash-bound resume records. The recorded complete
-balanced run took about 6.7
-hours; it is smaller than the full residual tree. These are low-confidence
-planning estimates, not benchmarks or a completion promise. Kernel resource
-failures or an integration bug could increase them. A few days of engineering
-and sustained checking is a more appropriate current estimate than the earlier
-weeks-to-months geometric port estimate.
-
-The method and source comparison remain Michael Schroeder's
-[version-1 archive, 19 September 2026](https://doi.org/10.5281/zenodo.22842891).
-The stronger balanced and residual integer certificates target 192 and 123
-instead of that archive's 193 and 124. The balanced improvement is fully proved
-for its restricted geometric case; the stronger residual target is not yet
-Lean-proved. No priority, currently-best-bound, or improvement of HMPT's
-asymptotic coefficient is claimed.
+The source method and comparison remain Michael Schroeder's
+[version-1 archive](https://doi.org/10.5281/zenodo.22842891). No currently-best-bound
+or priority claim is made. These finite targets do not improve HMPT's asymptotic
+coefficient.

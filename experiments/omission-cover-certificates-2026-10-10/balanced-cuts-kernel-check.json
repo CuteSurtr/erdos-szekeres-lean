@@ -1,0 +1,37 @@
+{
+  "scope": "Exact arithmetic consequences of the original omission rows; no new geometric hypotheses",
+  "binding": {
+    "manifest": "97bde4a0388629b9a69a9d5c6afc1bd67bde9048040f6fd95e1ec76b536f904c",
+    "lean": "Lean (version 4.24.0, arm64-apple-darwin23.6.0, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)",
+    "inputs": {
+      "/workspace/erdos-szekeres-lean/lean-toolchain": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434",
+      "/workspace/erdos-szekeres-lean/lake-manifest.json": "bc21802066bdf7c94b0eb1e7bd3d3389ae0d416c2ed69c6e5dae03e74945c8e7",
+      "/workspace/erdos-szekeres-lean/.cache/omission-balanced-linked/export.json": "4e2f95bc5fd694704211dbf4c2aebe5bafd6420293663fe0ac5b18e1d71b0b84",
+      "/workspace/erdos-szekeres-lean/.cache/omission-balanced-linked/BalancedProof/Catalog.lean": "17080b3c93264fcffd6b5b075ec00c2e713a01914290e3d11e53e516b648583c",
+      "/workspace/erdos-szekeres-lean/.cache/omission-balanced-linked/BalancedProof/Catalog.olean": "d650caa857c8351dfd842004c11dedd326433a84e219f630211e980a21251c64",
+      "/workspace/erdos-szekeres-lean/ErdosSzekeres/Omission/CoverCuts.lean": "5a2c3f157cd843263cc36f8f2c6465deea9396a20610edab1fc2ae84b7b140d9",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/CoverCuts.olean": "2207249f69fbe836a1a691a15987a7d12ec48ceeb9d610c080749fb5436d676d",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/OmissionCertificates.olean": "54394f6a413b31a4a4174b3f1655e7af3568a7f94e849b13353c717399c6bdc9",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/OmissionPacking.olean": "0068fcfb003180c1974bd054b50f9e4ac1a1c8d799bb46df16e93fcea66fe021"
+    }
+  },
+  "fingerprint": "014c8018f119a402d3cc3429116ba4325cdee592fe4482e58d40738c46f849e2",
+  "modules": {
+    "BalancedCoverCuts": {
+      "exit": 0,
+      "source_sha256": "d6034d03cddfece754fd5909c2160e6dbd8dfac9f65271b5171b206b513ec66c",
+      "stdout": "'BalancedCoverCuts.cut0' depends on axioms: [propext, Classical.choice, Quot.sound]\n'BalancedCoverCuts.cut25' depends on axioms: [propext, Classical.choice, Quot.sound]\n'BalancedCoverCuts.cut50' depends on axioms: [propext, Classical.choice, Quot.sound]\n'BalancedCoverCuts.cut75' depends on axioms: [propext, Classical.choice, Quot.sound]\n'BalancedCoverCuts.cut100' depends on axioms: [propext, Classical.choice, Quot.sound]\n'BalancedCoverCuts.cut125' depends on axioms: [propext, Classical.choice, Quot.sound]\n'BalancedCoverCuts.cut150' depends on axioms: [propext, Classical.choice, Quot.sound]\n'BalancedCoverCuts.cut175' depends on axioms: [propext, Classical.choice, Quot.sound]\n'BalancedCoverCuts.cut200' depends on axioms: [propext, Classical.choice, Quot.sound]\n'BalancedCoverCuts.all_rows' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": {
+        "BalancedCoverCuts.all_rows": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "4363534aaf08f737c9c1a7fad39a6c1d1184426f64003d181dd339253af86eb3"
+    }
+  },
+  "complete": true
+}
