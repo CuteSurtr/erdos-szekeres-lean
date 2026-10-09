@@ -78,6 +78,19 @@ satisfies all 1,187 original rows and all 45 additions with 32 holes. Thus these
 constraints alone cannot exclude that assignment; no real-point realization
 of it is claimed.
 
+Two further coupled constraints are now proved for actual residual configurations:
+`Omission.CoupledCore13.hole_bound` in
+[CoupledObstruction.lean](ErdosSzekeres/Omission/CoupledObstruction.lean), and
+`Omission.CoupledCoreSecond.hole_bound` in
+[CoupledSecondObstruction.lean](ErdosSzekeres/Omission/CoupledSecondObstruction.lean).
+Each excludes simultaneous occupation of thirteen specified states by using
+their common chronological order, actual pair ranks and orientation signs.
+The first constraint excludes the preceding 32-hole witness, with that strict
+strengthening also proved in Lean. The [first](experiments/omission-coupled-core-2026-10-10/README.md)
+and [second](experiments/omission-coupled-next-2026-10-10/README.md) proof bundles
+preserve the literal kernel-checked refutations and independent replay controls.
+They do not yet give a smaller global threshold.
+
 [DyadicScale.lean](ErdosSzekeres/HMPT/DyadicScale.lean) extends the finite HMPT
 counting argument to any number of doubling stages.
 `HMPT.positive_dyadic_leading_budget_iff` proves that its explicit idealized
@@ -91,7 +104,7 @@ Pinned versions: **Lean 4.24.0**, **Mathlib v4.24.0**; dependency revisions are 
 [lake-manifest.json](lake-manifest.json).
 
 The current library passes `lake build --wfail`. The
-[full saved axiom audit](docs/validation/axiom-audit-cover-2026-10-10.txt) checks **475 named
+[full saved axiom audit](docs/validation/axiom-audit-coupled-2026-10-10.txt) checks **483 named
 theorems**, including both main theorems and their transitive axiom dependencies.
 Only `propext`, `Classical.choice`, and `Quot.sound` are allowed. There is no
 `sorry`, `admit`, `sorryAx`, or `native_decide` in the maintained Lean sources,

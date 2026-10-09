@@ -1,0 +1,44 @@
+{
+  "scope": "Six completed coupled-obstruction library modules, the aggregate/audit and standalone first strictness proof; pending template variants are excluded.",
+  "library_build": {
+    "command": "lake build --wfail",
+    "jobs": 3259,
+    "passed": true
+  },
+  "axiom_roots": 483,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "tests": {
+    "count": 100,
+    "passed": 77,
+    "skipped_optional": 23,
+    "new_coupled_replay_controls": 6
+  },
+  "placeholder_scan_passed": true,
+  "retained_317_inputs_rehashed": 822,
+  "retained_317_hash_mismatches": [],
+  "sources": {
+    "ErdosSzekeres/Omission/CoupledLrat.lean": "d580eed2b603472df39a5dac3918a09481629b8224a4a03325dd77f6c85f9e51",
+    "ErdosSzekeres/Omission/CoupledSemantics.lean": "672adbe50764a3c94a00342a4e23f10cac69f257e4e304cf2f5661cf91151f58",
+    "ErdosSzekeres/Omission/CoupledCore13.lean": "4c84a47d7809d708451399cf70daeba929c7ed84d490886e8483306a57bb1858",
+    "ErdosSzekeres/Omission/CoupledObstruction.lean": "f003e9967181523f4eb5427f8921406b0b619ffcab8920867c8826867b3c8fa2",
+    "ErdosSzekeres/Omission/CoupledCoreSecond.lean": "f906b4b2b49aa2289f726c7aabb4489041bc724666b56016f6174594bca89c88",
+    "ErdosSzekeres/Omission/CoupledSecondObstruction.lean": "fb292466fc935896041f4654821d66f2165aff45b03473a34a30842d6a2bcf82",
+    "ErdosSzekeres.lean": "eaf3c8bb6e85e53fb15dd9406fb46e34e5d6206a7e38571b8afe3ad8270618b6",
+    "scripts/AxiomAudit.lean": "16484937be0b2a4577de0163dd404ad39c1035225c8007181a5574e36982cfac",
+    "experiments/omission-coupled-core-2026-10-10/Strictness.lean": "1ce8066c174681f9d467c0ec197e1b2c2e9fafc5596a0d39f0e743c1983e5ba0"
+  },
+  "remote_ci": {
+    "run": 37984305688,
+    "attempts": [
+      1,
+      2
+    ],
+    "conclusion": "cancelled",
+    "build_exit_code": 143,
+    "scope": "Local build succeeded; these remote attempts did not complete."
+  }
+}

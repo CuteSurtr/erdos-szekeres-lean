@@ -1,0 +1,111 @@
+{
+  "status": "kernel-checked geometric obstruction and finite strictness",
+  "support": [
+    16,
+    25,
+    30,
+    39,
+    43,
+    50,
+    53,
+    62,
+    65,
+    68,
+    77,
+    91,
+    101
+  ],
+  "demand": 1,
+  "hypotheses": [
+    "real Configuration n (strict horizontal order and general position)",
+    "no6-cap",
+    "no convex8-gon",
+    "existing no6-cup/5-cap junction"
+  ],
+  "scope": "A genuinely stronger necessary omission row. It excludes the checked32-hole abstract witness, without establishing that every32-hole assignment is impossible or a new global ES8 bound.",
+  "proof": {
+    "variables": 389,
+    "base_clauses": 407,
+    "derived_rup_steps": 343,
+    "clause_families": {
+      "empty_direction": 27,
+      "domain": 21,
+      "growth": 31,
+      "order_transitive": 7,
+      "fixed_sign": 110,
+      "convex_four": 180,
+      "packet": 28,
+      "no_octagon": 3
+    },
+    "core_module": "ErdosSzekeres.Omission.CoupledCore13",
+    "actual_geometry_module": "ErdosSzekeres.Omission.CoupledObstruction",
+    "roots": [
+      "ErdosSzekeres.Omission.CoupledCore13.context_impossible",
+      "ErdosSzekeres.Omission.CoupledCore13.exists_missing_state",
+      "ErdosSzekeres.Omission.CoupledCore13.hole_bound",
+      "ErdosSzekeres.Omission.CoupledCore13.strict_strengthening",
+      "ErdosSzekeres.Omission.CoupledCore13.countermodel_not_realizable"
+    ],
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "no_sorry": true,
+    "no_custom_axioms": true,
+    "no_native_decide_or_ofReduceBool": true,
+    "method": "Mathlib FromLRAT produces ordinary kernel proof terms;407 template covers and finite prerequisites use decide +kernel. Geometric clause soundness is proved generically from actual owners."
+  },
+  "validation": {
+    "single_compiler_memory_option": "-M1500",
+    "clean_generic_compile": true,
+    "clean_core_compile": true,
+    "clean_actual_geometry_compile": true,
+    "clean_strictness_compile": true,
+    "independent_exact_RUP_replay": 343,
+    "independent_complete_deletion_replay": 13,
+    "deletion_scope": "Every one-point deletion is satisfiable in the necessary shared-order/shared-label/sign model, including all8-subset exclusions. This does not establish real-point realizability or minimum cardinality among all supports.",
+    "check_command": "python3 scripts/check_omission_coupled_core.py",
+    "export_command": "python3 scripts/export_omission_coupled_core.py",
+    "export_byte_identical": true,
+    "strictness_import_objects": [
+      ".cache/six-hour-primal/lean/ResidualCountermodel.olean",
+      ".cache/omission-lean-full/residual/Catalog.olean"
+    ],
+    "strictness_sources": [
+      "experiments/omission-cover-certificates-2026-10-10/ResidualCountermodel.lean",
+      ".cache/omission-lean-full/residual/Catalog.lean"
+    ],
+    "strictness_generated_catalog_sha256": "f94c74ecade3b2714f961cd3ee7826ad0804342886f0e86ab2ca3908f86cb7da"
+  },
+  "semantic_review": [
+    "Actual pair labels are symmetric only in storage: min/max is taken in the common actual-owner chronological order.",
+    "Directed Ferrers membership is recomputed from the same ambient configuration; both label bounds and forbidden(1,6) are proved.",
+    "Canonical orientation parity uses nonzero orientations obtained from actual general position and distinct owner extraction.",
+    "Packet clauses require actual chronological x-order; no arbitrary-label planarity is assumed.",
+    "Convex quadruples use exactly two true signs in[!w,z,!y,x], proved for real nondegenerate quadruples.",
+    "No-octagon clauses are proved by the increasing-index four-subset convexity theorem; index order need not equal chronological order.",
+    "The raw DIMACS formula is definitionally equal to the407 semantic clauses; no external solver output is assumed.",
+    "Strictness reuses the same old-row witness and proves exact equality of the13-state supports."
+  ],
+  "sha256": {
+    "ErdosSzekeres/Omission/CoupledCore13.lean": "4c84a47d7809d708451399cf70daeba929c7ed84d490886e8483306a57bb1858",
+    "ErdosSzekeres/Omission/CoupledLrat.lean": "d580eed2b603472df39a5dac3918a09481629b8224a4a03325dd77f6c85f9e51",
+    "ErdosSzekeres/Omission/CoupledObstruction.lean": "f003e9967181523f4eb5427f8921406b0b619ffcab8920867c8826867b3c8fa2",
+    "ErdosSzekeres/Omission/CoupledSemantics.lean": "672adbe50764a3c94a00342a4e23f10cac69f257e4e304cf2f5661cf91151f58",
+    "ErdosSzekeres/OrientationConvexity.lean": "3ec9e93b8dc3c89b82dd444df9060596b8aaa6dcd428a7223d8c7bbc33f1e4e7",
+    "ErdosSzekeres/OrientationObstructions.lean": "1f9d5fe90621dd826b964361c5cc730f929eb2b87d5e89ef9a2c844d80be5761",
+    "experiments/omission-coupled-core-2026-10-10/Strictness.lean": "1ce8066c174681f9d467c0ec197e1b2c2e9fafc5596a0d39f0e743c1983e5ba0",
+    "experiments/omission-coupled-core-2026-10-10/axiom-audit.txt": "eb6a19eed552d82c0aaedb6698d2addefc4a0f72da46124e72f675a27c4ca0dd",
+    "experiments/omission-coupled-core-2026-10-10/core13.cnf": "94d62a341397cab0a97e1da94b913e39111f0a776dd55c257ea57007e7f889a1",
+    "experiments/omission-coupled-core-2026-10-10/core13.json": "3b95f2445cee5b55450606c7fc4f4ff4914d0c184998010f4ad8ded398229cc9",
+    "experiments/omission-coupled-core-2026-10-10/core13.lrat": "ff289b1d106752c2b089585d7434b5735aab6604435d44ca38f4d3cbb28abd49",
+    "experiments/omission-coupled-core-2026-10-10/core13.smt2.gz": "91c77884562778082b224fd8fe4ad62e4f30a96e4b03edd7e111ace370fc0593",
+    "experiments/omission-coupled-core-2026-10-10/deletion-witnesses.json.gz": "9b4b186419e679d850cc57820aa3e07af8f0fa7b14978acab98273038bacde44",
+    "experiments/omission-coupled-core-2026-10-10/discovery-sources.json.gz": "2fd5b4aee8d2f848b6fd7b9f1b2f76888fb6ded9b0f289098f012fd4e4a03c28",
+    "experiments/omission-coupled-core-2026-10-10/initial16.smt2.gz": "68e8f6e3feb6b8eb0228c6df50deb0c9fab1ced23e219f6019bcd80d7db95d64",
+    "experiments/omission-cover-certificates-2026-10-10/ResidualCountermodel.lean": "067846e9ff9a71131914f500002f4ecf217e0d87a1373f804bbbcd9cd4128f1d",
+    "scripts/check_omission_coupled_core.py": "e05f7452552109f0588d7ff008aa75641d2887d82cb4dd8635225277bb9ae5fe",
+    "scripts/export_omission_coupled_core.py": "9468e5db6d2adfcc3e2c303a231406d4a55a76e160a058d534d96681a6790c8f"
+  }
+}

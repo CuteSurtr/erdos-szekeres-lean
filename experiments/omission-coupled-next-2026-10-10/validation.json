@@ -1,0 +1,87 @@
+{
+  "status": "kernel-checked geometric obstruction",
+  "support": [
+    16,
+    25,
+    30,
+    39,
+    43,
+    50,
+    53,
+    62,
+    65,
+    77,
+    79,
+    91,
+    110
+  ],
+  "demand": 1,
+  "hypotheses": [
+    "real Configuration n (strict horizontal order and general position)",
+    "no 6-cap",
+    "no convex 8-gon",
+    "existing no 6-cup / 5-cap junction"
+  ],
+  "scope": "A second necessary coupled omission row. It excludes the independently replayed second 32-hole abstract witness, which satisfies the first core and all 42 first-template candidates. No exclusion of every 32-hole assignment or improved global ES8 bound follows yet.",
+  "proof": {
+    "variables": 429,
+    "base_clauses": 520,
+    "derived_rup_steps": 435,
+    "clause_families": {
+      "empty_direction": 37,
+      "domain": 37,
+      "growth": 46,
+      "order_transitive": 6,
+      "fixed_sign": 116,
+      "convex_four": 217,
+      "packet": 58,
+      "no_octagon": 3
+    },
+    "core_module": "ErdosSzekeres.Omission.CoupledCoreSecond",
+    "actual_geometry_module": "ErdosSzekeres.Omission.CoupledSecondObstruction",
+    "roots": [
+      "ErdosSzekeres.Omission.CoupledCoreSecond.context_impossible",
+      "ErdosSzekeres.Omission.CoupledCoreSecond.exists_missing_state",
+      "ErdosSzekeres.Omission.CoupledCoreSecond.hole_bound"
+    ],
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "no_sorry": true,
+    "no_custom_axioms": true,
+    "no_native_decide_or_ofReduceBool": true,
+    "method": "Reuse of the first core generic actual-owner clause semantics, with every literal and finite state prerequisite rechecked. Mathlib FromLRAT produces ordinary kernel proof terms."
+  },
+  "validation": {
+    "compiler_memory_option": "-M1200",
+    "core_seconds": 44.29227816697676,
+    "clean_core_compile": true,
+    "clean_actual_geometry_compile": true,
+    "independent_exact_RUP_replay": 435,
+    "independent_complete_deletion_replay": 13,
+    "deletion_scope": "Earlier SAT models are restricted to each final 12-state deletion and all domains, rank growth, fixed signs, packets, convex-four semantics and all 8-subset exclusions are independently replayed. This establishes subset-minimality of this necessary model, not real-point realizability.",
+    "check_command": "python3 scripts/check_omission_coupled_second.py",
+    "export_command": "python3 scripts/export_omission_coupled_second.py",
+    "export_byte_identical": true
+  },
+  "sha256": {
+    "ErdosSzekeres/Omission/CoupledCoreSecond.lean": "f906b4b2b49aa2289f726c7aabb4489041bc724666b56016f6174594bca89c88",
+    "ErdosSzekeres/Omission/CoupledLrat.lean": "d580eed2b603472df39a5dac3918a09481629b8224a4a03325dd77f6c85f9e51",
+    "ErdosSzekeres/Omission/CoupledSecondObstruction.lean": "fb292466fc935896041f4654821d66f2165aff45b03473a34a30842d6a2bcf82",
+    "ErdosSzekeres/Omission/CoupledSemantics.lean": "672adbe50764a3c94a00342a4e23f10cac69f257e4e304cf2f5661cf91151f58",
+    "experiments/omission-coupled-next-2026-10-10/axiom-audit.txt": "b9ecd9b1f4fa7f88c7ae4fb150b78aa63a3a64b294c9784950c22a7627d1d7f0",
+    "experiments/omission-coupled-next-2026-10-10/core13.cnf": "37058f37fb48866a61163cd76cd963eef87b86a5b929658ebd2e81f7fc108647",
+    "experiments/omission-coupled-next-2026-10-10/core13.json": "0b823bd1807a68ed56db7dff217260585769238d32f842849302bbe65155079d",
+    "experiments/omission-coupled-next-2026-10-10/core13.lrat": "3d0b117c9afa59ff8ca2fc099ec96828742c12fd5beb9d880dda78b3c7d4317f",
+    "experiments/omission-coupled-next-2026-10-10/core13.smt2.gz": "9126e6c07da672fe94ee8779b93e110c0e0afb70ed2e6be861e244e969c5ef27",
+    "experiments/omission-coupled-next-2026-10-10/deletion-witnesses.json.gz": "565fd60bfe6ce379615359e7577420a13452723ef7a026f9090da702250a843c",
+    "experiments/omission-coupled-next-2026-10-10/discovery-sources.json.gz": "9be05a1a2299f6bcf8b68abc60abe65b297b2a64709798a12f46db54ce388fb8",
+    "experiments/omission-coupled-next-2026-10-10/initial16.smt2.gz": "4d312826d4ae8c360a96af352a5b5904920c57881b15100abcf6d466777aa128",
+    "scripts/check_omission_coupled_core.py": "e05f7452552109f0588d7ff008aa75641d2887d82cb4dd8635225277bb9ae5fe",
+    "scripts/check_omission_coupled_second.py": "cc8f846dc42807879e5a72aefaa637d64a952604ef6a1e9d5375e6eac23c6f33",
+    "scripts/export_omission_coupled_core.py": "9468e5db6d2adfcc3e2c303a231406d4a55a76e160a058d534d96681a6790c8f",
+    "scripts/export_omission_coupled_second.py": "ccd8f27f4d00a96ed346884e3eeabfb7a098fe22e3f4c37b6bba7826602fb3fd"
+  }
+}

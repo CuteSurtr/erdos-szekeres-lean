@@ -217,3 +217,15 @@ original fallback residual tree as attributed CC BY 4.0 data. No compiled
 objects or upstream inspection checkout are committed. The complete 317-point
 proof uses these finite inputs and the separately attributed geometric ports;
 it does not change the dependency provenance of Suk or HMPT.
+
+## Coupled residual obstructions — 10 October 2026
+
+The `Omission/Coupled*` modules and the two `omission-coupled-*` artifacts
+retain Schroeder's state numbering and the preceding attributed geometric
+interfaces. Derived state data retain CC BY 4.0 attribution. The local shared
+order/rank/orientation encodings, refutations and actual-owner necessity proofs
+are new additions. `CoupledLrat.lean` invokes Mathlib's Apache-2.0
+`Mathlib.Tactic.Sat.FromLRAT` proof-term generator; it does not vendor that
+implementation or introduce a native-evaluation axiom. CaDiCaL and Z3 were
+used only for untrusted proof discovery and are not committed here. The
+literal derivations are independently replayed and checked by Lean's kernel.

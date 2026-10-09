@@ -105,3 +105,14 @@ doubling stages: `HMPT.convex_dyadic_scale_ratio_bound`,
 expression over the integer stage count and positive real scale. These are
 supplementary results, not additional claims from HMPT's paper or a stronger
 asymptotic coefficient.
+
+The supplementary `Omission/Coupled*` modules also have no numbered
+counterpart in either paper. `Omission.CoupledCore13.hole_bound` in
+[CoupledObstruction.lean](../ErdosSzekeres/Omission/CoupledObstruction.lean)
+and `Omission.CoupledCoreSecond.hole_bound` in
+[CoupledSecondObstruction.lean](../ErdosSzekeres/Omission/CoupledSecondObstruction.lean)
+each rule out simultaneous occupation of thirteen specified residual states.
+Their common-order, rank and orientation clauses are proved necessary for
+actual real points before applying their kernel-checked finite refutations.
+These strengthen the finite residual model; they do not improve either
+paper's asymptotic statement.

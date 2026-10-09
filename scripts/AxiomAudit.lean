@@ -485,3 +485,12 @@ import ErdosSzekeres
 #print axioms ErdosSzekeres.Omission.Configuration.orient_ne_of_distinct
 #print axioms main
 #print axioms Config.main_lemma
+
+#print axioms ErdosSzekeres.Omission.CoupledCore13.context_impossible
+#print axioms ErdosSzekeres.Omission.CoupledCore13.states_injective
+#print axioms ErdosSzekeres.Omission.CoupledCore13.exists_missing_state
+#print axioms ErdosSzekeres.Omission.CoupledCore13.hole_bound
+#print axioms ErdosSzekeres.Omission.CoupledCoreSecond.context_impossible
+#print axioms ErdosSzekeres.Omission.CoupledCoreSecond.states_injective
+#print axioms ErdosSzekeres.Omission.CoupledCoreSecond.exists_missing_state
+#print axioms ErdosSzekeres.Omission.CoupledCoreSecond.hole_bound

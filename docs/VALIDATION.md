@@ -1,5 +1,29 @@
 # Verification records
 
+## Coupled geometric obstructions — 10 October 2026
+
+The default library passes `lake build --wfail` (**3,259 jobs**) with both
+`CoupledCore13.hole_bound` and `CoupledCoreSecond.hole_bound` included. The
+[complete axiom report](validation/axiom-audit-coupled-2026-10-10.txt) checks
+**483 named roots** and accepts only `propext`, `Classical.choice` and
+`Quot.sound`. The six added library modules and standalone first strictness
+proof contain no proof placeholders, custom axioms or native-evaluation axioms.
+The [source-bound record](validation/coupled-checks-2026-10-10.json) states the
+exact scope; compatible-template experiments are not counted in this snapshot.
+
+The [Python run](validation/coupled-tests-2026-10-10.txt) has 100 tests:
+77 pass and 23 optional integration/solver controls skip in the standard-library
+environment. All six new coupled-proof controls pass, including exact replay
+of both derivations, all 26 deletion witnesses, formula-damage rejection and
+rejection of an invalid final derivation even after its hash is updated.
+Earlier full integration checks remain recorded below.
+
+The two proof bundles preserve their own direct Lean audits and exact source
+formula identities. All 822 inputs of the completed 317-point proof were
+rehashed after this library build and still matched. GitHub run `37984305688`
+was cancelled on both attempts, with the build process returning 143; those
+remote attempts did not complete, despite the successful local build.
+
 ## Closed 317-point theorem — 10 October 2026
 
 The default library passes `lake build --wfail` (**3,253 jobs**). The

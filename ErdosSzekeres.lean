@@ -44,3 +44,5 @@ import ErdosSzekeres.Omission.PopulationBounds
 import ErdosSzekeres.HMPT.DyadicScale
 import ErdosSzekeres.OrientationConvexity
 import ErdosSzekeres.OrientationObstructions
+import ErdosSzekeres.Omission.CoupledObstruction
+import ErdosSzekeres.Omission.CoupledSecondObstruction
