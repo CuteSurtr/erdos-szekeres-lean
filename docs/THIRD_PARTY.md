@@ -256,3 +256,20 @@ that implementation or introduce a native-evaluation axiom. CaDiCaL and Z3 were
 used only for untrusted discovery and are not committed here. The literal
 derivations are independently replayed and checked by Lean's kernel. Compiled
 objects and inspection caches remain ignored.
+
+The fifth bundle additionally preserves 28 checked template variants. The
+[eleven-state](../experiments/omission-coupled-eleven-2026-10-10/README.md) and
+[nine-state](../experiments/omission-coupled-nine-2026-10-10/README.md) bundles
+use the same attributed catalog and semantic interfaces, with separately
+checked literal refutations and complete deletion witnesses. Their discovery
+model witnesses are abstract Boolean assignments, not realized point sets.
+
+The [finite HMPT refinement](../experiments/hmpt-binomial-refinement-2026-10-10/README.md)
+retains a binomial subset count in the existing two-scale argument. It relies
+on the already attributed HMPT geometry and Mathlib counting facts; it does not
+import a new third-party implementation or assert literature priority.
+
+The [endpoint budget analysis](../experiments/hmpt-endpoint-barrier-2026-10-10/README.md)
+uses the same HMPT coefficient and this repository's explicit entropy budget.
+It introduces no external code and does not attribute an impossibility claim
+to the published paper.

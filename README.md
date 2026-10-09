@@ -99,7 +99,12 @@ relative to this frozen system.
 `Omission.CoupledCoreFifth.hole_bound` add three more checked obstructions.
 The third and fourth templates supply three and 24 checked variants,
 respectively, through `CoupledThirdVariants.all_rows` and
-`CoupledFourthVariants.all_rows`.
+`CoupledFourthVariants.all_rows`. `CoupledFifthVariants.all_rows` adds 28
+further checked maps. Smaller eleven- and nine-state obstructions are proved
+by `CoupledCoreEleven.hole_bound` and `CoupledCoreNine.hole_bound`; their
+[eleven-state](experiments/omission-coupled-eleven-2026-10-10/README.md) and
+[nine-state](experiments/omission-coupled-nine-2026-10-10/README.md) bundles
+preserve the geometric proofs and independent certificate controls.
 [CoupledDemandTwo.lean](ErdosSzekeres/Omission/CoupledDemandTwo.lean) proves
 `Omission.CoupledDemandTwo.hole_bound`: at least two states are missing from
 one specified 14-state set. Given the earlier rows, that formulation is
@@ -112,7 +117,19 @@ counting argument to any number of doubling stages.
 `HMPT.positive_dyadic_leading_budget_iff` proves that its explicit idealized
 leading expression becomes positive exactly above `8√2/3`. This is an
 algebraic limitation of this proof family, not a universal barrier to better
-Erdős–Szekeres bounds. See the [research report](docs/RESEARCH_2026-10-10.md).
+Erdős–Szekeres bounds. [EndpointBarrier.lean](ErdosSzekeres/HMPT/EndpointBarrier.lean) also proves
+that the existing entropy budget is eventually negative at every fixed positive
+scale for coefficients at or below `8√2/3`, including equality. That statement
+concerns this budget only. See the [research report](docs/RESEARCH_2026-10-10.md).
+
+[BinomialRefinement.lean](ErdosSzekeres/HMPT/BinomialRefinement.lean) strengthens
+the finite HMPT counting interface by retaining the exact subset count.
+`HMPT.two_scale_binomial_bound` gives a strictly smaller density threshold;
+`HMPT.suk_two_scale_factorial_bound` supplies a closed real-point bound with
+a factorial saving in its exponent. This standard counting refinement leaves
+the asymptotic coefficient unchanged and carries no novelty claim. The
+[proof artifact](experiments/hmpt-binomial-refinement-2026-10-10/README.md)
+states the formulas, hypotheses and a checked strictness example.
 
 ## Verification
 
@@ -120,7 +137,7 @@ Pinned versions: **Lean 4.24.0**, **Mathlib v4.24.0**; dependency revisions are 
 [lake-manifest.json](lake-manifest.json).
 
 The current library passes `lake build --wfail`. The
-[full saved axiom audit](docs/validation/axiom-audit-extensions-2026-10-10.txt) checks **517 named
+[full saved axiom audit](docs/validation/axiom-audit-recovery-2026-10-10.txt) checks **544 named
 theorems**, including both main theorems and their transitive axiom dependencies.
 Only `propext`, `Classical.choice`, and `Quot.sound` are allowed. There is no
 `sorry`, `admit`, `sorryAx`, or `native_decide` in the maintained Lean sources,

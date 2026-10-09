@@ -10,9 +10,17 @@ jobs:
       - uses: leanprover/lean-action@v1
         with:
           auto-config: "false"
-          build: "true"
-          build-args: "--wfail"
+          build: "false"
+          use-github-cache: "false"
           use-mathlib-cache: "true"
+      - name: Build coupled proofs sequentially
+        shell: bash
+        run: |
+          set -euo pipefail
+          for module in CoupledVariants CoupledSecondVariants CoupledThirdVariants CoupledFourthVariants CoupledFifthVariants CoupledElevenObstruction CoupledNineObstruction; do
+            /usr/bin/time -v lake build --wfail "ErdosSzekeres.Omission.$module"
+          done
+          lake build --wfail
       - name: Test exact-coordinate search
         run: python3 -m unittest discover -s scripts -v
       - name: Audit theorem axioms

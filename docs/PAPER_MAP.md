@@ -106,6 +106,21 @@ expression over the integer stage count and positive real scale. These are
 supplementary results, not additional claims from HMPT's paper or a stronger
 asymptotic coefficient.
 
+The supplementary [BinomialRefinement.lean](../ErdosSzekeres/HMPT/BinomialRefinement.lean)
+retains `choose(N,m+1)` at the initial scale of the Proposition 3.8 replacement.
+`HMPT.two_scale_binomial_bound`, `HMPT.two_scale_factorial_exponential_bound`,
+and `HMPT.suk_two_scale_factorial_bound` strengthen the implemented finite
+criteria. `HMPT.twoScaleFactorialExponent_le` compares closed exponents.
+The paper already uses binomial subset counting elsewhere; this is a standard
+refinement of this finite interface, without an asymptotic or priority claim.
+
+[EndpointBarrier.lean](../ErdosSzekeres/HMPT/EndpointBarrier.lean) adds
+`HMPT.normalizedBudget_neg_at_endpoint` and
+`HMPT.budget_eventually_negative_at_or_below_published`: the existing entropy
+budget fails at equality too, for every fixed positive scale. This is an
+analysis of that explicit interface, with no universal impossibility claim
+and no assertion about the newer factorial criterion.
+
 ## Supplementary project results: coupled residual obstructions
 
 These results have no numbered counterpart in Suk or HMPT and are project
@@ -126,6 +141,9 @@ applying kernel-checked finite refutations.
 | First and second template families | [CoupledVariants.lean](../ErdosSzekeres/Omission/CoupledVariants.lean): `CoupledVariants.all_rows`; [CoupledSecondVariants.lean](../ErdosSzekeres/Omission/CoupledSecondVariants.lean): `CoupledSecondVariants.all_rows` | 42 and 35 checked supports, with 20 duplicates: **57 distinct rows**. |
 | Classification of that frozen union | [UnionCatalog.lean](../experiments/omission-coupled-union-2026-10-10/UnionCatalog.lean): `CoupledUnion.all_rows`; [Independence.lean](../experiments/omission-coupled-union-2026-10-10/Independence.lean): `CoupledUnion.independent_each_selected_row`; [Redundancy.lean](../experiments/omission-coupled-union-2026-10-10/Redundancy.lean): `CoupledUnion.redundant_rows_implied` | Nine rows are individually independent of the original 1,187 rows, prior 45 additions and other 56 union rows; 48 follow from original rows. Independence witnesses have 141 holes, without a realizability claim. Later additions can change independence. |
 | Third and fourth template families | [CoupledThirdVariants.lean](../ErdosSzekeres/Omission/CoupledThirdVariants.lean): `CoupledThirdVariants.all_rows`; [CoupledFourthVariants.lean](../ErdosSzekeres/Omission/CoupledFourthVariants.lean): `CoupledFourthVariants.all_rows` | Three selected third-core variants and 24 fourth-core variants; the latter include the fourth core itself. |
+| Fifth template family | [CoupledFifthVariants.lean](../ErdosSzekeres/Omission/CoupledFifthVariants.lean): `CoupledFifthVariants.all_rows` | 28 further checked support maps. |
+| Eleven-state core | [CoupledElevenObstruction.lean](../ErdosSzekeres/Omission/CoupledElevenObstruction.lean): `CoupledCoreEleven.hole_bound` | At least one of eleven specified states is absent. |
+| Nine-state core | [CoupledNineObstruction.lean](../ErdosSzekeres/Omission/CoupledNineObstruction.lean): `CoupledCoreNine.hole_bound` | At least one of nine specified states is absent. |
 | Fourteen-state capacity improvement | [CoupledDemandTwo.lean](../ErdosSzekeres/Omission/CoupledDemandTwo.lean): `CoupledDemandTwo.hole_bound`; [TwoHoleAssembly.lean](../ErdosSzekeres/Omission/TwoHoleAssembly.lean): `two_holes_of_deletions` | At least two of fourteen states are absent, using the third core and earlier rows. This is another formulation of the third obstruction relative to those premises, not a second independent discovery. |
 
 These finite geometric constraints do not by themselves establish a new global

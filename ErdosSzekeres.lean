@@ -53,3 +53,8 @@ import ErdosSzekeres.Omission.CoupledFourthObstruction
 import ErdosSzekeres.Omission.CoupledThirdVariants
 import ErdosSzekeres.Omission.CoupledFourthVariants
 import ErdosSzekeres.Omission.CoupledFifthObstruction
+import ErdosSzekeres.Omission.CoupledFifthVariants
+import ErdosSzekeres.Omission.CoupledElevenObstruction
+import ErdosSzekeres.HMPT.BinomialRefinement
+import ErdosSzekeres.Omission.CoupledNineObstruction
+import ErdosSzekeres.HMPT.EndpointBarrier

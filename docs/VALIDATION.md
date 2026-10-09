@@ -1,5 +1,37 @@
 # Verification records
 
+## Smaller obstructions and finite HMPT refinement — 10 October 2026
+
+The complete library passes `lake build --wfail` (**3,293 jobs**). The
+[current saved audit](validation/axiom-audit-recovery-2026-10-10.txt) checks
+**544 named roots**, with only `propext`, `Classical.choice`, and `Quot.sound`.
+The [115-test run](validation/recovery-tests-2026-10-10.txt) has 92 passes and
+23 optional skips. All 21 coupled certificate replay and corruption controls
+pass. The [source-bound record](validation/recovery-checks-2026-10-10.json)
+contains source hashes and the clean placeholder scan.
+
+New checked results comprise 28 fifth-template maps; eleven- and nine-state
+geometric obstructions; nine finite binomial/factorial HMPT refinement theorems;
+and five endpoint-budget analysis theorems. Their separate proof bundles retain
+full audits and exact claims. A standalone kernel example proves strictness of
+the new exponent formula. The published asymptotic coefficient is unchanged.
+
+All 972 inputs of the completed 316-point gate and 822 inputs of the earlier
+317-point gate still match after this build. The unfinished 315/314 certificate
+runs are not counted as completed theorems here. GitHub run `37991641955` was
+cancelled after a runner shutdown signal, with build exit 143; the remote build
+did not complete. Local proof checks and audits succeeded. The workflow now builds the
+large coupled proof families sequentially, then runs the full build and existing
+checks. This reduces simultaneous memory demand; it does not identify the cause
+of the earlier shutdowns. Mathlib download caching remains enabled.
+
+Some comments in the frozen conditional-interface sources still call their
+numerical premises targets. Those comments describe their original checkpoint;
+the separate completed global assemblies discharge those premises. Their source
+bytes remain unchanged to preserve the checked certificate bindings.
+
+
+
 ## Closed 316-point theorem and expanded geometry — 10 October 2026
 
 The library passes `lake build --wfail` (**3,283 jobs**). The

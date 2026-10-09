@@ -54,3 +54,17 @@ Schroeder's version-1 archive, 19 September 2026,
 The original data remain CC BY 4.0; see [THIRD_PARTY.md](../../docs/THIRD_PARTY.md)
 for the code licenses and Baek prerequisites. This local addition makes no
 literature priority claim. Build objects remain ignored.
+
+## Checked compatible family
+
+`CoupledFifthVariants.all_rows` proves 28 further demand-one rows for actual
+residual configurations. The generic `CoupledTemplateFifth.hole_bound` reuses
+the existing propositional refutation for any injective state map satisfying
+its finite prerequisites. Every listed map passed ordinary kernel reduction;
+all five audited interfaces use only the three standard axioms.
+
+The [family record](template-validation.json), [literal maps](template-variants.json)
+and [full audit](template-axiom-audit.txt) preserve the checked result. An exact
+Python complement-witness diagnostic finds each selected row independent of
+the frozen 2,427-row baseline. That diagnostic is not a Lean independence theorem
+and does not establish a new global cardinality bound.

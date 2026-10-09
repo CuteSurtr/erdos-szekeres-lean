@@ -1,0 +1,67 @@
+{
+  "status": "kernel-checked",
+  "support": [
+    33,
+    43,
+    64,
+    68,
+    75,
+    87,
+    91,
+    99,
+    118
+  ],
+  "atoms": 243,
+  "base_clauses": 280,
+  "derived_rup_steps": 215,
+  "clause_families": {
+    "domain": 26,
+    "empty_direction": 18,
+    "growth": 13,
+    "order_transitive": 14,
+    "fixed_sign": 63,
+    "convex_four": 118,
+    "packet": 26,
+    "no_octagon": 2
+  },
+  "independent_exact_rup_replay": "passed",
+  "independent_complete_deletion_replay": 9,
+  "separating_witness": {
+    "holes": 33,
+    "rows_exactly_replayed": 2456,
+    "support_fully_occupied": true,
+    "lean_strictness_theorem": false
+  },
+  "root_names": [
+    "ErdosSzekeres.Omission.CoupledCoreNine.context_impossible",
+    "ErdosSzekeres.Omission.CoupledCoreNine.exists_missing_state",
+    "ErdosSzekeres.Omission.CoupledCoreNine.hole_bound"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "build": {
+    "command": "lake build ErdosSzekeres.Omission.CoupledNineObstruction --wfail",
+    "passed": true
+  },
+  "sha256": {
+    "experiments/omission-coupled-nine-2026-10-10/discovery-provenance.json": "8e234fd15da721b7c37b53e5f2766aaae9f05300218914e7d252d5974a7a2023",
+    "experiments/omission-coupled-nine-2026-10-10/discovery-independent-replay.json": "c3ea1c0f9b276b21f6fb09ec4fed9265fbf7159503aac95867c2462d8b439fd5",
+    "experiments/omission-coupled-nine-2026-10-10/core9.json": "e7f6489eeff749c6efaf81ada63888c4f214075277139da53ca6f787b560160a",
+    "experiments/omission-coupled-nine-2026-10-10/core9.smt2.gz": "4a815e3f9ca10cd46a0f580275f08056ef136d91b0a90b0c4efd5ea05184b956",
+    "experiments/omission-coupled-nine-2026-10-10/core9.lrat": "f8876ca099d8372daf4f6f799ee804fd92b1fe4e1bfca9a7738fc064c8c2b0be",
+    "experiments/omission-coupled-nine-2026-10-10/deletion-witnesses.json.gz": "d79fc111ee7be14d2d13dc7eb617a64789e5f4b66ba89d9e3c08697688dbc807",
+    "experiments/omission-coupled-nine-2026-10-10/README.md": "65ca7241315217fd8f42f9215b9298521a946a7df00553500863e39a04e9b005",
+    "experiments/omission-coupled-nine-2026-10-10/discovery-minimal-core.json": "f6c84f9f3a03f2e4524f6619aadd84eff48b59221f130ef3224ee3dca51b3552",
+    "experiments/omission-coupled-nine-2026-10-10/separated-33-hole-witness.json": "791e67a647f683f9973d70208b3b22f43155bd520564847328f501b57a3f0d7e",
+    "experiments/omission-coupled-nine-2026-10-10/core9.cnf": "0a319e81f626bf4970affa36e58580e068c95119b6baa7c106d3f2dd6482b0b1",
+    "experiments/omission-coupled-nine-2026-10-10/discovery-source.json.gz": "e014ab1323462512f55fdaeec5fba5a1abff88f2d1b2ad29b64072d7c4b616b9",
+    "experiments/omission-coupled-nine-2026-10-10/axiom-audit.txt": "c165fa3e1a54218bfb832b059fe4612b87575c5c6b272787df939434ceca2e63",
+    "ErdosSzekeres/Omission/CoupledCoreNine.lean": "98ec2111ec363991277f0af0ad1c83aafce8b53e149b255b6d8075469a77b6d9",
+    "ErdosSzekeres/Omission/CoupledNineObstruction.lean": "7ef03dfc097129d4c33f63c5bc4346491ce8de5c4ae8c045096594b15e0ac6d0",
+    "scripts/export_omission_coupled_sized.py": "8a0a6390d289d243750a88609413c1d14288ed32b9b6c54396401345dbde6c14",
+    "scripts/check_omission_coupled_nine.py": "c389069b3921ba67edf00ab0c94cb90cf2b2c251f5c81adb8c48b8a8837069be"
+  }
+}
