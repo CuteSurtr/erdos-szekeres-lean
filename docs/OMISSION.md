@@ -1,23 +1,27 @@
 # Exact omission certificates
 
-**Resumed checkpoint, 2026-10-09:** the complete balanced tree built locally on
-October 7 and has now been recovered and packaged for reproduction. All 9,862
-leaves and the final root passed Lean; a new explicit occupancy corollary proves
-the finite bound 192. The residual tree is incomplete. See the
-[full balanced artifact](../experiments/omission-balanced-lean-2026-10-09/README.md)
-and [remaining work](ES8_REMAINING.md).
+**Geometric checkpoint, 2026-10-09:** Lean now proves the balanced actual-point
+bound **192**, including the complete 9,862-leaf arithmetic tree, the injective
+point-to-state assignment, all 2,685 geometric rows, and their final composition.
+The hypotheses are real general-position points in strict x-order, with no
+7-cup, no 7-cap and no convex octagon. See the
+[geometric proof artifact](../experiments/omission-balanced-geometry-2026-10-09/README.md)
+and [remaining work](ES8_REMAINING.md). The residual and global arguments are
+unfinished.
 
-The residual checkpoint covers the first **310 of 3,411 proof parts**. Ten
-failed, interrupted or previously unstarted parts were checked sequentially on
-October 9, with all expected axiom reports passing. The remaining parts and the
-root are not checked. The [partial-build record](../experiments/omission-residual-progress-2026-10-09.json)
-distinguishes recovered checks from the fresh retry; it makes no global claim.
+The residual checkpoint now covers the first **330 of 3,411 proof parts**, or
+**13,827 of 145,474 leaves**. The latest 20-part block added 862 checked leaves
+in about 15 minutes. All expected axiom reports passed. The other 3,081 parts
+and the root remain unchecked. The [latest partial-build record](../experiments/omission-residual-progress-2026-10-09-batch2.json)
+links to and preserves the earlier 310-part record; neither claims a residual
+exclusion theorem.
 
 This work investigates the finite octagon systems in Michael Schroeder's
 [*Erdős–Szekeres: Upper Bounds for Convex Heptagons and Octagons*, v1,
 19 September 2026](https://doi.org/10.5281/zenodo.22842891).
 The input data and their licenses are recorded in `schroeder-2026-10-05.json`
-and `THIRD_PARTY.md`. No source module from that formalization is imported.
+and `THIRD_PARTY.md`. Balanced state/rank/sign modules have now been adapted
+from that formalization, with their licenses and modifications recorded there.
 
 The balanced system has 252 Boolean hole variables and 2,685 rows; the residual
 system has 154 variables and 1,187 rows. A row says that at least a specified
@@ -30,8 +34,8 @@ the checked finite occupancy bound is therefore 192. The residual budget 30
 is also excluded by a complete integer certificate with 145,474 leaves and
 minimum margin 2, giving occupancy 123. With the full published geometric
 reduction, these would imply
-ES(8) ≤ 317 instead of the preprint's 319. **The geometric reduction is not
-formalized in this repository, and these numerical targets are not theorems.**
+ES(8) ≤ 317 instead of the preprint's 319. **Only the balanced geometric subcase
+is complete. The full reduction and the global numerical target remain unproved.**
 This finite target is also distinct from improving HMPT's asymptotic coefficient.
 
 ## What is checked
@@ -41,8 +45,10 @@ real points have one of eight patterns. It does not assume general position.
 `prefix_states.py` exhaustively enumerates the resulting abstract patterns on
 at most six labels and computes attained consecutive-chain ranks. At six labels
 there are 908 patterns and 333 possible incoming-state sets. The finite
-enumeration, rank semantics, and coverage of real configurations remain outside
-Lean; prefix constraints are experimental.
+prefix enumeration and its extra constraints remain experimental. Attained
+rank semantics and the balanced catalog coverage for actual real configurations
+are now proved separately in `ErdosSzekeres/Omission/`; see
+[the geometry proof map](OMISSION_GEOMETRY.md).
 
 `OmissionCertificates.lean` proves the weighted-capacity inequality, the
 strict-margin contradiction, and the residual-demand reduction under a partial

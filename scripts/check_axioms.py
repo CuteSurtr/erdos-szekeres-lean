@@ -6,20 +6,30 @@ import re
 import subprocess
 
 
+ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
+
+
+def audit_output(output, expected):
+    """Require exactly one complete report, including Lean's axiom-free form."""
+    pattern = (r"^'" + re.escape(expected) +
+               r"' (?:depends on axioms: \[([^]]*)\]|does not depend on any axioms)\s*$")
+    reports = re.findall(pattern, output, re.MULTILINE)
+    if len(reports) != 1:
+        raise ValueError(f"Expected one axiom report for {expected}; found {len(reports)}")
+    axioms = {a.strip() for a in reports[0].split(",") if a.strip()}
+    if not axioms <= ALLOWED:
+        raise ValueError(f"Nonstandard axioms in {expected}: {sorted(axioms - ALLOWED)}")
+    return sorted(axioms)
+
+
 def check(lake="lake", output=None):
     root = Path(__file__).resolve().parents[1]
     audit = root / "scripts/AxiomAudit.lean"
     expected = re.findall(r"^#print axioms (\S+)$", audit.read_text(), re.MULTILINE)
     result = subprocess.run([lake, "env", "lean", str(audit)], cwd=root,
                             text=True, capture_output=True, check=True)
-    allowed = {"propext", "Classical.choice", "Quot.sound"}
     for name in expected:
-        found = re.search(r"'" + re.escape(name) + r"' depends on axioms: \[([^]]*)\]", result.stdout)
-        if found is None:
-            raise RuntimeError(f"Missing axiom report for {name}: {result.stdout}")
-        axioms = {x.strip() for x in found.group(1).split(",") if x.strip()}
-        if not axioms <= allowed:
-            raise RuntimeError(f"Nonstandard axioms in {name}: {axioms - allowed}")
+        audit_output(result.stdout, name)
     summary = f"Axiom audit passed for {len(expected)} theorems: only standard Lean axioms."
     if output is not None:
         Path(output).write_text(result.stdout.rstrip() + "\n" + summary + "\n")

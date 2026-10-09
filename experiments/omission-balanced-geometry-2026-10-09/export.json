@@ -1,0 +1,518 @@
+{
+  "scope": "Balanced real configurations avoiding 7-cups, 7-caps and convex octagons",
+  "source_sha256": "23363c9e341a7edf4de28b6bf21970983cc6d4cafa6f2bdef54ce3d25b1c5a94",
+  "cycle_source_sha256": "f9131e0803a88a4eec49eb0f2a48c50560e65bedf289c9dba1a37b63f648643d",
+  "exporter_sha256": "34f76a6c862d40cd9db256ee6a7864a021178f75d07af83fca9c643769174f1c",
+  "rows": 2685,
+  "chunk_size": 32,
+  "modules": [
+    {
+      "module": "Geometry00000",
+      "start": 0,
+      "end": 32
+    },
+    {
+      "module": "Geometry00032",
+      "start": 32,
+      "end": 64
+    },
+    {
+      "module": "Geometry00064",
+      "start": 64,
+      "end": 96
+    },
+    {
+      "module": "Geometry00096",
+      "start": 96,
+      "end": 128
+    },
+    {
+      "module": "Geometry00128",
+      "start": 128,
+      "end": 160
+    },
+    {
+      "module": "Geometry00160",
+      "start": 160,
+      "end": 192
+    },
+    {
+      "module": "Geometry00192",
+      "start": 192,
+      "end": 224
+    },
+    {
+      "module": "Geometry00224",
+      "start": 224,
+      "end": 256
+    },
+    {
+      "module": "Geometry00256",
+      "start": 256,
+      "end": 288
+    },
+    {
+      "module": "Geometry00288",
+      "start": 288,
+      "end": 320
+    },
+    {
+      "module": "Geometry00320",
+      "start": 320,
+      "end": 352
+    },
+    {
+      "module": "Geometry00352",
+      "start": 352,
+      "end": 384
+    },
+    {
+      "module": "Geometry00384",
+      "start": 384,
+      "end": 416
+    },
+    {
+      "module": "Geometry00416",
+      "start": 416,
+      "end": 448
+    },
+    {
+      "module": "Geometry00448",
+      "start": 448,
+      "end": 480
+    },
+    {
+      "module": "Geometry00480",
+      "start": 480,
+      "end": 512
+    },
+    {
+      "module": "Geometry00512",
+      "start": 512,
+      "end": 544
+    },
+    {
+      "module": "Geometry00544",
+      "start": 544,
+      "end": 576
+    },
+    {
+      "module": "Geometry00576",
+      "start": 576,
+      "end": 608
+    },
+    {
+      "module": "Geometry00608",
+      "start": 608,
+      "end": 640
+    },
+    {
+      "module": "Geometry00640",
+      "start": 640,
+      "end": 672
+    },
+    {
+      "module": "Geometry00672",
+      "start": 672,
+      "end": 704
+    },
+    {
+      "module": "Geometry00704",
+      "start": 704,
+      "end": 736
+    },
+    {
+      "module": "Geometry00736",
+      "start": 736,
+      "end": 768
+    },
+    {
+      "module": "Geometry00768",
+      "start": 768,
+      "end": 800
+    },
+    {
+      "module": "Geometry00800",
+      "start": 800,
+      "end": 832
+    },
+    {
+      "module": "Geometry00832",
+      "start": 832,
+      "end": 864
+    },
+    {
+      "module": "Geometry00864",
+      "start": 864,
+      "end": 896
+    },
+    {
+      "module": "Geometry00896",
+      "start": 896,
+      "end": 928
+    },
+    {
+      "module": "Geometry00928",
+      "start": 928,
+      "end": 960
+    },
+    {
+      "module": "Geometry00960",
+      "start": 960,
+      "end": 992
+    },
+    {
+      "module": "Geometry00992",
+      "start": 992,
+      "end": 1024
+    },
+    {
+      "module": "Geometry01024",
+      "start": 1024,
+      "end": 1056
+    },
+    {
+      "module": "Geometry01056",
+      "start": 1056,
+      "end": 1088
+    },
+    {
+      "module": "Geometry01088",
+      "start": 1088,
+      "end": 1120
+    },
+    {
+      "module": "Geometry01120",
+      "start": 1120,
+      "end": 1152
+    },
+    {
+      "module": "Geometry01152",
+      "start": 1152,
+      "end": 1184
+    },
+    {
+      "module": "Geometry01184",
+      "start": 1184,
+      "end": 1216
+    },
+    {
+      "module": "Geometry01216",
+      "start": 1216,
+      "end": 1248
+    },
+    {
+      "module": "Geometry01248",
+      "start": 1248,
+      "end": 1280
+    },
+    {
+      "module": "Geometry01280",
+      "start": 1280,
+      "end": 1312
+    },
+    {
+      "module": "Geometry01312",
+      "start": 1312,
+      "end": 1344
+    },
+    {
+      "module": "Geometry01344",
+      "start": 1344,
+      "end": 1376
+    },
+    {
+      "module": "Geometry01376",
+      "start": 1376,
+      "end": 1408
+    },
+    {
+      "module": "Geometry01408",
+      "start": 1408,
+      "end": 1440
+    },
+    {
+      "module": "Geometry01440",
+      "start": 1440,
+      "end": 1472
+    },
+    {
+      "module": "Geometry01472",
+      "start": 1472,
+      "end": 1504
+    },
+    {
+      "module": "Geometry01504",
+      "start": 1504,
+      "end": 1536
+    },
+    {
+      "module": "Geometry01536",
+      "start": 1536,
+      "end": 1568
+    },
+    {
+      "module": "Geometry01568",
+      "start": 1568,
+      "end": 1600
+    },
+    {
+      "module": "Geometry01600",
+      "start": 1600,
+      "end": 1632
+    },
+    {
+      "module": "Geometry01632",
+      "start": 1632,
+      "end": 1664
+    },
+    {
+      "module": "Geometry01664",
+      "start": 1664,
+      "end": 1696
+    },
+    {
+      "module": "Geometry01696",
+      "start": 1696,
+      "end": 1728
+    },
+    {
+      "module": "Geometry01728",
+      "start": 1728,
+      "end": 1760
+    },
+    {
+      "module": "Geometry01760",
+      "start": 1760,
+      "end": 1792
+    },
+    {
+      "module": "Geometry01792",
+      "start": 1792,
+      "end": 1824
+    },
+    {
+      "module": "Geometry01824",
+      "start": 1824,
+      "end": 1856
+    },
+    {
+      "module": "Geometry01856",
+      "start": 1856,
+      "end": 1888
+    },
+    {
+      "module": "Geometry01888",
+      "start": 1888,
+      "end": 1920
+    },
+    {
+      "module": "Geometry01920",
+      "start": 1920,
+      "end": 1952
+    },
+    {
+      "module": "Geometry01952",
+      "start": 1952,
+      "end": 1984
+    },
+    {
+      "module": "Geometry01984",
+      "start": 1984,
+      "end": 2016
+    },
+    {
+      "module": "Geometry02016",
+      "start": 2016,
+      "end": 2048
+    },
+    {
+      "module": "Geometry02048",
+      "start": 2048,
+      "end": 2080
+    },
+    {
+      "module": "Geometry02080",
+      "start": 2080,
+      "end": 2112
+    },
+    {
+      "module": "Geometry02112",
+      "start": 2112,
+      "end": 2144
+    },
+    {
+      "module": "Geometry02144",
+      "start": 2144,
+      "end": 2176
+    },
+    {
+      "module": "Geometry02176",
+      "start": 2176,
+      "end": 2208
+    },
+    {
+      "module": "Geometry02208",
+      "start": 2208,
+      "end": 2240
+    },
+    {
+      "module": "Geometry02240",
+      "start": 2240,
+      "end": 2272
+    },
+    {
+      "module": "Geometry02272",
+      "start": 2272,
+      "end": 2304
+    },
+    {
+      "module": "Geometry02304",
+      "start": 2304,
+      "end": 2336
+    },
+    {
+      "module": "Geometry02336",
+      "start": 2336,
+      "end": 2368
+    },
+    {
+      "module": "Geometry02368",
+      "start": 2368,
+      "end": 2400
+    },
+    {
+      "module": "Geometry02400",
+      "start": 2400,
+      "end": 2432
+    },
+    {
+      "module": "Geometry02432",
+      "start": 2432,
+      "end": 2464
+    },
+    {
+      "module": "Geometry02464",
+      "start": 2464,
+      "end": 2496
+    },
+    {
+      "module": "Geometry02496",
+      "start": 2496,
+      "end": 2528
+    },
+    {
+      "module": "Geometry02528",
+      "start": 2528,
+      "end": 2560
+    },
+    {
+      "module": "Geometry02560",
+      "start": 2560,
+      "end": 2592
+    },
+    {
+      "module": "Geometry02592",
+      "start": 2592,
+      "end": 2624
+    },
+    {
+      "module": "Geometry02624",
+      "start": 2624,
+      "end": 2656
+    },
+    {
+      "module": "Geometry02656",
+      "start": 2656,
+      "end": 2685
+    }
+  ],
+  "lean_checked": false,
+  "files": {
+    "BalancedGeometry.lean": "9f9492a2d23c4adacc7e286cbcca89e5c0017145a2d7d6c760ac4fe18b9e36cf",
+    "Geometry00000.lean": "2eff98e269cfaa6a530e247e84587763ec12cfd25be30e98f03000f22868b895",
+    "Geometry00032.lean": "b950ef0228d0e1cf0562e90bd1cf8d4dde6babad1a0769a37c510f4f66e31b11",
+    "Geometry00064.lean": "719c19e8e6a59bb4a9559a7d509deef05d54ec031e884b3510413bd6beed76d6",
+    "Geometry00096.lean": "0c1e2e166d4081ce70e6e4806364c95a5dd4f3afaf754aded943a9d8f99d6e27",
+    "Geometry00128.lean": "5d54543810cb1d29a0ccd391b3ec7686c36cf49b731fc00906e8a9137c6a99cc",
+    "Geometry00160.lean": "9e3064bafb16a2a02183a474fd3a8364c20d760c7700aa3284ce6aeb1e21d83b",
+    "Geometry00192.lean": "c91640f2daa68a00610a2093de5216868a99d11a41d77a2989070db8646837ee",
+    "Geometry00224.lean": "8ca9769ec6b2b44fb906834d253205e8da6f91e2aea7b49f761b69597c6bdade",
+    "Geometry00256.lean": "cf9959dbc21839d0780c4d5af2647cc8ae03b2267e39370f2669870e4b2c61e9",
+    "Geometry00288.lean": "e95d4a14709d1ac9db6d4e16e39a26c4b8e19c3a067396879ab0dbda8b6b518a",
+    "Geometry00320.lean": "e66ed58688ee1bf3e8450a5b34200cf6c765ee395bba48cf2cd89952db623c1c",
+    "Geometry00352.lean": "b4163d898709796a42e352caee801c104ef71f297ed51782f7819b60ff7b04a2",
+    "Geometry00384.lean": "e85450a2942986a7553f98cc162c1d7df55f8935b9affb0acb06de3206ea5041",
+    "Geometry00416.lean": "deea0712c8d8cf05d798b134dd95790783c6813cbd0f76762350a306c4fb9b62",
+    "Geometry00448.lean": "345c6e10d8d3d2dda806068ab365160f96bb4b014a8da87cb18ab98502d468f5",
+    "Geometry00480.lean": "7615bd3860da46a182682e81e485ce418eaf646aaee8422bdf0ba0cba9776428",
+    "Geometry00512.lean": "bfeadfaad8b1981651f62014e078eb3f979c84ddebdaf08e0c3abe17a950fe6e",
+    "Geometry00544.lean": "68eaf5230cbd9c5854c96917abc1b742fdeebf8a5725e93db36632ca940a2a11",
+    "Geometry00576.lean": "99ab8ae63de0dc09eb75cf0a62d230ed55fa6741ae5c9f386a78d0d1d654c602",
+    "Geometry00608.lean": "54e0064e0674fc849f5c454779b86013e61ce2433f645489e57649506ddee711",
+    "Geometry00640.lean": "056c56d5b04f1a7abbd3f0faabff126feb5fc85623b44535d9137218c1241153",
+    "Geometry00672.lean": "0b8a3db446127f5f613293662971c169380e0169fbf324ecfe9656f793431d41",
+    "Geometry00704.lean": "7ccafa20686492d8916bc226ebb663e9d70e6593b4f650666b3b06291e165928",
+    "Geometry00736.lean": "b8cfbe0cd2b53d7e2aff87d7787b9bee9a3b4e83d37e32443972f5fa032d8c14",
+    "Geometry00768.lean": "7a1501e1bc8388f02241caac787e5d4553aacd0bf6c980f1950114574959a594",
+    "Geometry00800.lean": "9bed7a8d06c00f089911b343f7da3ca98292275696b561c06fe613b9dfcc38bd",
+    "Geometry00832.lean": "030af7518aeabb2e02ae1b28d2124457c0f05cee811b8c30ccdc8ebb04924d7c",
+    "Geometry00864.lean": "2e0e11aac0147a672ac63cc48565496adb9dbc1a7a1ff1236e0474c5c056580c",
+    "Geometry00896.lean": "45a20474204895982e81b49e26a99ff16eb19719f3b6f5fee3a8817172741ecd",
+    "Geometry00928.lean": "78a6f8805ab6974a90b7318a1d4262bf7ce821fc5f32157021a3a5cb9239f3c6",
+    "Geometry00960.lean": "78ea9be3e9583dfbd2b7298ba524502a009ec7b22aeced075248a13628850d03",
+    "Geometry00992.lean": "7679bb00499b9bd14237f7828e44df0df8bd4dd8acdb4fe2fe85eba604a3c171",
+    "Geometry01024.lean": "02b7558fafe102a5a1482efbb7407f870dd823d281f48db3fa50661cb12df22e",
+    "Geometry01056.lean": "0745e8bbb21fe76367b614484c629bba7ef8d5f2c156a6dcef08e505f177a943",
+    "Geometry01088.lean": "5621a36d3ab6c18d9899a679cf402e8f63c46861526337a4b195f93f7d9948d1",
+    "Geometry01120.lean": "28b8564fd53943a362ad9e9322663406f7f073f0c5dba1a119c6c55414c5dfeb",
+    "Geometry01152.lean": "7c780b1b5e41285392b6ccac422e3c83624ab6ca7a6ddaa5a3844e2d9a9914a7",
+    "Geometry01184.lean": "742151db4b81b2da08a45b8a03ea21be88fafd9345c941dcfb81f56ac3cd8170",
+    "Geometry01216.lean": "4f47f8ccedca1ba8bcedbfe00f65b15ebf955f6ff8143ddc9c76f4e5082123c2",
+    "Geometry01248.lean": "1b45cfe1551d8d191bcce9badab4199c7dcb91569d215425834072f52f8794b6",
+    "Geometry01280.lean": "c7f95fd8f75d6e5bb17344bf16c9cdf8eddb56719f445aaa351adfa7273e0d22",
+    "Geometry01312.lean": "1b77f3fa85aafac4527419bf8cd7d9f38c41d44ef58db154d5a44da97bed5b75",
+    "Geometry01344.lean": "25d2975515ac4edf307e0f6b2540adb29057bfabcf95a6690f720d4077598b79",
+    "Geometry01376.lean": "e6d16aa9460de7bd47fbdebafe5972f040028747bc70548e83c2cb89b23cf77e",
+    "Geometry01408.lean": "cae6d7168741c02cd16399698fd3f328ce799d80373981dc113ae2a6645b628c",
+    "Geometry01440.lean": "4d4323a60c5fe7713e5c1a29964f5d0a942052f95a3c52380c54a3acd09f3c4b",
+    "Geometry01472.lean": "0cae068d4c6532949922722605eaa7dd98f3ef9cdf02b40ae6433a78b8c10ab6",
+    "Geometry01504.lean": "723c07435f1e5b6d8c23d3143fad482d9f0d24c2148c8afd3446900c968d077d",
+    "Geometry01536.lean": "fe33296859a6f763223ef8046b345d01cd12103b1c872a86f4d340673489447b",
+    "Geometry01568.lean": "984eff453b1223a0e5da9863f02efc1521d344c16e4814a96a5e2ec9146f47a7",
+    "Geometry01600.lean": "98dad2c882345f6d397e6d4bcdddb6c5c963838145b6d84f09ad084204951ade",
+    "Geometry01632.lean": "b1a2eb613db03765cde1fa0ac2a9fd90044717e98f016e335c44bda7d9afe5c0",
+    "Geometry01664.lean": "1fb20505d68dcb88bc72b3febd06706807379fa3b15e8dbaa701a25912e7e190",
+    "Geometry01696.lean": "08cd0bdaf12ca5e9df66bee98a03b52b3d262291a6bc8a8f48f0ec8a35c2eaec",
+    "Geometry01728.lean": "16cd19465e68dd0a5f13f69b54934b38b73869168d1ac7975f6cd3725b8d34c7",
+    "Geometry01760.lean": "780332cb809850474293c420137bdc4ff58adad3a47fc4ee9d5316607697bb87",
+    "Geometry01792.lean": "d2b01afee58b2b9bcdb290929c47a4e861b8a87b62c896d7efa7ee76a60a20cb",
+    "Geometry01824.lean": "dcfa7cb7e9711e015a4845705b49199e7388185ef2104145214cc1d2920c2216",
+    "Geometry01856.lean": "747e6611c375dfc3b63bb58ebd06ca6e163267b06a8b89756cbf1abe8ad0ca13",
+    "Geometry01888.lean": "e93fe01a2a445523d5bc22ffb554ec7ab3d406377e0baefa698a40b2933b790c",
+    "Geometry01920.lean": "fc75aa7a3d2657546efc4c460abb39647afde992e2131574975732ef21611a91",
+    "Geometry01952.lean": "930dc7fecb73c23b4f5e92a8adaec50f04c43233b6bd85ee69e08ab1943fba14",
+    "Geometry01984.lean": "0af4684ce9ee63b6431bd82698b1408f54be14f2b43286ba947aa99b8b9204ee",
+    "Geometry02016.lean": "f855e6978e3e39b85da7b5f5a9c4aedc775ec8f4c5e6b90ab65125a690fb3306",
+    "Geometry02048.lean": "25de9fcb3d34161f268ccea453ca870e1e650f8ea6f8cf9287d93ef7227b1bd4",
+    "Geometry02080.lean": "6a256cbe3f2c936a8f5e97128c346b32da8113597de24ed23fc0e4777e6219b9",
+    "Geometry02112.lean": "34a70d25f2bf0a3a4cfd69c9c91566b7b5159cc7aeda4494dcffc1c0b7ed08c7",
+    "Geometry02144.lean": "d502daf4ac326016721c1cb30f60fd7fb3b53060c6ad158fc767857a518d6eb6",
+    "Geometry02176.lean": "3b6894cac48367180c8859ee39ccd3073b902b000ed61809892d682f6c535aac",
+    "Geometry02208.lean": "85d0a7280d25f30155529d5f4d6180c6322c38b6c080feb23fc8c988d79dfd23",
+    "Geometry02240.lean": "bc2f86a294c347987d7fb7e9bfc6722e31249c921e099ad7bab9320bc036fe46",
+    "Geometry02272.lean": "9950509a184f3c2fff5a1d5727382a48e1f6b4302e08f98740c7a4969a76d2be",
+    "Geometry02304.lean": "f1a4b3f262a7fe9b79dac2d2662519bc0772eebed9396549ef2eeb071c2621c7",
+    "Geometry02336.lean": "4ee13a650ae5cf800706b1885b5ed83b0a8d6e72d310eea51080951634267377",
+    "Geometry02368.lean": "2e4d611d4d96e27b8cdef4e66f95e71a11c5b2ed677c02a35ac47557b1df26b7",
+    "Geometry02400.lean": "a51fabd60f2f0f04b1f4b30a0cae7e9ee193e5f8771e082268da15e95bbd054e",
+    "Geometry02432.lean": "14017f8e53db26656bff4f80a63a23c7aa2ded0c6d0070ae254803cd96cc3f9f",
+    "Geometry02464.lean": "d2005fdea0c5797d6fa2710ac803d165b88a312ff9d5c2a6fa2712044b752ceb",
+    "Geometry02496.lean": "da002ecc8881013945ab9567f0906e95d836f027fb053af5324470ab044869ed",
+    "Geometry02528.lean": "7ecb52c199e512cb5f7b6b6c870fdc06c55351bca138d5e5b8780e51c7cbb30a",
+    "Geometry02560.lean": "7ee2db87f85503802cf67ad3fe8a093eec327d94061e19d41857802eed3565ec",
+    "Geometry02592.lean": "0d6e8ae7d5a0045753785d15c6bd7d8690061b483a68725433733d4c570c0a02",
+    "Geometry02624.lean": "22bd8afc2bf59e7224a8fa7eef4fde2d004e5179d71e43ade0f626896f8ac2f5",
+    "Geometry02656.lean": "306326d44f78bcecfc94202b76bad53449e73888d8078cc09b577bb1ba7172a1"
+  }
+}

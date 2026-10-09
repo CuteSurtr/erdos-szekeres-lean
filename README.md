@@ -4,8 +4,10 @@ Lean proofs of two published upper bounds for **finite point sets in the real
 plane in general position** (no three distinct points collinear), together with
 separately identified computational research. Polygons need not be empty.
 
-**The Erdős–Szekeres conjecture is not proved or disproved here. No new geometric
-upper bound or improvement of HMPT's asymptotic coefficient is claimed.**
+**The Erdős–Szekeres conjecture is not proved or disproved here. ES(8) ≤ 317 and
+an improvement of HMPT's asymptotic coefficient remain unproved.** A restricted
+geometric bound of 192 points is checked below; no priority or best-bound claim
+is made.
 
 ## Finished formalizations
 
@@ -34,13 +36,33 @@ restricted specializations, and statements not formalized.
 - [HMPT proof ledger](docs/HMPT.md): cap budgets, counting ratios, two scales and optimization.
 - [Third-party provenance and licenses](docs/THIRD_PARTY.md): adapted prerequisites and research data.
 
+## Completed balanced geometric subcase — 9 October 2026
+
+For actual real points in general position, ordered by **strictly increasing
+x-coordinates**, absence of a 7-cup, a 7-cap and a convex octagon implies **at
+most 192 points**. Cups and caps require the appropriate sign on every increasing
+triple of the selected points. The exact theorem is
+`OmissionBalanced.real_configuration_bound`, in the separately checked
+[BalancedGeometry.lean](experiments/omission-balanced-geometry-2026-10-09/BalancedGeometry.lean).
+Its hypotheses are geometric; no catalog-row constraints are assumed.
+
+The proof includes the actual-point state assignment, all **2,685 geometric row
+checks**, and the complete balanced arithmetic certificate. It tightens the
+source archive's balanced-case bound of 193 by one point. The state/cycle method
+and adapted prerequisites are credited to Michael Schroeder's version-1 archive;
+the stronger arithmetic certificate and local geometric connections are described
+in the [proof map](docs/OMISSION_GEOMETRY.md) and
+[reproducible artifact](experiments/omission-balanced-geometry-2026-10-09/README.md).
+This subcase's extra cup/cap restrictions cannot be dropped. The residual and
+partition/projective arguments needed for the global octagon bound are unfinished.
+
 ## Verification
 
 Pinned versions: **Lean 4.24.0**, **Mathlib v4.24.0**; dependency revisions are in
 [lake-manifest.json](lake-manifest.json).
 
 The current library passes `lake build --wfail`. The
-[full saved axiom audit](docs/validation/axiom-audit-2026-10-05.txt) checks **201 named
+[full saved axiom audit](docs/validation/axiom-audit-geometry-2026-10-09.txt) checks **269 named
 theorems**, including both main theorems and their transitive axiom dependencies.
 Only `propext`, `Classical.choice`, and `Quot.sound` are allowed. There is no
 `sorry`, `admit`, `sorryAx`, or `native_decide` in the maintained Lean sources,
@@ -65,21 +87,17 @@ instructions and are not silently counted as default-library CI checks.
 
 This material is separate from the finished Suk and HMPT formalizations.
 
-- **Finite octagon omission systems:** complete exact integer certificates
-  improve two auxiliary occupancy bounds from 193 to 192 and from 124 to 123.
-  Two programs replayed the arithmetic. The **complete balanced tree is now
-  checked in Lean**, with `OmissionBalanced.occupied_card_le` proving occupancy
-  at most 192. The residual Lean tree is incomplete. The connection from
-  arbitrary real configurations to all catalog rows is
-  **not formalized here**. Consequently **ES(8) ≤ 317 is not a theorem of this repository**.
-- **Current checking checkpoint:** the [complete balanced certificate](experiments/omission-balanced-lean-2026-10-09/README.md)
-  includes 9,862 leaves, 898 proof parts, the final exclusion theorem and its
-  explicit occupancy corollary. Source archives, build reports, axiom output,
-  and reproduction instructions are provided. This supersedes the
-  [earlier one-leaf checkpoint](experiments/omission-chunked-2026-10-05/README.md).
+- **Residual omission system:** a complete exact integer certificate gives the
+  auxiliary occupancy target 123, with independent arithmetic replays. Lean has
+  checked the first **330 of 3,411 parts**, covering **13,827 of 145,474 leaves**.
+  The residual root and its geometric row requirements remain unfinished.
+- **Global finite octagon target:** the balanced geometric theorem above is
+  complete, but the residual bound, minimum-slope partition and root-specific
+  projective transfer have not been composed into an arbitrary-real-set theorem.
+  Consequently **ES(8) ≤ 317 is not a theorem of this repository**.
 - **Other retained experiments:** exact-coordinate searches, SAT/SMT attempts and
   a Lean-checked counterexample to a proposed mixed-cap lemma. None improves the
-  published geometric upper bounds; timeout results remain inconclusive.
+  published global geometric upper bounds; timeout results remain inconclusive.
 
 See [the ES(8) remaining-work estimate](docs/ES8_REMAINING.md),
 [omission certificate record](docs/OMISSION.md), [mixed-cap result](docs/MIXED_CAPS.md),

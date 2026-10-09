@@ -1,6 +1,51 @@
 # Verification records
 
-## Resumed finite-certificate checkpoint — 2026-10-09
+## Balanced geometry library — 2026-10-09
+
+The main library now includes twelve modules for attained ranks, exact balanced
+state indexing, the actual real-point connection, computed boxes, geometric
+cycle soundness and the first literal row. The main `lake build --wfail` passes
+with **3,207 jobs**. The [full current audit](validation/axiom-audit-geometry-2026-10-09.txt)
+passes for **269 named roots**, including 68 new geometry roots. Every transitive
+axiom is among `propext`, `Classical.choice`, and `Quot.sound`; some finite and
+structural results are axiom-free. The audit parser now accepts Lean's explicit
+axiom-free report while still rejecting missing, duplicate and nonstandard
+reports, with tests for each case.
+
+All **55 Python tests** pass in the existing solver environment with the Lean
+integration controls enabled. The standard-library-only run passes 39 and
+skips 16 optional tests. A new Lean control accepts the source's first cycle and
+rejects a deliberately corrupted cyclic order, with the same support. CI runs
+that control separately, in addition to the existing arithmetic exporter
+controls. A literal-data test verifies that the geometric catalog has exactly
+the same 252 profiles in the same order as the archived arithmetic row source.
+
+The [second residual batch](../experiments/omission-residual-progress-2026-10-09-batch2.json)
+adds twenty successful part checks (862 leaves), bringing the checkpoint to
+**330 parts and 13,827 leaves**. The residual root is still unchecked. The
+historical record below is retained rather than overwritten.
+
+The [standalone geometric certificate](../experiments/omission-balanced-geometry-2026-10-09/README.md)
+also passed all **86 module checks**: the occupancy prerequisite, 84 row blocks,
+and the final assembly. The 85 generated geometry sources reproduce byte for
+byte and contain no placeholders or custom axioms. The final two reports are:
+
+```text
+'OmissionBalanced.all_geometric_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalanced.real_configuration_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+```
+
+All 2,685 row supports and demands are equated with the arithmetic catalog
+inside Lean. The standalone theorem concludes the actual-point bound 192 under
+the explicit balanced avoidance hypotheses. It is not part of the default
+269-root audit or a global ES(8) theorem. The [artifact validation manifest](../experiments/omission-balanced-geometry-2026-10-09/validation.json)
+records all sources, prerequisite bindings, output hashes and test-log hashes.
+The final source scan covers 116 loose Lean files, plus the 900 archived
+arithmetic and 85 archived geometry sources; no placeholders, custom axioms or
+compiled artifacts occur in those source archives. Git tracks no cache or
+compiled build outputs.
+
+## Earlier arithmetic-only checkpoint — 2026-10-09
 
 The [complete balanced artifact](../experiments/omission-balanced-lean-2026-10-09/README.md)
 records the successful October 7 build of all 898 parts and the final root,

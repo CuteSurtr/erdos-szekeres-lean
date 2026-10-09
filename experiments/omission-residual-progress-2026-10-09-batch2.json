@@ -1,0 +1,308 @@
+{
+  "date": "2026-10-09",
+  "scope": "Partial residual certificate only; no residual exclusion or geometric result",
+  "previous_record": "omission-residual-progress-2026-10-09.json",
+  "previous_record_sha256": "05e25559a3142529ef9f4c2c81eb59ef20b13a21c7d7a54ce03a5e505cd4b7db",
+  "total_parts": 3411,
+  "checked_parts": 330,
+  "all_first_330_parts_checked": true,
+  "total_leaves": 145474,
+  "checked_leaves": 13827,
+  "new_checked_leaves": 862,
+  "root_checked": false,
+  "full_tree_lean_checked": false,
+  "binding": {
+    "manifest": "4de6ce291b08c362022e9843b16b12212444e6e7400b0d53532ebf0563daaf40",
+    "lean": "Lean (version 4.24.0, arm64-apple-darwin23.6.0, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)",
+    "inputs": {
+      "lean-toolchain": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434",
+      "lake-manifest.json": "bc21802066bdf7c94b0eb1e7bd3d3389ae0d416c2ed69c6e5dae03e74945c8e7",
+      ".lake/build/lib/lean/ErdosSzekeres/OmissionCertificates.olean": "54394f6a413b31a4a4174b3f1655e7af3568a7f94e849b13353c717399c6bdc9",
+      ".lake/build/lib/lean/ErdosSzekeres/OmissionPacking.olean": "0068fcfb003180c1974bd054b50f9e4ac1a1c8d799bb46df16e93fcea66fe021"
+    }
+  },
+  "fingerprint": "2384563fa345ec3ecb49174c42f649aafb84b3374ed4bb49fe7560c471a856b6",
+  "new_kernel_checks": {
+    "Part00310": {
+      "exit": 0,
+      "seconds": 53.432,
+      "source_sha256": "ea556990a9766e235bec78b5161860bb9f1e1a2f7f031563d8ba44d76e03038e",
+      "stdout": "'OmissionResidual.node1201' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "2be948264e83de665873a24d16329475cb221384f308a2012e20d81eb41820ca"
+    },
+    "Part00311": {
+      "exit": 0,
+      "seconds": 55.494,
+      "source_sha256": "997e04dcda86c09af63f7521747eab54b9a0e38c8cdae44084572b129b878339",
+      "stdout": "'OmissionResidual.node1206' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "8341f4c8bb358a4bbb1da300fb6c7afdfa39df897222670cdb5caa3fd88fe6d3"
+    },
+    "Part00312": {
+      "exit": 0,
+      "seconds": 60.823,
+      "source_sha256": "3c3b7b0d7fe3d4eaa13a021ec1b6e1690bfa915da36d3f6a79f182cb501a1c85",
+      "stdout": "'OmissionResidual.node1211' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "cdd2d5700762a6b2ce3aa4a83cc6a42304724bffaa0c2ebea29dd35cd516201f"
+    },
+    "Part00313": {
+      "exit": 0,
+      "seconds": 43.626,
+      "source_sha256": "2f3db27d423f17a3fcc744a1dffccb935ecc2941bfde970fa558457308a6d766",
+      "stdout": "'OmissionResidual.node1212' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "5a28fe9f0fbd78f8af8b90d8505c6189dc804f4d4fa202add6eb65f7bb019df4"
+    },
+    "Part00314": {
+      "exit": 0,
+      "seconds": 54.601,
+      "source_sha256": "6d4380025d8e825a7a20aa7437baadac8024467fcb9b1b2c1f9cc1393db11ac0",
+      "stdout": "'OmissionResidual.node1214' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "0ad4c783e53a88776163d9b812d0430596d99ae04c8390ff239e8fc65c7cb63e"
+    },
+    "Part00315": {
+      "exit": 0,
+      "seconds": 17.926,
+      "source_sha256": "be7ebcfcc5e066f28f08e2f1f30b8247ba62cec7218c8cfacdda8c92a846977f",
+      "stdout": "'OmissionResidual.node1215' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "db05ef0ff1dd2a9a3d4a1657576a33fb5568009ce182974dc5d605e392d34963"
+    },
+    "Part00316": {
+      "exit": 0,
+      "seconds": 54.016,
+      "source_sha256": "4277711bb506c2a0951edf6e03edd6bce8cb6d12107872a567ef953547806ffe",
+      "stdout": "'OmissionResidual.node1221' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "ce4b174bfb24fdcf6bbc66c0d69a577bce86dc81fc6e5381d2d03f89c507a4dd"
+    },
+    "Part00317": {
+      "exit": 0,
+      "seconds": 68.585,
+      "source_sha256": "d1bf46b870d0dd1cf8d356c507fa858738568fe5266a9f1e1a05327efe31fee6",
+      "stdout": "'OmissionResidual.node1226' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "3b0a187c60b89a471f8225e85c243a6cadb4ed3cca00e0e9e9b285f69df445fe"
+    },
+    "Part00318": {
+      "exit": 0,
+      "seconds": 55.782,
+      "source_sha256": "cdde038e499cfb28e777acfee4f9ab5b81200e3369d65a8ca7e0ef0c8a6d0dfa",
+      "stdout": "'OmissionResidual.node1229' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "eff7e0ffff79293853f9afa6c3269a4da41c05088a564c08ffeb7f81d48a92e0"
+    },
+    "Part00319": {
+      "exit": 0,
+      "seconds": 34.972,
+      "source_sha256": "4da007292204361faec0113402054701660fe111cc9b88f71abed03e1991e11d",
+      "stdout": "'OmissionResidual.node1232' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "18f153665990ee5a06bf7f430db20327914b5f028281ae3522f040b269be8209"
+    },
+    "Part00320": {
+      "exit": 0,
+      "seconds": 61.231,
+      "source_sha256": "fad3b979fa10d3a56c1b6abd38ffbcf2dbdbed4d25e0a2cee10a0a56c895779d",
+      "stdout": "'OmissionResidual.node1239' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "b6afeedaa35e41cb9b76aa1b7b2c9e387c743c882e5737006978f63db8a867a6"
+    },
+    "Part00321": {
+      "exit": 0,
+      "seconds": 37.897,
+      "source_sha256": "c452d134ace3c97f2bafa46546af34a3ee86f5b2fc5afd852601dfdc27647408",
+      "stdout": "'OmissionResidual.node1240' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "21ad2ef0accf8c8ef15b786903a8ade839cd91c369adaf3edd7667684b1eb140"
+    },
+    "Part00322": {
+      "exit": 0,
+      "seconds": 33.631,
+      "source_sha256": "cfb448bbc715bb5de04f75022c48ef8cee62b975251583c4d5cae3bd7a9f1c1c",
+      "stdout": "'OmissionResidual.node1245' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "1df155d0738d2637fb90137aaf6f3330f02066f0fc888abad7d0041ee57b3e1d"
+    },
+    "Part00323": {
+      "exit": 0,
+      "seconds": 35.695,
+      "source_sha256": "05606fadcb37593b5f71f6964e82055f5df8e0112534e47ad293d8f406cb6125",
+      "stdout": "'OmissionResidual.node1250' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "246e01111da9906e665f6d69a336ec6273d045196b69102e6602e0b9a38550c2"
+    },
+    "Part00324": {
+      "exit": 0,
+      "seconds": 30.746,
+      "source_sha256": "bc47586c9c4f768d0f0f9f4d05fcf91f7cc7488e5ed48f2b96081b3906b0110c",
+      "stdout": "'OmissionResidual.node1253' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "ad1f8feeefbd14126aa26ff3846c2020f1ce4cda806e13fdd7dd92512abd904f"
+    },
+    "Part00325": {
+      "exit": 0,
+      "seconds": 47.173,
+      "source_sha256": "a57886f0f82f9dee1c2c8a8ea9037cf5b0ab74d72842e52140b859dee5642d59",
+      "stdout": "'OmissionResidual.node1258' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "e21d4f05c99f2b3bbf9d57ce0ead5d60ec0ffc27cdfc74e621679e3506605a67"
+    },
+    "Part00326": {
+      "exit": 0,
+      "seconds": 32.123,
+      "source_sha256": "e2116c4829074579890922c9254f6dc879c342821a001e2b1ea9e80f87809562",
+      "stdout": "'OmissionResidual.node1261' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "41d8ac3fcea99d66a7b6e4cfb37e8a3f852fb536b9aa45ba406477f798c69cba"
+    },
+    "Part00327": {
+      "exit": 0,
+      "seconds": 43.216,
+      "source_sha256": "57a6660f4c354d790c2867b9782a1a6f6c0d798830d332a897d5c6e4318c0853",
+      "stdout": "'OmissionResidual.node1269' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "95ef3b1234ec8e96e9b0d7f449ec6b146bd1c5b9994175ead200335749b7b6ef"
+    },
+    "Part00328": {
+      "exit": 0,
+      "seconds": 31.434,
+      "source_sha256": "c82ea2b7a33d705f855860176fef908c53dddc44dc71540d69aa0034eccc168d",
+      "stdout": "'OmissionResidual.node1272' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "5520fc337749af4dd1c2c0765bab06013c31baa5e1abea5393f858b60b65ffaa"
+    },
+    "Part00329": {
+      "exit": 0,
+      "seconds": 56.643,
+      "source_sha256": "94b6a8bb5a6075d811a4ca5d928f31adf6b8dc12ef8cc6e1897d71f0b89ae9d6",
+      "stdout": "'OmissionResidual.node1283' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "olean_sha256": "c9f8bc1292e94e6e4f8b4d6392f31644a654b1d821639d506f23a0ba24142cc2"
+    }
+  },
+  "new_check_seconds": 909.046
+}
