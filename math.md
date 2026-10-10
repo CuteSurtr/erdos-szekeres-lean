@@ -1626,15 +1626,89 @@ identification and final composition. A new feasible 32-hole assignment would
 instead require stronger geometry or another argument. No completion-time or
 certificate-size estimate is justified by the partial searches.
 
+### R.7. Attainment of the incoming cup rank
+
+The following result restricts the actual pair labels, beyond the omission
+inequalities in $`\mathcal A_{2646}`$. Let $`\mathrm{cup}`$ be any Boolean
+coloring of increasing triples of natural numbers, and suppose that its
+restriction to $`\{0,\ldots,n-1\}`$ contains no six-cap. For arbitrary colorings,
+paths here check each consecutive triple; geometric colorings have the
+transitivity described in Section F. Use that section's actual rank notation:
+
+```math
+ d(u,v)=\bigl(6-F_-(u,v),\;E_+(u,v)-1\bigr),\qquad
+ H_u=\max\bigl(\{0\}\cup\{d(t,u)_2:t<u\}\bigr).
+```
+
+Here subtraction is natural-number subtraction. The cap hypothesis gives
+$`d(t,u)_1\ge1`$ for $`t<u<n`$, so $`H_u`$ is exactly
+`ResidualStates.column n cup u 0`.
+
+**Proposition R.7 (source cup height).** For every $`u<v<n`$,
+
+```math
+ d(u,v)_2\le H_u+1.\qquad\text{(R9)}
+```
+
+**Proof.** The longest ending-cup rank $`r=E_+(u,v)`$ is attained.
+If the attaining path is the two-point path, $`d(u,v)_2=1\le H_u+1`$.
+Otherwise it extends an ending cup of length $`r-1`$ on a pair $`(t,u)`$
+with $`t<u`$. Hence $`E_+(t,u)\ge r-1`$ and
+$`H_u\ge d(t,u)_2\ge r-2`$. This gives (R9).
+No eight-cup or junction hypothesis is used in this raw statement. The Lean
+declaration is `ResidualRankAttainment.cup_label_le_source_height_succ` in
+[RankAttainment.lean](experiments/omission-residual-rank-attainment-2026-10-10/RankAttainment.lean).
+
+Under the additional hypotheses of the residual owner map, let $`s_u\in U`$
+be the state of $`u`$, and let $`h_0(s_u)`$ denote the first height of its
+profile. The exact profile identification gives $`H_u=h_0(s_u)`$.
+`ResidualRankAttainment.cup_label_le_source_shape_succ` proves this form,
+and `Configuration.residual_cup_label_le_source_shape_succ` gives it for a
+real configuration with no six-cap, no convex octagon and no junction.
+
+For a coupled context $`C`$ with states $`s_i`$ and distinct indices $`i,j`$,
+put $`H_i=h_0(s_i)`$. Then
+
+```math
+ C.\mathrm{owner}(i)<C.\mathrm{owner}(j)
+ \quad\Longrightarrow\quad C.\mathrm{edge}(i,j)_2\le H_i+1.
+ \qquad\text{(R10)}
+```
+
+This is `Coupled.Context.edge_cup_le_source_shape_succ` in
+[CoupledDomain.lean](experiments/omission-residual-rank-attainment-2026-10-10/CoupledDomain.lean).
+The equivalent two-literal clause
+
+```math
+ \neg\mathrm{before}(i,j)\ \lor\
+ \neg\mathrm{ge}_{\mathrm{cup}}(i,j,H_i+2)
+```
+
+is `Coupled.Context.source_cup_clause`. For any natural numbers $`a,b`$ with
+$`H_i+1<b`$, `Coupled.Context.source_cup_domain_clause` proves the existing
+five-literal `domainClause i j a b`: if $`i`$ precedes $`j`$, their edge label
+cannot equal $`(a,b)`$. These directions always refer to chronological owner
+order. They do not assume that catalog indices increase chronologically.
+All six declaration names have prefix `ErdosSzekeres.Omission`.
+
+An independent finite replay restricts the directed domains of Section F
+by $`b\le h_0(s_i)+1`$. Across all 23,562 distinct directed state pairs it
+removes 13,832 labels from 4,555 domains. There is no newly empty direction,
+new incompatible unordered pair, or changed bounding-box forced sign among
+the 596,904 unordered triples. Thus (R9) strengthens the semantics of shared
+edge labels, but these computations establish neither (OPEN) nor a numerical
+improvement. The 2,646-row catalog is unchanged by this separate theorem.
+
 ## V. Validation and references
 
 All finished results discussed above are proved without `sorry`, `admit`,
 custom mathematical axioms, or `native_decide`. The audited declarations depend
 only on the standard Lean axioms `propext`, `Classical.choice` and `Quot.sound`
 (or a subset). The maintained-library audit covers 571 named declarations;
-the standalone residual continuation has a separate gate checking 29
-modules and 53 audit roots, including the nine new modules and ten audit roots
-for Proposition R.6. The large arithmetic trees for 314 have their own
+the standalone residual continuation has a separate gate checking 31
+modules and 59 audit roots, including nine modules and ten audit roots
+for Proposition R.6 and two modules and six roots for Proposition R.7 and
+its corollaries. The large arithmetic trees for 314 have their own
 complete kernel records, linked in Section F.5. They are distinct from the
 maintained-library CI build. A passing discovery script is not substituted
 for any of these proofs. The [validation ledger](docs/VALIDATION.md) supplies

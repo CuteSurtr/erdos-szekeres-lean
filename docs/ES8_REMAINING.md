@@ -61,6 +61,11 @@ has no complete exclusion or feasible 32-hole witness at this checkpoint;
 the best saved near-models each violate one row. The geometric necessity of
 these additional rows is finished. Whether the combined inequalities force
 at least 33 holes is unknown.
+The separately proved [attained-rank restriction](../experiments/omission-residual-rank-attainment-2026-10-10/README.md)
+bounds an edge's cup label by its source height plus one. It removes 13,832
+candidate edge labels, but produces no new incompatible pair or bounding-box
+forced triple sign in the finite assessment. It is available as a coupled clause; it has
+not been turned into further omission rows or a complete exclusion certificate.
 See [MATH.md](MATH.md) for the exact population calculation and certificate logic.
 
 The [new residual checkpoint](../experiments/omission-residual32-resume-2026-10-10/README.md)

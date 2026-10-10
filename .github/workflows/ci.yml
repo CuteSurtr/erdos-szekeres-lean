@@ -92,6 +92,7 @@ jobs:
           python3 experiments/omission-residual32-primal-resume-2026-10-10/check.py
           python3 -m unittest discover -s experiments/omission-residual32-sat-resume-2026-10-10 -p test_opb.py -v
           python3 experiments/omission-residual32-sat-resume-2026-10-10/regenerate_opb.py --output .cache/residual32-ci-input.opb
+          python3 experiments/omission-residual-rank-attainment-2026-10-10/assessment/replay.py --check
       - name: Save verified project build cache
         if: success() && steps.project-cache.outputs.cache-hit != 'true'
         uses: actions/cache/save@v5

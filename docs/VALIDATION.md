@@ -7,6 +7,28 @@ hashes are normalized. Earlier GitHub run/commit links refer to the original
 private repository and may not resolve in the public replacement. New hosted
 results are available in the [CI workflow](https://github.com/CuteSurtr/erdos-szekeres-lean/actions/workflows/ci.yml).
 
+## Attained source-cup rank — 10 October 2026
+
+The [attained-rank bundle](../experiments/omission-residual-rank-attainment-2026-10-10/README.md)
+proves the source-height bound and its catalog, configuration and coupled-clause
+forms. Its [kernel record](../experiments/omission-residual-rank-attainment-2026-10-10/kernel-check.json)
+records fresh serial builds of two modules; the [six-root axiom audit](../experiments/omission-residual-rank-attainment-2026-10-10/axioms.txt)
+uses only `propext`, `Classical.choice` and `Quot.sound`. Source and dependency
+hashes are bound by the manifest. Two negative controls reject changed inputs.
+
+The portable continuation gate now includes **31 modules and 59 audit roots**.
+The preceding 29-module build and this two-module build are separately recorded;
+the hosted workflow rebuilds all 31 from source and rejects warnings, proof
+placeholders, custom axioms and native evaluation. The maintained library and
+its 571-root audit are unchanged.
+
+The [finite replay](../experiments/omission-residual-rank-attainment-2026-10-10/assessment/replay.py)
+reproduces all 23,562 directed domains and 596,904 unordered triple comparisons.
+The new bound removes 13,832 labels from 4,555 domains, with no newly incompatible
+pairs or changed forced-sign triples. This finite assessment is separate from
+the Lean proof. Neither supplies a global hole bound or the 313-point theorem.
+CI replays the assessment without an external solver.
+
 ## Relaxed Sixth template and resumed 313 search — 10 October 2026
 
 The [new geometric bundle](../experiments/omission-residual32-sixth-relaxed-2026-10-10/README.md)
@@ -18,7 +40,7 @@ contains only the standard Lean axioms. The independent finite checker
 replays 1,032 RUP steps, all literal maps and the exact 2,646-row catalog
 extension; two negative controls reject corrupted certificates or maps.
 
-The portable continuation gate now includes **29 modules and 53 audit roots**.
+At this checkpoint, the portable continuation gate included **29 modules and 53 audit roots**.
 The [fresh combined build record](validation/residual32-2646-checks-2026-10-10.json)
 and [complete axiom output](validation/residual32-2646-axioms-2026-10-10.txt)
 identify this checkpoint. This rebuild uses fresh objects and rejects compiler

@@ -200,6 +200,14 @@ bring the current residual search to **2,646 geometrically justified rows**;
 they do not yet prove the 313-point theorem. None of the 48 rows follows from
 a single previous row; independence from the entire earlier system is not claimed.
 
+A separate [attained-rank lemma](experiments/omission-residual-rank-attainment-2026-10-10/README.md)
+proves that an outgoing cup label is at most the source profile's first height
+plus one. `ErdosSzekeres.Omission.ResidualRankAttainment.cup_label_le_source_height_succ`
+and its coupled-clause corollaries are kernel checked. Exact enumeration removes
+13,832 candidate directed edge labels, while all pair incompatibilities and
+bounding-box forced triple signs remain unchanged. This strengthens the coupled search model;
+it does not exclude a global 32-hole assignment or add a numerical bound.
+
 ## Verification
 
 Pinned versions: **Lean 4.24.0**, **Mathlib v4.24.0**; dependency revisions are in

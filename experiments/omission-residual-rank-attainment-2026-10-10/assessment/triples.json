@@ -1,0 +1,125 @@
+{
+  "scope": "Bounding-box cyclic-triple predicate changes only, using the coordinate extrema from ResidualDomains.boundingBox and the six chronological cases of CycleSigns.CheckTriple in the maintained Lean sources. Status0=neither sign forced;1=positive;2=negative;3=both predicates true. No solver and no new geometric theorem.",
+  "source_sha256": "151ea1bfb175f6507d910521eb96961c82b54add2fb7e49e13b864b87241123e",
+  "unordered_triples": 596904,
+  "seconds": 2.3906725419219583,
+  "raw_original_box_counts": {
+    "2": 24993,
+    "1": 30942,
+    "0": 540969
+  },
+  "old_forbidden_cell_box_counts": {
+    "2": 24993,
+    "1": 30942,
+    "0": 540969
+  },
+  "new_cup_bound_box_counts": {
+    "2": 24993,
+    "1": 30942,
+    "0": 540969
+  },
+  "raw_to_new_status_changes": {},
+  "coupled_to_new_status_changes": {},
+  "new_both_predicate_triples": [],
+  "candidate_triples": {
+    "original2469_witness": {
+      "old": {
+        "2": 10120,
+        "1": 13848,
+        "0": 271272
+      },
+      "new": {
+        "2": 10120,
+        "1": 13848,
+        "0": 271272
+      },
+      "new_forced_unsigned": 0,
+      "new_both_signs": []
+    },
+    "previous_tabu_candidate": {
+      "old": {
+        "2": 10602,
+        "1": 13385,
+        "0": 271253
+      },
+      "new": {
+        "2": 10602,
+        "1": 13385,
+        "0": 271253
+      },
+      "new_forced_unsigned": 0,
+      "new_both_signs": []
+    },
+    "best_tabu_candidate": {
+      "old": {
+        "2": 10077,
+        "1": 13010,
+        "0": 272153
+      },
+      "new": {
+        "2": 10077,
+        "1": 13010,
+        "0": 272153
+      },
+      "new_forced_unsigned": 0,
+      "new_both_signs": []
+    },
+    "near_row205": {
+      "old": {
+        "2": 10077,
+        "1": 13010,
+        "0": 272153
+      },
+      "new": {
+        "2": 10077,
+        "1": 13010,
+        "0": 272153
+      },
+      "new_forced_unsigned": 0,
+      "new_both_signs": []
+    },
+    "near_row973": {
+      "old": {
+        "2": 10345,
+        "1": 13402,
+        "0": 271493
+      },
+      "new": {
+        "2": 10345,
+        "1": 13402,
+        "0": 271493
+      },
+      "new_forced_unsigned": 0,
+      "new_both_signs": []
+    },
+    "near_row1075": {
+      "old": {
+        "2": 10083,
+        "1": 13429,
+        "0": 271728
+      },
+      "new": {
+        "2": 10083,
+        "1": 13429,
+        "0": 271728
+      },
+      "new_forced_unsigned": 0,
+      "new_both_signs": []
+    },
+    "near_row995": {
+      "old": {
+        "2": 10298,
+        "1": 13243,
+        "0": 271699
+      },
+      "new": {
+        "2": 10298,
+        "1": 13243,
+        "0": 271699
+      },
+      "new_forced_unsigned": 0,
+      "new_both_signs": []
+    }
+  },
+  "changed_triples": []
+}
