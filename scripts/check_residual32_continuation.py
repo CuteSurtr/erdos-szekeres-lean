@@ -29,6 +29,8 @@ ADDED = ROOT/'experiments/omission-residual32-added-rows-2026-10-10'
 PRIMAL = ROOT/'experiments/omission-residual32-2598-primal-2026-10-10'
 RELAXED = ROOT/'experiments/omission-residual32-sixth-relaxed-2026-10-10'
 RANK = ROOT/'experiments/omission-residual-rank-attainment-2026-10-10'
+RANK_CORES = ROOT/'experiments/omission-residual32-rank-certificates-2026-10-10'
+NORMALIZATION = ROOT/'experiments/omission-residual-rank-normalization-2026-10-10'
 STANDARD = {'propext','Classical.choice','Quot.sound'}
 
 
@@ -49,11 +51,14 @@ def unit_plan():
     units = [(OLD,'Residual32ContextsProof.Catalog',
               ['OmissionResidual32Contexts.code_correct'])]
     for bundle, prefix in [(WITNESS,''),(COUPLED,''),(SIXTH,''),
-                           (FOURTH,'FourthGlobalProof.'),(ADDED,''),(RELAXED,''),(RANK,'')]:
+                           (FOURTH,'FourthGlobalProof.'),(ADDED,''),(RELAXED,''),(RANK,''),
+                           (RANK_CORES,''),(NORMALIZATION,'')]:
         if bundle == RELAXED:
             import_file('relaxed_preflight',bundle/'check.py').check()
         if bundle == RANK:
             import_file('rank_preflight',bundle/'check.py').preflight()
+        if bundle in (RANK_CORES,NORMALIZATION):
+            import_file('new_rank_preflight_'+bundle.name.replace('-','_'),bundle/'check.py').check()
         if bundle in (FOURTH,ADDED):
             manifest = json.loads((bundle/'manifest.json').read_text())
             import_file('row_preflight',bundle/'check.py').preflight(manifest)
@@ -93,7 +98,8 @@ def main():
     for bundle, filename in [(WITNESS,'test_check.py'),(COUPLED,'test_check.py'),
                              (FOURTH,'test_preflight.py'),(ADDED,'test_preflight.py'),
                              (PRIMAL,'test_check.py'),(RELAXED,'test_check.py'),
-                             (RANK,'test_check.py')]:
+                             (RANK,'test_check.py'),(RANK_CORES,'test_check.py'),
+                             (NORMALIZATION,'test_check.py')]:
         test = bundle/filename
         if not test.is_file():
             raise ValueError(f'Missing expected finite controls: {test}')

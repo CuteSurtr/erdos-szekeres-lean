@@ -1,0 +1,84 @@
+{
+  "scope": "Exclusion of the saved306-vertex single-swap component only; not all33-hole assignments.",
+  "vertices": "experiments/omission-residual32-primal-resume-2026-10-10/feasible33-vertices.json",
+  "vertices_sha256": "176852f296ed58dbfc27054914f20f79ddca39c07309b2a53d83127dd8f812ae",
+  "base_decompressed_sha256": "151ea1bfb175f6507d910521eb96961c82b54add2fb7e49e13b864b87241123e",
+  "catalog_decompressed_sha256": "e800d5f8a6c5cc45c73ddcc1e57488f2ca8f2ffb704a1515ff7444d589c682f6",
+  "new_supports": [
+    [
+      33,
+      43,
+      53,
+      65,
+      74,
+      77,
+      85,
+      89,
+      91,
+      96,
+      107,
+      110,
+      125
+    ],
+    [
+      1,
+      2,
+      7,
+      12,
+      18,
+      20,
+      27,
+      30,
+      33,
+      34,
+      39,
+      43,
+      53
+    ],
+    [
+      33,
+      43,
+      53,
+      65,
+      75,
+      77,
+      87,
+      89,
+      91,
+      99,
+      110,
+      111,
+      118
+    ],
+    [
+      1,
+      11,
+      23,
+      24,
+      30,
+      33,
+      34,
+      39,
+      50,
+      56,
+      67,
+      77
+    ]
+  ],
+  "saved_vertices": 306,
+  "all_saved_vertices_satisfy_2646": true,
+  "survivors_after_each_prefix": [
+    306,
+    16,
+    16,
+    16,
+    0
+  ],
+  "individually_excluded": [
+    290,
+    0,
+    0,
+    195
+  ],
+  "remaining_vertices": []
+}

@@ -196,7 +196,7 @@ now requires only 41 finite compatibility tests. Its 48 literal maps give
 48 further geometric rows, proved by
 `ErdosSzekeres.Omission.CoupledSixthRelaxedVariants.all_rows`.
 The 1,029-clause refutation has 1,032 kernel-checked RUP steps. These additions
-bring the current residual search to **2,646 geometrically justified rows**;
+bring that residual-search checkpoint to **2,646 geometrically justified rows**;
 they do not yet prove the 313-point theorem. None of the 48 rows follows from
 a single previous row; independence from the entire earlier system is not claimed.
 
@@ -205,8 +205,27 @@ proves that an outgoing cup label is at most the source profile's first height
 plus one. `ErdosSzekeres.Omission.ResidualRankAttainment.cup_label_le_source_height_succ`
 and its coupled-clause corollaries are kernel checked. Exact enumeration removes
 13,832 candidate directed edge labels, while all pair incompatibilities and
-bounding-box forced triple signs remain unchanged. This strengthens the coupled search model;
-it does not exclude a global 32-hole assignment or add a numerical bound.
+bounding-box forced triple signs remain unchanged. The subsequent
+[normalization theorem](experiments/omission-residual-rank-normalization-2026-10-10/README.md)
+explains its precise limitation: clipping cup labels preserves every solution
+of the abstract coupled model on the same occupied states. Thus adding this
+bound restricts labels but leaves abstract satisfiability unchanged.
+`RankNormalization.catalog_exists_frame_iff_sourceBound` proves this in Lean;
+it does not assert that the resulting labels are attained geometric ranks.
+
+The [rank-aware search](experiments/omission-residual32-rank-search-2026-10-10/README.md)
+nevertheless found four further geometric omission rows, bringing the current
+catalog to **2,650 rows**. Their
+[complete Lean certificates](experiments/omission-residual32-rank-certificates-2026-10-10/README.md)
+include a proof using 16 source-cup clauses. The four `hole_bound` theorems
+live in namespaces `ErdosSzekeres.Omission.CoupledCoreRankSearchOne`,
+`CoupledCoreRankSearchTwo`, `CoupledCoreRankSearchThree`, and
+`CoupledCoreRankSearchFour`. Exact 33-hole countermodels demonstrate successive
+strict strengthening of the row system. The
+[finite replay](experiments/omission-residual32-rank-global-2026-10-10/README.md)
+also checks that the new rows exclude the entire saved 306-vertex component
+of 33-hole assignments. This does not exhaust all 33-hole assignments and
+does not prove the 313-point theorem.
 
 ## Verification
 
@@ -247,10 +266,11 @@ previously had eight pending frontier leaves within three original contexts.
 Continuing case 4 produced the old catalog's 32-hole witness above; cases 2
 and 7 remain partial. Eleven earlier contexts have Lean proofs and ten more
 have integer-replayed subtrees, but no complete old-catalog exclusion is
-possible. The current search catalog adds 177 geometric rows, for **2,646 rows**
+possible. The current search catalog adds 181 geometric rows, for **2,650 rows**
 in total. Bounded SAT, native pseudo-Boolean and repair searches remain
-inconclusive. Several 32-hole near-models each violate one row; none is a
-feasible assignment. No complete 32-hole exclusion certificate has been found.
+inconclusive. The new rows exclude three of the four saved near-model basins
+more strongly; one saved 32-hole candidate still violates only row 973. None
+is a feasible assignment. No complete 32-hole exclusion certificate has been found.
 The [local search replay](experiments/omission-residual32-primal-resume-2026-10-10/README.md)
 verifies a complete 306-vertex component of feasible 33-hole assignments and
 the new near-models. The [SAT/PB comparison](experiments/omission-residual32-sat-resume-2026-10-10/README.md)

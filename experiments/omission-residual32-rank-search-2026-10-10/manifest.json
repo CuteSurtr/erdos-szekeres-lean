@@ -1,0 +1,31 @@
+{
+  "scope": "Discovery provenance and portable finite replay. Geometric certificates are separate; unknown and unexported UNSAT reports are not theorems.",
+  "component_vertices": "experiments/omission-residual32-primal-resume-2026-10-10/feasible33-vertices.json",
+  "component_near_models": "experiments/omission-residual32-primal-resume-2026-10-10/feasible33-near-models.json",
+  "files_sha256": {
+    "check.py": "b4adbcc6bf7d04c2f5e2e663e8d89f34e72ce37b4118ba0b72ea8afe584ad34f",
+    "cnf_export.py": "d034da2726fa943f3e561b8e360d3e92c3f526943e535757fceeea4d44322d3d",
+    "core-four-search.json": "5f1260c83d8d94a423525cae60df52e2ef8e6fbff00c0cf0b51af338c0c909bd",
+    "core-one-search.json": "79272b61b9988b6333d0fe19d7076a98a25e4aa1b7699ae96ecff3058163ff30",
+    "discovery-continuation.json": "827f67f29edf78f7542bcf83a6c2f978463f80e357af479902f79622538eb1bb",
+    "discovery-initial.json": "7310057996e445b24e37a54cbcd5120003d17e07cb736160d953e9f4c70ab607",
+    "discovery-survivors.json": "214ffcb0e6c813190cc021186b3141c97fe133b98cd14e3ef291e5ce771173aa",
+    "model-provenance.json": "9ce95a69406ada6e1abc1a37256b7e14d3a213b565c1a1a3dac10498a8cee367",
+    "model.py": "5a8cfd187d1cfe8bccd519af2366a06750351a969fbd1cd62ac4ed369b4f995d",
+    "probe.py": "234334cd4829af74ae23cc4c5907b1c2d0d95685f5f7424c03f0f0af881f2869",
+    "rows-and-countermodels.json": "2d8ad7b665de0d34a15af2cc651c4dba3de0b4663f16663ad14ca6f1a9893c48",
+    "search/control_minimize.py": "45c83d5b90f4f6f683181348bcfac087bef7f7f1dae0a454d79cd3181ca98cba",
+    "search/export_four.py": "6f8d75cc42e4efa9a7b6f8633f317e1800d8af1bc31476eca205ce80c069eded",
+    "search/export_more.py": "a574360021ecfe38f5316f3fc5056cd0c556c7e9fc8618cf7b8dde05f0f5ea53",
+    "search/minimize_survivor.py": "22f62a7c4f3a3d121fedcb97aa963813ecc52f233798b683bb4482dab1bed498",
+    "search/probe_continue.py": "4dd4d8782ab56ec5a73e3048df4ed94c7a585d723dd825fffb995c292486be87",
+    "search/probe_survivors.py": "1bd3f7e1dbea75317ee0dd7061df3cacfd6269b6f97442abb26477a2352694ac",
+    "search/replay_old_clipping.py": "b60b96209cc2901fa7048c345549ea07ce46a70759bc358e60aab2dc447d18bc",
+    "survivors-input.json": "db6db86586849eeec5bb2684146bfca5a55f9f81958c41cd48b79ad97fb83913",
+    "trim_core.py": "8d5a5b847814104a46c1140e41e791a2ba276bfe98bba6f4d0a3627b33fa3e8c"
+  },
+  "external_sha256": {
+    "experiments/omission-residual32-primal-resume-2026-10-10/feasible33-vertices.json": "176852f296ed58dbfc27054914f20f79ddca39c07309b2a53d83127dd8f812ae",
+    "experiments/omission-residual32-primal-resume-2026-10-10/feasible33-near-models.json": "ab4867e5cc84e9deb9eda95168ce98e1eca40c487457b47ad74bf91170317dd4"
+  }
+}

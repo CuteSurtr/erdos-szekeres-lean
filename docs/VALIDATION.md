@@ -7,6 +7,46 @@ hashes are normalized. Earlier GitHub run/commit links refer to the original
 private repository and may not resolve in the public replacement. New hosted
 results are available in the [CI workflow](https://github.com/CuteSurtr/erdos-szekeres-lean/actions/workflows/ci.yml).
 
+## Rank-aware search, four rows and normalization — 10 October 2026
+
+The [four-core certificate bundle](../experiments/omission-residual32-rank-certificates-2026-10-10/README.md)
+checks eight new Lean modules and sixteen theorem roots. Supports have sizes
+13, 13, 13 and 12. Their literal refutations contain 503, 726, 582 and 795
+clauses, with 419, 605, 450 and 659 RUP steps. The second and fourth proofs
+use 16 and 3 source-cup clauses. The [kernel record](../experiments/omission-residual32-rank-certificates-2026-10-10/kernel-check.json)
+and [complete axiom audit](../experiments/omission-residual32-rank-certificates-2026-10-10/axioms.txt)
+bind the actual geometric `hole_bound` theorems. Twelve corruption controls
+independently test the proof replay; the source exporter has seven controls,
+including fresh Lean rejection of altered direction and threshold literals.
+
+The [normalization bundle](../experiments/omission-residual-rank-normalization-2026-10-10/README.md)
+checks two further modules and twelve roots. Its exact-catalog theorem proves
+that source-height clipping preserves abstract coupled-model satisfiability.
+Its [axiom audit](../experiments/omission-residual-rank-normalization-2026-10-10/axioms.txt)
+uses only the standard axioms. Five controls check source identity and a
+nontrivial clipped assignment with fifteen changed labels. This theorem
+explicitly excludes additional equations for exact attained ranks.
+
+The portable continuation gate now checks **41 modules and 87 theorem roots**
+from source. It runs both new bundles' finite preflights and rejection controls
+before compiling, and rejects warnings, proof placeholders, custom axioms and
+native evaluation. The hosted workflow also enables all source-cup exporter
+kernel controls and the new standard-library discovery/catalog replays.
+
+The maintained library still builds all 3,301 jobs with `--wfail`; its 571-root
+audit is unchanged. The ordinary Python suite now reports 122 tests: 96 pass
+and 26 optional tests skip. Enabling the new source-cup integration suite
+passes all seven controls, including its three optional Lean checks.
+
+The [2,650-row catalog replay](../experiments/omission-residual32-rank-global-2026-10-10/README.md)
+binds the unchanged 2,646-row prefix and all four new supports. Its
+uncompressed SHA-256 is
+`e800d5f8a6c5cc45c73ddcc1e57488f2ca8f2ffb704a1515ff7444d589c682f6`.
+Exact integer replays verify four successive 33-hole strictness witnesses and
+elimination of the saved 306-vertex single-swap component. The component does
+not exhaust all 33-hole assignments. Neither it nor a timed-out global solver
+run supplies a 32-hole exclusion. **The completed planar bound remains 314.**
+
 ## Attained source-cup rank — 10 October 2026
 
 The [attained-rank bundle](../experiments/omission-residual-rank-attainment-2026-10-10/README.md)
@@ -16,7 +56,7 @@ records fresh serial builds of two modules; the [six-root axiom audit](../experi
 uses only `propext`, `Classical.choice` and `Quot.sound`. Source and dependency
 hashes are bound by the manifest. Two negative controls reject changed inputs.
 
-The portable continuation gate now includes **31 modules and 59 audit roots**.
+At the attained-rank checkpoint, the portable continuation gate included **31 modules and 59 audit roots**.
 The preceding 29-module build and this two-module build are separately recorded;
 the hosted workflow rebuilds all 31 from source and rejects warnings, proof
 placeholders, custom axioms and native evaluation. The maintained library and

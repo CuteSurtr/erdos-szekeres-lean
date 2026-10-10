@@ -1592,11 +1592,13 @@ conjunction of the old rows is made.
 
 ### R.6. The precise remaining proposition
 
-The sufficient arithmetic statement for the present residual route is
+Let $`\mathcal A_{2650}`$ be $`\mathcal A_{2646}`$ followed by the four
+proved rows of §R.8, in the stated order. The sufficient arithmetic statement
+for the present residual route is
 
 ```math
  \forall h:U\to\{0,1\},\qquad
- \mathcal A_{2646}(h)\Longrightarrow\sum_{i\in U}h_i\ge33.
+ \mathcal A_{2650}(h)\Longrightarrow\sum_{i\in U}h_i\ge33.
  \qquad\text{(OPEN)}
 ```
 
@@ -1619,7 +1621,7 @@ remain partial; Proposition R.2 shows why closing those cases alone could
 not prove the old relaxation sufficient.
 
 There is no remaining unproved geometric premise in the completed 314 theorem.
-For the current 2,646-row route, the existing row families already have
+For the current 2,650-row route, the existing row families already have
 geometric necessity proofs. A successful continuation would still require a
 complete arithmetic certificate, kernel checking of it, literal catalog
 identification and final composition. A new feasible 32-hole assignment would
@@ -1699,16 +1701,163 @@ the 596,904 unordered triples. Thus (R9) strengthens the semantics of shared
 edge labels, but these computations establish neither (OPEN) nor a numerical
 improvement. The 2,646-row catalog is unchanged by this separate theorem.
 
+### R.8. Four further geometric omission rows
+
+For the same catalog $`U=\{0,\ldots,153\}`$, define
+
+```math
+\begin{aligned}
+W_1&=\{33,43,53,65,74,77,85,89,91,96,107,110,125\},\\
+W_2&=\{1,2,7,12,18,20,27,30,33,34,39,43,53\},\\
+W_3&=\{33,43,53,65,75,77,87,89,91,99,110,111,118\},\\
+W_4&=\{1,11,23,24,30,33,34,39,50,56,67,77\}.
+\end{aligned}
+```
+
+**Proposition R.8.** For every actual residual configuration $`c`$ satisfying
+Definition F.4 and every $`t\in\{1,2,3,4\}`$,
+
+```math
+ W_t\not\subseteq O(c),\qquad
+ \sum_{i\in W_t}\mathbf1_{U\setminus O(c)}(i)\ge1.
+ \qquad\text{(R11)}
+```
+
+*Proof.* If all listed states occurred, choose their distinct owners in the
+same configuration. The coupled semantic lemmas assign truth values to the
+literal CNF's order, pair-label, triple-orientation and four-point convexity
+variables. Every initial clause follows from the actual configuration's
+domain, growth, orientation-packet and octagon-avoidance properties. The
+second and fourth certificates also use sixteen and three clauses, respectively,
+furnished by (R10). Lean checks
+the complete literal refutations and obtains a contradiction. A missing
+state gives the cardinality inequality. ∎
+
+The following table identifies the exact declarations. Namespace prefixes
+are `ErdosSzekeres.Omission.CoupledCoreRankSearch`, followed by the word in
+the second column.
+
+| Support | Namespace suffix | Actual geometric theorem |
+| --- | --- | --- |
+| $`W_1`$ | `One` | `hole_bound` in [RankGeometryOne.lean](experiments/omission-residual32-rank-certificates-2026-10-10/RankGeometryOne.lean) |
+| $`W_2`$ | `Two` | `hole_bound` in [RankGeometryTwo.lean](experiments/omission-residual32-rank-certificates-2026-10-10/RankGeometryTwo.lean) |
+| $`W_3`$ | `Three` | `hole_bound` in [RankGeometryThree.lean](experiments/omission-residual32-rank-certificates-2026-10-10/RankGeometryThree.lean) |
+| $`W_4`$ | `Four` | `hole_bound` in [RankGeometryFour.lean](experiments/omission-residual32-rank-certificates-2026-10-10/RankGeometryFour.lean) |
+
+Each file also proves `states_injective` and `exists_missing_state`; the
+corresponding `RankCore*.lean` file proves `context_impossible`. The
+[certificate bundle](experiments/omission-residual32-rank-certificates-2026-10-10/README.md)
+contains all CNF, RUP, source and axiom-audit data.
+
+The [finite catalog replay](experiments/omission-residual32-rank-global-2026-10-10/README.md)
+identifies $`\mathcal A_{2650}`$ as the unchanged 2,646-row prefix followed by
+(R11). Separately checked Boolean assignments with 33 holes satisfy the
+prefix and all earlier rows in (R11), while violating the next row. Thus each
+addition strictly strengthens the previous conjunction, even under
+$`h_0=0`$ and $`\sum h_i\le33`$. This finite countermodel check is performed
+with exact Python integers; it is separate from the Lean proofs of (R11).
+It does not establish independence under a 32-hole budget.
+
+These four rows eliminate all 306 vertices of the saved single-swap component
+of feasible 33-hole assignments. That component does not enumerate all
+33-hole assignments. Neither this observation nor the bounded global search
+establishes (OPEN).
+
+### R.9. Normalizing abstract cup labels
+
+The source-height inequality (R9) reduces individual label domains. The
+following theorem shows why this alone cannot exclude further occupied
+supports in the fully specified abstract coupled model.
+
+Fix $`k\ge0`$ profiles $`s_i`$, with $`H_i=s_i(0)`$, such that
+$`s_i(a-1)\le H_i`$ for $`1\le a\le4`$. The exact 154-state catalog has this
+property. Fix an injective order map $`p:\{0,\ldots,k-1\}\to\mathbb N`$,
+symmetric cap coordinates $`a_{ij}`$, triple signs, and four-point convexity
+data. Collect these unchanged data in $`F`$. A cup labeling $`b_{ij}`$ is
+**valid** when it is symmetric, the bounds $`1\le a_{ij}\le4`$ and
+$`1\le b_{ij}\le6`$ hold for $`i\ne j`$, and the following conditions hold:
+
+- If $`p(i)\lt p(j)`$, then $`(a_{ij},b_{ij})\in D(s_j)\setminus D(s_i)`$
+  and $`(a_{ij},b_{ij})\ne(1,6)`$.
+- On each increasing triple $`p(i)\lt p(j)\lt p(\ell)`$, a positive sign
+  requires $`b_{ij}\lt b_{j\ell}`$, and a negative sign requires
+  $`a_{ij}\lt a_{j\ell}`$.
+
+Write $`V(s,F,b)`$ for this predicate. Additional requirements on the order,
+cap coordinates, signs or convexity data can be any predicate $`P(F)`$.
+In particular, the fixed-sign, orientation-packet, four-point convexity and
+no-octagon constraints do not depend on the cup coordinates once $`F`$ is
+fixed.
+
+**Proposition R.9 (clipping).** For every increasing pair set
+
+```math
+ \widehat b_{ij}=\min\{b_{ij},H_i+1\}
+ \quad\text{when }p(i)\lt p(j),
+ \qquad \widehat b_{ji}=\widehat b_{ij},
+ \qquad \widehat b_{ii}=b_{ii}.
+ \qquad\text{(R12)}
+```
+
+If $`V(s,F,b)`$, then $`V(s,F,\widehat b)`$ and
+$`\widehat b_{ij}\le H_i+1`$ for every increasing pair. Consequently,
+
+```math
+\begin{aligned}
+ &\exists F,b\;[P(F)\land V(s,F,b)]\\
+ &\quad\Longleftrightarrow
+ \exists F,b\;[P(F)\land V(s,F,b)\land
+   \forall i,j\;(p(i)\lt p(j)\Rightarrow b_{ij}\le H_i+1)].
+ \qquad\text{(R13)}
+\end{aligned}
+```
+
+*Proof.* Decreasing a positive cup coordinate preserves membership in the
+target profile. If clipping changes the coordinate, its new value is
+$`H_i+1`$, which is above every source column, so source exclusion also
+persists. Clipping cannot create the forbidden cell $`(1,6)`$: since the old
+coordinate is at most six, a clipped coordinate equal to six was already
+six. Symmetry and numerical bounds are immediate.
+
+For a positive increasing triple, target membership of its first edge gives
+$`b_{ij}\le H_j`$. Hence
+
+```math
+ \min\{b_{ij},H_i+1\}
+ \le b_{ij}
+ \lt \min\{b_{j\ell},H_j+1\}.
+```
+
+This preserves positive growth. Cap growth and all data in $`F`$ are
+unchanged, as is $`P(F)`$. Clipping proves the forward implication of (R13);
+the reverse implication forgets the extra bound. ∎
+
+The definitions `Frame`, `HeightDominates`, `Allowed`, `Valid`, `SourceBound`
+and `clip` in [Normalization.lean](experiments/omission-residual-rank-normalization-2026-10-10/Normalization.lean)
+are exactly those above. In namespace `ErdosSzekeres.Omission.RankNormalization`,
+`allowed_clip`, `clipped_growth`, `clip_valid`, `clip_sourceBound`, and
+`exists_frame_iff_sourceBound` formalize the proof. The exact-catalog theorem
+`catalog_exists_frame_iff_sourceBound` in
+[CatalogNormalization.lean](experiments/omission-residual-rank-normalization-2026-10-10/CatalogNormalization.lean)
+checks the profile-height hypothesis and applies (R13).
+
+This equivalence concerns abstract labels with the displayed constraints.
+It neither constructs real points nor preserves additional equations
+requiring the labels to equal attained cup maxima. The rank lemma can
+participate in shorter certificates, as in §R.8, but by itself cannot
+change satisfiability of this abstract model on a fixed occupied support.
+
 ## V. Validation and references
 
 All finished results discussed above are proved without `sorry`, `admit`,
 custom mathematical axioms, or `native_decide`. The audited declarations depend
 only on the standard Lean axioms `propext`, `Classical.choice` and `Quot.sound`
 (or a subset). The maintained-library audit covers 571 named declarations;
-the standalone residual continuation has a separate gate checking 31
-modules and 59 audit roots, including nine modules and ten audit roots
+the standalone residual continuation has a separate gate checking 41
+modules and 87 audit roots, including nine modules and ten audit roots
 for Proposition R.6 and two modules and six roots for Proposition R.7 and
-its corollaries. The large arithmetic trees for 314 have their own
+its corollaries, eight modules and sixteen roots for Proposition R.8,
+and two modules and twelve roots for Proposition R.9. The large arithmetic trees for 314 have their own
 complete kernel records, linked in Section F.5. They are distinct from the
 maintained-library CI build. A passing discovery script is not substituted
 for any of these proofs. The [validation ledger](docs/VALIDATION.md) supplies

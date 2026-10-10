@@ -1,0 +1,67 @@
+'ErdosSzekeres.Omission.ResidualRankAttainment.cup_label_le_source_height_succ' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.ResidualRankAttainment.cup_label_le_source_shape_succ' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.Configuration.residual_cup_label_le_source_shape_succ' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+'ErdosSzekeres.Omission.Coupled.Context.edge_cup_le_source_shape_succ' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.Coupled.Context.source_cup_clause' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Omission.Coupled.Context.source_cup_domain_clause' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+'ErdosSzekeres.Omission.CoupledCoreRankSearchOne.context_impossible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+'ErdosSzekeres.Omission.CoupledCoreRankSearchOne.states_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.CoupledCoreRankSearchOne.exists_missing_state' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.CoupledCoreRankSearchOne.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+'ErdosSzekeres.Omission.CoupledCoreRankSearchTwo.context_impossible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+'ErdosSzekeres.Omission.CoupledCoreRankSearchTwo.states_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.CoupledCoreRankSearchTwo.exists_missing_state' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.CoupledCoreRankSearchTwo.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+'ErdosSzekeres.Omission.CoupledCoreRankSearchThree.context_impossible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+'ErdosSzekeres.Omission.CoupledCoreRankSearchThree.states_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.CoupledCoreRankSearchThree.exists_missing_state' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.CoupledCoreRankSearchThree.hole_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+'ErdosSzekeres.Omission.CoupledCoreRankSearchFour.context_impossible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+'ErdosSzekeres.Omission.CoupledCoreRankSearchFour.states_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.CoupledCoreRankSearchFour.exists_missing_state' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.CoupledCoreRankSearchFour.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
