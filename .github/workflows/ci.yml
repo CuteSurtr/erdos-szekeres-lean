@@ -13,13 +13,42 @@ jobs:
       # The compiler is limited by weakLeanArgs in lakefile.toml.
       LEAN_NUM_THREADS: "1"
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
+      - name: Prepare runner memory
+        shell: bash
+        run: |
+          set -euo pipefail
+          # These SDKs are unused by this Lean/Python job. Reclaim space on
+          # the disposable hosted VM before downloading the proof libraries.
+          sudo rm -rf /usr/local/lib/android /usr/share/dotnet
+          available_kib=$(df --output=avail -k . | tail -n 1)
+          if (( available_kib < 24 * 1024 * 1024 )); then
+            echo "Insufficient disk space for swap and Lean dependencies" >&2
+            df -h .
+            exit 1
+          fi
+          # Keep the runner's existing swap and add headroom for individual
+          # kernel checks, which can exceed the private runner's RAM limit.
+          sudo fallocate -l 12G /swapfile-lean
+          sudo chmod 600 /swapfile-lean
+          sudo mkswap /swapfile-lean
+          sudo swapon /swapfile-lean
+          free -h
+          df -h .
       - uses: leanprover/lean-action@v1
         with:
           auto-config: "false"
           build: "false"
           use-github-cache: "false"
           use-mathlib-cache: "true"
+      - name: Restore project build cache
+        id: project-cache
+        uses: actions/cache/restore@v5
+        with:
+          path: .lake/build
+          key: ${{ runner.os }}-${{ runner.arch }}-lean-build-v1-${{ hashFiles('lean-toolchain', 'lake-manifest.json', 'lakefile.toml') }}-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-${{ runner.arch }}-lean-build-v1-${{ hashFiles('lean-toolchain', 'lake-manifest.json', 'lakefile.toml') }}-
       - name: Record runner resources
         run: |
           lean --version
@@ -27,14 +56,23 @@ jobs:
           nproc
           free -h
           df -h .
-      - name: Build coupled proofs sequentially
-        shell: bash
-        run: |
-          set -euo pipefail
-          for module in CoupledVariants CoupledSecondVariants CoupledThirdVariants CoupledFourthVariants CoupledFifthVariants CoupledElevenObstruction CoupledNineVariant; do
-            /usr/bin/time -v lake build --wfail "ErdosSzekeres.Omission.$module"
-          done
-          /usr/bin/time -v lake build --wfail
+      # Separate sequential steps expose which proof family is still running.
+      - name: Build first coupled family
+        run: /usr/bin/time -v lake build --wfail ErdosSzekeres.Omission.CoupledVariants
+      - name: Build second coupled family
+        run: /usr/bin/time -v lake build --wfail ErdosSzekeres.Omission.CoupledSecondVariants
+      - name: Build third coupled family
+        run: /usr/bin/time -v lake build --wfail ErdosSzekeres.Omission.CoupledThirdVariants
+      - name: Build fourth coupled family
+        run: /usr/bin/time -v lake build --wfail ErdosSzekeres.Omission.CoupledFourthVariants
+      - name: Build fifth coupled family
+        run: /usr/bin/time -v lake build --wfail ErdosSzekeres.Omission.CoupledFifthVariants
+      - name: Build eleven-point obstruction
+        run: /usr/bin/time -v lake build --wfail ErdosSzekeres.Omission.CoupledElevenObstruction
+      - name: Build nine-point variant
+        run: /usr/bin/time -v lake build --wfail ErdosSzekeres.Omission.CoupledNineVariant
+      - name: Build full library
+        run: /usr/bin/time -v lake build --wfail
       - name: Test exact-coordinate search
         run: python3 -m unittest discover -s scripts -v
       - name: Audit theorem axioms
@@ -47,3 +85,15 @@ jobs:
         run: ERDOS_LEAN_EXPORT_TEST=1 lake env python3 -m unittest discover -s scripts -p 'test_omission_residual_*.py' -v
       - name: Check additional residual row controls
         run: ERDOS_LEAN_EXPORT_TEST=1 lake env python3 -m unittest discover -s scripts -p test_additional_residual_rows.py -v
+      - name: Save verified project build cache
+        if: success() && steps.project-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v5
+        with:
+          path: .lake/build
+          key: ${{ steps.project-cache.outputs.cache-primary-key }}
+      - name: Diagnose runner failure
+        if: failure()
+        run: |
+          free -h
+          df -h .
+          sudo journalctl -k --no-pager -n 100
