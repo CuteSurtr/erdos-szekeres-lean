@@ -126,8 +126,8 @@ orientation on each of its four increasing triples. Its open support region
 is
 
 ```math
- \{p:\ \omega(a,b,p)<0,\quad \omega(b,c,p)>0,\quad
-             \omega(c,d,p)<0\}.
+ \{p:\ \omega(a,b,p)\lt 0,\quad \omega(b,c,p)>0,\quad
+             \omega(c,d,p)\lt 0\}.
 ```
 
 These are `Suk.CapFrame` and `Suk.CapFrame.spike` in
@@ -291,7 +291,7 @@ $`4m+1\le M\le N`$,
 
 ```math
  \mathsf F(M,4m+1),\qquad
- N^{m+7}\Pi(m,n)\binom M{4m+1}<\binom N{4m+1}
+ N^{m+7}\Pi(m,n)\binom M{4m+1}\lt \binom N{4m+1}
  \quad\Longrightarrow\quad\mathsf F(N,n).
  \qquad\text{(T1)}
 ```
@@ -330,7 +330,7 @@ and
 
 ```math
  (d+1)(4m+1)+3mn+6m+(4n+3m)(\log m+4)
-   <(3m-6)(X-1).
+   \lt (3m-6)(X-1).
  \qquad\text{(E2)}
 ```
 
@@ -414,7 +414,7 @@ Then, for $`m\ge3`$, $`n\ge4`$, $`4m+1\le M\le N`$,
 
 ```math
  \mathsf F(M,4m+1),\qquad
- T_{\rm bin}(N,m,n)\binom M{4m+1}<\binom N{4m+1}
+ T_{\rm bin}(N,m,n)\binom M{4m+1}\lt \binom N{4m+1}
  \quad\Longrightarrow\quad\mathsf F(N,n).
  \qquad\text{(B1)}
 ```
@@ -462,7 +462,7 @@ $`(m+1)!\binom N{m+1}\le N^{m+1}`$. More generally, if
 $`\Pi(m,n)\le2^V`$, $`d\le E`$, $`2K\le E`$, and
 
 ```math
- (d+1)K+V<DE+\lfloor\log((m+1)!)\rfloor,
+ (d+1)K+V\lt DE+\lfloor\log((m+1)!)\rfloor,
  \qquad\text{(B4)}
 ```
 
@@ -675,7 +675,7 @@ The corresponding declarations are `ActualRanks.labels`,
 grid, define the incoming down-set of vertex $`v`$ by
 
 ```math
-I(v)=\{z:\exists u<v,\ z_1\le d_1(u,v),\ z_2\le d_2(u,v)\}.
+I(v)=\{z:\exists u\lt v,\ z_1\le d_1(u,v),\ z_2\le d_2(u,v)\}.
 ```
 
 For every $`u<v`$,
@@ -709,7 +709,7 @@ by
 
 ```math
 6\ge f_1\ge f_2\ge f_3\ge f_4\ge0,
-\qquad f_1<6\ \text{or}\ f_2=6.
+\qquad f_1\lt 6\ \text{or}\ f_2=6.
 \qquad\text{(F.6)}
 ```
 
@@ -916,7 +916,7 @@ E_T=\sum_{i\in T}(L_i-C)_++\sum_{i\notin T}L_i.
 If
 
 ```math
-C(q-1)+E_T<D,
+C(q-1)+E_T\lt D,
 \qquad\text{(F.10)}
 ```
 
@@ -963,7 +963,7 @@ $`h_i=0`$ on $`Z`$, and total at most $`b`$. If $`\vert M\vert >b`$, no such vec
 exists. Otherwise, any weighted rows satisfying
 
 ```math
-C(b-|M|)+\sum_{i\in F}(L_i-C)_++\sum_{i\in M}L_i<D
+C(b-|M|)+\sum_{i\in F}(L_i-C)_++\sum_{i\in M}L_i\lt D
 \qquad\text{(F.11)}
 ```
 
@@ -992,7 +992,7 @@ subtracting whole sums:
 
 ```math
 C(b-|M|)+\sum_{i\in V}(L_i-C)_++\sum_{i\in M}L_i
- <D+\sum_{i\in M\cup Z}(L_i-C)_+.
+ \lt D+\sum_{i\in M\cup Z}(L_i-C)_+.
 \qquad\text{(F.12)}
 ```
 
@@ -1156,7 +1156,7 @@ the minimum slope among all segments from $`u`$. Such a vertex exists by
 finiteness. Put
 
 ```math
-U=\{u:u<m(u)\},\qquad L=\{u:m(u)<u\}.
+U=\{u:u\lt m(u)\},\qquad L=\{u:m(u)\lt u\}.
 ```
 
 These sets are disjoint and cover the indices. Minimum slope and nonzero
@@ -1285,7 +1285,7 @@ For $`h:U\to\{0,1\}`$ define
 
 ```math
  \mathcal A_{2469}(h)\quad\Longleftrightarrow\quad
- \forall r<2469,\qquad d_r\le\sum_{i\in S_r}h_i.
+ \forall r\lt 2469,\qquad d_r\le\sum_{i\in S_r}h_i.
  \qquad\text{(R1)}
 ```
 
@@ -1482,7 +1482,7 @@ $`T_{j+1}`$ equal to the support of the $`j`$-th Fourth map. The theorem
 ordered literal array used in the search. Its `all_rows` theorem proves
 
 ```math
- \forall j<129,\qquad \sum_{i\in T_j}h_i\ge1
+ \forall j\lt 129,\qquad \sum_{i\in T_j}h_i\ge1
  \quad\text{for }h_i=\mathbf1_{U\setminus O(c)}(i).
  \qquad\text{(R6)}
 ```
@@ -1576,7 +1576,7 @@ $`V_r=\sigma_r(\{0,\ldots,12\})`$. In
 `all_rows` proves
 
 ```math
- \forall r<48,\qquad \sum_{i\in V_r}h_i\ge1
+ \forall r\lt 48,\qquad \sum_{i\in V_r}h_i\ge1
  \quad\text{for }h_i=\mathbf1_{U\setminus O(c)}(i).
  \qquad\text{(R8)}
 ```
@@ -1637,7 +1637,7 @@ transitivity described in Section F. Use that section's actual rank notation:
 
 ```math
  d(u,v)=\bigl(6-F_-(u,v),\;E_+(u,v)-1\bigr),\qquad
- H_u=\max\bigl(\{0\}\cup\{d(t,u)_2:t<u\}\bigr).
+ H_u=\max\bigl(\{0\}\cup\{d(t,u)_2:t\lt u\}\bigr).
 ```
 
 Here subtraction is natural-number subtraction. The cap hypothesis gives
@@ -1670,7 +1670,7 @@ For a coupled context $`C`$ with states $`s_i`$ and distinct indices $`i,j`$,
 put $`H_i=h_0(s_i)`$. Then
 
 ```math
- C.\mathrm{owner}(i)<C.\mathrm{owner}(j)
+ C.\mathrm{owner}(i)\lt C.\mathrm{owner}(j)
  \quad\Longrightarrow\quad C.\mathrm{edge}(i,j)_2\le H_i+1.
  \qquad\text{(R10)}
 ```
