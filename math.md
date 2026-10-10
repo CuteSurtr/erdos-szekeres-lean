@@ -613,12 +613,12 @@ exist. The inductive predicates are `ActualRanks.EndingPath` and
 For $`u<v<w`$, appending or prepending the third point gives
 
 ```math
-\begin{array}{ll}
+\begin{aligned}
 {}[p_u,p_v,p_w]<0
  &\Longrightarrow E_-(u,v)<E_-(v,w),\quad F_-(v,w)<F_-(u,v),\\
 {}[p_u,p_v,p_w]>0
  &\Longrightarrow E_+(u,v)<E_+(v,w).
-\end{array}
+\end{aligned}
 \tag{F.1}
 ```
 
@@ -655,10 +655,10 @@ too large. For the residual cup coordinate, octagon avoidance excludes an
 eight-cup. Formula (F.1) implies, for either label system $`d`$,
 
 ```math
-\begin{split}
+\begin{aligned}
 {}[p_u,p_v,p_w]<0&\Longrightarrow d_1(u,v)<d_1(v,w),\\
 {}[p_u,p_v,p_w]>0&\Longrightarrow d_2(u,v)<d_2(v,w).
-\end{split}
+\end{aligned}
 \tag{F.4}
 ```
 
