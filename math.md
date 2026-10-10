@@ -83,7 +83,7 @@ $`n\ge n_0`$,
  \mathsf F\!\left(
    \left\lfloor 2^{\,n+6n^{2/3}\log n}\right\rfloor_{\mathbb N},n
  \right).
- \tag{S}
+ \qquad\text{(S)}
 ```
 
 This is `ErdosSzekeres.Suk.theorem2016` in
@@ -101,7 +101,7 @@ there is an integer $`n_0\ge3`$ such that, for every integer $`n\ge n_0`$,
    2^{\,n+(8\sqrt2/3+\varepsilon)\sqrt{n\log n}}
   \right\rfloor_{\mathbb N},n
  \right).
- \tag{H}
+ \qquad\text{(H)}
 ```
 
 This is `ErdosSzekeres.HMPT.theorem2020` in
@@ -170,7 +170,7 @@ same integer conditions and $`n+b\le2^H`$,
 
 ```math
  \mathsf F\bigl(2^{\,n+K+Hb+64(k+5)},n\bigr).
- \tag{S1}
+ \qquad\text{(S1)}
 ```
 
 The extraction loss here is $`64(k+5)`$. It is a proved replacement estimate;
@@ -181,7 +181,7 @@ $`k=a(a+1)`$ gives, for $`n\ge4`$, $`a\ge2`$, $`n\le a^3`$,
 ```math
  \mathsf F\bigl(2^{D_S(n,a)},n\bigr),\qquad
  D_S(n,a)=n+a^2+a^2\lceil\log(n+a^2)\rceil+64\bigl(a(a+1)+5\bigr).
- \tag{S2}
+ \qquad\text{(S2)}
 ```
 
 This is `Suk.cubic_log_bound`.
@@ -191,7 +191,7 @@ conditions:
 
 ```math
  n\ge4,\qquad n^{1/3}\ge4,\qquad \log n\ge100.
- \tag{S3}
+ \qquad\text{(S3)}
 ```
 
 Put $`x=n^{1/3}`$, $`a=\lceil x\rceil`$, and
@@ -232,7 +232,7 @@ If $`j\le M\le N`$ and $`\mathsf F(M,j)`$, double counting yields
 
 ```math
  \binom Nj\le c_j(P)\binom Mj.
- \tag{D}
+ \qquad\text{(D)}
 ```
 
 The declaration is `Suk.convex_subsets_density`; the inequality uses integer
@@ -245,7 +245,7 @@ Define
        \binom{2(n-1)+r+r(n-2)}{2(n-1)+r},
  \qquad
  \Pi(m,n)=B(m-3,n)B(2m-3,n).
- \tag{P}
+ \qquad\text{(P)}
 ```
 
 These are `HMPT.supportProductBound` in
@@ -263,7 +263,7 @@ The convex-fan construction and projective coordinate change give
 ```math
  c_{2(r+3)+1}(P)\le
  c_{r+4}(P)\,N^3 B(r,n)
- \tag{R}
+ \qquad\text{(R)}
 ```
 
 whenever $`n\ge4`$, $`P`$ is in general position with distinct first
@@ -281,7 +281,7 @@ of the two inequalities gives
 
 ```math
  c_{4m+1}(P)\le c_{m+1}(P)N^6\Pi(m,n).
- \tag{T}
+ \qquad\text{(T)}
 ```
 
 This is `HMPT.convex_two_scale_ratio_bound`. Bounding
@@ -293,7 +293,7 @@ $`4m+1\le M\le N`$,
  \mathsf F(M,4m+1),\qquad
  N^{m+7}\Pi(m,n)\binom M{4m+1}<\binom N{4m+1}
  \quad\Longrightarrow\quad\mathsf F(N,n).
- \tag{T1}
+ \qquad\text{(T1)}
 ```
 
 This last statement no longer assumes distinct first coordinates: a proved
@@ -309,7 +309,7 @@ formalized verbatim.
 ```math
  \Pi(m,n)\le
  2^{\,3mn+6m+(4n+3m)\lceil\log(8m)\rceil},\qquad m\ge3,
- \tag{E1}
+ \qquad\text{(E1)}
 ```
 
 using the elementary binomial estimate
@@ -331,7 +331,7 @@ and
 ```math
  (d+1)(4m+1)+3mn+6m+(4n+3m)(\log m+4)
    <(3m-6)(X-1).
- \tag{E2}
+ \qquad\text{(E2)}
 ```
 
 Then $`\mathsf F(\lfloor2^X\rfloor_{\mathbb N},n)`$.
@@ -378,7 +378,7 @@ $`\Delta_n(c,C)/(nL_n)`$, once $`n\ge2`$, and
 ```math
  \frac{\Delta_n(c,C)}{n\log n}\longrightarrow
  3cC-16c^2-2.
- \tag{E3}
+ \qquad\text{(E3)}
 ```
 
 Consequently every choice with $`c>0`$ and positive limiting slack yields
@@ -416,7 +416,7 @@ Then, for $`m\ge3`$, $`n\ge4`$, $`4m+1\le M\le N`$,
  \mathsf F(M,4m+1),\qquad
  T_{\rm bin}(N,m,n)\binom M{4m+1}<\binom N{4m+1}
  \quad\Longrightarrow\quad\mathsf F(N,n).
- \tag{B1}
+ \qquad\text{(B1)}
 ```
 
 This is `HMPT.two_scale_binomial_bound` in
@@ -442,7 +442,7 @@ and define
 \qquad
  E_!=\max\left\{d,2K,
   \left\lfloor\frac{\max(A-F,0)}D\right\rfloor+1\right\}.
- \tag{B2}
+ \qquad\text{(B2)}
 ```
 
 Here $`m\ge3`$, so $`D>0`$. The definitions are
@@ -451,7 +451,7 @@ If $`n\ge4`$, $`K\le2^d`$, and $`\mathsf F(2^d,K)`$, then
 
 ```math
  \mathsf F(2^{E_!},n),\qquad E_!\le E_0.
- \tag{B3}
+ \qquad\text{(B3)}
 ```
 
 The declarations are `HMPT.integer_two_scale_factorial_bound` and
@@ -463,7 +463,7 @@ $`\Pi(m,n)\le2^V`$, $`d\le E`$, $`2K\le E`$, and
 
 ```math
  (d+1)K+V<DE+\lfloor\log((m+1)!)\rfloor,
- \tag{B4}
+ \qquad\text{(B4)}
 ```
 
 then $`\mathsf F(2^E,n)`$, under the same $`m,n,K`$ and input-bound
@@ -487,7 +487,7 @@ at least $`D`$ from its numerator gives $`E_!<E_0`$. Thus
 
 ```math
  \mathsf F(2^{E_0-1},n)
- \tag{B5}
+ \qquad\text{(B5)}
 ```
 
 whenever $`m\ge3`$, $`n\ge4`$, $`K\le2^d`$,
@@ -615,13 +615,13 @@ For $`u<v<w`$, appending or prepending the third point gives
 ```math
 [p_u,p_v,p_w]\lt0
  \Longrightarrow E_-(u,v)\lt E_-(v,w),\quad F_-(v,w)\lt F_-(u,v).
-\tag{F.1a}
+\qquad\text{(F.1a)}
 ```
 
 ```math
 [p_u,p_v,p_w]\gt0
  \Longrightarrow E_+(u,v)\lt E_+(v,w).
-\tag{F.1b}
+\qquad\text{(F.1b)}
 ```
 
 These are `ActualRanks.rank_growth` and `ResidualRanks.rank_growth`.
@@ -641,7 +641,7 @@ For balanced configurations define
 
 ```math
 d_B(u,v)=\bigl(E_-(u,v)-1,E_+(u,v)-1\bigr)\in\{1,\ldots,5\}^2.
-\tag{F.2}
+\qquad\text{(F.2)}
 ```
 
 For residual configurations define instead
@@ -649,7 +649,7 @@ For residual configurations define instead
 ```math
 d_R(u,v)=\bigl(6-F_-(u,v),E_+(u,v)-1\bigr)
  \in\{1,\ldots,4\}\times\{1,\ldots,6\}.
-\tag{F.3}
+\qquad\text{(F.3)}
 ```
 
 The bounds follow by shortening an attained forbidden chain if a rank were
@@ -658,12 +658,12 @@ eight-cup. Formulas (F.1a–b) imply, for either label system $`d`$,
 
 ```math
 [p_u,p_v,p_w]\lt0\Longrightarrow d_1(u,v)\lt d_1(v,w).
-\tag{F.4a}
+\qquad\text{(F.4a)}
 ```
 
 ```math
 [p_u,p_v,p_w]\gt0\Longrightarrow d_2(u,v)\lt d_2(v,w).
-\tag{F.4b}
+\qquad\text{(F.4b)}
 ```
 
 The corresponding declarations are `ActualRanks.labels`,
@@ -682,7 +682,7 @@ For every $`u<v`$,
 
 ```math
 d(u,v)\in I(v)\setminus I(u).
-\tag{F.5}
+\qquad\text{(F.5)}
 ```
 
 Consequently distinct vertices have distinct incoming states.
@@ -710,7 +710,7 @@ by
 ```math
 6\ge f_1\ge f_2\ge f_3\ge f_4\ge0,
 \qquad f_1<6\ \text{or}\ f_2=6.
-\tag{F.6}
+\qquad\text{(F.6)}
 ```
 
 There are $`\binom{10}{4}-\binom83=210-56=154`$ such profiles. The residual
@@ -756,7 +756,7 @@ $`h_i=1`$ for $`i\notin O`$, $`h_i=0`$ for $`i\in O`$. By injectivity,
 
 ```math
 \sum_{i\in V}h_i+n=|V|.
-\tag{F.7}
+\qquad\text{(F.7)}
 ```
 
 An omission row is a pair $`(S_r,d_r)`$, with $`S_r\subseteq V`$ and
@@ -764,7 +764,7 @@ $`d_r\in\mathbb N`$, asserting
 
 ```math
 h(S_r):=\sum_{i\in S_r}h_i=|S_r\setminus O|\ge d_r.
-\tag{F.8}
+\qquad\text{(F.8)}
 ```
 
 Every actual configuration satisfies the rows proved below. The converse,
@@ -892,7 +892,7 @@ For every nonnegative integer capacity $`C`$,
 ```math
 D\le\sum_i L_ih_i
  \le C\sum_i h_i+\sum_i(L_i-C)_+.
-\tag{F.9}
+\qquad\text{(F.9)}
 ```
 
 *Proof.* Multiply each row by its weight and transpose the finite sum.
@@ -917,7 +917,7 @@ If
 
 ```math
 C(q-1)+E_T<D,
-\tag{F.10}
+\qquad\text{(F.10)}
 ```
 
 then every Boolean vector satisfying the old rows satisfies $`h(T)\ge q`$.
@@ -964,7 +964,7 @@ exists. Otherwise, any weighted rows satisfying
 
 ```math
 C(b-|M|)+\sum_{i\in F}(L_i-C)_++\sum_{i\in M}L_i<D
-\tag{F.11}
+\qquad\text{(F.11)}
 ```
 
 exclude the branch.
@@ -993,7 +993,7 @@ subtracting whole sums:
 ```math
 C(b-|M|)+\sum_{i\in V}(L_i-C)_++\sum_{i\in M}L_i
  <D+\sum_{i\in M\cup Z}(L_i-C)_+.
-\tag{F.12}
+\qquad\text{(F.12)}
 ```
 
 **Definition F.14 (exclusion tree).** A node contains either an over-budget
@@ -1020,7 +1020,7 @@ column coefficient $`c_i<B`$, and
 
 ```math
 \sum_i c_iB^i=\sum_r w_rR_r.
-\tag{F.13}
+\qquad\text{(F.13)}
 ```
 
 Then $`c_i=L_i`$ for every $`i`$.
@@ -1081,7 +1081,7 @@ system. Theorem F.16 and integrality give at least 62 balanced holes or
 
 ```math
 n_B\le252-62=190,\qquad n_R\le154-32=122.
-\tag{F.14}
+\qquad\text{(F.14)}
 ```
 
 ∎
@@ -1114,7 +1114,7 @@ in $`x>a_x`$. On this half-plane apply
 
 ```math
 \Phi_a(x,y)=\left(\frac{y-a_y}{x-a_x},-\frac1{x-a_x}\right).
-\tag{F.15}
+\qquad\text{(F.15)}
 ```
 
 The map is injective there. Its first coordinates are distinct because equal
@@ -1125,7 +1125,7 @@ the determinant identity is
 ```math
 [\Phi_a(p),\Phi_a(q),\Phi_a(r)]
 =-\frac{[p,q,r]}{(p_x-a_x)(q_x-a_x)(r_x-a_x)}.
-\tag{F.16}
+\qquad\text{(F.16)}
 ```
 
 An octagon in the chart transfers to an octagon among the original non-root
@@ -1170,7 +1170,7 @@ and set
 
 ```math
 H=L\cup G,\qquad R=U\setminus G.
-\tag{F.17}
+\qquad\text{(F.17)}
 ```
 
 The residual part has no six-cap, being a subset of $`U`$, and no junction:
@@ -1286,7 +1286,7 @@ For $`h:U\to\{0,1\}`$ define
 ```math
  \mathcal A_{2469}(h)\quad\Longleftrightarrow\quad
  \forall r<2469,\qquad d_r\le\sum_{i\in S_r}h_i.
- \tag{R1}
+ \qquad\text{(R1)}
 ```
 
 In Lean, $`h`$ is a natural-valued function together with the explicit premises
@@ -1301,7 +1301,7 @@ $`h_i=1`$ if $`i\notin O(c)`$, and $`h_i=0`$ otherwise. Then
 
 ```math
  \mathcal A_{2469}(h),\qquad \sum_{i\in U}h_i+n=154.
- \tag{R2}
+ \qquad\text{(R2)}
 ```
 
 This is `OmissionResidual32Transfer.all_rows` and `feasible_holes` in
@@ -1330,7 +1330,7 @@ Let $`h_i^{\ast}=\mathbf1_{M_{\ast}}(i)`$.
 ```math
  \mathcal A_{2469}(h^{\ast}),\qquad \sum_i h_i^{\ast}=32,\qquad
  h_{54}^{\ast}=1,\quad h_{43}^{\ast}=h_{67}^{\ast}=h_0^{\ast}=0.
- \tag{R3}
+ \qquad\text{(R3)}
 ```
 
 In particular the universally quantified implication from (R1) and the four
@@ -1361,7 +1361,7 @@ $`c`$ satisfies
 
 ```math
  |S_{\ast}\setminus O(c)|\ge1.
- \tag{R4}
+ \qquad\text{(R4)}
 ```
 
 This is `ErdosSzekeres.Omission.CoupledCoreSixth.hole_bound` in
@@ -1459,7 +1459,7 @@ compatible, then every actual residual configuration satisfies
 
 ```math
  |\sigma(\{0,\ldots,12\})\setminus O(c)|\ge1.
- \tag{R5}
+ \qquad\text{(R5)}
 ```
 
 This is `CoupledTemplateFourth.hole_bound` in
@@ -1484,7 +1484,7 @@ ordered literal array used in the search. Its `all_rows` theorem proves
 ```math
  \forall j<129,\qquad \sum_{i\in T_j}h_i\ge1
  \quad\text{for }h_i=\mathbf1_{U\setminus O(c)}(i).
- \tag{R6}
+ \qquad\text{(R6)}
 ```
 
 Both are in namespace `ErdosSzekeres.Omission`, in
@@ -1501,7 +1501,7 @@ The sufficient arithmetic statement for the present residual route is
 ```math
  \forall h:U\to\{0,1\},\qquad
  \mathcal A_{2598}(h)\Longrightarrow\sum_{i\in U}h_i\ge33.
- \tag{OPEN}
+ \qquad\text{(OPEN)}
 ```
 
 **(OPEN) is not proved in this repository.** If proved and bound to these
