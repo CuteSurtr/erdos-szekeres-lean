@@ -1,0 +1,42 @@
+{
+  "scope": "Frozen source and checkpoint verified; five original-row cuts copied into new tree only; no Lean claim",
+  "source_sha256": "f03eebb1d20eae3bd25dbb5024eaacdfdcc5bcd8ed964d190bdfa59c73aeb909",
+  "parent_tree_sha256": "b2cc1b24617e881cc939b4c0b1a54300d203f1c2c2f925dd3c59e86b47c92560",
+  "seed_sha256": "e972958f0ff776c826440a3d47e8c3af839c6d9b7e1c4bca878264a63dea360d",
+  "diagnostic_sha256": "947c50d3ed3df43728c4ee320e24f0a5fabf2d80b6e541fd6ae8fce976dc9a22",
+  "cuts": [
+    {
+      "node": 492360,
+      "residual_demand_margin": 11,
+      "direct_demand_margin": 11
+    },
+    {
+      "node": 492359,
+      "residual_demand_margin": 1,
+      "direct_demand_margin": 1
+    },
+    {
+      "node": 485523,
+      "residual_demand_margin": 159,
+      "direct_demand_margin": 159
+    },
+    {
+      "node": 485522,
+      "residual_demand_margin": 13,
+      "direct_demand_margin": 13
+    },
+    {
+      "node": 30,
+      "residual_demand_margin": 21,
+      "direct_demand_margin": 21
+    }
+  ],
+  "checked": {
+    "nodes": 701979,
+    "leaves": 350990,
+    "pending": 19,
+    "complete": false,
+    "minimum_margin": 1
+  },
+  "seconds": 45.153134915977716
+}

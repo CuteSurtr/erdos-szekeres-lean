@@ -1,0 +1,685 @@
+{
+  "scope": "Independent exact integer replay of every resumed original pending context; no Lean or planar-bound claim",
+  "source_sha256": "f03eebb1d20eae3bd25dbb5024eaacdfdcc5bcd8ed964d190bdfa59c73aeb909",
+  "resumed_tree_sha256": "46ec6b7d5f580c68f88affa2dd61f100862e05ca9fc05a86cded449d4a501050",
+  "original_tree_sha256": "b2cc1b24617e881cc939b4c0b1a54300d203f1c2c2f925dd3c59e86b47c92560",
+  "newly_closed_original_contexts": [
+    492357,
+    492355,
+    492350,
+    492346,
+    492344,
+    485519,
+    485517,
+    485514,
+    485512,
+    485509,
+    485506,
+    485503,
+    29,
+    24,
+    11,
+    9
+  ],
+  "original_contexts": [
+    {
+      "original_node": 492360,
+      "initial_missing": [
+        27,
+        43,
+        47,
+        49,
+        60,
+        67,
+        87,
+        88,
+        93,
+        109
+      ],
+      "initial_occupied": [
+        25,
+        34,
+        36,
+        44,
+        45,
+        50,
+        65,
+        78
+      ],
+      "nodes": 1,
+      "weighted_leaves": 1,
+      "over_budget_leaves": 0,
+      "pending_leaves": 0,
+      "complete_under_context": true,
+      "previously_cut_closed": true,
+      "minimum_margin": 11
+    },
+    {
+      "original_node": 492359,
+      "initial_missing": [
+        27,
+        43,
+        47,
+        49,
+        60,
+        67,
+        88,
+        93,
+        109
+      ],
+      "initial_occupied": [
+        25,
+        34,
+        36,
+        44,
+        45,
+        50,
+        65,
+        78,
+        87
+      ],
+      "nodes": 1,
+      "weighted_leaves": 1,
+      "over_budget_leaves": 0,
+      "pending_leaves": 0,
+      "complete_under_context": true,
+      "previously_cut_closed": true,
+      "minimum_margin": 1
+    },
+    {
+      "original_node": 492357,
+      "initial_missing": [
+        27,
+        43,
+        47,
+        60,
+        67,
+        88,
+        93,
+        109
+      ],
+      "initial_occupied": [
+        25,
+        34,
+        36,
+        44,
+        45,
+        49,
+        50,
+        65,
+        78
+      ],
+      "nodes": 3,
+      "weighted_leaves": 2,
+      "over_budget_leaves": 0,
+      "pending_leaves": 0,
+      "complete_under_context": true,
+      "previously_cut_closed": false,
+      "minimum_margin": 19
+    },
+    {
+      "original_node": 492355,
+      "initial_missing": [
+        27,
+        43,
+        47,
+        60,
+        67,
+        88,
+        109
+      ],
+      "initial_occupied": [
+        25,
+        34,
+        36,
+        44,
+        45,
+        50,
+        65,
+        78,
+        93
+      ],
+      "nodes": 19,
+      "weighted_leaves": 10,
+      "over_budget_leaves": 0,
+      "pending_leaves": 0,
+      "complete_under_context": true,
+      "previously_cut_closed": false,
+      "minimum_margin": 1
+    },
+    {
+      "original_node": 492350,
+      "initial_missing": [
+        27,
+        43,
+        47,
+        67,
+        88,
+        109
+      ],
+      "initial_occupied": [
+        34,
+        36,
+        44,
+        45,
+        60,
+        78
+      ],
+      "nodes": 587,
+      "weighted_leaves": 294,
+      "over_budget_leaves": 0,
+      "pending_leaves": 0,
+      "complete_under_context": true,
+      "previously_cut_closed": false,
+      "minimum_margin": 1
+    },
+    {
+      "original_node": 492346,
+      "initial_missing": [
+        27,
+        43,
+        47,
+        67,
+        88
+      ],
+      "initial_occupied": [
+        36,
+        44,
+        78,
+        109
+      ],
+      "nodes": 2003,
+      "weighted_leaves": 1002,
+      "over_budget_leaves": 0,
+      "pending_leaves": 0,
+      "complete_under_context": true,
+      "previously_cut_closed": false,
+      "minimum_margin": 1
+    },
+    {
+      "original_node": 492344,
+      "initial_missing": [
+        27,
+        43,
+        67,
+        88
+      ],
+      "initial_occupied": [
+        36,
+        44,
+        47,
+        78
+      ],
+      "nodes": 2959,
+      "weighted_leaves": 1480,
+      "over_budget_leaves": 0,
+      "pending_leaves": 0,
+      "complete_under_context": true,
+      "previously_cut_closed": false,
+      "minimum_margin": 1
+    },
+    {
+      "original_node": 485523,
+      "initial_missing": [
+        31,
+        34,
+        37,
+        43,
+        46,
+        47,
+        56,
+        60,
+        67,
+        88,
+        109
+      ],
+      "initial_occupied": [
+        23,
+        27,
+        36,
+        39,
+        44,
+        70,
+        78,
+        81,
+        97
+      ],
+      "nodes": 1,
+      "weighted_leaves": 1,
+      "over_budget_leaves": 0,
+      "pending_leaves": 0,
+      "complete_under_context": true,
+      "previously_cut_closed": true,
+      "minimum_margin": 159
+    },
+    {
+      "original_node": 485522,
+      "initial_missing": [
+        31,
+        34,
+        37,
+        43,
+        46,
+        47,
+        56,
+        60,
+        67,
+        88
+      ],
+      "initial_occupied": [
+        23,
+        27,
+        36,
+        39,
+        44,
+        70,
+        78,
+        81,
+        97,
+        109
+      ],
+      "nodes": 1,
+      "weighted_leaves": 1,
+      "over_budget_leaves": 0,
+      "pending_leaves": 0,
+      "complete_under_context": true,
+      "previously_cut_closed": true,
+      "minimum_margin": 13
+    },
+    {
+      "original_node": 485519,
+      "initial_missing": [
+        31,
+        34,
+        37,
+        43,
+        46,
+        47,
+        60,
+        67,
+        88
+      ],
+      "initial_occupied": [
+        23,
+        27,
+        36,
+        39,
+        44,
+        56,
+        70,
+        78,
+        81
+      ],
+      "nodes": 5,
+      "weighted_leaves": 3,
+      "over_budget_leaves": 0,
+      "pending_leaves": 0,
+      "complete_under_context": true,
+      "previously_cut_closed": false,
+      "minimum_margin": 3
+    },
+    {
+      "original_node": 485517,
+      "initial_missing": [
+        31,
+        34,
+        37,
+        43,
+        46,
+        47,
+        67,
+        88
+      ],
+      "initial_occupied": [
+        23,
+        27,
+        36,
+        39,
+        44,
+        60,
+        70,
+        78,
+        81
+      ],
+      "nodes": 25,
+      "weighted_leaves": 13,
+      "over_budget_leaves": 0,
+      "pending_leaves": 0,
+      "complete_under_context": true,
+      "previously_cut_closed": false,
+      "minimum_margin": 3
+    },
+    {
+      "original_node": 485514,
+      "initial_missing": [
+        31,
+        34,
+        43,
+        46,
+        47,
+        67,
+        88
+      ],
+      "initial_occupied": [
+        27,
+        36,
+        37,
+        39,
+        44,
+        70,
+        78,
+        81
+      ],
+      "nodes": 99,
+      "weighted_leaves": 50,
+      "over_budget_leaves": 0,
+      "pending_leaves": 0,
+      "complete_under_context": true,
+      "previously_cut_closed": false,
+      "minimum_margin": 1
+    },
+    {
+      "original_node": 485512,
+      "initial_missing": [
+        34,
+        43,
+        46,
+        47,
+        67,
+        88
+      ],
+      "initial_occupied": [
+        27,
+        31,
+        36,
+        39,
+        44,
+        70,
+        78,
+        81
+      ],
+      "nodes": 177,
+      "weighted_leaves": 89,
+      "over_budget_leaves": 0,
+      "pending_leaves": 0,
+      "complete_under_context": true,
+      "previously_cut_closed": false,
+      "minimum_margin": 1
+    },
+    {
+      "original_node": 485509,
+      "initial_missing": [
+        34,
+        43,
+        46,
+        67,
+        88
+      ],
+      "initial_occupied": [
+        27,
+        36,
+        39,
+        44,
+        47,
+        78,
+        81
+      ],
+      "nodes": 385,
+      "weighted_leaves": 193,
+      "over_budget_leaves": 0,
+      "pending_leaves": 0,
+      "complete_under_context": true,
+      "previously_cut_closed": false,
+      "minimum_margin": 1
+    },
+    {
+      "original_node": 485506,
+      "initial_missing": [
+        43,
+        46,
+        67,
+        88
+      ],
+      "initial_occupied": [
+        27,
+        34,
+        36,
+        44,
+        78,
+        81
+      ],
+      "nodes": 341,
+      "weighted_leaves": 171,
+      "over_budget_leaves": 0,
+      "pending_leaves": 0,
+      "complete_under_context": true,
+      "previously_cut_closed": false,
+      "minimum_margin": 1
+    },
+    {
+      "original_node": 485503,
+      "initial_missing": [
+        43,
+        67,
+        88
+      ],
+      "initial_occupied": [
+        27,
+        36,
+        44,
+        46,
+        78
+      ],
+      "nodes": 1897,
+      "weighted_leaves": 949,
+      "over_budget_leaves": 0,
+      "pending_leaves": 0,
+      "complete_under_context": true,
+      "previously_cut_closed": false,
+      "minimum_margin": 1
+    },
+    {
+      "original_node": 30,
+      "initial_missing": [
+        25,
+        27,
+        47,
+        54,
+        67,
+        81,
+        112
+      ],
+      "initial_occupied": [
+        12,
+        20,
+        34,
+        43,
+        44,
+        46,
+        51,
+        55,
+        60,
+        69,
+        73,
+        88,
+        92,
+        93,
+        105,
+        109
+      ],
+      "nodes": 1,
+      "weighted_leaves": 1,
+      "over_budget_leaves": 0,
+      "pending_leaves": 0,
+      "complete_under_context": true,
+      "previously_cut_closed": true,
+      "minimum_margin": 21
+    },
+    {
+      "original_node": 29,
+      "initial_missing": [
+        25,
+        27,
+        47,
+        54,
+        67,
+        81
+      ],
+      "initial_occupied": [
+        12,
+        20,
+        34,
+        43,
+        44,
+        46,
+        51,
+        55,
+        60,
+        69,
+        73,
+        88,
+        92,
+        93,
+        105,
+        109,
+        112
+      ],
+      "nodes": 3,
+      "weighted_leaves": 2,
+      "over_budget_leaves": 0,
+      "pending_leaves": 0,
+      "complete_under_context": true,
+      "previously_cut_closed": false,
+      "minimum_margin": 8
+    },
+    {
+      "original_node": 24,
+      "initial_missing": [
+        25,
+        27,
+        47,
+        54,
+        67
+      ],
+      "initial_occupied": [
+        12,
+        20,
+        34,
+        43,
+        44,
+        46,
+        51,
+        55,
+        69,
+        81,
+        88,
+        93,
+        105,
+        109
+      ],
+      "nodes": 39,
+      "weighted_leaves": 20,
+      "over_budget_leaves": 0,
+      "pending_leaves": 0,
+      "complete_under_context": true,
+      "previously_cut_closed": false,
+      "minimum_margin": 1
+    },
+    {
+      "original_node": 11,
+      "initial_missing": [
+        27,
+        47,
+        54,
+        67
+      ],
+      "initial_occupied": [
+        25,
+        43,
+        88
+      ],
+      "nodes": 16199,
+      "weighted_leaves": 8100,
+      "over_budget_leaves": 0,
+      "pending_leaves": 0,
+      "complete_under_context": true,
+      "previously_cut_closed": false,
+      "minimum_margin": 1
+    },
+    {
+      "original_node": 9,
+      "initial_missing": [
+        27,
+        54,
+        67
+      ],
+      "initial_occupied": [
+        43,
+        47,
+        88
+      ],
+      "nodes": 31321,
+      "weighted_leaves": 15661,
+      "over_budget_leaves": 0,
+      "pending_leaves": 0,
+      "complete_under_context": true,
+      "previously_cut_closed": false,
+      "minimum_margin": 1
+    },
+    {
+      "original_node": 7,
+      "initial_missing": [
+        54,
+        67
+      ],
+      "initial_occupied": [
+        27,
+        43,
+        88
+      ],
+      "nodes": 24561,
+      "weighted_leaves": 12275,
+      "over_budget_leaves": 0,
+      "pending_leaves": 6,
+      "complete_under_context": false,
+      "previously_cut_closed": false,
+      "minimum_margin": 1
+    },
+    {
+      "original_node": 4,
+      "initial_missing": [
+        54
+      ],
+      "initial_occupied": [
+        43,
+        67
+      ],
+      "nodes": 1,
+      "weighted_leaves": 0,
+      "over_budget_leaves": 0,
+      "pending_leaves": 1,
+      "complete_under_context": false,
+      "previously_cut_closed": false,
+      "minimum_margin": null
+    },
+    {
+      "original_node": 2,
+      "initial_missing": [],
+      "initial_occupied": [
+        43,
+        54
+      ],
+      "nodes": 1,
+      "weighted_leaves": 0,
+      "over_budget_leaves": 0,
+      "pending_leaves": 1,
+      "complete_under_context": false,
+      "previously_cut_closed": false,
+      "minimum_margin": null
+    }
+  ],
+  "pending_count": 8,
+  "complete": false,
+  "seconds": 19.6397930419771,
+  "script_sha256": "0886401a589061cd2d96e62c4cd9056b83e94e1023f2b91ad09a61be627e0acb"
+}

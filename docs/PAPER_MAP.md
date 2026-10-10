@@ -172,3 +172,20 @@ pinned 2026 archive; it has no numbered counterpart in Suk or HMPT. The
 [assembly ledger](../experiments/omission-global-assembly-2026-10-10/README.md)
 maps the arithmetic certificates, geometric transfers and final declarations.
 It does not change either paper's asymptotic coefficient.
+
+## Supplementary residual32 transfer and branch proofs
+
+These project results have no numbered counterpart in Suk or HMPT.
+
+| Result | Lean file and theorem | Scope |
+| --- | --- | --- |
+| Full enlarged catalog transfer | [Transfer.lean](../experiments/omission-residual32-transfer-2026-10-10/Transfer.lean): `OmissionResidual32Transfer.all_rows`, `feasible_holes` | All 2,469 exact rows hold for the same actual residual assignment; holes plus points equal 154. |
+| Conditional arithmetic interface | Same file: `residual_bound_of_hole_budget` | Converts an explicit, separately proved hole-budget exclusion to a population bound; no 32-hole exclusion is asserted. |
+| Five arithmetic contexts | [Context bundle](../experiments/omission-residual32-context-certificates-2026-10-10/README.md): `OmissionResidual32Contexts.node492360`, `node492359`, `node485523`, `node485522`, `node30` | Exclude their stated contexts under explicit literal row validity and at most 32 holes. |
+| Actual geometric contexts | [ContextGeometry.lean](../experiments/omission-residual32-transfer-2026-10-10/ContextGeometry.lean): `geometric_node492360`, `geometric_node492359`, `geometric_node485523`, `geometric_node485522`, `geometric_node30`, `geometric_parent492360`, `geometric_parent485523`, all in `OmissionResidual32Transfer` | Discharge row validity for actual residual configurations of at least 122 points; the two parent results eliminate one split assumption each. |
+| Mandatory zero state | [ZeroState.lean](../experiments/omission-residual32-context-certificates-2026-10-10/ZeroState.lean): `OmissionResidualZeroState.zero_mem_residualOccupied` | Every nonempty actual residual configuration occupies catalog state zero. |
+| Six newly closed subtrees | [Resumed Lean bundle](../experiments/omission-residual32-resume-lean-2026-10-10/README.md): `OmissionResidual32Resume.Context492357.excludes_context`, and corresponding declarations for `Context29`, `Context485519`, `Context492355`, `Context485517`, `Context24` | Each proves its full inherited context impossible at 32 holes; the same bundle's `Geometry.lean` discharges row validity for actual configurations with at least 122 points. All 44 splits and 50 weighted leaves are checked. |
+
+The precise 2,469-row provenance table is in the
+[transfer bundle](../experiments/omission-residual32-transfer-2026-10-10/README.md).
+These theorems do not complete the 313-point target.

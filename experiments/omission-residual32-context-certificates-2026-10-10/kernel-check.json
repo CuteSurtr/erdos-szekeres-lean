@@ -1,0 +1,105 @@
+{
+  "scope": "Five conditioned arithmetic exclusions for a literal 2469-row Boolean system; all row inequalities are explicit assumptions. No geometric transfer or complete 32-hole exclusion.",
+  "lean": "Lean (version 4.24.0, arm64-apple-darwin23.6.0, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)",
+  "manifest_sha256": "bf9dbfda1e15488b39cc3693949abaae1beec6e8e72f41e1bf4817012b357393",
+  "checker_sha256": "3d69ac8cb9069ed87594578d79bacdfcfbb817634c4428b32e789d291cd354ac",
+  "all_modules_passed": true,
+  "validated_identities": {
+    "source archive": "138a9fd6e3c773437411e9cca487153a221928e6d5d85d09b8d73e4919f5e8c3",
+    "uncompressed source": "f03eebb1d20eae3bd25dbb5024eaacdfdcc5bcd8ed964d190bdfa59c73aeb909",
+    "diagnostic": "947c50d3ed3df43728c4ee320e24f0a5fabf2d80b6e541fd6ae8fce976dc9a22",
+    "pending contexts": "723ad9f3cbe5474769ee87d7080f018bef8278d8b4939474378906919e22af9d",
+    "generator": "c0a70318c9ce341cf6b8b67f2a9276cc614f366e23e4673e5529862377befa58",
+    "exporter": "af6df59bcab2e2ca68ff6d165314e16cf36a67ec6569da4251442b9c673c9f59",
+    "generated source Residual32ContextsProof/Audit.lean": "9748948a615adc3da71f0479922f0bf29cdef678e1de06932f885cd79d17ff78",
+    "generated source Residual32ContextsProof/Catalog.lean": "053f35ea49b7ec2b95818e96ab18bcd7628c09190d0e97bfc1552f3937b606bd",
+    "generated source Residual32ContextsProof/Node30.lean": "ce57a1b5ad6c5093964ed827f98db5a3375bcc8e3893ba259306ce86d9629bde",
+    "generated source Residual32ContextsProof/Node485522.lean": "4c67bf42a80526538eaed8a95b9f61ee52f3fc975434d2239f521188f744ea4a",
+    "generated source Residual32ContextsProof/Node485523.lean": "37e5e4c2074f709389289ea1a4e0dd11b13cbacd781166a54c59527521ec76ee",
+    "generated source Residual32ContextsProof/Node492359.lean": "f38e54bebc7385010e74970d0e82f9459a85db5f9fbe39a31a22a5e4dbc034df",
+    "generated source Residual32ContextsProof/Node492360.lean": "24761799c04025f0ff8f08cbada88628c3abe5bbcd16bb78a6567202b062cbd7"
+  },
+  "conditional_exclusions": 5,
+  "modules": [
+    {
+      "module": "Residual32ContextsProof.Catalog",
+      "seconds": 67.087,
+      "source_sha256": "053f35ea49b7ec2b95818e96ab18bcd7628c09190d0e97bfc1552f3937b606bd",
+      "log_sha256": "1ab7a5d81ee40b60316f5432b1b7b6387543d579de8e115652a6a92ec52ad55d",
+      "olean_sha256": "710097ed4b1c00033aec31c1d9138d0fcbe08e6ccfabfd8c0e7f2cec26acf664"
+    },
+    {
+      "module": "Residual32ContextsProof.Node492360",
+      "seconds": 2.855,
+      "source_sha256": "24761799c04025f0ff8f08cbada88628c3abe5bbcd16bb78a6567202b062cbd7",
+      "log_sha256": "18021fd4d0b97c1c16d8bebe239cd122fc5004b514ecab9b41cfed137ff383a7",
+      "olean_sha256": "27f04e4d4f3891c90c4d1dabbbad952b8428008e7b68fe48ef82bf20679ba78b"
+    },
+    {
+      "module": "Residual32ContextsProof.Node492359",
+      "seconds": 2.765,
+      "source_sha256": "f38e54bebc7385010e74970d0e82f9459a85db5f9fbe39a31a22a5e4dbc034df",
+      "log_sha256": "9cc089a9afc188e34685160cb413700465684fca831c28b63ab4e7c5ea21a83b",
+      "olean_sha256": "6490780757ac4a7bb33c482f6d6f353d22ae9b772fa2e21984729811296f08ec"
+    },
+    {
+      "module": "Residual32ContextsProof.Node485523",
+      "seconds": 2.828,
+      "source_sha256": "37e5e4c2074f709389289ea1a4e0dd11b13cbacd781166a54c59527521ec76ee",
+      "log_sha256": "c787d9aefcd90f7c070b4aade5c89972427cfcf297246358d54becef814bf298",
+      "olean_sha256": "c38dbee280562f3b8cb15eada93c507f0fa08d72f4d1d95d34f30d8bb240f65b"
+    },
+    {
+      "module": "Residual32ContextsProof.Node485522",
+      "seconds": 2.661,
+      "source_sha256": "4c67bf42a80526538eaed8a95b9f61ee52f3fc975434d2239f521188f744ea4a",
+      "log_sha256": "95cd0227e426079ad626e902c845afb18eac046024995967115e23561e053fa6",
+      "olean_sha256": "478f3e6db80ddbb50b6a7b7ab12c84cdfa939396c34483b32b59765361e2cffd"
+    },
+    {
+      "module": "Residual32ContextsProof.Node30",
+      "seconds": 2.749,
+      "source_sha256": "ce57a1b5ad6c5093964ed827f98db5a3375bcc8e3893ba259306ce86d9629bde",
+      "log_sha256": "9502c4212170b166163449877f3d220df9ee93177eb911aa35663298162ddaae",
+      "olean_sha256": "c03ede02e561ce39d82cd7421475fccaf5f7efcc17dc1ea0ec5527cdf931f1df"
+    },
+    {
+      "module": "Residual32ContextsProof.Audit",
+      "seconds": 1.758,
+      "source_sha256": "9748948a615adc3da71f0479922f0bf29cdef678e1de06932f885cd79d17ff78",
+      "log_sha256": "76ee75074b938b8fc37e0870ee3babea271d82e73db3ea2cea53431ac33e5626",
+      "olean_sha256": "b26f7bc5b64d8ea26bbc65ff457fa50ae53996d4c215fa3760969a5cbf32dc7f"
+    }
+  ],
+  "axioms_sha256": "76ee75074b938b8fc37e0870ee3babea271d82e73db3ea2cea53431ac33e5626",
+  "axioms": {
+    "OmissionResidual32Contexts.node492360": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "OmissionResidual32Contexts.node492359": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "OmissionResidual32Contexts.node485523": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "OmissionResidual32Contexts.node485522": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "OmissionResidual32Contexts.node30": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "geometric_transfer_checked": false,
+  "complete_32_hole_exclusion": false,
+  "frozen_tree_modified": false
+}

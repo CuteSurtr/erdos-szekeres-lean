@@ -150,6 +150,22 @@ in [CoupledNineStructuralVariants.lean](ErdosSzekeres/Omission/CoupledNineStruct
 The [structural proof artifact](experiments/omission-coupled-nine-structural-2026-10-10/README.md)
 contains the readable argument and all three checked instances.
 
+The enlarged **2,469-row residual catalog now has a complete geometric
+transfer** in [Transfer.lean](experiments/omission-residual32-transfer-2026-10-10/Transfer.lean).
+`OmissionResidual32Transfer.all_rows` proves every literal constraint for one
+actual residual assignment; `feasible_holes` also gives its exact population
+complement. Five conditional arithmetic exclusions are checked in the
+[context-certificate bundle](experiments/omission-residual32-context-certificates-2026-10-10/README.md),
+and [ContextGeometry.lean](experiments/omission-residual32-transfer-2026-10-10/ContextGeometry.lean)
+applies them to actual configurations of at least 122 points, including two
+merged-parent exclusions. A separate [zero-state theorem](experiments/omission-residual32-context-certificates-2026-10-10/ZeroState.lean)
+proves that every nonempty actual residual configuration occupies state zero.
+Six further closed subtrees and their actual-configuration corollaries are
+checked in the [resumed Lean bundle](experiments/omission-residual32-resume-lean-2026-10-10/README.md),
+covering all 44 splits and 50 weighted leaves in those six trees.
+These are finished standalone proofs; the complete 32-hole exclusion is still
+missing, so the global bound remains 314.
+
 ## Verification
 
 Pinned versions: **Lean 4.24.0**, **Mathlib v4.24.0**; dependency revisions are in
@@ -179,12 +195,14 @@ instructions and are not silently counted as default-library CI checks.
 
 ## In-progress research — 10 October 2026
 
-The 313-point target is **not proved**. The bounded balanced 62-hole search
-was inconclusive. The residual 32-hole checkpoint retains 24 open cases;
-separate exact arithmetic cuts handle five of them, leaving 19 unresolved by
-the combined checks. That larger literal research catalog and its partial
-arithmetic proof have not been checked in Lean. Neither solver output nor a
-partially checked certificate is counted as a theorem.
+The 313-point target is **not proved**. The bounded balanced 62-hole searches,
+including a separate [ten-minute SAT run](experiments/omission-balanced62-sat-2026-10-10/README.md),
+were inconclusive. The [resumed residual search](experiments/omission-residual32-resume-2026-10-10/README.md)
+has eight pending frontier leaves within three of the original 24 unresolved
+contexts. Eleven original contexts now have Lean proofs; another ten have
+complete, independently replayed integer subtrees. The enlarged catalog's
+geometric transfer is finished, but the full arithmetic exclusion is neither
+complete nor Lean-checked. Frontier counts do not measure a completion percentage.
 
 The [current work estimate](docs/ES8_REMAINING.md) separates these stronger
 targets from the completed 314-point result. The earlier complete 315-, 316-

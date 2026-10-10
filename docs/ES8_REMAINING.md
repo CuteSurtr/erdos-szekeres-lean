@@ -35,23 +35,29 @@ cuts and exact catalog identifications are also checked in Lean.
 | Target | Required work | Unknowns and rough size |
 | --- | --- | --- |
 | 313 through the balanced side | Exclude at most 62 balanced holes, export and check a complete arithmetic proof, then reuse the proved geometric interface. | The bounded witness search was inconclusive. No exclusion or 62-hole witness was found. The geometric transfer for the present catalog is already available, but there is no reliable search or proof-size estimate. |
-| 313 through the residual side | Finish the 32-hole exclusion, bind every row of the enlarged research catalog to actual residual points in Lean, check all arithmetic and compose the result. | The frozen tree has 24 pending cases; five have separate exact integer certificates, leaving 19 unresolved by the combined checks. Neither root case is closed. The partial tree already has 350,966 closed leaves, about seven times the leaf count of the completed residual31 proof. Using similar packing could require thousands of generated Lean parts; compression could change that size substantially. Unexplored subtrees prevent a reliable completion-time estimate. |
+| 313 through the residual side | Finish the 32-hole exclusion, check its complete arithmetic proof in Lean, then compose it with the now-proved full geometric transfer. | The resumed tree has eight pending leaves within three of the original 24 contexts. Eleven original contexts have Lean proofs; ten more have complete integer-replayed subtrees. One side of the state-43 split is closed arithmetically. The partial tree has 391,293 leaves, about eight times the completed residual31 proof. Similar packing could require thousands of generated Lean parts; compression could change that size substantially. Unexplored subtrees prevent a reliable completion-time estimate. |
 | Further improvements | Find stronger necessary constraints or a stronger counting argument, and prove the complete resulting reduction. | The newer coupled and structural geometric rows are individually proved. They do not themselves establish a stronger population bound, and no reliable estimate for another global improvement is available. |
 
-The enlarged residual model has 2,469 rows, including twelve replayed arithmetic
-consequences. Its individual new geometric inequalities have Lean proofs, but
-the exact full literal catalog has no completed Lean binding. That binding must
-show every indexed row holds for the same actual point assignment; a successful
-solver result would not discharge it. The existing projective chart and
-partition can be reused once the enlarged population theorem is proved.
-Whether this finite Boolean model excludes 32 holes is itself unresolved.
+The enlarged residual model has 2,469 rows, including twelve arithmetic
+consequences. Its [full literal geometric binding](../experiments/omission-residual32-transfer-2026-10-10/README.md)
+is now proved in Lean. `OmissionResidual32Transfer.all_rows` establishes every
+indexed row for the same actual residual assignment, and `feasible_holes`
+proves the population equation `sum holes + n = 154`. The conditional theorem
+`residual_bound_of_hole_budget` isolates the arithmetic exclusion still needed;
+it does not supply that exclusion. The existing chart and partition can then
+be reused. Whether this finite Boolean model excludes 32 holes remains unresolved.
 
-The [residual checkpoint](../experiments/omission-residual32-research-2026-10-10/README.md),
-[separate five-cut probe](../experiments/omission-residual32-three-row-probe-2026-10-10/README.md)
-and [balanced search diagnostic](../experiments/omission-balanced62-research-2026-10-10/README.md)
-preserve exact inputs and clearly separate numerical diagnostics from checked
-proofs. The three newest nine-state rows did not close any additional pending
-context in the bounded probe. No solver remains running.
+The [new residual checkpoint](../experiments/omission-residual32-resume-2026-10-10/README.md)
+preserves the resumed tree's identity and sixteen closed conditional subtrees;
+the earlier frozen tree remains unchanged. The [five-cut Lean bundle](../experiments/omission-residual32-context-certificates-2026-10-10/README.md)
+and transfer bundle distinguish checked theorems from integer search evidence.
+The [six resumed Lean subtrees](../experiments/omission-residual32-resume-lean-2026-10-10/README.md)
+discharge 44 splits and 50 weighted leaves and supply actual geometric corollaries.
+The [balanced search diagnostic](../experiments/omission-balanced62-research-2026-10-10/README.md)
+and [SAT continuation](../experiments/omission-balanced62-sat-2026-10-10/README.md)
+are inconclusive. The separately proved occupancy of state zero is an additional
+actual-rank restriction; fixing it closed no extra original context in the
+numerical probe. No stronger bound follows from these partial results.
 
 A Lean-checked 32-hole abstract witness satisfies all 1,187 original residual
 rows and all 45 earlier additions. Later searches found further witnesses for

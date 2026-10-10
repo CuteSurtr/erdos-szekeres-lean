@@ -1,5 +1,63 @@
 # Verification records
 
+## Residual32 catalog transfer and contextual proofs — 10 October 2026 continuation
+
+The [transfer gate](../experiments/omission-residual32-transfer-2026-10-10/kernel-check.json)
+passes six fresh modules and audits 17 named roots. It proves every one of the
+2,469 frozen literal inequalities for the same actual residual configuration,
+including all twelve final rounded consequences and the exact population
+complement. Five actual-configuration exclusions and two merged-parent
+exclusions also pass. All reported axioms are `propext`, `Classical.choice`,
+and `Quot.sound`. The checker rehashes 747 prerequisite objects/configurations
+and 72 external Lean sources; a corrupted original catalog is rejected before
+compilation. See its [complete validation](../experiments/omission-residual32-transfer-2026-10-10/validation.json).
+
+The [five original contextual certificates](../experiments/omission-residual32-context-certificates-2026-10-10/kernel-check.json)
+pass seven fresh modules with explicit row-validity premises. Their checker
+validates archived source, decompressed source, diagnostic, frozen contexts,
+generator, exporter and generated-file identities before compiling. The
+negative preflight test rejects a mismatched source. The separate
+[zero-state check](../experiments/omission-residual32-context-certificates-2026-10-10/zero-state-check.json)
+proves actual occupancy of state zero for every nonempty residual configuration.
+
+The [six resumed subtree proofs](../experiments/omission-residual32-resume-lean-2026-10-10/kernel-check.json)
+pass seven fresh modules and audit twelve conclusions: six conditional
+arithmetic exclusions and six actual geometric corollaries. Their 94 nodes,
+44 binary splits and 50 weighted leaves were independently reviewed against
+the inherited contexts and frozen source. All 853 recorded prerequisite/source
+identities match; an altered subtree archive is rejected before compilation.
+Only the same three standard axioms occur. The fresh check took 58.595 seconds.
+
+The [resumed arithmetic tree](../experiments/omission-residual32-resume-2026-10-10/README.md)
+and sixteen closed conditional subtrees pass independent unbounded-integer
+replay, with six corruption controls. This evidence is separate from Lean:
+eight leaves remain open, within three original contexts, and the full tree
+is not a checked 32-hole exclusion. Six of the sixteen new conditional
+subtrees additionally have the Lean proofs above; ten remain integer-only.
+The [balanced SAT run](../experiments/omission-balanced62-sat-2026-10-10/README.md)
+ended `UNKNOWN` at 600 seconds. It is not an infeasibility certificate.
+
+All 3,929 input identities of the completed 314-point gate were rehashed during
+this continuation and remained unchanged. These new standalone bundles are
+checked separately; the maintained library's CI does not implicitly build them.
+The [final packaging record](validation/residual32-continuation-checks-2026-10-10.json)
+binds all 21 new Lean sources and the bundle records. It records eight passing
+negative controls, matching artifact identities, and no proof placeholders or
+custom axiom declarations in those sources.
+
+## Hosted CI repair — 10 October 2026
+
+GitHub [run 38011126753](https://github.com/CuteSurtr/erdos-szekeres-lean/actions/runs/38011126753)
+succeeded on commit `2359347ecc880b8b932b1e78dd5d02ab0166fff3` in 1h18m57s.
+It passed the full 3,301-job library build, the 571-theorem standard-axiom audit,
+92 Python tests (23 conditional skips), and all 26 opted-in Lean integration
+checks. No proof checks were removed. The workflow limits compiler/build
+parallelism, provisions extra swap, cancels superseded runs, and saves the
+project build cache only after all checks pass. The cold full-library stage
+took 43m03s, including 2,324 seconds in `GeneralResidualBlocks`; the verified
+build cache was successfully saved. This hosted result is distinct from the
+standalone final 314-point gate and the new standalone transfer checks.
+
 ## Closed 314-point theorem — 10 October 2026
 
 The [complete final gate](../experiments/omission-global-assembly-2026-10-10/global-cover-314-check.json)

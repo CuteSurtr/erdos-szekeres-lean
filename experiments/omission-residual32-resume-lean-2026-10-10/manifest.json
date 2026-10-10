@@ -1,0 +1,253 @@
+{
+  "scope": "Six complete inherited-context exclusions with explicit literal-row assumptions, plus actual-configuration corollaries. No complete32-hole exclusion or new planar bound.",
+  "source_uncompressed_sha256": "f03eebb1d20eae3bd25dbb5024eaacdfdcc5bcd8ed964d190bdfa59c73aeb909",
+  "generator_sha256": "8aa3b31135c359f0d1fe906e570db059800342f57f8a3a519457b46ce27c4e86",
+  "external_inputs": {
+    "experiments/omission-residual32-research-2026-10-10/source.json.gz": "138a9fd6e3c773437411e9cca487153a221928e6d5d85d09b8d73e4919f5e8c3",
+    "experiments/omission-residual32-research-2026-10-10/pending-contexts.json": "723ad9f3cbe5474769ee87d7080f018bef8278d8b4939474378906919e22af9d",
+    "scripts/omission_lean_export.py": "af6df59bcab2e2ca68ff6d165314e16cf36a67ec6569da4251442b9c673c9f59",
+    "scripts/omission_row_probe.py": "70e1cf0ecea170079855469325f0e88203bc202f407000209d727bfad250adb9",
+    "experiments/omission-residual32-resume-2026-10-10/check.py": "b3f33a623b12a1ba5985f8d8fa8f3d556501cec0704a21b20eae28e6f9810040",
+    "experiments/omission-residual32-context-certificates-2026-10-10/manifest.json": "bf9dbfda1e15488b39cc3693949abaae1beec6e8e72f41e1bf4817012b357393",
+    "experiments/omission-residual32-context-certificates-2026-10-10/Residual32ContextsProof/Catalog.lean": "053f35ea49b7ec2b95818e96ab18bcd7628c09190d0e97bfc1552f3937b606bd",
+    "experiments/omission-residual32-transfer-2026-10-10/mapping.json": "a20c3def596e3ec600235730d1cf049a49db7613a4f7d65e76281397f3c21975",
+    "experiments/omission-residual32-transfer-2026-10-10/kernel-check.json": "b3b5a658aa2d25c4797243fa997eba688fe9dee3ee8064b7a6331d40e348b504",
+    "experiments/omission-residual32-transfer-2026-10-10/ContextGeometry.lean": "3b7e7fb8e8fbbf5bc841b08b4e587ae2513f990a53b06a3d24baf8d397de82dd",
+    "experiments/omission-residual32-transfer-2026-10-10/Transfer.lean": "e19e3d99f0b409eed8f176d1400d6f77dfd6d3b2fec840453c2a12e4d5985e8d"
+  },
+  "proofs": [
+    {
+      "original_node": 492357,
+      "archive": "experiments/omission-residual32-resume-2026-10-10/closed-context-492357.json.gz",
+      "archive_sha256": "fb9e09fc3611ccbcd3c53b5e15d5e2f8a0c1f9714371745d223cba450f58f701",
+      "root": 0,
+      "missing": [
+        27,
+        43,
+        47,
+        60,
+        67,
+        88,
+        93,
+        109
+      ],
+      "occupied": [
+        25,
+        34,
+        36,
+        44,
+        45,
+        49,
+        50,
+        65,
+        78
+      ],
+      "module": "Residual32ResumeProof.Context492357",
+      "theorem": "OmissionResidual32Resume.Context492357.excludes_context",
+      "exact_replay": {
+        "nodes": 3,
+        "weighted_leaves": 2,
+        "over_budget_leaves": 0,
+        "minimum_margin": 19
+      },
+      "geometric_theorem": "OmissionResidual32Resume.geometric_context492357"
+    },
+    {
+      "original_node": 29,
+      "archive": "experiments/omission-residual32-resume-2026-10-10/closed-context-29.json.gz",
+      "archive_sha256": "571ab2fa14de7411c9609eec894f8d2f198562b4e47f7020ff9aaddb4c68bf05",
+      "root": 0,
+      "missing": [
+        25,
+        27,
+        47,
+        54,
+        67,
+        81
+      ],
+      "occupied": [
+        12,
+        20,
+        34,
+        43,
+        44,
+        46,
+        51,
+        55,
+        60,
+        69,
+        73,
+        88,
+        92,
+        93,
+        105,
+        109,
+        112
+      ],
+      "module": "Residual32ResumeProof.Context29",
+      "theorem": "OmissionResidual32Resume.Context29.excludes_context",
+      "exact_replay": {
+        "nodes": 3,
+        "weighted_leaves": 2,
+        "over_budget_leaves": 0,
+        "minimum_margin": 8
+      },
+      "geometric_theorem": "OmissionResidual32Resume.geometric_context29"
+    },
+    {
+      "original_node": 485519,
+      "archive": "experiments/omission-residual32-resume-2026-10-10/closed-context-485519.json.gz",
+      "archive_sha256": "8f3d8bb141e0c560ee931f3e4cfbb217e8e70939cccdd085d9bc572ce99b7670",
+      "root": 0,
+      "missing": [
+        31,
+        34,
+        37,
+        43,
+        46,
+        47,
+        60,
+        67,
+        88
+      ],
+      "occupied": [
+        23,
+        27,
+        36,
+        39,
+        44,
+        56,
+        70,
+        78,
+        81
+      ],
+      "module": "Residual32ResumeProof.Context485519",
+      "theorem": "OmissionResidual32Resume.Context485519.excludes_context",
+      "exact_replay": {
+        "nodes": 5,
+        "weighted_leaves": 3,
+        "over_budget_leaves": 0,
+        "minimum_margin": 3
+      },
+      "geometric_theorem": "OmissionResidual32Resume.geometric_context485519"
+    },
+    {
+      "original_node": 492355,
+      "archive": "experiments/omission-residual32-resume-2026-10-10/closed-context-492355.json.gz",
+      "archive_sha256": "40017f697a5993e379fce012e598790c2f941227c8dd900ab1f93b9a79473fa6",
+      "root": 0,
+      "missing": [
+        27,
+        43,
+        47,
+        60,
+        67,
+        88,
+        109
+      ],
+      "occupied": [
+        25,
+        34,
+        36,
+        44,
+        45,
+        50,
+        65,
+        78,
+        93
+      ],
+      "module": "Residual32ResumeProof.Context492355",
+      "theorem": "OmissionResidual32Resume.Context492355.excludes_context",
+      "exact_replay": {
+        "nodes": 19,
+        "weighted_leaves": 10,
+        "over_budget_leaves": 0,
+        "minimum_margin": 1
+      },
+      "geometric_theorem": "OmissionResidual32Resume.geometric_context492355"
+    },
+    {
+      "original_node": 485517,
+      "archive": "experiments/omission-residual32-resume-2026-10-10/closed-context-485517.json.gz",
+      "archive_sha256": "79a464f79b86839b8c384516e8bf96eafd94fa2b02fced8e090ae0f1b0575b05",
+      "root": 0,
+      "missing": [
+        31,
+        34,
+        37,
+        43,
+        46,
+        47,
+        67,
+        88
+      ],
+      "occupied": [
+        23,
+        27,
+        36,
+        39,
+        44,
+        60,
+        70,
+        78,
+        81
+      ],
+      "module": "Residual32ResumeProof.Context485517",
+      "theorem": "OmissionResidual32Resume.Context485517.excludes_context",
+      "exact_replay": {
+        "nodes": 25,
+        "weighted_leaves": 13,
+        "over_budget_leaves": 0,
+        "minimum_margin": 3
+      },
+      "geometric_theorem": "OmissionResidual32Resume.geometric_context485517"
+    },
+    {
+      "original_node": 24,
+      "archive": "experiments/omission-residual32-resume-2026-10-10/closed-context-24.json.gz",
+      "archive_sha256": "a073ebb42b81a3c25fc6bf646b0055e64e791610766558807d0c0a92f8cf517c",
+      "root": 0,
+      "missing": [
+        25,
+        27,
+        47,
+        54,
+        67
+      ],
+      "occupied": [
+        12,
+        20,
+        34,
+        43,
+        44,
+        46,
+        51,
+        55,
+        69,
+        81,
+        88,
+        93,
+        105,
+        109
+      ],
+      "module": "Residual32ResumeProof.Context24",
+      "theorem": "OmissionResidual32Resume.Context24.excludes_context",
+      "exact_replay": {
+        "nodes": 39,
+        "weighted_leaves": 20,
+        "over_budget_leaves": 0,
+        "minimum_margin": 1
+      },
+      "geometric_theorem": "OmissionResidual32Resume.geometric_context24"
+    }
+  ],
+  "files": {
+    "Residual32ResumeProof/Context24.lean": "ba7e1679d0fef4d553a58cfd619369674015465b3a8cb61e362eae6c54deec08",
+    "Residual32ResumeProof/Context29.lean": "20a4777ea5d20da9a3e0f5c5c4ae49f56c0c10ebc4643717b5790f79866e9469",
+    "Residual32ResumeProof/Context485517.lean": "4e1da40fb0bc6f1e7bb89c807474f16b844d96ae2a49265af1a13dfa5546dd9f",
+    "Residual32ResumeProof/Context485519.lean": "9287387faad84d8004b8189fe56ff865b7713e15b0ccc51d3572665a743bbdc4",
+    "Residual32ResumeProof/Context492355.lean": "2d873b5185cd7eebc1f1ff1dc6a977f1c2f5ada19468015f630fd5c6c95ceeb5",
+    "Residual32ResumeProof/Context492357.lean": "91bdc266845908331198e077d1edb5109b1a27581a23e2409543e2e550f55c5b",
+    "Residual32ResumeProof/Geometry.lean": "eb082cdafbb398b1df92edc954c6008b3e8817b6568ce4ac1b743582180619dc"
+  }
+}

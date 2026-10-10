@@ -1,0 +1,15 @@
+{
+  "scope": "Negative control for prerequisite source identity; no original input changed",
+  "command": [
+    "python3",
+    "experiments/omission-residual32-transfer-2026-10-10/check.py",
+    "--arithmetic",
+    "/workspace/erdos-szekeres-lean/.cache/residual32-transfer-provenance-negative",
+    "--output",
+    "/workspace/erdos-szekeres-lean/.cache/residual32-transfer-provenance-negative/output"
+  ],
+  "exit": 1,
+  "rejected_before_compilation": true,
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/erdos-szekeres-lean/experiments/omission-residual32-transfer-2026-10-10/check.py\", line 30, in <module>\n    bind_source(paths[2]/'Catalog.lean',hashlib.sha256(original_raw).hexdigest())\n    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/erdos-szekeres-lean/experiments/omission-residual32-transfer-2026-10-10/check.py\", line 26, in bind_source\n    assert sha(path)==expected, f'Changed prerequisite source: {path}'\n           ^^^^^^^^^^^^^^^^^^^\nAssertionError: Changed prerequisite source: /workspace/erdos-szekeres-lean/.cache/residual32-transfer-provenance-negative/Catalog.lean\n",
+  "original_source_sha256": "f94c74ecade3b2714f961cd3ee7826ad0804342886f0e86ab2ca3908f86cb7da"
+}
