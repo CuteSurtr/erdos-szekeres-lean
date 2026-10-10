@@ -9,3 +9,6 @@ rev = "v4.24.0"
 
 [[lean_lib]]
 name = "ErdosSzekeres"
+# Lean 4.24's compiler does not read LEAN_NUM_THREADS. Avoid overlapping
+# elaboration of the large certificate terms inside an individual module.
+weakLeanArgs = ["-j1"]

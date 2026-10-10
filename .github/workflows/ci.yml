@@ -2,9 +2,16 @@ name: Check formalization
 on: [push, pull_request]
 permissions:
   contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   check:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    env:
+      # Lake's worker pool and Lean's compiler pool are separate in Lean 4.24.
+      # The compiler is limited by weakLeanArgs in lakefile.toml.
+      LEAN_NUM_THREADS: "1"
     steps:
       - uses: actions/checkout@v4
       - uses: leanprover/lean-action@v1
@@ -13,6 +20,13 @@ jobs:
           build: "false"
           use-github-cache: "false"
           use-mathlib-cache: "true"
+      - name: Record runner resources
+        run: |
+          lean --version
+          lake --version
+          nproc
+          free -h
+          df -h .
       - name: Build coupled proofs sequentially
         shell: bash
         run: |
@@ -20,7 +34,7 @@ jobs:
           for module in CoupledVariants CoupledSecondVariants CoupledThirdVariants CoupledFourthVariants CoupledFifthVariants CoupledElevenObstruction CoupledNineVariant; do
             /usr/bin/time -v lake build --wfail "ErdosSzekeres.Omission.$module"
           done
-          lake build --wfail
+          /usr/bin/time -v lake build --wfail
       - name: Test exact-coordinate search
         run: python3 -m unittest discover -s scripts -v
       - name: Audit theorem axioms
