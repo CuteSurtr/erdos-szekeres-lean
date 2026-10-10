@@ -160,3 +160,15 @@ power-of-two threshold can be halved when its counting term exceeds the
 auxiliary floor. [VisibleEdgeInsertion.lean](../ErdosSzekeres/VisibleEdgeInsertion.lean)
 proves `VisibleEdgeInsertion.convexPosition_insert_of_one_visible_edge` for an
 explicit supporting-edge family with retained vertex coverage.
+
+## Supplementary finite octagon theorem
+
+`ErdosSzekeres.Omission.forces_convex_octagon_314` and
+`convex_octagon_of_card_ge_314` in
+[FinalCover314B61FusedR31Fused.lean](../experiments/omission-global-assembly-2026-10-10/FinalCover314B61FusedR31Fused.lean)
+prove the 314-point ordinary real-plane bound. This is a separate computational
+route using the omission method and state catalogs credited to Schroeder's
+pinned 2026 archive; it has no numbered counterpart in Suk or HMPT. The
+[assembly ledger](../experiments/omission-global-assembly-2026-10-10/README.md)
+maps the arithmetic certificates, geometric transfers and final declarations.
+It does not change either paper's asymptotic coefficient.

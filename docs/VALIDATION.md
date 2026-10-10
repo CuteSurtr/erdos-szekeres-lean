@@ -1,5 +1,29 @@
 # Verification records
 
+## Closed 314-point theorem — 10 October 2026
+
+The [complete final gate](../experiments/omission-global-assembly-2026-10-10/global-cover-314-check.json)
+passes all eight assembly modules and rehashes **3,929 unchanged inputs**.
+Its SHA-256 is `a16dea3164f6269ebb985595a513c886ff73993b6d381e626d704b80fee1d016`.
+The [full final axiom output](../experiments/omission-global-assembly-2026-10-10/global-cover-314-axioms.txt)
+checks `ErdosSzekeres.Omission.forces_convex_octagon_314` and its explicit
+real-point form, with only `propext`, `Classical.choice` and `Quot.sound`.
+The theorem has no undischarged row, arithmetic or coordinate hypotheses.
+
+The residual31 arithmetic proof passes all **1,218 modules**: 1,216 parts,
+catalog and root, covering 50,945 leaves. The balanced61 proof has 22,318
+leaves in 504 modules. Both source-only archives were independently checked
+against every exported source hash and scanned for proof placeholders and
+native-evaluation tokens. The 264 loose source files in the 571-root library
+audit below remain byte-for-byte unchanged. No additional library build or
+test-suite run is claimed for this certificate-only completion.
+
+The [additional validation record](validation/octagon-314-checks-2026-10-10.json)
+binds these independent checks. The observed final gate took 444.789 seconds
+and reached 31,645,417,472 bytes of child-process resident memory (about 29.47
+GiB). These are measurements from this Mac, not portable resource guarantees.
+The current GitHub build remains separate from these completed local checks.
+
 ## Structural geometry and uniform finite saving — 10 October 2026
 
 The complete library passes `lake build --wfail` (**3,301 jobs**). The

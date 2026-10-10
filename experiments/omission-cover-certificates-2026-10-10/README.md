@@ -23,7 +23,8 @@ and their standard-axiom audits are complete. The `*-v2-source.json` files
 contain the entire extended catalogs; `*-v2-cuts.json` contain the exact cut
 DAGs. Their Lean sources, export manifests and complete kernel records are
 preserved here. These larger cut families alone do not establish a stronger
-global octagon bound.
+global octagon bound; their completed arithmetic roots and global
+compositions are recorded below.
 
 The generic proof is `OmissionCertificates.rounded_cover_cut` in
 [CoverCuts.lean](../../ErdosSzekeres/Omission/CoverCuts.lean). A nonnegative integer
@@ -41,12 +42,13 @@ propose the multipliers, but Lean rechecks the full integer inequality.
 | Balanced, 252 states |59|711 leaves|9,862 leaves|Complete: 17 parts, catalog and root|
 | Balanced, 252 states |60|3,954 leaves|No completed previous tree|Complete: 92 parts, catalog and root|
 | Balanced V2, 252 states |61|22,318 leaves|22,112-leaf alternative, not fully Lean checked|Complete: 502 parts, catalog and root|
+| Residual V2, 154 states |31|50,945 leaves|61,423-leaf alternative, not fully Lean checked|Complete: 1,216 parts, catalog and root|
 
-The residual30 and balanced61 roots have been composed with all geometric
-prerequisites into **`ForcesConvexNGon 315 8`**. The earlier complete 316 and
-317 proofs using balanced60 and balanced59 remain available. All four
-successful kernel records and source-only archives are saved here. The
-[complete 315 assembly](../omission-global-assembly-2026-10-10/global-cover-315-check.json)
+The residual31 and balanced61 roots have been composed with all geometric
+prerequisites into **`ForcesConvexNGon 314 8`**. The earlier complete 315, 316
+and 317 proofs remain available. All five successful kernel records and
+source-only archives are saved here. The
+[complete 314 assembly](../omission-global-assembly-2026-10-10/global-cover-314-check.json)
 retains no unproved arithmetic or geometric hypothesis.
 
 `ResidualCountermodel.lean` is a separate checked result: one explicit 32-hole
@@ -132,3 +134,23 @@ lake env python3 scripts/check_omission_lean.py \
 Check the generated export and source hashes against
 `balanced-61-fused-export.json`. Start with one checker worker unless available
 memory has been measured; the final aggregate imports all part objects.
+
+The completed residual31 fused family is reproduced similarly, with packing
+base 262,144 and 1,216 proof parts:
+
+```sh
+python3 scripts/omission_fused_export.py \
+  experiments/omission-cover-certificates-2026-10-10/residual-v2-source.json \
+  experiments/omission-cover-certificates-2026-10-10/residual-31-fused-tree.json.gz \
+  --output .cache/reproduce-residual31-fused \
+  --namespace OmissionResidualCover31Fused \
+  --module-prefix ResidualCover31FusedProof --leaf-limit 64
+lake env python3 scripts/check_omission_lean.py \
+  .cache/reproduce-residual31-fused --resume --workers 1 --memory 1800
+```
+
+Compare the generated export and every source hash with
+`residual-31-fused-export.json`. The final 314 composition requires both this
+family and B61, the two V2 cut-transfer families, and the complete original
+geometric catalogs and reductions. Its profile and full check record are in
+the global assembly artifact.

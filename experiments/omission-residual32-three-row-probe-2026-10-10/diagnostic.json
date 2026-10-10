@@ -1,0 +1,2201 @@
+{
+  "scope": "Small computational probe only. The three added geometric inequalities are individually proved, but this literal catalog and these finite weighted cuts have not been checked in Lean. No tree was edited, no search was restarted, and no new planar bound is claimed.",
+  "source_reference": "../omission-residual32-research-2026-10-10/source.json.gz",
+  "source_sha256": "f03eebb1d20eae3bd25dbb5024eaacdfdcc5bcd8ed964d190bdfa59c73aeb909",
+  "pending_contexts_reference": "../omission-residual32-research-2026-10-10/pending-contexts.json",
+  "pending_contexts_sha256": "723ad9f3cbe5474769ee87d7080f018bef8278d8b4939474378906919e22af9d",
+  "parent_tree_sha256": "b2cc1b24617e881cc939b4c0b1a54300d203f1c2c2f925dd3c59e86b47c92560",
+  "frozen_checkpoint_manifest_sha256": "050ea261651731ece458e461f7bfed57d7890648a37e235c33d66add46de1425",
+  "frozen_inputs_verified_against_preexisting_checkpoint_manifest": true,
+  "probe_script_sha256": "c1b2dbe9901d85121fd73c88efd19c172e7ead517b03645976e5eac81e75f7e0",
+  "solver": "HiGHS 1.15.1",
+  "threads": 1,
+  "seconds": 0.9967986249830574,
+  "all_48_probes_completed": true,
+  "source_rows": 2469,
+  "appended_rows": [
+    {
+      "row": 2469,
+      "support": [
+        44,
+        53,
+        64,
+        68,
+        75,
+        87,
+        91,
+        99,
+        118
+      ],
+      "rhs": 1,
+      "geometric_theorem": {
+        "name": "ErdosSzekeres.Omission.CoupledNineVariant.hole_bound",
+        "source": "ErdosSzekeres/Omission/CoupledNineVariant.lean",
+        "source_sha256_at_diagnostic": "0f729cddfc8c16ecf739c728ce609d7984247543163e6bfb5259c50f1039d2fe"
+      }
+    },
+    {
+      "row": 2470,
+      "support": [
+        33,
+        43,
+        64,
+        68,
+        75,
+        87,
+        91,
+        99,
+        111
+      ],
+      "rhs": 1,
+      "geometric_theorem": {
+        "name": "ErdosSzekeres.Omission.StructuralNine111.hole_bound",
+        "source": "ErdosSzekeres/Omission/CoupledNineStructuralVariants.lean",
+        "source_sha256_at_diagnostic": "e95c1918d7b5b036f741c6a1932c8e0d53cb26c5c408680c7f7969d9af0693dd"
+      }
+    },
+    {
+      "row": 2471,
+      "support": [
+        44,
+        53,
+        64,
+        68,
+        75,
+        87,
+        91,
+        99,
+        111
+      ],
+      "rhs": 1,
+      "geometric_theorem": {
+        "name": "ErdosSzekeres.Omission.StructuralNineShifted111.hole_bound",
+        "source": "ErdosSzekeres/Omission/CoupledNineStructuralVariants.lean",
+        "source_sha256_at_diagnostic": "e95c1918d7b5b036f741c6a1932c8e0d53cb26c5c408680c7f7969d9af0693dd"
+      }
+    }
+  ],
+  "contexts_tested": 24,
+  "baseline_exact_contradictions": 5,
+  "augmented_exact_contradictions": 5,
+  "new_contexts_closed_by_the_three_rows": 0,
+  "objectives_changed_above_1e_minus_7": [],
+  "successful_cuts_independently_replayed": true,
+  "cuts_for_original_source": [
+    {
+      "node": 492360,
+      "missing": [
+        27,
+        43,
+        47,
+        49,
+        60,
+        67,
+        87,
+        88,
+        93,
+        109
+      ],
+      "occupied": [
+        25,
+        34,
+        36,
+        44,
+        45,
+        50,
+        65,
+        78
+      ],
+      "leaf": {
+        "type": "weighted",
+        "capacity": 100,
+        "weights": [
+          [
+            12,
+            26
+          ],
+          [
+            64,
+            2
+          ],
+          [
+            72,
+            3
+          ],
+          [
+            77,
+            15
+          ],
+          [
+            118,
+            11
+          ],
+          [
+            179,
+            3
+          ],
+          [
+            250,
+            1
+          ],
+          [
+            352,
+            2
+          ],
+          [
+            394,
+            11
+          ],
+          [
+            409,
+            4
+          ],
+          [
+            421,
+            14
+          ],
+          [
+            466,
+            10
+          ],
+          [
+            498,
+            8
+          ],
+          [
+            540,
+            17
+          ],
+          [
+            552,
+            23
+          ],
+          [
+            571,
+            3
+          ],
+          [
+            572,
+            23
+          ],
+          [
+            625,
+            24
+          ],
+          [
+            632,
+            48
+          ],
+          [
+            692,
+            1
+          ],
+          [
+            741,
+            17
+          ],
+          [
+            743,
+            18
+          ],
+          [
+            842,
+            3
+          ],
+          [
+            850,
+            48
+          ],
+          [
+            852,
+            29
+          ],
+          [
+            855,
+            3
+          ],
+          [
+            857,
+            1
+          ],
+          [
+            864,
+            11
+          ],
+          [
+            878,
+            25
+          ],
+          [
+            883,
+            27
+          ],
+          [
+            885,
+            32
+          ],
+          [
+            920,
+            17
+          ],
+          [
+            924,
+            20
+          ],
+          [
+            925,
+            23
+          ],
+          [
+            944,
+            22
+          ],
+          [
+            966,
+            34
+          ],
+          [
+            973,
+            53
+          ],
+          [
+            997,
+            11
+          ],
+          [
+            1004,
+            1
+          ],
+          [
+            1009,
+            16
+          ],
+          [
+            1010,
+            6
+          ],
+          [
+            1044,
+            3
+          ],
+          [
+            1049,
+            7
+          ],
+          [
+            1076,
+            17
+          ],
+          [
+            1086,
+            1
+          ],
+          [
+            1121,
+            3
+          ],
+          [
+            1122,
+            1
+          ],
+          [
+            1123,
+            23
+          ],
+          [
+            1128,
+            4
+          ],
+          [
+            1131,
+            5
+          ],
+          [
+            1132,
+            13
+          ],
+          [
+            1133,
+            3
+          ],
+          [
+            1155,
+            9
+          ],
+          [
+            1159,
+            7
+          ],
+          [
+            1160,
+            1
+          ],
+          [
+            1169,
+            7
+          ],
+          [
+            1172,
+            11
+          ],
+          [
+            1173,
+            14
+          ],
+          [
+            1175,
+            10
+          ],
+          [
+            1177,
+            10
+          ],
+          [
+            1179,
+            14
+          ],
+          [
+            1186,
+            24
+          ],
+          [
+            1188,
+            17
+          ],
+          [
+            1201,
+            25
+          ],
+          [
+            1202,
+            9
+          ],
+          [
+            1217,
+            21
+          ],
+          [
+            1222,
+            10
+          ],
+          [
+            1277,
+            2
+          ],
+          [
+            1466,
+            6
+          ],
+          [
+            1560,
+            3
+          ],
+          [
+            1572,
+            12
+          ],
+          [
+            1584,
+            6
+          ],
+          [
+            1591,
+            8
+          ],
+          [
+            1593,
+            41
+          ],
+          [
+            1637,
+            6
+          ],
+          [
+            1640,
+            23
+          ],
+          [
+            1659,
+            9
+          ],
+          [
+            1747,
+            7
+          ],
+          [
+            1900,
+            5
+          ],
+          [
+            2008,
+            16
+          ],
+          [
+            2225,
+            9
+          ]
+        ]
+      },
+      "exact_integer_margin": 11,
+      "uses_any_appended_row": false
+    },
+    {
+      "node": 492359,
+      "missing": [
+        27,
+        43,
+        47,
+        49,
+        60,
+        67,
+        88,
+        93,
+        109
+      ],
+      "occupied": [
+        25,
+        34,
+        36,
+        44,
+        45,
+        50,
+        65,
+        78,
+        87
+      ],
+      "leaf": {
+        "type": "weighted",
+        "capacity": 100,
+        "weights": [
+          [
+            10,
+            2
+          ],
+          [
+            12,
+            10
+          ],
+          [
+            43,
+            3
+          ],
+          [
+            77,
+            32
+          ],
+          [
+            118,
+            11
+          ],
+          [
+            394,
+            12
+          ],
+          [
+            411,
+            9
+          ],
+          [
+            421,
+            21
+          ],
+          [
+            456,
+            1
+          ],
+          [
+            457,
+            12
+          ],
+          [
+            466,
+            32
+          ],
+          [
+            498,
+            2
+          ],
+          [
+            540,
+            13
+          ],
+          [
+            552,
+            23
+          ],
+          [
+            569,
+            2
+          ],
+          [
+            571,
+            21
+          ],
+          [
+            572,
+            22
+          ],
+          [
+            625,
+            27
+          ],
+          [
+            632,
+            43
+          ],
+          [
+            675,
+            14
+          ],
+          [
+            690,
+            29
+          ],
+          [
+            692,
+            1
+          ],
+          [
+            741,
+            21
+          ],
+          [
+            743,
+            6
+          ],
+          [
+            813,
+            7
+          ],
+          [
+            817,
+            18
+          ],
+          [
+            844,
+            9
+          ],
+          [
+            850,
+            25
+          ],
+          [
+            852,
+            38
+          ],
+          [
+            855,
+            31
+          ],
+          [
+            864,
+            28
+          ],
+          [
+            868,
+            26
+          ],
+          [
+            885,
+            43
+          ],
+          [
+            920,
+            13
+          ],
+          [
+            925,
+            26
+          ],
+          [
+            944,
+            9
+          ],
+          [
+            966,
+            15
+          ],
+          [
+            973,
+            49
+          ],
+          [
+            976,
+            13
+          ],
+          [
+            984,
+            7
+          ],
+          [
+            1010,
+            9
+          ],
+          [
+            1011,
+            10
+          ],
+          [
+            1012,
+            5
+          ],
+          [
+            1031,
+            11
+          ],
+          [
+            1033,
+            8
+          ],
+          [
+            1034,
+            8
+          ],
+          [
+            1044,
+            7
+          ],
+          [
+            1045,
+            10
+          ],
+          [
+            1081,
+            3
+          ],
+          [
+            1086,
+            9
+          ],
+          [
+            1108,
+            11
+          ],
+          [
+            1120,
+            3
+          ],
+          [
+            1123,
+            18
+          ],
+          [
+            1132,
+            2
+          ],
+          [
+            1133,
+            16
+          ],
+          [
+            1137,
+            3
+          ],
+          [
+            1153,
+            1
+          ],
+          [
+            1155,
+            3
+          ],
+          [
+            1172,
+            17
+          ],
+          [
+            1173,
+            31
+          ],
+          [
+            1175,
+            4
+          ],
+          [
+            1177,
+            11
+          ],
+          [
+            1179,
+            6
+          ],
+          [
+            1183,
+            17
+          ],
+          [
+            1184,
+            3
+          ],
+          [
+            1186,
+            20
+          ],
+          [
+            1188,
+            16
+          ],
+          [
+            1201,
+            34
+          ],
+          [
+            1202,
+            16
+          ],
+          [
+            1258,
+            2
+          ],
+          [
+            1316,
+            8
+          ],
+          [
+            1349,
+            3
+          ],
+          [
+            1469,
+            5
+          ],
+          [
+            1572,
+            3
+          ],
+          [
+            1591,
+            13
+          ],
+          [
+            1593,
+            35
+          ],
+          [
+            1640,
+            6
+          ],
+          [
+            1659,
+            9
+          ],
+          [
+            1900,
+            1
+          ],
+          [
+            2008,
+            13
+          ]
+        ]
+      },
+      "exact_integer_margin": 1,
+      "uses_any_appended_row": false
+    },
+    {
+      "node": 485523,
+      "missing": [
+        31,
+        34,
+        37,
+        43,
+        46,
+        47,
+        56,
+        60,
+        67,
+        88,
+        109
+      ],
+      "occupied": [
+        23,
+        27,
+        36,
+        39,
+        44,
+        70,
+        78,
+        81,
+        97
+      ],
+      "leaf": {
+        "type": "weighted",
+        "capacity": 10000,
+        "weights": [
+          [
+            0,
+            1361
+          ],
+          [
+            72,
+            1933
+          ],
+          [
+            91,
+            1194
+          ],
+          [
+            273,
+            1036
+          ],
+          [
+            302,
+            1229
+          ],
+          [
+            304,
+            344
+          ],
+          [
+            408,
+            352
+          ],
+          [
+            409,
+            1588
+          ],
+          [
+            420,
+            1017
+          ],
+          [
+            421,
+            2107
+          ],
+          [
+            472,
+            542
+          ],
+          [
+            483,
+            638
+          ],
+          [
+            498,
+            3026
+          ],
+          [
+            550,
+            1263
+          ],
+          [
+            552,
+            7557
+          ],
+          [
+            571,
+            3467
+          ],
+          [
+            731,
+            41
+          ],
+          [
+            737,
+            1734
+          ],
+          [
+            740,
+            2818
+          ],
+          [
+            741,
+            245
+          ],
+          [
+            813,
+            3876
+          ],
+          [
+            817,
+            598
+          ],
+          [
+            818,
+            229
+          ],
+          [
+            835,
+            134
+          ],
+          [
+            851,
+            3026
+          ],
+          [
+            870,
+            1180
+          ],
+          [
+            874,
+            3506
+          ],
+          [
+            891,
+            12
+          ],
+          [
+            929,
+            1619
+          ],
+          [
+            933,
+            161
+          ],
+          [
+            940,
+            1165
+          ],
+          [
+            944,
+            974
+          ],
+          [
+            949,
+            116
+          ],
+          [
+            962,
+            1124
+          ],
+          [
+            965,
+            1352
+          ],
+          [
+            966,
+            2822
+          ],
+          [
+            972,
+            1692
+          ],
+          [
+            973,
+            5510
+          ],
+          [
+            1003,
+            301
+          ],
+          [
+            1004,
+            254
+          ],
+          [
+            1009,
+            1185
+          ],
+          [
+            1010,
+            602
+          ],
+          [
+            1011,
+            1713
+          ],
+          [
+            1060,
+            238
+          ],
+          [
+            1061,
+            1335
+          ],
+          [
+            1069,
+            102
+          ],
+          [
+            1070,
+            134
+          ],
+          [
+            1076,
+            1383
+          ],
+          [
+            1081,
+            837
+          ],
+          [
+            1082,
+            399
+          ],
+          [
+            1089,
+            1492
+          ],
+          [
+            1090,
+            519
+          ],
+          [
+            1100,
+            201
+          ],
+          [
+            1122,
+            197
+          ],
+          [
+            1123,
+            1626
+          ],
+          [
+            1132,
+            31
+          ],
+          [
+            1137,
+            391
+          ],
+          [
+            1172,
+            669
+          ],
+          [
+            1173,
+            2244
+          ],
+          [
+            1177,
+            2143
+          ],
+          [
+            1178,
+            101
+          ],
+          [
+            1179,
+            1173
+          ],
+          [
+            1185,
+            506
+          ],
+          [
+            1186,
+            2245
+          ],
+          [
+            1190,
+            96
+          ],
+          [
+            1200,
+            1900
+          ],
+          [
+            1209,
+            2485
+          ],
+          [
+            1217,
+            2225
+          ],
+          [
+            1219,
+            2978
+          ],
+          [
+            1253,
+            1132
+          ],
+          [
+            1276,
+            443
+          ],
+          [
+            1466,
+            981
+          ],
+          [
+            1484,
+            239
+          ],
+          [
+            1545,
+            408
+          ],
+          [
+            1591,
+            531
+          ],
+          [
+            1605,
+            1128
+          ],
+          [
+            1660,
+            1805
+          ],
+          [
+            1913,
+            673
+          ],
+          [
+            1945,
+            467
+          ],
+          [
+            2225,
+            48
+          ]
+        ]
+      },
+      "exact_integer_margin": 159,
+      "uses_any_appended_row": false
+    },
+    {
+      "node": 485522,
+      "missing": [
+        31,
+        34,
+        37,
+        43,
+        46,
+        47,
+        56,
+        60,
+        67,
+        88
+      ],
+      "occupied": [
+        23,
+        27,
+        36,
+        39,
+        44,
+        70,
+        78,
+        81,
+        97,
+        109
+      ],
+      "leaf": {
+        "type": "weighted",
+        "capacity": 100,
+        "weights": [
+          [
+            0,
+            29
+          ],
+          [
+            72,
+            38
+          ],
+          [
+            91,
+            5
+          ],
+          [
+            275,
+            6
+          ],
+          [
+            302,
+            9
+          ],
+          [
+            304,
+            19
+          ],
+          [
+            347,
+            23
+          ],
+          [
+            392,
+            9
+          ],
+          [
+            409,
+            1
+          ],
+          [
+            472,
+            4
+          ],
+          [
+            483,
+            1
+          ],
+          [
+            498,
+            25
+          ],
+          [
+            550,
+            31
+          ],
+          [
+            552,
+            64
+          ],
+          [
+            571,
+            30
+          ],
+          [
+            616,
+            3
+          ],
+          [
+            737,
+            8
+          ],
+          [
+            739,
+            8
+          ],
+          [
+            740,
+            27
+          ],
+          [
+            741,
+            5
+          ],
+          [
+            812,
+            4
+          ],
+          [
+            813,
+            24
+          ],
+          [
+            819,
+            17
+          ],
+          [
+            851,
+            23
+          ],
+          [
+            870,
+            5
+          ],
+          [
+            872,
+            4
+          ],
+          [
+            874,
+            25
+          ],
+          [
+            887,
+            1
+          ],
+          [
+            940,
+            22
+          ],
+          [
+            942,
+            6
+          ],
+          [
+            962,
+            31
+          ],
+          [
+            963,
+            16
+          ],
+          [
+            964,
+            22
+          ],
+          [
+            966,
+            9
+          ],
+          [
+            971,
+            18
+          ],
+          [
+            972,
+            26
+          ],
+          [
+            973,
+            54
+          ],
+          [
+            1004,
+            1
+          ],
+          [
+            1009,
+            17
+          ],
+          [
+            1010,
+            14
+          ],
+          [
+            1011,
+            18
+          ],
+          [
+            1061,
+            12
+          ],
+          [
+            1069,
+            5
+          ],
+          [
+            1076,
+            16
+          ],
+          [
+            1082,
+            8
+          ],
+          [
+            1099,
+            1
+          ],
+          [
+            1100,
+            4
+          ],
+          [
+            1108,
+            5
+          ],
+          [
+            1122,
+            9
+          ],
+          [
+            1123,
+            12
+          ],
+          [
+            1137,
+            6
+          ],
+          [
+            1138,
+            3
+          ],
+          [
+            1171,
+            2
+          ],
+          [
+            1172,
+            2
+          ],
+          [
+            1173,
+            16
+          ],
+          [
+            1177,
+            13
+          ],
+          [
+            1178,
+            5
+          ],
+          [
+            1179,
+            18
+          ],
+          [
+            1183,
+            10
+          ],
+          [
+            1185,
+            5
+          ],
+          [
+            1186,
+            27
+          ],
+          [
+            1200,
+            1
+          ],
+          [
+            1209,
+            22
+          ],
+          [
+            1217,
+            8
+          ],
+          [
+            1219,
+            43
+          ],
+          [
+            1253,
+            23
+          ],
+          [
+            1273,
+            1
+          ],
+          [
+            1372,
+            5
+          ],
+          [
+            1433,
+            3
+          ],
+          [
+            1482,
+            19
+          ],
+          [
+            1545,
+            3
+          ],
+          [
+            1572,
+            3
+          ],
+          [
+            1660,
+            8
+          ],
+          [
+            1665,
+            6
+          ],
+          [
+            1851,
+            5
+          ],
+          [
+            2457,
+            7
+          ]
+        ]
+      },
+      "exact_integer_margin": 13,
+      "uses_any_appended_row": false
+    },
+    {
+      "node": 30,
+      "missing": [
+        25,
+        27,
+        47,
+        54,
+        67,
+        81,
+        112
+      ],
+      "occupied": [
+        12,
+        20,
+        34,
+        43,
+        44,
+        46,
+        51,
+        55,
+        60,
+        69,
+        73,
+        88,
+        92,
+        93,
+        105,
+        109
+      ],
+      "leaf": {
+        "type": "weighted",
+        "capacity": 1000,
+        "weights": [
+          [
+            7,
+            504
+          ],
+          [
+            122,
+            207
+          ],
+          [
+            238,
+            540
+          ],
+          [
+            275,
+            293
+          ],
+          [
+            326,
+            95
+          ],
+          [
+            465,
+            136
+          ],
+          [
+            466,
+            451
+          ],
+          [
+            475,
+            86
+          ],
+          [
+            484,
+            86
+          ],
+          [
+            507,
+            43
+          ],
+          [
+            572,
+            288
+          ],
+          [
+            577,
+            156
+          ],
+          [
+            617,
+            158
+          ],
+          [
+            624,
+            306
+          ],
+          [
+            674,
+            98
+          ],
+          [
+            737,
+            3
+          ],
+          [
+            739,
+            67
+          ],
+          [
+            798,
+            202
+          ],
+          [
+            850,
+            289
+          ],
+          [
+            873,
+            289
+          ],
+          [
+            876,
+            42
+          ],
+          [
+            903,
+            171
+          ],
+          [
+            904,
+            209
+          ],
+          [
+            905,
+            243
+          ],
+          [
+            920,
+            236
+          ],
+          [
+            926,
+            8
+          ],
+          [
+            941,
+            355
+          ],
+          [
+            944,
+            223
+          ],
+          [
+            945,
+            42
+          ],
+          [
+            946,
+            137
+          ],
+          [
+            948,
+            374
+          ],
+          [
+            963,
+            265
+          ],
+          [
+            967,
+            68
+          ],
+          [
+            968,
+            307
+          ],
+          [
+            970,
+            181
+          ],
+          [
+            973,
+            542
+          ],
+          [
+            978,
+            54
+          ],
+          [
+            992,
+            73
+          ],
+          [
+            994,
+            39
+          ],
+          [
+            995,
+            328
+          ],
+          [
+            1004,
+            11
+          ],
+          [
+            1009,
+            91
+          ],
+          [
+            1010,
+            27
+          ],
+          [
+            1012,
+            3
+          ],
+          [
+            1028,
+            17
+          ],
+          [
+            1030,
+            4
+          ],
+          [
+            1061,
+            62
+          ],
+          [
+            1075,
+            6
+          ],
+          [
+            1076,
+            111
+          ],
+          [
+            1101,
+            14
+          ],
+          [
+            1102,
+            69
+          ],
+          [
+            1108,
+            21
+          ],
+          [
+            1123,
+            28
+          ],
+          [
+            1128,
+            44
+          ],
+          [
+            1131,
+            36
+          ],
+          [
+            1133,
+            5
+          ],
+          [
+            1139,
+            6
+          ],
+          [
+            1140,
+            29
+          ],
+          [
+            1141,
+            110
+          ],
+          [
+            1146,
+            33
+          ],
+          [
+            1154,
+            1
+          ],
+          [
+            1155,
+            99
+          ],
+          [
+            1167,
+            154
+          ],
+          [
+            1174,
+            100
+          ],
+          [
+            1175,
+            25
+          ],
+          [
+            1177,
+            108
+          ],
+          [
+            1178,
+            64
+          ],
+          [
+            1179,
+            235
+          ],
+          [
+            1183,
+            190
+          ],
+          [
+            1186,
+            170
+          ],
+          [
+            1223,
+            294
+          ],
+          [
+            1254,
+            169
+          ],
+          [
+            1318,
+            53
+          ],
+          [
+            1442,
+            55
+          ],
+          [
+            1443,
+            71
+          ],
+          [
+            1516,
+            41
+          ],
+          [
+            1559,
+            376
+          ],
+          [
+            1572,
+            46
+          ],
+          [
+            1580,
+            31
+          ],
+          [
+            1585,
+            86
+          ],
+          [
+            1931,
+            174
+          ],
+          [
+            1932,
+            3
+          ],
+          [
+            1950,
+            52
+          ]
+        ]
+      },
+      "exact_integer_margin": 21,
+      "uses_any_appended_row": false
+    }
+  ],
+  "numerical_diagnostics": [
+    {
+      "node": 492360,
+      "baseline_status": "HighsModelStatus.kOptimal",
+      "augmented_status": "HighsModelStatus.kOptimal",
+      "baseline_objective_numerical": 32.31036562262987,
+      "augmented_objective_numerical": 32.310365622628346,
+      "baseline_exact_cut_found": true,
+      "augmented_exact_cut_found": true
+    },
+    {
+      "node": 492359,
+      "baseline_status": "HighsModelStatus.kOptimal",
+      "augmented_status": "HighsModelStatus.kOptimal",
+      "baseline_objective_numerical": 32.165484030161636,
+      "augmented_objective_numerical": 32.16548403016129,
+      "baseline_exact_cut_found": true,
+      "augmented_exact_cut_found": true
+    },
+    {
+      "node": 492357,
+      "baseline_status": "HighsModelStatus.kOptimal",
+      "augmented_status": "HighsModelStatus.kOptimal",
+      "baseline_objective_numerical": 31.92663296220843,
+      "augmented_objective_numerical": 31.926632962208497,
+      "baseline_exact_cut_found": false,
+      "augmented_exact_cut_found": false
+    },
+    {
+      "node": 492355,
+      "baseline_status": "HighsModelStatus.kOptimal",
+      "augmented_status": "HighsModelStatus.kOptimal",
+      "baseline_objective_numerical": 31.431566457049094,
+      "augmented_objective_numerical": 31.431566457048834,
+      "baseline_exact_cut_found": false,
+      "augmented_exact_cut_found": false
+    },
+    {
+      "node": 492350,
+      "baseline_status": "HighsModelStatus.kOptimal",
+      "augmented_status": "HighsModelStatus.kOptimal",
+      "baseline_objective_numerical": 30.50181723255137,
+      "augmented_objective_numerical": 30.501817232552057,
+      "baseline_exact_cut_found": false,
+      "augmented_exact_cut_found": false
+    },
+    {
+      "node": 492346,
+      "baseline_status": "HighsModelStatus.kOptimal",
+      "augmented_status": "HighsModelStatus.kOptimal",
+      "baseline_objective_numerical": 29.98946903277122,
+      "augmented_objective_numerical": 29.98946903277376,
+      "baseline_exact_cut_found": false,
+      "augmented_exact_cut_found": false
+    },
+    {
+      "node": 492344,
+      "baseline_status": "HighsModelStatus.kOptimal",
+      "augmented_status": "HighsModelStatus.kOptimal",
+      "baseline_objective_numerical": 29.657137541088463,
+      "augmented_objective_numerical": 29.65713754108837,
+      "baseline_exact_cut_found": false,
+      "augmented_exact_cut_found": false
+    },
+    {
+      "node": 485523,
+      "baseline_status": "HighsModelStatus.kOptimal",
+      "augmented_status": "HighsModelStatus.kOptimal",
+      "baseline_objective_numerical": 32.01760746355745,
+      "augmented_objective_numerical": 32.01760746355787,
+      "baseline_exact_cut_found": true,
+      "augmented_exact_cut_found": true
+    },
+    {
+      "node": 485522,
+      "baseline_status": "HighsModelStatus.kOptimal",
+      "augmented_status": "HighsModelStatus.kOptimal",
+      "baseline_objective_numerical": 32.323625155204375,
+      "augmented_objective_numerical": 32.32362515520436,
+      "baseline_exact_cut_found": true,
+      "augmented_exact_cut_found": true
+    },
+    {
+      "node": 485519,
+      "baseline_status": "HighsModelStatus.kOptimal",
+      "augmented_status": "HighsModelStatus.kOptimal",
+      "baseline_objective_numerical": 31.747186036321413,
+      "augmented_objective_numerical": 31.747186036321366,
+      "baseline_exact_cut_found": false,
+      "augmented_exact_cut_found": false
+    },
+    {
+      "node": 485517,
+      "baseline_status": "HighsModelStatus.kOptimal",
+      "augmented_status": "HighsModelStatus.kOptimal",
+      "baseline_objective_numerical": 31.320806761039776,
+      "augmented_objective_numerical": 31.32080676103978,
+      "baseline_exact_cut_found": false,
+      "augmented_exact_cut_found": false
+    },
+    {
+      "node": 485514,
+      "baseline_status": "HighsModelStatus.kOptimal",
+      "augmented_status": "HighsModelStatus.kOptimal",
+      "baseline_objective_numerical": 31.022714876172344,
+      "augmented_objective_numerical": 31.022714876172223,
+      "baseline_exact_cut_found": false,
+      "augmented_exact_cut_found": false
+    },
+    {
+      "node": 485512,
+      "baseline_status": "HighsModelStatus.kOptimal",
+      "augmented_status": "HighsModelStatus.kOptimal",
+      "baseline_objective_numerical": 30.78117726333607,
+      "augmented_objective_numerical": 30.78117726333656,
+      "baseline_exact_cut_found": false,
+      "augmented_exact_cut_found": false
+    },
+    {
+      "node": 485509,
+      "baseline_status": "HighsModelStatus.kOptimal",
+      "augmented_status": "HighsModelStatus.kOptimal",
+      "baseline_objective_numerical": 30.38925212879799,
+      "augmented_objective_numerical": 30.389252128798038,
+      "baseline_exact_cut_found": false,
+      "augmented_exact_cut_found": false
+    },
+    {
+      "node": 485506,
+      "baseline_status": "HighsModelStatus.kOptimal",
+      "augmented_status": "HighsModelStatus.kOptimal",
+      "baseline_objective_numerical": 29.973950439134683,
+      "augmented_objective_numerical": 29.973950439139678,
+      "baseline_exact_cut_found": false,
+      "augmented_exact_cut_found": false
+    },
+    {
+      "node": 485503,
+      "baseline_status": "HighsModelStatus.kOptimal",
+      "augmented_status": "HighsModelStatus.kOptimal",
+      "baseline_objective_numerical": 29.5563253110193,
+      "augmented_objective_numerical": 29.556325311020085,
+      "baseline_exact_cut_found": false,
+      "augmented_exact_cut_found": false
+    },
+    {
+      "node": 30,
+      "baseline_status": "HighsModelStatus.kOptimal",
+      "augmented_status": "HighsModelStatus.kOptimal",
+      "baseline_objective_numerical": 32.0560311626061,
+      "augmented_objective_numerical": 32.056031162606104,
+      "baseline_exact_cut_found": true,
+      "augmented_exact_cut_found": true
+    },
+    {
+      "node": 29,
+      "baseline_status": "HighsModelStatus.kOptimal",
+      "augmented_status": "HighsModelStatus.kOptimal",
+      "baseline_objective_numerical": 31.892051306505813,
+      "augmented_objective_numerical": 31.89205130650308,
+      "baseline_exact_cut_found": false,
+      "augmented_exact_cut_found": false
+    },
+    {
+      "node": 24,
+      "baseline_status": "HighsModelStatus.kOptimal",
+      "augmented_status": "HighsModelStatus.kOptimal",
+      "baseline_objective_numerical": 31.294141328585926,
+      "augmented_objective_numerical": 31.294141328585894,
+      "baseline_exact_cut_found": false,
+      "augmented_exact_cut_found": false
+    },
+    {
+      "node": 11,
+      "baseline_status": "HighsModelStatus.kOptimal",
+      "augmented_status": "HighsModelStatus.kOptimal",
+      "baseline_objective_numerical": 29.03545201153926,
+      "augmented_objective_numerical": 29.03545201154789,
+      "baseline_exact_cut_found": false,
+      "augmented_exact_cut_found": false
+    },
+    {
+      "node": 9,
+      "baseline_status": "HighsModelStatus.kOptimal",
+      "augmented_status": "HighsModelStatus.kOptimal",
+      "baseline_objective_numerical": 28.696801659454035,
+      "augmented_objective_numerical": 28.69680165945408,
+      "baseline_exact_cut_found": false,
+      "augmented_exact_cut_found": false
+    },
+    {
+      "node": 7,
+      "baseline_status": "HighsModelStatus.kOptimal",
+      "augmented_status": "HighsModelStatus.kOptimal",
+      "baseline_objective_numerical": 28.23427221324293,
+      "augmented_objective_numerical": 28.23427221324288,
+      "baseline_exact_cut_found": false,
+      "augmented_exact_cut_found": false
+    },
+    {
+      "node": 4,
+      "baseline_status": "HighsModelStatus.kOptimal",
+      "augmented_status": "HighsModelStatus.kOptimal",
+      "baseline_objective_numerical": 27.570630074912014,
+      "augmented_objective_numerical": 27.570630074910962,
+      "baseline_exact_cut_found": false,
+      "augmented_exact_cut_found": false
+    },
+    {
+      "node": 2,
+      "baseline_status": "HighsModelStatus.kOptimal",
+      "augmented_status": "HighsModelStatus.kOptimal",
+      "baseline_objective_numerical": 27.30171918550594,
+      "augmented_objective_numerical": 27.301719185502627,
+      "baseline_exact_cut_found": false,
+      "augmented_exact_cut_found": false
+    }
+  ],
+  "outcome": "Five pending contexts admit exact weighted contradictions from the original source alone. All five augmented runs also yield cuts using only original rows. This probe found no additional exact contradiction attributable to the three rows. The frozen tree retains its original 24 pending contexts because it was not modified.",
+  "remaining_contexts_without_separate_cut": 19,
+  "remaining_by_state43_status_if_five_cuts_are_applied": {
+    "occupied": 7,
+    "missing": 12
+  },
+  "uncertified_contexts": [
+    {
+      "node": 492357,
+      "baseline_lp_minimum_numerical": 31.92663296220843,
+      "augmented_lp_minimum_numerical": 31.926632962208497,
+      "solver_reports_optimal": true
+    },
+    {
+      "node": 492355,
+      "baseline_lp_minimum_numerical": 31.431566457049094,
+      "augmented_lp_minimum_numerical": 31.431566457048834,
+      "solver_reports_optimal": true
+    },
+    {
+      "node": 492350,
+      "baseline_lp_minimum_numerical": 30.50181723255137,
+      "augmented_lp_minimum_numerical": 30.501817232552057,
+      "solver_reports_optimal": true
+    },
+    {
+      "node": 492346,
+      "baseline_lp_minimum_numerical": 29.98946903277122,
+      "augmented_lp_minimum_numerical": 29.98946903277376,
+      "solver_reports_optimal": true
+    },
+    {
+      "node": 492344,
+      "baseline_lp_minimum_numerical": 29.657137541088463,
+      "augmented_lp_minimum_numerical": 29.65713754108837,
+      "solver_reports_optimal": true
+    },
+    {
+      "node": 485519,
+      "baseline_lp_minimum_numerical": 31.747186036321413,
+      "augmented_lp_minimum_numerical": 31.747186036321366,
+      "solver_reports_optimal": true
+    },
+    {
+      "node": 485517,
+      "baseline_lp_minimum_numerical": 31.320806761039776,
+      "augmented_lp_minimum_numerical": 31.32080676103978,
+      "solver_reports_optimal": true
+    },
+    {
+      "node": 485514,
+      "baseline_lp_minimum_numerical": 31.022714876172344,
+      "augmented_lp_minimum_numerical": 31.022714876172223,
+      "solver_reports_optimal": true
+    },
+    {
+      "node": 485512,
+      "baseline_lp_minimum_numerical": 30.78117726333607,
+      "augmented_lp_minimum_numerical": 30.78117726333656,
+      "solver_reports_optimal": true
+    },
+    {
+      "node": 485509,
+      "baseline_lp_minimum_numerical": 30.38925212879799,
+      "augmented_lp_minimum_numerical": 30.389252128798038,
+      "solver_reports_optimal": true
+    },
+    {
+      "node": 485506,
+      "baseline_lp_minimum_numerical": 29.973950439134683,
+      "augmented_lp_minimum_numerical": 29.973950439139678,
+      "solver_reports_optimal": true
+    },
+    {
+      "node": 485503,
+      "baseline_lp_minimum_numerical": 29.5563253110193,
+      "augmented_lp_minimum_numerical": 29.556325311020085,
+      "solver_reports_optimal": true
+    },
+    {
+      "node": 29,
+      "baseline_lp_minimum_numerical": 31.892051306505813,
+      "augmented_lp_minimum_numerical": 31.89205130650308,
+      "solver_reports_optimal": true
+    },
+    {
+      "node": 24,
+      "baseline_lp_minimum_numerical": 31.294141328585926,
+      "augmented_lp_minimum_numerical": 31.294141328585894,
+      "solver_reports_optimal": true
+    },
+    {
+      "node": 11,
+      "baseline_lp_minimum_numerical": 29.03545201153926,
+      "augmented_lp_minimum_numerical": 29.03545201154789,
+      "solver_reports_optimal": true
+    },
+    {
+      "node": 9,
+      "baseline_lp_minimum_numerical": 28.696801659454035,
+      "augmented_lp_minimum_numerical": 28.69680165945408,
+      "solver_reports_optimal": true
+    },
+    {
+      "node": 7,
+      "baseline_lp_minimum_numerical": 28.23427221324293,
+      "augmented_lp_minimum_numerical": 28.23427221324288,
+      "solver_reports_optimal": true
+    },
+    {
+      "node": 4,
+      "baseline_lp_minimum_numerical": 27.570630074912014,
+      "augmented_lp_minimum_numerical": 27.570630074910962,
+      "solver_reports_optimal": true
+    },
+    {
+      "node": 2,
+      "baseline_lp_minimum_numerical": 27.30171918550594,
+      "augmented_lp_minimum_numerical": 27.301719185502627,
+      "solver_reports_optimal": true
+    }
+  ],
+  "remaining_lp_scope": "HiGHS reported optimal LP minima at most 32, within 1e-7 tolerance, for each of the other 19 contexts both before and after the three rows were added. These are floating-point diagnostics, not exact rational feasibility certificates, integer witnesses, or Lean proofs. The stored large tree still has 24 pending leaves."
+}

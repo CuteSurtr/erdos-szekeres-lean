@@ -1,0 +1,542 @@
+{
+  "scope": "Unclosed cases of an incomplete exact Boolean row search; no infeasibility claim",
+  "source_sha256": "f03eebb1d20eae3bd25dbb5024eaacdfdcc5bcd8ed964d190bdfa59c73aeb909",
+  "tree_sha256": "b2cc1b24617e881cc939b4c0b1a54300d203f1c2c2f925dd3c59e86b47c92560",
+  "contexts": [
+    {
+      "node": 492360,
+      "state43_hole": true,
+      "missing": [
+        27,
+        43,
+        47,
+        49,
+        60,
+        67,
+        87,
+        88,
+        93,
+        109
+      ],
+      "occupied": [
+        25,
+        34,
+        36,
+        44,
+        45,
+        50,
+        65,
+        78
+      ],
+      "depth": 18
+    },
+    {
+      "node": 492359,
+      "state43_hole": true,
+      "missing": [
+        27,
+        43,
+        47,
+        49,
+        60,
+        67,
+        88,
+        93,
+        109
+      ],
+      "occupied": [
+        25,
+        34,
+        36,
+        44,
+        45,
+        50,
+        65,
+        78,
+        87
+      ],
+      "depth": 18
+    },
+    {
+      "node": 492357,
+      "state43_hole": true,
+      "missing": [
+        27,
+        43,
+        47,
+        60,
+        67,
+        88,
+        93,
+        109
+      ],
+      "occupied": [
+        25,
+        34,
+        36,
+        44,
+        45,
+        49,
+        50,
+        65,
+        78
+      ],
+      "depth": 17
+    },
+    {
+      "node": 492355,
+      "state43_hole": true,
+      "missing": [
+        27,
+        43,
+        47,
+        60,
+        67,
+        88,
+        109
+      ],
+      "occupied": [
+        25,
+        34,
+        36,
+        44,
+        45,
+        50,
+        65,
+        78,
+        93
+      ],
+      "depth": 16
+    },
+    {
+      "node": 492350,
+      "state43_hole": true,
+      "missing": [
+        27,
+        43,
+        47,
+        67,
+        88,
+        109
+      ],
+      "occupied": [
+        34,
+        36,
+        44,
+        45,
+        60,
+        78
+      ],
+      "depth": 12
+    },
+    {
+      "node": 492346,
+      "state43_hole": true,
+      "missing": [
+        27,
+        43,
+        47,
+        67,
+        88
+      ],
+      "occupied": [
+        36,
+        44,
+        78,
+        109
+      ],
+      "depth": 9
+    },
+    {
+      "node": 492344,
+      "state43_hole": true,
+      "missing": [
+        27,
+        43,
+        67,
+        88
+      ],
+      "occupied": [
+        36,
+        44,
+        47,
+        78
+      ],
+      "depth": 8
+    },
+    {
+      "node": 485523,
+      "state43_hole": true,
+      "missing": [
+        31,
+        34,
+        37,
+        43,
+        46,
+        47,
+        56,
+        60,
+        67,
+        88,
+        109
+      ],
+      "occupied": [
+        23,
+        27,
+        36,
+        39,
+        44,
+        70,
+        78,
+        81,
+        97
+      ],
+      "depth": 20
+    },
+    {
+      "node": 485522,
+      "state43_hole": true,
+      "missing": [
+        31,
+        34,
+        37,
+        43,
+        46,
+        47,
+        56,
+        60,
+        67,
+        88
+      ],
+      "occupied": [
+        23,
+        27,
+        36,
+        39,
+        44,
+        70,
+        78,
+        81,
+        97,
+        109
+      ],
+      "depth": 20
+    },
+    {
+      "node": 485519,
+      "state43_hole": true,
+      "missing": [
+        31,
+        34,
+        37,
+        43,
+        46,
+        47,
+        60,
+        67,
+        88
+      ],
+      "occupied": [
+        23,
+        27,
+        36,
+        39,
+        44,
+        56,
+        70,
+        78,
+        81
+      ],
+      "depth": 18
+    },
+    {
+      "node": 485517,
+      "state43_hole": true,
+      "missing": [
+        31,
+        34,
+        37,
+        43,
+        46,
+        47,
+        67,
+        88
+      ],
+      "occupied": [
+        23,
+        27,
+        36,
+        39,
+        44,
+        60,
+        70,
+        78,
+        81
+      ],
+      "depth": 17
+    },
+    {
+      "node": 485514,
+      "state43_hole": true,
+      "missing": [
+        31,
+        34,
+        43,
+        46,
+        47,
+        67,
+        88
+      ],
+      "occupied": [
+        27,
+        36,
+        37,
+        39,
+        44,
+        70,
+        78,
+        81
+      ],
+      "depth": 15
+    },
+    {
+      "node": 485512,
+      "state43_hole": true,
+      "missing": [
+        34,
+        43,
+        46,
+        47,
+        67,
+        88
+      ],
+      "occupied": [
+        27,
+        31,
+        36,
+        39,
+        44,
+        70,
+        78,
+        81
+      ],
+      "depth": 14
+    },
+    {
+      "node": 485509,
+      "state43_hole": true,
+      "missing": [
+        34,
+        43,
+        46,
+        67,
+        88
+      ],
+      "occupied": [
+        27,
+        36,
+        39,
+        44,
+        47,
+        78,
+        81
+      ],
+      "depth": 12
+    },
+    {
+      "node": 485506,
+      "state43_hole": true,
+      "missing": [
+        43,
+        46,
+        67,
+        88
+      ],
+      "occupied": [
+        27,
+        34,
+        36,
+        44,
+        78,
+        81
+      ],
+      "depth": 10
+    },
+    {
+      "node": 485503,
+      "state43_hole": true,
+      "missing": [
+        43,
+        67,
+        88
+      ],
+      "occupied": [
+        27,
+        36,
+        44,
+        46,
+        78
+      ],
+      "depth": 8
+    },
+    {
+      "node": 30,
+      "state43_hole": false,
+      "missing": [
+        25,
+        27,
+        47,
+        54,
+        67,
+        81,
+        112
+      ],
+      "occupied": [
+        12,
+        20,
+        34,
+        43,
+        44,
+        46,
+        51,
+        55,
+        60,
+        69,
+        73,
+        88,
+        92,
+        93,
+        105,
+        109
+      ],
+      "depth": 23
+    },
+    {
+      "node": 29,
+      "state43_hole": false,
+      "missing": [
+        25,
+        27,
+        47,
+        54,
+        67,
+        81
+      ],
+      "occupied": [
+        12,
+        20,
+        34,
+        43,
+        44,
+        46,
+        51,
+        55,
+        60,
+        69,
+        73,
+        88,
+        92,
+        93,
+        105,
+        109,
+        112
+      ],
+      "depth": 23
+    },
+    {
+      "node": 24,
+      "state43_hole": false,
+      "missing": [
+        25,
+        27,
+        47,
+        54,
+        67
+      ],
+      "occupied": [
+        12,
+        20,
+        34,
+        43,
+        44,
+        46,
+        51,
+        55,
+        69,
+        81,
+        88,
+        93,
+        105,
+        109
+      ],
+      "depth": 19
+    },
+    {
+      "node": 11,
+      "state43_hole": false,
+      "missing": [
+        27,
+        47,
+        54,
+        67
+      ],
+      "occupied": [
+        25,
+        43,
+        88
+      ],
+      "depth": 7
+    },
+    {
+      "node": 9,
+      "state43_hole": false,
+      "missing": [
+        27,
+        54,
+        67
+      ],
+      "occupied": [
+        43,
+        47,
+        88
+      ],
+      "depth": 6
+    },
+    {
+      "node": 7,
+      "state43_hole": false,
+      "missing": [
+        54,
+        67
+      ],
+      "occupied": [
+        27,
+        43,
+        88
+      ],
+      "depth": 5
+    },
+    {
+      "node": 4,
+      "state43_hole": false,
+      "missing": [
+        54
+      ],
+      "occupied": [
+        43,
+        67
+      ],
+      "depth": 3
+    },
+    {
+      "node": 2,
+      "state43_hole": false,
+      "missing": [],
+      "occupied": [
+        43,
+        54
+      ],
+      "depth": 2
+    }
+  ]
+}

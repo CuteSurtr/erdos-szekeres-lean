@@ -1,5 +1,5 @@
 {
-  "scope": "Complete balanced59/balanced60/balanced61/residual30 kernel certificates, V1 and V2 cut transfers; separately linked closed315,316 and317 real-point theorems.",
+  "scope": "Complete balanced59/balanced60/balanced61/residual30/residual31 kernel certificates, V1 and V2 cut transfers; separately linked closed314,315,316 and317 real-point theorems.",
   "source_attribution": {
     "author": "Michael Schroeder",
     "version": "1, 19 September 2026",
@@ -43,11 +43,15 @@
     "residual-v2-cuts-export.json": "b2ec3815fdd54cbb9308ffc70aa26892b90f997bf1b3c5c3c3b79f88495f5a14",
     "residual-v2-cuts-kernel-check.json": "cacd5811ce051a5451a26a212b3e832ba83ded7f524b96eb841624074fb32c9e",
     "ResidualCoverCutsV2.lean": "46ba1570e1dbc22fb75a31129e4f17d3826afc2dbe7ca27c3742b26869ca3c5b",
-    "README.md": "acad252924a08d9efb9a1d72415509aeb8a51bd2d8a0cefee4d4b2aaf07841b8",
+    "README.md": "5445e761595cfd7fadbb1ca4333be23770bd103b28a0d29836a79ab69441a6b0",
     "balanced-61-fused-lean-sources.tar.gz": "28aee1f64fb21f9d179893b4dc4616b3b14acfab5c49c53dd7d8a6bd03f78f58",
     "balanced-61-fused-export.json": "885f898e64683f13e803940691664282dbae8039fe569b049ee520f41cba6412",
     "balanced-61-fused-kernel-check.json": "c338bac45a3c013d7fbf6360b7e0679c9b14225d32b43803706733193d88ea5f",
-    "balanced-61-fused-tree.json.gz": "d2a0c10b2df72bf238646b4a29287d9b0c55b24f7586a06c1895d6f53a3abfd1"
+    "balanced-61-fused-tree.json.gz": "d2a0c10b2df72bf238646b4a29287d9b0c55b24f7586a06c1895d6f53a3abfd1",
+    "residual-31-fused-lean-sources.tar.gz": "d86db287e6ed3dcfe2fb69ed7b77914a9d44148abfc5363bfd62018176d262b2",
+    "residual-31-fused-export.json": "177d7087560475e9f93bc1e4235f265f4c54988ac734efe6b5515cfb3875fabd",
+    "residual-31-fused-kernel-check.json": "b224c44d30feeed318c0b98e4f2b40c2df063415e20e824c2cd6f2d38d2e7b3e",
+    "residual-31-fused-tree.json.gz": "7887f300ac86ab794c22896ed4127f45c8be306dfaac20a1c126f67b070af675"
   },
   "version2_cuts": {
     "balanced": {
@@ -87,6 +91,20 @@
       "arithmetic_record": "balanced-61-fused-kernel-check.json",
       "cut_record": "balanced-v2-cuts-kernel-check.json",
       "source_archive": "balanced-61-fused-lean-sources.tar.gz"
+    },
+    "residual": {
+      "budget": 31,
+      "source_files": 1218,
+      "parts": 1216,
+      "leaves": 50945,
+      "arithmetic_complete": true,
+      "cut_transfer_complete": true,
+      "original_rows": 1187,
+      "derived_rows": 1108,
+      "rows": 2295,
+      "arithmetic_record": "residual-31-fused-kernel-check.json",
+      "cut_record": "residual-v2-cuts-kernel-check.json",
+      "source_archive": "residual-31-fused-lean-sources.tar.gz"
     }
   }
 }

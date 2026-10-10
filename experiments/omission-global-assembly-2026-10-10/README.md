@@ -1,24 +1,24 @@
 # Parameterized global assembly
 
-**The closed bound `ES(8) ≤ 315` is Lean-checked.**
-[`FinalCover315B61FusedR30.lean`](FinalCover315B61FusedR30.lean) proves
-`ErdosSzekeres.Omission.forces_convex_octagon_315 : ForcesConvexNGon 315 8`.
-Equivalently, every finite set of at least 315 points in `ℝ²` in general
+**The closed bound `ES(8) ≤ 314` is Lean-checked.**
+[`FinalCover314B61FusedR31Fused.lean`](FinalCover314B61FusedR31Fused.lean) proves
+`ErdosSzekeres.Omission.forces_convex_octagon_314 : ForcesConvexNGon 314 8`.
+Equivalently, every finite set of at least 314 points in `ℝ²` in general
 position contains eight points in convex position. No arithmetic-certificate,
 population-bound, rational-coordinate, or realizability hypothesis remains.
 
-The [complete final record](global-cover-315-check.json) verifies both
+The [complete final record](global-cover-314-check.json) verifies both
 compressed arithmetic roots, both cut-transfer proofs, all geometric rows,
 both catalog identifications, and the final theorem. The
-[axiom output](global-cover-315-axioms.txt) reports only `propext`,
+[axiom output](global-cover-314-axioms.txt) reports only `propext`,
 `Classical.choice`, and `Quot.sound` for each final root. This is an ordinary
 convex octagon result, not an empty-octagon result or an asymptotic improvement.
 No priority claim for the finite bound is made here.
 
 The older `Final317.lean` source uses a different, unfinished arithmetic
-route; it is not needed by the checked rounded-cover proof. The earlier 316 and 317
-cover proofs remain checked and preserved. The 314 candidate and alternative
-315 routes below retain their separately stated status.
+route; it is not needed by the checked rounded-cover proof. The earlier 315,
+316 and 317 cover proofs remain checked and preserved. Unfinished alternative routes below
+retain their separately stated status.
 
 ## Checked statements
 
@@ -137,7 +137,7 @@ under CC BY 4.0 and contains 85 generated Lean source files only. The adapted
 geometric library retains Schroeder's MIT notice and Baek's Apache-2.0 notice
 as described in `THIRD_PARTY.md`. All archives are source/data bundles; compiled
 objects remain outside Git. The local `manifest.json` records every packaged
-file hash and distinguishes the checked 315, 316 and 317 chains from historical
+file hash and distinguishes the checked 314, 315, 316 and 317 chains from historical
 and pending alternatives. Absolute paths in check records identify the observed build;
 their object hashes are evidence, not bundled binaries or portable resume records.
 
@@ -291,18 +291,41 @@ weighted certificates. The large trace, CNF and literal metadata remain in
 ignored cache; the preserved record contains their hashes and the bounded
 outcome. No semantic Lean transfer or LRAT formalization was started.
 
-The selected residual31 fused certificate has 50,945 exact leaves in 1,216
-parts, packing base 262,144, and the 2,295-row catalog containing 1,108 derived
-cuts. Its frozen namespace and prefix are `OmissionResidualCover31Fused` and
-`ResidualCover31FusedProof`. Exact Python replay completed; its full Lean
-arithmetic root is pending. The 1,108-cut transfer is already kernel checked.
-`ResidualCover31FusedBridge.lean` prepares the exact catalog bridge.
-`FinalCover315B60R31Fused.lean` and `FinalCover314B61FusedR31Fused.lean` prepare
-the corresponding compositions. The profiles
-`profile-balanced60-v1-residual31-fused-v2.json` and
-`profile-balanced61-fused-v2-residual31-fused-v2.json` now pin their exact frozen
-manifest identities. None of these pending assemblies establishes a stronger
-bound until its full arithmetic roots and final Lean theorem pass.
+## Complete 314 assembly
+
+The residual31 fused certificate has 50,945 exact leaves in 1,216 parts,
+packing base 262,144, and the 2,295-row catalog containing 1,108 derived cuts.
+All 1,218 arithmetic modules (parts, catalog and root) are now Lean checked.
+Its namespace and prefix are `OmissionResidualCover31Fused` and
+`ResidualCover31FusedProof`. The complete 1,108-cut transfer source, full
+extended catalog, exact cut DAG, export manifest and kernel record are
+preserved in the [cover artifact](../omission-cover-certificates-2026-10-10/README.md).
+
+`ResidualCover31FusedBridge.lean` proves the exact catalog identification.
+`FinalCover314B61FusedR31Fused.lean` combines balanced population 190 and
+residual population 122 into the closed ordinary-real-point theorem
+`ErdosSzekeres.Omission.forces_convex_octagon_314` and its explicit
+`convex_octagon_of_card_ge_314` statement. Its profile gate passed all eight
+modules and rehashed all 3,929 bound inputs unchanged. The four
+final roots use only `propext`, `Classical.choice` and `Quot.sound`.
+
+The [resource record](global-cover-314-resources.json) reports
+444.789 seconds for the complete gate. Its reported maximum child-process
+RSS is 31,645,417,472 bytes (approximately 29.47 GiB). Memory and timing are
+observations of this Mac, not guarantees for another host.
+
+To reproduce 314, use the 315 command above with these four replacements:
+
+```sh
+--profile experiments/omission-global-assembly-2026-10-10/profile-balanced61-fused-v2-residual31-fused-v2.json
+--output .cache/reproduce-global-cover-314
+--residual-cover-arithmetic .cache/omission-residual-cover31-fused-linked
+--residual-cover-cuts .cache/omission-cover-transfer-residual-v2
+```
+
+Apply the relocation procedure below for a different host. The separate
+`FinalCover315B60R31Fused.lean` and its profile remain an uncompiled alternative
+route to the already established 315 threshold; they are not inputs of 314.
 
 ## Bounded part-conjunction prototype
 
