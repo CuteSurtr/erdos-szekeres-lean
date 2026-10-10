@@ -1,0 +1,29 @@
+erdos-szekeres-lean
+Copyright 2026 erdos-szekeres-lean contributors
+
+Original project contributions are licensed under the Apache License,
+Version 2.0, except where a more specific notice applies. See LICENSE and
+docs/LICENSING.md for scope. Third-party licenses are retained.
+
+This project includes adaptations of:
+- sneed-and-feed/lean-theorems-1, revision
+  4fce2c92ad4321064a06afdc86d0272bc625ce14 (CC0-1.0).
+- Jineon Baek's erdos-tuza-valtr, revision
+  a5ad53efefb36f8654b9227ce4dba2bf04a7ec3f, and Baek modules distributed
+  with the Schroeder archive described below (Apache-2.0).
+- Michael Schroeder, Erdős–Szekeres: Upper Bounds for Convex Heptagons
+  and Octagons, version-1 archive dated 19 September 2026, supplied
+  identifier DOI 10.5281/zenodo.22842891. Original archive code:
+  Copyright (c) 2026 Michael Schroeder, MIT. Manuscript, original prose,
+  and original certificate data: Copyright (c) 2026 Michael Schroeder,
+  CC BY 4.0. Derived state catalogs and certificate data retain that
+  attribution and license, including when embedded in Lean sources.
+
+Source headers, experiment manifests and docs/THIRD_PARTY.md identify
+adapted material and local changes. License texts/notices are retained in
+docs/CC0-1.0.txt, docs/APACHE-2.0.txt, docs/SCHROEDER-MIT.txt and
+docs/SCHROEDER-CC-BY-4.0.md. No endorsement by upstream authors is implied.
+
+Lean, Mathlib and solver tools are separate dependencies with their own
+licenses. Mathematical attribution to Suk and to Holmsen, Nassajian
+Mojarrad, Pach and Tardos is recorded in docs/PAPER_MAP.md.

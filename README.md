@@ -11,9 +11,13 @@ The Erdős–Szekeres conjecture and an improvement of HMPT's asymptotic
 coefficient remain open in this project. No priority or best-known-bound claim
 is made.
 
-Start with the [mathematical explanation](docs/MATH.md) for the original
-conjecture, the reduction from real points to finite states, the proof of 314,
-and the precise gap to 313.
+Start with the [formal mathematical companion](math.md): precise
+definitions, quantified statements, proof arguments and direct Lean declaration
+references for the asymptotic bounds, the finite proof of 314 and the gap to 313.
+
+Original project contributions are licensed under [Apache-2.0](LICENSE).
+Third-party code and data retain their own licenses; see the
+[license scope](docs/LICENSING.md) and [attribution notice](NOTICE).
 
 ## Finished formalizations
 

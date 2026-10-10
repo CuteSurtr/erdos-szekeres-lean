@@ -1,5 +1,9 @@
 # Third-party Lean source provenance
 
+The project's default license and all exceptions are specified in
+[LICENSING.md](LICENSING.md). Existing upstream terms below are retained;
+the root Apache-2.0 license does not relicense these contributions.
+
 The following files in `ErdosSzekeres/Vendor/` are adapted from
 [sneed-and-feed/lean-theorems-1](https://github.com/sneed-and-feed/lean-theorems-1),
 revision `4fce2c92ad4321064a06afdc86d0272bc625ce14`, under CC0-1.0. The full license
@@ -46,6 +50,11 @@ Its data and prose are distributed under CC BY 4.0, its original code under
 MIT, and its Baek port under Apache-2.0. The complete archive remains an ignored
 local inspection dependency. The balanced geometry adaptations listed below
 are now maintained in this repository.
+
+The archive's README describes its DOI as reserved for an unpublished Zenodo
+draft. This attribution identifies the supplied, pinned archive and does not
+assert that the identifier resolves publicly. The original data/prose license
+notice is retained in [SCHROEDER-CC-BY-4.0.md](SCHROEDER-CC-BY-4.0.md).
 
 The source catalogue hashes are recorded in the experiment manifests. Our
 prefix enumeration and stronger-budget tree searches use those catalogues
