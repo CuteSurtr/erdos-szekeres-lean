@@ -613,13 +613,15 @@ exist. The inductive predicates are `ActualRanks.EndingPath` and
 For $`u<v<w`$, appending or prepending the third point gives
 
 ```math
-\begin{aligned}
-{}[p_u,p_v,p_w]<0
- &\Longrightarrow E_-(u,v)<E_-(v,w),\quad F_-(v,w)<F_-(u,v),\\
-{}[p_u,p_v,p_w]>0
- &\Longrightarrow E_+(u,v)<E_+(v,w).
-\end{aligned}
-\tag{F.1}
+[p_u,p_v,p_w]\lt0
+ \Longrightarrow E_-(u,v)\lt E_-(v,w),\quad F_-(v,w)\lt F_-(u,v).
+\tag{F.1a}
+```
+
+```math
+[p_u,p_v,p_w]\gt0
+ \Longrightarrow E_+(u,v)\lt E_+(v,w).
+\tag{F.1b}
 ```
 
 These are `ActualRanks.rank_growth` and `ResidualRanks.rank_growth`.
@@ -652,14 +654,16 @@ d_R(u,v)=\bigl(6-F_-(u,v),E_+(u,v)-1\bigr)
 
 The bounds follow by shortening an attained forbidden chain if a rank were
 too large. For the residual cup coordinate, octagon avoidance excludes an
-eight-cup. Formula (F.1) implies, for either label system $`d`$,
+eight-cup. Formulas (F.1a–b) imply, for either label system $`d`$,
 
 ```math
-\begin{aligned}
-{}[p_u,p_v,p_w]<0&\Longrightarrow d_1(u,v)<d_1(v,w),\\
-{}[p_u,p_v,p_w]>0&\Longrightarrow d_2(u,v)<d_2(v,w).
-\end{aligned}
-\tag{F.4}
+[p_u,p_v,p_w]\lt0\Longrightarrow d_1(u,v)\lt d_1(v,w).
+\tag{F.4a}
+```
+
+```math
+[p_u,p_v,p_w]\gt0\Longrightarrow d_2(u,v)\lt d_2(v,w).
+\tag{F.4b}
 ```
 
 The corresponding declarations are `ActualRanks.labels`,
@@ -687,7 +691,7 @@ Consequently distinct vertices have distinct incoming states.
 belonged to $`I(u)`$, some $`t<u`$ would have both coordinates of $`d(t,u)`$
 at least those of $`d(u,v)`$. The triple $`(t,u,v)`$ is either a cap or a
 cup; either possibility contradicts the appropriate strict inequality in
-(F.4). Thus (F.5) holds, and it separates the two states. This is
+(F.4a–b). Thus (F.5) holds, and it separates the two states. This is
 `StateInterface.incoming_admissible` and `StateInterface.states_distinct` in
 [StateInterface.lean](ErdosSzekeres/Omission/StateInterface.lean). The
 specialized injectivity results are `ActualRanks.balancedState_injective`
@@ -787,7 +791,7 @@ rectangle bounding this difference either is empty, ruling out that
 chronological order, or contains every allowable pair label. For each of the
 six possible chronological orders of three owners, the checker verifies
 either an empty required difference or a coordinate separation forcing the
-desired sign via (F.4). To force a chronological cup it checks that the
+desired sign via (F.4a–b). To force a chronological cup it checks that the
 second pair's maximum first coordinate is at most the first pair's minimum
 first coordinate; to force a cap it checks the analogous second-coordinate
 inequality. Orientation changes sign under an odd permutation, so all six
