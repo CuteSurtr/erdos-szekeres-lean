@@ -1,5 +1,61 @@
 # Verification records
 
+## Residual32 witness and geometric strengthening — 10 October 2026
+
+The old 2,469-row relaxation now has a Lean-checked 32-hole witness, so no
+universal 33-hole bound follows from those rows. The
+[case-4 record](../experiments/omission-residual32-case4-2026-10-10/kernel-check.json)
+checks two modules and fifteen conclusions. Cases 2 and 7 remain partial
+integer searches; no complete exclusions are claimed for them.
+
+The [new coupled core](../experiments/omission-residual32-witness-coupled-2026-10-10/kernel-check.json)
+checks three modules and eleven conclusions, including a valid geometric
+row, strict strengthening, and nonrealizability of that exact old witness.
+The independent checker replays all 258 RUP steps and thirteen deletion
+models; seven corruption/replay controls pass. These deletion models are
+necessary-constraint assignments, not real-point realizations.
+
+The [generic Sixth template](../experiments/omission-residual32-sixth-variants-2026-10-10/kernel-check.json)
+checks three modules and four conclusions. Its 29 additional literal supports
+are only Python diagnostics and all follow from individual old rows. The
+[Fourth128 family](../experiments/omission-residual32-fourth-global-variants-2026-10-10/kernel-check.json)
+checks ten modules and ten audited roots in 352.453 seconds. All 128 rows are
+valid for actual configurations. None passes the single-old-row implication
+test; full independence is not claimed. An independent review checked the
+ordered maps, support bindings, eight proof chunks and complete assembly.
+
+The [ordered129 bridge](../experiments/omission-residual32-added-rows-2026-10-10/kernel-check.json)
+checks `Residual32AddedRows.literal_binding` and `all_rows` in 13.979 seconds.
+Its preflight binds the unchanged old prefix and the exact new suffix of
+the 2,598-row search source. A changed tail index is rejected before Lean.
+The strengthened arithmetic search remains inconclusive; its best 32-hole
+near-model violates original row 205 by one.
+
+These are **19 new standalone Lean modules and 42 audited conclusions**.
+The portable gate additionally rebuilds the old literal Catalog, for 20
+modules and 43 audited conclusions in total. Only `propext`,
+`Classical.choice`, and `Quot.sound` occur in the local proof audits.
+The [combined local audit](validation/residual32-strengthening-axioms-2026-10-10.txt)
+and [source-bound record](validation/residual32-strengthening-checks-2026-10-10.json)
+identify this checkpoint. The gate scans every compiled source for proof
+placeholders, custom axiom
+declarations and native-evaluation tokens. It regenerates the coupled core,
+checks exact finite diagnostics, and builds fresh experiment objects on Linux
+or macOS without relying on platform-specific saved object hashes.
+
+```sh
+lake env python3 scripts/check_residual32_continuation.py
+```
+
+This command is now an explicit hosted CI step. Local results above do not
+assert that a hosted run has completed; the exact pushed commit's Actions
+result must be checked separately. All 3,929 inputs of the completed 314-point
+assembly were rehashed unchanged during this continuation. That bound remains
+the completed global result. See [MATH.md](MATH.md) for the mathematical scope.
+
+Earlier sections below are historical checkpoints. Their unresolved-old-model
+status is superseded by the exact witness described above.
+
 ## Residual32 catalog transfer and contextual proofs — 10 October 2026 continuation
 
 The [transfer gate](../experiments/omission-residual32-transfer-2026-10-10/kernel-check.json)

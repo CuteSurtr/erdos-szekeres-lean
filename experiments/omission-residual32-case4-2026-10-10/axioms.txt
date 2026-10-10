@@ -1,0 +1,18 @@
+'OmissionResidual32Case4.missing_card' depends on axioms: [propext, Quot.sound]
+'OmissionResidual32Case4.all_rows' depends on axioms: [propext, Quot.sound]
+'OmissionResidual32Case4.fixed_context' depends on axioms: [propext, Quot.sound]
+'OmissionResidual32Case4.zero_occupied' depends on axioms: [propext, Quot.sound]
+'OmissionResidual32Case4.holes_boolean' depends on axioms: [propext, Quot.sound]
+'OmissionResidual32Case4.sum_holes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual32Case4.total_holes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual32Case4.allows_thirty_two_holes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual32Case4.no_universal_thirty_three_hole_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+'OmissionResidual32Case4.all_first_variants' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual32Case4.all_second_variants' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual32Case4.all_third_variants' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual32Case4.all_fourth_variants' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual32Case4.all_fifth_variants' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual32Case4.later_nine_rows' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,251 @@
+{
+  "scope": "Exact arithmetic tree compression only; Lean validation is separate",
+  "source_sha256": "f03eebb1d20eae3bd25dbb5024eaacdfdcc5bcd8ed964d190bdfa59c73aeb909",
+  "prepare_sha256": "40bc0df296d44d06e420a1c9a6202927f9217bdcdb21654c22d8db1ba7520c23",
+  "source_archive_sha256": "138a9fd6e3c773437411e9cca487153a221928e6d5d85d09b8d73e4919f5e8c3",
+  "frozen_contexts_sha256": "723ad9f3cbe5474769ee87d7080f018bef8278d8b4939474378906919e22af9d",
+  "checker_sha256": "b3f33a623b12a1ba5985f8d8fa8f3d556501cec0704a21b20eae28e6f9810040",
+  "compactor_sha256": "e70957a48b8e387d7a6ca00ac5c48c193b13d6ab656e670501eea05f048beebd",
+  "contexts": [
+    {
+      "original_node": 485514,
+      "input": "experiments/omission-residual32-resume-2026-10-10/closed-context-485514.json.gz",
+      "input_sha256": "179314c427f54a95deb4e87eb67e726df361c028b56cc65d30a62d8abd70fba7",
+      "output": "compressed-context-485514.json.gz",
+      "output_sha256": "e0295dcc91a714cd9ebae4cbee293f59de86c3e94299526796a706e7628f1228",
+      "before": {
+        "nodes": 99,
+        "weighted_leaves": 50,
+        "over_budget_leaves": 0,
+        "minimum_margin": 1
+      },
+      "after": {
+        "nodes": 99,
+        "weighted_leaves": 50,
+        "over_budget_leaves": 0,
+        "minimum_margin": 1
+      },
+      "lifted_ancestor_checks": 0,
+      "compacted_retained_leaves": 1,
+      "largest_multiplier_total": 119688,
+      "above_catalog_base": 0,
+      "seconds": 0.034
+    },
+    {
+      "original_node": 485512,
+      "input": "experiments/omission-residual32-resume-2026-10-10/closed-context-485512.json.gz",
+      "input_sha256": "0fae10af22a51655312485e3e19722beb32fc900cfdedd1ba1d20a8f872dcd20",
+      "output": "compressed-context-485512.json.gz",
+      "output_sha256": "147e5b0dc55e1ee772f2efb94e00cf97b66b1185954b78862e134a70361f2b46",
+      "before": {
+        "nodes": 177,
+        "weighted_leaves": 89,
+        "over_budget_leaves": 0,
+        "minimum_margin": 1
+      },
+      "after": {
+        "nodes": 177,
+        "weighted_leaves": 89,
+        "over_budget_leaves": 0,
+        "minimum_margin": 1
+      },
+      "lifted_ancestor_checks": 0,
+      "compacted_retained_leaves": 2,
+      "largest_multiplier_total": 130291,
+      "above_catalog_base": 0,
+      "seconds": 0.064
+    },
+    {
+      "original_node": 485506,
+      "input": "experiments/omission-residual32-resume-2026-10-10/closed-context-485506.json.gz",
+      "input_sha256": "edc6f70e67948a5ed8e9351fae3f4b67a6f58c5554f7b44e9769153d2fb2a955",
+      "output": "compressed-context-485506.json.gz",
+      "output_sha256": "cc4da00a2ebfe8315af6f30a788d7cb3fefb28585bd7751385ee5df466021538",
+      "before": {
+        "nodes": 341,
+        "weighted_leaves": 171,
+        "over_budget_leaves": 0,
+        "minimum_margin": 1
+      },
+      "after": {
+        "nodes": 341,
+        "weighted_leaves": 171,
+        "over_budget_leaves": 0,
+        "minimum_margin": 1
+      },
+      "lifted_ancestor_checks": 0,
+      "compacted_retained_leaves": 3,
+      "largest_multiplier_total": 132521,
+      "above_catalog_base": 1,
+      "seconds": 0.13
+    },
+    {
+      "original_node": 485509,
+      "input": "experiments/omission-residual32-resume-2026-10-10/closed-context-485509.json.gz",
+      "input_sha256": "1cb976ce6fccc8443d76ac37a6321706213aaa40c9abbea04b95b784602a821b",
+      "output": "compressed-context-485509.json.gz",
+      "output_sha256": "81bc03ec5ad6f554a0b381d74c6aeef8b052b370c0aabdf09203ca979f2003c5",
+      "before": {
+        "nodes": 385,
+        "weighted_leaves": 193,
+        "over_budget_leaves": 0,
+        "minimum_margin": 1
+      },
+      "after": {
+        "nodes": 385,
+        "weighted_leaves": 193,
+        "over_budget_leaves": 0,
+        "minimum_margin": 1
+      },
+      "lifted_ancestor_checks": 0,
+      "compacted_retained_leaves": 7,
+      "largest_multiplier_total": 137148,
+      "above_catalog_base": 4,
+      "seconds": 0.148
+    },
+    {
+      "original_node": 492350,
+      "input": "experiments/omission-residual32-resume-2026-10-10/closed-context-492350.json.gz",
+      "input_sha256": "eaae0614d3f88fcae9cbf1afd75ebcd5316bd94337add86d062b8809d6bd761c",
+      "output": "compressed-context-492350.json.gz",
+      "output_sha256": "90a9ddee1c20fd529dfb14d9c04c94fc86267113cd8b8a77cf0da7396478de91",
+      "before": {
+        "nodes": 587,
+        "weighted_leaves": 294,
+        "over_budget_leaves": 0,
+        "minimum_margin": 1
+      },
+      "after": {
+        "nodes": 587,
+        "weighted_leaves": 294,
+        "over_budget_leaves": 0,
+        "minimum_margin": 1
+      },
+      "lifted_ancestor_checks": 0,
+      "compacted_retained_leaves": 8,
+      "largest_multiplier_total": 129860,
+      "above_catalog_base": 0,
+      "seconds": 0.219
+    },
+    {
+      "original_node": 485503,
+      "input": "experiments/omission-residual32-resume-2026-10-10/closed-context-485503.json.gz",
+      "input_sha256": "c93d7feb4f29813f46e1fd33fc45f9c557a658921ea79fa3c4c67f7d09d317f1",
+      "output": "compressed-context-485503.json.gz",
+      "output_sha256": "2f03b1469f739afe7dbe6c132bcebdafc33d493099aab2c64cfc0be47a2aa206",
+      "before": {
+        "nodes": 1897,
+        "weighted_leaves": 949,
+        "over_budget_leaves": 0,
+        "minimum_margin": 1
+      },
+      "after": {
+        "nodes": 1897,
+        "weighted_leaves": 949,
+        "over_budget_leaves": 0,
+        "minimum_margin": 1
+      },
+      "lifted_ancestor_checks": 0,
+      "compacted_retained_leaves": 37,
+      "largest_multiplier_total": 142287,
+      "above_catalog_base": 10,
+      "seconds": 0.753
+    },
+    {
+      "original_node": 492346,
+      "input": "experiments/omission-residual32-resume-2026-10-10/closed-context-492346.json.gz",
+      "input_sha256": "e777bb64760d7a2c101ddc6bbb99a5beff4377bd1f5aaecd1bd9830e197034a7",
+      "output": "compressed-context-492346.json.gz",
+      "output_sha256": "e80ddd788d586b3aaf19add2aa72ac606aa016155c4aecf012474487d703e7ac",
+      "before": {
+        "nodes": 2003,
+        "weighted_leaves": 1002,
+        "over_budget_leaves": 0,
+        "minimum_margin": 1
+      },
+      "after": {
+        "nodes": 1999,
+        "weighted_leaves": 1000,
+        "over_budget_leaves": 0,
+        "minimum_margin": 1
+      },
+      "lifted_ancestor_checks": 2,
+      "compacted_retained_leaves": 37,
+      "largest_multiplier_total": 130335,
+      "above_catalog_base": 0,
+      "seconds": 0.754
+    },
+    {
+      "original_node": 492344,
+      "input": "experiments/omission-residual32-resume-2026-10-10/closed-context-492344.json.gz",
+      "input_sha256": "ca32e0ea11d90308e4fa9d477b946d35963ecab69eb4f1d529e2e08bb2f08961",
+      "output": "compressed-context-492344.json.gz",
+      "output_sha256": "0a7068778db974cd66a5bfbc3616cc3ada59e58695a332699b000aa756bfce26",
+      "before": {
+        "nodes": 2959,
+        "weighted_leaves": 1480,
+        "over_budget_leaves": 0,
+        "minimum_margin": 1
+      },
+      "after": {
+        "nodes": 2959,
+        "weighted_leaves": 1480,
+        "over_budget_leaves": 0,
+        "minimum_margin": 1
+      },
+      "lifted_ancestor_checks": 0,
+      "compacted_retained_leaves": 49,
+      "largest_multiplier_total": 142177,
+      "above_catalog_base": 5,
+      "seconds": 1.186
+    },
+    {
+      "original_node": 11,
+      "input": "experiments/omission-residual32-resume-2026-10-10/closed-context-11.json.gz",
+      "input_sha256": "e4352f20cd6c4f661d36a6a6a8ad1229c50fd0b81f352874a15b26b9cd3c7398",
+      "output": "compressed-context-11.json.gz",
+      "output_sha256": "3e07f945670764c240309f7532e3d135916bef86eb7fbae9af4632906a5b5110",
+      "before": {
+        "nodes": 16199,
+        "weighted_leaves": 8100,
+        "over_budget_leaves": 0,
+        "minimum_margin": 1
+      },
+      "after": {
+        "nodes": 16197,
+        "weighted_leaves": 8099,
+        "over_budget_leaves": 0,
+        "minimum_margin": 1
+      },
+      "lifted_ancestor_checks": 1,
+      "compacted_retained_leaves": 259,
+      "largest_multiplier_total": 140074,
+      "above_catalog_base": 7,
+      "seconds": 6.177
+    },
+    {
+      "original_node": 9,
+      "input": "experiments/omission-residual32-resume-2026-10-10/closed-context-9.json.gz",
+      "input_sha256": "7908e0faa769a385cf6ce1c8218156aeb3d07e8967940ea5ef86fa44b25f928e",
+      "output": "compressed-context-9.json.gz",
+      "output_sha256": "b5e37dd8da4aa30070ba97200dd7f6b1f6e6557b19d3a10e0a0bd788883a7743",
+      "before": {
+        "nodes": 31321,
+        "weighted_leaves": 15661,
+        "over_budget_leaves": 0,
+        "minimum_margin": 1
+      },
+      "after": {
+        "nodes": 31297,
+        "weighted_leaves": 15649,
+        "over_budget_leaves": 0,
+        "minimum_margin": 1
+      },
+      "lifted_ancestor_checks": 12,
+      "compacted_retained_leaves": 495,
+      "largest_multiplier_total": 150828,
+      "above_catalog_base": 60,
+      "seconds": 12.567
+    }
+  ]
+}

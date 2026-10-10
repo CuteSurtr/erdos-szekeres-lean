@@ -1,0 +1,72 @@
+{
+  "schema": "residual32-primal-package-v1",
+  "scope": "2,598 necessary Boolean rows and bounded inconclusive search; no global bound or geometric realization claim.",
+  "states": 154,
+  "rows": 2598,
+  "base_rows": 2469,
+  "base_source_uncompressed_sha256": "f03eebb1d20eae3bd25dbb5024eaacdfdcc5bcd8ed964d190bdfa59c73aeb909",
+  "source_uncompressed_sha256": {
+    "source-2471.json.gz": "09756e694e643ebcb36bf5c6e763c890e986802c6adb803f99367aca7e81347b",
+    "source-2598.json.gz": "01d4fde13ae0ca43427540a3d529e7e29b875936332af2cc4ef7d423edee469b"
+  },
+  "append_order": {
+    "2469": "Sixth core demand-one row",
+    "2470+k": "Fourth family row k, 0 <= k < 128"
+  },
+  "lean_bindings": {
+    "sixth": {
+      "support_data": "experiments/omission-residual32-witness-coupled-2026-10-10/core13.json",
+      "module": "experiments/omission-residual32-witness-coupled-2026-10-10/Geometry.lean",
+      "theorem": "ErdosSzekeres.Omission.CoupledCoreSixth.hole_bound",
+      "kernel_record": "experiments/omission-residual32-witness-coupled-2026-10-10/kernel-check.json"
+    },
+    "fourth": {
+      "row_bindings": "experiments/omission-residual32-fourth-global-variants-2026-10-10/row-bindings.json",
+      "data_module": "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Data.lean",
+      "module": "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Root.lean",
+      "theorem": "ErdosSzekeres.Omission.CoupledFourthGlobalVariants.all_rows",
+      "kernel_record": "experiments/omission-residual32-fourth-global-variants-2026-10-10/kernel-check.json"
+    },
+    "ordered_additions": {
+      "module": "experiments/omission-residual32-added-rows-2026-10-10/AddedRows.lean",
+      "manifest": "experiments/omission-residual32-added-rows-2026-10-10/manifest.json",
+      "theorem": "ErdosSzekeres.Omission.Residual32AddedRows.all_rows",
+      "literal_binding_theorem": "ErdosSzekeres.Omission.Residual32AddedRows.literal_binding",
+      "kernel_record": "experiments/omission-residual32-added-rows-2026-10-10/kernel-check.json"
+    }
+  },
+  "external_inputs": {
+    "experiments/omission-residual32-research-2026-10-10/source.json.gz": "138a9fd6e3c773437411e9cca487153a221928e6d5d85d09b8d73e4919f5e8c3",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/row-bindings.json": "dbb78c914bcce4e5dcc7bf083eec96568f65e82c6f2176b25c558c4f86a7563a",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/kernel-check.json": "7416f0e4b2de2c0a63d46cee0923dfe5f1ae8e578f872c3aedc506e358358a99",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Data.lean": "2f123817e11626fc8184334a3e8c52cac4ee4e9c27fe7c08fb3e178c43458093",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Root.lean": "734435b2469547dabc1c5c446d8a46446ef9eb5e1515d52414a97a286485a8a0",
+    "experiments/omission-residual32-witness-coupled-2026-10-10/core13.json": "364bb7ec0bcdef8673b9d40656f1a4d53349b66d5144e497ccec1deb53df22ba",
+    "experiments/omission-residual32-witness-coupled-2026-10-10/LeanCore.lean": "d77d900f228f2f91e71f39b1af303c59c765c5eefaa978b8aa8bc45050168133",
+    "experiments/omission-residual32-witness-coupled-2026-10-10/Geometry.lean": "9b47934dc5e8ab8ad85a7697f03e32f1c3eb3c130e397c04f211734107bc27a3",
+    "experiments/omission-residual32-witness-coupled-2026-10-10/kernel-check.json": "9893a340c4ee42357560408b46d760bd71a800883452bb3c2fa671684da7cd74",
+    "experiments/omission-residual32-added-rows-2026-10-10/AddedRows.lean": "8ccbbbc7e177dacb8808d74acd92185ed34ba6d156f62e1f8d4d2839e31b22a0",
+    "experiments/omission-residual32-added-rows-2026-10-10/manifest.json": "7cf54b7aa434865df42cb83e4251a2085be78954c8e1d8733dd038deced37689",
+    "experiments/omission-residual32-added-rows-2026-10-10/kernel-check.json": "16f1c73b4f414aae5f3cf3fc15faa1e5c9f8f2107ec77dc67398e866fdf786b5"
+  },
+  "files": {
+    "README.md": "dbd1fec3ec54547aaf15d4699bf44c77a2ad74a991ff01777c50e924b73c828a",
+    "candidates.json": "57d5fc3c7467967d7d9760537580ae004e43258dac0f95c964097ead3fbc30e5",
+    "check.py": "38c6efa754bdd4197185734c798152f0d5d666b3424176ec10462832ccd8720c",
+    "exact-check.json": "25cdcbfc0b66087143e6f3b31a4c2990d1845f63f66f24830aceeb4c5a6501e7",
+    "family-source-manifest.json": "42ca3dd1394e40ab06c33056cb6973b20379b76423c5bf7a88827e806ee7061f",
+    "family-witness-search.json": "c48d4e8808b961535f5ddcf9dc67e0219502ce041075c7f3c74683fd2ac3b835",
+    "fourth-row-bindings.json": "dbb78c914bcce4e5dcc7bf083eec96568f65e82c6f2176b25c558c4f86a7563a",
+    "lp-probe.json": "e63e92e9237e75c77329cb4ca32b2963bc21bbc924f006723b184afe6336ffd0",
+    "repair-best-final.json": "a7f9a04928e6615c0a83b7df2ddfcd34cfe871f5fb93cbc523e5e5652ab3eeba",
+    "repair-best.json": "17da4d663a62166b37b18bc87e58a5730f7873e8a9442e931fac1bcef6fa1ace",
+    "research-sources.json.gz": "1925d11fcf3694d0131967e32a4499e79db3924becae915693d7fa4cf2b88d03",
+    "source-2471.json.gz": "a3fa01ece5233f82ebd4038e987b6ca07f27648af4e6243a591256344e2e096c",
+    "source-2598.json.gz": "02507ea568e78813d74620b7bc354bc64c921cfd6f5fd5dc40391425884c0f65",
+    "source-manifest.json": "f51911dbe6c18a96da111c567469be20f88a5e563f39fbf8015ac93389bc0597",
+    "tabu-result.json": "bab3d6bff93822075176eba0b50c6fd3bd23a8159090b634b73b62424246417d",
+    "tabu-trace.json": "dfaf7ac191e52718f4095aa02a449f84d701bfcd66195b51621cbbbf3e531988",
+    "test_check.py": "30e12ec307c2e28b094ab69ddb6257745d154588ef99f724034096a7f1defcc5",
+    "witness-search.json": "07c03547b627f15f4b56089dbb9b45b690ac63be581e9f538ab0084fe01d2212"
+  }
+}

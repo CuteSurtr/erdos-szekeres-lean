@@ -1,0 +1,47 @@
+{
+  "scope": "Exact integer weighted tree; Python replay only until Lean export and geometric transfer are checked",
+  "source": ".cache/residual32-case7-2026-10-10/source.json",
+  "source_sha256": "f03eebb1d20eae3bd25dbb5024eaacdfdcc5bcd8ed964d190bdfa59c73aeb909",
+  "seed_tree": ".cache/residual32-case7-2026-10-10/seed.json.gz",
+  "seed_tree_sha256": "2871f361760b7f02fc2babb050fe95db495174bf674d4d6070733c96cd68a7cf",
+  "script_sha256": "77521e0589ea58914aba79c49f3162783da9d909ec265b981bb1e6672bf27a44",
+  "solver": "HiGHS 1.15.1",
+  "strategy": "pseudocost",
+  "maximum_weight_scale": 10000,
+  "strong_candidates": 4,
+  "strong_lookahead_depth": 8,
+  "hole_budget": 32,
+  "root": 0,
+  "original_node": 7,
+  "missing": [
+    54,
+    67
+  ],
+  "occupied": [
+    27,
+    43,
+    88
+  ],
+  "initial_pending": 6,
+  "initial_nodes": 24561,
+  "seconds": 216.8140717500355,
+  "processed_lp_nodes": 29357,
+  "new_exact_leaves": 15287,
+  "new_branches": 15288,
+  "forced_branches": 617,
+  "lp_resets": 0,
+  "lp_failures": {},
+  "leaf_scales": {
+    "100": 5195,
+    "1000": 3018,
+    "256": 5163,
+    "10000": 925,
+    "32": 368,
+    "10": 1
+  },
+  "nodes_count": 55137,
+  "pending_count": 7,
+  "status": "unknown",
+  "complete": false,
+  "final": true
+}

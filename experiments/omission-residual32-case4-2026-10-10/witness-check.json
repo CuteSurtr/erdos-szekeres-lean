@@ -1,0 +1,22 @@
+{
+  "source_rows": 2469,
+  "states": 154,
+  "holes": 32,
+  "occupied": 122,
+  "minimum_slack": 0,
+  "tight_rows": 588,
+  "slack_histogram": {
+    "0": 588,
+    "1": 1025,
+    "2": 568,
+    "3": 241,
+    "4": 38,
+    "5": 7,
+    "6": 1,
+    "8": 1
+  },
+  "case4_context_satisfied": true,
+  "state_zero_occupied": true,
+  "geometric_realizability_checked": false,
+  "scope": "Exact feasible assignment to the frozen 2469-row Boolean relaxation only"
+}

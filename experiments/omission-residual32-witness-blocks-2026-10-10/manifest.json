@@ -1,0 +1,20 @@
+{
+  "status": "stopped_no_candidate",
+  "scope": "Search diagnostics only; no Lean theorem, no infeasibility claim beyond the two recorded finite algorithm runs, and no improved planar bound.",
+  "outcomes": {
+    "threshold": "complete finite run, no candidate",
+    "cell": "complete finite run, no candidate",
+    "endpoint": "bounded Z3 run returned unknown, inconclusive"
+  },
+  "source_uncompressed_sha256": "f03eebb1d20eae3bd25dbb5024eaacdfdcc5bcd8ed964d190bdfa59c73aeb909",
+  "external_inputs": {
+    "experiments/omission-residual32-research-2026-10-10/source.json.gz": "138a9fd6e3c773437411e9cca487153a221928e6d5d85d09b8d73e4919f5e8c3"
+  },
+  "files": {
+    "endpoint-search.json": "b95039abd8b0bf4ff10601bfdc2ea284111ac8f5f699f3289ac7bfa2fb0e6d77",
+    "search-cell.json": "3dd4e2c3332179daa84123fc7a1393346ba63f32b8e779050c1be6702e2e9c6d",
+    "search-threshold.json": "28d281bcb319b1566ba4cb952c9b35b7d35c99e6e7cf1bfd863aaeb54f219962",
+    "search.py": "fd3d83e14055a89b4303cd2f741a052955a8d1ca3772fcf47a6246c104972409",
+    "search_endpoint.py": "579b1ca91e304b5da1f9062cf98c62a0a36c09fb0cd2d10831162c93ec892f9d"
+  }
+}

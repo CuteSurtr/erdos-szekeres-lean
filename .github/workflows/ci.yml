@@ -85,6 +85,8 @@ jobs:
         run: ERDOS_LEAN_EXPORT_TEST=1 lake env python3 -m unittest discover -s scripts -p 'test_omission_residual_*.py' -v
       - name: Check additional residual row controls
         run: ERDOS_LEAN_EXPORT_TEST=1 lake env python3 -m unittest discover -s scripts -p test_additional_residual_rows.py -v
+      - name: Check residual32 witness and geometric refinements
+        run: lake env python3 scripts/check_residual32_continuation.py
       - name: Save verified project build cache
         if: success() && steps.project-cache.outputs.cache-hit != 'true'
         uses: actions/cache/save@v5

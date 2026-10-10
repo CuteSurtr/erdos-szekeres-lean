@@ -1,0 +1,2577 @@
+{
+  "scope": "Exact single-row implication test for 128 demand-one Fourth rows; not a test of full logical independence.",
+  "criterion": "old rhs > cardinality(old support minus new support); Boolean holes on the outside contribute at most that cardinality.",
+  "negative_result_meaning": "No single old row certifies this row by this criterion. Combinations of old rows or other geometric consequences may still imply it.",
+  "old_source": "experiments/omission-residual32-research-2026-10-10/source.json.gz",
+  "source_archive_sha256": "138a9fd6e3c773437411e9cca487153a221928e6d5d85d09b8d73e4919f5e8c3",
+  "source_uncompressed_sha256": "f03eebb1d20eae3bd25dbb5024eaacdfdcc5bcd8ed964d190bdfa59c73aeb909",
+  "row_bindings_sha256": "dbb78c914bcce4e5dcc7bf083eec96568f65e82c6f2176b25c558c4f86a7563a",
+  "classifier_sha256": "02d3bbb782ac0ba585fe106644d0858c42ff5854ba155289ba4e7a535544ae3d",
+  "old_rows": 2469,
+  "new_rows": 128,
+  "directly_implied_count": 0,
+  "not_certified_by_single_row_count": 128,
+  "directly_implied_rows": [],
+  "rows": [
+    {
+      "row": 0,
+      "support": [
+        6,
+        11,
+        14,
+        17,
+        20,
+        21,
+        27,
+        29,
+        32,
+        37,
+        41,
+        45,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 1,
+      "support": [
+        10,
+        14,
+        16,
+        20,
+        21,
+        25,
+        27,
+        29,
+        32,
+        37,
+        41,
+        45,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 2,
+      "support": [
+        22,
+        29,
+        32,
+        37,
+        38,
+        42,
+        45,
+        48,
+        58,
+        84,
+        94,
+        98,
+        106
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 3,
+      "support": [
+        1,
+        4,
+        7,
+        11,
+        13,
+        17,
+        18,
+        21,
+        24,
+        27,
+        31,
+        34,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 4,
+      "support": [
+        1,
+        4,
+        7,
+        11,
+        13,
+        17,
+        18,
+        21,
+        24,
+        27,
+        31,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 5,
+      "support": [
+        1,
+        4,
+        7,
+        11,
+        13,
+        18,
+        21,
+        24,
+        27,
+        31,
+        34,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 6,
+      "support": [
+        2,
+        4,
+        7,
+        13,
+        16,
+        18,
+        21,
+        24,
+        25,
+        27,
+        31,
+        34,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 7,
+      "support": [
+        2,
+        4,
+        7,
+        13,
+        16,
+        18,
+        21,
+        24,
+        25,
+        27,
+        31,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 8,
+      "support": [
+        2,
+        4,
+        7,
+        13,
+        16,
+        18,
+        21,
+        24,
+        27,
+        31,
+        34,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 9,
+      "support": [
+        3,
+        8,
+        11,
+        12,
+        13,
+        17,
+        18,
+        21,
+        24,
+        27,
+        31,
+        34,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 10,
+      "support": [
+        3,
+        8,
+        11,
+        12,
+        13,
+        17,
+        18,
+        21,
+        24,
+        27,
+        31,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 11,
+      "support": [
+        3,
+        8,
+        11,
+        12,
+        13,
+        18,
+        21,
+        24,
+        27,
+        31,
+        34,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 12,
+      "support": [
+        5,
+        8,
+        12,
+        13,
+        16,
+        18,
+        21,
+        24,
+        25,
+        27,
+        31,
+        34,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 13,
+      "support": [
+        5,
+        8,
+        12,
+        13,
+        16,
+        18,
+        21,
+        24,
+        25,
+        27,
+        31,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 14,
+      "support": [
+        5,
+        8,
+        12,
+        13,
+        16,
+        18,
+        21,
+        24,
+        27,
+        31,
+        34,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 15,
+      "support": [
+        1,
+        4,
+        7,
+        11,
+        13,
+        17,
+        18,
+        21,
+        24,
+        31,
+        34,
+        39,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 16,
+      "support": [
+        1,
+        4,
+        7,
+        11,
+        13,
+        17,
+        18,
+        21,
+        24,
+        31,
+        39,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 17,
+      "support": [
+        1,
+        4,
+        7,
+        11,
+        13,
+        18,
+        21,
+        24,
+        31,
+        34,
+        39,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 18,
+      "support": [
+        2,
+        4,
+        7,
+        13,
+        16,
+        18,
+        21,
+        24,
+        25,
+        31,
+        34,
+        39,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 19,
+      "support": [
+        2,
+        4,
+        7,
+        13,
+        16,
+        18,
+        21,
+        24,
+        25,
+        31,
+        39,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 20,
+      "support": [
+        2,
+        4,
+        7,
+        13,
+        16,
+        18,
+        21,
+        24,
+        31,
+        34,
+        39,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 21,
+      "support": [
+        3,
+        8,
+        11,
+        12,
+        13,
+        17,
+        18,
+        21,
+        24,
+        31,
+        34,
+        39,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 22,
+      "support": [
+        3,
+        8,
+        11,
+        12,
+        13,
+        17,
+        18,
+        21,
+        24,
+        31,
+        39,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 23,
+      "support": [
+        3,
+        8,
+        11,
+        12,
+        13,
+        18,
+        21,
+        24,
+        31,
+        34,
+        39,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 24,
+      "support": [
+        5,
+        8,
+        12,
+        13,
+        16,
+        18,
+        21,
+        24,
+        25,
+        31,
+        34,
+        39,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 25,
+      "support": [
+        5,
+        8,
+        12,
+        13,
+        16,
+        18,
+        21,
+        24,
+        25,
+        31,
+        39,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 26,
+      "support": [
+        5,
+        8,
+        12,
+        13,
+        16,
+        18,
+        21,
+        24,
+        31,
+        34,
+        39,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 27,
+      "support": [
+        1,
+        4,
+        7,
+        11,
+        13,
+        17,
+        21,
+        24,
+        27,
+        31,
+        34,
+        39,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 28,
+      "support": [
+        1,
+        4,
+        7,
+        11,
+        13,
+        17,
+        21,
+        24,
+        27,
+        31,
+        39,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 29,
+      "support": [
+        1,
+        4,
+        7,
+        11,
+        13,
+        21,
+        24,
+        27,
+        31,
+        34,
+        39,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 30,
+      "support": [
+        1,
+        4,
+        11,
+        13,
+        17,
+        18,
+        21,
+        24,
+        27,
+        31,
+        34,
+        39,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 31,
+      "support": [
+        1,
+        4,
+        11,
+        13,
+        17,
+        18,
+        21,
+        24,
+        27,
+        31,
+        39,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 32,
+      "support": [
+        1,
+        4,
+        11,
+        13,
+        18,
+        21,
+        24,
+        27,
+        31,
+        34,
+        39,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 33,
+      "support": [
+        2,
+        4,
+        7,
+        13,
+        16,
+        21,
+        24,
+        25,
+        27,
+        31,
+        34,
+        39,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 34,
+      "support": [
+        2,
+        4,
+        7,
+        13,
+        16,
+        21,
+        24,
+        25,
+        27,
+        31,
+        39,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 35,
+      "support": [
+        2,
+        4,
+        7,
+        13,
+        16,
+        21,
+        24,
+        27,
+        31,
+        34,
+        39,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 36,
+      "support": [
+        2,
+        4,
+        13,
+        16,
+        18,
+        21,
+        24,
+        25,
+        27,
+        31,
+        34,
+        39,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 37,
+      "support": [
+        2,
+        4,
+        13,
+        16,
+        18,
+        21,
+        24,
+        25,
+        27,
+        31,
+        39,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 38,
+      "support": [
+        2,
+        4,
+        13,
+        16,
+        18,
+        21,
+        24,
+        27,
+        31,
+        34,
+        39,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 39,
+      "support": [
+        3,
+        8,
+        11,
+        12,
+        13,
+        17,
+        21,
+        24,
+        27,
+        31,
+        34,
+        39,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 40,
+      "support": [
+        3,
+        8,
+        11,
+        12,
+        13,
+        17,
+        21,
+        24,
+        27,
+        31,
+        39,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 41,
+      "support": [
+        3,
+        8,
+        11,
+        12,
+        13,
+        21,
+        24,
+        27,
+        31,
+        34,
+        39,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 42,
+      "support": [
+        3,
+        8,
+        11,
+        13,
+        17,
+        18,
+        21,
+        24,
+        27,
+        31,
+        34,
+        39,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 43,
+      "support": [
+        3,
+        8,
+        11,
+        13,
+        17,
+        18,
+        21,
+        24,
+        27,
+        31,
+        39,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 44,
+      "support": [
+        3,
+        8,
+        11,
+        13,
+        18,
+        21,
+        24,
+        27,
+        31,
+        34,
+        39,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 45,
+      "support": [
+        5,
+        8,
+        12,
+        13,
+        16,
+        21,
+        24,
+        25,
+        27,
+        31,
+        34,
+        39,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 46,
+      "support": [
+        5,
+        8,
+        12,
+        13,
+        16,
+        21,
+        24,
+        25,
+        27,
+        31,
+        39,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 47,
+      "support": [
+        5,
+        8,
+        12,
+        13,
+        16,
+        21,
+        24,
+        27,
+        31,
+        34,
+        39,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 48,
+      "support": [
+        5,
+        8,
+        13,
+        16,
+        18,
+        21,
+        24,
+        25,
+        27,
+        31,
+        34,
+        39,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 49,
+      "support": [
+        5,
+        8,
+        13,
+        16,
+        18,
+        21,
+        24,
+        25,
+        27,
+        31,
+        39,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 50,
+      "support": [
+        5,
+        8,
+        13,
+        16,
+        18,
+        21,
+        24,
+        27,
+        31,
+        34,
+        39,
+        44,
+        53
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 51,
+      "support": [
+        2,
+        4,
+        7,
+        16,
+        19,
+        24,
+        25,
+        26,
+        28,
+        36,
+        40,
+        54,
+        64
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 52,
+      "support": [
+        2,
+        4,
+        7,
+        16,
+        19,
+        24,
+        25,
+        26,
+        28,
+        40,
+        49,
+        54,
+        64
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 53,
+      "support": [
+        2,
+        4,
+        7,
+        16,
+        19,
+        24,
+        25,
+        28,
+        36,
+        40,
+        49,
+        54,
+        64
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 54,
+      "support": [
+        2,
+        4,
+        16,
+        19,
+        24,
+        25,
+        26,
+        28,
+        36,
+        40,
+        49,
+        54,
+        64
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 55,
+      "support": [
+        2,
+        4,
+        7,
+        16,
+        19,
+        24,
+        26,
+        28,
+        34,
+        36,
+        40,
+        54,
+        64
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 56,
+      "support": [
+        2,
+        4,
+        7,
+        16,
+        19,
+        24,
+        26,
+        28,
+        34,
+        40,
+        49,
+        54,
+        64
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 57,
+      "support": [
+        2,
+        4,
+        7,
+        16,
+        19,
+        24,
+        28,
+        34,
+        36,
+        40,
+        49,
+        54,
+        64
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 58,
+      "support": [
+        2,
+        4,
+        16,
+        19,
+        24,
+        26,
+        28,
+        34,
+        36,
+        40,
+        49,
+        54,
+        64
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 59,
+      "support": [
+        5,
+        8,
+        12,
+        16,
+        19,
+        24,
+        25,
+        26,
+        28,
+        36,
+        40,
+        54,
+        64
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 60,
+      "support": [
+        5,
+        8,
+        12,
+        16,
+        19,
+        24,
+        25,
+        26,
+        28,
+        40,
+        49,
+        54,
+        64
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 61,
+      "support": [
+        5,
+        8,
+        12,
+        16,
+        19,
+        24,
+        25,
+        28,
+        36,
+        40,
+        49,
+        54,
+        64
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 62,
+      "support": [
+        5,
+        8,
+        16,
+        19,
+        24,
+        25,
+        26,
+        28,
+        36,
+        40,
+        49,
+        54,
+        64
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 63,
+      "support": [
+        5,
+        8,
+        12,
+        16,
+        19,
+        24,
+        26,
+        28,
+        34,
+        36,
+        40,
+        54,
+        64
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 64,
+      "support": [
+        5,
+        8,
+        12,
+        16,
+        19,
+        24,
+        26,
+        28,
+        34,
+        40,
+        49,
+        54,
+        64
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 65,
+      "support": [
+        5,
+        8,
+        12,
+        16,
+        19,
+        24,
+        28,
+        34,
+        36,
+        40,
+        49,
+        54,
+        64
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 66,
+      "support": [
+        5,
+        8,
+        16,
+        19,
+        24,
+        26,
+        28,
+        34,
+        36,
+        40,
+        49,
+        54,
+        64
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 67,
+      "support": [
+        3,
+        8,
+        11,
+        12,
+        13,
+        17,
+        18,
+        29,
+        32,
+        37,
+        41,
+        45,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 68,
+      "support": [
+        3,
+        8,
+        11,
+        12,
+        13,
+        17,
+        18,
+        29,
+        32,
+        37,
+        41,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 69,
+      "support": [
+        3,
+        8,
+        11,
+        12,
+        13,
+        18,
+        29,
+        32,
+        37,
+        41,
+        45,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 70,
+      "support": [
+        5,
+        8,
+        12,
+        13,
+        16,
+        18,
+        25,
+        29,
+        32,
+        37,
+        41,
+        45,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 71,
+      "support": [
+        5,
+        8,
+        12,
+        13,
+        16,
+        18,
+        25,
+        29,
+        32,
+        37,
+        41,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 72,
+      "support": [
+        5,
+        8,
+        12,
+        13,
+        16,
+        18,
+        29,
+        32,
+        37,
+        41,
+        45,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 73,
+      "support": [
+        3,
+        8,
+        11,
+        12,
+        13,
+        17,
+        18,
+        29,
+        32,
+        41,
+        45,
+        50,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 74,
+      "support": [
+        3,
+        8,
+        11,
+        12,
+        13,
+        17,
+        18,
+        29,
+        32,
+        41,
+        50,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 75,
+      "support": [
+        3,
+        8,
+        11,
+        12,
+        13,
+        18,
+        29,
+        32,
+        41,
+        45,
+        50,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 76,
+      "support": [
+        5,
+        8,
+        12,
+        13,
+        16,
+        18,
+        25,
+        29,
+        32,
+        41,
+        45,
+        50,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 77,
+      "support": [
+        5,
+        8,
+        12,
+        13,
+        16,
+        18,
+        25,
+        29,
+        32,
+        41,
+        50,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 78,
+      "support": [
+        5,
+        8,
+        12,
+        13,
+        16,
+        18,
+        29,
+        32,
+        41,
+        45,
+        50,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 79,
+      "support": [
+        3,
+        8,
+        11,
+        12,
+        13,
+        17,
+        29,
+        32,
+        37,
+        41,
+        45,
+        50,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 80,
+      "support": [
+        3,
+        8,
+        11,
+        12,
+        13,
+        17,
+        29,
+        32,
+        37,
+        41,
+        50,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 81,
+      "support": [
+        3,
+        8,
+        11,
+        12,
+        13,
+        29,
+        32,
+        37,
+        41,
+        45,
+        50,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 82,
+      "support": [
+        3,
+        8,
+        11,
+        13,
+        17,
+        18,
+        29,
+        32,
+        37,
+        41,
+        45,
+        50,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 83,
+      "support": [
+        3,
+        8,
+        11,
+        13,
+        17,
+        18,
+        29,
+        32,
+        37,
+        41,
+        50,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 84,
+      "support": [
+        3,
+        8,
+        11,
+        13,
+        18,
+        29,
+        32,
+        37,
+        41,
+        45,
+        50,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 85,
+      "support": [
+        5,
+        8,
+        12,
+        13,
+        16,
+        25,
+        29,
+        32,
+        37,
+        41,
+        45,
+        50,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 86,
+      "support": [
+        5,
+        8,
+        12,
+        13,
+        16,
+        25,
+        29,
+        32,
+        37,
+        41,
+        50,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 87,
+      "support": [
+        5,
+        8,
+        12,
+        13,
+        16,
+        29,
+        32,
+        37,
+        41,
+        45,
+        50,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 88,
+      "support": [
+        5,
+        8,
+        13,
+        16,
+        18,
+        25,
+        29,
+        32,
+        37,
+        41,
+        45,
+        50,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 89,
+      "support": [
+        5,
+        8,
+        13,
+        16,
+        18,
+        25,
+        29,
+        32,
+        37,
+        41,
+        50,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 90,
+      "support": [
+        5,
+        8,
+        13,
+        16,
+        18,
+        29,
+        32,
+        37,
+        41,
+        45,
+        50,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 91,
+      "support": [
+        6,
+        11,
+        14,
+        17,
+        20,
+        21,
+        27,
+        29,
+        32,
+        37,
+        41,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 92,
+      "support": [
+        6,
+        11,
+        14,
+        20,
+        21,
+        27,
+        29,
+        32,
+        37,
+        41,
+        45,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 93,
+      "support": [
+        10,
+        14,
+        16,
+        20,
+        21,
+        25,
+        27,
+        29,
+        32,
+        37,
+        41,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 94,
+      "support": [
+        10,
+        14,
+        16,
+        20,
+        21,
+        27,
+        29,
+        32,
+        37,
+        41,
+        45,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 95,
+      "support": [
+        6,
+        11,
+        14,
+        17,
+        20,
+        21,
+        27,
+        29,
+        32,
+        41,
+        45,
+        50,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 96,
+      "support": [
+        6,
+        11,
+        14,
+        17,
+        20,
+        21,
+        27,
+        29,
+        32,
+        41,
+        50,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 97,
+      "support": [
+        6,
+        11,
+        14,
+        20,
+        21,
+        27,
+        29,
+        32,
+        41,
+        45,
+        50,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 98,
+      "support": [
+        10,
+        14,
+        16,
+        20,
+        21,
+        25,
+        27,
+        29,
+        32,
+        41,
+        45,
+        50,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 99,
+      "support": [
+        10,
+        14,
+        16,
+        20,
+        21,
+        25,
+        27,
+        29,
+        32,
+        41,
+        50,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 100,
+      "support": [
+        10,
+        14,
+        16,
+        20,
+        21,
+        27,
+        29,
+        32,
+        41,
+        45,
+        50,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 101,
+      "support": [
+        6,
+        11,
+        14,
+        17,
+        20,
+        21,
+        29,
+        32,
+        37,
+        41,
+        45,
+        50,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 102,
+      "support": [
+        6,
+        11,
+        14,
+        17,
+        20,
+        21,
+        29,
+        32,
+        37,
+        41,
+        50,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 103,
+      "support": [
+        6,
+        11,
+        14,
+        20,
+        21,
+        29,
+        32,
+        37,
+        41,
+        45,
+        50,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 104,
+      "support": [
+        6,
+        11,
+        14,
+        17,
+        21,
+        27,
+        29,
+        32,
+        37,
+        41,
+        45,
+        50,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 105,
+      "support": [
+        6,
+        11,
+        14,
+        17,
+        21,
+        27,
+        29,
+        32,
+        37,
+        41,
+        50,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 106,
+      "support": [
+        6,
+        11,
+        14,
+        21,
+        27,
+        29,
+        32,
+        37,
+        41,
+        45,
+        50,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 107,
+      "support": [
+        10,
+        14,
+        16,
+        20,
+        21,
+        25,
+        29,
+        32,
+        37,
+        41,
+        45,
+        50,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 108,
+      "support": [
+        10,
+        14,
+        16,
+        20,
+        21,
+        25,
+        29,
+        32,
+        37,
+        41,
+        50,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 109,
+      "support": [
+        10,
+        14,
+        16,
+        20,
+        21,
+        29,
+        32,
+        37,
+        41,
+        45,
+        50,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 110,
+      "support": [
+        10,
+        14,
+        16,
+        21,
+        25,
+        27,
+        29,
+        32,
+        37,
+        41,
+        45,
+        50,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 111,
+      "support": [
+        10,
+        14,
+        16,
+        21,
+        25,
+        27,
+        29,
+        32,
+        37,
+        41,
+        50,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 112,
+      "support": [
+        10,
+        14,
+        16,
+        21,
+        27,
+        29,
+        32,
+        37,
+        41,
+        45,
+        50,
+        55,
+        65
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 113,
+      "support": [
+        5,
+        8,
+        12,
+        16,
+        19,
+        25,
+        26,
+        32,
+        38,
+        47,
+        51,
+        66,
+        75
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 114,
+      "support": [
+        5,
+        8,
+        12,
+        16,
+        19,
+        25,
+        26,
+        32,
+        38,
+        51,
+        60,
+        66,
+        75
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 115,
+      "support": [
+        5,
+        8,
+        12,
+        16,
+        19,
+        25,
+        32,
+        38,
+        47,
+        51,
+        60,
+        66,
+        75
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 116,
+      "support": [
+        5,
+        8,
+        16,
+        19,
+        25,
+        26,
+        32,
+        38,
+        47,
+        51,
+        60,
+        66,
+        75
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 117,
+      "support": [
+        5,
+        8,
+        12,
+        16,
+        19,
+        26,
+        32,
+        38,
+        45,
+        47,
+        51,
+        66,
+        75
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 118,
+      "support": [
+        5,
+        8,
+        12,
+        16,
+        19,
+        26,
+        32,
+        38,
+        45,
+        51,
+        60,
+        66,
+        75
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 119,
+      "support": [
+        5,
+        8,
+        12,
+        16,
+        19,
+        32,
+        38,
+        45,
+        47,
+        51,
+        60,
+        66,
+        75
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 120,
+      "support": [
+        5,
+        8,
+        16,
+        19,
+        26,
+        32,
+        38,
+        45,
+        47,
+        51,
+        60,
+        66,
+        75
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 121,
+      "support": [
+        9,
+        13,
+        18,
+        19,
+        24,
+        26,
+        32,
+        34,
+        38,
+        47,
+        51,
+        66,
+        75
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 122,
+      "support": [
+        9,
+        13,
+        18,
+        19,
+        24,
+        26,
+        32,
+        34,
+        38,
+        51,
+        60,
+        66,
+        75
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 123,
+      "support": [
+        9,
+        13,
+        18,
+        19,
+        24,
+        32,
+        34,
+        38,
+        47,
+        51,
+        60,
+        66,
+        75
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 124,
+      "support": [
+        9,
+        13,
+        19,
+        24,
+        26,
+        32,
+        34,
+        38,
+        47,
+        51,
+        60,
+        66,
+        75
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 125,
+      "support": [
+        9,
+        13,
+        18,
+        19,
+        24,
+        26,
+        32,
+        38,
+        45,
+        47,
+        51,
+        66,
+        75
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 126,
+      "support": [
+        9,
+        13,
+        18,
+        19,
+        24,
+        26,
+        32,
+        38,
+        45,
+        51,
+        60,
+        66,
+        75
+      ],
+      "directly_implied": false,
+      "certificates": []
+    },
+    {
+      "row": 127,
+      "support": [
+        9,
+        13,
+        18,
+        19,
+        24,
+        32,
+        38,
+        45,
+        47,
+        51,
+        60,
+        66,
+        75
+      ],
+      "directly_implied": false,
+      "certificates": []
+    }
+  ]
+}

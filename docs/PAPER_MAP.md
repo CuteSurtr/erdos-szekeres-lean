@@ -189,3 +189,18 @@ These project results have no numbered counterpart in Suk or HMPT.
 The precise 2,469-row provenance table is in the
 [transfer bundle](../experiments/omission-residual32-transfer-2026-10-10/README.md).
 These theorems do not complete the 313-point target.
+
+## Supplementary residual32 witness and stronger rows
+
+These also have no numbered counterpart in Suk or HMPT.
+
+| Result | Lean file and theorem | Scope |
+| --- | --- | --- |
+| Exact old-catalog witness | [Witness.lean](../experiments/omission-residual32-case4-2026-10-10/Witness.lean): `OmissionResidual32Case4.all_rows`, `no_universal_thirty_three_hole_bound` | A Boolean 32-hole assignment satisfies all 2,469 rows; no geometric realization is asserted. |
+| Sixth coupled core | [Geometry.lean](../experiments/omission-residual32-witness-coupled-2026-10-10/Geometry.lean): `ErdosSzekeres.Omission.CoupledCoreSixth.hole_bound`, `strict_strengthening`, `countermodel_not_realizable` | A valid thirteen-state row excludes that exact assignment; its nonrealizability is proved. |
+| Generic Sixth template | [SixthTemplateGeometry.lean](../experiments/omission-residual32-sixth-variants-2026-10-10/SixthTemplateGeometry.lean): `ErdosSzekeres.Omission.CoupledTemplateSixth.hole_bound` | Every injective compatible substitution satisfies a demand-one omission row. |
+| Global Fourth-template search prefix | [Root.lean](../experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Root.lean): `ErdosSzekeres.Omission.CoupledFourthGlobalVariants.all_rows` | All 128 literal new rows hold for actual residual configurations. The search prefix is not a complete classification. |
+
+The new rows do not yet establish a 33-hole minimum or the 313-point theorem.
+The [mathematical explanation](MATH.md) connects these declarations to the
+population bounds and distinguishes the solver search from kernel proofs.

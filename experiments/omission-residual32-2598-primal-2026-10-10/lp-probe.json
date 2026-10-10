@@ -1,0 +1,116 @@
+{
+  "scope": "LP diagnostics; only positive exact integer cuts certify contradictions",
+  "source_sha256": "01d4fde13ae0ca43427540a3d529e7e29b875936332af2cc4ef7d423edee469b",
+  "rows": 2598,
+  "threads": 1,
+  "seconds": 0.24774995900224894,
+  "results": [
+    {
+      "context": "root",
+      "zero_occupied": false,
+      "missing": [],
+      "occupied": [],
+      "status": "HighsModelStatus.kOptimal",
+      "numerical_minimum_holes": 26.99999999999987,
+      "exact_contradiction": null
+    },
+    {
+      "context": "original2",
+      "zero_occupied": false,
+      "missing": [],
+      "occupied": [
+        43,
+        54
+      ],
+      "status": "HighsModelStatus.kOptimal",
+      "numerical_minimum_holes": 27.301719185506972,
+      "exact_contradiction": null
+    },
+    {
+      "context": "original4",
+      "zero_occupied": false,
+      "missing": [
+        54
+      ],
+      "occupied": [
+        43,
+        67
+      ],
+      "status": "HighsModelStatus.kOptimal",
+      "numerical_minimum_holes": 27.57063007491149,
+      "exact_contradiction": null
+    },
+    {
+      "context": "original7",
+      "zero_occupied": false,
+      "missing": [
+        54,
+        67
+      ],
+      "occupied": [
+        27,
+        43,
+        88
+      ],
+      "status": "HighsModelStatus.kOptimal",
+      "numerical_minimum_holes": 28.234272213242928,
+      "exact_contradiction": null
+    },
+    {
+      "context": "root",
+      "zero_occupied": true,
+      "missing": [],
+      "occupied": [
+        0
+      ],
+      "status": "HighsModelStatus.kOptimal",
+      "numerical_minimum_holes": 27.000000000000014,
+      "exact_contradiction": null
+    },
+    {
+      "context": "original2",
+      "zero_occupied": true,
+      "missing": [],
+      "occupied": [
+        0,
+        43,
+        54
+      ],
+      "status": "HighsModelStatus.kOptimal",
+      "numerical_minimum_holes": 27.30171918550271,
+      "exact_contradiction": null
+    },
+    {
+      "context": "original4",
+      "zero_occupied": true,
+      "missing": [
+        54
+      ],
+      "occupied": [
+        0,
+        43,
+        67
+      ],
+      "status": "HighsModelStatus.kOptimal",
+      "numerical_minimum_holes": 27.570630074911527,
+      "exact_contradiction": null
+    },
+    {
+      "context": "original7",
+      "zero_occupied": true,
+      "missing": [
+        54,
+        67
+      ],
+      "occupied": [
+        0,
+        27,
+        43,
+        88
+      ],
+      "status": "HighsModelStatus.kOptimal",
+      "numerical_minimum_holes": 28.234272213226177,
+      "exact_contradiction": null
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "scope": "128 distinct additional Fourth-template rows; no standalone planar bound",
+  "namespace": "ErdosSzekeres.Omission.CoupledFourthGlobalVariants",
+  "source_uncompressed_sha256": "f03eebb1d20eae3bd25dbb5024eaacdfdcc5bcd8ed964d190bdfa59c73aeb909",
+  "generator_sha256": "1a55e5d6a1e1e9817e44f8eaa020d9bf3b4a4233cd9d3ee0a9946ce031eae18d",
+  "external_inputs": {
+    "experiments/omission-residual32-research-2026-10-10/source.json.gz": "138a9fd6e3c773437411e9cca487153a221928e6d5d85d09b8d73e4919f5e8c3",
+    "experiments/omission-residual32-case4-2026-10-10/witness.json": "f2717dae6a250e21ffde91c6dacb30eb30b5654d0da0c1b43128725a9ce19bc3",
+    "ErdosSzekeres/Omission/CoupledTemplateFourth.lean": "7f57fdffb2877a0f253a8d91359486b4e53e8fbadb8ef372b4bcb87c7cca06f9",
+    "ErdosSzekeres/Omission/CoupledTemplateFourthCheck.lean": "f3cc0f765bb4e136a75d1a50dac6aeffcd25b549d01fc64be46d6a157d098c2c",
+    "ErdosSzekeres/Omission/CoupledTemplateFourthGeometry.lean": "bdd7f4b814cdbe42fb771d441b9666cb578a09eced0ea5f529e13d2a3d663539"
+  },
+  "inputs": {
+    "variants.json": "d1f5d83dda364e67ae8228e609c8d94e6de95f285b565bdbefee99a7b77a7762",
+    "variants-all-states.json": "cdd5e8d84f30d94311b18c3e46c4a65bf2cd357ee4719c826a4d909dd13a42d3",
+    "row-bindings.json": "dbb78c914bcce4e5dcc7bf083eec96568f65e82c6f2176b25c558c4f86a7563a"
+  },
+  "files": {
+    "FourthGlobalProof/Data.lean": "2f123817e11626fc8184334a3e8c52cac4ee4e9c27fe7c08fb3e178c43458093",
+    "FourthGlobalProof/Part00.lean": "08c9ed535f13d9ab62af7dd71eef124d446407478422a2003a60df6b44c8c309",
+    "FourthGlobalProof/Part01.lean": "b74dccc5619d60b9a2f6cd0f180aea20fc68f71b834b56f8d84b7869213704d1",
+    "FourthGlobalProof/Part02.lean": "77c2563bd2ef9cefa2246c83dfffa3fa207877d4c68e0a371afa3afe690f21da",
+    "FourthGlobalProof/Part03.lean": "f94945db6262a0d26355b0497e315b4e0addc546c0dcd0d948c82c20f9c54045",
+    "FourthGlobalProof/Part04.lean": "0f0b833f757803372923781dd7b113c4c824b0cd3dd5da0a3502e286561f323c",
+    "FourthGlobalProof/Part05.lean": "ae279c587c29eccdec1555118e3f5cc2324031605176695a60c8de21ce4e8d52",
+    "FourthGlobalProof/Part06.lean": "921850417f665a8a2b5b0a4ea54b63215a894bd25f70eb965ceda6a7052be8ab",
+    "FourthGlobalProof/Part07.lean": "2579691f46928121b67a2aaea58fb75b5f1f4b010b70964ea26eba8451959c38",
+    "FourthGlobalProof/Root.lean": "734435b2469547dabc1c5c446d8a46446ef9eb5e1515d52414a97a286485a8a0"
+  },
+  "modules": [
+    "Data",
+    "Part00",
+    "Part01",
+    "Part02",
+    "Part03",
+    "Part04",
+    "Part05",
+    "Part06",
+    "Part07",
+    "Root"
+  ],
+  "rows": 128,
+  "part_size": 16
+}

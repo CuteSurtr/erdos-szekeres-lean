@@ -1,0 +1,48 @@
+{
+  "holes": [
+    7,
+    12,
+    33,
+    39,
+    44,
+    47,
+    50,
+    51,
+    52,
+    54,
+    55,
+    56,
+    69,
+    71,
+    73,
+    75,
+    76,
+    77,
+    78,
+    90,
+    97,
+    99,
+    101,
+    109,
+    115,
+    117,
+    118,
+    119,
+    124,
+    127,
+    132,
+    133
+  ],
+  "exact_rows_checked": true,
+  "source_reference": "../omission-residual32-research-2026-10-10/source.json.gz",
+  "source_uncompressed_sha256": "f03eebb1d20eae3bd25dbb5024eaacdfdcc5bcd8ed964d190bdfa59c73aeb909",
+  "original_node": 4,
+  "missing": [
+    54
+  ],
+  "occupied": [
+    43,
+    67
+  ],
+  "scope": "Feasible necessary-inequality relaxation only; no geometric realizability or planar counterexample claimed"
+}

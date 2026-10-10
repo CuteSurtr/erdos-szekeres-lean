@@ -1,0 +1,63 @@
+{
+  "complete": true,
+  "scope": "Exact catalog identities and integer diagnostics; no global infeasibility proof",
+  "source_sha256": "01d4fde13ae0ca43427540a3d529e7e29b875936332af2cc4ef7d423edee469b",
+  "rows": 2598,
+  "added_rows": 129,
+  "candidate_violations": {
+    "original2469_witness": [
+      {
+        "row": 2469,
+        "count": 0,
+        "rhs": 1,
+        "deficit": 1
+      },
+      {
+        "row": 2470,
+        "count": 0,
+        "rhs": 1,
+        "deficit": 1
+      },
+      {
+        "row": 2471,
+        "count": 0,
+        "rhs": 1,
+        "deficit": 1
+      },
+      {
+        "row": 2472,
+        "count": 0,
+        "rhs": 1,
+        "deficit": 1
+      }
+    ],
+    "previous_tabu_candidate": [
+      {
+        "row": 177,
+        "count": 0,
+        "rhs": 1,
+        "deficit": 1
+      },
+      {
+        "row": 973,
+        "count": 5,
+        "rhs": 6,
+        "deficit": 1
+      }
+    ],
+    "best_tabu_candidate": [
+      {
+        "row": 205,
+        "count": 0,
+        "rhs": 1,
+        "deficit": 1
+      }
+    ]
+  },
+  "local_repair_trials": {
+    "repair-best.json": 3968,
+    "repair-best-final.json": 3968
+  },
+  "lean_kernel_executed_by_this_checker": false,
+  "global_32_hole_exclusion": false
+}

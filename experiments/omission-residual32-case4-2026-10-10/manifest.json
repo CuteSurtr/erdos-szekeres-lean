@@ -1,0 +1,41 @@
+{
+  "scope": "Kernel-checked 32-hole model of the exact frozen relaxation, not geometric realizability or a planar bound",
+  "source_uncompressed_sha256": "f03eebb1d20eae3bd25dbb5024eaacdfdcc5bcd8ed964d190bdfa59c73aeb909",
+  "original_node": 4,
+  "missing": [
+    54
+  ],
+  "occupied": [
+    43,
+    67
+  ],
+  "hole_budget": 32,
+  "kernel_check_sha256": "792389cc3302820d71cc065aed45239b76c0a62a4aeb43ae65e4b316366632f6",
+  "partial_checkpoint": {
+    "path": ".cache/residual32-case4-2026-10-10/chunk1.json.gz",
+    "sha256": "f1c724e041ffa9105a684319c180af813d509f35fcb4b44ebb3aae5bfc7038a1",
+    "committed": false
+  },
+  "files": {
+    "ExistingFamilies.lean": "9b5157153ad38d4c2199fa5672231e64c63e29b246eb5941913e8bddb12f4761",
+    "README.md": "5c3e3a7b92aa03c2525a34b9061d493315f1d8e802d2e85f8a3c79612145fc77",
+    "Witness.lean": "d08045fbc41158704a4a50ab7ea0c61a5a6b99cf629766c5ecb1e74dc2bea518",
+    "axioms.txt": "6289e04e6ea312e46f2131b639cb971abc52526ca7a11f452533a9a9cb466f9d",
+    "check_lean.py": "59002e0c3d7e2532eae6a0d6464ad8fbbc6f5a75715737d57e4ee763689aa147",
+    "check_witness.py": "c7d99d865f5615269e0d1420d57cfbbc10395786fdf1e77e8e6dbe9d990356f4",
+    "conditional_check.py": "aeb8388f31e67daab021bdae8258cdf5f280a5ccfb2f9684ec17379937e84fcd",
+    "full-witness-template-match.json": "3fd94df0988ba7bca394cd706ddcf63a8342fdd5661f83f30a1b21a9d5dcae9b",
+    "kernel-check.json": "792389cc3302820d71cc065aed45239b76c0a62a4aeb43ae65e4b316366632f6",
+    "minimal-core-template-match.json": "2ff29fbc2f15af11ef1f6509200f7fafaf946417f6cb009362ccd88a78740429",
+    "partial-tree-replay.json": "1689e3c6f08d0c75f54f62d895753bdee9555fc629d505bbee6b746dfcc27d33",
+    "search-summary.json": "5343213d4a08e6899a7bcc1ce1dbfa1f85eda005fa8d8520d3692df634ef4098",
+    "search.log": "87a8f65e90dc69b1cd4497ff51e75eb5c65254b45af21bffb49da2afe0f416e1",
+    "search.py": "4cf72e6416f945aee64238aed702bc82223ac681e501b1ad5d1da9e998faf22c",
+    "seed.json": "46e80e47297c433c5dc6ae26e36c36a91db75ce9e16ea30ecbf48a29aa506cff",
+    "template_match.py": "254a25b45d4623fc6955ea527b51cf6bd128cd1878c5427fed691dc0a20393b9",
+    "test_check.py": "7a48fb2acfed9fcb12e3a962e2b65367b3cd6c82b5477967efc5817b3e470c5c",
+    "tests.json": "40e8f618fe77cc5c82bf4a429ee25eb9499bccdf752e539be3f111e7120634c3",
+    "witness-check.json": "98ae09ebce6d912326953cb9bd790075ae92f7be83ae093ead4269472bba0ca2",
+    "witness.json": "f2717dae6a250e21ffde91c6dacb30eb30b5654d0da0c1b43128725a9ce19bc3"
+  }
+}

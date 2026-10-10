@@ -35,7 +35,7 @@ cuts and exact catalog identifications are also checked in Lean.
 | Target | Required work | Unknowns and rough size |
 | --- | --- | --- |
 | 313 through the balanced side | Exclude at most 62 balanced holes, export and check a complete arithmetic proof, then reuse the proved geometric interface. | The bounded witness search was inconclusive. No exclusion or 62-hole witness was found. The geometric transfer for the present catalog is already available, but there is no reliable search or proof-size estimate. |
-| 313 through the residual side | Finish the 32-hole exclusion, check its complete arithmetic proof in Lean, then compose it with the now-proved full geometric transfer. | The resumed tree has eight pending leaves within three of the original 24 contexts. Eleven original contexts have Lean proofs; ten more have complete integer-replayed subtrees. One side of the state-43 split is closed arithmetically. The partial tree has 391,293 leaves, about eight times the completed residual31 proof. Similar packing could require thousands of generated Lean parts; compression could change that size substantially. Unexplored subtrees prevent a reliable completion-time estimate. |
+| 313 through the residual side | Exclude at most 32 holes using stronger geometry, check the complete arithmetic certificate and its literal row binding, then compose the result with the partition. | The old 2,469-row catalog admits a Lean-checked 32-hole witness, so its full exclusion is impossible. A new core and 128 template rows are geometrically proved and exclude that witness. Bounded searches of the 2,598-row catalog are inconclusive. A prior partial tree already had 391,293 leaves; a successful new proof could differ radically in size. There is no reliable completion-time or proof-size estimate. |
 | Further improvements | Find stronger necessary constraints or a stronger counting argument, and prove the complete resulting reduction. | The newer coupled and structural geometric rows are individually proved. They do not themselves establish a stronger population bound, and no reliable estimate for another global improvement is available. |
 
 The enlarged residual model has 2,469 rows, including twelve arithmetic
@@ -45,7 +45,19 @@ indexed row for the same actual residual assignment, and `feasible_holes`
 proves the population equation `sum holes + n = 154`. The conditional theorem
 `residual_bound_of_hole_budget` isolates the arithmetic exclusion still needed;
 it does not supply that exclusion. The existing chart and partition can then
-be reused. Whether this finite Boolean model excludes 32 holes remains unresolved.
+be reused. The old model is now proved to admit 32 holes; that conditional
+interface cannot be discharged from these rows alone.
+
+The [case-4 witness](../experiments/omission-residual32-case4-2026-10-10/README.md)
+is checked in Lean and satisfies every old row, the branch context, and
+occupation of state zero. Cases 2 and 7 remain incomplete. Their partial
+certificates cannot change the feasibility of case 4. The
+[new coupled obstruction](../experiments/omission-residual32-witness-coupled-2026-10-10/README.md)
+proves that this witness is not geometrically realizable and supplies a valid
+new row. The [128-row Fourth-template family](../experiments/omission-residual32-fourth-global-variants-2026-10-10/README.md)
+is also Lean-checked. The strengthened 2,598-row model has no complete exclusion
+or feasible witness at this checkpoint; a 32-hole near-model violates one row.
+See [MATH.md](MATH.md) for the exact population calculation and certificate logic.
 
 The [new residual checkpoint](../experiments/omission-residual32-resume-2026-10-10/README.md)
 preserves the resumed tree's identity and sixteen closed conditional subtrees;
@@ -63,7 +75,7 @@ A Lean-checked 32-hole abstract witness satisfies all 1,187 original residual
 rows and all 45 earlier additions. Later searches found further witnesses for
 some intermediate models. These expose limitations of those specific Boolean
 models; they do not provide real residual configurations or Erdős–Szekeres lower
-bounds, and they do not establish tightness of the newest model.
+bounds, and they do not establish tightness of the newest strengthened model.
 
 The source method and comparison remain Michael Schroeder's
 [version-1 archive](https://doi.org/10.5281/zenodo.22842891). No currently-best-bound

@@ -281,3 +281,15 @@ The [second nine-state support](../experiments/omission-coupled-nine-variant-202
 reuses the original nine-state refutation with newly checked state-dependent
 premises. Its literal state data retain the same catalog attribution and data
 license. These additions introduce no new third-party code or priority claim.
+
+The [residual32 witness continuation](../experiments/omission-residual32-case4-2026-10-10/README.md),
+[sixth core](../experiments/omission-residual32-witness-coupled-2026-10-10/README.md),
+[generic sixth template](../experiments/omission-residual32-sixth-variants-2026-10-10/README.md),
+and [128 new Fourth-template rows](../experiments/omission-residual32-fourth-global-variants-2026-10-10/README.md)
+retain this same catalog and geometric-interface attribution. Their search
+scripts adapt earlier local coupled models and exporters, with source hashes
+recorded in each bundle. The new literal CNF/LRAT derivation, Lean necessity
+proofs and finite witnesses are project additions. The independent RUP checker
+adapts `scripts/check_omission_coupled_core.py`; no external solver source or
+binary is committed. The case-2/case-7 partial trees and failed repair searches
+are research diagnostics, not new bounds attributed to any paper.

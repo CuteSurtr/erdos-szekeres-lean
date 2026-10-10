@@ -1,0 +1,53 @@
+{
+  "scope": "Prospective augmented Boolean source for exact witness discovery; additions not yet assumed Lean checked",
+  "base_source": ".cache/residual32-case2-2026-10-10/source.json",
+  "base_source_sha256": "f03eebb1d20eae3bd25dbb5024eaacdfdcc5bcd8ed964d190bdfa59c73aeb909",
+  "source": ".cache/residual32-sixth-primal-2026-10-10/source-2471.json",
+  "source_sha256": "09756e694e643ebcb36bf5c6e763c890e986802c6adb803f99367aca7e81347b",
+  "rows": 2471,
+  "unchanged_prefix_rows": 2469,
+  "ordered_additions": [
+    {
+      "row": 2469,
+      "support": [
+        25,
+        43,
+        53,
+        65,
+        74,
+        85,
+        89,
+        91,
+        96,
+        107,
+        110,
+        111,
+        125
+      ],
+      "rhs": 1,
+      "provenance": "Prospective Sixth core",
+      "lean_status_at_search": "Checking in another agent; not presumed proved by this search"
+    },
+    {
+      "row": 2470,
+      "support": [
+        6,
+        11,
+        14,
+        17,
+        20,
+        21,
+        27,
+        29,
+        32,
+        37,
+        41,
+        45,
+        65
+      ],
+      "rhs": 1,
+      "provenance": "Compatible Fourth-template substitution",
+      "lean_status_at_search": "Checking in another agent; not presumed proved by this search"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "scope": "Source-bound local kernel records and source preflight; hosted CI checked separately. No313theorem.",
+  "modules_in_portable_gate": 20,
+  "audited_roots": 43,
+  "new_modules": 19,
+  "new_roots": 42,
+  "source_hashes": {
+    "experiments/omission-residual32-context-certificates-2026-10-10/Residual32ContextsProof/Catalog.lean": "053f35ea49b7ec2b95818e96ab18bcd7628c09190d0e97bfc1552f3937b606bd",
+    "experiments/omission-residual32-case4-2026-10-10/Witness.lean": "d08045fbc41158704a4a50ab7ea0c61a5a6b99cf629766c5ecb1e74dc2bea518",
+    "experiments/omission-residual32-case4-2026-10-10/ExistingFamilies.lean": "9b5157153ad38d4c2199fa5672231e64c63e29b246eb5941913e8bddb12f4761",
+    "experiments/omission-residual32-witness-coupled-2026-10-10/LeanCore.lean": "d77d900f228f2f91e71f39b1af303c59c765c5eefaa978b8aa8bc45050168133",
+    "experiments/omission-residual32-witness-coupled-2026-10-10/Geometry.lean": "9b47934dc5e8ab8ad85a7697f03e32f1c3eb3c130e397c04f211734107bc27a3",
+    "experiments/omission-residual32-witness-coupled-2026-10-10/TemplateRow.lean": "f746aa1d505bec64851ef8df8429b195676319beaeb20a16c128a7acd86ffebc",
+    "experiments/omission-residual32-sixth-variants-2026-10-10/SixthTemplate.lean": "676880f8f670f163060ecb109fa453c7e578da9c39afa5914488eee51796e239",
+    "experiments/omission-residual32-sixth-variants-2026-10-10/SixthTemplateCheck.lean": "d75f2f8d0de868c3df65887255b49d8c120e403c01127665beaca963de36f5b0",
+    "experiments/omission-residual32-sixth-variants-2026-10-10/SixthTemplateGeometry.lean": "c57b4ca13d4d971924b90a8d357d2ecf737d166a7927f30ae7bf912787172027",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Data.lean": "2f123817e11626fc8184334a3e8c52cac4ee4e9c27fe7c08fb3e178c43458093",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part00.lean": "08c9ed535f13d9ab62af7dd71eef124d446407478422a2003a60df6b44c8c309",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part01.lean": "b74dccc5619d60b9a2f6cd0f180aea20fc68f71b834b56f8d84b7869213704d1",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part02.lean": "77c2563bd2ef9cefa2246c83dfffa3fa207877d4c68e0a371afa3afe690f21da",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part03.lean": "f94945db6262a0d26355b0497e315b4e0addc546c0dcd0d948c82c20f9c54045",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part04.lean": "0f0b833f757803372923781dd7b113c4c824b0cd3dd5da0a3502e286561f323c",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part05.lean": "ae279c587c29eccdec1555118e3f5cc2324031605176695a60c8de21ce4e8d52",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part06.lean": "921850417f665a8a2b5b0a4ea54b63215a894bd25f70eb965ceda6a7052be8ab",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part07.lean": "2579691f46928121b67a2aaea58fb75b5f1f4b010b70964ea26eba8451959c38",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Root.lean": "734435b2469547dabc1c5c446d8a46446ef9eb5e1515d52414a97a286485a8a0",
+    "experiments/omission-residual32-added-rows-2026-10-10/AddedRows.lean": "8ccbbbc7e177dacb8808d74acd92185ed34ba6d156f62e1f8d4d2839e31b22a0"
+  },
+  "gate_sha256": "1a762190f3129ff1563d33847c3a89ac501a2fd2a5969f54e631eedbbe0631ca",
+  "axioms_sha256": "f290052621435af3b345589da29100e4f798a54303e73665cc0c8c3ab7dea16f",
+  "global314_unchanged_input_count": 3929,
+  "forbidden_proof_tokens": [],
+  "records": {
+    "experiments/omission-residual32-case4-2026-10-10/kernel-check.json": "792389cc3302820d71cc065aed45239b76c0a62a4aeb43ae65e4b316366632f6",
+    "experiments/omission-residual32-witness-coupled-2026-10-10/kernel-check.json": "9893a340c4ee42357560408b46d760bd71a800883452bb3c2fa671684da7cd74",
+    "experiments/omission-residual32-sixth-variants-2026-10-10/kernel-check.json": "e29d3c6a1bf31dca987f979a805355149c8a038a262dd7461329799b323aa82b",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/kernel-check.json": "7416f0e4b2de2c0a63d46cee0923dfe5f1ae8e578f872c3aedc506e358358a99",
+    "experiments/omission-residual32-added-rows-2026-10-10/kernel-check.json": "16f1c73b4f414aae5f3cf3fc15faa1e5c9f8f2107ec77dc67398e866fdf786b5"
+  },
+  "finite_controls": {
+    "case4": 22,
+    "new_core": 7,
+    "fourth_preflight": 1,
+    "added_tail_preflight": 1,
+    "primal_catalog": 9
+  },
+  "independent_rup_steps": 258,
+  "independent_deletion_models": 13
+}

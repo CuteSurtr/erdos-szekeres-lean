@@ -1,0 +1,172 @@
+{
+  "scope": "128 distinct additional Fourth-template rows; no standalone planar bound",
+  "complete": true,
+  "lean": "Lean (version 4.24.0, arm64-apple-darwin23.6.0, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)",
+  "manifest_sha256": "5ff4ff8dd6d51eb8a6d7f45495878994a50abeea12a2f6f1431a0cafd42f3585",
+  "checker_sha256": "b4d8fc7151d50088d68ff48a555c4526007e50811dc3d8bf92788624890a0d5b",
+  "validated_identities": {
+    "experiments/omission-residual32-research-2026-10-10/source.json.gz": "138a9fd6e3c773437411e9cca487153a221928e6d5d85d09b8d73e4919f5e8c3",
+    "experiments/omission-residual32-case4-2026-10-10/witness.json": "f2717dae6a250e21ffde91c6dacb30eb30b5654d0da0c1b43128725a9ce19bc3",
+    "ErdosSzekeres/Omission/CoupledTemplateFourth.lean": "7f57fdffb2877a0f253a8d91359486b4e53e8fbadb8ef372b4bcb87c7cca06f9",
+    "ErdosSzekeres/Omission/CoupledTemplateFourthCheck.lean": "f3cc0f765bb4e136a75d1a50dac6aeffcd25b549d01fc64be46d6a157d098c2c",
+    "ErdosSzekeres/Omission/CoupledTemplateFourthGeometry.lean": "bdd7f4b814cdbe42fb771d441b9666cb578a09eced0ea5f529e13d2a3d663539",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/variants.json": "d1f5d83dda364e67ae8228e609c8d94e6de95f285b565bdbefee99a7b77a7762",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/variants-all-states.json": "cdd5e8d84f30d94311b18c3e46c4a65bf2cd357ee4719c826a4d909dd13a42d3",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/row-bindings.json": "dbb78c914bcce4e5dcc7bf083eec96568f65e82c6f2176b25c558c4f86a7563a",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Data.lean": "2f123817e11626fc8184334a3e8c52cac4ee4e9c27fe7c08fb3e178c43458093",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part00.lean": "08c9ed535f13d9ab62af7dd71eef124d446407478422a2003a60df6b44c8c309",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part01.lean": "b74dccc5619d60b9a2f6cd0f180aea20fc68f71b834b56f8d84b7869213704d1",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part02.lean": "77c2563bd2ef9cefa2246c83dfffa3fa207877d4c68e0a371afa3afe690f21da",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part03.lean": "f94945db6262a0d26355b0497e315b4e0addc546c0dcd0d948c82c20f9c54045",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part04.lean": "0f0b833f757803372923781dd7b113c4c824b0cd3dd5da0a3502e286561f323c",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part05.lean": "ae279c587c29eccdec1555118e3f5cc2324031605176695a60c8de21ce4e8d52",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part06.lean": "921850417f665a8a2b5b0a4ea54b63215a894bd25f70eb965ceda6a7052be8ab",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part07.lean": "2579691f46928121b67a2aaea58fb75b5f1f4b010b70964ea26eba8451959c38",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Root.lean": "734435b2469547dabc1c5c446d8a46446ef9eb5e1515d52414a97a286485a8a0",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/generate.py": "1a55e5d6a1e1e9817e44f8eaa020d9bf3b4a4233cd9d3ee0a9946ce031eae18d"
+  },
+  "modules": {
+    "Data": {
+      "exit": 0,
+      "seconds": 2.318,
+      "source_sha256": "2f123817e11626fc8184334a3e8c52cac4ee4e9c27fe7c08fb3e178c43458093",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "axioms": {},
+      "olean_sha256": "c992cbb38b64b0e012b9b4664719643a838741819757e06c6bcfa77efa6c7a0a"
+    },
+    "Part00": {
+      "exit": 0,
+      "seconds": 42.641,
+      "source_sha256": "08c9ed535f13d9ab62af7dd71eef124d446407478422a2003a60df6b44c8c309",
+      "log_sha256": "fdb836a3298531abff386f62469c074e09ce0f0a4da67d80f5087f1feeca17f6",
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledFourthGlobalVariants.Part00.checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "32ee03ae6b471f4666f444e807c6507768c18667b0f56c477847362d71c0f28c"
+    },
+    "Part01": {
+      "exit": 0,
+      "seconds": 42.124,
+      "source_sha256": "b74dccc5619d60b9a2f6cd0f180aea20fc68f71b834b56f8d84b7869213704d1",
+      "log_sha256": "4691994f054ff6cd1f9ab22dfe2c3243f38406a6c53b78822b902da208340bbf",
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledFourthGlobalVariants.Part01.checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "12db7e0def12cb2780da5a1c5f69f6c39eac974aec0f2cad51ac32a431edf0e3"
+    },
+    "Part02": {
+      "exit": 0,
+      "seconds": 41.499,
+      "source_sha256": "77c2563bd2ef9cefa2246c83dfffa3fa207877d4c68e0a371afa3afe690f21da",
+      "log_sha256": "7512f3b14ab573fcef2b28d098cbb2a4789619b97fd466a4cf84000c942b0a2f",
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledFourthGlobalVariants.Part02.checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "b527988c9691906882d8e6768aa2c7f4695be98ee22a51d0e5d7e017e35a4ea2"
+    },
+    "Part03": {
+      "exit": 0,
+      "seconds": 44.25,
+      "source_sha256": "f94945db6262a0d26355b0497e315b4e0addc546c0dcd0d948c82c20f9c54045",
+      "log_sha256": "dc010b83e518ea2e6f9c823a3f4602d5664428e5d780066aaf986047cdf45e12",
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledFourthGlobalVariants.Part03.checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "1bb89c7f40212b6dee7e13012bc9610843b55d42b9912ea30990010412208b36"
+    },
+    "Part04": {
+      "exit": 0,
+      "seconds": 43.06,
+      "source_sha256": "0f0b833f757803372923781dd7b113c4c824b0cd3dd5da0a3502e286561f323c",
+      "log_sha256": "c28f958a79073211d004486e28c22843d781e013279adaf9e1a6791294366a21",
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledFourthGlobalVariants.Part04.checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "4b5fe7c5595572c8dfb3a8887a3c4549ace280803050ce939753e7330804d825"
+    },
+    "Part05": {
+      "exit": 0,
+      "seconds": 44.366,
+      "source_sha256": "ae279c587c29eccdec1555118e3f5cc2324031605176695a60c8de21ce4e8d52",
+      "log_sha256": "01a202b3222f1e64012fdd352089d65b279dc27b869cbfc5d700f7d4e0074535",
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledFourthGlobalVariants.Part05.checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "3dd6d60d254b62a3bfcfc0ccb248580097f31e2ac734839ffa50b6a982e0dd25"
+    },
+    "Part06": {
+      "exit": 0,
+      "seconds": 43.848,
+      "source_sha256": "921850417f665a8a2b5b0a4ea54b63215a894bd25f70eb965ceda6a7052be8ab",
+      "log_sha256": "1f4eb51ea15927492c134a9ed8ad285ca19e9586e00c7421627db0d530bb97d4",
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledFourthGlobalVariants.Part06.checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "421200a73bb21636e504203e1c009b5109b6c8fc0dced88cc17070bad1807614"
+    },
+    "Part07": {
+      "exit": 0,
+      "seconds": 45.219,
+      "source_sha256": "2579691f46928121b67a2aaea58fb75b5f1f4b010b70964ea26eba8451959c38",
+      "log_sha256": "94f2f3e6784dce1735aaec57df77281196833e506146ee8bfbea75aa57ff4aa5",
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledFourthGlobalVariants.Part07.checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "1d4b5f80a2fbe09cbdebf81f3759e308167f2e177610f569518154ab6c5de41e"
+    },
+    "Root": {
+      "exit": 0,
+      "seconds": 3.128,
+      "source_sha256": "734435b2469547dabc1c5c446d8a46446ef9eb5e1515d52414a97a286485a8a0",
+      "log_sha256": "014865f87de9870456932ace35cd80d22a042ddb2ae44b69c6b84a3a48ea5550",
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledFourthGlobalVariants.checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ErdosSzekeres.Omission.CoupledFourthGlobalVariants.all_rows": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "fe7ca44fec7912eae140909b5080164219ce33d9b7e897622711f7731ed64345"
+    }
+  },
+  "rows": 128,
+  "part_size": 16,
+  "axioms_sha256": "a7248d391edbea722e6de5d55a40668e3c16ac7cf7b46f814c98bc18e384d689"
+}

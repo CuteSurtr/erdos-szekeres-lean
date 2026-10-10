@@ -11,6 +11,10 @@ The Erdős–Szekeres conjecture and an improvement of HMPT's asymptotic
 coefficient remain open in this project. No priority or best-known-bound claim
 is made.
 
+Start with the [mathematical explanation](docs/MATH.md) for the original
+conjecture, the reduction from real points to finite states, the proof of 314,
+and the precise gap to 313.
+
 ## Finished formalizations
 
 All logarithms below are to base 2. The floor is the natural-number floor.
@@ -163,8 +167,28 @@ proves that every nonempty actual residual configuration occupies state zero.
 Six further closed subtrees and their actual-configuration corollaries are
 checked in the [resumed Lean bundle](experiments/omission-residual32-resume-lean-2026-10-10/README.md),
 covering all 44 splits and 50 weighted leaves in those six trees.
-These are finished standalone proofs; the complete 32-hole exclusion is still
-missing, so the global bound remains 314.
+These are finished standalone proofs; they do not establish a global bound
+below 314.
+
+The latest continuation resolves an important limitation of that search:
+a [Lean-checked 32-hole witness](experiments/omission-residual32-case4-2026-10-10/README.md)
+satisfies **all 2,469 rows**. `OmissionResidual32Case4.no_universal_thirty_three_hole_bound`
+proves that the old catalog cannot supply the needed arithmetic exclusion.
+This assignment is not a real-point counterexample.
+
+A new [thirteen-state geometric obstruction](experiments/omission-residual32-witness-coupled-2026-10-10/README.md)
+excludes it. In namespace `ErdosSzekeres.Omission.CoupledCoreSixth`,
+`hole_bound`, `strict_strengthening`, and `countermodel_not_realizable`
+prove the new row, its independence from the old catalog, and nonrealizability
+of that witness. Its 376-clause formula and 258-step refutation are checked
+by Lean. A [128-row Fourth-template family](experiments/omission-residual32-fourth-global-variants-2026-10-10/README.md)
+is also proved for actual configurations by
+`ErdosSzekeres.Omission.CoupledFourthGlobalVariants.all_rows`.
+The [exact 129-row addition](experiments/omission-residual32-added-rows-2026-10-10/README.md)
+is geometrically bound by `ErdosSzekeres.Omission.Residual32AddedRows.all_rows`.
+The [generic Sixth template](experiments/omission-residual32-sixth-variants-2026-10-10/README.md)
+is proved separately. These strengthen the geometric toolbox; they do not yet
+prove the 313-point theorem.
 
 ## Verification
 
@@ -184,25 +208,31 @@ lake exe cache get
 lake build --wfail
 python3 scripts/check_axioms.py
 python3 -m unittest discover -s scripts -v
+lake env python3 scripts/check_residual32_continuation.py
 ```
 
 The default Python suite needs only the standard library; solver-specific tests
 skip when their optional dependencies are unavailable. This Mac checkout has a
 workspace-local toolchain, so use `ELAN_HOME="$PWD/.elan" .elan/bin/lake` in place
 of `lake`. `.cache/`, `.lake/`, `.elan/` and compiled outputs are ignored and are
-not committed. Standalone research certificates have separate reproduction
-instructions and are not silently counted as default-library CI checks.
+not committed. The last command freshly compiles the new residual32 witness
+and geometric refinements and is an explicit hosted CI step. Other standalone
+research certificates retain their separate reproduction instructions; they
+are not implicitly included in the default library build.
 
 ## In-progress research — 10 October 2026
 
 The 313-point target is **not proved**. The bounded balanced 62-hole searches,
 including a separate [ten-minute SAT run](experiments/omission-balanced62-sat-2026-10-10/README.md),
 were inconclusive. The [resumed residual search](experiments/omission-residual32-resume-2026-10-10/README.md)
-has eight pending frontier leaves within three of the original 24 unresolved
-contexts. Eleven original contexts now have Lean proofs; another ten have
-complete, independently replayed integer subtrees. The enlarged catalog's
-geometric transfer is finished, but the full arithmetic exclusion is neither
-complete nor Lean-checked. Frontier counts do not measure a completion percentage.
+previously had eight pending frontier leaves within three original contexts.
+Continuing case 4 produced the old catalog's 32-hole witness above; cases 2
+and 7 remain partial. Eleven earlier contexts have Lean proofs and ten more
+have integer-replayed subtrees, but no complete old-catalog exclusion is
+possible. The new search catalog adds 129 geometric rows, for **2,598 rows**
+in total. Bounded integer and repair searches are inconclusive: the best
+recorded 32-hole near-model still violates one row. No exclusion certificate
+or feasible assignment for all 2,598 rows has been established.
 
 The [current work estimate](docs/ES8_REMAINING.md) separates these stronger
 targets from the completed 314-point result. The earlier complete 315-, 316-

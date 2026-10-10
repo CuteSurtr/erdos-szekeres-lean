@@ -1,0 +1,29 @@
+{
+  "scope": "Partial context7 search; not a complete exclusion. Stopped after context4 supplied a32-hole model of the full catalog.",
+  "source_sha256": "f03eebb1d20eae3bd25dbb5024eaacdfdcc5bcd8ed964d190bdfa59c73aeb909",
+  "hole_budget": 32,
+  "missing": [
+    54,
+    67
+  ],
+  "occupied": [
+    27,
+    43,
+    88
+  ],
+  "parent_tree_sha256": "46ec6b7d5f580c68f88affa2dd61f100862e05ca9fc05a86cded449d4a501050",
+  "checkpoint": ".cache/residual32-case7-2026-10-10/chunk1.json.gz",
+  "checkpoint_sha256": "3d8f329a1a5207698c0ea8096a47ca99cfa683dc9efbee874e828384081652f7",
+  "checkpoint_bytes": 8192717,
+  "checkpoint_committed": false,
+  "script_sha256": "77521e0589ea58914aba79c49f3162783da9d909ec265b981bb1e6672bf27a44",
+  "new_exact_leaves": 15287,
+  "new_global_bound": false,
+  "files": {
+    "README.md": "cf1e669cc05c41f0d52cdc77c1dae91ff1c184db31462d12e673009bf2b825a0",
+    "preparation.json": "79ddecb194504d2d6dc7ce46900c46ca6a159711f67437b7a490bbdf04b0da20",
+    "replay.json": "450a3cc45b2060f84e6a8fa11375eff044c3ef9a88310cf04110927ebd7bffcd",
+    "search-summary.json": "f4a2e22d2eadb15b18c6e41c44286b44348cdc1531f9c62c9b0d618de3223ac6",
+    "search.py": "77521e0589ea58914aba79c49f3162783da9d909ec265b981bb1e6672bf27a44"
+  }
+}

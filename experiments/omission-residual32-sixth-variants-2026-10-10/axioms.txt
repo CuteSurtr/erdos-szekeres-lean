@@ -1,0 +1,10 @@
+'ErdosSzekeres.Omission.CoupledTemplateSixth.context_impossible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+'ErdosSzekeres.Omission.CoupledTemplateSixth.check_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+'ErdosSzekeres.Omission.CoupledTemplateSixth.exists_missing_index' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.CoupledTemplateSixth.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
