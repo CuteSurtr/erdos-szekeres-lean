@@ -614,9 +614,9 @@ For $`u<v<w`$, appending or prepending the third point gives
 
 ```math
 \begin{array}{ll}
-[p_u,p_v,p_w]<0
+{}[p_u,p_v,p_w]<0
  &\Longrightarrow E_-(u,v)<E_-(v,w),\quad F_-(v,w)<F_-(u,v),\\
-[p_u,p_v,p_w]>0
+{}[p_u,p_v,p_w]>0
  &\Longrightarrow E_+(u,v)<E_+(v,w).
 \end{array}
 \tag{F.1}
@@ -656,8 +656,8 @@ eight-cup. Formula (F.1) implies, for either label system $`d`$,
 
 ```math
 \begin{split}
-[p_u,p_v,p_w]<0&\Longrightarrow d_1(u,v)<d_1(v,w),\\
-[p_u,p_v,p_w]>0&\Longrightarrow d_2(u,v)<d_2(v,w).
+{}[p_u,p_v,p_w]<0&\Longrightarrow d_1(u,v)<d_1(v,w),\\
+{}[p_u,p_v,p_w]>0&\Longrightarrow d_2(u,v)<d_2(v,w).
 \end{split}
 \tag{F.4}
 ```
