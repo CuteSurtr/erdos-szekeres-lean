@@ -1,1709 +1,881 @@
-# Erdős–Szekeres bounds: a mathematical companion to the Lean proofs
+# Erdős–Szekeres bounds and their formal proofs
 
-**Status: 10 October 2026.** The closed results are Suk's asymptotic upper
-bound, the ordinary real-point specialization of HMPT's improved asymptotic
-bound, and $`\mathrm{ES}(8)\le314`$. The assertion $`\mathrm{ES}(8)\le313`$
-and an improvement of HMPT's asymptotic coefficient remain unproved here.
+## 1. Statements and conventions
 
-This manuscript translates the principal checked declarations into ordinary
-mathematics, with their hypotheses and quantifiers retained. Each mathematical
-step identifies its Lean declaration or finite certificate schema. Literal
-catalogs and long derivations are specified by their archived data and the
-soundness theorems explained below; listing every generated proof term is not
-necessary to specify their mathematical meaning. The exposition itself is
-human-readable documentation, not a separately kernel-checked translation.
-The Lean statements and the exact certificate inputs are authoritative.
+This article describes three completed Lean proofs: Suk's asymptotic bound,
+the ordinary real-point specialization of the Holmsen–Mojarrad–Pach–Tardos
+(HMPT) bound, and the finite bound $`\mathrm{ES}(8)\le314`$. It also explains
+the proved refinements and the precise remaining problem in the investigation
+of $`\mathrm{ES}(8)\le313`$.
 
-The intended reader is a mathematician familiar with finite combinatorics and
-planar convexity. No rational-coordinate or bounded-grid assumption is made.
-The arguments concern convex polygons whose interiors may contain other points.
-The [paper correspondence](docs/PAPER_MAP.md) records the differences between
-these implementations and the published intermediate lemmas.
+The [finite octagon proof](#2-geometric-configurations-and-finite-state-spaces)
+occupies §§2–3. Section 4 treats the [asymptotic bounds](#4-the-asymptotic-arguments),
+and §§5–6 develop the [residual inequalities and the open bound 313](#5-stronger-residual-inequalities).
 
-- [Definitions and conventions](#a-definitions-and-conventions).
-- [Suk and HMPT, with finite bounds and limiting parameters](#s-the-formalized-suk-and-hmpt-bounds).
-- [The closed finite octagon theorem](#f-the-finite-octagon-theorem).
-- [The residual relaxation and the precise open proposition for 313](#r-the-residual-relaxation-and-the-unresolved-bound-313).
-- [Validation and references](#v-validation-and-references).
-
-## A. Definitions and conventions
-
-The ambient plane is $`\mathbb R^2`$, represented by `Point := Fin 2 → ℝ`.
-All configurations in the final statements are finite sets, so repeated points
-are excluded. A finite set $`P\subset\mathbb R^2`$ is in general position if
-no three distinct members are collinear. A finite set $`Q`$ is in convex
-position if
+A finite set $`P\subset\mathbb R^2`$ is in **general position** if no three
+distinct points are collinear. It is in **convex position** if
 
 ```math
-  q\notin\mathrm{conv}(Q\setminus\{q\})\qquad(q\in Q).
+p\notin\mathrm{conv}(P\setminus\{p\})\qquad(p\in P).
 ```
 
-The Lean definition uses Mathlib's `ConvexIndependent`; the displayed
-characterization is `ErdosSzekeres.convexPosition_iff` in
-[Basic.lean](ErdosSzekeres/Basic.lean).
+Write $`\mathsf F(N,n)`$ when every finite general-position set of at least
+$`N`$ points contains a subset of cardinality $`n`$ in convex position. Thus
+$`\mathrm{ES}(n)\le N`$ means $`\mathsf F(N,n)`$. These are ordinary convex
+polygons: other points may lie inside their hulls. Coordinates are arbitrary
+real numbers.
 
-Write $`\mathsf F(N,n)`$ for the assertion that every finite general-position
-set $`P\subset\mathbb R^2`$ with $`\vert P\vert \ge N`$ contains a subset $`Q`$ of
-cardinality exactly $`n`$ in convex position. This is precisely
-`ErdosSzekeres.ForcesConvexNGon N n` in
-[Definitions.lean](ErdosSzekeres/Definitions.lean). There is no requirement
-that $`\mathrm{conv}(Q)`$ contain no other points of $`P`$.
-The exact-cardinality formulation $`\vert P\vert =N`$ is equivalent, by
-`forcesConvexNGon_iff_exact`. Also, $`\mathsf F(N,n)`$ implies
-$`\mathsf F(M,n)`$ whenever $`N\le M`$, by `ForcesConvexNGon.mono`.
+**Theorem 1.1 (completed bounds).** The following statements hold.
 
-The usual notation $`\mathrm{ES}(n)\le N`$ abbreviates $`\mathsf F(N,n)`$.
-The code formulates the problem through $`\mathsf F`$, rather than a separately
-defined minimum $`\mathrm{ES}(n)`$. In particular, its proposition
-`ErdosSzekeresConjecture` is
+1. **Suk:** there exists $`n_0\ge3`$ such that, for every integer $`n\ge n_0`$,
 
-```math
-  \forall n\in\mathbb N,\quad n\ge3\Longrightarrow
-  \mathsf F(2^{n-2}+1,n).
-```
+   ```math
+   \mathsf F\!\left(\left\lfloor2^{n+6n^{2/3}\log n}\right\rfloor_{\mathbb N},n\right).
+   ```
 
-The customary equality $`\mathrm{ES}(n)=2^{n-2}+1`$ additionally uses the
-classical lower-bound construction, which is not part of that Lean definition
-or a lower-bound formalization claimed here. For $`n=8`$, the conjectured
-threshold is $`65`$.
+2. **HMPT:** for every real $`\varepsilon>0`$ there exists $`n_0\ge3`$ such that,
+   for every integer $`n\ge n_0`$,
 
-Throughout the following statements, $`\log`$ denotes $`\log_2`$. For a
-nonnegative real number $`x`$, $`\lfloor x\rfloor_{\mathbb N}`$ denotes its
-natural-number floor. Integer divisions are floor divisions, and a subtraction
-in a natural-number expression is truncated at zero. For positive integers
-$`u`$, `Nat.clog 2 u` is $`\lceil\log u\rceil`$ and `Nat.log 2 u` is
-$`\lfloor\log u\rfloor`$.
+   ```math
+   \mathsf F\!\left(
+   \left\lfloor2^{n+(8\sqrt2/3+\varepsilon)\sqrt{n\log n}}\right\rfloor_{\mathbb N},n
+   \right).
+   ```
 
-## S. The formalized Suk and HMPT bounds
+3. **Finite octagon bound:** $`\mathsf F(314,8)`$.
 
-**Theorem S.1 (Suk bound).** There is an integer $`n_0\ge3`$ such that, for every integer
-$`n\ge n_0`$,
+The first two statements are eventual bounds; their quantifiers do not permit
+an unverified substitution of $`n=8`$. The HMPT statement retains every
+positive $`\varepsilon`$ and concerns ordinary point sets, not the paper's
+pseudo-configuration or convex-body extensions.
 
-```math
- \mathsf F\!\left(
-   \left\lfloor 2^{\,n+6n^{2/3}\log n}\right\rfloor_{\mathbb N},n
- \right).
- \qquad\text{(S)}
-```
+All logarithms are to base two. Finite counting parameters are natural numbers
+unless specified otherwise. Natural-number subtraction is truncated at
+zero; natural-number division is floor division. We write
+$`\lfloor x\rfloor_{\mathbb N}`$ for the natural floor, and use
+$`\lceil\log u\rceil`$, $`\lfloor\log u\rfloor`$ for Lean's
+`Nat.clog 2 u`, `Nat.log 2 u` when $`u>0`$.
 
-This is `ErdosSzekeres.Suk.theorem2016` in
-[Suk/Asymptotic.lean](ErdosSzekeres/Suk/Asymptotic.lean), with the exact
-predicate and threshold defined in
-[Suk/Statement.lean](ErdosSzekeres/Suk/Statement.lean).
-The theorem has no extraction, coloring, or arithmetic-certificate hypothesis.
+| Statement | Lean declaration and source |
+| --- | --- |
+| General position, convex position, $`\mathsf F`$ | `ErdosSzekeres.GeneralPosition`, `ConvexPosition`, `ForcesConvexNGon` in [Definitions](ErdosSzekeres/Definitions.lean) |
+| Convex-hull characterization; equivalence with sets of exactly $`N`$ points; monotonicity in $`N`$ | `convexPosition_iff`, `forcesConvexNGon_iff_exact`, `ForcesConvexNGon.mono` in [Basic](ErdosSzekeres/Basic.lean), with prefix `ErdosSzekeres` |
+| Suk bound | `ErdosSzekeres.Suk.theorem2016` in [Suk/Asymptotic](ErdosSzekeres/Suk/Asymptotic.lean) |
+| HMPT bound | `ErdosSzekeres.HMPT.theorem2020` in [HMPT/Asymptotic](ErdosSzekeres/HMPT/Asymptotic.lean) |
+| Finite octagon bound | `ErdosSzekeres.Omission.forces_convex_octagon_314`, `convex_octagon_of_card_ge_314` in [FinalCover314B61FusedR31Fused](experiments/omission-global-assembly-2026-10-10/FinalCover314B61FusedR31Fused.lean) |
 
-**Theorem S.2 (HMPT bound for ordinary real point sets).** For every real $`\varepsilon>0`$
-there is an integer $`n_0\ge3`$ such that, for every integer $`n\ge n_0`$,
+The formalized conjecture is
+$`\forall n\ge3,\ \mathsf F(2^{n-2}+1,n)`$; for octagons its threshold is
+$`65`$. This definition does not include a formalization of the classical
+lower-bound construction. Neither the conjecture nor the bound $`313`$ is
+proved here.
 
-```math
- \mathsf F\!\left(
-  \left\lfloor
-   2^{\,n+(8\sqrt2/3+\varepsilon)\sqrt{n\log n}}
-  \right\rfloor_{\mathbb N},n
- \right).
- \qquad\text{(H)}
-```
+## 2. Geometric configurations and finite state spaces
 
-This is `ErdosSzekeres.HMPT.theorem2020` in
-[HMPT/Asymptotic.lean](ErdosSzekeres/HMPT/Asymptotic.lean);
-[HMPT/Statement.lean](ErdosSzekeres/HMPT/Statement.lean) defines
-`publishedCoefficient := 8 * Real.sqrt 2 / 3` and makes the quantifier order
-$`\forall\varepsilon>0\,\exists n_0\,\forall n\ge n_0`$ explicit.
-In particular, the statement does not set $`\varepsilon=0`$.
+### 2.1. Cups, caps and attained ranks
 
-Both are eventual upper bounds. Neither declaration provides the finite
-claim obtained by substituting $`n=8`$ without verifying its eventual
-hypotheses. The separately formalized octagon bound does not change the
-coefficient in (H). The scope is ordinary finite subsets of $`\mathbb R^2`$;
-HMPT's pseudo-configurations and convex-body extensions are not formalized
-by these declarations.
+Put $`[a,b,c]=\det(b-a,c-a)`$. An **ordered configuration** of size $`n`$ is a
+map $`p:\{0,\ldots,n-1\}\to\mathbb R^2`$ with strictly increasing first
+coordinates and nonzero determinants on increasing triples. A cup, respectively
+cap, is an increasing sequence whose increasing triples have positive,
+respectively negative, determinant.
 
-### S.1. Finite geometric and arithmetic steps for (S)
-
-The implementation uses finite horizontal support paths. For
-$`\omega(a,b,c)=\det(b-a,c-a)`$, a cap frame $`(a,b,c,d)`$ has negative
-orientation on each of its four increasing triples. Its open support region
-is
-
-```math
- \{p:\ \omega(a,b,p)\lt 0,\quad \omega(b,c,p)>0,\quad
-             \omega(c,d,p)\lt 0\}.
-```
-
-These are `Suk.CapFrame` and `Suk.CapFrame.spike` in
-[SpikeGeometry.lean](ErdosSzekeres/Suk/SpikeGeometry.lean).
-`Suk.ClockwiseAnchors (k+3)` consists of a sequence with negative orientation
-on every increasing triple; its consecutive four-point windows determine
-$`k`$ frames. Horizontal order is an explicit strict-monotonicity hypothesis
-at the intermediate support-path theorems, not a hypothesis of (S) or (H).
-
-The finite support theorem supplies the following implication. Let
-$`P`$ be in general position, let all $`k+3`$ horizontally ordered anchors
-belong to $`P`$, and let $`Q_i\subseteq P`$ lie in the $`i`$-th support
-region. If
-
-```math
- n\ge4,\quad K,b\ge3,\quad n\le rK,\quad n\le tb,\quad
- t(r+1)\le k
-```
-
-and every region satisfies
-
-```math
- |Q_i|>2^{n+K-4}\binom{n+b-4}{n-2},
-```
-
-then $`P`$ contains a convex $`n`$-gon. This is
-`Suk.ClockwiseAnchors.finite_support_bound` in
-[FiniteSupport.lean](ErdosSzekeres/Suk/FiniteSupport.lean).
-The proof constructs the triangle order in each region and uses its
-chain/antichain dichotomy. Consecutive large chains are treated by supported
-cap growth and adjacent gluing; separated large antichains supply compatible
-supported caps whose union is convex. The support sequence itself provides
-the adjacency and separation hypotheses used by those gluing results.
-
-The extraction/counting argument and a change of coordinates discharge the
-support-path hypotheses for arbitrary $`P`$. Their finite consequence is
-`Suk.finite_logarithmic_bound` in
-[IntegerParameters.lean](ErdosSzekeres/Suk/IntegerParameters.lean): under the
-same integer conditions and $`n+b\le2^H`$,
-
-```math
- \mathsf F\bigl(2^{\,n+K+Hb+64(k+5)},n\bigr).
- \qquad\text{(S1)}
-```
-
-The extraction loss here is $`64(k+5)`$. It is a proved replacement estimate;
-the paper's literal intermediate extraction constant is not being asserted.
-The closed finite parameter choice $`K=b=a^2`$, $`r=t=a`$,
-$`k=a(a+1)`$ gives, for $`n\ge4`$, $`a\ge2`$, $`n\le a^3`$,
-
-```math
- \mathsf F\bigl(2^{D_S(n,a)},n\bigr),\qquad
- D_S(n,a)=n+a^2+a^2\lceil\log(n+a^2)\rceil+64\bigl(a(a+1)+5\bigr).
- \qquad\text{(S2)}
-```
-
-This is `Suk.cubic_log_bound`.
-
-For completeness, the final comparison in (S) retains explicit sufficient
-conditions:
-
-```math
- n\ge4,\qquad n^{1/3}\ge4,\qquad \log n\ge100.
- \qquad\text{(S3)}
-```
-
-Put $`x=n^{1/3}`$, $`a=\lceil x\rceil`$, and
-$`H=\lceil\log(n+a^2)\rceil`$. The proof establishes
-$`n\le a^3`$, $`a^2\le2x^2`$, $`a^2\le n`$,
-$`H\le\log n+2`$, and $`a(a+1)+5\le3a^2`$. Consequently
-
-```math
- D_S(n,a)-n
- \le (H+193)a^2
- \le2(\log n+195)x^2
- \le6n^{2/3}\log n.
-```
-
-The integer power $`2^{D_S(n,a)}`$ is therefore at most the natural floor in
-(S). `Suk.integer_parameters_fit_exponent` proves the parameter comparison;
-`Suk.coefficient_six_bound` proves (S) under (S3). Divergence of
-$`n^{1/3}`$ and $`\log n`$ then yields `Suk.theorem2016`.
-
-The dependency sequence is
-`finite_support_bound` → `finite_density_bound` →
-`finite_exponential_bound` → `finite_logarithmic_bound` →
-`cubic_parameter_bound` → `coefficient_six_bound` → `theorem2016`.
-The full finite density theorem is in
-[Suk/FiniteBound.lean](ErdosSzekeres/Suk/FiniteBound.lean), and the power
-estimate is in
-[Suk/ExponentialBound.lean](ErdosSzekeres/Suk/ExponentialBound.lean).
-The intermediate arrows suppress proved counting and coordinate lemmas;
-they do not represent additional assumptions.
-
-### S.2. The finite counting interface for (H)
-
-Let $`P`$ be a finite set in general position, let $`c_j(P)`$ count its convex
-$`j`$-element subsets, and let
-$`N=\vert P\vert `$. This is the cardinality of `Suk.convexSubsets P j` in
-[ExtractionCounting.lean](ErdosSzekeres/Suk/ExtractionCounting.lean).
-If $`j\le M\le N`$ and $`\mathsf F(M,j)`$, double counting yields
-
-```math
- \binom Nj\le c_j(P)\binom Mj.
- \qquad\text{(D)}
-```
-
-The declaration is `Suk.convex_subsets_density`; the inequality uses integer
-multiplication, without division or an implicit rounding convention.
-
-Define
-
-```math
- B(r,n)=2^{(r+1)(n-1)+2r}
-       \binom{2(n-1)+r+r(n-2)}{2(n-1)+r},
- \qquad
- \Pi(m,n)=B(m-3,n)B(2m-3,n).
- \qquad\text{(P)}
-```
-
-These are `HMPT.supportProductBound` in
-[RegionProduct.lean](ErdosSzekeres/HMPT/RegionProduct.lean) and
-`HMPT.twoScaleProduct` in
-[TwoScale.lean](ErdosSzekeres/HMPT/TwoScale.lean).
-The geometric product bound applies to actual support regions. Attained
-chain and antichain maxima give their size-product estimates; adjacent-cap
-and even/odd separated-cap budgets control the vertical and horizontal
-parameters. In particular, both path endpoints and the padding of small
-capacities appear in $`B`$, rather than being discarded as implicit losses.
-
-The convex-fan construction and projective coordinate change give
-
-```math
- c_{2(r+3)+1}(P)\le
- c_{r+4}(P)\,N^3 B(r,n)
- \qquad\text{(R)}
-```
-
-whenever $`n\ge4`$, $`P`$ is in general position with distinct first
-coordinates, and $`P`$ avoids a convex $`n`$-gon. This is
-`HMPT.convex_family_ratio_bound` in
-[FanCounting.lean](ErdosSzekeres/HMPT/FanCounting.lean).
-The counting uses actual smaller convex subsets. Projective preservation and
-transfer back to the original real configuration are proved in
-[Projective.lean](ErdosSzekeres/HMPT/Projective.lean),
-[ProjectedCaps.lean](ErdosSzekeres/HMPT/ProjectedCaps.lean), and
-[ConvexFan.lean](ErdosSzekeres/HMPT/ConvexFan.lean).
-
-Apply (R) at $`r=m-3`$ and $`r=2m-3`$, with $`m\ge3`$. Direct multiplication
-of the two inequalities gives
-
-```math
- c_{4m+1}(P)\le c_{m+1}(P)N^6\Pi(m,n).
- \qquad\text{(T)}
-```
-
-This is `HMPT.convex_two_scale_ratio_bound`. Bounding
-$`c_{m+1}(P)\le N^{m+1}`$ and combining (T) with (D) proves
-`HMPT.two_scale_bound`: for integers $`m\ge3`$, $`n\ge4`$, and
-$`4m+1\le M\le N`$,
-
-```math
- \mathsf F(M,4m+1),\qquad
- N^{m+7}\Pi(m,n)\binom M{4m+1}\lt \binom N{4m+1}
- \quad\Longrightarrow\quad\mathsf F(N,n).
- \qquad\text{(T1)}
-```
-
-This last statement no longer assumes distinct first coordinates: a proved
-linear change of coordinates supplies them. The linear-path ratio argument
-is the implementation's replacement for the paper's cyclic alternative; it
-is not a claim that the original intermediate proposition has been
-formalized verbatim.
-
-### S.3. Entropy budget and the coefficient $`8\sqrt2/3`$
-
-[Entropy.lean](ErdosSzekeres/HMPT/Entropy.lean) proves
-
-```math
- \Pi(m,n)\le
- 2^{\,3mn+6m+(4n+3m)\lceil\log(8m)\rceil},\qquad m\ge3,
- \qquad\text{(E1)}
-```
-
-using the elementary binomial estimate
-$`\binom NA\le(4R)^A`$ when $`N\le RA`$.
-The theorem `HMPT.real_entropy_two_scale_bound` supplies the exact rounding
-interface. Let $`m,n,d\in\mathbb N`$, $`X\in\mathbb R`$, and assume
-
-```math
- m\ge3,\quad n\ge4,\quad
- \mathsf F(2^d,4m+1),\quad 4m+1\le2^d,
-```
-
-```math
- d+1\le X,\qquad 2(4m+1)+1\le X,
-```
-
-and
-
-```math
- (d+1)(4m+1)+3mn+6m+(4n+3m)(\log m+4)
-   \lt (3m-6)(X-1).
- \qquad\text{(E2)}
-```
-
-Then $`\mathsf F(\lfloor2^X\rfloor_{\mathbb N},n)`$.
-The proof uses $`E=\lfloor X\rfloor_{\mathbb N}`$ and
-$`X-1\le E`$; thus the unit loss in (E2) accounts explicitly for rounding.
-
-Set
-
-```math
- L_n=\log n,\qquad S_n=\sqrt{nL_n},\qquad
- m_n=\lceil cS_n\rceil_{\mathbb N},\qquad
- d_n=\left\lceil
-  (4m_n+1)+6(4m_n+1)^{2/3}\log(4m_n+1)
- \right\rceil_{\mathbb N}
-```
-
-for a fixed real $`c>0`$. The definitions are `HMPT.asymptoticScale`,
-`roundedScale`, and `scaleInputExponent`. Suk's theorem implies
-$`\mathsf F(2^{d_n},4m_n+1)`$ eventually.
-[AsymptoticInput.lean](ErdosSzekeres/HMPT/AsymptoticInput.lean) and
-[ScaleLimits.lean](ErdosSzekeres/HMPT/ScaleLimits.lean) prove
-
-```math
- \frac{m_n}{S_n}\longrightarrow c,\qquad
- \frac{d_n}{S_n}\longrightarrow4c,\qquad
- \frac{\log m_n}{L_n}\longrightarrow\frac12,\qquad
- \frac{m_n}{n},\frac{d_n}{n}\longrightarrow0.
-```
-
-For $`X_n=n+CS_n`$, define the exact slack in (E2) by
+Consecutive-triple signs suffice. Indeed, when
+$`a_x\lt b_x\lt c_x\lt d_x`$,
 
 ```math
 \begin{aligned}
- \Delta_n(c,C)={}&(3m_n-6)(n+CS_n-1)\\
- &-\bigl((d_n+1)(4m_n+1)+3m_nn+6m_n
-             +(4n+3m_n)(\log m_n+4)\bigr).
+(c_x-b_x)[a,b,d]&=(d_x-b_x)[a,b,c]+(b_x-a_x)[b,c,d],\\
+(c_x-b_x)[a,c,d]&=(d_x-c_x)[a,b,c]+(c_x-a_x)[b,c,d].
 \end{aligned}
 ```
 
-`HMPT.budgetRatio_identity` identifies the implemented normalized budget with
-$`\Delta_n(c,C)/(nL_n)`$, once $`n\ge2`$, and
-`HMPT.normalizedBudget_tendsto` proves
+Both identities preserve a common strict sign. Induction gives the
+all-triples condition and closure under subsequences. An eight-cup is
+therefore a convex octagon.
 
-```math
- \frac{\Delta_n(c,C)}{n\log n}\longrightarrow
- 3cC-16c^2-2.
- \qquad\text{(E3)}
-```
-
-Consequently every choice with $`c>0`$ and positive limiting slack yields
-$`\mathsf F(\lfloor2^{n+C\sqrt{n\log n}}\rfloor_{\mathbb N},n)`$
-eventually. This is `HMPT.eventual_bound_of_positive_slack`.
-Taking $`c=1/(2\sqrt2)`$ and $`C=8\sqrt2/3+\varepsilon`$ makes the limit
-$`3c\varepsilon>0`$, which proves (H).
-
-The exact algebraic identity
-
-```math
- 3cC-16c^2-2
-  =3c(C-8\sqrt2/3)-(4c-\sqrt2)^2
-```
-
-is separately proved as `HMPT.leading_slack_identity` in
-[ParameterBarrier.lean](ErdosSzekeres/HMPT/ParameterBarrier.lean).
-It shows that a positive limiting slack at some fixed $`c>0`$ is possible
-if and only if $`C>8\sqrt2/3`$. This concerns the explicit budget (E2),
-not a lower bound for $`\mathrm{ES}(n)`$ or an obstruction to other arguments.
-
-### S.4. Exact binomial and factorial refinements
-
-The following are supplementary finite improvements of the implemented
-counting criterion; they do not improve (H)'s asymptotic coefficient.
-Retain $`c_{m+1}(P)\le\binom N{m+1}`$ in (T), and put
-
-```math
- T_{\rm bin}(N,m,n)=\binom N{m+1}N^6\Pi(m,n).
-```
-
-Then, for $`m\ge3`$, $`n\ge4`$, $`4m+1\le M\le N`$,
-
-```math
- \mathsf F(M,4m+1),\qquad
- T_{\rm bin}(N,m,n)\binom M{4m+1}\lt \binom N{4m+1}
- \quad\Longrightarrow\quad\mathsf F(N,n).
- \qquad\text{(B1)}
-```
-
-This is `HMPT.two_scale_binomial_bound` in
-[BinomialRefinement.lean](ErdosSzekeres/HMPT/BinomialRefinement.lean).
-The same file proves
-$`T_{\rm bin}(N,m,n)\le N^{m+7}\Pi(m,n)`$, with strict inequality for
-$`N>0`$ and $`m\ge1`$. This is a strict improvement of the counting
-expression, not by itself a statement of a new best numerical Erdős–Szekeres
-bound.
-
-For a closed integer criterion, let
-
-```math
- K=4m+1,\quad D=3m-6,\quad
- V=\lceil\log\Pi(m,n)\rceil,\quad
- A=(d+1)K+V,\quad F=\lfloor\log((m+1)!)\rfloor,
-```
-
-and define
-
-```math
- E_0=\max\left\{d,2K,\left\lfloor\frac A D\right\rfloor+1\right\},
-\qquad
- E_!=\max\left\{d,2K,
-  \left\lfloor\frac{\max(A-F,0)}D\right\rfloor+1\right\}.
- \qquad\text{(B2)}
-```
-
-Here $`m\ge3`$, so $`D>0`$. The definitions are
-`HMPT.twoScaleExponent` and `HMPT.twoScaleFactorialExponent`.
-If $`n\ge4`$, $`K\le2^d`$, and $`\mathsf F(2^d,K)`$, then
-
-```math
- \mathsf F(2^{E_!},n),\qquad E_!\le E_0.
- \qquad\text{(B3)}
-```
-
-The declarations are `HMPT.integer_two_scale_factorial_bound` and
-`HMPT.twoScaleFactorialExponent_le`.
-
-The factorial credit follows from the exact inequality
-$`(m+1)!\binom N{m+1}\le N^{m+1}`$. More generally, if
-$`\Pi(m,n)\le2^V`$, $`d\le E`$, $`2K\le E`$, and
-
-```math
- (d+1)K+V\lt DE+\lfloor\log((m+1)!)\rfloor,
- \qquad\text{(B4)}
-```
-
-then $`\mathsf F(2^E,n)`$, under the same $`m,n,K`$ and input-bound
-hypotheses. This is `HMPT.two_scale_factorial_exponential_bound`.
-One multiplies the binomial count by $`(m+1)!`$, compares the resulting
-powers of two, uses $`2^{\lfloor\log((m+1)!)\rfloor}\le(m+1)!`$, and cancels
-the positive factorial. Applying the integer division identity to
-$`\max(A-F,0)`$ establishes (B4) at $`E=E_!`$.
-
-There is also a uniform strict comparison under one explicit condition.
-[FactorialSaving.lean](ErdosSzekeres/HMPT/FactorialSaving.lean) proves
-
-```math
- 2^{3m-6}\le(m+1)!\quad(m\ge3),
-```
-
-so $`F\ge D`$. It also proves $`d<E_0`$. If $`2K<E_0`$, the counting term
-in (B2) is therefore strictly larger than both auxiliary terms, and subtracting
-at least $`D`$ from its numerator gives $`E_!<E_0`$. Thus
-`HMPT.integer_two_scale_bound_one_bit_smaller` establishes
-
-```math
- \mathsf F(2^{E_0-1},n)
- \qquad\text{(B5)}
-```
-
-whenever $`m\ge3`$, $`n\ge4`$, $`K\le2^d`$,
-$`\mathsf F(2^d,K)`$, and $`2K<E_0`$. This halves the previous sufficient
-power-of-two threshold in the stated parameter range. It is a comparison
-between two finite interfaces in this repository, with no priority claim.
-
-The auxiliary input in (B3) can be discharged by (S2). Specifically,
-`HMPT.suk_two_scale_factorial_bound` takes only the integer hypotheses
-$`m\ge3`$, $`n\ge4`$, $`a\ge2`$, $`4m+1\le a^3`$, and substitutes
-$`d=D_S(4m+1,a)`$. No unproved geometric input remains in that specialization.
-
-### S.5. Declaration correspondence
-
-This table identifies the statements used above. Names in the last column
-are fully qualified after prefixing `ErdosSzekeres.`.
-
-| Mathematical content | Lean file | Declaration |
-| --- | --- | --- |
-| General position, convex position, $`\mathsf F(N,n)`$ | [Definitions](ErdosSzekeres/Definitions.lean) | `GeneralPosition`, `ConvexPosition`, `ForcesConvexNGon` |
-| Convex-hull characterization; exact cardinality | [Basic](ErdosSzekeres/Basic.lean) | `convexPosition_iff`, `forcesConvexNGon_iff_exact` |
-| (S), with exact coefficient and floor | [Suk/Asymptotic](ErdosSzekeres/Suk/Asymptotic.lean) | `Suk.theorem2016` |
-| Support-region finite implication | [Suk/FiniteSupport](ErdosSzekeres/Suk/FiniteSupport.lean) | `Suk.ClockwiseAnchors.finite_support_bound` |
-| (S1), (S2) | [Suk/IntegerParameters](ErdosSzekeres/Suk/IntegerParameters.lean) | `Suk.finite_logarithmic_bound`, `Suk.cubic_log_bound` |
-| (S3) and exponent comparison | [Suk/Asymptotic](ErdosSzekeres/Suk/Asymptotic.lean) | `Suk.integer_parameters_fit_exponent`, `Suk.coefficient_six_bound` |
-| (H), including every positive epsilon | [HMPT/Asymptotic](ErdosSzekeres/HMPT/Asymptotic.lean) | `HMPT.theorem2020` |
-| (D) | [Suk/ExtractionCounting](ErdosSzekeres/Suk/ExtractionCounting.lean) | `Suk.convex_subsets_density` |
-| Geometric product bound $`B`$ | [HMPT/RegionProduct](ErdosSzekeres/HMPT/RegionProduct.lean) | `HMPT.support_product_bound` |
-| (R) | [HMPT/FanCounting](ErdosSzekeres/HMPT/FanCounting.lean) | `HMPT.convex_family_ratio_bound` |
-| (T), (T1) | [HMPT/TwoScale](ErdosSzekeres/HMPT/TwoScale.lean) | `HMPT.convex_two_scale_ratio_bound`, `HMPT.two_scale_bound` |
-| (E1), exact floor bridge (E2) | [HMPT/Entropy](ErdosSzekeres/HMPT/Entropy.lean) | `HMPT.twoScaleProduct_le_common_entropy`, `HMPT.real_entropy_two_scale_bound` |
-| (E3), positive-slack consequence | [HMPT/Asymptotic](ErdosSzekeres/HMPT/Asymptotic.lean) | `HMPT.budgetRatio_identity`, `HMPT.normalizedBudget_tendsto`, `HMPT.eventual_bound_of_positive_slack` |
-| Fixed-scale optimization identity | [HMPT/ParameterBarrier](ErdosSzekeres/HMPT/ParameterBarrier.lean) | `HMPT.leading_slack_identity`, `HMPT.positive_leading_slack_iff` |
-| (B1), (B3), (B4) | [HMPT/BinomialRefinement](ErdosSzekeres/HMPT/BinomialRefinement.lean) | `HMPT.two_scale_binomial_bound`, `HMPT.integer_two_scale_factorial_bound`, `HMPT.two_scale_factorial_exponential_bound` |
-| (B5) | [HMPT/FactorialSaving](ErdosSzekeres/HMPT/FactorialSaving.lean) | `HMPT.integer_two_scale_bound_one_bit_smaller` |
-
-The proof architecture is faithful to these Lean declarations, not a claim of
-verbatim coverage of every intermediate result in the papers. Suk's extraction
-is replaced by a finite counting argument with the explicit loss above. HMPT's
-cyclic statements are replaced where needed by finite support paths, retained
-endpoint terms, and the two-step convex-subset count. The final real-point
-bounds (S) and (H) are closed theorems. The
-[paper correspondence](docs/PAPER_MAP.md) records which original statements are
-replaced or outside the formalized scope. These asymptotic proofs do not
-import the omission-search experiments or the separate octagon certificates.
-
-## F. The finite octagon theorem
-
-**Theorem F.1 (closed real-plane statement).** Let $`S\subset\mathbb R^2`$ be
-finite, with no three distinct points collinear. If $`\vert S\vert \ge314`$, there is a
-subset $`T\subseteq S`$ such that $`\vert T\vert =8`$ and every point of $`T`$ is a vertex
-of $`\mathrm{conv}(T)`$. Thus $`ES(8)\le314`$.
-
-In Lean this is
-`ErdosSzekeres.Omission.forces_convex_octagon_314 : ForcesConvexNGon 314 8`.
-The declaration `ErdosSzekeres.Omission.convex_octagon_of_card_ge_314` expands
-the conclusion into an eight-element subset with Mathlib's
-`ConvexIndependent ℝ` predicate. Both are in
-[FinalCover314B61FusedR31Fused.lean](experiments/omission-global-assembly-2026-10-10/FinalCover314B61FusedR31Fused.lean).
-The theorem has no hypothesis concerning coordinates being rational, a solver
-certificate being valid, or a combinatorial assignment being realizable.
-It concerns ordinary convex octagons; other points of $`S`$ may lie inside
-their convex hulls. No assertion of optimality or priority is made.
-
-The proof below separates the real-geometric reduction, finite geometric
-inequalities, exact arithmetic exclusion, and final composition. The ranks
-used in each induced configuration are computed within that configuration;
-their witnesses are not taken from a larger set.
-
-### F.1. Configurations, paths, and actual rank states
-
-**Definition F.2 (ordered configuration and chains).** Put
-
-```math
- [a,b,c]=(b_x-a_x)(c_y-a_y)-(b_y-a_y)(c_x-a_x).
-```
-
-An ordered configuration of size $`n`$ is a map
-$`p:\{0,\ldots,n-1\}\to\mathbb R^2`$ such that $`p_i^x<p_j^x`$ whenever
-$`i<j`$, and $`[p_i,p_j,p_k]\ne0`$ whenever $`i<j<k`$.
-A $`k`$-cup is a strictly increasing sequence of $`k`$ indices on whose
-increasing triples this determinant is positive; a $`k`$-cap has negative
-determinants instead. These are the precise predicates
-`Configuration`, `Configuration.HasCup`, and `Configuration.HasCap` in
-[Realization.lean](ErdosSzekeres/Omission/Realization.lean).
-The ambient real-set predicates are defined in
-[Definitions.lean](ErdosSzekeres/Definitions.lean).
-
-For an increasing list it is equivalent to require the appropriate sign on
-consecutive triples. The implication from consecutive to all triples uses
-real geometry. For $`a_x<b_x<c_x<d_x`$, the identities
+For $`u\lt v`$, let $`E_-(u,v)`$ and $`E_+(u,v)`$ be the greatest lengths of
+caps and cups ending with the exact pair $`(u,v)`$. Let $`F_-(u,v)`$ be the
+greatest length of a cap starting with that pair. All paths lie inside the
+configuration under consideration. The pair itself has length two, so these
+finite maxima exist and are attained. Extension of an attaining path gives
 
 ```math
 \begin{aligned}
-(c_x-b_x)[a,b,d]
-  &=(d_x-b_x)[a,b,c]+(b_x-a_x)[b,c,d],\\
-(c_x-b_x)[a,c,d]
-  &=(d_x-c_x)[a,b,c]+(c_x-a_x)[b,c,d]
+[p_u,p_v,p_w]\lt0&\Longrightarrow
+ E_-(u,v)\lt E_-(v,w),\quad F_-(v,w)\lt F_-(u,v),\\
+[p_u,p_v,p_w]>0&\Longrightarrow E_+(u,v)\lt E_+(v,w)
+\qquad(u\lt v\lt w).
 \end{aligned}
 ```
 
-preserve either common strict sign. Induction gives closure under taking
-subsequences. The declarations `PlanarChains.positive_four`, `negative_four`,
-and `cup_all` prove this step in
-[PlanarChains.lean](ErdosSzekeres/Omission/PlanarChains.lean).
-The actual-path conversions `Configuration.endingPath_hasCup` and
-`endingPath_hasCap` use the same geometric transitivity. In particular, an
-eight-cup gives a convex octagon by `ListGeometry.hasNCup_octagon` in
-[ListGeometry.lean](ErdosSzekeres/Omission/ListGeometry.lean).
+A configuration is **balanced** if it has no seven-cap, seven-cup or convex
+octagon. It is **residual** if it has no six-cap, convex octagon or junction.
+A **junction** consists of an actual six-cup ending at a vertex and an actual
+five-cap starting there, both inside the configuration.
 
-**Definition F.3 (attained ranks).** For $`u<v`$, write
-$`E_-(u,v)`$ and $`E_+(u,v)`$ for the maximum lengths of actual caps and cups
-ending with the exact pair $`(u,v)`$. Write $`F_-(u,v)`$ for the maximum length
-of an actual cap starting with that pair and remaining in the same finite
-configuration. The pair itself is a path of length two, so these maxima
-exist. The inductive predicates are `ActualRanks.EndingPath` and
-`ResidualRanks.StartingPath`; their maxima and attainment theorems are
-`ActualRanks.rank`, `ActualRanks.rank_attained`, `ResidualRanks.rank`, and
-`ResidualRanks.rank_attained` in
-[ActualRanks.lean](ErdosSzekeres/Omission/ActualRanks.lean) and
-[ResidualRanks.lean](ErdosSzekeres/Omission/ResidualRanks.lean).
-
-For $`u<v<w`$, appending or prepending the third point gives
+Define pair labels by
 
 ```math
-[p_u,p_v,p_w]\lt0
- \Longrightarrow E_-(u,v)\lt E_-(v,w),\quad F_-(v,w)\lt F_-(u,v).
-\qquad\text{(F.1a)}
+d_B(u,v)=(E_-(u,v)-1,E_+(u,v)-1)\in\{1,\ldots,5\}^2
 ```
+
+in the balanced case, and by
 
 ```math
-[p_u,p_v,p_w]\gt0
- \Longrightarrow E_+(u,v)\lt E_+(v,w).
-\qquad\text{(F.1b)}
+d_R(u,v)=(6-F_-(u,v),E_+(u,v)-1)
+ \in\{1,\ldots,4\}\times\{1,\ldots,6\}
 ```
 
-These are `ActualRanks.rank_growth` and `ResidualRanks.rank_growth`.
-They concern attained lengths, rather than freely assigned numerical ranks.
+in the residual case. These bounds follow by shortening an attained forbidden
+chain; octagon avoidance rules out an eight-cup. In both cases a cap triple
+strictly increases the first label coordinate, and a cup triple strictly
+increases the second.
 
-**Definition F.4 (balanced and residual hypotheses).** A balanced
-configuration has no seven-cap, no seven-cup, and no convex octagon. A
-residual configuration has no six-cap, no convex octagon, and no junction.
-A junction is an actual six-cup ending at a vertex $`u`$, together with an
-actual five-cap starting at $`u`$, both wholly inside the configuration.
-This is `Subsets.JunctionOn` and its negation `NoJunctionOn` in
-[Subsets.lean](ErdosSzekeres/Omission/Subsets.lean). In particular, the
-no-junction condition does not merely prohibit a chosen numerical pair of
-rank values.
+### 2.2. Incoming states
 
-For balanced configurations define
+For either label system, define the incoming down-set
 
 ```math
-d_B(u,v)=\bigl(E_-(u,v)-1,E_+(u,v)-1\bigr)\in\{1,\ldots,5\}^2.
-\qquad\text{(F.2)}
+I(v)=\{z:\exists u\lt v,\ z_1\le d_1(u,v),\ z_2\le d_2(u,v)\}
 ```
 
-For residual configurations define instead
+inside the corresponding positive label grid.
 
-```math
-d_R(u,v)=\bigl(6-F_-(u,v),E_+(u,v)-1\bigr)
- \in\{1,\ldots,4\}\times\{1,\ldots,6\}.
-\qquad\text{(F.3)}
-```
+**Lemma 2.1 (state separation).** If $`u\lt v`$, then
+$`d(u,v)\in I(v)\setminus I(u)`$. Consequently different vertices have
+different incoming states.
 
-The bounds follow by shortening an attained forbidden chain if a rank were
-too large. For the residual cup coordinate, octagon avoidance excludes an
-eight-cup. Formulas (F.1a–b) imply, for either label system $`d`$,
+*Proof.* The first membership is immediate. Membership in $`I(u)`$ would
+supply $`t\lt u`$ with both coordinates of $`d(t,u)`$ at least those of
+$`d(u,v)`$. The triple $`(t,u,v)`$ is a cup or a cap; either sign contradicts
+the corresponding strict growth inequality. ∎
 
-```math
-[p_u,p_v,p_w]\lt0\Longrightarrow d_1(u,v)\lt d_1(v,w).
-\qquad\text{(F.4a)}
-```
-
-```math
-[p_u,p_v,p_w]\gt0\Longrightarrow d_2(u,v)\lt d_2(v,w).
-\qquad\text{(F.4b)}
-```
-
-The corresponding declarations are `ActualRanks.labels`,
-`ActualRanks.balanced_label_bounds`, `ActualRanks.labels_increasing`,
-`ResidualRanks.labels`, `ResidualRanks.label_bounds`, and
-`ResidualRanks.labels_increasing`.
-
-**Lemma F.5 (incoming state separation).** In the appropriate positive label
-grid, define the incoming down-set of vertex $`v`$ by
-
-```math
-I(v)=\{z:\exists u\lt v,\ z_1\le d_1(u,v),\ z_2\le d_2(u,v)\}.
-```
-
-For every $`u<v`$,
-
-```math
-d(u,v)\in I(v)\setminus I(u).
-\qquad\text{(F.5)}
-```
-
-Consequently distinct vertices have distinct incoming states.
-
-*Proof.* Membership in $`I(v)`$ is witnessed by $`u`$. If the same label
-belonged to $`I(u)`$, some $`t<u`$ would have both coordinates of $`d(t,u)`$
-at least those of $`d(u,v)`$. The triple $`(t,u,v)`$ is either a cap or a
-cup; either possibility contradicts the appropriate strict inequality in
-(F.4a–b). Thus (F.5) holds, and it separates the two states. This is
-`StateInterface.incoming_admissible` and `StateInterface.states_distinct` in
-[StateInterface.lean](ErdosSzekeres/Omission/StateInterface.lean). The
-specialized injectivity results are `ActualRanks.balancedState_injective`
-and `ResidualStates.state_injective`. ∎
-
-**Proposition F.6 (the two literal state universes).** A balanced incoming
-state is represented by its nonincreasing column heights
-
-```math
-5\ge f_1\ge f_2\ge\cdots\ge f_5\ge0.
-```
-
-There are $`\binom{10}{5}=252`$ such profiles. A residual state is represented
-by
+A balanced state has nonincreasing column heights
+$`5\ge f_1\ge\cdots\ge f_5\ge0`$. There are $`\binom{10}{5}=252`$ profiles.
+A residual state satisfies
 
 ```math
 6\ge f_1\ge f_2\ge f_3\ge f_4\ge0,
-\qquad f_1\lt 6\ \text{or}\ f_2=6.
-\qquad\text{(F.6)}
+\qquad f_1\lt6\ \text{or}\ f_2=6.                       \qquad\text{(2.1)}
 ```
 
-There are $`\binom{10}{4}-\binom83=210-56=154`$ such profiles. The residual
-literal catalog appends a fifth, zero coordinate to each four-column profile.
-Both configurations therefore have injective maps into their respective
-ordered catalogs.
+To prove the extra restriction, observe that label $`(1,6)`$ would give a
+five-cap starting with $`(u,v)`$ and a seven-cup ending with $`(u,v)`$.
+Deleting the cup's last vertex creates a junction at $`u`$. Thus a height
+six in the first column must be attained by a label whose first coordinate
+is at least two. The residual catalog consequently has
+$`\binom{10}{4}-\binom83=154`$ profiles; its literal representation appends a
+fifth zero coordinate.
 
-*Proof.* The height at column $`a`$ is the maximum second coordinate of an
-incoming pair whose first coordinate is at least $`a`$, taking zero when
-there is no such pair. Heights are nonincreasing, and positive cell membership
-is exactly the corresponding height inequality. In the residual case the
-label $`(1,6)`$ is impossible: it would give an attained outgoing five-cap
-from $`(u,v)`$ and an attained incoming seven-cup ending with $`(u,v)`$.
-Removing the last vertex of the cup leaves a six-cup ending at $`u`$, hence a
-forbidden junction. If $`f_1=6`$, attainment of that height must therefore
-come from a label with first coordinate at least two, giving $`f_2=6`$.
-The excluded profiles have first height six and three remaining heights
-between zero and five, explaining the subtraction of $`\binom83`$.
-Injectivity follows from Lemma F.5. ∎
-
-The height construction and its characterization are
-`ActualRanks.column`, `incoming_iff_column`, and `balancedState` in
-[BalancedStates.lean](ErdosSzekeres/Omission/BalancedStates.lean), and
-`ResidualStates.column`, `incoming_iff_column`, `top_cell_constraint`, and
-`state` in [ResidualStates.lean](ErdosSzekeres/Omission/ResidualStates.lean).
-The crucial attained-rank argument is `ResidualRanks.forbidden_label`.
-The Lean implementation checks completeness and the precise order of the
-literal catalogs, rather than relying on the informal binomial count:
-`BalancedCatalog.catalog_length`, `profiles_covered`, `ownerIndex_profile`,
-and `ownerIndex_injective` in
-[BalancedCatalog.lean](ErdosSzekeres/Omission/BalancedCatalog.lean), with
-the analogous declarations in
-[ResidualCatalog.lean](ErdosSzekeres/Omission/ResidualCatalog.lean).
-The real-point maps are `Configuration.balancedOwner` and
-`Configuration.residualOwner`; the latter and its injectivity theorem are in
-[ResidualRealization.lean](ErdosSzekeres/Omission/ResidualRealization.lean).
-
-### F.2. Geometric omission inequalities
-
-**Definition F.7 (holes and a row system).** For a configuration whose owner
-map takes values in a catalog $`V`$, let $`O\subseteq V`$ be its image and put
-$`h_i=1`$ for $`i\notin O`$, $`h_i=0`$ for $`i\in O`$. By injectivity,
+Lean checks completeness and ordering of both literal catalogs. Lemma 2.1
+then gives injective owner maps into these catalogs. If $`O`$ is the image
+of a configuration of size $`n`$, define its **holes** by
+$`h_i=\mathbf1_{V\setminus O}(i)`$. Injectivity gives
 
 ```math
-\sum_{i\in V}h_i+n=|V|.
-\qquad\text{(F.7)}
+\sum_{i\in V}h_i+n=\vert V\vert.                         \qquad\text{(2.2)}
 ```
 
-An omission row is a pair $`(S_r,d_r)`$, with $`S_r\subseteq V`$ and
-$`d_r\in\mathbb N`$, asserting
+| Construction | Declarations (prefix `ErdosSzekeres.Omission`) |
+| --- | --- |
+| Ordered real configurations; cups and caps | `Configuration`, `Configuration.HasCup`, `Configuration.HasCap` in [Realization](ErdosSzekeres/Omission/Realization.lean) |
+| Sign propagation and convexity | `PlanarChains.positive_four`, `negative_four`, `cup_all` in [PlanarChains](ErdosSzekeres/Omission/PlanarChains.lean); `ListGeometry.hasNCup_octagon` in [ListGeometry](ErdosSzekeres/Omission/ListGeometry.lean) |
+| Ending and starting paths, maxima, attainment, growth | `ActualRanks.EndingPath`, `rank`, `rank_attained`, `rank_growth`, `labels` in [ActualRanks](ErdosSzekeres/Omission/ActualRanks.lean); corresponding `ResidualRanks` declarations and `forbidden_label` in [ResidualRanks](ErdosSzekeres/Omission/ResidualRanks.lean) |
+| Junction and restriction to subsets | `Subsets.JunctionOn`, `NoJunctionOn`, `restrict` in [Subsets](ErdosSzekeres/Omission/Subsets.lean) |
+| State separation | `StateInterface.incoming_admissible`, `states_distinct` in [StateInterface](ErdosSzekeres/Omission/StateInterface.lean) |
+| Heights and state injectivity | `ActualRanks.column`, `incoming_iff_column`, `balancedState_injective` in [BalancedStates](ErdosSzekeres/Omission/BalancedStates.lean); `ResidualStates.column`, `top_cell_constraint`, `state_injective` in [ResidualStates](ErdosSzekeres/Omission/ResidualStates.lean) |
+| Literal catalogs and owner maps | `BalancedCatalog.profiles_covered`, `ownerIndex_profile`, `ownerIndex_injective` in [BalancedCatalog](ErdosSzekeres/Omission/BalancedCatalog.lean); analogous [ResidualCatalog](ErdosSzekeres/Omission/ResidualCatalog.lean) results and `Configuration.residualOwner` in [ResidualRealization](ErdosSzekeres/Omission/ResidualRealization.lean) |
+
+### 2.3. Geometric omission inequalities
+
+An **omission row** is a support $`S_r\subseteq V`$ and demand $`d_r\in\mathbb N`$
+asserting
 
 ```math
-h(S_r):=\sum_{i\in S_r}h_i=|S_r\setminus O|\ge d_r.
-\qquad\text{(F.8)}
+h(S_r):=\sum_{i\in S_r}h_i=\vert S_r\setminus O\vert\ge d_r. \qquad\text{(2.3)}
 ```
 
-Every actual configuration satisfies the rows proved below. The converse,
-that every Boolean solution is realized by points in the plane, is not used
-or asserted.
+These are necessary conditions on actual configurations; their Boolean
+solutions need not be realizable by points.
 
-**Lemma F.8 (cycle rows).** Suppose a list of distinct catalog states
-$`s_0,\ldots,s_{k-1}`$ has the following checked property: for each
-$`i<j<\ell`$, any actual owners of $`s_i,s_j,s_\ell`$, in that order, have
-positive orientation. In a configuration with no convex octagon, at most
-seven listed states are occupied. Thus the support of the list has demand
-$`k-7`$, with natural subtraction understood when $`k<7`$.
+**Lemma 2.2 (cycle rows).** Suppose a list of distinct states has this checked
+property: owners of every three states, in list order, have positive
+orientation. At most seven listed states occur in an octagon-free
+configuration. A list of length $`k`$ therefore gives demand $`k-7`$.
 
-*Proof.* If eight listed states were occupied, take them in list order and
-select their distinct actual owners. Every increasing triple in this order
-has positive orientation. `hasConvexNGon_of_positive_cycle` then supplies an
-actual convex octagon. Subtract the resulting bound of seven occupied states
-from the support cardinality. ∎
+*Proof.* Eight occupied states would have distinct owners, positive orientation
+on every increasing triple in list order, and hence form a convex octagon. ∎
 
-The checked property is finite and stronger than an unsupported assertion
-about a polygon order. For catalog states $`A,B`$, every actual pair label
-lies in the directed difference $`I(B)\setminus I(A)`$ by (F.5). The computed
-rectangle bounding this difference either is empty, ruling out that
-chronological order, or contains every allowable pair label. For each of the
-six possible chronological orders of three owners, the checker verifies
-either an empty required difference or a coordinate separation forcing the
-desired sign via (F.4a–b). To force a chronological cup it checks that the
-second pair's maximum first coordinate is at most the first pair's minimum
-first coordinate; to force a cap it checks the analogous second-coordinate
-inequality. Orientation changes sign under an odd permutation, so all six
-checks together prove positive orientation in the specified list order.
-Catalog index order, list order, and chronological owner order are distinct.
+The check uses rectangles bounding directed differences
+$`I(B)\setminus I(A)`$. By Lemma 2.1 every actual pair label lies in the
+appropriate rectangle. For each of the six chronological orders of three
+owners, the check finds either an empty required difference or a coordinate
+separation forcing the desired sign. For example, a second pair's maximum
+first coordinate at most the first pair's minimum excludes cap growth and
+forces a cup. Permutation parity converts chronological signs to list-order
+signs. Catalog order, list order and chronological order are distinct.
 
-This is exactly `CycleSigns.Safe`, `CheckTriple`, and
-`checked_triple_positive` in
-[CycleSigns.lean](ErdosSzekeres/Omission/CycleSigns.lean), using
-`BoundingBoxes.computedTable_valid` and the corresponding residual table.
-The geometric conclusions are `Configuration.checked_cycle_capacity`,
-`checked_cycle_hole_bound`, and `list_cycle_hole_bound` in
-[CycleGeometry.lean](ErdosSzekeres/Omission/CycleGeometry.lean), and
-`Configuration.residual_checked_cycle_capacity`,
-`residual_checked_cycle_hole_bound`, and `residual_list_cycle_hole_bound` in
-[ResidualCycleGeometry.lean](ErdosSzekeres/Omission/ResidualCycleGeometry.lean).
+**Lemma 2.3 (block rows).** Suppose all admissible pair labels on a residual
+support $`S`$ have a checked compression into $`\{1,2\}`$ that strictly
+increases along every cap triple. Then at most 22 states of $`S`$ are
+occupied, giving demand $`\vert S\vert-22`$.
 
-**Lemma F.9 (residual block rows).** Let $`S`$ be a checked residual support
-with a compression $`\kappa`$ of all admissible pair labels on that support
-into $`\{1,2\}`$. Suppose every actual cap triple in the support satisfies
-$`\kappa(d(u,v))<\kappa(d(v,w))`$. Then at most 22 states of $`S`$ can be
-occupied in an octagon-free residual configuration. Consequently
-$`h(S)\ge \vert S\vert -22`$.
+*Proof.* A four-cap would require three strictly increasing compressed values.
+Baek's finite theorem gives a four-cap or an eight-vertex cup/cap boundary
+among any 23 points. The boundary is a convex octagon by supporting affine
+functionals. Both alternatives are impossible. ∎
 
-*Proof.* A four-cap would give three consecutive pair values strictly
-increasing in $`\{1,2\}`$, which is impossible. Baek's finite theorem says
-that any 23 points of the resulting ordered combinatorial configuration
-contain a four-cap or an eight-vertex cap/cup boundary. The geometric
-boundary theorem converts the latter alternative to a convex octagon on
-the same real points. Thus the occupied owner set has size at most 22. ∎
+The compression is specified by active cells and a threshold at each cup
+coordinate. Finite checks establish coverage of all directed-difference labels
+and growth at every shared middle state. The resulting original catalogs
+contain 2,685 balanced cycle rows and 1,187 residual cycle or block rows.
+Every row is proved for the same occupied set $`O`$.
 
-The finite certificate consists of active label cells and a threshold at
-each cup coordinate. Its compression is one or two according as the cap
-coordinate is at most that threshold or exceeds it. `BlockCompression.pairsOK`
-checks that every possible directed-difference label is active;
-`growthOK` checks the strict increase at the shared middle state. The
-declarations `no_four_cap_of_rank2` in
-[BlockCompression.lean](ErdosSzekeres/Omission/BlockCompression.lean),
-`Baek.four_cap_or_eight_gon` in
-[Baek.lean](ErdosSzekeres/Omission/Baek.lean),
-`BaekGeometry.geometric_capacity22` in
-[BaekGeometry.lean](ErdosSzekeres/Omission/BaekGeometry.lean), and
-`BlockGeometry.block_hole_bound` in
-[BlockGeometry.lean](ErdosSzekeres/Omission/BlockGeometry.lean) carry out
-these steps. The boundary's convexity is proved by supporting affine
-functionals in `BoundaryGeometry.boundary_polygon` in
-[BoundaryGeometry.lean](ErdosSzekeres/Omission/BoundaryGeometry.lean).
+| Step | Lean correspondence |
+| --- | --- |
+| Six-order sign check | `CycleSigns.Safe`, `CheckTriple`, `checked_triple_positive` in [CycleSigns](ErdosSzekeres/Omission/CycleSigns.lean), using the proved [BoundingBoxes](ErdosSzekeres/Omission/BoundingBoxes.lean) and residual tables |
+| Cycle capacities and hole bounds | `Configuration.checked_cycle_capacity`, `checked_cycle_hole_bound`, `list_cycle_hole_bound` in [CycleGeometry](ErdosSzekeres/Omission/CycleGeometry.lean), with residual versions in [ResidualCycleGeometry](ErdosSzekeres/Omission/ResidualCycleGeometry.lean) |
+| Block compression and geometry | `BlockCompression.pairsOK`, `growthOK`, `no_four_cap_of_rank2` in [BlockCompression](ErdosSzekeres/Omission/BlockCompression.lean); `Baek.four_cap_or_eight_gon`, `BaekGeometry.geometric_capacity22`, `BlockGeometry.block_hole_bound` in [Baek](ErdosSzekeres/Omission/Baek.lean), [BaekGeometry](ErdosSzekeres/Omission/BaekGeometry.lean), [BlockGeometry](ErdosSzekeres/Omission/BlockGeometry.lean) |
+| All original rows and Boolean hole vectors | `OmissionBalanced.all_geometric_rows`, `feasible_holes` in the [balanced source bundle](experiments/omission-global-assembly-2026-10-10/README.md); `OmissionResidual.all_geometric_rows`, `feasible_holes` in the [residual source bundle](experiments/omission-residual-geometry-2026-10-09/README.md) |
 
-**Proposition F.10 (the complete original geometric row systems).** Every
-balanced configuration satisfies the 2,685 literal balanced rows, comprising
-1,584 cycle supports of size eight and demand one, 780 of size nine and
-demand two, and 321 of size ten and demand three. Every residual
-configuration satisfies the 1,187 literal residual rows: 974 cycles of size
-eight and demand one, 190 of size nine and demand two, and 23 blocks of size
-28 and demand six.
+The first three rows use namespace prefix `ErdosSzekeres.Omission`.
 
-*Proof.* Each cycle list is checked against Lemma F.8, including injectivity,
-every triple, support equality, and demand equality. Each block is checked
-against Lemma F.9, including its compression conditions and support equality.
-Finite row-index case splits cover the entire catalogs. ∎
+## 3. Exact certificates and the proof of the octagon bound
 
-The exact universal conclusions are `OmissionBalanced.all_geometric_rows`
-in `BalancedRows.lean`, preserved in
-[balanced-rows-sources.tar.gz](experiments/omission-global-assembly-2026-10-10/balanced-rows-sources.tar.gz),
-and `OmissionResidual.all_geometric_rows` in `ResidualAllGeometry.lean`,
-preserved in
-[blocks-sources.tar.gz](experiments/omission-residual-geometry-2026-10-09/blocks-sources.tar.gz).
-For example, the residual conclusion is
+### 3.1. Weighted inequalities and integer rounding
+
+**Lemma 3.1 (weighted capacity bound).** Let $`h:V\to\{0,1\}`$ satisfy the
+rows (2.3). For nonnegative integer weights $`w_r`$, put
 
 ```math
-\forall r\in\{0,\ldots,1186\},\quad
-d_r\le |S_r\setminus O_R(c)|
+L_i=\sum_{r:i\in S_r}w_r,\qquad D=\sum_rw_rd_r.
 ```
 
-for every real `Configuration` satisfying exactly the residual hypotheses
-of Definition F.4. Equation (F.7), Booleanity, and all rows are combined in
-`OmissionBalanced.feasible_holes` in
-[BalancedBudgets.lean](experiments/omission-global-assembly-2026-10-10/BalancedBudgets.lean)
-and `OmissionResidual.feasible_holes` in
-[ResidualReduction.lean](experiments/omission-residual-geometry-2026-10-09/ResidualReduction.lean).
-
-### F.3. Exact arithmetic certificates and rounded cuts
-
-All quantities in this subsection are integers. Write $`x_+=\max(x,0)`$;
-Lean's subtraction on natural numbers implements this truncation.
-
-**Lemma F.11 (weighted capacity inequality).** Suppose
-$`h:V\to\{0,1\}`$ satisfies $`h(S_r)\ge d_r`$ for every row. Choose
-nonnegative integer weights $`w_r`$, and define
+For every integer $`C\ge0`$,
 
 ```math
-L_i=\sum_{r:i\in S_r}w_r,
-\qquad D=\sum_r w_rd_r.
+D\le\sum_iL_ih_i\le C\sum_ih_i+\sum_i(L_i-C)_+,           \qquad\text{(3.1)}
 ```
 
-For every nonnegative integer capacity $`C`$,
+where $`x_+=\max(x,0)`$.
 
-```math
-D\le\sum_i L_ih_i
- \le C\sum_i h_i+\sum_i(L_i-C)_+.
-\qquad\text{(F.9)}
-```
+*Proof.* Multiply and sum the rows, then use
+$`L_ih_i\le Ch_i+(L_i-C)_+`$ for each Boolean coordinate. ∎
 
-*Proof.* Multiply each row by its weight and transpose the finite sum.
-For each Boolean $`h_i`$,
-$`L_ih_i\le Ch_i+(L_i-C)_+`$; summing proves the second inequality. ∎
-
-This is `OmissionCertificates.weighted_capacity_bound` in
-[OmissionCertificates.lean](ErdosSzekeres/OmissionCertificates.lean).
-In particular, a strict inequality
-$`Cb+\sum_i(L_i-C)_+<D`$ excludes a hole vector of total at most $`b`$.
-The corresponding theorem is `OmissionCertificates.excludes_budget`.
-
-**Proposition F.12 (rounded cover cut).** Fix a prospective support
-$`T\subseteq V`$, a target $`q\ge1`$, and weights on already valid rows.
-Set
+In particular, $`Cb+\sum_i(L_i-C)_+\lt D`$ excludes at most $`b`$ holes.
+For a proposed support $`T`$, put
 
 ```math
 E_T=\sum_{i\in T}(L_i-C)_++\sum_{i\notin T}L_i.
 ```
 
-If
+The same proof gives $`D\le Ch(T)+E_T`$. Hence, for $`q\ge1`$,
 
 ```math
-C(q-1)+E_T\lt D,
-\qquad\text{(F.10)}
+C(q-1)+E_T\lt D\quad\Longrightarrow\quad h(T)\ge q.       \qquad\text{(3.2)}
 ```
 
-then every Boolean vector satisfying the old rows satisfies $`h(T)\ge q`$.
+This is an exact **rounded cover cut**: if the integer $`h(T)`$ were less
+than $`q`$, it would be at most $`q-1`$. For $`C>0`$ it expresses the ceiling
+bound $`h(T)\ge\lceil(D-E_T)/C\rceil`$. No floating-point objective is rounded.
+For example, three demand-one rows whose union is $`T`$ and whose column loads
+are at most two yield $`2(2-1)\lt3`$, and thus demand two on $`T`$.
 
-*Proof.* The same pointwise bound inside $`T`$, and $`L_ih_i\le L_i`$
-outside it, yield $`D\le Ch(T)+E_T`$. If the integer $`h(T)`$ were less
-than $`q`$, it would be at most $`q-1`$, contradicting (F.10). ∎
+The formal augmentations add 446 balanced cuts and 1,108 residual cuts.
+Every cut uses only earlier rows, so induction proves all 3,131 balanced
+and 2,295 residual inequalities without additional geometric assumptions.
 
-For $`C>0`$, this is the integer rounding step behind
-$`h(T)\ge\lceil(D-E_T)/C\rceil`$. The proof never rounds a floating-point
-objective. It checks the exact strict inequality (F.10), using
-`OmissionCertificates.weighted_subset_capacity_bound` and
-`rounded_cover_cut` in
-[CoverCuts.lean](ErdosSzekeres/Omission/CoverCuts.lean).
-
-For a concrete certificate, the first balanced added row, row 2685, has
-support
+At a tree node, let $`M`$ be indices fixed missing, $`Z`$ indices fixed occupied,
+and $`F=V\setminus(M\cup Z)`$. Assume $`M,Z`$ disjoint. A budget $`b`$ is
+impossible if $`\vert M\vert>b`$. Otherwise a sufficient leaf test is
 
 ```math
-T=\{136,154,174,178,188,189,194,203,208,209,216,218,220,228\}.
+C(b-\vert M\vert)+\sum_{i\in F}(L_i-C)_++\sum_{i\in M}L_i\lt D. \qquad\text{(3.3)}
 ```
 
-It adds original rows 150, 112, and 111, each with weight one and demand one.
-Their union is $`T`$; every column load is at most two. Thus $`D=3`$,
-$`C=2`$, and $`E_T=0`$. The exact inequality $`2(2-1)<3`$ gives demand two
-on $`T`$. The literal inputs and integer margin are in
-[balanced-v2-cuts.json](experiments/omission-cover-certificates-2026-10-10/balanced-v2-cuts.json).
-
-There are 446 balanced and 1,108 residual added cuts. Each recorded parent row
-precedes the derived row, so induction along the finite dependency order
-justifies the entire augmentation. The source modules
-[BalancedCoverCutsV2.lean](experiments/omission-cover-certificates-2026-10-10/BalancedCoverCutsV2.lean)
-and [ResidualCoverCutsV2.lean](experiments/omission-cover-certificates-2026-10-10/ResidualCoverCutsV2.lean)
-prove `BalancedCoverCutsV2.all_rows` and `ResidualCoverCutsV2.all_rows`.
-Their premises are Booleanity and the original row system; the cuts add no
-geometric hypothesis. The augmented systems contain 3,131 balanced and 2,295
-residual rows.
-
-**Proposition F.13 (conditioned leaf certificate).** At a branch, let
-$`M`$ be the indices fixed missing, $`Z`$ the indices fixed occupied, and
-$`F=V\setminus(M\cup Z)`$. A feasible vector has $`h_i=1`$ on $`M`$,
-$`h_i=0`$ on $`Z`$, and total at most $`b`$. If $`\vert M\vert >b`$, no such vector
-exists. Otherwise, any weighted rows satisfying
+Indeed, fixed missing indices consume $`\vert M\vert`$ holes, and the weighted
+sum is at most the left side. The implementation can instead remove fixed
+indices from each support and replace its demand by
+$`(d_r-\vert S_r\cap M\vert)_+`$. The production proofs use the equivalent
+full-load form
 
 ```math
-C(b-|M|)+\sum_{i\in F}(L_i-C)_++\sum_{i\in M}L_i\lt D
-\qquad\text{(F.11)}
+C(b-\vert M\vert)+\sum_{i\in V}(L_i-C)_++\sum_{i\in M}L_i
+\lt D+\sum_{i\in M\cup Z}(L_i-C)_+.                       \qquad\text{(3.4)}
 ```
 
-exclude the branch.
+A split on $`i`$ has a zero child fixing it occupied and a one child fixing it
+missing. Both children must be excluded. Induction, using Booleanity,
+therefore excludes the root context; an empty root excludes every solution
+within budget. No incomplete leaf is a proof case.
 
-*Proof.* Fixed missing indices already use $`\vert M\vert `$ holes. After transposing
-the weighted rows,
+Large column sums are checked by positional encoding. Put
+$`R_r=\sum_{i\in S_r}B^i`$ for $`B>1`$. If
+$`\sum_rw_r\lt B`$, every proposed digit $`c_i\lt B`$, and
 
 ```math
-D\le\sum_{i\in M}L_i+\sum_{i\in F}L_ih_i
- \le\sum_{i\in M}L_i+C(b-|M|)+\sum_{i\in F}(L_i-C)_+,
+\sum_i c_iB^i=\sum_rw_rR_r,
 ```
 
-contradicting (F.11). If both values were fixed at one index, the branch
-would already be inconsistent. ∎
+then $`c_i=L_i`$. Indeed, every actual load is below $`B`$; equality follows
+from uniqueness of base-$`B`$ digits, proved by reduction modulo $`B`$ and
+induction. Sparse storage and Horner evaluation change only representation.
 
-The general implementation first replaces a row by support
-$`S_r\setminus(M\cup Z)`$ and residual demand
-$`(d_r-\vert S_r\cap M\vert )_+`$. `sum_after_fixing` proves the exact decomposition
-of its row sum. `conditioned_excludes_budget` and
-`conditioned_excludes_of_full_load` prove the clipped-demand and original-load sufficient
-tests for this argument in
-[OmissionCertificates.lean](ErdosSzekeres/OmissionCertificates.lean).
-The production fused leaves use the original-load test, written without
-subtracting whole sums:
+| Argument | Lean declaration and source |
+| --- | --- |
+| Weighted bounds and conditioned leaves | `OmissionCertificates.weighted_capacity_bound`, `excludes_budget`, `sum_after_fixing`, `conditioned_excludes_budget`, `conditioned_excludes_of_full_load` in [OmissionCertificates](ErdosSzekeres/OmissionCertificates.lean) |
+| Rounded cuts | `OmissionCertificates.weighted_subset_capacity_bound`, `rounded_cover_cut` in [CoverCuts](ErdosSzekeres/Omission/CoverCuts.lean); `BalancedCoverCutsV2.all_rows`, `ResidualCoverCutsV2.all_rows` in the [cut bundle](experiments/omission-cover-certificates-2026-10-10/README.md) |
+| Tree induction | `CertificateTree.check_sound`, `excludes_of_check`, `split_excludes` in [OmissionCertificates](ErdosSzekeres/OmissionCertificates.lean) |
+| Packed loads | `pack_injective_of_lt`, `load_eq_of_packed`, `load_eq_of_sparse_packed` in [OmissionPacking](ErdosSzekeres/OmissionPacking.lean); `fused_sparse_packed_excludes` generated by [omission_fused_export.py](scripts/omission_fused_export.py) |
 
-```math
-C(b-|M|)+\sum_{i\in V}(L_i-C)_++\sum_{i\in M}L_i
- \lt D+\sum_{i\in M\cup Z}(L_i-C)_+.
-\qquad\text{(F.12)}
-```
+The certificate and packing declarations have namespace prefix
+`ErdosSzekeres.OmissionCertificates`; in particular, the tree declarations are
+`CertificateTree.check_sound`, `CertificateTree.excludes_of_check`, while
+`split_excludes` belongs directly to that namespace.
 
-**Definition F.14 (exclusion tree).** A node contains either an over-budget
-check, a weighted leaf as above, or a split on an index $`i`$. Its zero child
-adds $`i`$ to $`Z`$, and its one child adds $`i`$ to $`M`$. Both children
-must be excluded. Since a natural number bounded above by one is zero or
-one, induction on the tree proves exclusion at its root. An empty root
-context therefore excludes every Boolean solution of the row system with
-at most $`b`$ holes. There is no pending or oracle case in this proof rule.
+### 3.2. Population bounds
 
-The general statements are `CertificateTree.check_sound`,
-`CertificateTree.excludes_of_check`, and `split_excludes` in
-[OmissionCertificates.lean](ErdosSzekeres/OmissionCertificates.lean).
-The large production proofs instantiate the same leaf and split lemmas in
-separate modules, rather than evaluating one enormous recursive Boolean
-term. Their archived JSON has a `root`, a `hole_budget`, and a `nodes` array;
-a branch records `vertex`, `zero`, and `one`, while a weighted leaf records
-its integer `capacity` and sparse `[row, weight]` entries. Every descendant
-theorem retains its inherited missing and occupied context.
+**Theorem 3.2.** Every balanced configuration has at most 190 points; every
+residual configuration has at most 122 points.
 
-**Lemma F.15 (packed column verification).** For a base $`B>1`$, encode a row
-by $`R_r=\sum_{i\in S_r}B^i`$. Suppose $`\sum_r w_r<B`$, every proposed
-column coefficient $`c_i<B`$, and
+*Proof.* Complete kernel-checked exclusion trees show that the augmented
+balanced system has no solution with at most 61 holes, and the augmented
+residual system has none with at most 31 holes. Literal support and demand
+identities identify their rows with the geometric rows and proved cuts.
+Thus (2.2) gives
 
 ```math
-\sum_i c_iB^i=\sum_r w_rR_r.
-\qquad\text{(F.13)}
-```
-
-Then $`c_i=L_i`$ for every $`i`$.
-
-*Proof.* The right side equals $`\sum_iL_iB^i`$ by rearrangement, and
-$`L_i\le\sum_rw_r<B`$. Uniqueness of base-$`B`$ digits gives the result.
-The formal induction first takes both sides modulo $`B`$, then cancels the
-equal lowest digit and a positive factor $`B`$. ∎
-
-This is `pack_injective_of_lt`, `load_eq_of_packed`, and
-`load_eq_of_sparse_packed` in
-[OmissionPacking.lean](ErdosSzekeres/OmissionPacking.lean).
-The generated helper `fused_sparse_packed_excludes` checks in one conjunction
-the base bound, total weight bound, digit bounds, packed equality, and strict
-margin (F.12). It then applies `sparse_list_conditioned_excludes`. Sparse
-storage and Horner evaluation change the representation of the calculation,
-not its mathematical premise. The helper is embedded in each archived
-`Catalog.lean`; its generator is
-[omission_fused_export.py](scripts/omission_fused_export.py).
-
-**Theorem F.16 (the two certified arithmetic exclusions).** For the literal
-augmented balanced system, no Boolean vector satisfies every row and
-$`\sum_i h_i\le61`$. For the literal augmented residual system, no Boolean
-vector satisfies every row and $`\sum_i h_i\le31`$.
-
-*Proof.* The complete balanced tree contains 22,318 weighted leaves and
-22,317 splits, with packing base 524,288. The residual tree contains 50,945
-weighted leaves and 50,944 splits, with packing base 262,144. Both roots have
-empty missing and occupied contexts. Every finite leaf computation is
-checked using the Lean kernel, and the split lemmas compose them to the
-empty-context exclusions. ∎
-
-The declarations are `OmissionBalancedCover61Fused.excludes_budget` in
-`BalancedCover61FusedProof/Root.lean` and
-`OmissionResidualCover31Fused.excludes_budget` in
-`ResidualCover31FusedProof/Root.lean`. The sources and trees are preserved as
-[balanced proof sources](experiments/omission-cover-certificates-2026-10-10/balanced-61-fused-lean-sources.tar.gz),
-[balanced tree](experiments/omission-cover-certificates-2026-10-10/balanced-61-fused-tree.json.gz),
-[residual proof sources](experiments/omission-cover-certificates-2026-10-10/residual-31-fused-lean-sources.tar.gz),
-and [residual tree](experiments/omission-cover-certificates-2026-10-10/residual-31-fused-tree.json.gz).
-The exact augmented source hashes are
-`acaf6323a2539be869304f42263f80a87db95be1b998e41638dba9bca4d63d72`
-and `c5bc49d588791a6a43e9deba3c4f01af59cf12b781037e69cffb5c2f7735ac61`,
-respectively. Numerical discovery records and an export-time `lean_checked`
-flag do not establish Theorem F.16; the separate complete kernel records do.
-
-**Proposition F.17 (population bounds).** Every balanced real configuration
-has at most 190 points. Every residual real configuration has at most 122
-points.
-
-*Proof.* The finite bridges check equality of both supports and demands:
-the first 2,685 balanced rows are exactly the original geometric rows, and
-the remaining 446 are exactly the proved balanced cuts; the first 1,187
-residual rows and remaining 1,108 cuts satisfy the analogous identities.
-Hence a hole vector supplied by Proposition F.10 satisfies the augmented
-system. Theorem F.16 and integrality give at least 62 balanced holes or
-32 residual holes. Using (F.7),
-
-```math
-n_B\le252-62=190,\qquad n_R\le154-32=122.
-\qquad\text{(F.14)}
+n_B\le252-62=190,\qquad n_R\le154-32=122.                 \qquad\text{(3.5)}
 ```
 
 ∎
 
-The literal identities are `base_catalog_matches` and `cut_catalog_matches`
-in [BalancedCover61FusedBridge.lean](experiments/omission-global-assembly-2026-10-10/BalancedCover61FusedBridge.lean)
-and [ResidualCover31FusedBridge.lean](experiments/omission-global-assembly-2026-10-10/ResidualCover31FusedBridge.lean).
-Their `all_cover_rows` and `exclusion_transfer` theorems discharge the
-arithmetic-to-geometric catalog connection. The general population maps are
-`OmissionBalanced.balanced_bound_of_hole_budget` and
-`OmissionResidual.residual_bound_of_hole_budget`; a rejected budget $`b`$
-gives bounds $`251-b`$ and $`153-b`$, respectively, using natural subtraction.
-The final closed declarations are
-`ErdosSzekeres.Omission.balanced_population_190` and
-`ErdosSzekeres.Omission.residual_population_122` in the same file as
-Theorem F.1. Their types are exactly `Partition.BalancedBound 190` and
-`Partition.ResidualBound 122`, whose universally quantified geometric
-hypotheses are those of Definition F.4.
+The arithmetic roots are `OmissionBalancedCover61Fused.excludes_budget` and
+`OmissionResidualCover31Fused.excludes_budget`, preserved with their complete
+trees in the [certificate bundle](experiments/omission-cover-certificates-2026-10-10/README.md).
+The [balanced bridge](experiments/omission-global-assembly-2026-10-10/BalancedCover61FusedBridge.lean)
+and [residual bridge](experiments/omission-global-assembly-2026-10-10/ResidualCover31FusedBridge.lean)
+prove `base_catalog_matches`, `cut_catalog_matches`, `all_cover_rows` and
+`exclusion_transfer`. The resulting closed declarations are
+`ErdosSzekeres.Omission.balanced_population_190` and `residual_population_122`
+in the final theorem file from §1. Their types are `Partition.BalancedBound 190`
+and `Partition.ResidualBound 122`, with exactly the geometric hypotheses of §2.
+More generally, excluding budget $`b`$ yields populations $`251-b`$ and $`153-b`$.
 
-### F.4. Projective reduction, partition, and final composition
+### 3.3. Projective reduction and minimum-slope partition
 
-**Proposition F.18 (one-point projective reduction).** Every nonempty finite
-general-position set $`S\subset\mathbb R^2`$ with no convex octagon gives an
-actual ordered configuration $`c`$ of size $`\vert S\vert -1`$, with no seven-cap and
-no convex octagon.
+**Lemma 3.3 (root deletion).** A nonempty finite general-position set $`S`$
+without a convex octagon gives an ordered configuration of size
+$`\vert S\vert-1`$ with no seven-cap and no convex octagon.
 
-*Proof.* First apply an invertible linear map making all abscissae distinct.
-Let $`a`$ be the unique leftmost transformed point. All remaining points lie
-in $`x>a_x`$. On this half-plane apply
+*Proof.* An invertible linear change makes all abscissae distinct. Let $`a`$
+be the leftmost point. On the half-plane $`x>a_x`$ use
 
 ```math
-\Phi_a(x,y)=\left(\frac{y-a_y}{x-a_x},-\frac1{x-a_x}\right).
-\qquad\text{(F.15)}
-```
-
-The map is injective there. Its first coordinates are distinct because equal
-ray slopes from $`a`$ would make three original points collinear. Thus its
-image can be ordered as a `Configuration`. General position is preserved;
-the determinant identity is
-
-```math
+\begin{aligned}
+\Phi_a(x,y)&=\left(\frac{y-a_y}{x-a_x},-\frac1{x-a_x}\right),\\
 [\Phi_a(p),\Phi_a(q),\Phi_a(r)]
-=-\frac{[p,q,r]}{(p_x-a_x)(q_x-a_x)(r_x-a_x)}.
-\qquad\text{(F.16)}
+&=-\frac{[p,q,r]}{(p_x-a_x)(q_x-a_x)(r_x-a_x)}.
+\end{aligned}                                           \qquad\text{(3.6)}
 ```
 
-An octagon in the chart transfers to an octagon among the original non-root
-points. A seven-cap in increasing chart order, together with $`a`$, also
-gives a convex octagon: triples not containing the root acquire positive
-orientation by (F.16), and triples containing the root acquire positive
-orientation from the strictly increasing ray slopes. Both alternatives
-contradict avoidance. Exactly one original point was deleted. ∎
+This map is injective; equal first coordinates would mean equal ray slopes
+from $`a`$, contradicting general position. Its image is therefore an ordered
+configuration. Convex polygons transfer back through this chart. A seven-cap,
+together with $`a`$, also transfers to a convex octagon: non-root triples
+acquire positive orientation by (3.6), and root triples do so by increasing
+ray slopes. Both alternatives contradict avoidance. ∎
 
-The precise conclusion `exists_cap_free_chart` retains
-`IsRootDeletionChart S c`, an explicit relation through the invertible linear
-map, root deletion, and (F.15), in addition to the cardinality and avoidance
-claims. See `root_cap_polygon`, `exists_projective_chart`, and
-`exists_cap_free_chart` in
-[ProjectiveTransfer.lean](ErdosSzekeres/Omission/ProjectiveTransfer.lean).
-Formula (F.15) is `HMPT.projectFrom` and (F.16) is
-`HMPT.orient_projectFrom` in
-[HMPT/Projective.lean](ErdosSzekeres/HMPT/Projective.lean).
+**Lemma 3.4 (partition).** An ordered configuration of size $`n\ge2`$ with no
+seven-cap or convex octagon partitions into a balanced part $`H`$ and a
+residual part $`R`$.
 
-**Proposition F.19 (minimum-slope partition).** Let $`c`$ be an ordered
-configuration with $`n\ge2`$, no seven-cap, and no convex octagon. Its index
-set partitions into $`H\sqcup R`$, where the induced configuration on $`H`$
-is balanced and the induced configuration on $`R`$ is residual. In
-particular $`n=\vert H\vert +\vert R\vert `$.
+*Proof.* At each vertex $`u`$, choose a distinct minimum-slope neighbor $`m(u)`$.
+Set $`U=\{u:u\lt m(u)\}`$, $`L=\{u:m(u)\lt u\}`$. Minimum slope and
+nonzero orientation show that a cap ending in $`U`$ extends rightwards to its
+minimum-slope neighbor; a cup starting in $`L`$ extends leftwards. Hence
+$`U`$ has no six-cap and $`L`$ no seven-cup.
 
-*Proof.* For each vertex $`u`$, choose a distinct vertex $`m(u)`$ attaining
-the minimum slope among all segments from $`u`$. Such a vertex exists by
-finiteness. Put
+Let $`G`$ be the junction vertices witnessed within $`U`$, and put
+$`H=L\cup G`$, $`R=U\setminus G`$. The residual restrictions on $`R`$ follow
+by restriction; a junction there would place its vertex in $`G`$. Both parts
+inherit octagon avoidance, and $`H`$ inherits seven-cap avoidance.
+
+Suppose $`H`$ contains a seven-cup from $`s`$ to $`t`$. Its first vertex cannot
+lie in $`L`$, since left extension gives an eight-cup. Its last vertex cannot
+lie in $`G`$: extend that junction's outgoing five-cap to a six-cap; the join
+sign either extends the seven-cup or prepends its penultimate vertex to the
+six-cap, contradicting one of the avoidance assumptions. Thus $`s\in G`$
+and $`t\in L`$. At $`s`$ there is an incoming six-cup and an outgoing six-cap
+whose second vertex $`q`$ lies in $`U`$, so $`q\ne t`$. The geometric
+three-chain lemma excludes these chains together with the seven-cup from
+$`s`$ to $`t`$. It follows from the four-point sign identities and cup/cap
+boundary geometry, without requiring unrelated chains to be disjoint.
+Thus $`H`$ is balanced. ∎
+
+**Proof of Theorem 1.1(3).** If $`S`$ avoids convex octagons, the empty and
+small cases are immediate. Otherwise Lemmas 3.3–3.4 and Theorem 3.2 give
 
 ```math
-U=\{u:u\lt m(u)\},\qquad L=\{u:m(u)\lt u\}.
+\vert S\vert=\vert H\vert+\vert R\vert+1\le190+122+1=313.
 ```
 
-These sets are disjoint and cover the indices. Minimum slope and nonzero
-orientation give two extension rules: a cap whose last point is in $`U`$
-extends to its right-hand minimum-slope neighbor; a cup whose first point
-is in $`L`$ extends to its left-hand minimum-slope neighbor. Consequently
-$`U`$ has no six-cap and $`L`$ has no seven-cup.
+Therefore 314 points force a convex octagon. ∎
 
-Let $`G\subseteq U`$ be the junction vertices witnessed wholly inside $`U`$,
-and set
+| Geometric step | Declarations (prefix `ErdosSzekeres.Omission` except where specified) |
+| --- | --- |
+| Actual root-deletion chart | `IsRootDeletionChart`, `root_cap_polygon`, `exists_projective_chart`, `exists_cap_free_chart` in [ProjectiveTransfer](ErdosSzekeres/Omission/ProjectiveTransfer.lean); `ErdosSzekeres.HMPT.projectFrom`, `orient_projectFrom` in [Projective](ErdosSzekeres/HMPT/Projective.lean) |
+| Minimum-slope extension | `MinimumSlope.MinNeighbors`, `exists_min_neighbors`, `cap_to_right`, `cup_from_left` in [MinimumSlope](ErdosSzekeres/Omission/MinimumSlope.lean) |
+| Partition and three-chain argument | `SlopePartition.junctions`, `balancedPart`, `residualPart` in [SlopePartition](ErdosSzekeres/Omission/SlopePartition.lean); `ThreeChain.three_chain` in [ThreeChain](ErdosSzekeres/Omission/ThreeChain.lean); `Partition.balanced_no_seven_cup`, `exists_partition` in [Partition](ErdosSzekeres/Omission/Partition.lean) |
+| Final composition | `Partition.avoiding_card_le_of_population_bounds`, `forces_of_population_bounds` in [PopulationBounds](ErdosSzekeres/Omission/PopulationBounds.lean) |
+
+The general composition gives $`\mathsf F(B+R+2,8)`$ from balanced and residual
+population bounds $`B,R`$, provided $`1\le B+R`$. One added point is the
+deleted root; the other converts an avoiding-set bound into a forcing threshold.
+
+## 4. The asymptotic arguments
+
+### 4.1. Suk's finite support bound
+
+A **cap frame** $`(a,b,c,d)`$ has negative orientation on all four increasing
+triples. Its support region is
 
 ```math
-H=L\cup G,\qquad R=U\setminus G.
-\qquad\text{(F.17)}
+\{p:[a,b,p]\lt0,\ [b,c,p]>0,\ [c,d,p]\lt0\}.
 ```
 
-The residual part has no six-cap, being a subset of $`U`$, and no junction:
-a junction in $`R`$ would also be one in $`U`$, placing its vertex in
-$`G`$. Both parts inherit octagon avoidance, and $`H`$ inherits seven-cap
-avoidance.
-
-It remains to exclude a seven-cup in $`H`$. Its first vertex $`s`$ cannot
-belong to $`L`$, since the left extension would give an eight-cup. Its last
-vertex $`t`$ cannot belong to $`G`$: extend the outgoing five-cap at that
-junction to a six-cap; the sign at the join either extends the given
-seven-cup to an eight-cup or prepends its penultimate point to that six-cap,
-giving a seven-cap. Hence $`s\in G`$ and $`t\in L`$. At $`s`$ there is an
-incoming six-cup and an outgoing six-cap, the latter obtained by extending
-the outgoing five-cap in $`U`$. Its second point $`q`$ lies in $`U`$, so
-$`q\ne t`$. The geometric three-chain lemma forbids precisely these three
-chains: an incoming six-cup ending at $`s`$, an outgoing six-cap beginning
-$`(s,q)`$, and an outgoing seven-cup from $`s`$ to $`t\ne q`$, in a
-configuration with no seven-cap and no octagon. Its proof uses the
-four-point sign identities and cup/cap boundary geometry to produce one of
-those forbidden configurations. This eliminates the remaining seven-cup.
-Equation (F.17) is a disjoint partition, proving the cardinality identity. ∎
-
-The minimum-slope choice and extension rules are `MinimumSlope.MinNeighbors`,
-`exists_min_neighbors`, `cap_to_right`, and `cup_from_left` in
-[MinimumSlope.lean](ErdosSzekeres/Omission/MinimumSlope.lean).
-The sets in (F.17) are `SlopePartition.junctions`, `balancedPart`, and
-`residualPart` in
-[SlopePartition.lean](ErdosSzekeres/Omission/SlopePartition.lean).
-The precise three-chain statement is `ThreeChain.three_chain` in
-[ThreeChain.lean](ErdosSzekeres/Omission/ThreeChain.lean); it imposes only
-the specified endpoint exception, without assuming unrelated chains are
-disjoint. `Partition.balanced_no_seven_cup` and `Partition.exists_partition`
-in [Partition.lean](ErdosSzekeres/Omission/Partition.lean) prove the
-remaining avoidance and the full partition statement. All restrictions use
-`Subsets.restrict`, which enumerates exactly the chosen real-point subset.
-
-**Proof of Theorem F.1.** Suppose $`S`$ avoids convex octagons. The empty
-case is immediate. Otherwise Proposition F.18 gives a cap-free chart with
-$`\vert S\vert =n+1`$. If $`n\le1`$, the desired avoiding-set bound is immediate.
-If $`n\ge2`$, apply Proposition F.19 and then Proposition F.17:
+A clockwise sequence of $`k+3`$ horizontally ordered anchors determines
+$`k`$ consecutive frames. Suppose the anchors belong to a general-position set
+$`P`$, and $`Q_i\subseteq P`$ lies in the $`i`$th region. The finite support
+theorem gives a convex $`n`$-gon whenever
 
 ```math
-|S|=|H|+|R|+1\le190+122+1=313.
+\begin{gathered}
+n\ge4,\quad K,b\ge3,\quad n\le rK,\quad n\le tb,\quad t(r+1)\le k,\\
+\vert Q_i\vert>2^{n+K-4}\binom{n+b-4}{n-2}\quad\text{for every }i.
+\end{gathered}                                           \qquad\text{(4.1)}
 ```
 
-Therefore $`\vert S\vert \ge314`$ forces a convex octagon. ∎
-
-The general composition theorem is
-`Partition.forces_of_population_bounds`: for natural numbers $`B,R`$ with
-$`1\le B+R`$, a proved `BalancedBound B` and `ResidualBound R` imply
-`ForcesConvexNGon (B + R + 2) 8`. Its avoiding-set form is
-`Partition.avoiding_card_le_of_population_bounds`, giving
-$`\vert S\vert \le B+R+1`$. Both are in
-[PopulationBounds.lean](ErdosSzekeres/Omission/PopulationBounds.lean).
-One added point accounts for the deleted root, and the other for the strict
-forcing threshold. Instantiating $`B=190`$ and $`R=122`$ gives the exact
-closed declaration in Theorem F.1.
-
-### F.5. Recorded kernel validation and correspondence
-
-The table reports preserved successful Lean 4.24.0 checks; it is not a claim
-that the entire large proof was recompiled while writing this note. Source
-archives contain Lean text and mathematical data, not compiled objects.
-Every cited final audit uses only `propext`, `Classical.choice`, and
-`Quot.sound`. The mathematical dependencies are the checked declarations;
-solver outputs and Python replay are supplementary discovery and provenance
-records.
-
-| Mathematical statement | Lean declaration or family | Recorded validation |
-| --- | --- | --- |
-| Original balanced geometric rows, Proposition F.10 | `OmissionBalanced.all_geometric_rows`; 84 row blocks and aggregate | [85-module complete record](experiments/omission-global-assembly-2026-10-10/balanced-rows-kernel-check.json) |
-| Original residual cycles and blocks, Proposition F.10 | `OmissionResidual.all_nonblock_rows`, `all_geometric_rows` | [39 cycle modules](experiments/omission-residual-geometry-2026-10-09/cycles-kernel-check.json) and [24 block/composition modules](experiments/omission-residual-geometry-2026-10-09/blocks-kernel-check.json), both complete |
-| All 446 rounded balanced cuts, Proposition F.12 | `BalancedCoverCutsV2.all_rows` | [Complete cut check](experiments/omission-cover-certificates-2026-10-10/balanced-v2-cuts-kernel-check.json) |
-| All 1,108 rounded residual cuts, Proposition F.12 | `ResidualCoverCutsV2.all_rows` | [Complete cut check](experiments/omission-cover-certificates-2026-10-10/residual-v2-cuts-kernel-check.json) |
-| Balanced exclusion of at most 61 holes, Theorem F.16 | `OmissionBalancedCover61Fused.excludes_budget`; 22,318 weighted leaves | [504 modules: catalog, 502 parts, root](experiments/omission-cover-certificates-2026-10-10/balanced-61-fused-kernel-check.json), complete |
-| Residual exclusion of at most 31 holes, Theorem F.16 | `OmissionResidualCover31Fused.excludes_budget`; 50,945 weighted leaves | [1,218 modules: catalog, 1,216 parts, root](experiments/omission-cover-certificates-2026-10-10/residual-31-fused-kernel-check.json), complete |
-| Literal support/demand transfer and population bounds, Proposition F.17 | Both fused bridges; `balanced_population_190`, `residual_population_122` | Included in the [complete eight-module final assembly record](experiments/omission-global-assembly-2026-10-10/global-cover-314-check.json) |
-| Closed real-point octagon theorem, Theorem F.1 | `forces_convex_octagon_314`, `convex_octagon_of_card_ge_314` | Same final record; [explicit axiom output](experiments/omission-global-assembly-2026-10-10/global-cover-314-axioms.txt) |
-
-The final profile pins the arithmetic exports, cut transfers, row counts,
-and budgets in
-[profile-balanced61-fused-v2-residual31-fused-v2.json](experiments/omission-global-assembly-2026-10-10/profile-balanced61-fused-v2-residual31-fused-v2.json).
-The exact profile matters: the completed 314 proof uses the 2,295-row residual
-system and rejects budget 31. Later 2,469-row and 2,598-row investigations
-targeting budget 32 are separate research artifacts and are not premises of
-Theorem F.1.
-
-The finite catalogs, initial row families, geometric architecture, and adapted
-proof code derive in part from Michael Schroeder's pinned version-1 archive;
-the 23-point combinatorial theorem uses Baek's formal development. Their
-attribution and separate code/data licenses are documented in
-[THIRD_PARTY.md](docs/THIRD_PARTY.md). The present theorem is the result of the
-closed formal composition above, not a claim of independent discovery of
-every constituent argument.
-
-## R. The residual relaxation and the unresolved bound 313
-
-This section separates proved consequences of real geometry from the unresolved
-integer optimization problem. The state indices are those of the fixed residual
-catalog in Section F; they are not coordinates of points. Every assertion about
-an actual residual configuration assumes all three residual restrictions from
-Section F: no six-cap, no convex octagon and no six-cup/five-cap junction.
-
-### R.1. The frozen 2,469-row system
-
-Let $`U=\{0,\ldots,153\}`$. For $`r\in\{0,\ldots,2468\}`$ let $`(S_r,d_r)`$ be
-the exact support and demand given by `OmissionResidual32Contexts.support`
-and `demand` in
-[Catalog.lean](experiments/omission-residual32-context-certificates-2026-10-10/Residual32ContextsProof/Catalog.lean).
-For $`h:U\to\{0,1\}`$ define
+The proof uses the triangle order's chain/antichain dichotomy within each
+region. Consecutive large chains yield supported cap growth and adjacent
+gluing; separated large antichains yield compatible caps with convex union.
+Extraction by finite counting, followed by a coordinate change, proves
 
 ```math
- \mathcal A_{2469}(h)\quad\Longleftrightarrow\quad
- \forall r\lt 2469,\qquad d_r\le\sum_{i\in S_r}h_i.
- \qquad\text{(R1)}
+\mathsf F\bigl(2^{n+K+Hb+64(k+5)},n\bigr)                 \qquad\text{(4.2)}
 ```
 
-In Lean, $`h`$ is a natural-valued function together with the explicit premises
-$`h_i\le1`$; this is equivalent to the displayed Boolean-valued convention.
-The first 1,187 rows are the original residual geometric rows. They are followed
-by 1,108 rounded consequences, 162 additional geometric rows and 12 further
-rounded consequences. All row indices in this section are zero-based.
+under the integer hypotheses of (4.1) and $`n+b\le2^H`$. The extraction loss
+$`64(k+5)`$ is a proved replacement estimate, not the paper's literal
+intermediate constant.
 
-**Proposition R.1 (geometric necessity).** For every residual configuration
-$`c`$ on $`n`$ points, let $`O(c)\subseteq U`$ be its occupied states and set
-$`h_i=1`$ if $`i\notin O(c)`$, and $`h_i=0`$ otherwise. Then
+Taking $`K=b=a^2`$, $`r=t=a`$, $`k=a(a+1)`$ gives
 
 ```math
- \mathcal A_{2469}(h),\qquad \sum_{i\in U}h_i+n=154.
- \qquad\text{(R2)}
+\begin{aligned}
+D_S(n,a)&=n+a^2+a^2\lceil\log(n+a^2)\rceil+64(a(a+1)+5),\\
+n\ge4,\ a\ge2,\ n\le a^3&\quad\Longrightarrow\quad
+\mathsf F(2^{D_S(n,a)},n).                               \qquad\text{(4.3)}
+\end{aligned}
 ```
 
-This is `OmissionResidual32Transfer.all_rows` and `feasible_holes` in
-[Transfer.lean](experiments/omission-residual32-transfer-2026-10-10/Transfer.lean).
-The proof uses one common $`O(c)`$ for every family. Literal equalities identify
-the row supports and demands with the geometric and rounded-cut theorems;
-injectivity of the state assignment gives $`\vert O(c)\vert =n`$, hence the second equality.
-The converse to (R2) is not a theorem: a feasible $`h`$ need not be realized by
-points in the plane.
+For $`n\ge4`$, $`x=n^{1/3}\ge4`$ and $`\log n\ge100`$, set
+$`a=\lceil x\rceil`$, $`H=\lceil\log(n+a^2)\rceil`$. Then
+$`n\le a^3`$, $`a^2\le2x^2`$, $`a^2\le n`$, $`H\le\log n+2`$ and
+$`a(a+1)+5\le3a^2`$. Consequently
 
-### R.2. A proved obstruction to this relaxation
+```math
+D_S(n,a)-n\le(H+193)a^2
+ \le2(\log n+195)x^2\le6n^{2/3}\log n.
+```
+
+The integer $`2^{D_S(n,a)}`$ lies below the natural floor in Theorem 1.1(1).
+The sufficient hypotheses hold eventually, proving Suk's bound.
+
+| Step | Declarations (prefix `ErdosSzekeres.Suk`) |
+| --- | --- |
+| Frames and support theorem | `CapFrame`, `CapFrame.spike` in [SpikeGeometry](ErdosSzekeres/Suk/SpikeGeometry.lean); `ClockwiseAnchors.finite_support_bound` in [FiniteSupport](ErdosSzekeres/Suk/FiniteSupport.lean) |
+| Extraction and integer parameters | `finite_density_bound` in [FiniteBound](ErdosSzekeres/Suk/FiniteBound.lean), `finite_exponential_bound` in [ExponentialBound](ErdosSzekeres/Suk/ExponentialBound.lean), `finite_logarithmic_bound`, `cubic_log_bound` in [IntegerParameters](ErdosSzekeres/Suk/IntegerParameters.lean) |
+| Exponent comparison and eventual conclusion | `integer_parameters_fit_exponent`, `coefficient_six_bound`, `theorem2016` in [Asymptotic](ErdosSzekeres/Suk/Asymptotic.lean) |
+
+### 4.2. HMPT's two-scale count
+
+Let $`P`$ be a finite set in general position, let $`c_j(P)`$ count its convex
+$`j`$-subsets, and let $`N=\vert P\vert`$.
+If $`j\le M\le N`$ and $`\mathsf F(M,j)`$, double counting gives
+
+```math
+\binom Nj\le c_j(P)\binom Mj.                            \qquad\text{(4.4)}
+```
 
 Define
 
 ```math
 \begin{aligned}
- M_{\ast} = \{&7,12,33,39,44,47,50,51,52,54,55,56,69,71,73,75,\\
-          &76,77,78,90,97,99,101,109,115,117,118,119,124,127,132,133\}.
+B(r,n)&=2^{(r+1)(n-1)+2r}
+ \binom{2(n-1)+r+r(n-2)}{2(n-1)+r},\\
+\Pi(m,n)&=B(m-3,n)B(2m-3,n).
 \end{aligned}
 ```
 
-Let $`h_i^{\ast}=\mathbf1_{M_{\ast}}(i)`$.
-
-**Proposition R.2 (exact finite witness).** The function $`h^{\ast}`$ satisfies
-
-```math
- \mathcal A_{2469}(h^{\ast}),\qquad \sum_i h_i^{\ast}=32,\qquad
- h_{54}^{\ast}=1,\quad h_{43}^{\ast}=h_{67}^{\ast}=h_0^{\ast}=0.
- \qquad\text{(R3)}
-```
-
-In particular the universally quantified implication from (R1) and the four
-displayed branch conditions to $`\sum_i h_i\ge33`$ is false.
-
-**Proof.** The literal set has 32 distinct members. For each of the 2,469
-literal rows, finite computation proves $`d_r\le\vert S_r\cap M_{\ast}\vert `$.
-For every $`S\subseteq U`$, $`\sum_{i\in S}\mathbf1_{M_{\ast}}(i)=\vert S\cap M_{\ast}\vert `$;
-this converts the cardinality checks into (R3). Substitution of $`h^{\ast}`$ in
-the proposed universal implication would give $`33\le32`$. These are ordinary
-kernel-checked proofs (`decide +kernel` for the finite computations).
-The declarations `missing_card`, `all_rows`, `sum_holes`,
-`allows_thirty_two_holes` and `no_universal_thirty_three_hole_bound`, all in
-namespace `OmissionResidual32Case4`, appear in
-[Witness.lean](experiments/omission-residual32-case4-2026-10-10/Witness.lean).
-This is a counterexample to a finite implication, not a planar counterexample.
-
-### R.3. A further necessary geometric inequality
-
-Let
+Attained chain and antichain maxima bound products of support-region sizes;
+adjacent-cap and separated even/odd-cap budgets control their parameters.
+The expression $`B`$ retains endpoint and small-capacity padding terms.
+For $`n\ge4`$, an $`n`$-gon-free general-position set with distinct abscissae
+satisfies the convex-fan ratio
 
 ```math
- S_{\ast} = \{25,43,53,65,74,85,89,91,96,107,110,111,125\}.
+c_{2(r+3)+1}(P)\le c_{r+4}(P)N^3B(r,n).
 ```
 
-**Theorem R.3 (the Sixth obstruction).** Every actual residual configuration
-$`c`$ satisfies
+The fan construction uses a projective chart and proved transfer back to the
+original points. Applying the ratio at $`r=m-3`$ and $`r=2m-3`$ gives, for
+$`m\ge3`$,
 
 ```math
- |S_{\ast}\setminus O(c)|\ge1.
- \qquad\text{(R4)}
+c_{4m+1}(P)\le c_{m+1}(P)N^6\Pi(m,n).                    \qquad\text{(4.5)}
 ```
 
-This is `ErdosSzekeres.Omission.CoupledCoreSixth.hole_bound` in
-[Geometry.lean](experiments/omission-residual32-witness-coupled-2026-10-10/Geometry.lean).
+Combine $`c_{m+1}(P)\le N^{m+1}`$ with (4.4). For
+$`m\ge3`$, $`n\ge4`$, $`4m+1\le M\le N`$,
 
-**Proof and exact certificate semantics.** Suppose all 13 states are occupied.
-Enumerate them in the displayed increasing order by $`s:\{0,\ldots,12\}\to U`$.
-Choose owners $`v_j\in\{0,\ldots,n-1\}`$ with residual state $`s(j)`$.
-The $`v_j`$ are distinct because the $`s(j)`$ are distinct. Write $`p_j=c(v_j)`$.
-All owners belong to the same configuration; neither their relative order nor
-their pair ranks may be chosen independently in different clauses.
+```math
+\mathsf F(M,4m+1),\qquad
+N^{m+7}\Pi(m,n)\binom M{4m+1}\lt\binom N{4m+1}
+\quad\Longrightarrow\quad\mathsf F(N,n).                 \qquad\text{(4.6)}
+```
 
-The structure `Coupled.Context 13 n s` records exactly these owners, their
-states, the residual restrictions and the nonzero orientations of distinct
-triples. For a pair of distinct owners, let $`(a_{ij},b_{ij})`$ be its actual
-residual label with the earlier owner placed first. The proved bounds are
-$`1\le a_{ij}\le4`$ and $`1\le b_{ij}\le6`$.
-The atom interpretation in
-[CoupledSemantics.lean](ErdosSzekeres/Omission/CoupledSemantics.lean) is:
+A linear coordinate change removes the distinct-abscissa hypothesis from
+this conclusion. The support-path and two-step counting arguments replace
+some cyclic intermediates in the paper; the [paper map](docs/PAPER_MAP.md)
+records the correspondence.
 
-| Lean atom | Mathematical proposition |
+### 4.3. Entropy, rounding and the leading coefficient
+
+The elementary estimate $`\binom NA\le(4R)^A`$ for $`N\le RA`$ yields
+
+```math
+\Pi(m,n)\le2^{3mn+6m+(4n+3m)\lceil\log(8m)\rceil}
+\qquad(m\ge3).
+```
+
+The exact real-exponent interface assumes $`m,n,d\in\mathbb N`$,
+$`X\in\mathbb R`$, and
+
+```math
+\begin{gathered}
+m\ge3,\quad n\ge4,\quad \mathsf F(2^d,4m+1),\quad 4m+1\le2^d,\\
+d+1\le X,\qquad 2(4m+1)+1\le X,\\
+(d+1)(4m+1)+3mn+6m+(4n+3m)(\log m+4)
+ \lt(3m-6)(X-1).                                        \qquad\text{(4.7)}
+\end{gathered}
+```
+
+It concludes $`\mathsf F(\lfloor2^X\rfloor_{\mathbb N},n)`$. The unit loss
+comes from $`E=\lfloor X\rfloor_{\mathbb N}\ge X-1`$, so rounding is explicit.
+
+For a fixed $`c>0`$, put
+
+```math
+\begin{gathered}
+L_n=\log n,\quad S_n=\sqrt{nL_n},\quad m_n=\lceil cS_n\rceil_{\mathbb N},\\
+d_n=\left\lceil(4m_n+1)+6(4m_n+1)^{2/3}\log(4m_n+1)\right\rceil_{\mathbb N}.
+\end{gathered}
+```
+
+Suk's theorem supplies $`\mathsf F(2^{d_n},4m_n+1)`$ eventually. The proved
+limits are
+
+```math
+\frac{m_n}{S_n}\to c,\qquad \frac{d_n}{S_n}\to4c,\qquad
+\frac{\log m_n}{L_n}\to\frac12,\qquad \frac{m_n}{n},\frac{d_n}{n}\to0.
+```
+
+At $`X_n=n+CS_n`$, define the exact slack
+
+```math
+\Delta_n=(3m_n-6)(n+CS_n-1)
+-\bigl((d_n+1)(4m_n+1)+3m_nn+6m_n+(4n+3m_n)(\log m_n+4)\bigr).
+```
+
+Then
+
+```math
+\frac{\Delta_n}{n\log n}\longrightarrow3cC-16c^2-2.       \qquad\text{(4.8)}
+```
+
+A positive limit makes (4.7) hold eventually. Taking
+$`c=1/(2\sqrt2)`$ and $`C=8\sqrt2/3+\varepsilon`$ makes it
+$`3c\varepsilon>0`$, proving Theorem 1.1(2). The identity
+
+```math
+3cC-16c^2-2=3c(C-8\sqrt2/3)-(4c-\sqrt2)^2
+```
+
+shows that positive limiting slack for some $`c>0`$ is possible exactly when
+$`C>8\sqrt2/3`$. This is a barrier for this particular budget, not a lower
+bound on Erdős–Szekeres numbers.
+
+| Step | Lean correspondence |
+| --- | --- |
+| Convex-subset density | `ErdosSzekeres.Suk.convex_subsets_density` in [ExtractionCounting](ErdosSzekeres/Suk/ExtractionCounting.lean) |
+| Product and fan estimates | `support_product_bound` in [RegionProduct](ErdosSzekeres/HMPT/RegionProduct.lean), `convex_family_ratio_bound` in [FanCounting](ErdosSzekeres/HMPT/FanCounting.lean); geometry in [ProjectedCaps](ErdosSzekeres/HMPT/ProjectedCaps.lean) and [ConvexFan](ErdosSzekeres/HMPT/ConvexFan.lean) |
+| Two scales | `convex_two_scale_ratio_bound`, `two_scale_bound` in [TwoScale](ErdosSzekeres/HMPT/TwoScale.lean) |
+| Entropy and floor interface | `twoScaleProduct_le_common_entropy`, `real_entropy_two_scale_bound` in [Entropy](ErdosSzekeres/HMPT/Entropy.lean) |
+| Rounded input and limits | `asymptoticScale`, `roundedScale`, `scaleInputExponent` and their limits in [AsymptoticInput](ErdosSzekeres/HMPT/AsymptoticInput.lean), [ScaleLimits](ErdosSzekeres/HMPT/ScaleLimits.lean) |
+| Slack and conclusion | `budgetRatio_identity`, `normalizedBudget_tendsto`, `eventual_bound_of_positive_slack`, `theorem2020` in [Asymptotic](ErdosSzekeres/HMPT/Asymptotic.lean) |
+| Fixed-scale barrier | `leading_slack_identity`, `positive_leading_slack_iff` in [ParameterBarrier](ErdosSzekeres/HMPT/ParameterBarrier.lean) |
+
+Except in the first row, declaration names have prefix `ErdosSzekeres.HMPT`.
+
+### 4.4. Finite binomial and factorial refinements
+
+Retaining $`c_{m+1}(P)\le\binom N{m+1}`$ improves (4.6) by replacing
+$`N^{m+7}\Pi`$ with $`T_{\mathrm{bin}}=\binom N{m+1}N^6\Pi`$, under the same
+hypotheses. This expression is no larger, and strictly smaller for $`N>0`$,
+$`m\ge1`$.
+
+For a closed integer bound, set
+
+```math
+K=4m+1,\quad D=3m-6,\quad V=\lceil\log\Pi(m,n)\rceil,
+\quad A=(d+1)K+V,\quad F=\lfloor\log((m+1)!)\rfloor,
+```
+
+```math
+E_0=\max\left\{d,2K,\left\lfloor A/D\right\rfloor+1\right\},\qquad
+E_!=\max\left\{d,2K,\left\lfloor\max(A-F,0)/D\right\rfloor+1\right\}.
+```
+
+For $`m\ge3`$, $`n\ge4`$, $`K\le2^d`$ and $`\mathsf F(2^d,K)`$,
+
+```math
+\mathsf F(2^{E_!},n),\qquad E_!\le E_0.                  \qquad\text{(4.9)}
+```
+
+The credit comes from $`(m+1)!\binom N{m+1}\le N^{m+1}`$. More generally,
+for nonnegative integers $`E,V`$ with $`\Pi(m,n)\le2^V`$, the same input hypotheses and
+
+```math
+d\le E,\quad 2K\le E,\quad (d+1)K+V\lt DE+\lfloor\log((m+1)!)\rfloor
+```
+
+imply $`\mathsf F(2^E,n)`$. Multiply the counting inequality by the factorial,
+compare powers using $`2^F\le(m+1)!`$, and cancel that positive factor.
+Integer division applied to $`\max(A-F,0)`$ proves (4.9).
+
+Moreover, $`2^{3m-6}\le(m+1)!`$ for $`m\ge3`$, so $`F\ge D`$; also
+$`d\lt E_0`$. If $`2K\lt E_0`$, the counting term determines $`E_0`$, giving
+$`E_!\lt E_0`$ and hence $`\mathsf F(2^{E_0-1},n)`$. Finally the input
+$`d=D_S(4m+1,a)`$ is discharged by (4.3) whenever $`a\ge2`$ and
+$`4m+1\le a^3`$.
+
+These results are `two_scale_binomial_bound`,
+`integer_two_scale_factorial_bound`, `twoScaleFactorialExponent_le`,
+`two_scale_factorial_exponential_bound`, `suk_two_scale_factorial_bound` in
+[BinomialRefinement](ErdosSzekeres/HMPT/BinomialRefinement.lean), and
+`integer_two_scale_bound_one_bit_smaller` in
+[FactorialSaving](ErdosSzekeres/HMPT/FactorialSaving.lean), all under prefix
+`ErdosSzekeres.HMPT`. They improve finite interfaces in this development; they do
+not improve HMPT's asymptotic coefficient or establish literature priority.
+
+## 5. Stronger residual inequalities
+
+### 5.1. The Boolean relaxation and an exact countermodel
+
+Fix the residual universe $`U=\{0,\ldots,153\}`$. For a literal catalog of
+$`q`$ rows, write
+
+```math
+\mathcal A_q(h)\quad\Longleftrightarrow\quad
+\forall r\lt q,\quad d_r\le\sum_{i\in S_r}h_i,
+\qquad h:U\to\{0,1\}.                                  \qquad\text{(5.1)}
+```
+
+The 2,469-row catalog extends the residual system of §3 by additional
+geometric rows and rounded cuts. Its exact supports and demands are
+`OmissionResidual32Contexts.support` and `demand` in
+[Catalog](experiments/omission-residual32-context-certificates-2026-10-10/Residual32ContextsProof/Catalog.lean).
+`OmissionResidual32Transfer.all_rows` and `feasible_holes` in
+[Transfer](experiments/omission-residual32-transfer-2026-10-10/Transfer.lean)
+prove, for every actual residual configuration,
+
+```math
+\mathcal A_{2469}(h),\qquad \sum_i h_i+n=154,
+\qquad h=\mathbf1_{U\setminus O(c)}.                     \qquad\text{(5.2)}
+```
+
+The implication $`\mathcal A_{2469}(h)\Rightarrow\sum h_i\ge33`$ is false.
+An exact countermodel has missing set
+
+```math
+\begin{aligned}
+M_* =\{&7,12,33,39,44,47,50,51,52,54,55,56,69,71,73,75,\\
+       &76,77,78,90,97,99,101,109,115,117,118,119,124,127,132,133\}.
+\end{aligned}
+```
+
+It has 32 elements, satisfies every old row, and has
+$`h_{54}=1`$, $`h_{43}=h_{67}=h_0=0`$. The kernel checks each integer
+intersection count; indicator sums equal those counts. These are
+`OmissionResidual32Case4.missing_card`, `all_rows`, `sum_holes`,
+`allows_thirty_two_holes`, `no_universal_thirty_three_hole_bound` in
+[Witness](experiments/omission-residual32-case4-2026-10-10/Witness.lean).
+This is a countermodel to a finite relaxation, not a configuration of points.
+
+### 5.2. Coupled geometric obstructions
+
+For occupied distinct states $`s_i`$, choose their distinct actual owners $`v_i`$
+in one residual configuration. A `Coupled.Context` retains these owners,
+their states and geometric hypotheses. The semantics uses the following atoms:
+
+| Atom | Interpretation |
 | --- | --- |
 | `falsum` | $`\bot`$ |
-| `before i j` | $`v_i<v_j`$ |
-| `capGe i j t` | $`t\le a_{ij}`$ |
-| `cupGe i j t` | $`t\le b_{ij}`$ |
-| `positive i j k` | $`\det(p_j-p_i,p_k-p_i)>0`$ |
-| `convex i j k l` | $`\{p_i,p_j,p_k,p_l\}`$ is in convex position |
+| `before i j` | $`v_i\lt v_j`$ |
+| `capGe i j t`, `cupGe i j t` | $`t\le a_{ij}`$, $`t\le b_{ij}`$ for the actual pair label, with its earlier owner first |
+| `positive i j k` | $`[p_{v_i},p_{v_j},p_{v_k}]>0`$ |
+| `convex i j k l` | The four owners are in convex position |
 
-Positive literals assert the corresponding proposition; negative literals
-assert its negation. A clause is their disjunction, and the formula is the
-conjunction of its clauses. The ordered list `CoupledCoreSixth.atoms` fixes
-the correspondence between numerical variable identifiers and these
-propositions. Thus the numerical formula is completely specified by that list
-and [core13.cnf](experiments/omission-residual32-witness-coupled-2026-10-10/core13.cnf).
+Positive and negative literals assert these propositions and their negations.
+Each initial clause is proved from order, admissible domains, rank growth,
+orientation or octagon avoidance. A checked RUP derivation proves the clauses
+inconsistent: each added clause follows by unit propagation after negating
+it, and the derivation ends with the empty clause. The interpretation in
+[CoupledSemantics](ErdosSzekeres/Omission/CoupledSemantics.lean) ensures that
+owners and pair labels cannot vary independently between clauses. Lean checks
+the resulting proof terms.
 
-For every such context, the private lemmas `sound000` through `sound375` in
-[LeanCore.lean](experiments/omission-residual32-witness-coupled-2026-10-10/LeanCore.lean)
-prove all 376 clauses, using actual order, rank growth, domain restrictions,
-orientation implications and convex-octagon exclusion. `formula_eq` identifies
-these clauses with the refuted formula. The retained formula has 337 variables;
-[core13.lrat](experiments/omission-residual32-witness-coupled-2026-10-10/core13.lrat)
-contains 258 clause additions. Each retained RUP step is justified by unit
-propagation after negating its proposed clause, using the indicated earlier
-clauses. The checked derivation ends in the empty clause. Mathlib's LRAT
-proof-term generator supplies a proof checked by the Lean kernel; the solver
-output is not an additional axiom.
-
-`CoupledCoreSixth.context_impossible` applies that refutation to the valuation
-defined above. This contradicts the supposed simultaneous occupation and
-proves `exists_missing_state`; its cardinality form is (R4). This proof is
-finite but does not enumerate real coordinates. Its validity depends on the
-proved geometric interpretation of every clause.
-
-**Corollary R.4 (strict strengthening and nonrealizability).** The row (R4)
-does not follow from (R1), even after restricting to the 32-hole witness with
-state zero occupied. Moreover no actual residual configuration has occupied
-set $`U\setminus M_{\ast}`$.
-
-**Proof.** Direct finite checking gives $`S_{\ast}\cap M_{\ast}=\varnothing`$. Hence
-$`h^{\ast}`$ satisfies every old inequality and violates (R4). If
-$`O(c)=U\setminus M_{\ast}`$, then
-$`S_{\ast}\setminus O(c)=S_{\ast}\cap M_{\ast} =\varnothing`$, contradicting Theorem R.3.
-These are `CoupledCoreSixth.strict_strengthening` and
-`countermodel_not_realizable` in the same geometry module. The last statement
-excludes this exact occupied set; it does not exclude all 32-hole assignments.
-
-### R.4. Template transport and the 2,598-row system
-
-The Fourth obstruction has a state-parametric form. A map
-$`\sigma:\{0,\ldots,12\}\to U`$ is called compatible here precisely when it
-satisfies `CoupledTemplateFourth.Compatible` in
-[CoupledTemplateFourth.lean](ErdosSzekeres/Omission/CoupledTemplateFourth.lean).
-This is a finite conjunction: the ordered pairs in `emptyTests` have the
-specified empty directed domains, the labels listed in `domainTests` are
-disallowed, and the ordered triples in `positiveTests` pass the proved
-orientation test. These three literal lists are part of the definition;
-compatibility does not mean merely that the support has 13 elements.
-More explicitly, within $`\{1,\ldots,4\}\times\{1,\ldots,6\}`$, the directed
-domain is
+For example, let
 
 ```math
- D_\sigma(i,j)=\bigl(I(\sigma(j))\setminus I(\sigma(i))\bigr)
-                 \setminus\{(1,6)\}.
+S_* =\{25,43,53,65,74,85,89,91,96,107,110,111,125\}.
 ```
 
-Here $`I(s)`$ denotes the positive cells of the catalog profile $`s`$.
-`emptyTests` requires the indicated domain to be empty, and `domainTests`
-requires the indicated label to lie outside it. Removing $`(1,6)`$ uses the
-proved forbidden-label statement from Section F.1; this is exactly
-`Coupled.Allowed`, not the unmodified Ferrers difference.
+**Proposition 5.1 (Sixth obstruction).** Every residual configuration satisfies
+$`\vert S_*\setminus O(c)\vert\ge1`$.
 
-**Proposition R.5 (template transport).** If $`\sigma`$ is injective and
-compatible, then every actual residual configuration satisfies
+*Proof.* Simultaneous occupation would supply a context satisfying the refuted
+formula. Thus some state is missing. ∎
+
+The declarations are `CoupledCoreSixth.context_impossible` in
+[LeanCore](experiments/omission-residual32-witness-coupled-2026-10-10/LeanCore.lean)
+and `exists_missing_state`, `hole_bound` in
+[Geometry](experiments/omission-residual32-witness-coupled-2026-10-10/Geometry.lean),
+with prefix `ErdosSzekeres.Omission`. Since $`S_*\cap M_*=\varnothing`$, this
+row strictly strengthens the old conjunction and proves that the exact
+occupied set $`U\setminus M_*`$ is not realizable (`strict_strengthening`,
+`countermodel_not_realizable`).
+
+### 5.3. Transporting obstructions
+
+For an injection $`\sigma:\{0,\ldots,12\}\to U`$, define
 
 ```math
- |\sigma(\{0,\ldots,12\})\setminus O(c)|\ge1.
- \qquad\text{(R5)}
+D_\sigma(i,j)=\bigl(I(\sigma(j))\setminus I(\sigma(i))\bigr)
+ \setminus\{(1,6)\}.
 ```
+
+Here $`I(s)`$ means the positive cells of profile $`s`$. A template's
+**compatibility** predicate consists of specified empty-domain tests,
+excluded-label tests and positive-orientation tests. These are exact finite
+lists, not merely a condition on the cardinality of the image.
+
+The Fourth template uses the lists `emptyTests`, `domainTests`, `positiveTests`
+in [CoupledTemplateFourth](ErdosSzekeres/Omission/CoupledTemplateFourth.lean).
+The relaxed Sixth template uses
+
+```math
+E=\{(1,0),(10,6),(12,10),(12,11)\},\qquad
+D=\{(10,11,a,b):a\in\{2,3\},\ b\in\{4,5,6\}\},
+```
+
+and the exact 31-triple list `positiveTests` in
+[SixthRelaxedTemplate](experiments/omission-residual32-sixth-relaxed-2026-10-10/SixthRelaxedTemplate.lean).
+Writing that list as $`Q`$ and the six-order sign check of §2.3 as $`P`$,
+compatibility means
+
+```math
+(i,j)\in E\Rightarrow D_\sigma(i,j)=\varnothing,\quad
+(i,j,a,b)\in D\Rightarrow(a,b)\notin D_\sigma(i,j),\quad
+(i,j,k)\in Q\Rightarrow P(\sigma(i),\sigma(j),\sigma(k)).
+```
+
+**Proposition 5.2 (transport).** For either template, every injective compatible
+map satisfies $`\vert\operatorname{image}(\sigma)\setminus O(c)\vert\ge1`$.
+
+*Proof.* Choose distinct owners if the image is occupied. Compatibility
+justifies every state-dependent clause of the template refutation; the
+remaining clauses hold for all actual contexts. The refutation contradicts
+simultaneous occupation. ∎
 
 This is `CoupledTemplateFourth.hole_bound` in
-[CoupledTemplateFourthGeometry.lean](ErdosSzekeres/Omission/CoupledTemplateFourthGeometry.lean).
-The proof again selects distinct owners. Compatibility justifies the
-state-dependent premises in the frozen Fourth refutation; its other clauses
-are valid for every actual context. That refutation contradicts occupation
-of all owners.
+[CoupledTemplateFourthGeometry](ErdosSzekeres/Omission/CoupledTemplateFourthGeometry.lean),
+and `CoupledTemplateSixthRelaxed.context_impossible`, `hole_bound` in the
+[relaxed template](experiments/omission-residual32-sixth-relaxed-2026-10-10/SixthRelaxedTemplate.lean)
+and its [geometry module](experiments/omission-residual32-sixth-relaxed-2026-10-10/SixthRelaxedTemplateGeometry.lean),
+all under `ErdosSzekeres.Omission`.
 
-The literal family `CoupledFourthGlobalVariants.maps` contains 128 maps.
-`checked` proves injectivity and compatibility for each, and `all_rows` applies
-(R5) to each support; see
-[Data.lean](experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Data.lean)
-and [Root.lean](experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Root.lean).
-This finite family is not asserted to enumerate all compatible maps.
+The checked catalogs append the Sixth support and 128 Fourth images to obtain
+$`\mathcal A_{2598}`$, then 48 relaxed Sixth images to obtain
+$`\mathcal A_{2646}`$. Their `checked` theorems establish injectivity and
+compatibility, and `all_rows` proves necessity for the same $`O(c)`$:
 
-Define 129 added supports $`T_0,\ldots,T_{128}`$ by taking $`T_0=S_{\ast}`$ and
-$`T_{j+1}`$ equal to the support of the $`j`$-th Fourth map. The theorem
-`Residual32AddedRows.literal_binding` identifies that family with the exact
-ordered literal array used in the search. Its `all_rows` theorem proves
+| Family | Literal maps and geometric correspondence |
+| --- | --- |
+| Fourth images | `CoupledFourthGlobalVariants.maps`, `checked`, `all_rows` in [FourthGlobalProof](experiments/omission-residual32-fourth-global-variants-2026-10-10/README.md) |
+| Ordered first 129 additions | `Residual32AddedRows.literal_binding`, `all_rows` in [AddedRows](experiments/omission-residual32-added-rows-2026-10-10/AddedRows.lean) |
+| Relaxed Sixth images | `CoupledSixthRelaxedVariants.maps`, `checked`, `all_rows` in [SixthRelaxedProof](experiments/omission-residual32-sixth-relaxed-2026-10-10/README.md) |
 
-```math
- \forall j\lt 129,\qquad \sum_{i\in T_j}h_i\ge1
- \quad\text{for }h_i=\mathbf1_{U\setminus O(c)}(i).
- \qquad\text{(R6)}
-```
+The Fourth family is not claimed exhaustive. Each of the 48 later supports
+passes a finite test for nonimplication by any single previous row; this
+observation alone is not used as a budget-constrained independence result.
 
-Both are in namespace `ErdosSzekeres.Omission`, in
-[AddedRows.lean](experiments/omission-residual32-added-rows-2026-10-10/AddedRows.lean).
-Together, (R1) and (R6) define $`\mathcal A_{2598}`$: the unchanged old 2,469
-rows followed by these 129 rows. The archived JSON's ordered correspondence
-is separately checked against these Lean literals; it is not silently assumed
-from matching family names.
+## 6. Rank attainment, further rows and the remaining problem
 
-### R.5. A relaxed Sixth obstruction and 48 further rows
+### 6.1. A bound from the source profile
 
-Retain the universe $`U`$, the directed domains $`D_\sigma`$, and the
-positive-orientation test of Section F.2. Write $`P(A,B,C)`$ for the finite
-predicate `CycleSigns.CheckTriple ResidualDomains.computedTable A B C = true`.
-Its geometric soundness was established in that section; it tests all six
-possible chronological orders, without assuming that catalog indices are
-chronological indices.
+Let
+$`H_u=\max(\{0\}\cup\{d_R(t,u)_2:t\lt u\})`$.
+If there is no six-cap, the first label coordinate is positive, so this
+is exactly the first column height of the incoming state.
 
-For an injection $`\sigma:\{0,\ldots,12\}\to U`$, define the following
-three finite sets of tests:
+**Lemma 6.1 (source cup bound).** For $`u\lt v\lt n`$,
 
 ```math
- E=\{(1,0),(10,6),(12,10),(12,11)\},
- \qquad
- D=\{(10,11,a,b):a\in\{2,3\},\ b\in\{4,5,6\}\}.
+d_R(u,v)_2\le H_u+1.                                    \qquad\text{(6.1)}
 ```
+
+*Proof.* Let $`r=E_+(u,v)`$, attained by an ending cup. A two-point path gives
+$`d_R(u,v)_2=1`$. Otherwise its prefix ends with some $`(t,u)`$ and has length
+$`r-1`$. Hence $`H_u\ge E_+(t,u)-1\ge r-2`$, proving the inequality. ∎
+
+This raw result needs neither eight-cup nor junction avoidance; it also holds
+for arbitrary Boolean triple colorings when paths check consecutive triples.
+Geometric transitivity is only needed to identify those paths with cups.
+For an actual residual owner state $`s_u`$, its first height equals $`H_u`$.
+Thus an ordered pair of owners $`i,j`$ satisfies the clause
 
 ```math
-\begin{aligned}
- Q=\{& (0,1,2),(0,1,7),(0,11,7),(1,2,3),(1,2,7),\\
-     & (1,11,7),(1,12,11),(2,3,6),(2,3,7),(2,4,5),\\
-     & (2,4,10),(2,11,7),(3,6,7),(3,6,10),(3,11,7),\\
-     & (4,5,8),(4,5,10),(4,12,10),(5,8,9),(5,8,10),\\
-     & (5,12,10),(6,10,7),(6,11,7),(6,12,10),(7,10,11),\\
-     & (8,9,10),(8,9,12),(8,12,10),(9,12,10),(9,12,11),(10,12,11)\}.
-\end{aligned}
+\neg\mathrm{before}(i,j)\ \lor\
+\neg\mathrm{cupGe}(i,j,s_i(0)+2).
 ```
 
-Call $`\sigma`$ Sixth-compatible if
+The order is chronological, not catalog order. The exact declarations are
+`ResidualRankAttainment.cup_label_le_source_height_succ`,
+`cup_label_le_source_shape_succ` and
+`Configuration.residual_cup_label_le_source_shape_succ` in
+[RankAttainment](experiments/omission-residual-rank-attainment-2026-10-10/RankAttainment.lean),
+and `Coupled.Context.edge_cup_le_source_shape_succ`, `source_cup_clause`,
+`source_cup_domain_clause` in
+[CoupledDomain](experiments/omission-residual-rank-attainment-2026-10-10/CoupledDomain.lean),
+all under prefix `ErdosSzekeres.Omission`. The last theorem excludes any label
+$`(a,b)`$ with $`s_i(0)+1\lt b`$ in that direction.
 
-```math
-\begin{aligned}
- &(i,j)\in E \Longrightarrow D_\sigma(i,j)=\varnothing,\\
- &(i,j,a,b)\in D \Longrightarrow (a,b)\notin D_\sigma(i,j),\\
- &(i,j,k)\in Q \Longrightarrow P(\sigma(i),\sigma(j),\sigma(k)).
-\end{aligned}
-```
+### 6.2. Four additional omission rows
 
-This is exactly `CoupledTemplateSixthRelaxed.Compatible` in
-[SixthRelaxedTemplate.lean](experiments/omission-residual32-sixth-relaxed-2026-10-10/SixthRelaxedTemplate.lean):
-four empty-domain tests, six excluded-label tests, and 31 orientation tests.
-It is a different predicate from Fourth-compatibility in Proposition R.5.
-
-**Proposition R.6 (relaxed Sixth transport).** Every injective Sixth-compatible
-map satisfies
-
-```math
- |\sigma(\{0,\ldots,12\})\setminus O(c)|\ge1
- \qquad\text{(R7)}
-```
-
-for every residual configuration $`c`$ with no six-cap, no convex octagon,
-and no six-cup/five-cap junction.
-
-**Proof.** If every state in the image were occupied, select an owner for
-each. Injectivity of $`\sigma`$ makes the owners distinct, and general position
-makes every determinant on three owners nonzero. This constructs the
-`Coupled.Context 13 n σ` used by the clause interpretation of Section R.3.
-The 41 compatibility tests justify the retained state-dependent clauses;
-order, rank growth, orientation identities and octagon exclusion justify the
-other clauses. The exact resulting formula has 361 Boolean variables and
-1,029 clauses. Its retained 1,032-step RUP refutation ends in the empty clause.
-Lean checks both the interpretation and the refutation. Therefore not all
-13 states are occupied, giving (R7). ∎
-
-The correspondence is `CoupledCoreSixthRelaxed.cnf_refutation` in
-[SixthRelaxedCore.lean](experiments/omission-residual32-sixth-relaxed-2026-10-10/SixthRelaxedCore.lean),
-`CoupledTemplateSixthRelaxed.context_impossible` in the template module, and
-`exists_missing_index` and `hole_bound` in
-[SixthRelaxedTemplateGeometry.lean](experiments/omission-residual32-sixth-relaxed-2026-10-10/SixthRelaxedTemplateGeometry.lean).
-All namespaces have prefix `ErdosSzekeres.Omission`.
-
-Let $`\sigma_0,\ldots,\sigma_{47}`$ be the literal maps in
-[SixthRelaxedProof/Data.lean](experiments/omission-residual32-sixth-relaxed-2026-10-10/SixthRelaxedProof/Data.lean),
-in the order of `CoupledSixthRelaxedVariants.maps`, and put
-$`V_r=\sigma_r(\{0,\ldots,12\})`$. In
-[SixthRelaxedProof/Root.lean](experiments/omission-residual32-sixth-relaxed-2026-10-10/SixthRelaxedProof/Root.lean),
-`checked` proves injectivity and Sixth-compatibility for each map, and
-`all_rows` proves
-
-```math
- \forall r\lt 48,\qquad \sum_{i\in V_r}h_i\ge1
- \quad\text{for }h_i=\mathbf1_{U\setminus O(c)}(i).
- \qquad\text{(R8)}
-```
-
-Define $`\mathcal A_{2646}`$ to be $`\mathcal A_{2598}`$ followed by these
-48 rows, in that order. The independent checker binds the archived
-[2,646-row source](experiments/omission-residual32-sixth-relaxed-2026-10-10/source-2646.json.gz)
-to the unchanged 2,598-row prefix and the exact Lean maps. Its decompressed
-SHA-256 is `151ea1bfb175f6507d910521eb96961c82b54add2fb7e49e13b864b87241123e`.
-None of the 48 rows is implied by any single old row, as checked by the
-finite support/demand comparison. No assertion of independence from the
-conjunction of the old rows is made.
-
-### R.6. The precise remaining proposition
-
-Let $`\mathcal A_{2650}`$ be $`\mathcal A_{2646}`$ followed by the four
-proved rows of §R.8, in the stated order. The sufficient arithmetic statement
-for the present residual route is
-
-```math
- \forall h:U\to\{0,1\},\qquad
- \mathcal A_{2650}(h)\Longrightarrow\sum_{i\in U}h_i\ge33.
- \qquad\text{(OPEN)}
-```
-
-**(OPEN) is not proved in this repository.** If proved and bound to these
-exact literal rows, it would give $`n\le121`$ by (R2). The proved balanced
-bound $`190`$ and the proved projective/partition composition would then give
-$`\mathsf F(313,8)`$, because $`190+121+2=313`$. A statement restricted to
-$`h_0=0`$ would also suffice for nonempty residual configurations, using the
-separate proved occupation-of-zero lemma and treating the empty case directly.
-
-The earlier bounded searches recorded in the
-[2,598-row bundle](experiments/omission-residual32-2598-primal-2026-10-10/README.md)
-provide neither a feasible 32-hole assignment nor a complete exclusion. The
-best saved candidate violates old row 205, whose support is
-$`\{24,31,34,40,61,68,73,100\}`$ and whose demand is one. Timeouts and failed
-local repairs do not establish (OPEN). Subsequent bounded SAT and native
-pseudo-Boolean runs on the 2,646 rows also returned without a model or a
-complete refutation. Cases 2 and 7 of the earlier search
-remain partial; Proposition R.2 shows why closing those cases alone could
-not prove the old relaxation sufficient.
-
-There is no remaining unproved geometric premise in the completed 314 theorem.
-For the current 2,650-row route, the existing row families already have
-geometric necessity proofs. A successful continuation would still require a
-complete arithmetic certificate, kernel checking of it, literal catalog
-identification and final composition. A new feasible 32-hole assignment would
-instead require stronger geometry or another argument. No completion-time or
-certificate-size estimate is justified by the partial searches.
-
-### R.7. Attainment of the incoming cup rank
-
-The following result restricts the actual pair labels, beyond the omission
-inequalities in $`\mathcal A_{2646}`$. Let $`\mathrm{cup}`$ be any Boolean
-coloring of increasing triples of natural numbers, and suppose that its
-restriction to $`\{0,\ldots,n-1\}`$ contains no six-cap. For arbitrary colorings,
-paths here check each consecutive triple; geometric colorings have the
-transitivity described in Section F. Use that section's actual rank notation:
-
-```math
- d(u,v)=\bigl(6-F_-(u,v),\;E_+(u,v)-1\bigr),\qquad
- H_u=\max\bigl(\{0\}\cup\{d(t,u)_2:t\lt u\}\bigr).
-```
-
-Here subtraction is natural-number subtraction. The cap hypothesis gives
-$`d(t,u)_1\ge1`$ for $`t<u<n`$, so $`H_u`$ is exactly
-`ResidualStates.column n cup u 0`.
-
-**Proposition R.7 (source cup height).** For every $`u<v<n`$,
-
-```math
- d(u,v)_2\le H_u+1.\qquad\text{(R9)}
-```
-
-**Proof.** The longest ending-cup rank $`r=E_+(u,v)`$ is attained.
-If the attaining path is the two-point path, $`d(u,v)_2=1\le H_u+1`$.
-Otherwise it extends an ending cup of length $`r-1`$ on a pair $`(t,u)`$
-with $`t<u`$. Hence $`E_+(t,u)\ge r-1`$ and
-$`H_u\ge d(t,u)_2\ge r-2`$. This gives (R9).
-No eight-cup or junction hypothesis is used in this raw statement. The Lean
-declaration is `ResidualRankAttainment.cup_label_le_source_height_succ` in
-[RankAttainment.lean](experiments/omission-residual-rank-attainment-2026-10-10/RankAttainment.lean).
-
-Under the additional hypotheses of the residual owner map, let $`s_u\in U`$
-be the state of $`u`$, and let $`h_0(s_u)`$ denote the first height of its
-profile. The exact profile identification gives $`H_u=h_0(s_u)`$.
-`ResidualRankAttainment.cup_label_le_source_shape_succ` proves this form,
-and `Configuration.residual_cup_label_le_source_shape_succ` gives it for a
-real configuration with no six-cap, no convex octagon and no junction.
-
-For a coupled context $`C`$ with states $`s_i`$ and distinct indices $`i,j`$,
-put $`H_i=h_0(s_i)`$. Then
-
-```math
- C.\mathrm{owner}(i)\lt C.\mathrm{owner}(j)
- \quad\Longrightarrow\quad C.\mathrm{edge}(i,j)_2\le H_i+1.
- \qquad\text{(R10)}
-```
-
-This is `Coupled.Context.edge_cup_le_source_shape_succ` in
-[CoupledDomain.lean](experiments/omission-residual-rank-attainment-2026-10-10/CoupledDomain.lean).
-The equivalent two-literal clause
-
-```math
- \neg\mathrm{before}(i,j)\ \lor\
- \neg\mathrm{ge}_{\mathrm{cup}}(i,j,H_i+2)
-```
-
-is `Coupled.Context.source_cup_clause`. For any natural numbers $`a,b`$ with
-$`H_i+1<b`$, `Coupled.Context.source_cup_domain_clause` proves the existing
-five-literal `domainClause i j a b`: if $`i`$ precedes $`j`$, their edge label
-cannot equal $`(a,b)`$. These directions always refer to chronological owner
-order. They do not assume that catalog indices increase chronologically.
-All six declaration names have prefix `ErdosSzekeres.Omission`.
-
-An independent finite replay restricts the directed domains of Section F
-by $`b\le h_0(s_i)+1`$. Across all 23,562 distinct directed state pairs it
-removes 13,832 labels from 4,555 domains. There is no newly empty direction,
-new incompatible unordered pair, or changed bounding-box forced sign among
-the 596,904 unordered triples. Thus (R9) strengthens the semantics of shared
-edge labels, but these computations establish neither (OPEN) nor a numerical
-improvement. The 2,646-row catalog is unchanged by this separate theorem.
-
-### R.8. Four further geometric omission rows
-
-For the same catalog $`U=\{0,\ldots,153\}`$, define
+Define
 
 ```math
 \begin{aligned}
@@ -1714,183 +886,161 @@ W_4&=\{1,11,23,24,30,33,34,39,50,56,67,77\}.
 \end{aligned}
 ```
 
-**Proposition R.8.** For every actual residual configuration $`c`$ satisfying
-Definition F.4 and every $`t\in\{1,2,3,4\}`$,
+**Proposition 6.2.** Every actual residual configuration satisfies
+$`\vert W_t\setminus O(c)\vert\ge1`$ for $`1\le t\le4`$.
 
-```math
- W_t\not\subseteq O(c),\qquad
- \sum_{i\in W_t}\mathbf1_{U\setminus O(c)}(i)\ge1.
- \qquad\text{(R11)}
-```
+*Proof.* The owner interpretation of §5.2 satisfies each initial clause of
+the corresponding checked refutation. The second and fourth proofs also
+use source-cup clauses from Lemma 6.1. Simultaneous occupation is impossible. ∎
 
-*Proof.* If all listed states occurred, choose their distinct owners in the
-same configuration. The coupled semantic lemmas assign truth values to the
-literal CNF's order, pair-label, triple-orientation and four-point convexity
-variables. Every initial clause follows from the actual configuration's
-domain, growth, orientation-packet and octagon-avoidance properties. The
-second and fourth certificates also use sixteen and three clauses, respectively,
-furnished by (R10). Lean checks
-the complete literal refutations and obtains a contradiction. A missing
-state gives the cardinality inequality. ∎
+For each suffix `One`, `Two`, `Three`, `Four`, the namespace
+`ErdosSzekeres.Omission.CoupledCoreRankSearch` followed by that suffix contains
+`context_impossible` in `RankCore*.lean`, and `states_injective`,
+`exists_missing_state`, `hole_bound` in `RankGeometry*.lean`. These sources
+and complete refutations are in the [four-core bundle](experiments/omission-residual32-rank-certificates-2026-10-10/README.md).
 
-The following table identifies the exact declarations. Namespace prefixes
-are `ErdosSzekeres.Omission.CoupledCoreRankSearch`, followed by the word in
-the second column.
-
-| Support | Namespace suffix | Actual geometric theorem |
-| --- | --- | --- |
-| $`W_1`$ | `One` | `hole_bound` in [RankGeometryOne.lean](experiments/omission-residual32-rank-certificates-2026-10-10/RankGeometryOne.lean) |
-| $`W_2`$ | `Two` | `hole_bound` in [RankGeometryTwo.lean](experiments/omission-residual32-rank-certificates-2026-10-10/RankGeometryTwo.lean) |
-| $`W_3`$ | `Three` | `hole_bound` in [RankGeometryThree.lean](experiments/omission-residual32-rank-certificates-2026-10-10/RankGeometryThree.lean) |
-| $`W_4`$ | `Four` | `hole_bound` in [RankGeometryFour.lean](experiments/omission-residual32-rank-certificates-2026-10-10/RankGeometryFour.lean) |
-
-Each file also proves `states_injective` and `exists_missing_state`; the
-corresponding `RankCore*.lean` file proves `context_impossible`. The
-[certificate bundle](experiments/omission-residual32-rank-certificates-2026-10-10/README.md)
-contains all CNF, RUP, source and axiom-audit data.
-
+Append $`W_1,W_2,W_3,W_4`$ in this order to define $`\mathcal A_{2650}`$.
 The [finite catalog replay](experiments/omission-residual32-rank-global-2026-10-10/README.md)
-identifies $`\mathcal A_{2650}`$ as the unchanged 2,646-row prefix followed by
-(R11). Separately checked Boolean assignments with 33 holes satisfy the
-prefix and all earlier rows in (R11), while violating the next row. Thus each
-addition strictly strengthens the previous conjunction, even under
-$`h_0=0`$ and $`\sum h_i\le33`$. This finite countermodel check is performed
-with exact Python integers; it is separate from the Lean proofs of (R11).
-It does not establish independence under a 32-hole budget.
+checks the unchanged prefix and four additions. Exact Boolean assignments
+with 33 holes and $`h_0=0`$ satisfy each preceding conjunction but violate the
+next row. Thus these are strict strengthenings at budget 33. These arithmetic
+countermodel checks use exact Python integers and are distinct from the Lean
+geometric proofs. The rows also eliminate a saved component of 306
+single-swap-connected 33-hole assignments, not all such assignments.
 
-These four rows eliminate all 306 vertices of the saved single-swap component
-of feasible 33-hole assignments. That component does not enumerate all
-33-hole assignments. Neither this observation nor the bounded global search
-establishes (OPEN).
+### 6.3. Normalization of abstract cup labels
 
-### R.9. Normalizing abstract cup labels
+Lemma 6.1 narrows label domains, but the following theorem limits what that
+restriction alone can achieve. On a finite index set $`\{0,\ldots,k-1\}`$,
+fix profiles $`s_i`$, first heights $`H_i=s_i(0)`$,
+and assume $`s_i(a-1)\le H_i`$ for $`1\le a\le4`$. Fix an injective order
+$`p(i)`$, symmetric cap coordinates $`a_{ij}`$, triple signs and four-point
+convexity data; denote this collection by $`F`$.
 
-The source-height inequality (R9) reduces individual label domains. The
-following theorem shows why this alone cannot exclude further occupied
-supports in the fully specified abstract coupled model.
+A symmetric cup labeling $`b_{ij}`$ is **valid**, written $`V(s,F,b)`$, if
+$`1\le a_{ij}\le4`$, $`1\le b_{ij}\le6`$ for distinct indices, and:
 
-Fix $`k\ge0`$ profiles $`s_i`$, with $`H_i=s_i(0)`$, such that
-$`s_i(a-1)\le H_i`$ for $`1\le a\le4`$. The exact 154-state catalog has this
-property. Fix an injective order map $`p:\{0,\ldots,k-1\}\to\mathbb N`$,
-symmetric cap coordinates $`a_{ij}`$, triple signs, and four-point convexity
-data. Collect these unchanged data in $`F`$. A cup labeling $`b_{ij}`$ is
-**valid** when it is symmetric, the bounds $`1\le a_{ij}\le4`$ and
-$`1\le b_{ij}\le6`$ hold for $`i\ne j`$, and the following conditions hold:
-
-- If $`p(i)\lt p(j)`$, then $`(a_{ij},b_{ij})\in D(s_j)\setminus D(s_i)`$
-  and $`(a_{ij},b_{ij})\ne(1,6)`$.
-- On each increasing triple $`p(i)\lt p(j)\lt p(\ell)`$, a positive sign
-  requires $`b_{ij}\lt b_{j\ell}`$, and a negative sign requires
+- For $`p(i)\lt p(j)`$, the label belongs to
+  $`I(s_j)\setminus I(s_i)`$ and differs from $`(1,6)`$.
+- On $`p(i)\lt p(j)\lt p(\ell)`$, positive sign requires
+  $`b_{ij}\lt b_{j\ell}`$; negative sign requires
   $`a_{ij}\lt a_{j\ell}`$.
 
-Write $`V(s,F,b)`$ for this predicate. Additional requirements on the order,
-cap coordinates, signs or convexity data can be any predicate $`P(F)`$.
-In particular, the fixed-sign, orientation-packet, four-point convexity and
-no-octagon constraints do not depend on the cup coordinates once $`F`$ is
-fixed.
+Let $`P(F)`$ be any further condition independent of cup coordinates, including
+fixed-sign, orientation-packet, four-point convexity and no-octagon constraints.
 
-**Proposition R.9 (clipping).** For every increasing pair set
+**Proposition 6.3 (clipping).** Set, for increasing pairs,
 
 ```math
- \widehat b_{ij}=\min\{b_{ij},H_i+1\}
- \quad\text{when }p(i)\lt p(j),
- \qquad \widehat b_{ji}=\widehat b_{ij},
- \qquad \widehat b_{ii}=b_{ii}.
- \qquad\text{(R12)}
+\widehat b_{ij}=\min\{b_{ij},H_i+1\},\qquad
+\widehat b_{ji}=\widehat b_{ij},\qquad \widehat b_{ii}=b_{ii}.
 ```
 
-If $`V(s,F,b)`$, then $`V(s,F,\widehat b)`$ and
-$`\widehat b_{ij}\le H_i+1`$ for every increasing pair. Consequently,
+Validity is preserved, and therefore
 
 ```math
-\begin{aligned}
- &\exists F,b\;[P(F)\land V(s,F,b)]\\
- &\quad\Longleftrightarrow
- \exists F,b\;[P(F)\land V(s,F,b)\land
-   \forall i,j\;(p(i)\lt p(j)\Rightarrow b_{ij}\le H_i+1)].
- \qquad\text{(R13)}
-\end{aligned}
+\exists F,b\,[P(F)\land V(s,F,b)]
+\quad\Longleftrightarrow\quad
+\exists F,b\,[P(F)\land V(s,F,b)\land
+ \forall i,j\,(p(i)\lt p(j)\Rightarrow b_{ij}\le H_i+1)].   \qquad\text{(6.2)}
 ```
 
-*Proof.* Decreasing a positive cup coordinate preserves membership in the
-target profile. If clipping changes the coordinate, its new value is
-$`H_i+1`$, which is above every source column, so source exclusion also
-persists. Clipping cannot create the forbidden cell $`(1,6)`$: since the old
-coordinate is at most six, a clipped coordinate equal to six was already
-six. Symmetry and numerical bounds are immediate.
-
-For a positive increasing triple, target membership of its first edge gives
-$`b_{ij}\le H_j`$. Hence
+*Proof.* Decreasing a positive cup coordinate preserves target membership.
+A changed value is $`H_i+1`$, above every source column, so source exclusion
+persists. Clipping cannot create $`(1,6)`$: a clipped value six was already
+six because the old coordinate is at most six. Bounds and symmetry persist.
+For a positive increasing triple, target membership gives $`b_{ij}\le H_j`$,
+so
 
 ```math
- \min\{b_{ij},H_i+1\}
- \le b_{ij}
- \lt \min\{b_{j\ell},H_j+1\}.
+\min\{b_{ij},H_i+1\}\le b_{ij}\lt\min\{b_{j\ell},H_j+1\}.
 ```
 
-This preserves positive growth. Cap growth and all data in $`F`$ are
-unchanged, as is $`P(F)`$. Clipping proves the forward implication of (R13);
-the reverse implication forgets the extra bound. ∎
+Cap growth and $`P(F)`$ are unchanged. Clipping proves one implication in
+(6.2); forgetting the extra bound proves the other. ∎
 
-The definitions `Frame`, `HeightDominates`, `Allowed`, `Valid`, `SourceBound`
-and `clip` in [Normalization.lean](experiments/omission-residual-rank-normalization-2026-10-10/Normalization.lean)
-are exactly those above. In namespace `ErdosSzekeres.Omission.RankNormalization`,
-`allowed_clip`, `clipped_growth`, `clip_valid`, `clip_sourceBound`, and
-`exists_frame_iff_sourceBound` formalize the proof. The exact-catalog theorem
+`ErdosSzekeres.Omission.RankNormalization` defines `Frame`, `HeightDominates`,
+`Allowed`, `Valid`, `SourceBound`, `clip` and proves `allowed_clip`,
+`clipped_growth`, `clip_valid`, `clip_sourceBound`, `exists_frame_iff_sourceBound`
+in [Normalization](experiments/omission-residual-rank-normalization-2026-10-10/Normalization.lean).
 `catalog_exists_frame_iff_sourceBound` in
-[CatalogNormalization.lean](experiments/omission-residual-rank-normalization-2026-10-10/CatalogNormalization.lean)
-checks the profile-height hypothesis and applies (R13).
+[CatalogNormalization](experiments/omission-residual-rank-normalization-2026-10-10/CatalogNormalization.lean)
+checks the exact catalog's height hypothesis.
 
-This equivalence concerns abstract labels with the displayed constraints.
-It neither constructs real points nor preserves additional equations
-requiring the labels to equal attained cup maxima. The rank lemma can
-participate in shorter certificates, as in §R.8, but by itself cannot
-change satisfiability of this abstract model on a fixed occupied support.
+This equivalence neither realizes points nor preserves equations requiring
+labels to equal attained maxima. It shows that the source bound alone cannot
+change satisfiability on a fixed support in this abstract model, although it
+can shorten certificates. Independently, finite domain replay finds no new
+empty directed domain, incompatible pair or changed bounding-box forced sign;
+its data are in the [rank-attainment bundle](experiments/omission-residual-rank-attainment-2026-10-10/README.md).
 
-## V. Validation and references
+### 6.4. The open implication for 313
 
-All finished results discussed above are proved without `sorry`, `admit`,
-custom mathematical axioms, or `native_decide`. The audited declarations depend
-only on the standard Lean axioms `propext`, `Classical.choice` and `Quot.sound`
-(or a subset). The maintained-library audit covers 571 named declarations;
-the standalone residual continuation has a separate gate checking 41
-modules and 87 audit roots, including nine modules and ten audit roots
-for Proposition R.6 and two modules and six roots for Proposition R.7 and
-its corollaries, eight modules and sixteen roots for Proposition R.8,
-and two modules and twelve roots for Proposition R.9. The large arithmetic trees for 314 have their own
-complete kernel records, linked in Section F.5. They are distinct from the
-maintained-library CI build. A passing discovery script is not substituted
-for any of these proofs. The [validation ledger](docs/VALIDATION.md) supplies
-commands, scopes and recorded outputs.
+The present sufficient arithmetic statement is
 
-The source-to-mathematics correspondences in Sections S, F and R preserve
-strict inequalities, natural-number subtraction, the order of asymptotic
-quantifiers and all geometric restrictions. In particular, a conditional
-finite arithmetic implication is not identified with an unconditional planar
-bound, and an abstract feasible state assignment is not identified with a
-realizable point set. These distinctions explain both the completed theorem
-and the present boundary of the research.
+```math
+\forall h:U\to\{0,1\},\qquad
+\mathcal A_{2650}(h)\Longrightarrow\sum_i h_i\ge33.        \qquad\text{(OPEN)}
+```
 
-The principal external references are:
+**This implication remains unproved.** If established for the exact catalog,
+(5.2) would give residual population at most 121, and the proved composition
+would yield $`\mathsf F(313,8)`$, since $`190+121+2=313`$. Restricting (OPEN) to
+$`h_0=0`$ would also suffice: the first vertex of a nonempty actual residual
+configuration occupies state zero, by `OmissionResidualZeroState.zero_mem_residualOccupied`
+in [ZeroState](experiments/omission-residual32-context-certificates-2026-10-10/ZeroState.lean);
+the empty case is immediate.
+
+All current rows already have geometric necessity proofs. What remains is a
+complete arithmetic exclusion, its kernel-checked certificate, literal catalog
+identification and final composition. Bounded searches provide neither that
+exclusion nor a current 32-hole model. A feasible model would instead require
+stronger geometric information. Partial trees, unsuccessful local searches
+and the elimination of one finite component do not settle (OPEN). The
+[remaining-work account](docs/ES8_REMAINING.md) records the computational
+status; the partial searches do not justify a completion-time estimate.
+
+## 7. Validation and attribution
+
+The completed results use no `sorry`, `admit`, custom mathematical axioms or
+`native_decide`. Their audited dependencies are contained in the standard
+Lean axioms `propext`, `Classical.choice`, `Quot.sound`. The mathematical
+statements and certificate literals are authoritative; this article is an
+exposition, not a separately checked translation.
+
+| Proof scope | Validation record |
+| --- | --- |
+| Maintained geometric and asymptotic library | [Validation ledger](docs/VALIDATION.md), including commands and axiom audit |
+| Original balanced and residual geometric rows | [Balanced record](experiments/omission-global-assembly-2026-10-10/balanced-rows-kernel-check.json); residual [cycle](experiments/omission-residual-geometry-2026-10-09/cycles-kernel-check.json) and [block](experiments/omission-residual-geometry-2026-10-09/blocks-kernel-check.json) records |
+| Rounded cuts and complete arithmetic exclusions | [Certificate ledger](experiments/omission-cover-certificates-2026-10-10/README.md), with source archives and full kernel records |
+| Closed real-point theorem $`\mathsf F(314,8)`$ | [Final assembly record](experiments/omission-global-assembly-2026-10-10/global-cover-314-check.json) and [axiom output](experiments/omission-global-assembly-2026-10-10/global-cover-314-axioms.txt) |
+| Later residual rows and normalization | Standalone continuation checks in the [validation ledger](docs/VALIDATION.md) and source bundles linked in §§5–6 |
+
+The large arithmetic proofs have complete preserved kernel records distinct
+from the maintained-library build. The completed 314 theorem uses the
+2,295-row residual catalog and excludes budget 31. Later budget-32 research
+is not a premise of that theorem. The asymptotic proofs are likewise
+independent of the omission-search experiments.
+
+References and attribution:
 
 1. Andrew Suk, *On the Erdős–Szekeres convex polygon problem*,
    [arXiv:1604.08657v2](https://arxiv.org/abs/1604.08657v2), 2016.
 2. Andreas F. Holmsen, Hossein Nassajian Mojarrad, János Pach and Gábor Tardos,
-   *Two extensions of the Erdős–Szekeres problem*,
-   [arXiv:1710.11415v3](https://arxiv.org/abs/1710.11415v3),
-   *Journal of the European Mathematical Society* **22** (2020), 3981–3995,
+   *Two extensions of the Erdős–Szekeres problem*, JEMS **22** (2020),
+   3981–3995, [arXiv:1710.11415v3](https://arxiv.org/abs/1710.11415v3),
    [doi:10.4171/JEMS/1000](https://doi.org/10.4171/JEMS/1000).
 3. Michael Schroeder, *Erdős–Szekeres: Upper Bounds for Convex Heptagons and
-   Octagons*, supplied version-1 archive dated 19 September 2026. The supplied
-   identifier is DOI `10.5281/zenodo.22842891`; its README describes a reserved
-   Zenodo draft, so public resolution or peer review is not asserted here.
-   Pinned source identities, local changes and attribution are in the
+   Octagons*, supplied version-1 archive, 19 September 2026. The supplied
+   DOI `10.5281/zenodo.22842891` is described as a reserved Zenodo draft;
+   public resolution or peer review is not asserted. The finite catalogs,
+   geometric architecture and adapted proof code are attributed in the
    [third-party ledger](docs/THIRD_PARTY.md).
 4. Jineon Baek, [erdos-tuza-valtr](https://github.com/jcpaik/erdos-tuza-valtr),
-   the attributed formal combinatorial prerequisites and finite block theorem;
-   the exact imported revisions and adaptations are in the same ledger.
+   the formal combinatorial prerequisites and block theorem; imported
+   revisions and adaptations are recorded in the same ledger.
 
-Original project exposition is Apache-2.0. Third-party code and derived data
-retain the exceptions listed in [the license scope](docs/LICENSING.md).
-The theorem $`\mathrm{ES}(8)\le314`$ is the proved bound of this repository;
-no literature-priority or best-known-bound claim is made.
+The [paper correspondence](docs/PAPER_MAP.md) distinguishes direct statements
+from replacement arguments. Original exposition is Apache-2.0; third-party
+code and derived data retain the [documented license exceptions](docs/LICENSING.md).
+No literature-priority or best-known-bound claim is made.
