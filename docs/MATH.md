@@ -14,9 +14,9 @@ their convex hull. Other points may lie inside the polygon.
 
 The Erdős–Szekeres conjecture is
 
-\[
+$$
 \operatorname{ES}(n)=2^{n-2}+1 \qquad(n\geq3).
-\]
+$$
 
 The classical lower-bound construction explains why this proposed threshold
 cannot be smaller. The difficult direction is the universal upper bound.
@@ -69,15 +69,15 @@ not coordinates in a grid and not a list of possible point locations.
 For the residual configuration let O be its occupied states and let
 M = {0,…,153} ∖ O be its missing states, or **holes**. Injectivity gives
 
-\[
+$$
 |R|+|M|=154.
-\]
+$$
 
 Each proved geometric row consists of a support Sᵣ and a demand dᵣ, asserting
 
-\[
+$$
 |S_r\cap M|\geq d_r.
-\]
+$$
 
 Equivalently, with hᵢ = 1 for a missing state and hᵢ = 0 otherwise,
 the row says ∑ᵢ∈Sᵣ hᵢ ≥ dᵣ. A demand-one row forbids all of its states
@@ -98,15 +98,15 @@ those frozen proof notes precede the completed assembly.
 The finished arithmetic certificates prove at least 62 balanced holes and
 at least 32 residual holes. Therefore
 
-\[
+$$
 |H|\leq252-62=190,\qquad |R|\leq154-32=122.
-\]
+$$
 
 Adding back the distinguished point, an avoiding set has at most
 
-\[
+$$
 190+122+1=313
-\]
+$$
 
 points. Hence every set of 314 points forces an octagon.
 The closed theorem is `ErdosSzekeres.Omission.forces_convex_octagon_314` in
@@ -146,9 +146,9 @@ assignment cannot be realized by an actual avoiding residual configuration.
 
 Take the thirteen states
 
-\[
+$$
 S=\{25,43,53,65,74,85,89,91,96,107,110,111,125\}.
-\]
+$$
 
 The new theorem proves |S ∩ M| ≥ 1 for every actual residual configuration
 with the restrictions in Section 3. The old witness occupies all thirteen,
