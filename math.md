@@ -102,9 +102,9 @@ finite maxima exist and are attained. Extension of an attaining path gives
 
 ```math
 \begin{aligned}
-[p_u,p_v,p_w]\lt0&\Longrightarrow
+{}[p_u,p_v,p_w]\lt0&\Longrightarrow
  E_-(u,v)\lt E_-(v,w),\quad F_-(v,w)\lt F_-(u,v),\\
-[p_u,p_v,p_w]>0&\Longrightarrow E_+(u,v)\lt E_+(v,w)
+{}[p_u,p_v,p_w]>0&\Longrightarrow E_+(u,v)\lt E_+(v,w)
 \qquad(u\lt v\lt w).
 \end{aligned}
 ```
@@ -375,7 +375,7 @@ be the leftmost point. On the half-plane $`x>a_x`$ use
 ```math
 \begin{aligned}
 \Phi_a(x,y)&=\left(\frac{y-a_y}{x-a_x},-\frac1{x-a_x}\right),\\
-[\Phi_a(p),\Phi_a(q),\Phi_a(r)]
+{}[\Phi_a(p),\Phi_a(q),\Phi_a(r)]
 &=-\frac{[p,q,r]}{(p_x-a_x)(q_x-a_x)(r_x-a_x)}.
 \end{aligned}                                           \qquad\text{(3.6)}
 ```
@@ -595,8 +595,11 @@ limits are
 At $`X_n=n+CS_n`$, define the exact slack
 
 ```math
-\Delta_n=(3m_n-6)(n+CS_n-1)
--\bigl((d_n+1)(4m_n+1)+3m_nn+6m_n+(4n+3m_n)(\log m_n+4)\bigr).
+\begin{aligned}
+\Delta_n={}&(3m_n-6)(n+CS_n-1)\\
+&-\bigl((d_n+1)(4m_n+1)+3m_nn+6m_n
+ +(4n+3m_n)(\log m_n+4)\bigr).
+\end{aligned}
 ```
 
 Then
@@ -639,13 +642,17 @@ $`m\ge1`$.
 For a closed integer bound, set
 
 ```math
-K=4m+1,\quad D=3m-6,\quad V=\lceil\log\Pi(m,n)\rceil,
-\quad A=(d+1)K+V,\quad F=\lfloor\log((m+1)!)\rfloor,
+\begin{gathered}
+K=4m+1,\quad D=3m-6,\quad V=\lceil\log\Pi(m,n)\rceil,\\
+A=(d+1)K+V,\quad F=\lfloor\log((m+1)!)\rfloor.
+\end{gathered}
 ```
 
 ```math
-E_0=\max\left\{d,2K,\left\lfloor A/D\right\rfloor+1\right\},\qquad
-E_!=\max\left\{d,2K,\left\lfloor\max(A-F,0)/D\right\rfloor+1\right\}.
+\begin{aligned}
+E_0&=\max\left\{d,2K,\left\lfloor A/D\right\rfloor+1\right\},\\
+E_!&=\max\left\{d,2K,\left\lfloor\max(A-F,0)/D\right\rfloor+1\right\}.
+\end{aligned}
 ```
 
 For $`m\ge3`$, $`n\ge4`$, $`K\le2^d`$ and $`\mathsf F(2^d,K)`$,
@@ -787,8 +794,10 @@ in [CoupledTemplateFourth](ErdosSzekeres/Omission/CoupledTemplateFourth.lean).
 The relaxed Sixth template uses
 
 ```math
-E=\{(1,0),(10,6),(12,10),(12,11)\},\qquad
-D=\{(10,11,a,b):a\in\{2,3\},\ b\in\{4,5,6\}\},
+\begin{aligned}
+E&=\{(1,0),(10,6),(12,10),(12,11)\},\\
+D&=\{(10,11,a,b):a\in\{2,3\},\ b\in\{4,5,6\}\}.
+\end{aligned}
 ```
 
 and the exact 31-triple list `positiveTests` in
@@ -797,13 +806,15 @@ Writing that list as $`Q`$ and the six-order sign check of §2.3 as $`P`$,
 compatibility means
 
 ```math
-(i,j)\in E\Rightarrow D_\sigma(i,j)=\varnothing,\quad
-(i,j,a,b)\in D\Rightarrow(a,b)\notin D_\sigma(i,j),\quad
-(i,j,k)\in Q\Rightarrow P(\sigma(i),\sigma(j),\sigma(k)).
+\begin{aligned}
+(i,j)\in E&\Rightarrow D_\sigma(i,j)=\varnothing,\\
+(i,j,a,b)\in D&\Rightarrow(a,b)\notin D_\sigma(i,j),\\
+(i,j,k)\in Q&\Rightarrow P(\sigma(i),\sigma(j),\sigma(k)).
+\end{aligned}
 ```
 
 **Proposition 5.2 (transport).** For either template, every injective compatible
-map satisfies $`\vert\operatorname{image}(\sigma)\setminus O(c)\vert\ge1`$.
+map satisfies $`\vert\mathrm{image}(\sigma)\setminus O(c)\vert\ge1`$.
 
 *Proof.* Choose distinct owners if the image is occupied. Compatibility
 justifies every state-dependent clause of the template refutation; the
@@ -939,10 +950,12 @@ fixed-sign, orientation-packet, four-point convexity and no-octagon constraints.
 Validity is preserved, and therefore
 
 ```math
-\exists F,b\,[P(F)\land V(s,F,b)]
-\quad\Longleftrightarrow\quad
-\exists F,b\,[P(F)\land V(s,F,b)\land
- \forall i,j\,(p(i)\lt p(j)\Rightarrow b_{ij}\le H_i+1)].   \qquad\text{(6.2)}
+\begin{aligned}
+&\exists F,b\,[P(F)\land V(s,F,b)]\\
+&\quad\Longleftrightarrow\quad
+ \exists F,b\,[P(F)\land V(s,F,b)\land\\
+&\qquad\qquad \forall i,j\,(p(i)\lt p(j)\Rightarrow b_{ij}\le H_i+1)].
+\end{aligned}                                            \qquad\text{(6.2)}
 ```
 
 *Proof.* Decreasing a positive cup coordinate preserves target membership.
