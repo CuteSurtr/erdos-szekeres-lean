@@ -27,22 +27,22 @@ real numbers.
 
 **Theorem 1.1 (completed bounds).** The following statements hold.
 
-1. **Suk:** there exists $`n_0\ge3`$ such that, for every integer $`n\ge n_0`$,
+**(1) Suk.** There exists $`n_0\ge3`$ such that, for every integer $`n\ge n_0`$,
 
-   ```math
-   \mathsf F\!\left(\left\lfloor2^{n+6n^{2/3}\log n}\right\rfloor_{\mathbb N},n\right).
-   ```
+```math
+\mathsf F\!\left(\left\lfloor2^{n+6n^{2/3}\log n}\right\rfloor_{\mathbb N},n\right).
+```
 
-2. **HMPT:** for every real $`\varepsilon>0`$ there exists $`n_0\ge3`$ such that,
-   for every integer $`n\ge n_0`$,
+**(2) HMPT.** For every real $`\varepsilon>0`$ there exists $`n_0\ge3`$ such that,
+for every integer $`n\ge n_0`$,
 
-   ```math
-   \mathsf F\!\left(
-   \left\lfloor2^{n+(8\sqrt2/3+\varepsilon)\sqrt{n\log n}}\right\rfloor_{\mathbb N},n
-   \right).
-   ```
+```math
+\mathsf F\!\left(
+\left\lfloor2^{n+(8\sqrt2/3+\varepsilon)\sqrt{n\log n}}\right\rfloor_{\mathbb N},n
+\right).
+```
 
-3. **Finite octagon bound:** $`\mathsf F(314,8)`$.
+**(3) Finite octagon bound.** $`\mathsf F(314,8)`$.
 
 The first two statements are eventual bounds; their quantifiers do not permit
 an unverified substitution of $`n=8`$. The HMPT statement retains every
