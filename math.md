@@ -33,9 +33,11 @@ All configurations in the final statements are finite sets, so repeated points
 are excluded. A finite set $P\subset\mathbb R^2$ is in general position if
 no three distinct members are collinear. A finite set $Q$ is in convex
 position if
+
 $$
   q\notin\operatorname{conv}(Q\setminus\{q\})\qquad(q\in Q).
 $$
+
 The Lean definition uses Mathlib's `ConvexIndependent`; the displayed
 characterization is `ErdosSzekeres.convexPosition_iff` in
 [Basic.lean](ErdosSzekeres/Basic.lean).
@@ -54,10 +56,12 @@ The usual notation $\mathrm{ES}(n)\le N$ abbreviates $\mathsf F(N,n)$.
 The code formulates the problem through $\mathsf F$, rather than a separately
 defined minimum $\mathrm{ES}(n)$. In particular, its proposition
 `ErdosSzekeresConjecture` is
+
 $$
   \forall n\in\mathbb N,\quad n\ge3\Longrightarrow
   \mathsf F(2^{n-2}+1,n).
 $$
+
 The customary equality $\mathrm{ES}(n)=2^{n-2}+1$ additionally uses the
 classical lower-bound construction, which is not part of that Lean definition
 or a lower-bound formalization claimed here. For $n=8$, the conjectured
@@ -74,12 +78,14 @@ $\lfloor\log u\rfloor$.
 
 **Theorem S.1 (Suk bound).** There is an integer $n_0\ge3$ such that, for every integer
 $n\ge n_0$,
+
 $$
  \mathsf F\!\left(
    \left\lfloor 2^{\,n+6n^{2/3}\log n}\right\rfloor_{\mathbb N},n
  \right).
  \tag{S}
 $$
+
 This is `ErdosSzekeres.Suk.theorem2016` in
 [Suk/Asymptotic.lean](ErdosSzekeres/Suk/Asymptotic.lean), with the exact
 predicate and threshold defined in
@@ -88,6 +94,7 @@ The theorem has no extraction, coloring, or arithmetic-certificate hypothesis.
 
 **Theorem S.2 (HMPT bound for ordinary real point sets).** For every real $\varepsilon>0$
 there is an integer $n_0\ge3$ such that, for every integer $n\ge n_0$,
+
 $$
  \mathsf F\!\left(
   \left\lfloor
@@ -96,6 +103,7 @@ $$
  \right).
  \tag{H}
 $$
+
 This is `ErdosSzekeres.HMPT.theorem2020` in
 [HMPT/Asymptotic.lean](ErdosSzekeres/HMPT/Asymptotic.lean);
 [HMPT/Statement.lean](ErdosSzekeres/HMPT/Statement.lean) defines
@@ -116,10 +124,12 @@ The implementation uses finite horizontal support paths. For
 $\omega(a,b,c)=\det(b-a,c-a)$, a cap frame $(a,b,c,d)$ has negative
 orientation on each of its four increasing triples. Its open support region
 is
+
 $$
  \{p:\ \omega(a,b,p)<0,\quad \omega(b,c,p)>0,\quad
              \omega(c,d,p)<0\}.
 $$
+
 These are `Suk.CapFrame` and `Suk.CapFrame.spike` in
 [SpikeGeometry.lean](ErdosSzekeres/Suk/SpikeGeometry.lean).
 `Suk.ClockwiseAnchors (k+3)` consists of a sequence with negative orientation
@@ -131,14 +141,18 @@ The finite support theorem supplies the following implication. Let
 $P$ be in general position, let all $k+3$ horizontally ordered anchors
 belong to $P$, and let $Q_i\subseteq P$ lie in the $i$-th support
 region. If
+
 $$
  n\ge4,\quad K,b\ge3,\quad n\le rK,\quad n\le tb,\quad
  t(r+1)\le k
 $$
+
 and every region satisfies
+
 $$
  |Q_i|>2^{n+K-4}\binom{n+b-4}{n-2},
 $$
+
 then $P$ contains a convex $n$-gon. This is
 `Suk.ClockwiseAnchors.finite_support_bound` in
 [FiniteSupport.lean](ErdosSzekeres/Suk/FiniteSupport.lean).
@@ -153,37 +167,45 @@ support-path hypotheses for arbitrary $P$. Their finite consequence is
 `Suk.finite_logarithmic_bound` in
 [IntegerParameters.lean](ErdosSzekeres/Suk/IntegerParameters.lean): under the
 same integer conditions and $n+b\le2^H$,
+
 $$
  \mathsf F\bigl(2^{\,n+K+Hb+64(k+5)},n\bigr).
  \tag{S1}
 $$
+
 The extraction loss here is $64(k+5)$. It is a proved replacement estimate;
 the paper's literal intermediate extraction constant is not being asserted.
 The closed finite parameter choice $K=b=a^2$, $r=t=a$,
 $k=a(a+1)$ gives, for $n\ge4$, $a\ge2$, $n\le a^3$,
+
 $$
  \mathsf F\bigl(2^{D_S(n,a)},n\bigr),\qquad
  D_S(n,a)=n+a^2+a^2\lceil\log(n+a^2)\rceil+64\bigl(a(a+1)+5\bigr).
  \tag{S2}
 $$
+
 This is `Suk.cubic_log_bound`.
 
 For completeness, the final comparison in (S) retains explicit sufficient
 conditions:
+
 $$
  n\ge4,\qquad n^{1/3}\ge4,\qquad \log n\ge100.
  \tag{S3}
 $$
+
 Put $x=n^{1/3}$, $a=\lceil x\rceil$, and
 $H=\lceil\log(n+a^2)\rceil$. The proof establishes
 $n\le a^3$, $a^2\le2x^2$, $a^2\le n$,
 $H\le\log n+2$, and $a(a+1)+5\le3a^2$. Consequently
+
 $$
  D_S(n,a)-n
  \le (H+193)a^2
  \le2(\log n+195)x^2
  \le6n^{2/3}\log n.
 $$
+
 The integer power $2^{D_S(n,a)}$ is therefore at most the natural floor in
 (S). `Suk.integer_parameters_fit_exponent` proves the parameter comparison;
 `Suk.coefficient_six_bound` proves (S) under (S3). Divergence of
@@ -207,14 +229,17 @@ $j$-element subsets, and let
 $N=|P|$. This is the cardinality of `Suk.convexSubsets P j` in
 [ExtractionCounting.lean](ErdosSzekeres/Suk/ExtractionCounting.lean).
 If $j\le M\le N$ and $\mathsf F(M,j)$, double counting yields
+
 $$
  \binom Nj\le c_j(P)\binom Mj.
  \tag{D}
 $$
+
 The declaration is `Suk.convex_subsets_density`; the inequality uses integer
 multiplication, without division or an implicit rounding convention.
 
 Define
+
 $$
  B(r,n)=2^{(r+1)(n-1)+2r}
        \binom{2(n-1)+r+r(n-2)}{2(n-1)+r},
@@ -222,6 +247,7 @@ $$
  \Pi(m,n)=B(m-3,n)B(2m-3,n).
  \tag{P}
 $$
+
 These are `HMPT.supportProductBound` in
 [RegionProduct.lean](ErdosSzekeres/HMPT/RegionProduct.lean) and
 `HMPT.twoScaleProduct` in
@@ -233,11 +259,13 @@ parameters. In particular, both path endpoints and the padding of small
 capacities appear in $B$, rather than being discarded as implicit losses.
 
 The convex-fan construction and projective coordinate change give
+
 $$
  c_{2(r+3)+1}(P)\le
  c_{r+4}(P)\,N^3 B(r,n)
  \tag{R}
 $$
+
 whenever $n\ge4$, $P$ is in general position with distinct first
 coordinates, and $P$ avoids a convex $n$-gon. This is
 `HMPT.convex_family_ratio_bound` in
@@ -250,20 +278,24 @@ transfer back to the original real configuration are proved in
 
 Apply (R) at $r=m-3$ and $r=2m-3$, with $m\ge3$. Direct multiplication
 of the two inequalities gives
+
 $$
  c_{4m+1}(P)\le c_{m+1}(P)N^6\Pi(m,n).
  \tag{T}
 $$
+
 This is `HMPT.convex_two_scale_ratio_bound`. Bounding
 $c_{m+1}(P)\le N^{m+1}$ and combining (T) with (D) proves
 `HMPT.two_scale_bound`: for integers $m\ge3$, $n\ge4$, and
 $4m+1\le M\le N$,
+
 $$
  \mathsf F(M,4m+1),\qquad
  N^{m+7}\Pi(m,n)\binom M{4m+1}<\binom N{4m+1}
  \quad\Longrightarrow\quad\mathsf F(N,n).
  \tag{T1}
 $$
+
 This last statement no longer assumes distinct first coordinates: a proved
 linear change of coordinates supplies them. The linear-path ratio argument
 is the implementation's replacement for the paper's cyclic alternative; it
@@ -273,33 +305,41 @@ formalized verbatim.
 ### S.3. Entropy budget and the coefficient $8\sqrt2/3$
 
 [Entropy.lean](ErdosSzekeres/HMPT/Entropy.lean) proves
+
 $$
  \Pi(m,n)\le
  2^{\,3mn+6m+(4n+3m)\lceil\log(8m)\rceil},\qquad m\ge3,
  \tag{E1}
 $$
+
 using the elementary binomial estimate
 $\binom NA\le(4R)^A$ when $N\le RA$.
 The theorem `HMPT.real_entropy_two_scale_bound` supplies the exact rounding
 interface. Let $m,n,d\in\mathbb N$, $X\in\mathbb R$, and assume
+
 $$
  m\ge3,\quad n\ge4,\quad
  \mathsf F(2^d,4m+1),\quad 4m+1\le2^d,
 $$
+
 $$
  d+1\le X,\qquad 2(4m+1)+1\le X,
 $$
+
 and
+
 $$
  (d+1)(4m+1)+3mn+6m+(4n+3m)(\log m+4)
    <(3m-6)(X-1).
  \tag{E2}
 $$
+
 Then $\mathsf F(\lfloor2^X\rfloor_{\mathbb N},n)$.
 The proof uses $E=\lfloor X\rfloor_{\mathbb N}$ and
 $X-1\le E$; thus the unit loss in (E2) accounts explicitly for rounding.
 
 Set
+
 $$
  L_n=\log n,\qquad S_n=\sqrt{nL_n},\qquad
  m_n=\lceil cS_n\rceil_{\mathbb N},\qquad
@@ -307,11 +347,13 @@ $$
   (4m_n+1)+6(4m_n+1)^{2/3}\log(4m_n+1)
  \right\rceil_{\mathbb N}
 $$
+
 for a fixed real $c>0$. The definitions are `HMPT.asymptoticScale`,
 `roundedScale`, and `scaleInputExponent`. Suk's theorem implies
 $\mathsf F(2^{d_n},4m_n+1)$ eventually.
 [AsymptoticInput.lean](ErdosSzekeres/HMPT/AsymptoticInput.lean) and
 [ScaleLimits.lean](ErdosSzekeres/HMPT/ScaleLimits.lean) prove
+
 $$
  \frac{m_n}{S_n}\longrightarrow c,\qquad
  \frac{d_n}{S_n}\longrightarrow4c,\qquad
@@ -320,6 +362,7 @@ $$
 $$
 
 For $X_n=n+CS_n$, define the exact slack in (E2) by
+
 $$
 \begin{aligned}
  \Delta_n(c,C)={}&(3m_n-6)(n+CS_n-1)\\
@@ -327,14 +370,17 @@ $$
              +(4n+3m_n)(\log m_n+4)\bigr).
 \end{aligned}
 $$
+
 `HMPT.budgetRatio_identity` identifies the implemented normalized budget with
 $\Delta_n(c,C)/(nL_n)$, once $n\ge2$, and
 `HMPT.normalizedBudget_tendsto` proves
+
 $$
  \frac{\Delta_n(c,C)}{n\log n}\longrightarrow
  3cC-16c^2-2.
  \tag{E3}
 $$
+
 Consequently every choice with $c>0$ and positive limiting slack yields
 $\mathsf F(\lfloor2^{n+C\sqrt{n\log n}}\rfloor_{\mathbb N},n)$
 eventually. This is `HMPT.eventual_bound_of_positive_slack`.
@@ -342,10 +388,12 @@ Taking $c=1/(2\sqrt2)$ and $C=8\sqrt2/3+\varepsilon$ makes the limit
 $3c\varepsilon>0$, which proves (H).
 
 The exact algebraic identity
+
 $$
  3cC-16c^2-2
   =3c(C-8\sqrt2/3)-(4c-\sqrt2)^2
 $$
+
 is separately proved as `HMPT.leading_slack_identity` in
 [ParameterBarrier.lean](ErdosSzekeres/HMPT/ParameterBarrier.lean).
 It shows that a positive limiting slack at some fixed $c>0$ is possible
@@ -357,16 +405,20 @@ not a lower bound for $\mathrm{ES}(n)$ or an obstruction to other arguments.
 The following are supplementary finite improvements of the implemented
 counting criterion; they do not improve (H)'s asymptotic coefficient.
 Retain $c_{m+1}(P)\le\binom N{m+1}$ in (T), and put
+
 $$
  T_{\rm bin}(N,m,n)=\binom N{m+1}N^6\Pi(m,n).
 $$
+
 Then, for $m\ge3$, $n\ge4$, $4m+1\le M\le N$,
+
 $$
  \mathsf F(M,4m+1),\qquad
  T_{\rm bin}(N,m,n)\binom M{4m+1}<\binom N{4m+1}
  \quad\Longrightarrow\quad\mathsf F(N,n).
  \tag{B1}
 $$
+
 This is `HMPT.two_scale_binomial_bound` in
 [BinomialRefinement.lean](ErdosSzekeres/HMPT/BinomialRefinement.lean).
 The same file proves
@@ -376,12 +428,15 @@ expression, not by itself a statement of a new best numerical Erdős–Szekeres
 bound.
 
 For a closed integer criterion, let
+
 $$
  K=4m+1,\quad D=3m-6,\quad
  V=\lceil\log\Pi(m,n)\rceil,\quad
  A=(d+1)K+V,\quad F=\lfloor\log((m+1)!)\rfloor,
 $$
+
 and define
+
 $$
  E_0=\max\left\{d,2K,\left\lfloor\frac A D\right\rfloor+1\right\},
 \qquad
@@ -389,23 +444,28 @@ $$
   \left\lfloor\frac{\max(A-F,0)}D\right\rfloor+1\right\}.
  \tag{B2}
 $$
+
 Here $m\ge3$, so $D>0$. The definitions are
 `HMPT.twoScaleExponent` and `HMPT.twoScaleFactorialExponent`.
 If $n\ge4$, $K\le2^d$, and $\mathsf F(2^d,K)$, then
+
 $$
  \mathsf F(2^{E_!},n),\qquad E_!\le E_0.
  \tag{B3}
 $$
+
 The declarations are `HMPT.integer_two_scale_factorial_bound` and
 `HMPT.twoScaleFactorialExponent_le`.
 
 The factorial credit follows from the exact inequality
 $(m+1)!\binom N{m+1}\le N^{m+1}$. More generally, if
 $\Pi(m,n)\le2^V$, $d\le E$, $2K\le E$, and
+
 $$
  (d+1)K+V<DE+\lfloor\log((m+1)!)\rfloor,
  \tag{B4}
 $$
+
 then $\mathsf F(2^E,n)$, under the same $m,n,K$ and input-bound
 hypotheses. This is `HMPT.two_scale_factorial_exponential_bound`.
 One multiplies the binomial count by $(m+1)!$, compares the resulting
@@ -415,17 +475,21 @@ $\max(A-F,0)$ establishes (B4) at $E=E_!$.
 
 There is also a uniform strict comparison under one explicit condition.
 [FactorialSaving.lean](ErdosSzekeres/HMPT/FactorialSaving.lean) proves
+
 $$
  2^{3m-6}\le(m+1)!\quad(m\ge3),
 $$
+
 so $F\ge D$. It also proves $d<E_0$. If $2K<E_0$, the counting term
 in (B2) is therefore strictly larger than both auxiliary terms, and subtracting
 at least $D$ from its numerator gives $E_!<E_0$. Thus
 `HMPT.integer_two_scale_bound_one_bit_smaller` establishes
+
 $$
  \mathsf F(2^{E_0-1},n)
  \tag{B5}
 $$
+
 whenever $m\ge3$, $n\ge4$, $K\le2^d$,
 $\mathsf F(2^d,K)$, and $2K<E_0$. This halves the previous sufficient
 power-of-two threshold in the stated parameter range. It is a comparison
@@ -1214,11 +1278,13 @@ the exact support and demand given by `OmissionResidual32Contexts.support`
 and `demand` in
 [Catalog.lean](experiments/omission-residual32-context-certificates-2026-10-10/Residual32ContextsProof/Catalog.lean).
 For $h:U\to\{0,1\}$ define
+
 $$
  \mathcal A_{2469}(h)\quad\Longleftrightarrow\quad
  \forall r<2469,\qquad d_r\le\sum_{i\in S_r}h_i.
  \tag{R1}
 $$
+
 In Lean, $h$ is a natural-valued function together with the explicit premises
 $h_i\le1$; this is equivalent to the displayed Boolean-valued convention.
 The first 1,187 rows are the original residual geometric rows. They are followed
@@ -1228,10 +1294,12 @@ rounded consequences. All row indices in this section are zero-based.
 **Proposition R.1 (geometric necessity).** For every residual configuration
 $c$ on $n$ points, let $O(c)\subseteq U$ be its occupied states and set
 $h_i=1$ if $i\notin O(c)$, and $h_i=0$ otherwise. Then
+
 $$
  \mathcal A_{2469}(h),\qquad \sum_{i\in U}h_i+n=154.
  \tag{R2}
 $$
+
 This is `OmissionResidual32Transfer.all_rows` and `feasible_holes` in
 [Transfer.lean](experiments/omission-residual32-transfer-2026-10-10/Transfer.lean).
 The proof uses one common $O(c)$ for every family. Literal equalities identify
@@ -1243,27 +1311,31 @@ points in the plane.
 ### R.2. A proved obstruction to this relaxation
 
 Define
+
 $$
 \begin{aligned}
- M_* = \{&7,12,33,39,44,47,50,51,52,54,55,56,69,71,73,75,\\
+ M_{\ast} = \{&7,12,33,39,44,47,50,51,52,54,55,56,69,71,73,75,\\
           &76,77,78,90,97,99,101,109,115,117,118,119,124,127,132,133\}.
 \end{aligned}
 $$
-Let $h_i^*=\mathbf1_{M_*}(i)$.
 
-**Proposition R.2 (exact finite witness).** The function $h^*$ satisfies
+Let $h_i^{\ast}=\mathbf1_{M_{\ast}}(i)$.
+
+**Proposition R.2 (exact finite witness).** The function $h^{\ast}$ satisfies
+
 $$
- \mathcal A_{2469}(h^*),\qquad \sum_i h_i^*=32,\qquad
- h_{54}^*=1,\quad h_{43}^*=h_{67}^*=h_0^*=0.
+ \mathcal A_{2469}(h^{\ast}),\qquad \sum_i h_i^{\ast}=32,\qquad
+ h_{54}^{\ast}=1,\quad h_{43}^{\ast}=h_{67}^{\ast}=h_0^{\ast}=0.
  \tag{R3}
 $$
+
 In particular the universally quantified implication from (R1) and the four
 displayed branch conditions to $\sum_i h_i\ge33$ is false.
 
 **Proof.** The literal set has 32 distinct members. For each of the 2,469
-literal rows, finite computation proves $d_r\le|S_r\cap M_*|$.
-For every $S\subseteq U$, $\sum_{i\in S}\mathbf1_{M_*}(i)=|S\cap M_*|$;
-this converts the cardinality checks into (R3). Substitution of $h^*$ in
+literal rows, finite computation proves $d_r\le|S_r\cap M_{\ast}|$.
+For every $S\subseteq U$, $\sum_{i\in S}\mathbf1_{M_{\ast}}(i)=|S\cap M_{\ast}|$;
+this converts the cardinality checks into (R3). Substitution of $h^{\ast}$ in
 the proposed universal implication would give $33\le32$. These are ordinary
 kernel-checked proofs (`decide +kernel` for the finite computations).
 The declarations `missing_card`, `all_rows`, `sum_holes`,
@@ -1275,16 +1347,19 @@ This is a counterexample to a finite implication, not a planar counterexample.
 ### R.3. A further necessary geometric inequality
 
 Let
+
 $$
- S_* = \{25,43,53,65,74,85,89,91,96,107,110,111,125\}.
+ S_{\ast} = \{25,43,53,65,74,85,89,91,96,107,110,111,125\}.
 $$
 
 **Theorem R.3 (the Sixth obstruction).** Every actual residual configuration
 $c$ satisfies
+
 $$
- |S_*\setminus O(c)|\ge1.
+ |S_{\ast}\setminus O(c)|\ge1.
  \tag{R4}
 $$
+
 This is `ErdosSzekeres.Omission.CoupledCoreSixth.hole_bound` in
 [Geometry.lean](experiments/omission-residual32-witness-coupled-2026-10-10/Geometry.lean).
 
@@ -1340,12 +1415,12 @@ proved geometric interpretation of every clause.
 **Corollary R.4 (strict strengthening and nonrealizability).** The row (R4)
 does not follow from (R1), even after restricting to the 32-hole witness with
 state zero occupied. Moreover no actual residual configuration has occupied
-set $U\setminus M_*$.
+set $U\setminus M_{\ast}$.
 
-**Proof.** Direct finite checking gives $S_*\cap M_*=\varnothing$. Hence
-$h^*$ satisfies every old inequality and violates (R4). If
-$O(c)=U\setminus M_*$, then
-$S_*\setminus O(c)=S_*\cap M_* =\varnothing$, contradicting Theorem R.3.
+**Proof.** Direct finite checking gives $S_{\ast}\cap M_{\ast}=\varnothing$. Hence
+$h^{\ast}$ satisfies every old inequality and violates (R4). If
+$O(c)=U\setminus M_{\ast}$, then
+$S_{\ast}\setminus O(c)=S_{\ast}\cap M_{\ast} =\varnothing$, contradicting Theorem R.3.
 These are `CoupledCoreSixth.strict_strengthening` and
 `countermodel_not_realizable` in the same geometry module. The last statement
 excludes this exact occupied set; it does not exclude all 32-hole assignments.
@@ -1363,10 +1438,12 @@ orientation test. These three literal lists are part of the definition;
 compatibility does not mean merely that the support has 13 elements.
 More explicitly, within $\{1,\ldots,4\}\times\{1,\ldots,6\}$, the directed
 domain is
+
 $$
  D_\sigma(i,j)=\bigl(I(\sigma(j))\setminus I(\sigma(i))\bigr)
                  \setminus\{(1,6)\}.
 $$
+
 Here $I(s)$ denotes the positive cells of the catalog profile $s$.
 `emptyTests` requires the indicated domain to be empty, and `domainTests`
 requires the indicated label to lie outside it. Removing $(1,6)$ uses the
@@ -1375,10 +1452,12 @@ proved forbidden-label statement from Section F.1; this is exactly
 
 **Proposition R.5 (template transport).** If $\sigma$ is injective and
 compatible, then every actual residual configuration satisfies
+
 $$
  |\sigma(\{0,\ldots,12\})\setminus O(c)|\ge1.
  \tag{R5}
 $$
+
 This is `CoupledTemplateFourth.hole_bound` in
 [CoupledTemplateFourthGeometry.lean](ErdosSzekeres/Omission/CoupledTemplateFourthGeometry.lean).
 The proof again selects distinct owners. Compatibility justifies the
@@ -1393,15 +1472,17 @@ The literal family `CoupledFourthGlobalVariants.maps` contains 128 maps.
 and [Root.lean](experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Root.lean).
 This finite family is not asserted to enumerate all compatible maps.
 
-Define 129 added supports $T_0,\ldots,T_{128}$ by taking $T_0=S_*$ and
-$T_{j+1}$ equal to the support of the $j$th Fourth map. The theorem
+Define 129 added supports $T_0,\ldots,T_{128}$ by taking $T_0=S_{\ast}$ and
+$T_{j+1}$ equal to the support of the $j$-th Fourth map. The theorem
 `Residual32AddedRows.literal_binding` identifies that family with the exact
 ordered literal array used in the search. Its `all_rows` theorem proves
+
 $$
  \forall j<129,\qquad \sum_{i\in T_j}h_i\ge1
  \quad\text{for }h_i=\mathbf1_{U\setminus O(c)}(i).
  \tag{R6}
 $$
+
 Both are in namespace `ErdosSzekeres.Omission`, in
 [AddedRows.lean](experiments/omission-residual32-added-rows-2026-10-10/AddedRows.lean).
 Together, (R1) and (R6) define $\mathcal A_{2598}$: the unchanged old 2,469
@@ -1412,11 +1493,13 @@ from matching family names.
 ### R.5. The precise remaining proposition
 
 The sufficient arithmetic statement for the present residual route is
+
 $$
  \forall h:U\to\{0,1\},\qquad
  \mathcal A_{2598}(h)\Longrightarrow\sum_{i\in U}h_i\ge33.
  \tag{OPEN}
 $$
+
 **(OPEN) is not proved in this repository.** If proved and bound to these
 exact literal rows, it would give $n\le121$ by (R2). The proved balanced
 bound $190$ and the proved projective/partition composition would then give
