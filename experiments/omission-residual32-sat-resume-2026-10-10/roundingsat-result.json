@@ -1,0 +1,28 @@
+{
+  "source": "experiments/omission-residual32-2598-primal-2026-10-10/source-2598.json.gz",
+  "source_decompressed_sha256": "01d4fde13ae0ca43427540a3d529e7e29b875936332af2cc4ef7d423edee469b",
+  "solver_sha256": "6d887ef989c4700acf6bb20193057eab4009c7f236e58fbaf128173e6ff16d99",
+  "opb_sha256": "d46d9fe1ab9f2a76ad6e193880d6debce403a30d5d05f10d211c37581dbb86f6",
+  "states": 154,
+  "rows": 2646,
+  "budget": 32,
+  "zero_occupied": true,
+  "encoding_integer_replay": true,
+  "command": [
+    ".cache/roundingsat/build-resume313/roundingsat",
+    ".cache/resume313-root/augmented2646.opb",
+    "--time-limit=300",
+    "--print-sol=1",
+    "--verbosity=1",
+    "--proof-log=.cache/resume313-root/augmented2646.pbp"
+  ],
+  "additional_rows": "experiments/omission-residual32-sixth-relaxed-2026-10-10/rows.json",
+  "additional_rows_sha256": "6b5693be0d1e1c19f4acd6090b4f25d88204a596a8daba93bbb089e43e7cbb7b",
+  "scope": "Native pseudo-Boolean exploratory search;48 additional geometry rows are pending Lean validation; no exclusion claimed.",
+  "seconds": 310.6665866250405,
+  "returncode": 4,
+  "status": [
+    "s TIMELIMIT"
+  ],
+  "proof_complete_unsat": false
+}

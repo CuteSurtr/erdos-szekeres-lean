@@ -27,6 +27,7 @@ FOURTH = ROOT/'experiments/omission-residual32-fourth-global-variants-2026-10-10
 SIXTH = ROOT/'experiments/omission-residual32-sixth-variants-2026-10-10'
 ADDED = ROOT/'experiments/omission-residual32-added-rows-2026-10-10'
 PRIMAL = ROOT/'experiments/omission-residual32-2598-primal-2026-10-10'
+RELAXED = ROOT/'experiments/omission-residual32-sixth-relaxed-2026-10-10'
 STANDARD = {'propext','Classical.choice','Quot.sound'}
 
 
@@ -47,7 +48,9 @@ def unit_plan():
     units = [(OLD,'Residual32ContextsProof.Catalog',
               ['OmissionResidual32Contexts.code_correct'])]
     for bundle, prefix in [(WITNESS,''),(COUPLED,''),(SIXTH,''),
-                           (FOURTH,'FourthGlobalProof.'),(ADDED,'')]:
+                           (FOURTH,'FourthGlobalProof.'),(ADDED,''),(RELAXED,'')]:
+        if bundle == RELAXED:
+            import_file('relaxed_preflight',bundle/'check.py').check()
         if bundle in (FOURTH,ADDED):
             manifest = json.loads((bundle/'manifest.json').read_text())
             import_file('row_preflight',bundle/'check.py').preflight(manifest)
@@ -86,7 +89,7 @@ def main():
         raise ValueError('Coupled core differs from regenerated clause semantics')
     for bundle, filename in [(WITNESS,'test_check.py'),(COUPLED,'test_check.py'),
                              (FOURTH,'test_preflight.py'),(ADDED,'test_preflight.py'),
-                             (PRIMAL,'test_check.py')]:
+                             (PRIMAL,'test_check.py'),(RELAXED,'test_check.py')]:
         test = bundle/filename
         if not test.is_file():
             raise ValueError(f'Missing expected finite controls: {test}')

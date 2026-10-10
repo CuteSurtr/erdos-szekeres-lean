@@ -1,0 +1,32 @@
+'ErdosSzekeres.Omission.CoupledCoreSixthRelaxed.cnf_refutation' depends on axioms: [propext]
+
+'ErdosSzekeres.Omission.CoupledTemplateSixthRelaxed.context_impossible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+'ErdosSzekeres.Omission.CoupledTemplateSixthRelaxed.check_sound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+'ErdosSzekeres.Omission.CoupledTemplateSixthRelaxed.exists_missing_index' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.CoupledTemplateSixthRelaxed.hole_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+
+'ErdosSzekeres.Omission.CoupledSixthRelaxedVariants.Part00.checked' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+'ErdosSzekeres.Omission.CoupledSixthRelaxedVariants.Part01.checked' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+'ErdosSzekeres.Omission.CoupledSixthRelaxedVariants.Part02.checked' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+'ErdosSzekeres.Omission.CoupledSixthRelaxedVariants.checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Omission.CoupledSixthRelaxedVariants.all_rows' depends on axioms: [propext, Classical.choice, Quot.sound]

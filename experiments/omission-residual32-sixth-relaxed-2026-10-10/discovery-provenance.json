@@ -1,0 +1,33 @@
+{
+  "scope": "Discovery history only. The retained augmented CNF, LRAT, generated semantics and literal maps are checked independently; original large solver inputs are not needed for proof reproduction.",
+  "original_core_reference": "experiments/omission-residual32-witness-coupled-2026-10-10/core13.json",
+  "original_core_sha256": "364bb7ec0bcdef8673b9d40656f1a4d53349b66d5144e497ccec1deb53df22ba",
+  "original_full_cnf_generator_reference": "experiments/omission-residual32-witness-coupled-2026-10-10/cnf_export.py",
+  "original_full_cnf_generator_sha256": "912f1bcda9030d9b232faa85b689606be2b656601edd1b93516dfdb216fbf0b6",
+  "first_attempt": {
+    "state_tests_before": 159,
+    "state_tests_after": 155,
+    "globally_nondominated_new_supports": 0,
+    "lean_checked": false
+  },
+  "augmented_attempt": {
+    "state_tests_before": 159,
+    "state_tests_after": 41,
+    "trimmed_variables": 361,
+    "trimmed_clauses": 1029,
+    "rup_steps": 1032,
+    "globally_nondominated_new_supports": 48,
+    "complete_csp_traversal_report": "augmented-variants.json",
+    "occupied_only_csp_report": "near-model-variants.json",
+    "lean_record": "kernel-check.json"
+  },
+  "discovery_scripts": {
+    "minimize.py": "4fa410a952c00d29500dac83321036c41b0775249e5a20aa73498a43327d4d46",
+    "trim.py": "26291f0639d63b347071542b380c3cca7fa4851c629636e912e55f26c7cc78bf",
+    "augment_minimize.py": "585dced5deacdf004827de47eb60b16c8560aae2b405a9db5c3ab7046f619600",
+    "trim_augmented.py": "b7f305e4bdfaf9bc1dcb20246d94f852aedc36cccc512b956baca4574b3aa1f2",
+    "discover.py": "c9e88f58c63cf536f5963b25d80e8dc87645d8a92f8105dc1237f35b6cd33ddd",
+    "discover_augmented.py": "fc57c2810d586a840b172ec32c322da5888b4eb7edc0c3d68a68384cb3b9c46b"
+  },
+  "note": "CSP exhaustion and optimization history are computational diagnostics, not Lean exhaustiveness or minimality theorems. No assertion of logical independence from combinations of existing rows."
+}

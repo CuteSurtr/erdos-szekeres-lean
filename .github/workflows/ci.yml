@@ -87,6 +87,11 @@ jobs:
         run: ERDOS_LEAN_EXPORT_TEST=1 lake env python3 -m unittest discover -s scripts -p test_additional_residual_rows.py -v
       - name: Check residual32 witness and geometric refinements
         run: lake env python3 scripts/check_residual32_continuation.py
+      - name: Replay residual32 finite search controls
+        run: |
+          python3 experiments/omission-residual32-primal-resume-2026-10-10/check.py
+          python3 -m unittest discover -s experiments/omission-residual32-sat-resume-2026-10-10 -p test_opb.py -v
+          python3 experiments/omission-residual32-sat-resume-2026-10-10/regenerate_opb.py --output .cache/residual32-ci-input.opb
       - name: Save verified project build cache
         if: success() && steps.project-cache.outputs.cache-hit != 'true'
         uses: actions/cache/save@v5

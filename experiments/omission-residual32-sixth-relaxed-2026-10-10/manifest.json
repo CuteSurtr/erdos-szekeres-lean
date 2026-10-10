@@ -1,0 +1,30 @@
+{
+  "scope": "Frozen41-test relaxed Sixth compatibility template and48literalmaps. Kernel status is recorded separately.",
+  "files": {
+    "SixthRelaxedCore.lean": "df44efa7015120da1b84e57ff4873d008dc61736fbacd3ea8f0b1e36cbcc0b44",
+    "SixthRelaxedProof/Data.lean": "d04276cb52b0929e8df682840961ba2028a7fb62f46c5251122acde03f7a9a21",
+    "SixthRelaxedProof/Part00.lean": "065129cb32a5987a0cfa4060dd6e471e1c6cd63eabb5aab78fcb4c471dd4c976",
+    "SixthRelaxedProof/Part01.lean": "a2dede5a82b1145cfed14adea3f07ce603a73d8a8a1cb04294138b62bcdb3200",
+    "SixthRelaxedProof/Part02.lean": "2378addd1197a486824a293ddcb1aa21e337148ca4e7e459781f9d7f2441fe4c",
+    "SixthRelaxedProof/Root.lean": "72eded078fb081631b5a295dfcb9d8d1347271dd191d101fffdbd39b8b24a5b1",
+    "SixthRelaxedTemplate.lean": "e2010e6fab2e3a98d951f49e4127507ba14d957f13288af31971bae04dcc97c0",
+    "SixthRelaxedTemplateCheck.lean": "c6a4f2ec9470f76ca35e5bf894fe25000d330d049088ca7f48b9474586610403",
+    "SixthRelaxedTemplateGeometry.lean": "c570fc82b58546e25d33113a8c353a04be6fe2c674bd03b93eba3e65d0211e17",
+    "augmented.cnf": "d33a269db4183775fbe86edff330be434521c02a715ec3702b37c3e91d35e51f",
+    "augmented.json": "355d9d2983b9cf5ed99ecbc62d06a75fff6b5eae76e2724476543faef1580934",
+    "augmented.lrat": "558c8a4f4eb4ac463236d73cde068950e90c6d49958a1915d74bf669435ea56f",
+    "generate.py": "0f566811e9cd82f81f7d2a1932cc28f534b2cf580816d17e65eda2ed26e36f8e",
+    "rows.json": "6b5693be0d1e1c19f4acd6090b4f25d88204a596a8daba93bbb089e43e7cbb7b"
+  },
+  "external_inputs": {
+    "scripts/export_omission_coupled_sized.py": "8a0a6390d289d243750a88609413c1d14288ed32b9b6c54396401345dbde6c14",
+    "scripts/export_omission_coupled_template_sized.py": "e56aba1530367f07fac5cdff044f6d2f06490dced44a10d168e9278e23c7b3b7",
+    "experiments/omission-residual32-sixth-variants-2026-10-10/SixthTemplateCheck.lean": "d75f2f8d0de868c3df65887255b49d8c120e403c01127665beaca963de36f5b0",
+    "experiments/omission-residual32-sixth-variants-2026-10-10/SixthTemplateGeometry.lean": "c57b4ca13d4d971924b90a8d357d2ecf737d166a7927f30ae7bf912787172027",
+    "experiments/omission-residual32-witness-coupled-2026-10-10/core13.json": "364bb7ec0bcdef8673b9d40656f1a4d53349b66d5144e497ccec1deb53df22ba",
+    "experiments/omission-residual32-2598-primal-2026-10-10/source-2598.json.gz": "02507ea568e78813d74620b7bc354bc64c921cfd6f5fd5dc40391425884c0f65"
+  },
+  "source_sha256": "01d4fde13ae0ca43427540a3d529e7e29b875936332af2cc4ef7d423edee469b",
+  "template_conditions": 41,
+  "literal_rows": 48
+}

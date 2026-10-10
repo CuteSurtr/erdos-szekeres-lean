@@ -1,0 +1,189 @@
+{
+  "scope": "Distinct-row near-models, not satisfying witnesses. Every candidate has32holes and fails exactly one of2646rows by1.",
+  "source": "experiments/omission-residual32-2598-primal-2026-10-10/source-2598.json.gz",
+  "source_sha256": "01d4fde13ae0ca43427540a3d529e7e29b875936332af2cc4ef7d423edee469b",
+  "additional_rows": "experiments/omission-residual32-sixth-relaxed-2026-10-10/rows.json",
+  "additional_rows_sha256": "6b5693be0d1e1c19f4acd6090b4f25d88204a596a8daba93bbb089e43e7cbb7b",
+  "candidates": [
+    {
+      "holes": [
+        12,
+        17,
+        25,
+        26,
+        27,
+        44,
+        45,
+        46,
+        47,
+        49,
+        55,
+        62,
+        69,
+        70,
+        71,
+        78,
+        88,
+        90,
+        97,
+        101,
+        104,
+        109,
+        111,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        124,
+        127,
+        133
+      ],
+      "violations": [
+        {
+          "row": 205,
+          "count": 0,
+          "rhs": 1
+        }
+      ],
+      "satisfied_rows": 2645,
+      "exact_set_and_bitset_replay": true
+    },
+    {
+      "holes": [
+        11,
+        25,
+        27,
+        34,
+        40,
+        43,
+        44,
+        45,
+        47,
+        50,
+        54,
+        66,
+        67,
+        69,
+        70,
+        71,
+        72,
+        82,
+        88,
+        96,
+        97,
+        99,
+        101,
+        104,
+        109,
+        115,
+        117,
+        124,
+        127,
+        132,
+        133,
+        139
+      ],
+      "violations": [
+        {
+          "row": 973,
+          "count": 5,
+          "rhs": 6
+        }
+      ],
+      "satisfied_rows": 2645,
+      "exact_set_and_bitset_replay": true
+    },
+    {
+      "holes": [
+        17,
+        23,
+        24,
+        25,
+        37,
+        44,
+        45,
+        46,
+        47,
+        54,
+        55,
+        58,
+        62,
+        70,
+        78,
+        81,
+        85,
+        88,
+        92,
+        99,
+        101,
+        106,
+        108,
+        109,
+        117,
+        118,
+        119,
+        126,
+        127,
+        129,
+        130,
+        133
+      ],
+      "violations": [
+        {
+          "row": 1075,
+          "count": 0,
+          "rhs": 1
+        }
+      ],
+      "satisfied_rows": 2645,
+      "exact_set_and_bitset_replay": true
+    },
+    {
+      "holes": [
+        12,
+        17,
+        25,
+        27,
+        39,
+        40,
+        44,
+        45,
+        57,
+        58,
+        59,
+        60,
+        64,
+        66,
+        67,
+        72,
+        78,
+        81,
+        88,
+        101,
+        103,
+        104,
+        107,
+        108,
+        109,
+        115,
+        117,
+        127,
+        132,
+        133,
+        138,
+        139
+      ],
+      "violations": [
+        {
+          "row": 995,
+          "count": 1,
+          "rhs": 2
+        }
+      ],
+      "satisfied_rows": 2645,
+      "exact_set_and_bitset_replay": true
+    }
+  ]
+}

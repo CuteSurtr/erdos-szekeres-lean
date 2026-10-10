@@ -1,0 +1,537 @@
+{
+  "scope": "Fresh standalone witness and geometric-row checks; no 313-point theorem.",
+  "lean": "Lean (version 4.24.0, arm64-apple-darwin23.6.0, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)",
+  "complete": true,
+  "modules": {
+    "Residual32ContextsProof.Catalog": {
+      "source": "experiments/omission-residual32-context-certificates-2026-10-10/Residual32ContextsProof/Catalog.lean",
+      "source_sha256": "053f35ea49b7ec2b95818e96ab18bcd7628c09190d0e97bfc1552f3937b606bd",
+      "exit": 0,
+      "seconds": 55.957,
+      "axioms": {
+        "OmissionResidual32Contexts.code_correct": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "Witness": {
+      "source": "experiments/omission-residual32-case4-2026-10-10/Witness.lean",
+      "source_sha256": "d08045fbc41158704a4a50ab7ea0c61a5a6b99cf629766c5ecb1e74dc2bea518",
+      "exit": 0,
+      "seconds": 26.63,
+      "axioms": {
+        "OmissionResidual32Case4.missing_card": [
+          "Quot.sound",
+          "propext"
+        ],
+        "OmissionResidual32Case4.all_rows": [
+          "Quot.sound",
+          "propext"
+        ],
+        "OmissionResidual32Case4.fixed_context": [
+          "Quot.sound",
+          "propext"
+        ],
+        "OmissionResidual32Case4.zero_occupied": [
+          "Quot.sound",
+          "propext"
+        ],
+        "OmissionResidual32Case4.holes_boolean": [
+          "Quot.sound",
+          "propext"
+        ],
+        "OmissionResidual32Case4.sum_holes": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "OmissionResidual32Case4.total_holes": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "OmissionResidual32Case4.allows_thirty_two_holes": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "OmissionResidual32Case4.no_universal_thirty_three_hole_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "ExistingFamilies": {
+      "source": "experiments/omission-residual32-case4-2026-10-10/ExistingFamilies.lean",
+      "source_sha256": "9b5157153ad38d4c2199fa5672231e64c63e29b246eb5941913e8bddb12f4761",
+      "exit": 0,
+      "seconds": 8.842,
+      "axioms": {
+        "OmissionResidual32Case4.all_first_variants": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "OmissionResidual32Case4.all_second_variants": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "OmissionResidual32Case4.all_third_variants": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "OmissionResidual32Case4.all_fourth_variants": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "OmissionResidual32Case4.all_fifth_variants": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "OmissionResidual32Case4.later_nine_rows": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "LeanCore": {
+      "source": "experiments/omission-residual32-witness-coupled-2026-10-10/LeanCore.lean",
+      "source_sha256": "d77d900f228f2f91e71f39b1af303c59c765c5eefaa978b8aa8bc45050168133",
+      "exit": 0,
+      "seconds": 27.002,
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledCoreSixth.context_impossible": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "Geometry": {
+      "source": "experiments/omission-residual32-witness-coupled-2026-10-10/Geometry.lean",
+      "source_sha256": "9b47934dc5e8ab8ad85a7697f03e32f1c3eb3c130e397c04f211734107bc27a3",
+      "exit": 0,
+      "seconds": 2.274,
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledCoreSixth.states_injective": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ErdosSzekeres.Omission.CoupledCoreSixth.exists_missing_state": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ErdosSzekeres.Omission.CoupledCoreSixth.hole_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ErdosSzekeres.Omission.CoupledCoreSixth.witness_violates_coupled": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ErdosSzekeres.Omission.CoupledCoreSixth.strict_strengthening": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ErdosSzekeres.Omission.CoupledCoreSixth.countermodel_not_realizable": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "TemplateRow": {
+      "source": "experiments/omission-residual32-witness-coupled-2026-10-10/TemplateRow.lean",
+      "source_sha256": "f746aa1d505bec64851ef8df8429b195676319beaeb20a16c128a7acd86ffebc",
+      "exit": 0,
+      "seconds": 4.311,
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledFourthWitnessVariant.checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ErdosSzekeres.Omission.CoupledFourthWitnessVariant.hole_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ErdosSzekeres.Omission.CoupledFourthWitnessVariant.witness_violates_row": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ErdosSzekeres.Omission.CoupledFourthWitnessVariant.strict_strengthening": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "SixthTemplate": {
+      "source": "experiments/omission-residual32-sixth-variants-2026-10-10/SixthTemplate.lean",
+      "source_sha256": "676880f8f670f163060ecb109fa453c7e578da9c39afa5914488eee51796e239",
+      "exit": 0,
+      "seconds": 18.935,
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledTemplateSixth.context_impossible": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "SixthTemplateCheck": {
+      "source": "experiments/omission-residual32-sixth-variants-2026-10-10/SixthTemplateCheck.lean",
+      "source_sha256": "d75f2f8d0de868c3df65887255b49d8c120e403c01127665beaca963de36f5b0",
+      "exit": 0,
+      "seconds": 1.58,
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledTemplateSixth.check_sound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "SixthTemplateGeometry": {
+      "source": "experiments/omission-residual32-sixth-variants-2026-10-10/SixthTemplateGeometry.lean",
+      "source_sha256": "c57b4ca13d4d971924b90a8d357d2ecf737d166a7927f30ae7bf912787172027",
+      "exit": 0,
+      "seconds": 1.996,
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledTemplateSixth.exists_missing_index": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ErdosSzekeres.Omission.CoupledTemplateSixth.hole_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "FourthGlobalProof.Data": {
+      "source": "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Data.lean",
+      "source_sha256": "2f123817e11626fc8184334a3e8c52cac4ee4e9c27fe7c08fb3e178c43458093",
+      "exit": 0,
+      "seconds": 2.401,
+      "axioms": {}
+    },
+    "FourthGlobalProof.Part00": {
+      "source": "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part00.lean",
+      "source_sha256": "08c9ed535f13d9ab62af7dd71eef124d446407478422a2003a60df6b44c8c309",
+      "exit": 0,
+      "seconds": 41.921,
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledFourthGlobalVariants.Part00.checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "FourthGlobalProof.Part01": {
+      "source": "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part01.lean",
+      "source_sha256": "b74dccc5619d60b9a2f6cd0f180aea20fc68f71b834b56f8d84b7869213704d1",
+      "exit": 0,
+      "seconds": 40.665,
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledFourthGlobalVariants.Part01.checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "FourthGlobalProof.Part02": {
+      "source": "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part02.lean",
+      "source_sha256": "77c2563bd2ef9cefa2246c83dfffa3fa207877d4c68e0a371afa3afe690f21da",
+      "exit": 0,
+      "seconds": 40.831,
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledFourthGlobalVariants.Part02.checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "FourthGlobalProof.Part03": {
+      "source": "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part03.lean",
+      "source_sha256": "f94945db6262a0d26355b0497e315b4e0addc546c0dcd0d948c82c20f9c54045",
+      "exit": 0,
+      "seconds": 40.302,
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledFourthGlobalVariants.Part03.checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "FourthGlobalProof.Part04": {
+      "source": "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part04.lean",
+      "source_sha256": "0f0b833f757803372923781dd7b113c4c824b0cd3dd5da0a3502e286561f323c",
+      "exit": 0,
+      "seconds": 40.537,
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledFourthGlobalVariants.Part04.checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "FourthGlobalProof.Part05": {
+      "source": "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part05.lean",
+      "source_sha256": "ae279c587c29eccdec1555118e3f5cc2324031605176695a60c8de21ce4e8d52",
+      "exit": 0,
+      "seconds": 41.304,
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledFourthGlobalVariants.Part05.checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "FourthGlobalProof.Part06": {
+      "source": "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part06.lean",
+      "source_sha256": "921850417f665a8a2b5b0a4ea54b63215a894bd25f70eb965ceda6a7052be8ab",
+      "exit": 0,
+      "seconds": 41.39,
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledFourthGlobalVariants.Part06.checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "FourthGlobalProof.Part07": {
+      "source": "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part07.lean",
+      "source_sha256": "2579691f46928121b67a2aaea58fb75b5f1f4b010b70964ea26eba8451959c38",
+      "exit": 0,
+      "seconds": 42.149,
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledFourthGlobalVariants.Part07.checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "FourthGlobalProof.Root": {
+      "source": "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Root.lean",
+      "source_sha256": "734435b2469547dabc1c5c446d8a46446ef9eb5e1515d52414a97a286485a8a0",
+      "exit": 0,
+      "seconds": 3.128,
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledFourthGlobalVariants.checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ErdosSzekeres.Omission.CoupledFourthGlobalVariants.all_rows": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "AddedRows": {
+      "source": "experiments/omission-residual32-added-rows-2026-10-10/AddedRows.lean",
+      "source_sha256": "8ccbbbc7e177dacb8808d74acd92185ed34ba6d156f62e1f8d4d2839e31b22a0",
+      "exit": 0,
+      "seconds": 6.768,
+      "axioms": {
+        "ErdosSzekeres.Omission.Residual32AddedRows.literal_binding": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ErdosSzekeres.Omission.Residual32AddedRows.all_rows": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "SixthRelaxedCore": {
+      "source": "experiments/omission-residual32-sixth-relaxed-2026-10-10/SixthRelaxedCore.lean",
+      "source_sha256": "df44efa7015120da1b84e57ff4873d008dc61736fbacd3ea8f0b1e36cbcc0b44",
+      "exit": 0,
+      "seconds": 5.234,
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledCoreSixthRelaxed.cnf_refutation": [
+          "propext"
+        ]
+      }
+    },
+    "SixthRelaxedTemplate": {
+      "source": "experiments/omission-residual32-sixth-relaxed-2026-10-10/SixthRelaxedTemplate.lean",
+      "source_sha256": "e2010e6fab2e3a98d951f49e4127507ba14d957f13288af31971bae04dcc97c0",
+      "exit": 0,
+      "seconds": 60.272,
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledTemplateSixthRelaxed.context_impossible": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "SixthRelaxedTemplateCheck": {
+      "source": "experiments/omission-residual32-sixth-relaxed-2026-10-10/SixthRelaxedTemplateCheck.lean",
+      "source_sha256": "c6a4f2ec9470f76ca35e5bf894fe25000d330d049088ca7f48b9474586610403",
+      "exit": 0,
+      "seconds": 1.494,
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledTemplateSixthRelaxed.check_sound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "SixthRelaxedTemplateGeometry": {
+      "source": "experiments/omission-residual32-sixth-relaxed-2026-10-10/SixthRelaxedTemplateGeometry.lean",
+      "source_sha256": "c570fc82b58546e25d33113a8c353a04be6fe2c674bd03b93eba3e65d0211e17",
+      "exit": 0,
+      "seconds": 1.951,
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledTemplateSixthRelaxed.exists_missing_index": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ErdosSzekeres.Omission.CoupledTemplateSixthRelaxed.hole_bound": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "SixthRelaxedProof.Data": {
+      "source": "experiments/omission-residual32-sixth-relaxed-2026-10-10/SixthRelaxedProof/Data.lean",
+      "source_sha256": "d04276cb52b0929e8df682840961ba2028a7fb62f46c5251122acde03f7a9a21",
+      "exit": 0,
+      "seconds": 1.739,
+      "axioms": {}
+    },
+    "SixthRelaxedProof.Part00": {
+      "source": "experiments/omission-residual32-sixth-relaxed-2026-10-10/SixthRelaxedProof/Part00.lean",
+      "source_sha256": "065129cb32a5987a0cfa4060dd6e471e1c6cd63eabb5aab78fcb4c471dd4c976",
+      "exit": 0,
+      "seconds": 12.19,
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledSixthRelaxedVariants.Part00.checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "SixthRelaxedProof.Part01": {
+      "source": "experiments/omission-residual32-sixth-relaxed-2026-10-10/SixthRelaxedProof/Part01.lean",
+      "source_sha256": "a2dede5a82b1145cfed14adea3f07ce603a73d8a8a1cb04294138b62bcdb3200",
+      "exit": 0,
+      "seconds": 13.198,
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledSixthRelaxedVariants.Part01.checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "SixthRelaxedProof.Part02": {
+      "source": "experiments/omission-residual32-sixth-relaxed-2026-10-10/SixthRelaxedProof/Part02.lean",
+      "source_sha256": "2378addd1197a486824a293ddcb1aa21e337148ca4e7e459781f9d7f2441fe4c",
+      "exit": 0,
+      "seconds": 14.091,
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledSixthRelaxedVariants.Part02.checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    },
+    "SixthRelaxedProof.Root": {
+      "source": "experiments/omission-residual32-sixth-relaxed-2026-10-10/SixthRelaxedProof/Root.lean",
+      "source_sha256": "72eded078fb081631b5a295dfcb9d8d1347271dd191d101fffdbd39b8b24a5b1",
+      "exit": 0,
+      "seconds": 1.958,
+      "axioms": {
+        "ErdosSzekeres.Omission.CoupledSixthRelaxedVariants.checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "ErdosSzekeres.Omission.CoupledSixthRelaxedVariants.all_rows": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      }
+    }
+  },
+  "seconds": 601.094,
+  "gate_sha256": "b535f14edde08dc275730ffbd8fa179f0447dca8e48805f44fb213d06c67badd",
+  "axioms_sha256": "ba52d59ddcc81f17d3062aec532a94f021969374cf980679f6650b3328177ae5",
+  "python_suite": {
+    "tests": 115,
+    "passed": 92,
+    "skipped": 23
+  },
+  "independent_local_component_replay": {
+    "catalog_rows": [
+      2598,
+      2646
+    ],
+    "checker_sha256": "1d5831c77b2b96dfcc90b0daddaad1ce3108bd6a6af34894eef9596455d7fc81",
+    "complete": true,
+    "component_directed_edges": 3650,
+    "component_near_models": 26,
+    "component_removable_holes": 0,
+    "component_vertices": 306,
+    "near_model_failed_rows": [
+      205,
+      973,
+      1075,
+      995
+    ],
+    "negative_controls_rejected": [
+      "disconnected closed union",
+      "omitted component vertex",
+      "occupied state0 changed",
+      "false32-hole witness",
+      "partial34 search called exhaustive",
+      "modified source bytes",
+      "incorrect complete edge count"
+    ],
+    "new_distinct_row_near_models": 3,
+    "partial34_search_exhausted": false,
+    "scope": "Exact local Boolean component and candidate replay only; no global32 exclusion or geometric realization.",
+    "source2598_sha256": "01d4fde13ae0ca43427540a3d529e7e29b875936332af2cc4ef7d423edee469b",
+    "source2646_sha256": "151ea1bfb175f6507d910521eb96961c82b54add2fb7e49e13b864b87241123e"
+  },
+  "shared_counter_control_tests_passed": 3,
+  "opb_serialization_control_tests_passed": 1
+}

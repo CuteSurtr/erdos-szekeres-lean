@@ -7,6 +7,43 @@ hashes are normalized. Earlier GitHub run/commit links refer to the original
 private repository and may not resolve in the public replacement. New hosted
 results are available in the [CI workflow](https://github.com/CuteSurtr/erdos-szekeres-lean/actions/workflows/ci.yml).
 
+## Relaxed Sixth template and resumed 313 search — 10 October 2026
+
+The [new geometric bundle](../experiments/omission-residual32-sixth-relaxed-2026-10-10/README.md)
+proves a 41-condition template and 48 concrete necessary omission rows for
+actual residual configurations. Its [kernel record](../experiments/omission-residual32-sixth-relaxed-2026-10-10/kernel-check.json)
+checks nine modules and ten audited declarations; its
+[axiom output](../experiments/omission-residual32-sixth-relaxed-2026-10-10/axioms.txt)
+contains only the standard Lean axioms. The independent finite checker
+replays 1,032 RUP steps, all literal maps and the exact 2,646-row catalog
+extension; two negative controls reject corrupted certificates or maps.
+
+The portable continuation gate now includes **29 modules and 53 audit roots**.
+The [fresh combined build record](validation/residual32-2646-checks-2026-10-10.json)
+and [complete axiom output](validation/residual32-2646-axioms-2026-10-10.txt)
+identify this checkpoint. This rebuild uses fresh objects and rejects compiler
+warnings, proof placeholders, custom axioms and native evaluation in every
+compiled source. The maintained library and its 571-root audit are unchanged.
+
+The [local-search checker](../experiments/omission-residual32-primal-resume-2026-10-10/check.py)
+independently proves by integer replay that the saved 306-vertex, 3,650-edge
+33-hole graph is one entire connected component under single swaps with
+state zero occupied. It starts from one seed and checks closure and
+reachability. No vertex permits removal of a hole. Seven negative controls
+include a disconnected union that must not be mistaken for one component.
+The three additional 32-hole near-models each fail one row. The search over
+five million 34-hole assignments was capped and is not exhaustive. These
+are Python checks of finite search evidence, not Lean population bounds.
+
+The [SAT/PB bundle](../experiments/omission-residual32-sat-resume-2026-10-10/README.md)
+records two timed-out SAT runs and one timed-out native pseudo-Boolean run.
+Three local counter-encoding tests and one integer-serialization test pass;
+the OPB generator reproduces the saved input hash. CI also replays the local
+component, the serialization test, and the exact OPB input without installing
+a solver. The ordinary Python suite reports 115 tests: 92 pass and 23 optional
+tests are skipped. No global 32-hole exclusion, geometric realization, or 313-point
+theorem is claimed by any of these search diagnostics.
+
 ## Residual32 witness and geometric strengthening — 10 October 2026
 
 The old 2,469-row relaxation now has a Lean-checked 32-hole witness, so no

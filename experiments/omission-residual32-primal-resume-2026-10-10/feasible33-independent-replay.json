@@ -1,0 +1,37 @@
+{
+  "scope": "Independent exact integer replay of the complete feasible33 single-exchange component containing eight row205 repairs; no global32 exclusion and no geometric realization claim.",
+  "source": "experiments/omission-residual32-2598-primal-2026-10-10/source-2598.json.gz",
+  "source_sha256": "01d4fde13ae0ca43427540a3d529e7e29b875936332af2cc4ef7d423edee469b",
+  "additional_rows": "experiments/omission-residual32-sixth-relaxed-2026-10-10/rows.json",
+  "additional_rows_sha256": "6b5693be0d1e1c19f4acd6090b4f25d88204a596a8daba93bbb089e43e7cbb7b",
+  "same_graphs": true,
+  "reports": [
+    {
+      "catalog": "base2598",
+      "rows": 2598,
+      "vertices": 306,
+      "directed_edges": 3650,
+      "exhausted": true,
+      "removable_holes": 0,
+      "single_deficit_rows": [
+        205
+      ],
+      "single_deficit_models": 26,
+      "seconds": 0.38093275006394833
+    },
+    {
+      "catalog": "augmented2646",
+      "rows": 2646,
+      "vertices": 306,
+      "directed_edges": 3650,
+      "exhausted": true,
+      "removable_holes": 0,
+      "single_deficit_rows": [
+        205
+      ],
+      "single_deficit_models": 26,
+      "seconds": 0.3867450829129666
+    }
+  ],
+  "script_sha256": "e3ba6b6fb5abce91065546a55d60e7024a24d0be2881a3206ce5b24cf9c323ac"
+}

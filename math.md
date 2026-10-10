@@ -1494,13 +1494,109 @@ rows followed by these 129 rows. The archived JSON's ordered correspondence
 is separately checked against these Lean literals; it is not silently assumed
 from matching family names.
 
-### R.5. The precise remaining proposition
+### R.5. A relaxed Sixth obstruction and 48 further rows
+
+Retain the universe $`U`$, the directed domains $`D_\sigma`$, and the
+positive-orientation test of Section F.2. Write $`P(A,B,C)`$ for the finite
+predicate `CycleSigns.CheckTriple ResidualDomains.computedTable A B C = true`.
+Its geometric soundness was established in that section; it tests all six
+possible chronological orders, without assuming that catalog indices are
+chronological indices.
+
+For an injection $`\sigma:\{0,\ldots,12\}\to U`$, define the following
+three finite sets of tests:
+
+```math
+ E=\{(1,0),(10,6),(12,10),(12,11)\},
+ \qquad
+ D=\{(10,11,a,b):a\in\{2,3\},\ b\in\{4,5,6\}\}.
+```
+
+```math
+\begin{aligned}
+ Q=\{& (0,1,2),(0,1,7),(0,11,7),(1,2,3),(1,2,7),\\
+     & (1,11,7),(1,12,11),(2,3,6),(2,3,7),(2,4,5),\\
+     & (2,4,10),(2,11,7),(3,6,7),(3,6,10),(3,11,7),\\
+     & (4,5,8),(4,5,10),(4,12,10),(5,8,9),(5,8,10),\\
+     & (5,12,10),(6,10,7),(6,11,7),(6,12,10),(7,10,11),\\
+     & (8,9,10),(8,9,12),(8,12,10),(9,12,10),(9,12,11),(10,12,11)\}.
+\end{aligned}
+```
+
+Call $`\sigma`$ Sixth-compatible if
+
+```math
+\begin{aligned}
+ &(i,j)\in E \Longrightarrow D_\sigma(i,j)=\varnothing,\\
+ &(i,j,a,b)\in D \Longrightarrow (a,b)\notin D_\sigma(i,j),\\
+ &(i,j,k)\in Q \Longrightarrow P(\sigma(i),\sigma(j),\sigma(k)).
+\end{aligned}
+```
+
+This is exactly `CoupledTemplateSixthRelaxed.Compatible` in
+[SixthRelaxedTemplate.lean](experiments/omission-residual32-sixth-relaxed-2026-10-10/SixthRelaxedTemplate.lean):
+four empty-domain tests, six excluded-label tests, and 31 orientation tests.
+It is a different predicate from Fourth-compatibility in Proposition R.5.
+
+**Proposition R.6 (relaxed Sixth transport).** Every injective Sixth-compatible
+map satisfies
+
+```math
+ |\sigma(\{0,\ldots,12\})\setminus O(c)|\ge1
+ \qquad\text{(R7)}
+```
+
+for every residual configuration $`c`$ with no six-cap, no convex octagon,
+and no six-cup/five-cap junction.
+
+**Proof.** If every state in the image were occupied, select an owner for
+each. Injectivity of $`\sigma`$ makes the owners distinct, and general position
+makes every determinant on three owners nonzero. This constructs the
+`Coupled.Context 13 n σ` used by the clause interpretation of Section R.3.
+The 41 compatibility tests justify the retained state-dependent clauses;
+order, rank growth, orientation identities and octagon exclusion justify the
+other clauses. The exact resulting formula has 361 Boolean variables and
+1,029 clauses. Its retained 1,032-step RUP refutation ends in the empty clause.
+Lean checks both the interpretation and the refutation. Therefore not all
+13 states are occupied, giving (R7). ∎
+
+The correspondence is `CoupledCoreSixthRelaxed.cnf_refutation` in
+[SixthRelaxedCore.lean](experiments/omission-residual32-sixth-relaxed-2026-10-10/SixthRelaxedCore.lean),
+`CoupledTemplateSixthRelaxed.context_impossible` in the template module, and
+`exists_missing_index` and `hole_bound` in
+[SixthRelaxedTemplateGeometry.lean](experiments/omission-residual32-sixth-relaxed-2026-10-10/SixthRelaxedTemplateGeometry.lean).
+All namespaces have prefix `ErdosSzekeres.Omission`.
+
+Let $`\sigma_0,\ldots,\sigma_{47}`$ be the literal maps in
+[SixthRelaxedProof/Data.lean](experiments/omission-residual32-sixth-relaxed-2026-10-10/SixthRelaxedProof/Data.lean),
+in the order of `CoupledSixthRelaxedVariants.maps`, and put
+$`V_r=\sigma_r(\{0,\ldots,12\})`$. In
+[SixthRelaxedProof/Root.lean](experiments/omission-residual32-sixth-relaxed-2026-10-10/SixthRelaxedProof/Root.lean),
+`checked` proves injectivity and Sixth-compatibility for each map, and
+`all_rows` proves
+
+```math
+ \forall r<48,\qquad \sum_{i\in V_r}h_i\ge1
+ \quad\text{for }h_i=\mathbf1_{U\setminus O(c)}(i).
+ \qquad\text{(R8)}
+```
+
+Define $`\mathcal A_{2646}`$ to be $`\mathcal A_{2598}`$ followed by these
+48 rows, in that order. The independent checker binds the archived
+[2,646-row source](experiments/omission-residual32-sixth-relaxed-2026-10-10/source-2646.json.gz)
+to the unchanged 2,598-row prefix and the exact Lean maps. Its decompressed
+SHA-256 is `151ea1bfb175f6507d910521eb96961c82b54add2fb7e49e13b864b87241123e`.
+None of the 48 rows is implied by any single old row, as checked by the
+finite support/demand comparison. No assertion of independence from the
+conjunction of the old rows is made.
+
+### R.6. The precise remaining proposition
 
 The sufficient arithmetic statement for the present residual route is
 
 ```math
  \forall h:U\to\{0,1\},\qquad
- \mathcal A_{2598}(h)\Longrightarrow\sum_{i\in U}h_i\ge33.
+ \mathcal A_{2646}(h)\Longrightarrow\sum_{i\in U}h_i\ge33.
  \qquad\text{(OPEN)}
 ```
 
@@ -1511,17 +1607,19 @@ $`\mathsf F(313,8)`$, because $`190+121+2=313`$. A statement restricted to
 $`h_0=0`$ would also suffice for nonempty residual configurations, using the
 separate proved occupation-of-zero lemma and treating the empty case directly.
 
-The bounded searches recorded in the
+The earlier bounded searches recorded in the
 [2,598-row bundle](experiments/omission-residual32-2598-primal-2026-10-10/README.md)
 provide neither a feasible 32-hole assignment nor a complete exclusion. The
 best saved candidate violates old row 205, whose support is
 $`\{24,31,34,40,61,68,73,100\}`$ and whose demand is one. Timeouts and failed
-local repairs do not establish (OPEN). Cases 2 and 7 of the earlier search
+local repairs do not establish (OPEN). Subsequent bounded SAT and native
+pseudo-Boolean runs on the 2,646 rows also returned without a model or a
+complete refutation. Cases 2 and 7 of the earlier search
 remain partial; Proposition R.2 shows why closing those cases alone could
 not prove the old relaxation sufficient.
 
 There is no remaining unproved geometric premise in the completed 314 theorem.
-For the current 2,598-row route, the existing row families already have
+For the current 2,646-row route, the existing row families already have
 geometric necessity proofs. A successful continuation would still require a
 complete arithmetic certificate, kernel checking of it, literal catalog
 identification and final composition. A new feasible 32-hole assignment would
@@ -1534,8 +1632,9 @@ All finished results discussed above are proved without `sorry`, `admit`,
 custom mathematical axioms, or `native_decide`. The audited declarations depend
 only on the standard Lean axioms `propext`, `Classical.choice` and `Quot.sound`
 (or a subset). The maintained-library audit covers 571 named declarations;
-the latest standalone residual continuation has a separate gate checking 20
-modules and 43 audit roots. The large arithmetic trees for 314 have their own
+the standalone residual continuation has a separate gate checking 29
+modules and 53 audit roots, including the nine new modules and ten audit roots
+for Proposition R.6. The large arithmetic trees for 314 have their own
 complete kernel records, linked in Section F.5. They are distinct from the
 maintained-library CI build. A passing discovery script is not substituted
 for any of these proofs. The [validation ledger](docs/VALIDATION.md) supplies

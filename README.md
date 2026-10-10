@@ -191,8 +191,14 @@ is also proved for actual configurations by
 The [exact 129-row addition](experiments/omission-residual32-added-rows-2026-10-10/README.md)
 is geometrically bound by `ErdosSzekeres.Omission.Residual32AddedRows.all_rows`.
 The [generic Sixth template](experiments/omission-residual32-sixth-variants-2026-10-10/README.md)
-is proved separately. These strengthen the geometric toolbox; they do not yet
-prove the 313-point theorem.
+is proved separately. A [relaxed Sixth template](experiments/omission-residual32-sixth-relaxed-2026-10-10/README.md)
+now requires only 41 finite compatibility tests. Its 48 literal maps give
+48 further geometric rows, proved by
+`ErdosSzekeres.Omission.CoupledSixthRelaxedVariants.all_rows`.
+The 1,029-clause refutation has 1,032 kernel-checked RUP steps. These additions
+bring the current residual search to **2,646 geometrically justified rows**;
+they do not yet prove the 313-point theorem. None of the 48 rows follows from
+a single previous row; independence from the entire earlier system is not claimed.
 
 ## Verification
 
@@ -233,10 +239,15 @@ previously had eight pending frontier leaves within three original contexts.
 Continuing case 4 produced the old catalog's 32-hole witness above; cases 2
 and 7 remain partial. Eleven earlier contexts have Lean proofs and ten more
 have integer-replayed subtrees, but no complete old-catalog exclusion is
-possible. The new search catalog adds 129 geometric rows, for **2,598 rows**
-in total. Bounded integer and repair searches are inconclusive: the best
-recorded 32-hole near-model still violates one row. No exclusion certificate
-or feasible assignment for all 2,598 rows has been established.
+possible. The current search catalog adds 177 geometric rows, for **2,646 rows**
+in total. Bounded SAT, native pseudo-Boolean and repair searches remain
+inconclusive. Several 32-hole near-models each violate one row; none is a
+feasible assignment. No complete 32-hole exclusion certificate has been found.
+The [local search replay](experiments/omission-residual32-primal-resume-2026-10-10/README.md)
+verifies a complete 306-vertex component of feasible 33-hole assignments and
+the new near-models. The [SAT/PB comparison](experiments/omission-residual32-sat-resume-2026-10-10/README.md)
+records the bounded global searches and their encoding checks. These are
+computational diagnostics, separate from the Lean geometric proofs.
 
 The [current work estimate](docs/ES8_REMAINING.md) separates these stronger
 targets from the completed 314-point result. The earlier complete 315-, 316-
