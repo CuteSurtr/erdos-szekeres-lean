@@ -64,6 +64,45 @@ The writing pass does not modify Lean proof sources or certificate inputs.
 A fresh maintained-library axiom audit passed for all **571** named
 declarations, with only the standard Lean axioms allowed.
 
-Publication must not be described as privacy-clean merely because no secret
-token was found: the historical local-path finding above requires an explicit
-disposition before changing repository visibility.
+## Disposition: sanitized history
+
+The repository owner selected removal of the historical paths before
+publication. The local workspace prefix was replaced with
+`/workspace/erdos-szekeres-lean` throughout the retained history. All dependent
+SHA-256 records were updated, including the eight canonical JSON binding
+fingerprints. These are path-normalized copies of the recorded checks, not
+claims that the old timed builds were rerun.
+
+The sanitized baseline is `6c04015cb033674ce948418aa2cb80eff75f2568`:
+
+- All 42 commits up to the documentation/license preparation are retained;
+  41 commit IDs change. Authors, committers, dates, messages and parent
+  relationships are preserved.
+- 34 directly affected current files and 19 dependent metadata/documentation
+  files change. All Lean and Python sources, compressed archives, CNF/LRAT
+  certificates and JSON numerical/Boolean data remain unchanged.
+- Every stored object in the isolated rewritten repository was scanned;
+  no original local-home/workspace prefix remains. All 61 replaced original
+  blobs are absent from that repository, and strict Git integrity checks pass.
+- Independent validation passes 18 checks, including all eight canonical
+  fingerprints, 98 packaging files, the final 314 profile and source bindings,
+  1,807 archived Lean sources with saved audits, and the current residual
+  continuation's finite checks. The broader source scan inspected 3,423 Lean
+  payloads, including archives, with no admission/native-evaluation matches.
+
+A force-push by itself does not remove GitHub's cached old commit views.
+The publication therefore uses a fresh repository containing only the sanitized
+graph under the original `CuteSurtr/erdos-szekeres-lean` name. The original
+repository is retained privately as
+`erdos-szekeres-lean-private-archive-2026-10-10`; its old Actions logs and
+unsanitized objects are not transferred. This preserves a private recovery
+copy without making the old GitHub object history public. See
+[GitHub's history-removal guidance](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository).
+
+Earlier hosted-CI links in historical validation notes refer to the original
+repository and may not resolve in the replacement. The stored source hashes,
+proof archives and normalized audit records remain available for reproduction.
+New hosted checks appear in the
+[public repository's CI workflow](https://github.com/CuteSurtr/erdos-szekeres-lean/actions/workflows/ci.yml).
+Future saved local audit output should likewise normalize machine-specific
+paths before it is committed.

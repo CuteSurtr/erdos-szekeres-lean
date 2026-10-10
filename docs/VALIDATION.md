@@ -1,5 +1,12 @@
 # Verification records
 
+The [publication audit](PUBLICATION_AUDIT.md#disposition-sanitized-history)
+documents the removal of local machine paths from Git history. Proof sources
+and certificate data are unchanged; path-bearing records and their dependent
+hashes are normalized. Earlier GitHub run/commit links refer to the original
+private repository and may not resolve in the public replacement. New hosted
+results are available in the [CI workflow](https://github.com/CuteSurtr/erdos-szekeres-lean/actions/workflows/ci.yml).
+
 ## Residual32 witness and geometric strengthening — 10 October 2026
 
 The old 2,469-row relaxation now has a Lean-checked 32-hole witness, so no
