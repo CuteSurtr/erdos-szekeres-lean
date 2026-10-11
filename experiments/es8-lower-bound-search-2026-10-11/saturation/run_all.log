@@ -1,0 +1,16 @@
+trials=80 points_tested=480 mismatches=0 histogram_of_true_values={4: 31, 5: 151, 6: 209, 7: 72, 8: 16, 9: 1}
+{"trials": 40, "fails": 0, "total_faces_compared": 29115, "total_bad_faces_matched": 20058}
+{"trials": 40, "fails": 0, "total_faces_compared": 30874, "total_bad_faces_matched": 21715}
+{"N": 8, "K": 5, "lines": 28, "parallel_pairs": 6, "nonS_vertex_pairs": 204, "nonS_distinct_vertices": 202, "max_lines_through_nonS_vertex": 3, "faces_euler": 280, "faces_hit_by_valid_candidates": 280, "candidates": 928, "invalid_candidates": 0, "valid_candidates": 928, "cache_hits": 885, "dp_found": 43, "dp_none": 0, "bad_candidates": 0, "cpu_seconds": 0.0}
+{"N": 8, "K": 5, "certificates": 43, "E": 489, "V": 210, "faces_E_minus_V_plus_1": 280, "candidates": 1844, "distinct_faces_hit": 280, "uncovered_candidates": 0, "uncovered_distinct_faces": 0, "cpu_seconds": 0.0}
+{"N": 16, "K": 6, "lines": 120, "parallel_pairs": 55, "nonS_vertex_pairs": 5405, "nonS_distinct_vertices": 5390, "max_lines_through_nonS_vertex": 4, "faces_euler": 5742, "faces_hit_by_valid_candidates": 5742, "candidates": 22100, "invalid_candidates": 2, "valid_candidates": 22098, "cache_hits": 21861, "dp_found": 237, "dp_none": 0, "bad_candidates": 0, "cpu_seconds": 0.0}
+{"N": 16, "K": 6, "certificates": 237, "E": 11147, "V": 5406, "faces_E_minus_V_plus_1": 5742, "candidates": 44108, "distinct_faces_hit": 5742, "uncovered_candidates": 0, "uncovered_distinct_faces": 0, "cpu_seconds": 0.0}
+{"N": 32, "K": 7, "lines": 496, "parallel_pairs": 388, "nonS_vertex_pairs": 107492, "nonS_distinct_vertices": 107378, "max_lines_through_nonS_vertex": 10, "faces_euler": 108875, "faces_hit_by_valid_candidates": 108875, "candidates": 431952, "invalid_candidates": 10, "valid_candidates": 431942, "cache_hits": 429648, "dp_found": 2294, "dp_none": 0, "bad_candidates": 0, "cpu_seconds": 0.5}
+{"N": 32, "K": 7, "certificates": 2294, "E": 216284, "V": 107410, "faces_E_minus_V_plus_1": 108875, "candidates": 863152, "distinct_faces_hit": 108875, "uncovered_candidates": 0, "uncovered_distinct_faces": 0, "cpu_seconds": 1.3}
+{"N": 64, "K": 8, "lines": 2016, "parallel_pairs": 2098, "nonS_vertex_pairs": 1904030, "nonS_distinct_vertices": 1903444, "max_lines_through_nonS_vertex": 15, "faces_euler": 1909613, "faces_hit_by_valid_candidates": 1909613, "candidates": 7624184, "invalid_candidates": 4, "valid_candidates": 7624180, "cache_hits": 7610095, "dp_found": 14085, "dp_none": 0, "bad_candidates": 0, "cpu_seconds": 29.7}
+{"N": 64, "K": 8, "certificates": 14085, "E": 3813120, "V": 1903508, "faces_E_minus_V_plus_1": 1909613, "candidates": 15244416, "distinct_faces_hit": 1909613, "uncovered_candidates": 0, "uncovered_distinct_faces": 0, "cpu_seconds": 86.4}
+{"N": 8, "K": 5, "lines": 28, "faces_euler": 280, "faces_enumerated": 280, "bad_faces": 0, "c_bad_faces": 0, "bad_sets_equal": true}
+{"N": 16, "K": 6, "lines": 120, "faces_euler": 5742, "faces_enumerated": 5742, "bad_faces": 0, "c_bad_faces": 0, "bad_sets_equal": true}
+{"n": 6, "samples": 100, "seed": 1, "largest_convex_subset_values": [6], "all_equal_n": true, "seconds": 0.1}
+{"n": 7, "samples": 300, "seed": 3, "largest_convex_subset_values": [7], "all_equal_n": true, "seconds": 3.6}
+{"n": 8, "samples": 40, "seed": 4, "largest_convex_subset_values": [8], "all_equal_n": true, "seconds": 7.1}

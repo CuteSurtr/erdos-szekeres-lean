@@ -1,0 +1,12 @@
+== variant v8_1: addpoint (4000 candidates) then anneal raw T 1.0->0.05 mu=0.05
+addpoint K=8 base=64 valid=3855 min=1 at (292193409,-111) hist[0,1,2,3-9,10-99,1e2-1e3,1e3-1e4,>=1e4]=0,761,4,6,21,124,555,2384
+anneal K=8 N=65 raw=1 T0=1 T1=0.05 mu=0.050 seed=61 iters=200000 best=1 accepted=19273 gprej=6235 evals=193765 dwellE0/1/2/3+=0/52/192978/735 acc_at_best=3 cpu=278.0s
+== variant v8_2: addpoint (4000 candidates) then anneal raw T 1.0->0.05 mu=0.05
+addpoint K=8 base=64 valid=3926 min=1 at (1900,-23838405) hist[0,1,2,3-9,10-99,1e2-1e3,1e3-1e4,>=1e4]=0,804,3,12,38,175,527,2367
+anneal K=8 N=65 raw=1 T0=1 T1=0.05 mu=0.050 seed=62 iters=200000 best=1 accepted=17175 gprej=4471 evals=195529 dwellE0/1/2/3+=0/819/187362/7348 acc_at_best=53 cpu=288.9s
+== variant v8_3: addpoint (4000 candidates) then anneal raw T 1.0->0.05 mu=0.05
+addpoint K=8 base=64 valid=3928 min=1 at (9368,37018222) hist[0,1,2,3-9,10-99,1e2-1e3,1e3-1e4,>=1e4]=0,792,0,7,22,157,581,2369
+anneal K=8 N=65 raw=1 T0=1 T1=0.05 mu=0.050 seed=63 iters=200000 best=1 accepted=16855 gprej=5984 evals=194016 dwellE0/1/2/3+=0/40/173032/20944 acc_at_best=6 cpu=284.4s
+== M65w raw mu=0.2 from init_w8p_3, T 2.0->0.1
+anneal K=8 N=65 raw=1 T0=2 T1=0.1 mu=0.200 seed=71 iters=200000 best=1 accepted=13667 gprej=5673 evals=194327 dwellE0/1/2/3+=0/527/133068/60732 acc_at_best=24 cpu=281.8s
+== DONE

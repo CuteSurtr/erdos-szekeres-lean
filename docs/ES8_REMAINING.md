@@ -30,6 +30,24 @@ used in that implication. The balanced and residual arithmetic certificates
 contain 22,318 and 50,945 leaves, respectively; their 446 and 1,108 rounding
 cuts and exact catalog identifications are also checked in Lean.
 
+## Lower bound and the 11 October searches
+
+The lower bound **ES(8) ≥ 65** is now proved in Lean as the classical
+Erdős–Szekeres construction; see [§1.1 of the exposition](../math.md#11-the-classical-lower-bound).
+Raising it would disprove the Erdős–Szekeres conjecture. The
+[lower-bound search record](../experiments/es8-lower-bound-search-2026-10-11/README.md)
+shows by an exact face-by-face computation that no 65th point can be added
+to the 64-point witness without a convex octagon. A heuristic annealing search
+from such extended sets never reduced their single convex octagon, and was
+too weak to rediscover a 64-point octagon-free set from a random start.
+Neither result constrains other 65-point sets.
+
+The [CP-SAT residual record](../experiments/omission-residual32-cpsat-2026-10-11/README.md)
+ran fifty minutes on twelve workers against the 2,650-row catalog. It found
+33-hole assignments but left the lower bound at 28, against the LP value 27.
+A discovery round around the saved one-row 32-hole near-model found no new
+row. The status of 313 below is unchanged.
+
 ## Stronger research targets, not completed bounds
 
 | Target | Required work | Unknowns and rough size |

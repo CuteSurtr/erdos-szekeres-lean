@@ -1,0 +1,12 @@
+r64_s91.txt: N=64 general_position=True largest_convex_subset=9
+r65_s7.txt: N=65 general_position=True largest_convex_subset=9
+m65w_raw_s1.txt: N=65 general_position=True largest_convex_subset=8 common_core_size=8 => exactly one convex 8-gon
+out/r64_s91.txt: c8=46 maxconvex=8 
+out/r65_s7.txt: c8=15 maxconvex=8 
+out/m65w_raw_s1.txt: c8=1 maxconvex=8 
+out/m65w_raw_s2.txt: c8=1 maxconvex=8 
+out/m65w_raw_s3.txt: c8=1 maxconvex=8 
+out/m65w_raw_s4.txt: c8=1 maxconvex=8 
+out/m65v_s1.txt: c8=1 maxconvex=8 
+out/m65v_s2.txt: c8=1 maxconvex=8 
+out/m65w_plateau_s81.txt: c8=1 maxconvex=8 

@@ -112,6 +112,11 @@ bound alone does not strengthen feasibility of the abstract model.
 These finite assignments encode necessary geometric conditions; satisfying
 them does not establish a realization by points in the plane. The
 [remaining-work note](docs/ES8_REMAINING.md) describes the unresolved steps.
+A fifty-minute [CP-SAT probe](experiments/omission-residual32-cpsat-2026-10-11/README.md)
+of the 2,650-row catalog was also inconclusive. On the other side, an
+[exact computation](experiments/es8-lower-bound-search-2026-10-11/README.md)
+shows that the 64-point lower-bound witness cannot be extended to 65 points
+without a convex octagon; this does not exclude other 65-point sets.
 Dated experiment directories preserve the individual proofs and search
 records, including unsuccessful searches.
 
