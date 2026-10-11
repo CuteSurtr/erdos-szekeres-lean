@@ -6,26 +6,28 @@ formalized verbatim. Numbering is pinned to
 and [HMPT, arXiv:1710.11415v3 (3 August 2020)](https://arxiv.org/pdf/1710.11415v3),
 the version corresponding to the final 2020 coefficient.
 
-**Exact** means the relevant stated upper-bound conclusion is proved.
+**Exact** means the relevant stated conclusion, an upper or a lower bound, is proved.
 **Replacement** means a different checked lemma serves that step; it is not a
 proof of the original intermediate statement. **Real only** excludes the
 paper's pseudo-configurations. **Not formalized** means there is no corresponding
 proved declaration. These distinctions matter even though the two final
 real-point upper bounds are complete.
 
-In the tables, prepend `ErdosSzekeres.` to names beginning `Suk.` or `HMPT.`.
+In the tables, prepend `ErdosSzekeres.` to every declaration name.
 Links identify the actual Lean source file. All numbered results in these two
 versions, all numbered sections, and the principal unnumbered proof stages are
-covered below. Background citations are not additional completed theorems.
+covered below. Background citations are not additional completed theorems, except
+the Erdős–Szekeres lower bound, which is now formalized.
 
 ## Suk
 
 | Paper location | Lean files and declarations | Coverage / difference |
 | --- | --- | --- |
 | §1, definitions and conjecture | [Definitions.lean](../ErdosSzekeres/Definitions.lean): `GeneralPosition`, `ConvexPosition`, `ForcesConvexNGon`, `ErdosSzekeresConjecture` | Definitions for real finite sets; the conjecture is not asserted. |
+| §1, the Erdős–Szekeres lower bound $`2^{n-2}+1`$ | [LowerBound/Construction.lean](../ErdosSzekeres/LowerBound/Construction.lean): `not_forcesConvexNGon_two_pow`, `conjecturedBound_le_of_forces`, `erdosSzekeresConjecture_iff_isLeast`; [LowerBound/Number.lean](../ErdosSzekeres/LowerBound/Number.lean): `esNumber`, `conjecturedBound_le_esNumber` | **Exact** for real point sets, via the 1961 construction of $`2^{n-2}`$ points. Cited background in the paper, not one of its numbered results. |
 | §1, Theorem 1.1 | [Suk/Asymptotic.lean](../ErdosSzekeres/Suk/Asymptotic.lean): `Suk.theorem2016`; [Statement.lean](../ErdosSzekeres/Suk/Statement.lean): `Suk.Theorem2016` | **Exact upper bound**, including coefficient 6 and the proof's floor convention. |
 | §2, Lemma 2.1 | [FourPoint.lean](../ErdosSzekeres/Suk/FourPoint.lean): `Suk.convexPosition_of_four_subsets`, `Suk.convexPosition_of_subsets_card_le_four` | Four-point criterion, from Mathlib's Carathéodory theorem. |
-| §2, Theorem 2.2 | [CupsCaps.lean](../ErdosSzekeres/Suk/CupsCaps.lean): `Suk.cups_caps`, `Suk.classical_upper_bound` | Upper-bound direction for target sizes at least three. The matching extremal lower bound is **not formalized**. |
+| §2, Theorem 2.2 | [CupsCaps.lean](../ErdosSzekeres/Suk/CupsCaps.lean): `Suk.cups_caps`, `Suk.classical_upper_bound` | Upper-bound direction for target sizes at least three. The matching extremal construction is [LowerBound/Construction.lean](../ErdosSzekeres/LowerBound/Construction.lean): `LowerBound.exists_cupCapFree`, which gives $`\binom{k+l-4}{k-2}`$ points with no $`k`$-cup and no $`l`$-cap. There, cups and caps are sets whose increasing triples all have one orientation sign, rather than the vendored list predicates. |
 | §2, Theorem 2.3 | [TransitiveColoring.lean](../ErdosSzekeres/Suk/TransitiveColoring.lean): `Suk.transitive_cups_caps`, `Suk.transitive_path_clique` | Transitive-coloring upper bound. Equality/lower-bound construction is **not formalized**. |
 | §2, Theorem 2.4 | [DenseCapExtraction.lean](../ErdosSzekeres/Suk/DenseCapExtraction.lean): `Suk.rich_support_of_dense_caps`; [SupportCoarsening.lean](../ErdosSzekeres/Suk/SupportCoarsening.lean): `Suk.ClockwiseAnchors.extract_rich_spikes`; [IntegerParameters.lean](../ErdosSzekeres/Suk/IntegerParameters.lean): `Suk.cubic_log_bound` | **Replacement** extraction argument. The literal `32k` constant is **not formalized**; the checked exponent loss is `64(k+5)`, absorbed in the final estimate. |
 | §2, support-region setup | [SpikeGeometry.lean](../ErdosSzekeres/Suk/SpikeGeometry.lean), [SupportSequence.lean](../ErdosSzekeres/Suk/SupportSequence.lean): `Suk.ClockwiseAnchors.adjacent_frames` | Open halfplane support frames in a horizontal clockwise sequence, with explicit endpoints. |

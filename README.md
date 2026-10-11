@@ -1,9 +1,10 @@
 # Erdős–Szekeres bounds in Lean
 
-This repository formalizes upper bounds for the Erdős–Szekeres problem in
-Lean 4. It contains proofs of Suk's 2016 bound, the ordinary real-point case
-of the Holmsen–Mojarrad–Pach–Tardos (HMPT) 2020 bound, and the finite bound
-**ES(8) ≤ 314**.
+This repository formalizes bounds for the Erdős–Szekeres problem in Lean 4.
+It contains proofs of Suk's 2016 bound, the ordinary real-point case of the
+Holmsen–Mojarrad–Pach–Tardos (HMPT) 2020 bound, the finite bound
+**ES(8) ≤ 314**, and the classical lower bound
+$`\mathrm{ES}(n)\ge2^{n-2}+1`$. Together, **65 ≤ ES(8) ≤ 314**.
 
 All results concern finite subsets of the real plane in general position:
 no three distinct points are collinear. A convex polygon may contain other
@@ -38,6 +39,11 @@ $`n`$ (depending on $`\varepsilon`$),
 **Finite octagon bound.** Every set of at least 314 points in general
 position contains eight points in convex position.
 
+**Erdős–Szekeres lower bound.** For every $`n\ge3`$ there are $`2^{n-2}`$
+points in general position with no $`n`$ points in convex position. Hence
+$`\mathrm{ES}(n)\ge2^{n-2}+1`$; for octagons, 64 points do not suffice and
+$`\mathrm{ES}(8)\ge65`$.
+
 The following declarations have complete proofs. Names in the table are
 relative to the namespace `ErdosSzekeres`.
 
@@ -46,15 +52,31 @@ relative to the namespace `ErdosSzekeres`.
 | Suk | `Suk.theorem2016` | [Suk/Asymptotic.lean](ErdosSzekeres/Suk/Asymptotic.lean) |
 | HMPT | `HMPT.theorem2020` | [HMPT/Asymptotic.lean](ErdosSzekeres/HMPT/Asymptotic.lean) |
 | ES(8) ≤ 314 | `Omission.forces_convex_octagon_314` | [FinalCover314B61FusedR31Fused.lean](experiments/omission-global-assembly-2026-10-10/FinalCover314B61FusedR31Fused.lean) |
+| ES(n) ≥ 2^(n-2) + 1 | `not_forcesConvexNGon_two_pow`, `conjecturedBound_le_of_forces` | [LowerBound/Construction.lean](ErdosSzekeres/LowerBound/Construction.lean) |
+| ES(8) ≥ 65 | `octagon_lower_bound`, `sixtyFive_le_esNumber_eight` | [LowerBound/Construction.lean](ErdosSzekeres/LowerBound/Construction.lean), [LowerBound/Number.lean](ErdosSzekeres/LowerBound/Number.lean) |
 
-The last file also provides `Omission.convex_octagon_of_card_ge_314`, which
+The ES(8) ≤ 314 file also provides `Omission.convex_octagon_of_card_ge_314`, which
 states the result directly for finite subsets of $`\mathbb R^2`$.
+
+The lower bound shows that the formalized conjecture, `ErdosSzekeresConjecture`,
+is equivalent to $`\mathrm{ES}(n)=2^{n-2}+1`$ for all $`n\ge3`$
+(`erdosSzekeresConjecture_iff_isLeast`, `erdosSzekeresConjecture_iff_esNumber`).
+Raising the lower bound for octagons above 65 would disprove that conjecture.
 
 The asymptotic theorems do not assert the displayed estimates for every
 small $`n`$. HMPT's extensions to pseudo-configurations and convex bodies
 are outside the scope of this formalization.
 
 ## Proofs and supporting material
+
+The lower bound is the Erdős–Szekeres construction of 1961. Blocks are
+stacked far above or far below one another, and every convex subset of the
+union is controlled by its cups and caps in the individual blocks; a fourth
+point inside a triangle rules out every other configuration. The proof is
+explained in [§1.1 of the exposition](math.md#11-the-classical-lower-bound).
+With `--json`, [es_lower_bound_witness.py](scripts/es_lower_bound_witness.py)
+prints exact integer coordinates of the 64-point octagon-free witness; it is
+a numerical control, not part of the proof.
 
 The asymptotic proofs combine geometric extraction, counting, and explicit
 parameter estimates. Their detailed correspondence with the published
@@ -107,8 +129,8 @@ lake env python3 scripts/check_residual32_continuation.py
 ```
 
 The finished proofs contain no `sorry` or `admit`. The
-[saved library audit](docs/validation/axiom-audit-structural-2026-10-10.txt)
-checks 571 named theorems and permits only `propext`, `Classical.choice`,
+[saved library audit](docs/validation/axiom-audit-lower-bound-2026-10-11.txt)
+checks 587 named theorems and permits only `propext`, `Classical.choice`,
 and `Quot.sound`. The [validation guide](docs/VALIDATION.md) records the
 scope of these checks and the separate audits of the finite certificates.
 

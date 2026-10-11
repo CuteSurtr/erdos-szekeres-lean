@@ -584,3 +584,20 @@ import ErdosSzekeres
 #print axioms ErdosSzekeres.HMPT.normalizedBudget_neg_at_endpoint
 #print axioms ErdosSzekeres.HMPT.budget_eventually_negative_at_published
 #print axioms ErdosSzekeres.HMPT.budget_eventually_negative_at_or_below_published
+
+#print axioms ErdosSzekeres.LowerBound.mem_convexHull_of_orient
+#print axioms ErdosSzekeres.LowerBound.Stacked.generalPosition_union
+#print axioms ErdosSzekeres.LowerBound.Stacked.convexBound_union
+#print axioms ErdosSzekeres.LowerBound.exists_stacked
+#print axioms ErdosSzekeres.LowerBound.exists_cupCapFree
+#print axioms ErdosSzekeres.LowerBound.exists_generalPosition_without_convexNGon
+#print axioms ErdosSzekeres.not_forcesConvexNGon_two_pow
+#print axioms ErdosSzekeres.conjecturedBound_le_of_forces
+#print axioms ErdosSzekeres.erdosSzekeresConjecture_iff_isLeast
+#print axioms ErdosSzekeres.not_forcesConvexNGon_64_8
+#print axioms ErdosSzekeres.octagon_lower_bound
+#print axioms ErdosSzekeres.conjecturedBound_le_esNumber
+#print axioms ErdosSzekeres.esNumber_le_choose
+#print axioms ErdosSzekeres.erdosSzekeresConjecture_iff_esNumber
+#print axioms ErdosSzekeres.esNumber_three
+#print axioms ErdosSzekeres.sixtyFive_le_esNumber_eight

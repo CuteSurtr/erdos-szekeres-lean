@@ -7,6 +7,31 @@ hashes are normalized. Earlier GitHub run/commit links refer to the original
 private repository and may not resolve in the public replacement. New hosted
 results are available in the [CI workflow](https://github.com/CuteSurtr/erdos-szekeres-lean/actions/workflows/ci.yml).
 
+## Erdős–Szekeres lower bound — 11 October 2026
+
+Seven new modules in [ErdosSzekeres/LowerBound](../ErdosSzekeres/LowerBound)
+prove the 1961 construction: for every $`n\ge3`$ there are $`2^{n-2}`$ real
+points in general position with no $`n`$ points in convex position. The
+principal roots are `ErdosSzekeres.not_forcesConvexNGon_two_pow`,
+`conjecturedBound_le_of_forces`, `octagon_lower_bound` and
+`sixtyFive_le_esNumber_eight`, so $`65\le\mathrm{ES}(8)`$. Except for the new
+`esNumber n := sInf {N | ForcesConvexNGon N n}`, whose defining set is nonempty
+for $`n\ge3`$ by `Suk.classical_upper_bound`, the statements use only the
+unchanged definitions `GeneralPosition`, `HasConvexNGon`, `ForcesConvexNGon`
+and `conjecturedBound`. The proof contains no finite certificate, `decide` or
+native evaluation.
+
+The maintained library builds all **3,308 jobs** with `--wfail`. Sixteen new
+roots extend the audit to **587 theorems**; the
+[saved audit](validation/axiom-audit-lower-bound-2026-10-11.txt) uses only
+`propext`, `Classical.choice` and `Quot.sound`. The ordinary Python suite now
+reports 125 tests: 99 pass and 26 optional tests skip. Its three new tests
+check the exact integer witnesses of
+[es_lower_bound_witness.py](../scripts/es_lower_bound_witness.py) for
+$`n=3,\ldots,8`$, including general position and a largest convex subset of
+exactly $`n-1`$ points, and compare its convex-subset dynamic program with
+brute force. These numerical controls are independent of the Lean proof.
+
 ## Rank-aware search, four rows and normalization — 10 October 2026
 
 The [four-core certificate bundle](../experiments/omission-residual32-rank-certificates-2026-10-10/README.md)

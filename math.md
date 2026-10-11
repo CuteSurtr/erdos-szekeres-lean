@@ -2,11 +2,13 @@
 
 ## 1. Statements and conventions
 
-This article describes three completed Lean proofs: Suk's asymptotic bound,
-the ordinary real-point specialization of the Holmsen–Mojarrad–Pach–Tardos
-(HMPT) bound, and the finite bound $`\mathrm{ES}(8)\le314`$. It also explains
-the proved refinements and the precise remaining problem in the investigation
-of $`\mathrm{ES}(8)\le313`$.
+This article describes three completed Lean proofs of upper bounds: Suk's
+asymptotic bound, the ordinary real-point specialization of the
+Holmsen–Mojarrad–Pach–Tardos (HMPT) bound, and the finite bound
+$`\mathrm{ES}(8)\le314`$. Section 1.1 adds the completed classical lower
+bound $`\mathrm{ES}(n)\ge2^{n-2}+1`$, so $`65\le\mathrm{ES}(8)\le314`$. The
+article also explains the proved refinements and the precise remaining
+problem in the investigation of $`\mathrm{ES}(8)\le313`$.
 
 The [finite octagon proof](#2-geometric-configurations-and-finite-state-spaces)
 occupies §§2–3. Section 4 treats the [asymptotic bounds](#4-the-asymptotic-arguments),
@@ -66,9 +68,102 @@ $`\lceil\log u\rceil`$, $`\lfloor\log u\rfloor`$ for Lean's
 
 The formalized conjecture is
 $`\forall n\ge3,\ \mathsf F(2^{n-2}+1,n)`$; for octagons its threshold is
-$`65`$. This definition does not include a formalization of the classical
-lower-bound construction. Neither the conjecture nor the bound $`313`$ is
+$`65`$. The classical construction in §1.1 proves that no smaller threshold
+is possible, so the conjecture asserts exactly that $`2^{n-2}+1`$ is the
+least forcing number. Neither the conjecture nor the bound $`313`$ is
 proved here.
+
+### 1.1. The classical lower bound
+
+**Theorem 1.2 (Erdős–Szekeres, 1961).** For every $`n\ge3`$ there is a set
+of $`2^{n-2}`$ points in general position with no $`n`$ points in convex
+position. Consequently $`\mathsf F(N,n)`$ implies $`N\ge2^{n-2}+1`$. In
+particular every $`N`$ with $`\mathsf F(N,8)`$ satisfies $`N\ge65`$, and
+together with Theorem 1.1(3), $`65\le\mathrm{ES}(8)\le314`$.
+
+Put $`[a,b,c]=\det(b-a,c-a)`$, compare points by their first coordinates,
+and let $`\sigma\in\{1,-1\}`$.
+A **$`\sigma`$-chain** is a set whose horizontally increasing triples
+$`a,b,c`$ satisfy $`\sigma[a,b,c]>0`$; thus $`1`$-chains are cups and
+$`(-1)`$-chains are caps. A block $`B`$ is **stacked** on a block $`A`$ with
+sign $`\sigma`$ if every point of $`B`$ lies to the right of $`A`$ and
+
+```math
+\sigma[a,a',b]>0,\qquad \sigma[a,b,b']\lt0
+\qquad(a_x\lt a'_x,\ b_x\lt b'_x)
+```
+
+for $`a,a'\in A`$ and $`b,b'\in B`$. Translating $`B`$ by
+$`(t,\sigma M)`$ with $`t`$ and then $`M`$ large achieves this: after the
+translation the two expressions are affine in $`M`$, with positive slope
+$`a'_x-a_x`$ and negative slope $`-(b'_x-b_x)`$. Translation preserves every
+other property used below.
+
+Let $`B`$ be stacked on $`A`$ with sign $`\sigma`$. The proof uses two
+observations.
+
+**(i)** A $`\sigma`$-chain meeting $`A`$ has at most one point of $`B`$, and
+a $`(-\sigma)`$-chain meeting $`B`$ has at most one point of $`A`$: two such
+points produce a mixed triple of the wrong sign.
+
+**(ii)** A convex subset $`P`$ meeting both blocks is a $`\sigma`$-chain in
+$`A`$ and a $`(-\sigma)`$-chain in $`B`$. Suppose that
+$`x,y,z\in P\cap A`$ increase and $`\sigma[x,y,z]\lt0`$, and take
+$`b\in P\cap B`$. Then $`\sigma[x,z,b]`$, $`\sigma[x,z,y]`$,
+$`\sigma[z,b,y]`$ and $`\sigma[b,x,y]`$ are positive. The barycentric
+identity
+
+```math
+[x,z,b]\,y=[z,b,y]\,x+[b,x,y]\,z+[x,z,y]\,b
+```
+
+places $`y`$ in the triangle $`xzb`$, which is impossible in convex
+position. The block $`B`$ is symmetric, with the triangle $`axz`$ for
+$`a\in P\cap A`$.
+
+Write $`c_\sigma(X)`$ for the largest $`\sigma`$-chain and $`c(X)`$ for
+the largest convex subset of $`X`$. The two observations give
+
+```math
+\begin{aligned}
+c_\sigma(A\cup B)&\le\max(c_\sigma(A)+1,\ c_\sigma(B)),\qquad
+c_{-\sigma}(A\cup B)\le\max(c_{-\sigma}(A),\ c_{-\sigma}(B)+1),\\
+c(A\cup B)&\le\max(c(A),\ c(B),\ c_\sigma(A)+c_{-\sigma}(B)).
+\end{aligned}
+```
+
+Let $`S(k,l)`$ be one point when $`k=2`$ or $`l=2`$, and for $`k,l\ge3`$
+obtain $`S(k,l)`$ by stacking $`S(k-1,l)`$ and $`S(k,l-1)`$ upward. By
+induction and Pascal's rule, $`S(k,l)`$ has $`\binom{k+l-4}{k-2}`$ points,
+no $`k`$-cup, no $`l`$-cap, and convex subsets of size at most $`k+l-3`$. Now
+stack $`T_i=S(n-i,i+2)`$, $`i=0,\ldots,n-2`$, downward. If $`U_j`$ is the
+union of the first $`j`$ blocks, induction gives $`c_{-1}(U_j)\le j`$ and
+
+```math
+c(U_{j+1})\le\max\bigl(n-1,\ c_{-1}(U_j)+c_1(T_j)\bigr)
+\le\max(n-1,\ j+(n-j-1))=n-1.
+```
+
+The final set has $`\sum_{i=0}^{n-2}\binom{n-2}{i}=2^{n-2}`$ points.
+
+| Statement | Lean declaration and source |
+| --- | --- |
+| Theorem 1.2 | `ErdosSzekeres.LowerBound.exists_generalPosition_without_convexNGon`, `ErdosSzekeres.not_forcesConvexNGon_two_pow`, `conjecturedBound_le_of_forces` in [LowerBound/Construction](ErdosSzekeres/LowerBound/Construction.lean) |
+| Octagons | `ErdosSzekeres.not_forcesConvexNGon_64_8`, `octagon_lower_bound` in the same file |
+| Conjecture as an exact value | `ErdosSzekeres.erdosSzekeresConjecture_iff_isLeast` in [LowerBound/Construction](ErdosSzekeres/LowerBound/Construction.lean); with $`\mathrm{ES}(n)`$ defined as a least element, `esNumber`, `conjecturedBound_le_esNumber`, `esNumber_le_choose`, `erdosSzekeresConjecture_iff_esNumber`, `sixtyFive_le_esNumber_eight`, `esNumber_three` in [LowerBound/Number](ErdosSzekeres/LowerBound/Number.lean) |
+| Blocks with no $`k`$-cup and no $`l`$-cap; the downward induction | `ErdosSzekeres.LowerBound.exists_cupCapFree`, `exists_capChain` in [LowerBound/Construction](ErdosSzekeres/LowerBound/Construction.lean) |
+| Observations (i)–(ii) and the three recursions | `Stacked.card_inter_right_le_one`, `Stacked.card_inter_left_le_one`, `Stacked.isChain_inter_left`, `Stacked.isChain_inter_right`, `Stacked.chainBound_union`, `Stacked.chainBound_neg_union`, `Stacked.convexBound_union` in [LowerBound/Stacking](ErdosSzekeres/LowerBound/Stacking.lean), with prefix `ErdosSzekeres.LowerBound` |
+| Triangle membership from orientations | `ErdosSzekeres.LowerBound.mem_convexHull_of_orient` in [LowerBound/Triangle](ErdosSzekeres/LowerBound/Triangle.lean) |
+| Realization by translation | `ErdosSzekeres.LowerBound.exists_stacked` in [LowerBound/Placement](ErdosSzekeres/LowerBound/Placement.lean) |
+
+The upper bound in `esNumber_le_choose` is the classical cups-caps bound
+already used by Suk's proof. The stronger value $`314`$ is the archived
+theorem of Theorem 1.1(3): applying `esNumber_le_of_forces` to
+`Omission.forces_convex_octagon_314` gives `esNumber 8 ≤ 314`. The script
+[es_lower_bound_witness.py](scripts/es_lower_bound_witness.py) builds the
+same sets with exact integer coordinates and independently confirms that
+the largest convex subsets of the witnesses for $`n=3,\ldots,8`$ have
+$`n-1`$ points. It is a numerical control, not part of the proof.
 
 ## 2. Geometric configurations and finite state spaces
 
@@ -1052,6 +1147,12 @@ References and attribution:
 4. Jineon Baek, [erdos-tuza-valtr](https://github.com/jcpaik/erdos-tuza-valtr),
    the formal combinatorial prerequisites and block theorem; imported
    revisions and adaptations are recorded in the same ledger.
+5. Paul Erdős and George Szekeres, *A combinatorial problem in geometry*,
+   Compositio Math. **2** (1935), 463–470.
+6. Paul Erdős and George Szekeres, *On some extremum problems in elementary
+   geometry*, Ann. Univ. Sci. Budapest. Eötvös Sect. Math. **3–4**
+   (1960–61), 53–62. The construction of §1.1 follows this paper; its
+   formalization is original to this repository.
 
 The [paper correspondence](docs/PAPER_MAP.md) distinguishes direct statements
 from replacement arguments. Original exposition is Apache-2.0; third-party

@@ -15,7 +15,10 @@ placeholders or additional axioms.
 - `Suk/CupsCaps.lean`: geometric cups-caps upper bound and the classical binomial
   bound for arbitrary real point sets. A linear equivalence connects the vendored
   pair-coordinate geometry to our `Fin 2 → ℝ` definitions. The lower-bound equality
-  in Theorem 2.2 is not needed for the upper-bound argument and is not claimed.
+  in Theorem 2.2 is not needed for the upper-bound argument. The matching
+  construction of $`\binom{k+l-4}{k-2}`$ points with no $`k`$-cup and no $`l`$-cap is
+  proved separately as `ErdosSzekeres.LowerBound.exists_cupCapFree` in
+  `LowerBound/Construction.lean`; Suk's proof does not use it.
 - `Suk/ChainAntichain.lean`: if |S| > (a−1)(b−1), then S has a chain of at least a
   elements or an antichain of at least b elements. Derived from the adapted
   Dilworth theorem for any finite subset of a partial order.

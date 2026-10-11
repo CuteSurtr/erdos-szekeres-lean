@@ -63,3 +63,5 @@ import ErdosSzekeres.Omission.CoupledNineVariant
 import ErdosSzekeres.VisibleEdgeInsertion
 import ErdosSzekeres.Omission.CoupledNineStructural
 import ErdosSzekeres.Omission.CoupledNineStructuralVariants
+import ErdosSzekeres.LowerBound.Construction
+import ErdosSzekeres.LowerBound.Number
