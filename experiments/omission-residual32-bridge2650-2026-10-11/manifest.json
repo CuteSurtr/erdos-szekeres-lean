@@ -1,0 +1,82 @@
+{
+  "scope": "Literal 2,650-row residual catalog and its conditional bridge. ES(8) <= 313 is NOT proved: it follows only from Excludes2650Zero 32.",
+  "source_reference": "experiments/omission-residual32-rank-global-2026-10-10/source-2650.json.gz",
+  "source_archive_sha256": "8c7fe9ef5264182524095d46ef50ed6bc691cab425efa965756d1870112241aa",
+  "source_uncompressed_sha256": "e800d5f8a6c5cc45c73ddcc1e57488f2ca8f2ffb704a1515ff7444d589c682f6",
+  "research_prefix_reference": "experiments/omission-residual32-research-2026-10-10/source.json.gz",
+  "research_prefix_uncompressed_sha256": "f03eebb1d20eae3bd25dbb5024eaacdfdcc5bcd8ed964d190bdfa59c73aeb909",
+  "exporter": "scripts/omission_lean_export.py",
+  "exporter_sha256": "af6df59bcab2e2ca68ff6d165314e16cf36a67ec6569da4251442b9c673c9f59",
+  "row_reader_sha256": "70e1cf0ecea170079855469325f0e88203bc202f407000209d727bfad250adb9",
+  "generator_sha256": "583d3ecd4699359e5ed203ca4d757927211addc249ed04e5f85b1f524312dd42",
+  "namespace": "OmissionResidual32Bridge2650",
+  "module_prefix": "Residual32Bridge2650",
+  "states": 154,
+  "rows": 2650,
+  "base": 131072,
+  "chunk_size": 128,
+  "row_blocks": [
+    {
+      "rows": [
+        0,
+        2469
+      ],
+      "family": "OmissionResidual32Contexts.support/demand",
+      "geometry": "OmissionResidual32Transfer.all_rows"
+    },
+    {
+      "rows": [
+        2469,
+        2598
+      ],
+      "family": "ErdosSzekeres.Omission.Residual32AddedRows.support",
+      "geometry": "ErdosSzekeres.Omission.Residual32AddedRows.all_rows"
+    },
+    {
+      "rows": [
+        2598,
+        2646
+      ],
+      "family": "ErdosSzekeres.Omission.CoupledSixthRelaxedVariants.support",
+      "geometry": "ErdosSzekeres.Omission.CoupledSixthRelaxedVariants.all_rows"
+    },
+    {
+      "rows": [
+        2646,
+        2647
+      ],
+      "family": "ErdosSzekeres.Omission.CoupledCoreRankSearchOne.support.toFinset",
+      "geometry": "ErdosSzekeres.Omission.CoupledCoreRankSearchOne.hole_bound"
+    },
+    {
+      "rows": [
+        2647,
+        2648
+      ],
+      "family": "ErdosSzekeres.Omission.CoupledCoreRankSearchTwo.support.toFinset",
+      "geometry": "ErdosSzekeres.Omission.CoupledCoreRankSearchTwo.hole_bound"
+    },
+    {
+      "rows": [
+        2648,
+        2649
+      ],
+      "family": "ErdosSzekeres.Omission.CoupledCoreRankSearchThree.support.toFinset",
+      "geometry": "ErdosSzekeres.Omission.CoupledCoreRankSearchThree.hole_bound"
+    },
+    {
+      "rows": [
+        2649,
+        2650
+      ],
+      "family": "ErdosSzekeres.Omission.CoupledCoreRankSearchFour.support.toFinset",
+      "geometry": "ErdosSzekeres.Omission.CoupledCoreRankSearchFour.hole_bound"
+    }
+  ],
+  "files": {
+    "Residual32Bridge2650/Catalog.lean": "5b97f861a4bf4272d2d3d7bbadbb076261f5d7c3c9bd2e86fbf4b1a9e87a1c71",
+    "Residual32Bridge2650/Final.lean": "c07b05bb07684e2db40d760489bf88f211e52bed378894d7a7fbfe8704f2b7c7",
+    "Residual32Bridge2650/Matches.lean": "3c421106f50fb87dd639aaf71a641e1a154b48a80f2198bf8ecddc7b23472161",
+    "Residual32Bridge2650/Rows.lean": "f06654554e31579e32b0018632d2dc71018e835c8012bfe2c8f691b0f7a861f4"
+  }
+}

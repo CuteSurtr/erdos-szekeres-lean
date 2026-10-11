@@ -48,6 +48,18 @@ ran fifty minutes on twelve workers against the 2,650-row catalog. It found
 A discovery round around the saved one-row 32-hole near-model found no new
 row. The status of 313 below is unchanged.
 
+The [conditional bridge](../experiments/omission-residual32-bridge2650-2026-10-11/README.md)
+now proves in Lean that ES(8) ≤ 313 follows from one finite arithmetic
+statement, `Excludes2650Zero 32`: no 0/1 hole vector with state zero occupied
+satisfies all 2,650 rows with at most 32 holes. Every row is bound literally to
+its geometric theorem. That statement itself is not yet proved; an exact
+branch-and-bound certificate for it is the remaining step.
+
+A further [family test](../experiments/es8-lower-bound-search-2026-10-11/README.md#a-family-of-stacking-constructions-added-11-october-2026)
+found 76 saturated 64-point octagon-free stacking constructions, covering 75
+order types, and showed that the stacking bound recursion cannot certify 65
+points.
+
 ## Stronger research targets, not completed bounds
 
 | Target | Required work | Unknowns and rough size |

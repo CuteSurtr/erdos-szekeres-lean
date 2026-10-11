@@ -222,3 +222,42 @@ searches sequentially on one core; logged CPU seconds are shown below.
 Two batches originally ran at once, so these times include contention.
 `main65.sh` repeats the interrupted run. Drivers append to logs in
 `$BUILD_DIR/out/`, so use a fresh `BUILD_DIR` for a clean repeat.
+
+## A family of stacking constructions (added 11 October 2026)
+
+`family/` extends the saturation test from the canonical witness to other
+64-point sets built by the same stacking method. `dp.py` runs the bound
+recursion of the Lean construction (cup, cap and convex bounds of an upward or
+downward stacking, plus c ≤ c₊ + c₋ − 2) over all stacking trees. About
+1.2 × 10²¹ labelled trees certify 64 points with no convex octagon. **No tree
+certifies 65 points**: under a convex-subset limit c, the recursion's largest
+size is exactly 2^(c−1). Every certified tree uses cup/cap blocks of sizes
+1, 6, 15, 20, 15, 6, 1.
+
+`generate.py` realized 4,128 certified trees with exact least-offset integer
+coordinates. They give 1,592 distinct order types under relabeling and
+reflection, each checked for general position, distinct abscissae and a
+largest convex subset of exactly 7. The canonical tree reproduces `witness(8)`
+byte for byte. Representatives within the coordinate bound of `sat.c` exist for
+1,233 order types; 76 sets covering 75 order types were tested:
+
+| Category | Sets tested | Saturated |
+| --- | ---: | ---: |
+| Canonical witness and a second realization of its order type | 2 | 2 |
+| Bracketings of the downward chain of blocks | 13 | 13 |
+| Arrangements of the canonical blocks | 13 | 13 |
+| Canonical arrangement with randomly built blocks | 12 | 12 |
+| Arrangements with randomly built blocks | 11 | 11 |
+| Random certified trees | 25 | 25 |
+
+Every run reached all faces of its arrangement (1,909,148 to 1,911,468) and
+found no face without a convex octagon. `verify.c` independently covered every
+face for `ot0016` and `ot0772`. The tested sets are in `family/sets/`, with
+per-set results in `family/out/results.json` and `family/out/summary.txt`.
+
+Saturation depends on the coordinates, not only on the order type, and these
+are 75 of 1,592 order types from one construction method. A 65-point set
+without a convex octagon need not contain any of them. The results are
+evidence only. To rerun, copy `family/` to a directory under `.cache/`, build
+`sat` and `verify` from `saturation/` into its `bin/`, and run
+`run_queue.sh`; outputs are written beside the copy.

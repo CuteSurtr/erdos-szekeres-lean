@@ -1,0 +1,140 @@
+===== Residual32Bridge2650.Catalog =====
+'OmissionResidual32Bridge2650.code_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+      143.76 real       115.07 user         2.43 sys
+          5249515520  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              374655  page reclaims
+                   0  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   2  voluntary context switches
+              180656  involuntary context switches
+        890286183715  instructions retired
+        356635435945  cycles elapsed
+          2966886280  peak memory footprint
+
+===== Residual32Bridge2650.Matches =====
+'OmissionResidual32Bridge2650.rowCode_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual32Bridge2650.support2650_eq_of_rowCode' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual32Bridge2650.support2650_eq_of_codes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual32Bridge2650.prefix_matches' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual32Bridge2650.added_matches' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual32Bridge2650.relaxed_matches' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual32Bridge2650.rank_one_matches' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual32Bridge2650.rank_two_matches' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual32Bridge2650.rank_three_matches' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual32Bridge2650.rank_four_matches' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual32Bridge2650.suffix_demand' depends on axioms: [propext, Quot.sound]
+      106.82 real        86.04 user         2.44 sys
+          6470320128  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              464742  page reclaims
+                   0  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   9  voluntary context switches
+              140805  involuntary context switches
+        695266589313  instructions retired
+        270140472591  cycles elapsed
+          4078764136  peak memory footprint
+
+===== Residual32Bridge2650.Rows =====
+'OmissionResidual32Bridge2650.row_of_missing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual32Bridge2650.all_rows_2650' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual32Bridge2650.holes_sum_add_population' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual32Bridge2650.residual_bound_of_excludes2650' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual32Bridge2650.residual_bound_121_of_excludes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual32Bridge2650.excludes2650Zero_of_node' depends on axioms: [propext, Classical.choice, Quot.sound]
+        9.52 real         6.99 user         0.97 sys
+          2867560448  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              220360  page reclaims
+                   0  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  39  voluntary context switches
+                8271  involuntary context switches
+         56071025448  instructions retired
+         23626203940  cycles elapsed
+           476021104  peak memory footprint
+
+===== Residual32Bridge2650.Final =====
+'OmissionResidual32Bridge2650.balanced_population_190' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual32Bridge2650.all_rows_2650' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual32Bridge2650.residual_bound_121_of_excludes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual32Bridge2650.forces_convex_octagon_313_of_excludes' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OmissionResidual32Bridge2650.convex_octagon_of_card_ge_313_of_excludes' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OmissionResidual32Bridge2650.forces_convex_octagon_313_of_node' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Excludes2650Zero : ℕ → Prop
+@all_rows_2650 : ∀ {n : ℕ} (c : Configuration n) (noCap : ¬c.HasCap 6)
+  (noOctagon : ¬HasConvexNGon 8 (Finset.image c.point Finset.univ))
+  (noJunction : Subsets.NoJunctionOn c.cup (Finset.range n)) (r : Fin 2650),
+  demand2650 r ≤
+    ∑ i ∈ support2650 r, OmissionResidual32Transfer.holesOf (c.residualOccupied noCap noOctagon noJunction) i
+residual_bound_121_of_excludes : Excludes2650Zero 32 → Partition.ResidualBound 121
+forces_convex_octagon_313_of_excludes : Excludes2650Zero 32 → ForcesConvexNGon 313 8
+convex_octagon_of_card_ge_313_of_excludes : Excludes2650Zero 32 →
+  ∀ (S : Finset (Fin 2 → ℝ)), GeneralPosition S → 313 ≤ S.card → ∃ T ⊆ S, T.card = 8 ∧ ConvexIndependent ℝ fun p => ↑p
+@excludes2650Zero_of_node : ∀ {budget : ℕ} {support' : Fin 2650 → Finset (Fin 154)} {demand' : Fin 2650 → ℕ},
+  (∀ (r : Fin 2650), support' r = support2650 r) →
+    (∀ (r : Fin 2650), demand' r = demand2650 r) →
+      (¬∃ holes,
+            (∀ (i : Fin 154), holes i ≤ 1) ∧
+              (∀ (r : Fin 2650), demand' r ≤ ∑ i ∈ support' r, holes i) ∧
+                ∑ i, holes i ≤ budget ∧ (∀ i ∈ ∅, holes i = 1) ∧ ∀ i ∈ insert 0 ∅, holes i = 0) →
+        Excludes2650Zero budget
+@forces_convex_octagon_313_of_node : ∀ {support' : Fin 2650 → Finset (Fin 154)} {demand' : Fin 2650 → ℕ},
+  (∀ (r : Fin 2650), support' r = support2650 r) →
+    (∀ (r : Fin 2650), demand' r = demand2650 r) →
+      (¬∃ holes,
+            (∀ (i : Fin 154), holes i ≤ 1) ∧
+              (∀ (r : Fin 2650), demand' r ≤ ∑ i ∈ support' r, holes i) ∧
+                ∑ i, holes i ≤ 32 ∧ (∀ i ∈ ∅, holes i = 1) ∧ ∀ i ∈ insert 0 ∅, holes i = 0) →
+        ForcesConvexNGon 313 8
+OmissionResidual32Bridge2650.Excludes2650Zero : ℕ → Prop
+OmissionResidual32Bridge2650.residual_bound_121_of_excludes : OmissionResidual32Bridge2650.Excludes2650Zero 32 →
+  ErdosSzekeres.Omission.Partition.ResidualBound 121
+OmissionResidual32Bridge2650.forces_convex_octagon_313_of_excludes : OmissionResidual32Bridge2650.Excludes2650Zero 32 →
+  ErdosSzekeres.ForcesConvexNGon 313 8
+       60.34 real        46.17 user         2.18 sys
+          6414417920  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              340339  page reclaims
+               97125  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                1214  voluntary context switches
+               89179  involuntary context switches
+        385571722378  instructions retired
+        141759732655  cycles elapsed
+          1982327000  peak memory footprint
