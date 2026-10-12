@@ -6,7 +6,8 @@ This article describes three completed Lean proofs of upper bounds: Suk's
 asymptotic bound, the ordinary real-point specialization of the
 Holmsen–Mojarrad–Pach–Tardos (HMPT) bound, and the finite bound
 $`\mathrm{ES}(8)\le314`$. Section 1.1 adds the completed classical lower
-bound $`\mathrm{ES}(n)\ge2^{n-2}+1`$, so $`65\le\mathrm{ES}(8)\le314`$. The
+bound $`\mathrm{ES}(n)\ge2^{n-2}+1`$, so $`65\le\mathrm{ES}(8)\le314`$, and §6.5
+records the later proof of $`\mathrm{ES}(8)\le313`$. The
 article also explains the proved refinements and the precise remaining
 problem in the investigation of $`\mathrm{ES}(8)\le313`$.
 
@@ -70,8 +71,8 @@ The formalized conjecture is
 $`\forall n\ge3,\ \mathsf F(2^{n-2}+1,n)`$; for octagons its threshold is
 $`65`$. The classical construction in §1.1 proves that no smaller threshold
 is possible, so the conjecture asserts exactly that $`2^{n-2}+1`$ is the
-least forcing number. Neither the conjecture nor the bound $`313`$ is
-proved here.
+least forcing number. The conjecture is not proved here; the bound
+$`313`$ is proved in §6.5.
 
 ### 1.1. The classical lower bound
 
@@ -1107,6 +1108,27 @@ stronger geometric information. Partial trees, unsuccessful local searches
 and the elimination of one finite component do not settle (OPEN). The
 [remaining-work account](docs/ES8_REMAINING.md) records the computational
 status; the partial searches do not justify a completion-time estimate.
+
+### 6.5. The proof of 313
+
+The implication of §6.4 is now discharged. Lean proves, with every row bound
+to its geometric theorem, that $`\mathrm{ES}(8)\le313`$ follows if no 0/1
+vector with state 0 occupied satisfies the 2,650 rows of the current residual
+catalog with at most 32 holes. An exact branch-and-bound with LP strong
+branching proves this: its tree has 437,580 leaves, each a nonnegative integer
+combination of rows with a strict capacity margin. The kernel checked all
+leaves and the assembly, giving
+
+```math
+\mathsf F(313,8),
+```
+
+`ErdosSzekeres.Omission.forces_convex_octagon_313` in
+[Final313/Final.lean](experiments/omission-final313-2026-10-11/Final313/Final.lean),
+with only the standard axioms. The residual population bound is 121, so an
+octagon-free set has at most $`1+190+121=312`$ points. The
+[313 record](experiments/omission-final313-2026-10-11/README.md) gives the
+certificate and the reproduction procedure.
 
 ## 7. Validation and attribution
 

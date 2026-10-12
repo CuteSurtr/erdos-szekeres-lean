@@ -3,8 +3,8 @@
 This repository formalizes bounds for the Erdős–Szekeres problem in Lean 4.
 It contains proofs of Suk's 2016 bound, the ordinary real-point case of the
 Holmsen–Mojarrad–Pach–Tardos (HMPT) 2020 bound, the finite bound
-**ES(8) ≤ 314**, and the classical lower bound
-$`\mathrm{ES}(n)\ge2^{n-2}+1`$. Together, **65 ≤ ES(8) ≤ 314**.
+**ES(8) ≤ 313**, and the classical lower bound
+$`\mathrm{ES}(n)\ge2^{n-2}+1`$. Together, **65 ≤ ES(8) ≤ 313**.
 
 All results concern finite subsets of the real plane in general position:
 no three distinct points are collinear. A convex polygon may contain other
@@ -36,7 +36,7 @@ $`n`$ (depending on $`\varepsilon`$),
 \left\lfloor 2^{\,n+(8\sqrt2/3+\varepsilon)\sqrt{n\log_2 n}}\right\rfloor.
 ```
 
-**Finite octagon bound.** Every set of at least 314 points in general
+**Finite octagon bound.** Every set of at least 313 points in general
 position contains eight points in convex position.
 
 **Erdős–Szekeres lower bound.** For every $`n\ge3`$ there are $`2^{n-2}`$
@@ -51,11 +51,12 @@ relative to the namespace `ErdosSzekeres`.
 | --- | --- | --- |
 | Suk | `Suk.theorem2016` | [Suk/Asymptotic.lean](ErdosSzekeres/Suk/Asymptotic.lean) |
 | HMPT | `HMPT.theorem2020` | [HMPT/Asymptotic.lean](ErdosSzekeres/HMPT/Asymptotic.lean) |
-| ES(8) ≤ 314 | `Omission.forces_convex_octagon_314` | [FinalCover314B61FusedR31Fused.lean](experiments/omission-global-assembly-2026-10-10/FinalCover314B61FusedR31Fused.lean) |
+| ES(8) ≤ 313 | `Omission.forces_convex_octagon_313` | [Final313/Final.lean](experiments/omission-final313-2026-10-11/Final313/Final.lean) |
+| ES(8) ≤ 314 (earlier) | `Omission.forces_convex_octagon_314` | [FinalCover314B61FusedR31Fused.lean](experiments/omission-global-assembly-2026-10-10/FinalCover314B61FusedR31Fused.lean) |
 | ES(n) ≥ 2^(n-2) + 1 | `not_forcesConvexNGon_two_pow`, `conjecturedBound_le_of_forces` | [LowerBound/Construction.lean](ErdosSzekeres/LowerBound/Construction.lean) |
 | ES(8) ≥ 65 | `octagon_lower_bound`, `sixtyFive_le_esNumber_eight` | [LowerBound/Construction.lean](ErdosSzekeres/LowerBound/Construction.lean), [LowerBound/Number.lean](ErdosSzekeres/LowerBound/Number.lean) |
 
-The ES(8) ≤ 314 file also provides `Omission.convex_octagon_of_card_ge_314`, which
+The ES(8) ≤ 313 file also provides `Omission.convex_octagon_of_card_ge_313`, which
 states the result directly for finite subsets of $`\mathbb R^2`$.
 
 The lower bound shows that the formalized conjecture, `ErdosSzekeresConjecture`,
@@ -86,39 +87,37 @@ notes.
 The octagon proof uses the omission method. A projective transformation
 removes one point and reduces an octagon-free set to two configurations,
 called balanced and residual. Geometric inequalities and exact integer
-certificates bound their sizes by 190 and 122. Hence the original set has
-at most $`1+190+122=313`$ points. The
-[assembly record](experiments/omission-global-assembly-2026-10-10/README.md)
-contains the full theorem audit and reproduction instructions.
+certificates bound their sizes by 190 and 121. Hence the original set has
+at most $`1+190+121=312`$ points. The residual bound 121 uses a 2,650-row
+catalog of proved geometric inequalities and an exact certificate with
+437,580 leaves showing that at least 33 of its 154 states are missing. The
+[313 record](experiments/omission-final313-2026-10-11/README.md) contains
+the certificate, the kernel-check record and reproduction instructions; the
+earlier [314 assembly](experiments/omission-global-assembly-2026-10-10/README.md)
+used the bound 122.
 
 The repository also proves finite refinements of the HMPT counting
 criterion and additional geometric omission inequalities. These are
 explained in [math.md](math.md); they do not improve HMPT's asymptotic
 coefficient.
 
-## The open bound 313
+## Beyond 313
 
-**ES(8) ≤ 313 is not proved here.** The present route would suffice if the
-residual population bound could be reduced from 122 to 121. In the
-154-state representation, this means proving that at least 33 states are
-missing.
+**ES(8) ≤ 313 is proved** (12 October 2026). Its certificate is far larger
+than the earlier ones: the complete Lean kernel check takes about 120
+CPU-hours, so it was run on one machine rather than in the hosted CI
+workflow; the [313 record](experiments/omission-final313-2026-10-11/README.md)
+explains how to repeat it. A [conditional bridge](experiments/omission-residual32-bridge2650-2026-10-11/README.md)
+reduces the bound to one finite arithmetic statement, which the certificate
+supplies.
 
-The current research catalog contains 2,650 necessary omission inequalities.
-The latest four have [complete Lean certificates](experiments/omission-residual32-rank-certificates-2026-10-10/README.md),
-but no complete exclusion of assignments with at most 32 missing states has
-been found. A proved normalization lemma also shows why the new cup-rank
-bound alone does not strengthen feasibility of the abstract model.
-
-These finite assignments encode necessary geometric conditions; satisfying
-them does not establish a realization by points in the plane. The
-[remaining-work note](docs/ES8_REMAINING.md) describes the unresolved steps.
-A fifty-minute [CP-SAT probe](experiments/omission-residual32-cpsat-2026-10-11/README.md)
-of the 2,650-row catalog was also inconclusive. On the other side, an
+No further improvement is claimed. On the lower side, an
 [exact computation](experiments/es8-lower-bound-search-2026-10-11/README.md)
-shows that the 64-point lower-bound witness cannot be extended to 65 points
-without a convex octagon; this does not exclude other 65-point sets.
-Dated experiment directories preserve the individual proofs and search
-records, including unsuccessful searches.
+shows that the 64-point lower-bound witness and 75 further stacking
+constructions cannot be extended to 65 points without a convex octagon;
+this does not exclude other 65-point sets. Dated experiment directories
+preserve the individual proofs and search records, including unsuccessful
+searches; the [remaining-work note](docs/ES8_REMAINING.md) summarizes them.
 
 ## Verification
 

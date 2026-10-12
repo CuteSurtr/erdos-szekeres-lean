@@ -1,5 +1,15 @@
 # Finite octagon status and remaining work
 
+**12 October 2026: ES(8) ≤ 313 is proved.** `ErdosSzekeres.Omission.forces_convex_octagon_313`
+in [Final313/Final.lean](../experiments/omission-final313-2026-10-11/Final313/Final.lean)
+combines the [conditional bridge](../experiments/omission-residual32-bridge2650-2026-10-11/README.md)
+with an exact 437,580-leaf certificate excluding at most 32 residual holes over
+the 2,650-row catalog. The whole chain was kernel-checked locally with only the
+standard axioms; see the [313 record](../experiments/omission-final313-2026-10-11/README.md).
+Sections below that describe 313 as open record the state before this result.
+
+# Finite octagon status and remaining work
+
 **10 October 2026: ES(8) ≤ 314 is proved. No geometric transfer or arithmetic
 obligation remains for that theorem.** This also settles every former project
 target from 317 down to 315. Their earlier proof records remain preserved.

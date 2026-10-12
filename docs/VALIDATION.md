@@ -7,6 +7,18 @@ hashes are normalized. Earlier GitHub run/commit links refer to the original
 private repository and may not resolve in the public replacement. New hosted
 results are available in the [CI workflow](https://github.com/CuteSurtr/erdos-szekeres-lean/actions/workflows/ci.yml).
 
+## ES(8) ≤ 313 — 12 October 2026
+
+The [313 record](../experiments/omission-final313-2026-10-11/README.md) closes
+the conditional bridge. Its 437,580-leaf certificate was replayed exactly in
+Python and exported to 10,325 Lean parts plus catalog and root; every module
+passed the kernel with an audited axiom report and a recorded object hash.
+`forces_convex_octagon_313 : ForcesConvexNGon 313 8` and
+`convex_octagon_of_card_ge_313` depend only on `propext`, `Classical.choice`
+and `Quot.sound`. The check took about 120 CPU-hours on one machine and is not
+part of the hosted CI workflow; the maintained library build and its 587-root
+audit are unchanged.
+
 ## Erdős–Szekeres lower bound — 11 October 2026
 
 Seven new modules in [ErdosSzekeres/LowerBound](../ErdosSzekeres/LowerBound)

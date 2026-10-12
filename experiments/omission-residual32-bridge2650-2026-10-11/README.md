@@ -1,6 +1,10 @@
 # Conditional bridge: the 2,650-row residual catalog and ES(8) ≤ 313
 
-**This bundle is CONDITIONAL. ES(8) ≤ 313 is NOT proved.** The completed planar
+**Update, 12 October 2026:** the hypothesis `Excludes2650Zero 32` is now supplied by the
+[313 certificate](../omission-final313-2026-10-11/README.md), so ES(8) ≤ 313 is proved.
+The text below describes this bundle as it was checked.
+
+**This bundle is CONDITIONAL. ES(8) ≤ 313 is NOT proved here.** The completed planar
 bound remains 314. What is checked here is that ES(8) ≤ 313 follows from one
 purely arithmetic statement about a finite catalog, `Excludes2650Zero 32`.
 That statement is a Lean definition; it is an explicit hypothesis of the final
