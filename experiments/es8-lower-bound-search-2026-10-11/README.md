@@ -261,3 +261,13 @@ without a convex octagon need not contain any of them. The results are
 evidence only. To rerun, copy `family/` to a directory under `.cache/`, build
 `sat` and `verify` from `saturation/` into its `bin/`, and run
 `run_queue.sh`; outputs are written beside the copy.
+
+### Completion of the family test (13 October 2026)
+
+The remaining 1,158 order-type representatives within the coordinate bound of
+`sat.c` were tested on 12–13 October with the same program
+(`family/out/results-remaining.json`, sets in `family/sets/`). Every one is
+saturated: no face of its line arrangement admits a 65th point without a convex
+octagon. With the 76 sets above, 1,234 tested sets cover all 1,233 order types
+of this family that fit the coordinate bound; 359 order types with larger
+coordinates remain untested. ES(8) ≥ 65 is unchanged.
