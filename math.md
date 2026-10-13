@@ -5,15 +5,14 @@
 This article describes three completed Lean proofs of upper bounds: Suk's
 asymptotic bound, the ordinary real-point specialization of the
 Holmsen–Mojarrad–Pach–Tardos (HMPT) bound, and the finite bound
-$`\mathrm{ES}(8)\le314`$. Section 1.1 adds the completed classical lower
-bound $`\mathrm{ES}(n)\ge2^{n-2}+1`$, so $`65\le\mathrm{ES}(8)\le314`$, and §6.5
-records the later proof of $`\mathrm{ES}(8)\le313`$. The
-article also explains the proved refinements and the precise remaining
-problem in the investigation of $`\mathrm{ES}(8)\le313`$.
+$`\mathrm{ES}(8)\le313`$. Together with the classical lower bound proved
+in §1.1, the octagon result gives $`65\le\mathrm{ES}(8)\le313`$.
 
 The [finite octagon proof](#2-geometric-configurations-and-finite-state-spaces)
-occupies §§2–3. Section 4 treats the [asymptotic bounds](#4-the-asymptotic-arguments),
-and §§5–6 develop the [residual inequalities and the open bound 313](#5-stronger-residual-inequalities).
+begins in §§2–3 with the geometric reduction and the intermediate bound 314.
+Section 4 treats the [asymptotic bounds](#4-the-asymptotic-arguments).
+The [stronger residual inequalities](#5-stronger-residual-inequalities) of
+§§5–6 complete the proof of 313.
 
 A finite set $`P\subset\mathbb R^2`$ is in **general position** if no three
 distinct points are collinear. It is in **convex position** if
@@ -45,7 +44,7 @@ for every integer $`n\ge n_0`$,
 \right).
 ```
 
-**(3) Finite octagon bound.** $`\mathsf F(314,8)`$.
+**(3) Finite octagon bound.** $`\mathsf F(313,8)`$.
 
 The first two statements are eventual bounds; their quantifiers do not permit
 an unverified substitution of $`n=8`$. The HMPT statement retains every
@@ -65,7 +64,8 @@ $`\lceil\log u\rceil`$, $`\lfloor\log u\rfloor`$ for Lean's
 | Convex-hull characterization; equivalence with sets of exactly $`N`$ points; monotonicity in $`N`$ | `convexPosition_iff`, `forcesConvexNGon_iff_exact`, `ForcesConvexNGon.mono` in [Basic](ErdosSzekeres/Basic.lean), with prefix `ErdosSzekeres` |
 | Suk bound | `ErdosSzekeres.Suk.theorem2016` in [Suk/Asymptotic](ErdosSzekeres/Suk/Asymptotic.lean) |
 | HMPT bound | `ErdosSzekeres.HMPT.theorem2020` in [HMPT/Asymptotic](ErdosSzekeres/HMPT/Asymptotic.lean) |
-| Finite octagon bound | `ErdosSzekeres.Omission.forces_convex_octagon_314`, `convex_octagon_of_card_ge_314` in [FinalCover314B61FusedR31Fused](experiments/omission-global-assembly-2026-10-10/FinalCover314B61FusedR31Fused.lean) |
+| Finite octagon bound | `ErdosSzekeres.Omission.forces_convex_octagon_313`, `convex_octagon_of_card_ge_313` in [Final313/Final](experiments/omission-final313-2026-10-11/Final313/Final.lean) |
+| Intermediate bound 314 | `ErdosSzekeres.Omission.forces_convex_octagon_314`, `convex_octagon_of_card_ge_314` in [FinalCover314B61FusedR31Fused](experiments/omission-global-assembly-2026-10-10/FinalCover314B61FusedR31Fused.lean) |
 
 The formalized conjecture is
 $`\forall n\ge3,\ \mathsf F(2^{n-2}+1,n)`$; for octagons its threshold is
@@ -80,7 +80,7 @@ $`313`$ is proved in §6.5.
 of $`2^{n-2}`$ points in general position with no $`n`$ points in convex
 position. Consequently $`\mathsf F(N,n)`$ implies $`N\ge2^{n-2}+1`$. In
 particular every $`N`$ with $`\mathsf F(N,8)`$ satisfies $`N\ge65`$, and
-together with Theorem 1.1(3), $`65\le\mathrm{ES}(8)\le314`$.
+together with Theorem 1.1(3), $`65\le\mathrm{ES}(8)\le313`$.
 
 Put $`[a,b,c]=\det(b-a,c-a)`$, compare points by their first coordinates,
 and let $`\sigma\in\{1,-1\}`$.
@@ -158,13 +158,42 @@ The final set has $`\sum_{i=0}^{n-2}\binom{n-2}{i}=2^{n-2}`$ points.
 | Realization by translation | `ErdosSzekeres.LowerBound.exists_stacked` in [LowerBound/Placement](ErdosSzekeres/LowerBound/Placement.lean) |
 
 The upper bound in `esNumber_le_choose` is the classical cups-caps bound
-already used by Suk's proof. The stronger value $`314`$ is the archived
+already used by Suk's proof. The stronger value $`313`$ is the archived
 theorem of Theorem 1.1(3): applying `esNumber_le_of_forces` to
-`Omission.forces_convex_octagon_314` gives `esNumber 8 ≤ 314`. The script
+`Omission.forces_convex_octagon_313` gives `esNumber 8 ≤ 313`. The script
 [es_lower_bound_witness.py](scripts/es_lower_bound_witness.py) builds the
 same sets with exact integer coordinates and independently confirms that
 the largest convex subsets of the witnesses for $`n=3,\ldots,8`$ have
 $`n-1`$ points. It is a numerical control, not part of the proof.
+
+### 1.2. Literature comparison
+
+The literature search of **13 October 2026** found no earlier universal
+planar bound as strong as $`\mathrm{ES}(8)\le313`$. The strongest directly
+comparable public announcement located was Michael Schroeder's
+[version-1 preprint](https://michaelschroeder.ai/research/ErdosSzekeres/erdos_szekeres_upper_bounds_v1.pdf),
+19 September 2026: Theorem 1.1 states $`\mathrm{ES}(8)\le319`$.
+Theorem 1.1(3) improves that threshold by six. This comparison supports an
+apparently new best known bound; it does not establish exhaustive priority
+or imply external peer review of either proof.
+
+The omission method, initial catalogs and much of the geometric reduction
+used here are adapted from Schroeder's work. The present improvement uses
+stronger omission inequalities and integer certificates, with their
+geometric interpretation and arithmetic verification checked in Lean.
+Sections 2–3 describe the inherited method and its local implementation;
+§§5–6 give the additional rows and the certificate closing 313. The
+[provenance ledger](docs/THIRD_PARTY.md) identifies the adapted code and data.
+
+Two distinctions matter. Baek and Balko's
+[2025/2026 paper](https://doi.org/10.1016/j.jcta.2026.106195) gives the
+threshold $`65`$ for split octagons and for convex octagons in decomposable
+sets, not in arbitrary point sets. Table 1 of
+[Koshelev and Koshka (2026)](https://arxiv.org/pdf/2604.20120) reports the
+bound $`324`$ under Norin–Yuditsky's name, but its finite derivation was not
+located in the cited [paper](https://arxiv.org/abs/1509.03332); we therefore
+do not treat that attribution as independently verified. Finally, the finite
+octagon result does not improve Suk's or HMPT's asymptotic estimates.
 
 ## 2. Geometric configurations and finite state spaces
 
@@ -337,7 +366,7 @@ Every row is proved for the same occupied set $`O`$.
 
 The first three rows use namespace prefix `ErdosSzekeres.Omission`.
 
-## 3. Exact certificates and the proof of the octagon bound
+## 3. Exact certificates and geometric composition
 
 ### 3.1. Weighted inequalities and integer rounding
 
@@ -430,7 +459,7 @@ The certificate and packing declarations have namespace prefix
 `CertificateTree.check_sound`, `CertificateTree.excludes_of_check`, while
 `split_excludes` belongs directly to that namespace.
 
-### 3.2. Population bounds
+### 3.2. Initial population bounds
 
 **Theorem 3.2.** Every balanced configuration has at most 190 points; every
 residual configuration has at most 122 points.
@@ -455,7 +484,8 @@ and [residual bridge](experiments/omission-global-assembly-2026-10-10/ResidualCo
 prove `base_catalog_matches`, `cut_catalog_matches`, `all_cover_rows` and
 `exclusion_transfer`. The resulting closed declarations are
 `ErdosSzekeres.Omission.balanced_population_190` and `residual_population_122`
-in the final theorem file from §1. Their types are `Partition.BalancedBound 190`
+in [FinalCover314B61FusedR31Fused](experiments/omission-global-assembly-2026-10-10/FinalCover314B61FusedR31Fused.lean).
+Their types are `Partition.BalancedBound 190`
 and `Partition.ResidualBound 122`, with exactly the geometric hypotheses of §2.
 More generally, excluding budget $`b`$ yields populations $`251-b`$ and $`153-b`$.
 
@@ -510,14 +540,15 @@ $`s`$ to $`t`$. It follows from the four-point sign identities and cup/cap
 boundary geometry, without requiring unrelated chains to be disjoint.
 Thus $`H`$ is balanced. ∎
 
-**Proof of Theorem 1.1(3).** If $`S`$ avoids convex octagons, the empty and
+**Intermediate conclusion: $`\mathsf F(314,8)`$.** If $`S`$ avoids convex octagons, the empty and
 small cases are immediate. Otherwise Lemmas 3.3–3.4 and Theorem 3.2 give
 
 ```math
 \vert S\vert=\vert H\vert+\vert R\vert+1\le190+122+1=313.
 ```
 
-Therefore 314 points force a convex octagon. ∎
+Therefore 314 points force a convex octagon. Section 6 improves the residual
+bound from 122 to 121 and completes Theorem 1.1(3). ∎
 
 | Geometric step | Declarations (prefix `ErdosSzekeres.Omission` except where specified) |
 | --- | --- |
@@ -939,7 +970,7 @@ The Fourth family is not claimed exhaustive. Each of the 48 later supports
 passes a finite test for nonimplication by any single previous row; this
 observation alone is not used as a budget-constrained independence result.
 
-## 6. Rank attainment, further rows and the remaining problem
+## 6. Rank attainment and the proof of 313
 
 ### 6.1. A bound from the source profile
 
@@ -1083,52 +1114,62 @@ can shorten certificates. Independently, finite domain replay finds no new
 empty directed domain, incompatible pair or changed bounding-box forced sign;
 its data are in the [rank-attainment bundle](experiments/omission-residual-rank-attainment-2026-10-10/README.md).
 
-### 6.4. The open implication for 313
+### 6.4. The residual arithmetic exclusion
 
-The present sufficient arithmetic statement is
-
-```math
-\forall h:U\to\{0,1\},\qquad
-\mathcal A_{2650}(h)\Longrightarrow\sum_i h_i\ge33.        \qquad\text{(OPEN)}
-```
-
-**This implication remains unproved.** If established for the exact catalog,
-(5.2) would give residual population at most 121, and the proved composition
-would yield $`\mathsf F(313,8)`$, since $`190+121+2=313`$. Restricting (OPEN) to
-$`h_0=0`$ would also suffice: the first vertex of a nonempty actual residual
-configuration occupies state zero, by `OmissionResidualZeroState.zero_mem_residualOccupied`
-in [ZeroState](experiments/omission-residual32-context-certificates-2026-10-10/ZeroState.lean);
-the empty case is immediate.
-
-All current rows already have geometric necessity proofs. What remains is a
-complete arithmetic exclusion, its kernel-checked certificate, literal catalog
-identification and final composition. Bounded searches provide neither that
-exclusion nor a current 32-hole model. A feasible model would instead require
-stronger geometric information. Partial trees, unsuccessful local searches
-and the elimination of one finite component do not settle (OPEN). The
-[remaining-work account](docs/ES8_REMAINING.md) records the computational
-status; the partial searches do not justify a completion-time estimate.
-
-### 6.5. The proof of 313
-
-The implication of §6.4 is now discharged. Lean proves, with every row bound
-to its geometric theorem, that $`\mathrm{ES}(8)\le313`$ follows if no 0/1
-vector with state 0 occupied satisfies the 2,650 rows of the current residual
-catalog with at most 32 holes. An exact branch-and-bound with LP strong
-branching proves this: its tree has 437,580 leaves, each a nonnegative integer
-combination of rows with a strict capacity margin. The kernel checked all
-leaves and the assembly, giving
+**Proposition 6.4.** For every Boolean vector $`h:U\to\{0,1\}`$,
 
 ```math
-\mathsf F(313,8),
+h_0=0\ \land\ \mathcal A_{2650}(h)
+\quad\Longrightarrow\quad\sum_{i\in U}h_i\ge33.          \qquad\text{(6.3)}
 ```
 
-`ErdosSzekeres.Omission.forces_convex_octagon_313` in
-[Final313/Final.lean](experiments/omission-final313-2026-10-11/Final313/Final.lean),
-with only the standard axioms. The residual population bound is 121, so an
-octagon-free set has at most $`1+190+121=312`$ points. The
-[313 record](experiments/omission-final313-2026-10-11/README.md) gives the
-certificate and the reproduction procedure.
+The condition $`h_0=0`$ means that state zero is occupied. It holds for every
+nonempty residual configuration: its first vertex has no incoming edges and
+therefore has the empty incoming state. This is
+`OmissionResidualZeroState.zero_mem_residualOccupied` in
+[ZeroState](experiments/omission-residual32-context-certificates-2026-10-10/ZeroState.lean).
+No unconditional exclusion of all Boolean vectors is needed or asserted.
+
+*Proof of Proposition 6.4.* Suppose that $`h_0=0`$,
+$`\mathcal A_{2650}(h)`$ and $`\sum_i h_i\le32`$. The certificate partitions
+these assignments into a complete binary tree. Its 437,579 leaves are excluded by
+nonnegative integer combinations of rows, using the conditioned capacity
+bound of §3.1; every strict margin is at least one. The search used linear
+programming to propose the branching decisions and weights, but the leaf
+inequalities are exact integer statements. Lean checks the leaves, the
+binary composition and the equality of the certificate's literal catalog
+with $`\mathcal A_{2650}`$. ∎
+
+The stored search tree includes one additional, unfinished leaf for
+$`h_0=1`$. That leaf is outside the exported subtree and outside (6.3).
+The formal conclusion is
+`ErdosSzekeres.Omission.residual_excludes_2650_zero`, whose type is
+`OmissionResidual32Bridge2650.Excludes2650Zero 32`.
+
+### 6.5. Completion of the geometric proof
+
+**Proof of Theorem 1.1(3).** Every actual residual hole vector satisfies
+$`\mathcal A_{2650}`$ and the cardinality identity (2.2). If its configuration
+is nonempty, Proposition 6.4 gives $`n_R\le154-33=121`$; the same population
+bound holds trivially for the empty configuration. Combining this with
+$`n_B\le190`$ and Lemmas 3.3–3.4, every octagon-free set satisfies
+
+```math
+\vert S\vert\le1+n_B+n_R\le1+190+121=312.
+```
+
+Consequently $`\mathsf F(313,8)`$. ∎
+
+| Step | Lean declaration and source |
+| --- | --- |
+| Necessity of all 2,650 rows; cardinality identity; residual bound from (6.3) | `OmissionResidual32Bridge2650.all_rows_2650`, `holes_sum_add_population`, `residual_bound_121_of_excludes` in [Rows](experiments/omission-residual32-bridge2650-2026-10-11/Residual32Bridge2650/Rows.lean) |
+| Complete exclusion with state zero occupied | `OmissionResidual2650Zero.node1`, generated from the [committed certificate](experiments/omission-final313-2026-10-11/certificate/) |
+| Literal supports and demands | `OmissionResidual2650ZeroMatch.support_eq`, `demand_eq` in [Match](experiments/omission-final313-2026-10-11/Final313/Match.lean) |
+| Proposition 6.4 and the unconditional real-point theorem | `ErdosSzekeres.Omission.residual_excludes_2650_zero`, `forces_convex_octagon_313`, `convex_octagon_of_card_ge_313` in [Final](experiments/omission-final313-2026-10-11/Final313/Final.lean) |
+
+The [313 record](experiments/omission-final313-2026-10-11/README.md) preserves
+the certificate, compilation records and reproduction procedure. The final
+theorem has no undischarged geometric or arithmetic hypothesis.
 
 ## 7. Validation and attribution
 
@@ -1145,12 +1186,15 @@ exposition, not a separately checked translation.
 | Rounded cuts and complete arithmetic exclusions | [Certificate ledger](experiments/omission-cover-certificates-2026-10-10/README.md), with source archives and full kernel records |
 | Closed real-point theorem $`\mathsf F(314,8)`$ | [Final assembly record](experiments/omission-global-assembly-2026-10-10/global-cover-314-check.json) and [axiom output](experiments/omission-global-assembly-2026-10-10/global-cover-314-axioms.txt) |
 | Later residual rows and normalization | Standalone continuation checks in the [validation ledger](docs/VALIDATION.md) and source bundles linked in §§5–6 |
+| Closed real-point theorem $`\mathsf F(313,8)`$ | [Final proof record](experiments/omission-final313-2026-10-11/README.md), [assembly report](experiments/omission-final313-2026-10-11/final-report.json) and [axiom output](experiments/omission-final313-2026-10-11/final-audit.out) |
 
 The large arithmetic proofs have complete preserved kernel records distinct
 from the maintained-library build. The completed 314 theorem uses the
-2,295-row residual catalog and excludes budget 31. Later budget-32 research
-is not a premise of that theorem. The asymptotic proofs are likewise
-independent of the omission-search experiments.
+2,295-row residual catalog and excludes budget 31. The 313 theorem uses the
+2,650-row catalog and excludes budget 32 under $`h_0=0`$. Hosted CI checks
+the maintained library and selected continuation proofs; it does not rebuild
+the entire large certificate. The asymptotic proofs are independent of the
+omission-search experiments.
 
 References and attribution:
 
@@ -1161,9 +1205,10 @@ References and attribution:
    3981–3995, [arXiv:1710.11415v3](https://arxiv.org/abs/1710.11415v3),
    [doi:10.4171/JEMS/1000](https://doi.org/10.4171/JEMS/1000).
 3. Michael Schroeder, *Erdős–Szekeres: Upper Bounds for Convex Heptagons and
-   Octagons*, supplied version-1 archive, 19 September 2026. The supplied
-   DOI `10.5281/zenodo.22842891` is described as a reserved Zenodo draft;
-   public resolution or peer review is not asserted. The finite catalogs,
+   Octagons*, version 1, 19 September 2026;
+   [public manuscript and proof materials](https://michaelschroeder.ai/research/ErdosSzekeres/companion),
+   [doi:10.5281/zenodo.22842891](https://doi.org/10.5281/zenodo.22842891).
+   This is a public preprint; no external peer review is claimed. The finite catalogs,
    geometric architecture and adapted proof code are attributed in the
    [third-party ledger](docs/THIRD_PARTY.md).
 4. Jineon Baek, [erdos-tuza-valtr](https://github.com/jcpaik/erdos-tuza-valtr),
@@ -1179,4 +1224,5 @@ References and attribution:
 The [paper correspondence](docs/PAPER_MAP.md) distinguishes direct statements
 from replacement arguments. Original exposition is Apache-2.0; third-party
 code and derived data retain the [documented license exceptions](docs/LICENSING.md).
-No literature-priority or best-known-bound claim is made.
+The literature comparison in §1.2 is separate from the formal correctness
+claim and is limited to the public sources located on the stated date.

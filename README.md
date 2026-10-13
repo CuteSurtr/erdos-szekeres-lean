@@ -68,6 +68,30 @@ The asymptotic theorems do not assert the displayed estimates for every
 small $`n`$. HMPT's extensions to pseudo-configurations and convex bodies
 are outside the scope of this formalization.
 
+## Comparison with the literature
+
+As of **13 October 2026**, our search of the literature and public preprints
+found no earlier general bound as strong as **ES(8) ≤ 313**. To the best of
+our knowledge, it is a new best-known upper bound for ordinary real planar
+point sets in general position. This is a dated literature assessment, not
+a guarantee of priority or a claim of external peer review.
+
+The strongest directly comparable prior announcement we located is
+**ES(8) ≤ 319**, Theorem 1.1 of Michael Schroeder's
+[*Erdős–Szekeres: Upper Bounds for Convex Heptagons and Octagons*](https://michaelschroeder.ai/research/ErdosSzekeres/erdos_szekeres_upper_bounds_v1.pdf)
+(version 1, 19 September 2026). The present bound improves that threshold by
+six points. It builds on Schroeder's omission method, state catalogs and
+geometric formalization, with additional inequalities and stronger exact
+certificates developed here.
+
+Baek and Balko's
+[*The Erdős–Szekeres Conjecture Revisited*](https://doi.org/10.1016/j.jcta.2026.106195)
+proves the conjectured threshold for decomposable sets and a split-polygon
+variant; it does not give the threshold 65 for arbitrary point sets. The
+[detailed comparison](math.md#12-literature-comparison) discusses these
+distinctions and the reported 324 bound. The result here is a finite
+improvement at $`n=8`$; it does not improve Suk's or HMPT's asymptotic bounds.
+
 ## Proofs and supporting material
 
 The lower bound is the Erdős–Szekeres construction of 1961. Blocks are
@@ -89,8 +113,11 @@ removes one point and reduces an octagon-free set to two configurations,
 called balanced and residual. Geometric inequalities and exact integer
 certificates bound their sizes by 190 and 121. Hence the original set has
 at most $`1+190+121=312`$ points. The residual bound 121 uses a 2,650-row
-catalog of proved geometric inequalities and an exact certificate with
-437,580 leaves showing that at least 33 of its 154 states are missing. The
+catalog of proved geometric inequalities. For a nonempty residual configuration,
+geometric rank attainment ensures that state zero is occupied; the exact
+certificate excludes every assignment with this property and at most 32 missing
+states. Its exported subtree has
+437,579 weighted leaves, forcing at least 33 of the 154 states to be missing. The
 [313 record](experiments/omission-final313-2026-10-11/README.md) contains
 the certificate, the kernel-check record and reproduction instructions; the
 earlier [314 assembly](experiments/omission-global-assembly-2026-10-10/README.md)
@@ -103,15 +130,7 @@ coefficient.
 
 ## Beyond 313
 
-**ES(8) ≤ 313 is proved** (12 October 2026). Its certificate is far larger
-than the earlier ones: the complete Lean kernel check takes about 120
-CPU-hours, so it was run on one machine rather than in the hosted CI
-workflow; the [313 record](experiments/omission-final313-2026-10-11/README.md)
-explains how to repeat it. A [conditional bridge](experiments/omission-residual32-bridge2650-2026-10-11/README.md)
-reduces the bound to one finite arithmetic statement, which the certificate
-supplies.
-
-No further improvement is claimed. On the lower side, an
+No bound below 313 is claimed here. On the lower side, an
 [exact computation](experiments/es8-lower-bound-search-2026-10-11/README.md)
 shows that the 64-point lower-bound witness and 75 further stacking
 constructions cannot be extended to 65 points without a convex octagon;
@@ -138,20 +157,34 @@ checks 587 named theorems and permits only `propext`, `Classical.choice`,
 and `Quot.sound`. The [validation guide](docs/VALIDATION.md) records the
 scope of these checks and the separate audits of the finite certificates.
 
-The commands above build the maintained library and check the residual
-continuation. The large archived certificates for 314 have separate
-reproduction instructions in the assembly record; they are not all rebuilt
-by `lake build`. Some tests require optional solvers or explicit opt-in;
-CI enables the required Lean integration checks. Build outputs and local
-caches are ignored by Git.
+The 313 theorem was kernel-checked on 12 October 2026. Its
+[final axiom report](experiments/omission-final313-2026-10-11/final-audit.out)
+contains only those same three axioms; the theorem retains no unproved
+geometric or arithmetic hypothesis. The
+[certificate record](experiments/omission-final313-2026-10-11/README.md)
+provides source hashes, per-module check records and reproduction instructions.
+A complete rebuild requires roughly 120 CPU-hours.
+
+The commands above and [hosted CI](.github/workflows/ci.yml) build the maintained
+library and check the residual continuation. **They do not rebuild the large
+313 certificate or all archived 314 certificates.** Their verification is
+recorded separately. Some tests require optional solvers or explicit opt-in;
+CI enables the required Lean integration checks. Build outputs and local caches
+are ignored by Git.
 
 ## Attribution and license
 
-The omission method, original state catalogs, and parts of the formal
-infrastructure derive from Michael Schroeder's pinned version-1 archive.
-The 23-point combinatorial theorem uses Baek's formal development. Full
-sources and adaptations are documented in [THIRD_PARTY.md](docs/THIRD_PARTY.md).
-No claim of literature priority or a best-known bound is made.
+The omission method, original state catalogs, projective reduction,
+minimum-slope partition and substantial parts of the geometric formalization
+derive from Michael Schroeder's
+[version-1 archive](https://doi.org/10.5281/zenodo.22842891). These are adapted
+foundations of the 313 proof, not independently discovered methods. The
+additional omission inequalities, strengthened certificates and their local
+Lean verification are described in [math.md](math.md). The 23-point
+combinatorial theorem uses Jineon Baek's formal development. Full sources,
+adaptations and retained licenses are documented in
+[THIRD_PARTY.md](docs/THIRD_PARTY.md); no endorsement by the original authors
+is implied.
 
 Original contributions are licensed under [Apache-2.0](LICENSE).
 Third-party material retains its own licenses; see [NOTICE](NOTICE) and
