@@ -56,3 +56,24 @@ tiny, biased part of all heptagon-free 32-point configurations.
 
 The direction of this search follows a suggestion by Andrew Suk that the
 conjecture might fail for small n. No literature-priority claim is made.
+
+## Rotationally symmetric SAT models (`symmetric/`, added 14 October 2026)
+
+`symcnf.py` encodes N points with an m-fold rotational symmetry as a CC system
+(Knuth interiority and Grassmann–Plücker clauses on orbit representatives of
+triples, with an auxiliary or included centre and a labelling normal form); the
+"no convex K-gon" constraint uses the 4-point criterion. The encoding was checked
+against brute force on all models of small instances and against 3,040 random
+realizable symmetric sets (`symcheck.py`, `axiom5_check.py`, `symvalidate.py`),
+and it reproduces the controls: 16 points, no hexagon: 3-fold UNSAT, 4- and
+5-fold SAT; 18 points, no hexagon: UNSAT for m = 2, 3, 6, 9 (DRAT-checked).
+
+| Instance | Outcome |
+| --- | --- |
+| 33 points, no heptagon, 11-fold | UNSAT in 0.75 s, trivially: an 11-point orbit is a regular 11-gon, so every symmetry order ≥ 7 is excluded |
+| 33 points, no heptagon, 3-fold (2,002 orientation orbits; 464k variables, 9.5M clauses) | undecided after two 2-hour CaDiCaL runs and a short cube-and-conquer start (`cnc/`, 5 cubes refuted, 3 open at the checkpoint) |
+| 32 points, no heptagon, 2-fold | SAT in 51 s; 45 distinct abstract models (`enum_models.cpp`), none realized by the two realizers here (`symrealize.c`, `lp_realize.py`), which also fail on known-realizable symmetric 32-point chirotopes, so no realizability conclusion follows |
+
+`runs-summary.txt` records the runs. A realizable 2-fold model would be a new
+symmetric extremal 32-point set, not a counterexample; the 3-fold 33-point
+question is the open symmetric target. Nothing about ES(7) is established.
