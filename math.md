@@ -169,12 +169,13 @@ $`n-1`$ points. It is a numerical control, not part of the proof.
 
 ### 1.2. Literature comparison
 
-The literature search of **13 October 2026** found no earlier universal
-planar bound as strong as $`\mathrm{ES}(8)\le313`$. The strongest directly
+The literature search of **14 October 2026** ([survey](docs/RELATED_WORK_2026-10-14.md))
+found no earlier universal planar bound as strong as $`\mathrm{ES}(8)\le312`$;
+the best published value is $`408`$ (Mojarrad–Vlachos 2016). The strongest directly
 comparable public announcement located was Michael Schroeder's
 [version-1 preprint](https://michaelschroeder.ai/research/ErdosSzekeres/erdos_szekeres_upper_bounds_v1.pdf),
 19 September 2026: Theorem 1.1 states $`\mathrm{ES}(8)\le319`$.
-Theorem 1.1(3) improves that threshold by six. This comparison supports an
+Theorem 1.1(3) improves that threshold by seven. This comparison supports an
 apparently new best known bound; it does not establish exhaustive priority
 or imply external peer review of either proof.
 

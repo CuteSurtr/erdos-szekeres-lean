@@ -71,10 +71,11 @@ are outside the scope of this formalization.
 
 ## Comparison with the literature
 
-As of **13 October 2026**, our search of the literature and public preprints
-found no earlier general bound as strong as **ES(8) ≤ 313**. To the best of
-our knowledge, it is a new best-known upper bound for ordinary real planar
-point sets in general position. This is a dated literature assessment, not
+As of **14 October 2026**, our search of the literature and public preprints
+(see the [survey](docs/RELATED_WORK_2026-10-14.md)) found no earlier general
+bound as strong as **ES(8) ≤ 312**; the best published value is 408
+(Mojarrad–Vlachos 2016). To the best of our knowledge, it is a new best-known
+upper bound for ordinary real planar point sets in general position. This is a dated literature assessment, not
 a guarantee of priority or a claim of external peer review.
 
 The strongest directly comparable prior announcement we located is
