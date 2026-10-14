@@ -7,6 +7,16 @@ hashes are normalized. Earlier GitHub run/commit links refer to the original
 private repository and may not resolve in the public replacement. New hosted
 results are available in the [CI workflow](https://github.com/CuteSurtr/erdos-szekeres-lean/actions/workflows/ci.yml).
 
+## ES(8) ≤ 312 — 14 October 2026
+
+The [312 record](../experiments/omission-final312-2026-10-13/README.md) lowers
+the balanced population bound to 189 with a 93,988-leaf certificate over the
+3,131-row balanced catalog (budget 62), replayed exactly in Python, exported to
+2,167 Lean parts plus catalog and root, and kernel-checked module by module
+with recorded object hashes (about 58 CPU-hours). `forces_convex_octagon_312 :
+ForcesConvexNGon 312 8` and `convex_octagon_of_card_ge_312` depend only on
+`propext`, `Classical.choice` and `Quot.sound`. Not part of the hosted CI.
+
 ## ES(8) ≤ 313 — 12 October 2026
 
 The [313 record](../experiments/omission-final313-2026-10-11/README.md) closes

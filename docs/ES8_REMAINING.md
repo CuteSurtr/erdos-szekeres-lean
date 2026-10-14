@@ -1,5 +1,12 @@
 # Finite octagon status and remaining work
 
+**14 October 2026: ES(8) ≤ 312 is proved.** `ErdosSzekeres.Omission.forces_convex_octagon_312`
+in [Final312/Final.lean](../experiments/omission-final312-2026-10-13/Final312/Final.lean)
+lowers the balanced population bound to 189 with a 93,988-leaf certificate over
+the balanced catalog (at least 63 of 252 states missing); see the
+[312 record](../experiments/omission-final312-2026-10-13/README.md). Octagon-free
+sets therefore have at most 311 points.
+
 **12 October 2026: ES(8) ≤ 313 is proved.** `ErdosSzekeres.Omission.forces_convex_octagon_313`
 in [Final313/Final.lean](../experiments/omission-final313-2026-10-11/Final313/Final.lean)
 combines the [conditional bridge](../experiments/omission-residual32-bridge2650-2026-10-11/README.md)
