@@ -1,8 +1,14 @@
-# Toward ES(8) ≤ 312 — 13–14 October 2026
+# ES(8) ≤ 312 — 13–14 October 2026
 
-**Status: the arithmetic certificate is complete and replayed exactly; its Lean
-kernel check is in progress. ES(8) ≤ 312 is NOT yet proved.** The completed
-planar bound is 313. This file will be updated when the check finishes.
+**`ErdosSzekeres.Omission.forces_convex_octagon_312 : ForcesConvexNGon 312 8`**:
+every set of at least 312 points in general position in the real plane contains
+eight points in convex position. The Lean kernel checked the complete chain on
+14 October 2026 (Lean 4.24.0, Mathlib v4.24.0): all 2,169 certificate modules,
+the bridge `Final312/Bridge62.lean`, and the assembly `Final312/Final.lean`. The
+axiom report of the final theorems is `[propext, Classical.choice, Quot.sound]`;
+see [final-audit.out](final-audit.out) and [final-report.json](final-report.json).
+`certificate/kernel-check.json.xz` is the complete per-module record. The check
+ran on one local machine and is not part of the hosted CI workflow.
 
 ## The route
 
@@ -41,8 +47,8 @@ leaves per part, packing base 2^22) with the SHA-256 of every generated file.
 `search/pipeline.sh` runs the unattended completion: assembly and replay,
 export, `scripts/check_omission_lean.py` with resumable per-module records,
 compilation of `Final312/Bridge62.lean` and `Final312/Final.lean`, and the
-statement and axiom audit of `forces_convex_octagon_312`. Parts take about
-95 s each; the full check needs roughly 60 CPU-hours.
+statement and axiom audit of `forces_convex_octagon_312`. Parts took 30–170 s
+each (about 95 s median); the recorded module times sum to about 58 CPU-hours.
 
 The catalog and omission method derive from Michael Schroeder's version-1
 archive; see [THIRD_PARTY.md](../../docs/THIRD_PARTY.md).
