@@ -1,3 +1,4 @@
+import os
 #!/usr/bin/env python3
 """Soundness test of a symcnf.py CNF against random *realizable* rotationally symmetric point
 sets (the direction that matters: every realizable symmetric configuration with the normal-form
@@ -21,7 +22,7 @@ import math
 import random
 import sys
 
-sys.path.insert(0, "/Users/jiho/Desktop/lean 4 /scripts")
+sys.path.insert(0, "scripts")
 from es_lower_bound_witness import largest_convex_subset, orient  # noqa: E402
 
 

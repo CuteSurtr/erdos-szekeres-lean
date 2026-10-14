@@ -13,7 +13,7 @@ import os
 import subprocess
 import sys
 
-sys.path.insert(0, "/Users/jiho/Desktop/lean 4 /scripts")
+sys.path.insert(0, "scripts")
 from es_lower_bound_witness import largest_convex_subset, orient, general_position  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
