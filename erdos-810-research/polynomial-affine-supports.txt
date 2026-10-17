@@ -1,0 +1,188 @@
+FIXED-DEGREE NONLINEAR POLYNOMIAL INTERCEPTS: COMMON-SUPPORT POWER SAVING
+
+
+Status: a restricted-class theorem for proper B colorings. This is not a
+solution of unrestricted Erdos #810. The proof uses the classical Weil
+bound for prime-field Kloosterman sums. It is not Lean certified, and
+historical priority of this formulation has not been established.
+
+1. THEOREM
+
+Let p be an odd prime and beta in F_p[T] have degree D with 2<=D<p.
+Let A subset F_p* have size d. For each a in A choose D_a subset X
+subset F_p, and select the edges
+
+                   x -> sigma_a(x)=ax+beta(a), x in D_a,
+
+with color a. Assume the selected graph is simple and properly colored,
+and every C4 is rainbow (condition B). Set
+
+                  m=sum_a |D_a|, R=sum_a (|X|-|D_a|).
+
+For each fixed D there is C_D independent of p,beta,A,X such that
+
+                 m <= C_D p^(19/10)+sqrt(2) p sqrt(R).       (1)
+
+Consequently common support gives O_D(p^(19/10)) edges, and R=o(p^2)
+gives m=o(p^2) for bounded D. Common support and d>=delta p give the
+sharper O_{D,delta}(p^(15/8)) estimate.
+
+The exclusion of degree at most one is essential to this power-saving
+argument. Such intercepts give concurrent affine pencils. The theorem
+does not assume additive or multiplicative structure of A, and beta may
+vary with p subject to the fixed degree bound.
+
+2. CROSSED INVOLUTIONS AND THE COMBINATORIAL ESTIMATE
+
+On V=F_p^2 define
+
+ tau_a(x,y)=((y-beta(a))/a, ax+beta(a)),
+ S_A f=sum_{a in A} f composed with tau_a.
+
+These are involutions, so S_A is self-adjoint of constant degree d.
+For E the selected edge set, an internal transition is an ordered triple
+(a,x,z) with (x,sigma_a(z)) and (z,sigma_a(x)) both in E. If the two
+diagonal color-a incidences at x,z are present, B forces x=z. The actual
+loops contribute exactly m. Every other transition has a missing
+diagonal incidence, including any virtual loop whose point is present
+in another color. Each missing (a,x) occurs in at most deg_E(x)<=d
+transitions in either position. Therefore
+
+                  <1_E,S_A1_E> <= m+2dR.                     (2)
+
+For R=0 equality holds. This proof uses only that sigma_a is a
+permutation and the actual graph is simple, proper and B-colored.
+
+3. GENERAL FOURIER BLOCK AND ITS KLOOSTERMAN FOURTH MOMENT
+
+For chi_(xi,eta)(x,y)=e_p(xi x+eta y),
+
+ P_tau_a chi_(xi,eta)
+   =e_p(beta(a)(eta-xi/a)) chi_(a eta,xi/a).
+
+The frequency product xi eta is invariant. In a nonzero product block
+t, indexed by (r,t/r), the matrix is
+
+ M_t(r,s)=1_A(rs/t) e_p((r-s) beta(rs/t)/(rs/t)).              (3)
+
+It is Hermitian. Write F(a)=beta(a)/a. Expand tr M_t^4 over r,s,u,v,
+and make the bijective change
+
+ a=rs/t, q=u/r, h=v/s, s=ta/r, u=qr, v=hta/r.
+
+The four membership tests are a,qa,qha,ha in A. The phase is
+alpha r+gamma/r, where
+
+ alpha=[h beta(a)-h beta(qa)+beta(qha)-beta(ha)]/(ha),
+ gamma=(t/q)[-q beta(a)+beta(qa)-beta(qha)+q beta(ha)].         (4)
+
+One direct check is that the coefficient of r before substituting
+s=ta/r is F(a)-qF(qa)+qF(qha)-F(ha), and that of s is
+-F(a)+F(qa)-hF(qha)+hF(ha).
+
+If (alpha,gamma)!=(0,0), the sum over r!=0 has absolute value at most
+2sqrt(p): this is Weil's Kloosterman estimate when both coefficients
+are nonzero, and additive-character orthogonality gives -1 when exactly
+one is nonzero. If both vanish, the sum is p-1.
+
+4. ALL EXCEPTIONAL TRIPLES ARE CONTROLLED BY COLLINEARITY
+
+The cases q=1 or h=1 are automatically exceptional and account for
+2d^2-d supported triples. Suppose now q,h!=1. The two coefficient rows
+in (4), on the value vector (beta(a),beta(qa),beta(qha),beta(ha)), are
+
+                  [ h,-h, 1,-1], [-q,1,-1,q].
+
+They are linearly independent. Indeed comparison at coordinate 3 in a
+putative dependence forces multiplier -1, and coordinates 2 and 1 would
+then force h=q=1. Both rows annihilate the independent vectors
+
+                   (1,1,1,1), (a,qa,qha,ha).
+
+The latter are independent because q!=1. Thus their common kernel is
+exactly the vectors of affine-in-slope values. In particular, an
+exceptional triple makes all four graph points
+
+ (a,beta(a)), (qa,beta(qa)), (qha,beta(qha)), (ha,beta(ha))
+
+collinear. This proof includes coincident slopes, such as q=h=-1;
+it never presumes four distinct points.
+
+Choose a and b=qa as an ordered distinct pair from A. Their affine line
+intersects the graph of beta in at most D points, because beta(T) minus
+that line's equation is a nonzero degree-D polynomial. Thus c=ha has at
+most D choices, and the fourth slope bc/a is then determined. Hence
+
+ exceptional triples <=2d^2-d+Dd(d-1) <=(D+2)d^2.            (5)
+
+The total supported triples are the multiplicative energy
+E_x(A)=#{(a,b,c,e) in A^4: ae=bc}<=d^3. Therefore
+
+              tr M_t^4 <=(D+2)p d^2+2sqrt(p) E_x(A).        (6)
+
+5. THE AXIS BLOCK
+
+The nonzero coordinate axes form an off-diagonal block whose norm is
+the norm on mean-zero functions of the one-point affine operator
+C_A=sum_a P_sigma_a. Its Fourier matrix, up to taking an adjoint, is
+
+                 N(r,s)=1_A(r/s)e_p(s beta(r/s)).
+
+For an affine quotient sigma_a sigma_b^-1 put rho=a/b. Its slope and
+intercept are
+
+                       rho, beta(rho b)-rho beta(b).        (7)
+
+If rho^(D-1)!=1, the second expression is a degree-D polynomial in b
+with nonzero leading coefficient. Every quotient with that slope has
+at most D representations. The contribution to quotient energy from
+all such slopes is therefore at most Dd^2.
+
+There are at most D-1 remaining ratios rho. For each one, the total
+number of pairs (a,b) in A^2 with a/b=rho is at most d, so the sum of
+squared quotient multiplicities for that ratio is at most d^2. Thus
+the affine quotient energy satisfies
+
+ E_aff(A):=#{(a,b,c,e) in A^4:sigma_a sigma_b^-1
+                                  =sigma_c sigma_e^-1}
+                         <=(2D-1)d^2.                       (8)
+
+The character of the mean-zero permutation representation of Aff(F_p)
+is p-1 at identity, -1 at a nontrivial translation, and zero elsewhere.
+Expanding tr((C_A C_A*)^2) and dropping the negative translation terms
+proves
+
+                     ||N||^4 <=(p-1) E_aff(A).              (9)
+
+Taking inverses if necessary to use a genuine representation rather
+than a pullback antirepresentation changes neither these norms nor
+the energy count.
+
+6. FINISHING THE BOUND
+
+Let K_D=max(D+2,2D-1). All nonconstant Fourier blocks are bounded by
+
+ lambda=[K_D p d^2+2sqrt(p) E_x(A)]^(1/4)
+       <=C_D[p^(1/4)d^(1/2)+p^(1/8)d^(3/4)].                (10)
+
+Centering 1_E in the p^2-point space and using (2) gives
+
+             (d+lambda)m^2/p^2 <=(1+lambda)m+2dR.           (11)
+
+For d>0 this implies
+
+ m <=p^2(1+lambda)/d+sqrt(2)p sqrt(R)
+   <=p^2/d+C_D p^(9/4)d^(-1/2)
+          +C_D p^(17/8)d^(-1/4)+sqrt(2)p sqrt(R).           (12)
+
+If d<=p^(9/10), use m<=dp. Otherwise the three first terms in (12)
+are O_D(p^(19/10)). The case d=0 is empty. This proves (1).
+
+7. EXPONENTIAL-SUM INPUT
+
+Iwaniec--Kowalski, Analytic Number Theory, Theorem 11.11 and equation
+(11.15), printed page 280:
+https://people.math.ethz.ch/~kowalski/ik-ant-exp-sums.pdf
+
+This is an analytic proof using the stated exponential-sum theorem.
+Formal verification and historical priority are not claimed.

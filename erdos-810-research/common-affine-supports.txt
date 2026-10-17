@@ -1,0 +1,264 @@
+ARBITRARY AFFINE INTERCEPTS WITH COMMON OR NEARLY COMMON SUPPORT
+
+
+Status: subquadratic theorem for a support subclass; Section 8 also gives
+an explicit common-support rate from integer Roth bounds. No
+polynomial hypothesis is imposed on the intercept function. This does
+not solve arbitrary-support affine colorings or unrestricted Erdos #810.
+Historical priority is unverified. No Lean certification is asserted.
+
+1. STATEMENT
+
+For each odd prime p let A subset F_p* and let beta:A->F_p be arbitrary.
+For a in A select exactly the color-a edges
+
+                    x -> ax+beta(a), x in D_a,
+
+where D_a subset X subset F_p. Suppose the resulting colored graph is
+simple and proper, and every C4 is rainbow (property B). Write
+
+           d=|A|, m=sum_a |D_a|, R=sum_a (|X|-|D_a|).
+
+THEOREM. Uniformly over all these choices, R=o(p^2) implies m=o(p^2).
+In particular, common row support D_a=X always implies m=o(p^2).
+There is one original color per slope, so the representing affine maps
+are distinct and d<=p-1. No degree restriction or structured formula for
+beta is used.
+
+For EXACT common support, the additional argument in Section 8 proves
+
+ m/p^2 << p^(-1/11)+(r_3([p-1])/p)^(1/6)
+        << exp(-c(log p)^(1/12)).                            (Q)
+
+Here r_3([n]) denotes the maximum size of an integer subset of
+{0,...,n-1} containing no nontrivial three-term arithmetic progression.
+The last inequality uses a published Kelley--Meka-type Roth bound.
+
+The proof below uses three established inputs: Weil's Kloosterman bound,
+the affine-energy bound of Petridis--Roche-Newton--Rudnev--Warren, and
+Solymosi's finite-group-table theorem.
+
+2. A MASTER SPECTRAL INEQUALITY FOR ANY INTERCEPT FUNCTION
+
+Let P={(a,beta(a)):a in A} in the coefficient plane, and let L be the
+largest number of its points on an affine line (take L=0 if A is empty).
+Let E_aff be the quotient energy of S={sigma_a:a in A}:
+
+ E_aff=#{(g,h,u,v) in S^4:gh^-1=uv^-1}.
+
+Let E_x(A) be the multiplicative energy of the slope set, at most d^3.
+Define crossed involutions on F_p^2 by
+
+       tau_a(x,y)=((y-beta(a))/a, ax+beta(a)),
+       S_A f=sum_{a in A} f composed with tau_a.
+
+On mean-zero functions,
+
+ ||S_A|| <=lambda,
+ lambda^4 <= max{(p-1)E_aff,
+                       p(L+2)d^2+2sqrt(p)E_x(A)}.              (1)
+
+Here lambda may be chosen as the fourth root of the right-hand side.
+It need not be less than d in sparse ranges.
+
+Proof of (1). The Fourier product blocks and phase coefficients are
+exactly those in polynomial-affine-supports.txt,
+Sections 3--4. The proof there did not use polynomiality until bounding
+line intersections. For q,h!=1, the two coefficient equations vanish
+exactly when the values at slopes a,qa,qha,ha are affine in slope; the
+rank-two argument includes repeated slopes. Choose ordered a,b=qa with
+a!=b, then choose c=ha on their coefficient-plane line. There are at
+most L choices for c, and the fourth slope bc/a is determined. The
+q=1 or h=1 cases contribute 2d^2-d. Thus at most (L+2)d^2 exceptional
+triples occur. All other r-sums are bounded by 2sqrt(p), proving the
+second term in (1). The axis-block character argument gives the first
+term (p-1)E_aff without any special formula for beta. QED.
+
+For the actual edge set E, the missing-incidence charging argument also
+uses no polynomial hypothesis:
+
+               <1_E,S_A1_E> <= m+2dR.
+
+In particular, it charges virtual fixed-point loops correctly. Centering
+1_E gives the exact useful inequality
+
+              (d+lambda)m^2/p^2 <=(1+lambda)m+2dR.           (2)
+
+For d>0 this implies
+
+              m<=p^2(1+lambda)/d+sqrt(2)p sqrt(R).          (3)
+
+3. THE PUBLISHED AFFINE-ENERGY INPUT AND ITS HYPOTHESES
+
+Petridis, Roche-Newton, Rudnev and Warren, An Energy Bound in the Affine
+Group, Theorem 2.1, gives for an affine-map set S of size d with maximum
+line occupancy L and vertical-line occupancy v,
+
+                        E_aff << v^(1/2)d^(5/2)+L d^2,
+
+provided v d<=p^2 in characteristic p. For our P there is at most one
+point on any vertical line, hence v=1 and d<=p-1 verifies the hypothesis.
+Thus
+
+                         E_aff <<d^(5/2)+L d^2.             (4)
+
+Their displayed energy is #{g^-1 h=u^-1 v}, which has the same value
+as our right-quotient energy: gh^-1=uv^-1 iff u^-1 g=v^-1 h. This is a
+bijection of ordered quadruples, not an abelian-group assumption.
+
+Primary source, Theorem 2.1 on PDF page 3:
+https://arxiv.org/pdf/1911.03401
+Published: IMRN 2022, issue 2, pages 1154--1172.
+https://academic.oup.com/imrn/article/2022/2/1154/5850679
+
+
+4. A LARGE COLLINEAR SUBPALETTE WOULD CONTRADICT SOLYMOSI'S THEOREM
+
+Assume for contradiction along a sequence p->infinity that
+
+                         m>=epsilon p^2, R=o(p^2),           (5)
+
+with fixed epsilon>0. Since m<=d|X| and d,|X|<=p, both d and |X| are
+at least epsilon p. We show L=o(p) along this sequence.
+
+If not, some coefficient-plane line contains at least delta p points
+for fixed delta>0 along a subsequence. Vertical lines contain at most
+one point, so the line has equation beta(a)=u a+v. The corresponding
+color subgraph has at least
+
+                         L|X|-R >=delta epsilon p^2-o(p^2)
+
+actual edges. Make row and column changes x'=x+u, y'=y-v. These maps
+are bijections and the retained lines become y'=a x'. The only possible
+edge with x'=0 or y'=0 is the point (0,0), and simplicity/properness
+allows at most one actual edge there. Delete it.
+
+The remaining graph is a partial multiplication-table graph on the two
+sides F_p*, with edge color a=y'/x'. Invert the row labels if desired
+to write the color as the product of row and column. Solymosi's Theorem
+5 says that a positive-density subset of a sufficiently large finite
+group table contains a nondegenerate rectangle with equal diagonal
+products. This gives a C4 with repeated opposite color, contrary to B.
+Consequently
+
+                                L=o(p).                     (6)
+
+Source: J. Solymosi, The (7,4)-conjecture in finite groups, Theorem 5,
+PDF page 4:
+https://arxiv.org/pdf/1309.0133
+
+The partial supports need not coincide within this pencil. The estimate
+L|X|-R uses only the total missing-incidence budget, so the cited group
+theorem is applied to the actual retained edges, not to completed maps.
+
+5. FINISHING THE QUALITATIVE THEOREM
+
+Under (5) we have epsilon p<=d<=p. Equations (4) and (6) give
+E_aff=o(p^3). Equation (1) then gives
+
+ lambda^4 <=max{o(p^4), o(p^4)+O(p^(7/2))}=o(p^4),
+
+so lambda=o(p). Equation (3), together with d>=epsilon p and R=o(p^2),
+forces m=o(p^2), contradicting (5). This proves the theorem uniformly.
+
+The error rates in this qualitative deduction include the finite-group
+table theorem. Section 8 gives an explicit stretched-logarithmic rate
+for exact common support. No polynomial saving is asserted for arbitrary
+intercepts. Fixed-degree nonlinear polynomial intercepts admit the
+separate O_D(p^(19/10)) bound proved in the companion note.
+
+6. STANDARD EXPONENTIAL-SUM INPUT
+
+The nonexceptional block estimate uses only the prime-field Kloosterman
+bound, with one-zero coefficients handled by character orthogonality:
+Iwaniec--Kowalski, Analytic Number Theory, Theorem 11.11 and (11.15),
+printed page 280:
+https://people.math.ethz.ch/~kowalski/ik-ant-exp-sums.pdf
+
+The Fourier reduction and the treatment of zero coefficients are fully
+written in polynomial-affine-supports.txt. There
+is no assumed randomness of the four palette membership tests.
+
+7. LIMITATIONS
+
+The conclusion requires a common container with o(p^2) omissions, or a
+separate support decomposition that reduces to that situation. General
+partial affine colorings can have Theta(p^2) omissions in every such
+container; this proof supplies no universal way to repair them. It also
+assumes one color for each slope and prime fields. The theorem is a
+mathematical deduction, not a claim to solve general #810 or a
+certification of historical originality.
+
+8. AN EXPLICIT COMMON-SUPPORT RATE VIA INTEGER ROTH
+
+Suppose R=0, put theta=|X|/p, kappa=d/p, and rho=m/p^2=kappa theta.
+If |X|<=1, the edge bound m<=p is already stronger than (Q), so assume
+|X|>=2. Consider any nonvertical coefficient-plane line containing L_0
+palette points; write it beta(a)=u a+v and let T be its slope set.
+Discard the possible exceptional row x=-u, and put Y=(X+u)\{0}.
+Thus |Y|>=|X|-1. After shifting columns by -v, the pencil edges are
+precisely (x',a x') for a in T and x' in Y.
+
+Choose a generator of F_p*, put n=p-1, and write A_0=log T and
+Y_0=log Y as subsets of Z_n. For every t in Z_n, define
+
+                         H_t=A_0 intersect (Y_0-t).
+
+The set H_t is strongly three-term-AP-free. Indeed, suppose
+h-r,h,h+r all belong to H_t with r!=0 in Z_n. Take two row logarithms
+t+h-r and t+h and diagonal color h. The column logarithms are
+t+2h-r and t+2h. The cross-colors are h+r and h-r, respectively.
+All four edges are selected by common support, all rows and columns
+are distinct because r!=0, and the two diagonal colors coincide.
+This violates B.
+
+This argument also handles an element r of order two: h-r=h+r can
+then hold, but the rectangle still has distinct rows and columns and
+repeated diagonal color. No odd-order group theorem is being assumed.
+Integer representatives of H_t in {0,...,n-1} are consequently ordinary
+integer 3AP-free, so |H_t|<=r_3([n]). Averaging over t gives
+
+               L_0 |Y|=sum_t |H_t|<=n r_3([n]).             (20)
+
+Vertical coefficient-plane lines contain at most one palette point.
+Let F=r_3([p-1])/p. Since |X|-1>=|X|/2, (20) implies for the maximum
+line occupancy L
+
+                             L/p<=2F/theta,                 (21)
+
+with a harmless absolute enlargement for the vertical-line case.
+
+Using the affine-energy estimate (4) in the master bound (1), followed
+by taking fourth roots and using E_x(A)<=d^3, gives
+
+ lambda/d <<p^(-1/8)kappa^(-3/8)
+             +(L/p)^(1/4)kappa^(-1/2)
+             +p^(-1/8)kappa^(-1/4).                        (22)
+
+The exact common-support identity and the spectral lower bound yield
+rho<=(1+lambda)/(d+lambda)<=(1+lambda)/d. Substitute (21) and note
+kappa>=rho and theta=rho/kappa. Since 0<rho<=1,
+
+ rho <<p^(-1)rho^(-1)+p^(-1/8)rho^(-3/8)
+                                   +F^(1/4)rho^(-1/2).     (23)
+
+At least one of the three terms is a fixed positive fraction of rho.
+The resulting alternatives give respectively rho<<p^(-1/2),
+rho<<p^(-1/11), or rho<<F^(1/6). This proves the first estimate in (Q).
+
+The published Bloom--Sisask exposition of the Kelley--Meka theorem
+gives r_3([n])/n<=C exp(-c(log n)^(1/12)). Taking its sixth root changes
+only the constant c, proving the final estimate in (Q). Using a stronger
+integer Roth estimate in the first part of (Q) is also legitimate; the
+displayed exponent is a conservative published input, not a claim of
+the currently best numerical Roth exponent.
+
+Primary source: Thomas F. Bloom and Olof Sisask, The Kelley--Meka bounds
+for sets free of three-term arithmetic progressions, Essential Number
+Theory 2 (2023), 15--44, Theorem 1:
+https://msp.org/ent/2023/2-1/ent-v2-n1-p02-p.pdf
+The same published issue is accessible at
+https://msp.org/ent/2023/2-1/ent-v2-n1-s.pdf
+
+The rate follows from the structural argument and the stated Roth bound.
+Historical priority of the resulting formulation remains unverified.

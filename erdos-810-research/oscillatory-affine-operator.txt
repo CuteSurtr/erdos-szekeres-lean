@@ -1,0 +1,163 @@
+OSCILLATORY AFFINE OPERATORS OVER PRIME FIELDS
+
+1. Statement
+
+Let p be an odd prime, s in F_p^*, and w:F_p^*->C satisfy |w(a)|<=1.
+On functions on F_p define
+
+ C_(s,w) f(x)=sum_(a!=0) w(a) e_p(s*(a^2*x+a^3)) f(a*x+a^2).
+
+Then, for an absolute constant C,
+
+                    ||C_(s,w)||_(2->2) <= C*p^(7/8).       (1)
+
+The norm is unchanged by choosing counting or normalized counting
+measure. No L-infinity bound on the input or test function is needed.
+The estimate is uniform in the weights, their support, and s!=0.
+
+The exact partial-Fourier/Mellin decomposition in Section 5
+then proves the same estimate for arbitrary complex |v(a)|<=1 in
+
+ R_(s,v)=sum_(a!=0) v(a) M_[e_p(s*(a^2*x+a^3))] U_(tau_a),
+ tau_a(x,y)=(y/a-a, a*x+a^2).
+
+This estimate controls individual nonzero Fourier slices. It does not by
+itself control their full sum for arbitrary support sets.
+
+2. Two Cauchy-Schwarz steps and the exact pair phase
+
+Write E_x=p^(-1)sum_x, and take E|f|^2=E|g|^2=1. Extend w by w(0)=0.
+Set
+
+ T=E_x conj(g(x)) E_a w(a)e_p(s*(a^2*x+a^3)) f(a*x+a^2)
+  =p^(-1) E_x conj(g(x)) C_(s,w)f(x).
+
+Cauchy-Schwarz in x, then the triangle inequality and Cauchy-Schwarz
+over the p^2 ordered pairs (a,b), give
+
+ |T|^4 <= p^(-2) sum_(a,b!=0) |I_ab|^2,                   (2)
+
+where
+
+ I_ab=E_x e_p(s*(u_a(x)-u_b(x)))
+                 f(a*x+a^2) conj(f(b*x+b^2)),
+ u_a(x)=a^2*x+a^3.
+
+Put b=t*a and y=a*x+a^2. Then
+
+ b*x+b^2=t*y+a^2*t*(t-1),
+ u_a(x)-u_b(x)=a*(1-t^2)*y-a^3*t^2*(t-1).
+
+The last term is constant in y, and disappears under the absolute
+value in (2). Thus, writing c=t*(t-1), d=s*(1-t^2),
+
+ |I_ab|=|E_y f(y)conj(f(t*y+c*a^2))e_p(d*a*y)|.           (3)
+
+For t=1 or t=-1, the absolute value in (3) is at most 1, by
+Cauchy-Schwarz and the fact that y->t*y+c*a^2 is a permutation.
+Their total contribution to (2) is at most 2/p.
+
+3. Fixed t different from 0,1,-1
+
+Fix such a t, so both c and d are nonzero. The nonnegative sum over
+a!=0 may be enlarged to the sum over all a. Put
+
+ S_t=sum_a |E_y f(y)conj(f(t*y+c*a^2))e_p(d*a*y)|^2.
+
+Expanding and writing r=y-y' gives
+
+ S_t=p^(-2)sum_r sum_y G_r(y) (L_r H_r)(y),
+
+ G_r(y)=f(y)conj(f(y-r)),
+ H_r(z)=conj(f(z))f(z-t*r),
+ L_r H(y)=sum_a e_p(d*a*r) H(t*y+c*a^2).
+
+All norms in the rest of this section use counting measure.
+
+For r!=0, L_r sends the normalized Fourier character of frequency xi
+to that of frequency t*xi, multiplied by
+
+                 sum_a e_p(c*xi*a^2+d*r*a).
+
+At xi=0 this is zero. At xi!=0 it has absolute value sqrt(p).
+For completeness, if alpha!=0, expansion of
+|sum_a e_p(alpha*a^2+beta*a)|^2 and the substitution a=b+h give
+
+ sum_h e_p(alpha*h^2+beta*h)sum_b e_p(2*alpha*h*b)=p,
+
+because p is odd and only h=0 survives. Hence ||L_r||=sqrt(p).
+
+Furthermore,
+
+ sum_r ||G_r||_2^2=(sum_y |f(y)|^2)^2=p^2,
+ sum_r ||H_r||_2^2=(sum_z |f(z)|^2)^2=p^2,
+
+where the second equality uses t!=0. Cauchy-Schwarz first in y and
+then in r bounds the absolute contribution from r!=0 by
+
+ p^(-2)*sqrt(p)*sum_(r!=0)||G_r||_2||H_r||_2 <= sqrt(p).
+
+For r=0, its nonnegative contribution is
+
+ p^(-2)sum_y |f(y)|^2 sum_a |f(t*y+c*a^2)|^2 <= 2.
+
+Indeed, for each fixed y the map a->t*y+c*a^2 has at most two
+preimages per value, and sum_z|f(z)|^2=p. Therefore
+
+                         S_t <= 2+sqrt(p).                (4)
+
+4. Summation and norm conclusion
+
+There are p-3 values of t other than 0,1,-1. Equations (2)--(4) give
+
+ |T|^4 <= 2/p + (p-3)*(2+sqrt(p))/p^2 = O(p^(-1/2)).      (5)
+
+Since T=p^(-1)<g,C_(s,w)f> with normalized inner product, taking
+the supremum over unit f,g gives (1). Every use of f involved only
+its L2 norm or the exact correlation identities above. The proof
+does not assume flatness, bounded entries, or an L-infinity norm.
+
+5. Exact decomposition of the crossed operator
+
+For a,b!=0 put
+
+ r=a/b, q=(a^2-b^2)/b, t=b*(b-a), c0=s*a^2*(a-b).
+
+The exact pair-product identity is
+
+ R_a R_b^* f(x,y)
+   =e_p(-s*r*t*x+c0) f(r*x+q, r^(-1)*y+t).
+
+Expand f(x,y)=sum_eta f_eta(x)e_p(eta*y). The output frequency eta
+uses input frequency r*eta, and the coefficient is
+
+ e_p(-s*r*t*x+r*eta*t+c0) f_(r*eta)(r*x+q).
+
+The unitary, eta-dependent shift g_eta(z)=f_eta(z+eta/s) changes this to
+
+                  e_p(-s*r*t*z+c0) g_(r*eta)(r*z+q).
+
+On eta=0 this is the trivial-character block. On eta!=0, decompose
+by the full orthonormal multiplicative-character basis. For a block
+g_eta(z)=chi(eta)g(z), the additional factor is
+
+                       chi(r)=chi(a)conj(chi(b)).
+
+For arbitrary complex weights v(a), the pair product also contains
+v(a)conj(v(b)). The block of R_(s,v) R_(s,v)^* is therefore
+C_(s,chi*v)C_(s,chi*v)^*.
+The trivial character also occurs in the eta=0 block. These blocks
+exhaust the whole space, so
+
+                    ||R_(s,v)||=max_chi ||C_(s,chi*v)||.
+
+Applying (1) gives ||R_(s,v)||=O(p^(7/8)), uniformly in |v|<=1
+and s!=0. Taking v=1_A gives the operator for a selected palette A.
+
+6. Scope and limitations
+
+For the common-potential masks 1_H(a^2*x+a^3), the full operator
+has coefficients hhat(s-l)*hhat(l) multiplying chirp conjugates of
+R_s. A uniform estimate for each R_s does not justify dropping or
+freely summing these coefficients. Their absolute total can grow
+with p. A separate argument is still needed for arbitrary H; the estimate above does not imply sparsity for that full class.
