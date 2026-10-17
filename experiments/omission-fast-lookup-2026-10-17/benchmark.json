@@ -20,34 +20,46 @@
     "packed_code_lookup_shift_mask": 0.08,
     "packed_demand_lookup": 0.02,
     "full_fast_leaf": 0.56,
-    "full_fast_leaf_kernel_decide": 0.42
+    "full_fast_leaf_kernel_decide": 0.42,
+    "margin_conjunct_fin_get": 0.38,
+    "full_fast_leaf_v2_getD_margin": 0.41
   },
   "catalog": {
     "fast_catalog_seconds": 219.8,
     "max_resident_bytes": 12475875328,
-    "note": "one-time cost per export: 98 packed code chunks and the exhaustive fastCode_eq / fastDemand_eq decisions"
+    "note": "one-time cost per export: 98 packed code chunks and the exhaustive fastCode_eq / fastDemand_eq decisions",
+    "fast_v2_catalog_seconds": 229.2
   },
   "parts_seconds": {
-    "note": "old and new compiled concurrently, one process each",
+    "note": "pairs compiled concurrently, one process each; fused and v1 measured together, v2 later under the same load",
     "Part00098": {
       "fused": 108.4,
-      "fast": 51.5,
+      "fast_v1": 51.5,
+      "fast_v2": 47.1,
       "weighted_leaves": 58
     },
     "Part00500": {
       "fused": 83.1,
-      "fast": 42.3,
+      "fast_v1": 42.3,
+      "fast_v2": 38.5,
       "weighted_leaves": 46
     },
     "Part01500": {
       "fused": 71.7,
-      "fast": 38.4,
+      "fast_v1": 38.4,
+      "fast_v2": 34.5,
       "weighted_leaves": 41
+    },
+    "Part02166": {
+      "fused_recorded_2026_10_14": 109.313,
+      "fast_v2": 48.7
     }
   },
-  "negative_control": "first weight of the first leaf of fast Part01500 increased by one: lean exit 1, exactly one error ('Tactic `decide` proved that the proposition ... is false')",
-  "unit_tests": "scripts/test_omission_fast_export.py: 4 tests including the optional kernel control (ERDOS_LEAN_FAST_TEST=1), passing",
+  "negative_control": "first weight of the first leaf of fast Part01500 increased by one: lean exit 1, exactly one error ('Tactic `decide` proved that the proposition ... is false') (v1 export)",
+  "unit_tests": "scripts/test_omission_fast_export.py: 4 tests including the optional kernel control (ERDOS_LEAN_FAST_TEST=1), passing for v1 and v2",
   "rejected_tweak": "linter.all false plus noncomputable section: 36.3 s -> 34.3 s on Part01500; not adopted",
-  "exporter_sha256": "e27a34778cf06062b5550b31e730f3a74c51a6663bcf8c7154fd62cc474edafe",
-  "test_sha256": "f34d9fc55e193eb911568647914ea7d35d908361b79a0a0787da0541eb69ae94"
+  "exporter_sha256": "002a0091c01ef7907844974b7ce1a9d7056326804742955ee95a454369f383ea",
+  "test_sha256": "f34d9fc55e193eb911568647914ea7d35d908361b79a0a0787da0541eb69ae94",
+  "v2_change": "margin sums read coefficients with List.getD instead of Fin-indexed List.get: whole Part01500 39.1 s -> 32.7 s when compiled side by side",
+  "negative_control_v2": "first load coefficient of the first leaf of v2 Part01500 increased by one: lean exit 1, exactly one error (decided proposition is false)"
 }

@@ -31,7 +31,10 @@ fused exporter and adds to the end of the Catalog:
   `log₂(base) · states` bits);
 - `fastDemand_eq` and `fastCode_eq`, proved for every row by one exhaustive
   `decide +kernel`;
-- `fused_fast_excludes`, which rewrites the fused check through these equalities.
+- `fused_fast_excludes`, which rewrites the fused check through these equalities
+  and reads the margin's coefficients with `List.getD`. In version 1 the margin
+  used the `Fin`-indexed `List.get`, which took 0.38 s of the remaining 0.52 s
+  per leaf.
 
 Each leaf keeps its statement word for word. Only its proof changes to
 `fused_fast_excludes ... code_correct fastCode_eq fastDemand_eq`. The Root, the
@@ -43,23 +46,24 @@ hashes in `export.json`) are unchanged.
 Same host, Lean 4.24.0. The ES(8) ≤ 311 search was using 10 of 15 cores
 throughout. Full numbers are in [benchmark.json](benchmark.json).
 
-| Object | Fused | Packed lookups |
-| --- | --- | --- |
-| one leaf (node 8647) | 1.47 s | 0.56 s |
-| `Part00098` (58 weighted leaves) | 108.4 s | 51.5 s |
-| `Part00500` (46) | 83.1 s | 42.3 s |
-| `Part01500` (41) | 71.7 s | 38.4 s |
-| Catalog (once per export) | — | 220 s, 12.5 GB peak |
+| Object | Fused | Packed v1 | Packed v2 |
+| --- | --- | --- | --- |
+| one leaf | 1.47 s | 0.56 s | 0.41 s |
+| `Part00098` (58 weighted leaves) | 108.4 s | 51.5 s | 47.1 s |
+| `Part00500` (46) | 83.1 s | 42.3 s | 38.5 s |
+| `Part01500` (41) | 71.7 s | 38.4 s | 34.5 s |
+| `Part02166` | 109.3 s (recorded run) | — | 48.7 s |
+| Catalog (once per export) | — | 220 s, 12.5 GB peak | 229 s |
 
-Parts are about twice as fast. What remains per part is mostly elaborating the
+Parts are 2.1–2.3 times faster. What remains per part is mostly elaborating the
 statements and the branch theorems. Turning off linters and code generation saved
 another 6% on `Part01500`; that change was not adopted.
 
 ## Controls
 
-- Raising the first weight of the first leaf of the fast `Part01500` by one makes
-  Lean fail with exactly one error, for that leaf (the decided proposition is
-  false).
+- Raising the first weight of the first leaf of `Part01500` by one (v1 export),
+  or its first load coefficient by one (v2 export), makes Lean fail with exactly
+  one error, for that leaf: the decided proposition is false.
 - [scripts/test_omission_fast_export.py](../../scripts/test_omission_fast_export.py)
   checks that statements, the Root and the report fields match the fused export.
   It also checks that unexpected leaf shapes are refused. With

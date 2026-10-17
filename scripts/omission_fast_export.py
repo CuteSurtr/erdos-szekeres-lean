@@ -11,7 +11,8 @@ unchanged and adds, at the end of the Catalog,
 * `fastDemand_eq` and `fastCode_eq`, proving by an exhaustive kernel decision
   that they agree with `demand` and `code` on every row;
 * `fused_fast_excludes`, which rewrites a fused leaf check through these
-  equalities.
+  equalities and reads the margin's coefficients with `List.getD` (the
+  `Fin`-indexed `List.get` in the margin sums cost another fifth of a leaf).
 
 Every leaf keeps its exact statement; only its proof changes from
 `fused_sparse_packed_excludes ... code_correct` to
@@ -38,12 +39,15 @@ FAST_HELPER = """theorem fused_fast_excludes {ρ : Type*} (base : ℕ) (cs : Lis
       cs.all (fun c => decide (c < base)) = true ∧
       packList base cs = sparseSum code' entries ∧
       capacity * (budget - missing.card) +
-        (cs.map (fun c => c - capacity)).sum + ∑ i ∈ missing, cs.get i <
-      sparseSum demand' entries + ∑ i ∈ missing ∪ occupied, (cs.get i - capacity)) :
+        (cs.map (fun c => c - capacity)).sum + ∑ i ∈ missing, cs.getD i.val 0 <
+      sparseSum demand' entries + ∑ i ∈ missing ∪ occupied, (cs.getD i.val 0 - capacity)) :
     ¬ ∃ holes : Fin cs.length → ℕ, (∀ i, holes i ≤ 1) ∧
       (∀ r, demand r ≤ ∑ i ∈ support r, holes i) ∧ (∑ i, holes i) ≤ budget ∧
       (∀ i ∈ missing, holes i = 1) ∧ (∀ i ∈ occupied, holes i = 0) := by
+  have hget : ∀ i : Fin cs.length, cs.getD i.val 0 = cs.get i := fun i => by
+    simp [List.getD_eq_getElem?_getD]
   rw [show code' = code from funext hcode', show demand' = demand from funext hdemand'] at checks
+  simp only [hget] at checks
   exact fused_sparse_packed_excludes base cs support demand code entries missing occupied
     capacity budget hcode checks
 """
@@ -118,7 +122,7 @@ def export(source, tree, output, namespace="OmissionFastExport", leaf_limit=64,
         raise ValueError("Not every fused leaf was rewritten")
     report["fused_exporter_sha256"] = report["exporter_sha256"]
     report["exporter_sha256"] = original.sha256(Path(__file__))
-    report["proof_style"] = "fast_packed_lookup_v1"
+    report["proof_style"] = "fast_packed_lookup_v2"
     report["fast_helper_sha256"] = hashlib.sha256(helper.encode()).hexdigest()
     report["fast_weighted_leaves"] = leaves
     report["files"] = {str(path.relative_to(output)): original.sha256(path)
