@@ -1,0 +1,53 @@
+{
+  "scope": "Same-host throughput comparison of fused and packed-lookup leaf proofs on the ES(8) <= 312 certificate; no new geometric result",
+  "host": "One 15-core laptop with 48 GB; Lean 4.24.0, Mathlib v4.24.0; the budget-63 search was running on 10 cores during all timings",
+  "fused_export": {
+    "tree": "experiments/omission-final312-2026-10-13/certificate (the ES(8) <= 312 certificate)",
+    "parts": 2167,
+    "leaves": 93988,
+    "proof_style": "fused_sparse_packed_v1"
+  },
+  "leaf_profile_seconds": {
+    "note": "node8647 of Part00098, each component in its own file, wall time minus the 1.99 s import baseline",
+    "full_fused_leaf": 1.44,
+    "sparseSum_code_entries": 1.11,
+    "sparseSum_demand_entries": 1.12,
+    "code_lookups_only": 1.12,
+    "packList": 0.0,
+    "cs_all_below_base": 0.02,
+    "finset_sums_and_card": 0.04,
+    "packed_code_lookup_div_mod": 0.17,
+    "packed_code_lookup_shift_mask": 0.08,
+    "packed_demand_lookup": 0.02,
+    "full_fast_leaf": 0.56,
+    "full_fast_leaf_kernel_decide": 0.42
+  },
+  "catalog": {
+    "fast_catalog_seconds": 219.8,
+    "max_resident_bytes": 12475875328,
+    "note": "one-time cost per export: 98 packed code chunks and the exhaustive fastCode_eq / fastDemand_eq decisions"
+  },
+  "parts_seconds": {
+    "note": "old and new compiled concurrently, one process each",
+    "Part00098": {
+      "fused": 108.4,
+      "fast": 51.5,
+      "weighted_leaves": 58
+    },
+    "Part00500": {
+      "fused": 83.1,
+      "fast": 42.3,
+      "weighted_leaves": 46
+    },
+    "Part01500": {
+      "fused": 71.7,
+      "fast": 38.4,
+      "weighted_leaves": 41
+    }
+  },
+  "negative_control": "first weight of the first leaf of fast Part01500 increased by one: lean exit 1, exactly one error ('Tactic `decide` proved that the proposition ... is false')",
+  "unit_tests": "scripts/test_omission_fast_export.py: 4 tests including the optional kernel control (ERDOS_LEAN_FAST_TEST=1), passing",
+  "rejected_tweak": "linter.all false plus noncomputable section: 36.3 s -> 34.3 s on Part01500; not adopted",
+  "exporter_sha256": "e27a34778cf06062b5550b31e730f3a74c51a6663bcf8c7154fd62cc474edafe",
+  "test_sha256": "f34d9fc55e193eb911568647914ea7d35d908361b79a0a0787da0541eb69ae94"
+}
