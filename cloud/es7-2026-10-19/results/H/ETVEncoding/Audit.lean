@@ -1,5 +1,6 @@
 import ETVEncoding.Main
 import ETVEncoding.Xsb
+import ETVEncoding.Shear
 
 /-! Axiom audit: `lake build` fails if any of these theorems uses an axiom other than
 `propext`, `Classical.choice` and `Quot.sound` (in particular `sorryAx`,
@@ -62,3 +63,16 @@ info: 'ETV.hasConvexNGon_of_unsat' depends on axioms: [propext, Classical.choice
 info: 'ETV.cap_cup_or_gon_of_unsat_xsb' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in #print axioms ETV.cap_cup_or_gon_of_unsat_xsb
+
+/-- info: 'ETV.distinctXReduction' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in #print axioms ETV.distinctXReduction
+
+/--
+info: 'ETV.forcesConvexNGon_of_unsat' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs in #print axioms ETV.forcesConvexNGon_of_unsat
+
+/--
+info: 'ETV.heptagonConjecture_of_unsat' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs in #print axioms ETV.heptagonConjecture_of_unsat

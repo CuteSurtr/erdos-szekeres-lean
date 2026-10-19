@@ -4,6 +4,12 @@ This directory is a Lean 4 package (`ETVEncoding`, Lean 4.24.0, Mathlib v4.24.0)
 formalises the encoding of `tools/etv/gen_etv.py` (without options, and with `--xsb`) and
 proves it sound: if the CNF is unsatisfiable, every point set of the given size, in general
 position and with distinct x-coordinates, has an `A`-cap, a `U`-cup or a convex `K`-gon.
+For `A = U = K` no distinct-x hypothesis is needed. For example,
+
+    theorem ETV.heptagonConjecture_of_unsat :
+        ¬DimacsSatisfiable (dimacs 33 7 7 7) → ErdosSzekeres.HeptagonConjecture
+
+where `dimacs 33 7 7 7` is the clause list of `gen_etv.py 33 7 7 7`.
 
 There is no `sorry`, `admit`, `native_decide` or new axiom. Every theorem listed below
 depends only on `propext`, `Classical.choice` and `Quot.sound`. `ETVEncoding/Audit.lean`
@@ -51,8 +57,9 @@ These follow the Python encoder.
 | `Gon.lean` | The middle-vertex rule and the vertex set of a gon. |
 | `Points.lean` | `XSorted P N`, `ptSet`, `sigOf P` (the chirotope), `HasChainPts s m S` (an `m`-cap for `s = -1`, an `m`-cup for `s = 1`, via `LowerBound.IsChain`), and the geometric links. |
 | `Main.lean` | Sorting a finite set by x and the final theorems. |
-| `Targets.lean` | Targets stated as `def … : Prop`: `DistinctXReduction` (open) and `XsbSound` (proved in `Xsb.lean`). |
+| `Targets.lean` | `DistinctXReduction` and `XsbSound` stated as `def … : Prop`, both proved in the files below. |
 | `Xsb.lean` | `mirror N σ`, and the soundness of the `--xsb` clause. |
+| `Shear.lean` | The shear `(x, y) ↦ (x + εy, y)`, `DistinctXReduction`, and the `ForcesConvexNGon` corollaries. |
 | `Audit.lean` | `#guard_msgs` axiom checks. |
 | `scripts/compare_dimacs.sh` | Byte-for-byte comparison with `gen_etv.py`. |
 
@@ -106,8 +113,15 @@ Point sets:
 - `cap_cup_or_gon_of_unsat_xsb`: the point-set conclusion of `cap_cup_or_gon_of_unsat`
   from UNSAT of the `--xsb` file (`N ≥ 3`, `K ≥ 4`).
 - `hasConvexNGon_of_unsat`, the diagonal case: if `dimacs N K K K` is unsatisfiable, every
-  such `N`-point set has a convex `K`-gon. For example, `gen_etv.py 33 7 7 7` UNSAT would
-  give the heptagon statement for sets with distinct x-coordinates.
+  such `N`-point set has a convex `K`-gon.
+- `distinctXReduction : DistinctXReduction`: some shear `(x, y) ↦ (x + εy, y)` makes the
+  x-coordinates of a finite set distinct (`exists_shear_distinctX`). The shear preserves
+  `orient` (`orient_shear`) and general position, and convex position pulls back along it
+  (`convexPosition_of_image_linear`, via `LinearMap.image_convexHull`).
+- `forcesConvexNGon_of_unsat`: `¬DimacsSatisfiable (dimacs N K K K)` and `K ≥ 4` imply
+  `ForcesConvexNGon N K`, the repository's own statement, with no extra hypotheses.
+- `heptagonConjecture_of_unsat`: `¬DimacsSatisfiable (dimacs 33 7 7 7)` implies
+  `HeptagonConjecture`.
 
 Only the needed direction is proved: a gon in the signotope gives a convex set of points.
 The converse (a convex `K`-subset gives a gon) is not needed for soundness and is not
@@ -135,14 +149,10 @@ For a run that is meant to become a theorem, it is simpler to generate the CNF w
 EmptyHexagonLean does with `lake exe encode`. The Python encoder is then only a
 cross-check.
 
-## Open target (stated in `Targets.lean`, not proved)
+## Targets
 
-- `DistinctXReduction`: the distinct-x statement implies `ForcesConvexNGon N K`. Plan: the
-  shear `(x, y) ↦ (x + εy, y)` has determinant 1, so it preserves `orient` exactly, and it
-  is linear, so it preserves convex position. All but finitely many `ε` make the
-  x-coordinates distinct.
-
-`XsbSound`, also stated there, is proved (`xsbSound`).
+`Targets.lean` states `DistinctXReduction` and `XsbSound` as propositions. Both are now
+proved (`distinctXReduction`, `xsbSound`). The remaining open items are listed below.
 
 ## Remaining gap to a verified UNSAT pipeline
 
@@ -168,8 +178,7 @@ cross-check.
    `gen_cnf.py` options (`--flip`, `--hull`, `--mirror`), the symmetric encodings
    (`tools/symmetric`), and any injected lemma clauses (critique item 4) are not covered.
    Only the option-free and `--xsb` `gen_etv.py` CNFs are.
-4. **Distinct x-coordinates.** See `DistinctXReduction`.
-5. **The emitter.** The `IO` code that prints `dimacs` is unverified (only string
+4. **The emitter.** The `IO` code that prints `dimacs` is unverified (only string
    formatting). Its output has been compared with Python but not proved equal.
 
 Completeness is not needed for soundness, but note: the CNF forbids `K`-gons only through
@@ -179,7 +188,6 @@ affect any UNSAT conclusion.
 
 ## Effort estimate for the rest
 
-- `DistinctXReduction`: about 0.5–1 day (shear argument, finite avoidance of bad `ε`).
 - An UNSAT import via an external verified checker and a disclosed hypothesis: about 1 day
   of plumbing, plus the solver and checker time for the instance.
 - An axiom-free in-kernel check of a small instance: 1–3 days, if feasible at all.

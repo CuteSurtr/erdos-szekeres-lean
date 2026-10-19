@@ -7,4 +7,5 @@ import ETVEncoding.Points
 import ETVEncoding.Main
 import ETVEncoding.Targets
 import ETVEncoding.Xsb
+import ETVEncoding.Shear
 import ETVEncoding.Audit

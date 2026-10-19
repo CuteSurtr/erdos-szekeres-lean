@@ -4,16 +4,17 @@ import ETVEncoding.Main
 # Targets stated as propositions
 
 These are propositions, not theorems or axioms; nothing in the library assumes them.
-`DistinctXReduction` is open. `XsbSound` is proved in `ETVEncoding.Xsb` (`xsbSound`).
+Both are proved: `DistinctXReduction` in `ETVEncoding.Shear` (`distinctXReduction`) and
+`XsbSound` in `ETVEncoding.Xsb` (`xsbSound`).
 -/
 
 namespace ETV
 
 open ErdosSzekeres
 
-/-- **Target: drop the distinct-x hypothesis.** A small rotation makes the x-coordinates of a
-finite set distinct and preserves orientations and convex position, so the distinct-x form of
-`hasConvexNGon_of_unsat` should give `ForcesConvexNGon`. -/
+/-- Dropping the distinct-x hypothesis; proved as `ETV.distinctXReduction` in
+`ETVEncoding.Shear`. A shear `(x, y) ↦ (x + εy, y)` makes the x-coordinates of a finite set
+distinct and preserves orientations and convex position. -/
 def DistinctXReduction : Prop :=
   ∀ N K : ℕ,
     (∀ S : Finset Point, GeneralPosition S → LowerBound.DistinctX S → S.card = N →
