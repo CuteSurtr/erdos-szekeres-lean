@@ -5,8 +5,8 @@
 This article describes three completed Lean proofs of upper bounds: Suk's
 asymptotic bound, the ordinary real-point specialization of the
 Holmsen–Mojarrad–Pach–Tardos (HMPT) bound, and the finite bound
-$`\mathrm{ES}(8)\le313`$. Together with the classical lower bound proved
-in §1.1, the octagon result gives $`65\le\mathrm{ES}(8)\le312`$.
+$`\mathrm{ES}(8)\le311`$. Together with the classical lower bound proved
+in §1.1, the octagon result gives $`65\le\mathrm{ES}(8)\le311`$.
 
 The [finite octagon proof](#2-geometric-configurations-and-finite-state-spaces)
 begins in §§2–3 with the geometric reduction and the intermediate bound 314.
@@ -44,7 +44,7 @@ for every integer $`n\ge n_0`$,
 \right).
 ```
 
-**(3) Finite octagon bound.** $`\mathsf F(312,8)`$; the earlier proofs give $`\mathsf F(314,8)`$ and $`\mathsf F(313,8)`$.
+**(3) Finite octagon bound.** $`\mathsf F(311,8)`$; the earlier proofs give $`\mathsf F(314,8)`$, $`\mathsf F(313,8)`$ and $`\mathsf F(312,8)`$.
 
 The first two statements are eventual bounds; their quantifiers do not permit
 an unverified substitution of $`n=8`$. The HMPT statement retains every
@@ -64,7 +64,8 @@ $`\lceil\log u\rceil`$, $`\lfloor\log u\rfloor`$ for Lean's
 | Convex-hull characterization; equivalence with sets of exactly $`N`$ points; monotonicity in $`N`$ | `convexPosition_iff`, `forcesConvexNGon_iff_exact`, `ForcesConvexNGon.mono` in [Basic](ErdosSzekeres/Basic.lean), with prefix `ErdosSzekeres` |
 | Suk bound | `ErdosSzekeres.Suk.theorem2016` in [Suk/Asymptotic](ErdosSzekeres/Suk/Asymptotic.lean) |
 | HMPT bound | `ErdosSzekeres.HMPT.theorem2020` in [HMPT/Asymptotic](ErdosSzekeres/HMPT/Asymptotic.lean) |
-| Finite octagon bound | `ErdosSzekeres.Omission.forces_convex_octagon_312`, `convex_octagon_of_card_ge_312` in [Final312/Final](experiments/omission-final312-2026-10-13/Final312/Final.lean) |
+| Finite octagon bound | `ErdosSzekeres.Omission.forces_convex_octagon_311`, `convex_octagon_of_card_ge_311` in [Final311/Final](experiments/omission-final311-2026-10-14/Final311/Final.lean) |
+| Intermediate bound 312 | `ErdosSzekeres.Omission.forces_convex_octagon_312`, `convex_octagon_of_card_ge_312` in [Final312/Final](experiments/omission-final312-2026-10-13/Final312/Final.lean) |
 | Intermediate bound 313 | `ErdosSzekeres.Omission.forces_convex_octagon_313`, `convex_octagon_of_card_ge_313` in [Final313/Final](experiments/omission-final313-2026-10-11/Final313/Final.lean) |
 | Intermediate bound 314 | `ErdosSzekeres.Omission.forces_convex_octagon_314`, `convex_octagon_of_card_ge_314` in [FinalCover314B61FusedR31Fused](experiments/omission-global-assembly-2026-10-10/FinalCover314B61FusedR31Fused.lean) |
 
@@ -73,7 +74,7 @@ $`\forall n\ge3,\ \mathsf F(2^{n-2}+1,n)`$; for octagons its threshold is
 $`65`$. The classical construction in §1.1 proves that no smaller threshold
 is possible, so the conjecture asserts exactly that $`2^{n-2}+1`$ is the
 least forcing number. The conjecture is not proved here; the bound
-$`313`$ is proved in §6.5.
+$`311`$ is proved in §§6.5–6.7.
 
 ### 1.1. The classical lower bound
 
@@ -81,7 +82,7 @@ $`313`$ is proved in §6.5.
 of $`2^{n-2}`$ points in general position with no $`n`$ points in convex
 position. Consequently $`\mathsf F(N,n)`$ implies $`N\ge2^{n-2}+1`$. In
 particular every $`N`$ with $`\mathsf F(N,8)`$ satisfies $`N\ge65`$, and
-together with Theorem 1.1(3), $`65\le\mathrm{ES}(8)\le312`$.
+together with Theorem 1.1(3), $`65\le\mathrm{ES}(8)\le311`$.
 
 Put $`[a,b,c]=\det(b-a,c-a)`$, compare points by their first coordinates,
 and let $`\sigma\in\{1,-1\}`$.
@@ -159,9 +160,9 @@ The final set has $`\sum_{i=0}^{n-2}\binom{n-2}{i}=2^{n-2}`$ points.
 | Realization by translation | `ErdosSzekeres.LowerBound.exists_stacked` in [LowerBound/Placement](ErdosSzekeres/LowerBound/Placement.lean) |
 
 The upper bound in `esNumber_le_choose` is the classical cups-caps bound
-already used by Suk's proof. The stronger value $`313`$ is the archived
+already used by Suk's proof. The stronger value $`311`$ is the archived
 theorem of Theorem 1.1(3): applying `esNumber_le_of_forces` to
-`Omission.forces_convex_octagon_312` gives `esNumber 8 ≤ 312`. The script
+`Omission.forces_convex_octagon_311` gives `esNumber 8 ≤ 311`. The script
 [es_lower_bound_witness.py](scripts/es_lower_bound_witness.py) builds the
 same sets with exact integer coordinates and independently confirms that
 the largest convex subsets of the witnesses for $`n=3,\ldots,8`$ have
@@ -170,12 +171,13 @@ $`n-1`$ points. It is a numerical control, not part of the proof.
 ### 1.2. Literature comparison
 
 The literature search of **14 October 2026** ([survey](docs/RELATED_WORK_2026-10-14.md))
-found no earlier universal planar bound as strong as $`\mathrm{ES}(8)\le312`$;
-the best published value is $`408`$ (Mojarrad–Vlachos 2016). The strongest directly
-comparable public announcement located was Michael Schroeder's
+found no earlier universal planar bound as strong as $`\mathrm{ES}(8)\le312`$,
+hence none as strong as $`\mathrm{ES}(8)\le311`$; the best published value is
+$`408`$ (Mojarrad–Vlachos 2016). The strongest directly comparable public
+announcement located was Michael Schroeder's
 [version-1 preprint](https://michaelschroeder.ai/research/ErdosSzekeres/erdos_szekeres_upper_bounds_v1.pdf),
 19 September 2026: Theorem 1.1 states $`\mathrm{ES}(8)\le319`$.
-Theorem 1.1(3) improves that threshold by seven. This comparison supports an
+Theorem 1.1(3) improves that threshold by eight. This comparison supports an
 apparently new best known bound; it does not establish exhaustive priority
 or imply external peer review of either proof.
 
@@ -1191,8 +1193,29 @@ row combination with a strict capacity margin, checked by the kernel. Hence
 with only the standard axioms, and an octagon-free set has at most
 $`1+189+121=311`$ points. The [312 record](experiments/omission-final312-2026-10-13/README.md)
 gives the certificate and the reproduction procedure. Both finite exclusions
-are pure arithmetic over proved rows; the next steps, budgets 63 and 33, need
-either larger certificates or new geometric rows.
+are pure arithmetic over proved rows.
+
+### 6.7. The balanced step to 311
+
+The same bridge with budget 63 needs every 0/1 vector with at most 63 holes
+excluded over the 3,131-row balanced catalog; this gives the balanced
+population bound 188. The exact branch-and-bound of §6.6 proves the exclusion
+with 782,437 leaves (1,564,873 nodes, 18,066 Lean parts), each again a
+nonnegative integer row combination with a strict capacity margin checked by
+the kernel. Hence
+
+```math
+\mathsf F(311,8),
+```
+
+`ErdosSzekeres.Omission.forces_convex_octagon_311` in
+[Final311/Final.lean](experiments/omission-final311-2026-10-14/Final311/Final.lean),
+with only the standard axioms, and an octagon-free set has at most
+$`1+188+121=310`$ points. The [311 record](experiments/omission-final311-2026-10-14/README.md)
+gives the certificate and the reproduction procedure. The next steps are
+costly or blocked: budget 64 on the balanced side is projected at roughly
+eight times this certificate, and residual budget 33 is impossible over the
+present rows, which admit 33-hole assignments, so it needs new geometric rows.
 
 ## 7. Validation and attribution
 

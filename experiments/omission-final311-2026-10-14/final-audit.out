@@ -1,0 +1,4 @@
+'ErdosSzekeres.Omission.balanced_population_188' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Omission.forces_convex_octagon_311' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Omission.convex_octagon_of_card_ge_311' depends on axioms: [propext, Classical.choice, Quot.sound]
+Omission.forces_convex_octagon_311 : ForcesConvexNGon 311 8

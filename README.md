@@ -3,8 +3,8 @@
 This repository formalizes bounds for the Erdős–Szekeres problem in Lean 4.
 It contains proofs of Suk's 2016 bound, the ordinary real-point case of the
 Holmsen–Mojarrad–Pach–Tardos (HMPT) 2020 bound, the finite bound
-**ES(8) ≤ 312**, and the classical lower bound
-$`\mathrm{ES}(n)\ge2^{n-2}+1`$. Together, **65 ≤ ES(8) ≤ 312**.
+**ES(8) ≤ 311**, and the classical lower bound
+$`\mathrm{ES}(n)\ge2^{n-2}+1`$. Together, **65 ≤ ES(8) ≤ 311**.
 
 All results concern finite subsets of the real plane in general position:
 no three distinct points are collinear. A convex polygon may contain other
@@ -36,7 +36,7 @@ $`n`$ (depending on $`\varepsilon`$),
 \left\lfloor 2^{\,n+(8\sqrt2/3+\varepsilon)\sqrt{n\log_2 n}}\right\rfloor.
 ```
 
-**Finite octagon bound.** Every set of at least 312 points in general
+**Finite octagon bound.** Every set of at least 311 points in general
 position contains eight points in convex position.
 
 **Erdős–Szekeres lower bound.** For every $`n\ge3`$ there are $`2^{n-2}`$
@@ -51,13 +51,14 @@ relative to the namespace `ErdosSzekeres`.
 | --- | --- | --- |
 | Suk | `Suk.theorem2016` | [Suk/Asymptotic.lean](ErdosSzekeres/Suk/Asymptotic.lean) |
 | HMPT | `HMPT.theorem2020` | [HMPT/Asymptotic.lean](ErdosSzekeres/HMPT/Asymptotic.lean) |
-| ES(8) ≤ 312 | `Omission.forces_convex_octagon_312` | [Final312/Final.lean](experiments/omission-final312-2026-10-13/Final312/Final.lean) |
+| ES(8) ≤ 311 | `Omission.forces_convex_octagon_311` | [Final311/Final.lean](experiments/omission-final311-2026-10-14/Final311/Final.lean) |
+| ES(8) ≤ 312 (earlier) | `Omission.forces_convex_octagon_312` | [Final312/Final.lean](experiments/omission-final312-2026-10-13/Final312/Final.lean) |
 | ES(8) ≤ 313 (earlier) | `Omission.forces_convex_octagon_313` | [Final313/Final.lean](experiments/omission-final313-2026-10-11/Final313/Final.lean) |
 | ES(8) ≤ 314 (earlier) | `Omission.forces_convex_octagon_314` | [FinalCover314B61FusedR31Fused.lean](experiments/omission-global-assembly-2026-10-10/FinalCover314B61FusedR31Fused.lean) |
 | ES(n) ≥ 2^(n-2) + 1 | `not_forcesConvexNGon_two_pow`, `conjecturedBound_le_of_forces` | [LowerBound/Construction.lean](ErdosSzekeres/LowerBound/Construction.lean) |
 | ES(8) ≥ 65 | `octagon_lower_bound`, `sixtyFive_le_esNumber_eight` | [LowerBound/Construction.lean](ErdosSzekeres/LowerBound/Construction.lean), [LowerBound/Number.lean](ErdosSzekeres/LowerBound/Number.lean) |
 
-The ES(8) ≤ 312 file also provides `Omission.convex_octagon_of_card_ge_312`, which
+The ES(8) ≤ 311 file also provides `Omission.convex_octagon_of_card_ge_311`, which
 states the result directly for finite subsets of $`\mathbb R^2`$.
 
 The lower bound shows that the formalized conjecture, `ErdosSzekeresConjecture`,
@@ -73,16 +74,17 @@ are outside the scope of this formalization.
 
 As of **14 October 2026**, our search of the literature and public preprints
 (see the [survey](docs/RELATED_WORK_2026-10-14.md)) found no earlier general
-bound as strong as **ES(8) ≤ 312**; the best published value is 408
-(Mojarrad–Vlachos 2016). To the best of our knowledge, it is a new best-known
-upper bound for ordinary real planar point sets in general position. This is a dated literature assessment, not
-a guarantee of priority or a claim of external peer review.
+bound as strong as **ES(8) ≤ 312**, hence none as strong as **ES(8) ≤ 311**;
+the best published value is 408 (Mojarrad–Vlachos 2016). To the best of our
+knowledge, it is a new best-known upper bound for ordinary real planar point
+sets in general position. This is a dated literature assessment, not a
+guarantee of priority or a claim of external peer review.
 
 The strongest directly comparable prior announcement we located is
 **ES(8) ≤ 319**, Theorem 1.1 of Michael Schroeder's
 [*Erdős–Szekeres: Upper Bounds for Convex Heptagons and Octagons*](https://michaelschroeder.ai/research/ErdosSzekeres/erdos_szekeres_upper_bounds_v1.pdf)
 (version 1, 19 September 2026). The present bound improves that threshold by
-six points. It builds on Schroeder's omission method, state catalogs and
+eight points. It builds on Schroeder's omission method, state catalogs and
 geometric formalization, with additional inequalities and stronger exact
 certificates developed here.
 
@@ -113,17 +115,18 @@ notes.
 The octagon proof uses the omission method. A projective transformation
 removes one point and reduces an octagon-free set to two configurations,
 called balanced and residual. Geometric inequalities and exact integer
-certificates bound their sizes by 189 and 121. Hence the original set has
-at most $`1+189+121=311`$ points. The residual bound 121 uses a 2,650-row
+certificates bound their sizes by 188 and 121. Hence the original set has
+at most $`1+188+121=310`$ points. The residual bound 121 uses a 2,650-row
 catalog of proved geometric inequalities; for a nonempty residual
 configuration, geometric rank attainment ensures that state zero is occupied,
 and an exact certificate with 437,579 weighted leaves excludes every such
 assignment with at most 32 missing states
 ([313 record](experiments/omission-final313-2026-10-11/README.md)). The
-balanced bound 189 uses the 3,131-row balanced catalog and a 93,988-leaf
-certificate forcing at least 63 of its 252 states to be missing
-([312 record](experiments/omission-final312-2026-10-13/README.md)). Both
-records contain the certificates, kernel-check records and reproduction
+balanced bound 188 uses the 3,131-row balanced catalog and a 782,437-leaf
+certificate forcing at least 64 of its 252 states to be missing
+([311 record](experiments/omission-final311-2026-10-14/README.md)); the
+[312 record](experiments/omission-final312-2026-10-13/README.md) gave 189 with
+93,988 leaves. The records contain the certificates, kernel-check records and reproduction
 instructions; the earlier [314 assembly](experiments/omission-global-assembly-2026-10-10/README.md)
 used the bounds 190 and 122.
 
@@ -132,15 +135,19 @@ criterion and additional geometric omission inequalities. These are
 explained in [math.md](math.md); they do not improve HMPT's asymptotic
 coefficient.
 
-## Beyond 312
+## Beyond 311
 
-No bound below 312 is claimed here. The 313 and 312 certificates are far
+No bound below 311 is claimed here. The 313, 312 and 311 certificates are far
 larger than the earlier ones: their complete Lean kernel checks take about
-120 and 58 CPU-hours, so they were run on one machine rather than in the
-hosted CI workflow; the [313](experiments/omission-final313-2026-10-11/README.md)
-and [312](experiments/omission-final312-2026-10-13/README.md) records explain
-how to repeat them. A [survey of related work](docs/RELATED_WORK_2026-10-14.md)
-places these values next to the published bounds. On the lower side, an
+120, 58 and 170 CPU-hours (the 311 check also needs about 500 GB of disk for
+compiled parts), so they were run on one machine rather than in the hosted CI
+workflow; the [313](experiments/omission-final313-2026-10-11/README.md),
+[312](experiments/omission-final312-2026-10-13/README.md) and
+[311](experiments/omission-final311-2026-10-14/README.md) records explain how
+to repeat them. The next balanced step, budget 64, is projected at roughly
+eight times the 311 certificate. A
+[survey of related work](docs/RELATED_WORK_2026-10-14.md) places these values
+next to the published bounds. On the lower side, an
 [exact computation](experiments/es8-lower-bound-search-2026-10-11/README.md)
 shows that the 64-point lower-bound witness and 1,232 further stacking
 constructions cannot be extended to 65 points without a convex octagon;

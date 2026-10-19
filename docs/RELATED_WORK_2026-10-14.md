@@ -8,9 +8,9 @@ below are taken from the cited abstracts and papers; claims from preprints and
 unreviewed records are marked as such. Numeric values derived from a stated
 formula are marked "(our arithmetic)". No priority claim is made, and nothing
 here asserts a result for this repository beyond what the [README](../README.md)
-states: **65 ≤ ES(8) ≤ 312** is proved and kernel-checked (313 on 12 October
-2026, 312 on 14 October 2026; see the
-[312 record](../experiments/omission-final312-2026-10-13/README.md)), and every
+states: **65 ≤ ES(8) ≤ 311** is proved and kernel-checked (313 on 12 October,
+312 on 14 October and 311 on 19 October 2026; see the
+[311 record](../experiments/omission-final311-2026-10-14/README.md)), and every
 counterexample search so far is negative (the realizable growth search had
 tested more than 16,000 heptagon-free 32-point sets by 14 October, all
 saturated; the committed [ES(7) record](../experiments/es7-search-2026-10-13/README.md)
@@ -54,7 +54,7 @@ on the [UCSD Erdős problems page](https://mathweb.ucsd.edu/~erdosproblems/erdos
 | [Norin–Yuditsky 2016](https://arxiv.org/abs/1509.03332) | limsup ES(n)/C(2n−5, n−2) ≤ 7/8 | — | — | published, DCG; o(1) terms unquantified, so no value at any fixed n |
 | [Suk 2016](https://arxiv.org/abs/1604.08657) (JAMS 2017), [HMPT 2020](https://arxiv.org/abs/1710.11415) (JEMS) | 2^{n+o(n)}, 2^{n+O(√(n log n))} | — | — | asymptotic; no value for n = 7, 8 |
 | [Schroeder, Zenodo record 22842891](https://zenodo.org/records/22842891), 19 Sept 2026 | **ES(7) ≤ 81**, **ES(8) ≤ 319**, and the (7,5,6) Erdős–Tuza–Valtr case with 25 points; "formalized in Lean" with native evaluation and "an explicitly documented trust boundary" | 81 | 319 | public preprint, not peer reviewed; this repository's omission catalogs derive from its version-1 archive |
-| **This repository** | ES(8) ≤ 312, kernel-checked 14 Oct 2026 (313 on 12 Oct) | — | **312** | see [README](../README.md) and the [312 record](../experiments/omission-final312-2026-10-13/README.md) |
+| **This repository** | ES(8) ≤ 311, kernel-checked 19 Oct 2026 (312 on 14 Oct, 313 on 12 Oct) | — | **311** | see [README](../README.md) and the [311 record](../experiments/omission-final311-2026-10-14/README.md) |
 
 Remarks on the table.
 
@@ -63,7 +63,7 @@ Remarks on the table.
   shape and is not a bound at n = 7, 8. Likewise (7/8)·C(2n−5, n−2) = 110.25
   and 404.25 (our arithmetic) are *not* valid bounds: Norin–Yuditsky's proof is
   non-inductive and its error terms are not made explicit. The correct
-  published comparison for ES(8) ≤ 312 is therefore 408, not 404. Schroeder's
+  published comparison for ES(8) ≤ 311 is therefore 408, not 404. Schroeder's
   footnote 1 (Zenodo record, unreviewed) notes that Koshelev–Koshka's table
   lists 92 and 324 under Norin–Yuditsky and that he "has not located their
   finite derivation"; the deleted "mate" set Q′ of that proof (at most
@@ -78,7 +78,7 @@ Remarks on the table.
   that "the case k = 7 remains open". The 2025 SAT literature therefore
   contains no published competitor to a heptagon catalog at n = 7.
 
-This repository's kernel-checked ES(8) ≤ 312 (and the earlier 313) is below
+This repository's kernel-checked ES(8) ≤ 311 (and the earlier 312 and 313) is below
 every bound in this table. The heptagon figure ES(7) ≤ 81 shows that the same
 catalog method applies to n = 7; nothing of the kind is attempted here yet.
 
@@ -337,7 +337,7 @@ which is why a monotone path of cups is a clique of cups.
 | Pure colorings, weak k-gon | — | — | **fails**: C_weak(7) > 33 | — | Baek–Balko Thm 7 |
 | Pure colorings, split k-gon | holds for all k: C_split(k,k,k) = 2^{k−2} + 1 | | | | Baek–Balko Thm 6 |
 | Signotopes / acyclic chirotopes | holds | **holds**: every 17-element 3-signotope has a strong 6-gon (Szekeres–Peters; chirotopes with DRAT, Scheucher) | **open**; no 33-element witness found by Baek–Balko, by Balko–Valtr, or by this project's SAT runs | open | as cited |
-| Realizable point sets | 5, 9 | 17 | 33 ≤ ES(7) ≤ 81 (unreviewed) / 113 (published) | 65 ≤ ES(8) ≤ 312 (this repository) | |
+| Realizable point sets | 5, 9 | 17 | 33 ≤ ES(7) ≤ 81 (unreviewed) / 113 (published) | 65 ≤ ES(8) ≤ 311 (this repository) | |
 
 Known abstract upper bounds are weak: C_weak(k) ≤ C_strong(k) ≤ C(2k−4, k−2) + 1
 (253 at k = 7, 925 at k = 8, our arithmetic; Baek–Balko), and for
@@ -430,7 +430,7 @@ via [Scheucher 2023](https://cgt-journal.org/index.php/cgt/article/view/12));
 [Koshelev 2007/2009](https://mathnet.ru/eng/mais52) claimed
 h(6) ≤ max{g(8), 400} = 463, but Scheucher's footnote 1 states the 50-page
 Russian paper "suddenly stops" and the proof is incomplete, so 463 should not
-be cited as established (with ES(8) ≤ 312 it would still read 400, our
+be cited as established (with ES(8) ≤ 311 it would still read 400, our
 arithmetic, moot after h(6) = 30). The Erdős problems page still shows 463 and is stale.
 [Overmars 2003](https://research-portal.uu.nl/en/publications/sets-without-empty-convex-6-gons/)
 (DCG 29) found the 29-point 6-hole-free set by local search with an exact
@@ -1393,9 +1393,9 @@ and Pach 2017.
 
 ## Consequences for this project
 
-1. **Upper bounds.** ES(8) ≤ 312 (kernel-checked 14 October 2026, after 313
-   on 12 October) improves the best published value (408) and the unreviewed
-   319 by seven points; the heptagon catalog behind ES(7) ≤ 81 is an untried
+1. **Upper bounds.** ES(8) ≤ 311 (kernel-checked 19 October 2026, after 313
+   on 12 October and 312 on 14 October) improves the best published value
+   (408) and the unreviewed 319 by eight points; the heptagon catalog behind ES(7) ≤ 81 is an untried
    target for the same certificate pipeline. The comparison figure is 408
    (Mojarrad–Vlachos), not 404 (Norin–Yuditsky's constant is not a bound at
    n = 8). Schroeder's own floors for the additive scheme (C_8 ≥ 62,

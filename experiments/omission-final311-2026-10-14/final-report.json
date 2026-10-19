@@ -1,0 +1,13 @@
+{
+ "result": "ES(8) <= 311: ErdosSzekeres.Omission.forces_convex_octagon_311 : ForcesConvexNGon 311 8",
+ "verified_at": "2026-10-19T14:14:54",
+ "lean": "Lean (version 4.24.0, arm64-apple-darwin23.6.0, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)",
+ "modules": 18068,
+ "all_audited": true,
+ "total_module_seconds": 631680,
+ "complete_flag": true,
+ "proof_style": "fast_packed_lookup_v2",
+ "search_nodes_logged": 1562913,
+ "audit": "'ErdosSzekeres.Omission.balanced_population_188' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ErdosSzekeres.Omission.forces_convex_octagon_311' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ErdosSzekeres.Omission.convex_octagon_of_card_ge_311' depends on axioms: [propext, Classical.choice, Quot.sound]\nOmission.forces_convex_octagon_311 : ForcesConvexNGon 311 8\n",
+ "scope": "Kernel-checked end to end on one machine; not part of hosted CI."
+}
