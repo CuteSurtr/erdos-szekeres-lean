@@ -2,6 +2,7 @@ import ETVEncoding.Main
 import ETVEncoding.Xsb
 import ETVEncoding.Shear
 import ETVEncoding.Hull
+import ETVEncoding.EndToEnd
 
 /-! Axiom audit: `lake build` fails if any of these theorems uses an axiom other than
 `propext`, `Classical.choice` and `Quot.sound` (in particular `sorryAx`,
@@ -97,3 +98,16 @@ info: 'ETV.forcesConvexNGon_of_unsat_hull' depends on axioms: [propext, Classica
 info: 'ETV.heptagonConjecture_of_unsat_n33k7hm' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in #print axioms ETV.heptagonConjecture_of_unsat_n33k7hm
+
+/--
+info: 'ETV.Rup.not_dimacsSatisfiable_of_run' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs in #print axioms ETV.Rup.not_dimacsSatisfiable_of_run
+
+/-- info: 'ETV.forces_quadrilateral_5' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in #print axioms ETV.forces_quadrilateral_5
+
+/--
+info: 'ETV.forces_quadrilateral_5_hm' depends on axioms: [propext, Classical.choice, Quot.sound]
+-/
+#guard_msgs in #print axioms ETV.forces_quadrilateral_5_hm

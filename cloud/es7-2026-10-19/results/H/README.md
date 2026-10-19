@@ -28,8 +28,11 @@ There is no `sorry`, `admit`, `native_decide` or new axiom. Every theorem listed
 depends only on `propext`, `Classical.choice` and `Quot.sound`. `ETVEncoding/Audit.lean`
 checks this with `#guard_msgs`, so `lake build` fails if it changes.
 
-Nothing here proves an UNSAT result. That still needs an UNSAT certificate for a concrete
-instance; see "Remaining gap" below.
+No ES(7) UNSAT result is proved here. That needs an UNSAT certificate for the actual instance
+(see "Remaining gap" below). The pipeline has been run end to end, with no trust in the SAT
+solver, on a small instance: `ETV.forces_quadrilateral_5 : ForcesConvexNGon 5 4` and
+`ETV.forces_quadrilateral_5_hm` (the `--hull --mirror` route). Each goes from the Lean-generated
+CNF, through a CaDiCaL LRAT proof, to a kernel check by a small verified checker.
 
 ## Build
 
@@ -76,6 +79,9 @@ These follow the Python encoder.
 | `ClausesB.lean` | The `gen_cnf.py` generator: `trackBClauses N K hull mirror flip mono` (same loops and order as Python) and `dimacsB` (numbering of `gen_etv.py N K K K`). |
 | `EmitB.lean` | `lake exe trackb_dimacs N K OUT [--hull] [--mirror] [--flip] [--no-mono]`, which also prints the two `c` comment lines. |
 | `TrackB.lean` | Soundness of `gen_cnf.py` at the signotope level (all options), `--flip` (complemented signotope), and the point-set theorem without `--hull`. |
+| `Kernel.lean` | `dimacsBSpec`, the `dimacsB` numbering written with `List.idxOf` so that the kernel can evaluate it, and `dimacsB_eq_spec`. |
+| `Rup.lean` | A small LRAT (RUP-only) checker over lists, with soundness theorem `Rup.not_dimacsSatisfiable_of_run`. It runs in the kernel. |
+| `EndToEnd.lean` | Kernel-checked UNSAT of `gen_cnf.py 5 4` and `gen_cnf.py 5 4 --hull --mirror`, giving `ForcesConvexNGon 5 4` both ways. |
 | `Hull.lean` | The projective normal form behind `--hull` (`HullFrame`, `exists_hullFrame`), the x-axis reflection behind `--mirror`, and `forcesConvexNGon_of_unsat_hull`. |
 | `Audit.lean` | `#guard_msgs` axiom checks. |
 | `scripts/compare_dimacs.sh` | Byte-for-byte comparison with `gen_etv.py`. |
@@ -168,6 +174,19 @@ Track B (`gen_cnf.py`):
   (`N ≥ 3`, `K ≥ 4`) implies `ForcesConvexNGon N K`.
 - `heptagonConjecture_of_unsat_n33k7hm`: the `N = 33`, `K = 7`, `--hull --mirror` case.
 
+End to end (`Kernel.lean`, `Rup.lean`, `EndToEnd.lean`):
+- `dimacsB_eq_spec`: `dimacsB = dimacsBSpec` when `N ≥ 3`. This is needed because the
+  `HashMap` numbering uses the opaque `mixHash`, which the kernel cannot evaluate.
+- `Rup.not_dimacsSatisfiable_of_run`: if the RUP checker accepts a proof that starts from
+  clauses of `cnf`, then `¬DimacsSatisfiable cnf`. Deletions are ignored, which is sound.
+- `n5k4_unsat` and `n5k4hm_unsat`: three `decide +kernel` facts each (the generator output
+  equals the literal CNF, the start clauses are in it, the checker accepts the CaDiCaL proof).
+- `forces_quadrilateral_5` and `forces_quadrilateral_5_hm`: `ForcesConvexNGon 5 4`.
+
+Lean's own LRAT checker (`Std.Tactic.BVDecide.LRAT.check`, used by `bv_decide`) has a
+soundness proof, but `decide +kernel` gets stuck on it, so without `native_decide` it is not
+usable here. That is why `Rup.lean` exists.
+
 Only the needed direction is proved: a gon in the signotope gives a convex set of points.
 The converse (a convex `K`-subset gives a gon) is not needed for soundness and is not
 proved.
@@ -217,11 +236,12 @@ proved (`distinctXReduction`, `xsbSound`). The remaining open items are listed b
      (cake_lpr) and record it in Lean as a disclosed hypothesis or axiom about
      `ETV.dimacs N A U K`. This is what EmptyHexagonLean does (`axiom unsat_6hole_cnf`).
      It breaks the "standard axioms only" rule, so it has to be stated openly.
-   - Check the proof inside Lean. Lean core's LRAT checker (used by `bv_decide`) has a
-     soundness proof but needs `Lean.ofReduceBool` to run at useful speed, and that is
-     forbidden here. Kernel evaluation of a certificate for an ES(7) instance is not
-     realistic. It could work for a tiny instance such as (7,4,7)@17 (UNSAT in 0.79 s);
-     that would be a useful end-to-end test.
+   - Check the proof inside Lean. This works for tiny instances (`EndToEnd.lean`, `N = 5`):
+     the kernel check takes about 30 s. It does not scale. The ES(5) instance
+     `gen_cnf.py 9 5 --hull --mirror` (2,073 clauses, 276 proof steps) did not finish in 10
+     minutes with the list-based checker, and ES(7) certificates are many orders of
+     magnitude larger. Lean core's LRAT checker needs `Lean.ofReduceBool` (`native_decide`)
+     to run, and that is forbidden here.
 
    Either route also needs a small bridge from `DimacsSatisfiable` to the checker's CNF
    semantics.
@@ -252,7 +272,9 @@ affect any UNSAT conclusion.
 
 - An UNSAT import via an external verified checker and a disclosed hypothesis: about 1 day
   of plumbing, plus the solver and checker time for the instance.
-- An axiom-free in-kernel check of a small instance: 1–3 days, if feasible at all.
+- A faster in-kernel checker (balanced trees instead of lists, clause deletion) for
+  ES(5)/ES(6)-sized test instances: 1–2 days. ES(7) certificates stay out of reach in the
+  kernel; they need an external verified checker.
 - `gen_etv.py --hull` with `A = U = K`: under a day (reuse `Hull.lean`; only the clause
   order differs).
 - Cube-and-conquer certification: 2–4 days of tooling, plus the compute.
