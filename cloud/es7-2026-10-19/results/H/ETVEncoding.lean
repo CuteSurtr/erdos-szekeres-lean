@@ -8,4 +8,7 @@ import ETVEncoding.Main
 import ETVEncoding.Targets
 import ETVEncoding.Xsb
 import ETVEncoding.Shear
+import ETVEncoding.ClausesB
+import ETVEncoding.TrackB
+import ETVEncoding.Hull
 import ETVEncoding.Audit

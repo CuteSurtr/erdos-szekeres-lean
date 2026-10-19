@@ -1,15 +1,28 @@
 # Task H: a verified encoding for the ETV signotope CNF (first part)
 
 This directory is a Lean 4 package (`ETVEncoding`, Lean 4.24.0, Mathlib v4.24.0) that
-formalises the encoding of `tools/etv/gen_etv.py` (without options, and with `--xsb`) and
-proves it sound: if the CNF is unsatisfiable, every point set of the given size, in general
+formalises two encoders and proves them sound:
+
+- `tools/etv/gen_etv.py N A U K`, without options and with `--xsb`;
+- `tools/trackB/gen_cnf.py N K` with every option combination it accepts: none,
+  `--no-mono`, `--flip`, `--hull` and `--hull --mirror`.
+
+For `gen_etv.py` the statement is: if the CNF is unsatisfiable, every point set of the given size, in general
 position and with distinct x-coordinates, has an `A`-cap, a `U`-cup or a convex `K`-gon.
 For `A = U = K` no distinct-x hypothesis is needed. For example,
 
     theorem ETV.heptagonConjecture_of_unsat :
         ¬DimacsSatisfiable (dimacs 33 7 7 7) → ErdosSzekeres.HeptagonConjecture
 
-where `dimacs 33 7 7 7` is the clause list of `gen_etv.py 33 7 7 7`.
+where `dimacs 33 7 7 7` is the clause list of `gen_etv.py 33 7 7 7`. For the file of the
+ES(7) SAT runs:
+
+    theorem ETV.heptagonConjecture_of_unsat_n33k7hm :
+        ¬DimacsSatisfiable (dimacsB 33 7 true true false true) → ErdosSzekeres.HeptagonConjecture
+
+Here `dimacsB 33 7 true true false true` is `gen_cnf.py 33 7 --hull --mirror`, and
+`lake exe trackb_dimacs 33 7 OUT --hull --mirror` reproduces the cached
+`.cache/es7/trackB-sat/cnf/n33k7hm.cnf` byte for byte.
 
 There is no `sorry`, `admit`, `native_decide` or new axiom. Every theorem listed below
 depends only on `propext`, `Classical.choice` and `Quot.sound`. `ETVEncoding/Audit.lean`
@@ -60,6 +73,10 @@ These follow the Python encoder.
 | `Targets.lean` | `DistinctXReduction` and `XsbSound` stated as `def … : Prop`, both proved in the files below. |
 | `Xsb.lean` | `mirror N σ`, and the soundness of the `--xsb` clause. |
 | `Shear.lean` | The shear `(x, y) ↦ (x + εy, y)`, `DistinctXReduction`, and the `ForcesConvexNGon` corollaries. |
+| `ClausesB.lean` | The `gen_cnf.py` generator: `trackBClauses N K hull mirror flip mono` (same loops and order as Python) and `dimacsB` (numbering of `gen_etv.py N K K K`). |
+| `EmitB.lean` | `lake exe trackb_dimacs N K OUT [--hull] [--mirror] [--flip] [--no-mono]`, which also prints the two `c` comment lines. |
+| `TrackB.lean` | Soundness of `gen_cnf.py` at the signotope level (all options), `--flip` (complemented signotope), and the point-set theorem without `--hull`. |
+| `Hull.lean` | The projective normal form behind `--hull` (`HullFrame`, `exists_hullFrame`), the x-axis reflection behind `--mirror`, and `forcesConvexNGon_of_unsat_hull`. |
 | `Audit.lean` | `#guard_msgs` axiom checks. |
 | `scripts/compare_dimacs.sh` | Byte-for-byte comparison with `gen_etv.py`. |
 
@@ -123,6 +140,34 @@ Point sets:
 - `heptagonConjecture_of_unsat`: `¬DimacsSatisfiable (dimacs 33 7 7 7)` implies
   `HeptagonConjecture`.
 
+Track B (`gen_cnf.py`):
+- `mem_trackBClauses`: apart from the symmetry-breaking clauses, every clause of
+  `gen_cnf.py N K` is a clause of `gen_etv.py N K K K`. The two files differ only in the
+  order of the end-flag and monotonicity clauses, and `--no-mono` drops some.
+- `dimacsB_satisfiable_of_signotope`: a signotope on `N ≥ 3` points with no `K`-gon, in
+  the normal forms that the options ask for (`HullForm`, `MirrorForm`, `σ 0 1 2 = true` for
+  `--flip`), satisfies `dimacsB N K hull mirror flip mono`.
+- `dimacsB_noHull_satisfiable` (`--flip` is sound): `σ` or its complement `!σ` satisfies the
+  flip unit, and complementing swaps caps and cups, so gons survive (`hasGon_of_compl`).
+- `forcesConvexNGon_of_unsat_trackB`: UNSAT of `gen_cnf.py N K [--flip] [--no-mono]`
+  (`N ≥ 3`, `K ≥ 4`) implies `ForcesConvexNGon N K`.
+- `hasConvexNGon_of_hasGon'`: a gon of the orientation signotope of any injective
+  family in general position (not necessarily x-sorted) is a convex gon.
+- `HullFrame`, `HullFrame.isSignotope` and `HullFrame.hullForm`. In a hull frame, `Q 0` is
+  left of all the other points and they are sorted by slope seen from `Q 0`. The orientation
+  signs then form a signotope in `--hull` normal form. For triples avoiding `Q 0`, the
+  projective map `q ↦ (slope, 1/(q.x - p.x))` multiplies orientations by a positive factor
+  (`orient_proj`) and sorts the images by x; for triples through `Q 0`, `orient_from`
+  applies.
+- `exists_hullFrame`: every finite set in general position with distinct x-coordinates has
+  a hull frame. Its leftmost point is `Q 0`.
+- `HullFrame.mirror`, `sigOf_mirrorFrame` and `ptSet_mirrorFrame`: reflecting in the x-axis
+  gives another hull frame of the reflected set, with `σ'(i,j,k) = σ(N-k, N-j, N-i)` away
+  from `Q 0`. This swaps the two sides of the `--mirror` clause.
+- `forcesConvexNGon_of_unsat_hull`: UNSAT of `gen_cnf.py N K --hull [--mirror] [--no-mono]`
+  (`N ≥ 3`, `K ≥ 4`) implies `ForcesConvexNGon N K`.
+- `heptagonConjecture_of_unsat_n33k7hm`: the `N = 33`, `K = 7`, `--hull --mirror` case.
+
 Only the needed direction is proved: a gon in the signotope gives a convex set of points.
 The converse (a convex `K`-subset gives a gon) is not needed for soundness and is not
 proved.
@@ -143,6 +188,16 @@ Results on 19 Oct 2026, all byte-identical (`cmp`) to `gen_etv.py`:
 - the same grid with `--xsb` for N ≥ 3 (1,512 files);
 - (17,4,7,7), (26,7,5,7), (27,7,5,7), (31,7,6,6), (32,7,7,7) and (33,7,7,7);
 - `--xsb` on (17,4,7,7), (26,7,5,7) and (33,7,7,7).
+
+Track B (`scripts/compare_trackb.sh`), also byte-identical:
+- the grid N ∈ {3,…,9,12}, K ∈ {4,…,8}, each with the seven option sets none,
+  `--no-mono`, `--hull`, `--hull --mirror`, `--hull --mirror --no-mono`, `--flip`,
+  `--flip --no-mono` (280 files);
+- (33,7), (33,7) `--hull --mirror`, (17,6) `--hull`;
+- all 38 cached files `.cache/es7/trackB-sat/cnf/n*k*[h][m].cnf` used in the earlier ES(7)
+  runs, including `n33k7hm.cnf` (sha256 prefix `86a1a1f68d18f2a3`), `n33k7h.cnf`,
+  `n33k7.cnf`, `n32k7hm.cnf` and `n17k6hm.cnf`. These files are local, not in the
+  repository; `scripts/compare_trackb_dir.sh DIR` reruns the check on any such directory.
 
 For a run that is meant to become a theorem, it is simpler to generate the CNF with
 `lake exe etv_dimacs` and give that file to the solver and the proof checker, as
@@ -173,11 +228,18 @@ proved (`distinctXReduction`, `xsbSound`). The remaining open items are listed b
 2. **Cube-and-conquer.** If the UNSAT comes from cubes (`tools/cnc`), you also need a
    checked proof that the cubes cover the space (a tautology/LRAT check of the cube
    disjunction) and one certificate per cube, as in EmptyHexagonLean.
-3. **Symmetry breaking and other encodings.** `--xsb` is covered. `--hull` and `--mirror`
-   (projective normal form, which needs a projective-transformation argument),
-   `gen_cnf.py` options (`--flip`, `--hull`, `--mirror`), the symmetric encodings
-   (`tools/symmetric`), and any injected lemma clauses (critique item 4) are not covered.
-   Only the option-free and `--xsb` `gen_etv.py` CNFs are.
+3. **Symmetry breaking and other encodings.** Covered: `gen_etv.py` without options and
+   with `--xsb`, and `gen_cnf.py` with all its options. Not covered:
+   - `gen_etv.py --hull`. The projective map used here preserves orientations, convex
+     position and gons, but not caps and cups, because it changes the x-order. So the hull
+     normal form is justified only when caps and cups are subsumed by gons, i.e. for
+     `A = U = K`, where the clauses are those of `gen_cnf.py N K --hull` up to order. For
+     `A ≠ U` I do not know a justification, and the argument here does not give one.
+   - `gen_etv.py --mirror`. It identifies `X(i,j,k)` with `X(m-k,m-j,m-i)`, so it restricts
+     to mirror-symmetric configurations. UNSAT then says only that no symmetric
+     configuration exists; it is not symmetry breaking.
+   - The symmetric encodings (`tools/symmetric`), one-point extensions (`ext_cnf.py`), and
+     any injected lemma clauses (critique item 4).
 4. **The emitter.** The `IO` code that prints `dimacs` is unverified (only string
    formatting). Its output has been compared with Python but not proved equal.
 
@@ -191,5 +253,6 @@ affect any UNSAT conclusion.
 - An UNSAT import via an external verified checker and a disclosed hypothesis: about 1 day
   of plumbing, plus the solver and checker time for the instance.
 - An axiom-free in-kernel check of a small instance: 1–3 days, if feasible at all.
-- `--hull` / `--mirror` soundness (projective normal form): about 1 week.
+- `gen_etv.py --hull` with `A = U = K`: under a day (reuse `Hull.lean`; only the clause
+  order differs).
 - Cube-and-conquer certification: 2–4 days of tooling, plus the compute.

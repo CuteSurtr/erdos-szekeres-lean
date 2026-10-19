@@ -1,6 +1,6 @@
 name = "etv_encoding"
 version = "0.1.0"
-defaultTargets = ["ETVEncoding", "etv_dimacs"]
+defaultTargets = ["ETVEncoding", "etv_dimacs", "trackb_dimacs"]
 
 # The parent repository (four directories up) supplies the planar
 # definitions (`Point`, `orient`, `ConvexPosition`, ...) and Mathlib.
@@ -14,3 +14,7 @@ name = "ETVEncoding"
 [[lean_exe]]
 name = "etv_dimacs"
 root = "ETVEncoding.Emit"
+
+[[lean_exe]]
+name = "trackb_dimacs"
+root = "ETVEncoding.EmitB"
