@@ -1,0 +1,18 @@
+cnf /private/tmp/claude-501/-Users-jiho-Desktop-lean-4-/3d74306a-3b6f-4edb-85db-abd21cbf81c6/scratchpad/E/cnf/n33k7m3refl.cnf
+sha256 cc329387c2c075670c9832b2969b9706c3b556cb25b9177f24f71497c2d9a781
+solver_options --elim=0
+Mon Oct 19 21:46:28 KST 2026
+s UNSATISFIABLE
+      214.67 real        28.05 user         1.32 sys
+          2807169024  maximum resident set size
+proof_bytes 650241362
+Mon Oct 19 21:50:03 KST 2026
+c topTable reallocation from 1024 to 1536
+c parsed a formula with 463980 variables and 9500128 clauses
+c topTable reallocation from 1536 to 2304
+c VERIFIED
+c verification time = 84.20 secs
+       84.21 real        10.16 user         0.49 sys
+           506478592  maximum resident set size
+lrat_check_exit 0
+Mon Oct 19 21:51:27 KST 2026

@@ -1,0 +1,1280 @@
+{
+ "task": "E",
+ "date": "2026-10-19",
+ "environment": {
+  "machine": "user's local Mac (task text assumed a cloud machine); shared with sibling tasks A-D running at the same time",
+  "cpu": "Apple M5 Pro",
+  "logical_cores": 15,
+  "performance_cores": 5,
+  "efficiency_cores": 10,
+  "memory_GB": 48,
+  "load_average": "about 5 before the task started, 46 at 21:29, 90-125 from 21:35 on (other tasks)",
+  "cadical": "3.0.1, git c60730422e758ef1cebe7aeddf2dda31c996bf04, built from source (SDK MacOSX26.5; the default MacOSX27 SDK fails to link)",
+  "drat_trim": "git 2e3b2dc0ecf938addbd779d42877b6ed69d9a985; drat-trim and lrat-check built from source",
+  "python": "3.14.7",
+  "solver_options_for_runs": "--elim=0 (memory, see memtest.txt)",
+  "workers": "3-fold run: 5 workers 21:37-21:46, then 7 workers from 21:47 (resumed from the saved state); D3 run: 2 workers (closed at the root after one job)"
+ },
+ "controls": [
+  {
+   "cnf": "n16k6m4",
+   "expected": "SATISFIABLE",
+   "got": "SATISFIABLE",
+   "seconds": 0,
+   "verdict": "OK",
+   "model_check": {
+    "symmetry_violations": 0,
+    "A4_violations": 0,
+    "GP_violations": 0,
+    "center_fact_violations": 0,
+    "sb_violations": 0,
+    "max_convex": 5,
+    "convex_6_subsets": 0
+   },
+   "reason": "4-fold hexagon-free 16-point sets exist (Subercaseaux et al. 2025: 66 abstract)"
+  },
+  {
+   "cnf": "n16k6m5c",
+   "expected": "SATISFIABLE",
+   "got": "SATISFIABLE",
+   "seconds": 0,
+   "verdict": "OK",
+   "model_check": {
+    "symmetry_violations": 0,
+    "A4_violations": 0,
+    "GP_violations": 0,
+    "center_fact_violations": 0,
+    "sb_violations": 0,
+    "max_convex": 5,
+    "convex_6_subsets": 0
+   },
+   "reason": "5-fold (centre in set) hexagon-free 16-point sets exist (Subercaseaux et al. 2025: 948)"
+  },
+  {
+   "cnf": "n18k6m3",
+   "expected": "UNSATISFIABLE",
+   "got": "UNSATISFIABLE",
+   "seconds": 1,
+   "verdict": "OK",
+   "model_check": null,
+   "reason": "ES(6)=17"
+  },
+  {
+   "cnf": "n18k6m6",
+   "expected": "UNSATISFIABLE",
+   "got": "UNSATISFIABLE",
+   "seconds": 0,
+   "verdict": "OK",
+   "model_check": null,
+   "reason": "ES(6)=17"
+  },
+  {
+   "cnf": "n6k5m2",
+   "expected": "SATISFIABLE",
+   "got": "SATISFIABLE",
+   "seconds": 0,
+   "verdict": "OK",
+   "model_check": {
+    "symmetry_violations": 0,
+    "A4_violations": 0,
+    "GP_violations": 0,
+    "center_fact_violations": 0,
+    "sb_violations": 0,
+    "max_convex": 4,
+    "convex_5_subsets": 0
+   },
+   "reason": "small sanity"
+  },
+  {
+   "cnf": "n6k5m3",
+   "expected": "SATISFIABLE",
+   "got": "SATISFIABLE",
+   "seconds": 0,
+   "verdict": "OK",
+   "model_check": {
+    "symmetry_violations": 0,
+    "A4_violations": 0,
+    "GP_violations": 0,
+    "center_fact_violations": 0,
+    "sb_violations": 0,
+    "max_convex": 4,
+    "convex_5_subsets": 0
+   },
+   "reason": "small sanity"
+  },
+  {
+   "cnf": "n8k5m2",
+   "expected": "SATISFIABLE",
+   "got": "SATISFIABLE",
+   "seconds": 0,
+   "verdict": "OK",
+   "model_check": {
+    "symmetry_violations": 0,
+    "A4_violations": 0,
+    "GP_violations": 0,
+    "center_fact_violations": 0,
+    "sb_violations": 0,
+    "max_convex": 4,
+    "convex_5_subsets": 0
+   },
+   "reason": "ES(5)=9 and saved models"
+  },
+  {
+   "cnf": "n8k5m4",
+   "expected": "SATISFIABLE",
+   "got": "SATISFIABLE",
+   "seconds": 0,
+   "verdict": "OK",
+   "model_check": {
+    "symmetry_violations": 0,
+    "A4_violations": 0,
+    "GP_violations": 0,
+    "center_fact_violations": 0,
+    "sb_violations": 0,
+    "max_convex": 4,
+    "convex_5_subsets": 0
+   },
+   "reason": "ES(5)=9 and saved models"
+  },
+  {
+   "cnf": "n8k5m8",
+   "expected": "UNSATISFIABLE",
+   "got": "UNSATISFIABLE",
+   "seconds": 0,
+   "verdict": "OK",
+   "model_check": null,
+   "reason": "one orbit of 8 is convex"
+  },
+  {
+   "cnf": "n9k5m3",
+   "expected": "UNSATISFIABLE",
+   "got": "UNSATISFIABLE",
+   "seconds": 0,
+   "verdict": "OK",
+   "model_check": null,
+   "reason": "ES(5)=9"
+  },
+  {
+   "cnf": "n9k5m9",
+   "expected": "UNSATISFIABLE",
+   "got": "UNSATISFIABLE",
+   "seconds": 0,
+   "verdict": "OK",
+   "model_check": null,
+   "reason": "ES(5)=9"
+  },
+  {
+   "cnf": "n10k5m3c",
+   "expected": "UNSATISFIABLE",
+   "got": "UNSATISFIABLE",
+   "seconds": 0,
+   "verdict": "OK",
+   "model_check": null,
+   "reason": "ES(5)=9"
+  },
+  {
+   "cnf": "n12k5m3",
+   "expected": "UNSATISFIABLE",
+   "got": "UNSATISFIABLE",
+   "seconds": 0,
+   "verdict": "OK",
+   "model_check": null,
+   "reason": "ES(5)=9"
+  },
+  {
+   "cnf": "n13k6m3c",
+   "expected": "?",
+   "got": "SATISFIABLE",
+   "seconds": 0,
+   "verdict": "OK",
+   "model_check": {
+    "symmetry_violations": 0,
+    "A4_violations": 0,
+    "GP_violations": 0,
+    "center_fact_violations": 0,
+    "sb_violations": 0,
+    "max_convex": 5,
+    "convex_6_subsets": 0
+   },
+   "reason": "not known"
+  },
+  {
+   "cnf": "n15k6m3",
+   "expected": "?",
+   "got": "UNSATISFIABLE",
+   "seconds": 0,
+   "verdict": "OK",
+   "model_check": null,
+   "reason": "not known"
+  },
+  {
+   "cnf": "n16k6m3c",
+   "expected": "?",
+   "got": "UNSATISFIABLE",
+   "seconds": 0,
+   "verdict": "OK",
+   "model_check": null,
+   "reason": "not known (saved run said UNSAT)"
+  }
+ ],
+ "controls_extra": [
+  {
+   "cnf": "n9k5d3",
+   "expected": "UNSATISFIABLE",
+   "got": "UNSATISFIABLE",
+   "seconds": 0.0,
+   "verdict": "OK",
+   "reason": "ES(5)=9"
+  },
+  {
+   "cnf": "n9k6d3",
+   "expected": "UNSATISFIABLE",
+   "got": "UNSATISFIABLE",
+   "seconds": 0.0,
+   "verdict": "OK",
+   "reason": "a D3 6-orbit is cocircular, hence a convex hexagon"
+  },
+  {
+   "cnf": "n21k6d3",
+   "expected": "UNSATISFIABLE",
+   "got": "UNSATISFIABLE",
+   "seconds": 0.5,
+   "verdict": "OK",
+   "reason": "ES(6)=17"
+  },
+  {
+   "cnf": "n15k6d3",
+   "expected": "UNSATISFIABLE",
+   "got": "UNSATISFIABLE",
+   "seconds": 0.0,
+   "verdict": "OK",
+   "reason": "implied by the 3-fold n15k6m3 answer (D3 is a sub-case of C3)"
+  },
+  {
+   "cnf": "n21k7d3",
+   "expected": "SATISFIABLE",
+   "got": "SATISFIABLE",
+   "seconds": 0.8,
+   "verdict": "OK",
+   "reason": "random exact D3 21-point sets without convex 7-gon exist (symval2)",
+   "model_check": {
+    "symmetry_violations": 0,
+    "A4_violations": 0,
+    "GP_violations": 0,
+    "center_fact_violations": 0,
+    "sb_violations": 0,
+    "max_convex": 6,
+    "convex_7_subsets": 0,
+    "reflection_violations": 0,
+    "status_line": "s SATISFIABLE",
+    "abstract_model_ok": true
+   }
+  },
+  {
+   "cnf": "n9k6m3",
+   "expected": "SATISFIABLE",
+   "got": "SATISFIABLE",
+   "seconds": 0.0,
+   "verdict": "OK",
+   "reason": "small 3-fold hexagon-free sets exist",
+   "model_check": {
+    "symmetry_violations": 0,
+    "A4_violations": 0,
+    "GP_violations": 0,
+    "center_fact_violations": 0,
+    "sb_violations": 0,
+    "max_convex": 5,
+    "convex_6_subsets": 0,
+    "status_line": "s SATISFIABLE",
+    "abstract_model_ok": true
+   }
+  },
+  {
+   "cnf": "n12k6m3",
+   "expected": "SATISFIABLE",
+   "got": "SATISFIABLE",
+   "seconds": 0.0,
+   "verdict": "OK",
+   "reason": "realizable 3-fold 12-point hexagon-free sets found (symval2, anneal_sym)",
+   "model_check": {
+    "symmetry_violations": 0,
+    "A4_violations": 0,
+    "GP_violations": 0,
+    "center_fact_violations": 0,
+    "sb_violations": 0,
+    "max_convex": 5,
+    "convex_6_subsets": 0,
+    "status_line": "s SATISFIABLE",
+    "abstract_model_ok": true
+   }
+  }
+ ],
+ "saved_models": [
+  {
+   "file": "n16k6m4.models",
+   "cnf": "n16k6m4",
+   "X_vars": 140,
+   "models": 30,
+   "all_lines_complete": true,
+   "assume_check": "TOTAL lines=30 sat=30",
+   "all_extend_to_cnf_models": true,
+   "symcheck_bad": 0,
+   "max_convex_over_models": 5
+  },
+  {
+   "file": "n16k6m5c.models",
+   "cnf": "n16k6m5c",
+   "X_vars": 112,
+   "models": 30,
+   "all_lines_complete": true,
+   "assume_check": "TOTAL lines=30 sat=30",
+   "all_extend_to_cnf_models": true,
+   "symcheck_bad": 0,
+   "max_convex_over_models": 5
+  },
+  {
+   "file": "n32k7m2.models",
+   "cnf": "n32k7m2",
+   "X_vars": 2480,
+   "models": 40,
+   "all_lines_complete": true,
+   "assume_check": "TOTAL lines=40 sat=40",
+   "all_extend_to_cnf_models": true,
+   "symcheck_bad": 0,
+   "max_convex_over_models": 6
+  },
+  {
+   "file": "n32k7m2_seeds.models",
+   "cnf": "n32k7m2",
+   "X_vars": 2480,
+   "models": 5,
+   "all_lines_complete": true,
+   "assume_check": "TOTAL lines=5 sat=5",
+   "all_extend_to_cnf_models": true,
+   "symcheck_bad": 0,
+   "max_convex_over_models": 6
+  },
+  {
+   "file": "n6k5m2.models",
+   "cnf": "n6k5m2",
+   "X_vars": 10,
+   "models": 3,
+   "all_lines_complete": true,
+   "assume_check": "TOTAL lines=3 sat=3",
+   "all_extend_to_cnf_models": true,
+   "symcheck_bad": 0,
+   "max_convex_over_models": 4,
+   "brute_count": 3,
+   "brute_equals_models": true,
+   "enum_models": "ENUM models=3 status=EXHAUSTED time=0.00",
+   "enum_equals_brute": true
+  },
+  {
+   "file": "n6k5m3.models",
+   "cnf": "n6k5m3",
+   "X_vars": 13,
+   "models": 8,
+   "all_lines_complete": true,
+   "assume_check": "TOTAL lines=8 sat=8",
+   "all_extend_to_cnf_models": true,
+   "symcheck_bad": 0,
+   "max_convex_over_models": 4,
+   "brute_count": 8,
+   "brute_equals_models": true,
+   "enum_models": "ENUM models=8 status=EXHAUSTED time=0.00",
+   "enum_equals_brute": true
+  },
+  {
+   "file": "n8k5m2.models",
+   "cnf": "n8k5m2",
+   "X_vars": 28,
+   "models": 8,
+   "all_lines_complete": true,
+   "assume_check": "TOTAL lines=8 sat=8",
+   "all_extend_to_cnf_models": true,
+   "symcheck_bad": 0,
+   "max_convex_over_models": 4
+  },
+  {
+   "file": "n8k5m4.models",
+   "cnf": "n8k5m4",
+   "X_vars": 14,
+   "models": 8,
+   "all_lines_complete": true,
+   "assume_check": "TOTAL lines=8 sat=8",
+   "all_extend_to_cnf_models": true,
+   "symcheck_bad": 0,
+   "max_convex_over_models": 4,
+   "brute_count": 8,
+   "brute_equals_models": true,
+   "enum_models": "ENUM models=8 status=EXHAUSTED time=0.00",
+   "enum_equals_brute": true
+  },
+  {
+   "file": "n8k5m8.models",
+   "cnf": "n8k5m8",
+   "X_vars": 7,
+   "models": 0,
+   "all_lines_complete": true,
+   "brute_count": 0,
+   "brute_equals_models": true,
+   "enum_models": "ENUM models=0 status=EXHAUSTED time=0.00",
+   "enum_equals_brute": true
+  },
+  {
+   "file": "n9k5m3.models",
+   "cnf": "n9k5m3",
+   "X_vars": 42,
+   "models": 0,
+   "all_lines_complete": true
+  },
+  {
+   "file": "n9k5m9.models",
+   "cnf": "n9k5m9",
+   "X_vars": 14,
+   "models": 0,
+   "all_lines_complete": true,
+   "brute_count": 0,
+   "brute_equals_models": true,
+   "enum_models": "ENUM models=0 status=EXHAUSTED time=0.00",
+   "enum_equals_brute": true
+  }
+ ],
+ "exact_symmetric_validation": [
+  {
+   "cnf": "n33k7d3.cnf",
+   "mode": "d3",
+   "N": 33,
+   "K": 7,
+   "samples": 100,
+   "tries": 115,
+   "map_conflicts": 0,
+   "mismatches": 0,
+   "kgon_free_samples": 0,
+   "dists": {
+    "box": 38,
+    "cluster": 25,
+    "annulus": 27,
+    "small": 10
+   },
+   "kgon_orbits_range": [
+    2084,
+    202608
+   ]
+  },
+  {
+   "cnf": "n33k7m3.cnf",
+   "mode": "c3",
+   "N": 33,
+   "K": 7,
+   "samples": 100,
+   "tries": 125,
+   "map_conflicts": 0,
+   "mismatches": 0,
+   "kgon_free_samples": 0,
+   "dists": {
+    "box": 32,
+    "cluster": 24,
+    "annulus": 35,
+    "small": 9
+   },
+   "kgon_orbits_range": [
+    2112,
+    150970
+   ]
+  },
+  {
+   "cnf": "n33k7m3refl.cnf",
+   "mode": "d3c3",
+   "N": 33,
+   "K": 7,
+   "samples": 60,
+   "tries": 68,
+   "map_conflicts": 0,
+   "mismatches": 0,
+   "kgon_free_samples": 0,
+   "dists": {
+    "box": 21,
+    "cluster": 13,
+    "annulus": 21,
+    "small": 5
+   },
+   "kgon_orbits_range": [
+    1963,
+    362294
+   ]
+  },
+  {
+   "cnf": "n6k5m3.cnf",
+   "mode": "c3",
+   "N": 6,
+   "K": 5,
+   "samples": 200,
+   "tries": 201,
+   "map_conflicts": 0,
+   "mismatches": 0,
+   "kgon_free_samples": 89,
+   "dists": {
+    "box": 47,
+    "cluster": 55,
+    "annulus": 47,
+    "small": 51
+   },
+   "kgon_orbits_range": [
+    0,
+    2
+   ]
+  },
+  {
+   "cnf": "n9k6m3.cnf",
+   "mode": "c3",
+   "N": 9,
+   "K": 6,
+   "samples": 200,
+   "tries": 201,
+   "map_conflicts": 0,
+   "mismatches": 0,
+   "kgon_free_samples": 36,
+   "dists": {
+    "box": 57,
+    "cluster": 44,
+    "annulus": 47,
+    "small": 52
+   },
+   "kgon_orbits_range": [
+    0,
+    30
+   ]
+  },
+  {
+   "cnf": "n12k6m3.cnf",
+   "mode": "c3",
+   "N": 12,
+   "K": 6,
+   "samples": 400,
+   "tries": 408,
+   "map_conflicts": 0,
+   "mismatches": 0,
+   "kgon_free_samples": 2,
+   "dists": {
+    "box": 89,
+    "cluster": 97,
+    "annulus": 122,
+    "small": 92
+   },
+   "kgon_orbits_range": [
+    0,
+    312
+   ]
+  },
+  {
+   "cnf": "n15k6m3.cnf",
+   "mode": "c3",
+   "N": 15,
+   "K": 6,
+   "samples": 200,
+   "tries": 203,
+   "map_conflicts": 0,
+   "mismatches": 0,
+   "kgon_free_samples": 0,
+   "dists": {
+    "box": 56,
+    "cluster": 50,
+    "annulus": 52,
+    "small": 42
+   },
+   "kgon_orbits_range": [
+    4,
+    1134
+   ]
+  },
+  {
+   "cnf": "n18k6m3.cnf",
+   "mode": "c3",
+   "N": 18,
+   "K": 6,
+   "samples": 100,
+   "tries": 101,
+   "map_conflicts": 0,
+   "mismatches": 0,
+   "kgon_free_samples": 0,
+   "dists": {
+    "box": 20,
+    "cluster": 20,
+    "annulus": 32,
+    "small": 28
+   },
+   "kgon_orbits_range": [
+    59,
+    2583
+   ]
+  },
+  {
+   "cnf": "n9k5d3.cnf",
+   "mode": "d3",
+   "N": 9,
+   "K": 5,
+   "samples": 200,
+   "tries": 202,
+   "map_conflicts": 0,
+   "mismatches": 0,
+   "kgon_free_samples": 0,
+   "dists": {
+    "box": 62,
+    "cluster": 54,
+    "annulus": 38,
+    "small": 46
+   },
+   "kgon_orbits_range": [
+    2,
+    24
+   ]
+  },
+  {
+   "cnf": "n9k6d3.cnf",
+   "mode": "d3",
+   "N": 9,
+   "K": 6,
+   "samples": 200,
+   "tries": 202,
+   "map_conflicts": 0,
+   "mismatches": 0,
+   "kgon_free_samples": 0,
+   "dists": {
+    "box": 62,
+    "cluster": 54,
+    "annulus": 38,
+    "small": 46
+   },
+   "kgon_orbits_range": [
+    1,
+    17
+   ]
+  },
+  {
+   "cnf": "n15k6d3.cnf",
+   "mode": "d3",
+   "N": 15,
+   "K": 6,
+   "samples": 200,
+   "tries": 210,
+   "map_conflicts": 0,
+   "mismatches": 0,
+   "kgon_free_samples": 0,
+   "dists": {
+    "box": 47,
+    "cluster": 51,
+    "annulus": 54,
+    "small": 48
+   },
+   "kgon_orbits_range": [
+    6,
+    855
+   ]
+  },
+  {
+   "cnf": "n21k7d3.cnf",
+   "mode": "d3",
+   "N": 21,
+   "K": 7,
+   "samples": 200,
+   "tries": 214,
+   "map_conflicts": 0,
+   "mismatches": 0,
+   "kgon_free_samples": 8,
+   "dists": {
+    "box": 49,
+    "cluster": 62,
+    "annulus": 46,
+    "small": 43
+   },
+   "kgon_orbits_range": [
+    0,
+    16465
+   ]
+  },
+  {
+   "cnf": "n27k7d3.cnf",
+   "mode": "d3",
+   "N": 27,
+   "K": 7,
+   "samples": 100,
+   "tries": 114,
+   "map_conflicts": 0,
+   "mismatches": 0,
+   "kgon_free_samples": 0,
+   "dists": {
+    "box": 25,
+    "cluster": 32,
+    "annulus": 24,
+    "small": 19
+   },
+   "kgon_orbits_range": [
+    151,
+    59649
+   ]
+  },
+  {
+   "cnf": "n21k7m3refl.cnf",
+   "mode": "d3c3",
+   "N": 21,
+   "K": 7,
+   "samples": 100,
+   "tries": 106,
+   "map_conflicts": 0,
+   "mismatches": 0,
+   "kgon_free_samples": 2,
+   "dists": {
+    "box": 41,
+    "cluster": 16,
+    "annulus": 17,
+    "small": 26
+   },
+   "kgon_orbits_range": [
+    0,
+    19346
+   ]
+  },
+  {
+   "cnf": "n15k6m3refl.cnf",
+   "mode": "d3c3",
+   "N": 15,
+   "K": 6,
+   "samples": 100,
+   "tries": 101,
+   "map_conflicts": 0,
+   "mismatches": 0,
+   "kgon_free_samples": 0,
+   "dists": {
+    "box": 34,
+    "cluster": 27,
+    "annulus": 20,
+    "small": 19
+   },
+   "kgon_orbits_range": [
+    6,
+    1675
+   ]
+  },
+  {
+   "cnf": "n9k5m3refl.cnf",
+   "mode": "d3c3",
+   "N": 9,
+   "K": 5,
+   "samples": 100,
+   "tries": 101,
+   "map_conflicts": 0,
+   "mismatches": 0,
+   "kgon_free_samples": 0,
+   "dists": {
+    "box": 28,
+    "cluster": 27,
+    "annulus": 19,
+    "small": 26
+   },
+   "kgon_orbits_range": [
+    3,
+    42
+   ]
+  },
+  {
+   "cnf": "n21k6m3refl.cnf",
+   "mode": "d3c3",
+   "N": 21,
+   "K": 6,
+   "samples": 100,
+   "tries": 106,
+   "map_conflicts": 0,
+   "mismatches": 0,
+   "kgon_free_samples": 0,
+   "dists": {
+    "box": 41,
+    "cluster": 16,
+    "annulus": 17,
+    "small": 26
+   },
+   "kgon_orbits_range": [
+    305,
+    11594
+   ]
+  }
+ ],
+ "c3refl_small_agreement": [
+  {
+   "c3refl": "n21k7m3refl",
+   "c3refl_result": "s SATISFIABLE",
+   "d3cnf_result": "s SATISFIABLE",
+   "validation": "mismatches 0 map_conflicts 0 kfree 2 samples 100"
+  },
+  {
+   "c3refl": "n21k6m3refl",
+   "c3refl_result": "s UNSATISFIABLE",
+   "d3cnf_result": "s UNSATISFIABLE",
+   "validation": "mismatches 0 map_conflicts 0 kfree 0 samples 100"
+  },
+  {
+   "c3refl": "n15k6m3refl",
+   "c3refl_result": "s UNSATISFIABLE",
+   "d3cnf_result": "s UNSATISFIABLE",
+   "validation": "mismatches 0 map_conflicts 0 kfree 0 samples 100"
+  },
+  {
+   "c3refl": "n9k5m3refl",
+   "c3refl_result": "s UNSATISFIABLE",
+   "d3cnf_result": "s UNSATISFIABLE",
+   "validation": "mismatches 0 map_conflicts 0 kfree 0 samples 100"
+  }
+ ],
+ "realizable_set_checks": [
+  {
+   "cnf": "n27k7d3.cnf",
+   "points": 27,
+   "map_conflicts": 0,
+   "cnfeval": {
+    "sample": "0",
+    "assigned": "562",
+    "missing": "0",
+    "xonly_violated": "0",
+    "true_level4": "1668",
+    "true_level5": "2057",
+    "true_level6": "894",
+    "kfalse": "0",
+    "other_false": "0",
+    "sat": "1"
+   },
+   "geomcount": {
+    "collinear": "0",
+    "maxconv": "6",
+    "orbits4": "1668",
+    "orbits5": "2057",
+    "orbits6": "894",
+    "orbits7": "0",
+    "subsets4": "9774",
+    "subsets5": "12288",
+    "subsets6": "5016",
+    "subsets7": "0"
+   }
+  }
+ ],
+ "labelled_model_counts": [
+  "n8k5m2 ENUM models=8 status=EXHAUSTED time=0.00",
+  "n16k6m4 ENUM models=528 status=EXHAUSTED time=21.84",
+  "n16k6m5c ENUM models=2796 status=EXHAUSTED time=29.25"
+ ],
+ "whole_cnf_solves": {
+  "lrat_n33k7d3.log": {
+   "sha256": "72ebbae027ac5e9264bfe00da8003774049875e1fecc94f60d4baf97af13fa01",
+   "solver_result": "s UNSATISFIABLE",
+   "proof_bytes": 170827636,
+   "lrat_check": "c VERIFIED",
+   "lrat_check_exit": 0
+  },
+  "lrat_n33k7m3refl.log": {
+   "sha256": "cc329387c2c075670c9832b2969b9706c3b556cb25b9177f24f71497c2d9a781",
+   "solver_result": "s UNSATISFIABLE",
+   "proof_bytes": 650241362,
+   "lrat_check": "c VERIFIED",
+   "lrat_check_exit": 0
+  },
+  "solve_n33k7m3refl.log": {
+   "sha256": "cc329387c2c075670c9832b2969b9706c3b556cb25b9177f24f71497c2d9a781",
+   "solver_result": "s UNSATISFIABLE",
+   "proof_bytes": null,
+   "lrat_check": null,
+   "lrat_check_exit": null
+  }
+ },
+ "mutation_tests": [
+  {
+   "cnf": "n15k6m3",
+   "mutation": "defdrop",
+   "samples": 300,
+   "mismatches": 0,
+   "map_conflicts": 0,
+   "detected": false
+  },
+  {
+   "cnf": "n15k6m3",
+   "mutation": "dropk",
+   "samples": 300,
+   "mismatches": 118,
+   "map_conflicts": 0,
+   "detected": true
+  },
+  {
+   "cnf": "n15k6m3",
+   "mutation": "sbflip",
+   "samples": 300,
+   "mismatches": 300,
+   "map_conflicts": 0,
+   "detected": true
+  },
+  {
+   "cnf": "n15k6m3",
+   "mutation": "topdefdrop",
+   "samples": 300,
+   "mismatches": 118,
+   "map_conflicts": 0,
+   "detected": true
+  },
+  {
+   "cnf": "n15k6m3",
+   "mutation": "unitflip",
+   "samples": 300,
+   "mismatches": 300,
+   "map_conflicts": 0,
+   "detected": true
+  },
+  {
+   "cnf": "n21k7d3",
+   "mutation": "defdrop",
+   "samples": 60,
+   "mismatches": 0,
+   "map_conflicts": 0,
+   "detected": false
+  },
+  {
+   "cnf": "n21k7d3",
+   "mutation": "dropk",
+   "samples": 60,
+   "mismatches": 0,
+   "map_conflicts": 0,
+   "detected": false
+  },
+  {
+   "cnf": "n21k7d3",
+   "mutation": "sbflip",
+   "samples": 60,
+   "mismatches": 60,
+   "map_conflicts": 0,
+   "detected": true
+  },
+  {
+   "cnf": "n21k7d3",
+   "mutation": "unitflip",
+   "samples": 60,
+   "mismatches": 60,
+   "map_conflicts": 0,
+   "detected": true
+  },
+  {
+   "cnf": "n9k6d3",
+   "mutation": "defdrop",
+   "samples": 300,
+   "mismatches": 0,
+   "map_conflicts": 0,
+   "detected": false
+  },
+  {
+   "cnf": "n9k6d3",
+   "mutation": "dropk",
+   "samples": 300,
+   "mismatches": 94,
+   "map_conflicts": 0,
+   "detected": true
+  },
+  {
+   "cnf": "n9k6d3",
+   "mutation": "sbflip",
+   "samples": 300,
+   "mismatches": 300,
+   "map_conflicts": 0,
+   "detected": true
+  },
+  {
+   "cnf": "n9k6d3",
+   "mutation": "topdefdrop",
+   "samples": 300,
+   "mismatches": 94,
+   "map_conflicts": 0,
+   "detected": true
+  },
+  {
+   "cnf": "n9k6d3",
+   "mutation": "unitflip",
+   "samples": 300,
+   "mismatches": 300,
+   "map_conflicts": 0,
+   "detected": true
+  }
+ ],
+ "anneal_controls": [
+  {
+   "N": 15,
+   "K": 6,
+   "mode": "c3",
+   "iters": 4000,
+   "best": [
+    4,
+    1,
+    1,
+    1,
+    1,
+    3
+   ],
+   "free_set": null
+  },
+  {
+   "N": 27,
+   "K": 7,
+   "mode": "d3",
+   "iters": 2000,
+   "best": [
+    0
+   ],
+   "free_set": "found (see log)"
+  }
+ ],
+ "runs": {
+  "c3_n33k7": {
+   "progress_records": 3,
+   "first": {
+    "tag": "start",
+    "t": 0.1,
+    "open": 1,
+    "running": 0,
+    "closed": 0,
+    "jobs": 0,
+    "splits": 0,
+    "retries": 0,
+    "closed_weight_exact": "0/1",
+    "closed_weight_dec": "0.000000000000000000000000000000",
+    "open_weight_dec": "1.000000000000000000000000000000",
+    "weights_sum_to_one": true,
+    "open_depth_hist": {
+     "0": 1
+    },
+    "closed_depth_hist": {},
+    "min_open_depth": 0,
+    "max_open_depth": 0,
+    "solve_hours_total": 0.0,
+    "sat": false
+   },
+   "last": {
+    "tag": "start",
+    "t": 577.8,
+    "open": 13,
+    "running": 0,
+    "closed": 0,
+    "jobs": 12,
+    "splits": 12,
+    "retries": 0,
+    "closed_weight_exact": "0/1",
+    "closed_weight_dec": "0.000000000000000000000000000000",
+    "open_weight_dec": "1.000000000000000000000000000000",
+    "weights_sum_to_one": true,
+    "open_depth_hist": {
+     "3": 3,
+     "4": 10
+    },
+    "closed_depth_hist": {},
+    "min_open_depth": 3,
+    "max_open_depth": 4,
+    "solve_hours_total": 0.389,
+    "sat": false
+   },
+   "verify_tree": null,
+   "lrat_spot_checks": [],
+   "events_sat": [],
+   "model_checks": [],
+   "lrat_verified": 0,
+   "lrat_attempted": 0
+  },
+  "d3_n33k7": {
+   "progress_records": 2,
+   "first": {
+    "tag": "start",
+    "t": 0.0,
+    "open": 1,
+    "running": 0,
+    "closed": 0,
+    "jobs": 0,
+    "splits": 0,
+    "retries": 0,
+    "closed_weight_exact": "0/1",
+    "closed_weight_dec": "0.000000000000000000000000000000",
+    "open_weight_dec": "1.000000000000000000000000000000",
+    "weights_sum_to_one": true,
+    "open_depth_hist": {
+     "0": 1
+    },
+    "closed_depth_hist": {},
+    "min_open_depth": 0,
+    "max_open_depth": 0,
+    "solve_hours_total": 0.0,
+    "sat": false
+   },
+   "last": {
+    "tag": "final",
+    "t": 204.6,
+    "open": 0,
+    "running": 0,
+    "closed": 1,
+    "jobs": 1,
+    "splits": 0,
+    "retries": 0,
+    "closed_weight_exact": "1/1",
+    "closed_weight_dec": "1.000000000000000000000000000000",
+    "open_weight_dec": "0.000000000000000000000000000000",
+    "weights_sum_to_one": true,
+    "open_depth_hist": {},
+    "closed_depth_hist": {
+     "0": 1
+    },
+    "min_open_depth": null,
+    "max_open_depth": null,
+    "solve_hours_total": 0.05,
+    "sat": false
+   },
+   "verify_tree": {
+    "closed_leaves": 1,
+    "open_leaves": 0,
+    "internal_nodes": 0,
+    "max_depth": 0,
+    "weights_sum_to_one": true,
+    "closed_weight": "1/1",
+    "closed_weight_float": 1.0,
+    "errors": [],
+    "n_errors": 0,
+    "partition_ok": true
+   },
+   "lrat_spot_checks": [],
+   "events_sat": [],
+   "model_checks": [],
+   "lrat_verified": 0,
+   "lrat_attempted": 0
+  },
+  "test_n18": {
+   "progress_records": 6,
+   "first": {
+    "tag": "start",
+    "t": 0.0,
+    "open": 1,
+    "running": 0,
+    "closed": 0,
+    "jobs": 0,
+    "splits": 0,
+    "retries": 0,
+    "closed_weight_exact": "0/1",
+    "closed_weight_dec": "0.000000000000000000000000000000",
+    "open_weight_dec": "1.000000000000000000000000000000",
+    "weights_sum_to_one": true,
+    "open_depth_hist": {
+     "0": 1
+    },
+    "closed_depth_hist": {},
+    "min_open_depth": 0,
+    "max_open_depth": 0,
+    "solve_hours_total": 0.0,
+    "sat": false
+   },
+   "last": {
+    "tag": "final",
+    "t": 28.1,
+    "open": 0,
+    "running": 0,
+    "closed": 162,
+    "jobs": 323,
+    "splits": 161,
+    "retries": 0,
+    "closed_weight_exact": "1/1",
+    "closed_weight_dec": "1.000000000000000000000000000000",
+    "open_weight_dec": "0.000000000000000000000000000000",
+    "weights_sum_to_one": true,
+    "open_depth_hist": {},
+    "closed_depth_hist": {
+     "5": 2,
+     "6": 20,
+     "7": 40,
+     "8": 62,
+     "9": 34,
+     "10": 4
+    },
+    "min_open_depth": null,
+    "max_open_depth": null,
+    "solve_hours_total": 0.011,
+    "sat": false
+   },
+   "verify_tree": null,
+   "lrat_spot_checks": [
+    {
+     "cube": [
+      -284,
+      -324,
+      -283,
+      -91,
+      -183,
+      269,
+      58
+     ],
+     "depth": 7,
+     "incremental_solve_ms": 0,
+     "solve_status": "s UNSATISFIABLE",
+     "solve_s": 0.2,
+     "proof_bytes": 144483,
+     "check": [
+      "c parsed a formula with 4203 variables and 335655 clauses",
+      "c VERIFIED",
+      "c verification time = 0.56 secs",
+      "exit=0"
+     ],
+     "check_s": 0.6,
+     "lrat_verified": true
+    },
+    {
+     "cube": [
+      -284,
+      324,
+      201,
+      275,
+      313,
+      -127,
+      219,
+      94,
+      122
+     ],
+     "depth": 9,
+     "incremental_solve_ms": 140,
+     "solve_status": "s UNSATISFIABLE",
+     "solve_s": 1.5,
+     "proof_bytes": 5677101,
+     "check": [
+      "c parsed a formula with 4203 variables and 335657 clauses",
+      "c VERIFIED",
+      "c verification time = 0.90 secs",
+      "exit=0"
+     ],
+     "check_s": 0.9,
+     "lrat_verified": true
+    },
+    {
+     "cube": [
+      284,
+      -219,
+      109,
+      -13,
+      8,
+      87
+     ],
+     "depth": 6,
+     "incremental_solve_ms": 9,
+     "solve_status": "s UNSATISFIABLE",
+     "solve_s": 0.4,
+     "proof_bytes": 247338,
+     "check": [
+      "c parsed a formula with 4203 variables and 335654 clauses",
+      "c VERIFIED",
+      "c verification time = 0.43 secs",
+      "exit=0"
+     ],
+     "check_s": 0.4,
+     "lrat_verified": true
+    }
+   ],
+   "events_sat": [],
+   "model_checks": [],
+   "lrat_verified": 3,
+   "lrat_attempted": 3
+  }
+ }
+}
