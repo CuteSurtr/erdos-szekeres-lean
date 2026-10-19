@@ -463,6 +463,27 @@
    ]
   },
   {
+   "cnf": "n33k7d3direct.cnf",
+   "mode": "d3",
+   "N": 33,
+   "K": 7,
+   "samples": 60,
+   "tries": 67,
+   "map_conflicts": 0,
+   "mismatches": 0,
+   "kgon_free_samples": 0,
+   "dists": {
+    "box": 18,
+    "cluster": 18,
+    "annulus": 18,
+    "small": 6
+   },
+   "kgon_orbits_range": [
+    1051,
+    176685
+   ]
+  },
+  {
    "cnf": "n33k7m3.cnf",
    "mode": "c3",
    "N": 33,
@@ -869,6 +890,13 @@
    "lrat_check": "c VERIFIED",
    "lrat_check_exit": 0
   },
+  "lrat_n33k7d3direct.log": {
+   "sha256": "7796d999b0dd39d9ea05ffd7da86da42dba25c771c699d21c052c5cc57cad95e",
+   "solver_result": "s UNSATISFIABLE",
+   "proof_bytes": 152917351,
+   "lrat_check": "c VERIFIED",
+   "lrat_check_exit": 0
+  },
   "lrat_n33k7m3refl.log": {
    "sha256": "cc329387c2c075670c9832b2969b9706c3b556cb25b9177f24f71497c2d9a781",
    "solver_result": "s UNSATISFIABLE",
@@ -1023,6 +1051,18 @@
     0
    ],
    "free_set": "found (see log)"
+  },
+  {
+   "N": 33,
+   "K": 7,
+   "mode": "d3",
+   "iters": 2500,
+   "best": [
+    24,
+    186,
+    27
+   ],
+   "free_set": null
   }
  ],
  "runs": {

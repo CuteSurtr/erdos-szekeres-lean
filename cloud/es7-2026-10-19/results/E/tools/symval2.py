@@ -195,7 +195,8 @@ def main():
     for r, e in zip(rows, evrows):
         g = r["geom"]
         ok = int(g["collinear"]) == 0 and int(e["xonly_violated"]) == 0 and int(e["missing"]) == 0
-        for lev in range(4, K):
+        top = K if info.get("kgon", "layered") == "layered" else 5   # direct: only conv_4 flags
+        for lev in range(4, top):
             ok &= int(e.get(f"true_level{lev}", 0)) == int(g[f"orbits{lev}"])
         ok &= int(e["kfalse"]) == int(g[f"orbits{K}"])
         ok &= int(e["sat"]) == (1 if int(g[f"orbits{K}"]) == 0 else 0)

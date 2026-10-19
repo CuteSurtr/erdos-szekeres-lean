@@ -21,6 +21,7 @@ Nothing in this directory is a theorem. "UNSAT" below always means "UNSAT of one
 |---|---|---|
 | D3, 33 = 5×6 + 3, mirror axes through the 3-orbit, K = 7 (`d3cnf.py`) | `n33k7d3` 72ebbae0 | **UNSAT, LRAT-checked** (lrat-check: `c VERIFIED`). Closed at the root cube in about 180 s wall. |
 | The same D3 class built a second way: 3-fold CNF plus 1,970 reflection clauses (`c3refl.py`) | `n33k7m3refl` cc329387 | **UNSAT, LRAT-checked** (`c VERIFIED`). The plain solve took 26.9 s CPU; the LRAT solve took 28.1 s CPU and wrote a 650 MB proof. |
+| The same D3 class with the direct K-gon encoding: each 7-set clause over its 35 conv₄ flags, no conv₅/conv₆ layer (`d3cnf.py --kgon direct`) | `n33k7d3direct` 7796d999 | **UNSAT, LRAT-checked** (15.9 s CPU, 153 MB proof, `c VERIFIED`). |
 | 3-fold, 33 = 11 orbits of 3, auxiliary centre, K = 7 (`symcnf.py 33 7 3`) | `n33k7m3` 4c214b4c | **Open.** Still running when this was committed. A later commit updates this row. |
 
 No model was found, so there is no candidate configuration and nothing to realize.
@@ -176,15 +177,22 @@ orbits of 6 plus 1 orbit of 3 on the mirror axes.
   chi(Sa,Sb,Sc) = −chi(a,b,c), is also UNSAT (`logs/solve_n33k7m3refl.log`). That
   construction shares only the label rule with `d3cnf.py`. On 21, 15 and 9 points the two
   constructions agree (`logs/c3refl_small.jsonl`). The LRAT proof of the cross-check CNF also passed lrat-check (`logs/lrat_n33k7m3refl.log`).
+- **Third construction.** `d3cnf.py --kgon direct` writes each 7-set clause over the 35
+  conv₄ flags of its 4-subsets, with no conv₅/conv₆ layer. It also passed the exact
+  validation (60 samples, 0 mismatches, `logs/val_n33k7d3direct_d3.json`), and it is UNSAT
+  with an LRAT proof that lrat-check verified (`logs/lrat_n33k7d3direct.log`).
 - **Annealing.** Exact annealing over real D3 33-point sets
-  (`logs/anneal_n33k7d3.json`): still running when this was committed.
+  (`logs/anneal_n33k7d3.json`, 3 restarts × 2,500 steps) got no lower than 24
+  convex-heptagon orbits. That is consistent with UNSAT. On 27 points the same annealer
+  found heptagon-free D3 sets at once.
 
 **What this does and does not show.** It is LRAT-checked UNSAT of `n33k7d3.cnf`. Read
-through the encoding, it says no D3-symmetric 33-element CC-system (acyclic uniform rank-3
-oriented matroid) of this type is free of convex 7-gons, so no such real point set is
-either. That reading is only as good as the encoding. The encoding is tested
+through the encoding, it says no CC-system (acyclic uniform rank-3 oriented matroid) on the 33
+points plus the auxiliary centre, with this D3 symmetry and labelling, is free of convex
+7-gons. Hence no real 33-point set in general position with exact D3 symmetry is free of
+them either. That reading is only as good as the encoding. The encoding is tested
 (controls, exact random D3 sets, a realizable 27-point positive control, mutation tests,
-and agreement with an independently built CNF), but it is **not formally verified**. So
+and agreement with two other constructions of the same instance), but it is **not formally verified**. So
 this is not a theorem.
 
 ## Files
