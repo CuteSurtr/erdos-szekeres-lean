@@ -21,6 +21,8 @@ ap.add_argument("--base", type=int, default=20000); ap.add_argument("--grow", ty
 ap.add_argument("--maxcand", type=int, default=0); ap.add_argument("--hours", type=float, default=1e9)
 ap.add_argument("--log-every", type=float, default=1800.0)
 ap.add_argument("--worker", required=True, help="path to the cncw binary")
+ap.add_argument("--resume", action="store_true", help="continue from outdir/state.json")
+ap.add_argument("--reset-limits", action="store_true", help="on resume, give every open cube the --base limit")
 a = ap.parse_args()
 out = Path(a.outdir); out.mkdir(parents=True, exist_ok=True)
 worker_bin = a.worker
@@ -33,8 +35,24 @@ closed_f = open(out / "closed.txt", "a")
 def push(cube, limit):
     i = nid[0]; nid[0] += 1; open_set[i] = (cube, limit)
     heapq.heappush(heap, (len(cube), i))
-push([], a.base)
 log = open(out / "cnc.log", "a")
+if a.resume and (out / "state.json").exists():
+    # Resume from the last checkpoint: its open cubes (including cubes that were in flight) plus
+    # its closed weight.  Work done after the checkpoint is redone, so closed.txt may list a
+    # cube twice; the weights stay exact.  --reset-limits gives every open cube the new base.
+    old = json.loads((out / "state.json").read_text())
+    for k in ("closed", "splits", "failed_lit_splits", "jobs", "started"):
+        st[k] = old[k]
+    st["closed_weight"] = Fraction(old["closed_weight"])
+    lat = json.loads((out / "latest.json").read_text())
+    closed_by_depth.update({int(k): v for k, v in lat.get("closed_by_depth", {}).items()})
+    for c, l in old["open"]:
+        push(c, a.base if a.reset_limits else l)
+    log.write(json.dumps({"event": "resume", "wall": time.strftime("%H:%M:%S"), "open": len(open_set),
+                          "base": a.base, "grow": a.grow, "nworkers": a.nworkers, "reset_limits": a.reset_limits}) + "\n")
+    log.flush()
+else:
+    push([], a.base)
 def snapshot(event="progress", to_log=True):
     depths = [len(c) for c, _ in open_set.values()]
     hist = {}
@@ -72,6 +90,10 @@ def worker(w):
         p.stdin.write(f"{i} {limit} {' '.join(map(str, cube))} 0\n"); p.stdin.flush()
         r = p.stdout.readline().split()
         dt = time.time() - t0
+        if not r:  # worker died: put the cube back and end this thread
+            with lock:
+                st["busy"] -= 1; heapq.heappush(heap, (len(cube), i))
+            break
         with lock:
             st["jobs"] += 1; st["busy"] -= 1
             del open_set[i]
@@ -97,7 +119,7 @@ threads = [threading.Thread(target=worker, args=(w,), daemon=True) for w in rang
 for t in threads: t.start()
 with lock: snapshot("start")
 last_log = time.time(); last_ckpt = time.time()
-deadline = st["started"] + a.hours * 3600
+deadline = time.time() + a.hours * 3600
 while any(t.is_alive() for t in threads):
     time.sleep(2)
     now = time.time()

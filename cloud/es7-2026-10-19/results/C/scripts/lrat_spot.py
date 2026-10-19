@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """LRAT spot checks of closed cubes from a cnc2 run.
 
-usage: lrat_spot.py <cnf> <closed.txt> <bindir> <workdir> <count> [timeout_s=900] [seed=1]
+usage: lrat_spot.py <cnf> <closed.txt> <bindir> <workdir> <count> [timeout_s=900] [seed=1] [min_cnc_seconds=0]
 
 For each sampled closed cube: write <cnf> + the cube as unit clauses, solve it from scratch with
 `cadical --lrat --binary=false` (time limit), and check the proof with drat-trim's `lrat-check`
@@ -12,11 +12,12 @@ import sys, os, random, subprocess, time, json
 cnf, closed, bindir, wd, count = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], int(sys.argv[5])
 tlim = int(sys.argv[6]) if len(sys.argv) > 6 else 900
 seed = int(sys.argv[7]) if len(sys.argv) > 7 else 1
+min_dt = float(sys.argv[8]) if len(sys.argv) > 8 else 0.0   # sample only cubes whose cnc solve took >= this
 os.makedirs(wd, exist_ok=True)
 cubes = []
 for line in open(closed):
     t = line.split()
-    if t: cubes.append((float(t[0]), [int(x) for x in t[1:-1]]))
+    if t and float(t[0]) >= min_dt: cubes.append((float(t[0]), [int(x) for x in t[1:-1]]))
 random.Random(seed).shuffle(cubes)
 cubes = cubes[:count]
 head, body = None, []

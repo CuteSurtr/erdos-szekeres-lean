@@ -289,7 +289,7 @@ static int mode_anneal(int K, int P, int A, long iters, double T0, double T1, ui
         u64 E = count_k(K), bestE = E;
         ll BX[MAXN], BY[MAXN]; memcpy(BX, X, sizeof X); memcpy(BY, Y, sizeof Y);
         long acc = 0, gprej = 0, it;
-        int pairs_dirty = 1; long nscans = 0; u64 scan_min = ~0ULL;
+        int pairs_dirty = 1; long nscans = 0, last_scan_it = -100000; u64 scan_min = ~0ULL;
         for (it = 0; it < iters && bestE > 0; it++) {
             double T = T0 * pow(T1 / T0, (double)it / (double)iters);
             int pick = (int)(rnd() % (uint64_t)(P + A));
@@ -321,20 +321,32 @@ static int mode_anneal(int K, int P, int A, long iters, double T0, double T1, ui
             double dE = log1p((double)E2) - log1p((double)E);
             if (E2 <= E || urand() < exp(-dE / T)) {
                 E = E2; acc++;
-                if (E < bestE) { bestE = E; memcpy(BX, X, sizeof X); memcpy(BY, Y, sizeof Y); }
-                /* A = 1: are the pair points alone K-gon free? then axis-scan them exactly */
+                if (E < bestE) {
+                    bestE = E; memcpy(BX, X, sizeof X); memcpy(BY, Y, sizeof Y);
+                    if (bestE <= 3) {   /* keep low-energy states even if the run is cut off */
+                        char tg[128]; snprintf(tg, sizeof tg, "K%d_P%d_A%d_seed%llu_run%d_it%ld_E%llu", K, P, A, (unsigned long long)seed, run, it, bestE);
+                        write_points(fbest, "a", tg);
+                    }
+                }
+                /* A = 1: are the pair points alone K-gon free? then axis-scan them exactly
+                 * (at most once per 3000 iterations; only new per-run minima are logged) */
                 if (pick < P) pairs_dirty = 1;
-                if (A == 1 && E <= 64 && pairs_dirty) {
+                if (A == 1 && E <= 64 && pairs_dirty && it - last_scan_it >= 3000) {
                     int n1 = N, c = 2 * P; ll sx = X[c], sy = Y[c];
                     N = 2 * P; build_rank_int();
                     u64 E32 = count_k(K);
                     if (E32 == 0) {
                         int nint; rat bt; u64 zc;
                         u64 m = axis_scan(K, &nint, &bt, &zc);
-                        nscans++; if (m < scan_min) scan_min = m;
-                        FILE *f = fopen(fscan, "a");
-                        fprintf(f, "run=%d it=%ld E33=%llu pairs_free=1 intervals=%d min_axis_E=%llu zero_intervals=%llu t=", run, it, E, nint, m, zc);
-                        print_i128(f, bt.n); fprintf(f, "/"); print_i128(f, bt.d); fprintf(f, "\n"); fclose(f);
+                        nscans++; last_scan_it = it;
+                        if (m < scan_min) {
+                            scan_min = m;
+                            FILE *f = fopen(fscan, "a");
+                            fprintf(f, "run=%d it=%ld E33=%llu pairs_free=1 intervals=%d min_axis_E=%llu zero_intervals=%llu t=", run, it, E, nint, m, zc);
+                            print_i128(f, bt.n); fprintf(f, "/"); print_i128(f, bt.d); fprintf(f, "\n"); fclose(f);
+                            char tg[128]; snprintf(tg, sizeof tg, "PAIRS_seed%llu_run%d_it%ld_axismin%llu", (unsigned long long)seed, run, it, m);
+                            write_points(fbest, "a", tg);
+                        }
                         if (m == 0) write_points(fzero, "a", "AXIS_ZERO_BASE");
                     }
                     pairs_dirty = 0;
@@ -423,6 +435,63 @@ int main(int argc, char **argv) {
             printf("N=%d", N); for (int k = 3; k <= K; k++) printf(" c%d=%llu", k, c[k]); printf(" maxconvex=%d\n", best);
             fflush(stdout);
         }
+        return 0;
+    }
+    if (argc >= 8 && !strcmp(argv[1], "axiswalk")) {
+        /* axiswalk K iters T seed init out: walk on the plateau of K-gon-free mirror sets with no
+         * axis point (init = one line "tag n x y ..." in internal order, n even), minimising the
+         * exact axis-scan minimum m = min_t #K-gons of set + (0,t).  A move relocates one
+         * representative (and its mirror); it is kept only if the set stays K-gon free, and then
+         * accepted if m does not increase or with probability exp(-(log1p m' - log1p m)/T). */
+        int K = atoi(argv[2]); long iters = atol(argv[3]); double T = atof(argv[4]);
+        uint64_t seed = (uint64_t)atoll(argv[5]); const char *init = argv[6], *outp = argv[7];
+        seed_rng(seed);
+        FILE *f = fopen(init, "r"); if (!f) { perror(init); return 2; }
+        char tag[256]; int n;
+        if (fscanf(f, "%255s %d", tag, &n) != 2) return 2;
+        N = n; P_ = n / 2; A_ = 0;
+        for (int i = 0; i < N; i++) if (fscanf(f, "%lld %lld", &X[i], &Y[i]) != 2) return 2;
+        fclose(f);
+        if (!is_mirror_symmetric() || !general_position_all()) { fprintf(stderr, "bad init\n"); return 2; }
+        build_orients(); build_rank_int();
+        if (count_k(K) != 0) { fprintf(stderr, "init not K-gon free\n"); return 2; }
+        int nint; rat bt; u64 zc;
+        u64 cur = axis_scan(K, &nint, &bt, &zc), best = cur;
+        long scans = 1, kept_free = 0, acc = 0;
+        clock_t t0 = clock();
+        char fb[512]; snprintf(fb, sizeof fb, "%s.walkbest", outp);
+        printf("start m=%llu\n", cur); fflush(stdout);
+        for (long it = 0; it < iters && best > 0; it++) {
+            int r = (int)(rnd() % (uint64_t)P_);
+            ll ox = X[2 * r], oy = Y[2 * r], nx, ny;
+            double smax = log2_extent() + 1.0, u = urand();
+            if (u < 0.7) { double sm = smax * urand(); nx = ox + scaled(sm); ny = oy + scaled(sm); }
+            else if (u < 0.9) { if (rnd() & 1) { nx = ox + scaled(smax); ny = oy; } else { nx = ox; ny = oy + scaled(smax); } }
+            else { int j = (int)(rnd() % (uint64_t)N); nx = llabs(X[j]) + scaled(smax * 0.5); ny = Y[j] + scaled(smax * 0.5); }
+            if (nx < 0) nx = -nx;
+            if (nx == 0) continue;
+            int mv[2] = {2 * r, 2 * r + 1};
+            place_rep(r, nx, ny);
+            if (!gp_moved(mv, 2)) { place_rep(r, ox, oy); continue; }
+            set_point_orients(mv[0]); set_point_orients(mv[1]); build_rank_int();
+            if (count_k(K) != 0) { place_rep(r, ox, oy); set_point_orients(mv[0]); set_point_orients(mv[1]); build_rank_int(); continue; }
+            kept_free++;
+            u64 m = axis_scan(K, &nint, &bt, &zc); scans++;
+            double d = log1p((double)m) - log1p((double)cur);
+            if (m <= cur || urand() < exp(-d / T)) {
+                cur = m; acc++;
+                if (m < best) {
+                    best = m;
+                    char tg[128]; snprintf(tg, sizeof tg, "axiswalk_K%d_seed%llu_it%ld_m%llu", K, (unsigned long long)seed, it, m);
+                    write_points(fb, "a", tg);
+                    printf("it=%ld new_best_m=%llu zero_intervals=%llu scans=%ld cpu=%.1fs\n", it, m, zc, scans,
+                           (double)(clock() - t0) / CLOCKS_PER_SEC); fflush(stdout);
+                    if (m == 0) { char fz[512]; snprintf(fz, sizeof fz, "%s.zero", outp); write_points(fz, "a", tg); }
+                }
+            } else { place_rep(r, ox, oy); set_point_orients(mv[0]); set_point_orients(mv[1]); build_rank_int(); }
+        }
+        printf("end best_m=%llu cur_m=%llu scans=%ld free_moves=%ld accepted=%ld cpu=%.1fs\n", best, cur, scans, kept_free, acc,
+               (double)(clock() - t0) / CLOCKS_PER_SEC);
         return 0;
     }
     if (argc >= 11 && !strcmp(argv[1], "anneal"))
