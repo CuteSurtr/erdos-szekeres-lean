@@ -113,8 +113,9 @@ if W:
         "min_heptagons_at_33_reached": 0 if sum(r["m0"] for r in W) else 1,
         "m1_faces_walk_states": dist([r["m1"] for r in allvis]),
         "m1_faces_walk_states_hist": hist([r["m1"] for r in allvis], EDGES_M1),
-        "m1_faces_random_walkers": dist([r["m1"] for r in allvis if per[r["w"]]["strategy"] == "random"]),
-        "m1_faces_greedy_walkers": dist([r["m1"] for r in allvis if per[r["w"]]["strategy"] == "greedy"]),
+        "m1_faces_random_walkers_nearfull_seeds": dist([r["m1"] for r in allvis if per[r["w"]]["strategy"] == "random" and r["w"] < 6]),
+        "m1_faces_greedy_walkers_nearfull_seeds": dist([r["m1"] for r in allvis if per[r["w"]]["strategy"] == "greedy"]),
+        "m1_faces_random_walkers_anneal_seeds (w6,w7)": dist([r["m1"] for r in allvis if r["w"] >= 6]),
         "m2_faces_walk_states": dist([r["m2"] for r in allvis]),
         "m1_lattice_realizable_fraction": round(sum(r["pt_ok"] for r in W) / max(1, sum(r["pt_ok"] + r["pt_fail"] for r in W)), 4),
         "states_with_no_lattice_m1_face": sum(1 for r in W if r["pt_ok"] == 0),
@@ -193,8 +194,14 @@ if A:
                           "initial_energy": dist([r["E0"] for r in L])} for f, L in sorted(fams.items())},
         "by_iters": {str(it): dist([r["recount7"] for r in A if r["iters"] == it]) for it in sorted(set(r["iters"] for r in A))},
     }
-    # 50 best distinct order types
-    A.sort(key=lambda r: (r["recount7"], r["cpu"] or 0))
+    # 50 best distinct order types: fewest heptagons, then fewest hexagons
+    emin = min(r["recount7"] for r in A)
+    lowA = [r for r in A if r["recount7"] <= emin + 1]
+    with ThreadPoolExecutor(NPROC) as ex:
+        c6s = list(ex.map(lambda r: dlib.cgon_count(r["pts"], 6)[6], lowA))
+    for r, c6 in zip(lowA, c6s):
+        r["c6"] = c6
+    A.sort(key=lambda r: (r["recount7"], r.get("c6") or 0, r["cpu"] or 0))
     cand = A[:2000]
     sigs = dlib.canon([r["pts"] for r in cand])
     best, seen = [], set()
@@ -223,8 +230,35 @@ if A:
         for v in vb:
             f.write(json.dumps(v) + "\n")
     S["anneal"]["best50"] = {"file": "anneal_best50.jsonl", "energies": [v["heptagons_cgon"] for v in vb],
+                             "hexagon_counts": [v["counts_cgon"]["6"] for v in vb],
                              "exact_py_agrees": all(v["heptagons_cgon"] == v["heptagons_exact_py"] for v in vb),
                              "all_general_position": all(v["general_position_exact"] for v in vb)}
+    # distinct one-heptagon order types found by annealing, and saturation of
+    # the heptagon-free deletions of the best 50 (exhaustive face sweeps)
+    one = [r for r in A if r["recount7"] == 1]
+    S["anneal"]["one_heptagon_runs"] = len(one)
+    if one:
+        sg1 = dlib.canon([r["pts"] for r in one])
+        S["anneal"]["one_heptagon_distinct_order_types"] = len(set(c[1] for c in sg1))
+        S["anneal"]["one_heptagon_distinct_by_family"] = {
+            f: len(set(c[1] for r, c in zip(one, sg1) if r["family"] == f)) for f in sorted(fams)}
+    dl = []
+    for v in vb:
+        if v["heptagons_cgon"] == 1:
+            dl += [(T, lab) for T, lab in walk.seed_deletions([(v["canonm_sha1_16"], v["pts"])])]
+    tmp = os.path.join(RUNS, "tmp_summarize"); os.makedirs(tmp, exist_ok=True)
+
+    def sw2(i):
+        p = os.path.join(tmp, f"a{i}.txt")
+        dlib.write_pts(p, dl[i][0])
+        st = dlib.satcount_sweep(p, 7, "-", 1, 3)
+        os.unlink(p)
+        return st
+    with ThreadPoolExecutor(NPROC) as ex:
+        st2 = list(ex.map(sw2, range(len(dl))))
+    S["anneal"]["best50_deletion_sweeps"] = {
+        "n": len(st2), "m0_total": sum(s["m0"] for s in st2), "all_complete": all(s["complete"] for s in st2),
+        "m1_faces": dist([s["m1"] for s in st2]), "m1_faces_hist": hist([s["m1"] for s in st2], EDGES_M1)}
 
 # ---------- found ----------
 S["found_files"] = sorted(os.path.relpath(f, RUNS) for f in glob.glob(os.path.join(RUNS, "*", "FOUND*")))

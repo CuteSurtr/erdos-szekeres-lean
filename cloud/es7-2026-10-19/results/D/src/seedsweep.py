@@ -21,9 +21,9 @@ def main():
     tmp = os.path.join(outdir, "tmp_seedsweep")
     os.makedirs(tmp, exist_ok=True)
     seedc = {}
-    for lab, P in seeds:
+    for i, (lab, P) in enumerate(seeds):  # labels repeat (all "FULL0"), key by index
         c = dlib.cgon_count(P, 8)
-        seedc[lab] = c
+        seedc[i] = c
     sig33 = dlib.canon([P for _, P in seeds])
     dels = walk.seed_deletions(seeds)
     sigs = dlib.canon([S for S, _ in dels])

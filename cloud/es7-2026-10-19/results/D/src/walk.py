@@ -67,6 +67,7 @@ class Walker:
         self.tmp = os.path.join(outdir, f"tmp_w{wid}")
         os.makedirs(self.tmp, exist_ok=True)
         self.log = open(os.path.join(outdir, f"walk_w{wid}.jsonl"), "a")
+        self.states = open(os.path.join(outdir, f"states_w{wid}.txt"), "a")
         self.found = os.path.join(outdir, f"FOUND_w{wid}.txt")
         self.nsweeps = 0; self.cpu_sweep = 0.0
         self.steps = 0; self.deadends = 0
@@ -125,7 +126,7 @@ class Walker:
             sigs = dlib.canon([T for _, _, T in batch])
             back = []
             for (i, v, T), (c, cm) in zip(batch, sigs):
-                if cm is None:
+                if cm is None or max(max(abs(x), abs(y)) for x, y in T) >= (1 << 29):
                     continue
                 k = h(cm)
                 if k in self.tabu or any(k == r[1] for r in res):
@@ -149,7 +150,24 @@ class Walker:
         st, faces = self.sweep(S)
         self.tabu.add(key)
         self.record(kind, S, st, extra)
+        # every swept (hence saturated) heptagon-free 32-point set: key m0 m1 m2 n x1 y1 ...
+        self.states.write(f"{key} {st['m0']} {st['m1']} {st['m2']} {len(S)} " +
+                          " ".join(f"{x} {y}" for x, y in S) + "\n")
+        self.states.flush()
         return st, faces
+
+    def write_summary(self):
+        ru = resource.getrusage(resource.RUSAGE_CHILDREN)
+        summ = {"w": self.wid, "strategy": self.strategy, "wall": round(time.time() - self.t0, 1),
+                "cpu_process": round(time.process_time(), 1), "cpu_children": round(ru.ru_utime + ru.ru_stime, 1),
+                "sweeps": self.nsweeps,
+                "sweep_cpu": round(self.cpu_sweep, 1), "steps": self.steps, "deadends": self.deadends,
+                "distinct_32_visited": len(self.tabu)}
+        json.dump(summ, open(os.path.join(self.out, f"walk_w{self.wid}_summary.json"), "w"))
+        with open(os.path.join(self.out, f"walk_w{self.wid}_tabu.txt"), "w") as f:
+            for k in sorted(self.tabu):
+                f.write(k + "\n")
+        return summ
 
     def run(self, starts):
         # starts: list of (S32, key, label)
@@ -192,19 +210,12 @@ class Walker:
             _, T, f2 = best
             cur = [T, self.neighbours(T, f2), f2]
             self.history.append(cur)
+            if self.steps % 200 < len(got):
+                self.write_summary()
             if len(self.history) > 4000:
                 # keep memory bounded: drop exhausted states and old ones
                 self.history = [hh for hh in self.history if hh[1]][-3000:]
-        ru = resource.getrusage(resource.RUSAGE_CHILDREN)
-        summ = {"w": self.wid, "strategy": self.strategy, "wall": round(time.time() - self.t0, 1),
-                "cpu_process": round(time.process_time(), 1), "cpu_children": round(ru.ru_utime + ru.ru_stime, 1),
-                "sweeps": self.nsweeps,
-                "sweep_cpu": round(self.cpu_sweep, 1), "steps": self.steps, "deadends": self.deadends,
-                "distinct_32_visited": len(self.tabu)}
-        json.dump(summ, open(os.path.join(self.out, f"walk_w{self.wid}_summary.json"), "w"))
-        with open(os.path.join(self.out, f"walk_w{self.wid}_tabu.txt"), "w") as f:
-            for k in sorted(self.tabu):
-                f.write(k + "\n")
+        summ = self.write_summary()
         print(json.dumps(summ), flush=True)
 
 
@@ -215,11 +226,11 @@ def load_seeds(paths):
             P = dlib.read_pts(p[4:])
             seeds.append((os.path.basename(p[4:]), P))
             continue
-        for line in open(p):
+        for ln, line in enumerate(open(p)):
             f = line.split()
             if not f:
                 continue
-            seeds.append((os.path.basename(p) + ":" + f[0], dlib.parse_line_pts(f, 2)))
+            seeds.append((f"{os.path.basename(p)}:{ln}:{f[0]}", dlib.parse_line_pts(f, 2)))
     return seeds
 
 
@@ -234,7 +245,9 @@ def seed_deletions(seeds):
             S = P[:v] + P[v + 1:]
             c2 = dlib.cgon_count(S, 7)
             if c2[7] == 0:
-                out.append((normalize(S), f"{label}/drop{v}"))
+                T = normalize(S)
+                if max(max(abs(x), abs(y)) for x, y in T) < (1 << 29):  # satcount bound
+                    out.append((T, f"{label}/drop{v}"))
     return out
 
 
