@@ -1,0 +1,77 @@
+{
+ "sets": 8537,
+ "positions_per_set": 33,
+ "answers": 281721,
+ "status_totals": {
+  "UNSAT": 281721
+ },
+ "sets_missing_answers": [],
+ "abstractly_saturated_sets": 8537,
+ "by_source_tag": {
+  "A7n": {
+   "sets": 1461,
+   "abstractly_saturated": 1461,
+   "UNSAT": 48213
+  },
+  "A7n2c": {
+   "sets": 732,
+   "abstractly_saturated": 732,
+   "UNSAT": 24156
+  },
+  "A7n2d": {
+   "sets": 608,
+   "abstractly_saturated": 608,
+   "UNSAT": 20064
+  },
+  "A7r": {
+   "sets": 3111,
+   "abstractly_saturated": 3111,
+   "UNSAT": 102663
+  },
+  "A7r2a": {
+   "sets": 510,
+   "abstractly_saturated": 510,
+   "UNSAT": 16830
+  },
+  "A7r2b": {
+   "sets": 459,
+   "abstractly_saturated": 459,
+   "UNSAT": 15147
+  },
+  "A7sv": {
+   "sets": 81,
+   "abstractly_saturated": 81,
+   "UNSAT": 2673
+  },
+  "A7sv2": {
+   "sets": 174,
+   "abstractly_saturated": 174,
+   "UNSAT": 5742
+  },
+  "A7w": {
+   "sets": 701,
+   "abstractly_saturated": 701,
+   "UNSAT": 23133
+  },
+  "A7w2e": {
+   "sets": 700,
+   "abstractly_saturated": 700,
+   "UNSAT": 23100
+  }
+ },
+ "sat_answers": [],
+ "conflicts_per_solve": {
+  "n": 281721,
+  "mean": 2.656,
+  "median": 2,
+  "p99": 9,
+  "max": 23
+ },
+ "wall_ms_per_solve": {
+  "n": 281721,
+  "mean": 62.972,
+  "median": 43.7,
+  "p99": 211.7,
+  "max": 21255.6
+ }
+}

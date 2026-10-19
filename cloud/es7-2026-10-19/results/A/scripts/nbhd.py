@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """r-point abstract neighbourhood search (delete r points, re-insert r+1).
 
-usage: nbhd.py WORKDIR SAMPLE.txt R PER_KIND CONFLICT_LIMIT OUTDIR [workers] [seed]
+usage: nbhd.py WORKDIR SAMPLE.txt R PER_KIND CONFLICT_LIMIT OUTDIR [workers] [seed] [kinds]
+       (kinds: comma-separated subset of win,geo,rand; default all three)
 
 SAMPLE.txt: set ids (one per line) from pool.sig / extra/ae.sig (32-point sets).
 For every set, deletion sets D (|D| = R) of three kinds, PER_KIND each:
@@ -38,7 +39,7 @@ def load(wd):
     return sig, pts
 
 
-def deletion_sets(P, R, per_kind, rng):
+def deletion_sets(P, R, per_kind, rng, kinds=('win', 'geo', 'rand')):
     n = len(P)
     out = []
     seen = set()
@@ -49,15 +50,15 @@ def deletion_sets(P, R, per_kind, rng):
             seen.add(D)
             out.append((kind, D))
 
-    for _ in range(per_kind):
+    for _ in range(per_kind if 'win' in kinds else 0):
         s = rng.randint(1, n - R + 1)
         add('win', range(s, s + R))
-    for _ in range(per_kind):
+    for _ in range(per_kind if 'geo' in kinds else 0):
         c = rng.randint(1, n)
         cx, cy = P[c - 1]
         order = sorted(range(1, n + 1), key=lambda a: (P[a - 1][0] - cx) ** 2 + (P[a - 1][1] - cy) ** 2)
         add('geo', order[:R])
-    for _ in range(per_kind):
+    for _ in range(per_kind if 'rand' in kinds else 0):
         add('rand', rng.sample(range(1, n + 1), R))
     return out
 
@@ -84,6 +85,7 @@ def main():
     wd, sample, R, per_kind, climit, outdir = sys.argv[1:7]
     workers = int(sys.argv[7]) if len(sys.argv) > 7 else os.cpu_count()
     seed = int(sys.argv[8]) if len(sys.argv) > 8 else 1
+    kinds = tuple(sys.argv[9].split(',')) if len(sys.argv) > 9 else ('win', 'geo', 'rand')
     R, per_kind = int(R), int(per_kind)
     sig, pts = load(wd)
     ids = [l.strip() for l in open(sample) if l.strip()]
@@ -91,7 +93,7 @@ def main():
     blocks = []
     meta = []
     for sid in ids:
-        for kind, D in deletion_sets(pts[sid], R, per_kind, rng):
+        for kind, D in deletion_sets(pts[sid], R, per_kind, rng, kinds):
             blocks.append(blocks_for(sid, sig[sid], D, kind, R))
             meta.append({"id": sid, "kind": kind, "D": D})
     os.makedirs(outdir, exist_ok=True)

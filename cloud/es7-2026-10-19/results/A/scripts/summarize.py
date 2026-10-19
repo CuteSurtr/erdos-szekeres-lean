@@ -2,7 +2,7 @@
 """Summarise ext_solve outputs.
 
 usage: summarize.py main OUTDIR SIGFILE M OUT.json [PER_SET.tsv]
-       summarize.py nbhd OUTDIR OUT.json
+       summarize.py nbhd OUTDIR OUT.json [PER_DELETION_SET.tsv]
 main : per-set SAT/UNSAT/UNKNOWN counts over positions 1..M; every set must have exactly M answers.
 nbhd : counts per deletion set (label) and per R.
 """
@@ -69,7 +69,7 @@ def main_mode(outdir, sigfile, M, out, tsv=None):
     print(json.dumps({k: v for k, v in res.items() if k not in ('by_source_tag', 'sat_answers')}))
 
 
-def nbhd_mode(outdir, out):
+def nbhd_mode(outdir, out, tsv=None):
     per = defaultdict(Counter)
     conf, ms = [], []
     sat = []
@@ -92,6 +92,11 @@ def nbhd_mode(outdir, out):
            "sat_answers": [{"label": a, "tag": b} for a, b in sat],
            "conflicts_per_solve": stats(conf), "wall_ms_per_solve": stats(ms)}
     json.dump(res, open(out, 'w'), indent=1)
+    if tsv:
+        with open(tsv, 'w') as f:
+            f.write("label\tSAT\tUNSAT\tUNKNOWN\n")
+            for lab, c in sorted(per.items()):
+                f.write(f"{lab}\t{c.get('SAT', 0)}\t{c.get('UNSAT', 0)}\t{c.get('UNKNOWN', 0)}\n")
     print(json.dumps({k: v for k, v in res.items() if k != 'sat_answers'}))
 
 
@@ -99,4 +104,4 @@ if __name__ == '__main__':
     if sys.argv[1] == 'main':
         main_mode(sys.argv[2], sys.argv[3], int(sys.argv[4]), sys.argv[5], sys.argv[6] if len(sys.argv) > 6 else None)
     else:
-        nbhd_mode(sys.argv[2], sys.argv[3])
+        nbhd_mode(sys.argv[2], sys.argv[3], sys.argv[4] if len(sys.argv) > 4 else None)

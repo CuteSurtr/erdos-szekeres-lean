@@ -38,8 +38,9 @@ def main():
                 if rec[0] != 'W':
                     continue
                 lab, tag, model = rec[1], rec[2], rec[3]
-                if lab.startswith('N') and '_' in lab:
-                    sid, kind, D = lab[1:].split('_')
+                parts = lab.split('_')
+                if lab.startswith('N') and len(parts) >= 3 and parts[-2] in ('win', 'geo', 'rand'):
+                    sid, kind, D = lab[1:].rsplit('_', 2)
                     D = [int(v) for v in D.split('-')]
                 else:
                     sid, kind, D = lab, 'one', []
