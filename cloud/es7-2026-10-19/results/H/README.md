@@ -41,9 +41,9 @@ The package needs the parent repository at `../../../..` (path dependency) for `
 
     cd cloud/es7-2026-10-19/results/H
     lake exe cache get      # Mathlib oleans for this workspace
-    lake build              # library, axiom audit and the `etv_dimacs` executable
+    lake build              # library, axiom audit, `etv_dimacs` and `trackb_dimacs`
 
-A fresh build compiles 14 modules of the parent repository and the 11 modules here, a few
+A fresh build compiles 14 modules of the parent repository and the 19 modules here, a few
 minutes on top of the Mathlib cache. Lake creates `.lake/packages/mathlib` inside this
 directory. To avoid a second Mathlib checkout, copy or clone the parent's
 `.lake/packages` there first (on macOS, `cp -cR ../../../../.lake/packages .lake/`).
@@ -85,10 +85,13 @@ These follow the Python encoder.
 | `Hull.lean` | The projective normal form behind `--hull` (`HullFrame`, `exists_hullFrame`), the x-axis reflection behind `--mirror`, and `forcesConvexNGon_of_unsat_hull`. |
 | `Audit.lean` | `#guard_msgs` axiom checks. |
 | `scripts/compare_dimacs.sh` | Byte-for-byte comparison with `gen_etv.py`. |
+| `scripts/compare_trackb.sh`, `scripts/compare_trackb_dir.sh` | The same for `gen_cnf.py`, on a grid or on a directory of existing `nNkK[h][m].cnf` files. |
+| `scripts/lrat_to_lean.py` | Turns a DIMACS file and its textual LRAT proof into the Lean definitions used in `EndToEnd.lean`. |
 
 ## Proved
 
-All in namespace `ETV`, all with axioms `[propext, Classical.choice, Quot.sound]`.
+All in namespace `ETV`. None uses an axiom beyond `propext`, `Classical.choice` and
+`Quot.sound`.
 
 Signotope combinatorics:
 - `Chain.allTriples`: in a signotope, every triple of a chain (not only consecutive ones)
@@ -193,8 +196,9 @@ proved.
 
 ## The Lean CNF is the Python CNF
 
-The proofs are about `ETV.dimacs`. `lake exe etv_dimacs` prints exactly that list, after
-plain string formatting in `Emit.lean`, which is not verified. To check that it is the file
+The proofs are about `ETV.dimacs` and `ETV.dimacsB`. `lake exe etv_dimacs` and
+`lake exe trackb_dimacs` print exactly those lists, after plain string formatting in
+`Emit.lean` and `EmitB.lean`, which is not verified. To check that it is the file
 the SAT solver saw:
 
     lake build
@@ -219,7 +223,7 @@ Track B (`scripts/compare_trackb.sh`), also byte-identical:
   repository; `scripts/compare_trackb_dir.sh DIR` reruns the check on any such directory.
 
 For a run that is meant to become a theorem, it is simpler to generate the CNF with
-`lake exe etv_dimacs` and give that file to the solver and the proof checker, as
+`lake exe etv_dimacs` or `lake exe trackb_dimacs` and give that file to the solver and the proof checker, as
 EmptyHexagonLean does with `lake exe encode`. The Python encoder is then only a
 cross-check.
 
@@ -236,15 +240,15 @@ proved (`distinctXReduction`, `xsbSound`). The remaining open items are listed b
      (cake_lpr) and record it in Lean as a disclosed hypothesis or axiom about
      `ETV.dimacs N A U K`. This is what EmptyHexagonLean does (`axiom unsat_6hole_cnf`).
      It breaks the "standard axioms only" rule, so it has to be stated openly.
-   - Check the proof inside Lean. This works for tiny instances (`EndToEnd.lean`, `N = 5`):
-     the kernel check takes about 30 s. It does not scale. The ES(5) instance
-     `gen_cnf.py 9 5 --hull --mirror` (2,073 clauses, 276 proof steps) did not finish in 10
-     minutes with the list-based checker, and ES(7) certificates are many orders of
-     magnitude larger. Lean core's LRAT checker needs `Lean.ofReduceBool` (`native_decide`)
-     to run, and that is forbidden here.
+   - Check the proof inside Lean. This works for tiny instances: `EndToEnd.lean` (`N = 5`,
+     97 clauses) compiles in under a minute. It does not scale. For the ES(5) instance
+     `gen_cnf.py 9 5 --hull --mirror` (2,073 clauses, 276 proof steps), elaborating and
+     checking the literal clause list did not finish within about 20 minutes, so it is not
+     included. ES(7) certificates are many orders of magnitude larger. Lean core's LRAT
+     checker needs `Lean.ofReduceBool` (`native_decide`) to run, and that is forbidden here.
 
-   Either route also needs a small bridge from `DimacsSatisfiable` to the checker's CNF
-   semantics.
+   For the external route, `DimacsSatisfiable` is the usual DIMACS semantics of the printed
+   file, so the imported fact is exactly "this file is UNSAT".
 2. **Cube-and-conquer.** If the UNSAT comes from cubes (`tools/cnc`), you also need a
    checked proof that the cubes cover the space (a tautology/LRAT check of the cube
    disjunction) and one certificate per cube, as in EmptyHexagonLean.

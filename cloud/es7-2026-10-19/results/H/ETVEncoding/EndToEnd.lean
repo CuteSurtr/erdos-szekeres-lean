@@ -15,7 +15,8 @@ axiom):
 
 With the soundness theorems this proves the classical value `ES(4) ≤ 5` through the
 pipeline (encoding, `--hull`, `--mirror`) that an ES(7) certificate for `n33k7hm.cnf` would go
-through. `ES(5) ≤ 9` the same way is in `ETVEncoding.EndToEnd9` (not built by default).
+through. The same route for `ES(5) ≤ 9` (`gen_cnf.py 9 5 --hull --mirror`) is too slow for this
+list-based checker; see the README.
 -/
 
 namespace ETV
