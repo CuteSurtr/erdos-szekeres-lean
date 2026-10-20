@@ -31,3 +31,13 @@
   Product of surviving-cube counts along the paths: 1.7e7 to 1.07e9 (mostly 64^5 = 1.07e9).
 - 02:10 hard node 102 (depth 30): march -d 10 -> 945 cubes + 28 refuted leaves (336 s); conquer
   with 3 incremental CaDiCaL workers, 600 s/cube cap (hard102/progress.txt).
+- 02:13 LRAT spot-check (lrat/summary.txt): 4 hard102 cubes at the 20/50/80/95th percentile of
+  solved-cube time (0.2-6 s): CaDiCaL --lrat, lrat-check "c VERIFIED" on node CNF + cube units; proofs
+  0.4-17 MB, checked in 0.1-0.3 s. Negative test: same proof against the CNF with the last cube unit
+  removed -> lrat-check ERROR (not verified).
+- 02:15 glue pipeline on the (7,5,7)@26 control models (ours+lexx, bb+lexx): glue.py 757 -> 32-element
+  signotopes, sigcheckB: no 7-gon (both tests), max cap 6, max cup 6, no signotope violation.
+- 02:17 realize.py (methods ins-ff,lp,free; 150 CPU s) on the 26-point control model: not realized,
+  211 violated triples at best (proves nothing; KPH report ~1.6e-4 realization rate at this size).
+- 02:23 hard102 interim: 496/945 cubes done (493 UNSAT, 3 hit 600 s), summed cube time 4,525 s;
+  solve-time histogram <1 s: 331, 1-10 s: 130, 10-60 s: 23, 60-600 s: 9, >=600 s: 3.
