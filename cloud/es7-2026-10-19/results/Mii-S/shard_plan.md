@@ -13,8 +13,8 @@ cases and is estimated at 135–300+ core-hours.
 
 ## 0. Inputs (pin these)
 
-- Branch `es7-cloud`. Generator scripts are in `results/Mii-S/scripts/`, at the commit that
-  added this file (see `README.md`).
+- Branch `es7-cloud`. Generator scripts are in `results/Mii-S/scripts/` at commit
+  `6a44b5fac3e8e7e6ea490637f4cc66dbcf1aa7c8`.
 - `F` = `m33k7int.sub.cnf` from `results/C/scripts/make_cnfs.sh OUT`. It must have sha256
   `69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d`, and it is byte-identical to H3's
   `lake exe mir_dimacs interior 33 7`.

@@ -35,6 +35,7 @@ one explicit CNF, checked with cake_lpr. All of them are listed in the `*.jsonl`
 
 ## What ran where
 
+- **Generator commit:** `6a44b5fac3e8e7e6ea490637f4cc66dbcf1aa7c8` on `es7-cloud`, the last commit that changed `scripts/`.
 - One cloud VM: Linux 6.18 x86_64, 4 cores, 15 GB RAM (`env.txt`). Run from 04:49 to 08:45 UTC on
   20 Oct 2026. All computation stopped at 08:31.
 - Tools, built here:
