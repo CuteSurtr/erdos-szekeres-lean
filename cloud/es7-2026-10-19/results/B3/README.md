@@ -9,9 +9,17 @@ no UNSAT claim is made. What this run produced is a cost estimate for a proper H
 cube-and-conquer: roughly **2–3 × 10^5 core-hours**. That needs a cluster; a laptop is out of
 the question.
 
+**Shared folder.** Several B3 sessions wrote to this folder at once. This README covers the
+two-level session: `README.md`, `logs/` (environment in `logs/env.txt`) and
+`scripts/{iworker.cpp,twolevel.py,subcnf.py,project.py,status.py,dist.py,lrat_spot.py,scratch_solve.py,lvl3.py}`.
+`README_knuth.md`, `progress.md` and the other files belong to a sibling session. Its
+independent Knuth estimate, using our encoder plus the lex-leader, cutoff depth 24 and
+57 samples, gives **≥ 2.5 × 10^5 core-hours**, which agrees with the projection below. My
+first commit overwrote that session's `env.txt` by mistake; it has been restored.
+
 ## Where it ran
 
-One cloud container (`env.txt`): 4 cores, 15 GB RAM, Linux 6.18. Tools were built from
+One cloud container (`logs/env.txt`): 4 cores, 15 GB RAM, Linux 6.18. Tools were built from
 source in the session:
 
 | Tool | Version / commit |
