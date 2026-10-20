@@ -1,6 +1,7 @@
 #!/bin/bash
 export PATH=/opt/bin:$PATH
-D=/home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C3WAVE1/C07
+D=/opt/work/live
+RES=/home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C3WAVE1/C07
 END=$(date -u -d "2026-10-20 11:13" +%s)
 cd /opt/c3s/cloud/es7-2026-10-19/results/C3-S/tools
 while read R; do
@@ -11,6 +12,6 @@ while read R; do
   rc=$?
   echo "=== ROOT $R end $(date -u +%T) rc=$rc" >> $D/driver.log
   if tail -5 $D/driver.log | grep -q "SAT FOUND\|PROOF NOT ACCEPTED"; then echo STOPPED >> $D/driver.log; break; fi
-done < $D/roots.txt
+done < $RES/roots.txt
 pkill -f close_tree.py; pkill -x cadical; pkill -x cake_lpr; pkill -x lrat-check
 echo "=== ALL DONE $(date -u +%T)" >> $D/driver.log
