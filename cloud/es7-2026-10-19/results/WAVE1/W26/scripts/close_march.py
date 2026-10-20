@@ -113,6 +113,8 @@ def solve(cube, timeout):
     elif r["status"] == "NOSPLIT": submit(cube, 10 * a.timeout)
 def task(c, t):
     try: solve(c, t)
+    except Exception:
+        import traceback; rec({"error": traceback.format_exc(), "cube": c, "status": "ERROR"})
     finally:
         with cv: count[0] -= 1; cv.notify_all()
 def submit(c, t):
