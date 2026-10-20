@@ -49,6 +49,19 @@ def main():
         if len({p[0] for p in S}) < len(S):
             L = 2 * max(abs(p[1]) for p in S) + 1; S = [(L * x + y, y) for x, y in S]; res["sheared"] = True
         S.sort()
+        if max(max(abs(x), abs(y)) for x, y in S) >= 2 ** 16:
+            # smaller realization of the same chirotope first (re-checked exactly; caps/cups are then
+            # recomputed in the new x-order, and the heptagon-free property is a chirotope invariant)
+            import realize as R
+            chiS = chiro.chirotope_of(S)
+            for seed in range(1, 6):
+                r = R.realize(chiS, len(S), budget=30, seed=seed)
+                if r["realized"] and chiro.verify_exact(r["points"], chiS)[0]:
+                    T0 = [tuple(p) for p in r["points"]]
+                    T0 = sorted(T0)
+                    if (max(max(abs(x), abs(y)) for x, y in T0) < 2 ** 16 and len({p[0] for p in T0}) == len(T0)
+                            and min(longest_chain(T0, -1), longest_chain(T0, +1)) <= 4):
+                        S = T0; res["S_recompressed"] = True; break
         cap, cup = longest_chain(S, -1), longest_chain(S, +1)
         res.update(S_longest_cap=cap, S_longest_cup=cup, S_largest_convex=chiro.largest_convex_subset(S))
         if cap <= 4: res["construction"] = "6-cap deep below S"; T = S

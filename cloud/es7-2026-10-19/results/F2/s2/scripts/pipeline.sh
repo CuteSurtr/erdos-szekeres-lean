@@ -23,6 +23,6 @@ def o(p,q,r): return (q[0]-p[0])*(r[1]-p[1])-(q[1]-p[1])*(r[0]-p[0])
 f=open('$S/signs32.txt','w')
 for l in open('$S/sets32.jsonl'):
     r=json.loads(l)
-    for key in ('points_exact','points'):
+    for key in [k for k in ('points_exact','points') if k in r]:
         Q=sorted(map(tuple,r[key])); f.write(''.join('+' if o(Q[i],Q[j],Q[k])>0 else '-' for i,j,k in itertools.combinations(range(len(Q)),3))+'\n')"
 $S/brute26 32 33 33 7 < $S/signs32.txt > $O/brute32.txt

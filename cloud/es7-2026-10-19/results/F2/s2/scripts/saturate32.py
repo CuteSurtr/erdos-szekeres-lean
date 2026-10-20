@@ -14,7 +14,9 @@ climit = sys.argv[6] if len(sys.argv) > 6 else "0"; opts = sys.argv[7:]
 def orient(p, q, r): return (q[0] - p[0]) * (r[1] - p[1]) - (q[1] - p[1]) * (r[0] - p[0])
 out = open(outp, "a")
 for line in open(inp):
-    rec = json.loads(line); P = [tuple(p) for p in rec["points"]]; n = len(P)
+    rec = json.loads(line)
+    if "points" not in rec: continue
+    P = [tuple(p) for p in rec["points"]]; n = len(P)
     res = {"id": rec["id"], "N": n}
     with tempfile.TemporaryDirectory() as td:
         pf = os.path.join(td, "p.txt"); bf = os.path.join(td, "bad.txt")
