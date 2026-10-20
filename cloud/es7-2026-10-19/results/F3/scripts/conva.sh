@@ -14,7 +14,7 @@ $P -c "
 import json
 with open('$O/sets32.jsonl','w') as f:
     for l in open('$S/sets32f.jsonl'):
-        r=json.loads(l); f.write(json.dumps({k:v for k,v in r.items() if k!='points_exact'})+'\n')"
+        f.write(l)"
 $P $D/saturate32.py $S/sat $S/ext_solve $S/b33.cnf $O/sets32.jsonl $O/sat32.jsonl 0 lucky=0 > $O/sat32.log
 $P -c "
 import json,itertools

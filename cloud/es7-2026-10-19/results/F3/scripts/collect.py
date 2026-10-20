@@ -40,8 +40,8 @@ for d in sorted(glob.glob(f"{run}/proc/*/")):
     rec = {"id": n, "fp": fp.get("fp"), "duplicate": st.get("duplicate"), "done": st.get("done", False),
            "verify26": {k: v.get(k) for k in ("general_position", "cap_cup", "lcs", "brute_axviol_cap_cup_lcs")}}
     A = jl(f"{d}convA/sat32.jsonl")
-    rec["convA"] = [{"id": r["id"], "geom_saturated": r.get("geom_saturated"), "faces": r["geom"].get("faces_euler"),
-                     "bad": r["geom"].get("bad_candidates"), "geom_error": r["geom"].get("error"),
+    rec["convA"] = [{"id": r["id"], "geom_saturated": r.get("geom_saturated"), "faces": r.get("geom", {}).get("faces_euler"), "geom_run": r.get("geom_run", True),
+                     "bad": r.get("geom", {}).get("bad_candidates"), "geom_error": r.get("geom", {}).get("error"),
                      "abs_unsat": r["abs"]["UNSAT"], "abs_sat": r["abs"]["SAT"], "abs_unknown": r["abs"]["UNKNOWN"],
                      "abs_saturated": r["abs_saturated"]} for r in A]
     try: rec["convA_brute32"] = open(f"{d}convA/brute32.txt").read().split("\n")[:-1]

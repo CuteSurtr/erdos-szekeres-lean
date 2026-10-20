@@ -6,13 +6,13 @@
     "3000002",
     "3000003"
    ],
-   "chains": 6,
+   "chains": 8,
    "reached26": 2,
    "reached_hist": {
     "15": 1,
     "18": 1,
     "19": 1,
-    "20": 1,
+    "20": 3,
     "26": 2
    }
   },
@@ -37,11 +37,11 @@
    }
   },
   "kph_style": {
-   "models_realize_attempted": 682,
+   "models_realize_attempted": 953,
    "realized": 0,
    "realized_exact_ok": 0,
-   "realizer_cpu_s": 3475,
-   "models_generated": 800
+   "realizer_cpu_s": 4855,
+   "models_generated": 1100
   }
  },
  "sets": [
@@ -69,6 +69,7 @@
      "id": "gg3000002_1",
      "geom_saturated": true,
      "faces": 109337,
+     "geom_run": true,
      "bad": 0,
      "geom_error": null,
      "abs_unsat": 33,
@@ -81,13 +82,50 @@
     "OK 1",
     "OK 2"
    ],
-   "convB": []
+   "convB": [
+    {
+     "file": "gg3000002_1_d0.pts",
+     "general_position": true,
+     "largest_convex_subset": 6,
+     "brute_kgon": "N=32 K=7 signotope_violations=0 K-subsets=3365856 convex_K_subsets=0",
+     "sat_c": "skipped: |coord| >= 2^27",
+     "ext_sat": [],
+     "ext_unknown": [],
+     "ext_unsat": 33,
+     "abstract_saturated": true,
+     "geom_saturated": null
+    },
+    {
+     "file": "gg3000002_1_d1.pts",
+     "general_position": true,
+     "largest_convex_subset": 6,
+     "brute_kgon": "N=32 K=7 signotope_violations=0 K-subsets=3365856 convex_K_subsets=0",
+     "sat_c": "skipped: |coord| >= 2^27",
+     "ext_sat": [],
+     "ext_unknown": [],
+     "ext_unsat": 33,
+     "abstract_saturated": true,
+     "geom_saturated": null
+    },
+    {
+     "file": "gg3000002_1_d10.pts",
+     "general_position": true,
+     "largest_convex_subset": 6,
+     "brute_kgon": "N=32 K=7 signotope_violations=0 K-subsets=3365856 convex_K_subsets=0",
+     "sat_c": "skipped: |coord| >= 2^27",
+     "ext_sat": [],
+     "ext_unknown": [],
+     "ext_unsat": 33,
+     "abstract_saturated": true,
+     "geom_saturated": null
+    }
+   ]
   },
   {
    "id": "gg3000002_2",
    "fp": "c0458eb8fb9c4b153ec2",
-   "duplicate": null,
-   "done": false,
+   "duplicate": false,
+   "done": true,
    "verify26": {
     "general_position": true,
     "cap_cup": [
@@ -102,10 +140,256 @@
      "6"
     ]
    },
-   "convA": [],
-   "convB": []
+   "convA": [
+    {
+     "id": "gg3000002_2",
+     "geom_saturated": null,
+     "faces": null,
+     "geom_run": false,
+     "bad": null,
+     "geom_error": null,
+     "abs_unsat": 33,
+     "abs_sat": 0,
+     "abs_unknown": 0,
+     "abs_saturated": true
+    }
+   ],
+   "convA_brute32": [
+    "OK 1",
+    "OK 2"
+   ],
+   "convB": [
+    {
+     "file": "gg3000002_2_d0.pts",
+     "general_position": true,
+     "largest_convex_subset": 6,
+     "brute_kgon": "N=32 K=7 signotope_violations=0 K-subsets=3365856 convex_K_subsets=0",
+     "sat_c": "skipped: |coord| >= 2^27",
+     "ext_sat": [],
+     "ext_unknown": [],
+     "ext_unsat": 33,
+     "abstract_saturated": true,
+     "geom_saturated": null
+    },
+    {
+     "file": "gg3000002_2_d1.pts",
+     "general_position": true,
+     "largest_convex_subset": 6,
+     "brute_kgon": "N=32 K=7 signotope_violations=0 K-subsets=3365856 convex_K_subsets=0",
+     "sat_c": "skipped: |coord| >= 2^27",
+     "ext_sat": [],
+     "ext_unknown": [],
+     "ext_unsat": 33,
+     "abstract_saturated": true,
+     "geom_saturated": null
+    },
+    {
+     "file": "gg3000002_2_d1_small.pts",
+     "general_position": true,
+     "largest_convex_subset": 6,
+     "brute_kgon": "N=32 K=7 signotope_violations=0 K-subsets=3365856 convex_K_subsets=0",
+     "sat_c": {
+      "N": 32,
+      "K": 7,
+      "lines": 496,
+      "parallel_pairs": 0,
+      "nonS_vertex_pairs": 107880,
+      "nonS_distinct_vertices": 107880,
+      "max_lines_through_nonS_vertex": 2,
+      "faces_euler": 109337,
+      "faces_hit_by_valid_candidates": 109337,
+      "candidates": 433504,
+      "invalid_candidates": 0,
+      "valid_candidates": 433504,
+      "cache_hits": 431174,
+      "dp_found": 2330,
+      "dp_none": 0,
+      "bad_candidates": 0,
+      "cpu_seconds": 0.8
+     },
+     "ext_sat": [],
+     "ext_unknown": [],
+     "ext_unsat": 33,
+     "abstract_saturated": true,
+     "geom_saturated": true
+    },
+    {
+     "file": "gg3000002_2_d2.pts",
+     "general_position": true,
+     "largest_convex_subset": 6,
+     "brute_kgon": "N=32 K=7 signotope_violations=0 K-subsets=3365856 convex_K_subsets=0",
+     "sat_c": "skipped: |coord| >= 2^27",
+     "ext_sat": [],
+     "ext_unknown": [],
+     "ext_unsat": 33,
+     "abstract_saturated": true,
+     "geom_saturated": null
+    },
+    {
+     "file": "gg3000002_2_d2_small.pts",
+     "general_position": true,
+     "largest_convex_subset": 6,
+     "brute_kgon": "N=32 K=7 signotope_violations=0 K-subsets=3365856 convex_K_subsets=0",
+     "sat_c": {
+      "N": 32,
+      "K": 7,
+      "lines": 496,
+      "parallel_pairs": 0,
+      "nonS_vertex_pairs": 107880,
+      "nonS_distinct_vertices": 107880,
+      "max_lines_through_nonS_vertex": 2,
+      "faces_euler": 109337,
+      "faces_hit_by_valid_candidates": 109337,
+      "candidates": 433504,
+      "invalid_candidates": 0,
+      "valid_candidates": 433504,
+      "cache_hits": 431144,
+      "dp_found": 2360,
+      "dp_none": 0,
+      "bad_candidates": 0,
+      "cpu_seconds": 0.9
+     },
+     "ext_sat": [],
+     "ext_unknown": [],
+     "ext_unsat": 33,
+     "abstract_saturated": true,
+     "geom_saturated": true
+    },
+    {
+     "file": "gg3000002_2_d3.pts",
+     "general_position": true,
+     "largest_convex_subset": 6,
+     "brute_kgon": "N=32 K=7 signotope_violations=0 K-subsets=3365856 convex_K_subsets=0",
+     "sat_c": "skipped: |coord| >= 2^27",
+     "ext_sat": [],
+     "ext_unknown": [],
+     "ext_unsat": 33,
+     "abstract_saturated": true,
+     "geom_saturated": null
+    },
+    {
+     "file": "gg3000002_2_d4.pts",
+     "general_position": true,
+     "largest_convex_subset": 6,
+     "brute_kgon": "N=32 K=7 signotope_violations=0 K-subsets=3365856 convex_K_subsets=0",
+     "sat_c": "skipped: |coord| >= 2^27",
+     "ext_sat": [],
+     "ext_unknown": [],
+     "ext_unsat": 33,
+     "abstract_saturated": true,
+     "geom_saturated": null
+    },
+    {
+     "file": "gg3000002_2_d4_small.pts",
+     "general_position": true,
+     "largest_convex_subset": 6,
+     "brute_kgon": "N=32 K=7 signotope_violations=0 K-subsets=3365856 convex_K_subsets=0",
+     "sat_c": {
+      "N": 32,
+      "K": 7,
+      "lines": 496,
+      "parallel_pairs": 0,
+      "nonS_vertex_pairs": 107880,
+      "nonS_distinct_vertices": 107880,
+      "max_lines_through_nonS_vertex": 2,
+      "faces_euler": 109337,
+      "faces_hit_by_valid_candidates": 109337,
+      "candidates": 433504,
+      "invalid_candidates": 0,
+      "valid_candidates": 433504,
+      "cache_hits": 431224,
+      "dp_found": 2280,
+      "dp_none": 0,
+      "bad_candidates": 0,
+      "cpu_seconds": 0.8
+     },
+     "ext_sat": [],
+     "ext_unknown": [],
+     "ext_unsat": 33,
+     "abstract_saturated": true,
+     "geom_saturated": true
+    },
+    {
+     "file": "gg3000002_2_d5.pts",
+     "general_position": true,
+     "largest_convex_subset": 6,
+     "brute_kgon": "N=32 K=7 signotope_violations=0 K-subsets=3365856 convex_K_subsets=0",
+     "sat_c": "skipped: |coord| >= 2^27",
+     "ext_sat": [],
+     "ext_unknown": [],
+     "ext_unsat": 33,
+     "abstract_saturated": true,
+     "geom_saturated": null
+    },
+    {
+     "file": "gg3000002_2_d6.pts",
+     "general_position": true,
+     "largest_convex_subset": 6,
+     "brute_kgon": "N=32 K=7 signotope_violations=0 K-subsets=3365856 convex_K_subsets=0",
+     "sat_c": "skipped: |coord| >= 2^27",
+     "ext_sat": [],
+     "ext_unknown": [],
+     "ext_unsat": 33,
+     "abstract_saturated": true,
+     "geom_saturated": null
+    },
+    {
+     "file": "gg3000002_2_d6_small.pts",
+     "general_position": true,
+     "largest_convex_subset": 6,
+     "brute_kgon": "N=32 K=7 signotope_violations=0 K-subsets=3365856 convex_K_subsets=0",
+     "sat_c": {
+      "N": 32,
+      "K": 7,
+      "lines": 496,
+      "parallel_pairs": 0,
+      "nonS_vertex_pairs": 107880,
+      "nonS_distinct_vertices": 107880,
+      "max_lines_through_nonS_vertex": 2,
+      "faces_euler": 109337,
+      "faces_hit_by_valid_candidates": 109337,
+      "candidates": 433504,
+      "invalid_candidates": 0,
+      "valid_candidates": 433504,
+      "cache_hits": 431138,
+      "dp_found": 2366,
+      "dp_none": 0,
+      "bad_candidates": 0,
+      "cpu_seconds": 0.8
+     },
+     "ext_sat": [],
+     "ext_unknown": [],
+     "ext_unsat": 33,
+     "abstract_saturated": true,
+     "geom_saturated": true
+    },
+    {
+     "file": "gg3000002_2_d7.pts",
+     "general_position": true,
+     "largest_convex_subset": 6,
+     "brute_kgon": "N=32 K=7 signotope_violations=0 K-subsets=3365856 convex_K_subsets=0",
+     "sat_c": "skipped: |coord| >= 2^27",
+     "ext_sat": [],
+     "ext_unknown": [],
+     "ext_unsat": 33,
+     "abstract_saturated": true,
+     "geom_saturated": null
+    },
+    {
+     "file": "gg3000002_2_d8.pts",
+     "general_position": true,
+     "largest_convex_subset": 6,
+     "brute_kgon": "N=32 K=7 signotope_violations=0 K-subsets=3365856 convex_K_subsets=0",
+     "sat_c": "skipped: |coord| >= 2^27",
+     "ext_sat": [],
+     "ext_unknown": [],
+     "ext_unsat": 33,
+     "abstract_saturated": true,
+     "geom_saturated": null
+    }
+   ]
   }
  ],
- "new_distinct_26": 0,
+ "new_distinct_26": 1,
  "alerts": []
 }

@@ -13,7 +13,8 @@ out = open(outp, "w")
 for l in open(inp):
     r = json.loads(l)
     if "points_exact" not in r: continue
-    if "points" not in r or not r.get("compressed_ok"):
+    if "points" not in r or not r.get("compressed_ok") or r.get("compressed_max", 1 << 60) >= 2 ** 27:
+        r["compressed_ok"] = False
         P = [tuple(p) for p in r["points_exact"]]; chi = chiro.chirotope_of(P); r["compress_retry"] = False
         for seed in range(11, 11 + ns):
             z = R.realize(chi, len(P), budget=budget, seed=seed)
