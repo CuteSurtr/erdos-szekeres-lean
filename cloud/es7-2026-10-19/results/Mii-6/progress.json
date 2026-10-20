@@ -4,16 +4,16 @@
  "top_cubes": 16,
  "top_cubes_closed": 6,
  "counts": {
-  "leaf_unsat_verified": 352,
+  "leaf_unsat_verified": 384,
   "leaf_unsat_check_failed": 0,
   "sat": 0,
-  "open_unsolved": 609,
-  "split_nodes": 15,
-  "gaps_verified": 6,
+  "open_unsolved": 640,
+  "split_nodes": 16,
+  "gaps_verified": 7,
   "gaps_open": 9
  },
- "closed_weight_of_shard": 0.4052734375,
- "cadical_seconds": 25256,
+ "closed_weight_of_shard": 0.4365234375,
+ "cadical_seconds": 31256,
  "shard_closed": false,
  "per_top_cube": [
   {
@@ -92,7 +92,7 @@
     2705
    ],
    "closed": false,
-   "closed_weight": 0.0
+   "closed_weight": 0.015625
   },
   {
    "cube": [
@@ -118,7 +118,7 @@
     2380
    ],
    "closed": false,
-   "closed_weight": 0.484375
+   "closed_weight": 0.96875
   },
   {
    "cube": [
