@@ -3,3 +3,8 @@ RUNS/walk/walk_w0.jsonl states 2853 m0 total 0 m1 median 283
 RUNS/walk/walk_w1.jsonl states 2838 m0 total 0 m1 median 542
 baseline starts 36 cpu 2060.6 emitted lines 2464
 anneal runs 38 min E hist {1: 33, 2: 1, 3: 1, 9: 1, 24: 1, 743: 1}
+== progress 02:14:49 UTC
+RUNS/walkms/walk_w0.jsonl states 2055 starts 129 m0 total 0
+RUNS/walkms/walk_w1.jsonl states 2054 starts 129 m0 total 0
+anneal runs 160 min E hist {1: 132, 2: 1, 3: 4, 4: 2, 6: 1, 7: 1, 8: 1, 9: 1, 11: 1, 24: 1, 219: 1, 243: 1, 497: 1, 706: 1, 743: 1, 989: 1, 1050: 1, 1156: 1, 1226: 1, 1280: 1, 1401: 1, 1906: 1, 2005: 1, 2039: 1, 2122: 1}
+by family {'layers': {1: 28, 3: 1, 8: 1, 24: 1, 497: 1, 743: 1, 989: 1, 2005: 1}, 'uniform': {1: 9, 2: 1, 3: 1, 6: 1, 1280: 1}, 'nearpert': {1: 34, 4: 1, 9: 1, 11: 1, 706: 1, 1156: 1, 1226: 1, 1906: 1, 2039: 1}, 'lattice': {1: 36, 3: 1, 4: 1, 219: 1, 1050: 1, 1401: 1, 2122: 1}, 'clusters': {1: 25, 3: 1, 7: 1, 243: 1}}
