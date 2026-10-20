@@ -383,3 +383,20 @@ PROOF NOT ACCEPTED 0s0-1s1_2s0-10s0_3s0-4s0
 {"node": "0s0-1s1_2s0-10s0_6_3s1-9s0", "status": "UNSATISFIABLE", "solve_s": 4.3, "certified": true}
 {"node": "0s0-1s1_2s0-10s0_6_3s1-9s1", "status": "UNSATISFIABLE", "solve_s": 5.8, "certified": true}
 {"node": "0s0-1s1_2s0-10s0_6_4s0-5s0", "status": "UNSATISFIABLE", "solve_s": 5.0, "certified": true}
+{"node": "0s0-1s1_2s0-10s0_6_4s0-5s1", "status": "UNSATISFIABLE", "solve_s": 4.6, "certified": true}
+{"node": "0s0-1s1_2s0-10s0_6_4s1-5s0", "status": "UNSATISFIABLE", "solve_s": 4.4, "certified": true}
+{"node": "0s0-1s1_2s0-10s0_6_4s1-5s1", "status": "UNSATISFIABLE", "solve_s": 4.6, "certified": true}
+{"node": "0s0-1s1_2s0-10s0_6_4s0-7s0", "status": "UNSATISFIABLE", "solve_s": 4.7, "certified": true}
+{"node": "0s0-1s1_2s0-10s0_6_4s0-7s1", "status": "UNSATISFIABLE", "solve_s": 4.4, "certified": true}
+=== 09:29:38: out.jsonl in the git tree was replaced by git pull --rebase at the 09:03 push; the driver kept appending to the deleted inode (lines 100-349). Recovered from /proc/PID/fd/3 (first 99 lines byte-identical), driver killed, restarted with OUT=/opt/work/out.jsonl, copied into this dir before each commit.
+=== ROOT 0s0-1s0_2s0-6s1 start 09:29:38 hours 2.3728 jobs 3
+{"root": "0s0-1s0_2s0-6s1", "open_frontier": 0}
+=== ROOT 0s0-1s0_3s0-10s0 start 09:29:45 hours 2.3708 jobs 3
+{"root": "0s0-1s0_3s0-10s0", "open_frontier": 0}
+=== ROOT 0s0-1s0_3s1-8s0 start 09:29:52 hours 2.3689 jobs 3
+{"root": "0s0-1s0_3s1-8s0", "open_frontier": 0}
+=== ROOT 0s0-1s0_4s1-7s1 start 09:29:59 hours 2.3669 jobs 3
+{"root": "0s0-1s0_4s1-7s1", "open_frontier": 0}
+=== ROOT 0s0-1s0_5s1-9s0 start 09:30:06 hours 2.365 jobs 3
+{"root": "0s0-1s0_5s1-9s0", "open_frontier": 0}
+=== ROOT 0s0-1s0_7s0-9s0 start 09:30:13 hours 2.3631 jobs 3
