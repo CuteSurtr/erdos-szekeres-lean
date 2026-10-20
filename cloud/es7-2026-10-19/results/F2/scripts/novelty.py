@@ -8,15 +8,16 @@ sys.path.insert(0, os.path.join(HERE, "..", "..", "..", "tools", "realizer"))
 from chiro import canonical_form, chirotope_of  # noqa
 def canon(pts):
     return hashlib.sha1(canonical_form(chirotope_of(pts), len(pts)).encode()).hexdigest()
-def pool_line(l):
+def pool_line(item):
+    key, l = item
     t = l.split(); i = t.index("32"); v = list(map(int, t[i + 1:i + 65]))
-    return t[0] + ":" + t[1], canon([(v[2 * k], v[2 * k + 1]) for k in range(32)])
+    return key, canon([(v[2 * k], v[2 * k + 1]) for k in range(32)])
 if __name__ == "__main__":
     out = sys.argv[1]
     new = {os.path.basename(f): canon([tuple(map(int, l.split())) for l in open(f) if l.strip()]) for f in sys.argv[2:]}
     lines = []
     for f in sorted(glob.glob(os.path.join(HERE, "..", "..", "..", "inputs", "distinct_K7*.txt"))):
-        lines += [l for l in open(f) if l.strip()]
+        lines += [(f"{os.path.basename(f)}:{k + 1}", l) for k, l in enumerate(open(f)) if l.strip()]
     with mp.Pool(2) as P:
         pool = dict(P.map(pool_line, lines, chunksize=50))
     inv = {}
