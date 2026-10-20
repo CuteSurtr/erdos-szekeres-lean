@@ -1,4 +1,4 @@
-leaves 0 Counter() lrat Counter()
-splits 1 [(13, 7, 64, 'UNSATISFIABLE', 'VERIFIED')]
-max solve 0 sum 0
-Tue Oct 20 02:55:39 UTC 2026
+leaves 1 Counter({'UNSATISFIABLE': 1}) lrat Counter({'VERIFIED': 1})
+splits 8 [(13, 7, 64, 'UNSATISFIABLE', 'VERIFIED'), (29, 7, 64, 'UNSATISFIABLE', 'VERIFIED'), (5, 7, 64, 'UNSATISFIABLE', 'VERIFIED'), (21, 7, 64, 'UNSATISFIABLE', 'VERIFIED'), (45, 7, 64, 'UNSATISFIABLE', 'VERIFIED'), (37, 7, 64, 'UNSATISFIABLE', 'VERIFIED'), (61, 7, 64, 'UNSATISFIABLE', 'VERIFIED'), (69, 7, 64, 'UNSATISFIABLE', 'VERIFIED')]
+max solve 182.11 sum 182
+Tue Oct 20 03:16:26 UTC 2026
