@@ -1,0 +1,8490 @@
+{
+ "R": "/opt/fin/cloud/es7-2026-10-19/results (Zf = 14447d0d56c891a89a07a8141b50eae0ebfd44a7)",
+ "summary": {
+  "cases": 450,
+  "tree_node": 140,
+  "tree_leaf": 310,
+  "open": [],
+  "leaf_direct": 172,
+  "leaf_wave_empty": 138,
+  "leaves_total": 74000,
+  "leaves_in_trees": 73690,
+  "split_nodes": 910,
+  "max_depth": 7,
+  "split_records_with_children_key": [
+   "WAVE1/W34/U3-5_L",
+   "WAVE1/W34/U3-5_L",
+   "WAVE1/W34/U_L2-4",
+   "WAVE1/W34/U_L2-4",
+   "WAVE1/W34/U_L2-4",
+   "WAVE1/W34/U_L2-4",
+   "WAVE1/W34/U_L2-7",
+   "WAVE1/W34/U_L2-7",
+   "WAVE1/W34/U_L2-7",
+   "WAVE1/W34/U_L2-7"
+  ],
+  "dirs_by_name": [
+   "WAVE1/W06/U_L2.s6",
+   "WAVE1/W07/U_L2",
+   "WAVE1/W35/U10_L11",
+   "WAVE1/W35/U10_L15",
+   "WAVE1/W35/U10_L5",
+   "WAVE1/W35/U11_L10",
+   "WAVE1/W35/U11_L15",
+   "WAVE1/W35/U11_L5",
+   "WAVE1/W35/U12_L16",
+   "WAVE1/W35/U12_L6",
+   "WAVE1/W35/U13_L10",
+   "WAVE1/W35/U13_L6",
+   "WAVE1/W35/U14_L11",
+   "WAVE1/W35/U14_L7",
+   "WAVE1/W35/U15_L7",
+   "WAVE1/W35/U16_L2",
+   "WAVE1/W35/U16_L4",
+   "WAVE1/W35/U16_L8",
+   "WAVE1/W35/U3-16_L",
+   "WAVE1/W35/U3_L12",
+   "WAVE1/W35/U3_L16",
+   "WAVE1/W35/U3_L4",
+   "WAVE1/W35/U3_L8",
+   "WAVE1/W35/U4-14_L",
+   "WAVE1/W35/U4_L12",
+   "WAVE1/W35/U4_L16",
+   "WAVE1/W35/U4_L7",
+   "WAVE1/W35/U5-10_L",
+   "WAVE1/W35/U5-12_L",
+   "WAVE1/W35/U5-14_L",
+   "WAVE1/W35/U5-16_L",
+   "WAVE1/W35/U5-7_L",
+   "WAVE1/W35/U5_L13",
+   "WAVE1/W35/U5_L7",
+   "WAVE1/W35/U6-14_L",
+   "WAVE1/W35/U6-9_L",
+   "WAVE1/W35/U6_L10",
+   "WAVE1/W35/U6_L16",
+   "WAVE1/W35/U6_L5",
+   "WAVE1/W35/U7_L12",
+   "WAVE1/W35/U7_L8",
+   "WAVE1/W35/U8_L10",
+   "WAVE1/W35/U8_L14",
+   "WAVE1/W35/U8_L15",
+   "WAVE1/W35/U8_L2",
+   "WAVE1/W35/U8_L9",
+   "WAVE1/W35/U9_L10",
+   "WAVE1/W35/U9_L11",
+   "WAVE1/W35/U9_L15",
+   "WAVE1/W35/U9_L5",
+   "WAVE1/W35/U9_L8",
+   "WAVE1/W35/U_L2-15",
+   "WAVE1/W35/U_L4-15",
+   "WAVE1/W35/U_L5-8"
+  ],
+  "dirs_skipped": [
+   "WAVE1/W00/scripts",
+   "WAVE1/W01/scripts",
+   "WAVE1/W03/scripts",
+   "WAVE1/W04/scripts",
+   "WAVE1/W05/scripts",
+   "WAVE1/W07/scripts",
+   "WAVE1/W08/scripts",
+   "WAVE1/W09/scripts",
+   "WAVE1/W10/scripts",
+   "WAVE1/W12/scripts",
+   "WAVE1/W14/scripts",
+   "WAVE1/W15/scripts",
+   "WAVE1/W17/scripts",
+   "WAVE1/W18/scripts",
+   "WAVE1/W19/scripts",
+   "WAVE1/W20/scripts",
+   "WAVE1/W21/scripts",
+   "WAVE1/W22/scripts",
+   "WAVE1/W24/scripts",
+   "WAVE1/W26/scripts",
+   "WAVE1/W27/scripts",
+   "WAVE1/W28/scripts",
+   "WAVE1/W32/scripts",
+   "WAVE1/W34/U10_L12",
+   "WAVE1/W34/U10_L16",
+   "WAVE1/W34/U10_L6",
+   "WAVE1/W34/U11_L12",
+   "WAVE1/W34/U11_L16",
+   "WAVE1/W34/U11_L7",
+   "WAVE1/W34/U12_L2",
+   "WAVE1/W34/U12_L8",
+   "WAVE1/W34/U12_L9",
+   "WAVE1/W34/U13_L11",
+   "WAVE1/W34/U13_L2",
+   "WAVE1/W34/U13_L7",
+   "WAVE1/W34/U14_L2",
+   "WAVE1/W34/U14_L8",
+   "WAVE1/W34/U15_L2",
+   "WAVE1/W34/U15_L8",
+   "WAVE1/W34/U15_L9",
+   "WAVE1/W34/U16_L11",
+   "WAVE1/W34/U16_L5",
+   "WAVE1/W34/U16_L9",
+   "WAVE1/W34/U3-15_L",
+   "WAVE1/W34/U4_L10",
+   "WAVE1/W34/U4_L13",
+   "WAVE1/W34/U4_L8",
+   "WAVE1/W34/U5_L14",
+   "WAVE1/W34/U5_L15",
+   "WAVE1/W34/U5_L2",
+   "WAVE1/W34/U5_L8",
+   "WAVE1/W34/U6_L11",
+   "WAVE1/W34/U6_L7",
+   "WAVE1/W34/U7_L14",
+   "WAVE1/W34/U7_L2",
+   "WAVE1/W34/U7_L9",
+   "WAVE1/W34/U8_L11",
+   "WAVE1/W34/U8_L4",
+   "WAVE1/W34/U8_L6",
+   "WAVE1/W34/U9_L12",
+   "WAVE1/W34/U9_L16",
+   "WAVE1/W34/U9_L2",
+   "WAVE1/W34/U_L4-10",
+   "WAVE1/W35/scripts",
+   "WAVE2/S5/scripts"
+  ]
+ },
+ "rows": [
+  {
+   "k": 0,
+   "case": "U2_L",
+   "U": [
+    2
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 1,
+   "case": "U_L2",
+   "U": [],
+   "L": [
+    2
+   ],
+   "dirs": [
+    "WAVE1/W00/U_L2.s0of12",
+    "WAVE1/W01/U_L2.s01",
+    "WAVE1/W02/U_L2.s2of12",
+    "WAVE1/W03/U_L2_s3of12",
+    "WAVE1/W04/U_L2_s4",
+    "WAVE1/W05/U_L2.s5",
+    "WAVE1/W06/U_L2.s6",
+    "WAVE1/W07/U_L2",
+    "WAVE1/W08/U_L2.s8",
+    "WAVE1/W09/U_L2.s9",
+    "WAVE1/W10/U_L2_s10of12",
+    "WAVE1/W11/U_L2_s11",
+    "WAVE3/G1/U_L2",
+    "WAVE3/G2/U_L2",
+    "WAVE3/G3/U_L2",
+    "WAVE4/H01/U_L2",
+    "WAVE4/H02/U_L2",
+    "WAVE4/H03/U_L2",
+    "WAVE4/H04/U_L2",
+    "WAVE4/H05/U_L2",
+    "WAVE4/H06/U_L2",
+    "WAVE4/H07/U_L2",
+    "WAVE4/H08/U_L2",
+    "WAVE4/H09/U_L2",
+    "WAVE4/H10/U_L2",
+    "WAVE4/H11/U_L2",
+    "WAVE4/H12/U_L2",
+    "WAVE4/H13/U_L2",
+    "WAVE4/H14/U_L2",
+    "WAVE4/H15/U_L2",
+    "WAVE4/H16/U_L2",
+    "WAVE4/H17/U_L2",
+    "WAVE4/H18/U_L2",
+    "WAVE4/H32/U_L2",
+    "WAVE4/H33/U_L2",
+    "WAVE4/H46/U_L2",
+    "WAVE4/H47/U_L2",
+    "WAVE4/H48/U_L2",
+    "WAVE4/H56/U_L2",
+    "WAVE4/H57/U_L2",
+    "WAVE4/H71/U_L2",
+    "WAVE4/H74/U_L2"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 22529,
+   "split": 357,
+   "depth": 7,
+   "closed_records": 22529,
+   "closed_unused": 0,
+   "nodes": 358
+  },
+  {
+   "k": 2,
+   "case": "U3_L",
+   "U": [
+    3
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W25/U3_L",
+    "WAVE2/F1/U3_L",
+    "WAVE2/F2/U3_L",
+    "WAVE2/F3/U3_L",
+    "WAVE4/H24/U3_L",
+    "WAVE4/H25/U3_L",
+    "WAVE4/H29/U3_L",
+    "WAVE4/H30/U3_L",
+    "WAVE4/H40/U3_L",
+    "WAVE4/H41/U3_L",
+    "WAVE4/H42/U3_L",
+    "WAVE4/H43/U3_L",
+    "WAVE4/H44/U3_L",
+    "WAVE4/H45/U3_L",
+    "WAVE4/H51/U3_L",
+    "WAVE4/H52/U3_L",
+    "WAVE4/H53/U3_L",
+    "WAVE4/H54/U3_L",
+    "WAVE4/H55/U3_L",
+    "WAVE4/H60/U3_L",
+    "WAVE4/H61/U3_L",
+    "WAVE4/H62/U3_L",
+    "WAVE4/H63/U3_L",
+    "WAVE4/H64/U3_L",
+    "WAVE4/H65/U3_L",
+    "WAVE4/H66/U3_L",
+    "WAVE4/H67/U3_L",
+    "WAVE4/H72/U3_L",
+    "WAVE4/H73/U3_L",
+    "WAVE4/H75/U3_L"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 11744,
+   "split": 185,
+   "depth": 6,
+   "closed_records": 11744,
+   "closed_unused": 0,
+   "nodes": 186
+  },
+  {
+   "k": 3,
+   "case": "U_L3",
+   "U": [],
+   "L": [
+    3
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 4,
+   "case": "U4_L",
+   "U": [
+    4
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W29/U4_L",
+    "WAVE2/F4/U4_L",
+    "WAVE2/F5/U4_L",
+    "WAVE4/H28/U4_L",
+    "WAVE4/H31/U4_L"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 3336,
+   "split": 51,
+   "depth": 5,
+   "closed_records": 3336,
+   "closed_unused": 0,
+   "nodes": 52
+  },
+  {
+   "k": 5,
+   "case": "U_L4",
+   "U": [],
+   "L": [
+    4
+   ],
+   "dirs": [
+    "WAVE1/W12/U_L4_s0",
+    "WAVE1/W13/U_L4-s1",
+    "WAVE1/W14/U_L4_shard2of3"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 1856,
+   "split": 28,
+   "depth": 5,
+   "closed_records": 1856,
+   "closed_unused": 0,
+   "nodes": 29
+  },
+  {
+   "k": 6,
+   "case": "U5_L",
+   "U": [
+    5
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W27/U5_L",
+    "WAVE3/G20/U5_L"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 2055,
+   "split": 31,
+   "depth": 5,
+   "closed_records": 2055,
+   "closed_unused": 0,
+   "nodes": 32
+  },
+  {
+   "k": 7,
+   "case": "U_L5",
+   "U": [],
+   "L": [
+    5
+   ],
+   "dirs": [
+    "WAVE1/W28/U_L5",
+    "WAVE3/G22/U_L5"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 1751,
+   "split": 26,
+   "depth": 7,
+   "closed_records": 1751,
+   "closed_unused": 0,
+   "nodes": 27
+  },
+  {
+   "k": 8,
+   "case": "U6_L",
+   "U": [
+    6
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W15/U6_L.s0of2",
+    "WAVE1/W16/U6_L"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 1099,
+   "split": 16,
+   "depth": 5,
+   "closed_records": 1099,
+   "closed_unused": 0,
+   "nodes": 17
+  },
+  {
+   "k": 9,
+   "case": "U_L6",
+   "U": [],
+   "L": [
+    6
+   ],
+   "dirs": [
+    "WAVE1/W28/U_L6",
+    "WAVE3/G21/U_L6",
+    "WAVE4/H19/U_L6",
+    "WAVE4/H20/U_L6",
+    "WAVE4/H21/U_L6",
+    "WAVE4/H22/U_L6",
+    "WAVE4/H23/U_L6",
+    "WAVE4/H34/U_L6",
+    "WAVE4/H50/U_L6"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 2701,
+   "split": 43,
+   "depth": 6,
+   "closed_records": 2701,
+   "closed_unused": 0,
+   "nodes": 44
+  },
+  {
+   "k": 10,
+   "case": "U7_L",
+   "U": [
+    7
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W26/U7_L",
+    "WAVE3/G23/U7_L"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 871,
+   "split": 12,
+   "depth": 5,
+   "closed_records": 871,
+   "closed_unused": 0,
+   "nodes": 13
+  },
+  {
+   "k": 11,
+   "case": "U_L7",
+   "U": [],
+   "L": [
+    7
+   ],
+   "dirs": [
+    "WAVE1/W28/U_L7",
+    "WAVE3/G14/U_L7",
+    "WAVE3/G15/U_L7",
+    "WAVE4/H26/U_L7",
+    "WAVE4/H27/U_L7",
+    "WAVE4/H35/U_L7",
+    "WAVE4/H36/U_L7",
+    "WAVE4/H37/U_L7",
+    "WAVE4/H38/U_L7",
+    "WAVE4/H39/U_L7",
+    "WAVE4/H49/U_L7",
+    "WAVE4/H58/U_L7",
+    "WAVE4/H59/U_L7",
+    "WAVE4/H68/U_L7",
+    "WAVE4/H69/U_L7",
+    "WAVE4/H70/U_L7"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 3707,
+   "split": 59,
+   "depth": 7,
+   "closed_records": 3759,
+   "closed_unused": 52,
+   "nodes": 60
+  },
+  {
+   "k": 12,
+   "case": "U8_L",
+   "U": [
+    8
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W29/U8_L",
+    "WAVE3/G8/U8_L",
+    "WAVE3/G9/U8_L"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 567,
+   "split": 7,
+   "depth": 4,
+   "closed_records": 567,
+   "closed_unused": 0,
+   "nodes": 8
+  },
+  {
+   "k": 13,
+   "case": "U_L8",
+   "U": [],
+   "L": [
+    8
+   ],
+   "dirs": [
+    "WAVE1/W30/U_L8",
+    "WAVE2/F6/U_L8",
+    "WAVE2/F7/U_L8"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 2598,
+   "split": 40,
+   "depth": 7,
+   "closed_records": 2598,
+   "closed_unused": 0,
+   "nodes": 41
+  },
+  {
+   "k": 14,
+   "case": "U9_L",
+   "U": [
+    9
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W30/U9_L",
+    "WAVE3/G18/U9_L",
+    "WAVE3/G19/U9_L"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 565,
+   "split": 7,
+   "depth": 4,
+   "closed_records": 565,
+   "closed_unused": 0,
+   "nodes": 8
+  },
+  {
+   "k": 15,
+   "case": "U_L9",
+   "U": [],
+   "L": [
+    9
+   ],
+   "dirs": [
+    "WAVE1/W27/U_L9",
+    "WAVE3/G16/U_L9",
+    "WAVE3/G17/U_L9"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 191,
+   "split": 1,
+   "depth": 2,
+   "closed_records": 191,
+   "closed_unused": 0,
+   "nodes": 2
+  },
+  {
+   "k": 16,
+   "case": "U10_L",
+   "U": [
+    10
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W17/U10_L.s0of2",
+    "WAVE1/W18/U10_L"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 437,
+   "split": 5,
+   "depth": 3,
+   "closed_records": 437,
+   "closed_unused": 0,
+   "nodes": 6
+  },
+  {
+   "k": 17,
+   "case": "U_L10",
+   "U": [],
+   "L": [
+    10
+   ],
+   "dirs": [
+    "WAVE1/W26/U_L10"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 18,
+   "case": "U11_L",
+   "U": [
+    11
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W28/U11_L"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 309,
+   "split": 3,
+   "depth": 2,
+   "closed_records": 309,
+   "closed_unused": 0,
+   "nodes": 4
+  },
+  {
+   "k": 19,
+   "case": "U_L11",
+   "U": [],
+   "L": [
+    11
+   ],
+   "dirs": [
+    "WAVE1/W19/U_L11_s0of4",
+    "WAVE1/W20/U_L11_s1",
+    "WAVE1/W21/U_L11.s2of4",
+    "WAVE1/W22/U_L11"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 20,
+   "case": "U12_L",
+   "U": [
+    12
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W23/U12_L_s0",
+    "WAVE1/W24/U12_L_s1of2"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 191,
+   "split": 1,
+   "depth": 2,
+   "closed_records": 191,
+   "closed_unused": 0,
+   "nodes": 2
+  },
+  {
+   "k": 21,
+   "case": "U_L12",
+   "U": [],
+   "L": [
+    12
+   ],
+   "dirs": [
+    "WAVE1/W27/U_L12"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 22,
+   "case": "U13_L",
+   "U": [
+    13
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W26/U13_L"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 23,
+   "case": "U_L13",
+   "U": [],
+   "L": [
+    13
+   ],
+   "dirs": [
+    "WAVE1/W31/U_L13"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 24,
+   "case": "U14_L",
+   "U": [
+    14
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W26/U14_L"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 25,
+   "case": "U_L14",
+   "U": [],
+   "L": [
+    14
+   ],
+   "dirs": [
+    "WAVE1/W31/U_L14"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 26,
+   "case": "U15_L",
+   "U": [
+    15
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W29/U15_L",
+    "WAVE3/G4/U15_L",
+    "WAVE3/G5/U15_L"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 304,
+   "split": 3,
+   "depth": 3,
+   "closed_records": 304,
+   "closed_unused": 0,
+   "nodes": 4
+  },
+  {
+   "k": 27,
+   "case": "U_L15",
+   "U": [],
+   "L": [
+    15
+   ],
+   "dirs": [
+    "WAVE1/W29/U_L15",
+    "WAVE3/G10/U_L15",
+    "WAVE3/G11/U_L15"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 28,
+   "case": "U16_L",
+   "U": [
+    16
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W25/U16_L",
+    "WAVE3/G6/U16_L",
+    "WAVE3/G7/U16_L"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 29,
+   "case": "U_L16",
+   "U": [],
+   "L": [
+    16
+   ],
+   "dirs": [
+    "WAVE1/W25/U_L16",
+    "WAVE3/G12/U_L16",
+    "WAVE3/G13/U_L16"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 30,
+   "case": "U2-3_L",
+   "U": [
+    2,
+    3
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 31,
+   "case": "U_L2-3",
+   "U": [],
+   "L": [
+    2,
+    3
+   ],
+   "dirs": [
+    "WAVE1/W35/U_L2-3"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 500,
+   "split": 6,
+   "depth": 3,
+   "closed_records": 500,
+   "closed_unused": 0,
+   "nodes": 7
+  },
+  {
+   "k": 32,
+   "case": "U2-4_L",
+   "U": [
+    2,
+    4
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 33,
+   "case": "U_L2-4",
+   "U": [],
+   "L": [
+    2,
+    4
+   ],
+   "dirs": [
+    "WAVE1/W34/U_L2-4"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 379,
+   "split": 4,
+   "depth": 3,
+   "closed_records": 379,
+   "closed_unused": 0,
+   "nodes": 5
+  },
+  {
+   "k": 34,
+   "case": "U2-5_L",
+   "U": [
+    2,
+    5
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 35,
+   "case": "U_L2-5",
+   "U": [],
+   "L": [
+    2,
+    5
+   ],
+   "dirs": [
+    "WAVE1/W33/U_L2-5"
+   ],
+   "tree": "node",
+   "roots": 123,
+   "leaves": 123,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 123,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 36,
+   "case": "U2-6_L",
+   "U": [
+    2,
+    6
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 37,
+   "case": "U_L2-6",
+   "U": [],
+   "L": [
+    2,
+    6
+   ],
+   "dirs": [
+    "WAVE1/W35/U_L2-6"
+   ],
+   "tree": "node",
+   "roots": 127,
+   "leaves": 367,
+   "split": 4,
+   "depth": 3,
+   "closed_records": 367,
+   "closed_unused": 0,
+   "nodes": 5
+  },
+  {
+   "k": 38,
+   "case": "U2-7_L",
+   "U": [
+    2,
+    7
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 39,
+   "case": "U_L2-7",
+   "U": [],
+   "L": [
+    2,
+    7
+   ],
+   "dirs": [
+    "WAVE1/W34/U_L2-7"
+   ],
+   "tree": "node",
+   "roots": 125,
+   "leaves": 377,
+   "split": 4,
+   "depth": 3,
+   "closed_records": 377,
+   "closed_unused": 0,
+   "nodes": 5
+  },
+  {
+   "k": 40,
+   "case": "U2-8_L",
+   "U": [
+    2,
+    8
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 41,
+   "case": "U_L2-8",
+   "U": [],
+   "L": [
+    2,
+    8
+   ],
+   "dirs": [
+    "WAVE1/W32/U_L2-8"
+   ],
+   "tree": "node",
+   "roots": 122,
+   "leaves": 185,
+   "split": 1,
+   "depth": 2,
+   "closed_records": 185,
+   "closed_unused": 0,
+   "nodes": 2
+  },
+  {
+   "k": 42,
+   "case": "U2-9_L",
+   "U": [
+    2,
+    9
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 43,
+   "case": "U_L2-9",
+   "U": [],
+   "L": [
+    2,
+    9
+   ],
+   "dirs": [
+    "WAVE1/W33/U_L2-9"
+   ],
+   "tree": "node",
+   "roots": 122,
+   "leaves": 122,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 122,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 44,
+   "case": "U2-10_L",
+   "U": [
+    2,
+    10
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 45,
+   "case": "U_L2-10",
+   "U": [],
+   "L": [
+    2,
+    10
+   ],
+   "dirs": [
+    "WAVE1/W35/U_L2-10"
+   ],
+   "tree": "node",
+   "roots": 122,
+   "leaves": 122,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 122,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 46,
+   "case": "U2-11_L",
+   "U": [
+    2,
+    11
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 47,
+   "case": "U_L2-11",
+   "U": [],
+   "L": [
+    2,
+    11
+   ],
+   "dirs": [
+    "WAVE1/W34/U_L2-11"
+   ],
+   "tree": "node",
+   "roots": 124,
+   "leaves": 124,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 124,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 48,
+   "case": "U2-12_L",
+   "U": [
+    2,
+    12
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 49,
+   "case": "U_L2-12",
+   "U": [],
+   "L": [
+    2,
+    12
+   ],
+   "dirs": [
+    "WAVE1/W33/U_L2-12"
+   ],
+   "tree": "node",
+   "roots": 125,
+   "leaves": 125,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 125,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 50,
+   "case": "U2-13_L",
+   "U": [
+    2,
+    13
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 51,
+   "case": "U_L2-13",
+   "U": [],
+   "L": [
+    2,
+    13
+   ],
+   "dirs": [
+    "WAVE1/W35/U_L2-13"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 52,
+   "case": "U2-14_L",
+   "U": [
+    2,
+    14
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 53,
+   "case": "U_L2-14",
+   "U": [],
+   "L": [
+    2,
+    14
+   ],
+   "dirs": [
+    "WAVE1/W34/U_L2-14"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 54,
+   "case": "U2-15_L",
+   "U": [
+    2,
+    15
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 55,
+   "case": "U_L2-15",
+   "U": [],
+   "L": [
+    2,
+    15
+   ],
+   "dirs": [
+    "WAVE1/W35/U_L2-15",
+    "WAVE2/S1/U_L2-15"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 56,
+   "case": "U2-16_L",
+   "U": [
+    2,
+    16
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 57,
+   "case": "U_L2-16",
+   "U": [],
+   "L": [
+    2,
+    16
+   ],
+   "dirs": [
+    "WAVE1/W33/U_L2-16"
+   ],
+   "tree": "node",
+   "roots": 117,
+   "leaves": 117,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 117,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 58,
+   "case": "U3-4_L",
+   "U": [
+    3,
+    4
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W35/U3-4_L"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 306,
+   "split": 3,
+   "depth": 3,
+   "closed_records": 306,
+   "closed_unused": 0,
+   "nodes": 4
+  },
+  {
+   "k": 59,
+   "case": "U_L3-4",
+   "U": [],
+   "L": [
+    3,
+    4
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 60,
+   "case": "U3-5_L",
+   "U": [
+    3,
+    5
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W34/U3-5_L"
+   ],
+   "tree": "node",
+   "roots": 122,
+   "leaves": 247,
+   "split": 2,
+   "depth": 3,
+   "closed_records": 247,
+   "closed_unused": 0,
+   "nodes": 3
+  },
+  {
+   "k": 61,
+   "case": "U_L3-5",
+   "U": [],
+   "L": [
+    3,
+    5
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 62,
+   "case": "U3-6_L",
+   "U": [
+    3,
+    6
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W33/U3-6_L"
+   ],
+   "tree": "node",
+   "roots": 119,
+   "leaves": 119,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 119,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 63,
+   "case": "U_L3-6",
+   "U": [],
+   "L": [
+    3,
+    6
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 64,
+   "case": "U3-7_L",
+   "U": [
+    3,
+    7
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W35/U3-7_L"
+   ],
+   "tree": "node",
+   "roots": 119,
+   "leaves": 119,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 119,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 65,
+   "case": "U_L3-7",
+   "U": [],
+   "L": [
+    3,
+    7
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 66,
+   "case": "U3-8_L",
+   "U": [
+    3,
+    8
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W34/U3-8_L"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 67,
+   "case": "U_L3-8",
+   "U": [],
+   "L": [
+    3,
+    8
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 68,
+   "case": "U3-9_L",
+   "U": [
+    3,
+    9
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W33/U3-9_L"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 69,
+   "case": "U_L3-9",
+   "U": [],
+   "L": [
+    3,
+    9
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 70,
+   "case": "U3-10_L",
+   "U": [
+    3,
+    10
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W35/U3-10_L"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 71,
+   "case": "U_L3-10",
+   "U": [],
+   "L": [
+    3,
+    10
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 72,
+   "case": "U3-11_L",
+   "U": [
+    3,
+    11
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W34/U3-11_L"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 73,
+   "case": "U_L3-11",
+   "U": [],
+   "L": [
+    3,
+    11
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 74,
+   "case": "U3-12_L",
+   "U": [
+    3,
+    12
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W33/U3-12_L"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 75,
+   "case": "U_L3-12",
+   "U": [],
+   "L": [
+    3,
+    12
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 76,
+   "case": "U3-13_L",
+   "U": [
+    3,
+    13
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W35/U3-13_L"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 77,
+   "case": "U_L3-13",
+   "U": [],
+   "L": [
+    3,
+    13
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 78,
+   "case": "U3-14_L",
+   "U": [
+    3,
+    14
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W34/U3-14_L"
+   ],
+   "tree": "node",
+   "roots": 127,
+   "leaves": 127,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 127,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 79,
+   "case": "U_L3-14",
+   "U": [],
+   "L": [
+    3,
+    14
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 80,
+   "case": "U3-15_L",
+   "U": [
+    3,
+    15
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE2/S3/U3-15_L"
+   ],
+   "tree": "node",
+   "roots": 127,
+   "leaves": 127,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 127,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 81,
+   "case": "U_L3-15",
+   "U": [],
+   "L": [
+    3,
+    15
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 82,
+   "case": "U3-16_L",
+   "U": [
+    3,
+    16
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W35/U3-16_L",
+    "WAVE2/S1/U3-16_L"
+   ],
+   "tree": "node",
+   "roots": 112,
+   "leaves": 112,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 112,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 83,
+   "case": "U_L3-16",
+   "U": [],
+   "L": [
+    3,
+    16
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 84,
+   "case": "U4-5_L",
+   "U": [
+    4,
+    5
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W33/U4-5_L"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 85,
+   "case": "U_L4-5",
+   "U": [],
+   "L": [
+    4,
+    5
+   ],
+   "dirs": [
+    "WAVE1/W35/U_L4-5"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W35/U_L4-5"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 86,
+   "case": "U4-6_L",
+   "U": [
+    4,
+    6
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W34/U4-6_L"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 87,
+   "case": "U_L4-6",
+   "U": [],
+   "L": [
+    4,
+    6
+   ],
+   "dirs": [
+    "WAVE1/W33/U_L4-6"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U_L4-6"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 88,
+   "case": "U4-7_L",
+   "U": [
+    4,
+    7
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W35/U4-7_L"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 89,
+   "case": "U_L4-7",
+   "U": [],
+   "L": [
+    4,
+    7
+   ],
+   "dirs": [
+    "WAVE1/W34/U_L4-7"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W34/U_L4-7"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 90,
+   "case": "U4-8_L",
+   "U": [
+    4,
+    8
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W33/U4-8_L"
+   ],
+   "tree": "node",
+   "roots": 108,
+   "leaves": 108,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 108,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 91,
+   "case": "U_L4-8",
+   "U": [],
+   "L": [
+    4,
+    8
+   ],
+   "dirs": [
+    "WAVE1/W35/U_L4-8"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W35/U_L4-8"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 92,
+   "case": "U4-9_L",
+   "U": [
+    4,
+    9
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W34/U4-9_L"
+   ],
+   "tree": "node",
+   "roots": 103,
+   "leaves": 103,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 103,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 93,
+   "case": "U_L4-9",
+   "U": [],
+   "L": [
+    4,
+    9
+   ],
+   "dirs": [
+    "WAVE1/W33/U_L4-9"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U_L4-9"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 94,
+   "case": "U4-10_L",
+   "U": [
+    4,
+    10
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W35/U4-10_L"
+   ],
+   "tree": "node",
+   "roots": 104,
+   "leaves": 104,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 104,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 95,
+   "case": "U_L4-10",
+   "U": [],
+   "L": [
+    4,
+    10
+   ],
+   "dirs": [
+    "WAVE2/S3/U_L4-10"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S3/U_L4-10"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 96,
+   "case": "U4-11_L",
+   "U": [
+    4,
+    11
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W34/U4-11_L"
+   ],
+   "tree": "node",
+   "roots": 118,
+   "leaves": 118,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 118,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 97,
+   "case": "U_L4-11",
+   "U": [],
+   "L": [
+    4,
+    11
+   ],
+   "dirs": [
+    "WAVE1/W33/U_L4-11"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U_L4-11"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 98,
+   "case": "U4-12_L",
+   "U": [
+    4,
+    12
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W35/U4-12_L",
+    "WAVE2/S2/U4-12_L",
+    "WAVE3/G25/U4-12_L"
+   ],
+   "tree": "node",
+   "roots": 116,
+   "leaves": 116,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 116,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 99,
+   "case": "U_L4-12",
+   "U": [],
+   "L": [
+    4,
+    12
+   ],
+   "dirs": [
+    "WAVE1/W32/U_L4-12"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U_L4-12"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 100,
+   "case": "U4-13_L",
+   "U": [
+    4,
+    13
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W34/U4-13_L"
+   ],
+   "tree": "node",
+   "roots": 96,
+   "leaves": 96,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 96,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 101,
+   "case": "U_L4-13",
+   "U": [],
+   "L": [
+    4,
+    13
+   ],
+   "dirs": [
+    "WAVE1/W33/U_L4-13"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U_L4-13"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 102,
+   "case": "U4-14_L",
+   "U": [
+    4,
+    14
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W35/U4-14_L",
+    "WAVE2/S2/U4-14_L"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S2/U4-14_L"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 103,
+   "case": "U_L4-14",
+   "U": [],
+   "L": [
+    4,
+    14
+   ],
+   "dirs": [
+    "WAVE1/W34/U_L4-14"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W34/U_L4-14"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 104,
+   "case": "U4-15_L",
+   "U": [
+    4,
+    15
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W33/U4-15_L"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U4-15_L"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 105,
+   "case": "U_L4-15",
+   "U": [],
+   "L": [
+    4,
+    15
+   ],
+   "dirs": [
+    "WAVE1/W35/U_L4-15",
+    "WAVE2/S2/U_L4-15"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S2/U_L4-15"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 106,
+   "case": "U4-16_L",
+   "U": [
+    4,
+    16
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W33/U4-16_L",
+    "WAVE2/S5/U4-16_L"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S5/U4-16_L"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 107,
+   "case": "U_L4-16",
+   "U": [],
+   "L": [
+    4,
+    16
+   ],
+   "dirs": [
+    "WAVE1/W32/U_L4-16"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U_L4-16"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 108,
+   "case": "U5-6_L",
+   "U": [
+    5,
+    6
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W34/U5-6_L"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W34/U5-6_L"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 109,
+   "case": "U_L5-6",
+   "U": [],
+   "L": [
+    5,
+    6
+   ],
+   "dirs": [
+    "WAVE1/W33/U_L5-6"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U_L5-6"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 110,
+   "case": "U5-7_L",
+   "U": [
+    5,
+    7
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W35/U5-7_L",
+    "WAVE2/S2/U5-7_L"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S2/U5-7_L"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 111,
+   "case": "U_L5-7",
+   "U": [],
+   "L": [
+    5,
+    7
+   ],
+   "dirs": [
+    "WAVE1/W34/U_L5-7"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W34/U_L5-7"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 112,
+   "case": "U5-8_L",
+   "U": [
+    5,
+    8
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W33/U5-8_L"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U5-8_L"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 113,
+   "case": "U_L5-8",
+   "U": [],
+   "L": [
+    5,
+    8
+   ],
+   "dirs": [
+    "WAVE1/W35/U_L5-8",
+    "WAVE2/S2/U_L5-8"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S2/U_L5-8"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 114,
+   "case": "U5-9_L",
+   "U": [
+    5,
+    9
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W34/U5-9_L"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W34/U5-9_L"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 115,
+   "case": "U_L5-9",
+   "U": [],
+   "L": [
+    5,
+    9
+   ],
+   "dirs": [
+    "WAVE1/W33/U_L5-9"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U_L5-9"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 116,
+   "case": "U5-10_L",
+   "U": [
+    5,
+    10
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W35/U5-10_L",
+    "WAVE2/S2/U5-10_L"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S2/U5-10_L"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 117,
+   "case": "U_L5-10",
+   "U": [],
+   "L": [
+    5,
+    10
+   ],
+   "dirs": [
+    "WAVE1/W34/U_L5-10"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W34/U_L5-10"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 118,
+   "case": "U5-11_L",
+   "U": [
+    5,
+    11
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W32/U5-11_L"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U5-11_L"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 119,
+   "case": "U_L5-11",
+   "U": [],
+   "L": [
+    5,
+    11
+   ],
+   "dirs": [
+    "WAVE1/W33/U_L5-11"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U_L5-11"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 120,
+   "case": "U5-12_L",
+   "U": [
+    5,
+    12
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W35/U5-12_L",
+    "WAVE2/S2/U5-12_L"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S2/U5-12_L"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 121,
+   "case": "U_L5-12",
+   "U": [],
+   "L": [
+    5,
+    12
+   ],
+   "dirs": [
+    "WAVE1/W34/U_L5-12"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W34/U_L5-12"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 122,
+   "case": "U5-13_L",
+   "U": [
+    5,
+    13
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W32/U5-13_L"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U5-13_L"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 123,
+   "case": "U_L5-13",
+   "U": [],
+   "L": [
+    5,
+    13
+   ],
+   "dirs": [
+    "WAVE1/W33/U_L5-13"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U_L5-13"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 124,
+   "case": "U5-14_L",
+   "U": [
+    5,
+    14
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W35/U5-14_L",
+    "WAVE2/S2/U5-14_L"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S2/U5-14_L"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 125,
+   "case": "U_L5-14",
+   "U": [],
+   "L": [
+    5,
+    14
+   ],
+   "dirs": [
+    "WAVE1/W34/U_L5-14"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W34/U_L5-14"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 126,
+   "case": "U5-15_L",
+   "U": [
+    5,
+    15
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W32/U5-15_L"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U5-15_L"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 127,
+   "case": "U_L5-15",
+   "U": [],
+   "L": [
+    5,
+    15
+   ],
+   "dirs": [
+    "WAVE1/W33/U_L5-15"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U_L5-15"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 128,
+   "case": "U5-16_L",
+   "U": [
+    5,
+    16
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W35/U5-16_L",
+    "WAVE2/S2/U5-16_L"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S2/U5-16_L"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 129,
+   "case": "U_L5-16",
+   "U": [],
+   "L": [
+    5,
+    16
+   ],
+   "dirs": [
+    "WAVE1/W34/U_L5-16"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W34/U_L5-16"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 130,
+   "case": "U6-7_L",
+   "U": [
+    6,
+    7
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W32/U6-7_L"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U6-7_L"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 131,
+   "case": "U_L6-7",
+   "U": [],
+   "L": [
+    6,
+    7
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 132,
+   "case": "U6-8_L",
+   "U": [
+    6,
+    8
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W33/U6-8_L"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U6-8_L"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 133,
+   "case": "U_L6-8",
+   "U": [],
+   "L": [
+    6,
+    8
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 134,
+   "case": "U6-9_L",
+   "U": [
+    6,
+    9
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W35/U6-9_L",
+    "WAVE2/S2/U6-9_L"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S2/U6-9_L"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 135,
+   "case": "U_L6-9",
+   "U": [],
+   "L": [
+    6,
+    9
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 136,
+   "case": "U6-10_L",
+   "U": [
+    6,
+    10
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W34/U6-10_L"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W34/U6-10_L"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 137,
+   "case": "U_L6-10",
+   "U": [],
+   "L": [
+    6,
+    10
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 138,
+   "case": "U6-11_L",
+   "U": [
+    6,
+    11
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W32/U6-11_L"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U6-11_L"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 139,
+   "case": "U_L6-11",
+   "U": [],
+   "L": [
+    6,
+    11
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 140,
+   "case": "U6-12_L",
+   "U": [
+    6,
+    12
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W33/U6-12_L"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U6-12_L"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 141,
+   "case": "U_L6-12",
+   "U": [],
+   "L": [
+    6,
+    12
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 142,
+   "case": "U6-13_L",
+   "U": [
+    6,
+    13
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W32/U6-13_L"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U6-13_L"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 143,
+   "case": "U_L6-13",
+   "U": [],
+   "L": [
+    6,
+    13
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 144,
+   "case": "U6-14_L",
+   "U": [
+    6,
+    14
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W35/U6-14_L",
+    "WAVE2/S2/U6-14_L"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S2/U6-14_L"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 145,
+   "case": "U_L6-14",
+   "U": [],
+   "L": [
+    6,
+    14
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 146,
+   "case": "U6-15_L",
+   "U": [
+    6,
+    15
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W34/U6-15_L"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W34/U6-15_L"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 147,
+   "case": "U_L6-15",
+   "U": [],
+   "L": [
+    6,
+    15
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 148,
+   "case": "U6-16_L",
+   "U": [
+    6,
+    16
+   ],
+   "L": [],
+   "dirs": [
+    "WAVE1/W32/U6-16_L"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U6-16_L"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 149,
+   "case": "U_L6-16",
+   "U": [],
+   "L": [
+    6,
+    16
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 150,
+   "case": "U7-8_L",
+   "U": [
+    7,
+    8
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 151,
+   "case": "U_L7-8",
+   "U": [],
+   "L": [
+    7,
+    8
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 152,
+   "case": "U7-9_L",
+   "U": [
+    7,
+    9
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 153,
+   "case": "U_L7-9",
+   "U": [],
+   "L": [
+    7,
+    9
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 154,
+   "case": "U7-10_L",
+   "U": [
+    7,
+    10
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 155,
+   "case": "U_L7-10",
+   "U": [],
+   "L": [
+    7,
+    10
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 156,
+   "case": "U7-11_L",
+   "U": [
+    7,
+    11
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 157,
+   "case": "U_L7-11",
+   "U": [],
+   "L": [
+    7,
+    11
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 158,
+   "case": "U7-12_L",
+   "U": [
+    7,
+    12
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 159,
+   "case": "U_L7-12",
+   "U": [],
+   "L": [
+    7,
+    12
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 160,
+   "case": "U7-13_L",
+   "U": [
+    7,
+    13
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 161,
+   "case": "U_L7-13",
+   "U": [],
+   "L": [
+    7,
+    13
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 162,
+   "case": "U7-14_L",
+   "U": [
+    7,
+    14
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 163,
+   "case": "U_L7-14",
+   "U": [],
+   "L": [
+    7,
+    14
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 164,
+   "case": "U7-15_L",
+   "U": [
+    7,
+    15
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 165,
+   "case": "U_L7-15",
+   "U": [],
+   "L": [
+    7,
+    15
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 166,
+   "case": "U7-16_L",
+   "U": [
+    7,
+    16
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 167,
+   "case": "U_L7-16",
+   "U": [],
+   "L": [
+    7,
+    16
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 168,
+   "case": "U8-9_L",
+   "U": [
+    8,
+    9
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 169,
+   "case": "U_L8-9",
+   "U": [],
+   "L": [
+    8,
+    9
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 170,
+   "case": "U8-10_L",
+   "U": [
+    8,
+    10
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 171,
+   "case": "U_L8-10",
+   "U": [],
+   "L": [
+    8,
+    10
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 172,
+   "case": "U8-11_L",
+   "U": [
+    8,
+    11
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 173,
+   "case": "U_L8-11",
+   "U": [],
+   "L": [
+    8,
+    11
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 174,
+   "case": "U8-12_L",
+   "U": [
+    8,
+    12
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 175,
+   "case": "U_L8-12",
+   "U": [],
+   "L": [
+    8,
+    12
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 176,
+   "case": "U8-13_L",
+   "U": [
+    8,
+    13
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 177,
+   "case": "U_L8-13",
+   "U": [],
+   "L": [
+    8,
+    13
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 178,
+   "case": "U8-14_L",
+   "U": [
+    8,
+    14
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 179,
+   "case": "U_L8-14",
+   "U": [],
+   "L": [
+    8,
+    14
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 180,
+   "case": "U8-15_L",
+   "U": [
+    8,
+    15
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 181,
+   "case": "U_L8-15",
+   "U": [],
+   "L": [
+    8,
+    15
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 182,
+   "case": "U8-16_L",
+   "U": [
+    8,
+    16
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 183,
+   "case": "U_L8-16",
+   "U": [],
+   "L": [
+    8,
+    16
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 184,
+   "case": "U9-10_L",
+   "U": [
+    9,
+    10
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 185,
+   "case": "U_L9-10",
+   "U": [],
+   "L": [
+    9,
+    10
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 186,
+   "case": "U9-11_L",
+   "U": [
+    9,
+    11
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 187,
+   "case": "U_L9-11",
+   "U": [],
+   "L": [
+    9,
+    11
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 188,
+   "case": "U9-12_L",
+   "U": [
+    9,
+    12
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 189,
+   "case": "U_L9-12",
+   "U": [],
+   "L": [
+    9,
+    12
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 190,
+   "case": "U9-13_L",
+   "U": [
+    9,
+    13
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 191,
+   "case": "U_L9-13",
+   "U": [],
+   "L": [
+    9,
+    13
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 192,
+   "case": "U9-14_L",
+   "U": [
+    9,
+    14
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 193,
+   "case": "U_L9-14",
+   "U": [],
+   "L": [
+    9,
+    14
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 194,
+   "case": "U9-15_L",
+   "U": [
+    9,
+    15
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 195,
+   "case": "U_L9-15",
+   "U": [],
+   "L": [
+    9,
+    15
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 196,
+   "case": "U9-16_L",
+   "U": [
+    9,
+    16
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 197,
+   "case": "U_L9-16",
+   "U": [],
+   "L": [
+    9,
+    16
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 198,
+   "case": "U10-11_L",
+   "U": [
+    10,
+    11
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 199,
+   "case": "U_L10-11",
+   "U": [],
+   "L": [
+    10,
+    11
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 200,
+   "case": "U10-12_L",
+   "U": [
+    10,
+    12
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 201,
+   "case": "U_L10-12",
+   "U": [],
+   "L": [
+    10,
+    12
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 202,
+   "case": "U10-13_L",
+   "U": [
+    10,
+    13
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 203,
+   "case": "U_L10-13",
+   "U": [],
+   "L": [
+    10,
+    13
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 204,
+   "case": "U10-14_L",
+   "U": [
+    10,
+    14
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 205,
+   "case": "U_L10-14",
+   "U": [],
+   "L": [
+    10,
+    14
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 206,
+   "case": "U10-15_L",
+   "U": [
+    10,
+    15
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 207,
+   "case": "U_L10-15",
+   "U": [],
+   "L": [
+    10,
+    15
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 208,
+   "case": "U10-16_L",
+   "U": [
+    10,
+    16
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 209,
+   "case": "U_L10-16",
+   "U": [],
+   "L": [
+    10,
+    16
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 210,
+   "case": "U11-12_L",
+   "U": [
+    11,
+    12
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 211,
+   "case": "U_L11-12",
+   "U": [],
+   "L": [
+    11,
+    12
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 212,
+   "case": "U11-13_L",
+   "U": [
+    11,
+    13
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 213,
+   "case": "U_L11-13",
+   "U": [],
+   "L": [
+    11,
+    13
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 214,
+   "case": "U11-14_L",
+   "U": [
+    11,
+    14
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 215,
+   "case": "U_L11-14",
+   "U": [],
+   "L": [
+    11,
+    14
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 216,
+   "case": "U11-15_L",
+   "U": [
+    11,
+    15
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 217,
+   "case": "U_L11-15",
+   "U": [],
+   "L": [
+    11,
+    15
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 218,
+   "case": "U11-16_L",
+   "U": [
+    11,
+    16
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 219,
+   "case": "U_L11-16",
+   "U": [],
+   "L": [
+    11,
+    16
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 220,
+   "case": "U12-13_L",
+   "U": [
+    12,
+    13
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 221,
+   "case": "U_L12-13",
+   "U": [],
+   "L": [
+    12,
+    13
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 222,
+   "case": "U12-14_L",
+   "U": [
+    12,
+    14
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 223,
+   "case": "U_L12-14",
+   "U": [],
+   "L": [
+    12,
+    14
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 224,
+   "case": "U12-15_L",
+   "U": [
+    12,
+    15
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 225,
+   "case": "U_L12-15",
+   "U": [],
+   "L": [
+    12,
+    15
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 226,
+   "case": "U12-16_L",
+   "U": [
+    12,
+    16
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 227,
+   "case": "U_L12-16",
+   "U": [],
+   "L": [
+    12,
+    16
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 228,
+   "case": "U13-14_L",
+   "U": [
+    13,
+    14
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 229,
+   "case": "U_L13-14",
+   "U": [],
+   "L": [
+    13,
+    14
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 230,
+   "case": "U13-15_L",
+   "U": [
+    13,
+    15
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 231,
+   "case": "U_L13-15",
+   "U": [],
+   "L": [
+    13,
+    15
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 232,
+   "case": "U13-16_L",
+   "U": [
+    13,
+    16
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 233,
+   "case": "U_L13-16",
+   "U": [],
+   "L": [
+    13,
+    16
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 234,
+   "case": "U14-15_L",
+   "U": [
+    14,
+    15
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 235,
+   "case": "U_L14-15",
+   "U": [],
+   "L": [
+    14,
+    15
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 236,
+   "case": "U14-16_L",
+   "U": [
+    14,
+    16
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 237,
+   "case": "U_L14-16",
+   "U": [],
+   "L": [
+    14,
+    16
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 238,
+   "case": "U15-16_L",
+   "U": [
+    15,
+    16
+   ],
+   "L": [],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 239,
+   "case": "U_L15-16",
+   "U": [],
+   "L": [
+    15,
+    16
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 240,
+   "case": "U2_L3",
+   "U": [
+    2
+   ],
+   "L": [
+    3
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 241,
+   "case": "U2_L4",
+   "U": [
+    2
+   ],
+   "L": [
+    4
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 242,
+   "case": "U2_L5",
+   "U": [
+    2
+   ],
+   "L": [
+    5
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 243,
+   "case": "U2_L6",
+   "U": [
+    2
+   ],
+   "L": [
+    6
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 244,
+   "case": "U2_L7",
+   "U": [
+    2
+   ],
+   "L": [
+    7
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 245,
+   "case": "U2_L8",
+   "U": [
+    2
+   ],
+   "L": [
+    8
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 246,
+   "case": "U2_L9",
+   "U": [
+    2
+   ],
+   "L": [
+    9
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 247,
+   "case": "U2_L10",
+   "U": [
+    2
+   ],
+   "L": [
+    10
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 248,
+   "case": "U2_L11",
+   "U": [
+    2
+   ],
+   "L": [
+    11
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 249,
+   "case": "U2_L12",
+   "U": [
+    2
+   ],
+   "L": [
+    12
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 250,
+   "case": "U2_L13",
+   "U": [
+    2
+   ],
+   "L": [
+    13
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 251,
+   "case": "U2_L14",
+   "U": [
+    2
+   ],
+   "L": [
+    14
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 252,
+   "case": "U2_L15",
+   "U": [
+    2
+   ],
+   "L": [
+    15
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 253,
+   "case": "U2_L16",
+   "U": [
+    2
+   ],
+   "L": [
+    16
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 254,
+   "case": "U3_L2",
+   "U": [
+    3
+   ],
+   "L": [
+    2
+   ],
+   "dirs": [
+    "WAVE1/W33/U3_L2"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 315,
+   "split": 3,
+   "depth": 3,
+   "closed_records": 315,
+   "closed_unused": 0,
+   "nodes": 4
+  },
+  {
+   "k": 255,
+   "case": "U3_L4",
+   "U": [
+    3
+   ],
+   "L": [
+    4
+   ],
+   "dirs": [
+    "WAVE1/W35/U3_L4",
+    "WAVE2/S2/U3_L4"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 254,
+   "split": 2,
+   "depth": 2,
+   "closed_records": 254,
+   "closed_unused": 0,
+   "nodes": 3
+  },
+  {
+   "k": 256,
+   "case": "U3_L5",
+   "U": [
+    3
+   ],
+   "L": [
+    5
+   ],
+   "dirs": [
+    "WAVE1/W34/U3_L5",
+    "WAVE3/G26/U3_L5"
+   ],
+   "tree": "node",
+   "roots": 123,
+   "leaves": 123,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 123,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 257,
+   "case": "U3_L6",
+   "U": [
+    3
+   ],
+   "L": [
+    6
+   ],
+   "dirs": [
+    "WAVE1/W32/U3_L6"
+   ],
+   "tree": "node",
+   "roots": 124,
+   "leaves": 124,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 124,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 258,
+   "case": "U3_L7",
+   "U": [
+    3
+   ],
+   "L": [
+    7
+   ],
+   "dirs": [
+    "WAVE1/W33/U3_L7"
+   ],
+   "tree": "node",
+   "roots": 125,
+   "leaves": 125,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 125,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 259,
+   "case": "U3_L8",
+   "U": [
+    3
+   ],
+   "L": [
+    8
+   ],
+   "dirs": [
+    "WAVE1/W35/U3_L8",
+    "WAVE2/S2/U3_L8"
+   ],
+   "tree": "node",
+   "roots": 127,
+   "leaves": 127,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 127,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 260,
+   "case": "U3_L9",
+   "U": [
+    3
+   ],
+   "L": [
+    9
+   ],
+   "dirs": [
+    "WAVE1/W34/U3_L9",
+    "WAVE3/G24/U3_L9"
+   ],
+   "tree": "node",
+   "roots": 125,
+   "leaves": 125,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 125,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 261,
+   "case": "U3_L10",
+   "U": [
+    3
+   ],
+   "L": [
+    10
+   ],
+   "dirs": [
+    "WAVE1/W32/U3_L10"
+   ],
+   "tree": "node",
+   "roots": 125,
+   "leaves": 125,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 125,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 262,
+   "case": "U3_L11",
+   "U": [
+    3
+   ],
+   "L": [
+    11
+   ],
+   "dirs": [
+    "WAVE1/W33/U3_L11"
+   ],
+   "tree": "node",
+   "roots": 117,
+   "leaves": 117,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 117,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 263,
+   "case": "U3_L12",
+   "U": [
+    3
+   ],
+   "L": [
+    12
+   ],
+   "dirs": [
+    "WAVE1/W35/U3_L12",
+    "WAVE2/S2/U3_L12"
+   ],
+   "tree": "node",
+   "roots": 119,
+   "leaves": 119,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 119,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 264,
+   "case": "U3_L13",
+   "U": [
+    3
+   ],
+   "L": [
+    13
+   ],
+   "dirs": [
+    "WAVE1/W34/U3_L13",
+    "WAVE3/G26/U3_L13"
+   ],
+   "tree": "node",
+   "roots": 127,
+   "leaves": 127,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 127,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 265,
+   "case": "U3_L14",
+   "U": [
+    3
+   ],
+   "L": [
+    14
+   ],
+   "dirs": [
+    "WAVE1/W32/U3_L14"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 266,
+   "case": "U3_L15",
+   "U": [
+    3
+   ],
+   "L": [
+    15
+   ],
+   "dirs": [
+    "WAVE1/W33/U3_L15"
+   ],
+   "tree": "node",
+   "roots": 123,
+   "leaves": 123,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 123,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 267,
+   "case": "U3_L16",
+   "U": [
+    3
+   ],
+   "L": [
+    16
+   ],
+   "dirs": [
+    "WAVE1/W35/U3_L16",
+    "WAVE2/S2/U3_L16"
+   ],
+   "tree": "node",
+   "roots": 113,
+   "leaves": 113,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 113,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 268,
+   "case": "U4_L2",
+   "U": [
+    4
+   ],
+   "L": [
+    2
+   ],
+   "dirs": [
+    "WAVE1/W34/U4_L2",
+    "WAVE2/S4/U4_L2",
+    "WAVE3/G25/U4_L2"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 254,
+   "split": 2,
+   "depth": 2,
+   "closed_records": 254,
+   "closed_unused": 0,
+   "nodes": 3
+  },
+  {
+   "k": 269,
+   "case": "U4_L3",
+   "U": [
+    4
+   ],
+   "L": [
+    3
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 270,
+   "case": "U4_L5",
+   "U": [
+    4
+   ],
+   "L": [
+    5
+   ],
+   "dirs": [
+    "WAVE1/W32/U4_L5"
+   ],
+   "tree": "node",
+   "roots": 111,
+   "leaves": 111,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 111,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 271,
+   "case": "U4_L6",
+   "U": [
+    4
+   ],
+   "L": [
+    6
+   ],
+   "dirs": [
+    "WAVE1/W33/U4_L6"
+   ],
+   "tree": "node",
+   "roots": 112,
+   "leaves": 112,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 112,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 272,
+   "case": "U4_L7",
+   "U": [
+    4
+   ],
+   "L": [
+    7
+   ],
+   "dirs": [
+    "WAVE1/W35/U4_L7",
+    "WAVE2/S2/U4_L7"
+   ],
+   "tree": "node",
+   "roots": 112,
+   "leaves": 112,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 112,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 273,
+   "case": "U4_L8",
+   "U": [
+    4
+   ],
+   "L": [
+    8
+   ],
+   "dirs": [
+    "WAVE2/S4/U4_L8"
+   ],
+   "tree": "node",
+   "roots": 113,
+   "leaves": 113,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 113,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 274,
+   "case": "U4_L9",
+   "U": [
+    4
+   ],
+   "L": [
+    9
+   ],
+   "dirs": [
+    "WAVE1/W32/U4_L9"
+   ],
+   "tree": "node",
+   "roots": 114,
+   "leaves": 114,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 114,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 275,
+   "case": "U4_L10",
+   "U": [
+    4
+   ],
+   "L": [
+    10
+   ],
+   "dirs": [
+    "WAVE2/S3/U4_L10"
+   ],
+   "tree": "node",
+   "roots": 110,
+   "leaves": 110,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 110,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 276,
+   "case": "U4_L11",
+   "U": [
+    4
+   ],
+   "L": [
+    11
+   ],
+   "dirs": [
+    "WAVE1/W33/U4_L11"
+   ],
+   "tree": "node",
+   "roots": 96,
+   "leaves": 96,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 96,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 277,
+   "case": "U4_L12",
+   "U": [
+    4
+   ],
+   "L": [
+    12
+   ],
+   "dirs": [
+    "WAVE1/W35/U4_L12",
+    "WAVE2/S2/U4_L12"
+   ],
+   "tree": "node",
+   "roots": 107,
+   "leaves": 107,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 107,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 278,
+   "case": "U4_L13",
+   "U": [
+    4
+   ],
+   "L": [
+    13
+   ],
+   "dirs": [
+    "WAVE2/S4/U4_L13"
+   ],
+   "tree": "node",
+   "roots": 113,
+   "leaves": 113,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 113,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 279,
+   "case": "U4_L14",
+   "U": [
+    4
+   ],
+   "L": [
+    14
+   ],
+   "dirs": [
+    "WAVE1/W32/U4_L14"
+   ],
+   "tree": "node",
+   "roots": 119,
+   "leaves": 119,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 119,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 280,
+   "case": "U4_L15",
+   "U": [
+    4
+   ],
+   "L": [
+    15
+   ],
+   "dirs": [
+    "WAVE1/W33/U4_L15"
+   ],
+   "tree": "node",
+   "roots": 126,
+   "leaves": 126,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 126,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 281,
+   "case": "U4_L16",
+   "U": [
+    4
+   ],
+   "L": [
+    16
+   ],
+   "dirs": [
+    "WAVE1/W35/U4_L16",
+    "WAVE2/S2/U4_L16"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S2/U4_L16"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 282,
+   "case": "U5_L2",
+   "U": [
+    5
+   ],
+   "L": [
+    2
+   ],
+   "dirs": [
+    "WAVE2/S4/U5_L2"
+   ],
+   "tree": "node",
+   "roots": 123,
+   "leaves": 247,
+   "split": 2,
+   "depth": 2,
+   "closed_records": 247,
+   "closed_unused": 0,
+   "nodes": 3
+  },
+  {
+   "k": 283,
+   "case": "U5_L3",
+   "U": [
+    5
+   ],
+   "L": [
+    3
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 284,
+   "case": "U5_L4",
+   "U": [
+    5
+   ],
+   "L": [
+    4
+   ],
+   "dirs": [
+    "WAVE1/W32/U5_L4"
+   ],
+   "tree": "node",
+   "roots": 110,
+   "leaves": 110,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 110,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 285,
+   "case": "U5_L6",
+   "U": [
+    5
+   ],
+   "L": [
+    6
+   ],
+   "dirs": [
+    "WAVE1/W33/U5_L6"
+   ],
+   "tree": "node",
+   "roots": 108,
+   "leaves": 108,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 108,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 286,
+   "case": "U5_L7",
+   "U": [
+    5
+   ],
+   "L": [
+    7
+   ],
+   "dirs": [
+    "WAVE1/W35/U5_L7",
+    "WAVE2/S2/U5_L7"
+   ],
+   "tree": "node",
+   "roots": 112,
+   "leaves": 112,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 112,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 287,
+   "case": "U5_L8",
+   "U": [
+    5
+   ],
+   "L": [
+    8
+   ],
+   "dirs": [
+    "WAVE2/S4/U5_L8"
+   ],
+   "tree": "node",
+   "roots": 112,
+   "leaves": 112,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 112,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 288,
+   "case": "U5_L9",
+   "U": [
+    5
+   ],
+   "L": [
+    9
+   ],
+   "dirs": [
+    "WAVE1/W32/U5_L9"
+   ],
+   "tree": "node",
+   "roots": 115,
+   "leaves": 115,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 115,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 289,
+   "case": "U5_L10",
+   "U": [
+    5
+   ],
+   "L": [
+    10
+   ],
+   "dirs": [
+    "WAVE1/W33/U5_L10"
+   ],
+   "tree": "node",
+   "roots": 108,
+   "leaves": 108,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 108,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 290,
+   "case": "U5_L11",
+   "U": [
+    5
+   ],
+   "L": [
+    11
+   ],
+   "dirs": [
+    "WAVE1/W33/U5_L11",
+    "WAVE2/S5/U5_L11"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S5/U5_L11"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 291,
+   "case": "U5_L12",
+   "U": [
+    5
+   ],
+   "L": [
+    12
+   ],
+   "dirs": [
+    "WAVE1/W33/U5_L12"
+   ],
+   "tree": "node",
+   "roots": 108,
+   "leaves": 108,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 108,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 292,
+   "case": "U5_L13",
+   "U": [
+    5
+   ],
+   "L": [
+    13
+   ],
+   "dirs": [
+    "WAVE1/W35/U5_L13",
+    "WAVE2/S2/U5_L13"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S2/U5_L13"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 293,
+   "case": "U5_L14",
+   "U": [
+    5
+   ],
+   "L": [
+    14
+   ],
+   "dirs": [
+    "WAVE2/S4/U5_L14"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S4/U5_L14"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 294,
+   "case": "U5_L15",
+   "U": [
+    5
+   ],
+   "L": [
+    15
+   ],
+   "dirs": [
+    "WAVE2/S3/U5_L15"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S3/U5_L15"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 295,
+   "case": "U5_L16",
+   "U": [
+    5
+   ],
+   "L": [
+    16
+   ],
+   "dirs": [
+    "WAVE1/W32/U5_L16"
+   ],
+   "tree": "node",
+   "roots": 104,
+   "leaves": 104,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 104,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 296,
+   "case": "U6_L2",
+   "U": [
+    6
+   ],
+   "L": [
+    2
+   ],
+   "dirs": [
+    "WAVE1/W32/U6_L2"
+   ],
+   "tree": "node",
+   "roots": 124,
+   "leaves": 124,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 124,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 297,
+   "case": "U6_L3",
+   "U": [
+    6
+   ],
+   "L": [
+    3
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 298,
+   "case": "U6_L4",
+   "U": [
+    6
+   ],
+   "L": [
+    4
+   ],
+   "dirs": [
+    "WAVE1/W33/U6_L4"
+   ],
+   "tree": "node",
+   "roots": 108,
+   "leaves": 108,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 108,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 299,
+   "case": "U6_L5",
+   "U": [
+    6
+   ],
+   "L": [
+    5
+   ],
+   "dirs": [
+    "WAVE1/W35/U6_L5",
+    "WAVE2/S2/U6_L5"
+   ],
+   "tree": "node",
+   "roots": 107,
+   "leaves": 107,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 107,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 300,
+   "case": "U6_L7",
+   "U": [
+    6
+   ],
+   "L": [
+    7
+   ],
+   "dirs": [
+    "WAVE2/S4/U6_L7"
+   ],
+   "tree": "node",
+   "roots": 108,
+   "leaves": 108,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 108,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 301,
+   "case": "U6_L8",
+   "U": [
+    6
+   ],
+   "L": [
+    8
+   ],
+   "dirs": [
+    "WAVE1/W32/U6_L8"
+   ],
+   "tree": "node",
+   "roots": 116,
+   "leaves": 116,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 116,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 302,
+   "case": "U6_L9",
+   "U": [
+    6
+   ],
+   "L": [
+    9
+   ],
+   "dirs": [
+    "WAVE1/W33/U6_L9"
+   ],
+   "tree": "node",
+   "roots": 113,
+   "leaves": 113,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 113,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 303,
+   "case": "U6_L10",
+   "U": [
+    6
+   ],
+   "L": [
+    10
+   ],
+   "dirs": [
+    "WAVE1/W35/U6_L10",
+    "WAVE2/S2/U6_L10"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S2/U6_L10"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 304,
+   "case": "U6_L11",
+   "U": [
+    6
+   ],
+   "L": [
+    11
+   ],
+   "dirs": [
+    "WAVE2/S4/U6_L11"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S4/U6_L11"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 305,
+   "case": "U6_L12",
+   "U": [
+    6
+   ],
+   "L": [
+    12
+   ],
+   "dirs": [
+    "WAVE1/W32/U6_L12"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U6_L12"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 306,
+   "case": "U6_L13",
+   "U": [
+    6
+   ],
+   "L": [
+    13
+   ],
+   "dirs": [
+    "WAVE1/W33/U6_L13"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U6_L13"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 307,
+   "case": "U6_L14",
+   "U": [
+    6
+   ],
+   "L": [
+    14
+   ],
+   "dirs": [
+    "WAVE1/W32/U6_L14"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U6_L14"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 308,
+   "case": "U6_L15",
+   "U": [
+    6
+   ],
+   "L": [
+    15
+   ],
+   "dirs": [
+    "WAVE1/W33/U6_L15"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U6_L15"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 309,
+   "case": "U6_L16",
+   "U": [
+    6
+   ],
+   "L": [
+    16
+   ],
+   "dirs": [
+    "WAVE1/W35/U6_L16",
+    "WAVE2/S2/U6_L16"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S2/U6_L16"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 310,
+   "case": "U7_L2",
+   "U": [
+    7
+   ],
+   "L": [
+    2
+   ],
+   "dirs": [
+    "WAVE2/S4/U7_L2"
+   ],
+   "tree": "node",
+   "roots": 125,
+   "leaves": 188,
+   "split": 1,
+   "depth": 2,
+   "closed_records": 188,
+   "closed_unused": 0,
+   "nodes": 2
+  },
+  {
+   "k": 311,
+   "case": "U7_L3",
+   "U": [
+    7
+   ],
+   "L": [
+    3
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 312,
+   "case": "U7_L4",
+   "U": [
+    7
+   ],
+   "L": [
+    4
+   ],
+   "dirs": [
+    "WAVE1/W32/U7_L4"
+   ],
+   "tree": "node",
+   "roots": 110,
+   "leaves": 110,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 110,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 313,
+   "case": "U7_L5",
+   "U": [
+    7
+   ],
+   "L": [
+    5
+   ],
+   "dirs": [
+    "WAVE1/W33/U7_L5"
+   ],
+   "tree": "node",
+   "roots": 111,
+   "leaves": 111,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 111,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 314,
+   "case": "U7_L6",
+   "U": [
+    7
+   ],
+   "L": [
+    6
+   ],
+   "dirs": [
+    "WAVE1/W35/U7_L6"
+   ],
+   "tree": "node",
+   "roots": 108,
+   "leaves": 108,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 108,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 315,
+   "case": "U7_L8",
+   "U": [
+    7
+   ],
+   "L": [
+    8
+   ],
+   "dirs": [
+    "WAVE1/W35/U7_L8",
+    "WAVE2/S1/U7_L8"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S1/U7_L8"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 316,
+   "case": "U7_L9",
+   "U": [
+    7
+   ],
+   "L": [
+    9
+   ],
+   "dirs": [
+    "WAVE2/S4/U7_L9"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S4/U7_L9"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 317,
+   "case": "U7_L10",
+   "U": [
+    7
+   ],
+   "L": [
+    10
+   ],
+   "dirs": [
+    "WAVE1/W32/U7_L10"
+   ],
+   "tree": "node",
+   "roots": 114,
+   "leaves": 114,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 114,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 318,
+   "case": "U7_L11",
+   "U": [
+    7
+   ],
+   "L": [
+    11
+   ],
+   "dirs": [
+    "WAVE1/W33/U7_L11"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U7_L11"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 319,
+   "case": "U7_L12",
+   "U": [
+    7
+   ],
+   "L": [
+    12
+   ],
+   "dirs": [
+    "WAVE1/W35/U7_L12",
+    "WAVE2/S1/U7_L12"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S1/U7_L12"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 320,
+   "case": "U7_L13",
+   "U": [
+    7
+   ],
+   "L": [
+    13
+   ],
+   "dirs": [
+    "WAVE1/W33/U7_L13"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U7_L13"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 321,
+   "case": "U7_L14",
+   "U": [
+    7
+   ],
+   "L": [
+    14
+   ],
+   "dirs": [
+    "WAVE2/S4/U7_L14"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S4/U7_L14"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 322,
+   "case": "U7_L15",
+   "U": [
+    7
+   ],
+   "L": [
+    15
+   ],
+   "dirs": [
+    "WAVE1/W32/U7_L15"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U7_L15"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 323,
+   "case": "U7_L16",
+   "U": [
+    7
+   ],
+   "L": [
+    16
+   ],
+   "dirs": [
+    "WAVE1/W33/U7_L16"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U7_L16"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 324,
+   "case": "U8_L2",
+   "U": [
+    8
+   ],
+   "L": [
+    2
+   ],
+   "dirs": [
+    "WAVE1/W35/U8_L2",
+    "WAVE2/S1/U8_L2"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 191,
+   "split": 1,
+   "depth": 2,
+   "closed_records": 191,
+   "closed_unused": 0,
+   "nodes": 2
+  },
+  {
+   "k": 325,
+   "case": "U8_L3",
+   "U": [
+    8
+   ],
+   "L": [
+    3
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 326,
+   "case": "U8_L4",
+   "U": [
+    8
+   ],
+   "L": [
+    4
+   ],
+   "dirs": [
+    "WAVE2/S3/U8_L4"
+   ],
+   "tree": "node",
+   "roots": 116,
+   "leaves": 116,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 116,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 327,
+   "case": "U8_L5",
+   "U": [
+    8
+   ],
+   "L": [
+    5
+   ],
+   "dirs": [
+    "WAVE1/W32/U8_L5"
+   ],
+   "tree": "node",
+   "roots": 116,
+   "leaves": 116,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 116,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 328,
+   "case": "U8_L6",
+   "U": [
+    8
+   ],
+   "L": [
+    6
+   ],
+   "dirs": [
+    "WAVE2/S3/U8_L6"
+   ],
+   "tree": "node",
+   "roots": 114,
+   "leaves": 114,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 114,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 329,
+   "case": "U8_L7",
+   "U": [
+    8
+   ],
+   "L": [
+    7
+   ],
+   "dirs": [
+    "WAVE1/W33/U8_L7"
+   ],
+   "tree": "node",
+   "roots": 113,
+   "leaves": 113,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 113,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 330,
+   "case": "U8_L9",
+   "U": [
+    8
+   ],
+   "L": [
+    9
+   ],
+   "dirs": [
+    "WAVE1/W35/U8_L9",
+    "WAVE2/S1/U8_L9"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S1/U8_L9"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 331,
+   "case": "U8_L10",
+   "U": [
+    8
+   ],
+   "L": [
+    10
+   ],
+   "dirs": [
+    "WAVE1/W35/U8_L10",
+    "WAVE2/S1/U8_L10"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S1/U8_L10"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 332,
+   "case": "U8_L11",
+   "U": [
+    8
+   ],
+   "L": [
+    11
+   ],
+   "dirs": [
+    "WAVE2/S3/U8_L11"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S3/U8_L11"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 333,
+   "case": "U8_L12",
+   "U": [
+    8
+   ],
+   "L": [
+    12
+   ],
+   "dirs": [
+    "WAVE1/W32/U8_L12"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U8_L12"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 334,
+   "case": "U8_L13",
+   "U": [
+    8
+   ],
+   "L": [
+    13
+   ],
+   "dirs": [
+    "WAVE1/W33/U8_L13"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U8_L13"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 335,
+   "case": "U8_L14",
+   "U": [
+    8
+   ],
+   "L": [
+    14
+   ],
+   "dirs": [
+    "WAVE1/W35/U8_L14",
+    "WAVE2/S1/U8_L14"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S1/U8_L14"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 336,
+   "case": "U8_L15",
+   "U": [
+    8
+   ],
+   "L": [
+    15
+   ],
+   "dirs": [
+    "WAVE1/W35/U8_L15",
+    "WAVE2/S1/U8_L15"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S1/U8_L15"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 337,
+   "case": "U8_L16",
+   "U": [
+    8
+   ],
+   "L": [
+    16
+   ],
+   "dirs": [
+    "WAVE1/W32/U8_L16"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U8_L16"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 338,
+   "case": "U9_L2",
+   "U": [
+    9
+   ],
+   "L": [
+    2
+   ],
+   "dirs": [
+    "WAVE2/S3/U9_L2"
+   ],
+   "tree": "node",
+   "roots": 127,
+   "leaves": 127,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 127,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 339,
+   "case": "U9_L3",
+   "U": [
+    9
+   ],
+   "L": [
+    3
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 340,
+   "case": "U9_L4",
+   "U": [
+    9
+   ],
+   "L": [
+    4
+   ],
+   "dirs": [
+    "WAVE1/W33/U9_L4",
+    "WAVE2/S5/U9_L4"
+   ],
+   "tree": "node",
+   "roots": 117,
+   "leaves": 117,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 117,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 341,
+   "case": "U9_L5",
+   "U": [
+    9
+   ],
+   "L": [
+    5
+   ],
+   "dirs": [
+    "WAVE1/W35/U9_L5",
+    "WAVE2/S1/U9_L5"
+   ],
+   "tree": "node",
+   "roots": 118,
+   "leaves": 118,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 118,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 342,
+   "case": "U9_L6",
+   "U": [
+    9
+   ],
+   "L": [
+    6
+   ],
+   "dirs": [
+    "WAVE1/W32/U9_L6"
+   ],
+   "tree": "node",
+   "roots": 115,
+   "leaves": 115,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 115,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 343,
+   "case": "U9_L7",
+   "U": [
+    9
+   ],
+   "L": [
+    7
+   ],
+   "dirs": [
+    "WAVE1/W33/U9_L7"
+   ],
+   "tree": "node",
+   "roots": 116,
+   "leaves": 116,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 116,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 344,
+   "case": "U9_L8",
+   "U": [
+    9
+   ],
+   "L": [
+    8
+   ],
+   "dirs": [
+    "WAVE1/W35/U9_L8",
+    "WAVE2/S1/U9_L8"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S1/U9_L8"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 345,
+   "case": "U9_L10",
+   "U": [
+    9
+   ],
+   "L": [
+    10
+   ],
+   "dirs": [
+    "WAVE1/W35/U9_L10",
+    "WAVE2/S1/U9_L10"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S1/U9_L10"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 346,
+   "case": "U9_L11",
+   "U": [
+    9
+   ],
+   "L": [
+    11
+   ],
+   "dirs": [
+    "WAVE1/W35/U9_L11",
+    "WAVE2/S1/U9_L11"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S1/U9_L11"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 347,
+   "case": "U9_L12",
+   "U": [
+    9
+   ],
+   "L": [
+    12
+   ],
+   "dirs": [
+    "WAVE2/S3/U9_L12"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S3/U9_L12"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 348,
+   "case": "U9_L13",
+   "U": [
+    9
+   ],
+   "L": [
+    13
+   ],
+   "dirs": [
+    "WAVE1/W32/U9_L13"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U9_L13"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 349,
+   "case": "U9_L14",
+   "U": [
+    9
+   ],
+   "L": [
+    14
+   ],
+   "dirs": [
+    "WAVE1/W33/U9_L14"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U9_L14"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 350,
+   "case": "U9_L15",
+   "U": [
+    9
+   ],
+   "L": [
+    15
+   ],
+   "dirs": [
+    "WAVE1/W35/U9_L15",
+    "WAVE2/S1/U9_L15"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S1/U9_L15"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 351,
+   "case": "U9_L16",
+   "U": [
+    9
+   ],
+   "L": [
+    16
+   ],
+   "dirs": [
+    "WAVE2/S3/U9_L16"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S3/U9_L16"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 352,
+   "case": "U10_L2",
+   "U": [
+    10
+   ],
+   "L": [
+    2
+   ],
+   "dirs": [
+    "WAVE1/W32/U10_L2"
+   ],
+   "tree": "node",
+   "roots": 126,
+   "leaves": 126,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 126,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 353,
+   "case": "U10_L3",
+   "U": [
+    10
+   ],
+   "L": [
+    3
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 354,
+   "case": "U10_L4",
+   "U": [
+    10
+   ],
+   "L": [
+    4
+   ],
+   "dirs": [
+    "WAVE1/W33/U10_L4"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 355,
+   "case": "U10_L5",
+   "U": [
+    10
+   ],
+   "L": [
+    5
+   ],
+   "dirs": [
+    "WAVE1/W35/U10_L5",
+    "WAVE2/S1/U10_L5"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 356,
+   "case": "U10_L6",
+   "U": [
+    10
+   ],
+   "L": [
+    6
+   ],
+   "dirs": [
+    "WAVE2/S3/U10_L6"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S3/U10_L6"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 357,
+   "case": "U10_L7",
+   "U": [
+    10
+   ],
+   "L": [
+    7
+   ],
+   "dirs": [
+    "WAVE1/W34/U10_L7"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 358,
+   "case": "U10_L8",
+   "U": [
+    10
+   ],
+   "L": [
+    8
+   ],
+   "dirs": [
+    "WAVE1/W32/U10_L8"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U10_L8"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 359,
+   "case": "U10_L9",
+   "U": [
+    10
+   ],
+   "L": [
+    9
+   ],
+   "dirs": [
+    "WAVE1/W33/U10_L9"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U10_L9"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 360,
+   "case": "U10_L11",
+   "U": [
+    10
+   ],
+   "L": [
+    11
+   ],
+   "dirs": [
+    "WAVE1/W35/U10_L11",
+    "WAVE2/S1/U10_L11"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S1/U10_L11"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 361,
+   "case": "U10_L12",
+   "U": [
+    10
+   ],
+   "L": [
+    12
+   ],
+   "dirs": [
+    "WAVE2/S3/U10_L12"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S3/U10_L12"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 362,
+   "case": "U10_L13",
+   "U": [
+    10
+   ],
+   "L": [
+    13
+   ],
+   "dirs": [
+    "WAVE1/W32/U10_L13"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U10_L13"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 363,
+   "case": "U10_L14",
+   "U": [
+    10
+   ],
+   "L": [
+    14
+   ],
+   "dirs": [
+    "WAVE1/W33/U10_L14"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U10_L14"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 364,
+   "case": "U10_L15",
+   "U": [
+    10
+   ],
+   "L": [
+    15
+   ],
+   "dirs": [
+    "WAVE1/W35/U10_L15",
+    "WAVE2/S1/U10_L15"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S1/U10_L15"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 365,
+   "case": "U10_L16",
+   "U": [
+    10
+   ],
+   "L": [
+    16
+   ],
+   "dirs": [
+    "WAVE2/S3/U10_L16"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S3/U10_L16"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 366,
+   "case": "U11_L2",
+   "U": [
+    11
+   ],
+   "L": [
+    2
+   ],
+   "dirs": [
+    "WAVE1/W32/U11_L2"
+   ],
+   "tree": "node",
+   "roots": 117,
+   "leaves": 117,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 117,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 367,
+   "case": "U11_L3",
+   "U": [
+    11
+   ],
+   "L": [
+    3
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 368,
+   "case": "U11_L4",
+   "U": [
+    11
+   ],
+   "L": [
+    4
+   ],
+   "dirs": [
+    "WAVE1/W33/U11_L4"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 369,
+   "case": "U11_L5",
+   "U": [
+    11
+   ],
+   "L": [
+    5
+   ],
+   "dirs": [
+    "WAVE1/W35/U11_L5",
+    "WAVE2/S1/U11_L5"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 370,
+   "case": "U11_L6",
+   "U": [
+    11
+   ],
+   "L": [
+    6
+   ],
+   "dirs": [
+    "WAVE1/W33/U11_L6",
+    "WAVE2/S5/U11_L6"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S5/U11_L6"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 371,
+   "case": "U11_L7",
+   "U": [
+    11
+   ],
+   "L": [
+    7
+   ],
+   "dirs": [
+    "WAVE2/S3/U11_L7"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S3/U11_L7"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 372,
+   "case": "U11_L8",
+   "U": [
+    11
+   ],
+   "L": [
+    8
+   ],
+   "dirs": [
+    "WAVE1/W32/U11_L8"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U11_L8"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 373,
+   "case": "U11_L9",
+   "U": [
+    11
+   ],
+   "L": [
+    9
+   ],
+   "dirs": [
+    "WAVE1/W33/U11_L9"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U11_L9"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 374,
+   "case": "U11_L10",
+   "U": [
+    11
+   ],
+   "L": [
+    10
+   ],
+   "dirs": [
+    "WAVE1/W35/U11_L10",
+    "WAVE2/S1/U11_L10"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S1/U11_L10"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 375,
+   "case": "U11_L12",
+   "U": [
+    11
+   ],
+   "L": [
+    12
+   ],
+   "dirs": [
+    "WAVE2/S3/U11_L12"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S3/U11_L12"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 376,
+   "case": "U11_L13",
+   "U": [
+    11
+   ],
+   "L": [
+    13
+   ],
+   "dirs": [
+    "WAVE1/W32/U11_L13"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U11_L13"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 377,
+   "case": "U11_L14",
+   "U": [
+    11
+   ],
+   "L": [
+    14
+   ],
+   "dirs": [
+    "WAVE1/W33/U11_L14"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U11_L14"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 378,
+   "case": "U11_L15",
+   "U": [
+    11
+   ],
+   "L": [
+    15
+   ],
+   "dirs": [
+    "WAVE1/W35/U11_L15",
+    "WAVE2/S1/U11_L15"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S1/U11_L15"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 379,
+   "case": "U11_L16",
+   "U": [
+    11
+   ],
+   "L": [
+    16
+   ],
+   "dirs": [
+    "WAVE2/S3/U11_L16"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S3/U11_L16"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 380,
+   "case": "U12_L2",
+   "U": [
+    12
+   ],
+   "L": [
+    2
+   ],
+   "dirs": [
+    "WAVE2/S3/U12_L2"
+   ],
+   "tree": "node",
+   "roots": 118,
+   "leaves": 118,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 118,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 381,
+   "case": "U12_L3",
+   "U": [
+    12
+   ],
+   "L": [
+    3
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 382,
+   "case": "U12_L4",
+   "U": [
+    12
+   ],
+   "L": [
+    4
+   ],
+   "dirs": [
+    "WAVE1/W32/U12_L4"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 383,
+   "case": "U12_L5",
+   "U": [
+    12
+   ],
+   "L": [
+    5
+   ],
+   "dirs": [
+    "WAVE1/W33/U12_L5"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 384,
+   "case": "U12_L6",
+   "U": [
+    12
+   ],
+   "L": [
+    6
+   ],
+   "dirs": [
+    "WAVE1/W35/U12_L6",
+    "WAVE2/S1/U12_L6"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S1/U12_L6"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 385,
+   "case": "U12_L7",
+   "U": [
+    12
+   ],
+   "L": [
+    7
+   ],
+   "dirs": [
+    "WAVE1/W33/U12_L7"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U12_L7"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 386,
+   "case": "U12_L8",
+   "U": [
+    12
+   ],
+   "L": [
+    8
+   ],
+   "dirs": [
+    "WAVE2/S3/U12_L8"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S3/U12_L8"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 387,
+   "case": "U12_L9",
+   "U": [
+    12
+   ],
+   "L": [
+    9
+   ],
+   "dirs": [
+    "WAVE2/S3/U12_L9"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S3/U12_L9"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 388,
+   "case": "U12_L10",
+   "U": [
+    12
+   ],
+   "L": [
+    10
+   ],
+   "dirs": [
+    "WAVE1/W32/U12_L10"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U12_L10"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 389,
+   "case": "U12_L11",
+   "U": [
+    12
+   ],
+   "L": [
+    11
+   ],
+   "dirs": [
+    "WAVE1/W32/U12_L11"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U12_L11"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 390,
+   "case": "U12_L13",
+   "U": [
+    12
+   ],
+   "L": [
+    13
+   ],
+   "dirs": [
+    "WAVE1/W33/U12_L13"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U12_L13"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 391,
+   "case": "U12_L14",
+   "U": [
+    12
+   ],
+   "L": [
+    14
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 392,
+   "case": "U12_L15",
+   "U": [
+    12
+   ],
+   "L": [
+    15
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 393,
+   "case": "U12_L16",
+   "U": [
+    12
+   ],
+   "L": [
+    16
+   ],
+   "dirs": [
+    "WAVE1/W35/U12_L16",
+    "WAVE2/S1/U12_L16"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S1/U12_L16"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 394,
+   "case": "U13_L2",
+   "U": [
+    13
+   ],
+   "L": [
+    2
+   ],
+   "dirs": [
+    "WAVE2/S3/U13_L2"
+   ],
+   "tree": "node",
+   "roots": 127,
+   "leaves": 127,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 127,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 395,
+   "case": "U13_L3",
+   "U": [
+    13
+   ],
+   "L": [
+    3
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 396,
+   "case": "U13_L4",
+   "U": [
+    13
+   ],
+   "L": [
+    4
+   ],
+   "dirs": [
+    "WAVE1/W32/U13_L4"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 397,
+   "case": "U13_L5",
+   "U": [
+    13
+   ],
+   "L": [
+    5
+   ],
+   "dirs": [
+    "WAVE1/W33/U13_L5",
+    "WAVE2/S5/U13_L5"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S5/U13_L5"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 398,
+   "case": "U13_L6",
+   "U": [
+    13
+   ],
+   "L": [
+    6
+   ],
+   "dirs": [
+    "WAVE1/W35/U13_L6",
+    "WAVE2/S1/U13_L6"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S1/U13_L6"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 399,
+   "case": "U13_L7",
+   "U": [
+    13
+   ],
+   "L": [
+    7
+   ],
+   "dirs": [
+    "WAVE2/S3/U13_L7"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S3/U13_L7"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 400,
+   "case": "U13_L8",
+   "U": [
+    13
+   ],
+   "L": [
+    8
+   ],
+   "dirs": [
+    "WAVE1/W32/U13_L8"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U13_L8"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 401,
+   "case": "U13_L9",
+   "U": [
+    13
+   ],
+   "L": [
+    9
+   ],
+   "dirs": [
+    "WAVE1/W33/U13_L9"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U13_L9"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 402,
+   "case": "U13_L10",
+   "U": [
+    13
+   ],
+   "L": [
+    10
+   ],
+   "dirs": [
+    "WAVE1/W35/U13_L10",
+    "WAVE2/S1/U13_L10"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S1/U13_L10"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 403,
+   "case": "U13_L11",
+   "U": [
+    13
+   ],
+   "L": [
+    11
+   ],
+   "dirs": [
+    "WAVE2/S3/U13_L11"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S3/U13_L11"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 404,
+   "case": "U13_L12",
+   "U": [
+    13
+   ],
+   "L": [
+    12
+   ],
+   "dirs": [
+    "WAVE1/W32/U13_L12"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U13_L12"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 405,
+   "case": "U13_L14",
+   "U": [
+    13
+   ],
+   "L": [
+    14
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 406,
+   "case": "U13_L15",
+   "U": [
+    13
+   ],
+   "L": [
+    15
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 407,
+   "case": "U13_L16",
+   "U": [
+    13
+   ],
+   "L": [
+    16
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 408,
+   "case": "U14_L2",
+   "U": [
+    14
+   ],
+   "L": [
+    2
+   ],
+   "dirs": [
+    "WAVE2/S3/U14_L2"
+   ],
+   "tree": "node",
+   "roots": 127,
+   "leaves": 127,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 127,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 409,
+   "case": "U14_L3",
+   "U": [
+    14
+   ],
+   "L": [
+    3
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 410,
+   "case": "U14_L4",
+   "U": [
+    14
+   ],
+   "L": [
+    4
+   ],
+   "dirs": [
+    "WAVE1/W32/U14_L4"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 411,
+   "case": "U14_L5",
+   "U": [
+    14
+   ],
+   "L": [
+    5
+   ],
+   "dirs": [
+    "WAVE1/W32/U14_L5"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 412,
+   "case": "U14_L6",
+   "U": [
+    14
+   ],
+   "L": [
+    6
+   ],
+   "dirs": [
+    "WAVE1/W33/U14_L6"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U14_L6"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 413,
+   "case": "U14_L7",
+   "U": [
+    14
+   ],
+   "L": [
+    7
+   ],
+   "dirs": [
+    "WAVE1/W35/U14_L7",
+    "WAVE2/S1/U14_L7"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S1/U14_L7"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 414,
+   "case": "U14_L8",
+   "U": [
+    14
+   ],
+   "L": [
+    8
+   ],
+   "dirs": [
+    "WAVE2/S3/U14_L8"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S3/U14_L8"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 415,
+   "case": "U14_L9",
+   "U": [
+    14
+   ],
+   "L": [
+    9
+   ],
+   "dirs": [
+    "WAVE1/W32/U14_L9"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U14_L9"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 416,
+   "case": "U14_L10",
+   "U": [
+    14
+   ],
+   "L": [
+    10
+   ],
+   "dirs": [
+    "WAVE1/W33/U14_L10"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U14_L10"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 417,
+   "case": "U14_L11",
+   "U": [
+    14
+   ],
+   "L": [
+    11
+   ],
+   "dirs": [
+    "WAVE1/W35/U14_L11",
+    "WAVE2/S1/U14_L11"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S1/U14_L11"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 418,
+   "case": "U14_L12",
+   "U": [
+    14
+   ],
+   "L": [
+    12
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 419,
+   "case": "U14_L13",
+   "U": [
+    14
+   ],
+   "L": [
+    13
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 420,
+   "case": "U14_L15",
+   "U": [
+    14
+   ],
+   "L": [
+    15
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 421,
+   "case": "U14_L16",
+   "U": [
+    14
+   ],
+   "L": [
+    16
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 422,
+   "case": "U15_L2",
+   "U": [
+    15
+   ],
+   "L": [
+    2
+   ],
+   "dirs": [
+    "WAVE2/S3/U15_L2"
+   ],
+   "tree": "node",
+   "roots": 125,
+   "leaves": 125,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 125,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 423,
+   "case": "U15_L3",
+   "U": [
+    15
+   ],
+   "L": [
+    3
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 424,
+   "case": "U15_L4",
+   "U": [
+    15
+   ],
+   "L": [
+    4
+   ],
+   "dirs": [
+    "WAVE1/W33/U15_L4",
+    "WAVE2/S5/U15_L4",
+    "WAVE3/G24/U15_L4"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 425,
+   "case": "U15_L5",
+   "U": [
+    15
+   ],
+   "L": [
+    5
+   ],
+   "dirs": [
+    "WAVE1/W32/U15_L5"
+   ],
+   "tree": "node",
+   "roots": 128,
+   "leaves": 128,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 128,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 426,
+   "case": "U15_L6",
+   "U": [
+    15
+   ],
+   "L": [
+    6
+   ],
+   "dirs": [
+    "WAVE1/W33/U15_L6"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U15_L6"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 427,
+   "case": "U15_L7",
+   "U": [
+    15
+   ],
+   "L": [
+    7
+   ],
+   "dirs": [
+    "WAVE1/W35/U15_L7",
+    "WAVE2/S1/U15_L7"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S1/U15_L7"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 428,
+   "case": "U15_L8",
+   "U": [
+    15
+   ],
+   "L": [
+    8
+   ],
+   "dirs": [
+    "WAVE2/S3/U15_L8"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S3/U15_L8"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 429,
+   "case": "U15_L9",
+   "U": [
+    15
+   ],
+   "L": [
+    9
+   ],
+   "dirs": [
+    "WAVE2/S3/U15_L9"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S3/U15_L9"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 430,
+   "case": "U15_L10",
+   "U": [
+    15
+   ],
+   "L": [
+    10
+   ],
+   "dirs": [
+    "WAVE1/W32/U15_L10"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U15_L10"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 431,
+   "case": "U15_L11",
+   "U": [
+    15
+   ],
+   "L": [
+    11
+   ],
+   "dirs": [
+    "WAVE1/W32/U15_L11"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U15_L11"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 432,
+   "case": "U15_L12",
+   "U": [
+    15
+   ],
+   "L": [
+    12
+   ],
+   "dirs": [
+    "WAVE1/W33/U15_L12"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U15_L12"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 433,
+   "case": "U15_L13",
+   "U": [
+    15
+   ],
+   "L": [
+    13
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 434,
+   "case": "U15_L14",
+   "U": [
+    15
+   ],
+   "L": [
+    14
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 435,
+   "case": "U15_L16",
+   "U": [
+    15
+   ],
+   "L": [
+    16
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 436,
+   "case": "U16_L2",
+   "U": [
+    16
+   ],
+   "L": [
+    2
+   ],
+   "dirs": [
+    "WAVE1/W35/U16_L2",
+    "WAVE2/S1/U16_L2"
+   ],
+   "tree": "node",
+   "roots": 126,
+   "leaves": 126,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 126,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 437,
+   "case": "U16_L3",
+   "U": [
+    16
+   ],
+   "L": [
+    3
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 438,
+   "case": "U16_L4",
+   "U": [
+    16
+   ],
+   "L": [
+    4
+   ],
+   "dirs": [
+    "WAVE1/W35/U16_L4",
+    "WAVE2/S1/U16_L4"
+   ],
+   "tree": "node",
+   "roots": 112,
+   "leaves": 112,
+   "split": 0,
+   "depth": 1,
+   "closed_records": 112,
+   "closed_unused": 0,
+   "nodes": 1
+  },
+  {
+   "k": 439,
+   "case": "U16_L5",
+   "U": [
+    16
+   ],
+   "L": [
+    5
+   ],
+   "dirs": [
+    "WAVE2/S3/U16_L5"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S3/U16_L5"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 440,
+   "case": "U16_L6",
+   "U": [
+    16
+   ],
+   "L": [
+    6
+   ],
+   "dirs": [
+    "WAVE1/W32/U16_L6"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U16_L6"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 441,
+   "case": "U16_L7",
+   "U": [
+    16
+   ],
+   "L": [
+    7
+   ],
+   "dirs": [
+    "WAVE1/W33/U16_L7"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W33/U16_L7"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 442,
+   "case": "U16_L8",
+   "U": [
+    16
+   ],
+   "L": [
+    8
+   ],
+   "dirs": [
+    "WAVE1/W35/U16_L8",
+    "WAVE2/S1/U16_L8"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S1/U16_L8"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 443,
+   "case": "U16_L9",
+   "U": [
+    16
+   ],
+   "L": [
+    9
+   ],
+   "dirs": [
+    "WAVE2/S3/U16_L9"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S3/U16_L9"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 444,
+   "case": "U16_L10",
+   "U": [
+    16
+   ],
+   "L": [
+    10
+   ],
+   "dirs": [
+    "WAVE1/W32/U16_L10"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE1/W32/U16_L10"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 445,
+   "case": "U16_L11",
+   "U": [
+    16
+   ],
+   "L": [
+    11
+   ],
+   "dirs": [
+    "WAVE2/S3/U16_L11"
+   ],
+   "tree": "leaf",
+   "source": "wave empty cube",
+   "whole_dirs": [
+    "WAVE2/S3/U16_L11"
+   ],
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 446,
+   "case": "U16_L12",
+   "U": [
+    16
+   ],
+   "L": [
+    12
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 447,
+   "case": "U16_L13",
+   "U": [
+    16
+   ],
+   "L": [
+    13
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 448,
+   "case": "U16_L14",
+   "U": [
+    16
+   ],
+   "L": [
+    14
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  },
+  {
+   "k": 449,
+   "case": "U16_L15",
+   "U": [
+    16
+   ],
+   "L": [
+    15
+   ],
+   "tree": "leaf",
+   "source": "Mii-S direct",
+   "leaves": 1,
+   "split": 0,
+   "depth": 0
+  }
+ ]
+}

@@ -15,7 +15,8 @@ defaults to the `V2L` directory next to this script; the data goes to LEANDIR/Tr
   records name two cases, or a record naming a case other than the directory's, stops the run.
   From the case's directories: the top cubes (top.icnf lines `a ... 0`, in file order, the
   directories in sorted order, duplicates dropped), the SPLIT records (cube, subs) and the
-  closed cubes (UNSAT, cake_lpr exactly `s VERIFIED UNSAT`, by exact literal sequence).
+  closed cubes (UNSAT, cake_lpr exactly `s VERIFIED UNSAT`, by exact literal sequence). A SPLIT
+  record without "subs" but with "children" (the W34 driver) is read with children as subs.
   Root children: the top cubes that are not parent + sub of a SPLIT record. A node whose
   sequence was closed is a leaf; otherwise its children are (sub, subtree of parent + sub) in
   the recorded order of its SPLIT record. Stops on an open node, on two different SPLIT records
@@ -65,7 +66,7 @@ def aslist(v):
     return v
 
 per = collections.defaultdict(lambda: {"top": [], "topset": set(), "closed": set(), "subs": {}, "whole": [], "dirs": []})
-skipped, byname_dirs = [], []
+skipped, byname_dirs, children_key = [], [], []
 for w in ["WAVE1", "WAVE2", "WAVE3", "WAVE4"]:
     wd = os.path.join(R, w)
     if not os.path.isdir(wd): continue
@@ -110,10 +111,15 @@ for w in ["WAVE1", "WAVE2", "WAVE3", "WAVE4"]:
                     if not isinstance(c, list): continue
                     if not c: P["whole"].append(rel)
                     P["closed"].add(tuple(c))
-                elif st == "SPLIT" and "subs" in r:
+                elif st == "SPLIT" and ("subs" in r or "children" in r):
+                    # W34's driver names the list "children" (relative cubes, as "subs"; the
+                    # leaves under it are recorded as cube + child); counted in status.json
                     c = aslist(r.get("cube"))
-                    subs = tuple(tuple(s) for s in aslist(r["subs"]))
+                    subs = tuple(tuple(s) for s in aslist(r["subs"] if "subs" in r else r["children"]))
                     c = tuple(c)
+                    if "subs" not in r:
+                        children_key.append(rel)
+                        if any(s[:len(c)] == c for s in subs): fail("%s: SPLIT children of %s look absolute" % (rel, list(c)))
                     if c in P["subs"] and P["subs"][c] != subs: fail("%s: two SPLIT records of %s differ" % (rel, list(c)))
                     P["subs"].setdefault(c, subs)
 
@@ -265,6 +271,6 @@ summary = {"cases": len(rows), "tree_node": len(treek), "tree_leaf": sum(r["tree
            "leaves_in_trees": sum(r["leaves"] for r in rows if r["tree"] == "node"),
            "split_nodes": sum(r["split"] for r in rows),
            "max_depth": max(r["depth"] for r in rows),
-           "dirs_by_name": byname_dirs, "dirs_skipped": skipped}
+           "split_records_with_children_key": children_key, "dirs_by_name": byname_dirs, "dirs_skipped": skipped}
 json.dump({"R": os.path.abspath(R), "summary": summary, "rows": rows}, open(os.path.join(OUT, "status.json"), "w"), indent=1)
 print(json.dumps({k: v for k, v in summary.items() if not k.startswith("dirs")}), "dirs_by_name", len(byname_dirs), "skipped", len(skipped))
