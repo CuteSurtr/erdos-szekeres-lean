@@ -25,3 +25,4 @@
   against F2's four 26-sets.  But it is NOT a (7,5,7) set in any direction: all 650 sweep
   directions have max cap >= 5 (process26.py: cap4_directions 0), and s2 build32.py finds neither
   a 4-cap nor a 4-cup frame.  So no deep-below 32-point set exists for it in either convention.
+- 05:50 generators stopped; 06:00 realizer finished all 3,000 models on 4 cores (0 realized); README written.
