@@ -19,3 +19,18 @@ this build accepts an unjustified empty clause (`logs/lrat_check_soundness.md` t
 verdicts do not certify UNSAT. The leaves have to be re-checked with a sound checker
 (`cake_lpr`, and lrat-check with `results/E2/tools/lrat-check-E2.patch`) before sub-case (i)
 counts as closed, and the cover must be re-checked with `lake exe cover_check` from results/H3.
+
+# Wave 1 for mirror sub-case (ii): `ii_wave1.json`
+
+Deterministic assignment of the 278 open hull cases of `results/Mii-S` (cases.jsonl at commit afb4a45)
+to 36 cloud machines W00..W35 (sha256 of the file:
+`6df36dab6dc93cec474ee7a795b38716bc19bf2d6064468b9c5e38e00901c72e`).
+
+- The six most expensive 4-gon-hull cases are split by top cube: case CNF from
+  `results/Mii-S/scripts/hullsplit.py case`, top cubes from `march_cu CASE -d 7`, shard s of k takes the
+  cubes with 0-based line index i, i mod k == s. U_L2 gets 12 machines, U_L11 4, U_L4 3, U10_L, U6_L and
+  U12_L 2 each. Every shard of a case must record the same top-cube file sha256.
+- The other 22 open 4-gon cases are packed onto 7 machines and the 250 open 6-gon cases onto 4,
+  longest estimate first (cases without an estimate counted as 600 s).
+- Leaves are closed only by cake_lpr `s VERIFIED UNSAT`; results go to `results/WAVE1/<vm>/<case>/`
+  (`leaves.jsonl`, `leaves.icnf`, and `open.icnf` for anything left).
