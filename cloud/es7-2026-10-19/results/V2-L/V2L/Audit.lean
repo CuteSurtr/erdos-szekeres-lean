@@ -107,6 +107,10 @@ import V2L.Main
 #guard_msgs in
 #print axioms V2L.caseCnf_eq
 
+/-- info: 'V2L.interiorCertificates_of_cover' depends on axioms: [propext, Quot.sound] -/
+#guard_msgs in
+#print axioms V2L.interiorCertificates_of_cover
+
 /-- info: 'V2L.interiorCnf_unsat_of_certificates' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs in
 #print axioms V2L.interiorCnf_unsat_of_certificates

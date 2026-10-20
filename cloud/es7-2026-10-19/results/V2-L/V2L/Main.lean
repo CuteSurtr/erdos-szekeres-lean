@@ -48,6 +48,16 @@ theorem upCnf_eq (p : List Nat × List Int) :
 
 theorem caseCnf_eq (c : List Int) : caseCnf c = cubeCnf (interiorCnf 33 7) c := rfl
 
+/-- Once the cover facts of a concrete leaf table are proved (in the kernel), only the UNSAT
+facts remain as hypotheses. -/
+theorem interiorCertificates_of_cover {leaves : List Nat × List Nat → List (List Int)}
+    (hcov : ∀ p ∈ caseTable, coverCheck (leaves p.1) = true) (hroot : RootCertificate)
+    (hup : UpCertificates)
+    (hleaf : ∀ p ∈ caseTable, ∀ l ∈ leaves p.1,
+      ¬DimacsSatisfiable (cubeCnf (cubeCnf (interiorCnf 33 7) p.2) l)) :
+    InteriorCertificates leaves :=
+  ⟨hroot, hup, fun p hp => ⟨hcov p hp, hleaf p hp⟩⟩
+
 /-- **The certificates refute `m33k7int.sub.cnf`.** -/
 theorem interiorCnf_unsat_of_certificates {leaves : List Nat × List Nat → List (List Int)}
     (h : InteriorCertificates leaves) : ¬DimacsSatisfiable (interiorCnf 33 7) := by
