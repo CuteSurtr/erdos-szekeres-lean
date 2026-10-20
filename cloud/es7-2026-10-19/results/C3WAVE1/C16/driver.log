@@ -1,0 +1,15 @@
+=== ROOT 16 0s0-1s0_2s0-9s0 start 07:38:19 H=3.498
+{"node": "0s0-1s0_2s0-9s0", "status": "UNSATISFIABLE", "solve_s": 58.4, "certified": true}
+{"root": "0s0-1s0_2s0-9s0", "open_frontier": 0}
+=== ROOT 16 0s0-1s0_2s0-9s0 end 07:39:59 rc=0
+=== ROOT 40 0s0-1s0_3s0-5s1 start 07:39:59 H=3.47
+{"node": "0s0-1s0_3s0-5s1", "status": "UNSATISFIABLE", "solve_s": 64.9, "certified": true}
+{"root": "0s0-1s0_3s0-5s1", "open_frontier": 0}
+=== ROOT 40 0s0-1s0_3s0-5s1 end 07:41:43 rc=0
+=== ROOT 64 0s0-1s0_4s0-10s0 start 07:41:43 H=3.441
+{"node": "0s0-1s0_4s0-10s0", "status": "UNSATISFIABLE", "solve_s": 45.4, "certified": true}
+{"root": "0s0-1s0_4s0-10s0", "open_frontier": 0}
+=== ROOT 64 0s0-1s0_4s0-10s0 end 07:43:07 rc=0
+=== ROOT 88 0s0-1s0_5 start 07:43:07 H=3.417
+{"node": "0s0-1s0_5_6", "status": "UNSATISFIABLE", "solve_s": 72.8, "certified": false}
+PROOF NOT ACCEPTED 0s0-1s0_5_6
