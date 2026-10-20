@@ -30,7 +30,7 @@ the tree and resumed from those records. The in-flight work at the restart (abou
 minutes) was redone and is not counted below.
 
 ## Result
-- 43 top cubes: 32 closed directly, 11 split (4 at depth 7, 4 at depth 13, 3 at depth 19).
+- 43 top cubes: 39 closed directly, 4 split; 11 splits in all (4 at depth 7, 4 at depth 13, 3 at depth 19).
 - 710 leaves, all UNSAT with cake_lpr `s VERIFIED UNSAT`. No unchecked UNSAT, no SAT, no timeouts left;
   `open.icnf` is empty.
 - Leaf depths: 7: 39, 13: 252, 17: 2, 18: 9, 19: 227, 23: 2, 24: 5, 25: 174.
