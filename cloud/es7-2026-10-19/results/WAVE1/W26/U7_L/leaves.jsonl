@@ -1,0 +1,4 @@
+{"solve_s": 60.02, "status": "UNKNOWN", "whole": true, "timeout": 60, "case_sha256": "d320d668e526b71e8362bbd87462b8ec7b40f677d09359ed515b4dd97f11d3cb"}
+{"top": true, "ncubes": 128, "march_s": 181.0, "march": "number of cubes 128, including 0 refuted", "case_sha256": "d320d668e526b71e8362bbd87462b8ec7b40f677d09359ed515b4dd97f11d3cb", "top_sha256": "5ce594610376ec1da0924b55e5c4eedbc2ecbebea0b7ed1a983e4c018497f144", "shard": 0, "nshards": 1}
+{"cube": [-1089, 1112, -1245, 1229, -1212, 1194, 1175], "timeout": 300, "solve_s": 57.57, "proof_bytes": 52944617, "cake_lpr": "s VERIFIED UNSAT", "check_s": 17.21, "status": "UNSAT"}
+{"cube": [-1089, 1112, -1245, 1229, -1212, 1194, -1175], "timeout": 300, "solve_s": 68.89, "proof_bytes": 61190198, "cake_lpr": "s VERIFIED UNSAT", "check_s": 10.42, "status": "UNSAT"}
