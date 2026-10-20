@@ -12,7 +12,8 @@ Changes against the original:
   records with their children are final; anything else is redone);
 - leaves.icnf lists only leaves whose cake_lpr line is `s VERIFIED UNSAT`; open.icnf lists the
   cubes still open (not yet run, deadline, unverified UNSAT, SAT, or a split without children);
-- solver work files go to --tmp (outside the repository); child CPU time is recorded;
+- solver work files go to --tmp and the live leaves.jsonl to --state (both outside the
+  repository; --summarize copies it into OUTDIR); child CPU time is recorded;
 - a SAT answer keeps the model (`v` lines) in OUTDIR/SAT_<k>.model.
 """
 import argparse, hashlib, json, os, re, subprocess, threading, time
@@ -23,10 +24,14 @@ ap.add_argument("--top", required=True); ap.add_argument("--shard", type=int, de
 ap.add_argument("--nshards", type=int, default=1); ap.add_argument("--tmp", required=True)
 ap.add_argument("--depth", type=int, default=7); ap.add_argument("--timeout", type=int, default=300)
 ap.add_argument("--split-depth", type=int, default=6); ap.add_argument("--jobs", type=int, default=4)
+ap.add_argument("--state", required=True)
 ap.add_argument("--deadline", type=float, default=1e18); ap.add_argument("--summarize", action="store_true")
 a = ap.parse_args(); os.makedirs(a.out, exist_ok=True); os.makedirs(a.tmp, exist_ok=True)
+os.makedirs(a.state, exist_ok=True)
 VER = "s VERIFIED UNSAT"
-LJ = os.path.join(a.out, "leaves.jsonl")
+# the live log is kept in --state (outside the repository): `git pull --rebase --autostash`
+# replaces tracked files, which would leave an open log handle writing to an unlinked file
+LJ = os.path.join(a.state, "leaves.jsonl")
 top_all = [list(map(int, l.split()[1:-1])) for l in open(a.top) if l.startswith("a")]
 mine = [c for i, c in enumerate(top_all) if i % a.nshards == a.shard]
 
@@ -53,6 +58,8 @@ def walk(final):
     return leaves, todo, bad
 def write_lists():
     leaves, todo, bad = walk(replay())
+    if os.path.exists(LJ): subprocess.run(["cp", LJ, os.path.join(a.out, "leaves.jsonl")])
+    subprocess.run(f"cp {a.state}/SAT_* {a.out}/ 2>/dev/null", shell=True)
     with open(os.path.join(a.out, "leaves.icnf"), "w") as f:
         for c in sorted(leaves, key=lambda c: (len(c), c)): f.write("a " + " ".join(map(str, c)) + " 0\n")
     with open(os.path.join(a.out, "open.icnf"), "w") as f:
@@ -102,7 +109,7 @@ def solve(cube):
         r["status"] = "UNSAT"
     elif rc == 10:
         r["status"] = "SAT"
-        with open(os.path.join(a.out, f"SAT_{k}.model"), "w") as g: g.write(o)
+        with open(os.path.join(a.state, f"SAT_{k}.model"), "w") as g: g.write(o)
         subprocess.run(["cp", f, os.path.join(a.tmp, f"SAT_{k}.cnf")])
     else:
         r["status"] = "SPLIT"; subs, ms, mcpu, line = march(cube, a.split_depth, k)
@@ -111,6 +118,8 @@ def solve(cube):
     for s in subs: submit(cube + s)
 def task(c):
     try: solve(c)
+    except Exception:
+        import traceback; rec({"cube": c, "status": "ERROR", "error": traceback.format_exc()[-1500:]})
     finally:
         with cv: count[0] -= 1; cv.notify_all()
 def submit(c):
