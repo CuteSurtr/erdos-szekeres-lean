@@ -9,8 +9,8 @@ report which of the 450 cases are closed.
   `cubeCnf (cubeCnf F c) [] = cubeCnf F c ++ []`.
 * Otherwise the leaves are the union, over every WAVE1/<vm>/<dir> whose name starts with the
   case name (shards included), of the records of leaves.jsonl with status UNSAT and cake_lpr
-  "s VERIFIED UNSAT". A record with "direct": true (the case CNF itself refuted, its
-  case_sha256 equal to the case's) gives the empty leaf. Every top record of such a dir must carry the case's cnf_sha256.
+  "s VERIFIED UNSAT". A record with "direct": true or "whole": true (the case CNF itself
+  refuted, its case_sha256 or cnf_sha256 equal to the case's) gives the empty leaf. Every top record of such a dir must carry the case's cnf_sha256.
 * A case is closed when its leaves pass a Python port of `Mir.coverCheck` (pre-check only; the
   Lean statement needs `coverCheck` proved in the kernel).
 Writes OUT_DIR/status.json and OUT_DIR/leaves/<case>.icnf (cubes in record order)."""
@@ -56,9 +56,10 @@ for r in cases:
                 if x.get("top"):
                     if x.get("case_sha256") != r["cnf_sha256"]: bad.append(d)
                 elif x.get("status") == "UNSAT" and x.get("cake_lpr") == "s VERIFIED UNSAT":
-                    if x.get("direct"):
+                    if x.get("direct") or x.get("whole"):
                         # the case CNF itself was refuted: the empty leaf
-                        if x.get("case_sha256") != r["cnf_sha256"]: bad.append(d); continue
+                        if x.get("case_sha256", x.get("cnf_sha256")) != r["cnf_sha256"]:
+                            bad.append(d); continue
                         x["cube"] = []
                     if "cube" not in x:
                         other["UNSAT without cube"] = other.get("UNSAT without cube", 0) + 1; continue

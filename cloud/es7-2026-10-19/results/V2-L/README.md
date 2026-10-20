@@ -15,8 +15,8 @@ There is no `sorry`, `admit`, `native_decide`, `axiom` declaration, `implemented
 theorems take the solver certificates as hypotheses: the 122 cover obligations and, for each
 of the 450 cases, a leaf list with per-leaf UNSAT facts. The leaf lists are parameters. The 122
 obligations are cake_lpr-verified (`Mii-S/cover_lrat.jsonl`), and their CNFs are byte-identical
-to the Lean terms (§5). Of the 450 cases, 172 were closed directly by Mii-S. The rest were still
-running in WAVE1 when this run ended (status in §7). So the leaf lists have not yet been fixed
+to the Lean terms (§5). Of the 450 cases, 172 were closed directly by Mii-S. At 10:20 UTC WAVE1
+had closed 144 more, so 316/450 were closed and 134 were still running (§7). So the leaf lists have not yet been fixed
 as Lean data, and the kernel cover check of all of them has not yet been run.
 `scripts/finalize.sh` does both once WAVE1 is complete.
 
@@ -282,8 +282,23 @@ of a byte comparison.
 | `CaseCertificates leaves`: `coverCheck (leaves (U,L)) = true` | 450 | to be proved in the kernel once the leaf lists are fixed (§8) |
 | `CaseCertificates leaves`: per-leaf `¬DimacsSatisfiable (cubeCnf (cubeCnf F c) l)` | 172 direct + WAVE1 leaves | see below |
 
-WAVE1 status at the snapshot (`logs/leaves_status.json`, from `scripts/assemble_leaves.py` on
-the branch as pulled at the time shown there): see §9.
+**WAVE1 status at the last snapshot** (10:20 UTC, branch commit in `logs/leaves_status.json`,
+from `scripts/assemble_leaves.py`):
+
+| | cases | leaves |
+|---|---|---|
+| closed directly by Mii-S (cake_lpr on the case CNF) | 172 | 172 (empty leaf) |
+| closed by WAVE1 (cake_lpr-verified leaves pass the Python `coverCheck` port) | 144 | 13,663 |
+| **closed** | **316 / 450** | |
+| open: some verified leaves, not yet covering | 10 | 13,634 so far |
+| open: no verified leaf recorded yet | 124 | |
+
+- The 134 open cases are 16 with a 4-gon hull and 118 with a 6-gon hull. The 4-gon cases are
+  `U_L2 U3_L U4_L U5_L U_L5 U_L6 U7_L U_L7 U8_L U_L8 U9_L U_L9 U15_L U_L15 U16_L U_L16`.
+- No case CNF hash mismatch was found: every top or whole-case record carries the case's sha256.
+- Records not counted as leaves: `SPLIT`, `TIMEOUT`, `UNKNOWN`, `UNSAT_UNVERIFIED`, and
+  bookkeeping records with no status.
+- WAVE1 was due to finish around 11:00 UTC, after this run, so these numbers are a snapshot.
 
 ## 8. What remains
 
@@ -301,8 +316,10 @@ the branch as pulled at the time shown there): see §9.
      hypotheses are the cake_lpr facts: V1-L's 1,198 leaves, root, the 121 up:U, and the
      per-leaf facts.
 
-   Tested here on the 192 cases closed at 08:25 UTC (2,467 leaves): the generated file
-   elaborates in 12 s, and the kernel cover check of those 192 cases took 2 min. The template
+   Tested here, with `--closed-only`, on the closed cases:
+   - 192 cases at 08:25 UTC (2,467 leaves): the generated file elaborates in 12 s, and the kernel
+     cover check takes 2 min;
+   - 242 cases at 09:45 UTC (11,474 leaves): 97 s and 2 min. The template
    type-checks with the cover fact as a variable. After finalize, add the new theorems to
    `V2L/Audit.lean`, and add a `leaves_eq`-style comparison of `leavesOf` with the assembled cube
    files. `gen_leaves.py` writes from the same files, so the comparison is a cross-check only.
