@@ -108,7 +108,29 @@ def worker(w):
             else:
                 lit, np_, nn_ = int(r[2]), int(r[3]), int(r[4])
                 nl = int(limit * a.grow)
-                if lit == 0:
+                if len(r) > 5:
+                    # protocol 2: failed literals chained by the worker.  Each one is a binary
+                    # node whose child cube+[f] is refuted by unit propagation (logged with dt -1).
+                    nf = int(r[5]); fl = [int(x) for x in r[6:6 + nf]]
+                    c = list(cube)
+                    for f in fl:
+                        cc = c + [f]
+                        st["closed"] += 1; st["closed_weight"] += Fraction(1, 2 ** len(cc))
+                        closed_by_depth[len(cc)] = closed_by_depth.get(len(cc), 0) + 1
+                        closed_f.write(f"-1 {' '.join(map(str, cc))} 0\n")
+                        st["splits"] += 1; st["failed_lit_splits"] += 1
+                        c = c + [-f]
+                    closed_f.flush()
+                    if lit == 0 and np_ == -2:
+                        st["closed"] += 1; st["closed_weight"] += Fraction(1, 2 ** len(c))
+                        closed_by_depth[len(c)] = closed_by_depth.get(len(c), 0) + 1
+                        closed_f.write(f"-1 {' '.join(map(str, c))} 0\n"); closed_f.flush()
+                    elif lit == 0:
+                        push(c, nl)
+                    else:
+                        st["splits"] += 1
+                        push(c + [lit], nl); push(c + [-lit], nl)
+                elif lit == 0:
                     push(cube, nl)
                 else:
                     st["splits"] += 1

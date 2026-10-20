@@ -44,8 +44,18 @@ def main():
         "unsat_drat_trim_verified": sum(1 for r in cs if r["expect"] == "UNSAT" and r.get("drat_trim") == "VERIFIED"),
         "sat_controls": sum(1 for r in cs if r["expect"] == "SAT"),
         "sat_controls_cadical_10": sum(1 for r in cs if r["expect"] == "SAT" and r["cadical_exit"] == 10)}
+    for name in ('cert_nb_r4', 'cert_nb_r5'):
+        cs = jlines(os.path.join(wd, name + '.jsonl'))
+        S["drat_sample_" + name[5:]] = {
+            "instances": len(cs), "maps_match": sum(r["map_matches"] for r in cs),
+            "reported_unsat": sum(1 for r in cs if r["reported"] == "UNSAT"),
+            "cadical_20": sum(1 for r in cs if r["cadical_exit"] == 20),
+            "drat_trim_verified": sum(1 for r in cs if r.get("drat_trim") == "VERIFIED")}
+    S["one_point_extension_rot90"] = jload(os.path.join(wd, 'rot_summary.json'))
     nb = {}
-    for p in sorted(glob.glob(os.path.join(wd, 'nb*_r*.json'))):
+    for p in sorted(glob.glob(os.path.join(wd, 'nb*_r*.json'))) + [os.path.join(wd, 'probe_r8.json')]:
+        if not os.path.exists(p) or p.endswith('.run.json'):
+            continue
         name = os.path.basename(p)[:-5]
         rec = jload(p)
         run = jload(os.path.join(wd, name, 'run.json'))
