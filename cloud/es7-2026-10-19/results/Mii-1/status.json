@@ -10,12 +10,12 @@
     2705,
     3005
    ],
-   "closed": false,
-   "lrat_all_verified": false,
-   "unsat_leaves": 0,
+   "closed": true,
+   "lrat_all_verified": true,
+   "unsat_leaves": 64,
    "sat": 0,
-   "open_nodes": 1,
-   "open_fraction": "1"
+   "open_nodes": 0,
+   "open_fraction": "0"
   },
   "9": {
    "cube": [
@@ -46,10 +46,10 @@
    ],
    "closed": false,
    "lrat_all_verified": false,
-   "unsat_leaves": 1,
+   "unsat_leaves": 10,
    "sat": 0,
-   "open_nodes": 63,
-   "open_fraction": "63/64"
+   "open_nodes": 54,
+   "open_fraction": "27/32"
   },
   "25": {
    "cube": [
@@ -63,10 +63,10 @@
    ],
    "closed": false,
    "lrat_all_verified": false,
-   "unsat_leaves": 2,
+   "unsat_leaves": 63,
    "sat": 0,
-   "open_nodes": 62,
-   "open_fraction": "31/32"
+   "open_nodes": 1,
+   "open_fraction": "1/64"
   },
   "33": {
    "cube": [
@@ -275,15 +275,15 @@
  },
  "n_roots_seen": 16,
  "total": {
-  "closed_roots": 0,
-  "closed_lrat_roots": 0,
-  "unsat_leaves": 6,
+  "closed_roots": 1,
+  "closed_lrat_roots": 1,
+  "unsat_leaves": 140,
   "sat_leaves": 0,
-  "open_nodes": 199,
-  "splits": 3,
-  "gaps": 3,
+  "open_nodes": 128,
+  "splits": 4,
+  "gaps": 4,
   "lrat_failed": 0,
-  "cpu_solve_s": 1498.7,
-  "cpu_lrat_s": 7.3
+  "cpu_solve_s": 9229.3,
+  "cpu_lrat_s": 172.4
  }
 }
