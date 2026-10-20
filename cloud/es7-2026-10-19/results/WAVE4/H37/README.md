@@ -2,7 +2,7 @@
 
 - Case U_L7 (U = "", L = "7"), case CNF sha256 c6d1c840d97921426e0f2d1d34213fb94293cc1783296ec2357d7883b804f099 (matches cases.jsonl).
 - Cubes given: 196 (`results/WAVE4/tasks/H37.json` at 4bfd8e7), written in order to `U_L7/top.icnf` (196 lines).
-- Driver: `close_march.py` (byte-identical to WAVE2/F2, see driver.diff), `--depth 7 --timeout 300 --split-depth 6 --jobs 4 --hours 2.22`, started 13:39:48 UTC, ended about 14:20 UTC with `open 0`.
+- Driver: `close_march.py` (byte-identical to WAVE2/F2, see driver.diff), `--depth 7 --timeout 300 --split-depth 6 --jobs 4 --hours 2.22`, started 13:39:48 UTC, ended at 14:09 UTC with `open 0`.
 - Verified leaves: 259, each with cake_lpr printing `s VERIFIED UNSAT`.
 - Cubes split: 1 (a top cube that hit the 300 s cap; march_cu -d 6 gave 64 sub-cubes, 0 refuted, all 64 closed).
 - Cubes still open: 0. `open.icnf` is empty.
