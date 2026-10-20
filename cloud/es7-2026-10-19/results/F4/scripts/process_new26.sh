@@ -33,9 +33,11 @@ for l in open('$O/s2conv/sets32.jsonl'):
         if k in r:
             open('$O/s2conv/'+r['id']+'_s2'+suf+'.pts','w').write(''.join(f'{x} {y}\n' for x,y in r[k]))"
 # retry compression (2 seeds x 150 CPU-s) for direction-scan sets still at |coord| >= 2^27
+shopt -s nullglob
 for f in $O/f2conv/*_d[0-9]*.pts; do case $f in *_small.pts) continue;; esac
   [ -e ${f%.pts}_small.pts ] || $PY $F2/scripts/compress32.py 150 $f >> $O/compress.log; done
-ls $O/f2conv/*.pts $O/s2conv/*.pts 2>/dev/null > $O/all32.txt || true
+for f in $O/f2conv/*.pts $O/s2conv/*.pts; do echo $f; done > $O/all32.txt
+if [ ! -s $O/all32.txt ]; then echo "{\"files32\": 0, \"note\": \"no direction with max cap <= 4 and no 4-cup frame: no deep-below 32-set\", \"ALERT\": false}" > $O/summary.json; cat $O/summary.json; exit 0; fi
 $PY $D/fingerprint.py $(cat $O/all32.txt) > $O/fp32.txt
 $PY $F2/scripts/check32.py $S/bin/sat $S/bin/ext_solve $S/bin/brute_kgon $S/b33.cnf $O/check $(cat $O/all32.txt) > $O/check32.jsonl
 $PY - $O <<'PY'

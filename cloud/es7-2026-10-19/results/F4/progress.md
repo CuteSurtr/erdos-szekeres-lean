@@ -19,3 +19,9 @@
   (max 22 of 26 placed), grow_guided 4000001/4000002 one finished chain (max 23), realizer 258
   models with 0 realized.  03:05 relaunched: grow_guided seeds 4000007, 4000008; arm_f seed
   4000006 with --jitter 0.3 --extra-props 2 --smart-bt; realizer resumed at model 258.
+- 04:18 grow_guided seed 4000008 chain 5 produced gg4000008_5 (via the hybrid realizer step, so its
+  x-order is the realizer's, not the model's).  Exact: distinct x, general position, lcs 6
+  (heptagon-free), x-direction max cap 6 / cup 6.  Canonical fingerprint d336c15c... is new
+  against F2's four 26-sets.  But it is NOT a (7,5,7) set in any direction: all 650 sweep
+  directions have max cap >= 5 (process26.py: cap4_directions 0), and s2 build32.py finds neither
+  a 4-cap nor a 4-cup frame.  So no deep-below 32-point set exists for it in either convention.
