@@ -29,6 +29,10 @@ import dlib
 from dlib import b
 
 SB = 1 << 28
+# MAXLEN > 0: bounded walks of MAXLEN steps from each start, no backtracking;
+# ONE_PER_SEED=1: one random heptagon-free deletion per seed as start.
+MAXLEN = int(os.environ.get("MAXLEN", "0"))
+ONE_PER_SEED = os.environ.get("ONE_PER_SEED") == "1"
 
 
 def normalize(P):
@@ -183,9 +187,10 @@ class Walker:
                     if key in self.tabu:
                         continue
                     st, faces = self.visit(S, key, "start", {"label": label})
+                    self.since_start = 0
                     cur = [S, self.neighbours(S, faces), faces]
                     self.history.append(cur)
-                elif cand:
+                elif cand and not MAXLEN:
                     cur = self.rng.choice(cand)
                     self.deadends += 1
                 else:
@@ -210,6 +215,10 @@ class Walker:
             _, T, f2 = best
             cur = [T, self.neighbours(T, f2), f2]
             self.history.append(cur)
+            self.since_start += 1
+            if MAXLEN and self.since_start >= MAXLEN:
+                cur = None  # bounded walk: move on to the next start
+                self.history = []
             if self.steps % 200 < len(got):
                 self.write_summary()
             if len(self.history) > 4000:
@@ -259,6 +268,15 @@ if __name__ == "__main__":
     dels = seed_deletions(seeds)
     sigs = dlib.canon([S for S, _ in dels])
     starts = [(S, h(cm), lab) for (S, lab), (c, cm) in zip(dels, sigs)]
+    if ONE_PER_SEED:
+        r = random.Random(int(sys.argv[6]))
+        r.shuffle(starts)
+        seen = set(); one = []
+        for st in starts:
+            sk = st[2].rsplit("/drop", 1)[0]
+            if sk not in seen:
+                seen.add(sk); one.append(st)
+        starts = one
     print(f"[w{wid}] seeds {len(seeds)} deletions {len(starts)}", flush=True)
     W = Walker(outdir, wid, strategy, seconds, seed)
     W.run(starts)
