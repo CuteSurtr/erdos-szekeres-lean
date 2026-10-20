@@ -1,0 +1,28 @@
+== U4_L
+top.icnf sha256 d8d70ee7920665ddf52ccc5d103c3f8a9f57d1c2e2f679d9763c78f482294c38, cubes 128
+covercheck top.icnf:              s COVERED 128
+covercheck leaves.icnf:           s NOT COVERED 1348
+covercheck leaves.icnf+open.icnf: s COVERED 2013
+open cubes: 665
+== U15_L
+top.icnf sha256 20d96de2f698309b8d70c3492b1ebc225f9c9f782b590f2762949be5fd9d6b6a, cubes 128
+covercheck top.icnf:              s COVERED 128
+covercheck leaves.icnf:           s NOT COVERED 0
+covercheck leaves.icnf+open.icnf: s COVERED 128
+open cubes: 128
+== U_L15
+top.icnf sha256 b1a4f6297d37699eec6d20b18b61b4818ba3f6a8dfbe63aa2a2b3b106c56ae87, cubes 128
+covercheck top.icnf:              s COVERED 128
+covercheck leaves.icnf:           s NOT COVERED 0
+covercheck leaves.icnf+open.icnf: s COVERED 128
+open cubes: 128
+== U8_L
+top.icnf sha256 1f96896ce06fd10f923e6f02ba62d489ef4bea30c741cb761a443045a0cf987f, cubes 128
+covercheck top.icnf:              s COVERED 128
+covercheck leaves.icnf:           s NOT COVERED 0
+covercheck leaves.icnf+open.icnf: s COVERED 128
+open cubes: 128
+U4_L: known=2043 done=1378 unsat=1348 verified=1348 badcheck=0 split=30 SAT=0 cpu_h=13.51
+U15_L: known=128 done=0 unsat=0 verified=0 badcheck=0 split=0 SAT=0 cpu_h=0.00
+U_L15: known=128 done=0 unsat=0 verified=0 badcheck=0 split=0 SAT=0 cpu_h=0.00
+U8_L: known=128 done=0 unsat=0 verified=0 badcheck=0 split=0 SAT=0 cpu_h=0.00
