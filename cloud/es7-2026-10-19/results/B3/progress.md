@@ -50,3 +50,6 @@
   at 300/400 s) and samples_d18.txt (2 depth-18 nodes, both >300 s). estimate.py: depth-24 cutoff
   >= 8.9e8 s ~ 2.5e5 core-h (lower bound, censored).
 - 03:45 three depth-18 nodes with a 1500 s cap running.
+- 04:06 depth-18 nodes (1500 s cap): 3/3 UNSAT in 186, 508, 1220 s. Depth-18 estimate >= 3.7e4 core-h
+  (n = 5, 2 censored at 300 s), below the depth-24 estimate (2.5e5). estimate_output.txt.
+- 04:06 Kissat baseline killed after 12,218 s on 1 core, no answer.

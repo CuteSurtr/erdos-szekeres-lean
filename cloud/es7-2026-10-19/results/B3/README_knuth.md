@@ -64,15 +64,17 @@ at this size.
 
    | cutoff depth | samples | timeouts | node time median / mean | estimated total, plain CaDiCaL at that cutoff |
    |---|---|---|---|---|
-   | 18 | see `samples_d18.txt` | | | |
+   | 18 | 5 | 2 (300 s cap; the other 3 ran with a 1500 s cap and solved in 186, 508, 1220 s) | 300 s / ≥ 503 s | **≥ 1.3e8 s ≈ 3.7e4 core-h** (±4.9e7 s, 1 s.e.; n = 5) |
    | 24 | 57 | 3 (300–400 s cap) | 13 s / ≥ 53 s | **≥ 8.9e8 s ≈ 2.5e5 core-h** (±2.1e8 s, 1 s.e.) |
    | 30 | 12 | 2 (300 s cap) | 0.44 s / ≥ 50 s | ≥ 5.4e10 s ≈ 1.5e7 core-h (±3.6e10 s) |
 
    - At depths 6–24, every one of the 57+ paths had all 64 of 64 cubes surviving at every level
      (product 64^4 = 1.7e7 at depth 24).
    - Node times are heavy-tailed: at depth 24, p25 = 3.9 s, p75 = 45 s, p90 = 171 s.
-   - The deeper cutoff costs more in total. Splitting further only multiplies the cube count
-     (×64 per 6 levels, with no pruning) faster than the per-cube time falls.
+   - The deeper cutoff costs more in total: the estimate rises from depth 18 to 24 to 30.
+     Splitting further only multiplies the cube count (×64 per 6 levels, with no pruning)
+     faster than the per-cube time falls. CDCL inside one node does much better than
+     lookahead splitting here. `estimate_output.txt` has the numbers.
 3. **Full CnC of one hard depth-30 node** (seed 102; it timed out at 300 s as a single job;
    `hard102/`).
    - `march_cu -d 10` gave 945 cubes plus 28 refuted leaves, in 336 s.
@@ -88,8 +90,8 @@ at this size.
    - `march_cu -d 8` CnC: 271 s of conquer time.
    - Default dynamic `march_cu`: 27,173 cubes, 694 s of cubing plus 1,208 s of conquer.
    - So lookahead CnC cost 2.6–18× the monolithic CPU time on the solvable sibling instance.
-5. **Baseline: plain Kissat**, one core, whole instance with lexx. It ran from 00:42 to about
-   04:10 UTC (about 3.5 h) with no answer, and was killed.
+5. **Baseline: plain Kissat**, one core, whole instance with lexx. It ran from 00:42 to 04:06 UTC
+   (12,218 s) with no answer, and was killed.
 6. **LRAT spot-check** (`lrat/summary.txt`).
    - 4 cubes of node 102, at the 20th/50th/80th/95th percentile of solve time, were checked with
      `cadical --lrat` and lrat-check against the node CNF plus the cube units. All 4 gave
@@ -109,21 +111,28 @@ realization beyond the controls above.
 
 ## Projection and assessment
 - **Best estimate.** Proving (7,5,7)@27 UNSAT with this encoding (ours + x-reflection
-  lex-leader), march_cu cubing and CaDiCaL costs **at least about 2.5e5 core-hours** (≈ 30
-  core-years). This is a censored lower bound from the depth-24 Knuth estimate; the 1 s.e.
-  interval is about ±25%.
-  - Heavy tails could raise it a lot: the hard depth-30 node alone has ≥ 12,600 s with 14 cubes
-    still open.
-  - Depth-30 cutoffs project far more (≥ 1.5e7 core-h).
+  lex-leader), march_cu cubing and plain CaDiCaL costs about **4e4 to 2.5e5 core-hours**
+  (roughly 4 to 30 core-years).
+  - The low end is the depth-18 Knuth estimate: ≥ 3.7e4 core-h, from only 5 samples, 2 of them
+    censored at 300 s.
+  - The high end is the depth-24 estimate: ≥ 2.5e5 core-h from 57 samples.
+  - Every figure is a censored lower bound for its cutoff, and tails are heavy. One hard depth-30
+    node alone has ≥ 12,600 s with 14 cubes still open.
+  - Cutting shallower than 18 (nodes of 20 min or more) might be cheaper still. It was not
+    measured, because a single sample needs more than an hour.
   - An independent B3 session's two-level projection on the same VM type, in
-    `logs/projection_interim.json`, gave about 1.7e5 core-h (95% CI 1.0e5–2.4e5). That is
-    consistent with this one.
-- **Not laptop-tractable.** On 4 cores this is about 7 years even at the lower bound.
-- **Cluster-tractable only at the scale of the largest SAT proofs.** The lower bound is already
-  above Schur number five (about 14 CPU-years) and the Pythagorean triples problem (about 4
-  CPU-years), and more than 100× KPH's 23-point theorem (1,727 core-h).
-- Before anyone spends cluster time, the encoding needs work: stronger symmetry breaking
-  (march's lookahead finds no refutations in the first 24–30 levels), the cardinality lemmas from
-  plan #1, or a better splitting order.
-- **The positive direction looks cheap to test:** (7,5,7)@26 solves in 0.2 s. But a model at 27
+    `logs/projection_interim.json`, gave about 1.7e5 core-h (95% CI 1.0e5–2.4e5). That is inside
+    this range.
+- **Not laptop-tractable.** On 4 cores this is about 1 to 7 years.
+- **Cluster-tractable, at the scale of the large published SAT proofs.**
+  - 4e4 core-h is about the Pythagorean triples problem (about 3.5e4 CPU-h) and twice the empty
+    hexagon proof.
+  - 2.5e5 core-h is above Schur number five (about 1.2e5 CPU-h).
+  - Either is far beyond KPH's 23-point theorem (1,727 core-h).
+- **Before anyone spends cluster time:**
+  - Run a proper pilot at cutoff depth 12–18 with many more samples and longer caps.
+  - Add stronger symmetry breaking: march's lookahead refutes nothing in the first 24 levels.
+  - Add the cardinality lemmas from plan #1 (A/B-tested on ES(6)).
+  - Use proof-producing conquer, since only 4 cubes were LRAT-checked here.
+- **The positive direction is cheap to test:** (7,5,7)@26 solves in 0.2 s. But a model at 27
   would still be only an abstract signotope until it is realized.
