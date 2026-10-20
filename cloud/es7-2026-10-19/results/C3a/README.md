@@ -4,7 +4,23 @@ Nothing here is a theorem. "UNSAT" means UNSAT of one specific CNF; the encoding
 tested, not formally verified. A SAT model is an abstract signotope until it is realized
 with exact coordinates and re-checked.
 
-RESULTS_PLACEHOLDER
+## Summary
+
+Machine: 4-vCPU cloud VM, 15 GB RAM (`env.txt`); 2 to 5 solver processes at a time. Tools built
+from source: CaDiCaL 3.0.1 (c607304), drat-trim lrat-check (2e3b2dc) with E2's empty-clause
+patch, cake_lpr (CakeML-verified LRAT checker, upstream HEAD), march_cu (CnC 705b60c; `-fcommon`
+plus a memory-size patch, see `shard_plan.md`).
+
+| | result |
+|---|---|
+| Encoding | `c3cnf.py m k [--gon chain\|conv]`; validated (identities on 2,300 sets; clause-level check on 1,000 + 1,010 sets; controls; agrees with symcnf and C3b) |
+| Size, m = 11, k = 7 | chain 168,399 vars / 4,154,921 clauses; conv 466,697 / 2,115,323; symcnf about 464k / 9.5M |
+| m = 10, k = 7 (30 points) | **SAT** (abstract): chain model in 15 s, conv model in 49 s; both pass the brute-force model checks (largest convex subset 6). **Not realized**: the realizer's best attempts left 138 and 105 triples wrong. This proves nothing either way. |
+| m = 11, k = 7 (33 points) | **Open.** No model found. CaDiCaL 20 min: no answer (chain and conv). Cube-and-conquer (conv, march_cu depth 12, 4,096 cubes, coverage certified): every depth-12 leaf tried (4) is still open after 1,500 s. Depth-12 leaf 0, split again by march_cu into 64 depth-18 cubes: SUB_SUMMARY |
+| Certified weight | SUB_WEIGHT of the whole space (all of it inside depth-12 leaf 0); everything else is open |
+| Shard plan | `shard_plan.md`: exact recipe, plus a cost estimate of roughly 2×10^4 core-hours at the measured rates. That is too costly to call closable without a better encoding or cube split. |
+
+No 33-point SAT model was found, so there is nothing to realize at m = 11.
 
 ## The encoding (`c3cnf.py`)
 
@@ -111,3 +127,33 @@ C3b (`results/C3b/tools/gen_c3b.py`, commit 3aac870) independently built the sam
 encoding, with 4-point acyclicity clauses on chi_S added. On m = 2..8, k = 5, 6, 7 (21 cases) both
 generators give the same answer (`logs/compare_c3b.jsonl`). Adding acyclicity to the conv
 variant (`--acy`) did not speed it up (m = 7..9, k = 6).
+
+## m = 11, k = 7 runs (step 4)
+
+All timings are wall seconds on the shared 4-vCPU VM. LRAT proofs are ASCII
+(`--binary=false`), are checked and then deleted (they are 1.5 to 2.5 GB each), and are never
+committed.
+
+1. **Plain CaDiCaL, 20-minute cap.** chain CNF: no answer (1,188 s CPU, 0.95 GB RSS,
+   `logs/cadical20_m11_k7.log`). conv CNF: no answer (1,136 s CPU, 1.9 GB,
+   `logs/cadical20_m11_k7_conv.log`). In 20 minutes the conv CNF ran about 5× as many
+   conflicts as the chain CNF.
+2. **Chain CNF probes.** march_cu `-d 4` gives 16 cubes in 75 s (the default build segfaults
+   above m = 8; see the patch in `shard_plan.md`). `-d 8` progressed only 3/64 in 33 min and was
+   stopped (`logs/march_d8_aborted.log`). Depth-4 cube 0: open after 900 s. The 1,024 σ cubes
+   (all assignments of the 10 free σ bits): 4 open after 300 s, and cubes 0 and 1023 still open
+   after 3,600 s each (`logs/chain_sigma_probe_leaves.jsonl`).
+3. **Conv CNF, march_cu.** `-d 8` gives 256 cubes in 120 s, deterministic (identical sha256 on a
+   re-run). `-d 12` gives 4,096 cubes in 538 s; march refuted none itself. For both, the
+   coverage formula (AND of the negated cubes) is UNSAT, accepted by both checkers.
+   - Depth 8: leaves 0 and 1 open after 1,200 s. (These two records were lost from
+     leaves.jsonl by a git rebase during the run; the driver's stdout log shows them.
+     Running output now lives outside the work tree.)
+   - Depth 12: leaves 0, 256, 512 and 768 open after 1,500 s
+     (`logs/conv_d12_sample{A,B}_leaves.jsonl`).
+   - Depth-12 leaf 0 = CNF plus its 12 cube literals, split by `march_cu -d 6` into 64 cubes
+     (`cubes/conv_m11k7_d12leaf0_d6.icnf`, coverage certified), solved with a 900 s cap:
+     SUB_DETAIL (`leaves.jsonl`).
+   - Two depth-18 sub-leaves (1 and 8) were solver-UNSAT and accepted by lrat-check, but
+     cake_lpr was OOM-killed (4 checkers in parallel on 15 GB). They are **not** counted as
+     certified. The heap is now 6 GB per checker. RERUN_NOTE

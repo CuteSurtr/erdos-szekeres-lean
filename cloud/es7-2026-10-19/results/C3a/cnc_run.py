@@ -68,7 +68,7 @@ def dual_check(cnf, proof):
     t = time.time()
     a = subprocess.run([LRAT, cnf, proof], capture_output=True, text=True).stdout
     a = next((l for l in a.splitlines() if l.startswith("c VERIFIED") or l.startswith("c NOT VERIFIED")), "none")
-    env = dict(os.environ, CML_HEAP_SIZE="12000", CML_STACK_SIZE="2000")
+    env = dict(os.environ, CML_HEAP_SIZE="6000", CML_STACK_SIZE="2000")
     b = subprocess.run([CAKE, cnf, proof], capture_output=True, text=True, env=env).stdout.strip().splitlines()
     b = b[0] if b else "none"
     return a, b, (a == "c VERIFIED" and b == "s VERIFIED UNSAT"), round(time.time() - t, 1)
