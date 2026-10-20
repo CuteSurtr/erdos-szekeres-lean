@@ -42,8 +42,9 @@ def parity_sort(t):
 
 
 class C3Enc:
-    def __init__(self, m, k, sb=True, xsig=False, gon="chain"):
+    def __init__(self, m, k, sb=True, xsig=False, gon="chain", acy=False):
         self.m, self.k, self.n = m, k, 3 * m
+        self.acy = acy
         self.xsig = xsig
         self.gon = gon
         self.nv = 0
@@ -186,6 +187,27 @@ class C3Enc:
                         self.add(g + [-sq[a1], sq[b1], -sq[c1]])
                         self.add(g + [sq[a1], -sq[b1], sq[c1]])
             self.section("xsig", st)
+        if self.acy:
+            # chi_S is acyclic: no 4-set has one of the 2 totally cyclic sign patterns
+            st = len(cl)
+            cyc = []
+            for pat in itertools.product((1, -1), repeat=4):
+                base = dict(zip(itertools.combinations(range(4), 3), pat))
+                O = lambda x, y, z: parity_sort((x, y, z))[1] * base[parity_sort((x, y, z))[0]]
+                ins = lambda d, a, b, c: O(a, b, d) == O(b, c, d) == O(c, a, d)
+                if sum(ins(d, *[q for q in range(4) if q != d]) for d in range(4)) > 1:
+                    cyc.append(pat)
+            assert len(cyc) == 2
+            seen = set()
+            for Q in itertools.combinations(range(n), 4):
+                rep = min(tuple(sorted(((i - j * m) % n) for i in Q)) for j in range(3))
+                if rep in seen:
+                    continue
+                seen.add(rep)
+                lits = [self.T[t] for t in itertools.combinations(Q, 3)]
+                for pat in cyc:
+                    self.add([(-l if p > 0 else l) for l, p in zip(lits, pat)])
+            self.section("acy", st)
         if self.gon == "conv":
             self.build_conv()
             return
@@ -285,7 +307,7 @@ class C3Enc:
             for c in self.clauses:
                 f.write(" ".join(map(str, c)) + " 0\n")
         info = {"m": self.m, "k": self.k, "n": self.n, "vars": self.nv, "clauses": len(self.clauses),
-                "C_vars": self.nC, "sections": self.sections, "sb": self.sb, "xsig": self.xsig, "gon": self.gon}
+                "C_vars": self.nC, "sections": self.sections, "sb": self.sb, "xsig": self.xsig, "gon": self.gon, "acy": self.acy}
         if mappath:
             mp = dict(info)
             mp["C"] = [[*t, l] for t, l in sorted(self.C.items())]
@@ -307,8 +329,9 @@ def main():
     ap.add_argument("--no-sb", action="store_true")
     ap.add_argument("--xsig", action="store_true", help="signotope axioms of chi_S in the x-order of S")
     ap.add_argument("--gon", choices=["chain", "conv"], default="chain")
+    ap.add_argument("--acy", action="store_true", help="acyclicity of chi_S on 4-sets")
     a = ap.parse_args()
-    e = C3Enc(a.m, a.k, sb=not a.no_sb, xsig=a.xsig, gon=a.gon)
+    e = C3Enc(a.m, a.k, sb=not a.no_sb, xsig=a.xsig, gon=a.gon, acy=a.acy)
     e.build()
     print(json.dumps(e.write(a.out, a.map)))
 
