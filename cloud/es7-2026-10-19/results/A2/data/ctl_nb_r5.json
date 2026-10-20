@@ -1,0 +1,269 @@
+{
+ "run": {
+  "workers": 4,
+  "blocks": 201,
+  "exit_codes": [
+   0
+  ],
+  "solver_options": [
+   "lucky=0"
+  ],
+  "wall_s": 39.3,
+  "R": 5,
+  "M": 32,
+  "bases": 67,
+  "deletion_sets": 201,
+  "jobs": 11770
+ },
+ "per_group": {
+  "ALL|ALL|ALL": {
+   "deletion_sets": 201,
+   "answers": 11770,
+   "SAT": 9040,
+   "UNSAT": 2730,
+   "UNKNOWN": 0,
+   "conflicts_mean": 5.3,
+   "conflicts_max": 228,
+   "ms_mean": 12.2,
+   "ms_max": 1546.5
+  },
+  "ALL|ALL|free": {
+   "deletion_sets": 201,
+   "answers": 11770,
+   "SAT": 9040,
+   "UNSAT": 2730,
+   "UNKNOWN": 0,
+   "conflicts_mean": 5.3,
+   "conflicts_max": 228,
+   "ms_mean": 12.2,
+   "ms_max": 1546.5
+  },
+  "ALL|geo|free": {
+   "deletion_sets": 67,
+   "answers": 3890,
+   "SAT": 3585,
+   "UNSAT": 305,
+   "UNKNOWN": 0,
+   "conflicts_mean": 2.7,
+   "conflicts_max": 104,
+   "ms_mean": 8.6,
+   "ms_max": 1504.5
+  },
+  "ALL|rand|free": {
+   "deletion_sets": 67,
+   "answers": 4020,
+   "SAT": 1745,
+   "UNSAT": 2275,
+   "UNKNOWN": 0,
+   "conflicts_mean": 10.0,
+   "conflicts_max": 228,
+   "ms_mean": 18.3,
+   "ms_max": 1546.5
+  },
+  "ALL|win|free": {
+   "deletion_sets": 67,
+   "answers": 3860,
+   "SAT": 3710,
+   "UNSAT": 150,
+   "UNKNOWN": 0,
+   "conflicts_mean": 3.0,
+   "conflicts_max": 163,
+   "ms_mean": 9.5,
+   "ms_max": 1416.4
+  },
+  "alphaevolve|geo|free": {
+   "deletion_sets": 7,
+   "answers": 416,
+   "SAT": 416,
+   "UNSAT": 0,
+   "UNKNOWN": 0,
+   "conflicts_mean": 2.6,
+   "conflicts_max": 79,
+   "ms_mean": 8.2,
+   "ms_max": 74.4
+  },
+  "alphaevolve|rand|free": {
+   "deletion_sets": 7,
+   "answers": 420,
+   "SAT": 104,
+   "UNSAT": 316,
+   "UNKNOWN": 0,
+   "conflicts_mean": 6.8,
+   "conflicts_max": 73,
+   "ms_mean": 18.0,
+   "ms_max": 1457.6
+  },
+  "alphaevolve|win|free": {
+   "deletion_sets": 7,
+   "answers": 342,
+   "SAT": 342,
+   "UNSAT": 0,
+   "UNKNOWN": 0,
+   "conflicts_mean": 1.9,
+   "conflicts_max": 51,
+   "ms_mean": 7.5,
+   "ms_max": 26.7
+  },
+  "pool|geo|free": {
+   "deletion_sets": 60,
+   "answers": 3474,
+   "SAT": 3169,
+   "UNSAT": 305,
+   "UNKNOWN": 0,
+   "conflicts_mean": 2.7,
+   "conflicts_max": 104,
+   "ms_mean": 8.7,
+   "ms_max": 1504.5
+  },
+  "pool|rand|free": {
+   "deletion_sets": 60,
+   "answers": 3600,
+   "SAT": 1641,
+   "UNSAT": 1959,
+   "UNKNOWN": 0,
+   "conflicts_mean": 10.4,
+   "conflicts_max": 228,
+   "ms_mean": 18.4,
+   "ms_max": 1546.5
+  },
+  "pool|win|free": {
+   "deletion_sets": 60,
+   "answers": 3518,
+   "SAT": 3368,
+   "UNSAT": 150,
+   "UNKNOWN": 0,
+   "conflicts_mean": 3.1,
+   "conflicts_max": 163,
+   "ms_mean": 9.7,
+   "ms_max": 1416.4
+  },
+  "src:A7n|ALL|ALL": {
+   "deletion_sets": 18,
+   "answers": 1076,
+   "SAT": 847,
+   "UNSAT": 229,
+   "UNKNOWN": 0,
+   "conflicts_mean": 5.6,
+   "conflicts_max": 217,
+   "ms_mean": 11.2,
+   "ms_max": 227.1
+  },
+  "src:A7n2c|ALL|ALL": {
+   "deletion_sets": 18,
+   "answers": 1072,
+   "SAT": 797,
+   "UNSAT": 275,
+   "UNKNOWN": 0,
+   "conflicts_mean": 8.0,
+   "conflicts_max": 219,
+   "ms_mean": 15.8,
+   "ms_max": 1140.1
+  },
+  "src:A7n2d|ALL|ALL": {
+   "deletion_sets": 18,
+   "answers": 1037,
+   "SAT": 758,
+   "UNSAT": 279,
+   "UNKNOWN": 0,
+   "conflicts_mean": 5.4,
+   "conflicts_max": 159,
+   "ms_mean": 12.0,
+   "ms_max": 1503.1
+  },
+  "src:A7r|ALL|ALL": {
+   "deletion_sets": 18,
+   "answers": 1072,
+   "SAT": 779,
+   "UNSAT": 293,
+   "UNKNOWN": 0,
+   "conflicts_mean": 7.5,
+   "conflicts_max": 163,
+   "ms_mean": 12.8,
+   "ms_max": 495.5
+  },
+  "src:A7r2a|ALL|ALL": {
+   "deletion_sets": 18,
+   "answers": 1076,
+   "SAT": 829,
+   "UNSAT": 247,
+   "UNKNOWN": 0,
+   "conflicts_mean": 6.7,
+   "conflicts_max": 119,
+   "ms_mean": 13.5,
+   "ms_max": 1514.9
+  },
+  "src:A7r2b|ALL|ALL": {
+   "deletion_sets": 18,
+   "answers": 1072,
+   "SAT": 887,
+   "UNSAT": 185,
+   "UNKNOWN": 0,
+   "conflicts_mean": 5.8,
+   "conflicts_max": 160,
+   "ms_mean": 11.8,
+   "ms_max": 266.9
+  },
+  "src:A7sv|ALL|ALL": {
+   "deletion_sets": 18,
+   "answers": 994,
+   "SAT": 840,
+   "UNSAT": 154,
+   "UNKNOWN": 0,
+   "conflicts_mean": 4.2,
+   "conflicts_max": 126,
+   "ms_mean": 11.8,
+   "ms_max": 1546.5
+  },
+  "src:A7sv2|ALL|ALL": {
+   "deletion_sets": 18,
+   "answers": 1033,
+   "SAT": 830,
+   "UNSAT": 203,
+   "UNKNOWN": 0,
+   "conflicts_mean": 3.9,
+   "conflicts_max": 228,
+   "ms_mean": 14.0,
+   "ms_max": 1504.5
+  },
+  "src:A7w|ALL|ALL": {
+   "deletion_sets": 18,
+   "answers": 1080,
+   "SAT": 700,
+   "UNSAT": 380,
+   "UNKNOWN": 0,
+   "conflicts_mean": 3.3,
+   "conflicts_max": 68,
+   "ms_mean": 9.2,
+   "ms_max": 549.3
+  },
+  "src:A7w2e|ALL|ALL": {
+   "deletion_sets": 18,
+   "answers": 1080,
+   "SAT": 911,
+   "UNSAT": 169,
+   "UNKNOWN": 0,
+   "conflicts_mean": 3.8,
+   "conflicts_max": 77,
+   "ms_mean": 11.0,
+   "ms_max": 1395.5
+  },
+  "src:AEdel|ALL|ALL": {
+   "deletion_sets": 21,
+   "answers": 1178,
+   "SAT": 862,
+   "UNSAT": 316,
+   "UNKNOWN": 0,
+   "conflicts_mean": 3.9,
+   "conflicts_max": 79,
+   "ms_mean": 11.5,
+   "ms_max": 1457.6
+  }
+ },
+ "sat_models": 9040,
+ "sat_models_checked": {
+  "ok": 9040,
+  "FAIL": 0
+ },
+ "deletion_sets_with_SAT": 201,
+ "deletion_sets_total": 201
+}
