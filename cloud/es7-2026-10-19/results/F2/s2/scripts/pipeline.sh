@@ -16,3 +16,13 @@ with open('$O/sets32.jsonl','w') as f:
     for l in open('$S/sets32.jsonl'):
         r=json.loads(l); f.write(json.dumps({k:v for k,v in r.items() if k!='points_exact'})+'\n')"
 /usr/bin/python3 $D/saturate32.py $S/sat $S/ext_solve $S/b33.cnf $O/sets32.jsonl $O/sat32.jsonl 0 lucky=0 > $O/sat32.log
+# brute-force: every 32-set (exact and compressed), x-sorted signs, no convex 7-subset (cap/cup limits off)
+/usr/bin/python3 -c "
+import json,itertools
+def o(p,q,r): return (q[0]-p[0])*(r[1]-p[1])-(q[1]-p[1])*(r[0]-p[0])
+f=open('$S/signs32.txt','w')
+for l in open('$S/sets32.jsonl'):
+    r=json.loads(l)
+    for key in ('points_exact','points'):
+        Q=sorted(map(tuple,r[key])); f.write(''.join('+' if o(Q[i],Q[j],Q[k])>0 else '-' for i,j,k in itertools.combinations(range(len(Q)),3))+'\n')"
+$S/brute26 32 33 33 7 < $S/signs32.txt > $O/brute32.txt
