@@ -36,3 +36,7 @@
 {"event": "worker_ready", "w": 0, "t": 6652.0}
 {"event": "worker_ready", "w": 2, "t": 6652.0}
 {"event": "worker_ready", "w": 1, "t": 6652.2}
+{"event": "start", "solver_opts": ["--elim=0"], "nworkers": 3, "base": 10000, "grow": 1.2, "cap": 2000000, "maxcand": 400, "open": 321, "t": 7366.4}
+{"event": "worker_ready", "w": 1, "t": 7387.3}
+{"event": "worker_ready", "w": 2, "t": 7387.3}
+{"event": "worker_ready", "w": 0, "t": 7387.3}
