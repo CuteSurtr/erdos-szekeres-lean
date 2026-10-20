@@ -9,6 +9,8 @@ W14 copy of results/Mii-S/scripts/close_march.py (original kept as close_march.o
   resumable: on start, OUTDIR/leaves.jsonl is replayed; a cube with a cake_lpr-verified UNSAT
   record is a leaf, a SPLIT record (which now stores its children `subs`) expands into its
   children, anything else (no record, deadline OPEN, unverified UNSAT) is queued again.
+  --log FILE        keep the record file outside the git checkout (a rebase replaces tracked files,
+                    and an open append handle would then write into a deleted inode)
   --report          only rewrite leaves.icnf / open.icnf from leaves.jsonl, solve nothing
   leaves.icnf: only leaves whose cake_lpr line is `s VERIFIED UNSAT`; open.icnf: the open frontier.
   On SAT the cadical model is saved to OUTDIR/SAT_k.model (CNF copy goes to WORK, not OUTDIR).
@@ -22,11 +24,12 @@ ap.add_argument("--split-depth", type=int, default=6); ap.add_argument("--jobs",
 ap.add_argument("--hours", type=float, default=1e9)
 ap.add_argument("--top"); ap.add_argument("--shard", type=int, default=0); ap.add_argument("--nshards", type=int, default=1)
 ap.add_argument("--work", default="/tmp/claude-0/w/work"); ap.add_argument("--report", action="store_true")
+ap.add_argument("--log")  # write the records here (outside the git tree) and copy them into OUTDIR yourself
 ap.add_argument("--test-split-len", type=int, default=0)  # testing only: split cubes shorter than this unsolved
 a = ap.parse_args(); os.makedirs(a.out, exist_ok=True); os.makedirs(a.work, exist_ok=True)
 deadline = time.time() + a.hours * 3600
 hdr, body = open(a.case).read().split("\n", 1); nv, nc = int(hdr.split()[2]), int(hdr.split()[3])
-LJ = os.path.join(a.out, "leaves.jsonl")
+LJ = a.log or os.path.join(a.out, "leaves.jsonl")
 lock = threading.Lock()
 def load():
     return [json.loads(l) for l in open(LJ)] if os.path.exists(LJ) else []
