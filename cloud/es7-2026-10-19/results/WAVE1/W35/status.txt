@@ -6,12 +6,12 @@ U_L2-13 whole= ['TIMEOUT'] top= (128, 0) {'TIMEOUT': 1, 'UNSAT': 128} cpu=2020
 U3-4_L whole= ['TIMEOUT'] top= (128, 0) {'TIMEOUT': 1, 'UNSAT': 306, 'SPLIT': 3} cpu=9000
 U3-7_L whole= ['TIMEOUT'] top= (119, 7) {'TIMEOUT': 1, 'UNSAT': 119} cpu=2793
 U3-10_L whole= ['TIMEOUT'] top= (128, 0) {'TIMEOUT': 1, 'UNSAT': 128} cpu=2189
-U3-13_L whole= ['TIMEOUT'] top= (128, 0) {'TIMEOUT': 1, 'UNSAT': 66} cpu=1328
+U3-13_L whole= ['TIMEOUT'] top= (128, 0) {'TIMEOUT': 1, 'UNSAT': 128} cpu=2065
 U_L4-5 whole= ['UNSAT'] top= None {'UNSAT': 1} cpu=60
-U4-7_L whole= ['TIMEOUT'] top= (128, 0) {'TIMEOUT': 1} cpu=968
+U4-7_L whole= ['TIMEOUT'] top= (128, 0) {'TIMEOUT': 1, 'UNSAT': 128} cpu=1405
 U_L4-8 whole= ['UNSAT'] top= None {'UNSAT': 1} cpu=47
-U4-10_L whole= ['TIMEOUT'] top= (104, 22) {'TIMEOUT': 1} cpu=1063
-U4-12_L whole= ['TIMEOUT'] top= (116, 10) {'TIMEOUT': 1} cpu=784
+U4-10_L whole= ['TIMEOUT'] top= (104, 22) {'TIMEOUT': 1, 'UNSAT': 104} cpu=1380
+U4-12_L whole= ['TIMEOUT'] top= (116, 10) {'TIMEOUT': 1, 'UNSAT': 64} cpu=996
 U4-14_L whole= [] top= None {} cpu=0
 U_L4-15 whole= [] top= None {} cpu=0
 U5-7_L whole= [] top= None {} cpu=0
