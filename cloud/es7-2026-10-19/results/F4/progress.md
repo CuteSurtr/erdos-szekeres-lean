@@ -15,3 +15,7 @@
   as F2 reported; all general position, lcs 6, brute_kgon 0 convex 7-sets, ext_solve 33/33 UNSAT
   on all 9 files; sat.c 0 bad candidates on the 3 files below 2^27 (2 order types).  Added a
   compression retry (2 x 150 CPU-s) so more order types get the geometric face sweep.
+- ~03:00 container restart killed all runs (logs kept).  Before it: arm_f seed 4000003 558 restarts
+  (max 22 of 26 placed), grow_guided 4000001/4000002 one finished chain (max 23), realizer 258
+  models with 0 realized.  03:05 relaunched: grow_guided seeds 4000007, 4000008; arm_f seed
+  4000006 with --jitter 0.3 --extra-props 2 --smart-bt; realizer resumed at model 258.
