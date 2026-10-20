@@ -1,0 +1,10 @@
+shard size 16, already done 0, queued 16
+{"status": "UNKNOWN", "solve_s": 300.02, "rc": 0, "kind": "cube", "cube": [-1651, -345, -1245, 2029, 2380, 2705, -3005], "depth": 7, "t": "2026-10-20T03:12:11Z"}
+{"status": "UNKNOWN", "solve_s": 300.02, "rc": 0, "kind": "cube", "cube": [-1651, -345, 1245, 2029, 2380, 2705, -3005], "depth": 7, "t": "2026-10-20T03:12:11Z"}
+{"status": "UNKNOWN", "solve_s": 300.02, "rc": 0, "kind": "cube", "cube": [-1651, -345, 1245, -2029, -2380, -2705, 3005], "depth": 7, "t": "2026-10-20T03:12:11Z"}
+{"status": "UNKNOWN", "solve_s": 300.03, "rc": 0, "kind": "cube", "cube": [-1651, -345, -1245, -2029, -2380, -2705, 3005], "depth": 7, "t": "2026-10-20T03:12:11Z"}
+{"kind": "split", "cube": [-1651, -345, -1245, -2029, -2380, -2705, 3005], "status": "SPLIT", "solve_s": 0.0, "march_s": 236.63, "nsub": 64, "march_info": "c number of cubes 64, including 0 refuted leaves", "march_rc": 0, "t": "2026-10-20T03:16:08Z"}
+{"kind": "split", "cube": [-1651, -345, 1245, -2029, -2380, -2705, 3005], "status": "SPLIT", "solve_s": 0.0, "march_s": 493.25, "nsub": 64, "march_info": "c number of cubes 64, including 0 refuted leaves", "march_rc": 0, "t": "2026-10-20T03:20:24Z"}
+{"status": "UNKNOWN", "solve_s": 300.03, "rc": 0, "kind": "cube", "cube": [-1651, 345, -552, 1245, -2029, -2380, 2705], "depth": 7, "t": "2026-10-20T03:21:08Z"}
+{"kind": "split", "cube": [-1651, -345, 1245, 2029, 2380, 2705, -3005], "status": "SPLIT", "solve_s": 0.0, "march_s": 583.53, "nsub": 64, "march_info": "c number of cubes 64, including 0 refuted leaves", "march_rc": 0, "t": "2026-10-20T03:21:55Z"}
+{"kind": "split", "cube": [-1651, -345, -1245, 2029, 2380, 2705, -3005], "status": "SPLIT", "solve_s": 0.0, "march_s": 593.27, "nsub": 64, "march_info": "c number of cubes 64, including 0 refuted leaves", "march_rc": 0, "t": "2026-10-20T03:22:04Z"}
