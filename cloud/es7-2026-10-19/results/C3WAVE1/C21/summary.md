@@ -5,10 +5,10 @@
 | 2 | `0s0-1s0_4s0-6s1` | closed | d2:1 | 0 | 0 | 67 | 37 |
 | 3 | `0s0-1s0_5s0-7s0` | closed | d2:1 | 0 | 0 | 4 | 19 |
 | 4 | `0s0-1s0_6s0-9s1` | closed | d2:1 | 0 | 0 | 58 | 36 |
-| 5 | `0s0-1s0_8s0-10s1` | not started | - | 0 | - | 0 | 0 |
+| 5 | `0s0-1s0_8s0-10s1` | closed | d2:1 | 0 | 0 | 77 | 42 |
 | 6 | `0s0-1s1_2s0-7s0` | closed | d2:1 | 0 | 0 | 239 | 52 |
 | 7 | `0s0-1s1_3s0-10s1` | closed | d2:1 | 0 | 0 | 64 | 38 |
-| 8 | `0s0-1s1_3s1-8s1` | not started | - | 0 | - | 0 | 0 |
+| 8 | `0s0-1s1_3s1-8s1` | open | d4:1 | 8 | 545 | 317 | 22 |
 | 9 | `0s0-1s1_4s1-8s0` | not started | - | 0 | - | 0 | 0 |
 | 10 | `0s0-1s1_5s1-9s1` | not started | - | 0 | - | 0 | 0 |
 | 11 | `0s0-1s1_7s0-9s1` | not started | - | 0 | - | 0 | 0 |
@@ -69,10 +69,12 @@
 | 66 | `0s0_3s1-4s0` | not started | - | 0 | - | 0 | 0 |
 | 67 | `0s0_5s1-6s0` | not started | - | 0 | - | 0 | 0 |
 
-roots closed: 7/68; not started: 61; total solve 455 s, check 238 s (wall per node, 4 jobs in parallel)
+roots closed: 8/68; not started: 59; total solve 849 s, check 301 s (wall per node, 4 jobs in parallel)
 
 | depth | certified | split | open (tried or queued, not closed) |
 |---|---|---|---|
-| 2 | 7 | 0 | 0 |
+| 2 | 8 | 1 | 0 |
+| 3 | 0 | 7 | 84 |
+| 4 | 1 | 0 | 461 |
 
-SAT records: 0; UNSAT not certified (proof rejections): 0
+SAT records: 0; UNSAT not certified (proof rejections): 1
