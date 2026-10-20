@@ -8,3 +8,4 @@ Re-run alone (same CNF sha256 9eea20aa…f85, fresh CaDiCaL proof of 1,737,879 b
 Four cake_lpr at ~4.2 GB each exceed the 15 GB, no-swap VM, so the cause is memory.
 The driver was stopped and resumed with --jobs 3 (as instructed). The node is re-solved and
 re-checked by the driver on resume; only the driver's record counts.
+dmesg confirms: cake_lpr invoked oom-killer at ~913 s uptime (07:50 UTC).
