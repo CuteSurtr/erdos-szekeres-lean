@@ -19,3 +19,15 @@
   So CnC costs 2.6x (d=8) to 18x (dynamic) the monolithic CPU time on ES(6).
   Knuth probe on ES(6) (probe_es6_seed1.log): depth 4: 16 cubes x 2.5-5.3 s -> estimate ~60 s, same
   order as the true 106-271 s.
+- CORRECTION: probe.sh used `shuf --random-source=<(yes SEED)`, which is NOT random: it picks
+  line 63 of 64 for every seed (checked). So probe_757_seed1/2/3 and probe_es6 followed ONE
+  deterministic path (the same cubes, timing noise only). They describe one hard path, not a
+  random sample; their "est_nodes" figures are not Knuth estimates. Replaced by descend.sh /
+  sample_node.sh (python random.seed(seed*1000+step)).
+- 01:57 node30 (descend seed 7, depth 30): march -d 10 -> 109 cubes + 73 refuted leaves (68 s);
+  all 109 cubes UNSAT in 2.65 s total.
+- 02:00 samples_d30.txt: 12 random depth-30 nodes (5 descents of march -d 6), plain CaDiCaL,
+  300 s cap: 10 UNSAT in 0.13-0.92 s, 2 (seeds 102, 106) TIMEOUT at 300 s. Heavy-tailed.
+  Product of surviving-cube counts along the paths: 1.7e7 to 1.07e9 (mostly 64^5 = 1.07e9).
+- 02:10 hard node 102 (depth 30): march -d 10 -> 945 cubes + 28 refuted leaves (336 s); conquer
+  with 3 incremental CaDiCaL workers, 600 s/cube cap (hard102/progress.txt).
