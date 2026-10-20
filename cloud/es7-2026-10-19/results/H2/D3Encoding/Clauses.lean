@@ -168,10 +168,10 @@ def convStep (t : Nat) (L : Nat → Nat → Nat → Int) (acc : List (List (List
 /-- The `K`-gon part, `--kgon layered`: conv variables from `nX + 1` on, their clauses, then
 one clause per canonical `K`-set. Returns the clauses and the final variable count. -/
 def kgonLayered (t K : Nat) (L : Nat → Nat → Nat → Int) (nX : Nat) : List (List Int) × Nat :=
-  let (cls, cv, nv) := (convKeys t K).foldl (convStep t L) ([], {}, nX)
+  let st := (convKeys t K).foldl (convStep t L) ([], {}, nX)
   let clK := ((combs (List.range (3 * t)) K).filter (isCanon t)).map fun S =>
-    (List.range K).map fun i => -((cv.getD (canon t (S.eraseIdx i)) 0 : Nat) : Int)
-  (cls.reverse.flatten ++ clK, nv)
+    (List.range K).map fun i => -((st.2.1.getD (canon t (S.eraseIdx i)) 0 : Nat) : Int)
+  (st.1.reverse.flatten ++ clK, st.2.2)
 
 /-- The labelling normal form (`add_sb`, odd `m`). -/
 def sbClauses (t : Nat) (L : Nat → Nat → Nat → Int) : List (List Int) :=
@@ -185,9 +185,9 @@ def sbClauses (t : Nat) (L : Nat → Nat → Nat → Int) : List (List Int) :=
 the clauses in file order. -/
 def d3Cnf (N K : Nat) : Nat × Nat × List (List Int) :=
   let t := N / 3
-  let (tv, nX) := triples t
-  let L := lit tv
-  let (kg, nv) := kgonLayered t K L nX
-  (nv, nX, axiomClauses t L ++ centerClauses t L ++ kg ++ sbClauses t L)
+  let tr := triples t
+  let L := lit tr.1
+  let kg := kgonLayered t K L tr.2
+  (kg.2, tr.2, axiomClauses t L ++ centerClauses t L ++ kg.1 ++ sbClauses t L)
 
 end D3
