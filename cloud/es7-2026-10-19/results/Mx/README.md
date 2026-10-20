@@ -209,11 +209,11 @@ gen_etv.py was run as a black box: `--mirror` (C's "m") and `--hull --mirror` (C
   UNSAT (`scripts/cover.py`) was **not run**, because one leaf is open. Until that check and the
   last leaf are done, this sub-case is "99.994 % of cube weight closed", not certified.
 
-### Sub-case "interior": 2.7 % of weight closed
+### Sub-case "interior": 3.1 % of weight closed
 
-- 7 of 256 depth-8 cubes are UNSAT and LRAT VERIFIED, with no SAT. Each cube took 1,500–2,736 s,
-  with LRAT proofs of 1.5–2.0 GB. That is 3.8 solver-hours.
-- 249 cubes are open. At this rate the interior sub-case needs about 130 core-hours with this
+- 8 of 256 depth-8 cubes are UNSAT and LRAT VERIFIED, with no SAT. Each cube took 1,500–2,736 s,
+  with LRAT proofs of 1.5–2.0 GB. That is 4.3 solver-hours.
+- 248 cubes are open. At this rate the interior sub-case needs about 130 core-hours with this
   encoding and this cubing. A finer cube split, or the orbit/lemma strengthening that results/C
   uses, would probably be needed.
 
