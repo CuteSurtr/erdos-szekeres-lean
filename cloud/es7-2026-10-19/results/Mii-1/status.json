@@ -80,10 +80,10 @@
    ],
    "closed": false,
    "lrat_all_verified": false,
-   "unsat_leaves": 63,
+   "unsat_leaves": 126,
    "sat": 0,
    "open_nodes": 1,
-   "open_fraction": "1/64"
+   "open_fraction": "1/4096"
   },
   "41": {
    "cube": [
@@ -131,10 +131,10 @@
    ],
    "closed": false,
    "lrat_all_verified": false,
-   "unsat_leaves": 15,
+   "unsat_leaves": 39,
    "sat": 0,
-   "open_nodes": 49,
-   "open_fraction": "49/64"
+   "open_nodes": 25,
+   "open_fraction": "25/64"
   },
   "65": {
    "cube": [
@@ -277,13 +277,13 @@
  "total": {
   "closed_roots": 7,
   "closed_lrat_roots": 7,
-  "unsat_leaves": 713,
+  "unsat_leaves": 800,
   "sat_leaves": 0,
-  "open_nodes": 57,
-  "splits": 12,
-  "gaps": 12,
+  "open_nodes": 33,
+  "splits": 13,
+  "gaps": 13,
   "lrat_failed": 0,
-  "cpu_solve_s": 38843.4,
-  "cpu_lrat_s": 761.6
+  "cpu_solve_s": 42913.0,
+  "cpu_lrat_s": 842.5
  }
 }
