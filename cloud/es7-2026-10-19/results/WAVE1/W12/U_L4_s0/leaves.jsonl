@@ -1,1 +1,36 @@
 {"start": true, "case_sha256": "eb730ad3eebdd96f8daf71efb79c4932d861ddd0e0b1c8b38c6423112bf66df8", "top_sha256": "c172b9354496170c210bab5707ff63b120495823df0ac3b38b04da125cbfcd08", "ntop": 128, "shard": 0, "nshards": 3, "nroots": 43, "queued": 43, "time": "2026-10-20T07:02:38Z"}
+{"cube": [1824, -1014, -2029, 2013, 999, 998, 997], "solve_s": 8.56, "proof_bytes": 16725513, "cake_lpr": "s VERIFIED UNSAT", "check_s": 12.16, "status": "UNSAT"}
+{"cube": [1824, -1014, -2029, -2013, -1996, -1978, 1959], "solve_s": 12.32, "proof_bytes": 21095149, "cake_lpr": "s VERIFIED UNSAT", "check_s": 10.36, "status": "UNSAT"}
+{"cube": [1824, -1014, -2029, -2013, 1996, -1978, 1959], "solve_s": 28.05, "proof_bytes": 21827584, "cake_lpr": "", "check_s": 6.31, "status": "UNSAT_UNVERIFIED"}
+{"cube": [1824, -1014, -2029, 2013, -999, 998, -1959], "solve_s": 21.58, "proof_bytes": 27819013, "cake_lpr": "s VERIFIED UNSAT", "check_s": 10.39, "status": "UNSAT"}
+{"cube": [1824, -1014, -2029, -2013, 1996, 1978, 1959], "solve_s": 43.03, "proof_bytes": 21213184, "cake_lpr": "", "check_s": 10.59, "status": "UNSAT_UNVERIFIED"}
+{"cube": [1824, -1014, 2029, -2013, -1996, 1978, -1959], "solve_s": 23.63, "proof_bytes": 26515338, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.81, "status": "UNSAT"}
+{"cube": [1824, -1014, 2029, 2013, -1996, -1978, 997], "solve_s": 22.72, "proof_bytes": 27432076, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.83, "status": "UNSAT"}
+{"cube": [1824, -1014, -2029, 2013, -999, -998, 1959], "solve_s": 63.71, "proof_bytes": 46197056, "cake_lpr": "s VERIFIED UNSAT", "check_s": 12.36, "status": "UNSAT"}
+{"cube": [1824, -1014, 2029, -2013, 1996, -1978, -997], "solve_s": 34.38, "proof_bytes": 32849827, "cake_lpr": "s VERIFIED UNSAT", "check_s": 11.8, "status": "UNSAT"}
+{"cube": [1824, -1014, 2029, 2013, -1996, 1978, -997], "solve_s": 64.11, "proof_bytes": 46641079, "cake_lpr": "s VERIFIED UNSAT", "check_s": 5.31, "status": "UNSAT"}
+{"cube": [1824, -1014, 2029, 2013, 1996, 1978, -1959], "solve_s": 69.58, "proof_bytes": 54023997, "cake_lpr": "s VERIFIED UNSAT", "check_s": 4.72, "status": "UNSAT"}
+{"cube": [1824, 1014, -2029, 2013, -1996, 1978, 1959], "solve_s": 106.24, "proof_bytes": 87970245, "cake_lpr": "s VERIFIED UNSAT", "check_s": 10.27, "status": "UNSAT"}
+{"cube": [1824, 1014, -2029, 2013, 1996, -1978, -1959], "solve_s": 125.14, "proof_bytes": 108729289, "cake_lpr": "s VERIFIED UNSAT", "check_s": 13.65, "status": "UNSAT"}
+{"cube": [1824, 1014, -2029, 2013, 1996, 1978, 1959], "solve_s": 120.04, "proof_bytes": 107681144, "cake_lpr": "s VERIFIED UNSAT", "check_s": 13.59, "status": "UNSAT"}
+{"cube": [1824, 1014, -2029, -2013, 1996, -1978, 1959], "solve_s": 146.22, "proof_bytes": 129289659, "cake_lpr": "s VERIFIED UNSAT", "check_s": 13.93, "status": "UNSAT"}
+{"cube": [1824, 1014, 2029, -579, -2013, -1996, 1959], "solve_s": 100.8, "proof_bytes": 82773388, "cake_lpr": "s VERIFIED UNSAT", "check_s": 9.49, "status": "UNSAT"}
+{"cube": [1824, 1014, 2029, -579, -2013, 1996, 1978], "solve_s": 94.1, "proof_bytes": 77819896, "cake_lpr": "s VERIFIED UNSAT", "check_s": 7.68, "status": "UNSAT"}
+{"cube": [1824, 1014, 2029, -579, 2013, 1996, 563], "solve_s": 132.75, "proof_bytes": 109086518, "cake_lpr": "s VERIFIED UNSAT", "check_s": 14.43, "status": "UNSAT"}
+{"cube": [1824, 1014, -2029, -2013, -1996, 1978, -1959], "solve_s": 236.77, "proof_bytes": 202445361, "cake_lpr": "s VERIFIED UNSAT", "check_s": 20.75, "status": "UNSAT"}
+{"cube": [-1824, -1040, -2200, -2224, 2247, 2813, -2804], "solve_s": 5.17, "proof_bytes": 15591260, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.12, "status": "UNSAT"}
+{"cube": [-1824, -1040, -2200, -2224, -2247, 2269, -2290], "solve_s": 5.09, "proof_bytes": 11587489, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.04, "status": "UNSAT"}
+{"cube": [-1824, -1040, -2200, 2224, 1048, 452, 588], "solve_s": 0.72, "proof_bytes": 6691491, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.64, "status": "UNSAT"}
+{"cube": [-1824, -1040, -2200, 2224, 1048, -452, 385], "solve_s": 12.12, "proof_bytes": 21254618, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.71, "status": "UNSAT"}
+{"cube": [-1824, -1040, -2200, 2224, -1048, 435, -424], "solve_s": 10.1, "proof_bytes": 19251118, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.57, "status": "UNSAT"}
+{"cube": [-1824, -1040, 2200, -2347, -2329, 2310, -1023], "solve_s": 29.98, "proof_bytes": 33718704, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.51, "status": "UNSAT"}
+{"cube": [-1824, -1040, 2200, -2347, 2329, 1024, 1023], "solve_s": 12.83, "proof_bytes": 21109697, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.4, "status": "UNSAT"}
+{"cube": [1824, 1014, 2029, 579, 1996, -2013, -1978], "solve_s": 238.08, "proof_bytes": 207662502, "cake_lpr": "s VERIFIED UNSAT", "check_s": 18.91, "status": "UNSAT"}
+{"cube": [-1824, -1040, 2200, -2347, 2329, -1024, -1023], "solve_s": 46.32, "proof_bytes": 44269355, "cake_lpr": "s VERIFIED UNSAT", "check_s": 12.79, "status": "UNSAT"}
+{"cube": [1824, 1014, 2029, 579, -1996, -1959, -1939], "solve_s": 268.34, "proof_bytes": 221525046, "cake_lpr": "s VERIFIED UNSAT", "check_s": 21.08, "status": "UNSAT"}
+{"cube": [-1824, -1040, 2200, 2347, -2364, -1025, -2310], "solve_s": 33.24, "proof_bytes": 35467706, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.69, "status": "UNSAT"}
+{"cube": [-1824, -1040, 2200, 2347, 2364, -2380, 2329], "solve_s": 60.66, "proof_bytes": 54567222, "cake_lpr": "s VERIFIED UNSAT", "check_s": 4.96, "status": "UNSAT"}
+{"cube": [-1824, 1040, -2290, 2269, -2247, 2224, -2200], "solve_s": 93.7, "proof_bytes": 79196911, "cake_lpr": "s VERIFIED UNSAT", "check_s": 7.68, "status": "UNSAT"}
+{"cube": [-1824, 1040, -2290, 2269, -2247, -2224, -2200], "solve_s": 105.57, "proof_bytes": 87741190, "cake_lpr": "s VERIFIED UNSAT", "check_s": 9.74, "status": "UNSAT"}
+{"cube": [-1824, 1040, -2290, 2269, 2247, 2224, -2380], "solve_s": 93.16, "proof_bytes": 79954908, "cake_lpr": "s VERIFIED UNSAT", "check_s": 7.38, "status": "UNSAT"}
+{"start": true, "case_sha256": "eb730ad3eebdd96f8daf71efb79c4932d861ddd0e0b1c8b38c6423112bf66df8", "top_sha256": "c172b9354496170c210bab5707ff63b120495823df0ac3b38b04da125cbfcd08", "ntop": 128, "shard": 0, "nshards": 3, "nroots": 43, "queued": 11, "time": "2026-10-20T07:16:10Z"}

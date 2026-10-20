@@ -79,9 +79,10 @@ def solve(cube):
     st = round(time.time() - t, 2); r = {"cube": cube, "solve_s": st}
     if rc == 20:
         r["proof_bytes"] = os.path.getsize(os.path.join(w, "p.lrat")); t = time.time()
-        o = subprocess.run([os.path.join(BIN, "cake_lpr"), f, os.path.join(w, "p.lrat")], capture_output=True, text=True).stdout
-        r["cake_lpr"] = next((l for l in o.splitlines() if l.startswith("s ")), o[-100:]); r["check_s"] = round(time.time() - t, 2)
+        p = subprocess.run([os.path.join(BIN, "cake_lpr"), f, os.path.join(w, "p.lrat")], capture_output=True, text=True)
+        o = p.stdout; r["cake_lpr"] = next((l for l in o.splitlines() if l.startswith("s ")), o[-100:]); r["check_s"] = round(time.time() - t, 2)
         r["status"] = "UNSAT" if r["cake_lpr"] == VER else "UNSAT_UNVERIFIED"
+        if r["status"] != "UNSAT": r.update(cake_rc=p.returncode, cake_err=p.stderr[-300:])
     elif rc == 10:
         r["status"] = "SAT"; subprocess.run(["cp", f, os.path.join(a.out, f"SAT_{k}.cnf")])
     else:
