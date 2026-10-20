@@ -36,6 +36,8 @@ def children(layers):
     ch = tree_children(M, K, layers, mirror=MIRROR)
     if not layers and TOP:  # stratum: only the H3 top case, or only the ten H6 cases
         ch = [c for c in ch if (len(c[0]) == 1) == (TOP == "H3")]
+    if TOP == "H6single" and len(layers) == 1:  # stratum: one-orbit second layers below H6
+        ch = [c for c in ch if len(c[1]) == 1]
     return ch
 
 
@@ -47,7 +49,7 @@ def main():
     ap.add_argument("--modeldir", default="/opt/work/models")
     ap.add_argument("--hours", type=float, default=100)
     ap.add_argument("--mirror", action="store_true", help="H3 mirror reduction at layer 2")
-    ap.add_argument("--top", choices=["H3", "H6"], help="stratum: estimate only this part of the tree")
+    ap.add_argument("--top", choices=["H3", "H6", "H6single"], help="stratum: estimate only this part of the tree")
     a = ap.parse_args()
     global MIRROR, TOP
     MIRROR, TOP = a.mirror, a.top
