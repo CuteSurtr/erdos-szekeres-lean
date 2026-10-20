@@ -124,3 +124,18 @@ None. No SAT model, no 7-gon-free 33-point set, and no axis interval with zero 7
 - `logs/cnc_i_hull/`, `logs/cnc_ii_interior/`: `cnc.log`, `latest.json`, `state.json` (open
   cubes), `closed.txt`, and the LRAT records.
 - No CNF or proof files are committed.
+
+## Final LRAT tally
+
+Output of `scripts/reconcile.py` on all LRAT records at 04:03 UTC:
+
+| run | distinct closed cubes | LRAT VERIFIED | unchecked | other outcomes |
+|---|---|---|---|---|
+| (i) hull | 4,535 | 4,535 | 0 | 0 |
+| (ii) interior | 749 | 749 | 0 | 0 |
+
+That is 5,289 proof checks in all. The longest from-scratch solve took 57.9 s, the largest
+proof was 22 MB, and the solves took 3.1 h of CPU in total. Proofs were deleted after
+checking. Every closed cube is certified in the sense that CNF + cube is UNSAT by a checked
+LRAT proof. The open cubes (1,048 for (i), 1,340 for (ii); listed in `state.json`) are
+unresolved, so **neither sub-case is certified**.
