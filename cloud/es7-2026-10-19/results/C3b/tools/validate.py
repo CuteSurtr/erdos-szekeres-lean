@@ -160,6 +160,7 @@ def main():
     ap.add_argument("--mmax", type=int, default=11)
     ap.add_argument("--ks", default="5,6,7")
     ap.add_argument("--log")
+    ap.add_argument("--rmin", type=int, default=1, help="use R >= rmin*m only (faster sampling)")
     a = ap.parse_args()
     rng = random.Random(a.seed)
     ks = [int(x) for x in a.ks.split(",")]
@@ -173,7 +174,7 @@ def main():
         if (m, k) not in evs:
             evs[m, k] = Evaluator(m, k)
         ev = evs[m, k]
-        R = rng.choice([m, m + 2, 2 * m, 4 * m, 30])
+        R = rng.choice([r for r in (m, m + 2, 2 * m, 4 * m, 30) if r >= a.rmin * m] or [30])
         P = random_set(m, rng, R)
         val, conf, chi = true_assignment(P, ev.mp, ev.mp)
         f1, f2, aux = ev.eval(val)
@@ -189,6 +190,7 @@ def main():
         if logf:
             logf.write(json.dumps({"m": m, "k": k, "R": R, "conflicts": conf, "nonkgon_falsified": f1,
                                    "kgon_falsified": f2, "true_aux": aux, "has_kgon": gon, "ok": ok}) + "\n")
+            logf.flush()
     print(json.dumps({"samples": a.samples, "seed": a.seed, "failures": fails, "per": stats}))
     sys.exit(1 if fails else 0)
 
