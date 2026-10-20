@@ -138,7 +138,9 @@ done = {}
 if os.path.exists(LEAVES):
     for line in open(LEAVES):
         if line.strip():
-            r = json.loads(line); done[key(r["kind"], r["cube"])] = r
+            r = json.loads(line)
+            if r.get("children_lost"): continue   # split record recovered without children: redo
+            done[key(r["kind"], r["cube"])] = r
 queue = []
 def expand(cube):
     k = key("cube", cube)
