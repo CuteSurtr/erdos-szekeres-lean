@@ -1,0 +1,6 @@
+Tools built from source on this VM, in /opt/work/tools (BIN):
+cadical   https://github.com/arminbiere/cadical   commit c60730422e758ef1cebe7aeddf2dda31c996bf04 (./configure && make), --version 3.0.1
+march_cu  https://github.com/marijnheule/CnC      commit 705b60c6491ef2b61988b3ce6ac674be1b90571d (march_cu: make CFLAGS="-O3 -fcommon")
+cake_lpr  https://github.com/tanyongkiam/cake_lpr commit a36874a8b750b43fe4b385b8ddbf5b033e46a3fa (make cake_lpr); ./cake_lpr example.cnf example.lpr -> s VERIFIED UNSAT
+F.cnf regenerated (gen_etv.py 33 7 7 7 --mirror; mirgen.py --interior --yflip-unit): sha256 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d (matches)
+U_L7 case CNF (hullsplit.py case F.cnf "" 7): sha256 c6d1c840d97921426e0f2d1d34213fb94293cc1783296ec2357d7883b804f099 (matches cases.jsonl)
