@@ -18,3 +18,11 @@ Now leaf records carry `"lits"` and cover records carry `"leaves_sha256"` (sha25
 list of the case's leaves in manifest order); a record is skipped on resume only if kind, key,
 case and lits (leaf) or leaves_sha256 (cover) all match. Old records without these fields are
 re-checked. Nothing else changes.
+
+## Change 3 (not a bug fix): `--skip-leaves` and `--skip-covers`
+A second pass re-checks only the leaves that have no VERIFIED record yet, from a renumbered
+sub-manifest, while the covers must be checked on each case's complete leaf set. These two flags
+let one run do only the leaf jobs (on the sub-manifest) and another only the cover jobs (on the
+full manifest). Without the flags the behaviour is unchanged. Skipping work cannot make
+anything accepted: acceptance still needs a VERIFIED cover record whose leaves_sha256 matches
+the case's full leaf list, and a VERIFIED record for every one of those leaves.

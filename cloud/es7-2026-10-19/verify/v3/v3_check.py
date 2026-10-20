@@ -40,6 +40,8 @@ def main():
     ap.add_argument("--cap", type=int, default=3600)
     ap.add_argument("--cadical", default="/opt/bin/cadical")
     ap.add_argument("--cake", default="/opt/bin/cake_lpr")
+    ap.add_argument("--skip-leaves", action="store_true", help="check only the covers of this shard's cases")
+    ap.add_argument("--skip-covers", action="store_true", help="check only this shard's leaves")
     a = ap.parse_args()
 
     raw = open(a.base, "rb").read()
@@ -158,7 +160,9 @@ def main():
               "rc": rc, "solve_s": st, "cake_lpr": line, "check_s": ct, "verdict": verdict})
 
     with ThreadPoolExecutor(a.jobs) as ex:
-        for f in [ex.submit(cover_job, c) for c in my_cases] + [ex.submit(leaf_job, r) for r in mine]:
+        jobs = [] if a.skip_covers else [ex.submit(cover_job, c) for c in my_cases]
+        jobs += [] if a.skip_leaves else [ex.submit(leaf_job, r) for r in mine]
+        for f in jobs:
             f.result()
     outf.close()
     print("shard", a.shard, "of", a.nshards, "leaves", len(mine), "covers", len(my_cases))
