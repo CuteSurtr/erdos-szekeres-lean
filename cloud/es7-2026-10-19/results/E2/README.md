@@ -197,7 +197,7 @@ None. No SAT answer from the driver or the probe, so there is nothing to realize
   about 01:13 to 01:45 the driver wrote to deleted inodes. The data was recovered from
   `/proc/<pid>/fd` before restarting. Since 01:46 the driver writes only to a scratch
   directory, and `run/` is a copy made at each commit. `closed.jsonl` was never affected:
-  it was empty, and no cube closed.
+  it was still empty then, since the one closed cube came at 03:45.
 - **Two container restarts** (§1).
 - No push was rejected beyond ordinary non-fast-forwards, which were fixed by
   `pull --rebase`. Everything is on `es7-cloud`.
@@ -209,7 +209,7 @@ None. No SAT answer from the driver or the probe, so there is nothing to realize
   `lrat_check_soundness.md`, `lrat_recheck.log` (E's D3 proofs) and
   `lrat_probe_leaves.jsonl`, `lrat_driver_closed.jsonl` (the closed driver cube).
 - `run/`: `state.json` (resumable frontier), `verify_tree.json`, `final.json`, `state_from_E.json`, `progress.log`,
-  `events.log`, `closed.jsonl` (empty) and `final_segments.json`.
+  `events.log`, `closed.jsonl` (the 1 closed cube) and `final_segments.json`.
 - `probe/`: Knuth probe walks (`*.jsonl`) and per-step logs (`*.jsonl.steps`).
 - `test_n18/`: driver end-to-end test.
 - `tools/`: `knuth_probe.py`, `dualcheck.sh`, `lrat-check-E2.patch`, and `lratcube.py`
