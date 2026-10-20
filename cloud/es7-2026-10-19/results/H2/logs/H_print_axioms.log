@@ -1,0 +1,13 @@
+ETV.heptagonConjecture_of_unsat : ¬ETV.DimacsSatisfiable (ETV.dimacs 33 7 7 7) → ErdosSzekeres.HeptagonConjecture
+ETV.heptagonConjecture_of_unsat_n33k7hm : ¬ETV.DimacsSatisfiable (ETV.dimacsB 33 7 true true false true) →
+  ErdosSzekeres.HeptagonConjecture
+ETV.forces_quadrilateral_5 : ErdosSzekeres.ForcesConvexNGon 5 4
+'ETV.heptagonConjecture_of_unsat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ETV.heptagonConjecture_of_unsat_n33k7hm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ETV.forces_quadrilateral_5' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ETV.forces_quadrilateral_5_hm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ETV.xsbSound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ETV.dimacsB_eq_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ETV.forcesConvexNGon_of_unsat_hull' depends on axioms: [propext, Classical.choice, Quot.sound]
+def ErdosSzekeres.HeptagonConjecture : Prop :=
+ErdosSzekeres.ForcesConvexNGon 33 7

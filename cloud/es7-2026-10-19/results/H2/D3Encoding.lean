@@ -7,3 +7,6 @@ import D3Encoding.Conv
 import D3Encoding.Sound
 import D3Encoding.Main
 import D3Encoding.Instance
+import D3Encoding.Geometry
+import D3Encoding.Targets
+import D3Encoding.Audit
