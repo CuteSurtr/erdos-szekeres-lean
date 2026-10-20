@@ -17,7 +17,9 @@ for i, line in enumerate(open(cubes)):
 rec = {}
 for line in open(leaves):
     if line.strip():
-        r = json.loads(line); rec[(r["kind"], tuple(r["cube"]))] = r
+        r = json.loads(line)
+        if r.get("children_lost"): continue   # recovered split without children (re-run later)
+        rec[(r["kind"], tuple(r["cube"]))] = r
 cnt = {"leaf_unsat_verified": 0, "leaf_unsat_check_failed": 0, "sat": 0, "open_unsolved": 0,
        "split_nodes": 0, "gaps_verified": 0, "gaps_open": 0}
 solve_s = 0.0
