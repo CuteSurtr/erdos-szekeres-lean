@@ -54,6 +54,22 @@ def true_assignment(e, L):
         setlit(v, bool(L.before[p]), ("B", p))
     for t, lit in e.T.items():
         setlit(lit, L.chiS[t] > 0, ("T", t))
+    if getattr(e, "gon", "chain") == "conv":
+        def O(t):
+            st = tuple(sorted(t))
+            a, b, c = t
+            par = -1 if ((a > b) + (a > c) + (b > c)) & 1 else 1
+            return par * L.chiS[st]
+        cv = {}
+        for S in sorted(e.conv, key=len):
+            if len(S) == 4:
+                ins = lambda d, a, b, c: O((a, b, d)) == O((b, c, d)) == O((c, a, d))
+                cv[S] = not any(ins(d, *[q for q in S if q != d]) for d in S)
+            else:
+                cv[S] = all(cv[tuple(x for x in S if x != y)] for y in S)
+            A[e.conv[S]] = cv[S]
+        gonS = any(all(cv[tuple(x for x in S if x != y)] for y in S) for S in itertools.combinations(range(n), k))
+        return A, conflicts, gonS
     # oriented ccw table and before table
     ccw = np.zeros((n, n, n), dtype=bool)
     for (i, j, l), s in L.chiS.items():
@@ -86,14 +102,15 @@ def true_assignment(e, L):
 
 def main():
     M, K, NS, seed = map(int, sys.argv[1:5])
+    gon = sys.argv[5] if len(sys.argv) > 5 else "chain"
     rng = random.Random(seed)
-    e = C3Enc(M, K)
+    e = C3Enc(M, K, gon=gon)
     e.build()
     lits, starts = flat(e.clauses)
     secs = e.sections
     gon_start = [s for s in secs if s[0] == "gon"][0][1]
     del e.clauses
-    res = {"m": M, "k": K, "seed": seed, "sets": 0, "gon": 0, "nogon": 0, "fail": []}
+    res = {"m": M, "k": K, "encoding": gon, "seed": seed, "sets": 0, "gon": 0, "nogon": 0, "fail": []}
     for t in range(NS):
         shape = rng.choice(["disk", "ring", "thin", "thin", (rng.randint(-900, 900), rng.randint(-900, 900))])
         pts = random_c3(M, rng, shape=shape)

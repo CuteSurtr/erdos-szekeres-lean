@@ -42,9 +42,10 @@ def parity_sort(t):
 
 
 class C3Enc:
-    def __init__(self, m, k, sb=True, xsig=False):
+    def __init__(self, m, k, sb=True, xsig=False, gon="chain"):
         self.m, self.k, self.n = m, k, 3 * m
         self.xsig = xsig
+        self.gon = gon
         self.nv = 0
         self.sections = []  # (name, first clause index, count)
         self.clauses = []
@@ -185,6 +186,9 @@ class C3Enc:
                         self.add(g + [-sq[a1], sq[b1], -sq[c1]])
                         self.add(g + [sq[a1], -sq[b1], sq[c1]])
             self.section("xsig", st)
+        if self.gon == "conv":
+            self.build_conv()
+            return
         # chain
         st = len(cl)
         self.Y = {}
@@ -223,13 +227,65 @@ class C3Enc:
             self.add(g)
         self.section("gon", st)
 
+    def build_conv(self):
+        """Variant gon encoding (--gon conv): 4-point criterion on chi_S with one variable per
+        R-orbit of r-subsets, as in symcnf.py:  conv4(Q) <- Q has one of the 6 convex chi_S
+        patterns;  conv_r(S) <- AND_x conv_{r-1}(S - x);  every k-set: OR_x NOT conv_{k-1}(S - x).
+        Sound: a real k-set in convex position makes every conv flag below it true."""
+        n, k, cl = self.n, self.k, self.clauses
+        convex = []
+        for pat in itertools.product((1, -1), repeat=4):
+            base = dict(zip(itertools.combinations(range(4), 3), pat))
+            O = lambda x, y, z: parity_sort((x, y, z))[1] * base[parity_sort((x, y, z))[0]]
+            ins = lambda d, a, b, c: O(a, b, d) == O(b, c, d) == O(c, a, d)
+            if not any(ins(d, *[q for q in range(4) if q != d]) for d in range(4)):
+                convex.append(pat)
+        assert len(convex) == 6
+        self.conv = {}
+
+        def cvar(S):
+            if S in self.conv:
+                return self.conv[S]
+            v = self.new()
+            cur = S
+            for _ in range(3):
+                self.conv[cur] = v
+                cur = tuple(sorted(self.R[i] for i in cur))
+            return v
+
+        st = len(cl)
+        done = set()
+        for Q in itertools.combinations(range(n), 4):
+            if Q in self.conv:
+                continue
+            v = cvar(Q)
+            lits = [self.T[t] for t in itertools.combinations(Q, 3)]
+            for pat in convex:
+                self.add([(-l if p > 0 else l) for l, p in zip(lits, pat)] + [v])
+        for r in range(5, k):
+            for S in itertools.combinations(range(n), r):
+                if S in self.conv:
+                    continue
+                v = cvar(S)
+                self.add([-self.conv[tuple(x for x in S if x != y)] for y in S] + [v])
+        self.section("conv", st)
+        st = len(cl)
+        seen = set()
+        for S in itertools.combinations(range(n), k):
+            rep = min(tuple(sorted(((i - j * self.m) % n) for i in S)) for j in range(3))
+            if rep in seen:
+                continue
+            seen.add(rep)
+            self.add([-self.conv[tuple(x for x in S if x != y)] for y in S])
+        self.section("gon", st)
+
     def write(self, path, mappath=None):
         with open(path, "w") as f:
             f.write(f"p cnf {self.nv} {len(self.clauses)}\n")
             for c in self.clauses:
                 f.write(" ".join(map(str, c)) + " 0\n")
         info = {"m": self.m, "k": self.k, "n": self.n, "vars": self.nv, "clauses": len(self.clauses),
-                "C_vars": self.nC, "sections": self.sections, "sb": self.sb, "xsig": self.xsig}
+                "C_vars": self.nC, "sections": self.sections, "sb": self.sb, "xsig": self.xsig, "gon": self.gon}
         if mappath:
             mp = dict(info)
             mp["C"] = [[*t, l] for t, l in sorted(self.C.items())]
@@ -250,8 +306,9 @@ def main():
     ap.add_argument("--map")
     ap.add_argument("--no-sb", action="store_true")
     ap.add_argument("--xsig", action="store_true", help="signotope axioms of chi_S in the x-order of S")
+    ap.add_argument("--gon", choices=["chain", "conv"], default="chain")
     a = ap.parse_args()
-    e = C3Enc(a.m, a.k, sb=not a.no_sb, xsig=a.xsig)
+    e = C3Enc(a.m, a.k, sb=not a.no_sb, xsig=a.xsig, gon=a.gon)
     e.build()
     print(json.dumps(e.write(a.out, a.map)))
 
