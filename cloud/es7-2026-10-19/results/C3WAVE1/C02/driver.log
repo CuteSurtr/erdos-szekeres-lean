@@ -43,3 +43,6 @@
 {"root": "0s0-1s1_5s0-10s0", "open_frontier": 0}
 === 0s0-1s1_5s0-10s0 end 08:03:18 rc=0
 === 0s0-1s1_6s0-7s1 start 08:03:18 hours=3.176388888888889
+{"node": "0s0-1s1_6s0-7s1", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-1s1_6s0-7s1_2_5", "status": "UNSATISFIABLE", "solve_s": 6.8, "certified": false}
+PROOF NOT ACCEPTED 0s0-1s1_6s0-7s1_2_5

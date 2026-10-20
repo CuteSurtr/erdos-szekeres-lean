@@ -9,3 +9,13 @@
 {"node": "0s0-1s1_3s0-6s0", "units": 339, "cnf_sha256": "ebcd0e056dba55fff2ddfb578bc219f06483df97c8deede68a829fb0625c3493", "cap": 300, "cadical_opts": ["--sat"], "status": "UNSATISFIABLE", "solve_s": 36.1, "proof_bytes": 151989364, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT", "certified": true, "check_s": 40.0, "base_sha256": "bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da"}
 {"node": "0s0-1s1_4s0-10s1", "units": 339, "cnf_sha256": "8dbaf2edfd0f27a24342bea4bd7bd1707333b6afb784a94d9d75a2227d67bf66", "cap": 300, "cadical_opts": ["--sat"], "status": "UNSATISFIABLE", "solve_s": 90.0, "proof_bytes": 210943841, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT", "certified": true, "check_s": 44.5, "base_sha256": "bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da"}
 {"node": "0s0-1s1_5s0-10s0", "units": 339, "cnf_sha256": "6aa0012811dd50a69717936f47457f4084ed211b2a750e671338963eff947103", "cap": 300, "cadical_opts": ["--sat"], "status": "UNSATISFIABLE", "solve_s": 226.4, "proof_bytes": 316595162, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT", "certified": true, "check_s": 52.2, "base_sha256": "bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da"}
+{"node": "0s0-1s1_6s0-7s1", "units": 339, "cnf_sha256": "188e521d980f73d65dd17e7043a578575e01e80c5cb5ceb8e4e7f6753bfbbd5b", "cap": 300, "cadical_opts": ["--sat"], "status": "UNKNOWN", "solve_s": 300.1, "base_sha256": "bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da"}
+{"node": "0s0-1s1_6s0-7s1", "split": true, "children": 91}
+{"node": "0s0-1s1_6s0-7s1_2", "split": true, "children": 66, "presplit": true}
+{"node": "0s0-1s1_6s0-7s1_3", "split": true, "children": 66, "presplit": true}
+{"node": "0s0-1s1_6s0-7s1_4", "split": true, "children": 66, "presplit": true}
+{"node": "0s0-1s1_6s0-7s1_5", "split": true, "children": 66, "presplit": true}
+{"node": "0s0-1s1_6s0-7s1_8", "split": true, "children": 66, "presplit": true}
+{"node": "0s0-1s1_6s0-7s1_9", "split": true, "children": 66, "presplit": true}
+{"node": "0s0-1s1_6s0-7s1_10", "split": true, "children": 66, "presplit": true}
+{"node": "0s0-1s1_6s0-7s1_2_5", "units": 444, "cnf_sha256": "fa90b82be73c8b47ea5478cc09e4ab054edda9e57c0f94570b0a8b965b969a0d", "cap": 600, "cadical_opts": ["--sat"], "status": "UNSATISFIABLE", "solve_s": 6.8, "proof_bytes": 20634413, "lrat_check": "c VERIFIED", "cake_lpr": "none", "certified": false, "check_s": 19.9, "base_sha256": "bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da"}
