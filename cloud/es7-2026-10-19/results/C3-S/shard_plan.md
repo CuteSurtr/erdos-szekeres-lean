@@ -5,7 +5,7 @@ VM (`env.txt`) and are rough (see "Expected cost").
 
 ## 1. Exact inputs
 
-- Generator commit: GENCOMMIT_PLACEHOLDER on branch `es7-cloud`. Directory
+- Generator commit: `fc55d53` on branch `es7-cloud`. Directory
   `cloud/es7-2026-10-19/results/C3-S/tools/`, which imports `../../C3a/c3cnf.py` (unchanged since
   `0473a37`). Python 3.11, no randomness in any generator.
 - Base CNF: `python3 tools/gen_case.py 11 7 none -o base.cnf`
@@ -17,7 +17,19 @@ VM (`env.txt`) and are rough (see "Expected cost").
   writes the same file (checked: identical sha256 for all 11 top cases).
 - Top cases (depth 1) and their CNF sha256:
 
-TOPCASES_PLACEHOLDER
+  | case | node name | units | CNF sha256 |
+  |---|---|---|---|
+  | H3 | `0s0` | 93 | `b6904b38881548aab08d1808374948652371bacdfd00e8a20f5031d887279475` |
+  | H6a1s0 | `0s0-1s0` | 187 | `5d8f9a3028033d2bd632b454dc0681f3107ec162406986965b91da23b1aae14c` |
+  | H6a1s1 | `0s0-1s1` | 187 | `441cf1c15c22882d17284c7f31c89752c14ecddf5ed7506c0d56ed100e565b56` |
+  | H6a2s0 | `0s0-2s0` | 187 | `d4c130ec7dbe629ecac16058b2f3c042e7b8607247cacf84f66c111ff47d158c` |
+  | H6a2s1 | `0s0-2s1` | 187 | `c4ba0989ba2f9b77185330250a4ff731fe11de0b5211cb42560845bc7cb510ce` |
+  | H6a3s0 | `0s0-3s0` | 187 | `0e75b381a3980c7151860aec4f771c0b52ea0a6fe139ad0d834dd192ef5c7473` |
+  | H6a3s1 | `0s0-3s1` | 187 | `b2507797af30ea3fd11024de2b4b8ed3febdd5e39326ca2c8256deefbc0c9940` |
+  | H6a4s0 | `0s0-4s0` | 187 | `64d6a08f91f59aeb49a853dd7ea5be60792dfacb3042f23ee66c8d618a26dece` |
+  | H6a4s1 | `0s0-4s1` | 187 | `7a2554c4c0ffcf4de41b4ebed6d10a1f0e3a6050c11994cac88ebc6b0dc08ec4` |
+  | H6a5s0 | `0s0-5s0` | 187 | `eb9f971b4c3c611a0315171b73d358daa9a13c3db8e8f7e5542d6a78ba490a9e` |
+  | H6a5s1 | `0s0-5s1` | 187 | `3b632d7936e433b054382d294ad7b30909c0627971b0afd0704221a5f9626777` |
 
 - Every depth-2 node (1,630 of them: 100 below H3 after the mirror reduction, 153 below each H6
   case), with its unit count and CNF sha256, is listed in `manifest_depth2.tsv`.
@@ -35,7 +47,7 @@ index is congruent to i mod N, and runs, with J = number of cores:
 cd cloud/es7-2026-10-19/results/C3-S/tools
 python3 gen_case.py 11 7 none -o /work/base.cnf          # check the sha256 above
 python3 close_tree.py /work/base.cnf /work/out_$i.jsonl SHARD --shard $i --nshards $N \
-        --jobs $J --caps 300,300,600 --cadopts=--sat
+        --jobs $J --caps 300,300,600 --cadopts=--sat --split-singles
 ```
 
 For each node, `close_tree.py` does the following:
@@ -56,8 +68,9 @@ driver and saves the model. Decode it with `results/C3a/decode.py`, check it, an
 The depth-1 nodes are never solved directly. The 11 top-case CNFs time out at 300 s, and the
 depth-2 shards are their children.
 
-Recommended policy change (from the measurements below): do not try a node whose newest layer
-is a single orbit. Split it at once. One-orbit layers add only 3 hull vertices, and those nodes
+`--split-singles` (used above and assumed in the cost numbers): a node whose newest layer is a
+single orbit directly below a two-orbit layer (or below the top) is split at once, without trying
+it. Runs of one-orbit layers are tried, or the tree explodes. One-orbit layers add only 3 hull vertices, and those nodes
 almost never close at 300 s (`logs/tree_H6a4s0.jsonl`).
 
 ## 3. Composition into one certificate
@@ -85,4 +98,25 @@ both checkers.
 
 ## 4. Expected cost
 
-COST_PLACEHOLDER
+All numbers are single-core seconds or hours, measured on the shared 4-core VM. "Solve" is
+CaDiCaL time; dual checking adds about 27% (measured: mean 27 s check per 101 s solve).
+
+| part of the tree | how measured | solve core-hours |
+|---|---|---|
+| 10 H6 cases × 144 two-orbit layer-2 nodes, closed at depth 2 | H6a4s0 enumerated completely: 139/144 closed, mean 100.6 s (median 81, max 290), 5 time out at 300 s | about 40 (+11 checking) |
+| the about 5 % of those pair nodes that time out, split once | assumed to cost like a one-orbit subtree below | about 130 |
+| 10 × 9 one-orbit layer-2 subtrees below H6 (pre-split, children capped) | 88 Knuth walks (`kd_H6single_s51`) | 469 ± 141 (median walk 113, max 11,797) |
+| H3 subtree (100 layer-2 options after the mirror reduction) | 8 Knuth walks (`kc_H3_*`, two policies) | median walk 446; policy 300k/100k: 218 and 1,681; one walk 682,760 |
+
+**Estimate: about 1,500 core-hours (H6 ≈ 800 with checking, H3 ≈ 500–1,700), but the H3 part
+is heavy-tailed and its mean over 8 walks is 86,000 ± 85,000 core-hours.** The one extreme walk
+goes through nested one-orbit layers (`0s0_1_5_...`): nested triangles add only 3 hull vertices
+per layer, so the tree branches about 100-fold per level with little propagation. The
+estimate is not reliable until the H3 stratum has hundreds of walks. Run the H3 subtree first,
+under the shard plan below, for a few hundred core-hours, then re-estimate from its own logs.
+
+For N machines with C cores each, the expected wall time is about 1,500 / (N·C) hours if the
+tail does not bite. For example, 16 machines × 32 cores gives about 3 h.
+The plan is deterministic, so a second run of the same plan reproduces the same node CNFs
+(sha256 in `manifest_depth2.tsv` and in the records). Solver time limits can change which nodes
+are split, but they never change soundness.

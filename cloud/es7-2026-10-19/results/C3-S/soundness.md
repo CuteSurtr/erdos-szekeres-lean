@@ -86,8 +86,9 @@ every root-to-leaf path of the layer tree passes through a node of N (a "cut"), 
 empty — up to the trusted parts: the base encoding, Lemmas 1–4 (paper proofs above, validated
 below), and the proof checkers.
 
-The cut condition is purely combinatorial: it is checked by `tools/check_cut.py` style
-enumeration (every node in the plan is either in N or has all its children enumerated).
+The cut condition is purely combinatorial: `tools/compose.py` checks it (a node is covered iff
+it is certified or all its `tree_children` are covered) and re-derives each certified node's CNF
+sha256 from the base CNF and the node name.
 
 ## What is validated mechanically (tools/validate_hull.py)
 For random symmetric sets with exact coordinates: the hull is computed from the coordinates,

@@ -9,7 +9,25 @@ paper proof (`soundness.md`) backed by exact-coordinate tests, not a formal proo
 
 ## Summary
 
-STATUS_PLACEHOLDER
+- **Decomposition: sound, validated, implemented.** The hull normalization proposed in the task
+  holds: label 0 is a hull vertex, σ_0 = 0, |hull| ∈ {3, 6}, a ≤ 5 after renormalization, and a
+  split on σ_a. That gives **11 top cases**. They are extended to **convex layers** (each layer one
+  or two R-orbits, all relevant ccw literals become unit clauses) and to a **mirror reduction
+  below H3** (190 → 100 layer-2 options). Proofs: `soundness.md`. Exact-coordinate tests:
+  2,379 canonically relabelled random sets plus 900 mirror pairs, with 0 failures.
+- **No top case is closed.** All 11 top-case CNFs time out at 300 s. **154 nodes of the layer
+  tree at m = 11 are closed**, each with an LRAT proof accepted by both lrat-check (E2 patch)
+  and cake_lpr. They include **139 of the 153 depth-2 children of H6(4, 0)**: all 144 two-orbit
+  children were tried, 139 closed, mean 101 s solve and 27 s check; the 9 one-orbit children and
+  5 pairs time out at 300 s. `tools/compose.py` re-derives every CNF sha256 and checks the cut:
+  not yet covered (1,956 frontier nodes open).
+- **Cost:** about **1,500 core-hours** if the H3 tail is mild. The H3 stratum is heavy-tailed,
+  and one of 8 walks extrapolates to 6.8·10^5 core-hours, so the true cost could be 10^4–10^5
+  core-hours. Details: "Measurements" below and `shard_plan.md` §4.
+- **No SAT at m = 11** was found: no model in any closure run, walk or probe.
+- Not done: realization of C3a's m = 10 model (optional step 5). All cores went to the m = 11
+  measurements. C3a's own 400 s realizer runs did not realize it
+  (`results/C3a/realize/*.log`), so it is still unrealized.
 
 ## What ran where
 
@@ -21,7 +39,7 @@ upper bounds on single-core times (about 1–1.5× inflated). Tools were built f
 - march_cu (CnC 705b60c, `-fcommon`, `mem_max = 600000000` as in C3a)
 - cake_lpr (built from the repository's `cake_lpr.S`)
 - drat-trim lrat-check (2e3b2dc) with `results/E2/tools/lrat-check-E2.patch`
-- pysat 1.x (cadical195) for incremental probes only. Its results are never used as closures.
+- python-sat 1.9.dev17 (cadical195) for incremental probes only. Its results are never used as closures.
 
 ## The decomposition (details and proofs: `soundness.md`)
 
@@ -80,7 +98,45 @@ Case CNF = base CNF (`gen_case.py 11 7 none`, byte-identical to C3a's chain CNF,
 
 ## Measurements at m = 11, k = 7
 
-MEASUREMENTS_PLACEHOLDER
+Raw records: `logs/`, summary: `logs/cost_summary.txt`. Single-core seconds on the shared VM.
+
+1. **Short CaDiCaL runs, 11 top cases** (`logs/short_summary.json`, `cases.jsonl`): 300 s,
+   default options. All are UNKNOWN, with 24.6k–83k conflicts and 119k–124k variables left. Two
+   depth-2 nodes (`0_5`, `0_3s0-7s1`) also time out at 300 s. The hull units alone are not
+   enough.
+2. **Sigma cubes:** H3 with all 10 free σ bits fixed (1,024 cubes) still times out at 300 s
+   (2/2 probes).
+3. **march_cu:** on the chain H3 CNF, `-d 10` emitted no cube in 35 min (killed). On the conv
+   variant of H3, `-d 8` gives 256 cubes in 115 s
+   (sha256 `e053125c…`). The probed cubes time out at 300 s (2/2). Cubes from march on the full
+   formula do not work as a split here.
+4. **Encodings on fixed layer nodes** (`logs/encoding_compare.jsonl`): C3a chain 12.5 s / 45.7 s,
+   C3a conv 69 s / 129 s, C3b chain 20 s / 52 s. Chain is used. CaDiCaL `--sat` is about 1.4×
+   faster on 2 nodes (`logs/cadical_options.jsonl`); `--unsat`, `--elim=false`, `--chrono=0` do
+   not help.
+5. **Layer tree.** Pruning on the core clauses without the 7-gon clauses removes nothing: all
+   1,720 depth-2 nodes are SAT there (`logs/probes/kp_count.jsonl`), so only the 7-gon clauses
+   prune. Random depth-3 nodes with σ fixed close in 3–4 s, but the raw tree is far too large
+   for that to help (`kl_D3_sigma`).
+6. **Adaptive Knuth walks** (`tools/knuth_adaptive.py`; pysat cadical195 with assumptions and
+   conflict budgets per depth; split into children when undecided; estimate = Σ weight × time):
+
+| stratum | walks | estimate (solve core-hours) |
+|---|---|---|
+| unstratified, budgets 20k/50k/200k (no mirror) | 22 | mean 3,080 ± 2,417 |
+| H3, mirror, 20k/50k/200k | 6 | median 446, mean 114,293 (one walk 682,760) |
+| H3, mirror, 300k/100k/300k | 2 | 218; 1,681 |
+| H6, budget 100k at depth 2 | 4 | 39 ± 17 (all four closed at depth 2) |
+| H6, one-orbit layer-2 subtrees, start at depth 3 | 88 | 469 ± 141 |
+
+7. **Certified closures** (`logs/closures.jsonl`, `logs/tree_H6a4s0.jsonl`): 154 distinct nodes.
+   Proofs are 20–250 MB (mean 209 MB at depth 2), and checking costs about 0.27× solve time.
+   - **H6(4, 0) at depth 2, enumerated completely:**
+     - 144 two-orbit children: 139 UNSAT (certified), 5 time out at 300 s;
+     - 9 one-orbit children: all time out at 300 s;
+     - total solve 13,983 s and check 3,740 s for the certified ones.
+
+The C3a/C3b m = 11 runs that continued in other sessions until about 06:55 UTC were not touched.
 
 ## Files
 
