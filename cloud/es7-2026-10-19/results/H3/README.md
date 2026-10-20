@@ -15,11 +15,25 @@ to two UNSAT facts about files that the Lean generator writes byte for byte. **T
 facts are not established here.** The parallel shard runs did not close either instance. C2's final
 state (commit 3a34639) has open weight 0.002722 in sub-case (i) (1,048 open cubes) and
 0.3640 in sub-case (ii) (1,340 open cubes).
-This run then attacked C2's 1,048 open cubes of sub-case (i) with plain CaDiCaL (no conflict
-limit, 600 s cap) and cake_lpr. **1,047 were refuted with cake_lpr-verified proofs. One cube,
-of weight 2^-19, timed out and is still open** (see §4 and §5). Sub-case (i) is therefore not
-closed, though it is one cube away. Nothing here is a claim about ES(7) or about the mirror
-class.
+This run then took on C2's 1,048 open cubes of sub-case (i) with plain CaDiCaL (no conflict
+limit, 600 s cap) and cake_lpr.
+- 1,047 were refuted with cake_lpr-verified proofs.
+- The last cube timed out once. It was split on two more variables (2538, 2687), and all four
+  sub-cubes were refuted and verified.
+
+**Result for sub-case (i), certified as a claim about one CNF.** The Lean-generated
+`hm33k7.sub.cnf` (sha256 `bfbc2d60…`) is UNSAT:
+- each of its 5,589 leaves `c` (`logs/leaves_i_hull_verified.txt`) has a
+  `s VERIFIED UNSAT` from cake_lpr on `cubeCnf F c`;
+- the Lean-proved `coverCheck` (compiled `cover_check`) accepts the leaf list
+  (`logs/cover_check_i_hull_final.log`).
+
+The leaves were checked with cake_lpr, a verified LRAT checker, and not with `lrat-check`.
+This UNSAT is **not imported into Lean**, so it is not a Lean theorem. Through the Lean
+theorem `Mir.hasConvexNGon_of_unsat_hull`, it would give: every 33-point mirror-symmetric set
+in general position whose axis point is a hull vertex has a convex 7-gon. That conclusion
+rests on the cake_lpr runs and the trust base in §4. **Sub-case (ii) is open** (open weight
+0.364), so there is no claim about the whole mirror class and none about ES(7).
 
 There is no `sorry`, `admit`, `native_decide` or new axiom. `MirrorEncoding/Audit.lean`
 checks with `#guard_msgs` that the 29 main theorems use at most `propext`,
@@ -304,15 +318,10 @@ CaDiCaL, `cnc2.py` and the Python encoders are not trusted.
 
 ## 5. Remaining targets, precisely
 
-1. **`¬ETV.DimacsSatisfiable (Mir.hullCnf 33 7)`.** Open, by one cube.
-   - Done: every leaf C2 closed (4,535) and 1,047 of C2's 1,048 open cubes have
-     cake_lpr-verified refutations of `cubeCnf (hullCnf 33 7) c`.
-   - Left: refute `cubeCnf (hullCnf 33 7) c₀` for the single cube `c₀` in
-     `logs/open_cubes_i_hull_remaining.txt` (19 literals; CaDiCaL with LRAT did not finish it
-     in 600 s). It can be done directly or by splitting it further, with cake_lpr checking.
-   - Then run `cover_check` on the 5,585 verified cubes plus `c₀`'s leaves.
-   - Then `Mir.not_dimacsSatisfiable_of_coverCheck` gives the UNSAT of this one CNF, resting
-     on cake_lpr and the compiled checker as described in §4.
+1. **`¬ETV.DimacsSatisfiable (Mir.hullCnf 33 7)`.** Certified outside Lean in this run,
+   with 5,589 cake_lpr-verified leaves and the cover check passing. What is left is only
+   the import into Lean (item 3). The four sub-cubes of the last open cube are in
+   `logs/cube_lrat_i_hull_last.jsonl`.
 2. **`¬ETV.DimacsSatisfiable (Mir.interiorCnf 33 7)`.** Open and far from closure: 1,340 open
    cubes, open weight 0.3640 (`logs/open_cubes_ii_interior.txt`). The same procedure
    applies, and the 749 verified closed cubes are already done.
