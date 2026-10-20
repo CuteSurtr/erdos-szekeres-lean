@@ -1,0 +1,24 @@
+{
+ "records": 541,
+ "status": {
+  "SPLIT": 20,
+  "UNSAT": 521
+ },
+ "unsat_lrat_verified": 521,
+ "unsat_lrat_other": 0,
+ "sat": 0,
+ "open_leaves": 739,
+ "open_by_depth": {
+  "19": 240,
+  "13": 498,
+  "15": 1
+ },
+ "split_gap_children_total": 0,
+ "closed_weight_of_shard": 0.509765625,
+ "open_weight_of_shard": 0.490234375,
+ "closed_plus_open_equals_shard": true,
+ "unsat_solve_s_total": 33035.4,
+ "unsat_solve_s_max": 275.79,
+ "lrat_check_s_total": 667.3,
+ "top_cubes_closed": 0
+}
