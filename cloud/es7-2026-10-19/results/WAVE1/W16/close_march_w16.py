@@ -34,7 +34,7 @@ def shard_top(top, s, k):
 
 def summarize(out, topcubes):
     """Write leaves.icnf (cake_lpr-verified leaves) and open.icnf; return counts."""
-    recs = [json.loads(l) for l in open(os.path.join(out, "leaves.jsonl")) if l.strip()]
+    recs = [json.loads(l) for l in open(os.path.join(out, "leaves.jsonl")) if l.endswith("\n") and l.strip()]
     done, ver, subs, sat, cpu = {}, [], [], 0, 0.0
     for r in recs:
         if "cube" not in r: continue
