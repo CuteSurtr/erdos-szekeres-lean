@@ -1,0 +1,23 @@
+# Kernel cover-check trials (4 cores, 15 GB, no swap; lean run as `lake env lean FILE`,
+# peak RSS sampled once per second). Leaf data: V2L/Leaves.lean from the chunked gen_leaves.py,
+# --closed-only on the 406 cases closed at the time (27,432 leaves in closed non-direct cases).
+#
+# 1. Template form over the closed cases, as one theorem:
+#    (caseTable.filter (leavesOf . nonempty)).all (coverCheck . leavesOf) = true := by decide +kernel
+#    -> killed by the OOM killer after 3 min 29 s (anon-rss 13.8 GB).
+# 2. One case at a time, `coverCheck (leavesOf s) = true := by decide +kernel`:
+#    U_L2-12 (125 leaves):  6 s, peak 2.2 GB
+#    U15_L   (304 leaves): 34 s, peak 3.6 GB
+#    U_L8  (2,598 leaves): killed by the OOM killer after 245 s (peak 13.5 GB)
+# 3. Kernel cost of the pieces, U_L8 (2,598 leaves, 71,890 literals):
+#    (leavesOf s).length = 2598                         5 s, 0.5 GB  (spine only)
+#    ((leavesOf s).map List.length).sum = 71890        22 s, 1.7 GB  (full unpack)
+#    (restrictPath [1112] (leavesOf s)).length = 2534  60 s, 3.5 GB  (one restrict)
+# 4. Split proof (V2L/CoverSplit.lean + scripts/gen_cover.py, threshold 150): U_L8 needs
+#    ~100 theorems, each re-evaluating restrictPath on the full list; the file was killed by the
+#    OOM killer after 377 s (peak 13.5 GB).
+#
+# The largest case (U_L2) has ~18,300 leaves and the whole data ~62,000. At the measured rate
+# (one restrict over 2,600 cubes ~ 40 s and ~2 GB), the kernel check of leavesOf_cover by
+# decide +kernel on Mir.coverCheck over List Int does not fit in 15 GB, and would not finish in
+# this run's time budget even if memory allowed.
