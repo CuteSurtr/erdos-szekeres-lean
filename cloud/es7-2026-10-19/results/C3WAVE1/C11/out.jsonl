@@ -14,3 +14,4 @@
 {"node": "0s0-1s1_2s0-10s0_8", "split": true, "children": 66, "presplit": true}
 {"node": "0s0-1s1_2s0-10s0_9", "split": true, "children": 66, "presplit": true}
 {"node": "0s0-1s1_2s0-10s0_3_7", "units": 444, "cnf_sha256": "49847134c669f74e9cfbc50635e74c6b10dfc761f7c13ae5898e4eafa9a5eee2", "cap": 600, "cadical_opts": ["--sat"], "status": "UNSATISFIABLE", "solve_s": 5.9, "proof_bytes": 18877808, "lrat_check": "c VERIFIED", "cake_lpr": "none", "certified": false, "check_s": 16.8, "base_sha256": "bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da"}
+{"node": "0s0-1s1_2s0-10s0_3s0-4s0", "units": 455, "cnf_sha256": "09e37790664ffe410c59139a608ac25ae0167090f450ed290cc6efe65f9fe507", "cap": 300, "cadical_opts": ["--sat"], "status": "UNSATISFIABLE", "solve_s": 37.8, "proof_bytes": 147698887, "lrat_check": "c VERIFIED", "cake_lpr": "none", "certified": false, "check_s": 26.6, "base_sha256": "bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da"}

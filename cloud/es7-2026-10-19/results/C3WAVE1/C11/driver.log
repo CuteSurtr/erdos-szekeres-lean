@@ -24,3 +24,21 @@
 {"node": "0s0-1s1_2s0-10s0_3_7", "status": "UNSATISFIABLE", "solve_s": 5.9, "certified": false}
 PROOF NOT ACCEPTED 0s0-1s1_2s0-10s0_3_7
 === resumed with --jobs 3 after OOM of cake_lpr (see recheck_*.md) 08:33:36
+=== ROOT 0s0-1s0_2s0-6s1 start 08:33:36 hours 3.3067
+{"root": "0s0-1s0_2s0-6s1", "open_frontier": 0}
+=== STOPPED
+=== ROOT 0s0-1s0_2s0-6s1 start 08:33:54 hours 3.3017
+{"root": "0s0-1s0_2s0-6s1", "open_frontier": 0}
+=== ROOT 0s0-1s0_3s0-10s0 start 08:33:54 hours 3.3017
+{"root": "0s0-1s0_3s0-10s0", "open_frontier": 0}
+=== ROOT 0s0-1s0_3s1-8s0 start 08:33:54 hours 3.3017
+{"root": "0s0-1s0_3s1-8s0", "open_frontier": 0}
+=== ROOT 0s0-1s0_4s1-7s1 start 08:33:55 hours 3.3014
+{"root": "0s0-1s0_4s1-7s1", "open_frontier": 0}
+=== ROOT 0s0-1s0_5s1-9s0 start 08:33:55 hours 3.3014
+{"root": "0s0-1s0_5s1-9s0", "open_frontier": 0}
+=== ROOT 0s0-1s0_7s0-9s0 start 08:33:55 hours 3.3014
+{"root": "0s0-1s0_7s0-9s0", "open_frontier": 0}
+=== ROOT 0s0-1s1_2s0-10s0 start 08:33:55 hours 3.3014
+{"node": "0s0-1s1_2s0-10s0_3s0-4s0", "status": "UNSATISFIABLE", "solve_s": 37.8, "certified": false}
+PROOF NOT ACCEPTED 0s0-1s1_2s0-10s0_3s0-4s0
