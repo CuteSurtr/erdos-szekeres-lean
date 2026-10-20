@@ -27,12 +27,12 @@
     -2705,
     -3005
    ],
-   "closed": false,
-   "lrat_all_verified": false,
-   "unsat_leaves": 59,
+   "closed": true,
+   "lrat_all_verified": true,
+   "unsat_leaves": 64,
    "sat": 0,
-   "open_nodes": 5,
-   "open_fraction": "5/64"
+   "open_nodes": 0,
+   "open_fraction": "0"
   },
   "17": {
    "cube": [
@@ -80,10 +80,10 @@
    ],
    "closed": false,
    "lrat_all_verified": false,
-   "unsat_leaves": 0,
+   "unsat_leaves": 2,
    "sat": 0,
-   "open_nodes": 1,
-   "open_fraction": "1"
+   "open_nodes": 62,
+   "open_fraction": "31/32"
   },
   "41": {
    "cube": [
@@ -97,10 +97,10 @@
    ],
    "closed": false,
    "lrat_all_verified": false,
-   "unsat_leaves": 0,
+   "unsat_leaves": 45,
    "sat": 0,
-   "open_nodes": 1,
-   "open_fraction": "1"
+   "open_nodes": 19,
+   "open_fraction": "19/64"
   },
   "49": {
    "cube": [
@@ -112,12 +112,12 @@
     -1028,
     1054
    ],
-   "closed": false,
-   "lrat_all_verified": false,
-   "unsat_leaves": 0,
+   "closed": true,
+   "lrat_all_verified": true,
+   "unsat_leaves": 1,
    "sat": 0,
-   "open_nodes": 1,
-   "open_fraction": "1"
+   "open_nodes": 0,
+   "open_fraction": "0"
   },
   "57": {
    "cube": [
@@ -131,10 +131,10 @@
    ],
    "closed": false,
    "lrat_all_verified": false,
-   "unsat_leaves": 0,
+   "unsat_leaves": 3,
    "sat": 0,
-   "open_nodes": 1,
-   "open_fraction": "1"
+   "open_nodes": 61,
+   "open_fraction": "61/64"
   },
   "65": {
    "cube": [
@@ -148,10 +148,10 @@
    ],
    "closed": false,
    "lrat_all_verified": false,
-   "unsat_leaves": 0,
+   "unsat_leaves": 9,
    "sat": 0,
-   "open_nodes": 1,
-   "open_fraction": "1"
+   "open_nodes": 55,
+   "open_fraction": "55/64"
   },
   "73": {
    "cube": [
@@ -275,15 +275,15 @@
  },
  "n_roots_seen": 16,
  "total": {
-  "closed_roots": 3,
-  "closed_lrat_roots": 3,
-  "unsat_leaves": 313,
+  "closed_roots": 5,
+  "closed_lrat_roots": 5,
+  "unsat_leaves": 378,
   "sat_leaves": 0,
-  "open_nodes": 17,
-  "splits": 5,
-  "gaps": 5,
+  "open_nodes": 204,
+  "splits": 9,
+  "gaps": 9,
   "lrat_failed": 0,
-  "cpu_solve_s": 17070.7,
-  "cpu_lrat_s": 344.1
+  "cpu_solve_s": 23242.0,
+  "cpu_lrat_s": 441.3
  }
 }
