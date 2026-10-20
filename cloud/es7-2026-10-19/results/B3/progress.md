@@ -46,3 +46,7 @@
   (censored: lower bound). UNSAT cube times: median 0.43 s, p90 5.7 s, p99 61 s, max 487 s.
   So this one depth-30 node is NOT closed: 14 depth-40 cubes remain open after 600 s each.
 - 03:07 sampling shallower random nodes (depth 24 x9, 18 x6, 12 x3), plain CaDiCaL, 300 s cap.
+- 03:07-03:45 Knuth samples: samples_d24.txt (57 random depth-24 nodes; 54 UNSAT 0.4-175 s, 3 capped
+  at 300/400 s) and samples_d18.txt (2 depth-18 nodes, both >300 s). estimate.py: depth-24 cutoff
+  >= 8.9e8 s ~ 2.5e5 core-h (lower bound, censored).
+- 03:45 three depth-18 nodes with a 1500 s cap running.
