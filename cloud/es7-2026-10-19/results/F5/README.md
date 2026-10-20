@@ -49,7 +49,7 @@ Seeds used: 5000001, 5000002, 5000003 (arm F), 5000401, 5000402, 5000403 (growth
 | arm F, default (5000001) | 0.23 h | 356 restarts | 0 | 22 |
 | arm F, `--jitter 0.5 --extra-props 2 --smart-bt` (5000002, 5000003) | 3.3 h | 2,584 restarts | 0 | 25 |
 | growth (5000401, 5000402, 5000403) | 8.0 h | 17 chains (5,987 model queries) | **2** (seed 5000401, chains 1 and 6) | 26 |
-| plain random model → realizer (5000900, niced) | ~2.1 CPU-h | 2,000 models drawn, 1,524 tried | 0 | 19 placed |
+| plain random model → realizer (5000900, niced) | ~2.2 h wall (niced, shared core) | 2,000 models drawn, 1,524 tried | 0 | 19 placed |
 
 - **Arm F.** It was 0 for 2,940 restarts here, while F2/s2's seed 22 found 2 in 162 restarts. On
   this machine growth was clearly the more productive arm, so after 13 minutes I moved one arm-F
