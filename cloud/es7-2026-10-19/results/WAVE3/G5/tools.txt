@@ -1,0 +1,7 @@
+cadical  3.0.1  https://github.com/arminbiere/cadical  c60730422e758ef1cebe7aeddf2dda31c996bf04  ./configure && make
+march_cu  https://github.com/marijnheule/CnC  705b60c6491ef2b61988b3ce6ac674be1b90571d  make CFLAGS="-O3 -fno-strict-aliasing -Wall -DNDEBUG -fcommon" (march_cu/)
+cake_lpr  https://github.com/tanyongkiam/cake_lpr  a36874a8b750b43fe4b385b8ddbf5b033e46a3fa  make cake_lpr
+cake_lpr.S sha256 2f3af32d55083839b3fa0e693afd817679c0b8944bef41def05a8b0ec72b7d4a
+cake_lpr example.cnf example.lpr -> s VERIFIED UNSAT
+F.cnf sha256 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d (matches)
+U15_L case CNF sha256 3f479f9f29a96f5cc39130124ce2a6402a6bc2b2bec73262b0de9fbb3c5adc8e (matches cases.jsonl)
