@@ -330,7 +330,38 @@ def gen_k7():
         if inside(poly, (0, ay)): return mirror_set(half, ay), {"mode": mode}
     return None
 
-GEN = {"hull46": gen_hull_kind, "uniform": gen_uniform, "degenerate": gen_degenerate, "k7mirror": gen_k7}
+
+TCOUNT = [0]
+def gen_targeted():
+    """aim at case CASES[t mod 450]: hull vertices at the x-ranks of the labels, on a parabola"""
+    U, L = CASES[TCOUNT[0] % len(CASES)]; TCOUNT[0] += 1
+    S = 10**6
+    xs = sorted(R.sample(range(1, S), 16), reverse=True)   # xs[a-1] = |x| of label a (a = 1..16)
+    X = xs[0]
+    def xof(a): return -xs[a - 1]
+    k = Fraction(R.randint(1, 3), X)
+    up = [(xof(a), int(k * (X * X - xof(a) ** 2)) + 1) for a in U]
+    lo = [(xof(a), -int(k * (X * X - xof(a) ** 2)) - 1) for a in L]
+    up_all = sorted([(-X, 0)] + up + [(-x, y) for x, y in up] + [(X, 0)])
+    lo_all = sorted([(-X, 0)] + lo + [(-x, y) for x, y in lo] + [(X, 0)])
+    def interp(chain, x):
+        for (x0, y0), (x1, y1) in zip(chain, chain[1:]):
+            if x0 <= x <= x1: return Fraction(y0) + Fraction(x - x0, x1 - x0) * (y1 - y0)
+    half = [(-xof(a), y) for a, y in [(a, None) for a in []]]
+    hv = {a: y for (x, y), a in zip(up, U)}; hv.update({a: y for (x, y), a in zip(lo, L)})
+    pts = []
+    for a in range(1, 17):
+        x = xof(a)
+        if a == 1: pts.append((X, 0)); continue
+        if a in hv: pts.append((-x, hv[a])); continue
+        ylo, yhi = interp(lo_all, x), interp(up_all, x)
+        if yhi - ylo < 3: return None
+        pts.append((-x, R.randint(int(ylo) + 1, int(yhi) - 1)))
+    ylo, yhi = interp(lo_all, 0), interp(up_all, 0)
+    if yhi - ylo < 3: return None
+    return mirror_set(pts, R.randint(int(ylo) + 1, int(yhi) - 1)), {"target": "U" + "-".join(map(str, U)) + "_L" + "-".join(map(str, L))}
+
+GEN = {"targeted": gen_targeted, "hull46": gen_hull_kind, "uniform": gen_uniform, "degenerate": gen_degenerate, "k7mirror": gen_k7}
 import os
 if os.environ.get("KINDS"): GEN = {k: v for k, v in GEN.items() if k in os.environ["KINDS"].split(",")}
 with open(OUT, "w") as out:

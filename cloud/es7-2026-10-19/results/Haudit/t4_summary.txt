@@ -1,0 +1,15 @@
+accepted sets: 15900 rejected (not in general position / axis on hull): {('uniform', 'reject_gp'): 792, ('uniform', 'reject_axis_on_hull'): 366, ('degenerate', 'reject_gp'): 1042, ('k7mirror', 'reject_gp'): 299, ('hull46', 'reject_gp'): 1, ('targeted', 'reject_gp'): 2}
+degenerate/axis        {'n': 1044, 'fail': 0, 'hull<=6': 1044, 'hull>=8': 0, 'yflip': 524, 'heptagon': 1044, 'angular_checked': 23}
+degenerate/chord       {'n': 174, 'fail': 0, 'hull<=6': 174, 'hull>=8': 0, 'yflip': 99, 'heptagon': 174, 'angular_checked': 1}
+degenerate/edge        {'n': 898, 'fail': 0, 'hull<=6': 898, 'hull>=8': 0, 'yflip': 458, 'heptagon': 898, 'angular_checked': 19}
+degenerate/xclose      {'n': 969, 'fail': 0, 'hull<=6': 969, 'hull>=8': 0, 'yflip': 472, 'heptagon': 969, 'angular_checked': 11}
+degenerate/xequal      {'n': 515, 'fail': 0, 'hull<=6': 515, 'hull>=8': 0, 'yflip': 257, 'heptagon': 515, 'angular_checked': 10}
+hull46                 {'n': 2600, 'fail': 0, 'hull<=6': 2600, 'hull>=8': 0, 'yflip': 1299, 'heptagon': 2600, 'angular_checked': 46}
+k7mirror               {'n': 2600, 'fail': 0, 'hull<=6': 1989, 'hull>=8': 611, 'yflip': 1324, 'heptagon': 2600, 'angular_checked': 61}
+targeted               {'n': 4500, 'fail': 0, 'hull<=6': 4500, 'hull>=8': 0, 'yflip': 2242, 'heptagon': 4500, 'angular_checked': 87}
+uniform                {'n': 2600, 'fail': 0, 'hull<=6': 428, 'hull>=8': 2172, 'yflip': 1347, 'heptagon': 2600, 'angular_checked': 51}
+distinct cases hit: 394  4-gon cases hit: 28
+hull size distribution: {4: 4623, 6: 8494, 8: 1360, 10: 909, 14: 117, 12: 379, 16: 16, 18: 2}
+FAILURES: []
+cases never hit: 56
+never-hit cases containing -X(1,2,3) (U2.. or L3.. pairs; vacuous under the y-flip): 56

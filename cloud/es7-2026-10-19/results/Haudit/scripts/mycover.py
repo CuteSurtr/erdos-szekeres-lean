@@ -3,7 +3,12 @@
 The CNF is solved by CaDiCaL with LRAT output and the proof is checked by cake_lpr.
 usage: mycover.py CUBES.icnf [WORKDIR]   (reads 'a l1 .. lk 0' lines)"""
 import sys, os, subprocess
-cubes = [list(map(int, l.split()[1:-1])) for l in open(sys.argv[1]) if l.startswith('a')]
+lines = [l for l in open(sys.argv[1]) if l.strip() and not l.startswith('c')]
+for l in lines:
+    t = l.split()
+    if t[0] != 'a' or t[-1] != '0' or not l.endswith('\n'):
+        print("s REJECTED malformed line", repr(l[-60:])); sys.exit(4)
+cubes = [list(map(int, l.split()[1:-1])) for l in lines]
 w = sys.argv[2] if len(sys.argv) > 2 else '/tmp'
 os.makedirs(w, exist_ok=True)
 assert all(0 not in c for c in cubes)
