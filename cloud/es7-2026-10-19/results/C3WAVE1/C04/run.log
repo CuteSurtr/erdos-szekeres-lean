@@ -1233,3 +1233,32 @@ RUNNER_DONE
 {"node": "0s0-1s1_4s0-5s1_3s0-9s1", "status": "UNSATISFIABLE", "solve_s": 50.3, "certified": true}
 {"node": "0s0-1s1_4s0-5s1_3s1-9s0", "status": "UNSATISFIABLE", "solve_s": 54.0, "certified": true}
 {"node": "0s0-1s1_4s0-5s1_3s0-10s0", "status": "UNSATISFIABLE", "solve_s": 42.9, "certified": true}
+{"node": "0s0-1s1_4s0-5s1_3s0-10s1", "status": "UNSATISFIABLE", "solve_s": 50.9, "certified": true}
+{"node": "0s0-1s1_4s0-5s1_3s1-10s0", "status": "UNSATISFIABLE", "solve_s": 42.1, "certified": true}
+{"node": "0s0-1s1_4s0-5s1_6s0-7s0", "status": "UNSATISFIABLE", "solve_s": 27.2, "certified": true}
+{"node": "0s0-1s1_4s0-5s1_3s1-10s1", "status": "UNSATISFIABLE", "solve_s": 52.9, "certified": true}
+{"node": "0s0-1s1_4s0-5s1_6s0-7s1", "status": "UNSATISFIABLE", "solve_s": 73.2, "certified": true}
+{"node": "0s0-1s1_4s0-5s1_6s1-7s1", "status": "UNSATISFIABLE", "solve_s": 27.5, "certified": true}
+{"node": "0s0-1s1_4s0-5s1_6s1-7s0", "status": "UNSATISFIABLE", "solve_s": 72.6, "certified": true}
+{"node": "0s0-1s1_4s0-5s1_6s0-8s0", "status": "UNSATISFIABLE", "solve_s": 30.4, "certified": true}
+{"node": "0s0-1s1_4s0-5s1_6s0-8s1", "status": "UNSATISFIABLE", "solve_s": 57.2, "certified": true}
+{"node": "0s0-1s1_4s0-5s1_6s1-8s1", "status": "UNSATISFIABLE", "solve_s": 35.2, "certified": true}
+{"node": "0s0-1s1_4s0-5s1_6s1-8s0", "status": "UNSATISFIABLE", "solve_s": 63.5, "certified": true}
+{"node": "0s0-1s1_4s0-5s1_6s0-9s0", "status": "UNSATISFIABLE", "solve_s": 35.1, "certified": true}
+{"node": "0s0-1s1_4s0-5s1_6s0-9s1", "status": "UNSATISFIABLE", "solve_s": 51.0, "certified": true}
+{"node": "0s0-1s1_4s0-5s1_6s1-9s0", "status": "UNSATISFIABLE", "solve_s": 46.6, "certified": true}
+{"node": "0s0-1s1_4s0-5s1_6s1-9s1", "status": "UNSATISFIABLE", "solve_s": 41.6, "certified": true}
+{"node": "0s0-1s1_4s0-5s1_6s0-10s0", "status": "UNSATISFIABLE", "solve_s": 38.1, "certified": true}
+{"node": "0s0-1s1_4s0-5s1_6s0-10s1", "status": "UNSATISFIABLE", "solve_s": 23.0, "certified": true}
+{"node": "0s0-1s1_4s0-5s1_6s1-10s0", "status": "UNSATISFIABLE", "solve_s": 24.4, "certified": true}
+{"node": "0s0-1s1_4s0-5s1_7s0-8s0", "status": "UNSATISFIABLE", "solve_s": 26.6, "certified": true}
+{"node": "0s0-1s1_4s0-5s1_6s1-10s1", "status": "UNSATISFIABLE", "solve_s": 45.8, "certified": true}
+{"node": "0s0-1s1_4s0-5s1_7s0-8s1", "status": "UNSATISFIABLE", "solve_s": 63.7, "certified": true}
+{"node": "0s0-1s1_4s0-5s1_7s1-8s1", "status": "UNSATISFIABLE", "solve_s": 33.4, "certified": true}
+{"node": "0s0-1s1_4s0-5s1_7s1-8s0", "status": "UNSATISFIABLE", "solve_s": 65.6, "certified": true}
+{"node": "0s0-1s1_4s0-5s1_7s0-9s0", "status": "UNSATISFIABLE", "solve_s": 48.8, "certified": true}
+{"node": "0s0-1s1_4s0-5s1_7s0-9s1", "status": "UNSATISFIABLE", "solve_s": 55.6, "certified": true}
+KILL at deadline during 0s0-1s1_4s0-5s1
+=== ROOT 0s0-1s1_4s0-5s1 end 11:12:03
+DEADLINE before 0s0-1s1_5s0-6s0
+RUNNER_FINAL
