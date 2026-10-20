@@ -21,6 +21,7 @@ ap = argparse.ArgumentParser()
 ap.add_argument("root"); ap.add_argument("out")
 ap.add_argument("--slots", type=int, default=3); ap.add_argument("--depth", type=int, default=10)
 ap.add_argument("--tlim", type=int, default=600); ap.add_argument("--first", default="")
+ap.add_argument("--maxsub", type=int, default=0)
 ap.add_argument("--seed", type=int, default=12345); ap.add_argument("--n", type=int, default=100000)
 a = ap.parse_args()
 R = Path(a.root).resolve(); O = Path(a.out).resolve(); O.mkdir(parents=True, exist_ok=True)
@@ -57,21 +58,23 @@ def job(cid):
     n_sub = sum(1 for l in open(cub) if l.startswith("a ")) if cub.exists() else 0
     rec = {"id": cid, "march_s": round(march_s, 2), "n_sub": n_sub, "march_rc": p.returncode}
     if n_sub > 0:
-        subprocess.run([str(R / "iworker"), str(cnf), str(cub), "0", "1", str(a.tlim), "2925", str(d), "7"],
+        subprocess.run([str(R / "iworker"), str(cnf), str(cub), "0", "1", str(a.tlim), "2925", str(d), "7", str(a.maxsub)],
                        capture_output=True)
         rows = [l.split() for l in open(d / "w0.log") if not l.startswith("#")]
         ts = [float(r[2]) for r in rows]
         rec.update(solve_s=round(sum(ts), 2), max_sub_s=round(max(ts), 2),
                    n_U=sum(r[1] == "U" for r in rows), n_S=sum(r[1] == "S" for r in rows),
                    n_T=sum(r[1] == "T" for r in rows))
-        rec["status"] = "SAT" if rec["n_S"] else ("UNSAT" if rec["n_U"] == n_sub else "OPEN")
+        rec["n_done"] = len(rows)
+        rec["est_top_s"] = round(n_sub * sum(ts) / len(rows), 1)  # ratio estimate (T counted at the limit)
+        rec["status"] = "SAT" if rec["n_S"] else ("UNSAT" if rec["n_U"] == n_sub else ("SAMPLED" if len(rows) < n_sub else "OPEN"))
         (d / "times.txt").write_text(" ".join(f"{r[1]}{r[2]}" for r in rows) + "\n")
     else:
         rec.update(solve_s=0.0, max_sub_s=0.0, n_U=0, n_S=0, n_T=0,
                    status="UNSAT" if refuted_by_march else "NOCUBES?")
         rec["march_tail"] = p.stdout[-300:]
     rec["wall_s"] = round(time.time() - t0, 2); rec["end"] = time.time()
-    cnf.unlink(missing_ok=True); cub.unlink(missing_ok=True)
+    cnf.unlink(missing_ok=True)
     with open(O / "top.jsonl", "a") as f:
         f.write(json.dumps(rec) + "\n")
     print(json.dumps(rec), flush=True)

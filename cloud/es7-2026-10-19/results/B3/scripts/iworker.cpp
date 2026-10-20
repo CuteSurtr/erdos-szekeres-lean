@@ -1,11 +1,12 @@
 // Incremental cube solver (iCaDiCaL style) for march_cu cube files.
-//   iworker CNF CUBES.icnf WID NW TLIM_S NX OUTDIR [SEED]
+//   iworker CNF CUBES.icnf WID NW TLIM_S NX OUTDIR [SEED [MAXCUBES]]
 // Loads CNF once into one CaDiCaL instance, then solves each assigned cube as assumptions,
 // keeping learned clauses between cubes. Cube i (0-based, file order) goes to this worker iff
 // perm[i] % NW == WID, where perm is a seeded random permutation, so every worker sees a
 // uniform random sample of the cubes (makes the running projection unbiased).
 // Per cube a wall-clock limit TLIM_S applies (0 = none); a cube that hits it is reported
 // as UNKNOWN (censored). Log line per cube: "id res secs" with res in U/S/T.
+// MAXCUBES > 0 stops after that many cubes (a uniform random sample of this worker's share).
 // On SAT the orientation literals 1..NX are written to OUTDIR/model-<id>.txt.
 #include "cadical.hpp"
 #include <algorithm>
@@ -33,6 +34,8 @@ int main(int argc, char **argv) {
   int nX = atoi(argv[6]);
   std::string outdir = argv[7];
   unsigned seed = argc > 8 ? atoi(argv[8]) : 1;
+  long maxc = argc > 9 ? atol(argv[9]) : 0;
+  long ndone = 0;
   std::vector<std::vector<int>> C;
   std::ifstream in(cubes);
   std::string line;
@@ -57,7 +60,7 @@ int main(int argc, char **argv) {
   FILE *log = fopen(logp.c_str(), "a");
   fprintf(log, "# start total_cubes=%zu wid=%d nw=%d tlim=%g t=%.3f\n", C.size(), wid, nw, tlim, now());
   fflush(log);
-  for (size_t p = wid; p < perm.size(); p += nw) {
+  for (size_t p = wid; p < perm.size() && (maxc <= 0 || ndone < maxc); p += nw, ndone++) {
     int id = perm[p];
     for (int l : C[id]) S.assume(l);
     double t0 = now();
