@@ -23,16 +23,16 @@ sys.path.insert(0, HERE)
 from pysat.formula import CNF  # noqa: E402
 from pysat.solvers import Solver  # noqa: E402
 from c3cnf import C3Enc  # noqa: E402
-from hullcase import cases, legacy_to_layers, layer2_options, layer_clauses, layers_name  # noqa: E402
+from hullcase import tree_children, layer_clauses, layers_name  # noqa: E402
 
 M, K = 11, 7
 
 
+MIRROR = False
+
+
 def children(layers):
-    if not layers:
-        return [legacy_to_layers(c) for c in cases(M, K)]
-    used = [r for L in layers for r, _ in L]
-    return [layers + [o] for o in layer2_options(M, [(r, None) for r in used])]
+    return tree_children(M, K, layers, mirror=MIRROR)
 
 
 def main():
@@ -42,7 +42,10 @@ def main():
     ap.add_argument("--budget", default="20000,50000,200000")
     ap.add_argument("--modeldir", default="/opt/work/models")
     ap.add_argument("--hours", type=float, default=100)
+    ap.add_argument("--mirror", action="store_true", help="H3 mirror reduction at layer 2")
     a = ap.parse_args()
+    global MIRROR
+    MIRROR = a.mirror
     budgets = [int(x) for x in a.budget.split(",")]
     E = C3Enc(M, K)
     S = Solver(name="cadical195", bootstrap_with=CNF(from_file=a.base).clauses)

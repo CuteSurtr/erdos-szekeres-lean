@@ -60,6 +60,24 @@ with both σ values of both residues; that is every possible L_{j+1}. So for eve
 layer tree, the children cover the node. (L_1 is normalized by Lemma 2; residue 0 is in L_1, so it
 never appears below, and σ of the residues of a two-orbit layer is fixed by the node.)
 
+## Lemma 5 (mirror reduction below H3). Let S be in the class with top case H3 and canonical
+labelling (l, labels, σ). Let M be the reflection in l, (x, y) ↦ (−x, y) in the frame. M(S) is in
+the class (M R M = R⁻¹, so M(S) is R-invariant; convex position is kept). With the same l, M(S)
+has labels i ↦ n−1−i (y/x changes sign) and every σ flips. Turning l just past the line of the
+point now labelled n−1 (the image of label 0, a hull vertex) moves it to label 0 and flips only
+its σ (it is the only point whose line l crosses), so the labels become i ↦ (−i) mod n, σ'_0 = 0,
+and σ' = 1 − σ for every other label. This is again a canonical labelling of M(S) in case H3. An
+orbit with residue r (labels r, r+m, r+2m) goes to labels 3m−r, 2m−r, m−r: residue m−r, with
+σ'_{m−r} = 1 − σ_{r+2m} = 1 − σ_r. Convex layers map to convex layers (M is affine). So the layer
+path of M(S) is the image of the layer path of S under (r, σ) ↦ (m−r, 1−σ).
+Hence, below H3, it suffices to keep one layer-2 option of each mirror pair: `h3_layer2_kept`
+keeps O iff key(O) ≤ key(mirror(O)) (100 of 190 options for m = 11; 10 are self-mirror).
+If every kept subtree is refuted, then for any S in case H3 either S's or M(S)'s layer 2 is kept
+and that set would satisfy a refuted node — contradiction. (Exact-coordinate validation:
+`tools/validate_mirror.py`; a mutation without the σ flip is detected.)
+This mirror map is only used under H3; for H6(a, s) the renormalization of label 0 maps each top
+case to itself with a residue-dependent relabelling, which is not used.
+
 ## Theorem (cover). If S is in the class, then for the canonical labelling of Lemma 2, the true
 assignment of the C3a (or C3b) variables satisfies the base CNF (C3a/C3b soundness, validated in
 those tasks) and the hull/layer units of exactly the nodes on S's own layer path. Hence:

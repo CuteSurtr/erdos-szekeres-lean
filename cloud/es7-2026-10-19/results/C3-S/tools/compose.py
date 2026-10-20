@@ -4,8 +4,8 @@
 Input: jsonl files of node records {"node": NAME, "certified": true, "cnf_sha256": ...} (from
 close_node.py; every record must have been checked by BOTH lrat-check (E2 patch) and cake_lpr).
 The class (m = 11, k = 7) is covered when the root of the layer tree is covered, where a node is
-covered iff it is certified, or it has children and all of them are covered (children as in
-knuth_pruned.children: the 11 top cases, then hullcase.layer2_options).  The script also re-derives
+covered iff it is certified, or it has children and all of them are covered (children: hullcase.tree_children with the
+H3 mirror reduction).  The script also re-derives
 each certified node's CNF sha256 from BASE + the node's units and compares it with the record.
 usage: compose.py BASE RESULTS.jsonl [...] [--no-sha]"""
 import hashlib
@@ -17,16 +17,13 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, "..", "..", "C3a"))
 sys.path.insert(0, HERE)
 from c3cnf import C3Enc  # noqa: E402
-from hullcase import cases, legacy_to_layers, layer2_options, layer_clauses, layers_name, parse_layers  # noqa: E402
+from hullcase import tree_children, layer_clauses, layers_name, parse_layers  # noqa: E402
 
 M, K = 11, 7
 
 
 def children(layers):
-    if not layers:
-        return [legacy_to_layers(c) for c in cases(M, K)]
-    used = [r for L in layers for r, _ in L]
-    return [layers + [o] for o in layer2_options(M, [(r, None) for r in used])]
+    return tree_children(M, K, layers, mirror=True)
 
 
 def node_sha(base_bytes, header, units):

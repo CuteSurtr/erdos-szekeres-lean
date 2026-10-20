@@ -142,3 +142,32 @@ def layer2_options(m, top):
                 for sc in (0, 1):
                     out.append([(b, sb), (c, sc)])
     return out
+
+
+# ---------------------------------------------------------------------------------------------
+# Mirror reduction inside H3 (see ../soundness.md, Lemma 5).  The reflection (x, y) -> (-x, y) in
+# the frame of l maps S to a set of the class; with l turned just past the image of label 0 the
+# labels map i -> (-i) mod n and sigma -> 1 - sigma (label 0 keeps sigma 0), so the top case H3 is
+# kept and a layer with residues r (sigma s) maps to residues m - r (sigma 1 - s).
+
+
+def mirror_layer(m, L):
+    return sorted(((m - r) % m, (None if s is None else 1 - s)) for r, s in L)
+
+
+def h3_layer2_kept(m):
+    """layer-2 options below H3 kept by the mirror reduction: O kept iff key(O) <= key(mirror(O))."""
+    key = lambda L: tuple((r, -1 if s is None else s) for r, s in sorted(L))
+    return [o for o in layer2_options(m, [(0, 0)]) if key(o) <= key(mirror_layer(m, o))]
+
+
+def tree_children(m, k, layers, mirror=True):
+    """children of a node of the layer tree (the shard plan's tree).  Root: the top hull cases.
+    Below: every next layer on the unused residues; with mirror=True the children of the H3 node
+    are reduced to h3_layer2_kept (Lemma 5)."""
+    if not layers:
+        return [legacy_to_layers(c) for c in cases(m, k)]
+    if mirror and layers == [[(0, 0)]]:
+        return [layers + [o] for o in h3_layer2_kept(m)]
+    used = [r for L in layers for r, _ in L]
+    return [layers + [o] for o in layer2_options(m, [(r, None) for r in used])]
