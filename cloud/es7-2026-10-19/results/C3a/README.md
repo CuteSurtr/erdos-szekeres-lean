@@ -80,7 +80,7 @@ give sets without large convex subsets).
   (item 5), and the check asserts that the labels are unchanged.
   - chain: 1,000 sets, m = 3..11, k = 5..11; 777 with a convex k-gon, 223 without; 0 failures
     (`logs/validate.jsonl`).
-  - conv: CONV_VAL_PLACEHOLDER (`logs/validate_conv.jsonl`).
+  - conv: 1,010 sets, m = 3..11, k = 5..9; 731 with a convex k-gon, 279 without; 0 failures (`logs/validate_conv.jsonl`).
   - The validator catches planted bugs (`mutation_test.py`, `logs/mutation.jsonl`): wrong ε
     signs (20/20 sets fail), a wrong σ orbit pattern (20/20), and forbidding (k+1)-gons instead
     of k-gons (fails on the set that has a k-gon but no (k+1)-gon).
