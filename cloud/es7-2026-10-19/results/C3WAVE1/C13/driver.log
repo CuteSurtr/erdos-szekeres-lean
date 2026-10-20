@@ -17,3 +17,17 @@
 === ROOT 0s0-1s0_6 start 08:57:22 H=3.4811
 {"node": "0s0-1s0_6_2", "status": "UNSATISFIABLE", "solve_s": 66.3, "certified": false}
 PROOF NOT ACCEPTED 0s0-1s0_6_2
+=== HALT: driver killed 09:09:35 after PROOF NOT ACCEPTED (cake_lpr OOM-killed, see README)
+=== ROOT 0s0-1s0_2s0-7s1 start 09:11:48 H=3.2406 jobs=3
+{"root": "0s0-1s0_2s0-7s1", "open_frontier": 0}
+=== ROOT 0s0-1s0_2s0-7s1 end 09:11:48 rc=0
+=== ROOT 0s0-1s0_3s0-4s0 start 09:11:48 H=3.2406 jobs=3
+{"root": "0s0-1s0_3s0-4s0", "open_frontier": 0}
+=== ROOT 0s0-1s0_3s0-4s0 end 09:11:48 rc=0
+=== ROOT 0s0-1s0_3s1-9s0 start 09:11:48 H=3.2406 jobs=3
+{"root": "0s0-1s0_3s1-9s0", "open_frontier": 0}
+=== ROOT 0s0-1s0_3s1-9s0 end 09:11:48 rc=0
+=== ROOT 0s0-1s0_4s1-8s1 start 09:11:48 H=3.2406 jobs=3
+{"root": "0s0-1s0_4s1-8s1", "open_frontier": 0}
+=== ROOT 0s0-1s0_4s1-8s1 end 09:11:48 rc=0
+=== ROOT 0s0-1s0_6 start 09:11:48 H=3.2406 jobs=3
