@@ -17,25 +17,26 @@ one explicit CNF, checked with cake_lpr. All of them are listed in the `*.jsonl`
      cake_lpr VERIFIED (`cover_lrat.jsonl`). The cover therefore needs no geometric trust.
 2. **Per-case measurements.**
    - 172/450 cases are UNSAT within 10 s, all cake_lpr VERIFIED (`pass2_lrat.jsonl`).
-   - Case U8_L (a 4-gon hull) was closed by cube-and-conquer, every leaf cake_lpr VERIFIED (see
-     below).
+   - Case U8_L (a 4-gon hull) is nearly closed by cube-and-conquer: 433 leaves, all cake_lpr
+     VERIFIED, about 70 left when time ran out (see below).
    - The rest are not cheap. The 6-gon cases cost 0.06–1.8 core-h each under march. The 4-gon
      cases cost 0.8 to ≥ 10.7 core-h each, and /2 and 3/ are the hard core.
    - Finishing by the split alone: about 135–300+ core-h.
-3. **The cheapest sound route found is a hybrid:** C2's tree, with the hull split at its 1,340 open leaves.
+3. **The most promising route found is a hybrid:** C2's tree, with the hull split at its 1,340 open leaves.
    - For an open cube o, one CNF `G_o` adds fresh selector variables `e_c → cube(c)` and the
      clause `∨ e_c`. That clause holds by the certified cover.
-   - C2 had left all of these cubes open. **Every one tried so far is UNSAT, and cake_lpr
-     VERIFIED it** (`open_ext_lrat.jsonl`): RESULT_OPEN_EXT.
-   - Projected total: about 50–70 core-h at this VM's speed, in 1,340 small jobs of similar size.
-     That is cheaper and far more predictable than the baselines (below).
+   - C2 had left all of these cubes open. Of the first 31 (file order), **26 are UNSAT and cake_lpr
+     VERIFIED** (`open_ext_lrat.jsonl`): CaDiCaL median 111 s over all 31, max 883 s for a solved one;
+     cake_lpr at most 53 s. The other **5 hit the 900 s limit** (indices 2, 22, 25, 29, 30).
+   - Projected total: about 120–160 core-h. That is the same order as the baselines, but it is
+     measured on the actual remaining region rather than extrapolated.
 4. `shard_plan.md` gives a deterministic N-machine plan and the Lean composition. The composition
    needs two small lemmas next to H3's `Cover.lean` (stated there, not written or compiled here).
 
 ## What ran where
 
-- One cloud VM: Linux 6.18 x86_64, 4 cores, 15 GB RAM (`env.txt`). Run from 04:49 to about
-  08:45 UTC on 20 Oct 2026.
+- One cloud VM: Linux 6.18 x86_64, 4 cores, 15 GB RAM (`env.txt`). Run from 04:49 to 08:45 UTC on
+  20 Oct 2026. All computation stopped at 08:31.
 - Tools, built here:
   - CaDiCaL 3.0.1 at c6073042;
   - march_cu from CnC 705b60c6, built with `-fcommon`;
@@ -122,7 +123,20 @@ F is kept, and both placements (above/below) are enumerated, so the y-flip is us
     4 missed them. So the layer split moves the difficulty down a layer rather than removing it.
   - Its certified covers do work: for 8/ and /7 all 214 `cover2.py` obligations are cake_lpr
     VERIFIED (`cover2_lrat_8_7.jsonl`, 484 s + 381 s).
-- **Case U8_L closed:** RESULT_U8.
+- **Case U8_L by cube-and-conquer** (`scripts/close_march.py`, `cnc_U8_L.json`, `cnc_U8_L/`).
+  It is **not finished**.
+  - Setup: `march_cu -d 7` gave 128 cubes. Each cube got `cadical --lrat -t 300` and then cake_lpr.
+    Six cubes timed out and were re-split with `march_cu -d 6`, giving 64 + 64 + 64 + 64 + 62 (2
+    refuted) + 64 children.
+  - At the stop (08:31 UTC), **433 leaves were UNSAT and all 433 were cake_lpr VERIFIED**. That took
+    14,521 s of CaDiCaL, 1,575 s of cake_lpr and 1,335 s of march splits, with 13.5 GB of proofs,
+    deleted after checking.
+  - About 70 leaves were still unsolved, and a seventh cube was being re-split.
+  - Measured cost so far: about 4.9 core-h, against the probe's 1.5 h estimate. The re-splits are
+    what the probe missed.
+  - `cnc_U8_L/leaves_closed_partial.icnf` lists the closed leaves. Resuming means solving the
+    rest of the partition in `cnc_U8_L/leaves.jsonl`: the top cubes and split children that have
+    no UNSAT record.
 
 ## 3. The hybrid: C2's open cubes × hull cases
 
@@ -137,7 +151,14 @@ F is kept, and both placements (above/below) are enumerated, so the y-flip is us
   `G_o = F + units(o) + {¬e_c ∨ l : l ∈ cube(c)} + (e_1 ∨ … ∨ e_450)`, with fresh `e_c`.
   - A model of F ∧ o extends to G_o by setting `e_c := cube(c) holds`, and the certified cover
     supplies some true `e_c`. So UNSAT of G_o refutes F ∧ o (`shard_plan.md` §4).
-  - Results: RESULT_OPEN_EXT_DETAIL
+  - Results: open cubes 1–31 (file order, 3 parallel jobs + 2–3 other processes on 4 cores):
+    - 26 UNSAT, all cake_lpr VERIFIED. CaDiCaL times: 0.9, 7, 14, 15, 17, 18, 20, 20, 21, 32, 42, 50,
+      51, 56, 64, 82, 111, 189, 216, 298, 362, 365, 386, 498, 501, 527, 883 s. cake_lpr: 2–53 s. Proofs up
+      to 463 MB.
+    - 5 UNKNOWN at 900 s: indices 2, 22, 25, 29, 30.
+    - So about 84% close directly. The rest need a split. Either use `march_cu` on G_o, or use the
+      per-case products, which `hybrid_grid.jsonl` shows are few per cube (1–37 survive 2,000
+      conflicts) and individually cheap (5–36 s).
 
 ## 4. Cost against the baselines
 
@@ -149,11 +170,14 @@ uniform assignment satisfies a closed cube (Monte Carlo, 40,000 samples).
 |---|---|---|---|
 | (a) Mii: d7 cubes + 300 s + d6 splits | closed measure 0.460 for 88.6 logged core-h | measure 0.54 | ≥ 104 by linear extrapolation. The rest is the hard tail, so likely several times that |
 | (b) C2 ∪ Mii closed, open region cubed afresh | closed measure 0.803 | the 1,340 C2 open cubes (minus Mii overlap); C2 could not close them | ≥ 38 linear; no per-cube cost known |
-| (S) hull split only | 172/450 cases + U8_L, cover certified | 277 cases | about 100+ (4-gon cases) + 35–200 (6-gon cases) ≈ 135–300+ |
-| **(H) C2 tree + hull split at the open leaves** | 749 closed (H3) + RESULT_OPEN_EXT_SHORT | the remaining open cubes | **≈ 50–70** (mean about 3 min per open cube, contended), evenly sized |
+| (S) hull split only | 172/450 cases (+ most of U8_L), cover certified | 278 cases | about 100+ (4-gon cases) + 35–200 (6-gon cases) ≈ 135–300+ |
+| (H) C2 tree + hull split at the open leaves | 749 closed (H3) + 26 open cubes refuted (cake_lpr) | 1,314 open cubes | ≈ 120–160: about 84% at a censored mean of about 5.2 min each (CaDiCaL + cake_lpr, contended), the rest split per case. Measured on the real remaining region |
 
-Route H is the recommendation. Its cost is a sum of 1,340 small measured pieces, not an
-extrapolation over a hard tail.
+None of the routes is cheap. Route H is the recommendation. Its pieces are measured on exactly
+the region C2 could not close, each piece is small and independently certifiable, and route (a)'s
+104 h is a lower bound extrapolated over a hard tail. Route (b)'s 38 h is a linear lower bound
+with no per-cube data behind it. On C2's own open cubes, plain CaDiCaL without the hull split
+was C2's failure mode.
 
 ## 5. SAT results
 
@@ -176,6 +200,8 @@ None. No case, cube, product or `G_o` was SAT, so nothing needed decoding or rea
 
 ## Caveats
 
+- The one case run to near completion, U8_L, already used about 3× its march-probe estimate
+  (re-splits plus contention). Treat all march estimates here as lower bounds, route S's especially.
 - The cost estimates come from small samples (6 cubes per probe, 12 open cubes on the grid) on a
   VM where 4–6 processes shared 4 cores. Times are wall-clock per process under that contention.
 - "Closed measure" is a uniform-assignment proxy, and it is not proportional to difficulty.

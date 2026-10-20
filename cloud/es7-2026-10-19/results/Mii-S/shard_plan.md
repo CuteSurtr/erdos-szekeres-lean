@@ -2,12 +2,12 @@
 
 **Recommended route (H): C2's tree with the hull split at its open leaves.** Each of C2's
 1,340 open cubes `o` becomes one CNF, `G_o`. In it, fresh selector variables pick a hull case,
-and the hull-case cubes do the work. Measured here: every one tried so far is UNSAT and
-cake_lpr-verified, at 20–365 s CaDiCaL + 4–23 s cake_lpr each on a contended 4-core VM
-(`open_ext_lrat.jsonl`). That puts the total at roughly **50–70 core-hours** at this VM's
-speed, in 1,340 independent, small, evenly sized jobs.
+and the hull-case cubes do the work. Measured here on open cubes 1–31: 26 are UNSAT and
+cake_lpr-verified (max 883 s CaDiCaL; at most 53 s cake_lpr), and 5 hit the 900 s limit
+(`open_ext_lrat.jsonl`). That puts the total at roughly **120–160 core-hours** at this VM's
+speed: about 84% direct, and the rest through per-case products.
 
-The pure hull-split route (S) is kept below as the fallback. It is sound and partly done
+The pure hull-split route (S) is kept below as the alternative. It is sound and partly done
 (172/450 cases closed, cover certified). Its remaining cost is dominated by a few hard 4-gon
 cases and is estimated at 135–300+ core-hours.
 
@@ -55,9 +55,15 @@ where `e_c = 47003 + index(c)` are fresh variables.
   the original variables only, i.e. drop the `e_c`. Alternatively, solve
   `F + o + cube(c)` per case c (`hybrid_grid.py` shows that only about 1–37 of the 278 open
   cases survive 2,000 conflicts per open cube). Both are covered by section 4.
-- Expected cost, from the jobs run here: mean about 170 s of CaDiCaL + 14 s of cake_lpr per cube
-  under contention, so about 60 core-h for all 1,340 (about 40–50 on uncontended cores). Proofs are
-  25–190 MB each; delete them after checking. On N = 8 machines × 4 cores this is about 2 h wall.
+- Expected cost, from the 31 jobs run here: a censored mean of 301 s of CaDiCaL + 12 s of
+  cake_lpr per cube under contention, so at least 117 core-h for all 1,340, plus the splits of
+  the roughly 16% that time out. Proofs are up to 463 MB; delete them after checking. On
+  N = 8 machines × 4 cores this is about 4–5 h wall.
+- For a G_o that times out, use per-case products. Write `F + units(o) + units(cube(c))` for each
+  of the 278 cases not already closed (the 172 closed cases are covered by monotonicity), and
+  check each with cake_lpr. Most die in under 1 s; the survivors took 5–36 s. Compose with
+  `hcov` (section 4) and the 450 product refutations, the closed cases' ones included by
+  monotonicity.
 - Optional speed-ups:
   - drop the open cubes that are fully inside the union of Mii's closed cubes (each also needs its
     Mii proof checked by cake_lpr, since most Mii leaves used lrat-check);
@@ -67,7 +73,8 @@ where `e_c = 47003 + index(c)` are fresh variables.
 ## 3. Route S (fallback): finish the 278 open hull cases directly
 
 `cases.jsonl` has every case's CNF sha256 and status. 172 cases are UNSAT with cake_lpr
-VERIFIED, and U8_L is closed by cube-and-conquer (see README).
+VERIFIED. U8_L is nearly done by cube-and-conquer: 433 leaves verified and about 70 left
+(see README).
 
 Per case: `scripts/close_march.py CASE.cnf OUT --depth 7 --timeout 300 --split-depth 6 --jobs
 <cores>`, with `--depth 6` for the 6-gon cases. The leaves are checked by cake_lpr, and
@@ -75,7 +82,8 @@ Per case: `scripts/close_march.py CASE.cnf OUT --depth 7 --timeout 300 --split-d
 
 Measured march estimates (`probes.jsonl`, 6 sampled cubes per case at 300 s, censored at 300):
 
-- 4-gon cases: 0.84 h (11/), 0.93 (/11), 1.13 (/8), 1.52 (8/), 1.64 (/4), 3.44 (6/),
+- 4-gon cases: 0.84 h (11/), 0.93 (/11), 1.13 (/8), 1.52 (8/; the real partial run already
+  used about 4.9 h because of re-splits), 1.64 (/4), 3.44 (6/),
   ≥ 8.3 (3/, 3/6 cubes timed out), ≥ 10.7 (/2, 6/6 timed out).
   - 28 cases × mean ≥ 3.6 h → ≥ 100 core-h, dominated by /2 and 3/.
 - 6-gon cases: 0.06 h (5/10), 0.62 (3,5/), 0.75 (6/2), 1.79 (/2,3).
