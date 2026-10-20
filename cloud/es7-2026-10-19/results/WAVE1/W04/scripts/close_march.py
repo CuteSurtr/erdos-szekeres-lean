@@ -22,10 +22,12 @@ ap.add_argument("--shard", type=int, default=0); ap.add_argument("--nshards", ty
 ap.add_argument("--depth", type=int, default=7); ap.add_argument("--timeout", type=int, default=300)
 ap.add_argument("--split-depth", type=int, default=6); ap.add_argument("--jobs", type=int, default=2)
 ap.add_argument("--hours", type=float, default=1e9)
+ap.add_argument("--presplit", type=int, default=0)  # split the first N of my top cubes without a solve
+ap.add_argument("--log", default=None)  # live record file, kept outside the git checkout
 a = ap.parse_args(); os.makedirs(a.out, exist_ok=True); os.makedirs(a.work, exist_ok=True)
 deadline = time.time() + a.hours * 3600
 hdr, body = open(a.case).read().split("\n", 1); nv, nc = int(hdr.split()[2]), int(hdr.split()[3])
-LOG = os.path.join(a.out, "leaves.jsonl")
+LOG = a.log or os.path.join(a.out, "leaves.jsonl")
 lock = threading.Lock()
 old = [json.loads(l) for l in open(LOG)] if os.path.exists(LOG) else []
 log = open(LOG, "a")
@@ -51,6 +53,12 @@ def solve(cube):
         rec({"cube": cube, "status": "OPEN", "reason": "deadline", "k": k}); return
     w = os.path.join(a.work, f"s_{k}"); os.makedirs(w, exist_ok=True); f = os.path.join(w, "f.cnf")
     write(f, cube); t = time.time()
+    if tuple(cube) in pre:
+        subs, ms, line = march(cube, a.split_depth, k); subprocess.run(["rm", "-rf", w])
+        rec({"cube": cube, "k": k, "status": "SPLIT", "presplit": True, "split_s": round(ms, 1), "march": line,
+             "nsub": len(subs), "subs": subs})
+        for s in subs: submit(cube + s)
+        return
     rc = subprocess.run([os.path.join(BIN, "cadical"), "--lrat", "--binary=false", "-q", "-t", str(a.timeout), f,
                          os.path.join(w, "p.lrat")], stdout=subprocess.DEVNULL).returncode
     st = round(time.time() - t, 2); r = {"cube": cube, "solve_s": st, "k": k}; subs = []
@@ -78,6 +86,7 @@ if not os.path.exists(a.top):
     march([], a.depth, "top", outcubes=a.top)
 top = [list(map(int, l.split()[1:-1])) for l in open(a.top) if l.startswith("a")]
 mine = [c for i, c in enumerate(top) if i % a.nshards == a.shard]
+pre = {tuple(c) for c in mine[:a.presplit]}
 if not any(r.get("top") for r in old):
     rec({"top": True, "ncubes": len(top), "shard": a.shard, "nshards": a.nshards, "nmine": len(mine),
          "top_sha256": hashlib.sha256(open(a.top, "rb").read()).hexdigest(),
