@@ -4,7 +4,7 @@ import json, sys, os, collections
 sys.path.insert(0, os.path.join(os.getcwd(), "..", "..", "C3a")); sys.path.insert(0, os.getcwd())
 from hullcase import tree_children, layers_name, parse_layers
 D = os.path.dirname(os.path.abspath(__file__))
-recs = [json.loads(l) for l in open(os.path.join(D, "out.jsonl"))]
+recs = [json.loads(l) for l in open(sys.argv[1] if len(sys.argv) > 1 else os.path.join(D, "out.jsonl"))]
 cert = {r["node"] for r in recs if r.get("certified") and r.get("lrat_check") == "c VERIFIED" and r.get("cake_lpr") == "s VERIFIED UNSAT"}
 split = {r["node"] for r in recs if r.get("split")}
 solved = {}
@@ -40,5 +40,7 @@ for rt in roots:
 print("\n| depth | certified | split | open |\n|---|---|---|---|")
 for d in sorted(tot): print(f"| {d} | {tot[d]['certified']} | {tot[d]['split']} | {tot[d]['open']} |")
 bad = [r["node"] for r in recs if r.get("status") == "UNSATISFIABLE" and not r.get("certified")]
+print("UNSAT records not accepted:", bad, "; of these later certified:", [n for n in bad if n in cert])
+bad = [n for n in bad if n not in cert]
 sat = [r["node"] for r in recs if r.get("status") == "SATISFIABLE"]
 print("\nproof rejections:", bad, " SAT:", sat)
