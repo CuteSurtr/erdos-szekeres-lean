@@ -134,7 +134,7 @@ Note: the 93 sets come from only 8 base sets S, so they are 8 families, not 93 i
 
 **(a) Geometric exact sweep (`tools/trackA/sat.c`).**
 - sat.c needs |coordinates| < 2^27. The realizer was therefore run on each 32-set's exact labelled chirotope (`scripts/compress32.py`, 40–150 CPU-s).
-- **43 of 93** got a small realization (max |coordinate| 2^18–2^22), accepted only after an exact re-check of all 4,960 triples.
+- **43 of 93** got a small realization (max |coordinate| between 2^14 and 2^27), accepted only after an exact re-check of all 4,960 triples.
 - sat.c on these 43 gives the same result for every set:
   - 109,337 faces, equal to the Euler count;
   - 0 bad candidates, so **all 43 are geometrically saturated**.
