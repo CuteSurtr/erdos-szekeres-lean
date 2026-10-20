@@ -4,7 +4,8 @@
 #   For each cube c (lines `l1 … 0`, or `time l1 … 0` with --timed) write
 #   cubeCnf F c = F ++ [[l] | l ∈ c]  (Mir.cubeCnf: header count + |c|, units appended),
 #   run CaDiCaL with a textual LRAT proof and check it with cake_lpr.
-#   Env: CADICAL, CAKE_LPR (binaries), TMPD (scratch dir). CNF/proof files are deleted.
+#   Env: CADICAL, CAKE_LPR (binaries), TMPD (scratch dir), SOLVE_TIMEOUT (seconds, 0 = none).
+#   CNF/proof files are deleted.
 set -u
 CNF="$1"; CUBES="$2"; OUT="$3"; shift 3
 TIMED=0; if [ "${1:-}" = "--timed" ]; then TIMED=1; shift; fi
@@ -19,7 +20,7 @@ while read -r line; do
   f="$TMPD/cube$n.cnf"; p="$TMPD/cube$n.lrat"
   { echo "p cnf $NV $((NC + ${#lits[@]}))"; tail -n +2 "$CNF"; for l in "${lits[@]}"; do echo "$l 0"; done; } > "$f"
   t0=$(date +%s.%N)
-  "$CADICAL" -q --elim=0 --lrat --binary=false "$f" "$p" > /dev/null; st=$?
+  timeout "${SOLVE_TIMEOUT:-0}" "$CADICAL" -q --elim=0 --lrat --binary=false "$f" "$p" > /dev/null; st=$?
   t1=$(date +%s.%N)
   if [ $st = 20 ]; then
     v=$("$CAKE_LPR" "$f" "$p" 2>&1 | tr '\n' ' '); pb=$(stat -c %s "$p")
