@@ -207,8 +207,8 @@ None. No SAT answer from the driver or the probe, so there is nothing to realize
 - `env.txt`: the environment, plus the two restart records.
 - `logs/`: `controls.log`, `lrat_controls.log`, `lrat_checker_controls.log`,
   `lrat_check_soundness.md`, `lrat_recheck.log` (E's D3 proofs) and
-  `lrat_probe_leaves.jsonl`.
-- `run/`: `state.json` (resumable frontier), `state_from_E.json`, `progress.log`,
+  `lrat_probe_leaves.jsonl`, `lrat_driver_closed.jsonl` (the closed driver cube).
+- `run/`: `state.json` (resumable frontier), `verify_tree.json`, `final.json`, `state_from_E.json`, `progress.log`,
   `events.log`, `closed.jsonl` (empty) and `final_segments.json`.
 - `probe/`: Knuth probe walks (`*.jsonl`) and per-step logs (`*.jsonl.steps`).
 - `test_n18/`: driver end-to-end test.
