@@ -1,6 +1,7 @@
 import V1L.Main
 import V2L.ClauseCover
 import V2L.Facts
+import V2L.Obligations
 
 /-!
 # Mirror sub-case (ii): the axis point is interior
@@ -39,6 +40,13 @@ def CaseCertificates (leaves : List Nat × List Nat → List (List Int)) : Prop 
 /-- All certificates of the hull-pair split, with leaf lists `leaves (U, L)`. -/
 def InteriorCertificates (leaves : List Nat × List Nat → List (List Int)) : Prop :=
   RootCertificate ∧ UpCertificates ∧ CaseCertificates leaves
+
+theorem rootCnf_eq : rootCnf = interiorCnf 33 7 ++ upCubes.map negClause := rfl
+
+theorem upCnf_eq (p : List Nat × List Int) :
+    upCnf p = cubeCnf (interiorCnf 33 7) p.2 ++ (casesOf p.1).map negClause := rfl
+
+theorem caseCnf_eq (c : List Int) : caseCnf c = cubeCnf (interiorCnf 33 7) c := rfl
 
 /-- **The certificates refute `m33k7int.sub.cnf`.** -/
 theorem interiorCnf_unsat_of_certificates {leaves : List Nat × List Nat → List (List Int)}

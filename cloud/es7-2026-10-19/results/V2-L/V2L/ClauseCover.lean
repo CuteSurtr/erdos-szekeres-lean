@@ -1,4 +1,5 @@
 import MirrorEncoding.Cover
+import V2L.Defs
 
 /-!
 # Clause covers: composing UNSAT results through blocking clauses
@@ -9,7 +10,7 @@ every assignment. Here the cover is itself certified by a SAT solver: `F` togeth
 one of the cubes. This is the argument of `results/Mii-S/soundness.md` ("certificate
 argument").
 
-* `negClause c` is the clause of the negated literals of the cube `c`.
+* `negClause c` (`V2L.Defs`) is the clause of the negated literals of the cube `c`.
 * `not_dimacsSatisfiable_of_clauseCover` (one level): `F ++ blocking clauses` UNSAT and every
   `cubeCnf F c` UNSAT.
 * `not_dimacsSatisfiable_of_clauseCover₂` (two levels, as in `cover.py`): `F ++ {¬UP(u)}`
@@ -27,8 +28,7 @@ namespace V2L
 
 open ETV Mir
 
-/-- The blocking clause of a cube: the disjunction of its negated literals. -/
-def negClause (c : List ℤ) : List ℤ := c.map fun z => -z
+theorem withUnits_eq : withUnits = cubeCnf := rfl
 
 theorem cubeSat_of_not_negClause {ν : ℕ → Bool} {c : List ℤ} (hc : ∀ z ∈ c, z ≠ 0)
     (h : ¬∃ z ∈ negClause c, LitSat ν z) : CubeSat ν c := by
