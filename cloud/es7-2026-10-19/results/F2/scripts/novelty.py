@@ -18,8 +18,13 @@ if __name__ == "__main__":
     lines = []
     for f in sorted(glob.glob(os.path.join(HERE, "..", "..", "..", "inputs", "distinct_K7*.txt"))):
         lines += [(f"{os.path.basename(f)}:{k + 1}", l) for k, l in enumerate(open(f)) if l.strip()]
-    with mp.Pool(2) as P:
-        pool = dict(P.map(pool_line, lines, chunksize=50))
+    cache = out + ".poolcache"
+    if os.path.exists(cache):
+        pool = json.load(open(cache))
+    else:
+        with mp.Pool(2) as P:
+            pool = dict(P.map(pool_line, lines, chunksize=50))
+        json.dump(pool, open(cache, "w"))
     inv = {}
     for k, h in pool.items(): inv.setdefault(h, []).append(k)
     res = {"pool_sets": len(pool), "pool_distinct_order_types": len(inv), "new_sets": len(new),
