@@ -1,6 +1,6 @@
 #!/bin/bash
 # Close roots one at a time, in order, until END (epoch seconds).
-D=/home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C3WAVE1/C02
+D=/opt/work/live; R0=/home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C3WAVE1/C02
 END=$1; JOBS=${2:-4}
 cd /opt/c3s/cloud/es7-2026-10-19/results/C3-S
 while read -r R; do
@@ -13,5 +13,5 @@ while read -r R; do
   last=$(tail -1 $D/driver.log)
   echo "=== $R end $(date -u +%T) rc=$rc" >> $D/driver.log
   if grep -q '"open_frontier": 0' <<<"$last"; then echo "$R done" >> $D/roots_done.txt; else break; fi
-done < $D/roots.txt
+done < $R0/roots.txt
 echo RUNNER_EXIT $(date -u +%T) >> $D/driver.log
