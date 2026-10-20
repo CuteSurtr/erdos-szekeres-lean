@@ -62,6 +62,8 @@ def running_queue(d):
     rate = done / max(1.0, (NOW - rtime) / 60)
     budget = 135 if '/WAVE4/' in '/' + d else 165
     left = max(0.0, (start + budget * 60 - NOW) / 60)
+    if d.startswith('WAVE4/') and NOW - rtime < 30 * 60:
+        rate = 0.0          # started less than 30 min ago: its rate is not yet meaningful, it keeps its list
     return q, rate, left
 
 # WAVE4 claims: a machine without README whose case directory has no synced leaves.jsonl yet claims its whole list
