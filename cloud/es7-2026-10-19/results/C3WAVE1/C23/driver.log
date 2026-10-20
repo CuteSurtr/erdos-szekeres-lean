@@ -1,0 +1,45 @@
+=== ROOT 0s0-1s0_2s1-4s1 start 07:38:03 H=3.5486
+{"node": "0s0-1s0_2s1-4s1", "status": "UNSATISFIABLE", "solve_s": 12.3, "certified": true}
+{"root": "0s0-1s0_2s1-4s1", "open_frontier": 0}
+=== ROOT 0s0-1s0_2s1-4s1 end 07:38:50 rc=0
+=== ROOT 0s0-1s0_3s0-9s0 start 07:38:50 H=3.5356
+{"node": "0s0-1s0_3s0-9s0", "status": "UNSATISFIABLE", "solve_s": 48.1, "certified": true}
+{"root": "0s0-1s0_3s0-9s0", "open_frontier": 0}
+=== ROOT 0s0-1s0_3s0-9s0 end 07:40:19 rc=0
+=== ROOT 0s0-1s0_4s0-7s1 start 07:40:19 H=3.5108
+{"node": "0s0-1s0_4s0-7s1", "status": "UNSATISFIABLE", "solve_s": 67.5, "certified": true}
+{"root": "0s0-1s0_4s0-7s1", "open_frontier": 0}
+=== ROOT 0s0-1s0_4s0-7s1 end 07:42:12 rc=0
+=== ROOT 0s0-1s0_5s0-8s0 start 07:42:12 H=3.4794
+{"node": "0s0-1s0_5s0-8s0", "status": "UNSATISFIABLE", "solve_s": 5.4, "certified": true}
+{"root": "0s0-1s0_5s0-8s0", "open_frontier": 0}
+=== ROOT 0s0-1s0_5s0-8s0 end 07:42:37 rc=0
+=== ROOT 0s0-1s0_6s1-10s1 start 07:42:37 H=3.4725
+{"node": "0s0-1s0_6s1-10s1", "status": "UNSATISFIABLE", "solve_s": 9.4, "certified": true}
+{"root": "0s0-1s0_6s1-10s1", "open_frontier": 0}
+=== ROOT 0s0-1s0_6s1-10s1 end 07:43:11 rc=0
+=== ROOT 0s0-1s0_8s0-9s1 start 07:43:11 H=3.4631
+{"node": "0s0-1s0_8s0-9s1", "status": "UNSATISFIABLE", "solve_s": 78.6, "certified": true}
+{"root": "0s0-1s0_8s0-9s1", "open_frontier": 0}
+=== ROOT 0s0-1s0_8s0-9s1 end 07:45:16 rc=0
+=== ROOT 0s0-1s1_2s0-8s0 start 07:45:16 H=3.4283
+{"node": "0s0-1s1_2s0-8s0", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-1s1_2s0-8s0_3_7", "status": "UNSATISFIABLE", "solve_s": 5.6, "certified": false}
+PROOF NOT ACCEPTED 0s0-1s1_2s0-8s0_3_7
+=== ROOT 0s0-1s1_2s0-8s0 end 07:51:13 rc=0
+HALT
+RUNNER DONE
+=== RESUME with --jobs 3 07:52:37
+=== ROOT 0s0-1s0_2s1-4s1 start 07:52:37 H=3.3058
+{"root": "0s0-1s0_2s1-4s1", "open_frontier": 0}
+=== ROOT 0s0-1s0_2s1-4s1 end 07:52:37 rc=0
+=== ROOT 0s0-1s0_3s0-9s0 start 07:52:37 H=3.3058
+{"root": "0s0-1s0_3s0-9s0", "open_frontier": 0}
+=== ROOT 0s0-1s0_3s0-9s0 end 07:52:38 rc=0
+=== ROOT 0s0-1s0_4s0-7s1 start 07:52:38 H=3.3056
+{"root": "0s0-1s0_4s0-7s1", "open_frontier": 0}
+=== ROOT 0s0-1s0_4s0-7s1 end 07:52:38 rc=0
+=== ROOT 0s0-1s0_5s0-8s0 start 07:52:38 H=3.3056
+{"root": "0s0-1s0_5s0-8s0", "open_frontier": 0}
+=== ROOT 0s0-1s0_5s0-8s0 end 07:52:38 rc=0
+=== ROOT 0s0-1s0_6s1-10s1 start 07:52:38 H=3.3056
