@@ -1,0 +1,8 @@
+BIN=/opt/work/tools (WORK=/opt/work/tmp)
+cadical  3.0.1  https://github.com/arminbiere/cadical  commit c60730422e758ef1cebe7aeddf2dda31c996bf04  (./configure && make; build/cadical)  sha256 44567cbf496fc2999eb24cc6a03d0b90a5040ed7debbd8c6347427f3e2518b28
+march_cu        https://github.com/marijnheule/CnC    commit 705b60c6491ef2b61988b3ce6ac674be1b90571d  (cd march_cu && make CFLAGS="-O3 -fcommon")  sha256 5239ba7c5f44f2468c721bc54991fa1374fee096b375f31271e18cee391061b2
+cake_lpr        https://github.com/tanyongkiam/cake_lpr commit a36874a8b750b43fe4b385b8ddbf5b033e46a3fa  (make cake_lpr)  sha256 1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca
+cake_lpr example.cnf example.lpr -> s VERIFIED UNSAT
+F.cnf sha256 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d (matches)
+CASE U_L6 (U="", L="6") sha256 741c7fe0917c292eb9401859b03204fd879df0b38a737819360924e44a105424 (matches cases.jsonl)
+top.icnf: 196 lines = 196 cubes in tasks/H19.json (at e0f250b), sha256 c5977b3a52aa6f87273bd4b22b13d21a6b0a0fe18bfa38120628daf049ab4446
