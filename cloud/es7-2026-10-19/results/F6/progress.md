@@ -16,3 +16,13 @@
   restarts, best 23, 0 complete. Reallocated (scripts/run_arms2.sh): those two cores now run
   grow_guided seeds 6000211.. and arm F --jitter 0.3 --extra-props 2 --smart-bt seeds 6000111..
   KPH-style at 377 models realized-attempted, 0 realized.
+- 03:43 grow_guided seed 6000202 chain 1 completed a 26-point set, gg6000202_1 (via dfs, 916 s);
+  03:50 chain 2 gave gg6000202_2 (358 s). Both: distinct x, general position, cap 4, cup 6, lcs 6,
+  brute 0 axiom violations; canonical fingerprints 73018d566e82b37c and 7a99a99767186a46, not
+  among F2's sets (data/sets26).
+- s2 convention (pipeline.sh): both 32-point deep-below sets lcs 6, brute 0 convex 7-subsets,
+  ext_solve 33/33 UNSAT (abstractly saturated). gg6000202_2: sat.c 0 bad faces (Euler count
+  matches). gg6000202_1: compression below 2^27 failed in build32, so the face sweep is pending a
+  recompression (scripts/geom_fill.py). (Note: the first gg6000202_1 run shared a scratch dir with
+  the F2 reproduction, so its logs also list F22_106/F22_162; data/sets32/gg6000202_1 keeps only
+  its own records. Later sets run in private dirs via scripts/handle26.sh.)
