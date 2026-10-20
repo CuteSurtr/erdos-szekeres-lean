@@ -1,0 +1,9 @@
+C3-S / C3a tools: git worktree of 8dc27c3 at /opt/c3s, unmodified (/opt/work was writable, so no path diff)
+cadical 3.0.1  c60730422e758ef1cebe7aeddf2dda31c996bf04  (./configure && make)
+cake_lpr       a36874a8b750b43fe4b385b8ddbf5b033e46a3fa  (make cake_lpr; example.cnf/example.lpr -> "s VERIFIED UNSAT")
+               note: at this commit cake_lpr ignores CML_HEAP_SIZE/CML_STACK_SIZE env vars (README: use --CML_HEAP_SIZE= flags),
+               so the driver's env setting (12000/2000) has no effect and cake_lpr runs with its built-in default heap 4096 MB / stack 4096 MB.
+lrat-check     drat-trim 2e3b2dc0ecf938addbd779d42877b6ed69d9a985 + results/E2/tools/lrat-check-E2.patch (make lrat-check)
+base.cnf: gen_case.py 11 7 none -> sha256 bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da (match), p cnf 168399 4154921
+roots: 68 depth-2 nodes, index = 7 mod 24 (close_tree.py SHARD expression == manifest_depth2.tsv depth-2 order; name-list sha256 5412782c... matches) -> roots.txt
+driver: run.sh (one close_tree.py per root, in order, --jobs 4 --caps 300,300,600 --cadopts=--sat --split-singles --hours <remaining>; hard stop 11:13 UTC)
