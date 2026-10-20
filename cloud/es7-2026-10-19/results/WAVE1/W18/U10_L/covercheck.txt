@@ -1,0 +1,6 @@
+covercheck.py top.icnf:
+s COVERED 128
+covercheck.py leaves.icnf + shard-0 top cubes (even 0-based lines of top.icnf):
+s COVERED 437
+covercheck.py leaves.icnf alone (expected NOT COVERED: shard 0 is not in it):
+s NOT COVERED 373
