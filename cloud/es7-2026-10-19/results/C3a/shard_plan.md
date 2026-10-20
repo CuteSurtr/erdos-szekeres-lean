@@ -38,13 +38,13 @@ All on the conv CNF, CaDiCaL 3.0.1 with `--lrat --binary=false`, 2 to 4 solvers 
 | plain (no cubes) | 1 | open after 1,200 s |
 | march depth 8 | 0, 1 | open after 1,200 s each |
 | march depth 12 | 0, 256, 512, 768 | open after 1,500 s each |
-| depth-12 leaf 0, then `march_cu -d 6` (depth 18) | 22 of 64 | all UNSAT: solve 172–439 s, mean 292 s; dual LRAT check mean 177 s; proofs mean 1.95 GB. 20 certified; 2 re-checked (see `leaves.jsonl`) |
+| depth-12 leaf 0, then `march_cu -d 6` (depth 18) | 22 of 64 | all UNSAT and all certified: solve 172–439 s, mean 290 s; dual LRAT check mean 176 s; proofs mean 1.94 GB |
 
 For the chain CNF (the encoding the task specified): the 1,024 σ cubes (depth 10) stay open
 after 3,600 s (cubes 0 and 1023), and march_cu is slow on it (depth 8 did not finish in 33 min).
 The conv CNF is the better target.
 
-Extrapolation, if every depth-12 leaf costs what leaf 0 does: 64 × 292 s ≈ 5.2 core-hours
+Extrapolation, if every depth-12 leaf costs what leaf 0 does: 64 × 290 s ≈ 5.2 core-hours
 of solving per depth-12 leaf, plus about 3.1 core-hours of checking. Over 4,096 leaves that is
 about 21,000 core-hours of solving plus 13,000 of checking. This rests on ONE depth-12 leaf
 (22 of its 64 sub-leaves) and could be off by a large factor either way. It is not a

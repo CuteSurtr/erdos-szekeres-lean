@@ -16,9 +16,9 @@ plus a memory-size patch, see `shard_plan.md`).
 | Encoding | `c3cnf.py m k [--gon chain\|conv]`; validated (identities on 2,300 sets; clause-level check on 1,000 + 1,010 sets; controls; agrees with symcnf and C3b) |
 | Size, m = 11, k = 7 | chain 168,399 vars / 4,154,921 clauses; conv 466,697 / 2,115,323; symcnf about 464k / 9.5M |
 | m = 10, k = 7 (30 points) | **SAT** (abstract): chain model in 15 s, conv model in 49 s; both pass the brute-force model checks (largest convex subset 6). **Not realized**: the realizer's best attempts left 138 and 105 triples wrong. This proves nothing either way. |
-| m = 11, k = 7 (33 points) | **Open.** No model found. CaDiCaL 20 min: no answer (chain and conv). Cube-and-conquer (conv, march_cu depth 12, 4,096 cubes, coverage certified): every depth-12 leaf tried (4) is still open after 1,500 s. Depth-12 leaf 0, split again by march_cu into 64 depth-18 cubes: SUB_SUMMARY |
-| Certified weight | SUB_WEIGHT of the whole space (all of it inside depth-12 leaf 0); everything else is open |
-| Shard plan | `shard_plan.md`: exact recipe, plus a cost estimate of roughly 2×10^4 core-hours at the measured rates. That is too costly to call closable without a better encoding or cube split. |
+| m = 11, k = 7 (33 points) | **Open.** No model found. CaDiCaL 20 min: no answer (chain and conv). Cube-and-conquer (conv, march_cu depth 12, 4,096 cubes, coverage certified): every depth-12 leaf tried (4) is still open after 1,500 s. Depth-12 leaf 0, split again by march_cu into 64 depth-18 cubes: 22 of 64 solved, all UNSAT and all certified by both checkers (solve 172–439 s, mean 290 s; check mean 176 s); the other 42 were not reached. |
+| Certified weight | 11/32 of depth-12 leaf 0 = **11/131072 ≈ 8.4×10⁻⁵** of the whole space (all of it inside depth-12 leaf 0); everything else is open |
+| Shard plan | `shard_plan.md`: exact recipe, plus a cost estimate of roughly 2×10⁴ core-hours of solving plus 1.3×10⁴ of checking at the measured rates. That is too costly to call closable without a better encoding or cube split. |
 
 No 33-point SAT model was found, so there is nothing to realize at m = 11.
 
@@ -153,7 +153,17 @@ committed.
      (`logs/conv_d12_sample{A,B}_leaves.jsonl`).
    - Depth-12 leaf 0 = CNF plus its 12 cube literals, split by `march_cu -d 6` into 64 cubes
      (`cubes/conv_m11k7_d12leaf0_d6.icnf`, coverage certified), solved with a 900 s cap:
-     SUB_DETAIL (`leaves.jsonl`).
+     22 of 64 solved before the time ran out, all UNSAT and certified (relative weight 11/32; `leaves.jsonl`, `summarize_leaves.py leaves.jsonl 1/4096`).
    - Two depth-18 sub-leaves (1 and 8) were solver-UNSAT and accepted by lrat-check, but
-     cake_lpr was OOM-killed (4 checkers in parallel on 15 GB). They are **not** counted as
-     certified. The heap is now 6 GB per checker. RERUN_NOTE
+     cake_lpr was OOM-killed (4 checkers in parallel on 15 GB). Both were re-solved with the heap
+     at 6 GB and then accepted by both checkers (tag `..._recheck`); only those records count.
+
+## Files
+
+- `c3cnf.py` generator; `c3geom.py` exact geometry; `check_identities.py`; `validate.py`;
+  `mutation_test.py`; `convk.c` exhaustive convex-k-set checker; `decode.py`; `to_sig.py`;
+  `compare_symcnf.sh`; `cnc_run.py` cube-and-conquer driver; `summarize_leaves.py`.
+- `leaves.jsonl`: depth-18 sub-leaves of conv depth-12 leaf 0 (weights relative to that leaf).
+- `cubes/`: all cube files with `SHA256SUMS`; `controls/`: the m = 6, k = 6 CnC control.
+- `models/`: decoded SAT models (abstract) and `.sig` files for m = 10; `realize/`: realizer logs.
+- `logs/`: everything cited above. `shard_plan.md`: recipe and cost estimate.
