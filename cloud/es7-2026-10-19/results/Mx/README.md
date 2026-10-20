@@ -100,4 +100,136 @@ Sizes for n = 33, k = 7 (all with 2,736 orientation variables):
 | top33 | 51,590 | 492,920 | 163,440 | 320,354 | 8,990 | 136 |
 | int33 | 51,590 | 492,787 | 163,440 | 320,354 | 8,990 | 2 + 1 |
 
-@@RESULTS@@
+## Validation (scripts/validate.py, logs/validate_10k.json): passed, 0 errors
+
+- **Sets.** 10,000 exactly mirror-symmetric integer point sets with n odd, uniform over 9..33 (about
+  770 per n), each with one axis point, in general position and with distinct x.
+  - 6,943 are random. Coordinate ranges run from 30 to 10^7. The axis point is forced to the
+    top in a quarter of them and to the bottom in another quarter.
+  - 3,057 are "structured": random mirror pairs taken from the mirror-symmetric classical
+    32-point heptagon-free set (tools/decomp/mirror.py, rotated so the axis is vertical), plus
+    one axis point.
+- **Brute force (scripts/bfgon.c).** For each set, an exhaustive search over subsets in convex
+  position with exact integer orientation tests gives the largest convex subset size L. Then k
+  is drawn from {L, L+1}, plus k = 7 for structured sets, with k ≥ 4.
+- **Checks on every set.** All passed on all 10,000.
+  - The mirror sign rule holds on every triple.
+  - The orbit variables are consistent.
+  - Every signotope clause is satisfied.
+  - The "top" clauses hold iff the axis point is an upper-hull vertex (hull computed
+    independently by monotone chain). The "interior" clauses hold iff it is interior. The
+    "sym" unit holds iff chi(0,1,2).
+  - The no-k-gon clauses hold under the least model of the auxiliary clauses iff L < k.
+- **Outcome mix.** 4,530 sets were k-gon-free and 5,470 contained a k-gon, with k from 5 to 19.
+  - k = 7 gon-free: 324 sets, all with n ≤ 19.
+  - n = 33, k = 7: 154 sets, all containing a 7-gon. So gon-free acceptance at n = 33 is tested
+    only for k ≥ 8.
+  - Axis position: top 2,861, bottom 3,283, interior 3,856.
+- **CaDiCaL subsample.** 200 sets were also solved as the written CNF plus orientation units. All
+  200 agree (90 SAT, 110 UNSAT).
+- **Sets from results/C/sets** (`logs/extcheck_C_sets.jsonl`, `scripts/extcheck.py`): 26 sets
+  checked, all agree.
+  - Pentagon-free 8, hexagon-free 11, classical mirror 32, mirror32_axismin1, the 33-point
+    near-miss with one heptagon (correctly rejected), and the 21 heptagon-free mirror 32-sets.
+  - Two of those 21 (seeds 6101 and 7101) have a mirror pair sharing an x-coordinate. The first
+    run on them reported a mismatch, because the x-sorted signotope is undefined there. After
+    the mirror-symmetric perturbation described under "Distinct x" they are in general position,
+    heptagon-free, and accepted. They are recorded with `perturbed: true`.
+
+## Controls (logs/controls.jsonl): passed except one timeout
+
+- **Mirror, required UNSAT.** (n,k) = (9,5), (17,6), (19,6), each in all four modes (none / all /
+  top / interior): 12/12 UNSAT, every one LRAT VERIFIED.
+- **Non-mirror Erdős–Szekeres.**
+  - n=8, k=5: SAT, and the model passes the independent signotope brute force (scripts/sigcheck.py).
+  - n=9, k=5: UNSAT, LRAT VERIFIED.
+  - n=16, k=6: SAT, sigcheck ok.
+  - **n=17, k=6: UNKNOWN after 3,000 s** (plain CaDiCaL, no symmetry breaking). This control was
+    not completed.
+- **sigcheck.py** decides "no convex k-gon" for a signotope in two independent ways that must
+  agree: an exhaustive 4-point-convexity subset search, and a cup/cap chain enumeration. It was
+  itself checked against bfgon on 60 real sets.
+
+## Agreement with results/C on small cases (logs/controls.jsonl, kind = compare)
+
+gen_etv.py was run as a black box: `--mirror` (C's "m") and `--hull --mirror` (C's sub-case (i),
+"hm"), with A = U = K = k.
+
+| n | k | Mx none | Mx top | Mx interior | C m | C hm |
+|---|---|---|---|---|---|---|
+| 5 | 4 | UNSAT | UNSAT | UNSAT | UNSAT | UNSAT |
+| 7 | 4 | UNSAT | UNSAT | UNSAT | UNSAT | UNSAT |
+| 7 | 5 | SAT | SAT | SAT | SAT | SAT |
+| 9 | 5 | UNSAT | UNSAT | UNSAT | UNSAT | UNSAT |
+| 9 | 6 | SAT | SAT | SAT | SAT | SAT |
+| 11 | 6 | SAT | SAT | SAT | SAT | SAT |
+| 13 | 6 | UNSAT | UNSAT | UNSAT | UNSAT | UNSAT |
+| 15 | 6 | UNSAT | UNSAT | UNSAT | UNSAT | UNSAT |
+| 13–25 (odd) | 7 | SAT | SAT | SAT | SAT | SAT |
+
+- Every Mx UNSAT in this table has a verified LRAT proof.
+- For every SAT row, five Mx models (seeds 0–4):
+  - pass sigcheck (signotope axioms, mirror rule, no convex k-gon);
+  - are accepted by C's `m` CNF as orientation units.
+- Five C `m` models per SAT row pass sigcheck and are accepted by the Mx CNF. That is 45/45 each
+  way.
+- Hull-frame models were not cross-mapped, because C's hm frame uses a projective re-ordering.
+- k = 7 at n = 27–31 was not compared (no time).
+
+## n = 33, k = 7
+
+- Cubes come from `march_cu -d 8` on each CNF: 256 cubes each, weight 1 in total, no
+  march-refuted leaves. The top split took 707 s and the interior split 788 s.
+- Each cube is solved as base CNF plus units by `cadical --lrat`, checked by `lrat-check`
+  against exactly that file, and the proof is then deleted.
+- The queue is FIFO and weights are exact.
+- A cube that times out is re-split by march_cu (`-d 3`) on the cube-conditioned CNF.
+- Leaf logs: `top33_leaves.jsonl`, `int33_leaves.jsonl`. Weight summaries come from
+  `scripts/status.py <cubes> <leaves>`.
+
+### Sub-case "top" (axis point is a hull vertex): 99.994 % of weight closed, 1 cube open
+
+- **Root cubes.** 255 of 256 depth-8 cubes are UNSAT and LRAT VERIFIED. Median 23 s, max 485 s.
+- **The hard root cube.** Cube −1314 −87 −1431 −1447 −536 −1462 −1476 −1489 timed out at 3,600 s
+  and was re-split (depth 3) into 8 children.
+  - 7 children are UNSAT and verified.
+  - The child ending −1336 −928 −1414 timed out again and was re-split into 8 grandchildren.
+    **7 are UNSAT and verified, and 1 depth-14 cube is still open** (weight 2^−14 = 6.1×10^−5
+    of the sub-case).
+  - Independently, that same child was re-split by hand with `march_cu -d 4` into 16 cubes
+    (`top33_lastcube_children_d4.icnf`, `last_leaves.jsonl`). 15/16 are UNSAT and verified, and
+    1 was still running at wrap-up.
+  - A side depth-5 split of the hard root cube (`top33_hardcube_children_d5.icnf`,
+    `hard_leaves.jsonl`) was stopped once the main run overtook it; 23 of its 32 cubes are
+    UNSAT and verified.
+- **Totals.** 269 leaves are UNSAT and LRAT VERIFIED in the main tree, with no failed check and no
+  SAT leaf. That is 5.3 solver-hours, 9.7 GB of LRAT checked, and 295 s of checking. The
+  largest proof was 408 MB.
+- **Coverage check not run.** The check that the base CNF plus the negations of all leaves is
+  UNSAT (`scripts/cover.py`) was **not run**, because one leaf is open. Until that check and the
+  last leaf are done, this sub-case is "99.994 % of cube weight closed", not certified.
+
+### Sub-case "interior": 2.7 % of weight closed
+
+- 7 of 256 depth-8 cubes are UNSAT and LRAT VERIFIED, with no SAT. Each cube took 1,500–2,736 s,
+  with LRAT proofs of 1.5–2.0 GB. That is 3.8 solver-hours.
+- 249 cubes are open. At this rate the interior sub-case needs about 130 core-hours with this
+  encoding and this cubing. A finer cube split, or the orbit/lemma strengthening that results/C
+  uses, would probably be needed.
+
+### SAT models
+
+None were found in any run.
+
+## Caveats
+
+- The encoding is unverified. The links that are argued above but not formally proved are:
+  the signotope axioms, the one-directional chain auxiliaries, the mirror rule, the hull and
+  interior clauses, and the y-reflection unit. Everything is tested, not proved.
+- During the run, a `git pull --rebase` at 03:41 replaced the live leaf files under the drivers.
+  The drivers kept appending to the unlinked inodes. Those records were recovered intact from
+  `/proc/<pid>/fd` (204 top leaves and 1 interior leaf), and the live files were moved to /tmp.
+  The controls run from before then was lost and re-run from scratch; the re-run is what is
+  reported.
+- Timings are wall-clock on a 4-vCPU VM, usually with 4–5 processes running.
+
