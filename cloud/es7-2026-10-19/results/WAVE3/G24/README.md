@@ -20,4 +20,4 @@ The cubes given were written as `top.icnf` in the order of the task file.
 - Every leaf has cake_lpr output exactly `s VERIFIED UNSAT`. There were no SAT results, no cake_lpr rejections and no timeouts.
 - `leaves.jsonl` starts with `{"case", "case_sha256"}`.
 - Overlap: the 128 U15_L4 cubes are, as a set, the top cubes of `results/WAVE2/S5/U15_L4/top.icnf`. S5 also closed all 128 of them. This run closes them independently.
-- U3_L9's 32 cubes are exactly `results/WAVE1/W34/U3_L9/open.icnf`. Together with W34's 93 verified leaves they cover W34's 125-cube top file. Its 1 march-refuted cube still needs whatever handling the cover check applies to W34's top file.
+- U3_L9's 32 cubes are exactly `results/WAVE1/W34/U3_L9/open.icnf`. Together with W34's 93 verified leaves they cover W34's 125-cube top file. 93 + 32 = 125, which is every line of that top file, the cube march marked as refuted included.
