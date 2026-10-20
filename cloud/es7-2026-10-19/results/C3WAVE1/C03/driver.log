@@ -1,0 +1,36 @@
+=== ROOT 0s0-1s0_2s0-10s1 start 07:39:11 H=3.547
+{"node": "0s0-1s0_2s0-10s1", "status": "UNSATISFIABLE", "solve_s": 9.1, "certified": true}
+{"root": "0s0-1s0_2s0-10s1", "open_frontier": 0}
+=== ROOT 0s0-1s0_2s0-10s1 end 07:39:52 rc=0
+=== ROOT 0s0-1s0_2s1-6s1 start 07:39:52 H=3.536
+{"node": "0s0-1s0_2s1-6s1", "status": "UNSATISFIABLE", "solve_s": 42.7, "certified": true}
+{"root": "0s0-1s0_2s1-6s1", "open_frontier": 0}
+=== ROOT 0s0-1s0_2s1-6s1 end 07:41:19 rc=0
+=== ROOT 0s0-1s0_3s1-4s0 start 07:41:19 H=3.511
+{"node": "0s0-1s0_3s1-4s0", "status": "UNSATISFIABLE", "solve_s": 79.1, "certified": true}
+{"root": "0s0-1s0_3s1-4s0", "open_frontier": 0}
+=== ROOT 0s0-1s0_3s1-4s0 end 07:43:19 rc=0
+=== ROOT 0s0-1s0_4s0-9s1 start 07:43:19 H=3.478
+{"node": "0s0-1s0_4s0-9s1", "status": "UNSATISFIABLE", "solve_s": 32.7, "certified": true}
+{"root": "0s0-1s0_4s0-9s1", "open_frontier": 0}
+=== ROOT 0s0-1s0_4s0-9s1 end 07:44:27 rc=0
+=== ROOT 0s0-1s0_5s1-10s0 start 07:44:27 H=3.459
+{"node": "0s0-1s0_5s1-10s0", "status": "UNSATISFIABLE", "solve_s": 42.8, "certified": true}
+{"root": "0s0-1s0_5s1-10s0", "open_frontier": 0}
+=== ROOT 0s0-1s0_5s1-10s0 end 07:45:47 rc=0
+=== ROOT 0s0-1s0_6s1-8s1 start 07:45:47 H=3.437
+{"node": "0s0-1s0_6s1-8s1", "status": "UNSATISFIABLE", "solve_s": 4.7, "certified": true}
+{"root": "0s0-1s0_6s1-8s1", "open_frontier": 0}
+=== ROOT 0s0-1s0_6s1-8s1 end 07:46:10 rc=0
+=== ROOT 0s0-1s0_8s1-9s1 start 07:46:10 H=3.431
+{"node": "0s0-1s0_8s1-9s1", "status": "UNSATISFIABLE", "solve_s": 4.2, "certified": true}
+{"root": "0s0-1s0_8s1-9s1", "open_frontier": 0}
+=== ROOT 0s0-1s0_8s1-9s1 end 07:46:34 rc=0
+=== ROOT 0s0-1s1_2s1-10s0 start 07:46:35 H=3.424
+{"node": "0s0-1s1_2s1-10s0", "status": "UNSATISFIABLE", "solve_s": 49.0, "certified": true}
+{"root": "0s0-1s1_2s1-10s0", "open_frontier": 0}
+=== ROOT 0s0-1s1_2s1-10s0 end 07:48:14 rc=0
+=== ROOT 0s0-1s1_3s0-6s1 start 07:48:15 H=3.396
+{"node": "0s0-1s1_3s0-6s1", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-1s1_3s0-6s1_2_4", "status": "UNSATISFIABLE", "solve_s": 6.6, "certified": false}
+PROOF NOT ACCEPTED 0s0-1s1_3s0-6s1_2_4
