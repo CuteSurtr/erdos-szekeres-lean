@@ -1,0 +1,8 @@
+cadical  3.0.1  https://github.com/arminbiere/cadical  commit c60730422e758ef1cebe7aeddf2dda31c996bf04  (./configure && make)
+march_cu         https://github.com/marijnheule/CnC     commit 705b60c6491ef2b61988b3ce6ac674be1b90571d  (march_cu: make CFLAGS="-O3 -fcommon")
+cake_lpr         https://github.com/tanyongkiam/cake_lpr commit a36874a8b750b43fe4b385b8ddbf5b033e46a3fa (make cake_lpr); bundled example.cnf/example.lpr -> s VERIFIED UNSAT
+BIN=/opt/tools/bin  WORK=/opt/work/tmp
+F.cnf sha256 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d (matches)
+CASE.cnf (U_L2) sha256 1d26b9475d1609388bda1853cc22c1fba0bb73fb1a5f8a28adf9fbd3f15aaa53 (matches cases.jsonl)
+top.icnf: 215 lines = 215 cubes in tasks/H56.json
+driver started 14:44 UTC with --hours 1.2
