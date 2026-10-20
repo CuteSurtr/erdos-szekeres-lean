@@ -1,4 +1,5 @@
 import V2L.Main
+import V2L.FinalTree
 
 /-! Axiom audit: `lake build` fails if any of these theorems uses an axiom other than
 `propext`, `Classical.choice` and `Quot.sound` (or uses fewer than recorded here). -/
@@ -130,3 +131,49 @@ import V2L.Main
 /-- info: 'V2L.mirrorExclusionLine_of_certificates' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs in
 #print axioms V2L.mirrorExclusionLine_of_certificates
+
+-- Tree certificates (TREE_TASK.md, V2G)
+
+/-- info: 'V2L.CTree.covers_of_check' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms V2L.CTree.covers_of_check
+
+/-- info: 'V2L.CTree.check_of_sibLists' depends on axioms: [propext] -/
+#guard_msgs in
+#print axioms V2L.CTree.check_of_sibLists
+
+/-- info: 'V2L.not_dimacsSatisfiable_of_tree' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms V2L.not_dimacsSatisfiable_of_tree
+
+/-- info: 'V2L.Trees.check001' depends on axioms: [propext] -/
+#guard_msgs in
+#print axioms V2L.Trees.check001
+
+/-- info: 'V2L.Trees.c001_0' does not depend on any axioms -/
+#guard_msgs in
+#print axioms V2L.Trees.c001_0
+
+/-- info: 'V2L.treeOf_check' depends on axioms: [propext] -/
+#guard_msgs in
+#print axioms V2L.treeOf_check
+
+/-- info: 'V2L.interiorCnf_unsat_of_certificatesT' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms V2L.interiorCnf_unsat_of_certificatesT
+
+/-- info: 'V2L.axisInteriorLine_of_certificatesT' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms V2L.axisInteriorLine_of_certificatesT
+
+/-- info: 'V2L.mirrorExclusionLine_of_certificatesT' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms V2L.mirrorExclusionLine_of_certificatesT
+
+/-- info: 'V2L.axisInteriorLine_final' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms V2L.axisInteriorLine_final
+
+/-- info: 'V2L.mirrorExclusionLine_final' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms V2L.mirrorExclusionLine_final

@@ -4,4 +4,8 @@ import V2L.Obligations
 import V2L.Facts
 import V2L.ClauseCover
 import V2L.Main
+import V2L.Tree
+import V2L.TreeData
+import V2L.TreeMain
+import V2L.FinalTree
 import V2L.Audit
