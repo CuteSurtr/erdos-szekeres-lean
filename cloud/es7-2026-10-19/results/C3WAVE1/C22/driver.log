@@ -27,3 +27,28 @@
 {"root": "0s0-1s1_2s0-7s1", "open_frontier": 0}
 === ROOT 166 0s0-1s1_2s0-7s1 end 2026-10-20T07:51:06Z rc=0
 === ROOT 190 0s0-1s1_3s0-4s0 start 2026-10-20T07:51:06Z hours=3.365
+=== ROOT 190 0s0-1s1_3s0-4s0 end 2026-10-20T07:52:15Z rc=0
+=== ROOT 190 0s0-1s1_3s0-4s0 start 2026-10-20T07:54:09Z hours=3.314
+{"node": "0s0-1s1_3s0-4s0", "status": "UNSATISFIABLE", "solve_s": 31.3, "certified": true}
+{"root": "0s0-1s1_3s0-4s0", "open_frontier": 0}
+=== ROOT 190 0s0-1s1_3s0-4s0 end 2026-10-20T07:55:19Z rc=0
+=== ROOT 214 0s0-1s1_3s1-9s0 start 2026-10-20T07:55:19Z hours=3.295
+{"node": "0s0-1s1_3s1-9s0", "status": "UNSATISFIABLE", "solve_s": 59.9, "certified": true}
+{"root": "0s0-1s1_3s1-9s0", "open_frontier": 0}
+=== ROOT 214 0s0-1s1_3s1-9s0 end 2026-10-20T07:56:59Z rc=0
+=== ROOT 238 0s0-1s1_4s1-8s1 start 2026-10-20T07:56:59Z hours=3.267
+{"node": "0s0-1s1_4s1-8s1", "status": "UNSATISFIABLE", "solve_s": 198.1, "certified": true}
+{"root": "0s0-1s1_4s1-8s1", "open_frontier": 0}
+=== ROOT 238 0s0-1s1_4s1-8s1 end 2026-10-20T08:01:05Z rc=0
+=== ROOT 262 0s0-1s1_6 start 2026-10-20T08:01:05Z hours=3.199
+{"node": "0s0-1s1_6_3", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-1s1_6_5", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-1s1_6_4", "status": "UNKNOWN", "solve_s": 300.4, "certified": null}
+{"node": "0s0-1s1_6_2", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-1s1_6_10", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-1s1_6_8", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-1s1_6_9", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-1s1_6_7", "status": "UNKNOWN", "solve_s": 300.6, "certified": null}
+{"node": "0s0-1s1_6_2s0-3s0", "status": "UNSATISFIABLE", "solve_s": 32.8, "certified": true}
+{"node": "0s0-1s1_6_2s1-3s1", "status": "UNSATISFIABLE", "solve_s": 38.0, "certified": true}
+{"node": "0s0-1s1_6_2s0-4s0", "status": "UNSATISFIABLE", "solve_s": 27.9, "certified": true}
