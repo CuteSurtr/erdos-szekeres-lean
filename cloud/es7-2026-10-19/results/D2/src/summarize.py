@@ -122,6 +122,23 @@ if W:
         "cpu_s_total": round(sum(p["cpu_s_total"] or 0 for p in per.values()), 1),
     }
 
+# ---------- bounded multi-start walk (D2): MAXLEN steps from one deletion of every seed ----------
+WM = jl(os.path.join(RUNS, "walkms", "walk_w*.jsonl"))
+if WM:
+    msum = [json.load(open(f)) for f in sorted(glob.glob(os.path.join(RUNS, "walkms", "walk_w*_summary.json")))]
+    tm = set()
+    for f in glob.glob(os.path.join(RUNS, "walkms", "walk_w*_tabu.txt")):
+        tm |= set(l.strip() for l in open(f) if l.strip())
+    cpu = sum(d["cpu_process"] + d["cpu_children"] for d in msum)
+    st = [r for r in WM if r["kind"] == "start"]; vi = [r for r in WM if r["kind"] == "visit"]
+    S["walk_multistart"] = {
+        "starts (seeds walked)": len(st), "states_swept": len(WM), "distinct_32pt_order_types": len(tm),
+        "overlap_with_long_walks": len(tm & tabu_union), "m0_faces_total": sum(r["m0"] for r in WM),
+        "cpu_s": round(cpu, 1), "new_32_sets_per_cpu_hour": round(len(WM) / cpu * 3600, 1) if cpu else None,
+        "m1_faces_start_states": dist([r["m1"] for r in st]), "m1_faces_walk_states": dist([r["m1"] for r in vi]),
+        "m2_faces_walk_states": dist([r["m2"] for r in vi]),
+        "states_with_no_lattice_m1_face": sum(1 for r in WM if r["pt_ok"] == 0)}
+
 # ---------- baseline ----------
 B = jl(os.path.join(RUNS, "baseline", "baseline_b*.jsonl"))
 if B:
