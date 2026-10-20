@@ -1,0 +1,9 @@
+BIN=/opt/work/bin  WORK=/opt/work/tmp
+cadical  https://github.com/arminbiere/cadical  c60730422e758ef1cebe7aeddf2dda31c996bf04  version 3.0.1  (./configure && make)  sha256 6f341810760fe6c6c74b845d201ce9a3469034e947add1635b1d20822ec897c6
+march_cu https://github.com/marijnheule/CnC  705b60c6491ef2b61988b3ce6ac674be1b90571d  (make CFLAGS='-O3 -fno-strict-aliasing -Wall -DNDEBUG -fcommon')  sha256 afcbb47642a922676693b325ed19d88698c6b8f700943fa2753d98126579f222
+cake_lpr https://github.com/tanyongkiam/cake_lpr  a36874a8b750b43fe4b385b8ddbf5b033e46a3fa  (make cake_lpr)  sha256 1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca
+cake_lpr example.cnf example.lpr -> s VERIFIED UNSAT
+gcc: gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+F.cnf sha256 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d (matches)
+CASE.cnf (U_L6) sha256 741c7fe0917c292eb9401859b03204fd879df0b38a737819360924e44a105424 (matches cases.jsonl)
+top.icnf: 196 lines = len(tasks/H23.json[U_L6]) = 196; sha256 6aba42832aba00f899870b9e68f97b5bc00c8da5cca8771af0e5664a581f2bad
