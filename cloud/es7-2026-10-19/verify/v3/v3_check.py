@@ -82,7 +82,7 @@ def main():
             except ValueError:
                 continue
             if o.get("verdict") in ("VERIFIED", "REJECTED", "SAT", "NOT_COVERED"):
-                done.add((o["kind"], o["key"]))
+                done.add((o["kind"], o["key"], o.get("case"), json.dumps(o.get("lits")), o.get("leaves_sha256")))
     lock = threading.Lock()
     outf = open(a.out, "a")
 
@@ -115,17 +115,17 @@ def main():
 
     def leaf_job(r):
         key = r["idx"]
-        if ("leaf", key) in done:
+        if ("leaf", key, r["case"], json.dumps(r["lits"]), None) in done:
             return
         cube = cube_of[r["case"]]
         cs = set(cube)
         lits = r["lits"]
         if any(-x in cs for x in lits):
-            emit({"kind": "leaf", "key": key, "case": r["case"], "verdict": "VERIFIED",
+            emit({"kind": "leaf", "key": key, "case": r["case"], "lits": lits, "verdict": "VERIFIED",
                   "note": "leaf contradicts the case cube, so its CNF is trivially UNSAT"})
             return
         if any(abs(x) > nv for x in lits):
-            emit({"kind": "leaf", "key": key, "case": r["case"], "verdict": "REJECTED",
+            emit({"kind": "leaf", "key": key, "case": r["case"], "lits": lits, "verdict": "REJECTED",
                   "note": "literal outside the variable range"})
             return
         extra = sorted((x for x in lits if x not in cs), key=abs)
@@ -135,16 +135,17 @@ def main():
         rc, st, pb, line, ct = solve_check(os.path.join(a.work, f"leaf-{key}"), data)
         verdict = ("VERIFIED" if line == "s VERIFIED UNSAT" else
                    "SAT" if rc == 10 else "TIMEOUT" if rc == "TIMEOUT" else "REJECTED")
-        emit({"kind": "leaf", "key": key, "case": r["case"], "cnf_sha256": sha, "rc": rc,
+        emit({"kind": "leaf", "key": key, "case": r["case"], "lits": lits, "cnf_sha256": sha, "rc": rc,
               "solve_s": st, "proof_bytes": pb, "cake_lpr": line, "check_s": ct, "verdict": verdict})
 
     def cover_job(case):
-        if ("cover", case) in done:
-            return
         lv = [r["lits"] for r in recs if r["case"] == case]
+        lsha = hashlib.sha256(json.dumps(lv).encode()).hexdigest()
+        if ("cover", case, None, "null", lsha) in done:
+            return
         cube = cube_of[case]
         if any(len(x) == 0 for x in lv):
-            emit({"kind": "cover", "key": case, "nleaves": len(lv), "verdict": "VERIFIED",
+            emit({"kind": "cover", "key": case, "nleaves": len(lv), "leaves_sha256": lsha, "verdict": "VERIFIED",
                   "note": "the empty cube is a leaf"})
             return
         clauses = [[x] for x in cube] + [[-x for x in l] for l in lv]
@@ -153,7 +154,7 @@ def main():
         rc, st, pb, line, ct = solve_check(os.path.join(a.work, f"cover-{case}"), data)
         verdict = ("VERIFIED" if line == "s VERIFIED UNSAT" else
                    "NOT_COVERED" if rc == 10 else "TIMEOUT" if rc == "TIMEOUT" else "REJECTED")
-        emit({"kind": "cover", "key": case, "nleaves": len(lv), "cnf_sha256": hashlib.sha256(data).hexdigest(),
+        emit({"kind": "cover", "key": case, "nleaves": len(lv), "leaves_sha256": lsha, "cnf_sha256": hashlib.sha256(data).hexdigest(),
               "rc": rc, "solve_s": st, "cake_lpr": line, "check_s": ct, "verdict": verdict})
 
     with ThreadPoolExecutor(a.jobs) as ex:
