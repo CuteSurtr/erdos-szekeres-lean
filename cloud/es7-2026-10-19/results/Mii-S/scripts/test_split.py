@@ -128,4 +128,5 @@ def main():
     rep["failures"] = len(rep["fail"])
     print(json.dumps(rep))
 
-main()
+if __name__ == "__main__":
+    main()

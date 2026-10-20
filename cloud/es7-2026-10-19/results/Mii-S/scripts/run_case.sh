@@ -14,14 +14,14 @@ if [ "$MODE" = lrat ]; then
 else
   "$BIN/cadical" -t "$T" "$d/case.cnf" > "$d/out" 2>&1; rc=$?
 fi
-t1=$(date +%s.%N); st=$(echo "$t1 - $t0" | bc)
+t1=$(date +%s.%N); st=$(printf "%.3f" "$(echo "$t1 - $t0" | bc)")
 res=UNKNOWN; [ $rc = 20 ] && res=UNSAT; [ $rc = 10 ] && res=SAT
 chk=null; ct=null; psz=null
 if [ "$MODE" = lrat ] && [ $res = UNSAT ]; then
   psz=$(stat -c %s "$d/p.lrat")
   c0=$(date +%s.%N)
   "$BIN/cake_lpr" "$d/case.cnf" "$d/p.lrat" > "$d/chk" 2>&1
-  c1=$(date +%s.%N); ct=$(echo "$c1 - $c0" | bc)
+  c1=$(date +%s.%N); ct=$(printf "%.3f" "$(echo "$c1 - $c0" | bc)")
   chk="\"$(grep -m1 '^s ' "$d/chk" | tr -d '\n')\""
 fi
 [ $res = SAT ] && cp "$d/out" "$W/SAT_$name.out"
