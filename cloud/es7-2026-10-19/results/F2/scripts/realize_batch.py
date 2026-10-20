@@ -43,8 +43,10 @@ def main():
         t = l.split()
         if t and len(t[-1]) == nx:
             lines.append((f"{a.prefix}{i}" if len(t) == 1 else f"{t[0]}_m{t[1]}", t[-1]))
+    resf = os.path.join(a.out, "results.jsonl")
+    done = {json.loads(l)["tag"] for l in open(resf)} if os.path.exists(resf) else set()
     jobs = [(lines[i][0], lines[i][1], a.N, a.time, a.methods.split(",") if a.methods != "auto" else "auto")
-            for i in range(a.start, min(len(lines), a.start + a.count))]
+            for i in range(a.start, min(len(lines), a.start + a.count)) if lines[i][0] not in done]
     with mp.Pool(a.jobs) as P, open(os.path.join(a.out, "results.jsonl"), "a") as f:
         for r in P.imap_unordered(work, jobs):
             if r["realized"]:
