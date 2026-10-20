@@ -1,109 +1,129 @@
-# Shard plan: closing sub-case (ii) through the hull-pair split
+# Shard plan: closing sub-case (ii)
 
-Everything is deterministic except where a wall-clock timeout is named. For a reproducible
-tree, replace `-t <sec>` with CaDiCaL's conflict limit `-c <n>`. On this VM, 1M conflicts was
-roughly 300–700 s.
+**Recommended route (H): C2's tree with the hull split at its open leaves.** Each of C2's
+1,340 open cubes `o` becomes one CNF, `G_o`. In it, fresh selector variables pick a hull case,
+and the hull-case cubes do the work. Measured here: every one tried so far is UNSAT and
+cake_lpr-verified, at 20–365 s CaDiCaL + 4–23 s cake_lpr each on a contended 4-core VM
+(`open_ext_lrat.jsonl`). That puts the total at roughly **50–70 core-hours** at this VM's
+speed, in 1,340 independent, small, evenly sized jobs.
 
-## 0. Inputs and generator
+The pure hull-split route (S) is kept below as the fallback. It is sound and partly done
+(172/450 cases closed, cover certified). Its remaining cost is dominated by a few hard 4-gon
+cases and is estimated at 135–300+ core-hours.
 
-- Branch `es7-cloud`, generator scripts in `results/Mii-S/scripts/` (commit: see
-  `README.md`, "Generator commit").
-- Base CNF: `results/C/scripts/make_cnfs.sh OUT` → `OUT/m33k7int.sub.cnf`, which must have
-  sha256 `69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d`. This is the same file
-  that H3's `lake exe mir_dimacs interior 33 7` writes.
-- Tools: CaDiCaL 3.0.1 (c6073042), march_cu (CnC 705b60c6, `-fcommon`), cake_lpr (a36874a8,
-  `cake_lpr.S` sha256 `2f3af32d…72b7d4a`). The patched lrat-check is only an optional second checker.
-- Case cubes: `python3 scripts/hullsplit.py cubes cases.icnf cases.json` gives 450 lines, sha256
-  `6b6f0946245da5cb33f287a0484c5ce7ef022bc26452a949848704018e6db742` (committed as
-  `cases.icnf`). Each case CNF is `python3 scripts/hullsplit.py case F U L OUT`, i.e. `F` plus
-  the cube's units appended in the order of the cube line. Its sha256 is in `cases.jsonl`.
-  The Lean-side meaning is H3's `cubeCnf F cube`.
+## 0. Inputs (pin these)
 
-## 1. Cover certificates (done here, 122 obligations)
+- Branch `es7-cloud`. Generator scripts are in `results/Mii-S/scripts/`, at the commit that
+  added this file (see `README.md`).
+- `F` = `m33k7int.sub.cnf` from `results/C/scripts/make_cnfs.sh OUT`. It must have sha256
+  `69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d`, and it is byte-identical to H3's
+  `lake exe mir_dimacs interior 33 7`.
+- Tools: CaDiCaL 3.0.1 (c6073042), march_cu (CnC 705b60c6, built with `-fcommon`), cake_lpr
+  (a36874a8; `cake_lpr.S` sha256 `2f3af32d…72b7d4a`).
+- The hull cases are `scripts/hullsplit.py cubes cases.icnf cases.json`. That gives 450 cubes;
+  `cases.icnf` has sha256 `6b6f0946245da5cb33f287a0484c5ce7ef022bc26452a949848704018e6db742`
+  and is committed. Case `n` (0-based line) is `hullsplit.cases()[n]`.
+- C2's leaves: the closed ones are `results/C2/logs/cnc_ii_interior/closed.txt` (749, all
+  cake_lpr-verified by H3: `results/H3/logs/cube_lrat_ii_interior.jsonl`). The open ones are
+  `results/H3/logs/open_cubes_ii_interior.txt` (1,340). H3's `cover_check` accepts the union
+  (`results/H3/logs/cover_check_C2_final.log`).
 
-`scripts/cover.py list` lists `root` and `up:U` for 121 upper chains U. Each obligation is
-`python3 scripts/cover.py cnf F OB OUT.cnf`, solved by `cadical --lrat --binary=false`
-and checked with `cake_lpr OUT.cnf proof`. All 122 are **UNSAT, cake_lpr VERIFIED**
-(`cover_lrat.jsonl`: 503 s CaDiCaL and 222 s cake_lpr in total, 1.0 GB of proofs, largest
-obligation `up:` at 206 s). Re-running them is optional: about 0.2 core-hours.
+## 1. Hull cover certificates (done: 122/122 cake_lpr VERIFIED)
 
-If a case is later split by layers (section 3b), each expanded node P also needs its
-`cover2.py list P` obligations, about 107 per node. For P = `8/` and `/7` (214 obligations)
-this took about 10–60 s per obligation.
+`scripts/cover.py list` lists `root` and `up:U` (121 upper chains U). For each obligation:
+`python3 scripts/cover.py cnf F OB X.cnf; cadical --lrat --binary=false X.cnf X.lrat;
+cake_lpr X.cnf X.lrat`. Results are in `cover_lrat.jsonl`: 503 s CaDiCaL and 222 s cake_lpr in total.
 
-## 2. The 450 case CNFs: status after this run
+## 2. Route H: one job per C2 open cube (1,340 jobs)
 
-See `cases.jsonl`, one line per case: sha256, status, times, estimate.
+For open cube number `i`, the 1-based line of `open_cubes_ii_interior.txt`:
 
-| group | cases | status |
-|---|---|---|
-| closed by plain CaDiCaL (≤ 10 s each) | 172 | UNSAT, cake_lpr VERIFIED |
-| further closed here | see README | UNSAT, cake_lpr VERIFIED |
-| open, hull a 6-gon (two extra pairs) | 248 → see README | estimated below |
-| open, hull a 4-gon (one extra pair) | 28 → see README | estimated below |
+```
+scripts/run_open_ext.sh F i 900 WORKDIR     # -> one JSON line
+#   = python3 scripts/open_ext.py F "<o, comma separated>" G.cnf
+#     cadical --lrat --binary=false -t 900 G.cnf G.lrat ; cake_lpr G.cnf G.lrat
+```
 
-## 3. Per-case procedure (what each machine runs)
+`G_o = F + units(o) + {¬e_c ∨ l : l ∈ cube(c)} for the 450 cases c + (e_1 ∨ … ∨ e_450)`,
+where `e_c = 47003 + index(c)` are fresh variables.
 
-For a case CNF `C` (from `hullsplit.py case`):
+- Shards: machine `m` of `N` takes the indices `i ≡ m (mod N)`, with one job per core.
+  Order inside a shard does not matter.
+- Determinism: replace `-t 900` with a conflict budget `-c 5000000` if needed. Nothing tried
+  here came close to that budget.
+- A job that does not finish: split it with `march_cu G.cnf -d 4`, using the cube literals over
+  the original variables only, i.e. drop the `e_c`. Alternatively, solve
+  `F + o + cube(c)` per case c (`hybrid_grid.py` shows that only about 1–37 of the 278 open
+  cases survive 2,000 conflicts per open cube). Both are covered by section 4.
+- Expected cost, from the jobs run here: mean about 170 s of CaDiCaL + 14 s of cake_lpr per cube
+  under contention, so about 60 core-h for all 1,340 (about 40–50 on uncontended cores). Proofs are
+  25–190 MB each; delete them after checking. On N = 8 machines × 4 cores this is about 2 h wall.
+- Optional speed-ups:
+  - drop the open cubes that are fully inside the union of Mii's closed cubes (each also needs its
+    Mii proof checked by cake_lpr, since most Mii leaves used lrat-check);
+  - keep one solver per shard and pass cubes as assumptions. This was measured at 21 s for one
+    cube in PySAT, but it needs an incremental proof format that cake_lpr does not check.
 
-a. **Cube-and-conquer, the default** (the Mi recipe that closed sub-case (i)):
-   ```
-   march_cu C -d 7 -o top.icnf          # 128 cubes; refuted leaves are written too
-   for each cube c:  C+c  ->  cadical --lrat --binary=false -t 300  ->  cake_lpr
-   on timeout:       march_cu C+c -d 6  -> 64 children c+s, recurse
-   ```
-   `scripts/close_march.py C OUT --depth 7 --timeout 300 --split-depth 6 --jobs <cores>`
-   does exactly this. It writes `OUT/leaves.jsonl` and `OUT/leaves.icnf` (the closed
-   leaves). Completion is checked with H3's `lake exe cover_check OUT/leaves.icnf`, which must
-   print `s COVERED`. `scripts/covercheck.py` is an unverified Python port for quick checks.
-   The 6-gon cases are smaller, so `-d 5` is enough to start.
-b. **Layer split, optional.** `scripts/layers.py next SPEC` gives the next convex layer, and
-   `cover2.py` gives the certified cover of that step. It pays off only when the next layer is
-   a 6-gon. The children whose next layer is again a 4-gon (one pair, no axis vertex) timed out
-   at 60 s in 10/10 tries under `/7`, so the 4-gon chains recur. Use it only for cases whose
-   probes favour it.
+## 3. Route S (fallback): finish the 278 open hull cases directly
 
-## 4. Expected cost (core-hours, this VM's speed)
+`cases.jsonl` has every case's CNF sha256 and status. 172 cases are UNSAT with cake_lpr
+VERIFIED, and U8_L is closed by cube-and-conquer (see README).
 
-See the estimate table in `README.md`, which draws on `est_one.jsonl`, `est_two.jsonl`,
-`probes.jsonl` and `cases.jsonl`. Assign cases to N machines by longest-processing-time on the
-estimate. The 4-gon cases go first and get the most cores, because their spread is largest.
+Per case: `scripts/close_march.py CASE.cnf OUT --depth 7 --timeout 300 --split-depth 6 --jobs
+<cores>`, with `--depth 6` for the 6-gon cases. The leaves are checked by cake_lpr, and
+`lake exe cover_check OUT/leaves.icnf` must print `s COVERED`.
 
-## 5. Composing the certificate
+Measured march estimates (`probes.jsonl`, 6 sampled cubes per case at 300 s, censored at 300):
 
-The goal is `¬DimacsSatisfiable (Mir.interiorCnf 33 7)`, the `h2` of
-`Mir.mirrorExclusionLine_of_unsat`.
+- 4-gon cases: 0.84 h (11/), 0.93 (/11), 1.13 (/8), 1.52 (8/), 1.64 (/4), 3.44 (6/),
+  ≥ 8.3 (3/, 3/6 cubes timed out), ≥ 10.7 (/2, 6/6 timed out).
+  - 28 cases × mean ≥ 3.6 h → ≥ 100 core-h, dominated by /2 and 3/.
+- 6-gon cases: 0.06 h (5/10), 0.62 (3,5/), 0.75 (6/2), 1.79 (/2,3).
+  - 250 cases × 0.15–0.8 h → 35–200 core-h. The layer-probe mean was 0.14 h, and it is biased low.
 
-1. Lean extension, small and not yet written. It needs a clause-cover lemma next to
-   `not_dimacsSatisfiable_of_cover` in `results/H3/MirrorEncoding/Cover.lean`:
-   ```lean
-   /-- Blocking-clause cover: if F ∧ P ∧ (no cube of `cubes` holds) is UNSAT and every
-   F ∧ c (c ∈ cubes) is UNSAT, then F ∧ P is UNSAT. -/
-   theorem not_dimacsSatisfiable_of_blocked {F : List (List ℤ)} {P : List ℤ} {cubes : List (List ℤ)}
-       (h0 : ∀ c ∈ cubes, ∀ z ∈ c, z ≠ 0)
-       (hb : ¬DimacsSatisfiable (cubeCnf F P ++ cubes.map (List.map (fun z => -z))))
-       (hc : ∀ c ∈ cubes, ¬DimacsSatisfiable (cubeCnf F c)) :
-       ¬DimacsSatisfiable (cubeCnf F P)
-   ```
-   Proof: let ν satisfy `cubeCnf F P`. If some c ∈ cubes holds under ν, then ν satisfies
-   `cubeCnf F c`, contradicting hc. Otherwise every c has a false literal z, so `-z` holds
-   (`litSat_neg`, using h0), and ν satisfies every blocking clause, contradicting hb. With
-   `P = []`, `cubeCnf F [] = F` up to `++ []`.
-2. Data:
-   - `root` (P = [], cubes = UP(U) for 121 U);
-   - `up:U` (P = UP(U), cubes = cube(U,L));
-   - per case either a direct cake_lpr refutation of `cubeCnf F cube(U,L)`, or a march leaf list
-     for which `coverCheck` holds, with one cake_lpr refutation of
-     `cubeCnf (cubeCnf F cube) leaf` per leaf (`not_dimacsSatisfiable_of_coverCheck` with F
-     replaced by `cubeCnf F cube`).
-3. Chain: per case gives `¬Sat (cubeCnf F cube(U,L))`. `up:U` with
-   `not_dimacsSatisfiable_of_blocked` gives `¬Sat (cubeCnf F UP(U))`, and `root` gives
-   `¬Sat F`.
-4. Trust base: the same as H3's (cake_lpr, the unit/clause appending in the scripts, Lean's
-   `coverCheck` binary). The Python generators (`hullsplit.py`, `cover.py`, `layers.py`) are
-   **not trusted**. A wrong cube only makes some obligation SAT, or leaves it unprovable. The
-   geometric argument (`soundness.md`) explains why the obligations are UNSAT. It is not
-   needed for soundness.
-5. File order. `check_cubes.sh` appends cube units after F. The blocking CNFs are F, then P's
-   units, then the blocking clauses (`cover.py cnf`). That is `cubeCnf F P ++ blocks`, the
-   order in `hb`.
+The layer split (`layers.py`, `cover2.py`) was tested and does not help in general. Under /7,
+the layer-2 children whose layer is again a 4-gon timed out at 60 s in 11 of 12 cases.
+
+## 4. Composing the certificate (Lean)
+
+The target is `¬DimacsSatisfiable (Mir.interiorCnf 33 7)`, the `h2` of
+`Mir.mirrorExclusionLine_of_unsat`. Two small lemmas are needed next to H3's `Cover.lean`.
+They are **not written or compiled here**.
+
+```lean
+/-- Blocking-clause cover. -/
+theorem covers_of_blocked {F : List (List ℤ)} {P : List ℤ} {cubes : List (List ℤ)}
+    (h0 : ∀ c ∈ cubes, ∀ z ∈ c, z ≠ 0)
+    (hb : ¬DimacsSatisfiable (cubeCnf F P ++ cubes.map (List.map (fun z => -z)))) :
+    ∀ ν, DimacsSat (cubeCnf F P) ν → ∃ c ∈ cubes, CubeSat ν c
+-- proof: otherwise every cube has a false literal z, so -z holds (litSat_neg), so ν
+-- satisfies every blocking clause, contradicting hb.
+
+/-- Selector extension. -/
+theorem not_sat_of_selector {F : List (List ℤ)} {o : List ℤ} {cubes : List (List ℤ)} (nv : ℕ)
+    (hvars : ∀ cl ∈ cubeCnf F o, ∀ z ∈ cl, z.natAbs ≤ nv) (hcv : ∀ c ∈ cubes, ∀ z ∈ c, z.natAbs ≤ nv)
+    (hcov : ∀ ν, DimacsSat F ν → ∃ c ∈ cubes, CubeSat ν c)
+    (hG : ¬DimacsSatisfiable (cubeCnf F o ++ selectorClauses nv cubes)) :
+    ¬DimacsSatisfiable (cubeCnf F o)
+-- selectorClauses nv cubes = [[-(e n), z] | n, z ∈ cubes[n]] ++ [[e 0, …, e (k-1)]],
+-- e n = nv + 1 + n.  Proof: extend ν by ν (e n) := decide (CubeSat ν cubes[n]).
+```
+
+Chain:
+1. `root` and `covers_of_blocked` (with P = []): every model of F satisfies some UP(U).
+   Then `up:U` and `covers_of_blocked` (with P = UP(U)): it satisfies some cube(U,L). That gives
+   `hcov` for the 450 case cubes.
+2. Each open o: `hG` comes from cake_lpr on `G_o` (`open_ext.py` writes F, then o's units, then
+   the selector clauses in that order: `cubeCnf F o ++ selectorClauses`).
+   `not_sat_of_selector` then gives `¬Sat (cubeCnf F o)`.
+3. Each closed C2 cube k: `¬Sat (cubeCnf F k)` (H3, cake_lpr).
+4. `not_dimacsSatisfiable_of_coverCheck` on closed ∪ open, which H3's `cover_check` accepts,
+   gives `¬Sat F`.
+
+Route S composes in the same way: per case, `¬Sat (cubeCnf F cube)`, directly or through
+`coverCheck` on march leaves of `cubeCnf F cube`. With `hcov`, a variant of
+`not_dimacsSatisfiable_of_cover` that takes a covering hypothesis relative to F, then gives `¬Sat F`.
+
+Trust base: as in H3 (cake_lpr, the scripts' clause appending, the compiled `cover_check`).
+`hullsplit.py`, `cover.py` and `open_ext.py` are **not trusted**: a wrong cube can only make
+some certificate fail. `soundness.md` gives the geometric reason the obligations are UNSAT.
