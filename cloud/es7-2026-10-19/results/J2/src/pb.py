@@ -8,6 +8,14 @@ of convex 7-gons, ties broken by fewer convex 6-gons), add results to a pool
 deduplicated by order type, retrain (fine-tune) on the best pool entries mixed
 with the 32-point training sets, repeat.
 
+v2 (env PREFIX=1): each sample keeps a random prefix of a pool set's encoding
+(GMIN..31 of its 32 gaps, default 24; the pool set is re-encoded with a random rotation) and
+the model completes the suffix; FRAC_UNCOND of samples are unconditional.
+MODEL=unigram replaces the transformer by a position-wise unigram model
+(token frequencies per position, re-estimated each generation from the same
+training mix): the no-context ablation of the same loop.
+INIT=path loads transformer weights (skips nothing else).
+
 usage: pb.py OUTDIR HOURS NPROC
 """
 import os, sys, json, time, random, glob, math
@@ -22,6 +30,11 @@ ITERS = int(os.environ.get('ITERS', 800))      # ls33 iterations per sample
 POOL = int(os.environ.get('POOL', 2000))       # best 33-point sets kept for training
 STEPS0 = int(os.environ.get('STEPS0', 3000))   # initial training steps
 STEPS = int(os.environ.get('STEPS', 600))      # fine-tune steps per generation
+PREFIX = int(os.environ.get('PREFIX', 0))
+FRAC_UNCOND = float(os.environ.get('FRAC_UNCOND', 0.2))
+MODEL = os.environ.get('MODEL', 'gpt')
+GMIN = int(os.environ.get('GMIN', 24))         # min gaps kept from the parent
+INIT = os.environ.get('INIT', '')
 torch.set_num_threads(NPROC)
 torch.manual_seed(0)
 rng = random.Random(0)
@@ -100,6 +113,51 @@ def sample(model, n, temp=1.0, bs=250):
     return out
 
 
+class Unigram:
+    def __init__(self):
+        self.lp = None
+
+    def fit(self, sets32, sets33, n=20000, frac33=0.7):
+        cnt = torch.ones((enc.SEQ, enc.VOCAB))          # add-one smoothing
+        for _ in range(n):
+            P = rng.choice(sets33) if (rng.random() < frac33 or not sets32) else rng.choice(sets32)
+            t = enc.encode(P, rng)
+            cnt[torch.arange(len(t)), torch.tensor(t)] += 1
+        self.lp = torch.log(cnt / cnt.sum(1, keepdim=True))
+
+    def __call__(self, x):
+        return self.lp[:x.shape[1]][None].expand(x.shape[0], -1, -1)
+
+    def eval(self):
+        pass
+
+
+@torch.no_grad()
+def sample_cond(model, prefixes, temp=1.0):
+    """complete equal-length prefixes to full 33-point sequences"""
+    model.eval()
+    x = torch.tensor(prefixes, dtype=torch.long)
+    for p in range(x.shape[1], enc.SEQ):
+        lg = model(x)[:, -1] / temp + GMASK[p][None]
+        nxt = torch.multinomial(F.softmax(lg, -1), 1)
+        x = torch.cat([x, nxt], 1)
+    return x.tolist()
+
+
+def gen_samples(model, pool_sets):
+    if not PREFIX:
+        return sample(model, NS)
+    nu = int(NS * FRAC_UNCOND)
+    out = sample(model, nu) if nu else []
+    bs = 50
+    for b0 in range(nu, NS, bs):
+        k = min(bs, NS - b0)
+        g = rng.randint(GMIN, 31)                      # gaps kept from the parent
+        pre = [enc.encode(rng.choice(pool_sets), rng)[:1 + 4 * g] for _ in range(k)]
+        out += sample_cond(model, pre)
+    return out
+
+
 def main():
     sets32 = []
     for f in sorted(glob.glob(IN + '/distinct_K7*.txt')):
@@ -110,11 +168,20 @@ def main():
     print('train data: %d 32-point, %d 33-point' % (len(sets32), len(seeds33)), flush=True)
     seed_canon = set(common.canon(seeds33))
     pool = {}                                   # canon -> (E7, c6, P)
+    seedc6 = {}
+    sres = common.run_ls(seeds33, 0, NPROC, seed=0)      # exact (E7, c6) of the seeds
+    for c, r in zip(common.canon([r[3] for r in sres]), sres):
+        seedc6[c] = r[2]
     for c, P in zip(common.canon(seeds33), seeds33):
-        pool[c] = (1, 10 ** 9, P)               # c6 unknown -> ranked last among E7=1
-    model = GPT()
-    opt = torch.optim.AdamW(model.parameters(), lr=3e-4, weight_decay=0.01)
-    print('params', sum(p.numel() for p in model.parameters()), flush=True)
+        pool[c] = (1, seedc6.get(c, 10 ** 9), P)
+    if MODEL == 'unigram':
+        model, opt = Unigram(), None
+    else:
+        model = GPT()
+        if INIT:
+            model.load_state_dict(torch.load(INIT))
+        opt = torch.optim.AdamW(model.parameters(), lr=3e-4, weight_decay=0.01)
+        print('params', sum(p.numel() for p in model.parameters()), flush=True)
     log = open(os.path.join(OUT, 'generations.jsonl'), 'a')
     timeline = open(os.path.join(OUT, 'timeline.jsonl'), 'a')
     best_ever = None
@@ -122,9 +189,13 @@ def main():
     while time.time() - T_START < HOURS * 3600:
         t0 = time.time()
         top = sorted(pool.values(), key=lambda v: (v[0], v[1]))[:POOL]
-        loss = train(model, opt, sets32, [v[2] for v in top], STEPS0 if gen == 0 else STEPS)
+        if MODEL == 'unigram':
+            model.fit(sets32, [v[2] for v in top])
+            loss = float('nan')
+        else:
+            loss = train(model, opt, sets32, [v[2] for v in top], STEPS0 if (gen == 0 and not INIT) else STEPS)
         t1 = time.time()
-        seqs = sample(model, NS)
+        seqs = gen_samples(model, [v[2] for v in top])
         dec = [enc.decode(s, rng) for s in seqs]
         dec = [P for P in dec if P is not None]
         t2 = time.time()
@@ -160,13 +231,15 @@ def main():
                    n_le1=len(good), distinct_ot_le1=len(set(cs)), new_ot_le1_vs_seeds=len(set(cs) - seed_canon),
                    c6_min_le1=c6good[0] if c6good else None,
                    c6_med_le1=c6good[len(c6good) // 2] if c6good else None,
-                   pool=len(pool), best_ever=[best_ever[0], best_ever[1]],
+                   pool=len(pool), pool_new_vs_seeds=len(set(pool) - seed_canon),
+                   pool_top_c6=sorted(v[1] for v in pool.values())[:3], best_ever=[best_ever[0], best_ever[1]],
                    cpu_self=round(common.self_cpu(), 1), cpu_children=round(common.child_cpu(), 1))
         log.write(json.dumps(rec) + '\n'); log.flush()
         timeline.write(json.dumps(dict(cpu=rec['cpu_self'] + rec['cpu_children'], E7_min_so_far=best_ever[0],
                                        pool_new=len(set(pool) - seed_canon))) + '\n'); timeline.flush()
         print(json.dumps(rec), flush=True)
-        torch.save(model.state_dict(), os.path.join(OUT, 'model.pt'))
+        if MODEL != 'unigram':
+            torch.save(model.state_dict(), os.path.join(OUT, 'model.pt'))
         with open(os.path.join(OUT, 'pool_top.txt'), 'w') as f:
             for v in sorted(pool.values(), key=lambda v: (v[0], v[1]))[:200]:
                 f.write('%d %d %s\n' % (v[0], v[1], common.fmt_set(v[2])))
