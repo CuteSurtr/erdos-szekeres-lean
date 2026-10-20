@@ -1,0 +1,10 @@
+close_march.py is a byte-for-byte copy of results/WAVE2/F2/close_march.py (cmp: identical; empty diff).
+sha256 2e0975aa98c7dbcc2cf535993b54f57db764f7bf50f64fc54b9ff2860e67c855
+Checked:
+(a) every solver job (solve: tempfile.mkdtemp(prefix="s_{k}_", dir=WORK)) and every march job
+    (march: tempfile.mkdtemp(prefix="m_{tag}_", dir=WORK)) gets its own fresh directory; cake_lpr runs on
+    the files in the solver job's directory. Directories are removed after use.
+(b) finalize() writes leaves.icnf and open.icnf via tempfile.mkstemp in the output dir, then os.replace.
+(c) the first record of a new leaves.jsonl is {"case": --name, "case_sha256": sha256 of the case CNF}.
+Also: a leaf counts (load, leaves.icnf) only when status UNSAT and cake_lpr == "s VERIFIED UNSAT" (AUDIT BUG-1);
+cube lines in --skip are accepted only if they end in " 0\n" (RISK-1); output dir /opt/work/out is outside the checkout.
