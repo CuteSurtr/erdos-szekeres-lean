@@ -36,7 +36,11 @@ def main():
                                "ms_sum": 0.0, "ms_max": 0.0, "deletion_sets": set()})
     per_del = defaultdict(lambda: {"SAT": 0, "n": 0})
     models = []
+    seen = set()  # a job answered twice (helper workers re-running a lagging worker's tail) counts once
     for rec in parse_outputs(rd):
+        if (rec[0], rec[1], rec[2]) in seen:
+            continue
+        seen.add((rec[0], rec[1], rec[2]))
         if rec[0] == 'W':
             models.append(rec)
             continue
