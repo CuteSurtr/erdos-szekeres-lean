@@ -23,9 +23,12 @@ def log(*m):
 def sh(*c, **k): return subprocess.run(c, capture_output=True, text=True, **k)
 def git_sync(msg, paths):
     with glock:
-        sh("git", "add", "--", *paths, ":!*.cnf", ":!*.lrat", ":!**/.*")
-        big = [l for l in sh("git", "diff", "--cached", "--name-only").stdout.split() if os.path.getsize(os.path.join(ROOT, l)) > 50e6]
-        for b in big: sh("git", "reset", "-q", "--", os.path.join(ROOT, b))
+        fs = []
+        for p in paths:
+            for dp, _, fn in (os.walk(p) if os.path.isdir(p) else [(os.path.dirname(p), None, [os.path.basename(p)])]):
+                fs += [os.path.join(dp, x) for x in fn if not x.startswith(".") and not x.endswith((".cnf", ".lrat"))
+                       and os.path.getsize(os.path.join(dp, x)) <= 50e6]
+        if fs: sh("git", "add", "--", *fs)
         sh("git", "commit", "-q", "-m", msg)
         sh("git", "pull", "-q", "--rebase", "--autostash", "origin", "es7-cloud")
         for i in range(5):
@@ -62,8 +65,16 @@ status = {}  # case -> dict for README
 def whole(case):
     try: whole1(case)
     except Exception as e: log(case, "whole failed", repr(e)); status.setdefault(case, {})["error"] = repr(e)
+PRIOR = {}
+for l in (open(os.path.join(S, "run.log")) if os.path.exists(os.path.join(S, "run.log")) else []):
+    t = l.split(" ", 3)
+    if len(t) == 4 and t[2] == "whole" and t[3].startswith("{"): PRIOR[t[1]] = json.loads(t[3])
 def whole1(case):
     st, d = others(case)
+    if case in PRIOR and PRIOR[case]["status"] == "UNKNOWN" and st != "closed":   # restart: reuse phase-1 result
+        f, h = build(case); status[case] = {"whole": PRIOR[case], "sha": h}; return
+    if os.path.exists(os.path.join(S, case, "leaves.icnf")) and open(os.path.join(S, case, "leaves.icnf")).read() == "a 0\n":
+        status[case] = {"whole": PRIOR.get(case), "sha": build(case)[1], "state": "closed_whole"}; return
     if st == "closed": status[case] = {"state": "skipped", "closed_in": d}; log(case, "closed elsewhere", d); return
     f, h = build(case); w = tempfile.mkdtemp(prefix="w_", dir=WORK); p = os.path.join(w, "p.lrat")
     t = time.time()
