@@ -11,7 +11,7 @@ For each S (integer points):
 If a 32-point set has |coordinate| >= 2^27 (sat.c's bound), the realizer is run on its exact
 chirotope to find a smaller realization of the same labelled order type, accepted only after an exact
 re-check; it is written as <name>_d<k>_small.pts.
-usage: process26.py OUTDIR S1.pts [S2.pts ...]  (JSON lines)"""
+usage: process26.py [--nocompress] OUTDIR S1.pts [S2.pts ...]  (JSON lines)"""
 import hashlib, itertools, json, math, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, "..", "..", "..", "tools", "realizer"))
@@ -39,19 +39,24 @@ def directions(S):
     """small integer (c, s) for one angle inside every arc between critical angles"""
     crit = set()
     for p, q in itertools.combinations(S, 2):
-        a = math.atan2(q[1] - p[1], q[0] - p[0])  # x-order changes when the 'up' angle is perpendicular
+        # x' = c x - s y with (c, s) = r (cos f, sin f): p, q swap x-order where cos f dx = sin f dy
+        a = math.atan2(q[0] - p[0], q[1] - p[1])
         for t in (a, a + math.pi):
             crit.add(t % (2 * math.pi))
     crit = sorted(crit); out = []
     for i, a in enumerate(crit):
         b = crit[(i + 1) % len(crit)] + (2 * math.pi if i + 1 == len(crit) else 0)
         mid = (a + b) / 2; width = b - a
-        for e in range(2, 40):
+        for e in range(2, 200):
             sc = 1 << e
             c, s = round(sc * math.cos(mid)), round(sc * math.sin(mid))
-            if abs(math.atan2(s, c) % (2 * math.pi) - mid % (2 * math.pi)) < width / 4: break
+            dd = abs(math.atan2(s, c) % (2 * math.pi) - mid % (2 * math.pi))
+            if min(dd, 2 * math.pi - dd) < width / 4: break
         out.append((c, s))
     return out
+
+NOCOMPRESS = "--nocompress" in sys.argv
+if NOCOMPRESS: sys.argv.remove("--nocompress")
 
 def main():
     outdir = sys.argv[1]; os.makedirs(outdir, exist_ok=True)
@@ -80,7 +85,7 @@ def main():
             with open(fn, "w") as f:
                 for x, y in P: f.write(f"{x} {y}\n")
             mx = max(max(abs(x), abs(y)) for x, y in P)
-            if mx >= 2 ** 27:
+            if mx >= 2 ** 27 and not NOCOMPRESS:
                 from realize import realize
                 chi = chirotope_of(P)
                 for seed in range(3):
