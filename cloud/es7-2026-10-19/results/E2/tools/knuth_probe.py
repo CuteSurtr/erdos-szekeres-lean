@@ -40,6 +40,7 @@ for w in range(a.walks):
         p.stdin.write(f"{jid} {budget} {' '.join(map(str, cube))} 0\n"); p.stdin.flush()
         r = p.stdout.readline().split()
         steps.append({"depth": len(cube), "budget": budget, "res": r[0], "ms": int(r[2])})
+        with open(a.out + ".steps", "a") as f: f.write(json.dumps({"walk": w, **steps[-1], "lit": int(r[3]) if r[0] == "K" else None, "t": round(time.time() - t0, 1)}) + "\n")
         if r[0] == "U": outcome = "closed"; break
         if r[0] == "S": outcome = "SAT"; break
         lit = int(r[3]); budget = min(a.cap, int(budget * a.grow))
