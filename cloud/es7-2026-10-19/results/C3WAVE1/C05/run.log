@@ -30,3 +30,6 @@
 {"node": "0s0-1s1_2s1-3s0", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
 {"node": "0s0-1s1_2s1-3s0_4_6", "status": "UNSATISFIABLE", "solve_s": 6.6, "certified": false}
 PROOF NOT ACCEPTED 0s0-1s1_2s1-3s0_4_6
+PAUSED 08:37:01: runner stopped to re-check 0s0-1s1_2s1-3s0_4_6 alone (cake_lpr printed no output)
+RESUME 08:38:00 with --jobs 3 from root index-line 8
+=== ROOT 0s0-1s1_2s1-3s0 start 08:38:00 H=3.233
