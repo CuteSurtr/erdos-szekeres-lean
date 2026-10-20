@@ -161,7 +161,19 @@
  },
  {
   "case": "U4_L2",
-  "state": "not reached / not started by S4"
+  "state": "OPEN",
+  "method": "close_march",
+  "top": 128,
+  "leaves": 62,
+  "splits": 0,
+  "open": 66,
+  "unchecked": 0,
+  "sat": 0,
+  "solve_s": 2214.1,
+  "check_s": 297.6,
+  "march_s": 346.4,
+  "cover": "NOT",
+  "case_sha256": "abbb78a38138b8a3ed7cfbe0bde22c838292647643f1463f07aa2ef967358a57"
  },
  {
   "case": "U3_L13",
