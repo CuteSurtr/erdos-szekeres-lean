@@ -17,7 +17,7 @@
 | `verify/ii_wave1.json` | 6df36dab…c72e | matches |
 | `results/Mii-S/cases.jsonl` | bf77e23c…6f58 | = value in ii_wave1.json |
 | case U_L2 (`hullsplit.py case BASE "" 2`) | 1d26b947…aa53 | matches entry |
-| `U_L2.s5/top.icnf` (`march_cu -d 7`) | f00804ef5fd21981ef094016e1d77b36fb1dc7d08a6d0b0f219afcc6d30999bd | 128 cubes, 0 refuted. Same hash as the other U_L2 shards that had reported by 07:03 UTC (W00–W04, W06, W08–W10) |
+| `U_L2.s5/top.icnf` (`march_cu -d 7`) | f00804ef5fd21981ef094016e1d77b36fb1dc7d08a6d0b0f219afcc6d30999bd | 128 cubes, 0 refuted. As of 09:10 UTC this hash appears in the results of all 12 U_L2 shards (W00–W11) |
 
 ## Method
 - `scripts/close_march_shard.py` is a variant of `results/Mii-S/scripts/close_march.py`. An unchanged copy of the original is in `scripts/`.
