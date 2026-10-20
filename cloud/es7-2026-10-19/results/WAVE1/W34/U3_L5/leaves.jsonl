@@ -1,1 +1,12 @@
 {"solve_s": 60.02, "rc": 0, "status": "TIMEOUT", "whole": true, "cnf_sha256": "677daf53a7fba5fd2988c3a7dfd5915365ed2e3fe81e698169243b6a8c046e69"}
+{"top": true, "ncubes": 123, "refuted": 3, "march_s": 593.3, "march": "number of cubes 123, including 3 refuted", "top_sha256": "e3975708c431584d3c00a6af6714b6b971dd0b5ab86cb278c734939f7ca16ad4", "case_sha256": "677daf53a7fba5fd2988c3a7dfd5915365ed2e3fe81e698169243b6a8c046e69"}
+{"solve_s": 0.89, "rc": 20, "status": "UNSAT", "proof_bytes": 6837133, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.7, "cube": [-2269, -2183, -2594, 63, -1282]}
+{"solve_s": 0.49, "rc": 20, "status": "UNSAT", "proof_bytes": 837252, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.41, "cube": [-2269, -2183, -2594, 63, 1282, 687]}
+{"solve_s": 0.71, "rc": 20, "status": "UNSAT", "proof_bytes": 512785, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.24, "cube": [-2269, -2183, -2594, -63, 4, 686]}
+{"solve_s": 9.4, "rc": 20, "status": "UNSAT", "proof_bytes": 13528227, "cake_lpr": "s VERIFIED UNSAT", "check_s": 4.71, "cube": [2269, -2594, 2894, -3170, -3534, -1540, 3518]}
+{"solve_s": 11.65, "rc": 20, "status": "UNSAT", "proof_bytes": 18798871, "cake_lpr": "s VERIFIED UNSAT", "check_s": 5.66, "cube": [2269, -2594, 2894, -3170, -3534, -1540, -3518]}
+{"solve_s": 14.42, "rc": 20, "status": "UNSAT", "proof_bytes": 20819462, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.16, "cube": [2269, -2594, 2894, -3170, -3534, 1540, 3518]}
+{"solve_s": 8.83, "rc": 20, "status": "UNSAT", "proof_bytes": 13216022, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.0, "cube": [2269, -2594, 2894, -3170, 3534, -1540, -3518]}
+{"solve_s": 28.75, "rc": 20, "status": "UNSAT", "proof_bytes": 32287707, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.8, "cube": [2269, -2594, 2894, -3170, -3534, 1540, -3518]}
+{"solve_s": 14.44, "rc": 20, "status": "UNSAT", "proof_bytes": 22506947, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.95, "cube": [2269, -2594, 2894, -3170, 3534, 1540, -3518]}
+{"solve_s": 22.08, "rc": 20, "status": "UNSAT", "proof_bytes": 27074185, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.22, "cube": [2269, -2594, 2894, -3170, 3534, -1540, 3518]}
