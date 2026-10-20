@@ -6,7 +6,11 @@ that is not closed within its cap is replaced by its children (hullcase.tree_chi
 reduction on).  Every record goes to OUT (jsonl, same format as close_node.py, plus "split":
 true for nodes that were split).  Restartable: certified nodes and split nodes in OUT are reused.
 A SAT answer stops the run (candidate model, saved under MODELDIR).
-usage: close_tree.py BASE OUT.jsonl ROOTNODE [--jobs J] [--caps 300,300,600] [--hours H]"""
+usage: close_tree.py BASE OUT.jsonl ROOTNODE [--jobs J] [--caps 300,300,600] [--hours H] [--cadopts=--sat]
+       close_tree.py BASE OUT.jsonl SHARD --shard I --nshards N ...
+  SHARD mode: the roots are the depth-2 nodes of the layer tree (tree_children twice, H3 mirror
+  reduction on; 1,630 nodes for m = 11), sorted by name; shard I of N takes those with index
+  congruent to I mod N.  Caps then count from depth 2."""
 import argparse
 import concurrent.futures as cf
 import hashlib
@@ -36,7 +40,7 @@ def sha(p):
 
 
 def solve(args):
-    base, node, cap, modeldir = args
+    base, node, cap, modeldir, opts = args
     us = [c[0] for c in layer_clauses(11, parse_layers(node), E.ccw, E.sig)]
     cnf, prf = os.path.join(WORK, node + ".cnf"), os.path.join(WORK, node + ".lrat")
     with open(base) as f, open(cnf, "w") as g:
@@ -48,9 +52,9 @@ def solve(args):
                 break
             g.write(b)
         g.write("".join(f"{u} 0\n" for u in us))
-    rec = {"node": node, "units": len(us), "cnf_sha256": sha(cnf), "cap": cap}
+    rec = {"node": node, "units": len(us), "cnf_sha256": sha(cnf), "cap": cap, "cadical_opts": opts}
     t = time.time()
-    r = subprocess.run(["cadical", "-q", "-t", str(cap), "--lrat", "--binary=false", cnf, prf], capture_output=True, text=True).stdout
+    r = subprocess.run(["cadical", "-q", "-t", str(cap)] + opts + ["--lrat", "--binary=false", cnf, prf], capture_output=True, text=True).stdout
     rec["status"] = next((l[2:] for l in r.splitlines() if l.startswith("s ")), "UNKNOWN")
     rec["solve_s"] = round(time.time() - t, 1)
     if rec["status"] == "UNSATISFIABLE":
@@ -74,6 +78,8 @@ def main():
     ap.add_argument("base"); ap.add_argument("out"); ap.add_argument("root")
     ap.add_argument("--jobs", type=int, default=2); ap.add_argument("--caps", default="300,300,600")
     ap.add_argument("--hours", type=float, default=100); ap.add_argument("--modeldir", default="/opt/work/models")
+    ap.add_argument("--cadopts", default="", help="extra CaDiCaL options, comma-separated (e.g. --sat)")
+    ap.add_argument("--shard", type=int); ap.add_argument("--nshards", type=int)
     a = ap.parse_args()
     os.makedirs(WORK, exist_ok=True)
     caps = [int(x) for x in a.caps.split(",")]
@@ -87,8 +93,14 @@ def main():
             if r.get("split"):
                 split.add(r["node"])
     deadline = time.time() + 3600 * a.hours
-    root = layers_name(parse_layers(a.root))
-    depth0 = len(parse_layers(root))
+    if a.shard is not None:
+        roots = sorted(layers_name(c2) for c1 in tree_children(11, 7, []) for c2 in tree_children(11, 7, c1))
+        roots = [r for i, r in enumerate(roots) if i % a.nshards == a.shard]
+        depth0 = 2
+    else:
+        roots = [layers_name(parse_layers(a.root))]
+        depth0 = len(parse_layers(roots[0]))
+    root = roots[0] if len(roots) == 1 else f"shard {a.shard}/{a.nshards} ({len(roots)} roots)"
 
     def expand(name):
         if name in done:
@@ -97,11 +109,12 @@ def main():
             return [x for c in tree_children(11, 7, parse_layers(name)) for x in expand(layers_name(c))]
         return [name]
 
-    frontier = expand(root)
+    frontier = [x for r in roots for x in expand(r)]
     fo = open(a.out, "a")
     with cf.ProcessPoolExecutor(a.jobs) as ex:
         while frontier and time.time() < deadline:
-            futs = {ex.submit(solve, (a.base, n, caps[min(len(parse_layers(n)) - depth0, len(caps) - 1)], a.modeldir)): n
+            futs = {ex.submit(solve, (a.base, n, caps[min(len(parse_layers(n)) - depth0, len(caps) - 1)], a.modeldir,
+                                   [o for o in a.cadopts.split(",") if o])): n
                     for n in frontier}
             nxt = []
             for fu in cf.as_completed(futs):
