@@ -32,7 +32,7 @@ Plain 60 s CaDiCaL: UNKNOWN on all four. Top march -d 7: 128 cubes, 0 refuted, f
 | case | CNF sha256 | top.icnf sha256 | status | verified leaves | splits | open cubes | CPU h |
 |---|---|---|---|---|---|---|---|
 | U11_L | ccdd70bc...a11164 | 785e007f...42b9d8 | **CLOSED** | 309 | 3 | 0 | 2.36 |
-| U_L5 | 84bf54f2...75ff6e | cdde9f11...3872cc | open | 609 | 12 | 274 | 6.00 |
+| U_L5 | 84bf54f2...75ff6e | cdde9f11...17a66 | open | 609 | 12 | 274 | 6.00 |
 | U_L6 | 741c7fe0...a105424 | a2e392c6...3872cc | open | 474 | 13 | 473 | 5.20 |
 | U_L7 | c6d1c840...04f099 | c2d771b8...64c3 | open (not started) | 0 | 0 | 128 | 0.10 |
 
