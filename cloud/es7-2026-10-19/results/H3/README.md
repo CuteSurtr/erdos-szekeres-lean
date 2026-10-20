@@ -12,8 +12,9 @@ Together these reduce the statement
 > every 33-point set in general position that is symmetric in a line has a convex 7-gon
 
 to two UNSAT facts about files that the Lean generator writes byte for byte. **Those UNSAT
-facts are not established here.** The parallel shard runs have not closed either instance:
-at the C2 checkpoint used below, 99.27 % of sub-case (i) was closed, and less of sub-case (ii).
+facts are not established here.** The parallel shard runs did not close either instance. C2's final
+state (commit 3a34639) has open weight 0.002722 in sub-case (i) (1,048 open cubes) and
+0.3640 in sub-case (ii) (1,340 open cubes).
 Everything below is about the encoding and the checking pipeline. None of it is a claim about
 ES(7) or about the mirror class.
 
@@ -222,6 +223,14 @@ gave:
 | C2, sub-case (i) | NOT COVERED (2,824) | COVERED (3,686) |
 | C2, sub-case (ii) | NOT COVERED (587) | COVERED (1,624) |
 
+| C2 final (3a34639), sub-case (i) | NOT COVERED (4,538) | COVERED (5,586) |
+| C2 final (3a34639), sub-case (ii) | NOT COVERED (749) | COVERED (2,089) |
+
+The C2 rows above the last two are from commit eb75ac3. For the final state,
+`logs/cover_check_C2_final.log` agrees with C2's own `check_tree2.py`. `coverCheck` accepts
+any branching variable, so the stale closed entries that C2 reports after its resume do no
+harm.
+
 So the schedulers' bookkeeping is a complete partition, and the open cubes are exactly what
 remains.
 
@@ -261,11 +270,12 @@ CaDiCaL, `cnc2.py` and the Python encoders are not trusted.
 
 ## 5. Remaining targets, precisely
 
-1. **`¬ETV.DimacsSatisfiable (Mir.hullCnf 33 7)`.** Open. The cube-and-conquer is not
-   finished: C2's checkpoint has 2,824 closed and 862 open cubes, and the closed weight is
-   0.99271. Once it finishes, it needs steps 3 and 4 above on the final leaves.
-2. **`¬ETV.DimacsSatisfiable (Mir.interiorCnf 33 7)`.** Open, with 587 closed and 1,037 open
-   cubes at C2's checkpoint. Same procedure.
+1. **`¬ETV.DimacsSatisfiable (Mir.hullCnf 33 7)`.** Open. C2 stopped with 4,538 closed
+   cubes (4,513 distinct in its state), 1,048 open cubes and open weight 0.002722. C2's
+   README judges that more of the same cubing will not close it in a predictable time.
+   Once it is closed, it needs steps 3 and 4 above on the final leaves.
+2. **`¬ETV.DimacsSatisfiable (Mir.interiorCnf 33 7)`.** Open, and far from closure: 749
+   closed cubes, 1,340 open, open weight 0.3640. Same procedure.
 3. **Importing 1 and 2 into Lean.** cake_lpr runs outside Lean, so the final statement is
    "Lean theorem + cake_lpr runs + cover check run", or an explicitly disclosed axiom.
 4. **Not needed, but open:** completeness (the CNFs could be stronger than the geometry),
