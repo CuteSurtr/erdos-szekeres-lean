@@ -1,0 +1,15 @@
+{"kind": "control-unsat", "n": 9, "k": 5, "mode": "none", "vars": 492, "clauses": 1444, "status": "UNSAT", "sec": 0.0, "lrat": "VERIFIED"}
+{"kind": "control-unsat", "n": 9, "k": 5, "mode": "all", "vars": 492, "clauses": 1445, "status": "UNSAT", "sec": 0.0, "lrat": "VERIFIED"}
+{"kind": "control-unsat", "n": 9, "k": 5, "mode": "top", "vars": 492, "clauses": 1454, "status": "UNSAT", "sec": 0.0, "lrat": "VERIFIED"}
+{"kind": "control-unsat", "n": 9, "k": 5, "mode": "interior", "vars": 492, "clauses": 1447, "status": "UNSAT", "sec": 0.0, "lrat": "VERIFIED"}
+{"kind": "control-unsat", "n": 17, "k": 6, "mode": "none", "vars": 5094, "clauses": 26359, "status": "UNSAT", "sec": 0.03, "lrat": "VERIFIED"}
+{"kind": "control-unsat", "n": 17, "k": 6, "mode": "all", "vars": 5094, "clauses": 26360, "status": "UNSAT", "sec": 0.02, "lrat": "VERIFIED"}
+{"kind": "control-unsat", "n": 17, "k": 6, "mode": "top", "vars": 5094, "clauses": 26395, "status": "UNSAT", "sec": 0.02, "lrat": "VERIFIED"}
+{"kind": "control-unsat", "n": 17, "k": 6, "mode": "interior", "vars": 5094, "clauses": 26362, "status": "UNSAT", "sec": 0.02, "lrat": "VERIFIED"}
+{"kind": "control-unsat", "n": 19, "k": 6, "mode": "none", "vars": 7357, "clauses": 42428, "status": "UNSAT", "sec": 0.03, "lrat": "VERIFIED"}
+{"kind": "control-unsat", "n": 19, "k": 6, "mode": "all", "vars": 7357, "clauses": 42429, "status": "UNSAT", "sec": 0.03, "lrat": "VERIFIED"}
+{"kind": "control-unsat", "n": 19, "k": 6, "mode": "top", "vars": 7357, "clauses": 42473, "status": "UNSAT", "sec": 0.04, "lrat": "VERIFIED"}
+{"kind": "control-unsat", "n": 19, "k": 6, "mode": "interior", "vars": 7357, "clauses": 42431, "status": "UNSAT", "sec": 0.03, "lrat": "VERIFIED"}
+{"kind": "control-nomirror", "n": 8, "k": 5, "expected": "SAT", "status": "SAT", "sec": 0.0, "sigcheck": {"ok": true}}
+{"kind": "control-nomirror", "n": 9, "k": 5, "expected": "UNSAT", "status": "UNSAT", "sec": 0.02, "lrat": "VERIFIED"}
+{"kind": "control-nomirror", "n": 16, "k": 6, "expected": "SAT", "status": "SAT", "sec": 0.03, "sigcheck": {"ok": true}}
