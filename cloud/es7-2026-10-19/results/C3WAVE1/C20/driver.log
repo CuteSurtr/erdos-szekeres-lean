@@ -1,1 +1,76 @@
 === 2026-10-20T07:38:34Z root 0s0-1s0_2s1-3s0 hours 3.5717
+=== 2026-10-20T07:41:19Z driver exit 0 root 0s0-1s0_2s1-3s0
+=== 2026-10-20T07:41:19Z root 0s0-1s0_3s0-7s1 hours 3.5258
+{"node": "0s0-1s0_3s0-7s1", "status": "UNSATISFIABLE", "solve_s": 57.0, "certified": true}
+{"root": "0s0-1s0_3s0-7s1", "open_frontier": 0}
+=== 2026-10-20T07:42:59Z driver exit 0 root 0s0-1s0_3s0-7s1
+=== 2026-10-20T07:42:59Z root 0s0-1s0_4s0-6s0 hours 3.4981
+{"node": "0s0-1s0_4s0-6s0", "status": "UNSATISFIABLE", "solve_s": 5.0, "certified": true}
+{"root": "0s0-1s0_4s0-6s0", "open_frontier": 0}
+=== 2026-10-20T07:43:27Z driver exit 0 root 0s0-1s0_4s0-6s0
+=== 2026-10-20T07:43:27Z root 0s0-1s0_5s0-6s1 hours 3.4903
+{"node": "0s0-1s0_5s0-6s1", "status": "UNSATISFIABLE", "solve_s": 85.8, "certified": true}
+{"root": "0s0-1s0_5s0-6s1", "open_frontier": 0}
+=== 2026-10-20T07:45:40Z driver exit 0 root 0s0-1s0_5s0-6s1
+=== 2026-10-20T07:45:40Z root 0s0-1s0_6s0-9s0 hours 3.4533
+{"node": "0s0-1s0_6s0-9s0", "status": "UNSATISFIABLE", "solve_s": 6.2, "certified": true}
+{"root": "0s0-1s0_6s0-9s0", "open_frontier": 0}
+=== 2026-10-20T07:46:09Z driver exit 0 root 0s0-1s0_6s0-9s0
+=== 2026-10-20T07:46:09Z root 0s0-1s0_8s0-10s0 hours 3.4453
+{"node": "0s0-1s0_8s0-10s0", "status": "UNSATISFIABLE", "solve_s": 6.3, "certified": true}
+{"root": "0s0-1s0_8s0-10s0", "open_frontier": 0}
+=== 2026-10-20T07:46:39Z driver exit 0 root 0s0-1s0_8s0-10s0
+=== 2026-10-20T07:46:39Z root 0s0-1s1_2s0-6s1 hours 3.4369
+{"node": "0s0-1s1_2s0-6s1", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-1s1_2s0-6s1_3_5", "status": "UNSATISFIABLE", "solve_s": 5.7, "certified": false}
+PROOF NOT ACCEPTED 0s0-1s1_2s0-6s1_3_5
+=== 2026-10-20T07:52:46Z PROOF NOT ACCEPTED on 0s0-1s1_2s0-6s1_3_5: cake_lpr OOM-killed (memcg limit 14.3 GB, cake_lpr anon-rss 4.07 GB, 4 jobs); driver stopped, node re-checked alone
+=== re-check alone of 0s0-1s1_2s0-6s1_3_5 (cnf sha256 ddba8d04..., same as record): cadical UNSAT 3.2 s, proof 652929 B, lrat-check 'c VERIFIED', cake_lpr 's VERIFIED UNSAT' (18 s). Cause: memory. Resuming with --jobs 3.
+=== 2026-10-20T07:53:36Z root 0s0-1s0_2s1-3s0 hours 3.3211
+{"node": "0s0-1s0_2s1-3s0", "status": "UNSATISFIABLE", "solve_s": 107.5, "certified": true}
+{"root": "0s0-1s0_2s1-3s0", "open_frontier": 0}
+=== 2026-10-20T07:56:05Z driver exit 0 root 0s0-1s0_2s1-3s0
+=== 2026-10-20T07:56:05Z root 0s0-1s0_3s0-7s1 hours 3.2797
+{"root": "0s0-1s0_3s0-7s1", "open_frontier": 0}
+=== 2026-10-20T07:56:06Z driver exit 0 root 0s0-1s0_3s0-7s1
+=== 2026-10-20T07:56:06Z root 0s0-1s0_4s0-6s0 hours 3.2794
+{"root": "0s0-1s0_4s0-6s0", "open_frontier": 0}
+=== 2026-10-20T07:56:06Z driver exit 0 root 0s0-1s0_4s0-6s0
+=== 2026-10-20T07:56:06Z root 0s0-1s0_5s0-6s1 hours 3.2794
+{"root": "0s0-1s0_5s0-6s1", "open_frontier": 0}
+=== 2026-10-20T07:56:06Z driver exit 0 root 0s0-1s0_5s0-6s1
+=== 2026-10-20T07:56:06Z root 0s0-1s0_6s0-9s0 hours 3.2794
+{"root": "0s0-1s0_6s0-9s0", "open_frontier": 0}
+=== 2026-10-20T07:56:06Z driver exit 0 root 0s0-1s0_6s0-9s0
+=== 2026-10-20T07:56:06Z root 0s0-1s0_8s0-10s0 hours 3.2794
+{"root": "0s0-1s0_8s0-10s0", "open_frontier": 0}
+=== 2026-10-20T07:56:06Z driver exit 0 root 0s0-1s0_8s0-10s0
+=== 2026-10-20T07:56:06Z root 0s0-1s1_2s0-6s1 hours 3.2794
+{"node": "0s0-1s1_2s0-6s1_3s0-4s0", "status": "UNSATISFIABLE", "solve_s": 12.8, "certified": true}
+{"node": "0s0-1s1_2s0-6s1_3s0-4s1", "status": "UNSATISFIABLE", "solve_s": 19.3, "certified": true}
+{"node": "0s0-1s1_2s0-6s1_3s1-4s0", "status": "UNSATISFIABLE", "solve_s": 32.0, "certified": true}
+{"node": "0s0-1s1_2s0-6s1_3s1-4s1", "status": "UNSATISFIABLE", "solve_s": 16.2, "certified": true}
+{"node": "0s0-1s1_2s0-6s1_3s0-5s1", "status": "UNSATISFIABLE", "solve_s": 4.3, "certified": true}
+{"node": "0s0-1s1_2s0-6s1_3s0-5s0", "status": "UNSATISFIABLE", "solve_s": 29.4, "certified": true}
+{"node": "0s0-1s1_2s0-6s1_3s1-5s1", "status": "UNSATISFIABLE", "solve_s": 17.4, "certified": true}
+{"node": "0s0-1s1_2s0-6s1_3s1-5s0", "status": "UNSATISFIABLE", "solve_s": 32.5, "certified": true}
+{"node": "0s0-1s1_2s0-6s1_3s0-7s0", "status": "UNSATISFIABLE", "solve_s": 17.4, "certified": true}
+{"node": "0s0-1s1_2s0-6s1_3s1-7s1", "status": "UNSATISFIABLE", "solve_s": 12.9, "certified": true}
+{"node": "0s0-1s1_2s0-6s1_3s0-7s1", "status": "UNSATISFIABLE", "solve_s": 45.3, "certified": true}
+{"node": "0s0-1s1_2s0-6s1_3s1-7s0", "status": "UNSATISFIABLE", "solve_s": 33.3, "certified": true}
+{"node": "0s0-1s1_2s0-6s1_3s0-8s0", "status": "UNSATISFIABLE", "solve_s": 28.8, "certified": true}
+{"node": "0s0-1s1_2s0-6s1_3s0-8s1", "status": "UNSATISFIABLE", "solve_s": 29.3, "certified": true}
+{"node": "0s0-1s1_2s0-6s1_3s1-8s0", "status": "UNSATISFIABLE", "solve_s": 34.7, "certified": true}
+{"node": "0s0-1s1_2s0-6s1_3s1-8s1", "status": "UNSATISFIABLE", "solve_s": 15.0, "certified": true}
+{"node": "0s0-1s1_2s0-6s1_3s0-9s0", "status": "UNSATISFIABLE", "solve_s": 26.6, "certified": true}
+{"node": "0s0-1s1_2s0-6s1_3s0-9s1", "status": "UNSATISFIABLE", "solve_s": 12.6, "certified": true}
+{"node": "0s0-1s1_2s0-6s1_3s1-9s0", "status": "UNSATISFIABLE", "solve_s": 33.1, "certified": true}
+{"node": "0s0-1s1_2s0-6s1_3s0-10s0", "status": "UNSATISFIABLE", "solve_s": 25.2, "certified": true}
+{"node": "0s0-1s1_2s0-6s1_3s1-9s1", "status": "UNSATISFIABLE", "solve_s": 37.3, "certified": true}
+{"node": "0s0-1s1_2s0-6s1_3s0-10s1", "status": "UNSATISFIABLE", "solve_s": 12.5, "certified": true}
+{"node": "0s0-1s1_2s0-6s1_3s1-10s0", "status": "UNSATISFIABLE", "solve_s": 23.2, "certified": true}
+{"node": "0s0-1s1_2s0-6s1_4s0-5s0", "status": "UNSATISFIABLE", "solve_s": 25.7, "certified": true}
+{"node": "0s0-1s1_2s0-6s1_4s0-5s1", "status": "UNSATISFIABLE", "solve_s": 16.3, "certified": true}
+{"node": "0s0-1s1_2s0-6s1_3s1-10s1", "status": "UNSATISFIABLE", "solve_s": 64.3, "certified": true}
+{"node": "0s0-1s1_2s0-6s1_4s1-5s0", "status": "UNSATISFIABLE", "solve_s": 22.3, "certified": true}
+{"node": "0s0-1s1_2s0-6s1_4s1-5s1", "status": "UNSATISFIABLE", "solve_s": 11.8, "certified": true}

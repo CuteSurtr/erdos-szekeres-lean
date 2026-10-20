@@ -8,7 +8,7 @@ for ROOT in $(awk '{print $2}' $D/roots.txt); do
   now=$(date +%s); [ $now -ge $STOP ] && break
   H=$(python3 -c "print(round(($STOP-$now)/3600,4))")
   echo "=== $(date -u +%FT%TZ) root $ROOT hours $H" >> $D/driver.log
-  python3 close_tree.py /opt/work/base.cnf $D/out.jsonl $ROOT --jobs 4 --caps 300,300,600 --cadopts=--sat --split-singles --hours $H >> $D/driver.log 2>&1
+  python3 close_tree.py /opt/work/base.cnf $D/out.jsonl $ROOT --jobs 3 --caps 300,300,600 --cadopts=--sat --split-singles --hours $H >> $D/driver.log 2>&1
   echo "=== $(date -u +%FT%TZ) driver exit $? root $ROOT" >> $D/driver.log
   if tail -3 $D/driver.log | grep -q "SAT FOUND\|PROOF NOT ACCEPTED"; then echo "=== HALT" >> $D/driver.log; exit 3; fi
 done
