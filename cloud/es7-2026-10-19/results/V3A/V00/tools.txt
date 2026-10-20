@@ -1,0 +1,10 @@
+CaDiCaL: https://github.com/arminbiere/cadical commit c60730422e758ef1cebe7aeddf2dda31c996bf04 (requested c6073042), version 3.0.1
+  ./configure && make -j4; /opt/bin/cadical sha256 6815d39700f7eb3fd7509ed0bea37001a6ec2b5233f988443d801cd8dcc64a2c
+cake_lpr: https://github.com/tanyongkiam/cake_lpr commit a36874a8b750b43fe4b385b8ddbf5b033e46a3fa (requested a36874a8)
+  make cake_lpr; /opt/bin/cake_lpr sha256 1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca
+  bundled example: ./cake_lpr example.cnf example.lpr -> s VERIFIED UNSAT
+  negative check: empty proof -> "c empty clause not derived at end of proof"
+compiler: cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+python: Python 3.11.17
+F regenerated with tools/etv/gen_etv.py and results/C/scripts/mirgen.py from the 7c6d70c worktree:
+  F.cnf sha256 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d (matches), header p cnf 47002 515121
