@@ -1,0 +1,5 @@
+input commit Z = a71d30d58c21f637bcd4666f17b0bf7b7044a5bb
+results/V3D/worklist.jsonl sha256 27e02b76e005964ef7779f970b1e3da55328bdfa878541b4ad86020120e7b1d9, lines 22682 (expected 27e02b76...e1d9, 22682: match)
+cross-check at 3e4dbaae3901301b13a873b37286757f6c5656a5: v3_jsonl_leaves.py WAVE1..4 then v3_manifest.py -> Mzd.jsonl sha256 9685d3c4e3c071782c9db41362a6e4bc244ee99130ef131bc7b6da58254a67a8, 70215 lines (expected 9685d3c4...7a8, 70215: match); manifest problems 0
+work-list records whose (case, lits) is not in Mzd.jsonl: 0 of 22682 -> PASS
+shard 7 of 24 (idx % 24 == 7): 945 leaves
