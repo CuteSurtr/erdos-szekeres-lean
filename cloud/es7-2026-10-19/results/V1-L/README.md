@@ -9,6 +9,8 @@ No `sorry`, `admit`, `native_decide` or new axiom. `V1L/Audit.lean` pins the axi
 with `#guard_msgs`; `lake build` fails if they change.
 
 The overall verdict, with the leaf-by-leaf status of the sibling runs, is in `SUMMARY.md`.
+In short, all 1,198 leaves have a cake_lpr `s VERIFIED UNSAT` record. V1-0, V1-2 and V1-3
+finished. V1-1 stopped after 9 leaves, and this VM checked its other 291.
 
 ## Environment
 
@@ -60,7 +62,8 @@ proved in the kernel (§4).
 | `V1L/Audit.lean` | `#guard_msgs` axiom checks |
 | `V1L/LeavesEq.lean` | `lake exe leaves_eq FILE`, an unverified cross-check of the generated data |
 | `scripts/gen_leaves.py` | writes `V1L/Leaves.lean` from the cube file |
-| `scripts/check_siblings.py` | checks V1-0..3's `leaves_cake.jsonl` against the cube file |
+| `scripts/check_siblings.py` | checks V1-0..3's `leaves_cake.jsonl` against the cube file (`logs/sibling_check.json`) |
+| `scripts/backup_leaves.py`, `backup_v1-1/` | the backup cake_lpr run of 291 of V1-1's leaves (see `SUMMARY.md`) |
 
 ### The leaf data
 
