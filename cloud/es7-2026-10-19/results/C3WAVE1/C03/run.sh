@@ -1,6 +1,6 @@
 #!/bin/bash
 export PATH=/opt/bin:$PATH
-D=/home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C3WAVE1/C03
+D=/opt/work; R0=/home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C3WAVE1/C03
 END=$(date -u -d "2026-10-20 11:12" +%s)
 cd /opt/c3s/cloud/es7-2026-10-19/results/C3-S/tools
 while read R; do
@@ -11,5 +11,5 @@ while read R; do
   rc=$?
   echo "=== ROOT $R end $(date -u +%T) rc=$rc" >> $D/driver.log
   if grep -q "SAT FOUND\|PROOF NOT ACCEPTED" <(tail -5 $D/driver.log); then echo STOPPED >> $D/driver.log; break; fi
-done < $D/roots.txt
+done < $R0/roots.txt
 echo "=== ALL DONE $(date -u +%T)" >> $D/driver.log
