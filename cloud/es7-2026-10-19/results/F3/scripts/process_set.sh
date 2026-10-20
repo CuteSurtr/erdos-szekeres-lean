@@ -4,7 +4,7 @@
 #     F2/s2 post26.py + brute26.c (inside pipeline.sh);
 #  2. canonical order-type fingerprint (fingerprint.py) vs KNOWN (F2 sets and earlier F3 sets);
 #     duplicates stop here;
-#  3. convention A (F2/s2 pipeline.sh): 6-cap deep below in the given x-direction (or 6-cup above),
+#  3. convention A (conva.sh = F2/s2 pipeline.sh + compression retry): 6-cap deep below in the given x-direction (or 6-cup above),
 #     exact checks, compression, sat.c face sweep + ext_solve at all 33 positions, brute 32;
 #  4. convention B (F2 process26.py): every sweep direction with max cap <= 4, deep-below 6-cap,
 #     dedupe, compression; F2 check32.py on every 32-set (exact + compressed): general position,
@@ -25,8 +25,8 @@ def o(p,q,r): return (q[0]-p[0])*(r[1]-p[1])-(q[1]-p[1])*(r[0]-p[0])
 P=sorted(tuple(map(int,l.split())) for l in open('$O/$name.pts') if l.strip())
 m=''.join('+' if o(P[i],P[j],P[k])>0 else '-' for i,j,k in itertools.combinations(range(len(P)),3))
 print(json.dumps({'id':'$name','points':[list(p) for p in P],'model':m}))" > $O/in.jsonl
-bash $F2/s2/scripts/pipeline.sh $O/scr $O/convA $O/in.jsonl > $O/convA.log 2>&1
+bash $H/conva.sh $O/scr $O/convA $O/in.jsonl > $O/convA.log 2>&1
 $P $F2/scripts/process26.py $O/convB $O/$name.pts > $O/convB.log 2>&1
-ls $O/convB/*.pts > /dev/null 2>&1 && $P $F2/scripts/check32.py $BIN/sat $BIN/ext_solve $BIN/brute_kgon $BIN/b33.cnf $O/scr/wd $O/convB/*.pts > $O/convB_check32.jsonl 2>> $O/convB.log
+ls $O/convB/*.pts > /dev/null 2>&1 && $P $F2/scripts/check32.py $BIN/sat $BIN/ext_solve $BIN/brute_kgon $BIN/b33.cnf $O/wd32 $O/convB/*.pts > $O/convB_check32.jsonl 2>> $O/convB.log
 rm -rf $O/scr
 echo "{\"id\": \"$name\", \"duplicate\": false, \"fp\": \"$fp\", \"done\": true}" > $O/status.json

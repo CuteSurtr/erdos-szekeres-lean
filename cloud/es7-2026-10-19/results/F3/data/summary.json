@@ -1,0 +1,83 @@
+{
+ "generators": {
+  "grow_guided": {
+   "seeds": [
+    "3000001",
+    "3000002"
+   ],
+   "chains": 2,
+   "reached26": 1,
+   "reached_hist": {
+    "18": 1,
+    "26": 1
+   }
+  },
+  "arm_f": {
+   "restarts": 346,
+   "complete": 0,
+   "complete_exact_ok": 0,
+   "fail_at_hist": {
+    "11": 1,
+    "12": 6,
+    "13": 9,
+    "14": 28,
+    "15": 57,
+    "16": 86,
+    "17": 65,
+    "18": 40,
+    "19": 29,
+    "20": 22,
+    "21": 3
+   }
+  },
+  "kph_style": {
+   "models_realize_attempted": 257,
+   "realized": 0,
+   "realized_exact_ok": 0,
+   "realizer_cpu_s": 1310,
+   "models_generated": 300
+  }
+ },
+ "sets": [
+  {
+   "id": "gg3000002_1",
+   "fp": "1e6478898e0b114e1e84",
+   "duplicate": null,
+   "done": false,
+   "verify26": {
+    "general_position": true,
+    "cap_cup": [
+     4,
+     6
+    ],
+    "lcs": 6,
+    "brute_axviol_cap_cup_lcs": [
+     "0",
+     "4",
+     "6",
+     "6"
+    ]
+   },
+   "convA": [
+    {
+     "id": "gg3000002_1",
+     "geom_saturated": true,
+     "faces": 109337,
+     "bad": 0,
+     "geom_error": null,
+     "abs_unsat": 33,
+     "abs_sat": 0,
+     "abs_unknown": 0,
+     "abs_saturated": true
+    }
+   ],
+   "convA_brute32": [
+    "OK 1",
+    "OK 2"
+   ],
+   "convB": []
+  }
+ ],
+ "new_distinct_26": 0,
+ "alerts": []
+}

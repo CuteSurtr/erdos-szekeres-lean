@@ -22,7 +22,7 @@ for f in glob.glob(f"{run}/armF_*.jsonl") + glob.glob(f"{run}/kph/real_*.jsonl")
 PY
   for f in $RUN/found/*.pts; do
     [ -e "$f" ] || continue; n=$(basename $f .pts)
-    [ -e $RUN/proc/$n/status.json ] && continue
+    [ -d $RUN/proc/$n ] && continue   # started (status.json is written at the end)
     echo "$(date -u +%T) start $n"; $H/process_set.sh $BIN $f $RUN/proc $RUN/known_fp.jsonl; echo "$(date -u +%T) done $n $(cat $RUN/proc/$n/status.json)"
   done
   sleep 30
