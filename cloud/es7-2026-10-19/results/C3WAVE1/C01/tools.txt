@@ -12,3 +12,6 @@ lrat-check: 2e3b2dc0ecf938addbd779d42877b6ed69d9a985 + results/E2/tools/lrat-che
 base.cnf: bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da (matches expected)
 depth-2 list: 1630 names, identical to manifest_depth2.tsv depth-2 rows, sha256 of joined names 5412782cb766088d63fa9342afaaddcf057baee69b82b82bba69e5754fef6b7e
 roots: 68 (index = 1 mod 24), roots.txt
+UPDATE 08:00 UTC: after OOM kills of concurrent cake_lpr checks (oom_dmesg.txt; one check alone reached
+  12 GB RSS), the wrapper now also runs cake_lpr under `flock /opt/work/cake.lock` (one check at a time),
+  and the driver runs with --jobs 3 from root 1 onward (restart at ~08:01 UTC).

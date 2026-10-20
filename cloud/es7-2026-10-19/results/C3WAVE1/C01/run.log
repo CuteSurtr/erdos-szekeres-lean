@@ -1,1 +1,24 @@
 === root 1 0s0-1s0_2 start 07:39:16 hours 3.606 jobs 4
+=== root 1 end 07:53:27 rc 0
+=== root 25 0s0-1s0_2s1-5s1 start 07:53:27 hours 3.369 jobs 4
+{"node": "0s0-1s0_2s1-5s1", "status": "UNSATISFIABLE", "solve_s": 10.1, "certified": true}
+{"root": "0s0-1s0_2s1-5s1", "open_frontier": 0}
+=== root 25 end 07:54:38 rc 0
+=== root 49 0s0-1s0_3s1-10s0 start 07:54:38 hours 3.35 jobs 4
+{"node": "0s0-1s0_3s1-10s0", "status": "UNSATISFIABLE", "solve_s": 11.4, "certified": true}
+{"root": "0s0-1s0_3s1-10s0", "open_frontier": 0}
+=== root 49 end 07:55:58 rc 0
+=== root 73 0s0-1s0_4s0-8s1 start 07:55:58 hours 3.328 jobs 4
+{"node": "0s0-1s0_4s0-8s1", "status": "UNSATISFIABLE", "solve_s": 53.8, "certified": true}
+{"root": "0s0-1s0_4s0-8s1", "open_frontier": 0}
+=== root 73 end 07:58:08 rc 0
+=== root 97 0s0-1s0_5s0-9s0 start 07:58:08 hours 3.291 jobs 4
+{"node": "0s0-1s0_5s0-9s0", "status": "UNSATISFIABLE", "solve_s": 14.4, "certified": true}
+{"root": "0s0-1s0_5s0-9s0", "open_frontier": 0}
+=== root 97 end 07:59:28 rc 0
+=== root 121 0s0-1s0_6s1-7s1 start 07:59:28 hours 3.269 jobs 4
+=== root 1 0s0-1s0_2 start 08:00:55 hours 3.245 jobs 3
+{"node": "0s0-1s0_2_5", "status": "UNSATISFIABLE", "solve_s": 66.2, "certified": true}
+{"node": "0s0-1s0_2_3", "status": "UNSATISFIABLE", "solve_s": 68.3, "certified": true}
+{"node": "0s0-1s0_2_4", "status": "UNSATISFIABLE", "solve_s": 75.1, "certified": true}
+{"node": "0s0-1s0_2_6", "status": "UNSATISFIABLE", "solve_s": 58.6, "certified": true}

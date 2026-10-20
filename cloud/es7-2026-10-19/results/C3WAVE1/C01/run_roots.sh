@@ -13,8 +13,8 @@ while read idx root; do
     if [ $(date +%s) -ge $DEADLINE ]; then echo "=== deadline: killing driver $(date -u +%T)" >> $D/run.log; kill -TERM -- -$pid; sleep 5; kill -KILL -- -$pid 2>/dev/null; break; fi
     sleep 10
   done
-  wait $pid
-  echo "=== root $idx end $(date -u +%T) rc $?" >> $D/run.log
+  wait $pid; rc=$?
+  echo "=== root $idx end $(date -u +%T) rc $rc" >> $D/run.log
   if tail -3 $D/run.log | grep -q "SAT FOUND\|PROOF NOT ACCEPTED"; then echo "=== STOP for inspection" >> $D/run.log; exit 3; fi
 done < $D/roots.txt
 echo "=== ALL DONE $(date -u +%T)" >> $D/run.log
