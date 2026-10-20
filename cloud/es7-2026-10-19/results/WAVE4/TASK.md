@@ -6,7 +6,7 @@ General rules:
 - Start: `git fetch origin es7-cloud && git checkout es7-cloud`. Record the environment (`uname -a; nproc; free -g || true; df -h /opt || true; date -u`) into `cloud/es7-2026-10-19/results/WAVE4/{V}/env.txt`, then commit and push it at once.
 - Time budget: {H} hours of wall time. Commit and push progress at least every 30 minutes. Use the last 15 minutes to write `results/WAVE4/{V}/README.md`, push, and report. If all your cubes are closed earlier, write the README then and end.
 - Do not end your turn while work is running. ScheduleWakeup does not fire in this environment. Keep the session active: wait with background until-loops or Monitor that return on progress, commit, then wait again.
-- Commit only to branch es7-cloud, and only inside `cloud/es7-2026-10-19/results/WAVE4/{V}/`. Use plain commit messages with no AI co-author or attribution trailers. Run `git pull --rebase --autostash` before every push, and retry the push until it succeeds (many machines push to this branch). If a push still fails after 10 tries, push to branch `claude/es7-w4-{v}` and say so.
+- Commit only to branch es7-cloud, and only inside `cloud/es7-2026-10-19/results/WAVE4/{V}/`. Use plain commit messages with no AI co-author or attribution trailers. Run `git pull --rebase --autostash` before every push, and retry the push until it succeeds (many machines push to this branch). If a push still fails after 10 tries, push to branch `es7-fallback-w4-{v}` and say so.
 - Never commit files over 50 MB, and never commit CNF or LRAT proof files. Use all 4 cores.
 - A cube counts as closed only if cake_lpr prints the exact line `s VERIFIED UNSAT` on its LRAT proof. Do not use drat-trim's lrat-check (unpatched it is unsound).
 

@@ -6,7 +6,7 @@ General rules:
 - Start: `git fetch origin es7-cloud && git checkout es7-cloud`. Record the environment (`uname -a; nproc; free -g || true; df -h /opt || true; date -u`) into `cloud/es7-2026-10-19/results/V2-L/logs/final_env.txt`, then commit and push it at once.
 - Time budget: {H} hours of wall time. Commit and push progress at least every 30 minutes. Use the last 15 minutes to update `results/V2-L/README.md`, push, and report.
 - Do not end your turn while work is running. ScheduleWakeup does not fire in this environment. Keep the session active: wait with background until-loops or Monitor that return on progress, commit, then wait again.
-- Commit only to branch es7-cloud, and only inside `cloud/es7-2026-10-19/results/V2-L/`. Use plain commit messages with no AI co-author or attribution trailers. Run `git pull --rebase --autostash` before every push, and retry the push until it succeeds (many machines push to this branch). If a push still fails after 10 tries, push to branch `claude/es7-v2f` and say so.
+- Commit only to branch es7-cloud, and only inside `cloud/es7-2026-10-19/results/V2-L/`. Use plain commit messages with no AI co-author or attribution trailers. Run `git pull --rebase --autostash` before every push, and retry the push until it succeeds (many machines push to this branch). If a push still fails after 10 tries, push to branch `es7-fallback-v2f` and say so.
 - Never commit files over 50 MB. Use all 4 cores.
 - Never write `sorry` or `admit` in any Lean file, not even temporarily. Do not add `axiom` declarations, `native_decide`, `implemented_by` or `extern`.
 
