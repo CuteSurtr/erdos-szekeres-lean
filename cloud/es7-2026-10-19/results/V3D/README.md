@@ -1,0 +1,12 @@
+# V3D: fourth acceptance pass of mirror sub-case (ii)
+
+The earlier passes check the leaves of earlier manifests: `results/V3B/` the 25032 leaves of the manifest at 066eaa9 that had no VERIFIED record then, `results/V3C/` the 12380 leaves found between 066eaa9 and fdd0393. The waves kept closing cubes after that (mostly the WAVE4 helpers). This pass checks every leaf of the manifest at commit 3e4dbaae3 (2026-10-20 15:11 UTC) that has no VERIFIED record there and that no running machine is checking.
+
+`worklist.jsonl` (22682 records, sha256 27e02b76e005964ef7779f970b1e3da55328bdfa878541b4ad86020120e7b1d9) was made by `scripts/build_worklist_d.py REPO 3e4dbaae3 OUT --skip-v3c 2,3,6,7,8,9,10,11,12,13,14,15`:
+- The manifest at 3e4dbaae3 is built exactly as V3B step 2 does it, with `verify/v3/` at bdf319c, from `git archive` exports of the wave directories: `v3_jsonl_leaves.py` on each of `results/WAVE1` to `results/WAVE4` into `jtree1` to `jtree4`, then `v3_manifest.py` over the four pairs in order. It has 70215 lines (sha256 9685d3c4e3c071782c9db41362a6e4bc244ee99130ef131bc7b6da58254a67a8), with leaves in all 278 wave cases and no problems.
+- As a control, the script also rebuilds V3B's list at 066eaa9 and checks its sha256 (605e39d27b8a11c8b8de36b167d1760f91dc3e6c4e49a2e570bf607689e7cfe7); it matches.
+- 43963 keys (case, `json.dumps(lits)`) have a VERIFIED leaf record in `results/V3T/**/*.jsonl` or `results/V3[A-E]/*/out.jsonl` at 3e4dbaae3. 26252 manifest records have none.
+- Left out: the 3570 of these that are in `results/V3C/worklist.jsonl` shards 2, 3 and 6 to 15, whose machines were still running at 3e4dbaae3 (no README.md). All 16 V3B machines and V3C Q00, Q01, Q04 and Q05 had finished, so any leaf they left unchecked is in this list.
+- The other 22682 records form the work list, idx renumbered 0..22681; the other fields are the manifest's. By case: U_L2 12384, U3_L 4243, U_L7 2864, U_L6 2029, U4_L 768, U_L5 394. By source: WAVE4 19476, WAVE3 2648, WAVE2 557, and 1 leaf (U3_L, from WAVE4/H66) known so far only from a `leaves.jsonl` record.
+
+The machines are D00 to D23, machine i taking the records with idx = i mod 24 (`TASK.md`). Leaves found after 3e4dbaae3 (three wave cases still had open cubes then) and leaves a V3C or V3D machine leaves unchecked go to a later pass. The final acceptance table (`results/V3Z/`) re-derives the manifest from the wave directories at the final commit and needs a VERIFIED record for every leaf and a VERIFIED cover for every case, so this list only decides which leaves are checked here.
