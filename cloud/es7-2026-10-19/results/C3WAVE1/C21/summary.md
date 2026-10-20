@@ -11,7 +11,7 @@
 | 8 | `0s0-1s1_3s1-8s1` | closed | d3:84, d4:462 | 8 | 0 | 4462 | 8520 |
 | 9 | `0s0-1s1_4s1-8s0` | closed | d3:84, d4:462 | 8 | 0 | 4549 | 8384 |
 | 10 | `0s0-1s1_5s1-9s1` | closed | d2:1 | 0 | 0 | 184 | 35 |
-| 11 | `0s0-1s1_7s0-9s1` | open | d4:113 | 8 | 433 | 959 | 1614 |
+| 11 | `0s0-1s1_7s0-9s1` | open | d4:296 | 8 | 250 | 1969 | 4189 |
 | 12 | `0s0-2s0_1s0-10s1` | not started | - | 0 | - | 0 | 0 |
 | 13 | `0s0-2s0_1s1-6s1` | not started | - | 0 | - | 0 | 0 |
 | 14 | `0s0-2s0_3s1-4s0` | not started | - | 0 | - | 0 | 0 |
@@ -69,13 +69,13 @@
 | 66 | `0s0_3s1-4s0` | not started | - | 0 | - | 0 | 0 |
 | 67 | `0s0_5s1-6s0` | not started | - | 0 | - | 0 | 0 |
 
-roots closed: 11/68; not started: 56; total solve 10686 s, check 18833 s (wall per node, summed; 3-4 jobs ran in parallel)
+roots closed: 11/68; not started: 56; total solve 11696 s, check 21408 s (wall per node, summed; 3-4 jobs ran in parallel)
 
 | depth | certified | split | open (tried or queued, not closed) |
 |---|---|---|---|
 | 2 | 9 | 3 | 0 |
 | 3 | 168 | 21 | 84 |
-| 4 | 1037 | 0 | 349 |
+| 4 | 1220 | 0 | 166 |
 
 SAT records: 0; UNSAT records not certified: 1, of which still uncertified after a re-check: 0
 - `0s0-1s1_3s1-8s1_2_5`: lrat_check='c VERIFIED', cake_lpr='none'; certified on re-check: True
