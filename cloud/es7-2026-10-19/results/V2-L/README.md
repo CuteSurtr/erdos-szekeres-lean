@@ -300,7 +300,51 @@ from `scripts/assemble_leaves.py`):
   bookkeeping records with no status.
 - WAVE1 was due to finish around 11:00 UTC, after this run, so these numbers are a snapshot.
 
+### 7a. Final run (V2F, `FINAL_TASK.md` at c1e8231), 20 Oct 2026, 13:59–17:59 UTC
+
+- **Zf** = `14447d0d56c891a89a07a8141b50eae0ebfd44a7` (`FINAL/READY.json`; 0 open cubes in the 278 wave cases).
+- **Assembly with the task rules** (`scripts/assemble_leaves_all.py`, the per-record rules of
+  `assemble_leaves.py` over WAVE1..WAVE4; `leaves_asm/status.json`, committed with `git add -f`): **411 / 450 closed**, 74,031 leaves. The task says to stop here,
+  so steps 5–7 (Leaves.lean, Final.lean, audit) were **not done**.
+- **The 39 open cases** are all in WAVE2 S-directories (S1–S5), and they are open only because of record format,
+  not missing leaves:
+  - 18 dirs (S1, S2, S4, S5) start with a march record `{"top": true, "march_s": ..., "march": ...}`
+    that has no `case_sha256`. The rule "every top record must carry the case's sha256" rejects the dir.
+    The second top record does carry the right sha256.
+  - 21 dirs (S3) were closed whole: one record `{"whole": true, "cube": [], ..., "cake_lpr": "s VERIFIED UNSAT"}`
+    without a sha256 of its own. The sha256 is on a separate header line `{"case": ..., "case_sha256": ...}`.
+  - Open cases: U_L2-15 U3-16_L U_L4-10 U4_L2 U4_L8 U4_L13 U5_L2 U5_L8 U5_L15 U6_L5 U6_L7 U7_L2 U8_L2
+    U8_L11 U9_L4 U9_L5 U9_L12 U9_L16 U10_L5 U10_L6 U10_L12 U10_L16 U11_L5 U11_L7 U11_L12 U11_L16
+    U12_L8 U12_L9 U13_L7 U13_L11 U14_L8 U15_L4 U15_L8 U15_L9 U16_L2 U16_L4 U16_L5 U16_L9 U16_L11.
+- **Manifest at Zf** (verify/v3 at bdf319c, WAVE1..WAVE4): 73,880 lines, sha256
+  `e01af167…ea83b5`, equal to READY.json. 278 cases with leaves, 0 problems.
+- **Cross-check** (`scripts/crosscheck_manifest.py`, `logs/final_crosscheck.log`): of the 74,031 assembled leaves, all
+  are leaves of the manifest for their case, or the empty leaf of a direct case (asm_not_in_manifest = 0).
+  21 manifest leaves are not in `leaves_asm`: the empty leaves of the 21 whole-closed S3 dirs.
+- **Diagnostic, not the task rule** (`scripts/assemble_leaves_dirsha.py`, `logs/leaves_asm_dirsha/status.json`):
+  if a dir is rejected only when some record carries a *different* `case_sha256` (records without one inherit
+  the dir's), all **450 / 450** close with 74,052 leaves = the 73,880 manifest leaves + 172 empty leaves. The cross-check is
+  exact both ways (0 / 0).
+- **The kernel cover check does not fit** (`logs/final_kernel_cover_trial.log`). Already on a 406-case snapshot with 60,005 leaves (14:40 UTC),
+  `decide +kernel` on `coverCheck` is OOM-killed (15 GB machine). One case of 2,598 leaves already needs > 13.5 GB.
+  The largest case (U_L2) has about 18,300 leaves. One `restrict` pass over 2,600 cubes takes about 40 s
+  in the kernel. A `Nat`-coded copy of the check, a small fuel, and a split proof
+  (`V2L/CoverSplit.lean`, `scripts/gen_cover.py`, compiled but not imported by `V2L.lean`) did not
+  change this. So `leavesOf_cover` as written in `scripts/Final.lean.template` cannot be checked this way. It needs a
+  cheaper kernel representation, or a proof that does not evaluate `coverCheck` on the full lists.
+- `scripts/gen_leaves.py` now writes the leaves in definitions of 500 cubes each. With one list literal, the
+  file with 60,005 leaves fails elaboration (heartbeat timeout; with `maxHeartbeats 0`, stack overflow).
+  The chunked file elaborates in 49 s (`logs/final_leaves_trial.log`).
+- Builds (`logs/final_*_build.log`): H 24 min (Mathlib from source; `lake exe cache get` got 403,
+  `logs/final_cache_get.log`), H3 38 s, V1-L 1 min 44 s, V2-L 7 min 49 s, all `Build completed successfully`.
+- Axioms are unchanged: the main theorems use `[propext, Classical.choice, Quot.sound]` (§7 above). No
+  new theorem was added to `V2L.lean`, `Audit.lean` was not changed, and no `sorry`/`admit` was written.
+
 ## 8. What remains
+
+**After the final run (V2F):** (a) settle the case-sha256 rule for the WAVE2 S-dir record formats (§7a).
+The dir-level rule closes all 450 cases, and the result equals the manifest. (b) Replace the `decide +kernel`
+proof of `leavesOf_cover`, which runs out of memory at this size. Items 1–2 below are from the earlier run.
 
 1. **WAVE1 must close the remaining cases** (done around 11:00 UTC, after this run).
 2. **Instantiation.** Run `scripts/finalize.sh` (from `results/V2-L`, after `git pull`). It:
