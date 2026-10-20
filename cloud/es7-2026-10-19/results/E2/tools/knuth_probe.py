@@ -21,6 +21,7 @@ ap.add_argument("--seed", type=int, default=7); ap.add_argument("--maxdepth", ty
 ap.add_argument("--base", type=int, default=10000); ap.add_argument("--grow", type=float, default=1.2)
 ap.add_argument("--cap", type=int, default=2_000_000); ap.add_argument("--hours", type=float, default=1e9)
 ap.add_argument("--maxcand", type=int, default=400)
+ap.add_argument("--resume", default=None, help='JSON [cube, budget] to start walk 0 from')
 ap.add_argument("--solver-opt", action="append", default=[])
 a = ap.parse_args()
 rng = random.Random(a.seed)
@@ -33,6 +34,7 @@ jid = 0
 for w in range(a.walks):
     if time.time() > deadline: break
     cube, budget = rng.choice(frontier)
+    if a.resume and w == 0: cube, budget = json.loads(a.resume)
     cube = list(cube); d0 = len(cube); steps = []
     t0 = time.time(); outcome = "maxdepth"
     while len(cube) < a.maxdepth and time.time() < deadline:
@@ -40,7 +42,7 @@ for w in range(a.walks):
         p.stdin.write(f"{jid} {budget} {' '.join(map(str, cube))} 0\n"); p.stdin.flush()
         r = p.stdout.readline().split()
         steps.append({"depth": len(cube), "budget": budget, "res": r[0], "ms": int(r[2])})
-        with open(a.out + ".steps", "a") as f: f.write(json.dumps({"walk": w, **steps[-1], "lit": int(r[3]) if r[0] == "K" else None, "t": round(time.time() - t0, 1)}) + "\n")
+        with open(a.out + ".steps", "a") as f: f.write(json.dumps({"walk": w, **steps[-1], "lit": int(r[3]) if r[0] == "K" else None, "t": round(time.time() - t0, 1), "cube": list(cube)}) + "\n")
         if r[0] == "U": outcome = "closed"; break
         if r[0] == "S": outcome = "SAT"; break
         lit = int(r[3]); budget = min(a.cap, int(budget * a.grow))

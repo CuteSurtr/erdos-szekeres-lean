@@ -40,3 +40,4 @@
 {"event": "worker_ready", "w": 1, "t": 7387.3}
 {"event": "worker_ready", "w": 2, "t": 7387.3}
 {"event": "worker_ready", "w": 0, "t": 7387.3}
+{"event": "start", "solver_opts": ["--elim=0"], "nworkers": 3, "base": 10000, "grow": 1.2, "cap": 2000000, "maxcand": 400, "open": 467, "t": 9887.2}
