@@ -8,7 +8,8 @@ Shard = cubes whose 0-based line index i in cubes.icnf has i % nshards == shard.
 Per cube C: write CNF + C as unit clauses, run `cadical --lrat --binary=false -t tlim`.
  * UNSAT -> lrat-check the proof against that CNF (proof deleted afterwards).
  * SAT   -> model saved to <outdir>/sat/ at once; driver flags it.
- * time limit -> `march_cu <CNF+C> -d split_depth -o sub.icnf`; children are C + subcube.
+ * time limit -> logged, then a separate "split" job runs
+   `march_cu <CNF+C> -d split_depth -o sub.icnf`; children are C + subcube.
    march_cu also emits its refuted leaves as cubes, but we do not trust its tree: we also solve
    the "gap" formula
    CNF + C + {not subcube_j for every j} with cadical --lrat and lrat-check it: its UNSAT
@@ -86,30 +87,34 @@ def job_cube(cube, tag):
     write_cnf(path, cube)
     r = solve(path, a.tlim, tag)
     r.update(kind="cube", cube=cube, depth=len(cube))
-    if r["status"] == "UNKNOWN":
-        sub = path + ".icnf"; t0 = time.time()
-        p = subprocess.run([os.path.join(a.bindir, "march_cu"), path, "-d", str(a.split_depth),
-                            "-o", sub], capture_output=True, text=True)
-        subs = []
-        if os.path.exists(sub):
-            for line in open(sub):
-                t = line.split()
-                if t and t[0] == "a": subs.append([int(x) for x in t[1:-1]])
-            os.remove(sub)
-        refuted = None
-        for line in p.stdout.splitlines():
-            if "refuted leaves" in line or "refuted" in line.lower():
-                refuted = line.strip()
-        sat_found = "SATISFIABLE" in p.stdout and "UNSATISFIABLE" not in p.stdout
-        r["split"] = {"march_s": round(time.time() - t0, 2), "nsub": len(subs),
-                      "march_info": refuted, "march_rc": p.returncode,
-                      "march_sat_line": sat_found,
-                      "children": [cube + [l for l in s if l not in cube] for s in subs]}
-        # march_cu prints "a 0" when it refutes CNF+C outright: no children, and the gap
-        # job (CNF + C with no extra clauses) then carries the whole cube.
-        r["split"]["children"] = [c for c in r["split"]["children"] if len(c) > len(cube)]
     os.remove(path)
     return r
+
+
+def job_split(cube, tag):
+    """march_cu -d split_depth on CNF + C (logged separately so a restart keeps the timeout)."""
+    path = os.path.join(a.workdir, "s_%s.cnf" % tag)
+    write_cnf(path, cube)
+    sub = path + ".icnf"; t0 = time.time()
+    p = subprocess.run([os.path.join(a.bindir, "march_cu"), path, "-d", str(a.split_depth),
+                        "-o", sub], capture_output=True, text=True)
+    subs = []
+    if os.path.exists(sub):
+        for line in open(sub):
+            t = line.split()
+            if t and t[0] == "a": subs.append([int(x) for x in t[1:-1]])
+        os.remove(sub)
+    info = None
+    for line in p.stdout.splitlines():
+        if "number of cubes" in line: info = line.strip()
+    children = [cube + [l for l in s if l not in cube] for s in subs]
+    # march_cu prints "a 0" when it refutes CNF+C outright: no children, and the gap
+    # job (CNF + C with no extra clauses) then carries the whole cube.
+    children = [c for c in children if len(c) > len(cube)]
+    os.remove(path)
+    return {"kind": "split", "cube": cube, "status": "SPLIT", "solve_s": 0.0,
+            "march_s": round(time.time() - t0, 2), "nsub": len(subs), "march_info": info,
+            "march_rc": p.returncode, "children": children}
 
 
 def job_gap(cube, children, tag):
@@ -139,8 +144,10 @@ def expand(cube):
     k = key("cube", cube)
     if k not in done: queue.append(("cube", cube, None)); return
     r = done[k]
-    if r["status"] == "UNKNOWN" and "split" in r:
-        ch = r["split"]["children"]
+    if r["status"] == "UNKNOWN":
+        sp = done.get(key("split", cube))
+        if sp is None: queue.append(("split", cube, None)); return
+        ch = sp["children"]
         if key("gap", cube) not in done: queue.append(("gap", cube, ch))
         for c in ch: expand(c)
 for c in shard: expand(c)
@@ -164,7 +171,8 @@ with ProcessPoolExecutor(a.jobs) as ex, open(LEAVES, "a") as log:
         while queue and len(running) < a.jobs:
             kind, cube, ch = queue.pop(0)
             tag = hashlib.sha1(key(kind, cube).encode()).hexdigest()[:12]
-            fut = ex.submit(job_cube, cube, tag) if kind == "cube" else ex.submit(job_gap, cube, ch, tag)
+            fn = {"cube": job_cube, "split": job_split}.get(kind)
+            fut = ex.submit(fn, cube, tag) if fn else ex.submit(job_gap, cube, ch, tag)
             running[fut] = (kind, cube, ch)
         snapshot()
         fin, _ = wait(list(running), return_when=FIRST_COMPLETED)
@@ -174,12 +182,14 @@ with ProcessPoolExecutor(a.jobs) as ex, open(LEAVES, "a") as log:
             r["t"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
             log.write(json.dumps(r) + "\n"); log.flush()
             done[key(kind, cube)] = r
-            print(json.dumps({k: v for k, v in r.items() if k not in ("split",)})[:300], flush=True)
+            print(json.dumps({k: v for k, v in r.items() if k != "children"})[:300], flush=True)
             if r["status"] == "SATISFIABLE":
                 print("!!! SAT", r.get("model_file"), flush=True)
                 open(os.path.join(a.outdir, "SAT_FOUND"), "a").write(json.dumps(r) + "\n")
-            if kind == "cube" and "split" in r:
-                queue.append(("gap", cube, r["split"]["children"]))
-                for c in r["split"]["children"]: queue.append(("cube", c, None))
+            if kind == "cube" and r["status"] == "UNKNOWN":
+                queue.insert(0, ("split", cube, None))
+            if kind == "split":
+                queue.append(("gap", cube, r["children"]))
+                for c in r["children"]: queue.append(("cube", c, None))
     snapshot()
 print("queue empty", flush=True)
