@@ -1,6 +1,7 @@
 stock lrat-check on "2 0 0" vs SAT CNF x1: c VERIFIED
 lrat-check-E2: c NOT VERIFIED
-cake_lpr: c Checking failed at line: 0. Reason: pivot must be non-zerodriver test (m17k6.sub, 3 cubes, genuine proofs, all three checkers accept):
+cake_lpr: c Checking failed at line: 0. Reason: pivot must be non-zero
+driver test (m17k6.sub, 3 cubes, genuine proofs, all three checkers accept):
  "cube": [-1, "solve_s": 0.0, "proof_bytes": 34043, "lrat_check": "c VERIFIED", "lrat_check_s": 0.0, "lrat_check_E2": "c VERIFIED", "lrat_check_E2_s": 0.0, "cake_lpr": "s VERIFIED UNSAT", "cake_lpr_s": 0.1
  "cube": [1], "proof_bytes": 27330, "lrat_check": "c VERIFIED", "lrat_check_s": 0.0, "lrat_check_E2": "c VERIFIED", "lrat_check_E2_s": 0.0, "cake_lpr": "s VERIFIED UNSAT", "cake_lpr_s": 0.1, "lrat_verified": true
  "cube": [-1, "solve_s": 0.0, "proof_bytes": 14664, "lrat_check": "c VERIFIED", "lrat_check_s": 0.0, "lrat_check_E2": "c VERIFIED", "lrat_check_E2_s": 0.0, "cake_lpr": "s VERIFIED UNSAT", "cake_lpr_s": 0.1
