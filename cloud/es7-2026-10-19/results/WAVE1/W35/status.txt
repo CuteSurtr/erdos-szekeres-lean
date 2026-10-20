@@ -2,10 +2,10 @@ U7_L6 whole= ['TIMEOUT'] top= (108, 12) {'TIMEOUT': 1, 'UNSAT': 108} cpu=1087
 U_L2-3 whole= ['TIMEOUT'] top= (128, 0) {'TIMEOUT': 1, 'UNSAT': 500, 'SPLIT': 6} cpu=15178
 U_L2-6 whole= ['TIMEOUT'] top= (127, 1) {'TIMEOUT': 1, 'UNSAT': 367, 'SPLIT': 4} cpu=8177
 U_L2-10 whole= ['TIMEOUT'] top= (122, 4) {'TIMEOUT': 1, 'UNSAT': 122} cpu=2254
-U_L2-13 whole= ['TIMEOUT'] top= None {'TIMEOUT': 1} cpu=60
-U3-4_L whole= ['TIMEOUT'] top= None {'TIMEOUT': 1} cpu=60
-U3-7_L whole= ['TIMEOUT'] top= None {'TIMEOUT': 1} cpu=60
-U3-10_L whole= [] top= None {} cpu=0
+U_L2-13 whole= ['TIMEOUT'] top= (128, 0) {'TIMEOUT': 1, 'UNSAT': 128} cpu=2020
+U3-4_L whole= ['TIMEOUT'] top= (128, 0) {'TIMEOUT': 1, 'UNSAT': 118} cpu=4101
+U3-7_L whole= ['TIMEOUT'] top= (119, 7) {'TIMEOUT': 1} cpu=393
+U3-10_L whole= ['TIMEOUT'] top= None {'TIMEOUT': 1} cpu=60
 U3-13_L whole= [] top= None {} cpu=0
 U_L4-5 whole= [] top= None {} cpu=0
 U4-7_L whole= [] top= None {} cpu=0
