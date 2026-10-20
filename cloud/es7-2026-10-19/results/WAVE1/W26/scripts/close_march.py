@@ -66,7 +66,7 @@ def finish(open_cubes):
             if "cube" in r and r.get("status") == "UNSAT" and r.get("cake_lpr") == OK:
                 f.write("a " + " ".join(map(str, r["cube"] + [0])) + "\n")
     with open(os.path.join(a.out, "open.icnf"), "w") as f:
-        for c in open_cubes: f.write("a " + " ".join(map(str, c + [0])) + "\n")
+        for c in open_cubes: f.write("a " + " ".join(map(str, list(c) + [0])) + "\n")
 
 # whole-case attempt
 if a.whole and not any(r.get("whole") for r in old):
