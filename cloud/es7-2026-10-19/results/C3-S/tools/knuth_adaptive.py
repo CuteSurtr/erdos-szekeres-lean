@@ -29,10 +29,14 @@ M, K = 11, 7
 
 
 MIRROR = False
+TOP = None
 
 
 def children(layers):
-    return tree_children(M, K, layers, mirror=MIRROR)
+    ch = tree_children(M, K, layers, mirror=MIRROR)
+    if not layers and TOP:  # stratum: only the H3 top case, or only the ten H6 cases
+        ch = [c for c in ch if (len(c[0]) == 1) == (TOP == "H3")]
+    return ch
 
 
 def main():
@@ -43,9 +47,10 @@ def main():
     ap.add_argument("--modeldir", default="/opt/work/models")
     ap.add_argument("--hours", type=float, default=100)
     ap.add_argument("--mirror", action="store_true", help="H3 mirror reduction at layer 2")
+    ap.add_argument("--top", choices=["H3", "H6"], help="stratum: estimate only this part of the tree")
     a = ap.parse_args()
-    global MIRROR
-    MIRROR = a.mirror
+    global MIRROR, TOP
+    MIRROR, TOP = a.mirror, a.top
     budgets = [int(x) for x in a.budget.split(",")]
     E = C3Enc(M, K)
     S = Solver(name="cadical195", bootstrap_with=CNF(from_file=a.base).clauses)
@@ -89,7 +94,8 @@ def main():
             weight *= len(ch)
             node = rng.choice(ch)
         rec = {"walk": w, "seed": a.seed, "outcome": outcome, "est_seconds": round(est_s, 1), "est_solver_calls": est_calls,
-               "est_conflicts": est_conf, "path": path, "budgets": budgets, "start": a.start}
+               "est_conflicts": est_conf, "path": path, "budgets": budgets, "start": a.start,
+               "top": a.top, "mirror": a.mirror}
         fo.write(json.dumps(rec) + "\n"); fo.flush()
         print(json.dumps({k: rec[k] for k in ("walk", "outcome", "est_seconds", "est_solver_calls")}), flush=True)
 
