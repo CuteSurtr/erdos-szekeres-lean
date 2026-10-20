@@ -18,7 +18,7 @@ Everything below is about the encoding and the checking pipeline. None of it is 
 ES(7) or about the mirror class.
 
 There is no `sorry`, `admit`, `native_decide` or new axiom. `MirrorEncoding/Audit.lean`
-checks with `#guard_msgs` that the 25 main theorems use at most `propext`,
+checks with `#guard_msgs` that the 29 main theorems use at most `propext`,
 `Classical.choice` and `Quot.sound`. `lake build` fails if this changes.
 
 ## What ran where
@@ -45,8 +45,13 @@ VM started at 02:35 UTC on 20 Oct 2026.
 - `results/H`: `lake build` completed (`Build completed successfully (1557 jobs)`). This
   includes `ETVEncoding.Audit`, whose 24 `#guard_msgs` axiom checks all passed. Log:
   `logs/H_lake_build.log`.
-- `results/H2`: see `logs/H2_lake_build.log` and the "H2 build" line at the end of this
-  file.
+- `results/H2`: `lake build` completed (`Build completed successfully (1754 jobs)`,
+  the same count as in H2's README), after building the additional Mathlib modules it needs.
+  `D3Encoding.Audit` (11 `#guard_msgs` axiom checks) is part of the default target and
+  passed. Logs: `logs/H2_lake_build.log` (first run; the log file is cut off, the job exited
+  0) and `logs/H2_lake_build_rerun.log` (incremental rerun showing the completion line and
+  the linter warnings).
+- The byte comparisons of H/H2 were not rerun here; H2 already checked them.
 
 ## 2. Formalisation of the mirror class
 
@@ -158,7 +163,7 @@ The targets are stated in `Targets.lean`:
 
 Axiom report (`logs/print_axioms.log`, enforced by `Audit.lean`):
 - `dimacsSat_mirgen` and `not_dimacsSatisfiable_of_cover` use `[propext, Quot.sound]`.
-- The other 23 theorems, including `hullCnf_satisfiable`, `interiorCnf_satisfiable`,
+- The other 27 theorems, including `hullCnf_satisfiable`, `interiorCnf_satisfiable`,
   `interiorTieBreak`, `mirrorExclusion_of_unsat`, `mirrorExclusion_of_cubes`,
   `exists_mirrorSet` and `covers_of_coverCheck`, use `[propext, Classical.choice, Quot.sound]`.
 

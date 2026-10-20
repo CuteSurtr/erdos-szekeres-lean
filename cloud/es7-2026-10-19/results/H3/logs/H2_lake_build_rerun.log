@@ -1,0 +1,46 @@
+⚠ [2/186] Replayed D3Encoding.Triples
+warning: D3Encoding/Triples.lean:164:82: This simp argument is unused:
+  and_true
+
+Hint: Omit it from the simp argument list.
+  simp only [paritySort, h1, h2, h3, if_true, if_false, ValidT, chiT, true_and,̵ ̵a̵n̵d̵_̵t̵r̵u̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [5/186] Replayed D3Encoding.Canon
+warning: D3Encoding/Canon.lean:94:30: unused variable `hi`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [1746/1754] Replayed D3Encoding.Geometry
+warning: D3Encoding/Geometry.lean:83:70: This simp argument is unused:
+  Matrix.head_cons
+
+Hint: Omit it from the simp argument list.
+  simp only [orient, rotC, Matrix.cons_val_zero, Matrix.cons_val_one,̵ ̵M̵a̵t̵r̵i̵x̵.̵h̵e̵a̵d̵_̵c̵o̵n̵s̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D3Encoding/Geometry.lean:89:71: This simp argument is unused:
+  Matrix.head_cons
+
+Hint: Omit it from the simp argument list.
+  simp only [orient, reflC, Matrix.cons_val_zero, Matrix.cons_val_one,̵ ̵M̵a̵t̵r̵i̵x̵.̵h̵e̵a̵d̵_̵c̵o̵n̵s̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D3Encoding/Geometry.lean:94:70: This simp argument is unused:
+  Matrix.head_cons
+
+Hint: Omit it from the simp argument list.
+  simp only [orient, rotC, Matrix.cons_val_zero, Matrix.cons_val_one,̵ ̵M̵a̵t̵r̵i̵x̵.̵h̵e̵a̵d̵_̵c̵o̵n̵s̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D3Encoding/Geometry.lean:99:70: This simp argument is unused:
+  Matrix.head_cons
+
+Hint: Omit it from the simp argument list.
+  simp only [orient, rotC, Matrix.cons_val_zero, Matrix.cons_val_one,̵ ̵M̵a̵t̵r̵i̵x̵.̵h̵e̵a̵d̵_̵c̵o̵n̵s̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Build completed successfully (1754 jobs).
+
+real	0m1.494s
+user	0m1.029s
+sys	0m0.654s
