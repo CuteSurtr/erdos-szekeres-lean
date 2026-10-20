@@ -17,7 +17,7 @@ leaf counted only on `s VERIFIED UNSAT`). Run as
 
 | case | cubes given | verified leaves | splits | cubes still open | every given cube covered |
 |---|---|---|---|---|---|
-| U15_L | 64 | 177 | 2 (63 + 51 sub-cubes) | 0 | yes |
+| U15_L | 64 | 177 | 2 (63 + 52 sub-cubes; 62 + 63 + 52 = 177) | 0 | yes |
 
 - **U15_L: closed.** The 64 given cubes are 64 of the 128 top cubes of `results/WAVE1/W29/U15_L/top.icnf`
   (copied as `U15_L/top.icnf`, in the task file's order). 62 closed directly; 2 hit the 300 s cap and were
