@@ -101,6 +101,8 @@ def solve(cube):
     else:
         r["status"] = "SPLIT"; subs, ms, line = march(cube, a.split_depth, k)
         r.update(split_s=round(ms, 1), march=line, nsub=len(subs), subs=subs)
+        if not subs or any(not x for x in subs):  # F6: march refuted it or gave no cubes; child == parent would loop
+            r["status"] = "SPLIT_FAIL"; del r["subs"]
     c1 = os.times(); r["cpu_s"] = round(c1.children_user + c1.children_system - c0.children_user - c0.children_system, 1)
     subprocess.run(["rm", "-rf", w]); rec(r)
     if r["status"] == "SPLIT":
