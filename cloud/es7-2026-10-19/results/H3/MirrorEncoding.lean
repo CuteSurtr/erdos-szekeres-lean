@@ -6,4 +6,5 @@ import MirrorEncoding.TieBreak
 import MirrorEncoding.CoverCore
 import MirrorEncoding.Cover
 import MirrorEncoding.Targets
+import MirrorEncoding.Line
 import MirrorEncoding.Audit

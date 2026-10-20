@@ -23,3 +23,7 @@
 'Mir.covers_of_coverCheck' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Mir.not_dimacsSatisfiable_of_cover' depends on axioms: [propext, Quot.sound]
 'Mir.not_dimacsSatisfiable_of_coverCheck' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Mir.mirrorExclusionLine_of_unsat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Mir.mirrorExclusionLine_of_cubes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Mir.mirrorExclusionLine_of_mirrorExclusionY' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Mir.convexPosition_of_image_affine' depends on axioms: [propext, Classical.choice, Quot.sound]

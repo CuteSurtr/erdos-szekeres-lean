@@ -1,4 +1,4 @@
-import MirrorEncoding.Targets
+import MirrorEncoding.Line
 
 /-! Axiom audit: `lake build` fails if any of these theorems uses an axiom other than
  `propext`, `Classical.choice` and `Quot.sound` (or uses fewer than recorded here). -/
@@ -102,3 +102,19 @@ import MirrorEncoding.Targets
 /-- info: 'Mir.not_dimacsSatisfiable_of_coverCheck' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs in
 #print axioms Mir.not_dimacsSatisfiable_of_coverCheck
+/-- info: 'Mir.mirrorExclusionLine_of_unsat' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms Mir.mirrorExclusionLine_of_unsat
+
+/-- info: 'Mir.mirrorExclusionLine_of_cubes' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms Mir.mirrorExclusionLine_of_cubes
+
+/-- info: 'Mir.mirrorExclusionLine_of_mirrorExclusionY' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms Mir.mirrorExclusionLine_of_mirrorExclusionY
+
+/-- info: 'Mir.convexPosition_of_image_affine' depends on axioms: [propext, Classical.choice, Quot.sound] -/
+#guard_msgs in
+#print axioms Mir.convexPosition_of_image_affine
+
