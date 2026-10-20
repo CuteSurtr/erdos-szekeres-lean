@@ -28,3 +28,4 @@
 {"kind": "control-nomirror", "n": 8, "k": 5, "expected": "SAT", "status": "SAT", "sec": 0.0, "sigcheck": {"ok": true}}
 {"kind": "control-nomirror", "n": 9, "k": 5, "expected": "UNSAT", "status": "UNSAT", "sec": 0.01, "lrat": "VERIFIED"}
 {"kind": "control-nomirror", "n": 16, "k": 6, "expected": "SAT", "status": "SAT", "sec": 0.03, "sigcheck": {"ok": true}}
+{"kind": "control-nomirror", "n": 17, "k": 6, "expected": "UNSAT", "status": "UNKNOWN", "sec": 3000.01}
