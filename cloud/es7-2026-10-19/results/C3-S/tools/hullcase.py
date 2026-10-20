@@ -1,0 +1,144 @@
+#!/usr/bin/env python3
+"""C3-S: hull normalization for the 3-fold class (centre-pencil normal form of C3a/C3b).
+
+Labels 0..n-1 (n = 3m) by direction of the line through the centre c, R(i) = (i - m) mod n
+(R = rotation by +120 deg), sigma_i = [x_i < 0], sigma_{r+m} = 1 - sigma_r, sigma_{r+2m} = sigma_r.
+
+WLOG (see ../README.md): label 0 is a vertex of conv(S) and sigma_0 = 0.  The hull vertex set
+H is R-invariant, has 3 or 6 elements when there is no convex 7-gon (k <= 9 here: |H| <= k-1 < 9
+and 3 | |H|), and
+  H3        : H = {0, m, 2m}
+  H6(a, s)  : H = {0, m, 2m, a, a+m, a+2m}, 1 <= a <= m // 2 (a and m - a are exchanged by
+              moving label 0 to the other hull orbit), s = sigma_a.
+Counter-clockwise order of H (= angular order about c, which is interior to conv(S)):
+  H3        : 0, 2m, m
+  H6(a, 0)  : 0, a, 2m, a+2m, m, a+m
+  H6(a, 1)  : 0, a+m, 2m, a, m, a+2m
+Case clauses: sigma_a = s (H6), and ccw(u, v, w) for every directed hull edge (u, v) and every
+other point w (strictly left of every edge <=> H is the hull in this cyclic order).
+"""
+
+
+def cases(m, k):
+    assert 5 <= k <= 9, "hull sizes 3 and 6 only"
+    out = [("H3",)]
+    if k - 1 >= 6:
+        for a in range(1, m // 2 + 1):
+            for s in (0, 1):
+                out.append(("H6", a, s))
+    return out
+
+
+def case_name(c):
+    return "H3" if c[0] == "H3" else f"H6a{c[1]}s{c[2]}"
+
+
+def parse_case(name):
+    if name == "H3":
+        return ("H3",)
+    assert name.startswith("H6a")
+    a, s = name[3:].split("s")
+    return ("H6", int(a), int(s))
+
+
+def hull_order(m, c):
+    if c[0] == "H3":
+        return [0, 2 * m, m]
+    _, a, s = c
+    assert 1 <= a <= m // 2 and s in (0, 1)
+    if s == 0:
+        return [0, a, 2 * m, a + 2 * m, m, a + m]
+    return [0, a + m, 2 * m, a, m, a + 2 * m]
+
+
+def hull_clauses(m, c, ccw, sig_true):
+    """ccw(p,q,r): literal 'p,q,r counter-clockwise in S';  sig_true(i): literal 'sigma_i = 1'."""
+    n = 3 * m
+    cl = []
+    if c[0] == "H6":
+        lit = sig_true(c[1])
+        cl.append([lit if c[2] else -lit])
+    H = hull_order(m, c)
+    for t in range(len(H)):
+        u, v = H[t], H[(t + 1) % len(H)]
+        for w in range(n):
+            if w != u and w != v:
+                cl.append([ccw(u, v, w)])
+    return cl
+
+
+# ---------------------------------------------------------------------------------------------
+# Convex layers (generalization).  A layer spec is a list of layers L1, L2, ...; each layer is a
+# list of (residue, sigma) pairs (sigma None for a one-orbit layer below the top).  Layer L_j is
+# the hull vertex set of P_j = S minus (L_1 .. L_{j-1}); it is R-invariant, has 3 or 6 points
+# (no convex 7-gon) and contains c in its interior, so its ccw order is the angular order about
+# c, i.e. the order of the keys (sigma_i, i).  For one orbit {r, r+m, r+2m} that cyclic order is
+# r, r+2m, r+m whatever sigma_r is, so one-orbit layers need no sigma.
+# Name: layers joined by '_', residues of a layer by '-', sigma as suffix 's0'/'s1'.
+#   "0" = H3,  "0-2s1" = H6a2s1,  "0_5" = H3 then L2 = orbit 5,  "0_3s0-7s1" = H3 then L2 = orbits 3, 7.
+
+
+def parse_layers(name):
+    out = []
+    for lay in name.split("_"):
+        L = []
+        for tok in lay.split("-"):
+            if "s" in tok:
+                r, s = tok.split("s")
+                L.append((int(r), int(s)))
+            else:
+                L.append((int(tok), None))
+        out.append(L)
+    return out
+
+
+def layers_name(layers):
+    return "_".join("-".join(f"{r}" if s is None else f"{r}s{s}" for r, s in L) for L in layers)
+
+
+def legacy_to_layers(c):
+    return [[(0, 0)]] if c[0] == "H3" else [[(0, 0), (c[1], c[2])]]
+
+
+def layer_order(m, L):
+    if len(L) == 1:
+        r = L[0][0]
+        return [r, r + 2 * m, r + m]
+    key = []
+    for r, s in L:
+        assert s is not None
+        for w, i in enumerate((r, r + m, r + 2 * m)):
+            key.append(((s if w != 1 else 1 - s), i))
+    return [i for _, i in sorted(key)]
+
+
+def layer_clauses(m, layers, ccw, sig_true):
+    n = 3 * m
+    used = set()
+    cl = []
+    for L in layers:
+        for r, s in L:
+            if s is not None and r != 0:
+                lit = sig_true(r)
+                cl.append([lit if s else -lit])
+        H = layer_order(m, L)
+        rest = [w for w in range(n) if w not in used]
+        for t in range(len(H)):
+            u, v = H[t], H[(t + 1) % len(H)]
+            for w in rest:
+                if w != u and w != v:
+                    cl.append([ccw(u, v, w)])
+        used |= set(H)
+    return cl
+
+
+def layer2_options(m, top):
+    """all second layers below top layer `top` (list of (r, s)), as lists of (r, s)."""
+    rem = [r for r in range(m) if r not in {r for r, _ in top}]
+    out = [[(r, None)] for r in rem]
+    for i, b in enumerate(rem):
+        for c in rem[i + 1:]:
+            for sb in (0, 1):
+                for sc in (0, 1):
+                    out.append([(b, sb), (c, sc)])
+    return out
