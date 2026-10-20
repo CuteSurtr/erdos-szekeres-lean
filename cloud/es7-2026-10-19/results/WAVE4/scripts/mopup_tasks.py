@@ -62,6 +62,8 @@ def running_queue(d):
     rate = done / max(1.0, (NOW - rtime) / 60)
     budget = 135 if '/WAVE4/' in '/' + d else 165
     left = max(0.0, (start + budget * 60 - NOW) / 60)
+    if os.environ.get('HORIZON'):
+        left = min(left, float(os.environ['HORIZON']))   # plan to finish sooner: a running machine keeps only HORIZON minutes of work
     if d.startswith('WAVE4/') and NOW - rtime < 30 * 60:
         rate = 0.0          # started less than 30 min ago: its rate is not yet meaningful, it keeps its list
     return q, rate, left
