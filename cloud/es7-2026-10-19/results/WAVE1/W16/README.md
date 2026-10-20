@@ -12,10 +12,10 @@ the cake_lpr example prints `s VERIFIED UNSAT`). Run: 2026-10-20 07:01–09:19 U
 |---|---|---|
 | m33k7int.sub.cnf (regenerated) | 69c1dc8f…ffff932d | match |
 | verify/ii_wave1.json | 6df36dab…e901c72e | match |
-| U6_L.cnf (`hullsplit.py case BASE 6 ""`) | 8196f2ae…f3d546d838a47b9e3f4e42d7bc5d4487b759871f14 | match |
+| U6_L.cnf (`hullsplit.py case BASE 6 ""`) | 8196f2aef46cc55cd21ba4f3d546d838a47b9e3f4e42d7bc5d4487b759871f14 | match |
 | top.icnf (`march_cu U6_L.cnf -d 7`) | 6ca82ad4c8db1cc6f3174d10c1ef2f3b726440e90b3ec752fc89ce92e9c5fe63 | 128 cubes, 0 refuted |
 
-U6_L.cnf: `8196f2aef46cc55cd21ba4f3d546d838a47b9e3f4e42d7bc5d4487b759871f14`, equal to the entry and to cases.jsonl.
+U6_L.cnf hash equals the entry and cases.jsonl.
 The shard of U6_L running on the other machine must record the same top.icnf sha256.
 
 ## Method
