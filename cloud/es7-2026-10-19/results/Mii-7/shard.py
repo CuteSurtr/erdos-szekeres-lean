@@ -72,7 +72,21 @@ while changed:
                     tasks[ch["id"]] = ch; order.append(ch["id"]); changed = True
 
 lock = threading.Lock()
-q = queue.Queue()
+# scheduling only (does not change the shard): top cubes with the fewest pending tasks first,
+# depth-first inside a top cube, so that whole top cubes close as early as possible
+def top_of(tid): return tid.split('.')[0]
+npend = {}
+for tid in order:
+    if tid not in done: npend[top_of(tid)] = npend.get(top_of(tid), 0) + 1
+rank = {t: n for n, t in enumerate(sorted(npend, key=lambda t: (npend[t], int(t[1:]))))}
+def prio(tid):
+    path = tuple(int(x) if x.isdigit() else 10**6 for x in tid.split('.')[1:])
+    return (rank.get(top_of(tid), 10**6), path)
+class PQ(queue.PriorityQueue):
+    def put(self, tid): super().put((prio(tid) if tid is not None else (10**9,), tid or ""))
+    def get(self):
+        _, tid = super().get(); return tid or None
+q = PQ()
 for tid in order:
     if tid not in done: q.put(tid)
 
