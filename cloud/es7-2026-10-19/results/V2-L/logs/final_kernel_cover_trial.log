@@ -27,3 +27,4 @@
 #    Int coverAux with fuel 40 instead of sum+1 (= 6,000+), U15_L:        25 s, peak 2.0 GB
 #    So neither the Int arithmetic nor the fuel is the main cost; the growth is in the
 #    kernel's evaluation of the recursion itself. Not pursued further in this run.
+#    Leaves as plain Int list literals (no packing), U15_L, one file: 283 s (mostly elaboration), peak 1.4 GB
