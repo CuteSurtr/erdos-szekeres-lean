@@ -13,12 +13,19 @@ details. Lean 4.24.0 came from the GitHub release tarball, because the proxy blo
   `ETVEncoding.Audit` is part of the default target, so all 24 `#guard_msgs` axiom checks
   passed. The unfinished `ETVEncoding/Packed.lean` is not imported by the library; built on
   its own (`lake build ETVEncoding.Packed`) it also succeeds. Log: `logs/H_lake_build.log`.
-- **Parent repository.** The full `lake build` of the parent (all 209 modules, which import
-  much of Mathlib including measure theory) was started but **not finished**. Building Mathlib
-  from source on 4 cores was too slow, and I stopped it after about 70 minutes, at around
-  3000 Mathlib modules, to keep time for the rest. Every parent module that H imports (`Basic`,
-  `Definitions`, `Orientation`, `OrientationConvexity`, `Suk.*`, …) was built: some during
-  the interrupted parent build, the rest (9) during H's build. So "the parent builds" is verified only for the part H depends on.
+- **Parent repository.** The full `lake build` of the parent (all 209 modules) was **not
+  completed**. I ran it twice:
+  - The first, parallel run built Mathlib from source and most parent modules, but seven
+    memory-heavy `ErdosSzekeres.Omission.*` modules (`GeneralResidualBlocks`,
+    `CoupledCore13`, `CoupledCoreSecond` … `Fifth`, `CoupledCoreEleven`) were OOM-killed
+    (exit 137). Four Lean processes do not fit in 15 GB.
+  - Rebuilt one at a time, all seven compiled successfully, each with "Build completed
+    successfully".
+  - The final parallel `lake build` for the remaining modules took the whole container down
+    twice (out of memory, then a restart), so I stopped. Some parent modules outside H's
+    import closure were never built here.
+
+  **Every parent module that H imports was built and checked.**
 - **Source scan.** `sorry`, `admit`, `native_decide` and `axiom` occur in neither
   `results/H` nor the parent `ErdosSzekeres/` tree, except inside comments.
 - **Independent `#print axioms`.** These were run in a separate file (`logs/H_print_axioms.log`)
