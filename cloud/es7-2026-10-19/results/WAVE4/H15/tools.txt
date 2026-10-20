@@ -1,0 +1,8 @@
+BIN=/opt/work/bin  WORK=/opt/work/tmp
+cadical   https://github.com/arminbiere/cadical   c60730422e758ef1cebe7aeddf2dda31c996bf04  (./configure && make; --version 3.0.1)
+march_cu  https://github.com/marijnheule/CnC      705b60c6491ef2b61988b3ce6ac674be1b90571d  (march_cu/, make with CFLAGS += -fcommon)
+cake_lpr  https://github.com/tanyongkiam/cake_lpr a36874a8b750b43fe4b385b8ddbf5b033e46a3fa  (make cake_lpr; example.cnf/example.lpr -> s VERIFIED UNSAT)
+F.cnf sha256 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d (regenerated, matches)
+U_L2 CASE.cnf sha256 1d26b9475d1609388bda1853cc22c1fba0bb73fb1a5f8a28adf9fbd3f15aaa53 (matches cases.jsonl)
+top.icnf: 324 lines = 324 cubes in tasks/H15.json (e0f250b), file order; sha256 6cb61c071a23ba87f34733c06bb70b87818cb154821fc4db0a9708ef87175c4f
+driver started 2026-10-20T12:55:42Z with --hours 2.221
