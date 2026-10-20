@@ -1,0 +1,42 @@
+# V2G step 5a: kernel trials of the tree check on the data at branch commit e1d13c7b (working tree,
+# scripts/gen_trees.py --partial; 3 cases still open there). 4 cores, 15 GB, no swap.
+# Wall time and peak RSS by a wrapper (resource.getrusage(RUSAGE_CHILDREN).ru_maxrss, the max
+# over the lean processes), each run alone.
+#
+# Cases: U_L8 (k=13) 2,598 leaves, 40 split nodes, 41 sibling lists, depth 7
+#        U4_L (k=4)  3,336 leaves, 51 split nodes, 52 sibling lists, depth 5
+#        U_L7 (k=11) 3,707 leaves, 59 split nodes, 60 sibling lists, depth 7
+#        (largest: U_L2 (k=1) 22,529 leaves, 357 split nodes, 358 sibling lists)
+#
+# 1. As TREE_TASK.md 5b says, one theorem per case, (tree).check = true by decide +kernel,
+#    in a Mathlib-free scratch copy (CoverCore + the CTree definitions + the U_L8 data), bare lean:
+#      U_L8, data only (elaboration):            6.3 s, peak 0.45 GB
+#      U_L8, + tree013.check = true:              73.6 s, peak 5.65 GB  (kernel ~67 s)
+#      U_L8, + coverCheck of the root list only:  10.1 s, peak 0.76 GB
+#    So one kernel run costs ~1.6 s and ~130 MB per sibling list on average, and the memory is
+#    not released between declarations in one process (same file, 4 / 12 / 41 separate
+#    per-sibling-list theorems: peak 0.85 / 1.66 / 4.11 GB). U_L2 (358 lists) as one theorem
+#    would need ~45 GB; it does not fit in 15 GB.
+# 2. Therefore (deviation from 5b, see README): one theorem per sibling list,
+#      theorem cK_j : coverCheck (nK_j.map Prod.fst) = true := by decide +kernel
+#    in modules of at most N lists (separate lean processes), and per case
+#      theorem sibK : treeK.sibLists = [nK_0.map Prod.fst, ...] := rfl
+#      theorem checkK : (treeOf s).check = true   -- from CTree.check_of_sibLists, no re-evaluation
+#    Per module (lake env lean FILE, Mathlib-importing V2L modules; import base ~2 GB):
+#      V2L/Trees/N013_0.lean 16 PEAK rc=0 wall=28.2s maxrss_children=3.44GB sampled_max_lean_rss=3.43GB
+#      V2L/Trees/N013_1.lean 16 PEAK rc=0 wall=23.0s maxrss_children=3.42GB sampled_max_lean_rss=3.42GB
+#      V2L/Trees/N013_2.lean 9 PEAK rc=0 wall=14.1s maxrss_children=2.67GB sampled_max_lean_rss=2.65GB
+#      V2L/Trees/Check013.lean 1 PEAK rc=0 wall=3.6s maxrss_children=2.13GB sampled_max_lean_rss=2.06GB
+#      V2L/Trees/N004_0.lean 16 PEAK rc=0 wall=27.2s maxrss_children=3.51GB sampled_max_lean_rss=3.49GB
+#      V2L/Trees/N004_1.lean 16 PEAK rc=0 wall=23.6s maxrss_children=3.41GB sampled_max_lean_rss=3.39GB
+#      V2L/Trees/N004_2.lean 16 PEAK rc=0 wall=23.3s maxrss_children=3.30GB sampled_max_lean_rss=3.30GB
+#      V2L/Trees/N004_3.lean 4 PEAK rc=0 wall=7.3s maxrss_children=2.34GB sampled_max_lean_rss=2.34GB
+#      V2L/Trees/N011_0.lean 16 PEAK rc=0 wall=25.5s maxrss_children=3.35GB sampled_max_lean_rss=3.34GB
+#      V2L/Trees/N011_1.lean 16 PEAK rc=0 wall=22.6s maxrss_children=3.36GB sampled_max_lean_rss=3.35GB
+#      V2L/Trees/N011_2.lean 16 PEAK rc=0 wall=22.1s maxrss_children=3.35GB sampled_max_lean_rss=3.33GB
+#      V2L/Trees/N011_3.lean 12 PEAK rc=0 wall=17.5s maxrss_children=3.07GB sampled_max_lean_rss=3.06GB
+#    (columns: module, number of decide +kernel theorems, wall, peak RSS; N = 16 here.)
+#    So ~1.3 s per sibling list and ~90 MB per list on top of the ~2.1 GB import base. The
+#    final run uses N = 10 (peak ~3 GB per process, 4 lake jobs in parallel stay under 13 GB).
+# 3. The 450-way combination (AllOf chain of per-case theorems, `exact` against caseSpecs)
+#    elaborates in ~5 s (tested with a decidable dummy predicate over caseSpecs).
