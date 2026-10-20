@@ -10,3 +10,8 @@
 - 02:41 launched on 4 cores: grow_guided.py (F2) seeds 4000001, 4000002; arm_f.py (F2/s2) seed
   4000003; gen_models.py seeds 4000004 (400 models) + 4000005 (2,600 models), 3,000 distinct,
   all OK under brute26 26 5 7 7, then realize_models.py (validated realizer, 4 CPU-s, ins-ff,lp).
+- 02:58 control: F4 process_new26.sh on F2's gg401_5 (fingerprint check bypassed) gives 5 direction-scan
+  deep-below 32-sets + the s2-convention set (same order type as d4), 5 distinct order types,
+  as F2 reported; all general position, lcs 6, brute_kgon 0 convex 7-sets, ext_solve 33/33 UNSAT
+  on all 9 files; sat.c 0 bad candidates on the 3 files below 2^27 (2 order types).  Added a
+  compression retry (2 x 150 CPU-s) so more order types get the geometric face sweep.

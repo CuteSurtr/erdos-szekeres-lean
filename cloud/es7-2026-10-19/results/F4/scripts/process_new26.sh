@@ -32,6 +32,9 @@ for l in open('$O/s2conv/sets32.jsonl'):
     for k,suf in (('points_exact',''),('points','_small')):
         if k in r:
             open('$O/s2conv/'+r['id']+'_s2'+suf+'.pts','w').write(''.join(f'{x} {y}\n' for x,y in r[k]))"
+# retry compression (2 seeds x 150 CPU-s) for direction-scan sets still at |coord| >= 2^27
+for f in $O/f2conv/*_d[0-9]*.pts; do case $f in *_small.pts) continue;; esac
+  [ -e ${f%.pts}_small.pts ] || $PY $F2/scripts/compress32.py 150 $f >> $O/compress.log; done
 ls $O/f2conv/*.pts $O/s2conv/*.pts 2>/dev/null > $O/all32.txt || true
 $PY $D/fingerprint.py $(cat $O/all32.txt) > $O/fp32.txt
 $PY $F2/scripts/check32.py $S/bin/sat $S/bin/ext_solve $S/bin/brute_kgon $S/b33.cnf $O/check $(cat $O/all32.txt) > $O/check32.jsonl
