@@ -41,3 +41,8 @@
   211 violated triples at best (proves nothing; KPH report ~1.6e-4 realization rate at this size).
 - 02:23 hard102 interim: 496/945 cubes done (493 UNSAT, 3 hit 600 s), summed cube time 4,525 s;
   solve-time histogram <1 s: 331, 1-10 s: 130, 10-60 s: 23, 60-600 s: 9, >=600 s: 3.
+- 03:06 hard102 finished its pass (hard102/cubes.tsv: idx, result, seconds, conflicts): 945 cubes,
+  931 UNSAT, 14 hit the 600 s cap, 0 SAT. Wall 72 min on 3 cores; summed cube time 12,611 s
+  (censored: lower bound). UNSAT cube times: median 0.43 s, p90 5.7 s, p99 61 s, max 487 s.
+  So this one depth-30 node is NOT closed: 14 depth-40 cubes remain open after 600 s each.
+- 03:07 sampling shallower random nodes (depth 24 x9, 18 x6, 12 x3), plain CaDiCaL, 300 s cap.
