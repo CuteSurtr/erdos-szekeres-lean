@@ -80,10 +80,10 @@
    ],
    "closed": false,
    "lrat_all_verified": false,
-   "unsat_leaves": 2,
+   "unsat_leaves": 25,
    "sat": 0,
-   "open_nodes": 62,
-   "open_fraction": "31/32"
+   "open_nodes": 39,
+   "open_fraction": "39/64"
   },
   "41": {
    "cube": [
@@ -97,10 +97,10 @@
    ],
    "closed": false,
    "lrat_all_verified": false,
-   "unsat_leaves": 45,
+   "unsat_leaves": 139,
    "sat": 0,
-   "open_nodes": 19,
-   "open_fraction": "19/64"
+   "open_nodes": 113,
+   "open_fraction": "113/262144"
   },
   "49": {
    "cube": [
@@ -146,12 +146,12 @@
     2364,
     -2689
    ],
-   "closed": false,
-   "lrat_all_verified": false,
-   "unsat_leaves": 9,
+   "closed": true,
+   "lrat_all_verified": true,
+   "unsat_leaves": 64,
    "sat": 0,
-   "open_nodes": 55,
-   "open_fraction": "55/64"
+   "open_nodes": 0,
+   "open_fraction": "0"
   },
   "73": {
    "cube": [
@@ -275,15 +275,15 @@
  },
  "n_roots_seen": 16,
  "total": {
-  "closed_roots": 5,
-  "closed_lrat_roots": 5,
-  "unsat_leaves": 378,
+  "closed_roots": 6,
+  "closed_lrat_roots": 6,
+  "unsat_leaves": 550,
   "sat_leaves": 0,
-  "open_nodes": 204,
-  "splits": 9,
-  "gaps": 9,
+  "open_nodes": 220,
+  "splits": 12,
+  "gaps": 12,
   "lrat_failed": 0,
-  "cpu_solve_s": 23242.0,
-  "cpu_lrat_s": 441.3
+  "cpu_solve_s": 30767.0,
+  "cpu_lrat_s": 596.6
  }
 }
