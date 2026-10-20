@@ -479,3 +479,8 @@
 {"cube": [-1824, 1040, 2290, -605, 2329, 2364, 2380, 2347, 2310, 2269, 2247, 2224, 2200, 2406, -557, -2549, 2572, -3211, -1728], "k": 476, "solve_s": 29.1, "proof_bytes": 33566435, "cake_lpr": "s VERIFIED UNSAT", "check_s": 4.81, "status": "UNSAT", "cpu_s": 32.98}
 {"cube": [-1824, 1040, 2290, -605, 2329, 2364, 2380, 2347, 2310, 2269, 2247, 2224, 2200, 2406, -557, -2549, -2572, -2689, -1838], "k": 479, "solve_s": 18.2, "proof_bytes": 25754302, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.91, "status": "UNSAT", "cpu_s": 20.75}
 {"cube": [-1824, 1040, 2290, -605, 2329, 2364, 2380, 2347, 2310, 2269, 2247, 2224, 2200, 2406, -557, -2549, -2572, -2689, 1838], "k": 480, "solve_s": 82.95, "proof_bytes": 75459717, "cake_lpr": "s VERIFIED UNSAT", "check_s": 10.99, "status": "UNSAT", "cpu_s": 92.28}
+{"restart": true, "reason": "first run (pid 2448) exited normally at ~08:02Z, but its last record(s) and its done record went to a leaves.jsonl inode that a git rebase had replaced, so they were lost; the cubes they covered are re-queued"}
+{"top": true, "ncubes": 128, "shard": 2, "nshards": 3, "shard_cubes": 42, "top_sha256": "c172b9354496170c210bab5707ff63b120495823df0ac3b38b04da125cbfcd08", "case_sha256": "eb730ad3eebdd96f8daf71efb79c4932d861ddd0e0b1c8b38c6423112bf66df8", "start": "2026-10-20T08:02:52Z"}
+{"resume": true, "queued": 1}
+{"cube": [-1824, 1040, 2290, -605, 2329, 2364, 2380, 2347, 2310, 2269, 2247, 2224, 2200, 2406, 557, 2689, 2672, 2705, 2654], "k": 481, "solve_s": 158.97, "proof_bytes": 126391071, "cake_lpr": "s VERIFIED UNSAT", "check_s": 19.35, "status": "UNSAT", "cpu_s": 175.47}
+{"done": true, "leaves": 473, "open": 0, "end": "2026-10-20T08:05:51Z"}
