@@ -505,8 +505,8 @@ with 0 problems.
 - The 172 direct cases: `UNSAT_VERIFIED` in `cases.jsonl`.
 - The 138 empty-cube cases: each matches the manifest's empty leaf.
 - Manifest leaves not in a tree: **52**, all in U_L7 (3,759 manifest leaves against 3,707 tree
-  leaves). They are verified cubes that are not leaves of the recorded split tree, for example
-  cubes of a split node that also got its own record. The task allows this.
+  leaves). Each of them strictly contains a tree leaf. They are cubes below a node that
+  was both closed and split, so the tree stops at the closed node (task rule). The task allows this.
 
 ### 9.5 Kernel checks (`logs/tree_kernel_trial.log`, `logs/tree_kernel.log`, `logs/tree_build.log`)
 
