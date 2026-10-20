@@ -17,6 +17,8 @@ with position).  Loop:
      free x-slot is SAT-tested as the next point (faces_step); only if none extends is a point dropped;
      with >= dthr core points this becomes a bounded depth-first search (B SAT faces per level,
      dbudget face scans in total);
+  3c. endgame (25 points, stuck): for `swaps` random core points c, remove c, take up to B SAT faces
+     for the two free positions, and test each resulting 25-point core for a final SAT face;
   4. hybrid: when stuck with >= rthr core points, the current model (which agrees with the core) is
      also handed to the validated realizer (budget rbudget CPU-s); its points need not keep the core,
      and their x-order need not match the model's (the caller re-checks caps in the actual direction).
@@ -49,7 +51,7 @@ def main():
     ap.add_argument("--S", type=int, default=6); ap.add_argument("--climit", type=int, default=5000)
     ap.add_argument("--maxq", type=int, default=400)
     ap.add_argument("--fthr", type=int, default=18); ap.add_argument("--dthr", type=int, default=22)
-    ap.add_argument("--B", type=int, default=4); ap.add_argument("--maxf", type=int, default=40); ap.add_argument("--dbudget", type=int, default=60); ap.add_argument("--rthr", type=int, default=21); ap.add_argument("--rbudget", type=float, default=3.0)
+    ap.add_argument("--B", type=int, default=4); ap.add_argument("--maxf", type=int, default=40); ap.add_argument("--swaps", type=int, default=8); ap.add_argument("--dbudget", type=int, default=60); ap.add_argument("--rthr", type=int, default=21); ap.add_argument("--rbudget", type=float, default=3.0)
     a = ap.parse_args()
     os.makedirs(a.out, exist_ok=True)
     rnd = random.Random(a.seed)
@@ -220,7 +222,7 @@ def main():
     while time.time() < end:
         chain += 1; t0 = time.time()
         core = {rnd.randint(1, N): (0, 0)}
-        queries = drops = stuck = rcalls = fcalls = fhits = 0; fqueries = [0]; maxk = 1; via = "growth"
+        queries = drops = stuck = rcalls = fcalls = fhits = 0; fqueries = [0]; swapcalls = 0; maxk = 1; via = "growth"
         while len(core) < N and time.time() < end and queries < a.maxq:
             queries += 1
             r, model = query(core)
@@ -243,6 +245,19 @@ def main():
                 if res["realized"] and verify_exact([tuple(p) for p in res["points"]], chi)[0]:
                     core = {i + 1: tuple(p) for i, p in enumerate(res["points"])}; via = "realizer"; break
             stuck = 0 if progressed else stuck + 1
+            if stuck >= a.S and len(core) == N - 1 and a.swaps > 0:
+                # endgame swap search: remove one core point, re-place exhaustively, then try the last point
+                done = None
+                for c in rnd.sample(sorted(core), min(a.swaps, len(core))):
+                    sub = {i: p for i, p in core.items() if i != c}
+                    for c2 in faces_step(sub, want=a.B):
+                        if len(c2) != N - 1: continue
+                        f3 = faces_step(c2, want=1)
+                        if f3: done = f3[0]; break
+                    if done is not None or time.time() > end: break
+                swapcalls += 1
+                if done is not None:
+                    core = done; maxk = N; via = "swap"; break
             if stuck >= a.S and len(core) >= a.fthr and fcalls < a.maxf:
                 fcalls += 1
                 if len(core) >= a.dthr:
@@ -257,7 +272,7 @@ def main():
                 for _ in range(rnd.randint(1, 3)):
                     if len(core) > 1: del core[rnd.choice(sorted(core))]
                 drops += 1; stuck = 0
-        rec = {"chain": chain, "reached": len(core), "max_reached": maxk, "queries": queries, "drops": drops, "realizer_calls": rcalls, "face_calls": fcalls, "face_hits": fhits, "face_queries": fqueries[0], "via": via,
+        rec = {"chain": chain, "reached": len(core), "max_reached": maxk, "queries": queries, "drops": drops, "realizer_calls": rcalls, "face_calls": fcalls, "face_hits": fhits, "face_queries": fqueries[0], "swap_calls": swapcalls, "via": via,
                "secs": round(time.time() - t0, 1)}
         if len(core) == N:
             pts = [core[i] for i in sorted(core)]
