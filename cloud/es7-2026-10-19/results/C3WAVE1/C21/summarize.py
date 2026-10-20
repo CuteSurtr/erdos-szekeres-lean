@@ -44,8 +44,9 @@ for i, r in enumerate(roots):
     else: nns = locals().get('nns', 0) + 1
     f = lambda c: ", ".join(f"d{d}:{c[d]}" for d in sorted(c)) or "-"
     print(f"| {i} | `{r}` | {st} | {f(acc['cert'])} | {sum(acc['split'].values())} | {sum(acc['open'].values()) if started else '-'} | {acc['solve']:.0f} | {acc['check']:.0f} |")
-print(f"\nroots closed: {nclosed}/{len(roots)}; not started: {locals().get('nns', 0)}; total solve {S:.0f} s, check {C:.0f} s (wall per node, 4 jobs in parallel)\n")
+print(f"\nroots closed: {nclosed}/{len(roots)}; not started: {locals().get('nns', 0)}; total solve {S:.0f} s, check {C:.0f} s (wall per node, summed; 3-4 jobs ran in parallel)\n")
 print("| depth | certified | split | open (tried or queued, not closed) |\n|---|---|---|---|")
 for d in sorted(set(tot["cert"]) | set(tot["split"]) | set(tot["open"])):
     print(f"| {d} | {tot['cert'][d]} | {tot['split'][d]} | {tot['open'][d]} |")
-print(f"\nSAT records: {len(sat)}; UNSAT not certified (proof rejections): {len(bad)}")
+print(f"\nSAT records: {len(sat)}; UNSAT records not certified: {len(bad)}, of which still uncertified after a re-check: {len([r for r in bad if r['node'] not in cert])}")
+for r in bad: print(f"- `{r['node']}`: lrat_check={r.get('lrat_check')!r}, cake_lpr={r.get('cake_lpr')!r}; certified on re-check: {r['node'] in cert}")
