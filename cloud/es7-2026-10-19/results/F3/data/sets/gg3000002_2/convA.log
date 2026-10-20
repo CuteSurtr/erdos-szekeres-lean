@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results/F2/s2/scripts/saturate32.py", line 22, in <module>
+    P = [tuple(p) for p in (rec["points"] if small else rec["points_exact"])]; n = len(P)
+                                                        ~~~^^^^^^^^^^^^^^^^
+KeyError: 'points_exact'

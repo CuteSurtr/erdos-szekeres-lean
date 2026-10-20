@@ -3,39 +3,45 @@
   "grow_guided": {
    "seeds": [
     "3000001",
-    "3000002"
+    "3000002",
+    "3000003"
    ],
-   "chains": 2,
-   "reached26": 1,
+   "chains": 6,
+   "reached26": 2,
    "reached_hist": {
+    "15": 1,
     "18": 1,
-    "26": 1
+    "19": 1,
+    "20": 1,
+    "26": 2
    }
   },
   "arm_f": {
-   "restarts": 346,
+   "restarts": 661,
    "complete": 0,
    "complete_exact_ok": 0,
    "fail_at_hist": {
-    "11": 1,
-    "12": 6,
-    "13": 9,
-    "14": 28,
-    "15": 57,
-    "16": 86,
-    "17": 65,
-    "18": 40,
-    "19": 29,
-    "20": 22,
-    "21": 3
+    "9": 1,
+    "11": 5,
+    "12": 9,
+    "13": 20,
+    "14": 59,
+    "15": 93,
+    "16": 146,
+    "17": 133,
+    "18": 96,
+    "19": 58,
+    "20": 35,
+    "21": 5,
+    "22": 1
    }
   },
   "kph_style": {
-   "models_realize_attempted": 257,
+   "models_realize_attempted": 682,
    "realized": 0,
    "realized_exact_ok": 0,
-   "realizer_cpu_s": 1310,
-   "models_generated": 300
+   "realizer_cpu_s": 3475,
+   "models_generated": 800
   }
  },
  "sets": [
@@ -75,6 +81,28 @@
     "OK 1",
     "OK 2"
    ],
+   "convB": []
+  },
+  {
+   "id": "gg3000002_2",
+   "fp": "c0458eb8fb9c4b153ec2",
+   "duplicate": null,
+   "done": false,
+   "verify26": {
+    "general_position": true,
+    "cap_cup": [
+     4,
+     6
+    ],
+    "lcs": 6,
+    "brute_axviol_cap_cup_lcs": [
+     "0",
+     "4",
+     "6",
+     "6"
+    ]
+   },
+   "convA": [],
    "convB": []
   }
  ],
