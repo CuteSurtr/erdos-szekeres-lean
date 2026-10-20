@@ -16,7 +16,7 @@ Step:
  3. If no proposal is SAT, the last two placed labels are removed (bounded backtracking).
 A complete 26-point set is re-checked exactly (increasing x, no collinear triple, the exact
 orientations form a model of the CNF) and brute-forced later by brute26.c."""
-import sys, os, json, argparse, itertools, time, random, math
+import sys, os, json, argparse, itertools, time, random, math, collections
 import numpy as np, highspy
 from pysat.formula import CNF
 from pysat.solvers import Solver
@@ -28,6 +28,7 @@ ap.add_argument("--backtrack", type=int, default=10); ap.add_argument("--box", t
 ap.add_argument("--jitter", type=float, default=0.0, help="place at a random point of the inscribed disc, radius fraction")
 ap.add_argument("--bt-depth", type=int, default=0, help="backtrack removes 1..bt_depth labels (random); 0 = always 2")
 ap.add_argument("--extra-props", type=int, default=0, help="extra randomly weighted L1 proposals per label")
+ap.add_argument("--smart-bt", action="store_true", help="backtrack by removing the placed labels that block the best L1 proposal")
 ap.add_argument("-o", required=True)
 a = ap.parse_args()
 n = a.n; TR = list(itertools.combinations(range(n), 3)); nx = len(TR)
@@ -174,7 +175,17 @@ while time.time() - w0 < a.time:
             maxk = max(maxk, len(Pl)); continue
         bt += 1
         if bt > a.backtrack or len(order) <= 3: break
-        for _ in range(min(rng.randint(1, a.bt_depth) if a.bt_depth else 2, len(order) - 2)): del Pl[order.pop()]
+        nrem = min(rng.randint(1, a.bt_depth) if a.bt_depth else 2, len(order) - 2)
+        if a.smart_bt and not placed and cand:
+            # remove the placed labels most often on the wrong side for the best L1 proposal
+            _, q, c = cand[0]; gx, gy, g0 = rows_for(G, C, q)
+            viol = np.nonzero(gx * c[0] + gy * c[1] + g0 <= 0)[0]
+            cnt = collections.Counter()
+            for v in viol: cnt[int(G["la"][G["ii"][v]])] += 1; cnt[int(G["la"][G["jj"][v]])] += 1
+            for lab, _ in cnt.most_common(nrem):
+                if len(order) > 3 and lab in Pl: del Pl[lab]; order.remove(lab)
+        else:
+            for _ in range(nrem): del Pl[order.pop()]
         s.set_phases([v if rng.random() < 0.5 else -v for v in range(1, nx + 1)])
         s.conf_budget(a.conf * 4)
         if not s.solve_limited(assumptions=lits_placed(Pl)): break
