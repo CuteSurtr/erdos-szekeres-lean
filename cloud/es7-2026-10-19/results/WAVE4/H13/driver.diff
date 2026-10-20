@@ -1,0 +1,14 @@
+close_march.py is a byte-for-byte copy of results/WAVE2/F2/close_march.py (no diff).
+sha256 2e0975aa98c7dbcc2cf535993b54f57db764f7bf50f64fc54b9ff2860e67c855 (same for source and copy)
+
+Checked:
+(a) every solver job (solve, line 83) and every march job (march, line 39) uses its own
+    tempfile.mkdtemp(dir=WORK) directory, removed afterwards; cake_lpr runs on the files in
+    the solver job's directory.
+(b) finalize() (lines 134-142) writes leaves.icnf and open.icnf with tempfile.mkstemp in the
+    output directory and os.replace into place.
+(c) the first record of leaves.jsonl is {"case": <--name>, "case_sha256": ...} (lines 117-119);
+    run with --name U_L2.
+Also (AUDIT BUG-1/RISK-1/RISK-3): leaves.icnf and the closed set include only records with
+cake_lpr == "s VERIFIED UNSAT"; other verdicts are UNSAT_UNCHECKED and stay open; every
+line written ends with " 0\n"; the driver used is this reviewed copy, unchanged.
