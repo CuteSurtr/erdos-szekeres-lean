@@ -90,3 +90,10 @@
 {"node": "0s0-1s0_9_4s1-5s0", "status": "UNSATISFIABLE", "solve_s": 14.6, "certified": true}
 {"node": "0s0-1s0_9_4s0-6s1", "status": "UNSATISFIABLE", "solve_s": 15.6, "certified": false}
 PROOF NOT ACCEPTED 0s0-1s0_9_4s0-6s1
+--- manual stop after PROOF NOT ACCEPTED (cake_lpr OOM-killed) at 08:05:37
+=== RESUME with --jobs 3 at 08:06:18
+=== ROOT 0s0-1s0_2s0-3s0 start 08:06:18 H=3.095
+{"root": "0s0-1s0_2s0-3s0", "open_frontier": 0}
+=== ROOT 0s0-1s0_2s0-3s0 end 08:06:23
+STOP: event
+RUNNER_DONE
