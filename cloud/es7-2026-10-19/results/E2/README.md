@@ -5,10 +5,13 @@ encodings are tested but not formally verified.
 
 ## Status in one paragraph
 
-**`n33k7m3` is still open.** No cube of the cube-and-conquer tree closed in this run
-(closed weight exactly 0/1); no model was found. The frontier went from 55 cubes at
-depth 5–6 (inherited from task E) to __FINAL_OPEN__. A Knuth random-probe estimate puts
-the remaining tree at 10^4.4 leaves or more, with a heavy tail. The run is far from
+**`n33k7m3` is still open.** After 605 jobs (12.9 cumulative solve-hours including E's
+2.6), the cube-and-conquer driver closed **one** cube (depth 9; closed weight exactly
+**1/512**). That cube passes an LRAT check with both sound checkers, so LRAT coverage of
+closed cubes is 1/1. No model was found. The frontier went from 55 cubes at depth 5–6
+(inherited from task E) to 604 open cubes at depth 9–10. A Knuth random-probe estimate puts
+the full tree at roughly 2.5·10^4 leaves at the very least, and more likely ≥ 3·10^5,
+with a heavy tail. The run is far from
 converging on 4 cores (see §4). **A side finding matters more than the run:** the
 `lrat-check` that task E used (drat-trim git 2e3b2dc, which is also current upstream
 master) accepts a forged one-line proof on a satisfiable CNF (§2). E2 re-checked E's three
@@ -120,15 +123,21 @@ Frontier history (`run/progress.log`; driver restarts write "start" lines):
 | 02:29 | 9,167 | 428 | 0 | 8: 83, 9: 346 | 8.78 |
 | 02:42 (after restart 2) | 9,887 | 466 | 0 | 8: 45, 9: 422 | 9.37 |
 | 03:12 | 11,688 | 529 | 0 | 9: 494, 10: 36 | 10.82 |
-__FINAL_ROW__
+| 03:54 (final, deadline) | 14,211 | 605 | **1** (depth 9) | 9: 418, 10: 186 | 12.87 |
 
-Every job so far exhausted its budget and split; there have been no retries. The
+Every job except one exhausted its budget and split, and there were no retries. The one
+closed cube is `[-1456, -1094, 307, -1584, 1314, 1336, -663, -1241, -1494]` (depth 9).
+The incremental worker closed it in 20 ms, helped by clauses it had already learned. From
+scratch, CaDiCaL proved it UNSAT in 10.3 s with a 614 KB LRAT proof, which the patched
+lrat-check and cake_lpr both accept (`logs/lrat_driver_closed.jsonl`). The final tree
+check (`run/verify_tree.json`) gives 1 closed leaf, 604 open leaves, 604 internal nodes,
+partition_ok true and closed weight 1/512. The
 exact-weight invariant (closed + open = 1) held at every log line.
 
 ## 4. Convergence assessment and tree size (`probe/`, `tools/knuth_probe.py`)
 
-**The driver gives no convergence signal.** The closed weight is exactly 0 after
-__FINAL_JOBS__ jobs. The tree is complete down to depth 8 or 9: all 2^8 = 256 depth-8
+**The driver gives almost no convergence signal.** The closed weight is exactly 1/512 after
+605 jobs (only 1/512 closed). The tree is complete down to depth 8 or 9: all 2^8 = 256 depth-8
 nodes exist and none has closed. Per-job time grows with depth, about 60–100 s at depth 8
 and 3–9 min at depth 15–20, because the budget grows 1.2× per level.
 
@@ -142,7 +151,7 @@ Knuth's estimator then gives 2^(D−d0) leaves for that cube's subtree. Walks so
 | s10 #0 | 8 | closed at depth 14 | 64 |
 | s9 #0 | 7 | **still open at depth 20** when container restart 2 killed it | ≥ 8,192 (censored) |
 | s8 #0 | 7 | killed at depth 12 by container restart 1 | no information |
-__PROBE_ROWS__
+| s10 #1 | 8 | **still open at depth 18** at the probe deadline | ≥ 1,024 (censored) |
 
 **Both closed probe leaves were re-proved from scratch with an LRAT proof, and both checkers
 accept them** (`logs/lrat_probe_leaves.jsonl`):
@@ -158,8 +167,11 @@ cube):
 
 - **Optimistic,** using only the two closed walks: about 256 × 96 ≈ 2.5·10^4 leaves, so
   about 5·10^4 jobs. At 2–5 CPU-minutes per job that is about 2·10^3–4·10^3 core-hours.
-- **With the censored s9 walk** (≥ 2^12 per depth-8 cube on that path): the mean is at least
-  about 1.4·10^3, so ≥ 3.7·10^5 leaves. Jobs there take 5–10 min, so ≳ 5·10^4 core-hours.
+- **With the two censored walks** (s9: ≥ 2^12 per depth-8 cube on that path; s10 #1:
+  ≥ 2^10): the mean over the four walks is ≥ (128 + 64 + 4096 + 1024)/4 ≈ 1.3·10^3, so
+  ≥ 3.4·10^5 leaves. Jobs there take 5–10 min, so ≳ 5·10^4 core-hours.
+- The driver's depth-9 closure shows that some subtrees are tiny. The probe never sampled
+  one, so the spread between subtrees is very large in both directions.
 
 With two complete walks and one censored walk this is a very rough, heavy-tailed estimate.
 The honest summary is **"at least thousands of core-hours, plausibly tens of thousands."**
