@@ -49,7 +49,7 @@ def main():
     ap.add_argument("--S", type=int, default=6); ap.add_argument("--climit", type=int, default=5000)
     ap.add_argument("--maxq", type=int, default=400)
     ap.add_argument("--fthr", type=int, default=18); ap.add_argument("--dthr", type=int, default=22)
-    ap.add_argument("--B", type=int, default=4); ap.add_argument("--dbudget", type=int, default=60); ap.add_argument("--rthr", type=int, default=21); ap.add_argument("--rbudget", type=float, default=3.0)
+    ap.add_argument("--B", type=int, default=4); ap.add_argument("--maxf", type=int, default=40); ap.add_argument("--dbudget", type=int, default=60); ap.add_argument("--rthr", type=int, default=21); ap.add_argument("--rbudget", type=float, default=3.0)
     a = ap.parse_args()
     os.makedirs(a.out, exist_ok=True)
     rnd = random.Random(a.seed)
@@ -109,7 +109,6 @@ def main():
         restricted to q's x-slot, dedupe by float sign vector, and SAT-test each (exact bits); returns
         a list of up to `want` new cores (one per SAT candidate, at most 2 per position q)"""
         found = []
-        nonlocal queries
         ids = sorted(core); P = np.array([core[i] for i in ids], dtype=float)
         cx, cy = P[:, 0].mean(), P[:, 1].mean(); sc = max(1.0, np.abs(P - [cx, cy]).max())
         Q = (P - [cx, cy]) / sc
@@ -174,8 +173,32 @@ def main():
                     bits.append("1" if o > 0 else "0")
                 if bad: continue
                 srv.stdin.write(f"{len(nid)} {' '.join(map(str, nid))} {''.join(bits)}\n"); srv.stdin.flush()
-                queries += 1
+                fqueries[0] += 1
                 if srv.stdout.readline().strip() == "SAT":
+                    # move the new point to the Chebyshev centre of its face (same sign pattern), exactly
+                    sp = np.array([1.0 if b else -1.0 for b in sg[t]])
+                    ax_, ay_ = list(Q[ii, 0]), list(Q[ii, 1]); bx_, by_ = list(Q[jj, 0]), list(Q[jj, 1]); ss = list(sp)
+                    if L is not None: ax_.append(xs[L]); ay_.append(0.0); bx_.append(xs[L]); by_.append(1.0); ss.append(-1)
+                    if R is not None: ax_.append(xs[R]); ay_.append(0.0); bx_.append(xs[R]); by_.append(1.0); ss.append(1)
+                    # sg uses n.z - c > 0 with n = (-dy, dx): that is det(a, b, z) > 0, the same sign convention
+                    rr = _cell_point(None, None, tuple(np.array(v, float) for v in (ax_, ay_, bx_, by_, ss)), 3.0)
+                    if rr is not None and rr[2] > 1e-12:
+                        for extra in (0, 8, 16):
+                            k2 = (max(0, math.ceil(math.log2(16 / (rr[2] * sc)))) if rr[2] * sc < 16 else 0) + extra
+                            f2 = 1 << k2
+                            c3 = {i: (f2 * x, f2 * y) for i, (x, y) in core.items()}
+                            p3 = (round(f2 * (cx + sc * rr[0])), round(f2 * (cy + sc * rr[1])))
+                            n3 = dict(c3); n3[q] = p3
+                            pts3 = [n3[i] for i in nid]
+                            ok3 = [pt[0] for pt in pts3] == sorted(set(pt[0] for pt in pts3))
+                            if ok3:
+                                b3 = []
+                                for i1, j1, l1_ in itertools.combinations(range(len(pts3)), 3):
+                                    o = orient(pts3[i1], pts3[j1], pts3[l1_])
+                                    if o == 0: ok3 = False; break
+                                    b3.append("1" if o > 0 else "0")
+                            if ok3 and "".join(b3) == "".join(bits):
+                                new = n3; break
                     g = 0
                     while all(x % 2 == 0 and y % 2 == 0 for x, y in new.values()) and g < 200:
                         new = {i: (x // 2, y // 2) for i, (x, y) in new.items()}; g += 1
@@ -197,7 +220,7 @@ def main():
     while time.time() < end:
         chain += 1; t0 = time.time()
         core = {rnd.randint(1, N): (0, 0)}
-        queries = drops = stuck = rcalls = fcalls = fhits = 0; maxk = 1; via = "growth"
+        queries = drops = stuck = rcalls = fcalls = fhits = 0; fqueries = [0]; maxk = 1; via = "growth"
         while len(core) < N and time.time() < end and queries < a.maxq:
             queries += 1
             r, model = query(core)
@@ -220,7 +243,7 @@ def main():
                 if res["realized"] and verify_exact([tuple(p) for p in res["points"]], chi)[0]:
                     core = {i + 1: tuple(p) for i, p in enumerate(res["points"])}; via = "realizer"; break
             stuck = 0 if progressed else stuck + 1
-            if stuck >= a.S and len(core) >= a.fthr:
+            if stuck >= a.S and len(core) >= a.fthr and fcalls < a.maxf:
                 fcalls += 1
                 if len(core) >= a.dthr:
                     r = dfs(core, [a.dbudget])
@@ -234,7 +257,7 @@ def main():
                 for _ in range(rnd.randint(1, 3)):
                     if len(core) > 1: del core[rnd.choice(sorted(core))]
                 drops += 1; stuck = 0
-        rec = {"chain": chain, "reached": len(core), "max_reached": maxk, "queries": queries, "drops": drops, "realizer_calls": rcalls, "face_calls": fcalls, "face_hits": fhits, "via": via,
+        rec = {"chain": chain, "reached": len(core), "max_reached": maxk, "queries": queries, "drops": drops, "realizer_calls": rcalls, "face_calls": fcalls, "face_hits": fhits, "face_queries": fqueries[0], "via": via,
                "secs": round(time.time() - t0, 1)}
         if len(core) == N:
             pts = [core[i] for i in sorted(core)]
