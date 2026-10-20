@@ -110,8 +110,8 @@ mostly the split lookahead.
 | (7,5,7)@27 | 17 | 16–28 | 1.7e7; 1.3e5–5.4e8 | 62,610; 205,458; 59,166–372,863; 636–1,575,593 |
 
 Probe leaf cubes were re-solved from scratch with `cadical --lrat` and checked with
-`lrat-check` (`logs/knuth/lrat_leaves.jsonl`). Every leaf checked was VERIFIED and was also
-UNSAT on the Baek–Balko CNF. This only shows that the leaves the probes reach are genuinely
+`lrat-check` (`logs/knuth/lrat_leaves.jsonl`). **All 28 probe leaves (11 + 17) were VERIFIED**, and all
+28 are also UNSAT on the Baek–Balko CNF with the same lex-leader. This only shows that the leaves the probes reach are genuinely
 refutable, and cheaply so (5–20 s, 8–22 MB proofs).
 
 **Convergence assessment (honest).**
