@@ -18,11 +18,12 @@ ap.add_argument("--timeout", type=int, default=300)
 ap.add_argument("--split-depth", type=int, default=6); ap.add_argument("--jobs", type=int, default=4)
 ap.add_argument("--hours", type=float, default=1e9)
 ap.add_argument("--work", default=None)
+ap.add_argument("--log", default=None)  # live log outside the git tree (a git checkout replaces the file under an open handle)
 a = ap.parse_args(); os.makedirs(a.out, exist_ok=True)
 work = a.work or a.out; os.makedirs(work, exist_ok=True)
 deadline = time.time() + a.hours * 3600
 hdr, body = open(a.case).read().split("\n", 1); nv, nc = int(hdr.split()[2]), int(hdr.split()[3])
-lock = threading.Lock(); LP = os.path.join(a.out, "leaves.jsonl")
+lock = threading.Lock(); LP = a.log or os.path.join(a.out, "leaves.jsonl")
 VER = "s VERIFIED UNSAT"
 old = [json.loads(l) for l in open(LP)] if os.path.exists(LP) else []
 log = open(LP, "a")
@@ -101,7 +102,8 @@ print(f"top {len(tops)} mine {len(mine)} todo {len(todo)}", flush=True)
 for c in todo: submit(c)
 with cv:
     while count[0] > 0: cv.wait()
-leaves = [json.loads(l) for l in open(LP)]
+log.close(); leaves = [json.loads(l) for l in open(LP)]
+if a.log: open(os.path.join(a.out, "leaves.jsonl"), "w").writelines(open(LP))
 last = {}
 for r in leaves:
     if "cube" in r: last[tuple(r["cube"])] = r
