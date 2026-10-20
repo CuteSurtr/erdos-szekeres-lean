@@ -15,8 +15,11 @@ to two UNSAT facts about files that the Lean generator writes byte for byte. **T
 facts are not established here.** The parallel shard runs did not close either instance. C2's final
 state (commit 3a34639) has open weight 0.002722 in sub-case (i) (1,048 open cubes) and
 0.3640 in sub-case (ii) (1,340 open cubes).
-Everything below is about the encoding and the checking pipeline. None of it is a claim about
-ES(7) or about the mirror class.
+This run then attacked C2's 1,048 open cubes of sub-case (i) with plain CaDiCaL (no conflict
+limit, 600 s cap) and cake_lpr. **1,047 were refuted with cake_lpr-verified proofs. One cube,
+of weight 2^-19, timed out and is still open** (see §4 and §5). Sub-case (i) is therefore not
+closed, though it is one cube away. Nothing here is a claim about ES(7) or about the mirror
+class.
 
 There is no `sorry`, `admit`, `native_decide` or new axiom. `MirrorEncoding/Audit.lean`
 checks with `#guard_msgs` that the 29 main theorems use at most `propext`,
@@ -203,6 +206,18 @@ streams ran at nice 10 from 02:59 to 04:46 UTC.
 | (i) `hm33k7.sub` | 4,535 | **4,535** | 0 | 0.99743 | 6,920 | 7,297 | 22.2 MB | 16.5 GB |
 | (ii) `m33k7int.sub` | 749 | **749** | 0 | 0.63687 | 325 | 1,467 | 17.9 MB | 0.65 GB |
 
+Formerly open cubes of sub-case (i), from C2's final `state.json` (03:46 to 06:19 UTC, 4
+streams, `SOLVE_TIMEOUT=600`):
+
+| cubes | cake_lpr `s VERIFIED UNSAT` | timed out | weight verified | weight left | CaDiCaL s | cake_lpr s | largest proof |
+|---|---|---|---|---|---|---|---|
+| 1,048 | **1,047** | 1 (19 literals) | 0.0027197 | 2^-19 ≈ 1.9e-6 | 17,132 | 3,052 | 301 MB |
+
+Logs: `logs/cube_lrat_i_hull_open.jsonl` and `logs/cube_lrat_i_hull_open.summary.json`. The
+remaining cube is `logs/open_cubes_i_hull_remaining.txt`.
+`logs/cover_check_i_hull_after_open.log` shows `coverCheck` accepting the 5,585 verified
+cubes plus that one cube; without it, the check says `NOT COVERED`.
+
 The weight column is a plain sum over distinct cubes. Some of C2's closed entries are stale
 duplicates of re-split cubes, so the sum can exceed C2's exact closed weight (0.99728 and
 0.63601).
@@ -289,13 +304,15 @@ CaDiCaL, `cnc2.py` and the Python encoders are not trusted.
 
 ## 5. Remaining targets, precisely
 
-1. **`¬ETV.DimacsSatisfiable (Mir.hullCnf 33 7)`.** Open. C2 stopped with 1,048 open
-   cubes (open weight 0.002722). C2's README judges that more of the same cubing will not
-   close it in a predictable time. `logs/cover_check_verified_plus_open.log` shows that the
-   4,535 cake_lpr-verified closed cubes plus `logs/open_cubes_i_hull.txt` are accepted by
-   `coverCheck`. So what is left is exactly this: refute `cubeCnf (hullCnf 33 7) c` for each
-   of the 1,048 open cubes `c` (directly, or by further splitting) with cake_lpr-checked
-   proofs, then rerun `cover_check` on the final leaf list.
+1. **`¬ETV.DimacsSatisfiable (Mir.hullCnf 33 7)`.** Open, by one cube.
+   - Done: every leaf C2 closed (4,535) and 1,047 of C2's 1,048 open cubes have
+     cake_lpr-verified refutations of `cubeCnf (hullCnf 33 7) c`.
+   - Left: refute `cubeCnf (hullCnf 33 7) c₀` for the single cube `c₀` in
+     `logs/open_cubes_i_hull_remaining.txt` (19 literals; CaDiCaL with LRAT did not finish it
+     in 600 s). It can be done directly or by splitting it further, with cake_lpr checking.
+   - Then run `cover_check` on the 5,585 verified cubes plus `c₀`'s leaves.
+   - Then `Mir.not_dimacsSatisfiable_of_coverCheck` gives the UNSAT of this one CNF, resting
+     on cake_lpr and the compiled checker as described in §4.
 2. **`¬ETV.DimacsSatisfiable (Mir.interiorCnf 33 7)`.** Open and far from closure: 1,340 open
    cubes, open weight 0.3640 (`logs/open_cubes_ii_interior.txt`). The same procedure
    applies, and the 749 verified closed cubes are already done.
