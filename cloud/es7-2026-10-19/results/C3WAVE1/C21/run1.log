@@ -19,3 +19,15 @@
 {"root": "0s0-1s0_6s0-9s1", "open_frontier": 0}
 === ROOT 0s0-1s0_6s0-9s1 end 07:43:07 rc=0
 === ROOT 0s0-1s0_8s0-10s1 start 07:43:07 H=3.4942
+{"node": "0s0-1s0_8s0-10s1", "status": "UNSATISFIABLE", "solve_s": 72.7, "certified": true}
+{"root": "0s0-1s0_8s0-10s1", "open_frontier": 0}
+=== ROOT 0s0-1s0_8s0-10s1 end 07:44:59 rc=0
+=== ROOT 0s0-1s1_2s0-7s0 start 07:44:59 H=3.4631
+{"node": "0s0-1s1_2s0-7s0", "status": "UNSATISFIABLE", "solve_s": 239.0, "certified": true}
+{"root": "0s0-1s1_2s0-7s0", "open_frontier": 0}
+=== ROOT 0s0-1s1_2s0-7s0 end 07:49:51 rc=0
+=== ROOT 0s0-1s1_3s0-10s1 start 07:49:51 H=3.3819
+{"node": "0s0-1s1_3s0-10s1", "status": "UNSATISFIABLE", "solve_s": 63.7, "certified": true}
+{"root": "0s0-1s1_3s0-10s1", "open_frontier": 0}
+=== ROOT 0s0-1s1_3s0-10s1 end 07:51:33 rc=0
+=== ROOT 0s0-1s1_3s1-8s1 start 07:51:33 H=3.3536
