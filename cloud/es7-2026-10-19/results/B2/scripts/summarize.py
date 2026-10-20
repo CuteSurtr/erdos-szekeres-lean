@@ -21,7 +21,7 @@ for tag in ("k7a5u7N27", "k7a5u6N26", "k6a5u6N16"):
     out[tag] = {"jobs": st["jobs"], "splits": st["splits"], "closed": st["closed"], "open": len(st["open"]),
                 "closed_weight_exact": st["closed_weight"], "open_weight_exact": f"{ow.numerator}/{ow.denominator}",
                 "open_depth_hist": {str(k): hist[k] for k in sorted(hist)}, "sat": st["sat"]}
-for f in sorted((W / "runs" / "knuth").glob("*.jsonl")):
+for f in sorted((W / "runs" / "knuth").glob("*_s[0-9]*.jsonl")):
     P = [json.loads(l) for l in open(f)]
     fin = [p for p in P if p["end"] == "closed"]
     if not fin:
