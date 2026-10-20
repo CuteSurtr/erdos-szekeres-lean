@@ -36,7 +36,7 @@ if os.path.exists(LP):
             done[tuple(r["cube"])] = r
 log = open(LP, "a")
 def rec(r):
-    with lock: log.write(json.dumps(r) + "\n"); log.flush()
+    with lock: log.write(json.dumps(r) + "\n"); log.flush(); print(json.dumps({k: v for k, v in r.items() if k != "subs"}), flush=True)
 def write(path, cube):
     with open(path, "w") as f:
         f.write(f"p cnf {nv} {nc + len(cube)}\n"); f.write(body); f.write("".join(f"{l} 0\n" for l in cube))
