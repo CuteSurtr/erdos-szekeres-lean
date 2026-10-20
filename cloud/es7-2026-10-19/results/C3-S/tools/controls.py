@@ -15,6 +15,7 @@ sys.path.insert(0, HERE)
 from hullcase import cases, case_name  # noqa: E402
 
 CAD, LRAT, CAKE = "cadical", "lrat-check", "cake_lpr"
+CAP = int(os.environ.get("C3S_CAP", "600"))
 
 
 def sha(p):
@@ -45,7 +46,7 @@ def main():
                                    check=True, capture_output=True)
                     t = time.time()
                     prf = cnf + ".lrat"
-                    args = [CAD, "-q", cnf] + (["--lrat", "--binary=false", prf] if cert and enc == "c3a" else [])
+                    args = [CAD, "-q", "-t", str(CAP), cnf] + (["--lrat", "--binary=false", prf] if cert and enc == "c3a" else [])
                     r = subprocess.run(args, capture_output=True, text=True).stdout
                     st = next((l[2:] for l in r.splitlines() if l.startswith("s ")), "UNKNOWN")
                     rec[enc] = {"status": st, "s": round(time.time() - t, 2), "sha256": sha(cnf)}
