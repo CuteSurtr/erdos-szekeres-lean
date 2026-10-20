@@ -306,3 +306,15 @@ PROOF NOT ACCEPTED 0s0-1s0_6_2
 {"root": "0s0-1s1_2s0-3s0", "open_frontier": 0}
 === ROOT 0s0-1s1_2s0-3s0 end 10:09:29 rc=0
 === ROOT 0s0-1s1_2s1-7s0 start 10:09:29 H=2.2792 jobs=3
+{"node": "0s0-1s1_2s1-7s0", "status": "UNSATISFIABLE", "solve_s": 247.8, "certified": true}
+{"root": "0s0-1s1_2s1-7s0", "open_frontier": 0}
+=== ROOT 0s0-1s1_2s1-7s0 end 10:14:17 rc=0
+=== ROOT 0s0-1s1_3s1-4s1 start 10:14:17 H=2.1992 jobs=3
+{"node": "0s0-1s1_3s1-4s1", "status": "UNSATISFIABLE", "solve_s": 36.6, "certified": true}
+{"root": "0s0-1s1_3s1-4s1", "open_frontier": 0}
+=== ROOT 0s0-1s1_3s1-4s1 end 10:15:18 rc=0
+=== ROOT 0s0-1s1_4s1-10s0 start 10:15:18 H=2.1822 jobs=3
+{"node": "0s0-1s1_4s1-10s0", "status": "UNSATISFIABLE", "solve_s": 72.4, "certified": true}
+{"root": "0s0-1s1_4s1-10s0", "open_frontier": 0}
+=== ROOT 0s0-1s1_4s1-10s0 end 10:16:59 rc=0
+=== ROOT 0s0-1s1_5s1-10s1 start 10:16:59 H=2.1542 jobs=3
