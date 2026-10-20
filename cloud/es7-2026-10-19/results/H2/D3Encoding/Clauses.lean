@@ -53,27 +53,30 @@ def canon (t : Nat) (S : List Nat) : List Nat :=
     let T := sortL (S.map g.1)
     if lexLt T best then T else best) S
 
-/-- `parity_sort` on a triple: the sorted triple and the sign of the sorting permutation. -/
+/-- `parity_sort` on a triple of distinct numbers: the sorted triple and the sign of the
+sorting permutation (Python counts inversions; for distinct entries this is the same). -/
 def paritySort (a b c : Nat) : (Nat × Nat × Nat) × Int :=
-  let inv := (if a > b then 1 else 0) + (if a > c then 1 else 0) + (if b > c then 1 else 0)
-  match sortL [a, b, c] with
-  | [x, y, z] => ((x, y, z), if inv % 2 = 1 then -1 else 1)
-  | _ => ((0, 0, 0), 1)
+  if a < b then
+    if b < c then ((a, b, c), 1) else if a < c then ((a, c, b), -1) else ((c, a, b), 1)
+  else
+    if a < c then ((b, a, c), -1) else if b < c then ((b, c, a), 1) else ((c, b, a), -1)
 
 abbrev TV := Std.HashMap (Nat × Nat × Nat) (Nat × Int)
 
-/-- One step of `D3Encoding._triples`: allocate the next variable for an unseen orbit and
-record `chi(S) = s · sg · v` for every image `S`. -/
+/-- Record `chi(S) = s · sg · v` for every image `S = sorted(g T)` of `T = (a, b, c)`; the
+first entry for `S` wins, as with Python's `seen` dictionary. -/
+def orbitStep (a b c v : Nat) (tv : TV) (g : (Nat → Nat) × Int) : TV :=
+  tv.insertIfNew (paritySort (g.1 a) (g.1 b) (g.1 c)).1
+    (v, (paritySort (g.1 a) (g.1 b) (g.1 c)).2 * g.2)
+
+def insertOrbit (t a b c v : Nat) (tv : TV) : TV :=
+  (group t).foldl (orbitStep a b c v) tv
+
+/-- One step of `D3Encoding._triples`: allocate the next variable for an unseen orbit. -/
 def tripleStep (t : Nat) (st : TV × Nat) (T : List Nat) : TV × Nat :=
   match T with
   | [a, b, c] =>
-    if st.1.contains (a, b, c) then st
-    else
-      let v := st.2 + 1
-      let tv := (group t).foldl (fun tv g =>
-        let (S, s) := paritySort (g.1 a) (g.1 b) (g.1 c)
-        tv.insertIfNew S (v, s * g.2)) st.1
-      (tv, v)
+    if st.1.contains (a, b, c) then st else (insertOrbit t a b c (st.2 + 1) st.1, st.2 + 1)
   | _ => st
 
 /-- The triple table and the number `nX` of triple variables. -/
@@ -82,9 +85,8 @@ def triples (t : Nat) : TV × Nat :=
 
 /-- `SymEncoding.lit`: the literal that is true iff `chi(a,b,c) = +1`. -/
 def lit (tv : TV) (a b c : Nat) : Int :=
-  let (S, s) := paritySort a b c
-  let (v, sg) := tv.getD S (0, 1)
-  s * sg * v
+  (paritySort a b c).2 * (tv.getD (paritySort a b c).1 (0, 1)).2 *
+    ((tv.getD (paritySort a b c).1 (0, 1)).1 : Int)
 
 /-- The A4 (interiority) clauses of one 4-set. -/
 def a4Clauses (L : Nat → Nat → Nat → Int) (S : List Nat) : List (List Int) :=
@@ -121,12 +123,17 @@ def axiomClauses (t : Nat) (L : Nat → Nat → Nat → Int) : List (List Int) :
   ((combs pts 4).filter (isCanon t)).flatMap (a4Clauses L) ++
   ((combs pts 5).filter (isCanon t)).flatMap (gpClauses L)
 
+/-- Drop adjacent repeats (on a sorted list: all repeats). -/
+def uniq : List Int → List Int
+  | a :: b :: l => if a = b then uniq (b :: l) else a :: uniq (b :: l)
+  | l => l
+
 /-- `sorted(units)` for the centre facts, as unit clauses. -/
 def centerClauses (t : Nat) (L : Nat → Nat → Nat → Int) : List (List Int) :=
   let c := 3 * t
   let units := (List.range (3 * t)).flatMap fun a =>
     [L c a (rot c 1 a), -L c a (rot c 2 a)]
-  ((units.mergeSort (· ≤ ·)).eraseDups).map ([·])
+  (uniq (units.mergeSort (· ≤ ·))).map ([·])
 
 /-- The six labelled convex sign patterns `(abc, abd, acd, bcd)` of `a<b<c<d`, in the
 order of `itertools.product((1,-1), repeat=4)`. -/
@@ -136,37 +143,35 @@ def convexPatterns : List (List Int) :=
 
 abbrev CV := Std.HashMap (List Nat) Nat
 
-/-- The `K`-gon part, `--kgon layered`: the conv variables (from `nX + 1` on) and their
-clauses. Returns the clauses, the conv map and the final variable count. -/
+/-- The canonical `r`-subsets of the set points, `4 ≤ r ≤ K - 1`, in Python's allocation
+order (level by level, `combinations` order inside a level). -/
+def convKeys (t K : Nat) : List (List Nat) :=
+  (List.range' 4 (K - 4)).flatMap fun r => (combs (List.range (3 * t)) r).filter (isCanon t)
+
+/-- The clauses that define the conv variable `v` of the key `S`: the six pattern clauses
+for `|S| = 4`, the layered clause `∧ᵢ conv(canon(S∖Sᵢ)) → conv(S)` otherwise. -/
+def convClauses (t : Nat) (L : Nat → Nat → Nat → Int) (cv : CV) (v : Nat) (S : List Nat) :
+    List (List Int) :=
+  match S with
+  | [a, b, c, d] =>
+    let lits := [L a b c, L a b d, L a c d, L b c d]
+    convexPatterns.map fun pat => (List.zipWith (fun p l => -p * l) pat lits) ++ [(v : Int)]
+  | _ =>
+    [((List.range S.length).map fun i => -((cv.getD (canon t (S.eraseIdx i)) 0 : Nat) : Int)) ++
+      [(v : Int)]]
+
+def convStep (t : Nat) (L : Nat → Nat → Nat → Int) (acc : List (List (List Int)) × CV × Nat)
+    (S : List Nat) : List (List (List Int)) × CV × Nat :=
+  (convClauses t L acc.2.1 (acc.2.2 + 1) S :: acc.1, acc.2.1.insertIfNew S (acc.2.2 + 1),
+    acc.2.2 + 1)
+
+/-- The `K`-gon part, `--kgon layered`: conv variables from `nX + 1` on, their clauses, then
+one clause per canonical `K`-set. Returns the clauses and the final variable count. -/
 def kgonLayered (t K : Nat) (L : Nat → Nat → Nat → Int) (nX : Nat) : List (List Int) × Nat :=
-  let pts := List.range (3 * t)
-  let can := canon t
-  -- conv_4
-  let (cl4, cv, nv) := ((combs pts 4).filter (isCanon t)).foldl
-    (fun (acc : List (List (List Int)) × CV × Nat) S =>
-      let (cls, cv, nv) := acc
-      let v := nv + 1
-      match S with
-      | [a, b, c, d] =>
-        let lits := [L a b c, L a b d, L a c d, L b c d]
-        let new := convexPatterns.map fun pat =>
-          (List.zipWith (fun p l => -p * l) pat lits) ++ [(v : Int)]
-        (new :: cls, cv.insert S v, v)
-      | _ => (cls, cv.insert S v, v)) ([], {}, nX)
-  -- conv_r, 5 ≤ r ≤ K-1
-  let (clr, cv, nv) := (List.range' 5 (K - 5)).foldl
-    (fun (acc : List (List (List Int)) × CV × Nat) r =>
-      ((combs pts r).filter (isCanon t)).foldl
-        (fun (acc : List (List (List Int)) × CV × Nat) S =>
-          let (cls, cv, nv) := acc
-          let v := nv + 1
-          let cl := ((List.range r).map fun i =>
-            -((cv.getD (can (S.eraseIdx i)) 0 : Nat) : Int)) ++ [(v : Int)]
-          ([cl] :: cls, cv.insert S v, v)) acc) ([], cv, nv)
-  -- K-sets
-  let clK := ((combs pts K).filter (isCanon t)).map fun S =>
-    (List.range K).map fun i => -((cv.getD (can (S.eraseIdx i)) 0 : Nat) : Int)
-  (cl4.reverse.flatten ++ clr.reverse.flatten ++ clK, nv)
+  let (cls, cv, nv) := (convKeys t K).foldl (convStep t L) ([], {}, nX)
+  let clK := ((combs (List.range (3 * t)) K).filter (isCanon t)).map fun S =>
+    (List.range K).map fun i => -((cv.getD (canon t (S.eraseIdx i)) 0 : Nat) : Int)
+  (cls.reverse.flatten ++ clK, nv)
 
 /-- The labelling normal form (`add_sb`, odd `m`). -/
 def sbClauses (t : Nat) (L : Nat → Nat → Nat → Int) : List (List Int) :=
