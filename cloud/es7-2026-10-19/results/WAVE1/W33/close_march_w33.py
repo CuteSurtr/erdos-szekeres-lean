@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""W33 copy of results/Mii-S/scripts/close_march.py: same recipe, several cases on one shared pool.
+"""W33 copy of results/Mii-S/scripts/close_march.py: same recipe, several cases on one shared
+priority pool (earlier cases first).
 
   close_march_w33.py --cases NAME=CASE.cnf ... --root OUTROOT --jobs 4 --deadline EPOCH
                      [--plain 60] [--shard s --nshards k]
@@ -11,8 +12,7 @@ and its children queued.  Changes from close_march.py: shared pool across cases,
 SPLIT records list their children (`subs`) so a rerun resumes from leaves.jsonl, leaves.icnf holds
 only cake_lpr-verified leaves, open.icnf holds cubes not closed, SAT models are kept.
 """
-import argparse, hashlib, json, os, re, subprocess, threading, time, sys
-from concurrent.futures import ThreadPoolExecutor
+import argparse, hashlib, heapq, json, os, re, subprocess, threading, time, sys
 BIN = os.environ.get("BIN", "/opt/w33/bin")
 ap = argparse.ArgumentParser(); ap.add_argument("--cases", nargs="+", required=True); ap.add_argument("--root", required=True)
 ap.add_argument("--depth", type=int, default=7); ap.add_argument("--timeout", type=int, default=300)
@@ -23,7 +23,7 @@ ap.add_argument("--work", default="/opt/w33/work"); ap.add_argument("--finish-on
 a = ap.parse_args()
 VER = "s VERIFIED UNSAT"
 lock = threading.Lock(); cv = threading.Condition(); count = [0]; nid = [0]
-pool = ThreadPoolExecutor(a.jobs)
+heap = []; seq = [0]  # (case index, seq): earlier cases first, so cases close in the listed order
 
 class Case:
     def __init__(s, name, path):
@@ -73,13 +73,20 @@ def cadical(C, cube, tlim):
     subprocess.run(["rm", "-rf", w]); return r
 
 def submit(fn, *args):
-    with cv: count[0] += 1
-    def task():
+    with cv:
+        count[0] += 1; seq[0] += 1; heapq.heappush(heap, (args[0].idx, seq[0], fn, args)); cv.notify_all()
+
+def worker():
+    while True:
+        with cv:
+            while not heap:
+                if count[0] == 0: return
+                cv.wait(timeout=60)
+            _, _, fn, args = heapq.heappop(heap)
         try: fn(*args)
         except Exception as e: print("ERR", e, file=sys.stderr, flush=True)
         finally:
             with cv: count[0] -= 1; cv.notify_all()
-    pool.submit(task)
 
 def cube_task(C, cube):
     if time.time() > a.deadline: return
@@ -145,11 +152,13 @@ def finish(C):
 
 os.makedirs(a.work, exist_ok=True)
 cases = [Case(*x.split("=", 1)) for x in a.cases]
+for i, C in enumerate(cases): C.idx = i
 if a.finish_only:
     for C in cases: finish(C)
     sys.exit(0)
 for C in cases: resume(C)
-with cv:
-    while count[0] > 0: cv.wait(timeout=60)
+ws = [threading.Thread(target=worker) for _ in range(a.jobs)]
+for t in ws: t.start()
+for t in ws: t.join()
 for C in cases: finish(C)
 print("ALL DONE", flush=True)

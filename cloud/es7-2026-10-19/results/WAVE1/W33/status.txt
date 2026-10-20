@@ -1,12 +1,12 @@
-U5_L10     open=108 verified_leaves=0 splits=0 top=108 cpu=425s
-U_L2-5     open=123 verified_leaves=0 splits=0 top=123 cpu=486s
-U_L2-9     open=122 verified_leaves=0 splits=0 top=122 cpu=747s
-U_L2-12    open=125 verified_leaves=0 splits=0 top=125 cpu=534s
+U5_L10     CLOSED(cubes) open=0 verified_leaves=108 splits=0 top=108 cpu=923s
+U_L2-5     CLOSED(cubes) open=0 verified_leaves=123 splits=0 top=123 cpu=4451s
+U_L2-9     open=1 verified_leaves=121 splits=0 top=122 cpu=2074s
+U_L2-12    open=97 verified_leaves=28 splits=0 top=125 cpu=740s
 U_L2-16    open=117 verified_leaves=0 splits=0 top=117 cpu=268s
 U3-6_L     open=119 verified_leaves=0 splits=0 top=119 cpu=274s
-U3-9_L     open=1 verified_leaves=0 splits=0 top=- cpu=60s
-U3-12_L    open=1 verified_leaves=0 splits=0 top=- cpu=60s
-U4-5_L     open=1 verified_leaves=0 splits=0 top=- cpu=60s
+U3-9_L     open=128 verified_leaves=0 splits=0 top=128 cpu=318s
+U3-12_L    open=128 verified_leaves=0 splits=0 top=128 cpu=301s
+U4-5_L     open=128 verified_leaves=0 splits=0 top=128 cpu=542s
 U_L4-6     CLOSED(whole) cpu=60s
 U4-8_L     open=1 verified_leaves=0 splits=0 top=- cpu=60s
 U_L4-9     CLOSED(whole) cpu=47s
@@ -21,11 +21,11 @@ U_L5-13    CLOSED(whole) cpu=17s
 U_L5-15    CLOSED(whole) cpu=22s
 U6-8_L     CLOSED(whole) cpu=23s
 U6-12_L    CLOSED(whole) cpu=22s
-U3_L2      open=1 verified_leaves=0 splits=0 top=- cpu=60s
-U3_L7      open=1 verified_leaves=0 splits=0 top=- cpu=60s
-U3_L11     open=1 verified_leaves=0 splits=0 top=- cpu=60s
+U3_L2      open=128 verified_leaves=0 splits=0 top=128 cpu=224s
+U3_L7      open=125 verified_leaves=0 splits=0 top=125 cpu=360s
+U3_L11     open=117 verified_leaves=0 splits=0 top=117 cpu=419s
 U3_L15     open=1 verified_leaves=0 splits=0 top=- cpu=60s
-U4_L6      open=1 verified_leaves=0 splits=0 top=- cpu=60s
+U4_L6      open=112 verified_leaves=0 splits=0 top=112 cpu=311s
 U4_L11     open=1 verified_leaves=0 splits=0 top=- cpu=60s
 U4_L15     open=1 verified_leaves=0 splits=0 top=- cpu=60s
 U5_L6      open=1 verified_leaves=0 splits=0 top=- cpu=60s
