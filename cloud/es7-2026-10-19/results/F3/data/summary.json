@@ -6,14 +6,15 @@
     "3000002",
     "3000003"
    ],
-   "chains": 11,
-   "reached26": 2,
+   "chains": 15,
+   "reached26": 3,
    "reached_hist": {
     "15": 1,
-    "18": 2,
-    "19": 2,
+    "18": 3,
+    "19": 3,
     "20": 4,
-    "26": 2
+    "21": 1,
+    "26": 3
    }
   },
   "arm_f": {
@@ -37,11 +38,11 @@
    }
   },
   "kph_style": {
-   "models_realize_attempted": 1191,
+   "models_realize_attempted": 1421,
    "realized": 0,
    "realized_exact_ok": 0,
-   "realizer_cpu_s": 6067,
-   "models_generated": 1400
+   "realizer_cpu_s": 7238,
+   "models_generated": 1600
   }
  },
  "sets": [
@@ -1036,6 +1037,28 @@
      "geom_saturated": null
     }
    ]
+  },
+  {
+   "id": "gg3000003_7",
+   "fp": "990901f3597bad54e531",
+   "duplicate": null,
+   "done": false,
+   "verify26": {
+    "general_position": true,
+    "cap_cup": [
+     4,
+     6
+    ],
+    "lcs": 6,
+    "brute_axviol_cap_cup_lcs": [
+     "0",
+     "4",
+     "6",
+     "6"
+    ]
+   },
+   "convA": [],
+   "convB": []
   }
  ],
  "new_distinct_26": 2,
