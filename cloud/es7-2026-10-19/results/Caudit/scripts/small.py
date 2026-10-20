@@ -15,7 +15,7 @@ from multiprocessing import Pool
 
 root, hk, wd, N, k, n, seed = sys.argv[1], sys.argv[2], sys.argv[3], int(sys.argv[4]), int(sys.argv[5]), int(sys.argv[6]), int(sys.argv[7])
 os.makedirs(wd, exist_ok=True)
-G = f"{root}/tools/etv/gen_etv.py"; MG = f"{root}/results/C/scripts/mirgen.py"
+G = os.environ.get("GEN_ETV", f"{root}/tools/etv/gen_etv.py"); MG = os.environ.get("MIRGEN", f"{root}/results/C/scripts/mirgen.py")
 tag = f"N{N}k{k}"
 def sh(*a): subprocess.run(a, check=True, capture_output=True)
 c = lambda s: f"{wd}/{s}{tag}.cnf"
