@@ -63,13 +63,6 @@ if __name__ == '__main__':
         for mode in ['none', 'all', 'top', 'interior']:
             p, enc = mx(n, k, mode); r, _ = solve(p, lrat=True)
             rec(dict(kind='control-unsat', n=n, k=k, mode=mode, vars=enc['nvars'], clauses=len(enc['clauses']), **r))
-    # 2. non-mirror Erdos-Szekeres controls
-    for n, k, exp in [(8, 5, 'SAT'), (9, 5, 'UNSAT'), (16, 6, 'SAT'), (17, 6, 'UNSAT')]:
-        p, enc = mx(n, k, 'none', mirror=False); r, m = solve(p, lrat=(exp == 'UNSAT'), timeout=3000)
-        d = dict(kind='control-nomirror', n=n, k=k, expected=exp, **r)
-        if r['status'] == 'SAT':
-            chi = decode_mx(enc, m); d['sigcheck'] = sigcheck.check(n, chi, k, mirror=False)
-        rec(d)
     # 3. small-case agreement with results/C encodings + model cross-acceptance
     grid = [(5, 4), (7, 4), (7, 5), (9, 5), (9, 6), (11, 6), (13, 6), (15, 6), (13, 7), (15, 7), (17, 7),
             (19, 7), (21, 7), (23, 7), (25, 7)]
@@ -103,4 +96,11 @@ if __name__ == '__main__':
                 acc.append((ok, r2['status']))
             row['C_models_sigcheck_ok_and_in_mx'] = acc
         rec(row)
+    # 2. non-mirror Erdos-Szekeres controls
+    for n, k, exp in [(8, 5, 'SAT'), (9, 5, 'UNSAT'), (16, 6, 'SAT'), (17, 6, 'UNSAT')]:
+        p, enc = mx(n, k, 'none', mirror=False); r, m = solve(p, lrat=(exp == 'UNSAT'), timeout=3000)
+        d = dict(kind='control-nomirror', n=n, k=k, expected=exp, **r)
+        if r['status'] == 'SAT':
+            chi = decode_mx(enc, m); d['sigcheck'] = sigcheck.check(n, chi, k, mirror=False)
+        rec(d)
     log.close()
