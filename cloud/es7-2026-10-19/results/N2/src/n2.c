@@ -337,6 +337,7 @@ static int gather(int i, Cand *out, int t0, int t1) {
     return nc;
 }
 static int tabu_until[MAXN];
+static int NV = 3; /* heptagon vertices tried per tabu step (env N2_NV) */
 
 static void run_tabu(double budget, int pen, long long *steps_out) {
     long long step = 0;
@@ -347,11 +348,11 @@ static void run_tabu(double budget, int pen, long long *steps_out) {
         step++;
         double t = cpu() - t_start;
         double lam = pen ? lam0 * fmax(0.0, 1.0 - t / (0.75 * budget)) : 0;
-        /* candidate points: up to 3 heptagon vertices (weighted by degree), 1 other */
-        int C[8], nC = 0, used[MAXN] = {0};
+        /* candidate points: up to NV heptagon vertices (weighted by degree), 1 other */
+        int C[MAXN], nC = 0, used[MAXN] = {0};
         long long totdeg = 0;
         for (int j = 0; j < NPTS; j++) if (tabu_until[j] < step) totdeg += deg[j];
-        for (int rep = 0; rep < 3 && totdeg > 0; rep++) {
+        for (int rep = 0; rep < NV && totdeg > 0; rep++) {
             long long r = (long long)(rnd() % (u64)totdeg), acc = 0;
             for (int j = 0; j < NPTS; j++) {
                 if (tabu_until[j] >= step || used[j]) continue;
@@ -359,7 +360,7 @@ static void run_tabu(double budget, int pen, long long *steps_out) {
                 if (r < acc) { used[j] = 1; C[nC++] = j; totdeg -= deg[j]; break; }
             }
         }
-        for (int tries = 0; tries < 100 && nC < 4; tries++) {
+        for (int tries = 0; tries < 100 && nC < NV + 1; tries++) {
             int j = rndi(NPTS);
             if (!used[j] && tabu_until[j] < step) { used[j] = 1; C[nC++] = j; }
         }
@@ -497,6 +498,7 @@ static void run_lns(double budget, long long *steps_out) {
 int main(int argc, char **argv) {
     if (argc < 6) { fprintf(stderr, "usage: n2 tabu|lns|pen init.txt cpu_seconds seed outprefix\n"); return 1; }
     const char *meth = argv[1];
+    if (getenv("N2_NV")) NV = atoi(getenv("N2_NV"));
     double budget = atof(argv[3]);
     rs ^= mix64((u64)atoll(argv[4]) + 12345);
     if (!rs) rs = 1;
