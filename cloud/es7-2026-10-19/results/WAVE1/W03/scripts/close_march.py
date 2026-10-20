@@ -73,6 +73,8 @@ def solve(cube):
         for s in subs: submit(cube + s)
 def task(c):
     try: solve(c)
+    except Exception:
+        import traceback; traceback.print_exc(); rec({"cube": c, "status": "ERROR", "err": traceback.format_exc()[-300:]})
     finally:
         with cv: count[0] -= 1; cv.notify_all()
 def submit(c):
