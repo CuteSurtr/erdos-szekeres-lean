@@ -26,3 +26,8 @@
   recompression (scripts/geom_fill.py). (Note: the first gg6000202_1 run shared a scratch dir with
   the F2 reproduction, so its logs also list F22_106/F22_162; data/sets32/gg6000202_1 keeps only
   its own records. Later sets run in private dirs via scripts/handle26.sh.)
+- 05:15 stopped arm F (0 complete in 3,029 restarts) to free cores for gg6000202_1 recompression.
+- 05:15 gg6000202_1 direction scan: 29 deep-below 32-sets, all exact-OK, all 33/33 UNSAT; no
+  realization below 2^27, so geom_fill (3 x 40 CPU-s each) ran: 2/29 swept (0 free faces).
+- 05:50 generation ended: grow_guided 19 chains, 2 complete; KPH-style 0/1,883 realized.
+- 06:03 final fingerprints: both new sets distinct from F2's 22 sets and from F3-F5's sets on the branch.
