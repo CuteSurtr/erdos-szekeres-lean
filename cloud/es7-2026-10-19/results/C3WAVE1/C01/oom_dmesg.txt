@@ -1,13 +1,3 @@
-[  972.742374] Memory cgroup out of memory: Killed process 3827 (cake_lpr) total-vm:14339188kB, anon-rss:8136960kB, file-rss:1376kB, shmem-rss:0kB, UID:0 pgtables:15988kB oom_score_adj:0
-[  976.044406] Memory cgroup out of memory: Killed process 3831 (cake_lpr) total-vm:14339188kB, anon-rss:8336128kB, file-rss:1464kB, shmem-rss:0kB, UID:0 pgtables:16376kB oom_score_adj:0
-[  980.859365] Memory cgroup out of memory: Killed process 3845 (cake_lpr) total-vm:14339188kB, anon-rss:7183744kB, file-rss:1320kB, shmem-rss:0kB, UID:0 pgtables:14128kB oom_score_adj:0
-[  987.106716] Memory cgroup out of memory: Killed process 3847 (cake_lpr) total-vm:14339188kB, anon-rss:12038144kB, file-rss:1360kB, shmem-rss:0kB, UID:0 pgtables:23628kB oom_score_adj:0
-[  999.221000] Memory cgroup out of memory: Killed process 3868 (cake_lpr) total-vm:14339188kB, anon-rss:5112320kB, file-rss:1460kB, shmem-rss:0kB, UID:0 pgtables:10076kB oom_score_adj:0
-[ 1001.496628] Memory cgroup out of memory: Killed process 3869 (cake_lpr) total-vm:14339188kB, anon-rss:6056832kB, file-rss:1440kB, shmem-rss:0kB, UID:0 pgtables:11924kB oom_score_adj:0
-[ 1005.625809] Memory cgroup out of memory: Killed process 3870 (cake_lpr) total-vm:14339188kB, anon-rss:7953664kB, file-rss:1204kB, shmem-rss:0kB, UID:0 pgtables:15632kB oom_score_adj:0
-[ 1013.387425] Memory cgroup out of memory: Killed process 3874 (cake_lpr) total-vm:14339188kB, anon-rss:11449216kB, file-rss:1252kB, shmem-rss:0kB, UID:0 pgtables:22476kB oom_score_adj:0
-[ 1018.960866] Memory cgroup out of memory: Killed process 3896 (cake_lpr) total-vm:14339188kB, anon-rss:6300928kB, file-rss:1396kB, shmem-rss:0kB, UID:0 pgtables:12392kB oom_score_adj:0
-[ 1021.741046] Memory cgroup out of memory: Killed process 3897 (cake_lpr) total-vm:14339188kB, anon-rss:7571840kB, file-rss:1300kB, shmem-rss:0kB, UID:0 pgtables:14888kB oom_score_adj:0
 [ 1025.720560] Memory cgroup out of memory: Killed process 3902 (cake_lpr) total-vm:14339188kB, anon-rss:7674240kB, file-rss:1528kB, shmem-rss:0kB, UID:0 pgtables:15084kB oom_score_adj:0
 [ 1031.909530] Memory cgroup out of memory: Killed process 3912 (cake_lpr) total-vm:14339188kB, anon-rss:10556160kB, file-rss:1348kB, shmem-rss:0kB, UID:0 pgtables:20724kB oom_score_adj:0
 [ 1040.593973] Memory cgroup out of memory: Killed process 3919 (cake_lpr) total-vm:14339188kB, anon-rss:10033536kB, file-rss:1444kB, shmem-rss:0kB, UID:0 pgtables:19716kB oom_score_adj:0
@@ -17,3 +7,13 @@
 [ 1066.234510] Memory cgroup out of memory: Killed process 3957 (cake_lpr) total-vm:14339188kB, anon-rss:11307264kB, file-rss:1404kB, shmem-rss:0kB, UID:0 pgtables:22192kB oom_score_adj:0
 [ 1071.191908] Memory cgroup out of memory: Killed process 3976 (cake_lpr) total-vm:14339188kB, anon-rss:4885120kB, file-rss:1292kB, shmem-rss:0kB, UID:0 pgtables:9632kB oom_score_adj:0
 [ 1075.090294] Memory cgroup out of memory: Killed process 3977 (cake_lpr) total-vm:14339188kB, anon-rss:7039232kB, file-rss:1384kB, shmem-rss:0kB, UID:0 pgtables:13844kB oom_score_adj:0
+[ 2410.396120] Memory cgroup out of memory: Killed process 5980 (cake_lpr) total-vm:14339188kB, anon-rss:11686912kB, file-rss:1276kB, shmem-rss:0kB, UID:0 pgtables:22932kB oom_score_adj:0
+[ 2425.391234] Memory cgroup out of memory: Killed process 6021 (cake_lpr) total-vm:14339188kB, anon-rss:8080896kB, file-rss:1300kB, shmem-rss:0kB, UID:0 pgtables:15880kB oom_score_adj:0
+[ 2446.938270] Memory cgroup out of memory: Killed process 6068 (cake_lpr) total-vm:14339188kB, anon-rss:10845056kB, file-rss:1404kB, shmem-rss:0kB, UID:0 pgtables:21288kB oom_score_adj:0
+[ 2495.329826] Memory cgroup out of memory: Killed process 6217 (cake_lpr) total-vm:14339188kB, anon-rss:9423616kB, file-rss:1340kB, shmem-rss:0kB, UID:0 pgtables:18504kB oom_score_adj:0
+[ 2513.496397] Memory cgroup out of memory: Killed process 6241 (cake_lpr) total-vm:14339188kB, anon-rss:8082048kB, file-rss:1468kB, shmem-rss:0kB, UID:0 pgtables:15876kB oom_score_adj:0
+[ 2532.151655] Memory cgroup out of memory: Killed process 6259 (cake_lpr) total-vm:14339188kB, anon-rss:9558400kB, file-rss:1400kB, shmem-rss:0kB, UID:0 pgtables:18772kB oom_score_adj:0
+[ 2550.310340] Memory cgroup out of memory: Killed process 6286 (cake_lpr) total-vm:14339188kB, anon-rss:10867712kB, file-rss:1200kB, shmem-rss:0kB, UID:0 pgtables:21332kB oom_score_adj:0
+[ 2559.515864] Memory cgroup out of memory: Killed process 6310 (cake_lpr) total-vm:14339188kB, anon-rss:8387840kB, file-rss:1304kB, shmem-rss:0kB, UID:0 pgtables:16480kB oom_score_adj:0
+[ 2595.717988] Memory cgroup out of memory: Killed process 6381 (cake_lpr) total-vm:14339188kB, anon-rss:10394624kB, file-rss:1264kB, shmem-rss:0kB, UID:0 pgtables:20412kB oom_score_adj:0
+[ 2617.813655] Memory cgroup out of memory: Killed process 6404 (cake_lpr) total-vm:14339188kB, anon-rss:12288000kB, file-rss:1304kB, shmem-rss:0kB, UID:0 pgtables:24100kB oom_score_adj:0

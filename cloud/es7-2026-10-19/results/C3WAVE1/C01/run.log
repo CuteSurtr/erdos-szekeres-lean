@@ -22,3 +22,28 @@
 {"node": "0s0-1s0_2_3", "status": "UNSATISFIABLE", "solve_s": 68.3, "certified": true}
 {"node": "0s0-1s0_2_4", "status": "UNSATISFIABLE", "solve_s": 75.1, "certified": true}
 {"node": "0s0-1s0_2_6", "status": "UNSATISFIABLE", "solve_s": 58.6, "certified": true}
+{"node": "0s0-1s0_2_7", "status": "UNSATISFIABLE", "solve_s": 50.5, "certified": true}
+{"node": "0s0-1s0_2_8", "status": "UNSATISFIABLE", "solve_s": 12.3, "certified": true}
+{"node": "0s0-1s0_2_9", "status": "UNSATISFIABLE", "solve_s": 11.7, "certified": true}
+{"node": "0s0-1s0_2_10", "status": "UNSATISFIABLE", "solve_s": 10.8, "certified": true}
+{"node": "0s0-1s0_2_3s0-4s0", "status": "UNSATISFIABLE", "solve_s": 4.8, "certified": true}
+{"node": "0s0-1s0_2_3s0-4s1", "status": "UNSATISFIABLE", "solve_s": 14.2, "certified": true}
+{"node": "0s0-1s0_2_3s1-4s0", "status": "UNSATISFIABLE", "solve_s": 18.1, "certified": true}
+{"node": "0s0-1s0_2_3s1-4s1", "status": "UNSATISFIABLE", "solve_s": 5.5, "certified": true}
+{"node": "0s0-1s0_2_3s0-5s0", "status": "UNSATISFIABLE", "solve_s": 5.4, "certified": true}
+{"node": "0s0-1s0_2_3s0-5s1", "status": "UNSATISFIABLE", "solve_s": 16.1, "certified": true}
+{"node": "0s0-1s0_2_3s1-5s0", "status": "UNSATISFIABLE", "solve_s": 16.8, "certified": true}
+{"node": "0s0-1s0_2_3s1-5s1", "status": "UNSATISFIABLE", "solve_s": 6.2, "certified": true}
+{"node": "0s0-1s0_2_3s0-6s0", "status": "UNSATISFIABLE", "solve_s": 5.8, "certified": true}
+{"node": "0s0-1s0_2_3s0-6s1", "status": "UNSATISFIABLE", "solve_s": 12.0, "certified": true}
+{"node": "0s0-1s0_2_3s1-6s0", "status": "UNSATISFIABLE", "solve_s": 16.0, "certified": true}
+{"node": "0s0-1s0_2_3s1-6s1", "status": "UNSATISFIABLE", "solve_s": 6.6, "certified": true}
+{"node": "0s0-1s0_2_3s0-7s0", "status": "UNSATISFIABLE", "solve_s": 6.6, "certified": true}
+{"node": "0s0-1s0_2_3s0-7s1", "status": "UNSATISFIABLE", "solve_s": 10.6, "certified": true}
+{"node": "0s0-1s0_2_3s1-7s0", "status": "UNSATISFIABLE", "solve_s": 14.8, "certified": true}
+{"node": "0s0-1s0_2_3s1-7s1", "status": "UNSATISFIABLE", "solve_s": 7.1, "certified": true}
+{"node": "0s0-1s0_2_3s0-8s0", "status": "UNSATISFIABLE", "solve_s": 13.4, "certified": true}
+{"node": "0s0-1s0_2_3s0-8s1", "status": "UNSATISFIABLE", "solve_s": 9.9, "certified": false}
+PROOF NOT ACCEPTED 0s0-1s0_2_3s0-8s1
+=== 08:30:40 restart: driver output had gone to unlinked files since 08:05 (git rebase replaced out.jsonl/run.log); recovered from /proc/PID/fd; live files now in /opt/work; resume root 1 with JOBS=3
+=== root 1 0s0-1s0_2 start 08:30:40 hours 2.749 jobs 3
