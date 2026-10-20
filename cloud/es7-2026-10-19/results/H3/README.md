@@ -92,6 +92,7 @@ All definitions are in namespace `Mir`. Points use the parent repository's `Poin
     `1/(w_a w_b w_c) > 0`. For all but finitely many small `ε` it separates all
     x-coordinates (`exists_eps`). Sorting by the image's x-coordinate and pulling back
     gives the enumeration (`interiorTieBreak`).
+- **Any mirror line** reduces to the y-axis by a rigid motion (`Line.lean`, see §3).
 - **The y-flip unit `X(1,2,3)`** is handled at the signotope level. Complementing `σ` keeps
   the signotope axioms, the mirror symmetry and gon-freeness, and it swaps the two interior
   clauses.
@@ -151,6 +152,11 @@ Point-set level:
     theorem Mir.mirrorExclusion_of_unsat (h1 : ¬DimacsSatisfiable (hullCnf 33 7))
         (h2 : ¬DimacsSatisfiable (interiorCnf 33 7)) : MirrorExclusion
     theorem Mir.mirrorExclusionY_of_mirrorExclusion : MirrorExclusion → MirrorExclusionY
+    theorem Mir.mirrorExclusionLine_of_unsat (h1 : ¬DimacsSatisfiable (hullCnf 33 7))
+        (h2 : ¬DimacsSatisfiable (interiorCnf 33 7)) : MirrorExclusionLine
+    theorem Mir.mirrorExclusionLine_of_cubes (hc1 : coverCheck C1 = true) (hc2 : coverCheck C2 = true)
+        (h1 : ∀ c ∈ C1, ¬DimacsSatisfiable (cubeCnf (hullCnf 33 7) c))
+        (h2 : ∀ c ∈ C2, ¬DimacsSatisfiable (cubeCnf (interiorCnf 33 7) c)) : MirrorExclusionLine
 
 The targets are stated in `Targets.lean`:
 
@@ -158,6 +164,14 @@ The targets are stated in `Targets.lean`:
         HasConvexNGon 7 S
     def Mir.MirrorExclusionY : Prop := ∀ S, GeneralPosition S → S.card = 33 →
         (∀ q ∈ S, reflX q ∈ S) → HasConvexNGon 7 S
+    def Mir.MirrorExclusionLine : Prop := ∀ S a u, u 0 ^ 2 + u 1 ^ 2 = 1 → GeneralPosition S →
+        S.card = 33 → (∀ q ∈ S, reflLine a u q ∈ S) → HasConvexNGon 7 S
+
+`MirrorExclusionLine` is the statement for an arbitrary mirror line, the line through `a`
+with unit direction `u`. `Line.lean` reduces it to the y-axis. The rigid motion
+`p ↦ M (p − a)`, with `M = [[u₁, −u₀], [u₀, u₁]]`, conjugates `reflLine a u` to `reflX`,
+preserves orientations (`det M = 1`), and convex position pulls back along it
+(`convexPosition_of_image_affine`).
 
 `DimacsSatisfiable` is the plain DIMACS semantics from `results/H`.
 
@@ -221,8 +235,8 @@ For each sub-case `F ∈ {hullCnf 33 7, interiorCnf 33 7}`:
 3. Run `lake exe cover_check C`. It must print `s COVERED`.
 4. For every `c ∈ C`, cake_lpr must print `s VERIFIED UNSAT` on `cubeCnf F c` with that
    cube's proof (`scripts/check_cubes.sh`).
-5. Then `Mir.mirrorExclusion_of_cubes` gives `MirrorExclusion`, from the two cube lists and
-   the two families of per-cube facts.
+5. Then `Mir.mirrorExclusionLine_of_cubes` gives `MirrorExclusionLine`, from the two cube
+   lists and the two families of per-cube facts.
 
 Steps 3 and 4 run outside the Lean kernel. Bringing them into Lean takes either:
 - a disclosed hypothesis or axiom per instance (EmptyHexagonLean style), or
@@ -254,12 +268,7 @@ CaDiCaL, `cnc2.py` and the Python encoders are not trusted.
    cubes at C2's checkpoint. Same procedure.
 3. **Importing 1 and 2 into Lean.** cake_lpr runs outside Lean, so the final statement is
    "Lean theorem + cake_lpr runs + cover check run", or an explicitly disclosed axiom.
-4. **An arbitrary mirror line.** `MirrorSet` uses the y-axis. A set symmetric in another
-   line is congruent to such a set. The isometry step, which preserves general position and
-   convex position, is not formalised. `results/H`'s `convexPosition_of_image_linear` and
-   `Frame.lean`'s `generalPosition_image_linear` cover the linear part; a translation is
-   still missing.
-5. **Not needed, but open:** completeness (the CNFs could be stronger than the geometry),
+4. **Not needed, but open:** completeness (the CNFs could be stronger than the geometry),
    and non-vacuity (no explicit `MirrorSet` is built in Lean).
 
 ## Build
@@ -281,4 +290,5 @@ CaDiCaL, `cnc2.py` and the Python encoders are not trusted.
 | `TieBreak.lean` | the projective tie-break (`interiorTieBreak`) |
 | `CoverCore.lean`, `Cover.lean`, `CoverMain.lean` | cover check, its soundness, composition, `cover_check` |
 | `Targets.lean` | `MirrorExclusion(Y)`, `InteriorTieBreak`, the reductions, `exists_mirrorSet` |
+| `Line.lean` | `reflLine`, the rigid motion to the y-axis, `MirrorExclusionLine` |
 | `Audit.lean` | `#guard_msgs` axiom checks |
