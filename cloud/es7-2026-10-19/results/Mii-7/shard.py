@@ -59,6 +59,7 @@ if os.path.exists(leaves_path):
     for line in open(leaves_path):
         if not line.strip(): continue
         r = json.loads(line)
+        if r["status"] == "ERROR": continue   # retried on restart
         done[r["id"]] = r
 # replay splits so their children are known
 changed = True
@@ -114,7 +115,9 @@ def run(t):
     dt = time.time() - t0
     out = open(fout).read()
     st = [l for l in out.splitlines() if l.startswith("s ")]
-    st = st[0][2:] if st else "ERROR"
+    if st: st = st[0][2:]
+    elif "c UNKNOWN" in out: st = "UNKNOWN"     # cadical -q prints the timeout as a comment
+    else: st = "ERROR"
     if os.environ.get("TEST_FORCE_SPLIT") and t["kind"] == "cube" and tid.count('.') == 0:
         st = "UNKNOWN"   # testing only: exercise the split path
     r = dict(id=tid, kind=t["kind"], cube=cube, n_extra=len(extra), host=host,
