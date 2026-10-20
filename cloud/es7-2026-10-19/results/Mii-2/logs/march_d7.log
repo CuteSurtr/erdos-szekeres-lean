@@ -1,0 +1,24 @@
+c down fraction = 0.020 and down exponent = 0.300
+c cubes are emitted to cubes.icnf
+c the DIMACS p-line indicates a CNF of 47002 variables and 515121 clauses.
+c equivalence reasoning is turned off.
+c clause-length heuristic with magic constants: bin = 25.00 and dec = 0.50
+c init_lookahead: longest clause has size 136
+c number of free variables = 44130
+c highest active variable  = 47001
+c dynamic_preselect_setsize :: off
+cc |----------------------------------------------------------------|
+c
+c main():: nodeCount: 0
+c main():: dead ends in main: 0
+c main():: lookAheadCount: 4426247
+c main():: unitResolveCount: 160443
+c time = 218.04 seconds
+c main():: necessary_assignments: 574
+c print learnt clauses and cubes
+c number of cubes 128, including 0 refuted leaves
+c average weight cubes 39102.469, average weights leaves -nan
+
+real	3m39.932s
+user	3m37.836s
+sys	0m0.250s
