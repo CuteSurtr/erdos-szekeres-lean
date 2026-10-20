@@ -31,8 +31,49 @@ machines, and the timing data measured so far. All numbers are from a 4-core clo
 
 ## Measured per-cube times
 
-TIMES_PLACEHOLDER
+All on the conv CNF, CaDiCaL 3.0.1 with `--lrat --binary=false`, 2 to 4 solvers on 4 vCPUs.
+
+| cube level | leaves tried | result |
+|---|---|---|
+| plain (no cubes) | 1 | open after 1,200 s |
+| march depth 8 | 0, 1 | open after 1,200 s each |
+| march depth 12 | 0, 256, 512, 768 | open after 1,500 s each |
+| depth-12 leaf 0, then `march_cu -d 6` (depth 18) | 22 of 64 | all UNSAT: solve 172–439 s, mean 292 s; dual LRAT check mean 177 s; proofs mean 1.95 GB. 20 certified; 2 re-checked (see `leaves.jsonl`) |
+
+For the chain CNF (the encoding the task specified): the 1,024 σ cubes (depth 10) stay open
+after 3,600 s (cubes 0 and 1023), and march_cu is slow on it (depth 8 did not finish in 33 min).
+The conv CNF is the better target.
+
+Extrapolation, if every depth-12 leaf costs what leaf 0 does: 64 × 292 s ≈ 5.2 core-hours
+of solving per depth-12 leaf, plus about 3.1 core-hours of checking. Over 4,096 leaves that is
+about 21,000 core-hours of solving plus 13,000 of checking. This rests on ONE depth-12 leaf
+(22 of its 64 sub-leaves) and could be off by a large factor either way. It is not a
+"closable soon" instance. Better targets: (a) a cheaper split (a different march depth, or
+cubing on σ first), measured on more than one leaf; (b) a stronger encoding; (c) mirror
+symmetry breaking, which would halve the work and is not yet used.
 
 ## Recipe for N machines
 
-SHARD_RECIPE_PLACEHOLDER
+Deterministic, with no coordination between machines beyond the shard index:
+
+1. Build CaDiCaL 3.0.1 (c607304), drat-trim lrat-check (2e3b2dc) with
+   `results/E2/tools/lrat-check-E2.patch`, cake_lpr, and the patched march_cu (above).
+2. `python3 c3cnf.py 11 7 --gon conv -o v3_m11_k7.cnf` and check the sha256.
+3. `march_cu v3_m11_k7.cnf -d 12 -o d12.icnf` (538 s) and check the sha256 against
+   `cubes/conv_m11k7_d12.icnf`, or simply use that file.
+4. Machine j of N takes the depth-12 leaves i with i mod N = j. For each leaf i:
+   build `leaf_i.cnf` = CNF + its 12 literals as units (the header clause count goes up by 12);
+   run `march_cu leaf_i.cnf -d 6 -o sub_i.icnf`; then
+   `python3 cnc_run.py leaf_i.cnf sub_i.icnf out_i work_i --jobs <cores> --limit 1800`.
+   That certifies coverage of sub_i, solves each sub-leaf, and accepts it only when both
+   checkers accept. Run each checker one at a time, or give it about 5 GB of RAM: cake_lpr
+   needs about 4.2 GB on these proofs.
+5. A depth-12 leaf is closed when all 64 sub-leaves are certified (`summarize_leaves.py`
+   reports relative weight 1). Sub-leaves still open at the limit get re-split by march_cu
+   on their own leaf CNF, the same way. Any SAT: decode with `decode.py` (map from
+   `c3cnf.py ... --map`), commit at once, then realize (`to_sig.py`, `tools/realizer`).
+6. Done when all 4,096 depth-12 leaves are closed. The depth-12 cube coverage proof is
+   already certified (`logs/conv_d12_cubes.json`).
+
+Already done: depth-12 leaf 0 (`cubes/conv_m11k7_d12leaf0_d6.icnf`), sub-leaves listed in
+`leaves.jsonl`; the remaining sub-leaves of leaf 0 are open.
