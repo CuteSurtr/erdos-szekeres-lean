@@ -68,6 +68,9 @@ def solve(cube):
         for s in subs: submit(cube + s)
 def task(c):
     try: solve(c)
+    except Exception:
+        import traceback; traceback.print_exc()
+        rec({"cube": c, "status": "ERROR", "error": traceback.format_exc()[-500:]})
     finally:
         with cv: count[0] -= 1; cv.notify_all()
 def submit(c):
@@ -87,7 +90,7 @@ for r in old:
     if "cube" in r: last[tuple(r["cube"])] = r
 def frontier(c):
     r = last.get(tuple(c))
-    if r is None or r.get("status") in ("OPEN", None) or (r["status"] == "UNSAT" and r.get("cake_lpr") != VER):
+    if r is None or r.get("status") in ("OPEN", "ERROR", None) or (r["status"] == "UNSAT" and r.get("cake_lpr") != VER):
         return [c]
     if r["status"] == "SPLIT" and "subs" in r:
         return [x for s in r["subs"] for x in frontier(c + s)]
