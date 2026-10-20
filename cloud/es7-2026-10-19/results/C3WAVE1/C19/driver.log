@@ -191,3 +191,44 @@ PROOF NOT ACCEPTED 0s0-1s0_8_2s1-10s1
 === 2026-10-20T08:48:38Z driver killed and restarted: since 08:22 its out.jsonl/driver.log handles pointed at files replaced by 'git pull --rebase' (deleted inodes); content recovered from /proc/<pid>/fd, live output now kept in /opt/work and copied here before each commit; in-flight nodes re-run
 === ROOT 19 0s0-1s0_2s1-10s1 start 2026-10-20T08:48:45Z hours 2.404
 {"root": "0s0-1s0_2s1-10s1", "open_frontier": 0}
+=== ROOT 19 0s0-1s0_2s1-10s1 end 2026-10-20T08:48:55Z
+=== ROOT 43 0s0-1s0_3s0-7s0 start 2026-10-20T08:48:55Z hours 2.401
+{"root": "0s0-1s0_3s0-7s0", "open_frontier": 0}
+=== ROOT 43 0s0-1s0_3s0-7s0 end 2026-10-20T08:49:05Z
+=== ROOT 67 0s0-1s0_4s0-5s1 start 2026-10-20T08:49:05Z hours 2.399
+{"root": "0s0-1s0_4s0-5s1", "open_frontier": 0}
+=== ROOT 67 0s0-1s0_4s0-5s1 end 2026-10-20T08:49:15Z
+=== ROOT 91 0s0-1s0_5s0-6s0 start 2026-10-20T08:49:15Z hours 2.396
+{"root": "0s0-1s0_5s0-6s0", "open_frontier": 0}
+=== ROOT 91 0s0-1s0_5s0-6s0 end 2026-10-20T08:49:25Z
+=== ROOT 115 0s0-1s0_6s0-8s1 start 2026-10-20T08:49:25Z hours 2.393
+{"root": "0s0-1s0_6s0-8s1", "open_frontier": 0}
+=== ROOT 115 0s0-1s0_6s0-8s1 end 2026-10-20T08:49:35Z
+=== ROOT 139 0s0-1s0_8 start 2026-10-20T08:49:35Z hours 2.39
+{"root": "0s0-1s0_8", "open_frontier": 0}
+=== ROOT 139 0s0-1s0_8 end 2026-10-20T08:49:45Z
+=== ROOT 163 0s0-1s1_2s0-6s0 start 2026-10-20T08:49:45Z hours 2.388
+{"root": "0s0-1s1_2s0-6s0", "open_frontier": 0}
+=== ROOT 163 0s0-1s1_2s0-6s0 end 2026-10-20T08:49:55Z
+=== ROOT 187 0s0-1s1_3 start 2026-10-20T08:49:55Z hours 2.385
+{"node": "0s0-1s1_3_2s0-8s1", "status": "UNSATISFIABLE", "solve_s": 161.5, "certified": true}
+{"node": "0s0-1s1_3_2s0-8s0", "status": "UNSATISFIABLE", "solve_s": 187.7, "certified": true}
+{"node": "0s0-1s1_3_2s1-7s0", "status": "UNSATISFIABLE", "solve_s": 272.8, "certified": true}
+{"node": "0s0-1s1_3_2s1-8s1", "status": "UNSATISFIABLE", "solve_s": 127.7, "certified": true}
+{"node": "0s0-1s1_3_2s1-8s0", "status": "UNSATISFIABLE", "solve_s": 165.1, "certified": true}
+{"node": "0s0-1s1_3_2s0-9s1", "status": "UNSATISFIABLE", "solve_s": 81.8, "certified": true}
+{"node": "0s0-1s1_3_2s1-9s0", "status": "UNSATISFIABLE", "solve_s": 68.9, "certified": true}
+{"node": "0s0-1s1_3_2s0-9s0", "status": "UNSATISFIABLE", "solve_s": 193.2, "certified": true}
+{"node": "0s0-1s1_3_2s0-10s1", "status": "UNSATISFIABLE", "solve_s": 86.8, "certified": true}
+{"node": "0s0-1s1_3_2s1-9s1", "status": "UNSATISFIABLE", "solve_s": 203.2, "certified": true}
+{"node": "0s0-1s1_3_2s0-10s0", "status": "UNSATISFIABLE", "solve_s": 194.8, "certified": true}
+{"node": "0s0-1s1_3_2s1-10s0", "status": "UNSATISFIABLE", "solve_s": 76.2, "certified": true}
+{"node": "0s0-1s1_3_4s0-5s0", "status": "UNSATISFIABLE", "solve_s": 47.2, "certified": true}
+{"node": "0s0-1s1_3_2s1-10s1", "status": "UNSATISFIABLE", "solve_s": 203.4, "certified": true}
+{"node": "0s0-1s1_3_4s0-5s1", "status": "UNSATISFIABLE", "solve_s": 239.8, "certified": true}
+{"node": "0s0-1s1_3_4s1-5s1", "status": "UNSATISFIABLE", "solve_s": 52.2, "certified": true}
+{"node": "0s0-1s1_3_4s0-6s0", "status": "UNSATISFIABLE", "solve_s": 46.3, "certified": true}
+{"node": "0s0-1s1_3_4s1-5s0", "status": "UNSATISFIABLE", "solve_s": 270.0, "certified": true}
+{"node": "0s0-1s1_3_4s1-6s1", "status": "UNSATISFIABLE", "solve_s": 50.9, "certified": true}
+{"node": "0s0-1s1_3_4s0-7s0", "status": "UNSATISFIABLE", "solve_s": 121.4, "certified": true}
+{"node": "0s0-1s1_3_4s0-6s1", "status": "UNSATISFIABLE", "solve_s": 284.5, "certified": true}
