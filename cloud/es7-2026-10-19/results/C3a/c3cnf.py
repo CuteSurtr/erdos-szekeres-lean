@@ -42,8 +42,9 @@ def parity_sort(t):
 
 
 class C3Enc:
-    def __init__(self, m, k, sb=True):
+    def __init__(self, m, k, sb=True, xsig=False):
         self.m, self.k, self.n = m, k, 3 * m
+        self.xsig = xsig
         self.nv = 0
         self.sections = []  # (name, first clause index, count)
         self.clauses = []
@@ -172,6 +173,18 @@ class C3Enc:
             done.add(abs(tl))
             self.xor0([tl, self.C[t], self.sig(t[0]), self.sig(t[1]), self.sig(t[2])])
         self.section("xorT", st)
+        if self.xsig:
+            # chi_S is a signotope in the x-order of S: for p<q<r<s in that order the sequence
+            # chi_S(pqr), chi_S(pqs), chi_S(prs), chi_S(qrs) changes sign at most once.
+            st = len(cl)
+            for quad in itertools.combinations(range(n), 4):
+                for p, q, r, s4 in itertools.permutations(quad):
+                    g = [-self.B(p, q), -self.B(q, r), -self.B(r, s4)]
+                    sq = [self.ccw(p, q, r), self.ccw(p, q, s4), self.ccw(p, r, s4), self.ccw(q, r, s4)]
+                    for a1, b1, c1 in itertools.combinations(range(4), 3):
+                        self.add(g + [-sq[a1], sq[b1], -sq[c1]])
+                        self.add(g + [sq[a1], -sq[b1], sq[c1]])
+            self.section("xsig", st)
         # chain
         st = len(cl)
         self.Y = {}
@@ -216,7 +229,7 @@ class C3Enc:
             for c in self.clauses:
                 f.write(" ".join(map(str, c)) + " 0\n")
         info = {"m": self.m, "k": self.k, "n": self.n, "vars": self.nv, "clauses": len(self.clauses),
-                "C_vars": self.nC, "sections": self.sections, "sb": self.sb}
+                "C_vars": self.nC, "sections": self.sections, "sb": self.sb, "xsig": self.xsig}
         if mappath:
             mp = dict(info)
             mp["C"] = [[*t, l] for t, l in sorted(self.C.items())]
@@ -236,8 +249,9 @@ def main():
     ap.add_argument("-o", "--out", required=True)
     ap.add_argument("--map")
     ap.add_argument("--no-sb", action="store_true")
+    ap.add_argument("--xsig", action="store_true", help="signotope axioms of chi_S in the x-order of S")
     a = ap.parse_args()
-    e = C3Enc(a.m, a.k, sb=not a.no_sb)
+    e = C3Enc(a.m, a.k, sb=not a.no_sb, xsig=a.xsig)
     e.build()
     print(json.dumps(e.write(a.out, a.map)))
 
