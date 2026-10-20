@@ -29,7 +29,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, "..", "..", "C3a"))
 sys.path.insert(0, HERE)
 from c3cnf import C3Enc  # noqa: E402
-from c3geom import Labelled, orient, rot, zsgn, zsub, zmul, zadd, general_position  # noqa: E402
+from c3geom import Labelled, orient, rot, zsgn, zsub, zmul, zadd, zmpf, general_position  # noqa: E402
+import mpmath  # noqa: E402
 from validate import flat, brute, true_assignment  # noqa: E402
 from hullcase import cases, case_name, hull_clauses, layer_clauses, parse_layers, layers_name  # noqa: E402
 
@@ -144,6 +145,30 @@ def main():
                     continue
             found = u
             break
+        if found is None:
+            # constructive fallback: l just next to the line through c and a chosen hull vertex
+            # (integer approximations of that direction, perturbed by +-1 in the normal direction)
+            res["fallback_used"] = res.get("fallback_used", 0) + 1
+            for h in sorted(H):
+                X, Y = zmpf(pts[h][0]), zmpf(pts[h][1])
+                for e10 in range(3, 40):
+                    N = mpmath.mpf(10) ** e10 / mpmath.sqrt(X * X + Y * Y)
+                    vx, vy = int(mpmath.nint(X * N)), int(mpmath.nint(Y * N))
+                    for sg in (1, -1):
+                        u = (vx - sg * vy // abs(vy or 1) * 0 + sg * (-vy > 0) - sg * (-vy < 0), vy + sg * (vx > 0) - sg * (vx < 0))
+                        order = label_order(pts, u)
+                        if order is None or order[0] not in H:
+                            continue
+                        lab = {o: l for l, o in enumerate(order)}
+                        Hl = sorted(lab[x] for x in H)
+                        if len(H) == 6 and sorted({l % M for l in Hl})[1] > M // 2:
+                            continue
+                        found = u
+                        break
+                    if found:
+                        break
+                if found:
+                    break
         if found is None:
             res["fail"].append({"set": t, "why": "no canonical l found"})
             continue
