@@ -193,10 +193,29 @@ cube `c` it:
 3. checks the textual LRAT proof with cake_lpr;
 4. deletes both files.
 
-It ran on the Lean-generated `hm33k7.sub.cnf` and `m33k7int.sub.cnf`, over the **closed
-cubes of the C2 runs** (`results/C2/logs/cnc_*/closed.txt` at commit eb75ac3), cheapest first.
-Results: `logs/cube_lrat_i_hull.jsonl`, `logs/cube_lrat_ii_interior.jsonl`, and the summary
-at the end of this file.
+It ran on the Lean-generated `hm33k7.sub.cnf` and `m33k7int.sub.cnf`, over **every closed
+cube of the C2 runs**. That is `results/C2/logs/cnc_*/closed.txt` at C2's final commit
+3a34639; earlier checkpoints were processed first, and then the cubes they lacked. Up to 4
+streams ran at nice 10 from 02:59 to 04:46 UTC.
+
+| sub-case | distinct closed cubes | cake_lpr `s VERIFIED UNSAT` | not verified | sum of `2^-len` | CaDiCaL s | cake_lpr s | largest proof | total proof bytes |
+|---|---|---|---|---|---|---|---|---|
+| (i) `hm33k7.sub` | 4,535 | **4,535** | 0 | 0.99743 | 6,920 | 7,297 | 22.2 MB | 16.5 GB |
+| (ii) `m33k7int.sub` | 749 | **749** | 0 | 0.63687 | 325 | 1,467 | 17.9 MB | 0.65 GB |
+
+The weight column is a plain sum over distinct cubes. Some of C2's closed entries are stale
+duplicates of re-split cubes, so the sum can exceed C2's exact closed weight (0.99728 and
+0.63601).
+
+Logs:
+- `logs/cube_lrat_*.jsonl`: one line per cube, with the cube, solver exit, times, proof size
+  and cake_lpr verdict;
+- `logs/cube_lrat_*.summary.json`, produced by `scripts/summarize_cubes.py`.
+
+No proof file is committed. Each one was deleted right after its check.
+
+C2's own spot checks used `lrat-check`, which is not verified. Here every leaf C2 closed has a
+certificate checked by a verified checker, against the CNF that the Lean generator emits.
 
 ### The cover argument, verified
 
@@ -270,12 +289,16 @@ CaDiCaL, `cnc2.py` and the Python encoders are not trusted.
 
 ## 5. Remaining targets, precisely
 
-1. **`¬ETV.DimacsSatisfiable (Mir.hullCnf 33 7)`.** Open. C2 stopped with 4,538 closed
-   cubes (4,513 distinct in its state), 1,048 open cubes and open weight 0.002722. C2's
-   README judges that more of the same cubing will not close it in a predictable time.
-   Once it is closed, it needs steps 3 and 4 above on the final leaves.
-2. **`¬ETV.DimacsSatisfiable (Mir.interiorCnf 33 7)`.** Open, and far from closure: 749
-   closed cubes, 1,340 open, open weight 0.3640. Same procedure.
+1. **`¬ETV.DimacsSatisfiable (Mir.hullCnf 33 7)`.** Open. C2 stopped with 1,048 open
+   cubes (open weight 0.002722). C2's README judges that more of the same cubing will not
+   close it in a predictable time. `logs/cover_check_verified_plus_open.log` shows that the
+   4,535 cake_lpr-verified closed cubes plus `logs/open_cubes_i_hull.txt` are accepted by
+   `coverCheck`. So what is left is exactly this: refute `cubeCnf (hullCnf 33 7) c` for each
+   of the 1,048 open cubes `c` (directly, or by further splitting) with cake_lpr-checked
+   proofs, then rerun `cover_check` on the final leaf list.
+2. **`¬ETV.DimacsSatisfiable (Mir.interiorCnf 33 7)`.** Open and far from closure: 1,340 open
+   cubes, open weight 0.3640 (`logs/open_cubes_ii_interior.txt`). The same procedure
+   applies, and the 749 verified closed cubes are already done.
 3. **Importing 1 and 2 into Lean.** cake_lpr runs outside Lean, so the final statement is
    "Lean theorem + cake_lpr runs + cover check run", or an explicitly disclosed axiom.
 4. **Not needed, but open:** completeness (the CNFs could be stronger than the geometry),
