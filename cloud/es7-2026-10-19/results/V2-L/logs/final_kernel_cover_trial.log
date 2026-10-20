@@ -21,3 +21,9 @@
 # (one restrict over 2,600 cubes ~ 40 s and ~2 GB), the kernel check of leavesOf_cover by
 # decide +kernel on Mir.coverCheck over List Int does not fit in 15 GB, and would not finish in
 # this run's time budget even if memory allowed.
+# 5. Variants (scratch files, not committed):
+#    Nat-coded copy of coverCheck (codes 2z / 2|z|+1, Nat.beq), U15_L:    22 s, peak 1.8 GB
+#    Nat-coded copy, U_L8 (2,598 leaves): killed by the OOM killer after 238 s (peak 13.5 GB)
+#    Int coverAux with fuel 40 instead of sum+1 (= 6,000+), U15_L:        25 s, peak 2.0 GB
+#    So neither the Int arithmetic nor the fuel is the main cost; the growth is in the
+#    kernel's evaluation of the recursion itself. Not pursued further in this run.
