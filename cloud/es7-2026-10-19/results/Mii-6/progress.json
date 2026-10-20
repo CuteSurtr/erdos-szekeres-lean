@@ -2,18 +2,18 @@
  "shard": 6,
  "nshards": 8,
  "top_cubes": 16,
- "top_cubes_closed": 2,
+ "top_cubes_closed": 3,
  "counts": {
-  "leaf_unsat_verified": 83,
+  "leaf_unsat_verified": 188,
   "leaf_unsat_check_failed": 0,
   "sat": 0,
-  "open_unsolved": 185,
+  "open_unsolved": 80,
   "split_nodes": 4,
   "gaps_verified": 3,
   "gaps_open": 1
  },
- "closed_weight_of_shard": 0.142578125,
- "cadical_seconds": 9004,
+ "closed_weight_of_shard": 0.2451171875,
+ "cadical_seconds": 15852,
  "shard_closed": false,
  "per_top_cube": [
   {
@@ -26,8 +26,8 @@
     2705,
     -3005
    ],
-   "closed": false,
-   "closed_weight": 0.0
+   "closed": true,
+   "closed_weight": 1.0
   },
   {
    "cube": [
@@ -53,7 +53,7 @@
     3005
    ],
    "closed": false,
-   "closed_weight": 0.28125
+   "closed_weight": 0.921875
   },
   {
    "cube": [
