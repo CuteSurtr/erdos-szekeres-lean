@@ -1,0 +1,13 @@
+close_march.py copied byte for byte from results/WAVE2/F2/close_march.py (cmp: identical; no diff).
+sha256 2e0975aa98c7dbcc2cf535993b54f57db764f7bf50f64fc54b9ff2860e67c855
+
+Checked:
+(a) fresh directory per job: solve() uses tempfile.mkdtemp(prefix="s_{k}_", dir=WORK) (line 83);
+    march() uses tempfile.mkdtemp(prefix="m_{tag}_", dir=WORK) (line 39); cake_lpr runs on the
+    f.cnf/p.lrat inside the solve directory. OK.
+(b) leaves.icnf and open.icnf are written by atomic() via tempfile.mkstemp in the out dir and
+    os.replace into place (lines 136-143). OK.
+(c) first leaves.jsonl record is {"case": --name, "case_sha256": sha256 of the case CNF}
+    (lines 117-119); run with --name U_L7. OK.
+Also: a leaf goes into leaves.icnf only with cake_lpr == "s VERIFIED UNSAT" (line 141; AUDIT BUG-1);
+other verdicts are UNSAT_UNCHECKED and stay open.
