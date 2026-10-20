@@ -21,7 +21,7 @@ usage: v3_check.py --root ROOT --base F.cnf --manifest M.jsonl --shard I --nshar
                    --out OUT.jsonl [--work DIR] [--jobs 4] [--cap 3600]
                    [--cadical /opt/bin/cadical] [--cake /opt/bin/cake_lpr]
 """
-import argparse, hashlib, json, os, shutil, subprocess, sys, threading, time
+import argparse, hashlib, json, os, shutil, subprocess, sys, tempfile, threading, time
 from concurrent.futures import ThreadPoolExecutor
 
 F_SHA = "69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d"
@@ -92,7 +92,8 @@ def main():
             outf.flush()
 
     def solve_check(w, data):
-        os.makedirs(w, exist_ok=True)
+        os.makedirs(a.work, exist_ok=True)
+        w = tempfile.mkdtemp(prefix=os.path.basename(w) + ".", dir=a.work)
         cnf, prf = os.path.join(w, "f.cnf"), os.path.join(w, "p.lrat")
         open(cnf, "wb").write(data)
         t0 = time.time()
