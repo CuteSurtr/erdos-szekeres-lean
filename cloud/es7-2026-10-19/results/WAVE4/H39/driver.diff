@@ -1,0 +1,13 @@
+close_march.py copied byte for byte from results/WAVE2/F2/close_march.py (cmp: identical).
+sha256 (source and copy): 2e0975aa98c7dbcc2cf535993b54f57db764f7bf50f64fc54b9ff2860e67c855
+diff against source: empty.
+Checked by reading the script:
+(a) every solver job (solve: tempfile.mkdtemp prefix s_k_ under WORK) and every march_cu job
+    (march: tempfile.mkdtemp prefix m_tag_ under WORK) gets its own fresh directory, removed afterwards.
+(b) finalize() writes leaves.icnf and open.icnf via tempfile.mkstemp in OUTDIR, then os.replace into place.
+(c) when leaves.jsonl is new, its first record is {"case": --name, "case_sha256": sha256 of CASE.cnf}.
+Also (Haudit): leaves.icnf lists only records with status UNSAT and cake_lpr == "s VERIFIED UNSAT" (BUG-1);
+cube files are written whole, each line ending " 0", and renamed atomically (RISK-1); the shared driver is unmodified (RISK-3).
+CASE U_L7 (U="", L="7") sha256 c6d1c840d97921426e0f2d1d34213fb94293cc1783296ec2357d7883b804f099 (matches cases.jsonl)
+top.icnf: 196 lines = 196 cubes in tasks/H39.json (commit 4bfd8e7); top.icnf sha256 57c2751eb22be09e34ba40f7ef6160a961793d16bab705bcedf6ebe268354638
+Run: BIN=/opt/work/bin WORK=/opt/work/tmp close_march.py /opt/work/CASE.cnf /opt/work/out/U_L7 --name U_L7 --top /opt/work/top.icnf --depth 7 --timeout 300 --split-depth 6 --jobs 4 --hours 2.2 (started 13:43:37 UTC; budget ends 16:11 UTC)
