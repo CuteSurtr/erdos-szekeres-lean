@@ -20,12 +20,16 @@ def packed(c):
     return "(%d, %s)" % (len(c), ("0x" + "".join("%05x" % enc(z) for z in c)) if c else "0")
 def natlist(xs): return "[" + ", ".join(map(str, xs)) + "]"
 
-ents = []
+ents, chunks, CHUNK = [], [], 500
 for r in st["rows"]:
     if closed_only and not r["closed"]: continue
     f = os.path.join(asm, "leaves", r["case"] + ".icnf")
     cubes = [list(map(int, l.split()[1:-1])) for l in open(f) if l.startswith("a")]
-    ents.append("  ((%s, %s), [%s])" % (natlist(r["U"]), natlist(r["L"]), ", ".join(packed(c) for c in cubes)))
+    names = []
+    for i in range(0, len(cubes), CHUNK):
+        names.append("leafChunk%d" % len(chunks))
+        chunks.append("def %s : List (Nat × Nat) := [%s]\n" % (names[-1], ", ".join(packed(c) for c in cubes[i:i + CHUNK])))
+    ents.append("  ((%s, %s), %s)" % (natlist(r["U"]), natlist(r["L"]), " ++ ".join(names) if names else "[]"))
 src = """import V2L.Data
 
 /-!
@@ -44,6 +48,9 @@ def unpackAux20 : Nat → Nat → List Int → List Int
 
 def unpack20 (p : Nat × Nat) : List Int := unpackAux20 p.1 p.2 []
 
+/- The leaf cubes, in chunks of at most 500 (one large list literal exceeds the elaborator's
+heartbeat limit); each case's list is the concatenation of its chunks, in order. -/
+%s
 set_option maxRecDepth 100000 in
 /-- Per case `(U, L)`, its leaf cubes, stored as `(k, n)` with 5 hex digits per literal. -/
 def leafPacked : List ((List Nat × List Nat) × List (Nat × Nat)) := [
@@ -59,6 +66,6 @@ def leavesOf (s : List Nat × List Nat) : List (List Int) :=
   | none => []
 
 end V2L
-""" % (os.path.join(asm, "status.json"), json.dumps({k: v for k, v in st["summary"].items() if k != "open"}), ",\n".join(ents))
+""" % (os.path.join(asm, "status.json"), json.dumps({k: v for k, v in st["summary"].items() if k != "open"}), "".join(chunks), ",\n".join(ents))
 open(out, "w").write(src)
 print(len(ents), "cases", hashlib.sha256(src.encode()).hexdigest())
