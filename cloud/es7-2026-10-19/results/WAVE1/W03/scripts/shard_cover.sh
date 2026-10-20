@@ -8,3 +8,8 @@ grep '^a' $D/top.icnf | awk -v s=$S -v k=$K '(NR-1)%k!=s' > $D/.others.icnf
 echo "leaves+others: $(python3 $CC $D/leaves.icnf $D/.others.icnf)"
 echo "others alone (must be NOT COVERED): $(python3 $CC $D/.others.icnf)"
 rm -f $D/.others.icnf
+if [ -f $D/open.icnf ]; then
+grep '^a' $D/top.icnf | awk -v s=$S -v k=$K '(NR-1)%k!=s' > $D/.others.icnf
+echo "leaves+open+others: $(python3 $CC $D/leaves.icnf $D/open.icnf $D/.others.icnf)"
+rm -f $D/.others.icnf
+fi
