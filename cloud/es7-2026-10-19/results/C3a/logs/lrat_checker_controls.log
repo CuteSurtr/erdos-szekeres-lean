@@ -1,0 +1,4 @@
+genuine-m3k5 | expect ACCEPT | lrat-check-E2: c VERIFIED | cake_lpr: s VERIFIED UNSAT
+trivialSAT | expect REJECT | lrat-check-E2: c NOT VERIFIED | cake_lpr: c Checking failed at line: 0. Reason: pivot must be non-zero
+m2k5SAT-hintless-empty | expect REJECT | lrat-check-E2: c NOT VERIFIED | cake_lpr: c Checking failed at line: 0. Reason: pivot must be non-zero
+m3k5-truncated | expect REJECT | lrat-check-E2: c NOT VERIFIED | cake_lpr: c Checking failed at line: 695. Reason: pivot must be non-zero
