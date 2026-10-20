@@ -8,14 +8,13 @@ D=$(cd "$(dirname "$0")" && pwd)
 mkdir -p $O
 /usr/bin/python3 $D/post26.py $O/sets26.jsonl $S/signs26.txt "$@" > $O/post26.log
 $S/brute26 26 5 7 7 < $S/signs26.txt > $O/brute26.txt
-rm -f $S/sets32.jsonl $O/sat32.jsonl
-/usr/bin/python3 $D/build32.py $O/sets26.jsonl $S/sets32.jsonl > $O/build32.log
+/usr/bin/python3 $D/build32.py $O/sets26.jsonl $S/sets32.jsonl >> $O/build32.log
 /usr/bin/python3 -c "
 import json,sys
 with open('$O/sets32.jsonl','w') as f:
     for l in open('$S/sets32.jsonl'):
-        r=json.loads(l); f.write(json.dumps({k:v for k,v in r.items() if k!='points_exact'})+'\n')"
-/usr/bin/python3 $D/saturate32.py $S/sat $S/ext_solve $S/b33.cnf $O/sets32.jsonl $O/sat32.jsonl 0 lucky=0 > $O/sat32.log
+        f.write(l)"
+/usr/bin/python3 $D/saturate32.py $S/sat $S/ext_solve $S/b33.cnf $O/sets32.jsonl $O/sat32.jsonl 0 lucky=0 >> $O/sat32.log
 # brute-force: every 32-set (exact and compressed), x-sorted signs, no convex 7-subset (cap/cup limits off)
 /usr/bin/python3 -c "
 import json,itertools

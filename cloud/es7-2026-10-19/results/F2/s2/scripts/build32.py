@@ -42,9 +42,12 @@ def deep_below(S, m=6):
         if ok: return A, D
         D *= 4
 def main():
+    done = set(json.loads(l)["id"] for l in open(sys.argv[2])) if os.path.exists(sys.argv[2]) else set()
     out = open(sys.argv[2], "a")
     for line in open(sys.argv[1]):
-        rec = json.loads(line); S = [tuple(map(int, p)) for p in rec["points"]]
+        rec = json.loads(line)
+        if rec["id"] in done: continue
+        S = [tuple(map(int, p)) for p in rec["points"]]
         res = {"id": rec["id"], "n_S": len(S)}
         if len({p[0] for p in S}) < len(S):
             L = 2 * max(abs(p[1]) for p in S) + 1; S = [(L * x + y, y) for x, y in S]; res["sheared"] = True

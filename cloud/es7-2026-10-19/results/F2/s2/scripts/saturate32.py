@@ -12,23 +12,28 @@ import sys, os, json, subprocess, tempfile, itertools
 sat, ext, base, inp, outp = sys.argv[1:6]
 climit = sys.argv[6] if len(sys.argv) > 6 else "0"; opts = sys.argv[7:]
 def orient(p, q, r): return (q[0] - p[0]) * (r[1] - p[1]) - (q[1] - p[1]) * (r[0] - p[0])
+done = set(json.loads(l)["id"] for l in open(outp)) if os.path.exists(outp) else set()
 out = open(outp, "a")
 for line in open(inp):
     rec = json.loads(line)
-    if "points" not in rec: continue
-    P = [tuple(p) for p in rec["points"]]; n = len(P)
-    res = {"id": rec["id"], "N": n}
+    if rec["id"] in done or ("points" not in rec and "points_exact" not in rec): continue
+    # geometric test needs |coord| < 2^27 (sat.c); the abstract test uses the exact points
+    small = "points" in rec and max(max(abs(x), abs(y)) for x, y in rec["points"]) < 2 ** 27
+    P = [tuple(p) for p in (rec["points"] if small else rec["points_exact"])]; n = len(P)
+    res = {"id": rec["id"], "N": n, "geom_run": small}
     with tempfile.TemporaryDirectory() as td:
-        pf = os.path.join(td, "p.txt"); bf = os.path.join(td, "bad.txt")
-        open(pf, "w").write("".join(f"{x} {y}\n" for x, y in P))
-        r = subprocess.run([sat, "sat", pf, "7", bf], capture_output=True, text=True)
-        js = [l for l in r.stdout.splitlines() if l.startswith("{")]
-        g = json.loads(js[-1]) if js else {"error": (r.stdout + r.stderr)[-400:]}
-        res["geom"] = g
-        if js:
-            res["geom_faces_covered"] = g["faces_euler"] == g["faces_hit_by_valid_candidates"]
-            res["geom_saturated"] = g["bad_candidates"] == 0 and res["geom_faces_covered"]
-            if g["bad_candidates"]: res["geom_bad_head"] = open(bf).read()[:3000]
+      if small:
+          pf = os.path.join(td, "p.txt"); bf = os.path.join(td, "bad.txt")
+          open(pf, "w").write("".join(f"{x} {y}\n" for x, y in P))
+          r = subprocess.run([sat, "sat", pf, "7", bf], capture_output=True, text=True)
+          js = [l for l in r.stdout.splitlines() if l.startswith("{")]
+          g = json.loads(js[-1]) if js else {"error": (r.stdout + r.stderr)[-400:]}
+          res["geom"] = g
+          if js:
+              res["geom_faces_covered"] = g["faces_euler"] == g["faces_hit_by_valid_candidates"]
+              res["geom_saturated"] = g["bad_candidates"] == 0 and res["geom_faces_covered"]
+              if g["bad_candidates"]: res["geom_bad_head"] = open(bf).read()[:3000]
+      if True:
         # abstract: x-sorted signotope (shear if x repeats)
         Q = P
         if len({p[0] for p in Q}) < n:
