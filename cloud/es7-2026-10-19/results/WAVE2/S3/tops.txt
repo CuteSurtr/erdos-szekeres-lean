@@ -1,0 +1,16 @@
+# top cubes: march_cu CASE.cnf -d 7 (made in /opt/work/cases, passed to close_march.py --top). wall s under shared load
+U3-15_L 533a70de5f9a3db5cb8fee37d3f6ae0077a98f71893be943bb919cbecb515f7f lines 127 368.2 ['c number of cubes 127, including 1 refuted leaves']
+U8_L6 f0f3b9071d2754d777539502265c958e08a2f45843bbba1b01c4b1396cd5644b lines 114 376.0 ['c number of cubes 114, including 10 refuted leaves']
+U12_L2 8f58b0d84fdb65b4d6cb3a6da37c4679207f7220033a2d13dfa3be95e1a19bdc lines 118 c number of cubes 118, including 6 refuted leaves
+U4_L10 c552e9a2edfaa9e398a387c65ef54bb2b0d4fa7cfdea17ecf5eee2c98e93863e lines 110 c number of cubes 110, including 14 refuted leaves
+U15_L2 7b8ba79864e5ab6d3f57ab5bdc1c3e29048eee29eb86b12ba6f121d14d30d27c lines 125 303.2 ['c number of cubes 125, including 3 refuted leaves']
+U14_L2 bf188dea6882c6ef5cabd69c7410557e73ba6c5ee0599ac7217f498fb03b2859 lines 127 793.4 ['c number of cubes 127, including 1 refuted leaves']
+U13_L2 f9599f966f674c740722fa3a9798ab3c0c5372bf67a83eff2534e6ec20fd4726 lines 127 c number of cubes 127, including 1 refuted leaves
+U9_L2 8358f1019ed1a3b1281213132e85c209f39da8dd1dc59ff52d87587ef0cc17bb lines 127 c number of cubes 127, including 2 refuted leaves
+U8_L4 d4b4ec6f2cc2cf4b726d814f83ace8a50d89a3a6d89695198b8d0c52a299de37 lines 116 c number of cubes 116, including 8 refuted leaves
+# manual (prefetch) wall s:
+U4_L10 401s
+U12_L2 572s
+U8_L4 313s
+U13_L2 622s
+U9_L2 671s
