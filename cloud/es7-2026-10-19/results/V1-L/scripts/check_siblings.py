@@ -3,9 +3,17 @@
 
 Usage: check_siblings.py ICNF V1-0/leaves_cake.jsonl ... > report.json
 
-A leaf i (0-based line of ICNF) counts as verified if some record has "i" == i, the same cube
-as line i, solver_exit 20 and cake_lpr exactly "s VERIFIED UNSAT" (cake_exit 0). Records
-from a run other than V1-(i mod 4) are reported but still accepted if they match.
+A leaf i (0-based line of ICNF) counts as verified if some record has index i, the same cube
+as line i, solver_exit 20 and a cake_lpr verdict of `s VERIFIED UNSAT` (and cake_exit 0 when
+the record has that field). Records from a run other than V1-(i mod 4) are reported but still
+accepted if they match.
+
+The four runs use slightly different record formats:
+- the index is "i" (V1-0, V1-2) or "line" (V1-1, V1-3), both the 0-based line number;
+- V1-0, V1-2, V1-3 store cake_lpr's verdict line verbatim, "s VERIFIED UNSAT";
+- V1-1 stores "VERIFIED UNSAT", which its run_leaves.py writes exactly when cake_lpr's output
+  contains the line `s VERIFIED UNSAT` (regex ^s VERIFIED UNSAT$); anything else is
+  recorded as "REJECT: ...". Both spellings are accepted.
 """
 import json, sys, collections
 
@@ -26,7 +34,7 @@ for f in files:
             bad_lines.append(f"{f}:{n}")
             continue
         r["_run"] = run
-        recs[r.get("i")].append(r)
+        recs[r["i"] if "i" in r else r.get("line")].append(r)
 ok, fail, missing, cube_mismatch, wrong_run = [], [], [], [], []
 for i, c in enumerate(leaves):
     rs = recs.get(i, [])
@@ -34,7 +42,8 @@ for i, c in enumerate(leaves):
         missing.append(i)
         continue
     good = [r for r in rs if r.get("cube") == c and r.get("solver_exit") == 20
-            and r.get("cake_lpr") == "s VERIFIED UNSAT" and r.get("cake_exit", 0) == 0]
+            and r.get("cake_lpr") in ("s VERIFIED UNSAT", "VERIFIED UNSAT")
+            and r.get("cake_exit", 0) == 0]
     if any(r.get("cube") != c for r in rs):
         cube_mismatch.append(i)
     if any(r["_run"] != f"V1-{i % 4}" for r in rs):
@@ -46,7 +55,7 @@ out = {"leaves": len(leaves), "verified": len(ok), "verified_by_run": dict(sorte
        "missing_by_run": dict(sorted(collections.Counter(f"V1-{i % 4}" for i in missing).items())),
        "cube_mismatch": cube_mismatch, "record_from_other_run": wrong_run,
        "unparsable_lines": bad_lines,
-       "cake_s_total": round(sum(r.get("cake_s", 0) for rs in recs.values() for r in rs), 1),
+       "cake_s_total": round(sum(r.get("cake_s", r.get("cake_lpr_s", 0)) for rs in recs.values() for r in rs), 1),
        "max_proof_bytes": max((r.get("proof_bytes", 0) for rs in recs.values() for r in rs), default=0)}
 json.dump(out, sys.stdout, indent=1)
 print()
