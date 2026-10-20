@@ -12,7 +12,7 @@ def items():
     for f in sys.argv[5:]:
         if f.endswith(".jsonl"):
             for l in open(f):
-                r = json.loads(l); yield f"{os.path.basename(f)}:{r['id']}", [tuple(p) for p in r.get("points_exact", r["points"])]
+                r = json.loads(l); yield f"{os.path.basename(f)}:{r['id']}", [tuple(p) for p in (r["points_exact"] if "points_exact" in r else r["points"])]
         else:
             yield os.path.basename(f), [tuple(map(int, l.split())) for l in open(f) if l.strip()]
 out = open(outp, "a")
