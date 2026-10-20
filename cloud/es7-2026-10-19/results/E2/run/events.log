@@ -17,3 +17,14 @@
 {"event": "worker_ready", "w": 1, "t": 2821.2}
 {"event": "worker_ready", "w": 3, "t": 2821.2}
 {"event": "worker_ready", "w": 2, "t": 2821.3}
+{"event": "start", "solver_opts": ["--elim=0"], "nworkers": 4, "base": 10000, "grow": 1.2, "cap": 2000000, "maxcand": 400, "open": 213, "t": 4675.6}
+{"event": "worker_ready", "w": 2, "t": 4685.3}
+{"event": "stop_file", "t": 4685.6}
+{"event": "worker_failed", "w": 0, "line": "", "t": 4685.7}
+{"event": "worker_failed", "w": 3, "line": "", "t": 4685.7}
+{"event": "worker_failed", "w": 1, "line": "", "t": 4685.8}
+{"event": "worker_died", "w": 2, "cube": [1456, 406, -1674, 1802, 1220, 849, 1988], "t": 4685.8}
+{"event": "start", "solver_opts": ["--elim=0"], "nworkers": 3, "base": 10000, "grow": 1.2, "cap": 2000000, "maxcand": 400, "open": 213, "t": 4687.6}
+{"event": "worker_ready", "w": 2, "t": 4693.8}
+{"event": "worker_ready", "w": 1, "t": 4693.8}
+{"event": "worker_ready", "w": 0, "t": 4693.9}
