@@ -8,7 +8,7 @@ allocation order (needed only to evaluate F's non-orientation clauses).
 
 usage: geotest.py F.cnf CASES.icnf K7FILE SEED COUNT_PER_KIND OUT.jsonl
 """
-import sys, json, random, itertools
+import sys, json, random, itertools, math
 from fractions import Fraction
 import numpy as np
 sys.path.insert(0, '/opt/audit'); import mycube as M
@@ -113,7 +113,7 @@ def normalize(P):
     if any(isinstance(c, Fraction) for p in P for c in p):
         den = 1
         for p in P:
-            for c in p: den = den * Fraction(c).denominator // np.gcd(den, Fraction(c).denominator)
+            for c in p: den = math.lcm(den, Fraction(c).denominator)
         P = [(int(Fraction(x) * den), int(Fraction(y) * den)) for x, y in P]
     P = sorted(P)
     flipped = False
@@ -331,6 +331,8 @@ def gen_k7():
     return None
 
 GEN = {"hull46": gen_hull_kind, "uniform": gen_uniform, "degenerate": gen_degenerate, "k7mirror": gen_k7}
+import os
+if os.environ.get("KINDS"): GEN = {k: v for k, v in GEN.items() if k in os.environ["KINDS"].split(",")}
 with open(OUT, "w") as out:
     for kind, g in GEN.items():
         got = 0; att = 0

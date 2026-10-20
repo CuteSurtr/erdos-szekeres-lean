@@ -1,0 +1,12 @@
+top cubes 128 depth 7 shorter (march-refuted) cubes 0 tree leaves 149
+top                          covercheck.py: s COVERED 128          mycover.py: s COVERED (cake_lpr VERIFIED) 128
+tree                         covercheck.py: s COVERED 149          mycover.py: s COVERED (cake_lpr VERIFIED) 149
+remove_leaf_0                covercheck.py: s NOT COVERED 148      mycover.py: s NOT COVERED (cadical found an uncovered assignment) 148
+remove_leaf_1                covercheck.py: s NOT COVERED 148      mycover.py: s NOT COVERED (cadical found an uncovered assignment) 148
+remove_leaf_2                covercheck.py: s NOT COVERED 148      mycover.py: s NOT COVERED (cadical found an uncovered assignment) 148
+flip_literal_0               covercheck.py: s NOT COVERED 149      mycover.py: s NOT COVERED (cadical found an uncovered assignment) 149
+flip_literal_1               covercheck.py: s NOT COVERED 149      mycover.py: s NOT COVERED (cadical found an uncovered assignment) 149
+flip_literal_2               covercheck.py: s NOT COVERED 149      mycover.py: s NOT COVERED (cadical found an uncovered assignment) 149
+shorten_leaf(superset)       covercheck.py: s COVERED 149          mycover.py: s COVERED (cake_lpr VERIFIED) 149
+duplicate_leaf               covercheck.py: s COVERED 150          mycover.py: s COVERED (cake_lpr VERIFIED) 150
+ALL MUTATION TESTS AS EXPECTED {}
