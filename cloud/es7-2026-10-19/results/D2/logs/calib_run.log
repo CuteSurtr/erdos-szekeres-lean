@@ -1,0 +1,8 @@
+classical {"ES6_classical": {"n": 16, "general_position_exact": true, "exact_counts": {"3": 560, "4": 1119, "5": 802, "6": 0}, "integer_realization_bits": 24, "c6": 0, "sat_bad": 0, "sat_complete": true, "satcount_m0": 0, "satcount_m1": 405, "satcount_m2": 0, "satcount_complete": true, "faces": 5801}, "four_fold_16": {"n": 16, "general_position_exact": true, "exact_counts": {"3": 560, "4": 924, "5": 272, "6": 0}, "integer_realization_bits": 24, "c6": 0, "sat_bad": 0, "sat_complete": true, "satcount_m0": 0, "satcount_m1": 0, "satcount_m2": 0, "satcount_complete": true, "faces": 5728}, "five_fold_16": {"n": 16, "general_position_exact": true, "exact_counts": {"3": 560, "4": 1185, "5": 978, "6": 0}, "integer_realization_bits": 24, "c6": 0, "sat_bad": 0, "sat_complete": true, "satcount_m0": 0, "satcount_m1": 0, "satcount_m2": 0, "satcount_complete": true, "faces": 5804}}
+k6 annealed distinct order types: 287
+k6 annealed {'sets': 287, 'all_hexagon_free': True, 'sat_bad_total': 0, 'sat_all_complete': True, 'satcount_m0_total': 0, 'satcount_all_complete': True}
+k6 null 355 m0 total 0
+alphaevolve {"n": 33, "general_position_exact": true, "exact_counts_fraction": {"3": 5456, "4": 24758, "5": 47945, "6": 32055, "7": 1, "8": 0}, "heptagons_exact": [[14, 15, 17, 20, 23, 25, 32]], "integer_realization_bits": 26, "cgon_counts_integer": {"3": 5456, "4": 24758, "5": 47945, "6": 32055, "7": 1, "8": 0}, "exact_counts_integer": {"3": 5456, "4": 24758, "5": 47945, "6": 32055, "7": 1, "8": 0}, "integer_points_file": "calib/alphaevolve_int.txt"}
+validation points 5460 mismatches 0
+done 52.0
+CALIBDONE
