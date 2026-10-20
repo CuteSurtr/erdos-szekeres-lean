@@ -80,6 +80,8 @@ def main():
     ap.add_argument("--hours", type=float, default=100); ap.add_argument("--modeldir", default="/opt/work/models")
     ap.add_argument("--cadopts", default="", help="extra CaDiCaL options, comma-separated (e.g. --sat)")
     ap.add_argument("--shard", type=int); ap.add_argument("--nshards", type=int)
+    ap.add_argument("--split-singles", action="store_true",
+                    help="split (without solving) a node whose newest layer is a single orbit and whose previous layer is not")
     a = ap.parse_args()
     os.makedirs(WORK, exist_ok=True)
     caps = [int(x) for x in a.caps.split(",")]
@@ -109,8 +111,24 @@ def main():
             return [x for c in tree_children(11, 7, parse_layers(name)) for x in expand(layers_name(c))]
         return [name]
 
-    frontier = [x for r in roots for x in expand(r)]
+    def presplit(names):
+        out = []
+        for nm in names:
+            L = parse_layers(nm)
+            # only a single-orbit layer directly below a two-orbit layer (or below the top) is
+            # pre-split; runs of single-orbit layers are solved, else the tree explodes
+            if (a.split_singles and len(L) >= 2 and len(L[-1]) == 1 and (len(L) == 2 or len(L[-2]) == 2)
+                    and tree_children(11, 7, L)):
+                ch = [layers_name(c) for c in tree_children(11, 7, L)]
+                fo.write(json.dumps({"node": nm, "split": True, "children": len(ch), "presplit": True}) + "\n"); fo.flush()
+                out += presplit(ch)
+            else:
+                out.append(nm)
+        return out
+
     fo = open(a.out, "a")
+    frontier = sorted((x for r in roots for x in expand(r)), key=lambda x: (len(parse_layers(x)), x.count("-")))
+    frontier = presplit(frontier)
     with cf.ProcessPoolExecutor(a.jobs) as ex:
         while frontier and time.time() < deadline:
             futs = {ex.submit(solve, (a.base, n, caps[min(len(parse_layers(n)) - depth0, len(caps) - 1)], a.modeldir,
@@ -132,7 +150,7 @@ def main():
                     return
                 ch = tree_children(11, 7, parse_layers(r["node"]))
                 fo.write(json.dumps({"node": r["node"], "split": True, "children": len(ch)}) + "\n"); fo.flush()
-                nxt += [layers_name(c) for c in ch]
+                nxt += presplit([layers_name(c) for c in ch])
             frontier = nxt
     print(json.dumps({"root": root, "open_frontier": len(frontier)}), flush=True)
 
