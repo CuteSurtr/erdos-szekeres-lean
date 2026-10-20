@@ -88,9 +88,8 @@ def isTaut (c : List Int) : Bool := c.any fun l => c.contains (-l)
 def mirStep (st : Std.HashSet (List Int) × Array (List Int)) (c : List Int) :
     Std.HashSet (List Int) × Array (List Int) :=
   if isTaut c then st
-  else
-    let key := normClause c
-    if st.1.contains key then st else (st.1.insert key, st.2.push key)
+  else if st.1.contains (normClause c) then st
+  else (st.1.insert (normClause c), st.2.push (normClause c))
 
 /-- `mirgen.py` without the extra clauses: substituted, normalised, deduplicated. -/
 def mirgen (cls : List (List Int)) : List (List Int) :=
