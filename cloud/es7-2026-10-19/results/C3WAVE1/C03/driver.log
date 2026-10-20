@@ -34,3 +34,35 @@
 {"node": "0s0-1s1_3s0-6s1", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
 {"node": "0s0-1s1_3s0-6s1_2_4", "status": "UNSATISFIABLE", "solve_s": 6.6, "certified": false}
 PROOF NOT ACCEPTED 0s0-1s1_3s0-6s1_2_4
+=== OOM: cake_lpr killed by cgroup (14.3 GB limit) on 0s0-1s1_3s0-6s1_2_4; rechecked alone -> certified; resuming with --jobs 3 at 08:04:38
+=== ROOT 0s0-1s0_2s0-10s1 start 08:04:38 H=3.123
+{"root": "0s0-1s0_2s0-10s1", "open_frontier": 0}
+=== ROOT 0s0-1s0_2s0-10s1 end 08:04:39 rc=0
+STOPPED
+=== ALL DONE 08:04:39
+=== (previous ALL DONE/STOPPED were a false stop on the stale log line; restarted 08:04:53)
+=== ROOT 0s0-1s0_2s0-10s1 start 08:04:53 H=3.119
+{"root": "0s0-1s0_2s0-10s1", "open_frontier": 0}
+=== ROOT 0s0-1s0_2s0-10s1 end 08:04:53 rc=0
+=== ROOT 0s0-1s0_2s1-6s1 start 08:04:53 H=3.119
+{"root": "0s0-1s0_2s1-6s1", "open_frontier": 0}
+=== ROOT 0s0-1s0_2s1-6s1 end 08:04:53 rc=0
+=== ROOT 0s0-1s0_3s1-4s0 start 08:04:53 H=3.119
+{"root": "0s0-1s0_3s1-4s0", "open_frontier": 0}
+=== ROOT 0s0-1s0_3s1-4s0 end 08:04:54 rc=0
+=== ROOT 0s0-1s0_4s0-9s1 start 08:04:54 H=3.118
+{"root": "0s0-1s0_4s0-9s1", "open_frontier": 0}
+=== ROOT 0s0-1s0_4s0-9s1 end 08:04:54 rc=0
+=== ROOT 0s0-1s0_5s1-10s0 start 08:04:54 H=3.118
+{"root": "0s0-1s0_5s1-10s0", "open_frontier": 0}
+=== ROOT 0s0-1s0_5s1-10s0 end 08:04:54 rc=0
+=== ROOT 0s0-1s0_6s1-8s1 start 08:04:54 H=3.118
+{"root": "0s0-1s0_6s1-8s1", "open_frontier": 0}
+=== ROOT 0s0-1s0_6s1-8s1 end 08:04:54 rc=0
+=== ROOT 0s0-1s0_8s1-9s1 start 08:04:54 H=3.118
+{"root": "0s0-1s0_8s1-9s1", "open_frontier": 0}
+=== ROOT 0s0-1s0_8s1-9s1 end 08:04:54 rc=0
+=== ROOT 0s0-1s1_2s1-10s0 start 08:04:54 H=3.118
+{"root": "0s0-1s1_2s1-10s0", "open_frontier": 0}
+=== ROOT 0s0-1s1_2s1-10s0 end 08:04:55 rc=0
+=== ROOT 0s0-1s1_3s0-6s1 start 08:04:55 H=3.118
