@@ -13,7 +13,8 @@ and the CakeML-verified `cake_lpr`.
 - march_cu split it into 64 cubes, all on the σ bits. Coverage weight is exactly 1, and no
   leaf was refuted by march.
 - 4 of the 64 cubes ran 300 s each: all UNKNOWN.
-- PROBE_SUMMARY
+- 5 fully σ-fixed leaves (depth 10) ran without proofs: 2 at 2,400 s and 3 at 1,800 s.
+  All UNKNOWN, at 0.9–1.3M conflicts each.
 - Closed and LRAT-certified weight: **0**.
 
 What did pass:
@@ -50,7 +51,7 @@ No m = 11 model was found, so there is nothing to realize.
 ## The encoding (`tools/gen_c3b.py`, generator commit 3aac870)
 
 The setup and identities are as in the task. The proofs are written out in
-`README_draft_derivation.md`; the first two checks below re-verify them exactly.
+`DERIVATION.md`; the first two checks below re-verify them exactly.
 
 **Variables (m = 11)**
 - X = chi' per R-orbit of triples: 1,826. The signs follow e_i e_j e_k and the permutation
@@ -206,14 +207,30 @@ hash).
 - **Cube solving** (`tools/cnc_run.py`). Each cube is solved as CNF + units with
   `cadical --lrat --binary=false -t T`, then both checkers run.
   - Cubes 0–3 at T = 300 s: all UNKNOWN (`logs/cnc_d6_probe300.jsonl`).
-  - LEAF_PROBES
+  - Fully σ-fixed leaves (`logs/leaves_d10.icnf`, which extends d6 cubes 0, 21, 42, 63 and 10
+    with seeded random σ bits) were timed with `tools/probe_leaf.sh` (plain CaDiCaL, no
+    proof; `logs/probe_leaves_d10.jsonl`). Leaves 0 and 1 ran 2,400 s; leaves 2, 3 and 4 ran
+    1,800 s. **All UNKNOWN**, with 1,280,633, 1,205,891, 923,946, 986,494 and 922,700
+    conflicts.
+  - Sub-cubing σ-leaf 0 with `march_cu -d 5` reached only 16/64 progress in 44 min, about
+    5 min per lookahead node, and was aborted (`logs/march_leaf0_d5_aborted.log`).
 - **Closed weight: 0 / 1. LRAT coverage of the instance: none.**
 
-TIMING
+**Timing estimate.**
+- No leaf finished, so there is no real estimate. 5 of the 1,024 σ-leaves were timed and
+  none closed within 1,800–2,400 s.
+- If those 5 are typical, plain CaDiCaL needs more than about 1,024 × 2,000 s ≈ 570
+  core-hours. That is only an extrapolated lower bound; the true cost is unknown and
+  probably much larger.
+- On this 4-core VM within the 4-hour budget, the instance was not closable.
 
 ## Shard plan
 
-SHARD
+`shard_plan.md` records the deterministic inputs: generator commit 3aac870, CNF sha256,
+patched march_cu command, cube-file sha256, 64 cubes, and per-cube times.
+
+**It is not a ready plan to close the instance.** Closability is not established for this
+encoding. C3a's conv-variant plan, whose deep sub-leaves do close, is the better route.
 
 ## Files
 
@@ -228,5 +245,5 @@ SHARD
 - `tools/cnc_run.py`: cube solving with LRAT and both checkers.
 - `tools/coverage.py`: cube-tree and closed-weight check.
 - `tools/probe_leaf.sh`: proof-free timing probe of one cube.
-- `README_draft_derivation.md`: proofs of the identities and of the encoding's soundness.
+- `DERIVATION.md`: proofs of the identities and of the encoding's soundness.
 - `logs/`: everything cited above. No CNF or proof files are committed.
