@@ -13,6 +13,8 @@ tried = defaultdict(list)
 for r in recs:
     if "status" in r: tried[r["node"]].append(r)
 bad = [r for r in recs if r.get("status") == "UNSATISFIABLE" and not r.get("certified")]
+rechecked = [r for r in bad if r["node"] in cert]
+bad = [r for r in bad if r["node"] not in cert]
 sat = [r for r in recs if r.get("status") == "SATISFIABLE"]
 memo = {}
 def walk(n, acc):
@@ -40,3 +42,4 @@ for d in sorted(set(tot['cert']) | set(tot['split']) | set(tot['open'])):
     print(f"| {d} | {tot['cert'][d]} | {tot['split'][d]} | {tot['open'][d]} |")
 print(f"\nSAT records: {len(sat)}; UNSAT records not certified: {len(bad)}")
 for r in bad: print("  rejected:", r["node"], r.get("lrat_check"), r.get("cake_lpr"))
+for r in rechecked: print("  first check failed, later certified:", r["node"], r.get("lrat_check"), r.get("cake_lpr"))
