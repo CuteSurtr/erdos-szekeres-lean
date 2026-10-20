@@ -19,3 +19,10 @@ shard size 16, already done 0, queued 16
 {"status": "UNKNOWN", "solve_s": 300.02, "rc": 0, "kind": "cube", "cube": [1651, -87, -987, 2029, 2380, 2705, -3005], "depth": 7, "t": "2026-10-20T03:36:21Z"}
 {"status": "UNKNOWN", "solve_s": 300.02, "rc": 0, "kind": "cube", "cube": [1651, -87, 987, -2029, 2380, 2705, -3005], "depth": 7, "t": "2026-10-20T03:36:35Z"}
 {"status": "UNKNOWN", "solve_s": 300.02, "rc": 0, "kind": "cube", "cube": [1651, -87, 987, 2029, 2380, 2705, -3005], "depth": 7, "t": "2026-10-20T03:37:21Z"}
+{"status": "UNKNOWN", "solve_s": 300.02, "rc": 0, "kind": "cube", "cube": [1651, 87, 810, 509, 566, 593, -619], "depth": 7, "t": "2026-10-20T03:38:52Z"}
+{"kind": "split", "cube": [1651, -87, -987, 2029, 2380, 2705, -3005], "status": "SPLIT", "solve_s": 0.0, "march_s": 356.18, "nsub": 64, "march_info": "c number of cubes 64, including 0 refuted leaves", "march_rc": 0, "t": "2026-10-20T03:42:17Z"}
+{"kind": "split", "cube": [1651, -87, 987, 2029, 2380, 2705, -3005], "status": "SPLIT", "solve_s": 0.0, "march_s": 422.86, "nsub": 64, "march_info": "c number of cubes 64, including 0 refuted leaves", "march_rc": 0, "t": "2026-10-20T03:44:24Z"}
+{"kind": "split", "cube": [1651, -87, 987, -2029, 2380, 2705, -3005], "status": "SPLIT", "solve_s": 0.0, "march_s": 545.25, "nsub": 64, "march_info": "c number of cubes 64, including 0 refuted leaves", "march_rc": 0, "t": "2026-10-20T03:45:40Z"}
+{"kind": "split", "cube": [1651, 87, 810, 509, 566, 593, -619], "status": "SPLIT", "solve_s": 0.0, "march_s": 503.52, "nsub": 64, "march_info": "c number of cubes 64, including 0 refuted leaves", "march_rc": 0, "t": "2026-10-20T03:47:16Z"}
+{"status": "UNSATISFIABLE", "solve_s": 0.28, "rc": 20, "proof_bytes": 204149, "lrat_check": "VERIFIED", "check_s": 0.18, "kind": "gap", "cube": [-1651, -345, -1245, -2029, -2380, -2705, 3005], "nchildren": 64, "t": "2026-10-20T03:47:16Z"}
+{"status": "UNKNOWN", "solve_s": 300.02, "rc": 0, "kind": "cube", "cube": [1651, 87, 810, -509, 2029, 2380, -2705], "depth": 7, "t": "2026-10-20T03:47:18Z"}
