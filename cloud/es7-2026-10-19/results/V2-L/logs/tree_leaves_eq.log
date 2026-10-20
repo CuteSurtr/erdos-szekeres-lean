@@ -1,0 +1,8 @@
+# The leaves of the Lean trees, evaluated by Lean (`lake env lean --run scripts/dump_tree_leaves.lean DIR`,
+# compiled-interpreter evaluation of (treeOf s).leaves for the 450 s in caseTable, 11 s), compared byte for byte
+# with the leaf lists that gen_trees.py wrote from the wave records at Zf (trees_out/leaves/<case>.icnf; "a 0" for
+# the 310 cases with tree leaf). gen_trees.py itself checked that every such leaf is the exact literal sequence of
+# an UNSAT record with cake_lpr "s VERIFIED UNSAT" of that case.
+cases equal 450 differ 0 leaf lines 74000
+# This is a cross-check of the generator and the Lean definitions (interpreted code, not the kernel); the theorem
+# itself quantifies over (treeOf p.1).leaves, so whatever they are, they are the hypotheses.
