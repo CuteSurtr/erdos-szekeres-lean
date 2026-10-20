@@ -36,4 +36,7 @@ theorem AllOf.forall {α : Type} {P : α → Prop} {l : List α} (h : AllOf P l)
     · exact hp
     · exact ih a ha
 
+/-- A sibling list accepted by `coverCheck`. -/
+def CoverOk (L : List (List Int)) : Prop := Mir.coverCheck L = true
+
 end V2L

@@ -44,6 +44,41 @@ def CTree.kidsCheck : List (List Int × CTree) → Bool
   | (_, t) :: rest => t.check && CTree.kidsCheck rest
 end
 
+mutual
+/-- All sibling lists of the tree, in preorder: a node's cube list first, then those of its
+children in order. -/
+def CTree.sibLists : CTree → List (List (List Int))
+  | .leaf => []
+  | .node kids => kids.map Prod.fst :: CTree.kidsSibLists kids
+
+/-- The sibling lists of a list of children. -/
+def CTree.kidsSibLists : List (List Int × CTree) → List (List (List Int))
+  | [] => []
+  | (_, t) :: rest => t.sibLists ++ CTree.kidsSibLists rest
+end
+
+mutual
+/-- `check` is the conjunction of `coverCheck` over `sibLists`, so it can be proved from one
+kernel computation per sibling list. -/
+theorem CTree.check_of_sibLists : ∀ {t : CTree},
+    (∀ L ∈ t.sibLists, coverCheck L = true) → t.check = true
+  | .leaf, _ => by rw [CTree.check]
+  | .node kids, h => by
+    rw [CTree.sibLists] at h
+    rw [CTree.check, Bool.and_eq_true]
+    exact ⟨h _ List.mem_cons_self,
+      CTree.kidsCheck_of_sibLists fun L hL => h L (List.mem_cons_of_mem _ hL)⟩
+
+theorem CTree.kidsCheck_of_sibLists : ∀ {kids : List (List Int × CTree)},
+    (∀ L ∈ CTree.kidsSibLists kids, coverCheck L = true) → CTree.kidsCheck kids = true
+  | [], _ => by rw [CTree.kidsCheck]
+  | (_, t) :: rest, h => by
+    rw [CTree.kidsSibLists] at h
+    rw [CTree.kidsCheck, Bool.and_eq_true]
+    exact ⟨CTree.check_of_sibLists fun L hL => h L (List.mem_append_left _ hL),
+      CTree.kidsCheck_of_sibLists fun L hL => h L (List.mem_append_right _ hL)⟩
+end
+
 theorem cubeSat_append {ν : ℕ → Bool} {s l : List ℤ} (hs : CubeSat ν s) (hl : CubeSat ν l) :
     CubeSat ν (s ++ l) := by
   intro z hz
