@@ -1,0 +1,55 @@
+{
+ "U_L2": {
+  "open": 6466,
+  "orphans": 0,
+  "reserved_for_running": 624,
+  "to_helpers": 5842,
+  "helpers": 18,
+  "running": [
+   "G1: queue 2251 rate 3.4/min left 80 min reserve 218",
+   "G2: queue 1992 rate 5.1/min left 58 min reserve 240",
+   "G3: queue 2223 rate 3.6/min left 59 min reserve 166"
+  ]
+ },
+ "U_L6": {
+  "open": 1074,
+  "orphans": 0,
+  "reserved_for_running": 94,
+  "to_helpers": 980,
+  "helpers": 5,
+  "running": [
+   "G21: queue 1074 rate 2.0/min left 58 min reserve 94"
+  ]
+ },
+ "U3_L": {
+  "open": 875,
+  "orphans": 234,
+  "reserved_for_running": 240,
+  "to_helpers": 635,
+  "helpers": 2,
+  "running": [
+   "F1: queue 281 rate 8.9/min left 5 min reserve 38",
+   "F3: queue 360 rate 9.7/min left 26 min reserve 202"
+  ]
+ },
+ "U_L7": {
+  "open": 526,
+  "orphans": 0,
+  "reserved_for_running": 137,
+  "to_helpers": 389,
+  "helpers": 2,
+  "running": [
+   "G14: queue 526 rate 2.1/min left 80 min reserve 137"
+  ]
+ },
+ "U4_L": {
+  "open": 327,
+  "orphans": 0,
+  "reserved_for_running": 137,
+  "to_helpers": 190,
+  "helpers": 1,
+  "running": [
+   "F4: queue 327 rate 5.7/min left 30 min reserve 137"
+  ]
+ }
+}
