@@ -1,0 +1,8 @@
+input commit Z = 71bcca7 (worktree /opt/in)
+results/V3C/worklist.jsonl sha256 aeb4a3f19a5979e6d8fb9c4bc68b303de1332ea2a2677e1d4f69833fb6025abc, 12380 lines (both match)
+shard 5 of 16: 774 records (idx % 16 == 5)
+cross-check at fdd0393: v3_jsonl_leaves.py WAVE1 -> dirs 119 leaf lines 30151 skipped records 71; WAVE2 -> dirs 106 leaf lines 11810 skipped 0; WAVE3 -> dirs 29 leaf lines 6202 skipped 0
+v3_manifest.py: leaves 47533 cases with leaves 278 problems 0
+Mfd.jsonl sha256 34676b0c112438285b15a2cdb63291b9e63b242a98ac84b38d1d0d9c642afbfb, 47533 lines (both match)
+every one of the 12380 work-list (case, lits) records occurs in Mfd.jsonl (0 missing)
+cross-check: PASS
