@@ -11,6 +11,10 @@ The wave VMs ran 36 separately modified copies of `close_march.py` (Haudit RISK-
 - `v3_manifest.py ROOT OUT_MANIFEST OUT_CASES results/WAVE1 [more wave dirs]`: assigns every
   leaves directory to a case (case_sha256 in leaves.jsonl and the directory name must agree),
   rejects malformed lines, and numbers the distinct (case, leaf) pairs.
+- `v3_jsonl_leaves.py ROOT results/WAVE1 OUTDIR`: for drivers that write leaves.icnf only at the
+  end, turns the UNSAT records of every leaves.jsonl into a leaves.icnf under OUTDIR (same
+  directory names, leaves.jsonl copied for the case assignment). Pass OUTDIR to v3_manifest.py as
+  a second wave directory. It only adds candidate leaves; v3_check.py still re-checks each one.
 - `v3_check.py --root ROOT --base F.cnf --manifest M --shard I --nshards N --out OUT`:
   checks the leaves with idx = I mod N and the covers of the cases at position I mod N.
   Each job uses its own work directory. The run is resumable.
