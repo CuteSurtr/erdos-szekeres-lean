@@ -1,0 +1,36 @@
+import V2L.Main
+import V2L.Leaves
+
+/-!
+# Sub-case (ii) and the mirror class, with the WAVE1 leaf lists
+
+`leavesOf` (generated, `V2L/Leaves.lean`) gives every case its leaf cubes. The cover facts are
+proved here in the kernel, so only the cake_lpr facts remain as hypotheses.
+-/
+
+namespace V2L
+
+open ETV ErdosSzekeres Mir
+
+set_option maxHeartbeats 0 in
+theorem leavesOf_cover : ∀ p ∈ caseTable, coverCheck (leavesOf p.1) = true := by
+  decide +kernel
+
+/-- **Sub-case (ii), any mirror line**, from the 122 cover-obligation facts and the per-leaf
+facts of the 450 cases. -/
+theorem axisInteriorLine_of_leafFacts (hroot : RootCertificate) (hup : UpCertificates)
+    (hleaf : ∀ p ∈ caseTable, ∀ l ∈ leavesOf p.1,
+      ¬DimacsSatisfiable (cubeCnf (cubeCnf (interiorCnf 33 7) p.2) l)) :
+    AxisInteriorLine :=
+  axisInteriorLine_of_certificates (interiorCertificates_of_cover leavesOf_cover hroot hup hleaf)
+
+/-- **The mirror class**, from V1-L's 1,198 leaf facts and the sub-case (ii) facts. -/
+theorem mirrorExclusionLine_of_leafFacts
+    (h1 : ∀ c ∈ V1L.hullLeaves, ¬DimacsSatisfiable (cubeCnf (hullCnf 33 7) c))
+    (hroot : RootCertificate) (hup : UpCertificates)
+    (hleaf : ∀ p ∈ caseTable, ∀ l ∈ leavesOf p.1,
+      ¬DimacsSatisfiable (cubeCnf (cubeCnf (interiorCnf 33 7) p.2) l)) :
+    MirrorExclusionLine :=
+  mirrorExclusionLine_of_certificates h1 (interiorCertificates_of_cover leavesOf_cover hroot hup hleaf)
+
+end V2L
