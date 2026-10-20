@@ -37,7 +37,7 @@ One cloud VM: Linux x86_64, 4 cores, 15 GB RAM, no swap (`env.txt`). Started at 
   | `results/H` | `Build completed successfully (1557 jobs)` | 29 min (Mathlib from source) | `logs/H_lake_build.log` |
   | `results/H3` | `Build completed successfully (1560 jobs)`, including `MirrorEncoding.Audit` | 36 s | `logs/H3_lake_build.log` |
   | `results/V1-L` | `Build completed successfully (1561 jobs)`, including `V1L.Audit` | 1.5 min | `logs/V1L_lake_build.log` |
-  | `results/V2-L` | clean rebuild of all V2L modules and the `v2l_data` exe, see the log | see log | `logs/V2L_lake_build.log` |
+  | `results/V2-L` | `Build completed successfully (1573 jobs)`, clean rebuild of all V2L modules (`V2L.Facts` 437 s, the rest < 10 s each), `V2L.Audit` and the `v2l_data` exe | 7 min 36 s | `logs/V2L_lake_build.log` |
 
 - H3, V1-L and V2-L share H's packages directory (`.lake/packages -> ../../H/.lake/packages`).
 - **The CNF.** `logs/mir_dimacs_interior.log`: `lake exe mir_dimacs interior 33 7 OUT` (H3) wrote
