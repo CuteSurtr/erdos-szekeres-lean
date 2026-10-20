@@ -6,7 +6,7 @@ Per model: (1) task A's near-original realizer (realize_models.realize: alternat
 LPs from the original coordinates, then a nonlinear search); (2) if that fails,
 tools/realizer/realize.py (portfolio; --xgrid-pool = the base set's coordinates) with T CPU s.
 Any candidate is re-checked here independently: integer points, to_sig recomputed from the points
-alone must equal the model, brute_kgon must report 0 axiom violations and its convex 7-subset count.
+alone, labelled orientations must equal the model, brute_kgon reports violations and convex 7-subsets.
 """
 import argparse
 import json
@@ -21,16 +21,28 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 B = os.path.abspath(os.path.join(HERE, '..', '..', '..'))
 sys.path.insert(0, os.path.join(HERE, '..', '..', 'A', 'scripts'))
 import realize_models as RM  # noqa: E402
-from sigutil import to_sig, brute, triples  # noqa: E402
+from sigutil import to_sig, brute, triples, orient  # noqa: E402
 
 A = None
 
 
 def exact(M, model, P):
-    spts, sg, _ = to_sig([tuple(p) for p in P])
+    """Labelled check: point t realizes model label t+1. Every orientation recomputed with ints;
+    then the x-sorted signotope of the points (any order) goes through brute_kgon (convex position
+    is an order-type invariant, so the 7-gon count does not depend on the labelling)."""
+    P = [tuple(map(int, p)) for p in P]
+    mism = zero = 0
+    for (i, j, k), c in zip(triples(M), model):
+        o = orient(P[i - 1], P[j - 1], P[k - 1])
+        if o == 0:
+            zero += 1
+        elif ('+' if o > 0 else '-') != c:
+            mism += 1
+    spts, sg, _ = to_sig(P)
     bk = brute(os.path.join(A.wd, 'brute_kgon'), M, 7, sg, os.path.join(A.wd, 'tmp'), f"r2_{os.getpid()}")
-    return {"recomputed_equals_model": sg == model, "brute_violations": bk["violations"],
-            "brute_convex7": bk["convex"], "realized": sg == model and bk["violations"] == 0}
+    return {"labelled_mismatches": mism, "collinear": zero, "xsorted_sig_equals_model": sg == model,
+            "brute_violations": bk["violations"], "brute_convex7": bk["convex"],
+            "realized": mism == 0 and zero == 0 and bk["violations"] == 0}
 
 
 def work(job):
