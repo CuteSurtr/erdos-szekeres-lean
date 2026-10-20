@@ -21,11 +21,11 @@ U_L5-13    CLOSED(whole) cpu=17s
 U_L5-15    CLOSED(whole) cpu=22s
 U6-8_L     CLOSED(whole) cpu=23s
 U6-12_L    CLOSED(whole) cpu=22s
-U3_L2      open=15 verified_leaves=176 splits=1 top=128 cpu=6982s
-U3_L7      open=125 verified_leaves=0 splits=0 top=125 cpu=360s
-U3_L11     open=117 verified_leaves=0 splits=0 top=117 cpu=419s
+U3_L2      CLOSED(cubes) open=0 verified_leaves=315 splits=3 top=128 cpu=10558s
+U3_L7      CLOSED(cubes) open=0 verified_leaves=125 splits=0 top=125 cpu=2056s
+U3_L11     open=1 verified_leaves=116 splits=0 top=117 cpu=1157s
 U3_L15     open=1 verified_leaves=0 splits=0 top=- cpu=60s
-U4_L6      open=112 verified_leaves=0 splits=0 top=112 cpu=311s
+U4_L6      open=65 verified_leaves=47 splits=0 top=112 cpu=440s
 U4_L11     open=1 verified_leaves=0 splits=0 top=- cpu=60s
 U4_L15     open=1 verified_leaves=0 splits=0 top=- cpu=60s
 U5_L6      open=1 verified_leaves=0 splits=0 top=- cpu=60s
