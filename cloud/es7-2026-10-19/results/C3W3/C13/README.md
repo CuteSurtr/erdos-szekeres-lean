@@ -86,4 +86,4 @@ Total new records: 1,957, of which 1,921 certified UNSAT (all with `c VERIFIED` 
 ## compose.py
 
 `python3 $TOOLS/compose.py /opt/work/base.cnf results/C3W3/C13/out.jsonl` (`compose.txt`; new records only, so the class is not expected to be covered):
-(compose.py still running at commit time; result added in the next commit)
+`{"certified_nodes": 1921, "class_covered": false, "uncovered_frontier_nodes": 1040, ...}`. As expected, not covered (this file holds one shard of new records only); compose recomputed the CNF sha256 of all 1,921 certified nodes.
