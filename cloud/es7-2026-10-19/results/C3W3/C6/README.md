@@ -61,4 +61,6 @@ Partial (1): 0s0-3s1_4s0-7s1.
 - No `PROOF NOT ACCEPTED`. Every certified record has `lrat_check: c VERIFIED` and `cake_lpr: s VERIFIED UNSAT`.
 - No memory problem. At most about 9 GB of the 15 GB was in use.
 
+compose.txt (run on the new-only out.jsonl): certified_nodes 2347, class_covered false, uncovered_frontier_nodes 805. The class was not expected to be covered.
+
 Files: `out.jsonl` (new records only), `driver0.log` (last 100 lines of the driver log), `compose.txt`, `roots.tsv`, `lane0.sh`, `tools.txt`, `env.txt`.
