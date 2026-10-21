@@ -111,6 +111,15 @@ erdosproblems.com page for Problem 107 (edited 11 April 2026) lists only the asy
 - **Szekeres–Peters 2006**, §5 (per the 14 Oct survey): a purely combinatorial 2^{k−2}
   construction in the signature-function model.
 
+- **Bogdan 2025** (arXiv:2512.24061): the conclusion, as quoted in search snippets, says progress
+  depends on stronger anchoring "for the hardest symmetric configurations". Symmetry appears there
+  as something to break or anchor, not as a class that is solved.
+- **Koshelev–Koshka 2026** (arXiv:2604.20120): per the snippet, a 25-point example with 3-fold
+  symmetry for a hexagon-type variant, not for convex 7-gons.
+- **Mackey, CMU 5th-year master's thesis, 2025** (csd.cmu.edu announcement): analyses the
+  symmetric 16-point sets and describes 32-point 7-gon-free configurations as a larger open
+  generalization. The text was not retrieved.
+
 I found no paper on reflection-invariant (mirror-symmetric) point sets without large convex
 polygons, none on dihedral symmetry, and none on 3-fold rotational symmetry at 33 points.
 
