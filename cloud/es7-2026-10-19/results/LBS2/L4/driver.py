@@ -1,21 +1,22 @@
 #!/usr/bin/env python3
 """walk32 worker: ES base (gen_es.py) -> random walk (walk) -> snapshots -> vfy4 (exact GP,
 convex k-subset counts, order-type hash) -> tools/realizer/saturate.py --K 7 (exact checks
-and sat.c).  One JSON line per distinct (per worker) order type into out/wW.jsonl, the
-points into out/sets_wW.txt.  Stops at DEADLINE (unix time) or if out/STOP exists; any set
-with bad_candidates > 0 writes out/ALERT_* and creates out/STOP.
-usage: driver.py WORKER DEADLINE"""
+and sat.c).  One JSON line per distinct (per worker) order type into live/eE_wW.jsonl, the
+points into live/eE_sets_wW.txt (live/ is not tracked by git; copies are committed under data/).
+Stops at DEADLINE (unix time) or if live/STOP exists; any set with bad_candidates > 0 writes
+live/ALERT_* and creates live/STOP.  EPOCH only changes the random seeds (restarts).
+usage: driver.py WORKER DEADLINE EPOCH"""
 import json, os, random, subprocess, sys, time
 HERE = os.path.dirname(os.path.abspath(__file__))
 TOOLS = os.path.join(HERE, "..", "..", "..", "tools")
 SAT = os.path.join(HERE, "sat")
-w, deadline = int(sys.argv[1]), float(sys.argv[2])
-out = os.path.join(HERE, "out"); os.makedirs(out, exist_ok=True)
+w, deadline, epoch = int(sys.argv[1]), float(sys.argv[2]), int(sys.argv[3])
+out = os.path.join(HERE, "live"); os.makedirs(out, exist_ok=True)
 tmp = os.path.join(out, f"tmp{w}"); os.makedirs(tmp, exist_ok=True)
-rng = random.Random(1000 + w)
+rng = random.Random(1000 * epoch + w)
 seen = set()
-jl = open(os.path.join(out, f"w{w}.jsonl"), "a")
-sets = open(os.path.join(out, f"sets_w{w}.txt"), "a")
+jl = open(os.path.join(out, f"e{epoch}_w{w}.jsonl"), "a")
+sets = open(os.path.join(out, f"e{epoch}_sets_w{w}.txt"), "a")
 
 def test(path, rec):
     t0 = time.time()
@@ -40,7 +41,7 @@ def test(path, rec):
         pts = open(path).read().split()
         sets.write(v["ot_hash"] + " " + " ".join(pts) + "\n"); sets.flush()
         if rec.get("bad_candidates") != 0 or not rec.get("faces_covered") or s.get("largest_convex_subset", 7) >= 7:
-            tag = f"ALERT_w{w}_{v['ot_hash']}"
+            tag = f"ALERT_e{epoch}_w{w}_{v['ot_hash']}"
             open(os.path.join(out, tag + ".pts"), "w").write(open(path).read())
             open(os.path.join(out, tag + ".json"), "w").write(json.dumps(s) + "\n")
             if rec.get("bad_candidates"):

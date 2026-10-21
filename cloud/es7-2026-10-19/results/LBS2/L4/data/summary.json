@@ -1,0 +1,75 @@
+{
+ "lines": 3100,
+ "sets_tested": 3100,
+ "skipped": 0,
+ "distinct_order_types": 3092,
+ "order_types_tested_more_than_once": 4,
+ "all_saturated": true,
+ "not_saturated": [],
+ "bad_candidates_total": 0,
+ "faces_covered_all": true,
+ "py_largest_convex_subset": {
+  "6": 3100
+ },
+ "vfy4_vs_py_GP_agree": true,
+ "c6": {
+  "min": 11584,
+  "p10": 15447,
+  "median": 20949,
+  "p90": 32874,
+  "max": 39648
+ },
+ "c5": {
+  "min": 26422,
+  "p10": 30023,
+  "median": 36298,
+  "p90": 45539,
+  "max": 49884
+ },
+ "faces": {
+  "min": 108898,
+  "p10": 109280,
+  "median": 109334,
+  "p90": 109337,
+  "max": 109337
+ },
+ "hull": {
+  "5": 1549,
+  "4": 1000,
+  "3": 85,
+  "6": 466
+ },
+ "max_abs_coord": {
+  "min": 31447056,
+  "p10": 34030183,
+  "median": 54045344,
+  "p90": 65905332,
+  "max": 67106818
+ },
+ "walk_len": {
+  "min": 1,
+  "p10": 10,
+  "median": 400,
+  "p90": 15000,
+  "max": 60000
+ },
+ "by_base_mild": {
+  "0": 581,
+  "1": 1485,
+  "2": 1034
+ },
+ "distinct_bases": 247,
+ "seconds_mean": 0.886,
+ "c6_histogram_5000": {
+  "10000": 206,
+  "15000": 1216,
+  "20000": 548,
+  "25000": 489,
+  "30000": 489,
+  "35000": 152
+ },
+ "faces_histogram_1000": {
+  "108000": 45,
+  "109000": 3055
+ }
+}
