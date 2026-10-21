@@ -21,3 +21,14 @@
 === 0s0-1s1_6s0-7s1 K=3 end 05:03:39
 === 0s0-1s1_6s0-7s1 K=3 all certified
 === 0s0-1s1_2s1-4s0 K=3 start 05:03:39 deadline 05:30:26
+{"node": "0s0-1s1_2s1-4s0", "cube": {"3": 0, "5": 0, "6": 0}, "status": "UNSATISFIABLE", "solve_s": 236.6, "certified": true}
+{"node": "0s0-1s1_2s1-4s0", "cube": {"3": 0, "5": 0, "6": 1}, "status": "UNSATISFIABLE", "solve_s": 188.4, "certified": true}
+{"node": "0s0-1s1_2s1-4s0", "cube": {"3": 0, "5": 1, "6": 0}, "status": "UNSATISFIABLE", "solve_s": 147.8, "certified": true}
+{"node": "0s0-1s1_2s1-4s0", "cube": {"3": 0, "5": 1, "6": 1}, "status": "UNSATISFIABLE", "solve_s": 119.7, "certified": true}
+{"node": "0s0-1s1_2s1-4s0", "cube": {"3": 1, "5": 0, "6": 0}, "status": "UNSATISFIABLE", "solve_s": 176.4, "certified": true}
+{"node": "0s0-1s1_2s1-4s0", "cube": {"3": 1, "5": 0, "6": 1}, "status": "UNSATISFIABLE", "solve_s": 174.7, "certified": true}
+{"node": "0s0-1s1_2s1-4s0", "cube": {"3": 1, "5": 1, "6": 0}, "status": "UNSATISFIABLE", "solve_s": 151.1, "certified": true}
+{"node": "0s0-1s1_2s1-4s0", "cube": {"3": 1, "5": 1, "6": 1}, "status": "UNSATISFIABLE", "solve_s": 132.0, "certified": true}
+=== 0s0-1s1_2s1-4s0 K=3 end 05:14:00
+=== 0s0-1s1_2s1-4s0 K=3 all certified
+=== 0s0-1s1_2s0-4s1 K=3 start 05:14:00 deadline 05:49:00
