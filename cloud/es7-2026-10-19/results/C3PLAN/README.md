@@ -13,7 +13,7 @@ Full answers with sources: `PLAN.md`.
   3 jobs). The range is 2,100–8,000 core-h unless the heaviest H3 Knuth walk is representative, in
   which case it is about 8.7·10^5. H3 has no wave data at all.
 - **Cheaper:** (a) a mirror reduction below every H6 case (Lemma H6M, proof in `PLAN.md` §3a,
-  0 failures on 900 exact-coordinate sets, `scripts/validate_mirror_h6.py`) keeps 81 of 153 layer-2
+  0 failures on 3,900 exact-coordinate sets, `scripts/validate_mirror_h6.py`) keeps 81 of 153 layer-2
   options per H6 case and brings the mid value to about 2,000 core-h. (b) σ-cube splitting of
   timed-out nodes (`scripts/sigma_cubes.py`, `logs/sigma_cubes.jsonl`, every UNSAT checked by
   lrat-check E2 and cake_lpr): mixed, with 1 of 3 hard nodes closed at 16.6× less cost than its

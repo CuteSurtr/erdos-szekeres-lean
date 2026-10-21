@@ -3,25 +3,25 @@ H3/one	5	0/0	2.77/5.66/8636.00	14/28/43180	C3-S Knuth walks (H3 stratum, 100 roo
 H3/two	95	0/0	2.77/5.66/8636.00	263/538/820420	C3-S Knuth walks (H3 stratum, 100 roots)
 H6(1,0)/one	9	9/0	1.29/1.29/1.29	12/12/12	own roots
 H6(1,0)/two	144	144/0	0.02/0.02/0.02	3/3/3	own roots
-H6(1,1)/one	9	0/9	16.49/26.81/68.10	148/241/613	own roots
-H6(1,1)/two	144	103/36	1.55/1.91/3.34	223/275/481	own roots
-H6(2,0)/one	9	1/5	1.46/1.60/2.17	13/14/20	own roots
-H6(2,0)/two	144	68/0	0.02/0.02/0.02	3/3/3	own roots
-H6(2,1)/one	9	0/1	11.70/18.85/47.46	105/170/427	own roots
-H6(2,1)/two	144	10/12	1.30/2.20/5.79	188/317/834	own roots
-H6(3,0)/one	9	0/1	1.00/1.51/3.58	9/14/32	own roots
-H6(3,0)/two	144	2/0	0.02/0.02/0.02	3/3/3	own roots
-H6(3,1)/one	9	0/0	16.01/26.02/66.04	144/234/594	borrowed: all measured s1/one roots
-H6(3,1)/two	144	0/0	1.52/1.95/3.67	218/280/529	borrowed: all measured s1/two roots
-H6(4,0)/one	9	0/0	1.33/1.42/1.76	12/13/16	borrowed: all measured s0/one roots
+H6(1,1)/one	9	0/9	16.54/26.80/67.85	149/241/611	own roots
+H6(1,1)/two	144	103/36	1.59/1.90/3.13	229/273/450	own roots
+H6(2,0)/one	9	3/3	1.54/1.58/1.75	14/14/16	own roots
+H6(2,0)/two	144	71/0	0.02/0.02/0.02	3/3/3	own roots
+H6(2,1)/one	9	0/1	11.69/18.85/47.45	105/170/427	own roots
+H6(2,1)/two	144	18/12	1.04/1.60/3.82	150/230/551	own roots
+H6(3,0)/one	9	1/1	1.18/1.54/2.95	11/14/27	own roots
+H6(3,0)/two	144	10/0	0.02/0.02/0.02	3/3/3	own roots
+H6(3,1)/one	9	0/0	16.05/26.00/65.81	144/234/592	borrowed: all measured s1/one roots
+H6(3,1)/two	144	1/1	1.04/2.02/5.94	150/291/855	own roots
+H6(4,0)/one	9	0/0	1.37/1.42/1.65	12/13/15	borrowed: all measured s0/one roots
 H6(4,0)/two	144	0/0	0.02/0.02/0.02	3/3/3	borrowed: all measured s0/two roots
-H6(4,1)/one	9	0/0	16.01/26.02/66.04	144/234/594	borrowed: all measured s1/one roots
-H6(4,1)/two	144	0/0	1.52/1.95/3.67	218/280/529	borrowed: all measured s1/two roots
-H6(5,0)/one	9	0/0	1.33/1.42/1.76	12/13/16	borrowed: all measured s0/one roots
+H6(4,1)/one	9	0/0	16.05/26.00/65.81	144/234/592	borrowed: all measured s1/one roots
+H6(4,1)/two	144	0/0	1.49/1.84/3.28	214/266/472	borrowed: all measured s1/two roots
+H6(5,0)/one	9	0/0	1.37/1.42/1.65	12/13/15	borrowed: all measured s0/one roots
 H6(5,0)/two	144	0/0	0.02/0.02/0.02	3/3/3	borrowed: all measured s0/two roots
-H6(5,1)/one	9	0/0	16.01/26.02/66.04	144/234/594	borrowed: all measured s1/one roots
-H6(5,1)/two	144	0/0	1.52/1.95/3.67	218/280/529	borrowed: all measured s1/two roots
-TOTAL core-hours low/mid/high: 2102/3193/869435
-TOTAL with H6 mirror reduction, core-hours low/mid/high: 1261/1986/866761
-H3 high from the second-heaviest walk (1,681 solve core-h) instead of 6.8e5: no mirror 7970 with H6 mirror 5295
-bucket costs c_b (s): {"s0/one/3/1": 115.5, "s0/one/3/2": 37.1, "s0/two/2/2": 77.8, "s1/one/3/1": 300.1, "s1/one/3/2": 157.0, "s1/one/4/1": 79.0, "s1/one/4/2": 66.5, "s1/two/2/2": 225.6, "s1/two/3/2": 56.3, "s1/two/4/1": 22.2, "s1/two/4/2": 20.4}
+H6(5,1)/one	9	0/0	16.05/26.00/65.81	144/234/592	borrowed: all measured s1/one roots
+H6(5,1)/two	144	0/0	1.49/1.84/3.28	214/266/472	borrowed: all measured s1/two roots
+TOTAL core-hours low/mid/high: 1997/3085/869314
+TOTAL with H6 mirror reduction, core-hours low/mid/high: 1205/1928/866696
+H3 high from the second-heaviest walk (1,681 solve core-h) instead of 6.8e5: no mirror 7849 with H6 mirror 5231
+bucket costs c_b (s): {"s0/one/3/1": 115.5, "s0/one/3/2": 37.2, "s0/two/2/2": 77.1, "s1/one/3/1": 300.1, "s1/one/3/2": 156.5, "s1/one/4/1": 79.0, "s1/one/4/2": 66.5, "s1/two/2/2": 220.0, "s1/two/3/2": 56.2, "s1/two/4/1": 21.9, "s1/two/4/2": 20.2}
