@@ -1,6 +1,6 @@
 # C3U: σ-cube splitting in the 3-fold tools
 
-Task `results/C3U/TASK.md` at 3f153540, H = 2.25. Run 2026-10-21 05:31–07:4x UTC on one cloud VM (4 cores, 15 GB,
+Task `results/C3U/TASK.md` at 3f153540, H = 2.25. Run 2026-10-21 05:31–06:40 UTC on one cloud VM (4 cores, 15 GB,
 no swap; `env.txt`). The same `env.txt` lists the CaDiCaL 3.0.1, cake_lpr and lrat-check (E2 patch) builds and the
 checker sanity test. It also gives the m = 11 base: `p cnf 168399 4154921`, sha256 `bf0e502e…dd6da`, which matches.
 
@@ -25,7 +25,7 @@ at depth 1.
   - A certified node is covered.
   - A node is covered if a σ-split of it (a checked record or an implied one) has all 2^K children covered.
   - A plain layer node is covered if all its `tree_children` are covered. This is the C3T rule unchanged: it needs no
-    split record, and it is explored only below nodes with a certified (or split) descendant.
+    split record, and it is explored only below nodes with a certified descendant (C3T) or a cube or σ-split descendant.
   - A cube node is layer-split **only if it has a layer split record**. A cube node with no layer children (every
     residue used) is never covered vacuously.
 - In `compose.py`, a σ-split record with wrong `sigma_bits` is a hard error (exit 1), not just an unused record. The
@@ -37,6 +37,8 @@ at depth 1.
   leaves the frontier, as in C3T. `compose.py` does not count such a node as covered.
 
 ## Tests (scripts in `tests/`, outputs in `tests/logs/`)
+
+Records of all small runs are in `tests/logs/small/` (JSON records only: no CNF or proof files are kept).
 
 `tests/small.py` runs a C3U tool on a small (m, k), like `results/C3T/tests/small.py`. It imports the tool unchanged and
 rebinds only the module-level (m, k) bindings: `C3Enc`, `layer_clauses`, `tree_children` and `E` as in C3T, plus
@@ -50,7 +52,15 @@ limits (`--caps 600`). All small instances are UNSAT for H3 in `results/C3-S/log
    `solve_s` and `check_s`. That covers status, units, cap, `cnf_sha256`, `cadical_args`, `proof_sha256`,
    `proof_bytes`, the checker lines and the split records.
 
-   CMP_TABLE
+   | instance (root `0s0`, `-c`) | records old / new / new0 | old: UNKNOWN, split, UNSAT (certified) | result |
+   |---|---|---|---|
+   | m = 6, k = 6, `-c 300` | 130 / 130 / 130 | 5, 5, 120 (120) | identical |
+   | m = 7, k = 6, `-c 3000` (C3T's tree test) | 38 / 38 / 38 | 1, 1, 36 (36) | identical |
+   | m = 7, k = 6, `-c 300` | 205 / 205 / 205 | 5, 5, 195 (195) | identical |
+   | m = 8, k = 6, `-c 3000` | 51 / 51 / 51 | 1, 1, 49 (49) | identical |
+
+   **0 failures.** The proofs (`proof_sha256`) are also identical, so the C3U tools with σ-splits off write exactly the
+   C3T records.
 
 2. **σ-split trees close** (`run_small.sh sig`, `check_small.py` → `logs/check_small_*.txt`). For each run, the
    checker counts the σ-splits, the nested σ-splits (a σ-split of a node that already has \|C\| > 0, so \|C\| reaches
@@ -60,26 +70,38 @@ limits (`--caps 600`). All small instances are UNSAT for H3 in `results/C3-S/log
    {0,1}^{1..m−1} consistent with the path. At each node it removes the vectors matched by a certified leaf `L__C` with
    that L. A maximal path with vectors left would be a hole.
 
-   SIG_TABLE
+   | run (m, k, `-c`, K) | σ-splits | nested σ-splits | max \|C\| | layer splits of cube nodes | rule-3 dropped options | certified leaves / of them cubes | compose.py covered, `sigma_splits_used` | brute-force holes |
+   |---|---|---|---|---|---|---|---|---|
+   | 6, 6, 300, K = 2 | 8 | 5 | 4 | 1 | 18 | 58 / 36 | yes, 8 | 0 |
+   | 7, 6, 300, K = 2 | 6 | 3 | 4 | 4 | 104 | 126 / 93 | yes, 6 | 0 |
+   | 7, 6, 300, K = 3 | 3 | 0 | 3 | 7 | 147 | 218 / 185 | yes, 3 | 0 |
+   | 7, 6, 100, K = 2 | 15 | 12 | 4 | 69 | 1,554 | 1,104 / 1,071 | yes, 15 | 0 |
+   | 8, 6, 300, K = 2 | 12 | 8 | 4 | 14 | 468 | 506 / 461 | yes, 12 | 0 |
+   | 8, 6, 300, K = 3 | 17 | 13 | 6 | 4 | 180 | 248 / 203 | yes, 17 | 0 |
+
+   All 6 runs closed (`open_frontier` 0, `logs/run_small_sig.txt`). Every UNSAT answer was certified by both checkers,
+   and there was no SAT. The σ-split records have exactly the fields `node, split, sigma_bits, children` with
+   children = 2^K.
 
    Every listed feature occurs. There are σ-splits with K = 2 and K = 3. Nested σ-splits (\|C\| = 2K) occur for K = 2
    (m = 6, 7, 8) and for K = 3 (m = 8 only: at m ≤ 7 no node at depth ≥ 2 has 6 free residues). The layer split also
    occurs below cube nodes, including below nested cubes where \|C\| = S·K stops further σ-splits. In those splits rule 3
    dropped hundreds of options. `restart_test.sh` cut the m = 6 run after 40 of its 78 lines and re-ran `close_tree`: it
-   rebuilt the same tree (78 lines, `compose` covered, brute force 0 holes, `logs/restart_test.txt`).
+   rebuilt the same tree: 78 lines, equal to the uninterrupted run as a multiset of records apart from timings, `compose`
+   covered, brute force 0 holes (`logs/restart_test.txt`).
 
-3. **compose.py rejections** (`compose_reject.py` → `logs/compose_reject.txt`, on the m = 6 K = 2 and m = 7 K = 3 runs;
-   0 failures). Each mutation is a copy of the run's records with one change.
+3. **compose.py rejections** (`compose_reject.py` → `logs/compose_reject.txt`, on the m = 6 K = 2, m = 7 K = 3 and
+   m = 8 K = 3 runs; 0 failures in all three). Each mutation is a copy of the run's records with one change.
 
    | mutation | compose.py | brute force |
    |---|---|---|
    | none | rc 0, covered | 0 holes |
-   | one certified cube record removed (missing cube) | rc 0, **not covered** | 66 / 864 holes |
+   | one certified cube record removed (missing cube) | rc 0, **not covered** | 66 / 864 / 3,690 holes |
    | a cube record with a wrong `cnf_sha256` | **rc 1**, names file, line, node and both hashes | – |
    | σ-split record with `sigma_bits` reversed | **rc 1** ("sigma_bits … refused") | – |
    | σ-split record with a residue that is not among the K smallest free ones | **rc 1** | – |
    | an added σ-split record at depth 1 (`0s0`) | **rc 1** | – |
-   | a layer child of a cube node dropped although it does not conflict (its newest layer fixes a residue of C to C's value; its certified record removed) | rc 0, **not covered** | 3 / 22 holes |
+   | a layer child of a cube node dropped although it does not conflict (its newest layer fixes a residue of C to C's value; its certified record removed) | rc 0, **not covered** | 3 / 22 / 66 holes |
 
 4. **m = 11, real base** (`logs/m11/`, `logs/m11_vs_g0.txt`). `close_tree.py --sigma-split 3 --caps 1,300,300
    --cadopts=--sat --jobs 2` ran on rows 0 and 12 of `results/C3SIG/G0/nodes.tsv`: `0s0-1s1_2s0-9s0` and
