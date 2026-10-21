@@ -239,10 +239,13 @@ def main():
                     res = True; used_sig.add(kk); break
         if not res:
             if cube:
-                if kk in lsplit:
-                    res = all([cov(c) for c in cube_layer_kids(m, k, layers, cube)])
+                ch = cube_layer_kids(m, k, layers, cube)
+                if kk in lsplit and ch:  # a node without children is never covered vacuously
+                    res = all([cov(c) for c in ch])
             elif not layers or layers in prefixes:
-                res = all([cov(key(c, ())) for c in layer_children(m, k, layers)])
+                ch = layer_children(m, k, layers)
+                res = bool(ch) and all([cov(key(c, ())) for c in ch])
+                if not ch: missing.append(kname(kk))
         if not res and kk not in cert and kk not in ssplit and kk not in lsplit and not (not cube and (not layers or layers in prefixes)):
             missing.append(kname(kk))
         memo[kk] = res
