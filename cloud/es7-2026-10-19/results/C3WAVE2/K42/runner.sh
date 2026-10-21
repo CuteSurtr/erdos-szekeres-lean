@@ -2,7 +2,7 @@
 export PATH=/opt/bin:$PATH
 END=$(date -u -d '2026-10-21 02:06:13' +%s)
 cd /opt/c3s/cloud/es7-2026-10-19/results/C3-S/tools
-tail -n +2 /opt/work/roots.tsv | cut -f2 | while read R; do
+tail -n +$((2+${SKIP:-0})) /opt/work/roots.tsv | cut -f2 | while read R; do
   NOW=$(date +%s); [ $NOW -ge $END ] && break
   S=$(python3 -c "print(round(min(0.17,($END-$NOW)/3600),3))")
   echo "=== ROOT $R start $(date -u +%T) hours $S"

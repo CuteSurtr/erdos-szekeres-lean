@@ -1,0 +1,16 @@
+=== ROOT 0s0-4s1_6 start 01:26:54 hours 0.17
+{"node": "0s0-4s1_6_2", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-4s1_6_3", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-4s1_6_1", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-4s1_6_5", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-4s1_6_8", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-4s1_6_7", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-4s1_6_1s0-2s0", "status": "UNSATISFIABLE", "solve_s": 17.0, "certified": true}
+{"node": "0s0-4s1_6_1s0-2s1", "status": "UNSATISFIABLE", "solve_s": 114.8, "certified": true}
+{"node": "0s0-4s1_6_9", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-4s1_6_10", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-4s1_6_1s0-3s0", "status": "UNSATISFIABLE", "solve_s": 22.4, "certified": true}
+{"node": "0s0-4s1_6_1s1-2s1", "status": "UNSATISFIABLE", "solve_s": 42.7, "certified": true}
+{"node": "0s0-4s1_6_1s1-2s0", "status": "UNSATISFIABLE", "solve_s": 168.0, "certified": true}
+=== RESTART 01:44:15: VM worker restarted at ~01:4x, runner and solvers were killed; root 0s0-4s1_6 had its slice (started 01:26:54); resuming with root 2 (SKIP=1)
+=== ROOT 0s0-4s1_5s1-9s1 start 01:44:16 hours 0.17
