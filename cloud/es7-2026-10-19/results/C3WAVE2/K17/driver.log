@@ -134,3 +134,27 @@
 {"node": "0s0-2s0_9_7s1-10s0", "status": "UNSATISFIABLE", "solve_s": 37.0, "certified": true}
 === RUNNER KILLED by worker restart (~00:58 UTC) during root 0s0-2s0_9; resumed at root 6 with runner_resume.sh 00:58:21
 === ROOT 0s0-2s1_3s0-5s0 start 00:58:21 hours 0.17
+{"node": "0s0-2s1_3s0-5s0", "status": "UNSATISFIABLE", "solve_s": 42.7, "certified": true}
+{"root": "0s0-2s1_3s0-5s0", "open_frontier": 0}
+=== ROOT 0s0-2s1_3s0-5s0 end 00:59:46
+=== ROOT 0s0-2s1_4s1-5s1 start 00:59:46 hours 0.17
+{"node": "0s0-2s1_4s1-5s1", "status": "UNSATISFIABLE", "solve_s": 36.9, "certified": true}
+{"root": "0s0-2s1_4s1-5s1", "open_frontier": 0}
+=== ROOT 0s0-2s1_4s1-5s1 end 01:00:59
+=== ROOT 0s0-2s1_6s1-10s1 start 01:00:59 hours 0.17
+{"node": "0s0-2s1_6s1-10s1", "status": "UNSATISFIABLE", "solve_s": 225.4, "certified": true}
+{"root": "0s0-2s1_6s1-10s1", "open_frontier": 0}
+=== ROOT 0s0-2s1_6s1-10s1 end 01:05:30
+=== ROOT 0s0-3s0_1s0-4s0 start 01:05:30 hours 0.17
+{"node": "0s0-3s0_1s0-4s0", "status": "UNSATISFIABLE", "solve_s": 20.9, "certified": true}
+{"root": "0s0-3s0_1s0-4s0", "open_frontier": 0}
+=== ROOT 0s0-3s0_1s0-4s0 end 01:06:24
+=== ROOT 0s0-3s0_2s0-8s1 start 01:06:24 hours 0.17
+{"node": "0s0-3s0_2s0-8s1", "status": "UNSATISFIABLE", "solve_s": 82.1, "certified": true}
+{"root": "0s0-3s0_2s0-8s1", "open_frontier": 0}
+=== ROOT 0s0-3s0_2s0-8s1 end 01:08:25
+=== ROOT 0s0-3s0_4s1-9s0 start 01:08:25 hours 0.17
+{"node": "0s0-3s0_4s1-9s0", "status": "UNSATISFIABLE", "solve_s": 57.8, "certified": true}
+{"root": "0s0-3s0_4s1-9s0", "open_frontier": 0}
+=== ROOT 0s0-3s0_4s1-9s0 end 01:09:59
+=== ROOT 0s0-3s0_7 start 01:09:59 hours 0.17
