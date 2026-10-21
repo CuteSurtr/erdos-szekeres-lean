@@ -158,3 +158,24 @@
 {"root": "0s0-3s0_4s1-9s0", "open_frontier": 0}
 === ROOT 0s0-3s0_4s1-9s0 end 01:09:59
 === ROOT 0s0-3s0_7 start 01:09:59 hours 0.17
+{"node": "0s0-3s0_7_1", "status": "UNSATISFIABLE", "solve_s": 141.4, "certified": true}
+{"node": "0s0-3s0_7_4", "status": "UNSATISFIABLE", "solve_s": 146.3, "certified": true}
+{"node": "0s0-3s0_7_2", "status": "UNSATISFIABLE", "solve_s": 161.0, "certified": true}
+{"node": "0s0-3s0_7_5", "status": "UNSATISFIABLE", "solve_s": 139.8, "certified": true}
+{"node": "0s0-3s0_7_8", "status": "UNSATISFIABLE", "solve_s": 124.7, "certified": true}
+{"node": "0s0-3s0_7_6", "status": "UNSATISFIABLE", "solve_s": 141.5, "certified": true}
+{"node": "0s0-3s0_7_1s0-2s0", "status": "UNSATISFIABLE", "solve_s": 18.3, "certified": true}
+{"node": "0s0-3s0_7_1s0-2s1", "status": "UNSATISFIABLE", "solve_s": 53.0, "certified": true}
+{"node": "0s0-3s0_7_10", "status": "UNSATISFIABLE", "solve_s": 123.4, "certified": true}
+{"node": "0s0-3s0_7_9", "status": "UNSATISFIABLE", "solve_s": 150.1, "certified": true}
+{"node": "0s0-3s0_7_1s1-2s1", "status": "UNSATISFIABLE", "solve_s": 11.7, "certified": true}
+{"node": "0s0-3s0_7_1s0-4s0", "status": "UNSATISFIABLE", "solve_s": 11.1, "certified": true}
+{"node": "0s0-3s0_7_1s1-2s0", "status": "UNSATISFIABLE", "solve_s": 55.2, "certified": true}
+{"node": "0s0-3s0_7_1s1-4s0", "status": "UNSATISFIABLE", "solve_s": 25.7, "certified": true}
+{"node": "0s0-3s0_7_1s1-4s1", "status": "UNSATISFIABLE", "solve_s": 13.1, "certified": true}
+{"node": "0s0-3s0_7_1s0-4s1", "status": "UNSATISFIABLE", "solve_s": 53.0, "certified": true}
+{"node": "0s0-3s0_7_1s0-5s0", "status": "UNSATISFIABLE", "solve_s": 28.9, "certified": true}
+{"node": "0s0-3s0_7_1s1-5s0", "status": "UNSATISFIABLE", "solve_s": 27.8, "certified": true}
+{"node": "0s0-3s0_7_1s0-5s1", "status": "UNSATISFIABLE", "solve_s": 42.8, "certified": true}
+=== RUNNER KILLED by worker restart (~01:20 UTC) during root 0s0-3s0_7; resumed at root 13 with runner_resume2.sh 01:21:59
+=== ROOT 0s0-3s1_1s0-7s1 start 01:21:59 hours 0.17
