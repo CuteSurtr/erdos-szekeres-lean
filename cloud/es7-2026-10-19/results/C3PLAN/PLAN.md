@@ -6,7 +6,7 @@ per-node solve + check seconds from the `out.jsonl` records. These are not wall 
 ran 3 jobs on 4 cores, so each number is a little inflated.
 
 Data snapshot: all `results/C3WAVE1/*/out.jsonl` and `results/C3WAVE2/*/out.jsonl` as of the last pull
-(01:10 UTC, branch es7-cloud at 3691ba2b). Wave 2 was still running then (until about 02:00 UTC), so its rows will grow.
+(01:11 UTC, branch es7-cloud at d83ee07a). Wave 2 was still running then (until about 02:00 UTC), so its rows will grow.
 
 ## 1. Measured cost so far
 
@@ -22,7 +22,7 @@ E2 `c VERIFIED` and cake_lpr `s VERIFIED UNSAT`), or a split record whose `tree_
 | H6(1,0) | one | 9 | 9 | 0 | 0 | 11.6 |
 | H6(1,0) | two | 144 | 144 | 0 | 0 | 3.1 |
 | H6(1,1) | one | 9 | 0 | 9 | 0 | 55.5 |
-| H6(1,1) | two | 144 | 103 | 36 | 5 | 164.9 |
+| H6(1,1) | two | 144 | 103 | 36 | 5 | 165.7 |
 | H6(2,0) | one | 9 | 1 | 5 | 3 | 7.9 |
 | H6(2,0) | two | 144 | 68 | 0 | 76 | 1.5 |
 | H6(2,1) | one | 9 | 0 | 1 | 8 | 4.5 |
@@ -39,7 +39,7 @@ E2 `c VERIFIED` and cake_lpr `s VERIFIED UNSAT`), or a split record whose `tree_
 | H6(5,0) | two | 144 | 0 | 0 | 144 | 0.0 |
 | H6(5,1) | one | 9 | 0 | 0 | 9 | 0.0 |
 | H6(5,1) | two | 144 | 0 | 0 | 144 | 0.0 |
-| **all** | | 1630 | 337 | 64 | 1229 | 258.5 |
+| **all** | | 1630 | 337 | 64 | 1229 | 259.3 |
 
 Per-node buckets (all wave records; `scripts/estimate.py` prints them as `c_b`;
 s = σ_a of the top case, l2 = layer-2 type, d = depth, o = orbits in the newest layer):
@@ -54,9 +54,9 @@ s = σ_a of the top case, l2 = layer-2 type, d = depth, o = orbits in the newest
 | s1/one/4/1 | 189 | 189 | 0 | 50.8 | 28.2 |
 | s1/one/4/2 | 797 | 795 | 0 | 41.2 | 25.4 |
 | s1/two/2/2 | 161 | 84 | 77 | 190.2 | 35.4 |
-| s1/two/3/2 | 2639 | 2638 | 0 | 30.6 | 25.7 |
-| s1/two/4/1 | 2097 | 2083 | 0 | 6.7 | 15.8 |
-| s1/two/4/2 | 19462 | 19462 | 0 | 5.5 | 14.9 |
+| s1/two/3/2 | 2660 | 2659 | 0 | 30.6 | 25.7 |
+| s1/two/4/1 | 2109 | 2095 | 0 | 6.6 | 15.7 |
+| s1/two/4/2 | 19562 | 19562 | 0 | 5.5 | 14.9 |
 
 **Which roots are hard and what they share** (`stats.tsv`; `scripts/estimate.py`):
 
@@ -69,23 +69,27 @@ run out of time. "Hard" below means that nodes timed out at their cap.
   H6(2,0) 68, H6(3,0) 2), at depth 2, for a mean of 78 core-s per root. One-orbit s = 0
   roots cost about 4,600 core-s each (9 closed H6(1,0) roots, 120 depth-3 leaves each). The 6
   partial one-orbit s = 0 roots (`0s0-2s0_{3,6,7,9,10}`, `0s0-3s0_5`) are wave-2 slices that ran out
-  of time with 3–100 untried depth-3 nodes and no timeout. Every root with timeouts is an s = 1 root.
-  C3-S points the same way: H6(4,0) had 139 of 144 two-orbit depth-2 children closing at 300 s
-  (`results/C3-S/README.md`, Measurements 7).
-- **One-orbit layer 2 under s = 1 is the hardest stratum.** None of the 10 (0 closed) measured roots
-  (all 9 of H6(1,1), plus `0s0-2s1_1`) is closed. The wave-1 ones (`0s0-1s1_{2,3,4,6,7,10}`,
+  of time with 3–100 untried depth-3 nodes and no timeout. Every wave root with timeouts is an
+  s = 1 root. One caution: C3-S's full enumeration of H6(4,0) at depth 2 (s = 0, no `--sat`, up to
+  6 processes on 4 cores) had 5 of 144 two-orbit and all 9 one-orbit children time out at 300 s
+  (`results/C3-S/README.md`, Measurements 7). So s = 0 with a ≥ 3 may be harder than the measured
+  a = 1, 2. If those 5 roots behave like s = 1 two-orbit timeouts (about 4.4 core-h each),
+  H6(4,0) costs about 20 core-h more than the borrowed estimate below.
+- **One-orbit layer 2 under s = 1 is the hardest stratum.** None of the measured roots
+  (10: all 9 of H6(1,1) and `0s0-2s1_1`) is closed. The wave-1 ones (`0s0-1s1_{2,3,4,6,7,10}`,
   `0s0-2s1_1`) have spent 9,000–41,000 core-s each and still have 375–4,299 open nodes
   (`0s0-1s1_4`: 1,329 at depth 4 and 2,970 at depth 5). Their depth-3
   single-orbit children (single below single) timed out at 300 s **80 times out of 80**.
   That is 6.7 core-h of pure timeouts that a pre-split would have avoided (bucket s1/one/3/1).
 - **Two-orbit layer 2 under s = 1 is bimodal.** Of 161 measured roots, 113 are closed and 48 partial. The closed ones cost median 122 and mean 3834 core-s, max 16390.
+  At depth 2, 77 of 161 attempted of these roots timed out at 300 s (bucket s1/two/2/2).
   When a two-orbit s = 1 root times out at 300 s, its layer split produces 7 pre-split single
   children plus 84 two-orbit children, then 462 depth-4 leaves: **546 certified nodes, about
   6,000–6,500 s solve plus about 9,600 s check per root** (`0s0-1s1_2s1-9s1`, `0s0-1s1_3s1-4s0`,
   `0s0-1s1_4s0-6s1` in `stats.tsv`).
-  Mixed layer-2 σ (01, 10) is open somewhat more often than equal σ (00, 11):
+  Mixed layer-2 σ (01, 10) is still open much more often than equal σ (00, 11):
   38 of 80 mixed vs 10 of 81 equal still open (`stats.tsv`, column l2sigma).
-- **Checking costs as much as solving.** Over all records, solve 122.9 core-h and check 135.6 core-h. At depth 4 a node takes
+- **Checking costs as much as solving.** Over all records, solve 123.1 core-h and check 136.2 core-h. At depth 4 a node takes
   about 5.5 s to solve and 15 s to check. Most of the 15 s is fixed work per node: the 4.15M-clause
   base CNF is written, hashed and parsed by both checkers. Deep layer trees therefore pay mostly
   for this overhead.
@@ -112,45 +116,46 @@ Model (`scripts/estimate.py`, full description in its docstring):
 | H6(1,0)/one | 9 | 9/0 | 1.29/1.29/1.29 | 12/12/12 | own roots |
 | H6(1,0)/two | 144 | 144/0 | 0.02/0.02/0.02 | 3/3/3 | own roots |
 | H6(1,1)/one | 9 | 0/9 | 16.49/26.81/68.10 | 148/241/613 | own roots |
-| H6(1,1)/two | 144 | 103/36 | 1.55/1.91/3.35 | 223/275/483 | own roots |
+| H6(1,1)/two | 144 | 103/36 | 1.55/1.91/3.34 | 223/275/481 | own roots |
 | H6(2,0)/one | 9 | 1/5 | 1.46/1.60/2.17 | 13/14/20 | own roots |
 | H6(2,0)/two | 144 | 68/0 | 0.02/0.02/0.02 | 3/3/3 | own roots |
 | H6(2,1)/one | 9 | 0/1 | 11.70/18.85/47.46 | 105/170/427 | own roots |
-| H6(2,1)/two | 144 | 10/12 | 1.30/2.20/5.80 | 188/317/835 | own roots |
+| H6(2,1)/two | 144 | 10/12 | 1.30/2.20/5.79 | 188/317/834 | own roots |
 | H6(3,0)/one | 9 | 0/1 | 1.00/1.51/3.58 | 9/14/32 | own roots |
 | H6(3,0)/two | 144 | 2/0 | 0.02/0.02/0.02 | 3/3/3 | own roots |
 | H6(3,1)/one | 9 | 0/0 | 16.01/26.02/66.04 | 144/234/594 | borrowed: all measured s1/one roots |
-| H6(3,1)/two | 144 | 0/0 | 1.51/1.95/3.69 | 218/281/531 | borrowed: all measured s1/two roots |
+| H6(3,1)/two | 144 | 0/0 | 1.52/1.95/3.67 | 218/280/529 | borrowed: all measured s1/two roots |
 | H6(4,0)/one | 9 | 0/0 | 1.33/1.42/1.76 | 12/13/16 | borrowed: all measured s0/one roots |
 | H6(4,0)/two | 144 | 0/0 | 0.02/0.02/0.02 | 3/3/3 | borrowed: all measured s0/two roots |
 | H6(4,1)/one | 9 | 0/0 | 16.01/26.02/66.04 | 144/234/594 | borrowed: all measured s1/one roots |
-| H6(4,1)/two | 144 | 0/0 | 1.51/1.95/3.69 | 218/281/531 | borrowed: all measured s1/two roots |
+| H6(4,1)/two | 144 | 0/0 | 1.52/1.95/3.67 | 218/280/529 | borrowed: all measured s1/two roots |
 | H6(5,0)/one | 9 | 0/0 | 1.33/1.42/1.76 | 12/13/16 | borrowed: all measured s0/one roots |
 | H6(5,0)/two | 144 | 0/0 | 0.02/0.02/0.02 | 3/3/3 | borrowed: all measured s0/two roots |
 | H6(5,1)/one | 9 | 0/0 | 16.01/26.02/66.04 | 144/234/594 | borrowed: all measured s1/one roots |
-| H6(5,1)/two | 144 | 0/0 | 1.51/1.95/3.69 | 218/281/531 | borrowed: all measured s1/two roots |
+| H6(5,1)/two | 144 | 0/0 | 1.52/1.95/3.67 | 218/280/529 | borrowed: all measured s1/two roots |
 
 (`estimate.txt`, made by `scripts/estimate.py`; core-h are solve + check.)
 
-**Result: about 3,194 core-hours (range 2,101 – 7,979) with the current method.** That is
-1,065 machine-hours of the 4-core VMs used here at 3 jobs per VM (798 at 4 jobs).
+**Result: about 3,193 core-hours (range 2,102 – 7,970) with the current method.** That is
+1,064 machine-hours of the 4-core VMs used here at 3 jobs per VM (798 at 4 jobs).
 The range has an unbounded tail from H3. One of the 8 H3 Knuth walks extrapolates to 6.8·10^5 solve
-core-h. If that walk is representative, the total is about 869,444 core-h and the method cannot
-finish H3. The upper end 7,979 uses the second-heaviest H3 walk (1,681) instead.
+core-h. If that walk is representative, the total is about 869,435 core-h and the method cannot
+finish H3. The upper end 7,970 uses the second-heaviest H3 walk (1,681) instead.
 
 Where it goes (mid): s = 1 one-orbit about 1113 core-h for 45 roots, s = 1 two-orbit about
-1435 core-h for 720 roots, H3 about 566 core-h (Knuth walk only), and all s = 0 strata
+1432 core-h for 720 roots, H3 about 566 core-h (Knuth walk only), and all s = 0 strata
 together about 81 core-h.
 
 **Comparison with the C3-S Knuth walks** (`results/C3-S/README.md` "Measurements" 6, solve only).
 Check is about as large as solve here, so the walk numbers should be compared with about half of
 the measured totals:
 - The unstratified walks gave 3,080 ± 2,417 solve core-h, and C3-S's headline was "about 1,500
-  core-h if the H3 tail is mild". The measured H6 part alone is about 2,629 core-h (solve +
-  check), roughly 1,249 solve, so the total sits at the upper end of the C3-S guess.
+  core-h if the H3 tail is mild". The measured H6 part alone is about 2,626 core-h (solve +
+  check), roughly 1,247 solve, so the total sits at the upper end of the C3-S guess.
 - "H6, budget 100k at depth 2: 39 ± 17": a large **underestimate** for the H6 two-orbit strata
-  (measured about 1,450 core-h). The 4 walks all landed in easy s = 0 / quickly closing nodes
-  and never saw the s = 1 timeouts, which cost about 15,800 core-s each.
+  (measured about 1,447 core-h). All 4 walks closed at depth 2, so the walks never sampled a
+  depth-2 timeout. In the waves such a timeout costs about 15,800 core-s (the 546-node layer split
+  in 3b).
 - "H6 one-orbit subtrees from depth 3: 469 ± 141": consistent with the measured one-orbit total of
   about 1,179 core-h solve + check (about half of it solve).
 
@@ -263,8 +268,8 @@ nodes each under layer splitting.
 - **Encodings**: C3a chain is the fastest of those measured (C3-S Measurements 4: chain
   12.5 s / 45.7 s vs conv 69 / 129, C3b chain 20 / 52). Nothing new here.
 
-**Combined estimate.** The mirror reduction (3a) gives 1,986 core-h mid (range 1,260 –
-5,300, H3 unchanged; `scripts/estimate.py` "with H6 mirror"). σ-cubes (3b) might reduce the s = 1 tail further,
+**Combined estimate.** The mirror reduction (3a) gives 1,986 core-h mid (range 1,261 –
+5,295, H3 unchanged; `scripts/estimate.py` "with H6 mirror"). σ-cubes (3b) might reduce the s = 1 tail further,
 but 3 nodes with a mixed outcome do not support a number.
 
 ## 4. Plan for the next wave
@@ -286,16 +291,17 @@ Order matters more than size: close what is cheap and certain first, then measur
    If the median total cost is below half of the 546-node layer split (about 16,000 core-s), use
    σ-cubes as the first split in 3c/3d.
 2. **Wave 3a: s = 0 cleanup, 10 machines × 2 h.** All untouched H6(a, 0) roots (mirror-kept only:
-   about 81 per case minus those already closed), a = 2..5, caps 300/300/600. Expected about 40
-   core-h of work, i.e. a few hours on 10 machines (3 jobs each). Result: **five top cases closed**
-   (H6(1,0) is already fully closed). This also measures the a = 3..5 dependence.
+   about 81 per case minus those already closed), a = 2..5, caps 300/300/600. Expected about 45
+   core-h of work (s = 0 strata about 81 core-h without the mirror reduction), i.e. 1–2 hours
+   on 10 machines (3 jobs each). Result: **all five s = 0 top cases closed** (H6(1,0) already is). This also measures the a = 3..5 dependence.
 3. **Wave 3b: H3 pilot, 10 machines × 3 h, in parallel with 3a.** 30 mirror-kept H3 roots, chosen
-   at random, 3 per machine, with the σ-cube split on timeouts. This replaces the Knuth-walk number
+   at random, 3 per machine, with the current layer split (and σ-cubes on timeouts once step 0
+   provides them). This replaces the Knuth-walk number
    for H3 (the largest uncertainty) with measured per-root costs.
 4. **Wave 3c: s = 1 two-orbit, 30 machines × 8 h.** The mirror-kept two-orbit roots of H6(a, 1),
    about 76 × 5 = 380, minus those closed: about 300. Budget, from the s1/two stratum mean of about
    2 core-h per root: about 600 core-h ≈ 200 machine-hours (3 jobs), less if the σ-cube pilot wins.
-5. **Wave 3d: s = 1 one-orbit, 25 roots** (5 kept per a), resumed from the 7 partial roots'
+5. **Wave 3d: s = 1 one-orbit, 25 roots** (5 kept per a), resumed from the 10 partial roots'
    records where kept. One root per machine, 25 machines × 12 h, with σ-cubes below single layers.
    This is the stratum with the most uncertainty in H6.
 6. Then H3 in full, sized from the 3b pilot.

@@ -248,7 +248,7 @@ root	top	l2type	l2	l2sigma	waves	status	cert_by_depth	split_by_depth	timeout_the
 0s0-1s1_5s0-7s0	H6(1,1)	two	5-7	00	1	closed	d2:1	-	-	-	-	1	0	2	34.7	21.6
 0s0-1s1_5s0-7s1	H6(1,1)	two	5-7	01	1	closed	d3:84,d4:462	d2:1,d3:7	d2:1	-	-	546	0	4	5812.4	9009.3
 0s0-1s1_5s0-8s0	H6(1,1)	two	5-8	00	1	closed	d2:1	-	-	-	-	1	0	2	44.6	22.3
-0s0-1s1_5s0-8s1	H6(1,1)	two	5-8	01	2	partial	d4:168	d2:1,d3:7	d2:1	-	d3:84,d4:294	168	378	4	1107.4	2217.8
+0s0-1s1_5s0-8s1	H6(1,1)	two	5-8	01	2	partial	d3:21,d4:280	d2:1,d3:7	d2:1	-	d3:63,d4:182	301	245	4	2149.8	4139.0
 0s0-1s1_5s0-9s0	H6(1,1)	two	5-9	00	2	closed	d2:1	-	-	-	-	1	0	2	125.8	40.7
 0s0-1s1_5s0-9s1	H6(1,1)	two	5-9	01	2	partial	d4:211	d2:1,d3:7	d2:1	-	d3:84,d4:251	211	335	4	1427.7	3108.5
 0s0-1s1_5s1-10s0	H6(1,1)	two	5-10	10	1	closed	d2:1	-	-	-	-	1	0	2	206.2	32.3
