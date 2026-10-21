@@ -100,8 +100,9 @@ def main():
             for fu in cf.as_completed(futs):
                 subs.append(fu.result())
         wall = time.time() - t0
-        for s in subs:
-            if s["status"] == "UNSATISFIABLE": check(s)
+        us_ = [s for s in subs if s["status"] == "UNSATISFIABLE"]
+        with cf.ThreadPoolExecutor(2) as ex:  # 2 dual checks at once (memory: cake_lpr heap)
+            list(ex.map(check, us_))
         if meth == "opt":
             closed = any(s.get("certified") for s in subs)
         else:
