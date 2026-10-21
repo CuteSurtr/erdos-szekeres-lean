@@ -134,3 +134,22 @@
 {"root": "0s0-2s0_4s1-7s0", "open_frontier": 0}
 === ROOT 0s0-2s0_4s1-7s0 end 01:22:56
 === ROOT 0s0-2s0_7s0-8s1 start 01:22:56 hours 0.17
+{"node": "0s0-2s0_7s0-8s1", "status": "UNSATISFIABLE", "solve_s": 255.2, "certified": true}
+{"root": "0s0-2s0_7s0-8s1", "open_frontier": 0}
+=== ROOT 0s0-2s0_7s0-8s1 end 01:28:05
+=== ROOT 0s0-2s1_1s1-4s1 start 01:28:05 hours 0.156
+{"node": "0s0-2s1_1s1-4s1", "status": "UNSATISFIABLE", "solve_s": 104.0, "certified": true}
+{"root": "0s0-2s1_1s1-4s1", "open_frontier": 0}
+=== ROOT 0s0-2s1_1s1-4s1 end 01:30:38
+=== ROOT 0s0-2s1_4 start 01:30:38 hours 0.114
+{"node": "0s0-2s1_4_5", "status": "UNKNOWN", "solve_s": 300.2, "certified": null}
+{"node": "0s0-2s1_4_1", "status": "UNKNOWN", "solve_s": 300.2, "certified": null}
+{"node": "0s0-2s1_4_3", "status": "UNKNOWN", "solve_s": 300.2, "certified": null}
+{"node": "0s0-2s1_4_6", "status": "UNKNOWN", "solve_s": 300.2, "certified": null}
+{"node": "0s0-2s1_4_8", "status": "UNKNOWN", "solve_s": 300.2, "certified": null}
+{"node": "0s0-2s1_4_7", "status": "UNKNOWN", "solve_s": 300.2, "certified": null}
+{"node": "0s0-2s1_4_1s0-3s0", "status": "UNSATISFIABLE", "solve_s": 42.0, "certified": true}
+Terminated
+=== ROOT 0s0-2s1_4 end 01:42:18
+=== RUNNER DONE 01:42:18
+=== KILLED at budget end 01:42:29: root 0s0-2s1_4 unfinished, driver stopped by hand
