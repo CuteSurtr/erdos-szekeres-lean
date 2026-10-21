@@ -46,3 +46,6 @@ Fix suggested for C3U: in covered2's plain branch, `if not ch: missing; return F
   Cosmetic for soundness (compose is the judge) but misleading.
 - close_tree.py reading OUT on restart: a sigma_cubes.py-format record ("node" = parent, "cube") that is
   certified would mark the PARENT done.  Only if such a file is used as close_tree OUT; compose is unaffected.
+- t2 (m=7, k=6, K=3, --conf 3000,300,200,200,200,2000): 401 solves, 3 sigma splits, 16 cube layer splits, 312 dropped;
+  t3 (m=6, k=6, K=2, --conf 1000,150,150,150,3000): 316 solves, 15 sigma splits (nested, |C| = 4), 23 cube layer splits,
+  414 dropped.  Both composers: covered, same certified counts (381 / 277).  forge.py: 18/18 on t1, t2, t3.
