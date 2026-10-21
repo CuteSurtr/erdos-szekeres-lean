@@ -37,7 +37,8 @@ C3U changes (results/C3U/TASK.md rule 5, results/C3U/sigma_split.md):
     have a certified or split descendant); for a cube node L__C only when it has a layer split
     record, with children L'__C for L' in tree_children(L) not contradicting C
     (hullcase.cube_layer_children).
-- New output fields: "certified_cube_nodes", "sigma_splits_used"."""
+- New output fields: "certified_cube_nodes", "sigma_splits_used" (nodes covered through a sigma
+  split), "sigma_split_nodes_sample" (the first 50 of them)."""
 import hashlib
 import json
 import os
@@ -247,7 +248,8 @@ def main():
                       "certified_with_proof_sha256": {"records": sum(1 for _, _, r, _ in allcert if r.get("proof_sha256")),
                                                       "nodes": sum(1 for r in cert.values() if r.get("proof_sha256"))},
                       "sha_checked": "--no-sha" not in sys.argv, "mirror_h6": MIRROR_H6,
-                      "certified_cube_nodes": sum(1 for n in cert if "__" in n), "sigma_splits_used": len(sig_used)}))
+                      "certified_cube_nodes": sum(1 for n in cert if "__" in n), "sigma_splits_used": len(sig_used),
+                      "sigma_split_nodes_sample": sorted(sig_used)[:50]}))
 
 
 if __name__ == "__main__":
