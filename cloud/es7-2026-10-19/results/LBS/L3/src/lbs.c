@@ -6,7 +6,9 @@
    Each restart: simulated annealing over 11 orbit representatives (3-fold symmetric),
    then simulated annealing over all 33 points (symmetry broken).
    Count of convex k-gons: for each lowest vertex p, angular sort, DP over chains.
-   usage: lbs seed seconds outprefix [R] [symsteps] [freesteps] [w]
+   usage: lbs seed seconds outprefix [R] [symsteps] [freesteps] [w] [initfile]
+   with initfile (sets in the _near.txt format) each restart starts the free phase
+   from a random c7 = 3 set of that file instead of running the symmetric phase.
    acceptance energy is c7 + w*c6 (w = 0: pure c7). */
 #include <stdio.h>
 #include <stdlib.h>
@@ -51,7 +53,7 @@ static void count(ll *c6, ll *c7){
     int m=0;
     for(int i=0;i<N;i++) if(i!=p && lower(i,p)){
       int x=m++; while(x>0 && O[p][i][s[x-1]]>0){ s[x]=s[x-1]; x--; } s[x]=i; }
-    if(m<6) continue;
+    if(m<5) continue;   /* 6-gons need 5 points above p (fixed: was m<6, which missed at most one 6-gon) */
     for(int i=0;i<m;i++) for(int j=0;j<m;j++) dp[i][j]=(i<j);
     for(int len=3;len<=6;len++){ /* dp holds chains with len vertices (incl p) ending i->j */
       for(int i=0;i<m;i++) memset(nx[i],0,sizeof(uint32_t)*m);
@@ -95,11 +97,19 @@ int main(int argc,char**argv){
   snprintf(fbest,512,"%s_best.txt",pre); snprintf(fbsym,512,"%s_bestsym.txt",pre); snprintf(flog,512,"%s_runs.tsv",pre); snprintf(fnear,512,"%s_near.txt",pre);
   FILE *lg=fopen(flog,"a"); setvbuf(lg,0,_IOLBF,0);
   fprintf(lg,"#W %g S1 %lld S2 %lld\n#restart\tR\tT0",W,S1,S2); fprintf(lg,"\tsym_final\tsym_best\tsym_best_c6\tfree_final\tfree_best\tfree_best_c6\tevals\tsecs\n");
+  static ll IA[400][N], IB[400][N]; int ni=0;
+  if(argc>8){ FILE *fi=fopen(argv[8],"r"); char ln[512]; int k=-1, use=0; ll c7i;
+    while(fi && fgets(ln,sizeof ln,fi)){
+      if(ln[0]=='#'){ use = sscanf(ln,"# restart %*d c7 %lld",&c7i)==1 && c7i==3 && ni<400; if(use){ k=0; ni++; } continue; }
+      if(use && k<N && sscanf(ln,"%lld %lld",&IA[ni-1][k],&IB[ni-1][k])==2) k++; }
+    if(fi) fclose(fi);
+    fprintf(lg,"# %d initial sets\n",ni); S1=0; }
   double t0=now(); ll gbest=1LL<<60, gbsym=1LL<<60; ll Abest[N],Bbest[N];
   for(int rest=0; now()-t0<secs; rest++){
     double rt=now(); ll evals=0;
     /* random symmetric start in general position */
-    do{ for(int r=0;r<K;r++) set_orbit(r,rcoord(),rcoord()); }while(!distinct_ok()||!full_table());
+    if(ni){ int x=rnd()%ni; memcpy(A,IA[x],sizeof A); memcpy(B,IB[x],sizeof B); full_table(); }
+    else do{ for(int r=0;r<K;r++) set_orbit(r,rcoord(),rcoord()); }while(!distinct_ok()||!full_table());
     ll c6,c7; count(&c6,&c7); evals++;
     double T0=pow(10.0,0.3+1.2*urand()), T1=0.05;   /* temperatures in units of c7 */
     ll bc7=c7,bc6=c6; memcpy(Abest,A,sizeof A); memcpy(Bbest,B,sizeof B);
