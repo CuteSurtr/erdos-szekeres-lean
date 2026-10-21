@@ -34,3 +34,15 @@ My composer had the same hole (same prefix idea); fixed in tools/mycompose.py (a
 is never covered unless certified): now not covered.
 Fix suggested for C3U: in covered2's plain branch, `if not ch: missing; return False` (as C3T's
 `covered`), or keep prefixes to proper prefixes.
+
+- Re-solved 3 C3SIG/G0 cubes (cheapest) with my own CNF (tools/resolve.py; CaDiCaL --sat -t 600 --lrat --binary=false,
+  lrat-check E2 + cake_lpr): cnf_sha256 equal to G0's records 3/3, UNSAT, both checkers accept, proof_bytes equal
+  to G0's records to the byte (208478098, 212743975, 235203589).  logs/resolve_sig_G0.jsonl.
+- Wave records at 712efc6b use at most 7 of the 11 residues (no fully layered node), so finding 1 is latent
+  for current records; it becomes reachable once rule-3 layer splits below cubes run 4+ layers deeper.
+- close_tree.py (C3U, and C3T before it): a timed-out node with no children (fully layered) gets a split record
+  with "children": 0 and leaves the frontier, so the run prints open_frontier 0 without a proof of that node.
+  compose.py catches it for cube nodes (79a3f3c1 guard) and, for plain nodes, only if finding 1 is fixed.
+  Cosmetic for soundness (compose is the judge) but misleading.
+- close_tree.py reading OUT on restart: a sigma_cubes.py-format record ("node" = parent, "cube") that is
+  certified would mark the PARENT done.  Only if such a file is used as close_tree OUT; compose is unaffected.
