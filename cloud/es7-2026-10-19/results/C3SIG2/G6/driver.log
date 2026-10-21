@@ -62,3 +62,17 @@
 {"node": "0s0-4s1_1", "cube": {"2": 0, "3": 0, "5": 0, "6": 0, "7": 0, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 179.1, "certified": true}
 {"node": "0s0-4s1_1", "cube": {"2": 0, "3": 0, "5": 0, "6": 0, "7": 0, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 193.6, "certified": true}
 {"node": "0s0-4s1_1", "cube": {"2": 0, "3": 0, "5": 0, "6": 0, "7": 1, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 209.9, "certified": true}
+{"node": "0s0-4s1_1", "cube": {"2": 0, "3": 0, "5": 0, "6": 0, "7": 1, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 193.5, "certified": true}
+{"node": "0s0-4s1_1", "cube": {"2": 0, "3": 0, "5": 0, "6": 1, "7": 0, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 225.7, "certified": true}
+{"node": "0s0-4s1_1", "cube": {"2": 0, "3": 0, "5": 0, "6": 1, "7": 0, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 221.3, "certified": true}
+{"node": "0s0-4s1_1", "cube": {"2": 0, "3": 0, "5": 0, "6": 1, "7": 1, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 188.1, "certified": true}
+{"node": "0s0-4s1_1", "cube": {"2": 0, "3": 0, "5": 0, "6": 1, "7": 1, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 196.0, "certified": true}
+{"node": "0s0-4s1_1", "cube": {"2": 0, "3": 0, "5": 1, "6": 0, "7": 0, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 200.1, "certified": true}
+{"node": "0s0-4s1_1", "cube": {"2": 0, "3": 0, "5": 1, "6": 0, "7": 0, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 217.0, "certified": true}
+{"node": "0s0-4s1_1", "cube": {"2": 0, "3": 0, "5": 1, "6": 0, "7": 1, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 239.7, "certified": true}
+{"node": "0s0-4s1_1", "cube": {"2": 0, "3": 0, "5": 1, "6": 0, "7": 1, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 153.8, "certified": true}
+=== 0s0-4s1_1 refine end 2026-10-21T07:23:51Z killed=1
+=== 0s0-5s1_1 K=3 start 2026-10-21T07:23:51Z deadline 07:57:00Z
+{"node": "0s0-5s1_1", "cube": {"2": 0, "3": 0, "4": 0}, "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-5s1_1", "cube": {"2": 0, "3": 0, "4": 1}, "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-5s1_1", "cube": {"2": 0, "3": 1, "4": 0}, "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
