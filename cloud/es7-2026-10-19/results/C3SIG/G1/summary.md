@@ -4,6 +4,7 @@
 | 5 | 0s0-1s1_3s0-4s1 | 3 | 8 | 8 | 0 | 0 | 1286.4 | 353.4 | 235.2 | 1639.8 | 15626.6 | 0.105 |
 | 9 | 0s0-1s1_7s1-9s0 | 3 | 8 | 8 | 0 | 0 | 1078.5 | 345.5 | 220.2 | 1424.0 | 15308.2 | 0.093 |
 | 13 | 0s0-1s1_5s0-7s1 | 3 | 8 | 8 | 0 | 0 | 1346.5 | 387.4 | 268.6 | 1733.9 | 14821.7 | 0.117 |
+| 17 | 0s0-1s1_5s1-7s0 | 3 | 8 | 8 | 0 | 0 | 1343.3 | 369.6 | 313.8 | 1712.9 | 14314.4 | 0.120 |
 
-closed-node ratios (sigma cost of the closing K / recorded_core_s): [0.102, 0.105, 0.093, 0.117] median 0.103
-K=3: open-or-unrun cubes 0 of 32 = 0.0%
+closed-node ratios (sigma cost of the closing K / recorded_core_s): [0.102, 0.105, 0.093, 0.117, 0.12] median 0.105
+K=3: open-or-unrun cubes 0 of 40 = 0.0%
