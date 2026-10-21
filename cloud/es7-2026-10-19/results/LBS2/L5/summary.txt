@@ -1,0 +1,23 @@
+sets by source and status:
+  anneal32-from-nearmiss   tested                                   35
+  anneal32-random          tested                                   370
+  nearmiss-L1              tested                                   14
+  nearmiss-L2              duplicate order type                     202
+  nearmiss-L2              tested                                   1107
+sets with c7 = 0 checked: 1728
+distinct order types: 1526  tested by sat: 1526
+  anneal32-from-nearmiss: 35 order types
+  anneal32-random: 370 order types
+  nearmiss-L1: 14 order types
+  nearmiss-L2: 1107 order types
+sat / sat_wide: Counter({'sat_wide': 1081, 'sat': 445})
+all saturated: True  bad_candidates total: 0
+faces_euler == faces_hit for all: True
+largest convex subset: Counter({6: 1526})
+vfy7 gp and c7 = 0 and saturate.py gp for all: True
+faces: [(109317, 2), (109322, 1), (109323, 3), (109324, 3), (109325, 3), (109326, 3), (109327, 3), (109328, 1), (109329, 5), (109330, 5), (109331, 3), (109333, 1), (109334, 1), (109335, 12), (109336, 28), (109337, 1452)]
+c6 anneal32-from-nearmiss: min 11234 median 17509 max 27500  [('[10000,15000)', 8), ('[15000,20000)', 19), ('[20000,25000)', 6), ('[25000,30000)', 2)]
+c6 anneal32-random: min 8171 median 15841 max 34535  [('[5000,10000)', 12), ('[10000,15000)', 136), ('[15000,20000)', 139), ('[20000,25000)', 70), ('[25000,30000)', 9), ('[30000,35000)', 4)]
+c6 nearmiss-L1: min 16665 median 22715 max 24520  [('[15000,20000)', 7), ('[20000,25000)', 7)]
+c6 nearmiss-L2: min 6162 median 11154 max 39648  [('[5000,10000)', 274), ('[10000,15000)', 568), ('[15000,20000)', 139), ('[20000,25000)', 79), ('[25000,30000)', 33), ('[30000,35000)', 4), ('[35000,40000)', 10)]
+sat cpu seconds: median 4.2 max 5.4
