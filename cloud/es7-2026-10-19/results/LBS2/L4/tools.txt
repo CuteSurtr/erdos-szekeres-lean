@@ -1,0 +1,23 @@
+LBS2 L4 (walk32) tools, built on x86_64 with gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0, Python 3.11.17
+
+sat      = gcc -O2 tools/trackA/sat.c (unchanged; exact for |coord| < 2^27)
+saturate = tools/realizer/saturate.py (unchanged; exact GP + exact largest convex subset in
+           Python ints, then "sat sat FILE 7")
+gen_es.py = ES 32-point construction with mild random gaps/offsets (adapted from
+           results/LBS/L2/gen_bases.py, credit L2); MILD=0 gives the minimal witness, which has
+           the same order type as L2's base000 (equal vfy4 hash ac62a26296aad8f3)
+walk     = walk.c: centre + integer per-axis scaling to ~2^25, then a random walk that accepts
+           a one-point move iff |coord| < 2^26, general position (int128) and largest convex
+           subset <= 6 (anchor DP)
+vfy4     = vfy4.c: independent exact check: GP over all triples; counts of convex 5-, 6-, 7-,
+           8-subsets by brute-force enumeration with triangle-containment tests (no DP);
+           order-type hash = FNV-1a of the lexicographically least chirotope over all hull
+           vertices x {orientation, reflection}, others labelled by angle (up to relabelling
+           and reflection)
+Cross-checks: vfy4 c5/c6 agree with L2's lbs count on base000 (49884 / 39648) and on L2's
+best 33-point set (c6 = 10075, c7 = 1); the hash is unchanged under a random relabelling
+plus reflection plus axis scaling.
+
+Smoke test (saturate.py on results/LBS/L2/bases/base000.txt, the minimal ES witness, max |coord| 7062592):
+{"file": "base000.txt", "N": 32, "general_position": true, "largest_convex_subset": 6, "max_abs_coord": 7062592, "sat": {"N": 32, "K": 7, "lines": 496, "parallel_pairs": 388, "nonS_vertex_pairs": 107492, "nonS_distinct_vertices": 107378, "max_lines_through_nonS_vertex": 10, "faces_euler": 108875, "faces_hit_by_valid_candidates": 108875, "candidates": 431952, "invalid_candidates": 10, "valid_candidates": 431942, "cache_hits": 429648, "dp_found": 2294, "dp_none": 0, "bad_candidates": 0, "cpu_seconds": 0.7}, "faces_covered": true, "saturated": true}
+=> largest convex subset 6, faces_euler == faces_hit == 108875, bad_candidates 0: saturated.
