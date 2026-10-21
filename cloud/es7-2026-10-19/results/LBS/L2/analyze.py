@@ -73,6 +73,7 @@ P("independent check (vfy, brute force + monotone-chain hulls) of %d saved sets:
 
 # near-miss structure of the best sets
 P("")
+P("best.txt = first set below (seed=%s run=%d)" % (sets[0][2], sets[0][3]))
 P("ten best sets (fewest 7-gons, then fewest 6-gons):")
 for c7, c6, seed, run, pts in sets[:10]:
     v, gons = vfy(pts)
@@ -85,8 +86,6 @@ for c7, c6, seed, run, pts in sets[:10]:
     P(line)
 c7, c6, seed, run, pts = sets[0]
 with open(os.path.join(D, "best.txt"), "w") as f:
-    f.write("# %d points, %d convex 7-gons, %d convex 6-gons (worker seed %s, run %s)\n"
-            % (len(pts), c7, c6, seed, run))
     f.writelines("%d %d\n" % p for p in pts)
 open(os.path.join(D, "analysis.txt"), "w").write("\n".join(out) + "\n")
 print("\n".join(out))
