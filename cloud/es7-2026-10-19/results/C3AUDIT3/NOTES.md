@@ -49,3 +49,9 @@ Fix suggested for C3U: in covered2's plain branch, `if not ch: missing; return F
 - t2 (m=7, k=6, K=3, --conf 3000,300,200,200,200,2000): 401 solves, 3 sigma splits, 16 cube layer splits, 312 dropped;
   t3 (m=6, k=6, K=2, --conf 1000,150,150,150,3000): 316 solves, 15 sigma splits (nested, |C| = 4), 23 cube layer splits,
   414 dropped.  Both composers: covered, same certified counts (381 / 277).  forge.py: 18/18 on t1, t2, t3.
+- Re-solved 3 cubes of C3U's m = 11 records (C3U/tests/logs/m11/tree_*.jsonl at 0181991c; the 3 cheapest):
+  cnf_sha256 3/3 equal, UNSAT 3/3, proof_sha256 and proof_bytes 3/3 equal to C3U's records (CaDiCaL is
+  deterministic), lrat-check 3/3 c VERIFIED, cake_lpr s VERIFIED UNSAT 3/3 (first run: 2 empty cake_lpr outputs
+  under memory pressure from a parallel m = 8 run; re-run alone: accepted).  logs/resolve_c3u_m11.jsonl
+  (lines 1-3 first run, 4-5 re-run).
+- Both composers on C3U's m = 11 records: 16 certified cubes, 2 sigma splits used, frontier 161 (agree).
