@@ -32,3 +32,45 @@
 06:27:06 === ROOT 0s0-4s1_7s1-8s1 start
 06:27:24 cube {"node": "0s0-5s1_1s1-6s0", "cube": {"2": 1, "3": 1, "4": 0}, "status": "UNSATISFIABLE", "solve_s": 54.5, "check_s": 32.3, "certified": true, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT"}
 06:27:25 === ROOT 0s0-4s1_6s0-7s1 start
+06:27:48 cube {"node": "0s0-5s1_1s1-6s0", "cube": {"2": 1, "3": 1, "4": 1}, "status": "UNSATISFIABLE", "solve_s": 68.0, "check_s": 28.8, "certified": true, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT"}
+06:27:48 === ROOT 0s0-5s1_1s1-6s0 end closed at sigma level 1 open1=0 open2=0 wall=1081s
+06:27:49 === ROOT 0s0-4s1_5s0-8s0 start
+06:28:20 direct {"node": "0s0-4s1_7s1-8s1", "cube": null, "status": "UNSATISFIABLE", "solve_s": 43.7, "check_s": 29.1, "certified": true, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT"}
+06:28:20 === ROOT 0s0-4s1_7s1-8s1 end closed directly open1=0 open2=0 wall=73s
+06:28:21 === ROOT 0s0-4s1_2s0-7s0 start
+06:29:04 direct {"node": "0s0-4s1_5s0-8s0", "cube": null, "status": "UNSATISFIABLE", "solve_s": 45.3, "check_s": 29.0, "certified": true, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT"}
+06:29:04 === ROOT 0s0-4s1_5s0-8s0 end closed directly open1=0 open2=0 wall=75s
+06:29:04 === ROOT 0s0-4s1_1s1-7s0 start
+06:31:45 direct {"node": "0s0-4s1_2s0-7s0", "cube": null, "status": "UNSATISFIABLE", "solve_s": 166.6, "check_s": 36.5, "certified": true, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT"}
+06:31:45 === ROOT 0s0-4s1_2s0-7s0 end closed directly open1=0 open2=0 wall=204s
+06:31:46 === ROOT 0s0-4s1_1s0-8s1 start
+06:32:25 direct {"node": "0s0-4s1_6s0-7s1", "cube": null, "status": "UNKNOWN", "solve_s": 300.1, "check_s": null, "certified": null, "lrat_check": null, "cake_lpr": null}
+06:33:33 direct {"node": "0s0-4s1_1s1-7s0", "cube": null, "status": "UNSATISFIABLE", "solve_s": 227.3, "check_s": 40.6, "certified": true, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT"}
+06:33:33 === ROOT 0s0-4s1_1s1-7s0 end closed directly open1=0 open2=0 wall=269s
+06:33:54 direct {"node": "0s0-4s1_1s0-8s1", "cube": null, "status": "UNSATISFIABLE", "solve_s": 93.6, "check_s": 33.5, "certified": true, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT"}
+06:33:54 === ROOT 0s0-4s1_1s0-8s1 end closed directly open1=0 open2=0 wall=128s
+06:34:44 cube {"node": "0s0-4s1_6s0-7s1", "cube": {"1": 0, "2": 0, "3": 0}, "status": "UNSATISFIABLE", "solve_s": 104.5, "check_s": 33.8, "certified": true, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT"}
+06:36:46 cube {"node": "0s0-4s1_6s0-7s1", "cube": {"1": 0, "2": 0, "3": 1}, "status": "UNSATISFIABLE", "solve_s": 153.7, "check_s": 38.2, "certified": true, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT"}
+06:37:41 cube {"node": "0s0-4s1_6s0-7s1", "cube": {"1": 0, "2": 1, "3": 0}, "status": "UNSATISFIABLE", "solve_s": 185.4, "check_s": 40.9, "certified": true, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT"}
+06:38:56 cube {"node": "0s0-4s1_6s0-7s1", "cube": {"1": 0, "2": 1, "3": 1}, "status": "UNSATISFIABLE", "solve_s": 208.1, "check_s": 42.4, "certified": true, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT"}
+06:40:00 cube {"node": "0s0-4s1_6s0-7s1", "cube": {"1": 1, "2": 0, "3": 0}, "status": "UNSATISFIABLE", "solve_s": 155.5, "check_s": 38.2, "certified": true, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT"}
+06:41:49 cube {"node": "0s0-4s1_6s0-7s1", "cube": {"1": 1, "2": 0, "3": 1}, "status": "UNSATISFIABLE", "solve_s": 206.1, "check_s": 41.8, "certified": true, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT"}
+06:41:51 === ROOT 0s0-4s1_1s0-10s0 start
+06:42:59 cube {"node": "0s0-4s1_6s0-7s1", "cube": {"1": 1, "2": 1, "3": 1}, "status": "UNSATISFIABLE", "solve_s": 145.3, "check_s": 33.2, "certified": true, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT"}
+06:43:00 === ROOT 0s0-3s1_5s1-7s0 start
+06:43:28 cube {"node": "0s0-4s1_6s0-7s1", "cube": {"1": 1, "2": 1, "3": 0}, "status": "UNSATISFIABLE", "solve_s": 229.2, "check_s": 42.7, "certified": true, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT"}
+06:43:28 === ROOT 0s0-4s1_6s0-7s1 end closed at sigma level 1 open1=0 open2=0 wall=964s
+06:43:29 === ROOT 0s0-3s1_4s1-9s0 start
+06:46:52 direct {"node": "0s0-4s1_1s0-10s0", "cube": null, "status": "UNKNOWN", "solve_s": 300.4, "check_s": null, "certified": null, "lrat_check": null, "cake_lpr": null}
+06:48:01 direct {"node": "0s0-3s1_5s1-7s0", "cube": null, "status": "UNKNOWN", "solve_s": 300.1, "check_s": null, "certified": null, "lrat_check": null, "cake_lpr": null}
+06:48:30 direct {"node": "0s0-3s1_4s1-9s0", "cube": null, "status": "UNKNOWN", "solve_s": 300.1, "check_s": null, "certified": null, "lrat_check": null, "cake_lpr": null}
+06:49:42 cube {"node": "0s0-4s1_1s0-10s0", "cube": {"2": 0, "3": 0, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 131.4, "check_s": 38.5, "certified": true, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT"}
+06:50:38 cube {"node": "0s0-4s1_1s0-10s0", "cube": {"2": 0, "3": 1, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 94.2, "check_s": 33.0, "certified": true, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT"}
+06:51:04 cube {"node": "0s0-4s1_1s0-10s0", "cube": {"2": 0, "3": 0, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 126.9, "check_s": 55.0, "certified": true, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT"}
+06:51:33 cube {"node": "0s0-4s1_1s0-10s0", "cube": {"2": 0, "3": 1, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 77.7, "check_s": 32.2, "certified": true, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT"}
+06:52:52 cube {"node": "0s0-4s1_1s0-10s0", "cube": {"2": 1, "3": 0, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 76.4, "check_s": 31.8, "certified": true, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT"}
+06:53:19 cube {"node": "0s0-4s1_1s0-10s0", "cube": {"2": 1, "3": 0, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 112.4, "check_s": 46.9, "certified": true, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT"}
+06:53:31 cube {"node": "0s0-4s1_1s0-10s0", "cube": {"2": 1, "3": 1, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 75.5, "check_s": 41.4, "certified": true, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT"}
+06:54:31 cube {"node": "0s0-4s1_1s0-10s0", "cube": {"2": 1, "3": 1, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 63.0, "check_s": 35.1, "certified": true, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT"}
+06:54:31 === ROOT 0s0-4s1_1s0-10s0 end closed at sigma level 1 open1=0 open2=0 wall=761s
+06:55:27 cube {"node": "0s0-3s1_5s1-7s0", "cube": {"1": 0, "2": 0, "4": 0}, "status": "UNSATISFIABLE", "solve_s": 96.5, "check_s": 30.3, "certified": true, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT"}
