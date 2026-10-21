@@ -103,3 +103,26 @@
 {"node": "0s0-4s1_1s1-10s1", "cube": {"2": 0, "3": 0, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 141.5, "certified": true}
 {"node": "0s0-4s1_1s1-10s1", "cube": {"2": 0, "3": 0, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 213.3, "certified": true}
 {"node": "0s0-4s1_1s1-10s1", "cube": {"2": 0, "3": 1, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 216.2, "certified": true}
+07:27:16 pushed: C3W3S S0: progress
+{"node": "0s0-4s1_1s1-10s1", "cube": {"2": 0, "3": 1, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 228.6, "certified": true}
+{"node": "0s0-4s1_1s1-10s1", "cube": {"2": 1, "3": 0, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 216.7, "certified": true}
+{"node": "0s0-4s1_1s1-10s1", "cube": {"2": 1, "3": 0, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 282.9, "certified": true}
+{"node": "0s0-4s1_1s1-10s1", "cube": {"2": 1, "3": 1, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 275.7, "certified": true}
+{"node": "0s0-4s1_1s1-10s1", "cube": {"2": 1, "3": 1, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 186.5, "certified": true}
+07:34:40 === ROOT 0s0-4s1_1s1-10s1 end closed at sigma level 1
+07:34:43 === ROOT 0s0-4s1_1s0-3s0 start direct
+07:34:43 === ROOT 0s0-3s1_5s1-9s1 start direct
+07:34:43 === ROOT 0s0-3s1_5s0-7s0 start direct
+{"node": "0s0-4s1_1s0-3s0", "base_sha256": "bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da", "units": 339, "cnf_sha256": "ad36c4e8f5c0c9c3e63b06d55394cb0bcec060a3c434b55a4d20ccb7d25302c7", "status": "UNSATISFIABLE", "solve_s": 41.0, "proof_bytes": 131318031, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT", "certified": true, "check_s": 25.2}
+{"node": "0s0-3s1_5s0-7s0", "base_sha256": "bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da", "units": 339, "cnf_sha256": "f0d3815946475a9053eb6413d6f5a6e026c87dfec7d218d948954fd422f791a2", "status": "UNSATISFIABLE", "solve_s": 43.9, "proof_bytes": 132021427, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT", "certified": true, "check_s": 35.3}
+{"node": "0s0-3s1_5s1-9s1", "base_sha256": "bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da", "units": 339, "cnf_sha256": "ed70d76552c73c2484fea4000fa9aaf18645129a89f1f573dcbaca11844128b3", "status": "UNSATISFIABLE", "solve_s": 242.5, "proof_bytes": 382923864, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT", "certified": true, "check_s": 41.1}
+07:39:28 === ROOT 0s0-4s1_1s0-3s0 end closed directly
+07:39:28 === ROOT 0s0-3s1_5s1-9s1 end closed directly
+07:39:28 === ROOT 0s0-3s1_5s0-7s0 end closed directly
+07:39:30 === ROOT 0s0-3s1_4s1-5s0 start direct
+07:39:30 === ROOT 0s0-3s1_4s0-10s1 start direct
+07:39:30 === ROOT 0s0-3s1_1s1-4s1 start direct
+{"node": "0s0-3s1_1s1-4s1", "base_sha256": "bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da", "units": 339, "cnf_sha256": "56ba463d039ab930b5911523cac0b1127ded7d248fc137e99d7cf0811c408d39", "status": "UNSATISFIABLE", "solve_s": 98.8, "proof_bytes": 220842459, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT", "certified": true, "check_s": 36.3}
+{"node": "0s0-3s1_4s0-10s1", "base_sha256": "bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da", "units": 339, "cnf_sha256": "d7b4ec6a18b0261062c661ae293215378f869c1e1f6e3926fece18c1887c18c7", "status": "UNSATISFIABLE", "solve_s": 161.2, "proof_bytes": 242451172, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT", "certified": true, "check_s": 34.3}
+{"node": "0s0-3s1_4s1-5s0", "base_sha256": "bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da", "units": 339, "cnf_sha256": "1508fccff0e912642e20e26cfdfbe97e7cc4f0ecbb091965906cc026a6e26543", "status": "UNKNOWN", "solve_s": 300.1}
+07:44:35 === ROOT 0s0-3s1_4s1-5s0 sigma level 1
