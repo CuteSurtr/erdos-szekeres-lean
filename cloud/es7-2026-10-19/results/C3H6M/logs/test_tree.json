@@ -1,0 +1,98 @@
+{
+ "a": {
+  "root": 1,
+  "tops": 11,
+  "depth2": 1630,
+  "deeper_random": 3000,
+  "deeper_by_depth": {
+   "6": 1103,
+   "4": 577,
+   "3": 611,
+   "7": 108,
+   "5": 601
+  }
+ },
+ "b": {
+  "per_case": {
+   "0s0-1s0": {
+    "children_off": 153,
+    "children_on": 81,
+    "one_orbit_kept": 5,
+    "self_mirror": 9,
+    "pairs": 72
+   },
+   "0s0-1s1": {
+    "children_off": 153,
+    "children_on": 81,
+    "one_orbit_kept": 5,
+    "self_mirror": 9,
+    "pairs": 72
+   },
+   "0s0-2s0": {
+    "children_off": 153,
+    "children_on": 81,
+    "one_orbit_kept": 5,
+    "self_mirror": 9,
+    "pairs": 72
+   },
+   "0s0-2s1": {
+    "children_off": 153,
+    "children_on": 81,
+    "one_orbit_kept": 5,
+    "self_mirror": 9,
+    "pairs": 72
+   },
+   "0s0-3s0": {
+    "children_off": 153,
+    "children_on": 81,
+    "one_orbit_kept": 5,
+    "self_mirror": 9,
+    "pairs": 72
+   },
+   "0s0-3s1": {
+    "children_off": 153,
+    "children_on": 81,
+    "one_orbit_kept": 5,
+    "self_mirror": 9,
+    "pairs": 72
+   },
+   "0s0-4s0": {
+    "children_off": 153,
+    "children_on": 81,
+    "one_orbit_kept": 5,
+    "self_mirror": 9,
+    "pairs": 72
+   },
+   "0s0-4s1": {
+    "children_off": 153,
+    "children_on": 81,
+    "one_orbit_kept": 5,
+    "self_mirror": 9,
+    "pairs": 72
+   },
+   "0s0-5s0": {
+    "children_off": 153,
+    "children_on": 81,
+    "one_orbit_kept": 5,
+    "self_mirror": 9,
+    "pairs": 72
+   },
+   "0s0-5s1": {
+    "children_off": 153,
+    "children_on": 81,
+    "one_orbit_kept": 5,
+    "self_mirror": 9,
+    "pairs": 72
+   }
+  },
+  "total_kept": 810
+ },
+ "h6m_kept_columns": {
+  "rows": 1026,
+  "h6_rows": 926,
+  "agree": 926,
+  "disagree": []
+ },
+ "failures": 0,
+ "failure_sample": []
+}
