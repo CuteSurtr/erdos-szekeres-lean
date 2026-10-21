@@ -486,7 +486,7 @@ The same table is in `NUMBERS.tsv`.
 | hull cases | 450 | `results/Mii-S/soundness.md` |
 | 4-gon / 6-gon cases | 30 / 420 | `results/Mii-S/soundness.md` |
 | cases by U size 0/1/2 | 120 / 225 / 105 | `results/Haudit/AUDIT.md` task 2 |
-| vacuous cases | 56 | `results/Haudit/AUDIT.md` NOTE-3 |
+| vacuous cases (2 ∈ U, or 3 ∈ L and 2 ∉ L) | 56 | `results/Haudit/AUDIT.md` NOTE-3; `results/Haudit/t4_summary.txt` |
 | cube length | 61–535 literals | `results/Mii-S/README.md` §1 |
 | upper chains U | 121 | `results/Mii-S/soundness.md` |
 | split obligations | 122 | `results/Mii-S/cover_lrat.jsonl`; `results/Haudit/t3_cover_lrat.jsonl` |

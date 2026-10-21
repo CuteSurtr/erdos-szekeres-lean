@@ -7,4 +7,6 @@ Task `TASK.md` (committed at 852bee7) with H = 1.5, Z = 852bee7. Run 2026-10-21 
 
 Commit hashes are the new ones (after the 2026-10-21 rewrite), translated with `results/FINAL/COMMIT_MAP.tsv`; old hashes are given in brackets where a source cites them.
 
-Points to note found while writing (all in `MIRROR.md` §6 and §9): the V3 leaf CNFs are not byte-identical to the Lean leaf terms (V3 drops leaf literals already in the case cube and sorts by |literal|; the Lean term appends all leaf literals in recorded order), so the link between them is equisatisfiability by clause-set equality, not checked in Lean; and V3 records a leaf that contradicts its case cube as VERIFIED without a solver run. The compute of the four solving waves is not summed anywhere in the repository.
+Points to note found while writing (all in `MIRROR.md` §6 and §9): the V3 leaf CNFs are not byte-identical to the Lean leaf terms (V3 drops leaf literals already in the case cube and sorts by |literal|; the Lean term appends all leaf literals in recorded order), so the link between them is equisatisfiability by clause-set equality, not checked in Lean; and V3 records a leaf that contradicts its case cube as VERIFIED without a solver run (no final leaf took this path: `results/V3Z/problems.txt`, n = 73,880 solved leaves). The compute of the four solving waves is not summed anywhere in the repository.
+
+`REVIEW.md` (task `REVIEW_TASK.md` at c0ad8895) is a referee report on these three files and lists the corrections applied to them after the first pass.
