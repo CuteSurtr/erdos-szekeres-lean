@@ -1,0 +1,12 @@
+name = "c3_encoding"
+version = "0.1.0"
+defaultTargets = ["C3Encoding", "c3_dimacs"]
+
+# No dependencies (no Mathlib): the generator builds in seconds.
+
+[[lean_lib]]
+name = "C3Encoding"
+
+[[lean_exe]]
+name = "c3_dimacs"
+root = "C3Encoding.Emit"
