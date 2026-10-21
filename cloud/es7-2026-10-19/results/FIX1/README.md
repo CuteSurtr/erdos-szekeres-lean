@@ -99,5 +99,9 @@ changes `tools/`.
 - `v3_check.py` itself is unchanged, because the task asked only for the aggregate. It still
   ignores cake_lpr's exit code and stderr, and has no cake_lpr timeout (A4 finding 3). v2 makes
   the acceptance independent of the records' `verdict` field.
-- The old `compose.py` with its sha check (one full 70 MB hash per node) was still running on
-  sets A and B when this README was written; see the end of this file.
+- The old `compose.py` with its sha check (one full 70 MB hash per node) was run on the same
+  records split into 4 file shards: all exit 0, 42,602 certified nodes sha-checked
+  (`results/C3T/tests/logs/compose_old_setB_shard*.txt`). Its counts on the whole set were taken
+  with `--no-sha` and agree with the new script.
+
+Finished 2026-10-21 about 05:27 UTC, well inside the 2.0 h budget.

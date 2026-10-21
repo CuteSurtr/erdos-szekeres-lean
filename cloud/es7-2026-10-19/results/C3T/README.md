@@ -82,9 +82,11 @@ VM (`results/FIX1/env.txt`).
    | B: A + `C3WAVE1/C04/out_reconstructed.jsonl` + 5 recheck files (42,602 certified records) | 42,599 certified nodes, not covered, 7,453 frontier | 42,599 certified nodes, not covered, 7,453 frontier; 42,602 records sha-checked, 0 mismatches; 0 with proof_sha256 |
 
    The old script with `--no-sha` and the new one with `--no-sha` give identical JSON for the
-   old fields. The old script with its sha check ran in the background; see
-   `results/FIX1/README.md` for whether it finished. It hashes the 70 MB base again for every
-   node. `C3WAVE1/C09/notes/removed_records.jsonl` is left out: it holds the 9 split records that
+   old fields. The old script with its sha check hashes the 70 MB base again for every node, so
+   it was run on set B split into 4 file shards in parallel (`logs/files_setB_shard*.txt`,
+   `logs/compose_old_setB_shard*.txt`): all 4 exit 0 (no sha mismatch), 10,677 + 10,011 + 10,935 +
+   10,979 = 42,602 certified nodes checked, 964–1,052 s each. The new script does the same check
+   on all records in 14 s. `C3WAVE1/C09/notes/removed_records.jsonl` is left out: it holds the 9 split records that
    C09 removed. For information only (**test, not a claim**):
    `logs/compose_new_setB_mirror_h6_TESTONLY.txt` gives 4,883 frontier nodes with `--mirror-h6`
    on, against 7,453 with it off.
