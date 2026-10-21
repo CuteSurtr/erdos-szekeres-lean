@@ -183,7 +183,7 @@ many minor-minimal nonrealizable rank-three chirotopes. The following exact
 invariant distinguishes this example from their twelve-element star member.
 
 A permutation $p$ preserves the reorientation class precisely when signs
-$\gamma,\epsilon_i\in\{\pm1\}$ satisfy
+$`\gamma,\epsilon_i\in\{-1,+1\}`$ satisfy
 
 ```math
 \chi(p(i),p(j),p(k))=
