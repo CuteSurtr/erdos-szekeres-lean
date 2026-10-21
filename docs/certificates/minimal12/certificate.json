@@ -1,0 +1,351 @@
+{
+  "title": "Portable exact certificate of a minor-minimal nonrealizable twelve-point order type with no convex seven",
+  "labels": [
+    0,
+    2,
+    3,
+    4,
+    8,
+    10,
+    11,
+    12,
+    16,
+    18,
+    19,
+    20
+  ],
+  "symmetries": {
+    "c3_images": [
+      16,
+      18,
+      19,
+      20,
+      0,
+      2,
+      3,
+      4,
+      8,
+      10,
+      11,
+      12
+    ],
+    "reflection_images": [
+      0,
+      19,
+      18,
+      12,
+      16,
+      11,
+      10,
+      4,
+      8,
+      3,
+      2,
+      20
+    ]
+  },
+  "deletion_witnesses": [
+    {
+      "omitted": 0,
+      "points": [
+        [
+          2,
+          32,
+          7
+        ],
+        [
+          3,
+          -37,
+          3
+        ],
+        [
+          4,
+          -17,
+          -27
+        ],
+        [
+          8,
+          13,
+          10
+        ],
+        [
+          10,
+          -16,
+          -30
+        ],
+        [
+          11,
+          7,
+          33
+        ],
+        [
+          12,
+          1,
+          29
+        ],
+        [
+          16,
+          2,
+          -17
+        ],
+        [
+          18,
+          -28,
+          16
+        ],
+        [
+          19,
+          19,
+          -24
+        ],
+        [
+          20,
+          26,
+          -6
+        ]
+      ]
+    },
+    {
+      "omitted": 2,
+      "points": [
+        [
+          0,
+          -12,
+          14
+        ],
+        [
+          3,
+          -29,
+          -4
+        ],
+        [
+          4,
+          -23,
+          -16
+        ],
+        [
+          8,
+          8,
+          7
+        ],
+        [
+          10,
+          -14,
+          -36
+        ],
+        [
+          11,
+          3,
+          29
+        ],
+        [
+          12,
+          -6,
+          35
+        ],
+        [
+          16,
+          -4,
+          -17
+        ],
+        [
+          18,
+          -10,
+          40
+        ],
+        [
+          19,
+          13,
+          -25
+        ],
+        [
+          20,
+          22,
+          -20
+        ]
+      ]
+    },
+    {
+      "omitted": 3,
+      "points": [
+        [
+          0,
+          -10,
+          25
+        ],
+        [
+          2,
+          40,
+          -19
+        ],
+        [
+          4,
+          -66,
+          -7
+        ],
+        [
+          8,
+          25,
+          11
+        ],
+        [
+          10,
+          -34,
+          -31
+        ],
+        [
+          11,
+          29,
+          46
+        ],
+        [
+          12,
+          23,
+          45
+        ],
+        [
+          16,
+          4,
+          -25
+        ],
+        [
+          18,
+          3,
+          52
+        ],
+        [
+          19,
+          16,
+          -65
+        ],
+        [
+          20,
+          31,
+          -33
+        ]
+      ]
+    },
+    {
+      "omitted": 4,
+      "points": [
+        [
+          0,
+          -20,
+          5
+        ],
+        [
+          2,
+          24,
+          -3
+        ],
+        [
+          3,
+          -39,
+          -5
+        ],
+        [
+          8,
+          12,
+          5
+        ],
+        [
+          10,
+          -20,
+          -26
+        ],
+        [
+          11,
+          12,
+          19
+        ],
+        [
+          12,
+          6,
+          19
+        ],
+        [
+          16,
+          -8,
+          -20
+        ],
+        [
+          18,
+          -18,
+          24
+        ],
+        [
+          19,
+          10,
+          -28
+        ],
+        [
+          20,
+          20,
+          -9
+        ]
+      ]
+    }
+  ],
+  "gp_seeds": [
+    {
+      "anchor": 0,
+      "others": [
+        2,
+        3,
+        4,
+        12
+      ],
+      "larger_term": 1,
+      "smaller_term": 2
+    },
+    {
+      "anchor": 2,
+      "others": [
+        3,
+        18,
+        19,
+        20
+      ],
+      "larger_term": 1,
+      "smaller_term": 2
+    },
+    {
+      "anchor": 2,
+      "others": [
+        8,
+        12,
+        18,
+        20
+      ],
+      "larger_term": 2,
+      "smaller_term": 0
+    },
+    {
+      "anchor": 4,
+      "others": [
+        0,
+        2,
+        3,
+        19
+      ],
+      "larger_term": 2,
+      "smaller_term": 0
+    }
+  ],
+  "gp_convention": "P0=[abc][ade], P1=-[abd][ace], P2=[abe][acd]; P0+P1+P2=0",
+  "convex_six_witness": [
+    2,
+    3,
+    10,
+    11,
+    18,
+    19
+  ],
+  "provenance_only": {
+    "pinned_commit": "c82c74c379ca81218b0eff4dacf552de055114d4",
+    "source_model": "cloud/es7-2026-10-19/results/C3a/models/model_m8_k7.json",
+    "source_model_sha256": "5e62bbac09a63509d14e8661b2708ef2b9d8f44faeab818ec4624f4baa35a1b7",
+    "repository": "https://github.com/CuteSurtr/erdos-szekeres-lean"
+  },
+  "scope": "All signs are reconstructed from coordinate overlaps. No Git access, solver, previous checker or external enumeration is needed."
+}
