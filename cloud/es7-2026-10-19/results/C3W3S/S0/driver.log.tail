@@ -126,3 +126,24 @@
 {"node": "0s0-3s1_4s0-10s1", "base_sha256": "bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da", "units": 339, "cnf_sha256": "d7b4ec6a18b0261062c661ae293215378f869c1e1f6e3926fece18c1887c18c7", "status": "UNSATISFIABLE", "solve_s": 161.2, "proof_bytes": 242451172, "lrat_check": "c VERIFIED", "cake_lpr": "s VERIFIED UNSAT", "certified": true, "check_s": 34.3}
 {"node": "0s0-3s1_4s1-5s0", "base_sha256": "bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da", "units": 339, "cnf_sha256": "1508fccff0e912642e20e26cfdfbe97e7cc4f0ecbb091965906cc026a6e26543", "status": "UNKNOWN", "solve_s": 300.1}
 07:44:35 === ROOT 0s0-3s1_4s1-5s0 sigma level 1
+07:47:19 pushed: C3W3S S0: progress
+{"node": "0s0-3s1_4s1-5s0", "cube": {"1": 0, "2": 0, "6": 0}, "status": "UNSATISFIABLE", "solve_s": 194.2, "certified": true}
+{"node": "0s0-3s1_4s1-5s0", "cube": {"1": 0, "2": 0, "6": 1}, "status": "UNSATISFIABLE", "solve_s": 127.1, "certified": true}
+{"node": "0s0-3s1_4s1-5s0", "cube": {"1": 0, "2": 1, "6": 0}, "status": "UNSATISFIABLE", "solve_s": 239.3, "certified": true}
+{"node": "0s0-3s1_4s1-5s0", "cube": {"1": 0, "2": 1, "6": 1}, "status": "UNSATISFIABLE", "solve_s": 167.0, "certified": true}
+{"node": "0s0-3s1_4s1-5s0", "cube": {"1": 1, "2": 0, "6": 0}, "status": "UNSATISFIABLE", "solve_s": 253.9, "certified": true}
+{"node": "0s0-3s1_4s1-5s0", "cube": {"1": 1, "2": 0, "6": 1}, "status": "UNSATISFIABLE", "solve_s": 263.3, "certified": true}
+{"node": "0s0-3s1_4s1-5s0", "cube": {"1": 1, "2": 1, "6": 0}, "status": "UNSATISFIABLE", "solve_s": 196.0, "certified": true}
+{"node": "0s0-3s1_4s1-5s0", "cube": {"1": 1, "2": 1, "6": 1}, "status": "UNSATISFIABLE", "solve_s": 249.6, "certified": true}
+07:58:26 === ROOT 0s0-3s1_4s1-5s0 end closed at sigma level 1
+07:58:26 === ROOT 0s0-3s1_4s0-10s1 end closed directly
+07:58:26 === ROOT 0s0-3s1_1s1-4s1 end closed directly
+07:58:27 SKIP 0s0-3s1_1s0-4s1: record 0s0-3s1_1s0-4s1 in C3W3/C12/out.jsonl
+07:58:27 SKIP 0s0-2s1_5s0-8s1: record 0s0-2s1_5s0-8s1 in C3W3/C0/out.jsonl
+07:58:28 SKIP 0s0-2s1_4s1-5s0: record 0s0-2s1_4s1-5s0 in C3W3/C6/out.jsonl
+07:58:28 SKIP 0s0-2s1_3s1-7s1: record 0s0-2s1_3s1-7s1 in C3W3/C12/out.jsonl
+07:58:29 SKIP 0s0-2s1_3s0-4s1: record 0s0-2s1_3s0-4s1 in C3W3/C0/out.jsonl
+07:58:29 SKIP 0s0-2s1_5s1-6s0: record 0s0-2s1_5s1-6s0_8s0-9s0 in C3W3/C6/out.jsonl
+07:58:30 SKIP 0s0-1s1_5s0-6s1: record 0s0-1s1_5s0-6s1_2s0-3s0 in C3W3/C12/out.jsonl
+07:58:30 SKIP 0s0-1s1_2s0-5s1: record 0s0-1s1_2s0-5s1_4s1-8s1 in C3W3/C0/out.jsonl
+07:58:30 === DRIVER DONE
