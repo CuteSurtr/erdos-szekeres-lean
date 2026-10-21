@@ -6,7 +6,7 @@ per-node solve + check seconds from the `out.jsonl` records. These are not wall 
 ran 3 jobs on 4 cores, so each number is a little inflated.
 
 Data snapshot: all `results/C3WAVE1/*/out.jsonl` and `results/C3WAVE2/*/out.jsonl` as of the last pull
-(01:17 UTC, branch es7-cloud at 39fa881d). Wave 2 was still running then (until about 02:00 UTC), so its rows will grow.
+(01:35 UTC, branch es7-cloud at 927bbe29). Wave 2 was still running then (until about 02:00 UTC), so its rows will grow.
 
 ## 1. Measured cost so far
 
@@ -18,19 +18,19 @@ E2 `c VERIFIED` and cake_lpr `s VERIFIED UNSAT`), or a split record whose `tree_
 | top case | layer 2 | roots | closed | partial | untouched | core-h spent (solve + check) |
 |---|---|---|---|---|---|---|
 | H3 | one | 5 | 0 | 0 | 5 | 0.0 |
-| H3 | two | 95 | 0 | 0 | 95 | 0.0 |
+| H3 | two | 95 | 0 | 1 | 94 | 0.8 |
 | H6(1,0) | one | 9 | 9 | 0 | 0 | 11.6 |
 | H6(1,0) | two | 144 | 144 | 0 | 0 | 3.1 |
-| H6(1,1) | one | 9 | 0 | 9 | 0 | 56.5 |
-| H6(1,1) | two | 144 | 103 | 36 | 5 | 178.0 |
-| H6(2,0) | one | 9 | 3 | 3 | 3 | 9.0 |
-| H6(2,0) | two | 144 | 71 | 0 | 73 | 1.6 |
-| H6(2,1) | one | 9 | 0 | 1 | 8 | 4.5 |
-| H6(2,1) | two | 144 | 18 | 12 | 114 | 14.5 |
-| H6(3,0) | one | 9 | 1 | 1 | 7 | 1.7 |
+| H6(1,1) | one | 9 | 0 | 9 | 0 | 57.4 |
+| H6(1,1) | two | 144 | 103 | 36 | 5 | 188.1 |
+| H6(2,0) | one | 9 | 5 | 1 | 3 | 9.6 |
+| H6(2,0) | two | 144 | 72 | 0 | 72 | 1.6 |
+| H6(2,1) | one | 9 | 0 | 3 | 6 | 4.8 |
+| H6(2,1) | two | 144 | 21 | 14 | 109 | 24.4 |
+| H6(3,0) | one | 9 | 1 | 1 | 7 | 2.2 |
 | H6(3,0) | two | 144 | 10 | 0 | 134 | 0.2 |
 | H6(3,1) | one | 9 | 0 | 0 | 9 | 0.0 |
-| H6(3,1) | two | 144 | 1 | 1 | 142 | 0.1 |
+| H6(3,1) | two | 144 | 1 | 2 | 141 | 1.5 |
 | H6(4,0) | one | 9 | 0 | 0 | 9 | 0.0 |
 | H6(4,0) | two | 144 | 0 | 0 | 144 | 0.0 |
 | H6(4,1) | one | 9 | 0 | 0 | 9 | 0.0 |
@@ -39,24 +39,27 @@ E2 `c VERIFIED` and cake_lpr `s VERIFIED UNSAT`), or a split record whose `tree_
 | H6(5,0) | two | 144 | 0 | 0 | 144 | 0.0 |
 | H6(5,1) | one | 9 | 0 | 0 | 9 | 0.0 |
 | H6(5,1) | two | 144 | 0 | 0 | 144 | 0.0 |
-| **all** | | 1630 | 360 | 63 | 1207 | 280.7 |
+| **all** | | 1630 | 366 | 67 | 1197 | 305.4 |
 
 Per-node buckets (all wave records; `scripts/estimate.py` prints them as `c_b`;
 s = σ_a of the top case, l2 = layer-2 type, d = depth, o = orbits in the newest layer):
 
 | s / l2 / d / o | attempted | certified | timeouts | mean solve s | mean check s (certified) |
 |---|---|---|---|---|---|
-| s0/one/3/1 | 131 | 128 | 0 | 76.7 | 39.4 |
-| s0/one/3/2 | 1748 | 1744 | 0 | 17.0 | 20.3 |
-| s0/two/2/2 | 225 | 225 | 0 | 45.2 | 32.0 |
-| s1/one/3/1 | 80 | 0 | 80 | 300.1 | 0.0 |
-| s1/one/3/2 | 818 | 807 | 11 | 123.3 | 33.2 |
+| H3/two/2/2 | 1 | 0 | 1 | 300.1 | 0.0 |
+| H3/two/4/1 | 7 | 7 | 0 | 182.9 | 44.1 |
+| H3/two/4/2 | 11 | 11 | 0 | 50.3 | 29.0 |
+| s0/one/3/1 | 139 | 136 | 0 | 80.4 | 39.2 |
+| s0/one/3/2 | 1804 | 1800 | 0 | 17.3 | 20.4 |
+| s0/two/2/2 | 226 | 226 | 0 | 46.2 | 32.1 |
+| s1/one/3/1 | 83 | 0 | 83 | 300.1 | 0.0 |
+| s1/one/3/2 | 849 | 838 | 11 | 121.8 | 33.0 |
 | s1/one/4/1 | 189 | 189 | 0 | 50.8 | 28.2 |
 | s1/one/4/2 | 797 | 795 | 0 | 41.2 | 25.4 |
-| s1/two/2/2 | 171 | 93 | 78 | 184.9 | 35.1 |
-| s1/two/3/2 | 2712 | 2711 | 0 | 30.6 | 25.7 |
-| s1/two/4/1 | 2403 | 2389 | 0 | 6.6 | 15.4 |
-| s1/two/4/2 | 22500 | 22500 | 0 | 5.4 | 14.8 |
+| s1/two/2/2 | 177 | 96 | 81 | 186.4 | 35.1 |
+| s1/two/3/2 | 2883 | 2882 | 0 | 30.6 | 25.7 |
+| s1/two/4/1 | 2719 | 2705 | 0 | 6.5 | 15.2 |
+| s1/two/4/2 | 25654 | 25654 | 0 | 5.4 | 14.6 |
 
 **Which roots are hard and what they share** (`stats.tsv`; `scripts/estimate.py`):
 
@@ -65,35 +68,35 @@ s = σ_a of the top case, l2 = layer-2 type, d = depth, o = orbits in the newest
 run out of time. "Hard" below means that nodes timed out at their cap.
 
 - **The top-case bit s = σ_a decides it.** No s = 0 node has ever timed out (bucket table: 0
-  timeouts in every s0 bucket). Every measured two-orbit s = 0 root is closed (H6(1,0) 144, H6(2,0) 71, H6(3,0) 10), at depth 2, for a mean of 77 core-s per root. One-orbit s = 0
+  timeouts in every s0 bucket). Every measured two-orbit s = 0 root is closed (H6(1,0) 144, H6(2,0) 72, H6(3,0) 10), at depth 2, for a mean of 78 core-s per root. One-orbit s = 0
   roots cost about 4,600 core-s each (9 closed H6(1,0) roots, 120 depth-3 leaves each). The
-  4 partial one-orbit s = 0 roots (`0s0-2s0_3`, `0s0-2s0_6`, `0s0-2s0_9`, `0s0-3s0_7`) are wave-2 slices that ran out of time with
-  3–120 untried depth-3 nodes and no timeout. Every wave root with timeouts is an
+  2 partial one-orbit s = 0 roots (`0s0-2s0_9`, `0s0-3s0_7`) are wave-2 slices that ran out of time with
+  3–101 untried depth-3 nodes and no timeout. Every wave root with timeouts is an
   s = 1 root. One caution: C3-S's full enumeration of H6(4,0) at depth 2 (s = 0, no `--sat`, up to
   6 processes on 4 cores) had 5 of 144 two-orbit and all 9 one-orbit children time out at 300 s
   (`results/C3-S/README.md`, Measurements 7). So s = 0 with a ≥ 3 may be harder than the measured
   a = 1, 2. If those 5 roots behave like s = 1 two-orbit timeouts (about 4.4 core-h each),
   H6(4,0) costs about 20 core-h more than the borrowed estimate below.
 - **One-orbit layer 2 under s = 1 is the hardest stratum.** None of the measured roots
-  (10: `0s0-1s1_10`, `0s0-1s1_2`, `0s0-1s1_3`, `0s0-1s1_4`, `0s0-1s1_5`, `0s0-1s1_6`, `0s0-1s1_7`, `0s0-1s1_8`, `0s0-1s1_9`, `0s0-2s1_1`) is closed. The wave-1 ones (`0s0-1s1_{2,3,4,6,7,10}`,
+  (12: `0s0-1s1_10`, `0s0-1s1_2`, `0s0-1s1_3`, `0s0-1s1_4`, `0s0-1s1_5`, `0s0-1s1_6`, `0s0-1s1_7`, `0s0-1s1_8`, `0s0-1s1_9`, `0s0-2s1_1`, `0s0-2s1_6`, `0s0-2s1_7`) is closed. The wave-1 ones (`0s0-1s1_{2,3,4,6,7,10}`,
   `0s0-2s1_1`) have spent 9,000–41,000 core-s each and still have 375–4,299 open nodes
   (`0s0-1s1_4`: 1,329 at depth 4 and 2,970 at depth 5). Their depth-3
   single-orbit children (single below single) timed out at 300 s **80 times out of 80**.
   That is 6.7 core-h of pure timeouts that a pre-split would have avoided (bucket s1/one/3/1).
-- **Two-orbit layer 2 under s = 1 is bimodal.** Of 171 measured roots, 122 are closed and 49 partial. The closed ones cost median 117 and mean 3559 core-s, max 16390.
-  At depth 2, 78 of 171 attempted of these roots timed out at 300 s (bucket s1/two/2/2).
+- **Two-orbit layer 2 under s = 1 is bimodal.** Of 177 measured roots, 125 are closed and 52 partial. The closed ones cost median 118 and mean 3478 core-s, max 16390.
+  At depth 2, 81 of 177 attempted of these roots timed out at 300 s (bucket s1/two/2/2).
   When a two-orbit s = 1 root times out at 300 s, its layer split produces 7 pre-split single
   children plus 84 two-orbit children, then 462 depth-4 leaves: **546 certified nodes, about
   6,000–6,500 s solve plus about 9,600 s check per root** (`0s0-1s1_2s1-9s1`, `0s0-1s1_3s1-4s0`,
   `0s0-1s1_4s0-6s1` in `stats.tsv`).
   Mixed layer-2 σ (01, 10) is still open much more often than equal σ (00, 11):
-  38 of 83 mixed vs 11 of 88 equal still open (`stats.tsv`, column l2sigma).
-- **Checking costs as much as solving.** Over all records, solve 130.2 core-h and check 150.4 core-h. At depth 4 a node takes
+  40 of 87 mixed vs 12 of 90 equal still open (`stats.tsv`, column l2sigma).
+- **Checking costs as much as solving.** Over all records, solve 139.4 core-h and check 166.0 core-h. At depth 4 a node takes
   about 5.5 s to solve and 15 s to check. Most of the 15 s is fixed work per node: the 4.15M-clause
   base CNF is written, hashed and parsed by both checkers. Deep layer trees therefore pay mostly
   for this overhead.
 - **H3 (100 roots) has no wave records at all**, and H6(a, ·) for a = 3, 4, 5 has only
-  14 touched roots of 918. Both waves take roots in name order, which puts the H6 roots first, and wave 2 had not
+  15 touched roots of 918. Both waves take roots in name order, which puts the H6 roots first, and wave 2 had not
   reached these at the snapshot.
 
 ## 2. Total cost of the C3 class with the current method
@@ -114,49 +117,49 @@ Model (`scripts/estimate.py`, full description in its docstring):
 | H3/two | 95 | 0/0 | 2.77/5.66/8636.00 | 263/538/820420 | C3-S Knuth walks (H3 stratum, 100 roots) |
 | H6(1,0)/one | 9 | 9/0 | 1.29/1.29/1.29 | 12/12/12 | own roots |
 | H6(1,0)/two | 144 | 144/0 | 0.02/0.02/0.02 | 3/3/3 | own roots |
-| H6(1,1)/one | 9 | 0/9 | 16.54/26.80/67.85 | 149/241/611 | own roots |
-| H6(1,1)/two | 144 | 103/36 | 1.59/1.90/3.13 | 229/273/450 | own roots |
-| H6(2,0)/one | 9 | 3/3 | 1.54/1.58/1.75 | 14/14/16 | own roots |
-| H6(2,0)/two | 144 | 71/0 | 0.02/0.02/0.02 | 3/3/3 | own roots |
-| H6(2,1)/one | 9 | 0/1 | 11.69/18.85/47.45 | 105/170/427 | own roots |
-| H6(2,1)/two | 144 | 18/12 | 1.04/1.60/3.82 | 150/230/551 | own roots |
-| H6(3,0)/one | 9 | 1/1 | 1.18/1.54/2.95 | 11/14/27 | own roots |
+| H6(1,1)/one | 9 | 0/9 | 16.56/26.74/67.46 | 149/241/607 | own roots |
+| H6(1,1)/two | 144 | 103/36 | 1.62/1.89/2.96 | 234/272/427 | own roots |
+| H6(2,0)/one | 9 | 5/1 | 1.61/1.61/1.62 | 14/15/15 | own roots |
+| H6(2,0)/two | 144 | 72/0 | 0.02/0.02/0.02 | 3/3/3 | own roots |
+| H6(2,1)/one | 9 | 0/3 | 6.62/11.64/31.73 | 60/105/286 | own roots |
+| H6(2,1)/two | 144 | 21/14 | 1.14/1.58/3.33 | 164/227/480 | own roots |
+| H6(3,0)/one | 9 | 1/1 | 1.37/1.63/2.69 | 12/15/24 | own roots |
 | H6(3,0)/two | 144 | 10/0 | 0.02/0.02/0.02 | 3/3/3 | own roots |
-| H6(3,1)/one | 9 | 0/0 | 16.05/26.00/65.81 | 144/234/592 | borrowed: all measured s1/one roots |
-| H6(3,1)/two | 144 | 1/1 | 1.04/2.02/5.94 | 150/291/855 | own roots |
-| H6(4,0)/one | 9 | 0/0 | 1.37/1.42/1.65 | 12/13/15 | borrowed: all measured s0/one roots |
+| H6(3,1)/one | 9 | 0/0 | 14.07/22.97/58.53 | 127/207/527 | borrowed: all measured s1/one roots |
+| H6(3,1)/two | 144 | 1/2 | 1.58/2.67/7.03 | 227/384/1012 | own roots |
+| H6(4,0)/one | 9 | 0/0 | 1.41/1.44/1.57 | 13/13/14 | borrowed: all measured s0/one roots |
 | H6(4,0)/two | 144 | 0/0 | 0.02/0.02/0.02 | 3/3/3 | borrowed: all measured s0/two roots |
-| H6(4,1)/one | 9 | 0/0 | 16.05/26.00/65.81 | 144/234/592 | borrowed: all measured s1/one roots |
-| H6(4,1)/two | 144 | 0/0 | 1.49/1.84/3.28 | 214/266/472 | borrowed: all measured s1/two roots |
-| H6(5,0)/one | 9 | 0/0 | 1.37/1.42/1.65 | 12/13/15 | borrowed: all measured s0/one roots |
+| H6(4,1)/one | 9 | 0/0 | 14.07/22.97/58.53 | 127/207/527 | borrowed: all measured s1/one roots |
+| H6(4,1)/two | 144 | 0/0 | 1.53/1.84/3.11 | 220/265/447 | borrowed: all measured s1/two roots |
+| H6(5,0)/one | 9 | 0/0 | 1.41/1.44/1.57 | 13/13/14 | borrowed: all measured s0/one roots |
 | H6(5,0)/two | 144 | 0/0 | 0.02/0.02/0.02 | 3/3/3 | borrowed: all measured s0/two roots |
-| H6(5,1)/one | 9 | 0/0 | 16.05/26.00/65.81 | 144/234/592 | borrowed: all measured s1/one roots |
-| H6(5,1)/two | 144 | 0/0 | 1.49/1.84/3.28 | 214/266/472 | borrowed: all measured s1/two roots |
+| H6(5,1)/one | 9 | 0/0 | 14.07/22.97/58.53 | 127/207/527 | borrowed: all measured s1/one roots |
+| H6(5,1)/two | 144 | 0/0 | 1.53/1.84/3.11 | 220/265/447 | borrowed: all measured s1/two roots |
 
 (`estimate.txt`, made by `scripts/estimate.py`; core-h are solve + check.)
 
-**Result: about 3,085 core-hours (range 1,997 – 7,849) with the current method.** That is
-1,028 machine-hours of the 4-core VMs used here at 3 jobs per VM (771 at 4 jobs).
+**Result: about 3,028 core-hours (range 2,008 – 7,515) with the current method.** That is
+1,009 machine-hours of the 4-core VMs used here at 3 jobs per VM (757 at 4 jobs).
 The range has an unbounded tail from H3. One of the 8 H3 Knuth walks extrapolates to 6.8·10^5 solve
-core-h. If that walk is representative, the total is about 869,314 core-h and the method cannot
-finish H3. The upper end 7,849 uses the second-heaviest H3 walk (1,681) instead.
+core-h. If that walk is representative, the total is about 868,980 core-h and the method cannot
+finish H3. The upper end 7,515 uses the second-heaviest H3 walk (1,681) instead.
 
-Where it goes (mid): s = 1 one-orbit about 1113 core-h for 45 roots, s = 1 two-orbit about
-1326 core-h for 720 roots, H3 about 566 core-h (Knuth walk only), and all s = 0 strata
-together about 81 core-h.
+Where it goes (mid): s = 1 one-orbit about 967 core-h for 45 roots, s = 1 two-orbit about
+1413 core-h for 720 roots, H3 about 566 core-h (Knuth walk only), and all s = 0 strata
+together about 83 core-h.
 
 **Comparison with the C3-S Knuth walks** (`results/C3-S/README.md` "Measurements" 6, solve only).
 Check is about as large as solve here, so the walk numbers should be compared with about half of
 the measured totals:
 - The unstratified walks gave 3,080 ± 2,417 solve core-h, and C3-S's headline was "about 1,500
-  core-h if the H3 tail is mild". The measured H6 part alone is about 2,520 core-h (solve +
-  check), roughly 1,169 solve, so the total sits at the upper end of the C3-S guess.
+  core-h if the H3 tail is mild". The measured H6 part alone is about 2,463 core-h (solve +
+  check), roughly 1,124 solve, so the total sits at the upper end of the C3-S guess.
 - "H6, budget 100k at depth 2: 39 ± 17": a large **underestimate** for the H6 two-orbit strata
-  (measured about 1,341 core-h). All 4 walks closed at depth 2, so the walks never sampled a
+  (measured about 1,428 core-h). All 4 walks closed at depth 2, so the walks never sampled a
   depth-2 timeout. In the waves such a timeout costs about 15,800 core-s (the 546-node layer split
   in 3b).
 - "H6 one-orbit subtrees from depth 3: 469 ± 141": consistent with the measured one-orbit total of
-  about 1,179 core-h solve + check (about half of it solve).
+  about 1,035 core-h solve + check (about half of it solve).
 
 ## 3. Ways to make it cheaper (with evidence)
 
@@ -268,8 +271,8 @@ nodes each under layer splitting.
 - **Encodings**: C3a chain is the fastest of those measured (C3-S Measurements 4: chain
   12.5 s / 45.7 s vs conv 69 / 129, C3b chain 20 / 52). Nothing new here.
 
-**Combined estimate.** The mirror reduction (3a) gives 1,928 core-h mid (range 1,205 –
-5,231, H3 unchanged; `scripts/estimate.py` "with H6 mirror"). σ-cubes (3b) might reduce the s = 1 tail further,
+**Combined estimate.** The mirror reduction (3a) gives 1,894 core-h mid (range 1,209 –
+5,045, H3 unchanged; `scripts/estimate.py` "with H6 mirror"). σ-cubes (3b) might reduce the s = 1 tail further,
 but 3 nodes with a mixed outcome do not support a number.
 
 ## 4. Plan for the next wave
@@ -292,7 +295,7 @@ Order matters more than size: close what is cheap and certain first, then measur
    σ-cubes as the first split in 3c/3d.
 2. **Wave 3a: s = 0 cleanup, 10 machines × 2 h.** All untouched H6(a, 0) roots (mirror-kept only:
    about 81 per case minus those already closed), a = 2..5, caps 300/300/600. Expected about 45
-   core-h of work (s = 0 strata about 81 core-h without the mirror reduction), i.e. 1–2 hours
+   core-h of work (s = 0 strata about 83 core-h without the mirror reduction), i.e. 1–2 hours
    on 10 machines (3 jobs each). Result: **all five s = 0 top cases closed** (H6(1,0) already is). This also measures the a = 3..5 dependence.
 3. **Wave 3b: H3 pilot, 10 machines × 3 h, in parallel with 3a.** 30 mirror-kept H3 roots, chosen
    at random, 3 per machine, with the current layer split (and σ-cubes on timeouts once step 0
@@ -301,12 +304,12 @@ Order matters more than size: close what is cheap and certain first, then measur
 4. **Wave 3c: s = 1 two-orbit, 30 machines × 8 h.** The mirror-kept two-orbit roots of H6(a, 1),
    about 76 × 5 = 380, minus those closed: about 300. Budget, from the s1/two stratum mean of about
    2 core-h per root: about 600 core-h ≈ 200 machine-hours (3 jobs), less if the σ-cube pilot wins.
-5. **Wave 3d: s = 1 one-orbit, 25 roots** (5 kept per a), resumed from the 10 partial roots'
+5. **Wave 3d: s = 1 one-orbit, 25 roots** (5 kept per a), resumed from the 12 partial roots'
    records where kept. One root per machine, 25 machines × 12 h, with σ-cubes below single layers.
    This is the stratum with the most uncertainty in H6.
 6. Then H3 in full, sized from the 3b pilot.
 
-**Total with the mirror reduction 3a** (mid): about 1,928 core-h without the σ-cube gain. With 40 machines
+**Total with the mirror reduction 3a** (mid): about 1,894 core-h without the σ-cube gain. With 40 machines
 × 3 jobs = 120 parallel solves, that is about 16 h of wall time. Whether σ-cubes shorten this is
 decided by the pilot in step 1.
 
