@@ -13,3 +13,16 @@
 {"node": "0s0-2s1_1", "cube": {"3": 0, "4": 0, "5": 0, "6": 0, "7": 0, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 211.9, "certified": true}
 {"node": "0s0-2s1_1", "cube": {"3": 0, "4": 0, "5": 0, "6": 0, "7": 0, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 236.3, "certified": true}
 {"node": "0s0-2s1_1", "cube": {"3": 0, "4": 0, "5": 0, "6": 0, "7": 1, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 222.7, "certified": true}
+{"node": "0s0-2s1_1", "cube": {"3": 0, "4": 0, "5": 0, "6": 0, "7": 1, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 203.7, "certified": true}
+{"node": "0s0-2s1_1", "cube": {"3": 0, "4": 0, "5": 0, "6": 1, "7": 0, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 217.3, "certified": true}
+{"node": "0s0-2s1_1", "cube": {"3": 0, "4": 0, "5": 0, "6": 1, "7": 0, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 187.0, "certified": true}
+{"node": "0s0-2s1_1", "cube": {"3": 0, "4": 0, "5": 0, "6": 1, "7": 1, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 227.7, "certified": true}
+{"node": "0s0-2s1_1", "cube": {"3": 0, "4": 0, "5": 0, "6": 1, "7": 1, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 183.4, "certified": true}
+{"node": "0s0-2s1_1", "cube": {"3": 0, "4": 0, "5": 1, "6": 0, "7": 0, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 225.6, "certified": true}
+{"node": "0s0-2s1_1", "cube": {"3": 0, "4": 0, "5": 1, "6": 0, "7": 0, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 183.3, "certified": true}
+{"node": "0s0-2s1_1", "cube": {"3": 0, "4": 0, "5": 1, "6": 0, "7": 1, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 230.0, "certified": true}
+=== 0s0-2s1_1 refine end 2026-10-21T06:17:30Z killed=1
+=== 0s0-3s1_1 K=3 start 2026-10-21T06:17:30Z deadline 06:50:40Z
+{"node": "0s0-3s1_1", "cube": {"2": 0, "4": 0, "5": 0}, "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-3s1_1", "cube": {"2": 0, "4": 0, "5": 1}, "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-3s1_1", "cube": {"2": 0, "4": 1, "5": 0}, "status": "UNKNOWN", "solve_s": 300.2, "certified": null}
