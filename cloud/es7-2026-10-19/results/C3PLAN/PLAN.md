@@ -6,7 +6,7 @@ per-node solve + check seconds from the `out.jsonl` records. These are not wall 
 ran 3 jobs on 4 cores, so each number is a little inflated.
 
 Data snapshot: all `results/C3WAVE1/*/out.jsonl` and `results/C3WAVE2/*/out.jsonl` as of the last pull
-(01:35 UTC, branch es7-cloud at 927bbe29). Wave 2 was still running then (until about 02:00 UTC), so its rows will grow.
+(01:35 UTC, branch es7-cloud at 2c2ba0bb). Wave 2 was still running then (until about 02:00 UTC), so its rows will grow.
 
 ## 1. Measured cost so far
 
@@ -95,8 +95,15 @@ run out of time. "Hard" below means that nodes timed out at their cap.
   about 5.5 s to solve and 15 s to check. Most of the 15 s is fixed work per node: the 4.15M-clause
   base CNF is written, hashed and parsed by both checkers. Deep layer trees therefore pay mostly
   for this overhead.
-- **H3 (100 roots) has no wave records at all**, and H6(a, ·) for a = 3, 4, 5 has only
-  15 touched roots of 918. Both waves take roots in name order, which puts the H6 roots first, and wave 2 had not
+- **H3 is almost unmeasured.** H6(a, ·) for a = 3, 4, 5 has only 15 touched roots of 918.
+  Wave 2 reached H3 only just before the final pull. One H3 root, `0s0_5s1-6s0` (two-orbit), has
+  records: it timed out at 300 s at depth 2 and was split. Its first 18 depth-4 nodes were
+  certified at a mean of 79 s solve per node for two-orbit last layers and 227 s for single ones
+  (buckets H3/two/4/2 and H3/two/4/1 in `estimate.txt`), which is 4–30× the s1/two depth-4 cost.
+  It still has 822 open nodes. Taking about 100 core-s per open node, this root alone would cost
+  about 23 core-h. If the median H3 root were like it, H3 would cost about 2,300 core-h instead of
+  the Knuth-walk median of 566. This is one root, not an estimate, but it is the strongest signal
+  that H3 is the stratum to measure first (§4 step 3). Both waves take roots in name order, which puts the H6 roots first, and wave 2 had not
   reached these at the snapshot.
 
 ## 2. Total cost of the C3 class with the current method
@@ -140,6 +147,8 @@ Model (`scripts/estimate.py`, full description in its docstring):
 
 **Result: about 3,028 core-hours (range 2,008 – 7,515) with the current method.** That is
 1,009 machine-hours of the 4-core VMs used here at 3 jobs per VM (757 at 4 jobs).
+The H3 part (566 core-h mid) comes only from the Knuth walks. The single measured H3 root
+(§1) points to about 2,300 core-h, which would raise the mid total by about 1,700 core-h.
 The range has an unbounded tail from H3. One of the 8 H3 Knuth walks extrapolates to 6.8·10^5 solve
 core-h. If that walk is representative, the total is about 868,980 core-h and the method cannot
 finish H3. The upper end 7,515 uses the second-heaviest H3 walk (1,681) instead.
