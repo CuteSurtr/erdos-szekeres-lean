@@ -4,17 +4,18 @@ from indep import *
 import indep as _I; truth = _I.truth
 m, nsets, seed, mode = int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3]), sys.argv[4]   # mode: geo | sat | satnogon
 k = 7
+KENC = int(mode.split(":")[1]) if mode.startswith("satk") else 7
 rng = random.Random(seed)
-E = C3Enc(m, k)
+E = C3Enc(m, KENC)
 basefile = None
-if mode in ("sat", "satnogon"):
+if mode in ("sat", "satnogon") or mode.startswith("satk"):
     E.build()
     cls = E.clauses
     if mode == "satnogon":
         g = [s for s in E.sections if s[0] == "gon"][0]
         assert g[1] + g[2] == len(cls)
         cls = cls[:g[1]]
-    basefile = f"/opt/audit/ind/base_{m}_{mode}.body"
+    basefile = f"/opt/audit/ind/base_{m}_{mode.replace(':','')}.body"
     with open(basefile, "w") as f:
         for c in cls: f.write(" ".join(map(str, c)) + " 0\n")
     NC = len(cls)
@@ -30,6 +31,9 @@ while stats["sets"] < nsets and tried < 200000:
     inclass = None
     if mode == "sat":
         if has_kgon(S, k): stats["kgon_skip"] += 1; continue
+        inclass = True
+    if mode.startswith("satk"):
+        if maxconv(S) >= KENC: stats["kgon_skip"] += 1; continue
         inclass = True
     stats["sets"] += 1
     found_tree = []

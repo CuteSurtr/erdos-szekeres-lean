@@ -125,3 +125,19 @@ def has_kgon(S, k):
     for Q in itertools.combinations(S, k):
         if len(hull(list(Q))) == k: return True
     return False
+
+def maxconv(S):
+    import functools
+    best = min(3, len(S))
+    for x in S:
+        P = [p for p in S if (p[1], p[0]) > (x[1], x[0])]
+        P.sort(key=functools.cmp_to_key(lambda a, b: -1 if orient(x, a, b) > 0 else 1))
+        t = len(P); f = [[0] * t for _ in range(t)]
+        for j in range(t):
+            for i in range(j):
+                v = 3  # x, P[i], P[j]
+                for h in range(i):
+                    if f[h][i] and orient(P[h], P[i], P[j]) > 0 and f[h][i] + 1 > v: v = f[h][i] + 1
+                f[i][j] = v
+                if orient(P[i], P[j], x) > 0 and v > best: best = v
+    return best
