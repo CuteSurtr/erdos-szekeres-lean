@@ -29,3 +29,19 @@ Zf = 06c1f798c (old 14447d0d5); WAVE1-4 and Mii-S identical between Zf and the b
   V3 records: 73,828 match, 0 mismatch, 0 leaves contradicting their case cube.
 - W34 `children`: `run_w34.py` lines 9, 57, 130, 135: `children` is the march_cu sub-cube list of a
   timed-out cube and the children queued are `cube + x`; same meaning as `subs` of close_march.py.
+
+00:50 UTC (cont.)
+- 172 direct cases: Mii-S/pass2_lrat.jsonl has cake_lpr exactly `s VERIFIED UNSAT` for all 172 (2 more
+  records for non-direct cases have no cake_lpr), cnf_sha256 = cases.jsonl; Haudit/t5_all172.jsonl: 172/172
+  verified with matching hash; the set equals the UNSAT_VERIFIED cases.
+- Lean caseCubes (decoded from Data.lean casePacked) = Mii-S/cases.icnf, per (U, L), in order: 450/450.
+- `gen_trees.py` rerun at Zf into a scratch dir: `V2L/Trees/` (503 files) byte-identical to the committed
+  ones, status.json rows and summary equal.
+- Dir lists per tree case equal status.json. All 468 leaves.jsonl sit at WAVEx/VM/dir (none deeper).
+  The 40 "leaves.icnf only" dirs are all W34 not-started cases with a 0-byte leaves.icnf.
+- WAVE2-4 drivers: 109 close_march.py copies identical, 4 variants (F4, F5, F6, S5); all 113 contain the
+  same leaf-file write line as WAVE1. SKIP records ("closed elsewhere") are never counted closed.
+- Tree leaves sharing a literal with their case cube: 0. So V3's file for a leaf is Lean's
+  `cubeCnf (cubeCnf F c) l` with the leaf units permuted (sorted by |x|), nothing else.
+- V3Z cases_final.jsonl: 278 accepted wave cases carry status "OPEN" (inherited from Mii-S); acceptance
+  is in accepted_final.tsv (278 ACCEPTED, cover VERIFIED).
