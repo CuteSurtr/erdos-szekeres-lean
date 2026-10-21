@@ -4,13 +4,13 @@ Task: `results/AUDIT2/TASK.md` at 852bee7, A = A5, H = 1.75 h. Run 2026-10-21 00
 
 ## Result
 
-I found nothing that breaks the claim or weakens the trust base within this focus. Every leaf, cover and direct case I checked independently came back `s VERIFIED UNSAT` from cake_lpr. Every CNF I built has the same sha256 as the V3 or Mii-S record for it.
+I found nothing that breaks the claim or weakens the trust base within this focus. All 423 sampled leaves, all 140 non-trivial covers and all 172 direct cases came back `s VERIFIED UNSAT` from cake_lpr. Every CNF I built has the same sha256 as the V3 or Mii-S record for it.
 
 | set | count | cake_lpr `s VERIFIED UNSAT` | cnf_sha256 = V3 / Mii-S record |
 |---|---|---|---|
 | main random leaf sample (`sample.jsonl` → `out.jsonl`) | 320 (70 U_L2, 60 U3_L, 50 U_L7, 140 from the other cases; 60 cases) | 320 | 320 |
 | extra leaves (`extra_out.jsonl`): the one leaf with a REJECTED V3 record, plus 10 empty-cube leaves | 11 | 11 | 11 |
-| second sample (`out2.jsonl`): 80 more U_L2/U3_L/U_L7 leaves, plus the 12 slowest leaves by V3 timing | 92 | 91 (+1 see below) | 92 |
+| second sample (`out2.jsonl`): 80 more U_L2/U3_L/U_L7 leaves, plus the 12 slowest leaves by V3 timing | 92 | 92 (1 after a single-job re-check, below) | 92 |
 | all 172 direct cases, F + cube (`direct_out.jsonl`) | 172 | 172 | 172 (vs `Mii-S/cases.jsonl`) |
 | cover CNFs: 20 picked (`covers_out.jsonl`, includes U_L2 with 22,529 leaves, U3_L, U_L7) and **all 140 non-trivial** covers (`covers_all.jsonl`) | 140 | 140 | 140 |
 | sha256 only, **every** manifest leaf (`allsha.log`) | 73,880 | (n/a) | 73,880: every VERIFIED V3 record for the leaf has my sha |
@@ -30,7 +30,7 @@ The leaf check plus the cover check makes the argument whole. Cube ∧ (some lea
 
 ## Findings (none break the claim)
 
-1. **Cosmetic. One leaf could not be finished here.** The leaf is U_L2-5 [2247, 2572, 2872, -3230, -3248, -3265, -3281], idx 59938 (`out2.jsonl`). With 4 jobs running, cake_lpr was killed by the memory cgroup of this sandbox (dmesg: `Memory cgroup out of memory: Killed process (cake_lpr) anon-rss:4197632kB`), so its verdict was empty. A re-check on its own was then killed while the proof was still being written. The CNF sha matches the V3B/B09 VERIFIED record (e46fcb66…). This is a resource limit of my sandbox, not a finding against the claim. The outcome of the final background attempt is recorded in `recheck.txt`.
+1. **Cosmetic (resolved). Out of memory in my run.** The leaf is U_L2-5 [2247, 2572, 2872, -3230, -3248, -3265, -3281], idx 59938. With 4 jobs running, cake_lpr was killed by this sandbox's memory cgroup (dmesg: `Memory cgroup out of memory: Killed process (cake_lpr) anon-rss:4197632kB`), so its verdict was empty. I re-checked it alone (CaDiCaL rc 20, 248 MB proof, `CML_HEAP_SIZE=3000`) and cake_lpr printed `s VERIFIED UNSAT` (`recheck.txt`, appended to `out2.jsonl` with `"recheck": true`). Its CNF sha matches the V3B/B09 record (e46fcb66…). Total: 423 of 423 sampled leaves verified.
 2. **Cosmetic.** One manifest leaf has two records: an empty-verdict REJECTED in `V3A/V07/out.jsonl` and a VERIFIED in `V3B/B04/out.jsonl` (U4_L [-1014, -1040, 1065, -1112, 1134, 1155, -1245]). This is the same out-of-memory pattern. I re-verified it (`extra_out.jsonl`, 172 s solve).
 3. **Cosmetic.** Wave directory names carry shard suffixes (`U_L2.s01`, `U_L2_s3of12`, `U_L4-s1`, `U_L4_shard2of3`, …). The case assignment relies on `case_sha256`, which matched the case for every directory I touched. Given names like `U_L2` and `U_L2-15`, assigning cases by name prefix alone would be unsafe.
 4. **Note.** `v3_jsonl_leaves.py` reports "skipped records 71" for WAVE1. I did not investigate them. They cannot cause a wrongly accepted case, because the covers close over the leaves that were kept.
