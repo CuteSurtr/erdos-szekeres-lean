@@ -75,7 +75,12 @@ def hull_clauses(m, c, ccw, sig_true):
 # c, i.e. the order of the keys (sigma_i, i).  For one orbit {r, r+m, r+2m} that cyclic order is
 # r, r+2m, r+m whatever sigma_r is, so one-orbit layers need no sigma.
 # Name: layers joined by '_', residues of a layer by '-', sigma as suffix 's0'/'s1'.
-#   "0" = H3,  "0-2s1" = H6a2s1,  "0_5" = H3 then L2 = orbit 5,  "0_3s0-7s1" = H3 then L2 = orbits 3, 7.
+# The top layer always carries sigma (label 0 has sigma 0), as legacy_to_layers and tree_children
+# build it:
+#   "0s0" = H3,  "0s0-2s1" = H6a2s1,  "0s0_5" = H3 then L2 = orbit 5,
+#   "0s0_3s0-7s1" = H3 then L2 = orbits 3, 7.
+# (C3-S comments and C3-S/README.md wrote these as "0", "0-2s1", "0_5", "0_3s0-7s1"; those strings
+# are not the tree's names: compose.py never counts them, and "0-2s1" is not even a valid layer.)
 
 
 def parse_layers(name):
@@ -161,13 +166,34 @@ def h3_layer2_kept(m):
     return [o for o in layer2_options(m, [(0, 0)]) if key(o) <= key(mirror_layer(m, o))]
 
 
-def tree_children(m, k, layers, mirror=True):
+# ---------------------------------------------------------------------------------------------
+# Mirror reduction below H6(a, s) (results/C3PLAN/PLAN.md section 3a, Lemma H6M).  OFF by default
+# (mirror_h6=False); no task may use it before results/C3AUDIT2 accepts the lemma.
+#   phi_{a,s}: (r, sigma) -> ((a - r) mod m, sigma xor [r < a] xor [s = 0]), None stays None.
+
+
+def h6_phi(m, a, s, L):
+    return sorted(((a - r) % m, (None if sg is None else sg ^ int(r < a) ^ int(s == 0))) for r, sg in L)
+
+
+def h6_layer2_kept(m, a, s):
+    """layer-2 options below H6(a, s) kept by Lemma H6M: O kept iff key(O) <= key(phi(O))."""
+    key = lambda L: tuple((r, -1 if sg is None else sg) for r, sg in sorted(L))
+    return [o for o in layer2_options(m, [(0, 0), (a, s)]) if key(o) <= key(h6_phi(m, a, s, o))]
+
+
+def tree_children(m, k, layers, mirror=True, mirror_h6=False):
     """children of a node of the layer tree (the shard plan's tree).  Root: the top hull cases.
     Below: every next layer on the unused residues; with mirror=True the children of the H3 node
-    are reduced to h3_layer2_kept (Lemma 5)."""
+    are reduced to h3_layer2_kept (Lemma 5); with mirror_h6=True (default off) the children of
+    each H6(a, s) node are reduced to h6_layer2_kept (PLAN.md 3a)."""
     if not layers:
         return [legacy_to_layers(c) for c in cases(m, k)]
     if mirror and layers == [[(0, 0)]]:
         return [layers + [o] for o in h3_layer2_kept(m)]
+    if (mirror_h6 and len(layers) == 1 and len(layers[0]) == 2 and layers[0][0] == (0, 0)
+            and layers == legacy_to_layers(("H6", layers[0][1][0], layers[0][1][1]))
+            and 1 <= layers[0][1][0] <= m // 2 and layers[0][1][1] in (0, 1)):
+        return [layers + [o] for o in h6_layer2_kept(m, layers[0][1][0], layers[0][1][1])]
     used = [r for L in layers for r, _ in L]
     return [layers + [o] for o in layer2_options(m, [(r, None) for r in used])]

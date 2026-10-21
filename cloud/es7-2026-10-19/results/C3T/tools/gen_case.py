@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """C3-S case CNF: the C3a (default) or C3b encoding plus the hull-case clauses of hullcase.py.
-usage: gen_case.py m k CASE -o out.cnf [--enc c3a|c3b] [--gon chain|conv]   (CASE: H3, H6a<a>s<s>, a layer name such as 0_3s0-7s1, or none)"""
+usage: gen_case.py m k CASE -o out.cnf [--enc c3a|c3b] [--gon chain|conv]   (CASE: H3, H6a<a>s<s>, a layer name such as 0s0_3s0-7s1, or none)"""
 import argparse
 import json
 import os

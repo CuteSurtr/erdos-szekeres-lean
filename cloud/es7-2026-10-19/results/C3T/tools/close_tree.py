@@ -6,6 +6,10 @@ that is not closed within its cap is replaced by its children (hullcase.tree_chi
 reduction on).  Every record goes to OUT (jsonl, same format as close_node.py, plus "split":
 true for nodes that were split).  Restartable: certified nodes and split nodes in OUT are reused.
 A SAT answer stops the run (candidate model, saved under MODELDIR).
+C3T (FIX1) additions, all other fields unchanged: every solve record also has "cadical_args" (the
+full CaDiCaL argument list without the CNF and proof paths) and "proof_sha256" (sha256 of the LRAT
+file that both checkers read, computed before they run and before the proof is deleted; null when
+CaDiCaL did not answer UNSATISFIABLE).
 usage: close_tree.py BASE OUT.jsonl ROOTNODE [--jobs J] [--caps 300,300,600] [--hours H] [--cadopts=--sat]
        close_tree.py BASE OUT.jsonl SHARD --shard I --nshards N ...
   SHARD mode: the roots are the depth-2 nodes of the layer tree (tree_children twice, H3 mirror
@@ -53,12 +57,16 @@ def solve(args):
             g.write(b)
         g.write("".join(f"{u} 0\n" for u in us))
     rec = {"node": node, "units": len(us), "cnf_sha256": sha(cnf), "cap": cap, "cadical_opts": opts}
+    cargs = ["-q", "-t", str(cap)] + opts + ["--lrat", "--binary=false"]
+    rec["cadical_args"] = cargs
     t = time.time()
-    r = subprocess.run(["cadical", "-q", "-t", str(cap)] + opts + ["--lrat", "--binary=false", cnf, prf], capture_output=True, text=True).stdout
+    r = subprocess.run(["cadical"] + cargs + [cnf, prf], capture_output=True, text=True).stdout
     rec["status"] = next((l[2:] for l in r.splitlines() if l.startswith("s ")), "UNKNOWN")
     rec["solve_s"] = round(time.time() - t, 1)
+    rec["proof_sha256"] = None
     if rec["status"] == "UNSATISFIABLE":
         rec["proof_bytes"] = os.path.getsize(prf)
+        rec["proof_sha256"] = sha(prf)
         t = time.time()
         a, b, ok = dual(cnf, prf)
         rec.update({"lrat_check": a, "cake_lpr": b, "certified": ok, "check_s": round(time.time() - t, 1)})
