@@ -73,3 +73,17 @@
 {"node": "0s0-3s1_4", "cube": {"1": 0, "2": 0, "5": 1, "6": 0, "7": 1, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 219.9, "certified": true}
 === 0s0-3s1_4 L=K6 end 2026-10-21T07:22:43Z killed=1
 === 0s0-4s1_5 L=K3 start 2026-10-21T07:22:43Z deadline 07:56:00Z
+{"node": "0s0-4s1_5", "cube": {"1": 0, "2": 0, "3": 0}, "status": "UNKNOWN", "solve_s": 300.5, "certified": null}
+{"node": "0s0-4s1_5", "cube": {"1": 0, "2": 0, "3": 1}, "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-4s1_5", "cube": {"1": 0, "2": 1, "3": 0}, "status": "UNKNOWN", "solve_s": 300.4, "certified": null}
+{"node": "0s0-4s1_5", "cube": {"1": 0, "2": 1, "3": 1}, "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-4s1_5", "cube": {"1": 1, "2": 0, "3": 0}, "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-4s1_5", "cube": {"1": 1, "2": 0, "3": 1}, "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-4s1_5", "cube": {"1": 1, "2": 1, "3": 0}, "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-4s1_5", "cube": {"1": 1, "2": 1, "3": 1}, "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+=== 0s0-4s1_5 L=K3 end 2026-10-21T07:37:49Z killed=0
+=== 0s0-4s1_5 L=K6 start 2026-10-21T07:37:49Z deadline 07:56:00Z
+{"node": "0s0-4s1_5", "bits6": [1, 2, 3, 6, 7, 8], "open_k3": [[0, 0, 0], [0, 0, 1], [0, 1, 0], [0, 1, 1], [1, 0, 0], [1, 0, 1], [1, 1, 0], [1, 1, 1]]}
+{"node": "0s0-4s1_5", "cube": {"1": 0, "2": 0, "3": 0, "6": 0, "7": 0, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 196.3, "certified": true}
+{"node": "0s0-4s1_5", "cube": {"1": 0, "2": 0, "3": 0, "6": 0, "7": 0, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 199.1, "certified": true}
+{"node": "0s0-4s1_5", "cube": {"1": 0, "2": 0, "3": 0, "6": 0, "7": 1, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 176.2, "certified": true}
