@@ -1,1 +1,25 @@
 === ROOT 0s0-2s0_3s0-10s0 start 04:42:13 hours 0.5
+{"node": "0s0-2s0_3s0-10s0", "status": "UNSATISFIABLE", "solve_s": 81.5, "certified": true}
+{"root": "0s0-2s0_3s0-10s0", "open_frontier": 0}
+=== ROOT 0s0-2s0_3s0-10s0 end 04:44:13
+=== ROOT 0s0-2s0_5s0-7s1 start 04:44:13 hours 0.5
+{"node": "0s0-2s0_5s0-7s1", "status": "UNSATISFIABLE", "solve_s": 90.6, "certified": true}
+{"root": "0s0-2s0_5s0-7s1", "open_frontier": 0}
+=== ROOT 0s0-2s0_5s0-7s1 end 04:46:21
+=== ROOT 0s0-4s0_6s1-7s1 start 04:46:21 hours 0.5
+{"node": "0s0-4s0_6s1-7s1", "status": "UNSATISFIABLE", "solve_s": 12.3, "certified": true}
+{"root": "0s0-4s0_6s1-7s1", "open_frontier": 0}
+=== ROOT 0s0-4s0_6s1-7s1 end 04:46:55
+=== ROOT 0s0-5s0_1s1-9s0 start 04:46:55 hours 0.5
+{"node": "0s0-5s0_1s1-9s0", "status": "UNSATISFIABLE", "solve_s": 19.7, "certified": true}
+{"root": "0s0-5s0_1s1-9s0", "open_frontier": 0}
+=== ROOT 0s0-5s0_1s1-9s0 end 04:47:41
+=== ROOT 0s0-5s0_6s0-10s1 start 04:47:41 hours 0.5
+{"node": "0s0-5s0_6s0-10s1", "status": "UNSATISFIABLE", "solve_s": 128.9, "certified": true}
+{"root": "0s0-5s0_6s0-10s1", "open_frontier": 0}
+=== ROOT 0s0-5s0_6s0-10s1 end 04:50:24
+=== ROOT 0s0-3s0_4 start 04:50:24 hours 0.5
+{"node": "0s0-3s0_4_1", "status": "UNSATISFIABLE", "solve_s": 115.6, "certified": true}
+{"node": "0s0-3s0_4_2", "status": "UNSATISFIABLE", "solve_s": 137.3, "certified": true}
+{"node": "0s0-3s0_4_5", "status": "UNSATISFIABLE", "solve_s": 106.8, "certified": true}
+{"node": "0s0-3s0_4_6", "status": "UNSATISFIABLE", "solve_s": 105.1, "certified": true}
