@@ -42,7 +42,7 @@ Solve and check times are summed per node, not wall-clock (3 jobs on 4 cores).
 ## The 10-minute slice is not enforced inside a batch
 
 `close_tree.py` checks `--hours` only between batches: it submits the whole frontier at once and waits for all of
-it. Root 7's depth-3 batch (553 nodes) started at about 00:50 and was still running at END, so this root used
+it. Root 7's batch of 546 nodes (84 at depth 3, 462 at depth 4) started at about 00:50 and was still running at END, so this root used
 57 minutes instead of 10, and roots 8–34 were never started. At 01:37:21 (40 s after END) I stopped
 `close_tree.py` by hand (the runner then exited) and killed the 3 orphaned CaDiCaL runs. Every finished
 node had already been written to `out.jsonl`; only the 3 running nodes were lost, and they are open in
