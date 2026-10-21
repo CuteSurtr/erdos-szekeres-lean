@@ -37,7 +37,10 @@ sha256 `9071a631…`, m=4 k=7 `p cnf 6888 53677` sha256 `4c67e734…` (full valu
 Node CNFs (base + `layerUnits`), sha256 vs column `cnf_sha256` of `C3-S/manifest_depth2.tsv`:
 `logs/compare_nodes.log`: 40 nodes (all 11 depth-1 nodes and 29 depth-2 nodes, both one- and
 two-orbit second layers), 40 MATCH, unit counts equal to the manifest's.
-`logs/compare_all_nodes.log`: ALLNODES_RESULT
+`logs/compare_all_nodes.log` (`scripts/compare_all_nodes.sh`): all 1641 nodes of the manifest
+(11 at depth 1, 1630 at depth 2), 1641 MATCH, 0 MISMATCH. (The running script's log was replaced
+by a `git pull --rebase` mid-run; it was recovered from the process's open file descriptor, and
+the one node whose line was cut off at the end, `0s0_5s1-6s0`, was re-run separately: MATCH.)
 
 ## Next
 

@@ -60,7 +60,8 @@ the header count increased.
 * Done: `baseClauses` / `c3_dimacs base m k` byte-identical to `gen_case.py m k none` for
   m = 2..5 × k = 5..8, (6,7), (7,7), (11,7) (`logs/compare_base.log`).
 * Done: `c3_dimacs node 11 7 DIR NAME…` matches `cnf_sha256` of `C3-S/manifest_depth2.tsv` for
-  the nodes in `logs/compare_nodes.log`.
+  all 1641 nodes (`logs/compare_nodes.log`: 40 nodes with unit counts;
+  `logs/compare_all_nodes.log`: every node).
 
 ## Next: the soundness statement
 
