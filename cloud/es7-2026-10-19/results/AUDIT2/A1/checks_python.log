@@ -1,0 +1,14 @@
+Lean hullLeaves decoded: 1198
+hull_leaves.icnf sha256 cc11270a57ebe85ad1d5c83b15da0a3439521cc7ebd50432f16c223a1b2478b6
+icnf cubes 1198 equal to Lean: True
+leaves with a verified record of the same index and cube: 1198 missing: []
+residues per file: {'V1-0/leaves_cake.jsonl': [0], 'V1-1/leaves_cake.jsonl': [1], 'V1-2/leaves_cake.jsonl': [2], 'V1-3/leaves_cake.jsonl': [3], 'V1-L/backup_v1-1/leaves_cake.snapshot.jsonl': [1]}
+Data.lean: 450 specs/cubes equal Mii-S cases.icnf and cases.jsonl order; specs distinct
+Lean tree leaves total 74000 cases with .leaf 310
+F sha256 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d bytes 9086471
+header [b'p', b'cnf', b'47002', b'515121']
+F lines 515121 lines with a misplaced 0 token: 0 max |lit| 47002
+case CNF (Lean order) sha256 = Mii-S cases.jsonl cnf_sha256 for 450 of 450
+wave tree leaves whose rebuilt CNF sha256 equals a verified record sha256: 73828 not: 0
+Mii-S/cover_lrat.jsonl verified obligations 122 sha256 equal to Lean-rebuilt: 122 of 122 missing/mismatch: []
+Haudit/t3_cover_lrat.jsonl verified obligations 122 sha256 equal to Lean-rebuilt: 122 of 122 missing/mismatch: []
