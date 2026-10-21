@@ -10,3 +10,17 @@
 === 0s0-1s1_4 L=K3 end 2026-10-21T05:57:46Z killed=0
 === 0s0-1s1_4 L=K6 start 2026-10-21T05:57:46Z deadline 06:16:00Z
 {"node": "0s0-1s1_4", "bits6": [2, 3, 5, 6, 7, 8], "open_k3": [[0, 0, 0], [0, 0, 1], [0, 1, 0], [0, 1, 1], [1, 0, 0], [1, 0, 1], [1, 1, 0], [1, 1, 1]]}
+{"node": "0s0-1s1_4", "cube": {"2": 0, "3": 0, "5": 0, "6": 0, "7": 0, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 181.5, "certified": true}
+{"node": "0s0-1s1_4", "cube": {"2": 0, "3": 0, "5": 0, "6": 0, "7": 0, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 194.4, "certified": true}
+{"node": "0s0-1s1_4", "cube": {"2": 0, "3": 0, "5": 0, "6": 0, "7": 1, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 215.7, "certified": true}
+{"node": "0s0-1s1_4", "cube": {"2": 0, "3": 0, "5": 0, "6": 0, "7": 1, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 158.0, "certified": true}
+{"node": "0s0-1s1_4", "cube": {"2": 0, "3": 0, "5": 0, "6": 1, "7": 0, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 199.6, "certified": true}
+{"node": "0s0-1s1_4", "cube": {"2": 0, "3": 0, "5": 0, "6": 1, "7": 0, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 189.7, "certified": true}
+{"node": "0s0-1s1_4", "cube": {"2": 0, "3": 0, "5": 0, "6": 1, "7": 1, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 202.9, "certified": true}
+{"node": "0s0-1s1_4", "cube": {"2": 0, "3": 0, "5": 0, "6": 1, "7": 1, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 180.8, "certified": true}
+{"node": "0s0-1s1_4", "cube": {"2": 0, "3": 0, "5": 1, "6": 0, "7": 0, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 200.5, "certified": true}
+{"node": "0s0-1s1_4", "cube": {"2": 0, "3": 0, "5": 1, "6": 0, "7": 0, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 142.9, "certified": true}
+{"node": "0s0-1s1_4", "cube": {"2": 0, "3": 0, "5": 1, "6": 0, "7": 1, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 248.2, "certified": true}
+{"node": "0s0-1s1_4", "cube": {"2": 0, "3": 0, "5": 1, "6": 0, "7": 1, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 162.7, "certified": true}
+=== 0s0-1s1_4 L=K6 end 2026-10-21T06:16:03Z killed=1
+=== 0s0-2s1_3 L=K3 start 2026-10-21T06:16:03Z deadline 06:49:22Z
