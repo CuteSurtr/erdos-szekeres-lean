@@ -123,6 +123,13 @@ it accepted both. C3U hit the same failure in its test 4. The tools handle it sa
     line that is not exact; a cube node's layer split record missing.
   - Covered: the original records; a correct implied split from sigma_cubes records.
 - **Childless input** (finding 1): the one case where C3U compose and my fixed composer differ.
+- **`tools/mybrute.py`:** a brute-force cover check independent of every composer and of the split records. Every
+  maximal path of my tree, with every σ vector consistent with it, must be matched by a certified leaf
+  (`logs/mybrute.txt`).
+  - 0 holes on t1, t2, t3 and on the 4 regenerated C3U runs.
+  - 1 hole on the childless input (`0s0_1s0-2s0_3_4`, 3 of its 4 σ vectors unmatched). This confirms that C3U's
+    "covered" there is wrong.
+- **forge.py also passes 18/18** on C3U's m = 7 c100 run (1,104 certified, 69 cube layer splits).
 
 ## Comparison on the repository's records (step 2)
 
@@ -134,7 +141,7 @@ All outputs are in `logs/m11_compare.txt`. Base sha `bf0e502e…`, sha check on,
 | 116 wave files (all `out.jsonl` of C3WAVE1, C3WAVE2, C3S0, C3W3 + 5 recheck files + C04 `out_reconstructed`; not `summary*`, not `removed_records`) | 48,614 records, 48,439 nodes, sha-checked, not covered, frontier 11,492 | same | same |
 | waves + C3SIG | 48,774 / 48,599, 20 σ-splits used, frontier 11,492 | same | – |
 | C3U `tests/logs/m11/tree_*.jsonl` | 16 cubes, 2 σ-splits used, frontier 161 | same | – |
-| C3U small runs regenerated with C3U's `run_small.sh sig` (C3U tools) | SIG_ROWS | | |
+| C3U small runs regenerated with C3U's `run_small.sh sig` (C3U tools at 95cafa93, its conflict limits; m = 6 K=2, m = 7 K=2, m = 7 K=3, m = 7 c100 K=2) | covered; 58 / 126 / 218 / 1,104 certified; 8 / 6 / 3 / 15 σ-splits used | same | – |
 
 The frontier of waves + C3SIG equals that of the waves alone, because the waves had already layer-closed the 20 pilot
 nodes.
