@@ -6,6 +6,8 @@
 // c7 = 0 writes SNAP further snapshots (every GAP accepted moves), then restart.
 // With STARTFILE (one set of 32 or 33 points per line, "x,y" tokens; a random point of a
 // 33-point set is dropped) every run starts from a random set of the file at lower temperature.
+// Moves: Gaussian with log-uniform scale relative to the nearest-neighbour distance (70%), or a
+// contraction towards a random other point by a log-uniform fraction (30%).
 // Polish: a run whose best is <= 8 restarts up to 4 times from its best set at low temperature.
 // Usage: anneal32 SEED SECONDS OUTFILE [STARTFILE]   (appends "seed run snap c7 c6 | x,y ..." lines)
 #include <cstdio>
@@ -96,8 +98,12 @@ int main(int argc,char**argv){
         int i=(np>0 && (rng()&1)) ? part[rng()%np] : (int)(rng()%N); P q=pts[i];
         // step size: log-uniform relative to distance to nearest other point
         ll dmin=-1; for(int j=0;j<N;j++) if(j!=i){ ll dx=pts[j].x-q.x, dy=pts[j].y-q.y; ll d=std::max(std::llabs(dx),std::llabs(dy)); if(dmin<0||d<dmin) dmin=d; }
-        double s=std::max(1.0,(double)dmin*std::pow(2.0,4-12*U(rng)));
-        q.x+=(ll)llround(s*G(rng)); q.y+=(ll)llround(s*G(rng));
+        if(U(rng)<0.3){ // contraction move: towards a random other point j
+          int j=rng()%N; if(j==i) continue; double t=std::pow(2.0,-10*U(rng))*0.9;
+          q.x+=(ll)llround(t*(pts[j].x-q.x)+G(rng)); q.y+=(ll)llround(t*(pts[j].y-q.y)+G(rng));
+        } else {
+          double s=std::max(1.0,(double)dmin*std::pow(2.0,4-12*U(rng)));
+          q.x+=(ll)llround(s*G(rng)); q.y+=(ll)llround(s*G(rng)); }
         if(!okPoint(pts,i,q)) continue;
         P old=pts[i]; pts[i]=q; ll n6, n7=count7(pts,&n6);
         if(n7<=c7 || U(rng)<std::exp(-(double)(n7-c7)/T)){ c7=n7; c6=n6; if(c7<best){ best=c7; memcpy(bestP,pts,sizeof pts);} }
