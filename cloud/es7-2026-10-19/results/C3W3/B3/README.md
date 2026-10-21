@@ -10,7 +10,7 @@ Task: `results/C3W3/TASK.md` at 640a56c2, with V = B3, LIST = B_h3pilot.tsv, j =
 - C3-S tools: worktree of 132398c at /opt/c3s, unmodified.
 - CaDiCaL 3.0.1 at c6073042; cake_lpr a36874a8 (its example gives `s VERIFIED UNSAT`); lrat-check 2e3b2dc with the E2 patch.
   Sanity check: `3 0 0` is rejected by both checkers and `3 0 1 2 0` is accepted by both (`tools.txt`).
-- Base CNF `gen_case.py 11 7 none`: `p cnf 168399 4154921`, sha256 `bf0e502e…6cda6dd6da`, which matches.
+- Base CNF `gen_case.py 11 7 none`: `p cnf 168399 4154921`, sha256 `bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da`, which matches.
 - Roots: the rows of B_h3pilot.tsv with row ≡ 3 (mod 10): rows 3, 13 and 23 (`roots.tsv`). All three are `untouched`, so I seeded **0 records**.
   `out.jsonl` therefore holds only new records (255 lines).
 - One lane (`lane0.sh`): `close_tree.py … --jobs 3 --caps 300,300,600 --cadopts=--sat --split-singles --hours S`, with S = min(0.9, hours left).
