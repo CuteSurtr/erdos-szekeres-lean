@@ -7,7 +7,8 @@
 // lbs2: when the count is small, half the moves pick a point lying in a convex
 // 7-gon (participation = c7 - c7 without the point); runs ending with best<=3
 // get a low-temperature polish phase from their best set.
-// Usage: lbs2 SEED SECONDS OUTPREFIX
+// Usage: lbs2 SEED SECONDS OUTPREFIX [STARTFILE]  (with STARTFILE every run
+// restarts from that set at low temperature: polish mode)
 #include <cstdio>
 #include <cstdlib>
 #include <cstdint>
@@ -62,14 +63,18 @@ int main(int argc,char**argv){
   auto el=[&]{ return std::chrono::duration<double>(std::chrono::steady_clock::now()-t0).count(); };
   char fn[512]; snprintf(fn,512,"%s.runs.txt",pre); FILE* runs=fopen(fn,"a");
   ll globalBest=-1; int run=0;
-  if(argc>4){ P t[N]; ll c6; for(int i=0;i<N;i++) t[i]={ (ll)(i*i*7919%1000003), (ll)(i*104729%999983)}; 
+  if(argc>4 && !strcmp(argv[4],"bench")){ P t[N]; ll c6; for(int i=0;i<N;i++) t[i]={ (ll)(i*i*7919%1000003), (ll)(i*104729%999983)}; 
     double s=el(); int it=0; while(el()-s<2){ countConvex(t,&c6); it++; } printf("evals/s %.1f\n",it/2.0); return 0; }
   while(el()<secs){
     run++;
     // random start
     ll R = 1LL<<(14+rng()%14); int dist=rng()%3;
     P pts[N];
-    for(int i=0;i<N;i++){ P q; do{
+    P start[N]; bool polish = argc>4;
+    if(polish){ FILE* sf=fopen(argv[4],"r"); char ln[256]; int k=0; ll mx=0;
+      while(k<N && fgets(ln,256,sf)) if(ln[0]!='#' && sscanf(ln,"%lld %lld",&start[k].x,&start[k].y)==2){ mx=std::max(mx,std::max(start[k].x,start[k].y)); k++; }
+      fclose(sf); memcpy(pts,start,sizeof(pts)); R=mx; }
+    else for(int i=0;i<N;i++){ P q; do{
         if(dist==0){ q={(ll)(U(rng)*R),(ll)(U(rng)*R)}; }
         else if(dist==1){ double r=sqrt(U(rng))*R/2, th=U(rng)*2*M_PI; q={(ll)(R/2+r*cos(th)),(ll)(R/2+r*sin(th))}; }
         else { q={(ll)(R/2+G(rng)*R/8),(ll)(R/2+G(rng)*R/8)}; }
@@ -78,6 +83,7 @@ int main(int argc,char**argv){
     ll c6; ll c7=countConvex(pts,&c6);
     double lam = (rng()%3==0)?0.0:((rng()%2)?0.001:0.01);
     double T0 = pow(10, U(rng)*2.5), T1 = 0.05+U(rng)*0.3;
+    if(polish){ T0 = pow(10, -0.5+U(rng)*1.0); T1=0.1; if(lam==0) lam=0.001; }
     long steps = (long)(pow(10, 4.3+U(rng)*1.4));
     double cur = c7 + lam*c6; ll best7=c7; P bestP[N]; memcpy(bestP,pts,sizeof(pts));
     int hot[N]; int nh=-1; // points in some convex 7-gon, valid when nh>=0
