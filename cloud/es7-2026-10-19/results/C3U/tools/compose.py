@@ -20,7 +20,24 @@ C3T (FIX1) changes:
   nodes, carrying a proof_sha256) and "sha_checked".
 - --mirror-h6 (default off): children of H6(a, s) nodes reduced by Lemma H6M (hullcase.py,
   results/C3PLAN/PLAN.md 3a).  Off, the tree is exactly that of C3-S compose.py.  No task may use
-  it before results/C3AUDIT2 accepts the lemma."""
+  it before results/C3AUDIT2 accepts the lemma.
+
+C3U changes (results/C3U/TASK.md rule 5, results/C3U/sigma_split.md):
+- Node names may be sigma-cube names "L__C" (hullcase.parse_node); a certified record's CNF sha256
+  is re-derived from its name (layer units of L, then the units of C).
+- Records of results/C3PLAN/scripts/sigma_cubes.py ("node" = parent N, "cube" = {r: v}) are read as
+  records of the node N__C, C = the cube sorted by residue.
+- A node is covered if it is certified, or if one of its splits has all its children covered:
+  * sigma split: a split record with "sigma_bits", or, for a node N whose 2^K sigma_cubes.py cubes
+    on the same K residues are all certified, an implied one.  The bits must be exactly the K
+    smallest free residues of the node (hullcase.free_residues) and the node must have at least 2
+    layers; a split record that fails this makes the script exit 1 (an implied one is just not
+    used).  Children: all 2^K cube nodes.
+  * layer split: as in C3T for plain layer nodes (always available, explored below nodes that
+    have a certified or split descendant); for a cube node L__C only when it has a layer split
+    record, with children L'__C for L' in tree_children(L) not contradicting C
+    (hullcase.cube_layer_children).
+- New output fields: "certified_cube_nodes", "sigma_splits_used"."""
 import hashlib
 import json
 import os
@@ -31,6 +48,7 @@ sys.path.insert(0, os.path.join(HERE, "..", "..", "C3a"))
 sys.path.insert(0, HERE)
 from c3cnf import C3Enc  # noqa: E402
 from hullcase import tree_children, layer_clauses, layers_name, parse_layers  # noqa: E402
+from hullcase import cube_layer_children, free_residues, node_name, node_units, parse_node, sigma_children  # noqa: E402
 
 M, K = 11, 7
 BASE_SHA = "bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da"
@@ -93,14 +111,55 @@ def main():
         fail(f"BASE {base} has sha256 {bs}, not {BASE_SHA}")
     cert = {}
     allcert = []
+    ssplit = {}  # node -> list of (sigma_bits, where): sigma split records
+    lsplit = set()  # cube nodes with a layer split record
+    cubes = {}  # sigma_cubes.py records: (parent, residues) -> set of certified cube names
+
+    def canon(f, i, nm):
+        try:
+            return node_name(*parse_node(nm))
+        except ValueError as e:
+            fail(f"{f} line {i}: bad node name: {e}")
+
     for f in files:
         for i, l in enumerate(open(f)):
             r = json.loads(l)
             if "base_sha256" in r and r["base_sha256"] != BASE_SHA:
                 fail(f"{f} line {i + 1}: base_sha256 {r['base_sha256']} is not {BASE_SHA}")
+            if "node" not in r:
+                continue  # e.g. sigma_cubes runner "meta" records
+            if "cube" in r:
+                parent = canon(f, i + 1, r["node"])
+                C = sorted((int(x), v) for x, v in r["cube"].items())
+                if parse_node(parent)[1] or not C or any(v not in (0, 1) for _, v in C):
+                    fail(f"{f} line {i + 1}: bad sigma_cubes record")
+                name = node_name(parse_node(parent)[0], C)
+            else:
+                name = canon(f, i + 1, r["node"])
+            if r.get("split") and "sigma_bits" in r:
+                ssplit.setdefault(name, []).append((r["sigma_bits"], f"{f} line {i + 1}"))
+            elif r.get("split") and parse_node(name)[1]:
+                lsplit.add(name)
             if r.get("certified") and r.get("lrat_check") == "c VERIFIED" and r.get("cake_lpr") == "s VERIFIED UNSAT":
-                cert[layers_name(parse_layers(r["node"]))] = r
-                allcert.append((f, i + 1, r))
+                cert[name] = r
+                allcert.append((f, i + 1, r, name))
+                if "cube" in r:
+                    cubes.setdefault((parent, tuple(sorted(int(x) for x in r["cube"]))), set()).add(name)
+    # sigma split records must name the K smallest free residues of a node with >= 2 layers
+    for name, L in ssplit.items():
+        lay, C = parse_node(name)
+        for bits, where in L:
+            nb = len(bits) if isinstance(bits, list) else 0
+            if nb == 0 or len(lay) < 2 or bits != free_residues(M, lay, C)[:nb] or len(free_residues(M, lay, C)) < nb:
+                fail(f"{where}: node {name}: sigma_bits {bits} are not the {nb} smallest free residues "
+                     f"{free_residues(M, lay, C)[:nb]} of a node with >= 2 layers")
+    # implied sigma splits: all 2^K sigma_cubes.py cubes of a node on its K smallest free residues certified
+    for (parent, res), got in cubes.items():
+        lay, C = parse_node(parent)
+        nb = len(res)
+        if len(lay) >= 2 and list(res) == free_residues(M, lay, C)[:nb] and len(free_residues(M, lay, C)) >= nb:
+            if got == {node_name(*c) for c in sigma_children(M, lay, C, nb)[1]}:
+                ssplit.setdefault(parent, []).append((list(res), "implied by sigma_cubes records"))
     if "--no-sha" not in sys.argv:
         E = C3Enc(M, K)
         with open(base, "rb") as f:
@@ -109,10 +168,9 @@ def main():
         if header[:2] != ["p", "cnf"] or len(header) != 4:
             fail("BASE header is not 'p cnf V C'")
         shas = {}
-        for f, i, r in allcert:
-            name = layers_name(parse_layers(r["node"]))
+        for f, i, r, name in allcert:
             if name not in shas:
-                us = [c[0] for c in layer_clauses(M, parse_layers(name), E.ccw, E.sig)]
+                us = node_units(M, name, E.ccw, E.sig)
                 shas[name] = node_sha_cached(body, header, us)
             if shas[name] != r.get("cnf_sha256"):
                 fail(f"{f} line {i}: node {name}: cnf_sha256 {r.get('cnf_sha256')} is not the re-derived {shas[name]}")
@@ -133,31 +191,62 @@ def main():
         return ok
 
     # only expand below nodes that have a certified descendant, to keep the report small
+    # (C3U: also the layer prefixes of cube nodes, including L itself, and of sigma-split nodes)
     prefixes = set()
     for name in cert:
-        L = parse_layers(name)
-        for j in range(1, len(L)):
+        L, C = parse_node(name)
+        for j in range(1, len(L) + (1 if C else 0)):
             prefixes.add(layers_name(L[:j]))
+    for name in list(ssplit) + list(lsplit):
+        L = parse_node(name)[0]
+        for j in range(1, len(L) + 1):
+            prefixes.add(layers_name(L[:j]))
+    sig_used = set()
 
-    def covered2(layers):
-        name = layers_name(layers) if layers else "ROOT"
+    def covered2(layers, C=()):
+        C = list(C)
+        name = (node_name(layers, C) if layers else "ROOT")
+        if name in memo:
+            return memo[name]
+        memo[name] = False  # no cycles: every split adds a layer or a sigma bit
         if name in cert:
+            memo[name] = True
             return True
+        for bits, _ in ssplit.get(name, []):
+            # sigma split (checked above: bits = the K smallest free residues): all 2^K cubes
+            res = True
+            for cl, cc in sigma_children(M, layers, C, len(bits))[1]:
+                res = covered2(cl, cc) and res
+            if res:
+                sig_used.add(name)
+                memo[name] = True
+                return True
+        if C:
+            if name not in lsplit:
+                missing.append(name)
+                return False
+            res = True
+            for cl, cc in cube_layer_children(M, K, layers, C, mirror=True, mirror_h6=MIRROR_H6):
+                res = covered2(cl, cc) and res
+            memo[name] = res
+            return res
         if layers and name not in prefixes:
             missing.append(name)
             return False
         ok = True
         for c in children(layers):
             ok = covered2(c) and ok
+        memo[name] = ok
         return ok
 
     ok = covered2([])
     print(json.dumps({"certified_nodes": len(cert), "class_covered": ok, "uncovered_frontier_nodes": len(missing),
                       "uncovered_sample": missing[:10],
                       "certified_records": len(allcert),
-                      "certified_with_proof_sha256": {"records": sum(1 for _, _, r in allcert if r.get("proof_sha256")),
+                      "certified_with_proof_sha256": {"records": sum(1 for _, _, r, _ in allcert if r.get("proof_sha256")),
                                                       "nodes": sum(1 for r in cert.values() if r.get("proof_sha256"))},
-                      "sha_checked": "--no-sha" not in sys.argv, "mirror_h6": MIRROR_H6}))
+                      "sha_checked": "--no-sha" not in sys.argv, "mirror_h6": MIRROR_H6,
+                      "certified_cube_nodes": sum(1 for n in cert if "__" in n), "sigma_splits_used": len(sig_used)}))
 
 
 if __name__ == "__main__":

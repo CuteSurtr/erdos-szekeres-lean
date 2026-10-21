@@ -197,3 +197,68 @@ def tree_children(m, k, layers, mirror=True, mirror_h6=False):
         return [layers + [o] for o in h6_layer2_kept(m, layers[0][1][0], layers[0][1][1])]
     used = [r for L in layers for r, _ in L]
     return [layers + [o] for o in layer2_options(m, [(r, None) for r in used])]
+
+
+# ---------------------------------------------------------------------------------------------
+# C3U: sigma-cube nodes (results/C3U/TASK.md, results/C3U/sigma_split.md).  A node name is a layer
+# name L or "L__C", C = fixed sigma bits "r s v" (v in {0, 1}) joined by '-', sorted by residue,
+# e.g. "0s0-1s1_2s0-9s0__3s0-4s0-5s1".  CNF of L__C = CNF of L, then one unit per bit of C in the
+# order of C (sigma_r if v = 1, -sigma_r if v = 0), as results/C3PLAN/scripts/sigma_cubes.py.
+
+
+def parse_node(name):
+    """name -> (layers, C) with C a list of (r, v); C = [] for a plain layer name."""
+    if "__" not in name:
+        return parse_layers(name), []
+    lay, cub = name.split("__")
+    C = []
+    for tok in cub.split("-"):
+        r, v = tok.split("s")
+        if not (r.isdigit() and v in ("0", "1")):
+            raise ValueError(f"bad sigma bit {tok!r} in {name!r}")
+        C.append((int(r), int(v)))
+    if not C or len({r for r, _ in C}) != len(C):
+        raise ValueError(f"bad cube in {name!r}")
+    return parse_layers(lay), C
+
+
+def node_name(layers, C):
+    return layers_name(layers) + ("__" + "-".join(f"{r}s{v}" for r, v in C) if C else "")
+
+
+def free_residues(m, layers, C):
+    """r in 1..m-1, in no layer of L and not in C, ascending."""
+    used = {r for L in layers for r, _ in L} | {r for r, _ in C}
+    return [r for r in range(1, m) if r not in used]
+
+
+def cube_units(C, sig_true):
+    return [sig_true(r) if v else -sig_true(r) for r, v in C]
+
+
+def node_units(m, name, ccw, sig_true):
+    layers, C = parse_node(name)
+    return [c[0] for c in layer_clauses(m, layers, ccw, sig_true)] + cube_units(C, sig_true)
+
+
+def sigma_children(m, layers, C, K):
+    """the K smallest free residues and the 2^K cube children (layers, C') of node (layers, C),
+    C' = C plus those residues with every assignment, sorted by residue."""
+    bits = free_residues(m, layers, C)[:K]
+    out = []
+    for i in range(2 ** K):
+        vals = [(i >> (K - 1 - j)) & 1 for j in range(K)]
+        out.append((layers, sorted(C + list(zip(bits, vals)))))
+    return bits, out
+
+
+def conflicts(layer, C):
+    """True iff the layer gives a residue of C an explicit sigma different from C's value."""
+    cv = dict(C)
+    return any(s is not None and r in cv and cv[r] != s for r, s in layer)
+
+
+def cube_layer_children(m, k, layers, C, mirror=True, mirror_h6=False):
+    """layer split of node (layers, C): (L', C) for L' in tree_children(L) whose newest layer does
+    not conflict with C (rule 3).  For C = [] this is tree_children."""
+    return [(c, C) for c in tree_children(m, k, layers, mirror=mirror, mirror_h6=mirror_h6) if not conflicts(c[-1], C)]
