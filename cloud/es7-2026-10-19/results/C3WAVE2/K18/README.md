@@ -26,8 +26,8 @@ Tools as in `results/C3WAVE1/C00/README.md` (`tools.txt`):
 Root 1 timed out at 300 s at depth 2 and was split into 91 depth-3 children: 84 certified at the 300 s cap, 7 one-orbit children
 (`_2`, `_3`, `_4`, `_6`, `_7`, `_9`, `_10`) pre-split into 66 depth-4 children each (462). Six of them (`_2` … `_9`) are fully
 certified (66/66); `_10` has 30 of 66 certified, so 36 depth-4 nodes remain open. No node timed out at depth 3 or 4: the
-largest depth-4 solve time was 60 s against the 600 s cap. Solve and check times are summed per node (depth 3: 1 296 s / 1 717 s
-for the 84; depth 4: 2 932 s / 6 050 s for the 426; plus 300 s for the depth-2 timeout). With 3 jobs on 4 cores they are not wall-clock.
+largest depth-4 solve time was 60 s against the 600 s cap. Solve and check times are summed per node (depth 3: 2 279 s / 2 098 s
+for the 84; depth 4: 1 948 s / 5 669 s for the 426; plus 300 s for the depth-2 timeout). With 3 jobs on 4 cores they are not wall-clock.
 
 Totals: 510 certified nodes, all with `c VERIFIED` (lrat-check, E2 patch) and `s VERIFIED UNSAT` (cake_lpr); 1 UNKNOWN (the root at 300 s);
 519 records in `out.jsonl` (resumable).
