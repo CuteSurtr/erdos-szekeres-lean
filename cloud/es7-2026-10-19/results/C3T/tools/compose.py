@@ -14,7 +14,8 @@ C3T (FIX1) changes:
   "base_sha256" must carry BASE_SHA; otherwise the script prints the reason and exits 1.
 - Every check that guards correctness is an explicit test that prints the reason and exits 1
   (no bare assert, so python3 -O cannot skip it).  The CNF sha256 is re-derived for EVERY
-  certified record (not only the last record per node).
+  certified record (not only the last record per node); the hash of header + BASE body is cached
+  per unit count (node_sha_cached: the same bytes as node_sha, tested equal in C3T/tests).
 - The output also reports "certified_with_proof_sha256" (certified records, and distinct certified
   nodes, carrying a proof_sha256) and "sha_checked".
 - --mirror-h6 (default off): children of H6(a, s) nodes reduced by Lemma H6M (hullcase.py,
@@ -61,6 +62,22 @@ def node_sha(base_bytes, header, units):
     return h.hexdigest()
 
 
+_hcache = {}
+
+
+def node_sha_cached(base_bytes, header, units):
+    """same bytes and digest as node_sha; the hash of header + BASE body is cached per unit count."""
+    n = len(units)
+    if n not in _hcache:
+        h = hashlib.sha256()
+        h.update(f"p cnf {header[2]} {int(header[3]) + n}\n".encode())
+        h.update(base_bytes)
+        _hcache[n] = h
+    h = _hcache[n].copy()
+    h.update("".join(f"{u} 0\n" for u in units).encode())
+    return h.hexdigest()
+
+
 def main():
     global MIRROR_H6
     unknown = [a for a in sys.argv[1:] if a.startswith("--") and a not in ("--no-sha", "--mirror-h6")]
@@ -96,7 +113,7 @@ def main():
             name = layers_name(parse_layers(r["node"]))
             if name not in shas:
                 us = [c[0] for c in layer_clauses(M, parse_layers(name), E.ccw, E.sig)]
-                shas[name] = node_sha(body, header, us)
+                shas[name] = node_sha_cached(body, header, us)
             if shas[name] != r.get("cnf_sha256"):
                 fail(f"{f} line {i}: node {name}: cnf_sha256 {r.get('cnf_sha256')} is not the re-derived {shas[name]}")
     memo = {}
