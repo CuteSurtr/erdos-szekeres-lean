@@ -1,6 +1,6 @@
 # AUDIT2 A1: the Lean statements
 
-Audit A1 of `results/AUDIT2/TASK.md` (Z = 852bee7, H = 1.75 h). Run on 21 Oct 2026, 00:33 to 01:35 UTC, on one cloud VM with 4 cores and 15 GB (`env.txt`). Branch es7-cloud, built at fcc1a09. The Lean sources under `ErdosSzekeres/`, `results/H`, `H3`, `V1-L` and `V2-L` have not changed since 852bee7 (`git log 852bee7..HEAD` on those paths is empty).
+Audit A1 of `results/AUDIT2/TASK.md` (Z = 852bee7, H = 1.75 h). Run on 21 Oct 2026, 00:33 to 01:25 UTC, on one cloud VM with 4 cores and 15 GB (`env.txt`). Branch es7-cloud, built at fcc1a09. The Lean sources under `ErdosSzekeres/`, `results/H`, `H3`, `V1-L` and `V2-L` have not changed since 852bee7 (`git log 852bee7..HEAD` on those paths is empty).
 
 ## Verdict
 
