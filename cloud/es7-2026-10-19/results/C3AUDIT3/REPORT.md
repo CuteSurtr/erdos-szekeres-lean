@@ -4,8 +4,8 @@ Task `results/C3AUDIT3/TASK.md` at 3f153540, H = 3.0. Run on 2026-10-21 from 05:
 on one cloud VM (4 cores, 15 GB; `env.txt`). I built these tools here: CaDiCaL 3.0.1 (c6073042), cake_lpr (a36874a8)
 and lrat-check (drat-trim 2e3b2dc with `results/E2/tools/lrat-check-E2.patch`). As a sanity check, lrat-check rejects
 `3 0 0` on {1},{−1} and accepts `3 0 1 2 0`. The m = 11 base I rebuilt has header `p cnf 168399 4154921` and sha256
-`bf0e502e…dd6da`. C3U was reviewed at its README draft c5dd35d2. Its `tools/` last changed at **95cafa93**, which is
-the commit the README recommends. Working notes are in `NOTES.md`.
+`bf0e502e…dd6da`. C3U was reviewed at its final README, f710546d (finished 06:40 UTC). Its `tools/` last changed at **95cafa93**, which
+is the commit the README recommends. Working notes are in `NOTES.md`.
 
 ## Verdict
 
@@ -44,7 +44,7 @@ Conditions for accepting the implementation:
     `0s0_1s0-2s0_3`). My fixed composer: not covered (frontier `0s0_1s0-2s0_3_4`). See `logs/childless_compose.txt`.
 - **Reach today:** the wave records at 712efc6b use at most 7 of the 11 residues, so no record is fully layered. Every
   covered/not-covered answer so far is unaffected. The hole opens once rule-3 splits below cubes reach full depth.
-- **Wrong statements:** `sigma_split.md:82` and `README.md:27` say the plain-node rule is "the C3T rule unchanged".
+- **Wrong statements** (final README f710546d): `sigma_split.md:82` and `README.md:27` say the plain-node rule is "the C3T rule unchanged".
   `README.md:37` says compose "does not count such a node as covered". Both are false for plain nodes.
 - My own composer had the same hole on its first version, because I followed the same specification. I fixed it
   (`tools/mycompose.py`: a node without children is covered only if certified). Every comparison below was run or
@@ -129,7 +129,11 @@ it accepted both. C3U hit the same failure in its test 4. The tools handle it sa
   - 0 holes on t1, t2, t3 and on the 4 regenerated C3U runs.
   - 1 hole on the childless input (`0s0_1s0-2s0_3_4`, 3 of its 4 σ vectors unmatched). This confirms that C3U's
     "covered" there is wrong.
-- **forge.py also passes 18/18** on C3U's m = 7 c100 run (1,104 certified, 69 cube layer splits).
+- **forge.py also passes 18/18** on C3U's m = 7 c100 run (1,104 certified, 69 cube layer splits) and on its m = 8 K = 3
+  run (nested K = 3) (`logs/forge_c3u_sig_m8k6c300K3.txt`).
+- **Reproducibility:** I re-ran C3U's `run_small.sh sig` here with C3U's tools. The m = 6 and the three m = 7 runs give
+  records equal to C3U's committed ones in node, `cnf_sha256`, `proof_sha256`, status, `sigma_bits` and children
+  (`logs/regen_vs_committed.txt`). My own driver's t1 equals C3U's `sig_m7k6c300K2` (above).
 
 ## Comparison on the repository's records (step 2)
 
@@ -141,7 +145,7 @@ All outputs are in `logs/m11_compare.txt`. Base sha `bf0e502e…`, sha check on,
 | 116 wave files (all `out.jsonl` of C3WAVE1, C3WAVE2, C3S0, C3W3 + 5 recheck files + C04 `out_reconstructed`; not `summary*`, not `removed_records`) | 48,614 records, 48,439 nodes, sha-checked, not covered, frontier 11,492 | same | same |
 | waves + C3SIG | 48,774 / 48,599, 20 σ-splits used, frontier 11,492 | same | – |
 | C3U `tests/logs/m11/tree_*.jsonl` | 16 cubes, 2 σ-splits used, frontier 161 | same | – |
-| C3U small runs regenerated with C3U's `run_small.sh sig` (C3U tools at 95cafa93, its conflict limits; m = 6 K=2, m = 7 K=2, m = 7 K=3, m = 7 c100 K=2) | covered; 58 / 126 / 218 / 1,104 certified; 8 / 6 / 3 / 15 σ-splits used | same | – |
+| C3U's 20 small-run record files, `tests/logs/small/*.jsonl` at f710546d (12 `cmp_*`, 2 `restart_*`, 6 `sig_*` including m = 8 with K = 2 and K = 3) | all covered; certified counts and `sigma_splits_used` as in C3U's table, e.g. m = 8 K = 3: 248 certified, 17 σ-splits | **identical on all 20** (`logs/c3u_small_records.txt`) | – |
 
 The frontier of waves + C3SIG equals that of the waves alone, because the waves had already layer-closed the 20 pilot
 nodes.
@@ -157,8 +161,9 @@ lrat-check (E2) and cake_lpr.
 ## What I could not check
 - Lemmas 1–5, the base encoding and the symmetry reduction were taken as given (C3AUDIT's scope). The H6M lemma
   (`--mirror-h6`) was not reviewed. It stays off.
-- C3U's `run_small.sh cmp` (C3T against C3U with `--sigma-split 0`) was not re-run. Instead, all three composers agree
-  on all wave records, and the `close_tree.py` diff shows that the `--sigma-split 0` path gives the same cap index as
-  C3T (splits from the root = layers from the root) and the same children.
-- m = 8 nested K = 3 trees were not closed by my driver within the budget. C3U's m = 8 runs: SIG_M8.
-- C3U's README is a draft (`CMP_TABLE` and `SIG_TABLE` are still placeholders). Later C3U commits were not reviewed.
+- I did not re-run C3U's `run_small.sh cmp` (C3T against C3U with `--sigma-split 0`). I did run both composers on
+  its committed records: they agree, with 0 brute-force holes. The `close_tree.py` diff shows that the
+  `--sigma-split 0` path gives the same cap index as C3T (splits from the root = layers from the root) and the same
+  children.
+- My driver did not close an m = 8 nested K = 3 tree within the budget. Instead, C3U's committed m = 8 K = 3 run
+  (\|C\| up to 6) passes both composers, brute force with 0 holes, and forge.py 18/18.
