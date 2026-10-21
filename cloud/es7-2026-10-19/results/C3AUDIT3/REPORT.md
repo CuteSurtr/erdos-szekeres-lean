@@ -12,18 +12,19 @@ is the commit the README recommends. Working notes are in `NOTES.md`.
 | | verdict |
 |---|---|
 | **Specification** (`results/C3U/TASK.md` rules 1–5) | **Accept.** Rules 2 and 3 cover their parents. The units never lose a set. The depth ≥ 2 restriction is sufficient and both tools enforce it. Details below. |
-| **Implementation** (`results/C3U/tools` at 95cafa93) | **Reject `compose.py` until finding 1 is fixed. Then accept with conditions.** `hullcase.py` and `close_tree.py` match the specification: my driver, written from the specification only, builds the identical tree with identical CNF hashes. `compose.py` has a soundness hole. It is not triggered by any current record, but waves must not use 95cafa93 `compose.py` as the judge. |
+| **Implementation** (`results/C3U/tools` at 95cafa93) | **Reject `compose.py` until finding 1 is fixed. Then accept with conditions.** `hullcase.py` and `close_tree.py` match the specification: my driver, written from the specification only, builds the identical tree with identical CNF hashes. `compose.py` has a soundness hole (finding 1). It is not triggered by any current m = 11 record, but I reproduced it from unmodified `close_tree.py` output at m = 5. Waves must not use 95cafa93 `compose.py` as the judge. |
 
 Conditions for accepting the implementation:
 1. Fix finding 1 in `compose.py`, e.g. `if not ch: missing; return False` in the plain branch of `covered2`.
-2. Re-run `tools/forge.py` and `logs/childless_real_m5k6.jsonl` against the fixed version. The childless input must
-   come out not covered.
+2. Re-run `tools/forge.py`, `logs/childless_real_m5k6.jsonl` and `logs/natural/` (A + C) against the fixed version.
+   The childless input must come out not covered. The 5 nodes listed in `logs/natural/README.txt` must be
+   uncovered.
 3. Correct the two false statements in `README.md` and `sigma_split.md` (finding 1).
 4. Keep `--jobs ≤ 3` for m = 11 cube proofs (cake_lpr ≈ 4 GB each), as C3U says. I saw the same failure (finding 4).
 
 ## Findings, most serious first
 
-### 1. `compose.py` covers a childless plain node vacuously — breaks soundness (latent)
+### 1. `compose.py` covers a childless plain node vacuously — breaks soundness (latent at m = 11 today; reproduced from `close_tree.py` output at m = 5)
 - `C3U/tools/compose.py:199` (95cafa93) puts the layer name L itself into `prefixes` for every certified cube record
   `L__C`. C3T used only proper prefixes. Line 203 does the same for split records.
 - `compose.py:235-241` then covers a plain node that is in `prefixes` with `for c in children(layers): ok = …`. When
@@ -139,7 +140,8 @@ it accepted both. C3U hit the same failure in its test 4. The tools handle it sa
 - **`tools/mybrute.py`:** a brute-force cover check independent of every composer and of the split records. Every
   maximal path of my tree, with every σ vector consistent with it, must be matched by a certified leaf
   (`logs/mybrute.txt`).
-  - 0 holes on t1, t2, t3 and on the 4 regenerated C3U runs.
+  - 0 holes on t1, t2 and t3, on the 4 regenerated C3U runs, and on all 20 committed C3U small-run files
+    (`logs/c3u_small_records.txt`).
   - 1 hole on the childless input (`0s0_1s0-2s0_3_4`, 3 of its 4 σ vectors unmatched). This confirms that C3U's
     "covered" there is wrong.
 - **forge.py also passes 18/18** on C3U's m = 7 c100 run (1,104 certified, 69 cube layer splits) and on its m = 8 K = 3
