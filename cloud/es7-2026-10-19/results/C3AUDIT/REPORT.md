@@ -1,7 +1,7 @@
 # C3AUDIT: adversarial review of the 3-fold class setup
 
 Task: `TASK.md` at 3d83517 (H = 1.25 h). One cloud VM, 4 cores, 15 GB (`env.txt`), 00:44 to
-about 01:55 UTC on 2026-10-21. Tools built from source: CaDiCaL 3.0.1 (c6073042) and cake_lpr
+about 01:25 UTC on 2026-10-21. Tools built from source: CaDiCaL 3.0.1 (c6073042) and cake_lpr
 (a36874a, `make`, from the repository's `cake_lpr.S`). I did not build lrat-check: cake_lpr is
 the checker I used.
 
@@ -89,16 +89,15 @@ code under test (`tree_children`, `layer_clauses`). For every admissible frame i
 - every layer unit and the `sb` unit are true;
 - some frame of S or of M(S) lands in the kept tree.
 
-Results, all with 0 failures (`logs/geo11.json`, `logs/geo7.json`, `logs/sat*.json`,
-`logs/satnogon11.json`, `logs/satk11.json`):
+Results, all with 0 failures (`logs/geo*.json`, `logs/sat*.json`):
 
 | test | sets | result |
 |---|---|---|
-| geometry only, m = 11 | 300 | all covered, all 11 top cases hit, depths 6–10, 57 covered only through the mirror |
-| geometry only, m = 7 | 300 | all covered |
+| geometry only, m = 11 (4 seeds) | 1,050 | all covered; all 11 top cases hit; depths 6–10; 187 covered only through the mirror |
+| geometry only, m = 7 and m = 9 | 300 + 300 | all covered |
 | full base CNF (k = 7) + node units + true T, σ fixed, must be SAT; m = 4, 5, 6, 7, in-class sets only (brute-force no convex 7-gon) | 100, 150, 120, 30 | all SAT |
-| m = 11, base CNF without the `gon` section + node units + true T, σ fixed | 40 | all SAT |
-| m = 11, full C3Enc(11, 11) CNF (no convex 11-gon, by an O(n⁴) DP checked against brute force) + k = 7 node units + true T, σ fixed | 25 | all SAT |
+| m = 11, base CNF without the `gon` section + node units + true T, σ fixed | 100 | all SAT |
+| m = 11, full C3Enc(11, 11) CNF (no convex 11-gon, by an O(n⁴) DP checked against brute force) + k = 7 node units + true T, σ fixed | 55 | all SAT |
 
 The tests have teeth (`tools/mut.py`, `tools/mut2.py`):
 - reversed 2-orbit layer order: 270 false units;
@@ -147,9 +146,10 @@ I found no configuration that no node covers.
   reads all 24,445 certified records (wave 1 and wave 2 at the time). It gives the same answer
   as `compose.py`: not covered, 6,591 frontier nodes, 0 duplicate records, and 0 child-list
   differences from `tree_children` on the 417 prefix nodes.
-- *sha256 recomputation.* I ran `compose.py`'s sha check with the rebuilt base: it passed on C01
-  and C17 (2,191 records) and on wave 2 (2,213 records). For the other 22 wave-1 directories, see
-  `logs/compose_sha_g*.txt`, filled in below.
+- *sha256 recomputation.* I ran `compose.py`'s sha check with the rebuilt base over **every**
+  certified record: all 22,622 wave-1 records (`logs/compose_sha_C01_C17.txt`,
+  `logs/compose_sha_g0..3.txt`) and the 2,213 wave-2 records present at about 01:05 UTC
+  (`logs/compose_sha_wave2.txt`). No mismatch.
 
 ## What I could not check
 
