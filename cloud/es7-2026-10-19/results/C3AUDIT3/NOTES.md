@@ -55,3 +55,11 @@ Fix suggested for C3U: in covered2's plain branch, `if not ch: missing; return F
   under memory pressure from a parallel m = 8 run; re-run alone: accepted).  logs/resolve_c3u_m11.jsonl
   (lines 1-3 first run, 4-5 re-run).
 - Both composers on C3U's m = 11 records: 16 certified cubes, 2 sigma splits used, frontier 161 (agree).
+
+## C3U README draft appeared (c5dd35d2, 06:26 UTC); tools last changed at 95cafa93 (the commit it recommends)
+- Finding 1 re-confirmed at 95cafa93 (logs/childless_compose.txt): C3U compose covered = true; C3T compose on the
+  same plain records says not covered (frontier 0s0_1s0-2s0_3); fixed mycompose says not covered.
+- README "Choices" and sigma_split.md:82 call the plain-node rule "the C3T rule unchanged" and README says compose
+  "does not count such a node [no children] as covered": both false for plain nodes, because `prefixes` changed
+  (compose.py:199 and :203 now include L itself).
+- forge.py 18/18 on t1, t2, t3 against 95cafa93 (logs/forge_t*_c3u95cafa93.txt).
