@@ -67,7 +67,7 @@ Columns count new records only. Splits include pre-splits (--split-singles). Sol
 
 Closed (every leaf certified, `open_frontier: 0`): `0s0-1s1_3s1-9s1`, `0s0-4s1_1s0-5s1`, `0s0-2s1_3s1-10s1`, `0s0-2s1_4s1-7s0`, `0s0-3s1_1s0-10s1`, `0s0-3s1_1s1-5s1`.
 
-Partial: `0s0-3s1_4s0-8s1` (started 09:30:35 with a 0.953 h slice). The root timed out at 300 s and was split. Its 84 children were pre-split, and 7 more depth-3 nodes were split. 327 depth-4 nodes were certified before the run was stopped at END. The depth-3/4 batch in progress (`close_tree.py` checks its deadline only between batches) was killed at 10:27:48. The nodes still in flight left no records, and no checker result was cut short in a record (no `cake_lpr: none`). This root's records stay in `out.jsonl` for resumption.
+Partial: `0s0-3s1_4s0-8s1` (started 09:30:35 with a 0.953 h slice). The root timed out at 300 s and was split. Its 7 depth-3 children (single-orbit layers) were pre-split, and 462 depth-4 nodes were certified before the run was stopped at END. The depth-4 batch in progress (`close_tree.py` checks its deadline only between batches) was killed at 10:27:48. The nodes still in flight left no records, and no checker result was cut short in a record (no `cake_lpr: none`). This root's records stay in `out.jsonl` for resumption.
 
 Not reached (26): rows 134–584 of my shard (`roots.tsv`), including the partial list root `0s0-1s1_7s0-8s1` (its 529 seed records are not in `out.jsonl`).
 
