@@ -47,3 +47,8 @@ All 565 certified records have `lrat_check: c VERIFIED` and `cake_lpr: s VERIFIE
 ## Files
 
 `out.jsonl` (575 new records, lane 0), `driver0.log` (last 100 lines), `lane0.sh`, `roots.tsv`, `tools.txt`, `env.txt`, `compose.txt`.
+
+## compose.py
+
+`python3 $TOOLS/compose.py /opt/work/base.cnf results/C3W3/B2/out.jsonl` (`compose.txt`) gives `{"certified_nodes": 565, "class_covered": false, "uncovered_frontier_nodes": 294, ...}`.
+This is expected: the file holds one partial root. compose recomputed the CNF sha256 of all 565 certified nodes from the base CNF and the node names.
