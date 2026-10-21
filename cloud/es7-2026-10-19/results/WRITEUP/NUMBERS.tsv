@@ -17,7 +17,7 @@ hull cases	450	results/Mii-S/soundness.md
 4-gon hull cases	30	results/Mii-S/soundness.md
 6-gon hull cases	420	results/Mii-S/soundness.md
 cases with |U| = 0 / 1 / 2	120 / 225 / 105	results/Haudit/AUDIT.md
-vacuous cases	56	results/Haudit/AUDIT.md
+vacuous cases (2 ∈ U, or 3 ∈ L and 2 ∉ L)	56	results/Haudit/AUDIT.md; results/Haudit/t4_summary.txt
 cube length (literals)	61-535	results/Mii-S/README.md
 upper chains U	121	results/Mii-S/soundness.md
 split obligations verified (Mii-S)	122	results/Mii-S/cover_lrat.jsonl
@@ -27,7 +27,7 @@ obligations CaDiCaL / cake_lpr seconds (Haudit)	515 / 313	results/Haudit/AUDIT.m
 direct cases	172	results/Mii-S/cases.jsonl
 direct cases re-verified	172	results/Haudit/t5_all172.jsonl
 pass2_lrat.jsonl records / verified	174 / 172	results/Mii-S/pass2_lrat.jsonl
-direct cases CaDiCaL / cake_lpr seconds (Mii-S)	443 / 331	results/Mii-S/README.md
+direct cases CaDiCaL / cake_lpr seconds over the 172 verified records (Mii-S)	443 / 331	results/Mii-S/README.md
 direct cases solve / check seconds (Haudit)	699 / 445	results/Haudit/AUDIT.md
 wave cases	278	results/FINAL/READY.json
 open cubes at Zf	0	results/FINAL/READY.json
@@ -35,7 +35,7 @@ Zf (new hash)	06c1f798cd8b8b066df804282f95e9ec075c4d99	results/FINAL/COMMIT_MAP.
 Zf (old hash, as cited)	14447d0d56c891a89a07a8141b50eae0ebfd44a7	results/FINAL/READY.json
 manifest leaves	73880	results/FINAL/READY.json
 manifest sha256	e01af167266dc044078798355f76f9f8d36c74d1b8843aeab90072b644ea83b5	results/FINAL/READY.json
-manifest leaf lines WAVE1 / 2 / 3 / 4	30151 / 12429 / 8850 / 28871	results/V3Z/inputs.txt
+v3_jsonl_leaves.py leaf lines jtree1 / 2 / 3 / 4 (before merging; sum 80301; manifest 73880)	30151 / 12429 / 8850 / 28871	results/V3Z/inputs.txt
 leaves with a VERIFIED V3 record	73880	results/V3Z/problems.txt
 wave cases accepted	278	results/V3Z/accepted_final.tsv
 covers VERIFIED	278	results/V3Z/covers.jsonl
@@ -46,8 +46,8 @@ cover records read VERIFIED / NOT_COVERED	377 / 9	results/V3Z/README.md
 aggregate input files	78	results/V3Z/aggregate_inputs.txt
 solve seconds per leaf median / max	10.9 / 730.0	results/V3Z/problems.txt
 check seconds per leaf median / max	3.0 / 52.0	results/V3Z/problems.txt
-V3 CaDiCaL seconds over accepted leaves	1353233	results/V3Z/accepted_final.tsv (sum of solve_s)
-V3 cake_lpr seconds over accepted leaves	301295	results/V3Z/accepted_final.tsv (sum of check_s)
+V3 CaDiCaL seconds, one record per accepted leaf plus covers	1353233	results/V3Z/accepted_final.tsv (sum of solve_s)
+V3 cake_lpr seconds, one record per accepted leaf plus covers	301295	results/V3Z/accepted_final.tsv (sum of check_s)
 tree hypothesis instances (hleaves)	74000	results/V2-L/README.md
 leaf-tree cases (direct + empty cube)	310 (172 + 138)	results/V2-L/README.md
 non-trivial trees	140	results/V2-L/README.md

@@ -7,6 +7,24 @@ cites an older hash, the old one is given in brackets and was translated with
 `results/FINAL/COMMIT_MAP.tsv`. Written 2026-10-21 from the files at commit 852bee7 (the commit of
 `results/WRITEUP/TASK.md`) and the branch head at the time of writing.
 
+**Terms.** A CNF is a propositional formula in conjunctive normal form, written as a DIMACS
+file; UNSAT means unsatisfiable. A cube is a conjunction of literals; F + cube is F with the
+cube's literals added as unit clauses (`cubeCnf` in Lean). LRAT is a clausal proof format for
+UNSAT; cake_lpr is a checker for such proofs, formally verified in HOL4/CakeML down to x64
+(`results/V2-L/README.md` §6), whose verdict on a refuted file is `s VERIFIED UNSAT`. A leaf is
+a cube whose CNF has been refuted; a set of leaves covers a case if every assignment satisfying
+the case cube satisfies some leaf (`verify/v3/v3_check.py`). A case (U, L) of §4 is named
+`U<U>_L<L>` with elements joined by `-`, e.g. U_L7 for U = ∅, L = {7} (`results/Mii-S/scripts/hullsplit.py`, `name`).
+Directory names under `results/` are separate cloud runs: H and H3 are the Lean encoding
+packages; C and C2 earlier runs on the mirror class; Mi-0..Mi-3 the shard runs of sub-case (i)
+(a shard is one machine's share of the cubes); V1-0..V1-3 and V1-L the re-checks and the Lean
+side of sub-case (i); Mii-S the case split of sub-case (ii); Haudit its independent audit;
+WAVE1–WAVE4 the four rounds of cloud machines that solved the 278 hard cases; V2-L (with its
+assembly steps V2F, V2G) the Lean side of sub-case (ii); V3T, V3A–V3E and V3Z the from-scratch
+re-solving and checking runs ("acceptance", §5); E and E2 the D_3 runs (§2); C3-S, C3WAVE1,
+C3WAVE2 the runs on the 3-fold class. Zf is the commit at which no wave case had an open cube
+(§5).
+
 ## 1. Statement, and what is and is not claimed
 
 **Theorem (conditional on the trust base of §6).** Let S be a set of 33 points in the plane,
@@ -17,10 +35,12 @@ Equivalently: a counterexample to the Erdős–Szekeres conjecture at n = 7, tha
 in general position with no convex heptagon (which would show ES(7) > 33 = 2^5 + 1), is not
 mirror-symmetric.
 
-The statement is the Lean 4 proposition `Mir.MirrorExclusionLine` (`results/H3/README.md` §3):
+The statement is the Lean 4 proposition `Mir.MirrorExclusionLine`
+(`results/H3/MirrorEncoding/Line.lean`, namespace `Mir`; `results/H3/README.md` §3):
 
 ```lean
-def Mir.MirrorExclusionLine : Prop := ∀ S a u, u 0 ^ 2 + u 1 ^ 2 = 1 → GeneralPosition S →
+def MirrorExclusionLine : Prop :=
+  ∀ (S : Finset Point) (a u : Point), u 0 ^ 2 + u 1 ^ 2 = 1 → GeneralPosition S →
     S.card = 33 → (∀ q ∈ S, reflLine a u q ∈ S) → HasConvexNGon 7 S
 ```
 
@@ -36,34 +56,44 @@ unsatisfiable", each of which is a cake_lpr `s VERIFIED UNSAT` verdict on a file
   Axioms: `propext`, `Classical.choice`, `Quot.sound` (`results/V2-L/README.md` §9.2).
 - Each of the CNF facts has a cake_lpr verdict recorded in the repository; for sub-case (ii) the
   case and leaf facts were in addition re-derived from scratch (every leaf re-solved from a CNF
-  rebuilt from F, every proof checked by cake_lpr, every case cover checked) by the acceptance
+  rebuilt from F, the sub-case (ii) CNF of §3, every proof checked by cake_lpr, every case cover checked) by the acceptance
   passes V3T, V3A–V3E and V3Z (`results/V3Z/summary.md`).
 
 **What is not claimed.**
 - Not ES(7) = 33. Only the mirror-symmetric class is excluded.
 - The class of sets invariant under a rotation by 120° (and under no reflection) is **open**.
   `results/C3-S/README.md`: "No top case is closed", 1,956 frontier nodes open, with a cost
-  estimate of about 1,500 core-hours "if the H3 tail is mild", possibly 10^4–10^5. Later
+  estimate of about 1,500 core-hours "if the H3 tail is mild" (there H3 is the 3-fold top case
+  with a triangular hull, not the directory `results/H3`), possibly 10^4–10^5. Later
   waves work on it (`results/C3WAVE1`, 24 machines C00–C23; `results/C3WAVE2/README.md`: a survey
   of the 1,349 of 1,630 depth-2 roots that wave 1 did not touch); the class is not closed.
-- No counterexample is known. No SAT result occurred anywhere in the mirror runs
-  (`results/V3Z/README.md`: "SAT: none"; `results/Mii-S/README.md` §5).
+- No counterexample is known. No SAT record occurs in Mii-S (`results/Mii-S/README.md` §5:
+  "No case, cube, product or `G_o` was SAT") or in any leaf or cover file of the acceptance runs
+  V3T, V3A–V3E, V3Z (`results/V3Z/README.md`).
 - The cake_lpr verdicts are not imported into Lean; they are hypotheses of the Lean theorem
   (§6). The CNF facts are about files; the step from a file to a Lean term is a byte or sha256
   comparison done outside Lean, and for the per-leaf files of sub-case (ii) it rests on the
   drivers' file writing (§6).
-- We did not find prior work on the mirror-symmetric class at 33 points. The related-work notes
-  (`docs/RELATED_WORK_2026-10-14.md`) list rotationally symmetric searches (Subercaseaux,
-  Mackey, Qian and Heule, arXiv 2506.00224: 3-, 4- and 5-fold at 16 points, 4-fold at 32 points)
-  and an unverified mention of "axially symmetric sets (18 points force an empty hexagon)" in
-  Koshelev–Koshka (arXiv 2604.20120), marked there "should be re-verified". No priority is
-  claimed.
+- We did not find prior work stating that every reflection-invariant 33-point set in general
+  position contains 7 points in convex position (`results/LIT/RELATED.md` §3–§4, searches of
+  21 October 2026 listed in `results/LIT/searches.tsv`; the sources there were read from
+  abstracts and search snippets only, because direct fetches were blocked; and
+  `docs/RELATED_WORK_2026-10-14.md`). The nearest work found concerns rotational symmetry:
+  Subercaseaux, Mackey, Qian and Heule (arXiv:2506.00224): for 16 points without a convex
+  hexagon the 3-fold formula is UNSAT and the 4- and 5-fold formulas are satisfiable and
+  realizable; for 32 points without a convex 7-gon there is no realizable 4-fold symmetric set.
+  The 14 Oct survey also records a mention of "axially symmetric sets (18 points force an empty
+  hexagon)" in Koshelev–Koshka (arXiv:2604.20120), marked there "should be re-verified"; the
+  later search (`results/LIT/RELATED.md` §3) found in that paper's snippets only a 25-point
+  3-fold symmetric example for a hexagon-type variant. No priority is claimed.
 
 ## 2. Which symmetries a 33-point counterexample can have
 
 Let S be 33 points in general position with no 7 in convex position, and let G be the group
-of isometries of the plane that map S to itself. G is finite and fixes the centroid of S, so G
-is cyclic C_s or dihedral D_s, with rotation subgroup C_s.
+of isometries of the plane that map S to itself. G is finite (S contains three non-collinear
+points, and an isometry is determined by their images) and fixes the centroid of S, so by the
+classification of finite groups of plane isometries G is cyclic C_s or dihedral D_s, with
+rotation subgroup C_s. The point reflection (half-turn) is the rotation of order 2.
 
 **Claim.** s ∈ {1, 3}. Hence G is trivial, generated by one reflection (D_1), C_3, or D_3.
 
@@ -81,14 +111,18 @@ This is the argument of `plan/es7_structure.md` (C6, "[own, elementary]") and
 `plan/es7_methods.md` (Rotations); the s = 5 line is the divisibility check they do not spell out.
 
 **The cases that remain.**
-- **D_3.** Under D_3, 33 = 6a + 3b + c, c ∈ {0, 1}; a mirror line carries at most 2 points
-  (general position), so b ≤ 2, and the only solution is 5 orbits of 6 and one orbit of 3 on the
-  mirror axes (`results/E/README.md` §4). This class is excluded by the CNF `n33k7d3` (sha256
-  prefix 72ebbae0) and two independent constructions of the same class (`n33k7m3refl` cc329387,
-  `n33k7d3direct` 7796d999), all UNSAT (`results/E/README.md`, Summary). `results/E2/README.md`
+- **D_3.** Under D_3, 33 = 6a + 3b + c, with a orbits of size 6, b orbits of size 3 (on the
+  mirror axes) and c ∈ {0, 1} for the centre; c = 0 by the C_3 case. Each orbit of size 3 has one
+  point on each of the three axes (the rotation permutes them), so each axis carries b points of
+  S; a line carries at most 2 points (general position), so b ≤ 2; 33 = 6a + 3b forces b odd, so
+  b = 1 and a = 5: 5 orbits of 6 and one orbit of 3 on the mirror axes
+  (`results/E/README.md` §4). This class is excluded by the CNF `n33k7d3` (sha256
+  prefix 72ebbae0) and two other constructions of the same class, `n33k7m3refl` (cc329387; the 3-fold CNF plus
+  reflection clauses, `c3refl.py`) and `n33k7d3direct` (7796d999; `d3cnf.py` with the direct
+  K-gon encoding), all UNSAT (`results/E/README.md`, Summary). `results/E2/README.md`
   re-checked the three proofs with the patched lrat-check and with cake_lpr: all VERIFIED / `s
   VERIFIED UNSAT`. The D_3 encodings are tested, not formally verified (`results/E/README.md`:
-  "this is not a theorem"). A D_3-symmetric set is also mirror-symmetric, so it is covered by the
+  "Nothing in this directory is a theorem"). A D_3-symmetric set is also mirror-symmetric, so it is covered by the
   theorem of this note too, which does not depend on E/E2.
 - **D_1 (one reflection):** this note.
 - **C_3 (a 3-fold rotation, no reflection):** open (§1).
@@ -105,32 +139,47 @@ without being a vertex.
 **Variables.** After a normalization that orders the points 1..33, the variable X(i,j,k), for
 i < j < k, is true when the points i, j, k are counter-clockwise; an assignment satisfying the
 axioms is a signotope (an abstract order type). The base CNF
-(`tools/etv/gen_etv.py 33 7 7 7 --mirror`, Lean `ETV.etvClauses`, soundness proved in
-`results/H`) has the signotope axioms and the clauses forbidding 7 points in convex position via
+(`tools/etv/gen_etv.py 33 7 7 7 --mirror`; in Lean `mirClauses` = `ETV.etvClauses`, the
+option-free generator whose soundness is proved in `results/H`, plus hull units and the
+identification clauses, `results/H3/README.md` §3) has the signotope axioms and the clauses forbidding 7 points in convex position via
 cup and cap auxiliary variables (`results/H3/README.md` §3, "The generator").
 
 **Mirror normalization.** The mirror identification is the orbit substitution
 X(i,j,k) = X(34−k, 34−j, 34−i), with sign +, applied to every clause (`results/C/scripts/mirgen.py`,
-Lean `Mir.subVar`/`subLit`, `results/H3/README.md` §3). `results/Haudit/AUDIT.md` NOTE-4 checked
+Lean `Mir.subVar`/`subLit`, `results/H3/README.md` §3). This is the form for sub-case (ii); in
+sub-case (i) `mirgen.py` uses m = N + 2, i.e. X(i,j,k) = X(35−k, 35−j, 35−i) on points 2..33
+(`mirgen.py` docstring: "m = N+1 (no hull) or N+2 (hull, indices 2..N)"). The sign is + because
+the reflection negates every orientation and reversing the order of three indices is an odd
+permutation. `results/Haudit/AUDIT.md` NOTE-4 checked
 the + sign on all 5,456 triples of each of 15,900 exact sets.
 
 **Sub-case (i), axis point a hull vertex** (`hullCnf 33 7`, file `hm33k7.sub.cnf`, sha256
 `bfbc2d6096e4099ba751130d421eca9da18b72559991103cc2d4b4bc0d92757d`, header `p cnf 47002 535454`,
 `results/H3/README.md` §3). If c is extreme, all other points are strictly on one side of the
-horizontal through c (`extreme_axis_split`); a rotation makes c leftmost on the axis, and a
-projective map (x, y) ↦ (x/d, 1/d) with d = y₀ − y sends c to vertical infinity. Sorting the
-others by slope from c gives the hull frame, and uniqueness of hull frames gives the pairing
-i ↔ N − i (`results/H3/README.md` §2, "Sub-case (i)").
+horizontal through c (`extreme_axis_split`). The linear map (x, y) ↦ (−y, x) (`rotA`, c on top)
+or (x, y) ↦ (y, x) (`rotB`, c at the bottom; this map is a reflection, not a rotation, and
+reverses every orientation, `orient_rotB`) makes c strictly leftmost on the new, horizontal
+mirror axis. Sorting the other points by slope from c gives the hull frame (`ETV.HullFrame`;
+this is the projective normal form of `results/C`, in which c goes to vertical infinity and the
+slope seen from c is x/(y₀ − y)). A hull frame is determined by the set and its first point
+(`HullFrame.eq_of_ptSet`), so the mirrored frame is the frame itself, which gives
+σ(N−k, N−j, N−i) = σ(i, j, k) for 1 ≤ i in the 0-based indexing of `Frame.lean`
+(`results/H3/MirrorEncoding/Frame.lean` header; `results/H3/README.md` §2, "Sub-case (i)").
 
 **Sub-case (ii), axis point interior** (`interiorCnf 33 7`, file `m33k7int.sub.cnf` = F, sha256
 `69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d`, header `p cnf 47002 515121`,
 `results/H3/README.md` §3; 2,736 free orbits, `results/C/README.md`). The axis is the y-axis;
 points are sorted by x, so P_{34−i} = reflX(P_i) and c = P_17. Ties in x between different pairs
 are broken by the projective map (x, y) ↦ (x, y)/(1 + εy), which commutes with the reflection
-and keeps every orientation sign (`TieBreak.lean`, `exists_eps`). Two clauses say that c is not
-extreme: some chord P_i P_{34−i} has c above it and some has c below it, because
-orient(a, c, reflX a) = 2·a.x·(c.y − a.y) (`AxisInterior`). Finally the unit X(1,2,3) breaks the
-y-flip (x, y) ↦ (x, −y), which commutes with the reflection and complements every orientation
+and keeps every orientation sign (`TieBreak.lean`, `exists_eps`). Here reflX(x, y) = (−x, y),
+and orient(p, q, r) > 0 means p, q, r counter-clockwise (`results/Mii-S/soundness.md`,
+Notation). Two clauses say that c is not extreme: some X(i,17,k) with i < 17 < k is true and
+some is false (`AxisInterior`, `mirgen.py --interior`). They hold because some point a of S is
+strictly above c and some strictly below, and for a mirror pair a, reflX a with a left of the
+axis, orient(a, c, reflX a) = 2·a.x·(c.y − a.y) (`results/H3/README.md` §2). Finally the unit X(1,2,3) breaks the
+y-flip (x, y) ↦ (x, −y), which commutes with the reflection, keeps the x-order and complements
+every orientation; complementing a signotope keeps the signotope axioms, the mirror symmetry and
+the absence of convex 7-gons and swaps the two interior clauses, so X(1,2,3) may be assumed
 (`results/H3/README.md` §2, `results/Mii-S/soundness.md` step 1).
 
 **Lean soundness** (`results/H3/README.md` §3, `MirrorEncoding/Sound.lean`, `Interior.lean`,
@@ -148,8 +197,8 @@ y-flip (x, y) ↦ (x, −y), which commutes with the reflection and complements 
 `DimacsSatisfiable` is plain DIMACS semantics (`results/H`). The reduction from an arbitrary line
 to the y-axis is the rigid motion p ↦ M(p − a), M = [[u₁, −u₀], [u₀, u₁]] (`Line.lean`).
 The Lean generator `Gen.lean` writes both CNFs; its output (string formatting in `Emit.lean`,
-unverified) is byte-identical (`cmp`) to the Python generators `results/C/scripts/make_cnfs.sh`
-for both files and for an 84-instance grid of smaller sizes (`results/H3/README.md` §3, table).
+unverified) is byte-identical (`cmp`) to the output of the Python generators (`gen_etv.py`,
+`mirgen.py`, driven by the shell script `results/C/scripts/make_cnfs.sh`) for both files and for an 84-instance grid of smaller sizes (`results/H3/README.md` §3, table).
 `MirrorEncoding/Audit.lean` pins 29 axiom sets with `#guard_msgs`.
 
 ## 4. The case split of sub-case (ii)
@@ -171,7 +220,8 @@ of each ccw hull edge; (b) hull triples are ccw; (c) each upper (lower) vertex i
 every chord P_iP_k that spans it in x. Cubes have 61–535 orbit literals
 (`results/Mii-S/README.md` §1; checked on `results/Mii-S/cases.jsonl`, field `nlits`).
 `results/Mii-S/soundness.md` proves (a)–(c) for the true orientation assignment of any real
-configuration, and that it satisfies exactly the cube of its own case.
+configuration, i.e. that it satisfies the cube of its own case (that it satisfies no other cube
+is only tested, and not needed).
 
 **Completeness, certified without geometry (the 122 obligations).** UP(U) is the cube that says
 the upper chain starts 1, u_1, …, u_k, 34−u_k: for each edge v→q of this left half (the crossing
@@ -185,20 +235,25 @@ edge included), orient(v, q, r) < 0 for every other point r (`results/Mii-S/soun
 This is a statement about models of F (signotopes), not about point sets, so the case split is
 complete as a matter of propositional logic once the 122 obligations are UNSAT. The Lean form is
 `V2L.not_dimacsSatisfiable_of_clauseCover₂` (`results/V2-L/README.md` §3); the kernel also checks
-`casesOf_length_sum` (the `casesOf U` partition the 450 cases) and that no cube contains the
-literal 0 (§4 there). A flat one-level cover with all 450 blocking clauses did not finish in
+`casesOf_length_sum` (the lengths of the `casesOf U` sum to 450; with `upSets_nodup` and
+`caseSpecs_upper_mem` they partition the 450 cases) and that no cube contains the literal 0 (§4
+there: "Only the nonzero facts are used by the proofs"). A flat one-level cover with all 450 blocking clauses did not finish in
 1,480 s of CaDiCaL (`results/Mii-S/soundness.md`).
 
 The 122 obligations: all `s VERIFIED UNSAT` in `results/Mii-S/cover_lrat.jsonl` (122 records),
 and again from scratch in `results/Haudit/t3_cover_lrat.jsonl` (122 records, every CNF sha256
-equal to Mii-S's; the auditor's independent construction of the 122 CNFs agreed with `cover.py`'s,
-`results/Haudit/AUDIT.md` task 2). Their CNFs are byte-identical to the Lean terms
+equal to Mii-S's, `results/Haudit/AUDIT.md` task 3; the auditor's independent construction of
+the 122 CNFs agreed with `cover.py`'s, task 2). Their CNFs are byte-identical to the Lean terms
 `rootCnf`/`upCnf` (`results/V2-L/README.md` §5: root equal, 121/121 equal).
 
 **Tests of the geometric argument** (not needed for soundness): Mii-S, 2,000 + 1,000 random
 sets, 0 failures, 279 distinct cases hit (`results/Mii-S/README.md` §1); Haudit's independent
 test, 15,900 exact sets, 0 failures, 394 distinct cases hit = all except the 56 vacuous ones
-(2 ∈ U or 3 ∈ L, contradicting the X(1,2,3) unit) (`results/Haudit/AUDIT.md` task 4, NOTE-3).
+(`results/Haudit/AUDIT.md` task 4, NOTE-3). The vacuous cases are those with 2 ∈ U, or with
+3 ∈ L and 2 ∉ L: their cubes contain ¬X(1,2,3), contradicting F's unit X(1,2,3). NOTE-3 writes
+"2 ∈ U or 3 ∈ L", which also takes in the case U = ∅, L = {2, 3} and gives 57; that case is not
+vacuous (its lower chain 1, 2, 3 is ccw) and was hit by the tests (`results/Haudit/t4_summary.txt`:
+"U2.. or L3.."; recounted from `results/Mii-S/cases.jsonl`).
 
 ## 5. Solving and from-scratch acceptance
 
@@ -208,28 +263,35 @@ Mi-0..Mi-3; they form a complete binary partition (`verify/README.md`). Every le
 with cake_lpr by V1-0..V1-3 and a backup run in V1-L: 1,198 of 1,198 `s VERIFIED UNSAT`, no gaps
 (`results/V1-L/SUMMARY.md`, table: 300 + 300 + 299 + 299; CaDiCaL 26,142 s and cake_lpr 4,608 s
 summed over that table's rows). Earlier, H3 had closed the same CNF with a different leaf list of
-5,589 cake_lpr-verified leaves from the C2 tree (`results/H3/README.md`); the Lean theorem does
+5,589 cake_lpr-verified leaves (the closed cubes of the earlier run C2, plus C2's 1,048 open
+cubes refuted by H3, the last one after a split into 4 sub-cubes) (`results/H3/README.md`); the Lean theorem does
 not use that list.
 
 **Sub-case (ii), the 172 direct cases.** 172 cases were UNSAT within 10 s
 (`results/Mii-S/README.md` §2), each re-solved with LRAT and cake_lpr-verified
 (`results/Mii-S/pass2_lrat.jsonl`: 174 records over 174 cases, 172 with `s VERIFIED UNSAT` and 2
-without a cake_lpr field; 443 s CaDiCaL and 331 s cake_lpr in total), and again from scratch by
+without a cake_lpr field (U_L2-3 and U_L2-4, result UNKNOWN); 443 s CaDiCaL and 331 s cake_lpr
+over the 172 verified records), and again from scratch by
 the audit (`results/Haudit/t5_all172.jsonl`: 172 of 172 `s VERIFIED UNSAT`, sha256 equal to
 `cases.jsonl`, 699 s solve and 445 s check, `results/Haudit/AUDIT.md` task 5).
 
-**Sub-case (ii), the 278 wave cases** were closed by cube-and-conquer: march_cu (CnC 705b60c6) top
-cubes (`march_cu CASE -d 7`, 128 cubes per top file in WAVE1, `results/Haudit/AUDIT.md` NOTE-2),
-CaDiCaL 3.0.1 on each cube with a time cap, split again (SPLIT records) on a timeout, and a leaf counted only with cake_lpr `s VERIFIED UNSAT`
-(`verify/README.md` "Wave 1", `results/Mii-S/README.md` §2). Four waves of cloud machines:
+**Sub-case (ii), the 278 wave cases** were closed by cube-and-conquer (a look-ahead solver,
+march_cu from the CnC package at 705b60c6, splits a CNF into cubes, i.e. conjunctions of
+literals, and CaDiCaL 3.0.1 solves each cube with a time cap; a cube that times out is split
+again, recorded as SPLIT; a leaf counts only with cake_lpr `s VERIFIED UNSAT`). In WAVE1 the six
+hardest 4-gon cases were split into march_cu top cubes (`march_cu CASE -d 7`, 128 cubes per top
+file, `results/Haudit/AUDIT.md` NOTE-2); the other cases were first given whole to the driver
+(`verify/README.md` "Wave 1", `results/Mii-S/README.md` §2). 138 wave cases closed with the empty
+cube as their only leaf (`results/V3Z/covers.jsonl`). Four waves of cloud machines:
 WAVE1 36 machines (W00–W35), WAVE2 12, WAVE3 26, WAVE4 75 (directory listings of
 `results/WAVE1`–`results/WAVE4`). At Zf = 06c1f798cd8b8b066df804282f95e9ec075c4d99 [old
 14447d0d56c891a89a07a8141b50eae0ebfd44a7], 2026-10-20T16:20:17Z, no wave case has an open cube
 (`results/FINAL/READY.json`: 278 wave cases, 0 open cubes, tool
 `results/WAVE4/scripts/gfrontier3.py`).
 
-**Why the wave records were not accepted as they stand.** The waves ran 36 separately modified
-drivers (`results/Haudit/AUDIT.md` RISK-3). The audit found that the original Mii-S driver counts
+**Why the wave records were not accepted as they stand.** The 36 WAVE1 machines each ran their
+own modified driver (`results/Haudit/AUDIT.md` RISK-3); the drivers of WAVE2–WAVE4 were not
+reviewed by the audit. The audit found that the original Mii-S driver counts
 a leaf as closed even when cake_lpr rejects it (BUG-1, no effect on committed results), that a
 truncated last cube line could be read as a larger cube (RISK-1), and that some drivers used
 non-unique scratch names, so a verdict could be recorded for the wrong cube (RISK-3 (b)).
@@ -243,7 +305,9 @@ non-unique scratch names, so a verdict could be recorded for the wrong cube (RIS
   already in the cube (both sorted by |literal|); the case part must hash to the case's
   `cnf_sha256` in `results/Mii-S/cases.jsonl`; run CaDiCaL with a text LRAT proof; VERIFIED only
   if cake_lpr prints exactly `s VERIFIED UNSAT`. A leaf that contradicts its case cube is
-  recorded VERIFIED without a solver run (`verify/v3/v3_check.py`, `leaf_job`).
+  recorded VERIFIED without a solver run (`verify/v3/v3_check.py`, `leaf_job`); none of the
+  73,880 final leaves is of this kind (`results/V3Z/problems.txt` gives timings for n = 73,880
+  solved leaves).
 - per case: the cover CNF {case cube units} + {¬leaf : leaf} must be UNSAT with a cake_lpr
   verified proof, or the leaf list must contain the empty cube.
 - V3T (`results/V3T/README.md`) reviewed and tested the scripts, found two bugs (shared work
@@ -269,8 +333,10 @@ non-unique scratch names, so a verdict could be recorded for the wrong cube (RIS
 
 Lean 4.24.0, Mathlib v4.24.0. Packages `results/H` (`ETVEncoding`), `results/H3`
 (`MirrorEncoding`), `results/V1-L` (`V1L`), `results/V2-L` (`V2L`). No `sorry`, `admit`,
-`native_decide`, `axiom` declaration, `implemented_by` or `extern` (`results/V2-L/README.md` §9.2,
-`logs/tree_grep_forbidden.log`, over 517 Lean files).
+`native_decide`, `axiom` declaration, `implemented_by` or `extern` in V2-L (`results/V2-L/README.md`
+§9.2, `results/V2-L/logs/tree_grep_forbidden.log`, a grep over V2-L's 517 Lean files);
+`results/H`, `results/H3` and `results/V1-L` each state in their README: no `sorry`, `admit`,
+`native_decide` or new axiom.
 
 **Sub-case (i)** (`results/V1-L/SUMMARY.md`):
 
@@ -315,31 +381,40 @@ outside the manifest; 52 manifest leaves, all in U_L7, are not tree leaves: each
 a tree leaf (cubes below a node that was both closed and split). So 73,690 + 52 + 138 = 73,880.
 
 **Trust base.** To read `V2L.mirrorExclusionLine_final` as the theorem of §1 one trusts:
-1. The Lean kernel and the definitions `Point`, `GeneralPosition`, `HasConvexNGon` (main
-   repository), `reflLine`, `convexHull` (Mathlib/H3), `DimacsSatisfiable` (H), `cubeCnf`,
-   `coverCheck`, `hullCnf`, `interiorCnf` (H3), `negClause` and the data definitions (V2-L).
+1. The Lean kernel and the definitions `Point`, `GeneralPosition`, `ConvexPosition`,
+   `HasConvexNGon` (main repository, `ErdosSzekeres/Definitions.lean`), `reflLine` (H3),
+   `convexHull` (Mathlib), `DimacsSatisfiable` (H), `cubeCnf`, `coverCheck`, `hullCnf`,
+   `interiorCnf` (H3), `hullLeaves` (V1-L), `negClause`, `RootCertificate`, `UpCertificates` and
+   the data definitions `upCubes`, `upTable`, `caseTable`, `casesOf`, `treeOf` (V2-L).
 2. **cake_lpr verdicts read as unsatisfiability of byte-identified files.** cake_lpr at
    a36874a8, `cake_lpr.S` sha256 `2f3af32d…72b7d4a`, verified in HOL4/CakeML down to x64; the
    trusted remainder is `basis_ffi.c`, gcc/ld and the OS (`results/V2-L/README.md` §6). A verdict
    `s VERIFIED UNSAT` on a file is read as `¬DimacsSatisfiable` of the Lean term whose DIMACS text
-   that file is. CaDiCaL, march_cu and the unpatched lrat-check (unsound,
-   `results/E2/logs/lrat_check_soundness.md`) are not trusted.
+   that file is. CaDiCaL, march_cu and lrat-check (the patched version, and drat-trim's unpatched one, which is
+   unsound: `results/E2/logs/lrat_check_soundness.md`) are not trusted. Where the verdicts are
+   recorded: root and up:U in `results/Mii-S/cover_lrat.jsonl`; the 172 direct cases in
+   `results/Mii-S/cases.jsonl` (`UNSAT_VERIFIED`); the other 138 + 73,690 tree leaves in the
+   `leaves.jsonl` records under `results/WAVE1`–`WAVE4` at Zf; sub-case (i) as in
+   `results/V1-L/SUMMARY.md` (`results/V2-L/README.md` §9.6).
 3. **DIMACS emission.** `Emit.lean` (H3) and `V2L/DataEq.lean` are unverified string formatting.
    They reproduced, from the Lean terms, F's sha256, the 122 obligation CNFs (byte/sha256 equal to
    the files cake_lpr checked) and the 450 case CNFs (sha256 equal to `cases.jsonl`)
    (`results/V2-L/README.md` §5), and `hm33k7.sub.cnf` (`results/V1-L/README.md` §2).
 4. **The drivers' leaf recording.** For the leaf facts, the per-leaf files were written by
    unverified Python ("case file + leaf units" in recorded order; `results/V2-L/README.md` §3, a
-   grep over the 56 WAVE1 driver scripts), and the cubes in `treeOf` are the literal sequences of
-   UNSAT records with `cake_lpr` exactly `s VERIFIED UNSAT` (§9.3). For sub-case (i) the same
-   holds for the V1-0..V1-3 drivers (`results/V1-L/SUMMARY.md`, item 3).
+   grep over the 56 WAVE1 driver scripts; the drivers of WAVE2–WAVE4 were not checked this way),
+   and the cubes in `treeOf` are the literal sequences of UNSAT records with `cake_lpr` exactly
+   `s VERIFIED UNSAT` (§9.3). For sub-case (i) the same holds for the V1-0..V1-3 drivers and
+   V1-L's backup driver `scripts/backup_leaves.py`, which checked 291 of the leaves
+   (`results/V1-L/SUMMARY.md`, trust base item 3 and table).
    The V3 acceptance removes the dependence on the wave drivers' verdicts but not on file identity:
    its leaf CNF is F + case units + only the leaf literals not in the case cube, sorted by
    |literal|, while the Lean term `cubeCnf (cubeCnf F c) l` appends all of l's literals in recorded
    order. The two have the same set of clauses (duplicate unit clauses removed, order changed), so
    they are equisatisfiable, but they are not byte-identical and this step is not checked in Lean.
    A V3 leaf that contradicts its case cube is accepted without a solver call; the corresponding
-   Lean term then contains complementary unit clauses and is trivially unsatisfiable.
+   Lean term then contains complementary unit clauses and is trivially unsatisfiable. In the
+   final table no leaf took this path (`results/V3Z/problems.txt`, n = 73,880 solved leaves).
 
 ## 7. Reproduction
 
@@ -348,8 +423,9 @@ a tree leaf (cubes below a node that was both closed and split). So 73,690 + 52 
   [old 14447d0d] (`results/FINAL/READY.json`).
 - verify/v3: 92746acb [old bdf319c] (`results/V3Z/README.md`).
 - V3Z table built at branch head 569b763f [old ff29bc68]; V3Z summary committed in 45bce6a0.
-- V2-L tree data and `FinalTree.lean`: last changed in 6ba4e377 (the commit cited as e1d13c7b in
-  `results/V2-L/README.md` §9.5 for the trial data maps to the same new hash).
+- V2-L tree data at Zf (`V2L/Trees/`, `scripts/gen_trees.py`): 8f3fdb83 [old 14fdad2c];
+  `FinalTree.lean` last changed in 6ba4e377, which is also the new hash of e1d13c7b, the commit
+  of the trial data cited in `results/V2-L/README.md` §9.5.
 - Generator scripts of Mii-S: fef1a241 [old 6a44b5f] (`results/Mii-S/README.md`).
 - The Python reference generators `tools/etv/gen_etv.py` and `results/C/scripts/mirgen.py` at
   3a04d94 (unchanged by the rewrite) (`results/H3/README.md`).
@@ -371,8 +447,9 @@ a tree leaf (cubes below a node that was both closed and split). So 73,690 + 52 
 - Manifest at Zf: `v3_jsonl_leaves.py ROOT results/WAVEk jtreek` for k = 1..4, then
   `v3_manifest.py ROOT M.jsonl C.jsonl results/WAVE1 jtree1 results/WAVE2 jtree2 results/WAVE3 jtree3 results/WAVE4 jtree4`
   (`results/FINAL/READY.json`).
-- Leaves and covers: `v3_check.py --root ROOT --base F.cnf --manifest M --shard I --nshards N --out OUT [--skip-covers|--skip-leaves] --jobs 4 --cap 1800`
-  (`verify/v3/README.md`, `results/V3B/TASK.md`); table: `results/V3Z/scripts/run_aggregate.sh`.
+- Leaves: `v3_check.py --root ROOT --base F.cnf --manifest M --shard I --nshards N --out OUT --skip-covers --work W --jobs 4 --cap 1800`
+  (`verify/v3/README.md`, `results/V3B/TASK.md` step 4); covers: the same with `--skip-leaves
+  --jobs 4 --cap 3600` (`results/V3Z/README.md`); table: `results/V3Z/scripts/run_aggregate.sh`.
 - Lean: `lake build` in `results/H`, `results/H3`, `results/V1-L`, `results/V2-L` (sharing H's
   `.lake/packages`); trees: `python3 -I scripts/gen_trees.py R OUTDIR` in `results/V2-L`
   reproduces `V2L/Trees/` byte for byte (`results/V2-L/README.md` §9.6).
@@ -382,6 +459,9 @@ a tree leaf (cubes below a node that was both closed and split). So 73,690 + 52 
   = 149; acceptance machines: 1 (V3T) + 9 + 16 + 16 + 24 + 8 (V3A–E) + 1 (V3Z) = 75.
 - Acceptance of the 73,880 wave leaves: 1,353,233 s (375.9 h) CaDiCaL and 301,295 s (83.7 h)
   cake_lpr, summed over the `solve_s` and `check_s` columns of `results/V3Z/accepted_final.tsv`.
+  These columns count one VERIFIED record per leaf plus the cover proofs
+  (`results/V3Z/scripts/aggregate_final.py`); repeated runs of the same leaf in V3A–V3E are not
+  counted, so the V3 compute actually spent is larger.
 - Covers and direct cases: 122 obligations 503 s + 222 s (Mii-S) and 515 s + 313 s (Haudit
   rerun); 172 direct cases 443 s + 331 s (Mii-S) and 699 s + 445 s (Haudit).
 - Sub-case (i) leaves: CaDiCaL 26,142 s, cake_lpr 4,608 s (`results/V1-L/SUMMARY.md` table).
@@ -439,7 +519,7 @@ The same table is in `NUMBERS.tsv`.
 - **Leaf counts.** V2-L's tree hypothesis has 74,000 instances; the manifest has 73,880 wave
   leaves, which with the 172 direct cases is 74,052 (`results/V2-L/README.md` §7a). The difference
   is the 52 U_L7 leaves of §6. V2F's per-record assembly closed only 411/450 cases with 74,031
-  leaves, because of record formats of 39 WAVE2 S-directories (§7a there); the directory-level rule
+  leaves, because of record formats of 39 WAVE2 directories of machines S1–S5 (§7a there); the directory-level rule
   closes 450/450.
 - **Timings of the same checks.** 122 obligations: 503 s CaDiCaL / 222 s cake_lpr
   (`results/Mii-S/README.md`) against 515 s / 313 s (`results/Haudit/AUDIT.md`, a rerun). 172
@@ -448,5 +528,13 @@ The same table is in `NUMBERS.tsv`.
   `s VERIFIED UNSAT` and 2 no cake_lpr field; `results/Mii-S/cases.jsonl` lists exactly 172 as
   `UNSAT_VERIFIED`.
 - **Geometric test coverage.** 279 distinct cases hit (Mii-S) against 394 (Haudit); different tests.
+- **Vacuous cases.** `results/Haudit/AUDIT.md` NOTE-3 states the rule as "2 ∈ U or 3 ∈ L",
+  which matches 57 cases; its count 56 and `results/Haudit/t4_summary.txt` ("U2.. or L3..")
+  exclude U = ∅, L = {2, 3} (§4).
+- **Sub-case (i) normal form.** `results/H3/README.md` §2 calls both `rotA` and `rotB` a
+  rotation; `rotB` (x, y) ↦ (y, x) is a reflection (`Frame.lean`, `orient_rotB`) (§3).
+- **Related work.** For Koshelev–Koshka (arXiv:2604.20120) the 14 Oct survey records a mention
+  of axially symmetric 18-point sets; `results/LIT/RELATED.md` §3 found in the snippets only a
+  25-point 3-fold example for a hexagon-type variant (§1).
 - **Leaf literal order.** The Lean leaf terms and the V3 rebuilt files differ in unit-clause order
   and duplicates (§6, item 4).
