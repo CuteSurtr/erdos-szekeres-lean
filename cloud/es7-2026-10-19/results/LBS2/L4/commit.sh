@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Sync live/ into data/ chunks, summarize, commit and push (only this directory).
 cd "$(dirname "$0")"
 python3 sync.py && python3 analyze.py > /dev/null
