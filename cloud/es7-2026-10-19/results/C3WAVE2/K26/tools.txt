@@ -1,0 +1,10 @@
+Tools for C3WAVE2 K26 (set up 2026-10-21 00:27-00:29 UTC; as results/C3WAVE1/C00/README.md describes; gen_case.py needs -o, so the base CNF was written with -o)
+- C3-S tools: git worktree /opt/c3s at 132398cdc801ee5df204eda8567b72abdbfc4341 (132398c, formerly 8dc27c3); TOOLS=/opt/c3s/cloud/es7-2026-10-19/results/C3-S/tools, unmodified (git status: 0 changes)
+- CaDiCaL: c60730422e758ef1cebe7aeddf2dda31c996bf04, 3.0.1 -> /opt/bin/cadical
+- cake_lpr: a36874a8b750b43fe4b385b8ddbf5b033e46a3fa, make cake_lpr -> /opt/bin/cake_lpr; example.cnf/example.lpr: s VERIFIED UNSAT
+- drat-trim lrat-check: 2e3b2dc0ecf938addbd779d42877b6ed69d9a985 + results/E2/tools/lrat-check-E2.patch (normal diff, applied with `patch lrat-check.c < patch`), gcc -O2 -> /opt/bin/lrat-check
+  sanity on CNF {1},{-1}: LRAT '3 0 0': lrat-check 'c NOT VERIFIED', cake_lpr 'c Checking failed at line: 0. Reason: pivot must be non-zero', no s line (rejected by both)
+                          LRAT '3 0 1 2 0': lrat-check 'c VERIFIED', cake_lpr 's VERIFIED UNSAT' (accepted by both)
+- base CNF: python3 $TOOLS/gen_case.py 11 7 none -o /opt/work/base.cnf: p cnf 168399 4154921, sha256 bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da (matches)
+- roots: rows of results/C3WAVE2/roots.tsv with idx = 26 mod 40: 34 roots (roots.tsv)
+- runner started 00:29:12 UTC with setsid nohup; END 01:41:55 UTC
