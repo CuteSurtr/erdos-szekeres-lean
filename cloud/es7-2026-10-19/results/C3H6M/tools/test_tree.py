@@ -55,6 +55,7 @@ man = [r["node"] for r in csv.DictReader(open(os.path.join(RES, "C3-S/manifest_d
 chk(sorted(man) == sorted(NEW.layers_name(x) for x in d2), "manifest depth-2 == tree depth-2 (flag off)")
 for L in d2:
     chk(kids(OLD, L) == kids(NEW, L), f"d2 {NEW.layers_name(L)}"); n_d2 += 1
+    chk(kids(NEW, L, mirror_h6=True) == kids(OLD, L), f"d2 flag-on {NEW.layers_name(L)}")
 rng = random.Random(20261021)
 deep_by_depth = {}
 while n_deep < 3000:
@@ -132,5 +133,25 @@ for f in sorted(glob.glob(os.path.join(RES, "C3W3/lists/*.tsv"))):
         else: col["disagree"].append((os.path.basename(f), r["node"], r["h6m_kept"], mine))
 out["h6m_kept_columns"] = col
 chk(not col["disagree"], "h6m_kept column")
+# ---- mutations: wrong maps must be told apart from C3T's kept sets, and they leave true pairs uncovered
+muts = {
+    "h3_map_m_minus_r": lambda a, s, o: tuple(sorted(((M - r) % M, None if g is None else 1 - g) for r, g in o)),
+    "no_sigma_change": lambda a, s, o: tuple(sorted(((a - r) % M, g) for r, g in o)),
+    "no_r_lt_a_term": lambda a, s, o: tuple(sorted(((a - r) % M, None if g is None else g ^ (s == 0)) for r, g in o)),
+    "no_s_eq_0_term": lambda a, s, o: tuple(sorted(((a - r) % M, None if g is None else g ^ (r < a)) for r, g in o)),
+}
+mres = {}
+for mn, f in muts.items():
+    differ = uncovered = 0
+    for t in tops[1:]:
+        a, s = t[0][1]
+        opts = own_options({0, a})
+        kept_m = {own_key(o) for o in opts if own_key(o) <= own_key(f(a, s, o))}
+        c3t = {own_key(tuple(tuple(x) for x in o)) for o in NEW.h6_layer2_kept(M, a, s)}
+        differ += kept_m != c3t
+        uncovered += sum(1 for o in opts if own_key(o) not in kept_m and own_key(own_phi(a, s, o)) not in kept_m)
+    mres[mn] = {"cases_differing_from_c3t": differ, "options_uncovered_by_true_phi": uncovered}
+    chk(differ > 0 and uncovered > 0, f"mutation {mn} not detected")
+out["mutations"] = mres
 out["failures"] = len(fails); out["failure_sample"] = fails[:20]
 print(json.dumps(out, indent=1))

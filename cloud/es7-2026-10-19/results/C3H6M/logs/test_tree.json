@@ -93,6 +93,24 @@
   "agree": 926,
   "disagree": []
  },
+ "mutations": {
+  "h3_map_m_minus_r": {
+   "cases_differing_from_c3t": 10,
+   "options_uncovered_by_true_phi": 470
+  },
+  "no_sigma_change": {
+   "cases_differing_from_c3t": 9,
+   "options_uncovered_by_true_phi": 20
+  },
+  "no_r_lt_a_term": {
+   "cases_differing_from_c3t": 8,
+   "options_uncovered_by_true_phi": 36
+  },
+  "no_s_eq_0_term": {
+   "cases_differing_from_c3t": 5,
+   "options_uncovered_by_true_phi": 48
+  }
+ },
  "failures": 0,
  "failure_sample": []
 }
