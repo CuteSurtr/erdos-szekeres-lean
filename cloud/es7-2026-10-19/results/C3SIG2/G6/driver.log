@@ -84,3 +84,19 @@
 === 0s0-5s1_1 K=3 end 2026-10-21T07:38:57Z killed=0
 === 0s0-5s1_1 refine start 2026-10-21T07:38:57Z deadline 07:57:00Z
 {"node": "0s0-5s1_1", "bits6": [2, 3, 4, 6, 7, 8], "open_k3": [[0, 0, 0], [0, 0, 1], [0, 1, 0], [0, 1, 1], [1, 0, 0], [1, 0, 1], [1, 1, 0], [1, 1, 1]], "tasks": 64}
+{"node": "0s0-5s1_1", "cube": {"2": 0, "3": 0, "4": 0, "6": 0, "7": 0, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 159.8, "certified": true}
+{"node": "0s0-5s1_1", "cube": {"2": 0, "3": 0, "4": 0, "6": 0, "7": 0, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 202.4, "certified": true}
+{"node": "0s0-5s1_1", "cube": {"2": 0, "3": 0, "4": 0, "6": 0, "7": 1, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 181.4, "certified": true}
+{"node": "0s0-5s1_1", "cube": {"2": 0, "3": 0, "4": 0, "6": 0, "7": 1, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 166.7, "certified": true}
+{"node": "0s0-5s1_1", "cube": {"2": 0, "3": 0, "4": 0, "6": 1, "7": 0, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 213.6, "certified": true}
+{"node": "0s0-5s1_1", "cube": {"2": 0, "3": 0, "4": 0, "6": 1, "7": 0, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 190.4, "certified": true}
+{"node": "0s0-5s1_1", "cube": {"2": 0, "3": 0, "4": 0, "6": 1, "7": 1, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 174.5, "certified": true}
+{"node": "0s0-5s1_1", "cube": {"2": 0, "3": 0, "4": 0, "6": 1, "7": 1, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 151.3, "certified": true}
+{"node": "0s0-5s1_1", "cube": {"2": 0, "3": 0, "4": 1, "6": 0, "7": 0, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 158.4, "certified": true}
+{"node": "0s0-5s1_1", "cube": {"2": 0, "3": 0, "4": 1, "6": 0, "7": 0, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 129.8, "certified": true}
+{"node": "0s0-5s1_1", "cube": {"2": 0, "3": 0, "4": 1, "6": 0, "7": 1, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 112.5, "certified": true}
+{"node": "0s0-5s1_1", "cube": {"2": 0, "3": 0, "4": 1, "6": 0, "7": 1, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 141.9, "certified": true}
+{"node": "0s0-5s1_1", "cube": {"2": 0, "3": 0, "4": 1, "6": 1, "7": 0, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 157.8, "certified": true}
+{"node": "0s0-5s1_1", "cube": {"2": 0, "3": 0, "4": 1, "6": 1, "7": 0, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 154.0, "certified": true}
+=== 0s0-5s1_1 refine end 2026-10-21T07:57:04Z killed=1
+=== RUNNER DONE 2026-10-21T07:57:04Z
