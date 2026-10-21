@@ -1,6 +1,7 @@
 import sys, random, json, subprocess, os, collections
 sys.path.insert(0, "/opt/audit/ind")
 from indep import *
+import indep as _I; truth = _I.truth
 m, nsets, seed, mode = int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3]), sys.argv[4]   # mode: geo | sat | satnogon
 k = 7
 rng = random.Random(seed)
