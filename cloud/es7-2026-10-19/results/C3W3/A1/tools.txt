@@ -6,4 +6,4 @@ lrat-check: https://github.com/marijnheule/drat-trim 2e3b2dc0ecf938addbd779d4287
 base CNF: gen_case.py 11 7 none -o /opt/work/base.cnf -> p cnf 168399 4154921, sha256 bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da (matches)
 roots: C3W3/lists/A_s0.tsv rows with row % 8 == 1: 37 roots (roots.tsv); 3 lanes, --jobs 1, slice 0.5 h, budget 2.0 h
 start 2026-10-21 04:40:01 UTC; END = start + 2 h - 15 min = 06:25:01 UTC
-seed: out0.jsonl seeded with 96 records (root 0s0-4s0_1s0-9s0: 88 certified depth-3, 7 split depth-3 name level, 1 split root; all from C3S0/S0/out.jsonl)
+seed: out0.jsonl seeded with 96 records for root 0s0-4s0_1s0-9s0 (1 root split, 7 depth-3 splits, 88 certified depth-4 nodes; depth = number of layers), all from C3S0/S0/out.jsonl; these lines are not in out.jsonl
