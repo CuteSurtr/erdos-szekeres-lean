@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """walk32 worker: ES base (gen_es.py) -> random walk (walk) -> snapshots -> vfy4 (exact GP,
 convex k-subset counts, order-type hash) -> tools/realizer/saturate.py --K 7 (exact checks
-and sat.c).  One JSON line per distinct (per worker) order type into live/eE_wW.jsonl, the
+and sat.c).  One JSON line per snapshot (from epoch 3 on; epochs 1-2 skipped
+repeated order types within a worker) into live/eE_wW.jsonl, the
 points into live/eE_sets_wW.txt (live/ is not tracked by git; copies are committed under data/).
 Stops at DEADLINE (unix time) or if live/STOP exists; any set with bad_candidates > 0 writes
 live/ALERT_* and creates live/STOP.  EPOCH only changes the random seeds (restarts).
@@ -24,9 +25,9 @@ def test(path, rec):
     rec.update(vfy4=v)
     if not v.get("general_position") or v["c7"] != 0 or v["c8plus"] != 0:
         rec["skipped"] = "not GP or has convex 7-gon"
-    elif v["ot_hash"] in seen:
-        return None
     else:
+        # saturation depends on the realization, not only on the order type: test every snapshot
+        rec["ot_seen_in_worker"] = v["ot_hash"] in seen
         seen.add(v["ot_hash"])
         r = subprocess.run([sys.executable, os.path.join(TOOLS, "realizer", "saturate.py"), "--sat", SAT, "--K", "7", path],
                            capture_output=True, text=True)
@@ -61,10 +62,15 @@ while time.time() < deadline and not os.path.exists(os.path.join(out, "STOP")):
     steps = rng.choice([1, 2, 5, 10, 30, 100, 300, 1000, 3000])
     nsnap = rng.choice([5, 10, 20])
     rmin = rng.choice([1e-3, 1e-2, 1e-1])
-    gen = dict(generator="walk32", worker=w, run=run, base_mild=mild, base_seed=bseed, walk_seed=wseed,
-               steps=steps, nsnap=nsnap, rmin=rmin)
+    beta = 0
+    if epoch >= 4 and rng.random() < 0.4:   # variant lowc6: bias the walk towards few convex 6-gons
+        beta = rng.choice([10, 100, 1000])
+        steps = rng.choice([100, 300, 1000, 3000])
+        nsnap = rng.choice([5, 10])
+    gen = dict(generator="walk32" + ("-lowc6" if beta else ""), worker=w, run=run, base_mild=mild, base_seed=bseed, walk_seed=wseed,
+               steps=steps, nsnap=nsnap, rmin=rmin, beta=beta)
     pref = os.path.join(tmp, "s")
-    r = subprocess.run([os.path.join(HERE, "walk"), base, str(wseed), str(nsnap), str(steps), str(rmin), pref],
+    r = subprocess.run([os.path.join(HERE, "walk"), base, str(wseed), str(nsnap), str(steps), str(rmin), pref] + ([str(beta)] if beta else []),
                        capture_output=True, text=True)
     try:
         wstat = json.loads(r.stderr.strip().splitlines()[-1])

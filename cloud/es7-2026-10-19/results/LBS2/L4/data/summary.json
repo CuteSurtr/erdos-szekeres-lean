@@ -1,75 +1,75 @@
 {
- "lines": 3100,
- "sets_tested": 3100,
+ "lines": 3642,
+ "sets_tested": 3642,
  "skipped": 0,
- "distinct_order_types": 3092,
- "order_types_tested_more_than_once": 4,
+ "distinct_order_types": 3567,
+ "order_types_tested_more_than_once": 33,
  "all_saturated": true,
  "not_saturated": [],
  "bad_candidates_total": 0,
  "faces_covered_all": true,
  "py_largest_convex_subset": {
-  "6": 3100
+  "6": 3642
  },
  "vfy4_vs_py_GP_agree": true,
  "c6": {
   "min": 11584,
-  "p10": 15447,
-  "median": 20949,
-  "p90": 32874,
+  "p10": 15396,
+  "median": 21195,
+  "p90": 32960,
   "max": 39648
  },
  "c5": {
-  "min": 26422,
-  "p10": 30023,
-  "median": 36298,
-  "p90": 45539,
+  "min": 25906,
+  "p10": 30028,
+  "median": 36428,
+  "p90": 45578,
   "max": 49884
  },
  "faces": {
   "min": 108898,
-  "p10": 109280,
+  "p10": 109282,
   "median": 109334,
   "p90": 109337,
   "max": 109337
  },
  "hull": {
-  "5": 1549,
-  "4": 1000,
-  "3": 85,
-  "6": 466
+  "5": 1823,
+  "4": 1171,
+  "3": 104,
+  "6": 544
  },
  "max_abs_coord": {
   "min": 31447056,
-  "p10": 34030183,
-  "median": 54045344,
-  "p90": 65905332,
+  "p10": 34028708,
+  "median": 53856622,
+  "p90": 65878830,
   "max": 67106818
  },
  "walk_len": {
   "min": 1,
   "p10": 10,
   "median": 400,
-  "p90": 15000,
+  "p90": 14000,
   "max": 60000
  },
  "by_base_mild": {
-  "0": 581,
-  "1": 1485,
-  "2": 1034
+  "0": 708,
+  "1": 1729,
+  "2": 1205
  },
- "distinct_bases": 247,
- "seconds_mean": 0.886,
+ "distinct_bases": 287,
+ "seconds_mean": 0.899,
  "c6_histogram_5000": {
-  "10000": 206,
-  "15000": 1216,
-  "20000": 548,
-  "25000": 489,
-  "30000": 489,
-  "35000": 152
+  "10000": 248,
+  "15000": 1394,
+  "20000": 670,
+  "25000": 580,
+  "30000": 544,
+  "35000": 206
  },
  "faces_histogram_1000": {
-  "108000": 45,
-  "109000": 3055
+  "108000": 55,
+  "109000": 3587
  }
 }
