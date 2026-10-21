@@ -22,3 +22,20 @@
 {"node": "0s0_5s1-6s0", "cube": {"1": 0, "2": 0, "3": 1, "4": 0, "7": 0, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 228.4, "certified": true}
 === 0s0_5s1-6s0 L=6 end 2026-10-21T06:16:28Z killed=1
 === 0s0_1s1-3s1 L=3 start 2026-10-21T06:16:28Z deadline 06:49:25Z
+{"node": "0s0_1s1-3s1", "cube": {"2": 0, "4": 0, "5": 0}, "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0_1s1-3s1", "cube": {"2": 0, "4": 0, "5": 1}, "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0_1s1-3s1", "cube": {"2": 0, "4": 1, "5": 0}, "status": "UNKNOWN", "solve_s": 300.3, "certified": null}
+{"node": "0s0_1s1-3s1", "cube": {"2": 0, "4": 1, "5": 1}, "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0_1s1-3s1", "cube": {"2": 1, "4": 0, "5": 0}, "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0_1s1-3s1", "cube": {"2": 1, "4": 0, "5": 1}, "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0_1s1-3s1", "cube": {"2": 1, "4": 1, "5": 0}, "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0_1s1-3s1", "cube": {"2": 1, "4": 1, "5": 1}, "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+=== 0s0_1s1-3s1 L=3 end 2026-10-21T06:31:34Z killed=0
+=== 0s0_1s1-3s1 L=6 start 2026-10-21T06:31:34Z deadline 06:49:25Z
+{"node": "0s0_1s1-3s1", "bits6": [2, 4, 5, 6, 7, 8], "open_k3": [{"2": 0, "4": 0, "5": 0}, {"2": 0, "4": 0, "5": 1}, {"2": 0, "4": 1, "5": 0}, {"2": 0, "4": 1, "5": 1}, {"2": 1, "4": 0, "5": 0}, {"2": 1, "4": 0, "5": 1}, {"2": 1, "4": 1, "5": 0}, {"2": 1, "4": 1, "5": 1}], "tasks": 64}
+{"node": "0s0_1s1-3s1", "cube": {"2": 0, "4": 0, "5": 0, "6": 0, "7": 0, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 65.9, "certified": true}
+{"node": "0s0_1s1-3s1", "cube": {"2": 0, "4": 0, "5": 0, "6": 0, "7": 0, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 74.0, "certified": true}
+{"node": "0s0_1s1-3s1", "cube": {"2": 0, "4": 0, "5": 0, "6": 0, "7": 1, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 56.5, "certified": true}
+{"node": "0s0_1s1-3s1", "cube": {"2": 0, "4": 0, "5": 0, "6": 0, "7": 1, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 72.5, "certified": true}
+{"node": "0s0_1s1-3s1", "cube": {"2": 0, "4": 0, "5": 0, "6": 1, "7": 0, "8": 0}, "status": "UNSATISFIABLE", "solve_s": 58.4, "certified": true}
+{"node": "0s0_1s1-3s1", "cube": {"2": 0, "4": 0, "5": 0, "6": 1, "7": 0, "8": 1}, "status": "UNSATISFIABLE", "solve_s": 68.7, "certified": true}
