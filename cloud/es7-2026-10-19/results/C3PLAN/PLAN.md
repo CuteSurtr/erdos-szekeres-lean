@@ -6,7 +6,7 @@ per-node solve + check seconds from the `out.jsonl` records. These are not wall 
 ran 3 jobs on 4 cores, so each number is a little inflated.
 
 Data snapshot: all `results/C3WAVE1/*/out.jsonl` and `results/C3WAVE2/*/out.jsonl` as of the last pull
-(01:16 UTC, branch es7-cloud at b77d9d01). Wave 2 was still running then (until about 02:00 UTC), so its rows will grow.
+(01:17 UTC, branch es7-cloud at 39fa881d). Wave 2 was still running then (until about 02:00 UTC), so its rows will grow.
 
 ## 1. Measured cost so far
 
@@ -65,18 +65,17 @@ s = σ_a of the top case, l2 = layer-2 type, d = depth, o = orbits in the newest
 run out of time. "Hard" below means that nodes timed out at their cap.
 
 - **The top-case bit s = σ_a decides it.** No s = 0 node has ever timed out (bucket table: 0
-  timeouts in every s0 bucket). Every measured two-orbit s = 0 root is closed (H6(1,0) 144,
-  H6(2,0) 68, H6(3,0) 2), at depth 2, for a mean of 77 core-s per root. One-orbit s = 0
-  roots cost about 4,600 core-s each (9 closed H6(1,0) roots, 120 depth-3 leaves each). The 6
-  partial one-orbit s = 0 roots (`0s0-2s0_{3,6,7,9,10}`, `0s0-3s0_5`) are wave-2 slices that ran out
-  of time with 3–100 untried depth-3 nodes and no timeout. Every wave root with timeouts is an
+  timeouts in every s0 bucket). Every measured two-orbit s = 0 root is closed (H6(1,0) 144, H6(2,0) 71, H6(3,0) 10), at depth 2, for a mean of 77 core-s per root. One-orbit s = 0
+  roots cost about 4,600 core-s each (9 closed H6(1,0) roots, 120 depth-3 leaves each). The
+  4 partial one-orbit s = 0 roots (`0s0-2s0_3`, `0s0-2s0_6`, `0s0-2s0_9`, `0s0-3s0_7`) are wave-2 slices that ran out of time with
+  3–120 untried depth-3 nodes and no timeout. Every wave root with timeouts is an
   s = 1 root. One caution: C3-S's full enumeration of H6(4,0) at depth 2 (s = 0, no `--sat`, up to
   6 processes on 4 cores) had 5 of 144 two-orbit and all 9 one-orbit children time out at 300 s
   (`results/C3-S/README.md`, Measurements 7). So s = 0 with a ≥ 3 may be harder than the measured
   a = 1, 2. If those 5 roots behave like s = 1 two-orbit timeouts (about 4.4 core-h each),
   H6(4,0) costs about 20 core-h more than the borrowed estimate below.
 - **One-orbit layer 2 under s = 1 is the hardest stratum.** None of the measured roots
-  (10: all 9 of H6(1,1) and `0s0-2s1_1`) is closed. The wave-1 ones (`0s0-1s1_{2,3,4,6,7,10}`,
+  (10: `0s0-1s1_10`, `0s0-1s1_2`, `0s0-1s1_3`, `0s0-1s1_4`, `0s0-1s1_5`, `0s0-1s1_6`, `0s0-1s1_7`, `0s0-1s1_8`, `0s0-1s1_9`, `0s0-2s1_1`) is closed. The wave-1 ones (`0s0-1s1_{2,3,4,6,7,10}`,
   `0s0-2s1_1`) have spent 9,000–41,000 core-s each and still have 375–4,299 open nodes
   (`0s0-1s1_4`: 1,329 at depth 4 and 2,970 at depth 5). Their depth-3
   single-orbit children (single below single) timed out at 300 s **80 times out of 80**.
@@ -93,8 +92,8 @@ run out of time. "Hard" below means that nodes timed out at their cap.
   about 5.5 s to solve and 15 s to check. Most of the 15 s is fixed work per node: the 4.15M-clause
   base CNF is written, hashed and parsed by both checkers. Deep layer trees therefore pay mostly
   for this overhead.
-- **H3 (100 roots) and H6(a, ·) for a = 4, 5 have no wave records at all**, and a = 3 has only 3
-  roots. Both waves take roots in name order, which puts the H6 roots first, and wave 2 had not
+- **H3 (100 roots) has no wave records at all**, and H6(a, ·) for a = 3, 4, 5 has only
+  14 touched roots of 918. Both waves take roots in name order, which puts the H6 roots first, and wave 2 had not
   reached these at the snapshot.
 
 ## 2. Total cost of the C3 class with the current method
