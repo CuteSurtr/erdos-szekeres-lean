@@ -119,7 +119,24 @@ The findings below are about how the evidence is documented or labelled. None of
 
 ## Lean build
 
-LEAN_BUILD_PLACEHOLDER
+I built the packages myself from a `git archive` of the branch head (8f3fdb83 trees). The build used Lean 4.24.0
+from the release zip and Mathlib `f897ebcf` from source (the cache is not reachable). The command was
+`lake build V2L.FinalTree V2L.Audit`, and the result was `Build completed successfully (2076 jobs)`, 00:45–01:19 UTC
+(`lean_build_tail.log`). That build kernel-checked all 1,050 per-sibling-list `decide +kernel` theorems,
+`CheckLeaf` and `treeOf_check`.
+
+`scripts/A6Check.lean` (`lake env lean`):
+
+- `#check V2L.mirrorExclusionLine_final`: the four hypotheses are as `V2-L/README.md` §9.1 says. `hleaves` is
+  `∀ p ∈ caseTable, ∀ l ∈ (treeOf p.1).leaves, ¬DimacsSatisfiable (cubeCnf (cubeCnf (interiorCnf 33 7) p.2) l)`.
+- Axioms:
+  - `mirrorExclusionLine_final`: [propext, Classical.choice, Quot.sound];
+  - `treeOf_check`: [propext].
+- `#eval`:
+  - the leaves summed over `caseTable` give **74,000**;
+  - cases with an empty leaf list: **0**, so `hleaves` is not vacuous for any case.
+- A grep of `V2-L/V2L` for `sorry`, `admit`, `native_decide`, `implemented_by` and `@[extern` finds only one
+  comment, in `Facts.lean:11`.
 
 ## What I could not check
 
