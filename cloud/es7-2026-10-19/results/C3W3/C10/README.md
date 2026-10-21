@@ -84,3 +84,4 @@ Partial: 0s0-4s1_1s1-5s0. Not reached: rows 11–33 of `roots.tsv`, including th
 There were no SAT answers, no `PROOF NOT ACCEPTED`, and no memory problems. Peak used memory was about 9 GB of 15 GB.
 
 `compose.txt`: output of `compose.py` on `out.jsonl`. The class is not expected to be covered.
+Result: 2,324 certified nodes; `class_covered: false`, with 850 uncovered frontier nodes (as expected).
