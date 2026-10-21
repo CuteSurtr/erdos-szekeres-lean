@@ -35,13 +35,15 @@ def compose(recs, tag, brute=False):
 
 rows = [compose(R, "none", brute=True)]
 sig = [i for i, r in enumerate(R) if r.get("split") and "sigma_bits" in r]
-# a sigma-split parent all of whose cubes are certified leaves
+# a sigma-split parent with the most certified cube leaves (all of them if possible)
 names = {r["node"]: i for i, r in enumerate(R) if cert(r)}
+best = None
 for i in sig:
     L, C = h.parse_node(R[i]["node"])
-    kids = [h.node_name(*c) for c in h.sigma_children(int(m), L, C, len(R[i]["sigma_bits"]))[1]]
-    if all(c in names for c in kids):
-        break
+    kids = [c for c in (h.node_name(*c) for c in h.sigma_children(int(m), L, C, len(R[i]["sigma_bits"]))[1]) if c in names]
+    if best is None or len(kids) > len(best[1]):
+        best = (i, kids)
+i, kids = best
 # 1. missing cube
 rows.append(compose([r for j, r in enumerate(R) if j != names[kids[-1]]], "missing_cube", brute=True))
 rows[-1]["detail"] = kids[-1]

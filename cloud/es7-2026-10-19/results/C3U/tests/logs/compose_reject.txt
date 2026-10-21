@@ -8,11 +8,11 @@
 {"mutation": "nonconflicting_layer_child_dropped", "rc": 0, "class_covered": false, "error": null, "uncovered_sample": ["0s0_1_2s1-3s1__2s1-3s1-4s0-5s0", "0s0_1__2s1-3s1", "0s0_1_2_3"], "brute_force_holes": 3, "detail": "0s0_1_2s1-3s1__2s1-3s1-4s0-5s0 (child of 0s0_1__2s1-3s1-4s0-5s0; its newest layer fixes a residue of C to C's value)"}
 FAILURES 0 [] []
 == sig_m7k6c300K3
-Traceback (most recent call last):
-  File "/home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C3U/tests/compose_reject.py", line 46, in <module>
-    rows.append(compose([r for j, r in enumerate(R) if j != names[kids[-1]]], "missing_cube", brute=True))
-                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C3U/tests/compose_reject.py", line 46, in <listcomp>
-    rows.append(compose([r for j, r in enumerate(R) if j != names[kids[-1]]], "missing_cube", brute=True))
-                                                            ~~~~~^^^^^^^^^^
-KeyError: '0s0_3__1s1-2s1-4s1'
+{"mutation": "none", "rc": 0, "class_covered": true, "error": null, "uncovered_sample": [], "brute_force_holes": 0}
+{"mutation": "missing_cube", "rc": 0, "class_covered": false, "error": null, "uncovered_sample": ["0s0_1__2s1-3s1-4s0", "0s0_1_2_3", "0s0_1_2_4"], "brute_force_holes": 864, "detail": "0s0_1__2s1-3s1-4s0"}
+{"mutation": "cube_wrong_cnf_sha256", "rc": 1, "class_covered": null, "error": "/opt/work/small/mut_m7K3/mut_cube_wrong_cnf_sha256.jsonl line 53: node 0s0_1__2s0-3s0-4s0: cnf_sha256 0000000000000000000000000000000000000000000000000000000000000000 is not the re-derived 2d9b52cf3488a705924919dab0b4db9a9c24e59549e5b87d5658aa09138c8b5a", "uncovered_sample": [], "detail": "0s0_1__2s0-3s0-4s0"}
+{"mutation": "sigma_bits_reversed", "rc": 1, "class_covered": null, "error": "/opt/work/small/mut_m7K3/mut_sigma_bits_reversed.jsonl line 6: node 0s0_1 (2 layers): sigma_bits [4, 3, 2] refused: a sigma split needs a node with >= 2 layers and the 3 smallest free residues [2, 3, 4]", "uncovered_sample": [], "detail": "0s0_1 sigma_bits [2, 3, 4] -> [4, 3, 2]"}
+{"mutation": "sigma_bits_not_smallest", "rc": 1, "class_covered": null, "error": "/opt/work/small/mut_m7K3/mut_sigma_bits_not_smallest.jsonl line 6: node 0s0_1 (2 layers): sigma_bits [2, 3, 5] refused: a sigma split needs a node with >= 2 layers and the 3 smallest free residues [2, 3, 4]", "uncovered_sample": [], "detail": "0s0_1 sigma_bits [2, 3, 4] -> [2, 3, 5]"}
+{"mutation": "sigma_split_at_depth_1", "rc": 1, "class_covered": null, "error": "/opt/work/small/mut_m7K3/mut_sigma_split_at_depth_1.jsonl line 241: node 0s0 (1 layers): sigma_bits [1, 2] refused: a sigma split needs a node with >= 2 layers and the 2 smallest free residues [1, 2]", "uncovered_sample": []}
+{"mutation": "nonconflicting_layer_child_dropped", "rc": 0, "class_covered": false, "error": null, "uncovered_sample": ["0s0_2_1s0-3s1__1s0-3s1-4s0", "0s0_2_1_3", "0s0_2_1_4"], "brute_force_holes": 22, "detail": "0s0_2_1s0-3s1__1s0-3s1-4s0 (child of 0s0_2__1s0-3s1-4s0; its newest layer fixes a residue of C to C's value)"}
+FAILURES 0 [] []
