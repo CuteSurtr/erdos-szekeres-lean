@@ -42,6 +42,17 @@ Conditions for accepting the implementation:
     quarter of FULL: σ_3 and σ_4 are free in FULL, because its layers 3 and 4 are one-orbit layers.
   - **C3U compose (95cafa93): `class_covered: true`.** C3T compose on the same plain records: not covered (frontier
     `0s0_1s0-2s0_3`). My fixed composer: not covered (frontier `0s0_1s0-2s0_3_4`). See `logs/childless_compose.txt`.
+- **The same failure from unmodified `close_tree.py` output** (`logs/natural/`, see its README.txt): m = 5, k = 6.
+  - Run A: C3U `close_tree` from `0s0` with `-c 1`, no σ-split.
+  - Run B: C3U `close_tree` from `0s0_2` with `-c 1` and `--sigma-split 2`.
+  - C: the 46 fully layered cube leaves that B left with 0 children, solved afterwards, all certified. A later
+    `close_tree` run with those leaves as ROOT does the same.
+  - On A + C, C3U compose reports a frontier of 31 nodes, and my brute force finds 36 holes. **5 fully layered plain
+    nodes are counted covered** (no uncovered ancestor in C3U's frontier list), although only one σ half of each is
+    certified. Example: `0s0_2_1_3s0-4s1`, where only `__1s1-3s0` is certified; brute force leaves 2 σ vectors of it
+    unrefuted. My fixed composer reports a frontier of 52.
+  - This is the "earlier wave split the node by layers, a later wave σ-split it" situation the task asked about: the
+    layer route of `0s0_2` comes from A, the cube certificates from B and C.
 - **Reach today:** the wave records at 712efc6b use at most 7 of the 11 residues, so no record is fully layered. Every
   covered/not-covered answer so far is unaffected. The hole opens once rule-3 splits below cubes reach full depth.
 - **Wrong statements** (final README f710546d): `sigma_split.md:82` and `README.md:27` say the plain-node rule is "the C3T rule unchanged".
@@ -52,7 +63,9 @@ Conditions for accepting the implementation:
 
 ### 2. `close_tree.py` drops a timed-out childless node from the frontier — misleading, not a soundness break
 `close_tree.py:194-196` (95cafa93) writes `{"split": true, "children": 0}` for a fully layered node that timed out,
-and the node leaves the frontier. The run can then print `open_frontier: 0` without a proof of that node. This
+and the node leaves the frontier. The run can then print `open_frontier: 0` without a proof of that node. Reproduced: run A above (C3U `close_tree`, m = 5,
+k = 6, `-c 1`) prints `{"open_frontier": 0}` while 52 fully layered nodes timed out and were never refuted. Both
+composers report them uncovered. This
 behaviour is inherited from C3T, and the C3U README states it. `compose.py` is the judge: it catches cube nodes, and
 catches plain nodes only once finding 1 is fixed. Suggestion: keep such a node on an "unsplittable" list and print it.
 
