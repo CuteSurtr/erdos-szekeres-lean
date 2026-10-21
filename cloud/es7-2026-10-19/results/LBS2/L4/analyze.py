@@ -30,5 +30,12 @@ c6h = collections.Counter((r["c6"] // 5000) * 5000 for r in tested)
 s["c6_histogram_5000"] = dict(sorted(c6h.items()))
 fh = collections.Counter((r["faces"] // 1000) * 1000 for r in tested)
 s["faces_histogram_1000"] = dict(sorted(fh.items()))
+for g in sorted({r["generator"] for r in tested}):
+    t = [r for r in tested if r["generator"] == g]
+    s["by_generator_" + g] = {"sets": len(t), "distinct_order_types": len({r["ot_hash"] for r in t}),
+                             "saturated": sum(1 for r in t if r.get("saturated") is True),
+                             "c6": q([r["c6"] for r in t]), "faces": q([r["faces"] for r in t])}
+s["min_c6_records"] = [{k: r.get(k) for k in ("generator", "worker", "run", "base_seed", "walk_seed", "beta", "walk_len", "ot_hash", "c6", "c5", "hull", "faces", "bad_candidates")}
+                       for r in sorted(tested, key=lambda r: r["c6"])[:3]]
 json.dump(s, open(os.path.join(HERE, "data", "summary.json"), "w"), indent=1)
 print(json.dumps(s, indent=1))
