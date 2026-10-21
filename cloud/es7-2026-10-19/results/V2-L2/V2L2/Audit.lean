@@ -7,15 +7,15 @@ import V2L2.Main
 #guard_msgs in
 #print axioms V2L2.dimacsSatisfiable_congr
 
-/-- info: 'V2L2.v3LeafCnf_iff' depends on axioms: [propext] -/
+/-- info: 'V2L2.v3LeafCnf_iff' depends on axioms: [propext, Quot.sound] -/
 #guard_msgs in
 #print axioms V2L2.v3LeafCnf_iff
 
-/-- info: 'V2L2.not_dimacsSatisfiable_of_units' depends on axioms: [propext] -/
+/-- info: 'V2L2.not_dimacsSatisfiable_of_units' depends on axioms: [propext, Quot.sound] -/
 #guard_msgs in
 #print axioms V2L2.not_dimacsSatisfiable_of_units
 
-/-- info: 'V2L2.not_dimacsSatisfiable_of_neg_mem' depends on axioms: [propext] -/
+/-- info: 'V2L2.not_dimacsSatisfiable_of_neg_mem' depends on axioms: [propext, Quot.sound] -/
 #guard_msgs in
 #print axioms V2L2.not_dimacsSatisfiable_of_neg_mem
 
