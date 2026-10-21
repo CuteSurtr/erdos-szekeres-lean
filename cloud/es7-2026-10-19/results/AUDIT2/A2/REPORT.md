@@ -1,7 +1,7 @@
 # AUDIT2 A2: the encoding (CNF F and the sub-case (i) CNF)
 
 Audit id A2. Budget 1.75 h. Task file `results/AUDIT2/TASK.md` at Z = 852bee7. The run was
-00:33 to about 01:25 UTC, 21 Oct 2026, on one cloud VM (4 cores, 15 GB, `env.txt`). Working
+00:33 to 01:15 UTC, 21 Oct 2026, on one cloud VM (4 cores, 15 GB, `env.txt`). Working
 notes with timestamps are in `NOTES.md`, and logs are in `logs/`.
 
 **Question.** Is F = `m33k7int.sub.cnf` a sound encoding of sub-case (ii), and is
