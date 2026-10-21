@@ -17,7 +17,7 @@ Machine: one cloud VM with 4 cores, 15 GB RAM and no swap (`env.txt`). Start 04:
   - 518 for `0s0-1s1_5s0-8s1` (C3WAVE2/K18);
   - 487 for `0s0-2s1_5s1-8s0` (C3WAVE2/K03).
 
-  `out.jsonl` holds only the 2,400 new records, which are the lines after the seeded ones.
+  `out.jsonl` holds only the 2,401 new records, which are the lines after the seeded ones.
 
 ## Per root
 
