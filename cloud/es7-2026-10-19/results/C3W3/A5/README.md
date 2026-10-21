@@ -14,7 +14,7 @@ One cloud VM, 4 cores, 15 GB RAM, no swap (`env.txt`). Start 04:40:08 UTC, END 0
 
 Lanes `lane0.sh`, `lane1.sh`, `lane2.sh` (lane k takes root positions ≡ k mod 3), each `close_tree.py … --jobs 1 --caps 300,300,600 --cadopts=--sat --split-singles --hours S`.
 All three lanes were killed at END (06:25 UTC). The nodes in flight at that moment wrote no record, so `out.jsonl` has no record with `cake_lpr: none` and there was nothing to re-check.
-`close_tree.py` checks its deadline only between waves, so a root can run past its 0.5 h slice. Lane 0 spent the whole run on root 5 and lane 2 on root 69. Lane 1 closed 7 roots.
+`close_tree.py` checks its deadline only between waves, so a root can run past its 0.5 h slice. Lane 0 spent the whole run on root 5 and lane 2 on root 69. Lane 1 closed 7 roots and lane 2 closed 2.
 
 Seeded records (step 3): 360, all in lane 0 (0s0-5s0_1s0-4s1: 38, 0s0-5s0_2s1-4s0: 322), from earlier waves' out/recheck files. `out.jsonl` has only the 698 new records (lane by lane, without the seeded lines).
 
@@ -23,7 +23,7 @@ Seeded records (step 3): 360, all in lane 0 (0s0-5s0_1s0-4s1: 38, 0s0-5s0_2s1-4s
 
 Closed (9): 0s0-2s0_1s1-4s0, 0s0-2s0_3s0-8s0, 0s0-2s0_5s0-6s1, 0s0-4s0_1s1-7s0, 0s0-4s0_6s0-8s0, 0s0-5s0_1s1-8s0, 0s0-5s0_2s1-9s1, 0s0-2s0_4, 0s0-2s0_3s1-10s1.
 Partial: 0s0-5s0_1s0-4s1 (row 5, resumed), 0s0-5s0_1s0-3s1 (row 69), 0s0-2s0_8s1-9s0 (row 181; started 3 min before END, nothing recorded).
-Not reached: 25 roots, including the seeded partial root 0s0-5s0_2s1-4s0 (row 149).
+Not reached: 24 roots, including the seeded partial root 0s0-5s0_2s1-4s0 (row 149).
 
 ## Per root (new records only; depth = number of layers, roots are at depth 2)
 
