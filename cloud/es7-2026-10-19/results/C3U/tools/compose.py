@@ -151,8 +151,8 @@ def main():
         for bits, where in L:
             nb = len(bits) if isinstance(bits, list) else 0
             if nb == 0 or len(lay) < 2 or bits != free_residues(M, lay, C)[:nb] or len(free_residues(M, lay, C)) < nb:
-                fail(f"{where}: node {name}: sigma_bits {bits} are not the {nb} smallest free residues "
-                     f"{free_residues(M, lay, C)[:nb]} of a node with >= 2 layers")
+                fail(f"{where}: node {name} ({len(lay)} layers): sigma_bits {bits} refused: a sigma split needs a "
+                     f"node with >= 2 layers and the {nb} smallest free residues {free_residues(M, lay, C)[:nb]}")
     # implied sigma splits: all 2^K sigma_cubes.py cubes of a node on its K smallest free residues certified
     for (parent, res), got in cubes.items():
         lay, C = parse_node(parent)
@@ -222,11 +222,12 @@ def main():
                 memo[name] = True
                 return True
         if C:
-            if name not in lsplit:
+            ch = cube_layer_children(M, K, layers, C, mirror=True, mirror_h6=MIRROR_H6)
+            if name not in lsplit or not ch:  # no children (all residues used): never vacuously covered
                 missing.append(name)
                 return False
             res = True
-            for cl, cc in cube_layer_children(M, K, layers, C, mirror=True, mirror_h6=MIRROR_H6):
+            for cl, cc in ch:
                 res = covered2(cl, cc) and res
             memo[name] = res
             return res
