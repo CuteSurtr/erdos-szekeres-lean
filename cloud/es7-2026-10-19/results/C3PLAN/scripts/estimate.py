@@ -87,6 +87,7 @@ def s_of(top):
 
 
 tot = [0.0, 0.0, 0.0]
+totm = [0.0, 0.0, 0.0]  # with the H6 mirror reduction of PLAN.md (kept: 5 of 9 one-orbit, 76 of 144 two-orbit roots)
 print("stratum\troots\tmeasured(closed/partial)\tper_root_core_h(low/mid/high)\tstratum_core_h(low/mid/high)\tsource")
 for st in sorted(count):
     n = count[st]
@@ -103,7 +104,13 @@ for st in sorted(count):
         meas = f"{sum(x[3] == 'closed' for x in per.get(st, []))}/{sum(x[3] == 'partial' for x in per.get(st, []))}"
         lo, mid, hi = (sum(x[i] for x in v) / len(v) for i in range(3))
     tot = [tot[0] + n * lo, tot[1] + n * mid, tot[2] + n * hi]
+    f = 1 if st[0] == "H3" else (5 / 9 if st[1] == "one" else 76 / 144)
+    totm = [totm[0] + f * n * lo, totm[1] + f * n * mid, totm[2] + f * n * hi]
     print(f"{st[0]}/{st[1]}\t{n}\t{meas}\t{lo/3600:.2f}/{mid/3600:.2f}/{hi/3600:.2f}\t"
           f"{n*lo/3600:.0f}/{n*mid/3600:.0f}/{n*hi/3600:.0f}\t{src}")
 print("TOTAL core-hours low/mid/high:", "/".join(f"{x/3600:.0f}" for x in tot))
+print("TOTAL with H6 mirror reduction, core-hours low/mid/high:", "/".join(f"{x/3600:.0f}" for x in totm))
+H3 = [x * 1.27 for x in (218, 446, 1681)]
+print("H3 high from the second-heaviest walk (1,681 solve core-h) instead of 6.8e5:",
+      "no mirror", f"{(tot[2] - 1.27 * 6.8e5 * 3600) / 3600 + H3[2]:.0f}", "with H6 mirror", f"{(totm[2] - 1.27 * 6.8e5 * 3600) / 3600 + H3[2]:.0f}")
 print("bucket costs c_b (s):", json.dumps({"/".join(map(str, k)): round(v, 1) for k, v in sorted(cb.items())}))

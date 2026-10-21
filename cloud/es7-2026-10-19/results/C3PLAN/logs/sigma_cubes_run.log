@@ -8,3 +8,22 @@
 {"node": "0s0-1s1_3s1-4s0", "cube": {"2": 1, "5": 1, "6": 0}, "status": "UNSATISFIABLE", "solve_s": 133.3, "certified": true}
 {"node": "0s0-1s1_3s1-4s0", "cube": {"2": 1, "5": 1, "6": 1}, "status": "UNKNOWN", "solve_s": 150.1, "certified": null}
 === 0s0-1s1_2s1-9s1 00:55:16
+{"node": "0s0-1s1_2s1-9s1", "cube": {"3": 0, "4": 0, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 32.5, "certified": true}
+{"node": "0s0-1s1_2s1-9s1", "cube": {"3": 0, "4": 0, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 68.9, "certified": true}
+{"node": "0s0-1s1_2s1-9s1", "cube": {"3": 0, "4": 1, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 69.1, "certified": true}
+{"node": "0s0-1s1_2s1-9s1", "cube": {"3": 0, "4": 1, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 115.8, "certified": true}
+{"node": "0s0-1s1_2s1-9s1", "cube": {"3": 1, "4": 0, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 70.4, "certified": true}
+{"node": "0s0-1s1_2s1-9s1", "cube": {"3": 1, "4": 0, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 101.7, "certified": true}
+{"node": "0s0-1s1_2s1-9s1", "cube": {"3": 1, "4": 1, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 101.7, "certified": true}
+{"node": "0s0-1s1_2s1-9s1", "cube": {"3": 1, "4": 1, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 132.9, "certified": true}
+=== DONE 01:01:40
+=== 0s0-1s1_4s0-6s1 01:01:52
+{"node": "0s0-1s1_4s0-6s1", "cube": {"2": 0, "3": 0, "5": 0}, "status": "UNKNOWN", "solve_s": 120.1, "certified": null}
+{"node": "0s0-1s1_4s0-6s1", "cube": {"2": 0, "3": 0, "5": 1}, "status": "UNKNOWN", "solve_s": 120.1, "certified": null}
+{"node": "0s0-1s1_4s0-6s1", "cube": {"2": 0, "3": 1, "5": 0}, "status": "UNKNOWN", "solve_s": 120.3, "certified": null}
+{"node": "0s0-1s1_4s0-6s1", "cube": {"2": 0, "3": 1, "5": 1}, "status": "UNKNOWN", "solve_s": 120.4, "certified": null}
+{"node": "0s0-1s1_4s0-6s1", "cube": {"2": 1, "3": 0, "5": 0}, "status": "UNKNOWN", "solve_s": 120.1, "certified": null}
+{"node": "0s0-1s1_4s0-6s1", "cube": {"2": 1, "3": 0, "5": 1}, "status": "UNKNOWN", "solve_s": 120.1, "certified": null}
+{"node": "0s0-1s1_4s0-6s1", "cube": {"2": 1, "3": 1, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 118.7, "certified": true}
+{"node": "0s0-1s1_4s0-6s1", "cube": {"2": 1, "3": 1, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 91.4, "certified": true}
+=== DONE 01:08:21
