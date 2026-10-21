@@ -32,3 +32,25 @@
 === NODE 0s0-1s1_2s1-3s0 K=3 end 2026-10-21T05:09:50Z
 === NODE 0s0-1s1_2s1-3s0 K=3 all 8 certified, no K=6
 === NODE 0s0-1s1_4s0-7s1 K=3 start 2026-10-21T05:09:50Z deadline 2026-10-21T05:47:34Z
+{"node": "0s0-1s1_4s0-7s1", "cube": {"2": 0, "3": 0, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 139.2, "certified": true}
+{"node": "0s0-1s1_4s0-7s1", "cube": {"2": 0, "3": 0, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 162.8, "certified": true}
+{"node": "0s0-1s1_4s0-7s1", "cube": {"2": 0, "3": 1, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 133.3, "certified": true}
+{"node": "0s0-1s1_4s0-7s1", "cube": {"2": 0, "3": 1, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 114.9, "certified": true}
+{"node": "0s0-1s1_4s0-7s1", "cube": {"2": 1, "3": 0, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 113.6, "certified": true}
+{"node": "0s0-1s1_4s0-7s1", "cube": {"2": 1, "3": 0, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 121.5, "certified": true}
+{"node": "0s0-1s1_4s0-7s1", "cube": {"2": 1, "3": 1, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 93.1, "certified": true}
+{"node": "0s0-1s1_4s0-7s1", "cube": {"2": 1, "3": 1, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 98.8, "certified": true}
+=== NODE 0s0-1s1_4s0-7s1 K=3 end 2026-10-21T05:17:56Z
+=== NODE 0s0-1s1_4s0-7s1 K=3 all 8 certified, no K=6
+=== NODE 0s0-1s1_5s1-6s0 K=3 start 2026-10-21T05:17:56Z deadline 2026-10-21T06:25:19Z
+{"node": "0s0-1s1_5s1-6s0", "cube": {"2": 0, "3": 0, "4": 0}, "status": "UNSATISFIABLE", "solve_s": 110.0, "certified": true}
+{"node": "0s0-1s1_5s1-6s0", "cube": {"2": 0, "3": 0, "4": 1}, "status": "UNSATISFIABLE", "solve_s": 159.8, "certified": true}
+{"node": "0s0-1s1_5s1-6s0", "cube": {"2": 0, "3": 1, "4": 0}, "status": "UNSATISFIABLE", "solve_s": 181.0, "certified": true}
+{"node": "0s0-1s1_5s1-6s0", "cube": {"2": 0, "3": 1, "4": 1}, "status": "UNSATISFIABLE", "solve_s": 168.8, "certified": true}
+{"node": "0s0-1s1_5s1-6s0", "cube": {"2": 1, "3": 0, "4": 0}, "status": "UNSATISFIABLE", "solve_s": 152.8, "certified": true}
+{"node": "0s0-1s1_5s1-6s0", "cube": {"2": 1, "3": 0, "4": 1}, "status": "UNSATISFIABLE", "solve_s": 190.2, "certified": true}
+{"node": "0s0-1s1_5s1-6s0", "cube": {"2": 1, "3": 1, "4": 0}, "status": "UNSATISFIABLE", "solve_s": 181.4, "certified": true}
+{"node": "0s0-1s1_5s1-6s0", "cube": {"2": 1, "3": 1, "4": 1}, "status": "UNSATISFIABLE", "solve_s": 158.0, "certified": true}
+=== NODE 0s0-1s1_5s1-6s0 K=3 end 2026-10-21T05:28:07Z
+=== NODE 0s0-1s1_5s1-6s0 K=3 all 8 certified, no K=6
+=== RUNNER DONE 2026-10-21T05:28:07Z
