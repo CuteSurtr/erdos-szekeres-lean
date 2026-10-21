@@ -66,4 +66,9 @@ Summed solve time 5,287 s, check time 5,069 s. Per-root breakdown in `summary.js
 
 ## compose.py
 
-compose.py was still running at the commit time; its output is added in the next commit (`compose.txt`).
+`python3 $TOOLS/compose.py /opt/work/base.cnf /opt/work/out.jsonl` (`compose.txt`): `{"certified_nodes": 308, "class_covered": false, "uncovered_frontier_nodes": 986, ...}`.
+As expected, the class is not covered (this machine holds 1/40 of the wave-2 roots). compose recomputed the CNF sha256 of all 308 certified nodes from the base CNF and the node names.
+
+## Files
+
+`env.txt`, `tools.txt`, `roots.tsv`, `runner.sh`, `runner_resume.sh`, `runner_resume2.sh`, `out.jsonl` (all records, resumable), `driver.log` (last 200 lines), `summary.py`, `summary.jsonl`, `compose.txt`.
