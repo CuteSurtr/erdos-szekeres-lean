@@ -1,18 +1,3 @@
-{"node": "0s0_2s0-6s1__1s1-3s0-4s1-5s1-7s1-8s0", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
-{"node": "0s0_2s0-6s1__1s1-3s0-4s1-5s1-7s1-8s1", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
-{"node": "0s0_2s0-6s1__1s1-3s0-4s0-5s0-7s0-8s0", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
-{"node": "0s0_2s0-6s1__1s1-3s0-4s0-5s0-7s0-8s1", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
-{"node": "0s0_2s0-6s1__1s1-3s0-4s0-5s0-7s1-8s0", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
-{"node": "0s0_2s0-6s1__1s1-3s0-4s0-5s0-7s1-8s1", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
-{"node": "0s0_2s0-6s1__1s1-3s0-4s0-5s1-7s0-8s0", "status": "UNKNOWN", "solve_s": 300.2, "certified": null}
-{"node": "0s0_2s0-6s1__1s1-3s0-4s0-5s1-7s0-8s1", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
-{"node": "0s0_2s0-6s1__1s1-3s0-4s0-5s1-7s1-8s0", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
-{"node": "0s0_2s0-6s1__1s1-3s0-4s0-5s1-7s1-8s1", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
-{"node": "0s0_2s0-6s1__1s0-3s1-4s1-5s0-7s0-8s0", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
-{"node": "0s0_2s0-6s1__1s0-3s1-4s1-5s0-7s0-8s1", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
-{"node": "0s0_2s0-6s1__1s0-3s1-4s1-5s0-7s1-8s0", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
-{"node": "0s0_2s0-6s1__1s0-3s1-4s1-5s0-7s1-8s1", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
-{"node": "0s0_2s0-6s1__1s0-3s1-4s1-5s1-7s0-8s0", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
 {"node": "0s0_2s0-6s1__1s0-3s1-4s1-5s1-7s0-8s1", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
 {"node": "0s0_2s0-6s1__1s0-3s1-4s1-5s1-7s1-8s0", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
 {"node": "0s0_2s0-6s1__1s0-3s1-4s1-5s1-7s1-8s1", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
@@ -98,3 +83,18 @@
 {"node": "0s0_3s1-4s0__1s1-2s1-5s0", "status": "UNKNOWN", "solve_s": 1.0, "certified": null}
 {"node": "0s0_3s1-4s0__1s1-2s1-5s1", "status": "UNKNOWN", "solve_s": 1.0, "certified": null}
 === NOTE root 0s0_2s0-6s1 close_tree stopped by hand at 14:50:17 UTC (slice 2.0 h ended 14:41:44; tool checks its deadline only between rounds); 2 in-flight cadical runs killed, no record written for them
+{"node": "0s0_3s1-4s0__1s0-2s1-5s0-6s0-7s1-8s0", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0_3s1-4s0__1s0-2s1-5s0-6s0-7s0-8s1", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0_3s1-4s0__1s0-2s1-5s0-6s0-7s0-8s0", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0_3s1-4s0__1s0-2s1-5s0-6s0-7s1-8s1", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0_3s1-4s0__1s0-2s1-5s0-6s1-7s0-8s0", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0_3s1-4s0__1s0-2s1-5s0-6s1-7s0-8s1", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0_3s1-4s0__1s0-2s1-5s0-6s1-7s1-8s0", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0_3s1-4s0__1s0-2s1-5s0-6s1-7s1-8s1", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0_3s1-4s0__1s0-2s0-5s0-6s0-7s0-8s0", "status": "UNSATISFIABLE", "solve_s": 267.8, "certified": true}
+{"node": "0s0_3s1-4s0__1s0-2s0-5s0-6s0-7s0-8s1", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0_3s1-4s0__1s0-2s0-5s0-6s0-7s1-8s0", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0_3s1-4s0__1s0-2s0-5s0-6s0-7s1-8s1", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0_3s1-4s0__1s0-2s0-5s0-6s1-7s0-8s1", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0_3s1-4s0__1s0-2s0-5s0-6s1-7s0-8s0", "status": "UNKNOWN", "solve_s": 300.5, "certified": null}
+{"node": "0s0_3s1-4s0__1s0-2s0-5s0-6s1-7s1-8s0", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
