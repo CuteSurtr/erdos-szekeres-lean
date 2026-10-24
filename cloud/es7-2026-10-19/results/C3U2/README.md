@@ -72,7 +72,42 @@ finding-1 inputs, the childless file and natural A + C, and the new one passes b
   tool prints 1 and the new one prints 0 (correct).
 
 ### 3. C3U's tests with the C3U2 tools
-SMALL_TESTS_PLACEHOLDER
+These are C3U's scripts, copied to `tests/` with only the tool paths changed: `run_small.sh` (`NEW`, `SN`; the σ runs
+are also split into two lanes, `sigA` / `sigB`), `restart_test.sh` (`T`), `small.py`, `check_small.py`,
+`compose_reject.py` and `compare_small.py`. The CaDiCaL `-c` conflict limits keep every run deterministic. I ran
+`run_small.sh cmp`, `sigA` and `sigB` in parallel. The checks ran through `tests/post_small.sh` on a copy of `tests/`
+outside the repository (logs written to /opt/work, then copied into `logs/`).
+
+- **Old against new without σ-splits** (`logs/compare_small.txt`). C3T `close_tree`, C3U2 `close_tree` with defaults, and
+  C3U2 with `--sigma-split 0`: m = 6 c300, m = 7 c3000, m = 7 c300 and m = 8 c3000 give 130 / 38 / 205 / 51 records.
+  They are identical apart from timings, `proof_sha256` included. **FAILURES 0.**
+- **σ-split trees** (`logs/check_small.txt`). All 6 runs closed with `open_frontier 0` and `unsplittable 0`. The C3U2
+  `compose.py` reports covered, and the brute force finds 0 holes. The numbers are C3U's:
+
+  | run (m, k, `-c`, K) | σ-splits | nested | max \|C\| | cube layer splits | rule-3 dropped | certified / cubes | covered, σ used | holes |
+  |---|---|---|---|---|---|---|---|---|
+  | 6, 6, 300, 2 | 8 | 5 | 4 | 1 | 18 | 58 / 36 | yes, 8 | 0 |
+  | 7, 6, 300, 2 | 6 | 3 | 4 | 4 | 104 | 126 / 93 | yes, 6 | 0 |
+  | 7, 6, 300, 3 | 3 | 0 | 3 | 7 | 147 | 218 / 185 | yes, 3 | 0 |
+  | 7, 6, 100, 2 | 15 | 12 | 4 | 69 | 1,554 | 1,104 / 1,071 | yes, 15 | 0 |
+  | 8, 6, 300, 2 | 12 | 8 | 4 | 14 | 468 | 506 / 461 | yes, 12 | 0 |
+  | 8, 6, 300, 3 | 17 | 13 | 6 | 4 | 180 | 248 / 203 | yes, 17 | 0 |
+
+- **Same records as C3U** (`logs/same_as_C3U.txt`, `tests/same_records.py`). Every one of the 18 record files (6 `sig_*`
+  and 12 `cmp_*`) equals C3U's committed file in `results/C3U/tests/logs/small/` as a multiset of records, apart from
+  timings and `base_sha256`. That covers cnf_sha256, proof_sha256, the split records and σ bits. **18/18.** No small run
+  had a childless timeout, so the `close_tree` change does not show here.
+- **compose.py rejections** (`logs/compose_reject.txt`, m = 6 K = 2, m = 7 K = 3, m = 8 K = 3). The unchanged input is
+  covered with 0 holes. A missing cube gives not covered (66 / 864 / 3,690 holes). A wrong cube `cnf_sha256`, reversed
+  `sigma_bits`, non-smallest bits and a σ-split at depth 1 each give rc 1. A non-conflicting rule-3 child dropped gives
+  not covered (3 / 22 / 66 holes). **FAILURES 0** in all three, the same as C3U.
+- **Restart** (`logs/restart_test.txt`). The m = 6 K = 2 run was cut after 40 of its 78 lines and re-run. It gives 78
+  records, equal to the uninterrupted run, compose covered, 0 holes.
+- Records of all small runs are in `tests/logs/small/` (JSON only). Some lines of `logs/run_small_*.txt` were rebuilt:
+  the runner's stdout files sat in the repository, and a `git pull --rebase --autostash` replaced them while the runs
+  were writing. I recovered the text from the still-open descriptors. For the last run of each lane
+  (`cmp_m8k6c3000_new0`, `sig_m8k6c300K3`, `sig_m8k6c300K2`) the final line was gone, and I rebuilt it from that run's
+  own `.log` (rc is not known). Their record files are complete and pass every check above.
 
 ## Official composition (step 3)
 
@@ -134,4 +169,14 @@ compose and mycompose disagree on any root. **313 open, 597 closed, frontier 8,7
 | **total** | **910** | **313** | **597** | **8,765** |
 
 ## Not done / limits
-NOTDONE_PLACEHOLDER
+- I did not re-run C3U's m = 11 `close_tree` test (C3U test 4, 2 × 8 cubes, about 40 minutes with checks). The only
+  `close_tree.py` changes are in restart reading and in childless timeouts, and neither can occur in that test.
+- I did not re-run C3AUDIT3's brute force (`mybrute.py`). The frontier comparison with its fixed `mycompose.py` was
+  enough for the task's checks, and C3AUDIT3's brute-force counts on the natural inputs stand (A + C: 36 holes, all
+  inside the 52-node frontier that the new compose reports, since the 5 wrongly covered nodes are now open).
+- `--mirror-h6` was used as the task asks. It still rests on Lemma H6M (C3AUDIT2). mycompose has no H6 mirror, so the
+  reduced-cut comparison is root by root, on the 910 roots.
+- No wave record carries `proof_sha256` (they predate C3T), so `certified_with_proof_sha256` is 0.
+- The official composition covers the records at 3fd8a4d8. C3W4 records pushed after that commit are not in it.
+- `close_node.py`, `hullcase.py` and the other tools are unchanged. The checker memory note (C3AUDIT3 finding 4) still
+  applies: keep `--jobs` ≤ 3 for m = 11 cube proofs.
