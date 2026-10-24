@@ -74,7 +74,7 @@ Every closed root has `open_frontier` 0 in the driver log and no split record wi
 | H6(2,0)/two | 2 | 2 | 0 | 0 | 2 | 0 | 195 | 65 |
 | H6(5,1)/two | 13 | 0 | 0 | 13 | 0 | 0 | 0 | 0 |
 
-out.jsonl holds 163 records: 120 certified nodes (each with lrat-check `c VERIFIED` and cake_lpr `s VERIFIED UNSAT`), 16 timeouts at 300 s and 16 σ-split records. None has cake_lpr `none`.
+out.jsonl holds 163 records: 131 certified nodes (each with lrat-check `c VERIFIED` and cake_lpr `s VERIFIED UNSAT`), 16 timeouts at 300 s and 16 σ-split records. None has cake_lpr `none`.
 
 ## SAT / rejections / memory
 - SAT: none.
