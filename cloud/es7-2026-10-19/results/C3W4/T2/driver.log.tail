@@ -1,20 +1,3 @@
-=== ROOT 0s0-3s1_1s1-5s0 start 11:33:53 hours 1.0
-{"node": "0s0-3s1_1s1-5s0", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
-{"node": "0s0-3s1_1s1-5s0__2s0-4s0-6s1", "status": "UNSATISFIABLE", "solve_s": 96.3, "certified": true}
-{"node": "0s0-3s1_1s1-5s0__2s0-4s0-6s0", "status": "UNSATISFIABLE", "solve_s": 139.4, "certified": true}
-{"node": "0s0-3s1_1s1-5s0__2s0-4s1-6s0", "status": "UNSATISFIABLE", "solve_s": 206.9, "certified": true}
-{"node": "0s0-3s1_1s1-5s0__2s0-4s1-6s1", "status": "UNSATISFIABLE", "solve_s": 122.3, "certified": true}
-{"node": "0s0-3s1_1s1-5s0__2s1-4s0-6s0", "status": "UNSATISFIABLE", "solve_s": 164.4, "certified": true}
-{"node": "0s0-3s1_1s1-5s0__2s1-4s0-6s1", "status": "UNSATISFIABLE", "solve_s": 105.4, "certified": true}
-{"node": "0s0-3s1_1s1-5s0__2s1-4s1-6s0", "status": "UNSATISFIABLE", "solve_s": 169.0, "certified": true}
-{"node": "0s0-3s1_1s1-5s0__2s1-4s1-6s1", "status": "UNSATISFIABLE", "solve_s": 101.6, "certified": true}
-{"root": "0s0-3s1_1s1-5s0", "open_frontier": 0}
-=== ROOT 0s0-3s1_1s1-5s0 end 11:47:47
-=== ROOT 0s0-3s1_6s0-7s1 start 11:47:47 hours 1.0
-{"node": "0s0-3s1_6s0-7s1", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
-{"node": "0s0-3s1_6s0-7s1__1s0-2s0-4s0", "status": "UNSATISFIABLE", "solve_s": 145.2, "certified": true}
-{"node": "0s0-3s1_6s0-7s1__1s0-2s1-4s0", "status": "UNSATISFIABLE", "solve_s": 222.8, "certified": true}
-{"node": "0s0-3s1_6s0-7s1__1s0-2s0-4s1", "status": "UNSATISFIABLE", "solve_s": 268.1, "certified": true}
 {"node": "0s0-3s1_6s0-7s1__1s0-2s1-4s1", "status": "UNSATISFIABLE", "solve_s": 245.2, "certified": true}
 {"node": "0s0-3s1_6s0-7s1__1s1-2s0-4s0", "status": "UNSATISFIABLE", "solve_s": 224.2, "certified": true}
 {"node": "0s0-3s1_6s0-7s1__1s1-2s0-4s1", "status": "UNSATISFIABLE", "solve_s": 214.8, "certified": true}
@@ -91,3 +74,27 @@
 {"root": "0s0-3s1_4s1-6s0", "open_frontier": 0}
 === ROOT 0s0-3s1_4s1-6s0 end 13:15:30
 === ROOT 0s0-3s1_5s0-7s1 start 13:15:30 hours 1.0
+{"node": "0s0-3s1_5s0-7s1", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-3s1_5s0-7s1__1s0-2s0-4s0", "status": "UNSATISFIABLE", "solve_s": 171.2, "certified": true}
+{"node": "0s0-3s1_5s0-7s1__1s0-2s1-4s0", "status": "UNSATISFIABLE", "solve_s": 217.5, "certified": true}
+{"node": "0s0-3s1_5s0-7s1__1s0-2s0-4s1", "status": "UNSATISFIABLE", "solve_s": 221.4, "certified": true}
+{"node": "0s0-3s1_5s0-7s1__1s0-2s1-4s1", "status": "UNSATISFIABLE", "solve_s": 228.1, "certified": true}
+{"node": "0s0-3s1_5s0-7s1__1s1-2s0-4s1", "status": "UNSATISFIABLE", "solve_s": 206.2, "certified": true}
+{"node": "0s0-3s1_5s0-7s1__1s1-2s0-4s0", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-3s1_5s0-7s1__1s1-2s1-4s1", "status": "UNSATISFIABLE", "solve_s": 162.0, "certified": true}
+{"node": "0s0-3s1_5s0-7s1__1s1-2s1-4s0", "status": "UNSATISFIABLE", "solve_s": 254.8, "certified": true}
+{"node": "0s0-3s1_5s0-7s1__1s1-2s0-4s0-6s0-8s0-9s1", "status": "UNSATISFIABLE", "solve_s": 35.3, "certified": true}
+{"node": "0s0-3s1_5s0-7s1__1s1-2s0-4s0-6s0-8s1-9s0", "status": "UNSATISFIABLE", "solve_s": 40.0, "certified": true}
+{"node": "0s0-3s1_5s0-7s1__1s1-2s0-4s0-6s0-8s0-9s0", "status": "UNSATISFIABLE", "solve_s": 45.0, "certified": true}
+{"node": "0s0-3s1_5s0-7s1__1s1-2s0-4s0-6s0-8s1-9s1", "status": "UNSATISFIABLE", "solve_s": 31.2, "certified": true}
+{"node": "0s0-3s1_5s0-7s1__1s1-2s0-4s0-6s1-8s0-9s0", "status": "UNSATISFIABLE", "solve_s": 29.9, "certified": true}
+{"node": "0s0-3s1_5s0-7s1__1s1-2s0-4s0-6s1-8s0-9s1", "status": "UNSATISFIABLE", "solve_s": 43.6, "certified": true}
+{"node": "0s0-3s1_5s0-7s1__1s1-2s0-4s0-6s1-8s1-9s0", "status": "UNSATISFIABLE", "solve_s": 32.3, "certified": true}
+{"node": "0s0-3s1_5s0-7s1__1s1-2s0-4s0-6s1-8s1-9s1", "status": "UNSATISFIABLE", "solve_s": 33.2, "certified": true}
+{"root": "0s0-3s1_5s0-7s1", "open_frontier": 0}
+=== ROOT 0s0-3s1_5s0-7s1 end 13:36:59
+=== ROOT 0s0-3s1_6s0-8s1 start 13:36:59 hours 1.0
+{"node": "0s0-3s1_6s0-8s1", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-3s1_6s0-8s1__1s0-2s0-4s0", "status": "UNSATISFIABLE", "solve_s": 148.1, "certified": true}
+{"node": "0s0-3s1_6s0-8s1__1s0-2s0-4s1", "status": "UNSATISFIABLE", "solve_s": 213.6, "certified": true}
+{"node": "0s0-3s1_6s0-8s1__1s0-2s1-4s0", "status": "UNSATISFIABLE", "solve_s": 258.7, "certified": true}
