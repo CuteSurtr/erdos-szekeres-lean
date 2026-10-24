@@ -110,3 +110,19 @@ if sp:
         print(f"  {key}: total {sum(v)}, per cube min {min(v)} median {statistics.median(v)} max {max(v)}")
     full = sum(1 for st in sp if st["open"] == 0)
     print(f"  layer subtrees fully certified: {full} of {len(sp)}; certified layer-node solve_s total {sum(st['solve_s'] for st in sp):.0f}, check_s total {sum(st['check_s'] for st in sp):.0f}")
+    print("  per stratum: stratum, timed-out cubes, layer nodes, certified, timed out, open leaves, subtrees fully certified")
+    for s in sorted({x[1] for x in sub_rows}):
+        o = [st for R, s2, c, st in sub_rows if s2 == s and st is not None]
+        print(f"    {s}\t{sum(1 for x in sub_rows if x[1] == s)}\t{sum(x['nodes'] for x in o)}\t{sum(x['certified'] for x in o)}\t"
+              f"{sum(x['timed_out'] for x in o)}\t{sum(x['open'] for x in o)}\t{sum(1 for x in o if x['open'] == 0)}")
+    # solve and check times of the certified layer children of timed-out cubes (first layer below the cube)
+    lt, lc = [], []
+    for R, s, c, st in sub_rows:
+        if st is not None:
+            for k in layer_kids(c):
+                if k in cert:
+                    lt.append(cert[k]["solve_s"]); lc.append(cert[k].get("check_s", 0))
+    if lt:
+        q = statistics.quantiles(lt, n=20)
+        print(f"  certified first-layer children: n={len(lt)} solve_s median {statistics.median(lt):.1f} p90 {q[17]:.1f} max {max(lt)} "
+              f"mean {statistics.mean(lt):.1f}; check_s mean {statistics.mean(lc):.1f}")
