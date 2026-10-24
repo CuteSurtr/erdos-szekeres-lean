@@ -466,6 +466,7 @@ for name, expect, m, k, f in CASES:
         v, j = run_comp(t, c, p)
         row[c] = v
         row[c + "_frontier"] = j.get("frontier_n")
+        row[c + "_open_d2"] = j.get("open_d2")
         ok = v == expect.rstrip("*") or (expect == "either" and v in ("covered", "not covered"))
         if ok: summary["pass"][c] += 1
         else: summary["fail"][c].append(name)

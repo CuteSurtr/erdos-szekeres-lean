@@ -13,6 +13,7 @@ import mycompose as Y  # noqa  (only for units(): CNF bytes)
 
 m, k, BASE, N, SEED, OUT = int(sys.argv[1]), int(sys.argv[2]), sys.argv[3], int(sys.argv[4]), int(sys.argv[5]), sys.argv[6]
 COMPS = sys.argv[7:]
+H6M = os.environ.get("FUZZ_H6M") == "1"  # tree and composers with the Lemma H6M reduction (--mirror-h6)
 os.makedirs(OUT, exist_ok=True)
 E = C3Enc(m, k)
 hdr, body = None, None
@@ -47,6 +48,11 @@ def kids(layers):
         mir = lambda L: tuple(sorted(((m - r) % m, None if v is None else 1 - v) for r, v in L))
         kk = lambda L: tuple((r, -1 if v is None else v) for r, v in sorted(L))
         opts = [o for o in opts if kk(o) <= kk(mir(o))]
+    if H6M and len(layers) == 1 and len(layers[0]) == 2:
+        a, s = layers[0][1]
+        phi = lambda O: tuple(sorted(((a - r) % m, None if v is None else v ^ int(r < a) ^ int(s == 0)) for r, v in O))
+        kk = lambda L: tuple((r, -1 if v is None else v) for r, v in sorted(L))
+        opts = [o for o in opts if kk(o) <= kk(phi(o))]
     return [layers + (o,) for o in opts]
 
 
@@ -139,7 +145,8 @@ def brute(recs):
 
 
 def run_comp(who, path, extra=()):
-    x = subprocess.run([sys.executable, os.path.join(HERE, "runcomp.py"), who, str(m), str(k), BASE, path] + list(extra),
+    extra = list(extra) + (["--mirror-h6"] if H6M else [])
+    x = subprocess.run([sys.executable, os.path.join(HERE, "runcomp.py"), who, str(m), str(k), BASE, path] + extra,
                        capture_output=True, text=True)
     try:
         return json.loads(x.stdout.strip().splitlines()[-1])
@@ -240,11 +247,11 @@ KINDS = ["none", "drop_cert", "drop_split", "forge_sha", "flip_cube_bit", "sigma
 rng = random.Random(SEED)
 stats = {"cases": 0, "unsound": {c: 0 for c in COMPS}, "forge_not_rejected": {c: 0 for c in COMPS},
          "disagree": 0, "verdicts": {}}
-log = open(os.path.join(OUT, f"fuzz_m{m}k{k}_s{SEED}.jsonl"), "w")
+log = open(os.path.join(OUT, f"fuzz_m{m}k{k}_s{SEED}{'_h6m' if H6M else ''}.jsonl"), "w")
 for t in range(N):
     K = rng.choice([0, 1, 2, 2, 3])
-    base_p = rng.uniform(0.3, 0.9)
-    recs = drive(rng, lambda d, L, C: 0.0 if d < 2 else base_p, K, rng.choice([1, 2]), rng.choice([4, 5, 6]),
+    base_p = rng.uniform(0.3, 0.9) if os.environ.get("FUZZ_HIGH") != "1" else rng.uniform(0.75, 0.97)
+    recs = drive(rng, lambda d, L, C: 0.0 if d < 2 else (base_p if (L and len(L[-1]) == 2) or os.environ.get("FUZZ_HIGH") != "1" or freeres(L, C) else 1.0), K, rng.choice([1, 2]), rng.choice([4, 5, 6]),
                  rng.random() < 0.5, rng.random() < 0.5)
     kind = KINDS[t % len(KINDS)]
     if kind == "none":
