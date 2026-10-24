@@ -57,6 +57,17 @@ the summaries, the full frontier sets and the status of every depth-2 root.
 The 5 nodes are `0s0_2_1_3s0-4s1`, `0s0_2_1s1-4s0_3`, `0s0_2_3_1s1-4s0`, `0s0_2_3s0-4s1_1` and `0s0_2_3s1-4s1_1`
 (from `logs/natural/README.txt`). On A + C the old compose's memo has all 5 True, and the new one and mycompose have all
 5 False. On A + B + C none of them is visited: `0s0_2` is covered through its σ-split before the plain route is tried.
+**Brute force against the frontier** (`tests/brute_vs_frontier.py` → `logs/brute_vs_frontier.txt`). This runs C3AUDIT3's
+`mybrute.py` unchanged. It ignores every composer and split record, and every hole it finds must lie below a node of the
+composer's frontier.
+
+| input | brute-force holes | old compose: frontier, holes not below it | **new compose: frontier, holes not below it** |
+|---|---|---|---|
+| childless | 1 | 0, **1** (`0s0_1s0-2s0_3_4`) | 1, **0** |
+| natural A | 52 | 52, 0 | 52, 0 |
+| natural A + C | 36 | 31, **5** (the 5 nodes above) | 52, **0** |
+| natural A + B + C | 31 | 31, 0 | 31, 0 |
+
 `forge.py` has no childless case, so the old compose passes it too. The old compose fails on exactly the two
 finding-1 inputs, the childless file and natural A + C, and the new one passes both.
 
@@ -171,9 +182,6 @@ compose and mycompose disagree on any root. **313 open, 597 closed, frontier 8,7
 ## Not done / limits
 - I did not re-run C3U's m = 11 `close_tree` test (C3U test 4, 2 × 8 cubes, about 40 minutes with checks). The only
   `close_tree.py` changes are in restart reading and in childless timeouts, and neither can occur in that test.
-- I did not re-run C3AUDIT3's brute force (`mybrute.py`). The task's checks compare against its fixed `mycompose.py`,
-  and C3AUDIT3's brute-force counts on the natural inputs stand as it reported them. I did not map its 36 holes on
-  A + C node by node onto the new 52-node frontier.
 - `--mirror-h6` was used as the task asks. It still rests on Lemma H6M (C3AUDIT2). mycompose has no H6 mirror, so the
   reduced-cut comparison is root by root, on the 910 roots.
 - No wave record carries `proof_sha256` (they predate C3T), so `certified_with_proof_sha256` is 0.
