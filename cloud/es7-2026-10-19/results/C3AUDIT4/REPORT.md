@@ -13,7 +13,7 @@ Working notes are in `NOTES.md`.
 
 | | verdict |
 |---|---|
-| `results/C3U2/tools/compose.py` (cad4e050) | **Accept.** The finding-1 hole is closed. I found no other coverage path that can succeed through an empty loop or a partial cover. It passes 98/98 of my adversarial cases, C3AUDIT3's tests, and 1,715 fuzz cases with 0 unsound answers. On every m = 11 input it agrees with C3AUDIT3's fixed `mycompose.py`. |
+| `results/C3U2/tools/compose.py` (cad4e050) | **Accept.** The finding-1 hole is closed. I found no other coverage path that can succeed through an empty loop or a partial cover. It passes 98/98 of my adversarial cases, C3AUDIT3's tests, and 1,719 fuzz cases with 0 unsound answers. On every m = 11 input it agrees with C3AUDIT3's fixed `mycompose.py`. |
 | `results/C3U2/tools/close_tree.py` (cad4e050) | **Accept.** The fixes for findings 2 and 3 work as described: tested with a stub solver, while C3U 95cafa93 fails all three scenarios. The diff touches nothing else. |
 | Condition (reporting only, not soundness) | When the two composers are compared, compare the verdict and the set of open depth-2 roots. Compare the frontier only after removing nodes that carry a split record. The two tools list a failed σ-split node differently (finding 1 below). C3U2's claim that the full frontier set equals mycompose's holds at 3fd8a4d8. It no longer holds at dacc5d2c, where C3W4 records with incomplete nested σ-splits exist. |
 
@@ -24,7 +24,7 @@ Only 2 files change, +42 / −8. `hullcase.py`, `close_node.py` and every other 
 - `compose.py:246-250` (finding 1): the plain branch of `covered2` now has `ch = children(layers); if not ch: missing; return False`,
   placed after the `prefixes` test and before the loop. A fully layered plain node is therefore covered only through
   `name in cert` (line 221) or through a σ-split record of its own. A fully layered node has no free residue (free =
-  not in any layer), so a σ-split record of its own is refused at load time (`compose.py:157-159`). Correct.
+  not in any layer), so a σ-split record of its own is refused at load time (`compose.py:156-163`). Correct.
 - `compose.py:225-229`: a σ-split is used only if `sigma_children` returns 2^K > 0 children. `compose.py:169-170`: an
   implied split needs K > 0 and the full set of 2^K cubes. Both are defensive: the bits were already validated at load
   time, and `sigma_children` always returns 2^K children. Correct, and they change no answer.
