@@ -23,7 +23,7 @@ Task: `results/C3W4/TASK.md` at 3fd8a4d8, V = H29, LIST = W4_H3.tsv, j = 29, N =
 Root 29: the root and its 8 first-level cubes timed out at cap 1 as intended, which gave 64 cubes on 6 σ bits.
 Only 9 of the 64 were certified at cap 300. The other **55 timed out**, unlike the C3SIG2 pilots,
 where every 6-bit cube that ran was certified. Each of the 55 was layer-split into 51 children, giving 2,805 depth-3 nodes at cap 600.
-By END, 592 of them were certified (median solve about 20 s, none timed out) and 2,213 were still open.
+By END, 592 of them were certified (median solve 16.5 s, max 84 s, none timed out) and 2,213 were still open.
 No split record has `"children": 0`.
 
 Run note: `close_tree.py` checks its `--hours` deadline only between generations. The 2.0 h slice ran out at 13:34
