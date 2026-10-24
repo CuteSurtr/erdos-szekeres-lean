@@ -25,7 +25,12 @@ usage: close_tree.py BASE OUT.jsonl ROOTNODE [--jobs J] [--caps 300,300,600] [--
        close_tree.py BASE OUT.jsonl SHARD --shard I --nshards N ...
   SHARD mode: the roots are the depth-2 nodes of the layer tree (tree_children twice, H3 mirror
   reduction on; 1,630 nodes for m = 11), sorted by name; shard I of N takes those with index
-  congruent to I mod N.  Caps then count from depth 2."""
+  congruent to I mod N.  Caps then count from depth 2.
+C3U2 changes (results/C3U2/TASK.md, results/C3AUDIT3/REPORT.md findings 2 and 3): on restart, a
+record with a "cube" field (sigma_cubes.py format) is read as a record of node__C, never of node;
+a timed-out node without children (layer split empty, no sigma split possible) gets no split record:
+it stays in the open frontier, counted in "open_frontier" and listed in "unsplittable_nodes" at the
+end of the run; an old split record with 0 children is treated as no split (the node is open)."""
 import argparse
 import concurrent.futures as cf
 import hashlib
@@ -113,6 +118,12 @@ def main():
     if os.path.exists(a.out):
         for l in open(a.out):
             r = json.loads(l)
+            if "cube" in r:
+                # C3U2 (C3AUDIT3 finding 3): a sigma_cubes.py record ("node" = parent N, "cube" = {r: v})
+                # is a record of N__C (C sorted by residue, as compose.py reads it), never of N
+                if r.get("certified"):
+                    done.add(node_name(parse_node(r["node"])[0], sorted((int(x), v) for x, v in r["cube"].items())))
+                continue
             if r.get("certified"):
                 done.add(r["node"])
             if r.get("split"):
@@ -142,7 +153,10 @@ def main():
         if name in done:
             return []
         if name in split:
-            return [x for c in kids(split[name]) for x in expand(c, d + 1)]
+            ks = kids(split[name])
+            if ks:
+                return [x for c in ks for x in expand(c, d + 1)]
+            # C3U2: a split record without children (written before C3U2) splits nothing: still open
         return [(name, d)]
 
     def presplit(names):
@@ -161,6 +175,7 @@ def main():
         return out
 
     fo = open(a.out, "a")
+    unsplittable = []  # C3U2 (C3AUDIT3 finding 2): timed-out nodes without children, still open
     frontier = sorted((x for r in roots for x in expand(r, 0)), key=lambda x: (len(parse_node(x[0])[0]), x[0].count("-")))
     frontier = presplit(frontier)
     with cf.ProcessPoolExecutor(a.jobs) as ex:
@@ -192,10 +207,16 @@ def main():
                     nxt += [(c, d + 1) for c in ch]
                     continue
                 ch = layer_kids(n)
+                if not ch:
+                    # C3U2 (C3AUDIT3 finding 2): no split record with 0 children; the node stays open
+                    unsplittable.append(n)
+                    print(json.dumps({"node": n, "unsplittable": True}), flush=True)
+                    continue
                 fo.write(json.dumps({"node": n, "split": True, "children": len(ch)}) + "\n"); fo.flush()
                 nxt += presplit([(c, d + 1) for c in ch])
             frontier = nxt
-    print(json.dumps({"root": root, "open_frontier": len(frontier)}), flush=True)
+    print(json.dumps({"root": root, "open_frontier": len(frontier) + len(unsplittable),
+                      "unsplittable": len(unsplittable), "unsplittable_nodes": sorted(unsplittable)}), flush=True)
 
 
 if __name__ == "__main__":

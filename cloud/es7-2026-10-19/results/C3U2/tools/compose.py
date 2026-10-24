@@ -38,7 +38,14 @@ C3U changes (results/C3U/TASK.md rule 5, results/C3U/sigma_split.md):
     record, with children L'__C for L' in tree_children(L) not contradicting C
     (hullcase.cube_layer_children).
 - New output fields: "certified_cube_nodes", "sigma_splits_used" (nodes covered through a sigma
-  split), "sigma_split_nodes_sample" (the first 50 of them)."""
+  split), "sigma_split_nodes_sample" (the first 50 of them).
+
+C3U2 changes (results/C3U2/TASK.md, results/C3AUDIT3/REPORT.md finding 1):
+- A node without children, plain or cube, is covered only if it has a certified record: covered2
+  no longer covers a plain node in `prefixes` whose tree_children are empty (the loop over no
+  children left ok = True).  No coverage path may succeed through an empty loop: a sigma split
+  needs exactly 2^K > 0 children, and an implied sigma split needs a non-empty set of 2^K cubes.
+  (The unused helper `covered` already refuses a node without children.)"""
 import hashlib
 import json
 import os
@@ -159,7 +166,8 @@ def main():
         lay, C = parse_node(parent)
         nb = len(res)
         if len(lay) >= 2 and list(res) == free_residues(M, lay, C)[:nb] and len(free_residues(M, lay, C)) >= nb:
-            if got == {node_name(*c) for c in sigma_children(M, lay, C, nb)[1]}:
+            want = {node_name(*c) for c in sigma_children(M, lay, C, nb)[1]}
+            if nb > 0 and len(want) == 2 ** nb and got == want:  # C3U2: never implied by an empty cube set
                 ssplit.setdefault(parent, []).append((list(res), "implied by sigma_cubes records"))
     if "--no-sha" not in sys.argv:
         E = C3Enc(M, K)
@@ -215,8 +223,9 @@ def main():
             return True
         for bits, _ in ssplit.get(name, []):
             # sigma split (checked above: bits = the K smallest free residues): all 2^K cubes
-            res = True
-            for cl, cc in sigma_children(M, layers, C, len(bits))[1]:
+            sch = sigma_children(M, layers, C, len(bits))[1]
+            res = len(sch) == 2 ** len(bits) and len(sch) > 0  # C3U2: never covered by an empty loop
+            for cl, cc in sch:
                 res = covered2(cl, cc) and res
             if res:
                 sig_used.add(name)
@@ -235,8 +244,12 @@ def main():
         if layers and name not in prefixes:
             missing.append(name)
             return False
+        ch = children(layers)
+        if not ch:  # C3U2 (C3AUDIT3 finding 1): a plain node without children is covered only if certified
+            missing.append(name)
+            return False
         ok = True
-        for c in children(layers):
+        for c in ch:
             ok = covered2(c) and ok
         memo[name] = ok
         return ok
