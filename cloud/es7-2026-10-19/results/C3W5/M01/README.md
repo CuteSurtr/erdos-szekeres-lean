@@ -12,7 +12,7 @@ One cloud VM, 4 cores, 15 GB RAM, no swap (`env.txt`). Session start 16:12:25 UT
 
 - Roots: rows of `C3W5/lists/W5_two.tsv` with row ≡ 1 (mod 10): 8 roots (`roots.tsv`).
 - Options: `--jobs 3 --sigma-split 3 --sigma-levels 2 --caps 300,300,600 --cadopts=--sat --split-singles`, slice 1.0 h (`runner.sh`, started with `setsid nohup`).
-- Seeding: 6 records, all for root `0s0-4s1_6s1-8s0`, all from `C3W4/T2/out.jsonl`: its σ split record (bits 1,2,3, 8 children) and 5 certified σ cubes. No other C3W4 record matched my roots; there are no `recheck*.jsonl` files in C3W4. `out.jsonl` here holds only the 43 new records (lines 7 onward of the run's out file).
+- Seeding: 6 records, all for root `0s0-4s1_6s1-8s0`, all from `C3W4/T2/out.jsonl`: its σ split record (bits 1,2,3, 8 children) and 5 certified σ cubes. No other C3W4 record matched my roots; there are no `recheck*.jsonl` files in C3W4. `out.jsonl` here holds only the 37 new records (lines 7–43 of the run's 43-line out file).
 
 ## Per root
 
