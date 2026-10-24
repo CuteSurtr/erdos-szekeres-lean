@@ -1,0 +1,7 @@
+BIN=/home/user/tools/bin
+cadical  https://github.com/arminbiere/cadical  c60730422e758ef1cebe7aeddf2dda31c996bf04 (version 3.0.1; ./configure && make)
+march_cu https://github.com/marijnheule/CnC     705b60c6491ef2b61988b3ce6ac674be1b90571d (make CFLAGS="-O3 -fno-strict-aliasing -Wall -DNDEBUG -fcommon")
+cake_lpr https://github.com/tanyongkiam/cake_lpr a36874a8b750b43fe4b385b8ddbf5b033e46a3fa (make cake_lpr; example.cnf/example.lpr -> s VERIFIED UNSAT)
+3b26dfd08d3b45f6b9cd93ebc10ef2f15584ece4182ec35734619266f79dc3e9  /home/user/tools/bin/cadical
+1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca  /home/user/tools/bin/cake_lpr
+afcbb47642a922676693b325ed19d88698c6b8f700943fa2753d98126579f222  /home/user/tools/bin/march_cu

@@ -1,0 +1,13 @@
+# verified closed cubes (cube lists of logs/cube_lrat_*.jsonl) + C2 final open cubes
+== i_hull: verified closed only
+c cubes: 4538
+s NOT COVERED
+== i_hull: verified closed + open_cubes_i_hull.txt
+c cubes: 5586
+s COVERED
+== ii_interior: verified closed only
+c cubes: 749
+s NOT COVERED
+== ii_interior: verified closed + open_cubes_ii_interior.txt
+c cubes: 2089
+s COVERED

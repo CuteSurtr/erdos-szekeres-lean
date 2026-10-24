@@ -1,0 +1,21 @@
+'Mir.mirrorExclusionLine_of_unsat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Mir.mirrorExclusionLine_of_cubes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Mir.hasConvexNGon_of_unsat_hull' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Mir.interiorTieBreak_holds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Mir.hullCnf_satisfiable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Mir.interiorCnf_satisfiable' depends on axioms: [propext, Classical.choice, Quot.sound]
+mirrorExclusionLine_of_unsat : ¬ETV.DimacsSatisfiable (hullCnf 33 7) →
+  ¬ETV.DimacsSatisfiable (interiorCnf 33 7) → MirrorExclusionLine
+def Mir.MirrorExclusionLine : Prop :=
+∀ (S : Finset ErdosSzekeres.Point) (a u : ErdosSzekeres.Point),
+  u 0 ^ 2 + u 1 ^ 2 = 1 →
+    ErdosSzekeres.GeneralPosition S → S.card = 33 → (∀ q ∈ S, reflLine a u q ∈ S) → ErdosSzekeres.HasConvexNGon 7 S
+def ETV.DimacsSatisfiable : List (List ℤ) → Prop :=
+fun cls => ∃ ν, ETV.DimacsSat cls ν
+def ETV.DimacsSat : List (List ℤ) → (ℕ → Bool) → Prop :=
+fun cls ν => ∀ c ∈ cls, ∃ l ∈ c, 0 < l ∧ ν l.natAbs = true ∨ l < 0 ∧ ν l.natAbs = false
+/tmp/claude-0/a2/Ax.lean:13:7: error(lean.unknownIdentifier): Unknown constant `ETV.LitSat`
+def Mir.yflipUnit : ℕ → ℕ → ℕ → List (List ℤ) :=
+fun N A U => [[↑((num N A U).getD (subVar N false (ETV.Var.x 0 1 2)) 0)]]
+def Mir.interiorCnf : ℕ → ℕ → List (List ℤ) :=
+fun N K => mirgen (subDimacs N K K K false) ++ interiorClauses N K K ++ yflipUnit N K K

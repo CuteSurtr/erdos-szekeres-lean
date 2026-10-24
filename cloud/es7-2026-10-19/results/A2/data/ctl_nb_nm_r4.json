@@ -1,0 +1,126 @@
+{
+ "run": {
+  "workers": 4,
+  "blocks": 533,
+  "exit_codes": [
+   0
+  ],
+  "solver_options": [
+   "lucky=0"
+  ],
+  "wall_s": 29.0,
+  "R": 4,
+  "M": 32,
+  "bases": 274,
+  "deletion_sets": 533,
+  "jobs": 10550
+ },
+ "per_group": {
+  "ALL|ALL|ALL": {
+   "deletion_sets": 533,
+   "answers": 10550,
+   "SAT": 9939,
+   "UNSAT": 611,
+   "UNKNOWN": 0,
+   "conflicts_mean": 1.7,
+   "conflicts_max": 109,
+   "ms_mean": 10.1,
+   "ms_max": 2955.9
+  },
+  "ALL|ALL|free": {
+   "deletion_sets": 533,
+   "answers": 10550,
+   "SAT": 9939,
+   "UNSAT": 611,
+   "UNKNOWN": 0,
+   "conflicts_mean": 1.7,
+   "conflicts_max": 109,
+   "ms_mean": 10.1,
+   "ms_max": 2955.9
+  },
+  "ALL|hnear|free": {
+   "deletion_sets": 259,
+   "answers": 5075,
+   "SAT": 4740,
+   "UNSAT": 335,
+   "UNKNOWN": 0,
+   "conflicts_mean": 1.6,
+   "conflicts_max": 45,
+   "ms_mean": 9.8,
+   "ms_max": 2955.9
+  },
+  "ALL|hv|free": {
+   "deletion_sets": 274,
+   "answers": 5475,
+   "SAT": 5199,
+   "UNSAT": 276,
+   "UNKNOWN": 0,
+   "conflicts_mean": 1.7,
+   "conflicts_max": 109,
+   "ms_mean": 10.4,
+   "ms_max": 2797.6
+  },
+  "nearmiss|hnear|free": {
+   "deletion_sets": 259,
+   "answers": 5075,
+   "SAT": 4740,
+   "UNSAT": 335,
+   "UNKNOWN": 0,
+   "conflicts_mean": 1.6,
+   "conflicts_max": 45,
+   "ms_mean": 9.8,
+   "ms_max": 2955.9
+  },
+  "nearmiss|hv|free": {
+   "deletion_sets": 274,
+   "answers": 5475,
+   "SAT": 5199,
+   "UNSAT": 276,
+   "UNKNOWN": 0,
+   "conflicts_mean": 1.7,
+   "conflicts_max": 109,
+   "ms_mean": 10.4,
+   "ms_max": 2797.6
+  },
+  "src:NM_AE33|ALL|ALL": {
+   "deletion_sets": 2,
+   "answers": 40,
+   "SAT": 40,
+   "UNSAT": 0,
+   "UNKNOWN": 0,
+   "conflicts_mean": 0.7,
+   "conflicts_max": 5,
+   "ms_mean": 7.6,
+   "ms_max": 15.8
+  },
+  "src:NM_p2c|ALL|ALL": {
+   "deletion_sets": 288,
+   "answers": 5695,
+   "SAT": 5380,
+   "UNSAT": 315,
+   "UNKNOWN": 0,
+   "conflicts_mean": 1.6,
+   "conflicts_max": 109,
+   "ms_mean": 9.4,
+   "ms_max": 2855.3
+  },
+  "src:NM_p2d|ALL|ALL": {
+   "deletion_sets": 243,
+   "answers": 4815,
+   "SAT": 4519,
+   "UNSAT": 296,
+   "UNKNOWN": 0,
+   "conflicts_mean": 1.8,
+   "conflicts_max": 45,
+   "ms_mean": 10.9,
+   "ms_max": 2955.9
+  }
+ },
+ "sat_models": 9939,
+ "sat_models_checked": {
+  "ok": 9939,
+  "FAIL": 0
+ },
+ "deletion_sets_with_SAT": 533,
+ "deletion_sets_total": 533
+}

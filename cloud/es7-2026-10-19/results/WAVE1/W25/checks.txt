@@ -1,0 +1,13 @@
+Tools (built in /home/user/tools, linked from /home/user/work/bin):
+  cadical   c60730422e758ef1cebe7aeddf2dda31c996bf04 (version 3.0.1), ./configure && make
+  march_cu  CnC 705b60c6491ef2b61988b3ce6ac674be1b90571d, CFLAGS += -fcommon
+  cake_lpr  a36874a8b750b43fe4b385b8ddbf5b033e46a3fa, make cake_lpr; binary sha256 1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca
+            bundled example: ./cake_lpr example.cnf example.lpr -> s VERIFIED UNSAT
+sha256 checks (all match):
+  m33k7int.sub.cnf (regenerated: gen_etv.py 33 7 7 7 --mirror; mirgen.py --interior --yflip-unit)
+                   69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d  OK
+  verify/ii_wave1.json 6df36dab6dc93cec474ee7a795b38716bc19bf2d6064468b9c5e38e00901c72e  OK
+  U3_L.cnf  (U=3,  L=)   7ab00d97d5047e0003bd8d254560dc8464d880d7165c6d7f0e01fab79ee0f823  OK
+  U_L16.cnf (U=,   L=16) edd50c2727d7103c5470b8390ae206c656d601677f08ecc012978e2321b31c9a  OK
+  U16_L.cnf (U=16, L=)   49f745077549c93a3d48497bed44618750d7156cd8a386ef199f66cf8e25fab4  OK
+Run: close_w25.py . --deadline 1792491900 (10:25 UTC) --jobs 4 U3_L=... U_L16=... U16_L=...  started ~07:08 UTC

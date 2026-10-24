@@ -1,0 +1,110 @@
+{
+ "events_ok": true,
+ "bad": [],
+ "leaves": 316,
+ "partition_sum_is_1": true,
+ "closed_leaves": 0,
+ "sat_leaves": 0,
+ "open_leaves": 316,
+ "open_matches_state": false,
+ "closed_weight_exact": "0/1",
+ "closed_weight": 0.0,
+ "state_closed_weight": "0/1",
+ "closed_weight_matches_state": true,
+ "open_depth_hist": {
+  "8": 196,
+  "9": 120
+ },
+ "per_depth": {
+  "0": {
+   "n": 1,
+   "U": 0,
+   "K": 1,
+   "S": 0,
+   "secs": 14.3,
+   "secs_U": 0.0,
+   "secs_K": 14.3,
+   "conf_K": 20000
+  },
+  "1": {
+   "n": 2,
+   "U": 0,
+   "K": 2,
+   "S": 0,
+   "secs": 33.7,
+   "secs_U": 0.0,
+   "secs_K": 33.7,
+   "conf_K": 50000
+  },
+  "2": {
+   "n": 4,
+   "U": 0,
+   "K": 4,
+   "S": 0,
+   "secs": 90.9,
+   "secs_U": 0.0,
+   "secs_K": 90.9,
+   "conf_K": 125000
+  },
+  "3": {
+   "n": 8,
+   "U": 0,
+   "K": 8,
+   "S": 0,
+   "secs": 307.6,
+   "secs_U": 0.0,
+   "secs_K": 307.6,
+   "conf_K": 312496
+  },
+  "4": {
+   "n": 16,
+   "U": 0,
+   "K": 16,
+   "S": 0,
+   "secs": 617.9,
+   "secs_U": 0.0,
+   "secs_K": 617.9,
+   "conf_K": 781232
+  },
+  "5": {
+   "n": 32,
+   "U": 0,
+   "K": 32,
+   "S": 0,
+   "secs": 1478.0,
+   "secs_U": 0.0,
+   "secs_K": 1478.0,
+   "conf_K": 1953056
+  },
+  "6": {
+   "n": 64,
+   "U": 0,
+   "K": 64,
+   "S": 0,
+   "secs": 3836.5,
+   "secs_U": 0.0,
+   "secs_K": 3836.5,
+   "conf_K": 4882624
+  },
+  "7": {
+   "n": 128,
+   "U": 0,
+   "K": 128,
+   "S": 0,
+   "secs": 9865.0,
+   "secs_U": 0.0,
+   "secs_K": 9865.0,
+   "conf_K": 12206464
+  },
+  "8": {
+   "n": 60,
+   "U": 0,
+   "K": 60,
+   "S": 0,
+   "secs": 5592.1,
+   "secs_U": 0.0,
+   "secs_K": 5592.1,
+   "conf_K": 7152180
+  }
+ }
+}

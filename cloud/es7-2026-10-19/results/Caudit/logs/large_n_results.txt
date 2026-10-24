@@ -1,0 +1,28 @@
+# CNF | assignment set | outcome counts (hornchk)
+m33k7.cnf | 10000 random, plain x-sort |  10000 xviol=0 forbviol>0;
+m33k7int.sub.cnf | 5052 interior, frame ii |  5052 xviol=0 forbviol>0;
+m33k7.cnf | 5052 interior, frame ii |  5052 xviol=0 forbviol>0;
+hm33k7.cnf | 4948 hull-vertex, frame i |  4948 xviol=0 forbviol>0;
+hm33k7.sub.cnf | 4948 hull-vertex, frame i |  4948 xviol=0 forbviol>0;
+m33k7int.sub.cnf | 4948 hull-vertex, frame ii (negative: interior clause must fail) |  4948 xviol=1 forbviol>0;
+  (violated clause numbers:  2489 firstx=515119; 2459 firstx=515120; ; clauses 515119/515120 are the two interior clauses)
+m33k8int.sub.cnf | 5052 interior, frame ii, K=8 |  5052 xviol=0 forbviol>0;
+hm33k8.sub.cnf | 4948 hull-vertex, frame i, K=8 |  4948 xviol=0 forbviol>0;
+m33k7.cnf | near-extremal derived (d33.xs) |  2400 xviol=0 forbviol>0;
+m33k7int.sub.cnf | near-extremal derived (d33.ii.int) |  1951 xviol=0 forbviol>0;
+hm33k7.cnf | near-extremal derived (d33.i.hm) |  449 xviol=0 forbviol>0;
+hm33k7.sub.cnf | near-extremal derived (d33.i.hsub) |  449 xviol=0 forbviol>0;
+m33k8.cnf | near-extremal derived (d33.xs.m33k8) |  2400 xviol=0 forbviol=0;
+m33k8int.sub.cnf | near-extremal derived (d33.ii.int8) |  1951 xviol=0 forbviol=0;
+hm33k8.cnf | near-extremal derived (d33.i.hm8) |  449 xviol=0 forbviol=0;
+hm33k8.sub.cnf | near-extremal derived (d33.i.hsub8) |  449 xviol=0 forbviol=0;
+m31k7.cnf | near-extremal derived (d31.xs.m31) |  15 xviol=0 forbviol=0; 4785 xviol=0 forbviol>0;
+m31k7int.sub.cnf | near-extremal derived (d31.ii.int) |  10 xviol=0 forbviol=0; 3831 xviol=0 forbviol>0;
+hm31k7.cnf | near-extremal derived (d31.i.hm) |  5 xviol=0 forbviol=0; 954 xviol=0 forbviol>0;
+hm31k7.sub.cnf | near-extremal derived (d31.i.hsub) |  5 xviol=0 forbviol=0; 954 xviol=0 forbviol>0;
+m33k7.cnf | 72 annealed (cgon: 1-3 heptagons, no octagon) + 1 near-miss 33-pt sets, frame xs |  73 xviol=0 forbviol>0;
+m33k7int.sub.cnf | 72 annealed (cgon: 1-3 heptagons, no octagon) + 1 near-miss 33-pt sets, frame ii |  64 xviol=0 forbviol>0;
+hm33k7.cnf | 72 annealed (cgon: 1-3 heptagons, no octagon) + 1 near-miss 33-pt sets, frame i |  9 xviol=0 forbviol>0;
+hm33k7.sub.cnf | 72 annealed (cgon: 1-3 heptagons, no octagon) + 1 near-miss 33-pt sets, frame i |  9 xviol=0 forbviol>0;
+m33k8int.sub.cnf | 72 annealed (cgon: 1-3 heptagons, no octagon) + 1 near-miss 33-pt sets, frame ii |  64 xviol=0 forbviol=0;
+hm33k8.sub.cnf | 72 annealed (cgon: 1-3 heptagons, no octagon) + 1 near-miss 33-pt sets, frame i |  9 xviol=0 forbviol=0;

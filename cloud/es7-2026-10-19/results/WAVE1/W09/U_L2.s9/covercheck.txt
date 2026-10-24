@@ -1,0 +1,13 @@
+top line 9 cube -987 -1420 1651 1635 -1618 -1600 -1581: 64 leaves -> s COVERED 64
+top line 21 cube -987 -1420 -1651 1446 -1635 1618 -1600: 64 leaves -> s COVERED 64
+top line 33 cube -987 1420 -1651 -1446 1635 -1618 -1600: 64 leaves -> s COVERED 64
+top line 45 cube -987 1420 -1651 1446 1600 -1471 1540: 64 leaves -> s COVERED 64
+top line 57 cube -987 1420 1651 1446 -1635 -1618 1600: 64 leaves -> s COVERED 64
+top line 69 cube 987 1420 -1651 1635 1446 -1618 1600: 64 leaves -> s COVERED 64
+top line 81 cube 987 1420 1651 -1446 -1635 1618 1600: 64 leaves -> s COVERED 64
+top line 93 cube 987 1420 1651 1446 1471 -1635 1618: 64 leaves -> s COVERED 64
+top line 105 cube 987 -1420 1651 -1446 1635 -1618 -1600: 64 leaves -> s COVERED 64
+top line 117 cube 987 -1420 -1651 1446 -1635 1618 -1600: 64 leaves -> s COVERED 64
+leaves total 640 leaves under shard top cubes 640
+records: UNSAT 640 verified 640 SPLIT 10 SAT 0
+cadical s on leaves 12176, cake_lpr s 2801, cadical s on split (timeout) nodes 3000, march split s 687, max proof bytes 138438389, total proof bytes 16937106348

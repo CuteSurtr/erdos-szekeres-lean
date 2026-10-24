@@ -1,0 +1,28 @@
+{
+ "input": "ctl/k7a5u7N26_ours.model",
+ "P": 26,
+ "m": 1,
+ "center": false,
+ "methods": [
+  "ins-ff",
+  "lp"
+ ],
+ "cpu_budget_per_attempt_s": 120.0,
+ "seeds": 1,
+ "models": 1,
+ "classes": 1,
+ "realized_models": 0,
+ "realized_classes": 0,
+ "median_cpu_seconds_realized": null,
+ "max_cpu_seconds_realized": null,
+ "mean_cpu_seconds_all": 120.153,
+ "wall_seconds": 121.4,
+ "per_model": [
+  {
+   "name": "model1",
+   "class": 0,
+   "representative": "model1",
+   "realized": false
+  }
+ ]
+}

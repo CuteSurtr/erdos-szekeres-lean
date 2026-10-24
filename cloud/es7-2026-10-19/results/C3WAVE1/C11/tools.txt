@@ -1,0 +1,6 @@
+C3-S/C3a tools: worktree of commit 8dc27c3 at /opt/c3s (no changes; /opt/work writable)
+cadical: arminbiere/cadical c6073042 (3.0.1), ./configure && make
+cake_lpr: tanyongkiam/cake_lpr a36874a8, make cake_lpr; example.cnf/example.lpr -> s VERIFIED UNSAT
+lrat-check: marijnheule/drat-trim 2e3b2dc + results/E2/tools/lrat-check-E2.patch, gcc -O2
+base.cnf: python3 tools/gen_case.py 11 7 none; bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da; header p cnf 168399 4154921
+roots: index = 11 mod 24 of 1630 sorted depth-2 nodes (close_tree.py SHARD expression); 68 roots; identical to manifest_depth2.tsv rows (sorted list sha256 5412782c...)

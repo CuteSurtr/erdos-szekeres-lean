@@ -1,0 +1,9 @@
+c dynamic_preselect_setsize :: off
+c 
+----------------------------------------------------------------
+cc 
+
+real	43m59.151s
+user	43m15.929s
+sys	0m1.320s
+aborted at 05:53 UTC after 44 min wall, progress 16/64 ticks; command: march_cu leaf0.cnf -d 5 -o leaf0_d5.icnf; leaf0.cnf = c3b_m11k7.cnf + units of logs/leaves_d10.icnf line 1, sha256 b86d0c85cab593ea46cceecc32777424a5bcd19965cbbf418870d49f50d2cc42

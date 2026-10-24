@@ -1,0 +1,36 @@
+/home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results/F2/scripts/../../../tools/realizer/realize.py:124: RuntimeWarning: overflow encountered in divide
+  kD = dg * S / N
+/home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results/F2/scripts/../../../tools/realizer/realize.py:129: RuntimeWarning: invalid value encountered in multiply
+  gxa = kD * (uy - vy) - fab * ux - fac * vx
+/home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results/F2/scripts/../../../tools/realizer/realize.py:130: RuntimeWarning: invalid value encountered in multiply
+  gya = kD * (vx - ux) - fab * uy - fac * vy
+/home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results/F2/scripts/../../../tools/realizer/realize.py:132: RuntimeWarning: invalid value encountered in multiply
+  gyb = -kD * vx + fab * uy - fbc * wy
+/home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results/F2/scripts/../../../tools/realizer/realize.py:133: RuntimeWarning: invalid value encountered in multiply
+  gxc = -kD * uy + fac * vx + fbc * wx
+/home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results/F2/scripts/../../../tools/realizer/realize.py:134: RuntimeWarning: invalid value encountered in multiply
+  gyc = kD * ux + fac * vy + fbc * wy
+/home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results/F2/scripts/../../../tools/realizer/realize.py:135: RuntimeWarning: invalid value encountered in matmul
+  GX = gxa @ self.Ea + gxb @ self.Eb + gxc @ self.Ec
+Traceback (most recent call last):
+  File "/home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results/F2/scripts/grow_guided.py", line 287, in <module>
+    main()
+    ~~~~^^
+  File "/home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results/F2/scripts/grow_guided.py", line 243, in main
+    res = realize(chi, N, budget=a.rbudget, seed=rnd.randint(0, 10**6))
+  File "/home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results/F2/scripts/../../../tools/realizer/realize.py", line 979, in realize
+    pts, unp = insertion(prob, rng, deadline, log=log, failfirst=True)
+               ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results/F2/scripts/../../../tools/realizer/realize.py", line 687, in insertion
+    pts_, bv, bxy = penalty_descent(sub, rng, min(deadline, _clock() + 2.0), mode="free",
+                    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                    R=16, steps=300, init=(x, y), max_rounds=2)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results/F2/scripts/../../../tools/realizer/realize.py", line 285, in penalty_descent
+    pts = try_exact(prob, X[j], Y[j])
+  File "/home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results/F2/scripts/../../../tools/realizer/realize.py", line 201, in try_exact
+    pts = int_points_from_float(prob, x, y, k)
+  File "/home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results/F2/scripts/../../../tools/realizer/realize.py", line 177, in int_points_from_float
+    pts = [(int(round(x[i] * sc)), int(round(y[i] * sc))) for i in range(prob.n)]
+                ~~~~~^^^^^^^^^^^
+ValueError: cannot convert float NaN to integer

@@ -1,0 +1,60 @@
+c - 8877.89 73 35 115 1207 601274 1 27939335 84610 2.1 45 21 4 19 44% 10958 139476 7425 35%
+c - 8887.14 72 35 115 1208 601275 1 27974078 85500 2.1 45 21 4 19 45% 10958 139476 7425 35%
+c - 8897.07 72 35 115 1209 601291 1 28008835 89005 2.1 44 21 4 19 45% 10958 139476 7425 35%
+c - 8906.79 73 35 115 1210 601306 1 28043605 89561 2.1 44 21 4 19 45% 10958 139476 7425 35%
+c - 8916.96 73 35 115 1211 601320 1 28078393 88783 2.0 44 22 4 19 45% 10958 139476 7425 35%
+c - 8926.30 74 35 115 1212 601335 1 28113192 87758 2.0 44 22 4 19 44% 10958 139476 7425 35%
+c caught signal 2 (SIGINT)
+c ---- [ profiling ] ---------------------------------------------------------
+c        8257.20   92.44 %  search
+c        4349.64   48.69 %  focused
+c        3907.56   43.74 %  stable
+c         674.11    7.55 %  simplify
+c         649.42    7.27 %  probe
+c         575.47    6.44 %  vivify
+c          66.45    0.74 %  sweep
+c          24.46    0.27 %  walking
+c          22.23    0.25 %  reduce
+c           3.73    0.04 %  substitute
+c           2.70    0.03 %  factor
+c           1.47    0.02 %  eliminate
+c           1.24    0.01 %  preprocess
+c           0.56    0.01 %  congruence
+c           0.49    0.01 %  subsume
+c           0.37    0.00 %  transitive
+c           0.13    0.00 %  backbone
+c           0.06    0.00 %  lucky
+c           0.04    0.00 %  parse
+c =============================================
+c        8932.65  100.00 %  total
+c ---- [ statistics ] --------------------------------------------------------
+c chronological:                          673                0 %  conflicts
+c conflicts:                         28137665             3149.98 per second
+c decisions:                         72451272                2.57 per conflict
+c eliminated:                           11528               55 %  variables
+c factored:                              3270               16 %  variables
+c propagations:                   26307665621          2945112    per second
+c reductions:                            1212            23216    interval
+c reordered:                               69           407792    interval
+c rephased:                                88           319746    interval
+c restarts:                            601337               47    interval
+c strengthened:                            16                0 %  checks
+c subsumed:                               113                0 %  checks
+c switched:                               115           244675    interval
+c vivified:                           1771455               32 %  checks
+c walks:                                   29           970264    interval
+c ---- [ glue usage ] --------------------------------------------------------
+c focused glue 1    used 19593604 clauses 50.04% accumulated 50.04% tier1
+c focused glue 2    used  3772321 clauses  9.63% accumulated 59.68%
+c focused glue 3-10 used 10887461 clauses 27.81% accumulated 87.49%
+c focused glue 11   used   708189 clauses  1.81% accumulated 89.30%
+c focused glue 12   used   633104 clauses  1.62% accumulated 90.91% tier2
+c stable glue 4    used 10113819 clauses  9.51% accumulated 54.25% tier1
+c stable glue 5    used  8467048 clauses  7.96% accumulated 62.21%
+c stable glue 6-17 used 27754102 clauses 26.09% accumulated 88.30%
+c stable glue 18   used   942486 clauses  0.89% accumulated 89.19%
+c stable glue 19   used   932812 clauses  0.88% accumulated 90.06% tier2
+c ---- [ resources ] ---------------------------------------------------------
+c maximum-resident-set-size:         86794240 bytes         83 MB
+c process-time:                     2h 28m 53s            8932.65 seconds
+c raising signal 2 (SIGINT)

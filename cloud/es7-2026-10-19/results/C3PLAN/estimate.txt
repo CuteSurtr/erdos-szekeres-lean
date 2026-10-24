@@ -1,0 +1,27 @@
+stratum	roots	measured(closed/partial)	per_root_core_h(low/mid/high)	stratum_core_h(low/mid/high)	source
+H3/one	5	0/0	2.77/5.66/8636.00	14/28/43180	C3-S Knuth walks (H3 stratum, 100 roots)
+H3/two	95	0/0	2.77/5.66/8636.00	263/538/820420	C3-S Knuth walks (H3 stratum, 100 roots)
+H6(1,0)/one	9	9/0	1.29/1.29/1.29	12/12/12	own roots
+H6(1,0)/two	144	144/0	0.02/0.02/0.02	3/3/3	own roots
+H6(1,1)/one	9	0/9	16.56/26.74/67.46	149/241/607	own roots
+H6(1,1)/two	144	103/36	1.62/1.89/2.96	234/272/427	own roots
+H6(2,0)/one	9	5/1	1.61/1.61/1.62	14/15/15	own roots
+H6(2,0)/two	144	72/0	0.02/0.02/0.02	3/3/3	own roots
+H6(2,1)/one	9	0/3	6.62/11.64/31.73	60/105/286	own roots
+H6(2,1)/two	144	21/14	1.14/1.58/3.33	164/227/480	own roots
+H6(3,0)/one	9	1/1	1.37/1.63/2.69	12/15/24	own roots
+H6(3,0)/two	144	10/0	0.02/0.02/0.02	3/3/3	own roots
+H6(3,1)/one	9	0/0	14.07/22.97/58.53	127/207/527	borrowed: all measured s1/one roots
+H6(3,1)/two	144	1/2	1.58/2.67/7.03	227/384/1012	own roots
+H6(4,0)/one	9	0/0	1.41/1.44/1.57	13/13/14	borrowed: all measured s0/one roots
+H6(4,0)/two	144	0/0	0.02/0.02/0.02	3/3/3	borrowed: all measured s0/two roots
+H6(4,1)/one	9	0/0	14.07/22.97/58.53	127/207/527	borrowed: all measured s1/one roots
+H6(4,1)/two	144	0/0	1.53/1.84/3.11	220/265/447	borrowed: all measured s1/two roots
+H6(5,0)/one	9	0/0	1.41/1.44/1.57	13/13/14	borrowed: all measured s0/one roots
+H6(5,0)/two	144	0/0	0.02/0.02/0.02	3/3/3	borrowed: all measured s0/two roots
+H6(5,1)/one	9	0/0	14.07/22.97/58.53	127/207/527	borrowed: all measured s1/one roots
+H6(5,1)/two	144	0/0	1.53/1.84/3.11	220/265/447	borrowed: all measured s1/two roots
+TOTAL core-hours low/mid/high: 2008/3028/868980
+TOTAL with H6 mirror reduction, core-hours low/mid/high: 1209/1894/866510
+H3 high from the second-heaviest walk (1,681 solve core-h) instead of 6.8e5: no mirror 7515 with H6 mirror 5045
+bucket costs c_b (s): {"H3/two/2/2": 300.1, "H3/two/4/1": 227.0, "H3/two/4/2": 79.3, "s0/one/3/1": 119.0, "s0/one/3/2": 37.7, "s0/two/2/2": 78.3, "s1/one/3/1": 300.1, "s1/one/3/2": 154.8, "s1/one/4/1": 79.0, "s1/one/4/2": 66.5, "s1/two/2/2": 221.5, "s1/two/3/2": 56.2, "s1/two/4/1": 21.6, "s1/two/4/2": 20.0}

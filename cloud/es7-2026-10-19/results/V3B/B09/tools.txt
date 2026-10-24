@@ -1,0 +1,6 @@
+CaDiCaL https://github.com/arminbiere/cadical commit c60730422e758ef1cebe7aeddf2dda31c996bf04 version 3.0.1 -> /opt/bin/cadical
+cake_lpr https://github.com/tanyongkiam/cake_lpr commit a36874a8b750b43fe4b385b8ddbf5b033e46a3fa (make cake_lpr) -> /opt/bin/cake_lpr
+cake_lpr example.cnf example.lpr: s VERIFIED UNSAT
+verify/v3 from commit bdf319c (worktree /opt/v3src)
+sha256 /opt/bin/cadical 357f0b40c251515c61f7b14aa350b750dfe8ad2ce4335857847eeb8b636adaca
+sha256 /opt/bin/cake_lpr 1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca

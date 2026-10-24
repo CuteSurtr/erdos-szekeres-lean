@@ -1,0 +1,8 @@
+C3-S tools: used in place from this checkout (results/C3-S/tools, results/C3a); no diff in results/C3-S/tools between 132398c and the es7-cloud head at d88e0d49+ (git diff --stat empty)
+cadical: https://github.com/arminbiere/cadical c60730422e758ef1cebe7aeddf2dda31c996bf04 (3.0.1), ./configure && make
+cake_lpr: https://github.com/tanyongkiam/cake_lpr a36874a8b750b43fe4b385b8ddbf5b033e46a3fa, make cake_lpr
+lrat-check: https://github.com/marijnheule/drat-trim 2e3b2dc0ecf938addbd779d42877b6ed69d9a985 + results/E2/tools/lrat-check-E2.patch (patch(1)), gcc -O2
+  sanity: CNF {1},{-1}; LRAT "3 0 0" -> lrat-check "c NOT VERIFIED" (c FAILED: empty clause without a RUP conflict), cake_lpr rejects (pivot must be non-zero);
+          "3 0 1 2 0" -> "c VERIFIED" and "s VERIFIED UNSAT"
+march_cu: https://github.com/marijnheule/CnC 705b60c, -fcommon added to CFLAGS, microsat.c S->mem_max = 600000000 (as results/C3a/shard_plan.md); run with ulimit -s unlimited
+base CNF: gen_case.py 11 7 none -o base.cnf -> p cnf 168399 4154921, sha256 bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da (matches)

@@ -1,0 +1,74 @@
+{
+ "U3_L": {
+  "open": 1211,
+  "claimed_by_wave4": 0,
+  "reserved_for_running": 635,
+  "to_mopup": 576,
+  "machines": 2,
+  "running": [
+   "H24: queue 318 rate 0.0/min left 106 min reserve 318",
+   "H25: queue 317 rate 0.0/min left 120 min reserve 317"
+  ]
+ },
+ "U4_L": {
+  "open": 236,
+  "claimed_by_wave4": 128,
+  "reserved_for_running": 0,
+  "to_mopup": 108,
+  "machines": 1,
+  "running": []
+ },
+ "U_L2": {
+  "open": 3345,
+  "claimed_by_wave4": 0,
+  "reserved_for_running": 2692,
+  "to_mopup": 653,
+  "machines": 2,
+  "running": [
+   "H01: queue 292 rate 4.8/min left 102 min reserve 292",
+   "H02: queue 177 rate 5.8/min left 102 min reserve 177",
+   "H03: queue 228 rate 5.0/min left 102 min reserve 228",
+   "H04: queue 119 rate 5.8/min left 102 min reserve 119",
+   "H05: queue 14 rate 9.7/min left 102 min reserve 14",
+   "H06: queue 0 rate 10.4/min left 102 min reserve 0",
+   "H07: queue 226 rate 5.1/min left 103 min reserve 226",
+   "H08: queue 104 rate 6.4/min left 104 min reserve 104",
+   "H09: queue 238 rate 6.4/min left 103 min reserve 238",
+   "H10: queue 191 rate 5.7/min left 104 min reserve 191",
+   "H11: queue 1 rate 10.9/min left 103 min reserve 1",
+   "H12: queue 50 rate 8.1/min left 104 min reserve 50",
+   "H13: queue 293 rate 5.3/min left 105 min reserve 293",
+   "H14: queue 229 rate 4.4/min left 105 min reserve 229",
+   "H15: queue 161 rate 5.5/min left 105 min reserve 161",
+   "H16: queue 93 rate 7.0/min left 104 min reserve 93",
+   "H17: queue 25 rate 10.2/min left 105 min reserve 25",
+   "H18: queue 35 rate 9.2/min left 104 min reserve 35",
+   "G1: queue 65 rate 4.5/min left 40 min reserve 65",
+   "G2: queue 356 rate 5.1/min left 18 min reserve 72",
+   "G3: queue 448 rate 5.6/min left 18 min reserve 79"
+  ]
+ },
+ "U_L6": {
+  "open": 539,
+  "claimed_by_wave4": 196,
+  "reserved_for_running": 64,
+  "to_mopup": 279,
+  "machines": 1,
+  "running": [
+   "H19: queue 2 rate 6.9/min left 105 min reserve 2",
+   "H20: queue 185 rate 0.4/min left 106 min reserve 34",
+   "H22: queue 1 rate 7.0/min left 106 min reserve 1",
+   "G21: queue 155 rate 1.9/min left 18 min reserve 27"
+  ]
+ },
+ "U_L7": {
+  "open": 1433,
+  "claimed_by_wave4": 389,
+  "reserved_for_running": 63,
+  "to_mopup": 981,
+  "machines": 5,
+  "running": [
+   "G14: queue 1044 rate 2.0/min left 40 min reserve 63"
+  ]
+ }
+}

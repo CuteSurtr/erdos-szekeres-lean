@@ -1,0 +1,8 @@
+# re-check of 0s0-1s1_3s0-9s0_2_5 alone, 08:45:58 UTC
+cnf sha256 ecc2cc234abad2418a870830fb1e696ffd89f2c05b0d1cfa080b1dc62478eda0
+s UNSATISFIABLE
+solve 5.3 s, proof 20170256 bytes
+dual ('c VERIFIED', 's VERIFIED UNSAT', True) 13.2 s
+
+[ 1033.590469] Memory cgroup out of memory: Killed process 2577 (cake_lpr) total-vm:8391796kB, anon-rss:3852416kB, file-rss:1256kB, shmem-rss:0kB, UID:0 pgtables:7612kB oom_score_adj:0
+cake_lpr was killed by the memory cgroup (4 jobs in parallel). Not a real rejection; driver resumed with --jobs 3 (it re-solves and re-checks the node itself).

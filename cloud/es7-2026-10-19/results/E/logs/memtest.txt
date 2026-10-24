@@ -1,0 +1,10 @@
+# CaDiCaL 3.0.1 peak memory on n33k7m3.cnf (463,980 vars, 9,498,158 clauses); machine load ~60-100
+parse only (-c 1), default options:                 1.53 GB peak, 3.25 s user
+parse only (-c 1), elim/subsume/probe/vivify off:   1.53 GB peak
+3,000 conflicts, default options (-v):              2.17 GB peak, 8.8 s user
+20,000 conflicts, --factor=0 --congruence=0 --sweep=0: 7.16 GB peak, 47.8 s user
+20,000 conflicts, --elim=0:                         3.14 GB peak, 32.5 s user
+20,000 conflicts, default options:                  killed while at 5.4-6.4 GB RSS
+20,000 conflicts, --elimboundmax=0:                 killed while at 5.2 GB RSS
+incremental worker (ccworker), defaults, two 20,000-conflict jobs + look-ahead: 7.93 GB peak, 98.9 s user
+=> all cube-and-conquer workers and LRAT runs use --elim=0

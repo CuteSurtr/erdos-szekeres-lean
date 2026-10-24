@@ -1,0 +1,113 @@
+{"whole": true, "case_sha256": "f06ffbe5472cd4ac33cd0919e323b150a331343d5c7a81484ad3448304705573", "plain_s": 60, "solve_s": 60.01, "status": "UNKNOWN", "rc": 0}
+{"top": true, "ncubes": 111, "march_s": 201.6, "march": "number of cubes 111, including 9 refuted", "case_sha256": "f06ffbe5472cd4ac33cd0919e323b150a331343d5c7a81484ad3448304705573", "top_sha256": "45a203fd03e8ba9824caf955b8027a4fa83acf4f67ad15bdfdd1fc1c71b0718c", "shard": 0, "nshards": 1}
+{"cube": [-1089, -3005, 2737, 8892, -1187], "solve_s": 0.28, "proof_bytes": 969452, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.33, "status": "UNSAT"}
+{"cube": [-1089, -3005, 2737, 8892, 1187], "solve_s": 0.37, "proof_bytes": 825920, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.12, "status": "UNSAT"}
+{"cube": [-1089, -3005, 2737, -8892, 32, -1187], "solve_s": 0.26, "proof_bytes": 882671, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.15, "status": "UNSAT"}
+{"cube": [-1089, -3005, 2737, -8892, 32, 1187], "solve_s": 0.3, "proof_bytes": 713270, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.2, "status": "UNSAT"}
+{"cube": [-1089, -3005, 2737, -8892, -32, -36383, 2090], "solve_s": 0.29, "proof_bytes": 857397, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.15, "status": "UNSAT"}
+{"cube": [-1089, -3005, 2737, -8892, -32, -36383, -2090], "solve_s": 0.26, "proof_bytes": 905685, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.13, "status": "UNSAT"}
+{"cube": [-1089, -3005, 2737, -8892, -32, 36383, 28038], "solve_s": 0.29, "proof_bytes": 1003779, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.23, "status": "UNSAT"}
+{"cube": [-1089, -3005, -2737, -289, -1426], "solve_s": 0.29, "proof_bytes": 785271, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.15, "status": "UNSAT"}
+{"cube": [-1089, -3005, 2737, -8892, -32, 36383, -28038], "solve_s": 0.97, "proof_bytes": 7404042, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.54, "status": "UNSAT"}
+{"cube": [-1089, -3005, -2737, -289, 1426, 5557], "solve_s": 0.27, "proof_bytes": 920673, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.12, "status": "UNSAT"}
+{"cube": [-1089, -3005, -2737, -289, 1426, -5557, 28037], "solve_s": 0.31, "proof_bytes": 678173, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.25, "status": "UNSAT"}
+{"cube": [-1089, -3005, -2737, 289, 41701, -29804], "solve_s": 0.34, "proof_bytes": 1018404, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.18, "status": "UNSAT"}
+{"cube": [-1089, -3005, -2737, -289, 1426, -5557, -28037], "solve_s": 0.77, "proof_bytes": 7784206, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.53, "status": "UNSAT"}
+{"cube": [-1089, -3005, -2737, 289, 41701, 29804, 497], "solve_s": 0.31, "proof_bytes": 910325, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.24, "status": "UNSAT"}
+{"cube": [-1089, -3005, -2737, 289, 41701, 29804, -497], "solve_s": 0.88, "proof_bytes": 9162323, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.62, "status": "UNSAT"}
+{"cube": [-1089, -3005, -2737, 289, -41701, -203, -29804], "solve_s": 0.37, "proof_bytes": 1056556, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.38, "status": "UNSAT"}
+{"cube": [-1089, -3005, -2737, 289, -41701, -203, 29804], "solve_s": 1.19, "proof_bytes": 8616910, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.72, "status": "UNSAT"}
+{"cube": [-1089, -3005, -2737, 289, -41701, 203, 16542], "solve_s": 1.41, "proof_bytes": 7850314, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.8, "status": "UNSAT"}
+{"cube": [-1089, -3005, -2737, 289, -41701, 203, -16542], "solve_s": 4.46, "proof_bytes": 14356339, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.12, "status": "UNSAT"}
+{"cube": [-1089, 3005, 638, -30086, 499], "solve_s": 0.37, "proof_bytes": 964455, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.5, "status": "UNSAT"}
+{"cube": [-1089, 3005, 638, -30086, -499, 26261, -23004], "solve_s": 0.36, "proof_bytes": 713188, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.18, "status": "UNSAT"}
+{"cube": [-1089, 3005, 638, -30086, -499, 26261, 23004], "solve_s": 0.35, "proof_bytes": 985014, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.16, "status": "UNSAT"}
+{"cube": [-1089, 3005, 638, 30086, 177, -120], "solve_s": 0.31, "proof_bytes": 814042, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.25, "status": "UNSAT"}
+{"cube": [-1089, 3005, 638, -30086, -499, -26261, 28039], "solve_s": 0.53, "proof_bytes": 7048581, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.6, "status": "UNSAT"}
+{"cube": [-1089, 3005, 638, -30086, -499, -26261, -28039], "solve_s": 1.39, "proof_bytes": 7727598, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.55, "status": "UNSAT"}
+{"cube": [-1089, 3005, 638, 30086, 177, 120, 497], "solve_s": 0.3, "proof_bytes": 765865, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.14, "status": "UNSAT"}
+{"cube": [-1089, 3005, 638, 30086, -177, -585, -1334], "solve_s": 0.31, "proof_bytes": 964542, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.16, "status": "UNSAT"}
+{"cube": [-1089, 3005, 638, 30086, 177, 120, -497], "solve_s": 0.87, "proof_bytes": 7904773, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.57, "status": "UNSAT"}
+{"cube": [-1089, 3005, 638, 30086, -177, -585, 1334], "solve_s": 0.5, "proof_bytes": 1018902, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.29, "status": "UNSAT"}
+{"cube": [-1089, 3005, -638, 640, -244, -120, 38357], "solve_s": 0.3, "proof_bytes": 856776, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.23, "status": "UNSAT"}
+{"cube": [-1089, 3005, 638, 30086, -177, 585, 29998], "solve_s": 1.17, "proof_bytes": 7696971, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.69, "status": "UNSAT"}
+{"cube": [-1089, 3005, -638, 640, -244, -120, -38357], "solve_s": 0.33, "proof_bytes": 959118, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.23, "status": "UNSAT"}
+{"cube": [-1089, 3005, -638, 640, -244, 120, 26261], "solve_s": 0.3, "proof_bytes": 962953, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.11, "status": "UNSAT"}
+{"cube": [-1089, 3005, -638, 640, 244, 637, 10543], "solve_s": 0.34, "proof_bytes": 961528, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.15, "status": "UNSAT"}
+{"cube": [-1089, 3005, -638, 640, -244, 120, -26261], "solve_s": 1.07, "proof_bytes": 7498076, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.42, "status": "UNSAT"}
+{"cube": [-1089, 3005, -638, 640, 244, -637, -585], "solve_s": 0.43, "proof_bytes": 1116358, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.09, "status": "UNSAT"}
+{"cube": [-1089, 3005, -638, 640, 244, 637, -10543], "solve_s": 1.09, "proof_bytes": 7698040, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.75, "status": "UNSAT"}
+{"cube": [-1089, 3005, -638, -640, 641, 1480, -1426], "solve_s": 0.39, "proof_bytes": 838906, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.29, "status": "UNSAT"}
+{"cube": [-1089, 3005, 638, 30086, -177, 585, -29998], "solve_s": 8.1, "proof_bytes": 21597999, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.55, "status": "UNSAT"}
+{"cube": [-1089, 3005, -638, -640, 641, 1480, 1426], "solve_s": 0.88, "proof_bytes": 7459631, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.5, "status": "UNSAT"}
+{"cube": [-1089, 3005, -638, -640, 641, -1480, 637], "solve_s": 1.06, "proof_bytes": 7669691, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.67, "status": "UNSAT"}
+{"cube": [-1089, 3005, -638, 640, 244, -637, 585], "solve_s": 5.28, "proof_bytes": 15351805, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.48, "status": "UNSAT"}
+{"cube": [-1089, 3005, -638, -640, -641, 642, -246], "solve_s": 0.84, "proof_bytes": 7790898, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.49, "status": "UNSAT"}
+{"cube": [-1089, 3005, -638, -640, 641, -1480, -637], "solve_s": 4.21, "proof_bytes": 13850579, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.86, "status": "UNSAT"}
+{"cube": [-1089, 3005, -638, -640, -641, 642, 246], "solve_s": 3.93, "proof_bytes": 14246627, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.97, "status": "UNSAT"}
+{"cube": [-1089, 3005, -638, -640, -641, -642, 643], "solve_s": 4.73, "proof_bytes": 13957136, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.91, "status": "UNSAT"}
+{"cube": [1089, -1155, 503, -502, -1175, 1194, -1212], "solve_s": 1.7, "proof_bytes": 10436886, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.71, "status": "UNSAT"}
+{"cube": [1089, -1155, 503, -502, -1175, -1194, -1212], "solve_s": 0.83, "proof_bytes": 7147121, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.59, "status": "UNSAT"}
+{"cube": [1089, -1155, 503, -502, -1175, -1194, 1212], "solve_s": 1.74, "proof_bytes": 9738270, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.69, "status": "UNSAT"}
+{"cube": [1089, -1155, 503, -502, -1175, 1194, 1212], "solve_s": 6.06, "proof_bytes": 17917533, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.06, "status": "UNSAT"}
+{"cube": [1089, -1155, 503, -502, 1175, -1194, -1212], "solve_s": 2.25, "proof_bytes": 9239144, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.57, "status": "UNSAT"}
+{"cube": [1089, -1155, 503, -502, 1175, -1194, 1212], "solve_s": 5.3, "proof_bytes": 16594979, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.11, "status": "UNSAT"}
+{"cube": [1089, -1155, 503, -502, 1175, 1194, -1229], "solve_s": 4.77, "proof_bytes": 14267227, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.96, "status": "UNSAT"}
+{"cube": [1089, -1155, 503, 502, 1175, 1194, -1229], "solve_s": 1.73, "proof_bytes": 10231565, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.56, "status": "UNSAT"}
+{"cube": [1089, -1155, 503, 502, 1175, -1194, 1212], "solve_s": 1.38, "proof_bytes": 8335323, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.57, "status": "UNSAT"}
+{"cube": [1089, -1155, 503, -502, 1175, 1194, 1229], "solve_s": 9.61, "proof_bytes": 20154645, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.47, "status": "UNSAT"}
+{"cube": [1089, -1155, 503, 502, 1175, -1194, -1212], "solve_s": 0.61, "proof_bytes": 7244076, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.49, "status": "UNSAT"}
+{"cube": [1089, -1155, 503, 502, 1175, 1194, 1229], "solve_s": 5.54, "proof_bytes": 16523272, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.12, "status": "UNSAT"}
+{"cube": [1089, -1155, 503, 502, -1175, 1194, -1212], "solve_s": 0.55, "proof_bytes": 7014263, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.46, "status": "UNSAT"}
+{"cube": [1089, -1155, 503, 502, -1175, -1194, -1212], "solve_s": 0.3, "proof_bytes": 722402, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.19, "status": "UNSAT"}
+{"cube": [1089, -1155, 503, 502, -1175, 1194, 1212], "solve_s": 1.96, "proof_bytes": 9192928, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.65, "status": "UNSAT"}
+{"cube": [1089, -1155, 503, 502, -1175, -1194, 1212], "solve_s": 0.54, "proof_bytes": 6949368, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.68, "status": "UNSAT"}
+{"cube": [1089, -1155, -503, 502, -1175, 1194, -1212], "solve_s": 1.63, "proof_bytes": 8464686, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.83, "status": "UNSAT"}
+{"cube": [1089, -1155, -503, 502, -1175, -1194, 1212], "solve_s": 1.92, "proof_bytes": 10469650, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.84, "status": "UNSAT"}
+{"cube": [1089, -1155, -503, 502, -1175, -1194, -1212], "solve_s": 0.62, "proof_bytes": 7194369, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.71, "status": "UNSAT"}
+{"cube": [1089, -1155, -503, 502, -1175, 1194, 1212], "solve_s": 7.06, "proof_bytes": 15491686, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.03, "status": "UNSAT"}
+{"cube": [1089, -1155, -503, 502, 1175, -1194, -1245], "solve_s": 3.86, "proof_bytes": 14764955, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.04, "status": "UNSAT"}
+{"cube": [1089, -1155, -503, 502, 1175, -1194, 1245], "solve_s": 5.61, "proof_bytes": 15906667, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.28, "status": "UNSAT"}
+{"cube": [1089, -1155, -503, 502, 1175, 1194, -1212], "solve_s": 4.87, "proof_bytes": 14225454, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.3, "status": "UNSAT"}
+{"cube": [1089, -1155, -503, -502, -1175, -1212, 1229], "solve_s": 6.2, "proof_bytes": 17637173, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.62, "status": "UNSAT"}
+{"cube": [1089, -1155, -503, -502, -1175, -1212, -1229], "solve_s": 4.27, "proof_bytes": 15334522, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.6, "status": "UNSAT"}
+{"cube": [1089, -1155, -503, 502, 1175, 1194, 1212], "solve_s": 10.98, "proof_bytes": 21756672, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.05, "status": "UNSAT"}
+{"cube": [1089, -1155, -503, -502, -1175, 1212, -1229], "solve_s": 5.82, "proof_bytes": 16918054, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.99, "status": "UNSAT"}
+{"cube": [1089, -1155, -503, -502, 1175, -1194, -1212], "solve_s": 4.94, "proof_bytes": 14717010, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.14, "status": "UNSAT"}
+{"cube": [-1089, 3005, -638, -640, -641, -642, -643], "solve_s": 57.08, "proof_bytes": 63621568, "cake_lpr": "s VERIFIED UNSAT", "check_s": 7.24, "status": "UNSAT"}
+{"cube": [1089, -1155, -503, -502, -1175, 1212, 1229], "solve_s": 9.56, "proof_bytes": 20059062, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.89, "status": "UNSAT"}
+{"cube": [1089, -1155, -503, -502, 1175, 1194, -1212], "solve_s": 6.72, "proof_bytes": 16795826, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.04, "status": "UNSAT"}
+{"cube": [1089, -1155, -503, -502, 1175, -1194, 1212], "solve_s": 8.31, "proof_bytes": 20372940, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.19, "status": "UNSAT"}
+{"cube": [1089, 1155, -1245, -1229, -1212, -503, -1112], "solve_s": 4.04, "proof_bytes": 14888502, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.91, "status": "UNSAT"}
+{"cube": [1089, 1155, -1245, -1229, -1212, 503, -1112], "solve_s": 1.08, "proof_bytes": 8241680, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.49, "status": "UNSAT"}
+{"cube": [1089, 1155, -1245, -1229, -1212, 503, 1112], "solve_s": 4.13, "proof_bytes": 14950695, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.14, "status": "UNSAT"}
+{"cube": [1089, 1155, -1245, -1229, -1212, -503, 1112], "solve_s": 7.11, "proof_bytes": 20771722, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.21, "status": "UNSAT"}
+{"cube": [1089, -1155, -503, -502, 1175, 1194, 1212], "solve_s": 12.9, "proof_bytes": 24480265, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.53, "status": "UNSAT"}
+{"cube": [1089, 1155, -1245, -1229, 1212, 506, 505], "solve_s": 3.97, "proof_bytes": 14561312, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.98, "status": "UNSAT"}
+{"cube": [1089, 1155, -1245, -1229, 1212, 506, -505], "solve_s": 6.6, "proof_bytes": 16766388, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.31, "status": "UNSAT"}
+{"cube": [1089, 1155, -1245, -1229, 1212, -506, 505], "solve_s": 6.37, "proof_bytes": 17007170, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.13, "status": "UNSAT"}
+{"cube": [1089, 1155, -1245, 1229, -1212, 506, 505], "solve_s": 3.35, "proof_bytes": 13978533, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.95, "status": "UNSAT"}
+{"cube": [1089, 1155, -1245, 1229, -1212, 506, -505], "solve_s": 5.9, "proof_bytes": 17571918, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.7, "status": "UNSAT"}
+{"cube": [1089, 1155, -1245, -1229, 1212, -506, -505], "solve_s": 8.25, "proof_bytes": 20881075, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.11, "status": "UNSAT"}
+{"cube": [1089, 1155, -1245, 1229, -1212, -506, 505], "solve_s": 5.75, "proof_bytes": 16735175, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.15, "status": "UNSAT"}
+{"cube": [1089, 1155, -1245, 1229, -1212, -506, -505], "solve_s": 8.6, "proof_bytes": 20179179, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.22, "status": "UNSAT"}
+{"cube": [1089, 1155, -1245, 1229, 1212, 506, 505], "solve_s": 6.02, "proof_bytes": 18294745, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.05, "status": "UNSAT"}
+{"cube": [1089, 1155, -1245, 1229, 1212, 506, -505], "solve_s": 8.63, "proof_bytes": 20758381, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.49, "status": "UNSAT"}
+{"cube": [1089, 1155, -1245, 1229, 1212, -506, 505], "solve_s": 8.7, "proof_bytes": 20439510, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.38, "status": "UNSAT"}
+{"cube": [1089, 1155, 1245, -1229, -1212, 506, -40], "solve_s": 5.86, "proof_bytes": 16658131, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.16, "status": "UNSAT"}
+{"cube": [1089, 1155, 1245, -1229, -1212, 506, 40], "solve_s": 3.99, "proof_bytes": 14514859, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.17, "status": "UNSAT"}
+{"cube": [1089, 1155, -1245, 1229, 1212, -506, -505], "solve_s": 10.41, "proof_bytes": 20619937, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.27, "status": "UNSAT"}
+{"cube": [1089, 1155, 1245, -1229, -1212, -506, -1175], "solve_s": 6.42, "proof_bytes": 17094246, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.21, "status": "UNSAT"}
+{"cube": [1089, 1155, 1245, -1229, 1212, 506, -1175], "solve_s": 5.94, "proof_bytes": 16541431, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.41, "status": "UNSAT"}
+{"cube": [1089, 1155, 1245, -1229, -1212, -506, 1175], "solve_s": 7.34, "proof_bytes": 16953650, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.53, "status": "UNSAT"}
+{"cube": [1089, 1155, 1245, -1229, 1212, 506, 1175], "solve_s": 7.0, "proof_bytes": 16482505, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.16, "status": "UNSAT"}
+{"cube": [1089, 1155, 1245, 1229, -1212, 506, -1175], "solve_s": 6.44, "proof_bytes": 16047957, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.06, "status": "UNSAT"}
+{"cube": [1089, 1155, 1245, -1229, 1212, -506, -1175], "solve_s": 9.07, "proof_bytes": 20978852, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.47, "status": "UNSAT"}
+{"cube": [1089, 1155, 1245, -1229, 1212, -506, 1175], "solve_s": 10.73, "proof_bytes": 22964336, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.62, "status": "UNSAT"}
+{"cube": [1089, 1155, 1245, 1229, -1212, 506, 1175], "solve_s": 10.16, "proof_bytes": 20215626, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.92, "status": "UNSAT"}
+{"cube": [1089, 1155, 1245, 1229, -1212, -506, -1175], "solve_s": 10.91, "proof_bytes": 20419694, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.3, "status": "UNSAT"}
+{"cube": [1089, 1155, 1245, 1229, -1212, -506, 1175], "solve_s": 14.22, "proof_bytes": 24815915, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.99, "status": "UNSAT"}
+{"cube": [1089, 1155, 1245, 1229, 1212, -1194, -1175], "solve_s": 11.78, "proof_bytes": 22366972, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.88, "status": "UNSAT"}
+{"cube": [1089, 1155, 1245, 1229, 1212, -1194, 1175], "solve_s": 18.35, "proof_bytes": 28225543, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.81, "status": "UNSAT"}
+{"cube": [1089, 1155, 1245, 1229, 1212, 1194, -1175], "solve_s": 20.38, "proof_bytes": 29198557, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.74, "status": "UNSAT"}
+{"cube": [1089, 1155, 1245, 1229, 1212, 1194, 1175], "solve_s": 28.65, "proof_bytes": 34677000, "cake_lpr": "s VERIFIED UNSAT", "check_s": 4.98, "status": "UNSAT"}

@@ -1,0 +1,9 @@
+Leaf idx 2119 (case U4_L, lits [-1014,-1040,1065,-1112,1134,1155,-1245]) was recorded REJECTED by v3_check
+(rc 20, solve 216 s, proof 159,754,492 bytes, cake_lpr stdout empty after 50 s).
+Cause: kernel log at ~09:25Z: "Memory cgroup out of memory: Killed process 2991 (cake_lpr) ... anon-rss:4197376kB"
+(4 concurrent jobs in the session's memory cgroup). This is REVIEW.md RISK-3/RISK-5 (transient failure recorded as REJECTED).
+Diagnostic re-run by hand (not via v3_check, so it does NOT count as a VERIFIED record):
+  rebuilt leaf CNF sha256 aec21121bf39a77d7fa6bed1beb344e73e8a6e92c150542fb04a511628b1937d (same as the record)
+  cadical -q --lrat --binary=false -> rc 20, proof 159,754,492 bytes, sha256 3de7047eb2b1e27ee9e2ade525ee841d113c96647a433c0322efbe181c40bfcf
+  cake_lpr f.cnf p.lrat -> "s VERIFIED UNSAT" in 15 s
+The second pass will re-check this leaf (no VERIFIED record).

@@ -1,0 +1,11 @@
+input commit Z: a71d30d58c21f637bcd4666f17b0bf7b7044a5bb
+worklist.jsonl sha256 27e02b76e005964ef7779f970b1e3da55328bdfa878541b4ad86020120e7b1d9 lines 22682 (expected 27e02b76...b1d9, 22682): OK
+cross-check at 3e4dbaae3 (3e4dbaae3901301b13a873b37286757f6c5656a5):
+  v3_jsonl_leaves WAVE1 jtree1: dirs 119 leaf lines 30151 skipped records 71
+  v3_jsonl_leaves WAVE2 jtree2: dirs 107 leaf lines 12429 skipped records 0
+  v3_jsonl_leaves WAVE3 jtree3: dirs 29 leaf lines 8850 skipped records 0
+  v3_jsonl_leaves WAVE4 jtree4: dirs 62 leaf lines 23090 skipped records 0
+  v3_manifest: leaves 70215 cases with leaves 278 problems 0
+  Mzd.jsonl sha256 9685d3c4e3c071782c9db41362a6e4bc244ee99130ef131bc7b6da58254a67a8, 70215 lines: OK
+  work-list records whose (case, lits) is not in Mzd.jsonl: 0 of 22682: OK
+shard 2 of 24, run started Tue Oct 20 15:24:30 UTC 2026 approx 15:24:20 UTC

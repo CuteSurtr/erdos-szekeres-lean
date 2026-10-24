@@ -1,0 +1,6 @@
+input commit: a71d30d (ROOT=/opt/in/cloud/es7-2026-10-19)
+results/V3D/worklist.jsonl sha256 27e02b76e005964ef7779f970b1e3da55328bdfa878541b4ad86020120e7b1d9, 22682 lines: OK
+cross-check at 3e4dbaae3: jtree1 30151 leaf lines (71 skipped), jtree2 12429, jtree3 8850, jtree4 23090
+v3_manifest Mzd.jsonl: 70215 leaves, 278 cases, 0 problems, sha256 9685d3c4e3c071782c9db41362a6e4bc244ee99130ef131bc7b6da58254a67a8: OK
+every work-list (case, lits) occurs in Mzd.jsonl: 22682/22682, 0 missing: OK
+shard 5 of 24

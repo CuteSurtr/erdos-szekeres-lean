@@ -1,0 +1,16 @@
+== full-CNF LRAT control n18k6m3 (sha256 02c5ffc2..)
+s UNSATISFIABLE
+solve 1s
+proof_bytes 5322132
+c VERIFIED
+lrat_check_exit 0
+== negative LRAT control: n15k6m3's proof checked against n18k6m3 (must fail)
+c NOT VERIFIED
+lrat_check_exit 1
+== negative LRAT control 2: n18k6m3 proof with the empty-clause step removed (must fail)
+c WARNING: Verification incomplete. Last line checked = 385757
+c NOT VERIFIED
+lrat_check_exit 1
+== negative LRAT control 3: n18k6m3 proof with the last (conflict) hint of the empty-clause step removed (must fail)
+c VERIFIED
+lrat_check_exit 0

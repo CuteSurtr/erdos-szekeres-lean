@@ -1,0 +1,15 @@
+results/WAVE4/H33/close_march.py is a byte-for-byte copy of results/WAVE2/F2/close_march.py.
+sha256 (both): 2e0975aa98c7dbcc2cf535993b54f57db764f7bf50f64fc54b9ff2860e67c855
+diff results/WAVE2/F2/close_march.py results/WAVE4/H33/close_march.py: empty
+
+Checked by reading the copy:
+(a) fresh directory per job: solve() uses tempfile.mkdtemp(prefix=f"s_{k}_", dir=WORK) for every
+    CaDiCaL + cake_lpr job; march() uses tempfile.mkdtemp(prefix=f"m_{tag}_", dir=WORK) for every
+    split. Each directory is removed after its job. WORK=/opt/work/tmp.
+(b) atomic writes: finalize().atomic() writes leaves.icnf and open.icnf to tempfile.mkstemp in the
+    output dir, then os.replace() into place.
+(c) first record: when leaves.jsonl does not exist, the first record written is
+    {"case": a.name, "case_sha256": sha256(CASE.cnf)}; run with --name U_L2.
+Also: a leaf is written to leaves.icnf only if status == "UNSAT" and cake_lpr == "s VERIFIED UNSAT"
+(AUDIT BUG-1); cubes files are written via tmp + rename (RISK-1); this is the reviewed F2 driver,
+unmodified (RISK-3). --skip is not used.

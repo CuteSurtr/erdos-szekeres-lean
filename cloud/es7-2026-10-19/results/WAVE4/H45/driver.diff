@@ -1,0 +1,8 @@
+results/WAVE4/H45/close_march.py is a byte-for-byte copy of results/WAVE2/F2/close_march.py (cmp: identical; no changes, empty diff).
+sha256 of both: 2e0975aa98c7dbcc2cf535993b54f57db764f7bf50f64fc54b9ff2860e67c855
+Checked:
+(a) every solver job (solve(), line 83) and every march_cu split job (march(), line 39) gets its own tempfile.mkdtemp directory under WORK; cake_lpr runs on the files in the solver job's directory; the directory is removed after the job. No shared scratch names (AUDIT RISK-3b).
+(b) leaves.icnf and open.icnf are written by finalize()/atomic() (lines 136-143) to a tempfile.mkstemp file in the output directory and then os.replace'd into place (AUDIT RISK-1).
+(c) the first record of a new leaves.jsonl (lines 117-119) holds "case" (from --name, here U3_L) and "case_sha256".
+Also: a leaf enters leaves.icnf only with status UNSAT and cake_lpr == "s VERIFIED UNSAT" (line 141; AUDIT BUG-1); other cake_lpr verdicts give UNSAT_UNCHECKED and stay open.
+Run: BIN=/opt/work/bin WORK=/opt/work/tmp python3 close_march.py /opt/work/CASE.cnf /opt/work/out/U3_L --name U3_L --top /opt/work/top.icnf --depth 7 --timeout 300 --split-depth 6 --jobs 4 --hours 2.15  (started 2026-10-20 14:22:10 UTC; output directory outside the git checkout)

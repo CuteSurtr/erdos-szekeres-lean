@@ -1,0 +1,11 @@
+input commit Z = 066eaa98a68e7c4a7f9b7cea24380deef7e8b2e4 (worktree /opt/in), verify/v3 at bdf319c
+v3_jsonl_leaves WAVE1 -> jtree1: dirs 119 leaf lines 30151 skipped records 71
+v3_jsonl_leaves WAVE2 -> jtree2: dirs 86 leaf lines 5156 skipped records 0
+v3_jsonl_leaves WAVE3 -> jtree3: dirs 5 leaf lines 232 skipped records 0
+v3_manifest (WAVE1 jtree1 WAVE2 jtree2 WAVE3 jtree3): leaves 35153 cases with leaves 253 problems 0
+M.jsonl sha256 22b6f6a782cd2b2e6319c61c7bc7029032d10aa5fd583dcfbba47ec627e1c549 (35153 lines)
+VERIFIED keys from V3T/*.jsonl, V3A/*/out.jsonl (no V3B out.jsonl at Z): 10121
+n (Mt.jsonl records) 25032
+Mt.jsonl sha256 605e39d27b8a11c8b8de36b167d1760f91dc3e6c4e49a2e570bf607689e7cfe7
+shard 15 of 16: idx = 15 mod 16
+leaves in my shard: 1564

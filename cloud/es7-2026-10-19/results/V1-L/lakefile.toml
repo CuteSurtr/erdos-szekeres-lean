@@ -1,0 +1,15 @@
+name = "v1l"
+version = "0.1.0"
+defaultTargets = ["V1L", "leaves_eq"]
+
+# `results/H3` (MirrorEncoding), and through it `results/H`, the parent repository and Mathlib.
+[[require]]
+name = "mirror_encoding"
+path = "../H3"
+
+[[lean_lib]]
+name = "V1L"
+
+[[lean_exe]]
+name = "leaves_eq"
+root = "V1L.LeavesEq"

@@ -1,0 +1,23 @@
+{"N": 7, "A": 5, "U": 5, "K": 5, "vars": 195, "X": 35, "clauses": 672, "mirror": true, "hull": false}
+{"N": 7, "A": 5, "U": 5, "K": 5, "vars": 195, "X": 35, "clauses": 675, "mirror": true, "hull": true}
+{"N": 8, "A": 5, "U": 5, "K": 5, "vars": 310, "X": 56, "clauses": 1250, "mirror": true, "hull": false}
+{"N": 8, "A": 5, "U": 5, "K": 5, "vars": 310, "X": 56, "clauses": 1247, "mirror": true, "hull": true}
+{"N": 9, "A": 5, "U": 5, "K": 5, "vars": 462, "X": 84, "clauses": 2124, "mirror": true, "hull": false}
+{"N": 9, "A": 5, "U": 5, "K": 5, "vars": 462, "X": 84, "clauses": 2128, "mirror": true, "hull": true}
+{"N": 11, "A": 6, "U": 6, "K": 6, "vars": 1121, "X": 165, "clauses": 5828, "mirror": true, "hull": false}
+{"N": 11, "A": 6, "U": 6, "K": 6, "vars": 1121, "X": 165, "clauses": 5833, "mirror": true, "hull": true}
+{"N": 16, "A": 6, "U": 6, "K": 6, "vars": 3866, "X": 560, "clauses": 29593, "mirror": true, "hull": false}
+{"N": 16, "A": 6, "U": 6, "K": 6, "vars": 3866, "X": 560, "clauses": 29586, "mirror": true, "hull": true}
+{"N": 17, "A": 6, "U": 6, "K": 6, "vars": 4702, "X": 680, "clauses": 38301, "mirror": true, "hull": false}
+{"N": 17, "A": 6, "U": 6, "K": 6, "vars": 4702, "X": 680, "clauses": 38309, "mirror": true, "hull": true}
+{"N": 32, "A": 7, "U": 7, "K": 7, "vars": 42666, "X": 4960, "clauses": 602484, "mirror": true, "hull": false}
+{"N": 32, "A": 7, "U": 7, "K": 7, "vars": 42666, "X": 4960, "clauses": 602469, "mirror": true, "hull": true}
+{"N": 33, "A": 7, "U": 7, "K": 7, "vars": 47002, "X": 5456, "clauses": 684478, "mirror": true, "hull": false}
+{"N": 33, "A": 7, "U": 7, "K": 7, "vars": 47002, "X": 5456, "clauses": 684494, "mirror": true, "hull": true}
+{"in": "hm33k7.cnf", "out": "hm33k7.sub.cnf", "N": 33, "vars": 47002, "X": 5456, "orbit_reps": 2480, "clauses": 535454, "tautologies_dropped": 5440, "duplicates_dropped": 143600, "interior": false, "yflip_unit": false, "hull": true}
+{"in": "m33k7.cnf", "out": "m33k7int.sub.cnf", "N": 33, "vars": 47002, "X": 5456, "orbit_reps": 2736, "clauses": 515121, "tautologies_dropped": 5920, "duplicates_dropped": 163440, "interior": true, "yflip_unit": true, "hull": false}
+{"in": "m17k6.cnf", "out": "m17k6.sub.cnf", "N": 17, "vars": 4702, "X": 680, "orbit_reps": 344, "clauses": 28053, "tautologies_dropped": 784, "duplicates_dropped": 9464, "interior": false, "yflip_unit": false, "hull": false}
+{"in": "hm17k6.cnf", "out": "hm17k6.sub.cnf", "N": 17, "vars": 4702, "X": 680, "orbit_reps": 280, "clauses": 30413, "tautologies_dropped": 672, "duplicates_dropped": 7224, "interior": false, "yflip_unit": false, "hull": true}
+{"in": "m9k5.cnf", "out": "m9k5.sub.cnf", "N": 9, "vars": 462, "X": 84, "orbit_reps": 44, "clauses": 1528, "tautologies_dropped": 104, "duplicates_dropped": 492, "interior": false, "yflip_unit": false, "hull": false}
+{"in": "m32k7.cnf", "out": "m32k7.sub.cnf", "N": 32, "vars": 42666, "X": 4960, "orbit_reps": 2480, "clauses": 453444, "tautologies_dropped": 5440, "duplicates_dropped": 143600, "interior": false, "yflip_unit": false, "hull": false}
+cnf done 0

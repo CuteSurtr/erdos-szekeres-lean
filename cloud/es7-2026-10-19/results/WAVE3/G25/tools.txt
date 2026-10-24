@@ -1,0 +1,8 @@
+cadical   https://github.com/arminbiere/cadical  commit c60730422e758ef1cebe7aeddf2dda31c996bf04 (version 3.0.1), ./configure && make; sha256 65c86231a76cf339d3bd29ae3513eeed3b0586b80364fcac177d4958fbb801b9
+march_cu  https://github.com/marijnheule/CnC     commit 705b60c6491ef2b61988b3ce6ac674be1b90571d, make CFLAGS="-O3 -fno-strict-aliasing -Wall -DNDEBUG -fcommon"; sha256 afcbb47642a922676693b325ed19d88698c6b8f700943fa2753d98126579f222
+cake_lpr  https://github.com/tanyongkiam/cake_lpr commit a36874a8b750b43fe4b385b8ddbf5b033e46a3fa, make cake_lpr; sha256 1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca
+cake_lpr example.cnf example.lpr -> s VERIFIED UNSAT
+F.cnf sha256 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d (gen_etv.py 33 7 7 7 --mirror; mirgen.py --interior --yflip-unit) OK
+U4_L2.cnf   sha256 abbb78a38138b8a3ed7cfbe0bde22c838292647643f1463f07aa2ef967358a57 = cases.jsonl OK
+U4-12_L.cnf sha256 ab4845555c04e3dc55eaaa9563c70c5a201e26441f3a5294743252c3887e2bc1 = cases.jsonl OK
+Run plan: U4-12_L (52 cubes, --jobs 4), then U4_L2 (128 cubes, --jobs 4), sequentially, --top = cubes from tasks/G25.json in file order.

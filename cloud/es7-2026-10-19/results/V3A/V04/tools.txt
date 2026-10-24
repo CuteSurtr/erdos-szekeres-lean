@@ -1,0 +1,7 @@
+cadical: https://github.com/arminbiere/cadical commit c60730422e758ef1cebe7aeddf2dda31c996bf04 version 3.0.1 -> /opt/bin/cadical (./configure && make)
+cake_lpr: https://github.com/tanyongkiam/cake_lpr commit a36874a8b750b43fe4b385b8ddbf5b033e46a3fa (make cake_lpr, gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0) -> /opt/bin/cake_lpr
+cake_lpr bundled example (example.cnf example.lpr): s VERIFIED UNSAT
+sha256 /opt/bin/cadical 6bf8df782c8063eb0eee6fb3bafff063eb321d624a59ae520627ba5fac22dcfc
+sha256 /opt/bin/cake_lpr 1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca
+F regenerated with tools/etv/gen_etv.py and results/C/scripts/mirgen.py from es7-cloud checkout at 1fbead9
+F.cnf sha256 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d (expected 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d: match)

@@ -1,0 +1,9 @@
+cadical    https://github.com/arminbiere/cadical  c60730422e758ef1cebe7aeddf2dda31c996bf04  (3.0.1)
+march_cu   https://github.com/marijnheule/CnC    705b60c6491ef2b61988b3ce6ac674be1b90571d  (make CFLAGS="-O3 -fcommon")
+cake_lpr   https://github.com/tanyongkiam/cake_lpr a36874a8b750b43fe4b385b8ddbf5b033e46a3fa  (make cake_lpr; example.cnf/example.lpr -> s VERIFIED UNSAT)
+
+sha256 checks (all match):
+m33k7int.sub.cnf  69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d  (expected 69c1dc8f...932d)
+ii_wave1.json     6df36dab6dc93cec474ee7a795b38716bc19bf2d6064468b9c5e38e00901c72e  (expected 6df36dab...c72e)
+U10_L.cnf         7f6b84cd24133ecd7eb5f982ccff9d9012ae326d85263b7edf0898e668a02f3a  (entry 7f6b84cd...2f3a)
+top.icnf (march_cu U10_L.cnf -d 7)  9f1b517bec7eb6de62f1fa04c90a29ce9da95bb0de833c401fc0bdb1203a06e3  128 cubes, 0 refuted leaves, 261.8 s

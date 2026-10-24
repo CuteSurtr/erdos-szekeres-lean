@@ -1,0 +1,6 @@
+share.icnf = frontier.icnf lines at 0-based positions p with p % 2 == 1, in reverse order (621 cubes); top.icnf = share.icnf.
+Driver: BIN=/opt/work/bin python3 close_march.py U4_L.cnf U4_L --top share.icnf --timeout 300 --split-depth 6 --jobs 4 --hours H (started 09:43 UTC).
+Every 30 min manage.sh copies outputs here, commits, pulls, and runs drop.py on the driver's open.icnf against
+results/WAVE1/W29/U4_L and results/WAVE2/*/U4_L (other than F5). If cubes are covered by others' verified leaves, the driver is
+stopped, its top.icnf (in the work dir) is replaced by the remaining open cubes (queue.icnf here), and it is resumed from leaves.jsonl.
+Dropped cubes are listed in dropped.jsonl with the directory whose leaves cover them.

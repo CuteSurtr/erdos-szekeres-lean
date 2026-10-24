@@ -1,0 +1,5 @@
+09:18 UTC: driver printed "PROOF NOT ACCEPTED 0s0-1s1_10_4_3s0-6s1" (lrat_check "c VERIFIED", cake_lpr "none").
+dmesg: Memory cgroup out of memory: Killed process 8020 (cake_lpr) anon-rss 4.2 GB (4 jobs; two cake_lpr + two cadical at once).
+Re-run alone (gen_case.py 11 7 0s0-1s1_10_4_3s0-6s1, sha256 32b1f53d01e680dd59697838bab8517453c51d11d88a7028c9bf2a21643f00df):
+cadical -t 600 --sat: s UNSATISFIABLE in 43 s, proof 183,442,562 bytes; lrat-check (E2): c VERIFIED (5 s); cake_lpr: s VERIFIED UNSAT (21 s).
+Cause: memory. Driver resumed with --jobs 3 (it re-solves the node itself and writes its own record).

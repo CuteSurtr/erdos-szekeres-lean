@@ -1,0 +1,33 @@
+== cake_lpr bundled example
+s VERIFIED UNSAT
+== forged proof '2 0 0' on p cnf 1 1 / 1 0
+-- patched lrat-check:
+c parsed a formula with 1 variables and 1 clauses
+c FAILED: empty clause without a RUP conflict
+c failed while checking clause: 0
+c check redundancy res: 0 pivot: 0 start: 0
+c SUCCESS
+c FAILED: empty clause without a RUP conflict
+c WARNING: Verification incomplete. Last line checked = 2
+c NOT VERIFIED
+c allocated 1024 3 10
+c Added clauses = 1.  Deleted clauses = 0.  Max live clauses = 1
+c verification time = 0.02 secs
+exit 1
+-- unpatched lrat-check 2e3b2dc:
+c parsed a formula with 1 variables and 1 clauses
+c VERIFIED
+c allocated 1024 4 10
+c Added clauses = 2.  Deleted clauses = 0.  Max live clauses = 2
+c verification time = 0.03 secs
+exit 0
+-- cake_lpr:
+c Checking failed at line: 0. Reason: pivot must be non-zero
+exit 0
+== genuine CaDiCaL proof (pigeonhole php 4->3)
+s UNSATISFIABLE
+cadical exit 20
+-- patched lrat-check:
+c VERIFIED
+-- cake_lpr:
+s VERIFIED UNSAT
