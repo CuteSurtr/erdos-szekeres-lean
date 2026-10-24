@@ -1,0 +1,10 @@
+0s0_1s0-10s1 records 82 certified 64 timeouts 9 sigma splits 9 layer splits 0 childless splits 0 other []
+  certified by (depth, sigma level): {(2, 2): 64}
+  solve_s 6661 check_s 2229
+0s0_1s1-6s0 records 654 certified 614 timeouts 20 sigma splits 9 layer splits 11 childless splits 0 other []
+  certified by (depth, sigma level): {(2, 2): 53, (3, 2): 561}
+  solve_s 25042 check_s 13899
+0s0_2s1-7s0 records 32 certified 7 timeouts 12 sigma splits 9 layer splits 3 childless splits 0 other [('0s0_2s1-7s0__1s0-3s0-4s1-5s1-6s1-8s1', 'none')]
+  certified by (depth, sigma level): {(2, 2): 7}
+  solve_s 1858 check_s 284
+0s0_4s0-7s1 not reached
