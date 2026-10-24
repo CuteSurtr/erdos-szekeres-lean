@@ -47,3 +47,13 @@
 {"node": "0s0-5s1_2s1-10s1__1s0-3s1-4s0", "status": "UNSATISFIABLE", "solve_s": 141.6, "certified": true}
 {"node": "0s0-5s1_2s1-10s1__1s1-3s0-4s0", "status": "UNSATISFIABLE", "solve_s": 97.8, "certified": true}
 {"node": "0s0-5s1_2s1-10s1__1s0-3s1-4s1", "status": "UNSATISFIABLE", "solve_s": 161.0, "certified": true}
+{"node": "0s0-5s1_2s1-10s1__1s1-3s0-4s1", "status": "UNSATISFIABLE", "solve_s": 171.7, "certified": true}
+{"node": "0s0-5s1_2s1-10s1__1s1-3s1-4s0", "status": "UNSATISFIABLE", "solve_s": 137.7, "certified": true}
+{"node": "0s0-5s1_2s1-10s1__1s1-3s1-4s1", "status": "UNSATISFIABLE", "solve_s": 175.0, "certified": true}
+{"root": "0s0-5s1_2s1-10s1", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== ROOT 0s0-5s1_2s1-10s1 end 17:07:20
+=== ROOT 0s0-5s1_2s0-3s0 start 17:07:20 hours 1.0
+{"node": "0s0-5s1_2s0-3s0", "status": "UNSATISFIABLE", "solve_s": 23.8, "certified": true}
+{"root": "0s0-5s1_2s0-3s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== ROOT 0s0-5s1_2s0-3s0 end 17:08:12
+=== RUNNER DONE 17:08:12
