@@ -30,7 +30,7 @@ Totals (stratum H3/two): 456 certified nodes, all with lrat-check `c VERIFIED` a
 
 ## Why only one root
 
-`close_tree.py` checks `--hours` only between generations of the frontier. The 2.0 h slice ran out while the third generation was running: the 2,805 layer children at cap 600, submitted all at once. That generation alone needs about 6–7 h on 3 jobs. The runner started no other root, and I stopped the run at END (16:16:38 UTC). All 584 records written up to then are in `out.jsonl` and can be reused when the root is resumed.
+`close_tree.py` checks `--hours` only between generations of the frontier. The 2.0 h slice ran out while the third generation was running: the 2,805 layer children at cap 600, submitted all at once. At the observed rate (447 children in about 2.8 h on 3 jobs) the whole generation needs about 17 h. The runner started no other root, and I stopped the run at END (16:16:38 UTC). All 584 records written up to then are in `out.jsonl` and can be reused when the root is resumed.
 
 ## Files
 
