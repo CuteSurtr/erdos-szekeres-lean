@@ -7,3 +7,15 @@
 {"root": "0s0_1s1-7s1__2s0-3s0-4s1-5s0-6s1-8s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
 === CUBE 0s0_1s1-7s1__2s0-3s0-4s1-5s0-6s1-8s0 end 17:11:05
 === CUBE 0s0_5__1s0-2s1-3s0-4s0-6s1-7s0 start 17:11:05
+{"node": "0s0_5__1s0-2s1-3s0-4s0-6s1-7s0", "status": "UNKNOWN", "solve_s": 1800.1, "certified": null}
+{"root": "0s0_5__1s0-2s1-3s0-4s0-6s1-7s0", "open_frontier": 72, "unsplittable": 0, "unsplittable_nodes": []}
+=== CUBE 0s0_5__1s0-2s1-3s0-4s0-6s1-7s0 end 17:41:07
+=== CUBE 0s0-2s1_6__1s0-3s0-4s1-5s0-7s1-8s0 start 17:41:07
+{"node": "0s0-2s1_6__1s0-3s0-4s1-5s0-7s1-8s0", "status": "UNSATISFIABLE", "solve_s": 250.7, "certified": true}
+{"root": "0s0-2s1_6__1s0-3s0-4s1-5s0-7s1-8s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== CUBE 0s0-2s1_6__1s0-3s0-4s1-5s0-7s1-8s0 end 17:46:10
+=== CUBE 0s0_1s0-2s1__3s0-4s0-5s0-6s0-7s0-8s1 start 17:46:10
+{"node": "0s0_1s0-2s1__3s0-4s0-5s0-6s0-7s0-8s1", "status": "UNSATISFIABLE", "solve_s": 330.1, "certified": true}
+{"root": "0s0_1s0-2s1__3s0-4s0-5s0-6s0-7s0-8s1", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== CUBE 0s0_1s0-2s1__3s0-4s0-5s0-6s0-7s0-8s1 end 17:52:32
+=== LANE DONE 17:52:32
