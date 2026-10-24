@@ -19,7 +19,7 @@ Depth means layers, so the roots are at d2. "σn" means n σ bits are fixed.
 | row | root | stratum | status | certified | timeouts | splits | open frontier | solve s | check s |
 |---|---|---|---|---|---|---|---|---|---|
 | 1 | 0s0-1s1_4 | H6(1,1)/one | **partial** | d2/σ6: 41; d3/σ6: 466 | σ0 and σ3 at cap 1: 1 + 8; d2/σ6 at 300 s: 23 | σ: 1 + 8 (8 children each); layer: 23 (1,173 children) | ≈707 d3/σ6 layer children not attempted | 26,590 | 11,751 |
-| 17 | 0s0-3s1_4 | H6(3,1)/one | **partial** | d2/σ6: 19 | cap 1: 1 + 8; d2/σ6 at 300 s: 20 | σ: 1 + 8; layer: 20 (1,028 children) | 25 6-bit cubes and 1,028 layer children not attempted (≈1,045 counted by the script) | 11,043 | 770 |
+| 17 | 0s0-3s1_4 | H6(3,1)/one | **partial** | d2/σ6: 19 | cap 1: 1 + 8; d2/σ6 at 300 s: 20 | σ: 1 + 8; layer: 20 (1,020 children) | 1,045: 25 6-bit cubes and 1,020 layer children not attempted | 11,043 | 770 |
 | 33 | 0s0-5s1_1 | H6(5,1)/one | not reached | – | – | – | – | – | – |
 
 - No split record has `"children": 0`, so there is no childless timed-out node.
