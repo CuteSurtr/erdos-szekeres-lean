@@ -1,0 +1,138 @@
+== forge.py t1 (m = 7, k = 6) against OLD compose.py
+{"test": "00_original", "expect": "covered", "mine": "covered", "c3u": "covered", "pass": true}
+{"test": "01_missing_cube", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "02_wrong_cube_sha", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t1_OLD/02_wrong_cube_sha.jsonl:42 cnf_sha256 mismatch for 0s0_1__2s0", "c3u_msg": "/opt/work/small/forge_t1_OLD/02_wrong_cube_sha.jsonl line 42: node 0s0_1__2s0-3s0: cnf_sha"}
+{"test": "03_wrong_sigma_bits", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t1_OLD/03_wrong_sigma_bits.jsonl:4 sigma split of 0s0_1 with bits [3", "c3u_msg": "/opt/work/small/forge_t1_OLD/03_wrong_sigma_bits.jsonl line 4: node 0s0_1 (2 layers): sigm"}
+{"test": "03b_sigma_bits_reversed", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t1_OLD/03b_sigma_bits_reversed.jsonl:4 sigma split of 0s0_1 with bit", "c3u_msg": "/opt/work/small/forge_t1_OLD/03b_sigma_bits_reversed.jsonl line 4: node 0s0_1 (2 layers): "}
+{"test": "03c_sigma_bits_strings", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t1_OLD/03c_sigma_bits_strings.jsonl:4 sigma split of 0s0_1 with bits", "c3u_msg": "/opt/work/small/forge_t1_OLD/03c_sigma_bits_strings.jsonl line 4: node 0s0_1 (2 layers): s"}
+{"test": "04_cube_layer_child_dropped", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "05_sigma_split_depth1_record", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t1_OLD/05_sigma_split_depth1_record.jsonl:149 sigma split of 0s0 wit", "c3u_msg": "/opt/work/small/forge_t1_OLD/05_sigma_split_depth1_record.jsonl line 149: node 0s0 (1 laye"}
+{"test": "05b_sigma_cubes_depth1_only", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "05c_sigma_split_depth1_with_cubes", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t1_OLD/05c_sigma_split_depth1_with_cubes.jsonl:5 sigma split of 0s0 ", "c3u_msg": "/opt/work/small/forge_t1_OLD/05c_sigma_split_depth1_with_cubes.jsonl line 5: node 0s0 (1 l"}
+{"test": "06a_implied_split_ok", "expect": "covered", "mine": "covered", "c3u": "covered", "pass": true}
+{"test": "06b_implied_split_3of4", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "06c_implied_split_wrong_bits", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "06d_without_node", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "07_unsorted_cube_name", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "08_cake_not_exact", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "09_cube_layer_split_record_missing", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "10_wrong_base_sha", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t1_OLD/10_wrong_base_sha.jsonl:42 base_sha256 mismatch", "c3u_msg": "/opt/work/small/forge_t1_OLD/10_wrong_base_sha.jsonl line 42: base_sha256 eeeeeeeeeeeeeeee"}
+{"tests": 18, "passed": 18}
+pass: 18 of 19
+== forge.py t1 (m = 7, k = 6) against NEW compose.py
+{"test": "00_original", "expect": "covered", "mine": "covered", "c3u": "covered", "pass": true}
+{"test": "01_missing_cube", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "02_wrong_cube_sha", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t1_NEW/02_wrong_cube_sha.jsonl:42 cnf_sha256 mismatch for 0s0_1__2s0", "c3u_msg": "/opt/work/small/forge_t1_NEW/02_wrong_cube_sha.jsonl line 42: node 0s0_1__2s0-3s0: cnf_sha"}
+{"test": "03_wrong_sigma_bits", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t1_NEW/03_wrong_sigma_bits.jsonl:4 sigma split of 0s0_1 with bits [3", "c3u_msg": "/opt/work/small/forge_t1_NEW/03_wrong_sigma_bits.jsonl line 4: node 0s0_1 (2 layers): sigm"}
+{"test": "03b_sigma_bits_reversed", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t1_NEW/03b_sigma_bits_reversed.jsonl:4 sigma split of 0s0_1 with bit", "c3u_msg": "/opt/work/small/forge_t1_NEW/03b_sigma_bits_reversed.jsonl line 4: node 0s0_1 (2 layers): "}
+{"test": "03c_sigma_bits_strings", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t1_NEW/03c_sigma_bits_strings.jsonl:4 sigma split of 0s0_1 with bits", "c3u_msg": "/opt/work/small/forge_t1_NEW/03c_sigma_bits_strings.jsonl line 4: node 0s0_1 (2 layers): s"}
+{"test": "04_cube_layer_child_dropped", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "05_sigma_split_depth1_record", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t1_NEW/05_sigma_split_depth1_record.jsonl:149 sigma split of 0s0 wit", "c3u_msg": "/opt/work/small/forge_t1_NEW/05_sigma_split_depth1_record.jsonl line 149: node 0s0 (1 laye"}
+{"test": "05b_sigma_cubes_depth1_only", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "05c_sigma_split_depth1_with_cubes", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t1_NEW/05c_sigma_split_depth1_with_cubes.jsonl:5 sigma split of 0s0 ", "c3u_msg": "/opt/work/small/forge_t1_NEW/05c_sigma_split_depth1_with_cubes.jsonl line 5: node 0s0 (1 l"}
+{"test": "06a_implied_split_ok", "expect": "covered", "mine": "covered", "c3u": "covered", "pass": true}
+{"test": "06b_implied_split_3of4", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "06c_implied_split_wrong_bits", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "06d_without_node", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "07_unsorted_cube_name", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "08_cake_not_exact", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "09_cube_layer_split_record_missing", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "10_wrong_base_sha", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t1_NEW/10_wrong_base_sha.jsonl:42 base_sha256 mismatch", "c3u_msg": "/opt/work/small/forge_t1_NEW/10_wrong_base_sha.jsonl line 42: base_sha256 eeeeeeeeeeeeeeee"}
+{"tests": 18, "passed": 18}
+pass: 18 of 19
+== forge.py t2 (m = 7, k = 6) against OLD compose.py
+{"test": "00_original", "expect": "covered", "mine": "covered", "c3u": "covered", "pass": true}
+{"test": "01_missing_cube", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "02_wrong_cube_sha", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t2_OLD/02_wrong_cube_sha.jsonl:42 cnf_sha256 mismatch for 0s0_1__2s0", "c3u_msg": "/opt/work/small/forge_t2_OLD/02_wrong_cube_sha.jsonl line 42: node 0s0_1__2s0-3s0-4s0: cnf"}
+{"test": "03_wrong_sigma_bits", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t2_OLD/03_wrong_sigma_bits.jsonl:4 sigma split of 0s0_1 with bits [3", "c3u_msg": "/opt/work/small/forge_t2_OLD/03_wrong_sigma_bits.jsonl line 4: node 0s0_1 (2 layers): sigm"}
+{"test": "03b_sigma_bits_reversed", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t2_OLD/03b_sigma_bits_reversed.jsonl:4 sigma split of 0s0_1 with bit", "c3u_msg": "/opt/work/small/forge_t2_OLD/03b_sigma_bits_reversed.jsonl line 4: node 0s0_1 (2 layers): "}
+{"test": "03c_sigma_bits_strings", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t2_OLD/03c_sigma_bits_strings.jsonl:4 sigma split of 0s0_1 with bits", "c3u_msg": "/opt/work/small/forge_t2_OLD/03c_sigma_bits_strings.jsonl line 4: node 0s0_1 (2 layers): s"}
+{"test": "04_cube_layer_child_dropped", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "05_sigma_split_depth1_record", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t2_OLD/05_sigma_split_depth1_record.jsonl:422 sigma split of 0s0 wit", "c3u_msg": "/opt/work/small/forge_t2_OLD/05_sigma_split_depth1_record.jsonl line 422: node 0s0 (1 laye"}
+{"test": "05b_sigma_cubes_depth1_only", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "05c_sigma_split_depth1_with_cubes", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t2_OLD/05c_sigma_split_depth1_with_cubes.jsonl:5 sigma split of 0s0 ", "c3u_msg": "/opt/work/small/forge_t2_OLD/05c_sigma_split_depth1_with_cubes.jsonl line 5: node 0s0 (1 l"}
+{"test": "06a_implied_split_ok", "expect": "covered", "mine": "covered", "c3u": "covered", "pass": true}
+{"test": "06b_implied_split_3of4", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "06c_implied_split_wrong_bits", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "06d_without_node", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "07_unsorted_cube_name", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "08_cake_not_exact", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "09_cube_layer_split_record_missing", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "10_wrong_base_sha", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t2_OLD/10_wrong_base_sha.jsonl:42 base_sha256 mismatch", "c3u_msg": "/opt/work/small/forge_t2_OLD/10_wrong_base_sha.jsonl line 42: base_sha256 eeeeeeeeeeeeeeee"}
+{"tests": 18, "passed": 18}
+pass: 18 of 19
+== forge.py t2 (m = 7, k = 6) against NEW compose.py
+{"test": "00_original", "expect": "covered", "mine": "covered", "c3u": "covered", "pass": true}
+{"test": "01_missing_cube", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "02_wrong_cube_sha", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t2_NEW/02_wrong_cube_sha.jsonl:42 cnf_sha256 mismatch for 0s0_1__2s0", "c3u_msg": "/opt/work/small/forge_t2_NEW/02_wrong_cube_sha.jsonl line 42: node 0s0_1__2s0-3s0-4s0: cnf"}
+{"test": "03_wrong_sigma_bits", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t2_NEW/03_wrong_sigma_bits.jsonl:4 sigma split of 0s0_1 with bits [3", "c3u_msg": "/opt/work/small/forge_t2_NEW/03_wrong_sigma_bits.jsonl line 4: node 0s0_1 (2 layers): sigm"}
+{"test": "03b_sigma_bits_reversed", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t2_NEW/03b_sigma_bits_reversed.jsonl:4 sigma split of 0s0_1 with bit", "c3u_msg": "/opt/work/small/forge_t2_NEW/03b_sigma_bits_reversed.jsonl line 4: node 0s0_1 (2 layers): "}
+{"test": "03c_sigma_bits_strings", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t2_NEW/03c_sigma_bits_strings.jsonl:4 sigma split of 0s0_1 with bits", "c3u_msg": "/opt/work/small/forge_t2_NEW/03c_sigma_bits_strings.jsonl line 4: node 0s0_1 (2 layers): s"}
+{"test": "04_cube_layer_child_dropped", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "05_sigma_split_depth1_record", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t2_NEW/05_sigma_split_depth1_record.jsonl:422 sigma split of 0s0 wit", "c3u_msg": "/opt/work/small/forge_t2_NEW/05_sigma_split_depth1_record.jsonl line 422: node 0s0 (1 laye"}
+{"test": "05b_sigma_cubes_depth1_only", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "05c_sigma_split_depth1_with_cubes", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t2_NEW/05c_sigma_split_depth1_with_cubes.jsonl:5 sigma split of 0s0 ", "c3u_msg": "/opt/work/small/forge_t2_NEW/05c_sigma_split_depth1_with_cubes.jsonl line 5: node 0s0 (1 l"}
+{"test": "06a_implied_split_ok", "expect": "covered", "mine": "covered", "c3u": "covered", "pass": true}
+{"test": "06b_implied_split_3of4", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "06c_implied_split_wrong_bits", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "06d_without_node", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "07_unsorted_cube_name", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "08_cake_not_exact", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "09_cube_layer_split_record_missing", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "10_wrong_base_sha", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t2_NEW/10_wrong_base_sha.jsonl:42 base_sha256 mismatch", "c3u_msg": "/opt/work/small/forge_t2_NEW/10_wrong_base_sha.jsonl line 42: base_sha256 eeeeeeeeeeeeeeee"}
+{"tests": 18, "passed": 18}
+pass: 18 of 19
+== forge.py t3 (m = 6, k = 6) against OLD compose.py
+{"test": "00_original", "expect": "covered", "mine": "covered", "c3u": "covered", "pass": true}
+{"test": "01_missing_cube", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "02_wrong_cube_sha", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t3_OLD/02_wrong_cube_sha.jsonl:55 cnf_sha256 mismatch for 0s0_1__2s0", "c3u_msg": "/opt/work/small/forge_t3_OLD/02_wrong_cube_sha.jsonl line 55: node 0s0_1__2s0-3s0-4s0-5s0:"}
+{"test": "03_wrong_sigma_bits", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t3_OLD/03_wrong_sigma_bits.jsonl:4 sigma split of 0s0_1 with bits [3", "c3u_msg": "/opt/work/small/forge_t3_OLD/03_wrong_sigma_bits.jsonl line 4: node 0s0_1 (2 layers): sigm"}
+{"test": "03b_sigma_bits_reversed", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t3_OLD/03b_sigma_bits_reversed.jsonl:4 sigma split of 0s0_1 with bit", "c3u_msg": "/opt/work/small/forge_t3_OLD/03b_sigma_bits_reversed.jsonl line 4: node 0s0_1 (2 layers): "}
+{"test": "03c_sigma_bits_strings", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t3_OLD/03c_sigma_bits_strings.jsonl:4 sigma split of 0s0_1 with bits", "c3u_msg": "/opt/work/small/forge_t3_OLD/03c_sigma_bits_strings.jsonl line 4: node 0s0_1 (2 layers): s"}
+{"test": "04_cube_layer_child_dropped", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "05_sigma_split_depth1_record", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t3_OLD/05_sigma_split_depth1_record.jsonl:356 sigma split of 0s0 wit", "c3u_msg": "/opt/work/small/forge_t3_OLD/05_sigma_split_depth1_record.jsonl line 356: node 0s0 (1 laye"}
+{"test": "05b_sigma_cubes_depth1_only", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "05c_sigma_split_depth1_with_cubes", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t3_OLD/05c_sigma_split_depth1_with_cubes.jsonl:5 sigma split of 0s0 ", "c3u_msg": "/opt/work/small/forge_t3_OLD/05c_sigma_split_depth1_with_cubes.jsonl line 5: node 0s0 (1 l"}
+{"test": "06a_implied_split_ok", "expect": "covered", "mine": "covered", "c3u": "covered", "pass": true}
+{"test": "06b_implied_split_3of4", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "06c_implied_split_wrong_bits", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "06d_without_node", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "07_unsorted_cube_name", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "08_cake_not_exact", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "09_cube_layer_split_record_missing", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "10_wrong_base_sha", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t3_OLD/10_wrong_base_sha.jsonl:55 base_sha256 mismatch", "c3u_msg": "/opt/work/small/forge_t3_OLD/10_wrong_base_sha.jsonl line 55: base_sha256 eeeeeeeeeeeeeeee"}
+{"tests": 18, "passed": 18}
+pass: 18 of 19
+== forge.py t3 (m = 6, k = 6) against NEW compose.py
+{"test": "00_original", "expect": "covered", "mine": "covered", "c3u": "covered", "pass": true}
+{"test": "01_missing_cube", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "02_wrong_cube_sha", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t3_NEW/02_wrong_cube_sha.jsonl:55 cnf_sha256 mismatch for 0s0_1__2s0", "c3u_msg": "/opt/work/small/forge_t3_NEW/02_wrong_cube_sha.jsonl line 55: node 0s0_1__2s0-3s0-4s0-5s0:"}
+{"test": "03_wrong_sigma_bits", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t3_NEW/03_wrong_sigma_bits.jsonl:4 sigma split of 0s0_1 with bits [3", "c3u_msg": "/opt/work/small/forge_t3_NEW/03_wrong_sigma_bits.jsonl line 4: node 0s0_1 (2 layers): sigm"}
+{"test": "03b_sigma_bits_reversed", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t3_NEW/03b_sigma_bits_reversed.jsonl:4 sigma split of 0s0_1 with bit", "c3u_msg": "/opt/work/small/forge_t3_NEW/03b_sigma_bits_reversed.jsonl line 4: node 0s0_1 (2 layers): "}
+{"test": "03c_sigma_bits_strings", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t3_NEW/03c_sigma_bits_strings.jsonl:4 sigma split of 0s0_1 with bits", "c3u_msg": "/opt/work/small/forge_t3_NEW/03c_sigma_bits_strings.jsonl line 4: node 0s0_1 (2 layers): s"}
+{"test": "04_cube_layer_child_dropped", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "05_sigma_split_depth1_record", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t3_NEW/05_sigma_split_depth1_record.jsonl:356 sigma split of 0s0 wit", "c3u_msg": "/opt/work/small/forge_t3_NEW/05_sigma_split_depth1_record.jsonl line 356: node 0s0 (1 laye"}
+{"test": "05b_sigma_cubes_depth1_only", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "05c_sigma_split_depth1_with_cubes", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t3_NEW/05c_sigma_split_depth1_with_cubes.jsonl:5 sigma split of 0s0 ", "c3u_msg": "/opt/work/small/forge_t3_NEW/05c_sigma_split_depth1_with_cubes.jsonl line 5: node 0s0 (1 l"}
+{"test": "06a_implied_split_ok", "expect": "covered", "mine": "covered", "c3u": "covered", "pass": true}
+{"test": "06b_implied_split_3of4", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "06c_implied_split_wrong_bits", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "06d_without_node", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "07_unsorted_cube_name", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "08_cake_not_exact", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "09_cube_layer_split_record_missing", "expect": "not covered", "mine": "not covered", "c3u": "not covered", "pass": true}
+{"test": "10_wrong_base_sha", "expect": "reject", "mine": "reject", "c3u": "reject", "pass": true, "mine_msg": "/opt/work/small/forge_t3_NEW/10_wrong_base_sha.jsonl:55 base_sha256 mismatch", "c3u_msg": "/opt/work/small/forge_t3_NEW/10_wrong_base_sha.jsonl line 55: base_sha256 eeeeeeeeeeeeeeee"}
+{"tests": 18, "passed": 18}
+pass: 18 of 19
+childless_real_m5k6 | OLD compose.py: {"certified_nodes": 21, "class_covered": true, "uncovered_frontier_nodes": 0, "uncovered_sample": [], "certified_records": 21, "certified_with_proof_sha256": {"records": 0, "nodes": 0}, "sha_checked": true, "mirror_h6": false, "certified_cube_nodes": 1, "sigma_splits_used": 0, "sigma_split_nodes_sample": []}
+childless_real_m5k6 | NEW compose.py: {"certified_nodes": 21, "class_covered": false, "uncovered_frontier_nodes": 1, "uncovered_sample": ["0s0_1s0-2s0_3_4"], "certified_records": 21, "certified_with_proof_sha256": {"records": 0, "nodes": 0}, "sha_checked": true, "mirror_h6": false, "certified_cube_nodes": 1, "sigma_splits_used": 0, "sigma_split_nodes_sample": []}
+childless_real_m5k6 | mycompose (C3AUDIT3, fixed): {"m": 5, "k": 6, "certified_records": 21, "certified_nodes": 21, "certified_cube_nodes": 1, "sha_checked": 21, "sigma_split_nodes": 0, "sigma_splits_used": 0, "cube_layer_split_nodes": 0, "class_covered": false, "uncovered_frontier": 1, "uncovered_sample": ["0s0_1s0-2s0_3_4"]}
+natural A | OLD compose.py: {"certified_nodes": 37, "class_covered": false, "uncovered_frontier_nodes": 52, "uncovered_sample": ["0s0_1_2_3", "0s0_1_2_4", "0s0_1_2_3s0-4s1", "0s0_1_2_3s1-4s0", "0s0_1_2_3s1-4s1", "0s0_1_3_2", "0s0_1_3_4", "0s0_1_3_2s0-4s1", "0s0_1_3_2s1-4s0", "0s0_1_3_2s1-4s1"], "certified_records": 37, "certified_with_proof_sha256": {"records": 37, "nodes": 37}, "sha_checked": true, "mirror_h6": false, "certified_cube_nodes": 0, "sigma_splits_used": 0, "sigma_split_nodes_sample": []}
+natural A | NEW compose.py: {"certified_nodes": 37, "class_covered": false, "uncovered_frontier_nodes": 52, "uncovered_sample": ["0s0_1_2_3", "0s0_1_2_4", "0s0_1_2_3s0-4s1", "0s0_1_2_3s1-4s0", "0s0_1_2_3s1-4s1", "0s0_1_3_2", "0s0_1_3_4", "0s0_1_3_2s0-4s1", "0s0_1_3_2s1-4s0", "0s0_1_3_2s1-4s1"], "certified_records": 37, "certified_with_proof_sha256": {"records": 37, "nodes": 37}, "sha_checked": true, "mirror_h6": false, "certified_cube_nodes": 0, "sigma_splits_used": 0, "sigma_split_nodes_sample": []}
+natural A | mycompose (C3AUDIT3, fixed): {"m": 5, "k": 6, "certified_records": 37, "certified_nodes": 37, "certified_cube_nodes": 0, "sha_checked": 37, "sigma_split_nodes": 0, "sigma_splits_used": 0, "cube_layer_split_nodes": 0, "class_covered": false, "uncovered_frontier": 52, "uncovered_sample": ["0s0_1_2_3", "0s0_1_2_3s0-4s1", "0s0_1_2_3s1-4s0", "0s0_1_2_3s1-4s1", "0s0_1_2_4"]}
+natural A + C | OLD compose.py: {"certified_nodes": 83, "class_covered": false, "uncovered_frontier_nodes": 31, "uncovered_sample": ["0s0_1_2_3", "0s0_1_2_4", "0s0_1_2_3s0-4s1", "0s0_1_2_3s1-4s0", "0s0_1_2_3s1-4s1", "0s0_1_3_2", "0s0_1_3_4", "0s0_1_3_2s0-4s1", "0s0_1_3_2s1-4s0", "0s0_1_3_2s1-4s1"], "certified_records": 83, "certified_with_proof_sha256": {"records": 37, "nodes": 37}, "sha_checked": true, "mirror_h6": false, "certified_cube_nodes": 46, "sigma_splits_used": 0, "sigma_split_nodes_sample": []}
+natural A + C | NEW compose.py: {"certified_nodes": 83, "class_covered": false, "uncovered_frontier_nodes": 52, "uncovered_sample": ["0s0_1_2_3", "0s0_1_2_4", "0s0_1_2_3s0-4s1", "0s0_1_2_3s1-4s0", "0s0_1_2_3s1-4s1", "0s0_1_3_2", "0s0_1_3_4", "0s0_1_3_2s0-4s1", "0s0_1_3_2s1-4s0", "0s0_1_3_2s1-4s1"], "certified_records": 83, "certified_with_proof_sha256": {"records": 37, "nodes": 37}, "sha_checked": true, "mirror_h6": false, "certified_cube_nodes": 46, "sigma_splits_used": 0, "sigma_split_nodes_sample": []}
+natural A + C | mycompose (C3AUDIT3, fixed): {"m": 5, "k": 6, "certified_records": 83, "certified_nodes": 83, "certified_cube_nodes": 46, "sha_checked": 83, "sigma_split_nodes": 0, "sigma_splits_used": 0, "cube_layer_split_nodes": 0, "class_covered": false, "uncovered_frontier": 52, "uncovered_sample": ["0s0_1_2_3", "0s0_1_2_3s0-4s1", "0s0_1_2_3s1-4s0", "0s0_1_2_3s1-4s1", "0s0_1_2_4"]}
+natural A + B + C | OLD compose.py: {"certified_nodes": 101, "class_covered": false, "uncovered_frontier_nodes": 31, "uncovered_sample": ["0s0_1_2_3", "0s0_1_2_4", "0s0_1_2_3s0-4s1", "0s0_1_2_3s1-4s0", "0s0_1_2_3s1-4s1", "0s0_1_3_2", "0s0_1_3_4", "0s0_1_3_2s0-4s1", "0s0_1_3_2s1-4s0", "0s0_1_3_2s1-4s1"], "certified_records": 101, "certified_with_proof_sha256": {"records": 55, "nodes": 55}, "sha_checked": true, "mirror_h6": false, "certified_cube_nodes": 64, "sigma_splits_used": 1, "sigma_split_nodes_sample": ["0s0_2"]}
+natural A + B + C | NEW compose.py: {"certified_nodes": 101, "class_covered": false, "uncovered_frontier_nodes": 31, "uncovered_sample": ["0s0_1_2_3", "0s0_1_2_4", "0s0_1_2_3s0-4s1", "0s0_1_2_3s1-4s0", "0s0_1_2_3s1-4s1", "0s0_1_3_2", "0s0_1_3_4", "0s0_1_3_2s0-4s1", "0s0_1_3_2s1-4s0", "0s0_1_3_2s1-4s1"], "certified_records": 101, "certified_with_proof_sha256": {"records": 55, "nodes": 55}, "sha_checked": true, "mirror_h6": false, "certified_cube_nodes": 64, "sigma_splits_used": 1, "sigma_split_nodes_sample": ["0s0_2"]}
+natural A + B + C | mycompose (C3AUDIT3, fixed): {"m": 5, "k": 6, "certified_records": 101, "certified_nodes": 101, "certified_cube_nodes": 64, "sha_checked": 101, "sigma_split_nodes": 1, "sigma_splits_used": 1, "cube_layer_split_nodes": 95, "class_covered": false, "uncovered_frontier": 31, "uncovered_sample": ["0s0_1_2_3", "0s0_1_2_3s0-4s1", "0s0_1_2_3s1-4s0", "0s0_1_2_3s1-4s1", "0s0_1_2_4"]}
