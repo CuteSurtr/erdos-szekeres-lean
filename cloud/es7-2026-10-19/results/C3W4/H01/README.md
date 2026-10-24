@@ -15,15 +15,15 @@ Task: `results/C3W4/TASK.md` at 3fd8a4d8. One cloud VM: 4 cores, 15 GB RAM, no s
 |---|---|---|---|---|---|---|---|
 | 1 | 0s0_1s0-10s1 | **closed** (open_frontier 0, no childless split) | 64 at (2, σ2) | 9 (cap 1 only) | 9 / 0 | 6661 | 2229 |
 | 31 | 0s0_1s1-6s0 | **closed** (open_frontier 0, no childless split) | 53 at (2, σ2), 561 at (3, σ2) | 20 (9 at cap 1, 11 6-bit cubes at 300 s) | 9 / 11 (51 children each) | 25042 | 13899 |
-| 61 | 0s0_2s1-7s0 | **partial** (killed at END) | 7 at (2, σ2) | 12 (9 at cap 1, 3 cubes at 300 s) | 9 / 3 (51 children each) | 1858 | 284 |
+| 61 | 0s0_2s1-7s0 | **partial** (killed at END) | 7 at (2, σ2), +1 on re-check | 12 (9 at cap 1, 3 cubes at 300 s) | 9 / 3 (51 children each) | 1858 | 284 |
 | 91 | 0s0_4s0-7s1 | not reached | – | – | – | – | – |
 
-Root 0s0_2s1-7s0 open frontier: 53 of its 64 6-bit cubes have no record, 153 layer children of the 3 timed-out cubes are unsolved, and cube `__1s0-3s0-4s1-5s1-6s1-8s1` is in `recheck.jsonl` (see below). Its records stay valid for a later composition.
+Root 0s0_2s1-7s0 open frontier: 53 of its 64 6-bit cubes have no record, 153 layer children of the 3 timed-out cubes are unsolved, and cube `__1s0-3s0-4s1-5s1-6s1-8s1` was certified on re-check (`recheck.jsonl`), so the open frontier is 206 nodes. Its records stay valid for a later composition.
 
-Totals (stratum H3/two): 2 closed, 1 partial, 1 not reached; 685 certified nodes; 41 timeouts (27 by design at cap 1); solve 33561 s, check 16412 s.
+Totals (stratum H3/two): 2 closed, 1 partial, 1 not reached; 686 certified nodes (685 in out.jsonl, 1 in recheck.jsonl); 41 timeouts (27 by design at cap 1); solve 33561 s, check 16412 s.
 
 ## Incidents
 - SAT: none.
-- Proof rejections: none. One node, `0s0_2s1-7s0__1s0-3s0-4s1-5s1-6s1-8s1`, got UNSAT with lrat-check `c VERIFIED`, but cake_lpr was killed at END, so cake_lpr is `none` and the node is not certified. Its `--jobs 1` re-check is reported below.
+- Proof rejections: none. One node, `0s0_2s1-7s0__1s0-3s0-4s1-5s1-6s1-8s1`, got UNSAT with lrat-check `c VERIFIED`, but cake_lpr was killed at END, so cake_lpr is `none` and the node is not certified. Re-checked alone (`close_tree.py … --jobs 1 --caps 300 --sigma-split 0`, 16:16–16:22): UNSAT in 276.5 s, same proof size 398931173 bytes, lrat-check `c VERIFIED`, cake_lpr `s VERIFIED UNSAT`, certified. The record is in `recheck.jsonl`.
 - Memory: no problem (at least 3 GB free throughout, no OOM).
 - No `"children": 0` split records.
