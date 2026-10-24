@@ -23,7 +23,7 @@ All nodes are at layer depth 2 (no layer split was needed); σ level 0 = root, 1
 
 | row | root | stratum | status | certified (σ level 2, cap 300) | timeouts | splits | max solve s | solve s | check s | wall |
 |-----|------|---------|--------|------|----------|--------|------|---------|---------|------|
-| 12 | 0s0-4s0_5 | H6(4,0)/one | **closed** (open frontier 0, no childless node) | 64 / 64 | 9 (root + 8 at σ1, all at cap 1, by design) | 9 (8 children each) | 109 | 3,926 | 2,536 | 11:33–12:10 |
+| 12 | 0s0-4s0_5 | H6(4,0)/one | **closed** (open frontier 0, no childless node) | 64 / 64 | 9 (root + 8 at σ1, all at cap 1, by design) | 9 (8 children each) | 90 | 3,926 | 2,536 | 11:33–12:10 |
 | 28 | 0s0-5s0_1 | H6(5,0)/one | **closed** (open frontier 0, no childless node) | 64 / 64 | 9 (root + 8 at σ1, all at cap 1, by design) | 9 (8 children each) | 258 | 8,757 | 2,687 | 12:10–13:16 |
 
 Every 6-bit cube was certified at the 300 s cap on its first attempt; no cube timed out, so the layer split at cap 600
