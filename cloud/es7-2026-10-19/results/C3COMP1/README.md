@@ -1,6 +1,6 @@
 # C3COMP1: composition after wave 4, and a cap experiment on timed-out 6-bit cubes
 
-One cloud VM, 4 cores, 15 GB RAM, no swap (`env.txt`), 16:56 to about 19:20 UTC on 2026-10-24 (H = 2.5).
+One cloud VM, 4 cores, 15 GB RAM, no swap (`env.txt`), 16:56 to 19:15 UTC on 2026-10-24 (H = 2.5).
 Task `results/C3COMP1/TASK.md` at 1cb98b52. Start head: 5392150c.
 
 ## Tools (`tools.txt`)
@@ -130,7 +130,11 @@ over 13 roots.
 
 ### Extra pilot (beyond the task): a third σ level on one H3/one cube
 
-PILOT9_PLACEHOLDER
+`pilot9/run.sh`: `close_tree.py base pilot9/out.jsonl 0s0_5__1s0-2s1-3s0-4s0-6s0-7s0 --jobs 3 --sigma-split 3 --sigma-levels 3
+--caps 1,600 --cadopts=--sat --hours 0.1`, 18:32–19:03. The cube had timed out at 1800 s above. At cap 1 it was σ-split on
+residues 8, 9, 10 into 8 nine-bit cubes, and **all 8 timed out at 600 s** (`pilot9/log`). Their layer-split records were
+written, but the children were not run (open frontier 360). So for this cube, a third σ level at 600 s does no better than
+the 6-bit cube at 1800 s.
 
 ## Recommendation for the remaining roots
 
@@ -147,8 +151,13 @@ PILOT9_PLACEHOLDER
    Add up to about 150 core-hours if ≈ 5% still need the layer fallback (≈ 2,600 core-s each). 0 of 15 did here, so
    5% is a margin, not a measured rate. Total **≈ 400–550 core-hours**, or about 130–180 VM-hours at 3 jobs per 4-core VM.
 3. **H3/one (5 roots, 320 six-bit cubes)**: neither raising the cap (0 of 5 at 1800 s) nor the layer split (21 of 44
-   children time out at 600 s) works. Use a third σ level, `--sigma-levels 3 --caps 1,1,1,600,600` (512 nine-bit cubes
-   per root). Size it from the pilot above before committing machines. PILOT9_COST
+   children time out at 600 s) works. A third σ level at 600 s does not
+   work either (0 of 8 nine-bit cubes on one cube). Run no wave on them until a pilot measures the real cost. Suggested
+   pilot, 1 VM for one day: (a) one H3/one 6-bit cube with no cap (or `-t 28800`), for its true solve time and proof size;
+   (b) two nine-bit cubes of the same cube at `-t 3600`; (c) one layer child that timed out at 600 s, at `-t 3600`.
+   Lower bound from the evidence: 320 six-bit cubes × more than 1,800 s ≈ **more than 160 core-hours**, plus checking
+   (the proofs will be several GB each; cake_lpr needs about 4 GB at 300 s proofs, so watch memory with 3 jobs). An upper
+   estimate cannot be given from these data. H3/one is now the critical path of the 3-fold class.
 4. Compose again after C3W5 and these runs. Report frontier sizes from mycompose, or note compose.py's double count
    of σ-split cube nodes described in Part 1.
 
