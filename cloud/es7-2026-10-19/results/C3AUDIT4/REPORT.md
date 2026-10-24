@@ -168,6 +168,12 @@ layers). The stratum labels are all consistent with the root names.
 records, 533 cube nodes, 36 / 31 σ-splits used, open depth-2 roots 750 / 313, with identical sets. The frontier is
 12,364 vs 12,268 (no mirror) and 10,104 vs 10,008 (mirror). The 96 extra nodes are all σ-split nodes (finding 1).
 
+**At faf1da51, the head at 12:45 UTC:** 174 files, with more C3W4 records (`logs/m11_compare_faf1da51.txt`). Both
+composers: not covered, 92,246 certified records (92,131 nodes, 2,222 cube nodes), σ-splits used 239 / 234, open
+depth-2 roots **727 of 1,630 / 290 of 910**, with identical sets. The frontier is 32,720 vs 32,451 and 30,460 vs
+30,191. The 269 extra C3U2 nodes are again all σ-split nodes. This is for information only: the official list is C3U2's
+at 3fd8a4d8.
+
 ## What I could not check
 - I did not re-solve any node. No solver was built here, because the composers do not read proofs. C3AUDIT3 re-solved
   6 m = 11 cubes with matching sha values. The trust in `lrat_check` / `cake_lpr` strings and `cnf_sha256` stays as
