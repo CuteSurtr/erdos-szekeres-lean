@@ -1,0 +1,11 @@
+lines 690
+status {'UNKNOWN': 33, 'UNSATISFIABLE': 624}
+cert 624
+unsat not cert []
+layers=2 sigma_bits=0 cap=1 cert 0 timeout 1 solve_s 1 check_s 0
+layers=2 sigma_bits=3 cap=1 cert 0 timeout 8 solve_s 8 check_s 0
+layers=2 sigma_bits=6 cap=300 cert 40 timeout 24 solve_s 17538 check_s 2125
+layers=3 sigma_bits=6 cap=600 cert 584 timeout 0 solve_s 14399 check_s 15710
+sigma splits 9 layer splits 24 childless []
+solve_s 31945 check_s 17834
+layer children 1224 attempted 584 open frontier 640
