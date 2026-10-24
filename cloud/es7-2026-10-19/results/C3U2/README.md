@@ -171,9 +171,9 @@ compose and mycompose disagree on any root. **313 open, 597 closed, frontier 8,7
 ## Not done / limits
 - I did not re-run C3U's m = 11 `close_tree` test (C3U test 4, 2 × 8 cubes, about 40 minutes with checks). The only
   `close_tree.py` changes are in restart reading and in childless timeouts, and neither can occur in that test.
-- I did not re-run C3AUDIT3's brute force (`mybrute.py`). The frontier comparison with its fixed `mycompose.py` was
-  enough for the task's checks, and C3AUDIT3's brute-force counts on the natural inputs stand (A + C: 36 holes, all
-  inside the 52-node frontier that the new compose reports, since the 5 wrongly covered nodes are now open).
+- I did not re-run C3AUDIT3's brute force (`mybrute.py`). The task's checks compare against its fixed `mycompose.py`,
+  and C3AUDIT3's brute-force counts on the natural inputs stand as it reported them. I did not map its 36 holes on
+  A + C node by node onto the new 52-node frontier.
 - `--mirror-h6` was used as the task asks. It still rests on Lemma H6M (C3AUDIT2). mycompose has no H6 mirror, so the
   reduced-cut comparison is root by root, on the 910 roots.
 - No wave record carries `proof_sha256` (they predate C3T), so `certified_with_proof_sha256` is 0.
