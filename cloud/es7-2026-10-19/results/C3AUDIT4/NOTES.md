@@ -34,3 +34,11 @@ sha256 bf0e502e…dd6da, equal to the task's value).
   sigma_cubes records to node__C (finding 3); childless timed-out node -> "unsplittable", stays open (finding 2);
   an old split record with 0 children is treated as no split.
 - adv.py at cad4e050: C3U2 98/98, 0 unsound.
+
+## 11:50-12:07
+- C3U2 README draft at a3eb78af (placeholders for C3U's small tests and "not done"); tools unchanged since cad4e050.
+- m = 11 at 3fd8a4d8 (C3U2's 127 files = my glob): C3U2 and mycompose(+myh6) identical (frontier sets 11,025 / 8,765,
+  open roots 750 / 313); open_roots.tsv matches my run row by row.
+- Fuzz: 929 + 594 (high closure) + 196 (H6M) cases, 0 unsound, C3U2 vs mine 0 verdict / open-root differences.
+- adv.py final: C3U2 98/98; m7k7 d-cases also with --mirror-h6: equal.
+- Report draft pushed; waiting for C3U2's final README (polling).
