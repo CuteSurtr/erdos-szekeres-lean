@@ -1,1 +1,2 @@
 14:34:01 UTC: H23 operator killed close_tree.py for root 0s0_2s1-3s0 (and its workers) to enforce the 2.0 h slice: close_tree checks --hours only between levels, and its level-4 batch (3264 layer children of the 64 timed-out 6-bit cubes, cap 600) would have run far past END. Runner continued with root 0s0_3s1-7s1.
+16:16:31 UTC: END reached; H23 operator killed the runner, close_tree.py for root 0s0_3s1-7s1 and all solver/checker processes (in-flight nodes leave no record).

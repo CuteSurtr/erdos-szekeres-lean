@@ -1,0 +1,19 @@
+records 393 none: 0 SAT: 0 unsat-not-cert: 0
+
+== 0s0_1s1-10s0 records 82 solve_s 6111 check_s 2720 childless splits 0
+ certified: {'layers 2, sigma bits 6': 64}
+ timeouts (k,cap): {('layers 2, sigma bits 0', 1): 1, ('layers 2, sigma bits 3', 1): 8}
+ splits: {('layers 2, sigma bits 0', 'sigma'): 1, ('layers 2, sigma bits 3', 'sigma'): 8}
+ layer-split children total 0
+
+== 0s0_2s1-3s0 records 200 solve_s 20767 check_s 1602 childless splits 0
+ certified: {'layers 3, sigma bits 6': 54}
+ timeouts (k,cap): {('layers 2, sigma bits 0', 1): 1, ('layers 2, sigma bits 3', 1): 8, ('layers 2, sigma bits 6', 300): 64}
+ splits: {('layers 2, sigma bits 0', 'sigma'): 1, ('layers 2, sigma bits 3', 'sigma'): 8, ('layers 2, sigma bits 6', 'layer'): 64}
+ layer-split children total 3264
+
+== 0s0_3s1-7s1 records 111 solve_s 16086 check_s 1855 childless splits 0
+ certified: {'layers 2, sigma bits 6': 39, 'layers 3, sigma bits 6': 4}
+ timeouts (k,cap): {('layers 2, sigma bits 0', 1): 1, ('layers 2, sigma bits 3', 1): 8, ('layers 2, sigma bits 6', 300): 25}
+ splits: {('layers 2, sigma bits 0', 'sigma'): 1, ('layers 2, sigma bits 3', 'sigma'): 8, ('layers 2, sigma bits 6', 'layer'): 25}
+ layer-split children total 1275
