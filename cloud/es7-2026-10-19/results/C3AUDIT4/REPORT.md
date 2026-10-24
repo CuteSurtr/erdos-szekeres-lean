@@ -2,8 +2,8 @@
 
 Task `results/C3AUDIT4/TASK.md` at 3fd8a4d8, H = 2.5. Run on 2026-10-24 from 11:31 UTC, from branch head 3fd8a4d8, on
 one cloud VM (4 cores, 15 GB; `env.txt`). C3U2 was reviewed at `results/C3U2/tools` **cad4e050**. That is the last
-commit that changes `tools/`, and it is still the tools state at the branch head I checked last (REVIEWED_HEAD). I read
-C3U2's README at REVIEWED_README. No SAT solver or proof checker was needed, because the composers do not read proofs.
+commit that changes `tools/`, and it is still the tools state at the branch head I checked last (7e9964a1, 12:45 UTC). I read
+C3U2's README in its final form at 1eb942c6. No SAT solver or proof checker was needed, because the composers do not read proofs.
 Every forged or adversarial record carries the true `cnf_sha256` of its node, computed from the rebuilt base, unless
 the case forges the sha on purpose. So a composer can only be fooled through structure, never through a bad hash. The m = 11
 base I rebuilt (`gen_case.py 11 7 none`) has header `p cnf 168399 4154921` and sha256 `bf0e502e…dd6da`, as required.
@@ -53,8 +53,10 @@ Only 2 files change, +42 / −8. `hullcase.py`, `close_node.py` and every other 
    - mycompose lists no node that C3U2 does not list.
    - Covered/not covered, the certified counts, σ-splits used and the open depth-2 roots all agree.
      (`logs/m11_compare_dacc5d2c.txt`).
-   - **C3U2's `tests/make_open_roots.py` refuses to write if the per-root frontier sizes differ**, so it will refuse
-     on later record sets for this harmless reason. Compare status, or the frontier without split nodes.
+   - **C3U2's `tests/make_open_roots.py:21-22` exits if the per-root frontier sizes differ.** On later record sets it
+     will therefore refuse to write for this harmless reason. The per-root frontier sizes differ on 12 of the 910 roots at
+     dacc5d2c and on 44 at faf1da51, although status agrees on every root. Compare status, or the frontier without
+     split nodes.
 2. **`mycompose.py` (C3AUDIT3) under-reports its frontier. This is cosmetic.**
    - `mycompose.py:249` leaves out an uncertified childless cube node that carries an old `{"split": true,
      "children": 0}` record, because such a node is in `lsplit`.
@@ -73,7 +75,11 @@ Only 2 files change, +42 / −8. `hullcase.py`, `close_node.py` and every other 
    - A forger would have to fake the checker strings anyway, so this adds no new attack.
    - As before, the composers trust each record's `lrat_check`, `cake_lpr` and `cnf_sha256`. C3U2's README notes
      that no m = 11 wave record carries a `proof_sha256`.
-5. **C3U2's README was still a draft at REVIEWED_README.** README_STATE
+5. **C3U2's README is consistent with what I found.** I read it in its final form at 1eb942c6. The change table and
+   its line numbers match the diff. The m = 11 numbers match my runs at 3fd8a4d8: 90,447 certified records, frontier
+   11,025 / 8,765, open roots 750 / 313. The strata table sums to 910 / 313 / 8,765. The recommended commit cad4e050 is
+   correct. Its statement that the full frontier set equals mycompose's is true at 3fd8a4d8, but not in general
+   (finding 1).
 
 ## Tests and counts
 
@@ -178,8 +184,8 @@ at 3fd8a4d8.
 - I did not re-solve any node. No solver was built here, because the composers do not read proofs. C3AUDIT3 re-solved
   6 m = 11 cubes with matching sha values. The trust in `lrat_check` / `cake_lpr` strings and `cnf_sha256` stays as
   before.
-- I did not re-run C3U's own tests (`results/C3U/tests`) against the C3U2 tools. That is C3U2's step 2, and its README
-  section on them was a placeholder at REVIEWED_README.
+- I did not re-run C3U's own tests (`results/C3U/tests`) against the C3U2 tools. That is C3U2's step 2, and I read
+  C3U2's results for them (README §3: FAILURES 0, 18/18 record files equal to C3U's), but I did not reproduce them.
 - I did not test `close_tree.py` with real CaDiCaL runs. The stub test covers the changed control flow only.
 - Lemma H6M itself, the symmetry reduction and the base encoding are out of scope. I only re-implemented H6M from
   its statement and matched the kept sets.
