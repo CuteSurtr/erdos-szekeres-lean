@@ -7,4 +7,4 @@ base CNF: gen_case.py 11 7 none -o /opt/work/base.cnf -> p cnf 168399 4154921, s
 units: C3W7/lists/W7.tsv rows with row % 36 == 28 (units.tsv, 53 nine-bit units); 3 lanes (lane k: positions = k mod 3), --jobs 1 each, no seeding
 options: --sigma-split 3 --sigma-levels 3 --caps 900,600 --cadopts=--sat --hours 0.02
 task: results/C3W7/TASK.md at 39bb1bac
-start 2026-10-25 10:46:24 UTC; END 15:01:24 UTC; lanes started 10:5x UTC (see driver logs)
+start 2026-10-25 10:46:24 UTC; END 15:01:24 UTC; lanes started 11:01:51 UTC
