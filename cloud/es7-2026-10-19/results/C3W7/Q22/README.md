@@ -20,7 +20,7 @@ The units are the 53 rows of `lists/W7.tsv` with row ≡ 22 (mod 36) (`units.tsv
 - **Not reached: 2** (positions 51, 52).
 - No SAT, no proof rejection, no checker `none` and no recheck (`recheck.jsonl` does not exist). There were no memory problems: about 2.5 GB was in use throughout. No unit ended early: every finished solve ran the full 900 s.
 
-This is not what `results/C3H1/X1` saw: there, the 8 nine-bit cubes of one six-bit cube closed in 450–662 s. Here, none of 48 nine-bit cubes from 46 different six-bit parents closed in 900 s with 3 solves running at once on 4 cores. At cap 900, the nine-bit cubes of these roots look mostly out of reach.
+This is not what `results/C3H1/X1` saw: there, the 8 nine-bit cubes of one six-bit cube closed in 450–662 s. Here, none of 48 nine-bit cubes from 48 different six-bit parents closed in 900 s with 3 solves running at once on 4 cores. At cap 900, the nine-bit cubes of these roots look mostly out of reach.
 
 ## Per unit
 
