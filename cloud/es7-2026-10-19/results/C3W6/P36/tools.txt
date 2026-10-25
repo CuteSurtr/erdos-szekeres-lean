@@ -6,5 +6,5 @@ lrat-check: https://github.com/marijnheule/drat-trim 2e3b2dc0ecf938addbd779d4287
 base CNF: python3 $TOOLS/gen_case.py 11 7 none -o /opt/work/base.cnf -> p cnf 168399 4154921, sha256 bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da (matches)
 units: C3W6/lists/W6.tsv (at c5260b44) rows with row % 44 == 36: 93 units (units.tsv), no seeded records; 31 per lane
 lanes: 3 (lane0.sh, lane1.sh, lane2.sh), each close_tree.py ... U --jobs 1 --sigma-split 3 --sigma-levels 2 --caps 900,600 --cadopts=--sat --hours 0.02 per unit
-start 2026-10-25 05:31:48 UTC; END 09:46:48 UTC; lanes launched 05:41 UTC
+start 2026-10-25 05:31:48 UTC; END 09:46:48 UTC; lanes launched 05:34:41 UTC
 each lane script has a watchdog that kills its process group at END (close_tree checks its deadline only between batches)
