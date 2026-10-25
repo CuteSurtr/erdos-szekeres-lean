@@ -16,11 +16,6 @@ Task `results/C3W7/TASK.md` at 39bb1bac with V = Q26, LIST = W7.tsv, j = 26, N =
 - No SAT. No proof rejection. No re-checks were needed (no `recheck.jsonl`). No checker was killed at END. No unit ended early (under 72 s without a certificate). No memory problem: at most about 5 GB of 15 GB was in use.
 
 ## Solve times of the certified units
-Certified 18: min 494.0, Q1 669.2, median 780.8, Q3 847.5, p90 883.6, max 897.1; above 300 s: 18
-
-## Per unit
-
-## Solve times of the certified units
 
 Certified 18: min 494.0, Q1 669.2, median 780.8, Q3 847.5, p90 883.6, max 897.1; above 300 s: 18
 
