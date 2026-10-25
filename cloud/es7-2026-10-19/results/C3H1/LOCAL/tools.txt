@@ -1,0 +1,18 @@
+Second local run on the same Mac, same tools, same base CNF (see results/C3W6/LOCAL/tools.txt for the build and sanity checks).
+Machine: Apple M5 Pro (5 performance + 10 efficiency cores), 48 GB RAM, macOS (Darwin 25.6.0), arm64. 10 lanes, --jobs 1 each.
+Toolchain: Apple clang 21.0.0 with SDKROOT=MacOSX26.5.sdk (the default MacOSX27.0 SDK does not link with this ld-1267).
+C3U2 tools: git worktree of cad4e050 at local/c3u2, TOOLS=results/C3U2/tools, unmodified.
+  close_tree.py is run through run_ct.py (in this directory): it imports close_tree, sets close_tree.WORK (the constant
+  "/opt/work/ct", not writable without root on macOS) to a local directory, forces the 'fork' start method so the worker
+  processes inherit it, and calls close_tree.main() with the same arguments. Nothing else differs.
+cadical: https://github.com/arminbiere/cadical c60730422e758ef1cebe7aeddf2dda31c996bf04 (3.0.1), ./configure && make, native arm64
+lrat-check: https://github.com/marijnheule/drat-trim 2e3b2dc0ecf938addbd779d42877b6ed69d9a985 + results/E2/tools/lrat-check-E2.patch, gcc -O2, native arm64
+cake_lpr: https://github.com/tanyongkiam/cake_lpr a36874a8b750b43fe4b385b8ddbf5b033e46a3fa, make cake_lpr_arm8 (the repository's ARMv8
+  build of the same verified CakeML checker; the cloud machines use its x64 build). cake_lpr_arm8.S uses no x18/w18 (reserved on Apple).
+  example.cnf/example.lpr -> s VERIFIED UNSAT; run with CML_HEAP_SIZE=12000 CML_STACK_SIZE=2000 (as controls.py sets).
+sanity: CNF {1},{-1}; LRAT "3 0 0" -> lrat-check "c FAILED: empty clause without a RUP conflict / c NOT VERIFIED", cake_lpr "c Checking failed
+  at line: 0. Reason: pivot must be non-zero" (both reject); "3 0 1 2 0" -> lrat-check "c VERIFIED", cake_lpr "s VERIFIED UNSAT"
+base CNF: gen_case.py 11 7 none -> p cnf 168399 4154921, sha256 bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da (matches)
+units: units2.tsv (phase, node, options): phase A = the C3W6 units that timed out at 900 s (39 at start), re-solved alone at cap 3600; phase B = H3/one six-bit cubes (the last 120 of the 319 open ones, in reverse order), split on sigma residues 8, 9, 10 into nine-bit cubes solved at cap 900 (the route of results/C3H1/X1)
+per unit: close_tree.py BASE out{phase}{k}.jsonl U --jobs 1 OPTIONS (lane2.sh); A: --sigma-split 3 --sigma-levels 2 --caps 3600,600 --cadopts=--sat --hours 0.02; B: --sigma-split 3 --sigma-levels 3 --caps 1,900 --cadopts=--sat --hours 0.05
+start 2026-10-25T09:13:43Z; records: phase A in results/C3W6/LOCAL2/, phase B in results/C3H1/LOCAL/
