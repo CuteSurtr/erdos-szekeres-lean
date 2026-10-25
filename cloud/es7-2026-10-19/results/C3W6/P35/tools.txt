@@ -4,7 +4,7 @@ cake_lpr: https://github.com/tanyongkiam/cake_lpr a36874a8b750b43fe4b385b8ddbf5b
 lrat-check: https://github.com/marijnheule/drat-trim 2e3b2dc0ecf938addbd779d42877b6ed69d9a985 + results/E2/tools/lrat-check-E2.patch (patch lrat-check.c < patch), gcc -O2, as /opt/bin/lrat-check
   sanity: CNF {1},{-1}; LRAT "3 0 0" -> lrat-check "c NOT VERIFIED", cake_lpr "pivot must be non-zero" (rejects); "3 0 1 2 0" -> lrat-check "c VERIFIED", cake_lpr "s VERIFIED UNSAT"
 base CNF: gen_case.py 11 7 none -o /opt/work/base.cnf -> p cnf 168399 4154921, sha256 bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da (matches)
-units: C3W6/lists/W6.tsv rows with row % 44 == 35 (units.tsv, 94 units); 3 lanes (lane k = positions = k mod 3, 31 each), --jobs 1 each; no seeding
+units: C3W6/lists/W6.tsv rows with row % 44 == 35 (units.tsv, 93 units); 3 lanes (lane k = positions = k mod 3, 31 each), --jobs 1 each; no seeding
 options: --jobs 1 --sigma-split 3 --sigma-levels 2 --caps 900,600 --cadopts=--sat --hours 0.02
 task: results/C3W6/TASK.md at c5260b44
 start 2026-10-25 05:31:54 UTC (lanes started 05:38 UTC); END 09:46:54 UTC
