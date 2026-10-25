@@ -29,7 +29,7 @@ Each of my 53 units has a different parent six-bit cube (53 parents, 1 unit each
 ## Solve times
 
 - Certified units: 1. Solve 879.3 s (min = quartiles = p90 = max), check 88.0 s, proof 881 MB. Certified above 300 s: 1.
-- Timed-out units: 47, all at cap 900 (solve_s 900.1–900.8). None ended in under 72 s, or in under 900 s at all, without a certificate.
+- Timed-out units: 47, all at cap 900 (solve_s 900.0–900.8). None ended in under 72 s, or in under 900 s at all, without a certificate.
 - Wall time per unit, including the split record: about 15 min, so a lane ran 4 units per hour.
 
 ## Killed at END / not reached
