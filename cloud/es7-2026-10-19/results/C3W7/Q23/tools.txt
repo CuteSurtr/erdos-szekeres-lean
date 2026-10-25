@@ -1,0 +1,12 @@
+C3U2 tools: worktree of commit cad4e050 (cad4e050d778aa37c9ea23afcbe704c94db3e890) at /opt/c3u2, TOOLS=/opt/c3u2/cloud/es7-2026-10-19/results/C3U2/tools, unmodified (git status clean); /opt/work writable
+cadical: https://github.com/arminbiere/cadical c60730422e758ef1cebe7aeddf2dda31c996bf04 (version 3.0.1), ./configure && make -> /opt/bin/cadical
+cake_lpr: https://github.com/tanyongkiam/cake_lpr a36874a8b750b43fe4b385b8ddbf5b033e46a3fa, make cake_lpr -> /opt/bin/cake_lpr; example.cnf/example.lpr -> s VERIFIED UNSAT
+lrat-check: https://github.com/marijnheule/drat-trim 2e3b2dc0ecf938addbd779d42877b6ed69d9a985 + results/E2/tools/lrat-check-E2.patch (patch lrat-check.c < patch), gcc -O2 -> /opt/bin/lrat-check
+  sanity: CNF {1},{-1}; LRAT "3 0 0" -> lrat-check "c NOT VERIFIED", cake_lpr "c Checking failed at line: 0. Reason: pivot must be non-zero" (rejects); "3 0 1 2 0" -> lrat-check "c VERIFIED", cake_lpr "s VERIFIED UNSAT"
+base CNF: gen_case.py 11 7 none -o /opt/work/base.cnf -> p cnf 168399 4154921, sha256 bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da (matches)
+python: Python 3.11.17
+units: C3W7/lists/W7.tsv rows with row % 36 == 23 (units.tsv, 53 units, header kept); 3 lanes (lane k: positions = k mod 3, from 0), no seeding
+command per unit: close_tree.py /opt/work/base.cnf /opt/work/out{k}.jsonl U --jobs 1 --sigma-split 3 --sigma-levels 3 --caps 900,600 --cadopts=--sat --hours 0.02
+lane0.sh/lane1.sh/lane2.sh exec lane.sh K (copied here); PROOF NOT ACCEPTED is re-checked in-lane into /opt/work/recheck.jsonl (--caps 900); SAT or rejected re-check sets a STOP flag for all lanes
+task: results/C3W7/TASK.md at 39bb1bac
+start 2026-10-25 10:46:26 UTC; lanes started 10:50:02 UTC; END 15:01:26 UTC (H = 4.5)
