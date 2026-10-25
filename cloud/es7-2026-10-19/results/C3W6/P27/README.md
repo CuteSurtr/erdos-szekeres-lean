@@ -42,7 +42,7 @@ Check times: 14.9–64.7 s per unit (median 40.3, sum 3,729). Every record has l
 - SAT: none.
 - PROOF NOT ACCEPTED: none, and no cake_lpr `none`. No recheck was needed, so there is no `recheck.jsonl`.
 - Memory: peak use was about 10 GB of 15 GB with 3 lanes. There was no memory problem.
-- Incident (affected neither the run nor the results): for about 10 minutes around 06:15 UTC, the session's command-safety check failed. The lanes kept running, and one progress push came late (06:25 instead of about 06:27–06:28 due, so within 25 min of the 06:03 push anyway).
+- Incident (no effect on the results): for about 10 minutes around 06:15 UTC, the session's command-safety check failed. The lanes kept running, and the pushes stayed within 25 minutes of each other (06:03, then 06:25).
 
 ## Per unit
 
