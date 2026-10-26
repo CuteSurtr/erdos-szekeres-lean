@@ -1,11 +1,3 @@
-{"node": "0s0_5s0-6s1__1s1-2s1-3s1-4s1-7s1-8s1", "status": "UNSATISFIABLE", "solve_s": 220.3, "certified": true}
-{"root": "0s0_5s0-6s1__1s1-2s1-3s1-4s1-7s1-8s1", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
-=== UNIT D 0s0_5s0-6s1__1s1-2s1-3s1-4s1-7s1-8s1 end 2026-10-26T01:16:16Z
-=== UNIT D 0s0-1s1_5__2s1-3s1-4s0-6s1-7s1-8s0 start 2026-10-26T01:16:16Z
-{"node": "0s0-1s1_5__2s1-3s1-4s0-6s1-7s1-8s0", "status": "UNSATISFIABLE", "solve_s": 147.8, "certified": true}
-{"root": "0s0-1s1_5__2s1-3s1-4s0-6s1-7s1-8s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
-=== UNIT D 0s0-1s1_5__2s1-3s1-4s0-6s1-7s1-8s0 end 2026-10-26T01:19:03Z
-=== UNIT D 0s0-2s1_5__1s1-3s0-4s1-6s0-7s1-8s1 start 2026-10-26T01:19:03Z
 {"node": "0s0-2s1_5__1s1-3s0-4s1-6s0-7s1-8s1", "status": "UNSATISFIABLE", "solve_s": 189.3, "certified": true}
 {"root": "0s0-2s1_5__1s1-3s0-4s1-6s0-7s1-8s1", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
 === UNIT D 0s0-2s1_5__1s1-3s0-4s1-6s0-7s1-8s1 end 2026-10-26T01:22:34Z
@@ -98,3 +90,11 @@
 {"root": "0s0_4__1s0-2s1-3s1-5s0-6s1-7s0-8s1-9s1-10s1", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
 === UNIT E 0s0_4__1s0-2s1-3s1-5s0-6s1-7s0-8s1-9s1-10s1 end 2026-10-26T04:45:26Z
 === UNIT E 0s0_4__1s0-2s1-3s1-5s0-6s0-7s1-8s1-9s0-10s1 start 2026-10-26T04:45:26Z
+{"node": "0s0_4__1s0-2s1-3s1-5s0-6s0-7s1-8s1-9s0-10s1", "status": "UNSATISFIABLE", "solve_s": 990.2, "certified": true}
+{"root": "0s0_4__1s0-2s1-3s1-5s0-6s0-7s1-8s1-9s0-10s1", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT E 0s0_4__1s0-2s1-3s1-5s0-6s0-7s1-8s1-9s0-10s1 end 2026-10-26T05:03:08Z
+=== UNIT E 0s0_4__1s0-2s1-3s1-5s0-6s0-7s0-8s0-9s0-10s1 start 2026-10-26T05:03:08Z
+{"node": "0s0_4__1s0-2s1-3s1-5s0-6s0-7s0-8s0-9s0-10s1", "status": "UNSATISFIABLE", "solve_s": 635.1, "certified": true}
+{"root": "0s0_4__1s0-2s1-3s1-5s0-6s0-7s0-8s0-9s0-10s1", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT E 0s0_4__1s0-2s1-3s1-5s0-6s0-7s0-8s0-9s0-10s1 end 2026-10-26T05:14:36Z
+=== UNIT E 0s0_4__1s0-2s1-3s0-5s1-6s1-7s0-8s1-9s0-10s1 start 2026-10-26T05:14:36Z
