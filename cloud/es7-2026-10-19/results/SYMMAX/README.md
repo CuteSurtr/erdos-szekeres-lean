@@ -1,5 +1,7 @@
 # SYMMAX: the largest symmetric point sets without a convex 7-gon
 
+![the 3-fold, 6-fold, 4-fold and mirror sets](symmetric_sets.svg)
+
 For a symmetry type, N(type) is the largest number of points in general position with that symmetry and no 7 points in
 convex position. All point files here have been checked exactly (see Verification).
 
@@ -8,9 +10,9 @@ convex position. All point files here have been checked exactly (see Verificatio
 | 3-fold rotation | 3m, 3m+1 (centre allowed) | `c3_31points.txt` (31, with centre) | 32 is not a possible size; every set with at least 33 points contains a 33-point 3-fold set, excluded by `results/C3FINAL` | **31** |
 | 6-fold rotation | 6m (no centre) | `c6_30points.txt` (30) | a 36-point 6-fold set contains a 33-point 3-fold set | **30** |
 | 4-fold rotation | 4m (no centre) | `c4_28points.txt` (28) | no 32-point 4-fold set exists (Subercaseaux, Mackey, Qian, Heule, arXiv 2506.00224, §6.2); larger sets contain one | **28** (with their result) |
-| 2-fold rotation (central symmetry) | 2m (no centre) | `results/SYM2/sym7_32points.txt` (32) | a 34-point set would refute ES(7) = 33; not excluded | at least 32 |
-| 5-fold rotation | 5m, 5m+1 | not searched | 35 or 36 points would refute ES(7) = 33 | open |
-| mirror | 2m + b, b <= 2 points on the axis | `mirror_32points.txt` (32, no point on the axis) | 33 points with one point on the axis: excluded (`results/FINAL`, `results/WRITEUP/MIRROR.md`); 34 points with no point on the axis would refute ES(7) = 33, not excluded | at least 32 |
+| 2-fold rotation (central symmetry) | 2m (no centre) | `results/SYM2/sym7_32points.txt` (32) | a 34-point set would refute ES(7) = 33; not excluded | at least 32, and exactly 32 if ES(7) = 33 |
+| 5-fold rotation | 5m, 5m+1 (centre allowed) | `c5_31points.txt` (31, with centre) | 32 to 34 are not possible sizes; 35 or 36 points would refute ES(7) = 33 | at least 31, and exactly 31 if ES(7) = 33 |
+| mirror | 2m + b, b <= 2 points on the axis | `mirror_32points.txt` (32, no point on the axis) | 33 points with one point on the axis: excluded (`results/FINAL`, `results/WRITEUP/MIRROR.md`); 34 points with no point on the axis would refute ES(7) = 33, not excluded | at least 32, and exactly 32 if ES(7) = 33 |
 | rotation of order 7 or more | | | every orbit is a convex polygon with at least 7 vertices | none |
 
 An even-order rotation contains the half-turn, so a centre point would be collinear with every pair p, -p. That is why
@@ -37,6 +39,9 @@ point on the axis (even size, 34 or more), and 5-fold sets of 35 or more points.
 
 `c3_27points.txt` 27 points, |coordinate| <= 287; `c3_30points.txt` 30 points, |coordinate| <= 306; `c3_31points.txt` 31 points, |coordinate| <= 1017; `c4_28points.txt` 28 points, |coordinate| <= 147; `c6_30points.txt` 30 points, |coordinate| <= 456; `mirror_32points.txt` 32 points, |coordinate| <= 614.
 
+- 5-fold file: a line c0 c1 c2 c3 is the point c0 + c1 z + c2 z² + c3 z³ with z = e^(2πi/5). The rotation by 72° is
+  multiplication by z. Orientations are decided exactly: Im(w)/sin 72° = ((2(w1 - w4) - (w2 - w3)) + (w2 - w3)√5)/2
+  (`verify5.py`, `anneal5.c`, `shrink5.py`).
 - 4-fold and mirror files: ordinary integer coordinates, rotation (x, y) -> (-y, x), mirror (x, y) -> (-x, y).
 - 3-fold and 6-fold files: Eisenstein coordinates. A line (a, b) is the point a + b·w, w = e^(2πi/3), that is the plane
   point (a - b/2, b·√3/2). This map is linear and invertible, so collinearity and convex position are decided exactly on
@@ -56,6 +61,8 @@ point on the axis (even size, 34 or more), and 5-fold sets of 35 or more points.
   - c4_28points: 1,184,040, 0.
   - c6_30points: 2,035,800, 0.
   - mirror_32points: 3,365,856, 0.
+  - c5_31points (`python3 verify5.py c5_31points.txt 7`): 2,629,575, 0.
+  - c5_30points: 2,035,800, 0.
 
 ## How they were found
 
@@ -68,5 +75,7 @@ Time to the first zero-cost set:
 - 4-fold 28: 1 second.
 - 6-fold 30: about 10 seconds.
 - mirror 32: 22 seconds.
+- 5-fold 30: 29 seconds.
+- 5-fold 31: about 6.5 minutes (two of three runs).
 
 `shrink.py` then scaled the representatives down while all checks still passed.
