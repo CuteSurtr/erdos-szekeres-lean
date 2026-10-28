@@ -21,3 +21,6 @@ Extension (2026-10-28 09:04Z, by request: run until the queue is empty): the 3-h
 09:15Z, so no unit was killed. Each first-window lane (END 09:15Z, no new unit after 09:10Z) finishes its current unit
 and exits; a waiting runner then restarts lane5.sh with the same lane number, the same queue and claims directory, and
 END 2026-10-29T09:15:00Z (a backstop only: the lanes exit when the queue is empty). Same tools, options and cap.
+Run ended 2026-10-28T17:16Z with the queue empty: 698/698 units certified (lrat-check "c VERIFIED" and cake_lpr
+"s VERIFIED UNSAT" on every one), 0 timeouts, 0 SAT, 0 proof rejections, no unit run twice. Solve s: min 394, q1 716,
+median 790, q3 873, p90 945, max 1117; check s: median 56, max 74; 164 core-hours in all.
