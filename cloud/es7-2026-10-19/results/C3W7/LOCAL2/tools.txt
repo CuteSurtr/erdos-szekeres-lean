@@ -16,3 +16,8 @@ base CNF: gen_case.py 11 7 none -> p cnf 168399 4154921, sha256 bf0e502ee7859940
 units: units5.tsv (phase, node, options) = the 698 C3W7 nine-bit units still open after all records up to c7631f52, in run 4's order (0s0_3: 4, then 0s0_2: 358, then 0s0_1: 336). Run 4 (results/C3W7/LOCAL/) was paused on 2026-10-26 at 15:31Z and its in-flight units were killed on 2026-10-28 without records, so they are re-solved here. The lanes share one queue (each takes the next unclaimed row); each unit is solved once at cap 3600 (records in results/C3W7/LOCAL2/; their sigma-split records are results/C3W7/presplit.jsonl). The run stops 3 hours after its start: no unit is started in the last 5 minutes, and units still running at the end are killed and left open.
 per unit: close_tree.py BASE out{k}.jsonl U --jobs 1 --sigma-split 3 --sigma-levels 3 --caps 3600,600 --cadopts=--sat --hours 0.02 (lane5.sh)
 start 2026-10-28T06:15:00Z, end 2026-10-28T09:15:00Z
+
+Extension (2026-10-28 09:04Z, by request: run until the queue is empty): the 3-hour stop was cancelled before
+09:15Z, so no unit was killed. Each first-window lane (END 09:15Z, no new unit after 09:10Z) finishes its current unit
+and exits; a waiting runner then restarts lane5.sh with the same lane number, the same queue and claims directory, and
+END 2026-10-29T09:15:00Z (a backstop only: the lanes exit when the queue is empty). Same tools, options and cap.
