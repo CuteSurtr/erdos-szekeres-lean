@@ -84,3 +84,31 @@ Calibration against arXiv 2506.00224, §6.1 (16 points, no convex hexagon; 90 se
 and 5-fold (with centre) sets, which the paper also found. For 3-fold with centre it stops at one convex hexagon, and the
 paper shows no such set exists. A control run on 3-fold 33-point sets with no convex 7-gon, impossible by
 `results/C3FINAL`, never got below 3 convex 7-gons in more than an hour.
+
+## Hexagons (k = 6), for comparison
+
+The largest symmetric sets with no convex hexagon (ES(6) = 17, so 16 is the most possible). Files are in `k6/`.
+
+| symmetry | largest size | |
+|---|---|---|
+| 2-fold | 16 | `k6/c2_16points.txt` |
+| 4-fold | 16 | `k6/c4_16points.txt` (as in arXiv 2506.00224, §6.1) |
+| 5-fold | 16 | `k6/c5_16points.txt`, with centre (as in arXiv 2506.00224) |
+| 3-fold | **13** | `k6/c3_13points.txt` (with centre); 14 is not a possible size; 15 and 16 are impossible: `tools/symmetric/symcnf.py 15 6 3` and `16 6 3 --center-in-set` (`k6/*.cnf`) are UNSAT, with LRAT proofs accepted by lrat-check and cake_lpr |
+| 6-fold | 1 | every 6-point orbit is a regular hexagon |
+| mirror | **12** | `k6/mirror_12points.txt` (5 mirror pairs and 2 points on the axis); the bound is the lemma below |
+
+**Lemma (mirror sets).** Let S be in general position and symmetric under the reflection in a line l. Let R be the
+points of S strictly on one side of l, read in the order of their projections to l (distinct, by general position).
+If p1, ..., pj in R form a chain that bulges away from l (each middle point farther from l than the chord of its
+neighbours), then these points and their mirror images are 2j points in convex position.
+
+Proof. Going around p1, ..., pj, then the mirror images in reverse order, every turn is to the same side. Along the chain
+this holds because the chain bulges outward. At pj and p1 the edge to the mirror image is perpendicular to l, and
+cross(pj - pj-1, pj' - pj) = 2·dist(pj, l)·(projection gap) > 0.
+
+Consequences. For k = 6, no 3-chain of R bulges outward, so every triple of R bends toward l. Then R is a single convex
+chain, so |R| <= 5, and |S| <= 2·5 + 2 = 12. For even k = 2j in general, R has no outward j-chain and no k-chain in
+convex position, so |R| <= C(3j-4, 2j-2) by the cups-caps theorem. For k = 8 this gives |S| <= 2·28 + 2 = 58 < 64: no
+mirror-symmetric set of 64 points avoids a convex octagon. For odd k = 7 the lemma only gives |S| <= 44, and 32 is
+reached.
