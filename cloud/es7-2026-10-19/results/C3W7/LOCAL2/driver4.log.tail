@@ -1,11 +1,3 @@
-{"node": "0s0_2__1s0-3s1-4s0-5s0-6s0-7s1-8s0-9s0-10s0", "status": "UNSATISFIABLE", "solve_s": 508.5, "certified": true}
-{"root": "0s0_2__1s0-3s1-4s0-5s0-6s0-7s1-8s0-9s0-10s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
-=== UNIT E 0s0_2__1s0-3s1-4s0-5s0-6s0-7s1-8s0-9s0-10s0 end 2026-10-28T11:02:34Z
-=== UNIT E 0s0_2__1s0-3s0-4s1-5s1-6s1-7s0-8s1-9s1-10s0 start 2026-10-28T11:02:35Z
-{"node": "0s0_2__1s0-3s0-4s1-5s1-6s1-7s0-8s1-9s1-10s0", "status": "UNSATISFIABLE", "solve_s": 719.3, "certified": true}
-{"root": "0s0_2__1s0-3s0-4s1-5s1-6s1-7s0-8s1-9s1-10s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
-=== UNIT E 0s0_2__1s0-3s0-4s1-5s1-6s1-7s0-8s1-9s1-10s0 end 2026-10-28T11:15:28Z
-=== UNIT E 0s0_2__1s0-3s0-4s1-5s1-6s0-7s0-8s1-9s0-10s1 start 2026-10-28T11:15:29Z
 {"node": "0s0_2__1s0-3s0-4s1-5s1-6s0-7s0-8s1-9s0-10s1", "status": "UNSATISFIABLE", "solve_s": 832.0, "certified": true}
 {"root": "0s0_2__1s0-3s0-4s1-5s1-6s0-7s0-8s1-9s0-10s1", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
 === UNIT E 0s0_2__1s0-3s0-4s1-5s1-6s0-7s0-8s1-9s0-10s1 end 2026-10-28T11:30:17Z
@@ -98,3 +90,11 @@
 {"root": "0s0_1__2s0-3s0-4s1-5s1-6s1-7s0-8s0-9s1-10s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
 === UNIT E 0s0_1__2s0-3s0-4s1-5s1-6s1-7s0-8s0-9s1-10s0 end 2026-10-28T16:33:42Z
 === UNIT E 0s0_1__2s0-3s0-4s1-5s0-6s1-7s0-8s1-9s0-10s1 start 2026-10-28T16:33:42Z
+{"node": "0s0_1__2s0-3s0-4s1-5s0-6s1-7s0-8s1-9s0-10s1", "status": "UNSATISFIABLE", "solve_s": 756.2, "certified": true}
+{"root": "0s0_1__2s0-3s0-4s1-5s0-6s1-7s0-8s1-9s0-10s1", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT E 0s0_1__2s0-3s0-4s1-5s0-6s1-7s0-8s1-9s0-10s1 end 2026-10-28T16:47:12Z
+=== UNIT E 0s0_1__2s0-3s0-4s0-5s1-6s1-7s1-8s1-9s0-10s0 start 2026-10-28T16:47:13Z
+{"node": "0s0_1__2s0-3s0-4s0-5s1-6s1-7s1-8s1-9s0-10s0", "status": "UNSATISFIABLE", "solve_s": 775.3, "certified": true}
+{"root": "0s0_1__2s0-3s0-4s0-5s1-6s1-7s1-8s1-9s0-10s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT E 0s0_1__2s0-3s0-4s0-5s1-6s1-7s1-8s1-9s0-10s0 end 2026-10-28T17:01:07Z
+=== UNIT E 0s0_1__2s0-3s0-4s0-5s1-6s0-7s0-8s0-9s1-10s0 start 2026-10-28T17:01:08Z
