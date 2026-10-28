@@ -78,4 +78,9 @@ Time to the first zero-cost set:
 - 5-fold 30: 29 seconds.
 - 5-fold 31: about 6.5 minutes (two of three runs).
 
-`shrink.py` then scaled the representatives down while all checks still passed.
+`shrink.py` (`shrink5.py` for 5-fold) then scaled the representatives down while all checks still passed.
+
+Calibration against arXiv 2506.00224, §6.1 (16 points, no convex hexagon; 90 seconds per run). The search finds 4-fold
+and 5-fold (with centre) sets, which the paper also found. For 3-fold with centre it stops at one convex hexagon, and the
+paper shows no such set exists. A control run on 3-fold 33-point sets with no convex 7-gon, impossible by
+`results/C3FINAL`, never got below 3 convex 7-gons in more than an hour.
