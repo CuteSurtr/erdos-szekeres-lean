@@ -1,15 +1,3 @@
-{"root": "0s0_2__1s1-3s1-4s1-5s0-6s0-7s0-8s1-9s0-10s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
-=== UNIT E 0s0_2__1s1-3s1-4s1-5s0-6s0-7s0-8s1-9s0-10s0 end 2026-10-28T07:04:11Z
-=== UNIT E 0s0_2__1s1-3s1-4s0-5s1-6s1-7s0-8s0-9s1-10s1 start 2026-10-28T07:04:11Z
-{"node": "0s0_2__1s1-3s1-4s0-5s1-6s1-7s0-8s0-9s1-10s1", "status": "UNSATISFIABLE", "solve_s": 1010.1, "certified": true}
-{"root": "0s0_2__1s1-3s1-4s0-5s1-6s1-7s0-8s0-9s1-10s1", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
-=== UNIT E 0s0_2__1s1-3s1-4s0-5s1-6s1-7s0-8s0-9s1-10s1 end 2026-10-28T07:22:05Z
-=== UNIT E 0s0_2__1s1-3s1-4s0-5s0-6s1-7s1-8s1-9s1-10s1 start 2026-10-28T07:22:05Z
-{"node": "0s0_2__1s1-3s1-4s0-5s0-6s1-7s1-8s1-9s1-10s1", "status": "UNSATISFIABLE", "solve_s": 958.4, "certified": true}
-{"root": "0s0_2__1s1-3s1-4s0-5s0-6s1-7s1-8s1-9s1-10s1", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
-=== UNIT E 0s0_2__1s1-3s1-4s0-5s0-6s1-7s1-8s1-9s1-10s1 end 2026-10-28T07:39:06Z
-=== UNIT E 0s0_2__1s1-3s1-4s0-5s0-6s0-7s1-8s1-9s1-10s0 start 2026-10-28T07:39:06Z
-{"node": "0s0_2__1s1-3s1-4s0-5s0-6s0-7s1-8s1-9s1-10s0", "status": "UNSATISFIABLE", "solve_s": 918.4, "certified": true}
 {"root": "0s0_2__1s1-3s1-4s0-5s0-6s0-7s1-8s1-9s1-10s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
 === UNIT E 0s0_2__1s1-3s1-4s0-5s0-6s0-7s1-8s1-9s1-10s0 end 2026-10-28T07:55:30Z
 === UNIT E 0s0_2__1s1-3s0-4s1-5s1-6s1-7s0-8s1-9s1-10s1 start 2026-10-28T07:55:30Z
@@ -98,3 +86,15 @@
 {"root": "0s0_1__2s1-3s1-4s1-5s0-6s0-7s0-8s1-9s0-10s1", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
 === UNIT E 0s0_1__2s1-3s1-4s1-5s0-6s0-7s0-8s1-9s0-10s1 end 2026-10-28T12:52:46Z
 === UNIT E 0s0_1__2s1-3s1-4s0-5s1-6s0-7s1-8s0-9s0-10s1 start 2026-10-28T12:52:46Z
+{"node": "0s0_1__2s1-3s1-4s0-5s1-6s0-7s1-8s0-9s0-10s1", "status": "UNSATISFIABLE", "solve_s": 805.5, "certified": true}
+{"root": "0s0_1__2s1-3s1-4s0-5s1-6s0-7s1-8s0-9s0-10s1", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT E 0s0_1__2s1-3s1-4s0-5s1-6s0-7s1-8s0-9s0-10s1 end 2026-10-28T13:07:08Z
+=== UNIT E 0s0_1__2s1-3s1-4s0-5s0-6s1-7s0-8s1-9s0-10s1 start 2026-10-28T13:07:08Z
+{"node": "0s0_1__2s1-3s1-4s0-5s0-6s1-7s0-8s1-9s0-10s1", "status": "UNSATISFIABLE", "solve_s": 842.7, "certified": true}
+{"root": "0s0_1__2s1-3s1-4s0-5s0-6s1-7s0-8s1-9s0-10s1", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT E 0s0_1__2s1-3s1-4s0-5s0-6s1-7s0-8s1-9s0-10s1 end 2026-10-28T13:22:10Z
+=== UNIT E 0s0_1__2s1-3s0-4s1-5s1-6s1-7s1-8s1-9s1-10s1 start 2026-10-28T13:22:11Z
+{"node": "0s0_1__2s1-3s0-4s1-5s1-6s1-7s1-8s1-9s1-10s1", "status": "UNSATISFIABLE", "solve_s": 715.7, "certified": true}
+{"root": "0s0_1__2s1-3s0-4s1-5s1-6s1-7s1-8s1-9s1-10s1", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT E 0s0_1__2s1-3s0-4s1-5s1-6s1-7s1-8s1-9s1-10s1 end 2026-10-28T13:34:56Z
+=== UNIT E 0s0_1__2s1-3s0-4s1-5s1-6s0-7s1-8s0-9s1-10s1 start 2026-10-28T13:34:56Z
