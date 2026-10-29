@@ -22,7 +22,8 @@ exactly 31 points.
 - **Lower example.** `results/SYMMAX/c3_31points.txt` has 31 points, centre included. Its coordinates are exact, and it
   has been independently checked.
 - **Proof of the 33-point case.** The case is encoded with a projective normal form (`results/C3-S/soundness.md`, a
-  written proof) and a compact encoding (`results/C3a`, `results/C3b`). It is split into 116,883 certified pieces. Two
+  written proof) and the compact chain encoding of `results/C3a`. That encoding was cross-checked on smaller cases
+  against `tools/symmetric/symcnf.py` and the independent encoding of `results/C3b`. It is split into 116,883 certified pieces. Two
   independently written composers check that the pieces cover the case: `results/C3FINAL` re-derives every piece's CNF
   hash from the base formula and covers all 910 retained depth-2 roots.
 - **Trust base.** See §3. Most important: the LRAT proofs of the pieces were not retained.
@@ -125,8 +126,9 @@ observations.
 ## 3. Trust base
 
 **Geometric soundness (written proofs, audited, not Lean).**
-- The threefold normal form (`results/C3-S/soundness.md`) and the C3a/C3b encodings. They were tested on thousands of
-  random sets, mutation-tested and audited (`results/C3AUDIT` to `C3AUDIT4`). An independent audit on 2026-10-29
+- The threefold normal form (`results/C3-S/soundness.md`) and the C3a chain encoding, cross-checked against C3b and
+  `symcnf.py`. They were tested on thousands of random sets, mutation-tested and audited (`results/C3AUDIT` to
+  `C3AUDIT4`). An independent audit on 2026-10-29
   re-read the normal form and the encoding source.
 - The encodings `tools/symmetric/symcnf.py` and `results/SYM5/symcnf_layers.py` (fivefold), and the layer lemma.
 - The centre-element encoding `results/SYMZ/zcnf.py` (mirror). Its soundness proof is in `results/SYMZ/README.md`.
@@ -181,11 +183,16 @@ compressed proofs.
 - **ES(7).** Still open; no unrestricted bound is improved.
 - **The last symmetric route.** Accepting the exclusions above, only **centrally symmetric sets of even size at least
   34** remain as symmetric counterexamples. Excluding 34 points excludes all of them, since pairs can be deleted.
-- **Status of the central 34-point search (2026-10-29).**
-  - The search uses the centre-element encoding with the centre fixed as the common point of all antipodal lines, plus
-    a hull-vertex normal form.
-  - Its convex layers are centrally symmetric quadrilaterals or hexagons. The hull alone gives 136 cases.
-  - No verdict yet; see `results/SYMZ/README.md` for runs and limits.
+- **Status of the central 34-point search (2026-10-29; details in `results/C2C34`).**
+  - The encoding has the centre as an element, and the first point is a hull vertex. The convex hull of a counterexample
+    is a centrally symmetric quadrilateral or hexagon, which gives 136 cases (32 up to rotation and reflection). Their
+    coverage of the formula is certified by an LRAT proof accepted by both checkers.
+  - Every canonical hexagonal-hull case is UNSAT with a retained LRAT proof, and most of the 120 hexagonal cases are done
+    the same way.
+  - So a centrally symmetric 34-point counterexample would have a parallelogram hull. This uses the canonical-case
+    argument until all 120 hexagonal cases are in.
+  - The 8 canonical parallelogram cases are open. A split at the second convex layer gives 560 subcases each; nested
+    parallelograms are the hard core.
 - **Limits of the central search.**
   - An abstract centre does not impose metric midpoints, and it does not imply realizability. The fourfold 32-point
     formula of the same kind is satisfiable, although no real fourfold set of that size exists; arXiv:2506.00224

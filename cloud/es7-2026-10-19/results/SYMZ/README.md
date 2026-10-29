@@ -55,7 +55,7 @@ records signs, and a class containing a triple and its negation would be reporte
 - Only UNSAT answers are used as proofs.
 
 For rotations of even order, the same file (`zcnf.py rot`) builds the analogous model with the centre c. There
-v_c = (v_p + v_{−p})/2, so χ(c, p, q) = χ(−p, p, q). It is used for the open central case in §4.
+v_c = (v_p + v_{−p})/2, so χ(c, p, q) = χ(−p, p, q). It is used for the open central case in §5.
 
 ## 2. Implementation tests
 
@@ -110,7 +110,20 @@ Notes on the table:
 - **Proof storage.** Proofs are not stored in Git. They are kept compressed, with byte-exact round trips verified, in a
   local archive outside the repository (see `results/WRITEUP/CERTIFICATES.md`).
 
-## 4. Centrally symmetric sets of 34 points: status (open)
+## 4. What a short argument gives
+
+The chain lemma of `results/SYMMAX` (an outward chain plus its mirror image is in convex position) gives only a weaker
+bound.
+- Look at the points on one side of the axis, in the coordinates (projection to the axis, distance from the axis). These
+  are an affine image of the plane, so convex position is unchanged.
+- They have no 4-cap: such a cap plus its mirror image would be 8 points in convex position.
+- They have no 7-cup: those 7 points would themselves be in convex position.
+- By the cups-caps theorem there are at most C(7, 5) = 21 such points on each side. With at most two axis points, a
+  mirror-symmetric set without a convex 7-gon has at most 44 points.
+
+Closing the gap from 44 to 32 is what the computations above do. No short argument for 32 is known to us.
+
+## 5. Centrally symmetric sets of 34 points: status (open)
 
 This is the only symmetric route to a counterexample to ES(7) = 33 that the exclusions in
 `results/WRITEUP/SYMMETRIC.md` leave open.
@@ -126,14 +139,24 @@ actually solved, `r2_t17k7h.cnf`, `8c2606ad…`, has identical clauses).
 **Hull case split** (`hullcubes.py`).
 - **The split.** The hull of a centrally symmetric set without a convex 7-gon is a centrally symmetric quadrilateral or
   hexagon through the first point. Given the angular order, it is determined by one or two further pairs: 16 + 120 = 136
-  cases.
-  - Each case fixes the oriented edges of the hull.
-  - `cover.cnf` (formula plus the negation of every case) must be UNSAT for the cases to cover the formula.
-  - In a 16-point hexagon test the split covers, and only the quadrilateral cases are satisfiable, as expected.
-- **Probes so far (no proof files).** The hexagonal case H5-11 is UNSAT in 1,124 s. The case runs and the 34-point
-  coverage check are recorded in `logs/central34_status.txt`.
-- **Cost.** At about 20 minutes per case, the full split needs on the order of 50 core-hours. It also needs a retained,
-  checked proof per case.
+  cases. Each case fixes the oriented edges of the hull.
+- **Coverage is certified.** `cover.cnf`, the formula plus the negation of every case, is UNSAT in 186.54 s. Its LRAT
+  proof is accepted by lrat-check and cake_lpr (`results/WRITEUP/CERTIFICATES.md`, central34-cover). In a 16-point
+  hexagon test the split also covers, and only the quadrilateral cases are satisfiable, as expected.
+- **Canonical cases (an argument about real sets, not about the CNF).**
+  - Start the labelling at any hull vertex of a real configuration. The numbers of antipodal classes between
+    consecutive hull vertices form a cyclic sequence of two or three positive integers with sum 17.
+  - Starting at another hull vertex rotates this sequence, and reflecting the configuration reverses it. Each of these
+    is again a valid labelling of a real configuration in the normal form.
+  - So every real configuration falls into a case whose sequence is least under rotation and reversal: 8 quadrilateral
+    and 24 hexagonal cases (`canonical.txt` in the archive). Refuting these 32 cases with this argument, or all 136
+    cases with the certified cover, would settle the central 34-point case.
+- **Exploratory runs (no proof files).** The final state at the end of this session is in `logs/central34_status.txt`.
+  - Hexagonal cases were refuted in about 6 to 19 minutes each.
+  - Quadrilateral cases ran longer without an answer.
+  - No case was found satisfiable.
+- **Continued in `results/C2C34`.** The hexagonal-hull cases were re-solved there with retained proofs, and the
+  quadrilateral cases were split further at the second convex layer.
 
 ## Files
 
@@ -144,6 +167,6 @@ actually solved, `r2_t17k7h.cnf`, `8c2606ad…`, has identical clauses).
   - Both test scripts read the solver path from `CADICAL`.
 - **Run helpers.** `runcad.sh`, `chk.sh` and `with_units.sh`; `hullcubes.py` and `runcase.sh` for the central case
   split.
-- **Logs.** `logs/` holds the solver and checker logs (build-host line removed, model lines dropped) and `gen.log`,
+- **Logs.** `logs/` holds the solver and checker logs (build-host line removed, model lines dropped) and `logs/gen.log`,
   the generator statistics.
 - **Hashes.** `sha256.txt`.

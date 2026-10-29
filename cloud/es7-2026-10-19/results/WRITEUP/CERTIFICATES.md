@@ -173,6 +173,31 @@ negation of every cube).
 
 **Logs.** `central34/cad_hc34_coverL.out`, `central34/chk_hc34_cover_lrat-check.out`, `central34/chk_hc34_cover_cake_lpr.out`, `central34/cubes.txt`, `central34/canonical.txt`
 
+## central34-hull
+
+**Case.** Centrally symmetric sets of 34 points: the hexagonal-hull cases `H<a>-<b>` of `results/C2C34/hullcubes.py`.
+Each case CNF is the base `c34h_final.cnf` (`zcnf.py rot 17 7 --m 2 --hull`, SHA-256
+`b0061e908bff80e6a597f31a6fec1d91e8504aebc09b0bcf41c2ff21604d8ff1`) plus the hull cube of the case as unit clauses
+(`results/C2C34/cubes.txt`).
+
+**Records.** Per case, `results/C2C34/logs/hex_cases.tsv` lists the case CNF SHA-256, the proof size and SHA-256, the
+archive SHA-256 and round trip, and the lrat-check and cake_lpr verdicts. Archive files are
+`central34-hull/<case>.lrat.zst`.
+
+**Solver.** `cadical -t 3600 --lrat --binary=false <case>.cnf <case>.lrat` (CaDiCaL 3.0.1).
+
+**Checkers.** `lrat-check <case>.cnf <case>.lrat` at solve time, and `cake_lpr --CML_HEAP_SIZE=16000 --CML_STACK_SIZE=4000`
+on the decompressed archive copy.
+
+**Counts at the end of the session.**
+
+```
+hexagonal-hull cases with proofs: 76 run, 76 UNSAT, lrat-check VERIFIED 76, archive round trip 76, cake_lpr VERIFIED 23
+canonical hexagonal cases UNSAT: 24/24; cake_lpr on canonical: 22/24
+all hexagonal cases UNSAT: 76/120; missing: ['H6-12', 'H7-10', 'H7-11', 'H7-12', 'H7-13', 'H7-14', 'H7-15', 'H7-16', 'H8-9', 'H8-10', 'H8-11', 'H8-12', 'H8-13', 'H8-14', 'H8-15', 'H8-16', 'H9-10', 'H9-11', 'H9-12', 'H9-13']
+solve time: min 308 s, median 627 s, max 1542 s; proofs total 331.7 GB
+```
+
 ## Reproduction
 
 1. Decompress: `zstd -d <name>.zst` and compare `shasum -a 256` with the table.
