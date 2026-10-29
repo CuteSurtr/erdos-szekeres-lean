@@ -193,6 +193,9 @@ compressed proofs.
     `results/C2C34`).
   - The 8 canonical parallelogram cases are open. A split at the second convex layer gives 560 subcases each; nested
     parallelograms are the hard core.
+  - A pilot on the canonical case P8 refuted 64 of its 287 subcase orbits with both checks (`results/C2C34` §6). A
+    compact encoding of the whole parallelogram case (`results/C2SGN`) certified its second-layer split and some pieces.
+    Neither closes the case.
 - **Limits of the central search.**
   - An abstract centre does not impose metric midpoints, and it does not imply realizability. The fourfold 32-point
     formula of the same kind is satisfiable, although no real fourfold set of that size exists; arXiv:2506.00224

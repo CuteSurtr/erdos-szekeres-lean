@@ -1,0 +1,79 @@
+experiment	formula	cube	solver	cap_s	result	seconds
+lookahead cubes, depth 10 (lacube)	s34pc (no --rs)	99	CaDiCaL 3.0.1	900	no answer	900
+lookahead cubes, depth 10 (lacube)	s34pc (no --rs)	309	CaDiCaL 3.0.1	900	no answer	900
+lookahead cubes, depth 10 (lacube)	s34pc (no --rs)	664	CaDiCaL 3.0.1	900	no answer	900
+second layer, before the unit-propagation filter	s34pcr	Q9.19	CaDiCaL 3.0.1	900	UNSAT	0
+second layer, before the unit-propagation filter	s34pcr	Q5.9	CaDiCaL 3.0.1	900	UNSAT	0
+second layer, before the unit-propagation filter	s34pcr	H6.16.23	CaDiCaL 3.0.1	900	UNSAT	0
+second layer, before the unit-propagation filter	s34pcr	H5.28.18	CaDiCaL 3.0.1	900	UNSAT	0
+second layer, before the unit-propagation filter	s34pcr	H3.21.10	CaDiCaL 3.0.1	900	UNSAT	0
+second layer, after the filter	s34pcr	H3.23.26	CaDiCaL 3.0.1	1200	UNSAT	460
+second layer, after the filter	s34pcr	H3.13.24	CaDiCaL 3.0.1	1200	UNSAT	930
+second layer, after the filter	s34pcr	Q3.18	CaDiCaL 3.0.1	1200	no answer	1200
+second layer, after the filter	s34pcr	Q3.11	CaDiCaL 3.0.1	1200	no answer	1200
+second layer, after the filter	s34pcr	H3.14.26	CaDiCaL 3.0.1	1200	no answer	1200
+third layer under Q3.11	s34pcr	Q3.11/H4.23.25	CaDiCaL 3.0.1	600	UNSAT	3
+third layer under Q3.11	s34pcr	Q3.11/Q4.9	CaDiCaL 3.0.1	600	no answer	600
+third layer under Q3.11	s34pcr	Q3.11/H4.9.30	CaDiCaL 3.0.1	600	no answer	600
+third layer under Q3.11	s34pcr	Q3.11/Q4.20	CaDiCaL 3.0.1	600	no answer	600
+fourth layer under Q3.11/H4.10.29	s34pcr	Q3.11/H4.10.29/H5.8.14	CaDiCaL 3.0.1	600	UNSAT	3
+fourth layer under Q3.11/H4.10.29	s34pcr	Q3.11/H4.10.29/H5.18.26	CaDiCaL 3.0.1	600	UNSAT	7
+fourth layer under Q3.11/H4.10.29	s34pcr	Q3.11/H4.10.29/H5.17.26	CaDiCaL 3.0.1	600	UNSAT	8
+fourth layer under Q3.11/H4.10.29	s34pcr	Q3.11/H4.10.29/H5.15.16	CaDiCaL 3.0.1	600	UNSAT	0
+fourth layer under Q3.11/H4.10.29	s34pcr	Q3.11/H4.10.29/H5.16.28	CaDiCaL 3.0.1	600	UNSAT	16
+fourth layer under Q3.11/H4.10.29	s34pcr	Q3.11/H4.10.29/H5.14.26	CaDiCaL 3.0.1	600	UNSAT	12
+nested parallelograms, n = 30	p30 (n=30, --par --centre --rs)	Q3.4	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 30	p30 (n=30, --par --centre --rs)	Q3.27	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 30	p30 (n=30, --par --centre --rs)	Q3.5	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 30	p30 (n=30, --par --centre --rs)	Q3.26	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 30	p30 (n=30, --par --centre --rs)	Q3.6	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 30	p30 (n=30, --par --centre --rs)	Q3.25	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 30	p30 (n=30, --par --centre --rs)	Q3.7	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 30	p30 (n=30, --par --centre --rs)	Q3.24	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 30	p30 (n=30, --par --centre --rs)	Q3.8	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 30	p30 (n=30, --par --centre --rs)	Q3.23	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 30	p30 (n=30, --par --centre --rs)	Q3.9	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 30	p30 (n=30, --par --centre --rs)	Q3.22	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 30	p30 (n=30, --par --centre --rs)	Q3.10	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 30	p30 (n=30, --par --centre --rs)	Q3.21	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 30	p30 (n=30, --par --centre --rs)	Q3.11	CaDiCaL 3.0.1	600	SAT	1
+nested parallelograms, n = 30	p30 (n=30, --par --centre --rs)	Q3.20	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 30	p30 (n=30, --par --centre --rs)	Q3.12	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 30	p30 (n=30, --par --centre --rs)	Q3.19	CaDiCaL 3.0.1	600	SAT	1
+nested parallelograms, n = 30	p30 (n=30, --par --centre --rs)	Q3.13	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 30	p30 (n=30, --par --centre --rs)	Q3.18	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 30	p30 (n=30, --par --centre --rs)	Q3.14	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 30	p30 (n=30, --par --centre --rs)	Q3.17	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 30	p30 (n=30, --par --centre --rs)	Q3.15	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 30	p30 (n=30, --par --centre --rs)	Q3.16	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 32	p32 (n=32, --par --centre --rs)	Q3.4	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 32	p32 (n=32, --par --centre --rs)	Q3.29	CaDiCaL 3.0.1	600	SAT	1
+nested parallelograms, n = 32	p32 (n=32, --par --centre --rs)	Q3.5	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 32	p32 (n=32, --par --centre --rs)	Q3.28	CaDiCaL 3.0.1	600	SAT	1
+nested parallelograms, n = 32	p32 (n=32, --par --centre --rs)	Q3.6	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 32	p32 (n=32, --par --centre --rs)	Q3.27	CaDiCaL 3.0.1	600	SAT	1
+nested parallelograms, n = 32	p32 (n=32, --par --centre --rs)	Q3.7	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 32	p32 (n=32, --par --centre --rs)	Q3.26	CaDiCaL 3.0.1	600	SAT	1
+nested parallelograms, n = 32	p32 (n=32, --par --centre --rs)	Q3.8	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 32	p32 (n=32, --par --centre --rs)	Q3.25	CaDiCaL 3.0.1	600	SAT	1
+nested parallelograms, n = 32	p32 (n=32, --par --centre --rs)	Q3.9	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 32	p32 (n=32, --par --centre --rs)	Q3.24	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 32	p32 (n=32, --par --centre --rs)	Q3.10	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 32	p32 (n=32, --par --centre --rs)	Q3.23	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 32	p32 (n=32, --par --centre --rs)	Q3.11	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 32	p32 (n=32, --par --centre --rs)	Q3.22	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 32	p32 (n=32, --par --centre --rs)	Q3.12	CaDiCaL 3.0.1	600	SAT	1
+nested parallelograms, n = 32	p32 (n=32, --par --centre --rs)	Q3.21	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 32	p32 (n=32, --par --centre --rs)	Q3.13	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 32	p32 (n=32, --par --centre --rs)	Q3.20	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 32	p32 (n=32, --par --centre --rs)	Q3.14	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 32	p32 (n=32, --par --centre --rs)	Q3.19	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 32	p32 (n=32, --par --centre --rs)	Q3.15	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 32	p32 (n=32, --par --centre --rs)	Q3.18	CaDiCaL 3.0.1	600	SAT	0
+nested parallelograms, n = 32	p32 (n=32, --par --centre --rs)	Q3.16	CaDiCaL 3.0.1	600	SAT	1
+nested parallelograms, n = 32	p32 (n=32, --par --centre --rs)	Q3.17	CaDiCaL 3.0.1	600	SAT	0
+hexagonal hull, k = 17 (calibration)	h34k17c	-	CaDiCaL 3.0.1	1800	no answer	1783.26
+hexagonal hull, k = 10 (calibration)	h34k10c	-	CaDiCaL 3.0.1	1800	no answer	1783.17
+cover of the second-layer split (all 3,850 cubes)	s34pcr_l2cover	-	CaDiCaL 3.0.1	3600	UNSAT	1524.26
+solver comparison (CaDiCaL: 455.47 s)	s34pcr	H3.23.26	Kissat 4.0.4	1200	UNSAT	~331 (wall)
+solver comparison (CaDiCaL: 922.13 s)	s34pcr	H3.13.24	Kissat 4.0.4	1200	UNSAT	~558 (wall)
