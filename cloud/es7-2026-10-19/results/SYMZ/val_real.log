@@ -1,0 +1,20 @@
+SYM2/sym7_32points.txt on r2_t16k7h --hull: s SATISFIABLE | rot m=2 t=16: zero pattern ok, identities consistent on the real set, wrote 2360 units
+SYM2/sym7_32points.txt on r2_t16k7h --hull --swap: s UNSATISFIABLE | rot m=2 t=16: zero pattern ok, identities consistent on the real set, wrote 2360 units (labelling deliberately wrong)
+SYM2/sym7_32points.txt on r2_t16k7h --nothull (deliberately wrong): s UNSATISFIABLE
+SYMMAX/k6/c2_16points.txt on r2_t8k6h --hull: s SATISFIABLE | rot m=2 t=8: zero pattern ok, identities consistent on the real set, wrote 252 units
+SYMMAX/k6/c2_16points.txt on r2_t8k6h --hull --swap: s UNSATISFIABLE | rot m=2 t=8: zero pattern ok, identities consistent on the real set, wrote 252 units (labelling deliberately wrong)
+SYMMAX/k6/c2_16points.txt on r2_t8k6h --nothull (deliberately wrong): s UNSATISFIABLE
+SYMMAX/k6/c4_16points.txt on r2_t8k6h --hull: s SATISFIABLE | rot m=2 t=8: zero pattern ok, identities consistent on the real set, wrote 252 units
+SYMMAX/k6/c4_16points.txt on r2_t8k6h --hull --swap: s UNSATISFIABLE | rot m=2 t=8: zero pattern ok, identities consistent on the real set, wrote 252 units (labelling deliberately wrong)
+SYMMAX/k6/c4_16points.txt on r2_t8k6h --nothull (deliberately wrong): s UNSATISFIABLE
+SYMMAX/c4_28points.txt on r2_t14k7h --hull: s SATISFIABLE | rot m=2 t=14: zero pattern ok, identities consistent on the real set, wrote 1547 units
+SYMMAX/c4_28points.txt on r2_t14k7h --hull --swap: s UNSATISFIABLE | rot m=2 t=14: zero pattern ok, identities consistent on the real set, wrote 1547 units (labelling deliberately wrong)
+SYMMAX/c4_28points.txt on r2_t14k7h --nothull (deliberately wrong): s UNSATISFIABLE
+SYMMAX/c4_28points.txt on r4_t7k7 (normal form): s SATISFIABLE | rot m=4 t=7: zero pattern ok, identities consistent on the real set, wrote 777 units
+SYMMAX/c4_28points.txt on r4_t7k7  --swap: s UNSATISFIABLE | rot m=4 t=7: zero pattern ok, identities consistent on the real set, wrote 777 units (labelling deliberately wrong)
+SYMMAX/k6/c4_16points.txt on r4_t4k6 (normal form): s SATISFIABLE | rot m=4 t=4: zero pattern ok, identities consistent on the real set, wrote 128 units
+SYMMAX/k6/c4_16points.txt on r4_t4k6  --swap: s UNSATISFIABLE | rot m=4 t=4: zero pattern ok, identities consistent on the real set, wrote 128 units (labelling deliberately wrong)
+SYMMAX/mirror_32points.txt on m_t16k7 (normal form): s SATISFIABLE | mirror m=2 t=16: zero pattern ok, identities consistent on the real set, wrote 2360 units
+SYMMAX/mirror_32points.txt on m_t16k7  --swap: s UNSATISFIABLE | mirror m=2 t=16: zero pattern ok, identities consistent on the real set, wrote 2360 units (labelling deliberately wrong)
+SYMMAX/k6/mirror_12points.txt on m_t5k6a2 (normal form): s SATISFIABLE | mirror m=2 t=5: zero pattern ok, identities consistent on the real set, wrote 106 units
+SYMMAX/k6/mirror_12points.txt on m_t5k6a2  --swap: s UNSATISFIABLE | mirror m=2 t=5: zero pattern ok, identities consistent on the real set, wrote 106 units (labelling deliberately wrong)
