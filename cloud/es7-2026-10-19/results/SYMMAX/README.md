@@ -11,7 +11,7 @@ convex position. All point files here have been checked exactly (see Verificatio
 | 6-fold rotation | 6m (no centre) | `c6_30points.txt` (30) | a 36-point 6-fold set contains a 33-point 3-fold set | **30** |
 | 4-fold rotation | 4m (no centre) | `c4_28points.txt` (28) | no 32-point 4-fold set exists (Subercaseaux, Mackey, Qian, Heule, arXiv 2506.00224, §6.2); larger sets contain one | **28** (with their result) |
 | 2-fold rotation (central symmetry) | 2m (no centre) | `results/SYM2/sym7_32points.txt` (32) | a 34-point set would refute ES(7) = 33; not excluded | at least 32, and exactly 32 if ES(7) = 33 |
-| 5-fold rotation | 5m, 5m+1 (centre allowed) | `c5_31points.txt` (31, with centre) | 32 to 34 are not possible sizes; 35 or 36 points would refute ES(7) = 33 | at least 31, and exactly 31 if ES(7) = 33 |
+| 5-fold rotation | 5m, 5m+1 (centre allowed) | `c5_31points.txt` (31, with centre) | 32 to 34 are not possible sizes; 35 or more points: excluded (`results/SYM5`) | **31** |
 | mirror | 2m + b, b <= 2 points on the axis | `mirror_32points.txt` (32, no point on the axis) | 33 points with one point on the axis: excluded (`results/FINAL`, `results/WRITEUP/MIRROR.md`); 34 points with no point on the axis would refute ES(7) = 33, not excluded | at least 32, and exactly 32 if ES(7) = 33 |
 | rotation of order 7 or more | | | every orbit is a convex polygon with at least 7 vertices | none |
 
@@ -30,10 +30,14 @@ Also here: two further 3-fold sets, `c3_30points.txt` (30, no centre) and `c3_27
 contains 7 points in convex position. So a 33-point counterexample to ES(7) = 33 has no symmetry.
 
 A symmetric set with more than 33 points and no convex 7-gon would refute ES(7) = 33 too. Such sets are excluded here in
-three cases: when they have a 3-fold rotation (they contain a 33-point 3-fold set); when they have a mirror with at
-least one point on the axis (they contain a 33-point mirror set with one axis point); and, by the result above, when
-they have a 4-fold rotation. Not excluded: centrally symmetric sets of 34 or more points, mirror-symmetric sets with no
-point on the axis (even size, 34 or more), and 5-fold sets of 35 or more points.
+four cases:
+- when they have a 3-fold rotation (they contain a 33-point 3-fold set);
+- when they have a mirror with at least one point on the axis (they contain a 33-point mirror set with one axis point);
+- when they have a 4-fold rotation (by the result above);
+- when they have a 5-fold rotation (`results/SYM5`, added 2026-10-29).
+
+Not excluded: centrally symmetric sets of 34 or more points, and mirror-symmetric sets with no point on the axis (even
+size, 34 or more).
 
 ## Coordinates
 
@@ -94,7 +98,7 @@ The largest symmetric sets with no convex hexagon (ES(6) = 17, so 16 is the most
 | 2-fold | 16 | `k6/c2_16points.txt` |
 | 4-fold | 16 | `k6/c4_16points.txt` (as in arXiv 2506.00224, §6.1) |
 | 5-fold | 16 | `k6/c5_16points.txt`, with centre (as in arXiv 2506.00224) |
-| 3-fold | **13** | `k6/c3_13points.txt` (with centre); 14 is not a possible size; 15 and 16 are impossible: `tools/symmetric/symcnf.py 15 6 3` and `16 6 3 --center-in-set` (`k6/*.cnf`) are UNSAT, with LRAT proofs accepted by lrat-check and cake_lpr |
+| 3-fold | **13** | `k6/c3_13points.txt` (with centre); 14 is not a possible size; 15 and 16 are impossible: `tools/symmetric/symcnf.py 15 6 3` and `16 6 3 --center-in-set` (`k6/*.cnf.gz`) are UNSAT, with LRAT proofs accepted by lrat-check and cake_lpr |
 | 6-fold | 1 | every 6-point orbit is a regular hexagon |
 | mirror | **12** | `k6/mirror_12points.txt` (5 mirror pairs and 2 points on the axis); the bound is the lemma below |
 
