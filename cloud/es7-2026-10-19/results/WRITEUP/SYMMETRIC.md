@@ -106,10 +106,12 @@ For central symmetry, `tools/symmetric/symcnf.py` gives these CNFs:
 - at 34 points, 838,168 variables and 14,957,688 clauses. Four CaDiCaL runs (`--seed=1`, `--seed=2`, `--unsat`, `--sat`)
   each ended after 70 to 73 minutes without an answer.
 
-For even-order rotations this model has no centre: it does not encode that all segments between antipodal points share
-their midpoint. Its 4-fold version is satisfiable at 32 points (`results/SYM5`, §4), although no real 4-fold set of that
-size exists. A real attempt at the centrally symmetric case therefore needs a model with the centre, and probably case
-splitting as in the 3-fold search.
+The 4-fold version of this abstract model is satisfiable at 32 points (`results/SYM5`, §4), although no real 4-fold set
+of that size exists. arXiv 2506.00224 (§6.2) found the same with its own model. It had to enumerate 310 million abstract
+solutions and show that their inner 12 points are not realizable. So an abstract model can be satisfiable where no real
+set exists, and only an UNSAT answer settles a case. For the centrally symmetric case at 34 points an UNSAT answer would
+still be a proof. A stronger model that also contains the centre is being tried (2026-10-29). Correction: an earlier
+version of this paragraph blamed the missing centre for the 4-fold result, which was wrong.
 
 ## 4. Other open questions
 
@@ -118,6 +120,6 @@ splitting as in the 3-fold search.
 - Is the largest mirror-symmetric 7-gon-free set of size 32 without assuming ES(7) = 33? That needs a mirror set of 34
   points with no point on the axis to be excluded.
 - A Lean formalization of the 3-fold encoding, as was done for the mirror class.
-- An abstract model for even-order rotations that includes the centre (a non-uniform oriented matroid, or another way
-  to make all antipodal segments concurrent). With such a model, the layer normal form might also make the 2-fold
-  34-point case tractable: its layers are centrally symmetric quadrilaterals or hexagons.
+- An abstract model for even-order rotations and for mirror symmetry without axis points that includes the centre of
+  the involution (in progress since 2026-10-29). The layer structure might also help in the 2-fold 34-point case: its
+  layers are centrally symmetric quadrilaterals or hexagons.

@@ -104,19 +104,24 @@ clauses on the triple variables. `with_units.sh` adds them to a CNF.
 So the normal-form units hold for real sets, and they are strong enough to reject a wrong labelling. The unit files are
 `u30L.txt`, `u30Lswap.txt`, `u30A.txt` and `u31L.txt`.
 
-## 4. Even-order rotations: the model is too weak
+## 4. Even-order rotations: the abstract model is satisfiable at 4-fold 32 points
 
 `symcnf_layers.py` also handles even m (sector clauses as in `symcnf.py`, no centre). It passes the same tests on
 `SYMMAX/c4_28points.txt` (`validate_z2.py`, `u28L.txt` SAT, `u28Lswap.txt` UNSAT).
 
 At 32 points, however, it is **satisfiable** (`c4_n32L`, 21 s, `cad_Q1.out` without the model lines), although no real
 4-fold 32-point set without a convex 7-gon exists (arXiv 2506.00224, §6.2).
-- **Why.** For even m the model has no centre, so it does not encode that all segments between antipodal points share
-  their midpoint. It is therefore weaker than the geometry, and this satisfying assignment does not come from a real
-  4-fold set.
-- **Consequence.** In this model, even-order cases (2-fold at 34 points, 4-fold at 32) cannot be settled by UNSAT. They
-  need a model that includes the centre. The four 2-fold 34-point CaDiCaL runs of 2026-10-28 (about 70 minutes each, no
-  answer; `results/WRITEUP/SYMMETRIC.md`) used this model.
+- **Why.** The model is abstract (CC systems), and this satisfying assignment is not realizable by points.
+  - arXiv 2506.00224 (§6.2) reports the same for its own 4-fold model: the 32-point formula "is easy to satisfy". The
+    authors enumerated all 310,187,713 non-isomorphic solutions (about one CPU-year) and found that none has realizable
+    inner 12 points.
+  - A model that also contains the centre, written on 2026-10-29, is satisfiable at 32 points as well.
+  - Correction: an earlier version of this section blamed the missing centre. That was wrong; the cause is
+    non-realizable abstract solutions.
+- **Consequence.** An abstract model can exclude a case only through UNSAT; a satisfying assignment shows nothing until
+  it is realized. For 4-fold sets at 32 points the abstract route fails, and the exclusion rests on the enumeration in
+  arXiv 2506.00224. For 2-fold sets at 34 points an UNSAT answer would still be a proof. The four 2-fold 34-point
+  CaDiCaL runs of 2026-10-28 (about 70 minutes each, no answer; `results/WRITEUP/SYMMETRIC.md`) used `symcnf.py`.
 
 ## Files
 

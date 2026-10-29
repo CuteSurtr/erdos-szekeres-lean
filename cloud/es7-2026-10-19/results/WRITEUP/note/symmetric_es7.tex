@@ -179,9 +179,10 @@ Both LRAT proofs are accepted by \texttt{lrat-check} and by \texttt{cake\_lpr}. 
 real $5$-fold sets of $30$ and $31$ points of Proposition~\ref{prop:C}, the latter without its centre. Their
 orientations satisfy the corresponding CNFs, and a deliberately wrong layer order does not (\texttt{results/SYM5}).
 \end{proof}
-For even $m$ the same model has no centre, since the centre is collinear with antipodal pairs. It then does not encode
-that all segments between antipodal points share their midpoint. Its $4$-fold version is satisfiable at $32$ points,
-although no such real set exists~\cite[\S6.2]{SMQH25}. So for even-order rotations this model is too weak.
+For even $m$ the same abstract model (without the centre, which is collinear with antipodal pairs) is satisfiable for
+$4$-fold symmetry at $32$ points, although no such real set exists~\cite[\S6.2]{SMQH25}. The authors of~\cite{SMQH25}
+found the same with their model, and excluded real sets only by enumerating $310$ million abstract solutions. So an
+abstract model can settle a case only through unsatisfiability.
 
 \section{The largest symmetric sets without a convex heptagon}
 \begin{proposition}\label{prop:C}
@@ -252,9 +253,9 @@ So mirror symmetry admits no extremal sets for $k=6$ or $k=8$, whereas for $k=7$
 \section{Open questions}
 \begin{enumerate}
 \item Is there a centrally symmetric set of $34$ points in general position without a convex heptagon? Such a set would
-  refute $ES(7)=33$. A SAT search with $17$ antipodal pairs needs a model that includes the centre (see the end of
-  Section~\ref{sec:five}). With it, the layer structure (centrally symmetric quadrilaterals and hexagons) may help as in the $5$-fold
-  case. The mirror case without axis points is open as well.
+  refute $ES(7)=33$. An abstract model can exclude it only through unsatisfiability (see the end of
+  Section~\ref{sec:five}); including the centre as an element strengthens the model. The mirror case without axis
+  points is open as well.
 \item Centrally symmetric sets of $2^{k-2}$ points without a convex $k$-gon for even $k\ge 8$ (by Proposition~\ref{prop:mirror}, mirror symmetry cannot give them for $k=8$).
 \item A formal verification of the $3$-fold encoding, as was done for the mirror case.
 \end{enumerate}
