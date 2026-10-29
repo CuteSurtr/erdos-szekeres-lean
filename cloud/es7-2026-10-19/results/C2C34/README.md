@@ -10,20 +10,17 @@ pairs.
 - This is the only symmetric route to a counterexample to ES(7) = 33 that `results/WRITEUP/SYMMETRIC.md` leaves open.
 
 **Status: open.** Certified so far:
-1. The hull case split below covers the problem. The LRAT proof of coverage is accepted by lrat-check and cake_lpr.
-2. Hexagonal hulls are excluded case by case (see §3 and `logs/hex_cases.tsv`):
-   - every one of the 24 canonical hexagonal-hull cases is UNSAT, each with a retained LRAT proof accepted by
-     lrat-check;
-   - most of the 120 hexagonal-hull cases are done the same way, and cake_lpr has accepted the proofs listed in
-     `logs/hex_cases.tsv`.
+1. **Coverage.** The hull case split below covers the problem. Its LRAT proof is accepted by lrat-check and cake_lpr.
+2. **Hexagonal hulls.** All 120 hexagonal-hull cases are UNSAT. Each has a retained LRAT proof accepted by lrat-check
+   and archived with a verified round trip (`logs/hex_cases.tsv`). cake_lpr has accepted the proofs marked there, and
+   was still checking the rest at the end of the session.
 
-**Consequence.** If all 120 hexagonal cases are UNSAT, the certified coverage alone gives the statement below. With
-only the 24 canonical cases, the relabelling argument of §2 is also needed.
+Together these give the following theorem. It needs no relabelling argument.
 
-> Every centrally symmetric set of 34 points in general position without a convex 7-gon has a parallelogram as its
-> convex hull.
+> **Theorem (computer-assisted).** Every centrally symmetric set of 34 points in general position without a convex
+> 7-gon has a parallelogram as its convex hull.
 
-The parallelogram cases are not solved.
+The parallelogram cases are not solved, so the question stays open.
 
 ## 1. Encoding
 
@@ -60,7 +57,7 @@ lrat-check and cake_lpr (`results/WRITEUP/CERTIFICATES.md`, central34-cover).
 - So every real configuration falls into a case whose sequence is least under rotation and reversal: 8 quadrilaterals
   and 24 hexagons (`canonical.txt`).
 
-This argument is needed only while not all 120 hexagonal cases are refuted.
+Since all 120 hexagonal cases are now refuted directly (§3), the result does not depend on this argument; it is kept for the parallelogram cases.
 
 ## 3. Hexagonal hulls (with retained proofs)
 
@@ -73,10 +70,8 @@ This argument is needed only while not all 120 hexagonal cases are refuted.
 **Per-case records** (`logs/hex_cases.tsv`): CNF SHA-256, proof size and SHA-256, archive SHA-256, round trip,
 lrat-check and cake_lpr verdicts.
 
-**Results.**
-- The 24 canonical cases took 308 to 1,351 s each.
-- No hexagonal case has been found satisfiable.
-- The final counts are in `logs/summary.txt`.
+**Results.** All 120 cases are UNSAT, solved in 291 to 1,562 s each (median 687 s). The proofs total 524 GB before
+compression. The final counts are in `logs/summary.txt`.
 
 ## 4. Quadrilateral hulls (open)
 
