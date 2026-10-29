@@ -146,6 +146,33 @@ Also archived, not checked: L2.lrat (sha256 dfbb6b60dcebd6bc402d76cf14bffb368d06
 
 **Logs.** `c3hex/chk_c3hex.log`
 
+## central34-cover
+
+**Case.** Centrally symmetric sets of 34 points: the 136 convex-hull cases of `results/SYMZ/hullcubes.py` cover the
+formula `zcnf.py rot 17 7 --m 2 --hull` (the hull of such a set without a convex 7-gon is a centrally symmetric
+quadrilateral or hexagon through the first point). This certifies only that the case split is exhaustive. The cases
+themselves are not all solved, and the central 34-point case remains open.
+
+**Hypotheses and soundness.** The encoding `results/SYMZ/zcnf.py` (kind `rot`, m = 2, with the centre as an element and
+the hull-vertex normal form); see `results/SYMZ/README.md`.
+
+**Generator.** `python3 zcnf.py rot 17 7 --m 2 --hull -o c34h.cnf --map c34h.json`, then
+`python3 hullcubes.py c34h.cnf c34h.json hc34`, which writes `hc34/cubes.txt` and `hc34/cover.cnf` (the formula plus the
+negation of every cube).
+
+| file | bytes | SHA-256 | archive | archive bytes | archive SHA-256 | round trip |
+|---|---:|---|---|---:|---|---|
+| CNF (cover.cnf) | 621,058,015 | `bb60facb223788fb57291c73abfacd6deaa1eccd82ad2be9f50d36292959a60f` | `central34/cover.cnf.zst` | 76,790,623 | `7920297253a16ea5bda7fe5cfe045f24ade116622918ff0c96856ebf84ff3e89` | verified |
+| LRAT proof | 3,833,946,210 | `3255391a5fd28472f48b286660eab67234d0094736df0d4f8c2d48b5eeb20aef` | `central34/hc34_coverL.lrat.zst` | 599,321,920 | `c38e458064a592b1c0b4bb65338b7af60c4848c875e09a6addcc19524eefd461` | verified |
+
+**Solver.** `cadical -t 3000 --lrat --binary=false cover.cnf hc34_coverL.lrat: s UNSATISFIABLE, 186.54 s`
+
+**Checkers.**
+- `lrat-check cover.cnf hc34_coverL.lrat: c VERIFIED, exit 0, 50 s`
+- `cake_lpr --CML_HEAP_SIZE=20000 --CML_STACK_SIZE=4000 cover.cnf hc34_coverL.lrat: s VERIFIED UNSAT, exit 0, 448 s`
+
+**Logs.** `central34/cad_hc34_coverL.out`, `central34/chk_hc34_cover_lrat-check.out`, `central34/chk_hc34_cover_cake_lpr.out`, `central34/cubes.txt`, `central34/canonical.txt`
+
 ## Reproduction
 
 1. Decompress: `zstd -d <name>.zst` and compare `shasum -a 256` with the table.

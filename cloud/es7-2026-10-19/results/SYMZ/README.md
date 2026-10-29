@@ -86,8 +86,9 @@ v_c = (v_p + v_{−p})/2, so χ(c, p, q) = χ(−p, p, q). It is used for the op
 - **Independent review.**
   - Two source audits on 2026-10-29 confirmed the soundness proof for the axis-free mirror branch (`zcnf_v1.py`).
   - An exact clause check on 240 small mirror configurations, with zero, one or two axis points, found no mismatch.
-  - An adversarial review covers the axis-point extension in `zcnf.py`, which the 33-point proof uses. Its outcome
-    is recorded in `REVIEW.md` when available.
+  - An adversarial review of the axis-point extension in `zcnf.py`, which the 33-point proof uses, found it sound.
+    It used an independent exact checker (`review/indep.py`), clause evaluation of the real 33-point CNF on 13 real
+    configurations (`review/evalcnf.c`), and five mutation tests (`REVIEW.md`).
 
 ## 3. Runs and certificates
 
