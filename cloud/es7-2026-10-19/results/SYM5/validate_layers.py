@@ -6,7 +6,7 @@ usage: validate_layers.py POINTS.txt MAP.json OUT_UNITS [--angle] [--swap]   (--
 import json, sys
 from itertools import combinations
 sys.argv, args = sys.argv[:1] + [a for a in sys.argv[1:] if not a.startswith("--")], [a for a in sys.argv[1:] if a.startswith("--")]
-src = open(sys.argv[0].replace("validate_layers.py", "../symmax/verify5.py")).read().split("path, k = sys.argv")[0]
+src = open(sys.argv[0].replace("validate_layers.py", "../SYMMAX/verify5.py")).read().split("path, k = sys.argv")[0]
 exec(src)                                   # sgn, norm, mul, conj, orient, rot, key_cmp, max_convex
 pts_path, map_path, out_path = sys.argv[1:4]
 P = [norm(list(map(int, l.split()))) for l in open(pts_path) if l.strip() and not l.startswith(("FOUND", "#"))]
