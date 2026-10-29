@@ -187,8 +187,8 @@ compressed proofs.
   - The encoding has the centre as an element, and the first point is a hull vertex. The convex hull of a counterexample
     is a centrally symmetric quadrilateral or hexagon, which gives 136 cases (32 up to rotation and reflection). Their
     coverage of the formula is certified by an LRAT proof accepted by both checkers.
-  - All 120 hexagonal-hull cases are UNSAT, each with a retained LRAT proof accepted by lrat-check. cake_lpr checking
-    was in progress at the end of the session; see `results/C2C34/logs/hex_cases.tsv`.
+  - All 120 hexagonal-hull cases are UNSAT, each with a retained LRAT proof accepted by both lrat-check and cake_lpr
+    (`results/C2C34/logs/hex_cases.tsv`).
   - So a centrally symmetric 34-point counterexample would have a parallelogram hull (a computer-assisted theorem,
     `results/C2C34`).
   - The 8 canonical parallelogram cases are open. A split at the second convex layer gives 560 subcases each; nested

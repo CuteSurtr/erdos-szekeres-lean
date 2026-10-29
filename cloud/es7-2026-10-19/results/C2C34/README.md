@@ -11,9 +11,8 @@ pairs.
 
 **Status: open.** Certified so far:
 1. **Coverage.** The hull case split below covers the problem. Its LRAT proof is accepted by lrat-check and cake_lpr.
-2. **Hexagonal hulls.** All 120 hexagonal-hull cases are UNSAT. Each has a retained LRAT proof accepted by lrat-check
-   and archived with a verified round trip (`logs/hex_cases.tsv`). cake_lpr has accepted the proofs marked there, and
-   was still checking the rest at the end of the session.
+2. **Hexagonal hulls.** All 120 hexagonal-hull cases are UNSAT. Each has a retained LRAT proof, archived with a verified
+   round trip and accepted by both lrat-check and cake_lpr (`logs/hex_cases.tsv`).
 
 Together these give the following theorem. It needs no relabelling argument.
 
@@ -71,7 +70,8 @@ Since all 120 hexagonal cases are now refuted directly (§3), the result does no
 lrat-check and cake_lpr verdicts.
 
 **Results.** All 120 cases are UNSAT, solved in 291 to 1,562 s each (median 687 s). The proofs total 524 GB before
-compression. The final counts are in `logs/summary.txt`.
+compression. lrat-check and cake_lpr accepted all 120; cake_lpr took 171 to 1,001 s per proof (median 376 s). The
+counts are in `logs/summary.txt`.
 
 ## 4. Quadrilateral hulls (open)
 

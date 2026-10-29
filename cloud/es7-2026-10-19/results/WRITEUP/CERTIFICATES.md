@@ -189,11 +189,11 @@ archive SHA-256 and round trip, and the lrat-check and cake_lpr verdicts. Archiv
 **Checkers.** `lrat-check <case>.cnf <case>.lrat` at solve time, and `cake_lpr --CML_HEAP_SIZE=16000 --CML_STACK_SIZE=4000`
 on the decompressed archive copy.
 
-**Counts at the end of the session.**
+**Counts.**
 
 ```
-hexagonal-hull cases with proofs: 120 run, 120 UNSAT, lrat-check VERIFIED 120, archive round trip 120, cake_lpr VERIFIED 31
-canonical hexagonal cases UNSAT: 24/24; cake_lpr on canonical: 23/24
+hexagonal-hull cases with proofs: 120 run, 120 UNSAT, lrat-check VERIFIED 120, archive round trip 120, cake_lpr VERIFIED 120
+canonical hexagonal cases UNSAT: 24/24; cake_lpr on canonical: 24/24
 all hexagonal cases UNSAT: 120/120; missing: []
 solve time: min 291 s, median 687 s, max 1562 s; proofs total 524.3 GB
 ```
