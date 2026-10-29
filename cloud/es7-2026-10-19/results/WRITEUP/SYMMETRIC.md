@@ -1,125 +1,207 @@
 # Symmetric point sets and the Erdős–Szekeres problem for heptagons
 
-Written 2026-10-28, updated 2026-10-29 (Theorem E). Paths are relative to `cloud/es7-2026-10-19/` on branch `es7-cloud`. ES(7) is the least n such that
-every n points in general position contain 7 in convex position. The conjecture says ES(7) = 33, and 32-point sets
-without a convex 7-gon are classical.
+Revised 2026-10-29 after an independent correctness and novelty audit. Paths are relative to `cloud/es7-2026-10-19/`
+on branch `es7-cloud`.
 
-## 1. Results
+**Setting.** ES(7) is the least n such that every n points in general position (no three on a line) contain 7 points in
+convex position. The Erdős–Szekeres conjecture says ES(7) = 33, and 32-point sets without a convex 7-gon are classical.
+A "k-gon" below means k points in convex position.
 
-**Theorem A (computer-assisted; trust base in §2).** Every set of 33 points in general position in the plane with a
-nontrivial symmetry contains 7 points in convex position. So a 33-point counterexample to ES(7) = 33 has no symmetry.
+**Scope.** None of the results here settles ES(7) or improves its unrestricted upper bound. They exclude symmetric
+counterexamples. "No matching prior result found" means only that none was found in the sources listed in §5; it is
+not a claim of priority.
 
-The symmetry group of a finite set fixes its centroid, so it is a cyclic group of rotations or a dihedral group. Which
-symmetric 33-point sets are possible in general position:
-- **Reflection.** The mirror class (`results/WRITEUP/MIRROR.md`, Lean statement `Mir.MirrorExclusionLine`).
-- **Rotation of order s >= 7.** Every orbit is a regular s-gon, already a convex 7-gon.
-- **Rotation of even order.** It contains the half-turn. Since 33 is odd, a centre point is needed, and it is collinear
-  with every pair p, -p.
-- **Order 5.** 33 is neither 0 nor 1 mod 5.
-- **Order 3.** 33 = 3·11 with no centre: the 3-fold class, closed on 2026-10-28.
-  - The final double composition (`results/C3FINAL`): two independent composers re-derive the CNF hash of all 116,883
-    certified records and find all 910 depth-2 roots of the reduced cut covered, with 0 differences.
-  - The record of the last pieces is `results/C3W7/LOCAL2` (698 nine-bit pieces, all certified).
-  - A from-scratch spot-check (`results/C3SPOT`) re-solved 2,120 randomly drawn pieces with fresh proofs. All 2,120
-    pass both checkers and match the stored CNF hashes.
+## 1. Main results
 
-**Theorem B.** For every odd k there is a centrally symmetric set of 2^(k-2) points in general position with no k
-points in convex position (`results/SYM2`: construction on the curve y = x³, proof, and verified sets for k = 7 and k = 9).
-For k = 7 this is a 2-fold symmetric 32-point set without a convex 7-gon. Subercaseaux, Mackey, Qian and Heule
-(arXiv 2506.00224, 2025) list finding one as future work. They also show that no 4-fold one exists, so 2 is the
-largest rotational symmetry a 32-point 7-gon-free set can have.
+**Theorem 1 (threefold symmetry; computer-assisted).** Every set of 33 points in general position that is invariant
+under a rotation of order 3 contains a convex 7-gon. The largest threefold-symmetric set without a convex 7-gon has
+exactly 31 points.
 
-**Theorem C (largest symmetric 7-gon-free sets; `results/SYMMAX`).** Every example below has small integer coordinates
-(in Eisenstein or cyclotomic coordinates for 3-, 5- and 6-fold symmetry). Each was checked exactly by a dynamic program
-and by brute force over every 7-point subset.
+- **Reduction.** A threefold set has 3m or 3m + 1 points (only the centre is fixed). One with at least 33 points
+  contains 11 whole non-central orbits, a 33-point threefold set without its centre. A set of 32 points is not possible.
+- **Lower example.** `results/SYMMAX/c3_31points.txt` has 31 points, centre included. Its coordinates are exact, and it
+  has been independently checked.
+- **Proof of the 33-point case.** The case is encoded with a projective normal form (`results/C3-S/soundness.md`, a
+  written proof) and a compact encoding (`results/C3a`, `results/C3b`). It is split into 116,883 certified pieces. Two
+  independently written composers check that the pieces cover the case: `results/C3FINAL` re-derives every piece's CNF
+  hash from the base formula and covers all 910 retained depth-2 roots.
+- **Trust base.** See §3. Most important: the LRAT proofs of the pieces were not retained.
 
-| symmetry | largest size | |
+**Theorem 2 (mirror symmetry; computer-assisted).** Every set of at least 33 points in general position that is
+symmetric under a reflection contains a convex 7-gon. The largest mirror-symmetric set without a convex 7-gon has
+exactly 32 points (`results/SYMMAX/mirror_32points.txt`: 16 mirror pairs, no point on the axis).
+
+The proof assembles two exclusions. By general position at most two points lie on the axis. Let b be their number.
+- **b = 0.** The size is even, hence at least 34. Keep 17 mirror pairs. This gives the 34-point axis-free case,
+  excluded by **Theorem 2b**.
+- **b = 1 or 2.** Keep 16 mirror pairs and one axis point. This gives a 33-point set with exactly one point on the axis,
+  excluded by **Theorem 2a**.
+
+**Theorem 2a (33 points, one point on the axis).** It has two independent proofs.
+- **Proof chain of 2026-10-21** (`results/WRITEUP/MIRROR.md`):
+  - The encoding, its normal form, the case split and the leaf cover are verified in Lean 4.
+  - The Lean statement rests on about 75,000 explicit CNF facts, each with a recorded cake_lpr verdict.
+  - The leaf proofs of sub-case (ii) were re-derived from scratch by acceptance passes.
+  - Those proof files were not retained.
+- **New proof of 2026-10-29** (`results/SYMZ`): a different encoding that adds the reflection's point at infinity as an
+  element.
+  - A single CNF is UNSAT.
+  - Its LRAT proof is retained, and both lrat-check and cake_lpr accept it.
+  - Its soundness is a written proof, not a Lean proof (§3).
+
+**Theorem 2b (34 points, no point on the axis; new, `results/SYMZ`).**
+- A single CNF of the same encoding is UNSAT, solved in 443 s.
+- Its LRAT proof is retained, and both checkers accept it.
+- An independent audit replayed lrat-check on the same proof and formula hashes.
+- The encoding's soundness proof was checked in two independent source audits.
+
+**Corollary 3.** Assume Theorems 1 and 2, the fivefold exclusion of §2 and the published fourfold exclusion
+(arXiv:2506.00224, §6.2). Then every set of at least 33 points in general position without a convex 7-gon has one of
+two forms:
+- it has no nontrivial symmetry; or
+- its symmetry group is exactly the half-turn group C2, and it then has an even number of points, at least 34.
+
+Proof:
+- A finite symmetry group fixes the centroid, so it is cyclic or dihedral. Reflections are excluded by Theorem 2.
+- A rotation of order s >= 7 has orbits that are regular s-gons, so it gives a convex 7-gon.
+- Orders 3, 4 and 5 are excluded by deleting whole orbits. Order 6 contains order 3.
+- What remains is the half-turn. Its centre is collinear with every antipodal pair, so it is not a point of the set, and
+  the size is even.
+
+The same holds for affine symmetries, after a change of inner product that makes the finite group orthogonal.
+
+## 2. Companion results and their antecedents
+
+| symmetry | largest size without a convex 7-gon | lower example | upper bound and credit |
+|---|---|---|---|
+| 3-fold rotation | **31** | `SYMMAX/c3_31points.txt` | Theorem 1 |
+| mirror | **32** | `SYMMAX/mirror_32points.txt` | Theorem 2 |
+| 6-fold rotation | **30** | `SYMMAX/c6_30points.txt` | consequence of Theorem 1: a sixfold set of 36 points contains a threefold 33-point set |
+| 4-fold rotation | **28** | `SYMMAX/c4_28points.txt` | Subercaseaux, Mackey, Qian and Heule (arXiv:2506.00224, §6.2) exclude 32 points and report realizable 28-point restrictions; our example is an explicit realization |
+| 5-fold rotation | **31** | `SYMMAX/c5_31points.txt` (centre included) | 32 to 34 are impossible sizes. For 35 or more, see "Fivefold" below |
+| 2-fold rotation | at least 32; exactly 32 if ES(7) = 33 | `SYM2/sym7_32points.txt` | open (§4) |
+
+**Fivefold (`results/SYM5`).**
+- **Our certificates.** Every fivefold set of at least 35 points contains a convex 7-gon. This is shown by two
+  encodings, and each LRAT proof is retained and accepted by both checkers.
+- **Layer lemma.** A rotation of order m >= 4 with no K-gon for some K <= 2m makes every convex layer a single orbit. So
+  such a 35-point set would be seven nested regular pentagons.
+- **Prior claim.** This upper bound overlaps an earlier reported computation. Bogdan (arXiv:2512.24061, §7, Table 1)
+  reports an UNSAT run at 33 points with six convex pentagonal layers and three unconstrained interior points (the
+  baseline `5^6` row). We checked his public generator (`es_sat_gen.py`): with zero offsets it imposes only
+  within-layer convexity and nesting.
+- **How the claim implies the bound.** Deleting two points of the innermost pentagon of a 35-point fivefold set gives
+  exactly that configuration. So the claim implies the fivefold upper bound.
+- **Status of the claim.** The repository publishes the generator but no proof files or logs. It is therefore an earlier
+  reported computational claim, not an independently verified theorem.
+- **What may be new.** The exact 31-point fivefold example, and the retained, double-checked certificates.
+
+**Central symmetry.**
+- **The construction.** For every odd k there is a centrally symmetric set of 2^(k-2) points in general position with
+  no convex k-gon (`results/SYM2`; for k = 7, 32 points).
+- **Attribution.** This follows from the Valtr construction described by Baek and Balko (SoCG 2025, Definition 13,
+  Lemma 14 and §6.1), which blows up an arbitrary base of k - 1 points in general position.
+  - Take a centrally symmetric base and pair each cluster with its negative. The cup and cap parameters x_i = i - 1 and
+    y_i = k - i - 1 are exchanged by the half-turn, as required.
+  - After a quarter-turn, the cubic construction of `results/SYM2` is a special case.
+- **What is ours.** The explicit symmetric specialization, a short direct proof via the cubic and exact integer
+  coordinates. They answer the concrete realization task named in the CMU preprint (a centrally symmetric 32-point
+  set). They are not a new general construction method. The 32-point set is not known to be the central maximum; that
+  is the open case of §4.
+
+**Hexagons (k = 6; `results/SYMMAX`, section "Hexagons").**
+
+| symmetry | largest size | source |
 |---|---|---|
-| 3-fold rotation | **31** | example with 31 points (centre included); 32 is not a possible size; 33 or more is excluded by Theorem A |
-| 6-fold rotation | **30** | example with 30 points; 36 would contain a 33-point 3-fold set |
-| 4-fold rotation | **28** | example with 28 points; 32 is excluded by arXiv 2506.00224, §6.2 |
-| 5-fold rotation | **31** | example with 31 points (centre included); 32 to 34 are not possible sizes; 35 or more is excluded by Theorem E |
-| 2-fold rotation | at least 32; exactly 32 if ES(7) = 33 | Theorem B |
-| mirror | at least 32; exactly 32 if ES(7) = 33 | example with 32 points (16 mirror pairs) |
+| 4-fold and 5-fold | 16 | the examples are in arXiv:2506.00224 |
+| 2-fold | 16 | follows from the fourfold example |
+| 3-fold | 13 | 15 and 16 are UNSAT with retained LRAT proofs; 16 agrees with arXiv:2506.00224 |
+| mirror | 12 | an elementary chain lemma, see below |
 
-So every symmetry type except the 4-fold reaches the largest size it can have below 33. The search behind these examples
-also reproduces the 16-point hexagon results of arXiv 2506.00224 (§6.1). It stays at three convex 7-gons or more on
-3-fold 33-point sets, as Theorem A requires.
+The chain lemma: an outward chain together with its mirror image is in convex position. It also bounds mirror-symmetric
+octagon-free sets by 58 points, so no mirror-symmetric set is extremal for k = 6 or k = 8. These are companion
+observations.
 
+## 3. Trust base
 
-**Theorem D (hexagons and mirror symmetry; `results/SYMMAX`, section "Hexagons").** For k = 6, the largest symmetric
-sets with no convex hexagon have these sizes:
-- 2-fold, 4-fold and 5-fold symmetry: 16, the largest possible since ES(6) = 17;
-- 3-fold symmetry: **13**. The 15- and 16-point cases are UNSAT with certified LRAT proofs, and 14 is not a possible size;
-- mirror symmetry: **12**.
+**Geometric soundness (written proofs, audited, not Lean).**
+- The threefold normal form (`results/C3-S/soundness.md`) and the C3a/C3b encodings. They were tested on thousands of
+  random sets, mutation-tested and audited (`results/C3AUDIT` to `C3AUDIT4`). An independent audit on 2026-10-29
+  re-read the normal form and the encoding source.
+- The encodings `tools/symmetric/symcnf.py` and `results/SYM5/symcnf_layers.py` (fivefold), and the layer lemma.
+- The centre-element encoding `results/SYMZ/zcnf.py` (mirror). Its soundness proof is in `results/SYMZ/README.md`.
+  - Two independent audits checked it for the axis-free case.
+  - An adversarial review checked the axis-point extension.
+  - Two-way random tests (3,300 random symmetric sets, 0 mismatches) and real-set tests cover the implementation.
 
-The mirror bound comes from a short lemma. If points on one side of the axis form a chain bulging away from the axis,
-then those points and their mirror images are in convex position. It also shows that no mirror-symmetric set of 64
-points avoids a convex octagon, since such a set has at most 58 points. Mirror symmetry therefore cannot give extremal
-sets for k = 6 or k = 8, although it does for k = 7 (the 32-point example above).
+**Lean-verified reductions.** The mirror proof chain of 2026-10-21: encoding soundness, normal forms, the reduction from
+an arbitrary line, the case split and the leaf cover (`results/WRITEUP/MIRROR.md` §6). Its CNF facts enter as
+hypotheses.
 
-**Theorem E (5-fold sets; computer-assisted, `results/SYM5`).** Every set of at least 35 points in general position
-with a rotation of order 5 contains 7 points in convex position. So the 5-fold maximum in Theorem C is 31 without any
-assumption, and 5-fold sets cannot refute ES(7) = 33.
-- **Reduction.** Such a set contains a 5-fold set of 35 points with no centre point.
-- **Encodings.** That case is UNSAT in two encodings. Each LRAT proof was accepted by both lrat-check and cake_lpr.
-  - `tools/symmetric/symcnf.py` with its angle normal form: 415 s.
-  - A layer normal form: 54 s. It uses a short lemma: with an m-fold rotation, m >= 4, and no K points in convex position
-    for some K <= 2m, every convex layer is a single orbit. A 35-point 5-fold set with no convex 7-gon would thus be 7
-    nested regular pentagons.
-- **Validation.** The normal forms were tested on the real 30- and 31-point 5-fold sets of `results/SYMMAX`.
+**External certificate checks.** LRAT proofs are checked by lrat-check (2e3b2dc with the E2 patch) and by cake_lpr
+(a36874a8; verified in CakeML, built locally for arm8). CaDiCaL c6073042 (3.0.1) produced the proofs. The checkers
+themselves are part of the trust base.
 
-## 2. Trust base of Theorem A for the 3-fold class
+**Recorded historical verdicts (not replayable now).**
+- Threefold: each of the 116,883 certified pieces recorded acceptance by both checkers at solve time, then the proof
+  was deleted. 26,436 of these records carry the proof's SHA-256, which identifies a proof but cannot recreate it.
+- Mirror proof chain of 2026-10-21: each leaf fact carries a recorded cake_lpr verdict; the proof files are not
+  retained.
 
-- **Encodings.** The C3-S normal form (`results/C3-S/soundness.md`, a written proof) and the C3a/C3b encodings. These
-  were tested (identities on thousands of random sets, mutation tests, controls) and audited (`results/C3AUDIT` to
-  `results/C3AUDIT4`). Unlike the mirror class, they are not formally verified in Lean.
-- **The H6 mirror reduction.** Lemma H6M (`results/C3AUDIT2`) reduces the depth-2 cut to 910 roots.
-- **Proofs.** Every certified record had its LRAT proof accepted at solve time by both lrat-check and cake_lpr, a checker
-  formally verified in CakeML. The proofs themselves are not stored; the records carry the verdicts and, in newer
-  records, the proof hash.
-- **Composition.** C3U2 `compose.py` and C3AUDIT3 `mycompose.py` were written independently and agree.
+**Checks actually replayed.**
+- Threefold composition: both composers were rerun from a fresh snapshot (`results/C3FINAL`) and rerun again by the
+  independent audit. They matched all 116,883 CNF hashes and covered all 910 roots. This checks assembly and formula
+  identity, not the deleted proofs.
+- Threefold spot-check (`results/C3SPOT`): 2,120 pieces drawn at random were re-solved from scratch with fresh proofs,
+  and all were accepted by both checkers with matching CNF hashes.
+  - The draw was stratified: 6 per source directory plus 3,000 uniform, 3,084 in all. 716 of the sampled nodes and 485
+    of the solved ones are σ-cube-refined nodes.
+  - This is additional evidence, not an exhaustive verification.
+- Mirror 34 points: the retained proof was accepted by both checkers twice (on the original formula and on a
+  regenerated one with identical clauses). The audit replayed lrat-check separately.
+- Mirror 33 points (new encoding): the retained proof was accepted by both checkers.
+- Fivefold: proofs P1 and L1 were accepted by both checkers. The audit replayed L1 with lrat-check and regenerated the
+  CNF hash.
 
-Theorem E rests on the following:
-- `symcnf.py`, the CC-system relaxation with the centre as an auxiliary point. It agrees with the independent C3a
-  encoding in 15 cases (`results/C3a`).
-- The layer lemma, needed only for the second encoding.
-- Two LRAT proofs, each accepted by both checkers.
+**Retained proofs.** All retained proofs are archived outside Git, compressed with zstd. Each archive's decompressed
+SHA-256 equals the original; see `results/WRITEUP/CERTIFICATES.md` for paths, hashes and commands.
 
-## 3. What Theorem A does not cover
+**Regenerating the threefold proofs.** The proofs can be regenerated piece by piece:
+1. Rebuild the pinned tools (`results/C3W4/TASK.md`, step 1).
+2. For every certified record in `results/C3FINAL/compose_files.txt`, rerun `close_tree.py` on its node with the
+   recorded options.
+3. Check each new proof with both checkers, keep the compressed proofs, and compose again.
 
-A symmetric set with more than 33 points and no convex 7-gon would also refute ES(7) = 33. Excluded here:
-- sets with a 3-fold rotation (they contain a 33-point 3-fold set);
-- mirror sets with at least one point on the axis (they contain a 33-point mirror set with one axis point);
-- sets with a 4-fold rotation (by the result of arXiv 2506.00224);
-- sets with a 5-fold rotation (Theorem E).
+The spot-check needed 22.9 core-hours for 2,120 pieces. A full regeneration needs compute comparable to the original
+campaign; its last 698 pieces alone took 164 core-hours (`results/C3W7/LOCAL2`). It also needs storage for the
+compressed proofs.
 
-**Not excluded:**
-- centrally symmetric sets of 34 or more points;
-- mirror sets with no point on the axis (even size, 34 or more).
+## 4. What remains open
 
-These are the remaining symmetric routes to a counterexample. On 2026-10-28, local annealing runs at 34 points (central
-and mirror symmetry) stayed far from zero convex 7-gons, as expected if ES(7) = 33.
+- **ES(7).** Still open; no unrestricted bound is improved.
+- **The last symmetric route.** Accepting the exclusions above, only **centrally symmetric sets of even size at least
+  34** remain as symmetric counterexamples. Excluding 34 points excludes all of them, since pairs can be deleted.
+- **Status of the central 34-point search (2026-10-29).**
+  - The search uses the centre-element encoding with the centre fixed as the common point of all antipodal lines, plus
+    a hull-vertex normal form.
+  - Its convex layers are centrally symmetric quadrilaterals or hexagons. The hull alone gives 136 cases.
+  - No verdict yet; see `results/SYMZ/README.md` for runs and limits.
+- **Limits of the central search.**
+  - An abstract centre does not impose metric midpoints, and it does not imply realizability. The fourfold 32-point
+    formula of the same kind is satisfiable, although no real fourfold set of that size exists; arXiv:2506.00224
+    observed the same with its own model.
+  - A satisfying assignment is not a counterexample until it is realized with exact coordinates. An UNSAT answer is a
+    proof only together with the encoding's soundness and the coverage of any case split.
+- **Literature.** See §5.
 
-For central symmetry, `tools/symmetric/symcnf.py` gives these CNFs:
-- at 32 points, 574,584 variables and 10,544,712 clauses, SAT in 54 s;
-- at 34 points, 838,168 variables and 14,957,688 clauses. Four CaDiCaL runs (`--seed=1`, `--seed=2`, `--unsat`, `--sat`)
-  each ended after 70 to 73 minutes without an answer.
+## 5. Literature consulted
 
-The 4-fold version of this abstract model is satisfiable at 32 points (`results/SYM5`, §4), although no real 4-fold set
-of that size exists. arXiv 2506.00224 (§6.2) found the same with its own model. It had to enumerate 310 million abstract
-solutions and show that their inner 12 points are not realizable. So an abstract model can be satisfiable where no real
-set exists, and only an UNSAT answer settles a case. For the centrally symmetric case at 34 points an UNSAT answer would
-still be a proof. A stronger model that also contains the centre is being tried (2026-10-29). Correction: an earlier
-version of this paragraph blamed the missing centre for the 4-fold result, which was wrong.
-
-## 4. Other open questions
-
-- Centrally symmetric extremal sets for even k >= 8. They are impossible for k = 4, and they exist for k = 6. The
-  construction of Theorem B fails for even k. Mirror-symmetric extremal sets are impossible for k = 6 and 8 (Theorem D).
-- Is the largest mirror-symmetric 7-gon-free set of size 32 without assuming ES(7) = 33? That needs a mirror set of 34
-  points with no point on the axis to be excluded.
-- A Lean formalization of the 3-fold encoding, as was done for the mirror class.
-- An abstract model for even-order rotations and for mirror symmetry without axis points that includes the centre of
-  the involution (in progress since 2026-10-29). The layer structure might also help in the 2-fold 34-point case: its
-  layers are centrally symmetric quadrilaterals or hexagons.
+- **Main sources compared:**
+  - Subercaseaux–Mackey–Qian–Heule, arXiv:2506.00224 (preprint, read in full) and its public code.
+  - Baek–Balko, SoCG 2025.
+  - Bogdan, arXiv:2512.24061, and the generator `bogdan27182/esc-paper`.
+  - Koshelev–Koshka, arXiv:2604.20120 (empty hexagons under axial symmetry, a different problem).
+  - Krapivin–Przybocki–Heule, arXiv:2607.02958.
+  - The Mackey thesis (CMU-CS-25-108).
+- **Not read:** the published CICM 2025 chapter of the CMU work (Springer, pages 29–47) was not accessible. Its final
+  text has not been compared, so priority statements stay provisional.

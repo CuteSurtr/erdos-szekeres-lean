@@ -5,9 +5,10 @@ behind `results/C3FINAL` was solved again from scratch, and the new results were
 
 ## Sample (`units6.tsv`)
 
-- **Population.** Every certified plain (non-cube) record with a node name in the 280 record files of the final
+- **Population.** Every certified record that is not a σ-cube record and has a node name, in the 280 record files of the final
   composition (`results/C3FINAL/compose_files.txt`, tree at f788780c). That is 116,345 distinct nodes in 14 source
-  directories.
+  directories. These include σ-cube-refined nodes (names containing `__`): 716 of the 3,084 sampled nodes and 485 of the
+  2,120 re-solved ones are of this kind.
 - **Draw.** Python `random.Random(20261028)`:
   - 6 nodes from every source directory;
   - 3,000 more drawn uniformly from the rest;
@@ -59,9 +60,10 @@ A row passes when all four of these hold:
 **2,120 re-solved, 2,120 pass, 0 other, 0 timeouts.**
 - Time: solving took 22.9 core-hours and checking 7.1. The longest solve took 1,210 s.
 - What it shows: the stored verdicts of the sampled pieces are reproducible from the base CNF alone.
-- What it suggests: with 0 failures in 2,120 random draws, the share of bad records among the 116,345 is below 0.15% at
-  95% confidence (rule of three). This bound is statistical and covers only the sampling. It adds to the per-record
-  checks at solve time and the double composition; it does not replace them.
+- What it suggests: with 0 failures in 2,120 draws, the share of bad records is small. A rule-of-three bound (below
+  0.15% at 95% confidence) is only indicative here. The draw was stratified (6 per source directory, then uniform), and
+  only the first 2,120 rows of the shuffled list were solved in the time window. The check is not exhaustive. It adds to
+  the per-record checks at solve time and the double composition; it does not replace them.
 
 ## Files
 

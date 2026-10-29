@@ -1,4 +1,4 @@
-# SYM2: a centrally symmetric set of 32 points with no convex 7-gon (and 2^(k-2) points for every odd k)
+# SYM2: an explicit centrally symmetric set of 32 points with no convex 7-gon (and 2^(k-2) points for every odd k)
 
 ## Result
 
@@ -16,7 +16,24 @@ Context. Subercaseaux, Mackey, Qian and Heule, "Automated Symmetric Construction
 construction without a convex 7-gon as future work, says they suspect symmetric constructions exist for all k >= 7, and
 calls the known extremal construction asymmetric. The set here is such a 2-fold realization, and the
 construction below gives one for every odd k. With their 4-fold result, 2 is the largest order of rotational symmetry
-of a 32-point set without a convex 7-gon. We found no earlier centrally symmetric construction in the literature.
+of a 32-point set without a convex 7-gon.
+
+**Attribution.** The existence of such sets for every odd k follows from published work.
+- Baek and Balko (*The Erdős–Szekeres Conjecture Revisited*, SoCG 2025, Definition 13, Lemma 14 and §6.1) describe a
+  construction due to Valtr. It blows up an arbitrary base of k - 1 points in general position into 2^(k-2) points
+  without a convex k-gon, using clusters with cup and cap parameters x_i = i - 1 and y_i = k - i - 1.
+- For odd k, take a centrally symmetric base and pair each cluster with its negative. The half-turn exchanges cups and
+  caps and the two parameters, so the union is centrally symmetric.
+- After a quarter-turn, the cubic construction below is a special case: base points on the curve y = x³ and
+  Erdős–Szekeres cup-cap sets as clusters.
+
+So this directory does not give a new general construction method. Its contribution is the explicit symmetric
+specialization, a short direct proof via the cubic, and exact integer coordinates. These answer the concrete
+realization task named in arXiv 2506.00224. Whether the symmetric corollary was stated explicitly anywhere before has not
+been established.
+
+The 32-point set is not known to be the largest centrally symmetric set without a convex 7-gon. Excluding 34 points is
+open; see `results/WRITEUP/SYMMETRIC.md`, §4.
 
 ## Verification
 

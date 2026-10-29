@@ -10,8 +10,18 @@ under a rotation of order 5 contains 7 points in convex position.
 - `results/SYMMAX/c5_31points.txt` is such a set with 31 points.
 - 5-fold sets have size 0 or 1 mod 5, so 32 to 34 are not possible sizes.
 
-Before this, the 5-fold maximum was known to be 31 only on the assumption ES(7) = 33. A 5-fold set of 35 or more points
-was one of three symmetric routes to a counterexample left open by `results/WRITEUP/SYMMETRIC.md`. This closes it.
+**Prior work.** The upper bound overlaps an earlier reported computation.
+- **The claim.** Bogdan (*Notes on the 33-point Erdős–Szekeres problem*, arXiv:2512.24061, December 2025, §7, Table 1)
+  reports an UNSAT run (Kissat) at 33 points: six convex pentagonal layers and three unconstrained interior points (the
+  baseline `5^6` row).
+- **The generator.** His public generator (`es_sat_gen.py`, repository `bogdan27182/esc-paper`), with zero offsets,
+  imposes only within-layer convexity and nesting.
+- **Why it implies the bound.** By the layer lemma (§2), a 5-fold set of 35 points without a convex 7-gon is seven
+  nested pentagons. Deleting two points of the innermost one gives exactly that configuration.
+- **Status of the claim.** The repository has no proof files or logs. It is an earlier reported computational claim,
+  not an independently verified theorem.
+- **What is ours.** Two independent encodings with retained proofs, each accepted by two checkers, and the exact 31-point
+  example (`results/SYMMAX/c5_31points.txt`), for which we found no earlier counterpart.
 
 ## 1. Reduction to 35 points with no centre point
 
@@ -72,7 +82,8 @@ For m = 5 and K = 7, S' is therefore 7 nested regular pentagons.
 Notes on the table:
 - Each of P1 and L1 alone proves the theorem. P1 needs no layer lemma; L1 is an independent second encoding of the same
   case.
-- The proofs are not stored (several GB). The CNFs come from a deterministic generator, and `sha256.txt` lists the
+- The proofs are not in Git (several GB). They are archived compressed with verified round trips; see
+  `results/WRITEUP/CERTIFICATES.md`. The CNFs come from a deterministic generator, and `sha256.txt` lists the
   sha256 of the CNFs and proofs.
 - cake_lpr ran out of heap on P1 at the default heap (`chk_P1_cake_lpr_heap12000.out`). In this build the heap is set
   with the `--CML_HEAP_SIZE=<MB>` flag; the environment variable has no effect. With `--CML_HEAP_SIZE=30000` the check
