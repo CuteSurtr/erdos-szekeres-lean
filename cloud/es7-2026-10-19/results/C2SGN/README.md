@@ -180,5 +180,8 @@ The cost is dominated by these chains of nested quadrilaterals.
 - **Tools.** `tools/` (`lacube.c`, `lacube2.c`, `upfilter.c`). Build with `cc -O2`.
   - `closesgn.py` expects `upfilter` next to it and `cadical`, `lrat-check` and `cake_lpr` in `../local/bin`.
 - **Review.** `REVIEW.md` and `review/`.
+- **Follow-up of 2026-10-30.** `midpoint/` (exploratory). The parallel-lines (midpoint) condition of real central
+  symmetry is already implied by the `--sym` axioms, so it prunes nothing. No integer antipodal pair with
+  |x|, |y| <= 300 extends `SYMMAX/c4_28points.txt` without a convex 7-gon. See `midpoint/README.md`.
 - **Logs.** `logs/`.
 - **Not committed.** CNFs (regenerate with the commands above) and proofs (deleted after both checks).
