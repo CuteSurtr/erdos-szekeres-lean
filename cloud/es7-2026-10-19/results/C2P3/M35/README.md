@@ -15,8 +15,8 @@ Task `results/C2P3/TASK.md` at commit 4f653319, V = M35, LIST = C2P3.tsv, j = 35
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 35 | P6_2-12 | P6 | Q | 6000 | 6000 | certified | 4205.9 | 100.9 | 616.5 | 7.08 | 4381 |
 | 85 | P6_10-12 | P6 | Q | 4800 | 2356 | certified | 691.7 | 51.6 | 332.7 | 3.60 | 4399 |
-| 135 | P6_2-7-16 | P6 | H | 1800 | – | not reached | – | – | – | – | – |
-| 185 | P6_7-8-13 | P6 | H | 1800 | – | not reached | – | – | – | – | – |
+| 135 | P6_2-7-16 | P6 | H | 1800 | 1257 | certified | 481.0 | 54.2 | 343.2 | 3.54 | 4409 |
+| 185 | P6_7-8-13 | P6 | H | 1800 | 363 | certified | 130.1 | 29.2 | 207.3 | 1.67 | 3416 |
 | 235 | P6_9-11-14 | P6 | H | 1800 | – | not reached | – | – | – | – | – |
 | 285 | P5_1-7-9 | P5 | H | 1800 | – | not reached | – | – | – | – | – |
 | 335 | P5_1-15 | P5 | Q | 2400 | – | not reached | – | – | – | – | – |
@@ -28,23 +28,25 @@ Task `results/C2P3/TASK.md` at commit 4f653319, V = M35, LIST = C2P3.tsv, j = 35
 
 | case | kind | certified | timed out (UNKNOWN) | not reached | errors / not certified | SAT |
 |---|---|---|---|---|---|---|
-| P6 | H | 0 | 0 | 3 | 0 | 0 |
+| P6 | H | 2 | 0 | 1 | 0 | 0 |
 | P6 | Q | 2 | 0 | 0 | 0 | 0 |
 | P5 | H | 0 | 0 | 4 | 0 | 0 |
 | P5 | Q | 0 | 0 | 1 | 0 | 0 |
-| all | | 2 | 0 | 8 | 0 | 0 |
+| all | | 4 | 0 | 6 | 0 | 0 |
 
 ### Certified units: minimum / median / maximum
 
-- solve s: 691.74 / 2448.80 / 4205.85
-- lrat-check s: 51.60 / 76.25 / 100.90
-- cake_lpr s: 332.70 / 474.60 / 616.50
-- proof GB: 3.60 / 5.34 / 7.08
+- solve s: 130.13 / 586.38 / 4205.85
+- lrat-check s: 29.20 / 52.90 / 100.90
+- cake_lpr s: 207.30 / 337.95 / 616.50
+- proof GB: 1.67 / 3.57 / 7.08
 
 ## Notes
 
-- Largest solver RSS: 4399 MB (machine: 4 cores, 15 GB).
+- Largest solver RSS: 4409 MB (machine: 4 cores, 15 GB).
 - SAT: none.
 - Proof rejections / records with `certified: false` or ERROR status: none.
+- The lane stopped at 11:48:05Z with 590 s left before END (under 15 min), so the last 6 units were not reached.
+- Lane caps below the list cap come from lane.py, which caps each solve so that 10 minutes remain before END for the checks. No unit hit its cap.
 - Memory problems: none. Every proof was deleted after its checks. No CNF or proof files are committed.
 - Files: `env.txt`, `tools.txt`, `units.tsv`, `run.sh`, `out.jsonl` (the lane records), `lane.log.tail`.
