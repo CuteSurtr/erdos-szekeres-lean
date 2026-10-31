@@ -19,7 +19,7 @@ Started 2026-10-31 06:46:43Z (epoch 1793429203); lane END 1793437303 (09:01:43Z)
 
 - **Certified: 6** (1 P8 Q, 5 P6 H). Timed out (UNKNOWN): 0. Errors / certified false: 0.
 - **Not reached: 2**: P6_7-10-11 (P6 H, cap 1800), P6_8-12-13 (P6 H, cap 1800). The lane stopped at 08:56:31Z with 311 s left (< 15 min).
-- P8_1-6 (Q, the hardest first-wave timeout) is now certified: solve 3716.65 s, proof 7.95 GB, lrat-check 119.6 s, cake_lpr 617.5 s.
+- P8_1-6 (Q, timed out at its full cap in the first wave) is now certified: solve 3716.65 s, proof 7.95 GB, lrat-check 119.6 s, cake_lpr 617.5 s.
 - Certified, min / median / max: solve s 71.74 / 325.08 / 3716.65; lrat-check s 24.1 / 52.1 / 119.6; cake_lpr s 159.4 / 300.95 / 617.5; proof GB 1.11 / 3.33 / 7.95.
 - Caps of the last two units were shortened by the lane (1329 s and 424 s) because END was near; both still finished UNSAT and certified.
 - Largest solver RSS: 4411.48 MB. cake_lpr ran with heap 8000 MB everywhere (no retry at 11000 MB).
