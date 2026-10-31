@@ -1,0 +1,26 @@
+TASK commit: 81cb025f (results/C2P5/TASK.md, unchanged at checkout HEAD 7f7837dc1)
+Tools: built by C2P/vendor/build_tools.sh from vendor/tools-src.tar.xz (no cloning/downloading)
+  CaDiCaL c6073042 (3.0.1), cake_lpr a36874a8, lrat-check 2e3b2dc + E2 patch
+  manifest: all 196 files match
+  cadical --version: 3.0.1
+  cake_lpr example: s VERIFIED UNSAT
+  sanity bad (LRAT on {1},{-1}): lrat-check 'c FAILED: empty clause without a RUP conflict'; cake_lpr 'c Checking failed at line: 0. Reason: pivot must be non-zero'
+  sanity good (LRAT on {1},{-1}): lrat-check 'c VERIFIED'; cake_lpr 's VERIFIED UNSAT'
+  expected: bad rejected by both, good accepted by both (c VERIFIED, s VERIFIED UNSAT)
+  dd94c7651f05f6e85a3d9cfaf69ad30f8fe089767407dbddffff96a1e270ec57  cadical
+  1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca  cake_lpr
+  29cf644ebd224e9986dbd95590962f9aea3b67b37162ccd20a6b0cae46feeed4  lrat-check
+Base CNF: python3 SYMZ/zcnf.py rot 17 7 --m 2 --hull
+  header: p cnf 838032 16653336  (expected p cnf 838032 16653336: OK)
+  b0061e908bff80e6a597f31a6fec1d91e8504aebc09b0bcf41c2ff21604d8ff1  /opt/work/base.cnf
+  2476fafff493a763fd7f2883380d359629191912a15a69bcbdfbf49bbf472b48  /opt/work/base.json
+  both sha256 match the expected values: OK
+Cubes: l2cubes.py a=1..8 byte-identical to C2P/cubes/P{a}_cubes.txt:
+  P1 identical (560 lines)
+  P2 identical (560 lines)
+  P3 identical (560 lines)
+  P4 identical (560 lines)
+  P5 identical (560 lines)
+  P6 identical (560 lines)
+  P7 identical (560 lines)
+  P8 identical (560 lines)
