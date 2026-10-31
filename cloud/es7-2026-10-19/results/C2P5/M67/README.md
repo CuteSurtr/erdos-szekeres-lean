@@ -51,7 +51,7 @@ Total: 19 certified.
 - cake_lpr s: 97.9 / 314.7 / 530.0
 - proof size: 0.22 GB / 3.30 GB / 6.01 GB
 - kind Q (3): solve 1956.82 / 2065.47 / 2358.37 s; lrat-check 88.2 / 91.1 / 91.4 s; cake_lpr 509.5 / 511.8 / 530.0 s; proof 5.76 GB / 5.95 GB / 6.01 GB
-- kind H (16): solve 25.0 / 229.79500000000002 / 447.34 s; lrat-check 12.2 / 50.3 / 57.2 s; cake_lpr 97.9 / 303.4 / 336.3 s; proof 0.22 GB / 3.18 GB / 3.69 GB
+- kind H (16): solve 25.0 / 229.80 / 447.34 s; lrat-check 12.2 / 50.3 / 57.2 s; cake_lpr 97.9 / 303.4 / 336.3 s; proof 0.22 GB / 3.18 GB / 3.69 GB
 
 Largest solver RSS: 4508 MB (P1_2-14).
 
