@@ -1,0 +1,13 @@
+C2P M37 tools (TASK.md at fb2c59af; branch es7-cloud)
+
+CaDiCaL / cake_lpr / lrat-check: NOT BUILT. The session's permission layer denied cloning and
+building the external repositories (cadical c6073042, cake_lpr a36874a8, drat-trim 2e3b2dc),
+so no solver or checker is available on this machine and no sanity checks were run.
+
+Base CNF: python3 SYMZ/zcnf.py rot 17 7 --m 2 --hull -o /opt/work/base.cnf --map /opt/work/base.json (69 s)
+  header p cnf 838032 16653336 (matches)
+  sha256 base.cnf  b0061e908bff80e6a597f31a6fec1d91e8504aebc09b0bcf41c2ff21604d8ff1 (matches)
+  sha256 base.json 2476fafff493a763fd7f2883380d359629191912a15a69bcbdfbf49bbf472b48 (matches)
+
+Cubes: python3 C2C34/l2cubes.py /opt/work/base.json a /opt/work/P{a}.txt, a = 1..8:
+  byte-identical (cmp) to C2P/cubes/P{a}_cubes.txt for all 8 cases, 560 lines each.
