@@ -1,0 +1,39 @@
+C2P5 M75 tools (TASK commit 81cb025f; repo HEAD at start 6cf0372c70ecbc417e906d0f9950154cd88d287b)
+
+## build_tools.sh
+manifest: all 196 files match
+lrat-check.c: In function 'main':
+lrat-check.c:399:5: warning: ignoring return value of 'fgets' declared with attribute 'warn_unused_result' [-Wunused-result]
+  399 |     fgets (ignore, sizeof (ignore), cnf);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cadical --version: 3.0.1
+cake_lpr example: s VERIFIED UNSAT
+sanity bad (LRAT on {1},{-1}): lrat-check 'c FAILED: empty clause without a RUP conflict'; cake_lpr 'c Checking failed at line: 0. Reason: pivot must be non-zero'
+sanity good (LRAT on {1},{-1}): lrat-check 'c VERIFIED'; cake_lpr 's VERIFIED UNSAT'
+expected: bad rejected by both, good accepted by both (c VERIFIED, s VERIFIED UNSAT)
+EXIT 0
+
+binaries:
+total 0
+lrwxrwxrwx 1 root root 39 Oct 31 15:25 cadical -> /opt/src/vendored/cadical/build/cadical
+lrwxrwxrwx 1 root root 35 Oct 31 15:25 cake_lpr -> /opt/src/vendored/cake_lpr/cake_lpr
+lrwxrwxrwx 1 root root 38 Oct 31 15:25 lrat-check -> /opt/src/vendored/drat-trim/lrat-check
+988783da567fb26b008b138db6435035a89c1d404a11159c5483f40e59c16bf2  /opt/work/bin/cadical
+1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca  /opt/work/bin/cake_lpr
+29cf644ebd224e9986dbd95590962f9aea3b67b37162ccd20a6b0cae46feeed4  /opt/work/bin/lrat-check
+
+## base CNF (python3 SYMZ/zcnf.py rot 17 7 --m 2 --hull)
+p cnf 838032 16653336
+b0061e908bff80e6a597f31a6fec1d91e8504aebc09b0bcf41c2ff21604d8ff1  /opt/work/base.cnf
+2476fafff493a763fd7f2883380d359629191912a15a69bcbdfbf49bbf472b48  /opt/work/base.json
+expected b0061e90...d8ff1 / 2476faff...2b48: OK
+
+## cubes (C2C34/l2cubes.py vs C2P/cubes)
+P1 identical
+P2 identical
+P3 identical
+P4 identical
+P5 identical
+P6 identical
+P7 identical
+P8 identical
