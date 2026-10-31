@@ -26,7 +26,7 @@ Start 03:23:23Z, END 06:08:23Z (start + 3 h − 15 min); `run.sh`. The lane stop
 | P7_2-3-5 | H | 614* | certified | 62.7 | 20.7 | 142.4 | 1.11 | 3170 |
 | P7_8-16 | Q | 384* | UNKNOWN | 381.7 | | | | 4382 |
 
-\* cap shortened by lane.py so that 10 minutes remain before END.
+\* cap shortened by lane.py so that 10 minutes remain before END (list caps: 1800 for H, 2400 for P7_8-16).
 
 ## Counts by case and kind
 - Certified 7: P8 H 3, P7 H 4.
