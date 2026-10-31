@@ -8,7 +8,7 @@ Task: `results/C2P4/TASK.md` at commit a46b478d. Start 2026-10-31 13:01:30 UTC (
 - Base CNF: header `p cnf 838032 16653336`, sha256 base.cnf `b0061e90…d8ff1` and base.json `2476faff…bf472b48`, both matching.
 - Cubes P1..P8: all byte-identical to `C2P/cubes/P{a}_cubes.txt`.
 
-## Units (15 rows, idx ≡ 7 mod 50; `units.tsv`)
+## Units (13 rows, idx ≡ 7 mod 50; `units.tsv`)
 
 | unit | case | kind | list cap | cap used | status | solve s | lrat-check s | cake_lpr s | proof bytes | solver RSS MB |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -23,10 +23,10 @@ The lane reduced the caps of the last three units to fit the time left. All thre
 - Certified: 4. By case and kind: P5 Q 1, P4 Q 1, P4 H 2.
 - Timed out (UNKNOWN): 0.
 - Errors: 0.
-- Not reached: 11. The lane stopped at 15:11:14Z with 315 s left before END. By case and kind:
+- Not reached: 9. The lane stopped at 15:11:14Z with 315 s left before END. By case and kind:
   - P4 H 3: P4_5-6-10, P4_5-13-14, P4_7-10-13.
   - P3 Q 1: P3_5-15.
-  - P3 H 6: P3_1-5-16, P3_1-11-15, P3_4-8-11, P3_5-7-14, P3_6-10-11.
+  - P3 H 5: P3_1-5-16, P3_1-11-15, P3_4-8-11, P3_5-7-14, P3_6-10-11.
 
 **Certified units, min / median / max**
 - Solve: 248.0 / 560.5 / 4136.5 s.
