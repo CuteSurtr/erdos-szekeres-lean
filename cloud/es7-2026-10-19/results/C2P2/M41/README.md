@@ -5,7 +5,7 @@ Machine: 4 cores, 15 GB RAM, no swap (`env.txt`). Start 06:47:31Z (epoch 1793429
 ## Tools and checks (`tools.txt`)
 - Built with `C2P/vendor/build_tools.sh` from the vendored `tools-src.tar.xz` (manifest: all 196 files match; nothing cloned or downloaded): CaDiCaL c6073042 (3.0.1), cake_lpr a36874a8, lrat-check 2e3b2dc + E2 patch.
 - Sanity: bad LRAT rejected by both checkers, good LRAT accepted by both; cake_lpr example `s VERIFIED UNSAT`.
-- Base CNF `zcnf.py rot 17 7 --m 2 --hull`: header `p cnf 838032 16653336`, sha256 base.cnf `b0061e90…d8ff1` and base.json `2476faff…bb48` — both match.
+- Base CNF `zcnf.py rot 17 7 --m 2 --hull`: header `p cnf 838032 16653336`, sha256 base.cnf `b0061e90…d8ff1` and base.json `2476faff…f472b48` — both match.
 - Cubes P1..P8 from `l2cubes.py`: all byte-identical to `C2P/cubes/P{a}_cubes.txt`.
 
 ## Units (18 rows, idx ≡ 41 mod 42; `units.tsv`)
