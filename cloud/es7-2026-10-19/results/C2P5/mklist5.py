@@ -11,8 +11,8 @@ Units listed in an EXCLUDE file (one name per line, optional) are left out.
 Machine j runs the rows with idx = j (mod N), in idx order. The units are placed greedily on the machine with the least
 expected load (ties to the lowest j), in phases: the Q units and covers of the first two cases (largest load first),
 then their H units; then for each further case its Q units and cover, then its H units. A case given as r<a> is placed
-in reverse (its H units in reverse order, then its Q units in reverse order); two lists that take the same case, one
-of them reversed, then start it from opposite ends. Expected loads (solve and both checks, seconds): H 650, cover
+in reverse (its H units in reverse order, then its Q units in reverse order; among the first two cases only its H
+units are reversed); two lists that take the same case, one of them reversed, then start it from opposite ends. Expected loads (solve and both checks, seconds): H 650, cover
 1,200, Q 3,400, Q after a short timeout 4,500, Q after a timeout at 5,000 s or more 9,000.
 usage: mklist5.py RESULTS_DIR OUT N [--exclude FILE] CASE...   (for example: mklist5.py results lists/C2P5B.tsv 50 2 1 3)"""
 import glob, json, sys
@@ -60,7 +60,7 @@ def phase(s):
     return [h[::-1], q[::-1]] if s.startswith("r") else [sorted(q, key=lambda x: -x[3]), h]
 first = specs[:2]
 phases = [sorted(sum((units[int(s.lstrip("r"))][0] for s in first), []), key=lambda x: -x[3]),
-          sum((units[int(s.lstrip("r"))][1] for s in first), [])]
+          sum(((units[int(s.lstrip("r"))][1][::-1] if s.startswith("r") else units[int(s.lstrip("r"))][1]) for s in first), [])]
 for s in specs[2:]: phases += phase(s)
 load, queue = [0] * N, [[] for _ in range(N)]
 for ph in phases:
