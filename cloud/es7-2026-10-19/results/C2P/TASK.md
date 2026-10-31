@@ -16,8 +16,15 @@ General rules: exactly as in `results/C3W4/TASK.md` (paths under `cloud/es7-2026
 ## Steps
 
 1. **Tools.**
-   - Build CaDiCaL 3.0.1 (commit c6073042), cake_lpr (a36874a8, `make cake_lpr`) and drat-trim lrat-check (2e3b2dc, with `results/E2/tools/lrat-check-E2.patch` applied) exactly as step 1 of `results/C3WAVE2/TASK.md` describes. That includes its sanity checks: the cake_lpr example prints `s VERIFIED UNSAT`, lrat-check rejects the LRAT `3 0 0` on {1},{-1} and accepts `3 0 1 2 0`.
-   - Put the three binaries (or links to them) in `/opt/work/bin/` as `cadical`, `cake_lpr` and `lrat-check`.
+   - Run `bash cloud/es7-2026-10-19/results/C2P/vendor/build_tools.sh` from the repository root.
+     - It builds CaDiCaL 3.0.1, cake_lpr and lrat-check (with the E2 patch) from the sources vendored in this
+       repository (`vendor/tools-src.tar.xz`). Those sources are unmodified copies of the upstream commits c6073042,
+       a36874a8 and 2e3b2dc, and `vendor/MANIFEST.sha256` lists their file hashes.
+     - It links the binaries into `/opt/work/bin/`.
+     - It runs the sanity checks. In the expected result, both checkers reject the bad LRAT and accept the good
+       one, and the cake_lpr example prints `s VERIFIED UNSAT`.
+   - Do not clone or download any code.
+   - If `results/C2P/{V}/` already has files from an earlier attempt that stopped at step 1, replace them.
    - Base CNF: from `cloud/es7-2026-10-19/results`, run `python3 SYMZ/zcnf.py rot 17 7 --m 2 --hull -o /opt/work/base.cnf --map /opt/work/base.json` (under a minute). The header must be `p cnf 838032 16653336`. The sha256 must be `b0061e908bff80e6a597f31a6fec1d91e8504aebc09b0bcf41c2ff21604d8ff1` for base.cnf and `2476fafff493a763fd7f2883380d359629191912a15a69bcbdfbf49bbf472b48` for base.json.
    - Cubes: for a = 1..8, `python3 C2C34/l2cubes.py /opt/work/base.json a /opt/work/P{a}.txt` must be byte-identical to `C2P/cubes/P{a}_cubes.txt`.
    - Record everything in `results/C2P/{V}/tools.txt`. If any check fails, stop and report.
