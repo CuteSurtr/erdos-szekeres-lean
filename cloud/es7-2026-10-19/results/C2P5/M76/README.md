@@ -18,9 +18,9 @@ Start 2026-10-31 15:10:27Z (epoch 1793459427); lane END 1793477427 (20:10:27Z). 
 | P1 | Q | 1 | 0 | 0 | 0 |
 | P2 | H | 6 | 0 | 0 | 0 |
 | P2 | Q | 1 | 0 | 0 | 0 |
-| P3 | H | 1 | 0 | 4 | 0 |
+| P3 | H | 5 | 0 | 0 | 0 |
 | P3 | Q | 1 | 0 | 0 | 0 |
-| all | | 15 | 0 | 4 | 0 |
+| all | | 19 | 0 | 0 | 0 |
 
 Other outcomes: none.
 
@@ -41,16 +41,16 @@ Other outcomes: none.
 | 626 | P1_6-9-12 | H | 2400 | UNSATISFIABLE | 78.04 | 25.9 | 172.8 | 1.11 | 3123.62 | True |
 | 676 | P3_6-13 | Q | 7227 | UNSATISFIABLE | 2188.81 | 89.6 | 486.9 | 5.57 | 4359.77 | True |
 | 726 | P3_1-6-13 | H | 2400 | UNSATISFIABLE | 540.93 | 66.7 | 370.5 | 3.72 | 4381.88 | True |
-| 776 | P3_1-13-15 | H | 2400 | not reached | | | | | | |
-| 826 | P3_4-9-11 | H | 2400 | not reached | | | | | | |
-| 876 | P3_5-8-14 | H | 2400 | not reached | | | | | | |
-| 926 | P3_7-8-9 | H | 2400 | not reached | | | | | | |
+| 776 | P3_1-13-15 | H | 2400 | UNSATISFIABLE | 239.42 | 54.9 | 331.6 | 3.23 | 4393.76 | True |
+| 826 | P3_4-9-11 | H | 2400 | UNSATISFIABLE | 93.13 | 25.9 | 170.5 | 1.15 | 3180.53 | True |
+| 876 | P3_5-8-14 | H | 2400 | UNSATISFIABLE | 298.6 | 54.7 | 315.7 | 3.21 | 4402.97 | True |
+| 926 | P3_7-8-9 | H | 1827 | UNSATISFIABLE | 26.82 | 14.5 | 115.3 | 0.22 | 2646.74 | True |
 
 ## Certified units: min / median / max
 
-- kind H (12): solve s 27.8 / 240.7 / 540.9; lrat-check s 13.7 / 54.9 / 66.7; cake_lpr s 115.2 / 322.5 / 370.5; proof GB 0.2 / 3.2 / 3.7
+- kind H (16): solve s 26.8 / 238.4 / 540.9; lrat-check s 13.7 / 54.7 / 66.7; cake_lpr s 115.2 / 316.0 / 370.5; proof GB 0.2 / 3.2 / 3.7
 - kind Q (3): solve s 1383.2 / 1626.1 / 2188.8; lrat-check s 76.5 / 89.6 / 90.9; cake_lpr s 434.6 / 449.9 / 486.9; proof GB 4.6 / 4.9 / 5.6
-- all (15): solve s 27.8 / 260.8 / 2188.8; lrat-check s 13.7 / 58.2 / 90.9; cake_lpr s 115.2 / 337.6 / 486.9; proof GB 0.2 / 3.2 / 5.6
+- all (19): solve s 26.8 / 244.1 / 2188.8; lrat-check s 13.7 / 54.9 / 90.9; cake_lpr s 115.2 / 328.7 / 486.9; proof GB 0.2 / 3.2 / 5.6
 
 ## Resources
 
