@@ -10,7 +10,7 @@ Restart of an earlier attempt that stopped at step 1; its files were replaced.
 - Sanity: both checkers reject the bad LRAT and accept the good one; cake_lpr example `s VERIFIED UNSAT`.
 - Base CNF header `p cnf 838032 16653336`; sha256 of base.cnf and base.json match.
 - Cubes P1..P8: byte-identical to `C2P/cubes/P{a}_cubes.txt` (560 lines each).
-- Commits: env `26d136d1`; tools/units/run.sh `def9e9cb`+1; progress commits after that.
+- Commits: env `def9e9cb`; tools, units, run.sh `81dc9b53`; progress commits after that.
 
 ## Lane
 Started 03:26Z (session start 03:23:24Z = 1793417004), END = 1793426904 (06:08:24Z); `run.sh`.
