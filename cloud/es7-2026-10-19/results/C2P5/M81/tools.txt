@@ -1,0 +1,27 @@
+# M81 tools (TASK commit 81cb025f; repo HEAD at start 8f9cddd4d)
+build: bash cloud/es7-2026-10-19/results/C2P/vendor/build_tools.sh (vendored sources, no clone/download)
+manifest: all 196 files match
+cadical --version: 3.0.1
+cake_lpr example: s VERIFIED UNSAT
+sanity bad (LRAT on {1},{-1}): lrat-check 'c FAILED: empty clause without a RUP conflict'; cake_lpr 'c Checking failed at line: 0. Reason: pivot must be non-zero'
+sanity good (LRAT on {1},{-1}): lrat-check 'c VERIFIED'; cake_lpr 's VERIFIED UNSAT'
+expected: bad rejected by both, good accepted by both (c VERIFIED, s VERIFIED UNSAT)
+upstream commits: CaDiCaL c6073042, cake_lpr a36874a8, lrat-check 2e3b2dc (+E2 patch)
+binaries:
+  cadical -> /opt/src/vendored/cadical/build/cadical sha256 89ed63714f9dba6b48604e9d10e17719a465f798ae049b3d8a80cfcf4555a0b6
+  cake_lpr -> /opt/src/vendored/cake_lpr/cake_lpr sha256 1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca
+  lrat-check -> /opt/src/vendored/drat-trim/lrat-check sha256 29cf644ebd224e9986dbd95590962f9aea3b67b37162ccd20a6b0cae46feeed4
+base CNF: python3 SYMZ/zcnf.py rot 17 7 --m 2 --hull -o /opt/work/base.cnf --map /opt/work/base.json (65 s)
+  header: p cnf 838032 16653336 (expected p cnf 838032 16653336) OK
+  sha256 b0061e908bff80e6a597f31a6fec1d91e8504aebc09b0bcf41c2ff21604d8ff1  /opt/work/base.cnf
+  sha256 2476fafff493a763fd7f2883380d359629191912a15a69bcbdfbf49bbf472b48  /opt/work/base.json
+  both sha256 match expected values: OK
+cubes: l2cubes.py a=1..8 byte-identical to C2P/cubes/P{a}_cubes.txt:
+  P1 identical (560 lines)
+  P2 identical (560 lines)
+  P3 identical (560 lines)
+  P4 identical (560 lines)
+  P5 identical (560 lines)
+  P6 identical (560 lines)
+  P7 identical (560 lines)
+  P8 identical (560 lines)
