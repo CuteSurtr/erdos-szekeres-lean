@@ -1,0 +1,17 @@
+C2P M29 tools and checks (Z = fb2c59af)
+
+Sources cloned into /opt/src at the pinned commits:
+  cadical   c60730422e758ef1cebe7aeddf2dda31c996bf04
+  cake_lpr  a36874a8b750b43fe4b385b8ddbf5b033e46a3fa
+  drat-trim 2e3b2dc0ecf938addbd779d42877b6ed69d9a985
+
+Build (./configure && make -j4; make cake_lpr; E2 patch + lrat-check): NOT DONE.
+  The session's permission policy refused to build and run the cloned external code.
+  No binaries in /opt/work/bin/, checker sanity tests not run.
+
+Base CNF (python3 SYMZ/zcnf.py rot 17 7 --m 2 --hull, 69 s):
+  header p cnf 838032 16653336                                                      OK
+  base.cnf  sha256 b0061e908bff80e6a597f31a6fec1d91e8504aebc09b0bcf41c2ff21604d8ff1 OK
+  base.json sha256 2476fafff493a763fd7f2883380d359629191912a15a69bcbdfbf49bbf472b48 OK
+
+Cubes (C2C34/l2cubes.py, a = 1..8): all 8 byte-identical to C2P/cubes/P{a}_cubes.txt  OK
