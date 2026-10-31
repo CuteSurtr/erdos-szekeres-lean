@@ -44,7 +44,7 @@ Certified units, min / median / max:
 - proof size: 0.2 / 3.2 / 4.0 GB (proofs deleted after checking)
 
 Timed out (UNKNOWN): none. Errors / `"certified": false`: none. Not reached: the remaining 39 units (all of P1–P5,
-P2_cover included, and 6 of P6), because the 3-hour budget ran out.
+P2_cover included, and 5 of P6), because the 3-hour budget ran out.
 
 ## Memory, SAT, rejections
 Largest solver RSS: 4469.97 MB (machine 15 GB); no memory problem.
