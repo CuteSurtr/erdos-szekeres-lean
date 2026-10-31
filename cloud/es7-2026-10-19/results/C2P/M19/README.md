@@ -5,7 +5,7 @@ Restart of the earlier M19 attempt (at fb2c59af), which stopped at step 1; its f
 **Result: 12 of 53 units run: 11 certified UNSAT, 1 timed out (UNKNOWN), 41 not reached. No SAT, no proof
 rejection, no error, no memory problem.**
 
-## Tools and checks ()
+## Tools and checks (`tools.txt`)
 - Built with `C2P/vendor/build_tools.sh` from the vendored sources (manifest: all 196 files match; nothing
   cloned or downloaded): CaDiCaL c6073042 (3.0.1), cake_lpr a36874a8, lrat-check 2e3b2dc with the E2 patch.
 - Sanity: both checkers reject the bad LRAT and accept the good one; the cake_lpr example prints `s VERIFIED UNSAT`.
