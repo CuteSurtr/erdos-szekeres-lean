@@ -22,7 +22,7 @@ lrat-check -> /opt/src/vendored/drat-trim/lrat-check sha256 29cf644ebd224e9986db
 
 == base CNF ==
 python3 SYMZ/zcnf.py rot 17 7 --m 2 --hull -o /opt/work/base.cnf --map /opt/work/base.json (real 1m8.7s)
-
+{"kind": "rot", "m": 2, "t": 17, "axis": 0, "N": 34, "K": 7, "Z": 34, "vars": 838032, "X_vars": 2856, "clauses": 16653336, "stats": {"triple_classes": 2856, "gp_5sets": 162384, "a4_4sets": 51816, "centre_units": 0, "conv": {"4": 23256, "5": 139128, "6": 672792, "K-sets": 2689808}, "sb_units": 136, "hull_sb_clauses": 10880}}
 header: p cnf 838032 16653336  (expected p cnf 838032 16653336: OK)
 b0061e908bff80e6a597f31a6fec1d91e8504aebc09b0bcf41c2ff21604d8ff1  /opt/work/base.cnf
 2476fafff493a763fd7f2883380d359629191912a15a69bcbdfbf49bbf472b48  /opt/work/base.json
