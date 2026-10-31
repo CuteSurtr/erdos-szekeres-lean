@@ -1,16 +1,33 @@
-C2P M17 tools (TASK.md at fb2c59af; branch es7-cloud)
+# C2P M17 tools and checks (TASK.md at 01909a07; repo HEAD 5598b661)
+build: bash cloud/es7-2026-10-19/results/C2P/vendor/build_tools.sh (vendored sources, nothing downloaded)
+sources: CaDiCaL c60730422e758ef1cebe7aeddf2dda31c996bf04, cake_lpr a36874a8b750b43fe4b385b8ddbf5b033e46a3fa, drat-trim lrat-check 2e3b2dc0ecf938addbd779d42877b6ed69d9a985 + E2 patch
+manifest: all 196 files match
+cadical --version: 3.0.1
+cake_lpr example: s VERIFIED UNSAT
+sanity bad (LRAT on {1},{-1}): lrat-check 'c FAILED: empty clause without a RUP conflict'; cake_lpr 'c Checking failed at line: 0. Reason: pivot must be non-zero'
+sanity good (LRAT on {1},{-1}): lrat-check 'c VERIFIED'; cake_lpr 's VERIFIED UNSAT'
+expected: bad rejected by both, good accepted by both (c VERIFIED, s VERIFIED UNSAT)
+exit 0
 
-Sources cloned into /opt/src at the required commits:
-  cadical   c60730422e758ef1cebe7aeddf2dda31c996bf04
-  cake_lpr  a36874a8b750b43fe4b385b8ddbf5b033e46a3fa
-  drat-trim 2e3b2dc0ecf938addbd779d42877b6ed69d9a985
-Build (CaDiCaL ./configure && make -j4; cake_lpr make cake_lpr; lrat-check with E2 patch): NOT DONE.
-  The build command was refused by this session's permission policy. No binaries, no sanity checks.
+binaries:
+cadical -> /opt/src/vendored/cadical/build/cadical sha256 446d4121710e5a36b8af91caaf611d1f4fa177d79823ff68bfb7ac938cfd7355
+lrat-check -> /opt/src/vendored/drat-trim/lrat-check sha256 29cf644ebd224e9986dbd95590962f9aea3b67b37162ccd20a6b0cae46feeed4
+cake_lpr -> /opt/src/vendored/cake_lpr/cake_lpr sha256 1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca
 
-Base CNF: python3 SYMZ/zcnf.py rot 17 7 --m 2 --hull -o /opt/work/base.cnf --map /opt/work/base.json (68 s)
-  header p cnf 838032 16653336 (matches)
-  sha256 base.cnf  b0061e908bff80e6a597f31a6fec1d91e8504aebc09b0bcf41c2ff21604d8ff1 (matches)
-  sha256 base.json 2476fafff493a763fd7f2883380d359629191912a15a69bcbdfbf49bbf472b48 (matches)
+base: python3 SYMZ/zcnf.py rot 17 7 --m 2 --hull -o /opt/work/base.cnf --map /opt/work/base.json (60 s)
+header: p cnf 838032 16653336 (expected p cnf 838032 16653336) OK
+b0061e908bff80e6a597f31a6fec1d91e8504aebc09b0bcf41c2ff21604d8ff1  /opt/work/base.cnf
+2476fafff493a763fd7f2883380d359629191912a15a69bcbdfbf49bbf472b48  /opt/work/base.json
+both sha256 match the expected values
 
-Cubes: python3 C2C34/l2cubes.py /opt/work/base.json a /opt/work/P{a}.txt, a = 1..8:
-  byte-identical (cmp) to C2P/cubes/P{a}_cubes.txt for all 8 cases, 560 lines each.
+cubes: python3 C2C34/l2cubes.py /opt/work/base.json a /opt/work/P{a}.txt, a = 1..8
+P1 byte-identical to C2P/cubes/P1_cubes.txt (560 lines)
+P2 byte-identical to C2P/cubes/P2_cubes.txt (560 lines)
+P3 byte-identical to C2P/cubes/P3_cubes.txt (560 lines)
+P4 byte-identical to C2P/cubes/P4_cubes.txt (560 lines)
+P5 byte-identical to C2P/cubes/P5_cubes.txt (560 lines)
+P6 byte-identical to C2P/cubes/P6_cubes.txt (560 lines)
+P7 byte-identical to C2P/cubes/P7_cubes.txt (560 lines)
+P8 byte-identical to C2P/cubes/P8_cubes.txt (560 lines)
+
+all checks pass
