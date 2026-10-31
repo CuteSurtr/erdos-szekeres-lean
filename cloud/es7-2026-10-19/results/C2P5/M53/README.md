@@ -7,7 +7,7 @@ Start 2026-10-31 15:24:11Z (epoch 1793460251), END 1793478251 (20:24:11Z). The l
 ## Tools and checks (`tools.txt`)
 - `C2P/vendor/build_tools.sh` from the vendored sources (manifest: all 196 files match; nothing downloaded): CaDiCaL c6073042 (3.0.1), cake_lpr a36874a8, lrat-check 2e3b2dc with the E2 patch.
 - Sanity: the cake_lpr example prints `s VERIFIED UNSAT`; both checkers reject the bad LRAT and accept the good one.
-- Base CNF: header `p cnf 838032 16653336`, sha256 b0061e90…d8ff1 (base.cnf) and 2476faff…bb48 (base.json), both as required.
+- Base CNF: header `p cnf 838032 16653336`, sha256 b0061e90…d8ff1 (base.cnf) and 2476faff…2b48 (base.json), both as required.
 - Cubes P1..P8 from `C2C34/l2cubes.py`: byte-identical to `C2P/cubes/P{a}_cubes.txt`.
 
 ## Units (`units.tsv`, idx ≡ 3 mod 50: 14 units)
