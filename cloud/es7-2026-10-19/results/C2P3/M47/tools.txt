@@ -1,0 +1,31 @@
+Tool sources: vendored cloud/es7-2026-10-19/results/C2P/vendor/tools-src.tar.xz (CaDiCaL c6073042, cake_lpr a36874a8, lrat-check 2e3b2dc + E2 patch); no code cloned or downloaded.
+Task commit Z = 4f653319; checkout HEAD at start: cc4d2e07811716ba4795785068e8f1ac3b09748e
+
+== build_tools.sh output (tar xattr warnings stripped) ==
+manifest: all 196 files match
+lrat-check.c: In function 'main':
+lrat-check.c:399:5: warning: ignoring return value of 'fgets' declared with attribute 'warn_unused_result' [-Wunused-result]
+  399 |     fgets (ignore, sizeof (ignore), cnf);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cadical --version: 3.0.1
+cake_lpr example: s VERIFIED UNSAT
+sanity bad (LRAT on {1},{-1}): lrat-check 'c FAILED: empty clause without a RUP conflict'; cake_lpr 'c Checking failed at line: 0. Reason: pivot must be non-zero'
+sanity good (LRAT on {1},{-1}): lrat-check 'c VERIFIED'; cake_lpr 's VERIFIED UNSAT'
+expected: bad rejected by both, good accepted by both (c VERIFIED, s VERIFIED UNSAT)
+EXIT 0
+
+== base CNF ==
+p cnf 838032 16653336
+b0061e908bff80e6a597f31a6fec1d91e8504aebc09b0bcf41c2ff21604d8ff1  /opt/work/base.cnf
+2476fafff493a763fd7f2883380d359629191912a15a69bcbdfbf49bbf472b48  /opt/work/base.json
+expected p cnf 838032 16653336; b0061e90...d8ff1; 2476faff...b48: OK
+
+== cubes ==
+P1 byte-identical (08cc376d81b4839b)
+P2 byte-identical (77e36b3e19122a82)
+P3 byte-identical (8f4620f24bc44e2f)
+P4 byte-identical (748c6e6271fcc427)
+P5 byte-identical (0c4c6e730f50feed)
+P6 byte-identical (f5bb0eaae55d9a7b)
+P7 byte-identical (b9bc5812900987f7)
+P8 byte-identical (302d8e121fdacf3a)
