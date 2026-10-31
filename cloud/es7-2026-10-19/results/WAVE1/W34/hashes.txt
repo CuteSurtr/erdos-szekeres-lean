@@ -1,0 +1,5 @@
+base m33k7int.sub.cnf regenerated (gen_etv.py 33 7 7 7 --mirror; mirgen.py --interior --yflip-unit):
+  69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d  OK
+verify/ii_wave1.json: 6df36dab6dc93cec474ee7a795b38716bc19bf2d6064468b9c5e38e00901c72e  OK
+results/Mii-S/cases.jsonl: bf77e23c6d9cdffb451a3ae63bdb972b4cc9589fbdca424e9cf0621f9e826f58  OK
+68/68 case CNFs (hullsplit.py case) match the W34 entry and cases.jsonl (assign.json: expected/got/ok)

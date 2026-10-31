@@ -1,0 +1,11 @@
+# PROOF NOT ACCEPTED 0s0-1s0_9_4s0-6s1 at 07:58 UTC (jobs 4): lrat-check 'c VERIFIED', cake_lpr output 'none'.
+# Cause: kernel memcg OOM killer killed cake_lpr (dmesg below). Re-run alone:
+node 0s0-1s0_9_4s0-6s1 units 396 sha 4b0b02b212bceb5ec1ebc1e403f2641e66193f25626fc4bd0808eb10386e472d
+['s UNSATISFIABLE'] solve_s 15.1 proof_bytes 88983692
+('c VERIFIED', 's VERIFIED UNSAT', True) check_s 17.7
+[ 1349.059686] cake_lpr invoked oom-killer: gfp_mask=0x100cca(GFP_HIGHUSER_MOVABLE), order=0, oom_score_adj=0
+[ 1349.221852] oom-kill:constraint=CONSTRAINT_MEMCG,nodemask=(null),cpuset=/,mems_allowed=0,oom_memcg=/process_api/01a1583c-abc6-77af-8e7d-c7f8d5d98835/claude-code-bash,task_memcg=/process_api/01a1583c-abc6-77af-8e7d-c7f8d5d98835/claude-code-bash,task=cake_lpr,pid=3686,uid=0
+[ 1349.227807] Memory cgroup out of memory: Killed process 3686 (cake_lpr) total-vm:8391796kB, anon-rss:4194432kB, file-rss:1308kB, shmem-rss:0kB, UID:0 pgtables:8272kB oom_score_adj:0
+[ 1709.348317] cake_lpr invoked oom-killer: gfp_mask=0x100cca(GFP_HIGHUSER_MOVABLE), order=0, oom_score_adj=0
+[ 1709.483679] oom-kill:constraint=CONSTRAINT_MEMCG,nodemask=(null),cpuset=/,mems_allowed=0,oom_memcg=/process_api/01a1583c-abc6-77af-8e7d-c7f8d5d98835/claude-code-bash,task_memcg=/process_api/01a1583c-abc6-77af-8e7d-c7f8d5d98835/claude-code-bash,task=cake_lpr,pid=4311,uid=0
+[ 1709.489811] Memory cgroup out of memory: Killed process 4311 (cake_lpr) total-vm:8391796kB, anon-rss:4202112kB, file-rss:1380kB, shmem-rss:0kB, UID:0 pgtables:8276kB oom_score_adj:0

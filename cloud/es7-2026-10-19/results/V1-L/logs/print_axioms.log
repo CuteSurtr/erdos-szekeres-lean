@@ -1,0 +1,11 @@
+V1L.hullVertexLine_of_leaves : (∀ c ∈ V1L.hullLeaves, ¬ETV.DimacsSatisfiable (Mir.cubeCnf (Mir.hullCnf 33 7) c)) →
+  ∀ (S : Finset ErdosSzekeres.Point) (a u c : ErdosSzekeres.Point),
+    u 0 ^ 2 + u 1 ^ 2 = 1 →
+      ErdosSzekeres.GeneralPosition S →
+        S.card = 33 →
+          (∀ q ∈ S, Mir.reflLine a u q ∈ S) →
+            c ∈ S → Mir.reflLine a u c = c → c ∉ (convexHull ℝ) ↑(S.erase c) → ErdosSzekeres.HasConvexNGon 7 S
+'V1L.hullLeaves_coverCheck' does not depend on any axioms
+'V1L.hullCnf_unsat_of_leaves' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V1L.hullVertexY_of_leaves' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V1L.hullVertexLine_of_leaves' depends on axioms: [propext, Classical.choice, Quot.sound]

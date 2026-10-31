@@ -1,0 +1,193 @@
+{
+ "total": {
+  "roots": 16,
+  "closed_leaves": 545,
+  "closed_lrat_verified": 545,
+  "unsat_not_verified": 0,
+  "sat_leaves": 0,
+  "open_leaves": 416,
+  "splits": 15,
+  "closed_weight": "19/32",
+  "roots_fully_closed": 9,
+  "closed_weight_of_shard": 0.59375,
+  "shard_fully_closed": false
+ },
+ "per_root": [
+  {
+   "root": 2,
+   "closed": 64,
+   "open": 0,
+   "sat": 0,
+   "unsat_unverified": 0,
+   "closed_weight": "1",
+   "closed_weight_f": 1.0,
+   "tree_complete": true,
+   "fully_closed": true
+  },
+  {
+   "root": 10,
+   "closed": 64,
+   "open": 0,
+   "sat": 0,
+   "unsat_unverified": 0,
+   "closed_weight": "1",
+   "closed_weight_f": 1.0,
+   "tree_complete": true,
+   "fully_closed": true
+  },
+  {
+   "root": 18,
+   "closed": 64,
+   "open": 0,
+   "sat": 0,
+   "unsat_unverified": 0,
+   "closed_weight": "1",
+   "closed_weight_f": 1.0,
+   "tree_complete": true,
+   "fully_closed": true
+  },
+  {
+   "root": 26,
+   "closed": 64,
+   "open": 0,
+   "sat": 0,
+   "unsat_unverified": 0,
+   "closed_weight": "1",
+   "closed_weight_f": 1.0,
+   "tree_complete": true,
+   "fully_closed": true
+  },
+  {
+   "root": 34,
+   "closed": 64,
+   "open": 0,
+   "sat": 0,
+   "unsat_unverified": 0,
+   "closed_weight": "1",
+   "closed_weight_f": 1.0,
+   "tree_complete": true,
+   "fully_closed": true
+  },
+  {
+   "root": 42,
+   "closed": 64,
+   "open": 0,
+   "sat": 0,
+   "unsat_unverified": 0,
+   "closed_weight": "1",
+   "closed_weight_f": 1.0,
+   "tree_complete": true,
+   "fully_closed": true
+  },
+  {
+   "root": 50,
+   "closed": 1,
+   "open": 0,
+   "sat": 0,
+   "unsat_unverified": 0,
+   "closed_weight": "1",
+   "closed_weight_f": 1.0,
+   "tree_complete": true,
+   "fully_closed": true
+  },
+  {
+   "root": 58,
+   "closed": 64,
+   "open": 0,
+   "sat": 0,
+   "unsat_unverified": 0,
+   "closed_weight": "1",
+   "closed_weight_f": 1.0,
+   "tree_complete": true,
+   "fully_closed": true
+  },
+  {
+   "root": 66,
+   "closed": 64,
+   "open": 0,
+   "sat": 0,
+   "unsat_unverified": 0,
+   "closed_weight": "1",
+   "closed_weight_f": 1.0,
+   "tree_complete": true,
+   "fully_closed": true
+  },
+  {
+   "root": 74,
+   "closed": 0,
+   "open": 64,
+   "sat": 0,
+   "unsat_unverified": 0,
+   "closed_weight": "0",
+   "closed_weight_f": 0.0,
+   "tree_complete": true,
+   "fully_closed": false
+  },
+  {
+   "root": 82,
+   "closed": 32,
+   "open": 32,
+   "sat": 0,
+   "unsat_unverified": 0,
+   "closed_weight": "1/2",
+   "closed_weight_f": 0.5,
+   "tree_complete": true,
+   "fully_closed": false
+  },
+  {
+   "root": 90,
+   "closed": 0,
+   "open": 64,
+   "sat": 0,
+   "unsat_unverified": 0,
+   "closed_weight": "0",
+   "closed_weight_f": 0.0,
+   "tree_complete": true,
+   "fully_closed": false
+  },
+  {
+   "root": 98,
+   "closed": 0,
+   "open": 64,
+   "sat": 0,
+   "unsat_unverified": 0,
+   "closed_weight": "0",
+   "closed_weight_f": 0.0,
+   "tree_complete": true,
+   "fully_closed": false
+  },
+  {
+   "root": 106,
+   "closed": 0,
+   "open": 64,
+   "sat": 0,
+   "unsat_unverified": 0,
+   "closed_weight": "0",
+   "closed_weight_f": 0.0,
+   "tree_complete": true,
+   "fully_closed": false
+  },
+  {
+   "root": 114,
+   "closed": 0,
+   "open": 64,
+   "sat": 0,
+   "unsat_unverified": 0,
+   "closed_weight": "0",
+   "closed_weight_f": 0.0,
+   "tree_complete": true,
+   "fully_closed": false
+  },
+  {
+   "root": 122,
+   "closed": 0,
+   "open": 64,
+   "sat": 0,
+   "unsat_unverified": 0,
+   "closed_weight": "0",
+   "closed_weight_f": 0.0,
+   "tree_complete": true,
+   "fully_closed": false
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+Input commit Z = 066eaa9 (git worktree /opt/in), ROOT=/opt/in/cloud/es7-2026-10-19; verify/v3 at bdf319c
+v3_jsonl_leaves.py results/WAVE1 jtree1: dirs 119 leaf lines 30151 skipped records 71
+v3_jsonl_leaves.py results/WAVE2 jtree2: dirs 86 leaf lines 5156 skipped records 0
+v3_jsonl_leaves.py results/WAVE3 jtree3: dirs 5 leaf lines 232 skipped records 0
+v3_manifest.py (results/WAVE1 jtree1 results/WAVE2 jtree2 results/WAVE3 jtree3): leaves 35153 cases with leaves 253 problems 0
+M.jsonl sha256 22b6f6a782cd2b2e6319c61c7bc7029032d10aa5fd583dcfbba47ec627e1c549 (35153 lines)
+Step 3: 21 JSONL files (results/V3T/**/*.jsonl, results/V3A/*/out.jsonl; no results/V3B/*/out.jsonl at Z)
+VERIFIED keys 10121; n = 25032
+Mt.jsonl sha256 605e39d27b8a11c8b8de36b167d1760f91dc3e6c4e49a2e570bf607689e7cfe7
+Shard 3 of 16: 1565 leaves (idx % 16 == 3)

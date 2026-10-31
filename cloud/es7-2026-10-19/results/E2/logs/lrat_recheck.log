@@ -1,0 +1,20 @@
+== n33k7d3direct (d3cnf.py 33 7 --kgon direct)  Tue Oct 20 00:29:13 UTC 2026
+sha256 7796d999b0dd39d9ea05ffd7da86da42dba25c771c699d21c052c5cc57cad95e
+s UNSATISFIABLE
+cadical solve+proof 36s, proof_bytes 152917351
+lrat-check-E2patch: c VERIFIED  (7s)
+cake_lpr: s VERIFIED UNSAT  (58s)
+== n33k7d3 (d3cnf.py 33 7 )  Tue Oct 20 00:32:43 UTC 2026
+sha256 72ebbae027ac5e9264bfe00da8003774049875e1fecc94f60d4baf97af13fa01
+s UNSATISFIABLE
+cadical solve+proof 38s, proof_bytes 170827636
+lrat-check-E2patch: c VERIFIED  (5s)
+cake_lpr: s VERIFIED UNSAT  (43s)
+done Tue Oct 20 00:35:05 UTC 2026
+== n33k7m3refl (c3refl.py on n33k7m3)  Tue Oct 20 00:35:19 UTC 2026
+sha256 cc329387c2c075670c9832b2969b9706c3b556cb25b9177f24f71497c2d9a781
+s UNSATISFIABLE
+cadical solve+proof 78s, proof_bytes 650241362
+lrat-check-E2patch: c VERIFIED (17s)
+cake_lpr: s VERIFIED UNSAT  (132s)
+done Tue Oct 20 00:39:10 UTC 2026

@@ -1,0 +1,124 @@
+V2L.mirrorExclusionLine_final : (∀ c ∈ V1L.hullLeaves, ¬ETV.DimacsSatisfiable (Mir.cubeCnf (Mir.hullCnf 33 7) c)) →
+  V2L.RootCertificate →
+    V2L.UpCertificates →
+      (∀ p ∈ V2L.caseTable,
+          ∀ l ∈ (V2L.treeOf p.1).leaves,
+            ¬ETV.DimacsSatisfiable (Mir.cubeCnf (Mir.cubeCnf (Mir.interiorCnf 33 7) p.2) l)) →
+        Mir.MirrorExclusionLine
+V2L.axisInteriorLine_final : V2L.RootCertificate →
+  V2L.UpCertificates →
+    (∀ p ∈ V2L.caseTable,
+        ∀ l ∈ (V2L.treeOf p.1).leaves,
+          ¬ETV.DimacsSatisfiable (Mir.cubeCnf (Mir.cubeCnf (Mir.interiorCnf 33 7) p.2) l)) →
+      ∀ (S : Finset ErdosSzekeres.Point) (a u c : ErdosSzekeres.Point),
+        u 0 ^ 2 + u 1 ^ 2 = 1 →
+          ErdosSzekeres.GeneralPosition S →
+            S.card = 33 →
+              (∀ q ∈ S, Mir.reflLine a u q ∈ S) →
+                c ∈ S → Mir.reflLine a u c = c → c ∈ (convexHull ℝ) ↑(S.erase c) → ErdosSzekeres.HasConvexNGon 7 S
+V1L.hullVertexLine_of_leaves : (∀ c ∈ V1L.hullLeaves, ¬ETV.DimacsSatisfiable (Mir.cubeCnf (Mir.hullCnf 33 7) c)) →
+  ∀ (S : Finset ErdosSzekeres.Point) (a u c : ErdosSzekeres.Point),
+    u 0 ^ 2 + u 1 ^ 2 = 1 →
+      ErdosSzekeres.GeneralPosition S →
+        S.card = 33 →
+          (∀ q ∈ S, Mir.reflLine a u q ∈ S) →
+            c ∈ S → Mir.reflLine a u c = c → c ∉ (convexHull ℝ) ↑(S.erase c) → ErdosSzekeres.HasConvexNGon 7 S
+def Mir.MirrorExclusionLine : Prop :=
+∀ (S : Finset ErdosSzekeres.Point) (a u : ErdosSzekeres.Point),
+  u 0 ^ 2 + u 1 ^ 2 = 1 →
+    ErdosSzekeres.GeneralPosition S → S.card = 33 → (∀ q ∈ S, Mir.reflLine a u q ∈ S) → ErdosSzekeres.HasConvexNGon 7 S
+def Mir.reflLine : ErdosSzekeres.Point → ErdosSzekeres.Point → ErdosSzekeres.Point → ErdosSzekeres.Point :=
+fun a u p =>
+  have d := (p 0 - a 0) * u 0 + (p 1 - a 1) * u 1;
+  ![a 0 + 2 * d * u 0 - (p 0 - a 0), a 1 + 2 * d * u 1 - (p 1 - a 1)]
+def ErdosSzekeres.GeneralPosition : Finset ErdosSzekeres.Point → Prop :=
+fun s => ∀ a ∈ s, ∀ b ∈ s, ∀ c ∈ s, a ≠ b → a ≠ c → b ≠ c → ¬Collinear ℝ {a, b, c}
+def ErdosSzekeres.ConvexPosition : Finset ErdosSzekeres.Point → Prop :=
+fun s => ConvexIndependent ℝ fun p => ↑p
+def ErdosSzekeres.HasConvexNGon : ℕ → Finset ErdosSzekeres.Point → Prop :=
+fun n s => ∃ t ⊆ s, t.card = n ∧ ErdosSzekeres.ConvexPosition t
+@[reducible] def ErdosSzekeres.Point : Type :=
+Fin 2 → ℝ
+def ETV.DimacsSatisfiable : List (List ℤ) → Prop :=
+fun cls => ∃ ν, ETV.DimacsSat cls ν
+def ETV.DimacsSat : List (List ℤ) → (ℕ → Bool) → Prop :=
+fun cls ν => ∀ c ∈ cls, ∃ l ∈ c, 0 < l ∧ ν l.natAbs = Bool.true ∨ l < 0 ∧ ν l.natAbs = Bool.false
+def Mir.cubeCnf : List (List ℤ) → List ℤ → List (List ℤ) :=
+fun F cube => F ++ List.map (fun z => [z]) cube
+def Mir.coverCheck : List (List ℤ) → Bool :=
+fun cubes => Mir.coverAux ((List.map List.length cubes).sum + 1) cubes
+def Mir.coverAux : ℕ → List (List ℤ) → Bool :=
+fun x x_1 =>
+  Nat.brecOn (motive := fun x => List (List ℤ) → Bool) x
+    (fun x f x_2 =>
+      (match (motive := (x : ℕ) → List (List ℤ) → Nat.below (motive := fun x => List (List ℤ) → Bool) x → Bool) x,
+          x_2 with
+        | 0, x => fun x => Bool.false
+        | fuel.succ, cubes => fun x =>
+          if cubes.any List.isEmpty = Bool.true then Bool.true
+          else
+            match cubes with
+            | [] => Bool.false
+            | [] :: tail => Bool.true
+            | (z :: tail) :: tail_1 => z != 0 && x.1 (Mir.restrict z cubes) && x.1 (Mir.restrict (-z) cubes))
+        f)
+    x_1
+def Mir.restrict : ℤ → List (List ℤ) → List (List ℤ) :=
+fun z cubes =>
+  List.filterMap
+    (fun c => if c.contains (-z) = Bool.true then Option.none else Option.some (List.filter (fun x => x != z) c)) cubes
+def Mir.Covers : List (List ℤ) → Prop :=
+fun cubes => ∀ (ν : ℕ → Bool), ∃ c ∈ cubes, Mir.CubeSat ν c
+def Mir.CubeSat : (ℕ → Bool) → List ℤ → Prop :=
+fun ν cube => ∀ z ∈ cube, Mir.LitSat ν z
+def Mir.LitSat : (ℕ → Bool) → ℤ → Prop :=
+fun ν z => 0 < z ∧ ν z.natAbs = Bool.true ∨ z < 0 ∧ ν z.natAbs = Bool.false
+def V2L.CTree.leaves : V2L.CTree → List (List ℤ) :=
+fun x =>
+  x.brecOn
+    (fun x f =>
+      (match (motive := (x : V2L.CTree) → x.below → List (List ℤ)) x with
+        | V2L.CTree.leaf => fun x => [[]]
+        | V2L.CTree.node kids => fun x => x.1)
+        f)
+    (fun x f =>
+      (match (motive := (x : List (List ℤ × V2L.CTree)) → V2L.CTree.below_1 x → List (List ℤ)) x with
+        | [] => fun x => []
+        | (s, t) :: rest => fun x => List.map (fun x => s ++ x) x.1.2.1 ++ x.2.1)
+        f)
+    fun t f => PUnit.unit
+def V2L.CTree.check : V2L.CTree → Bool :=
+fun x =>
+  x.brecOn
+    (fun x f =>
+      (match (motive := (x : V2L.CTree) → x.below → Bool) x with
+        | V2L.CTree.leaf => fun x => Bool.true
+        | V2L.CTree.node kids => fun x => Mir.coverCheck (List.map Prod.fst kids) && x.1)
+        f)
+    (fun x f =>
+      (match (motive := (x : List (List ℤ × V2L.CTree)) → V2L.CTree.below_1 x → Bool) x with
+        | [] => fun x => Bool.true
+        | (s, t) :: rest => fun x => x.1.2.1 && x.2.1)
+        f)
+    fun t f => PUnit.unit
+def V2L.RootCertificate : Prop :=
+¬ETV.DimacsSatisfiable (Mir.interiorCnf 33 7 ++ List.map V2L.negClause V2L.upCubes)
+def V2L.UpCertificates : Prop :=
+∀ p ∈ V2L.upTable,
+  ¬ETV.DimacsSatisfiable (Mir.cubeCnf (Mir.interiorCnf 33 7) p.2 ++ List.map V2L.negClause (V2L.casesOf p.1))
+def V2L.caseTable : List ((List ℕ × List ℕ) × List ℤ) :=
+V2L.caseSpecs.zip V2L.caseCubes
+def V2L.treeOf : List ℕ × List ℕ → V2L.CTree :=
+fun s =>
+  match List.find? (fun x => x.1 == s) V2L.treeTable with
+  | Option.some p => p.2
+  | Option.none => V2L.CTree.node []
+def V2L.negClause : List ℤ → List ℤ :=
+fun c => List.map (fun z => -z) c
+'V2L.mirrorExclusionLine_final' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V2L.axisInteriorLine_final' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V1L.hullVertexLine_of_leaves' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V2L.treeOf_check' depends on axioms: [propext]
+'V1L.hullLeaves_coverCheck' does not depend on any axioms
+'Mir.mirrorExclusionLine_of_unsat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Mir.interiorTieBreak_holds' depends on axioms: [propext, Classical.choice, Quot.sound]

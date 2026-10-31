@@ -1,0 +1,48 @@
+{
+ "seed": 1,
+ "xonly_clauses_m33k7": 332800,
+ "xonly_clauses_hm33k7": 332816,
+ "xonly_clauses_m33k7int.sub": 163443,
+ "xonly_clauses_hm33k7.sub": 183776,
+ "A_sets": 1000,
+ "A1_direct_mirror_identity_violations": 0,
+ "A2_interior_clause_matches_geometry": "1000/1000",
+ "A3_projective_orientation_mismatches_in_sampled_triples": 0,
+ "A_m33k7.xonly_SAT": "1000/1000",
+ "A_m33k7int.sub.xonly_SAT": "500/500",
+ "A_hm33k7.xonly_SAT": "500/500",
+ "A_hm33k7.sub.xonly_SAT": "500/500",
+ "A4_m33k7_full_unsat_iff_7gon": "200/200",
+ "A4_min_7gons_in_random_sets": 25411,
+ "A4_hm33k7_full_UNSAT": "100/100",
+ "A_time_s": 59.6,
+ "B_nonhull_N7_k5": {
+  "agree": "2000/2000",
+  "kgon_free_sets": 229
+ },
+ "B_hull_N7_k5": {
+  "agree": "2000/2000",
+  "kgon_free_sets": 56
+ },
+ "B_nonhull_N8_k5": {
+  "agree": "2000/2000",
+  "kgon_free_sets": 164
+ },
+ "B_nonhull_N9_k5": {
+  "agree": "2000/2000",
+  "kgon_free_sets": 0
+ },
+ "B_hull_N9_k5": {
+  "agree": "2000/2000",
+  "kgon_free_sets": 0
+ },
+ "B_nonhull_N11_k6": {
+  "agree": "2000/2000",
+  "kgon_free_sets": 17
+ },
+ "B_hull_N11_k6": {
+  "agree": "2000/2000",
+  "kgon_free_sets": 18
+ },
+ "B_time_s": 7.8
+}

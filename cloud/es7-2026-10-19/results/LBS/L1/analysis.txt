@@ -1,0 +1,28 @@
+== snap/s8.best.txt
+n 33 convex k-gons k=4..7: 21778 29245 11169 1
+convex 7-gons: [(1, 5, 20, 26, 28, 29, 31)] 
+distinct convex 6-gons inside a convex 7-gon: 7 of 11169
+points in some 7-gon: 7 max participation: 1
+deleting one point leaves 0 convex 7-gons for: [1, 5, 20, 26, 28, 29, 31]
+hull layers: [5, 4, 5, 4, 6, 5, 3, 1]
+== snap/s5.best.txt
+n 33 convex k-gons k=4..7: 23240 35683 16814 1
+convex 7-gons: [(1, 3, 4, 7, 20, 29, 31)] 
+distinct convex 6-gons inside a convex 7-gon: 7 of 16814
+points in some 7-gon: 7 max participation: 1
+deleting one point leaves 0 convex 7-gons for: [1, 3, 4, 7, 20, 29, 31]
+hull layers: [4, 6, 6, 5, 5, 5, 2]
+== snap/s1.best.txt
+n 33 convex k-gons k=4..7: 23564 39146 20891 1
+convex 7-gons: [(10, 11, 12, 13, 14, 30, 32)] 
+distinct convex 6-gons inside a convex 7-gon: 7 of 20891
+points in some 7-gon: 7 max participation: 1
+deleting one point leaves 0 convex 7-gons for: [10, 11, 12, 13, 14, 30, 32]
+hull layers: [5, 6, 6, 5, 6, 4, 1]
+== snap/s6.best.txt
+n 33 convex k-gons k=4..7: 24090 44886 30553 1
+convex 7-gons: [(5, 16, 18, 19, 21, 25, 29)] 
+distinct convex 6-gons inside a convex 7-gon: 7 of 30553
+points in some 7-gon: 7 max participation: 1
+deleting one point leaves 0 convex 7-gons for: [5, 16, 18, 19, 21, 25, 29]
+hull layers: [5, 5, 6, 5, 6, 5, 1]

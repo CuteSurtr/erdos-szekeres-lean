@@ -1,0 +1,13 @@
+== finding 2: run A of C3AUDIT3 (root 0s0, --caps 600 --cadopts=-c,1, no sigma split) with the new close_tree
+last line: {"root": "0s0", "open_frontier": 52, "unsplittable": 52, "unsplittable_nodes": ["0s0_1_2_3_4", "0s0_1_2_3s0-4s1", "0s0_1...
+new: split records with 0 children: 0 | old (C3AUDIT3 run A, C3U 95cafa93): 52
+new open_frontier 52 unsplittable 52 | unsplittable_nodes == the old 0-children split nodes: True
+all other records equal to run A (apart from timings and base_sha256): True 173 173
+== finding 2, restart: the new close_tree on a copy of run A's OUT (old format, 52 split records with 0 children), --hours 0
+old: {"root": "0s0", "open_frontier": 0}
+new: {"root": "0s0", "open_frontier": 52, "unsplittable": 0, "unsplittable_nodes": []}...
+== finding 3: OUT holds one certified sigma_cubes.py record {node: 0s0_1, cube: {2: 0}}; ROOT 0s0_1, --hours 0
+OLD (root 0s0_1): {"root": "0s0_1", "open_frontier": 0}
+OLD (root 0s0_1__2s0): {"root": "0s0_1__2s0", "open_frontier": 1}
+NEW (root 0s0_1): {"root": "0s0_1", "open_frontier": 1, "unsplittable": 0, "unsplittable_nodes": []}
+NEW (root 0s0_1__2s0): {"root": "0s0_1__2s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}

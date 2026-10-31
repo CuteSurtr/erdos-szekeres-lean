@@ -1,0 +1,16 @@
+cnf cnf/n33k7d3direct.cnf
+sha256 7796d999b0dd39d9ea05ffd7da86da42dba25c771c699d21c052c5cc57cad95e
+solver_options --elim=0
+Mon Oct 19 22:05:10 KST 2026
+s UNSATISFIABLE
+      160.31 real        15.93 user         1.29 sys
+          1134886912  maximum resident set size
+proof_bytes 152917351
+Mon Oct 19 22:07:50 KST 2026
+c parsed a formula with 7897 variables and 4535727 clauses
+c VERIFIED
+c verification time = 40.79 secs
+       40.80 real         4.13 user         0.20 sys
+           276955136  maximum resident set size
+lrat_check_exit 0
+Mon Oct 19 22:08:31 KST 2026

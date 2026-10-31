@@ -1,0 +1,6 @@
+C3-S/C3a tools: git worktree /opt/c3s at 8dc27c3 (unmodified; /opt/work writable, no diff)
+cadical: arminbiere/cadical c60730422e758ef1cebe7aeddf2dda31c996bf04 (3.0.1), ./configure && make
+cake_lpr: tanyongkiam/cake_lpr a36874a8b750b43fe4b385b8ddbf5b033e46a3fa, make cake_lpr; example.cnf/example.lpr -> s VERIFIED UNSAT
+lrat-check: marijnheule/drat-trim 2e3b2dc0ecf938addbd779d42877b6ed69d9a985 + results/E2/tools/lrat-check-E2.patch, gcc -O2
+base.cnf: gen_case.py 11 7 none, sha256 bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da (matches)
+roots: index = 17 mod 24 of sorted depth-2 names (close_tree.py SHARD expression); 68 roots; identical to manifest_depth2.tsv depth-2 list (1630 names, sha256 of sorted list 5412782c... matches shard_plan)

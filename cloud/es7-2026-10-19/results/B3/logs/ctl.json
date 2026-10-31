@@ -1,0 +1,170 @@
+{
+ "summary": {
+  "n": 4,
+  "all_agree": true,
+  "all_match_expected": true,
+  "all_models_ok": true
+ },
+ "controls": [
+  {
+   "k": 6,
+   "a": 5,
+   "u": 6,
+   "N": 16,
+   "conj_max": 15,
+   "expected": "UNSAT",
+   "runs": {
+    "ours": {
+     "result": "UNSAT",
+     "time_s": 128.129,
+     "vars": 3424,
+     "clauses": 27148
+    },
+    "bb": {
+     "result": "UNSAT",
+     "time_s": 114.258,
+     "vars": 3338,
+     "clauses": 22646
+    }
+   },
+   "agree": true,
+   "match_expected": true,
+   "models_ok": true
+  },
+  {
+   "k": 7,
+   "a": 4,
+   "u": 7,
+   "N": 16,
+   "conj_max": 16,
+   "expected": "SAT",
+   "runs": {
+    "ours": {
+     "result": "SAT",
+     "time_s": 0.025,
+     "vars": 3230,
+     "clauses": 26032,
+     "check": {
+      "N": 16,
+      "a": 4,
+      "u": 7,
+      "k": 7,
+      "missing": 0,
+      "sig_viol": 0,
+      "caps_a": 0,
+      "cups_u": 0,
+      "gons_cc": 0,
+      "gons_4pt": 0,
+      "max_cap": 3,
+      "max_cup": 6,
+      "ok": true
+     }
+    },
+    "bb": {
+     "result": "SAT",
+     "time_s": 0.019,
+     "vars": 3171,
+     "clauses": 21717,
+     "check": {
+      "N": 16,
+      "a": 4,
+      "u": 7,
+      "k": 7,
+      "missing": 0,
+      "sig_viol": 0,
+      "caps_a": 0,
+      "cups_u": 0,
+      "gons_cc": 0,
+      "gons_4pt": 0,
+      "max_cap": 3,
+      "max_cup": 6,
+      "ok": true
+     }
+    }
+   },
+   "agree": true,
+   "match_expected": true,
+   "models_ok": true
+  },
+  {
+   "k": 7,
+   "a": 4,
+   "u": 7,
+   "N": 17,
+   "conj_max": 16,
+   "expected": "UNSAT",
+   "runs": {
+    "ours": {
+     "result": "UNSAT",
+     "time_s": 1.403,
+     "vars": 3933,
+     "clauses": 33816
+    },
+    "bb": {
+     "result": "UNSAT",
+     "time_s": 1.068,
+     "vars": 3862,
+     "clauses": 28174
+    }
+   },
+   "agree": true,
+   "match_expected": true,
+   "models_ok": true
+  },
+  {
+   "k": 7,
+   "a": 5,
+   "u": 7,
+   "N": 26,
+   "conj_max": 26,
+   "expected": "SAT",
+   "runs": {
+    "ours": {
+     "result": "SAT",
+     "time_s": 0.234,
+     "vars": 17831,
+     "clauses": 222991,
+     "check": {
+      "N": 26,
+      "a": 5,
+      "u": 7,
+      "k": 7,
+      "missing": 0,
+      "sig_viol": 0,
+      "caps_a": 0,
+      "cups_u": 0,
+      "gons_cc": 0,
+      "gons_4pt": 0,
+      "max_cap": 4,
+      "max_cup": 6,
+      "ok": true
+     }
+    },
+    "bb": {
+     "result": "SAT",
+     "time_s": 0.184,
+     "vars": 17308,
+     "clauses": 185699,
+     "check": {
+      "N": 26,
+      "a": 5,
+      "u": 7,
+      "k": 7,
+      "missing": 0,
+      "sig_viol": 0,
+      "caps_a": 0,
+      "cups_u": 0,
+      "gons_cc": 0,
+      "gons_4pt": 0,
+      "max_cap": 4,
+      "max_cup": 6,
+      "ok": true
+     }
+    }
+   },
+   "agree": true,
+   "match_expected": true,
+   "models_ok": true
+  }
+ ]
+}

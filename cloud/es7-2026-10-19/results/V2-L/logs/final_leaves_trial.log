@@ -1,0 +1,26 @@
+# Trial on the 406 closed cases at 3eb7d7d0 (60,005 leaves), before READY.json
+## original gen_leaves.py: lake build V2L.Final
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: V2L/Leaves.lean:430:2: Unknown identifier `leafPacked.map`
+error: Lean exited with code 1
+Some required targets logged failures:
+- V2L.Leaves
+error: build failed
+
+real	8m10.448s
+user	7m56.754s
+sys	0m7.440s
+EXIT 1
+## original + set_option maxHeartbeats 0: lake env lean
+
+real	8m38.120s
+user	8m23.015s
+sys	0m11.615s
+EXIT 134
+## chunked (500 leaves per def): lake env lean
+
+real	0m49.287s
+user	1m0.125s
+sys	0m6.645s
+EXIT 0

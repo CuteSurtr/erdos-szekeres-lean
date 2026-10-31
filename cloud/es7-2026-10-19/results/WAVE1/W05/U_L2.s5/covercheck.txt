@@ -1,0 +1,6 @@
+results/Mii-S/scripts/covercheck.py (Python port of H3 Mir.coverCheck)
+top.icnf alone:                                    s COVERED 128     (march -d 7 cubes partition the case)
+leaves.icnf + the 117 top cubes of other shards:   s COVERED 821
+leaves.icnf alone:                                 s NOT COVERED 704 (expected: covers only shard 5)
+per own top cube i (leaves with prefix top[i], prefix stripped), i = 5,17,29,41,53,65,77,89,101,113,125:
+  each: s COVERED 64

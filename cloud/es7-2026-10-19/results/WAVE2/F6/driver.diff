@@ -1,0 +1,28 @@
+F6 driver review. close_march.py = WAVE2/F2/close_march.py plus one guard (diff at the end).
+Checked against WAVE1/W19/scripts/close_march.py (F2/driver.diff is the W19 -> F2 diff):
+(a) fresh directory per job: solve() uses tempfile.mkdtemp(prefix="s_<k>_", dir=WORK) and march()
+    uses tempfile.mkdtemp(prefix="m_<tag>_", dir=WORK); both removed after use. No shared s_k names
+    (AUDIT RISK-3b). WORK=/opt/work/tmp, used only by this one driver process.      OK
+(b) finalize() writes leaves.icnf and open.icnf with tempfile.mkstemp in OUTDIR, then os.replace
+    (AUDIT RISK-1).                                                                    OK
+(c) when leaves.jsonl does not exist, the first record written is {"case": NAME, "case_sha256": sha
+    of the case CNF}; checked in U_L8/leaves.jsonl line 1 (U_L8, 6c05114f...).        OK
+Also: leaves.icnf holds only records with status UNSAT and cake_lpr == "s VERIFIED UNSAT" (AUDIT
+BUG-1); other cake verdicts become UNSAT_UNCHECKED and stay open. SKIP records (cubes listed in
+--skip, built by mkskip.py from others' verified leaves) count as closed for open.icnf but are
+never written to leaves.icnf. leaves.jsonl did not exist before this run (no stale records, RISK-3c).
+Case CNF sha checked by hand before the run (6c05114f... = cases.jsonl); the driver records it.
+F6 change: if march_cu returns no cubes or an empty cube (refuted, `a 0`), the child would equal
+the parent and loop forever (AUDIT NOTE-1); such a record gets status SPLIT_FAIL and the cube stays open.
+
+--- ../F2/close_march.py	2026-10-20 10:24:45.991169853 +0000
++++ close_march.py	2026-10-20 10:26:55.617641309 +0000
+@@ -101,6 +101,8 @@
+     else:
+         r["status"] = "SPLIT"; subs, ms, line = march(cube, a.split_depth, k)
+         r.update(split_s=round(ms, 1), march=line, nsub=len(subs), subs=subs)
++        if not subs or any(not x for x in subs):  # F6: march refuted it or gave no cubes; child == parent would loop
++            r["status"] = "SPLIT_FAIL"; del r["subs"]
+     c1 = os.times(); r["cpu_s"] = round(c1.children_user + c1.children_system - c0.children_user - c0.children_system, 1)
+     subprocess.run(["rm", "-rf", w]); rec(r)
+     if r["status"] == "SPLIT":

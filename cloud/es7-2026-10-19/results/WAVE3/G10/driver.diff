@@ -1,0 +1,110 @@
+# G10 driver check
+WAVE3/G10/close_march.py is a byte-identical copy of WAVE2/F2/close_march.py (sha256 below).
+Diff below: WAVE1/W19/scripts/close_march.py -> WAVE3/G10/close_march.py (regenerated here; equals F2's driver.diff in content).
+
+Checked by reading the code:
+(a) fresh directory per job: march() uses tempfile.mkdtemp(prefix="m_<tag>_", dir=WORK) and solve() uses
+    tempfile.mkdtemp(prefix="s_<k>_", dir=WORK); both directories are removed after the job. No shared s_k names. OK.
+(b) atomic writes: finalize() writes leaves.icnf and open.icnf through tempfile.mkstemp in the output dir and
+    os.replace() into place; every line is written as "a ... 0\n". OK.
+(c) first leaves.jsonl record: if leaves.jsonl does not exist, the first record is {"case": --name, "case_sha256": sha256(case CNF)}. OK.
+Also: a leaf enters leaves.icnf (and the closed set) only when status == UNSAT and cake_lpr == "s VERIFIED UNSAT" (BUG-1 fixed);
+non-verified UNSAT is UNSAT_UNCHECKED and stays open; SPLIT records carry subs so the frontier is rebuilt on restart;
+--skip is not used by G10. Known liveness caveat (AUDIT NOTE-1): if march_cu refutes a split outright (writes "a 0"),
+the child equals its parent and is re-solved; watched for during the run.
+
+2e0975aa98c7dbcc2cf535993b54f57db764f7bf50f64fc54b9ff2860e67c855  WAVE3/G10/close_march.py
+45e01499ff28a95f08ded38c9a228927447d995c44e38e35a9ab9bcccaf3b429  WAVE1/W19/scripts/close_march.py
+
+--- WAVE1/W19/scripts/close_march.py	2026-10-20 10:56:57.234975722 +0000
++++ WAVE3/G10/close_march.py	2026-10-20 10:57:42.381198514 +0000
+@@ -13,14 +13,17 @@
+ - no cube is started when less than TIMEOUT seconds remain before the deadline;
+ - the solver stdout is kept for SAT answers (SAT_k.cnf, SAT_k.out).
+ """
+-import argparse, hashlib, json, os, re, subprocess, threading, time
++import argparse, hashlib, json, os, re, subprocess, tempfile, threading, time
+ from concurrent.futures import ThreadPoolExecutor
+ BIN = os.environ.get("BIN", "/tmp/claude-0/w/bin")
++WORK = os.environ.get("WORK", "/opt/work/tmp"); os.makedirs(WORK, exist_ok=True)  # F2: scratch root for mkdtemp
+ ap = argparse.ArgumentParser(); ap.add_argument("case"); ap.add_argument("out")
+ ap.add_argument("--depth", type=int, default=7); ap.add_argument("--timeout", type=int, default=300)
+ ap.add_argument("--split-depth", type=int, default=6); ap.add_argument("--jobs", type=int, default=2)
+ ap.add_argument("--hours", type=float, default=1e9); ap.add_argument("--top")
+ ap.add_argument("--shard", type=int, default=0); ap.add_argument("--nshards", type=int, default=1)
++ap.add_argument("--name")  # F2: case name for the first leaves.jsonl record (default: CNF basename)
++ap.add_argument("--skip")  # F2: file of cubes closed elsewhere (step d); re-read when it changes
+ a = ap.parse_args(); os.makedirs(a.out, exist_ok=True)
+ deadline = time.time() + a.hours * 3600
+ hdr, body = open(a.case).read().split("\n", 1); nv, nc = int(hdr.split()[2]), int(hdr.split()[3])
+@@ -33,7 +36,7 @@
+     with open(path, "w") as f:
+         f.write(f"p cnf {nv} {nc + len(cube)}\n"); f.write(body); f.write("".join(f"{l} 0\n" for l in cube))
+ def march(cube, d, tag, outfile=None):
+-    w = os.path.join(a.out, f"m_{tag}"); os.makedirs(w, exist_ok=True)
++    w = tempfile.mkdtemp(prefix=f"m_{tag}_", dir=WORK)  # F2 (a): fresh directory per job
+     write(os.path.join(w, "f.cnf"), cube); t = time.time(); cf = outfile or os.path.join(w, "cubes")
+     o = subprocess.run([os.path.join(BIN, "march_cu"), os.path.join(w, "f.cnf"), "-d", str(d), "-o", cf],
+                        capture_output=True, text=True).stdout
+@@ -48,6 +51,7 @@
+         if "cube" not in r: continue
+         c = tuple(r["cube"])
+         if r.get("status") == "UNSAT" and r.get("cake_lpr") == VER: closed.add(c)
++        elif r.get("status") == "SKIP": closed.add(c)   # F2 (d): closed elsewhere; not in leaves.icnf
+         elif r.get("status") == "SPLIT" and "subs" in r: split[c] = r["subs"]
+     return rs, closed, split
+ def frontier(roots, closed, split):
+@@ -61,11 +65,22 @@
+ def cake(f, p, extra=()):
+     r = subprocess.run([os.path.join(BIN, "cake_lpr"), *extra, f, p], capture_output=True, text=True)
+     return next((l for l in r.stdout.splitlines() if l.startswith("s ")), (r.stdout + r.stderr)[-120:])
++skipset, skipm = set(), [None]
++def skipped(cube):  # F2 (d): exact cubes listed in --skip (computed outside from others' verified leaves)
++    if not a.skip or not os.path.exists(a.skip): return False
++    with lock:
++        m = os.path.getmtime(a.skip)
++        if m != skipm[0]:
++            skipset.clear(); skipm[0] = m
++            for l in open(a.skip):
++                if l.startswith("a ") and l.endswith(" 0\n"): skipset.add(tuple(map(int, l.split()[1:-1])))
++        return tuple(cube) in skipset
+ pool = ThreadPoolExecutor(a.jobs); cv = threading.Condition(); count = [0]; n = [0]; inflight = {}
+ def solve(cube):
+     with lock: n[0] += 1; k = n[0]
+     if time.time() + a.timeout > deadline: return   # left open, rebuilt on resume
+-    w = os.path.join(a.out, f"s_{k}"); os.makedirs(w, exist_ok=True); f = os.path.join(w, "f.cnf")
++    if skipped(cube): rec({"cube": cube, "status": "SKIP", "why": "closed elsewhere"}); return  # F2 (d)
++    w = tempfile.mkdtemp(prefix=f"s_{k}_", dir=WORK); f = os.path.join(w, "f.cnf")  # F2 (a): fresh directory per job
+     write(f, cube); t = time.time(); c0 = os.times()
+     with open(os.path.join(w, "out"), "w") as so:
+         rc = subprocess.run([os.path.join(BIN, "cadical"), "--lrat", "--binary=false", "-q", "-t", str(a.timeout), f,
+@@ -99,6 +114,9 @@
+     pool.submit(task, c)
+ topf = os.path.join(a.out, "top.icnf")
+ if a.top and not os.path.exists(topf): subprocess.run(["cp", a.top, topf])
++if not os.path.exists(LJ):  # F2 (c): first record names the case
++    rec({"case": a.name or os.path.basename(a.case).rsplit(".", 1)[0],
++         "case_sha256": hashlib.sha256(open(a.case, "rb").read()).hexdigest()})
+ rs, closed, split = load()
+ if not os.path.exists(topf):
+     _, ms, line = march([], a.depth, "top", topf)
+@@ -115,12 +133,14 @@
+ rec({"resume": True, "time": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "frontier": len(todo)})
+ def finalize():
+     rs, closed, split = load()
+-    with open(os.path.join(a.out, "leaves.icnf"), "w") as f:
+-        for r in rs:
+-            if r.get("status") == "UNSAT" and r.get("cake_lpr") == VER: f.write("a " + " ".join(map(str, r["cube"])) + " 0\n")
++    def atomic(name, cubes):  # F2 (b): write a temporary file, then rename into place
++        fd, tmp = tempfile.mkstemp(prefix="." + name + ".", dir=a.out)
++        with os.fdopen(fd, "w") as f:
++            for c in cubes: f.write("a " + " ".join(map(str, c)) + " 0\n")
++        os.chmod(tmp, 0o644); os.replace(tmp, os.path.join(a.out, name))
++    atomic("leaves.icnf", [r["cube"] for r in rs if r.get("status") == "UNSAT" and r.get("cake_lpr") == VER])
+     op = frontier(mine, closed, split)
+-    with open(os.path.join(a.out, "open.icnf"), "w") as f:
+-        for c in op: f.write("a " + " ".join(map(str, c)) + " 0\n")
++    atomic("open.icnf", op)
+     return len(op)
+ for c in todo: submit(c)
+ with cv:

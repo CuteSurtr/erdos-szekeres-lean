@@ -1,0 +1,13 @@
+c down fraction = 0.020 and down exponent = 0.300
+c cubes are emitted to /opt/work/cubes/H3_d10.icnf
+c full lookahead due to high density!
+c the DIMACS p-line indicates a CNF of 168399 variables and 4155014 clauses.
+c equivalence reasoning is turned off.
+c clause-length heuristic with magic constants: bin = 25.00 and dec = 0.50
+c init_lookahead: longest clause has size 5
+c number of free variables = 167878
+c highest active variable  = 168399
+c dynamic_preselect_setsize :: off
+c |----------------------------------------------------------------|Terminated
+wall 2140
+killed by C3-S after 35 min wall: no cube emitted at depth 10 (chain H3 CNF)

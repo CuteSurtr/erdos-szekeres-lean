@@ -1,0 +1,4 @@
+top cubes in shard: 11 of 128 (indices 1,13,...,121); all 11 timed out at 300 s and were split by march_cu -d 6 into 64 cubes each
+leaves: 704 UNSAT, cake_lpr 's VERIFIED UNSAT' on 704/704; open: 0; SAT: 0
+leaf depth: [13]; max leaf solve 165.9 s, max check 16.4 s
+CPU (wall per job, summed): cadical 4.88 h, cake_lpr 0.77 h, march splits 0.21 h, total 5.86 core-h (+ top march_cu -d 7: 158.6 s)

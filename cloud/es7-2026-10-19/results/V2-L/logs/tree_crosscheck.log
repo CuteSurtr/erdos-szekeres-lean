@@ -1,0 +1,472 @@
+# V2G step 4: tree leaves vs the acceptance manifest at Zf = 14447d0d56c891a89a07a8141b50eae0ebfd44a7
+# manifest built at Zf (verify/v3 at bdf319c):
+#   $ python3 v3_jsonl_leaves.py ROOT results/WAVE1 jtree1
+#   dirs 119 leaf lines 30151 skipped records 71
+#   $ python3 v3_jsonl_leaves.py ROOT results/WAVE2 jtree2
+#   dirs 107 leaf lines 12429 skipped records 0
+#   $ python3 v3_jsonl_leaves.py ROOT results/WAVE3 jtree3
+#   dirs 29 leaf lines 8850 skipped records 0
+#   $ python3 v3_jsonl_leaves.py ROOT results/WAVE4 jtree4
+#   dirs 75 leaf lines 28871 skipped records 0
+#   $ python3 v3_manifest.py ROOT M.jsonl C.jsonl results/WAVE1 jtree1 ... results/WAVE4 jtree4
+#   leaves 73880 cases with leaves 278 problems 0
+#   exit 0
+#   e01af167266dc044078798355f76f9f8d36c74d1b8843aeab90072b644ea83b5  /tmp/claude-0/-home-user-erdos-szekeres-lean/2cd0c95e-4276-5646-a4f9-6560059083c7/scratchpad/fin/M.jsonl
+#   73880
+#   450
+# READY.json: manifest_sha256 e01af167266dc044078798355f76f9f8d36c74d1b8843aeab90072b644ea83b5, manifest_lines 73880 -> equal
+# trees: python3 -I scripts/gen_trees.py /opt/fin/cloud/es7-2026-10-19/results trees_out V2L (summary in trees_out/status.json)
+# $ python3 -I scripts/crosscheck_trees.py /opt/fin/cloud/es7-2026-10-19/results trees_out M.jsonl
+k case tree tree_leaves manifest_leaves manifest_not_in_tree tree_not_in_manifest how
+0 U2_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+1 U_L2 node 22529 22529 0 0 manifest
+2 U3_L node 11744 11744 0 0 manifest
+3 U_L3 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+4 U4_L node 3336 3336 0 0 manifest
+5 U_L4 node 1856 1856 0 0 manifest
+6 U5_L node 2055 2055 0 0 manifest
+7 U_L5 node 1751 1751 0 0 manifest
+8 U6_L node 1099 1099 0 0 manifest
+9 U_L6 node 2701 2701 0 0 manifest
+10 U7_L node 871 871 0 0 manifest
+11 U_L7 node 3707 3759 52 0 manifest
+12 U8_L node 567 567 0 0 manifest
+13 U_L8 node 2598 2598 0 0 manifest
+14 U9_L node 565 565 0 0 manifest
+15 U_L9 node 191 191 0 0 manifest
+16 U10_L node 437 437 0 0 manifest
+17 U_L10 node 128 128 0 0 manifest
+18 U11_L node 309 309 0 0 manifest
+19 U_L11 node 128 128 0 0 manifest
+20 U12_L node 191 191 0 0 manifest
+21 U_L12 node 128 128 0 0 manifest
+22 U13_L node 128 128 0 0 manifest
+23 U_L13 node 128 128 0 0 manifest
+24 U14_L node 128 128 0 0 manifest
+25 U_L14 node 128 128 0 0 manifest
+26 U15_L node 304 304 0 0 manifest
+27 U_L15 node 128 128 0 0 manifest
+28 U16_L node 128 128 0 0 manifest
+29 U_L16 node 128 128 0 0 manifest
+30 U2-3_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+31 U_L2-3 node 500 500 0 0 manifest
+32 U2-4_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+33 U_L2-4 node 379 379 0 0 manifest
+34 U2-5_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+35 U_L2-5 node 123 123 0 0 manifest
+36 U2-6_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+37 U_L2-6 node 367 367 0 0 manifest
+38 U2-7_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+39 U_L2-7 node 377 377 0 0 manifest
+40 U2-8_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+41 U_L2-8 node 185 185 0 0 manifest
+42 U2-9_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+43 U_L2-9 node 122 122 0 0 manifest
+44 U2-10_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+45 U_L2-10 node 122 122 0 0 manifest
+46 U2-11_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+47 U_L2-11 node 124 124 0 0 manifest
+48 U2-12_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+49 U_L2-12 node 125 125 0 0 manifest
+50 U2-13_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+51 U_L2-13 node 128 128 0 0 manifest
+52 U2-14_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+53 U_L2-14 node 128 128 0 0 manifest
+54 U2-15_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+55 U_L2-15 node 128 128 0 0 manifest
+56 U2-16_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+57 U_L2-16 node 117 117 0 0 manifest
+58 U3-4_L node 306 306 0 0 manifest
+59 U_L3-4 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+60 U3-5_L node 247 247 0 0 manifest
+61 U_L3-5 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+62 U3-6_L node 119 119 0 0 manifest
+63 U_L3-6 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+64 U3-7_L node 119 119 0 0 manifest
+65 U_L3-7 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+66 U3-8_L node 128 128 0 0 manifest
+67 U_L3-8 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+68 U3-9_L node 128 128 0 0 manifest
+69 U_L3-9 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+70 U3-10_L node 128 128 0 0 manifest
+71 U_L3-10 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+72 U3-11_L node 128 128 0 0 manifest
+73 U_L3-11 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+74 U3-12_L node 128 128 0 0 manifest
+75 U_L3-12 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+76 U3-13_L node 128 128 0 0 manifest
+77 U_L3-13 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+78 U3-14_L node 127 127 0 0 manifest
+79 U_L3-14 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+80 U3-15_L node 127 127 0 0 manifest
+81 U_L3-15 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+82 U3-16_L node 112 112 0 0 manifest
+83 U_L3-16 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+84 U4-5_L node 128 128 0 0 manifest
+85 U_L4-5 leaf 1 1 0 0 manifest empty leaf
+86 U4-6_L node 128 128 0 0 manifest
+87 U_L4-6 leaf 1 1 0 0 manifest empty leaf
+88 U4-7_L node 128 128 0 0 manifest
+89 U_L4-7 leaf 1 1 0 0 manifest empty leaf
+90 U4-8_L node 108 108 0 0 manifest
+91 U_L4-8 leaf 1 1 0 0 manifest empty leaf
+92 U4-9_L node 103 103 0 0 manifest
+93 U_L4-9 leaf 1 1 0 0 manifest empty leaf
+94 U4-10_L node 104 104 0 0 manifest
+95 U_L4-10 leaf 1 1 0 0 manifest empty leaf
+96 U4-11_L node 118 118 0 0 manifest
+97 U_L4-11 leaf 1 1 0 0 manifest empty leaf
+98 U4-12_L node 116 116 0 0 manifest
+99 U_L4-12 leaf 1 1 0 0 manifest empty leaf
+100 U4-13_L node 96 96 0 0 manifest
+101 U_L4-13 leaf 1 1 0 0 manifest empty leaf
+102 U4-14_L leaf 1 1 0 0 manifest empty leaf
+103 U_L4-14 leaf 1 1 0 0 manifest empty leaf
+104 U4-15_L leaf 1 1 0 0 manifest empty leaf
+105 U_L4-15 leaf 1 1 0 0 manifest empty leaf
+106 U4-16_L leaf 1 1 0 0 manifest empty leaf
+107 U_L4-16 leaf 1 1 0 0 manifest empty leaf
+108 U5-6_L leaf 1 1 0 0 manifest empty leaf
+109 U_L5-6 leaf 1 1 0 0 manifest empty leaf
+110 U5-7_L leaf 1 1 0 0 manifest empty leaf
+111 U_L5-7 leaf 1 1 0 0 manifest empty leaf
+112 U5-8_L leaf 1 1 0 0 manifest empty leaf
+113 U_L5-8 leaf 1 1 0 0 manifest empty leaf
+114 U5-9_L leaf 1 1 0 0 manifest empty leaf
+115 U_L5-9 leaf 1 1 0 0 manifest empty leaf
+116 U5-10_L leaf 1 1 0 0 manifest empty leaf
+117 U_L5-10 leaf 1 1 0 0 manifest empty leaf
+118 U5-11_L leaf 1 1 0 0 manifest empty leaf
+119 U_L5-11 leaf 1 1 0 0 manifest empty leaf
+120 U5-12_L leaf 1 1 0 0 manifest empty leaf
+121 U_L5-12 leaf 1 1 0 0 manifest empty leaf
+122 U5-13_L leaf 1 1 0 0 manifest empty leaf
+123 U_L5-13 leaf 1 1 0 0 manifest empty leaf
+124 U5-14_L leaf 1 1 0 0 manifest empty leaf
+125 U_L5-14 leaf 1 1 0 0 manifest empty leaf
+126 U5-15_L leaf 1 1 0 0 manifest empty leaf
+127 U_L5-15 leaf 1 1 0 0 manifest empty leaf
+128 U5-16_L leaf 1 1 0 0 manifest empty leaf
+129 U_L5-16 leaf 1 1 0 0 manifest empty leaf
+130 U6-7_L leaf 1 1 0 0 manifest empty leaf
+131 U_L6-7 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+132 U6-8_L leaf 1 1 0 0 manifest empty leaf
+133 U_L6-8 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+134 U6-9_L leaf 1 1 0 0 manifest empty leaf
+135 U_L6-9 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+136 U6-10_L leaf 1 1 0 0 manifest empty leaf
+137 U_L6-10 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+138 U6-11_L leaf 1 1 0 0 manifest empty leaf
+139 U_L6-11 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+140 U6-12_L leaf 1 1 0 0 manifest empty leaf
+141 U_L6-12 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+142 U6-13_L leaf 1 1 0 0 manifest empty leaf
+143 U_L6-13 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+144 U6-14_L leaf 1 1 0 0 manifest empty leaf
+145 U_L6-14 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+146 U6-15_L leaf 1 1 0 0 manifest empty leaf
+147 U_L6-15 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+148 U6-16_L leaf 1 1 0 0 manifest empty leaf
+149 U_L6-16 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+150 U7-8_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+151 U_L7-8 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+152 U7-9_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+153 U_L7-9 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+154 U7-10_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+155 U_L7-10 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+156 U7-11_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+157 U_L7-11 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+158 U7-12_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+159 U_L7-12 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+160 U7-13_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+161 U_L7-13 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+162 U7-14_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+163 U_L7-14 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+164 U7-15_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+165 U_L7-15 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+166 U7-16_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+167 U_L7-16 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+168 U8-9_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+169 U_L8-9 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+170 U8-10_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+171 U_L8-10 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+172 U8-11_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+173 U_L8-11 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+174 U8-12_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+175 U_L8-12 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+176 U8-13_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+177 U_L8-13 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+178 U8-14_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+179 U_L8-14 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+180 U8-15_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+181 U_L8-15 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+182 U8-16_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+183 U_L8-16 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+184 U9-10_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+185 U_L9-10 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+186 U9-11_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+187 U_L9-11 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+188 U9-12_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+189 U_L9-12 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+190 U9-13_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+191 U_L9-13 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+192 U9-14_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+193 U_L9-14 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+194 U9-15_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+195 U_L9-15 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+196 U9-16_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+197 U_L9-16 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+198 U10-11_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+199 U_L10-11 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+200 U10-12_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+201 U_L10-12 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+202 U10-13_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+203 U_L10-13 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+204 U10-14_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+205 U_L10-14 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+206 U10-15_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+207 U_L10-15 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+208 U10-16_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+209 U_L10-16 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+210 U11-12_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+211 U_L11-12 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+212 U11-13_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+213 U_L11-13 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+214 U11-14_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+215 U_L11-14 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+216 U11-15_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+217 U_L11-15 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+218 U11-16_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+219 U_L11-16 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+220 U12-13_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+221 U_L12-13 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+222 U12-14_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+223 U_L12-14 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+224 U12-15_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+225 U_L12-15 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+226 U12-16_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+227 U_L12-16 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+228 U13-14_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+229 U_L13-14 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+230 U13-15_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+231 U_L13-15 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+232 U13-16_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+233 U_L13-16 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+234 U14-15_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+235 U_L14-15 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+236 U14-16_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+237 U_L14-16 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+238 U15-16_L leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+239 U_L15-16 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+240 U2_L3 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+241 U2_L4 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+242 U2_L5 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+243 U2_L6 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+244 U2_L7 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+245 U2_L8 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+246 U2_L9 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+247 U2_L10 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+248 U2_L11 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+249 U2_L12 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+250 U2_L13 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+251 U2_L14 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+252 U2_L15 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+253 U2_L16 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+254 U3_L2 node 315 315 0 0 manifest
+255 U3_L4 node 254 254 0 0 manifest
+256 U3_L5 node 123 123 0 0 manifest
+257 U3_L6 node 124 124 0 0 manifest
+258 U3_L7 node 125 125 0 0 manifest
+259 U3_L8 node 127 127 0 0 manifest
+260 U3_L9 node 125 125 0 0 manifest
+261 U3_L10 node 125 125 0 0 manifest
+262 U3_L11 node 117 117 0 0 manifest
+263 U3_L12 node 119 119 0 0 manifest
+264 U3_L13 node 127 127 0 0 manifest
+265 U3_L14 node 128 128 0 0 manifest
+266 U3_L15 node 123 123 0 0 manifest
+267 U3_L16 node 113 113 0 0 manifest
+268 U4_L2 node 254 254 0 0 manifest
+269 U4_L3 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+270 U4_L5 node 111 111 0 0 manifest
+271 U4_L6 node 112 112 0 0 manifest
+272 U4_L7 node 112 112 0 0 manifest
+273 U4_L8 node 113 113 0 0 manifest
+274 U4_L9 node 114 114 0 0 manifest
+275 U4_L10 node 110 110 0 0 manifest
+276 U4_L11 node 96 96 0 0 manifest
+277 U4_L12 node 107 107 0 0 manifest
+278 U4_L13 node 113 113 0 0 manifest
+279 U4_L14 node 119 119 0 0 manifest
+280 U4_L15 node 126 126 0 0 manifest
+281 U4_L16 leaf 1 1 0 0 manifest empty leaf
+282 U5_L2 node 247 247 0 0 manifest
+283 U5_L3 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+284 U5_L4 node 110 110 0 0 manifest
+285 U5_L6 node 108 108 0 0 manifest
+286 U5_L7 node 112 112 0 0 manifest
+287 U5_L8 node 112 112 0 0 manifest
+288 U5_L9 node 115 115 0 0 manifest
+289 U5_L10 node 108 108 0 0 manifest
+290 U5_L11 leaf 1 1 0 0 manifest empty leaf
+291 U5_L12 node 108 108 0 0 manifest
+292 U5_L13 leaf 1 1 0 0 manifest empty leaf
+293 U5_L14 leaf 1 1 0 0 manifest empty leaf
+294 U5_L15 leaf 1 1 0 0 manifest empty leaf
+295 U5_L16 node 104 104 0 0 manifest
+296 U6_L2 node 124 124 0 0 manifest
+297 U6_L3 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+298 U6_L4 node 108 108 0 0 manifest
+299 U6_L5 node 107 107 0 0 manifest
+300 U6_L7 node 108 108 0 0 manifest
+301 U6_L8 node 116 116 0 0 manifest
+302 U6_L9 node 113 113 0 0 manifest
+303 U6_L10 leaf 1 1 0 0 manifest empty leaf
+304 U6_L11 leaf 1 1 0 0 manifest empty leaf
+305 U6_L12 leaf 1 1 0 0 manifest empty leaf
+306 U6_L13 leaf 1 1 0 0 manifest empty leaf
+307 U6_L14 leaf 1 1 0 0 manifest empty leaf
+308 U6_L15 leaf 1 1 0 0 manifest empty leaf
+309 U6_L16 leaf 1 1 0 0 manifest empty leaf
+310 U7_L2 node 188 188 0 0 manifest
+311 U7_L3 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+312 U7_L4 node 110 110 0 0 manifest
+313 U7_L5 node 111 111 0 0 manifest
+314 U7_L6 node 108 108 0 0 manifest
+315 U7_L8 leaf 1 1 0 0 manifest empty leaf
+316 U7_L9 leaf 1 1 0 0 manifest empty leaf
+317 U7_L10 node 114 114 0 0 manifest
+318 U7_L11 leaf 1 1 0 0 manifest empty leaf
+319 U7_L12 leaf 1 1 0 0 manifest empty leaf
+320 U7_L13 leaf 1 1 0 0 manifest empty leaf
+321 U7_L14 leaf 1 1 0 0 manifest empty leaf
+322 U7_L15 leaf 1 1 0 0 manifest empty leaf
+323 U7_L16 leaf 1 1 0 0 manifest empty leaf
+324 U8_L2 node 191 191 0 0 manifest
+325 U8_L3 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+326 U8_L4 node 116 116 0 0 manifest
+327 U8_L5 node 116 116 0 0 manifest
+328 U8_L6 node 114 114 0 0 manifest
+329 U8_L7 node 113 113 0 0 manifest
+330 U8_L9 leaf 1 1 0 0 manifest empty leaf
+331 U8_L10 leaf 1 1 0 0 manifest empty leaf
+332 U8_L11 leaf 1 1 0 0 manifest empty leaf
+333 U8_L12 leaf 1 1 0 0 manifest empty leaf
+334 U8_L13 leaf 1 1 0 0 manifest empty leaf
+335 U8_L14 leaf 1 1 0 0 manifest empty leaf
+336 U8_L15 leaf 1 1 0 0 manifest empty leaf
+337 U8_L16 leaf 1 1 0 0 manifest empty leaf
+338 U9_L2 node 127 127 0 0 manifest
+339 U9_L3 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+340 U9_L4 node 117 117 0 0 manifest
+341 U9_L5 node 118 118 0 0 manifest
+342 U9_L6 node 115 115 0 0 manifest
+343 U9_L7 node 116 116 0 0 manifest
+344 U9_L8 leaf 1 1 0 0 manifest empty leaf
+345 U9_L10 leaf 1 1 0 0 manifest empty leaf
+346 U9_L11 leaf 1 1 0 0 manifest empty leaf
+347 U9_L12 leaf 1 1 0 0 manifest empty leaf
+348 U9_L13 leaf 1 1 0 0 manifest empty leaf
+349 U9_L14 leaf 1 1 0 0 manifest empty leaf
+350 U9_L15 leaf 1 1 0 0 manifest empty leaf
+351 U9_L16 leaf 1 1 0 0 manifest empty leaf
+352 U10_L2 node 126 126 0 0 manifest
+353 U10_L3 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+354 U10_L4 node 128 128 0 0 manifest
+355 U10_L5 node 128 128 0 0 manifest
+356 U10_L6 leaf 1 1 0 0 manifest empty leaf
+357 U10_L7 node 128 128 0 0 manifest
+358 U10_L8 leaf 1 1 0 0 manifest empty leaf
+359 U10_L9 leaf 1 1 0 0 manifest empty leaf
+360 U10_L11 leaf 1 1 0 0 manifest empty leaf
+361 U10_L12 leaf 1 1 0 0 manifest empty leaf
+362 U10_L13 leaf 1 1 0 0 manifest empty leaf
+363 U10_L14 leaf 1 1 0 0 manifest empty leaf
+364 U10_L15 leaf 1 1 0 0 manifest empty leaf
+365 U10_L16 leaf 1 1 0 0 manifest empty leaf
+366 U11_L2 node 117 117 0 0 manifest
+367 U11_L3 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+368 U11_L4 node 128 128 0 0 manifest
+369 U11_L5 node 128 128 0 0 manifest
+370 U11_L6 leaf 1 1 0 0 manifest empty leaf
+371 U11_L7 leaf 1 1 0 0 manifest empty leaf
+372 U11_L8 leaf 1 1 0 0 manifest empty leaf
+373 U11_L9 leaf 1 1 0 0 manifest empty leaf
+374 U11_L10 leaf 1 1 0 0 manifest empty leaf
+375 U11_L12 leaf 1 1 0 0 manifest empty leaf
+376 U11_L13 leaf 1 1 0 0 manifest empty leaf
+377 U11_L14 leaf 1 1 0 0 manifest empty leaf
+378 U11_L15 leaf 1 1 0 0 manifest empty leaf
+379 U11_L16 leaf 1 1 0 0 manifest empty leaf
+380 U12_L2 node 118 118 0 0 manifest
+381 U12_L3 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+382 U12_L4 node 128 128 0 0 manifest
+383 U12_L5 node 128 128 0 0 manifest
+384 U12_L6 leaf 1 1 0 0 manifest empty leaf
+385 U12_L7 leaf 1 1 0 0 manifest empty leaf
+386 U12_L8 leaf 1 1 0 0 manifest empty leaf
+387 U12_L9 leaf 1 1 0 0 manifest empty leaf
+388 U12_L10 leaf 1 1 0 0 manifest empty leaf
+389 U12_L11 leaf 1 1 0 0 manifest empty leaf
+390 U12_L13 leaf 1 1 0 0 manifest empty leaf
+391 U12_L14 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+392 U12_L15 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+393 U12_L16 leaf 1 1 0 0 manifest empty leaf
+394 U13_L2 node 127 127 0 0 manifest
+395 U13_L3 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+396 U13_L4 node 128 128 0 0 manifest
+397 U13_L5 leaf 1 1 0 0 manifest empty leaf
+398 U13_L6 leaf 1 1 0 0 manifest empty leaf
+399 U13_L7 leaf 1 1 0 0 manifest empty leaf
+400 U13_L8 leaf 1 1 0 0 manifest empty leaf
+401 U13_L9 leaf 1 1 0 0 manifest empty leaf
+402 U13_L10 leaf 1 1 0 0 manifest empty leaf
+403 U13_L11 leaf 1 1 0 0 manifest empty leaf
+404 U13_L12 leaf 1 1 0 0 manifest empty leaf
+405 U13_L14 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+406 U13_L15 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+407 U13_L16 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+408 U14_L2 node 127 127 0 0 manifest
+409 U14_L3 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+410 U14_L4 node 128 128 0 0 manifest
+411 U14_L5 node 128 128 0 0 manifest
+412 U14_L6 leaf 1 1 0 0 manifest empty leaf
+413 U14_L7 leaf 1 1 0 0 manifest empty leaf
+414 U14_L8 leaf 1 1 0 0 manifest empty leaf
+415 U14_L9 leaf 1 1 0 0 manifest empty leaf
+416 U14_L10 leaf 1 1 0 0 manifest empty leaf
+417 U14_L11 leaf 1 1 0 0 manifest empty leaf
+418 U14_L12 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+419 U14_L13 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+420 U14_L15 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+421 U14_L16 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+422 U15_L2 node 125 125 0 0 manifest
+423 U15_L3 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+424 U15_L4 node 128 128 0 0 manifest
+425 U15_L5 node 128 128 0 0 manifest
+426 U15_L6 leaf 1 1 0 0 manifest empty leaf
+427 U15_L7 leaf 1 1 0 0 manifest empty leaf
+428 U15_L8 leaf 1 1 0 0 manifest empty leaf
+429 U15_L9 leaf 1 1 0 0 manifest empty leaf
+430 U15_L10 leaf 1 1 0 0 manifest empty leaf
+431 U15_L11 leaf 1 1 0 0 manifest empty leaf
+432 U15_L12 leaf 1 1 0 0 manifest empty leaf
+433 U15_L13 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+434 U15_L14 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+435 U15_L16 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+436 U16_L2 node 126 126 0 0 manifest
+437 U16_L3 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+438 U16_L4 node 112 112 0 0 manifest
+439 U16_L5 leaf 1 1 0 0 manifest empty leaf
+440 U16_L6 leaf 1 1 0 0 manifest empty leaf
+441 U16_L7 leaf 1 1 0 0 manifest empty leaf
+442 U16_L8 leaf 1 1 0 0 manifest empty leaf
+443 U16_L9 leaf 1 1 0 0 manifest empty leaf
+444 U16_L10 leaf 1 1 0 0 manifest empty leaf
+445 U16_L11 leaf 1 1 0 0 manifest empty leaf
+446 U16_L12 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+447 U16_L13 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+448 U16_L14 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+449 U16_L15 leaf 1 0 0 0 Mii-S UNSAT_VERIFIED
+TOTAL tree_leaves 74000 manifest_leaves 73880 manifest_not_in_tree 52 tree_not_in_manifest 0
+# exit 0

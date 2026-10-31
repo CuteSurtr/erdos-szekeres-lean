@@ -1,0 +1,7 @@
+Backup run of V1-1's leaves (i % 4 == 1), reverse order, started 06:08 UTC in the V1-L VM (4 cores, nice 5, 4 jobs).
+CNF: Lean `mir_dimacs hull 33 7`, sha256 bfbc2d6096e4099ba751130d421eca9da18b72559991103cc2d4b4bc0d92757d (logs/mir_dimacs_hull.log).
+cadical  https://github.com/arminbiere/cadical      c60730422e758ef1cebe7aeddf2dda31c996bf04 (3.0.1), ./configure && make
+cake_lpr https://github.com/tanyongkiam/cake_lpr    a36874a8b750b43fe4b385b8ddbf5b033e46a3fa, make cake_lpr
+  cake_lpr.S sha256 2f3af32d55083839b3fa0e693afd817679c0b8944bef41def05a8b0ec72b7d4a; example.cnf example.lpr -> "s VERIFIED UNSAT"
+Only cake_lpr checks the proofs here (no lrat-check). Driver: ../scripts/backup_leaves.py.
+gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0

@@ -1,0 +1,21 @@
+C3-S/C3a tools: worktree /opt/c3s at 8dc27c3 (unmodified; /opt/work writable, no path change)
+cadical c60730422e758ef1cebe7aeddf2dda31c996bf04
+cake_lpr a36874a8b750b43fe4b385b8ddbf5b033e46a3fa
+drat-trim 2e3b2dc0ecf938addbd779d42877b6ed69d9a985
+cadical --version: 3.0.1
+drat-trim lrat-check built with results/E2/tools/lrat-check-E2.patch:
+diff --git a/lrat-check.c b/lrat-check.c
+index 8fe998a..ec92f53 100644
+--- a/lrat-check.c
++++ b/lrat-check.c
+@@ -153,6 +153,7 @@ int checkClause (int* list, int size, int* hints, int print) {
+ 
+   if (res == CONFLICT) { return SUCCESS; }
+   if (res == FAILED  ) { return FAILED;  }
++  if (size == 0) { printf ("c FAILED: empty clause without a RUP conflict\n"); return FAILED; } // E2 patch
+ 
+   int *first = hints; first++; while (*first > 0) first++;
+   int start = intro[pivot ^ 1];
+cake_lpr example: s VERIFIED UNSAT
+base.cnf: p cnf 168399 4154921; sha256 bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da
+roots: index = 9 mod 24 of sorted depth-2 nodes (close_tree.py SHARD expression); 68 roots; identical to manifest_depth2.tsv selection; name-list sha256 5412782cb766088d63fa9342afaaddcf057baee69b82b82bba69e5754fef6b7e matches shard_plan

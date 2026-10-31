@@ -1,0 +1,58 @@
+# V3T mutation tests  2026-10-20T07:59:38Z  verify/v3 at f3b07a7
+
+## M1: one leaf removed from fully closed case U_L13 (128 leaves) -> cover must be NOT_COVERED
+m1_full 128  
+m1_drop 127 leaves; dropped: [-524, 3501, -3732, -3937, -3938, -3942, 45533]
+m1_full cover: VERIFIED nleaves 128 rc 20 s VERIFIED UNSAT
+m1_drop cover: NOT_COVERED nleaves 127 rc 10 
+
+## M2: malformed leaves.icnf copies -> v3_manifest.py must report a problem for that directory
+  tail of U_L13_no0:  0|a -45533 1014 -1996 566 1000 562 561|
+  tail of U_L13_nonl: 0|a -45533 1014 -1996 566 1000 562 561 0
+  tail of U_L13_nonl0: 1 0|a -45533 1014 -1996 566 1000 562 561
+  tail of U_L13_contra:  1014 -1996 566 1000 562 561 0|a 5 -5 0|
+leaves 128 cases with leaves 1 problems 4
+  exit status 1
+  {"problem": {"dir": "results/WM/WX/U_L13_contra", "problem": "malformed or contradictory lines", "count": 1}}
+  {"problem": {"dir": "results/WM/WX/U_L13_no0", "problem": "malformed or contradictory lines", "count": 1}}
+  {"problem": {"dir": "results/WM/WX/U_L13_nonl", "problem": "leaves.icnf does not end with a newline"}}
+  {"problem": {"dir": "results/WM/WX/U_L13_nonl0", "problem": "leaves.icnf does not end with a newline"}}
+  U_L13 dirs accepted: ['results/WM/WX/U_L13_ok']
+
+## M3: F with one clause removed -> v3_check.py must stop on the sha256 check
+  F_drop_samehdr: exit 1 : base CNF sha256 mismatch ; records written: 0
+  F_drop_fixhdr: exit 1 : base CNF sha256 mismatch ; records written: 0
+
+## M4: stub cake_lpr printing 's NOT VERIFIED' (and other stubs) -> leaf verdict REJECTED
+leaf {'idx': 0, 'case': 'U_L5-13', 'lits': [], 'sources': ['results/WAVE1/W33/U_L5-13']}
+  stub_notver: verdict REJECTED rc 20 cake_lpr 's NOT VERIFIED'
+  stub_silent: verdict REJECTED rc 20 cake_lpr ''
+  stub_near: verdict REJECTED rc 20 cake_lpr 's VERIFIED UNSAT junk'
+  stub_crash: verdict REJECTED rc 20 cake_lpr ''
+  control, real cake_lpr: verdict VERIFIED rc 20 cake_lpr 's VERIFIED UNSAT' solve_s 15.62 check_s 2.92
+
+## M5: cases.icnf copy with one cube changed -> v3_check.py must stop on the case sha256 check
+cube 37 literal 3 negated
+  flip one literal: exit 1 : case CNF sha256 mismatch for U_L2-6 ; records: 0
+  drop one literal: exit 1 : case CNF sha256 mismatch for U_L2-6 ; records: 0
+
+## M6: two leaves dirs of U_L13 under different VM dirs -> merged and deduplicated
+leaves 128 cases with leaves 1 problems 0
+  exit status 0
+  input lines 70 + 78 = 148; manifest records 128 distinct leaves 128
+  records with both sources 20 (expected 20 = lines 51..70)
+  manifest leaf set equals W31/U_L13 leaf set: True
+  cover on merged leaves: VERIFIED nleaves 128
+
+## M7 (fix 2): resume with a different manifest in the same OUT must not reuse records
+  records before 2, after 4; new records: [('cover', 'U_L13', 'VERIFIED'), ('leaf', 0, 'VERIFIED')]
+  same manifest again: records 4 -> 4 (expected no change)
+  work dir left over: 0 entries
+
+done 2026-10-20T08:05:30Z
+
+## M8 (RISK-1): hand-edited manifest record with literal 0 (not producible by v3_manifest.py)
+  lits [0]: verdict REJECTED rc 1 cake '' ; cover: REJECTED rc 1
+  lits [5, 0]: verdict REJECTED rc 1 cake '' ; cover: REJECTED rc 1
+  stderr: cadical: error: /opt/work/mut/work/cover-U_L5-13.5j676d0z/f.cnf:383: parse error: too many clauses
+cadical: error: /opt/work/mut/work/leaf-0.k2d6j1q7/f.cnf:515505: parse error: too many clauses

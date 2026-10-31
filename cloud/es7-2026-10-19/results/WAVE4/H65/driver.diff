@@ -1,0 +1,9 @@
+close_march.py copied byte for byte from results/WAVE2/F2/close_march.py (cmp: identical).
+sha256 2e0975aa98c7dbcc2cf535993b54f57db764f7bf50f64fc54b9ff2860e67c855
+Checked:
+(a) every solver and checker job gets its own fresh directory: tempfile.mkdtemp(dir=WORK) at line 39 (march) and line 83 (solve+check).
+(b) leaves.icnf and open.icnf written via atomic(): temporary file then os.replace into place (lines 136-140).
+(c) first record of leaves.jsonl has "case" and "case_sha256" (lines 117-119), with --name U3_L.
+Also: a leaf is counted closed only when cake_lpr == "s VERIFIED UNSAT" (lines 46, 53, 141) (AUDIT BUG-1).
+Note: a first launch at 15:07:40 UTC started without /opt/work/top.icnf (my error); it was killed within seconds
+(it had only begun the top-level march), its output directory deleted, and the driver restarted at 15:07:55 UTC.

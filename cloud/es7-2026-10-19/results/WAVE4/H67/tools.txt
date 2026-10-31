@@ -1,0 +1,9 @@
+BIN=/opt/work/bin, WORK=/opt/work/tmp
+cadical  3.0.1  https://github.com/arminbiere/cadical  commit c60730422e758ef1cebe7aeddf2dda31c996bf04  (./configure && make)  sha256 e2cd83807b9d302e8dc428f43e59ff20ce6f5510cf7e37b1e9ac81a4b0e32f23
+march_cu        https://github.com/marijnheule/CnC    commit 705b60c6491ef2b61988b3ce6ac674be1b90571d  (make CFLAGS="-O3 -fno-strict-aliasing -Wall -DNDEBUG -fcommon")  sha256 afcbb47642a922676693b325ed19d88698c6b8f700943fa2753d98126579f222
+cake_lpr        https://github.com/tanyongkiam/cake_lpr  commit a36874a8b750b43fe4b385b8ddbf5b033e46a3fa  (make cake_lpr)  sha256 1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca
+cake_lpr example.cnf example.lpr -> s VERIFIED UNSAT
+F.cnf sha256 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d
+CASE U3_L (U="3", L="") sha256 7ab00d97d5047e0003bd8d254560dc8464d880d7165c6d7f0e01fab79ee0f823 (matches cases.jsonl)
+top.icnf: 204 lines = len(tasks/H67.json["U3_L"]) = 204, sha256 3824994bfff683f1547a6762d0f6face42b23c3719cee6b516e30960913de9fd
+driver started 2026-10-20 15:09:50 UTC with --hours 1.18

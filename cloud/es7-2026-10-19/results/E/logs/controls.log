@@ -1,0 +1,16 @@
+n16k6m4 expected=SATISFIABLE got=SATISFIABLE time=0s verdict=OK check={"symmetry_violations":0,"A4_violations":0,"GP_violations":0,"center_fact_violations":0,"sb_violations":0,"max_convex":5,"convex_6_subsets":0} reason=4-fold_hexagon-free_16-point_sets_exist_(Subercaseaux_et_al._2025:_66_abstract)
+n16k6m5c expected=SATISFIABLE got=SATISFIABLE time=0s verdict=OK check={"symmetry_violations":0,"A4_violations":0,"GP_violations":0,"center_fact_violations":0,"sb_violations":0,"max_convex":5,"convex_6_subsets":0} reason=5-fold_(centre_in_set)_hexagon-free_16-point_sets_exist_(Subercaseaux_et_al._2025:_948)
+n18k6m3 expected=UNSATISFIABLE got=UNSATISFIABLE time=1s verdict=OK check= reason=ES(6)=17
+n18k6m6 expected=UNSATISFIABLE got=UNSATISFIABLE time=0s verdict=OK check= reason=ES(6)=17
+n6k5m2 expected=SATISFIABLE got=SATISFIABLE time=0s verdict=OK check={"symmetry_violations":0,"A4_violations":0,"GP_violations":0,"center_fact_violations":0,"sb_violations":0,"max_convex":4,"convex_5_subsets":0} reason=small_sanity
+n6k5m3 expected=SATISFIABLE got=SATISFIABLE time=0s verdict=OK check={"symmetry_violations":0,"A4_violations":0,"GP_violations":0,"center_fact_violations":0,"sb_violations":0,"max_convex":4,"convex_5_subsets":0} reason=small_sanity
+n8k5m2 expected=SATISFIABLE got=SATISFIABLE time=0s verdict=OK check={"symmetry_violations":0,"A4_violations":0,"GP_violations":0,"center_fact_violations":0,"sb_violations":0,"max_convex":4,"convex_5_subsets":0} reason=ES(5)=9_and_saved_models
+n8k5m4 expected=SATISFIABLE got=SATISFIABLE time=0s verdict=OK check={"symmetry_violations":0,"A4_violations":0,"GP_violations":0,"center_fact_violations":0,"sb_violations":0,"max_convex":4,"convex_5_subsets":0} reason=ES(5)=9_and_saved_models
+n8k5m8 expected=UNSATISFIABLE got=UNSATISFIABLE time=0s verdict=OK check= reason=one_orbit_of_8_is_convex
+n9k5m3 expected=UNSATISFIABLE got=UNSATISFIABLE time=0s verdict=OK check= reason=ES(5)=9
+n9k5m9 expected=UNSATISFIABLE got=UNSATISFIABLE time=0s verdict=OK check= reason=ES(5)=9
+n10k5m3c expected=UNSATISFIABLE got=UNSATISFIABLE time=0s verdict=OK check= reason=ES(5)=9
+n12k5m3 expected=UNSATISFIABLE got=UNSATISFIABLE time=0s verdict=OK check= reason=ES(5)=9
+n13k6m3c expected=? got=SATISFIABLE time=0s verdict=OK check={"symmetry_violations":0,"A4_violations":0,"GP_violations":0,"center_fact_violations":0,"sb_violations":0,"max_convex":5,"convex_6_subsets":0} reason=not_known
+n15k6m3 expected=? got=UNSATISFIABLE time=0s verdict=OK check= reason=not_known
+n16k6m3c expected=? got=UNSATISFIABLE time=0s verdict=OK check= reason=not_known_(saved_run_said_UNSAT)

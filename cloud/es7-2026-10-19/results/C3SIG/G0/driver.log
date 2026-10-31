@@ -1,0 +1,51 @@
+=== 0s0-1s1_2s0-9s0 K=3 start 2026-10-21T04:42:03Z deadline 05:02:50Z
+{"node": "0s0-1s1_2s0-9s0", "cube": {"3": 0, "4": 0, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 103.0, "certified": true}
+{"node": "0s0-1s1_2s0-9s0", "cube": {"3": 0, "4": 0, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 96.3, "certified": true}
+{"node": "0s0-1s1_2s0-9s0", "cube": {"3": 0, "4": 1, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 96.9, "certified": true}
+{"node": "0s0-1s1_2s0-9s0", "cube": {"3": 0, "4": 1, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 68.2, "certified": true}
+{"node": "0s0-1s1_2s0-9s0", "cube": {"3": 1, "4": 0, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 111.2, "certified": true}
+{"node": "0s0-1s1_2s0-9s0", "cube": {"3": 1, "4": 0, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 78.9, "certified": true}
+{"node": "0s0-1s1_2s0-9s0", "cube": {"3": 1, "4": 1, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 76.1, "certified": true}
+{"node": "0s0-1s1_2s0-9s0", "cube": {"3": 1, "4": 1, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 42.9, "certified": true}
+=== 0s0-1s1_2s0-9s0 K=3 end 2026-10-21T04:48:09Z killed=0
+=== 0s0-1s1_4s1-5s0 K=3 start 2026-10-21T04:48:09Z deadline 05:12:36Z
+{"node": "0s0-1s1_4s1-5s0", "cube": {"2": 0, "3": 0, "6": 0}, "status": "UNSATISFIABLE", "solve_s": 164.8, "certified": true}
+{"node": "0s0-1s1_4s1-5s0", "cube": {"2": 0, "3": 0, "6": 1}, "status": "UNSATISFIABLE", "solve_s": 134.3, "certified": true}
+{"node": "0s0-1s1_4s1-5s0", "cube": {"2": 0, "3": 1, "6": 0}, "status": "UNSATISFIABLE", "solve_s": 180.5, "certified": true}
+{"node": "0s0-1s1_4s1-5s0", "cube": {"2": 0, "3": 1, "6": 1}, "status": "UNSATISFIABLE", "solve_s": 177.9, "certified": true}
+{"node": "0s0-1s1_4s1-5s0", "cube": {"2": 1, "3": 0, "6": 0}, "status": "UNSATISFIABLE", "solve_s": 189.6, "certified": true}
+{"node": "0s0-1s1_4s1-5s0", "cube": {"2": 1, "3": 0, "6": 1}, "status": "UNSATISFIABLE", "solve_s": 152.6, "certified": true}
+{"node": "0s0-1s1_4s1-5s0", "cube": {"2": 1, "3": 1, "6": 0}, "status": "UNSATISFIABLE", "solve_s": 144.4, "certified": true}
+{"node": "0s0-1s1_4s1-5s0", "cube": {"2": 1, "3": 1, "6": 1}, "status": "UNSATISFIABLE", "solve_s": 161.3, "certified": true}
+=== 0s0-1s1_4s1-5s0 K=3 end 2026-10-21T04:58:39Z killed=0
+=== 0s0-1s1_2s0-3s1 K=3 start 2026-10-21T04:58:39Z deadline 05:27:46Z
+{"node": "0s0-1s1_2s0-3s1", "cube": {"4": 0, "5": 0, "6": 0}, "status": "UNSATISFIABLE", "solve_s": 118.0, "certified": true}
+{"node": "0s0-1s1_2s0-3s1", "cube": {"4": 0, "5": 0, "6": 1}, "status": "UNSATISFIABLE", "solve_s": 102.1, "certified": true}
+{"node": "0s0-1s1_2s0-3s1", "cube": {"4": 0, "5": 1, "6": 0}, "status": "UNSATISFIABLE", "solve_s": 139.6, "certified": true}
+{"node": "0s0-1s1_2s0-3s1", "cube": {"4": 0, "5": 1, "6": 1}, "status": "UNSATISFIABLE", "solve_s": 124.3, "certified": true}
+{"node": "0s0-1s1_2s0-3s1", "cube": {"4": 1, "5": 0, "6": 0}, "status": "UNSATISFIABLE", "solve_s": 151.8, "certified": true}
+{"node": "0s0-1s1_2s0-3s1", "cube": {"4": 1, "5": 0, "6": 1}, "status": "UNSATISFIABLE", "solve_s": 122.7, "certified": true}
+{"node": "0s0-1s1_2s0-3s1", "cube": {"4": 1, "5": 1, "6": 0}, "status": "UNSATISFIABLE", "solve_s": 175.5, "certified": true}
+{"node": "0s0-1s1_2s0-3s1", "cube": {"4": 1, "5": 1, "6": 1}, "status": "UNSATISFIABLE", "solve_s": 93.1, "certified": true}
+=== 0s0-1s1_2s0-3s1 K=3 end 2026-10-21T05:07:35Z killed=0
+=== 0s0-1s1_3s0-10s0 K=3 start 2026-10-21T05:07:35Z deadline 05:46:47Z
+{"node": "0s0-1s1_3s0-10s0", "cube": {"2": 0, "4": 0, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 98.3, "certified": true}
+{"node": "0s0-1s1_3s0-10s0", "cube": {"2": 0, "4": 0, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 84.6, "certified": true}
+{"node": "0s0-1s1_3s0-10s0", "cube": {"2": 0, "4": 1, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 98.4, "certified": true}
+{"node": "0s0-1s1_3s0-10s0", "cube": {"2": 0, "4": 1, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 60.0, "certified": true}
+{"node": "0s0-1s1_3s0-10s0", "cube": {"2": 1, "4": 0, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 109.9, "certified": true}
+{"node": "0s0-1s1_3s0-10s0", "cube": {"2": 1, "4": 0, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 89.8, "certified": true}
+{"node": "0s0-1s1_3s0-10s0", "cube": {"2": 1, "4": 1, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 78.9, "certified": true}
+{"node": "0s0-1s1_3s0-10s0", "cube": {"2": 1, "4": 1, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 53.4, "certified": true}
+=== 0s0-1s1_3s0-10s0 K=3 end 2026-10-21T05:13:41Z killed=0
+=== 0s0-1s1_2s0-6s1 K=3 start 2026-10-21T05:13:41Z deadline 06:26:00Z
+{"node": "0s0-1s1_2s0-6s1", "cube": {"3": 0, "4": 0, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 94.9, "certified": true}
+{"node": "0s0-1s1_2s0-6s1", "cube": {"3": 0, "4": 0, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 56.1, "certified": true}
+{"node": "0s0-1s1_2s0-6s1", "cube": {"3": 0, "4": 1, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 123.6, "certified": true}
+{"node": "0s0-1s1_2s0-6s1", "cube": {"3": 0, "4": 1, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 71.2, "certified": true}
+{"node": "0s0-1s1_2s0-6s1", "cube": {"3": 1, "4": 0, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 103.1, "certified": true}
+{"node": "0s0-1s1_2s0-6s1", "cube": {"3": 1, "4": 0, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 88.2, "certified": true}
+{"node": "0s0-1s1_2s0-6s1", "cube": {"3": 1, "4": 1, "5": 0}, "status": "UNSATISFIABLE", "solve_s": 99.8, "certified": true}
+{"node": "0s0-1s1_2s0-6s1", "cube": {"3": 1, "4": 1, "5": 1}, "status": "UNSATISFIABLE", "solve_s": 105.9, "certified": true}
+=== 0s0-1s1_2s0-6s1 K=3 end 2026-10-21T05:20:42Z killed=0
+=== RUNNER DONE 2026-10-21T05:20:42Z

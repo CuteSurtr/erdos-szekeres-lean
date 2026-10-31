@@ -1,0 +1,506 @@
+{
+ "none": {
+  "S_solver_controls": {
+   "pass": true,
+   "got": {
+    "m8k5": "SAT",
+    "m9k5": "UNSAT",
+    "hm9k5": "UNSAT",
+    "m9k5.sub": "UNSAT",
+    "m17k6": "UNSAT",
+    "hm17k6": "UNSAT",
+    "m17k6.sub": "UNSAT",
+    "hm17k6.sub": "UNSAT"
+   }
+  },
+  "P32_classical_SAT": {
+   "pass": true
+  },
+  "R33_random_orientation_clauses": {
+   "pass": true,
+   "int.sub": 500,
+   "h.sub": 500,
+   "m": 500,
+   "hm": 500
+  },
+  "SMALL_equivalence": {
+   "pass": true,
+   "detail": [
+    {
+     "int.sub": 0,
+     "m(interior sets)": 0,
+     "h.sub": 0,
+     "hm": 0,
+     "m(all sets, plain x-sort)": 0,
+     "N": 7,
+     "k": 5
+    },
+    {
+     "int.sub": 0,
+     "m(interior sets)": 0,
+     "h.sub": 0,
+     "hm": 0,
+     "m(all sets, plain x-sort)": 0,
+     "N": 9,
+     "k": 6
+    },
+    {
+     "int.sub": 0,
+     "m(interior sets)": 0,
+     "h.sub": 0,
+     "hm": 0,
+     "m(all sets, plain x-sort)": 0,
+     "N": 11,
+     "k": 7
+    }
+   ]
+  },
+  "D31_heptagon_free_31_SAT": {
+   "pass": true,
+   "int.sub": "10/10",
+   "h.sub": "5/5"
+  },
+  "time_s": 21
+ },
+ "M1_sign_rule_negated": {
+  "S_solver_controls": {
+   "pass": true,
+   "got": {
+    "m8k5": "SAT",
+    "m9k5": "UNSAT",
+    "hm9k5": "UNSAT",
+    "m9k5.sub": "UNSAT",
+    "m17k6": "UNSAT",
+    "hm17k6": "UNSAT",
+    "m17k6.sub": "UNSAT",
+    "hm17k6.sub": "UNSAT"
+   }
+  },
+  "P32_classical_SAT": {
+   "pass": false
+  },
+  "R33_random_orientation_clauses": {
+   "pass": false,
+   "int.sub": 0,
+   "h.sub": 0,
+   "m": 0,
+   "hm": 0
+  },
+  "SMALL_equivalence": {
+   "pass": false,
+   "detail": [
+    {
+     "int.sub": 43,
+     "m(interior sets)": 43,
+     "h.sub": 2,
+     "hm": 2,
+     "m(all sets, plain x-sort)": 45,
+     "N": 7,
+     "k": 5
+    },
+    {
+     "int.sub": 34,
+     "m(interior sets)": 34,
+     "h.sub": 47,
+     "hm": 47,
+     "m(all sets, plain x-sort)": 81,
+     "N": 9,
+     "k": 6
+    },
+    {
+     "int.sub": 105,
+     "m(interior sets)": 105,
+     "h.sub": 46,
+     "hm": 46,
+     "m(all sets, plain x-sort)": 151,
+     "N": 11,
+     "k": 7
+    }
+   ]
+  },
+  "D31_heptagon_free_31_SAT": {
+   "pass": false,
+   "int.sub": "0/10",
+   "h.sub": "0/5"
+  },
+  "time_s": 21
+ },
+ "M3_hull_pairing_unshifted": {
+  "S_solver_controls": {
+   "pass": true,
+   "got": {
+    "m8k5": "SAT",
+    "m9k5": "UNSAT",
+    "hm9k5": "UNSAT",
+    "m9k5.sub": "UNSAT",
+    "m17k6": "UNSAT",
+    "hm17k6": "UNSAT",
+    "m17k6.sub": "UNSAT",
+    "hm17k6.sub": "UNSAT"
+   }
+  },
+  "P32_classical_SAT": {
+   "pass": true
+  },
+  "R33_random_orientation_clauses": {
+   "pass": false,
+   "int.sub": 500,
+   "h.sub": 17,
+   "m": 500,
+   "hm": 0
+  },
+  "SMALL_equivalence": {
+   "pass": false,
+   "detail": [
+    {
+     "int.sub": 0,
+     "m(interior sets)": 0,
+     "h.sub": 2,
+     "hm": 2,
+     "m(all sets, plain x-sort)": 0,
+     "N": 7,
+     "k": 5
+    },
+    {
+     "int.sub": 0,
+     "m(interior sets)": 0,
+     "h.sub": 47,
+     "hm": 47,
+     "m(all sets, plain x-sort)": 0,
+     "N": 9,
+     "k": 6
+    },
+    {
+     "int.sub": 0,
+     "m(interior sets)": 0,
+     "h.sub": 45,
+     "hm": 46,
+     "m(all sets, plain x-sort)": 0,
+     "N": 11,
+     "k": 7
+    }
+   ]
+  },
+  "D31_heptagon_free_31_SAT": {
+   "pass": false,
+   "int.sub": "10/10",
+   "h.sub": "0/5"
+  },
+  "time_s": 21
+ },
+ "M4_interior_wrong_axis_label": {
+  "S_solver_controls": {
+   "pass": true,
+   "got": {
+    "m8k5": "SAT",
+    "m9k5": "UNSAT",
+    "hm9k5": "UNSAT",
+    "m9k5.sub": "UNSAT",
+    "m17k6": "UNSAT",
+    "hm17k6": "UNSAT",
+    "m17k6.sub": "UNSAT",
+    "hm17k6.sub": "UNSAT"
+   }
+  },
+  "P32_classical_SAT": {
+   "pass": true
+  },
+  "R33_random_orientation_clauses": {
+   "pass": false,
+   "int.sub": 360,
+   "h.sub": 500,
+   "m": 500,
+   "hm": 500
+  },
+  "SMALL_equivalence": {
+   "pass": false,
+   "detail": [
+    {
+     "int.sub": 7,
+     "m(interior sets)": 0,
+     "h.sub": 0,
+     "hm": 0,
+     "m(all sets, plain x-sort)": 0,
+     "N": 7,
+     "k": 5
+    },
+    {
+     "int.sub": 3,
+     "m(interior sets)": 0,
+     "h.sub": 0,
+     "hm": 0,
+     "m(all sets, plain x-sort)": 0,
+     "N": 9,
+     "k": 6
+    },
+    {
+     "int.sub": 19,
+     "m(interior sets)": 0,
+     "h.sub": 0,
+     "hm": 0,
+     "m(all sets, plain x-sort)": 0,
+     "N": 11,
+     "k": 7
+    }
+   ]
+  },
+  "D31_heptagon_free_31_SAT": {
+   "pass": true,
+   "int.sub": "10/10",
+   "h.sub": "5/5"
+  },
+  "time_s": 21
+ },
+ "M5_interior_only_chords_from_1": {
+  "S_solver_controls": {
+   "pass": true,
+   "got": {
+    "m8k5": "SAT",
+    "m9k5": "UNSAT",
+    "hm9k5": "UNSAT",
+    "m9k5.sub": "UNSAT",
+    "m17k6": "UNSAT",
+    "hm17k6": "UNSAT",
+    "m17k6.sub": "UNSAT",
+    "hm17k6.sub": "UNSAT"
+   }
+  },
+  "P32_classical_SAT": {
+   "pass": true
+  },
+  "R33_random_orientation_clauses": {
+   "pass": false,
+   "int.sub": 377,
+   "h.sub": 500,
+   "m": 500,
+   "hm": 500
+  },
+  "SMALL_equivalence": {
+   "pass": false,
+   "detail": [
+    {
+     "int.sub": 24,
+     "m(interior sets)": 0,
+     "h.sub": 0,
+     "hm": 0,
+     "m(all sets, plain x-sort)": 0,
+     "N": 7,
+     "k": 5
+    },
+    {
+     "int.sub": 15,
+     "m(interior sets)": 0,
+     "h.sub": 0,
+     "hm": 0,
+     "m(all sets, plain x-sort)": 0,
+     "N": 9,
+     "k": 6
+    },
+    {
+     "int.sub": 44,
+     "m(interior sets)": 0,
+     "h.sub": 0,
+     "hm": 0,
+     "m(all sets, plain x-sort)": 0,
+     "N": 11,
+     "k": 7
+    }
+   ]
+  },
+  "D31_heptagon_free_31_SAT": {
+   "pass": true,
+   "int.sub": "10/10",
+   "h.sub": "5/5"
+  },
+  "time_s": 21
+ },
+ "M6_yflip_unit_in_hull_case": {
+  "S_solver_controls": {
+   "pass": true,
+   "got": {
+    "m8k5": "SAT",
+    "m9k5": "UNSAT",
+    "hm9k5": "UNSAT",
+    "m9k5.sub": "UNSAT",
+    "m17k6": "UNSAT",
+    "hm17k6": "UNSAT",
+    "m17k6.sub": "UNSAT",
+    "hm17k6.sub": "UNSAT"
+   }
+  },
+  "P32_classical_SAT": {
+   "pass": true
+  },
+  "R33_random_orientation_clauses": {
+   "pass": false,
+   "int.sub": 500,
+   "h.sub": 291,
+   "m": 500,
+   "hm": 500
+  },
+  "SMALL_equivalence": {
+   "pass": true,
+   "detail": [
+    {
+     "int.sub": 0,
+     "m(interior sets)": 0,
+     "h.sub": 0,
+     "hm": 0,
+     "m(all sets, plain x-sort)": 0,
+     "N": 7,
+     "k": 5
+    },
+    {
+     "int.sub": 0,
+     "m(interior sets)": 0,
+     "h.sub": 0,
+     "hm": 0,
+     "m(all sets, plain x-sort)": 0,
+     "N": 9,
+     "k": 6
+    },
+    {
+     "int.sub": 0,
+     "m(interior sets)": 0,
+     "h.sub": 0,
+     "hm": 0,
+     "m(all sets, plain x-sort)": 0,
+     "N": 11,
+     "k": 7
+    }
+   ]
+  },
+  "D31_heptagon_free_31_SAT": {
+   "pass": true,
+   "int.sub": "10/10",
+   "h.sub": "5/5"
+  },
+  "time_s": 21
+ },
+ "M7_hull_units_negated": {
+  "S_solver_controls": {
+   "pass": true,
+   "got": {
+    "m8k5": "SAT",
+    "m9k5": "UNSAT",
+    "hm9k5": "UNSAT",
+    "m9k5.sub": "UNSAT",
+    "m17k6": "UNSAT",
+    "hm17k6": "UNSAT",
+    "m17k6.sub": "UNSAT",
+    "hm17k6.sub": "UNSAT"
+   }
+  },
+  "P32_classical_SAT": {
+   "pass": true
+  },
+  "R33_random_orientation_clauses": {
+   "pass": false,
+   "int.sub": 500,
+   "h.sub": 0,
+   "m": 500,
+   "hm": 0
+  },
+  "SMALL_equivalence": {
+   "pass": false,
+   "detail": [
+    {
+     "int.sub": 0,
+     "m(interior sets)": 0,
+     "h.sub": 2,
+     "hm": 2,
+     "m(all sets, plain x-sort)": 0,
+     "N": 7,
+     "k": 5
+    },
+    {
+     "int.sub": 0,
+     "m(interior sets)": 0,
+     "h.sub": 47,
+     "hm": 47,
+     "m(all sets, plain x-sort)": 0,
+     "N": 9,
+     "k": 6
+    },
+    {
+     "int.sub": 0,
+     "m(interior sets)": 0,
+     "h.sub": 46,
+     "hm": 46,
+     "m(all sets, plain x-sort)": 0,
+     "N": 11,
+     "k": 7
+    }
+   ]
+  },
+  "D31_heptagon_free_31_SAT": {
+   "pass": false,
+   "int.sub": "10/10",
+   "h.sub": "0/5"
+  },
+  "time_s": 21
+ },
+ "M8_gon_length_off_by_one": {
+  "S_solver_controls": {
+   "pass": true,
+   "got": {
+    "m8k5": "SAT",
+    "m9k5": "UNSAT",
+    "hm9k5": "UNSAT",
+    "m9k5.sub": "UNSAT",
+    "m17k6": "UNSAT",
+    "hm17k6": "UNSAT",
+    "m17k6.sub": "UNSAT",
+    "hm17k6.sub": "UNSAT"
+   }
+  },
+  "P32_classical_SAT": {
+   "pass": false
+  },
+  "R33_random_orientation_clauses": {
+   "pass": true,
+   "int.sub": 500,
+   "h.sub": 500,
+   "m": 500,
+   "hm": 500
+  },
+  "SMALL_equivalence": {
+   "pass": false,
+   "detail": [
+    {
+     "int.sub": 43,
+     "m(interior sets)": 43,
+     "h.sub": 1,
+     "hm": 1,
+     "m(all sets, plain x-sort)": 44,
+     "N": 7,
+     "k": 5
+    },
+    {
+     "int.sub": 29,
+     "m(interior sets)": 29,
+     "h.sub": 7,
+     "hm": 7,
+     "m(all sets, plain x-sort)": 74,
+     "N": 9,
+     "k": 6
+    },
+    {
+     "int.sub": 96,
+     "m(interior sets)": 96,
+     "h.sub": 34,
+     "hm": 34,
+     "m(all sets, plain x-sort)": 132,
+     "N": 11,
+     "k": 7
+    }
+   ]
+  },
+  "D31_heptagon_free_31_SAT": {
+   "pass": false,
+   "int.sub": "0/10",
+   "h.sub": "0/5"
+  },
+  "time_s": 21
+ }
+}

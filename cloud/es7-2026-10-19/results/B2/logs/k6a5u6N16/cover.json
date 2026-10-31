@@ -1,0 +1,90 @@
+{
+ "events_ok": true,
+ "bad": [],
+ "leaves": 22,
+ "partition_sum_is_1": true,
+ "closed_leaves": 22,
+ "sat_leaves": 0,
+ "open_leaves": 0,
+ "open_matches_state": true,
+ "closed_weight_exact": "1/1",
+ "closed_weight": 1.0,
+ "state_closed_weight": "1/1",
+ "closed_weight_matches_state": true,
+ "open_depth_hist": {},
+ "per_depth": {
+  "0": {
+   "n": 1,
+   "U": 0,
+   "K": 1,
+   "S": 0,
+   "secs": 2.0,
+   "secs_U": 0.0,
+   "secs_K": 2.0,
+   "conf_K": 20000
+  },
+  "1": {
+   "n": 2,
+   "U": 0,
+   "K": 2,
+   "S": 0,
+   "secs": 5.6,
+   "secs_U": 0.0,
+   "secs_K": 5.6,
+   "conf_K": 50000
+  },
+  "2": {
+   "n": 4,
+   "U": 0,
+   "K": 4,
+   "S": 0,
+   "secs": 14.5,
+   "secs_U": 0.0,
+   "secs_K": 14.5,
+   "conf_K": 125000
+  },
+  "3": {
+   "n": 8,
+   "U": 2,
+   "K": 6,
+   "S": 0,
+   "secs": 31.9,
+   "secs_U": 3.3,
+   "secs_K": 28.7,
+   "conf_K": 234372,
+   "conf_U": 78124
+  },
+  "4": {
+   "n": 12,
+   "U": 5,
+   "K": 7,
+   "S": 0,
+   "secs": 67.1,
+   "secs_U": 15.9,
+   "secs_K": 51.1,
+   "conf_U": 244135,
+   "conf_K": 341789
+  },
+  "5": {
+   "n": 14,
+   "U": 13,
+   "K": 1,
+   "S": 0,
+   "secs": 59.5,
+   "secs_U": 46.3,
+   "secs_K": 13.2,
+   "conf_U": 793429,
+   "conf_K": 61033
+  },
+  "6": {
+   "n": 2,
+   "U": 2,
+   "K": 0,
+   "S": 0,
+   "secs": 3.0,
+   "secs_U": 3.0,
+   "secs_K": 0.0,
+   "conf_U": 152582
+  }
+ }
+}

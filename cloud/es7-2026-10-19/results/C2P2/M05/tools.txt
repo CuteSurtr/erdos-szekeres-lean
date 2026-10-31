@@ -1,0 +1,29 @@
+C2P2 M05 tools (task commit d266d2c3)
+build_tools.sh output (tar xattr warnings omitted):
+manifest: all 196 files match
+lrat-check.c: In function 'main':
+lrat-check.c:399:5: warning: ignoring return value of 'fgets' declared with attribute 'warn_unused_result' [-Wunused-result]
+  399 |     fgets (ignore, sizeof (ignore), cnf);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cadical --version: 3.0.1
+cake_lpr example: s VERIFIED UNSAT
+sanity bad (LRAT on {1},{-1}): lrat-check 'c FAILED: empty clause without a RUP conflict'; cake_lpr 'c Checking failed at line: 0. Reason: pivot must be non-zero'
+sanity good (LRAT on {1},{-1}): lrat-check 'c VERIFIED'; cake_lpr 's VERIFIED UNSAT'
+expected: bad rejected by both, good accepted by both (c VERIFIED, s VERIFIED UNSAT)
+
+base: python3 SYMZ/zcnf.py rot 17 7 --m 2 --hull (71 s)
+{"kind": "rot", "m": 2, "t": 17, "axis": 0, "N": 34, "K": 7, "Z": 34, "vars": 838032, "X_vars": 2856, "clauses": 16653336, "stats": {"triple_classes": 2856, "gp_5sets": 162384, "a4_4sets": 51816, "centre_units": 0, "conv": {"4": 23256, "5": 139128, "6": 672792, "K-sets": 2689808}, "sb_units": 136, "hull_sb_clauses": 10880}}
+p cnf 838032 16653336
+b0061e908bff80e6a597f31a6fec1d91e8504aebc09b0bcf41c2ff21604d8ff1  /opt/work/base.cnf
+2476fafff493a763fd7f2883380d359629191912a15a69bcbdfbf49bbf472b48  /opt/work/base.json
+both sha256 match the expected values
+
+cubes: l2cubes.py a=1..8 vs C2P/cubes/P{a}_cubes.txt
+P1 byte-identical (560 lines, sha256 08cc376d81b4839b526514338cbb5ce9dbedcadc0f96313412f6c8668edaa685)
+P2 byte-identical (560 lines, sha256 77e36b3e19122a82de53a33cd3cee598ac7dc62df1020b315da5533dcf4c20f3)
+P3 byte-identical (560 lines, sha256 8f4620f24bc44e2f53e9b1ef5d2e1fa5dbd31d8c8d6e6a713129f41ae3d16fb4)
+P4 byte-identical (560 lines, sha256 748c6e6271fcc42740396ee733a71934243abdee854c7e3ec1773a27c1630d54)
+P5 byte-identical (560 lines, sha256 0c4c6e730f50feed0a40905d12f76a425875cb4570329de30f6759a02d7753fa)
+P6 byte-identical (560 lines, sha256 f5bb0eaae55d9a7b89308d4ffa61636e7ab55e38f5d9b640c783aced5488b01e)
+P7 byte-identical (560 lines, sha256 b9bc5812900987f71a34577e8f19be57003fe5053abb1d981cd2094382e6629e)
+P8 byte-identical (560 lines, sha256 302d8e121fdacf3a27f8288c73cb731bba89332e966abb7f433914c80118616c)

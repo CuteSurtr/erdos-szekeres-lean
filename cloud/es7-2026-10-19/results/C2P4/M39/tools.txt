@@ -1,0 +1,27 @@
+Task commit Z = a46b478d; V=M39 LIST=C2P4.tsv j=39 N=50 H=2.5
+Start epoch 1793451692, END 1793459792
+== build_tools.sh (vendored sources, no clone/download)
+manifest: all 196 files match
+lrat-check.c: In function 'main':
+lrat-check.c:399:5: warning: ignoring return value of 'fgets' declared with attribute 'warn_unused_result' [-Wunused-result]
+  399 |     fgets (ignore, sizeof (ignore), cnf);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cadical --version: 3.0.1
+cake_lpr example: s VERIFIED UNSAT
+sanity bad (LRAT on {1},{-1}): lrat-check 'c FAILED: empty clause without a RUP conflict'; cake_lpr 'c Checking failed at line: 0. Reason: pivot must be non-zero'
+sanity good (LRAT on {1},{-1}): lrat-check 'c VERIFIED'; cake_lpr 's VERIFIED UNSAT'
+expected: bad rejected by both, good accepted by both (c VERIFIED, s VERIFIED UNSAT)
+== base CNF
+p cnf 838032 16653336
+b0061e908bff80e6a597f31a6fec1d91e8504aebc09b0bcf41c2ff21604d8ff1  /opt/work/base.cnf
+2476fafff493a763fd7f2883380d359629191912a15a69bcbdfbf49bbf472b48  /opt/work/base.json
+both sha256 match expected
+== cubes: P1..P8 byte-identical to C2P/cubes/P{a}_cubes.txt
+08cc376d81b4839b526514338cbb5ce9dbedcadc0f96313412f6c8668edaa685  /opt/work/P1.txt
+77e36b3e19122a82de53a33cd3cee598ac7dc62df1020b315da5533dcf4c20f3  /opt/work/P2.txt
+8f4620f24bc44e2f53e9b1ef5d2e1fa5dbd31d8c8d6e6a713129f41ae3d16fb4  /opt/work/P3.txt
+748c6e6271fcc42740396ee733a71934243abdee854c7e3ec1773a27c1630d54  /opt/work/P4.txt
+0c4c6e730f50feed0a40905d12f76a425875cb4570329de30f6759a02d7753fa  /opt/work/P5.txt
+f5bb0eaae55d9a7b89308d4ffa61636e7ab55e38f5d9b640c783aced5488b01e  /opt/work/P6.txt
+b9bc5812900987f71a34577e8f19be57003fe5053abb1d981cd2094382e6629e  /opt/work/P7.txt
+302d8e121fdacf3a27f8288c73cb731bba89332e966abb7f433914c80118616c  /opt/work/P8.txt

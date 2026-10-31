@@ -1,0 +1,6 @@
+input commit a71d30d (worktree /opt/in)
+results/V3D/worklist.jsonl sha256 27e02b76e005964ef7779f970b1e3da55328bdfa878541b4ad86020120e7b1d9 lines 22682 (expected 27e02b76...b1d9, 22682): OK
+cross-check at 3e4dbaae3: v3_jsonl_leaves WAVE1 30151 leaf lines (71 skipped records), WAVE2 12429, WAVE3 8850, WAVE4 23090
+v3_manifest Mzd.jsonl sha256 9685d3c4e3c071782c9db41362a6e4bc244ee99130ef131bc7b6da58254a67a8 lines 70215, 278 cases with leaves, 0 problems (expected 9685d3c4...a7a8, 70215): OK
+every work-list record's (case, lits) occurs in Mzd.jsonl: 22682 of 22682, missing 0: OK
+shard 11 of 24

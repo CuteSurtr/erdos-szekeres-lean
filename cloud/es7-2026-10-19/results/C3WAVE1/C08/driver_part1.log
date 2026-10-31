@@ -1,0 +1,28 @@
+=== 08:19:10 root 8 0s0-1s0_2s0-5s0 jobs 4 hours 3.547
+{"node": "0s0-1s0_2s0-5s0", "status": "UNSATISFIABLE", "solve_s": 6.1, "certified": true}
+{"root": "0s0-1s0_2s0-5s0", "open_frontier": 0}
+=== 08:19:44 root 32 0s0-1s0_2s1-9s0 jobs 4 hours 3.538
+{"node": "0s0-1s0_2s1-9s0", "status": "UNSATISFIABLE", "solve_s": 13.2, "certified": true}
+{"root": "0s0-1s0_2s1-9s0", "open_frontier": 0}
+=== 08:20:29 root 56 0s0-1s0_3s1-6s1 jobs 4 hours 3.525
+{"node": "0s0-1s0_3s1-6s1", "status": "UNSATISFIABLE", "solve_s": 13.7, "certified": true}
+{"root": "0s0-1s0_3s1-6s1", "open_frontier": 0}
+=== 08:21:12 root 80 0s0-1s0_4s1-6s0 jobs 4 hours 3.513
+{"node": "0s0-1s0_4s1-6s0", "status": "UNSATISFIABLE", "solve_s": 127.0, "certified": true}
+{"root": "0s0-1s0_4s1-6s0", "open_frontier": 0}
+=== 08:24:01 root 104 0s0-1s0_5s1-7s1 jobs 4 hours 3.466
+{"node": "0s0-1s0_5s1-7s1", "status": "UNSATISFIABLE", "solve_s": 5.7, "certified": true}
+{"root": "0s0-1s0_5s1-7s1", "open_frontier": 0}
+=== 08:24:24 root 128 0s0-1s0_7s0-10s1 jobs 4 hours 3.46
+{"node": "0s0-1s0_7s0-10s1", "status": "UNSATISFIABLE", "solve_s": 82.7, "certified": true}
+{"root": "0s0-1s0_7s0-10s1", "open_frontier": 0}
+=== 08:26:26 root 152 0s0-1s0_9s1-10s1 jobs 4 hours 3.426
+{"node": "0s0-1s0_9s1-10s1", "status": "UNSATISFIABLE", "solve_s": 5.8, "certified": true}
+{"root": "0s0-1s0_9s1-10s1", "open_frontier": 0}
+=== 08:26:53 root 176 0s0-1s1_2s1-4s1 jobs 4 hours 3.419
+{"node": "0s0-1s1_2s1-4s1", "status": "UNSATISFIABLE", "solve_s": 32.2, "certified": true}
+{"root": "0s0-1s1_2s1-4s1", "open_frontier": 0}
+=== 08:28:00 root 200 0s0-1s1_3s0-9s0 jobs 4 hours 3.4
+{"node": "0s0-1s1_3s0-9s0", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-1s1_3s0-9s0_2_5", "status": "UNSATISFIABLE", "solve_s": 6.4, "certified": false}
+PROOF NOT ACCEPTED 0s0-1s1_3s0-9s0_2_5

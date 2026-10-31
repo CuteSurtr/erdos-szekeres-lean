@@ -1,0 +1,28 @@
+== C/logs/cnc_i_hull (commit 84b0af4): closed.txt 277 lines, state.json open 469
+-- closed only:
+c cubes: 277
+s NOT COVERED
+-- closed + open:
+c cubes: 746
+s COVERED
+== C/logs/cnc_ii_interior (commit 84b0af4): closed.txt 47 lines, state.json open 319
+-- closed only:
+c cubes: 47
+s NOT COVERED
+-- closed + open:
+c cubes: 366
+s COVERED
+== C2/logs/cnc_i_hull (commit eb75ac3): closed.txt 2824 lines, state.json open 862
+-- closed only:
+c cubes: 2824
+s NOT COVERED
+-- closed + open:
+c cubes: 3686
+s COVERED
+== C2/logs/cnc_ii_interior (commit eb75ac3): closed.txt 587 lines, state.json open 1037
+-- closed only:
+c cubes: 587
+s NOT COVERED
+-- closed + open:
+c cubes: 1624
+s COVERED

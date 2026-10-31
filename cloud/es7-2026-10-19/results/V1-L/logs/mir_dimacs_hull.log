@@ -1,0 +1,11 @@
+$ lake exe mir_dimacs hull 33 7 hm33k7.sub.cnf   (Tue Oct 20 05:12:47 UTC 2026)
+
+real	0m1.697s
+user	0m0.971s
+sys	0m0.721s
+bfbc2d6096e4099ba751130d421eca9da18b72559991103cc2d4b4bc0d92757d  lean_hm33k7.sub.cnf
+p cnf 47002 535454
+$ results/C/scripts/make_cnfs.sh (python) -> hm33k7.sub.cnf
+bfbc2d6096e4099ba751130d421eca9da18b72559991103cc2d4b4bc0d92757d  pycnf/hm33k7.sub.cnf
+$ cmp lean python
+identical

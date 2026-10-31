@@ -1,0 +1,169 @@
+# Task C3a: compact CNF for 3-fold symmetric 33-point sets without a convex 7-gon
+
+Nothing here is a theorem. "UNSAT" means UNSAT of one specific CNF; the encodings are
+tested, not formally verified. A SAT model is an abstract signotope until it is realized
+with exact coordinates and re-checked.
+
+## Summary
+
+Machine: 4-vCPU cloud VM, 15 GB RAM (`env.txt`); 2 to 5 solver processes at a time. Tools built
+from source: CaDiCaL 3.0.1 (c607304), drat-trim lrat-check (2e3b2dc) with E2's empty-clause
+patch, cake_lpr (CakeML-verified LRAT checker, upstream HEAD), march_cu (CnC 705b60c; `-fcommon`
+plus a memory-size patch, see `shard_plan.md`).
+
+| | result |
+|---|---|
+| Encoding | `c3cnf.py m k [--gon chain\|conv]`; validated (identities on 2,300 sets; clause-level check on 1,000 + 1,010 sets; controls; agrees with symcnf and C3b) |
+| Size, m = 11, k = 7 | chain 168,399 vars / 4,154,921 clauses; conv 466,697 / 2,115,323; symcnf about 464k / 9.5M |
+| m = 10, k = 7 (30 points) | **SAT** (abstract): chain model in 15 s, conv model in 49 s; both pass the brute-force model checks (largest convex subset 6). **Not realized**: the realizer's best attempts left 138 and 105 triples wrong. This proves nothing either way. |
+| m = 11, k = 7 (33 points) | **Open.** No model found. CaDiCaL 20 min: no answer (chain and conv). Cube-and-conquer (conv, march_cu depth 12, 4,096 cubes, coverage certified): every depth-12 leaf tried (4) is still open after 1,500 s. Depth-12 leaf 0, split again by march_cu into 64 depth-18 cubes: 22 of 64 solved, all UNSAT and all certified by both checkers (solve 172–439 s, mean 290 s; check mean 176 s); the other 42 were not reached. |
+| Certified weight | 11/32 of depth-12 leaf 0 = **11/131072 ≈ 8.4×10⁻⁵** of the whole space (all of it inside depth-12 leaf 0); everything else is open |
+| Shard plan | `shard_plan.md`: exact recipe, plus a cost estimate of roughly 2×10⁴ core-hours of solving plus 1.3×10⁴ of checking at the measured rates. That is too costly to call closable without a better encoding or cube split. |
+
+No 33-point SAT model was found, so there is nothing to realize at m = 11.
+
+## The encoding (`c3cnf.py`)
+
+Setup: S has 3m points in general position, is invariant under the rotation R by +120° about
+c = 0, and c is not in S. A generic symmetric perturbation keeps the order type, so we may assume
+no two points are collinear with c. Pick a line l through c that avoids S, make it the y-axis,
+and map S by phi(x, y) = (y/x, 1/x) to S'. Label the points 0..3m-1 by increasing X' = y/x.
+
+Identities used (re-checked exactly, see "Validation"):
+1. R acts on labels as R(i) = (i - m) mod 3m.
+2. chi_S(i,j,k) = chi'(i,j,k) · (-1)^(σi+σj+σk), where chi' is the orientation of S' (x-sorted, so
+   a signotope on the labels) and σi = [x_i < 0].
+3. chi'(Ri,Rj,Rk) = chi'(i,j,k) εi εj εk with εi = +1 iff i < m; and σ_{Ri} = σi xor [i ≥ m], so
+   σ on the orbit (r, r+m, r+2m) is (s, ¬s, s), one free bit s per orbit.
+4. For i < j let inv_ij = [Y'_i > Y'_j]. Then i is left of j in S iff inv_ij xor σi xor σj. The
+   inversions of a triple form a prefix of (ij, ik, jk) if chi'(ijk) = + and of (jk, ik, ij) if −;
+   σi = 0, σj = 1 forces inv_ij = 1, and σi = 1, σj = 0 forces inv_ij = 0.
+5. The point reflection p ↦ −p keeps the labels (X' is unchanged) and the class, and maps
+   (chi', σ, inv) to (−chi', ¬σ, ¬inv). So σ0 = 0 may be assumed. This is the only symmetry
+   breaking.
+
+Variables: chi' per R-orbit of triples (1,826 for m = 11: (5456 − 11)/3 + 11, the 11 orbit
+triangles being fixed by R), 11 σ bits, 528 inv bits, 528 order bits B_ij, and chi_S per orbit
+(T, 1,826), tied to chi' and σ by parity clauses.
+
+Core clauses: the signotope axiom on chi' for every 4-set (3-term monotonicity; the 327,360
+clauses collapse to 109,120 distinct ones under the orbit substitution), σ0 = 0, the prefix and
+forced inversion clauses, and the parity definitions of B and T.
+
+No convex k-gon, two variants (both one-directional, so only "a real convex k-gon forces a
+contradiction" is needed for soundness):
+
+- `--gon chain` (default; the encoding the task asked for). A convex k-gon has a leftmost vertex x
+  (in the x-order of S, given by the literals B). The other k−1 vertices lie in the open
+  half-plane right of x, sorted by angle about x; consecutive ones are counter-clockwise about x
+  and every interior turn is a left turn. Conversely, such a chain of k−1 points right of x is
+  angularly increasing inside a half-plane (span < 180°) with left turns everywhere, so with x it
+  is a convex k-gon. Encoding: Y[x,b,c] ← B(x,c) ∧ ccw_S(x,b,c); W2[x,a,b] ← B(x,a) ∧ Y[x,a,b];
+  W(r+1)[x,b,c] ← W r[x,a,b] ∧ Y[x,b,c] ∧ ccw_S(a,b,c); W(k−2) ∧ Y ∧ left turn → false. This is
+  the Szekeres–Peters angular chain about the leftmost point, with "x is left of p" as literals.
+  It is frame-dependent (tied to l), so it cannot be reduced by the rotation.
+- `--gon conv` (variant). A set is in convex position iff all its 4-subsets are. conv4(Q) ← one
+  of the 6 convex chi_S patterns of Q; conv_r(S) ← AND over x of conv_{r−1}(S − x); for every k-set
+  OR over x of ¬conv_{k−1}(S − x). One variable per R-orbit of subsets, one clause per R-orbit of
+  k-sets (chi_S is R-invariant). This is the gon layer of `symcnf.py`, placed on the compact
+  signotope core instead of symcnf's CC-system axioms; it does not need the x-order at all.
+
+Sizes for m = 11, k = 7:
+
+| CNF | variables | clauses | sha256 |
+|---|---|---|---|
+| `c3cnf.py 11 7` (chain) | 168,399 | 4,154,921 | `bf0e502e…` |
+| `c3cnf.py 11 7 --gon conv` | 466,697 | 2,115,323 | `023f8228…` |
+| `symcnf.py 33 7 3` (results/E, E2) | about 464k | about 9.5M | `4c214b4c…` |
+
+## Validation (step 3; all passed)
+
+Exact arithmetic: points are generated with coordinates in Z[√3] (a base point times 4, then its
+two exact rotations), every orientation of S, the x-order, and every collinearity with c are
+decided exactly; S' = phi(S) is computed in mpmath at 120 digits and every sign taken from it is
+asserted to exceed 10^-60 in absolute value (`c3geom.py`). General position, no two points
+collinear with c, and distinct x-coordinates after the rotation are checked exactly; sets that
+fail are redrawn. Point shapes: disk, ring, small clusters, and thin radial strips (the last
+give sets without large convex subsets).
+
+- **Identities 1–4 and the σ orbit pattern** (`check_identities.py`): 2,300 random symmetric
+  sets with m = 1..11, 0 failures (`logs/identities.log`, `logs/identities_2000.log`).
+- **3a, clause-level validation** (`validate.py`): for each set, the true value of every
+  variable is computed from the coordinates (base variables exactly; chain or conv variables as
+  the least fixpoint of their definitions), and every clause is evaluated. Required: all
+  non-gon clauses true, and the gon clauses all true exactly when the exhaustive checker
+  `convk.c` finds no convex k-set. When σ0 = 1 the set is replaced by −S with the same line l
+  (item 5), and the check asserts that the labels are unchanged.
+  - chain: 1,000 sets, m = 3..11, k = 5..11; 777 with a convex k-gon, 223 without; 0 failures
+    (`logs/validate.jsonl`).
+  - conv: 1,010 sets, m = 3..11, k = 5..9; 731 with a convex k-gon, 279 without; 0 failures (`logs/validate_conv.jsonl`).
+  - The validator catches planted bugs (`mutation_test.py`, `logs/mutation.jsonl`): wrong ε
+    signs (20/20 sets fail), a wrong σ orbit pattern (20/20), and forbidding (k+1)-gons instead
+    of k-gons (fails on the set that has a k-gon but no (k+1)-gon).
+- **3b, controls that must be UNSAT**: m = 3, k = 5 (9 points) UNSAT, with an LRAT proof
+  accepted by both lrat-check (E2 patch) and cake_lpr (`logs/control_m3k5_lrat.log`);
+  m = 6, k = 6 (18 points) UNSAT, closed as 8 march cubes, each leaf dual-checked, cube coverage
+  dual-checked (`controls/`). Also UNSAT: m = 4..8 with k = 5, and m = 5..8 with k = 6, in both
+  encodings.
+- **3c, expected SAT**: m = 2, k = 5 SAT; m = 8 and m = 9 with k = 7 SAT (3 s and 5 s).
+- **3d, agreement with symcnf.py** (origin/main, `symcnf.py 3m k 3`, auxiliary centre):
+  m = 2..6, k = 5, 6, 7: same answer in all 15 cases (`logs/compare_symcnf.jsonl`). chain vs conv:
+  same answer on m = 2..8, k = 5..7, 21 cases (`logs/compare_chain_conv.jsonl`).
+- **3e, decoded SAT models** (`decode.py`, independent of the clauses): chi' is checked against
+  the signotope axiom on every 4-set and against the symmetry rule; σ0 = 0 and the σ orbit
+  pattern hold; the inversion bits satisfy the prefix and forced rules and give a total x-order;
+  chi_S = chi'·(−1)^σ equals the T variables and is R-invariant; `convk` finds no convex k-set.
+  All models pass: m = 2..6 small cases, m = 8 and 9 with k = 7, and m = 10, k = 7 from both
+  encodings (`models/`, `logs/sat_controls.log`). Every model has largest convex subset < k.
+- **LRAT checkers**: the upstream drat-trim lrat-check accepts an empty clause without hints
+  (found by E2; `results/E2/logs/lrat_check_soundness.md`). Every UNSAT here is checked by
+  lrat-check with E2's patch AND by the CakeML-verified cake_lpr, and counts only if both
+  accept. Checker controls (`logs/lrat_checker_controls.log`): a genuine proof is accepted by
+  both; a SAT formula with a hintless empty clause and a truncated proof are rejected by both.
+
+### Comparison with C3b (read only after the checks above passed)
+
+C3b (`results/C3b/tools/gen_c3b.py`, commit 3aac870) independently built the same chain
+encoding, with 4-point acyclicity clauses on chi_S added. On m = 2..8, k = 5, 6, 7 (21 cases) both
+generators give the same answer (`logs/compare_c3b.jsonl`). Adding acyclicity to the conv
+variant (`--acy`) did not speed it up (m = 7..9, k = 6).
+
+## m = 11, k = 7 runs (step 4)
+
+All timings are wall seconds on the shared 4-vCPU VM. LRAT proofs are ASCII
+(`--binary=false`), are checked and then deleted (they are 1.5 to 2.5 GB each), and are never
+committed.
+
+1. **Plain CaDiCaL, 20-minute cap.** chain CNF: no answer (1,188 s CPU, 0.95 GB RSS,
+   `logs/cadical20_m11_k7.log`). conv CNF: no answer (1,136 s CPU, 1.9 GB,
+   `logs/cadical20_m11_k7_conv.log`). In 20 minutes the conv CNF ran about 5× as many
+   conflicts as the chain CNF.
+2. **Chain CNF probes.** march_cu `-d 4` gives 16 cubes in 75 s (the default build segfaults
+   above m = 8; see the patch in `shard_plan.md`). `-d 8` progressed only 3/64 in 33 min and was
+   stopped (`logs/march_d8_aborted.log`). Depth-4 cube 0: open after 900 s. The 1,024 σ cubes
+   (all assignments of the 10 free σ bits): 4 open after 300 s, and cubes 0 and 1023 still open
+   after 3,600 s each (`logs/chain_sigma_probe_leaves.jsonl`).
+3. **Conv CNF, march_cu.** `-d 8` gives 256 cubes in 120 s, deterministic (identical sha256 on a
+   re-run). `-d 12` gives 4,096 cubes in 538 s; march refuted none itself. For both, the
+   coverage formula (AND of the negated cubes) is UNSAT, accepted by both checkers.
+   - Depth 8: leaves 0 and 1 open after 1,200 s. (These two records were lost from
+     leaves.jsonl by a git rebase during the run; the driver's stdout log shows them.
+     Running output now lives outside the work tree.)
+   - Depth 12: leaves 0, 256, 512 and 768 open after 1,500 s
+     (`logs/conv_d12_sample{A,B}_leaves.jsonl`).
+   - Depth-12 leaf 0 = CNF plus its 12 cube literals, split by `march_cu -d 6` into 64 cubes
+     (`cubes/conv_m11k7_d12leaf0_d6.icnf`, coverage certified), solved with a 900 s cap:
+     22 of 64 solved before the time ran out, all UNSAT and certified (relative weight 11/32; `leaves.jsonl`, `summarize_leaves.py leaves.jsonl 1/4096`).
+   - Two depth-18 sub-leaves (1 and 8) were solver-UNSAT and accepted by lrat-check, but
+     cake_lpr was OOM-killed (4 checkers in parallel on 15 GB). Both were re-solved with the heap
+     at 6 GB and then accepted by both checkers (tag `..._recheck`); only those records count.
+
+## Files
+
+- `c3cnf.py` generator; `c3geom.py` exact geometry; `check_identities.py`; `validate.py`;
+  `mutation_test.py`; `convk.c` exhaustive convex-k-set checker; `decode.py`; `to_sig.py`;
+  `compare_symcnf.sh`; `cnc_run.py` cube-and-conquer driver; `summarize_leaves.py`.
+- `leaves.jsonl`: depth-18 sub-leaves of conv depth-12 leaf 0 (weights relative to that leaf).
+- `cubes/`: all cube files with `SHA256SUMS`; `controls/`: the m = 6, k = 6 CnC control.
+- `models/`: decoded SAT models (abstract) and `.sig` files for m = 10; `realize/`: realizer logs.
+- `logs/`: everything cited above. `shard_plan.md`: recipe and cost estimate.

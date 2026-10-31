@@ -1,0 +1,10 @@
+input commit: 71bcca7 (worktree /opt/in)
+results/V3C/worklist.jsonl sha256 aeb4a3f19a5979e6d8fb9c4bc68b303de1332ea2a2677e1d4f69833fb6025abc, 12380 lines (matches)
+cross-check at fdd0393 (worktree /opt/fd):
+  v3_jsonl_leaves WAVE1 jtree1: dirs 119 leaf lines 30151 skipped records 71
+  v3_jsonl_leaves WAVE2 jtree2: dirs 106 leaf lines 11810 skipped records 0
+  v3_jsonl_leaves WAVE3 jtree3: dirs 29 leaf lines 6202 skipped records 0
+  v3_manifest: leaves 47533 cases with leaves 278 problems 0
+  Mfd.jsonl sha256 34676b0c112438285b15a2cdb63291b9e63b242a98ac84b38d1d0d9c642afbfb, 47533 lines (matches)
+  work-list records whose (case, lits) are missing from Mfd.jsonl: 0 of 12380 (pass)
+shard: 10 of 16

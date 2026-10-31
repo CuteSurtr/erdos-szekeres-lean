@@ -1,0 +1,60 @@
+{"node": "0s0-3s1_1s0-6s1_8_5s1-7s0", "status": "UNSATISFIABLE", "solve_s": 2.4, "certified": true}
+{"root": "0s0-3s1_1s0-6s1_8_5s1-7s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0-3s1_1s0-6s1_8_5s1-7s0 end 2026-10-28T20:55:38Z
+=== UNIT 0s0_4__1s0-2s0-3s1-5s0-6s1-7s1-8s1-9s0-10s0 start 2026-10-28T20:55:38Z expect 21b9fca2f99338f1b98cf129949a1e588f58d907702e7ce9916949fb1a483e28 from C3W7/LOCAL/out.jsonl
+{"node": "0s0_4__1s0-2s0-3s1-5s0-6s1-7s1-8s1-9s0-10s0", "status": "UNSATISFIABLE", "solve_s": 649.2, "certified": true}
+{"root": "0s0_4__1s0-2s0-3s1-5s0-6s1-7s1-8s1-9s0-10s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0_4__1s0-2s0-3s1-5s0-6s1-7s1-8s1-9s0-10s0 end 2026-10-28T21:07:17Z
+=== UNIT 0s0-1s1_3s1-7s0_6_5s0-10s0 start 2026-10-28T21:07:17Z expect fbd221914cc2f4e4c2b1594293d00b435e37e90179047dd197aeef379bff03d1 from C3W3/C7/out.jsonl
+{"node": "0s0-1s1_3s1-7s0_6_5s0-10s0", "status": "UNSATISFIABLE", "solve_s": 2.5, "certified": true}
+{"root": "0s0-1s1_3s1-7s0_6_5s0-10s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0-1s1_3s1-7s0_6_5s0-10s0 end 2026-10-28T21:07:25Z
+=== UNIT 0s0-2s1_4s1-8s0_9_6s1-7s0 start 2026-10-28T21:07:25Z expect de152bf58f4e7b02648744d5ad6f0f2b3c8f0271136d39e6b4b6317630c55860 from C3W3/C10/out.jsonl
+{"node": "0s0-2s1_4s1-8s0_9_6s1-7s0", "status": "UNSATISFIABLE", "solve_s": 2.5, "certified": true}
+{"root": "0s0-2s1_4s1-8s0_9_6s1-7s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0-2s1_4s1-8s0_9_6s1-7s0 end 2026-10-28T21:07:33Z
+=== UNIT 0s0-2s1_3s1-7s0_9_1s0-6s0 start 2026-10-28T21:07:33Z expect 6bcc325512e49d9269d992d9e9c8695fdf6cfb05f4f38ab5f12d70a735ff646b from C3WAVE2/K35/out.jsonl
+{"node": "0s0-2s1_3s1-7s0_9_1s0-6s0", "status": "UNSATISFIABLE", "solve_s": 2.4, "certified": true}
+{"root": "0s0-2s1_3s1-7s0_9_1s0-6s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0-2s1_3s1-7s0_9_1s0-6s0 end 2026-10-28T21:07:42Z
+=== UNIT 0s0-2s1_3s0-5s1_9_7 start 2026-10-28T21:07:42Z expect a8869121ae07bfdfd64777fe1cfe5adf89d5cb913fa911dec1f01c1503a3c11a from C3W3/C1/out.jsonl
+{"node": "0s0-2s1_3s0-5s1_9_7", "status": "UNSATISFIABLE", "solve_s": 3.4, "certified": true}
+{"root": "0s0-2s1_3s0-5s1_9_7", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0-2s1_3s0-5s1_9_7 end 2026-10-28T21:07:51Z
+=== UNIT 0s0-2s1_4s1-7s0_9_5s1-6s1 start 2026-10-28T21:07:51Z expect 11cd9f44ee36a03b24e872b0e3b63cc62c91f34a4b10a7502fc205528014f715 from C3W3/C8/out.jsonl
+{"node": "0s0-2s1_4s1-7s0_9_5s1-6s1", "status": "UNSATISFIABLE", "solve_s": 2.3, "certified": true}
+{"root": "0s0-2s1_4s1-7s0_9_5s1-6s1", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0-2s1_4s1-7s0_9_5s1-6s1 end 2026-10-28T21:07:59Z
+=== UNIT 0s0-3s1_4s0-10s0_8_5s1-9s0 start 2026-10-28T21:07:59Z expect 551f960d74b38a80928dc7e18df35233d455cb29f56de9ce946bcb3552b025a8 from C3W3/C17/out.jsonl
+{"node": "0s0-3s1_4s0-10s0_8_5s1-9s0", "status": "UNSATISFIABLE", "solve_s": 2.8, "certified": true}
+{"root": "0s0-3s1_4s0-10s0_8_5s1-9s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0-3s1_4s0-10s0_8_5s1-9s0 end 2026-10-28T21:08:07Z
+=== UNIT 0s0-2s1_1s0-4s1_8_3s1-7s1 start 2026-10-28T21:08:07Z expect 4fb5ff3e3579eb7c6dd903795371ea5e33913925db66068041e58d4982e26fdc from C3WAVE2/K27/out.jsonl
+{"node": "0s0-2s1_1s0-4s1_8_3s1-7s1", "status": "UNSATISFIABLE", "solve_s": 2.1, "certified": true}
+{"root": "0s0-2s1_1s0-4s1_8_3s1-7s1", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0-2s1_1s0-4s1_8_3s1-7s1 end 2026-10-28T21:08:15Z
+=== UNIT 0s0-2s1_4s0-6s1_3_1s1-10s0 start 2026-10-28T21:08:15Z expect d137ec072df4b6ce0c2eeb7b2d0f9355ebecd254976ec01614ea5f350635fcf6 from C3WAVE2/K07/out.jsonl
+{"node": "0s0-2s1_4s0-6s1_3_1s1-10s0", "status": "UNSATISFIABLE", "solve_s": 4.1, "certified": true}
+{"root": "0s0-2s1_4s0-6s1_3_1s1-10s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0-2s1_4s0-6s1_3_1s1-10s0 end 2026-10-28T21:08:25Z
+=== UNIT 0s0-3s1_4s0-9s1_8s1-10s1 start 2026-10-28T21:08:25Z expect 33716e0ca2653c2de959501319f13dba3a6ac9bccf5d931535797e4c5326f6d5 from C3W3/C10/out.jsonl
+{"node": "0s0-3s1_4s0-9s1_8s1-10s1", "status": "UNSATISFIABLE", "solve_s": 3.2, "certified": true}
+{"root": "0s0-3s1_4s0-9s1_8s1-10s1", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0-3s1_4s0-9s1_8s1-10s1 end 2026-10-28T21:08:34Z
+=== UNIT 0s0-1s1_5s0-9s1_7_6s0-10s0 start 2026-10-28T21:08:34Z expect 6e76615cbcc08ff1ff4a7c054e6b606ae7d3493e5ad1eafac979f9706a4d10f0 from C3WAVE2/K20/out.jsonl
+{"node": "0s0-1s1_5s0-9s1_7_6s0-10s0", "status": "UNSATISFIABLE", "solve_s": 2.1, "certified": true}
+{"root": "0s0-1s1_5s0-9s1_7_6s0-10s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0-1s1_5s0-9s1_7_6s0-10s0 end 2026-10-28T21:08:41Z
+=== UNIT 0s0-2s1_3s0-10s0_6s1-7s1 start 2026-10-28T21:08:41Z expect 6f0a267224dbeafc96d5b2b1516299000a25bad65642774671e3066c32937124 from C3W3/C16/out.jsonl
+{"node": "0s0-2s1_3s0-10s0_6s1-7s1", "status": "UNSATISFIABLE", "solve_s": 10.3, "certified": true}
+{"root": "0s0-2s1_3s0-10s0_6s1-7s1", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0-2s1_3s0-10s0_6s1-7s1 end 2026-10-28T21:09:02Z
+=== UNIT 0s0-2s1_1s0-8s0_3_6s0-10s0 start 2026-10-28T21:09:02Z expect b55995f5291bdd3932a2542447e4b237da1fabe5d6dbad289ca565e302e89797 from C3WAVE1/C17/out.jsonl
+{"node": "0s0-2s1_1s0-8s0_3_6s0-10s0", "status": "UNSATISFIABLE", "solve_s": 2.1, "certified": true}
+{"root": "0s0-2s1_1s0-8s0_3_6s0-10s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0-2s1_1s0-8s0_3_6s0-10s0 end 2026-10-28T21:09:10Z
+=== UNIT 0s0-3s0_1__2s1-4s1-5s1-6s1-7s1-8s0 start 2026-10-28T21:09:10Z expect 18cd74f2e2217bc7798ac34be5ae12bce57b056a5f2e0a7d81f0f6a4114ca4f4 from C3W4/O08/out.jsonl
+{"node": "0s0-3s0_1__2s1-4s1-5s1-6s1-7s1-8s0", "status": "UNSATISFIABLE", "solve_s": 69.1, "certified": true}
+{"root": "0s0-3s0_1__2s1-4s1-5s1-6s1-7s1-8s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0-3s0_1__2s1-4s1-5s1-6s1-7s1-8s0 end 2026-10-28T21:10:34Z
+=== END, lane 2 exits 2026-10-28T21:10:34Z

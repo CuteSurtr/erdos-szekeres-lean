@@ -1,0 +1,21 @@
+# LBS2 L5 tools (paths relative to cloud/es7-2026-10-19)
+sat:        gcc -O2 -o sat tools/trackA/sat.c            (gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0), unchanged, task commit cbe809a1
+sat_wide:   clang -O2 -o sat_wide results/LBS2/L5/src/sat_wide.c   (Ubuntu clang version 18.1.3 (1ubuntu1))
+            = sat.c with _BitInt(256)/_BitInt(512) instead of int64/__int128, bound |coord| < 2^60 (used for sets with |coord| >= 2^27)
+saturate:   tools/realizer/saturate.py (unchanged); results/LBS2/L5/src/saturate_wide.py = same with bound 2^60, for sat_wide
+vfy7:       gcc -O2 -o vfy7 results/LBS2/L5/src/vfy7.c  (independent exact check: __int128 orientations, general position, c5..c8 by DFS over 4-point convexity)
+anneal32:   g++ -O2 -march=native -o anneal32 results/LBS2/L5/src/anneal32.cpp  (own annealer; DP counting scheme as in results/LBS/L1/src/lbs2.cpp)
+pipeline:   results/LBS2/L5/src/pipeline.py (vfy7 + exact order-type hash + saturate), nearmiss.py, anneal2cands.py, run.sh
+python:     Python 3.11.17; numpy/highspy installed with pip but not used in the end (F realizer failed on a test L2 set in 30 s)
+
+## smoke tests
+run/smoke_es32.pts = gen_bases.witness(7, Minimal()) of results/LBS/L2/gen_bases.py (ES 32-point construction, max |coord| 110353)
+vfy7: gp 1 n 32 c5 49884 c6 39648 c7 0 c8 0 maxabs 110353
+saturate.py + sat:
+{"file": "smoke_es32.pts", "N": 32, "general_position": true, "largest_convex_subset": 6, "max_abs_coord": 110353, "sat": {"N": 32, "K": 7, "lines": 496, "parallel_pairs": 388, "nonS_vertex_pairs": 107492, "nonS_distinct_vertices": 107378, "max_lines_through_nonS_vertex": 10, "faces_euler": 108875, "faces_hit_by_valid_candidates": 108875, "candidates": 431952, "invalid_candidates": 10, "valid_candidates": 431942, "cache_hits": 429648, "dp_found": 2294, "dp_none": 0, "bad_candidates": 0, "cpu_seconds": 0.7}, "faces_covered": true, "saturated": true}
+saturate_wide.py + sat_wide, same set:
+{"file": "smoke_es32.pts", "N": 32, "general_position": true, "largest_convex_subset": 6, "max_abs_coord": 110353, "sat": {"N": 32, "K": 7, "lines": 496, "parallel_pairs": 388, "nonS_vertex_pairs": 107492, "nonS_distinct_vertices": 107378, "max_lines_through_nonS_vertex": 10, "faces_euler": 108875, "faces_hit_by_valid_candidates": 108875, "candidates": 431952, "invalid_candidates": 10, "valid_candidates": 431942, "cache_hits": 429648, "dp_found": 2294, "dp_none": 0, "bad_candidates": 0, "cpu_seconds": 3.6}, "faces_covered": true, "saturated": true}
+run/smoke_es32_x2p20.pts = (x*2^20+7, y*2^20-3), same order type, max |coord| 1.16e11 > 2^27:
+vfy7: gp 1 n 32 c5 49884 c6 39648 c7 0 c8 0 maxabs 115713507331
+{"file": "smoke_es32_x2p20.pts", "N": 32, "general_position": true, "largest_convex_subset": 6, "max_abs_coord": 115713507331, "sat": {"N": 32, "K": 7, "lines": 496, "parallel_pairs": 388, "nonS_vertex_pairs": 107492, "nonS_distinct_vertices": 107378, "max_lines_through_nonS_vertex": 10, "faces_euler": 108875, "faces_hit_by_valid_candidates": 108875, "candidates": 431952, "invalid_candidates": 10, "valid_candidates": 431942, "cache_hits": 429648, "dp_found": 2294, "dp_none": 0, "bad_candidates": 0, "cpu_seconds": 3.8}, "faces_covered": true, "saturated": true}
+sat vs sat_wide stdout (without cpu_seconds) and bad-candidate files byte-identical on smoke_es32 with K = 6, 7 and on its first 14 points with K = 6 (729 bad candidates, exercises the bad-file path).

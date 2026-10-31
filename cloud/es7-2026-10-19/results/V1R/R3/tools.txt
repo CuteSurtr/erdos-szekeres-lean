@@ -1,0 +1,7 @@
+CaDiCaL 3.0.1, https://github.com/arminbiere/cadical commit c60730422e758ef1cebe7aeddf2dda31c996bf04, built with ./configure && make; binary sha256 9ea2d2a8631ab5b1313454a2b25e35ef1aa172f4a277186a6413931dc82a7239
+cake_lpr https://github.com/tanyongkiam/cake_lpr commit a36874a8b750b43fe4b385b8ddbf5b033e46a3fa, built with make cake_lpr; binary sha256 1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca
+cake_lpr example.cnf example.lpr: s VERIFIED UNSAT
+gcc: gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+CNF: hm33k7.sub.cnf from tools/etv/gen_etv.py 33 7 7 7 --mirror --hull then results/C/scripts/mirgen.py hm33k7.cnf 33 --hull (results/C/scripts/make_cnfs.sh); sha256 bfbc2d6096e4099ba751130d421eca9da18b72559991103cc2d4b4bc0d92757d (matches expected); header p cnf 47002 535454
+verify/hull_leaves.icnf sha256 cc11270a57ebe85ad1d5c83b15da0a3439521cc7ebd50432f16c223a1b2478b6 (matches expected)
+Solver: cadical --lrat=true --no-binary -q F.cnf proof.lrat; check: cake_lpr F.cnf proof.lrat; 3 leaves in parallel. Driver: own script (copy in driver.py).

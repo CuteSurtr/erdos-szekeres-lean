@@ -1,0 +1,8 @@
+gen_c3b.py 11 7 --d3
+f135ed01fb459045a7de7b47c24ad66ba69cf21873c83890954e53260fe93a30  d3_m11k7.cnf
+s UNSATISFIABLE
+c (percentage relative to total process time)
+c conflicts:                 30812       181.04    per second
+c total process time since initialization:       171.97    seconds
+proof_bytes 490004550
+lrat-check (drat-trim 2e3b2dc + E2 empty-clause patch): c VERIFIED

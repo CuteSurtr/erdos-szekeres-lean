@@ -1,0 +1,10 @@
+row	node	K	certified	open	open_unknown	open_not_run	solve_s	check_s	max_cube_s	recorded_core_s	ratio	closed	killed
+0	0s0-1s1_2s0-9s0	3	8	0	0	0	673.5	315.4	147.0	16389.6	0.0603	True	False
+4	0s0-1s1_4s1-5s0	3	8	0	0	0	1305.4	354.0	234.9	15792.7	0.1051	True	False
+8	0s0-1s1_2s0-3s1	3	8	0	0	0	1027.1	345.7	212.0	15397.8	0.0892	True	False
+12	0s0-1s1_3s0-10s0	3	8	0	0	0	673.3	330.4	156.2	15074.1	0.0666	True	False
+16	0s0-1s1_2s0-6s1	3	8	0	0	0	742.8	303.9	156.4	14618.7	0.0716	True	False
+# per-node total sigma cost / layer-split cost: {'0s0-1s1_2s0-9s0': 0.0603, '0s0-1s1_4s1-5s0': 0.1051, '0s0-1s1_2s0-3s1': 0.0892, '0s0-1s1_3s0-10s0': 0.0666, '0s0-1s1_2s0-6s1': 0.0716}
+# median ratio: 0.07160007387797819
+# open fraction K=3: 0/40
+# open fraction K=6: 0/0

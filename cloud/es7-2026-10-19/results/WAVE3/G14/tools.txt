@@ -1,0 +1,9 @@
+Built from source in /opt/tools, linked from /opt/work/bin:
+cadical   c60730422e758ef1cebe7aeddf2dda31c996bf04 (3.0.1), ./configure && make
+march_cu  CnC 705b60c6491ef2b61988b3ce6ac674be1b90571d, make CFLAGS="-O3 -fno-strict-aliasing -Wall -DNDEBUG -fcommon"
+cake_lpr  a36874a8b750b43fe4b385b8ddbf5b033e46a3fa, make cake_lpr; binary sha256 1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca
+          bundled example: ./cake_lpr example.cnf example.lpr -> s VERIFIED UNSAT
+F = /opt/work/F.cnf sha256 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d (gen_etv.py 33 7 7 7 --mirror; mirgen.py --interior --yflip-unit) = expected 69c1dc8f...932d OK
+U_L7.cnf (hullsplit.py case F "" 7) sha256 c6d1c840d97921426e0f2d1d34213fb94293cc1783296ec2357d7883b804f099 = cases.jsonl cnf_sha256 OK
+Top: 64 cubes of tasks/G14.json["U_L7"] in file order, sha256 d9c5dc9f505898c2eaa9ba2c94f9d7c3bee0215d6ee74a4e0f991adb9628c09a
+Run: BIN=/opt/work/bin WORK=/opt/work/tmp close_march.py U_L7.cnf U_L7 --name U_L7 --top U_L7.top.icnf --depth 7 --timeout 300 --split-depth 6 --jobs 4 --hours 2.722  started 11:20:31 UTC

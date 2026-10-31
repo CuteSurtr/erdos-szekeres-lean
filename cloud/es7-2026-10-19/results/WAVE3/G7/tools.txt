@@ -1,0 +1,7 @@
+cadical 3.0.1 commit c6073042 https://github.com/arminbiere/cadical
+march_cu CnC commit 705b60c6491ef2b61988b3ce6ac674be1b90571d built -O3 -fno-strict-aliasing -Wall -DNDEBUG -fcommon
+cake_lpr commit a36874a8b750b43fe4b385b8ddbf5b033e46a3fa make cake_lpr; example: s VERIFIED UNSAT
+cadical HEAD c60730422e758ef1cebe7aeddf2dda31c996bf04
+aec9944d4c767242e9cba25be81410571e903627808622674cf2f55d2abe6b76  /opt/bin/cadical
+1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca  /opt/bin/cake_lpr
+afcbb47642a922676693b325ed19d88698c6b8f700943fa2753d98126579f222  /opt/bin/march_cu

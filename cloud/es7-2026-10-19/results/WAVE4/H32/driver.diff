@@ -1,0 +1,8 @@
+close_march.py copied byte for byte from results/WAVE2/F2/close_march.py.
+diff results/WAVE2/F2/close_march.py results/WAVE4/H32/close_march.py: (empty, no changes)
+sha256 2e0975aa98c7dbcc2cf535993b54f57db764f7bf50f64fc54b9ff2860e67c855 (both files)
+Checked:
+(a) every march and solver/checker job gets a fresh tempfile.mkdtemp directory under WORK (lines 39, 83).
+(b) leaves.icnf and open.icnf are written to a temporary file and moved into place with os.replace (atomic(), lines 136-140).
+(c) the first leaves.jsonl record carries "case" (from --name, here U_L2) and "case_sha256" (lines 118-119, 131).
+Also: a leaf is UNSAT only if cake_lpr printed exactly "s VERIFIED UNSAT" (line 95), otherwise UNSAT_UNCHECKED and kept open (AUDIT BUG-1).

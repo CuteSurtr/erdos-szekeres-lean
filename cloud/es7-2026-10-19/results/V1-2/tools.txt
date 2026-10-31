@@ -1,0 +1,12 @@
+cadical   https://github.com/arminbiere/cadical       c60730422e758ef1cebe7aeddf2dda31c996bf04  (3.0.1)
+cake_lpr  https://github.com/tanyongkiam/cake_lpr     a36874a8b750b43fe4b385b8ddbf5b033e46a3fa  (make cake_lpr)
+drat-trim https://github.com/marijnheule/drat-trim    2e3b2dc0ecf938addbd779d42877b6ed69d9a985  (lrat-check.c + results/E2/tools/lrat-check-E2.patch, gcc -O2)
+
+Self-tests:
+- cake_lpr example.cnf example.lpr -> s VERIFIED UNSAT
+- patched lrat-check on forged proof "2 0 0" for "p cnf 1 1 / 1 0" -> c NOT VERIFIED (exit 1, "c FAILED: empty clause without a RUP conflict")
+- genuine CaDiCaL LRAT proof of {1 2, -1 2, 1 -2, -1 -2}: patched lrat-check -> c VERIFIED; cake_lpr -> s VERIFIED UNSAT
+
+Input hashes:
+- hm33k7.sub.cnf regenerated with results/C/scripts/make_cnfs.sh: bfbc2d6096e4099ba751130d421eca9da18b72559991103cc2d4b4bc0d92757d  (expected bfbc2d60...757d: match)
+- verify/hull_leaves.icnf: cc11270a57ebe85ad1d5c83b15da0a3439521cc7ebd50432f16c223a1b2478b6  (expected cc11270a...b6: match)

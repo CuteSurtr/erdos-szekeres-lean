@@ -1,0 +1,200 @@
+{"spec": "3/;6,9//-;7/13/-", "result": "UNSAT", "own_s": 0.194, "est_s": 0.2, "censored": false}
+{"spec": "3/;6,9//-;/8,10/-", "result": "UNSAT", "own_s": 0.185, "est_s": 0.2, "censored": false}
+{"spec": "3/;6,9//-", "result": "UNKNOWN", "own_s": 20.028, "nchildren": 242, "sampled": 2, "child_est": [0.2, 0.2], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 68.4}
+{"spec": "3/;13//B", "result": "UNSAT", "own_s": 3.906, "est_s": 3.9, "censored": false}
+{"spec": "/2;15//-;10/7/-", "result": "UNSAT", "own_s": 6.944, "est_s": 6.9, "censored": false}
+{"spec": "/2;15//-;11/8/-", "result": "UNSAT", "own_s": 5.301, "est_s": 5.3, "censored": false}
+{"spec": "/2;15//-", "result": "UNKNOWN", "own_s": 20.018, "nchildren": 288, "sampled": 2, "child_est": [6.9, 5.3], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 1776.8}
+{"spec": "3/;5/10/-;12/11/-", "result": "UNSAT", "own_s": 1.619, "est_s": 1.6, "censored": false}
+{"spec": "3/;5/10/-;/15/T", "result": "UNSAT", "own_s": 0.506, "est_s": 0.5, "censored": false}
+{"spec": "3/;5/10/-", "result": "UNKNOWN", "own_s": 20.014, "nchildren": 242, "sampled": 2, "child_est": [1.6, 0.5], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 274.1}
+{"spec": "3/;16/13/-", "result": "UNSAT", "own_s": 1.323, "est_s": 1.3, "censored": false}
+{"spec": "3/", "result": "UNKNOWN", "own_s": 20.049, "nchildren": 392, "sampled": 4, "child_est": [68.4, 3.9, 274.1, 1.3], "child_results": ["UNKNOWN", "UNSAT", "UNKNOWN", "UNSAT"], "censored": false, "est_s": 34094.6}
+{"spec": "/2;8/12/-;9//B", "result": "UNSAT", "own_s": 3.659, "est_s": 3.7, "censored": false}
+{"spec": "/2;8/12/-;10,13//-", "result": "UNSAT", "own_s": 0.174, "est_s": 0.2, "censored": false}
+{"spec": "/2;8/12/-", "result": "UNKNOWN", "own_s": 20.014, "nchildren": 242, "sampled": 2, "child_est": [3.7, 0.2], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 491.9}
+{"spec": "/2;16/15/-", "result": "UNSAT", "own_s": 6.049, "est_s": 6.0, "censored": false}
+{"spec": "4/;6//-;10,11//-", "result": "UNSAT", "own_s": 0.792, "est_s": 0.8, "censored": false}
+{"spec": "4/;6//-;/8,14/-", "result": "UNSAT", "own_s": 0.213, "est_s": 0.2, "censored": false}
+{"spec": "4/;6//-", "result": "UNKNOWN", "own_s": 20.019, "nchildren": 288, "sampled": 2, "child_est": [0.8, 0.2], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 164.0}
+{"spec": "4/;/10,13/-", "result": "UNSAT", "own_s": 0.169, "est_s": 0.2, "censored": false}
+{"spec": "4/;/12,15/-", "result": "UNSAT", "own_s": 0.174, "est_s": 0.2, "censored": false}
+{"spec": "/2;9//-;//B", "result": "UNSAT", "own_s": 9.34, "est_s": 9.3, "censored": false}
+{"spec": "4/;10/7/-;/15,16/-", "result": "UNSAT", "own_s": 0.26, "est_s": 0.3, "censored": false}
+{"spec": "4/;10/7/-;16/15/-", "result": "UNSAT", "own_s": 0.419, "est_s": 0.4, "censored": false}
+{"spec": "4/;10/7/-", "result": "UNKNOWN", "own_s": 20.014, "nchildren": 242, "sampled": 2, "child_est": [0.3, 0.4], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 104.7}
+{"spec": "4/", "result": "UNKNOWN", "own_s": 20.017, "nchildren": 392, "sampled": 4, "child_est": [164.0, 0.2, 0.2, 104.7], "child_results": ["UNKNOWN", "UNSAT", "UNSAT", "UNKNOWN"], "censored": false, "est_s": 26391.8}
+{"spec": "/2;9//-;11/5/-", "result": "UNKNOWN", "own_s": 20.028, "est_s": 20.0, "censored": true}
+{"spec": "/2;9//-", "result": "UNKNOWN", "own_s": 20.016, "nchildren": 288, "sampled": 2, "child_est": [9.3, 20.0], "child_results": ["UNSAT", "UNKNOWN"], "censored": true, "est_s": 4239.2}
+{"spec": "/2", "result": "UNKNOWN", "own_s": 20.018, "nchildren": 392, "sampled": 4, "child_est": [1776.8, 491.9, 6.0, 4239.2], "child_results": ["UNKNOWN", "UNKNOWN", "UNSAT", "UNKNOWN"], "censored": true, "est_s": 638382.2}
+{"spec": "/4;12//T", "result": "UNSAT", "own_s": 0.242, "est_s": 0.2, "censored": false}
+{"spec": "/4;7,16//-", "result": "UNSAT", "own_s": 0.184, "est_s": 0.2, "censored": false}
+{"spec": "5/;/4/B", "result": "UNSAT", "own_s": 0.193, "est_s": 0.2, "censored": false}
+{"spec": "5/;12/3/-", "result": "UNSAT", "own_s": 0.203, "est_s": 0.2, "censored": false}
+{"spec": "5/;7/10/-;8,16//-", "result": "UNSAT", "own_s": 0.23, "est_s": 0.2, "censored": false}
+{"spec": "5/;7/10/-;9/14/-", "result": "UNSAT", "own_s": 0.789, "est_s": 0.8, "censored": false}
+{"spec": "5/;7/10/-", "result": "UNKNOWN", "own_s": 20.041, "nchildren": 242, "sampled": 2, "child_est": [0.2, 0.8], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 141.0}
+{"spec": "/4;/6/-;7/14/-", "result": "UNSAT", "own_s": 8.154, "est_s": 8.2, "censored": false}
+{"spec": "/4;/6/-;8,11//-", "result": "UNSAT", "own_s": 0.192, "est_s": 0.2, "censored": false}
+{"spec": "/4;/6/-", "result": "UNKNOWN", "own_s": 20.017, "nchildren": 288, "sampled": 2, "child_est": [8.2, 0.2], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 1229.6}
+{"spec": "5/;3//T;/9/-", "result": "UNSAT", "own_s": 0.497, "est_s": 0.5, "censored": false}
+{"spec": "5/;3//T;6/10/-", "result": "UNSAT", "own_s": 0.657, "est_s": 0.7, "censored": false}
+{"spec": "5/;3//T", "result": "UNKNOWN", "own_s": 20.016, "nchildren": 242, "sampled": 2, "child_est": [0.5, 0.7], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 165.2}
+{"spec": "5/", "result": "UNKNOWN", "own_s": 20.019, "nchildren": 392, "sampled": 4, "child_est": [0.2, 0.2, 141.0, 165.2], "child_results": ["UNSAT", "UNSAT", "UNKNOWN", "UNKNOWN"], "censored": false, "est_s": 30066.8}
+{"spec": "/4;/5/T;7,15//-", "result": "UNSAT", "own_s": 0.236, "est_s": 0.2, "censored": false}
+{"spec": "/4;/5/T;12/9/-", "result": "UNSAT", "own_s": 1.197, "est_s": 1.2, "censored": false}
+{"spec": "/4;/5/T", "result": "UNKNOWN", "own_s": 20.016, "nchildren": 242, "sampled": 2, "child_est": [0.2, 1.2], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 189.4}
+{"spec": "/4", "result": "UNKNOWN", "own_s": 20.02, "nchildren": 392, "sampled": 4, "child_est": [0.2, 0.2, 1229.6, 189.4], "child_results": ["UNSAT", "UNSAT", "UNKNOWN", "UNKNOWN"], "censored": false, "est_s": 139121.2}
+{"spec": "/5;13,14//-", "result": "UNSAT", "own_s": 0.173, "est_s": 0.2, "censored": false}
+{"spec": "6/;8,15//-", "result": "UNSAT", "own_s": 4.293, "est_s": 4.3, "censored": false}
+{"spec": "/5;4/10/-;11/14/-", "result": "UNSAT", "own_s": 0.775, "est_s": 0.8, "censored": false}
+{"spec": "/5;4/10/-;/9,14/-", "result": "UNSAT", "own_s": 0.223, "est_s": 0.2, "censored": false}
+{"spec": "/5;4/10/-", "result": "UNKNOWN", "own_s": 20.021, "nchildren": 242, "sampled": 2, "child_est": [0.8, 0.2], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 141.0}
+{"spec": "/5;7/16/-", "result": "UNSAT", "own_s": 8.396, "est_s": 8.4, "censored": false}
+{"spec": "6/;4,13//-;5,14//-", "result": "UNSAT", "own_s": 5.677, "est_s": 5.7, "censored": false}
+{"spec": "6/;4,13//-;16/10/-", "result": "UNSAT", "own_s": 0.185, "est_s": 0.2, "censored": false}
+{"spec": "6/;4,13//-", "result": "UNKNOWN", "own_s": 20.025, "nchildren": 242, "sampled": 2, "child_est": [5.7, 0.2], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 733.9}
+{"spec": "/5;/4,13/-", "result": "UNSAT", "own_s": 9.169, "est_s": 9.2, "censored": false}
+{"spec": "/5", "result": "UNKNOWN", "own_s": 20.018, "nchildren": 392, "sampled": 4, "child_est": [0.2, 141.0, 8.4, 9.2], "child_results": ["UNSAT", "UNKNOWN", "UNSAT", "UNSAT"], "censored": false, "est_s": 15582.4}
+{"spec": "6/;13/5/-", "result": "UNSAT", "own_s": 19.646, "est_s": 19.6, "censored": false}
+{"spec": "/6;/4/T", "result": "UNSAT", "own_s": 4.736, "est_s": 4.7, "censored": false}
+{"spec": "/6;/11,15/-", "result": "UNSAT", "own_s": 0.336, "est_s": 0.3, "censored": false}
+{"spec": "/6;8/3/-", "result": "UNSAT", "own_s": 2.283, "est_s": 2.3, "censored": false}
+{"spec": "/6;11/13/-", "result": "UNSAT", "own_s": 4.642, "est_s": 4.6, "censored": false}
+{"spec": "/6", "result": "UNKNOWN", "own_s": 20.02, "nchildren": 392, "sampled": 4, "child_est": [4.7, 0.3, 2.3, 4.6], "child_results": ["UNSAT", "UNSAT", "UNSAT", "UNSAT"], "censored": false, "est_s": 1186.2}
+{"spec": "6/;4,10//-;/9/B", "result": "UNSAT", "own_s": 0.201, "est_s": 0.2, "censored": false}
+{"spec": "6/;4,10//-;/14/T", "result": "UNSAT", "own_s": 0.179, "est_s": 0.2, "censored": false}
+{"spec": "6/;4,10//-", "result": "UNKNOWN", "own_s": 20.013, "nchildren": 242, "sampled": 2, "child_est": [0.2, 0.2], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 68.4}
+{"spec": "6/", "result": "UNKNOWN", "own_s": 20.016, "nchildren": 392, "sampled": 4, "child_est": [4.3, 733.9, 19.6, 68.4], "child_results": ["UNSAT", "UNKNOWN", "UNSAT", "UNKNOWN"], "censored": false, "est_s": 80987.6}
+{"spec": "/7;16/3/-", "result": "UNSAT", "own_s": 0.36, "est_s": 0.4, "censored": false}
+{"spec": "/7;8,12//-", "result": "UNSAT", "own_s": 0.188, "est_s": 0.2, "censored": false}
+{"spec": "/7;15/4/-", "result": "UNSAT", "own_s": 1.596, "est_s": 1.6, "censored": false}
+{"spec": "/7;14/12/-", "result": "UNSAT", "own_s": 3.895, "est_s": 3.9, "censored": false}
+{"spec": "/7", "result": "UNKNOWN", "own_s": 20.048, "nchildren": 392, "sampled": 4, "child_est": [0.4, 0.2, 1.6, 3.9], "child_results": ["UNSAT", "UNSAT", "UNSAT", "UNSAT"], "censored": false, "est_s": 617.8}
+{"spec": "7/;11/5/-;10,15//-", "result": "UNSAT", "own_s": 0.232, "est_s": 0.2, "censored": false}
+{"spec": "7/;11/5/-;16/13/-", "result": "UNSAT", "own_s": 0.463, "est_s": 0.5, "censored": false}
+{"spec": "7/;11/5/-", "result": "UNKNOWN", "own_s": 20.016, "nchildren": 242, "sampled": 2, "child_est": [0.2, 0.5], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 104.7}
+{"spec": "7/;15/5/-", "result": "UNSAT", "own_s": 11.429, "est_s": 11.4, "censored": false}
+{"spec": "7/;/6,10/-", "result": "UNSAT", "own_s": 0.174, "est_s": 0.2, "censored": false}
+{"spec": "8/;12,13//-", "result": "UNSAT", "own_s": 0.289, "est_s": 0.3, "censored": false}
+{"spec": "7/;/13/B", "result": "UNSAT", "own_s": 0.195, "est_s": 0.2, "censored": false}
+{"spec": "7/", "result": "UNKNOWN", "own_s": 20.026, "nchildren": 392, "sampled": 4, "child_est": [104.7, 11.4, 0.2, 0.2], "child_results": ["UNKNOWN", "UNSAT", "UNSAT", "UNSAT"], "censored": false, "est_s": 11437.0}
+{"spec": "8/;4/16/-", "result": "UNSAT", "own_s": 1.942, "est_s": 1.9, "censored": false}
+{"spec": "8/;12/16/-", "result": "UNSAT", "own_s": 2.216, "est_s": 2.2, "censored": false}
+{"spec": "8/;/3,13/-", "result": "UNSAT", "own_s": 0.285, "est_s": 0.3, "censored": false}
+{"spec": "8/", "result": "UNKNOWN", "own_s": 20.019, "nchildren": 392, "sampled": 4, "child_est": [0.3, 1.9, 2.2, 0.3], "child_results": ["UNSAT", "UNSAT", "UNSAT", "UNSAT"], "censored": false, "est_s": 480.6}
+{"spec": "9/;4/15/-", "result": "UNSAT", "own_s": 2.449, "est_s": 2.4, "censored": false}
+{"spec": "/8;/6,12/-", "result": "UNSAT", "own_s": 7.366, "est_s": 7.4, "censored": false}
+{"spec": "9/;/10,14/-", "result": "UNSAT", "own_s": 0.392, "est_s": 0.4, "censored": false}
+{"spec": "/8;/5,16/-", "result": "UNSAT", "own_s": 13.632, "est_s": 13.6, "censored": false}
+{"spec": "9/;8/10/-", "result": "UNSAT", "own_s": 19.791, "est_s": 19.8, "censored": false}
+{"spec": "/8;9/7/-;11,12//-", "result": "UNSAT", "own_s": 0.448, "est_s": 0.4, "censored": false}
+{"spec": "/8;9/7/-;4,5//-", "result": "UNSAT", "own_s": 0.441, "est_s": 0.4, "censored": false}
+{"spec": "/8;9/7/-", "result": "UNKNOWN", "own_s": 20.034, "nchildren": 242, "sampled": 2, "child_est": [0.4, 0.4], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 116.8}
+{"spec": "9/;/5/T;11/15/-", "result": "UNSAT", "own_s": 0.612, "est_s": 0.6, "censored": false}
+{"spec": "9/;/5/T;13/7/-", "result": "UNSAT", "own_s": 0.874, "est_s": 0.9, "censored": false}
+{"spec": "9/;/5/T", "result": "UNKNOWN", "own_s": 20.044, "nchildren": 242, "sampled": 2, "child_est": [0.6, 0.9], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 201.5}
+{"spec": "9/", "result": "UNKNOWN", "own_s": 20.035, "nchildren": 392, "sampled": 4, "child_est": [2.4, 0.4, 19.8, 201.5], "child_results": ["UNSAT", "UNSAT", "UNSAT", "UNKNOWN"], "censored": false, "est_s": 21981.8}
+{"spec": "/8;4/12/-;/7,13/-", "result": "UNSAT", "own_s": 0.443, "est_s": 0.4, "censored": false}
+{"spec": "/8;4/12/-;7,15//-", "result": "UNSAT", "own_s": 0.427, "est_s": 0.4, "censored": false}
+{"spec": "/8;4/12/-", "result": "UNKNOWN", "own_s": 20.037, "nchildren": 242, "sampled": 2, "child_est": [0.4, 0.4], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 116.8}
+{"spec": "/8", "result": "UNKNOWN", "own_s": 20.029, "nchildren": 392, "sampled": 4, "child_est": [7.4, 13.6, 116.8, 116.8], "child_results": ["UNSAT", "UNSAT", "UNKNOWN", "UNKNOWN"], "censored": false, "est_s": 24970.8}
+{"spec": "/9;12/13/-", "result": "UNSAT", "own_s": 7.345, "est_s": 7.3, "censored": false}
+{"spec": "/9;3,8//-", "result": "UNSAT", "own_s": 0.404, "est_s": 0.4, "censored": false}
+{"spec": "/9;/8,13/-", "result": "UNSAT", "own_s": 2.259, "est_s": 2.3, "censored": false}
+{"spec": "/9;6/13/-;8//T", "result": "UNSAT", "own_s": 0.439, "est_s": 0.4, "censored": false}
+{"spec": "/9;6/13/-;8,11//-", "result": "UNSAT", "own_s": 0.51, "est_s": 0.5, "censored": false}
+{"spec": "/9;6/13/-", "result": "UNKNOWN", "own_s": 20.036, "nchildren": 242, "sampled": 2, "child_est": [0.4, 0.5], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 128.9}
+{"spec": "/9", "result": "UNKNOWN", "own_s": 20.148, "nchildren": 392, "sampled": 4, "child_est": [7.3, 0.4, 2.3, 128.9], "child_results": ["UNSAT", "UNSAT", "UNSAT", "UNKNOWN"], "censored": false, "est_s": 13632.3}
+{"spec": "10/;14/6/-", "result": "UNSAT", "own_s": 19.236, "est_s": 19.2, "censored": false}
+{"spec": "10/;13/4/-;/11,12/-", "result": "UNSAT", "own_s": 0.64, "est_s": 0.6, "censored": false}
+{"spec": "10/;13/4/-;14/5/-", "result": "UNSAT", "own_s": 6.848, "est_s": 6.8, "censored": false}
+{"spec": "10/;13/4/-", "result": "UNKNOWN", "own_s": 20.027, "nchildren": 242, "sampled": 2, "child_est": [0.6, 6.8], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 915.4}
+{"spec": "/10;12/11/-", "result": "UNSAT", "own_s": 12.509, "est_s": 12.5, "censored": false}
+{"spec": "10/;15/13/-", "result": "UNSAT", "own_s": 4.016, "est_s": 4.0, "censored": false}
+{"spec": "10/;/8,15/-", "result": "UNSAT", "own_s": 0.448, "est_s": 0.4, "censored": false}
+{"spec": "10/", "result": "UNKNOWN", "own_s": 20.069, "nchildren": 392, "sampled": 4, "child_est": [19.2, 915.4, 4.0, 0.4], "child_results": ["UNSAT", "UNKNOWN", "UNSAT", "UNSAT"], "censored": false, "est_s": 92042.1}
+{"spec": "/10;5/3/-", "result": "UNSAT", "own_s": 9.499, "est_s": 9.5, "censored": false}
+{"spec": "/10;/12/B", "result": "UNSAT", "own_s": 0.619, "est_s": 0.6, "censored": false}
+{"spec": "/10;/3,5/-", "result": "UNSAT", "own_s": 0.7, "est_s": 0.7, "censored": false}
+{"spec": "/10", "result": "UNKNOWN", "own_s": 20.029, "nchildren": 392, "sampled": 4, "child_est": [12.5, 9.5, 0.6, 0.7], "child_results": ["UNSAT", "UNSAT", "UNSAT", "UNSAT"], "censored": false, "est_s": 2303.4}
+{"spec": "11/;/9,14/-", "result": "UNSAT", "own_s": 0.745, "est_s": 0.7, "censored": false}
+{"spec": "11/;/8,14/-", "result": "UNSAT", "own_s": 0.709, "est_s": 0.7, "censored": false}
+{"spec": "11/;4/6/-;9/7/-", "result": "UNSAT", "own_s": 1.204, "est_s": 1.2, "censored": false}
+{"spec": "11/;4/6/-;14/8/-", "result": "UNSAT", "own_s": 0.968, "est_s": 1.0, "censored": false}
+{"spec": "11/;4/6/-", "result": "UNKNOWN", "own_s": 20.064, "nchildren": 242, "sampled": 2, "child_est": [1.2, 1.0], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 286.3}
+{"spec": "11/;15/10/-", "result": "UNSAT", "own_s": 3.423, "est_s": 3.4, "censored": false}
+{"spec": "11/", "result": "UNKNOWN", "own_s": 20.066, "nchildren": 392, "sampled": 4, "child_est": [0.7, 0.7, 286.3, 3.4], "child_results": ["UNSAT", "UNSAT", "UNKNOWN", "UNSAT"], "censored": false, "est_s": 28547.9}
+{"spec": "/11;/5/-;7/9/-", "result": "UNSAT", "own_s": 1.284, "est_s": 1.3, "censored": false}
+{"spec": "/11;/5/-;/4,16/-", "result": "UNSAT", "own_s": 8.862, "est_s": 8.9, "censored": false}
+{"spec": "/11;/5/-", "result": "UNKNOWN", "own_s": 20.048, "nchildren": 288, "sampled": 2, "child_est": [1.3, 8.9], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 1488.8}
+{"spec": "/11;3/8/-;12/5/-", "result": "UNSAT", "own_s": 1.264, "est_s": 1.3, "censored": false}
+{"spec": "/11;3/8/-;/15/-", "result": "UNSAT", "own_s": 2.768, "est_s": 2.8, "censored": false}
+{"spec": "/11;3/8/-", "result": "UNKNOWN", "own_s": 20.16, "nchildren": 242, "sampled": 2, "child_est": [1.3, 2.8], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 516.3}
+{"spec": "/11;6//T", "result": "UNSAT", "own_s": 0.552, "est_s": 0.6, "censored": false}
+{"spec": "12/;3,7//-;11,16//-", "result": "UNSAT", "own_s": 0.564, "est_s": 0.6, "censored": false}
+{"spec": "12/;3,7//-;16/8/-", "result": "UNSAT", "own_s": 2.704, "est_s": 2.7, "censored": false}
+{"spec": "12/;3,7//-", "result": "UNKNOWN", "own_s": 20.015, "nchildren": 242, "sampled": 2, "child_est": [0.6, 2.7], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 419.3}
+{"spec": "12/;4/14/-", "result": "UNSAT", "own_s": 1.248, "est_s": 1.2, "censored": false}
+{"spec": "/11;/6,13/-", "result": "UNSAT", "own_s": 8.804, "est_s": 8.8, "censored": false}
+{"spec": "/11", "result": "UNKNOWN", "own_s": 20.068, "nchildren": 392, "sampled": 4, "child_est": [1488.8, 516.3, 0.6, 8.8], "child_results": ["UNKNOWN", "UNKNOWN", "UNSAT", "UNSAT"], "censored": false, "est_s": 197441.1}
+{"spec": "12/;4,11//-;14/10/-", "result": "UNSAT", "own_s": 0.48, "est_s": 0.5, "censored": false}
+{"spec": "12/;4,11//-;13,14//-", "result": "UNSAT", "own_s": 0.495, "est_s": 0.5, "censored": false}
+{"spec": "12/;4,11//-", "result": "UNKNOWN", "own_s": 20.053, "nchildren": 242, "sampled": 2, "child_est": [0.5, 0.5], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 141.1}
+{"spec": "/12;4,13//-", "result": "UNSAT", "own_s": 0.392, "est_s": 0.4, "censored": false}
+{"spec": "/12;/10,11/-", "result": "UNSAT", "own_s": 0.632, "est_s": 0.6, "censored": false}
+{"spec": "12/;3//B", "result": "UNSAT", "own_s": 2.079, "est_s": 2.1, "censored": false}
+{"spec": "12/", "result": "UNKNOWN", "own_s": 20.022, "nchildren": 392, "sampled": 4, "child_est": [419.3, 1.2, 141.1, 2.1], "child_results": ["UNKNOWN", "UNSAT", "UNKNOWN", "UNSAT"], "censored": false, "est_s": 55262.6}
+{"spec": "/12;5/7/-", "result": "UNSAT", "own_s": 17.484, "est_s": 17.5, "censored": false}
+{"spec": "/12;7,15//-", "result": "UNSAT", "own_s": 0.445, "est_s": 0.4, "censored": false}
+{"spec": "/12", "result": "UNKNOWN", "own_s": 20.112, "nchildren": 392, "sampled": 4, "child_est": [0.4, 0.6, 17.5, 0.4], "child_results": ["UNSAT", "UNSAT", "UNSAT", "UNSAT"], "censored": false, "est_s": 1872.3}
+{"spec": "13/;7/16/-", "result": "UNSAT", "own_s": 2.04, "est_s": 2.0, "censored": false}
+{"spec": "13/;8,9//-", "result": "UNSAT", "own_s": 0.97, "est_s": 1.0, "censored": false}
+{"spec": "13/;/15,16/-", "result": "UNSAT", "own_s": 0.208, "est_s": 0.2, "censored": false}
+{"spec": "13/;/5,11/-", "result": "UNSAT", "own_s": 0.521, "est_s": 0.5, "censored": false}
+{"spec": "13/", "result": "UNKNOWN", "own_s": 20.067, "nchildren": 392, "sampled": 4, "child_est": [2.0, 1.0, 0.2, 0.5], "child_results": ["UNSAT", "UNSAT", "UNSAT", "UNSAT"], "censored": false, "est_s": 382.7}
+{"spec": "/13;11/8/-", "result": "UNSAT", "own_s": 8.187, "est_s": 8.2, "censored": false}
+{"spec": "14/;3//-;16//B", "result": "UNSAT", "own_s": 1.088, "est_s": 1.1, "censored": false}
+{"spec": "14/;3//-;13/12/-", "result": "UNSAT", "own_s": 0.92, "est_s": 0.9, "censored": false}
+{"spec": "14/;3//-", "result": "UNKNOWN", "own_s": 20.052, "nchildren": 288, "sampled": 2, "child_est": [1.1, 0.9], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 308.1}
+{"spec": "/13;6/12/-;10/7/-", "result": "UNSAT", "own_s": 1.196, "est_s": 1.2, "censored": false}
+{"spec": "/13;6/12/-;/11,15/-", "result": "UNSAT", "own_s": 0.42, "est_s": 0.4, "censored": false}
+{"spec": "/13;6/12/-", "result": "UNKNOWN", "own_s": 20.032, "nchildren": 242, "sampled": 2, "child_est": [1.2, 0.4], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 213.6}
+{"spec": "14/;9,11//-", "result": "UNSAT", "own_s": 0.876, "est_s": 0.9, "censored": false}
+{"spec": "14/;15/16/-", "result": "UNSAT", "own_s": 1.416, "est_s": 1.4, "censored": false}
+{"spec": "/13;9/6/-", "result": "UNSAT", "own_s": 7.796, "est_s": 7.8, "censored": false}
+{"spec": "/13;15/8/-", "result": "UNSAT", "own_s": 4.245, "est_s": 4.2, "censored": false}
+{"spec": "/13", "result": "UNKNOWN", "own_s": 20.04, "nchildren": 392, "sampled": 4, "child_est": [8.2, 213.6, 7.8, 4.2], "child_results": ["UNSAT", "UNKNOWN", "UNSAT", "UNSAT"], "censored": false, "est_s": 22932.4}
+{"spec": "14/;5/6/-", "result": "UNSAT", "own_s": 13.084, "est_s": 13.1, "censored": false}
+{"spec": "14/", "result": "UNKNOWN", "own_s": 20.037, "nchildren": 392, "sampled": 4, "child_est": [308.1, 0.9, 1.4, 13.1], "child_results": ["UNKNOWN", "UNSAT", "UNSAT", "UNSAT"], "censored": false, "est_s": 31723.0}
+{"spec": "/14;/4,5/-", "result": "UNSAT", "own_s": 1.62, "est_s": 1.6, "censored": false}
+{"spec": "/14;11,13//-", "result": "UNSAT", "own_s": 0.382, "est_s": 0.4, "censored": false}
+{"spec": "/14;7//T", "result": "UNSAT", "own_s": 0.424, "est_s": 0.4, "censored": false}
+{"spec": "15/;8,12//-", "result": "UNSAT", "own_s": 1.572, "est_s": 1.6, "censored": false}
+{"spec": "15/;7/11/-", "result": "UNSAT", "own_s": 3.49, "est_s": 3.5, "censored": false}
+{"spec": "15/;6/16/-", "result": "UNSAT", "own_s": 1.295, "est_s": 1.3, "censored": false}
+{"spec": "/14;3/15/-;16/12/-", "result": "UNSAT", "own_s": 0.583, "est_s": 0.6, "censored": false}
+{"spec": "/14;3/15/-;/9,13/-", "result": "UNSAT", "own_s": 1.316, "est_s": 1.3, "censored": false}
+{"spec": "/14;3/15/-", "result": "UNKNOWN", "own_s": 20.036, "nchildren": 242, "sampled": 2, "child_est": [0.6, 1.3], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 249.9}
+{"spec": "/14", "result": "UNKNOWN", "own_s": 20.04, "nchildren": 392, "sampled": 4, "child_est": [1.6, 0.4, 0.4, 249.9], "child_results": ["UNSAT", "UNSAT", "UNSAT", "UNKNOWN"], "censored": false, "est_s": 24745.4}
+{"spec": "15/;3,16//-;/7,12/-", "result": "UNSAT", "own_s": 0.494, "est_s": 0.5, "censored": false}
+{"spec": "15/;3,16//-;9,11//-", "result": "UNSAT", "own_s": 0.776, "est_s": 0.8, "censored": false}
+{"spec": "15/;3,16//-", "result": "UNKNOWN", "own_s": 20.032, "nchildren": 242, "sampled": 2, "child_est": [0.5, 0.8], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 177.3}
+{"spec": "15/", "result": "UNKNOWN", "own_s": 20.133, "nchildren": 392, "sampled": 4, "child_est": [1.6, 3.5, 1.3, 177.3], "child_results": ["UNSAT", "UNSAT", "UNSAT", "UNKNOWN"], "censored": false, "est_s": 18022.7}
+{"spec": "/15;8,10//-", "result": "UNSAT", "own_s": 0.532, "est_s": 0.5, "censored": false}
+{"spec": "/15;10,14//-", "result": "UNSAT", "own_s": 0.425, "est_s": 0.4, "censored": false}
+{"spec": "/15;/7,14/-", "result": "UNSAT", "own_s": 3.652, "est_s": 3.7, "censored": false}
+{"spec": "/15;//T", "result": "UNSAT", "own_s": 5.122, "est_s": 5.1, "censored": false}
+{"spec": "/15", "result": "UNKNOWN", "own_s": 20.144, "nchildren": 392, "sampled": 4, "child_est": [0.5, 0.4, 3.7, 5.1], "child_results": ["UNSAT", "UNSAT", "UNSAT", "UNSAT"], "censored": false, "est_s": 970.7}
+{"spec": "16/;6/7/-", "result": "UNSAT", "own_s": 10.438, "est_s": 10.4, "censored": false}
+{"spec": "16/;6/8/-", "result": "UNSAT", "own_s": 7.916, "est_s": 7.9, "censored": false}
+{"spec": "16/;9/15/-", "result": "UNSAT", "own_s": 3.828, "est_s": 3.8, "censored": false}
+{"spec": "/16;/7,10/-", "result": "UNSAT", "own_s": 0.744, "est_s": 0.7, "censored": false}
+{"spec": "/16;14,15//-", "result": "UNSAT", "own_s": 0.533, "est_s": 0.5, "censored": false}
+{"spec": "16/;9/8/-", "result": "UNSAT", "own_s": 10.42, "est_s": 10.4, "censored": false}
+{"spec": "16/", "result": "UNKNOWN", "own_s": 20.04, "nchildren": 392, "sampled": 4, "child_est": [10.4, 7.9, 3.8, 10.4], "child_results": ["UNSAT", "UNSAT", "UNSAT", "UNSAT"], "censored": false, "est_s": 3205.0}
+{"spec": "/16;8/15/-", "result": "UNSAT", "own_s": 7.55, "est_s": 7.5, "censored": false}
+{"spec": "/16;5//-;/7,13/-", "result": "UNSAT", "own_s": 0.214, "est_s": 0.2, "censored": false}
+{"spec": "/16;5//-;6,8//-", "result": "UNSAT", "own_s": 0.211, "est_s": 0.2, "censored": false}
+{"spec": "/16;5//-", "result": "UNKNOWN", "own_s": 20.015, "nchildren": 288, "sampled": 2, "child_est": [0.2, 0.2], "child_results": ["UNSAT", "UNSAT"], "censored": false, "est_s": 77.6}
+{"spec": "/16", "result": "UNKNOWN", "own_s": 20.047, "nchildren": 392, "sampled": 4, "child_est": [0.7, 0.5, 7.5, 77.6], "child_results": ["UNSAT", "UNSAT", "UNSAT", "UNKNOWN"], "censored": false, "est_s": 8477.4}

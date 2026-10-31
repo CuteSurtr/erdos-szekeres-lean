@@ -1,0 +1,9 @@
+C3-S tools: worktree of commit 132398c (8dc27c3 before the author rewrite, results/FINAL/COMMIT_MAP.tsv) at /opt/c3s, unmodified; /opt/work writable
+sigma_cubes.py: results/C3PLAN/scripts/sigma_cubes.py at 640a56c2, copied unmodified into $TOOLS (sha256 716aa57d6f25b391ffaf659af6221f425e7533c6fed3cbf6c55cbcb547e1a915)
+cadical: https://github.com/arminbiere/cadical c60730422e758ef1cebe7aeddf2dda31c996bf04 (version 3.0.1), ./configure && make
+cake_lpr: https://github.com/tanyongkiam/cake_lpr a36874a8b750b43fe4b385b8ddbf5b033e46a3fa, make cake_lpr; example.cnf/example.lpr -> s VERIFIED UNSAT
+lrat-check: https://github.com/marijnheule/drat-trim 2e3b2dc0ecf938addbd779d42877b6ed69d9a985 + results/E2/tools/lrat-check-E2.patch (applied with patch(1) to lrat-check.c, normal diff), gcc -O2
+  sanity: CNF {1},{-1}; LRAT "3 0 0" -> lrat-check "c NOT VERIFIED", cake_lpr "pivot must be non-zero" (rejects); "3 0 1 2 0" -> lrat-check "c VERIFIED", cake_lpr "s VERIFIED UNSAT"
+base CNF: gen_case.py 11 7 none -o /opt/work/base.cnf -> p cnf 168399 4154921, sha256 bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da (matches)
+nodes: C3W3/lists/S_sigma_nodes.tsv rows with row % 4 == 1: 5 nodes (nodes.tsv)
+sigma bits (first K of the free residues): 3s1-4s0 [2,5,6,7,8,9]; 3s0-4s1 [2,5,6,7,8,9]; 7s1-9s0 [2,3,4,5,6,8]; 5s0-7s1 [2,3,4,6,8,9]; 5s1-7s0 [2,3,4,6,8,9]; the K=6 bits extend the K=3 bits, so a K=6 cube refines the K=3 cube with the same first three values

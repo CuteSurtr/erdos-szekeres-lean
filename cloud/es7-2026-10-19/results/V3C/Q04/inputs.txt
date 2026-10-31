@@ -1,0 +1,6 @@
+input commit Z = 71bcca7 (worktree /opt/in)
+worklist.jsonl sha256 aeb4a3f19a5979e6d8fb9c4bc68b303de1332ea2a2677e1d4f69833fb6025abc lines 12380 (both match)
+cross-check at fdd0393: v3_jsonl_leaves WAVE1 jtree1 30151 leaf lines (71 skipped records), WAVE2 jtree2 11810, WAVE3 jtree3 6202
+v3_manifest Mfd.jsonl: 47533 leaves, 278 cases, 0 problems; sha256 34676b0c112438285b15a2cdb63291b9e63b242a98ac84b38d1d0d9c642afbfb (matches)
+every work-list record's (case, lits) occurs in Mfd.jsonl: yes (0 missing of 12380)
+shard 4 of 16

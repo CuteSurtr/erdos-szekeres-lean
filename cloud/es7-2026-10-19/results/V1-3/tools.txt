@@ -1,0 +1,11 @@
+cadical c60730422e758ef1cebe7aeddf2dda31c996bf04 2026-07-19 (3.0.1); ./configure && make
+cake_lpr a36874a8b750b43fe4b385b8ddbf5b033e46a3fa 2026-07-22; make cake_lpr; cake_lpr.S sha256 2f3af32d55083839b3fa0e693afd817679c0b8944bef41def05a8b0ec72b7d4a (matches cake_lpr.sha256)
+drat-trim 2e3b2dc0ecf938addbd779d42877b6ed69d9a985 2024-11-25; lrat-check.c patched with results/E2/tools/lrat-check-E2.patch (patch lrat-check.c < patch), gcc -O2
+gcc: gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+
+Sanity checks (04:51 UTC):
+- cake_lpr example.cnf example.lpr -> "s VERIFIED UNSAT"
+- forged proof "2 0 0" on "p cnf 1 1 / 1 0": patched lrat-check prints "c FAILED: empty clause without a RUP conflict" ... "c NOT VERIFIED", exit 1
+  (cake_lpr also rejects it: "c Checking failed at line: 0. Reason: pivot must be non-zero")
+- genuine CaDiCaL proof (cadical -q --elim=0 --lrat --binary=false) on the 2-variable all-clauses CNF:
+  patched lrat-check "c VERIFIED", cake_lpr "s VERIFIED UNSAT"

@@ -1,0 +1,10 @@
+leaf records verified: True | verified records: 473
+top cubes of shard covered by their own leaves: 42 / 42
+leaves extending some shard cube: 473 / 473
+record statuses: {'UNSAT': 473, 'SPLIT': 7}
+leaf depths: {7: 38, 13: 253, 17: 2, 18: 4, 19: 176}
+CPU h (cadical+cake_lpr+march splits): 3.723
+solve s: 10398 check s: 1817 split march s: 1443
+max solve_s: 300.04 max proof GB: 0.21
+splits: [(7, 64), (7, 64), (7, 64), (7, 64), (13, 61), (13, 61), (13, 60)]
+top-level cubes closed directly: 38

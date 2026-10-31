@@ -1,0 +1,23 @@
+C3-S/C3a tools: worktree /opt/c3s at 8dc27c3a1d4178cb935fdf39c0a8cf19d04627cf (unmodified; /opt/work is writable, so no path change)
+cadical: c60730422e758ef1cebe7aeddf2dda31c996bf04 (3.0.1), built ./configure && make
+cake_lpr: a36874a8b750b43fe4b385b8ddbf5b033e46a3fa, make cake_lpr; example.cnf/example.lpr -> s VERIFIED UNSAT
+  NOTE: at this commit cake_lpr no longer reads CML_HEAP_SIZE/CML_STACK_SIZE from the environment
+  (it takes --CML_HEAP_SIZE=/--CML_STACK_SIZE= flags; default 4096/4096 MB). The driver (controls.dual)
+  sets the env vars, so 'cake_lpr' on PATH is a wrapper that passes them as flags:
+    #!/bin/sh
+    # wrapper: cake_lpr a36874a reads heap/stack sizes only from flags; pass the driver's env values
+    exec /opt/build/cake_lpr/cake_lpr ${CML_HEAP_SIZE:+--CML_HEAP_SIZE=$CML_HEAP_SIZE} ${CML_STACK_SIZE:+--CML_STACK_SIZE=$CML_STACK_SIZE} "$@"
+lrat-check: 2e3b2dc0ecf938addbd779d42877b6ed69d9a985 + results/E2/tools/lrat-check-E2.patch, gcc -O2
+  control: SAT formula + hintless empty clause -> lrat-check "c NOT VERIFIED", cake_lpr rejects (no s VERIFIED UNSAT)
+base.cnf: bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da (matches expected)
+depth-2 list: 1630 names, identical to manifest_depth2.tsv depth-2 rows, sha256 of joined names 5412782cb766088d63fa9342afaaddcf057baee69b82b82bba69e5754fef6b7e
+roots: 68 (index = 1 mod 24), roots.txt
+UPDATE 08:00 UTC: after OOM kills of concurrent cake_lpr checks (oom_dmesg.txt; one check alone reached
+  12 GB RSS), the wrapper now also runs cake_lpr under `flock /opt/work/cake.lock` (one check at a time),
+  and the driver runs with --jobs 3 from root 1 onward (restart at ~08:01 UTC).
+UPDATE 08:18 UTC: cake_lpr wrapper replaced (checks were the bottleneck under the single lock). Test on the
+  0s0-1s0_2_4 proof (219 MB): heap 12000 -> ~11.6 GB RSS; heap 5000 -> 32 s, 5.2 GB, s VERIFIED UNSAT;
+  heap 3000 -> 33 s, 3.1 GB, s VERIFIED UNSAT. New wrapper: first attempt with heap 5000 MB in one of two
+  lock slots; if it does not print "s VERIFIED UNSAT", re-run with the driver's heap (12000) holding both
+  slots. A node is accepted only on cake_lpr's own "s VERIFIED UNSAT" (and lrat-check's). Retries are
+  logged to cake_retries.log. Wrapper text: cake_lpr_wrapper.sh.

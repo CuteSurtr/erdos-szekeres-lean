@@ -1,0 +1,16 @@
+Byte-for-byte comparison of results/H emitters with the Python encoders (run 2026-10-20, cloud VM, see env.txt).
+The emitters were compiled from results/H/ETVEncoding/{Clauses,Emit,ClausesB,EmitB}.lean (they import only Std),
+with Lean 4.24.0, before the Mathlib build finished; the scripts are results/H/scripts/compare_{dimacs,trackb}.sh
+with EXE pointed at that build.
+
+scripts/compare_dimacs.sh                       -> identical: 2160      (grid N in {0..7,9,12}, A,U in 2..7, K in 3..8)
+XSB=1 scripts/compare_dimacs.sh                 -> identical: 1512 --xsb
+scripts/compare_dimacs.sh 33 7 7 7 17 4 7 7 26 7 5 7 31 7 6 6 32 7 7 7  -> identical: 5
+XSB=1 scripts/compare_dimacs.sh 33 7 7 7 17 4 7 7                       -> identical: 2 --xsb
+scripts/compare_trackb.sh                       -> identical: 280       (N in {3..9,12}, K in 4..8, 7 option sets)
+scripts/compare_trackb.sh 33 7                  -> identical: 1
+scripts/compare_trackb.sh 33 7 --hull --mirror  -> identical: 1
+scripts/compare_trackb.sh 17 6 --hull           -> identical: 1
+sha256 prefix of `trackb_dimacs 33 7 --hull --mirror`: 86a1a1f68d18f2a3 (matches the README of results/H)
+sha256 prefix of `etv_dimacs 33 7 7 7`: 854a20b91250e90b
+No mismatches.

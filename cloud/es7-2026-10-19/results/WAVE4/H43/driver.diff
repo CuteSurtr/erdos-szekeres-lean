@@ -1,0 +1,15 @@
+results/WAVE4/H43/close_march.py is a byte-for-byte copy of results/WAVE2/F2/close_march.py (cmp: identical, no diff).
+sha256 2e0975aa98c7dbcc2cf535993b54f57db764f7bf50f64fc54b9ff2860e67c855
+
+Checked:
+(a) every solver job uses tempfile.mkdtemp(prefix="s_{k}_", dir=WORK) (line 83) and every march_cu job
+    tempfile.mkdtemp(prefix="m_{tag}_", dir=WORK) (line 39): a fresh directory per job, removed afterwards.
+(b) finalize() writes leaves.icnf and open.icnf via tempfile.mkstemp in the output directory and
+    os.replace into place (lines 136-140).
+(c) the first record of a new leaves.jsonl is {"case": --name, "case_sha256": sha256 of CASE.cnf} (lines 117-119);
+    run with --name U3_L.
+Also: a leaf goes into leaves.icnf only when cake_lpr printed exactly "s VERIFIED UNSAT" (lines 53, 137);
+other verdicts are recorded as UNSAT_UNCHECKED and stay open.
+
+Inputs: F.cnf sha256 69c1dc8f...932d (checked); /opt/work/U3_L.cnf sha256 7ab00d97...f823 = cases.jsonl;
+top.icnf = 190 cubes of tasks/H43.json (at 3ed048e), 190 lines.

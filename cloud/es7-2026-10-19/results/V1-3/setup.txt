@@ -1,0 +1,10 @@
+hm33k7.sub.cnf regenerated with results/C/scripts/make_cnfs.sh (into a scratch dir, not committed)
+  header: p cnf 47002 535454
+  sha256: bfbc2d6096e4099ba751130d421eca9da18b72559991103cc2d4b4bc0d92757d  (expected bfbc2d60...757d: MATCH)
+verify/hull_leaves.icnf: 1198 lines, sha256 cc11270a57ebe85ad1d5c83b15da0a3439521cc7ebd50432f16c223a1b2478b6  (expected cc11270a...78b6: MATCH)
+shard: 0-based line index i with i % 4 == 3 -> 299 leaves
+per leaf: cubeCnf as in results/H3/scripts/check_cubes.sh (header clause count + |c|, unit clauses appended);
+  cadical -q --elim=0 --lrat --binary=false (no time limit); cake_lpr must print "s VERIFIED UNSAT" (exit 0),
+  patched lrat-check must print the line "c VERIFIED" (exit 0); 4 leaves in parallel; proofs deleted after both checks.
+  A leaf with a rejected proof is re-solved once (recorded as attempt 2 with first_attempt nested).
+script: scripts/run_leaves.py (started 04:51 UTC)

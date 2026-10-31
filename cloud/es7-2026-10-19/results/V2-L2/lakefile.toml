@@ -1,0 +1,11 @@
+name = "v2l2"
+version = "0.1.0"
+defaultTargets = ["V2L2"]
+
+# `results/V2-L` (V2L), and through it H3, V1-L, H, the parent repository and Mathlib.
+[[require]]
+name = "v2l"
+path = "../V2-L"
+
+[[lean_lib]]
+name = "V2L2"

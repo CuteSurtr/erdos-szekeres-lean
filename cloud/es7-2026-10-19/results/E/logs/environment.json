@@ -1,0 +1,14 @@
+{
+ "machine": "user's local Mac (task text assumed a cloud machine); shared with sibling tasks A-D running at the same time",
+ "cpu": "Apple M5 Pro",
+ "logical_cores": 15,
+ "performance_cores": 5,
+ "efficiency_cores": 10,
+ "memory_GB": 48,
+ "load_average": "about 5 before the task started, 46 at 21:29, 90-125 from 21:35 on (other tasks)",
+ "cadical": "3.0.1, git c60730422e758ef1cebe7aeddf2dda31c996bf04, built from source (SDK MacOSX26.5; the default MacOSX27 SDK fails to link)",
+ "drat_trim": "git 2e3b2dc0ecf938addbd779d42877b6ed69d9a985; drat-trim and lrat-check built from source",
+ "python": "3.14.7",
+ "solver_options_for_runs": "--elim=0 (memory, see memtest.txt)",
+ "workers": "3-fold run: 5 workers 21:37-21:46, then 7 workers from 21:47 (resumed from the saved state); D3 run: 2 workers (closed at the root after one job)"
+}

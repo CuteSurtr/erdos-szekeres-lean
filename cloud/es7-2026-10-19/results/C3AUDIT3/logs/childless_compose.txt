@@ -1,0 +1,6 @@
+C3U compose at 95cafa93:
+{"certified_nodes": 21, "class_covered": true, "uncovered_frontier_nodes": 0, "uncovered_sample": [], "certified_records": 21, "certified_with_proof_sha256": {"records": 0, "nodes": 0}, "sha_checked": true, "mirror_h6": false, "certified_cube_nodes": 1, "sigma_splits_used": 0, "sigma_split_nodes_sample": []}
+C3T compose (ff9b09ee) on the plain records only (cube record removed):
+{"certified_nodes": 20, "class_covered": false, "uncovered_frontier_nodes": 1, "uncovered_sample": ["0s0_1s0-2s0_3"], "certified_records": 20, "certified_with_proof_sha256": {"records": 0, "nodes": 0}, "sha_checked": true, "mirror_h6": false}
+mycompose (fixed):
+{"m": 5, "k": 6, "certified_records": 21, "certified_nodes": 21, "certified_cube_nodes": 1, "sha_checked": 21, "sigma_split_nodes": 0, "sigma_splits_used": 0, "cube_layer_split_nodes": 0, "class_covered": false, "uncovered_frontier": 1, "uncovered_sample": ["0s0_1s0-2s0_3_4"]}

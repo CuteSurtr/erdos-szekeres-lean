@@ -1,0 +1,10 @@
+Node 0s0-1s1_2s1-3s0_4_6, in the driver run at 08:3x UTC (4 jobs): CaDiCaL UNSAT in 6.6 s, lrat-check "c VERIFIED",
+cake_lpr printed nothing (recorded "none") -> driver stopped with PROOF NOT ACCEPTED. At that time memory was
+7 GB used / 7 GB available with 4 solver/checker processes; cake_lpr runs with CML_HEAP_SIZE=12000 (12 GB heap).
+Re-check alone (08:37 UTC, nothing else running):
+  gen_case.py 11 7 0s0-1s1_2s1-3s0_4_6 -> sha256 cb1b2bef9d34a44ddd803f1a3657c49caafd5a55146963898159463bd9c77172 (same as the record)
+  cadical -q --sat --lrat --binary=false -> s UNSATISFIABLE, proof 20518639 bytes (same size as the record)
+  lrat-check (E2 patch) -> c VERIFIED
+  CML_HEAP_SIZE=12000 CML_STACK_SIZE=2000 cake_lpr -> exit 0, "s VERIFIED UNSAT"
+Conclusion: not a real rejection; cake_lpr failed for lack of memory under 4 concurrent jobs.
+Action: resumed the driver with --jobs 3 (it re-solves and re-checks this node itself).

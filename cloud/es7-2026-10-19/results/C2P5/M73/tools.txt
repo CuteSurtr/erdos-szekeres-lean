@@ -1,0 +1,35 @@
+C2P5 M73 tools and checks (TASK commit 81cb025f; LIST=C2P5B.tsv j=23 N=50 H=5.25)
+repo HEAD at start: 70b1315dba3a2eec01310f582ca138501b170c56
+
+== build_tools.sh (vendored sources; tools-src.tar.xz, upstream CaDiCaL c6073042, cake_lpr a36874a8, drat-trim/lrat-check 2e3b2dc + E2 patch)
+manifest: all 196 files match
+lrat-check.c: In function 'main':
+cadical --version: 3.0.1
+cake_lpr example: s VERIFIED UNSAT
+sanity bad (LRAT on {1},{-1}): lrat-check 'c FAILED: empty clause without a RUP conflict'; cake_lpr 'c Checking failed at line: 0. Reason: pivot must be non-zero'
+sanity good (LRAT on {1},{-1}): lrat-check 'c VERIFIED'; cake_lpr 's VERIFIED UNSAT'
+expected: bad rejected by both, good accepted by both (c VERIFIED, s VERIFIED UNSAT)
+ba28c9a16a2250a0afb97f3b73e13bca965cf08fbb310a9f2731c57af1b29d25  C2P/vendor/tools-src.tar.xz
+total 0
+lrwxrwxrwx 1 root root 39 Oct 31 15:11 cadical -> /opt/src/vendored/cadical/build/cadical
+lrwxrwxrwx 1 root root 35 Oct 31 15:11 cake_lpr -> /opt/src/vendored/cake_lpr/cake_lpr
+lrwxrwxrwx 1 root root 38 Oct 31 15:11 lrat-check -> /opt/src/vendored/drat-trim/lrat-check
+1b9f8adfdd44b4f98ddb76f530e1627fd8cb92a96ac42df8964abb2a6ff0635e  /opt/work/bin/cadical
+1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca  /opt/work/bin/cake_lpr
+29cf644ebd224e9986dbd95590962f9aea3b67b37162ccd20a6b0cae46feeed4  /opt/work/bin/lrat-check
+
+== base CNF: python3 SYMZ/zcnf.py rot 17 7 --m 2 --hull
+p cnf 838032 16653336
+b0061e908bff80e6a597f31a6fec1d91e8504aebc09b0bcf41c2ff21604d8ff1  /opt/work/base.cnf
+2476fafff493a763fd7f2883380d359629191912a15a69bcbdfbf49bbf472b48  /opt/work/base.json
+expected b0061e908bff80e6a597f31a6fec1d91e8504aebc09b0bcf41c2ff21604d8ff1 / 2476fafff493a763fd7f2883380d359629191912a15a69bcbdfbf49bbf472b48: OK
+
+== cubes: C2C34/l2cubes.py base.json a vs C2P/cubes/P{a}_cubes.txt
+P1 byte-identical (560 lines)
+P2 byte-identical (560 lines)
+P3 byte-identical (560 lines)
+P4 byte-identical (560 lines)
+P5 byte-identical (560 lines)
+P6 byte-identical (560 lines)
+P7 byte-identical (560 lines)
+P8 byte-identical (560 lines)

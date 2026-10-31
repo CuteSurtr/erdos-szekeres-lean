@@ -1,0 +1,41 @@
+stratum	roots	certified	timeout300	never_ran	other
+H3/one	5	0	231	89	0
+H3/two	65	670	1029	2461	0
+H6(1,1)/one	2	42	86	0	0
+H6(2,1)/one	4	59	160	37	0
+H6(3,1)/one	2	23	16	89	0
+H6(4,0)/one	1	0	0	64	0
+H6(4,1)/one	1	50	14	0	0
+H6(5,0)/one	2	0	0	128	0
+H6(5,1)/one	3	47	0	145	0
+total	85	891	1536	3013	0
+certified six-bit cube solve_s: n=891 min=52.1 p10=114.0 p25=174.5 median=233.7 p75=269.1 p90=288.8 max=300.0 mean=216.5
+  their check_s: total 41258, mean 46.3; solve_s total 192878
+  [0,25) s: 0
+  [25,50) s: 0
+  [50,75) s: 41
+  [75,100) s: 27
+  [100,125) s: 48
+  [125,150) s: 40
+  [150,175) s: 70
+  [175,200) s: 63
+  [200,225) s: 114
+  [225,250) s: 142
+  [250,275) s: 164
+  [275,300) s: 181
+timed-out cubes: 1536, layer-split: 1534, not split: 2
+  nodes: total 84350, per cube min 51 median 51.0 max 585
+  certified: total 10464, per cube min 0 median 0.0 max 51
+  timed_out: total 22, per cube min 0 median 0.0 max 9
+  open: total 73864, per cube min 0 median 51.0 max 553
+  never_ran: total 73864, per cube min 0 median 51.0 max 553
+  maxdepth: total 1538, per cube min 1 median 1.0 max 2
+  layer subtrees fully certified: 194 of 1534; certified layer-node solve_s total 260827, check_s total 278744
+  per stratum: stratum, timed-out cubes, layer nodes, certified, timed out, open leaves, subtrees fully certified
+    H3/one	231	17865	23	21	17821	0
+    H3/two	1029	52409	7565	1	44843	142
+    H6(1,1)/one	86	4386	843	0	3543	16
+    H6(2,1)/one	160	8160	1560	0	6600	27
+    H6(3,1)/one	16	816	0	0	816	0
+    H6(4,1)/one	14	714	473	0	241	9
+  certified first-layer children: n=10464 solve_s median 16.8 p90 54.2 max 374.5 mean 24.9; check_s mean 26.6

@@ -1,0 +1,20 @@
+input commit Z = 066eaa9 (worktree /opt/in); verify/v3 = bdf319c
+== v3_jsonl_leaves WAVE1
+dirs 119 leaf lines 30151 skipped records 71
+== v3_jsonl_leaves WAVE2
+dirs 86 leaf lines 5156 skipped records 0
+== v3_jsonl_leaves WAVE3
+dirs 5 leaf lines 232 skipped records 0
+== v3_manifest
+leaves 35153 cases with leaves 253 problems 0
+22b6f6a782cd2b2e6319c61c7bc7029032d10aa5fd583dcfbba47ec627e1c549  M.jsonl
+cd03dd0a81aec5d738a2ef5e6f817a1c151f4b9141b0ca5a3f0546978a7e1fbe  C.jsonl
+  35153 M.jsonl
+    450 C.jsonl
+  35603 total
+== Mt (step 3)
+files scanned 21
+VERIFIED leaf records 11308 distinct VERIFIED keys 10121
+n (Mt records) 25032
+605e39d27b8a11c8b8de36b167d1760f91dc3e6c4e49a2e570bf607689e7cfe7  /opt/work/Mt.jsonl
+removed from M: 10121

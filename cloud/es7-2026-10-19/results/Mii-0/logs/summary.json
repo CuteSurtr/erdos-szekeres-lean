@@ -1,0 +1,116 @@
+{
+ "shard": 0,
+ "shard_cubes": 16,
+ "cubes_total": 128,
+ "per_cube": [
+  {
+   "index": 0,
+   "closed_fraction": 1.0,
+   "open_leaves": 0,
+   "sat": 0
+  },
+  {
+   "index": 8,
+   "closed_fraction": 1.0,
+   "open_leaves": 0,
+   "sat": 0
+  },
+  {
+   "index": 16,
+   "closed_fraction": 1.0,
+   "open_leaves": 0,
+   "sat": 0
+  },
+  {
+   "index": 24,
+   "closed_fraction": 1.0,
+   "open_leaves": 0,
+   "sat": 0
+  },
+  {
+   "index": 32,
+   "closed_fraction": 1.0,
+   "open_leaves": 0,
+   "sat": 0
+  },
+  {
+   "index": 40,
+   "closed_fraction": 1.0,
+   "open_leaves": 0,
+   "sat": 0
+  },
+  {
+   "index": 48,
+   "closed_fraction": 1.0,
+   "open_leaves": 0,
+   "sat": 0
+  },
+  {
+   "index": 56,
+   "closed_fraction": 0.984375,
+   "open_leaves": 64,
+   "sat": 0
+  },
+  {
+   "index": 64,
+   "closed_fraction": 1.0,
+   "open_leaves": 0,
+   "sat": 0
+  },
+  {
+   "index": 72,
+   "closed_fraction": 0.390625,
+   "open_leaves": 39,
+   "sat": 0
+  },
+  {
+   "index": 80,
+   "closed_fraction": 0.0,
+   "open_leaves": 64,
+   "sat": 0
+  },
+  {
+   "index": 88,
+   "closed_fraction": 0.0,
+   "open_leaves": 64,
+   "sat": 0
+  },
+  {
+   "index": 96,
+   "closed_fraction": 0.0,
+   "open_leaves": 64,
+   "sat": 0
+  },
+  {
+   "index": 104,
+   "closed_fraction": 0.0,
+   "open_leaves": 64,
+   "sat": 0
+  },
+  {
+   "index": 112,
+   "closed_fraction": 0.0,
+   "open_leaves": 64,
+   "sat": 0
+  },
+  {
+   "index": 120,
+   "closed_fraction": 0.0,
+   "open_leaves": 64,
+   "sat": 0
+  }
+ ],
+ "records": 553,
+ "unsat_leaves": 537,
+ "unsat_lrat_verified_both_checkers": 537,
+ "unsat_stock_lrat_check_verified": 537,
+ "splits": 16,
+ "sat_leaves": 0,
+ "open_leaves": 487,
+ "unverified_unsat": 0,
+ "shard_cubes_fully_closed": 8,
+ "closed_weight_of_shard": "75/128",
+ "closed_weight_of_shard_float": 0.5859375,
+ "closed_weight_of_instance": "75/1024",
+ "open_weight_of_instance": "53/1024"
+}

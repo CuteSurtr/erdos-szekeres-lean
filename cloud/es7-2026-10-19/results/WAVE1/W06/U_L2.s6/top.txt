@@ -1,0 +1,5 @@
+case U_L2, shard 6 of 12; CASE sha256 1d26b9475d1609388bda1853cc22c1fba0bb73fb1a5f8a28adf9fbd3f15aaa53
+march_cu U_L2.cnf -d 7 -o top.icnf : 167 s; "number of cubes 128, including 0 refuted leaves"
+top.icnf sha256 f00804ef5fd21981ef094016e1d77b36fb1dc7d08a6d0b0f219afcc6d30999bd (128 lines)
+shard 6 cubes: 0-based lines 6,18,...,126 (11 cubes)
+run started 2026-10-20T07:02:02Z: close_march_w06.py --shard 6 --nshards 12 --jobs 4 --timeout 300 --split-depth 6 --hours 3.25

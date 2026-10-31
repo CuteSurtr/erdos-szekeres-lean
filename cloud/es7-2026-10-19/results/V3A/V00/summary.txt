@@ -1,0 +1,59 @@
+assigned leaves 1102 leaf records 1064 {'VERIFIED': 1064}
+VERIFIED matching manifest (idx,case,lits) 1064 unchecked (no VERIFIED) 38
+covers {'NOT_COVERED': 3, 'VERIFIED': 1}
+  cover U_L2-14 82 NOT_COVERED 10
+  cover U3_L2 40 NOT_COVERED 10
+  cover U7_L 63 NOT_COVERED 10
+  cover U10_L 437 VERIFIED 20
+leaf solve_s: sum 21533.9 median 16.23 max 265.04
+leaf check_s: sum 4328.6 median 3.13 max 25.82
+proof bytes max 217899724 sum 26555721555
+  case U10_L: assigned 28 verified 28
+  case U10_L2: assigned 8 verified 8
+  case U10_L7: assigned 8 verified 8
+  case U11_L: assigned 19 verified 19
+  case U14_L: assigned 8 verified 8
+  case U3-12_L: assigned 8 verified 8
+  case U3-6_L: assigned 8 verified 8
+  case U3-9_L: assigned 8 verified 8
+  case U3_L: assigned 3 verified 3
+  case U3_L10: assigned 8 verified 8
+  case U3_L14: assigned 8 verified 8
+  case U3_L2: assigned 3 verified 3
+  case U3_L6: assigned 7 verified 7
+  case U4-5_L: assigned 8 verified 8
+  case U4_L: assigned 10 verified 10
+  case U4_L14: assigned 7 verified 7
+  case U4_L5: assigned 7 verified 7
+  case U4_L9: assigned 7 verified 7
+  case U5_L: assigned 33 verified 33
+  case U5_L10: assigned 7 verified 7
+  case U5_L16: assigned 6 verified 6
+  case U5_L4: assigned 7 verified 7
+  case U5_L9: assigned 7 verified 7
+  case U6_L: assigned 55 verified 55
+  case U6_L2: assigned 7 verified 7
+  case U6_L8: assigned 8 verified 8
+  case U7_L: assigned 4 verified 4
+  case U7_L10: assigned 7 verified 7
+  case U7_L4: assigned 7 verified 7
+  case U7_L6: assigned 6 verified 6
+  case U8_L5: assigned 8 verified 8
+  case U9_L6: assigned 8 verified 8
+  case U_L10: assigned 4 verified 4
+  case U_L13: assigned 8 verified 8
+  case U_L14: assigned 8 verified 8
+  case U_L2: assigned 454 verified 454
+  case U_L2-11: assigned 8 verified 8
+  case U_L2-12: assigned 8 verified 8
+  case U_L2-14: assigned 5 verified 5
+  case U_L2-16: assigned 7 verified 7
+  case U_L2-3: assigned 31 verified 31
+  case U_L2-4: assigned 24 verified 24
+  case U_L2-5: assigned 8 verified 8
+  case U_L2-6: assigned 13 verified 13
+  case U_L2-7: assigned 24 verified 24
+  case U_L2-9: assigned 7 verified 7
+  case U_L4: assigned 116 verified 116
+  case U_L5: assigned 22 verified 6
+  case U_L8: assigned 22 verified 0

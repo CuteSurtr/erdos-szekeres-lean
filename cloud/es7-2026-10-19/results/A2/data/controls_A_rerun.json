@@ -1,0 +1,204 @@
+{
+ "C1": {
+  "sets": 30,
+  "own_position_SAT": 30,
+  "solve_runs": {
+   "workers": 4,
+   "blocks": 30,
+   "exit_codes": [
+    0
+   ],
+   "solver_options": [],
+   "wall_s": 4.9
+  },
+  "status_counts": {
+   "UNSAT": 591,
+   "SAT": 369
+  },
+  "sat_models_checked": {
+   "ok": 369
+  },
+  "per_set": {
+   "c1_0_q21": {
+    "UNSAT": 24,
+    "SAT": 8
+   },
+   "c1_294_q8": {
+    "SAT": 29,
+    "UNSAT": 3
+   },
+   "c1_589_q14": {
+    "UNSAT": 22,
+    "SAT": 10
+   },
+   "c1_883_q31": {
+    "UNSAT": 27,
+    "SAT": 5
+   },
+   "c1_1177_q19": {
+    "UNSAT": 15,
+    "SAT": 17
+   },
+   "c1_1472_q18": {
+    "UNSAT": 9,
+    "SAT": 23
+   },
+   "c1_1766_q2": {
+    "SAT": 32
+   },
+   "c1_2060_q23": {
+    "UNSAT": 20,
+    "SAT": 12
+   },
+   "c1_2355_q9": {
+    "UNSAT": 26,
+    "SAT": 6
+   },
+   "c1_2649_q1": {
+    "SAT": 22,
+    "UNSAT": 10
+   },
+   "c1_2943_q19": {
+    "UNSAT": 20,
+    "SAT": 12
+   },
+   "c1_3238_q29": {
+    "UNSAT": 22,
+    "SAT": 10
+   },
+   "c1_3532_q18": {
+    "UNSAT": 17,
+    "SAT": 15
+   },
+   "c1_3826_q21": {
+    "UNSAT": 22,
+    "SAT": 10
+   },
+   "c1_4121_q5": {
+    "SAT": 7,
+    "UNSAT": 25
+   },
+   "c1_4415_q6": {
+    "UNSAT": 27,
+    "SAT": 5
+   },
+   "c1_4710_q25": {
+    "UNSAT": 20,
+    "SAT": 12
+   },
+   "c1_5004_q17": {
+    "UNSAT": 27,
+    "SAT": 5
+   },
+   "c1_5298_q15": {
+    "UNSAT": 27,
+    "SAT": 5
+   },
+   "c1_5593_q29": {
+    "UNSAT": 23,
+    "SAT": 9
+   },
+   "c1_5887_q6": {
+    "UNSAT": 27,
+    "SAT": 5
+   },
+   "c1_6181_q12": {
+    "UNSAT": 24,
+    "SAT": 8
+   },
+   "c1_6476_q26": {
+    "UNSAT": 22,
+    "SAT": 10
+   },
+   "c1_6770_q22": {
+    "UNSAT": 26,
+    "SAT": 6
+   },
+   "c1_7064_q2": {
+    "UNSAT": 23,
+    "SAT": 9
+   },
+   "c1_7359_q22": {
+    "UNSAT": 18,
+    "SAT": 14
+   },
+   "c1_7653_q18": {
+    "UNSAT": 26,
+    "SAT": 6
+   },
+   "c1_7947_q12": {
+    "SAT": 25,
+    "UNSAT": 7
+   },
+   "c1_8242_q7": {
+    "SAT": 29,
+    "UNSAT": 3
+   },
+   "c1_8536_q24": {
+    "UNSAT": 29,
+    "SAT": 3
+   }
+  },
+  "pass": true
+ },
+ "C2": {
+  "sets": 8544,
+  "status_counts": {
+   "SAT": 8544
+  },
+  "solve_runs": {
+   "workers": 4,
+   "blocks": 8544,
+   "exit_codes": [
+    0
+   ],
+   "solver_options": [],
+   "wall_s": 37.7
+  },
+  "pass": true
+ },
+ "C3_full33": {
+  "sets": 274,
+  "status_counts": {
+   "UNSAT": 274
+  },
+  "solve_runs": {
+   "workers": 4,
+   "blocks": 274,
+   "exit_codes": [
+    0
+   ],
+   "solver_options": [],
+   "wall_s": 1.3
+  },
+  "brute_min_convex7": 1,
+  "brute_max_convex7": 1,
+  "pass": true
+ },
+ "C3_ext_with_7gon": {
+  "sets": 3,
+  "status_counts": {
+   "UNSAT": 99
+  },
+  "brute_convex7": [
+   1,
+   1,
+   1
+  ],
+  "pass": true
+ },
+ "C3_flipped": {
+  "set": "0",
+  "flipped_triple": [
+   1,
+   2,
+   4
+  ],
+  "brute_violations": 1,
+  "status_counts": {
+   "UNSAT": 1
+  },
+  "pass": true
+ },
+ "all_pass": true
+}

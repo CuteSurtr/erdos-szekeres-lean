@@ -1,0 +1,13 @@
+tools (built in /home/user/w):
+cadical   c60730422e758ef1cebe7aeddf2dda31c996bf04 (master at clone time, 2026-10-20)
+march_cu  CnC 705b60c6491ef2b61988b3ce6ac674be1b90571d, make CFLAGS="-O3 -fcommon"
+cake_lpr  a36874a8b750b43fe4b385b8ddbf5b033e46a3fa, make cake_lpr; example.cnf/example.lpr -> s VERIFIED UNSAT
+sha256:
+m33k7int.sub.cnf (regenerated: gen_etv.py 33 7 7 7 --mirror; mirgen.py --interior --yflip-unit)
+  69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d  OK (matches)
+verify/ii_wave1.json
+  6df36dab6dc93cec474ee7a795b38716bc19bf2d6064468b9c5e38e00901c72e  OK (matches)
+U_L2.cnf (hullsplit.py case BASE "" 2)
+  1d26b9475d1609388bda1853cc22c1fba0bb73fb1a5f8a28adf9fbd3f15aaa53  OK (matches entry)
+U_L2 top.icnf (march_cu U_L2.cnf -d 7, 175 s): 128 cubes, including 0 refuted leaves
+  f00804ef5fd21981ef094016e1d77b36fb1dc7d08a6d0b0f219afcc6d30999bd

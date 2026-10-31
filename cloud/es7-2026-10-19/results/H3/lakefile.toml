@@ -1,0 +1,19 @@
+name = "mirror_encoding"
+version = "0.1.0"
+defaultTargets = ["MirrorEncoding", "mir_dimacs", "cover_check"]
+
+# `results/H` (ETVEncoding) and, through it, the parent repository and Mathlib.
+[[require]]
+name = "etv_encoding"
+path = "../H"
+
+[[lean_lib]]
+name = "MirrorEncoding"
+
+[[lean_exe]]
+name = "mir_dimacs"
+root = "MirrorEncoding.Emit"
+
+[[lean_exe]]
+name = "cover_check"
+root = "MirrorEncoding.CoverMain"

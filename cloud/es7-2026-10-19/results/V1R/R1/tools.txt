@@ -1,0 +1,7 @@
+CaDiCaL: https://github.com/arminbiere/cadical commit c60730422e758ef1cebe7aeddf2dda31c996bf04, ./configure && make; --version: 3.0.1; binary sha256 812201169fa0a12dc604118c8dd409eb0effdbb94fa844cb945e9a9f98f672ea
+cake_lpr: https://github.com/tanyongkiam/cake_lpr commit a36874a8b750b43fe4b385b8ddbf5b033e46a3fa, make cake_lpr (gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0); cake_lpr.S sha256 2f3af32d55083839b3fa0e693afd817679c0b8944bef41def05a8b0ec72b7d4a, basis_ffi.c sha256 8e30d84fdcb2177aa5571d7fa6661a2fae5ecfd56baa0ce49c65f9233a9f87cb; example.cnf/example.lpr -> s VERIFIED UNSAT
+Solver call: cadical --lrat=true --no-binary -q leaf.cnf leaf.lrat ; checker call: cake_lpr leaf.cnf leaf.lrat
+CNF generation: tools/etv/gen_etv.py 33 7 7 7 --mirror --hull, then results/C/scripts/mirgen.py hm33k7.cnf 33 --hull (as results/C/scripts/make_cnfs.sh; H3 shows identical to the Lean mir_dimacs output)
+hm33k7.sub.cnf sha256 bfbc2d6096e4099ba751130d421eca9da18b72559991103cc2d4b4bc0d92757d (matches), header p cnf 47002 535454
+verify/hull_leaves.icnf sha256 cc11270a57ebe85ad1d5c83b15da0a3439521cc7ebd50432f16c223a1b2478b6 (matches)
+Driver: own script driver_v1r.py (copied here), 3 leaves in parallel

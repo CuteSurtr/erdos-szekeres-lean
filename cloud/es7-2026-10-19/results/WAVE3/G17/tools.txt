@@ -1,0 +1,6 @@
+cadical  https://github.com/arminbiere/cadical  commit c60730422e758ef1cebe7aeddf2dda31c996bf04 (version 3.0.1), ./configure && make; sha256 a79203976c8b201e10173a5793cfc226c899160807e0432267b13c3cd3b508b1
+march_cu https://github.com/marijnheule/CnC  commit 705b60c6491ef2b61988b3ce6ac674be1b90571d, march_cu/ make CFLAGS="-O3 -fno-strict-aliasing -Wall -DNDEBUG -fcommon"; sha256 afcbb47642a922676693b325ed19d88698c6b8f700943fa2753d98126579f222
+cake_lpr https://github.com/tanyongkiam/cake_lpr  commit a36874a8b750b43fe4b385b8ddbf5b033e46a3fa, make cake_lpr; cake_lpr.S sha256 2f3af32d55083839b3fa0e693afd817679c0b8944bef41def05a8b0ec72b7d4a; binary sha256 1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca
+cake_lpr example.cnf example.lpr -> s VERIFIED UNSAT
+F.cnf sha256 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d (gen_etv.py 33 7 7 7 --mirror; mirgen.py --interior --yflip-unit)
+U_L9 case CNF sha256 887d573e0e4934d19fef3983d5a50c4dd391e30c6f26250b10083c53df928fb4 (= cases.jsonl)

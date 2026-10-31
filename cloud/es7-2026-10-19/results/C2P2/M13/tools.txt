@@ -1,0 +1,32 @@
+C2P2 M13 tools and checks (TASK.md commit d266d2c3; V=M13, LIST=C2P2.tsv, j=13, N=42, H=2.5)
+repo HEAD at start: c1e55aa4dd2c656873f6afc49f4b6cd4a018d84d
+
+== build_tools.sh (vendored sources; CaDiCaL c6073042 v3.0.1, cake_lpr a36874a8, lrat-check 2e3b2dc + E2 patch)
+manifest: all 196 files match
+lrat-check.c: In function 'main':
+lrat-check.c:399:5: warning: ignoring return value of 'fgets' declared with attribute 'warn_unused_result' [-Wunused-result]
+  399 |     fgets (ignore, sizeof (ignore), cnf);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cadical --version: 3.0.1
+cake_lpr example: s VERIFIED UNSAT
+sanity bad (LRAT on {1},{-1}): lrat-check 'c FAILED: empty clause without a RUP conflict'; cake_lpr 'c Checking failed at line: 0. Reason: pivot must be non-zero'
+sanity good (LRAT on {1},{-1}): lrat-check 'c VERIFIED'; cake_lpr 's VERIFIED UNSAT'
+expected: bad rejected by both, good accepted by both (c VERIFIED, s VERIFIED UNSAT)
+(tar printed 'Ignoring unknown extended header keyword LIBARCHIVE.xattr.com.apple.provenance' warnings, harmless)
+
+== base CNF: python3 SYMZ/zcnf.py rot 17 7 --m 2 --hull -o /opt/work/base.cnf --map /opt/work/base.json
+{"kind": "rot", "m": 2, "t": 17, "axis": 0, "N": 34, "K": 7, "Z": 34, "vars": 838032, "X_vars": 2856, "clauses": 16653336, "stats": {"triple_classes": 2856, "gp_5sets": 162384, "a4_4sets": 51816, "centre_units": 0, "conv": {"4": 23256, "5": 139128, "6": 672792, "K-sets": 2689808}, "sb_units": 136, "hull_sb_clauses": 10880}}
+header: p cnf 838032 16653336  (expected p cnf 838032 16653336: OK)
+b0061e908bff80e6a597f31a6fec1d91e8504aebc09b0bcf41c2ff21604d8ff1  /opt/work/base.cnf
+2476fafff493a763fd7f2883380d359629191912a15a69bcbdfbf49bbf472b48  /opt/work/base.json
+both sha256 match the expected values: OK
+
+== cubes: python3 C2C34/l2cubes.py /opt/work/base.json a /opt/work/P{a}.txt
+P1: byte-identical to C2P/cubes/P1_cubes.txt (08cc376d81b4839b)
+P2: byte-identical to C2P/cubes/P2_cubes.txt (77e36b3e19122a82)
+P3: byte-identical to C2P/cubes/P3_cubes.txt (8f4620f24bc44e2f)
+P4: byte-identical to C2P/cubes/P4_cubes.txt (748c6e6271fcc427)
+P5: byte-identical to C2P/cubes/P5_cubes.txt (0c4c6e730f50feed)
+P6: byte-identical to C2P/cubes/P6_cubes.txt (f5bb0eaae55d9a7b)
+P7: byte-identical to C2P/cubes/P7_cubes.txt (b9bc5812900987f7)
+P8: byte-identical to C2P/cubes/P8_cubes.txt (302d8e121fdacf3a)

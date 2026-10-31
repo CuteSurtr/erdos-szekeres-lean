@@ -1,0 +1,5 @@
+cadical   https://github.com/arminbiere/cadical      c60730422e758ef1cebe7aeddf2dda31c996bf04 (version 3.0.1), ./configure && make
+cake_lpr  https://github.com/tanyongkiam/cake_lpr    a36874a8b750b43fe4b385b8ddbf5b033e46a3fa, make cake_lpr; example.cnf/example.lpr -> "s VERIFIED UNSAT"
+lrat-check https://github.com/marijnheule/drat-trim  2e3b2dc0ecf938addbd779d42877b6ed69d9a985 + results/E2/tools/lrat-check-E2.patch (applied with patch(1)), gcc -O2
+  forged proof "2 0 0" on "p cnf 1 1 / 1 0": patched lrat-check -> "c FAILED: empty clause without a RUP conflict ... c NOT VERIFIED" exit 1; cake_lpr -> rejects (pivot must be non-zero)
+  genuine proof: hm17k6.sub.cnf, CaDiCaL --elim=0 --lrat --binary=false, exit 20, 52831-byte proof: patched lrat-check "c VERIFIED", cake_lpr "s VERIFIED UNSAT"

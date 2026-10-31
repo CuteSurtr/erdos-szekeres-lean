@@ -1,0 +1,7 @@
+base CNF m33k7int.sub.cnf regenerated (gen_etv.py 33 7 7 7 --mirror; mirgen.py --interior --yflip-unit):
+  69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d  expected 69c1dc8f...932d  MATCH
+verify/ii_wave1.json: 6df36dab6dc93cec474ee7a795b38716bc19bf2d6064468b9c5e38e00901c72e  expected 6df36dab...c72e  MATCH
+case U_L4 (hullsplit.py case BASE "" 4): eb730ad3eebdd96f8daf71efb79c4932d861ddd0e0b1c8b38c6423112bf66df8  entry eb730ad3...6df8  MATCH
+top cubes: march_cu U_L4.cnf -d 7 -o top.icnf (3m49s): 128 cubes, 0 refuted leaves
+  top.icnf sha256 c172b9354496170c210bab5707ff63b120495823df0ac3b38b04da125cbfcd08
+  shard 2 of 3 = line indices i % 3 == 2: 42 cubes

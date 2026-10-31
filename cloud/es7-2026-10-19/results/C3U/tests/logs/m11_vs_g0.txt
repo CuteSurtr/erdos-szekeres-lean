@@ -1,0 +1,3 @@
+{"root": "0s0-1s1_2s0-9s0", "root_status": "UNKNOWN", "root_cap": 1, "split": [{"node": "0s0-1s1_2s0-9s0", "split": true, "sigma_bits": [3, 4, 5], "children": 8}], "cubes": 8, "certified": 8, "caps": [300], "cnf_sha256_and_units_equal_G0": 8, "solve_s": 1003.8, "check_s": 266.6, "proof_sha256_present": 8, "result": "OK"}
+{"root": "0s0-1s1_3s0-10s0", "root_status": "UNKNOWN", "root_cap": 1, "split": [{"node": "0s0-1s1_3s0-10s0", "split": true, "sigma_bits": [2, 4, 5], "children": 8}], "cubes": 8, "certified": 8, "caps": [300], "cnf_sha256_and_units_equal_G0": 8, "solve_s": 918.7, "check_s": 246.4, "proof_sha256_present": 8, "result": "OK"}
+FAILURES 0

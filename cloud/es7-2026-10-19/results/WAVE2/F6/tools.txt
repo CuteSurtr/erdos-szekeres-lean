@@ -1,0 +1,9 @@
+Built from source in /opt/src, linked from /opt/work/bin:
+cadical   c60730422e758ef1cebe7aeddf2dda31c996bf04 (3.0.1), ./configure && make
+march_cu  CnC 705b60c6491ef2b61988b3ce6ac674be1b90571d, make CFLAGS="-O3 -fno-strict-aliasing -Wall -DNDEBUG -fcommon"
+cake_lpr  a36874a8b750b43fe4b385b8ddbf5b033e46a3fa, make cake_lpr; binary sha256 1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca
+          bundled example: ./cake_lpr example.cnf example.lpr -> s VERIFIED UNSAT
+F = /opt/work/F.cnf sha256 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d (gen_etv.py 33 7 7 7 --mirror; mirgen.py --interior --yflip-unit) OK
+U_L8.cnf (hullsplit.py case F "" 8) sha256 6c05114f422e02810378941f606a0b34f9c2e943b042880a1a2f065dc7f1bfd5 = cases.jsonl cnf_sha256 OK
+Run: BIN=/opt/work/bin WORK=/opt/work/tmp close_march.py U_L8.cnf U_L8 --name U_L8 --top U_L8/share.icnf --skip skip.icnf --timeout 300 --split-depth 6 --jobs 4 --hours 2.631   started 10:27:09 UTC (deadline 13:05)
+Skip file: refresh_skip.sh (mkskip.py from F1) over W30 and WAVE2/*/U_L8 leaves.jsonl (not F6's own).

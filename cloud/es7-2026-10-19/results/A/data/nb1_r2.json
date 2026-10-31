@@ -1,0 +1,34 @@
+{
+ "deletion_sets": 1190,
+ "base_sets": 107,
+ "answers": 36890,
+ "status_totals": {
+  "UNSAT": 36890
+ },
+ "by_kind": {
+  "win": {
+   "UNSAT": 12772
+  },
+  "geo": {
+   "UNSAT": 11005
+  },
+  "rand": {
+   "UNSAT": 13113
+  }
+ },
+ "sat_answers": [],
+ "conflicts_per_solve": {
+  "n": 36890,
+  "mean": 3.439,
+  "median": 2,
+  "p99": 17,
+  "max": 65
+ },
+ "wall_ms_per_solve": {
+  "n": 36890,
+  "mean": 63.956,
+  "median": 40.2,
+  "p99": 206.5,
+  "max": 12419.4
+ }
+}

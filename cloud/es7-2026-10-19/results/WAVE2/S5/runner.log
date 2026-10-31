@@ -1,0 +1,38 @@
+10:37:42 status U11_L6 FREE U11_L6 [('results/WAVE1/W33/U11_L6', 'EMPTY', 0, 1)]
+10:39:08 whole U11_L6 rc=20 solve=75.527700633 check=10.679979927 cake=[s VERIFIED UNSAT]
+10:39:11 pushed S5: U11_L6 closed (whole)
+10:39:12 status U5_L11 FREE U5_L11 [('results/WAVE1/W33/U5_L11', 'EMPTY', 0, 1)]
+10:39:12 whole U5_L11 rc=20 solve=118.627238858 check=11.048401634 cake=[s VERIFIED UNSAT]
+10:39:14 pushed S5: U5_L11 closed (whole)
+10:39:15 status U9_L4 FREE U9_L4 [('results/WAVE1/W33/U9_L4', 'EMPTY', 0, 1)]
+10:39:15 whole U9_L4 rc=0 solve=120.019498689 check=0 cake=[-]
+10:39:15 driver U9_L4 2.68
+10:47:10 driver done U9_L4 0 open 0
+ 
+10:47:13 pushed S5: U9_L4 open 0
+10:47:13 status U15_L4 STARTED U15_L4 [('results/WAVE1/W33/U15_L4', 'STARTED', 0, 128)]
+10:47:13 defer U15_L4
+10:47:14 status U4-16_L FREE U4-16_L [('results/WAVE1/W33/U4-16_L', 'EMPTY', 0, 1)]
+10:47:14 whole U4-16_L rc=20 solve=61.113070427 check=18.187253741 cake=[s VERIFIED UNSAT]
+10:47:14 pushed S5: U4-16_L closed (whole)
+10:47:15 status U13_L5 STARTED U13_L5 [('results/WAVE1/W33/U13_L5', 'STARTED', 0, 128)]
+10:47:15 defer U13_L5
+10:47:15 status U12_L5 CLOSED U12_L5 [('results/WAVE1/W33/U12_L5', 'CLOSED', 128, 0)]
+10:47:15 SKIP closed elsewhere U12_L5
+10:47:16 status U11_L4 CLOSED U11_L4 [('results/WAVE1/W33/U11_L4', 'CLOSED', 128, 0)]
+10:47:16 SKIP closed elsewhere U11_L4
+10:47:16 status U10_L4 CLOSED U10_L4 [('results/WAVE1/W33/U10_L4', 'CLOSED', 128, 0)]
+10:47:16 SKIP closed elsewhere U10_L4
+10:47:17 status U9_L7 CLOSED U9_L7 [('results/WAVE1/W33/U9_L7', 'CLOSED', 116, 0)]
+10:47:17 SKIP closed elsewhere U9_L7
+10:47:17 status U15_L4 STARTED U15_L4 [('results/WAVE1/W33/U15_L4', 'STARTED', 0, 128)]
+10:47:17 whole U15_L4 rc=0 solve=120.034549665 check=0 cake=[-]
+10:47:17 driver U15_L4 2.55
+10:55:41 driver done U15_L4 0 open 0
+ 
+10:55:45 pushed S5: U15_L4 open 0
+10:55:45 status U13_L5 STARTED U13_L5 [('results/WAVE1/W33/U13_L5', 'STARTED', 0, 128)]
+10:55:45 whole U13_L5 rc=20 solve=106.934950515 check=22.686168244 cake=[s VERIFIED UNSAT]
+10:55:46 pushed S5: U13_L5 closed (whole)
+10:55:46 RUNNER DONE
+10:55:47 pushed S5: runner done

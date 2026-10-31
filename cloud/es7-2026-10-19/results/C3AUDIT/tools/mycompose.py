@@ -1,0 +1,51 @@
+"""Independent cut check (own tree definition) over certified records; compares with hullcase.tree_children."""
+import json, sys, glob, itertools, functools
+sys.path.insert(0, "/home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C3-S/tools")
+M = 11
+def opts(unused):
+    o = [f"{r}" for r in unused]
+    for b, c in itertools.combinations(sorted(unused), 2):
+        for sb in (0, 1):
+            for sc in (0, 1): o.append(f"{b}s{sb}-{c}s{sc}")
+    return o
+def toks(lay):
+    return sorted((int(t.split("s")[0]), int(t.split("s")[1]) if "s" in t else -1) for t in lay.split("-"))
+def mirror(lay):
+    return sorted(((M - r) % M, (1 - s) if s >= 0 else -1) for r, s in toks(lay))
+def children(name):
+    if name == "":
+        return ["0s0"] + [f"0s0-{a}s{s}" for a in range(1, 6) for s in (0, 1)]
+    lays = name.split("_")
+    used = {r for l in lays for r, _ in toks(l)}
+    o = opts([r for r in range(M) if r not in used])
+    if name == "0s0": o = [x for x in o if toks(x) <= mirror(x)]
+    return [name + "_" + x for x in o]
+def norm(name):  # canonical order of residues inside a layer
+    out = []
+    for l in name.split("_"):
+        t = toks(l); out.append("-".join(f"{r}" if s < 0 else f"{r}s{s}" for r, s in t))
+    return "_".join(out)
+cert = set(); nrec = 0; dup = 0
+for f in sys.argv[1:]:
+    for l in open(f):
+        r = json.loads(l)
+        if r.get("certified") and r.get("lrat_check") == "c VERIFIED" and r.get("cake_lpr") == "s VERIFIED UNSAT":
+            nrec += 1; n = norm(r["node"]); dup += n in cert; cert.add(n)
+prefixes = {"_".join(c.split("_")[:j]) for c in cert for j in range(1, c.count("_") + 1)}
+missing = []
+@functools.lru_cache(None)
+def cov(name):
+    if name in cert: return True
+    if name and name not in prefixes: missing.append(name); return False
+    return all([cov(c) for c in children(name)])
+ok = cov("")
+# compare own tree with hullcase on every prefix node
+import hullcase as HC
+mism = 0
+for p in sorted(prefixes | {""}):
+    a = sorted(children(p))
+    b = sorted(HC.layers_name(c) for c in HC.tree_children(11, 7, HC.parse_layers(p) if p else [], mirror=True))
+    mism += a != b
+print(json.dumps({"records": nrec, "distinct_certified": len(cert), "duplicates": dup, "class_covered": ok,
+                  "uncovered_frontier": len(missing), "prefix_nodes_compared": len(prefixes) + 1, "children_mismatch": mism,
+                  "not_in_tree": sum(1 for c in cert if c.rsplit("_",1)[-1] and c not in set(children(c.rsplit("_",1)[0] if "_" in c else "")))}))

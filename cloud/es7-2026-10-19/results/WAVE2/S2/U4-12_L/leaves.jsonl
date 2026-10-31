@@ -1,0 +1,119 @@
+{"case": "U4-12_L", "case_sha256": "ab4845555c04e3dc55eaaa9563c70c5a201e26441f3a5294743252c3887e2bc1"}
+{"top": true, "ncubes": 116, "shard": 0, "nshards": 1, "nmine": 116, "top_sha256": "90cfebacc10a534c287afe8425f675e018f49d2d702a19e327d1f696af918057", "case_sha256": "ab4845555c04e3dc55eaaa9563c70c5a201e26441f3a5294743252c3887e2bc1"}
+{"resume": true, "time": "2026-10-20T12:12:05Z", "frontier": 116}
+{"cube": [3732, 3707, 1292, -3765, -9511, 1263], "solve_s": 0.58, "proof_bytes": 831582, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.69, "status": "UNSAT", "cpu_s": 3.8}
+{"cube": [3732, 3707, 1292, -3765, -9511, -1263, 3501], "solve_s": 0.56, "proof_bytes": 913323, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.9, "status": "UNSAT", "cpu_s": 5.1}
+{"cube": [3732, 3707, 1292, -3765, 9511], "solve_s": 0.88, "proof_bytes": 6639588, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.43, "status": "UNSAT", "cpu_s": 6.8}
+{"cube": [3732, 3707, 1292, -3765, -9511, -1263, -3501], "solve_s": 1.14, "proof_bytes": 7517681, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.14, "status": "UNSAT", "cpu_s": 8.5}
+{"cube": [3732, 3707, 1292, 3765, 39484, 3501, -3248], "solve_s": 1.08, "proof_bytes": 7023550, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.4, "status": "UNSAT", "cpu_s": 8.3}
+{"cube": [3732, 3707, 1292, 3765, 39484, 3501, 3248], "solve_s": 1.18, "proof_bytes": 6645831, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.87, "status": "UNSAT", "cpu_s": 11.6}
+{"cube": [3732, 3707, 1292, 3765, 39484, -3501, 3248], "solve_s": 0.98, "proof_bytes": 6825405, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.58, "status": "UNSAT", "cpu_s": 10.4}
+{"cube": [3732, 3707, 1292, 3765, 39484, -3501, -3248], "solve_s": 1.3, "proof_bytes": 6942000, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.5, "status": "UNSAT", "cpu_s": 11.4}
+{"cube": [3732, 3707, 1292, 3765, -39484, -1263, 3501], "solve_s": 1.07, "proof_bytes": 6742929, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.36, "status": "UNSAT", "cpu_s": 9.9}
+{"cube": [3732, 3707, 1292, 3765, -39484, -1263, -3501], "solve_s": 1.15, "proof_bytes": 6861329, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.34, "status": "UNSAT", "cpu_s": 11.3}
+{"cube": [3732, 3707, 1292, 3765, -39484, 1263, 3501], "solve_s": 0.96, "proof_bytes": 6840751, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.37, "status": "UNSAT", "cpu_s": 11.6}
+{"cube": [3732, 3707, -1292, -1187, 4198, -37], "solve_s": 0.62, "proof_bytes": 1118967, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.8, "status": "UNSAT", "cpu_s": 8.0}
+{"cube": [3732, 3707, 1292, 3765, -39484, 1263, -3501], "solve_s": 2.53, "proof_bytes": 7368849, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.6, "status": "UNSAT", "cpu_s": 13.1}
+{"cube": [3732, 3707, -1292, -1187, 4198, 37, -3230], "solve_s": 0.75, "proof_bytes": 988970, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.03, "status": "UNSAT", "cpu_s": 8.4}
+{"cube": [3732, 3707, -1292, -1187, 4198, 37, 3230], "solve_s": 0.88, "proof_bytes": 774478, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.13, "status": "UNSAT", "cpu_s": 7.7}
+{"cube": [3732, 3707, -1292, -1187, -4198, 3483, -1507], "solve_s": 0.83, "proof_bytes": 922521, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.92, "status": "UNSAT", "cpu_s": 8.3}
+{"cube": [3732, 3707, -1292, -1187, -4198, 3483, 1507], "solve_s": 1.29, "proof_bytes": 7011805, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.36, "status": "UNSAT", "cpu_s": 10.0}
+{"cube": [3732, 3707, -1292, -1187, -4198, -3483, 3230], "solve_s": 0.9, "proof_bytes": 7081480, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.43, "status": "UNSAT", "cpu_s": 9.9}
+{"cube": [3732, 3707, -1292, -1187, -4198, -3483, -3230], "solve_s": 1.4, "proof_bytes": 6873789, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.36, "status": "UNSAT", "cpu_s": 10.6}
+{"cube": [3732, 3707, -1292, 1187, 4165, 9507], "solve_s": 1.1, "proof_bytes": 1092873, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.93, "status": "UNSAT", "cpu_s": 9.1}
+{"cube": [3732, 3707, -1292, 1187, 4165, -9507, 3784], "solve_s": 0.55, "proof_bytes": 884833, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.98, "status": "UNSAT", "cpu_s": 5.9}
+{"cube": [3732, 3707, -1292, 1187, 4165, -9507, -3784], "solve_s": 1.73, "proof_bytes": 7957769, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.54, "status": "UNSAT", "cpu_s": 12.7}
+{"cube": [3732, 3707, -1292, 1187, -4165, -1208, 1278], "solve_s": 2.08, "proof_bytes": 7694952, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.42, "status": "UNSAT", "cpu_s": 8.0}
+{"cube": [3732, 3707, -1292, 1187, -4165, -1208, -1278], "solve_s": 2.57, "proof_bytes": 7932911, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.68, "status": "UNSAT", "cpu_s": 12.3}
+{"cube": [3732, -3707, 1292, 4336, -3714, -1263, 3501], "solve_s": 0.34, "proof_bytes": 787616, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.95, "status": "UNSAT", "cpu_s": 8.2}
+{"cube": [3732, -3707, 1292, 4336, -3714, -1263, -3501], "solve_s": 0.96, "proof_bytes": 7140904, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.3, "status": "UNSAT", "cpu_s": 12.5}
+{"cube": [3732, 3707, -1292, 1187, -4165, 1208, -1530], "solve_s": 5.63, "proof_bytes": 10919131, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.32, "status": "UNSAT", "cpu_s": 22.8}
+{"cube": [3732, -3707, 1292, 4336, -3714, 1263, 3501], "solve_s": 0.62, "proof_bytes": 922966, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.81, "status": "UNSAT", "cpu_s": 9.9}
+{"cube": [3732, 3707, -1292, 1187, -4165, 1208, 1530], "solve_s": 5.22, "proof_bytes": 10868837, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.55, "status": "UNSAT", "cpu_s": 22.9}
+{"cube": [3732, -3707, 1292, 4336, 3714, -8264], "solve_s": 0.61, "proof_bytes": 908156, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.5, "status": "UNSAT", "cpu_s": 6.2}
+{"cube": [3732, -3707, 1292, 4336, -3714, 1263, -3501], "solve_s": 1.13, "proof_bytes": 6873190, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.38, "status": "UNSAT", "cpu_s": 10.3}
+{"cube": [3732, -3707, 1292, 4336, 3714, 8264], "solve_s": 0.98, "proof_bytes": 6603938, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.02, "status": "UNSAT", "cpu_s": 9.0}
+{"cube": [3732, -3707, 1292, -4336, 9511, -3157], "solve_s": 0.79, "proof_bytes": 1041977, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.86, "status": "UNSAT", "cpu_s": 7.4}
+{"cube": [3732, -3707, 1292, -4336, 9511, 3157], "solve_s": 1.09, "proof_bytes": 6817977, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.18, "status": "UNSAT", "cpu_s": 11.1}
+{"cube": [3732, -3707, 1292, -4336, -9511, -3714, 1554], "solve_s": 1.7, "proof_bytes": 7878881, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.74, "status": "UNSAT", "cpu_s": 10.9}
+{"cube": [3732, -3707, 1292, -4336, -9511, 3714, -4127], "solve_s": 0.68, "proof_bytes": 6906075, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.27, "status": "UNSAT", "cpu_s": 8.8}
+{"cube": [3732, -3707, 1292, -4336, -9511, -3714, -1554], "solve_s": 1.55, "proof_bytes": 7926024, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.29, "status": "UNSAT", "cpu_s": 12.6}
+{"cube": [3732, -3707, 1292, -4336, -9511, 3714, 4127], "solve_s": 0.73, "proof_bytes": 6754585, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.22, "status": "UNSAT", "cpu_s": 10.1}
+{"cube": [3732, -3707, -1292, 4336, 9511, 7744], "solve_s": 0.82, "proof_bytes": 6994070, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.35, "status": "UNSAT", "cpu_s": 10.0}
+{"cube": [3732, -3707, -1292, 4336, 9511, -7744], "solve_s": 1.08, "proof_bytes": 6889320, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.32, "status": "UNSAT", "cpu_s": 9.9}
+{"cube": [3732, -3707, -1292, 4336, -9511, 19142, 1553], "solve_s": 1.34, "proof_bytes": 7033552, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.26, "status": "UNSAT", "cpu_s": 10.5}
+{"cube": [3732, -3707, -1292, 4336, -9511, 19142, -1553], "solve_s": 1.23, "proof_bytes": 7392644, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.85, "status": "UNSAT", "cpu_s": 9.5}
+{"cube": [3732, -3707, -1292, 4336, -9511, -19142, 4128], "solve_s": 0.59, "proof_bytes": 999107, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.83, "status": "UNSAT", "cpu_s": 8.9}
+{"cube": [3732, -3707, -1292, 4336, -9511, -19142, -4128], "solve_s": 0.79, "proof_bytes": 7039649, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.1, "status": "UNSAT", "cpu_s": 8.9}
+{"cube": [3732, -3707, -1292, -4336, 507, -40540, 1554], "solve_s": 1.37, "proof_bytes": 7004983, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.32, "status": "UNSAT", "cpu_s": 10.2}
+{"cube": [3732, -3707, -1292, -4336, 507, 40540, 1554], "solve_s": 1.38, "proof_bytes": 6966828, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.99, "status": "UNSAT", "cpu_s": 7.6}
+{"cube": [3732, -3707, -1292, -4336, 507, -40540, -1554], "solve_s": 1.2, "proof_bytes": 7139544, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.32, "status": "UNSAT", "cpu_s": 10.5}
+{"cube": [3732, -3707, -1292, -4336, 507, 40540, -1554], "solve_s": 1.16, "proof_bytes": 7875839, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.25, "status": "UNSAT", "cpu_s": 9.4}
+{"cube": [3732, -3707, -1292, -4336, -507, 1530, 1507], "solve_s": 5.73, "proof_bytes": 11092127, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.46, "status": "UNSAT", "cpu_s": 15.6}
+{"cube": [3732, -3707, -1292, -4336, -507, 1530, -1507], "solve_s": 6.11, "proof_bytes": 11883518, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.02, "status": "UNSAT", "cpu_s": 27.6}
+{"cube": [-3732, 3501, 4320, 9758, -3476, 39073, -3245], "solve_s": 0.56, "proof_bytes": 6908354, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.59, "status": "UNSAT", "cpu_s": 16.0}
+{"cube": [3732, -3707, -1292, -4336, -507, -1530, 1507], "solve_s": 7.28, "proof_bytes": 10565630, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.02, "status": "UNSAT", "cpu_s": 30.3}
+{"cube": [3732, -3707, -1292, -4336, -507, -1530, -1507], "solve_s": 8.04, "proof_bytes": 11772709, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.66, "status": "UNSAT", "cpu_s": 31.9}
+{"cube": [-3732, 3501, 4320, 9758, -3476, 39073, 3245], "solve_s": 0.64, "proof_bytes": 7111021, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.73, "status": "UNSAT", "cpu_s": 11.5}
+{"cube": [-3732, 3501, 4320, 9758, -3476, -39073, -1263], "solve_s": 1.38, "proof_bytes": 7034171, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.55, "status": "UNSAT", "cpu_s": 11.6}
+{"cube": [-3732, 3501, 4320, 9758, -3476, -39073, 1263], "solve_s": 1.62, "proof_bytes": 7071339, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.21, "status": "UNSAT", "cpu_s": 11.4}
+{"cube": [-3732, 3501, 4320, 9758, 3476, -1263, -1507], "solve_s": 0.95, "proof_bytes": 7126675, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.72, "status": "UNSAT", "cpu_s": 10.0}
+{"cube": [-3732, 3501, 4320, 9758, 3476, -1263, 1507], "solve_s": 0.84, "proof_bytes": 6801548, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.38, "status": "UNSAT", "cpu_s": 9.3}
+{"cube": [-3732, 3501, 4320, 9758, 3476, 1263, -1507], "solve_s": 1.57, "proof_bytes": 6971983, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.92, "status": "UNSAT", "cpu_s": 12.1}
+{"cube": [-3732, 3501, 4320, -9758, -3476, 3248, 1263], "solve_s": 1.24, "proof_bytes": 994506, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.2, "status": "UNSAT", "cpu_s": 9.9}
+{"cube": [-3732, 3501, 4320, 9758, 3476, 1263, 1507], "solve_s": 1.88, "proof_bytes": 6915482, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.63, "status": "UNSAT", "cpu_s": 13.8}
+{"cube": [-3732, 3501, 4320, -9758, -3476, 3248, -1263], "solve_s": 1.48, "proof_bytes": 6945605, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.75, "status": "UNSAT", "cpu_s": 13.0}
+{"cube": [-3732, 3501, 4320, -9758, 3476, 3248, 1263], "solve_s": 0.98, "proof_bytes": 785939, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.66, "status": "UNSAT", "cpu_s": 6.3}
+{"cube": [-3732, 3501, 4320, -9758, -3476, -3248, 2972], "solve_s": 1.03, "proof_bytes": 6926740, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.0, "status": "UNSAT", "cpu_s": 11.6}
+{"cube": [-3732, 3501, 4320, -9758, -3476, -3248, -2972], "solve_s": 0.87, "proof_bytes": 7006606, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.52, "status": "UNSAT", "cpu_s": 11.8}
+{"cube": [-3732, 3501, 4320, -9758, 3476, 3248, -1263], "solve_s": 1.33, "proof_bytes": 6801397, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.17, "status": "UNSAT", "cpu_s": 10.0}
+{"cube": [-3732, 3501, -4320, 4336, -3476, 3248, -1478], "solve_s": 0.49, "proof_bytes": 986881, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.49, "status": "UNSAT", "cpu_s": 6.1}
+{"cube": [-3732, 3501, 4320, -9758, 3476, -3248, 2972], "solve_s": 1.19, "proof_bytes": 6911614, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.78, "status": "UNSAT", "cpu_s": 11.9}
+{"cube": [-3732, 3501, 4320, -9758, 3476, -3248, -2972], "solve_s": 1.54, "proof_bytes": 7164242, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.56, "status": "UNSAT", "cpu_s": 12.2}
+{"cube": [-3732, 3501, -4320, 4336, -3476, -3248, 2972], "solve_s": 0.92, "proof_bytes": 6826839, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.9, "status": "UNSAT", "cpu_s": 10.2}
+{"cube": [-3732, 3501, -4320, 4336, -3476, 3248, 1478], "solve_s": 1.29, "proof_bytes": 6765083, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.23, "status": "UNSAT", "cpu_s": 14.2}
+{"cube": [-3732, 3501, -4320, 4336, -3476, -3248, -2972], "solve_s": 1.59, "proof_bytes": 7240592, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.71, "status": "UNSAT", "cpu_s": 12.7}
+{"cube": [-3732, 3501, -4320, 4336, 3476, 3248, -3299], "solve_s": 1.18, "proof_bytes": 7041620, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.03, "status": "UNSAT", "cpu_s": 12.7}
+{"cube": [-3732, 3501, -4320, 4336, 3476, 3248, 3299], "solve_s": 0.51, "proof_bytes": 884874, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.09, "status": "UNSAT", "cpu_s": 9.8}
+{"cube": [-3732, 3501, -4320, 4336, 3476, -3248, 2672], "solve_s": 0.84, "proof_bytes": 6965709, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.64, "status": "UNSAT", "cpu_s": 10.3}
+{"cube": [-3732, 3501, -4320, -4336, -1146, -1507, -3595], "solve_s": 1.24, "proof_bytes": 7006680, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.85, "status": "UNSAT", "cpu_s": 10.6}
+{"cube": [-3732, 3501, -4320, 4336, 3476, -3248, -2672], "solve_s": 2.92, "proof_bytes": 8304723, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.43, "status": "UNSAT", "cpu_s": 14.6}
+{"cube": [-3732, 3501, -4320, -4336, -1146, -1507, 3595], "solve_s": 0.96, "proof_bytes": 7086365, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.71, "status": "UNSAT", "cpu_s": 11.3}
+{"cube": [-3732, 3501, -4320, -4336, -1146, 1507, 39441], "solve_s": 0.93, "proof_bytes": 6986778, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.02, "status": "UNSAT", "cpu_s": 11.2}
+{"cube": [-3732, 3501, -4320, -4336, -1146, 1507, -39441], "solve_s": 1.32, "proof_bytes": 7304207, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.52, "status": "UNSAT", "cpu_s": 9.1}
+{"cube": [-3732, 3501, -4320, -4336, 1146, 3476, -1189], "solve_s": 1.3, "proof_bytes": 7109813, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.27, "status": "UNSAT", "cpu_s": 10.8}
+{"cube": [-3732, 3501, -4320, -4336, 1146, 3476, 1189], "solve_s": 2.55, "proof_bytes": 7616835, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.36, "status": "UNSAT", "cpu_s": 13.9}
+{"cube": [-3732, 3501, -4320, -4336, 1146, -3476, 3248], "solve_s": 3.29, "proof_bytes": 8009680, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.42, "status": "UNSAT", "cpu_s": 15.4}
+{"cube": [-3732, -3501, 3248, 4336, 1613, -3223, 2972], "solve_s": 0.93, "proof_bytes": 7143612, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.25, "status": "UNSAT", "cpu_s": 11.9}
+{"cube": [-3732, 3501, -4320, -4336, 1146, -3476, -3248], "solve_s": 3.37, "proof_bytes": 8321586, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.64, "status": "UNSAT", "cpu_s": 18.9}
+{"cube": [-3732, -3501, 3248, 4336, 1613, 3223, 2972], "solve_s": 0.99, "proof_bytes": 6930416, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.96, "status": "UNSAT", "cpu_s": 7.8}
+{"cube": [-3732, -3501, 3248, 4336, 1613, -3223, -2972], "solve_s": 1.46, "proof_bytes": 7322562, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.67, "status": "UNSAT", "cpu_s": 13.7}
+{"cube": [-3732, -3501, 3248, 4336, 1613, 3223, -2972], "solve_s": 1.21, "proof_bytes": 6781410, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.11, "status": "UNSAT", "cpu_s": 9.4}
+{"cube": [-3732, -3501, 3248, 4336, -1613, 31906, 8408], "solve_s": 0.51, "proof_bytes": 965712, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.59, "status": "UNSAT", "cpu_s": 5.4}
+{"cube": [-3732, -3501, 3248, 4336, -1613, -31906, 1483], "solve_s": 1.22, "proof_bytes": 7019307, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.96, "status": "UNSAT", "cpu_s": 10.7}
+{"cube": [-3732, -3501, 3248, 4336, -1613, -31906, -1483], "solve_s": 0.87, "proof_bytes": 6920201, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.73, "status": "UNSAT", "cpu_s": 10.8}
+{"cube": [-3732, -3501, 3248, 4336, -1613, 31906, -8408], "solve_s": 0.6, "proof_bytes": 858821, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.86, "status": "UNSAT", "cpu_s": 7.6}
+{"cube": [-3732, -3501, 3248, -4336, 4320, -3223, 2972], "solve_s": 0.48, "proof_bytes": 1018945, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.57, "status": "UNSAT", "cpu_s": 6.9}
+{"cube": [-3732, -3501, 3248, -4336, 4320, 3223, 2972], "solve_s": 0.79, "proof_bytes": 6896021, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.87, "status": "UNSAT", "cpu_s": 7.5}
+{"cube": [-3732, -3501, 3248, -4336, 4320, -3223, -2972], "solve_s": 1.13, "proof_bytes": 7238460, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.36, "status": "UNSAT", "cpu_s": 9.1}
+{"cube": [-3732, -3501, 3248, -4336, 4320, 3223, -2972], "solve_s": 1.64, "proof_bytes": 7287566, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.98, "status": "UNSAT", "cpu_s": 9.4}
+{"cube": [-3732, -3501, 3248, -4336, -4320, 3223, 2972], "solve_s": 1.27, "proof_bytes": 7056829, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.09, "status": "UNSAT", "cpu_s": 9.1}
+{"cube": [-3732, -3501, 3248, -4336, -4320, 3223, -2972], "solve_s": 2.14, "proof_bytes": 7512542, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.37, "status": "UNSAT", "cpu_s": 11.2}
+{"cube": [-3732, -3501, 3248, -4336, -4320, -3223, 2972], "solve_s": 1.72, "proof_bytes": 7275767, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.72, "status": "UNSAT", "cpu_s": 11.4}
+{"cube": [-3732, -3501, -3248, 2972, -4336, 4320, -1593], "solve_s": 1.09, "proof_bytes": 7001084, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.45, "status": "UNSAT", "cpu_s": 10.1}
+{"cube": [-3732, -3501, 3248, -4336, -4320, -3223, -2972], "solve_s": 1.62, "proof_bytes": 7353320, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.0, "status": "UNSAT", "cpu_s": 13.5}
+{"cube": [-3732, -3501, -3248, 2972, -4336, 4320, 1593], "solve_s": 1.34, "proof_bytes": 6839898, "cake_lpr": "s VERIFIED UNSAT", "check_s": 6.0, "status": "UNSAT", "cpu_s": 11.8}
+{"cube": [-3732, -3501, -3248, 2972, -4336, -4320, 1593], "solve_s": 1.62, "proof_bytes": 6888685, "cake_lpr": "s VERIFIED UNSAT", "check_s": 7.62, "status": "UNSAT", "cpu_s": 14.4}
+{"cube": [-3732, -3501, -3248, 2972, 4336, -4320, 3066], "solve_s": 1.71, "proof_bytes": 6713399, "cake_lpr": "s VERIFIED UNSAT", "check_s": 7.63, "status": "UNSAT", "cpu_s": 13.6}
+{"cube": [-3732, -3501, -3248, 2972, -4336, -4320, -1593], "solve_s": 2.25, "proof_bytes": 6846328, "cake_lpr": "s VERIFIED UNSAT", "check_s": 7.74, "status": "UNSAT", "cpu_s": 19.9}
+{"cube": [-3732, -3501, -3248, 2972, 4336, -4320, -3066], "solve_s": 1.15, "proof_bytes": 864139, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.72, "status": "UNSAT", "cpu_s": 14.8}
+{"cube": [-3732, -3501, -3248, 2972, 4336, 4320, 1593], "solve_s": 0.91, "proof_bytes": 851317, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.75, "status": "UNSAT", "cpu_s": 9.9}
+{"cube": [-3732, -3501, -3248, 2972, 4336, 4320, -1593], "solve_s": 1.44, "proof_bytes": 6804633, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.53, "status": "UNSAT", "cpu_s": 15.3}
+{"cube": [-3732, -3501, -3248, -2972, 4132, 2672, -4320], "solve_s": 2.16, "proof_bytes": 7086057, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.31, "status": "UNSAT", "cpu_s": 9.5}
+{"cube": [-3732, -3501, -3248, -2972, 4132, 2672, 4320], "solve_s": 1.55, "proof_bytes": 6833449, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.57, "status": "UNSAT", "cpu_s": 8.2}
+{"cube": [-3732, -3501, -3248, -2972, -4132, -4320, -4336], "solve_s": 5.76, "proof_bytes": 8547870, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.53, "status": "UNSAT", "cpu_s": 11.1}
+{"cube": [-3732, -3501, -3248, -2972, 4132, -2672, -4320], "solve_s": 9.37, "proof_bytes": 10612844, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.95, "status": "UNSAT", "cpu_s": 21.1}
+{"cube": [-3732, -3501, -3248, -2972, -4132, -4320, 4336], "solve_s": 9.6, "proof_bytes": 10579477, "cake_lpr": "s VERIFIED UNSAT", "check_s": 4.32, "status": "UNSAT", "cpu_s": 24.6}
+{"cube": [-3732, -3501, -3248, -2972, 4132, -2672, 4320], "solve_s": 13.41, "proof_bytes": 13171685, "cake_lpr": "s VERIFIED UNSAT", "check_s": 4.47, "status": "UNSAT", "cpu_s": 30.4}
+{"cube": [-3732, -3501, -3248, -2972, -4132, 4320, -4336], "solve_s": 7.38, "proof_bytes": 10372023, "cake_lpr": "s VERIFIED UNSAT", "check_s": 1.82, "status": "UNSAT", "cpu_s": 23.5}
+{"cube": [-3732, -3501, -3248, -2972, -4132, 4320, 4336], "solve_s": 21.46, "proof_bytes": 26079922, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.04, "status": "UNSAT", "cpu_s": 38.6}

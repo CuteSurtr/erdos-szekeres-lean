@@ -1,0 +1,27 @@
+{
+ "case": "U8_L",
+ "cnf_sha256": "84d46852452d9d9fc09e44bcea66a78c9c672403341e034b2b3b03a4b09a9882",
+ "top_march": "number of cubes 128, including 0 refuted",
+ "top_march_s": 179.2,
+ "top_cubes": 128,
+ "splits": 6,
+ "split_march": [
+  "number of cubes 64, including 0 refuted",
+  "number of cubes 64, including 0 refuted",
+  "number of cubes 64, including 0 refuted",
+  "number of cubes 64, including 0 refuted",
+  "number of cubes 62, including 2 refuted",
+  "number of cubes 64, including 0 refuted"
+ ],
+ "leaves_unsat": 433,
+ "leaves_cake_verified": 433,
+ "other_records": 0,
+ "all_verified": true,
+ "covercheck_py": "no leaves.icnf (run not finished)",
+ "covered": false,
+ "cadical_s": 14521.2,
+ "cake_lpr_s": 1575.1,
+ "march_split_s": 1335.1,
+ "max_leaf_solve_s": 285.62,
+ "proof_bytes_total": 13512718035
+}
