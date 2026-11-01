@@ -2,9 +2,9 @@
 
 Local checks on an Apple M5 Pro, 1 November 2026 (UTC), over the run records on `es7-cloud` at a15dd2ce3.
 
-**Status.** Every piece of the case split is accounted for and every recorded CNF hash matches a rebuilt CNF. The
-statement "every centrally symmetric set of 34 points in general position contains a convex 7-gon" is **not yet
-claimed**: an independent review and the random re-solve sample (§5) are still open.
+**Status.** Every piece of the case split is accounted for and every recorded CNF hash matches a rebuilt CNF. An
+independent review (§8) found no blocking error. The statement "every centrally symmetric set of 34 points in general
+position contains a convex 7-gon" is **not yet claimed** while the random re-solve sample (§5) is running.
 
 ## 1. The chain being checked
 
@@ -40,6 +40,8 @@ claimed**: an independent review and the random re-solve sample (§5) are still 
   - Result: **2,589 of 2,589 recorded hashes match** (120 hexagonal cases, 61 pilot rows, 2,408 wave rows), 0
     mismatches.
   - Third-layer pieces (16 records) are skipped; they close no orbit.
+  - The case of each record is read from its unit name, not from the record. `hashmatch.json` lists, per unit, the
+    recorded hashes that were rebuilt and matched.
 - **Controls.**
   - A unit CNF written to disk and hashed with `shasum` gives the recorded hash.
   - Flipping one literal, or dropping one clause, changes the hash.
@@ -76,7 +78,9 @@ deleted.
 
 **Reproducibility.** Two units solved on the x86_64 cloud machines were re-solved on the ARM Mac: `P6_7-8-9` (record
 `C2P/M02`) and `P2_7-9-10` (`C2P5/M97`). Both gave a proof with the recorded size and SHA-256, and both checkers
-accepted it. Every deleted proof can therefore be regenerated from its CNF and recognized by its recorded hash.
+accepted it. Reproduction is not guaranteed in general: `P6_1-7` has the same CNF (`11dbd566…`) in `C2P4/M00` and
+`C2P4/LOCAL` but two different proofs (5,818 s on the cloud, 3,989 s on the Mac), both accepted by both checkers. A
+re-solve whose proof differs from its record is still checked afresh by both checkers.
 
 **Random sample.** `sample/sample.txt` lists 24 units drawn before any result was seen:
 - seed 20261101;
@@ -90,7 +94,8 @@ still running at the time of this commit.**
 ## 6. Lean check of the bookkeeping (`Central34Orbits.lean`, `gen_lean.py`)
 
 **The data.** `gen_lean.py` writes the closed subcases of each case as Lean lists. A subcase is included only through a
-record that is certified and hash-matched, or through a §4 re-solve whose CNF hash equals the expected one.
+certified record whose (unit, CNF hash) pair `hashmatch.py` rebuilt and matched, or through a §4 re-solve whose CNF hash
+equals the hash `hashmatch.py` computed for that unit. The case is read from the unit name.
 
 **The theorems.** Core Lean 4.24.0, `decide +kernel`, axioms `propext` only, about 6 s:
 - `subcases_reflection`: each case has 560 subcases, and the reflection maps subcases to subcases and is an
@@ -112,8 +117,44 @@ No matching prior result was found in the sources inspected:
 - The Mackey thesis listing (CMU-CS-25-108; abstract only, the PDF was unreachable): 16-point hexagon-free sets with 3-,
   4- and 5-fold rotation.
 - The survey `LIT/RELATED.md` with its 42 searches, and four new searches.
+- Krapivin–Przybocki–Heule, "Toward Satisfiability Modulo Realizability", arXiv:2607.02958v1 (July 2026): no symmetry
+  imposed, no nonrealizability certificates, no 34-point case; its 32-point search found no solution.
+- Koshelev–Koshka, arXiv:2604.20120v1 (April 2026): other Erdős–Szekeres variants, no symmetric 7-gon results.
+- Bogdan's arXiv:2512.24061 has only v1. The arXiv full-text search for "Erdős–Szekeres" (2026 entries), the 2025–2026
+  publication list of B. Subercaseaux and the 2025–2026 files of M. Heule show nothing on symmetric 7-gon-free sets or
+  certified nonrealizability. The Morris–Soltan survey records symmetric constructions only.
+- Not inspected: the CICM proceedings version of arXiv:2506.00224, the full Mackey thesis, journal databases behind
+  paywalls, and sources not in English.
 
 This is not a novelty claim.
+
+## 8. Independent review (1 November 2026)
+
+An adversarial review, run separately and given the code and claims but not the authors' reasoning, used its own
+scripts (`review/`). It ran no solver or checker. **No blocking error.**
+
+**Checked and found correct.**
+- Completeness of steps 1–5: hull and second layer have 4 or 6 vertices; the centre is not in the set; P_a and P_(17−a)
+  pair without fixed points; 34 points imply all larger sizes. Exact tests on 1,500 real sets and 6,000 labellings:
+  hull cubes, reduction A, second-layer cubes (1,704/1,704) and reduction B (1,704/1,704) agree with the geometry.
+- Cover shape: every subcase cube contains its hull cube and has 53 or 78 further literals.
+- Own recount of all 2,492 records, own regeneration of all 136 hull cubes and the eight cube files (byte-identical),
+  own rebuild of all 2,589 + 7 CNF hashes, and 35 hashes rebuilt with the lanes' own awk and `shasum` pipeline.
+- The Lean file: theorems as stated, not vacuous (`uncovered a []` has 560 entries), controls fail as they should.
+- Encoder sanity: 13,012,616 base clauses over triple variables hold on 160 real labellings.
+
+**Findings and their resolution.**
+1. *Major*: the claim waits for the random sample (§5). Unchanged; the sample is running.
+2. *Minor*: for the 120 hexagonal cases and 58 P8 orbits, cake_lpr ran on a CNF rebuilt by the same awk command but not
+   hashed (`C2C34/hchecker.sh`, `C2C34/p8/checker.sh`); lrat-check ran on the hashed file. The hexagonal proofs are
+   archived, so cake_lpr can be re-run on hash-checked CNFs.
+3. *Minor*: proofs are not always reproducible (`P6_1-7`). §5 corrected.
+4. *Minor*: `gen_lean.py` treated any record with a hash as matched, took the case from the record and had a no-op
+   assertion; `hashmatch.py` took the case from the record. Both fixed; the regenerated Lean file is byte-identical.
+5. *Minor*: the raw hull-cover logs were not in the repository. They are now in `evidence/central34-cover/` (build-host
+   line removed). The raw hexagonal lane records were not kept; only `C2C34/logs/hex_cases.tsv` and the proofs exist.
+6. *Minor*: `C2C34/README.md` and `WRITEUP/SYMMETRIC.md` still describe the parallelogram cases as open. They will be
+   updated with the write-up.
 
 ## Reproduction
 

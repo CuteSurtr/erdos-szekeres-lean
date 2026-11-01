@@ -2,8 +2,9 @@
 """Write Central34Orbits.lean: the closed subcases of P1..P8 as Lean data.
 
 A subcase goes into closedP<a> if some record of it has status UNSATISFIABLE, lrat_check "c VERIFIED",
-cake_lpr "s VERIFIED UNSAT" and a cnf_sha256 (every recorded cnf_sha256 was matched against the rebuilt CNF by
-hashmatch.py). Pilot records without a cnf_sha256 go into pilotUnhashed instead.
+cake_lpr "s VERIFIED UNSAT" and a cnf_sha256 that hashmatch.py rebuilt and matched for that unit (or, for a re-solve
+record, that equals the hash hashmatch.py computed for the unit). The case is taken from the unit name. Pilot records
+without a cnf_sha256 go into pilotUnhashed instead.
 usage: gen_lean.py RESULTS_DIR HASHMATCH_JSON OUT_LEAN COMMIT"""
 import csv, glob, json, os, sys
 
@@ -19,17 +20,18 @@ for f in sorted(glob.glob(os.path.join(RES, "C2P*", "*", "out.jsonl"))):
 with open(os.path.join(RES, "C2C34", "logs", "p8_units.tsv")) as fh:
     recs += [dict(r, case="P8") for r in csv.DictReader(fh, delimiter="\t")]
 for f in EXTRA:
-    recs += [r for r in map(json.loads, filter(str.strip, open(f))) if r["cnf_sha256"] == r["cnf_sha256_expected"]]
+    recs += [dict(r, _resolved=True) for r in map(json.loads, filter(str.strip, open(f)))
+             if r["cnf_sha256"] == hm["computed_for_no_hash"].get(r["unit"])]
 hashed, unhashed = {a: set() for a in range(1, 9)}, set()
 for r in recs:
     u = r["unit"]
     if not ok(r) or "/" in u or u.endswith("_cover"):
         continue
-    a = int(r["case"][1:]); V = tuple(int(x) for x in u.split("_")[1].split("-"))
-    (hashed[a] if r.get("cnf_sha256") else unhashed).add((a, V))
+    a = int(u.split("_")[0][1:]); V = tuple(int(x) for x in u.split("_")[1].split("-"))
+    bound = r.get("_resolved") or r.get("cnf_sha256") in hm["matched"].get(u, [])
+    (hashed[a] if bound else unhashed).add((a, V))
 hashed = {a: sorted(V for _, V in s) for a, s in hashed.items()}
 unhashed = sorted(V for a, V in unhashed if V not in hashed[a])
-assert all(a == 8 for a, _ in []) or True
 
 
 def lst(Vs, per=12):

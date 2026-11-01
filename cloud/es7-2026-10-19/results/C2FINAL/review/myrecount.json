@@ -1,0 +1,146 @@
+{
+ "summary": {
+  "P1": {
+   "subcases": 560,
+   "orbits": 287,
+   "fixed": 14,
+   "closed": 287,
+   "open": [],
+   "cover_accepted_hashed": [
+    "C2P3/LOCAL/out.jsonl:5"
+   ],
+   "cover_all": [
+    [
+     "C2P3/LOCAL/out.jsonl:5",
+     "UNSATISFIABLE"
+    ]
+   ]
+  },
+  "P2": {
+   "subcases": 560,
+   "orbits": 287,
+   "fixed": 14,
+   "closed": 287,
+   "open": [],
+   "cover_accepted_hashed": [
+    "C2P3/LOCAL/out.jsonl:4"
+   ],
+   "cover_all": [
+    [
+     "C2P3/LOCAL/out.jsonl:4",
+     "UNSATISFIABLE"
+    ]
+   ]
+  },
+  "P3": {
+   "subcases": 560,
+   "orbits": 287,
+   "fixed": 14,
+   "closed": 287,
+   "open": [],
+   "cover_accepted_hashed": [
+    "C2P3/LOCAL/out.jsonl:3"
+   ],
+   "cover_all": [
+    [
+     "C2P3/LOCAL/out.jsonl:3",
+     "UNSATISFIABLE"
+    ]
+   ]
+  },
+  "P4": {
+   "subcases": 560,
+   "orbits": 287,
+   "fixed": 14,
+   "closed": 287,
+   "open": [],
+   "cover_accepted_hashed": [
+    "C2P3/LOCAL/out.jsonl:2"
+   ],
+   "cover_all": [
+    [
+     "C2P3/LOCAL/out.jsonl:2",
+     "UNSATISFIABLE"
+    ]
+   ]
+  },
+  "P5": {
+   "subcases": 560,
+   "orbits": 287,
+   "fixed": 14,
+   "closed": 287,
+   "open": [],
+   "cover_accepted_hashed": [
+    "C2P3/LOCAL/out.jsonl:1"
+   ],
+   "cover_all": [
+    [
+     "C2P3/LOCAL/out.jsonl:1",
+     "UNSATISFIABLE"
+    ]
+   ]
+  },
+  "P6": {
+   "subcases": 560,
+   "orbits": 287,
+   "fixed": 14,
+   "closed": 287,
+   "open": [],
+   "cover_accepted_hashed": [
+    "C2P2/M36/out.jsonl:1"
+   ],
+   "cover_all": [
+    [
+     "C2P2/M36/out.jsonl:1",
+     "UNSATISFIABLE"
+    ]
+   ]
+  },
+  "P7": {
+   "subcases": 560,
+   "orbits": 287,
+   "fixed": 14,
+   "closed": 287,
+   "open": [],
+   "cover_accepted_hashed": [
+    "C2P/M10/out.jsonl:6"
+   ],
+   "cover_all": [
+    [
+     "C2P/M10/out.jsonl:6",
+     "UNSATISFIABLE"
+    ]
+   ]
+  },
+  "P8": {
+   "subcases": 560,
+   "orbits": 287,
+   "fixed": 14,
+   "closed": 287,
+   "open": [],
+   "cover_accepted_hashed": [
+    "C2FINAL/pilot/out.jsonl:2"
+   ],
+   "cover_all": [
+    [
+     "C2C34/logs/p8_units.tsv:2",
+     "UNSATISFIABLE"
+    ]
+   ]
+  }
+ },
+ "issues": [
+  "no cnf_sha256 C2C34/logs/p8_units.tsv:2 P8_cover UNSATISFIABLE",
+  "no cnf_sha256 C2C34/logs/p8_units.tsv:3 P8_3-4-5 UNSATISFIABLE",
+  "no cnf_sha256 C2C34/logs/p8_units.tsv:4 P8_9-13-15 UNSATISFIABLE",
+  "no cnf_sha256 C2C34/logs/p8_units.tsv:5 P8_3-4-15 UNSATISFIABLE",
+  "no cnf_sha256 C2C34/logs/p8_units.tsv:6 P8_2-12-15 UNSATISFIABLE",
+  "no cnf_sha256 C2C34/logs/p8_units.tsv:7 P8_2-4-11 UNSATISFIABLE",
+  "no cnf_sha256 C2C34/logs/p8_units.tsv:8 P8_1-3 UNSATISFIABLE",
+  "unit P6_1-7: 2 distinct proof hashes: [('C2P4/LOCAL/out.jsonl:1', 'e226ccae2f'), ('C2P4/M00/out.jsonl:1', 'c5d52e9cd3')]"
+ ],
+ "status": {
+  "UNSATISFIABLE": 2385,
+  "UNKNOWN": 107
+ }
+}
