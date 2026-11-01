@@ -4,7 +4,7 @@ Local checks on an Apple M5 Pro, 1 November 2026 (UTC), over the run records on 
 
 **Status.** Every piece of the case split is accounted for and every recorded CNF hash matches a rebuilt CNF. An
 independent review (§8) found no blocking error. The statement "every centrally symmetric set of 34 points in general
-position contains a convex 7-gon" is **not yet claimed** while the random re-solve sample (§5) is running.
+position contains a convex 7-gon" is **not yet claimed**: the random re-solve sample (§5) stopped before its Q units were done.
 
 ## 1. The chain being checked
 
@@ -88,8 +88,15 @@ re-solve whose proof differs from its record is still checked afresh by both che
 - cloud records only.
 
 `sample/reproduce.py` re-solves each unit (CNF hash checked, proof compared with the record, both checkers, archived
-proof). `sample/out.jsonl` holds the results, the first two lines being the reproducibility test. **This sample was
-still running at the time of this commit.**
+proof). `sample/out.jsonl` holds the results, the first two lines being the reproducibility test.
+
+**Result at the stop (1 November 2026, 09:10 UTC).**
+- Main sample: 21 of 24 units finished (16 H, 5 Q). In all 21 the rebuilt CNF has the
+  recorded hash, the proof has the recorded size and SHA-256, and both checkers accept it. Not reached before the
+  stop: P6_9-11, P7_1-15, P8_1-10.
+- Extra sample (`extra_sample.txt`, seed 20261102, one more H unit per case, drawn before any result was seen): 8 of
+  8 finished, all reproduced and accepted by both checkers (`extra_out.jsonl`).
+- Proofs are archived with zstd round trips in the local archive `es7-central34-resample-2026-11-01`.
 
 ## 6. Lean check of the bookkeeping (`Central34Orbits.lean`, `gen_lean.py`)
 
