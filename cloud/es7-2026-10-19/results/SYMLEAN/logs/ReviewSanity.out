@@ -1,0 +1,109 @@
+SYMLEAN/review/ReviewSanity.lean:1209:47: warning: This simp argument is unused:
+  Matrix.cons_val_one
+
+Hint: Omit it from the simp argument list.
+  simp only [reflLine, Matrix.cons_val_zero,̵ ̵M̵a̵t̵r̵i̵x̵.̵c̵o̵n̵s̵_̵v̵a̵l̵_̵o̵n̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'ErdosSzekeres.SymReduction.Review.main_hypotheses_satisfiable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.SymReduction.Review.main_hypotheses_satisfiable_rot' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.SymReduction.Review.halfTurn34_hyps_satisfiable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.SymReduction.Review.threefold33_hyps_satisfiable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.SymReduction.Review.fivefold35_hyps_satisfiable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.SymReduction.Review.fourfold32_hyps_satisfiable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.SymReduction.Review.mirrorOneAxis33_hyps_satisfiable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.SymReduction.Review.mirrorNoAxis34_hyps_satisfiable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.SymReduction.Review.mirrorOneAxis33_iff_exclusionLine' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.SymReduction.Review.not_hasConvexNGon_example' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.SymReduction.Review.rot3_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.SymReduction.Review.reflLine_fixed_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+def ErdosSzekeres.SymReduction.HalfTurn34 : Prop :=
+∀ (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point),
+  ErdosSzekeres.GeneralPosition S →
+    S.card = 34 →
+      c ∉ S →
+        ErdosSzekeres.SymReduction.Invariant (ErdosSzekeres.SymReduction.halfTurn c) S → ErdosSzekeres.HasConvexNGon 7 S
+def ErdosSzekeres.SymReduction.Threefold33 : Prop :=
+∀ (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point),
+  ErdosSzekeres.GeneralPosition S →
+    S.card = 33 →
+      c ∉ S →
+        ErdosSzekeres.SymReduction.Invariant (ErdosSzekeres.SymReduction.rotAbout c (2 * Real.pi / 3)) S →
+          ErdosSzekeres.HasConvexNGon 7 S
+def ErdosSzekeres.SymReduction.Fivefold35 : Prop :=
+∀ (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point),
+  ErdosSzekeres.GeneralPosition S →
+    S.card = 35 →
+      c ∉ S →
+        ErdosSzekeres.SymReduction.Invariant (ErdosSzekeres.SymReduction.rotAbout c (2 * Real.pi / 5)) S →
+          ErdosSzekeres.HasConvexNGon 7 S
+def ErdosSzekeres.SymReduction.Fourfold32 : Prop :=
+∀ (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point),
+  ErdosSzekeres.GeneralPosition S →
+    S.card = 32 →
+      c ∉ S →
+        ErdosSzekeres.SymReduction.Invariant (ErdosSzekeres.SymReduction.rotAbout c (2 * Real.pi / 4)) S →
+          ErdosSzekeres.HasConvexNGon 7 S
+def ErdosSzekeres.SymReduction.MirrorOneAxis33 : Prop :=
+∀ (S : Finset ErdosSzekeres.Point) (a u : ErdosSzekeres.Point),
+  u 0 ^ 2 + u 1 ^ 2 = 1 →
+    ErdosSzekeres.GeneralPosition S →
+      S.card = 33 →
+        ErdosSzekeres.SymReduction.Invariant (ErdosSzekeres.SymReduction.reflLine a u) S →
+          (∃ x ∈ S,
+              ErdosSzekeres.SymReduction.reflLine a u x = x ∧
+                ∀ y ∈ S, ErdosSzekeres.SymReduction.reflLine a u y = y → y = x) →
+            ErdosSzekeres.HasConvexNGon 7 S
+def ErdosSzekeres.SymReduction.MirrorNoAxis34 : Prop :=
+∀ (S : Finset ErdosSzekeres.Point) (a u : ErdosSzekeres.Point),
+  u 0 ^ 2 + u 1 ^ 2 = 1 →
+    ErdosSzekeres.GeneralPosition S →
+      S.card = 34 →
+        ErdosSzekeres.SymReduction.Invariant (ErdosSzekeres.SymReduction.reflLine a u) S →
+          (∀ p ∈ S, ErdosSzekeres.SymReduction.reflLine a u p ≠ p) → ErdosSzekeres.HasConvexNGon 7 S
+def ErdosSzekeres.SymReduction.MirrorExclusionLineCopy : Prop :=
+∀ (S : Finset ErdosSzekeres.Point) (a u : ErdosSzekeres.Point),
+  u 0 ^ 2 + u 1 ^ 2 = 1 →
+    ErdosSzekeres.GeneralPosition S →
+      S.card = 33 → (∀ q ∈ S, ErdosSzekeres.SymReduction.reflLine a u q ∈ S) → ErdosSzekeres.HasConvexNGon 7 S
+ErdosSzekeres.SymReduction.heptagon_of_nontrivial_isometry : ErdosSzekeres.SymReduction.HalfTurn34 →
+  ErdosSzekeres.SymReduction.Threefold33 →
+    ErdosSzekeres.SymReduction.Fivefold35 →
+      ErdosSzekeres.SymReduction.MirrorOneAxis33 →
+        ErdosSzekeres.SymReduction.MirrorNoAxis34 →
+          ∀ (S : Finset ErdosSzekeres.Point) (g : ErdosSzekeres.Point → ErdosSzekeres.Point),
+            ErdosSzekeres.GeneralPosition S →
+              33 ≤ S.card →
+                ErdosSzekeres.SymReduction.IsEucIsometry g →
+                  g ≠ id → ErdosSzekeres.SymReduction.Invariant g S → ErdosSzekeres.HasConvexNGon 7 S
+ErdosSzekeres.SymReduction.halfTurn_of_symmetric_counterexample : ErdosSzekeres.SymReduction.Threefold33 →
+  ErdosSzekeres.SymReduction.Fourfold32 →
+    ErdosSzekeres.SymReduction.Fivefold35 →
+      ErdosSzekeres.SymReduction.MirrorOneAxis33 →
+        ErdosSzekeres.SymReduction.MirrorNoAxis34 →
+          ∀ (S : Finset ErdosSzekeres.Point) (g : ErdosSzekeres.Point → ErdosSzekeres.Point),
+            ErdosSzekeres.GeneralPosition S →
+              33 ≤ S.card →
+                ErdosSzekeres.SymReduction.IsEucIsometry g →
+                  g ≠ id →
+                    ErdosSzekeres.SymReduction.Invariant g S →
+                      ¬ErdosSzekeres.HasConvexNGon 7 S →
+                        ∃ c, g = ErdosSzekeres.SymReduction.halfTurn c ∧ c ∉ S ∧ 2 ∣ S.card ∧ 34 ≤ S.card
