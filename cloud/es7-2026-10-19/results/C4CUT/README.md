@@ -1,25 +1,35 @@
 # C4CUT: a certificate for the fourfold 32-point exclusion
 
-Local runs on an Apple M5 Pro, 1 November 2026 (UTC).
+Local runs on an Apple M5 Pro, 1 November 2026 (UTC). README revised 1 November 2026 (UTC).
 
 **Statement.** Every set of 32 points in general position with a fourfold rotational symmetry contains a convex 7-gon.
 
 **Credit and status.**
 - Subercaseaux, Mackey, Qian and Heule (arXiv:2506.00224v1, §6.2) state this and observe that all solutions of their
   model have one of six inner 12-point patterns. The statement and the six-pattern observation are theirs.
-- Their last step, that none of the six patterns is realizable, rests on a heuristic realizer failing. Their §6.1
-  notes that this tool cannot certify unrealizability.
-- What this directory adds is a checkable certificate. It rests on the soundness of the layered encoder
-  `SYM5/symcnf_layers.py` for even m, which so far has one real-set test (`SYM5/validate_z2.py`) and no independent
-  review. **An independent review is pending.**
+- Their last step, that none of the six patterns is realizable, is stated without a method in arXiv v1. Their realizer
+  can show only realizability (§6.1, footnote 2); for some unrealized 16-point configurations they found an
+  unrealizable 10-point subconfiguration.
+- What this directory adds:
+  - **certificate accepted by both checkers**: an LRAT proof for the layered formula with six cuts (§3);
+  - **exact computation**: each cut is justified by a certificate checked in exact rational arithmetic (§2, §4).
+- **Encoder soundness: written proof, refereed.** The certificate rests on the soundness of the layered encoder
+  `SYM5/symcnf_layers.py` for m = 4 (its docstring argument and `SYM5/README.md` §2). The independent review of
+  1 November (`review/`) checked it clause family by clause family, with exact tests on real and random sets, and found
+  no blocking or major issue. The audit of the same day (`AUDIT3`, A4) re-verified the six cuts (36 of 36 mutations
+  rejected) and the chain of hashes.
 
 ## 1. Formula
 
 `python3 SYM5/symcnf_layers.py 32 7 4 -o c4_n32L.cnf --map c4_n32L.json` gives `p cnf 287296 5272494`, SHA-256
 `c3933d9a…`; the map written with it has SHA-256 `f72b186e…` (`c4_n32L.json`, printed by `verify_cuts.py`).
-This is the formula of `SYM5/README.md` §4, which is satisfiable (15 s).
+This is the formula of `SYM5/README.md` §4, which is satisfiable (16 s in the first iteration of `c4cut.log`).
 - Points are labelled 4·o + r, with layer o = 0..7 counted from the outside.
-- Each layer is one rotation orbit, by the layer lemma for m = 4 and K = 7.
+- Each layer is one rotation orbit, by the layer lemma for m = 4 and K = 7 (`SYM5` §2; arXiv:2506.00224, §3.2, states
+  the special case of 16 points without a convex hexagon).
+- Sector units: every other orbit is represented by its point in the open quadrant between the rays from the centre
+  through (0,0) and (0,1). Exactly one point of each orbit lies there, since a point on a bounding ray would be
+  collinear with two antipodal points of the first orbit. (`AUDIT3`, A4-1, noted that this step was not written down.)
 - The inner 12 points are labels 20..31.
 
 ## 2. Cuts (`c4cut.py`)
@@ -52,12 +62,17 @@ removes no real configuration.
 
 ## 3. Final proof (`c4final.sh`, `final.json`, `cad_c4cuts.out`)
 
-- **CNF.** Base plus the six cut clauses: SHA-256 `2aa18f1e…`.
-- **Solve.** CaDiCaL 3.0.1 `--lrat`: UNSAT in 29 s, 4.1 GB.
+- **CNF.** Base plus the six cut clauses: `p cnf 287296 5272500`, 183,470,218 bytes, SHA-256 `2aa18f1e…`.
+- **Solve.** CaDiCaL 3.0.1 (c6073042) `--lrat`: UNSAT in 29 s, 4.1 GB.
 - **Proof.** 1,040,775,249 bytes, SHA-256 `6e1199aa…`.
-- **Checkers.** lrat-check: `c VERIFIED`. cake_lpr (heap 8,000 MB): `s VERIFIED UNSAT`.
+- **Checkers.** lrat-check: `c VERIFIED`. cake_lpr (heap 8,000 MiB): `s VERIFIED UNSAT`. Only these verdict lines were
+  kept (`final.json`); the raw checker output was not, and the checker binaries are not named in the records. The
+  replay of 1 November with hash-bound logs accepted the proof with lrat-check (`AUDIT3` §5 row 1), and the full replay
+  with both checkers (`REPLAY`, 18:01–18:02 UTC) accepted it with lrat-check and cake_lpr (heap 8,000 MiB).
 - **Archive.** The CNF, the proof and the cuts are in the local archive `es7-c4-32-cuts-2026-11-01` (outside Git),
-  checked by a decompression round trip.
+  checked by a decompression round trip: `c4_n32L_cuts.cnf.zst` (24,321,041 bytes, SHA-256 `3dcb8921…`) and
+  `c4cuts.lrat.zst` (191,694,745 bytes, `0bf2d79e…`); full hashes in `WRITEUP/CERTIFICATES.md` (c4cut-final). The
+  archived `verify_cuts.py` is the version from before the review.
 
 ## 4. Checks of the cuts
 
@@ -72,18 +87,25 @@ removes no real configuration.
 - A certificate is found for the known nonrealizable 12-point order type of `docs/MINIMAL12_OBSTRUCTION.md` (branch
   main, `docs/certificates/minimal12/certificate.json`).
 
+**Review** (`review/README.md`). Its own verifier `my_verify_cuts.py` passes the six cuts and also checks that each
+clause uses exactly the 55 triple-orbit variables of labels 20..31. Mutations (a flipped literal, swapped signs, a
+changed or zero weight, a dropped row or literal) are rejected by both verifiers.
+
 ## 5. Consequence
 
 A set with a rotation of even order does not contain the centre, and its size is a multiple of the order
 (`WRITEUP/note`, `lem:sizes`(b)).
 - So a fourfold 7-gon-free set has at most 28 points.
 - 28 is attained (`SYMMAX/c4_28points.txt`).
-- Hence N(C4) = 28, conditional on the encoder review above.
+- Hence N(C4) = 28.
 
-The fourfold assumption of Corollary 3 in `WRITEUP/SYMMETRIC.md` is then discharged by this certificate.
-`WRITEUP` itself is not changed here.
+This is the fourfold hypothesis of Corollary 3 in `WRITEUP/SYMMETRIC.md` (the class `Fourfold32` in `SYMLEAN`). The main
+theorem of `WRITEUP/SYMMETRIC.md` does not need it: a fourfold set of at least 33 points has at least 36 points and
+contains 17 antipodal pairs, so the central 34-point theorem (`C2FINAL`) applies.
 
 ## Reproduction
+
+From `cloud/es7-2026-10-19/results`:
 
 ```sh
 python3 SYM5/symcnf_layers.py 32 7 4 -o c4_n32L.cnf --map c4_n32L.json

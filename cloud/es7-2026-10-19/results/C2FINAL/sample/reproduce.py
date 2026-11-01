@@ -4,12 +4,13 @@
 Per unit, one process at a time: rebuild the CNF exactly as C2P/tools/lane.py does and require its SHA-256 to equal the
 record's cnf_sha256; run CaDiCaL --lrat --binary=false; record whether the proof's size and SHA-256 equal the
 recorded ones; check the new proof with lrat-check and cake_lpr; delete the proof (it is regenerable when it
-reproduces the record). A memory guard waits while active + wired + compressed memory exceeds GUARD_GB.
+reproduces the record). A memory guard waits while active + wired + compressed memory exceeds GUARD_GB. REPRO_CAP overrides the
+3600 s solve cap; a cap that is not reached does not change the proof.
 usage: reproduce.py WORK BIN RESULTS OUT UNIT[@SOURCE]...   (SOURCE like C2P/M02 picks that machine's record)"""
 import glob, hashlib, json, os, re, subprocess, sys, time
 
 WORK, BIN, RES, OUT = sys.argv[1:5]
-CAP, GUARD_GB = 3600, 40.0
+CAP, GUARD_GB = int(os.environ.get("REPRO_CAP", 3600)), 40.0
 ARCH = os.environ.get("REPRO_ARCHIVE")  # if set: zstd-archive each proof there with a round-trip check
 BASE = os.path.join(WORK, "base.cnf")
 LOG = open(os.path.join(WORK, "reproduce.log"), "a", buffering=1)
@@ -95,8 +96,11 @@ for arg in sys.argv[5:]:
             _, o, t = run([os.path.join(BIN, "lrat-check"), F, P])
             rec["lrat_check"] = first(o, r"^.*(VERIFIED|FAIL|rror).*$"); rec["lrat_check_s"] = t
             guard()
-            _, o, t = run([os.path.join(BIN, "cake_lpr"), "--CML_HEAP_SIZE=8000", "--CML_STACK_SIZE=4000", F, P])
-            rec["cake_lpr"] = first(o, r"^.*(s VERIFIED|exhausted|rror|FAIL).*$") or "no verdict line"; rec["cake_s"] = t
+            for heap in (8000, 11000):  # as in lane.py: retry with a larger heap if the heap is exhausted
+                _, o, t = run([os.path.join(BIN, "cake_lpr"), f"--CML_HEAP_SIZE={heap}", "--CML_STACK_SIZE=4000", F, P])
+                rec["cake_lpr"] = first(o, r"^.*(s VERIFIED|exhausted|rror|FAIL).*$") or "no verdict line"; rec["cake_s"] = t
+                rec["cake_heap_mb"] = heap
+                if "exhausted" not in rec["cake_lpr"]: break
             rec["certified"] = rec["lrat_check"] == "c VERIFIED" and rec["cake_lpr"] == "s VERIFIED UNSAT"
             if ARCH:
                 os.makedirs(ARCH, exist_ok=True); A = os.path.join(ARCH, f"{unit}.lrat.zst")
