@@ -1,0 +1,11 @@
+formula c5A_25: vars 49100 clauses 1234114 classes {'T': 1076744, 'D': 61230, 'K': 96140}
+{"i": 0, "free": true, "nested": false, "single_orbit_layers": true, "conv7": 0, "largest_convex": 6, "evals": [{"T": 0, "D": 0, "K": 0}, {"T": 0, "D": 0, "K": 0}, {"T": 0, "D": 0, "K": 0}], "n_evals": 25, "neg": []}
+{"i": 1, "free": true, "nested": false, "single_orbit_layers": true, "conv7": 0, "largest_convex": 6, "evals": [{"T": 0, "D": 0, "K": 0}, {"T": 0, "D": 0, "K": 0}, {"T": 0, "D": 0, "K": 0}], "n_evals": 25, "neg": []}
+{"i": 2, "free": true, "nested": true, "single_orbit_layers": true, "conv7": 0, "largest_convex": 6, "evals": [{"T": 0, "D": 0, "K": 0}, {"T": 0, "D": 0, "K": 0}, {"T": 0, "D": 0, "K": 0}], "n_evals": 25, "neg": []}
+{"i": 3, "free": false, "nested": false, "single_orbit_layers": false, "conv7": 24695, "largest_convex": 10, "evals": [{"T": 0, "D": 0, "K": 4939}, {"T": 0, "D": 0, "K": 4939}, {"T": 0, "D": 0, "K": 4939}], "n_evals": 25, "neg": []}
+{"i": 4, "free": false, "nested": false, "single_orbit_layers": false, "conv7": 16125, "largest_convex": 10, "evals": [{"T": 0, "D": 0, "K": 3225}, {"T": 0, "D": 0, "K": 3225}, {"T": 0, "D": 0, "K": 3225}], "n_evals": 25, "neg": []}
+{"i": 5, "free": false, "nested": true, "single_orbit_layers": true, "conv7": 240, "largest_convex": 8, "evals": [{"T": 0, "D": 0, "K": 48}, {"T": 0, "D": 0, "K": 48}, {"T": 0, "D": 0, "K": 48}], "n_evals": 25, "neg": []}
+{"i": 6, "free": false, "nested": true, "single_orbit_layers": true, "conv7": 935, "largest_convex": 8, "evals": [{"T": 0, "D": 0, "K": 187}, {"T": 0, "D": 0, "K": 187}, {"T": 0, "D": 0, "K": 187}], "n_evals": 25, "neg": []}
+{"i": 7, "free": false, "nested": true, "single_orbit_layers": true, "conv7": 450, "largest_convex": 8, "evals": [{"T": 0, "D": 0, "K": 90}, {"T": 0, "D": 0, "K": 90}, {"T": 0, "D": 0, "K": 90}], "n_evals": 25, "neg": []}
+{"i": 8, "free": false, "nested": false, "single_orbit_layers": false, "conv7": 80205, "largest_convex": 10, "evals": [{"T": 0, "D": 0, "K": 16041}, {"T": 0, "D": 0, "K": 16041}, {"T": 0, "D": 0, "K": 16041}], "n_evals": 25, "neg": []}
+SUMMARY {"m": 5, "N": 25, "enc": "A", "configs": 9, "free_configs": 3, "evaluations": 225, "T_viol": 0, "D_viol": 0, "K_mismatch": 0, "layer_not_orbit": 0, "neg_controls": 0, "neg_controls_caught": 0, "seconds": 155.6}

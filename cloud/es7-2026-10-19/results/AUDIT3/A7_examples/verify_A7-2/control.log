@@ -1,0 +1,4 @@
+N=10 K=7 table_anomalies=0 subsets=120 convex=55
+N=10 K=6 table_anomalies=0 subsets=210 convex=135
+python monotone-chain control K=7 convex=55
+python monotone-chain control K=6 convex=135

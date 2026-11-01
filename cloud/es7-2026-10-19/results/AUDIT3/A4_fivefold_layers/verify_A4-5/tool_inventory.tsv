@@ -1,0 +1,18 @@
+sha256	bytes	mtime	forged-proof control	path
+f20462121defbc631f34850e06d5c0428ea4fecc4c890e6b755fd8e9bf9f534d	36552	2026-11-01 16:05:31	c FAILED: empty clause without a RUP conflict	<bin>/lrat-check
+f20462121defbc631f34850e06d5c0428ea4fecc4c890e6b755fd8e9bf9f534d	36552	2026-10-29 12:55:37	c FAILED: empty clause without a RUP conflict	<proof-archives>/es7-symmetry/tools/lrat-check
+f20462121defbc631f34850e06d5c0428ea4fecc4c890e6b755fd8e9bf9f534d	36552	2026-10-25 15:13:56	c FAILED: empty clause without a RUP conflict	<main-repo>/experiments/es7-local-lanes-2026-10-26/bin/lrat-check
+f20462121defbc631f34850e06d5c0428ea4fecc4c890e6b755fd8e9bf9f534d	36552	2026-10-25 15:13:56	c FAILED: empty clause without a RUP conflict	<earlier work dir>/local/bin/lrat-check
+66780e68d1859a66aa70ce3119db8b074d27c8d31c96623add22e6eaec372fe9	36552	2026-10-31 12:13:37	c FAILED: empty clause without a RUP conflict	<earlier work dir>/vendtest1/drat-trim/lrat-check
+bd7eb8052623525814a0a37502b47f05375d9d9dfaf96ddc2fcd858958517cea	36552	2026-10-19 23:10:03	c VERIFIED	<local-tools>/sat/src/drat-trim/lrat-check
+bd7eb8052623525814a0a37502b47f05375d9d9dfaf96ddc2fcd858958517cea	36552	2026-10-19 23:10:58	c VERIFIED	<local-tools>/m10/tools/drat-trim-master/lrat-check
+2fee767af4478ed817f8bdf6feea5866e5e59f1f67c2a4477e98ee961612881d	546520	2026-11-01 16:05:31	not run (audit rules)	<bin>/cake_lpr
+2fee767af4478ed817f8bdf6feea5866e5e59f1f67c2a4477e98ee961612881d	546520	2026-10-29 12:55:37	not run (audit rules)	<proof-archives>/es7-symmetry/tools/cake_lpr
+2fee767af4478ed817f8bdf6feea5866e5e59f1f67c2a4477e98ee961612881d	546520	2026-10-25 15:14:14	not run (audit rules)	<main-repo>/experiments/es7-local-lanes-2026-10-26/bin/cake_lpr
+2fee767af4478ed817f8bdf6feea5866e5e59f1f67c2a4477e98ee961612881d	546520	2026-10-25 15:14:14	not run (audit rules)	<earlier work dir>/local/bin/cake_lpr
+e12ecc8ce8a489394a2b7411e3fa264f037e4ceb2e615bab534158e19d04ac01	1571160	2026-11-01 16:05:31	build stamp: Sun Oct 25 15:14:29 KST 2026 Darwin <host> 25.6.0 arm64	<bin>/cadical
+e12ecc8ce8a489394a2b7411e3fa264f037e4ceb2e615bab534158e19d04ac01	1571160	2026-10-29 12:55:37	build stamp: Sun Oct 25 15:14:29 KST 2026 Darwin <host> 25.6.0 arm64	<proof-archives>/es7-symmetry/tools/cadical
+e12ecc8ce8a489394a2b7411e3fa264f037e4ceb2e615bab534158e19d04ac01	1571160	2026-10-25 15:14:30	build stamp: Sun Oct 25 15:14:29 KST 2026 Darwin <host> 25.6.0 arm64	<main-repo>/experiments/es7-local-lanes-2026-10-26/bin/cadical
+e12ecc8ce8a489394a2b7411e3fa264f037e4ceb2e615bab534158e19d04ac01	1571160	2026-10-25 15:14:30	build stamp: Sun Oct 25 15:14:29 KST 2026 Darwin <host> 25.6.0 arm64	<earlier work dir>/local/bin/cadical
+e9ab5da4f8952681da85c9f2a0c6009c35d633c3f36446e96aa1635c8dd068c4	1571160	2026-10-19 23:09:50	build stamp: Mon Oct 19 23:09:32 KST 2026 Darwin <host> 25.6.0 arm64	<local-tools>/sat/src/cadical/build/cadical
+c645c8109f9ee36acc9d207073d184ea13d835a7b87e46c49971722cd7e1aad9	1571160	2026-10-19 23:10:44	build stamp: Mon Oct 19 23:10:28 KST 2026 Darwin <host> 25.6.0 arm64	<local-tools>/m10/tools/cadical-master/build/cadical

@@ -1,0 +1,19 @@
+(1a) encoder float pattern == [-1, +1, ..., +1] for m = 2..16 even: OK
+(1b) sector units <=> open sector (0, 2pi/m), exact sweep of the 81^2 grid, m = 2,4,6: OK
+(4) m=2: 6552 orbits off the diameters -> exactly one sector point; 6 orbits meeting a diameter -> collinear triple in S and no labelling satisfies the sector units
+(4) m=4: 6544 orbits off the diameters -> exactly one sector point; 12 orbits meeting a diameter -> collinear triple in S and no labelling satisfies the sector units
+(4) m=6: 6528 orbits off the diameters -> exactly one sector point; 26 orbits meeting a diameter -> collinear triple in S and no labelling satisfies the sector units
+(2,3) m=2 t=4 angle : 25 exact GP sets, 200 labellings (all orbit-0 / (0,0) choices), every other orbit had exactly one open-sector point; 6 SB units, violated: 0; shifted-representative controls all caught
+(2,3) m=2 t=6 angle : 25 exact GP sets, 300 labellings (all orbit-0 / (0,0) choices), every other orbit had exactly one open-sector point; 15 SB units, violated: 0; shifted-representative controls all caught
+(2,3) m=4 t=3 angle : 25 exact GP sets, 300 labellings (all orbit-0 / (0,0) choices), every other orbit had exactly one open-sector point; 5 SB units, violated: 0; shifted-representative controls all caught
+(2,3) m=4 t=4 angle : 25 exact GP sets, 400 labellings (all orbit-0 / (0,0) choices), every other orbit had exactly one open-sector point; 9 SB units, violated: 0; shifted-representative controls all caught
+(2,3) m=4 t=3 layers: 25 exact GP sets, 100 labellings (all orbit-0 / (0,0) choices), every other orbit had exactly one open-sector point; 22 SB units, violated: 0; shifted-representative controls all caught
+(2,3) m=4 t=4 layers: 25 exact GP sets, 100 labellings (all orbit-0 / (0,0) choices), every other orbit had exactly one open-sector point; 38 SB units, violated: 0; shifted-representative controls all caught
+(2,3) m=4 t=5 layers: 10 exact GP sets, 40 labellings (all orbit-0 / (0,0) choices), every other orbit had exactly one open-sector point; 58 SB units, violated: 0; shifted-representative controls all caught
+(2,3) m=6 t=2 angle : 25 exact GP sets, 300 labellings (all orbit-0 / (0,0) choices), every other orbit had exactly one open-sector point; 3 SB units, violated: 0; shifted-representative controls all caught
+(2,3) m=6 t=3 angle : 10 exact GP sets, 180 labellings (all orbit-0 / (0,0) choices), every other orbit had exactly one open-sector point; 7 SB units, violated: 0; shifted-representative controls all caught
+(2,3) m=6 t=2 layers: 25 exact GP sets, 150 labellings (all orbit-0 / (0,0) choices), every other orbit had exactly one open-sector point; 17 SB units, violated: 0; shifted-representative controls all caught
+(2,3) m=6 t=3 layers: 10 exact GP sets, 60 labellings (all orbit-0 / (0,0) choices), every other orbit had exactly one open-sector point; 36 SB units, violated: 0; shifted-representative controls all caught
+        0.43 real         0.42 user         0.00 sys
+            20348928  maximum resident set size
+            11878832  peak memory footprint

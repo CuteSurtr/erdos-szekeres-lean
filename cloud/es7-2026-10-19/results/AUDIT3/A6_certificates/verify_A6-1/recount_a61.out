@@ -1,0 +1,26 @@
+wave records 2424 pilot rows 68 total 2492
+status counts {'UNSATISFIABLE': 2385, 'UNKNOWN': 107}
+records with proof_kept True: 0
+pilot proof_kept column values: {'False': 65, '': 3}
+certified (UNSAT + both verdict strings): 2385
+UNSAT but not both verdicts: 0 []
+  P1: distinct certified units 288 (covers 1)
+  P2: distinct certified units 288 (covers 1)
+  P3: distinct certified units 288 (covers 1)
+  P4: distinct certified units 288 (covers 1)
+  P5: distinct certified units 288 (covers 1)
+  P6: distinct certified units 289 (covers 1)
+  P7: distinct certified units 288 (covers 1)
+  P8: distinct certified units 304 (covers 1)
+distinct certified units in all: 2321
+units with more than one certified record: 64
+certified records without CNF hash: 7 ['P8_1-3', 'P8_2-12-15', 'P8_2-4-11', 'P8_3-4-15', 'P8_3-4-5', 'P8_9-13-15', 'P8_cover']
+pilot: 7 rows, all certified+archived+roundtrip: True; distinct units 7
+sample/out: 23 rows, all certified+archived+roundtrip: True; distinct units 23
+sample/extra: 8 rows, all certified+archived+roundtrip: True; distinct units 8
+re-solves with archived proofs in all: 38 distinct units: 38
+sample rows reproducing the recorded proof: 31 of 31
+sample rows with CNF matching record: 31 of 31
+main sample drawn 24 done 21 missing ['P6_9-11', 'P7_1-15', 'P8_1-10']
+done by kind (H = three-index name, Q = two-index name): {'H': 16, 'Q': 5}
+first two rows of sample/out (reproducibility test): ['P6_7-8-9', 'P2_7-9-10'] in drawn list: [False, False]

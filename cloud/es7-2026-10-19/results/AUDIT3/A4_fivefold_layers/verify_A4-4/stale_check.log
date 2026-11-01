@@ -1,0 +1,34 @@
+HEAD: 9cf4949a51c6a2602c57cf68f7df59b0e3d30562
+== C4CUT/README.md :: /independent review|review is pending|conditional on the encoder review|not changed here|discharged/
+14:  review. **An independent review is pending.**
+81:- Hence N(C4) = 28, conditional on the encoder review above.
+83:The fourfold assumption of Corollary 3 in `WRITEUP/SYMMETRIC.md` is then discharged by this certificate.
+84:`WRITEUP` itself is not changed here.
+== C4CUT/review/README.md :: /Verdict|blocking or major|will be updated with the write-up|^# /
+1:# Independent review of C4CUT (1 November 2026)
+7:**Verdict.** No blocking or major finding.
+65:4. **Verdicts rest on logs.** The checker verdicts are recorded in `final.json` and the logs; the proof is archived
+68:   counts agree. `SYM5/README.md` §4 still cites the enumeration; it will be updated with the write-up.
+== SYM5/README.md :: /rests on the enumeration|abstract route fails|2506.00224, .6.2\)/
+124:4-fold 32-point set without a convex 7-gon exists (arXiv 2506.00224, §6.2).
+133:  it is realized. For 4-fold sets at 32 points the abstract route fails, and the exclusion rests on the enumeration in
+== WRITEUP/SYMMETRIC.md :: /published fourfold exclusion|2506.00224, .6.2\) exclude 32|no real fourfold set of that size|symcnf_layers.py. \(fivefold\)|^Revised/
+3:Revised 2026-10-29 after an independent correctness and novelty audit. Paths are relative to `cloud/es7-2026-10-19/`
+59:**Corollary 3.** Assume Theorems 1 and 2, the fivefold exclusion of §2 and the published fourfold exclusion
+81:| 4-fold rotation | **28** | `SYMMAX/c4_28points.txt` | Subercaseaux, Mackey, Qian and Heule (arXiv:2506.00224, §6.2) exclude 32 points and report realizable 28-point restrictions; our example is an explicit realizati
+133:- The encodings `tools/symmetric/symcnf.py` and `results/SYM5/symcnf_layers.py` (fivefold), and the layer lemma.
+201:    formula of the same kind is satisfiable, although no real fourfold set of that size exists; arXiv:2506.00224
+== WRITEUP/note/symmetric_es7.tex :: /fourfold exclusion|fourfold bound is due|fourfold result of|showed that no real fourfold|Draft, /
+10:\title{Symmetric point sets and the Erd\H{o}s--Szekeres problem for heptagons\\[2pt]\large Draft, 29 October 2026}
+21:mirror-symmetric sets without a convex heptagon have exactly $31$ and $32$ points. Combined with the fourfold result of
+36:built rotational symmetry into SAT encodings, found symmetric extremal sets for $k=6$, showed that no real fourfold
+122:Assume Theorems~\ref{thm:A} and~\ref{thm:M}, Theorem~\ref{thm:E} below and the fourfold exclusion
+165:threefold $33$-point set, so $N(C_6)=30$ follows from Theorem~\ref{thm:A}. The fourfold bound is due
+== SYMMAX/README.md :: /no 32-point 4-fold set exists/
+12:| 4-fold rotation | 4m (no centre) | `c4_28points.txt` (28) | no 32-point 4-fold set exists (Subercaseaux, Mackey, Qian, Heule, arXiv 2506.00224, §6.2, who also report realizable 28-point restrictions); larger sets co
+== SYMZ/README.md :: /fourfold 32, no heptagon/
+82:  | fourfold 32, no heptagon | no real set exists (arXiv:2506.00224, §6.2) | **SAT** in 19 s |
+== mentions of C4CUT / its archive outside C4CUT/:
+   (none)
+== central-34 claim status at HEAD:
+7:position contains a convex 7-gon" is **not yet claimed**: the random re-solve sample (§5) stopped before its Q units were done.

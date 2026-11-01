@@ -1,0 +1,45 @@
+loaded {"files": 280, "records": 128803, "certified_records": 116883, "with_proof_sha256": 26436, "bad_names": 0, "noncanonical_names": 0, "status_not_unsat_but_certified": 0, "base_sha_mismatch": 0, "units_field_mismatch": 0, "cnf_sha_mismatch": 0, "sigma_cube_format_records": 663, "certified_true_but_checker_strings_wrong": 0, "certified_nodes": 116741, "certified_cube_nodes": 26748, "certified_nodes_with_a_proof_sha256_record": 26436} 1.2s
+sha re-derived 36.7s mismatches 0 own-units vs hullcase mismatches 0
+{
+ "class_covered": true,
+ "search_calls": 102509,
+ "certified_nodes_reached_by_search": 88528,
+ "certified_nodes_in_one_explicit_cut": 73567,
+ "depth2_covered": 1193,
+ "depth2_total": 1720,
+ "stats": {
+  "files": 280,
+  "records": 128803,
+  "certified_records": 116883,
+  "with_proof_sha256": 26436,
+  "bad_names": 0,
+  "noncanonical_names": 0,
+  "status_not_unsat_but_certified": 0,
+  "base_sha_mismatch": 0,
+  "units_field_mismatch": 0,
+  "cnf_sha_mismatch": 0,
+  "sigma_cube_format_records": 663,
+  "certified_true_but_checker_strings_wrong": 0,
+  "certified_nodes": 116741,
+  "certified_cube_nodes": 26748,
+  "certified_nodes_with_a_proof_sha256_record": 26436,
+  "base_sha_recomputed": "bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da",
+  "distinct_unit_counts": 21,
+  "own_units_vs_hullcase_mismatch": 0
+ },
+ "cnf_sha_mismatch_sample": [],
+ "bad_names": [],
+ "noncanonical_names": [],
+ "seconds": 38.8
+}
+0s0 190 options, 100 pairs, 10 self-paired, open pairs: 0
+0s0-1s0 153 options, 81 pairs, 9 self-paired, open pairs: 0
+0s0-1s1 153 options, 81 pairs, 9 self-paired, open pairs: 0
+0s0-2s0 153 options, 81 pairs, 9 self-paired, open pairs: 0
+0s0-2s1 153 options, 81 pairs, 9 self-paired, open pairs: 0
+0s0-3s0 153 options, 81 pairs, 9 self-paired, open pairs: 0
+0s0-3s1 153 options, 81 pairs, 9 self-paired, open pairs: 0
+0s0-4s0 153 options, 81 pairs, 9 self-paired, open pairs: 0
+0s0-4s1 153 options, 81 pairs, 9 self-paired, open pairs: 0
+0s0-5s0 153 options, 81 pairs, 9 self-paired, open pairs: 0
+0s0-5s1 153 options, 81 pairs, 9 self-paired, open pairs: 0

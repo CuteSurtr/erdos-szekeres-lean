@@ -1,0 +1,14 @@
+records: {'records': 2619, 'third_layer': 16, 'no_hash': 7, 'hash_match': 2596, 'hash_mismatch': 0, 'unknown_unit': 0}
+hash mismatches (first 10): []
+hull cover rebuilt from my cubes: bb60facb223788fb57291c73abfacd6deaa1eccd82ad2be9f50d36292959a60f == CERTIFICATES.md bb60facb...: True
+hexagonal hull cases refuted: 120 of 120
+P1: cover refuted True; orbits 287 (fixed 14); closed 287; both members refuted 0
+P2: cover refuted True; orbits 287 (fixed 14); closed 287; both members refuted 0
+P3: cover refuted True; orbits 287 (fixed 14); closed 287; both members refuted 0
+P4: cover refuted True; orbits 287 (fixed 14); closed 287; both members refuted 0
+P5: cover refuted True; orbits 287 (fixed 14); closed 287; both members refuted 0
+P6: cover refuted True; orbits 287 (fixed 14); closed 287; both members refuted 1
+P7: cover refuted True; orbits 287 (fixed 14); closed 287; both members refuted 0
+P8: cover refuted True; orbits 287 (fixed 14); closed 287; both members refuted 0
+CASE SPLIT CLOSED (with my cubes and the records)
+python3 orbitclosure.py $S/regen/base.cnf $S/regen/base.json   1.86s user 0.28s system 97% cpu 2.185 total

@@ -1,0 +1,60 @@
+## verifyg 3 c3_27points.txt 7
+{'group': '3', 'points': 27, 'distinct': True, 'invariant': True, 'fixed_points': 0, 'collinear_triples': 0, 'largest_convex_subset': 6}
+PASS
+n=27 k=7 subsets=888030 convex=0
+## verifyg 3 c3_30points.txt 7
+{'group': '3', 'points': 30, 'distinct': True, 'invariant': True, 'fixed_points': 0, 'collinear_triples': 0, 'largest_convex_subset': 6}
+PASS
+n=30 k=7 subsets=2035800 convex=0
+## verifyg 3 c3_31points.txt 7
+{'group': '3', 'points': 31, 'distinct': True, 'invariant': True, 'fixed_points': 1, 'collinear_triples': 0, 'largest_convex_subset': 6}
+PASS
+n=31 k=7 subsets=2629575 convex=0
+## verifyg 4 c4_28points.txt 7
+{'group': '4', 'points': 28, 'distinct': True, 'invariant': True, 'fixed_points': 0, 'collinear_triples': 0, 'largest_convex_subset': 6}
+PASS
+n=28 k=7 subsets=1184040 convex=0
+## verifyg 6 c6_30points.txt 7
+{'group': '6', 'points': 30, 'distinct': True, 'invariant': True, 'fixed_points': 0, 'collinear_triples': 0, 'largest_convex_subset': 6}
+PASS
+n=30 k=7 subsets=2035800 convex=0
+## verifyg M mirror_32points.txt 7
+{'group': 'M', 'points': 32, 'distinct': True, 'invariant': True, 'fixed_points': 0, 'collinear_triples': 0, 'largest_convex_subset': 6}
+PASS
+n=32 k=7 subsets=3365856 convex=0
+## verifyg 2 sym7_32points.txt 7
+{'group': '2', 'points': 32, 'distinct': True, 'invariant': True, 'fixed_points': 0, 'collinear_triples': 0, 'largest_convex_subset': 6}
+PASS
+n=32 k=7 subsets=3365856 convex=0
+## verifyg 2 k6_c2_16points.txt 6
+{'group': '2', 'points': 16, 'distinct': True, 'invariant': True, 'fixed_points': 0, 'collinear_triples': 0, 'largest_convex_subset': 5}
+PASS
+n=16 k=6 subsets=8008 convex=0
+## verifyg 3 k6_c3_13points.txt 6
+{'group': '3', 'points': 13, 'distinct': True, 'invariant': True, 'fixed_points': 1, 'collinear_triples': 0, 'largest_convex_subset': 5}
+PASS
+n=13 k=6 subsets=1716 convex=0
+## verifyg 4 k6_c4_16points.txt 6
+{'group': '4', 'points': 16, 'distinct': True, 'invariant': True, 'fixed_points': 0, 'collinear_triples': 0, 'largest_convex_subset': 5}
+PASS
+n=16 k=6 subsets=8008 convex=0
+## verifyg M k6_mirror_12points.txt 6
+{'group': 'M', 'points': 12, 'distinct': True, 'invariant': True, 'fixed_points': 2, 'collinear_triples': 0, 'largest_convex_subset': 5}
+PASS
+n=12 k=6 subsets=924 convex=0
+## verify5 c5_30points.txt 7
+{'group': 5, 'points': 30, 'distinct': True, 'invariant': True, 'fixed_points': 0, 'collinear_triples': 0, 'largest_convex_subset': 6}
+PASS
+n=30 k=7 subsets=2035800 convex=0
+## verify5 c5_31points.txt 7
+{'group': 5, 'points': 31, 'distinct': True, 'invariant': True, 'fixed_points': 1, 'collinear_triples': 0, 'largest_convex_subset': 6}
+PASS
+n=31 k=7 subsets=2629575 convex=0
+## verify5 c5_31minus_centre.txt 7
+{'group': 5, 'points': 30, 'distinct': True, 'invariant': True, 'fixed_points': 0, 'collinear_triples': 0, 'largest_convex_subset': 6}
+PASS
+n=30 k=7 subsets=2035800 convex=0
+## verify5 k6_c5_16points.txt 6
+{'group': 5, 'points': 16, 'distinct': True, 'invariant': True, 'fixed_points': 1, 'collinear_triples': 0, 'largest_convex_subset': 5}
+PASS
+n=16 k=6 subsets=8008 convex=0

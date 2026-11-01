@@ -1,0 +1,14 @@
+labellings: 1200
+  A  (claimed)                 mismatched on     0 of 1200
+  A' (claimed, start -p_a)     mismatched on     0 of 1200
+  A  flips i<=a (wrong)        mismatched on  1200 of 1200
+  A  no flips (wrong)          mismatched on  1200 of 1200
+  A  class a-i (wrong)         mismatched on  1200 of 1200
+  B  (claimed)                 mismatched on     0 of 1200
+  B' (claimed, start -p_a)     mismatched on     0 of 1200
+  B  flips i>=a (wrong)        mismatched on  1200 of 1200
+  B  flips i<a (wrong)         mismatched on  1200 of 1200
+  B  class a+1-i (wrong)       mismatched on  1200 of 1200
+  B  class i-a (wrong)         mismatched on  1200 of 1200
+  B  class -i (wrong)          mismatched on  1200 of 1200
+claimed maps never mismatch: True ; every wrong map caught: True

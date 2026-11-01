@@ -1,0 +1,4 @@
+m=4 t=2..5: {'sets': 600, 'free': 149, 'free_single': 149, 'nonsingle': 435, 'nonsingle_with_2m_convex': 435, 'violations': 0}
+$V test_layer_lemma.py 4 2 5 150 61  0.94s user 0.01s system 97% cpu 0.979 total
+m=5 t=2..4: {'sets': 450, 'free': 117, 'free_single': 117, 'nonsingle': 205, 'nonsingle_with_2m_convex': 205, 'violations': 0}
+$V test_layer_lemma.py 5 2 4 150 62  6.42s user 0.04s system 93% cpu 6.929 total

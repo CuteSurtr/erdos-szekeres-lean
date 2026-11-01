@@ -1,0 +1,24 @@
+c parsed a formula with 1646 variables and 126785 clauses
+c WARNING hint already satisfied in lemma with index 133785
+c failed while checking clause: -187 -176 91 0
+c check redundancy res: 0 pivot: -187 start: 0
+c hint 126774
+c 56 0
+c unit 56
+c hint 126776
+c 77 0
+c unit 77
+c hint 126783
+c 162 0
+c unit 162
+c hint 75268
+c -56 187 -77 -176 91 -162 0
+c unit 187
+c WARNING hint already satisfied in lemma with index 133785
+c SUCCESS
+c start 2777 first 0
+c WARNING: Verification incomplete. Last line checked = 133785
+c NOT VERIFIED
+c allocated 1024 1283697 16460
+c Added clauses = 133784.  Deleted clauses = 23855.  Max live clauses = 126786
+c verification time = 0.06 secs

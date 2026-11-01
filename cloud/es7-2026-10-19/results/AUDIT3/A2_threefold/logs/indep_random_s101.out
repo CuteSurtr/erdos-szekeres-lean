@@ -1,0 +1,133 @@
+built C3Enc(3,6): 11281 clauses in 0.0s
+built C3Enc(3,7): 14305 clauses in 0.0s
+built C3Enc(5,7): 144611 clauses in 0.2s
+built C3Enc(5,8): 177371 clauses in 0.3s
+built C3Enc(5,9): 210131 clauses in 0.4s
+built C3Enc(7,8): 762973 clauses in 1.2s
+built C3Enc(7,9): 906613 clauses in 1.3s
+built C3Enc(9,9): 2637127 clauses in 3.1s
+built C3Enc(7,7): 619333 clauses in 0.7s
+built C3Enc(9,8): 2215927 clauses in 2.6s
+{
+ "m3k6": {
+  "sets": 42,
+  "kgon_free": 22,
+  "fail": 0,
+  "H3": 32,
+  "H6": 10,
+  "max_depth": 3,
+  "mirror_checked": 42,
+  "mirror_mut_caught": 10,
+  "kept_via_mirror": 17,
+  "frames": 84
+ },
+ "m3k7": {
+  "sets": 42,
+  "kgon_free": 42,
+  "fail": 0,
+  "H3": 22,
+  "H6": 20,
+  "max_depth": 3,
+  "mirror_checked": 42,
+  "mirror_mut_caught": 6,
+  "kept_via_mirror": 14,
+  "frames": 84
+ },
+ "m5k7": {
+  "sets": 42,
+  "kgon_free": 18,
+  "fail": 0,
+  "H3": 26,
+  "H6": 16,
+  "max_depth": 5,
+  "mirror_checked": 41,
+  "mirror_mut_caught": 27,
+  "kept_via_mirror": 23,
+  "frames": 84
+ },
+ "m5k8": {
+  "sets": 42,
+  "kgon_free": 38,
+  "fail": 0,
+  "H3": 26,
+  "H6": 16,
+  "max_depth": 5,
+  "mirror_checked": 39,
+  "mirror_mut_caught": 30,
+  "kept_via_mirror": 20,
+  "frames": 84
+ },
+ "m5k9": {
+  "sets": 42,
+  "kgon_free": 35,
+  "fail": 0,
+  "H3": 24,
+  "H6": 18,
+  "max_depth": 5,
+  "mirror_checked": 36,
+  "mirror_mut_caught": 24,
+  "kept_via_mirror": 14,
+  "frames": 84
+ },
+ "m7k8": {
+  "sets": 42,
+  "kgon_free": 14,
+  "fail": 0,
+  "H3": 27,
+  "H6": 15,
+  "max_depth": 6,
+  "mirror_checked": 29,
+  "mirror_mut_caught": 24,
+  "kept_via_mirror": 9,
+  "frames": 84
+ },
+ "m7k9": {
+  "sets": 42,
+  "kgon_free": 29,
+  "fail": 0,
+  "H3": 24,
+  "H6": 18,
+  "max_depth": 6,
+  "mirror_checked": 32,
+  "mirror_mut_caught": 28,
+  "kept_via_mirror": 16,
+  "frames": 84
+ },
+ "m9k9": {
+  "sets": 42,
+  "kgon_free": 7,
+  "fail": 0,
+  "H3": 30,
+  "H6": 12,
+  "max_depth": 8,
+  "mirror_checked": 24,
+  "mirror_mut_caught": 21,
+  "kept_via_mirror": 9,
+  "frames": 84
+ },
+ "m7k7": {
+  "sets": 42,
+  "kgon_free": 1,
+  "fail": 0,
+  "H3": 23,
+  "H6": 19,
+  "max_depth": 6,
+  "mirror_checked": 32,
+  "mirror_mut_caught": 26,
+  "kept_via_mirror": 12,
+  "frames": 84
+ },
+ "m9k8": {
+  "sets": 42,
+  "kgon_free": 0,
+  "fail": 0,
+  "H3": 28,
+  "H6": 14,
+  "max_depth": 8,
+  "mirror_checked": 22,
+  "mirror_mut_caught": 18,
+  "kept_via_mirror": 5,
+  "frames": 84
+ }
+}
+done

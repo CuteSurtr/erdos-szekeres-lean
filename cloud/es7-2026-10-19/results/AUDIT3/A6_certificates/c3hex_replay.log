@@ -1,0 +1,19 @@
+symcnf.py (repo tools/symmetric) sha256: a8056da0c403e529ffaa2c80feffe12de7647d7dc26a641f58150a1b6faaa746
+symcnf.py (archive c3hex) sha256: a8056da0c403e529ffaa2c80feffe12de7647d7dc26a641f58150a1b6faaa746
+== c3_n15k6: cnf fc089011c5934f6bf63c581b5630712c83fc344e248325c10f71c62e9e99c811  lrat 659a3db6b2f3e5d2cd1bbc3cda9abf5608213878828f52c1fea028e37d0aa859
+   header: p cnf 1646 126785  last proof line: 156685 0 156680 156657 156648 156682 156663 156658 143705 0
+   lrat-check exit 0: c VERIFIED 
+   c parsed a formula with 1646 variables and 126785 clauses
+   c Added clauses = 156685.  Deleted clauses = 79490.  Max live clauses = 126786
+== c3_n16k6c: cnf 15766b1e6e44f9b8f4dcf222ce8440b454d635521dfa0eda7b4759a92836690e  lrat 1c4c5e37a79d339e4c2bf0280b38fc48f27568f8e284eea08594d9df2bcc318f
+   header: p cnf 2256 129171  last proof line: 145359 0 145339 145347 145298 0
+   lrat-check exit 0: c VERIFIED 
+   c parsed a formula with 2256 variables and 129171 clauses
+   c Added clauses = 145359.  Deleted clauses = 49704.  Max live clauses = 129172
+regenerated c3_n15k6.cnf sha256: fc089011c5934f6bf63c581b5630712c83fc344e248325c10f71c62e9e99c811
+regenerated c3_n16k6c.cnf sha256: 15766b1e6e44f9b8f4dcf222ce8440b454d635521dfa0eda7b4759a92836690e
+SYMMAX/k6/c3_n15k6.cnf.gz decompressed sha256: fc089011c5934f6bf63c581b5630712c83fc344e248325c10f71c62e9e99c811
+SYMMAX/k6/c3_n16k6c.cnf.gz decompressed sha256: 15766b1e6e44f9b8f4dcf222ce8440b454d635521dfa0eda7b4759a92836690e
+control forged hintless empty clause on SAT CNF: exit 1 : c FAILED: empty clause without a RUP conflict
+mutated line 56056 of 56056
+control c3_n15k6 proof with last empty-clause hint dropped: exit 1 : c FAILED: empty clause without a RUP conflict

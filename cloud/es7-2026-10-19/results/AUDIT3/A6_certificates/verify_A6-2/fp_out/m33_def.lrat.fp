@@ -1,0 +1,17 @@
+bytes=4120793950
+sha256=e1b2689d071a0b218f2c9be13a813f48bd3ea0fcd1e2fc1476a2549523ede1e4
+lines=29633663
+additions=21430210
+empty_additions=1
+first_empty_id=35510866
+min_add_id=14080657
+max_add_id=35510866
+nonincreasing_add_ids=0
+deletion_lines=8203453
+deleted_ids=32165860
+max_live=14080967
+comment_lines=0
+malformed_lines=0
+last_line=empty_addition
+input_clauses_arg=14080656
+input_plus_additions=35510866

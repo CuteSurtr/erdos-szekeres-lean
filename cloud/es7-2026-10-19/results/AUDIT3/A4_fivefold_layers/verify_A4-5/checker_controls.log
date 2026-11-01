@@ -1,0 +1,24 @@
+f20462121defbc63	sat1.cnf	forged_nohint.lrat	expect=reject	rc=1	c FAILED: empty clause without a RUP conflict
+f20462121defbc63	sat1.cnf	forged_hint.lrat	expect=reject	rc=1	c FAILED: empty clause without a RUP conflict
+f20462121defbc63	unsat2.cnf	genuine.lrat	expect=accept	rc=0	c VERIFIED
+f20462121defbc63	unsat2.cnf	unsat_badhint.lrat	expect=reject	rc=1	c FAILED: empty clause without a RUP conflict
+bd7eb80526235258	sat1.cnf	forged_nohint.lrat	expect=reject	rc=0	c VERIFIED
+bd7eb80526235258	sat1.cnf	forged_hint.lrat	expect=reject	rc=0	c VERIFIED
+bd7eb80526235258	unsat2.cnf	genuine.lrat	expect=accept	rc=0	c VERIFIED
+bd7eb80526235258	unsat2.cnf	unsat_badhint.lrat	expect=reject	rc=0	c VERIFIED
+bd7eb80526235258	sat1.cnf	forged_nohint.lrat	expect=reject	rc=0	c VERIFIED
+bd7eb80526235258	sat1.cnf	forged_hint.lrat	expect=reject	rc=0	c VERIFIED
+bd7eb80526235258	unsat2.cnf	genuine.lrat	expect=accept	rc=0	c VERIFIED
+bd7eb80526235258	unsat2.cnf	unsat_badhint.lrat	expect=reject	rc=0	c VERIFIED
+f20462121defbc63	sat1.cnf	forged_nohint.lrat	expect=reject	rc=1	c FAILED: empty clause without a RUP conflict
+f20462121defbc63	sat1.cnf	forged_hint.lrat	expect=reject	rc=1	c FAILED: empty clause without a RUP conflict
+f20462121defbc63	unsat2.cnf	genuine.lrat	expect=accept	rc=0	c VERIFIED
+f20462121defbc63	unsat2.cnf	unsat_badhint.lrat	expect=reject	rc=1	c FAILED: empty clause without a RUP conflict
+66780e68d1859a66	sat1.cnf	forged_nohint.lrat	expect=reject	rc=1	c FAILED: empty clause without a RUP conflict
+66780e68d1859a66	sat1.cnf	forged_hint.lrat	expect=reject	rc=1	c FAILED: empty clause without a RUP conflict
+66780e68d1859a66	unsat2.cnf	genuine.lrat	expect=accept	rc=0	c VERIFIED
+66780e68d1859a66	unsat2.cnf	unsat_badhint.lrat	expect=reject	rc=1	c FAILED: empty clause without a RUP conflict
+f20462121defbc63	sat1.cnf	forged_nohint.lrat	expect=reject	rc=1	c FAILED: empty clause without a RUP conflict
+f20462121defbc63	sat1.cnf	forged_hint.lrat	expect=reject	rc=1	c FAILED: empty clause without a RUP conflict
+f20462121defbc63	unsat2.cnf	genuine.lrat	expect=accept	rc=0	c VERIFIED
+f20462121defbc63	unsat2.cnf	unsat_badhint.lrat	expect=reject	rc=1	c FAILED: empty clause without a RUP conflict

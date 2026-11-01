@@ -1,0 +1,33 @@
+== 1. The >= 33 claim (assembled theorem, rotations only; mirrors are handled by M33/M34) ==
+[all five] thms=['C2_34', 'C3_33', 'C4_32', 'C5_35', 'REG'] n in [33,600] s in [2,60]
+   not excluded: 0 pairs; first: []
+   excluded ONLY via C4_32: 0 pairs; first: []
+[without C4_32] thms=['C2_34', 'C3_33', 'C5_35', 'REG'] n in [33,600] s in [2,60]
+   not excluded: 0 pairs; first: []
+   excluded ONLY via C4_32: 0 pairs; first: []
+   => with C2_34, C4_32 is redundant for every n >= 33.
+
+== 2. Corollary 3 as written (C2_34 NOT assumed): which orders survive? ==
+[without C2_34] thms=['C3_33', 'C4_32', 'C5_35', 'REG'] n in [33,600] s in [2,60]
+   not excluded: 284 pairs; first: [(2, 34), (2, 36), (2, 38), (2, 40), (2, 42), (2, 44), (2, 46), (2, 48), (2, 50), (2, 52), (2, 54), (2, 56)]
+   excluded ONLY via C4_32: 142 pairs; first: [(4, 36), (4, 40), (4, 44), (4, 48), (4, 52), (4, 56), (4, 60), (4, 64), (4, 68), (4, 72), (4, 76), (4, 80)]
+[without C2_34 and C4_32] thms=['C3_33', 'C5_35', 'REG'] n in [33,600] s in [2,60]
+   not excluded: 426 pairs; first: [(2, 34), (2, 36), (2, 38), (2, 40), (2, 42), (2, 44), (2, 46), (2, 48), (2, 50), (2, 52), (2, 54), (2, 56)]
+   excluded ONLY via C4_32: 0 pairs; first: []
+   surviving orders without C2_34 and C4_32: [2, 4]
+   => without C2_34, C4_32 is exactly what removes order 4 ('group exactly C2' in Cor. 3).
+      orders 4 surviving sizes (first): [36, 40, 44, 48, 52, 56]
+
+== 3. N(C4) = 28 ==
+   fourfold sizes above 28 not excluded without C4_32 (n<200): [32]
+   => C4_32 is indispensable for N(C4)=28 only at n = 32 (n >= 36 also follows from C2_34).
+
+== 4. 32-point sets: largest rotation order (SYM2/README claim) ==
+   orders possible for n=32: [2, 4, 8, 16, 31, 32]
+   s=2: excluded by nothing
+   s=4: excluded by [('C4_32', 4)]
+   s=8: excluded by [('C4_32', 4), ('REG', 8)]
+   s=16: excluded by [('C4_32', 4), ('REG', 8), ('REG', 16)]
+   s=31: excluded by [('REG', 31)]
+   s=32: excluded by [('C4_32', 4), ('REG', 8), ('REG', 16), ('REG', 32)]
+   => 'order 2 is the largest for 32-point 7-gon-free sets' needs C4_32 (s=4); s=8,16,32 by REG.

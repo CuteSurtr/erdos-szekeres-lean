@@ -1,0 +1,31 @@
+Part 1: 136 cases = 136 ; matches cubes.txt: True
+  sums of index gaps g: {17: 136}
+  sums of classes strictly between s = g-1, keyed (hull classes, sum): {(2, 15): 16, (3, 14): 120}
+  sums of points strictly between consecutive vertices of the full polygon: {(2, 30): 16, (3, 28): 120}
+  cases where some 'classes strictly between' count is 0 (so not 'positive'): 44 e.g. ['P1', 'P16', 'H1-2', 'H1-3']
+  examples: P1 g=(1, 16) s=(0, 15) | P8 g=(8, 9) s=(7, 8) | H1-2 g=(1, 1, 15) s=(0, 0, 14) | H5-11 g=(5, 6, 6) s=(4, 5, 5)
+  canonical by gaps:   8 P + 24 H; equals canonical.txt: True
+  canonical by strict: 8 P + 24 H; equals canonical.txt: True
+  dihedral orbits: by g 32, by s 32
+Part 2: 408 exact configurations (3 per case, all 136 cases), 4704 normal-form labellings (every hull vertex, original and mirror image)
+  in every labelling: classes strictly between consecutive hull classes sum to 17 - k (15 for k=2, 14 for k=3); index gaps sum to 17; start change = rotation; mirror = reversal;
+  the canonical case is reached and is the unique case from canonical.txt reached.
+FAILURES: 0
+        0.67 real         0.66 user         0.00 sys
+            17711104  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                1805  page reclaims
+                  41  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   3  voluntary context switches
+                 129  involuntary context switches
+         13280027479  instructions retired
+          2326326954  cycles elapsed
+             9372104  peak memory footprint

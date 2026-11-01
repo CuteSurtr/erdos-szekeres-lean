@@ -1,0 +1,22 @@
+{"N": 32, "K": 7, "m": 4, "t": 8, "P": 32, "center": "none", "center_index": null, "setpts": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], "vars": 287296, "X_vars": 1240, "clauses": 5272494, "sb": true, "kgon": "layered", "stats": {"orbits4": 9024, "orbits5": 50344, "conv_orbits": {"4": 9024, "5": 50344, "6": 226688, "K-sets": 841464}, "sb_clauses": 142, "normal_form": "layers"}}
+       18.88 real        18.68 user         0.13 sys
+            81346560  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                5704  page reclaims
+                  84  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  39  voluntary context switches
+                3269  involuntary context switches
+        395205685848  instructions retired
+         72098412900  cycles elapsed
+            72630752  peak memory footprint
+c3933d9a571d3912fc009b3cd331e18097ae9d44639018ca6923a6ed7931e68e  c4_n32L.cnf
+f72b186e254d098b3f499aebc5845af52505b2a7cc7b08650fc5ef3d08d09c56  c4_n32L.json
+base+cuts sha256: 2aa18f1e89152959c13adec575d3fda4a01b0dedaef2388984ba6fe6bfdb78d1 cuts: 6 header clauses: 5272500

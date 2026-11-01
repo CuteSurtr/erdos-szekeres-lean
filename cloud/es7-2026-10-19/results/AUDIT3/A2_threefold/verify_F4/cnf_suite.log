@@ -1,0 +1,85 @@
+== cnf/c3a_m3k6.cnf cnf/c3a_m3k6.map.json 11 300 disk,ring,cluster,strip
+{"m": 3, "k_cnf": 6, "k_bruteforce": 6, "sets": 300, "kgon_free": 85, "with_kgon": 215, "negated_for_sb": 155, "fail_base": 0, "fail_sound": 0, "fail_complete": 0, "redraws": 1}
+real 4.14
+user 4.05
+sys 0.02
+== cnf/c3a_m3k7.cnf cnf/c3a_m3k7.map.json 12 300 disk,ring,cluster,strip
+{"m": 3, "k_cnf": 7, "k_bruteforce": 7, "sets": 300, "kgon_free": 227, "with_kgon": 73, "negated_for_sb": 151, "fail_base": 0, "fail_sound": 0, "fail_complete": 0, "redraws": 1}
+real 4.54
+user 4.48
+sys 0.02
+== cnf/c3a_m4k6.cnf cnf/c3a_m4k6.map.json 13 300 disk,ring,cluster,strip
+{"m": 4, "k_cnf": 6, "k_bruteforce": 6, "sets": 300, "kgon_free": 0, "with_kgon": 300, "negated_for_sb": 137, "fail_base": 0, "fail_sound": 0, "fail_complete": 0, "redraws": 2}
+real 12.73
+user 12.64
+sys 0.03
+== cnf/c3a_m4k7.cnf cnf/c3a_m4k7.map.json 14 300 disk,ring,cluster,strip
+{"m": 4, "k_cnf": 7, "k_bruteforce": 7, "sets": 300, "kgon_free": 155, "with_kgon": 145, "negated_for_sb": 165, "fail_base": 0, "fail_sound": 0, "fail_complete": 0, "redraws": 0}
+real 14.83
+user 14.70
+sys 0.04
+== cnf/c3a_m5k6.cnf cnf/c3a_m5k6.map.json 15 150 disk,ring,cluster,strip
+{"m": 5, "k_cnf": 6, "k_bruteforce": 6, "sets": 150, "kgon_free": 0, "with_kgon": 150, "negated_for_sb": 69, "fail_base": 0, "fail_sound": 0, "fail_complete": 0, "redraws": 1}
+real 16.08
+user 15.92
+sys 0.06
+== cnf/c3a_m5k7.cnf cnf/c3a_m5k7.map.json 16 200 cluster,strip,disk
+{"m": 5, "k_cnf": 7, "k_bruteforce": 7, "sets": 200, "kgon_free": 35, "with_kgon": 165, "negated_for_sb": 92, "fail_base": 0, "fail_sound": 0, "fail_complete": 0, "redraws": 6}
+real 25.56
+user 25.16
+sys 0.21
+== cnf/c3a_m6k7.cnf cnf/c3a_m6k7.map.json 17 120 cluster,strip
+{"m": 6, "k_cnf": 7, "k_bruteforce": 7, "sets": 120, "kgon_free": 7, "with_kgon": 113, "negated_for_sb": 70, "fail_base": 0, "fail_sound": 0, "fail_complete": 0, "redraws": 3}
+real 33.18
+user 32.38
+sys 0.53
+== cnf/c3a_m4k6.cnf cnf/c3a_m4k6.map.json 21 60 disk,ring,cluster,strip 7
+SOUNDNESS FAIL: gon clause false on a k-gon-free set strip
+SOUNDNESS FAIL: gon clause false on a k-gon-free set disk
+SOUNDNESS FAIL: gon clause false on a k-gon-free set strip
+SOUNDNESS FAIL: gon clause false on a k-gon-free set strip
+SOUNDNESS FAIL: gon clause false on a k-gon-free set strip
+SOUNDNESS FAIL: gon clause false on a k-gon-free set strip
+SOUNDNESS FAIL: gon clause false on a k-gon-free set strip
+SOUNDNESS FAIL: gon clause false on a k-gon-free set disk
+SOUNDNESS FAIL: gon clause false on a k-gon-free set cluster
+SOUNDNESS FAIL: gon clause false on a k-gon-free set strip
+SOUNDNESS FAIL: gon clause false on a k-gon-free set cluster
+SOUNDNESS FAIL: gon clause false on a k-gon-free set strip
+SOUNDNESS FAIL: gon clause false on a k-gon-free set disk
+SOUNDNESS FAIL: gon clause false on a k-gon-free set strip
+SOUNDNESS FAIL: gon clause false on a k-gon-free set disk
+SOUNDNESS FAIL: gon clause false on a k-gon-free set strip
+SOUNDNESS FAIL: gon clause false on a k-gon-free set strip
+SOUNDNESS FAIL: gon clause false on a k-gon-free set cluster
+SOUNDNESS FAIL: gon clause false on a k-gon-free set cluster
+SOUNDNESS FAIL: gon clause false on a k-gon-free set disk
+SOUNDNESS FAIL: gon clause false on a k-gon-free set disk
+SOUNDNESS FAIL: gon clause false on a k-gon-free set strip
+SOUNDNESS FAIL: gon clause false on a k-gon-free set cluster
+SOUNDNESS FAIL: gon clause false on a k-gon-free set strip
+SOUNDNESS FAIL: gon clause false on a k-gon-free set disk
+SOUNDNESS FAIL: gon clause false on a k-gon-free set strip
+SOUNDNESS FAIL: gon clause false on a k-gon-free set cluster
+SOUNDNESS FAIL: gon clause false on a k-gon-free set strip
+SOUNDNESS FAIL: gon clause false on a k-gon-free set strip
+SOUNDNESS FAIL: gon clause false on a k-gon-free set disk
+SOUNDNESS FAIL: gon clause false on a k-gon-free set strip
+SOUNDNESS FAIL: gon clause false on a k-gon-free set cluster
+{"m": 4, "k_cnf": 6, "k_bruteforce": 7, "sets": 60, "kgon_free": 33, "with_kgon": 27, "negated_for_sb": 31, "fail_base": 0, "fail_sound": 32, "fail_complete": 0, "redraws": 0}
+real 2.67
+user 2.64
+sys 0.01
+== cnf/c3a_m5k6.cnf cnf/c3a_m5k6.map.json 22 40 cluster,strip 7
+SOUNDNESS FAIL: gon clause false on a k-gon-free set cluster
+SOUNDNESS FAIL: gon clause false on a k-gon-free set strip
+SOUNDNESS FAIL: gon clause false on a k-gon-free set strip
+SOUNDNESS FAIL: gon clause false on a k-gon-free set cluster
+SOUNDNESS FAIL: gon clause false on a k-gon-free set strip
+SOUNDNESS FAIL: gon clause false on a k-gon-free set cluster
+SOUNDNESS FAIL: gon clause false on a k-gon-free set strip
+{"m": 5, "k_cnf": 6, "k_bruteforce": 7, "sets": 40, "kgon_free": 7, "with_kgon": 33, "negated_for_sb": 20, "fail_base": 0, "fail_sound": 7, "fail_complete": 0, "redraws": 1}
+real 4.49
+user 4.43
+sys 0.03
+DONE

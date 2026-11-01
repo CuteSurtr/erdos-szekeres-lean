@@ -1,0 +1,47 @@
+== out.jsonl: 23 rows; sample.txt: 24 units
+  P6_7-8-9@C2P/M02             repro-test self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=H
+  P2_7-9-10@C2P5/M97           repro-test self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=H
+  P1_5-6-11@C2P5/M94           in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=H
+  P1_2-3-5@C2P5/M54            in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=H
+  P2_3-7-15@C2P5/M75           in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=H
+  P2_1-4-12@C2P5/M82           in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=H
+  P3_1-12-13@C2P5/M71          in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=H
+  P3_1-12-14@C2P5/M72          in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=H
+  P4_1-6-15@C2P4/M09           in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=H
+  P4_1-8-10@C2P5/M31           in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=H
+  P5_1-2-8@C2P3/M44            in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=H
+  P5_1-3-12@C2P3/M10           in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=H
+  P6_2-9-12@C2P/M39            in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=H
+  P6_8-9-11@C2P4/M31           in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=H
+  P7_9-10-11@C2P/M01           in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=H
+  P7_2-4-13@C2P/M23            in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=H
+  P8_1-3-15@C2P/M11            in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=H
+  P8_4-12-13@C2P/M13           in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=H
+  P1_2-3@C2P5/M56              in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=Q
+  P2_6-7@C2P5/M90              in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=Q
+  P3_6-7@C2P5/M70              in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=Q
+  P4_5-10@C2P4/M38             in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=Q
+  P5_6-11@C2P4/M30             in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=Q
+  drawn but not in out.jsonl: ['P6_9-11@C2P3/M31', 'P7_1-15@C2P/M40', 'P8_1-10@C2P2/M02']
+  finished drawn units by kind: {'H': 16, 'Q': 5}
+== extra_out.jsonl: 8 rows; extra_sample.txt: 8 units
+  P1_4-11-12@C2P5/M87          in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=H
+  P2_1-4-14@C2P5/M84           in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=H
+  P3_4-13-14@C2P5/M51          in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=H
+  P4_5-8-9@C2P5/M13            in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=H
+  P5_6-8-12@C2P4/M47           in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=H
+  P6_1-3-16@C2P2/M24           in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=H
+  P7_1-2-6@C2P/M09             in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=H
+  P8_2-4-6@C2P/M23             in-draw    self_ok=True cnf_eq_orig=True proof_eq_orig=True orig_verdicts_ok=True kind=H
+  drawn but not in extra_out.jsonl: []
+  finished drawn units by kind: {'H': 8}
+== pilot/out.jsonl
+  P8_3-4-5     self_ok=True cnf==hashmatch.computed_for_no_hash=True same_proof_as_pilot_record=True pilot_record_cnf_sha='' pilot_verdicts=(c VERIFIED, s VERIFIED UNSAT)
+  P8_cover     self_ok=True cnf==hashmatch.computed_for_no_hash=True same_proof_as_pilot_record=False pilot_record_cnf_sha='' pilot_verdicts=(c VERIFIED, s VERIFIED UNSAT)
+  P8_9-13-15   self_ok=True cnf==hashmatch.computed_for_no_hash=True same_proof_as_pilot_record=True pilot_record_cnf_sha='' pilot_verdicts=(c VERIFIED, s VERIFIED UNSAT)
+  P8_3-4-15    self_ok=True cnf==hashmatch.computed_for_no_hash=True same_proof_as_pilot_record=True pilot_record_cnf_sha='' pilot_verdicts=(c VERIFIED, s VERIFIED UNSAT)
+  P8_2-12-15   self_ok=True cnf==hashmatch.computed_for_no_hash=True same_proof_as_pilot_record=True pilot_record_cnf_sha='' pilot_verdicts=(c VERIFIED, s VERIFIED UNSAT)
+  P8_2-4-11    self_ok=True cnf==hashmatch.computed_for_no_hash=True same_proof_as_pilot_record=True pilot_record_cnf_sha='' pilot_verdicts=(c VERIFIED, s VERIFIED UNSAT)
+  P8_1-3       self_ok=True cnf==hashmatch.computed_for_no_hash=True same_proof_as_pilot_record=True pilot_record_cnf_sha='' pilot_verdicts=(c VERIFIED, s VERIFIED UNSAT)
+no_hash list in hashmatch.json: ['C2C34/pilot P8_cover UNSATISFIABLE', 'C2C34/pilot P8_3-4-5 UNSATISFIABLE', 'C2C34/pilot P8_9-13-15 UNSATISFIABLE', 'C2C34/pilot P8_3-4-15 UNSATISFIABLE', 'C2C34/pilot P8_2-12-15 UNSATISFIABLE', 'C2C34/pilot P8_2-4-11 UNSATISFIABLE', 'C2C34/pilot P8_1-3 UNSATISFIABLE']
+PROBLEMS: none

@@ -1,0 +1,10 @@
+random sets tested: 200 largest-convex histogram: {4: 2, 5: 40, 6: 87, 7: 60, 8: 11}
+mutated DP disagrees with brute force on 164 of 200 sets (must be > 0)
+convex 7-gon: DP gives 7
+convex 8-gon: DP gives 8
+convex 9-gon: DP gives 9
+convex 10-gon: DP gives 10
+convex 11-gon: DP gives 11
+convex 12-gon: DP gives 12
+CONTROLS OK
+        1.19 real         1.17 user         0.01 sys

@@ -1,0 +1,16 @@
+checked_at_utc 2026-11-01T12:35:38Z
+worktree_tip 9cf4949a51c6a2602c57cf68f7df59b0e3d30562
+last commit touching each document:
+  WRITEUP/SYMMETRIC.md             de02b4914 2026-10-30 01:55:58 +0900
+  WRITEUP/note/symmetric_es7.tex   a49b92d6d 2026-10-29 21:51:08 +0900
+  WRITEUP/CERTIFICATES.md          a49b92d6d 2026-10-29 21:51:08 +0900
+  SYMMAX/README.md                 189ab709a 2026-10-29 13:03:23 +0900
+  SYMZ/README.md                   8a62e9ecc 2026-10-29 17:04:25 +0900
+  C2C34/README.md                  de02b4914 2026-10-30 01:55:58 +0900
+  C4CUT/README.md                  755081b76 2026-11-01 17:00:43 +0900
+  C2FINAL/README.md                9cf4949a5 2026-11-01 18:10:24 +0900
+live random re-solve (not in git): reproduce.log tail:
+  12:16:13Z === P7_1-15 end UNSATISFIABLE reproduces True certified True
+  12:16:13Z done
+  12:16:26Z === P8_4-9 (C2C34/p8) solve
+  running cadical solves: 3 ; rep_P8_1-10.lrat bytes: 8699326464

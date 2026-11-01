@@ -1,0 +1,24 @@
+1. units in base: 136 distinct 136 expected 136 equal
+2. hull clauses in tail: 10880 all 3-literal True expected 10880 equal
+   triangles whose clause is a tautology: 16 all contain an antipodal pair and -q0: True
+3. X vars 2856 + conv vars 835176 = 838032 header vars 838032 OK
+4a. hull cubes (136) equal my semantic cubes: True sizes P: [61] H: [90]
+4b. P1_cubes.txt: names as expected True; cubes differing from my semantic cubes 0; second-layer literal counts [53, 78]
+4b. P2_cubes.txt: names as expected True; cubes differing from my semantic cubes 0; second-layer literal counts [53, 78]
+4b. P3_cubes.txt: names as expected True; cubes differing from my semantic cubes 0; second-layer literal counts [53, 78]
+4b. P4_cubes.txt: names as expected True; cubes differing from my semantic cubes 0; second-layer literal counts [53, 78]
+4b. P5_cubes.txt: names as expected True; cubes differing from my semantic cubes 0; second-layer literal counts [53, 78]
+4b. P6_cubes.txt: names as expected True; cubes differing from my semantic cubes 0; second-layer literal counts [53, 78]
+4b. P7_cubes.txt: names as expected True; cubes differing from my semantic cubes 0; second-layer literal counts [53, 78]
+4b. P8_cubes.txt: names as expected True; cubes differing from my semantic cubes 0; second-layer literal counts [53, 78]
+4c. pilot P8_cubes.txt identical to C2P/cubes/P8_cubes.txt (as data): True
+5. P1: subcases 560, orbits 287, fixed 14, rows inconsistent with i -> (1 - i) mod 17: 0
+5. P2: subcases 560, orbits 287, fixed 14, rows inconsistent with i -> (2 - i) mod 17: 0
+5. P3: subcases 560, orbits 287, fixed 14, rows inconsistent with i -> (3 - i) mod 17: 0
+5. P4: subcases 560, orbits 287, fixed 14, rows inconsistent with i -> (4 - i) mod 17: 0
+5. P5: subcases 560, orbits 287, fixed 14, rows inconsistent with i -> (5 - i) mod 17: 0
+5. P6: subcases 560, orbits 287, fixed 14, rows inconsistent with i -> (6 - i) mod 17: 0
+5. P7: subcases 560, orbits 287, fixed 14, rows inconsistent with i -> (7 - i) mod 17: 0
+5. P8: subcases 560, orbits 287, fixed 14, rows inconsistent with i -> (8 - i) mod 17: 0
+FAILURES []
+python3 static_checks.py $S/regen/base.cnf $S/regen/base.json   1.32s user 0.04s system 97% cpu 1.400 total

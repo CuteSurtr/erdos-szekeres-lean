@@ -1,0 +1,2 @@
+{'tested': 600, 'GP': 600, 'all_layers_single_orbit': 256, 'nest_strict_ok': 600, 'centre_ok': 256, 'units_ok': 174, 'units_tested': 175, 'multi_orbit_layer_convex': 429, 'multi_orbit_layers': 429}
+python3 -B check_layers_exact.py --random 600 20261101  3.30s user 0.03s system 96% cpu 3.448 total

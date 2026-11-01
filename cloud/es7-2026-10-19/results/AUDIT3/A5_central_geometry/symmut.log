@@ -1,0 +1,26 @@
+== mutB8_noneg (extra H_8)
+MISSING image of clause 16642328: 8  -> -8
+MISSING image of clause 16642329: 9  -> -2492
+MISSING image of clause 16642330: 10  -> -2491
+target set: 16653336 base + 10880 extra clauses; checked 16653336 images; missing 136
+exit 0
+== mutB8_noflip (extra H_8)
+MISSING image of clause 16642336: 16  -> -2485
+MISSING image of clause 16642344: 504  -> -2340
+MISSING image of clause 16642345: 505  -> -2339
+target set: 16653336 base + 10880 extra clauses; checked 16653336 images; missing 72
+exit 0
+== mutB8_swap12 (extra H_8)
+MISSING image of clause 16642337: 497  -> -2142
+target set: 16653336 base + 10880 extra clauses; checked 16653336 images; missing 1
+exit 0
+== mutA8_flipall (extra H_9)
+MISSING image of clause 16642343: 503  -> -10
+MISSING image of clause 16642344: 504  -> -505
+MISSING image of clause 16642345: 505  -> -939
+target set: 16653336 base + 10880 extra clauses; checked 16653336 images; missing 70
+== correct sigma_B8 but extra = H_0 instead of H_8
+MISSING image of clause 16642464: -1 -3 20  -> -2332 -1913 1981
+MISSING image of clause 16642465: 1 -4 -21  -> 2332 -1638 -1731
+MISSING image of clause 16642466: -1 4 21  -> -2332 1638 1731
+target set: 16653336 base + 10880 extra clauses; checked 16653336 images; missing 10880
