@@ -1,0 +1,61 @@
+### construct_k4.log
+k=4 j=2: tree size 1 (ETV value 1), recurrence: longest cap 1, cup 1, conv 1
+R: 1 points, max x 0, max y 0, max slope 0
+collinear triples in R: 0
+S: 4 points, H = 1, max |coord| = 2
+
+### construct_k5.log
+k=5 j=3: tree size 4 (ETV value 4), recurrence: longest cap 2, cup 4, conv 4
+R: 4 points, max x 4, max y 9, max slope 3
+collinear triples in R: 0
+S: 8 points, H = 19, max |coord| = 28
+
+### construct_k6.log
+k=6 j=3: tree size 5 (ETV value 5), recurrence: longest cap 2, cup 5, conv 5
+R: 5 points, max x 8, max y 25, max slope 4
+collinear triples in R: 0
+S: 12 points, H = 41, max |coord| = 66
+
+### construct_k7.log
+k=7 j=4: tree size 16 (ETV value 16), recurrence: longest cap 3, cup 6, conv 6
+R: 16 points, max x 80, max y 401, max slope 6.575
+collinear triples in R: 0
+S: 32 points, H = 540, max |coord| = 941
+
+### construct_k8.log
+k=8 j=4: tree size 22 (ETV value 22), recurrence: longest cap 3, cup 7, conv 7
+R: 22 points, max x 192, max y 1153, max slope 7.65625
+collinear triples in R: 0
+S: 46 points, H = 1486, max |coord| = 2639
+
+### construct_k9.log
+k=9 j=5: tree size 64 (ETV value 64), recurrence: longest cap 4, cup 8, conv 8
+R: 64 points, max x 1536, max y 13379, max slope 11.2643
+collinear triples in R: 0
+S: 128 points, H = 17325, max |coord| = 30704
+
+### construct_k10.log
+k=10 j=5: tree size 93 (ETV value 93), recurrence: longest cap 4, cup 9, conv 9
+R: 93 points, max x 3968, max y 38681, max slope 12.4693
+collinear triples in R: 0
+S: 188 points, H = 49503, max |coord| = 88184
+
+### construct_k11.log
+k=11 j=6: tree size 256 (ETV value 256), recurrence: longest cap 5, cup 10, conv 10
+R: 256 points, max x 28928, max y 394382, max slope 17.6612
+collinear triples in R: 0
+S: 512 points, H = 510940, max |coord| = 905322
+
+### construct_k12.log
+k=12 j=6: tree size 386 (ETV value 386), recurrence: longest cap 5, cup 11, conv 11
+R: 386 points, max x 77824, max y 1149235, max slope 19.1333
+collinear triples in R: 0
+S: 774 points, H = 1489067, max |coord| = 2638302
+
+### construct_k14.log
+k=14 j=7: tree size 1586 (ETV value 1586), recurrence: longest cap 6, cup 13, conv 13
+R: 1586 points, max x 1486848, max y 32533800, max slope 28.8011
+collinear triples in R: 0
+S: 3174 points, H = 42822930, max |coord| = 75356730
+python3 construct.py 14 1 sets  5.46s user 0.02s system 89% cpu 6.140 total
+

@@ -1,0 +1,106 @@
+### maxconv_a_R_k4.log
+file sets/etv_R_k4.txt: n = 1
+duplicate points: 0
+mirror symmetric under (x,y)->(x,-y): YES; points on the axis y=0: 1
+collinear triples: 0 (checked all 0 triples)
+LARGEST SUBSET IN CONVEX POSITION (method A, angular DP): 1
+distribution over anchors of the largest convex polygon with that lowest vertex: [1]:1
+
+### maxconv_a_R_k5.log
+file sets/etv_R_k5.txt: n = 4
+duplicate points: 0
+mirror symmetric under (x,y)->(x,-y): NO; points on the axis y=0: 1
+collinear triples: 0 (checked all 4 triples)
+LARGEST SUBSET IN CONVEX POSITION (method A, angular DP): 4
+distribution over anchors of the largest convex polygon with that lowest vertex: [1]:1 [2]:1 [3]:1 [4]:1
+witness polygon (4 vertices, counterclockwise, 0-based input line indices): 0 1 2 3
+witness coordinates: (0,0) (1,1) (2,3) (4,9)
+witness re-check (all other vertices strictly left of every edge, distinct): OK
+
+### maxconv_a_R_k6.log
+file sets/etv_R_k6.txt: n = 5
+duplicate points: 0
+mirror symmetric under (x,y)->(x,-y): NO; points on the axis y=0: 1
+collinear triples: 0 (checked all 10 triples)
+LARGEST SUBSET IN CONVEX POSITION (method A, angular DP): 5
+distribution over anchors of the largest convex polygon with that lowest vertex: [1]:1 [2]:1 [3]:1 [4]:1 [5]:1
+witness polygon (5 vertices, counterclockwise, 0-based input line indices): 0 1 2 3 4
+witness coordinates: (0,0) (1,1) (2,3) (4,9) (8,25)
+witness re-check (all other vertices strictly left of every edge, distinct): OK
+
+### maxconv_a_R_k7.log
+file sets/etv_R_k7.txt: n = 16
+duplicate points: 0
+mirror symmetric under (x,y)->(x,-y): NO; points on the axis y=0: 1
+collinear triples: 0 (checked all 560 triples)
+LARGEST SUBSET IN CONVEX POSITION (method A, angular DP): 6
+distribution over anchors of the largest convex polygon with that lowest vertex: [1]:1 [2]:1 [3]:2 [4]:3 [5]:4 [6]:5
+witness polygon (6 vertices, counterclockwise, 0-based input line indices): 0 1 3 6 15 14
+witness coordinates: (0,0) (1,2) (6,14) (20,64) (80,401) (72,361)
+witness re-check (all other vertices strictly left of every edge, distinct): OK
+
+### maxconv_a_R_k8.log
+file sets/etv_R_k8.txt: n = 22
+duplicate points: 0
+mirror symmetric under (x,y)->(x,-y): NO; points on the axis y=0: 1
+collinear triples: 0 (checked all 1540 triples)
+LARGEST SUBSET IN CONVEX POSITION (method A, angular DP): 7
+distribution over anchors of the largest convex polygon with that lowest vertex: [1]:1 [2]:1 [3]:2 [4]:3 [5]:4 [6]:5 [7]:6
+witness polygon (7 vertices, counterclockwise, 0-based input line indices): 0 1 3 6 10 21 20
+witness coordinates: (0,0) (1,2) (6,14) (20,64) (56,232) (192,1153) (176,1057)
+witness re-check (all other vertices strictly left of every edge, distinct): OK
+
+### maxconv_a_R_k9.log
+file sets/etv_R_k9.txt: n = 64
+duplicate points: 0
+mirror symmetric under (x,y)->(x,-y): NO; points on the axis y=0: 1
+collinear triples: 0 (checked all 41664 triples)
+LARGEST SUBSET IN CONVEX POSITION (method A, angular DP): 8
+distribution over anchors of the largest convex polygon with that lowest vertex: [1]:1 [2]:1 [3]:2 [4]:4 [5]:7 [6]:11 [7]:16 [8]:22
+witness polygon (8 vertices, counterclockwise, 0-based input line indices): 0 1 4 10 20 63 62 55
+witness coordinates: (0,0) (2,6) (16,56) (72,304) (256,1334) (1536,13379) (1504,13155) (1248,11043)
+witness re-check (all other vertices strictly left of every edge, distinct): OK
+
+### maxconv_a_R_k10.log
+file sets/etv_R_k10.txt: n = 93
+duplicate points: 0
+mirror symmetric under (x,y)->(x,-y): NO; points on the axis y=0: 1
+collinear triples: 0 (checked all 129766 triples)
+LARGEST SUBSET IN CONVEX POSITION (method A, angular DP): 9
+distribution over anchors of the largest convex polygon with that lowest vertex: [1]:1 [2]:1 [3]:2 [4]:4 [5]:7 [6]:11 [7]:16 [8]:22 [9]:29
+witness polygon (9 vertices, counterclockwise, 0-based input line indices): 0 1 4 10 20 35 92 91 83
+witness coordinates: (0,0) (2,6) (16,56) (72,304) (256,1334) (800,4948) (3968,38681) (3904,38169) (3328,32793)
+witness re-check (all other vertices strictly left of every edge, distinct): OK
+
+### maxconv_a_R_k11.log
+file sets/etv_R_k11.txt: n = 256
+duplicate points: 0
+mirror symmetric under (x,y)->(x,-y): NO; points on the axis y=0: 1
+collinear triples: 0 (checked all 2763520 triples)
+LARGEST SUBSET IN CONVEX POSITION (method A, angular DP): 10
+distribution over anchors of the largest convex polygon with that lowest vertex: [1]:1 [2]:1 [3]:2 [4]:4 [5]:8 [6]:15 [7]:26 [8]:42 [9]:64 [10]:93
+witness polygon (10 vertices, counterclockwise, 0-based input line indices): 0 1 5 15 35 70 255 254 245 209
+witness coordinates: (0,0) (4,16) (40,184) (224,1214) (960,6066) (3520,25584) (28928,394382) (28800,393230) (27520,379918) (21632,305588)
+witness re-check (all other vertices strictly left of every edge, distinct): OK
+
+### maxconv_a_R_k12.log
+file sets/etv_R_k12.txt: n = 386
+duplicate points: 0
+mirror symmetric under (x,y)->(x,-y): NO; points on the axis y=0: 1
+collinear triples: 0 (checked all 9511040 triples)
+LARGEST SUBSET IN CONVEX POSITION (method A, angular DP): 11
+distribution over anchors of the largest convex polygon with that lowest vertex: [1]:1 [2]:1 [3]:2 [4]:4 [5]:8 [6]:15 [7]:26 [8]:42 [9]:64 [10]:93 [11]:130
+witness polygon (11 vertices, counterclockwise, 0-based input line indices): 0 1 5 15 35 70 126 385 384 374 329
+witness coordinates: (0,0) (4,16) (40,184) (224,1214) (960,6066) (3520,25584) (11648,95930) (77824,1149235) (77568,1146675) (74752,1114419) (60416,916576)
+witness re-check (all other vertices strictly left of every edge, distinct): OK
+
+### maxconv_a_R_k14.log
+file sets/etv_R_k14.txt: n = 1586
+duplicate points: 0
+mirror symmetric under (x,y)->(x,-y): NO; points on the axis y=0: 1
+collinear triples: 0 (checked all 663645840 triples)
+LARGEST SUBSET IN CONVEX POSITION (method A, angular DP): 13
+witness polygon (13 vertices, counterclockwise, 0-based input line indices): 0 1 6 21 56 126 252 462 1585 1584 1572 1506 1286
+witness coordinates: (0,0) (8,40) (96,544) (640,4158) (3200,23676) (13440,112084) (50176,466675) (172032,1767628) (1486848,32533800) (1485824,32521512) (1472512,32341288) (1391616,31039791) (1081344,24798196)
+witness re-check (all other vertices strictly left of every edge, distinct): OK
+

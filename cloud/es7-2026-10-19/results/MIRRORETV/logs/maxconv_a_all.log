@@ -1,0 +1,128 @@
+### maxconv_a_k4.log
+file sets/mirror_S_k4.txt: n = 4
+duplicate points: 0
+mirror symmetric under (x,y)->(x,-y): YES; points on the axis y=0: 2
+collinear triples: 0 (checked all 4 triples)
+LARGEST SUBSET IN CONVEX POSITION (method A, angular DP): 3
+distribution over anchors of the largest convex polygon with that lowest vertex: [1]:1 [2]:1 [3]:2
+witness polygon (3 vertices, counterclockwise, 0-based input line indices): 1 0 2
+witness coordinates: (0,-1) (0,1) (-1,0)
+witness re-check (all other vertices strictly left of every edge, distinct): OK
+
+### maxconv_a_k5.log
+file sets/mirror_S_k5.txt: n = 8
+duplicate points: 0
+mirror symmetric under (x,y)->(x,-y): YES; points on the axis y=0: 0
+collinear triples: 0 (checked all 56 triples)
+LARGEST SUBSET IN CONVEX POSITION (method A, angular DP): 4
+distribution over anchors of the largest convex polygon with that lowest vertex: [1]:1 [2]:1 [3]:2 [4]:4
+witness polygon (4 vertices, counterclockwise, 0-based input line indices): 0 1 2 3
+witness coordinates: (0,19) (1,20) (2,22) (4,28)
+witness re-check (all other vertices strictly left of every edge, distinct): OK
+
+### maxconv_a_k6.log
+file sets/mirror_S_k6.txt: n = 12
+duplicate points: 0
+mirror symmetric under (x,y)->(x,-y): YES; points on the axis y=0: 2
+collinear triples: 0 (checked all 220 triples)
+LARGEST SUBSET IN CONVEX POSITION (method A, angular DP): 5
+distribution over anchors of the largest convex polygon with that lowest vertex: [1]:1 [2]:1 [3]:2 [4]:3 [5]:5
+witness polygon (5 vertices, counterclockwise, 0-based input line indices): 0 1 2 3 4
+witness coordinates: (0,41) (1,42) (2,44) (4,50) (8,66)
+witness re-check (all other vertices strictly left of every edge, distinct): OK
+
+### maxconv_a_k7.log
+file sets/mirror_S_k7.txt: n = 32
+duplicate points: 0
+mirror symmetric under (x,y)->(x,-y): YES; points on the axis y=0: 0
+collinear triples: 0 (checked all 4960 triples)
+LARGEST SUBSET IN CONVEX POSITION (method A, angular DP): 6
+distribution over anchors of the largest convex polygon with that lowest vertex: [1]:1 [2]:1 [3]:2 [4]:4 [5]:8 [6]:16
+witness polygon (6 vertices, counterclockwise, 0-based input line indices): 0 1 3 6 15 14
+witness coordinates: (0,540) (1,542) (6,554) (20,604) (80,941) (72,901)
+witness re-check (all other vertices strictly left of every edge, distinct): OK
+
+### maxconv_a_k8.log
+file sets/mirror_S_k8.txt: n = 46
+duplicate points: 0
+mirror symmetric under (x,y)->(x,-y): YES; points on the axis y=0: 2
+collinear triples: 0 (checked all 15180 triples)
+LARGEST SUBSET IN CONVEX POSITION (method A, angular DP): 7
+distribution over anchors of the largest convex polygon with that lowest vertex: [1]:1 [2]:1 [3]:2 [4]:4 [5]:6 [6]:10 [7]:22
+witness polygon (7 vertices, counterclockwise, 0-based input line indices): 0 1 3 6 10 21 20
+witness coordinates: (0,1486) (1,1488) (6,1500) (20,1550) (56,1718) (192,2639) (176,2543)
+witness re-check (all other vertices strictly left of every edge, distinct): OK
+
+### maxconv_a_k9.log
+file sets/mirror_S_k9.txt: n = 128
+duplicate points: 0
+mirror symmetric under (x,y)->(x,-y): YES; points on the axis y=0: 0
+collinear triples: 0 (checked all 341376 triples)
+LARGEST SUBSET IN CONVEX POSITION (method A, angular DP): 8
+distribution over anchors of the largest convex polygon with that lowest vertex: [1]:1 [2]:1 [3]:2 [4]:4 [5]:8 [6]:16 [7]:32 [8]:64
+witness polygon (8 vertices, counterclockwise, 0-based input line indices): 0 1 4 10 20 63 62 55
+witness coordinates: (0,17325) (2,17331) (16,17381) (72,17629) (256,18659) (1536,30704) (1504,30480) (1248,28368)
+witness re-check (all other vertices strictly left of every edge, distinct): OK
+
+### maxconv_a_k10.log
+file sets/mirror_S_k10.txt: n = 188
+duplicate points: 0
+mirror symmetric under (x,y)->(x,-y): YES; points on the axis y=0: 2
+collinear triples: 0 (checked all 1089836 triples)
+LARGEST SUBSET IN CONVEX POSITION (method A, angular DP): 9
+distribution over anchors of the largest convex polygon with that lowest vertex: [1]:1 [2]:1 [3]:2 [4]:4 [5]:8 [6]:13 [7]:22 [8]:44 [9]:93
+witness polygon (9 vertices, counterclockwise, 0-based input line indices): 0 1 4 10 20 35 92 91 83
+witness coordinates: (0,49503) (2,49509) (16,49559) (72,49807) (256,50837) (800,54451) (3968,88184) (3904,87672) (3328,82296)
+witness re-check (all other vertices strictly left of every edge, distinct): OK
+
+### maxconv_a_k11.log
+file sets/mirror_S_k11.txt: n = 512
+duplicate points: 0
+mirror symmetric under (x,y)->(x,-y): YES; points on the axis y=0: 0
+collinear triples: 0 (checked all 22238720 triples)
+LARGEST SUBSET IN CONVEX POSITION (method A, angular DP): 10
+distribution over anchors of the largest convex polygon with that lowest vertex: [1]:1 [2]:1 [3]:2 [4]:4 [5]:8 [6]:16 [7]:32 [8]:64 [9]:128 [10]:256
+witness polygon (10 vertices, counterclockwise, 0-based input line indices): 0 1 5 15 35 70 255 254 245 209
+witness coordinates: (0,510940) (4,510956) (40,511124) (224,512154) (960,517006) (3520,536524) (28928,905322) (28800,904170) (27520,890858) (21632,816528)
+witness re-check (all other vertices strictly left of every edge, distinct): OK
+
+### maxconv_a_k12.log
+file sets/mirror_S_k12.txt: n = 774
+duplicate points: 0
+mirror symmetric under (x,y)->(x,-y): YES; points on the axis y=0: 2
+collinear triples: 0 (checked all 76981524 triples)
+LARGEST SUBSET IN CONVEX POSITION (method A, angular DP): 11
+distribution over anchors of the largest convex polygon with that lowest vertex: [1]:1 [2]:1 [3]:2 [4]:4 [5]:8 [6]:16 [7]:28 [8]:49 [9]:93 [10]:186 [11]:386
+witness polygon (11 vertices, counterclockwise, 0-based input line indices): 0 1 5 15 35 70 126 385 384 374 329
+witness coordinates: (0,1489067) (4,1489083) (40,1489251) (224,1490281) (960,1495133) (3520,1514651) (11648,1584997) (77824,2638302) (77568,2635742) (74752,2603486) (60416,2405643)
+witness re-check (all other vertices strictly left of every edge, distinct): OK
+
+### maxconv_a_k14.log
+file sets/mirror_S_k14.txt: n = 3174
+duplicate points: 0
+mirror symmetric under (x,y)->(x,-y): YES; points on the axis y=0: 2
+collinear triples: 0 (checked all 5324255924 triples)
+LARGEST SUBSET IN CONVEX POSITION (method A, angular DP): 13
+distribution over anchors of the largest convex polygon with that lowest vertex: [1]:1 [2]:1 [3]:2 [4]:4 [5]:8 [6]:16 [7]:32 [8]:59 [9]:107 [10]:200 [11]:386 [12]:772 [13]:1586
+witness polygon (13 vertices, counterclockwise, 0-based input line indices): 0 1 6 21 56 126 252 462 1585 1584 1572 1506 1286
+witness coordinates: (0,42822930) (8,42822970) (96,42823474) (640,42827088) (3200,42846606) (13440,42935014) (50176,43289605) (172032,44590558) (1486848,75356730) (1485824,75344442) (1472512,75164218) (1391616,73862721) (1081344,67621126)
+witness re-check (all other vertices strictly left of every edge, distinct): OK
+       49.45 real        30.83 user         0.10 sys
+           122683392  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                7675  page reclaims
+                   2  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   3  voluntary context switches
+               28891  involuntary context switches
+        337663942067  instructions retired
+        109773235339  cycles elapsed
+           122306944  peak memory footprint
+

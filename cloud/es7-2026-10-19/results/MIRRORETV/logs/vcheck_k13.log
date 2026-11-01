@@ -1,0 +1,22 @@
+file=sets/blocks_S_k13.txt n=2048
+distinct: OK
+general position: OK (1429559296 triples)
+mirror symmetric (y): OK, axis points=0
+block  0 size    1 longest cap  1 (<=  1) longest cup  1 (<= 12)
+block  1 size   11 longest cap  2 (<=  2) longest cup 11 (<= 11)
+block  2 size   55 longest cap  3 (<=  3) longest cup 10 (<= 10)
+block  3 size  165 longest cap  4 (<=  4) longest cup  9 (<=  9)
+block  4 size  330 longest cap  5 (<=  5) longest cup  8 (<=  8)
+block  5 size  462 longest cap  6 (<=  6) longest cup  7 (<=  7)
+block  6 size  462 longest cap  7 (<=  7) longest cup  6 (<=  6)
+block  7 size  330 longest cap  8 (<=  8) longest cup  5 (<=  5)
+block  8 size  165 longest cap  9 (<=  9) longest cup  4 (<=  4)
+block  9 size   55 longest cap 10 (<= 10) longest cup  3 (<=  3)
+block 10 size   11 longest cap 11 (<= 11) longest cup  2 (<=  2)
+block 11 size    1 longest cap  1 (<= 12) longest cup  1 (<=  1)
+block lemma hypotheses: OK ((A) tests 581409972, (C) tests 802098704)
+ALG1 largest convex subset = 12
+witness (12 points, convex position OK): (-74915,-26844973329624086323) (-74917,-26844973329623268097) (-74919,-26844973329623175631) (-74921,-26844973329623163805) (-74923,-26844973329623162059) (-74925,-26844973329623161753) (-74927,-26844973329623161687) (-74929,-26844973329623161669) (-74931,-26844973329623161663) (-74933,-26844973329623161661) (-74935,-26844973329623161661) (-111925,-32810522958428873768)
+real 29.14
+user 28.67
+sys 0.05
