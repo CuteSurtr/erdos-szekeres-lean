@@ -1,0 +1,11 @@
+BIN=/opt/work/bin  WORK=/opt/work/tmp
+cadical   CaDiCaL 3.0.1  https://github.com/arminbiere/cadical  commit c60730422e758ef1cebe7aeddf2dda31c996bf04  (./configure && make)
+march_cu  https://github.com/marijnheule/CnC  commit 705b60c6491ef2b61988b3ce6ac674be1b90571d  (make CFLAGS="-O3 -fcommon" in march_cu/)
+cake_lpr  https://github.com/tanyongkiam/cake_lpr  commit a36874a8b750b43fe4b385b8ddbf5b033e46a3fa  (make cake_lpr); example.cnf/example.lpr -> s VERIFIED UNSAT
+sha256:
+0533f7bd6d8aa4d6d9695e2ad9130adf45103edfc27e701057ca964a036e61c8  /opt/work/bin/cadical
+1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca  /opt/work/bin/cake_lpr
+5239ba7c5f44f2468c721bc54991fa1374fee096b375f31271e18cee391061b2  /opt/work/bin/march_cu
+F.cnf: 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d  /opt/work/F.cnf
+CASE.cnf (U_L2): 1d26b9475d1609388bda1853cc22c1fba0bb73fb1a5f8a28adf9fbd3f15aaa53  /opt/work/CASE.cnf  (matches cases.jsonl cnf_sha256)
+top.icnf: 327 lines = len(tasks/H32.json["U_L2"]) = 327

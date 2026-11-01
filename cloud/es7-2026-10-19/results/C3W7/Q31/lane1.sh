@@ -1,0 +1,16 @@
+#!/bin/bash
+export PATH=/opt/bin:$PATH
+END=1792940488
+K=1
+cd /opt/c3u2/cloud/es7-2026-10-19/results/C3U2/tools
+tail -n +2 /opt/work/units.tsv | cut -f2 | awk -v k=$K '(NR-1)%3==k' | while read U; do
+  NOW=$(date +%s); [ $NOW -ge $END ] && break
+  grep -qs "SAT FOUND" /opt/work/driver0.log /opt/work/driver1.log /opt/work/driver2.log && { echo "=== STOP SAT"; break; }
+  echo "=== UNIT $U start $(date -u +%FT%TZ)"
+  python3 close_tree.py /opt/work/base.cnf /opt/work/out$K.jsonl $U --jobs 1 --sigma-split 3 --sigma-levels 3 --caps 900,600 --cadopts=--sat --hours 0.02 > /opt/work/ct$K.cur 2>&1
+  cat /opt/work/ct$K.cur >> /opt/work/ctfull$K.log
+  grep -h "SAT FOUND\|PROOF NOT ACCEPTED" /opt/work/ct$K.cur
+  tail -n 1 /opt/work/ct$K.cur
+  echo "=== UNIT $U end $(date -u +%FT%TZ)"
+done
+echo "=== LANE DONE $(date -u +%FT%TZ)"

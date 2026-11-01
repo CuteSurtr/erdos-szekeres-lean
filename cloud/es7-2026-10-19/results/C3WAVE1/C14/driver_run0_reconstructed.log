@@ -1,0 +1,19 @@
+# run 0 (08:53-09:19 UTC). driver.log was unlinked by a git rebase while the runner held it open;
+# this is the content read back from /proc/<pid>/fd/1 at 09:10, plus the last root's cur.log.
+=== ROOT 0s0-1s0_2s0-8s0 start 08:53:11 hours 3.58
+{"node": "0s0-1s0_2s0-8s0", "status": "UNSATISFIABLE", "solve_s": 39.3, "certified": true}
+=== ROOT 0s0-1s0_3s0-4s1 start 08:54:32 hours 3.558
+{"node": "0s0-1s0_3s0-4s1", "status": "UNSATISFIABLE", "solve_s": 76.4, "certified": true}
+=== ROOT 0s0-1s0_3s1-9s1 start 08:56:31 hours 3.525
+{"node": "0s0-1s0_3s1-9s1", "status": "UNSATISFIABLE", "solve_s": 78.6, "certified": true}
+=== ROOT 0s0-1s0_4s1-9s0 start 08:58:38 hours 3.489
+{"node": "0s0-1s0_4s1-9s0", "status": "UNSATISFIABLE", "solve_s": 56.8, "certified": true}
+=== ROOT 0s0-1s0_6s0-10s0 start 09:00:22 hours 3.461
+{"node": "0s0-1s0_6s0-10s0", "status": "UNSATISFIABLE", "solve_s": 25.8, "certified": true}
+=== ROOT 0s0-1s0_7s1-10s1 start 09:01:34 hours 3.441
+{"node": "0s0-1s0_7s1-10s1", "status": "UNSATISFIABLE", "solve_s": 6.4, "certified": true}
+=== ROOT 0s0-1s1_2s0-3s1 start 09:02:04 hours 3.432
+{"node": "0s0-1s1_2s0-3s1", "status": "UNKNOWN", "solve_s": 300.1, "certified": null}
+{"node": "0s0-1s1_2s0-3s1_4_8", "status": "UNSATISFIABLE", "solve_s": 6.6, "certified": false}
+PROOF NOT ACCEPTED 0s0-1s1_2s0-3s1_4_8
+# driver returned on PROOF NOT ACCEPTED but its pool kept running the rest of the batch with results discarded; killed at ~09:19

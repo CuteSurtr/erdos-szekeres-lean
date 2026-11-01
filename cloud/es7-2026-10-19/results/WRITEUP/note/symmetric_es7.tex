@@ -1,0 +1,263 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\title{Symmetric point sets and the Erd\H{o}s--Szekeres problem for heptagons\\[2pt]\large Draft, 29 October 2026}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let $ES(7)$ be the least $n$ such that every $n$ points in general position in the plane contain $7$ points in convex
+position; the Erd\H{o}s--Szekeres conjecture predicts $ES(7)=33$. We show, with computer-assisted proofs, that every
+$33$-point set in general position with a threefold rotational symmetry contains a convex heptagon, and that every
+mirror-symmetric set of at least $33$ points does. Together with explicit examples, the largest threefold-symmetric and
+mirror-symmetric sets without a convex heptagon have exactly $31$ and $32$ points. Combined with the fourfold result of
+Subercaseaux, Mackey, Qian and Heule and a fivefold exclusion, the only symmetric sets of at least $33$ points that could
+still avoid a convex heptagon are centrally symmetric sets of even size at least $34$. As companion material we record
+exact maxima for other symmetry types, with their antecedents, and an explicit centrally symmetric $32$-point example,
+which is a special case of a construction of Valtr described by Baek and Balko. None of this settles $ES(7)$ or improves
+its upper bound.
+\end{abstract}
+
+\section{Introduction}
+Erd\H{o}s and Szekeres~\cite{ES35} proved that $ES(k)$ is finite and constructed $2^{k-2}$ points in general position with
+no $k$ in convex position~\cite{ES61}; they conjectured $ES(k)=2^{k-2}+1$. The conjecture holds for $k\le 6$, the case
+$k=6$ by a computer search of Szekeres and Peters~\cite{SP06}, and $ES(k)\le 2^{k+o(k)}$ by Suk~\cite{Suk17}. The first
+open case is $k=7$.
+
+Symmetric configurations are a natural restricted search space. Subercaseaux, Mackey, Qian and Heule~\cite{SMQH25}
+built rotational symmetry into SAT encodings, found symmetric extremal sets for $k=6$, showed that no real fourfold
+symmetric $32$-point set avoids a convex heptagon, and asked for a realized twofold symmetric $32$-point example. Here we
+exclude symmetric counterexamples to $ES(7)=33$ except possibly centrally symmetric ones of even size at least $34$.
+
+Throughout, \emph{general position} means no three points on a line, and a \emph{$k$-gon} is a set of $k$ points in convex
+position. Computations are described with their trust base in Section~\ref{sec:trust}; directory names refer to
+\texttt{cloud/es7-2026-10-19/results} on the repository branch \texttt{es7-cloud}.
+
+\section{Which symmetries are possible}
+The symmetry group of a finite set fixes its centroid, so it is a cyclic group $C_s$ of rotations or a dihedral group.
+For a rotation of order $s$ about $c$, every orbit other than $\{c\}$ has exactly $s$ points and is the vertex set of a
+regular $s$-gon.
+\begin{lemma}\label{lem:sizes}
+Let $S$ be in general position and invariant under a rotation $\rho$ of order $s\ge 2$ about $c$.
+(a) If $s\ge 7$ and $S\ne\{c\}$, then $S$ contains a $7$-gon.
+(b) If $s$ is even and $|S|\ge 3$, then $c\notin S$ and $s$ divides $|S|$.
+(c) If $s$ is odd, then $|S|\equiv 0$ or $1 \pmod s$.
+\end{lemma}
+\begin{proof}
+(a) An orbit is a convex $s$-gon. (b) $\rho^{s/2}$ is the half-turn, so $c,p,\rho^{s/2}(p)$ are collinear for every $p$;
+hence $c\notin S$ and all orbits have size $s$. (c) At most the centre is a fixed point.
+\end{proof}
+
+\section{Threefold symmetry}
+\begin{theorem}[computer-assisted]\label{thm:A}
+Every set of $33$ points in general position that is invariant under a rotation of order $3$ contains $7$ points in convex
+position. The largest threefold-symmetric set in general position without a convex heptagon has exactly $31$ points.
+\end{theorem}
+A threefold set has $3m$ or $3m+1$ points, so one with at least $33$ points contains $11$ whole orbits of size $3$, a
+$33$-point threefold set without its centre; $32$ is not a possible size. An exact $31$-point example (centre included)
+is \texttt{SYMMAX/c3\_31points.txt}.
+
+For the $33$-point case, a projective normal form of the labelling (\texttt{C3-S/soundness.md}) gives a CNF with
+$168{,}399$ variables and $4{,}154{,}921$ clauses. Its unsatisfiability was established by splitting on the convex layers
+and on orientation bits of symmetric residues into $116{,}883$ certified pieces. A reflection of the $H6$ strata (Lemma
+H6M) leaves $910$ depth-$2$ roots. For each piece, CaDiCaL produced an LRAT proof that was accepted at solve time both by
+\texttt{lrat-check} and by the formally verified checker \texttt{cake\_lpr}~\cite{THM21}; these proofs were then deleted.
+Two independently written composers recompute the CNF hash of every certified piece from the base formula and find all
+$910$ roots covered (\texttt{C3FINAL}); an independent audit replayed this composition. In addition, $2{,}120$ randomly
+drawn pieces were re-solved from scratch with fresh proofs and both checkers (\texttt{C3SPOT}).
+
+\section{Mirror symmetry}\label{sec:mirror}
+\begin{theorem}[computer-assisted]\label{thm:M}
+Every mirror-symmetric set of at least $33$ points in general position contains $7$ points in convex position. The largest
+mirror-symmetric set in general position without a convex heptagon has exactly $32$ points.
+\end{theorem}
+\begin{proof}[Assembly]
+By general position at most two points lie on the axis. If none does, the size is even, hence at least $34$, and $17$
+mirror pairs form an axis-free $34$-point mirror set: this is excluded by Theorem~\ref{thm:M34}. If one or two do, $16$
+mirror pairs and one axis point form a $33$-point mirror set with exactly one point on the axis: this is excluded by
+Theorem~\ref{thm:M33}. An exact $32$-point example with $16$ pairs is \texttt{SYMMAX/mirror\_32points.txt}.
+\end{proof}
+
+\begin{theorem}[computer-assisted]\label{thm:M33}
+A mirror-symmetric set of $33$ points in general position with exactly one point on the axis contains a $7$-gon.
+\end{theorem}
+\begin{theorem}[computer-assisted]\label{thm:M34}
+A mirror-symmetric set of $34$ points in general position with no point on the axis contains a $7$-gon.
+\end{theorem}
+Theorem~\ref{thm:M33} has two independent proofs. The first (\texttt{WRITEUP/MIRROR.md}) uses a signotope encoding whose
+soundness, normal forms, case split and leaf cover are verified in Lean~4; its roughly $75{,}000$ CNF facts carry recorded
+\texttt{cake\_lpr} verdicts, and their proof files were not retained. The second, and the proof of Theorem~\ref{thm:M34},
+use the encoding below; each is a single CNF with a retained LRAT proof accepted by \texttt{lrat-check} and
+\texttt{cake\_lpr} (\texttt{SYMZ}).
+
+\paragraph{The encoding.} Put the axis on the $y$-axis, write the pairs as $L_i=(-a_i,b_i)$, $R_i=(a_i,b_i)$ with
+$a_i>0$, use homogeneous vectors $v_p=(1,x_p,y_p)$, and add one element $Z$ with vector $(0,1,0)$, the horizontal point
+at infinity. The chirotope $\chi=\operatorname{sign}\det$ of the set and $Z$ satisfies:
+(i) $\det(v_Z,v_p,v_q)=y_p-y_q$, so the zero triples are exactly $\{Z,L_i,R_i\}$;
+(ii) the reflection acts by $\operatorname{diag}(1,-1,1)$, which has determinant $-1$ and negates $v_Z$, so it reverses
+the orientation of triples of set points and preserves that of triples containing $Z$;
+(iii) $v_{R_i}-v_{L_i}=2a_iv_Z$ with $a_i>0$, so $\chi(Z,L_i,q)=\chi(R_i,L_i,q)=\chi(Z,R_i,q)$;
+(iv) the three-term Grassmann--Pl\"ucker relations hold, and the vectors are acyclic, since $w+\varepsilon x$ is positive
+on all of them for small $\varepsilon>0$;
+(v) numbering the pairs by decreasing height gives $\det(v_Z,v_{L_i},v_{L_j})=b_i-b_j>0$ for $i<j$.
+The CNF encodes (i)--(v), with variables for the classes of identified triples, and the absence of a $7$-gon through the
+four-point criterion. Every real configuration therefore gives a satisfying assignment, so unsatisfiability excludes
+all real configurations. The converse fails: a satisfying assignment need not be realizable, and $Z$ imposes no metric
+condition.
+
+For $34$ points the CNF has $838{,}032$ variables and $16{,}642{,}456$ clauses and is refuted by CaDiCaL in $443$\,s; for
+$33$ points with one axis point it has $695{,}928$ variables and $14{,}080{,}656$ clauses and is refuted in $964$\,s.
+The encoding was tested on real symmetric sets and on $3{,}300$ random symmetric sets (satisfiable exactly when no
+$K$-gon exists, no mismatch), and it reproduces the mirror hexagon bound of Proposition~\ref{prop:mirror}.
+
+\begin{corollary}\label{cor:only}
+Assume Theorems~\ref{thm:A} and~\ref{thm:M}, Theorem~\ref{thm:E} below and the fourfold exclusion
+of~\cite[\S6.2]{SMQH25}. Then a set of at least $33$ points in general position without a convex heptagon either has no
+nontrivial symmetry or has symmetry group exactly the half-turn group, and then it has an even number of points, at
+least $34$.
+\end{corollary}
+\begin{proof}
+Reflections are excluded by Theorem~\ref{thm:M}. Rotations of order $s\ge7$ are excluded by Lemma~\ref{lem:sizes}(a), and
+orders $3$, $4$ and $5$ by deleting whole orbits; order $6$ contains order $3$. The half-turn remains, and by
+Lemma~\ref{lem:sizes}(b) its centre is not a point of the set.
+\end{proof}
+
+\section{Companion results}\label{sec:comp}
+\begin{lemma}\label{lem:layers}
+Let $S$ be in general position and invariant under a rotation $\rho$ of order $m\ge 4$ about a point $c\notin S$, and
+suppose $S$ has no $K$ points in convex position for some $K\le 2m$. Then every convex layer of $S$ is a single orbit.
+\end{lemma}
+\begin{proof}
+The vertex set $V$ of $\operatorname{conv}(S)$ is invariant under $\rho$, so it is a union of orbits of $m$ points each,
+and it is in convex position; hence $|V|<K\le 2m$ and $V$ is one orbit. Apply the same argument to $S\setminus V$.
+\end{proof}
+
+\begin{theorem}[computer-assisted]\label{thm:E}
+Every set of at least $35$ points in general position with a rotation of order $5$ contains $7$ points in convex position.
+\end{theorem}
+Such a set contains a $35$-point fivefold set without centre, which by Lemma~\ref{lem:layers} would be seven nested
+regular pentagons. The CNF of \texttt{tools/symmetric/symcnf.py} for this case (an auxiliary centre, in general position
+after rotating each orbit slightly) is refuted in $415$\,s, and a second normal form using Lemma~\ref{lem:layers} in
+$54$\,s; both LRAT proofs are retained and accepted by both checkers (\texttt{SYM5}).
+\begin{remark}
+Theorem~\ref{thm:E} also follows from an earlier reported computation. Bogdan~\cite{Bog25} reports an unsatisfiable run
+for $33$ points with six convex pentagonal layers and three unconstrained interior points, and deleting two points of the
+innermost pentagon of a $35$-point fivefold set gives exactly that configuration. No proof files for that run are public,
+so we treat it as a prior reported claim rather than an independently verified theorem.
+\end{remark}
+
+\begin{proposition}\label{prop:C}
+Let $N(\Gamma)$ be the largest size of a set in general position with symmetry $\Gamma$ and no $7$ points in convex
+position. Then $N(C_3)=31$ and $N(\text{mirror})=32$ (Theorems~\ref{thm:A} and~\ref{thm:M}), $N(C_6)=30$, $N(C_4)=28$,
+$N(C_5)=31$ and $N(C_2)\ge 32$, with $N(C_2)=32$ if $ES(7)=33$.
+\end{proposition}
+\begin{proof}
+Lower bounds are exact examples in \texttt{SYMMAX} and \texttt{SYM2}, found by simulated annealing with exact arithmetic
+and checked by a dynamic program and by brute force over all $7$-subsets. A sixfold set of $36$ points contains a
+threefold $33$-point set, so $N(C_6)=30$ follows from Theorem~\ref{thm:A}. The fourfold bound is due
+to~\cite[\S6.2]{SMQH25}, who also report realizable $28$-point restrictions. The fivefold bound is Theorem~\ref{thm:E}
+and Lemma~\ref{lem:sizes}(c).
+\end{proof}
+
+\paragraph{An explicit centrally symmetric example.} Baek and Balko~\cite[Definition~13, Lemma~14 and \S6.1]{BB25}
+describe a construction of Valtr that blows up an arbitrary set of $k-1$ points in general position into $2^{k-2}$ points
+without a convex $k$-gon, using clusters with cup and cap parameters $x_i=i-1$ and $y_i=k-i-1$. For odd $k$, a
+centrally symmetric base with clusters paired by the half-turn, which exchanges cups and caps and the two parameters,
+gives a centrally symmetric set. The following is an explicit case of this, rotated by a quarter-turn, with a direct
+proof. Sort points by $x$-coordinate. An \emph{$a$-cup} is a sequence of $a$ points whose consecutive slopes increase,
+an \emph{$a$-cap} one whose slopes decrease; let $G(a,b)$ be the classical set of $\binom{a+b-4}{a-2}$ points in general
+position with no $a$-cup and no $b$-cap~\cite{ES35}. The half-turn $h(p)=-p$ exchanges cups and caps.
+
+\begin{proposition}\label{prop:B}
+Let $k\ge3$ be odd, $n=k-2$ and $x_i=2i-n$. For $i<n/2$ place a copy of $G(i+2,k-i)$, flattened by
+$(x,y)\mapsto(\varepsilon x,\varepsilon^2y)$, at $(x_i,x_i^3)$, and for $i>n/2$ place the image under $h$ of the copy at
+index $n-i$. For small $\varepsilon$ the union $S$ is a centrally symmetric set of $2^{k-2}$ points in general position
+without $k$ points in convex position.
+\end{proposition}
+\begin{proof}
+Cluster $B_i$ has no $(i+2)$-cup and no $(k-i)$-cap, and $|S|=\sum_i\binom{n}{i}=2^{k-2}$. Three points of the cubic at
+$x=a,b,c$ are collinear iff $a+b+c=0$, impossible for odd numbers. The slope between clusters $a<b$ is close to
+$\sigma(a,b)=x_a^2+x_ax_b+x_b^2\ge1$, slopes inside clusters tend to $0$, and
+$\sigma(b,c)-\sigma(a,b)=(x_c-x_a)(x_a+x_b+x_c)$; so for small $\varepsilon$ the set is in general position and
+consecutive segments between clusters turn according to the sign of $x_a+x_b+x_c$.
+
+Let $P\subseteq S$ be in convex position with leftmost point in $B_l$ and rightmost point in $B_r$. If $l=r$ then
+$|P|\le k-2$. Otherwise the lower chain is a cup in $B_l$ (at most $l+1$ points), then single points in clusters
+$c_1<\dots<c_t$ strictly between $l$ and $r$, and the upper chain is single points in clusters $d_1<\dots<d_s$ strictly
+between, then a cap in $B_r$ (at most $k-r-1$ points). The turn conditions reduce to $x_l+x_{c_1}+x_{c_2}>0$ (with
+$c_2=r$ if $t=1$) and $x_{d_{s-1}}+x_{d_s}+x_r<0$ (with $d_{s-1}=l$ if $s=1$). If $t,s\ge1$ and $c_1\le d_s$, comparing
+the two sums termwise gives a contradiction; so the clusters used by the two chains are distinct, $t+s\le r-l-1$, and
+$|P|\le(l+1)+(k-r-1)+t+s\le k-1$.
+\end{proof}
+For $k=7$ this gives $32$ points; an integer instance with coordinates of absolute value at most $1{,}250{,}000$ is in
+\texttt{SYM2}, checked by a dynamic program and by brute force over all $\binom{32}{7}$ subsets. It answers the concrete
+realization task of~\cite{SMQH25}; it is not a new general construction method.
+
+\paragraph{Hexagons.} For $k=6$ the largest symmetric sets without a convex hexagon have $16$ points for twofold,
+fourfold and fivefold rotations (the fourfold and fivefold examples are in~\cite{SMQH25}; a fourfold set is twofold),
+$13$ points for threefold rotations ($15$ and $16$ points are excluded by retained LRAT proofs; $16$ agrees
+with~\cite{SMQH25}), and $12$ points for a reflection, by the following elementary bound.
+
+\begin{lemma}\label{lem:mirror}
+Let $S$ be in general position and symmetric under the reflection $\mu$ in a line $\ell$, and let $p_1,\dots,p_j$ be
+points of $S$ strictly on one side of $\ell$, ordered by their projections to $\ell$, forming a chain in which every middle
+point is farther from $\ell$ than the chord of its neighbours. Then $\{p_1,\dots,p_j,\mu p_1,\dots,\mu p_j\}$ is in convex
+position.
+\end{lemma}
+\begin{proof}
+Traverse $p_1,\dots,p_j,\mu p_j,\dots,\mu p_1$. Along each chain the turns have a common sign because the chain bulges
+away from $\ell$. At $p_j$ the next edge is perpendicular to $\ell$, and the turn has the same sign, its cross product being
+$2\,\mathrm{dist}(p_j,\ell)$ times the projection gap. The same holds at $p_1$, and the mirror images give the rest.
+\end{proof}
+
+\begin{proposition}\label{prop:mirror}
+Let $k=2j$ be even, and let $S$ be a mirror-symmetric set in general position with no $k$ points in convex position. Then
+$|S|\le 2\binom{3j-4}{2j-2}+2$; in particular $|S|\le 12$ for $k=6$ and $|S|\le 58<2^{6}$ for $k=8$.
+\end{proposition}
+\begin{proof}
+With the projection to $\ell$ as abscissa and the distance to $\ell$ as height, Lemma~\ref{lem:mirror} says the points on
+one side have no $j$-cap; they have no $k$-cup, since a cup is in convex position. By the cups-caps theorem~\cite{ES35}
+there are at most $\binom{3j-4}{2j-2}$ of them, and at most two points lie on $\ell$.
+\end{proof}
+
+\section{Trust base}\label{sec:trust}
+\emph{Geometric soundness} of every encoding rests on written proofs, which were audited independently: the threefold
+normal form and encodings, the fivefold encodings and Lemma~\ref{lem:layers}, and the mirror encoding of
+Section~\ref{sec:mirror}. \emph{Lean-verified} are only the reductions of the first proof of Theorem~\ref{thm:M33}.
+\emph{External certificate checks} use \texttt{lrat-check} (with a patch for a known upstream defect) and
+\texttt{cake\_lpr}, a checker verified in CakeML; the checkers themselves are trusted. For the threefold theorem the
+per-piece proofs are \emph{recorded verdicts} only: they were checked at solve time and then deleted; the composition and
+$2{,}120$ random pieces were \emph{replayed}, which is evidence but not an exhaustive recheck. The mirror and fivefold
+proofs are retained in a compressed archive with their hashes, and the $34$-point mirror proof was replayed by an
+independent audit.
+
+\section{What remains open}
+$ES(7)$ itself is open, and no unrestricted bound is improved here. By Corollary~\ref{cor:only}, the remaining symmetric
+route to a counterexample is a centrally symmetric set of even size at least $34$; excluding $34$ points would exclude
+all of them. For the analogous encoding with the centre $c$ as an element ($v_c=(v_p+v_{-p})/2$, so
+$\chi(c,p,q)=\chi(-p,p,q)$), a split by the convex hull into $136$ cases has a certified cover. All $120$
+hexagonal-hull cases are refuted, each with a retained proof accepted by both checkers, so a centrally symmetric $34$-point counterexample would
+have a parallelogram hull. The parallelogram cases are open; nested parallelograms, the layer structure of the extremal $32$-point sets,
+are the hard core (\texttt{C2C34}). An abstract centre imposes no metric midpoint condition and no
+realizability: the fourfold $32$-point formula of the same kind is satisfiable, as~\cite{SMQH25} also observed for its own
+model, although no real set exists. Only an unsatisfiable answer, with a justified case cover, would settle the case.
+
+\begin{thebibliography}{9}
+\bibitem{BB25} J.~Baek and M.~Balko, The Erd\H{o}s--Szekeres conjecture revisited, in \emph{41st International Symposium on Computational Geometry (SoCG 2025)}, LIPIcs~332, paper~13, 2025.
+\bibitem{Bog25} D.~Bogdan, Notes on the 33-point Erd\H{o}s--Szekeres problem, arXiv:2512.24061 (2025).
+\bibitem{ES35} P.~Erd\H{o}s and G.~Szekeres, A combinatorial problem in geometry, \emph{Compositio Math.} 2 (1935), 463--470.
+\bibitem{ES61} P.~Erd\H{o}s and G.~Szekeres, On some extremum problems in elementary geometry, \emph{Ann. Univ. Sci. Budapest. E\"otv\"os Sect. Math.} 3--4 (1960/61), 53--62.
+\bibitem{SP06} G.~Szekeres and L.~Peters, Computer solution to the 17-point Erd\H{o}s--Szekeres problem, \emph{ANZIAM J.} 48 (2006), 151--164.
+\bibitem{Suk17} A.~Suk, On the Erd\H{o}s--Szekeres convex polygon problem, \emph{J. Amer. Math. Soc.} 30 (2017), 1047--1053.
+\bibitem{SMQH25} B.~Subercaseaux, E.~Mackey, L.~Qian and M.~J.~H.~Heule, Automated symmetric constructions in discrete geometry, arXiv:2506.00224 (2025). The final version in the CICM 2025 proceedings was not accessible to us.
+\bibitem{THM21} Y.~K.~Tan, M.~J.~H.~Heule and M.~O.~Myreen, cake\_lpr: verified propagation redundancy checking in CakeML, \emph{TACAS} 2021.
+\end{thebibliography}
+\end{document}

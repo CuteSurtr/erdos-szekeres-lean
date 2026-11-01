@@ -1,0 +1,20 @@
+{"event": "start", "solver_opts": ["--elim=0"], "nworkers": 5, "base": 10000, "grow": 1.2, "cap": 2000000, "maxcand": 400, "open": 1, "t": 0.1}
+{"event": "worker_ready", "w": 4, "t": 51.6}
+{"event": "worker_ready", "w": 2, "t": 51.9}
+{"event": "worker_ready", "w": 1, "t": 52.0}
+{"event": "worker_ready", "w": 3, "t": 52.3}
+{"event": "worker_ready", "w": 0, "t": 52.4}
+{"event": "stop_file", "t": 575.7}
+{"event": "worker_died", "w": 2, "cube": [-1456, -1094, -307, 1294], "t": 575.8}
+{"event": "worker_died", "w": 0, "cube": [1456, 406, -1674], "t": 575.8}
+{"event": "worker_died", "w": 1, "cube": [1456, 406, 1674], "t": 575.8}
+{"event": "worker_died", "w": 3, "cube": [-1456, -1094, -307, -1294], "t": 575.8}
+{"event": "worker_died", "w": 4, "cube": [1456, -406, 768], "t": 575.8}
+{"event": "start", "solver_opts": ["--elim=0"], "nworkers": 7, "base": 10000, "grow": 1.2, "cap": 2000000, "maxcand": 400, "open": 13, "t": 577.8}
+{"event": "worker_ready", "w": 3, "t": 621.6}
+{"event": "worker_ready", "w": 6, "t": 626.1}
+{"event": "worker_ready", "w": 2, "t": 626.2}
+{"event": "worker_ready", "w": 1, "t": 626.3}
+{"event": "worker_ready", "w": 5, "t": 626.8}
+{"event": "worker_ready", "w": 0, "t": 627.0}
+{"event": "worker_ready", "w": 4, "t": 627.5}

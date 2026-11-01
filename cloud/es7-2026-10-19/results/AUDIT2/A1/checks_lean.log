@@ -1,0 +1,12 @@
+Data.lean: 450 specs/cubes equal Mii-S cases.icnf and cases.jsonl order; specs distinct
+Lean tree leaves total 74000 cases with .leaf 310
+Lean hullLeaves decoded: 1198
+dump: cases 450 leaves 74000 ups 121 hull 1198
+Lean-evaluated specs, case cubes, tree leaves (in order) and hullLeaves equal the Python decoding
+a6626612d085ccd99fbee79631d145c5e9eced7590efd6a1352c77228d3abe51  /tmp/claude-0/w/dump.txt
+69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d  /tmp/claude-0/w/F_lean.cnf
+bfbc2d6096e4099ba751130d421eca9da18b72559991103cc2d4b4bc0d92757d  /tmp/claude-0/w/H_lean.cnf
+F_lean == F_py (cmp)
+Data.lean: 450 specs/cubes equal Mii-S cases.icnf and cases.jsonl order; specs distinct
+Lean tree leaves total 74000 cases with .leaf 310
+upTable (Lean-evaluated) equals Python decoding: True 121

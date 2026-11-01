@@ -1,0 +1,13 @@
+C3-S/C3a tools: git worktree of 132398c at /opt/c3s (unmodified); TOOLS=/opt/c3s/cloud/es7-2026-10-19/results/C3-S/tools
+sigma_cubes.py: results/C3PLAN/scripts/sigma_cubes.py at 4641a656 copied into TOOLS unmodified (git show 4641a656, cmp identical)
+refine6.py: driver copied from results/C3SIG2/G5/refine6.py (copy in this directory), placed in TOOLS; imports sigma_cubes unmodified and calls sigma_cubes.run((base, node, bits6, vals6, 300)), 3 jobs
+cadical: https://github.com/arminbiere/cadical c60730422e758ef1cebe7aeddf2dda31c996bf04 (version 3.0.1), ./configure && make -> /opt/bin/cadical
+cake_lpr: https://github.com/tanyongkiam/cake_lpr a36874a8b750b43fe4b385b8ddbf5b033e46a3fa, make cake_lpr -> /opt/bin/cake_lpr; example.cnf/example.lpr -> s VERIFIED UNSAT
+lrat-check: https://github.com/marijnheule/drat-trim 2e3b2dc0ecf938addbd779d42877b6ed69d9a985 + results/E2/tools/lrat-check-E2.patch (normal diff, patch lrat-check.c < patch), gcc -O2 -> /opt/bin/lrat-check
+  sanity: CNF {1},{-1}; LRAT "3 0 0" -> lrat-check "c FAILED: empty clause without a RUP conflict" / "c NOT VERIFIED", cake_lpr "c Checking failed at line: 0. Reason: pivot must be non-zero" (rejected); "3 0 1 2 0" -> lrat-check "c VERIFIED", cake_lpr "s VERIFIED UNSAT"
+base CNF: gen_case.py 11 7 none -o /opt/work/base.cnf -> p cnf 168399 4154921, sha256 bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da (matches)
+nodes: rows of results/C3SIG2/nodes.tsv with row % 4 == 3 (rows 3,7,11,15; all H3/two) -> nodes.tsv
+  6 smallest free residues: 0s0_1s0-5s0 [2,3,4,6,7,8]; 0s0_1s1-9s1 [2,3,4,5,6,7]; 0s0_2s1-8s1 [1,3,4,5,6,7]; 0s0_4s0-7s1 [1,2,3,5,6,8]
+runner: runner.sh (setsid nohup). END = start 05:44:45Z + 2.5 h - 15 min = 07:59:45Z. Each node gets (END - now)/(nodes left);
+  K=3 first; refinement only if K=3 cubes stay open and >5 min of the share is left; killed at the share deadline
+  (cubes not finished by then are unrecorded = open; the meta "run" record has killed_at_share_deadline).

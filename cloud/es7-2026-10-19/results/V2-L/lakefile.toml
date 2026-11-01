@@ -1,0 +1,20 @@
+name = "v2l"
+version = "0.1.0"
+defaultTargets = ["V2L", "v2l_data"]
+
+# `results/H3` (MirrorEncoding) and `results/V1-L` (V1L, sub-case (i)), and through them
+# `results/H`, the parent repository and Mathlib.
+[[require]]
+name = "mirror_encoding"
+path = "../H3"
+
+[[require]]
+name = "v1l"
+path = "../V1-L"
+
+[[lean_lib]]
+name = "V2L"
+
+[[lean_exe]]
+name = "v2l_data"
+root = "V2L.DataEq"

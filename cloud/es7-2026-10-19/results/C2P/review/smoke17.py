@@ -1,0 +1,16 @@
+import sys, time, random, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from geom import *
+mp = Map(sys.argv[1]); hull = load_cubes(sys.argv[2])
+rng = random.Random(5)
+P, p0 = design(17, 8, (1, 9), rng)
+print("gp", general_position(P))
+t0 = time.time()
+X = normal_form(P, p0); val = mp.assign(X)
+print("assign", time.time() - t0)
+H, V2, Hp, H2p = geometry_case(X)
+print("hull classes", H, "second layer", V2, len(Hp), len(H2p))
+print("hull cubes sat", [n for n, c in hull.items() if cube_true(val, c)])
+l2 = load_cubes(sys.argv[3])
+t0 = time.time()
+print("l2 sat", [n for n, c in l2.items() if cube_true(val, c)], time.time() - t0)

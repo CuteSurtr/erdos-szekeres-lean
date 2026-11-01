@@ -1,0 +1,18 @@
+close_march.py: byte-for-byte copy of results/WAVE2/F2/close_march.py (cmp: identical; no diff).
+sha256 2e0975aa98c7dbcc2cf535993b54f57db764f7bf50f64fc54b9ff2860e67c855
+
+Checked:
+(a) fresh directory per job: march() uses tempfile.mkdtemp(prefix="m_<tag>_", dir=WORK) (line 39);
+    solve() uses tempfile.mkdtemp(prefix="s_<k>_", dir=WORK) (line 83); cake_lpr checks the
+    f.cnf/p.lrat of that same per-job directory (lines 91-93). No shared scratch names.
+(b) finalize().atomic() writes leaves.icnf and open.icnf with tempfile.mkstemp in the output dir,
+    then os.replace into place (lines 136-143).
+(c) the first leaves.jsonl record is {"case": --name, "case_sha256": sha256 of the case CNF}
+    (lines 117-119); run with --name U_L7.
+Also: a leaf is written to leaves.icnf only if status UNSAT and cake_lpr == "s VERIFIED UNSAT"
+(lines 53, 141; AUDIT BUG-1); other verdicts are UNSAT_UNCHECKED and stay open.
+Output dir /opt/work/out/U_L7 is outside the git checkout (RISK-3/rebase safety).
+Run: BIN=/opt/work/bin WORK=/opt/work/tmp close_march.py /opt/work/CASE.cnf /opt/work/out/U_L7 --name U_L7
+     --top /opt/work/top.icnf --depth 7 --timeout 300 --split-depth 6 --jobs 4 --hours 2.217 (started 13:23:01 UTC)
+(An earlier start at 13:22:31 had a wrong --hours value; it was killed within a minute before any record
+ beyond the header and its output dir and scratch were deleted.)

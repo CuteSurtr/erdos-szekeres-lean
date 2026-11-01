@@ -1,0 +1,9 @@
+C3SIG G3, j = 3, H = 2.0, task file at 640a56c2. Start 04:39 UTC 2026-10-21.
+C3-S tools: git worktree /opt/c3s at 132398c (formerly 8dc27c3); TOOLS=/opt/c3s/cloud/es7-2026-10-19/results/C3-S/tools, unmodified.
+sigma_cubes.py: copied unmodified from results/C3PLAN/scripts/sigma_cubes.py (es7-cloud) into TOOLS; sha256 716aa57d6f25b391ffaf659af6221f425e7533c6fed3cbf6c55cbcb547e1a915
+CaDiCaL 3.0.1, commit c60730422e758ef1cebe7aeddf2dda31c996bf04 -> /opt/bin/cadical
+cake_lpr a36874a8b750b43fe4b385b8ddbf5b033e46a3fa (make cake_lpr) -> /opt/bin/cake_lpr; example.cnf/example.lpr prints: s VERIFIED UNSAT
+drat-trim lrat-check 2e3b2dc0ecf938addbd779d42877b6ed69d9a985 + results/E2/tools/lrat-check-E2.patch (applied with patch(1); normal-diff format) -> /opt/bin/lrat-check
+Sanity on CNF {1},{-1}: LRAT '3 0 0' rejected by both (lrat-check: c NOT VERIFIED, E2 message; cake_lpr: no s VERIFIED line); '3 0 1 2 0' accepted by both (c VERIFIED / s VERIFIED UNSAT).
+Base CNF: gen_case.py 11 7 none -o /opt/work/base.cnf: header p cnf 168399 4154921, sha256 bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da (matches).
+Nodes: rows of results/C3W3/lists/S_sigma_nodes.tsv with row = 3 mod 4 (nodes.tsv). Runner: runner.sh (per-node deadline = even share of the time left until 06:24 UTC; K=6 run only if a K=3 cube stays open, killed at the deadline).

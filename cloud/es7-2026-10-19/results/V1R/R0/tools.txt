@@ -1,0 +1,8 @@
+CaDiCaL 3.0.1 git c60730422e758ef1cebe7aeddf2dda31c996bf04, ./configure && make
+cake_lpr git a36874a8b750b43fe4b385b8ddbf5b033e46a3fa, make cake_lpr (gcc 13.3.0)
+cake_lpr.S sha256 2f3af32d55083839b3fa0e693afd817679c0b8944bef41def05a8b0ec72b7d4a
+basis_ffi.c sha256 8e30d84fdcb2177aa5571d7fa6661a2fae5ecfd56baa0ce49c65f9233a9f87cb
+example: s VERIFIED UNSAT
+generator: tools/etv/gen_etv.py 33 7 7 7 --mirror --hull, then results/C/scripts/mirgen.py hm33k7.cnf 33 --hull (results/C/scripts/make_cnfs.sh lines); python Python 3.11.17
+hm33k7.sub.cnf sha256 bfbc2d6096e4099ba751130d421eca9da18b72559991103cc2d4b4bc0d92757d (expected bfbc2d60...757d: match), header p cnf 47002 535454
+verify/hull_leaves.icnf sha256 cc11270a57ebe85ad1d5c83b15da0a3439521cc7ebd50432f16c223a1b2478b6 (expected cc11270a...78b6: match)

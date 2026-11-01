@@ -1,0 +1,1994 @@
+{
+ "task": "F: calibrated realizer (cloud/es7-2026-10-19)",
+ "machine": {
+  "cores": 15,
+  "note": "15-core Mac shared with other sessions (load average 120-130), processes niced; budgets and times are CPU seconds (time.process_time); wall time was about 8-10x larger"
+ },
+ "exact_check": "every realized point set re-checked with Fraction arithmetic: all C(n,3) orientations equal the model, no collinear triple",
+ "calibration_a_known_realizable": {
+  "run1": {
+   "multiscale33": {
+    "family": "multiscale",
+    "n": 33,
+    "m": 1,
+    "trials": 20,
+    "realized": 17,
+    "rate": 0.85,
+    "cpu_budget_s": 30.0,
+    "median_cpu_s_realized": 15.325,
+    "max_cpu_s_realized": 20.715,
+    "realized_by_method": {
+     "ins": 16,
+     "lp": 1
+    },
+    "methods": [
+     "lp",
+     "ins",
+     "free",
+     "polish"
+    ],
+    "complete": true
+   },
+   "pool32": {
+    "family": "pool",
+    "n": 32,
+    "m": 1,
+    "trials": 30,
+    "realized": 14,
+    "rate": 0.467,
+    "cpu_budget_s": 30.0,
+    "median_cpu_s_realized": 14.999,
+    "max_cpu_s_realized": 20.476,
+    "realized_by_method": {
+     "lp": 4,
+     "ins": 10
+    },
+    "methods": [
+     "lp",
+     "ins",
+     "free",
+     "polish"
+    ],
+    "complete": true
+   },
+   "sym16m4": {
+    "family": "sym",
+    "n": 16,
+    "m": 4,
+    "trials": 20,
+    "realized": 20,
+    "rate": 1.0,
+    "cpu_budget_s": 30.0,
+    "median_cpu_s_realized": 0.139,
+    "max_cpu_s_realized": 0.214,
+    "realized_by_method": {
+     "sym": 20
+    },
+    "methods": [
+     "auto",
+     "sym",
+     "lp",
+     "ins-ff",
+     "polish"
+    ],
+    "complete": true
+   },
+   "sym16m5c": {
+    "family": "sym",
+    "n": 16,
+    "m": 5,
+    "trials": 20,
+    "realized": 20,
+    "rate": 1.0,
+    "cpu_budget_s": 30.0,
+    "median_cpu_s_realized": 0.1,
+    "max_cpu_s_realized": 0.197,
+    "realized_by_method": {
+     "sym": 20
+    },
+    "methods": [
+     "auto",
+     "sym",
+     "lp",
+     "ins-ff",
+     "polish"
+    ],
+    "complete": true
+   },
+   "sym32m2": {
+    "family": "sym",
+    "n": 32,
+    "m": 2,
+    "trials": 20,
+    "realized": 20,
+    "rate": 1.0,
+    "cpu_budget_s": 30.0,
+    "median_cpu_s_realized": 4.923,
+    "max_cpu_s_realized": 13.618,
+    "realized_by_method": {
+     "sym2-ins": 20
+    },
+    "methods": [
+     "auto",
+     "ins",
+     "sym",
+     "lp",
+     "ins-ff"
+    ],
+    "complete": true
+   },
+   "sympool32m2": {
+    "family": "sympool",
+    "n": 32,
+    "m": 2,
+    "trials": 30,
+    "realized": 27,
+    "rate": 0.9,
+    "cpu_budget_s": 30.0,
+    "median_cpu_s_realized": 3.818,
+    "max_cpu_s_realized": 13.655,
+    "realized_by_method": {
+     "sym2-ins": 25,
+     "lp": 2
+    },
+    "methods": [
+     "auto",
+     "ins",
+     "sym",
+     "lp",
+     "ins-ff"
+    ],
+    "complete": true
+   },
+   "uniform16": {
+    "family": "uniform",
+    "n": 16,
+    "m": 1,
+    "trials": 20,
+    "realized": 20,
+    "rate": 1.0,
+    "cpu_budget_s": 30.0,
+    "median_cpu_s_realized": 0.038,
+    "max_cpu_s_realized": 0.146,
+    "realized_by_method": {
+     "lp": 20
+    },
+    "methods": [
+     "lp",
+     "ins",
+     "free",
+     "polish"
+    ],
+    "complete": true
+   },
+   "uniform26": {
+    "family": "uniform",
+    "n": 26,
+    "m": 1,
+    "trials": 20,
+    "realized": 20,
+    "rate": 1.0,
+    "cpu_budget_s": 30.0,
+    "median_cpu_s_realized": 1.307,
+    "max_cpu_s_realized": 6.244,
+    "realized_by_method": {
+     "ins": 17,
+     "lp": 3
+    },
+    "methods": [
+     "lp",
+     "ins",
+     "free",
+     "polish"
+    ],
+    "complete": true
+   },
+   "uniform33": {
+    "family": "uniform",
+    "n": 33,
+    "m": 1,
+    "trials": 20,
+    "realized": 20,
+    "rate": 1.0,
+    "cpu_budget_s": 30.0,
+    "median_cpu_s_realized": 19.239,
+    "max_cpu_s_realized": 19.95,
+    "realized_by_method": {
+     "ins": 20
+    },
+    "methods": [
+     "lp",
+     "ins",
+     "free",
+     "polish"
+    ],
+    "complete": true
+   }
+  },
+  "run2_explicit": {
+   "pool32_insff120": {
+    "family": "pool",
+    "n": 32,
+    "m": 1,
+    "trials": 30,
+    "realized": 28,
+    "rate": 0.933,
+    "cpu_budget_s": 120.0,
+    "median_cpu_s_realized": 2.976,
+    "max_cpu_s_realized": 48.807,
+    "realized_by_method": {
+     "ins-ff": 28
+    },
+    "methods": [
+     "ins-ff"
+    ],
+    "complete": true
+   },
+   "pool32_methods_insff_lp_free_polish": {
+    "family": "pool",
+    "n": 32,
+    "m": 1,
+    "trials": 30,
+    "realized": 21,
+    "rate": 0.7,
+    "cpu_budget_s": 30.0,
+    "median_cpu_s_realized": 5.365,
+    "max_cpu_s_realized": 18.483,
+    "realized_by_method": {
+     "lp": 3,
+     "ins-ff": 18
+    },
+    "methods": [
+     "ins-ff",
+     "lp",
+     "free",
+     "polish"
+    ],
+    "complete": true
+   },
+   "sympool32m2_120": {
+    "family": "sympool",
+    "n": 32,
+    "m": 2,
+    "trials": 30,
+    "realized": 30,
+    "rate": 1.0,
+    "cpu_budget_s": 120.0,
+    "median_cpu_s_realized": 1.635,
+    "max_cpu_s_realized": 52.327,
+    "realized_by_method": {
+     "sym2-ins": 30
+    },
+    "methods": [
+     "auto",
+     "ins",
+     "sym",
+     "lp",
+     "ins-ff"
+    ],
+    "complete": true
+   }
+  },
+  "run3_final_default": {
+   "multiscale33": {
+    "family": "multiscale",
+    "n": 33,
+    "m": 1,
+    "trials": 20,
+    "realized": 20,
+    "rate": 1.0,
+    "cpu_budget_s": 30.0,
+    "median_cpu_s_realized": 4.856,
+    "max_cpu_s_realized": 14.22,
+    "realized_by_method": {
+     "ins-ff": 20
+    },
+    "methods": [
+     "ins-ff",
+     "lp"
+    ],
+    "complete": true
+   },
+   "pool32": {
+    "family": "pool",
+    "n": 32,
+    "m": 1,
+    "trials": 30,
+    "realized": 26,
+    "rate": 0.867,
+    "cpu_budget_s": 30.0,
+    "median_cpu_s_realized": 4.916,
+    "max_cpu_s_realized": 20.34,
+    "realized_by_method": {
+     "ins-ff": 26
+    },
+    "methods": [
+     "ins-ff",
+     "lp"
+    ],
+    "complete": true
+   },
+   "uniform16": {
+    "family": "uniform",
+    "n": 16,
+    "m": 1,
+    "trials": 20,
+    "realized": 20,
+    "rate": 1.0,
+    "cpu_budget_s": 30.0,
+    "median_cpu_s_realized": 0.069,
+    "max_cpu_s_realized": 0.157,
+    "realized_by_method": {
+     "ins-ff": 20
+    },
+    "methods": [
+     "ins-ff",
+     "lp"
+    ],
+    "complete": true
+   },
+   "uniform26": {
+    "family": "uniform",
+    "n": 26,
+    "m": 1,
+    "trials": 20,
+    "realized": 20,
+    "rate": 1.0,
+    "cpu_budget_s": 30.0,
+    "median_cpu_s_realized": 0.569,
+    "max_cpu_s_realized": 0.952,
+    "realized_by_method": {
+     "ins-ff": 20
+    },
+    "methods": [
+     "ins-ff",
+     "lp"
+    ],
+    "complete": true
+   },
+   "uniform33": {
+    "family": "uniform",
+    "n": 33,
+    "m": 1,
+    "trials": 20,
+    "realized": 20,
+    "rate": 1.0,
+    "cpu_budget_s": 30.0,
+    "median_cpu_s_realized": 5.405,
+    "max_cpu_s_realized": 7.117,
+    "realized_by_method": {
+     "ins-ff": 20
+    },
+    "methods": [
+     "ins-ff",
+     "lp"
+    ],
+    "complete": true
+   }
+  }
+ },
+ "calibration_b_symmetric_16_point": {
+  "m4": {
+   "input": "enum/n16k6m4.all",
+   "P": 16,
+   "m": 4,
+   "center": false,
+   "methods": [
+    "sym",
+    "lp"
+   ],
+   "cpu_budget_per_attempt_s": 20.0,
+   "seeds": 1,
+   "models": 528,
+   "classes": 33,
+   "realized_models": 144,
+   "realized_classes": 9,
+   "median_cpu_seconds_realized": 0.141,
+   "max_cpu_seconds_realized": 1.012,
+   "mean_cpu_seconds_all": 14.61778787878788,
+   "wall_seconds": 1181.7,
+   "reverified_point_files": 9,
+   "reverified_all_ok": true,
+   "largest_convex_subset_values": [
+    5
+   ],
+   "realized_class_representatives": [
+    "model1",
+    "model5",
+    "model13",
+    "model18",
+    "model24",
+    "model27",
+    "model31",
+    "model40",
+    "model41"
+   ],
+   "solutions_in_published_counting": {
+    "total": 66,
+    "realized": 18
+   },
+   "realized_model_names": [
+    "model1",
+    "model5",
+    "model13",
+    "model14",
+    "model17",
+    "model18",
+    "model23",
+    "model24",
+    "model27",
+    "model28",
+    "model31",
+    "model32",
+    "model38",
+    "model40",
+    "model41",
+    "model49",
+    "model50",
+    "model52",
+    "model53",
+    "model57",
+    "model70",
+    "model71",
+    "model77",
+    "model78",
+    "model79",
+    "model80",
+    "model94",
+    "model99",
+    "model105",
+    "model108",
+    "model109",
+    "model112",
+    "model113",
+    "model118",
+    "model119",
+    "model133",
+    "model134",
+    "model139",
+    "model142",
+    "model143",
+    "model144",
+    "model147",
+    "model151",
+    "model152",
+    "model153",
+    "model159",
+    "model164",
+    "model165",
+    "model183",
+    "model185",
+    "model189",
+    "model190",
+    "model194",
+    "model198",
+    "model199",
+    "model205",
+    "model208",
+    "model209",
+    "model222",
+    "model223",
+    "model229",
+    "model240",
+    "model243",
+    "model245",
+    "model250",
+    "model251",
+    "model257",
+    "model258",
+    "model259",
+    "model262",
+    "model263",
+    "model269",
+    "model270",
+    "model271",
+    "model275",
+    "model278",
+    "model279",
+    "model280",
+    "model287",
+    "model288",
+    "model289",
+    "model291",
+    "model292",
+    "model303",
+    "model308",
+    "model317",
+    "model318",
+    "model319",
+    "model320",
+    "model323",
+    "model334",
+    "model336",
+    "model337",
+    "model339",
+    "model340",
+    "model341",
+    "model342",
+    "model348",
+    "model349",
+    "model358",
+    "model359",
+    "model365",
+    "model366",
+    "model369",
+    "model375",
+    "model379",
+    "model385",
+    "model388",
+    "model389",
+    "model390",
+    "model391",
+    "model401",
+    "model404",
+    "model405",
+    "model406",
+    "model415",
+    "model417",
+    "model422",
+    "model436",
+    "model437",
+    "model438",
+    "model439",
+    "model440",
+    "model441",
+    "model442",
+    "model456",
+    "model458",
+    "model459",
+    "model460",
+    "model469",
+    "model472",
+    "model482",
+    "model486",
+    "model487",
+    "model488",
+    "model490",
+    "model491",
+    "model494",
+    "model495",
+    "model503",
+    "model506",
+    "model516",
+    "model517",
+    "model518"
+   ],
+   "saturation_control": {
+    "note": "sat.c on every realized hexagon-free 16-point set (K=6); ES(6)=17 predicts all saturated",
+    "sets": 9,
+    "saturated": 9,
+    "all_faces_covered": true
+   },
+   "published": "66 abstract 4-fold solutions, 18 realizable, 9 up to isomorphism (Subercaseaux-Mackey-Qian-Heule, arXiv 2506.00224)",
+   "labelled_multiplicity": 8
+  },
+  "m5": {
+   "input": "enum/n16k6m5c.all",
+   "P": 16,
+   "m": 5,
+   "center": true,
+   "methods": [
+    "sym"
+   ],
+   "cpu_budget_per_attempt_s": 4.0,
+   "seeds": 1,
+   "models": 2796,
+   "classes": 466,
+   "realized_models": 294,
+   "realized_classes": 49,
+   "median_cpu_seconds_realized": 0.059,
+   "max_cpu_seconds_realized": 0.411,
+   "mean_cpu_seconds_all": 3.5972618025751073,
+   "wall_seconds": 2570.4,
+   "reverified_point_files": 49,
+   "reverified_all_ok": true,
+   "largest_convex_subset_values": [
+    5
+   ],
+   "realized_class_representatives": [
+    "model239",
+    "model243",
+    "model244",
+    "model252",
+    "model253",
+    "model254",
+    "model260",
+    "model262",
+    "model270",
+    "model272",
+    "model279",
+    "model281",
+    "model291",
+    "model292",
+    "model298",
+    "model299",
+    "model300",
+    "model301",
+    "model311",
+    "model312",
+    "model313",
+    "model314",
+    "model315",
+    "model316",
+    "model317",
+    "model379",
+    "model380",
+    "model420",
+    "model421",
+    "model422",
+    "model585",
+    "model586",
+    "model600",
+    "model602",
+    "model662",
+    "model669",
+    "model671",
+    "model672",
+    "model673",
+    "model674",
+    "model677",
+    "model679",
+    "model681",
+    "model682",
+    "model684",
+    "model700",
+    "model713",
+    "model1022",
+    "model1699"
+   ],
+   "solutions_in_published_counting": {
+    "total": 932,
+    "realized": 98
+   },
+   "realized_model_names": [
+    "model239",
+    "model243",
+    "model244",
+    "model252",
+    "model253",
+    "model254",
+    "model260",
+    "model262",
+    "model270",
+    "model272",
+    "model279",
+    "model281",
+    "model291",
+    "model292",
+    "model298",
+    "model299",
+    "model300",
+    "model301",
+    "model311",
+    "model312",
+    "model313",
+    "model314",
+    "model315",
+    "model316",
+    "model317",
+    "model379",
+    "model380",
+    "model383",
+    "model384",
+    "model385",
+    "model386",
+    "model387",
+    "model388",
+    "model390",
+    "model391",
+    "model392",
+    "model393",
+    "model394",
+    "model403",
+    "model406",
+    "model420",
+    "model421",
+    "model422",
+    "model499",
+    "model500",
+    "model507",
+    "model508",
+    "model511",
+    "model513",
+    "model517",
+    "model518",
+    "model533",
+    "model534",
+    "model545",
+    "model546",
+    "model547",
+    "model548",
+    "model549",
+    "model550",
+    "model563",
+    "model564",
+    "model565",
+    "model585",
+    "model586",
+    "model587",
+    "model600",
+    "model602",
+    "model605",
+    "model634",
+    "model658",
+    "model659",
+    "model660",
+    "model662",
+    "model669",
+    "model671",
+    "model672",
+    "model673",
+    "model674",
+    "model677",
+    "model679",
+    "model681",
+    "model682",
+    "model684",
+    "model685",
+    "model687",
+    "model688",
+    "model689",
+    "model700",
+    "model703",
+    "model704",
+    "model706",
+    "model707",
+    "model710",
+    "model713",
+    "model715",
+    "model950",
+    "model951",
+    "model1022",
+    "model1205",
+    "model1207",
+    "model1208",
+    "model1300",
+    "model1304",
+    "model1305",
+    "model1323",
+    "model1328",
+    "model1329",
+    "model1334",
+    "model1335",
+    "model1345",
+    "model1346",
+    "model1347",
+    "model1349",
+    "model1350",
+    "model1352",
+    "model1353",
+    "model1354",
+    "model1357",
+    "model1358",
+    "model1361",
+    "model1364",
+    "model1365",
+    "model1677",
+    "model1678",
+    "model1679",
+    "model1680",
+    "model1681",
+    "model1682",
+    "model1683",
+    "model1684",
+    "model1689",
+    "model1690",
+    "model1691",
+    "model1692",
+    "model1697",
+    "model1698",
+    "model1699",
+    "model1705",
+    "model1706",
+    "model1708",
+    "model1711",
+    "model1713",
+    "model1716",
+    "model1729",
+    "model1731",
+    "model1732",
+    "model1733",
+    "model1734",
+    "model1741",
+    "model1742",
+    "model1743",
+    "model1744",
+    "model1745",
+    "model1766",
+    "model1767",
+    "model1771",
+    "model1772",
+    "model1775",
+    "model1866",
+    "model1867",
+    "model1871",
+    "model1872",
+    "model1873",
+    "model1874",
+    "model1875",
+    "model1876",
+    "model1877",
+    "model1878",
+    "model1896",
+    "model1897",
+    "model1898",
+    "model1899",
+    "model1900",
+    "model1901",
+    "model1902",
+    "model1903",
+    "model1904",
+    "model1905",
+    "model1906",
+    "model1909",
+    "model1910",
+    "model1911",
+    "model1912",
+    "model1914",
+    "model1915",
+    "model1916",
+    "model1917",
+    "model1918",
+    "model1919",
+    "model1920",
+    "model1921",
+    "model1922",
+    "model1923",
+    "model1924",
+    "model1925",
+    "model1926",
+    "model1951",
+    "model1952",
+    "model1955",
+    "model2112",
+    "model2137",
+    "model2139",
+    "model2140",
+    "model2142",
+    "model2143",
+    "model2145",
+    "model2180",
+    "model2181",
+    "model2182",
+    "model2185",
+    "model2186",
+    "model2187",
+    "model2191",
+    "model2192",
+    "model2194",
+    "model2195",
+    "model2198",
+    "model2199",
+    "model2200",
+    "model2201",
+    "model2202",
+    "model2204",
+    "model2205",
+    "model2208",
+    "model2210",
+    "model2211",
+    "model2214",
+    "model2218",
+    "model2334",
+    "model2335",
+    "model2336",
+    "model2337",
+    "model2354",
+    "model2368",
+    "model2369",
+    "model2370",
+    "model2371",
+    "model2372",
+    "model2377",
+    "model2378",
+    "model2380",
+    "model2381",
+    "model2382",
+    "model2383",
+    "model2385",
+    "model2386",
+    "model2390",
+    "model2396",
+    "model2404",
+    "model2405",
+    "model2406",
+    "model2409",
+    "model2410",
+    "model2411",
+    "model2413",
+    "model2414",
+    "model2415",
+    "model2416",
+    "model2418",
+    "model2419",
+    "model2420",
+    "model2421",
+    "model2422",
+    "model2454",
+    "model2455",
+    "model2456",
+    "model2457",
+    "model2458",
+    "model2472",
+    "model2477",
+    "model2545",
+    "model2630",
+    "model2659",
+    "model2660",
+    "model2661",
+    "model2662",
+    "model2666",
+    "model2668",
+    "model2669",
+    "model2671",
+    "model2675",
+    "model2676",
+    "model2677",
+    "model2752",
+    "model2766",
+    "model2767",
+    "model2768",
+    "model2769",
+    "model2770",
+    "model2785",
+    "model2786",
+    "model2788",
+    "model2792",
+    "model2793"
+   ],
+   "saturation_control": {
+    "note": "sat.c on every realized hexagon-free 16-point set (K=6); ES(6)=17 predicts all saturated",
+    "sets": 49,
+    "saturated": 49,
+    "all_faces_covered": true
+   },
+   "published": "948 (also stated as 932) abstract 5-fold solutions, 92 realizable, 46 up to isomorphism (same paper)",
+   "labelled_multiplicity": 3
+  }
+ },
+ "application_32_point_two_fold": {
+  "isomorphism_classes": {
+   "models": 45,
+   "classes": 44
+  },
+  "pass1": {
+   "input": "B/inputs/enum/n32k7m2.models",
+   "P": 32,
+   "m": 2,
+   "center": false,
+   "methods": [
+    "ins",
+    "sym",
+    "lp",
+    "polish"
+   ],
+   "cpu_budget_per_attempt_s": 60.0,
+   "seeds": 1,
+   "models": 40,
+   "classes": 40,
+   "realized_models": 0,
+   "realized_classes": 0,
+   "median_cpu_seconds_realized": null,
+   "max_cpu_seconds_realized": null,
+   "mean_cpu_seconds_all": 52.24807499999999,
+   "wall_seconds": 2736.6
+  },
+  "pass1_seeds": {
+   "input": "B/inputs/enum/n32k7m2_seeds.models",
+   "P": 32,
+   "m": 2,
+   "center": false,
+   "methods": [
+    "ins",
+    "sym",
+    "lp",
+    "polish"
+   ],
+   "cpu_budget_per_attempt_s": 60.0,
+   "seeds": 1,
+   "models": 5,
+   "classes": 5,
+   "realized_models": 0,
+   "realized_classes": 0,
+   "median_cpu_seconds_realized": null,
+   "max_cpu_seconds_realized": null,
+   "mean_cpu_seconds_all": 52.5832,
+   "wall_seconds": 1465.0
+  },
+  "per_model": [
+   {
+    "model": "n32k7m2:model1",
+    "class": 0,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 184,
+      "cpu_seconds": 52.385,
+      "wall_seconds": 517.524,
+      "insertion_max_orbits_placed": 10,
+      "lp_best_slack": 0.5269059487913534
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.4,
+    "min_penalty_violations": 184,
+    "max_orbits_placed_symmetric_insertion": 10,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.5269059487913534
+   },
+   {
+    "model": "n32k7m2:model2",
+    "class": 1,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 222,
+      "cpu_seconds": 51.958,
+      "wall_seconds": 512.393,
+      "insertion_max_orbits_placed": 9,
+      "lp_best_slack": 0.6038753606030463
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.0,
+    "min_penalty_violations": 222,
+    "max_orbits_placed_symmetric_insertion": 9,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.6038753606030463
+   },
+   {
+    "model": "n32k7m2:model3",
+    "class": 2,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 224,
+      "cpu_seconds": 52.833,
+      "wall_seconds": 521.316,
+      "insertion_max_orbits_placed": 10,
+      "lp_best_slack": 0.8520237096449688
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.8,
+    "min_penalty_violations": 224,
+    "max_orbits_placed_symmetric_insertion": 10,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.8520237096449688
+   },
+   {
+    "model": "n32k7m2:model4",
+    "class": 3,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 214,
+      "cpu_seconds": 53.11,
+      "wall_seconds": 523.837,
+      "insertion_max_orbits_placed": 10,
+      "lp_best_slack": 0.8676573175718083
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 53.1,
+    "min_penalty_violations": 214,
+    "max_orbits_placed_symmetric_insertion": 10,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.8676573175718083
+   },
+   {
+    "model": "n32k7m2:model5",
+    "class": 4,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 206,
+      "cpu_seconds": 52.183,
+      "wall_seconds": 513.636,
+      "insertion_max_orbits_placed": 8,
+      "lp_best_slack": 0.7290268204307333
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.2,
+    "min_penalty_violations": 206,
+    "max_orbits_placed_symmetric_insertion": 8,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.7290268204307333
+   },
+   {
+    "model": "n32k7m2:model6",
+    "class": 5,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 208,
+      "cpu_seconds": 52.739,
+      "wall_seconds": 520.625,
+      "insertion_max_orbits_placed": 9,
+      "lp_best_slack": 0.7404272589131429
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.7,
+    "min_penalty_violations": 208,
+    "max_orbits_placed_symmetric_insertion": 9,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.7404272589131429
+   },
+   {
+    "model": "n32k7m2:model7",
+    "class": 6,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 164,
+      "cpu_seconds": 52.114,
+      "wall_seconds": 514.49,
+      "insertion_max_orbits_placed": 11,
+      "lp_best_slack": 0.46035171815398457
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.1,
+    "min_penalty_violations": 164,
+    "max_orbits_placed_symmetric_insertion": 11,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.46035171815398457
+   },
+   {
+    "model": "n32k7m2:model8",
+    "class": 7,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 112,
+      "cpu_seconds": 52.102,
+      "wall_seconds": 501.036,
+      "insertion_max_orbits_placed": 9,
+      "lp_best_slack": 0.4505104350109636
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.1,
+    "min_penalty_violations": 112,
+    "max_orbits_placed_symmetric_insertion": 9,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.4505104350109636
+   },
+   {
+    "model": "n32k7m2:model9",
+    "class": 8,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 126,
+      "cpu_seconds": 52.262,
+      "wall_seconds": 499.981,
+      "insertion_max_orbits_placed": 8,
+      "lp_best_slack": 0.43550930908379354
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.3,
+    "min_penalty_violations": 126,
+    "max_orbits_placed_symmetric_insertion": 8,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.43550930908379354
+   },
+   {
+    "model": "n32k7m2:model10",
+    "class": 9,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 134,
+      "cpu_seconds": 52.801,
+      "wall_seconds": 505.975,
+      "insertion_max_orbits_placed": 9,
+      "lp_best_slack": 0.4636927002302571
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.8,
+    "min_penalty_violations": 134,
+    "max_orbits_placed_symmetric_insertion": 9,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.4636927002302571
+   },
+   {
+    "model": "n32k7m2:model11",
+    "class": 10,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 116,
+      "cpu_seconds": 51.726,
+      "wall_seconds": 494.821,
+      "insertion_max_orbits_placed": 9,
+      "lp_best_slack": 0.687592424228952
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 51.7,
+    "min_penalty_violations": 116,
+    "max_orbits_placed_symmetric_insertion": 9,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.687592424228952
+   },
+   {
+    "model": "n32k7m2:model12",
+    "class": 11,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 114,
+      "cpu_seconds": 52.019,
+      "wall_seconds": 499.395,
+      "insertion_max_orbits_placed": 9,
+      "lp_best_slack": 0.46457040765260127
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.0,
+    "min_penalty_violations": 114,
+    "max_orbits_placed_symmetric_insertion": 9,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.46457040765260127
+   },
+   {
+    "model": "n32k7m2:model13",
+    "class": 12,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 186,
+      "cpu_seconds": 52.071,
+      "wall_seconds": 498.205,
+      "insertion_max_orbits_placed": 9,
+      "lp_best_slack": 0.5552930903095841
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.1,
+    "min_penalty_violations": 186,
+    "max_orbits_placed_symmetric_insertion": 9,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.5552930903095841
+   },
+   {
+    "model": "n32k7m2:model14",
+    "class": 13,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 222,
+      "cpu_seconds": 51.866,
+      "wall_seconds": 496.441,
+      "insertion_max_orbits_placed": 8,
+      "lp_best_slack": 0.561127126535974
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 51.9,
+    "min_penalty_violations": 222,
+    "max_orbits_placed_symmetric_insertion": 8,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.561127126535974
+   },
+   {
+    "model": "n32k7m2:model15",
+    "class": 14,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 238,
+      "cpu_seconds": 51.988,
+      "wall_seconds": 438.889,
+      "insertion_max_orbits_placed": 8,
+      "lp_best_slack": 0.9347978239597866
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.0,
+    "min_penalty_violations": 238,
+    "max_orbits_placed_symmetric_insertion": 8,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.9347978239597866
+   },
+   {
+    "model": "n32k7m2:model16",
+    "class": 15,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 230,
+      "cpu_seconds": 52.658,
+      "wall_seconds": 442.79,
+      "insertion_max_orbits_placed": 9,
+      "lp_best_slack": 0.9003925897949572
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.7,
+    "min_penalty_violations": 230,
+    "max_orbits_placed_symmetric_insertion": 9,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.9003925897949572
+   },
+   {
+    "model": "n32k7m2:model17",
+    "class": 16,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 234,
+      "cpu_seconds": 52.364,
+      "wall_seconds": 439.697,
+      "insertion_max_orbits_placed": 9,
+      "lp_best_slack": 0.45904180641243114
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.4,
+    "min_penalty_violations": 234,
+    "max_orbits_placed_symmetric_insertion": 9,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.45904180641243114
+   },
+   {
+    "model": "n32k7m2:model18",
+    "class": 17,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 178,
+      "cpu_seconds": 52.03,
+      "wall_seconds": 437.652,
+      "insertion_max_orbits_placed": 10,
+      "lp_best_slack": 0.44636947841947017
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.0,
+    "min_penalty_violations": 178,
+    "max_orbits_placed_symmetric_insertion": 10,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.44636947841947017
+   },
+   {
+    "model": "n32k7m2:model19",
+    "class": 18,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 176,
+      "cpu_seconds": 52.274,
+      "wall_seconds": 440.245,
+      "insertion_max_orbits_placed": 10,
+      "lp_best_slack": 0.45717324698578754
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.3,
+    "min_penalty_violations": 176,
+    "max_orbits_placed_symmetric_insertion": 10,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.45717324698578754
+   },
+   {
+    "model": "n32k7m2:model20",
+    "class": 19,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 170,
+      "cpu_seconds": 52.333,
+      "wall_seconds": 439.086,
+      "insertion_max_orbits_placed": 9,
+      "lp_best_slack": 0.46542323788045853
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.3,
+    "min_penalty_violations": 170,
+    "max_orbits_placed_symmetric_insertion": 9,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.46542323788045853
+   },
+   {
+    "model": "n32k7m2:model21",
+    "class": 20,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 238,
+      "cpu_seconds": 52.314,
+      "wall_seconds": 439.134,
+      "insertion_max_orbits_placed": 9,
+      "lp_best_slack": 0.47867379573835883
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.3,
+    "min_penalty_violations": 238,
+    "max_orbits_placed_symmetric_insertion": 9,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.47867379573835883
+   },
+   {
+    "model": "n32k7m2:model22",
+    "class": 21,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 158,
+      "cpu_seconds": 52.184,
+      "wall_seconds": 420.248,
+      "insertion_max_orbits_placed": 10,
+      "lp_best_slack": 0.46236473281904644
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.2,
+    "min_penalty_violations": 158,
+    "max_orbits_placed_symmetric_insertion": 10,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.46236473281904644
+   },
+   {
+    "model": "n32k7m2:model23",
+    "class": 22,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 176,
+      "cpu_seconds": 51.561,
+      "wall_seconds": 416.948,
+      "insertion_max_orbits_placed": 9,
+      "lp_best_slack": 0.45637305234612247
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 51.6,
+    "min_penalty_violations": 176,
+    "max_orbits_placed_symmetric_insertion": 9,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.45637305234612247
+   },
+   {
+    "model": "n32k7m2:model24",
+    "class": 23,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 160,
+      "cpu_seconds": 51.933,
+      "wall_seconds": 418.935,
+      "insertion_max_orbits_placed": 10,
+      "lp_best_slack": 0.7036182876728497
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 51.9,
+    "min_penalty_violations": 160,
+    "max_orbits_placed_symmetric_insertion": 10,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.7036182876728497
+   },
+   {
+    "model": "n32k7m2:model25",
+    "class": 24,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 240,
+      "cpu_seconds": 52.299,
+      "wall_seconds": 420.459,
+      "insertion_max_orbits_placed": 8,
+      "lp_best_slack": 0.56145761000467
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.3,
+    "min_penalty_violations": 240,
+    "max_orbits_placed_symmetric_insertion": 8,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.56145761000467
+   },
+   {
+    "model": "n32k7m2:model26",
+    "class": 25,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 302,
+      "cpu_seconds": 51.948,
+      "wall_seconds": 419.463,
+      "insertion_max_orbits_placed": 8,
+      "lp_best_slack": 0.6898493778509671
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 51.9,
+    "min_penalty_violations": 302,
+    "max_orbits_placed_symmetric_insertion": 8,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.6898493778509671
+   },
+   {
+    "model": "n32k7m2:model27",
+    "class": 26,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 208,
+      "cpu_seconds": 51.96,
+      "wall_seconds": 420.14,
+      "insertion_max_orbits_placed": 8,
+      "lp_best_slack": 0.6470301751507295
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.0,
+    "min_penalty_violations": 208,
+    "max_orbits_placed_symmetric_insertion": 8,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.6470301751507295
+   },
+   {
+    "model": "n32k7m2:model28",
+    "class": 27,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 228,
+      "cpu_seconds": 52.734,
+      "wall_seconds": 424.528,
+      "insertion_max_orbits_placed": 8,
+      "lp_best_slack": 0.6434085748860933
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.7,
+    "min_penalty_violations": 228,
+    "max_orbits_placed_symmetric_insertion": 8,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.6434085748860933
+   },
+   {
+    "model": "n32k7m2:model29",
+    "class": 28,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 198,
+      "cpu_seconds": 51.564,
+      "wall_seconds": 433.891,
+      "insertion_max_orbits_placed": 10,
+      "lp_best_slack": 0.6162474804080584
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 51.6,
+    "min_penalty_violations": 198,
+    "max_orbits_placed_symmetric_insertion": 10,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.6162474804080584
+   },
+   {
+    "model": "n32k7m2:model30",
+    "class": 29,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 212,
+      "cpu_seconds": 52.14,
+      "wall_seconds": 438.533,
+      "insertion_max_orbits_placed": 9,
+      "lp_best_slack": 0.5556147652330659
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.1,
+    "min_penalty_violations": 212,
+    "max_orbits_placed_symmetric_insertion": 9,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.5556147652330659
+   },
+   {
+    "model": "n32k7m2:model31",
+    "class": 30,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 216,
+      "cpu_seconds": 52.674,
+      "wall_seconds": 441.94,
+      "insertion_max_orbits_placed": 9,
+      "lp_best_slack": 0.549637989108605
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.7,
+    "min_penalty_violations": 216,
+    "max_orbits_placed_symmetric_insertion": 9,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.549637989108605
+   },
+   {
+    "model": "n32k7m2:model32",
+    "class": 31,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 220,
+      "cpu_seconds": 52.253,
+      "wall_seconds": 438.865,
+      "insertion_max_orbits_placed": 8,
+      "lp_best_slack": 0.5531435446347548
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.3,
+    "min_penalty_violations": 220,
+    "max_orbits_placed_symmetric_insertion": 8,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.5531435446347548
+   },
+   {
+    "model": "n32k7m2:model33",
+    "class": 32,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 210,
+      "cpu_seconds": 52.989,
+      "wall_seconds": 447.034,
+      "insertion_max_orbits_placed": 9,
+      "lp_best_slack": 0.5425733918721827
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 53.0,
+    "min_penalty_violations": 210,
+    "max_orbits_placed_symmetric_insertion": 9,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.5425733918721827
+   },
+   {
+    "model": "n32k7m2:model34",
+    "class": 33,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 206,
+      "cpu_seconds": 52.364,
+      "wall_seconds": 439.708,
+      "insertion_max_orbits_placed": 8,
+      "lp_best_slack": 0.5658282619200556
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.4,
+    "min_penalty_violations": 206,
+    "max_orbits_placed_symmetric_insertion": 8,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.5658282619200556
+   },
+   {
+    "model": "n32k7m2:model35",
+    "class": 34,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 194,
+      "cpu_seconds": 52.309,
+      "wall_seconds": 439.811,
+      "insertion_max_orbits_placed": 8,
+      "lp_best_slack": 0.5533494493840694
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.3,
+    "min_penalty_violations": 194,
+    "max_orbits_placed_symmetric_insertion": 8,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.5533494493840694
+   },
+   {
+    "model": "n32k7m2:model36",
+    "class": 35,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 176,
+      "cpu_seconds": 52.346,
+      "wall_seconds": 417.549,
+      "insertion_max_orbits_placed": 9,
+      "lp_best_slack": 0.6155013732362608
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.3,
+    "min_penalty_violations": 176,
+    "max_orbits_placed_symmetric_insertion": 9,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.6155013732362608
+   },
+   {
+    "model": "n32k7m2:model37",
+    "class": 36,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 220,
+      "cpu_seconds": 52.172,
+      "wall_seconds": 416.667,
+      "insertion_max_orbits_placed": 9,
+      "lp_best_slack": 0.6876930632628203
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.2,
+    "min_penalty_violations": 220,
+    "max_orbits_placed_symmetric_insertion": 9,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.6876930632628203
+   },
+   {
+    "model": "n32k7m2:model38",
+    "class": 37,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 220,
+      "cpu_seconds": 52.698,
+      "wall_seconds": 419.014,
+      "insertion_max_orbits_placed": 9,
+      "lp_best_slack": 0.5905592547974017
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.7,
+    "min_penalty_violations": 220,
+    "max_orbits_placed_symmetric_insertion": 9,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.5905592547974017
+   },
+   {
+    "model": "n32k7m2:model39",
+    "class": 38,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 182,
+      "cpu_seconds": 52.162,
+      "wall_seconds": 414.522,
+      "insertion_max_orbits_placed": 9,
+      "lp_best_slack": 0.5463601975231094
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.2,
+    "min_penalty_violations": 182,
+    "max_orbits_placed_symmetric_insertion": 9,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.5463601975231094
+   },
+   {
+    "model": "n32k7m2:model40",
+    "class": 39,
+    "attempts": [
+     {
+      "run": "pass1",
+      "realized": false,
+      "method": null,
+      "best_violations": 98,
+      "cpu_seconds": 51.503,
+      "wall_seconds": 410.538,
+      "insertion_max_orbits_placed": 11,
+      "lp_best_slack": 0.4350937307856787
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 51.5,
+    "min_penalty_violations": 98,
+    "max_orbits_placed_symmetric_insertion": 11,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.4350937307856787
+   },
+   {
+    "model": "n32k7m2_seeds:model1",
+    "class": 0,
+    "attempts": [
+     {
+      "run": "pass1_seeds",
+      "realized": false,
+      "method": null,
+      "best_violations": 184,
+      "cpu_seconds": 52.392,
+      "wall_seconds": 515.919,
+      "insertion_max_orbits_placed": 10,
+      "lp_best_slack": 0.5269059487913534
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.4,
+    "min_penalty_violations": 184,
+    "max_orbits_placed_symmetric_insertion": 10,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.5269059487913534
+   },
+   {
+    "model": "n32k7m2_seeds:model2",
+    "class": 40,
+    "attempts": [
+     {
+      "run": "pass1_seeds",
+      "realized": false,
+      "method": null,
+      "best_violations": 222,
+      "cpu_seconds": 52.597,
+      "wall_seconds": 520.599,
+      "insertion_max_orbits_placed": 10,
+      "lp_best_slack": 0.6630553079946535
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.6,
+    "min_penalty_violations": 222,
+    "max_orbits_placed_symmetric_insertion": 10,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.6630553079946535
+   },
+   {
+    "model": "n32k7m2_seeds:model3",
+    "class": 41,
+    "attempts": [
+     {
+      "run": "pass1_seeds",
+      "realized": false,
+      "method": null,
+      "best_violations": 194,
+      "cpu_seconds": 52.743,
+      "wall_seconds": 505.393,
+      "insertion_max_orbits_placed": 8,
+      "lp_best_slack": 0.6492975752082765
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.7,
+    "min_penalty_violations": 194,
+    "max_orbits_placed_symmetric_insertion": 8,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.6492975752082765
+   },
+   {
+    "model": "n32k7m2_seeds:model4",
+    "class": 42,
+    "attempts": [
+     {
+      "run": "pass1_seeds",
+      "realized": false,
+      "method": null,
+      "best_violations": 230,
+      "cpu_seconds": 52.294,
+      "wall_seconds": 499.752,
+      "insertion_max_orbits_placed": 9,
+      "lp_best_slack": 0.4958836887259485
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.3,
+    "min_penalty_violations": 230,
+    "max_orbits_placed_symmetric_insertion": 9,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.4958836887259485
+   },
+   {
+    "model": "n32k7m2_seeds:model5",
+    "class": 43,
+    "attempts": [
+     {
+      "run": "pass1_seeds",
+      "realized": false,
+      "method": null,
+      "best_violations": 240,
+      "cpu_seconds": 52.89,
+      "wall_seconds": 443.593,
+      "insertion_max_orbits_placed": 8,
+      "lp_best_slack": 0.7448620147507209
+     }
+    ],
+    "realized": false,
+    "total_cpu_seconds": 52.9,
+    "min_penalty_violations": 240,
+    "max_orbits_placed_symmetric_insertion": 8,
+    "max_points_placed_free_insertion": null,
+    "min_lp_slack": 0.7448620147507209
+   }
+  ],
+  "realized": 0,
+  "models": 45,
+  "saturation": "not run: no 32-point model was realized"
+ }
+}

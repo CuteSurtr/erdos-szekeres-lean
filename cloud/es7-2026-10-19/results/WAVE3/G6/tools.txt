@@ -1,0 +1,10 @@
+cadical c60730422e758ef1cebe7aeddf2dda31c996bf04
+CnC 705b60c6491ef2b61988b3ce6ac674be1b90571d
+cake_lpr a36874a8b750b43fe4b385b8ddbf5b033e46a3fa
+cadical version 3.0.1, built ./configure -O3
+march_cu built with CFLAGS=-O3 -fno-strict-aliasing -Wall -DNDEBUG -fcommon
+cake_lpr built with make cake_lpr; example.cnf/example.lpr -> s VERIFIED UNSAT
+a1ff14ccad1da35e66271531c0a53b909b5816a90a55e179699d8f64850aa13d  /opt/work/bin/cadical
+1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca  /opt/work/bin/cake_lpr
+afcbb47642a922676693b325ed19d88698c6b8f700943fa2753d98126579f222  /opt/work/bin/march_cu
+F.cnf 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d

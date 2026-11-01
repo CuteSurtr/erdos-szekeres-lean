@@ -1,0 +1,10 @@
+base CNF m33k7int.sub.cnf (make_cnfs.sh steps: gen_etv.py 33 7 7 7 --mirror; mirgen.py --interior --yflip-unit):
+  69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d  expected 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d  OK
+verify/ii_wave1.json:
+  6df36dab6dc93cec474ee7a795b38716bc19bf2d6064468b9c5e38e00901c72e  expected 6df36dab6dc93cec474ee7a795b38716bc19bf2d6064468b9c5e38e00901c72e  OK
+results/Mii-S/cases.jsonl:
+  bf77e23c6d9cdffb451a3ae63bdb972b4cc9589fbdca424e9cf0621f9e826f58  expected (ii_wave1.json) bf77e23c6d9cdffb451a3ae63bdb972b4cc9589fbdca424e9cf0621f9e826f58  OK
+case U10_L (hullsplit.py case BASE 10 "" OUT):
+  7f6b84cd24133ecd7eb5f982ccff9d9012ae326d85263b7edf0898e668a02f3a  expected 7f6b84cd24133ecd7eb5f982ccff9d9012ae326d85263b7edf0898e668a02f3a  OK
+top cubes U10_L/top.icnf (march_cu U10_L.cnf -d 7 -o top.icnf; 128 cubes, 0 refuted, 250.3 s):
+  9f1b517bec7eb6de62f1fa04c90a29ce9da95bb0de833c401fc0bdb1203a06e3

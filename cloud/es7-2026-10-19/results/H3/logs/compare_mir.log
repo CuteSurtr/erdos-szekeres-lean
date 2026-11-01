@@ -1,0 +1,8 @@
+# compare_mir.sh grid (N in 3..13,15,17; K in 4..7; hull for all N, interior for odd N), Tue Oct 20 02:53:12 UTC 2026
+# binary: standalone build of MirrorEncoding.Gen/Emit + ETVEncoding.Clauses (same sources)
+identical: 84  different: 0
+
+# real instances
+hm33k7.sub.cnf  (mir_dimacs hull 33 7)     cmp IDENTICAL  sha256 bfbc2d6096e4099ba751130d421eca9da18b72559991103cc2d4b4bc0d92757d  535454 clauses
+m33k7int.sub.cnf (mir_dimacs interior 33 7) cmp IDENTICAL  sha256 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d  515121 clauses
+also: hm17k6.sub.cnf IDENTICAL

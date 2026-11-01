@@ -1,0 +1,5 @@
+cover: 1 run, 1 UNSAT (1 accepted by both checkers), 0 no answer within the cap, 0 SAT; solve time min 550 s, median 550 s, max 550 s
+hexagonal: 53 run, 53 UNSAT (53 accepted by both checkers), 0 no answer within the cap, 0 SAT; solve time min 9 s, median 160 s, max 337 s
+quadrilateral: 14 run, 11 UNSAT (11 accepted by both checkers), 3 no answer within the cap, 0 SAT; solve time min 391 s, median 565 s, max 1382 s
+representatives closed by both checkers: 64 of 287 (11 of 56 quadrilateral, 53 of 231 hexagonal)
+proofs deleted after both checks: 65; proofs kept (a check failed): 0

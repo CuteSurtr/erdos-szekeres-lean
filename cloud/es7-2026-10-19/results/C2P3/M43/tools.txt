@@ -1,0 +1,30 @@
+tools (Z = 4f653319, TASK step 1)
+repo commit: 4f653319440c0be813495466c78fe200f0d9e965
+manifest: all 196 files match
+lrat-check.c: In function 'main':
+lrat-check.c:399:5: warning: ignoring return value of 'fgets' declared with attribute 'warn_unused_result' [-Wunused-result]
+  399 |     fgets (ignore, sizeof (ignore), cnf);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cadical --version: 3.0.1
+cake_lpr example: s VERIFIED UNSAT
+sanity bad (LRAT on {1},{-1}): lrat-check 'c FAILED: empty clause without a RUP conflict'; cake_lpr 'c Checking failed at line: 0. Reason: pivot must be non-zero'
+sanity good (LRAT on {1},{-1}): lrat-check 'c VERIFIED'; cake_lpr 's VERIFIED UNSAT'
+expected: bad rejected by both, good accepted by both (c VERIFIED, s VERIFIED UNSAT)
+
+ba28c9a16a2250a0afb97f3b73e13bca965cf08fbb310a9f2731c57af1b29d25  cloud/es7-2026-10-19/results/C2P3/M43/../../C2P/vendor/tools-src.tar.xz
+
+base: python3 SYMZ/zcnf.py rot 17 7 --m 2 --hull
+p cnf 838032 16653336
+b0061e908bff80e6a597f31a6fec1d91e8504aebc09b0bcf41c2ff21604d8ff1  /opt/work/base.cnf
+2476fafff493a763fd7f2883380d359629191912a15a69bcbdfbf49bbf472b48  /opt/work/base.json
+expected header p cnf 838032 16653336 and sha256 b0061e90...8ff1 / 2476faff...2b48: match
+
+cubes: l2cubes.py a = 1..8 byte-identical to C2P/cubes/P{a}_cubes.txt: all 8 identical
+8f2f7eea727aec6e03c703a2f99ee426  /opt/work/P1.txt
+dbc02c569d8e4767788667c874016b6b  /opt/work/P2.txt
+32e8d874f77ddb74b45740d0dae46799  /opt/work/P3.txt
+9e3ede6c3005dff3cd8b21859fabc400  /opt/work/P4.txt
+0d8f055a3f368d803b942ee4dca2dc04  /opt/work/P5.txt
+742d00d73b70a64315d9267bad4f2b36  /opt/work/P6.txt
+279d4a93678320ca4345d2d7662fbd93  /opt/work/P7.txt
+7906bce43c6bf17c15c6fe5f96f19dbf  /opt/work/P8.txt

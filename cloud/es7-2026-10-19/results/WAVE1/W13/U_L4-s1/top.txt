@@ -1,0 +1,4 @@
+case U_L4, cnf sha256 eb730ad3eebdd96f8daf71efb79c4932d861ddd0e0b1c8b38c6423112bf66df8 (matches ii_wave1.json)
+march_cu U_L4.cnf -d 7 -o top.icnf : number of cubes 128, including 0 refuted leaves; 250 s
+top.icnf sha256 c172b9354496170c210bab5707ff63b120495823df0ac3b38b04da125cbfcd08
+shard 1 of 3: lines i with i mod 3 == 1 -> 43 cubes

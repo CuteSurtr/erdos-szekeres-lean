@@ -1,0 +1,7 @@
+input commit: d0456ff8d6c066abed068224acd10163c6a4c6bf
+F.cnf sha256: 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d (expected 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d) OK
+worklist.jsonl sha256: 5c10bc043fbacbd397ea5867207b2a3fedebeb0174f98d3590b18c6d564baac9 lines 3801 (expected 5c10bc04...9baac9, 3801) OK
+cross-check at 14447d0d56c891a89a07a8141b50eae0ebfd44a7: jsonl leaves WAVE1 30151 (71 skipped records), WAVE2 12429, WAVE3 8850, WAVE4 28871
+Mzd.jsonl sha256 e01af167266dc044078798355f76f9f8d36c74d1b8843aeab90072b644ea83b5 lines 73880, problems 0 (expected e01af167...ea83b5, 73880) OK
+work-list records whose (case, lits) is not in Mzd.jsonl: 0 of 3801 OK
+shard 4 of 8: 475 leaves

@@ -1,0 +1,11 @@
+cadical c60730422e758ef1cebe7aeddf2dda31c996bf04
+CnC 705b60c6491ef2b61988b3ce6ac674be1b90571d
+cake_lpr a36874a8b750b43fe4b385b8ddbf5b033e46a3fa
+cadical version 3.0.1
+march_cu built with CFLAGS=-O3 -fno-strict-aliasing -Wall -DNDEBUG -fcommon
+cake_lpr built with make cake_lpr; example: s VERIFIED UNSAT
+cake_lpr.S sha256 2f3af32d55083839b3fa0e693afd817679c0b8944bef41def05a8b0ec72b7d4a
+BIN=/opt/work/bin
+60dd9125ae98b97ac36a89b69d7976012208ccd7015c1ed75741c8198f1bb4f1  /opt/work/bin/cadical
+1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca  /opt/work/bin/cake_lpr
+afcbb47642a922676693b325ed19d88698c6b8f700943fa2753d98126579f222  /opt/work/bin/march_cu

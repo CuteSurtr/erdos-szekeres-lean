@@ -1,0 +1,130 @@
+{"cube": [], "solve_s": 60.04, "status": "TIMEOUT", "whole_case": true, "case_sha256": "379250e6c59f018258b0449ba5da7d5ddc75c6ae5959100d330065e4633922e5"}
+{"top": true, "ncubes": 128, "march_cubes": 128, "refuted": 0, "march_s": 293.7, "march": "number of cubes 128, including 0 refuted", "top_icnf_sha256": "2ecc9b69f4026f62d3cb605766b503667ae2ad20677fdcc16e7a4b90fccfaa00", "case_sha256": "379250e6c59f018258b0449ba5da7d5ddc75c6ae5959100d330065e4633922e5"}
+{"cube": [1134, 1073, -3518, 1048, 1022, -3534, -995], "solve_s": 39.72, "proof_bytes": 40621813, "cake_lpr": "s VERIFIED UNSAT", "check_s": 6.99, "status": "UNSAT"}
+{"cube": [1134, 1073, -3518, 1048, 1022, -3534, 995], "solve_s": 46.91, "proof_bytes": 43935564, "cake_lpr": "s VERIFIED UNSAT", "check_s": 7.48, "status": "UNSAT"}
+{"cube": [1134, 1073, -3518, 1048, 1022, 3534, -3501], "solve_s": 24.61, "proof_bytes": 28996480, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.59, "status": "UNSAT"}
+{"cube": [1134, 1073, -3518, 1048, 1022, 3534, 3501], "solve_s": 38.32, "proof_bytes": 36056471, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.8, "status": "UNSAT"}
+{"cube": [1134, 1073, -3518, 1048, -1022, -3534, 995], "solve_s": 39.77, "proof_bytes": 41425045, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.82, "status": "UNSAT"}
+{"cube": [1134, 1073, -3518, 1048, -1022, -3534, -995], "solve_s": 40.34, "proof_bytes": 41305838, "cake_lpr": "s VERIFIED UNSAT", "check_s": 3.8, "status": "UNSAT"}
+{"cube": [1134, 1073, -3518, 1048, -1022, 3534, -3483], "solve_s": 14.66, "proof_bytes": 23751767, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.84, "status": "UNSAT"}
+{"cube": [1134, 1073, -3518, 1048, -1022, 3534, 3483], "solve_s": 12.5, "proof_bytes": 20545576, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.65, "status": "UNSAT"}
+{"cube": [1134, 1073, -3518, -1048, 1126, -1022, 13488], "solve_s": 14.55, "proof_bytes": 21838169, "cake_lpr": "s VERIFIED UNSAT", "check_s": 2.65, "status": "UNSAT"}
+{"cube": [1134, 1073, -3518, -1048, 1126, -1022, -13488], "solve_s": 84.82, "proof_bytes": 73797711, "cake_lpr": "s VERIFIED UNSAT", "check_s": 10.71, "status": "UNSAT"}
+{"cube": [1134, 1073, -3518, -1048, 1126, 1022, 995], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, 1073, -3518, -1048, 1126, 1022, -995], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, 1073, -3518, -1048, -1126, 2584, -3483], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, 1073, -3518, -1048, -1126, 2584, 3483], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, 1073, -3518, -1048, -1126, -2584, 3483], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, 1073, -3518, -1048, -1126, -2584, -3483], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, 1073, 3518, 3501, -1123, -1122, 3444], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, 1073, 3518, 3501, -1123, -1122, -3444], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, 1073, 3518, 3501, -1123, 1122, 3444], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, 1073, 3518, 3501, -1123, 1122, -3444], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, 1073, 3518, 3501, 1123, -1122, 3444], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, 1073, 3518, 3501, 1123, -1122, -3444], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, 1073, 3518, 3501, 1123, 1122, 3444], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, 1073, 3518, 3501, 1123, 1122, -3444], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, 1073, 3518, -3501, 1123, -3534, 1122], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, 1073, 3518, -3501, 1123, -3534, -1122], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, 1073, 3518, -3501, 1123, 3534, -1122], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, 1073, 3518, -3501, 1123, 3534, 1122], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, 1073, 3518, -3501, -1123, 3464, 3444], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, 1073, 3518, -3501, -1123, 3464, -3444], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, 1073, 3518, -3501, -1123, -3464, 3444], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, 1073, 3518, -3501, -1123, -3464, -3444], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, -3444, -3464, 1123, -1048, -3501], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, -3444, -3464, 1123, -1048, 3501], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, -3444, -3464, 1123, 1048, -1022], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, -3444, -3464, 1123, 1048, 1022], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, -3444, -3464, -1123, -3501, -3518], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, -3444, -3464, -1123, -3501, 3518], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, -3444, -3464, -1123, 3501, -3518], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, -3444, -3464, -1123, 3501, 3518], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, -3444, 3464, -3501, -3518, 1126], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, -3444, 3464, -3501, -3518, -1126], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, -3444, 3464, -3501, 3518, -3483], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, -3444, 3464, -3501, 3518, 3483], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, -3444, 3464, 3501, 1123, 2885], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, -3444, 3464, 3501, 1123, -2885], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, -3444, 3464, 3501, -1123, -2885], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, -3444, 3464, 3501, -1123, 2885], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, 3444, -3483, -3501, -3534, -3518], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, 3444, -3483, -3501, -3534, 3518], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, 3444, -3483, -3501, 3534, -3518], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, 3444, -3483, -3501, 3534, 3518], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, 3444, -3483, 3501, 1122, -3518], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, 3444, -3483, 3501, 1122, 3518], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, 3444, -3483, 3501, -1122, 3534], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, 3444, -3483, 3501, -1122, -3534], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, 3444, 3483, -1122, 3501, 3518], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, 3444, 3483, -1122, 3501, -3518], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, 3444, 3483, -1122, -3501, 1125], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, 3444, 3483, -1122, -3501, -1125], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, 3444, 3483, 1122, -3518, -3534], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, 3444, 3483, 1122, -3518, 3534], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, 3444, 3483, 1122, 3518, 3501], "status": "OPEN", "reason": "deadline"}
+{"cube": [1134, -1073, 3444, 3483, 1122, 3518, -3501], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, -8933, 43, 40, 41, 42], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, -8933, 43, 40, 41, -42], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, -8933, 43, 40, -41, 42], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, -8933, 43, 40, -41, -42], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, -8933, 43, -40, 41, 42], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, -8933, 43, -40, 41, -42], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, -8933, 43, -40, -41, 42], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, -8933, 43, -40, -41, -42], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, -8933, -43, 42, 41, 40], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, -8933, -43, 42, 41, -40], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, -8933, -43, 42, -41, 40], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, -8933, -43, 42, -41, -40], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, -8933, -43, -42, -40, -44], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, -8933, -43, -42, -40, 44], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, -8933, -43, -42, 40, -44], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, -8933, -43, -42, 40, 44], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, 8933, -1245, -1212, -1229, -1194], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, 8933, -1245, -1212, -1229, 1194], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, 8933, -1245, -1212, 1229, -1194], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, 8933, -1245, -1212, 1229, 1194], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, 8933, -1245, 1212, -1194, -1175], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, 8933, -1245, 1212, -1194, 1175], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, 8933, -1245, 1212, 1194, -1175], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, 8933, -1245, 1212, 1194, 1175], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, 8933, 1245, -1229, -1212, -1194], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, 8933, 1245, -1229, -1212, 1194], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, 8933, 1245, -1229, 1212, -1194], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, 8933, 1245, -1229, 1212, 1194], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, 8933, 1245, 1229, 1194, 1212], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, 8933, 1245, 1229, 1194, -1212], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, 8933, 1245, 1229, -1194, -1212], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, -1155, 8933, 1245, 1229, -1194, 1212], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, -1245, -1229, -1089, -1212, -1065], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, -1245, -1229, -1089, -1212, 1065], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, -1245, -1229, -1089, 1212, -1194], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, -1245, -1229, -1089, 1212, 1194], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, -1245, -1229, 1089, 1065, 1040], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, -1245, -1229, 1089, 1065, -1040], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, -1245, -1229, 1089, -1065, -1194], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, -1245, -1229, 1089, -1065, 1194], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, -1245, 1229, 1212, 1194, 1175], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, -1245, 1229, 1212, 1194, -1175], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, -1245, 1229, 1212, -1194, 1175], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, -1245, 1229, 1212, -1194, -1175], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, -1245, 1229, -1212, -1194, -1175], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, -1245, 1229, -1212, -1194, 1175], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, -1245, 1229, -1212, 1194, 1175], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, -1245, 1229, -1212, 1194, -1175], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, 1245, 1229, 1212, 1194, 1175], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, 1245, 1229, 1212, 1194, -1175], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, 1245, 1229, 1212, -1194, 1175], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, 1245, 1229, 1212, -1194, -1175], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, 1245, 1229, -1212, 1194, 1175], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, 1245, 1229, -1212, 1194, -1175], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, 1245, 1229, -1212, -1194, 1175], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, 1245, 1229, -1212, -1194, -1175], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, 1245, -1229, 1212, 1194, 1175], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, 1245, -1229, 1212, 1194, -1175], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, 1245, -1229, 1212, -1194, 1175], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, 1245, -1229, 1212, -1194, -1175], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, 1245, -1229, -1212, -1194, -1175], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, 1245, -1229, -1212, -1194, 1175], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, 1245, -1229, -1212, 1194, 1175], "status": "OPEN", "reason": "deadline"}
+{"cube": [-1134, 1155, 1245, -1229, -1212, 1194, -1175], "status": "OPEN", "reason": "deadline"}

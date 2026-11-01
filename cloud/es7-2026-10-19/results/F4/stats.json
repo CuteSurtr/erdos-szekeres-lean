@@ -1,0 +1,92 @@
+{
+ "abstract_models_attempted": 3000,
+ "abstract_models_realized": 0,
+ "realizer_cpu_s_total": 12263,
+ "ins_ff_placed_hist": {
+  "9": 22,
+  "10": 119,
+  "11": 468,
+  "12": 870,
+  "13": 872,
+  "14": 448,
+  "15": 159,
+  "16": 34,
+  "17": 7,
+  "18": 1
+ },
+ "armF_4000003.jsonl": {
+  "restarts": 558,
+  "complete_26": 0,
+  "maxk_hist": {
+   "14": 12,
+   "15": 28,
+   "16": 86,
+   "17": 112,
+   "18": 147,
+   "19": 106,
+   "20": 46,
+   "21": 15,
+   "22": 6
+  }
+ },
+ "armF_4000006.jsonl": {
+  "restarts": 3019,
+  "complete_26": 0,
+  "maxk_hist": {
+   "11": 1,
+   "12": 2,
+   "13": 9,
+   "14": 23,
+   "15": 74,
+   "16": 139,
+   "17": 333,
+   "18": 569,
+   "19": 647,
+   "20": 577,
+   "21": 394,
+   "22": 191,
+   "23": 51,
+   "24": 8,
+   "25": 1
+  }
+ },
+ "guided_4000001.jsonl": {
+  "chains": 0,
+  "reached_26": [],
+  "max_reached_hist": {},
+  "hours": 0.0
+ },
+ "guided_4000002.jsonl": {
+  "chains": 1,
+  "reached_26": [],
+  "max_reached_hist": {
+   "23": 1
+  },
+  "hours": 0.3
+ },
+ "guided_4000007.jsonl": {
+  "chains": 9,
+  "reached_26": [],
+  "max_reached_hist": {
+   "22": 4,
+   "23": 4,
+   "24": 1
+  },
+  "hours": 2.7
+ },
+ "guided_4000008.jsonl": {
+  "chains": 12,
+  "reached_26": [
+   [
+    "gg4000008_5",
+    "realizer"
+   ]
+  ],
+  "max_reached_hist": {
+   "22": 6,
+   "23": 5,
+   "24": 1
+  },
+  "hours": 2.7
+ }
+}

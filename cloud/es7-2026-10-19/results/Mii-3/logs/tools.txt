@@ -1,0 +1,4 @@
+cadical   https://github.com/arminbiere/cadical      c60730422e758ef1cebe7aeddf2dda31c996bf04  (version 3.0.1); built with ./configure && make
+drat-trim https://github.com/marijnheule/drat-trim   2e3b2dc0ecf938addbd779d42877b6ed69d9a985  (lrat-check built by make)
+CnC       https://github.com/marijnheule/CnC         705b60c6491ef2b61988b3ce6ac674be1b90571d  (march_cu built with make CFLAGS="-O3 -fcommon"; plain make fails with multiple-definition link errors)
+Note: this CaDiCaL head rejects the option -q. controls.sh passes -q, so it was run through a wrapper that drops -q and otherwise calls the same binary.

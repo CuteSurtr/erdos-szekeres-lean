@@ -1,0 +1,16 @@
+cadical   https://github.com/arminbiere/cadical  c60730422e758ef1cebe7aeddf2dda31c996bf04  (version 3.0.1)  ./configure && make
+march_cu  https://github.com/marijnheule/CnC     705b60c6491ef2b61988b3ce6ac674be1b90571d  make CFLAGS="-O3 -fcommon" in march_cu/
+cake_lpr  https://github.com/tanyongkiam/cake_lpr a36874a8b750b43fe4b385b8ddbf5b033e46a3fa  make cake_lpr; cake_lpr.S sha256 2f3af32d55083839b3fa0e693afd817679c0b8944bef41def05a8b0ec72b7d4a
+cake_lpr example.cnf example.lpr -> s VERIFIED UNSAT
+F = /opt/work/F.cnf sha256 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d (gen_etv.py 33 7 7 7 --mirror; mirgen.py --interior --yflip-unit): OK
+Case CNF sha256 checks (hullsplit.py case F U L vs cases.jsonl cnf_sha256):
+U11_L6 [11] [6] OK 5444dd0cf765969d749d17a6f281019187939fb8f773e0859d2f1cc05ba0d30c
+U5_L11 [5] [11] OK 9981f6c2496be6eb7f2217d4e2471db3017a6f2f47d9a78449fd5dc7aba1d340
+U9_L4 [9] [4] OK 7a3758f8d37ee4539888b717d7e1a3481318e08d9ec321f9f4492bf39743f44a
+U15_L4 [15] [4] OK 34c559d13ba1d00a9e9d8bca2fdea67ecf94040c8c6bbdc89e52758862f3f69c
+U4-16_L [4, 16] [] OK 90af8c38f0dd85d8872ce1c0861c684b70cf10282c84b1dfd7df4bcf6c29294f
+U13_L5 [13] [5] OK ab89005412ba429af43c04386e25f48305fcda8049c13850a8abd7775c522c2b
+U12_L5 [12] [5] OK 6d1489f6c008c59eacad29245142f349c9ab2f5cacf5325a17996a23accc52c5
+U11_L4 [11] [4] OK e5558ed667f21c2bdf21f61f7dd2294e64fd5dbcacc9081b5e482a8b698aa7c5
+U10_L4 [10] [4] OK e98f18939d89e39c7f395f20dda8a6202d3347a32a61e90d6683cf3fd4939a29
+U9_L7 [9] [7] OK b25796ef557db1afe88e2e471a511f85cbec74e037a1df47d8efb6b60f095c30

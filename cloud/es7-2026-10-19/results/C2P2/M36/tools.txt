@@ -1,0 +1,18 @@
+build_tools.sh (cloud/es7-2026-10-19/results/C2P/vendor/build_tools.sh), sources vendored in vendor/tools-src.tar.xz (CaDiCaL c6073042, cake_lpr a36874a8, lrat-check 2e3b2dc + E2 patch); no code cloned or downloaded.
+manifest: all 196 files match
+cadical --version: 3.0.1
+cake_lpr example: s VERIFIED UNSAT
+sanity bad (LRAT on {1},{-1}): lrat-check 'c FAILED: empty clause without a RUP conflict'; cake_lpr 'c Checking failed at line: 0. Reason: pivot must be non-zero'
+sanity good (LRAT on {1},{-1}): lrat-check 'c VERIFIED'; cake_lpr 's VERIFIED UNSAT'
+expected: bad rejected by both, good accepted by both (c VERIFIED, s VERIFIED UNSAT)
+binaries: cadical->/opt/src/vendored/cadical/build/cadical cake_lpr->/opt/src/vendored/cake_lpr/cake_lpr lrat-check->/opt/src/vendored/drat-trim/lrat-check 
+sha256 cadical d528b5303d61787d41d563d80cad3b9b7e83d28f9e01794072f9d038e0f27030
+sha256 cake_lpr 1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca
+sha256 lrat-check 29cf644ebd224e9986dbd95590962f9aea3b67b37162ccd20a6b0cae46feeed4
+
+base CNF: python3 SYMZ/zcnf.py rot 17 7 --m 2 --hull -o /opt/work/base.cnf --map /opt/work/base.json
+header: p cnf 838032 16653336  (expected p cnf 838032 16653336) OK
+b0061e908bff80e6a597f31a6fec1d91e8504aebc09b0bcf41c2ff21604d8ff1  /opt/work/base.cnf
+2476fafff493a763fd7f2883380d359629191912a15a69bcbdfbf49bbf472b48  /opt/work/base.json
+expected b0061e90...d8ff1 / 2476faff...2b48: OK
+cubes: l2cubes.py P1..P8 all byte-identical to C2P/cubes/P{a}_cubes.txt: OK

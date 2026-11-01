@@ -1,0 +1,5 @@
+fuzz_m5k6_s21.jsonl
+fuzz_m6k6_s22.jsonl
+fuzz_m7k5_s23.jsonl
+fuzz_m7k7_s24.jsonl
+{"run": "fz2", "totals": {"cases": 929, "brute_holes>0": 668}, "kinds": {"none": 106, "drop_cert": 106, "drop_split": 106, "forge_sha": 106, "flip_cube_bit": 71, "sigma_depth1": 106, "childless_quarter": 106, "cubes_into_split_node": 85, "sigma_wrong_bits": 71, "childless_cube_split": 66}, "per_composer": {"mine": {"not covered": 588, "reject": 283, "covered": 58, "covered_ok": 58}, "../../C3U/tools": {"not covered": 588, "reject": 283, "covered": 58, "covered_ok": 58}, "../../C3U2/tools": {"not covered": 588, "reject": 283, "covered": 58, "covered_ok": 58}}}

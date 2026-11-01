@@ -1,0 +1,21 @@
+# LBS2 task: exact one-point saturation of heptagon-free 32-point sets
+
+Your prompt gives these values: V (your machine name, L4 or L5), STRATEGY (`walk32` or `anneal32`), H (your time budget in hours) and Z (the commit of this file). Replace {V}, {STRATEGY}, {H} and {Z} by those values; follow everything else exactly.
+
+General rules: exactly as in `results/LBS/TASK.md`, with `results/LBS2/{V}/` as your only directory and the fallback branch `es7-fallback-lbs2-{V}` (lower case): commit identity CuteSurtr <133225877+CuteSurtr@users.noreply.github.com> (check `git var GIT_AUTHOR_IDENT` and `GIT_COMMITTER_IDENT`), `env.txt` pushed at once, plain commit messages with no AI co-author or attribution trailers, `git pull --rebase --autostash` before every push, progress pushed at least every 30 minutes, the last 10 minutes for the README, no file over 50 MB, and do not end your turn while work is running (run long jobs with `setsid nohup` and wait in the foreground with bounded until-loops of at most 10 minutes per tool call).
+
+## Idea
+
+A 33-point counterexample to ES(7) = 33 contains heptagon-free 32-point subsets. Conversely, a heptagon-free 32-point set S extends to a counterexample iff some face of the arrangement of the C(32, 2) lines through pairs of S holds a point p such that S + p has no convex 7-gon (the order type of S + p depends only on the face). `cloud/es7-2026-10-19/tools/trackA/sat.c` tests every face exactly, and `tools/realizer/saturate.py` wraps it with exact checks (usage and smoke test in `results/F/README.md`; its exactness bound is |coordinates| < 2^27). The first heuristic agents (`results/LBS/L1` to `L3`, still running) reach 1 convex 7-gon at best, and `results/LBS/L2` adds a 33rd point to heptagon-free 32-point sets only at about 4,000 sampled positions. Your job is the exact version, on as many and as different heptagon-free 32-point sets as you can produce.
+
+## Steps
+
+1. Build `sat.c` (with `-O2`) and run `saturate.py` on a known set as a smoke test (for example a realization of the Erdős–Szekeres 32-point construction with small coordinates; it must come out saturated with `faces_euler == faces_hit`). Record the tools in `tools.txt`.
+2. Produce heptagon-free 32-point sets in general position with integer coordinates, by strategy:
+   - `walk32`: realizations of the Erdős–Szekeres construction (`ErdosSzekeres/LowerBound` on branch main; `results/LBS/L2/gen_bases.py`), moved by random walks that keep the count of convex 7-gons at 0 (as L2 does), with many seeds and walk lengths, so that the sets differ in order type (record the convex 6-gon count and a hash of the order type).
+   - `anneal32`: annealing of random 32-point sets down to 0 convex 7-gons (your own exact annealer, or L1's with credit), plus 32-point subsets of the best 33-point near-misses in `results/LBS/L1`, `L2` and `L3` (sets with 1 to 3 convex 7-gons: drop a point of a remaining 7-gon); keep only sets whose 7-gon count is 0 by an exact count.
+   Coordinates must stay below 2^27 in absolute value for `sat.c`. If your sets need larger coordinates, either reduce them (find a set with the same order type and small coordinates, and check the order type exactly) or extend `sat.c` to exact wider arithmetic (for example `__int128`) and re-run the smoke test with the extension; document what you did.
+3. For every set: an exact general-position check and an exact 7-gon count by your own program (independent of the generator), then `saturate.py --sat ... --K 7` on it. Record one JSON line per set in `out.jsonl`: generator and seed, order-type hash, c6, faces, `faces_euler == faces_hit`, `bad_candidates`, seconds.
+4. If any set has `bad_candidates > 0`: stop the search, construct the 33rd point exactly (a rational point inside the face, scaled to integers), verify the 33-point set twice with two independent exact programs (general position, no 7 points in convex position), commit the coordinates, and report it first. It would be a counterexample.
+
+`README.md` and final message: the tools and smoke test, how many sets of how many distinct order types were tested, whether all were saturated, the distribution of c6 and of face counts, and anything unusual.

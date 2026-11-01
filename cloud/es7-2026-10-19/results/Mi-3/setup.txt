@@ -1,0 +1,12 @@
+hm33k7.sub.cnf (regenerated with results/C/scripts/make_cnfs.sh -> gen_etv.py + mirgen.py --hull)
+  header: p cnf 47002 535454  (matches results/C/README.md: 535,454 clauses)
+  sha256: bfbc2d6096e4099ba751130d421eca9da18b72559991103cc2d4b4bc0d92757d
+  hm33k7.cnf sha256: d3752e13db190fc808767c2a3cb661bd952c3ca68db19fc6cb95011f203c581a
+  results/C and results/C2 record no sha256 for this file (checked at 02:40 UTC).
+validation: results/C/scripts/validate.py <cnfdir> <bindir> <out> 1000 1 -> logs/validate_report.json (all pass, same as C)
+controls:   results/C/scripts/controls.sh -> logs/part1_controls.log (all pass; every UNSAT control LRAT VERIFIED)
+cubes: march_cu hm33k7.sub.cnf -d 7 -o cubes.icnf
+  "c number of cubes 128, including 0 refuted leaves"  (logs/march_d7.log)
+  cubes.icnf: 128 lines, sha256 2a1b47b50879f6f3b594ea412239ef2dfd20c69acf63e8fe2fab3ec62ac8764d
+shard 3: lines i (0-based) with i % 4 == 3 -> 32 cubes
+top-level residual: hm33k7.sub.cnf + 128 clauses (negation of each cube in cubes.icnf): cadical UNSAT, lrat-check VERIFIED (shard-independent: the 128 cubes cover the whole instance)

@@ -1,0 +1,8 @@
+CaDiCaL: https://github.com/arminbiere/cadical commit c60730422e758ef1cebe7aeddf2dda31c996bf04, version 3.0.1, built ./configure && make, installed /opt/bin/cadical
+  sha256 /opt/bin/cadical fc5aa18a0734510fa2d1e5c5b390e0345ce1a6e31529c46e217ff0440eb591fb
+cake_lpr: https://github.com/tanyongkiam/cake_lpr commit a36874a8b750b43fe4b385b8ddbf5b033e46a3fa, make cake_lpr, installed /opt/bin/cake_lpr
+  sha256 /opt/bin/cake_lpr 1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca
+  bundled example: cake_lpr example.cnf example.lpr -> s VERIFIED UNSAT
+F: gen_etv.py 33 7 7 7 --mirror; mirgen.py --interior --yflip-unit -> /opt/work/F.cnf
+  sha256 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d (expected 69c1dc8f...932d: match)
+verify/v3 from commit 7c6d70c (worktree /opt/v3src)

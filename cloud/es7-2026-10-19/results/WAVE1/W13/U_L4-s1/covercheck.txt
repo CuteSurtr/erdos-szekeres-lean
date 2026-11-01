@@ -1,0 +1,8 @@
+covercheck.py leaves.icnf + top cubes of shards 0,2 (85 lines):
+s COVERED 795
+covercheck.py leaves.icnf alone:
+s NOT COVERED 710
+covercheck.py shards 0,2 top cubes alone:
+s NOT COVERED 85
+per top cube of shard 1 (leaves restricted to the cube), 43 checks:
+     43 s COVERED

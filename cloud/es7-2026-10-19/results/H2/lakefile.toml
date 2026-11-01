@@ -1,0 +1,15 @@
+name = "d3_encoding"
+version = "0.1.0"
+defaultTargets = ["D3Encoding", "d3_dimacs"]
+
+# `results/H` (ETVEncoding) and, through it, the parent repository and Mathlib.
+[[require]]
+name = "etv_encoding"
+path = "../H"
+
+[[lean_lib]]
+name = "D3Encoding"
+
+[[lean_exe]]
+name = "d3_dimacs"
+root = "D3Encoding.Emit"

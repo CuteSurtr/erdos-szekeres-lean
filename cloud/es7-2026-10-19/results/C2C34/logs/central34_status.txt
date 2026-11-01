@@ -1,0 +1,44 @@
+Central symmetry, 34 points (zcnf.py rot 17 7 --m 2 --hull; clauses identical to c34h_final.cnf, sha256 b0061e90...)
+
+Direct runs (CaDiCaL 3.0.1, one process each):
+  c2h_def  default, --lrat    no answer        2668.08 s
+  c2h_uns  --unsat, --lrat    no answer        2670.91 s
+  c2h_sat  --sat, --lrat      no answer        6681.56 s
+  c2h_s1   --seed=1           no answer        1669.59 s
+  c2h_u5   --unsat --seed=5   no answer        1345.69 s
+  c2h_s2   --seed=2           no answer        706.59 s
+
+Coverage check (formula + negation of all 136 hull cubes, --lrat): UNSAT, 186.54 s; lrat-check: c VERIFIED
+
+Hull cases (no proof files; exploratory; limit 3000 s or stopped at the session deadline):
+  H1-2     UNSAT            385.43 s
+  H1-3     UNSAT            418.66 s
+  H1-4     UNSAT            426.37 s
+  H1-5     UNSAT            517.74 s
+  H1-6     UNSAT            503.36 s
+  H1-7     UNSAT            595.46 s
+  H1-8     UNSAT            626.67 s
+  H1-9     UNSAT            643.75 s
+  H2-4     UNSAT            288.05 s
+  H2-5     UNSAT            385.33 s
+  H2-6     UNSAT            421.64 s
+  H2-7     UNSAT            558.92 s
+  H2-8     UNSAT            565.85 s
+  H2-9     UNSAT            692.55 s
+  H3-10    UNSAT            753.30 s
+  H3-6     UNSAT            568.99 s
+  H3-7     UNSAT            623.29 s
+  H3-8     UNSAT            701.42 s
+  H3-9     UNSAT            761.81 s
+  H4-8     UNSAT            817.59 s
+  H4-9     UNSAT            707.19 s
+  H5-11    UNSAT            1123.63 s
+  P1       no answer        4531.36 s
+  P2       no answer        2906.79 s
+  P3       no answer        2907.56 s
+  P4       no answer        2906.42 s
+  P5       no answer        2905.93 s
+  P6       no answer        2903.78 s
+  P7       no answer        2907.10 s
+  P8       no answer        3470.73 s
+2026-10-29T05:15:26Z

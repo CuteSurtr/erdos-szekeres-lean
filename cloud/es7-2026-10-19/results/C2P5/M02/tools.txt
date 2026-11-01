@@ -1,0 +1,22 @@
+C2P5 M02 tools (Sat Oct 31 18:15:00 UTC 2026)
+repo HEAD cb46480e938fac48d3558e79e02c1a3457ef2dc3; TASK commit 81cb025f (TASK.md unchanged since)
+vendored sources: cadical c6073042 (3.0.1), cake_lpr a36874a8, drat-trim lrat-check 2e3b2dc + E2 patch
+manifest: all 196 files match
+cadical --version: 3.0.1
+cake_lpr example: s VERIFIED UNSAT
+sanity bad (LRAT on {1},{-1}): lrat-check 'c FAILED: empty clause without a RUP conflict'; cake_lpr 'c Checking failed at line: 0. Reason: pivot must be non-zero'
+sanity good (LRAT on {1},{-1}): lrat-check 'c VERIFIED'; cake_lpr 's VERIFIED UNSAT'
+expected: bad rejected by both, good accepted by both (c VERIFIED, s VERIFIED UNSAT)
+
+base.cnf header: p cnf 838032 16653336
+b0061e908bff80e6a597f31a6fec1d91e8504aebc09b0bcf41c2ff21604d8ff1  /opt/work/base.cnf
+2476fafff493a763fd7f2883380d359629191912a15a69bcbdfbf49bbf472b48  /opt/work/base.json
+(expected b0061e90...d8ff1 and 2476faff...2b48: match)
+cubes P1: byte-identical to C2P/cubes/P1_cubes.txt
+cubes P2: byte-identical to C2P/cubes/P2_cubes.txt
+cubes P3: byte-identical to C2P/cubes/P3_cubes.txt
+cubes P4: byte-identical to C2P/cubes/P4_cubes.txt
+cubes P5: byte-identical to C2P/cubes/P5_cubes.txt
+cubes P6: byte-identical to C2P/cubes/P6_cubes.txt
+cubes P7: byte-identical to C2P/cubes/P7_cubes.txt
+cubes P8: byte-identical to C2P/cubes/P8_cubes.txt

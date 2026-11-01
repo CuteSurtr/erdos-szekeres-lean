@@ -1,0 +1,29 @@
+# S5 driver review: results/WAVE2/S5/close_march.py
+# Base: results/WAVE1/W19/scripts/close_march.py -> F2 adaptation (results/WAVE2/F2/close_march.py, F2/driver.diff) -> S5 copy.
+#
+# Checked in the F2 copy:
+# (a) fresh directory per job: march() uses tempfile.mkdtemp(prefix="m_<tag>_", dir=WORK) and solve() uses
+#     tempfile.mkdtemp(prefix="s_<k>_", dir=WORK) for every CaDiCaL+cake_lpr job (CNF, LRAT, stdout all inside it);
+#     the cake_lpr call reads the CNF and the proof from that same directory. OK (fixes AUDIT RISK-3(b)).
+# (b) leaves.icnf and open.icnf: finalize() writes both through atomic(): mkstemp in the output dir, write, chmod,
+#     os.replace into place. OK (fixes RISK-1 exposure).
+# (c) first leaves.jsonl record: written before anything else when leaves.jsonl does not exist, with "case"
+#     (= --name) and "case_sha256" (sha256 of the case CNF file). OK. A later "top" record repeats case_sha256.
+# BUG-1: a leaf enters leaves.icnf only if status == "UNSAT" and cake_lpr == "s VERIFIED UNSAT" (load() and finalize()). OK.
+# Other: cubes are written as the full path (top cube + split suffixes), over F's variables; --skip is not used by S5.
+#
+# S5 change (one hunk, below): if march_cu refutes a cube while splitting it writes `a 0`, so a sub-cube would be
+# empty and the child equal to its parent (AUDIT NOTE-1); frontier() would then loop forever. Such a cube is now
+# recorded as NOSPLIT (no "subs"), and it stays open. It never counts as closed.
+#
+--- ../F2/close_march.py	2026-10-20 10:35:21.946585924 +0000
++++ close_march.py	2026-10-20 10:36:50.415487398 +0000
+@@ -101,6 +101,8 @@
+     else:
+         r["status"] = "SPLIT"; subs, ms, line = march(cube, a.split_depth, k)
+         r.update(split_s=round(ms, 1), march=line, nsub=len(subs), subs=subs)
++        if not subs or any(len(x) == 0 for x in subs):  # S5: march refuted the cube (`a 0`, NOTE-1): no proof, keep it open
++            r["status"] = "NOSPLIT"; del r["subs"]
+     c1 = os.times(); r["cpu_s"] = round(c1.children_user + c1.children_system - c0.children_user - c0.children_system, 1)
+     subprocess.run(["rm", "-rf", w]); rec(r)
+     if r["status"] == "SPLIT":

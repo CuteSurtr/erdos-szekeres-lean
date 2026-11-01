@@ -1,0 +1,14 @@
+'V2L.mirrorExclusionLine_final' depends on axioms: [propext, Classical.choice, Quot.sound]
+V2L.mirrorExclusionLine_final : (∀ c ∈ V1L.hullLeaves, ¬ETV.DimacsSatisfiable (Mir.cubeCnf (Mir.hullCnf 33 7) c)) →
+  V2L.RootCertificate →
+    V2L.UpCertificates →
+      (∀ p ∈ V2L.caseTable,
+          ∀ l ∈ (V2L.treeOf p.1).leaves,
+            ¬ETV.DimacsSatisfiable (Mir.cubeCnf (Mir.cubeCnf (Mir.interiorCnf 33 7) p.2) l)) →
+        Mir.MirrorExclusionLine
+'V1L.hullCnf_unsat_of_leaves' depends on axioms: [propext, Classical.choice, Quot.sound]
+def V2L.RootCertificate : Prop :=
+¬ETV.DimacsSatisfiable (Mir.interiorCnf 33 7 ++ List.map V2L.negClause V2L.upCubes)
+def V2L.UpCertificates : Prop :=
+∀ p ∈ V2L.upTable,
+  ¬ETV.DimacsSatisfiable (Mir.cubeCnf (Mir.interiorCnf 33 7) p.2 ++ List.map V2L.negClause (V2L.casesOf p.1))

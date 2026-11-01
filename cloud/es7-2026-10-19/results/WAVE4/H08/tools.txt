@@ -1,0 +1,7 @@
+cadical 3.0.1 https://github.com/arminbiere/cadical c60730422e758ef1cebe7aeddf2dda31c996bf04 (3.0.1)
+march_cu https://github.com/marijnheule/CnC 705b60c6491ef2b61988b3ce6ac674be1b90571d built with make CFLAGS='-O3 -fcommon'
+cake_lpr https://github.com/tanyongkiam/cake_lpr a36874a8b750b43fe4b385b8ddbf5b033e46a3fa make cake_lpr; example: s VERIFIED UNSAT
+BIN=/opt/bin
+7c2f230ee41b256b178303f80f0e30acc7a953cad3ca18c2995313f8d6489ceb  /opt/bin/cadical
+1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca  /opt/bin/cake_lpr
+5239ba7c5f44f2468c721bc54991fa1374fee096b375f31271e18cee391061b2  /opt/bin/march_cu

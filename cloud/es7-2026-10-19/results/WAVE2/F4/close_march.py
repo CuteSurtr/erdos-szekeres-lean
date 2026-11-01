@@ -1,0 +1,139 @@
+#!/usr/bin/env python3
+"""F4 (WAVE2) copy of F5's driver, unchanged in code; F5 (WAVE2) copy of the W19 driver; F5 changes: per-job mkdtemp scratch dirs, atomic
+leaves.icnf/open.icnf, "case" in the first leaves.jsonl record (see driver.diff).
+
+W19 copy of results/Mii-S/scripts/close_march.py with sharding, resume and a deadline.
+
+  close_march.py CASE.cnf OUTDIR --depth 7 --timeout 300 --split-depth 6 --jobs 4 \
+      [--shard s --nshards k] [--top TOP.icnf] [--hours H]
+Changes against the original:
+- top cubes come from `march_cu CASE -d DEPTH -o OUTDIR/top.icnf` (run once, reused if present);
+  with --nshards k only the cubes with 0-based line index i, i mod k == s are processed;
+- a leaf counts as closed only when cake_lpr prints `s VERIFIED UNSAT` (other verdicts are kept
+  as status UNSAT_UNCHECKED and stay open); leaves.icnf lists only the verified leaves;
+- SPLIT records carry the sub-cubes ("subs"), so a restart rebuilds the frontier from
+  leaves.jsonl and continues (resumable); open.icnf lists the frontier still open;
+- no cube is started when less than TIMEOUT seconds remain before the deadline;
+- the solver stdout is kept for SAT answers (SAT_k.cnf, SAT_k.out).
+"""
+import argparse, hashlib, json, os, re, subprocess, tempfile, threading, time
+from concurrent.futures import ThreadPoolExecutor
+BIN = os.environ.get("BIN", "/tmp/claude-0/w/bin")
+SCRATCH = os.environ.get("SCRATCH", tempfile.gettempdir())
+ap = argparse.ArgumentParser(); ap.add_argument("case"); ap.add_argument("out")
+ap.add_argument("--depth", type=int, default=7); ap.add_argument("--timeout", type=int, default=300)
+ap.add_argument("--split-depth", type=int, default=6); ap.add_argument("--jobs", type=int, default=2)
+ap.add_argument("--hours", type=float, default=1e9); ap.add_argument("--top")
+ap.add_argument("--shard", type=int, default=0); ap.add_argument("--nshards", type=int, default=1)
+a = ap.parse_args(); os.makedirs(a.out, exist_ok=True)
+deadline = time.time() + a.hours * 3600
+hdr, body = open(a.case).read().split("\n", 1); nv, nc = int(hdr.split()[2]), int(hdr.split()[3])
+LJ = os.path.join(a.out, "leaves.jsonl")
+lock = threading.Lock()
+def rec(r):
+    with lock:
+        with open(LJ, "a") as log: log.write(json.dumps(r) + "\n")
+def write(path, cube):
+    with open(path, "w") as f:
+        f.write(f"p cnf {nv} {nc + len(cube)}\n"); f.write(body); f.write("".join(f"{l} 0\n" for l in cube))
+def march(cube, d, tag, outfile=None):
+    w = tempfile.mkdtemp(prefix=f"m_{tag}_", dir=SCRATCH)
+    write(os.path.join(w, "f.cnf"), cube); t = time.time(); cf = outfile or os.path.join(w, "cubes")
+    o = subprocess.run([os.path.join(BIN, "march_cu"), os.path.join(w, "f.cnf"), "-d", str(d), "-o", cf],
+                       capture_output=True, text=True).stdout
+    cs = [list(map(int, l.split()[1:-1])) for l in open(cf) if l.startswith("a")]
+    m = re.search(r"number of cubes (\d+), including (\d+) refuted", o)
+    subprocess.run(["rm", "-rf", w]); return cs, time.time() - t, m.group(0) if m else o[-200:]
+VER = "s VERIFIED UNSAT"
+def load():
+    rs = [json.loads(l) for l in open(LJ)] if os.path.exists(LJ) else []
+    closed, split = set(), {}
+    for r in rs:
+        if "cube" not in r: continue
+        c = tuple(r["cube"])
+        if r.get("status") == "UNSAT" and r.get("cake_lpr") == VER: closed.add(c)
+        elif r.get("status") == "SPLIT" and "subs" in r: split[c] = r["subs"]
+    return rs, closed, split
+def frontier(roots, closed, split):
+    out, st = [], list(reversed(roots))
+    while st:
+        c = st.pop()
+        if tuple(c) in closed: continue
+        if tuple(c) in split: st.extend(reversed([c + s for s in split[tuple(c)]])); continue
+        out.append(c)
+    return out
+def cake(f, p, extra=()):
+    r = subprocess.run([os.path.join(BIN, "cake_lpr"), *extra, f, p], capture_output=True, text=True)
+    return next((l for l in r.stdout.splitlines() if l.startswith("s ")), (r.stdout + r.stderr)[-120:])
+pool = ThreadPoolExecutor(a.jobs); cv = threading.Condition(); count = [0]; n = [0]; inflight = {}
+def solve(cube):
+    with lock: n[0] += 1; k = n[0]
+    if time.time() + a.timeout > deadline: return   # left open, rebuilt on resume
+    w = tempfile.mkdtemp(prefix=f"s_{k}_", dir=SCRATCH); f = os.path.join(w, "f.cnf")
+    write(f, cube); t = time.time(); c0 = os.times()
+    with open(os.path.join(w, "out"), "w") as so:
+        rc = subprocess.run([os.path.join(BIN, "cadical"), "--lrat", "--binary=false", "-q", "-t", str(a.timeout), f,
+                             os.path.join(w, "p.lrat")], stdout=so).returncode
+    st = round(time.time() - t, 2); r = {"cube": cube, "solve_s": st}
+    if rc == 20:
+        r["proof_bytes"] = os.path.getsize(os.path.join(w, "p.lrat")); t = time.time()
+        v = cake(f, os.path.join(w, "p.lrat"))
+        if v != VER and "heap" in v.lower():
+            v = cake(f, os.path.join(w, "p.lrat"), ["--CML_HEAP_SIZE=10000", "--CML_STACK_SIZE=4000"]); r["cake_retry"] = True
+        r["cake_lpr"] = v; r["check_s"] = round(time.time() - t, 2)
+        r["status"] = "UNSAT" if v == VER else "UNSAT_UNCHECKED"
+    elif rc == 10:
+        r["status"] = "SAT"; sk = os.path.basename(w); r["sat_files"] = sk
+        subprocess.run(["cp", f, os.path.join(a.out, f"SAT_{sk}.cnf")])
+        subprocess.run(["cp", os.path.join(w, "out"), os.path.join(a.out, f"SAT_{sk}.out")])
+    elif time.time() > deadline:
+        r["status"] = "TIMEOUT"   # no split after the deadline; stays open
+    else:
+        r["status"] = "SPLIT"; subs, ms, line = march(cube, a.split_depth, k)
+        r.update(split_s=round(ms, 1), march=line, nsub=len(subs), subs=subs)
+    c1 = os.times(); r["cpu_s"] = round(c1.children_user + c1.children_system - c0.children_user - c0.children_system, 1)
+    subprocess.run(["rm", "-rf", w]); rec(r)
+    if r["status"] == "SPLIT":
+        for s in subs: submit(cube + s)
+def task(c):
+    try: solve(c)
+    finally:
+        with cv: count[0] -= 1; cv.notify_all()
+def submit(c):
+    with cv: count[0] += 1
+    pool.submit(task, c)
+topf = os.path.join(a.out, "top.icnf")
+if a.top and not os.path.exists(topf): subprocess.run(["cp", a.top, topf])
+rs, closed, split = load()
+if not os.path.exists(topf):
+    _, ms, line = march([], a.depth, "top", topf)
+    rec({"top": True, "case": os.path.basename(os.path.normpath(a.out)),
+         "case_sha256": hashlib.sha256(open(a.case, "rb").read()).hexdigest(), "march_s": round(ms, 1), "march": line})
+lines = open(topf).read().splitlines()
+alltop = [list(map(int, l.split()[1:-1])) for l in lines]
+assert all(l.startswith("a ") for l in lines)
+mine = [c for i, c in enumerate(alltop) if i % a.nshards == a.shard]
+if not any(r.get("top") and "top_sha256" in r for r in rs):
+    rec({"top": True, "case": os.path.basename(os.path.normpath(a.out)), "ncubes": len(alltop), "shard": a.shard, "nshards": a.nshards, "nmine": len(mine),
+         "top_sha256": hashlib.sha256(open(topf, "rb").read()).hexdigest(),
+         "case_sha256": hashlib.sha256(open(a.case, "rb").read()).hexdigest()})
+todo = frontier(mine, closed, split)
+rec({"resume": True, "time": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "frontier": len(todo)})
+def finalize():
+    rs, closed, split = load()
+    lf = os.path.join(a.out, "leaves.icnf")
+    with open(lf + ".tmp", "w") as f:
+        for r in rs:
+            if r.get("status") == "UNSAT" and r.get("cake_lpr") == VER: f.write("a " + " ".join(map(str, r["cube"])) + " 0\n")
+    os.replace(lf + ".tmp", lf)
+    op = frontier(mine, closed, split); of = os.path.join(a.out, "open.icnf")
+    with open(of + ".tmp", "w") as f:
+        for c in op: f.write("a " + " ".join(map(str, c)) + " 0\n")
+    os.replace(of + ".tmp", of)
+    return len(op)
+for c in todo: submit(c)
+with cv:
+    while count[0] > 0:
+        cv.wait(600)
+        with lock: finalize()
+with lock: print("open", finalize())

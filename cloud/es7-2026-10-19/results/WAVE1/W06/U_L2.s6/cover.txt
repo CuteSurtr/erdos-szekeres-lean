@@ -1,0 +1,9 @@
+covercheck.py (results/Mii-S/scripts) on U_L2 shard 6 of 12, 2026-10-20 08:45 UTC
+top.icnf alone                                   : s COVERED 128
+leaves.icnf + the 117 top cubes of other shards  : s COVERED 821   <- shard 6 part covered
+other shards' top cubes alone (sanity)           : s NOT COVERED 117
+leaves.icnf alone (sanity)                       : s NOT COVERED 704
+every leaf extends one of the 11 shard-6 top cubes: True
+per top cube c (leaves under c, restricted to c) : 11/11 s COVERED (64 leaves each)
+leaves.icnf sha256 2a5746301628cde4fba41df75bca6a2b702769dd732e9018bbd1790a43e5b757 (704 lines)
+open.icnf: empty

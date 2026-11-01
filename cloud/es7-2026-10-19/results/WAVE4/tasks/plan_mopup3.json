@@ -1,0 +1,42 @@
+{
+ "U3_L": {
+  "open": 2738,
+  "claimed_by_wave4": 900,
+  "reserved_for_running": 750,
+  "to_mopup": 1088,
+  "machines": 5,
+  "running": [
+   "H24: queue 270 rate 4.8/min left 38 min reserve 145",
+   "H25: queue 895 rate 2.3/min left 52 min reserve 95",
+   "H29: queue 493 rate 5.7/min left 73 min reserve 330",
+   "H30: queue 180 rate 6.0/min left 73 min reserve 180",
+   "H44: queue 0 rate 0.0/min left 121 min reserve 0"
+  ]
+ },
+ "U_L2": {
+  "open": 1403,
+  "claimed_by_wave4": 394,
+  "reserved_for_running": 580,
+  "to_mopup": 429,
+  "machines": 2,
+  "running": [
+   "H01: queue 139 rate 6.0/min left 34 min reserve 139",
+   "H02: queue 485 rate 5.5/min left 34 min reserve 149",
+   "H03: queue 5 rate 5.8/min left 34 min reserve 5",
+   "H07: queue 241 rate 5.4/min left 35 min reserve 148",
+   "H11: queue 74 rate 6.5/min left 35 min reserve 74",
+   "H14: queue 65 rate 7.1/min left 36 min reserve 65"
+  ]
+ },
+ "U_L7": {
+  "open": 737,
+  "claimed_by_wave4": 300,
+  "reserved_for_running": 248,
+  "to_mopup": 189,
+  "machines": 2,
+  "running": [
+   "H26: queue 332 rate 3.2/min left 57 min reserve 143",
+   "H38: queue 105 rate 2.9/min left 84 min reserve 105"
+  ]
+ }
+}

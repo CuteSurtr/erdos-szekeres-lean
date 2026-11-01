@@ -1,0 +1,22 @@
+# #print axioms (lake env lean on a scratch file importing V2L.FinalTree, Tue Oct 20 17:14:20 UTC 2026); the same
+# messages are pinned by #guard_msgs in V2L/Audit.lean, and lake build (2080 jobs) passes.
+'V2L.CTree.covers_of_check' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V2L.CTree.check_of_sibLists' depends on axioms: [propext]
+'V2L.not_dimacsSatisfiable_of_tree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V2L.Trees.check001' depends on axioms: [propext]
+'V2L.Trees.c001_0' does not depend on any axioms
+'V2L.treeOf_check' depends on axioms: [propext]
+'V2L.interiorCnf_unsat_of_certificatesT' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V2L.axisInteriorLine_of_certificatesT' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V2L.mirrorExclusionLine_of_certificatesT' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V2L.axisInteriorLine_final' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V2L.mirrorExclusionLine_final' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+# full lake build:
+Build completed successfully (2080 jobs).
+PEAK rc=0 wall=12.5s max_total_lean_rss=2.03GB max_single=2.03GB
+
+real	0m12.583s
+user	0m15.323s
+sys	0m2.258s
+EXIT 0

@@ -1,0 +1,7 @@
+worktree: /opt/c3s at 8dc27c3 (close_tree.py unchanged; /opt/work was writable, no path change)
+cadical: arminbiere/cadical c60730422e758ef1cebe7aeddf2dda31c996bf04 (3.0.1)
+cake_lpr: tanyongkiam/cake_lpr a36874a8b750b43fe4b385b8ddbf5b033e46a3fa, make cake_lpr; example.cnf/example.lpr -> s VERIFIED UNSAT
+lrat-check: marijnheule/drat-trim 2e3b2dc0ecf938addbd779d42877b6ed69d9a985 + results/E2/tools/lrat-check-E2.patch
+base CNF: gen_case.py 11 7 none -> p cnf 168399 4154921, sha256 bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da (matches)
+roots: 68 depth-2 nodes, index = 16 mod 24, from close_tree.py SHARD expression; identical to manifest_depth2.tsv depth-2 rows (sorted) taken at index 16 mod 24.
+manifest depth-2 name-list sha256 5412782cb766088d63fa9342afaaddcf057baee69b82b82bba69e5754fef6b7e (matches shard_plan)

@@ -1,0 +1,54 @@
+== gen_n15k6d3.log
+{"N": 15, "K": 6, "m": 3, "t": 5, "P": 16, "center": "aux", "center_index": 15, "setpts": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "vars": 851, "X_vars": 102, "clauses": 65283, "sb": true, "kgon": "layered", "stats": {"orbits4": 319, "orbits5": 749, "center_units": 3, "conv_orbits": {"4": 238, "5": 511, "K-sets": 855}, "sb_clauses": 14, "group": "D3"}, "group": "D3"}
+real 0.25
+user 0.14
+sys 0.01
+
+== gen_n21k6d3.log
+{"N": 21, "K": 6, "m": 3, "t": 7, "P": 22, "center": "aux", "center_index": 21, "setpts": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], "vars": 4703, "X_vars": 269, "clauses": 383388, "sb": true, "kgon": "layered", "stats": {"orbits4": 1249, "orbits5": 4434, "center_units": 4, "conv_orbits": {"4": 1020, "5": 3414, "K-sets": 9111}, "sb_clauses": 27, "group": "D3"}, "group": "D3"}
+real 5.38
+user 0.76
+sys 0.02
+
+== gen_n21k7d3.log
+{"N": 21, "K": 7, "m": 3, "t": 7, "P": 22, "center": "aux", "center_index": 21, "setpts": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], "vars": 13814, "X_vars": 269, "clauses": 402828, "sb": true, "kgon": "layered", "stats": {"orbits4": 1249, "orbits5": 4434, "center_units": 4, "conv_orbits": {"4": 1020, "5": 3414, "6": 9111, "K-sets": 19440}, "sb_clauses": 27, "group": "D3"}, "group": "D3"}
+real 3.74
+user 1.35
+sys 0.02
+
+== gen_n27k7d3.log
+{"N": 27, "K": 7, "m": 3, "t": 9, "P": 28, "center": "aux", "center_index": 27, "setpts": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26], "vars": 66510, "X_vars": 562, "clauses": 1573293, "sb": true, "kgon": "layered", "stats": {"orbits4": 3461, "orbits5": 16458, "center_units": 5, "conv_orbits": {"4": 2964, "5": 13494, "6": 49490, "K-sets": 148148}, "sb_clauses": 44, "group": "D3"}, "group": "D3"}
+real 54.28
+user 7.70
+sys 0.10
+
+== gen_n32k7m2.log
+{"N": 32, "K": 7, "m": 2, "t": 16, "P": 32, "center": "none", "center_index": null, "setpts": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], "vars": 574584, "X_vars": 2480, "clauses": 10544712, "sb": true, "kgon": "layered", "stats": {"orbits4": 18040, "orbits5": 100688, "conv_orbits": {"4": 18040, "5": 100688, "6": 453376, "K-sets": 1682928}, "sector_pattern": [-1], "sb_clauses": 120}}
+real 13.78
+user 13.53
+sys 0.16
+
+== gen_n33k7d3.log
+{"N": 33, "K": 7, "m": 3, "t": 11, "P": 34, "center": "aux", "center_index": 33, "setpts": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32], "vars": 232406, "X_vars": 1017, "clauses": 4760236, "sb": true, "kgon": "layered", "stats": {"orbits4": 7801, "orbits5": 46496, "center_units": 6, "conv_orbits": {"4": 6880, "5": 39616, "6": 184893, "K-sets": 712288}, "sb_clauses": 65, "group": "D3"}, "group": "D3"}
+real 82.01
+user 32.40
+sys 0.28
+
+== gen_n33k7m3.log
+{"N": 33, "K": 7, "m": 3, "t": 11, "P": 34, "center": "aux", "center_index": 33, "setpts": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32], "vars": 463980, "X_vars": 2002, "clauses": 9498158, "sb": true, "kgon": "layered", "stats": {"orbits4": 15466, "orbits5": 92752, "center_units": 11, "conv_orbits": {"4": 13640, "5": 79112, "6": 369226, "K-sets": 1424016}, "sb_clauses": 65}}
+real 17.39
+user 17.12
+sys 0.17
+
+== gen_n9k5d3.log
+{"N": 9, "K": 5, "m": 3, "t": 3, "P": 10, "center": "aux", "center_index": 9, "setpts": [0, 1, 2, 3, 4, 5, 6, 7, 8], "vars": 49, "X_vars": 25, "clauses": 4343, "sb": true, "kgon": "layered", "stats": {"orbits4": 41, "orbits5": 48, "center_units": 2, "conv_orbits": {"4": 24, "K-sets": 24}, "sb_clauses": 5, "group": "D3"}, "group": "D3"}
+real 0.07
+user 0.04
+sys 0.01
+
+== gen_n9k6d3.log
+{"N": 9, "K": 6, "m": 3, "t": 3, "P": 10, "center": "aux", "center_index": 9, "setpts": [0, 1, 2, 3, 4, 5, 6, 7, 8], "vars": 73, "X_vars": 25, "clauses": 4360, "sb": true, "kgon": "layered", "stats": {"orbits4": 41, "orbits5": 48, "center_units": 2, "conv_orbits": {"4": 24, "5": 24, "K-sets": 17}, "sb_clauses": 5, "group": "D3"}, "group": "D3"}
+real 0.06
+user 0.04
+sys 0.01
+

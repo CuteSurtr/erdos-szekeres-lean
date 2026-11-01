@@ -1,0 +1,5 @@
+$ covercheck.py leaves.icnf <top.icnf lines with 0-based index i, i%2==1>
+s COVERED 128
+$ covercheck.py top.icnf
+s COVERED 128
+leaves.icnf == top.icnf lines i%2==0 (as sets): yes
