@@ -1,0 +1,66 @@
+loaded N=16 in 0s
+trial 0 id first=2: convex7=112 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 28, 'violated_triple_only': 0, 'violated_Kset': 28, 'conv_true': 878, 'violated_other': 0} OK
+trial 0 mirror first=3: convex7=112 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 28, 'violated_triple_only': 0, 'violated_Kset': 28, 'conv_true': 878, 'violated_other': 0} OK
+  control [swap layers 1,2]: {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 30, 'violated_triple_only': 2, 'violated_Kset': 28, 'conv_true': 878, 'violated_other': 0} -> rejected (good)
+  control [layer-1 rep in next sector]: {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 29, 'violated_triple_only': 1, 'violated_Kset': 28, 'conv_true': 878, 'violated_other': 0} -> rejected (good)
+  control [clockwise order]: {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 63, 'violated_triple_only': 35, 'violated_Kset': 28, 'conv_true': 878, 'violated_other': 0} -> rejected (good)
+  control [(0,0) moved, reps not updated]: {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 31, 'violated_triple_only': 3, 'violated_Kset': 28, 'conv_true': 878, 'violated_other': 0} -> rejected (good)
+trial 1 id first=1: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 597, 'violated_other': 0} OK
+trial 1 mirror first=3: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 597, 'violated_other': 0} OK
+trial 2 id first=2: convex7=36 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 9, 'violated_triple_only': 0, 'violated_Kset': 9, 'conv_true': 607, 'violated_other': 0} OK
+trial 2 mirror first=2: convex7=36 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 9, 'violated_triple_only': 0, 'violated_Kset': 9, 'conv_true': 607, 'violated_other': 0} OK
+trial 3 id first=3: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 374, 'violated_other': 0} OK
+trial 3 mirror first=0: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 374, 'violated_other': 0} OK
+trial 4 id first=1: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 384, 'violated_other': 0} OK
+trial 4 mirror first=0: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 384, 'violated_other': 0} OK
+trial 5 id first=0: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 406, 'violated_other': 0} OK
+trial 5 mirror first=3: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 406, 'violated_other': 0} OK
+trial 6 id first=2: convex7=28 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 7, 'violated_triple_only': 0, 'violated_Kset': 7, 'conv_true': 531, 'violated_other': 0} OK
+trial 6 mirror first=2: convex7=28 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 7, 'violated_triple_only': 0, 'violated_Kset': 7, 'conv_true': 531, 'violated_other': 0} OK
+trial 7 id first=2: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 358, 'violated_other': 0} OK
+trial 7 mirror first=3: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 358, 'violated_other': 0} OK
+trial 8 id first=2: convex7=36 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 9, 'violated_triple_only': 0, 'violated_Kset': 9, 'conv_true': 629, 'violated_other': 0} OK
+trial 8 mirror first=3: convex7=36 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 9, 'violated_triple_only': 0, 'violated_Kset': 9, 'conv_true': 629, 'violated_other': 0} OK
+trial 9 id first=1: convex7=592 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 148, 'violated_triple_only': 0, 'violated_Kset': 148, 'conv_true': 1139, 'violated_other': 0} OK
+trial 9 mirror first=3: convex7=592 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 148, 'violated_triple_only': 0, 'violated_Kset': 148, 'conv_true': 1139, 'violated_other': 0} OK
+trial 10 id first=3: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 370, 'violated_other': 0} OK
+trial 10 mirror first=1: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 370, 'violated_other': 0} OK
+trial 11 id first=1: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 425, 'violated_other': 0} OK
+trial 11 mirror first=2: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 425, 'violated_other': 0} OK
+trial 12 id first=3: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 502, 'violated_other': 0} OK
+trial 12 mirror first=1: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 502, 'violated_other': 0} OK
+trial 13 id first=0: convex7=364 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 91, 'violated_triple_only': 0, 'violated_Kset': 91, 'conv_true': 1096, 'violated_other': 0} OK
+trial 13 mirror first=1: convex7=364 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 91, 'violated_triple_only': 0, 'violated_Kset': 91, 'conv_true': 1096, 'violated_other': 0} OK
+trial 14 id first=0: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 329, 'violated_other': 0} OK
+trial 14 mirror first=3: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 329, 'violated_other': 0} OK
+trial 15 id first=3: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 681, 'violated_other': 0} OK
+trial 15 mirror first=2: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 681, 'violated_other': 0} OK
+trial 16 id first=3: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 451, 'violated_other': 0} OK
+trial 16 mirror first=3: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 451, 'violated_other': 0} OK
+trial 17 id first=0: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 503, 'violated_other': 0} OK
+trial 17 mirror first=1: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 503, 'violated_other': 0} OK
+trial 18 id first=2: convex7=124 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 31, 'violated_triple_only': 0, 'violated_Kset': 31, 'conv_true': 702, 'violated_other': 0} OK
+trial 18 mirror first=3: convex7=124 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 31, 'violated_triple_only': 0, 'violated_Kset': 31, 'conv_true': 702, 'violated_other': 0} OK
+trial 19 id first=3: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 537, 'violated_other': 0} OK
+trial 19 mirror first=0: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 537, 'violated_other': 0} OK
+trial 20 id first=2: convex7=32 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 8, 'violated_triple_only': 0, 'violated_Kset': 8, 'conv_true': 546, 'violated_other': 0} OK
+trial 20 mirror first=0: convex7=32 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 8, 'violated_triple_only': 0, 'violated_Kset': 8, 'conv_true': 546, 'violated_other': 0} OK
+trial 21 id first=0: convex7=72 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 18, 'violated_triple_only': 0, 'violated_Kset': 18, 'conv_true': 760, 'violated_other': 0} OK
+trial 21 mirror first=1: convex7=72 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 18, 'violated_triple_only': 0, 'violated_Kset': 18, 'conv_true': 760, 'violated_other': 0} OK
+trial 22 id first=0: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 469, 'violated_other': 0} OK
+trial 22 mirror first=1: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 469, 'violated_other': 0} OK
+trial 23 id first=3: convex7=4 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 1, 'violated_triple_only': 0, 'violated_Kset': 1, 'conv_true': 507, 'violated_other': 0} OK
+trial 23 mirror first=0: convex7=4 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 1, 'violated_triple_only': 0, 'violated_Kset': 1, 'conv_true': 507, 'violated_other': 0} OK
+trial 24 id first=1: convex7=88 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 22, 'violated_triple_only': 0, 'violated_Kset': 22, 'conv_true': 714, 'violated_other': 0} OK
+trial 24 mirror first=3: convex7=88 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 22, 'violated_triple_only': 0, 'violated_Kset': 22, 'conv_true': 714, 'violated_other': 0} OK
+trial 25 id first=0: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 317, 'violated_other': 0} OK
+trial 25 mirror first=3: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 317, 'violated_other': 0} OK
+trial 26 id first=2: convex7=240 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 60, 'violated_triple_only': 0, 'violated_Kset': 60, 'conv_true': 1005, 'violated_other': 0} OK
+trial 26 mirror first=1: convex7=240 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 60, 'violated_triple_only': 0, 'violated_Kset': 60, 'conv_true': 1005, 'violated_other': 0} OK
+trial 27 id first=1: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 446, 'violated_other': 0} OK
+trial 27 mirror first=2: convex7=0 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 0, 'violated_triple_only': 0, 'violated_Kset': 0, 'conv_true': 446, 'violated_other': 0} OK
+trial 28 id first=0: convex7=256 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 64, 'violated_triple_only': 0, 'violated_Kset': 64, 'conv_true': 1062, 'violated_other': 0} OK
+trial 28 mirror first=3: convex7=256 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 64, 'violated_triple_only': 0, 'violated_Kset': 64, 'conv_true': 1062, 'violated_other': 0} OK
+trial 29 id first=0: convex7=88 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 22, 'violated_triple_only': 0, 'violated_Kset': 22, 'conv_true': 714, 'violated_other': 0} OK
+trial 29 mirror first=0: convex7=88 {'symmetry_inconsistencies': 0, 'rounds': 4, 'violated_total': 22, 'violated_triple_only': 0, 'violated_Kset': 22, 'conv_true': 714, 'violated_other': 0} OK
+ALL OK 1s
