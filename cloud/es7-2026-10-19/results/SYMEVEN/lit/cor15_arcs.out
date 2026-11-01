@@ -1,0 +1,16 @@
+file=smqh_table1_16points_x10.txt N=16 centrally symmetric, general position; convex subsets by size: {0: 1, 1: 16, 2: 120, 3: 560, 4: 924, 5: 272}; largest=5
+arcs (distinct sweep orders over the full circle): 128
+  v_1..v_5 = (2, 2, 4, 6, 2): 20 arcs; sizes k=8: 62/64, k=10: 248/256, k=12: 994/1024
+  v_1..v_5 = (2, 2, 4, 4, 4): 48 arcs; sizes k=8: 60/64, k=10: 240/256, k=12: 964/1024
+  v_1..v_5 = (2, 2, 4, 2, 6): 4 arcs; sizes k=8: 58/64, k=10: 232/256, k=12: 934/1024
+  v_1..v_5 = (2, 2, 2, 6, 4): 20 arcs; sizes k=8: 58/64, k=10: 230/256, k=12: 922/1024
+  v_1..v_5 = (2, 2, 2, 4, 6): 36 arcs; sizes k=8: 56/64, k=10: 222/256, k=12: 892/1024
+arcs giving exactly 2^(k-2) for k = m+2, m+4, m+6: 0
+file=mackey_fig328_x10.txt N=16 centrally symmetric, general position; convex subsets by size: {0: 1, 1: 16, 2: 120, 3: 560, 4: 924, 5: 272}; largest=5
+arcs (distinct sweep orders over the full circle): 128
+  v_1..v_5 = (2, 2, 4, 6, 2): 24 arcs; sizes k=8: 62/64, k=10: 248/256, k=12: 994/1024
+  v_1..v_5 = (2, 2, 4, 4, 4): 44 arcs; sizes k=8: 60/64, k=10: 240/256, k=12: 964/1024
+  v_1..v_5 = (2, 2, 4, 2, 6): 4 arcs; sizes k=8: 58/64, k=10: 232/256, k=12: 934/1024
+  v_1..v_5 = (2, 2, 2, 6, 4): 16 arcs; sizes k=8: 58/64, k=10: 230/256, k=12: 922/1024
+  v_1..v_5 = (2, 2, 2, 4, 6): 40 arcs; sizes k=8: 56/64, k=10: 222/256, k=12: 892/1024
+arcs giving exactly 2^(k-2) for k = m+2, m+4, m+6: 0

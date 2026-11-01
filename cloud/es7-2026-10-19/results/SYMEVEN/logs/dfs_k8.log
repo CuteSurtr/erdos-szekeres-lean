@@ -1,0 +1,11 @@
+N=64 duplicates=0 centrally_symmetric=1 origin_in_set=0 collinear_triples=0
+convex subsets of size 1: 64
+convex subsets of size 2: 2016
+convex subsets of size 3: 41664
+convex subsets of size 4: 345986
+convex subsets of size 5: 1177512
+convex subsets of size 6: 1792349
+convex subsets of size 7: 1032956
+convex subsets of size 8: 0
+convex subsets of size 9: 0
+./dfs_convex k8_points.txt 9  0.39s user 0.00s system 99% cpu 0.391 total
