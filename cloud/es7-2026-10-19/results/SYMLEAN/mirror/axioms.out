@@ -1,0 +1,40 @@
+'MirrorOdd.mirror_seven' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MirrorOdd.mirror_eight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MirrorOdd.mirror_seven_line' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MirrorOdd.mirror_eight_line' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MirrorOdd.mirror_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MirrorOdd.mirror_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MirrorOdd.mirror_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MirrorOdd.mirror_four_line' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MirrorOdd.mirror_five_line' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MirrorOdd.mirror_six_line' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MirrorOdd.mirror_odd_general' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MirrorOdd.mirror_even_general' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MirrorOdd.mirror_seven'' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MirrorOdd.mirror_eight'' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MirrorOdd.mirror_odd_general_line' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MirrorOdd.mirror_even_general_line' depends on axioms: [propext, Classical.choice, Quot.sound]
+ErdosSzekeres.SymReduction.heptagon_of_nontrivial_isometry_3 : ErdosSzekeres.SymReduction.HalfTurn34 →
+  ErdosSzekeres.SymReduction.Threefold33 →
+ErdosSzekeres.SymReduction.heptagon_of_nontrivial_affineEquiv_3 : ErdosSzekeres.SymReduction.HalfTurn34 →
+  ErdosSzekeres.SymReduction.Threefold33 →
+'ErdosSzekeres.SymReduction.reflLine_eq_lineRefl' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.SymReduction.card_le_32_of_reflLine' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.SymReduction.mirrorOneAxis33_proved' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.SymReduction.mirrorNoAxis34_proved' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.SymReduction.heptagon_of_nontrivial_isometry_3' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.SymReduction.heptagon_of_nontrivial_affineEquiv_3' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.SymReduction.heptagon_of_nontrivial_isometry_3' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.SymReduction.heptagon_of_nontrivial_affineEquiv_3' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.SymReduction.mirrorOneAxis33_proved' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.SymReduction.mirrorNoAxis34_proved' depends on axioms: [propext, Classical.choice, Quot.sound]
+ErdosSzekeres.SymReduction.heptagon_of_nontrivial_isometry_3 : ErdosSzekeres.SymReduction.HalfTurn34 →
+  ErdosSzekeres.SymReduction.Threefold33 →
