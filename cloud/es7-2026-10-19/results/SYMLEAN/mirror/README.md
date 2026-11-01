@@ -35,11 +35,12 @@ proofs in `SYMZ` and the Lean chain of `WRITEUP/MIRROR.md` are independent confi
 
 ## 2. The file
 
-`ReductionThreeClasses.lean` (4,236 lines, SHA-256 `0cc83994fe8c2c48…`):
+`ReductionThreeClasses.lean` (4,322 lines, SHA-256 `0cc83994fe8c2c48…`):
 - lines 38–1559 are lines 12–1533 of `../AffineReduction.lean`, unchanged;
 - lines 1562–4236 are the mirror development (namespace `MirrorOdd`), unchanged from its reviewed source;
-- the remaining lines are the union of the imports and the connecting lemmas: `reflLine_eq_lineRefl` (the two
-  reflection maps agree), `card_le_32_of_reflLine`, the two class proofs and the two `_3` theorems.
+- lines 4237–4322 (Part C) are the connecting lemmas: `reflLine_eq_lineRefl` (the two reflection maps agree),
+  `card_le_32_of_reflLine`, the two class proofs and the two `_3` theorems; the first lines are the union of the
+  imports.
 
 `axioms.out` is the `#print axioms` output.
 
@@ -51,8 +52,9 @@ proofs in `SYMZ` and the Lean chain of `WRITEUP/MIRROR.md` are independent confi
   The file contains no `sorry`, `admit` or `native_decide`.
 - An independent review recompiled the file, listed the binders of the two `_3` theorems (only `HalfTurn34`,
   `Threefold33` and `Fivefold35` appear), checked that both source parts are byte-identical to their originals,
-  confirmed the reflection maps agree (a Lean lemma and an exact polynomial check), and re-sent the 497 repository
-  constants of the mirror proof to the Lean kernel (all accepted, no axioms).
+  and confirmed the reflection maps agree (a Lean lemma and an exact polynomial check).
+- A separate review of the mirror development on its own re-sent the 497 repository constants its theorems depend on
+  to the Lean kernel (all accepted, no axioms).
 - The imported repository modules (`Definitions`, `Basic`, `ConvexCycleCuts`, `Omission/Baek`,
   `Omission/BaekGeometry`, `Omission/BoundaryGeometry`, `Omission/ListGeometry` and `Vendor/ETV`) are identical on
   this branch and on `main`.
