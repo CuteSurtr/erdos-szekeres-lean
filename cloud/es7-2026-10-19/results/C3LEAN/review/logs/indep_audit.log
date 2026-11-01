@@ -1,0 +1,21 @@
+memgate: start at mem 30258 MB after 20s wait
+{"n_certs": 910, "hull_roots": 910, "hull_roots_eq_tsv_set": true, "hull_roots_order_eq_cert_order": true, "tsv_codes_decode_to_tsv_in_order": true, "records": 128803, "certified_records": 116883, "certified_names": 116741, "python_rerun_failures": 0, "layer_splits": 942, "sigma_splits": 1747, "leaves": 73567, "distinct_leaf_nodes": 73567, "distinct_keys": 73567, "leaf_names_not_certified": 0, "leaf_not_under_root": 0, "leaf_names_with_several_shas": 0, "distinct_unit_counts": 17, "base_sha256": "bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da", "leaf_names_hash_checked": 73567, "leaf_records_hash_checked": 73707, "hash_mismatches": 0, "samples": {"missing": [], "not_under_root": [], "multi_sha": [], "sha_mismatch": [], "bad_runs": []}}
+       20.94 real        16.90 user         1.77 sys
+          1393164288  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              289965  page reclaims
+                  77  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 828  voluntary context switches
+               66755  involuntary context switches
+        311874165445  instructions retired
+         73632070309  cycles elapsed
+          1422312912  peak memory footprint
+memgate: exit 0

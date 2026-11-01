@@ -1,0 +1,46 @@
+'C3Cover.reflection_facts_H3' depends on axioms: [propext]
+'C3Cover.reflection_facts_H6_1_0' depends on axioms: [propext]
+'C3Cover.reflection_facts_H6_1_1' depends on axioms: [propext]
+'C3Cover.reflection_facts_H6_2_0' depends on axioms: [propext]
+'C3Cover.reflection_facts_H6_2_1' depends on axioms: [propext]
+'C3Cover.reflection_facts_H6_3_0' depends on axioms: [propext]
+'C3Cover.reflection_facts_H6_3_1' depends on axioms: [propext]
+'C3Cover.reflection_facts_H6_4_0' depends on axioms: [propext]
+'C3Cover.reflection_facts_H6_4_1' depends on axioms: [propext]
+'C3Cover.reflection_facts_H6_5_0' depends on axioms: [propext]
+'C3Cover.reflection_facts_H6_5_1' depends on axioms: [propext]
+'C3Cover.topCases_eq' does not depend on any axioms
+'C3Cover.strata' does not depend on any axioms
+'C3Cover.roots_match' does not depend on any axioms
+'C3Cover.roots_codes_match' does not depend on any axioms
+'C3Cover.roots_eq_tsv' depends on axioms: [propext]
+'C3Cover.all_checked' depends on axioms: [propext]
+'C3Cover.all_roots_covered' depends on axioms: [propext, Quot.sound]
+'C3Cover.control_missing_record' does not depend on any axioms
+'C3Cover.control_missing_sigma_child' does not depend on any axioms
+'C3Cover.control_swapped_keys' does not depend on any axioms
+'C3Cover.control_missing_layer_child' does not depend on any axioms
+'C3Cover.control_wrong_root' does not depend on any axioms
+'C3Cover.control_strict_reduction' does not depend on any axioms
+'C3Cover.control_phi_mutant' depends on axioms: [propext]
+'C3Cover.run_sound' depends on axioms: [propext, Quot.sound]
+'C3Cover.checkRoot_sound' depends on axioms: [propext, Quot.sound]
+      265.03 real       238.01 user        13.72 sys
+          1138851840  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             1080112  page reclaims
+               26401  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   2  signals received
+                7790  voluntary context switches
+              670576  involuntary context switches
+            23424142  instructions retired
+            17745324  cycles elapsed
+             1327392  peak memory footprint
+guard: exit 0 ; max RSS sampled 1081 MB
