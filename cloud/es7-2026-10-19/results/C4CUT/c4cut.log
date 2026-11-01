@@ -1,0 +1,21 @@
+07:20:49Z iter 0: 0 cuts -> SATISFIABLE (16 s)
+07:20:50Z   subset of 12 points: 7920 comparisons, certificate: 149 rows
+07:20:50Z   cut 1: 55 literals, 149 comparisons, weights sum 7308811
+07:20:50Z stop
+07:22:06Z iter 0: 1 cuts -> SATISFIABLE (21 s)
+07:22:06Z   subset of 12 points: 7920 comparisons, certificate: 144 rows
+07:22:06Z   cut 2: 55 literals, 144 comparisons, weights sum 5945518
+07:22:23Z iter 1: 2 cuts -> SATISFIABLE (16 s)
+07:22:23Z   subset of 12 points: 7920 comparisons, certificate: 146 rows
+07:22:23Z   cut 3: 55 literals, 146 comparisons, weights sum 11398474
+07:22:44Z iter 2: 3 cuts -> SATISFIABLE (21 s)
+07:22:45Z   subset of 12 points: 7920 comparisons, certificate: 142 rows
+07:22:45Z   cut 4: 55 literals, 142 comparisons, weights sum 5877820
+07:23:00Z iter 3: 4 cuts -> SATISFIABLE (15 s)
+07:23:01Z   subset of 12 points: 7920 comparisons, certificate: 152 rows
+07:23:01Z   cut 5: 55 literals, 152 comparisons, weights sum 24794733
+07:23:17Z iter 4: 5 cuts -> SATISFIABLE (16 s)
+07:23:17Z   subset of 12 points: 7920 comparisons, certificate: 146 rows
+07:23:17Z   cut 6: 55 literals, 146 comparisons, weights sum 984744
+07:23:42Z iter 5: 6 cuts -> UNSATISFIABLE (25 s)
+07:23:42Z stop
