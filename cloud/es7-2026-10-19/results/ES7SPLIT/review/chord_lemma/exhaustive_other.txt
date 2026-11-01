@@ -1,0 +1,39 @@
+=== c3_27points
+n=27 gp=1 convex k-sets: k3=2925 k4=10710 k5=16443 k6=9214 k7=0 | heptagons=0
+hull size 3 (ccw from leftmost)
+convex hexagons=9214 6-holes=60
+chain stats per m: m=1 [min 1 max 1 maxR 7] m=2 [min 2 max 2 maxR 14] m=3 [min 3 max 3 maxR 23] 
+violations: lemma(c!=m)=0 dp-vs-brute=0 corollary-region=0 nesting=0 hole-visibility=0
+=== c3_30points
+n=30 gp=1 convex k-sets: k3=4060 k4=16797 k5=29937 k6=19393 k7=0 | heptagons=0
+hull size 6 (ccw from leftmost)
+convex hexagons=19393 6-holes=78
+chain stats per m: m=1 [min 1 max 1 maxR 9] m=2 [min 2 max 2 maxR 18] m=3 [min 3 max 3 maxR 27] 
+violations: lemma(c!=m)=0 dp-vs-brute=0 corollary-region=0 nesting=0 hole-visibility=0
+hull ears (size,nested): (1,1) (0,1) (1,1) (0,1) (1,1) (0,1)
+=== c3_31points
+n=31 gp=1 convex k-sets: k3=4495 k4=18915 k5=33732 k6=23082 k7=0 | heptagons=0
+hull size 6 (ccw from leftmost)
+convex hexagons=23082 6-holes=96
+chain stats per m: m=1 [min 1 max 1 maxR 9] m=2 [min 2 max 2 maxR 17] m=3 [min 3 max 3 maxR 28] 
+violations: lemma(c!=m)=0 dp-vs-brute=0 corollary-region=0 nesting=0 hole-visibility=0
+hull ears (size,nested): (0,1) (0,1) (0,1) (0,1) (0,1) (0,1)
+=== c4_28points
+n=28 gp=1 convex k-sets: k3=3276 k4=10911 k5=10484 k6=3050 k7=0 | heptagons=0
+hull size 4 (ccw from leftmost)
+convex hexagons=3050 6-holes=70
+chain stats per m: m=1 [min 1 max 1 maxR 7] m=2 [min 2 max 2 maxR 16] m=3 [min 3 max 3 maxR 20] 
+violations: lemma(c!=m)=0 dp-vs-brute=0 corollary-region=0 nesting=0 hole-visibility=0
+=== c6_30points
+n=30 gp=1 convex k-sets: k3=4060 k4=17247 k5=33252 k6=25244 k7=0 | heptagons=0
+hull size 6 (ccw from leftmost)
+convex hexagons=25244 6-holes=90
+chain stats per m: m=1 [min 1 max 1 maxR 7] m=2 [min 2 max 2 maxR 14] m=3 [min 3 max 3 maxR 27] 
+violations: lemma(c!=m)=0 dp-vs-brute=0 corollary-region=0 nesting=0 hole-visibility=0
+hull ears (size,nested): (0,1) (0,1) (0,1) (0,1) (0,1) (0,1)
+=== prop8b_witness27
+n=27 gp=1 convex k-sets: k3=2925 k4=10980 k5=17823 k6=9632 k7=0 | heptagons=0
+hull size 5 (ccw from leftmost)
+convex hexagons=9632 6-holes=87
+chain stats per m: m=1 [min 1 max 1 maxR 10] m=2 [min 2 max 2 maxR 15] m=3 [min 3 max 3 maxR 21] 
+violations: lemma(c!=m)=0 dp-vs-brute=0 corollary-region=0 nesting=0 hole-visibility=0

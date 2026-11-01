@@ -1,0 +1,5 @@
+classical32.txt 32 general_position True gon 6
+mirror32.txt 32 general_position True gon 6
+central32.txt 32 general_position True gon 6
+prop8b_witness27.txt 27 general_position True gon 6
+$P gon_ind.py $D/classical32.txt $D/mirror32.txt $D/central32.txt   0.03s user 0.01s system 89% cpu 0.037 total

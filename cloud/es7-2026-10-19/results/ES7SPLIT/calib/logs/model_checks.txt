@@ -1,0 +1,27 @@
+# Independent re-check of every saved SAT model (run 1 November 2026 on the saved solver outputs; no solving).
+# ETV models: check_model.py N logs/out_*.txt ; hull models: check_hull_model.py N logs/<file>
+logs/out_N11_n6_a4_b6.txt: {"axiom_violations": 0, "longest_cap": 3, "longest_cup": 5, "largest_convex": 5, "status": "s SATISFIABLE"}
+logs/out_N12_n6_a4_b6.txt: s UNSATISFIABLE (no model)
+logs/out_N15_n6_a5_b6.txt: {"axiom_violations": 0, "longest_cap": 4, "longest_cup": 5, "largest_convex": 5, "status": "s SATISFIABLE"}
+logs/out_N16_n6_a5_b6.txt: s UNSATISFIABLE (no model)
+logs/out_N16_n6_a6_b6.txt: {"axiom_violations": 0, "longest_cap": 5, "longest_cup": 5, "largest_convex": 5, "status": "s SATISFIABLE"}
+logs/out_N16_n7_a4_b7.txt: {"axiom_violations": 0, "longest_cap": 3, "longest_cup": 6, "largest_convex": 6, "status": "s SATISFIABLE"}
+logs/out_N17_n6_a5_b6.txt: s UNSATISFIABLE (no model)
+logs/out_N17_n6_a6_b6.txt: c UNKNOWN (no model)
+logs/out_N17_n7_a4_b7.txt: s UNSATISFIABLE (no model)
+logs/out_N18_n6_a5_b6.txt: s UNSATISFIABLE (no model)
+logs/out_N20_n6_a5_b6.txt: s UNSATISFIABLE (no model)
+logs/out_N20_n7_a5_b7.txt: {"axiom_violations": 0, "longest_cap": 4, "longest_cup": 6, "largest_convex": 6, "status": "s SATISFIABLE"}
+logs/out_N23_n7_a5_b7.txt: {"axiom_violations": 0, "longest_cap": 4, "longest_cup": 6, "largest_convex": 6, "status": "s SATISFIABLE"}
+logs/out_N26_n7_a5_b7.txt: {"axiom_violations": 0, "longest_cap": 4, "longest_cup": 6, "largest_convex": 6, "status": "s SATISFIABLE"}
+logs/hull_N16_K6_h3.out: {"axiom_violations": 0, "longest_cap": 5, "longest_cup": 5, "largest_convex": 5, "status": "s SATISFIABLE", "extreme_points": 3}
+logs/hull_N16_K6_h4.out: {"axiom_violations": 0, "longest_cap": 5, "longest_cup": 5, "largest_convex": 5, "status": "s SATISFIABLE", "extreme_points": 4}
+logs/hull_N16_K6_h5.out: {"axiom_violations": 0, "longest_cap": 5, "longest_cup": 5, "largest_convex": 5, "status": "s SATISFIABLE", "extreme_points": 5}
+logs/hull_N16_K6_h6.out: s UNSATISFIABLE (no model)
+logs/hull_N17_K6_h3.out: s UNSATISFIABLE (no model)
+logs/hull_N17_K6_h4.out: s UNSATISFIABLE (no model)
+logs/hull_N17_K6_h5.out: s UNSATISFIABLE (no model)
+logs/hull_N8_K5_h3.out: {"axiom_violations": 0, "longest_cap": 4, "longest_cup": 4, "largest_convex": 4, "status": "s SATISFIABLE", "extreme_points": 3}
+logs/hull_N8_K5_h4.out: {"axiom_violations": 0, "longest_cap": 4, "longest_cup": 4, "largest_convex": 4, "status": "s SATISFIABLE", "extreme_points": 4}
+logs/hull_N8_K5_h5.out: s UNSATISFIABLE (no model)
+logs/pilot_k7_N32_h6.out: {"axiom_violations": 0, "longest_cap": 6, "longest_cup": 6, "largest_convex": 6, "status": "s SATISFIABLE", "extreme_points": 6}

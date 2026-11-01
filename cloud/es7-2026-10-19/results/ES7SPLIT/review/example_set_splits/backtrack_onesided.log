@@ -1,0 +1,14 @@
+classical32.txt: n=32 one-sided partitions=6 (search nodes 1273); ordered linear partitions (both sides >=2)=980
+    A = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+    A = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    A = [0, 1, 2, 3, 4, 5]
+    A = [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+    A = [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+    A = [26, 27, 28, 29, 30, 31]
+mirror32.txt: n=32 one-sided partitions=0 (search nodes 1133); ordered linear partitions (both sides >=2)=980
+central32.txt: n=32 one-sided partitions=0 (search nodes 1239); ordered linear partitions (both sides >=2)=984
+c3_31points.txt: n=31 one-sided partitions=0 (search nodes 1065); ordered linear partitions (both sides >=2)=918
+c3_30points.txt: n=30 one-sided partitions=0 (search nodes 987); ordered linear partitions (both sides >=2)=858
+c3_27points.txt: n=27 one-sided partitions=0 (search nodes 841); ordered linear partitions (both sides >=2)=696
+c6_30points.txt: n=30 one-sided partitions=0 (search nodes 1029); ordered linear partitions (both sides >=2)=858
+c4_28points.txt: n=28 one-sided partitions=0 (search nodes 871); ordered linear partitions (both sides >=2)=748

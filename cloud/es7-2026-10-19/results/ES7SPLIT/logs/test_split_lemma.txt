@@ -1,0 +1,6 @@
+numpy/linalg/_linalg.py:2820: RuntimeWarning: overflow encountered in multiply
+  s = (x.conj() * x).real
+{'trials': 149, 'bad': 0, 'conv_bad': 0, 'formula_mismatch': 0, 'not_found': 0, 'projective': 74, 'skipped': 1}
+{'trials': 150, 'bad': 0, 'conv_bad': 0, 'formula_mismatch': 0, 'not_found': 0, 'projective': 75, 'skipped': 0}
+{'trials': 150, 'bad': 0, 'conv_bad': 0, 'formula_mismatch': 0, 'not_found': 0, 'projective': 75, 'skipped': 0}
+{'trials': 150, 'bad': 0, 'conv_bad': 0, 'formula_mismatch': 0, 'not_found': 0, 'projective': 75, 'skipped': 0}

@@ -1,0 +1,13 @@
+start 0 done: walk acc=20000 tried=138511 emitted_total=21 t=16.6s
+start 0 done: walk acc=20000 tried=117224 emitted_total=21 t=13.9s
+start 0 done: walk acc=20000 tried=176029 emitted_total=21 t=22.2s
+start 0 done: walk acc=20000 tried=238351 emitted_total=21 t=35.0s
+start 0 done: walk acc=20000 tried=244512 emitted_total=21 t=35.0s
+start 0 done: walk acc=20000 tried=247841 emitted_total=21 t=34.7s
+start 0 done: walk acc=20000 tried=127528 emitted_total=21 t=15.5s
+start 0 done: walk acc=20000 tried=100052 emitted_total=21 t=10.4s
+start 0 done: walk acc=20000 tried=111624 emitted_total=21 t=11.7s
+start 0 done: walk acc=20000 tried=63688 emitted_total=11 t=28.6s
+start 1 done: walk acc=20000 tried=59168 emitted_total=22 t=57.0s
+start 2 done: walk acc=20000 tried=60381 emitted_total=33 t=88.0s
+tools/gen/gen walk 7 32 77 3 random:200000 400000 1.0 0.01 20000 2000   87.77s user 0.21s system 97% cpu 1:30.32 total
