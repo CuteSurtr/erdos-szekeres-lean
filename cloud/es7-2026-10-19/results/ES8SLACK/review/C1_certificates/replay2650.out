@@ -1,0 +1,7 @@
+{"catalog_sha256": "e800d5f8a6c5cc45c73ddcc1e57488f2ca8f2ffb704a1515ff7444d589c682f6", "states": 154, "rows": 2650}
+{"header": {"hole_budget": 32, "source_sha256": "e800d5f8a6c5cc45c73ddcc1e57488f2ca8f2ffb704a1515ff7444d589c682f6", "root": 0}}
+{"progress_leaves": 100000, "nodes": 200012, "sec": 6}
+{"progress_leaves": 200000, "nodes": 400012, "sec": 12}
+{"progress_leaves": 300000, "nodes": 600007, "sec": 18}
+{"progress_leaves": 400000, "nodes": 800009, "sec": 24}
+{"nodes": 875159, "branches": 437578, "leaves": 437579, "passA": 437579, "passB_only": 0, "over_budget": 0, "fail": 0, "skipped_nodes": 1, "skipped_leaves": 1, "maxdepth": 29, "minA": 1, "minB": 1, "py_rechecks": 10672, "max_weight_sum": 1545797, "max_capacity": 100000, "max_rows_in_leaf": 106, "pending_type_leaves": 0, "root_branch_vertex": 0, "skipped_leaf_types": ["pending"], "trailer": "}", "pending_left": 0, "skip_left": 0, "decompressed_bytes": 358825250, "decompressed_sha256": "6b61f0ff91c7b1e4a66a2f360d414117f0ce2172193ea0076d9679a579061fdb", "hist_missing_at_leaves": {"0": 1, "1": 16, "2": 124, "3": 639, "4": 2470, "5": 7512, "6": 18284, "7": 36304, "8": 58779, "9": 76683, "10": 81342, "11": 69783, "12": 47051, "13": 24842, "14": 10061, "15": 2962, "16": 625, "17": 91, "18": 10}, "fails": [], "seconds": 26.0, "VERDICT": "ALL LEAVES EXCLUDED, TREE COMPLETE"}
