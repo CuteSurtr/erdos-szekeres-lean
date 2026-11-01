@@ -1,0 +1,165 @@
+{
+ "question": "which threefold pieces certified only by sigma_cubes.py-format records can the C3FINAL cover (C3U2 compose.py --mirror-h6, 280 record files) not do without",
+ "population": {
+  "files": 280,
+  "records": 128803,
+  "certified_sigma_format_pieces": 532,
+  "certified_plain_pieces": 116345,
+  "pieces_certified_in_both_formats": 136,
+  "sigma_only_pieces": 396
+ },
+ "drop_one_runs": {
+  "runs": 396,
+  "necessary": 204,
+  "unnecessary": 192,
+  "necessary_by_source": {
+   "C3SIG2": 84,
+   "C3W3S": 120
+  },
+  "unnecessary_by_source": {
+   "C3SIG": 160,
+   "C3SIG2": 8,
+   "C3W3S": 24
+  },
+  "errors": [],
+  "full_covered": true
+ },
+ "sufficiency": {
+  "compose_keep_necessary_only_covered": true,
+  "compose_keep_none_covered": false,
+  "a2compose_keep_necessary_only_covered": true,
+  "a2compose_cut_size": 82575,
+  "a2compose_cut_contains_all_necessary": true,
+  "a2compose_keep_none_covered": false
+ },
+ "list": {
+  "pieces": 204,
+  "units_txt_sha256": "528f26cdb34a2d457eadf15608e430c00c4d8fc94a7450e4d77ce101341b460c",
+  "equals_A2_verify_F2_list": true,
+  "by_source_and_bits": {
+   "C3SIG2/6": 84,
+   "C3W3S/3": 120
+  },
+  "parents": 22,
+  "cadical_opts": [
+   "[\"--sat\"]"
+  ],
+  "caps": [
+   300
+  ],
+  "records_with_proof_sha256": 0,
+  "records_with_proof_bytes": 204,
+  "recorded_solve_h": 8.02,
+  "recorded_check_h": 2.41,
+  "recorded_proof_bytes_min_median_max_sum": [
+   40063566,
+   311426103,
+   466215017,
+   62793381495
+  ],
+  "records_outside_compose_files": 0,
+  "resolved_in_C3SPOT": 0
+ },
+ "build_only_hash_check": {
+  "pieces": 204,
+  "all_certified_records_match": 204,
+  "units_equal_compose_order": 204,
+  "uncertified_C3W4_attempts_with_same_cnf_sha256": 4
+ },
+ "end_to_end_test": {
+  "piece": "0s0-5s1_2s0-8s0__1s0-3s1-4s1",
+  "outcome": "certified",
+  "cnf_sha256": "fd24ee5947c7780258d62cc9b6a978ab9f2b5fc2b1c0a95abc08b721dd9057aa",
+  "cnf_matches_record": true,
+  "cadical_args": [
+   "-q",
+   "-t",
+   "900",
+   "--sat",
+   "--lrat",
+   "--binary=false"
+  ],
+  "status": "UNSATISFIABLE",
+  "cadical": {
+   "exit": 20,
+   "wall_s": 4.6,
+   "cpu_s": 4.0,
+   "max_rss_mb": 819
+  },
+  "proof_bytes": 40063566,
+  "proof_sha256": "e40fb4c0156473c9d087b26763c5f51753b0bbdfe5b057d2c0d3defba6ca8f78",
+  "proof_bytes_match_record": true,
+  "lrat_check": "c VERIFIED",
+  "lrat_check_run": {
+   "exit": 0,
+   "wall_s": 2.0,
+   "cpu_s": 1.4,
+   "max_rss_mb": 137
+  },
+  "cake_runs": [
+   {
+    "exit": 0,
+    "wall_s": 7.1,
+    "cpu_s": 5.6,
+    "max_rss_mb": 3001,
+    "heap_mb": 3000,
+    "stack_mb": 400,
+    "verdict": "s VERIFIED UNSAT",
+    "slot_wait_s": 0.0
+   }
+  ],
+  "roundtrip": "verified",
+  "archive_bytes": 9133063,
+  "archive_sha256": "77c58e194dc4ca860421d933367bd803341e62b82e8ac2eecfefd54f07e897d1"
+ },
+ "end_to_end_record": {
+  "file": "C3W3S/S0/out_sigma.jsonl",
+  "line": 20,
+  "node": "0s0-5s1_2s0-8s0",
+  "cube": {
+   "1": 0,
+   "3": 1,
+   "4": 1
+  },
+  "units": 342,
+  "cnf_sha256": "fd24ee5947c7780258d62cc9b6a978ab9f2b5fc2b1c0a95abc08b721dd9057aa",
+  "proof_bytes": 40063566,
+  "cap": 300,
+  "cadical_opts": [
+   "--sat"
+  ],
+  "status": "UNSATISFIABLE",
+  "solve_s": 9.0,
+  "check_s": 16.5,
+  "lrat_check": "c VERIFIED",
+  "cake_lpr": "s VERIFIED UNSAT",
+  "certified": true
+ },
+ "tools": {
+  "c3resolve.py": "09e7f9fcce374abc8e272d83d9659cc353606591e7fc8b55d3becfdae7d8eed5",
+  "indispensable.py": "a46523bbbf61a602ee148223629125d316ef012a37677debe2b2e916a60cf96e",
+  "make_list.py": "d15f9ded5c6fed2cecaf0c2119a66c76866795f7df576613e21538a6a9350694",
+  "make_base.py": "691162c0a1d4e727f331284db304945801af49a5cce9ae7c8be5bff53ccb44cf",
+  "verify_archive.py": "77d76de366cdcdff99194d859c0f3e2c4d11e82c673fd91cd64657aa2b4f351a",
+  "launch_lanes.sh": "bd9d0be87ecd89d0805c5d508e8319ea550b203b1ae64bf383ee14e8a2cf2480"
+ },
+ "binaries": {
+  "cadical": "e12ecc8ce8a489394a2b7411e3fa264f037e4ceb2e615bab534158e19d04ac01",
+  "lrat-check": "f20462121defbc631f34850e06d5c0428ea4fecc4c890e6b755fd8e9bf9f534d",
+  "cake_lpr": "2fee767af4478ed817f8bdf6feea5866e5e59f1f67c2a4477e98ee961612881d",
+  "cadical_build": [
+   "Version 3.0.1 c60730422e758ef1cebe7aeddf2dda31c996bf04"
+  ],
+  "zstd": "*** Zstandard CLI (64-bit) v1.5.7, by Yann Collet ***",
+  "sanity": {
+   "forged": {
+    "lrat_check": "c NOT VERIFIED",
+    "cake_lpr": "c Checking failed at line: 0. Reason: pivot must be non-zero"
+   },
+   "good": {
+    "lrat_check": "c VERIFIED",
+    "cake_lpr": "s VERIFIED UNSAT"
+   }
+  }
+ }
+}
