@@ -1,0 +1,16 @@
+k=6, proof's base, middle at delta >> eps
+  delta = eps^(1/2), eps=1/2^16                              N=16 sym=True GP=True maxconvex=6/6 witness_convex=True k-gon=True | hyp fails=['H4']
+  delta = eps^(1/4), eps=1/2^16                              N=16 sym=True GP=True maxconvex=6/6 witness_convex=True k-gon=True | hyp fails=['H4']
+  delta = eps^(1/2), eps=1/2^24                              N=16 sym=True GP=True maxconvex=6/6 witness_convex=True k-gon=True | hyp fails=['H4']
+  delta = eps^(1/4), eps=1/2^24                              N=16 sym=True GP=True maxconvex=6/6 witness_convex=True k-gon=True | hyp fails=['H4']
+  delta = eps^(1/2), eps=1/2^32                              N=16 sym=True GP=True maxconvex=6/6 witness_convex=True k-gon=True | hyp fails=['H4']
+  delta = eps^(1/4), eps=1/2^32                              N=16 sym=True GP=True maxconvex=6/6 witness_convex=True k-gon=True | hyp fails=['H4']
+k=8, proof's base, middle at delta >> eps
+  delta = eps^(1/2), eps=1/2^16                              N=64 sym=True GP=True maxconvex=8/8 witness_convex=True k-gon=True | hyp fails=['H4']
+  delta = eps^(1/4), eps=1/2^16                              N=64 sym=True GP=True maxconvex=8/8 witness_convex=True k-gon=True | hyp fails=['H4']
+  delta = eps^(1/2), eps=1/2^24                              N=64 sym=True GP=True maxconvex=8/8 witness_convex=True k-gon=True | hyp fails=['H4']
+  delta = eps^(1/4), eps=1/2^24                              N=64 sym=True GP=True maxconvex=8/8 witness_convex=True k-gon=True | hyp fails=['H4']
+  delta = eps^(1/2), eps=1/2^32                              N=64 sym=True GP=True maxconvex=8/8 witness_convex=True k-gon=True | hyp fails=['H4']
+  delta = eps^(1/4), eps=1/2^32                              N=64 sym=True GP=True maxconvex=8/8 witness_convex=True k-gon=True | hyp fails=['H4']
+even base k=8: 2 collinear triples; cluster triples involved: [(-6, 2, 4), (-4, -2, 6)]
+proof's base k=8: collinear triples: 0

@@ -1,0 +1,10 @@
+== python3 diversity.py 6 1000 21
+passing samples: 716 of 1000
+by (outer symmetry mode, middle mode): {('xmirror', 'sym'): 59, ('sym', 'greedy'): 59, ('sym', 'pair'): 61, ('xmirror', 'M0'): 60, ('indep', 'greedy'): 59, ('indep', 'pair'): 68, ('sym', 'sym'): 58, ('xmirror', 'pair'): 51, ('indep', 'sym'): 62, ('indep', 'M0'): 58, ('sym', 'M0'): 54, ('xmirror', 'greedy'): 67}
+not centrally symmetric: 693  middle off-centre: 212  full cup in B_{n/2-1} AND full cap in B_{n/2+1}: 690
+distinct cluster-size vectors: 57  examples: [((1, 3, 2, 3, 1), 55), ((1, 4, 4, 4, 1), 25), ((1, 4, 6, 4, 1), 67), ((1, 3, 5, 2, 1), 1), ((1, 4, 5, 4, 1), 9), ((1, 4, 2, 2, 1), 10), ((1, 3, 6, 3, 1), 61), ((1, 3, 2, 4, 1), 10)]
+== python3 diversity.py 8 200 11
+passing samples: 102 of 200
+by (outer symmetry mode, middle mode): {('xmirror', 'M0'): 6, ('sym', 'greedy'): 3, ('indep', 'sym'): 9, ('indep', 'greedy'): 14, ('sym', 'M0'): 4, ('xmirror', 'pair'): 13, ('xmirror', 'greedy'): 9, ('sym', 'sym'): 7, ('sym', 'pair'): 17, ('indep', 'M0'): 4, ('xmirror', 'sym'): 9, ('indep', 'pair'): 7}
+not centrally symmetric: 100  middle off-centre: 32  full cup in B_{n/2-1} AND full cap in B_{n/2+1}: 99
+distinct cluster-size vectors: 91  examples: [((1, 2, 12, 20, 12, 2, 1), 1), ((1, 6, 11, 5, 11, 6, 1), 1), ((1, 1, 11, 2, 4, 6, 1), 1), ((1, 1, 3, 9, 6, 6, 1), 1), ((1, 6, 8, 13, 3, 4, 1), 1), ((1, 5, 7, 20, 7, 5, 1), 1), ((1, 4, 2, 20, 2, 4, 1), 1), ((1, 3, 4, 2, 4, 3, 1), 2)]

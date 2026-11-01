@@ -1,0 +1,4 @@
+k=6 trials=1500 seed=21 outcome counts={'OK': 451, 'gen_fail': 1001, 'H4': 40, 'H4_fail_with_kgon': 40, 'H2': 4, 'H5': 4}
+  max convex subset among configurations satisfying (H0)-(H5): 5 (k-1=5); counterexamples: 0
+  max convex subset among configurations failing only (H4): 6
+python3 random_lemma_test.py 6 1500 21  13.74s user 0.11s system 97% cpu 14.220 total
