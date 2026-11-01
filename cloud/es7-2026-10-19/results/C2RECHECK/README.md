@@ -124,11 +124,11 @@ proof and are accepted by both checkers. `sample_extra.jsonl` is `C2FINAL/sample
   has the second shortest, P4_1-6-12 (670 s), instead of P4_7-9 (546 s).
 - **Order.** The units run by recorded solve time, from 17.8 s to 5,884 s.
 - **Scope.** This checks lanes, not a random sample of units: it detects a fault that affects a whole lane.
-- **Result.** See §6: 115 of 242 lanes when the run was stopped at the end of the session; the remaining lanes rest on their records.
+- **Result.** See §6: 145 of 242 lanes when the run was stopped at the end of the session; the remaining lanes rest on their records.
 
 ## 6. Results (`summarize.py`, `summary.json`)
 
-**Final totals** (last record finished 2026-11-01 20:12:21 UTC). The other documents of 1 November quote an earlier snapshot
+**Final totals** (last record finished 2026-11-01 20:54:18 UTC). The other documents of 1 November quote an earlier snapshot
 (records finished by 19:43:14 UTC: 44 of 65 for §4 and 81 of 242 for §5); these totals supersede it.
 
 | Re-check | done | CNF hash = record | proof = record | both checkers | archive round trip |
@@ -138,10 +138,10 @@ proof and are accepted by both checkers. `sample_extra.jsonl` is `C2FINAL/sample
 | Random sample, extra (§2) | 8 of 8 | 8 | 8 | 8 | 8 |
 | P8 pilot orbits (§3) | 58 of 58 | 58 | 58 | 58 | 58 |
 | Mac-only orbits and covers (§4) | 65 of 65 | 65 | 65 | 65 | 65 |
-| Lane spot check (§5) | 115 of 242 | 115 | 115 | 115 | 115 |
+| Lane spot check (§5) | 145 of 242 | 145 | 145 | 145 | 145 |
 
 Proofs that differ from the record: P8_1-10 (random sample, main). Not accepted by both checkers: none. The five
-covers are among the 65 units of §4, and the 115 units of §5 come from 115 lanes.
+covers are among the 65 units of §4, and the 145 units of §5 come from 145 lanes.
 
 **Columns.**
 - "proof = record": for a re-solve, the new proof has the recorded size and SHA-256. For §1, the decompressed
