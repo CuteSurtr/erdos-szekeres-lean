@@ -67,21 +67,23 @@ for f in sorted(glob.glob(os.path.join(RES, "C2P*", "*", "out.jsonl"))):
         if line.strip():
             r = json.loads(line); rows.append((src, r["unit"], r["case"], r.get("cnf_sha256", ""), r["status"]))
 
-res = {"match": 0, "mismatch": [], "no_hash": [], "skipped_subunits": 0, "distinct_n": 0}
+res = {"match": 0, "mismatch": [], "no_hash": [], "skipped_subunits": 0, "distinct_n": 0, "matched": {}}
 for src, unit, case, rec, st in rows:
     if "/" in unit:  # third-layer pieces (lane3.py): not used to close any orbit
         res["skipped_subunits"] += 1; continue
     if not rec:
         res["no_hash"].append(f"{src} {unit} {st}"); continue
-    got = digest(extra(unit, case))
+    got = digest(extra(unit, unit.split("_")[0]))  # the case is taken from the unit name, not the record
     if got == rec:
         res["match"] += 1
+        if rec not in res["matched"].setdefault(unit, []):
+            res["matched"][unit].append(rec)
     else:
         res["mismatch"].append(f"{src} {unit} {st} rec={rec[:12]} got={got[:12]}")
 res["distinct_n"] = len(states)
 # hashes of the CNFs that have no recorded hash, for the record
 res["computed_for_no_hash"] = {u.split()[1]: digest(extra(u.split()[1], "P8")) for u in res["no_hash"]}
 print(json.dumps({k: (v if not isinstance(v, list) or len(v) < 30 else v[:30] + [f"... {len(v)} total"])
-                  for k, v in res.items()}, indent=1))
+                  for k, v in res.items() if k != "matched"}, indent=1))
 if OUT:
     json.dump(res, open(OUT, "w"), indent=1)

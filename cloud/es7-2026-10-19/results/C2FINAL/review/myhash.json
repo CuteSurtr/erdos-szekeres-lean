@@ -1,0 +1,51 @@
+{
+ "matches_by_source": {
+  "hex": 120,
+  "pilot": 61,
+  "C2P": 468,
+  "C2P2": 194,
+  "C2P3": 314,
+  "C2P4": 324,
+  "C2P5": 1108,
+  "C2FINAL": 7
+ },
+ "total_match": 2596,
+ "mismatches": [],
+ "no_hash": [
+  [
+   "pilot",
+   "P8_cover"
+  ],
+  [
+   "pilot",
+   "P8_3-4-5"
+  ],
+  [
+   "pilot",
+   "P8_9-13-15"
+  ],
+  [
+   "pilot",
+   "P8_3-4-15"
+  ],
+  [
+   "pilot",
+   "P8_2-12-15"
+  ],
+  [
+   "pilot",
+   "P8_2-4-11"
+  ],
+  [
+   "pilot",
+   "P8_1-3"
+  ]
+ ],
+ "skipped_third_layer": 16,
+ "extra_clauses_mismatch": [],
+ "pilot_cover_mkunits_order": "f44c49514d568697786464a5ee0616e2fb54a563b50d8e160cd26894fada50e9",
+ "hull_cover_cnf": "bb60facb223788fb57291c73abfacd6deaa1eccd82ad2be9f50d36292959a60f",
+ "hull_cover_expected": "bb60facb223788fb57291c73abfacd6deaa1eccd82ad2be9f50d36292959a60f",
+ "hull_cover_bytes": 621058015,
+ "distinct_n": 5
+}
