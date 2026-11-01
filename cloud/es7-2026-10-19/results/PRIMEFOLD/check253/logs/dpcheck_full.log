@@ -1,0 +1,9 @@
+n=253  table entries not +-1 among i<j<k: 0
+subset size 253
+M1y (lowest-vertex anchor) max convex subset = 9  witness ok=1 : 0 1 10 19 28 171 90 36 9
+M1x (leftmost-vertex anchor) max convex subset = 9  witness ok=1 : 4 175 184 193 8 17 26 35 252
+M2 (cup+cap) max convex subset = 9  witness ok=1 : 5 14 23 32 175 94 40 13 4
+angular-order violations (must be 0): 0
+RESULT 9 9 9 AGREE
+        1.58 real         0.61 user         0.00 sys
+            19873792  maximum resident set size

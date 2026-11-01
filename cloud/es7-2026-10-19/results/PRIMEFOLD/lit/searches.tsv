@@ -1,0 +1,46 @@
+channel	query_or_url	result_summary
+WebSearch(ext)	7-fold rotational symmetry 64 points no convex octagon Erdős–Szekeres	no 7-fold/64-point source; hits: 2512.24061, 2203.07518, 2312.01223, 2506.00224, 2604.20120, BB SoCG
+WebSearch	symmetric point set without convex 8-gon 64 points construction rotational symmetry heptagon layers	nothing relevant beyond 2506.00224
+WebSearch	AlphaEvolve Erdős–Szekeres happy ending 2^{k-2} points no convex k-gon k=8 construction	no AlphaEvolve hit (found via arXiv directly: 2511.02864)
+WebSearch(ext)	"centrally symmetric" point set no convex octagon 64 points Erdős–Szekeres construction	nothing on centrally symmetric ES sets
+WebSearch(ext)	mirror/axially symmetric point set general position largest without convex k-gon Erdős–Szekeres reflection symmetry	nothing on mirror-symmetric ES sets
+WebSearch(ext)	Fermat's little theorem Erdős–Szekeres rotational symmetry 2^(k-2) points (k-1)-fold symmetric	no Fermat connection found
+WebSearch(ext)	"no convex octagon" OR "without a convex octagon" OR "octagon-free" point set rotational symmetry 3-fold 4-fold 5-fold	only tiling papers (irrelevant)
+WebSearch	"symmetric constructions for all" Erdős–Szekeres suspect 2^{k-2}+1	traces to 2506.00224 §7 only
+WebSearch(ext)	Erdős–Szekeres 2026 arXiv symmetric point sets convex position new construction rotational	no 2026 symmetric ES paper
+WebSearch(ext)	Subercaseaux Heule 2026 symmetric Erdős–Szekeres 32 points 7-gon 2-fold realization follow-up	no follow-up found
+WebSearch	"Erdős–Szekeres" "mirror symmetric" OR "reflection-symmetric" OR "line-symmetric" point set "convex position" maximum	nothing
+WebSearch	happy ending problem symmetric configuration nested regular polygons convex layers point set no convex k-gon	nothing
+WebSearch	emergentmind open problems symmetric Erdős–Szekeres constructions all k	emergentmind page cites only 2506.00224
+WebSearch	Scheucher "On Order Types, Projective Classes, and Realizations" bachelor thesis Graz 2014 pdf	found graz.elsevierpure.com PDF (403 on fetch)
+WebSearch(ext)	"happy ending" OR "Erdős–Szekeres" construction 64 points convex octagon found symmetric LLM/FunSearch/OpenEvolve/AlphaEvolve 2026	nothing (one irrelevant GitHub draft)
+WebSearch	"Erdős-Szekeres" "k-fold" OR "rotational symmetry" "2^{k-2}" construction all k conjecture symmetric extremal configuration	only 2506.00224
+WebSearch	Erdős–Szekeres extremal set rotational symmetry order prime p "2^{p-1}" divisibility centre point nested regular polygons	nothing
+WebSearch	point set "axis of symmetry" OR "bilateral symmetry" OR "reflection symmetry" "no convex" k-gon general position Erdős Szekeres bound	nothing
+WebSearch	LLM evolutionary search benchmark Erdős–Szekeres/happy ending ShinkaEvolve OpenEvolve ThetaEvolve CodeEvolve	only an unreliable blogspot post (no primary source)
+arXiv API	abs:Szekeres OR ti:Szekeres (60 newest of 411, to 2026-10-20)	no new symmetric ES paper after 2607.02958
+arXiv API	abs:"convex position" (25 newest of 180)	none relevant
+arXiv API	abs:"happy ending" (7)	none new
+arXiv API	abs:"rotational symmetry" AND abs:"general position" (0)	-
+arXiv API	abs:symmetric AND abs:"convex position" (3)	none relevant
+arXiv API	abs:octagon AND abs:convex (21)	none relevant
+arXiv API	abs:"rotationally symmetric" AND abs:"point set" (1)	none relevant
+arXiv API	abs:Szekeres AND abs:symmetric (61) / abs:Szekeres AND abs:symmetry (42)	only 2506.00224 (rest cosmology)
+arXiv API	abs:"general position" AND abs:convex AND (cat:math.CO OR cat:cs.CG) (40 newest of 138)	none relevant (holes, peeling, crossing families)
+arXiv API	abs:"k-gon" (73) / abs:"convex k-gon" (20) / abs:"7-gon" OR abs:"8-gon" OR abs:heptagon (183)	only 2607.02958, 2512.24061 relevant (no symmetric sets)
+arXiv API	ti:"Szekeres conjecture revisited"	0 (no arXiv version of Baek–Balko)
+arXiv API	id_list 2609.19540,2510.03832,2505.15366,2606.07806,2610.23553,2603.18484	abstracts read; none relevant
+OpenAlex	tas: "rotational symmetry" AND "convex position" / "mirror symmetric" AND "convex position" / "axial symmetry" AND (...) AND "general position"	0 / 0 / 0
+OpenAlex	tas: Szekeres AND (symmetric OR symmetry)	191, all cosmology except none relevant in top 25
+OpenAlex	fulltext: "symmetric constructions for all" / "no convex octagon" / "convex octagon" AND "64 points"	irrelevant / irrelevant / 0
+OpenAlex	cites:W4414913064 (SMQH) / cites:W7143313204 (Baek–Balko)	0 / 0
+SemanticScholar	citations of arXiv:2506.00224	3: 2607.02958, 2605.02132 (Latin squares), 2511.23226 (lattice paths)
+Crossref	10.1007/978-3-032-07021-0_3 (SMQH CICM)	metadata + 30 refs; no abstract; adds Scheucher BSc thesis ref
+GoogleScholar	two queries ("7-fold"; "Fermat's little theorem")	CAPTCHA; not used further
+GitHub API	google-deepmind/alphaevolve_repository_of_problems tree; ES notebook downloaded	33- and 65-point sets only
+GitHub API	repo search: erdos szekeres symmetric / happy ending problem symmetric / erdos szekeres octagon / convex position symmetric points sat	0 hits each
+GitHub API	bsubercaseaux/automatic-symmetries tree + README + encoder	only 16-point (k=6) experiments
+Elsevier/Unpaywall	Baek–Balko JCTA 10.1016/j.jcta.2026.106195	CC BY, but full text needs API key; ScienceDirect 403
+Web	erdosproblems.com/107 + forum/discuss/107	no symmetric-construction remarks
+Web	Wikipedia Happy ending problem (API) + File:8-points-no-pentagon.svg	8-point figure is two nested squares (4-fold), verified exactly
+Web	Eppstein blog 2017-07-01 pascals-triangle-points; Eppstein book excerpt (Cambridge)	no symmetry statement; book Fig. 1.2 = same two-squares 8-point figure

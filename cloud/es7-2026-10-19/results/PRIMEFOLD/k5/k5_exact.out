@@ -1,0 +1,71 @@
+# Part 1: the 56 orientation determinants (sorted triples) as polynomials in b = x + iy
+   a0 a1 a2 : const 2
+   a0 a1 a3 : const 2
+   a0 a1 b0 : lin-const [1, 0, 0]
+   a0 a1 b1 : lin-const [1, 0, 2]
+   a0 a1 b2 : lin-const [1, 2, 2]
+   a0 a1 b3 : lin-const [1, 2, 0]
+   a0 a2 a3 : const 2
+   a0 a2 b0 : lin-const [0, 0, -2]
+   a0 a2 b1 : lin-const [0, -2, 0]
+   a0 a2 b2 : lin-const [0, 0, 2]
+   a0 a2 b3 : lin-const [0, 2, 0]
+   a0 a3 b0 : lin-const [-1, 0, -2]
+   a0 a3 b1 : lin-const [-1, -2, -2]
+   a0 a3 b2 : lin-const [-1, -2, 0]
+   a0 a3 b3 : lin-const [-1, 0, 0]
+   a0 b0 b1 : C1 1
+   a0 b0 b2 : lin-const [0, 0, 2]
+   a0 b0 b3 : C3 -1
+   a0 b1 b2 : C4 1
+   a0 b1 b3 : lin-const [0, 2, 0]
+   a0 b2 b3 : C2 1
+   a1 a2 a3 : const 2
+   a1 a2 b0 : lin-const [1, 2, 0]
+   a1 a2 b1 : lin-const [1, 0, 0]
+   a1 a2 b2 : lin-const [1, 0, 2]
+   a1 a2 b3 : lin-const [1, 2, 2]
+   a1 a3 b0 : lin-const [0, 2, 0]
+   a1 a3 b1 : lin-const [0, 0, -2]
+   a1 a3 b2 : lin-const [0, -2, 0]
+   a1 a3 b3 : lin-const [0, 0, 2]
+   a1 b0 b1 : C3 1
+   a1 b0 b2 : lin-const [0, -2, 0]
+   a1 b0 b3 : C2 -1
+   a1 b1 b2 : C1 1
+   a1 b1 b3 : lin-const [0, 0, 2]
+   a1 b2 b3 : C4 1
+   a2 a3 b0 : lin-const [1, 2, 2]
+   a2 a3 b1 : lin-const [1, 2, 0]
+   a2 a3 b2 : lin-const [1, 0, 0]
+   a2 a3 b3 : lin-const [1, 0, 2]
+   a2 b0 b1 : C2 1
+   a2 b0 b2 : lin-const [0, 0, -2]
+   a2 b0 b3 : C4 -1
+   a2 b1 b2 : C3 1
+   a2 b1 b3 : lin-const [0, -2, 0]
+   a2 b2 b3 : C1 1
+   a3 b0 b1 : C4 1
+   a3 b0 b2 : lin-const [0, 2, 0]
+   a3 b0 b3 : C1 -1
+   a3 b1 b2 : C2 1
+   a3 b1 b3 : lin-const [0, 0, -2]
+   a3 b2 b3 : C3 1
+   b0 b1 b2 : C5 2
+   b0 b1 b3 : C5 2
+   b0 b2 b3 : C5 2
+   b1 b2 b3 : C5 2
+# summary: {'const': 4, 'lin-const': 32, 'C1': 4, 'C3': 4, 'C4': 4, 'C2': 4, 'C5': 4}
+# rational points on C1 inside T (zero orientation there => not general position):
+   s=1/3: b=(3/5, 1/5), zero orientations: 24
+   s=1/2: b=(2/5, 1/5), zero orientations: 24
+   s=1/5: b=(10/13, 2/13), zero orientations: 24
+# Part 2: representatives of the three components
+  I_a: b = (3/10, 1/10): zero orientations 0, convex 5-subsets: 0 []
+  I_b: b = (1/10, 3/10): zero orientations 0, convex 5-subsets: 0 []
+  II: b = (3/10, 3/10): zero orientations 0, convex 5-subsets: 20 ['a0 a1 a2 b2 b3', 'a0 a1 a3 b1 b2', 'a0 a1 b1 b2 b3', 'a0 a2 a3 b0 b1', 'a0 a2 b0 b1 b2', 'a0 a2 b0 b1 b3', 'a0 a2 b0 b2 b3', 'a0 a2 b1 b2 b3', 'a0 a3 b0 b1 b2', 'a0 b0 b1 b2 b3', 'a1 a2 a3 b0 b3', 'a1 a2 b0 b2 b3', 'a1 a3 b0 b1 b2', 'a1 a3 b0 b1 b3', 'a1 a3 b0 b2 b3', 'a1 a3 b1 b2 b3', 'a1 b0 b1 b2 b3', 'a2 a3 b0 b1 b3', 'a2 b0 b1 b2 b3', 'a3 b0 b1 b2 b3']
+# integer realisation (scale 10): A = (10,0),(0,10),(-10,0),(0,-10); B = (3,1),(-1,3),(-3,-1),(1,-3)
+   zero orientations 0, convex 5-subsets 0, largest convex subset 4
+   order type identical to the I_a representative: True
+# Part 3 (sanity): random rational samples per component [samples, pentagon-free]: {'I_a': [400, 400], 'I_b': [465, 465], 'II': [614, 0], 'curve': [4, 0]}
+RESULT: component I (x^2+y^2 < |x-y|, i.e. rho < |cos(phi) - sin(phi)|) is pentagon-free; component II and the curves are not.

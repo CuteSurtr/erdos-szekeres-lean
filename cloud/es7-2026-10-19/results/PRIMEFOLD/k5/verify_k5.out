@@ -1,0 +1,107 @@
+== Step 1: 56 determinants, two independent derivations ==
+M1 (symbolic) == M2 (interpolation) for all 56 triples; both agree with direct evaluation at 50 random rational points each
+== Step 2: sign of each determinant on the open triangle T ==
+  a0 a1 a2: +2                           deg 0  const  sign +1
+  a0 a1 a3: +2                           deg 0  const  sign +1
+  a0 a1 b0: +1-x-y                       deg 1  linear-definite  sign +1
+  a0 a1 b1: +1-x+y                       deg 1  linear-definite  sign +1
+  a0 a1 b2: +1+x+y                       deg 1  linear-definite  sign +1
+  a0 a1 b3: +1+x-y                       deg 1  linear-definite  sign +1
+  a0 a2 a3: +2                           deg 0  const  sign +1
+  a0 a2 b0: -2*y                         deg 1  linear-definite  sign -1
+  a0 a2 b1: -2*x                         deg 1  linear-definite  sign -1
+  a0 a2 b2: +2*y                         deg 1  linear-definite  sign +1
+  a0 a2 b3: +2*x                         deg 1  linear-definite  sign +1
+  a0 a3 b0: -1+x-y                       deg 1  linear-definite  sign -1
+  a0 a3 b1: -1-x-y                       deg 1  linear-definite  sign -1
+  a0 a3 b2: -1-x+y                       deg 1  linear-definite  sign -1
+  a0 a3 b3: -1+x+y                       deg 1  linear-definite  sign -1
+  a0 b0 b1: -x+y+x*x+y*y                 deg 2  C1-multiple  factor 1
+  a0 b0 b2: +2*y                         deg 1  linear-definite  sign +1
+  a0 b0 b3: +x+y-x*x-y*y                 deg 2  quadratic-definite  sign +1
+  a0 b1 b2: +x+y+x*x+y*y                 deg 2  quadratic-definite  sign +1
+  a0 b1 b3: +2*x                         deg 1  linear-definite  sign +1
+  a0 b2 b3: +x-y+x*x+y*y                 deg 2  C2-multiple  factor 1
+  a1 a2 a3: +2                           deg 0  const  sign +1
+  a1 a2 b0: +1+x-y                       deg 1  linear-definite  sign +1
+  a1 a2 b1: +1-x-y                       deg 1  linear-definite  sign +1
+  a1 a2 b2: +1-x+y                       deg 1  linear-definite  sign +1
+  a1 a2 b3: +1+x+y                       deg 1  linear-definite  sign +1
+  a1 a3 b0: +2*x                         deg 1  linear-definite  sign +1
+  a1 a3 b1: -2*y                         deg 1  linear-definite  sign -1
+  a1 a3 b2: -2*x                         deg 1  linear-definite  sign -1
+  a1 a3 b3: +2*y                         deg 1  linear-definite  sign +1
+  a1 b0 b1: -x-y+x*x+y*y                 deg 2  quadratic-definite  sign -1
+  a1 b0 b2: -2*x                         deg 1  linear-definite  sign -1
+  a1 b0 b3: -x+y-x*x-y*y                 deg 2  C2-multiple  factor -1
+  a1 b1 b2: -x+y+x*x+y*y                 deg 2  C1-multiple  factor 1
+  a1 b1 b3: +2*y                         deg 1  linear-definite  sign +1
+  a1 b2 b3: +x+y+x*x+y*y                 deg 2  quadratic-definite  sign +1
+  a2 a3 b0: +1+x+y                       deg 1  linear-definite  sign +1
+  a2 a3 b1: +1+x-y                       deg 1  linear-definite  sign +1
+  a2 a3 b2: +1-x-y                       deg 1  linear-definite  sign +1
+  a2 a3 b3: +1-x+y                       deg 1  linear-definite  sign +1
+  a2 b0 b1: +x-y+x*x+y*y                 deg 2  C2-multiple  factor 1
+  a2 b0 b2: -2*y                         deg 1  linear-definite  sign -1
+  a2 b0 b3: -x-y-x*x-y*y                 deg 2  quadratic-definite  sign -1
+  a2 b1 b2: -x-y+x*x+y*y                 deg 2  quadratic-definite  sign -1
+  a2 b1 b3: -2*x                         deg 1  linear-definite  sign -1
+  a2 b2 b3: -x+y+x*x+y*y                 deg 2  C1-multiple  factor 1
+  a3 b0 b1: +x+y+x*x+y*y                 deg 2  quadratic-definite  sign +1
+  a3 b0 b2: +2*x                         deg 1  linear-definite  sign +1
+  a3 b0 b3: +x-y-x*x-y*y                 deg 2  C1-multiple  factor -1
+  a3 b1 b2: +x-y+x*x+y*y                 deg 2  C2-multiple  factor 1
+  a3 b1 b3: -2*y                         deg 1  linear-definite  sign -1
+  a3 b2 b3: -x-y+x*x+y*y                 deg 2  quadratic-definite  sign -1
+  b0 b1 b2: +2*x*x+2*y*y                 deg 2  quadratic-definite  sign +1
+  b0 b1 b3: +2*x*x+2*y*y                 deg 2  quadratic-definite  sign +1
+  b0 b2 b3: +2*x*x+2*y*y                 deg 2  quadratic-definite  sign +1
+  b1 b2 b3: +2*x*x+2*y*y                 deg 2  quadratic-definite  sign +1
+summary: {'const': 4, 'linear-definite': 32, 'C1-multiple': 4, 'quadratic-definite': 12, 'C2-multiple': 4}
+C1 - C2 = 2(y - x): verified
+== Step 3: region representatives (exact) ==
+  I_a  b=(3/10, 1/10): zero triples 0, convex 5-subsets 0, largest convex subset 4, chirotope = region ref: True
+  I_a  b=(1/2, 1/10): zero triples 0, convex 5-subsets 0, largest convex subset 4, chirotope = region ref: True
+  I_a  b=(1/100, 1/1000): zero triples 0, convex 5-subsets 0, largest convex subset 4, chirotope = region ref: True
+  I_a  b=(9/10, 1/100): zero triples 0, convex 5-subsets 0, largest convex subset 4, chirotope = region ref: True
+  I_a  b=(99/100, 1/10000): zero triples 0, convex 5-subsets 0, largest convex subset 4, chirotope = region ref: True
+  I_b  b=(1/10, 3/10): zero triples 0, convex 5-subsets 0, largest convex subset 4, chirotope = region ref: True
+  I_b  b=(1/10, 1/2): zero triples 0, convex 5-subsets 0, largest convex subset 4, chirotope = region ref: True
+  I_b  b=(1/1000, 1/100): zero triples 0, convex 5-subsets 0, largest convex subset 4, chirotope = region ref: True
+  I_b  b=(1/100, 9/10): zero triples 0, convex 5-subsets 0, largest convex subset 4, chirotope = region ref: True
+  II   b=(3/10, 3/10): zero triples 0, convex 5-subsets 20, largest convex subset 6, chirotope = region ref: True
+  II   b=(1/4, 1/2): zero triples 0, convex 5-subsets 20, largest convex subset 6, chirotope = region ref: True
+  II   b=(9/10, 9/100): zero triples 0, convex 5-subsets 20, largest convex subset 6, chirotope = region ref: True
+  II   b=(1/100, 1/100): zero triples 0, convex 5-subsets 20, largest convex subset 6, chirotope = region ref: True
+  II   b=(1/3, 1/3): zero triples 0, convex 5-subsets 20, largest convex subset 6, chirotope = region ref: True
+  II   b=(9/100, 9/10): zero triples 0, convex 5-subsets 20, largest convex subset 6, chirotope = region ref: True
+  II   b=(99/100, 99/10000): zero triples 0, convex 5-subsets 20, largest convex subset 6, chirotope = region ref: True
+  II   b=(49/100, 1/2): zero triples 0, convex 5-subsets 20, largest convex subset 6, chirotope = region ref: True
+  II pentagons at (3/10,3/10): ['a0 a1 a2 b2 b3', 'a0 a1 a3 b1 b2', 'a0 a1 b1 b2 b3', 'a0 a2 a3 b0 b1', 'a0 a2 b0 b1 b2', 'a0 a2 b0 b1 b3', 'a0 a2 b0 b2 b3', 'a0 a2 b1 b2 b3', 'a0 a3 b0 b1 b2', 'a0 b0 b1 b2 b3', 'a1 a2 a3 b0 b3', 'a1 a2 b0 b2 b3', 'a1 a3 b0 b1 b2', 'a1 a3 b0 b1 b3', 'a1 a3 b0 b2 b3', 'a1 a3 b1 b2 b3', 'a1 b0 b1 b2 b3', 'a2 a3 b0 b1 b3', 'a2 b0 b1 b2 b3', 'a3 b0 b1 b2 b3']
+  my list of 20 == list printed in k5_exact.out: True
+  chirotope predicted from Step-2 signs matches each region reference:
+    I_a: True
+    I_b: True
+    II: True
+== Step 4: degenerate loci ==
+  on C1 b=(3/5,1/5): 4 collinear triples ['a0 b0 b1', 'a1 b1 b2', 'a2 b2 b3', 'a3 b0 b3'];  mirror point on C2: 4 collinear triples
+  on C1 b=(2/5,1/5): 4 collinear triples ['a0 b0 b1', 'a1 b1 b2', 'a2 b2 b3', 'a3 b0 b3'];  mirror point on C2: 4 collinear triples
+  on C1 b=(10/13,2/13): 4 collinear triples ['a0 b0 b1', 'a1 b1 b2', 'a2 b2 b3', 'a3 b0 b3'];  mirror point on C2: 4 collinear triples
+  on C1 b=(3/13,2/13): 4 collinear triples ['a0 b0 b1', 'a1 b1 b2', 'a2 b2 b3', 'a3 b0 b3'];  mirror point on C2: 4 collinear triples
+  on C1 b=(10/181,9/181): 4 collinear triples ['a0 b0 b1', 'a1 b1 b2', 'a2 b2 b3', 'a3 b0 b3'];  mirror point on C2: 4 collinear triples
+  on axis b=(1/3,0): 8 collinear triples
+  on axis b=(1/2,0): 8 collinear triples
+  on axis b=(9/10,0): 8 collinear triples
+== Step 5: mirror relation and order-type classes ==
+  S(y,x) is the mirror image of S(x,y) (exact, with explicit label map): verified
+  I_a ~ mirror(I_b): True
+  I_a ~ I_b without reflection (orientation-preserving relabelling): False None
+  I_a ~ II (either way): False
+  outside the family: b=(7/10,7/10) (x+y>1): zero triples 0, convex 5-subsets 56, largest convex 8
+== Step 6: "each outer vertex lies beyond two edge-lines of the inner square" ==
+  random exact samples where [all outer vertices beyond exactly 2 edge-lines] == [region I] == [pentagon-free]: 1529
+== Step 7: context checks ==
+  integer example: 4-fold symmetric, general position, no convex pentagon, same chirotope as I_a: verified
+  adding the centre to a 4-fold set always creates collinear triples (centre, p, -p): verified
+  random 3-square sets: 300 tried, 299 in general position, all contain a convex pentagon
+ALL CHECKS PASSED

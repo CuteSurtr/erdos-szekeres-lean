@@ -1,0 +1,48 @@
+n=104 hull=[0, 1, 2, 3, 4, 5, 6, 7] ccw cyclic order=[0, 1, 2, 3, 4, 5, 6, 7]
+runs of 2 consecutive hull vertices: 8 of 8 complements are modules (size n-2=102); cap sizes [0]
+   T=[0, 1] module=True cap_points=0 witness=None
+   T=[1, 2] module=True cap_points=0 witness=None
+runs of 3 consecutive hull vertices: 8 of 8 complements are modules (size n-3=101); cap sizes [1]
+   T=[0, 1, 2] module=True cap_points=1 witness=None
+   T=[1, 2, 3] module=True cap_points=1 witness=None
+runs of 4 consecutive hull vertices: 8 of 8 complements are modules (size n-4=100); cap sizes [2]
+   T=[0, 1, 2, 3] module=True cap_points=2 witness=None
+   T=[1, 2, 3, 4] module=True cap_points=2 witness=None
+runs of 5 consecutive hull vertices: 0 of 8 complements are modules (size n-5=99); cap sizes [51]
+   T=[0, 1, 2, 3, 4] module=False cap_points=51 witness=(0, 4, 5, 8)
+   T=[1, 2, 3, 4, 5] module=False cap_points=51 witness=(1, 5, 0, 8)
+runs of 6 consecutive hull vertices: 0 of 8 complements are modules (size n-6=98); cap sizes [100]
+   T=[0, 1, 2, 3, 4, 5] module=False cap_points=100 witness=(0, 4, 6, 8)
+   T=[1, 2, 3, 4, 5, 6] module=False cap_points=100 witness=(1, 5, 0, 8)
+n=112 hull=[0, 1, 2, 3, 4, 5, 6, 7] ccw cyclic order=[0, 1, 2, 3, 4, 5, 6, 7]
+runs of 2 consecutive hull vertices: 8 of 8 complements are modules (size n-2=110); cap sizes [0]
+   T=[0, 1] module=True cap_points=0 witness=None
+   T=[1, 2] module=True cap_points=0 witness=None
+runs of 3 consecutive hull vertices: 8 of 8 complements are modules (size n-3=109); cap sizes [1]
+   T=[0, 1, 2] module=True cap_points=1 witness=None
+   T=[1, 2, 3] module=True cap_points=1 witness=None
+runs of 4 consecutive hull vertices: 8 of 8 complements are modules (size n-4=108); cap sizes [2]
+   T=[0, 1, 2, 3] module=True cap_points=2 witness=None
+   T=[1, 2, 3, 4] module=True cap_points=2 witness=None
+runs of 5 consecutive hull vertices: 0 of 8 complements are modules (size n-5=107); cap sizes [55]
+   T=[0, 1, 2, 3, 4] module=False cap_points=55 witness=(0, 4, 5, 8)
+   T=[1, 2, 3, 4, 5] module=False cap_points=55 witness=(1, 5, 0, 8)
+runs of 6 consecutive hull vertices: 0 of 8 complements are modules (size n-6=106); cap sizes [108]
+   T=[0, 1, 2, 3, 4, 5] module=False cap_points=108 witness=(0, 4, 6, 8)
+   T=[1, 2, 3, 4, 5, 6] module=False cap_points=108 witness=(1, 5, 0, 8)
+n=120 hull=[0, 1, 2, 3, 4, 5, 6, 7] ccw cyclic order=[0, 1, 2, 3, 4, 5, 6, 7]
+runs of 2 consecutive hull vertices: 8 of 8 complements are modules (size n-2=118); cap sizes [0]
+   T=[0, 1] module=True cap_points=0 witness=None
+   T=[1, 2] module=True cap_points=0 witness=None
+runs of 3 consecutive hull vertices: 8 of 8 complements are modules (size n-3=117); cap sizes [1]
+   T=[0, 1, 2] module=True cap_points=1 witness=None
+   T=[1, 2, 3] module=True cap_points=1 witness=None
+runs of 4 consecutive hull vertices: 8 of 8 complements are modules (size n-4=116); cap sizes [2]
+   T=[0, 1, 2, 3] module=True cap_points=2 witness=None
+   T=[1, 2, 3, 4] module=True cap_points=2 witness=None
+runs of 5 consecutive hull vertices: 0 of 8 complements are modules (size n-5=115); cap sizes [59]
+   T=[0, 1, 2, 3, 4] module=False cap_points=59 witness=(0, 4, 5, 8)
+   T=[1, 2, 3, 4, 5] module=False cap_points=59 witness=(1, 5, 0, 9)
+runs of 6 consecutive hull vertices: 0 of 8 complements are modules (size n-6=114); cap sizes [116]
+   T=[0, 1, 2, 3, 4, 5] module=False cap_points=116 witness=(0, 4, 6, 8)
+   T=[1, 2, 3, 4, 5, 6] module=False cap_points=116 witness=(1, 5, 0, 9)

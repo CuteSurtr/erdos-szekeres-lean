@@ -1,0 +1,27 @@
+p=11 h=5 layers=90 centre=1 n=991
+max |coefficient| = 1001801157740117481382380261986 (100 bits)
+m(x) = +1 x^5 +1 x^4 -4 x^3 -3 x^2 +3 x^1 +1 x^0   [checked x^h m(x+1/x) = Phi_p(x)]
+m has 5 sign changes on a 2^-14 grid of [-2,2]; largest root t in [27566, 27567]/2^14 = [1.682495117, 1.682556152]; 2cos(2pi/p) = 1.682507066 (double, info only)
+duplicate point pairs (exact, canonical basis): 0
+level 0: B=320, E_d = 0 1 1 1 1
+layer radii: all 90 pairwise distinct (exact sort, no ties); smallest layer 89, largest layer 0
+points with radius different from their layer representative: 0
+centre is the origin: yes
+(y,x) order computed exactly; lowest point 8, highest 3
+pair table: 490545 pairs, max pair error 202 bits, triple threshold 3*emax (203 bits)
+  k=100 done (fast 166650, slow 0, zero 0)
+  k=200 done (fast 1333300, slow 0, zero 0)
+  k=300 done (fast 4499950, slow 0, zero 0)
+  k=400 done (fast 10666600, slow 0, zero 0)
+  k=500 done (fast 20833250, slow 0, zero 0)
+  k=600 done (fast 35999900, slow 0, zero 0)
+  k=700 done (fast 57166550, slow 0, zero 0)
+  k=800 done (fast 85333200, slow 0, zero 0)
+  k=900 done (fast 121499850, slow 0, zero 0)
+triples: 161716335 total, decided by pair fast path 161716335, full recomputation 0, zero (collinear) 0, positive 85466098
+escalation counts by level (sign_poly calls decided at level L): 8510 0 0 0
+smallest |S_D| among fast-path triples: 383 bits, triple (132,143,154); approx |det| = 3.6920e+18 (info only)
+spot check fast-path table vs independent full recomputation: 196435 triples, 0 mismatches
+rotation invariance orient(zeta a, zeta b, zeta c) = orient(a,b,c) over all 161716335 triples: 0 violations
+wrote p11.signs (20214542 bytes) and p11.meta
+RESULT general_position=yes

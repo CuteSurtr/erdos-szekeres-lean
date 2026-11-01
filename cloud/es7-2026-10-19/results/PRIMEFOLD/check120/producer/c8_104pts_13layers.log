@@ -1,0 +1,45 @@
+# certificate c8_104pts_13layers  m=8 C=0 K=9 scale=1000000  2026-11-01T15:06:26Z
+## 1. exact build + checks from the float configuration (methods A, B, C)
+{'m': 8, 'C': 0, 'n': 104, 'layers': 13, 'orbit_structure': True, 'distinct': True, 'invariant': True, 'zero_orientations': 0, 'intervalB_mismatch': 0, 'intervalB_undecided': 0, 'lexorder_intervalB_bad': 0, 'layers_are_nested_convex_orbits': True, 'radii_decreasing': True, 'max_abs_coeff': 281730, 'z8_sqrt2_mismatch': 0}
+sha256 c8_104pts_13layers.pts 1ff5d997099c122eb04f15f0b01015218f8f8e4346010490442c59c901da380f
+sha256 c8_104pts_13layers.otab eb6105bfc466c2a9fd58373b6f251daba27183fb02133c12f05e609e6c633313
+sha256 c8_104pts_13layers.lex b96e51dceb0efeb50f5ac729586a0242b422eb5309152ea7b34dbad83d3ccae5
+EXACT-PREP PASS
+exit=0
+## 2. two exact DPs on the orientation table
+table n=104: 0 antisymmetry/zero violations
+convex  3-gons: DP1 182104  DP2 182104
+convex  4-gons: DP1 3160006  DP2 3160006
+convex  5-gons: DP1 30546824  DP2 30546824
+convex  6-gons: DP1 170995184  DP2 170995184
+convex  7-gons: DP1 533448520  DP2 533448520
+convex  8-gons: DP1 744839613  DP2 744839613
+convex  9-gons: DP1 0  DP2 0
+largest convex subset: DP1 8  DP2 8
+CVX2 PASS (K=9)
+exit=0
+## 3. re-check from the exact point file alone
+{'m': 8, 'C': 0, 'n': 104, 'layers': 13, 'orbit_structure': True, 'distinct': True, 'invariant': True, 'zero_orientations': 0, 'intervalB_mismatch': 0, 'intervalB_undecided': 0, 'lexorder_intervalB_bad': 0, 'layers_are_nested_convex_orbits': True, 'radii_decreasing': True, 'max_abs_coeff': 281730, 'z8_sqrt2_mismatch': 0}
+sha256 recheck.pts 7832d2029e8691214e1638a85ba980a379db38fcfd3fe03b334655f00f04e29b
+sha256 recheck.otab eb6105bfc466c2a9fd58373b6f251daba27183fb02133c12f05e609e6c633313
+sha256 recheck.lex b96e51dceb0efeb50f5ac729586a0242b422eb5309152ea7b34dbad83d3ccae5
+EXACT-PREP PASS
+exit=0
+largest convex subset: DP1 8  DP2 8
+CVX2 PASS (K=9)
+exit=0
+orientation tables identical
+## 4. third implementation (copy of the earlier cvxcheck.c; its DFS limited to k<=4, then its own DP)
+table n=104: 0 antisymmetry/zero violations
+convex 3-subsets: 182104
+convex 4-subsets: 3160006
+DP largest convex subset: 8
+exit=0
+## sha256
+95b7509571da4f67d9340249dca1d422cfad020d81fae70862ab2a66cefea62e  c8_104pts_13layers.cfg
+1ff5d997099c122eb04f15f0b01015218f8f8e4346010490442c59c901da380f  c8_104pts_13layers.pts
+eb6105bfc466c2a9fd58373b6f251daba27183fb02133c12f05e609e6c633313  c8_104pts_13layers.otab
+b96e51dceb0efeb50f5ac729586a0242b422eb5309152ea7b34dbad83d3ccae5  c8_104pts_13layers.lex
+n=104 points; sorted triples checked; mismatches/undecided: 0; min |det| = 6.659E+03; error bound = 8.128E-137
+CROSSCHECK PASS
+bash ./verify/decimal_crosscheck.sh $N 8  0.43s user 0.04s system 94% cpu 0.504 total

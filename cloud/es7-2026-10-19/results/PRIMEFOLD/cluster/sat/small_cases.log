@@ -1,0 +1,9 @@
+m=4 n=3: s UNSATISFIABLE c VERIFIED
+m=5 n=3: s SATISFIABLE 
+m=5 n=4: s UNSATISFIABLE c VERIFIED
+m=6 n=6: s UNSATISFIABLE c VERIFIED
+m=7 n=10: s UNSATISFIABLE c VERIFIED
+m=7 n=10 sig=0 vars=822 clauses=6253
+DP sig=0 m=7 n=10: s UNSATISFIABLE c VERIFIED  cnf=bfd0d81f9e54df58 lrat=21a68a7a61c0cde5 size=25464
+m=8 n=15 sig=0 vars=2338 clauses=24248
+DP sig=0 m=8 n=15: s UNSATISFIABLE c VERIFIED  cnf=4a4e2ad4be26ed13 lrat=1bb4a28bf7836dd2 size=3511446
