@@ -1,0 +1,65 @@
+{
+ "hexagonal_hull_cake_recheck": {
+  "cases": 120,
+  "distinct": 120,
+  "cnf_archive_proof_hashes_match": 120,
+  "lrat_check_verified": 120,
+  "cake_lpr_verified": 120,
+  "certified_both_checkers": 120
+ },
+ "random_sample_main": {
+  "units": 24,
+  "cnf_hash_matches": 24,
+  "unsat": 24,
+  "certified_both_checkers": 24,
+  "proof_identical_to_record": 23,
+  "archive_roundtrip_verified": 24,
+  "not_identical": [
+   "P8_1-10"
+  ],
+  "not_certified": []
+ },
+ "random_sample_extra": {
+  "units": 8,
+  "cnf_hash_matches": 8,
+  "unsat": 8,
+  "certified_both_checkers": 8,
+  "proof_identical_to_record": 8,
+  "archive_roundtrip_verified": 8,
+  "not_identical": [],
+  "not_certified": []
+ },
+ "p8_pilot_orbits": {
+  "units": 58,
+  "cnf_hash_matches": 58,
+  "unsat": 58,
+  "certified_both_checkers": 58,
+  "proof_identical_to_record": 58,
+  "archive_roundtrip_verified": 58,
+  "not_identical": [],
+  "not_certified": []
+ },
+ "local_only_orbits_and_covers": {
+  "units": 65,
+  "cnf_hash_matches": 65,
+  "unsat": 65,
+  "certified_both_checkers": 65,
+  "proof_identical_to_record": 65,
+  "archive_roundtrip_verified": 65,
+  "not_identical": [],
+  "not_certified": [],
+  "planned": 65
+ },
+ "lane_spot_check": {
+  "units": 115,
+  "cnf_hash_matches": 115,
+  "unsat": 115,
+  "certified_both_checkers": 115,
+  "proof_identical_to_record": 115,
+  "archive_roundtrip_verified": 115,
+  "not_identical": [],
+  "not_certified": [],
+  "planned": 242,
+  "distinct_lanes": 115
+ }
+}
