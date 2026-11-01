@@ -1,0 +1,54 @@
+=== uf_compress: union-find path compression stores the x-to-root sign at every node of the path
+  t4k5_hull: map_check=ok; spec: PASS; real labellings 24, with violated clauses 0 ; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT']
+  t5k6_hull: map_check=ok; spec: PASS; real labellings 24, with violated clauses 0 ; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT']
+  t6k6_hull: map_check=ok; spec: PASS; real labellings 24, with violated clauses 0 ; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT']
+  t5k6_no-sb: map_check=ok; spec: PASS; real labellings 24, with violated clauses 0 ; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT']
+  t8k7_hull: map_check=ok; spec: PASS; real labellings 18, with violated clauses 0 ; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['SAT', 'SAT', 'SAT', 'SAT']
+=== gp_generic_polarity: GP generic path ignores literal polarity (affects 5-sets with a zero term, i.e. with c)
+  t4k5_hull: map_check=ok; spec: FAIL ['GP', 'A4', 'CONV4', 'KGON', 'SB', 'HULL']; real labellings 24, with violated clauses 24 {'triple-only/4': 402, 'unit': 432, 'triple-only/2': 672}; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT']
+  t5k6_hull: map_check=ok; spec: FAIL ['GP', 'A4', 'CONV4', 'CONV5', 'KGON', 'SB', 'HULL']; real labellings 24, with violated clauses 24 {'triple-only/4': 1010, 'unit': 720, 'triple-only/2': 1680}; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT']
+  t6k6_hull: map_check=ok; spec: FAIL ['GP', 'A4', 'CONV4', 'CONV5', 'KGON', 'SB', 'HULL']; real labellings 24, with violated clauses 24 {'triple-only/4': 1972, 'unit': 1080, 'triple-only/2': 3360}; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT']
+  t5k6_no-sb: map_check=ok; spec: FAIL ['GP', 'A4', 'CONV4', 'CONV5', 'KGON']; real labellings 24, with violated clauses 24 {'triple-only/4': 1010, 'unit': 720, 'triple-only/2': 1680}; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT']
+  t8k7_hull: map_check=ok; spec: FAIL ['GP', 'A4', 'CONV4', 'CONV5', 'CONV6', 'KGON', 'SB', 'HULL']; real labellings 18, with violated clauses 18 {'triple-only/4': 3382, 'unit': 1512, 'triple-only/2': 7056}; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['UNSAT', 'UNSAT', 'UNSAT', 'UNSAT']
+=== gp_fast_sign: GP fast path: one sign flipped in the first clause (forbids the valid product pattern +,-,+)
+  t4k5_hull: map_check=ok; spec: FAIL ['GP']; real labellings 24, with violated clauses 24 {'triple-only/6': 626}; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT']
+  t5k6_hull: map_check=ok; spec: FAIL ['GP']; real labellings 24, with violated clauses 24 {'triple-only/6': 3582}; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT']
+  t6k6_hull: map_check=ok; spec: FAIL ['GP']; real labellings 24, with violated clauses 24 {'triple-only/6': 11920}; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT']
+  t5k6_no-sb: map_check=ok; spec: FAIL ['GP']; real labellings 24, with violated clauses 24 {'triple-only/6': 3582}; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT']
+  t8k7_hull: map_check=ok; spec: FAIL ['GP']; real labellings 18, with violated clauses 18 {'triple-only/6': 52692}; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['UNSAT', 'UNSAT', 'UNSAT', 'UNSAT']
+=== hull_orient: hull clause uses chi(a,d,X0) instead of chi(d,a,X0)
+  t4k5_hull: map_check=ok; spec: FAIL ['HULL']; real labellings 24, with violated clauses 24 {'triple-only/3': 228}; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT']
+  t5k6_hull: map_check=ok; spec: FAIL ['HULL']; real labellings 24, with violated clauses 24 {'triple-only/3': 500}; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT']
+  t6k6_hull: map_check=ok; spec: FAIL ['HULL']; real labellings 24, with violated clauses 24 {'triple-only/3': 1228}; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT']
+  t5k6_no-sb: map_check=ok; spec: PASS; real labellings 24, with violated clauses 0 ; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT']
+  t8k7_hull: map_check=ok; spec: FAIL ['HULL']; real labellings 18, with violated clauses 18 {'triple-only/3': 2730}; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['UNSAT', 'UNSAT', 'UNSAT', 'UNSAT']
+=== parity: parity_sort counts only two of the three inversions
+  t4k5_hull: GENERATION FAILED (caught by the encoder's own check): AssertionError
+  t5k6_hull: GENERATION FAILED (caught by the encoder's own check): AssertionError
+  t6k6_hull: GENERATION FAILED (caught by the encoder's own check): AssertionError
+  t5k6_no-sb: GENERATION FAILED (caught by the encoder's own check): AssertionError
+  t8k7_hull: GENERATION FAILED (caught by the encoder's own check): AssertionError
+=== identity_sign_p0: centre identity with the wrong sign for p = 0 only
+  t4k5_hull: GENERATION FAILED (caught by the encoder's own check): ValueError: contradictory identification (1, 2, 8) = 1 * (0, 1, 2)
+  t5k6_hull: GENERATION FAILED (caught by the encoder's own check): ValueError: contradictory identification (1, 2, 10) = 1 * (0, 1, 2)
+  t6k6_hull: GENERATION FAILED (caught by the encoder's own check): ValueError: contradictory identification (1, 2, 12) = 1 * (0, 1, 2)
+  t5k6_no-sb: GENERATION FAILED (caught by the encoder's own check): ValueError: contradictory identification (1, 2, 10) = 1 * (0, 1, 2)
+  t8k7_hull: GENERATION FAILED (caught by the encoder's own check): ValueError: contradictory identification (1, 2, 16) = 1 * (0, 1, 2)
+=== a4_sign_Z: interiority clause with the wrong sign, only on 4-sets containing c
+  t4k5_hull: map_check=ok; spec: FAIL ['A4']; real labellings 24, with violated clauses 24 {'triple-only/4': 384}; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT']
+  t5k6_hull: map_check=ok; spec: FAIL ['A4']; real labellings 24, with violated clauses 24 {'triple-only/4': 960}; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT']
+  t6k6_hull: map_check=ok; spec: FAIL ['A4']; real labellings 24, with violated clauses 24 {'triple-only/4': 1920}; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT']
+  t5k6_no-sb: map_check=ok; spec: FAIL ['A4']; real labellings 24, with violated clauses 24 {'triple-only/4': 960}; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT', 'UNSAT']
+  t8k7_hull: map_check=ok; spec: FAIL ['A4']; real labellings 18, with violated clauses 18 {'triple-only/4': 3496}; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['UNSAT', 'UNSAT', 'UNSAT', 'UNSAT']
+=== ctl_hull_X1: sound control: hull clauses anchored at (0,1) = h(X0), also a hull vertex
+  t4k5_hull: map_check=ok; spec: PASS; real labellings 24, with violated clauses 0 ; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT']
+  t5k6_hull: map_check=ok; spec: PASS; real labellings 24, with violated clauses 0 ; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT']
+  t6k6_hull: map_check=ok; spec: PASS; real labellings 24, with violated clauses 0 ; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT']
+  t5k6_no-sb: map_check=ok; spec: PASS; real labellings 24, with violated clauses 0 ; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT']
+  t8k7_hull: map_check=ok; spec: PASS; real labellings 18, with violated clauses 0 ; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['SAT', 'SAT', 'SAT', 'SAT']
+=== ctl_hull_withZ: sound control: hull triangles may also use c as a vertex (X0 is an extreme point)
+  t4k5_hull: map_check=ok; spec: FAIL ['HULL']; real labellings 24, with violated clauses 0 ; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT']
+  t5k6_hull: map_check=ok; spec: FAIL ['HULL']; real labellings 24, with violated clauses 0 ; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT']
+  t6k6_hull: map_check=ok; spec: FAIL ['HULL']; real labellings 24, with violated clauses 0 ; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT']
+  t5k6_no-sb: map_check=ok; spec: PASS; real labellings 24, with violated clauses 0 ; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT']
+  t8k7_hull: map_check=ok; spec: FAIL ['HULL']; real labellings 18, with violated clauses 0 ; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['SAT', 'SAT', 'SAT', 'SAT']

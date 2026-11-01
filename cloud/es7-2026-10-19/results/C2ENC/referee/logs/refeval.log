@@ -1,0 +1,21 @@
+# original encoder (zcnf.py 13d6c162), independent evaluator
+refeval work t=4 K=5 hull=True seed=1: 3566 clauses, 54 labellings -> PASS
+refeval work t=5 K=5 hull=True seed=2: 15476 clauses, 62 labellings -> PASS
+refeval work t=5 K=6 hull=True seed=3: 15586 clauses, 62 labellings -> PASS
+refeval work t=6 K=6 hull=True seed=4: 47153 clauses, 58 labellings -> PASS
+refeval work t=6 K=7 hull=True seed=5: 47549 clauses, 42 labellings -> PASS
+refeval work t=7 K=7 hull=True seed=6: 116999 clauses, 36 labellings -> PASS
+refeval work t=5 K=6 hull=False seed=7: 15426 clauses, 46 labellings -> PASS
+refeval work t=8 K=7 hull=True seed=8: 250356 clauses, 23 labellings -> PASS
+# unsound mutants (expect FAIL)
+refeval conv4_pattern t=5 K=6 hull=True seed=3: 15686 clauses, 62 labellings -> FAIL
+refeval hull_anchor t=5 K=6 hull=True seed=3: 15586 clauses, 62 labellings -> FAIL
+refeval identity_sign t=5 K=6 hull=True seed=3: 15586 clauses, 62 labellings -> FAIL
+refeval gp_generic_polarity t=5 K=6 hull=True seed=3: 15926 clauses, 62 labellings -> FAIL
+refeval gp_fast_sign t=5 K=6 hull=True seed=3: 15586 clauses, 62 labellings -> FAIL
+refeval hull_orient t=5 K=6 hull=True seed=3: 15586 clauses, 62 labellings -> FAIL
+refeval a4_sign_Z t=5 K=6 hull=True seed=3: 15586 clauses, 62 labellings -> FAIL
+# sound controls / equivalent mutant, hull labellings only (expect PASS)
+refeval ctl_hull_X1 t=5 K=6 hull=True seed=3: 15586 clauses, 54 labellings -> PASS
+refeval ctl_hull_withZ t=5 K=6 hull=True seed=3: 15634 clauses, 54 labellings -> PASS
+refeval uf_compress t=5 K=6 hull=True seed=3: 15586 clauses, 54 labellings -> PASS

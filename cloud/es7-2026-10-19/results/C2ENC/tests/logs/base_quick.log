@@ -1,0 +1,74 @@
+model ready (1 s); family ranges {'GP': (1, 12588160), 'A4': (12588161, 13001600), 'CONV4': (13001601, 13140592), 'CONV5': (13140593, 13279720), 'CONV6': (13279721, 13952512), 'KGON': (13952513, 16642320), 'SB': (16642321, 16642456), 'HULL': (16642457, 16653336)}
+22 labellings
+  [0] sym32+pair#0 p0=(-918212, -814392) hull=True |H|=4: zero_ok=True ident_ok=True spot_bad=0 convex7(canonical)=2988 (4 s)
+  [1] sym32+pair#0 p0=(-250, -1250000) hull=True |H|=4: zero_ok=True ident_ok=True spot_bad=0 convex7(canonical)=2988 (4 s)
+  [2] sym32+pair#0 p0=(918212, 814392) hull=True |H|=4: zero_ok=True ident_ok=True spot_bad=0 convex7(canonical)=2988 (4 s)
+  [3] sym32+pair#0 p0=(250, 1250000) hull=True |H|=4: zero_ok=True ident_ok=True spot_bad=0 convex7(canonical)=2988 (4 s)
+  [4] sym32+pair#0 p0=(150, 269852) hull=False |H|=4: zero_ok=True ident_ok=True spot_bad=0 convex7(canonical)=2988 (4 s)
+  [5] sym32+pair#1 p0=(-352902, 1049463) hull=True |H|=4: zero_ok=True ident_ok=True spot_bad=0 convex7(canonical)=2491 (4 s)
+  [6] sym32+pair#1 p0=(250, 1250000) hull=True |H|=4: zero_ok=True ident_ok=True spot_bad=0 convex7(canonical)=2491 (4 s)
+  [7] sym32+pair#1 p0=(-65, -10507) hull=False |H|=4: zero_ok=True ident_ok=True spot_bad=0 convex7(canonical)=2491 (4 s)
+  [8] sym32+pair#2 p0=(-1117958, -1088499) hull=True |H|=4: zero_ok=True ident_ok=True spot_bad=0 convex7(canonical)=2988 (4 s)
+  [9] sym32+pair#2 p0=(250, 1250000) hull=True |H|=4: zero_ok=True ident_ok=True spot_bad=0 convex7(canonical)=2988 (4 s)
+  [10] sym32+pair#2 p0=(-77, -10587) hull=False |H|=4: zero_ok=True ident_ok=True spot_bad=0 convex7(canonical)=2988 (5 s)
+  [11] random-box p0=(-997172, -258522) hull=True |H|=10: zero_ok=True ident_ok=True spot_bad=0 convex7(canonical)=184556 (5 s)
+  [12] random-box p0=(-840536, -828387) hull=True |H|=10: zero_ok=True ident_ok=True spot_bad=0 convex7(canonical)=184556 (4 s)
+  [13] random-box p0=(40135, -985689) hull=True |H|=10: zero_ok=True ident_ok=True spot_bad=0 convex7(canonical)=184556 (4 s)
+  [14] random-box p0=(307926, -910277) hull=True |H|=10: zero_ok=True ident_ok=True spot_bad=0 convex7(canonical)=184556 (5 s)
+  [15] random-box p0=(943450, -608989) hull=True |H|=10: zero_ok=True ident_ok=True spot_bad=0 convex7(canonical)=184556 (5 s)
+header vars 838032 clauses 16653336; read 16653336 clauses (count OK); repeated-literal clauses 680; tautologies 0
+clause length histogram: 1:136 2:272 3:10880 4:478720 5:138720 6:12662008 7:3362600
+assignment 0 (work_quick/a0.bin): violated 2988 [len 7: 2988]
+assignment 1 (work_quick/a1.bin): violated 2988 [len 7: 2988]
+assignment 2 (work_quick/a2.bin): violated 2988 [len 7: 2988]
+assignment 3 (work_quick/a3.bin): violated 2988 [len 7: 2988]
+assignment 4 (work_quick/a4.bin): violated 3231 [len 3: 243] [len 7: 2988]
+assignment 5 (work_quick/a5.bin): violated 2491 [len 7: 2491]
+assignment 6 (work_quick/a6.bin): violated 2491 [len 7: 2491]
+assignment 7 (work_quick/a7.bin): violated 3096 [len 3: 605] [len 7: 2491]
+assignment 8 (work_quick/a8.bin): violated 2988 [len 7: 2988]
+assignment 9 (work_quick/a9.bin): violated 2988 [len 7: 2988]
+assignment 10 (work_quick/a10.bin): violated 3225 [len 3: 237] [len 7: 2988]
+assignment 11 (work_quick/a11.bin): violated 184556 [len 7: 184556]
+assignment 12 (work_quick/a12.bin): violated 184556 [len 7: 184556]
+assignment 13 (work_quick/a13.bin): violated 184556 [len 7: 184556]
+assignment 14 (work_quick/a14.bin): violated 184556 [len 7: 184556]
+assignment 15 (work_quick/a15.bin): violated 184556 [len 7: 184556]
+  [0] sym32+pair#0 hull=True: violated 2988 = KGON 2988 (expected 2988, exact=True) + HULL 0 (expected 0) + other {} -> OK
+  [1] sym32+pair#0 hull=True: violated 2988 = KGON 2988 (expected 2988, exact=True) + HULL 0 (expected 0) + other {} -> OK
+  [2] sym32+pair#0 hull=True: violated 2988 = KGON 2988 (expected 2988, exact=True) + HULL 0 (expected 0) + other {} -> OK
+  [3] sym32+pair#0 hull=True: violated 2988 = KGON 2988 (expected 2988, exact=True) + HULL 0 (expected 0) + other {} -> OK
+  [4] sym32+pair#0 hull=False: violated 3231 = KGON 2988 (expected 2988, exact=True) + HULL 243 (expected 243) + other {} -> OK
+  [5] sym32+pair#1 hull=True: violated 2491 = KGON 2491 (expected 2491, exact=True) + HULL 0 (expected 0) + other {} -> OK
+  [6] sym32+pair#1 hull=True: violated 2491 = KGON 2491 (expected 2491, exact=True) + HULL 0 (expected 0) + other {} -> OK
+  [7] sym32+pair#1 hull=False: violated 3096 = KGON 2491 (expected 2491, exact=True) + HULL 605 (expected 605) + other {} -> OK
+  [8] sym32+pair#2 hull=True: violated 2988 = KGON 2988 (expected 2988, exact=True) + HULL 0 (expected 0) + other {} -> OK
+  [9] sym32+pair#2 hull=True: violated 2988 = KGON 2988 (expected 2988, exact=True) + HULL 0 (expected 0) + other {} -> OK
+  [10] sym32+pair#2 hull=False: violated 3225 = KGON 2988 (expected 2988, exact=True) + HULL 237 (expected 237) + other {} -> OK
+  [11] random-box hull=True: violated 184556 = KGON 184556 (expected 184556, exact=True) + HULL 0 (expected 0) + other {} -> OK
+  [12] random-box hull=True: violated 184556 = KGON 184556 (expected 184556, exact=True) + HULL 0 (expected 0) + other {} -> OK
+  [13] random-box hull=True: violated 184556 = KGON 184556 (expected 184556, exact=True) + HULL 0 (expected 0) + other {} -> OK
+  [14] random-box hull=True: violated 184556 = KGON 184556 (expected 184556, exact=True) + HULL 0 (expected 0) + other {} -> OK
+  [15] random-box hull=True: violated 184556 = KGON 184556 (expected 184556, exact=True) + HULL 0 (expected 0) + other {} -> OK
+  [16] random-box p0=(997172, 258522) hull=True |H|=10: zero_ok=True ident_ok=True spot_bad=0 convex7(canonical)=184556 (5 s)
+  [17] random-box p0=(840536, 828387) hull=True |H|=10: zero_ok=True ident_ok=True spot_bad=0 convex7(canonical)=184556 (4 s)
+  [18] random-box p0=(-40135, 985689) hull=True |H|=10: zero_ok=True ident_ok=True spot_bad=0 convex7(canonical)=184556 (5 s)
+  [19] random-box p0=(-307926, 910277) hull=True |H|=10: zero_ok=True ident_ok=True spot_bad=0 convex7(canonical)=184556 (5 s)
+  [20] random-box p0=(-943450, 608989) hull=True |H|=10: zero_ok=True ident_ok=True spot_bad=0 convex7(canonical)=184556 (4 s)
+  [21] random-box p0=(-746505, -762958) hull=False |H|=10: zero_ok=True ident_ok=True spot_bad=0 convex7(canonical)=184556 (4 s)
+header vars 838032 clauses 16653336; read 16653336 clauses (count OK); repeated-literal clauses 680; tautologies 0
+clause length histogram: 1:136 2:272 3:10880 4:478720 5:138720 6:12662008 7:3362600
+assignment 0 (work_quick/a16.bin): violated 184556 [len 7: 184556]
+assignment 1 (work_quick/a17.bin): violated 184556 [len 7: 184556]
+assignment 2 (work_quick/a18.bin): violated 184556 [len 7: 184556]
+assignment 3 (work_quick/a19.bin): violated 184556 [len 7: 184556]
+assignment 4 (work_quick/a20.bin): violated 184556 [len 7: 184556]
+assignment 5 (work_quick/a21.bin): violated 184787 [len 3: 231] [len 7: 184556]
+  [16] random-box hull=True: violated 184556 = KGON 184556 (expected 184556, exact=True) + HULL 0 (expected 0) + other {} -> OK
+  [17] random-box hull=True: violated 184556 = KGON 184556 (expected 184556, exact=True) + HULL 0 (expected 0) + other {} -> OK
+  [18] random-box hull=True: violated 184556 = KGON 184556 (expected 184556, exact=True) + HULL 0 (expected 0) + other {} -> OK
+  [19] random-box hull=True: violated 184556 = KGON 184556 (expected 184556, exact=True) + HULL 0 (expected 0) + other {} -> OK
+  [20] random-box hull=True: violated 184556 = KGON 184556 (expected 184556, exact=True) + HULL 0 (expected 0) + other {} -> OK
+  [21] random-box hull=False: violated 184787 = KGON 184556 (expected 184556, exact=True) + HULL 231 (expected 231) + other {} -> OK
+22 labellings, 18 from hull vertices, 4 non-hull controls; min convex 7-gons (canonical) among hull labellings: 2491
+BASE EVALUATION PASSED (100 s)
