@@ -16,7 +16,8 @@ Local runs on an Apple M5 Pro, 1 November 2026 (UTC).
 ## 1. Formula
 
 `python3 SYM5/symcnf_layers.py 32 7 4 -o c4_n32L.cnf --map c4_n32L.json` gives `p cnf 287296 5272494`, SHA-256
-`c3933d9a…`. This is the formula of `SYM5/README.md` §4, which is satisfiable (15 s).
+`c3933d9a…`; the map written with it has SHA-256 `f72b186e…` (`c4_n32L.json`, printed by `verify_cuts.py`).
+This is the formula of `SYM5/README.md` §4, which is satisfiable (15 s).
 - Points are labelled 4·o + r, with layer o = 0..7 counted from the outside.
 - Each layer is one rotation orbit, by the layer lemma for m = 4 and K = 7.
 - The inner 12 points are labels 20..31.
@@ -45,7 +46,8 @@ removes no real configuration.
 **Result** (`c4cut.log`, `cuts.jsonl`).
 - Six cuts. After them the formula is UNSAT.
 - Each cut has 55 literals: the inner 12 points have 220 triples in 55 rotation orbits, one variable each. So each
-  cut is one complete inner chirotope, matching the six patterns of arXiv:2506.00224.
+  cut is one complete inner chirotope. Six is also the number of inner patterns reported in arXiv:2506.00224;
+  the patterns themselves were not compared, since their sign tables are not available here.
 - The certificates use 142 to 152 comparisons each.
 
 ## 3. Final proof (`c4final.sh`, `final.json`, `cad_c4cuts.out`)

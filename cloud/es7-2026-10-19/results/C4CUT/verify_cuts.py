@@ -11,7 +11,7 @@ certificate row against those signs only:
 - the weights are positive integers and the weighted bracket exponents cancel exactly, so summing gives 0 > 0.
 Hence no real configuration has all the signs, and the clause removes no real configuration.
 usage: verify_cuts.py MAP_JSON CUTS_JSONL"""
-import json, sys
+import hashlib, json, sys
 
 MAP, CUTS = sys.argv[1:3]
 tri = {tuple(t[:3]): (t[3], t[4]) for t in json.load(open(MAP))["triples"]}
@@ -42,8 +42,9 @@ for n, line in enumerate(open(CUTS)):
     expo = {}
     for row in rec["certificate"]:
         a, b, c, d, e = row["anchor_quintuple"]
+        assert len({a, b, c, d, e}) == 5, f"cut {n}: anchor quintuple has repeated points"
         w = row["weight"]
-        assert isinstance(w, int) and w > 0
+        assert type(w) is int and w > 0, f"cut {n}: weight must be a positive integer"
         terms = [((a, b, c), (a, d, e), 1), ((a, b, d), (a, c, e), -1), ((a, b, e), (a, c, d), 1)]
         sg = [co * orient(chi, *t1) * orient(chi, *t2) for t1, t2, co in terms]
         keys = [tuple(sorted([tuple(sorted(t1)), tuple(sorted(t2))])) for t1, t2, _ in terms]
@@ -56,3 +57,4 @@ for n, line in enumerate(open(CUTS)):
     assert rec["certificate"] and all(x == 0 for x in expo.values()), f"cut {n}: exponents do not cancel"
     ok += 1
 print(f"{ok} cuts verified: each clause forbids a sign pattern with no real realization")
+print("map SHA-256:", hashlib.sha256(open(MAP, "rb").read()).hexdigest())
