@@ -1,0 +1,129 @@
+{
+ "json_sha256_decompressed": "e800d5f8a6c5cc45c73ddcc1e57488f2ca8f2ffb704a1515ff7444d589c682f6",
+ "json_sha256_archive": "8c7fe9ef5264182524095d46ef50ed6bc691cab425efa965756d1870112241aa",
+ "json_states": 154,
+ "json_rows": 2650,
+ "lean_catalog_sha256": "5b97f861a4bf4272d2d3d7bbadbb076261f5d7c3c9bd2e86fbf4b1a9e87a1c71",
+ "lean_rows": 2650,
+ "lean_base": 131072,
+ "lean_eq_json_rowwise": true,
+ "lean_chunk_sizes_ok": true,
+ "lean_chunk_order_ok": true,
+ "demand_values": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  27
+ ],
+ "witness_checks": [
+  {
+   "len": 33,
+   "distinct_indices": true,
+   "in_range": true,
+   "popcount": 33,
+   "state0_occupied": true,
+   "violated_rows": [],
+   "tight_rows": 566,
+   "P1prime_ok": true,
+   "P1prime_alt_states": [
+    1,
+    3,
+    6,
+    11
+   ],
+   "P1prime_alt_ok": true,
+   "min_hole_index": 12
+  },
+  {
+   "len": 33,
+   "distinct_indices": true,
+   "in_range": true,
+   "popcount": 33,
+   "state0_occupied": true,
+   "violated_rows": [],
+   "tight_rows": 482,
+   "P1prime_ok": true,
+   "P1prime_alt_states": [
+    1,
+    3,
+    6,
+    11
+   ],
+   "P1prime_alt_ok": true,
+   "min_hole_index": 12
+  },
+  {
+   "len": 33,
+   "distinct_indices": true,
+   "in_range": true,
+   "popcount": 33,
+   "state0_occupied": true,
+   "violated_rows": [],
+   "tight_rows": 532,
+   "P1prime_ok": true,
+   "P1prime_alt_states": [
+    1,
+    3,
+    6,
+    11
+   ],
+   "P1prime_alt_ok": true,
+   "min_hole_index": 11
+  }
+ ],
+ "witnesses_distinct": true,
+ "pairwise_overlap": {
+  "0-1": 16,
+  "0-2": 18,
+  "1-2": 22
+ },
+ "pairwise_hamming": {
+  "0-1": 34,
+  "0-2": 30,
+  "1-2": 22
+ },
+ "state_profiles_1_2_4_7": {
+  "0": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "1": [
+   1,
+   0,
+   0,
+   0,
+   0
+  ],
+  "2": [
+   1,
+   1,
+   0,
+   0,
+   0
+  ],
+  "4": [
+   1,
+   1,
+   1,
+   0,
+   0
+  ],
+  "7": [
+   1,
+   1,
+   1,
+   1,
+   0
+  ]
+ },
+ "cpsat_sha_field": "e800d5f8a6c5cc45c73ddcc1e57488f2ca8f2ffb704a1515ff7444d589c682f6",
+ "witness0_equals_cpsat": true,
+ "ALL_OK": true
+}
