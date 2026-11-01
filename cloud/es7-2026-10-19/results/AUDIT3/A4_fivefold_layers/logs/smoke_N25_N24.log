@@ -1,0 +1,10 @@
+formula c5L_25: vars 49100 clauses 1234178 classes {'T': 1076808, 'D': 61230, 'K': 96140}
+SUMMARY {"m": 5, "N": 25, "enc": "L", "configs": 4, "free_configs": 2, "evaluations": 20, "T_viol": 0, "D_viol": 0, "K_mismatch": 0, "layer_not_orbit": 0, "neg_controls": 20, "neg_controls_caught": 20, "seconds": 144.4}
+      145.09 real       143.09 user         0.78 sys
+           639746048  maximum resident set size
+formula c4L_24: vars 47512 clauses 1018482 classes {'T': 871570, 'D': 60386, 'K': 86526}
+SUMMARY {"m": 4, "N": 24, "enc": "L", "configs": 4, "free_configs": 2, "evaluations": 16, "T_viol": 0, "D_viol": 0, "K_mismatch": 0, "layer_not_orbit": 0, "neg_controls": 20, "neg_controls_caught": 20, "seconds": 54.6}
+       51.19 real        50.88 user         0.16 sys
+           503595008  maximum resident set size
+
+[exited with code 0]

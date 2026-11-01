@@ -1,0 +1,5 @@
+n=128 distinct=True anomalies=[] C2-invariant=True origin_in_set=False maxabs=343000000000000000
+collinear=0 methodB_mismatch=0 (1s)
+DP lex(x,y): max_convex=8 witness_convex=True (1s)
+DP lex(y,x): max_convex=8 witness_convex=True (2s)
+random/window subsets: 40, mismatches=0, dp histogram={5: 2, 6: 16, 7: 15, 8: 7} (2s)

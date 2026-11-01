@@ -1,0 +1,36 @@
+M1_pair_identity_reversed
+    t6K7a1: evaluator exit 1, failures 40 (FAIL uniform {'bad_classes': 72, 'violated': 88, 'convK': 73, 'unexplained': 15, 'missing': 0, 'sample_unexpla)
+    t6K6a2: evaluator exit 1, failures 40 (FAIL uniform {'bad_classes': 84, 'violated': 337, 'convK': 256, 'unexplained': 81, 'missing': 0, 'sample_unexp)
+    t6K7a0: evaluator exit 1, failures 40 (FAIL uniform {'bad_classes': 60, 'violated': 37, 'convK': 22, 'unexplained': 15, 'missing': 0, 'sample_unexpla)
+M2_Z_group_sign
+    t6K7a1: generator error: ValueError: contradictory identification (1, 2, 13) = -1 * (0, 1, 2)
+    t6K6a2: generator error: ValueError: contradictory identification (12, 13, 14) = -1 * (12, 13, 14)
+    t6K7a0: generator error: ValueError: contradictory identification (1, 2, 12) = -1 * (0, 1, 2)
+M3_point_group_sign
+    t6K7a1: generator error: ValueError: contradictory identification (0, 1, 12) = -1 * (0, 1, 12)
+    t6K6a2: generator error: ValueError: contradictory identification (0, 1, 12) = -1 * (0, 1, 12)
+    t6K7a0: generator error: ValueError: contradictory identification (1, 2, 12) = -1 * (0, 1, 2)
+M4_sb_reversed
+    t6K7a1: evaluator exit 1, failures 40 (FAIL uniform {'bad_classes': 0, 'violated': 88, 'convK': 73, 'unexplained': 15, 'missing': 0, 'sample_unexplai)
+    t6K6a2: evaluator exit 1, failures 40 (FAIL uniform {'bad_classes': 0, 'violated': 271, 'convK': 256, 'unexplained': 15, 'missing': 0, 'sample_unexpl)
+    t6K7a0: evaluator exit 1, failures 40 (FAIL uniform {'bad_classes': 0, 'violated': 37, 'convK': 22, 'unexplained': 15, 'missing': 0, 'sample_unexplai)
+M5_a4_sign
+    t6K7a1: evaluator exit 1, failures 40 (FAIL uniform {'bad_classes': 0, 'violated': 176, 'convK': 73, 'unexplained': 103, 'missing': 0, 'sample_unexpl)
+    t6K6a2: evaluator exit 1, failures 40 (FAIL uniform {'bad_classes': 0, 'violated': 359, 'convK': 256, 'unexplained': 103, 'missing': 0, 'sample_unexp)
+    t6K7a0: evaluator exit 1, failures 35 (FAIL uniform {'bad_classes': 0, 'violated': 103, 'convK': 22, 'unexplained': 81, 'missing': 0, 'sample_unexpla)
+M6_gp_middle_sign
+    t6K7a1: evaluator exit 1, failures 40 (FAIL uniform {'bad_classes': 0, 'violated': 621, 'convK': 73, 'unexplained': 548, 'missing': 0, 'sample_unexpl)
+    t6K6a2: evaluator exit 1, failures 40 (FAIL uniform {'bad_classes': 0, 'violated': 925, 'convK': 256, 'unexplained': 669, 'missing': 0, 'sample_unexp)
+    t6K7a0: evaluator exit 1, failures 40 (FAIL uniform {'bad_classes': 0, 'violated': 493, 'convK': 22, 'unexplained': 471, 'missing': 0, 'sample_unexpl)
+M7_axis_not_fixed
+    t6K7a1: evaluator exit 0, failures 0
+    t6K6a2: generator error: ValueError: contradictory identification (12, 13, 14) = -1 * (12, 13, 14)
+    t6K7a0: evaluator exit 0, failures 0
+M8_sound_weakening_no_axis_identity
+    t6K7a1: evaluator exit 0, failures 0
+    t6K6a2: evaluator exit 0, failures 0
+    t6K7a0: evaluator exit 0, failures 0
+M9_convex4_pattern_too_wide
+    t6K7a1: evaluator exit 1, failures 40 (FAIL uniform {'bad_classes': 0, 'violated': 145, 'convK': 73, 'unexplained': 72, 'missing': 0, 'sample_unexpla)
+    t6K6a2: evaluator exit 1, failures 40 (FAIL uniform {'bad_classes': 0, 'violated': 386, 'convK': 256, 'unexplained': 130, 'missing': 0, 'sample_unexp)
+    t6K7a0: evaluator exit 1, failures 35 (FAIL uniform {'bad_classes': 0, 'violated': 77, 'convK': 22, 'unexplained': 55, 'missing': 0, 'sample_unexplai)

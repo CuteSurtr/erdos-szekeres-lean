@@ -1,0 +1,20 @@
+selftest uuf-100-1 OK: Added clauses = 937.  Deleted clauses = 301.  Max live clauses = 636
+selftest uuf-100-5 OK: Added clauses = 1060.  Deleted clauses = 182.  Max live clauses = 878
+selftest php8 OK: Added clauses = 57339.  Deleted clauses = 52137.  Max live clauses = 5943
+selftest r3 OK: Added clauses = 7511.  Deleted clauses = 4116.  Max live clauses = 3395
+cnf_m_t16k7a1.stat:header: p cnf 695928 14080656
+cnf_m_t16k7a1.stat:bytes: 518452724
+cnf_m_t16k7a1.stat:sha256: e45464edd52e06a31de4bbb664f444789540bad19039989679d76f7173739d02
+cnf_m_t16k7a1.stat:clauses_present: 14080656
+cnf_m_t16k7a1.stat:comments_after_header: 0
+cnf_m_t17k7.stat:header: p cnf 838032 16642456
+cnf_m_t17k7.stat:bytes: 620842936
+cnf_m_t17k7.stat:sha256: b175eac0e7c000f533506ea6931774f4969a0e0415011ba0c4fb47e7f09a6c5b
+cnf_m_t17k7.stat:clauses_present: 16642456
+cnf_m_t17k7.stat:comments_after_header: 0
+lrat_m33_def.stat:bytes: 4120793950
+lrat_m33_def.stat:sha256: e1b2689d071a0b218f2c9be13a813f48bd3ea0fcd1e2fc1476a2549523ede1e4
+lrat_m33_def.stat:lrat-check-style: Added clauses = 35510866.  Deleted clauses = 32165860.  Max live clauses = 14080967
+lrat_mr34_def.stat:bytes: 4373364691
+lrat_mr34_def.stat:sha256: 98e4d02a8f1e1e301603b9672dfe2c4e61e6659f14c2b5edc9e74bd31d4c6537
+lrat_mr34_def.stat:lrat-check-style: Added clauses = 41860266.  Deleted clauses = 36974924.  Max live clauses = 16642786

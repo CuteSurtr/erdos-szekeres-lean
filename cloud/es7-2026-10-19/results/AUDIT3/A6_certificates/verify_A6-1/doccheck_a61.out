@@ -1,0 +1,22 @@
+TRUE  SYMMETRIC.md header says 'Revised 2026-10-29' [3]
+FALSE §3 mentions the central case or 'open' at all (§3 = lines 126-180)
+TRUE  §4 calls the parallelogram cases open [194]
+TRUE  Corollary 3 assumes the published fourfold exclusion [59]
+TRUE  'Checks actually replayed' covers only threefold/mirror/fivefold ['Threefold composition', 'Threefold spot-check (`results/C3SPOT`)', 'Mirror 34 points', 'Mirror 33 points (new encoding)', 'Fivefold']
+FALSE SYMMETRIC.md mentions C4CUT / the fourfold certificate 
+FALSE SYMMETRIC.md mentions deleted central-34 proofs / C2P / C2FINAL 
+FALSE CERTIFICATES.md has an entry for es7-c4-32-cuts 
+FALSE CERTIFICATES.md has an entry for es7-central34-pilot-resolve 
+FALSE CERTIFICATES.md has an entry for es7-central34-resample 
+TRUE  CERTIFICATES.md central34-cover says 'remains open' [154]
+FALSE CERTIFICATES.md 'Not in the archive' mentions central-34 deleted proofs 
+TRUE  C4CUT/README.md still says 'An independent review is pending' [14]
+TRUE  C4CUT/README.md still says 'conditional on the encoder review' [81]
+TRUE  C4CUT/review/README.md records a completed review [7]
+TRUE  C2FINAL/README.md §8 finding 6 flags SYMMETRIC.md as stale (minor) [163]
+TRUE  C2FINAL/README.md says the central statement is not yet claimed [7]
+TRUE  C2P/README.md says every UNSAT proof was checked and then deleted [10]
+TRUE  [extra] LaTeX note says the parallelogram cases are open [248]
+TRUE  [extra] LaTeX note corollary assumes the fourfold exclusion of SMQH25 [122]
+TRUE  [extra] C2C34/README.md says 'Status: open' [12]
+FALSE [extra] C4CUT/final.json records archive (.zst) SHA-256 

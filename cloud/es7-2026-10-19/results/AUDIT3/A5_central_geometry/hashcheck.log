@@ -1,0 +1,24 @@
+hull cover (136 cubes)   extra  136  my hash bb60facb223788fb  recorded ['bb60facb223788fb']  match True
+P1_cover                 extra  621  my hash c8adc60fd2e072e2  recorded ['c8adc60fd2e072e2']  match True  certified record with this hash: True
+P2_cover                 extra  621  my hash cbb7f16015f725cf  recorded ['cbb7f16015f725cf']  match True  certified record with this hash: True
+P3_cover                 extra  621  my hash 91638b5f160d53ba  recorded ['91638b5f160d53ba']  match True  certified record with this hash: True
+P4_cover                 extra  621  my hash 13930f27919e32e7  recorded ['13930f27919e32e7']  match True  certified record with this hash: True
+P5_cover                 extra  621  my hash 5e81f7a5752a060b  recorded ['5e81f7a5752a060b']  match True  certified record with this hash: True
+P6_cover                 extra  621  my hash 0f026a59a575ab9d  recorded ['0f026a59a575ab9d']  match True  certified record with this hash: True
+P7_cover                 extra  621  my hash 7d9697198b9c0d1e  recorded ['7d9697198b9c0d1e']  match True  certified record with this hash: True
+P8_cover                 extra  621  my hash 8851e2ac75a54238  recorded ['8851e2ac75a54238']  match True  certified record with this hash: True
+H1-2                     extra   90  my hash bb5f94163455d602  recorded ['bb5f94163455d602']  match True
+H5-11                    extra   90  my hash 2e1f2d2647b20d93  recorded ['2e1f2d2647b20d93']  match True
+H8-9                     extra   90  my hash f1fba2fe292e4b2c  recorded ['f1fba2fe292e4b2c']  match True
+H15-16                   extra   90  my hash 7c3fc0827faea005  recorded ['7c3fc0827faea005']  match True
+H3-14                    extra   90  my hash 0ecec34629142dd5  recorded ['0ecec34629142dd5']  match True
+P8_1-14                  extra  114  my hash 094c6312c57aa6e5  recorded ['094c6312c57aa6e5']  match True  certified record with this hash: False
+P8_7-11                  extra  114  my hash 37f3de47d4113c6c  recorded []  match False  certified record with this hash: False
+P1_9-10                  extra  114  my hash 5a5b5924cec760b1  recorded []  match False  certified record with this hash: False
+P3_6-14                  extra  114  my hash e821b729a109d82e  recorded ['e821b729a109d82e']  match True  certified record with this hash: True
+P7_12-14                 extra  114  my hash a94885122400e9e2  recorded []  match False  certified record with this hash: False
+P2_1-3                   extra  114  my hash 96a0c74c6f8c952d  recorded ['96a0c74c6f8c952d']  match True  certified record with this hash: True
+P1_9-10-15               extra  139  my hash ba0553c110a8a78c  recorded []  match False  certified record with this hash: False
+P5_2-3-10                extra  139  my hash 172601170c3a9a49  recorded ['172601170c3a9a49']  match True  certified record with this hash: True
+SOME MISMATCH
+python3 hashcheck.py $S/regen/base.cnf $S/regen/base.json   1.53s user 0.25s system 96% cpu 1.840 total

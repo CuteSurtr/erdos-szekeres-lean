@@ -1,0 +1,11 @@
+sizes 33..3000, primes <= 400
+uncovered witnesses: 0 []
+hypothesis usage: {'C3-33': 1979, 'REG': 6048, 'M33': 2968, 'C2-34': 1484, 'M34': 1484, 'C5>=35': 1187}
+half-turn line holds (n even => n >= 34 => 17 pairs; centre never in S): True
+smallest possible half-turn size >= 33: 34
+fivefold sizes 33, 34 possible?: []
+witnesses left without C2-34 (only half-turns): {'rot2': 1484}
+every fourfold size n >= 33 (n = 4k) is covered by C2-34 through the half-turn: True
+cyclic C_m (2 <= m <= 400) always has an element of prime order: True
+hypotheses used at exactly n = 33: {'C3-33': 1, 'REG': 1, 'M33': 1}
+ALL CHECKS PASS

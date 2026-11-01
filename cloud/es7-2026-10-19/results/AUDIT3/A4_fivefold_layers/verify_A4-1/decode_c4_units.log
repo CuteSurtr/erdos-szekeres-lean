@@ -1,0 +1,4 @@
+units: 142  sector 14  polygon 16  nesting 112  other 0
+sector units: chi((0,0),(0,2),(o,0)) = -1 and chi((0,1),(0,3),(o,0)) = +1 for o = 1..7 (from the map, not the encoder)
+exact: the two sector signs hold  <=>  p in the open quadrant (0, pi/2) ccw from (0,0)  [61x61 grid, 3 frames]
+encoder add_sb units == CNF units (as a sequence): True | as a set: True

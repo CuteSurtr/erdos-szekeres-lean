@@ -1,0 +1,59 @@
+group	label	archive_exists	archive_bytes_ok	archive_sha_ok	archive_sha_source	decomp_sha_ok	decomp_bytes_ok
+CERTIFICATES.md:mirror34	CNF (p cnf 838032 16642456)	True	True	True	repo:WRITEUP/CERTIFICATES.md	not run	not run
+CERTIFICATES.md:mirror34	LRAT proof	True	True	True	repo:WRITEUP/CERTIFICATES.md	not run	not run
+CERTIFICATES.md:mirror33	CNF (p cnf 695928 14080656)	True	True	True	repo:WRITEUP/CERTIFICATES.md	not run	not run
+CERTIFICATES.md:mirror33	LRAT proof	True	True	True	repo:WRITEUP/CERTIFICATES.md	not run	not run
+CERTIFICATES.md:c5-angle	CNF (p cnf 401464 7923909)	True	True	True	repo:WRITEUP/CERTIFICATES.md	not run	not run
+CERTIFICATES.md:c5-angle	LRAT proof	True	True	True	repo:WRITEUP/CERTIFICATES.md	not run	not run
+CERTIFICATES.md:c5-layer	CNF (p cnf 401464 7924027)	True	True	True	repo:WRITEUP/CERTIFICATES.md	not run	not run
+CERTIFICATES.md:c5-layer	LRAT proof	True	True	True	repo:WRITEUP/CERTIFICATES.md	not run	not run
+CERTIFICATES.md:c3-hex-15	CNF (p cnf 1646 126785)	True	True	True	repo:WRITEUP/CERTIFICATES.md	not run	not run
+CERTIFICATES.md:c3-hex-15	LRAT proof	True	True	True	repo:WRITEUP/CERTIFICATES.md	not run	not run
+CERTIFICATES.md:c3-hex-16	CNF (p cnf 2256 129171)	True	True	True	repo:WRITEUP/CERTIFICATES.md	not run	not run
+CERTIFICATES.md:c3-hex-16	LRAT proof	True	True	True	repo:WRITEUP/CERTIFICATES.md	not run	not run
+CERTIFICATES.md:central34-cover	CNF (cover.cnf)	True	True	True	repo:WRITEUP/CERTIFICATES.md	not run	not run
+CERTIFICATES.md:central34-cover	LRAT proof	True	True	True	repo:WRITEUP/CERTIFICATES.md	not run	not run
+CERTIFICATES.md:c5-layer(L2, not checked)	L2 LRAT proof (second proof, not checked)	True	True	True	ARCHIVE-SELF:c5/archive_hashes.tsv (not in repo)	not run	not run
+C4CUT	CNF base+6 cuts	True	n/a(not recorded)	True	ARCHIVE-SELF:SHA256SUMS (not in repo)	not run	not run
+C4CUT	LRAT proof	True	n/a(not recorded)	True	ARCHIVE-SELF:SHA256SUMS (not in repo)	not run	not run
+C2FINAL/pilot	P8_3-4-5	True	True	True	repo:C2FINAL/pilot/out.jsonl	not run	not run
+C2FINAL/pilot	P8_cover	True	True	True	repo:C2FINAL/pilot/out.jsonl	not run	not run
+C2FINAL/pilot	P8_9-13-15	True	True	True	repo:C2FINAL/pilot/out.jsonl	not run	not run
+C2FINAL/pilot	P8_3-4-15	True	True	True	repo:C2FINAL/pilot/out.jsonl	not run	not run
+C2FINAL/pilot	P8_2-12-15	True	True	True	repo:C2FINAL/pilot/out.jsonl	not run	not run
+C2FINAL/pilot	P8_2-4-11	True	True	True	repo:C2FINAL/pilot/out.jsonl	not run	not run
+C2FINAL/pilot	P8_1-3	True	True	True	repo:C2FINAL/pilot/out.jsonl	not run	not run
+C2FINAL/sample/out.jsonl	P6_7-8-9@C2P/M02	True	True	True	repo:C2FINAL/sample/out.jsonl	not run	not run
+C2FINAL/sample/out.jsonl	P2_7-9-10@C2P5/M97	True	True	True	repo:C2FINAL/sample/out.jsonl	not run	not run
+C2FINAL/sample/out.jsonl	P1_5-6-11@C2P5/M94	True	True	True	repo:C2FINAL/sample/out.jsonl	not run	not run
+C2FINAL/sample/out.jsonl	P1_2-3-5@C2P5/M54	True	True	True	repo:C2FINAL/sample/out.jsonl	not run	not run
+C2FINAL/sample/out.jsonl	P2_3-7-15@C2P5/M75	True	True	True	repo:C2FINAL/sample/out.jsonl	not run	not run
+C2FINAL/sample/out.jsonl	P2_1-4-12@C2P5/M82	True	True	True	repo:C2FINAL/sample/out.jsonl	not run	not run
+C2FINAL/sample/out.jsonl	P3_1-12-13@C2P5/M71	True	True	True	repo:C2FINAL/sample/out.jsonl	not run	not run
+C2FINAL/sample/out.jsonl	P3_1-12-14@C2P5/M72	True	True	True	repo:C2FINAL/sample/out.jsonl	not run	not run
+C2FINAL/sample/out.jsonl	P4_1-6-15@C2P4/M09	True	True	True	repo:C2FINAL/sample/out.jsonl	not run	not run
+C2FINAL/sample/out.jsonl	P4_1-8-10@C2P5/M31	True	True	True	repo:C2FINAL/sample/out.jsonl	not run	not run
+C2FINAL/sample/out.jsonl	P5_1-2-8@C2P3/M44	True	True	True	repo:C2FINAL/sample/out.jsonl	not run	not run
+C2FINAL/sample/out.jsonl	P5_1-3-12@C2P3/M10	True	True	True	repo:C2FINAL/sample/out.jsonl	not run	not run
+C2FINAL/sample/out.jsonl	P6_2-9-12@C2P/M39	True	True	True	repo:C2FINAL/sample/out.jsonl	not run	not run
+C2FINAL/sample/out.jsonl	P6_8-9-11@C2P4/M31	True	True	True	repo:C2FINAL/sample/out.jsonl	not run	not run
+C2FINAL/sample/out.jsonl	P7_9-10-11@C2P/M01	True	True	True	repo:C2FINAL/sample/out.jsonl	not run	not run
+C2FINAL/sample/out.jsonl	P7_2-4-13@C2P/M23	True	True	True	repo:C2FINAL/sample/out.jsonl	not run	not run
+C2FINAL/sample/out.jsonl	P8_1-3-15@C2P/M11	True	True	True	repo:C2FINAL/sample/out.jsonl	not run	not run
+C2FINAL/sample/out.jsonl	P8_4-12-13@C2P/M13	True	True	True	repo:C2FINAL/sample/out.jsonl	not run	not run
+C2FINAL/sample/out.jsonl	P1_2-3@C2P5/M56	True	True	True	repo:C2FINAL/sample/out.jsonl	not run	not run
+C2FINAL/sample/out.jsonl	P2_6-7@C2P5/M90	True	True	True	repo:C2FINAL/sample/out.jsonl	not run	not run
+C2FINAL/sample/out.jsonl	P3_6-7@C2P5/M70	True	True	True	repo:C2FINAL/sample/out.jsonl	not run	not run
+C2FINAL/sample/out.jsonl	P4_5-10@C2P4/M38	True	True	True	repo:C2FINAL/sample/out.jsonl	not run	not run
+C2FINAL/sample/out.jsonl	P5_6-11@C2P4/M30	True	True	True	repo:C2FINAL/sample/out.jsonl	not run	not run
+C2FINAL/sample/extra_out.jsonl	P1_4-11-12@C2P5/M87	True	True	True	repo:C2FINAL/sample/extra_out.jsonl	not run	not run
+C2FINAL/sample/extra_out.jsonl	P2_1-4-14@C2P5/M84	True	True	True	repo:C2FINAL/sample/extra_out.jsonl	not run	not run
+C2FINAL/sample/extra_out.jsonl	P3_4-13-14@C2P5/M51	True	True	True	repo:C2FINAL/sample/extra_out.jsonl	not run	not run
+C2FINAL/sample/extra_out.jsonl	P4_5-8-9@C2P5/M13	True	True	True	repo:C2FINAL/sample/extra_out.jsonl	not run	not run
+C2FINAL/sample/extra_out.jsonl	P5_6-8-12@C2P4/M47	True	True	True	repo:C2FINAL/sample/extra_out.jsonl	not run	not run
+C2FINAL/sample/extra_out.jsonl	P6_1-3-16@C2P2/M24	True	True	True	repo:C2FINAL/sample/extra_out.jsonl	not run	not run
+C2FINAL/sample/extra_out.jsonl	P7_1-2-6@C2P/M09	True	True	True	repo:C2FINAL/sample/extra_out.jsonl	not run	not run
+C2FINAL/sample/extra_out.jsonl	P8_2-4-6@C2P/M23	True	True	True	repo:C2FINAL/sample/extra_out.jsonl	not run	not run
+# entries 55, failures 0
+# unreferenced archive file: es7-central34-resample-2026-11-01/P6_9-11.lrat.zst
+# unreferenced archive file: es7-central34-resample-2026-11-01/P7_1-15.lrat.zst

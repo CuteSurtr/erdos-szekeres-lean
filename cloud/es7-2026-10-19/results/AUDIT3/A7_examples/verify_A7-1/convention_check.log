@@ -1,0 +1,14 @@
+(1) project verify5.py orientation vs exact embedding j
+  c5_30              j=1: 4060/4060 agree; j=2: 1960/4060 agree; j=3: 2100/4060 agree; j=4: 0/4060 agree
+  c5_31              j=1: 4495/4495 agree; j=2: 2225/4495 agree; j=3: 2270/4495 agree; j=4: 0/4495 agree
+  c5_31minus_centre  j=1: 4060/4060 agree; j=2: 2010/4060 agree; j=3: 2050/4060 agree; j=4: 0/4060 agree
+  k6/c5_16           j=1: 560/560 agree; j=2: 270/560 agree; j=3: 290/560 agree; j=4: 0/560 agree
+
+(2) Eisenstein-coordinate files
+  R3 matrix ((0, -1), (1, -1)), order 3, M^T M = ((1, -1), (-1, 2)) (orthogonal: False)
+  R6 matrix ((1, -1), (1, 0)), order 6, M^T M = ((2, -1), (-1, 1)) (orthogonal: False)
+  c3_27     n=27 closed under R3: True (under R3: True); |rot(M p) - M(R p)| max 1.0e-77; integer vs Euclidean orientation mismatches: 0
+  c3_30     n=30 closed under R3: True (under R3: True); |rot(M p) - M(R p)| max 1.0e-77; integer vs Euclidean orientation mismatches: 0
+  c3_31     n=31 closed under R3: True (under R3: True); |rot(M p) - M(R p)| max 3.0e-77; integer vs Euclidean orientation mismatches: 0
+  c6_30     n=30 closed under R6: True (under R3: True); |rot(M p) - M(R p)| max 1.0e-77; integer vs Euclidean orientation mismatches: 0
+  k6/c3_13  n=13 closed under R3: True (under R3: True); |rot(M p) - M(R p)| max 2.0e-74; integer vs Euclidean orientation mismatches: 0

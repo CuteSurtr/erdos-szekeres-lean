@@ -1,0 +1,6 @@
+mutation flipped pattern: caught (AssertionError '(2, [1])')
+mutation half-open sector: caught (AssertionError '(2, [(7, 2), (-7, -2)], (-35, -10), True, False)')
+mutation clockwise inner orbits: caught (AssertionError 'symmetry inconsistency')
+python 3.14.7 | all mutations caught: True
+mutation pattern_ok j=0 flipped: caught (AssertionError '(2, [(7, 2), (-7, -2)], (-40, -40), False, True)')
+python 3.14.7 | all mutations caught (incl. 4): True

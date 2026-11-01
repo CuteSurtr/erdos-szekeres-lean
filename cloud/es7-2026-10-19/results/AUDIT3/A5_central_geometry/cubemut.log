@@ -1,0 +1,14 @@
+(B) a=3 partner rule correct (a-i): mismatches 0 of 560
+(B) a=3 partner rule wrong (a+1-i): mismatches 560 of 560
+(B) a=3 partner rule wrong (-i): mismatches 560 of 560
+(B) a=3 partner rule identity: mismatches 546 of 560
+(B) a=8 partner rule correct (a-i): mismatches 0 of 560
+(B) a=8 partner rule wrong (a+1-i): mismatches 560 of 560
+(B) a=8 partner rule wrong (-i): mismatches 560 of 560
+(B) a=8 partner rule identity: mismatches 546 of 560
+(A) b=2: sigma_A(P2) == P15: True
+(A) b=2: sigma_A(P2) == P16: False
+(A) b=2: sigma_A(P2) == P14: False
+(A) b=8: sigma_A(P8) == P9: True
+(A) b=8: sigma_A(P8) == P10: False
+(A) b=8: sigma_A(P8) == P8: False

@@ -1,0 +1,21 @@
+worktree HEAD 9cf4949a51c6a2602c57cf68f7df59b0e3d30562
+files at HEAD mentioning mirror proofs:
+    HEAD:cloud/es7-2026-10-19/results/SYMZ/README.md
+    HEAD:cloud/es7-2026-10-19/results/SYMZ/logs/cad_m33_def.out
+    HEAD:cloud/es7-2026-10-19/results/SYMZ/logs/cad_mr34_def.out
+    HEAD:cloud/es7-2026-10-19/results/SYMZ/sha256.txt
+    HEAD:cloud/es7-2026-10-19/results/WRITEUP/CERTIFICATES.md
+files at HEAD whose path names a replay: none
+HEAD tree contains <audit-2026-10-29> : False
+refs whose tree contains the audit dir: ['<local checkpoint ref>', '<local checkpoint ref>']
+main working tree git status of audit dir: ?? <audit-2026-10-29>/
+replay hash m_t17k7.cnf: b175eac0e7c000f5...  in CERTIFICATES.md: True
+replay hash mr34_def.lrat: 98e4d02a8f1e1e30...  in CERTIFICATES.md: True
+replay hash lrat-check: f20462121defbc63...  in CERTIFICATES.md: True
+replay exit_code 0 elapsed 45.45 verified True
+replay stats : ['parsed a formula with 838032 variables and 16642456 clauses', 'VERIFIED', 'Added clauses = 41860266.  Deleted clauses = 36974924.  Max live clauses = 16642786']
+solve stats  : ['parsed a formula with 838032 variables and 16642456 clauses', 'VERIFIED', 'Added clauses = 41860266.  Deleted clauses = 36974924.  Max live clauses = 16642786']
+statistics identical: True
+mirror34-lrat-replay.log 323d79bd67735b9ae0265f2acf37f104911077b58ac087668ed9ea9c1bc8b72d
+mirror34-lrat-replay.json 77949512eb6fb5fba548ea624646c7a05bc099a4c1033a71eeb4555c83ec134e
+mirror33 replay files in audit dir: none

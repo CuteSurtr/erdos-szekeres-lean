@@ -1,0 +1,21 @@
+big/c4_n32L.cnf: vars 287296 clauses 5272494
+{"single_orbit_layers": true, "largest_convex": 9, "conv7": 3356, "conv7_over_m": 839, "results": [["normal", {"T": 0, "D": 0, "K": 839}, 4], ["negative", {"T": 6, "D": 0, "K": 839}, 4]], "sec": 9}
+time: command terminated abnormally
+      602.05 real       544.81 user         2.85 sys
+           785612800  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              639084  page reclaims
+                  69  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 137  voluntary context switches
+              352140  involuntary context switches
+       9666647622640  instructions retired
+       1956735095347  cycles elapsed
+           775472136  peak memory footprint

@@ -1,0 +1,36 @@
+64 configurations written; families: {'uniform': 35, 'neardeg': 8, 'circle': 21}
+conv vars: 4:1204 5:3108 6:6216 total vars 10844; convexity method mismatches: tri4 0, caratheodory 0
+header vars 10844 clauses 354152; parsed clauses 354152; literal>nv 0
+clause length histogram: 1:28 2:56 4:29624 5:7056 6:301476 7:15912
+K-type clauses (all literals negated 6-set variables): 9752; canonical 7-sets: 9752
+convexity method mismatches: tri4 0 caratheodory 0
+violated clause instances: 155493 (explained clause events 9752, unexplained 0)
+canonical convex 7-sets summed over configurations: 155493; per-configuration count mismatches: 0
+RESULT PASS
+64 configurations written; families: {'neardeg': 6, 'circle': 20, 'uniform': 38}
+conv vars: 4:924 5:2184 6:4032 total vars 7392; convexity method mismatches: tri4 0, caratheodory 0
+header vars 7392 clauses 249460; parsed clauses 249460; literal>nv 0
+clause length histogram: 1:28 2:56 4:23296 5:5376 6:210952 7:9752
+K-type clauses (all literals negated 6-set variables): 5720; canonical 7-sets: 5720
+convexity method mismatches: tri4 0 caratheodory 0
+violated clause instances: 114426 (explained clause events 5720, unexplained 0)
+canonical convex 7-sets summed over configurations: 114426; per-configuration count mismatches: 0
+RESULT PASS
+64 configurations written; families: {'circle': 21, 'neardeg': 5, 'uniform': 38}
+conv vars: 4:1548 5:4312 6:9324 total vars 15573; convexity method mismatches: tri4 0, caratheodory 0
+header vars 15573 clauses 489721; parsed clauses 489721; literal>nv 0
+clause length histogram: 1:29 2:56 3:128 4:36992 5:9968 6:417368 7:25180
+K-type clauses (all literals negated 6-set variables): 15968; canonical 7-sets: 15968
+convexity method mismatches: tri4 0 caratheodory 0
+violated clause instances: 168739 (explained clause events 15582, unexplained 0)
+canonical convex 7-sets summed over configurations: 168739; per-configuration count mismatches: 0
+RESULT PASS
+64 configurations written; families: {'circle': 20, 'neardeg': 6, 'uniform': 38}
+conv vars: 4:693 5:1512 6:2520 total vars 4935; convexity method mismatches: tri4 0, caratheodory 0
+header vars 4935 clauses 175218; parsed clauses 175218; literal>nv 0
+clause length histogram: 1:21 2:42 4:17731 5:4032 6:147672 7:5720
+K-type clauses (all literals negated 6-set variables): 3235; canonical 7-sets: 3235
+convexity method mismatches: tri4 0 caratheodory 0
+violated clause instances: 47420 (explained clause events 3235, unexplained 0)
+canonical convex 7-sets summed over configurations: 47420; per-configuration count mismatches: 0
+RESULT PASS

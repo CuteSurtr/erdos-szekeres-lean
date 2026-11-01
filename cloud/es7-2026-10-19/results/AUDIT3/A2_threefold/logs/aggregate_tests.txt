@@ -1,0 +1,32 @@
+{
+ "sets": 1630,
+ "frames": 3260,
+ "fail": 0,
+ "kgon_free_sets": 1155,
+ "kgon_free_frames": 2310,
+ "units_checked": 2585438,
+ "mirror_checked": 1445,
+ "mirror_mut_caught": 761,
+ "kept_only_via_mirror": 777,
+ "reversed_ring_caught_frames": 2890,
+ "sigma_flip_caught_frames": 3260
+}
+m=3 k=5: {'sets': 10, 'kgon_free': 0, 'fail': 0}
+m=3 k=6: {'sets': 57, 'kgon_free': 31, 'fail': 0}
+m=3 k=7: {'sets': 42, 'kgon_free': 42, 'fail': 0}
+m=4 k=6: {'sets': 10, 'kgon_free': 0, 'fail': 0}
+m=4 k=7: {'sets': 15, 'kgon_free': 14, 'fail': 0}
+m=5 k=7: {'sets': 247, 'kgon_free': 206, 'fail': 0}
+m=5 k=8: {'sets': 57, 'kgon_free': 51, 'fail': 0}
+m=5 k=9: {'sets': 42, 'kgon_free': 35, 'fail': 0}
+m=6 k=7: {'sets': 195, 'kgon_free': 181, 'fail': 0}
+m=7 k=7: {'sets': 237, 'kgon_free': 181, 'fail': 0}
+m=7 k=8: {'sets': 57, 'kgon_free': 17, 'fail': 0}
+m=7 k=9: {'sets': 57, 'kgon_free': 35, 'fail': 0}
+m=8 k=7: {'sets': 180, 'kgon_free': 180, 'fail': 0}
+m=9 k=7: {'sets': 120, 'kgon_free': 120, 'fail': 0}
+m=9 k=8: {'sets': 42, 'kgon_free': 0, 'fail': 0}
+m=9 k=9: {'sets': 42, 'kgon_free': 7, 'fail': 0}
+m=11 k=7: {'sets': 40, 'kgon_free': 0, 'fail': 0}
+m=11 k=8: {'sets': 80, 'kgon_free': 28, 'fail': 0}
+m=11 k=9: {'sets': 100, 'kgon_free': 27, 'fail': 0}

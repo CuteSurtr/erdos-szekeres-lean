@@ -1,0 +1,80 @@
+form=layer seed=2 orbit0_layer=0 mutate=False
+  layer sequence (provisional orbit ids, outermost first): [1, 3, 6, 0, 4, 2, 5]; label order [1, 3, 6, 0, 4, 2, 5]
+  triple-only clauses: 6126727, violated: 0 []
+  conv4 defs: 62832, conv_r defs: 389564, K-set clauses: 1344904, violated: 4623
+  convex k-subsets k=4..7: [31300, 63582, 56755, 23115]; convex 7-subsets / 5 = 4623.0; K-set violations 4623
+  MATCH
+form=layer seed=3 orbit0_layer=0 mutate=False
+  layer sequence (provisional orbit ids, outermost first): [2, 3, 4, 5, 0, 1, 6]; label order [2, 3, 4, 5, 0, 1, 6]
+  triple-only clauses: 6126727, violated: 0 []
+  conv4 defs: 62832, conv_r defs: 389564, K-set clauses: 1344904, violated: 7742
+  convex k-subsets k=4..7: [32310, 71067, 73395, 38710]; convex 7-subsets / 5 = 7742.0; K-set violations 7742
+  MATCH
+form=layer seed=4 orbit0_layer=0 mutate=False
+  layer sequence (provisional orbit ids, outermost first): [5, 4, 3, 0, 2, 1, 6]; label order [5, 4, 3, 0, 2, 1, 6]
+  triple-only clauses: 6126727, violated: 0 []
+  conv4 defs: 62832, conv_r defs: 389564, K-set clauses: 1344904, violated: 7413
+  convex k-subsets k=4..7: [32180, 70157, 72000, 37065]; convex 7-subsets / 5 = 7413.0; K-set violations 7413
+  MATCH
+form=angle seed=1 orbit0_layer=0 mutate=False
+  layer sequence (provisional orbit ids, outermost first): [4, 5, 0, 3, 2, 1, 6]; label order [4, 0, 5, 1, 6, 3, 2]
+  triple-only clauses: 6126609, violated: 0 []
+  conv4 defs: 62832, conv_r defs: 389564, K-set clauses: 1344904, violated: 4184
+  convex k-subsets k=4..7: [31480, 63252, 54410, 20920]; convex 7-subsets / 5 = 4184.0; K-set violations 4184
+  MATCH
+form=angle seed=1 orbit0_layer=3 mutate=False
+  layer sequence (provisional orbit ids, outermost first): [4, 5, 0, 3, 2, 1, 6]; label order [3, 2, 4, 0, 5, 1, 6]
+  triple-only clauses: 6126609, violated: 0 []
+  conv4 defs: 62832, conv_r defs: 389564, K-set clauses: 1344904, violated: 4184
+  convex k-subsets k=4..7: [31480, 63252, 54410, 20920]; convex 7-subsets / 5 = 4184.0; K-set violations 4184
+  MATCH
+form=angle seed=1 orbit0_layer=6 mutate=False
+  layer sequence (provisional orbit ids, outermost first): [4, 5, 0, 3, 2, 1, 6]; label order [6, 3, 2, 4, 0, 5, 1]
+  triple-only clauses: 6126609, violated: 0 []
+  conv4 defs: 62832, conv_r defs: 389564, K-set clauses: 1344904, violated: 4184
+  convex k-subsets k=4..7: [31480, 63252, 54410, 20920]; convex 7-subsets / 5 = 4184.0; K-set violations 4184
+  MATCH
+form=angle seed=2 orbit0_layer=0 mutate=False
+  layer sequence (provisional orbit ids, outermost first): [1, 3, 6, 0, 4, 2, 5]; label order [1, 4, 6, 5, 0, 2, 3]
+  triple-only clauses: 6126609, violated: 0 []
+  conv4 defs: 62832, conv_r defs: 389564, K-set clauses: 1344904, violated: 4623
+  convex k-subsets k=4..7: [31300, 63582, 56755, 23115]; convex 7-subsets / 5 = 4623.0; K-set violations 4623
+  MATCH
+form=angle seed=2 orbit0_layer=3 mutate=False
+  layer sequence (provisional orbit ids, outermost first): [1, 3, 6, 0, 4, 2, 5]; label order [0, 2, 3, 1, 4, 6, 5]
+  triple-only clauses: 6126609, violated: 0 []
+  conv4 defs: 62832, conv_r defs: 389564, K-set clauses: 1344904, violated: 4623
+  convex k-subsets k=4..7: [31300, 63582, 56755, 23115]; convex 7-subsets / 5 = 4623.0; K-set violations 4623
+  MATCH
+form=angle seed=2 orbit0_layer=6 mutate=False
+  layer sequence (provisional orbit ids, outermost first): [1, 3, 6, 0, 4, 2, 5]; label order [5, 0, 2, 3, 1, 4, 6]
+  triple-only clauses: 6126609, violated: 0 []
+  conv4 defs: 62832, conv_r defs: 389564, K-set clauses: 1344904, violated: 4623
+  convex k-subsets k=4..7: [31300, 63582, 56755, 23115]; convex 7-subsets / 5 = 4623.0; K-set violations 4623
+  MATCH
+form=angle seed=3 orbit0_layer=0 mutate=False
+  layer sequence (provisional orbit ids, outermost first): [2, 3, 4, 5, 0, 1, 6]; label order [2, 1, 3, 4, 5, 6, 0]
+  triple-only clauses: 6126609, violated: 0 []
+  conv4 defs: 62832, conv_r defs: 389564, K-set clauses: 1344904, violated: 7742
+  convex k-subsets k=4..7: [32310, 71067, 73395, 38710]; convex 7-subsets / 5 = 7742.0; K-set violations 7742
+  MATCH
+form=angle seed=3 orbit0_layer=3 mutate=False
+  layer sequence (provisional orbit ids, outermost first): [2, 3, 4, 5, 0, 1, 6]; label order [5, 6, 0, 2, 1, 3, 4]
+  triple-only clauses: 6126609, violated: 0 []
+  conv4 defs: 62832, conv_r defs: 389564, K-set clauses: 1344904, violated: 7742
+  convex k-subsets k=4..7: [32310, 71067, 73395, 38710]; convex 7-subsets / 5 = 7742.0; K-set violations 7742
+  MATCH
+form=angle seed=3 orbit0_layer=6 mutate=False
+  layer sequence (provisional orbit ids, outermost first): [2, 3, 4, 5, 0, 1, 6]; label order [6, 0, 2, 1, 3, 4, 5]
+  triple-only clauses: 6126609, violated: 0 []
+  conv4 defs: 62832, conv_r defs: 389564, K-set clauses: 1344904, violated: 7742
+  convex k-subsets k=4..7: [32310, 71067, 73395, 38710]; convex 7-subsets / 5 = 7742.0; K-set violations 7742
+  MATCH
+form=angle seed=5 orbit0_layer=2 mutate=True
+  layer sequence (provisional orbit ids, outermost first): [4, 5, 0, 6, 2, 3, 1]; label order [0, 1, 4, 3, 2, 5, 6]
+  triple-only clauses: 6126609, violated: 1 [[608]]
+  conv4 defs: 62832, conv_r defs: 389564, K-set clauses: 1344904, violated: 3888
+form=layer seed=5 orbit0_layer=0 mutate=True
+  layer sequence (provisional orbit ids, outermost first): [4, 5, 0, 6, 2, 3, 1]; label order [4, 0, 5, 6, 2, 3, 1]
+  triple-only clauses: 6126727, violated: 1 [[533]]
+  conv4 defs: 62832, conv_r defs: 389564, K-set clauses: 1344904, violated: 3888

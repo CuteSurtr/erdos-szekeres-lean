@@ -1,0 +1,117 @@
+{
+ "name": "k6_mirror_12",
+ "path": "SYMMAX/k6/mirror_12points.txt",
+ "fmt": "Z2",
+ "K": 6,
+ "claimed_size": 12,
+ "parsed_points": 12,
+ "parse_anomalies": [],
+ "size_ok": true,
+ "distinct": true,
+ "distinct_affine": true,
+ "max_abs_native_coordinate": 286260,
+ "origin_in_set": false,
+ "centre_claim_ok": true,
+ "symmetry": {
+  "M": {
+   "invariant": true,
+   "orbit_sizes": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "num_orbits": 7,
+   "fixed_points": 2,
+   "numeric_isometry_max_error": "0.000e+00"
+  }
+ },
+ "points_on_mirror_axis": 2,
+ "axis_claim_ok": true,
+ "other_symmetries_tested": {
+  "C2": false,
+  "C4": false,
+  "M_y-axis": true,
+  "M_x-axis": false,
+  "M_diag": false,
+  "M_antidiag": false
+ },
+ "collinear_triples": 0,
+ "orient_methodB_mismatches": 0,
+ "orient_numeric_mismatches": 0,
+ "min_abs_numeric_cross": "5.549624e+07",
+ "order_ties": [
+  0,
+  0
+ ],
+ "dp_max_convex_four_orders": [
+  5,
+  5,
+  5,
+  5
+ ],
+ "dp_witness": [
+  [
+   -173636,
+   -8792
+  ],
+  [
+   -61999,
+   -5680
+  ],
+  [
+   -24047,
+   6679
+  ],
+  [
+   -19389,
+   13022
+  ],
+  [
+   -89257,
+   30601
+  ]
+ ],
+ "dp_witnesses_verified": [
+  true,
+  true,
+  true,
+  true
+ ],
+ "brute_output": [
+  "n=12 table: zero_entries_on_distinct_triples=0 alternation_violations=0",
+  "k=6 subsets=924 convex_TRI=0 convex_WRAP=0 disagreements=0",
+  "k=5 subsets=792 convex_TRI=58 convex_WRAP=58 disagreements=0"
+ ],
+ "random_subset_checks": {
+  "count": 60,
+  "mismatches": 0,
+  "dp_value_histogram": {
+   "5": 57,
+   "4": 3
+  }
+ },
+ "convex_layers": [
+  {
+   "size": 4
+  },
+  {
+   "size": 4
+  },
+  {
+   "size": 4
+  }
+ ],
+ "seconds": 0.1,
+ "brute_K_minus_1_convex": {
+  "k": "5",
+  "subsets": "792",
+  "convex_TRI": "58",
+  "convex_WRAP": "58",
+  "disagreements": "0"
+ },
+ "VERDICT": "PASS"
+}

@@ -1,0 +1,23 @@
+big/c5_n35L.cnf: vars 401464 clauses 7924027
+{"single_orbit_layers": true, "largest_convex": 10, "conv7": 63720, "conv7_over_m": 12744, "results": [["normal", {"T": 0, "D": 0, "K": 12744}, 4], ["negative", {"T": 16, "D": 0, "K": 12744}, 4]], "sec": 13}
+{"single_orbit_layers": true, "largest_convex": 9, "conv7": 28195, "conv7_over_m": 5639, "results": [["normal", {"T": 0, "D": 0, "K": 5639}, 4], ["negative", {"T": 7, "D": 0, "K": 5639}, 4]], "sec": 13}
+{"single_orbit_layers": true, "largest_convex": 10, "conv7": 78200, "conv7_over_m": 15640, "results": [["normal", {"T": 0, "D": 0, "K": 15640}, 4], ["negative", {"T": 1, "D": 0, "K": 15640}, 4]], "sec": 17}
+TOTAL {"configs": 3, "T": 0, "D": 0, "K_mismatch": 0, "neg": 3, "neg_caught": 3}
+      185.42 real       159.50 user         7.62 sys
+           949944320  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             2902825  page reclaims
+                  44  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   8  voluntary context switches
+              120025  involuntary context switches
+       2708573993432  instructions retired
+        604834121598  cycles elapsed
+           912229528  peak memory footprint

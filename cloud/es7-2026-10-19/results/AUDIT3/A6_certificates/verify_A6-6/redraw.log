@@ -1,0 +1,7 @@
+population sizes: {'P1H': 227, 'P1Q': 56, 'P2H': 226, 'P2Q': 56, 'P3H': 216, 'P3Q': 56, 'P4H': 231, 'P4Q': 56, 'P5H': 213, 'P5Q': 54, 'P6H': 224, 'P6Q': 57, 'P7H': 225, 'P7Q': 55, 'P8H': 178, 'P8Q': 43}
+main draw reproduces sample.txt exactly: True
+other seeds giving the same list: 0
+extra draw ('exclude_main', 'sample') reproduces extra_sample.txt: True (8/8 positional)
+extra draw ('exclude_main', 'choice') reproduces extra_sample.txt: True (8/8 positional)
+extra draw ('no_exclude', 'sample') reproduces extra_sample.txt: False (2/8 positional)
+extra draw ('no_exclude', 'choice') reproduces extra_sample.txt: False (2/8 positional)

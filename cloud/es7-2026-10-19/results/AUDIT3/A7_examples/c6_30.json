@@ -1,0 +1,160 @@
+{
+ "name": "c6_30",
+ "path": "SYMMAX/c6_30points.txt",
+ "fmt": "EIS",
+ "K": 7,
+ "claimed_size": 30,
+ "parsed_points": 30,
+ "parse_anomalies": [],
+ "size_ok": true,
+ "distinct": true,
+ "distinct_affine": true,
+ "max_abs_native_coordinate": 456,
+ "origin_in_set": false,
+ "centre_claim_ok": true,
+ "symmetry": {
+  "C6E": {
+   "invariant": true,
+   "orbit_sizes": [
+    6,
+    6,
+    6,
+    6,
+    6
+   ],
+   "num_orbits": 5,
+   "fixed_points": 0,
+   "numeric_isometry_max_error": "2.000e-87"
+  },
+  "C3E": {
+   "invariant": true,
+   "orbit_sizes": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+   ],
+   "num_orbits": 10,
+   "fixed_points": 0,
+   "numeric_isometry_max_error": "2.000e-87"
+  }
+ },
+ "other_symmetries_tested": {
+  "C3E": true,
+  "C6E": true,
+  "C2E": true,
+  "conj(real-axis mirror)": false
+ },
+ "collinear_triples": 0,
+ "orient_methodB_mismatches": 0,
+ "orient_numeric_mismatches": 0,
+ "min_abs_numeric_cross": "5.196152e+00",
+ "order_ties": [
+  0,
+  0
+ ],
+ "dp_max_convex_four_orders": [
+  6,
+  6,
+  6,
+  6
+ ],
+ "dp_witness": [
+  [
+   -456,
+   -89
+  ],
+  [
+   -367,
+   -456
+  ],
+  [
+   -162,
+   -179
+  ],
+  [
+   -158,
+   -173
+  ],
+  [
+   -139,
+   -53
+  ],
+  [
+   -179,
+   -17
+  ]
+ ],
+ "dp_witnesses_verified": [
+  true,
+  true,
+  true,
+  true
+ ],
+ "brute_output": [
+  "n=30 table: zero_entries_on_distinct_triples=0 alternation_violations=0",
+  "k=7 subsets=2035800 convex_TRI=0 convex_WRAP=0 disagreements=0",
+  "k=6 subsets=593775 convex_TRI=25244 convex_WRAP=25244 disagreements=0"
+ ],
+ "random_subset_checks": {
+  "count": 60,
+  "mismatches": 0,
+  "dp_value_histogram": {
+   "6": 41,
+   "5": 16,
+   "4": 3
+  }
+ },
+ "convex_layers": [
+  {
+   "size": 6,
+   "orbits": [
+    3
+   ],
+   "is_single_orbit": true
+  },
+  {
+   "size": 6,
+   "orbits": [
+    2
+   ],
+   "is_single_orbit": true
+  },
+  {
+   "size": 6,
+   "orbits": [
+    4
+   ],
+   "is_single_orbit": true
+  },
+  {
+   "size": 6,
+   "orbits": [
+    1
+   ],
+   "is_single_orbit": true
+  },
+  {
+   "size": 6,
+   "orbits": [
+    0
+   ],
+   "is_single_orbit": true
+  }
+ ],
+ "seconds": 0.3,
+ "brute_K_minus_1_convex": {
+  "k": "6",
+  "subsets": "593775",
+  "convex_TRI": "25244",
+  "convex_WRAP": "25244",
+  "disagreements": "0"
+ },
+ "VERDICT": "PASS"
+}

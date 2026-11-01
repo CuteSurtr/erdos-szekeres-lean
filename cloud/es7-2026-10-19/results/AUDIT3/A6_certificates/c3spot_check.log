@@ -1,0 +1,10 @@
+units6 rows: 3084 | distinct nodes: 3084
+per source group (sample): {'C3COMP1': 6, 'C3H1': 6, 'C3H1/LOCAL': 21, 'C3S0': 20, 'C3W3': 1277, 'C3W3S': 6, 'C3W4': 482, 'C3W5': 20, 'C3W6': 86, 'C3W6/LOCAL': 30, 'C3W7': 22, 'C3W7/LOCAL': 44, 'C3WAVE1': 571, 'C3WAVE2': 493} | groups: 14
+sigma-cube nodes in sample: 716
+units6 expected hash == certified original record hash: missing 0 mismatch 0 [] []
+out rows: 2120 | distinct nodes: 2120 | all four checks pass: 2120
+statuses: Counter({'UNSATISFIABLE': 2120}) | base hashes: Counter({'bf0e502ee785': 2120})
+sigma-cube nodes among solved: 485
+proof_sha256 present: 2120
+solved rows are rows 0..N-1 of the shuffled list: True | max index: 2119
+solved by group: {'C3COMP1': 3, 'C3H1': 5, 'C3H1/LOCAL': 10, 'C3S0': 15, 'C3W3': 888, 'C3W3S': 6, 'C3W4': 326, 'C3W5': 13, 'C3W6': 57, 'C3W6/LOCAL': 21, 'C3W7': 18, 'C3W7/LOCAL': 32, 'C3WAVE1': 392, 'C3WAVE2': 334}

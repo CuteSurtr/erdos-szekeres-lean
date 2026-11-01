@@ -1,0 +1,243 @@
+{
+ "C3": {
+  "file": "SYMMAX/c3_31points.txt",
+  "exists": true,
+  "points": 31,
+  "claimed": 31,
+  "size_ok": true,
+  "distinct": true,
+  "invariant": true,
+  "orbit_sizes": {
+   "1": 1,
+   "3": 10
+  },
+  "fixed_points": [
+   [
+    0,
+    0
+   ]
+  ],
+  "collinear_triples": 0,
+  "affine_group": {
+   "order": 3,
+   "type": "C3",
+   "rotation_orders": [
+    1,
+    3,
+    3
+   ],
+   "reflections": 0,
+   "max_rotation_order": 3,
+   "all_fix_centroid": true,
+   "centroid": [
+    "0",
+    "0"
+   ],
+   "averaged_form_invariant": true,
+   "averaged_form_B": [
+    [
+     "4",
+     "-2"
+    ],
+    [
+     "-2",
+     "4"
+    ]
+   ]
+  },
+  "ok": true
+ },
+ "C4": {
+  "file": "SYMMAX/c4_28points.txt",
+  "exists": true,
+  "points": 28,
+  "claimed": 28,
+  "size_ok": true,
+  "distinct": true,
+  "invariant": true,
+  "orbit_sizes": {
+   "4": 7
+  },
+  "fixed_points": [],
+  "collinear_triples": 0,
+  "affine_group": {
+   "order": 4,
+   "type": "C4",
+   "rotation_orders": [
+    1,
+    2,
+    4,
+    4
+   ],
+   "reflections": 0,
+   "max_rotation_order": 4,
+   "all_fix_centroid": true,
+   "centroid": [
+    "0",
+    "0"
+   ],
+   "averaged_form_invariant": true,
+   "averaged_form_B": [
+    [
+     "4",
+     "0"
+    ],
+    [
+     "0",
+     "4"
+    ]
+   ]
+  },
+  "ok": true
+ },
+ "C5": {
+  "file": "SYMMAX/c5_31points.txt",
+  "exists": true,
+  "points": 31,
+  "claimed": 31,
+  "size_ok": true,
+  "distinct": true,
+  "invariant": true,
+  "orbit_sizes": {
+   "1": 1,
+   "5": 6
+  },
+  "fixed_points": [
+   [
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "collinear_triples": 0,
+  "ok": true
+ },
+ "C6": {
+  "file": "SYMMAX/c6_30points.txt",
+  "exists": true,
+  "points": 30,
+  "claimed": 30,
+  "size_ok": true,
+  "distinct": true,
+  "invariant": true,
+  "orbit_sizes": {
+   "6": 5
+  },
+  "fixed_points": [],
+  "collinear_triples": 0,
+  "affine_group": {
+   "order": 6,
+   "type": "C6",
+   "rotation_orders": [
+    1,
+    2,
+    3,
+    3,
+    6,
+    6
+   ],
+   "reflections": 0,
+   "max_rotation_order": 6,
+   "all_fix_centroid": true,
+   "centroid": [
+    "0",
+    "0"
+   ],
+   "averaged_form_invariant": true,
+   "averaged_form_B": [
+    [
+     "8",
+     "-4"
+    ],
+    [
+     "-4",
+     "8"
+    ]
+   ]
+  },
+  "ok": true
+ },
+ "mirror": {
+  "file": "SYMMAX/mirror_32points.txt",
+  "exists": true,
+  "points": 32,
+  "claimed": 32,
+  "size_ok": true,
+  "distinct": true,
+  "invariant": true,
+  "orbit_sizes": {
+   "2": 16
+  },
+  "fixed_points": [],
+  "collinear_triples": 0,
+  "affine_group": {
+   "order": 2,
+   "type": "D1",
+   "rotation_orders": [
+    1
+   ],
+   "reflections": 1,
+   "max_rotation_order": 1,
+   "all_fix_centroid": true,
+   "centroid": [
+    "0",
+    "359/8"
+   ],
+   "averaged_form_invariant": true,
+   "averaged_form_B": [
+    [
+     "2",
+     "0"
+    ],
+    [
+     "0",
+     "2"
+    ]
+   ]
+  },
+  "ok": true
+ },
+ "C2": {
+  "file": "SYM2/sym7_32points.txt",
+  "exists": true,
+  "points": 32,
+  "claimed": 32,
+  "size_ok": true,
+  "distinct": true,
+  "invariant": true,
+  "orbit_sizes": {
+   "2": 16
+  },
+  "fixed_points": [],
+  "collinear_triples": 0,
+  "affine_group": {
+   "order": 2,
+   "type": "C2",
+   "rotation_orders": [
+    1,
+    2
+   ],
+   "reflections": 0,
+   "max_rotation_order": 2,
+   "all_fix_centroid": true,
+   "centroid": [
+    "0",
+    "0"
+   ],
+   "averaged_form_invariant": true,
+   "averaged_form_B": [
+    [
+     "2",
+     "0"
+    ],
+    [
+     "0",
+     "2"
+    ]
+   ]
+  },
+  "ok": true
+ },
+ "ALL_OK": true
+}
