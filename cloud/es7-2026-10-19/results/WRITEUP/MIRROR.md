@@ -59,6 +59,27 @@ unsatisfiable", each of which is a cake_lpr `s VERIFIED UNSAT` verdict on a file
   rebuilt from F, the sub-case (ii) CNF of §3, every proof checked by cake_lpr, every case cover checked) by the acceptance
   passes V3T, V3A–V3E and V3Z (`results/V3Z/summary.md`).
 
+**A second proof, from Baek's theorem (added in November 2026).** The theorem also follows from
+Baek's theorem (J. Baek, Eur. J. Combin. 124 (2025) 104085; arXiv:2206.04260, Theorem 1.6 in the
+arXiv numbering), which settles the Erdős–Tuza–Valtr conjecture for 4-caps. For n = 7 it says
+that a set in general position with distinct x-coordinates, no 4-cap and no convex 7-gon has at
+most C(6, 2) + 1 = 16 points. By the mirror reduction (`results/MIRRORETV/README.md` §2,
+`results/SYMLEAN/mirror/README.md` §1), with the mirror as the x-axis, the points strictly above
+it, together with at most one point on it, have distinct x-coordinates and contain no 4-cap, so a
+mirror-symmetric set in general position without a convex 7-gon has at most 32 points.
+- This is Lean-checked in `results/SYMLEAN/mirror`, with no CNF facts among its hypotheses:
+  `card_le_32_of_reflLine` (axioms `propext`, `Classical.choice`, `Quot.sound`). It rests on the
+  repository's formalization of Baek's theorem (main repository, `ErdosSzekeres/Vendor/ETV`,
+  adapted from Baek's Lean 4 code) and on bridge lemmas adapted from M. Schroeder's archive
+  (`docs/THIRD_PARTY.md`).
+- `Mir.MirrorExclusionLine` is the 33-point case of this bound. It is equivalent to the class
+  `MirrorOneAxis33`, proved there as `mirrorOneAxis33_proved`:
+  `results/SYMLEAN/review/ReviewSanity.lean` proves the equivalence for the copy of the statement
+  in `results/SYMLEAN`, and a separate check identified that copy and its `reflLine` with H3's by
+  `rfl` (`results/SYMLEAN/README.md` §5).
+- Along this route the theorem needs none of items 2–4 of the trust base of §6. The proof chain
+  described in this note is therefore an independent confirmation of it.
+
 **What is not claimed.**
 - Not ES(7) = 33. Only the mirror-symmetric class is excluded.
 - The class of sets invariant under a rotation by 120° (and under no reflection) is **open**.
@@ -67,6 +88,10 @@ unsatisfiable", each of which is a cake_lpr `s VERIFIED UNSAT` verdict on a file
   with a triangular hull, not the directory `results/H3`), possibly 10^4–10^5. Later
   waves work on it (`results/C3WAVE1`, 24 machines C00–C23; `results/C3WAVE2/README.md`: a survey
   of the 1,349 of 1,630 depth-2 roots that wave 1 did not touch); the class is not closed.
+  (Status on 21 October. The class was closed on 28 October, computer-assisted: `results/C3FINAL`
+  composes pieces that were each accepted by both proof checkers when solved (the proofs were not
+  kept), on top of the written proofs of the C3-S normal form (`results/C3-S/soundness.md`) and of
+  Lemma H6M (`results/C3AUDIT2`). See also `results/C3SPOT` and `results/C3LEAN`.)
 - No counterexample is known. No SAT record occurs in Mii-S (`results/Mii-S/README.md` §5:
   "No case, cube, product or `G_o` was SAT") or in any leaf or cover file of the acceptance runs
   V3T, V3A–V3E, V3Z (`results/V3Z/README.md`).
@@ -85,7 +110,9 @@ unsatisfiable", each of which is a cake_lpr `s VERIFIED UNSAT` verdict on a file
   The 14 Oct survey also records a mention of "axially symmetric sets (18 points force an empty
   hexagon)" in Koshelev–Koshka (arXiv:2604.20120), marked there "should be re-verified"; the
   later search (`results/LIT/RELATED.md` §3) found in that paper's snippets only a 25-point
-  3-fold symmetric example for a hexagon-type variant. No priority is claimed.
+  3-fold symmetric example for a hexagon-type variant. Baek's theorem (2025) implies the statement
+  through the mirror reduction (above) but does not state it, and none of the sources inspected
+  for `results/MIRRORETV/README.md` §8 states that derivation. No priority is claimed.
 
 ## 2. Which symmetries a 33-point counterexample can have
 
@@ -125,7 +152,7 @@ This is the argument of `plan/es7_structure.md` (C6, "[own, elementary]") and
   "Nothing in this directory is a theorem"). A D_3-symmetric set is also mirror-symmetric, so it is covered by the
   theorem of this note too, which does not depend on E/E2.
 - **D_1 (one reflection):** this note.
-- **C_3 (a 3-fold rotation, no reflection):** open (§1).
+- **C_3 (a 3-fold rotation, no reflection):** open on 21 October; closed since by `results/C3FINAL` (§1).
 
 **Mirror sets have exactly one point on the axis.** The points of S off the axis come in mirror
 pairs, so the number on the axis is odd; three points on the axis would be collinear. So S is one
@@ -512,7 +539,7 @@ The same table is in `NUMBERS.tsv`.
 
 - **Status lines written before the end.** `results/H3/README.md` says sub-case (ii) is open
   (1,340 open cubes); the first paragraph of `results/V2-L/README.md` gives 316/450 closed at
-  10:20 UTC; `verify/v3/README.md` ends "Not yet reviewed or tested by an independent agent";
+  10:20 UTC; `verify/v3/README.md` ends by saying that it was not yet independently reviewed or tested;
   `results/Haudit/AUDIT.md` RISK-2 says the clause-cover lemma "is not written yet";
   `results/Mii-S/README.md` says "Nothing here is a claim that sub-case (ii) is closed". All are
   snapshots superseded by V2-L §9, V3T and V3Z.

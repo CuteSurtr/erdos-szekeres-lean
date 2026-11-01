@@ -9,6 +9,13 @@ behind `results/C3FINAL` was solved again from scratch, and the new results were
   composition (`results/C3FINAL/compose_files.txt`, tree at f788780c). That is 116,345 distinct nodes in 14 source
   directories. These include σ-cube-refined nodes (names containing `__`): 716 of the 3,084 sampled nodes and 485 of the
   2,120 re-solved ones are of this kind.
+- **Left out: pieces certified only by σ-cube records.** σ-cube records (the record format of
+  `C3PLAN/scripts/sigma_cubes.py`, with the parent node and the σ cube in separate fields) are not in the population.
+  So the 396 certified pieces that have only such records (116,741 certified nodes in `C3FINAL`, minus the 116,345
+  above) were not sampled. 204 of them are indispensable to the cover: without any one of them, the composition of
+  `C3FINAL` leaves part of the class uncovered (one drop-one run of its composer for each of the 396; exact
+  computation). These 204 pieces were re-solved separately on 1 November 2026 (UTC). The list, the drop-one runs and
+  the re-solve results are in `C3PIECES`: all 204 were accepted by both checkers, on CNFs with the recorded hashes.
 - **Draw.** Python `random.Random(20261028)`:
   - 6 nodes from every source directory;
   - 3,000 more drawn uniformly from the rest;
@@ -63,7 +70,8 @@ A row passes when all four of these hold:
 - What it suggests: with 0 failures in 2,120 draws, the share of bad records is small. A rule-of-three bound (below
   0.15% at 95% confidence) is only indicative here. The draw was stratified (6 per source directory, then uniform), and
   only the first 2,120 rows of the shuffled list were solved in the time window. The check is not exhaustive. It adds to
-  the per-record checks at solve time and the double composition; it does not replace them.
+  the per-record checks at solve time and the double composition; it does not replace them. It says nothing about the
+  396 σ-cube pieces outside the population (see Sample).
 
 ## Files
 

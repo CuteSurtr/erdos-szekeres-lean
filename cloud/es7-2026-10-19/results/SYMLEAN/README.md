@@ -8,13 +8,20 @@ least 33 points in general position that is mapped into itself by a Euclidean is
 contains 7 points in convex position. The same holds with an affine bijection in place of the isometry (§4).
 
 **Status.**
-- Only the implication is Lean-checked: Lean 4.24.0, Mathlib `f897ebcf`, axioms `propext`, `Classical.choice` and
-  `Quot.sound`, no `sorry`.
-- The classes are hypotheses of the theorems, not axioms. None is proved in Lean. They rest on SAT certificates and
-  on written soundness proofs of the encoders (§5). `MirrorOneAxis33` is also equivalent to a statement that H3 and
-  V2-L derive in Lean from CNF facts (§5).
-- `HalfTurn34` is **not yet claimed**: `C2FINAL` stops short of claiming the central 34-point statement. So the
-  unconditional statement is not claimed here either.
+- In the files of §1 only the implication is Lean-checked: Lean 4.24.0, Mathlib `f897ebcf`, axioms `propext`,
+  `Classical.choice` and `Quot.sound`, no `sorry`.
+- The classes are hypotheses of the theorems, not axioms, and none is proved in the files of §1. They rest on SAT
+  certificates and on written soundness proofs of the encoders (§5). `MirrorOneAxis33` is also equivalent to a
+  statement that H3 and V2-L derive in Lean from CNF facts (§5).
+- The two mirror classes are proved in Lean, without SAT input, in `SYMLEAN/mirror` (`mirrorOneAxis33_proved`,
+  `mirrorNoAxis34_proved`). They follow from Baek's theorem (J. Baek, Eur. J. Combin. 124 (2025) 104085;
+  arXiv:2206.04260) by the mirror reduction. That directory restates the main theorem and its affine version with
+  only `HalfTurn34`, `Threefold33` and `Fivefold35` as hypotheses.
+- The central 34-point statement, the class `HalfTurn34`, is claimed in `C2FINAL` (computer-assisted), with the
+  composition check, the random re-solve sample and the re-checks of 1–2 November 2026 (totals in `C2RECHECK`). The
+  unconditional forms of §2 and §4 are then computer-assisted: they rest on the certificates of `HalfTurn34`,
+  `Threefold33` and `Fivefold35` and on the written proofs listed with them in §5. The implication and the two mirror
+  classes are Lean-checked; the other three classes are not.
 - The variant `halfTurn_of_symmetric_counterexample` (§3) does not use `HalfTurn34`. It uses the fourfold class
   `Fourfold32` (`C4CUT`). It concludes that every symmetry other than the identity of a heptagon-free set of at least
   33 points in general position is a half-turn about a point outside the set, and that the set then has an even
@@ -144,18 +151,24 @@ Variants with the same five hypotheses:
 
 | class | certificate | how it is certified | caveat |
 |---|---|---|---|
-| `HalfTurn34` | `C2C34` (encoder, hull cover, 120 hexagonal hulls), `C2P`–`C2P5` (parallelogram subcases), `C2FINAL` (composition) | hull cover, second-layer covers and each closed piece: certificate accepted by both checkers; encoder, and reductions A and B: written proofs (reviewed, `C2C34` §5 and `C2P/review`); composition: exact computation, its bookkeeping Lean-checked | **not yet claimed**: the random re-solve sample stopped before its Q units were done. The proofs of the parallelogram pieces were deleted after both checks |
+| `HalfTurn34` | `C2C34` (encoder, hull cover, 120 hexagonal hulls), `C2P`–`C2P5` (parallelogram subcases), `C2FINAL` (composition) | hull cover, second-layer covers and each closed piece: certificate accepted by both checkers; encoder, and reductions A and B: written proofs (reviewed, `C2C34` §5 and `C2P/review`); composition: exact computation, its bookkeeping Lean-checked | claimed in `C2FINAL` (computer-assisted), with the random re-solve sample and the re-checks of 1–2 November 2026 (totals in `C2RECHECK`). The original proofs of the parallelogram pieces were deleted after both checks, so most of these pieces rest on recorded verdicts |
 | `Threefold33` | `C3FINAL`, with the normal form `C3-S/soundness.md` and the encoding `C3a` | 116,883 pieces, each certificate accepted by both checkers when solved; composition: exact computation (two composers); normal form and encoding: written proofs (reviewed, `C3AUDIT`–`C3AUDIT4`) | the proofs were not retained; 2,120 random pieces were re-solved and accepted again (`C3SPOT`) |
 | `Fivefold35` | `SYM5` | two encodings, each certificate accepted by both checkers, proofs P1 and L1 retained; encoders and layer lemma: written proofs (reviewed) | |
 | `MirrorOneAxis33` | `SYMZ`, Theorem 2a | certificate accepted by both checkers, proof retained; encoder: written proof (reviewed) | |
 | | `H3` and `V2-L`: `Mir.MirrorExclusionLine` | Lean-checked, with 1 + 121 + 1,198 + 74,000 CNF facts as hypotheses, each with a recorded cake_lpr verdict (`WRITEUP/MIRROR.md`) | the proof files were not retained (`WRITEUP/CERTIFICATES.md`) |
+| | `SYMLEAN/mirror`: `mirrorOneAxis33_proved` | Lean-checked, no SAT input: Baek's theorem (formalized in the repository, `ErdosSzekeres/Vendor/ETV`) and the mirror reduction | |
 | `MirrorNoAxis34` | `SYMZ`, Theorem 2b | certificate accepted by both checkers, proof retained; encoder: written proof (reviewed in two audits) | |
-| `Fourfold32` (§3 only) | `C4CUT` | final certificate accepted by both checkers; six cuts: exact computation (independent verifier); encoder: written proof (reviewed, `C4CUT/review`) | `C4CUT/README.md` still says its review is pending |
+| | `SYMLEAN/mirror`: `mirrorNoAxis34_proved` | Lean-checked, no SAT input, as for `MirrorOneAxis33` | |
+| `Fourfold32` (§3 only) | `C4CUT` | final certificate accepted by both checkers; six cuts: exact computation (independent verifier); encoder: written proof (reviewed, `C4CUT/review`) | the review found no blocking or major finding (`C4CUT/review/README.md`) |
 
 **Credit.** The statement of `Fourfold32` is from Subercaseaux, Mackey, Qian and Heule (arXiv:2506.00224v1, §6.2);
 `C4CUT` adds a checkable certificate. The fivefold upper bound is implied by an earlier reported computation of
-B. C. Dumitru (arXiv:2512.24061, §7), which has priority; `SYM5` records the overlap (it names the author as
-"Bogdan", which is his given name).
+B. C. Dumitru (arXiv:2512.24061, §7), which has priority; `SYM5` records the overlap. The two mirror classes are
+implied by Baek's theorem (J. Baek, Eur. J. Combin. 124 (2025) 104085; arXiv:2206.04260, Theorem 1.6 in the arXiv
+numbering) through the mirror reduction (`SYMLEAN/mirror`, `MIRRORETV`). The certificates of `SYMZ` confirm both
+independently, and the H3 chain, conditional on its CNF facts, confirms `MirrorOneAxis33`. The Lean proof in
+`SYMLEAN/mirror` uses the repository's formalization of Baek's theorem, adapted from Baek's Lean 4 code, and bridge
+lemmas adapted from M. Schroeder's archive (`docs/THIRD_PARTY.md` at the repository root).
 
 **The bridge to H3.** `MirrorExclusionLineCopy` in the Lean file is the text of `Mir.MirrorExclusionLine`
 (`H3/MirrorEncoding/Line.lean`), over the same `reflLine`.
@@ -227,11 +240,12 @@ itself was checked by reading: no formal link joins a Lean class to its CNF.
 
 ### 6.5 Findings about status and documents (all minor)
 
-1. `HalfTurn34` is not yet claimed (§5), and the main theorem uses it for every rotation of even order. The variant
-   avoids it. The Lean file itself calls the classes hypotheses and does not overclaim.
-2. The documents disagree on `Fourfold32`. `C4CUT/README.md` says its review is pending, while
-   `C4CUT/review/README.md` reports no blocking or major finding. `SYM5/README.md` §4 and `WRITEUP/SYMMETRIC.md`
-   still cite the arXiv:2506.00224 enumeration.
+1. When the review ran, `HalfTurn34` was not yet claimed; it is now claimed in `C2FINAL` (§5). The main theorem uses
+   it for every rotation of even order. The variant avoids it. The Lean file itself calls the classes hypotheses and
+   does not overclaim.
+2. When the review ran, the documents disagreed on `Fourfold32`. `C4CUT/README.md` said its review was pending,
+   while `C4CUT/review/README.md` reports no blocking or major finding. `SYM5/README.md` §4 and `WRITEUP/SYMMETRIC.md`
+   cited the arXiv:2506.00224 enumeration.
 3. `Threefold33` and `Fivefold35` include sets whose centre lies on a line through two points of different orbits.
    The encoders exclude such sets. A perturbation argument closes the gap (written proof, reviewed): it is explicit
    in `SYM5` §1 and one sentence in `C3a/README.md`, `C3b/DERIVATION.md` and `C3-S/soundness.md`. For the other
@@ -290,9 +304,11 @@ repository root (Lean 4.24.0, Mathlib `f897ebcf`). The Mac was also running SAT 
 
 ## 9. What is not checked
 
-- The classes are not proved in Lean. Each rests on SAT certificates and on a written soundness proof of its encoder.
-  Only `MirrorOneAxis33` also has a Lean chain (through H3), and that chain is conditional on CNF facts.
-- `HalfTurn34` is not claimed, so neither is the unconditional form of §2 or §4.
+- `HalfTurn34`, `Threefold33`, `Fivefold35` and `Fourfold32` are not proved in Lean. Each rests on SAT certificates and
+  on a written soundness proof of its encoder. The two mirror classes are proved in Lean from Baek's theorem, without
+  SAT input (`SYMLEAN/mirror`); `MirrorOneAxis33` also has a Lean chain through H3, conditional on CNF facts.
+- `HalfTurn34` is claimed in `C2FINAL` (computer-assisted). The unconditional forms of §2 and §4 rest on it and on
+  the certificates of `Threefold33` and `Fivefold35`, so they are computer-assisted and not Lean-checked as a whole.
 - Some proofs were deleted after both checkers accepted them, so only recorded verdicts remain: the 116,883 pieces of
   `Threefold33` (2,120 re-solved, `C3SPOT`) and the parallelogram pieces of `HalfTurn34` (samples re-solved, `C2FINAL`
   §4–§5). The proof files of the H3 chain were not retained either; `SYMZ` gives `MirrorOneAxis33` a retained
