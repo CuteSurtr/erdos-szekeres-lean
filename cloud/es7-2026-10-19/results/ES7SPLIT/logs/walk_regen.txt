@@ -1,0 +1,11 @@
+# Regeneration of one walk (classical start, seed 1) with a fresh build of the repository generator
+# cloud/es7-2026-10-19/tools/trackA/gen.c (byte-identical, with gen_core.h, to the copy used for data/walks/),
+# 1 November 2026 (UTC).
+# Build: cc -O2 -o gen gen.c -lm, with -isysroot set to an installed macOS 26.5 SDK (the default SDK of this
+# machine failed to link). Run from the directory that contains ES7SPLIT/:
+./gen walk 7 32 1 1 ES7SPLIT/data/classical32.txt 1000 1 0.01 20000 1000 walk_classical32.txt
+gen mode=walk K=7 N=32 seed=1 starts=1 emitted=21 cpu=16.9s
+start 0 done: walk acc=20000 tried=138511 emitted_total=21 t=16.9s
+# (the original run, first line of logs/walks.err: tried=138511 emitted_total=21)
+walk_classical32.txt: 21 lines, identical to the first 21 lines of ES7SPLIT/data/walks/walk_classical32.txt
+SHA-256 of both: 793ee8107caea207...

@@ -1,0 +1,20 @@
+classical32.txt 32 {'partitions': 490, 'one_sided_fail': 974, 'empty': 0, 'inside_hull_only': 0, 'witness_fail': 0, 'ok': 6}
+   split |A|=6 |B|=26 cap_z(A)=2 cup_z(B)=4
+   split |A|=26 |B|=6 cap_z(A)=4 cup_z(B)=2
+   split |A|=16 |B|=16 cap_z(A)=3 cup_z(B)=3
+   split |A|=16 |B|=16 cap_z(A)=3 cup_z(B)=3
+   split |A|=26 |B|=6 cap_z(A)=4 cup_z(B)=2
+   split |A|=6 |B|=26 cap_z(A)=2 cup_z(B)=4
+mirror32.txt 32 {'partitions': 490, 'one_sided_fail': 980, 'empty': 0, 'inside_hull_only': 0, 'witness_fail': 0, 'ok': 0}
+central32.txt 32 {'partitions': 492, 'one_sided_fail': 984, 'empty': 0, 'inside_hull_only': 0, 'witness_fail': 0, 'ok': 0}
+c3_31points.txt 31 {'partitions': 459, 'one_sided_fail': 918, 'empty': 0, 'inside_hull_only': 0, 'witness_fail': 0, 'ok': 0}
+c3_30points.txt 30 {'partitions': 429, 'one_sided_fail': 858, 'empty': 0, 'inside_hull_only': 0, 'witness_fail': 0, 'ok': 0}
+c6_30points.txt 30 {'partitions': 429, 'one_sided_fail': 858, 'empty': 0, 'inside_hull_only': 0, 'witness_fail': 0, 'ok': 0}
+c4_28points.txt 28 {'partitions': 374, 'one_sided_fail': 748, 'empty': 0, 'inside_hull_only': 0, 'witness_fail': 0, 'ok': 0}
+c3_27points.txt 27 {'partitions': 348, 'one_sided_fail': 696, 'empty': 0, 'inside_hull_only': 0, 'witness_fail': 0, 'ok': 0}
+prop8b_witness27.txt 27 {'partitions': 346, 'one_sided_fail': 688, 'empty': 0, 'inside_hull_only': 0, 'witness_fail': 0, 'ok': 4}
+   split |A|=21 |B|=6 cap_z(A)=4 cup_z(B)=2
+   split |A|=6 |B|=21 cap_z(A)=2 cup_z(B)=4
+   split |A|=16 |B|=11 cap_z(A)=3 cup_z(B)=3
+   split |A|=11 |B|=16 cap_z(A)=3 cup_z(B)=3
+$P splits_ind.py $D/classical32.txt $D/mirror32.txt $D/central32.txt        1.68s user 0.01s system 98% cpu 1.714 total

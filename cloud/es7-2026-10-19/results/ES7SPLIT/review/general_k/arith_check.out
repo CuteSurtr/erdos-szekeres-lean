@@ -1,0 +1,29 @@
+violations: [] count 0
+k=3: needed a = []  (expected [3..k-2] = []: True);  beyond Baek (a>=5): []
+k=4: needed a = []  (expected [3..k-2] = []: True);  beyond Baek (a>=5): []
+k=5: needed a = [3]  (expected [3..k-2] = [3]: True);  beyond Baek (a>=5): []
+k=6: needed a = [3, 4]  (expected [3..k-2] = [3, 4]: True);  beyond Baek (a>=5): []
+k=7: needed a = [3, 4, 5]  (expected [3..k-2] = [3, 4, 5]: True);  beyond Baek (a>=5): [5]
+k=8: needed a = [3, 4, 5, 6]  (expected [3..k-2] = [3, 4, 5, 6]: True);  beyond Baek (a>=5): [5, 6]
+k=9: needed a = [3, 4, 5, 6, 7]  (expected [3..k-2] = [3, 4, 5, 6, 7]: True);  beyond Baek (a>=5): [5, 6, 7]
+k=10: needed a = [3, 4, 5, 6, 7, 8]  (expected [3..k-2] = [3, 4, 5, 6, 7, 8]: True);  beyond Baek (a>=5): [5, 6, 7, 8]
+k=11: needed a = [3, 4, 5, 6, 7, 8, 9]  (expected [3..k-2] = [3, 4, 5, 6, 7, 8, 9]: True);  beyond Baek (a>=5): [5, 6, 7, 8, 9]
+k=12: needed a = [3, 4, 5, 6, 7, 8, 9, 10]  (expected [3..k-2] = [3, 4, 5, 6, 7, 8, 9, 10]: True);  beyond Baek (a>=5): [5, 6, 7, 8, 9, 10]
+k=7 table:
+  (c,d)=(2,2): |A|<=E(7,3)=6, |B|<=E(7,3)=6, sum=12
+  (c,d)=(2,3): |A|<=E(7,3)=6, |B|<=E(7,4)=16, sum=22
+  (c,d)=(2,4): |A|<=E(7,3)=6, |B|<=E(7,5)=26, sum=32
+  (c,d)=(3,2): |A|<=E(7,4)=16, |B|<=E(7,3)=6, sum=22
+  (c,d)=(3,3): |A|<=E(7,4)=16, |B|<=E(7,4)=16, sum=32
+  (c,d)=(4,2): |A|<=E(7,5)=26, |B|<=E(7,3)=6, sum=32
+k=8 table:
+  (c,d)=(2,2): sum=7+7=14 vs 2^6=64
+  (c,d)=(2,3): sum=7+22=29 vs 2^6=64
+  (c,d)=(2,4): sum=7+42=49 vs 2^6=64
+  (c,d)=(2,5): sum=7+57=64 vs 2^6=64
+  (c,d)=(3,2): sum=22+7=29 vs 2^6=64
+  (c,d)=(3,3): sum=22+22=44 vs 2^6=64
+  (c,d)=(3,4): sum=22+42=64 vs 2^6=64
+  (c,d)=(4,2): sum=42+7=49 vs 2^6=64
+  (c,d)=(4,3): sum=42+22=64 vs 2^6=64
+  (c,d)=(5,2): sum=57+7=64 vs 2^6=64

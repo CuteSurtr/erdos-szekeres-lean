@@ -1,0 +1,23 @@
+=== classical32
+n=32 gp=1 convex k-sets: k3=4960 k4=23220 k5=49884 k6=39648 k7=0 | heptagons=0
+hull size 6 (ccw from leftmost)
+convex hexagons=39648 6-holes=163
+chain stats per m: m=1 [min 1 max 1 maxR 10] m=2 [min 2 max 2 maxR 20] m=3 [min 3 max 3 maxR 25] 
+violations: lemma(c!=m)=0 dp-vs-brute=0 corollary-region=0 nesting=0 hole-visibility=0
+hull ears (size,nested): (4,1) (4,1) (4,1) (9,1) (9,1) (4,1)
+$D/chordcheck --every 1  15.37s user 0.02s system 99% cpu 15.431 total
+=== mirror32
+n=32 gp=1 convex k-sets: k3=4960 k4=21468 k5=38166 k6=23184 k7=0 | heptagons=0
+hull size 6 (ccw from leftmost)
+convex hexagons=23184 6-holes=120
+chain stats per m: m=1 [min 1 max 1 maxR 10] m=2 [min 2 max 2 maxR 24] m=3 [min 3 max 3 maxR 29] 
+violations: lemma(c!=m)=0 dp-vs-brute=0 corollary-region=0 nesting=0 hole-visibility=0
+hull ears (size,nested): (1,1) (0,1) (0,1) (1,1) (0,1) (0,1)
+$D/chordcheck --every 1  7.21s user 0.02s system 99% cpu 7.301 total
+=== central32
+n=32 gp=1 convex k-sets: k3=4960 k4=21694 k5=40566 k6=27055 k7=0 | heptagons=0
+hull size 4 (ccw from leftmost)
+convex hexagons=27055 6-holes=152
+chain stats per m: m=1 [min 1 max 1 maxR 10] m=2 [min 2 max 2 maxR 24] m=3 [min 3 max 3 maxR 26] 
+violations: lemma(c!=m)=0 dp-vs-brute=0 corollary-region=0 nesting=0 hole-visibility=0
+$D/chordcheck --every 1  7.25s user 0.02s system 99% cpu 7.322 total

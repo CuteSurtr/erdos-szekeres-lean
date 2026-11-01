@@ -1,0 +1,12 @@
+points: 32, designated b = index 0 = (0, 0)
+distinct: yes
+general position: yes (collinear ordered triples: 0)
+b inside 0 triangles of other points -> b is a hull vertex
+hull vertices (triangle criterion): 6
+k=5: subsets 201376, convex 49884 | subsets containing b 31465, convex containing b 9356
+example convex hexagon (indices): 0 1 2 3 4 5  points: (0,0) (1,-1) (2,0) (3,2) (4,5) (5,9)
+k=6: subsets 906192, convex 39648 | subsets containing b 169911, convex containing b 10006
+k=7: subsets 3365856, convex 0 | subsets containing b 736281, convex containing b 0
+real 0.18
+user 0.17
+sys 0.00

@@ -1,0 +1,3 @@
+@main : ∀ {γ : Type u_1} [inst : LinearOrder γ] (n : ℕ) (C : Config γ) (S : Finset γ),
+  (n + 2).choose 2 + 2 ≤ S.card → C.HasNCap 4 S ∨ C.HasNGon (n + 3) S
+'baek_seven' depends on axioms: [propext, Classical.choice, Quot.sound]

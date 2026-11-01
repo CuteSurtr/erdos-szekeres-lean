@@ -1,0 +1,7 @@
+hexagonal hull set ears: [0, 0, 4, 0, 0, 0]
+hexagonal hull set ears: [4, 4, 4, 9, 9, 4]
+hexagonal hull set ears: [1, 0, 0, 1, 0, 0]
+hexagonal hull set ears: [0, 0, 0, 2, 0, 2]
+{'sets': 216, 'hept': 0, 'notgp': 0, 'lemma': 0, 'dp': 0, 'cor': 0, 'nest': 0, 'hole': 0, 'hexes': 3545557, 'holes': 26760, 'hexhull': 4, 'ears_all_nested': True}
+hull sizes: {4: 127, 6: 4, 3: 40, 5: 45}
+python3 -I $D/walks_driver.py $D/chordcheck 25   62.94s user 0.68s system 99% cpu 1:04.03 total
