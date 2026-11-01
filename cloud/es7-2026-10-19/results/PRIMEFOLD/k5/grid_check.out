@@ -1,0 +1,5 @@
+grid N=400: all 80199 points agree with prediction; per class: {'axis': 798, 'II': 34149, 'I_b': 22622, 'I_a': 22622, 'curve': 8}
+identities: C3 = (x+y)(x+y-1) - 2xy;  C1 - C2 = 2(y-x);  4*C1 = (2x-1)^2 + (2y+1)^2 - 2;  line-restriction values: OK
+real 0.76
+user 0.65
+sys 0.01

@@ -1,0 +1,20 @@
+p=9 t=28 centre=1 n=253 PREC=400
+layers have pairwise distinct radii and nonzero reps: yes
+orientation tables: 917154 filter calls, 1165 exact evaluations, zero orientations: 0
+random consistency check (cyclic/antisymmetric/nonzero) violations: 0
+wrote orientation sample to OUTDIR/p9_sample.txt
+method A (farthest-vertex DP, whole set): largest convex subset = 9
+witness polygon of size 9: 0(L0,s0) 1(L0,s1) 10(L1,s1) 19(L2,s1) 28(L3,s1) 171(L19,s0) 90(L10,s0) 36(L4,s0) 9(L1,s0)  all turns left: yes
+  window 1 subset  0 (16 points): farthest-DP 7  lowest-DP 7  brute-force DFS 7 
+  window 1 subset  1 (16 points): farthest-DP 6  lowest-DP 6  brute-force DFS 6 
+  window 1 subset  2 (16 points): farthest-DP 7  lowest-DP 7  brute-force DFS 7 
+  window 2 subset  0 (16 points): farthest-DP 8  lowest-DP 8  brute-force DFS 8 
+  window 2 subset  1 (16 points): farthest-DP 8  lowest-DP 8  brute-force DFS 8 
+  window 2 subset  2 (16 points): farthest-DP 8  lowest-DP 8  brute-force DFS 8 
+  window 3 subset  0 (16 points): farthest-DP 6  lowest-DP 6  brute-force DFS 6 
+  window 3 subset  1 (16 points): farthest-DP 8  lowest-DP 8  brute-force DFS 8 
+  window 3 subset  2 (16 points): farthest-DP 7  lowest-DP 7  brute-force DFS 7 
+  window 0 subset  0 (16 points): farthest-DP 8  lowest-DP 8  brute-force DFS 8 
+  window 0 subset  1 (16 points): farthest-DP 9  lowest-DP 9  brute-force DFS 9 
+  window 0 subset  2 (16 points): farthest-DP 8  lowest-DP 8  brute-force DFS 8 
+PASS (K=10)

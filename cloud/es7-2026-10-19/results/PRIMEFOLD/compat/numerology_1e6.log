@@ -1,0 +1,41 @@
+range m = 2..1000000; time 0.8s
+mismatches feasible/predicted: 0 []
+odd m force centre in S, even m force centre not in S (no GP needed): True
+first odd base-2 Fermat pseudoprimes: [341, 561, 645, 1105, 1387, 1729, 1905, 2047, 2465, 2701, 2821, 3277, 4033, 4369, 4371, 4681, 5461, 6601, 7957, 8321, 8481, 8911]
+  # odd base-2 psp < 10^3: 3
+  # odd base-2 psp < 10^4: 22
+  # odd base-2 psp < 10^5: 78
+  # odd base-2 psp < 10^6: 245
+feasible m <= 40: [2, 3, 4, 5, 7, 8, 11, 13, 16, 17, 19, 23, 29, 31, 32, 37]
+k = m+1 for feasible m <= 20: [3, 4, 5, 6, 8, 9, 12, 14, 17, 18, 20]
+k = m+1 for first three pseudoprime m: [342, 562, 646]
+341 = 11*31: True ; 561 = [3, 11, 17] ; 645 = [3, 5, 43]
+even feasible m are exactly the powers of two <= N: True
+m=2: |S|=2 = 2*1 (centre not in S)
+m=3: |S|=4 = 3*1 + 1 (centre in S)
+m=4: |S|=8 = 4*2 (centre not in S)
+m=5: |S|=16 = 5*3 + 1 (centre in S)
+m=7: |S|=64 = 7*9 + 1 (centre in S)
+m=8: |S|=128 = 8*16 (centre not in S)
+m=11: |S|=1024 = 11*93 + 1 (centre in S)
+m=13: |S|=4096 = 13*315 + 1 (centre in S)
+m=16: |S|=32768 = 16*2048 (centre not in S)
+m=17: |S|=65536 = 17*3855 + 1 (centre in S)
+        0.88 real         0.83 user         0.01 sys
+            20561920  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                1911  page reclaims
+                  79  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   0  voluntary context switches
+                1379  involuntary context switches
+         18933787750  instructions retired
+          3632536071  cycles elapsed
+            12370400  peak memory footprint

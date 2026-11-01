@@ -1,0 +1,15 @@
+file ../sets/k10/rule_p9_253pts.pts p 9 t 28 centre 1 n 253
+const c20 width (units 2^-256): 1 float check ok
+const c40 width (units 2^-256): 5 float check ok
+const s20 width (units 2^-256): 4 float check ok
+const s40 width (units 2^-256): 9 float check ok
+const s60 width (units 2^-256): 1 float check ok
+coefficient formulas: float sanity ok
+exact y-order and x-order computed (all points distinct); exact ties in y: 0 ties in x: 0 0.0s
+cross table built and antisymmetric 0.3s
+triples: 2667126 positive 1430678 negative 1236448 collinear(zero) 0 undecided 0 needed 1024-bit fallback 0 2.5s
+smallest |orient| among filter-certified triples ~ 7.9188e+17 at triple (63, 72, 81)
+wrote orient_upper.bin (n^3 bytes; entry [i][j][k] for i<j<k: 1 = ccw, 255 = cw)
+sha256 orient_upper.bin eec1c00545658e81daef940eb70cffcd202a5d3065ccba57cced231a1c65a694
+GENERAL POSITION (no three collinear, all signs certified): YES
+rotation/cyclic/antisymmetry consistency on 300000 random triples: violations 0

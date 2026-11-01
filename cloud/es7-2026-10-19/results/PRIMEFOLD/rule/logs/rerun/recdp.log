@@ -1,0 +1,6 @@
+h=1 p=3: recursive max/min construction size 1 ; target (2^(p-1)-1)/p = 1.0
+h=2 p=5: recursive max/min construction size 3 ; target (2^(p-1)-1)/p = 3.0
+h=3 p=7: recursive max/min construction size 9 ; target (2^(p-1)-1)/p = 9.0
+h=4 p=9: recursive max/min construction size 28 ; target (2^(p-1)-1)/p = 28.333333333333332
+h=5 p=11: recursive max/min construction size 90 ; target (2^(p-1)-1)/p = 93.0
+h=6 p=13: recursive max/min construction size 297 ; target (2^(p-1)-1)/p = 315.0

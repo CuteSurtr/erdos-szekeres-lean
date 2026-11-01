@@ -1,0 +1,26 @@
+n=104 mode=detect closures=788728 modules(2..n-2)=24 violations(size 2..n-5 found in detect mode)=0
+size_histogram: 100:8 101:8 102:8
+module size 100 complement: 4 5 6 7
+module size 100 complement: 0 5 6 7
+module size 101 complement: 5 6 7
+module size 100 complement: 0 1 6 7
+module size 101 complement: 0 6 7
+module size 102 complement: 6 7
+module size 100 complement: 0 1 2 7
+module size 101 complement: 0 1 7
+module size 102 complement: 0 7
+module size 100 complement: 3 4 5 6
+module size 101 complement: 4 5 6
+module size 102 complement: 5 6
+module size 100 complement: 2 3 4 5
+module size 101 complement: 3 4 5
+module size 102 complement: 4 5
+module size 100 complement: 1 2 3 4
+module size 101 complement: 2 3 4
+module size 102 complement: 3 4
+module size 100 complement: 0 1 2 3
+module size 101 complement: 1 2 3
+module size 102 complement: 2 3
+module size 101 complement: 0 1 2
+module size 102 complement: 1 2
+module size 102 complement: 0 1
