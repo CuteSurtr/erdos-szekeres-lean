@@ -32,8 +32,11 @@ specialization, a short direct proof via the cubic, and exact integer coordinate
 realization task named in arXiv 2506.00224. Whether the symmetric corollary was stated explicitly anywhere before has not
 been established.
 
-The 32-point set is not known to be the largest centrally symmetric set without a convex 7-gon. Excluding 34 points is
-open; see `results/WRITEUP/SYMMETRIC.md`, §4.
+Excluding 34 points was open when this directory was written. The central 34-point statement (every centrally
+symmetric set of 34 points in general position contains a convex 7-gon) is now claimed in `C2FINAL`
+(computer-assisted). A centrally symmetric set in general position does not contain its centre, so its size is even,
+and deleting an antipodal pair keeps the symmetry. So the 32-point set is then the largest centrally symmetric set in
+general position without a convex 7-gon.
 
 ## Verification
 
@@ -97,6 +100,19 @@ to the left of all the clusters the lower chain uses.
 ## Even k
 
 Centrally symmetric 2^(k-2)-point sets without a convex k-gon do not exist for k = 4: four centrally symmetric points
-form a parallelogram. For k = 6 they exist, because the paper above has 4-fold symmetric 16-point examples. For even
-k >= 8 the question stays open here. The construction above needs a middle cluster at the centre, which is collinear
-with every symmetric pair of cluster centres. `build.py: sym_even` fails for k = 4, 6 and 8 (largest convex subset k).
+form a parallelogram. For k = 6 they exist, because the paper above has 4-fold symmetric 16-point examples. They exist
+for every even k >= 8 as well (`SYMEVEN`):
+- Baek and Balko's blow-up lemma (SoCG 2025, Definition 13 and Lemma 14), applied to the 16-point set of Subercaseaux,
+  Mackey, Qian and Heule (arXiv 2506.00224, App. C, Table 1) with a half-turn-symmetric labelling that is not a
+  threshold and with half-turn-paired clusters, gives a centrally symmetric set of 2^(k-2) points without a convex
+  k-gon. No source inspected states this (`SYMEVEN` §6.3), and the SoCG version omits the proof of Lemma 14. Status
+  (`SYMEVEN` §6.2): written proof, not refereed, from the published lemma; explicit 64- and 256-point sets for k = 8
+  and 10 by exact computation.
+- `SYMEVEN/PROOF.md` gives a self-contained proof that does not use Lemma 14, with a cubic base as above (written
+  proof, refereed by an independent review; not machine-checked), and explicit instances for k = 6, 8 and 10 (exact
+  computation).
+
+The construction above needs a middle cluster at the centre, which is collinear with every symmetric pair of cluster
+centres. `build.py: sym_even` (base abscissae 2i - (k-2), all clusters at the same scale) fails for k = 4, 6 and 8
+(largest convex subset k). `SYMEVEN` uses the abscissae 0, ±1, ±3, ..., ±(k-3), so that the only collinear triples of
+base points pass through the centre, and a middle cluster smaller than the others by a factor ε.

@@ -1,6 +1,6 @@
 # SYMLEAN/mirror: the mirror classes proved in Lean, without SAT
 
-2 November 2026 (UTC).
+1 November 2026 (UTC).
 
 **Statement.** `ReductionThreeClasses.lean` proves two theorems in the namespace `ErdosSzekeres.SymReduction`:
 - `heptagon_of_nontrivial_isometry_3`: assume only the classes `HalfTurn34`, `Threefold33` and `Fivefold35` of

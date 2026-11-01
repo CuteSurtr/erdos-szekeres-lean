@@ -50,8 +50,9 @@ Unreviewed and non-journal claims I am aware of:
 - This repository, branch main (commit c019a54): ES(8) ≤ 311, kernel-checked in Lean.
 
 No paper from 2024 to 2026 that settles ES(7), or gives a peer-reviewed bound below 113 / 408,
-turned up. Bogdan (arXiv:2512.24061, December 2025) states that the case k = 7 is open, and the
-erdosproblems.com page for Problem 107 (edited 11 April 2026) lists only the asymptotic bound.
+turned up. B. C. Dumitru (arXiv:2512.24061, December 2025) states that the case k = 7 is open,
+and the erdosproblems.com page for Problem 107 (edited 11 April 2026) lists only the asymptotic
+bound.
 
 ## 2. Prior computer-assisted and formal work
 
@@ -75,7 +76,7 @@ erdosproblems.com page for Problem 107 (edited 11 April 2026) lists only the asy
   arXiv:2403.17370): Lean 4 verification of the h(6) = 30 encoding, with the LRAT proof checked
   by cake_lpr. About 4.7k lines of Lean; it found and fixed a small error in the original
   symmetry-breaking argument. ES(6) = 17 is also derived (`gon_6_theorem`, per the 14 Oct survey).
-- **Bogdan 2025** (arXiv:2512.24061, preprint): a SAT encoding of the 33-point, no-7-gon problem
+- **Dumitru 2025** (arXiv:2512.24061, preprint): a SAT encoding of the 33-point, no-7-gon problem
   (triple-orientation variables, the 4-point convexity criterion, convex-layer anchoring). It
   reports UNSAT certificates for a collection of "anchored subfamilies", with heavy-tailed run
   times. The abstract mentions no symmetry class and no complete case split.
@@ -103,7 +104,17 @@ erdosproblems.com page for Problem 107 (edited 11 April 2026) lists only the asy
   not find any reflection or dihedral case in the snippets.
 - **Morris–Soltan 2000** (Bull. AMS 37, 437–458): survey. It records symmetric or almost
   symmetric extremal constructions for variants of the problem (for example minimizing convex
-  pentagons), and the Lovász form of the 2^{n−2} construction.
+  pentagons), and the Lovász form of the 2^{n−2} construction. Its p. 443 also states the
+  Erdős–Tuza–Valtr inequality, in a form that is false as printed: "m(n,k,l) ≤
+  Σ_{i=n−l}^{k−2} C(k−2, i)", where m(n,k,l) is the least number such that every set of that
+  many points in general position contains n points in convex position, a k-cup or an l-cap.
+  An n-cup or an n-cap is in convex position, so with k = l = n this would give
+  ES(n) ≤ 2^{n−2}, against the lower bound ES(n) ≥ 2^{n−2} + 1 of Erdős–Szekeres 1960/61. The
+  intended statement is the lower bound that Erdős, Tuza and Valtr proved by a construction,
+  m(n,k,l) ≥ 1 + Σ_{i=n−l}^{k−2} C(n−2, i); they conjectured equality (as relayed by Balko–Valtr
+  2015; their 1996 paper itself was not read). The inequality should not be cited from the
+  survey. (Checked on 1 November 2026, after the search date above, against the full text of the
+  survey; `MIRRORETV/README.md` §8.)
 - **Erdős–Szekeres 1960/61; Kalbfleisch–Stanton 1995; Duque–Fabila-Monroy–Hidalgo-Toscano 2017**
   (arXiv:1602.03075): the 2^{n−2}-point construction, its corrected form, and a small-grid
   realization. None of them is about symmetry. Subercaseaux et al. call the classical
@@ -111,7 +122,7 @@ erdosproblems.com page for Problem 107 (edited 11 April 2026) lists only the asy
 - **Szekeres–Peters 2006**, §5 (per the 14 Oct survey): a purely combinatorial 2^{k−2}
   construction in the signature-function model.
 
-- **Bogdan 2025** (arXiv:2512.24061): the conclusion, as quoted in search snippets, says progress
+- **Dumitru 2025** (arXiv:2512.24061): the conclusion, as quoted in search snippets, says progress
   depends on stronger anchoring "for the hardest symmetric configurations". Symmetry appears there
   as something to break or anchor, not as a class that is solved.
 - **Koshelev–Koshka 2026** (arXiv:2604.20120): per the snippet, a 25-point example with 3-fold
@@ -129,7 +140,7 @@ polygons, none on dihedral symmetry, and none on 3-fold rotational symmetry at 3
 stating that every set of 33 points in general position invariant under a reflection contains 7
 points in convex position. The nearest published results concern other symmetry classes or sizes:
 4-fold rotational symmetry at 32 points (Subercaseaux et al. 2025, no realizable 7-gon-free set),
-and anchored subfamilies that are not described as symmetry classes (Bogdan 2025). Both are
+and anchored subfamilies that are not described as symmetry classes (Dumitru 2025). Both are
 preprints or proceedings, and neither covers reflections.
 
 **(b) Possible symmetries of a 33-point 7-gon-free set, and the D3 case.** We did not find prior
@@ -150,14 +161,15 @@ classical Erdős–Szekeres construction.
 ## 5. What someone checking (a) should cite
 
 1. Erdős–Szekeres 1935 and 1960/61: the problem, the conjecture ES(n) = 2^{n−2} + 1 and the lower bound.
-2. Morris–Soltan 2000: survey and history.
+2. Morris–Soltan 2000: survey and history (not for the Erdős–Tuza–Valtr inequality, which its
+   p. 443 misprints; see §3).
 3. Szekeres–Peters 2006 and Marić 2019: ES(6) = 17, computer and formal.
 4. Heule–Scheucher 2024 and Subercaseaux et al. ITP 2024: the SAT encoding style, LRAT and
    cake_lpr checking, and Lean verification of an encoding. (a) uses the same trust model
    (cake_lpr verdicts, Lean statements of the encoding).
 5. Subercaseaux–Mackey–Qian–Heule 2025: the only prior symmetric SAT study of 7-gon-free sets
    (4-fold, 32 points). It is the closest prior result to (a).
-6. Bogdan 2025 and Krapivin–Przybocki–Heule 2026: recent computational work on the 32/33-point
+6. Dumitru 2025 and Krapivin–Przybocki–Heule 2026: recent computational work on the 32/33-point
    7-gon problem.
 7. Mojarrad–Vlachos 2016, Suk 2017 and Holmsen–Mojarrad–Pach–Tardos 2020: the current upper bounds, for context.
 8. Balko–Valtr 2017 and Baek–Balko 2025/2026: the abstract (colouring) models and the classes
