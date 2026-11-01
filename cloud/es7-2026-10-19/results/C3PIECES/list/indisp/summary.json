@@ -1,0 +1,56 @@
+{
+ "compose": "C3U2/tools/compose.py",
+ "options": [
+  "--mirror-h6",
+  "--no-sha"
+ ],
+ "files": 280,
+ "records": 128803,
+ "certified_sigma_format_pieces": 532,
+ "certified_plain_pieces": 116345,
+ "pieces_certified_in_both_formats": 136,
+ "sigma_only_pieces": 396,
+ "canonicalisation_mismatches_vs_own": 0,
+ "full_covered": true,
+ "necessary": 204,
+ "unnecessary": 192,
+ "runs_with_errors": [],
+ "necessary_by_source": {
+  "C3SIG2": 84,
+  "C3W3S": 120
+ },
+ "unnecessary_by_source": {
+  "C3SIG": 160,
+  "C3SIG2": 8,
+  "C3W3S": 24
+ },
+ "keep_nec_covered": true,
+ "keep_none_covered": false,
+ "keep_nec": {
+  "run": "keep_nec",
+  "dropped_pieces": 192,
+  "dropped_records": 192,
+  "exit": 0,
+  "s": 2.28,
+  "class_covered": true,
+  "uncovered_frontier_nodes": 0,
+  "certified_nodes": 116549,
+  "certified_records": 116691,
+  "certified_cube_nodes": 26556,
+  "sigma_splits_used": 1731
+ },
+ "keep_none": {
+  "run": "keep_none",
+  "dropped_pieces": 396,
+  "dropped_records": 396,
+  "exit": 0,
+  "s": 2.26,
+  "class_covered": false,
+  "uncovered_frontier_nodes": 1384,
+  "certified_nodes": 116345,
+  "certified_records": 116487,
+  "certified_cube_nodes": 26352,
+  "sigma_splits_used": 1693
+ },
+ "seconds": 799.1
+}
