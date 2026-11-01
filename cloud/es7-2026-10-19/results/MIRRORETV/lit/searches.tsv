@@ -1,0 +1,53 @@
+date_utc	channel	query_or_url	outcome	useful_results
+2026-11-01	arXiv API	id_list=2206.04260	200, verbatim abstract	Baek, On the Erdos-Tuza-Valtr Conjecture (v1 2022-06-09, v2 2022-10-09)
+2026-11-01	arXiv API	all:"Tuza" AND all:"Valtr"	1 hit	2206.04260 only
+2026-11-01	arXiv API	abs:"Erdos-Tuza-Valtr"; abs:"Ramsey-remainder"	0 hits	-
+2026-11-01	arXiv API	all:Erdos AND Szekeres AND cap AND cup	2 hits	Moshkovitz-Shapira 1206.4001; Dobbins-Holmsen-Hubard 1307.0909
+2026-11-01	arXiv API	abs:Szekeres AND abs:convex; ti:Szekeres; abs:"happy ending" (sorted by date, since 2014 listed)	45/133/7 hits	2604.20120 Koshelev-Koshka; 2512.24061 Dumitru; 2312.01223 Damasdi et al.; 2506.00224 (via author search); no new ETV case
+2026-11-01	arXiv API	au:Balko; au:Baek; au:Valtr; au:Subercaseaux; au:Scheucher_M	47/2005/50/31/5	Baek-Balko and Balko-Valtr are NOT on arXiv; Bolzano papers 2604.16989, 2610.09769 checked (abstracts: no ES/ETV)
+2026-11-01	arXiv API	abs:cups AND abs:caps; abs:"convex position" AND abs:cap; abs:"convex position" AND abs:symmetric; abs:"convex polygon" AND abs:"mirror"; abs:"points in convex position" (2023+)	360/4/3/1/56	nothing on ETV cases or mirror-symmetric ES sets
+2026-11-01	arXiv PDF	2206.04260, 2604.16989, 2610.09769, 2506.00224, 2604.20120, 1710.11415, 2312.01223, 2607.02958, 1510.06255, 1505.07549, 2609.25199	200 (all)	full texts read with pdftotext
+2026-11-01	LIPIcs (Dagstuhl)	drops.dagstuhl.de/.../LIPIcs.SoCG.2025.13.pdf	200	Baek-Balko SoCG 2025 full text (15 pp.)
+2026-11-01	Eurocomb 2015 site	eurocomb2015.w.uib.no/files/2015/08/endm1938.pdf	200	Balko-Valtr ENDM 2015 extended abstract full text
+2026-11-01	Balko homepage	kam.mff.cuni.cz/~balko/ES_SAT/ ; prezentace/*.pdf	200	data page (colorings at N=17,23,26,27,30,31,32,33), two slide decks
+2026-11-01	web fetch	sciencedirect.com/science/article/pii/S0195669896900452 (wrong PII) and ...900451, .../pdf	403	ETV 1996 full text NOT accessible
+2026-11-01	curl	ScienceDirect pdf/first-page-pdf/pdf.sciencedirectassets.com for S0195669896900451	403	ETV not accessible
+2026-11-01	Crossref API	works/10.1006/eujc.1996.0045	200	PII S0195669896900451; Elsevier open-access user license from 2013-07-17 (open archive)
+2026-11-01	Elsevier API	api.elsevier.com/content/article/PII:S0195669896900451?httpAccept=text/plain	400 (needs key)	-
+2026-11-01	Semantic Scholar API	paper DOI:10.1006/eujc.1996.0045 (+citations)	200	14 citers incl. Krapivin-Przybocki-Heule 2607.02958; openAccessPdf = publisher DOI only
+2026-11-01	OpenAlex API	works/doi:10.1006/eujc.1996.0045 ; filter=cites:W2912850616	200	13 citers; any_repository_has_fulltext=false
+2026-11-01	OpenAlex API	cites of Baek EJC (W4404181634), Balko-Valtr EJC (W2735179260), Baek-Balko JCTA (W7143313204)	200	no new ETV result
+2026-11-01	Semantic Scholar API	citations of ARXIV:2206.04260 and DOI:10.1016/J.ENDM.2015.06.060	200	Damasdi-Dong-Scheucher-Zeng, Dumitru, Bergold-Scheucher, Kirchweger et al.; no new ETV case
+2026-11-01	Semantic Scholar API	keyword search "Erdos-Tuza-Valtr" etc.	429 rate limited (twice)	not available
+2026-11-01	OpenAlex API	search "Tuza Valtr"; "Erdos-Tuza-Valtr"; "symmetric point set convex polygon Erdos-Szekeres"	200	Lean Pool 2609.25199 (archives Baek formalization); Hajnal DSc 2026 (no ETV content); Zheng Yang Zenodo 22136406 (unrelated); 2610.17090 -> openai/math release
+2026-11-01	Unpaywall API	10.1006/EUJC.1996.0045 (placeholder email)	200	publisher bronze OA only, has_repository_copy=false
+2026-11-01	fatcat API	release lookup doi	timeout	not available
+2026-11-01	Wayback CDX	sciencedirect.com/science/article/pii/S0195669896900451*	only a 403 capture	-
+2026-11-01	scholar.archive.org	"Ramsey-remainder"	bot verification page	not available
+2026-11-01	core.ac.uk	search "Ramsey-remainder"	403	not available
+2026-11-01	users.renyi.hu/~p_erdos	Erdos.html index; 1995-xx.pdf / 1996-xx.pdf probes	index ends at 1990; 404	ETV not hosted
+2026-11-01	Valtr homepage	kam.mff.cuni.cz/~valtr/publications.html	200	lists ETV, no PDF link
+2026-11-01	AMS	Bull. AMS 37 (2000) Morris-Soltan PDF	403 (ams.org)	-
+2026-11-01	Notre Dame mirror	academicweb.nd.edu/~andyp/teaching/2013SpringMath366/MorrisSoltan.pdf	200	Morris-Soltan survey; ETV paragraph (with misprint) on p. 443
+2026-11-01	web fetch (saved binary)	renyi.hu/~barany/cikkek/85.pdf (Barany-Karolyi 2001)	200 via web fetch, 403 via curl	only Ramsey-remainder rr(k) discussed, not the cap/cup conjecture
+2026-11-01	GitHub raw/API	jcpaik/erdos-tuza-valtr README + repo metadata	200	Lean 4 `theorem main`: E(n,4,n) <= C(n-1,2)+2; Apache-2.0; pushed 2026-05-24
+2026-11-01	GitHub raw/API	openai/math README, CONTENTS.md (sha256 080badcb...), overview.tex, history.md	200	no family on Erdos-Szekeres / ETV / caps-cups / convex position
+2026-11-01	Zenodo API	records/22842891 + PDF	200	Schroeder v1 (2026-09-19), public; claims ETV (7,5,6)=25 (unreviewed)
+2026-11-01	Zenodo API	search "Erdos-Szekeres" heptagons	200	Schroeder; other 2026 deposits unrelated to ETV
+2026-11-01	OEIS	seq 4,12,46,188,774 ; 12,46,188,774 ; 2,4,12,46,188	No results	formula not in OEIS
+2026-11-01	OEIS	seq 1,5,22,93,386	A000346	no geometric / Erdos-Szekeres comment
+2026-11-01	OEIS	text "Tuza Valtr"; "Erdos Szekeres" convex	0 / A060040 only	-
+2026-11-01	erdosproblems.com	/107 and /forum/thread/107	200	no mention of ETV or symmetric sets (page edited 11 Apr 2026)
+2026-11-01	CMU reports archive	reports-archive.adm.cs.cmu.edu/anon/2025/CMU-CS-25-108.pdf	200	Mackey thesis: 3-,4-,5-fold rotational symmetry only
+2026-11-01	real-d.mtak.hu	Hajnal DSc dissertation PDF	200	no ETV / ES-symmetry content
+2026-11-01	web search	"Erdős-Tuza-Valtr" conjecture new case 5-cap proof 2025 OR 2026	results	no new case found; Baek repo, Baek-Balko
+2026-11-01	web search	Erdős–Szekeres mirror symmetric / axially symmetric / reflection symmetric point set no convex k-gon	results	Koshelev-Koshka (axial symmetry, empty hexagons); Subercaseaux et al. (rotational)
+2026-11-01	web search	"46 points" convex octagon symmetric	results	nothing relevant
+2026-11-01	web search	centrally symmetric / axially symmetric point sets convex position Erdős–Szekeres	results	nothing relevant
+2026-11-01	web search	"symmetric with respect to a line" ... convex hexagon olympiad	results	nothing relevant
+2026-11-01	web search	Jineon Baek dissertation	results	thesis is on the moving sofa (Math Genealogy id 333574), not ETV
+2026-11-01	web search	Ethan Mackey thesis CMU 2025	results	CMU-CS-25-108 located
+2026-11-01	web search	Balko Valtr SAT attack pseudolinear N(4,8,8)	results	EJC 2017 full text not reachable; ENDM + slides suffice
+2026-11-01	arXiv PDF	1807.10848 (Scheucher, Two disjoint 5-holes); 1602.03075 (Duque-Fabila-Monroy-Hidalgo-Toscano)	200	no reflection-symmetric Erdos-Szekeres constructions (grep symmetr/mirror/reflect/axis)
+2026-11-01	Cambridge Core	Szekeres-Peters 2006 ANZIAM J. PDF (resolve.cambridge.org; core-prod host)	504 / DNS failure	not read (not essential)
+2026-11-01	Balko data page	ES_SAT/8Gon4Red_23, ES_SAT/7Gon4Red_17.txt	200	checked with a script not committed here: no strong 8-gon / 7-gon, but weak (3,7)-gons at (6,22),(7,22) and weak (3,6)-gon at (0,10), consistent with Baek Thm 2.7

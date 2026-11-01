@@ -1,0 +1,14 @@
+file=sets/mirror8_k5_axis0.txt n=8
+distinct: OK
+general position: OK (56 triples)
+mirror symmetric (x): OK, axis points=0
+ALG1 largest convex subset = 4
+witness (4 points, convex position OK): (-1,0) (-2,2) (-3,-4) (-1,-1)
+ALG2 largest convex subset = 4
+file=sets/mirror8_k5_axis2.txt n=8
+distinct: OK
+general position: OK (56 triples)
+mirror symmetric (x): OK, axis points=2
+ALG1 largest convex subset = 4
+witness (4 points, convex position OK): (0,-6) (-1,-1) (-2,3) (-5,6)
+ALG2 largest convex subset = 4
