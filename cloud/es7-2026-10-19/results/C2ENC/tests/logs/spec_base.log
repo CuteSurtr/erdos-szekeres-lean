@@ -1,0 +1,18 @@
+  spec GP: 12588160 clauses (25 s)
+  spec A4: 413440 clauses (2 s)
+  spec CONV4: 138992 clauses (0 s)
+  spec CONV5: 139128 clauses
+  spec CONV6: 672792 clauses
+  spec KGON: 2689808 clauses (23 s)
+spec generated in 56 s; total 16653336 clauses
+CNF streamed in 44 s: header p cnf 838032 16653336, 16653336 clause lines, 0 tautological
+  GP     spec n= 12588160  cnf n= 12588160  lengths {4: 65280, 6: 12522880}  MATCH
+  A4     spec n=   413440  cnf n=   413440  lengths {4: 413440}  MATCH
+  CONV4  spec n=   138992  cnf n=   138992  lengths {2: 272, 5: 138720}  MATCH
+  CONV5  spec n=   139128  cnf n=   139128  lengths {6: 139128}  MATCH
+  CONV6  spec n=   672792  cnf n=   672792  lengths {4: 680, 7: 672112}  MATCH
+  KGON   spec n=  2689808  cnf n=  2689808  lengths {7: 2689808}  MATCH
+  SB     spec n=      136  cnf n=      136  lengths {1: 136}  MATCH
+  HULL   spec n=    10880  cnf n=    10880  lengths {3: 10880}  MATCH
+SPEC COMPARISON PASSED: the CNF equals the specified clause multiset family by family
+done

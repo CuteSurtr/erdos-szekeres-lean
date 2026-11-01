@@ -1,0 +1,1217 @@
+{
+ "original": {
+  "t4k5_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON PASSED: the CNF equals the specified clause multiset family by family",
+   "spec_differ": [],
+   "labellings": 24,
+   "labellings_with_violations": 0,
+   "violations_by_kind": {},
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT"
+   ]
+  },
+  "t5k6_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON PASSED: the CNF equals the specified clause multiset family by family",
+   "spec_differ": [],
+   "labellings": 24,
+   "labellings_with_violations": 0,
+   "violations_by_kind": {},
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT"
+   ]
+  },
+  "t6k6_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON PASSED: the CNF equals the specified clause multiset family by family",
+   "spec_differ": [],
+   "labellings": 24,
+   "labellings_with_violations": 0,
+   "violations_by_kind": {},
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT"
+   ]
+  },
+  "t5k6_no-sb": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON PASSED: the CNF equals the specified clause multiset family by family",
+   "spec_differ": [],
+   "labellings": 24,
+   "labellings_with_violations": 0,
+   "violations_by_kind": {},
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT"
+   ]
+  },
+  "t8k7_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON PASSED: the CNF equals the specified clause multiset family by family",
+   "spec_differ": [],
+   "labellings": 18,
+   "labellings_with_violations": 0,
+   "violations_by_kind": {},
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT"
+   ]
+  },
+  "t9k6_free": "UNSAT"
+ },
+ "identity_sign": {
+  "t4k5_hull": {
+   "map_check": false,
+   "spec": "map check failed: class ('B', 0, 1): map variables {1}, relative-sign products {1, -1}; class ('B', 0, 2): map variables {2}, relative-sign products {1, -1}; class ('B', 0, 3): map variables {3}, relative-sign products {1, -1}; class ('B', 1, 2): map variables {16}, relative-sign products {1, -1}; class ('B', 1, 3): map variables {17}, relative-sign products {1, -1}; class ('B', 2, 3): map variables {22}, relative-sign products {1, -1}; t=4: 80 nonzero triples, 16 type-A + 6 type-B classes = 22; X_vars=22; partition and signs DISAGREE",
+   "spec_differ": [],
+   "labellings": 24,
+   "labellings_with_violations": 24,
+   "violations_by_kind": {
+    "triple-only/4": 768,
+    "unit": 144
+   },
+   "identity_inconsistent_labellings": 24,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT"
+   ]
+  },
+  "t5k6_hull": {
+   "map_check": false,
+   "spec": "map check failed: class ('B', 0, 1): map variables {1}, relative-sign products {1, -1}; class ('B', 0, 2): map variables {2}, relative-sign products {1, -1}; class ('B', 0, 3): map variables {3}, relative-sign products {1, -1}; class ('B', 0, 4): map variables {4}, relative-sign products {1, -1}; class ('B', 1, 2): map variables {29}, relative-sign products {1, -1}; class ('B', 1, 3): map variables {30}, relative-sign products {1, -1}; class ('B', 1, 4): map variables {31}, relative-sign products {1, -1}; class ('B', 2, 3): map variables {44}, relative-sign products {1, -1}; class ('B', 2, 4): map variables {45}, relative-sign products {1, -1}; class ('B', 3, 4): map variables {50}, relative-sign products {1, -1}; t=5: 160 nonzero triples, 40 type-A + 10 type-B classes = 50; X_vars=50; partition and signs DISAGREE",
+   "spec_differ": [],
+   "labellings": 24,
+   "labellings_with_violations": 24,
+   "violations_by_kind": {
+    "triple-only/4": 1920,
+    "unit": 240
+   },
+   "identity_inconsistent_labellings": 24,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT"
+   ]
+  },
+  "t6k6_hull": {
+   "map_check": false,
+   "spec": "map check failed: class ('B', 0, 1): map variables {1}, relative-sign products {1, -1}; class ('B', 0, 2): map variables {2}, relative-sign products {1, -1}; class ('B', 0, 3): map variables {3}, relative-sign products {1, -1}; class ('B', 0, 4): map variables {4}, relative-sign products {1, -1}; class ('B', 0, 5): map variables {5}, relative-sign products {1, -1}; class ('B', 1, 2): map variables {46}, relative-sign products {1, -1}; class ('B', 1, 3): map variables {47}, relative-sign products {1, -1}; class ('B', 1, 4): map variables {48}, relative-sign products {1, -1}; class ('B', 1, 5): map variables {49}, relative-sign products {1, -1}; class ('B', 2, 3): map variables {74}, relative-sign products {1, -1}; class ('B', 2, 4): map variables {75}, relative-sign products {1, -1}; class ('B', 2, 5): map variables {76}, relative-sign products {1, -1}; class ('B', 3, 4): map variables {89}, relative-sign products {1, -1}; class ('B', 3, 5): map variables {90}, relative-sign products {1, -1}; class ('B', 4, 5): map variables {95}, relative-sign products {1, -1}; t=6: 280 nonzero triples, 80 type-A + 15 type-B classes = 95; X_vars=95; partition and signs DISAGREE",
+   "spec_differ": [],
+   "labellings": 24,
+   "labellings_with_violations": 24,
+   "violations_by_kind": {
+    "triple-only/4": 3840,
+    "unit": 360
+   },
+   "identity_inconsistent_labellings": 24,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT"
+   ]
+  },
+  "t5k6_no-sb": {
+   "map_check": false,
+   "spec": "map check failed: class ('B', 0, 1): map variables {1}, relative-sign products {1, -1}; class ('B', 0, 2): map variables {2}, relative-sign products {1, -1}; class ('B', 0, 3): map variables {3}, relative-sign products {1, -1}; class ('B', 0, 4): map variables {4}, relative-sign products {1, -1}; class ('B', 1, 2): map variables {29}, relative-sign products {1, -1}; class ('B', 1, 3): map variables {30}, relative-sign products {1, -1}; class ('B', 1, 4): map variables {31}, relative-sign products {1, -1}; class ('B', 2, 3): map variables {44}, relative-sign products {1, -1}; class ('B', 2, 4): map variables {45}, relative-sign products {1, -1}; class ('B', 3, 4): map variables {50}, relative-sign products {1, -1}; t=5: 160 nonzero triples, 40 type-A + 10 type-B classes = 50; X_vars=50; partition and signs DISAGREE",
+   "spec_differ": [],
+   "labellings": 24,
+   "labellings_with_violations": 24,
+   "violations_by_kind": {
+    "triple-only/4": 1920
+   },
+   "identity_inconsistent_labellings": 24,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT"
+   ]
+  },
+  "t8k7_hull": {
+   "map_check": false,
+   "spec": "map check failed: class ('B', 0, 1): map variables {1}, relative-sign products {1, -1}; class ('B', 0, 2): map variables {2}, relative-sign products {1, -1}; class ('B', 0, 3): map variables {3}, relative-sign products {1, -1}; class ('B', 0, 4): map variables {4}, relative-sign products {1, -1}; class ('B', 0, 5): map variables {5}, relative-sign products {1, -1}; class ('B', 0, 6): map variables {6}, relative-sign products {1, -1}; class ('B', 0, 7): map variables {7}, relative-sign products {1, -1}; class ('B', 1, 2): map variables {92}, relative-sign products {1, -1}; class ('B', 1, 3): map variables {93}, relative-sign products {1, -1}; class ('B', 1, 4): map variables {94}, relative-sign products {1, -1}; class ('B', 1, 5): map variables {95}, relative-sign products {1, -1}; class ('B', 1, 6): map variables {96}, relative-sign products {1, -1}; class ('B', 1, 7): map variables {97}, relative-sign products {1, -1}; class ('B', 2, 3): map variables {158}, relative-sign products {1, -1}; class ('B', 2, 4): map variables {159}, relative-sign products {1, -1}; class ('B', 2, 5): map variables {160}, relative-sign products {1, -1}; class ('B', 2, 6): map variables {161}, relative-sign products {1, -1}; class ('B', 2, 7): map variables {162}, relative-sign products {1, -1}; class ('B', 3, 4): map variables {203}, relative-sign products {1, -1}; class ('B', 3, 5): map variables {204}, relative-sign products {1, -1}; class ('B', 3, 6): map variables {205}, relative-sign products {1, -1}; class ('B', 3, 7): map variables {206}, relative-sign products {1, -1}; class ('B', 4, 5): map variables {231}, relative-sign products {1, -1}; class ('B', 4, 6): map variables {232}, relative-sign products {1, -1}; class ('B', 4, 7): map variables {233}, relative-sign products {1, -1}; class ('B', 5, 6): map variables {246}, relative-sign products {1, -1}; class ('B', 5, 7): map variables {247}, relative-sign products {1, -1}; class ('B', 6, 7): map variables {252}, relative-sign products {1, -1}; t=8: 672 nonzero triples, 224 type-A + 28 type-B classes = 252; X_vars=252; partition and signs DISAGREE",
+   "spec_differ": [],
+   "labellings": 18,
+   "labellings_with_violations": 18,
+   "violations_by_kind": {
+    "triple-only/4": 8064,
+    "unit": 504
+   },
+   "identity_inconsistent_labellings": 18,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT"
+   ]
+  }
+ },
+ "zero_missing": {
+  "t4k5_hull": {
+   "generation": "failed",
+   "error": "ValueError: contradictory identification (0, 1, 8) = -1 * (0, 1, 8)"
+  },
+  "t5k6_hull": {
+   "generation": "failed",
+   "error": "ValueError: contradictory identification (0, 1, 10) = -1 * (0, 1, 10)"
+  },
+  "t6k6_hull": {
+   "generation": "failed",
+   "error": "ValueError: contradictory identification (0, 1, 12) = -1 * (0, 1, 12)"
+  },
+  "t5k6_no-sb": {
+   "generation": "failed",
+   "error": "ValueError: contradictory identification (0, 1, 10) = -1 * (0, 1, 10)"
+  },
+  "t8k7_hull": {
+   "generation": "failed",
+   "error": "ValueError: contradictory identification (0, 1, 16) = -1 * (0, 1, 16)"
+  }
+ },
+ "zero_extra": {
+  "t4k5_hull": {
+   "generation": "failed",
+   "error": "AssertionError: contradictory SB units"
+  },
+  "t5k6_hull": {
+   "generation": "failed",
+   "error": "AssertionError: contradictory SB units"
+  },
+  "t6k6_hull": {
+   "generation": "failed",
+   "error": "AssertionError: contradictory SB units"
+  },
+  "t5k6_no-sb": {
+   "map_check": false,
+   "spec": "map check failed: triple sets differ: map-only 0, mine-only 2; triples missing from the map are not exactly the zero triples {Z, 2o, 2o+1}; t=5: 158 nonzero triples, 40 type-A + 10 type-B classes = 50; X_vars=50; partition and signs DISAGREE",
+   "spec_differ": [],
+   "labellings": 24,
+   "labellings_with_violations": 24,
+   "violations_by_kind": {
+    "unit": 120,
+    "triple-only/2": 576,
+    "triple-only/3": 208,
+    "triple-only/4": 176
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 24,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT"
+   ]
+  },
+  "t8k7_hull": {
+   "generation": "failed",
+   "error": "AssertionError: contradictory SB units"
+  }
+ },
+ "angular_cycle": {
+  "t4k5_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "SB"
+   ],
+   "labellings": 24,
+   "labellings_with_violations": 24,
+   "violations_by_kind": {
+    "unit": 24
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT"
+   ]
+  },
+  "t5k6_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "SB"
+   ],
+   "labellings": 24,
+   "labellings_with_violations": 24,
+   "violations_by_kind": {
+    "unit": 24
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT"
+   ]
+  },
+  "t6k6_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "SB"
+   ],
+   "labellings": 24,
+   "labellings_with_violations": 24,
+   "violations_by_kind": {
+    "unit": 24
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT"
+   ]
+  },
+  "t5k6_no-sb": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON PASSED: the CNF equals the specified clause multiset family by family",
+   "spec_differ": [],
+   "labellings": 24,
+   "labellings_with_violations": 0,
+   "violations_by_kind": {},
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT"
+   ]
+  },
+  "t8k7_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "SB"
+   ],
+   "labellings": 18,
+   "labellings_with_violations": 18,
+   "violations_by_kind": {
+    "unit": 18
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT"
+   ]
+  }
+ },
+ "hull_anchor": {
+  "t4k5_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "HULL"
+   ],
+   "labellings": 24,
+   "labellings_with_violations": 14,
+   "violations_by_kind": {
+    "triple-only/3": 112
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "SAT",
+    "UNSAT",
+    "SAT",
+    "UNSAT",
+    "UNSAT",
+    "SAT"
+   ]
+  },
+  "t5k6_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "HULL"
+   ],
+   "labellings": 24,
+   "labellings_with_violations": 20,
+   "violations_by_kind": {
+    "triple-only/3": 320
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "SAT",
+    "UNSAT"
+   ]
+  },
+  "t6k6_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "HULL"
+   ],
+   "labellings": 24,
+   "labellings_with_violations": 14,
+   "violations_by_kind": {
+    "triple-only/3": 392
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "SAT",
+    "UNSAT",
+    "UNSAT",
+    "SAT"
+   ]
+  },
+  "t5k6_no-sb": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON PASSED: the CNF equals the specified clause multiset family by family",
+   "spec_differ": [],
+   "labellings": 24,
+   "labellings_with_violations": 0,
+   "violations_by_kind": {},
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT"
+   ]
+  },
+  "t8k7_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "HULL"
+   ],
+   "labellings": 18,
+   "labellings_with_violations": 14,
+   "violations_by_kind": {
+    "triple-only/3": 360
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "SAT",
+    "UNSAT"
+   ]
+  }
+ },
+ "a4_missing": {
+  "t4k5_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "A4",
+    "CONV4",
+    "KGON",
+    "SB",
+    "HULL"
+   ],
+   "labellings": 24,
+   "labellings_with_violations": 0,
+   "violations_by_kind": {},
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT"
+   ]
+  },
+  "t5k6_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "A4",
+    "CONV4",
+    "CONV5",
+    "KGON",
+    "SB",
+    "HULL"
+   ],
+   "labellings": 24,
+   "labellings_with_violations": 0,
+   "violations_by_kind": {},
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT"
+   ]
+  },
+  "t6k6_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "A4",
+    "CONV4",
+    "CONV5",
+    "KGON",
+    "SB",
+    "HULL"
+   ],
+   "labellings": 24,
+   "labellings_with_violations": 0,
+   "violations_by_kind": {},
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT"
+   ]
+  },
+  "t5k6_no-sb": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "A4",
+    "CONV4",
+    "CONV5",
+    "KGON"
+   ],
+   "labellings": 24,
+   "labellings_with_violations": 0,
+   "violations_by_kind": {},
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT"
+   ]
+  },
+  "t8k7_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "A4",
+    "CONV4",
+    "CONV5",
+    "CONV6",
+    "KGON",
+    "SB",
+    "HULL"
+   ],
+   "labellings": 18,
+   "labellings_with_violations": 0,
+   "violations_by_kind": {},
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT"
+   ]
+  },
+  "t9k6_free": "UNSAT"
+ },
+ "a4_sign": {
+  "t4k5_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "A4"
+   ],
+   "labellings": 24,
+   "labellings_with_violations": 24,
+   "violations_by_kind": {
+    "triple-only/4": 1152
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT"
+   ]
+  },
+  "t5k6_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "A4"
+   ],
+   "labellings": 24,
+   "labellings_with_violations": 24,
+   "violations_by_kind": {
+    "triple-only/4": 3360
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT"
+   ]
+  },
+  "t6k6_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "A4"
+   ],
+   "labellings": 24,
+   "labellings_with_violations": 24,
+   "violations_by_kind": {
+    "triple-only/4": 7680
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT"
+   ]
+  },
+  "t5k6_no-sb": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "A4"
+   ],
+   "labellings": 24,
+   "labellings_with_violations": 24,
+   "violations_by_kind": {
+    "triple-only/4": 3360
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT"
+   ]
+  },
+  "t8k7_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "A4"
+   ],
+   "labellings": 18,
+   "labellings_with_violations": 18,
+   "violations_by_kind": {
+    "triple-only/4": 16048
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT"
+   ]
+  }
+ },
+ "gp_sign": {
+  "t4k5_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "GP",
+    "A4",
+    "CONV4",
+    "KGON",
+    "SB",
+    "HULL"
+   ],
+   "labellings": 24,
+   "labellings_with_violations": 24,
+   "violations_by_kind": {
+    "unit": 720,
+    "triple-only/4": 576,
+    "triple-only/2": 1344
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT"
+   ]
+  },
+  "t5k6_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "GP",
+    "A4",
+    "CONV4",
+    "CONV5",
+    "KGON",
+    "SB",
+    "HULL"
+   ],
+   "labellings": 24,
+   "labellings_with_violations": 24,
+   "violations_by_kind": {
+    "triple-only/4": 1496,
+    "unit": 1200,
+    "triple-only/2": 3360
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT"
+   ]
+  },
+  "t6k6_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "GP",
+    "A4",
+    "CONV4",
+    "CONV5",
+    "KGON",
+    "SB",
+    "HULL"
+   ],
+   "labellings": 24,
+   "labellings_with_violations": 24,
+   "violations_by_kind": {
+    "triple-only/4": 2932,
+    "unit": 1800,
+    "triple-only/2": 6720
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT"
+   ]
+  },
+  "t5k6_no-sb": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "GP",
+    "A4",
+    "CONV4",
+    "CONV5",
+    "KGON"
+   ],
+   "labellings": 24,
+   "labellings_with_violations": 24,
+   "violations_by_kind": {
+    "triple-only/4": 1496,
+    "unit": 1200,
+    "triple-only/2": 3360
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT"
+   ]
+  },
+  "t8k7_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "GP",
+    "A4",
+    "CONV4",
+    "CONV5",
+    "CONV6",
+    "KGON",
+    "SB",
+    "HULL"
+   ],
+   "labellings": 18,
+   "labellings_with_violations": 18,
+   "violations_by_kind": {
+    "triple-only/4": 5512,
+    "unit": 2520,
+    "triple-only/2": 14112
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT"
+   ]
+  }
+ },
+ "gp_missing": {
+  "t4k5_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "GP",
+    "A4",
+    "CONV4",
+    "KGON",
+    "SB",
+    "HULL"
+   ],
+   "labellings": 24,
+   "labellings_with_violations": 0,
+   "violations_by_kind": {},
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT"
+   ]
+  },
+  "t5k6_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "GP",
+    "A4",
+    "CONV4",
+    "CONV5",
+    "KGON",
+    "SB",
+    "HULL"
+   ],
+   "labellings": 24,
+   "labellings_with_violations": 0,
+   "violations_by_kind": {},
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT"
+   ]
+  },
+  "t6k6_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "GP",
+    "A4",
+    "CONV4",
+    "CONV5",
+    "KGON",
+    "SB",
+    "HULL"
+   ],
+   "labellings": 24,
+   "labellings_with_violations": 0,
+   "violations_by_kind": {},
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT"
+   ]
+  },
+  "t5k6_no-sb": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "GP",
+    "A4",
+    "CONV4",
+    "CONV5",
+    "KGON"
+   ],
+   "labellings": 24,
+   "labellings_with_violations": 0,
+   "violations_by_kind": {},
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT"
+   ]
+  },
+  "t8k7_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "GP",
+    "A4",
+    "CONV4",
+    "CONV5",
+    "CONV6",
+    "KGON",
+    "SB",
+    "HULL"
+   ],
+   "labellings": 18,
+   "labellings_with_violations": 0,
+   "violations_by_kind": {},
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT"
+   ]
+  },
+  "t9k6_free": "SAT; model violates interiority on 0 (4-set, t) instances and GP on 9164 (5-set, x) instances"
+ },
+ "group_sign": {
+  "t4k5_hull": {
+   "generation": "failed",
+   "error": "ValueError: contradictory identification (1, 2, 8) = 1 * (0, 1, 2)"
+  },
+  "t5k6_hull": {
+   "generation": "failed",
+   "error": "ValueError: contradictory identification (1, 2, 10) = 1 * (0, 1, 2)"
+  },
+  "t6k6_hull": {
+   "generation": "failed",
+   "error": "ValueError: contradictory identification (1, 2, 12) = 1 * (0, 1, 2)"
+  },
+  "t5k6_no-sb": {
+   "generation": "failed",
+   "error": "ValueError: contradictory identification (1, 2, 10) = 1 * (0, 1, 2)"
+  },
+  "t8k7_hull": {
+   "generation": "failed",
+   "error": "ValueError: contradictory identification (1, 2, 16) = 1 * (0, 1, 2)"
+  }
+ },
+ "k_off_by_one": {
+  "t4k5_hull": {
+   "generation": "failed",
+   "error": "KeyError: (0, 2, 3)"
+  },
+  "t5k6_hull": {
+   "map_check": true,
+   "spec": "AssertionError",
+   "spec_differ": [],
+   "labellings": 24,
+   "labellings_with_violations": 24,
+   "violations_by_kind": {
+    "kgon": 136
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT"
+   ]
+  },
+  "t6k6_hull": {
+   "map_check": true,
+   "spec": "AssertionError",
+   "spec_differ": [],
+   "labellings": 24,
+   "labellings_with_violations": 24,
+   "violations_by_kind": {
+    "kgon": 396
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT"
+   ]
+  },
+  "t5k6_no-sb": {
+   "map_check": true,
+   "spec": "AssertionError",
+   "spec_differ": [],
+   "labellings": 24,
+   "labellings_with_violations": 24,
+   "violations_by_kind": {
+    "kgon": 136
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT"
+   ]
+  },
+  "t8k7_hull": {
+   "map_check": true,
+   "spec": "AssertionError",
+   "spec_differ": [],
+   "labellings": 18,
+   "labellings_with_violations": 18,
+   "violations_by_kind": {
+    "kgon": 2454
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "UNSAT",
+    "UNSAT"
+   ]
+  }
+ },
+ "conv4_pattern": {
+  "t4k5_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "CONV4",
+    "KGON",
+    "SB",
+    "HULL"
+   ],
+   "labellings": 24,
+   "labellings_with_violations": 14,
+   "violations_by_kind": {
+    "conv-definition": 52
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "SAT",
+    "UNSAT",
+    "SAT",
+    "UNSAT",
+    "UNSAT"
+   ]
+  },
+  "t5k6_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "CONV4",
+    "CONV5",
+    "KGON",
+    "SB",
+    "HULL"
+   ],
+   "labellings": 24,
+   "labellings_with_violations": 22,
+   "violations_by_kind": {
+    "conv-definition": 170
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "UNSAT",
+    "SAT"
+   ]
+  },
+  "t6k6_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "CONV4",
+    "CONV5",
+    "KGON",
+    "SB",
+    "HULL"
+   ],
+   "labellings": 24,
+   "labellings_with_violations": 24,
+   "violations_by_kind": {
+    "conv-definition": 334
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "UNSAT"
+   ]
+  },
+  "t5k6_no-sb": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "CONV4",
+    "CONV5",
+    "KGON"
+   ],
+   "labellings": 24,
+   "labellings_with_violations": 22,
+   "violations_by_kind": {
+    "conv-definition": 170
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "SAT",
+    "SAT",
+    "SAT",
+    "SAT",
+    "UNSAT",
+    "SAT"
+   ]
+  },
+  "t8k7_hull": {
+   "map_check": true,
+   "spec": "SPEC COMPARISON FAILED",
+   "spec_differ": [
+    "CONV4",
+    "CONV5",
+    "CONV6",
+    "KGON",
+    "SB",
+    "HULL"
+   ],
+   "labellings": 18,
+   "labellings_with_violations": 14,
+   "violations_by_kind": {
+    "conv-definition": 822
+   },
+   "identity_inconsistent_labellings": 0,
+   "zero_pattern_bad_labellings": 0,
+   "two_way": [
+    "UNSAT",
+    "UNSAT",
+    "SAT",
+    "SAT"
+   ]
+  }
+ }
+}

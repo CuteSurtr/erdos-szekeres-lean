@@ -1,0 +1,19 @@
+OK   GP: [xab][xcd] - [xac][xbd] + [xad][xbc] = 0 for all x,a,b,c,d in R^3
+OK   A4: D(p,q,r) = D(t,q,r) + D(p,t,r) + D(p,q,t) when all first coordinates are 1
+OK   A4 (weighted): w_t D(p,q,r) = w_p D(t,q,r) + w_q D(p,t,r) + w_r D(p,q,t)
+OK   CENTRE: 2 D(c,p,q) = D(h(p),p,q) where h(p) = 2c - p
+OK   CENTRE: v_p + v_h(p) = 2 v_c (coordinatewise)
+OK   ZERO: D(c, p, h(p)) = 0
+OK   GROUP: D(h a, h b, h d) = D(a, b, d)
+OK   GROUP: h(c) = c
+OK   GROUP: D(c, h a, h b) = D(c, a, b)
+OK   HULL: D(a,b,d) = D(a,b,q) + D(b,d,q) + D(d,a,q)
+OK   ORIENT: det(v_a, v_b, v_d) = orient(a, b, d)
+OK   ANTI: D(c, p, h q) = -D(c, p, q)
+ALL IDENTITIES VERIFIED
+-- negative controls (each must FAIL) --
+FAIL control GP with middle sign +  residual has 36 terms
+FAIL control A4 unweighted on arbitrary vectors (needs first coordinates 1)  residual has 24 terms
+FAIL control CENTRE with the wrong sign: 2 D(c,p,q) = -D(h(p),p,q)  residual has 6 terms
+FAIL control GROUP for a reflection (det -1)  residual has 6 terms
+CONTROLS BEHAVE
