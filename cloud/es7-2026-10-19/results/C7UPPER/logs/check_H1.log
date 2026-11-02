@@ -1,0 +1,14 @@
+date: Tue Nov  3 06:55:03 KST 2026
+cnf: cnf/m7K8t10_H1.cnf  sha256: fa297b5bd6608d29369fd56f8cab20d6d17ad9d335253352541a42e4c669fc49  bytes: 63944866
+proof: proofs/m7K8t10_H1.lrat  sha256: c750a805a7a3dbdb4ba445c16fb75051a9fac623a3ddf93a5d864defe41039b2  bytes: 1702278368
+header: p cnf 80080 2748539
+--- lrat-check
+c parsed a formula with 80080 variables and 2748539 clauses
+c WARNING hint already satisfied in lemma with index 4558033
+c VERIFIED
+c allocated 1024 18552637 800800
+c Added clauses = 6725716.  Deleted clauses = 4631265.  Max live clauses = 2748539
+c verification time = 17.43 secs
+       17.43 real        17.08 user         0.30 sys
+           143032320  maximum resident set size
+           142672280  peak memory footprint
