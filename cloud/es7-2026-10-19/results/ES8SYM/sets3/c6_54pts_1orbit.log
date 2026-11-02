@@ -1,0 +1,23 @@
+# single-orbit 6-fold blow-up, 9-point cluster (tightness example for C3)  Mon Nov  2 23:16:05 KST 2026
+n=54 eps=0.001 min|orient|=1.068e-08 largest_convex_subset(float DP)=7
+scale=1.01e+11
+{'m': 6, 'C': 0, 'n': 54, 'layers': 9, 'distinct': True, 'invariant': True, 'zero_orientations': 0, 'layers_are_orbits': True, 'largest_convex_subset': 7, 'max_abs_coeff': 101107999302}
+PASS
+verify_config exit=0
+table n=54: 0 antisymmetry/zero violations
+convex 3-subsets: 24804
+convex 4-subsets: 211665
+convex 5-subsets: 890472
+convex 6-subsets: 1482422
+convex 7-subsets: 52902
+convex 8-subsets: 0
+DP largest convex subset: 7
+n=54 distinct=True zero_orientations=0
+table mismatches: 0
+largest convex subset (own DP): 7
+n=54 points; sorted triples checked; mismatches/undecided: 0; min |det| = 1.090E+14; error bound = 5.888E-126
+CROSSCHECK PASS
+0f42ea6b7d93c081b4e07a0f1b9b2ea633bf0f1acfcbbbfc05bd5ed52b990649  cert/c6_54pts_1orbit.blowup.cfg
+b2219b1ad5f90752ad6b9e3704380f03d6c6ad8ea53d926f3e578f0685c8699e  cert/c6_54pts_1orbit.layers
+93bb99fdf94c9b2461981933b3d0a787624ad9db74697dd5136a11b381a22bad  cert/c6_54pts_1orbit.pts
+db50cced89d502d43880a40886374e8376e587505885e7281013555f41718099  cert/c6_54pts_1orbit.orient.gz

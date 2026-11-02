@@ -1,0 +1,28 @@
+== certify_int base60_cost3_minus7  (Mon Nov  2 23:24:04 KST 2026)  input=runs/bases/B7.txt
+points:       60
+0a0da1665777aa1be791d2b7378d190601527dae7d152bb48aeefa71c2b8b3f9  push2/c3/cert/base60_cost3_minus7.txt
+-- check 1: symcheck.py (exact integer symmetry under (a,b)->(-b,a-b), distinctness, collinear triples)
+n=60 distinct=True invariant=True centre=False collinear_triples=0
+-- check 2: ES8SYM verify_set.py (big-integer orientation table, O(n^4) DP for largest convex subset, C3 check)
+{'points': 60, 'distinct': True, 'max_abs_coord': 51061038842606728, 'symmetric': True, 'collinear_triples': 0, 'largest_convex_subset': 7}
+PASS
+-- check 3: ES8SYM enum_convex.c (independent __int128 orientations, DFS enumeration of all convex polygons, compares orientation table)
+n=60 duplicates=0 collinear_triples=0
+orientation signs differing from push2/c3/cert/base60_cost3_minus7.txt.orient: 0
+convex 3-gons: 34220
+convex 4-gons: 292785
+convex 5-gons: 1132656
+convex 6-gons: 1776478
+convex 7-gons: 448896
+largest convex subset: 7
+-- check 4: ES8SYM cvxcheck.c on the cross-checked table (antisymmetry/no zero, DFS 4-point criterion, own DP)
+table n=60: 0 antisymmetry/zero violations
+convex 3-subsets: 34220
+convex 4-subsets: 292785
+convex 5-subsets: 1132656
+convex 6-subsets: 1776478
+convex 7-subsets: 448896
+convex 8-subsets: 0
+DP largest convex subset: 7
+-- results: symcheck=0 verify_set=0 enum_convex=0 cvxcheck=0
+ALL PASS

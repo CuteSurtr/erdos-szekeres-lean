@@ -270,3 +270,20 @@ a rotation after a linear change of coordinates with positive determinant. Exact
 general position, largest convex subset 7 by the big-integer O(n^4) dynamic program and by an independent __int128
 enumeration of all convex polygons (logs in `sets2/`), and an independent re-check from scratch with two further
 exact algorithms. So the threefold octagon-free maximum is at least 60 (previously 55); 64 = 3·21 + 1 remains open.
+
+## Addendum (2–3 November 2026): fivefold 56 points and single-orbit bounds
+
+- `sets3/c5_56pts_11layers_centre.pts` (SHA-256 `4cdd24bb…`): a fivefold set of 56 points (11 nested regular pentagons
+  plus the centre) in general position with no 8 points in convex position, built as a rotated blow-up with two base
+  orbits. Exact computation in Z[zeta_5] (two algorithms) and an independent re-check from scratch. The fivefold
+  octagon-free maximum is therefore at least 56 (previously 51); 61 = 5·12 + 1 is the largest size allowed if
+  ES(8) = 65.
+- Single-orbit limits (computer-assisted and written proofs, `sets3/single_orbit_bounds/`): one orbit of generic tiny
+  clusters gives at most 54 points for sixfold (cluster size <= 9, SAT relaxation with an LRAT proof checked by
+  lrat-check) and at most 51 for fivefold (cluster size <= 10, a written proof from the cups–caps theorem, also checked
+  by the same encoder). The sixfold bound is attained (`sets3/c6_54pts_1orbit.pts`, a second order type of 54 points).
+- Threefold: eight more 60-point octagon-free sets of new order types (`sets3/threefold60/base60_cost3_minus*.txt`),
+  obtained by deleting one orbit from an exact 63-point set with exactly three convex octagons
+  (`sets3/threefold60/control_cost3_63pts.txt`). For these eight sets, no infinitesimally small new orbit can be added
+  without a convex octagon (exact computation of the blocking arcs plus a short written argument). A threefold 64-point
+  octagon-free set would contain a 63-point one (delete the centre). The threefold maximum stays at least 60.
