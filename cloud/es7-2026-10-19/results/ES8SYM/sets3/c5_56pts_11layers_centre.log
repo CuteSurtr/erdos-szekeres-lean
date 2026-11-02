@@ -1,0 +1,35 @@
+# certify.sh runs/m5c_65.cfg 5 1 8 1e-3 c5_56pts_11layers_centre   (Mon Nov  2 22:47:01 KST 2026)
+## 1. realize
+n=56 eps=0.001 min|orient|=5.968e-08 largest_convex_subset(float DP)=7
+scale=1.22e+11
+## 2. verify_config.py
+{'m': 5, 'C': 1, 'n': 56, 'layers': 11, 'distinct': True, 'invariant': True, 'zero_orientations': 0, 'layers_are_orbits': True, 'largest_convex_subset': 7, 'max_abs_coeff': 122497499867}
+PASS
+verify_config exit=0
+## 3. cvxcheck
+table n=56: 0 antisymmetry/zero violations
+convex 3-subsets: 27720
+convex 4-subsets: 254660
+convex 5-subsets: 1276831
+convex 6-subsets: 3006175
+convex 7-subsets: 2398345
+convex 8-subsets: 0
+DP largest convex subset: 7
+## 4. orient.py + inv
+float cross-check disagreements (|det| not tiny): 0
+n=56, no collinear triple, table written to cert/c5_56pts_11layers_centre.ot
+tables identical: True n=56
+table_violations=0
+layers=5,5,5,5,5,5,5,5,5,5,5,1
+convex=27720,254660,1276831,3006175,2398345  (j=3..7)
+max_convex=7
+aut_plus=5
+canon_written=cert/c5_56pts_11layers_centre.ot.canon
+## 5. crosscheck_decimal.py
+n=56 points; sorted triples checked; mismatches/undecided: 0; min |det| = 8.882E+14; error bound = 6.002E-126
+CROSSCHECK PASS
+2665e06ea9b26f19c6f21f99800b7f41f3d9523f36472916daeb1a2c245e128a  cert/c5_56pts_11layers_centre.blowup.cfg
+5ff09768968f6b4d1dbb58a58a49eaab4ec2021f0f747512bc5b1cbf470b3e99  cert/c5_56pts_11layers_centre.layers
+4cdd24bbeaa56d437420b1d1f63ca5ecb0fba64482ceb78ba6f1f7a496cf3387  cert/c5_56pts_11layers_centre.pts
+5871212d9c3860462b60406df51cb407cfc1ff5f4565b9d16a4839838d5bffc6  cert/c5_56pts_11layers_centre.orient.gz
+040391e13e5c87b05d02ecc2f7146f875fd5e9ef05f7c1e499968b7fcf4a5f62  cert/c5_56pts_11layers_centre.ot
