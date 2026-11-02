@@ -295,3 +295,14 @@ corrections header. `m6_cluster5.py` (the independent check's command for the m 
 written or adapted for this directory. Logs of runs on 2 November: `check64/check64.log`, `check64/modules60/*.log`,
 `check253/logs/run_all.log`, `check991/logs/rerun/`, `rule/logs/rerun/`, `cluster/sat/rerun.log`,
 `cluster/check/m6_cluster5_exact.log`, `printed/compare_printed_*.out`. `SHA256SUMS` lists every file.
+
+## Addendum (2 November 2026): m = 8 cluster sets
+
+- `sets2/c8_112pts_1orbit14.pts` (SHA-256 `014aee04…`): an 8-fold set of 112 points in general position with no 9 points
+  in convex position that is one orbit of rotated copies of a 14-point cluster. The single-orbit cluster bound 14 for
+  m = 8 (Theorem E, generic clusters) is therefore attained. Exact computation (three sign methods, two dynamic
+  programs) and an independent re-check from scratch.
+- `sets2/c8_120pts_blowup2orb.pts` and `sets2/c8_120pts_blowup3orb.pts`: 120-point sets of the same kind built as
+  rotated blow-ups with two and three base orbits (exact computation, independent re-check). They match, but do not
+  exceed, the 15-layer record; a 16-layer (128-point) set was not found (about 46 minutes of further searches, best
+  remaining weighted count of convex 9-gons 151). A failed search is not impossibility.

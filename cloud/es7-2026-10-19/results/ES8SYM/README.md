@@ -24,7 +24,7 @@ known. All point sets are in `sets/`.
 | symmetry | possible sizes | largest set here | N(type) | status |
 |---|---|---|---|---|
 | half-turn (2-fold) | 2m (no centre) | 64: `c2_64points_k8.txt`, `c2_64points_k8_bb.txt` | >= 64; = 64 if ES(8) = 65 | exact computation; implied by published results (§5) |
-| 3-fold | 3m, 3m + 1 | 55 with centre: `c3_55points_k8.txt` | >= 55 | exact computation |
+| 3-fold | 3m, 3m + 1 | 60 without centre: `sets2/c3_60pts_nocentre.txt` (2 November); earlier 55 with centre: `c3_55points_k8.txt` | >= 55 | exact computation |
 | 4-fold | 4m | 52: `c4_52pts_13layers.pts` | >= 52 | exact computation |
 | 5-fold | 5m, 5m + 1 | 51 with centre: `c5_51pts_10layers_centre.pts` | >= 51 | exact computation |
 | 6-fold | 6m | 54: `c6_54pts_9layers.pts` | >= 54 | exact computation |
@@ -260,3 +260,13 @@ lrat-check OUTDIR/r23.cnf r23.lrat; cake_lpr --CML_HEAP_SIZE=3000 OUTDIR/r23.cnf
 `run_all.sh` writes both CNFs to OUTDIR. To solve again: `cadical --lrat --binary=false OUTDIR/r23.cnf r23.lrat`
 (about 13 minutes each). On some macOS installs the C compiler needs `CFLAGS="-O2 -isysroot <SDK path>"` (see the
 header of `run_all.sh`).
+
+## Addendum (2 November 2026): threefold 60 points
+
+Two threefold symmetric sets of 60 points (20 orbits, no centre) in general position with no 8 points in convex
+position, of different order types (`sets2/c3_60pts_nocentre.txt`, SHA-256 `2673c45c…`; `sets2/c3_60pts_nocentre_b.txt`,
+`0fb9f5a5…`). Integer coordinates in the lattice form of this directory: the order-3 map (a, b) -> (-b, a - b), which is
+a rotation after a linear change of coordinates with positive determinant. Exact computation: integer symmetry and
+general position, largest convex subset 7 by the big-integer O(n^4) dynamic program and by an independent __int128
+enumeration of all convex polygons (logs in `sets2/`), and an independent re-check from scratch with two further
+exact algorithms. So the threefold octagon-free maximum is at least 60 (previously 55); 64 = 3·21 + 1 remains open.

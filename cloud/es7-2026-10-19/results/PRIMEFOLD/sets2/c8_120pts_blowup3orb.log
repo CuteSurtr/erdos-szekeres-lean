@@ -1,0 +1,42 @@
+# certificate c8_120pts_blowup3orb  m=8 C=0 K=9 scale=1000000000000  2026-11-02T07:14:18Z
+## 1. exact build + checks from the float configuration (methods A, B, C)
+{'m': 8, 'C': 0, 'n': 120, 'layers': 15, 'orbit_structure': True, 'distinct': True, 'invariant': True, 'zero_orientations': 0, 'intervalB_mismatch': 0, 'intervalB_undecided': 0, 'lexorder_intervalB_bad': 0, 'layers_are_nested_convex_orbits': True, 'radii_decreasing': True, 'max_abs_coeff': 1001375641433, 'z8_sqrt2_mismatch': 0}
+sha256 c8_120pts_blowup3orb.pts 85214521cfc6e261aeb030685245a200312646d4eb782a67cbb5713afd1c7f44
+sha256 c8_120pts_blowup3orb.otab 20c209f2d051867c29cc1531b55cfc8e30a4576a8b83a7810ed67184cd8a4761
+sha256 c8_120pts_blowup3orb.lex c6dcb84fa27e6d4a82a510f1dda34699bd04de2d38a67597d1b0725114d4f3a8
+EXACT-PREP PASS
+exit=0
+## 2. two exact DPs on the orientation table
+table n=120: 0 antisymmetry/zero violations
+convex  3-gons: DP1 280840  DP2 280840
+convex  4-gons: DP1 5423250  DP2 5423250
+convex  5-gons: DP1 54594656  DP2 54594656
+convex  6-gons: DP1 296988072  DP2 296988072
+convex  7-gons: DP1 869466344  DP2 869466344
+convex  8-gons: DP1 1178284965  DP2 1178284965
+convex  9-gons: DP1 0  DP2 0
+largest convex subset: DP1 8  DP2 8
+CVX2 PASS (K=9)
+exit=0
+## 3. re-check from the exact point file alone
+{'m': 8, 'C': 0, 'n': 120, 'layers': 15, 'orbit_structure': True, 'distinct': True, 'invariant': True, 'zero_orientations': 0, 'intervalB_mismatch': 0, 'intervalB_undecided': 0, 'lexorder_intervalB_bad': 0, 'layers_are_nested_convex_orbits': True, 'radii_decreasing': True, 'max_abs_coeff': 1001375641433, 'z8_sqrt2_mismatch': 0}
+sha256 recheck.pts 1517632c293874415ea26fa7892795ddee6f055d22cf425ea3874b1e6bcda3bd
+sha256 recheck.otab 20c209f2d051867c29cc1531b55cfc8e30a4576a8b83a7810ed67184cd8a4761
+sha256 recheck.lex c6dcb84fa27e6d4a82a510f1dda34699bd04de2d38a67597d1b0725114d4f3a8
+EXACT-PREP PASS
+exit=0
+largest convex subset: DP1 8  DP2 8
+CVX2 PASS (K=9)
+exit=0
+orientation tables identical
+## 4. third implementation (scout cvxcheck.c copy; its DFS limited to k<=4, then its own DP)
+table n=120: 0 antisymmetry/zero violations
+convex 3-subsets: 280840
+convex 4-subsets: 5423250
+DP largest convex subset: 8
+exit=0
+## sha256
+a9f286015f20c0c8c7068c88ae4575c09ea4d3f013d7b5c148dd516af3db8a5c  c8_120pts_blowup3orb.cfg
+85214521cfc6e261aeb030685245a200312646d4eb782a67cbb5713afd1c7f44  c8_120pts_blowup3orb.pts
+20c209f2d051867c29cc1531b55cfc8e30a4576a8b83a7810ed67184cd8a4761  c8_120pts_blowup3orb.otab
+c6dcb84fa27e6d4a82a510f1dda34699bd04de2d38a67597d1b0725114d4f3a8  c8_120pts_blowup3orb.lex
