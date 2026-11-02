@@ -306,3 +306,11 @@ written or adapted for this directory. Logs of runs on 2 November: `check64/chec
   rotated blow-ups with two and three base orbits (exact computation, independent re-check). They match, but do not
   exceed, the 15-layer record; a 16-layer (128-point) set was not found (about 46 minutes of further searches, best
   remaining weighted count of convex 9-gons 151). A failed search is not impossibility.
+
+## Addendum (3 November 2026): fivefold sets without a convex 10-gon
+
+`sets3/c5k10_176pts_1orbit35.pts` (`32679bde…`): a fivefold set of 176 points (35 nested regular pentagons plus the
+centre) in general position with no 10 points in convex position, built as one orbit of a 35-point Erdős–Szekeres
+cups–caps cluster X(5,6). Exact computation and an independent re-check from scratch. A written proof (resting on the
+blow-up formula Lemma 1, written and not refereed; `sets3/c5k10_notes.md`) shows that a single orbit of generic tiny
+clusters gives at most 176 points for (m, K) = (5, 10). The size-compatible extremal size 256 = 5·51 + 1 was not reached.
