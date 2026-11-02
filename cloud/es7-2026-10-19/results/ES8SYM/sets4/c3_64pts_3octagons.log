@@ -1,0 +1,31 @@
+== enum_convex (ES8SYM tools, exact __int128 DFS)
+n=64 duplicates=0 collinear_triples=0
+convex 3-gons: 41664
+convex 4-gons: 334146
+convex 5-gons: 1094247
+convex 6-gons: 1481729
+convex 7-gons: 701691
+convex 8-gons: 3
+largest convex subset: 8
+== indep3 (independent edge-sorting DP)
+indep3: n=64 duplicates=0 threefold_invariant=1 centre=1 collinear_triples=0
+indep3: convex 3-gons: 41664
+indep3: convex 4-gons: 334146
+indep3: convex 5-gons: 1094247
+indep3: convex 6-gons: 1481729
+indep3: convex 7-gons: 701691
+indep3: convex 8-gons: 3
+indep3: convex 9-gons: 0
+indep3: largest convex subset: 8
+== same set without the centre
+indep3: n=63 duplicates=0 threefold_invariant=1 centre=0 collinear_triples=0
+indep3: convex 3-gons: 39711
+indep3: convex 4-gons: 313725
+indep3: convex 5-gons: 1010445
+indep3: convex 6-gons: 1330148
+indep3: convex 7-gons: 594012
+indep3: convex 8-gons: 3
+indep3: convex 9-gons: 0
+indep3: largest convex subset: 8
+44656bb3462c6bbc18035c823b4a7ad810dbe3016f8f95b24dc5a9c278d8423d  nearmiss/c3_63pts_3octagons_nocentre.txt
+a62d83f80396e7ce6a539710fa8d54ae725aa42730a05d99e9e1720701f5864a  nearmiss/c3_64pts_3octagons.txt

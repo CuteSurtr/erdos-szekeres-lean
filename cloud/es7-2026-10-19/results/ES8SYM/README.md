@@ -287,3 +287,13 @@ exact algorithms. So the threefold octagon-free maximum is at least 60 (previous
   (`sets3/threefold60/control_cost3_63pts.txt`). For these eight sets, no infinitesimally small new orbit can be added
   without a convex octagon (exact computation of the blocking arcs plus a short written argument). A threefold 64-point
   octagon-free set would contain a 63-point one (delete the centre). The threefold maximum stays at least 60.
+
+## Addendum (3 November 2026): 7-fold exact value, threefold 61
+
+- The 7-fold value is now exact: every 7-fold symmetric set of at least 65 points in general position contains a convex
+  octagon (`C7UPPER`, certified by two encoders and both checkers), so the 7-fold maximum is exactly 64.
+- Threefold: two sets of 61 points (20 orbits plus the centre) in general position with no convex octagon, of different
+  order types (`sets4/c3_61pts_centre.txt` `006a0cae…`, `sets4/c3_61pts_blowup.txt` `a61fcbd9…`; exact computation by
+  two algorithms in the logs and an independent re-check from scratch). Near misses: an exact 64-point threefold set and
+  its 63-point subset without the centre, each with exactly 3 convex octagons (`sets4/c3_6[34]pts_3octagons*.txt`). The
+  threefold maximum is therefore at least 61.
