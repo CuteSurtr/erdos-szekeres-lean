@@ -1,0 +1,22 @@
+{
+  "rigor": "exact computation; soundness uses written rotation-specific linear identity proof",
+  "source_witness_sha256": "b825445058788cddef5914d83f5cea61565cb8a0e47bb907e8a1f2f189544a9a",
+  "source_model_sha256": "77733c0aad1c97a66b4e037ea8a9dd59935198e872d94f604ee755c4e6bfa8bb",
+  "source_verified_sha256": "740495b8123613d8967d958f5c52a6d0d72edf868a9f2673a9f1822c708ac986",
+  "embeddings_verified": 181440,
+  "inconsistent_premises": 0,
+  "source_layers": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "unique_clauses": 181440,
+  "orbit_injections": "order-preserving only",
+  "family_sha256": "5c390fe5efd6d27760a9b3055f2347012bcc506eb13814a526b8dd28418e3251",
+  "source_exact54_tests": 5225472,
+  "source_exact54_forbidden_matches": 0,
+  "elapsed_seconds": 2.942,
+  "peak_rss_bytes": 140115968,
+  "status": "PASS"
+}

@@ -1,0 +1,7 @@
+{
+  "source_sha256": "8aefa45b0e53a768de328b10e2a8ec6dfd1554366a299848ad8cf6712ac6aa05",
+  "review": "No defect found in rotation coverage, signed product encoding, duplicate-edge indegrees, or Kahn acyclicity test.",
+  "coverage_argument": "Each GP relation has a distinguished pivot. Simultaneous sixfold rotation sends its pivot to the unique phase-zero point in its orbit; all four-element subsets of other points are then enumerated. The action on a pivot is free, giving exactly 27,307,560/6 representatives.",
+  "limitations": "Only directed product-vertex cycles; arbitrary weighted exponent cancellations are not exhausted.",
+  "crosschecks": "Three direct Python edge comparisons, including a known cyclic case, are retained with full enumeration."
+}

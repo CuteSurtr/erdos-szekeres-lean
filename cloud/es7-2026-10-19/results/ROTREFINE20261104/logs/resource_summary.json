@@ -1,0 +1,16 @@
+{
+  "monitor_stopped": true,
+  "monitor_session_reaped": true,
+  "samples": 610,
+  "first_sample_utc": "2026-11-03T17:19:23.305883+00:00",
+  "last_sample_utc": "2026-11-03T19:00:59.496049+00:00",
+  "monitor_peak_total_bytes": 28052520960,
+  "monitor_samples_at_or_above_29_decimal_GB": 0,
+  "initial_m6_reported_peak_gib": 26.184,
+  "highest_observed_total_decimal_gb_approx": 28.12,
+  "core_cap": 4,
+  "solver_lane_cap": 2,
+  "numerical_threads": 1,
+  "compression_threads": 1,
+  "note": "Initial m6 guard unit was corrected; source-specific peaks are retained in lane reports."
+}

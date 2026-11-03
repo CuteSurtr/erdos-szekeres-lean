@@ -1,0 +1,298 @@
+{
+  "status": "final assessment margin reached",
+  "last_event_utc": "2026-11-03T19:00:01.990846+00:00",
+  "all_children_reaped": true,
+  "SAT_models_retained": 90,
+  "UNSAT_events": 0,
+  "UNKNOWN_events": 0,
+  "full_GP_survivors": 40,
+  "separation_methods": {
+    "linear identity": 36,
+    "product cycle": 2,
+    "negative-definite quadratic obstruction": 1
+  },
+  "unseparated_survivors": [
+    "models/model0090.json"
+  ],
+  "cut_blocks": 92,
+  "cut_types": {
+    "GP identity": 51,
+    "sixfold linear determinant identity family": 14,
+    "sixfold linear determinant identity ordered-injection family": 24,
+    "rotational product cycle family": 2,
+    "sixfold negative-definite quadratic obstruction family": 1
+  },
+  "variables": 58626,
+  "final_clauses": 9198581,
+  "final_cnf_sha256": "4281bf37057401b54a912b40d3466e83406debc38918712b3c7fffe29d08d041",
+  "final_composition_reconstructed": true,
+  "last_model": "models/model0090.json",
+  "last_model_sha256": "62b5c1d0ba4c9fb6d9b19a65c86d87f427853af388cf65d470dd73cae1f19f21",
+  "last_model_assessment": {
+    "clauses": 9198581,
+    "elapsed_seconds": 112.44,
+    "event": "candidate_assessed",
+    "formula_sha256": "4281bf37057401b54a912b40d3466e83406debc38918712b3c7fffe29d08d041",
+    "gp_violations": 0,
+    "model": "models/model0090.json",
+    "model_sha256": "62b5c1d0ba4c9fb6d9b19a65c86d87f427853af388cf65d470dd73cae1f19f21",
+    "utc": "2026-11-03T18:50:12.553438+00:00"
+  },
+  "last_model_satisfies_final_formula": true,
+  "peak_observed_total_decimal_GB": 28.114856,
+  "peak_measured_lane_RSS_bytes": 2001993728,
+  "full_product_checks": [
+    {
+      "model_sha256": "ddd3173b4060f4821b71bed71d848e09d24b128cc6d5afb939e3acf0661d00b0",
+      "acyclic": true,
+      "evidence": "iterations/step0092/full_product/full/verified.json"
+    },
+    {
+      "model_sha256": "e00ff59fd80effdc5ff386e845c9ffd4e889af0b7f15847f2d513a9027b6f985",
+      "acyclic": true,
+      "evidence": "iterations/step0066/full_product/full/verified.json"
+    },
+    {
+      "model_sha256": "791029d5d38dfdaed0cd93da63aa8a843b178614387221b1e8d1b54325684bdb",
+      "acyclic": true,
+      "evidence": "iterations/step0061/full_product/full/verified.json"
+    },
+    {
+      "model_sha256": "62b5c1d0ba4c9fb6d9b19a65c86d87f427853af388cf65d470dd73cae1f19f21",
+      "acyclic": true,
+      "evidence": "iterations/step0095/full_product/full/verified.json"
+    },
+    {
+      "model_sha256": "3400f0b77d57d32cbcd2bfbb2956ee8f4dc8bc37caf2bf384a3231603dab91e1",
+      "acyclic": true,
+      "evidence": "iterations/step0068/full_product/full/verified.json"
+    },
+    {
+      "model_sha256": "52e2ba5a83e3c2013fb3ac3214db113d55ec53249240dd5b055255e449f2e2b0",
+      "acyclic": true,
+      "evidence": "iterations/step0056/full_product/full/verified.json"
+    },
+    {
+      "model_sha256": "9b168e3c10b18ab3689f1d571859e80c261fa54fd09cd42866854f7bab0ae2e8",
+      "acyclic": true,
+      "evidence": "iterations/step0094/full_product/full/verified.json"
+    },
+    {
+      "model_sha256": "c58537c9c725d6f5bdb327a2f3b4f5d29a455490a87fd34f945f783676de7b73",
+      "acyclic": true,
+      "evidence": "iterations/step0067/full_product/full/verified.json"
+    },
+    {
+      "model_sha256": "366e47356391738bcbe487086bbc95c8cb55d7fd83fca977d249a13487c54789",
+      "acyclic": true,
+      "evidence": "iterations/step0058/full_product/full/verified.json"
+    },
+    {
+      "model_sha256": "d42426a945f3b7603dffad8b3967f0a78c0a2ddbd776b9bd3f1734273b98ae1a",
+      "acyclic": false,
+      "evidence": "iterations/step0089/full_product/full/verified.json"
+    },
+    {
+      "model_sha256": "e11c5cd12e31e7a10bb260a39ffc902a36c55789b85f735f62df627ab9eddf8e",
+      "acyclic": true,
+      "evidence": "iterations/step0080/full_product/full/verified.json"
+    },
+    {
+      "model_sha256": "810683597ca88941838ae081210f85c2a11ee9c5dd85df69483711ce7b0a8423",
+      "acyclic": true,
+      "evidence": "iterations/step0072/full_product/full/verified.json"
+    },
+    {
+      "model_sha256": "77733c0aad1c97a66b4e037ea8a9dd59935198e872d94f604ee755c4e6bfa8bb",
+      "acyclic": true,
+      "evidence": "iterations/step0075/full_product/full/verified.json"
+    },
+    {
+      "model_sha256": "0283e1d82511c0f83752c16b936665fb646fd7ce8d1a9c427b999ee02af5d9c2",
+      "acyclic": true,
+      "evidence": "iterations/step0044/full_product/full/verified.json"
+    },
+    {
+      "model_sha256": "715b54cbc78fc2198aa21965a9004effaea34d354e1c776f91a6a83869d7724d",
+      "acyclic": true,
+      "evidence": "iterations/step0062/full_product/full/verified.json"
+    },
+    {
+      "model_sha256": "6b6c01d186376e03b8597a2ecb57a2bb4c7736c12c33f6fada33b2b51405c880",
+      "acyclic": true,
+      "evidence": "iterations/step0065/full_product/full/verified.json"
+    },
+    {
+      "model_sha256": "54310f0886b300ab67994b33625212f9792465536d09885b3a8eaba25cf29715",
+      "acyclic": true,
+      "evidence": "iterations/step0054/full_product/full/verified.json"
+    },
+    {
+      "model_sha256": "71e3bd894083596bb25b14dcaffaef346e491c5145e595660e2060350b3f3cc0",
+      "acyclic": true,
+      "evidence": "iterations/step0038/full_product/full/verified.json"
+    },
+    {
+      "model_sha256": "f14272ab098cf201293b90a14f43f394e7fdc9693e064f2dc7bd859c8061cd45",
+      "acyclic": true,
+      "evidence": "iterations/step0055/full_product/full/verified.json"
+    },
+    {
+      "model_sha256": "5991b2ab9386176c1f7ece014489a3fdb381f9fded4bed1fc17c796d4c153394",
+      "acyclic": true,
+      "evidence": "iterations/step0064/full_product/full/verified.json"
+    },
+    {
+      "model_sha256": "3ec9dee47a80a73c053590e0ade4ad3fec2fd7058de32e2ce006cf48853beb14",
+      "acyclic": true,
+      "evidence": "iterations/step0090/full_product/full/verified.json"
+    },
+    {
+      "model_sha256": "4e6914373a16a6d905c6ee11d8cf0b1ab0ba5e9468a946fa481cf7808ac2e0df",
+      "acyclic": true,
+      "evidence": "iterations/step0063/full_product/full/verified.json"
+    },
+    {
+      "model_sha256": "f940084c03a9825a04858fef9553647ce601005b8b88ffec53ea60d7d2dafbf0",
+      "acyclic": true,
+      "evidence": "iterations/step0046/full_product/full/verified.json"
+    },
+    {
+      "model_sha256": "7bede0c1aaccca5e64801f42dc537a493c232f7384d997481db274ace231d214",
+      "acyclic": true,
+      "evidence": "iterations/step0070/full_product/full/verified.json"
+    },
+    {
+      "model_sha256": "415eaf17ef81a105bae617c9acea2612d490b1f1a15a8745b50e11d3cf03b533",
+      "acyclic": true,
+      "evidence": "iterations/step0084/full_product/full/verified.json"
+    },
+    {
+      "model_sha256": "03e51ab03e64b7b2c39dece6423ba60851a9647e5ea9c4c62ab2060d721dbf35",
+      "acyclic": true,
+      "evidence": "iterations/step0049/full_product/full/verified.json"
+    },
+    {
+      "model_sha256": "81f90b9c096d36428b092fd7ffb493e78bbc564947df2ca52f81511b9fb6a26e",
+      "acyclic": true,
+      "evidence": "iterations/step0040/full_product/full/verified.json"
+    },
+    {
+      "model_sha256": "72f8c875af61243ab5fba34ab9cd927efd8881ef26992c0bb623cc10b9c4e353",
+      "acyclic": true,
+      "evidence": "full_product_model0001/full/verified.json"
+    },
+    {
+      "model_sha256": "8b98f35bf949205a9270d94460b02a8e420e1607c5280db84c6f5588a621a9a8",
+      "acyclic": true,
+      "evidence": "full_product_model0033/full/verified.json"
+    }
+  ],
+  "proof_traces": [
+    {
+      "path": "iterations/step0094/attempt.lrat",
+      "sha256": "6fc45cf04c0325fb220d285960e504bf202e0f363b189cdc33b552e395d2c1c4",
+      "compressed_sha256": "2d62f89632c2f675116242459ab1802d123ed6be1fca7bbd303851a6d047b4a0",
+      "decompression_roundtrip": true,
+      "status": "SAT/UNKNOWN/partial trace; not an UNSAT certificate"
+    },
+    {
+      "path": "iterations/step0093/attempt.lrat",
+      "sha256": "b39ef88100bddfbf2bd06b0e2885baedcaf994a547e3e08a632b8bd688f81437",
+      "compressed_sha256": "74c835c0560a1be90a80280c37be2d72ae05c351ca9e5da614a038b8c9e496c7",
+      "decompression_roundtrip": true,
+      "status": "SAT/UNKNOWN/partial trace; not an UNSAT certificate"
+    },
+    {
+      "path": "iterations/step0089/attempt.lrat",
+      "sha256": "e3280558d2cc86a0c12bfc1cb24cf8bd0c95746047eabbf3d017547774d933ff",
+      "compressed_sha256": "9288dc390c3cb179d2d9a9d214e8a41244c4285ede89d16f22f46d6300a78df6",
+      "decompression_roundtrip": true,
+      "status": "SAT/UNKNOWN/partial trace; not an UNSAT certificate"
+    },
+    {
+      "path": "iterations/step0080/attempt.lrat",
+      "sha256": "e1c0e577c0f448eed59e8134cb66f27c0bd31c221796966007a5378f5c86632d",
+      "compressed_sha256": "13c00f4beca9db869fe1f24e08a3c6466b95680e8a07769c11455d04994b48be",
+      "decompression_roundtrip": true,
+      "status": "SAT/UNKNOWN/partial trace; not an UNSAT certificate"
+    },
+    {
+      "path": "iterations/step0087/attempt.lrat",
+      "sha256": "1f4d4cbd6712a2b96efffc5beff2cd90810be2974bb7531f048eb1e15a15020f",
+      "compressed_sha256": "c02e100d01203dae21ad85bb4e82ba2d22bab3220ee835ccfbd98f394b2aebbe",
+      "decompression_roundtrip": true,
+      "status": "SAT/UNKNOWN/partial trace; not an UNSAT certificate"
+    },
+    {
+      "path": "iterations/step0086/attempt.lrat",
+      "sha256": "e69203592b012b09c86a1ade0e24dc7e5f88b6316a62a2e3c816138031fd7915",
+      "compressed_sha256": "57a3312abf1f4bd418d074b2a7d0b461eb3a1da940d52045cc7cafe70542ce83",
+      "decompression_roundtrip": true,
+      "status": "SAT/UNKNOWN/partial trace; not an UNSAT certificate"
+    },
+    {
+      "path": "iterations/step0081/attempt.lrat",
+      "sha256": "ede6dd5db6e53c883c96c9ac34c9b858e5542b324073b00b3cfd2a08d6357031",
+      "compressed_sha256": "694fda1b086e07c5863cb1deb653e0360597f6a3c654ad81c0af9b2e999d3ca7",
+      "decompression_roundtrip": true,
+      "status": "SAT/UNKNOWN/partial trace; not an UNSAT certificate"
+    },
+    {
+      "path": "iterations/step0088/attempt.lrat",
+      "sha256": "f06ce0fd34165bb472016b16b91c40a77f71e81bc10c0892e1b2519636ca33d1",
+      "compressed_sha256": "812a65bd98c01ec4a292ff12608389ca156d3798363f6a82d2fb4cc21d3e5602",
+      "decompression_roundtrip": true,
+      "status": "SAT/UNKNOWN/partial trace; not an UNSAT certificate"
+    },
+    {
+      "path": "iterations/step0091/attempt.lrat",
+      "sha256": "6ff71cf4dd1e7c364f45cd43bdaf622062839418cd0d37a812c07f02a8915be9",
+      "compressed_sha256": "1a3faca96db1e5d48d31eac35b82dade1e20d8befc729e96833b43ac693244ac",
+      "decompression_roundtrip": true,
+      "status": "SAT/UNKNOWN/partial trace; not an UNSAT certificate"
+    },
+    {
+      "path": "iterations/step0090/attempt.lrat",
+      "sha256": "40cbeaef523e62abf7509c5f69db91b53ad9e9f3c1c9b6692c7105c867d89f43",
+      "compressed_sha256": "efcfad7e678d89571715d83b07857d86fdf51d87dc4bb49ccdefdad792dcbe2f",
+      "decompression_roundtrip": true,
+      "status": "SAT/UNKNOWN/partial trace; not an UNSAT certificate"
+    },
+    {
+      "path": "iterations/step0084/attempt.lrat",
+      "sha256": "6ab1537c9be64d667724b9110d36461c12cc3a817d4e313d1dff9a9c798d4e25",
+      "compressed_sha256": "509b1103315109feb8a96f0aa83f4c2befa20d4a7797332203abf2b21885dbc0",
+      "decompression_roundtrip": true,
+      "status": "SAT/UNKNOWN/partial trace; not an UNSAT certificate"
+    },
+    {
+      "path": "iterations/step0083/attempt.lrat",
+      "sha256": "9f3aeef7e6c04e39b31ff566801d6530d9339759eb8e8b67624a4e06e894b86d",
+      "compressed_sha256": "2e6d7112d7089499eef93b16198570f562e89dd178fb5e906cce9ce514e23bd2",
+      "decompression_roundtrip": true,
+      "status": "SAT/UNKNOWN/partial trace; not an UNSAT certificate"
+    },
+    {
+      "path": "iterations/step0082/attempt.lrat",
+      "sha256": "fd7f68fd2c3a88b882a6499d266606957ed43df4c4317260ef76505d1b6f0c1e",
+      "compressed_sha256": "e3841a677a7ecde6c9ef219b3ed95134e58d4cbb1e88193a155da59dbb1015c5",
+      "decompression_roundtrip": true,
+      "status": "SAT/UNKNOWN/partial trace; not an UNSAT certificate"
+    },
+    {
+      "path": "iterations/step0085/attempt.lrat",
+      "sha256": "89f12876f6d153ef1925ceec0c800132f0ad85ccb25d1f3e42b43d40dedea7f2",
+      "compressed_sha256": "2d98932f7931097d87026a7de885458b96770ea1a16aea8bd1c0d46305c473b9",
+      "decompression_roundtrip": true,
+      "status": "SAT/UNKNOWN/partial trace; not an UNSAT certificate"
+    }
+  ],
+  "final_cnf_archive": {
+    "path": "current.cnf",
+    "sha256": "4281bf37057401b54a912b40d3466e83406debc38918712b3c7fffe29d08d041",
+    "compressed_sha256": "78ca8b661197f519c83f3551782223ca4dcf41e1c31309a46c574353ee162f65",
+    "decompression_roundtrip": true
+  },
+  "first_event_utc": "2026-11-03T17:19:18.130362+00:00"
+}
