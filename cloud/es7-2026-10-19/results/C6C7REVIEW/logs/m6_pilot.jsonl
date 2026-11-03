@@ -1,0 +1,65 @@
+{"deadline_utc": "2026-11-03T17:06:46.428899+00:00", "event": "start", "max_seconds": 1500, "rounds": 12, "seconds": 0.0, "solve_seconds": 120, "utc": "2026-11-03T16:41:46.428797+00:00"}
+{"event": "source_hashes", "hashes": {"gp_m6K8t10.cnf.model.json.zst": "9365fc6c39e5b534c0712a1b9604b1c9b063121b2319ae3acc21c81c8309eb4c", "gp_m6K8t10.cnf.zst": "b64543a7e2df0e11499de65706454c54a7ba644e4cd47141e2539373f0d4d8ca", "m6K8t10.cnf.json": "f053fbdf5682ebb444f287ef52ec323d3e5d30214f17f8e12ef1f0087c921114"}, "seconds": 0.003}
+{"elapsed": 2.043, "event": "command_done", "log": "generate.log", "peak_total_gb": 22.457, "returncode": 0, "seconds": 2.205, "stop_reason": null}
+{"clauses": 1609785, "event": "base", "initial_gp_clauses": 1143808, "seconds": 2.438, "sha256": "ff10dafb31b009b50341d47edb3cdee2d6fd4d74b08b86285982867e8e4479ed", "variables": 58626}
+{"elapsed": 0.259, "event": "command_done", "log": "round000/search.log", "peak_total_gb": 22.578, "returncode": 0, "seconds": 2.697, "stop_reason": null}
+{"elapsed": 0.511, "event": "command_done", "log": "round000/verify.log", "peak_total_gb": 22.532, "returncode": 0, "seconds": 3.208, "stop_reason": null}
+{"clause": [-58, -71, -72, -73, -74, -75, -76, -712, 751, -868], "event": "cut", "exact54_tests": 5184, "kind": "rotation_cycle", "literals": 10, "round": 0, "seconds": 3.23}
+{"elapsed": 0.769, "event": "command_done", "log": "round000/solve.log", "peak_total_gb": 22.565, "returncode": 10, "seconds": 4.29, "stop_reason": null}
+{"all_gp_relations_checked": false, "event": "sat", "model": "round000/model.json", "positive_variables": 26841, "round": 0, "seconds": 4.305}
+{"elapsed": 0.257, "event": "command_done", "log": "round001/search.log", "peak_total_gb": 22.555, "returncode": 0, "seconds": 4.561, "stop_reason": null}
+{"elapsed": 0.514, "event": "command_done", "log": "round001/verify.log", "peak_total_gb": 22.575, "returncode": 0, "seconds": 5.076, "stop_reason": null}
+{"clause": [-58, -77, -78, -79, -80, -81, -82, -943, 976, -1075], "event": "cut", "exact54_tests": 5184, "kind": "rotation_cycle", "literals": 10, "round": 1, "seconds": 5.097}
+{"elapsed": 0.769, "event": "command_done", "log": "round001/solve.log", "peak_total_gb": 22.652, "returncode": 10, "seconds": 6.166, "stop_reason": null}
+{"all_gp_relations_checked": false, "event": "sat", "model": "round001/model.json", "positive_variables": 26860, "round": 1, "seconds": 6.179}
+{"elapsed": 0.257, "event": "command_done", "log": "round002/search.log", "peak_total_gb": 22.663, "returncode": 0, "seconds": 6.436, "stop_reason": null}
+{"elapsed": 0.513, "event": "command_done", "log": "round002/verify.log", "peak_total_gb": 22.653, "returncode": 0, "seconds": 6.949, "stop_reason": null}
+{"clause": [-58, -83, -84, -85, -86, -87, -88, -1136, -1195, 1220], "event": "cut", "exact54_tests": 5184, "kind": "rotation_cycle", "literals": 10, "round": 2, "seconds": 6.971}
+{"elapsed": 1.789, "event": "command_done", "log": "round002/solve.log", "peak_total_gb": 22.43, "returncode": 10, "seconds": 9.053, "stop_reason": null}
+{"all_gp_relations_checked": false, "event": "sat", "model": "round002/model.json", "positive_variables": 27324, "round": 2, "seconds": 9.067}
+{"elapsed": 0.516, "event": "command_done", "log": "round003/search.log", "peak_total_gb": 22.415, "returncode": 0, "seconds": 9.583, "stop_reason": null}
+{"elapsed": 0.514, "event": "command_done", "log": "round003/verify.log", "peak_total_gb": 22.394, "returncode": 0, "seconds": 10.098, "stop_reason": null}
+{"clause": [-2868, -2893, -2894, -2895, -2896, -2897, -2898, -3642, 3657, -3702], "event": "cut", "exact54_tests": 5184, "kind": "rotation_cycle", "literals": 10, "round": 3, "seconds": 10.119}
+{"elapsed": 4.839, "event": "command_done", "log": "round003/solve.log", "peak_total_gb": 23.238, "returncode": 10, "seconds": 15.254, "stop_reason": null}
+{"all_gp_relations_checked": false, "event": "sat", "model": "round003/model.json", "positive_variables": 20597, "round": 3, "seconds": 15.268}
+{"elapsed": 0.256, "event": "command_done", "log": "round004/search.log", "peak_total_gb": 22.405, "returncode": 0, "seconds": 15.524, "stop_reason": null}
+{"elapsed": 0.512, "event": "command_done", "log": "round004/verify.log", "peak_total_gb": 22.392, "returncode": 0, "seconds": 16.036, "stop_reason": null}
+{"clause": [-58, -83, -84, -85, -86, -87, -88, -1138, 1165, -1246], "event": "cut", "exact54_tests": 5184, "kind": "rotation_cycle", "literals": 10, "round": 4, "seconds": 16.059}
+{"elapsed": 4.842, "event": "command_done", "log": "round004/solve.log", "peak_total_gb": 23.123, "returncode": 10, "seconds": 21.204, "stop_reason": null}
+{"all_gp_relations_checked": false, "event": "sat", "model": "round004/model.json", "positive_variables": 26069, "round": 4, "seconds": 21.218}
+{"elapsed": 0.507, "event": "command_done", "log": "round005/search.log", "peak_total_gb": 22.203, "returncode": 0, "seconds": 21.725, "stop_reason": null}
+{"elapsed": 0.512, "event": "command_done", "log": "round005/verify.log", "peak_total_gb": 22.195, "returncode": 0, "seconds": 22.237, "stop_reason": null}
+{"clause": [-58, -95, -96, -97, -98, -99, -100, -1420, 1435, -1480], "event": "cut", "exact54_tests": 5184, "kind": "rotation_cycle", "literals": 10, "round": 5, "seconds": 22.259}
+{"elapsed": 5.098, "event": "command_done", "log": "round005/solve.log", "peak_total_gb": 27.157, "returncode": 10, "seconds": 27.651, "stop_reason": null}
+{"all_gp_relations_checked": false, "event": "sat", "model": "round005/model.json", "positive_variables": 24410, "round": 5, "seconds": 27.667}
+{"elapsed": 0.257, "event": "command_done", "log": "round006/search.log", "peak_total_gb": 26.443, "returncode": 0, "seconds": 27.924, "stop_reason": null}
+{"elapsed": 0.513, "event": "command_done", "log": "round006/verify.log", "peak_total_gb": 26.493, "returncode": 0, "seconds": 28.437, "stop_reason": null}
+{"clause": [-58, -107, -108, -109, -110, -111, -112, -1558, 1561, -1570], "event": "cut", "exact54_tests": 5184, "kind": "rotation_cycle", "literals": 10, "round": 6, "seconds": 28.46}
+{"elapsed": 6.103, "event": "command_done", "log": "round006/solve.log", "peak_total_gb": 27.259, "returncode": 10, "seconds": 34.856, "stop_reason": null}
+{"all_gp_relations_checked": false, "event": "sat", "model": "round006/model.json", "positive_variables": 25201, "round": 6, "seconds": 34.87}
+{"elapsed": 0.512, "event": "command_done", "log": "round007/search.log", "peak_total_gb": 26.478, "returncode": 0, "seconds": 35.382, "stop_reason": null}
+{"elapsed": 0.514, "event": "command_done", "log": "round007/verify.log", "peak_total_gb": 26.478, "returncode": 0, "seconds": 35.896, "stop_reason": null}
+{"clause": [-1622, -1653, -1654, -1655, -1656, -1657, -1658, -2672, 2687, -2732], "event": "cut", "exact54_tests": 5184, "kind": "rotation_cycle", "literals": 10, "round": 7, "seconds": 35.92}
+{"elapsed": 2.286, "event": "command_done", "log": "round007/solve.log", "peak_total_gb": 26.466, "returncode": 10, "seconds": 38.5, "stop_reason": null}
+{"all_gp_relations_checked": false, "event": "sat", "model": "round007/model.json", "positive_variables": 26133, "round": 7, "seconds": 38.513}
+{"elapsed": 0.259, "event": "command_done", "log": "round008/search.log", "peak_total_gb": 26.476, "returncode": 0, "seconds": 38.772, "stop_reason": null}
+{"elapsed": 0.514, "event": "command_done", "log": "round008/verify.log", "peak_total_gb": 26.476, "returncode": 0, "seconds": 39.286, "stop_reason": null}
+{"clause": [-58, -59, -60, -61, -62, -63, -64, -140, -247, 296], "event": "cut", "exact54_tests": 5184, "kind": "rotation_cycle", "literals": 10, "round": 8, "seconds": 39.308}
+{"elapsed": 2.319, "event": "command_done", "log": "round008/solve.log", "peak_total_gb": 26.444, "returncode": 10, "seconds": 41.927, "stop_reason": null}
+{"all_gp_relations_checked": false, "event": "sat", "model": "round008/model.json", "positive_variables": 26139, "round": 8, "seconds": 41.941}
+{"elapsed": 0.262, "event": "command_done", "log": "round009/search.log", "peak_total_gb": 26.506, "returncode": 0, "seconds": 42.203, "stop_reason": null}
+{"elapsed": 0.522, "event": "command_done", "log": "round009/verify.log", "peak_total_gb": 26.456, "returncode": 0, "seconds": 42.725, "stop_reason": null}
+{"clause": [-58, -71, -72, -73, -74, -75, -76, -710, -793, 830], "event": "cut", "exact54_tests": 5184, "kind": "rotation_cycle", "literals": 10, "round": 9, "seconds": 42.747}
+{"elapsed": 5.152, "event": "command_done", "log": "round009/solve.log", "peak_total_gb": 27.239, "returncode": 10, "seconds": 48.202, "stop_reason": null}
+{"all_gp_relations_checked": false, "event": "sat", "model": "round009/model.json", "positive_variables": 24909, "round": 9, "seconds": 48.216}
+{"elapsed": 0.264, "event": "command_done", "log": "round010/search.log", "peak_total_gb": 26.291, "returncode": 0, "seconds": 48.48, "stop_reason": null}
+{"elapsed": 0.525, "event": "command_done", "log": "round010/verify.log", "peak_total_gb": 26.288, "returncode": 0, "seconds": 49.005, "stop_reason": null}
+{"clause": [-58, -95, -96, -97, -98, -99, -100, -1418, -1453, 1466], "event": "cut", "exact54_tests": 5184, "kind": "rotation_cycle", "literals": 10, "round": 10, "seconds": 49.028}
+{"elapsed": 5.916, "event": "command_done", "log": "round010/solve.log", "peak_total_gb": 27.104, "returncode": 10, "seconds": 55.242, "stop_reason": null}
+{"all_gp_relations_checked": false, "event": "sat", "model": "round010/model.json", "positive_variables": 25733, "round": 10, "seconds": 55.256}
+{"elapsed": 0.261, "event": "command_done", "log": "round011/search.log", "peak_total_gb": 26.227, "returncode": 0, "seconds": 55.517, "stop_reason": null}
+{"elapsed": 0.264, "event": "command_done", "log": "round011/verify.log", "peak_total_gb": 26.202, "returncode": 0, "seconds": 55.782, "stop_reason": null}
+{"clause": [-2, -30, -33, 127, 1195], "event": "cut", "exact54_tests": 5184, "kind": "gp_sign", "literals": 5, "round": 11, "seconds": 55.806}
+{"elapsed": 10.571, "event": "command_done", "log": "round011/solve.log", "peak_total_gb": 27.094, "returncode": 10, "seconds": 66.667, "stop_reason": null}
+{"all_gp_relations_checked": false, "event": "sat", "model": "round011/model.json", "positive_variables": 21950, "round": 11, "seconds": 66.681}
+{"cuts": 12, "elapsed": 66.681, "event": "finish", "seconds": 66.681}

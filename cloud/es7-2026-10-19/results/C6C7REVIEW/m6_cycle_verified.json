@@ -1,0 +1,120 @@
+{
+  "rigor": "exact computation; soundness uses written GP and rotation proof",
+  "model_sha256": "b0cde9d9e0ce5652211136d6443b91cbb7d261b601b5ff887a4273e834d14472",
+  "generator_sha256": "4564e7f0ff1d3794917414002b4847cca6f0753420bd806af9d107f2a361bace",
+  "witness_sha256": "e25599d3816e4d5ea94484633dde910afaa5f2a8404ec2c5ac164c0882689973",
+  "verified_all_triple_ids": 5710,
+  "comparisons": [
+    {
+      "quintuple": [
+        0,
+        2,
+        4,
+        22,
+        23
+      ],
+      "gp_signs": [
+        1,
+        1,
+        -1
+      ],
+      "literals": [
+        [
+          58,
+          868
+        ],
+        [
+          75,
+          -72
+        ],
+        [
+          76,
+          -71
+        ]
+      ]
+    },
+    {
+      "quintuple": [
+        0,
+        2,
+        4,
+        19,
+        20
+      ],
+      "gp_signs": [
+        -1,
+        1,
+        -1
+      ],
+      "literals": [
+        [
+          58,
+          751
+        ],
+        [
+          72,
+          -75
+        ],
+        [
+          73,
+          -74
+        ]
+      ]
+    },
+    {
+      "quintuple": [
+        0,
+        2,
+        4,
+        18,
+        21
+      ],
+      "gp_signs": [
+        1,
+        1,
+        -1
+      ],
+      "literals": [
+        [
+          58,
+          712
+        ],
+        [
+          71,
+          -76
+        ],
+        [
+          74,
+          -73
+        ]
+      ]
+    }
+  ],
+  "exponents": {
+    "0,2,18": 0,
+    "0,2,19": 0,
+    "0,2,20": 0,
+    "0,2,21": 0,
+    "0,2,22": 0,
+    "0,2,23": 0
+  },
+  "candidate_clause": [
+    -58,
+    -71,
+    -72,
+    -73,
+    -74,
+    -75,
+    -76,
+    -712,
+    751,
+    -868
+  ],
+  "candidate_added_to_cnf": false,
+  "exact54_sha256": "235472b5c604421d11458865e2035b9977a8aa628f699f82bfad74536bf12c95",
+  "exact54_all_triples_nonzero": true,
+  "exact54_labelled_pair_tests": 5184,
+  "exact54_forbidden_pattern_matches": 0,
+  "exact54_gp_identities_checked": 15552,
+  "exact54_rotation_equalities_checked": 93312
+}
