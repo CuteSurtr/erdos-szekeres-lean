@@ -926,4 +926,109 @@ theorem chain_clauses_sound {S : Finset Point} {c : Point} {m K : ℕ} (hm : 3 �
   obtain ⟨t, ht, htK, htc⟩ := hconv
   exact hno ⟨t, ht.trans (peel_subset S i), htK, htc⟩
 
+/-! ## 11. The angular rules (polar form) and radius order of layers -/
+
+/-- The point at distance `r` from `c` in direction `θ`. -/
+noncomputable def polar (c : Point) (r θ : ℝ) : Point := ![c 0 + r * Real.cos θ, c 1 + r * Real.sin θ]
+
+/-- **Polar orientation formula.** -/
+theorem orient_polar (c : Point) (ra rb rd α β δ : ℝ) :
+    orient (polar c ra α) (polar c rb β) (polar c rd δ) =
+      ra * rb * Real.sin (β - α) + rb * rd * Real.sin (δ - β) + rd * ra * Real.sin (α - δ) := by
+  simp only [orient, polar, Matrix.cons_val_zero, Matrix.cons_val_one, Real.sin_sub]
+  ring
+
+/-- **Angular rule A (centre inside the triangle).** If the three directions are in counter-clockwise
+order with all three gaps in `(0, π)`, the triple is positively oriented. -/
+theorem orient_polar_centre_inside {c : Point} {ra rb rd α β δ : ℝ} (ha : 0 < ra) (hb : 0 < rb)
+    (hd : 0 < rd) (h1 : 0 < β - α) (h1' : β - α < Real.pi) (h2 : 0 < δ - β) (h2' : δ - β < Real.pi)
+    (h3 : 0 < α - δ + 2 * Real.pi) (h3' : α - δ + 2 * Real.pi < Real.pi) :
+    0 < orient (polar c ra α) (polar c rb β) (polar c rd δ) := by
+  rw [orient_polar]
+  have s1 := Real.sin_pos_of_pos_of_lt_pi h1 h1'
+  have s2 := Real.sin_pos_of_pos_of_lt_pi h2 h2'
+  have s3 : 0 < Real.sin (α - δ) := by
+    have := Real.sin_pos_of_pos_of_lt_pi h3 h3'
+    rwa [Real.sin_add_two_pi] at this
+  positivity
+
+/-- `sin x + sin y > sin (x + y)` for `x, y ∈ (0, π)`. -/
+theorem sin_add_lt {x y : ℝ} (hx : 0 < x) (hx' : x < Real.pi) (hy : 0 < y) (hy' : y < Real.pi) :
+    Real.sin (x + y) < Real.sin x + Real.sin y := by
+  rw [Real.sin_add]
+  have sx := Real.sin_pos_of_pos_of_lt_pi hx hx'
+  have sy := Real.sin_pos_of_pos_of_lt_pi hy hy'
+  have cx : Real.cos x < 1 := by
+    refine lt_of_le_of_ne (Real.cos_le_one x) fun h => ?_
+    have := (Real.cos_eq_one_iff_of_lt_of_lt (by linarith) (by linarith)).1 h
+    linarith
+  have cy : Real.cos y < 1 := by
+    refine lt_of_le_of_ne (Real.cos_le_one y) fun h => ?_
+    have := (Real.cos_eq_one_iff_of_lt_of_lt (by linarith) (by linarith)).1 h
+    linarith
+  nlinarith [mul_pos sx (sub_pos.2 cy), mul_pos sy (sub_pos.2 cx)]
+
+/-- **Angular rule B (open half-plane, middle point outermost).** If the directions increase by
+`x, y > 0` with `x + y < π` and the angularly middle point has the largest radius, the triple turns
+left. -/
+theorem orient_polar_halfplane {c : Point} {ra rb rd α β δ : ℝ} (ha : 0 < ra) (hd : 0 < rd)
+    (hba : ra ≤ rb) (hbd : rd ≤ rb) (h1 : 0 < β - α) (h2 : 0 < δ - β) (h12 : δ - α < Real.pi) :
+    0 < orient (polar c ra α) (polar c rb β) (polar c rd δ) := by
+  rw [orient_polar]
+  set x := β - α
+  set y := δ - β
+  have hxy : α - δ = -(x + y) := by simp only [x, y]; ring
+  rw [hxy, Real.sin_neg]
+  have hx' : x < Real.pi := by simp only [x, y] at h12 h2 ⊢; linarith
+  have hy' : y < Real.pi := by simp only [x, y] at h12 h1 ⊢; linarith
+  have sx := Real.sin_pos_of_pos_of_lt_pi h1 hx'
+  have sy := Real.sin_pos_of_pos_of_lt_pi h2 hy'
+  have key := sin_add_lt h1 hx' h2 hy'
+  have e1 : ra * rd * Real.sin x ≤ ra * rb * Real.sin x := by
+    have := mul_le_mul_of_nonneg_left hbd (mul_nonneg ha.le sx.le)
+    nlinarith
+  have e2 : ra * rd * Real.sin y ≤ rb * rd * Real.sin y := by
+    have := mul_le_mul_of_nonneg_left hba (mul_nonneg hd.le sy.le)
+    nlinarith
+  have e3 : 0 < ra * rd * (Real.sin x + Real.sin y - Real.sin (x + y)) := by
+    have := sub_pos.2 key
+    positivity
+  nlinarith
+
+/-- Squared distance from `c`. -/
+def dist2 (c y : Point) : ℝ := (y 0 - c 0) ^ 2 + (y 1 - c 1) ^ 2
+
+/-- The closed disk `{y | dist2 c y ≤ R}` is convex. -/
+theorem convex_disk (c : Point) (R : ℝ) : Convex ℝ {y : Point | dist2 c y ≤ R} := by
+  intro y₁ hy₁ y₂ hy₂ u v hu hv huv
+  simp only [Set.mem_setOf_eq, dist2] at hy₁ hy₂ ⊢
+  simp only [Pi.add_apply, Pi.smul_apply, smul_eq_mul]
+  have hv' : v = 1 - u := by linarith
+  subst hv'
+  nlinarith [sq_nonneg (y₁ 0 - y₂ 0), sq_nonneg (y₁ 1 - y₂ 1), mul_nonneg hu hv]
+
+/-- **Radius order of the layers.** Under the hypotheses of the layer lemma, every point of a later
+layer is no farther from the centre than the points of an earlier layer. -/
+theorem dist2_le_of_later {S : Finset Point} {c : Point} {m K : ℕ} (hm : 0 < m) (hK : K ≤ 2 * m)
+    (hc : c ∉ S) (hinv : Invariant (rotAbout c (2 * Real.pi / m)) S) (hno : ¬ HasConvexNGon K S)
+    {n n' : ℕ} (hnn' : n ≤ n') {x : Point} (hx : x ∈ hullVerts (peel S n)) {y : Point}
+    (hy : y ∈ peel S n') : dist2 c y ≤ dist2 c x := by
+  have hcn : c ∉ peel S n := fun h => hc (peel_subset S n h)
+  have hnon : ¬ HasConvexNGon K (peel S n) := fun ⟨t, ht, htK⟩ =>
+    hno ⟨t, ht.trans (peel_subset S n), htK⟩
+  have hL := hullVerts_eq_orbitFS_rotAbout hm hK hcn (invariant_peel hm hc hinv n) hnon hx
+  -- every vertex of the layer has the same distance from `c`
+  have hsub : (hullVerts (peel S n) : Set Point) ⊆ {z : Point | dist2 c z ≤ dist2 c x} := by
+    intro z hz
+    rw [Finset.mem_coe, hL] at hz
+    obtain ⟨j, -, rfl⟩ := Finset.mem_image.1 hz
+    simp only [Set.mem_setOf_eq, dist2]
+    rw [rotAbout_iterate]
+    simp only [rotAbout, Matrix.cons_val_zero, Matrix.cons_val_one]
+    nlinarith [Real.sin_sq_add_cos_sq ((j : ℝ) * (2 * Real.pi / m))]
+  have hyn : y ∈ peel S n := peel_antitone S hnn' hy
+  have hyconv : y ∈ convexHull ℝ (hullVerts (peel S n) : Set Point) :=
+    subset_convexHull_hullVerts (peel S n) (Finset.mem_coe.2 hyn)
+  exact convexHull_min hsub (convex_disk c _) hyconv
+
 end ErdosSzekeres.LayerLemma
