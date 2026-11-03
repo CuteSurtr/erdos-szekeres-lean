@@ -78,7 +78,15 @@ sign clauses in the orbit variables. They hold for every configuration in genera
   - The 40 patterns that violate transitivity are UNSAT in under 1 s each, and lrat-check accepts every proof.
   - Of the 24 phase orders, five were started (d000000, d000001, d000011, d111110, d111111). None finished: all five
     were stopped after 3,059–3,257 s each, about 1.5–2 times the 6-fold cube times. The other 19 were not started.
-  - Peak RSS is about 3 GB per lane. Finer cubes (adding layer 5) or multi-hour lanes are the next step.
+  - Peak RSS is about 3 GB per lane.
+  - Finer split (3 November, 11:25Z–13:15Z). The phase order d111111 (1<2<3<4) was split by all 16 sign patterns of
+    Y(1,5), …, Y(4,5) (`tools/mk5e.py`, `logs/cubes5_d111111_layer5.txt`).
+    - The 11 impossible patterns are UNSAT in under 1 s each, and lrat-check accepts every proof.
+    - Three of the 5 positions of layer 5 (5<1, 1<5<2, 2<5<3) ran 6,570 s each without an answer, and the other 2 were
+      not started.
+    - So adding layer 5 did not make the pieces tractable on this machine. A 6-fold cube took about 30 min by
+      comparison.
+    - Other splitting variables, derived lemmas or much more compute are needed.
   - m4K8t17 was not attempted.
 - More GP rounds at t = L + 1.
 
