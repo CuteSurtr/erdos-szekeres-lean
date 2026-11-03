@@ -529,8 +529,8 @@ half-turn & $2t$ & 32 & 64 & exact computation$^\dagger$ & 66\\
 3-fold & $3t$, $3t+1$ & 31 & 61 (with centre) & exact computation & 66 (no centre)\\
 4-fold & $4t$ & 28 & 52 & exact computation & 68\\
 5-fold & $5t$, $5t+1$ & 31 & 56 (with centre) & exact computation & 65\\
-6-fold & $6t$ & 30 & 54 & exact computation & 66\\
-7-fold & $7t$, $7t+1$ & 1 & \textbf{64, exact} (with centre) & certificate, both checkers (\texttt{C7UPPER}) & 70\\
+6-fold & $6t$ & 30 & 54; \textbf{at most 60} & certificate, both checkers (\texttt{C6UPPER}) & 66 (excluded)\\
+7-fold & $7t$, $7t+1$ & 1 & \textbf{64, exact} (with centre) & certificate, both checkers (\texttt{C7UPPER}) & 70 (excluded)\\
 order $\ge8$ & $0,1$ & 1 & \textbf{1} (exact value) & Lean-checked & impossible\\
 \bottomrule
 \end{tabular}
@@ -672,7 +672,8 @@ printed in~\cite[p.~443]{MS00}, which would give $ES(n)\le2^{n-2}$ (the lower bo
 far beyond the $23$-point instance, and Baek's method is developed for $a=4$. (2)~Is there a mirror-symmetric
 heptagon-free $32$-point set with two points on the axis (Theorem~\ref{thm:A} allows it)? (3)~Conjecture~\ref{conj:primefold}
 for $k=9$ (best $120$ of $128$; by Theorem~\ref{thm:E} one orbit of generic tiny clusters does not suffice) and $k=12$
-(best $991$ of $1024$); does a generic cluster of $93$ points satisfying Proposition~\ref{prop:orbit} exist for $m=11$? (4)~Upper bounds for the rotation types at $k=8$ below $ES(8)-1$;
+(best $991$ of $1024$); does a generic cluster of $93$ points satisfying Proposition~\ref{prop:orbit} exist for $m=11$? (4)~Upper bounds for the rotation types at $k=8$ below $ES(8)-1$ (so far $6$-fold: at most $60$, and $7$-fold: exactly
+$64$, by SAT certificates on top of the reviewed, unrefereed encoder proof; the $3$-, $4$- and $5$-fold cases are open);
 is some threefold $22$-orbit set octagon-free? (5)~Does every centrally symmetric set of $66$ points in general position
 contain a convex octagon? (6)~Formalize Theorem~\ref{thm:B}, the constructions and Lemma~\ref{lem:cubic}.
 
