@@ -1,7 +1,8 @@
 # ROT456: the 6-, 5- and 4-fold cases of ES(8) = 65 — encoder review and status (open)
 
-3 November 2026 (UTC). **Status: open. No new theorem is claimed here.** This directory records an independent review
-of the `C7UPPER` encoder for m = 4, 5, 6, its validation, and computations that did not finish.
+3 November 2026 (UTC). **Status: the 6-fold case is settled in `C6UPPER`; the 5- and 4-fold cases are open.** This
+directory records an independent review of the `C7UPPER` encoder for m = 4, 5, 6, its validation, and computations that
+did not finish. The review in §2 is what `C6UPPER` relies on for m = 6.
 
 ## 1. Target
 
@@ -46,7 +47,7 @@ All runs used CaDiCaL 3.0.1, one core each.
 | m6K8t10 | 6 | 10 | 58,626 | 1,609,785 | `ff10dafb…` | SAT in 7.4 s |
 | m5K8t12 | 5 | 12 | 71,523 | 2,354,156 | `10d36965…` | SAT in 17 s |
 | m4K8t14 | 4 | 14 | 72,298 | 2,071,625 | `4ddfc22a…` | SAT (GP loop, below) |
-| m6K8t11 | 6 | 11 | 78,059 | 2,387,083 | `542c8a3a…` | **unknown** after 1,500 s |
+| m6K8t11 | 6 | 11 | 78,059 | 2,387,083 | `542c8a3a…` | unknown after 1,500 s; **UNSAT** with Y(1,2) and 32 cubes (`C6UPPER`) |
 | m5K8t13 | 5 | 13 | 91,390 | 3,295,617 | `d7bbb743…` | **unknown** after 1,500 s |
 | m4K8t17 | 4 | 17 | 130,439 | 4,658,852 | `4843a9e9…` | **unknown** after 1,500 s |
 
@@ -69,8 +70,12 @@ sign clauses in the orbit variables. They hold for every configuration in genera
 ## 4. Next steps
 
 - Symmetry breaking: reflection in the x-axis keeps theta_0 = 0. For even m it reverses the psi-order, so the unit
-  Y(1,2) loses nothing; for odd m the unit is H(1), as in `C7UPPER`.
-- Runs of several hours, or cube-and-conquer, for the three threshold instances.
+  Y(1,2) loses nothing (written out and tested in `C6UPPER` §2). For odd m the unit is H(1), as in `C7UPPER`.
+- m = 6: done (`C6UPPER`: Y(1,2) plus a 32-cube split on the phase order of layers 1–4, all proofs checked by both
+  checkers).
+- m = 5, 4: the same split. For m5K8t13 the base is H(1) plus 64 patterns of the six Y variables on layers 1–4, of which
+  24 are consistent; the 40 impossible ones are refuted, and a first run of the 24 consistent ones did not finish
+  (see `C6UPPER` §4 when updated).
 - More GP rounds at t = L + 1.
 
 ## Reproduction
