@@ -10,7 +10,9 @@ of ES(8) = 65).
 
 **Status.**
 - Encoding: `C7UPPER/gen.py`. Its soundness rests on a written proof (the docstring of `gen.py`). An independent review
-  found it sound for (m, K) = (6, 8) (`ROT456` §2). It is not Lean-checked.
+  found it sound for (m, K) = (6, 8) (`ROT456` §2).
+  - Lean-checked since 4 November (`LAYERLEAN`): the layer lemma, and the mathematical soundness of the chain family.
+  - Still written proof and review: the angular rules, and the step from code to clauses.
 - Symmetry breaking: the unit Y(1,2). This rests on the short written argument in §2, a numerical test, and an
   exact integer re-check (§5).
 - Second encoder: `encb/gen_b2.py` (the `C7UPPER` encoder B extended to even m) gives the same verdict with the same
@@ -170,8 +172,10 @@ the written soundness argument, the reflection unit (§2) and the canonical trip
 
 - The statement concerns Euclidean 6-fold rotations. Affine 6-fold symmetries reduce to it by the averaging argument of
   `SYMLEAN`.
-- The layer lemma, including strict nesting in the form of the nesting clauses, is Lean-checked (`LAYERLEAN`, added
-  4 November). The encoder's soundness and §2 are written proofs (reviewed, not Lean-checked).
+- Lean-checked (`LAYERLEAN`, added 4 November):
+  - the layer lemma, including strict nesting in the form of the nesting clauses;
+  - the mathematical soundness of the chain family.
+- Written proofs (reviewed, not Lean-checked): the angular rules, the step from code to clauses, and §2.
 - The exact maximum (54 or 60) is open. The plain encoding is SAT at 10 layers (`ROT456` §3).
 - The 5-fold (13 layers) and 4-fold (17 layers) threshold cases remain open (`ROT456`).
 

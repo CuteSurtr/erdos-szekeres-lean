@@ -1,4 +1,4 @@
-# LAYERLEAN: the layer lemma in Lean
+# LAYERLEAN: the layer lemma and the chain family in Lean
 
 4 November 2026 (KST). **Lean-checked**: Lean 4.24.0, Mathlib `f897ebcf`, the repository's pins. The file is
 `LayerLemma.lean`.
@@ -51,6 +51,19 @@ edge x → ρx. This is exactly the form of the layered encoders' nesting clause
 point p ≠ c, then c ∉ S. The rotation by π, a power of the given rotation, maps p to 2c − p, and the three points
 p, c, 2c − p would be collinear.
 
+**Chain clauses** (`chain_clauses_sound`). The encoders forbid a convex K-gon by forbidding K − 1 points q₀, …, q_{K−2}
+of the layers ≥ i, all other than a pivot p of layer i, that satisfy `orient p qₛ qₛ₊₁ > 0` and
+`orient qₛ qₛ₊₁ qₛ₊₂ > 0`. Under the layer lemma's hypotheses, general position, no convex K-gon, 4 ≤ K ≤ 2m and m ≥ 3,
+no such chain exists. In other words, the true orientations satisfy the encoders' chain family. The proof has two
+parts.
+- **Fan lemma** (`hasConvexNGon_of_fan`, general position not needed). A pivot plus n ≥ 3 chain points inside an open
+  half-plane through the pivot form a convex (n+1)-gon. Every ordered triple is positive, by two polynomial identities
+  (`orient_trans_halfplane`, `fan_step`) and the repository's `Suk.convexPosition_of_positive_triples`.
+- **Half-plane** (`lin_pos_of_peel`). Every other point of layers ≥ i lies strictly on the inner side of the tangent at
+  p.
+  - For vertices ρʲp, the value is |p − c|²(1 − cos jα).
+  - For later layers, it follows from strict nesting at the two edges through p.
+
 **Hypotheses.** Steps 1–3 need only m > 0 and K ≤ 2m, with no general position. Strict nesting also needs general
 position and m ≥ 2. The written version (`SYM5/README.md` §2,
 the note's Lemma `lem:layer`) assumes m ≥ 3 or 4.
@@ -61,8 +74,11 @@ from `SYMLEAN/SymmetricReduction.lean`.
 
 ## What is not in Lean
 
-- **The step from layers to CNF clauses.** Labelling the layers outermost first, normalizing θ_0 = 0, and the angular
-  and chain families are all part of each encoder's soundness proof, which remains a written proof.
+- **Angular rules.** These are the orientation literals forced by a phase pattern, from the polar formula; the formula
+  itself is Lean-checked in `ES8SYM`. Also outside Lean: the perturbation to generic phases, and the consistency of
+  one variable per triple orbit.
+- **Code to clauses.** That the Python generators emit exactly these families is checked by review and tests, not by
+  Lean.
 
 ## Where the lemma is used
 
@@ -75,5 +91,7 @@ from `SYMLEAN/SymmetricReduction.lean`.
 | `ROT456` | open 4-, 5- and 6-fold octagon thresholds | 4, 5, 6 | 8 |
 | `ES8SYM` | layered constructions | | |
 
-For these, the lemma's status changes from "written proof" to "**Lean-checked**". The step from layers to clauses
-stays a written proof.
+For these, the status changes as follows:
+- the layer lemma, from "written proof" to "**Lean-checked**";
+- the mathematical soundness of the chain family, now **Lean-checked**;
+- the angular rules and the code-to-clause correspondence, unchanged (written proof, review and tests).

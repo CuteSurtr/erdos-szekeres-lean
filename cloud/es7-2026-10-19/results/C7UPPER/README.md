@@ -9,7 +9,8 @@ position with no convex octagon has exactly 64 points. This is the 7-fold case o
 
 **Status.**
 - Encoding soundness: a written proof (the docstring of `gen.py`), checked step by step by an independent review that
-  found no gap. It is not Lean-checked.
+  found no gap. Since 4 November the layer lemma and the mathematical soundness of the chain family are Lean-checked
+  (`LAYERLEAN`). The angular rules and the step from code to clauses are not.
 - Two independently written encoders give UNSAT at 10 layers. Each LRAT proof is accepted by lrat-check (re-checked by
   an independent check) and by cake_lpr (heap 8,000 MB, about 33 s each; `logs/cake_A.out`, `logs/cake_B.out`).
 - Lower bound: the certified 64-point sets (9 layers plus the centre) of `ES8SYM` and `PRIMEFOLD`.
@@ -68,8 +69,8 @@ CaDiCaL 3.0.1, UNSAT in 833 s and 802 s (1.6–1.7 GB). Proofs and CNFs are in t
 
 - The statement concerns Euclidean 7-fold rotations; affine 7-fold symmetries reduce to it by the averaging argument
   of `SYMLEAN` (a 7-fold affine symmetry is conjugate to a rotation).
-- The encoding's soundness is a written proof (reviewed, not Lean-checked). The layer lemma, including strict
-  nesting, is Lean-checked (`LAYERLEAN`, added 4 November).
+- The layer lemma, including strict nesting, and the chain family's mathematical soundness are Lean-checked
+  (`LAYERLEAN`, added 4 November). The rest of the encoding's soundness is a written proof (reviewed, not Lean-checked).
 
 ## Reproduction
 

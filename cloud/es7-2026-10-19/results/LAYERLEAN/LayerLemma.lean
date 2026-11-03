@@ -1,5 +1,6 @@
 import ErdosSzekeres.Definitions
 import ErdosSzekeres.OrientationGeometry
+import ErdosSzekeres.Suk.OrientationClique
 import Mathlib.Analysis.Convex.Independent
 import Mathlib.Analysis.Convex.KreinMilman
 import Mathlib.Analysis.Convex.Topology
@@ -613,5 +614,316 @@ theorem centre_not_mem_of_even {S : Finset Point} {c : Point} {m : ℕ} (hm : 0 
     have := congrFun (h.trans hqval) i
     fin_cases i <;> simp at this ⊢ <;> linarith
   exact (generalPosition_iff_orient_ne_zero S).1 hgp p hp c hc q hq hpc hpq (Ne.symm hqc) h0
+
+/-! ## 9. Fan chains are convex polygons (the chain family of the layered encoders)
+
+The encoders forbid `K - 1` points `q 0, …, q (K-2)` around a pivot `p` with `orient p (q s) (q (s+1)) > 0`
+and `orient (q s) (q (s+1)) (q (s+2)) > 0`.  Such a chain inside an open half-plane through `p` is,
+with `p`, a convex polygon (`hasConvexNGon_of_fan`). -/
+
+/-- The linear functional `y ↦ w · (y - a)`. -/
+def lin (w a y : Point) : ℝ := w 0 * (y 0 - a 0) + w 1 * (y 1 - a 1)
+
+/-- **Half-plane transitivity.** Inside an open half-plane bounded by a line through `a`, the
+angular order around `a` is transitive. -/
+theorem orient_trans_halfplane {a b c e w : Point} (hb : 0 < lin w a b) (hc : 0 < lin w a c)
+    (he : 0 < lin w a e) (h1 : 0 < orient a b c) (h2 : 0 < orient a c e) :
+    0 < orient a b e := by
+  have key : orient a b e * lin w a c = orient a b c * lin w a e + orient a c e * lin w a b := by
+    simp only [orient, lin]
+    ring
+  have hpos : 0 < orient a b e * lin w a c := by
+    rw [key]
+    positivity
+  exact pos_of_mul_pos_left hpos hc.le
+
+/-- **One step along the fan.** -/
+theorem fan_step {p a b c e : Point} (h1 : 0 < orient b c e) (h2 : 0 < orient p c e)
+    (h3 : 0 < orient p b c) (h4 : 0 < orient a b c) (h5 : 0 < orient p a c) :
+    0 < orient a c e := by
+  have key : orient p b c * orient a c e = orient p c e * orient a b c + orient b c e * orient p a c := by
+    simp only [orient]
+    ring
+  have hpos : 0 < orient p b c * orient a c e := by
+    rw [key]
+    positivity
+  exact pos_of_mul_pos_right hpos h3.le
+
+/-- `orient p (q i) y` as the linear functional of a half-plane bounded by the line through `q i`. -/
+theorem orient_eq_lin (p x y : Point) : orient p x y = lin ![-(x 1 - p 1), x 0 - p 0] x y := by
+  simp only [orient, lin, Matrix.cons_val_zero, Matrix.cons_val_one]
+  ring
+
+/-- **Fan chains have all triples positive.** -/
+theorem fan_positive {p w : Point} {q : ℕ → Point} {n : ℕ}
+    (hhalf : ∀ s < n, 0 < lin w p (q s))
+    (hfan : ∀ s, s + 1 < n → 0 < orient p (q s) (q (s + 1)))
+    (hturn : ∀ s, s + 2 < n → 0 < orient (q s) (q (s + 1)) (q (s + 2))) :
+    (∀ j k, j < k → k < n → 0 < orient p (q j) (q k)) ∧
+      (∀ i j k, i < j → j < k → k < n → 0 < orient (q i) (q j) (q k)) := by
+  -- (a) angular order around the pivot, for all pairs
+  have hP : ∀ j k, j < k → k < n → 0 < orient p (q j) (q k) := by
+    intro j k hjk hkn
+    induction k, hjk using Nat.le_induction with
+    | base => exact hfan j hkn
+    | succ k hk ih =>
+      exact orient_trans_halfplane (hhalf j (by omega)) (hhalf k (by omega)) (hhalf (k + 1) hkn)
+        (ih (by omega)) (hfan k hkn)
+  -- (b) consecutive triples seen from an earlier chain point
+  have hQ : ∀ i s, i < s → s + 1 < n → 0 < orient (q i) (q s) (q (s + 1)) := by
+    intro i s his hsn
+    induction s, his using Nat.le_induction with
+    | base => exact hturn i (by omega)
+    | succ s hs ih =>
+      exact fan_step (p := p) (b := q s) (hturn s hsn) (hfan (s + 1) hsn) (hfan s (by omega))
+        (ih (by omega)) (hP i (s + 1) (by omega) (by omega))
+  refine ⟨hP, ?_⟩
+  -- (c) all triples, by transitivity around `q i` in the half-plane left of the line `p → q i`
+  intro i j k hij hjk hkn
+  induction k, hjk using Nat.le_induction with
+  | base => exact hQ i j hij hkn
+  | succ k hk ih =>
+    have hl : ∀ t, i < t → t < n → 0 < lin ![-(q i 1 - p 1), q i 0 - p 0] (q i) (q t) := by
+      intro t hit htn
+      rw [← orient_eq_lin]
+      exact hP i t hit htn
+    exact orient_trans_halfplane (hl j hij (by omega)) (hl k (by omega) (by omega))
+      (hl (k + 1) (by omega) hkn) (ih (by omega)) (hQ i k (by omega) hkn)
+
+/-- The pivot followed by the chain, indexed by `Fin (n + 1)`. -/
+def fanPt (p : Point) (q : ℕ → Point) (i : Fin (n + 1)) : Point :=
+  if (i : ℕ) = 0 then p else q ((i : ℕ) - 1)
+
+/-- **A fan chain is a convex polygon.** If `p` and the chain points `q 0, …, q (n-1)` (`n ≥ 3`) of
+`S` satisfy the chain conditions inside an open half-plane through `p`, then `S` contains `n + 1`
+points in convex position. -/
+theorem hasConvexNGon_of_fan {S : Finset Point} {p w : Point} {q : ℕ → Point} {n : ℕ}
+    (hn : 3 ≤ n) (hp : p ∈ S) (hq : ∀ s < n, q s ∈ S) (hhalf : ∀ s < n, 0 < lin w p (q s))
+    (hfan : ∀ s, s + 1 < n → 0 < orient p (q s) (q (s + 1)))
+    (hturn : ∀ s, s + 2 < n → 0 < orient (q s) (q (s + 1)) (q (s + 2))) :
+    HasConvexNGon (n + 1) S := by
+  classical
+  obtain ⟨hP, hT⟩ := fan_positive hhalf hfan hturn
+  set x : Fin (n + 1) → Point := fanPt p q with hx
+  -- every ordered triple of the polygon is positive
+  have htri : ∀ i j k : Fin (n + 1), i < j → j < k → 0 < orient (x i) (x j) (x k) := by
+    intro i j k hij hjk
+    have hij' : (i : ℕ) < j := hij
+    have hjk' : (j : ℕ) < k := hjk
+    have hk : (k : ℕ) < n + 1 := k.isLt
+    by_cases hi0 : (i : ℕ) = 0
+    · have hj0 : (j : ℕ) ≠ 0 := by omega
+      have hk0 : (k : ℕ) ≠ 0 := by omega
+      simp only [hx, fanPt, hi0, hj0, hk0, if_true, if_false]
+      exact hP _ _ (by omega) (by omega)
+    · have hj0 : (j : ℕ) ≠ 0 := by omega
+      have hk0 : (k : ℕ) ≠ 0 := by omega
+      simp only [hx, fanPt, hi0, hj0, hk0, if_false]
+      exact hT _ _ _ (by omega) (by omega) (by omega)
+  -- injectivity: two distinct indices lie in a positive triple with a third one
+  have hinj : Function.Injective x := by
+    intro i j hij
+    by_contra hne
+    rcases lt_or_gt_of_ne hne with h | h
+    · -- pick a third index
+      have : ∃ k : Fin (n + 1), k ≠ i ∧ k ≠ j := by
+        by_cases h0 : (i : ℕ) = 0 ∧ (j : ℕ) = 1
+        · exact ⟨⟨2, by omega⟩, fun e => by simp [Fin.ext_iff] at e; omega,
+            fun e => by simp [Fin.ext_iff] at e; omega⟩
+        · by_cases h1 : (i : ℕ) = 0
+          · exact ⟨⟨1, by omega⟩, fun e => by simp [Fin.ext_iff] at e; omega,
+              fun e => by simp [Fin.ext_iff] at e; omega⟩
+          · exact ⟨⟨0, by omega⟩, fun e => by simp [Fin.ext_iff] at e; omega,
+              fun e => by simp [Fin.ext_iff] at e; omega⟩
+      obtain ⟨k, hki, hkj⟩ := this
+      have hzero : ∀ a c : Point, orient a a c = 0 := fun a c => by simp [orient]
+      rcases lt_or_gt_of_ne hki with hk1 | hk1 <;> rcases lt_or_gt_of_ne hkj with hk2 | hk2
+      · have := htri k i j hk1 h
+        rw [hij, orient_cycle, orient_cycle] at this
+        rw [hzero] at this
+        exact lt_irrefl _ this
+      · exact absurd (lt_trans hk1 h) (lt_asymm hk2)
+      · have := htri i k j hk1 hk2
+        rw [hij, orient_cycle, hzero] at this
+        exact lt_irrefl _ this
+      · have := htri i j k h hk2
+        rw [hij, hzero] at this
+        exact lt_irrefl _ this
+    · -- symmetric case
+      have hji : x j = x i := hij.symm
+      have : ∃ k : Fin (n + 1), k ≠ i ∧ k ≠ j := by
+        by_cases h0 : (j : ℕ) = 0 ∧ (i : ℕ) = 1
+        · exact ⟨⟨2, by omega⟩, fun e => by simp [Fin.ext_iff] at e; omega,
+            fun e => by simp [Fin.ext_iff] at e; omega⟩
+        · by_cases h1 : (j : ℕ) = 0
+          · exact ⟨⟨1, by omega⟩, fun e => by simp [Fin.ext_iff] at e; omega,
+              fun e => by simp [Fin.ext_iff] at e; omega⟩
+          · exact ⟨⟨0, by omega⟩, fun e => by simp [Fin.ext_iff] at e; omega,
+              fun e => by simp [Fin.ext_iff] at e; omega⟩
+      obtain ⟨k, hki, hkj⟩ := this
+      have hzero : ∀ a c : Point, orient a a c = 0 := fun a c => by simp [orient]
+      rcases lt_or_gt_of_ne hkj with hk1 | hk1 <;> rcases lt_or_gt_of_ne hki with hk2 | hk2
+      · have := htri k j i hk1 h
+        rw [hji, orient_cycle, orient_cycle] at this
+        rw [hzero] at this
+        exact lt_irrefl _ this
+      · exact absurd (lt_trans hk1 h) (lt_asymm hk2)
+      · have := htri j k i hk1 hk2
+        rw [hji, orient_cycle, hzero] at this
+        exact lt_irrefl _ this
+      · have := htri j i k h hk2
+        rw [hji, hzero] at this
+        exact lt_irrefl _ this
+  have hconv : ConvexPosition ((Finset.univ : Finset (Fin (n + 1))).image x) :=
+    ErdosSzekeres.Suk.convexPosition_of_positive_triples x hinj Finset.univ (by simp; omega)
+      (fun i _ j _ k _ hij hjk => htri i j k hij hjk)
+  refine ⟨(Finset.univ : Finset (Fin (n + 1))).image x, ?_, ?_, hconv⟩
+  · intro y hy
+    obtain ⟨i, -, rfl⟩ := Finset.mem_image.1 hy
+    by_cases hi0 : (i : ℕ) = 0
+    · simp only [hx, fanPt, hi0, if_true]
+      exact hp
+    · simp only [hx, fanPt, hi0, if_false]
+      exact hq _ (by have := i.isLt; omega)
+  · rw [Finset.card_image_of_injective _ hinj]
+    simp
+
+/-! ## 10. Soundness of the chain clauses for layered configurations -/
+
+/-- The tangent functional at a polygon vertex, evaluated on another vertex of the same orbit. -/
+theorem lin_rotAbout (c p : Point) (β : ℝ) :
+    lin (c - p) p (rotAbout c β p) = ((p 0 - c 0) ^ 2 + (p 1 - c 1) ^ 2) * (1 - Real.cos β) := by
+  simp only [lin, rotAbout, Pi.sub_apply, Matrix.cons_val_zero, Matrix.cons_val_one]
+  ring
+
+/-- Every other vertex of the regular `m`-gon through `p` lies strictly on the inner side of the
+tangent at `p`. -/
+theorem lin_orbit_pos {c p : Point} (hpc : p ≠ c) {m : ℕ} (hm : 0 < m) {j : ℕ} (hj0 : 0 < j)
+    (hjm : j < m) : 0 < lin (c - p) p ((rotAbout c (2 * Real.pi / m))^[j] p) := by
+  rw [rotAbout_iterate, lin_rotAbout]
+  have hr : 0 < (p 0 - c 0) ^ 2 + (p 1 - c 1) ^ 2 := by
+    by_contra h
+    apply hpc
+    have h0 : p 0 - c 0 = 0 := by nlinarith [sq_nonneg (p 0 - c 0), sq_nonneg (p 1 - c 1)]
+    have h1 : p 1 - c 1 = 0 := by nlinarith [sq_nonneg (p 0 - c 0), sq_nonneg (p 1 - c 1)]
+    funext i
+    fin_cases i
+    · simpa using sub_eq_zero.1 h0
+    · simpa using sub_eq_zero.1 h1
+  have hmpos : (0 : ℝ) < m := by exact_mod_cast hm
+  have hβ0 : 0 < (j : ℝ) * (2 * Real.pi / m) := by
+    have : (0 : ℝ) < j := by exact_mod_cast hj0
+    positivity
+  have hβ1 : (j : ℝ) * (2 * Real.pi / m) < 2 * Real.pi := by
+    have hjm' : (j : ℝ) < m := by exact_mod_cast hjm
+    rw [mul_div_assoc', div_lt_iff₀ hmpos]
+    nlinarith [Real.pi_pos]
+  have hcos : Real.cos ((j : ℝ) * (2 * Real.pi / m)) < 1 := by
+    refine lt_of_le_of_ne (Real.cos_le_one _) ?_
+    intro h
+    have := (Real.cos_eq_one_iff_of_lt_of_lt (by linarith [Real.pi_pos]) hβ1).1 h
+    linarith
+  have : 0 < 1 - Real.cos ((j : ℝ) * (2 * Real.pi / m)) := by linarith
+  positivity
+
+/-- For `m ≥ 3` the vertex triple `p, ρ p, ρ^{m-1} p` is positively oriented. -/
+theorem orient_next_prev_pos {c p : Point} (hpc : p ≠ c) {m : ℕ} (hm : 3 ≤ m) :
+    0 < orient p (rotAbout c (2 * Real.pi / m) p) ((rotAbout c (2 * Real.pi / m))^[m - 1] p) := by
+  rw [rotAbout_iterate, orient_rotAbout]
+  have hr : 0 < (p 0 - c 0) ^ 2 + (p 1 - c 1) ^ 2 := by
+    by_contra h
+    apply hpc
+    have h0 : p 0 - c 0 = 0 := by nlinarith [sq_nonneg (p 0 - c 0), sq_nonneg (p 1 - c 1)]
+    have h1 : p 1 - c 1 = 0 := by nlinarith [sq_nonneg (p 0 - c 0), sq_nonneg (p 1 - c 1)]
+    funext i
+    fin_cases i
+    · simpa using sub_eq_zero.1 h0
+    · simpa using sub_eq_zero.1 h1
+  refine mul_pos hr ?_
+  set t : ℝ := Real.pi / m with htdef
+  have hmpos : (0 : ℝ) < m := by exact_mod_cast (show 0 < m by omega)
+  have hm3 : (3 : ℝ) ≤ m := by exact_mod_cast hm
+  have hcast : ((m - 1 : ℕ) : ℝ) = (m : ℝ) - 1 := by
+    rw [Nat.cast_sub (by omega)]
+    simp
+  have h2t : 2 * Real.pi / m = 2 * t := by rw [htdef]; ring
+  have h2s : ((m - 1 : ℕ) : ℝ) * (2 * Real.pi / m) = 2 * (((m : ℝ) - 1) * t) := by
+    rw [hcast, htdef]; ring
+  rw [h2s, h2t, trig_layer]
+  have hmt : (m : ℝ) * t = Real.pi := by rw [htdef]; field_simp
+  have ht0 : 0 < t := by positivity
+  have h1 : 0 < Real.sin t := Real.sin_pos_of_pos_of_lt_pi ht0 (by nlinarith [Real.pi_pos])
+  have h2 : 0 < Real.sin (((m : ℝ) - 1) * t) :=
+    Real.sin_pos_of_pos_of_lt_pi (by nlinarith) (by nlinarith)
+  have h3 : 0 < Real.sin (((m : ℝ) - 1) * t - t) :=
+    Real.sin_pos_of_pos_of_lt_pi (by nlinarith) (by nlinarith)
+  positivity
+
+/-- **The half-plane hypothesis of the chain family.** For a pivot `p` of layer `i`, every other
+point of the layers `≥ i` lies strictly on the inner side of the tangent at `p`. -/
+theorem lin_pos_of_peel {S : Finset Point} {c : Point} {m K : ℕ} (hm : 3 ≤ m) (hK : K ≤ 2 * m)
+    (hc : c ∉ S) (hinv : Invariant (rotAbout c (2 * Real.pi / m)) S) (hno : ¬ HasConvexNGon K S)
+    (hgp : GeneralPosition S) {i : ℕ} {p : Point} (hp : p ∈ hullVerts (peel S i)) {y : Point}
+    (hy : y ∈ peel S i) (hyp : y ≠ p) : 0 < lin (c - p) p y := by
+  set ρ := rotAbout c (2 * Real.pi / m) with hρ
+  have hm0 : 0 < m := by omega
+  have hpS : p ∈ S := peel_subset S i (hullVerts_subset _ hp)
+  have hpc : p ≠ c := fun h => hc (h ▸ hpS)
+  have hci : c ∉ peel S i := fun h => hc (peel_subset S i h)
+  have hnon : ¬ HasConvexNGon K (peel S i) := fun ⟨t, ht, htK⟩ =>
+    hno ⟨t, ht.trans (peel_subset S i), htK⟩
+  have hL := hullVerts_eq_orbitFS_rotAbout hm0 hK hci (invariant_peel hm0 hc hinv i) hnon hp
+  by_cases hyL : y ∈ hullVerts (peel S i)
+  · rw [hL] at hyL
+    obtain ⟨j, hj, rfl⟩ := Finset.mem_image.1 hyL
+    have hj0 : j ≠ 0 := by rintro rfl; exact hyp rfl
+    exact lin_orbit_pos hpc hm0 (by omega) (Finset.mem_range.1 hj)
+  · have hy1 : y ∈ peel S (i + 1) := by
+      rw [peel_succ]; exact Finset.mem_sdiff.2 ⟨hy, hyL⟩
+    set p' := ρ^[m - 1] p with hp'
+    have hp'L : p' ∈ hullVerts (peel S i) := by
+      rw [hL]; exact Finset.mem_image.2 ⟨m - 1, Finset.mem_range.2 (by omega), rfl⟩
+    have hρp' : ρ p' = p := by
+      rw [hp', ← Function.iterate_succ_apply' ρ (m - 1) p, Nat.succ_eq_add_one,
+        Nat.sub_add_cancel (by omega : 1 ≤ m)]
+      have := iterate_minimalPeriod (f := ρ) (x := p)
+      rwa [hρ, minimalPeriod_rotAbout hm0 hpc] at this
+    have e1 : 0 < orient p (ρ p) y :=
+      strict_nesting (by omega) hK hc hinv hno hgp (by omega : i < i + 1) hp hy1
+    have e2 : 0 < orient p' (ρ p') y :=
+      strict_nesting (by omega) hK hc hinv hno hgp (by omega : i < i + 1) hp'L hy1
+    rw [hρp'] at e2
+    have hw1 : 0 < lin (c - p) p (ρ p) := by
+      have := lin_orbit_pos hpc hm0 (j := 1) (by omega) (by omega)
+      simpa using this
+    have hw2 : 0 < lin (c - p) p p' := lin_orbit_pos hpc hm0 (by omega) (by omega)
+    have hpp : 0 < orient p (ρ p) p' := orient_next_prev_pos hpc hm
+    have key : orient p (ρ p) p' * lin (c - p) p y =
+        orient p' p y * lin (c - p) p (ρ p) + orient p (ρ p) y * lin (c - p) p p' := by
+      simp only [orient, lin, Pi.sub_apply]
+      ring
+    have hpos : 0 < orient p (ρ p) p' * lin (c - p) p y := by
+      rw [key]; positivity
+    exact pos_of_mul_pos_right hpos hpp.le
+
+/-- **Soundness of the chain clauses.** In a configuration satisfying the hypotheses of the layer
+lemma, in general position and with no `K` points in convex position (`4 ≤ K ≤ 2m`, `m ≥ 3`),
+there is no chain of `K - 1` points of the layers `≥ i`, other than a pivot `p` of layer `i`, with
+`orient p (q s) (q (s+1)) > 0` and `orient (q s) (q (s+1)) (q (s+2)) > 0`.  This is the statement that
+the true orientations satisfy the encoders' "no convex `K`-gon" clauses. -/
+theorem chain_clauses_sound {S : Finset Point} {c : Point} {m K : ℕ} (hm : 3 ≤ m) (hK4 : 4 ≤ K)
+    (hK : K ≤ 2 * m) (hc : c ∉ S) (hinv : Invariant (rotAbout c (2 * Real.pi / m)) S)
+    (hno : ¬ HasConvexNGon K S) (hgp : GeneralPosition S) {i : ℕ} {p : Point}
+    (hp : p ∈ hullVerts (peel S i)) {q : ℕ → Point} (hq : ∀ s < K - 1, q s ∈ peel S i)
+    (hqp : ∀ s < K - 1, q s ≠ p)
+    (hfan : ∀ s, s + 1 < K - 1 → 0 < orient p (q s) (q (s + 1)))
+    (hturn : ∀ s, s + 2 < K - 1 → 0 < orient (q s) (q (s + 1)) (q (s + 2))) : False := by
+  have hpS : p ∈ peel S i := hullVerts_subset _ hp
+  have hconv : HasConvexNGon (K - 1 + 1) (peel S i) :=
+    hasConvexNGon_of_fan (w := c - p) (by omega) hpS hq
+      (fun s hs => lin_pos_of_peel hm hK hc hinv hno hgp hp (hq s hs) (hqp s hs)) hfan hturn
+  rw [Nat.sub_add_cancel (by omega)] at hconv
+  obtain ⟨t, ht, htK, htc⟩ := hconv
+  exact hno ⟨t, ht.trans (peel_subset S i), htK, htc⟩
 
 end ErdosSzekeres.LayerLemma
