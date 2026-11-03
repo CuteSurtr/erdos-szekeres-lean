@@ -1,0 +1,8 @@
+# Realization attempts for the GP-consistent models (heuristic search; floating point; no hit)
+## m=6 t=10
+realize.py (hinge-loss descent over u = 1/r and phases, 360 s, seed 2): BEST violated 249 of 5710
+nest3 seeded from the plain SAT model (150 s): # m=6 t=10 C=0 K=8 cost=210 mindet=7.74e-07 maxconv=8
+nest3 seeded from the realize.py fit (200 s): # m=6 t=10 C=0 K=8 cost=924 mindet=7.6e-07 maxconv=9
+## m=4 t=14
+realize.py (230 s, seed 3): BEST violated 424 of 6930
+nest3 seeded from seed_from_model.py (220 s): # m=4 t=14 C=0 K=8 cost=1362 mindet=1.46e-06 maxconv=9
