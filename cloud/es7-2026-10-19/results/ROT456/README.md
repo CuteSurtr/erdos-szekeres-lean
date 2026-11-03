@@ -87,6 +87,13 @@ sign clauses in the orbit variables. They hold for every configuration in genera
     - So adding layer 5 did not make the pieces tractable on this machine. A 6-fold cube took about 30 min by
       comparison.
     - Other splitting variables, derived lemmas or much more compute are needed.
+  - Night run (4 November, about 6.5 h, `logs/cubes5_night_2026-11-04.txt`).
+    - Two 4-layer phase-order cubes, d001111 (2<3<1<4) and d010100 (4<2<1<3), each ran 22,102 s (6.1 h) without an
+      answer. A third lane was stopped after 802 s to free memory for another job.
+    - Each reached about 50 million conflicts.
+    - The 6-fold cubes, by comparison, closed after 2.0–2.6 million conflicts.
+    - So the 5-fold cubes are at least about 20 times harder in conflicts, and longer runs of the same split are
+      unlikely to settle the case on this machine.
   - m4K8t17 was not attempted.
 - More GP rounds at t = L + 1.
 
