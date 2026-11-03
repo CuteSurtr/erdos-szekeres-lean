@@ -1,0 +1,132 @@
+{
+  "m": 6,
+  "t": 10,
+  "model_sha256": "7fa3fe304361b20940b30e5a3fb3443b87c1bb6931acc50152e07421526e94f7",
+  "scope": "realizations invariant under the specified Euclidean rotation",
+  "verified_exponent_cancellation": true,
+  "comparisons": [
+    {
+      "anchor_quintuple": [
+        0,
+        2,
+        4,
+        6,
+        21
+      ],
+      "minority_term": 2,
+      "other_term": 1,
+      "term_signs": [
+        1,
+        1,
+        -1
+      ],
+      "greater_orbits": [
+        [
+          0,
+          2,
+          21
+        ],
+        [
+          0,
+          2,
+          8
+        ]
+      ],
+      "lesser_orbits": [
+        [
+          0,
+          2,
+          6
+        ],
+        [
+          0,
+          2,
+          23
+        ]
+      ],
+      "weight": 1
+    },
+    {
+      "anchor_quintuple": [
+        0,
+        2,
+        4,
+        10,
+        23
+      ],
+      "minority_term": 2,
+      "other_term": 1,
+      "term_signs": [
+        1,
+        1,
+        -1
+      ],
+      "greater_orbits": [
+        [
+          0,
+          2,
+          23
+        ],
+        [
+          0,
+          2,
+          6
+        ]
+      ],
+      "lesser_orbits": [
+        [
+          0,
+          2,
+          10
+        ],
+        [
+          0,
+          2,
+          19
+        ]
+      ],
+      "weight": 1
+    },
+    {
+      "anchor_quintuple": [
+        0,
+        2,
+        4,
+        8,
+        19
+      ],
+      "minority_term": 2,
+      "other_term": 1,
+      "term_signs": [
+        1,
+        1,
+        -1
+      ],
+      "greater_orbits": [
+        [
+          0,
+          2,
+          19
+        ],
+        [
+          0,
+          2,
+          10
+        ]
+      ],
+      "lesser_orbits": [
+        [
+          0,
+          2,
+          8
+        ],
+        [
+          0,
+          2,
+          21
+        ]
+      ],
+      "weight": 1
+    }
+  ]
+}

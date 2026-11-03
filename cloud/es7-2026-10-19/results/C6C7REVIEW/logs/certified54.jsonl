@@ -1,0 +1,8 @@
+{"source": "ES8SYM/sets/c6_54pts_9layers.pts", "sha256": "235472b5c604421d11458865e2035b9977a8aa628f699f82bfad74536bf12c95", "rigor": "exact computation", "arithmetic": "integer/rational Q(sqrt(3)); no trigonometry"}
+{"formula": "A", "m": 6, "t": 9, "clauses": 1040348, "sha256": "467e71194ffd0c2c6a629191fd5d86d33a30a61995e0227eac144649b5ba6782"}
+{"formula": "B", "m": 6, "t": 9, "clauses": 1040348, "sha256": "9f63854369a76998e13217e1f4208e365d0821b07f253decca2b9aed1ba1d350"}
+{"case": "original", "encoder": "A", "clauses": 1040348, "geometry_violations": 0, "chain_violations": 0, "Y12": false, "nonzero_triples": 24804, "strict_nesting": true, "phase_order": [0, 3, 8, 7, 2, 6, 5, 4, 1]}
+{"case": "original", "encoder": "B", "clauses": 1040348, "geometry_violations": 0, "chain_violations": 0, "Y12": false, "nonzero_triples": 24804, "strict_nesting": true, "phase_order": [0, 3, 8, 7, 2, 6, 5, 4, 1]}
+{"case": "mirror", "encoder": "A", "clauses": 1040348, "geometry_violations": 0, "chain_violations": 0, "Y12": true, "nonzero_triples": 24804, "strict_nesting": true, "phase_order": [0, 1, 4, 5, 6, 2, 7, 8, 3]}
+{"case": "mirror", "encoder": "B", "clauses": 1040348, "geometry_violations": 0, "chain_violations": 0, "Y12": true, "nonzero_triples": 24804, "strict_nesting": true, "phase_order": [0, 1, 4, 5, 6, 2, 7, 8, 3]}
+{"status": "PASS", "Y12_original": false, "Y12_mirror": true, "elapsed_seconds": 6.28, "maximum_rss_bytes": 733347840}

@@ -1,0 +1,72 @@
+{
+  "rigor": "exact computation for identities, assignments and GP checks; written soundness proof for cuts; solver timings are evidence only",
+  "archive": "proof-archives/es8-c6c7-review-2026-11-04/m6",
+  "start_utc": "2026-11-03T16:41:46+00:00",
+  "deadline_utc": "2026-11-03T17:06:46+00:00",
+  "finished_utc": "2026-11-03T17:04:45.764158+00:00",
+  "all_subtask_processes_exited": true,
+  "process_status_basis": "All retained child handles were waited to completion; each runner waits or terminates and reaps its own solver.",
+  "sat_solves": 25,
+  "unsat_results": 0,
+  "lrat_proofs_generated": 0,
+  "peak_observed_total_gb": 27.259,
+  "solver_cores": 1,
+  "memory_guard_total_gb": 29,
+  "individual_solver_peak_rss_recorded": false,
+  "polynomial_family_clauses": [
+    1080,
+    17280,
+    103680
+  ],
+  "complete_two_orbit_gp_clauses": 421720,
+  "additional_gp_refinement_clauses": 84256,
+  "initial_pilot_clauses": 12,
+  "final_clause_count": 3381621,
+  "checks": {
+    "initial_model_gp": {
+      "model_sha256": "b0cde9d9e0ce5652211136d6443b91cbb7d261b601b5ff887a4273e834d14472",
+      "checker_sha256": "7bb2e1535755438daeedb3dc68561abed94458945d87c2dedce9c53917a03c6c",
+      "checker_source_sha256": "2e425efed9e072963b36552e2565846d5ecc05952ce5b91e3cf065cd5be98ee9",
+      "verdict": "relations 27307560 violated 0",
+      "max_retained_violations": 100000
+    },
+    "intermediate_model_gp": {
+      "model_sha256": "7d52dd0f74bbeb1f1ccf11a0777f8c02dcd8be8dda50f8540d9465e75b6c4e76",
+      "checker_sha256": "7bb2e1535755438daeedb3dc68561abed94458945d87c2dedce9c53917a03c6c",
+      "checker_source_sha256": "2e425efed9e072963b36552e2565846d5ecc05952ce5b91e3cf065cd5be98ee9",
+      "verdict": "relations 27307560 violated 0",
+      "max_retained_violations": 100000
+    },
+    "intermediate_assignment": {
+      "rigor": "exact computation",
+      "cnf_sha256": "b27ef73ccaca4084fb06211a671dac6b4278b61b1a9ac105387c3e6fe9567cf0",
+      "model_sha256": "7d52dd0f74bbeb1f1ccf11a0777f8c02dcd8be8dda50f8540d9465e75b6c4e76",
+      "variables": 58626,
+      "clauses_checked": 3277941,
+      "all_clauses_satisfied": true,
+      "elapsed_seconds": 2.254
+    },
+    "final_model_gp": {
+      "model_sha256": "437144235bdaf2045f30767432d7453a2199bb608fee49257dfb51554db9789d",
+      "checker_sha256": "7bb2e1535755438daeedb3dc68561abed94458945d87c2dedce9c53917a03c6c",
+      "checker_source_sha256": "2e425efed9e072963b36552e2565846d5ecc05952ce5b91e3cf065cd5be98ee9",
+      "verdict": "relations 27307560 violated 2640",
+      "max_retained_violations": 100000
+    },
+    "final_assignment": {
+      "rigor": "exact computation",
+      "cnf_sha256": "7889860ea9c629e9a00d8f1523ecfaaa6e02d615d88853b7695c6ab1985c50d6",
+      "model_sha256": "437144235bdaf2045f30767432d7453a2199bb608fee49257dfb51554db9789d",
+      "variables": 58626,
+      "clauses_checked": 3381621,
+      "all_clauses_satisfied": true,
+      "elapsed_seconds": 2.383
+    }
+  },
+  "conclusions": [
+    "Original archived model has no realization carrying its specified sixfold rotation.",
+    "A fully GP-consistent successor is also excluded by a verified five-comparison rotation-specific polynomial.",
+    "The final retained assignment satisfies every clause of the strengthened formula but violates 2640 full GP relations.",
+    "No sixfold upper bound beyond 60 and no realizable 60-point set were established."
+  ]
+}
