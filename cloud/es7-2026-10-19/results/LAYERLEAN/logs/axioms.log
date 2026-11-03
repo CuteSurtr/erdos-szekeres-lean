@@ -3,6 +3,7 @@
 'ErdosSzekeres.LayerLemma.layers_are_orbits' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ErdosSzekeres.LayerLemma.exists_layer' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ErdosSzekeres.LayerLemma.strict_nesting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.LayerLemma.centre_not_mem_of_even' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ErdosSzekeres.LayerLemma.convexPosition_hullVerts' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ErdosSzekeres.LayerLemma.subset_convexHull_hullVerts' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ErdosSzekeres.LayerLemma.minimalPeriod_rotAbout' depends on axioms: [propext, Classical.choice, Quot.sound]
