@@ -12,6 +12,8 @@ of ES(8) = 65).
 - Encoding: `C7UPPER/gen.py`. Its soundness rests on a written proof (the docstring of `gen.py`). An independent review
   found it sound for (m, K) = (6, 8) (`ROT456` §2). It is not Lean-checked.
 - Symmetry breaking: the unit Y(1,2). This rests on the short written argument in §2 and an exact test.
+- Second encoder: `encb/gen_b2.py` (the `C7UPPER` encoder B extended to even m) gives the same verdict with the same
+  split; its own tests are in §3b.
 - Certificate: the case split covers all 32 sign patterns of five phase-order variables, which `tools/verify_cover.py`
   (stdlib only) checks. Every one of the 32 LRAT proofs is accepted by lrat-check and by cake_lpr.
 - Lower bound: the certified 54-point set `ES8SYM/sets/c6_54pts_9layers`. The exact maximum is open. One layer beyond
@@ -88,6 +90,73 @@ CNF + Y(1,2) is UNSAT, no configuration exists.
   at a time with heap 8,000 MB (`logs/cake.txt`).
 - **Archive.** The proofs (zstd) and the base CNF are in the local archive `es8-c6-octagon-2026-11-03` (outside Git).
   Each decompression round trip was verified. Raw and compressed hashes are in `SHA256SUMS.txt`.
+
+## 3b. Second encoder (encoder B)
+
+`encb/gen_b2.py` extends the second encoder of `C7UPPER`, `C7UPPER/gen_b.py`, to even m. It was written
+on 3 November 2026 and shares no code with `gen.py`.
+
+**How it differs from `gen.py`.**
+- It computes exact integer circular orders instead of sampled float patterns.
+- It builds the chains backwards.
+- It uses different canonical forms and a different variable numbering.
+
+**What the even-m extension changes.**
+- psi_i = theta_i mod 2pi/m, and there are no Hb variables.
+- A direction is (k, rank) in units of 2pi/m, and its antipode is (k + m/2, rank).
+- A triple that contains an antipodal pair of one layer has coinciding keys. It gets no angular clause, which is weaker
+  but sound (as in `gen.py`).
+- The odd-m code path is unchanged.
+
+**Tests** (`logs/encb_*`).
+- **Odd path unchanged.** `gen_b2.py 7 8 10` reproduces the certified encoder-B formula of `C7UPPER` byte for byte
+  (`b4d29017…`).
+- **Same size as encoder A.** For m = 6, B gives 42,728 variables and 1,040,348 clauses (9 layers), and 78,059 and
+  2,387,083 (11 layers), with 2,347 angular units and 7,740 conditional clauses at 11 layers.
+- **Agreement with encoder A.** `encb/compare_ab2.py` finds 0 mismatches on the non-chain part: 11,738 orbit-pattern
+  pairs at 9 layers and 23,852 at 11 layers.
+- **Real sets.** The certified 54-point set and its exact mirror image satisfy all 1,040,348 clauses of B's 9-layer
+  formula (`encb/test_b_sets.py`, 90-digit arithmetic, orientations read through B's own map).
+- **Chains against brute force.** On 880 random 2- and 3-layer configurations, 715 are octagon-free and satisfy B, and
+  165 contain a convex octagon and violate B's chain clauses. None is unsound or inexact (`encb/test_bruteforce_b2.py`,
+  brute force over all 8-subsets).
+- **Random larger sets.** 120 random configurations with 4–6 layers violate no non-chain clause
+  (`encb/test_random_b2.py`).
+
+**Certificate.**
+- **Formula.** B's m6K8t11 (SHA-256 `479e31a9…`) with B's own unit Y(1,2) (variable 1), split the same way: all 32
+  sign patterns of Y(1,3), Y(1,4), Y(2,3), Y(2,4), Y(3,4) (variables 2, 3, 10, 11, 18).
+- **Cover check.** `tools/verify_cover.py` accepts the split.
+- **Impossible patterns.** The 20 patterns that violate transitivity are refuted at once.
+
+The 12 phase orders:
+
+| cube | order | CaDiCaL (s) | LRAT | lrat-check | cake_lpr |
+|---|---|---:|---:|---|---|
+| c00000 | 4<3<1<2 | UNSAT | 2,151 | 3.90 GB | VERIFIED | VERIFIED UNSAT |
+| c00001 | 3<4<1<2 | UNSAT | 2,543 | 4.50 GB | VERIFIED | VERIFIED UNSAT |
+| c01001 | 3<1<4<2 | UNSAT | 1,768 | 3.26 GB | VERIFIED | VERIFIED UNSAT |
+| c01011 | 3<1<2<4 | UNSAT | 2,102 | 3.91 GB | VERIFIED | VERIFIED UNSAT |
+| c10000 | 4<1<3<2 | UNSAT | 1,716 | 3.18 GB | VERIFIED | VERIFIED UNSAT |
+| c10100 | 4<1<2<3 | UNSAT | 2,553 | 4.58 GB | VERIFIED | VERIFIED UNSAT |
+| c11000 | 1<4<3<2 | UNSAT | 1,990 | 3.62 GB | VERIFIED | VERIFIED UNSAT |
+| c11001 | 1<3<4<2 | UNSAT | 2,055 | 3.74 GB | VERIFIED | VERIFIED UNSAT |
+| c11011 | 1<3<2<4 | UNSAT | 1,916 | 3.60 GB | VERIFIED | VERIFIED UNSAT |
+| c11100 | 1<4<2<3 | UNSAT | 1,495 | 2.78 GB | VERIFIED | VERIFIED UNSAT |
+| c11110 | 1<2<4<3 | UNSAT | 2,076 | 4.20 GB | VERIFIED | VERIFIED UNSAT |
+| c11111 | 1<2<3<4 | UNSAT | 2,292 | 4.46 GB | VERIFIED | VERIFIED UNSAT |
+
+- **Runs.** About 24,700 CPU seconds in total on 6 lanes, 1 h 24 min wall clock. The proofs total 45.7 GB. cake_lpr ran
+  with heap 4,000 MB.
+- **Checks.** All 32 proofs are accepted by lrat-check and cake_lpr (`logs/encb_cubes.txt`, `logs/encb_cake.txt`,
+  `logs/encb_cadical_summary.txt`, `logs/encb_verify_cover.log`).
+- **Archive.** The proofs are in the local archive under `lrat_B/`.
+- **Unused hedge.** A hedge split of the last cube by layer 5 (`tools/mksub.py`, `tools/verify_sub.py`) was stopped
+  once that cube itself was UNSAT. It is not part of the certificate (`logs/encb_subcube_hedge.txt`).
+
+Encoders A and B therefore give independent certificates of the same statement. They share the written soundness
+argument and the reflection unit (§2), but no code.
+
 
 ## 4. Scope and open questions
 
