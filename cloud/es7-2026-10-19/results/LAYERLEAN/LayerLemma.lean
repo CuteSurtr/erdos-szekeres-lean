@@ -1,4 +1,5 @@
 import ErdosSzekeres.Definitions
+import ErdosSzekeres.OrientationGeometry
 import Mathlib.Analysis.Convex.Independent
 import Mathlib.Analysis.Convex.KreinMilman
 import Mathlib.Analysis.Convex.Topology
@@ -14,10 +15,12 @@ point `c ∉ S`, and suppose `S` has no `K` points in convex position for some `
 vertex set of the convex hull of `S` is a single `ρ`-orbit, i.e. a regular `m`-gon about `c`
 (`hullVerts_eq_orbitFS_rotAbout`).  Removing it leaves a set with the same properties, so every
 convex layer of `S` is one orbit, and each layer lies in the convex hull of the layer before it
-(`layers_are_orbits`).
+(`layers_are_orbits`); the layers exhaust `S` (`exists_layer`).  If `S` is moreover in general
+position and `m ≥ 2`, every point of a later layer lies strictly to the left of every edge
+`x → ρ x` of an earlier layer (`strict_nesting`), which is the form of the nesting clauses of the
+layered encoders.
 
-This is steps 1–3 of the layer lemma of `SYM5/README.md` §2.  Step 4 there (general position puts
-every later point *strictly* inside each earlier hull) is not formalized here.
+This is the layer lemma of `SYM5/README.md` §2 (all four steps).
 
 The vertices of the hull of a finite set are its points that are not in the convex hull of the
 other points (`hullVerts`); `extreme_mem_hullVerts` and `subset_convexHull_hullVerts` relate this to
@@ -450,5 +453,124 @@ theorem exists_layer (S : Finset Point) {y : Point} (hy : y ∈ S) :
   rw [hn, peel_succ] at hk
   by_contra hH
   exact hk (Finset.mem_sdiff.2 ⟨hyn, hH⟩)
+
+/-! ## 7. Strict nesting (step 4), in the orientation form of the encoders' nesting clauses -/
+
+theorem peel_antitone (S : Finset Point) {n n' : ℕ} (h : n ≤ n') : peel S n' ⊆ peel S n := by
+  induction h with
+  | refl => exact Finset.Subset.refl _
+  | step _ ih => exact (Finset.sdiff_subset).trans ih
+
+theorem rotAbout_iterate (c : Point) (α : ℝ) (j : ℕ) :
+    (rotAbout c α)^[j] = rotAbout c (j * α) := by
+  rw [rotAbout_eq_crot, crot_iterate, rotAbout_eq_crot, ← Complex.exp_nat_mul]
+  push_cast
+  ring_nf
+
+/-- The orientation of a regular-polygon triple, in coordinates. -/
+theorem orient_rotAbout (c x : Point) (α β : ℝ) :
+    orient x (rotAbout c α x) (rotAbout c β x) =
+      ((x 0 - c 0) ^ 2 + (x 1 - c 1) ^ 2) *
+        ((Real.cos α - 1) * Real.sin β - Real.sin α * (Real.cos β - 1)) := by
+  simp only [orient, rotAbout, Matrix.cons_val_zero, Matrix.cons_val_one]
+  ring
+
+/-- `(cos 2t - 1) sin 2s - sin 2t (cos 2s - 1) = 4 sin t sin s sin (s - t)`. -/
+theorem trig_layer (s t : ℝ) :
+    (Real.cos (2 * t) - 1) * Real.sin (2 * s) - Real.sin (2 * t) * (Real.cos (2 * s) - 1) =
+      4 * Real.sin t * Real.sin s * Real.sin (s - t) := by
+  rw [Real.cos_two_mul, Real.cos_two_mul, Real.sin_two_mul, Real.sin_two_mul, Real.sin_sub]
+  linear_combination (4 * Real.sin s * Real.cos s) * Real.sin_sq_add_cos_sq t -
+    (4 * Real.sin t * Real.cos t) * Real.sin_sq_add_cos_sq s
+
+/-- Every vertex of a regular `m`-gon lies weakly to the left of each of its edges. -/
+theorem orient_regular_nonneg {c x : Point} {m : ℕ} (hm : 0 < m) {j : ℕ} (hj : j ≤ m) :
+    0 ≤ orient x (rotAbout c (2 * Real.pi / m) x) ((rotAbout c (2 * Real.pi / m))^[j] x) := by
+  rw [rotAbout_iterate, orient_rotAbout]
+  refine mul_nonneg (by positivity) ?_
+  rcases Nat.eq_zero_or_pos j with rfl | hj0
+  · simp
+  set t : ℝ := Real.pi / m with htdef
+  have hmpos : (0 : ℝ) < m := by exact_mod_cast hm
+  have h2t : 2 * Real.pi / m = 2 * t := by rw [htdef]; ring
+  have h2s : (j : ℝ) * (2 * Real.pi / m) = 2 * (j * t) := by rw [htdef]; ring
+  rw [h2s, h2t, trig_layer]
+  have hjm : (j : ℝ) ≤ m := by exact_mod_cast hj
+  have hj1 : (1 : ℝ) ≤ j := by exact_mod_cast hj0
+  have ht0 : 0 ≤ t := by positivity
+  have htpi : t ≤ Real.pi := by
+    rw [htdef, div_le_iff₀ hmpos]
+    nlinarith [Real.pi_pos, (show (1 : ℝ) ≤ m by exact_mod_cast hm)]
+  have hjt : j * t ≤ Real.pi := by
+    rw [htdef, mul_div_assoc', div_le_iff₀ hmpos]
+    nlinarith [Real.pi_pos]
+  have h1 : 0 ≤ Real.sin t := Real.sin_nonneg_of_nonneg_of_le_pi ht0 htpi
+  have h2 : 0 ≤ Real.sin (j * t) :=
+    Real.sin_nonneg_of_nonneg_of_le_pi (by positivity) hjt
+  have h3 : 0 ≤ Real.sin (j * t - t) :=
+    Real.sin_nonneg_of_nonneg_of_le_pi (by nlinarith) (by nlinarith)
+  positivity
+
+/-- A closed half-plane `{q | 0 ≤ orient a b q}` is convex. -/
+theorem convex_orient_nonneg (a b : Point) : Convex ℝ {q : Point | 0 ≤ orient a b q} := by
+  intro q₁ hq₁ q₂ hq₂ u v hu hv huv
+  simp only [Set.mem_setOf_eq] at hq₁ hq₂ ⊢
+  have h : orient a b (u • q₁ + v • q₂) = u * orient a b q₁ + v * orient a b q₂ := by
+    simp only [orient, Pi.add_apply, Pi.smul_apply, smul_eq_mul]
+    linear_combination ((b 0 - a 0) * a 1 - (b 1 - a 1) * a 0) * huv
+  rw [h]
+  positivity
+
+/-- **Strict nesting.** Under the hypotheses of the layer lemma and general position, every point
+of a later layer lies strictly to the left of the edge `x → ρ x` of an earlier layer, for every
+vertex `x` of that layer: `orient x (ρ x) y > 0`.  This is the form of the nesting clauses of the
+layered encoders. -/
+theorem strict_nesting {S : Finset Point} {c : Point} {m K : ℕ} (hm : 2 ≤ m) (hK : K ≤ 2 * m)
+    (hc : c ∉ S) (hinv : Invariant (rotAbout c (2 * Real.pi / m)) S) (hno : ¬ HasConvexNGon K S)
+    (hgp : GeneralPosition S) {n n' : ℕ} (hnn' : n < n') {x : Point}
+    (hx : x ∈ hullVerts (peel S n)) {y : Point} (hy : y ∈ peel S n') :
+    0 < orient x (rotAbout c (2 * Real.pi / m) x) y := by
+  set ρ := rotAbout c (2 * Real.pi / m) with hρ
+  have hm0 : 0 < m := by omega
+  have hxn : x ∈ peel S n := hullVerts_subset _ hx
+  have hcn : c ∉ peel S n := fun h => hc (peel_subset S n h)
+  have hnon : ¬ HasConvexNGon K (peel S n) := fun ⟨t, ht, htK⟩ =>
+    hno ⟨t, ht.trans (peel_subset S n), htK⟩
+  have hL := hullVerts_eq_orbitFS_rotAbout hm0 hK hcn (invariant_peel hm0 hc hinv n) hnon hx
+  -- `y` is in a strictly later peel, so it lies in the hull of the layer and is not a vertex
+  have hy1 : y ∈ peel S (n + 1) := peel_antitone S (by omega) hy
+  have hyconv : y ∈ convexHull ℝ (hullVerts (peel S n) : Set Point) := by
+    have := subset_convexHull_hullVerts (peel S n)
+    exact this (Finset.mem_coe.2 ((Finset.sdiff_subset) (by rw [← peel_succ]; exact hy1)))
+  have hyL : y ∉ hullVerts (peel S n) := by
+    rw [peel_succ] at hy1
+    exact (Finset.mem_sdiff.1 hy1).2
+  -- weakly left: the half-plane contains the layer, hence its hull
+  have hweak : 0 ≤ orient x (ρ x) y := by
+    have hsub : (hullVerts (peel S n) : Set Point) ⊆ {q : Point | 0 ≤ orient x (ρ x) q} := by
+      intro q hq
+      rw [Finset.mem_coe, hL] at hq
+      obtain ⟨j, hj, rfl⟩ := Finset.mem_image.1 hq
+      exact orient_regular_nonneg hm0 (Finset.mem_range.1 hj).le
+    exact convexHull_min hsub (convex_orient_nonneg x (ρ x)) hyconv
+  -- strictly: equality would make `x, ρ x, y` collinear
+  have hρx : ρ x ∈ hullVerts (peel S n) := by
+    rw [hL]
+    exact Finset.mem_image.2 ⟨1, Finset.mem_range.2 (by omega), rfl⟩
+  have hxS : x ∈ S := peel_subset S n hxn
+  have hρxS : ρ x ∈ S := peel_subset S n (hullVerts_subset _ hρx)
+  have hyS : y ∈ S := peel_subset S n' hy
+  have hxc : x ≠ c := fun h' => hc (h' ▸ hxS)
+  have hxρx : x ≠ ρ x := by
+    intro h
+    have hper := minimalPeriod_rotAbout hm0 hxc
+    rw [← hρ] at hper
+    have : Function.IsFixedPt ρ x := h.symm
+    rw [Function.minimalPeriod_eq_one_iff_isFixedPt.2 this] at hper
+    omega
+  have hne : orient x (ρ x) y ≠ 0 :=
+    (generalPosition_iff_orient_ne_zero S).1 hgp x hxS (ρ x) hρxS y hyS hxρx
+      (fun h => hyL (h ▸ hx)) (fun h => hyL (h ▸ hρx))
+  exact lt_of_le_of_ne hweak (Ne.symm hne)
 
 end ErdosSzekeres.LayerLemma

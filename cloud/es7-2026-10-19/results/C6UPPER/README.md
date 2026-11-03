@@ -162,8 +162,8 @@ argument and the reflection unit (§2), but no code.
 
 - The statement concerns Euclidean 6-fold rotations. Affine 6-fold symmetries reduce to it by the averaging argument of
   `SYMLEAN`.
-- The layer lemma is Lean-checked except strict nesting (`LAYERLEAN`, added 4 November). Strict nesting, the
-  encoder's soundness and §2 are written proofs (reviewed, not Lean-checked).
+- The layer lemma, including strict nesting in the form of the nesting clauses, is Lean-checked (`LAYERLEAN`, added
+  4 November). The encoder's soundness and §2 are written proofs (reviewed, not Lean-checked).
 - The exact maximum (54, 60, or in between) is open. The plain encoding is SAT at 10 layers (`ROT456` §3).
 - The 5-fold (13 layers) and 4-fold (17 layers) threshold cases remain open (`ROT456`).
 

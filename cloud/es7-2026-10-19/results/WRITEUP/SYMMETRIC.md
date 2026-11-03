@@ -147,8 +147,8 @@ centre included; 32 to 34 are impossible sizes).
   LRAT proof is retained and accepted by both checkers. A generic centre comes from the perturbation lemma.
 - **Layer lemma.** A rotation of order m ≥ 4 about a point outside S, with no K-gon in S for some K ≤ 2m, makes every
   convex layer a single orbit. So a 35-point set would be seven nested regular pentagons. arXiv:2506.00224, §3.2, states
-  a special case (16 points, fourfold, no hexagon: four layers of four points). Steps 1–3 are Lean-checked in
-  `LAYERLEAN` (4 November); the strict-nesting step is a written proof.
+  a special case (16 points, fourfold, no hexagon: four layers of four points). The lemma, including strict nesting, is
+  Lean-checked in `LAYERLEAN` (4 November).
 - **Credit.** The bound also follows from an earlier reported computation, which has priority (30 December 2025).
   Dumitru (arXiv:2512.24061, §7, Table 1, row 5^6 (H = 30), baseline) reports an unsatisfiable Kissat run for 33 points
   whose first six convex layers are pentagons, with the remaining three points inside them. His public generator
@@ -217,8 +217,7 @@ mirror-symmetric octagon-free sets by 58 points. With Baek's theorem for n = 8 (
   (`AUDIT3` A4; `C4CUT/review`). Mirror: `SYMZ/zcnf.py` (`SYMZ/README.md`; two audits of 29 October; `AUDIT3` A3).
   Central: `C2ENC`, refereed; its finding R1 adds that each second-layer cover is a cover relative to a hull cube, a
   one-line consequence of the base theorem (`C2FINAL` §1).
-- The perturbation lemma for odd orders (`C2ENC`), the strict-nesting step of the layer lemma (the rest is
-  Lean-checked in `LAYERLEAN`), reductions A and B, Lemma 5 and Lemma H6M of the
+- The perturbation lemma for odd orders (`C2ENC`), reductions A and B, Lemma 5 and Lemma H6M of the
   threefold split, and the mirror reduction (also Lean-checked in `SYMLEAN/mirror`).
 - Every case except Theorem 2 rests on one encoder; Theorem 5 uses two normal forms of one encoder.
 - Baek's theorem itself is a refereed published theorem; the repository uses an adapted Lean formalization of it.

@@ -1,11 +1,11 @@
-# LAYERLEAN: the layer lemma in Lean (steps 1–3)
+# LAYERLEAN: the layer lemma in Lean
 
 4 November 2026 (KST). **Lean-checked**: Lean 4.24.0, Mathlib `f897ebcf`, the repository's pins. The file is
 `LayerLemma.lean`.
 - **Build.** `lake env lean LayerLemma.lean` from the repository root exits 0 with no messages (`logs/build.log`).
 - **Axioms.** Every theorem below depends only on `[propext, Classical.choice, Quot.sound]` (`logs/axioms.log`).
 - **No gaps.** There is no `sorry`, `admit` or `axiom`.
-- **Sanity check.** A copy with one proof step broken fails to compile.
+- **Sanity check.** Copies with one proof step broken (in the core lemma, and in strict nesting) fail to compile.
 
 ## What is proved
 
@@ -39,7 +39,16 @@ nonempty `peel S n` satisfies:
 
 The layers exhaust S: every point of S is a hull vertex of some `peel S n` (`exists_layer`).
 
-**Hypotheses.** Only m > 0 and K ≤ 2m are needed, with no general position. The written version (`SYM5/README.md` §2,
+**Strict nesting** (`strict_nesting`, step 4). Suppose further that S is in general position and m ≥ 2. Then for n < n',
+every vertex x of layer n and every y ∈ `peel S n'` satisfy `orient x (ρ x) y > 0`: y is strictly to the left of the
+edge x → ρx. This is exactly the form of the layered encoders' nesting clauses. The proof has three steps:
+- **Weak side.** The vertices of a regular m-gon lie weakly left of each edge (`orient_regular_nonneg`), via
+  `orient(x, ρx, ρ^j x) = |x − c|² · 4 sin t · sin jt · sin (j−1)t` with t = π/m (`orient_rotAbout`, `trig_layer`).
+- **Convexity.** Half-planes are convex (`convex_orient_nonneg`), so the hull of the layer is weakly left too.
+- **Strictness.** Equality would make three points of S collinear.
+
+**Hypotheses.** Steps 1–3 need only m > 0 and K ≤ 2m, with no general position. Strict nesting also needs general
+position and m ≥ 2. The written version (`SYM5/README.md` §2,
 the note's Lemma `lem:layer`) assumes m ≥ 3 or 4.
 
 The hypothesis is stated exactly as in the repository's case classes, as `Invariant (rotAbout c (2 * Real.pi / m)) S`.
@@ -48,9 +57,6 @@ from `SYMLEAN/SymmetricReduction.lean`.
 
 ## What is not in Lean
 
-- **Step 4 of the written proof, strict nesting.** The written proof uses general position to put each later point
-  *strictly* inside every earlier hull, not on an edge. Lean proves only non-strict containment. The encoders' nesting
-  clauses (`C7UPPER/gen.py`, `SYM5/symcnf_layers.py`) use the strict form.
 - **The centre for even m.** That the centre is not in S for even m, because O, p and −p would be collinear, is not
   formalized.
 - **The step from layers to CNF clauses.** Labelling the layers outermost first, normalizing θ_0 = 0, and the angular
@@ -67,5 +73,5 @@ from `SYMLEAN/SymmetricReduction.lean`.
 | `ROT456` | open 4-, 5- and 6-fold octagon thresholds | 4, 5, 6 | 8 |
 | `ES8SYM` | layered constructions | | |
 
-For these, the lemma's status changes from "written proof" to "**Lean-checked, except strict nesting (written
-proof)**".
+For these, the lemma's status changes from "written proof" to "**Lean-checked**". The step from layers to clauses
+stays a written proof.

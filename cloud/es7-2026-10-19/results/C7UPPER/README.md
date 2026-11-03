@@ -68,8 +68,8 @@ CaDiCaL 3.0.1, UNSAT in 833 s and 802 s (1.6–1.7 GB). Proofs and CNFs are in t
 
 - The statement concerns Euclidean 7-fold rotations; affine 7-fold symmetries reduce to it by the averaging argument
   of `SYMLEAN` (a 7-fold affine symmetry is conjugate to a rotation).
-- The encoding's soundness is a written proof (reviewed, not Lean-checked). The layer lemma is Lean-checked except
-  strict nesting (`LAYERLEAN`, added 4 November); strict nesting is a written proof.
+- The encoding's soundness is a written proof (reviewed, not Lean-checked). The layer lemma, including strict
+  nesting, is Lean-checked (`LAYERLEAN`, added 4 November).
 
 ## Reproduction
 
