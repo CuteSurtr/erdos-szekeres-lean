@@ -47,6 +47,10 @@ edge x → ρx. This is exactly the form of the layered encoders' nesting clause
 - **Convexity.** Half-planes are convex (`convex_orient_nonneg`), so the hull of the layer is weakly left too.
 - **Strictness.** Equality would make three points of S collinear.
 
+**The centre for even m** (`centre_not_mem_of_even`). If m is even, S is invariant and in general position, and S has a
+point p ≠ c, then c ∉ S. The rotation by π, a power of the given rotation, maps p to 2c − p, and the three points
+p, c, 2c − p would be collinear.
+
 **Hypotheses.** Steps 1–3 need only m > 0 and K ≤ 2m, with no general position. Strict nesting also needs general
 position and m ≥ 2. The written version (`SYM5/README.md` §2,
 the note's Lemma `lem:layer`) assumes m ≥ 3 or 4.
@@ -57,8 +61,6 @@ from `SYMLEAN/SymmetricReduction.lean`.
 
 ## What is not in Lean
 
-- **The centre for even m.** That the centre is not in S for even m, because O, p and −p would be collinear, is not
-  formalized.
 - **The step from layers to CNF clauses.** Labelling the layers outermost first, normalizing θ_0 = 0, and the angular
   and chain families are all part of each encoder's soundness proof, which remains a written proof.
 

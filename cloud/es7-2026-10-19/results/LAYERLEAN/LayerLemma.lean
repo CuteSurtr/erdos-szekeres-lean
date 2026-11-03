@@ -573,4 +573,45 @@ theorem strict_nesting {S : Finset Point} {c : Point} {m K : ℕ} (hm : 2 ≤ m)
       (fun h => hyL (h ▸ hx)) (fun h => hyL (h ▸ hρx))
   exact lt_of_le_of_ne hweak (Ne.symm hne)
 
+/-! ## 8. The centre for even orders -/
+
+/-- **Even orders exclude the centre.** If `m` is even, `S` is invariant under the rotation by
+`2π/m` about `c`, in general position, and has a point other than `c`, then `c ∉ S`: the rotation by
+`π` (a power of the given rotation) maps `p` to `2c - p`, and `p, c, 2c - p` are collinear. -/
+theorem centre_not_mem_of_even {S : Finset Point} {c : Point} {m : ℕ} (hm : 0 < m) (heven : Even m)
+    (hinv : Invariant (rotAbout c (2 * Real.pi / m)) S) (hgp : GeneralPosition S)
+    {p : Point} (hp : p ∈ S) (hpc : p ≠ c) : c ∉ S := by
+  intro hc
+  set q := (rotAbout c (2 * Real.pi / m))^[m / 2] p with hqdef
+  have hq : q ∈ S := iterate_mem hinv hp (m / 2)
+  have hhalf : ((m / 2 : ℕ) : ℝ) * (2 * Real.pi / m) = Real.pi := by
+    obtain ⟨k, hk⟩ := heven
+    have hk' : m / 2 = k := by omega
+    have hkpos : (0 : ℝ) < k := by exact_mod_cast (show 0 < k by omega)
+    rw [hk', hk]
+    push_cast
+    field_simp
+    ring
+  have hqval : q = ![2 * c 0 - p 0, 2 * c 1 - p 1] := by
+    rw [hqdef, rotAbout_iterate, hhalf]
+    funext i
+    fin_cases i <;> simp [rotAbout] <;> ring
+  have h0 : orient p c q = 0 := by
+    rw [hqval]
+    simp only [orient, Matrix.cons_val_zero, Matrix.cons_val_one]
+    ring
+  have hqc : q ≠ c := by
+    intro h
+    apply hpc
+    funext i
+    have := congrFun (hqval.symm.trans h) i
+    fin_cases i <;> simp at this ⊢ <;> linarith
+  have hpq : p ≠ q := by
+    intro h
+    apply hpc
+    funext i
+    have := congrFun (h.trans hqval) i
+    fin_cases i <;> simp at this ⊢ <;> linarith
+  exact (generalPosition_iff_orient_ne_zero S).1 hgp p hp c hc q hq hpc hpq (Ne.symm hqc) h0
+
 end ErdosSzekeres.LayerLemma

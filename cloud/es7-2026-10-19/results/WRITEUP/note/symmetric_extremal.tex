@@ -328,7 +328,7 @@ $\binom{k-2}{k/2-1}-2$ if and only if $P(k,k/2,k)$ holds (unconditionally $12<16
 
 Let $\rho$ be a rotation of order $m$ about $O$; orbits of points other than $O$ are regular $m$-gons.
 
-\begin{lemma}[layer lemma; Lean-checked (\texttt{LAYERLEAN}); the clause $O\notin S$ for even $m$ written proof]\label{lem:layer}
+\begin{lemma}[layer lemma; Lean-checked (\texttt{LAYERLEAN})]\label{lem:layer}
 Let $m\ge3$, $K\le2m$, and let $S$ be finite, in general position, $\rho$-invariant, with no $K$ points in convex
 position. Then $S\setminus\{O\}$ is the union of regular $m$-gons $L_1,\dots,L_t$ centred at $O$ (its convex layers),
 each strictly inside the convex hull of the previous one. If $m$ is even and $S\ne\{O\}$, then $O\notin S$.
@@ -646,7 +646,7 @@ Lemma~\ref{lem:mirror}; Theorem~\ref{thm:A}; $\Nm(k)\le4,8,12,32,46$ ($k=4,\dots
 Theorems~\ref{thm:B}, \ref{thm:allk}; Prop.~\ref{prop:etv}; Lemma~\ref{lem:pascal}; $\Nm(10)\le316$ & written proof (not refereed); estimates of Thm.~\ref{thm:B} Lean-checked\\
 $N(8,4,8)\le22$; $N(7,4,7)\le16$ by SAT & certificates: both checkers (2 encodings); lrat-check only (4)\\
 Explicit mirror sets; Props.~\ref{prop:small}, \ref{prop:noneq}; Thms.~\ref{thm:c7}, \ref{thm:records}; $k=8$ lower bounds (Table~\ref{tab:k8}); central instances & exact computation\\
-Lemma~\ref{lem:layer} & Lean-checked (\texttt{LAYERLEAN}: hull vertices one orbit, layers, strict nesting in orientation form); $O\notin S$ for even $m$: written proof\\
+Lemma~\ref{lem:layer} & Lean-checked (\texttt{LAYERLEAN}: hull vertices one orbit, layers, strict nesting in orientation form, $O\notin S$ for even $m$)\\
 Lemmas~\ref{lem:blowup}, \ref{lem:modules}; Prop.~\ref{prop:orbit}; Prop.~\ref{prop:small}(b); $k=8$ central remarks & written proof (not refereed)\\
 Proposition~\ref{prop:compat}; Proposition~\ref{prop:k8sizes} & core / part (a) Lean-checked; rest written proof\\
 Theorem~\ref{thm:E} & certificate, lrat-check only, plus written proofs\\
