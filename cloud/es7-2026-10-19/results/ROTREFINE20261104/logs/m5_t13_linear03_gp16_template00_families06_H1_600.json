@@ -1,0 +1,53 @@
+{
+  "all_children_stopped": true,
+  "archives": [
+    {
+      "bytes": 205953548,
+      "file": "t13_linear03_gp16_template00_families06_H1.cnf",
+      "roundtrip_sha256": "3ca0d9429daa4495b4336f9236334f093ab3d854efd0cdbdee9aa72537baf80f",
+      "sha256": "3ca0d9429daa4495b4336f9236334f093ab3d854efd0cdbdee9aa72537baf80f",
+      "zst_sha256": "f51144f5ca7d60f92a890808483e474d02059e618f8be6e5da43054bbfa4eb15"
+    },
+    {
+      "bytes": 1149235438,
+      "file": "t13_linear03_gp16_template00_families06_H1_600.lrat",
+      "roundtrip_sha256": "3d9c637f58f3e61e9f77c90463f4e120767ea55a4f5d28eefe081fee0de411d2",
+      "sha256": "3d9c637f58f3e61e9f77c90463f4e120767ea55a4f5d28eefe081fee0de411d2",
+      "zst_sha256": "62c2dcf93153f8ba1ecb0e4fbeb509e59bd8ee2506820708dfe09f916cafa6f6"
+    }
+  ],
+  "child_stopped": true,
+  "cnf_sha256": "3ca0d9429daa4495b4336f9236334f093ab3d854efd0cdbdee9aa72537baf80f",
+  "conflicts": 585071,
+  "cpu_seconds": 598.339,
+  "decisions": 1857098,
+  "exit_code": 0,
+  "guard": null,
+  "job": "t13_linear03_gp16_template00_families06_H1_600",
+  "log_sha256": "20ece6a530718a8854659d5efc66c7fe1224f30ea8982ff438b53ca769861db9",
+  "peak_rss_bytes": 2825060352,
+  "proof_archive": {
+    "bytes": 1149235438,
+    "file": "t13_linear03_gp16_template00_families06_H1_600.lrat",
+    "roundtrip_sha256": "3d9c637f58f3e61e9f77c90463f4e120767ea55a4f5d28eefe081fee0de411d2",
+    "sha256": "3d9c637f58f3e61e9f77c90463f4e120767ea55a4f5d28eefe081fee0de411d2",
+    "zst_sha256": "62c2dcf93153f8ba1ecb0e4fbeb509e59bd8ee2506820708dfe09f916cafa6f6"
+  },
+  "proof_file": "t13_linear03_gp16_template00_families06_H1_600.lrat",
+  "proof_status": "partial, not a certificate",
+  "propagations": 1973661338,
+  "restarts": 22693,
+  "sampled_child_peak_bytes": 2825060352,
+  "seconds_limit": 600,
+  "solver_options": [
+    "-t",
+    "600",
+    "--lrat",
+    "--binary=false"
+  ],
+  "solver_sha256": "e12ecc8ce8a489394a2b7411e3fa264f037e4ceb2e615bab534158e19d04ac01",
+  "system_memory_peak_bytes": 27760066560,
+  "verdict": "UNKNOWN",
+  "wall_seconds": 601.261,
+  "wrapper_sha256": "bb50f58477008119adb2a3efa50432170be44d7bbabbd76882771f1640a8f830"
+}

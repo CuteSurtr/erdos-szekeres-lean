@@ -1,0 +1,53 @@
+{
+  "all_children_stopped": true,
+  "archives": [
+    {
+      "bytes": 188391618,
+      "file": "t13_gp12_linear01_families06_H1.cnf",
+      "roundtrip_sha256": "1b2a2a0072ad475a27e22e8c7733b145a4bb597d5ad4b430560b7806b42de765",
+      "sha256": "1b2a2a0072ad475a27e22e8c7733b145a4bb597d5ad4b430560b7806b42de765",
+      "zst_sha256": "7c1e9d07f75a48ec3650343aa12d135f69282513d95ae5427747775fd4dd49f2"
+    },
+    {
+      "bytes": 1181192432,
+      "file": "t13_gp12_linear01_families06_H1_600.lrat",
+      "roundtrip_sha256": "513c67c06ac577af47dffa33575d49a5fac9ee1e7fe9ff2ffac455b907132093",
+      "sha256": "513c67c06ac577af47dffa33575d49a5fac9ee1e7fe9ff2ffac455b907132093",
+      "zst_sha256": "163292ac078a93c9478c55c0e8da93c80ed964a02b75ee1dd8fdaee35eea5d72"
+    }
+  ],
+  "child_stopped": true,
+  "cnf_sha256": "1b2a2a0072ad475a27e22e8c7733b145a4bb597d5ad4b430560b7806b42de765",
+  "conflicts": 634754,
+  "cpu_seconds": 598.729,
+  "decisions": 2024563,
+  "exit_code": 0,
+  "guard": null,
+  "job": "t13_gp12_linear01_families06_H1_600",
+  "log_sha256": "6dedc15ffa87616d2765ae7a1f6ecfded55aa9abdd48e5ff323d23334bd140bf",
+  "peak_rss_bytes": 2793472000,
+  "proof_archive": {
+    "bytes": 1181192432,
+    "file": "t13_gp12_linear01_families06_H1_600.lrat",
+    "roundtrip_sha256": "513c67c06ac577af47dffa33575d49a5fac9ee1e7fe9ff2ffac455b907132093",
+    "sha256": "513c67c06ac577af47dffa33575d49a5fac9ee1e7fe9ff2ffac455b907132093",
+    "zst_sha256": "163292ac078a93c9478c55c0e8da93c80ed964a02b75ee1dd8fdaee35eea5d72"
+  },
+  "proof_file": "t13_gp12_linear01_families06_H1_600.lrat",
+  "proof_status": "partial, not a certificate",
+  "propagations": 2022069130,
+  "restarts": 25426,
+  "sampled_child_peak_bytes": 2676867072,
+  "seconds_limit": 600,
+  "solver_options": [
+    "-t",
+    "600",
+    "--lrat",
+    "--binary=false"
+  ],
+  "solver_sha256": "e12ecc8ce8a489394a2b7411e3fa264f037e4ceb2e615bab534158e19d04ac01",
+  "system_memory_peak_bytes": 27790016512,
+  "verdict": "UNKNOWN",
+  "wall_seconds": 601.366,
+  "wrapper_sha256": "bb50f58477008119adb2a3efa50432170be44d7bbabbd76882771f1640a8f830"
+}

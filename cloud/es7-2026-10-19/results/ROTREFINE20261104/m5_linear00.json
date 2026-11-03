@@ -1,0 +1,141 @@
+{
+  "m": 5,
+  "t": 12,
+  "model_sha256": "40494397cc15b81e61ed8dacb2818e6377ab074c3ae97912dc906c67e505b028",
+  "scope": "realizations carrying the specified geometric fivefold rotation",
+  "method": "positive exact Q(sqrt5) dependency of orientation forms",
+  "records": [
+    {
+      "triple": [
+        0,
+        50,
+        53
+      ],
+      "variable": 1555,
+      "required_sign": 1,
+      "weight": [
+        5,
+        -1
+      ],
+      "signed_coefficients": [
+        [
+          [
+            "D",
+            0,
+            10
+          ],
+          [
+            "-2",
+            "2"
+          ]
+        ],
+        [
+          [
+            "D",
+            10,
+            10
+          ],
+          [
+            "2",
+            "-2"
+          ]
+        ],
+        [
+          [
+            "E",
+            0,
+            10
+          ],
+          [
+            "5",
+            "1"
+          ]
+        ]
+      ]
+    },
+    {
+      "triple": [
+        0,
+        51,
+        52
+      ],
+      "variable": 1562,
+      "required_sign": -1,
+      "weight": [
+        0,
+        2
+      ],
+      "signed_coefficients": [
+        [
+          [
+            "D",
+            0,
+            10
+          ],
+          [
+            "-6",
+            "2"
+          ]
+        ],
+        [
+          [
+            "D",
+            10,
+            10
+          ],
+          [
+            "-4",
+            "0"
+          ]
+        ],
+        [
+          [
+            "E",
+            0,
+            10
+          ],
+          [
+            "0",
+            "-2"
+          ]
+        ]
+      ]
+    },
+    {
+      "triple": [
+        50,
+        51,
+        53
+      ],
+      "variable": 6822,
+      "required_sign": 1,
+      "weight": [
+        5,
+        -1
+      ],
+      "signed_coefficients": [
+        [
+          [
+            "D",
+            10,
+            10
+          ],
+          [
+            "0",
+            "4"
+          ]
+        ]
+      ]
+    }
+  ],
+  "source_layers": [
+    0,
+    10
+  ],
+  "candidate_clause": [
+    -1555,
+    1562,
+    -6822
+  ],
+  "exact_residual_zero": true
+}

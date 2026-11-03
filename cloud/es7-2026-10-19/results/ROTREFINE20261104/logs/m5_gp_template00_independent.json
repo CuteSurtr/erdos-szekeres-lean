@@ -1,0 +1,20 @@
+{
+  "model_sha256": "22884512a1a0056cf8a9441b98e06daee014cc814079da01d8acd4a8804f8cb9",
+  "witness_sha256": "039fc9d0926982501099e1d26174e6b760bc164646a6f8b938663ea82468d1c7",
+  "term_signs": [
+    1,
+    1,
+    1
+  ],
+  "clause": [
+    -80,
+    1004,
+    -1005,
+    -1011,
+    1073,
+    -5569
+  ],
+  "canonical_variables": 6844,
+  "independent_variable_map": true,
+  "rigor": "exact computation plus the GP determinant identity"
+}
