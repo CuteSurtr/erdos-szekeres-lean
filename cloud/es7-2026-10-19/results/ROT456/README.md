@@ -73,9 +73,13 @@ sign clauses in the orbit variables. They hold for every configuration in genera
   Y(1,2) loses nothing (written out and tested in `C6UPPER` §2). For odd m the unit is H(1), as in `C7UPPER`.
 - m = 6: done (`C6UPPER`: Y(1,2) plus a 32-cube split on the phase order of layers 1–4, all proofs checked by both
   checkers).
-- m = 5, 4: the same split. For m5K8t13 the base is H(1) plus 64 patterns of the six Y variables on layers 1–4, of which
-  24 are consistent; the 40 impossible ones are refuted, and a first run of the 24 consistent ones did not finish
-  (see `C6UPPER` §4 when updated).
+- m = 5, 4: the same split. For m5K8t13 (3 November, 09:5xZ–10:44Z) the base is H(1) (variable 8803) plus all 64 sign
+  patterns of Y(1,2), Y(1,3), Y(1,4), Y(2,3), Y(2,4), Y(3,4).
+  - The 40 patterns that violate transitivity are UNSAT in under 1 s each, and lrat-check accepts every proof.
+  - Of the 24 phase orders, five were started (d000000, d000001, d000011, d111110, d111111). None finished: all five
+    were stopped after 3,059–3,257 s each, about 1.5–2 times the 6-fold cube times. The other 19 were not started.
+  - Peak RSS is about 3 GB per lane. Finer cubes (adding layer 5) or multi-hour lanes are the next step.
+  - m4K8t17 was not attempted.
 - More GP rounds at t = L + 1.
 
 ## Reproduction
