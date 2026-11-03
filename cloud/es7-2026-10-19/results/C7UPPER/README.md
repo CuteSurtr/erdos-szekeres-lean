@@ -21,6 +21,9 @@ position with no convex octagon has exactly 64 points. This is the 7-fold case o
 
 ## 1. Reduction
 
+Lean-checked since 4 November (`LAYERLEAN`, `sevenfold_octagon`): the statement follows from `Sevenfold70` (every
+centre-free 70-point sevenfold set in general position has a convex octagon). That is the content of the certificate.
+
 By the layer lemma (`SYM5/README.md` §2; a special case is stated in arXiv:2506.00224 §3.2), a 7-fold symmetric set in
 general position with no convex octagon (K = 8 <= 2·7) consists of nested regular heptagons, plus possibly the
 centre. A set of at least 65 points therefore has at least 10 layers (7·9 + 1 = 64), and its 10 outermost layers,

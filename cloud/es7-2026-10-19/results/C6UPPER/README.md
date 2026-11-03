@@ -30,6 +30,9 @@ of ES(8) = 65).
 
 ## 1. Reduction
 
+Lean-checked since 4 November (`LAYERLEAN`, `sixfold_octagon`): the statement follows from `Sixfold66` (every
+centre-free 66-point sixfold set in general position has a convex octagon). That is the content of the certificate below.
+
 By the layer lemma (`SYM5/README.md` §2; K = 8 <= 2·6), a 6-fold symmetric set in general position with no convex
 octagon consists of nested regular hexagons. It cannot contain the centre, which is the midpoint of two antipodal
 points of an orbit. A set of at least 61 points therefore has at least 11 layers, and its 11 outermost layers form a
