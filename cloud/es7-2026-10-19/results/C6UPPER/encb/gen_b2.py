@@ -1,13 +1,19 @@
 #!/usr/bin/env python3
-"""Second, independently written encoder for the same statement as gen.py (different code paths):
-  * point id = k*t + i (direction-major), point (i,k) = layer i (0 outermost), direction sector k;
+"""Second implementation of the same mathematical encoding as gen.py (no shared code; see the scope note below):
+  * point (i,k) = layer i (0 outermost), direction sector k; triples are enumerated layer-major (the helper `pid`
+    below is unused);
   * triple-orbit canonical form: rotate so that the first point (in (layer,k) order) has k = 0, take the
-    lexicographically smallest (layer,k)-sorted list;
+    lexicographically smallest (layer,k)-sorted list (this selects the same representatives as gen.py);
   * angular configuration computed EXACTLY (integer circular order of points and antipodes), no float sampling:
     direction of (i,k) = (J, rank) with J = 2k + h_i (mod 2m), units of pi/m, h_i = 0 iff theta_i < pi/m, and the
     psi-rank inside the cell; antipode = (J + m, rank);
   * chains are built BACKWARDS (F_l(q,q') = chain of l points starting q, q');
   * only clauses whose orientation literal is forced false are dropped; true-forced literals are kept.
+Scope (4 November 2026 review): the two encoders differ in the angular computation (exact integer circular order here,
+sampled float patterns in gen.py), the chain recurrence direction and the variable allocation; they share the triple
+canonical representatives, and parts of the validation code use gen.py.
+Same-layer antipodal triples (even m): the centre lies on a segment of the triple, which is neither a triangle around the
+centre nor in an open half-plane; such triples get no angular clause (a third, deliberately omitted case).
 Odd m: as written for m = 7 (C7UPPER/gen_b.py; this file reproduces its output byte for byte).
 Even m (added 3 November 2026): psi_i = theta_i mod 2pi/m, no Hb variables; direction of (i,k) = (k, rank) in units of
 2pi/m, antipode = (k + m/2, rank), which is the direction of the orbit point (i, k + m/2).  A triple containing such an
@@ -164,11 +170,11 @@ def main():
                     l = olit(p, a, b)
                     if not is_false(l):
                         okpair[(a, b)] = l
-        # F_2(a,b) <= o(p,a,b)
+        # o(p,a,b) => F_2(a,b)
         for (a, b), l in okpair.items():
             cls.append([fv(2, a, b), -l]); nchain += 1
         for lev in range(2, L):
-            # F_{lev+1}(a,b) <= o(p,a,b) & o(a,b,c) & F_lev(b,c)
+            # F_lev(b,c) & o(p,a,b) & o(a,b,c) => F_{lev+1}(a,b)
             for (b, c), _ in okpair.items():
                 if (lev, b, c) not in F:
                     continue

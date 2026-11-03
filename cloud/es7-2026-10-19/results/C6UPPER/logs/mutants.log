@@ -1,3 +1,4 @@
-mutant a: rejected (AssertionError: 31)
-mutant b: rejected (AssertionError: c10100.cnf)
-mutant c: rejected (AssertionError: c11000.cnf)
+mutant a: rejected (FAIL: 31)
+mutant b: rejected (FAIL: c10100.cnf)
+mutant c: rejected (FAIL: c11000.cnf)
+mutant d (empty dir, -O): rejected (FAIL: 0)
