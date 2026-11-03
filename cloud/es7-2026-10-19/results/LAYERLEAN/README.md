@@ -74,6 +74,18 @@ parts.
 - **Radius order** (`dist2_le_of_later`). Points of later layers are no farther from c than those of earlier layers, by
   convexity of the disk (`convex_disk`) and the layer lemma. This is the radius fact that rule B needs.
 
+**Reduction to exactly t layers** (`convexNGon_of_layers`). Suppose every invariant set in general position with exactly
+m·t points and no centre has a convex K-gon (K ≤ 2m). Then so does every invariant set in general position with more
+than m(t − 1) points other than the centre. The proof peels off t layers of exactly m points each (`card_peel`).
+
+**The two corollaries.**
+- `sixfold_octagon`: from `Sixfold66` (11 nested hexagons), every 6-fold set of 61 or more points has a convex octagon.
+  The centre is excluded automatically.
+- `sevenfold_octagon`: from `Sevenfold70` (10 nested heptagons), every 7-fold set of 65 or more points has one.
+- **Mutants.** Lowering either threshold (61 → 60, 65 → 64) makes the proof fail.
+- **Status.** These are §1 of `C6UPPER` and `C7UPPER`, now Lean-checked. The hypotheses are what the SAT certificates
+  establish, modulo the encoder steps listed below.
+
 **Hypotheses.** Steps 1–3 need only m > 0 and K ≤ 2m, with no general position. Strict nesting also needs general
 position and m ≥ 2. The written version (`SYM5/README.md` §2,
 the note's Lemma `lem:layer`) assumes m ≥ 3 or 4.

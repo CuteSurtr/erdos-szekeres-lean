@@ -1031,4 +1031,118 @@ theorem dist2_le_of_later {S : Finset Point} {c : Point} {m K : ℕ} (hm : 0 < m
     subset_convexHull_hullVerts (peel S n) (Finset.mem_coe.2 hyn)
   exact convexHull_min hsub (convex_disk c _) hyconv
 
+/-! ## 12. Reduction to exactly `t` layers (§1 of `C6UPPER` and `C7UPPER`) -/
+
+/-- While the remaining set is nonempty, each peel removes exactly one orbit of `m` points. -/
+theorem card_peel {S : Finset Point} {c : Point} {m K : ℕ} (hm : 0 < m) (hK : K ≤ 2 * m)
+    (hc : c ∉ S) (hinv : Invariant (rotAbout c (2 * Real.pi / m)) S) (hno : ¬ HasConvexNGon K S)
+    {t : ℕ} (ht : m * (t - 1) < S.card) : ∀ n ≤ t, (peel S n).card + m * n = S.card := by
+  intro n hn
+  induction n with
+  | zero => simp [peel]
+  | succ n ih =>
+    have ih' := ih (by omega)
+    have hne : (peel S n).Nonempty := by
+      rw [← Finset.card_pos]
+      have : m * n ≤ m * (t - 1) := Nat.mul_le_mul_left m (by omega)
+      omega
+    obtain ⟨x, hx, hL, hcard, -⟩ := layers_are_orbits hm hK hc hinv hno n hne
+    have hsub : hullVerts (peel S n) ⊆ peel S n := hullVerts_subset _
+    have hcardL : (hullVerts (peel S n)).card = m := by
+      have hxv : x ∈ hullVerts (peel S n) := by
+        rw [hL]; exact mem_orbitFS_self hm x
+      rw [hullVerts_eq_orbitFS_rotAbout hm hK (fun h => hc (peel_subset S n h))
+        (invariant_peel hm hc hinv n) (fun ⟨u, hu, huK⟩ => hno ⟨u, hu.trans (peel_subset S n), huK⟩) hxv]
+      exact hcard
+    rw [peel_succ, Finset.card_sdiff_of_subset hsub, hcardL]
+    have : m ≤ (peel S n).card := hcardL ▸ Finset.card_le_card hsub
+    rw [Nat.mul_succ]
+    omega
+
+/-- **Reduction to exactly `t` layers.** Suppose every set of exactly `m · t` points that is
+invariant under the rotation by `2π/m` about `c ∉` the set and in general position has `K` points in
+convex position (`K ≤ 2m`).  Then so does every invariant set in general position with more than
+`m (t - 1)` points other than the centre. -/
+theorem convexNGon_of_layers {m K t : ℕ} (hm : 0 < m) (hK : K ≤ 2 * m)
+    (H : ∀ (T : Finset Point) (c : Point), GeneralPosition T → c ∉ T →
+      Invariant (rotAbout c (2 * Real.pi / m)) T → T.card = m * t → HasConvexNGon K T)
+    (S : Finset Point) (c : Point) (hgp : GeneralPosition S)
+    (hinv : Invariant (rotAbout c (2 * Real.pi / m)) S) (hcard : m * (t - 1) < (S.erase c).card) :
+    HasConvexNGon K S := by
+  classical
+  by_contra hno
+  set S' := S.erase c with hS'
+  have hc' : c ∉ S' := Finset.notMem_erase c S
+  have hinv' : Invariant (rotAbout c (2 * Real.pi / m)) S' := invariant_erase_centre hinv
+  have hno' : ¬ HasConvexNGon K S' := fun ⟨u, hu, huK⟩ => hno ⟨u, hu.trans (Finset.erase_subset c S), huK⟩
+  have hcp := card_peel hm hK hc' hinv' hno' hcard t le_rfl
+  set T := S' \ peel S' t with hT
+  have hTcard : T.card = m * t := by
+    rw [hT, Finset.card_sdiff_of_subset (peel_subset S' t)]
+    omega
+  -- `T` is invariant: `S'` and `peel S' t` are, and the rotation has period `m` on `S'`
+  have hTinv : Invariant (rotAbout c (2 * Real.pi / m)) T := by
+    intro y hy
+    obtain ⟨hyS, hyP⟩ := Finset.mem_sdiff.1 hy
+    refine Finset.mem_sdiff.2 ⟨hinv' y hyS, fun hρy => hyP ?_⟩
+    have hyc : y ≠ c := fun h => hc' (h ▸ hyS)
+    have hback : (rotAbout c (2 * Real.pi / m))^[m - 1] (rotAbout c (2 * Real.pi / m) y) = y := by
+      rw [← Function.iterate_succ_apply, Nat.succ_eq_add_one, Nat.sub_add_cancel (by omega : 1 ≤ m)]
+      have := iterate_minimalPeriod (f := rotAbout c (2 * Real.pi / m)) (x := y)
+      rwa [minimalPeriod_rotAbout hm hyc] at this
+    rw [← hback]
+    exact iterate_mem (invariant_peel hm hc' hinv' t) hρy (m - 1)
+  have hTsub : T ⊆ S := (Finset.sdiff_subset).trans (Finset.erase_subset c S)
+  have hTgp : GeneralPosition T := fun a ha b hb d hd => hgp a (hTsub ha) b (hTsub hb) d (hTsub hd)
+  have hcT : c ∉ T := fun h => hc' ((Finset.sdiff_subset) h)
+  obtain ⟨u, hu, huK, hconv⟩ := H T c hTgp hcT hTinv hTcard
+  exact hno ⟨u, hu.trans hTsub, huK, hconv⟩
+
+/-- The `66`-point sixfold statement certified by `C6UPPER` (11 nested regular hexagons). -/
+def Sixfold66 : Prop :=
+  ∀ (T : Finset Point) (c : Point), GeneralPosition T → c ∉ T →
+    Invariant (rotAbout c (2 * Real.pi / 6)) T → T.card = 66 → HasConvexNGon 8 T
+
+/-- The `70`-point sevenfold statement certified by `C7UPPER` (10 nested regular heptagons). -/
+def Sevenfold70 : Prop :=
+  ∀ (T : Finset Point) (c : Point), GeneralPosition T → c ∉ T →
+    Invariant (rotAbout c (2 * Real.pi / 7)) T → T.card = 70 → HasConvexNGon 8 T
+
+/-- **The sixfold case of `ES(8) = 65`, reduced to `Sixfold66`.** Every sixfold symmetric set of at
+least 61 points in general position contains a convex octagon. -/
+theorem sixfold_octagon (H : Sixfold66) (S : Finset Point) (c : Point) (hgp : GeneralPosition S)
+    (hinv : Invariant (rotAbout c (2 * Real.pi / 6)) S) (hcard : 61 ≤ S.card) :
+    HasConvexNGon 8 S := by
+  classical
+  -- the centre is not in `S` (even order)
+  obtain ⟨p, hpS, hpc⟩ : ∃ p ∈ S, p ≠ c := by
+    by_contra h
+    push_neg at h
+    have : S ⊆ {c} := fun y hy => Finset.mem_singleton.2 (h y hy)
+    have := Finset.card_le_card this
+    simp at this
+    omega
+  have hcS : c ∉ S := centre_not_mem_of_even (m := 6) (by norm_num) (by decide)
+    (by exact_mod_cast hinv) hgp hpS hpc
+  refine convexNGon_of_layers (m := 6) (t := 11) (by norm_num) (by norm_num) ?_ S c hgp
+    (by exact_mod_cast hinv) ?_
+  · intro T c' h1 h2 h3 h4
+    exact H T c' h1 h2 (by exact_mod_cast h3) (by simpa using h4)
+  · rw [Finset.erase_eq_of_notMem hcS]
+    omega
+
+/-- **The sevenfold case of `ES(8) = 65`, reduced to `Sevenfold70`.** Every sevenfold symmetric set
+of at least 65 points in general position contains a convex octagon. -/
+theorem sevenfold_octagon (H : Sevenfold70) (S : Finset Point) (c : Point)
+    (hgp : GeneralPosition S) (hinv : Invariant (rotAbout c (2 * Real.pi / 7)) S)
+    (hcard : 65 ≤ S.card) : HasConvexNGon 8 S := by
+  classical
+  refine convexNGon_of_layers (m := 7) (t := 10) (by norm_num) (by norm_num) ?_ S c hgp
+    (by exact_mod_cast hinv) ?_
+  · intro T c' h1 h2 h3 h4
+    exact H T c' h1 h2 (by exact_mod_cast h3) (by simpa using h4)
+  · have := Finset.card_erase_le (s := S) (a := c)
+    have h2 := Finset.pred_card_le_card_erase (s := S) (a := c)
+    omega
+
 end ErdosSzekeres.LayerLemma
