@@ -1,4 +1,4 @@
-# LAYERLEAN: the layer lemma and the chain family in Lean
+# LAYERLEAN: the layer lemma, the chain family and the angular rules in Lean
 
 4 November 2026 (KST). **Lean-checked**: Lean 4.24.0, Mathlib `f897ebcf`, the repository's pins. The file is
 `LayerLemma.lean`.
@@ -64,6 +64,16 @@ parts.
   - For vertices ρʲp, the value is |p − c|²(1 − cos jα).
   - For later layers, it follows from strict nesting at the two edges through p.
 
+**Angular rules, polar form** (`orient_polar`, `orient_polar_centre_inside`, `orient_polar_halfplane`).
+- For points c + r(cos θ, sin θ):
+  `orient = r_a r_b sin(β−α) + r_b r_d sin(δ−β) + r_d r_a sin(α−δ)`.
+- **Rule A.** If the three angular gaps lie in (0, π), so that the centre is inside the triangle, the triple is
+  positive.
+- **Rule B.** If the directions increase by x, y > 0 with x + y < π, and the angularly middle point has the largest
+  radius, the triple turns left. This uses sin x + sin y > sin(x + y) (`sin_add_lt`).
+- **Radius order** (`dist2_le_of_later`). Points of later layers are no farther from c than those of earlier layers, by
+  convexity of the disk (`convex_disk`) and the layer lemma. This is the radius fact that rule B needs.
+
 **Hypotheses.** Steps 1–3 need only m > 0 and K ≤ 2m, with no general position. Strict nesting also needs general
 position and m ≥ 2. The written version (`SYM5/README.md` §2,
 the note's Lemma `lem:layer`) assumes m ≥ 3 or 4.
@@ -74,9 +84,10 @@ from `SYMLEAN/SymmetricReduction.lean`.
 
 ## What is not in Lean
 
-- **Angular rules.** These are the orientation literals forced by a phase pattern, from the polar formula; the formula
-  itself is Lean-checked in `ES8SYM`. Also outside Lean: the perturbation to generic phases, and the consistency of
-  one variable per triple orbit.
+- **From phase patterns to the rules.** Each encoder computes which of rule A or rule B applies, and to which ordered
+  triple, from the discrete phase pattern: the circular order of points and antipodes. That classification is part of
+  the code: it is exact integer comparisons in encoder B and reviewed float sampling in encoder A. Also outside Lean:
+  the perturbation to generic phases, and the consistency of one variable per triple orbit.
 - **Code to clauses.** That the Python generators emit exactly these families is checked by review and tests, not by
   Lean.
 
@@ -94,4 +105,6 @@ from `SYMLEAN/SymmetricReduction.lean`.
 For these, the status changes as follows:
 - the layer lemma, from "written proof" to "**Lean-checked**";
 - the mathematical soundness of the chain family, now **Lean-checked**;
-- the angular rules and the code-to-clause correspondence, unchanged (written proof, review and tests).
+- the angular rules in polar form, now **Lean-checked**;
+- the classification of phase patterns, the perturbation lemma and the code-to-clause correspondence, unchanged
+  (written proof, review and tests).
