@@ -82,6 +82,8 @@ CNF + Y(1,2) is UNSAT, no configuration exists.
 
 - **Runs.** CaDiCaL 3.0.1, one core per cube, 8 lanes, about 20,000 CPU seconds in total, 56 minutes wall clock,
   1.3–1.7 GB peak RSS each (`logs/cadical_summary.txt`). The proofs total 41.0 GB.
+- **Unsplit run.** A run of the whole instance (base + Y(1,2), no split, one core) was stopped after 6,578 s
+  without an answer. Its partial proof was deleted.
 - **Checkers.** lrat-check ran in the same lane right after each solve (`logs/cubes.txt`), and cake_lpr ran one proof
   at a time with heap 8,000 MB (`logs/cake.txt`).
 - **Archive.** The proofs (zstd) and the base CNF are in the local archive `es8-c6-octagon-2026-11-03` (outside Git).
