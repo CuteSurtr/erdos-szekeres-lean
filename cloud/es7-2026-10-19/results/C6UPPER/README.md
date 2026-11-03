@@ -5,13 +5,14 @@
 **Statement.** Every configuration of 11 nested regular hexagons about a common centre, in general position, contains
 8 points in convex position. Hence L(6,8) <= 10: every 6-fold rotationally symmetric set of at least 61 points in
 general position contains a convex octagon. The largest 6-fold symmetric set in general position with no convex octagon
-has between 54 and 60 points. In particular there is no 6-fold symmetric counterexample to ES(8) = 65 (the 6-fold case
+has 54 or 60 points (sizes are multiples of 6, since the centre is excluded). In particular there is no 6-fold symmetric counterexample to ES(8) = 65 (the 6-fold case
 of ES(8) = 65).
 
 **Status.**
 - Encoding: `C7UPPER/gen.py`. Its soundness rests on a written proof (the docstring of `gen.py`). An independent review
   found it sound for (m, K) = (6, 8) (`ROT456` §2). It is not Lean-checked.
-- Symmetry breaking: the unit Y(1,2). This rests on the short written argument in §2 and an exact test.
+- Symmetry breaking: the unit Y(1,2). This rests on the short written argument in §2, a numerical test, and an
+  exact integer re-check (§5).
 - Second encoder: `encb/gen_b2.py` (the `C7UPPER` encoder B extended to even m) gives the same verdict with the same
   split; its own tests are in §3b.
 - Certificate: the case split covers all 32 sign patterns of five phase-order variables, which `tools/verify_cover.py`
@@ -45,8 +46,9 @@ Its phases are 2pi/m - psi_i (i >= 1), so it reverses the order of psi_1, ..., p
 configurations therefore has psi_1 < psi_2, and by soundness it satisfies the CNF together with the unit Y(1,2). So if
 CNF + Y(1,2) is UNSAT, no configuration exists.
 
-**Test** (`ROT456/tests/test_reflect.py`, `logs/reflect.log`):
-- The certified 54-point set and its exact mirror image (complex conjugation of the cyclotomic coordinates) were run
+**Test** (`ROT456/tests/test_reflect.py`, `logs/reflect.log`; **numerical evidence**: 90-digit `Decimal` square roots and
+binary64 sector choice, with no error bound; the exact re-check is in §5):
+- The certified 54-point set and its mirror image (complex conjugation of the cyclotomic coordinates) were run
   through the 9-layer CNF m6K8t9.
 - Both satisfy all 1,040,348 clauses.
 - The mirror phases are 2pi/6 - psi_i.
@@ -94,12 +96,17 @@ CNF + Y(1,2) is UNSAT, no configuration exists.
 ## 3b. Second encoder (encoder B)
 
 `encb/gen_b2.py` extends the second encoder of `C7UPPER`, `C7UPPER/gen_b.py`, to even m. It was written
-on 3 November 2026 and shares no code with `gen.py`.
+on 3 November 2026 and does not import `gen.py`. It is a second implementation of the same mathematical encoding.
 
 **How it differs from `gen.py`.**
 - It computes exact integer circular orders instead of sampled float patterns.
 - It builds the chains backwards.
-- It uses different canonical forms and a different variable numbering.
+- It allocates variables in a different order.
+
+**What it shares** (corrected after the review in §5):
+- It selects the same canonical triple representatives as `gen.py`.
+- Its `pid` helper is unused.
+- Some of the validation below goes through `gen.py`'s code.
 
 **What the even-m extension changes.**
 - psi_i = theta_i mod 2pi/m, and there are no Hb variables.
@@ -115,11 +122,12 @@ on 3 November 2026 and shares no code with `gen.py`.
   2,387,083 (11 layers), with 2,347 angular units and 7,740 conditional clauses at 11 layers.
 - **Agreement with encoder A.** `encb/compare_ab2.py` finds 0 mismatches on the non-chain part: 11,738 orbit-pattern
   pairs at 9 layers and 23,852 at 11 layers.
-- **Real sets.** The certified 54-point set and its exact mirror image satisfy all 1,040,348 clauses of B's 9-layer
-  formula (`encb/test_b_sets.py`, 90-digit arithmetic, orientations read through B's own map).
-- **Chains against brute force.** On 880 random 2- and 3-layer configurations, 715 are octagon-free and satisfy B, and
-  165 contain a convex octagon and violate B's chain clauses. None is unsound or inexact (`encb/test_bruteforce_b2.py`,
-  brute force over all 8-subsets).
+- **Real sets.** The certified 54-point set and its mirror image satisfy all 1,040,348 clauses of B's 9-layer formula
+  (`encb/test_b_sets.py`). This is **numerical evidence**: 90-digit arithmetic, with orientations computed through
+  `gen.py`'s `Enc.o` and read off B's map. The exact, A-independent re-check is in §5.
+- **Chains against brute force** (float64; **evidence only**). On 880 random 2- and 3-layer configurations, 715 are
+  octagon-free and satisfy B, and 165 contain a convex octagon and violate B's chain clauses. None is unsound or inexact
+  (`encb/test_bruteforce_b2.py`, brute force over all 8-subsets).
 - **Random larger sets.** 120 random configurations with 4–6 layers violate no non-chain clause
   (`encb/test_random_b2.py`).
 
@@ -154,8 +162,8 @@ The 12 phase orders:
 - **Unused hedge.** A hedge split of the last cube by layer 5 (`tools/mksub.py`, `tools/verify_sub.py`) was stopped
   once that cube itself was UNSAT. It is not part of the certificate (`logs/encb_subcube_hedge.txt`).
 
-Encoders A and B therefore give independent certificates of the same statement. They share the written soundness
-argument and the reflection unit (§2), but no code.
+Encoders A and B therefore give two certificates of the same statement from separately implemented encoders. They share
+the written soundness argument, the reflection unit (§2) and the canonical triple representatives.
 
 
 ## 4. Scope and open questions
@@ -164,7 +172,7 @@ argument and the reflection unit (§2), but no code.
   `SYMLEAN`.
 - The layer lemma, including strict nesting in the form of the nesting clauses, is Lean-checked (`LAYERLEAN`, added
   4 November). The encoder's soundness and §2 are written proofs (reviewed, not Lean-checked).
-- The exact maximum (54, 60, or in between) is open. The plain encoding is SAT at 10 layers (`ROT456` §3).
+- The exact maximum (54 or 60) is open. The plain encoding is SAT at 10 layers (`ROT456` §3).
 - The 5-fold (13 layers) and 4-fold (17 layers) threshold cases remain open (`ROT456`).
 
 ## Reproduction
@@ -176,3 +184,34 @@ python3 C6UPPER/tools/verify_cover.py m6K8t11.cnf m6K8t11.cnf.json cubes
 P=<work dir> S=<dir with resolve/bin/{cadical,lrat-check}> python3 C6UPPER/tools/run.py 8 $(( $(date +%s) + 7200 ))
 P=<work dir> S=<dir with resolve/bin/cake_lpr> bash C6UPPER/tools/cake.sh
 ```
+
+## 5. Review of 4 November 2026
+
+An independent review on the branch `es8-c6c7-review-2026-11-04` (`results/C6C7REVIEW`) found **no blocking gap** in the
+layer, perturbation, angular, nesting, chain or reflection arguments.
+
+**Replayed then (certificate, both checkers):**
+- Six randomly chosen substantial cube proofs, three per encoder, and both 7-fold proofs.
+- Each passed lrat-check and cake_lpr against freshly generated formulas.
+- All proof and formula hashes matched.
+- The other 52 cube verdicts here remain historical, as recorded in §3 and §3b.
+
+**Exact re-check (exact computation).** The review redid the real-set tests in integer arithmetic, using the
+coordinates (X, √3·Y) of the 6-fold cyclotomic weights.
+- The 54-point set and its mirror satisfy every clause of both encoders' 9-layer formulas, with the Y(1,2) unit
+  toggling.
+- 68 exact random hexagon configurations agree with brute force for both encoders.
+
+**Corrections applied here:**
+- "exact" relabelled as numerical in §2 and §3b;
+- the independence wording corrected (§3b);
+- "54 or 60" in place of "between 54 and 60";
+- the cover checkers `tools/verify_cover.py` and `tools/verify_sub.py` use explicit checks instead of `assert`.
+  Before, an empty cube directory passed under `python3 -O`. Now it fails, as `tools/test_mutants.sh` mutant (d)
+  shows.
+- comments in `encb/gen_b2.py`: the chain implications are now written in the emitted direction, and the omitted
+  same-layer antipodal case for even m is stated. Its output is unchanged: `479e31a9…`, `b4d29017…` and `9f638543…`
+  are reproduced.
+
+**Still to correct.** The same comment issues remain in the certified `C7UPPER/gen_b.py` and the angular-dichotomy
+docstring of `C7UPPER/gen.py`, which are left unchanged.

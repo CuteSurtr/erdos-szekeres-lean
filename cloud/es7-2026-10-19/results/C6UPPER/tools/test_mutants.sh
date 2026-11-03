@@ -1,6 +1,7 @@
 #!/bin/bash
 # test_mutants.sh BASE.cnf META.json CUBEDIR : verify_cover.py must reject (a) a missing cube, (b) a cube whose body
-# differs from BASE in one literal, (c) a cube whose pattern unit has the wrong sign.
+# differs from BASE in one literal, (c) a cube whose pattern unit has the wrong sign, and (d) an empty cube
+# directory under `python3 -O` (the checks are explicit, not `assert`).
 set -u
 D=$(cd "$(dirname "$0")" && pwd); base=$1; meta=$2; cubes=$(cd "$3" && pwd); M=$(mktemp -d)
 for x in a b c; do mkdir $M/$x; for f in $cubes/c*.cnf; do ln -s $f $M/$x/; done; done
@@ -14,4 +15,6 @@ open(sys.argv[2],'w').write('\n'.join(s)+'\n')" $cubes/c11000.cnf $M/c/c11000.cn
 for x in a b c; do
   if python3 -I $D/verify_cover.py $base $meta $M/$x > $M/out 2>&1; then echo "mutant $x: ACCEPTED (bad)"; else echo "mutant $x: rejected ($(tail -1 $M/out))"; fi
 done
+mkdir $M/d
+if python3 -I -O $D/verify_cover.py $base $meta $M/d > $M/out 2>&1; then echo "mutant d (empty dir, -O): ACCEPTED (bad)"; else echo "mutant d (empty dir, -O): rejected ($(tail -1 $M/out))"; fi
 rm -rf $M
