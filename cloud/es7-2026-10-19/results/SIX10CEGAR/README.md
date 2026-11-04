@@ -150,6 +150,10 @@ coordinates, with a scale-free orientation loss.
     `ROTREFINE20261104/math_linear.py`, which is on the review branch.
 - **`logs/`**: per-lane logs, the event log, cut provenance, the audit and re-certification tables, and summaries.
 - **`cuts_verified.clauses`**: the 10,608 re-verified cuts, in DIMACS clause lines.
+- **`hard_models/`**: the 101 blocked hard models, stored losslessly as 10 cluster files, one per cube.
+  - Each file holds a representative's true variables (triple orbits and phase order) and each member's flips.
+  - `INDEX.tsv` gives the sizes and the representative's model-file SHA-256.
+  - These are the targets of the next step.
 - **Not committed:** `cuts.clauses`, with all 10,917 cuts, and `blocked.clauses`. Both are in the archive.
 - **Archive:** the full run directory (all models, witnesses and SDP lifts) is in
   `proof-archives/es8-six10-cegar-2026-11-04/` (tar + zstd, round trip verified, `SHA256SUMS`).

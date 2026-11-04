@@ -1,0 +1,269 @@
+% k8_section.tex -- draft section for the note symmetric_extremal.tex (draft of 4 November 2026).
+% Uses the note's macros (\orient, \conv, \dirn, \lean) and bibliography keys (SMQH25, Mac25, Bae25, BB25, Dum25,
+% Supp). Labels are prefixed k8: so that the section can be merged with the note; if it is merged, Lemma k8:layer
+% replaces the note's Lemma lem:layer, and the Supp entry must list C7UPPER, C6UPPER, LAYERLEAN, ROT456 and the review
+% directories C6C7REVIEW and ROTREFINE20261104.
+
+\section{Rotational symmetry for \texorpdfstring{$k=8$}{k=8}: upper bounds}\label{sec:k8}
+
+Let $\rho$ be the rotation by $2\pi/m$ about $O$. For $m\ge3$ and $K\le 2m$ let $L(m,K)$ be the largest $t$ for which
+there are $t$ nested regular $m$-gons centred at $O$ whose union is in general position and has no $K$ points in convex
+position. By Lemma~\ref{k8:layer} below, an $m$-fold symmetric set in general position with no convex $K$-gon has at most
+$mL(m,K)+1$ points, and at most $mL(m,K)$ if $m$ is even. The lower bounds $L(7,8)\ge9$ and $L(6,8)\ge9$ come from
+explicit sets (exact computation): seven order types of sevenfold symmetric $64$-point sets (nine heptagons and the
+centre) and a sixfold symmetric $54$-point set (nine hexagons)~\cite[\dirn{ES8SYM}, \dirn{PRIMEFOLD}]{Supp}. This
+section proves the matching upper bound for $m=7$ and an upper bound one layer above the lower bound for $m=6$
+(Table~\ref{k8:tab:status}).
+
+Every statement carries one of the labels Lean-checked; certificate (both checkers); exact computation; written proof
+(not refereed); evidence only. A \emph{certificate} is an LRAT proof of unsatisfiability of a CNF formula accepted by
+both lrat-check and the verified checker cake\_lpr; the solver (CaDiCaL~3.0.1) is not trusted. A certificate proves a
+geometric statement only together with the soundness of the encoding, whose status is stated separately
+(\S\ref{k8:sec:trust}). Paths refer to the supplementary directories~\cite{Supp}.
+
+\subsection{The layer lemma and the encoding facts in Lean}\label{k8:sec:lean}
+
+\begin{lemma}[layer lemma; Lean-checked (\dirn{LAYERLEAN})]\label{k8:layer}
+Let $m\ge3$, $K\le2m$, and let $S$ be a finite $\rho$-invariant set in general position with no $K$ points in
+convex position. Then $S\setminus\{O\}$ is the union of regular $m$-gons $L_0,L_1,\dots,L_{t-1}$ centred at $O$ (its
+convex layers), and for $n<n'$, every vertex $x$ of $L_n$ and every $y\in L_{n'}$ satisfy $\orient(x,\rho x,y)>0$. If $m$
+is even and $S\ne\{O\}$, then $O\notin S$.
+\end{lemma}
+
+\begin{proof}[Proof sketch]
+The set of hull vertices of $S\setminus\{O\}$ is $\rho$-invariant and nonempty, so it is a union of orbits of exactly
+$m$ points each; two orbits would give $2m\ge K$ points in convex position, so it is one orbit, a regular $m$-gon. Peel
+it off and repeat. For strict nesting, with $\tau=\pi/m$,
+\[
+\orient(x,\rho x,\rho^j x)=4\,|x-O|^2\sin\tau\,\sin j\tau\,\sin(j-1)\tau\ \ge0,
+\]
+so the vertices of a layer, and by convexity its hull, lie weakly to the left of each edge; equality would give three
+collinear points of $S$. For even $m$, $\rho^{m/2}$ is the half-turn, and $p,O,2O-p$ are collinear.
+\end{proof}
+
+In \dirn{LAYERLEAN/LayerLemma.lean} (Lean~4.24.0, Mathlib \texttt{f897ebcf}; axioms \texttt{propext},
+\texttt{Classical.choice}, \texttt{Quot.sound} only) the core statement \lean{hullVerts_eq_orbitFS} is proved for an
+injective affine map with all minimal periods equal to $m$, with no general position assumed; the layers are
+\lean{layers_are_orbits} and \lean{exists_layer}, strict nesting is \lean{strict_nesting} (it needs general position and
+$m\ge2$), and the centre is \lean{centre_not_mem_of_even}. The written version is \dirn{SYM5/README.md}~\S2.
+SMQH~\cite[\S3.2]{SMQH25} use the special case of $16$ points with fourfold symmetry and no convex hexagon (four layers
+of four points).
+
+\paragraph{Polar form} (Lean-checked, \lean{orient_polar}). Write the points of the layers as $O+r(\cos\theta,\sin\theta)$. Then
+\[
+\orient(a,b,d)=r_ar_b\sin(\theta_b-\theta_a)+r_br_d\sin(\theta_d-\theta_b)+r_dr_a\sin(\theta_a-\theta_d).
+\]
+
+\begin{lemma}[encoding facts; Lean-checked (\dirn{LAYERLEAN})]\label{k8:facts}
+Under the hypotheses of Lemma~\ref{k8:layer}:
+\begin{enumerate}[label=(\alph*)]
+\item\emph{(rule A)} if the three angular gaps from $a$ to $b$ to $d$ lie in $(0,\pi)$, so that $O$ lies inside the
+triangle, then $\orient(a,b,d)>0$;
+\item\emph{(rule B)} if $\theta_b=\theta_a+x$ and $\theta_d=\theta_b+y$ with $x,y>0$, $x+y<\pi$, and $r_b\ge
+r_a,r_d$, then $\orient(a,b,d)>0$;
+\item\emph{(radius order)} points of later layers are no farther from $O$ than points of earlier layers;
+\item\emph{(chains)} if $K\ge4$, there are no pivot $p\in L_i$ and points $q_0,\dots,q_{K-2}$ of
+$L_i\cup L_{i+1}\cup\cdots$, all other than $p$, with $\orient(p,q_s,q_{s+1})>0$ and $\orient(q_s,q_{s+1},q_{s+2})>0$
+for all admissible $s$;
+\item\emph{(reduction)} if every $\rho$-invariant set in general position with exactly $mt$ points and without $O$ has
+a convex $K$-gon, then so does every $\rho$-invariant set in general position with more than $m(t-1)$ points other than
+$O$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}[Proof sketch]
+(a)~All three sines are positive. (b)~By $r_b\ge r_a,r_d$ the polar form is at least
+$r_ar_d(\sin x+\sin y-\sin(x+y))>0$. (c)~By convexity of the disc and Lemma~\ref{k8:layer}. (d)~\emph{Fan lemma:} a
+pivot and $n\ge3$ chain points in an open half-plane through the pivot, with all these turns positive, are in convex
+position. \emph{Half-plane:} every other point of the layers $\ge i$ lies strictly on the inner side of the tangent line
+at $p$; for $\rho^jp$ the value is $|p-O|^2(1-\cos(2\pi j/m))$, and for later layers it follows from strict nesting at
+the two edges through $p$. So a chain would be a convex $K$-gon. (e)~Peel $t$ layers of exactly $m$ points.
+\end{proof}
+
+The Lean names are \lean{orient_polar}, \lean{orient_polar_centre_inside}, \lean{orient_polar_halfplane} (using
+$\sin x+\sin y>\sin(x+y)$, \lean{sin_add_lt}), \lean{dist2_le_of_later}, \lean{chain_clauses_sound} (with
+\lean{hasConvexNGon_of_fan} and \lean{lin_pos_of_peel}) and \lean{convexNGon_of_layers}.
+
+\subsection{The encoding}\label{k8:sec:enc}
+
+Fix $t$ layers and rotate so that layer $0$ has a vertex at angle $0$. The encoder \dirn{C7UPPER/gen.py} (encoder A) has
+one variable per rotation orbit of ordered triples (the orientation), phase-order variables $Y(i,j)=[\psi_i<\psi_j]$
+with $\psi=\theta\bmod\pi/m$ for odd $m$ and $\psi=\theta\bmod 2\pi/m$ for even $m$, variables $H(i)=[\theta_i<\pi/m]$ for
+odd $m$, and auxiliary chain variables. Its clauses are:
+\begin{itemize}
+\item\emph{angular rules:} for each triple, the circular order of its directions and their antipodes is determined by
+the phase order of its layers, and where rule A or rule B applies the orientation is fixed accordingly;
+\item\emph{nesting:} $\orient(x,\rho x,y)>0$ for $x$ in a layer and $y$ in a later one (Lemma~\ref{k8:layer});
+\item\emph{chains:} no chain of $K-1$ points around a pivot $(i,0)$ as in Lemma~\ref{k8:facts}(d). By rotation this
+covers every convex $K$-gon: take its outermost layer as $i$.
+\end{itemize}
+Even $m$ needs no $H$ variables, since antipodes are orbit points; a triple containing an antipodal pair of one layer
+gets no angular clause, which is weaker but sound. The encoder \dirn{C7UPPER/gen\_b.py}, extended to even $m$ as
+\dirn{C6UPPER/encb/gen\_b2.py} (encoder B), implements the same families separately: exact integer circular orders
+instead of sampled float patterns, chains built backwards, a different variable order. The two encoders share the
+written soundness argument, the canonical triple representatives and part of the validation code, so they are separate
+implementations of one encoding, not independent encodings.
+
+\emph{Soundness} (every real configuration of $t$ nested regular $m$-gons in general position without a convex $K$-gon
+satisfies the formula) is the docstring proof of \dirn{gen.py}: written proof (not refereed), reviewed line by line for
+$(m,K)=(4,8),(5,8),(6,8)$ (\dirn{ROT456}~\S2) and again for $m=6,7$ (\dirn{C6C7REVIEW}), with no blocking gap found. The
+parts in Lemmas~\ref{k8:layer} and~\ref{k8:facts} are Lean-checked; the rest is listed in \S\ref{k8:sec:trust}.
+
+\emph{Validation} (evidence only, except where stated). Fresh runs reproduce every formula byte for byte. The known
+sevenfold $63$- and $64$-point sets satisfy every clause of the $9$-layer formula, and the $54$-point sixfold set and
+its mirror image satisfy every clause of both encoders' $9$-layer formulas (exact computation, integer arithmetic in
+the coordinates of the sixfold cyclotomic weights, \dirn{C6C7REVIEW}). On random configurations, chain clauses agree with
+brute force over all $8$-subsets, and the non-chain clauses of A and B agree on all $185{,}549$ ($m=7$) and $35{,}590$
+($m=6$) orbit-pattern pairs compared. Calibration: for $(m,K)=(3,4),(4,5),(5,6),(6,7)$ the encoding is satisfiable
+exactly at the known maximum number of layers and unsatisfiable one layer beyond (proofs accepted by lrat-check).
+
+\subsection{Sevenfold symmetry}
+
+\begin{theorem}[certificate (both checkers), two encoders; reduction Lean-checked; lower bound exact computation]
+\label{k8:c7}
+Every configuration of $10$ nested regular heptagons about a common centre, in general position and without the centre,
+contains $8$ points in convex position. Hence $L(7,8)=9$: every sevenfold rotationally symmetric set of at least $65$
+points in general position contains a convex octagon, and the largest sevenfold symmetric set in general position
+without a convex octagon has exactly $64$ points.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+\emph{Reduction} (Lean-checked, \lean{sevenfold_octagon}). By Lemma~\ref{k8:facts}(e), the statement follows from
+\lean{Sevenfold70}: every centre-free sevenfold set of $70$ points in general position has a convex octagon. A set of
+at least $65$ points has at least $10$ layers ($7\cdot9+1=64$); lowering $65$ to $64$ makes the Lean proof fail.
+
+\emph{Certificate.} Both encoders give \texttt{p cnf 80080 2748538} at $10$ layers. Encoder A adds $\theta_0=0$ and the
+unit $H(1)$, which loses nothing: the reflection in the $x$-axis keeps $\theta_0=0$ and swaps $H(1)$. Encoder B uses
+only $\theta_0=0$. CaDiCaL~3.0.1 reports UNSAT in $833$\,s and $802$\,s; the LRAT proofs ($1{,}702{,}278{,}368$ and
+$1{,}630{,}259{,}870$ bytes) are accepted by lrat-check and by cake\_lpr, and both were replayed against freshly generated
+formulas with both checkers on 4 November (\dirn{C6C7REVIEW}). Hashes are in \dirn{C7UPPER/SHA256SUMS.txt}.
+
+\emph{Lower bound} (exact computation). The sevenfold $64$-point sets above.
+\end{proof}
+
+Sevenfold affine symmetries reduce to rotations by the averaging argument of \dirn{SYMLEAN}. The $64$-point sets have a
+$k=6$ analogue in print, the fivefold $16$-point set with centre of~\cite[App.~C, Table~2]{SMQH25}
+(also~\cite[Fig.~3.33]{Mac25}).
+
+\subsection{Sixfold symmetry}
+
+\begin{theorem}[certificate (both checkers), two encoders, on top of a written proof (not refereed) of the reflection
+unit; reduction Lean-checked; lower bound exact computation]\label{k8:c6}
+Every configuration of $11$ nested regular hexagons about a common centre, in general position, contains $8$ points in
+convex position. Hence $L(6,8)\le10$: every sixfold rotationally symmetric set of at least $61$ points in general position
+contains a convex octagon, and the largest sixfold symmetric set in general position without a convex octagon has $54$
+or $60$ points.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+\emph{Reduction} (Lean-checked, \lean{sixfold_octagon}). The statement follows from \lean{Sixfold66}. For even $m$ the
+centre is excluded (Lemma~\ref{k8:layer}), so sizes are multiples of $6$ and $61$ points need $11$ layers.
+
+\emph{Symmetry breaking} (written proof (not refereed), \dirn{C6UPPER}~\S2). For even $m$ and $i\ge1$, general position
+gives distinct phases $\psi_i\in(0,2\pi/m)$. The reflection $(x,y)\mapsto(x,-y)$ keeps the layers, their radii and the
+vertex at angle $0$, preserves general and convex position, and maps $\psi_i$ to $2\pi/m-\psi_i$. It reverses the phase
+order of layers $1,\dots,t-1$, so one of the two configurations satisfies $Y(1,2)$. The $54$-point set and its mirror
+image satisfy the $9$-layer formulas with $Y(1,2)$ false and true respectively (exact computation).
+
+\emph{Split.} The base formula (encoder A: $78{,}059$ variables, $2{,}387{,}083$ clauses) plus $Y(1,2)$ is split into
+all $32$ sign patterns of $Y(1,3),Y(1,4),Y(2,3),Y(2,4),Y(3,4)$. A standard-library checker confirms that each cube file
+is the base formula byte for byte plus its units and that the patterns are distinct, and it rejects mutated covers
+(exact computation). Twenty patterns contradict transitivity and are refuted at once; the other twelve are the orders of
+$\psi_1,\dots,\psi_4$ with $\psi_1<\psi_2$.
+
+\emph{Certificates.} For encoder A the twelve orders took $1{,}230$--$2{,}068$\,s each ($41.0$\,GB of proofs); for
+encoder B, with the same split on its own formula, $1{,}495$--$2{,}553$\,s ($45.7$\,GB). All $64$ proofs were accepted
+by lrat-check and by cake\_lpr when solved. On 4 November three randomly chosen phase-order proofs per encoder were
+replayed with both checkers against freshly generated formulas, with matching hashes (\dirn{C6C7REVIEW}); the other
+cube verdicts are as recorded at solve time. An unsplit run was stopped after $6{,}578$\,s without an answer; it
+proves nothing.
+
+\emph{Lower bound} (exact computation). The sixfold $54$-point set \dirn{ES8SYM/sets/c6\_54pts\_9layers}.
+\end{proof}
+
+\begin{remark}[the gap $54$ versus $60$]\label{k8:gap}
+The plain encoding is satisfiable at $10$ layers. Adding the $3$-term Grassmann--Pl\"ucker sign relations lazily gives an
+abstract sixfold $60$-point model that satisfies all $27{,}307{,}560$ of them and has no $7$-chain; it has not been
+realized (evidence only: the best numerical fit leaves $249$ of $5{,}710$ orbit signs wrong) (\dirn{ROT456}~\S3). The reviews exclude such models one at a time for the prescribed sixfold rotation (written proof
+(not refereed), the identities verified by exact computation): the archived $60$-point model by a three-comparison
+determinant-product cycle (\dirn{C6C7REVIEW}), and, of $40$ fully GP-consistent models of a later refinement, $36$ by
+linear identities, $2$ by directed product cycles and $1$ by a negative-definite quadratic form; the last one is
+unresolved (\dirn{ROTREFINE20261104}). These exclusions concern
+the geometric sixfold action only, not arbitrary realizations of the order types. The sixfold maximum remains $54$ or
+$60$.
+\end{remark}
+
+\subsection{Trust base}\label{k8:sec:trust}
+
+\begin{itemize}
+\item\emph{Lean-checked:} Lemma~\ref{k8:layer} with strict nesting and the even-$m$ centre exclusion;
+Lemma~\ref{k8:facts} (the polar form and rules A and B, the radius order, the soundness of the chain family, the
+reduction to exactly $t$ layers); the deductions of Theorems~\ref{k8:c7} and~\ref{k8:c6} from \lean{Sevenfold70} and
+\lean{Sixfold66}.
+\item\emph{Certificate (both checkers):} the unsatisfiability of the two sevenfold formulas and of the $64$ sixfold
+cube formulas. Trusted: lrat-check and cake\_lpr.
+\item\emph{Exact computation:} the cube cover; the lower-bound sets; the real-set tests of the sixfold formulas.
+\item\emph{Written proof (not refereed), reviewed:} (i)~the classification of phase patterns, i.e.\ which of rules A and
+B applies, and to which ordered triple, as a function of the discrete phase pattern (exact integer comparisons in
+encoder B, float sampling in encoder A); (ii)~the perturbation to generic phases and the consistency of one variable per
+triple orbit (for even $m$ a triple stabiliser can only act as a $3$-cycle); (iii)~the code-to-clause correspondence,
+i.e.\ that the generators emit exactly these families; (iv)~the reflection unit for $m=6$.
+\item\emph{Evidence only:} the random, brute-force and cross-encoder tests.
+\end{itemize}
+No step from a CNF formula to the Lean propositions \lean{Sevenfold70} and \lean{Sixfold66} is formalized. A review of
+4 November found no blocking gap; some comments in \dirn{C7UPPER/gen\_b.py} and the angular docstring of
+\dirn{C7UPPER/gen.py} still state chain implications in the reverse direction (documentation only; the emitted formulas
+are unchanged).
+
+\subsection{The open threefold, fourfold and fivefold cases}
+
+Sizes needed to violate $ES(8)=65$ are $13$ layers ($m=5$, with or without centre), $17$ layers ($m=4$) and $22$ orbits
+without centre ($m=3$). Nothing below is a theorem; timed-out runs prove nothing.
+
+\begin{table}[ht]
+\centering\footnotesize
+\begin{tabular}{@{}lllll@{}}
+\toprule
+$m$ & largest known octagon-free set & needed for $65$ points & formula at threshold & status\\
+\midrule
+3 & 61 (20 orbits and centre) & 22 orbits, no centre & --- (layer lemma fails, $8>6$) & open\\
+4 & 52 (13 layers) & 17 layers & $130{,}439$ var., $4{,}658{,}852$ cl. & open\\
+5 & 56 (11 layers and centre) & 13 layers & $91{,}390$ var., $3{,}295{,}617$ cl. & open\\
+6 & 54 (9 layers) & 11 layers & --- & excluded (Thm.~\ref{k8:c6}); max.\ 54 or 60\\
+7 & 64 (9 layers and centre) & 10 layers & --- & excluded (Thm.~\ref{k8:c7}); max.\ 64\\
+\bottomrule
+\end{tabular}
+\caption{Rotational symmetry of order $3$ to $7$ and convex octagons. Lower bounds: exact computation (\dirn{ES8SYM}).}
+\label{k8:tab:status}
+\end{table}
+
+\emph{Fivefold} (evidence only). With the unit $H(1)$ and the $64$ sign patterns of $Y(1,2),\dots,Y(3,4)$, the $40$
+impossible patterns are refuted at once (lrat-check). Five of the $24$ phase orders ran $3{,}059$--$3{,}257$\,s each
+without an answer; splitting one of them further by layer $5$ left pieces that ran $6{,}570$\,s each without an answer;
+two other phase-order cubes ran $22{,}102$\,s each, about $5\cdot10^7$ conflicts, without an answer, against
+$2.0$--$2.6\cdot10^6$ conflicts for the sixfold cubes (\dirn{ROT456}~\S4). The plain encoding is satisfiable at $12$
+layers. Four exact linear identities over $\mathbb{Q}(\sqrt5)$ were found and tested on the $56$-point set; one of them
+excludes a fully GP-consistent abstract $60$-point model (written proof (not refereed), verified by exact
+computation), but a strengthened $13$-layer formula still gave no answer in
+$600$\,s (\dirn{ROTREFINE20261104}).
+
+\emph{Fourfold} (evidence only). One run of the $17$-layer formula stopped at $1{,}500$\,s without an answer. At $14$
+layers a fully GP-consistent abstract $56$-point model exists and has not been realized (best fit: $424$ of $6{,}930$
+orbit signs wrong).
+
+\emph{Threefold.} Here $8>2\cdot3$, so Lemma~\ref{k8:layer} does not apply. Every convex layer is a triangle, a
+hexagon or the centre (written proof (not refereed), \dirn{ES8SYM}~\S3), and since $3\cdot21+1<65$, a threefold
+counterexample to $ES(8)=65$ exists if and only if some threefold set of $22$ orbits without centre is octagon-free.
+Near misses (exact computation): a threefold $64$-point set and its $63$-point subset without the centre, each with
+exactly three convex octagons. A radius-ordered relaxation that omits the nesting clauses has a written soundness
+argument (\dirn{C6C7REVIEW}); it has not been implemented or tested.
+
+\paragraph{Credit.} Subercaseaux, Mackey, Qian and Heule~\cite{SMQH25,Mac25} built rotational symmetry into SAT
+encodings for Erd\H{o}s--Szekeres-type problems; they also use the special case of Lemma~\ref{k8:layer}
+noted above. Dumitru's computations for $33$ points fix convex-layer
+templates~\cite[\S7, Table~1]{Dum25}; one of them implies the fivefold case for $k=7$, with priority, and no statement on
+symmetric sets for $k\ge8$ was found in~\cite{Dum25}. For the other symmetry types at $k=8$, the mirror value $46$
+follows from Baek's theorem~\cite{Bae25}, and the half-turn value $64$ from Baek--Balko's blow-up lemma~\cite[Lemma~14]{BB25}
+with the $16$-point sets of~\cite{SMQH25,Mac25}. For Theorems~\ref{k8:c7} and~\ref{k8:c6}, no matching prior result was found in the sources inspected (those of Section~\ref{sec:lit},
+arXiv:2512.24061, and a web search on 3 November 2026); the symmetric literature inspected stops at $k=7$. This is not a
+novelty claim.
