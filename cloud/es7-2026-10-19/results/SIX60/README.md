@@ -5,7 +5,7 @@
 
 | Part | Statement | Status |
 |---|---|---|
-| Lower bound | The three sets A, B and C in `sets/` have 60 points, are invariant under rotation by 60 degrees, are in general position, and contain no 8 points in convex position. | Exact computation, three independent implementations per set (below). |
+| Lower bound | The four sets A, B, C and D in `sets/` have 60 points, are invariant under rotation by 60 degrees, are in general position, and contain no 8 points in convex position. | Exact computation, three independent implementations per set (below). |
 | Upper bound | Every 6-fold symmetric set of at least 61 points in general position contains a convex octagon. | `C6UPPER` (3 November): a certificate accepted by both checkers for two separately implemented encoders. The reduction is Lean-checked (`LAYERLEAN`). The encoder steps are a written proof, reviewed but not Lean-checked. |
 
 Sizes of 6-fold sets without a centre are multiples of 6, and a general-position 6-fold set cannot contain the
@@ -29,6 +29,7 @@ Layer o is rows 6o..6o+5, outermost first.
 | `sets/c6_60pts_B.pts` | B | 2^28 | `2a0c981e…` |
 | `sets/c6_60pts_C.pts` | C | 10^12 | `61ed920d…` |
 | `sets/c6_60pts_C2.pts` | C' (rounding of C at 10^9; its own exact check) | 10^9 | `8ba0b2e9…` |
+| `sets/c6_60pts_D.pts` | D (A robustified; **smallest coordinates, recommended for presentation**) | 2^19 | `e2eaceb9…` |
 
 `sets/SHA256SUMS.txt` has the full hashes. Layer radii (outer layer = 1) and phases theta_i, from the float sources:
 - **A.** A twin-layer spiral. The outer hexagon is followed by four pairs of near-twin layers: radius 0.290 / 0.256 at
@@ -40,7 +41,10 @@ Layer o is rows 6o..6o+5, outermost first.
 - **C.** Needles at the outer edge midpoints. Layers 1–8 are at radii 7.3 x 10^-3 to 3.7 x 10^-3 with phases 30.2 to
   34.9 deg. The innermost hexagon has radius 5.4 x 10^-6 and phase 35.1 deg.
 
-A, B and C have 296,544, 301,674 and 221,976 convex 7-subsets, so they are pairwise different order types. None of them
+- **D.** Set A after a constrained local optimisation that keeps the octagon count at 0 (`construction/tools/robustify.py`).
+  All coefficients are at most 2^19 = 524,288, and the minimum normalized sine rises from 2.2e-5 to 1.3e-3.
+
+A, B, C and D have 296,544, 301,674, 221,976 and 316,182 convex 7-subsets, so they are pairwise different order types. None of them
 contains a certified 54-point order type of `ES8SYM` as nine of its layers. The realization workstream reports that
 neither 54-point order type extends by one hexagon at any nesting position: 36 SAT cases, all UNSAT, with LRAT proofs
 accepted by lrat-check (`construction/REALIZE_README.md`; not re-checked by the coordinator).
@@ -69,6 +73,7 @@ accepted by lrat-check (`construction/REALIZE_README.md`; not re-checked by the 
 | B | 291,927 | 1,057,422 | 1,462,500 | 301,674 | 0 |
 | C | 284,577 | 954,066 | 1,110,345 | 221,976 | 0 |
 | C' | 284,607 | 954,234 | 1,111,230 | 223,416 | 0 |
+| D | 297,279 | 1,128,000 | 1,651,268 | 316,182 | 0 |
 
 Reproduce, from this directory:
 
