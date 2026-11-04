@@ -12,7 +12,7 @@ position with no convex octagon has exactly 64 points. This is the 7-fold case o
   found no gap. Since 4 November three parts are Lean-checked (`LAYERLEAN`): the layer lemma, the mathematical
   soundness of the chain family, and the angular rules in polar form. The classification of phase patterns and the
   step from code to clauses are not.
-- Two independently written encoders give UNSAT at 10 layers. Each LRAT proof is accepted by lrat-check (re-checked by
+- Two separately implemented encoders give UNSAT at 10 layers. Each LRAT proof is accepted by lrat-check (re-checked by
   an independent check) and by cake_lpr (heap 8,000 MB, about 33 s each; `logs/cake_A.out`, `logs/cake_B.out`).
 - Lower bound: the certified 64-point sets (9 layers plus the centre) of `ES8SYM` and `PRIMEFOLD`.
 - No matching prior result was found in the sources inspected: the symmetric literature (arXiv:2506.00224 and the

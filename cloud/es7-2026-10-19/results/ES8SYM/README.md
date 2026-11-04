@@ -14,8 +14,9 @@ known. All point sets are in `sets/`.
   computation).
 - Rotation of order >= 8: only the centre (Lean-checked).
 - Every other entry is a lower bound by exact computation; the half-turn bound 64 also follows from published results
-  (§5). The only upper bounds come from ES(8) <= 311. The half-turn and 7-fold values equal 64 if ES(8) = 65; that
-  they equal 64 is a conjecture.
+  (§5). Upper bounds added on 3 November (certificate, both checkers): 7-fold at most 64, hence exactly 64 (`C7UPPER`),
+  and 6-fold at most 60 (`C6UPPER`). For the other rotation types the only upper bounds come from ES(8) <= 311. The
+  half-turn value equals 64 if ES(8) = 65; that it equals 64 is a conjecture.
 - One lemma of the first draft (rotation chains) was false; it is corrected here. Seven other tempting statements
   are refuted with explicit counterexamples (§7).
 
@@ -24,20 +25,34 @@ known. All point sets are in `sets/`.
 | symmetry | possible sizes | largest set here | N(type) | status |
 |---|---|---|---|---|
 | half-turn (2-fold) | 2m (no centre) | 64: `c2_64points_k8.txt`, `c2_64points_k8_bb.txt` | >= 64; = 64 if ES(8) = 65 | exact computation; implied by published results (§5) |
-| 3-fold | 3m, 3m + 1 | 60 without centre: `sets2/c3_60pts_nocentre.txt` (2 November); earlier 55 with centre: `c3_55points_k8.txt` | >= 55 | exact computation |
+| 3-fold | 3m, 3m + 1 | 61 with centre: `sets4/c3_61pts_centre.txt`, `sets4/c3_61pts_blowup.txt` (3 November); 60 without centre: `sets2/c3_60pts_nocentre.txt`, `sets2/c3_60pts_nocentre_b.txt` (2 November); earlier 55 with centre: `c3_55points_k8.txt` | >= 61 | exact computation |
 | 4-fold | 4m | 52: `c4_52pts_13layers.pts` | >= 52 | exact computation |
-| 5-fold | 5m, 5m + 1 | 51 with centre: `c5_51pts_10layers_centre.pts` | >= 51 | exact computation |
-| 6-fold | 6m | 54: `c6_54pts_9layers.pts` | >= 54 | exact computation |
-| 7-fold | 7m, 7m + 1 | 64 with centre: five order types (§6) | >= 64; = 64 if ES(8) = 65 | exact computation |
+| 5-fold | 5m, 5m + 1 | 56 with centre: `sets3/c5_56pts_11layers_centre.pts` (2–3 November); earlier 51 with centre: `c5_51pts_10layers_centre.pts` | >= 56 | exact computation |
+| 6-fold | 6m | 54: `c6_54pts_9layers.pts`; a second order type: `sets3/c6_54pts_1orbit.pts` | **54 or 60** | lower bound exact computation; upper bound 60 certificate, both checkers (`C6UPPER`, 3 November) |
+| 7-fold | 7m, 7m + 1 | 64 with centre: five order types (§6) | **64** | lower bound exact computation; upper bound certificate, both checkers (`C7UPPER`, 2–3 November) |
 | order >= 8 | 0 or 1 | the centre alone | 1 | Lean-checked |
 | mirror | 2m + b, b <= 2 on the axis | 46: `mirror_46points_k8.txt`, `mirror46_A_S.txt` | **46** | upper bound Lean-checked (`SYMLEAN/mirror`) and a corollary of Baek's theorem (refereed); certificates accepted by both checkers (§4); lower bound exact computation |
 
-- **Upper bounds for rotations.** The project's ES(8) <= 311 (Lean-checked; repository root
-  `experiments/omission-final311-2026-10-14/`, not re-run here) gives N <= 310. The refereed ES(8) <= 408
+*Updated 4 November 2026.* The 3-, 5-, 6- and 7-fold rows now agree with the addenda at the end of this file and with
+`WRITEUP/note/symmetric_extremal.tex`, Table `tab:k8` (3-fold 61, 4-fold 52, 5-fold 56, 6-fold 54, 7-fold exactly 64).
+Two upper bounds were added after 1 November:
+- 6-fold, `C6UPPER`: every 6-fold symmetric set of at least 61 points in general position contains a convex octagon.
+  Sizes are multiples of 6, so the 6-fold maximum is 54 or 60.
+- 7-fold, `C7UPPER`: every 7-fold symmetric set of at least 65 points in general position contains a convex octagon,
+  so the 7-fold maximum is exactly 64.
+
+Both are certificates (both checkers): for each of two separately implemented encoders, every LRAT proof is accepted by
+lrat-check and cake_lpr, on top of a written soundness proof of the encoding. The reduction to the certified
+statements is Lean-checked (`LAYERLEAN`, 4 November).
+
+- **Upper bounds for rotations.** For the half-turn, 3-, 4- and 5-fold types, the project's ES(8) <= 311 (Lean-checked;
+  repository root `experiments/omission-final311-2026-10-14/`, not re-run here) gives N <= 310. The refereed ES(8) <= 408
   (Mojarrad–Vlachos, Discrete Comput. Geom. 56 (2016)) gives 407.
 - **What ES(8) = 65 would need.** A symmetric counterexample needs at least 66 points (half-turn), 66 without centre
-  (3-fold, 22 orbits), 68 (4-fold), 65 (5-fold), 66 (6-fold) or 70 (7-fold); §3. The mirror case is settled: 46 < 65.
-- Without centre: 63 points for 7-fold (`c7_63pts_9layers.pts`); 54 for 3-fold (the 55-point set minus its centre).
+  (3-fold, 22 orbits), 68 (4-fold), 65 (5-fold), 66 (6-fold; excluded by `C6UPPER`) or 70 (7-fold; excluded by `C7UPPER`);
+  §3. The mirror case is settled: 46 < 65.
+- Without centre: 63 points for 7-fold (`c7_63pts_9layers.pts`); 60 for 3-fold (`sets2/c3_60pts_nocentre.txt`,
+  `sets2/c3_60pts_nocentre_b.txt`; earlier 54, the 55-point set minus its centre).
 
 ## 2. The point sets and their checks
 
@@ -220,7 +235,7 @@ Balko (§4 there, from a private communication).
 For the 7-fold 64-point sets, the 3-, 4-, 5- and 6-fold lower bounds, the corrected rotation-chain and zone lemmas,
 the statements of §5 other than the bound 64, the statements of §6, and the value 46 as a statement about
 mirror-symmetric sets, **no matching prior result was found in the sources inspected**:
-- SMQH, arXiv:2506.00224v1 (full text: rotations only, k <= 7); J. Mackey, CMU-CS-25-108 (thesis); Baek–Balko, SoCG
+- SMQH, arXiv:2506.00224v1 (full text: rotations only, k <= 7); E. Mackey, CMU-CS-25-108 (M.S. thesis, 2025); Baek–Balko, SoCG
   2025 (LIPIcs 332, 13: no occurrence of "symmetr"); Baek, arXiv:2206.04260v2; Balko–Valtr, ENDM 2015.
 - Georgiev–Gómez-Serrano–Tao–Wagner, arXiv:2511.02864v3, item 38: 64-point octagon-free sets with no symmetry stated;
   its published 65-point set is far from symmetric.
@@ -236,8 +251,9 @@ This is not a novelty claim.
 
 ## 9. Not claimed
 
-No upper bound for any rotation type beyond what ES(8) <= 311 gives; no exact value except mirror and order >= 8; no
-optimality of the 3-, 4-, 5- or 6-fold sets. General even k (`SYMEVEN/`), the (k − 1)-fold family for other k
+No upper bound for the half-turn, 3-, 4- or 5-fold types beyond what ES(8) <= 311 gives (the 6- and 7-fold bounds are
+in `C6UPPER` and `C7UPPER`); no exact value except mirror, 7-fold and order >= 8; no optimality of the 3-, 4-, 5- or
+6-fold sets. General even k (`SYMEVEN/`), the (k − 1)-fold family for other k
 (`PRIMEFOLD/`) and mirror sets for other k (`MIRRORETV/`) are treated separately. The Lean proof of the mirror bound is
 in `SYMLEAN/mirror`, not here. The two Lean files here were compiled with the repository's Lean 4.24.0 and Mathlib
 (`lean/*.out`); the copies differ from the compiled files only in four comment lines (SHA-256 of the compiled files
