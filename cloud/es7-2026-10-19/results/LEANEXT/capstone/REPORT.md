@@ -21,3 +21,24 @@ in one file, with the phase file kept in its own namespace.
 
 **Open issues.** The runs with middle point a or d follow in the same way (`orient_pos_of_runMidA`/`D`) but are not
 combined with layers here. The polar forms are assumed (see `phase/exists_polar`).
+
+## Capstone2.lean (all three run positions)
+
+The file is `Capstone2.lean` (2132 lines, SHA-256 `f8c3930c…`). Lines 1–2003 are identical to `Capstone.lean`.
+- **Checks.** The build is clean, re-checked independently.
+- **Axioms.** All main theorems depend only on [propext, Classical.choice, Quot.sound].
+
+**Lean-checked.**
+- **`orient_pos_of_layers_runMidD` and `orient_pos_of_layers_runMidA`.** The runs with middle point d or a in the
+  outermost layer.
+- **`orient_pos_of_layers_runMid{B,D,A}_intrinsic`.** The same three cases with intrinsic radii: each point is
+  `polar c (√(dist2 c ·)) θ`, and positivity comes from c ∉ S.
+- **Helpers.** `exists_angle` (every p ≠ c has such a form, from `exists_polar`), `sqrt_dist2_pos`, `polar_zero` and
+  `ne_of_mem`.
+
+**Mutant.** Reversing the outermost-layer hypothesis makes the proof fail.
+
+**Open issues.**
+- **Sorted angles.** The angles must be given sorted (α < β < δ < α + 2π). The unsorted case
+  (`orient_sign_of_phase`) is not wired in.
+- **Gap conditions.** The gap conditions ≠ π are assumed rather than derived from general position.
