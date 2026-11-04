@@ -83,6 +83,8 @@ for l in open('sets/c6_60pts_A.pts'):
 - The assignment satisfies every one of 2,157,010 clauses in 74 clause files: every cut family produced in the
   5 November campaign (chord lemma, GP, linear, facial, local, final-polynomial), `SIX10CEGAR/cuts_verified.clauses`
   and `SIX10REFINE/cut_model0090_sparse.clauses`.
+- Set B (phase order 1 < 2 < ... < 9) was labelled and checked the same way. It satisfies all 2,195,980 clauses of
+  the 84 clause files present at 01:25 KST.
 - A real configuration satisfies every sound clause, so this is a strong consistency check that none of these cut
   families is unsound.
 - It also shows that cube c11111 could never have become UNSAT: the "54 or 60" question could not be settled by

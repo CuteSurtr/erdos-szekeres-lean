@@ -1,0 +1,16 @@
+{
+ "base_clauses_total": 1609785,
+ "base_clauses_vars_le_5746": 7709,
+ "base_units_le_5746": 1880,
+ "chord_units_contradicting_base_units": [],
+ "chord_clauses_falsified_by_base_units": [],
+ "UP_base_small_plus_chord": "no conflict (2188 vars fixed)",
+ "UP_fixed_vars_base_only": 1880,
+ "(in_new_file, base_relation)": {
+  "(False, 'identical')": 308,
+  "(True, None)": 524,
+  "(False, 'subsumed-by-base-unit')": 144
+ },
+ "new_subset_of_chord": true,
+ "new_clauses_already_satisfied_by_base_UP": 0
+}
