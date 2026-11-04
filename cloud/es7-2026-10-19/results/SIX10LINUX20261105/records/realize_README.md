@@ -259,7 +259,7 @@ reconstructed and re-run by the original agent.
 | 8. float source | `runs/altproj_D0_N8ZERO_0.json` = `exact/cand1/config_float.json` (sha256 `ed5c8427…dfb3b`) = `exact/cand1/cand1.cfg` (lr, theta per layer) | |
 | 9. rounding | integer oblique seeds z_i = w0 + w1·zeta at scale 2^40 (`cand1_S40.json` → `cand1_vc.pts`, 00:55:34) and 2^28 (`cand1_s28.pts`, 00:57:34) | the 2^28 representatives are in `RESULT.json` / `cert_s28_seeds.json`. `small_S28.json` is another rounding at the same scale; it differs by 1 in two coordinates. **The reference object is `cand1_s28.pts`** |
 
-**Wall time.** 49 s from launch to the float N8 = 0 configuration: 6 s loading, 25 s for 6 SAT+fit rounds, 14 s
+**Wall time.** 49 s from launch (00:53:57) to the float N8 = 0 configuration (00:54:46): about 7 s loading, 28 s for 6 SAT+fit rounds, 14 s
 annealing. Exact verification followed within 3 minutes.
 
 **Scripts used**, with sha256 at hand-off. None was modified after 00:53:23, so all predate the run:
@@ -351,5 +351,70 @@ All of it is in `p2/` (README there). In short:
 
 ## Results at hand-off
 
-See section 0 (cand1, the reference; cand2) and sections 4–5. Robustification (`tools/robustify.py`, log
-`logs/robustify1.log`): see the addendum below once it finishes.
+See section 0 (cand1, the reference; cand2) and sections 4–5.
+
+### cand1r: robustified cand1, smaller integers (exact; `exact/cand1r/`)
+
+The coordinator asked to keep the robustified set as "cand2", but that name was already taken by the structurally
+different example above, so it is called **cand1r**. **cand1 stays the reference.**
+
+**How it was made.**
+- `tools/robustify.py ../exact/cand1/config_float.json ../exact/cand1/robust1.json 1200` ran from 00:58 to 01:18,
+  446k proposals with rng seed 1.
+- It is a constrained local annealing that maximises the smallest scale-free orientation (sin of the largest triangle
+  angle) while keeping float N8 = 0. That value rose from 2.2e-5 to **1.285e-3**.
+- The float result was rounded with `p2/mfold/tools/to_pts.py 6 robust1_z.json S` (z = a + b·zeta, rounded at 2^S)
+  and verified at S = 16..20:
+  - S = 19 and S = 20 pass the full pipeline;
+  - S = 16, 17 and 18 pass verify_cfg and crosscheck, but rounding changes the order type and creates octagons, so
+    those fail at cvx2;
+  - S = 10, 12 and 14 are not in general position.
+
+**cand1r = `cand1r_s19.pts`**. Its seeds w0 + w1·zeta, with every coefficient at most 2^19 = 524288 (cand1 uses 2^28):
+(524288,0), (131119,11665), (131103,11664), (107744,21423), (107703,21423), (88128,30720), (86762,30677),
+(56942,30072), (56913,30089), (5569,389).
+
+**Exact verification** (`v_S19/verify.log`, `v_S19/enum_convex.log`).
+- verify_cfg: EXACT-PREP PASS, with 0 zero orientations and interval B 0/0.
+- cvx2: DP1 = DP2, 0 convex 8-gons, largest 7, CVX2 PASS.
+- cvxcheck: 0 convex 8-subsets, DP 7.
+- crosscheck_decimal: PASS.
+- enum_convex (__int128, oblique integers): 0 collinear, largest convex subset 7.
+- Convex k-gon counts for k = 3..7: 34220, 297279, 1128000, 1651268, 316182. These differ from cand1, so this is a
+  different order type: 37 encoder variables differ.
+
+**Robustness.**
+- min |det| = 3.42e4 at coordinate size 5.2e5. Relative to the squared coordinate size that is 1.2e-7; cand1 has
+  2.6e8 at 2.7e8, which is 3.6e-9. So cand1r is about 35× more robust, with integers smaller by a factor of 2^9.
+
+**Encoder and clause checks.**
+- `encA_exact_check.json`: exact assignment, the convention holds, encoder A is SAT with all 5746 values.
+- `check_clauses.log` (`tools/check_set_vs_clauses.py`): **0 of 2,195,325** lane clauses violated. These are
+  `cegar/base` cuts, `shared/cuts`, `shared/gp` and all 80 `inbox/*.clauses`.
+
+| file | sha256 |
+|---|---|
+| `exact/cand1r/cand1r_s19.pts` | `e2eaceb9e6483b461a72fc330a5d05b0ad6d7e238bfc557f5eed412d95d133c2` |
+| `exact/cand1r/cand1r_s19_oblique_xy.txt` | `e06341b2ccbcd30f67f5daea679841e08990ac818f705796f9617a15ef719a06` |
+| `exact/cand1/robust1.json` (float source) | `f5828d99e59c2dad4dfafa4933880e3f3f3456b08ec44b01041937c7577eb8d3` |
+| `exact/cand1r/cand1r_seeds_model.json` (assignment) | `0e42a84d7eceea89ad31cd8b990c66039c3033323a97e241fa8ade0fdd42df20` |
+| `exact/cand1r/v_S19/c.otab` | `193c0540a6ecc8c274f4795c24f23c1a4aaaedc85373745945f40363c08be00a` |
+| `exact/cand1r/v_S19/verify.log` | `5511068ddea4de51263ac8c26394aecbd22a57919ce7760654dc1c21d2ca3830` |
+| `exact/cand1r/v_S19/enum_convex.log` | `d2b93553e1d22d520b768813e9249d4546d73377e3c7a81ef02e9135e4370ec6` |
+| `exact/cand1r/check_clauses.log` | `edeb36f969bfcb1677f161f4863d52642ab35c9c2e90ea1b146d9c8a6b640382` |
+
+### m-fold alternating projections and extension tests (`p2/mfold/`, `p2/README.md` §5)
+
+**Exact (LRAT).**
+- The order type of the certified 4-fold 52-point set does not extend by one layer: 26/26 cases.
+- The 5-fold 56-point set without its centre extends only by a new innermost layer: 32/33 cases UNSAT.
+
+**Relaxations** (one old layer freed; solver results, LRAT running):
+- 4-fold: 338/338 UNSAT.
+- 5-fold: 14 SAT cases out of 363, all with the new material at the centre. None could be realized numerically; the
+  best is N8 = 1,755.
+
+**Alternating projections** (5 runs, until 04:25):
+- best float N8 so far: 4-fold 240, 5-fold 590;
+- no N8 = 0 configuration yet;
+- any N8 = 0 output is exactly verified automatically (`p2/mfold/exact/VERIFIED.tsv`).
