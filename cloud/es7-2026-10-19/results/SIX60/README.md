@@ -17,6 +17,34 @@ from "54 or 60" to **60**. The 7-fold value was already exactly 64.
 octagon-free rotational sets; the symmetric literature it inspected stops at k = 7. That check was not repeated on
 5 November. No priority claim is made beyond it.
 
+## Proof, with references
+
+Let S be a finite set of points in the plane in general position, invariant under the rotation rho by 60 degrees
+about a point O, and with no 8 points in convex position.
+
+1. **O is not in S** (Lean-checked, `LAYERLEAN/LayerLemma.lean`, `centre_not_mem_of_even`). For even m, O is the
+   midpoint of p and rho^3(p) for every p in S, and three collinear points are excluded.
+2. **Layer lemma** (Lean-checked, `LAYERLEAN`: `hullVerts_eq_orbitFS` and its corollaries; first written in `SYM5` §2).
+   K = 8 <= 2m = 12, so S is a union of t nested regular hexagons about O, with strictly decreasing radii. Hence
+   |S| = 6t.
+3. **Upper bound** (`C6UPPER`). Every configuration of 11 nested regular hexagons in general position has 8 points in
+   convex position.
+   - **Certificate.** For each of two separately implemented encoders (`C7UPPER/gen.py` as encoder A and
+     `C6UPPER/encb/gen_b2.py` as encoder B), the formula for t = 11 with the reflection unit Y(1,2) and a 32-cube split
+     on the phase order of layers 1–4 is UNSAT. Every LRAT proof is accepted by both lrat-check and the verified
+     checker cake_lpr. The proofs are archived outside Git (`es8-c6-octagon-2026-11-03`; hashes in
+     `C6UPPER/SHA256SUMS.txt`).
+   - **Written proofs, reviewed, not Lean-checked.** The soundness of the encodings (docstring of `C7UPPER/gen.py` and
+     the review in `ROT456` §2), the reflection unit (`C6UPPER` §2), and the cover check (`C6UPPER/tools/verify_cover.py`).
+   - **Lean-checked reduction** (`LAYERLEAN`, `sixfold_octagon`). From the statement for 11 hexagons (`Sixfold66`),
+     every 6-fold set of 61 or more points has a convex octagon.
+   - So t <= 10 and |S| <= 60.
+4. **Lower bound** (exact computation, this directory). Each set below is a 60-point configuration of the required
+   kind, with t = 10.
+
+Hence the maximum is 60. The weakest links are the written soundness arguments of the encodings in step 3. They were
+already accepted for the `C6UPPER` and `C7UPPER` results; this record adds only the lower bound.
+
 ## The sets
 
 All coordinates are exact: one point per line, integers w_0..w_5 for the point sum_j w_j zeta^j, zeta = e^{2 pi i/6}.
