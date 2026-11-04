@@ -20,7 +20,7 @@ for i in range(n):
     if sg[i] != sg[i % m] ^ (1 if i // m == 1 else 0): bad += 1
 for i, j, v in mp["I"]: setv(v, inv[i, j] == 1)
 for i, j, v in mp["O"]: setv(v, (inv[i, j] ^ sg[i] ^ sg[j]) == 1)
-p = subprocess.run(["/tmp/claude-0/build/cnfeval", sys.argv[2], str(mp["primary_vars"]), str(mp["nonkgon_clauses"])],
+p = subprocess.run(["/sandbox/build/cnfeval", sys.argv[2], str(mp["primary_vars"]), str(mp["nonkgon_clauses"])],
                    input=" ".join(str(v if b else -v) for v, b in sorted(val.items())) + "\n", capture_output=True, text=True)
 f1, f2, aux = map(int, p.stdout.split())
 print(json.dumps({"model": sys.argv[1].split("/")[-1], "orbit_conflicts": bad, "nonkgon_falsified": f1, "kgon_falsified": f2,

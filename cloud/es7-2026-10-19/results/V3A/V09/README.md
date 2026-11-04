@@ -35,4 +35,4 @@ Ran 2026-10-20, 09:05–10:48 UTC, on 4 cores with 15 GB RAM (`env.txt`).
 - The run was stopped by killing the process. Each record is written when its job finishes, so the in-flight jobs simply have no record.
 - When I stopped it, my `pkill -f` pattern also killed my own waiting shell. I then killed the one remaining cake_lpr process by hand. Nothing was recorded for those jobs.
 - Pushes to es7-cloud hit races with other machines a few times. Retrying with pull --rebase fixed each one.
-  - Once, at 09:47, the fallback also pushed a copy to `claude/es7-v3a-v09`. The same commit then reached es7-cloud, so that branch is stale and has nothing extra.
+  - Once, at 09:47, the fallback also pushed a copy to `cloud-fallback/es7-v3a-v09`. The same commit then reached es7-cloud, so that branch is stale and has nothing extra.

@@ -58,7 +58,7 @@ def make(name, m, k, d):
 def main():
     names = sys.argv[1:] or ["inv_sign", "no_leftturn", "no_right", "xor_parity"]
     for name in names:
-        d = f"/tmp/claude-0/mut_{name}"
+        d = f"/sandbox/mut_{name}"
         os.makedirs(d, exist_ok=True)
         for m in range(3, 8):
             for k in (5, 6, 7):

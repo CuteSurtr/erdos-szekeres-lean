@@ -13,9 +13,9 @@ Resumable: keys already in leaves.jsonl with a final status are skipped."""
 import sys, os, json, subprocess, time, tempfile, threading
 from fractions import Fraction
 from collections import deque
-CAD = '/tmp/claude-0/sw/cadical/build/cadical'; LC = '/tmp/claude-0/sw/drat-trim/lrat-check'
-MARCH = '/tmp/claude-0/sw/CnC/march_cu/march_cu'
-WORK = '/tmp/claude-0/mx/work'; os.makedirs(WORK, exist_ok=True)
+CAD = '/sandbox/sw/cadical/build/cadical'; LC = '/sandbox/sw/drat-trim/lrat-check'
+MARCH = '/sandbox/sw/CnC/march_cu/march_cu'
+WORK = '/sandbox/mx/work'; os.makedirs(WORK, exist_ok=True)
 
 def read_cubes(path):
     cubes = []

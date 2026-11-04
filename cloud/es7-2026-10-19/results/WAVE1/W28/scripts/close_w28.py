@@ -16,7 +16,7 @@ the cubes left; per-call CPU time from wait4; resumable from leaves.jsonl + top.
 a SAT answer saves the CNF and the model and stops nothing else.
 """
 import argparse, hashlib, heapq, json, os, re, subprocess, sys, threading, time
-BIN = os.environ.get("BIN", "/tmp/claude-0/w/bin")
+BIN = os.environ.get("BIN", "/sandbox/w/bin")
 ap = argparse.ArgumentParser(); ap.add_argument("out"); ap.add_argument("work")
 ap.add_argument("--cases", nargs="+", required=True)
 ap.add_argument("--depth", type=int, default=7); ap.add_argument("--timeout", type=int, default=300)

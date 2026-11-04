@@ -19,9 +19,9 @@ from multiprocessing import Pool
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import mxgen
 HERE = os.path.dirname(os.path.abspath(__file__))
-BF = os.environ.get('BFGON', '/tmp/claude-0/mx/bfgon')
-CADICAL = os.environ.get('CADICAL', '/tmp/claude-0/sw/cadical/build/cadical')
-TMP = os.environ.get('MXTMP', '/tmp/claude-0/mx')
+BF = os.environ.get('BFGON', '/sandbox/mx/bfgon')
+CADICAL = os.environ.get('CADICAL', '/sandbox/sw/cadical/build/cadical')
+TMP = os.environ.get('MXTMP', '/sandbox/mx')
 
 def gp_ok(P):
     if len(set(x for x, _ in P)) != len(P): return False

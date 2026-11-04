@@ -24,5 +24,5 @@ F sha256 69c1dc8f…932d OK. The U_L2 case CNF (`hullsplit.py case F "" "2"`) ha
 - Time: 28,926 s total CaDiCaL wall time and 3,335 s total cake_lpr wall time, summed over jobs.
 - Files: `U_L2/top.icnf` (the 741 given cubes), `U_L2/leaves.icnf`, `U_L2/leaves.jsonl` (the
   first record holds case and case_sha256), `U_L2/open.icnf`.
-- Note: one progress push at 12:39 was refused by a ref-lock race and went to `claude/es7-w3-g2`.
+- Note: one progress push at 12:39 was refused by a ref-lock race and went to `cloud-fallback/es7-w3-g2`.
   It was then pushed to es7-cloud at once; es7-cloud holds everything.

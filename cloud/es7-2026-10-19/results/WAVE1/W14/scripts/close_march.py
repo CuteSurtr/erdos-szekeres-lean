@@ -17,13 +17,13 @@ W14 copy of results/Mii-S/scripts/close_march.py (original kept as close_march.o
 """
 import argparse, hashlib, json, os, re, subprocess, threading, time
 from concurrent.futures import ThreadPoolExecutor
-BIN = os.environ.get("BIN", "/tmp/claude-0/bin")
+BIN = os.environ.get("BIN", "/sandbox/bin")
 ap = argparse.ArgumentParser(); ap.add_argument("case"); ap.add_argument("out")
 ap.add_argument("--depth", type=int, default=7); ap.add_argument("--timeout", type=int, default=300)
 ap.add_argument("--split-depth", type=int, default=6); ap.add_argument("--jobs", type=int, default=2)
 ap.add_argument("--hours", type=float, default=1e9)
 ap.add_argument("--top"); ap.add_argument("--shard", type=int, default=0); ap.add_argument("--nshards", type=int, default=1)
-ap.add_argument("--work", default="/tmp/claude-0/w/work"); ap.add_argument("--report", action="store_true")
+ap.add_argument("--work", default="/sandbox/w/work"); ap.add_argument("--report", action="store_true")
 ap.add_argument("--log")  # write the records here (outside the git tree) and copy them into OUTDIR yourself
 ap.add_argument("--test-split-len", type=int, default=0)  # testing only: split cubes shorter than this unsolved
 a = ap.parse_args(); os.makedirs(a.out, exist_ok=True); os.makedirs(a.work, exist_ok=True)

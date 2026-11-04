@@ -5,7 +5,7 @@ leaves still open. There are no SAT leaves. Every closed leaf is UNSAT, and lrat
 verified each one.
 
 ## Where it ran
-Claude Code cloud container (`env.txt`): Linux x86_64, 4 cores, 15 GB RAM. Run from
+Cloud container (`env.txt`): Linux x86_64, 4 cores, 15 GB RAM. Run from
 02:36 to 06:13 UTC on 20 Oct 2026. The container restarted once, at about 03:05; the
 driver resumed from `leaves.jsonl`, and the 4 leaves that were in flight were redone.
 

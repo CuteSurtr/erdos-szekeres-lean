@@ -12,7 +12,7 @@ deadline no new solve or split starts (cubes are recorded OPEN instead).
 """
 import argparse, hashlib, json, os, re, subprocess, threading, time
 from concurrent.futures import ThreadPoolExecutor
-BIN = os.environ.get("BIN", "/tmp/claude-0/w/bin")
+BIN = os.environ.get("BIN", "/sandbox/w/bin")
 VER = "s VERIFIED UNSAT"
 ap = argparse.ArgumentParser(); ap.add_argument("case"); ap.add_argument("out")
 ap.add_argument("--depth", type=int, default=7); ap.add_argument("--timeout", type=int, default=300)
@@ -65,7 +65,7 @@ def solve(cube):
         r["status"] = "UNSAT"
     elif rc == 10:
         r["status"] = "SAT"; subprocess.run(["cp", f, os.path.join(a.out, f"SAT_{k}.cnf")])
-        subprocess.run(["cp", f, os.path.join("/tmp/claude-0/w", f"SAT_{k}.cnf")])
+        subprocess.run(["cp", f, os.path.join("/sandbox/w", f"SAT_{k}.cnf")])
     elif time.time() > deadline:
         r["status"] = "OPEN"; r["reason"] = "timeout after deadline"
     else:

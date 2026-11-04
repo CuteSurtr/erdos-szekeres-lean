@@ -28,8 +28,8 @@ import sys
 from fractions import Fraction as F
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-CNFDIR = os.environ.get("C3B_CNFDIR", "/tmp/claude-0/cnf")
-CNFEVAL = os.environ.get("CNFEVAL", "/tmp/claude-0/build/cnfeval")
+CNFDIR = os.environ.get("C3B_CNFDIR", "/sandbox/cnf")
+CNFEVAL = os.environ.get("CNFEVAL", "/sandbox/build/cnfeval")
 
 
 def det(p, q, r):

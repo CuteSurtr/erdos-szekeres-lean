@@ -8,7 +8,7 @@ Estimate of the case cost (core-seconds, censored at TIMEOUT) = ncubes * mean(sa
 """
 import json, os, random, re, subprocess, sys, time, hashlib
 from concurrent.futures import ThreadPoolExecutor
-HERE = os.path.dirname(os.path.abspath(__file__)); BIN = os.environ.get("BIN", "/tmp/claude-0/w/bin")
+HERE = os.path.dirname(os.path.abspath(__file__)); BIN = os.environ.get("BIN", "/sandbox/w/bin")
 cnf, U, L, D, K, T, seed, W = sys.argv[1:9]; jobs = int(sys.argv[9]) if len(sys.argv) > 9 else 1
 D, K, T, seed = int(D), int(K), int(T), int(seed)
 name = "FULL" if U == "-" else f"U{U.replace(',', '-')}_L{L.replace(',', '-')}"

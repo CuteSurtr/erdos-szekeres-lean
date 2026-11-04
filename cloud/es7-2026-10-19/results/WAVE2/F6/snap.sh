@@ -10,5 +10,5 @@ PY
 for f in leaves.icnf open.icnf top.icnf; do [ -f $O/$f ] && cp $O/$f $R/U_L8/$f; done
 git add $R && git commit -qm "F6: U_L8 progress $(date -u +%H:%M)" || true
 git pull -q --rebase --autostash
-git push -q origin es7-cloud || git push -q origin HEAD:claude/es7-w2-f6
+git push -q origin es7-cloud || git push -q origin HEAD:cloud-fallback/es7-w2-f6
 git log --oneline -1

@@ -7,9 +7,9 @@ to the gen_etv --mirror CNF as orientation units; and vice versa."""
 import sys, os, json, itertools, subprocess, time
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import mxgen, sigcheck
-CAD = '/tmp/claude-0/sw/cadical/build/cadical'; LC = '/tmp/claude-0/sw/drat-trim/lrat-check'
+CAD = '/sandbox/sw/cadical/build/cadical'; LC = '/sandbox/sw/drat-trim/lrat-check'
 ETV = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../../../tools/etv/gen_etv.py')
-T = '/tmp/claude-0/mx/ctl'; os.makedirs(T, exist_ok=True)
+T = '/sandbox/mx/ctl'; os.makedirs(T, exist_ok=True)
 
 def solve(path, lrat=False, seed=0, timeout=1800, units=()):
     if units:
