@@ -4,7 +4,7 @@
 # checked with cake_lpr and the proof is deleted afterwards.
 set -u
 CNF=$1; SPEC=$2; T=$3; W=$4; MODE=${5:-}
-HERE="$(cd "$(dirname "$0")" && pwd)"; BIN=${BIN:-/tmp/claude-0/w/bin}
+HERE="$(cd "$(dirname "$0")" && pwd)"; BIN=${BIN:-/sandbox/w/bin}
 name=$(echo "$SPEC" | tr "/;," "_+-"); d="$W/$name.$$"; mkdir -p "$d"
 python3 "$HERE/layers.py" case "$CNF" "$SPEC" "$d/case.cnf"
 sha=$(sha256sum "$d/case.cnf" | cut -d' ' -f1)

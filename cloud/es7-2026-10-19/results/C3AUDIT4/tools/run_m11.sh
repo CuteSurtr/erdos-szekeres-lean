@@ -5,7 +5,7 @@ set -e
 FLIST=$1; SNAP=$2; OUT=$3; COMMIT=$4
 T=$(cd "$(dirname "$0")" && pwd)
 RES=$T/../..
-BASE=/tmp/claude-0/-home-user-erdos-szekeres-lean/a2372e58-e319-59b7-94d3-805904fed989/scratchpad/base/b117.cnf
+BASE=/sandbox/a2372e58-e319-59b7-94d3-805904fed989/scratchpad/base/b117.cnf
 mkdir -p "$SNAP" "$OUT"
 (cd "$RES" && git archive "$COMMIT" $(cat "$FLIST")) | tar -x -C "$SNAP"
 cd "$SNAP"

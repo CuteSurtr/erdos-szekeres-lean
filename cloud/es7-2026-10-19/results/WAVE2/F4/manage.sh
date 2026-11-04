@@ -22,7 +22,7 @@ sync_out() {
 commit() {
   cd $R; git add results/WAVE2/F4; git commit -qm "WAVE2 F4: U4_L progress $(date -u +%H:%M)"
   git pull -q --rebase --autostash; for i in 1 2 3 4; do git push -q origin es7-cloud && return; sleep $((2**i)); git pull -q --rebase --autostash; done
-  git push -q origin HEAD:claude/es7-w2-f4 && echo "$(date -u +%T) pushed to claude/es7-w2-f4" >> $D/U4_L/manager.log
+  git push -q origin HEAD:cloud-fallback/es7-w2-f4 && echo "$(date -u +%T) pushed to cloud-fallback/es7-w2-f4" >> $D/U4_L/manager.log
 }
 cd $R; git pull -q --rebase --autostash
 dropq $D/U4_L/share.icnf; cp /opt/work/F4/newq.icnf $O/queue.icnf; cp $O/queue.icnf $O/top.icnf

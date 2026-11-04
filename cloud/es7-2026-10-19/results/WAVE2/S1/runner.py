@@ -25,7 +25,7 @@ def commit(msg, paths):
             p = sh("git push -q origin es7-cloud")
             if p.returncode == 0: log("pushed:", msg); return
             time.sleep(2 ** (i + 1))
-        p = sh("git push -q origin HEAD:claude/es7-w2-s1"); log("PUSH REJECTED on es7-cloud; pushed to claude/es7-w2-s1:", p.returncode, p.stderr[-200:])
+        p = sh("git push -q origin HEAD:cloud-fallback/es7-w2-s1"); log("PUSH REJECTED on es7-cloud; pushed to cloud-fallback/es7-w2-s1:", p.returncode, p.stderr[-200:])
 def other_status(case):
     with glock: sh("git pull -q --rebase --autostash")
     started, closed = [], []

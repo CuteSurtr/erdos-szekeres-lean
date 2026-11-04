@@ -8,4 +8,4 @@ for i in 1 2 3 4 5; do
   git pull -q --rebase --autostash origin es7-cloud && git push -q origin es7-cloud && { echo pushed; exit 0; }
   sleep $((2**i))
 done
-git push -q origin HEAD:claude/es7-c3w1-c08 && echo "pushed to claude/es7-c3w1-c08"
+git push -q origin HEAD:cloud-fallback/es7-c3w1-c08 && echo "pushed to cloud-fallback/es7-c3w1-c08"

@@ -14,7 +14,7 @@ ct.layer_clauses = lambda _m, L, ccw, sig: hullcase.layer_clauses(m, L, ccw, sig
 ct.tree_children = lambda _m, _k, L, **kw: hullcase.tree_children(m, k, L, **kw)
 ct.E = C3Enc(m, k); ct.M, ct.KC = m, k
 ct.WORK = os.path.join(os.path.dirname(out), "wk")
-BASE = "/tmp/claude-0/-home-user-erdos-szekeres-lean/a2372e58-e319-59b7-94d3-805904fed989/scratchpad/base/b56.cnf"
+BASE = "/sandbox/a2372e58-e319-59b7-94d3-805904fed989/scratchpad/base/b56.cnf"
 P = "0s0_1s0-2s0"
 CERTP = {
     # T1: P itself times out; every proper descendant closes

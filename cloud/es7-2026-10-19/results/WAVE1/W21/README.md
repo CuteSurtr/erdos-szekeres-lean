@@ -49,7 +49,7 @@ part of the top partition, and `top.icnf` alone gives `s COVERED 128`.
   `git pull --rebase` of the first progress push replaced `leaves.jsonl` while the run still had
   it open, so that run's records were lost. That run's empty files were deleted. The whole shard
   was rerun from scratch at 07:13, with the run directory outside the repo
-  (`/tmp/claude-0/w/run/`). The committed files are copies from that rerun. **Other machines that
+  (`/sandbox/w/run/`). The committed files are copies from that rerun. **Other machines that
   append to logs inside the checkout and push with `pull --rebase` may lose records the same
   way.**
 - Each verified leaf can be re-checked by rebuilding CASE + units(cube) and running

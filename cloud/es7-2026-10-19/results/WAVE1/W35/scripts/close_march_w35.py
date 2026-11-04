@@ -18,12 +18,12 @@ leaves.icnf = VERIFIED leaves (`a lits 0`, `a 0` for a whole-case closure); open
 without a verified leaf below them.  After the deadline no new solver call starts.
 """
 import argparse, hashlib, heapq, json, os, re, subprocess, threading, time
-BIN = os.environ.get("BIN", "/tmp/claude-0/w/bin")
+BIN = os.environ.get("BIN", "/sandbox/w/bin")
 ap = argparse.ArgumentParser(); ap.add_argument("entry"); ap.add_argument("cases"); ap.add_argument("out")
 ap.add_argument("--depth", type=int, default=7); ap.add_argument("--timeout", type=int, default=300)
 ap.add_argument("--whole-timeout", type=int, default=60)
 ap.add_argument("--split-depth", type=int, default=6); ap.add_argument("--jobs", type=int, default=4)
-ap.add_argument("--deadline", type=float, default=1e18); ap.add_argument("--work", default="/tmp/claude-0/w/work")
+ap.add_argument("--deadline", type=float, default=1e18); ap.add_argument("--work", default="/sandbox/w/work")
 a = ap.parse_args()
 entry = json.load(open(a.entry)); CASES = [c["case"] for c in entry["cases"]]
 SHA = {c["case"]: c["cnf_sha256"] for c in entry["cases"]}

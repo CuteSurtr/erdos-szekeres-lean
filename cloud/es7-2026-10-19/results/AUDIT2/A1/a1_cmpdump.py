@@ -1,9 +1,9 @@
 # Compare the Lean-evaluated dump (A1Dump.lean) with the Python decoding of the sources.
 import sys, re
 R, DUMP = sys.argv[1], sys.argv[2]
-src = open('/tmp/claude-0/s/a1_trees.py').read().split('# --- verified records')[0]
+src = open('/sandbox/s/a1_trees.py').read().split('# --- verified records')[0]
 sys.argv = ['x', R]; exec(src)
-v1 = open('/tmp/claude-0/s/a1_v1.py').read().split('raw = open')[0]
+v1 = open('/sandbox/s/a1_v1.py').read().split('raw = open')[0]
 B = R.rstrip('/').rsplit('/', 1)[0]
 g = {'sys': sys, 're': re}; exec(v1.replace('sys.argv[1]', repr(B)), g); hull = g['leaves']
 ints = lambda s: [int(x) for x in s.split()]

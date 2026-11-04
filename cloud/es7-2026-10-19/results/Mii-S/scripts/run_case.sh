@@ -4,7 +4,7 @@
 # checked with cake_lpr and the proof is deleted afterwards.
 set -u
 CNF=$1; U=$2; L=$3; T=$4; W=$5; MODE=${6:-}
-HERE="$(cd "$(dirname "$0")" && pwd)"; BIN=${BIN:-/tmp/claude-0/w/bin}
+HERE="$(cd "$(dirname "$0")" && pwd)"; BIN=${BIN:-/sandbox/w/bin}
 name="U${U//,/-}_L${L//,/-}"; d="$W/$name.$$"; mkdir -p "$d"
 python3 "$HERE/hullsplit.py" case "$CNF" "$U" "$L" "$d/case.cnf"
 sha=$(sha256sum "$d/case.cnf" | cut -d' ' -f1)

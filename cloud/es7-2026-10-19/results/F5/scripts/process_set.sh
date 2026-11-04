@@ -12,7 +12,7 @@
 # 4. every 32-point set: F2 check32.py (general position, exact lcs, brute_kgon, sat.c over all faces
 #    when |coord| < 2^27, ext_solve one-point extension at all 33 x-positions)
 set -e
-W=${W:-/tmp/claude-0/w}; NAME=$1; SP=$2; O=$3
+W=${W:-/sandbox/w}; NAME=$1; SP=$2; O=$3
 F2=$(cd "$(dirname "$0")/../../F2" && pwd)
 mkdir -p $O/sets32 $O/work
 cp $SP $O/$NAME.pts

@@ -5,7 +5,7 @@ is UNSAT (cube leaves cover everything march_cu refuted internally as well).
 usage: cover.py base.cnf cubes.icnf [extra.icnf ...]   (cubes replaced by their split children
 are covered recursively if the children files are listed; here we use the final leaf list)"""
 import sys, subprocess, os, json
-CAD = '/tmp/claude-0/sw/cadical/build/cadical'; LC = '/tmp/claude-0/sw/drat-trim/lrat-check'
+CAD = '/sandbox/sw/cadical/build/cadical'; LC = '/sandbox/sw/drat-trim/lrat-check'
 base, leaves = sys.argv[1], sys.argv[2]
 cubes = []
 if leaves.endswith('.jsonl'):
@@ -17,7 +17,7 @@ else:
 lines = open(base).read().split('\n')
 h = [i for i, l in enumerate(lines) if l.startswith('p cnf')][0]
 nv, nc = map(int, lines[h].split()[2:4])
-p = '/tmp/claude-0/mx/cover.cnf'
+p = '/sandbox/mx/cover.cnf'
 with open(p, 'w') as f:
     f.write('p cnf %d %d\n' % (nv, nc + len(cubes)))
     f.write('\n'.join(l for i, l in enumerate(lines) if i > h and l and not l.startswith('c')) + '\n')

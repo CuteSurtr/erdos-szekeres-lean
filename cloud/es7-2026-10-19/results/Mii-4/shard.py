@@ -13,9 +13,9 @@ CNF, CUBES, OUT, WD = sys.argv[1:5]
 NW = int(sys.argv[5]) if len(sys.argv) > 5 else 4
 TLIM = int(sys.argv[6]) if len(sys.argv) > 6 else 300
 SHARD, NSH = 4, 8
-CAD = "/tmp/claude-0/tools/cadical/build/cadical"
-LRC = "/tmp/claude-0/tools/drat-trim/lrat-check"
-MARCH = "/tmp/claude-0/tools/CnC/march_cu/march_cu"
+CAD = "/sandbox/tools/cadical/build/cadical"
+LRC = "/sandbox/tools/drat-trim/lrat-check"
+MARCH = "/sandbox/tools/CnC/march_cu/march_cu"
 os.makedirs(OUT, exist_ok=True); os.makedirs(WD, exist_ok=True)
 LEAVES = os.path.join(OUT, "leaves.jsonl"); STATE = os.path.join(OUT, "state.json")
 
@@ -103,7 +103,7 @@ def run_job(job):
         json.dump({"job": job, "model": model}, open(mp, "w"))
         rec["model_file"] = os.path.basename(mp); os.remove(cnf)
         record(rec)
-        subprocess.run(["bash", "-c", f"cd {OUT} && git add -A . && git commit -qm 'Mii-4: SAT leaf {tag}' && /tmp/claude-0/push.sh"])
+        subprocess.run(["bash", "-c", f"cd {OUT} && git add -A . && git commit -qm 'Mii-4: SAT leaf {tag}' && /sandbox/push.sh"])
         return []
     # timeout: split with march_cu -d 6 on CNF + cube (+ remainder clauses, if any)
     if job["kind"] == "remainder":
