@@ -1,0 +1,9 @@
+<repo>/.cache/es7/final-2026-11-04/lean_review/Mutant64.lean:1146:4: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 63
+  0 ≤ a ≤ 63
+  0 ≤ a - b ≤ 1
+where
+ a := ↑(S.erase c).card
+ b := ↑(S.card - 1)
+exit=1

@@ -1,0 +1,21 @@
+scratch/M5_enc_sign1.lean:267:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Equiv.Perm.sign ?f * Equiv.Perm.sign ?g
+in the target expression
+  0 < orient3 (P ∘ T) ↔ litVal (Equiv.Perm.sign σ₁) (P ∘ C)
+
+ι : Type u_1
+P : ι → Point
+r : ι → ι
+c : Point
+m : ℕ
+hr : ∀ (i : ι), P (r i) = rotAbout c (2 * Real.pi / ↑m) (P i)
+T T₀ C : Fin 3 → ι
+σ₁ σ₂ : Equiv.Perm (Fin 3)
+s : ℕ
+h₁ : T₀ = T ∘ ⇑σ₁
+h₂ : C = r^[s] ∘ T₀ ∘ ⇑σ₂
+hne : orient3 (P ∘ T) ≠ 0
+hsc : Semiconj P r (rotAbout c (2 * Real.pi / ↑m))
+hcomm : P ∘ r^[s] = (rotAbout c (2 * Real.pi / ↑m))^[s] ∘ P
+hPC : P ∘ C = (rotAbout c (2 * Real.pi / ↑m))^[s] ∘ (P ∘ T) ∘ ⇑(σ₁ * σ₂)
+⊢ 0 < orient3 (P ∘ T) ↔ litVal (Equiv.Perm.sign σ₁) (P ∘ C)

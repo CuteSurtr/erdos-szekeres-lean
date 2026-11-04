@@ -1,0 +1,11 @@
+scratch/M1_rot_sign.lean:120:2: error: ring failed, ring expressions not equal
+c : Point
+θ : ℝ
+a b d : Point
+⊢ -(b 0 * a 1 * 2) + b 0 * d 1 * 2 + b 1 * a 0 * 2 + (-(b 1 * d 0 * 2) - a 0 * d 1 * 2) + a 1 * d 0 * 2 = 0
+scratch/M1_rot_sign.lean:142:2: error: Type mismatch
+  orient_rotAbout_inv c θ
+has type
+  ∀ (a b d : Point), orient (rotAbout c θ a) (rotAbout c θ b) (rotAbout c θ d) = -orient a b d
+but is expected to have type
+  PreservesOrient (rotAbout c θ)

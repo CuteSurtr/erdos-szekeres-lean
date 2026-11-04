@@ -1,0 +1,22 @@
+scratch/M3_odd.lean:280:65: error: omega could not prove the goal:
+No usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.
+Try this:
+  ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+scratch/M3_odd.lean:277:66: error: unsolved goals
+S : Finset Point
+c : Point
+m : ℕ
+hm : 0 < m
+hinv : Invariant (rotAbout c (2 * Real.pi / ↑m)) S
+x : Point
+hx : x ∈ S
+hq : (rotAbout c (2 * Real.pi / ↑m))^[m / 2] x ∈ S
+k : ℕ
+hk : m = 2 * k + 1
+hk' : m / 2 = k
+hkpos : 0 < ↑k
+⊢ ↑k * 2 = 1 + ↑k * 2
