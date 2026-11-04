@@ -18,6 +18,7 @@ of `LAYERLEAN/LayerLemma.lean` (checked with `diff`).
 | `encb_literals/` | Python test (evidence only): encoder B's own literal code against real orientations, 5,947,032 ordered triples, 0 mismatches; 7 mutants. |
 | `linked/` | `Linked.lean`: rule B on layer indices (`orient_pos_of_layers`: middle point in the outermost layer, so the triple turns left). |
 | `keys/` | `KeyOrder.lean`: integer (cell, rank) keys sort exactly as the directions (`reduced_lt_iff_key`), with antipode cells for odd and even m. |
+| `capstone/` | `Capstone.lean`: linked + phase in one file; `orient_pos_of_layers_runMidB` (discrete PPP run with middle point in the outermost layer gives a left turn) and rule A from the alternating pattern. |
 | `review/` | An adversarial review of `LAYERLEAN` with no error found, and `VacuityTest.lean`: a concrete fourfold configuration discharging every hypothesis of `strict_nesting`, `layers_are_orbits`, `hullVerts_eq_orbitFS_rotAbout` and `chain_clauses_sound`. |
 
 **Still outside Lean.**
