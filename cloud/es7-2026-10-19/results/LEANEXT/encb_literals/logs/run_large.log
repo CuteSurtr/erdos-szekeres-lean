@@ -1,0 +1,27 @@
+gen_b2.py sha256 3d47459a9723b5f7344205f3f2d7463e0be00b41c5070155e5da8dbf78fd40ba
+dropped statements (read sys.argv): ['m, K, t = map(int, sys.argv[1:4])', 'out = sys.argv[4]']
+extracted canon: sha256(source) = 3cacbaef952e07f808dd1dd733050da832d322e60ec693abd334e6f8b77e0451
+extracted perm_sign: sha256(source) = 1ad9c834d123456b76cc6b613e1afbc3072053aec59833cd1078cec4bfa86dcf
+extracted olit: sha256(source) = 8f5a49c359fcc6a9eef9af6a6db981fc5b90eb111c131c8b00d70ca08c08b1b5
+nested m=4 t=8 seed=201: rejected=0 orbit vars=1240 Z_m-orbits=1240 canon-not-invariant=0 ordered triples=29760 mismatches=0 min|orient|=7.116e-05 | non-chain clauses=1883 violated=0
+free   m=4 t=8 seed=201: rejected=0 orbit vars=1240 Z_m-orbits=1240 canon-not-invariant=0 ordered triples=29760 mismatches=0 min|orient|=1.062e-03
+nested m=4 t=10 seed=202: rejected=0 orbit vars=2470 Z_m-orbits=2470 canon-not-invariant=0 ordered triples=59280 mismatches=0 min|orient|=1.109e-05 | non-chain clauses=4161 violated=0
+free   m=4 t=10 seed=202: rejected=0 orbit vars=2470 Z_m-orbits=2470 canon-not-invariant=0 ordered triples=59280 mismatches=0 min|orient|=4.019e-05
+nested m=5 t=8 seed=203: rejected=0 orbit vars=1976 Z_m-orbits=1976 canon-not-invariant=0 ordered triples=59280 mismatches=0 min|orient|=5.521e-05 | non-chain clauses=20267 violated=0
+free   m=5 t=8 seed=203: rejected=0 orbit vars=1976 Z_m-orbits=1976 canon-not-invariant=0 ordered triples=59280 mismatches=0 min|orient|=2.728e-04
+nested m=5 t=9 seed=204: rejected=0 orbit vars=2838 Z_m-orbits=2838 canon-not-invariant=0 ordered triples=85140 mismatches=0 min|orient|=5.496e-06 | non-chain clauses=31734 violated=0
+free   m=5 t=9 seed=204: rejected=0 orbit vars=2838 Z_m-orbits=2838 canon-not-invariant=0 ordered triples=85140 mismatches=0 min|orient|=2.515e-04
+nested m=6 t=8 seed=205: rejected=0 orbit vars=2888 Z_m-orbits=2888 canon-not-invariant=0 ordered triples=103776 mismatches=0 min|orient|=1.691e-05 | non-chain clauses=3558 violated=0
+free   m=6 t=8 seed=205: rejected=0 orbit vars=2888 Z_m-orbits=2888 canon-not-invariant=0 ordered triples=103776 mismatches=0 min|orient|=7.009e-05
+nested m=6 t=9 seed=206: rejected=0 orbit vars=4140 Z_m-orbits=4140 canon-not-invariant=0 ordered triples=148824 mismatches=0 min|orient|=5.589e-05 | non-chain clauses=5366 violated=0
+free   m=6 t=9 seed=206: rejected=0 orbit vars=4140 Z_m-orbits=4140 canon-not-invariant=0 ordered triples=148824 mismatches=0 min|orient|=3.349e-04
+nested m=6 t=10 seed=207: rejected=0 orbit vars=5710 Z_m-orbits=5710 canon-not-invariant=0 ordered triples=205320 mismatches=0 min|orient|=4.025e-06 | non-chain clauses=7709 violated=0
+free   m=6 t=10 seed=207: rejected=0 orbit vars=5710 Z_m-orbits=5710 canon-not-invariant=0 ordered triples=205320 mismatches=0 min|orient|=3.632e-05
+nested m=6 t=11 seed=208: rejected=0 orbit vars=7634 Z_m-orbits=7634 canon-not-invariant=0 ordered triples=274560 mismatches=0 min|orient|=2.665e-05 | non-chain clauses=10657 violated=0
+free   m=6 t=11 seed=208: rejected=0 orbit vars=7634 Z_m-orbits=7634 canon-not-invariant=0 ordered triples=274560 mismatches=0 min|orient|=1.354e-05
+nested m=7 t=8 seed=209: rejected=0 orbit vars=3960 Z_m-orbits=3960 canon-not-invariant=0 ordered triples=166320 mismatches=0 min|orient|=2.540e-04 | non-chain clauses=32170 violated=0
+free   m=7 t=8 seed=209: rejected=0 orbit vars=3960 Z_m-orbits=3960 canon-not-invariant=0 ordered triples=166320 mismatches=0 min|orient|=4.365e-05
+nested m=7 t=9 seed=210: rejected=0 orbit vars=5673 Z_m-orbits=5673 canon-not-invariant=0 ordered triples=238266 mismatches=0 min|orient|=6.398e-06 | non-chain clauses=50321 violated=0
+free   m=7 t=9 seed=210: rejected=0 orbit vars=5673 Z_m-orbits=5673 canon-not-invariant=0 ordered triples=238266 mismatches=0 min|orient|=7.407e-06
+TOTAL ordered triples=2741052 mismatches=0 min|orient|=4.025e-06 violated non-chain clauses=0 configs with canon/orbit-count failure=0 runs where encoder code raised=0
+python3 -I check_literals_b.py $G ${=ARGS2}  14.75s user 0.09s system 98% cpu 14.992 total
