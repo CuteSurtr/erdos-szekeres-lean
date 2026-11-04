@@ -76,6 +76,25 @@ Two methods found 60-point sets:
 Earlier evidence from the same night: pure annealing of the octagon count stalled at 90 octagons, and adding one
 hexagon to either certified 54-point set left at least 414 octagons on fixed-radius grids.
 
+## 5. The known record sets do not extend by one layer (certificate: LRAT, lrat-check)
+
+For each known record set, the realization workstream fixed all its layers' orbit signs and phase order, inserted
+one new layer at every nesting position and phase gap, and solved the encoder formula. The logs in `extensions/`
+record exit codes, lrat-check results and SHA-256 prefixes of each CNF and proof; the proof files themselves are
+outside Git.
+- **6-fold** (`extensions/lrat_ext_sixfold54.log`): neither 54-point order type of `ES8SYM` extends to 10 layers.
+  All 36 cases are UNSAT, and lrat-check accepts 36 of 36 proofs.
+  - For the nine-layer set the formula is encoder A alone.
+  - For the one-orbit set, the innermost insertion also uses the verified cut file and a snapshot of the GP clauses.
+- **4-fold** (`extensions/mfold_ext/lrat_ext4.log`): the 52-point order type of `ES8SYM/sets/c4_52pts_13layers` does not
+  extend to 14 layers. All 26 cases are UNSAT with encoder A alone (`gen.py 4 8 14`), and lrat-check accepts 26 of 26.
+- **5-fold** (`extensions/mfold_ext/lrat_ext5.log`): the 56-point set, centre dropped, extends to 12 layers only with
+  the new layer innermost. 32 of the 33 cases are UNSAT, and lrat-check accepts 32 of 32. The innermost case is SAT
+  for encoder A. Attempts to realize it failed (evidence only: at least 3,125 convex octagons).
+
+These statements rest on the written soundness of encoder A and concern extensions of these specific order types
+only. The 60-point sixfold sets of `SIX60` contain neither 54-point order type, as this result requires.
+
 ## Files
 
 - `records/`: the five workstream READMEs as of 01:15 KST (`cegar`, `facial`, `altcert`, `search`, `realize`),

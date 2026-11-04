@@ -60,7 +60,7 @@ solved on this machine without proofs, under the same load:
 
 ## Results
 
-**At the time of this commit (about 04:30 KST) no phase-order cube had finished.** None of the 36 solvers had
+**At the time of this commit (about 04:30 KST) no phase-order cube had finished.** None of the 36 cubes had
 reported UNSAT or SAT. The cover's 60 transitivity patterns are refuted and checked (see Setup).
 - Final per-cube outcomes are written automatically at 16:00 KST to `final/results_final.tsv` and
   `final/final_report.md` in the work directory (outside Git). They should be copied here and committed after review.
