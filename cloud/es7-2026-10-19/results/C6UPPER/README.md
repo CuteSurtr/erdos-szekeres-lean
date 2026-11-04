@@ -31,7 +31,8 @@ of ES(8) = 65).
 ## 1. Reduction
 
 Lean-checked since 4 November (`LAYERLEAN`, `sixfold_octagon`): the statement follows from `Sixfold66` (every
-centre-free 66-point sixfold set in general position has a convex octagon). That is the content of the certificate below.
+centre-free 66-point sixfold set in general position has a convex octagon). That is the content of the certificate below,
+modulo the encoder steps not in Lean and the symmetry breaking (§2) and cube cover (§3).
 
 By the layer lemma (`SYM5/README.md` §2; K = 8 <= 2·6), a 6-fold symmetric set in general position with no convex
 octagon consists of nested regular hexagons. It cannot contain the centre, which is the midpoint of two antipodal
@@ -205,7 +206,9 @@ layer, perturbation, angular, nesting, chain or reflection arguments.
 - Six randomly chosen substantial cube proofs, three per encoder, and both 7-fold proofs.
 - Each passed lrat-check and cake_lpr against freshly generated formulas.
 - All proof and formula hashes matched.
-- The other 52 cube verdicts here remain historical, as recorded in §3 and §3b.
+- The other 58 cube proofs (29 per encoder) were not replayed in that review. On 4 November 2026 all 64 cube proofs were
+  replayed with lrat-check against freshly generated CNFs: 64/64 `c VERIFIED`, every decompressed proof matching its
+  recorded raw SHA-256 (`logs/replay_2026-11-04.txt`). cake_lpr was not re-run then; its verdicts of 3 November stand.
 
 **Exact re-check (exact computation).** The review redid the real-set tests in integer arithmetic, using the
 coordinates (X, √3·Y) of the 6-fold cyclotomic weights.

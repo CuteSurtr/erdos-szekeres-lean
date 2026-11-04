@@ -102,6 +102,9 @@ from `SYMLEAN/SymmetricReduction.lean`.
   the perturbation to generic phases, and the consistency of one variable per triple orbit.
 - **Code to clauses.** That the Python generators emit exactly these families is checked by review and tests, not by
   Lean.
+- **Between the certificates and `Sixfold66`/`Sevenfold70`.** Also outside Lean: the symmetry-breaking units (Y(1,2)
+  for even m, H(1) for odd m; `C6UPPER` §2), the cube cover (`C6UPPER` §3, a checked tautology), and the normalisation
+  θ_0 = 0 with labels (i,k). Found by the review of 4 November (`lean_review`, finding F1).
 
 ## Where the lemma is used
 
