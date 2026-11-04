@@ -103,6 +103,27 @@ layers) case. It used degree-2 certificates over triple, phase, radius and nesti
   oblique coordinates and bound to the original cluster files. All 101 models are excluded.
 - These certificates matter for history only, since `SIX60` settles the sixfold question by a construction.
 
+## 6. Independent review of the general-m generator (m = 5, 4; `review_m/`)
+
+A second reviewer, asked to refute `tools/chord_rules_m.py`, found no unsound clause (verdict: **survives**).
+- **Line-by-line check** of the odd-m phase model (theta = psi + (0 if H else 180/m)), the Y and H polarities, layer
+  0, the prime implicants (every Y/H combination is realizable) and the merging.
+- **An exact verifier sharing no code with the generator** (`review_m/verify_exact.py`). For two-layer triples,
+  orient / r_J^2 = sin(c0) + lambda [sin(delta + c2) - sin(delta + c1)] for all lambda > 0. The zeros of the bracket
+  are located in rationals and signs are evaluated with 80-digit intervals.
+  - All 2,126 (m = 5, t = 13) and 1,313 (m = 4, t = 17) clauses are proved, including every clause added to the
+    threshold formulas.
+  - Every mutated control is rejected: flipped orientation, dropped or negated condition literal.
+- **Stress tests.** 12,000 random configurations (20.6M clause evaluations) and 1.8M corner evaluations, with phases
+  within 1e-14 of every boundary and radius ratios from 1e-12 to 1e12: 0 violations.
+- **Certified sets, in exact arithmetic.** The 5-fold 56-point set (Q(sqrt5) signs) satisfies all 552 applicable
+  clauses, and the 4-fold 52-point set (Gaussian integers) all 481.
+- **Consistency with the base formulas.** No conflict with the units of `gen.py 5 8 13` or `gen.py 4 8 17`. The 36
+  cube files contain exactly the reviewed clauses plus their units.
+- **Caveat stated by the reviewer.** The cube cover (reflection unit and phase-order split) was not part of this
+  review. It follows `ROT456`/`C7UPPER` §2. The 40 + 20 transitivity-violating patterns were refuted again with the
+  chord clauses added, with LRAT proofs accepted by lrat-check (5 November).
+
 ## Reproduction
 
 Run from this directory; `ES_RESULTS` defaults to the parent results directory.
