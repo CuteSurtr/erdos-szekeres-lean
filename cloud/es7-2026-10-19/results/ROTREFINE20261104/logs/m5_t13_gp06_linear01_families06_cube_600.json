@@ -1,0 +1,53 @@
+{
+  "all_children_stopped": true,
+  "archives": [
+    {
+      "bytes": 184289804,
+      "file": "t13_gp06_linear01_families06_cube.cnf",
+      "roundtrip_sha256": "e7f785a44b40c3d1cfd94d752b057d038d2311703bda60f0435b7aad12544a10",
+      "sha256": "e7f785a44b40c3d1cfd94d752b057d038d2311703bda60f0435b7aad12544a10",
+      "zst_sha256": "699788a5d815cc30abaeab793afca617a757c877775027e8a6d7fce2a4cdbc75"
+    },
+    {
+      "bytes": 1243456719,
+      "file": "t13_gp06_linear01_families06_cube_600.lrat",
+      "roundtrip_sha256": "849745909a02ecc7364f8d9c089c9e2d7ac3847b831a47893d84e946aa6417fe",
+      "sha256": "849745909a02ecc7364f8d9c089c9e2d7ac3847b831a47893d84e946aa6417fe",
+      "zst_sha256": "b5cf437c4db94c0d059c4579401ef691fd23c6df0be2aa0e952454294b6a86fe"
+    }
+  ],
+  "child_stopped": true,
+  "cnf_sha256": "e7f785a44b40c3d1cfd94d752b057d038d2311703bda60f0435b7aad12544a10",
+  "conflicts": 711347,
+  "cpu_seconds": 599.194,
+  "decisions": 2252552,
+  "exit_code": 0,
+  "guard": null,
+  "job": "t13_gp06_linear01_families06_cube_600",
+  "log_sha256": "c47a7741394ec5ebd8081dabace84fe6760b9af8ee1232087cb01ac54c4ac39c",
+  "peak_rss_bytes": 2560475136,
+  "proof_archive": {
+    "bytes": 1243456719,
+    "file": "t13_gp06_linear01_families06_cube_600.lrat",
+    "roundtrip_sha256": "849745909a02ecc7364f8d9c089c9e2d7ac3847b831a47893d84e946aa6417fe",
+    "sha256": "849745909a02ecc7364f8d9c089c9e2d7ac3847b831a47893d84e946aa6417fe",
+    "zst_sha256": "b5cf437c4db94c0d059c4579401ef691fd23c6df0be2aa0e952454294b6a86fe"
+  },
+  "proof_file": "t13_gp06_linear01_families06_cube_600.lrat",
+  "proof_status": "partial, not a certificate",
+  "propagations": 2265580714,
+  "restarts": 30011,
+  "sampled_child_peak_bytes": 2560475136,
+  "seconds_limit": 600,
+  "solver_options": [
+    "-t",
+    "600",
+    "--lrat",
+    "--binary=false"
+  ],
+  "solver_sha256": "e12ecc8ce8a489394a2b7411e3fa264f037e4ceb2e615bab534158e19d04ac01",
+  "system_memory_peak_bytes": 27838021632,
+  "verdict": "UNKNOWN",
+  "wall_seconds": 601.254,
+  "wrapper_sha256": "bb50f58477008119adb2a3efa50432170be44d7bbabbd76882771f1640a8f830"
+}

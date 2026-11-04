@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "kind": "sixfold negative-definite quadratic obstruction family",
+  "source_witness_sha256": "85ff269f59fd263be8e11a37c015f94dccb88a2354888eb14b09bd5d26e2fe8d",
+  "source_verified_sha256": "703a3ed821fa5740b6a23ad033e41892b2acfe620f06ff7d658150cd2d7fdfcf",
+  "source_model_sha256": "8b98f35bf949205a9270d94460b02a8e420e1607c5280db84c6f5588a621a9a8",
+  "family_sha256": "763bdd9da2e160230c006bea3c3659701f1b187c3a60bf37e32bfd79483cec05",
+  "records_sha256": "6067d856354170c2853126ef3c3199df6b73d09a4d99c11cd88afeeeaeb6fd5e",
+  "unique_clauses": 64512,
+  "source_model_violated_clauses": 1,
+  "orbit_injections": "order-preserving only",
+  "relative_shift_patterns": 128,
+  "direction_and_sign": "coupled +/+ or -/- only",
+  "coverage": "finite partial family; not exhaustive",
+  "exact54_sha256": "235472b5c604421d11458865e2035b9977a8aa628f699f82bfad74536bf12c95",
+  "exact54_tests": 129024,
+  "exact54_test_scope": "each emitted canonical clause on original and mirrored CCW injective embeddings",
+  "exact54_forbidden_matches": 0,
+  "exact54_min_true_literals": 5,
+  "exact54_largest_weighted_sum": -665408804864408222758599741302,
+  "elapsed_seconds": 4.693,
+  "peak_rss_bytes": 103350272
+}

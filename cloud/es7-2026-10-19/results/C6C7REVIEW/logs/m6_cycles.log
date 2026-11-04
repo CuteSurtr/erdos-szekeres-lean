@@ -1,0 +1,7 @@
+{"event": "selftest", "integer_gp_identities": 105, "passed": true, "peak_rss_bytes": 24772608, "seconds": 0.0}
+{"event": "input", "m": 6, "map_sha256": "f053fbdf5682ebb444f287ef52ec323d3e5d30214f17f8e12ef1f0087c921114", "model_sha256": "b0cde9d9e0ce5652211136d6443b91cbb7d261b601b5ff887a4273e834d14472", "peak_rss_bytes": 39436288, "positive_variables": 26476, "seconds": 0.188, "t": 10, "triple_orbits": 5710}
+{"cycle_length": 0, "edges": 1308, "event": "restriction", "gp_identities": 660, "layers": [0, 1], "peak_rss_bytes": 39829504, "seconds": 0.19, "union_complete": true, "union_edges": 1308}
+{"cycle_length": 0, "edges": 1308, "event": "restriction", "gp_identities": 660, "layers": [0, 2], "peak_rss_bytes": 40058880, "seconds": 0.191, "union_complete": true, "union_edges": 2608}
+{"cycle_length": 3, "edges": 1308, "event": "restriction", "gp_identities": 660, "layers": [0, 3], "peak_rss_bytes": 40255488, "seconds": 0.193, "union_complete": true, "union_edges": 3908}
+{"comparisons": 3, "event": "certificate", "independent_verify": true, "peak_rss_bytes": 40255488, "seconds": 0.193, "witness_sha256": "e25599d3816e4d5ea94484633dde910afaa5f2a8404ec2c5ac164c0882689973"}
+{"event": "stop", "peak_rss_bytes": 40255488, "seconds": 0.193}

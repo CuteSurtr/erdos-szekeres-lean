@@ -1,0 +1,11 @@
+{
+  "valid_witness": "accepted",
+  "mutants_rejected": [
+    "weight",
+    "sign",
+    "model_hash",
+    "matrix",
+    "clause"
+  ],
+  "arithmetic": "exact rational seed polynomials and matrix congruence"
+}

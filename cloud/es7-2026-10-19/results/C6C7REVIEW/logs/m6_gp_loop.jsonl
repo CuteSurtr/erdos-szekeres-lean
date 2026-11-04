@@ -1,0 +1,17 @@
+{"event": "full_gp", "model": "family_run2/model.json", "round": 0, "seconds": 0.316, "violations": 5904}
+{"event": "solve", "family_clauses": 455824, "round": 0, "seconds": 8.387, "status": "SAT"}
+{"event": "full_gp", "model": "gp_run00/model.json", "round": 1, "seconds": 8.696, "violations": 1320}
+{"event": "solve", "family_clauses": 459344, "round": 1, "seconds": 11.733, "status": "SAT"}
+{"event": "full_gp", "model": "gp_run01/model.json", "round": 2, "seconds": 12.037, "violations": 7848}
+{"event": "solve", "family_clauses": 480272, "round": 2, "seconds": 18.708, "status": "SAT"}
+{"event": "full_gp", "model": "gp_run02/model.json", "round": 3, "seconds": 19.017, "violations": 3984}
+{"event": "solve", "family_clauses": 490896, "round": 3, "seconds": 21.941, "status": "SAT"}
+{"event": "full_gp", "model": "gp_run03/model.json", "round": 4, "seconds": 22.244, "violations": 2592}
+{"event": "solve", "family_clauses": 497776, "round": 4, "seconds": 39.644, "status": "SAT"}
+{"event": "full_gp", "model": "gp_run04/model.json", "round": 5, "seconds": 39.953, "violations": 4656}
+{"event": "solve", "family_clauses": 510192, "round": 5, "seconds": 53.648, "status": "SAT"}
+{"event": "full_gp", "model": "gp_run05/model.json", "round": 6, "seconds": 53.954, "violations": 2004}
+{"event": "solve", "family_clauses": 515536, "round": 6, "seconds": 68.786, "status": "SAT"}
+{"event": "full_gp", "model": "gp_run06/model.json", "round": 7, "seconds": 69.085, "violations": 2628}
+{"event": "solve", "family_clauses": 522544, "round": 7, "seconds": 71.512, "status": "SAT"}
+{"event": "finish", "last_family": "gp_refine07/combined.clauses", "last_model": "gp_run07/model.json", "seconds": 71.512}

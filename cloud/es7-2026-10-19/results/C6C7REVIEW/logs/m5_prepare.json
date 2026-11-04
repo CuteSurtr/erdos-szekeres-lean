@@ -1,0 +1,298 @@
+{
+  "archives": [
+    {
+      "bytes": 79046649,
+      "file": "m5K8t13.cnf",
+      "roundtrip_sha256": "d7bbb74395b2799ecaa0bbaf9850842c205f059c7db20667e91d457e7e37928e",
+      "sha256": "d7bbb74395b2799ecaa0bbaf9850842c205f059c7db20667e91d457e7e37928e",
+      "zst_sha256": "54f6257faf705d36f9282d24548faedb321d7e9d23fa7ff8e14b0712bbc7258e"
+    },
+    {
+      "bytes": 38609101,
+      "file": "m5K8t11.cnf",
+      "roundtrip_sha256": "4d9a193e0f5c15f306f2166fcd6c814d675117cc113192f3604c4c9fb2723bf0",
+      "sha256": "4d9a193e0f5c15f306f2166fcd6c814d675117cc113192f3604c4c9fb2723bf0",
+      "zst_sha256": "7b9c18a8279cfe529f21dac883be8e7aa70601c4e303b28c77d982d3608eae40"
+    },
+    {
+      "bytes": 79046698,
+      "file": "baseline.cnf",
+      "roundtrip_sha256": "ef4c7dad8109a760d6f07fe9b098c20394e2dc613607ad3536df8b60a1fb4b58",
+      "sha256": "ef4c7dad8109a760d6f07fe9b098c20394e2dc613607ad3536df8b60a1fb4b58",
+      "zst_sha256": "b84d31110c0ec59c6fd40fb97a7453e875faafa84efe40301825271029ed313a"
+    },
+    {
+      "bytes": 79046705,
+      "file": "split_positive.cnf",
+      "roundtrip_sha256": "e79f1bc6e3544187d5433e11d152e4c4116fbb3325f3cab78418b2735cbd70aa",
+      "sha256": "e79f1bc6e3544187d5433e11d152e4c4116fbb3325f3cab78418b2735cbd70aa",
+      "zst_sha256": "a0e12a9d99863b7f026456386aaa4efd821950c8c9376ae78e14cdca03e4e201"
+    },
+    {
+      "bytes": 79046706,
+      "file": "split_negative.cnf",
+      "roundtrip_sha256": "1e4a6d86fa04f4405beb5f03d64b8d171da76e0e695f7ec0e23e0340a2c1a649",
+      "sha256": "1e4a6d86fa04f4405beb5f03d64b8d171da76e0e695f7ec0e23e0340a2c1a649",
+      "zst_sha256": "4886f585dfff91f7a5182dd94485a7965998236078b2cbf14b56d9bf89cda663"
+    }
+  ],
+  "common_cube": "d111111 + H(1)",
+  "common_units": [
+    8803,
+    8737,
+    8738,
+    8739,
+    8748,
+    8749,
+    8758
+  ],
+  "exact56": {
+    "H1_toggle": true,
+    "arithmetic": "integer cyclotomic signs, no floating comparisons",
+    "records": [
+      {
+        "H1": true,
+        "chain_violations": 0,
+        "clauses": 1630243,
+        "d111111": true,
+        "geometry_violations": 0,
+        "nonzero_triples": 26235,
+        "set": "original",
+        "split_routes": [
+          {
+            "eleven_layer_literal": 1424,
+            "pilot_var": 2009,
+            "sign": 1,
+            "triple": [
+              5,
+              10,
+              15
+            ]
+          },
+          {
+            "eleven_layer_literal": 1594,
+            "pilot_var": 2219,
+            "sign": -1,
+            "triple": [
+              5,
+              14,
+              19
+            ]
+          }
+        ]
+      },
+      {
+        "H1": false,
+        "chain_violations": 0,
+        "clauses": 1630243,
+        "d111111": false,
+        "geometry_violations": 0,
+        "nonzero_triples": 26235,
+        "set": "mirror",
+        "split_routes": [
+          {
+            "eleven_layer_literal": 1424,
+            "pilot_var": 2009,
+            "sign": -1,
+            "triple": [
+              5,
+              10,
+              15
+            ]
+          },
+          {
+            "eleven_layer_literal": 1594,
+            "pilot_var": 2219,
+            "sign": -1,
+            "triple": [
+              5,
+              14,
+              19
+            ]
+          }
+        ]
+      }
+    ],
+    "source_sha256": "4cdd24bbeaa56d437420b1d1f63ca5ecb0fba64482ceb78ba6f1f7a496cf3387"
+  },
+  "generator_sha256": "4564e7f0ff1d3794917414002b4847cca6f0753420bd806af9d107f2a361bace",
+  "jobs": [
+    {
+      "file": "baseline.cnf",
+      "name": "baseline",
+      "sha256": "ef4c7dad8109a760d6f07fe9b098c20394e2dc613607ad3536df8b60a1fb4b58",
+      "units": [
+        8803,
+        8737,
+        8738,
+        8739,
+        8748,
+        8749,
+        8758
+      ]
+    },
+    {
+      "file": "split_positive.cnf",
+      "name": "split_positive",
+      "sha256": "e79f1bc6e3544187d5433e11d152e4c4116fbb3325f3cab78418b2735cbd70aa",
+      "units": [
+        8803,
+        8737,
+        8738,
+        8739,
+        8748,
+        8749,
+        8758,
+        2009
+      ]
+    },
+    {
+      "file": "split_negative.cnf",
+      "name": "split_negative",
+      "sha256": "1e4a6d86fa04f4405beb5f03d64b8d171da76e0e695f7ec0e23e0340a2c1a649",
+      "units": [
+        8803,
+        8737,
+        8738,
+        8739,
+        8748,
+        8749,
+        8758,
+        -2009
+      ]
+    }
+  ],
+  "schema": 1,
+  "script_sha256": "9e4d53db93a066d213aea337c6057918d23221331ddb865ce6ada3700baff19c",
+  "selection": {
+    "candidate_count": 74,
+    "fixed_geometric_variables": 1675,
+    "method": "balanced residual occurrence, after geometric-family unit propagation",
+    "selected": [
+      {
+        "negative_occurrences": 383,
+        "positive_occurrences": 383,
+        "score": 383,
+        "triple": [
+          5,
+          10,
+          15
+        ],
+        "var": 2009
+      },
+      {
+        "negative_occurrences": 363,
+        "positive_occurrences": 363,
+        "score": 363,
+        "triple": [
+          5,
+          14,
+          19
+        ],
+        "var": 2219
+      }
+    ],
+    "top_ten": [
+      {
+        "negative": 383,
+        "positive": 383,
+        "triple": [
+          5,
+          10,
+          15
+        ],
+        "var": 2009
+      },
+      {
+        "negative": 363,
+        "positive": 363,
+        "triple": [
+          5,
+          14,
+          19
+        ],
+        "var": 2219
+      },
+      {
+        "negative": 348,
+        "positive": 346,
+        "triple": [
+          5,
+          10,
+          18
+        ],
+        "var": 2012
+      },
+      {
+        "negative": 346,
+        "positive": 348,
+        "triple": [
+          5,
+          13,
+          15
+        ],
+        "var": 2165
+      },
+      {
+        "negative": 343,
+        "positive": 343,
+        "triple": [
+          5,
+          13,
+          18
+        ],
+        "var": 2168
+      },
+      {
+        "negative": 339,
+        "positive": 339,
+        "triple": [
+          5,
+          12,
+          17
+        ],
+        "var": 2116
+      },
+      {
+        "negative": 337,
+        "positive": 345,
+        "triple": [
+          5,
+          10,
+          17
+        ],
+        "var": 2011
+      },
+      {
+        "negative": 345,
+        "positive": 337,
+        "triple": [
+          5,
+          12,
+          15
+        ],
+        "var": 2114
+      },
+      {
+        "negative": 323,
+        "positive": 323,
+        "triple": [
+          0,
+          8,
+          13
+        ],
+        "var": 301
+      },
+      {
+        "negative": 323,
+        "positive": 323,
+        "triple": [
+          0,
+          8,
+          18
+        ],
+        "var": 306
+      }
+    ]
+  }
+}

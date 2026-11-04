@@ -1,0 +1,193 @@
+{
+  "rigor": "exact computation; soundness uses written GP and rotation proof",
+  "model_sha256": "7d52dd0f74bbeb1f1ccf11a0777f8c02dcd8be8dda50f8540d9465e75b6c4e76",
+  "generator_sha256": "4564e7f0ff1d3794917414002b4847cca6f0753420bd806af9d107f2a361bace",
+  "witness_sha256": "7a72eaf9220fae89b4a98f460d1c09b4dab550897573fc884fc4a698db7f32c7",
+  "verified_all_triple_ids": 5710,
+  "comparisons": [
+    {
+      "quintuple": [
+        6,
+        9,
+        48,
+        53,
+        54
+      ],
+      "gp_signs": [
+        1,
+        -1,
+        1
+      ],
+      "literals": [
+        [
+          1689,
+          2802
+        ],
+        [
+          -1691,
+          2762
+        ],
+        [
+          1692,
+          2761
+        ]
+      ]
+    },
+    {
+      "quintuple": [
+        48,
+        6,
+        7,
+        9,
+        55
+      ],
+      "gp_signs": [
+        -1,
+        1,
+        -1
+      ],
+      "literals": [
+        [
+          1610,
+          -2793
+        ],
+        [
+          1689,
+          -2802
+        ],
+        [
+          -2763,
+          1664
+        ]
+      ]
+    },
+    {
+      "quintuple": [
+        6,
+        8,
+        48,
+        53,
+        55
+      ],
+      "gp_signs": [
+        1,
+        -1,
+        1
+      ],
+      "literals": [
+        [
+          1659,
+          2803
+        ],
+        [
+          1664,
+          2763
+        ],
+        [
+          1666,
+          2761
+        ]
+      ]
+    },
+    {
+      "quintuple": [
+        6,
+        10,
+        48,
+        53,
+        59
+      ],
+      "gp_signs": [
+        1,
+        1,
+        -1
+      ],
+      "literals": [
+        [
+          -1661,
+          2807
+        ],
+        [
+          -1660,
+          2767
+        ],
+        [
+          -1666,
+          2761
+        ]
+      ]
+    },
+    {
+      "quintuple": [
+        48,
+        6,
+        7,
+        10,
+        54
+      ],
+      "gp_signs": [
+        -1,
+        1,
+        -1
+      ],
+      "literals": [
+        [
+          1610,
+          -2783
+        ],
+        [
+          -1661,
+          -2807
+        ],
+        [
+          -2762,
+          -1691
+        ]
+      ]
+    }
+  ],
+  "exponents": {
+    "6,8,50": 0,
+    "6,8,53": 0,
+    "6,8,55": 0,
+    "6,9,48": 0,
+    "6,9,50": 0,
+    "6,48,53": 0,
+    "6,48,54": 0,
+    "6,48,55": 0,
+    "6,53,54": 0,
+    "6,53,59": 0
+  },
+  "candidate_clause": [
+    -1610,
+    1659,
+    -1660,
+    -1661,
+    -1664,
+    -1666,
+    1689,
+    1691,
+    -1692,
+    -2761,
+    -2762,
+    -2763,
+    -2767,
+    -2783,
+    -2793,
+    2802,
+    2803,
+    2807
+  ],
+  "candidate_added_to_cnf": false,
+  "exact54_sha256": "235472b5c604421d11458865e2035b9977a8aa628f699f82bfad74536bf12c95",
+  "exact54_all_triples_nonzero": true,
+  "source_layers": [
+    1,
+    8,
+    9
+  ],
+  "exact54_labelled_pair_tests": 217728,
+  "exact54_forbidden_pattern_matches": 0,
+  "exact54_gp_identities_checked": 1088640,
+  "exact54_rotation_equalities_checked": 6531840
+}

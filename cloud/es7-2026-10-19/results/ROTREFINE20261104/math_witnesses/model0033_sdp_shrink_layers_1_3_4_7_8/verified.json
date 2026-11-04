@@ -1,0 +1,2045 @@
+{
+  "status": "PASS",
+  "rigor": "exact polynomial plus exact rational positive-definiteness proof; finite exact-set regression tests",
+  "witness_sha256": "85ff269f59fd263be8e11a37c015f94dccb88a2354888eb14b09bd5d26e2fe8d",
+  "model_sha256": "8b98f35bf949205a9270d94460b02a8e420e1607c5280db84c6f5588a621a9a8",
+  "source_layers": [
+    1,
+    3,
+    4,
+    7,
+    8
+  ],
+  "support": 16,
+  "candidate_clause": [
+    1635,
+    -2026,
+    2107,
+    2162,
+    -2320,
+    2675,
+    2737,
+    3852,
+    3888,
+    -3911,
+    -4039,
+    4381,
+    -4431,
+    4564,
+    4895,
+    4977
+  ],
+  "direct_symbolic_matrix": true,
+  "exact_negative_definite": true,
+  "coupled_reflection_congruence": true,
+  "independent_sign_flip_positive_definite_negative_control": true,
+  "exact54_sha256": "235472b5c604421d11458865e2035b9977a8aa628f699f82bfad74536bf12c95",
+  "exact54_tests": 100,
+  "exact54_test_scope": "deterministic finite injective embeddings, not exhaustive",
+  "exact54_forbidden_matches": 0,
+  "exact54_min_true_literals": 7,
+  "exact54_largest_weighted_sum": -1957937268594849429654632956,
+  "exact54_cases": [
+    {
+      "targets": [
+        3,
+        5,
+        2,
+        8,
+        4
+      ],
+      "offsets": [
+        0,
+        1,
+        3,
+        0,
+        5
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -12232179816513966255640386058,
+      "true_cut_literals": 8
+    },
+    {
+      "targets": [
+        8,
+        1,
+        3,
+        6,
+        0
+      ],
+      "offsets": [
+        3,
+        5,
+        1,
+        4,
+        3
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -7279042281451441404528821756156,
+      "true_cut_literals": 7
+    },
+    {
+      "targets": [
+        3,
+        1,
+        6,
+        2,
+        5
+      ],
+      "offsets": [
+        1,
+        0,
+        5,
+        2,
+        4
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -11181916128504353029872314504,
+      "true_cut_literals": 9
+    },
+    {
+      "targets": [
+        8,
+        7,
+        6,
+        4,
+        3
+      ],
+      "offsets": [
+        3,
+        4,
+        3,
+        2,
+        1
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -16502064721301593893983227198,
+      "true_cut_literals": 7
+    },
+    {
+      "targets": [
+        6,
+        3,
+        1,
+        4,
+        8
+      ],
+      "offsets": [
+        5,
+        0,
+        4,
+        2,
+        5
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -25785717456054443464656981534,
+      "true_cut_literals": 9
+    },
+    {
+      "targets": [
+        7,
+        0,
+        6,
+        4,
+        2
+      ],
+      "offsets": [
+        3,
+        3,
+        3,
+        1,
+        1
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -9623244701395678274712095509602,
+      "true_cut_literals": 8
+    },
+    {
+      "targets": [
+        8,
+        0,
+        4,
+        5,
+        3
+      ],
+      "offsets": [
+        4,
+        1,
+        4,
+        2,
+        5
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -9624225857077572744560229215164,
+      "true_cut_literals": 9
+    },
+    {
+      "targets": [
+        6,
+        0,
+        7,
+        4,
+        8
+      ],
+      "offsets": [
+        2,
+        3,
+        1,
+        5,
+        5
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -9560474050799875334319080565442,
+      "true_cut_literals": 9
+    },
+    {
+      "targets": [
+        8,
+        0,
+        6,
+        2,
+        4
+      ],
+      "offsets": [
+        2,
+        0,
+        1,
+        0,
+        5
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -9378643781993363201887635791590,
+      "true_cut_literals": 9
+    },
+    {
+      "targets": [
+        5,
+        4,
+        8,
+        3,
+        1
+      ],
+      "offsets": [
+        3,
+        1,
+        1,
+        0,
+        2
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -4755814947500055504410743814,
+      "true_cut_literals": 11
+    },
+    {
+      "targets": [
+        3,
+        6,
+        0,
+        5,
+        4
+      ],
+      "offsets": [
+        4,
+        4,
+        0,
+        5,
+        4
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -5618996773274840154998065807112,
+      "true_cut_literals": 8
+    },
+    {
+      "targets": [
+        8,
+        6,
+        7,
+        0,
+        4
+      ],
+      "offsets": [
+        5,
+        4,
+        4,
+        4,
+        2
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -3267880415916295311823589459768,
+      "true_cut_literals": 8
+    },
+    {
+      "targets": [
+        1,
+        6,
+        5,
+        8,
+        4
+      ],
+      "offsets": [
+        2,
+        4,
+        5,
+        5,
+        1
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -24784474358141565832471192732,
+      "true_cut_literals": 10
+    },
+    {
+      "targets": [
+        4,
+        3,
+        5,
+        2,
+        7
+      ],
+      "offsets": [
+        4,
+        4,
+        0,
+        5,
+        0
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -16514412652092895785282688524,
+      "true_cut_literals": 7
+    },
+    {
+      "targets": [
+        2,
+        0,
+        4,
+        8,
+        7
+      ],
+      "offsets": [
+        3,
+        1,
+        0,
+        3,
+        2
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -9343954745705311434858373569818,
+      "true_cut_literals": 11
+    },
+    {
+      "targets": [
+        4,
+        2,
+        0,
+        1,
+        7
+      ],
+      "offsets": [
+        0,
+        0,
+        2,
+        4,
+        3
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -5030791403353595310163340037484,
+      "true_cut_literals": 10
+    },
+    {
+      "targets": [
+        7,
+        4,
+        6,
+        3,
+        1
+      ],
+      "offsets": [
+        5,
+        0,
+        3,
+        3,
+        2
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -20925527603344138422198042542,
+      "true_cut_literals": 15
+    },
+    {
+      "targets": [
+        2,
+        4,
+        6,
+        3,
+        0
+      ],
+      "offsets": [
+        5,
+        0,
+        2,
+        1,
+        2
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -7542991097275265160034324625420,
+      "true_cut_literals": 10
+    },
+    {
+      "targets": [
+        3,
+        4,
+        5,
+        8,
+        2
+      ],
+      "offsets": [
+        5,
+        1,
+        4,
+        1,
+        0
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -14925905079330094180038381916,
+      "true_cut_literals": 13
+    },
+    {
+      "targets": [
+        0,
+        5,
+        2,
+        6,
+        8
+      ],
+      "offsets": [
+        1,
+        1,
+        0,
+        1,
+        2
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -1006723078654650133087097618298,
+      "true_cut_literals": 11
+    },
+    {
+      "targets": [
+        4,
+        7,
+        1,
+        8,
+        6
+      ],
+      "offsets": [
+        0,
+        3,
+        1,
+        2,
+        3
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -24500919221537787125413030866,
+      "true_cut_literals": 11
+    },
+    {
+      "targets": [
+        6,
+        1,
+        4,
+        5,
+        2
+      ],
+      "offsets": [
+        1,
+        3,
+        1,
+        4,
+        4
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -12053325329311823382202004672,
+      "true_cut_literals": 10
+    },
+    {
+      "targets": [
+        1,
+        3,
+        4,
+        8,
+        6
+      ],
+      "offsets": [
+        5,
+        1,
+        5,
+        0,
+        3
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -29160609552574374988043859926,
+      "true_cut_literals": 9
+    },
+    {
+      "targets": [
+        0,
+        2,
+        5,
+        8,
+        1
+      ],
+      "offsets": [
+        2,
+        2,
+        5,
+        2,
+        3
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -850718775278056079411589389644,
+      "true_cut_literals": 8
+    },
+    {
+      "targets": [
+        0,
+        5,
+        1,
+        8,
+        4
+      ],
+      "offsets": [
+        1,
+        5,
+        0,
+        1,
+        2
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -1060832980008387269675539557824,
+      "true_cut_literals": 10
+    },
+    {
+      "targets": [
+        4,
+        7,
+        5,
+        0,
+        6
+      ],
+      "offsets": [
+        1,
+        1,
+        1,
+        3,
+        5
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -2965221189428723272056776458852,
+      "true_cut_literals": 8
+    },
+    {
+      "targets": [
+        0,
+        5,
+        3,
+        8,
+        7
+      ],
+      "offsets": [
+        1,
+        3,
+        1,
+        2,
+        5
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -867897312751211182997006823696,
+      "true_cut_literals": 9
+    },
+    {
+      "targets": [
+        7,
+        0,
+        5,
+        3,
+        2
+      ],
+      "offsets": [
+        2,
+        1,
+        4,
+        2,
+        5
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -9315742255284445681999808467436,
+      "true_cut_literals": 8
+    },
+    {
+      "targets": [
+        7,
+        6,
+        8,
+        3,
+        0
+      ],
+      "offsets": [
+        2,
+        1,
+        1,
+        0,
+        5
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -7776334915362003426323715377922,
+      "true_cut_literals": 10
+    },
+    {
+      "targets": [
+        0,
+        3,
+        8,
+        6,
+        1
+      ],
+      "offsets": [
+        0,
+        3,
+        3,
+        0,
+        4
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -841804483930842356261009635528,
+      "true_cut_literals": 10
+    },
+    {
+      "targets": [
+        3,
+        0,
+        8,
+        2,
+        7
+      ],
+      "offsets": [
+        5,
+        1,
+        0,
+        5,
+        1
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -9307576318947708266946364528382,
+      "true_cut_literals": 8
+    },
+    {
+      "targets": [
+        5,
+        7,
+        1,
+        2,
+        3
+      ],
+      "offsets": [
+        4,
+        5,
+        1,
+        4,
+        2
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -34676303172724499401956919604,
+      "true_cut_literals": 8
+    },
+    {
+      "targets": [
+        3,
+        8,
+        5,
+        0,
+        6
+      ],
+      "offsets": [
+        0,
+        3,
+        3,
+        1,
+        2
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -3378957665025129282808241348858,
+      "true_cut_literals": 10
+    },
+    {
+      "targets": [
+        8,
+        5,
+        4,
+        2,
+        3
+      ],
+      "offsets": [
+        5,
+        1,
+        4,
+        1,
+        4
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -15048307726949739908330072218,
+      "true_cut_literals": 8
+    },
+    {
+      "targets": [
+        2,
+        8,
+        7,
+        5,
+        4
+      ],
+      "offsets": [
+        4,
+        1,
+        4,
+        0,
+        4
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -9880029978393058258226549304,
+      "true_cut_literals": 9
+    },
+    {
+      "targets": [
+        6,
+        1,
+        5,
+        2,
+        4
+      ],
+      "offsets": [
+        3,
+        2,
+        5,
+        2,
+        0
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -9882018904663802920418602428,
+      "true_cut_literals": 9
+    },
+    {
+      "targets": [
+        2,
+        0,
+        8,
+        1,
+        6
+      ],
+      "offsets": [
+        0,
+        3,
+        0,
+        0,
+        1
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -9125805320664893535511885656400,
+      "true_cut_literals": 10
+    },
+    {
+      "targets": [
+        7,
+        1,
+        6,
+        3,
+        0
+      ],
+      "offsets": [
+        2,
+        4,
+        4,
+        3,
+        3
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -7029021650418721448794617171678,
+      "true_cut_literals": 11
+    },
+    {
+      "targets": [
+        3,
+        1,
+        0,
+        5,
+        8
+      ],
+      "offsets": [
+        1,
+        1,
+        5,
+        5,
+        2
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -5226136212180274548105831329992,
+      "true_cut_literals": 9
+    },
+    {
+      "targets": [
+        5,
+        8,
+        4,
+        1,
+        2
+      ],
+      "offsets": [
+        0,
+        4,
+        5,
+        1,
+        5
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -33025993211169910671762294780,
+      "true_cut_literals": 10
+    },
+    {
+      "targets": [
+        4,
+        3,
+        0,
+        7,
+        1
+      ],
+      "offsets": [
+        0,
+        2,
+        2,
+        5,
+        4
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -5123794158770415236764875919032,
+      "true_cut_literals": 10
+    },
+    {
+      "targets": [
+        5,
+        8,
+        0,
+        7,
+        1
+      ],
+      "offsets": [
+        4,
+        2,
+        2,
+        5,
+        1
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -5013447621534856869841211662826,
+      "true_cut_literals": 11
+    },
+    {
+      "targets": [
+        0,
+        6,
+        2,
+        7,
+        5
+      ],
+      "offsets": [
+        2,
+        1,
+        4,
+        2,
+        0
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -816739425511696393278581430636,
+      "true_cut_literals": 9
+    },
+    {
+      "targets": [
+        1,
+        7,
+        4,
+        0,
+        5
+      ],
+      "offsets": [
+        4,
+        3,
+        1,
+        4,
+        0
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -3421796390681214807942601726318,
+      "true_cut_literals": 11
+    },
+    {
+      "targets": [
+        1,
+        8,
+        6,
+        0,
+        2
+      ],
+      "offsets": [
+        0,
+        2,
+        0,
+        2,
+        3
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -3024003740154307442724051778524,
+      "true_cut_literals": 11
+    },
+    {
+      "targets": [
+        2,
+        3,
+        6,
+        1,
+        0
+      ],
+      "offsets": [
+        3,
+        2,
+        1,
+        4,
+        4
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -7627453801792191561129141921280,
+      "true_cut_literals": 13
+    },
+    {
+      "targets": [
+        3,
+        6,
+        8,
+        7,
+        5
+      ],
+      "offsets": [
+        5,
+        5,
+        1,
+        3,
+        1
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -9365187008439189566813691446,
+      "true_cut_literals": 8
+    },
+    {
+      "targets": [
+        7,
+        8,
+        0,
+        5,
+        4
+      ],
+      "offsets": [
+        2,
+        1,
+        5,
+        3,
+        0
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -5493123504514035906471795218150,
+      "true_cut_literals": 13
+    },
+    {
+      "targets": [
+        4,
+        5,
+        3,
+        8,
+        6
+      ],
+      "offsets": [
+        0,
+        4,
+        5,
+        4,
+        5
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -15698290388818679451813500922,
+      "true_cut_literals": 9
+    },
+    {
+      "targets": [
+        0,
+        6,
+        4,
+        3,
+        1
+      ],
+      "offsets": [
+        3,
+        5,
+        4,
+        4,
+        0
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -940193089012828827573528050914,
+      "true_cut_literals": 12
+    },
+    {
+      "targets": [
+        3,
+        1,
+        7,
+        4,
+        0
+      ],
+      "offsets": [
+        1,
+        3,
+        4,
+        3,
+        5
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -7605698246341399893402014053500,
+      "true_cut_literals": 11
+    },
+    {
+      "targets": [
+        0,
+        1,
+        2,
+        3,
+        6
+      ],
+      "offsets": [
+        0,
+        4,
+        2,
+        3,
+        5
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -882743619509817721262293109630,
+      "true_cut_literals": 7
+    },
+    {
+      "targets": [
+        2,
+        5,
+        4,
+        0,
+        7
+      ],
+      "offsets": [
+        5,
+        4,
+        2,
+        1,
+        2
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -3021727099959610092682323179688,
+      "true_cut_literals": 9
+    },
+    {
+      "targets": [
+        8,
+        6,
+        4,
+        5,
+        2
+      ],
+      "offsets": [
+        0,
+        0,
+        3,
+        1,
+        0
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -31218932144814177493309673202,
+      "true_cut_literals": 10
+    },
+    {
+      "targets": [
+        0,
+        3,
+        7,
+        1,
+        4
+      ],
+      "offsets": [
+        2,
+        3,
+        5,
+        2,
+        4
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -986136191565744368885260918136,
+      "true_cut_literals": 11
+    },
+    {
+      "targets": [
+        1,
+        7,
+        8,
+        6,
+        2
+      ],
+      "offsets": [
+        2,
+        2,
+        1,
+        2,
+        2
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -15451717273024466801142695926,
+      "true_cut_literals": 10
+    },
+    {
+      "targets": [
+        3,
+        4,
+        0,
+        6,
+        1
+      ],
+      "offsets": [
+        4,
+        0,
+        3,
+        2,
+        4
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -5823477756485756144929377331478,
+      "true_cut_literals": 12
+    },
+    {
+      "targets": [
+        0,
+        7,
+        5,
+        2,
+        4
+      ],
+      "offsets": [
+        1,
+        0,
+        4,
+        0,
+        0
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -764520721828363759668144653700,
+      "true_cut_literals": 11
+    },
+    {
+      "targets": [
+        0,
+        6,
+        4,
+        7,
+        8
+      ],
+      "offsets": [
+        3,
+        4,
+        1,
+        1,
+        2
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -902514671995529039965361760370,
+      "true_cut_literals": 11
+    },
+    {
+      "targets": [
+        7,
+        6,
+        4,
+        1,
+        5
+      ],
+      "offsets": [
+        0,
+        4,
+        1,
+        0,
+        3
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -7484549134263657657475883504,
+      "true_cut_literals": 7
+    },
+    {
+      "targets": [
+        2,
+        4,
+        5,
+        1,
+        7
+      ],
+      "offsets": [
+        1,
+        0,
+        4,
+        0,
+        3
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -22147208433618841378892448180,
+      "true_cut_literals": 9
+    },
+    {
+      "targets": [
+        1,
+        5,
+        3,
+        0,
+        6
+      ],
+      "offsets": [
+        3,
+        4,
+        3,
+        2,
+        5
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -3294719986481899595398700998124,
+      "true_cut_literals": 11
+    },
+    {
+      "targets": [
+        7,
+        2,
+        4,
+        6,
+        1
+      ],
+      "offsets": [
+        1,
+        3,
+        5,
+        0,
+        5
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -11169826756903689587039515436,
+      "true_cut_literals": 7
+    },
+    {
+      "targets": [
+        0,
+        7,
+        6,
+        4,
+        2
+      ],
+      "offsets": [
+        4,
+        3,
+        5,
+        0,
+        5
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -891631601224878180344205722994,
+      "true_cut_literals": 9
+    },
+    {
+      "targets": [
+        1,
+        0,
+        2,
+        5,
+        6
+      ],
+      "offsets": [
+        1,
+        0,
+        5,
+        1,
+        5
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -9636599886774269488474029877458,
+      "true_cut_literals": 9
+    },
+    {
+      "targets": [
+        3,
+        1,
+        2,
+        4,
+        8
+      ],
+      "offsets": [
+        4,
+        1,
+        5,
+        1,
+        4
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -29695290042864574444989702770,
+      "true_cut_literals": 9
+    },
+    {
+      "targets": [
+        0,
+        4,
+        3,
+        8,
+        6
+      ],
+      "offsets": [
+        0,
+        2,
+        5,
+        2,
+        5
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -973792845509942363381459881944,
+      "true_cut_literals": 11
+    },
+    {
+      "targets": [
+        5,
+        8,
+        6,
+        2,
+        1
+      ],
+      "offsets": [
+        1,
+        3,
+        0,
+        3,
+        2
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -20300550046881597000607382334,
+      "true_cut_literals": 8
+    },
+    {
+      "targets": [
+        1,
+        5,
+        2,
+        3,
+        7
+      ],
+      "offsets": [
+        3,
+        0,
+        1,
+        3,
+        3
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -29210663906717354955959490146,
+      "true_cut_literals": 10
+    },
+    {
+      "targets": [
+        5,
+        3,
+        2,
+        1,
+        8
+      ],
+      "offsets": [
+        5,
+        1,
+        1,
+        2,
+        1
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -18630554361039193923909099336,
+      "true_cut_literals": 10
+    },
+    {
+      "targets": [
+        7,
+        2,
+        3,
+        4,
+        5
+      ],
+      "offsets": [
+        3,
+        2,
+        3,
+        3,
+        1
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -13164053535119627521384841608,
+      "true_cut_literals": 11
+    },
+    {
+      "targets": [
+        4,
+        0,
+        8,
+        7,
+        5
+      ],
+      "offsets": [
+        4,
+        5,
+        4,
+        2,
+        4
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -9082634794822747863822515562662,
+      "true_cut_literals": 10
+    },
+    {
+      "targets": [
+        1,
+        8,
+        4,
+        0,
+        3
+      ],
+      "offsets": [
+        4,
+        4,
+        5,
+        4,
+        3
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -3025253516016751697183152468206,
+      "true_cut_literals": 10
+    },
+    {
+      "targets": [
+        5,
+        2,
+        8,
+        6,
+        0
+      ],
+      "offsets": [
+        1,
+        1,
+        1,
+        5,
+        5
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -7287353318649206498634170380342,
+      "true_cut_literals": 10
+    },
+    {
+      "targets": [
+        7,
+        2,
+        5,
+        8,
+        6
+      ],
+      "offsets": [
+        2,
+        2,
+        3,
+        3,
+        5
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -22289647095885763932691839042,
+      "true_cut_literals": 9
+    },
+    {
+      "targets": [
+        0,
+        7,
+        4,
+        3,
+        5
+      ],
+      "offsets": [
+        1,
+        2,
+        4,
+        2,
+        5
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -915164683367237122888496448436,
+      "true_cut_literals": 8
+    },
+    {
+      "targets": [
+        4,
+        1,
+        3,
+        2,
+        7
+      ],
+      "offsets": [
+        3,
+        2,
+        1,
+        1,
+        3
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -16685880969024635857144419568,
+      "true_cut_literals": 10
+    },
+    {
+      "targets": [
+        4,
+        7,
+        6,
+        5,
+        2
+      ],
+      "offsets": [
+        5,
+        1,
+        3,
+        3,
+        4
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -10875972871437425446323778122,
+      "true_cut_literals": 10
+    },
+    {
+      "targets": [
+        5,
+        1,
+        4,
+        8,
+        2
+      ],
+      "offsets": [
+        1,
+        5,
+        0,
+        0,
+        1
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -16843295699308244990240672700,
+      "true_cut_literals": 9
+    },
+    {
+      "targets": [
+        0,
+        5,
+        4,
+        1,
+        2
+      ],
+      "offsets": [
+        4,
+        0,
+        3,
+        4,
+        3
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -1034786615010263517411656757244,
+      "true_cut_literals": 13
+    },
+    {
+      "targets": [
+        1,
+        2,
+        4,
+        0,
+        6
+      ],
+      "offsets": [
+        5,
+        1,
+        5,
+        0,
+        4
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -2801841069556052308953097724244,
+      "true_cut_literals": 10
+    },
+    {
+      "targets": [
+        3,
+        7,
+        0,
+        5,
+        4
+      ],
+      "offsets": [
+        5,
+        5,
+        5,
+        0,
+        1
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -5642177900923172889312288087484,
+      "true_cut_literals": 9
+    },
+    {
+      "targets": [
+        5,
+        2,
+        8,
+        0,
+        3
+      ],
+      "offsets": [
+        0,
+        2,
+        1,
+        4,
+        0
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -2939453639675595736511215022452,
+      "true_cut_literals": 10
+    },
+    {
+      "targets": [
+        0,
+        7,
+        4,
+        1,
+        3
+      ],
+      "offsets": [
+        5,
+        1,
+        0,
+        4,
+        2
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -1061361180449046324045498473496,
+      "true_cut_literals": 12
+    },
+    {
+      "targets": [
+        3,
+        7,
+        2,
+        5,
+        1
+      ],
+      "offsets": [
+        4,
+        1,
+        3,
+        1,
+        5
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -4829247838122249117524206378,
+      "true_cut_literals": 9
+    },
+    {
+      "targets": [
+        7,
+        3,
+        5,
+        2,
+        6
+      ],
+      "offsets": [
+        0,
+        1,
+        1,
+        1,
+        5
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -10661902000476048865868091998,
+      "true_cut_literals": 9
+    },
+    {
+      "targets": [
+        2,
+        7,
+        5,
+        8,
+        4
+      ],
+      "offsets": [
+        3,
+        3,
+        4,
+        0,
+        5
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -19377350912607587106639452114,
+      "true_cut_literals": 11
+    },
+    {
+      "targets": [
+        8,
+        2,
+        1,
+        4,
+        5
+      ],
+      "offsets": [
+        5,
+        1,
+        0,
+        1,
+        2
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -8997426600270698768413715706,
+      "true_cut_literals": 9
+    },
+    {
+      "targets": [
+        0,
+        1,
+        4,
+        5,
+        3
+      ],
+      "offsets": [
+        2,
+        0,
+        1,
+        1,
+        4
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -1031765624350770416258268235782,
+      "true_cut_literals": 8
+    },
+    {
+      "targets": [
+        7,
+        0,
+        5,
+        4,
+        2
+      ],
+      "offsets": [
+        0,
+        0,
+        5,
+        3,
+        1
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -9794205039831719395870234190706,
+      "true_cut_literals": 9
+    },
+    {
+      "targets": [
+        8,
+        4,
+        1,
+        5,
+        0
+      ],
+      "offsets": [
+        4,
+        1,
+        3,
+        2,
+        0
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -7206387283001856796025272236414,
+      "true_cut_literals": 9
+    },
+    {
+      "targets": [
+        1,
+        6,
+        4,
+        0,
+        2
+      ],
+      "offsets": [
+        0,
+        5,
+        4,
+        0,
+        3
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -3373825227066569491430905542308,
+      "true_cut_literals": 8
+    },
+    {
+      "targets": [
+        4,
+        2,
+        7,
+        8,
+        6
+      ],
+      "offsets": [
+        2,
+        4,
+        2,
+        1,
+        0
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -12414278055633174509181803054,
+      "true_cut_literals": 9
+    },
+    {
+      "targets": [
+        4,
+        7,
+        2,
+        3,
+        1
+      ],
+      "offsets": [
+        5,
+        3,
+        1,
+        3,
+        4
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -20005873588163231626338029394,
+      "true_cut_literals": 11
+    },
+    {
+      "targets": [
+        3,
+        0,
+        2,
+        8,
+        1
+      ],
+      "offsets": [
+        1,
+        0,
+        2,
+        3,
+        4
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -9560315164112020639456868084476,
+      "true_cut_literals": 10
+    },
+    {
+      "targets": [
+        2,
+        6,
+        3,
+        4,
+        5
+      ],
+      "offsets": [
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -32716118278750034409146102760,
+      "true_cut_literals": 10
+    },
+    {
+      "targets": [
+        7,
+        5,
+        4,
+        2,
+        3
+      ],
+      "offsets": [
+        4,
+        2,
+        3,
+        2,
+        0
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -1957937268594849429654632956,
+      "true_cut_literals": 12
+    },
+    {
+      "targets": [
+        8,
+        6,
+        4,
+        0,
+        7
+      ],
+      "offsets": [
+        2,
+        5,
+        5,
+        1,
+        5
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": -1,
+      "weighted_determinant_sum": -3370597026960338330519737726006,
+      "true_cut_literals": 9
+    },
+    {
+      "targets": [
+        0,
+        3,
+        7,
+        1,
+        2
+      ],
+      "offsets": [
+        2,
+        5,
+        0,
+        4,
+        5
+      ],
+      "direction_and_sign": -1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -727266523275867950832147194784,
+      "true_cut_literals": 11
+    },
+    {
+      "targets": [
+        0,
+        7,
+        1,
+        8,
+        3
+      ],
+      "offsets": [
+        3,
+        0,
+        0,
+        2,
+        2
+      ],
+      "direction_and_sign": 1,
+      "mirror_ccw": 1,
+      "weighted_determinant_sum": -796889083571525565014106428826,
+      "true_cut_literals": 8
+    }
+  ],
+  "elapsed_seconds": 0.134
+}
