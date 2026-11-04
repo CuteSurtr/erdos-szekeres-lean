@@ -1,0 +1,32 @@
+scratch/M4_ray_lne0.lean:345:31: error: linarith failed to find a contradiction
+case h
+S : Finset Point
+c : Point
+m : ℕ
+heven : Even m
+hm : 0 < m
+hinv : Invariant (rotAbout c (2 * Real.pi / ↑m)) S
+hgp : GeneralPosition S
+x y : Point
+hx : x ∈ S
+hy : y ∈ S
+hxy : x ≠ y
+l : ℝ
+hl : l ≠ 0
+hray : y - c = l • (x - c)
+q : Point := ![2 * c 0 - x 0, 2 * c 1 - x 1]
+hqdef : q = ![2 * c 0 - x 0, 2 * c 1 - x 1]
+hq : q ∈ S
+hy0 : y 0 = c 0 + l * (x 0 - c 0)
+hy1 : y 1 = c 1 + l * (x 1 - c 1)
+hxc : x ≠ c
+hcoord : x 0 ≠ c 0 ∨ x 1 ≠ c 1
+hxq : x ≠ q
+h : y = q
+h0 : c 0 + l * (x 0 - c 0) = 2 * c 0 - x 0
+h1 : c 1 + l * (x 1 - c 1) = 2 * c 1 - x 1
+e0 : (l + 1) * (x 0 - c 0) = 0
+e1 : (l + 1) * (x 1 - c 1) = 0
+a✝ : l + 1 = 0
+⊢ False
+failed
