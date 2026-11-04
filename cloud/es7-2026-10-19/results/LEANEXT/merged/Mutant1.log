@@ -1,0 +1,8 @@
+.cache/es7/final-2026-11-04/lean_merge/scratch/Mutant1.lean:1381:39: error: Application type mismatch: The argument
+  hij
+has type
+  i ≤ j
+but is expected to have type
+  ?m.141 ≠ ?m.142
+in the application
+  @not_mem_hullVerts_peel_of_ne S ?m.141 ?m.142 hij
