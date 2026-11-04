@@ -1,0 +1,11 @@
+{
+  "valid_witness": "accepted",
+  "mutants_rejected": [
+    "weight",
+    "model_hash",
+    "clause",
+    "sign",
+    "variable"
+  ],
+  "arithmetic": "integer seed polynomials"
+}

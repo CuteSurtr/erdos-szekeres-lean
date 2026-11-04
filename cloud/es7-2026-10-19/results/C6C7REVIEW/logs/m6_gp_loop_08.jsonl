@@ -1,0 +1,5 @@
+{"event": "full_gp", "model": "gp_run07/model.json", "round": 8, "seconds": 0.288, "violations": 672}
+{"event": "solve", "family_clauses": 524336, "round": 8, "seconds": 2.466, "status": "SAT"}
+{"event": "full_gp", "model": "gp_run08/model.json", "round": 9, "seconds": 2.76, "violations": 0}
+{"event": "gp_consistent", "model": "gp_run08/model.json", "seconds": 2.772, "sha256": "7d52dd0f74bbeb1f1ccf11a0777f8c02dcd8be8dda50f8540d9465e75b6c4e76"}
+{"event": "finish", "last_family": "gp_refine08/combined.clauses", "last_model": "gp_run08/model.json", "seconds": 2.772}

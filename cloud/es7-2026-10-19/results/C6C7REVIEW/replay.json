@@ -1,0 +1,1141 @@
+{
+  "rigor": "exact computation; certificate only for successfully replayed proofs",
+  "started_utc": "2026-11-03T16:32:52Z",
+  "commands": [
+    {
+      "name": "generate_A6",
+      "argv": [
+        "$PYTHON",
+        "-I",
+        "$RESULTS/C7UPPER/gen.py",
+        "6",
+        "8",
+        "11",
+        "$SCRATCH/A6.cnf"
+      ],
+      "exit": 0,
+      "seconds": 4.012
+    },
+    {
+      "name": "cubes_A6",
+      "argv": [
+        "$PYTHON",
+        "-I",
+        "$RESULTS/C6UPPER/tools/mkcubes.py",
+        "$SCRATCH/A6.cnf",
+        "$SCRATCH/A6.cnf.json",
+        "$SCRATCH/A6_cubes"
+      ],
+      "exit": 0,
+      "seconds": 2.011
+    },
+    {
+      "name": "cover_A6",
+      "argv": [
+        "$PYTHON",
+        "-I",
+        "$RESULTS/C6UPPER/tools/verify_cover.py",
+        "$SCRATCH/A6.cnf",
+        "$SCRATCH/A6.cnf.json",
+        "$SCRATCH/A6_cubes"
+      ],
+      "exit": 0,
+      "seconds": 2.016
+    },
+    {
+      "name": "generate_B6",
+      "argv": [
+        "$PYTHON",
+        "-I",
+        "$RESULTS/C6UPPER/encb/gen_b2.py",
+        "6",
+        "8",
+        "11",
+        "$SCRATCH/B6.cnf"
+      ],
+      "exit": 0,
+      "seconds": 8.033
+    },
+    {
+      "name": "cubes_B6",
+      "argv": [
+        "$PYTHON",
+        "-I",
+        "$RESULTS/C6UPPER/tools/mkcubes.py",
+        "$SCRATCH/B6.cnf",
+        "$SCRATCH/B6.cnf.json",
+        "$SCRATCH/B6_cubes"
+      ],
+      "exit": 0,
+      "seconds": 2.005
+    },
+    {
+      "name": "cover_B6",
+      "argv": [
+        "$PYTHON",
+        "-I",
+        "$RESULTS/C6UPPER/tools/verify_cover.py",
+        "$SCRATCH/B6.cnf",
+        "$SCRATCH/B6.cnf.json",
+        "$SCRATCH/B6_cubes"
+      ],
+      "exit": 0,
+      "seconds": 2.007
+    },
+    {
+      "name": "generate_A7",
+      "argv": [
+        "$PYTHON",
+        "-I",
+        "$RESULTS/C7UPPER/gen.py",
+        "7",
+        "8",
+        "10",
+        "$SCRATCH/A7.cnf"
+      ],
+      "exit": 0,
+      "seconds": 4.011
+    },
+    {
+      "name": "generate_B7",
+      "argv": [
+        "$PYTHON",
+        "-I",
+        "$RESULTS/C7UPPER/gen_b.py",
+        "7",
+        "8",
+        "10",
+        "$SCRATCH/B7.cnf"
+      ],
+      "exit": 0,
+      "seconds": 10.042
+    },
+    {
+      "name": "generate_B7extended",
+      "argv": [
+        "$PYTHON",
+        "-I",
+        "$RESULTS/C6UPPER/encb/gen_b2.py",
+        "7",
+        "8",
+        "10",
+        "$SCRATCH/B7extended.cnf"
+      ],
+      "exit": 0,
+      "seconds": 10.049
+    },
+    {
+      "name": "add_H1",
+      "argv": [
+        "$PYTHON",
+        "-I",
+        "$RESULTS/C7UPPER/addunits.py",
+        "$SCRATCH/A7.cnf",
+        "$SCRATCH/A7_H1.cnf",
+        "7857"
+      ],
+      "exit": 0,
+      "seconds": 2.01
+    },
+    {
+      "name": "add_H1",
+      "argv": [
+        "$PYTHON",
+        "-I",
+        "$RESULTS/C7UPPER/addunits.py",
+        "$SCRATCH/A7.cnf",
+        "$SCRATCH/A7_H1.cnf",
+        "7857"
+      ],
+      "exit": 0,
+      "seconds": 2.014
+    },
+    {
+      "name": "decompress_A6_c11111",
+      "argv": [
+        "zstd",
+        "-q",
+        "-dc",
+        "$ARCHIVES/es8-c6-octagon-2026-11-03/lrat/c11111.lrat.zst"
+      ],
+      "exit": 0,
+      "seconds": 4.017
+    },
+    {
+      "name": "lrat_A6_c11111",
+      "argv": [
+        "$BIN/lrat-check",
+        "$SCRATCH/A6_cubes/c11111.cnf",
+        "$SCRATCH/A6_c11111.lrat"
+      ],
+      "exit": 0,
+      "seconds": 32.169
+    },
+    {
+      "name": "cake_A6_c11111",
+      "argv": [
+        "$BIN/cake_lpr",
+        "--CML_HEAP_SIZE=4000",
+        "--CML_STACK_SIZE=4000",
+        "$SCRATCH/A6_cubes/c11111.cnf",
+        "$SCRATCH/A6_c11111.lrat"
+      ],
+      "exit": 0,
+      "seconds": 82.382
+    },
+    {
+      "name": "decompress_A6_c11000",
+      "argv": [
+        "zstd",
+        "-q",
+        "-dc",
+        "$ARCHIVES/es8-c6-octagon-2026-11-03/lrat/c11000.lrat.zst"
+      ],
+      "exit": 0,
+      "seconds": 4.012
+    },
+    {
+      "name": "lrat_A6_c11000",
+      "argv": [
+        "$BIN/lrat-check",
+        "$SCRATCH/A6_cubes/c11000.cnf",
+        "$SCRATCH/A6_c11000.lrat"
+      ],
+      "exit": 0,
+      "seconds": 30.107
+    },
+    {
+      "name": "cake_A6_c11000",
+      "argv": [
+        "$BIN/cake_lpr",
+        "--CML_HEAP_SIZE=4000",
+        "--CML_STACK_SIZE=4000",
+        "$SCRATCH/A6_cubes/c11000.cnf",
+        "$SCRATCH/A6_c11000.lrat"
+      ],
+      "exit": 0,
+      "seconds": 80.297
+    },
+    {
+      "name": "decompress_A6_c11110",
+      "argv": [
+        "zstd",
+        "-q",
+        "-dc",
+        "$ARCHIVES/es8-c6-octagon-2026-11-03/lrat/c11110.lrat.zst"
+      ],
+      "exit": 0,
+      "seconds": 4.018
+    },
+    {
+      "name": "lrat_A6_c11110",
+      "argv": [
+        "$BIN/lrat-check",
+        "$SCRATCH/A6_cubes/c11110.cnf",
+        "$SCRATCH/A6_c11110.lrat"
+      ],
+      "exit": 0,
+      "seconds": 30.118
+    },
+    {
+      "name": "cake_A6_c11110",
+      "argv": [
+        "$BIN/cake_lpr",
+        "--CML_HEAP_SIZE=4000",
+        "--CML_STACK_SIZE=4000",
+        "$SCRATCH/A6_cubes/c11110.cnf",
+        "$SCRATCH/A6_c11110.lrat"
+      ],
+      "exit": 0,
+      "seconds": 84.326
+    },
+    {
+      "name": "decompress_B6_c11001",
+      "argv": [
+        "zstd",
+        "-q",
+        "-dc",
+        "$ARCHIVES/es8-c6-octagon-2026-11-03/lrat_B/c11001.lrat.zst"
+      ],
+      "exit": 0,
+      "seconds": 4.013
+    },
+    {
+      "name": "lrat_B6_c11001",
+      "argv": [
+        "$BIN/lrat-check",
+        "$SCRATCH/B6_cubes/c11001.cnf",
+        "$SCRATCH/B6_c11001.lrat"
+      ],
+      "exit": 0,
+      "seconds": 34.131
+    },
+    {
+      "name": "cake_B6_c11001",
+      "argv": [
+        "$BIN/cake_lpr",
+        "--CML_HEAP_SIZE=4000",
+        "--CML_STACK_SIZE=4000",
+        "$SCRATCH/B6_cubes/c11001.cnf",
+        "$SCRATCH/B6_c11001.lrat"
+      ],
+      "exit": 0,
+      "seconds": 90.426
+    },
+    {
+      "name": "decompress_B6_c11000",
+      "argv": [
+        "zstd",
+        "-q",
+        "-dc",
+        "$ARCHIVES/es8-c6-octagon-2026-11-03/lrat_B/c11000.lrat.zst"
+      ],
+      "exit": 0,
+      "seconds": 4.028
+    },
+    {
+      "name": "lrat_B6_c11000",
+      "argv": [
+        "$BIN/lrat-check",
+        "$SCRATCH/B6_cubes/c11000.cnf",
+        "$SCRATCH/B6_c11000.lrat"
+      ],
+      "exit": 0,
+      "seconds": 32.18
+    },
+    {
+      "name": "cake_B6_c11000",
+      "argv": [
+        "$BIN/cake_lpr",
+        "--CML_HEAP_SIZE=4000",
+        "--CML_STACK_SIZE=4000",
+        "$SCRATCH/B6_cubes/c11000.cnf",
+        "$SCRATCH/B6_c11000.lrat"
+      ],
+      "exit": 0,
+      "seconds": 84.449
+    },
+    {
+      "name": "decompress_B6_c11111",
+      "argv": [
+        "zstd",
+        "-q",
+        "-dc",
+        "$ARCHIVES/es8-c6-octagon-2026-11-03/lrat_B/c11111.lrat.zst"
+      ],
+      "exit": 0,
+      "seconds": 4.029
+    },
+    {
+      "name": "lrat_B6_c11111",
+      "argv": [
+        "$BIN/lrat-check",
+        "$SCRATCH/B6_cubes/c11111.cnf",
+        "$SCRATCH/B6_c11111.lrat"
+      ],
+      "exit": 0,
+      "seconds": 40.22
+    },
+    {
+      "name": "cake_B6_c11111",
+      "argv": [
+        "$BIN/cake_lpr",
+        "--CML_HEAP_SIZE=4000",
+        "--CML_STACK_SIZE=4000",
+        "$SCRATCH/B6_cubes/c11111.cnf",
+        "$SCRATCH/B6_c11111.lrat"
+      ],
+      "exit": 0,
+      "seconds": 106.439
+    },
+    {
+      "name": "decompress_A7",
+      "argv": [
+        "zstd",
+        "-q",
+        "-dc",
+        "$ARCHIVES/es8-c7-octagon-2026-11-03/m7K8t10_H1.lrat.zst"
+      ],
+      "exit": 0,
+      "seconds": 2.011
+    },
+    {
+      "name": "lrat_A7",
+      "argv": [
+        "$BIN/lrat-check",
+        "$SCRATCH/A7_H1.cnf",
+        "$SCRATCH/A7.lrat"
+      ],
+      "exit": 0,
+      "seconds": 16.062
+    },
+    {
+      "name": "cake_A7",
+      "argv": [
+        "$BIN/cake_lpr",
+        "--CML_HEAP_SIZE=4000",
+        "--CML_STACK_SIZE=4000",
+        "$SCRATCH/A7_H1.cnf",
+        "$SCRATCH/A7.lrat"
+      ],
+      "exit": 0,
+      "seconds": 42.165
+    },
+    {
+      "name": "decompress_B7",
+      "argv": [
+        "zstd",
+        "-q",
+        "-dc",
+        "$ARCHIVES/es8-c7-octagon-2026-11-03/B_full_m7K8t10.lrat.zst"
+      ],
+      "exit": 0,
+      "seconds": 2.01
+    },
+    {
+      "name": "lrat_B7",
+      "argv": [
+        "$BIN/lrat-check",
+        "$SCRATCH/B7.cnf",
+        "$SCRATCH/B7.lrat"
+      ],
+      "exit": 0,
+      "seconds": 16.064
+    },
+    {
+      "name": "cake_B7",
+      "argv": [
+        "$BIN/cake_lpr",
+        "--CML_HEAP_SIZE=4000",
+        "--CML_STACK_SIZE=4000",
+        "$SCRATCH/B7.cnf",
+        "$SCRATCH/B7.lrat"
+      ],
+      "exit": 0,
+      "seconds": 40.168
+    }
+  ],
+  "files": [
+    {
+      "file": "A6.cnf",
+      "sha256": "542c8a3a2c4484a7d60b5fdb8efc0f3506d782031fc4b4625604b360211ad51e",
+      "expected_match": true,
+      "bytes": 54704610
+    },
+    {
+      "file": "B6.cnf",
+      "sha256": "479e31a9e8d58d752c86b9abf02fb799c10615a7e61a88f132c49734674f37fc",
+      "expected_match": true,
+      "bytes": 58618857
+    },
+    {
+      "file": "A7.cnf",
+      "sha256": "1a7c0e706f2a7fb52b109ae20ca37d49c74940e01c1227fe152b46d742d5997f",
+      "expected_match": true,
+      "bytes": 63944859
+    },
+    {
+      "file": "B7.cnf",
+      "sha256": "b4d290176cb675c61ecbcf70380cc520aabf093d00e2572328a0975ae2d296e2",
+      "expected_match": true,
+      "bytes": 67820434
+    },
+    {
+      "file": "B7extended.cnf",
+      "sha256": "b4d290176cb675c61ecbcf70380cc520aabf093d00e2572328a0975ae2d296e2",
+      "expected_match": true,
+      "bytes": 67820434
+    },
+    {
+      "file": "A7_H1.cnf",
+      "sha256": "fa297b5bd6608d29369fd56f8cab20d6d17ad9d335253352541a42e4c669fc49",
+      "expected_match": true,
+      "bytes": 63944866
+    },
+    {
+      "file": "A6.cnf",
+      "sha256": "542c8a3a2c4484a7d60b5fdb8efc0f3506d782031fc4b4625604b360211ad51e",
+      "expected_match": true,
+      "bytes": 54704610
+    },
+    {
+      "file": "B6.cnf",
+      "sha256": "479e31a9e8d58d752c86b9abf02fb799c10615a7e61a88f132c49734674f37fc",
+      "expected_match": true,
+      "bytes": 58618857
+    },
+    {
+      "file": "A7.cnf",
+      "sha256": "1a7c0e706f2a7fb52b109ae20ca37d49c74940e01c1227fe152b46d742d5997f",
+      "expected_match": true,
+      "bytes": 63944859
+    },
+    {
+      "file": "B7.cnf",
+      "sha256": "b4d290176cb675c61ecbcf70380cc520aabf093d00e2572328a0975ae2d296e2",
+      "expected_match": true,
+      "bytes": 67820434
+    },
+    {
+      "file": "B7extended.cnf",
+      "sha256": "b4d290176cb675c61ecbcf70380cc520aabf093d00e2572328a0975ae2d296e2",
+      "expected_match": true,
+      "bytes": 67820434
+    },
+    {
+      "file": "A7_H1.cnf",
+      "sha256": "fa297b5bd6608d29369fd56f8cab20d6d17ad9d335253352541a42e4c669fc49",
+      "expected_match": true,
+      "bytes": 63944866
+    },
+    {
+      "file": "A6_c11111.lrat.zst",
+      "sha256": "09b8ff40595a11308931c55d8083bcc7295bdc1f1534acd2dde3091dc8f0139c",
+      "expected_match": true,
+      "bytes": 1098068288
+    },
+    {
+      "file": "A6_c11111.lrat",
+      "sha256": "230df1f314478f3543745a102e82341f0efef33c4e3cec5ce445e5d4a8664799",
+      "expected_match": true,
+      "bytes": 3891360324
+    },
+    {
+      "file": "A6_c11000.lrat.zst",
+      "sha256": "7af5c0cc372a056035ebac79357f9252de261023fbbebc984cac8592284acfd1",
+      "expected_match": true,
+      "bytes": 1047087404
+    },
+    {
+      "file": "A6_c11000.lrat",
+      "sha256": "5d3abe7a99a469d783315298443aba72292683dcdd8c693dd5ea87f438b11b82",
+      "expected_match": true,
+      "bytes": 3734215782
+    },
+    {
+      "file": "A6_c11110.lrat.zst",
+      "sha256": "2bfef94b092d3374b97d41ddedc617c896f03bec8d6c9128049b42a2b269ac95",
+      "expected_match": true,
+      "bytes": 1026152464
+    },
+    {
+      "file": "A6_c11110.lrat",
+      "sha256": "16fbfe9c1c7da82bdf4f63d2742f22a7bfaf776eb89c3c599f27dd5889730cc4",
+      "expected_match": true,
+      "bytes": 3625805415
+    },
+    {
+      "file": "B6_c11001.lrat.zst",
+      "sha256": "9d1a931d7852dbe1c0970c602874027ded43bd4ac201ef48740727b0615a0eb3",
+      "expected_match": true,
+      "bytes": 1039310420
+    },
+    {
+      "file": "B6_c11001.lrat",
+      "sha256": "88dcf4f58f01f90936f158d6cba04c5c337f3ee86ff3b4768714f5a014adf08b",
+      "expected_match": true,
+      "bytes": 3738153376
+    },
+    {
+      "file": "B6_c11000.lrat.zst",
+      "sha256": "f40cc1cb4653ee1efccfc8865c96e82b2f99780b5fc4d98bca1b6ec952f05065",
+      "expected_match": true,
+      "bytes": 1003250073
+    },
+    {
+      "file": "B6_c11000.lrat",
+      "sha256": "407e30d112a73b30a31f3d1c7c2165295b3b38b265c6231ee8e46aa385f57352",
+      "expected_match": true,
+      "bytes": 3621710932
+    },
+    {
+      "file": "B6_c11111.lrat.zst",
+      "sha256": "e5eb3612f2c9debe54d65a53416bae65e1225a5ad7fedc9e80a4e32b79593543",
+      "expected_match": true,
+      "bytes": 1242790915
+    },
+    {
+      "file": "B6_c11111.lrat",
+      "sha256": "0a988c3f26bbad6041877c6a76b4a040b5c96d834eb56aacd4be97e65d3010bb",
+      "expected_match": true,
+      "bytes": 4461671208
+    },
+    {
+      "file": "A7.lrat.zst",
+      "sha256": "4e2db40a6f86b8e1ab2449b8cdd58c6ad9a8be386dc9bfe4b4e976b74fac6dc4",
+      "expected_match": true,
+      "bytes": 418999237
+    },
+    {
+      "file": "A7.lrat",
+      "sha256": "c750a805a7a3dbdb4ba445c16fb75051a9fac623a3ddf93a5d864defe41039b2",
+      "expected_match": true,
+      "bytes": 1702278368
+    },
+    {
+      "file": "B7.lrat.zst",
+      "sha256": "6f41c33887e7f4d2091a826919b4fbe9d92205fe2fec52c904ebee52bfbbb56c",
+      "expected_match": true,
+      "bytes": 399554618
+    },
+    {
+      "file": "B7.lrat",
+      "sha256": "75f9bd350186724a85e949b05315369d88ef887c9953e0048810b67e8172550e",
+      "expected_match": true,
+      "bytes": 1630259870
+    }
+  ],
+  "proofs": [
+    {
+      "name": "A6_c11111",
+      "cnf_sha256": "e5854419334e19e52b54b18330a36f7623aa3807237ff7828255f65f46791826",
+      "raw_sha256": "230df1f314478f3543745a102e82341f0efef33c4e3cec5ce445e5d4a8664799",
+      "zst_sha256": "09b8ff40595a11308931c55d8083bcc7295bdc1f1534acd2dde3091dc8f0139c",
+      "lrat_check": "replayed VERIFIED",
+      "cake_lpr": "replayed VERIFIED UNSAT"
+    },
+    {
+      "name": "A6_c11000",
+      "cnf_sha256": "153f913a744a22507e518f59e7c2a6ea5f48a4aa294ec41e1f39f6aa50e26995",
+      "raw_sha256": "5d3abe7a99a469d783315298443aba72292683dcdd8c693dd5ea87f438b11b82",
+      "zst_sha256": "7af5c0cc372a056035ebac79357f9252de261023fbbebc984cac8592284acfd1",
+      "lrat_check": "replayed VERIFIED",
+      "cake_lpr": "replayed VERIFIED UNSAT"
+    },
+    {
+      "name": "A6_c11110",
+      "cnf_sha256": "53bb2a1934e7f22422407178ef913751009936de270204fe2ad76c2b55da88ca",
+      "raw_sha256": "16fbfe9c1c7da82bdf4f63d2742f22a7bfaf776eb89c3c599f27dd5889730cc4",
+      "zst_sha256": "2bfef94b092d3374b97d41ddedc617c896f03bec8d6c9128049b42a2b269ac95",
+      "lrat_check": "replayed VERIFIED",
+      "cake_lpr": "replayed VERIFIED UNSAT"
+    },
+    {
+      "name": "B6_c11001",
+      "cnf_sha256": "903f8aee3f3f039a28e7b93c5fa96d5980e1962c7066eb466cf7116c08d1891b",
+      "raw_sha256": "88dcf4f58f01f90936f158d6cba04c5c337f3ee86ff3b4768714f5a014adf08b",
+      "zst_sha256": "9d1a931d7852dbe1c0970c602874027ded43bd4ac201ef48740727b0615a0eb3",
+      "lrat_check": "replayed VERIFIED",
+      "cake_lpr": "replayed VERIFIED UNSAT"
+    },
+    {
+      "name": "B6_c11000",
+      "cnf_sha256": "560a5f794fcffa8f5fcee06022b9c1e726a9090e4984fec704125c1a08ae865b",
+      "raw_sha256": "407e30d112a73b30a31f3d1c7c2165295b3b38b265c6231ee8e46aa385f57352",
+      "zst_sha256": "f40cc1cb4653ee1efccfc8865c96e82b2f99780b5fc4d98bca1b6ec952f05065",
+      "lrat_check": "replayed VERIFIED",
+      "cake_lpr": "replayed VERIFIED UNSAT"
+    },
+    {
+      "name": "B6_c11111",
+      "cnf_sha256": "0fa206f7b75f8653e8da78dd3b750294d3ddafd8b86da53a489d8cc63fa02a8e",
+      "raw_sha256": "0a988c3f26bbad6041877c6a76b4a040b5c96d834eb56aacd4be97e65d3010bb",
+      "zst_sha256": "e5eb3612f2c9debe54d65a53416bae65e1225a5ad7fedc9e80a4e32b79593543",
+      "lrat_check": "replayed VERIFIED",
+      "cake_lpr": "replayed VERIFIED UNSAT"
+    },
+    {
+      "name": "A7",
+      "cnf_sha256": "fa297b5bd6608d29369fd56f8cab20d6d17ad9d335253352541a42e4c669fc49",
+      "raw_sha256": "c750a805a7a3dbdb4ba445c16fb75051a9fac623a3ddf93a5d864defe41039b2",
+      "zst_sha256": "4e2db40a6f86b8e1ab2449b8cdd58c6ad9a8be386dc9bfe4b4e976b74fac6dc4",
+      "lrat_check": "replayed VERIFIED",
+      "cake_lpr": "replayed VERIFIED UNSAT"
+    },
+    {
+      "name": "B7",
+      "cnf_sha256": "b4d290176cb675c61ecbcf70380cc520aabf093d00e2572328a0975ae2d296e2",
+      "raw_sha256": "75f9bd350186724a85e949b05315369d88ef887c9953e0048810b67e8172550e",
+      "zst_sha256": "6f41c33887e7f4d2091a826919b4fbe9d92205fe2fec52c904ebee52bfbbb56c",
+      "lrat_check": "replayed VERIFIED",
+      "cake_lpr": "replayed VERIFIED UNSAT"
+    }
+  ],
+  "memory_samples_gb": [
+    19.14,
+    19.167,
+    19.254,
+    20.014,
+    19.97,
+    20.105,
+    20.243,
+    20.342,
+    19.769,
+    20.54,
+    19.985,
+    20.048,
+    20.02,
+    20.052,
+    20.089,
+    20.191,
+    20.345,
+    19.705,
+    19.803,
+    19.829,
+    20.154,
+    20.215,
+    19.418,
+    19.214,
+    19.218,
+    19.215,
+    19.192,
+    19.291,
+    19.317,
+    19.298,
+    19.339,
+    19.606,
+    19.349,
+    19.372,
+    19.331,
+    19.464,
+    19.739,
+    19.848,
+    19.298,
+    19.438,
+    19.598,
+    19.578,
+    19.363,
+    23.601,
+    23.559,
+    23.636,
+    23.6,
+    23.676,
+    24.003,
+    24.005,
+    23.572,
+    23.54,
+    23.518,
+    23.636,
+    23.572,
+    23.593,
+    23.558,
+    23.534,
+    23.561,
+    23.418,
+    23.4,
+    23.521,
+    23.471,
+    23.518,
+    23.497,
+    23.486,
+    23.489,
+    23.48,
+    23.522,
+    23.488,
+    23.472,
+    23.481,
+    23.46,
+    23.502,
+    23.477,
+    23.514,
+    23.54,
+    23.49,
+    23.495,
+    23.466,
+    23.514,
+    23.536,
+    23.458,
+    19.311,
+    19.393,
+    19.352,
+    19.443,
+    19.411,
+    19.468,
+    19.43,
+    19.499,
+    19.452,
+    19.43,
+    19.446,
+    19.438,
+    19.445,
+    19.457,
+    19.479,
+    19.495,
+    19.486,
+    19.349,
+    23.548,
+    23.512,
+    23.583,
+    23.551,
+    23.534,
+    23.534,
+    23.536,
+    23.58,
+    23.547,
+    23.509,
+    23.557,
+    23.515,
+    23.579,
+    23.529,
+    23.529,
+    23.537,
+    23.537,
+    23.567,
+    23.567,
+    23.525,
+    23.588,
+    23.511,
+    23.518,
+    23.526,
+    23.478,
+    23.615,
+    23.56,
+    23.546,
+    23.499,
+    23.521,
+    23.541,
+    23.536,
+    23.498,
+    23.55,
+    23.507,
+    23.57,
+    23.548,
+    23.531,
+    23.551,
+    19.347,
+    19.425,
+    19.424,
+    19.492,
+    19.487,
+    19.449,
+    19.504,
+    19.451,
+    19.841,
+    19.501,
+    19.505,
+    19.505,
+    19.444,
+    19.522,
+    19.463,
+    19.473,
+    19.54,
+    19.328,
+    23.587,
+    23.573,
+    23.556,
+    23.597,
+    23.655,
+    23.59,
+    23.649,
+    23.617,
+    23.768,
+    23.635,
+    23.642,
+    23.583,
+    23.603,
+    23.607,
+    24.652,
+    24.868,
+    25.068,
+    25.206,
+    25.637,
+    25.59,
+    25.62,
+    25.609,
+    25.664,
+    25.689,
+    25.688,
+    25.636,
+    25.74,
+    25.699,
+    25.723,
+    25.715,
+    25.731,
+    25.741,
+    25.753,
+    25.721,
+    25.782,
+    25.772,
+    25.814,
+    25.805,
+    26.299,
+    26.403,
+    26.418,
+    22.221,
+    22.354,
+    22.362,
+    22.438,
+    22.426,
+    22.494,
+    22.619,
+    22.462,
+    22.44,
+    22.439,
+    22.8,
+    22.921,
+    22.758,
+    22.415,
+    22.984,
+    23.269,
+    22.461,
+    22.984,
+    23.199,
+    22.224,
+    27.02,
+    27.173,
+    26.521,
+    27.072,
+    27.266,
+    27.478,
+    26.464,
+    27.013,
+    26.656,
+    26.505,
+    26.959,
+    27.221,
+    27.248,
+    26.636,
+    27.068,
+    27.184,
+    26.243,
+    26.858,
+    27.091,
+    27.094,
+    27.091,
+    27.031,
+    25.987,
+    26.017,
+    25.968,
+    25.987,
+    26.018,
+    25.915,
+    25.986,
+    25.929,
+    25.988,
+    25.941,
+    25.869,
+    25.92,
+    25.905,
+    25.863,
+    25.918,
+    25.663,
+    25.625,
+    25.712,
+    25.774,
+    25.777,
+    25.616,
+    25.599,
+    21.403,
+    21.396,
+    21.463,
+    21.588,
+    21.551,
+    21.702,
+    21.721,
+    21.587,
+    21.64,
+    21.697,
+    21.656,
+    21.724,
+    21.737,
+    21.724,
+    21.728,
+    21.734,
+    21.75,
+    21.624,
+    21.397,
+    25.676,
+    25.695,
+    25.747,
+    25.54,
+    25.545,
+    25.561,
+    25.553,
+    25.563,
+    25.701,
+    25.656,
+    25.786,
+    25.713,
+    25.775,
+    25.736,
+    25.73,
+    25.773,
+    25.745,
+    25.704,
+    25.666,
+    25.628,
+    25.809,
+    25.739,
+    25.747,
+    25.738,
+    25.788,
+    25.797,
+    25.802,
+    25.867,
+    25.72,
+    25.662,
+    25.722,
+    25.662,
+    25.679,
+    25.661,
+    25.66,
+    25.658,
+    25.762,
+    23.581,
+    24.65,
+    24.878,
+    25.286,
+    21.177,
+    21.406,
+    21.619,
+    21.755,
+    21.719,
+    21.73,
+    21.801,
+    21.762,
+    21.631,
+    21.713,
+    21.701,
+    21.838,
+    21.816,
+    21.522,
+    21.708,
+    21.689,
+    21.736,
+    21.684,
+    21.499,
+    21.701,
+    21.713,
+    21.721,
+    21.638,
+    25.244,
+    25.309,
+    25.265,
+    25.398,
+    25.338,
+    25.472,
+    25.78,
+    25.662,
+    25.614,
+    25.828,
+    25.655,
+    25.642,
+    25.575,
+    25.445,
+    25.352,
+    25.099,
+    25.167,
+    25.183,
+    24.887,
+    24.895,
+    25.069,
+    25.047,
+    25.043,
+    24.799,
+    24.851,
+    24.815,
+    24.956,
+    24.957,
+    24.654,
+    24.671,
+    24.7,
+    24.839,
+    24.854,
+    24.674,
+    24.69,
+    24.654,
+    24.757,
+    24.74,
+    24.562,
+    24.612,
+    24.586,
+    24.697,
+    24.715,
+    24.675,
+    24.737,
+    24.7,
+    24.739,
+    24.79,
+    24.623,
+    24.64,
+    24.667,
+    24.625,
+    20.501,
+    20.371,
+    20.613,
+    20.498,
+    20.676,
+    20.657,
+    20.614,
+    20.632,
+    20.622,
+    20.433,
+    24.601,
+    24.531,
+    24.611,
+    24.564,
+    24.566,
+    24.561,
+    24.594,
+    24.586,
+    24.604,
+    24.544,
+    24.603,
+    25.424,
+    25.701,
+    24.779,
+    24.758,
+    24.706,
+    24.633,
+    24.651,
+    24.642,
+    24.663,
+    20.488,
+    20.496,
+    20.654,
+    20.638,
+    20.597,
+    20.738,
+    20.87,
+    20.845,
+    20.769,
+    20.619,
+    24.685,
+    24.642,
+    24.596,
+    24.601,
+    24.721,
+    24.579,
+    24.52,
+    24.529,
+    24.532,
+    24.69,
+    24.803,
+    24.696,
+    24.791,
+    24.86,
+    24.857,
+    25.046,
+    25.043,
+    24.447,
+    24.888
+  ],
+  "binaries": {
+    "cadical": "e12ecc8ce8a489394a2b7411e3fa264f037e4ceb2e615bab534158e19d04ac01",
+    "lrat-check": "f20462121defbc631f34850e06d5c0428ea4fecc4c890e6b755fd8e9bf9f534d",
+    "cake_lpr": "2fee767af4478ed817f8bdf6feea5866e5e59f1f67c2a4477e98ee961612881d"
+  },
+  "sources": {
+    "C7UPPER/gen.py": "4564e7f0ff1d3794917414002b4847cca6f0753420bd806af9d107f2a361bace",
+    "C7UPPER/gen_b.py": "8f09632fa22888b6feca34e729e3b74d25905eef2a6c4058934298075af96398",
+    "C6UPPER/encb/gen_b2.py": "7a04dd09f92f50f79dc0e3df0a7ca7c1592cb86da516a10cc3ddb3bd3637c794",
+    "C6UPPER/tools/mkcubes.py": "9b99b7003103d47b41cd2267b40efd34c77c44e35050f891e2f02c27953af395",
+    "C6UPPER/tools/verify_cover.py": "d4810222682e588ea2049c5b3ab9c4a75c8f68cc0c6e56103382db6c07cc6651"
+  },
+  "sampling": {
+    "seed": 1319527528443935447,
+    "method": "three uniformly selected without replacement from the 12 transitive phase-order cubes, independently for each encoder; selected before checking",
+    "A": [
+      "c11111",
+      "c11000",
+      "c11110"
+    ],
+    "B": [
+      "c11001",
+      "c11000",
+      "c11111"
+    ]
+  },
+  "finished_utc": "2026-11-03T16:50:13Z",
+  "complete": true
+}

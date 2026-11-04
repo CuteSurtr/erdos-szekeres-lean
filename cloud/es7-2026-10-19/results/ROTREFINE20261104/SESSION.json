@@ -1,0 +1,31 @@
+{
+  "date_local": "2026-11-04",
+  "timezone": "Asia/Seoul",
+  "start_utc": "2026-11-03T17:09:32Z",
+  "compute_stop_utc": "2026-11-03T19:00:00Z",
+  "delivery_deadline_utc": "2026-11-03T19:09:32Z",
+  "branch": "es8-c6c7-review-2026-11-04",
+  "base_commit": "c4b01bd29cb61c599d46288febb915a0f958c213",
+  "compute_core_cap": 4,
+  "solver_lane_cap": 2,
+  "cake_lane_cap": 1,
+  "worker_memory_guard_gb": 29,
+  "requested_total_memory_limit_gb": 30,
+  "initial_total_memory_bytes": 21587722240,
+  "initial_solver_processes": [],
+  "archive": "proof-archives/es8-rot-refine-2026-11-04",
+  "numerical_search_environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "cvxpy": "1.9.3",
+    "clarabel": "0.11.1",
+    "scs": "3.3.1",
+    "sdp_install_reason": "model0033 survives the linear relaxation; test Gram positive semidefiniteness as a necessary condition"
+  },
+  "proof_policy": "numeric search results accepted only after exact checking; no LP outcome alone is a certificate",
+  "research_stopped_utc": "2026-11-03T19:00:00Z",
+  "final_research_outcome": "No UNSAT certificate or coordinate construction; C6 maximum 54 or 60 and C5 threshold 65 remain open",
+  "finalization_utc": "2026-11-03T19:10:51.091794+00:00",
+  "closing_note": "Compute stopped within the requested window; report and commit finalization completed a few minutes after the delivery target."
+}

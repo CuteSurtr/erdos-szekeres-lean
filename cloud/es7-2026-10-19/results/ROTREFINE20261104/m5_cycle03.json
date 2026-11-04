@@ -1,0 +1,255 @@
+{
+  "m": 5,
+  "t": 12,
+  "model_sha256": "e907065467c5e3ee6ad04c2e7e71fa33c03c774fbb2de27aad2e177d58e07809",
+  "scope": "realizations invariant under the specified Euclidean rotation",
+  "verified_exponent_cancellation": true,
+  "comparisons": [
+    {
+      "anchor_quintuple": [
+        40,
+        3,
+        7,
+        9,
+        44
+      ],
+      "minority_term": 0,
+      "other_term": 1,
+      "term_signs": [
+        1,
+        -1,
+        -1
+      ],
+      "greater_orbits": [
+        [
+          0,
+          9,
+          42
+        ],
+        [
+          5,
+          40,
+          41
+        ]
+      ],
+      "lesser_orbits": [
+        [
+          0,
+          6,
+          42
+        ],
+        [
+          5,
+          42,
+          43
+        ]
+      ],
+      "weight": 1
+    },
+    {
+      "anchor_quintuple": [
+        40,
+        3,
+        8,
+        9,
+        41
+      ],
+      "minority_term": 1,
+      "other_term": 2,
+      "term_signs": [
+        -1,
+        1,
+        -1
+      ],
+      "greater_orbits": [
+        [
+          0,
+          6,
+          42
+        ],
+        [
+          5,
+          42,
+          43
+        ]
+      ],
+      "lesser_orbits": [
+        [
+          0,
+          42,
+          43
+        ],
+        [
+          5,
+          6,
+          42
+        ]
+      ],
+      "weight": 1
+    },
+    {
+      "anchor_quintuple": [
+        40,
+        2,
+        8,
+        9,
+        44
+      ],
+      "minority_term": 2,
+      "other_term": 0,
+      "term_signs": [
+        -1,
+        -1,
+        1
+      ],
+      "greater_orbits": [
+        [
+          0,
+          42,
+          43
+        ],
+        [
+          5,
+          6,
+          42
+        ]
+      ],
+      "lesser_orbits": [
+        [
+          0,
+          6,
+          43
+        ],
+        [
+          5,
+          40,
+          41
+        ]
+      ],
+      "weight": 1
+    },
+    {
+      "anchor_quintuple": [
+        40,
+        2,
+        5,
+        8,
+        41
+      ],
+      "minority_term": 1,
+      "other_term": 0,
+      "term_signs": [
+        1,
+        -1,
+        1
+      ],
+      "greater_orbits": [
+        [
+          0,
+          6,
+          43
+        ],
+        [
+          5,
+          40,
+          41
+        ]
+      ],
+      "lesser_orbits": [
+        [
+          0,
+          8,
+          43
+        ],
+        [
+          5,
+          42,
+          43
+        ]
+      ],
+      "weight": 1
+    },
+    {
+      "anchor_quintuple": [
+        40,
+        2,
+        5,
+        7,
+        44
+      ],
+      "minority_term": 0,
+      "other_term": 2,
+      "term_signs": [
+        -1,
+        1,
+        1
+      ],
+      "greater_orbits": [
+        [
+          0,
+          8,
+          43
+        ],
+        [
+          5,
+          42,
+          43
+        ]
+      ],
+      "lesser_orbits": [
+        [
+          0,
+          42,
+          43
+        ],
+        [
+          5,
+          7,
+          40
+        ]
+      ],
+      "weight": 1
+    },
+    {
+      "anchor_quintuple": [
+        40,
+        3,
+        5,
+        7,
+        41
+      ],
+      "minority_term": 2,
+      "other_term": 1,
+      "term_signs": [
+        1,
+        1,
+        -1
+      ],
+      "greater_orbits": [
+        [
+          0,
+          42,
+          43
+        ],
+        [
+          5,
+          7,
+          40
+        ]
+      ],
+      "lesser_orbits": [
+        [
+          0,
+          9,
+          42
+        ],
+        [
+          5,
+          40,
+          41
+        ]
+      ],
+      "weight": 1
+    }
+  ]
+}

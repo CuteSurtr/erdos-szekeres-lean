@@ -1,0 +1,26 @@
+{
+  "status": "final",
+  "verified_families": 39,
+  "linear_families": 38,
+  "negative_definite_families": 1,
+  "sum_family_clause_counts_not_global_unique": 5385408,
+  "source_exact54_tests": 101316696,
+  "additional_emitted_clause_exact54_tests": 1284096,
+  "maximum_source_orbits": 7,
+  "maximum_certificate_rows": 39,
+  "maximum_observed_math_peak_rss_bytes": 392282112,
+  "last_worker_event": {
+    "event": "worker_stopped",
+    "utc": "2026-11-03T18:50:18.458090+00:00",
+    "next_index": 1032,
+    "stop_requested": false,
+    "deadline_reached": false
+  },
+  "catalog_sha256": "322eb89d48d99276a045f54ec2ea9bc67260c419338a9d0ae6b587b0c7c005f5",
+  "conclusion": "exact exclusions of prescribed geometric sixfold sign patterns; no settled 60-point case or changed 54-to-60 bound",
+  "archive_manifest_sha256": "50c2116c4df11220a043edf6292059c995deda2cf95d2601d8506bde2bb36fa4",
+  "archive_files": 806,
+  "archive_raw_bytes": 1457228359,
+  "archive_compressed_bytes": 138512712,
+  "all_archive_roundtrips": true
+}

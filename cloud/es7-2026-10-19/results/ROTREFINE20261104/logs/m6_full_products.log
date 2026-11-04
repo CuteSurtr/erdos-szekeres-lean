@@ -1,0 +1,8 @@
+{"event": "process_finished", "role": "verification", "log": "small_pair/checker.log", "returncode": 0, "stop_reason": null, "seconds": 0.52, "peak_total_gb": 27.753, "peak_lane_rss_bytes": 317915136, "max_child_rss_bytes": 262897664}
+{"case": "small_pair", "identities": 660, "acyclic": true, "cycle_length": 0}
+{"event": "process_finished", "role": "verification", "log": "small_triple/checker.log", "returncode": 0, "stop_reason": null, "seconds": 0.51, "peak_total_gb": 27.753, "peak_lane_rss_bytes": 318701568, "max_child_rss_bytes": 263110656}
+{"case": "small_triple", "identities": 7140, "acyclic": true, "cycle_length": 0}
+{"event": "process_finished", "role": "verification", "log": "known_five_cycle/checker.log", "returncode": 0, "stop_reason": null, "seconds": 0.52, "peak_total_gb": 27.753, "peak_lane_rss_bytes": 318996480, "max_child_rss_bytes": 263258112}
+{"case": "known_five_cycle", "identities": 7140, "acyclic": false, "cycle_length": 5}
+{"event": "process_finished", "role": "verification", "log": "full/checker.log", "returncode": 0, "stop_reason": null, "seconds": 0.52, "peak_total_gb": 27.753, "peak_lane_rss_bytes": 469467136, "max_child_rss_bytes": 411516928}
+{"case": "full", "identities": 4551260, "acyclic": true, "cycle_length": 0}

@@ -1,0 +1,64 @@
+{
+  "candidate_clause": [
+    -1555,
+    1562,
+    -6822
+  ],
+  "exact56": {
+    "all_orbit_injections": true,
+    "arithmetic": "integer Z[zeta_5] and A+B sqrt(5) sign comparison",
+    "arithmetic_source_sha256": "b9354812e74145b4f6b74615f5910da084c0b7067af50ebd8cb19d5b365a2417",
+    "directions_and_sign_flips": true,
+    "embeddings": 2200,
+    "forbidden_matches": 0,
+    "nonzero_triples": 26235,
+    "points_without_centre": 55,
+    "relative_shifts_complete": true,
+    "source_layers": [
+      0,
+      10
+    ],
+    "source_sha256": "4cdd24bbeaa56d437420b1d1f63ca5ecb0fba64482ceb78ba6f1f7a496cf3387",
+    "table_sha256": "2a780b6ce4bf794eee1893dc557260f53bff2c65e87027ab077c63a61ba0ffed"
+  },
+  "exact56_weighted_identities": 11000,
+  "independent_method": "Formal degree-two complex polynomials over integer Z[zeta_5]",
+  "kind": "rotation_linear_identity",
+  "m": 5,
+  "model_sha256": "40494397cc15b81e61ed8dacb2818e6377ab074c3ae97912dc906c67e505b028",
+  "pattern": [
+    [
+      [
+        0,
+        50,
+        53
+      ],
+      1
+    ],
+    [
+      [
+        0,
+        51,
+        52
+      ],
+      -1
+    ],
+    [
+      [
+        50,
+        51,
+        53
+      ],
+      1
+    ]
+  ],
+  "polynomial_residual": {},
+  "positive_weights_verified": true,
+  "scope": "realizations carrying the specified geometric fivefold rotation",
+  "source_layers": [
+    0,
+    10
+  ],
+  "t": 12,
+  "witness_sha256": "36b585fcd66266a3a0b03c0d53bb42faa403c8a56b8a303eefed88c18a9e9e8a"
+}

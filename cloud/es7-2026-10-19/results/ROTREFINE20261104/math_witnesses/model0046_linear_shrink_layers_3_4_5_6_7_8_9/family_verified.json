@@ -1,0 +1,32 @@
+{
+  "rigor": "exact computation; soundness uses written rotation-specific linear identity proof",
+  "source_witness_sha256": "8c17edc308a483e58202c809833c9abb69242489c348b2682d31fd208798716d",
+  "source_model_sha256": "03e51ab03e64b7b2c39dece6423ba60851a9647e5ea9c4c62ab2060d721dbf35",
+  "source_verified_sha256": "5f37ab2d118c9cd663288ccadabf3589a0ad6e54e61ce2c0dcbb580456589666",
+  "embeddings_verified": 61440,
+  "inconsistent_premises": 0,
+  "source_layers": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "unique_clauses": 61440,
+  "orbit_injections": "order-preserving only",
+  "family_sha256": "73a0fa00278eb5cff7b096d5bdc0fa37824acc24b95c2d39272e98b261057d6e",
+  "source_exact54_tests": 100,
+  "source_exact54_forbidden_matches": 0,
+  "elapsed_seconds": 8.49,
+  "peak_rss_bytes": 155566080,
+  "status": "PASS",
+  "relative_shift_patterns": 128,
+  "coverage": "bounded partial family, not exhaustive",
+  "exact54_tests": 122880,
+  "exact54_test_scope": "each emitted clause on original and mirrored CCW injective embeddings",
+  "exact54_forbidden_matches": 0,
+  "exact54_sha256": "235472b5c604421d11458865e2035b9977a8aa628f699f82bfad74536bf12c95",
+  "independent_verification_sha256": "0dd934a5b1abb20926e25a14a382b35747c10d559356806155ce93493221c3de"
+}
