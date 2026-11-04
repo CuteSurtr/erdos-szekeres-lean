@@ -16,6 +16,7 @@ of `LAYERLEAN/LayerLemma.lean` (checked with `diff`).
 | `es7corr/` | From `Fivefold35`: every fivefold set of 32 or more points has a convex 7-gon. From `Fourfold32`: every fourfold set of 29 or more points has one. These are the ES(7) maxima 31 and 28 relative to the SAT case classes; the examples are in `SYMMAX`. |
 | `merged/` | `Merged.lean`: LayerLemma plus the even-m phase results in one file; `phase_ne_of_distinct_layers` and `not_same_ray_of_distinct_layers` (distinct layers have distinct phases mod 2π/m). |
 | `encb_literals/` | Python test (evidence only): encoder B's own literal code against real orientations, 5,947,032 ordered triples, 0 mismatches; 7 mutants. |
+| `linked/` | `Linked.lean`: rule B on layer indices (`orient_pos_of_layers`: middle point in the outermost layer, so the triple turns left). |
 | `review/` | An adversarial review of `LAYERLEAN` with no error found, and `VacuityTest.lean`: a concrete fourfold configuration discharging every hypothesis of `strict_nesting`, `layers_are_orbits`, `hullVerts_eq_orbitFS_rotAbout` and `chain_clauses_sound`. |
 
 **Still outside Lean.**
