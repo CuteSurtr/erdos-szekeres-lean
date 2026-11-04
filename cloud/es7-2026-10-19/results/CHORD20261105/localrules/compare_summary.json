@@ -1,0 +1,144 @@
+{
+ "mine_clauses": 4276,
+ "base_local_clauses": 7709,
+ "base_nonlocal(Y-only etc)": 168,
+ "facial_clauses": 1176,
+ "facial_nonlocal": 0,
+ "mine_not_subsumed_by_base_or_chord": 672,
+ "mine_not_subsumed_by_base_chord_facial": 0,
+ "mine_not_implied_by_base_or_chord(semantic, with Y transitivity)": 0,
+ "mine_not_implied_by_base_chord_facial(semantic)": 0,
+ "new_by_length": {
+  "2": 672
+ },
+ "forced_sign_order_triples": {
+  "mine": 6844,
+  "base": 11684,
+  "chord": 1336,
+  "facial": 2736,
+  "base+chord": 12352
+ },
+ "examples_base_not_in_mine": [
+  [
+   143,
+   -1,
+   []
+  ],
+  [
+   144,
+   -1,
+   []
+  ],
+  [
+   148,
+   -1,
+   [
+    [
+     [
+      1,
+      2
+     ],
+     1
+    ]
+   ]
+  ],
+  [
+   149,
+   -1,
+   [
+    [
+     [
+      1,
+      2
+     ],
+     1
+    ]
+   ]
+  ],
+  [
+   149,
+   -1,
+   [
+    [
+     [
+      1,
+      2
+     ],
+     -1
+    ]
+   ]
+  ],
+  [
+   150,
+   -1,
+   [
+    [
+     [
+      1,
+      2
+     ],
+     1
+    ]
+   ]
+  ],
+  [
+   150,
+   -1,
+   [
+    [
+     [
+      1,
+      2
+     ],
+     -1
+    ]
+   ]
+  ],
+  [
+   154,
+   -1,
+   [
+    [
+     [
+      1,
+      3
+     ],
+     1
+    ]
+   ]
+  ]
+ ],
+ "orbits_base_not_in_mine": 2400,
+ "examples_chord_not_in_mine": [],
+ "orbits_chord_not_in_mine": 0,
+ "examples_facial_not_in_mine": [],
+ "orbits_facial_not_in_mine": 0,
+ "covered_by_other_but_not_mine": {
+  "base": 5508,
+  "chord": 0,
+  "facial": 0
+ },
+ "mine_not_in_facial_triples": 4108,
+ "mine_not_in_facial_orbits": 1840,
+ "mine_not_in_facial_nor_base_chord_triples": 0,
+ "mine_not_in_facial_nor_base_chord_orbit_signs": 0,
+ "facial_clauses_not_implied_by_mine": 0,
+ "facial_not_implied_examples": [],
+ "new_bc_by_nlayers": {
+  "3": 672
+ },
+ "new_bcf_by_nlayers": {},
+ "hard101_models_violating_new_vs_base_chord": "0/101",
+ "hard101_models_violating_new_vs_base_chord_facial": "0/101",
+ "hard101_distinct_violated_new_vs_base_chord_facial": 0,
+ "hard101_models_violating_facial": "90/101",
+ "hard101_models_violating_chord_rules": "90/101",
+ "hard101_models_violating_all_local_rules": "90/101",
+ "cegar400_models_violating_new_vs_base_chord": "0/400",
+ "cegar400_models_violating_new_vs_base_chord_facial": "0/400",
+ "cegar400_distinct_violated_new_vs_base_chord_facial": 0,
+ "cegar400_models_violating_facial": "229/400",
+ "cegar400_models_violating_chord_rules": "229/400",
+ "cegar400_models_violating_all_local_rules": "229/400",
+ "cegar_models_total": 8195
+}

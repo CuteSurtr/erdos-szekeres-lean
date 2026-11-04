@@ -1,0 +1,976 @@
+{"clause": [1], "records": [{"kind": "triple", "triple": [0, 1, 2], "var": 1, "sign": -1, "weight": 1}]}
+{"clause": [2], "records": [{"kind": "triple", "triple": [0, 1, 3], "var": 2, "sign": -1, "weight": 1}]}
+{"clause": [3], "records": [{"kind": "triple", "triple": [0, 1, 4], "var": 3, "sign": -1, "weight": 1}]}
+{"clause": [6], "records": [{"kind": "triple", "triple": [0, 1, 8], "var": 6, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 1], "weight": 2, "sign": 1}]}
+{"clause": [7], "records": [{"kind": "triple", "triple": [0, 1, 9], "var": 7, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 1], "weight": 1}]}
+{"clause": [8], "records": [{"kind": "triple", "triple": [0, 1, 10], "var": 8, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 1], "weight": 1}]}
+{"clause": [12], "records": [{"kind": "triple", "triple": [0, 1, 14], "var": 12, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 2], "weight": 2, "sign": 1}]}
+{"clause": [13], "records": [{"kind": "triple", "triple": [0, 1, 15], "var": 13, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 2], "weight": 1}]}
+{"clause": [14], "records": [{"kind": "triple", "triple": [0, 1, 16], "var": 14, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 2], "weight": 1}]}
+{"clause": [18], "records": [{"kind": "triple", "triple": [0, 1, 20], "var": 18, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 3], "weight": 2, "sign": 1}]}
+{"clause": [19], "records": [{"kind": "triple", "triple": [0, 1, 21], "var": 19, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 3], "weight": 1}]}
+{"clause": [20], "records": [{"kind": "triple", "triple": [0, 1, 22], "var": 20, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 3], "weight": 1}]}
+{"clause": [24], "records": [{"kind": "triple", "triple": [0, 1, 26], "var": 24, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 4], "weight": 2, "sign": 1}]}
+{"clause": [25], "records": [{"kind": "triple", "triple": [0, 1, 27], "var": 25, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 4], "weight": 1}]}
+{"clause": [26], "records": [{"kind": "triple", "triple": [0, 1, 28], "var": 26, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 4], "weight": 1}]}
+{"clause": [30], "records": [{"kind": "triple", "triple": [0, 1, 32], "var": 30, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 5], "weight": 2, "sign": 1}]}
+{"clause": [31], "records": [{"kind": "triple", "triple": [0, 1, 33], "var": 31, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 5], "weight": 1}]}
+{"clause": [32], "records": [{"kind": "triple", "triple": [0, 1, 34], "var": 32, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 5], "weight": 1}]}
+{"clause": [36], "records": [{"kind": "triple", "triple": [0, 1, 38], "var": 36, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 6], "weight": 2, "sign": 1}]}
+{"clause": [37], "records": [{"kind": "triple", "triple": [0, 1, 39], "var": 37, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 6], "weight": 1}]}
+{"clause": [38], "records": [{"kind": "triple", "triple": [0, 1, 40], "var": 38, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 6], "weight": 1}]}
+{"clause": [42], "records": [{"kind": "triple", "triple": [0, 1, 44], "var": 42, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 7], "weight": 2, "sign": 1}]}
+{"clause": [43], "records": [{"kind": "triple", "triple": [0, 1, 45], "var": 43, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 7], "weight": 1}]}
+{"clause": [44], "records": [{"kind": "triple", "triple": [0, 1, 46], "var": 44, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 7], "weight": 1}]}
+{"clause": [48], "records": [{"kind": "triple", "triple": [0, 1, 50], "var": 48, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 8], "weight": 2, "sign": 1}]}
+{"clause": [49], "records": [{"kind": "triple", "triple": [0, 1, 51], "var": 49, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 8], "weight": 1}]}
+{"clause": [50], "records": [{"kind": "triple", "triple": [0, 1, 52], "var": 50, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 8], "weight": 1}]}
+{"clause": [54], "records": [{"kind": "triple", "triple": [0, 1, 56], "var": 54, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 9], "weight": 2, "sign": 1}]}
+{"clause": [55], "records": [{"kind": "triple", "triple": [0, 1, 57], "var": 55, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 9], "weight": 1}]}
+{"clause": [56], "records": [{"kind": "triple", "triple": [0, 1, 58], "var": 56, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 9], "weight": 1}]}
+{"clause": [58], "records": [{"kind": "triple", "triple": [0, 2, 4], "var": 58, "sign": -1, "weight": 1}]}
+{"clause": [62], "records": [{"kind": "triple", "triple": [0, 2, 9], "var": 62, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 1], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [0, 1], "weight": 1}]}
+{"clause": [63], "records": [{"kind": "triple", "triple": [0, 2, 10], "var": 63, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 1], "weight": 1}, {"kind": "phase_minus", "pair": [0, 1], "weight": 1}]}
+{"clause": [68], "records": [{"kind": "triple", "triple": [0, 2, 15], "var": 68, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 2], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [0, 2], "weight": 1}]}
+{"clause": [69], "records": [{"kind": "triple", "triple": [0, 2, 16], "var": 69, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 2], "weight": 1}, {"kind": "phase_minus", "pair": [0, 2], "weight": 1}]}
+{"clause": [74], "records": [{"kind": "triple", "triple": [0, 2, 21], "var": 74, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 3], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [0, 3], "weight": 1}]}
+{"clause": [75], "records": [{"kind": "triple", "triple": [0, 2, 22], "var": 75, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 3], "weight": 1}, {"kind": "phase_minus", "pair": [0, 3], "weight": 1}]}
+{"clause": [80], "records": [{"kind": "triple", "triple": [0, 2, 27], "var": 80, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 4], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [0, 4], "weight": 1}]}
+{"clause": [81], "records": [{"kind": "triple", "triple": [0, 2, 28], "var": 81, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 4], "weight": 1}, {"kind": "phase_minus", "pair": [0, 4], "weight": 1}]}
+{"clause": [86], "records": [{"kind": "triple", "triple": [0, 2, 33], "var": 86, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 5], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [0, 5], "weight": 1}]}
+{"clause": [87], "records": [{"kind": "triple", "triple": [0, 2, 34], "var": 87, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 5], "weight": 1}, {"kind": "phase_minus", "pair": [0, 5], "weight": 1}]}
+{"clause": [92], "records": [{"kind": "triple", "triple": [0, 2, 39], "var": 92, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 6], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [0, 6], "weight": 1}]}
+{"clause": [93], "records": [{"kind": "triple", "triple": [0, 2, 40], "var": 93, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 6], "weight": 1}, {"kind": "phase_minus", "pair": [0, 6], "weight": 1}]}
+{"clause": [98], "records": [{"kind": "triple", "triple": [0, 2, 45], "var": 98, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 7], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [0, 7], "weight": 1}]}
+{"clause": [99], "records": [{"kind": "triple", "triple": [0, 2, 46], "var": 99, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 7], "weight": 1}, {"kind": "phase_minus", "pair": [0, 7], "weight": 1}]}
+{"clause": [104], "records": [{"kind": "triple", "triple": [0, 2, 51], "var": 104, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 8], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [0, 8], "weight": 1}]}
+{"clause": [105], "records": [{"kind": "triple", "triple": [0, 2, 52], "var": 105, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 8], "weight": 1}, {"kind": "phase_minus", "pair": [0, 8], "weight": 1}]}
+{"clause": [110], "records": [{"kind": "triple", "triple": [0, 2, 57], "var": 110, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 9], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [0, 9], "weight": 1}]}
+{"clause": [111], "records": [{"kind": "triple", "triple": [0, 2, 58], "var": 111, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 9], "weight": 1}, {"kind": "phase_minus", "pair": [0, 9], "weight": 1}]}
+{"clause": [-113], "records": [{"kind": "triple", "triple": [0, 3, 6], "var": 113, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 1], "weight": 4, "sign": 1}]}
+{"clause": [-114], "records": [{"kind": "triple", "triple": [0, 3, 7], "var": 114, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 1], "weight": 2}]}
+{"clause": [-115], "records": [{"kind": "triple", "triple": [0, 3, 8], "var": 115, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 1], "weight": 2}]}
+{"clause": [-116], "records": [{"kind": "triple", "triple": [0, 3, 12], "var": 116, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 2], "weight": 4, "sign": 1}]}
+{"clause": [-117], "records": [{"kind": "triple", "triple": [0, 3, 13], "var": 117, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 2], "weight": 2}]}
+{"clause": [-118], "records": [{"kind": "triple", "triple": [0, 3, 14], "var": 118, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 2], "weight": 2}]}
+{"clause": [-119], "records": [{"kind": "triple", "triple": [0, 3, 18], "var": 119, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 3], "weight": 4, "sign": 1}]}
+{"clause": [-120], "records": [{"kind": "triple", "triple": [0, 3, 19], "var": 120, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 3], "weight": 2}]}
+{"clause": [-121], "records": [{"kind": "triple", "triple": [0, 3, 20], "var": 121, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 3], "weight": 2}]}
+{"clause": [-122], "records": [{"kind": "triple", "triple": [0, 3, 24], "var": 122, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 4], "weight": 4, "sign": 1}]}
+{"clause": [-123], "records": [{"kind": "triple", "triple": [0, 3, 25], "var": 123, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 4], "weight": 2}]}
+{"clause": [-124], "records": [{"kind": "triple", "triple": [0, 3, 26], "var": 124, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 4], "weight": 2}]}
+{"clause": [-125], "records": [{"kind": "triple", "triple": [0, 3, 30], "var": 125, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 5], "weight": 4, "sign": 1}]}
+{"clause": [-126], "records": [{"kind": "triple", "triple": [0, 3, 31], "var": 126, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 5], "weight": 2}]}
+{"clause": [-127], "records": [{"kind": "triple", "triple": [0, 3, 32], "var": 127, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 5], "weight": 2}]}
+{"clause": [-128], "records": [{"kind": "triple", "triple": [0, 3, 36], "var": 128, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 6], "weight": 4, "sign": 1}]}
+{"clause": [-129], "records": [{"kind": "triple", "triple": [0, 3, 37], "var": 129, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 6], "weight": 2}]}
+{"clause": [-130], "records": [{"kind": "triple", "triple": [0, 3, 38], "var": 130, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 6], "weight": 2}]}
+{"clause": [-131], "records": [{"kind": "triple", "triple": [0, 3, 42], "var": 131, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 7], "weight": 4, "sign": 1}]}
+{"clause": [-132], "records": [{"kind": "triple", "triple": [0, 3, 43], "var": 132, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 7], "weight": 2}]}
+{"clause": [-133], "records": [{"kind": "triple", "triple": [0, 3, 44], "var": 133, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 7], "weight": 2}]}
+{"clause": [-134], "records": [{"kind": "triple", "triple": [0, 3, 48], "var": 134, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 8], "weight": 4, "sign": 1}]}
+{"clause": [-135], "records": [{"kind": "triple", "triple": [0, 3, 49], "var": 135, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 8], "weight": 2}]}
+{"clause": [-136], "records": [{"kind": "triple", "triple": [0, 3, 50], "var": 136, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 8], "weight": 2}]}
+{"clause": [-137], "records": [{"kind": "triple", "triple": [0, 3, 54], "var": 137, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 9], "weight": 4, "sign": 1}]}
+{"clause": [-138], "records": [{"kind": "triple", "triple": [0, 3, 55], "var": 138, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 9], "weight": 2}]}
+{"clause": [-139], "records": [{"kind": "triple", "triple": [0, 3, 56], "var": 139, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 9], "weight": 2}]}
+{"clause": [142], "records": [{"kind": "triple", "triple": [0, 6, 9], "var": 142, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 1], "weight": 4, "sign": 1}]}
+{"clause": [193], "records": [{"kind": "triple", "triple": [0, 7, 8], "var": 193, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 1], "weight": 2, "sign": 1}]}
+{"clause": [194], "records": [{"kind": "triple", "triple": [0, 7, 9], "var": 194, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 1], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [0, 1], "weight": 1}]}
+{"clause": [195], "records": [{"kind": "triple", "triple": [0, 7, 10], "var": 195, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 1], "weight": 2}]}
+{"clause": [245], "records": [{"kind": "triple", "triple": [0, 8, 9], "var": 245, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 1], "weight": 1}]}
+{"clause": [246], "records": [{"kind": "triple", "triple": [0, 8, 10], "var": 246, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 1], "weight": 1}, {"kind": "phase_minus", "pair": [0, 1], "weight": 1}]}
+{"clause": [247], "records": [{"kind": "triple", "triple": [0, 8, 11], "var": 247, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 1], "weight": 2}]}
+{"clause": [296], "records": [{"kind": "triple", "triple": [0, 9, 10], "var": 296, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 1], "weight": 1}]}
+{"clause": [445], "records": [{"kind": "triple", "triple": [0, 12, 15], "var": 445, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 2], "weight": 4, "sign": 1}]}
+{"clause": [490], "records": [{"kind": "triple", "triple": [0, 13, 14], "var": 490, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 2], "weight": 2, "sign": 1}]}
+{"clause": [491], "records": [{"kind": "triple", "triple": [0, 13, 15], "var": 491, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 2], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [0, 2], "weight": 1}]}
+{"clause": [492], "records": [{"kind": "triple", "triple": [0, 13, 16], "var": 492, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 2], "weight": 2}]}
+{"clause": [536], "records": [{"kind": "triple", "triple": [0, 14, 15], "var": 536, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 2], "weight": 1}]}
+{"clause": [537], "records": [{"kind": "triple", "triple": [0, 14, 16], "var": 537, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 2], "weight": 1}, {"kind": "phase_minus", "pair": [0, 2], "weight": 1}]}
+{"clause": [538], "records": [{"kind": "triple", "triple": [0, 14, 17], "var": 538, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 2], "weight": 2}]}
+{"clause": [581], "records": [{"kind": "triple", "triple": [0, 15, 16], "var": 581, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 2], "weight": 1}]}
+{"clause": [712], "records": [{"kind": "triple", "triple": [0, 18, 21], "var": 712, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 3], "weight": 4, "sign": 1}]}
+{"clause": [751], "records": [{"kind": "triple", "triple": [0, 19, 20], "var": 751, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 3], "weight": 2, "sign": 1}]}
+{"clause": [752], "records": [{"kind": "triple", "triple": [0, 19, 21], "var": 752, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 3], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [0, 3], "weight": 1}]}
+{"clause": [753], "records": [{"kind": "triple", "triple": [0, 19, 22], "var": 753, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 3], "weight": 2}]}
+{"clause": [791], "records": [{"kind": "triple", "triple": [0, 20, 21], "var": 791, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 3], "weight": 1}]}
+{"clause": [792], "records": [{"kind": "triple", "triple": [0, 20, 22], "var": 792, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 3], "weight": 1}, {"kind": "phase_minus", "pair": [0, 3], "weight": 1}]}
+{"clause": [793], "records": [{"kind": "triple", "triple": [0, 20, 23], "var": 793, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 3], "weight": 2}]}
+{"clause": [830], "records": [{"kind": "triple", "triple": [0, 21, 22], "var": 830, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 3], "weight": 1}]}
+{"clause": [943], "records": [{"kind": "triple", "triple": [0, 24, 27], "var": 943, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 4], "weight": 4, "sign": 1}]}
+{"clause": [976], "records": [{"kind": "triple", "triple": [0, 25, 26], "var": 976, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 4], "weight": 2, "sign": 1}]}
+{"clause": [977], "records": [{"kind": "triple", "triple": [0, 25, 27], "var": 977, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 4], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [0, 4], "weight": 1}]}
+{"clause": [978], "records": [{"kind": "triple", "triple": [0, 25, 28], "var": 978, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 4], "weight": 2}]}
+{"clause": [1010], "records": [{"kind": "triple", "triple": [0, 26, 27], "var": 1010, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 4], "weight": 1}]}
+{"clause": [1011], "records": [{"kind": "triple", "triple": [0, 26, 28], "var": 1011, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 4], "weight": 1}, {"kind": "phase_minus", "pair": [0, 4], "weight": 1}]}
+{"clause": [1012], "records": [{"kind": "triple", "triple": [0, 26, 29], "var": 1012, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 4], "weight": 2}]}
+{"clause": [1043], "records": [{"kind": "triple", "triple": [0, 27, 28], "var": 1043, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 4], "weight": 1}]}
+{"clause": [1138], "records": [{"kind": "triple", "triple": [0, 30, 33], "var": 1138, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 5], "weight": 4, "sign": 1}]}
+{"clause": [1165], "records": [{"kind": "triple", "triple": [0, 31, 32], "var": 1165, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 5], "weight": 2, "sign": 1}]}
+{"clause": [1166], "records": [{"kind": "triple", "triple": [0, 31, 33], "var": 1166, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 5], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [0, 5], "weight": 1}]}
+{"clause": [1167], "records": [{"kind": "triple", "triple": [0, 31, 34], "var": 1167, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 5], "weight": 2}]}
+{"clause": [1193], "records": [{"kind": "triple", "triple": [0, 32, 33], "var": 1193, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 5], "weight": 1}]}
+{"clause": [1194], "records": [{"kind": "triple", "triple": [0, 32, 34], "var": 1194, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 5], "weight": 1}, {"kind": "phase_minus", "pair": [0, 5], "weight": 1}]}
+{"clause": [1195], "records": [{"kind": "triple", "triple": [0, 32, 35], "var": 1195, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 5], "weight": 2}]}
+{"clause": [1220], "records": [{"kind": "triple", "triple": [0, 33, 34], "var": 1220, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 5], "weight": 1}]}
+{"clause": [1297], "records": [{"kind": "triple", "triple": [0, 36, 39], "var": 1297, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 6], "weight": 4, "sign": 1}]}
+{"clause": [1318], "records": [{"kind": "triple", "triple": [0, 37, 38], "var": 1318, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 6], "weight": 2, "sign": 1}]}
+{"clause": [1319], "records": [{"kind": "triple", "triple": [0, 37, 39], "var": 1319, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 6], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [0, 6], "weight": 1}]}
+{"clause": [1320], "records": [{"kind": "triple", "triple": [0, 37, 40], "var": 1320, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 6], "weight": 2}]}
+{"clause": [1340], "records": [{"kind": "triple", "triple": [0, 38, 39], "var": 1340, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 6], "weight": 1}]}
+{"clause": [1341], "records": [{"kind": "triple", "triple": [0, 38, 40], "var": 1341, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 6], "weight": 1}, {"kind": "phase_minus", "pair": [0, 6], "weight": 1}]}
+{"clause": [1342], "records": [{"kind": "triple", "triple": [0, 38, 41], "var": 1342, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 6], "weight": 2}]}
+{"clause": [1361], "records": [{"kind": "triple", "triple": [0, 39, 40], "var": 1361, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 6], "weight": 1}]}
+{"clause": [1420], "records": [{"kind": "triple", "triple": [0, 42, 45], "var": 1420, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 7], "weight": 4, "sign": 1}]}
+{"clause": [1435], "records": [{"kind": "triple", "triple": [0, 43, 44], "var": 1435, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 7], "weight": 2, "sign": 1}]}
+{"clause": [1436], "records": [{"kind": "triple", "triple": [0, 43, 45], "var": 1436, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 7], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [0, 7], "weight": 1}]}
+{"clause": [1437], "records": [{"kind": "triple", "triple": [0, 43, 46], "var": 1437, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 7], "weight": 2}]}
+{"clause": [1451], "records": [{"kind": "triple", "triple": [0, 44, 45], "var": 1451, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 7], "weight": 1}]}
+{"clause": [1452], "records": [{"kind": "triple", "triple": [0, 44, 46], "var": 1452, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 7], "weight": 1}, {"kind": "phase_minus", "pair": [0, 7], "weight": 1}]}
+{"clause": [1453], "records": [{"kind": "triple", "triple": [0, 44, 47], "var": 1453, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 7], "weight": 2}]}
+{"clause": [1466], "records": [{"kind": "triple", "triple": [0, 45, 46], "var": 1466, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 7], "weight": 1}]}
+{"clause": [1507], "records": [{"kind": "triple", "triple": [0, 48, 51], "var": 1507, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 8], "weight": 4, "sign": 1}]}
+{"clause": [1516], "records": [{"kind": "triple", "triple": [0, 49, 50], "var": 1516, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 8], "weight": 2, "sign": 1}]}
+{"clause": [1517], "records": [{"kind": "triple", "triple": [0, 49, 51], "var": 1517, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 8], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [0, 8], "weight": 1}]}
+{"clause": [1518], "records": [{"kind": "triple", "triple": [0, 49, 52], "var": 1518, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 8], "weight": 2}]}
+{"clause": [1526], "records": [{"kind": "triple", "triple": [0, 50, 51], "var": 1526, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 8], "weight": 1}]}
+{"clause": [1527], "records": [{"kind": "triple", "triple": [0, 50, 52], "var": 1527, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 8], "weight": 1}, {"kind": "phase_minus", "pair": [0, 8], "weight": 1}]}
+{"clause": [1528], "records": [{"kind": "triple", "triple": [0, 50, 53], "var": 1528, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 8], "weight": 2}]}
+{"clause": [1535], "records": [{"kind": "triple", "triple": [0, 51, 52], "var": 1535, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 8], "weight": 1}]}
+{"clause": [1558], "records": [{"kind": "triple", "triple": [0, 54, 57], "var": 1558, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 9], "weight": 4, "sign": 1}]}
+{"clause": [1561], "records": [{"kind": "triple", "triple": [0, 55, 56], "var": 1561, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 9], "weight": 2, "sign": 1}]}
+{"clause": [1562], "records": [{"kind": "triple", "triple": [0, 55, 57], "var": 1562, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [0, 9], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [0, 9], "weight": 1}]}
+{"clause": [1563], "records": [{"kind": "triple", "triple": [0, 55, 58], "var": 1563, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 9], "weight": 2}]}
+{"clause": [1565], "records": [{"kind": "triple", "triple": [0, 56, 57], "var": 1565, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 9], "weight": 1}]}
+{"clause": [1566], "records": [{"kind": "triple", "triple": [0, 56, 58], "var": 1566, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [0, 9], "weight": 1}, {"kind": "phase_minus", "pair": [0, 9], "weight": 1}]}
+{"clause": [1567], "records": [{"kind": "triple", "triple": [0, 56, 59], "var": 1567, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 9], "weight": 2}]}
+{"clause": [1568], "records": [{"kind": "triple", "triple": [0, 57, 58], "var": 1568, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [0, 9], "weight": 1}]}
+{"clause": [1571], "records": [{"kind": "triple", "triple": [6, 7, 8], "var": 1571, "sign": -1, "weight": 1}]}
+{"clause": [1572], "records": [{"kind": "triple", "triple": [6, 7, 9], "var": 1572, "sign": -1, "weight": 1}]}
+{"clause": [1573], "records": [{"kind": "triple", "triple": [6, 7, 10], "var": 1573, "sign": -1, "weight": 1}]}
+{"clause": [1576, -5711], "records": [{"kind": "triple", "triple": [6, 7, 14], "var": 1576, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 2], "weight": 2, "sign": 1}]}
+{"clause": [1577], "records": [{"kind": "triple", "triple": [6, 7, 15], "var": 1577, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 2], "weight": 1}]}
+{"clause": [1578], "records": [{"kind": "triple", "triple": [6, 7, 16], "var": 1578, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 2], "weight": 1}]}
+{"clause": [1579, 5711], "records": [{"kind": "triple", "triple": [6, 7, 17], "var": 1579, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 2], "weight": 2, "sign": -1}]}
+{"clause": [1582, -5712], "records": [{"kind": "triple", "triple": [6, 7, 20], "var": 1582, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 3], "weight": 2, "sign": 1}]}
+{"clause": [1583], "records": [{"kind": "triple", "triple": [6, 7, 21], "var": 1583, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 3], "weight": 1}]}
+{"clause": [1584], "records": [{"kind": "triple", "triple": [6, 7, 22], "var": 1584, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 3], "weight": 1}]}
+{"clause": [1585, 5712], "records": [{"kind": "triple", "triple": [6, 7, 23], "var": 1585, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 3], "weight": 2, "sign": -1}]}
+{"clause": [1588, -5713], "records": [{"kind": "triple", "triple": [6, 7, 26], "var": 1588, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 4], "weight": 2, "sign": 1}]}
+{"clause": [1589], "records": [{"kind": "triple", "triple": [6, 7, 27], "var": 1589, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 4], "weight": 1}]}
+{"clause": [1590], "records": [{"kind": "triple", "triple": [6, 7, 28], "var": 1590, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 4], "weight": 1}]}
+{"clause": [1591, 5713], "records": [{"kind": "triple", "triple": [6, 7, 29], "var": 1591, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 4], "weight": 2, "sign": -1}]}
+{"clause": [1594, -5714], "records": [{"kind": "triple", "triple": [6, 7, 32], "var": 1594, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 5], "weight": 2, "sign": 1}]}
+{"clause": [1595], "records": [{"kind": "triple", "triple": [6, 7, 33], "var": 1595, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 5], "weight": 1}]}
+{"clause": [1596], "records": [{"kind": "triple", "triple": [6, 7, 34], "var": 1596, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 5], "weight": 1}]}
+{"clause": [1597, 5714], "records": [{"kind": "triple", "triple": [6, 7, 35], "var": 1597, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 5], "weight": 2, "sign": -1}]}
+{"clause": [1600, -5715], "records": [{"kind": "triple", "triple": [6, 7, 38], "var": 1600, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 6], "weight": 2, "sign": 1}]}
+{"clause": [1601], "records": [{"kind": "triple", "triple": [6, 7, 39], "var": 1601, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 6], "weight": 1}]}
+{"clause": [1602], "records": [{"kind": "triple", "triple": [6, 7, 40], "var": 1602, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 6], "weight": 1}]}
+{"clause": [1603, 5715], "records": [{"kind": "triple", "triple": [6, 7, 41], "var": 1603, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 6], "weight": 2, "sign": -1}]}
+{"clause": [1606, -5716], "records": [{"kind": "triple", "triple": [6, 7, 44], "var": 1606, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 7], "weight": 2, "sign": 1}]}
+{"clause": [1607], "records": [{"kind": "triple", "triple": [6, 7, 45], "var": 1607, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 7], "weight": 1}]}
+{"clause": [1608], "records": [{"kind": "triple", "triple": [6, 7, 46], "var": 1608, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 7], "weight": 1}]}
+{"clause": [1609, 5716], "records": [{"kind": "triple", "triple": [6, 7, 47], "var": 1609, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 7], "weight": 2, "sign": -1}]}
+{"clause": [1612, -5717], "records": [{"kind": "triple", "triple": [6, 7, 50], "var": 1612, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 8], "weight": 2, "sign": 1}]}
+{"clause": [1613], "records": [{"kind": "triple", "triple": [6, 7, 51], "var": 1613, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 8], "weight": 1}]}
+{"clause": [1614], "records": [{"kind": "triple", "triple": [6, 7, 52], "var": 1614, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 8], "weight": 1}]}
+{"clause": [1615, 5717], "records": [{"kind": "triple", "triple": [6, 7, 53], "var": 1615, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 8], "weight": 2, "sign": -1}]}
+{"clause": [1618, -5718], "records": [{"kind": "triple", "triple": [6, 7, 56], "var": 1618, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 9], "weight": 2, "sign": 1}]}
+{"clause": [1619], "records": [{"kind": "triple", "triple": [6, 7, 57], "var": 1619, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 9], "weight": 1}]}
+{"clause": [1620], "records": [{"kind": "triple", "triple": [6, 7, 58], "var": 1620, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 9], "weight": 1}]}
+{"clause": [1621, 5718], "records": [{"kind": "triple", "triple": [6, 7, 59], "var": 1621, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 9], "weight": 2, "sign": -1}]}
+{"clause": [1622], "records": [{"kind": "triple", "triple": [6, 8, 10], "var": 1622, "sign": -1, "weight": 1}]}
+{"clause": [1626, -5711], "records": [{"kind": "triple", "triple": [6, 8, 15], "var": 1626, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 2], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [1, 2], "weight": 1}]}
+{"clause": [1627], "records": [{"kind": "triple", "triple": [6, 8, 16], "var": 1627, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 2], "weight": 1}, {"kind": "phase_minus", "pair": [1, 2], "weight": 1}]}
+{"clause": [1628, 5711], "records": [{"kind": "triple", "triple": [6, 8, 17], "var": 1628, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 2], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [1, 2], "weight": 1}]}
+{"clause": [1632, -5712], "records": [{"kind": "triple", "triple": [6, 8, 21], "var": 1632, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 3], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [1, 3], "weight": 1}]}
+{"clause": [1633], "records": [{"kind": "triple", "triple": [6, 8, 22], "var": 1633, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 3], "weight": 1}, {"kind": "phase_minus", "pair": [1, 3], "weight": 1}]}
+{"clause": [1634, 5712], "records": [{"kind": "triple", "triple": [6, 8, 23], "var": 1634, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 3], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [1, 3], "weight": 1}]}
+{"clause": [1638, -5713], "records": [{"kind": "triple", "triple": [6, 8, 27], "var": 1638, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 4], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [1, 4], "weight": 1}]}
+{"clause": [1639], "records": [{"kind": "triple", "triple": [6, 8, 28], "var": 1639, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 4], "weight": 1}, {"kind": "phase_minus", "pair": [1, 4], "weight": 1}]}
+{"clause": [1640, 5713], "records": [{"kind": "triple", "triple": [6, 8, 29], "var": 1640, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 4], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [1, 4], "weight": 1}]}
+{"clause": [1644, -5714], "records": [{"kind": "triple", "triple": [6, 8, 33], "var": 1644, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 5], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [1, 5], "weight": 1}]}
+{"clause": [1645], "records": [{"kind": "triple", "triple": [6, 8, 34], "var": 1645, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 5], "weight": 1}, {"kind": "phase_minus", "pair": [1, 5], "weight": 1}]}
+{"clause": [1646, 5714], "records": [{"kind": "triple", "triple": [6, 8, 35], "var": 1646, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 5], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [1, 5], "weight": 1}]}
+{"clause": [1650, -5715], "records": [{"kind": "triple", "triple": [6, 8, 39], "var": 1650, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 6], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [1, 6], "weight": 1}]}
+{"clause": [1651], "records": [{"kind": "triple", "triple": [6, 8, 40], "var": 1651, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 6], "weight": 1}, {"kind": "phase_minus", "pair": [1, 6], "weight": 1}]}
+{"clause": [1652, 5715], "records": [{"kind": "triple", "triple": [6, 8, 41], "var": 1652, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 6], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [1, 6], "weight": 1}]}
+{"clause": [1656, -5716], "records": [{"kind": "triple", "triple": [6, 8, 45], "var": 1656, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 7], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [1, 7], "weight": 1}]}
+{"clause": [1657], "records": [{"kind": "triple", "triple": [6, 8, 46], "var": 1657, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 7], "weight": 1}, {"kind": "phase_minus", "pair": [1, 7], "weight": 1}]}
+{"clause": [1658, 5716], "records": [{"kind": "triple", "triple": [6, 8, 47], "var": 1658, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 7], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [1, 7], "weight": 1}]}
+{"clause": [1662, -5717], "records": [{"kind": "triple", "triple": [6, 8, 51], "var": 1662, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 8], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [1, 8], "weight": 1}]}
+{"clause": [1663], "records": [{"kind": "triple", "triple": [6, 8, 52], "var": 1663, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 8], "weight": 1}, {"kind": "phase_minus", "pair": [1, 8], "weight": 1}]}
+{"clause": [1664, 5717], "records": [{"kind": "triple", "triple": [6, 8, 53], "var": 1664, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 8], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [1, 8], "weight": 1}]}
+{"clause": [1668, -5718], "records": [{"kind": "triple", "triple": [6, 8, 57], "var": 1668, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 9], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [1, 9], "weight": 1}]}
+{"clause": [1669], "records": [{"kind": "triple", "triple": [6, 8, 58], "var": 1669, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 9], "weight": 1}, {"kind": "phase_minus", "pair": [1, 9], "weight": 1}]}
+{"clause": [1670, 5718], "records": [{"kind": "triple", "triple": [6, 8, 59], "var": 1670, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 9], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [1, 9], "weight": 1}]}
+{"clause": [1671, 5711], "records": [{"kind": "triple", "triple": [6, 9, 12], "var": 1671, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 2], "weight": 4, "sign": -1}]}
+{"clause": [-1671, -5711], "records": [{"kind": "triple", "triple": [6, 9, 12], "var": 1671, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 2], "weight": 4, "sign": 1}]}
+{"clause": [-1672], "records": [{"kind": "triple", "triple": [6, 9, 13], "var": 1672, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 2], "weight": 2}]}
+{"clause": [-1673], "records": [{"kind": "triple", "triple": [6, 9, 14], "var": 1673, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 2], "weight": 2}]}
+{"clause": [-1674, -5712], "records": [{"kind": "triple", "triple": [6, 9, 18], "var": 1674, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 3], "weight": 4, "sign": 1}]}
+{"clause": [1674, 5712], "records": [{"kind": "triple", "triple": [6, 9, 18], "var": 1674, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 3], "weight": 4, "sign": -1}]}
+{"clause": [-1675], "records": [{"kind": "triple", "triple": [6, 9, 19], "var": 1675, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 3], "weight": 2}]}
+{"clause": [-1676], "records": [{"kind": "triple", "triple": [6, 9, 20], "var": 1676, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 3], "weight": 2}]}
+{"clause": [1677, 5713], "records": [{"kind": "triple", "triple": [6, 9, 24], "var": 1677, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 4], "weight": 4, "sign": -1}]}
+{"clause": [-1677, -5713], "records": [{"kind": "triple", "triple": [6, 9, 24], "var": 1677, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 4], "weight": 4, "sign": 1}]}
+{"clause": [-1678], "records": [{"kind": "triple", "triple": [6, 9, 25], "var": 1678, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 4], "weight": 2}]}
+{"clause": [-1679], "records": [{"kind": "triple", "triple": [6, 9, 26], "var": 1679, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 4], "weight": 2}]}
+{"clause": [1680, 5714], "records": [{"kind": "triple", "triple": [6, 9, 30], "var": 1680, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 5], "weight": 4, "sign": -1}]}
+{"clause": [-1680, -5714], "records": [{"kind": "triple", "triple": [6, 9, 30], "var": 1680, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 5], "weight": 4, "sign": 1}]}
+{"clause": [-1681], "records": [{"kind": "triple", "triple": [6, 9, 31], "var": 1681, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 5], "weight": 2}]}
+{"clause": [-1682], "records": [{"kind": "triple", "triple": [6, 9, 32], "var": 1682, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 5], "weight": 2}]}
+{"clause": [1683, 5715], "records": [{"kind": "triple", "triple": [6, 9, 36], "var": 1683, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 6], "weight": 4, "sign": -1}]}
+{"clause": [-1683, -5715], "records": [{"kind": "triple", "triple": [6, 9, 36], "var": 1683, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 6], "weight": 4, "sign": 1}]}
+{"clause": [-1684], "records": [{"kind": "triple", "triple": [6, 9, 37], "var": 1684, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 6], "weight": 2}]}
+{"clause": [-1685], "records": [{"kind": "triple", "triple": [6, 9, 38], "var": 1685, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 6], "weight": 2}]}
+{"clause": [-1686, -5716], "records": [{"kind": "triple", "triple": [6, 9, 42], "var": 1686, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 7], "weight": 4, "sign": 1}]}
+{"clause": [1686, 5716], "records": [{"kind": "triple", "triple": [6, 9, 42], "var": 1686, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 7], "weight": 4, "sign": -1}]}
+{"clause": [-1687], "records": [{"kind": "triple", "triple": [6, 9, 43], "var": 1687, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 7], "weight": 2}]}
+{"clause": [-1688], "records": [{"kind": "triple", "triple": [6, 9, 44], "var": 1688, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 7], "weight": 2}]}
+{"clause": [1689, 5717], "records": [{"kind": "triple", "triple": [6, 9, 48], "var": 1689, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 8], "weight": 4, "sign": -1}]}
+{"clause": [-1689, -5717], "records": [{"kind": "triple", "triple": [6, 9, 48], "var": 1689, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 8], "weight": 4, "sign": 1}]}
+{"clause": [-1690], "records": [{"kind": "triple", "triple": [6, 9, 49], "var": 1690, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 8], "weight": 2}]}
+{"clause": [-1691], "records": [{"kind": "triple", "triple": [6, 9, 50], "var": 1691, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 8], "weight": 2}]}
+{"clause": [1692, 5718], "records": [{"kind": "triple", "triple": [6, 9, 54], "var": 1692, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 9], "weight": 4, "sign": -1}]}
+{"clause": [-1692, -5718], "records": [{"kind": "triple", "triple": [6, 9, 54], "var": 1692, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 9], "weight": 4, "sign": 1}]}
+{"clause": [-1693], "records": [{"kind": "triple", "triple": [6, 9, 55], "var": 1693, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 9], "weight": 2}]}
+{"clause": [-1694], "records": [{"kind": "triple", "triple": [6, 9, 56], "var": 1694, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 9], "weight": 2}]}
+{"clause": [-1697, 5711], "records": [{"kind": "triple", "triple": [6, 12, 15], "var": 1697, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 2], "weight": 4, "sign": -1}]}
+{"clause": [1697, -5711], "records": [{"kind": "triple", "triple": [6, 12, 15], "var": 1697, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 2], "weight": 4, "sign": 1}]}
+{"clause": [1742, -5711], "records": [{"kind": "triple", "triple": [6, 13, 14], "var": 1742, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 2], "weight": 2, "sign": 1}]}
+{"clause": [1743, -5711], "records": [{"kind": "triple", "triple": [6, 13, 15], "var": 1743, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 2], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [1, 2], "weight": 1}]}
+{"clause": [1744], "records": [{"kind": "triple", "triple": [6, 13, 16], "var": 1744, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 2], "weight": 2}]}
+{"clause": [1788], "records": [{"kind": "triple", "triple": [6, 14, 15], "var": 1788, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 2], "weight": 1}]}
+{"clause": [1789], "records": [{"kind": "triple", "triple": [6, 14, 16], "var": 1789, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 2], "weight": 1}, {"kind": "phase_minus", "pair": [1, 2], "weight": 1}]}
+{"clause": [1790], "records": [{"kind": "triple", "triple": [6, 14, 17], "var": 1790, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 2], "weight": 2}]}
+{"clause": [1833], "records": [{"kind": "triple", "triple": [6, 15, 16], "var": 1833, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 2], "weight": 1}]}
+{"clause": [1834, 5711], "records": [{"kind": "triple", "triple": [6, 15, 17], "var": 1834, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 2], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [1, 2], "weight": 1}]}
+{"clause": [1877, 5711], "records": [{"kind": "triple", "triple": [6, 16, 17], "var": 1877, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 2], "weight": 2, "sign": -1}]}
+{"clause": [-1964, 5712], "records": [{"kind": "triple", "triple": [6, 18, 21], "var": 1964, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 3], "weight": 4, "sign": -1}]}
+{"clause": [1964, -5712], "records": [{"kind": "triple", "triple": [6, 18, 21], "var": 1964, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 3], "weight": 4, "sign": 1}]}
+{"clause": [2003, -5712], "records": [{"kind": "triple", "triple": [6, 19, 20], "var": 2003, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 3], "weight": 2, "sign": 1}]}
+{"clause": [2004, -5712], "records": [{"kind": "triple", "triple": [6, 19, 21], "var": 2004, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 3], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [1, 3], "weight": 1}]}
+{"clause": [2005], "records": [{"kind": "triple", "triple": [6, 19, 22], "var": 2005, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 3], "weight": 2}]}
+{"clause": [2043], "records": [{"kind": "triple", "triple": [6, 20, 21], "var": 2043, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 3], "weight": 1}]}
+{"clause": [2044], "records": [{"kind": "triple", "triple": [6, 20, 22], "var": 2044, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 3], "weight": 1}, {"kind": "phase_minus", "pair": [1, 3], "weight": 1}]}
+{"clause": [2045], "records": [{"kind": "triple", "triple": [6, 20, 23], "var": 2045, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 3], "weight": 2}]}
+{"clause": [2082], "records": [{"kind": "triple", "triple": [6, 21, 22], "var": 2082, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 3], "weight": 1}]}
+{"clause": [2083, 5712], "records": [{"kind": "triple", "triple": [6, 21, 23], "var": 2083, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 3], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [1, 3], "weight": 1}]}
+{"clause": [2120, 5712], "records": [{"kind": "triple", "triple": [6, 22, 23], "var": 2120, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 3], "weight": 2, "sign": -1}]}
+{"clause": [-2195, 5713], "records": [{"kind": "triple", "triple": [6, 24, 27], "var": 2195, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 4], "weight": 4, "sign": -1}]}
+{"clause": [2195, -5713], "records": [{"kind": "triple", "triple": [6, 24, 27], "var": 2195, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 4], "weight": 4, "sign": 1}]}
+{"clause": [2228, -5713], "records": [{"kind": "triple", "triple": [6, 25, 26], "var": 2228, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 4], "weight": 2, "sign": 1}]}
+{"clause": [2229, -5713], "records": [{"kind": "triple", "triple": [6, 25, 27], "var": 2229, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 4], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [1, 4], "weight": 1}]}
+{"clause": [2230], "records": [{"kind": "triple", "triple": [6, 25, 28], "var": 2230, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 4], "weight": 2}]}
+{"clause": [2262], "records": [{"kind": "triple", "triple": [6, 26, 27], "var": 2262, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 4], "weight": 1}]}
+{"clause": [2263], "records": [{"kind": "triple", "triple": [6, 26, 28], "var": 2263, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 4], "weight": 1}, {"kind": "phase_minus", "pair": [1, 4], "weight": 1}]}
+{"clause": [2264], "records": [{"kind": "triple", "triple": [6, 26, 29], "var": 2264, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 4], "weight": 2}]}
+{"clause": [2295], "records": [{"kind": "triple", "triple": [6, 27, 28], "var": 2295, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 4], "weight": 1}]}
+{"clause": [2296, 5713], "records": [{"kind": "triple", "triple": [6, 27, 29], "var": 2296, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 4], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [1, 4], "weight": 1}]}
+{"clause": [2327, 5713], "records": [{"kind": "triple", "triple": [6, 28, 29], "var": 2327, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 4], "weight": 2, "sign": -1}]}
+{"clause": [2390, -5714], "records": [{"kind": "triple", "triple": [6, 30, 33], "var": 2390, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 5], "weight": 4, "sign": 1}]}
+{"clause": [-2390, 5714], "records": [{"kind": "triple", "triple": [6, 30, 33], "var": 2390, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 5], "weight": 4, "sign": -1}]}
+{"clause": [2417, -5714], "records": [{"kind": "triple", "triple": [6, 31, 32], "var": 2417, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 5], "weight": 2, "sign": 1}]}
+{"clause": [2418, -5714], "records": [{"kind": "triple", "triple": [6, 31, 33], "var": 2418, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 5], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [1, 5], "weight": 1}]}
+{"clause": [2419], "records": [{"kind": "triple", "triple": [6, 31, 34], "var": 2419, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 5], "weight": 2}]}
+{"clause": [2445], "records": [{"kind": "triple", "triple": [6, 32, 33], "var": 2445, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 5], "weight": 1}]}
+{"clause": [2446], "records": [{"kind": "triple", "triple": [6, 32, 34], "var": 2446, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 5], "weight": 1}, {"kind": "phase_minus", "pair": [1, 5], "weight": 1}]}
+{"clause": [2447], "records": [{"kind": "triple", "triple": [6, 32, 35], "var": 2447, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 5], "weight": 2}]}
+{"clause": [2472], "records": [{"kind": "triple", "triple": [6, 33, 34], "var": 2472, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 5], "weight": 1}]}
+{"clause": [2473, 5714], "records": [{"kind": "triple", "triple": [6, 33, 35], "var": 2473, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 5], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [1, 5], "weight": 1}]}
+{"clause": [2498, 5714], "records": [{"kind": "triple", "triple": [6, 34, 35], "var": 2498, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 5], "weight": 2, "sign": -1}]}
+{"clause": [-2549, 5715], "records": [{"kind": "triple", "triple": [6, 36, 39], "var": 2549, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 6], "weight": 4, "sign": -1}]}
+{"clause": [2549, -5715], "records": [{"kind": "triple", "triple": [6, 36, 39], "var": 2549, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 6], "weight": 4, "sign": 1}]}
+{"clause": [2570, -5715], "records": [{"kind": "triple", "triple": [6, 37, 38], "var": 2570, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 6], "weight": 2, "sign": 1}]}
+{"clause": [2571, -5715], "records": [{"kind": "triple", "triple": [6, 37, 39], "var": 2571, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 6], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [1, 6], "weight": 1}]}
+{"clause": [2572], "records": [{"kind": "triple", "triple": [6, 37, 40], "var": 2572, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 6], "weight": 2}]}
+{"clause": [2592], "records": [{"kind": "triple", "triple": [6, 38, 39], "var": 2592, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 6], "weight": 1}]}
+{"clause": [2593], "records": [{"kind": "triple", "triple": [6, 38, 40], "var": 2593, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 6], "weight": 1}, {"kind": "phase_minus", "pair": [1, 6], "weight": 1}]}
+{"clause": [2594], "records": [{"kind": "triple", "triple": [6, 38, 41], "var": 2594, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 6], "weight": 2}]}
+{"clause": [2613], "records": [{"kind": "triple", "triple": [6, 39, 40], "var": 2613, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 6], "weight": 1}]}
+{"clause": [2614, 5715], "records": [{"kind": "triple", "triple": [6, 39, 41], "var": 2614, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 6], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [1, 6], "weight": 1}]}
+{"clause": [2633, 5715], "records": [{"kind": "triple", "triple": [6, 40, 41], "var": 2633, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 6], "weight": 2, "sign": -1}]}
+{"clause": [2672, -5716], "records": [{"kind": "triple", "triple": [6, 42, 45], "var": 2672, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 7], "weight": 4, "sign": 1}]}
+{"clause": [-2672, 5716], "records": [{"kind": "triple", "triple": [6, 42, 45], "var": 2672, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 7], "weight": 4, "sign": -1}]}
+{"clause": [2687, -5716], "records": [{"kind": "triple", "triple": [6, 43, 44], "var": 2687, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 7], "weight": 2, "sign": 1}]}
+{"clause": [2688, -5716], "records": [{"kind": "triple", "triple": [6, 43, 45], "var": 2688, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 7], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [1, 7], "weight": 1}]}
+{"clause": [2689], "records": [{"kind": "triple", "triple": [6, 43, 46], "var": 2689, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 7], "weight": 2}]}
+{"clause": [2703], "records": [{"kind": "triple", "triple": [6, 44, 45], "var": 2703, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 7], "weight": 1}]}
+{"clause": [2704], "records": [{"kind": "triple", "triple": [6, 44, 46], "var": 2704, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 7], "weight": 1}, {"kind": "phase_minus", "pair": [1, 7], "weight": 1}]}
+{"clause": [2705], "records": [{"kind": "triple", "triple": [6, 44, 47], "var": 2705, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 7], "weight": 2}]}
+{"clause": [2718], "records": [{"kind": "triple", "triple": [6, 45, 46], "var": 2718, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 7], "weight": 1}]}
+{"clause": [2719, 5716], "records": [{"kind": "triple", "triple": [6, 45, 47], "var": 2719, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 7], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [1, 7], "weight": 1}]}
+{"clause": [2732, 5716], "records": [{"kind": "triple", "triple": [6, 46, 47], "var": 2732, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 7], "weight": 2, "sign": -1}]}
+{"clause": [2759, -5717], "records": [{"kind": "triple", "triple": [6, 48, 51], "var": 2759, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 8], "weight": 4, "sign": 1}]}
+{"clause": [-2759, 5717], "records": [{"kind": "triple", "triple": [6, 48, 51], "var": 2759, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 8], "weight": 4, "sign": -1}]}
+{"clause": [2768, -5717], "records": [{"kind": "triple", "triple": [6, 49, 50], "var": 2768, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 8], "weight": 2, "sign": 1}]}
+{"clause": [2769, -5717], "records": [{"kind": "triple", "triple": [6, 49, 51], "var": 2769, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 8], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [1, 8], "weight": 1}]}
+{"clause": [2770], "records": [{"kind": "triple", "triple": [6, 49, 52], "var": 2770, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 8], "weight": 2}]}
+{"clause": [2778], "records": [{"kind": "triple", "triple": [6, 50, 51], "var": 2778, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 8], "weight": 1}]}
+{"clause": [2779], "records": [{"kind": "triple", "triple": [6, 50, 52], "var": 2779, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 8], "weight": 1}, {"kind": "phase_minus", "pair": [1, 8], "weight": 1}]}
+{"clause": [2780], "records": [{"kind": "triple", "triple": [6, 50, 53], "var": 2780, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 8], "weight": 2}]}
+{"clause": [2787], "records": [{"kind": "triple", "triple": [6, 51, 52], "var": 2787, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 8], "weight": 1}]}
+{"clause": [2788, 5717], "records": [{"kind": "triple", "triple": [6, 51, 53], "var": 2788, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 8], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [1, 8], "weight": 1}]}
+{"clause": [2795, 5717], "records": [{"kind": "triple", "triple": [6, 52, 53], "var": 2795, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 8], "weight": 2, "sign": -1}]}
+{"clause": [2810, -5718], "records": [{"kind": "triple", "triple": [6, 54, 57], "var": 2810, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 9], "weight": 4, "sign": 1}]}
+{"clause": [-2810, 5718], "records": [{"kind": "triple", "triple": [6, 54, 57], "var": 2810, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 9], "weight": 4, "sign": -1}]}
+{"clause": [2813, -5718], "records": [{"kind": "triple", "triple": [6, 55, 56], "var": 2813, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 9], "weight": 2, "sign": 1}]}
+{"clause": [2814, -5718], "records": [{"kind": "triple", "triple": [6, 55, 57], "var": 2814, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 9], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [1, 9], "weight": 1}]}
+{"clause": [2815], "records": [{"kind": "triple", "triple": [6, 55, 58], "var": 2815, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 9], "weight": 2}]}
+{"clause": [2817], "records": [{"kind": "triple", "triple": [6, 56, 57], "var": 2817, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 9], "weight": 1}]}
+{"clause": [2818], "records": [{"kind": "triple", "triple": [6, 56, 58], "var": 2818, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [1, 9], "weight": 1}, {"kind": "phase_minus", "pair": [1, 9], "weight": 1}]}
+{"clause": [2819], "records": [{"kind": "triple", "triple": [6, 56, 59], "var": 2819, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 9], "weight": 2}]}
+{"clause": [2820], "records": [{"kind": "triple", "triple": [6, 57, 58], "var": 2820, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [1, 9], "weight": 1}]}
+{"clause": [2821, 5718], "records": [{"kind": "triple", "triple": [6, 57, 59], "var": 2821, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 9], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [1, 9], "weight": 1}]}
+{"clause": [2822, 5718], "records": [{"kind": "triple", "triple": [6, 58, 59], "var": 2822, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [1, 9], "weight": 2, "sign": -1}]}
+{"clause": [2823], "records": [{"kind": "triple", "triple": [12, 13, 14], "var": 2823, "sign": -1, "weight": 1}]}
+{"clause": [2824], "records": [{"kind": "triple", "triple": [12, 13, 15], "var": 2824, "sign": -1, "weight": 1}]}
+{"clause": [2825], "records": [{"kind": "triple", "triple": [12, 13, 16], "var": 2825, "sign": -1, "weight": 1}]}
+{"clause": [2828, -5719], "records": [{"kind": "triple", "triple": [12, 13, 20], "var": 2828, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 3], "weight": 2, "sign": 1}]}
+{"clause": [2829], "records": [{"kind": "triple", "triple": [12, 13, 21], "var": 2829, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 3], "weight": 1}]}
+{"clause": [2830], "records": [{"kind": "triple", "triple": [12, 13, 22], "var": 2830, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 3], "weight": 1}]}
+{"clause": [2831, 5719], "records": [{"kind": "triple", "triple": [12, 13, 23], "var": 2831, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 3], "weight": 2, "sign": -1}]}
+{"clause": [2834, -5720], "records": [{"kind": "triple", "triple": [12, 13, 26], "var": 2834, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 4], "weight": 2, "sign": 1}]}
+{"clause": [2835], "records": [{"kind": "triple", "triple": [12, 13, 27], "var": 2835, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 4], "weight": 1}]}
+{"clause": [2836], "records": [{"kind": "triple", "triple": [12, 13, 28], "var": 2836, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 4], "weight": 1}]}
+{"clause": [2837, 5720], "records": [{"kind": "triple", "triple": [12, 13, 29], "var": 2837, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 4], "weight": 2, "sign": -1}]}
+{"clause": [2840, -5721], "records": [{"kind": "triple", "triple": [12, 13, 32], "var": 2840, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 5], "weight": 2, "sign": 1}]}
+{"clause": [2841], "records": [{"kind": "triple", "triple": [12, 13, 33], "var": 2841, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 5], "weight": 1}]}
+{"clause": [2842], "records": [{"kind": "triple", "triple": [12, 13, 34], "var": 2842, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 5], "weight": 1}]}
+{"clause": [2843, 5721], "records": [{"kind": "triple", "triple": [12, 13, 35], "var": 2843, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 5], "weight": 2, "sign": -1}]}
+{"clause": [2846, -5722], "records": [{"kind": "triple", "triple": [12, 13, 38], "var": 2846, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 6], "weight": 2, "sign": 1}]}
+{"clause": [2847], "records": [{"kind": "triple", "triple": [12, 13, 39], "var": 2847, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 6], "weight": 1}]}
+{"clause": [2848], "records": [{"kind": "triple", "triple": [12, 13, 40], "var": 2848, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 6], "weight": 1}]}
+{"clause": [2849, 5722], "records": [{"kind": "triple", "triple": [12, 13, 41], "var": 2849, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 6], "weight": 2, "sign": -1}]}
+{"clause": [2852, -5723], "records": [{"kind": "triple", "triple": [12, 13, 44], "var": 2852, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 7], "weight": 2, "sign": 1}]}
+{"clause": [2853], "records": [{"kind": "triple", "triple": [12, 13, 45], "var": 2853, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 7], "weight": 1}]}
+{"clause": [2854], "records": [{"kind": "triple", "triple": [12, 13, 46], "var": 2854, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 7], "weight": 1}]}
+{"clause": [2855, 5723], "records": [{"kind": "triple", "triple": [12, 13, 47], "var": 2855, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 7], "weight": 2, "sign": -1}]}
+{"clause": [2858, -5724], "records": [{"kind": "triple", "triple": [12, 13, 50], "var": 2858, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 8], "weight": 2, "sign": 1}]}
+{"clause": [2859], "records": [{"kind": "triple", "triple": [12, 13, 51], "var": 2859, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 8], "weight": 1}]}
+{"clause": [2860], "records": [{"kind": "triple", "triple": [12, 13, 52], "var": 2860, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 8], "weight": 1}]}
+{"clause": [2861, 5724], "records": [{"kind": "triple", "triple": [12, 13, 53], "var": 2861, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 8], "weight": 2, "sign": -1}]}
+{"clause": [2864, -5725], "records": [{"kind": "triple", "triple": [12, 13, 56], "var": 2864, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 9], "weight": 2, "sign": 1}]}
+{"clause": [2865], "records": [{"kind": "triple", "triple": [12, 13, 57], "var": 2865, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 9], "weight": 1}]}
+{"clause": [2866], "records": [{"kind": "triple", "triple": [12, 13, 58], "var": 2866, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 9], "weight": 1}]}
+{"clause": [2867, 5725], "records": [{"kind": "triple", "triple": [12, 13, 59], "var": 2867, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 9], "weight": 2, "sign": -1}]}
+{"clause": [2868], "records": [{"kind": "triple", "triple": [12, 14, 16], "var": 2868, "sign": -1, "weight": 1}]}
+{"clause": [2872, -5719], "records": [{"kind": "triple", "triple": [12, 14, 21], "var": 2872, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 3], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [2, 3], "weight": 1}]}
+{"clause": [2873], "records": [{"kind": "triple", "triple": [12, 14, 22], "var": 2873, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 3], "weight": 1}, {"kind": "phase_minus", "pair": [2, 3], "weight": 1}]}
+{"clause": [2874, 5719], "records": [{"kind": "triple", "triple": [12, 14, 23], "var": 2874, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 3], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [2, 3], "weight": 1}]}
+{"clause": [2878, -5720], "records": [{"kind": "triple", "triple": [12, 14, 27], "var": 2878, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 4], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [2, 4], "weight": 1}]}
+{"clause": [2879], "records": [{"kind": "triple", "triple": [12, 14, 28], "var": 2879, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 4], "weight": 1}, {"kind": "phase_minus", "pair": [2, 4], "weight": 1}]}
+{"clause": [2880, 5720], "records": [{"kind": "triple", "triple": [12, 14, 29], "var": 2880, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 4], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [2, 4], "weight": 1}]}
+{"clause": [2884, -5721], "records": [{"kind": "triple", "triple": [12, 14, 33], "var": 2884, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 5], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [2, 5], "weight": 1}]}
+{"clause": [2885], "records": [{"kind": "triple", "triple": [12, 14, 34], "var": 2885, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 5], "weight": 1}, {"kind": "phase_minus", "pair": [2, 5], "weight": 1}]}
+{"clause": [2886, 5721], "records": [{"kind": "triple", "triple": [12, 14, 35], "var": 2886, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 5], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [2, 5], "weight": 1}]}
+{"clause": [2890, -5722], "records": [{"kind": "triple", "triple": [12, 14, 39], "var": 2890, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 6], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [2, 6], "weight": 1}]}
+{"clause": [2891], "records": [{"kind": "triple", "triple": [12, 14, 40], "var": 2891, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 6], "weight": 1}, {"kind": "phase_minus", "pair": [2, 6], "weight": 1}]}
+{"clause": [2892, 5722], "records": [{"kind": "triple", "triple": [12, 14, 41], "var": 2892, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 6], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [2, 6], "weight": 1}]}
+{"clause": [2896, -5723], "records": [{"kind": "triple", "triple": [12, 14, 45], "var": 2896, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 7], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [2, 7], "weight": 1}]}
+{"clause": [2897], "records": [{"kind": "triple", "triple": [12, 14, 46], "var": 2897, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 7], "weight": 1}, {"kind": "phase_minus", "pair": [2, 7], "weight": 1}]}
+{"clause": [2898, 5723], "records": [{"kind": "triple", "triple": [12, 14, 47], "var": 2898, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 7], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [2, 7], "weight": 1}]}
+{"clause": [2902, -5724], "records": [{"kind": "triple", "triple": [12, 14, 51], "var": 2902, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 8], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [2, 8], "weight": 1}]}
+{"clause": [2903], "records": [{"kind": "triple", "triple": [12, 14, 52], "var": 2903, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 8], "weight": 1}, {"kind": "phase_minus", "pair": [2, 8], "weight": 1}]}
+{"clause": [2904, 5724], "records": [{"kind": "triple", "triple": [12, 14, 53], "var": 2904, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 8], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [2, 8], "weight": 1}]}
+{"clause": [2908, -5725], "records": [{"kind": "triple", "triple": [12, 14, 57], "var": 2908, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 9], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [2, 9], "weight": 1}]}
+{"clause": [2909], "records": [{"kind": "triple", "triple": [12, 14, 58], "var": 2909, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 9], "weight": 1}, {"kind": "phase_minus", "pair": [2, 9], "weight": 1}]}
+{"clause": [2910, 5725], "records": [{"kind": "triple", "triple": [12, 14, 59], "var": 2910, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 9], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [2, 9], "weight": 1}]}
+{"clause": [2911, 5719], "records": [{"kind": "triple", "triple": [12, 15, 18], "var": 2911, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 3], "weight": 4, "sign": -1}]}
+{"clause": [-2911, -5719], "records": [{"kind": "triple", "triple": [12, 15, 18], "var": 2911, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 3], "weight": 4, "sign": 1}]}
+{"clause": [-2912], "records": [{"kind": "triple", "triple": [12, 15, 19], "var": 2912, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 3], "weight": 2}]}
+{"clause": [-2913], "records": [{"kind": "triple", "triple": [12, 15, 20], "var": 2913, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 3], "weight": 2}]}
+{"clause": [2914, 5720], "records": [{"kind": "triple", "triple": [12, 15, 24], "var": 2914, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 4], "weight": 4, "sign": -1}]}
+{"clause": [-2914, -5720], "records": [{"kind": "triple", "triple": [12, 15, 24], "var": 2914, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 4], "weight": 4, "sign": 1}]}
+{"clause": [-2915], "records": [{"kind": "triple", "triple": [12, 15, 25], "var": 2915, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 4], "weight": 2}]}
+{"clause": [-2916], "records": [{"kind": "triple", "triple": [12, 15, 26], "var": 2916, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 4], "weight": 2}]}
+{"clause": [2917, 5721], "records": [{"kind": "triple", "triple": [12, 15, 30], "var": 2917, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 5], "weight": 4, "sign": -1}]}
+{"clause": [-2917, -5721], "records": [{"kind": "triple", "triple": [12, 15, 30], "var": 2917, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 5], "weight": 4, "sign": 1}]}
+{"clause": [-2918], "records": [{"kind": "triple", "triple": [12, 15, 31], "var": 2918, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 5], "weight": 2}]}
+{"clause": [-2919], "records": [{"kind": "triple", "triple": [12, 15, 32], "var": 2919, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 5], "weight": 2}]}
+{"clause": [-2920, -5722], "records": [{"kind": "triple", "triple": [12, 15, 36], "var": 2920, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 6], "weight": 4, "sign": 1}]}
+{"clause": [2920, 5722], "records": [{"kind": "triple", "triple": [12, 15, 36], "var": 2920, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 6], "weight": 4, "sign": -1}]}
+{"clause": [-2921], "records": [{"kind": "triple", "triple": [12, 15, 37], "var": 2921, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 6], "weight": 2}]}
+{"clause": [-2922], "records": [{"kind": "triple", "triple": [12, 15, 38], "var": 2922, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 6], "weight": 2}]}
+{"clause": [-2923, -5723], "records": [{"kind": "triple", "triple": [12, 15, 42], "var": 2923, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 7], "weight": 4, "sign": 1}]}
+{"clause": [2923, 5723], "records": [{"kind": "triple", "triple": [12, 15, 42], "var": 2923, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 7], "weight": 4, "sign": -1}]}
+{"clause": [-2924], "records": [{"kind": "triple", "triple": [12, 15, 43], "var": 2924, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 7], "weight": 2}]}
+{"clause": [-2925], "records": [{"kind": "triple", "triple": [12, 15, 44], "var": 2925, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 7], "weight": 2}]}
+{"clause": [-2926, -5724], "records": [{"kind": "triple", "triple": [12, 15, 48], "var": 2926, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 8], "weight": 4, "sign": 1}]}
+{"clause": [2926, 5724], "records": [{"kind": "triple", "triple": [12, 15, 48], "var": 2926, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 8], "weight": 4, "sign": -1}]}
+{"clause": [-2927], "records": [{"kind": "triple", "triple": [12, 15, 49], "var": 2927, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 8], "weight": 2}]}
+{"clause": [-2928], "records": [{"kind": "triple", "triple": [12, 15, 50], "var": 2928, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 8], "weight": 2}]}
+{"clause": [-2929, -5725], "records": [{"kind": "triple", "triple": [12, 15, 54], "var": 2929, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 9], "weight": 4, "sign": 1}]}
+{"clause": [2929, 5725], "records": [{"kind": "triple", "triple": [12, 15, 54], "var": 2929, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 9], "weight": 4, "sign": -1}]}
+{"clause": [-2930], "records": [{"kind": "triple", "triple": [12, 15, 55], "var": 2930, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 9], "weight": 2}]}
+{"clause": [-2931], "records": [{"kind": "triple", "triple": [12, 15, 56], "var": 2931, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 9], "weight": 2}]}
+{"clause": [-2934, 5719], "records": [{"kind": "triple", "triple": [12, 18, 21], "var": 2934, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 3], "weight": 4, "sign": -1}]}
+{"clause": [2934, -5719], "records": [{"kind": "triple", "triple": [12, 18, 21], "var": 2934, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 3], "weight": 4, "sign": 1}]}
+{"clause": [2973, -5719], "records": [{"kind": "triple", "triple": [12, 19, 20], "var": 2973, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 3], "weight": 2, "sign": 1}]}
+{"clause": [2974, -5719], "records": [{"kind": "triple", "triple": [12, 19, 21], "var": 2974, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 3], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [2, 3], "weight": 1}]}
+{"clause": [2975], "records": [{"kind": "triple", "triple": [12, 19, 22], "var": 2975, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 3], "weight": 2}]}
+{"clause": [3013], "records": [{"kind": "triple", "triple": [12, 20, 21], "var": 3013, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 3], "weight": 1}]}
+{"clause": [3014], "records": [{"kind": "triple", "triple": [12, 20, 22], "var": 3014, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 3], "weight": 1}, {"kind": "phase_minus", "pair": [2, 3], "weight": 1}]}
+{"clause": [3015], "records": [{"kind": "triple", "triple": [12, 20, 23], "var": 3015, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 3], "weight": 2}]}
+{"clause": [3052], "records": [{"kind": "triple", "triple": [12, 21, 22], "var": 3052, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 3], "weight": 1}]}
+{"clause": [3053, 5719], "records": [{"kind": "triple", "triple": [12, 21, 23], "var": 3053, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 3], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [2, 3], "weight": 1}]}
+{"clause": [3090, 5719], "records": [{"kind": "triple", "triple": [12, 22, 23], "var": 3090, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 3], "weight": 2, "sign": -1}]}
+{"clause": [-3165, 5720], "records": [{"kind": "triple", "triple": [12, 24, 27], "var": 3165, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 4], "weight": 4, "sign": -1}]}
+{"clause": [3165, -5720], "records": [{"kind": "triple", "triple": [12, 24, 27], "var": 3165, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 4], "weight": 4, "sign": 1}]}
+{"clause": [3198, -5720], "records": [{"kind": "triple", "triple": [12, 25, 26], "var": 3198, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 4], "weight": 2, "sign": 1}]}
+{"clause": [3199, -5720], "records": [{"kind": "triple", "triple": [12, 25, 27], "var": 3199, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 4], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [2, 4], "weight": 1}]}
+{"clause": [3200], "records": [{"kind": "triple", "triple": [12, 25, 28], "var": 3200, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 4], "weight": 2}]}
+{"clause": [3232], "records": [{"kind": "triple", "triple": [12, 26, 27], "var": 3232, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 4], "weight": 1}]}
+{"clause": [3233], "records": [{"kind": "triple", "triple": [12, 26, 28], "var": 3233, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 4], "weight": 1}, {"kind": "phase_minus", "pair": [2, 4], "weight": 1}]}
+{"clause": [3234], "records": [{"kind": "triple", "triple": [12, 26, 29], "var": 3234, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 4], "weight": 2}]}
+{"clause": [3265], "records": [{"kind": "triple", "triple": [12, 27, 28], "var": 3265, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 4], "weight": 1}]}
+{"clause": [3266, 5720], "records": [{"kind": "triple", "triple": [12, 27, 29], "var": 3266, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 4], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [2, 4], "weight": 1}]}
+{"clause": [3297, 5720], "records": [{"kind": "triple", "triple": [12, 28, 29], "var": 3297, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 4], "weight": 2, "sign": -1}]}
+{"clause": [-3360, 5721], "records": [{"kind": "triple", "triple": [12, 30, 33], "var": 3360, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 5], "weight": 4, "sign": -1}]}
+{"clause": [3360, -5721], "records": [{"kind": "triple", "triple": [12, 30, 33], "var": 3360, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 5], "weight": 4, "sign": 1}]}
+{"clause": [3387, -5721], "records": [{"kind": "triple", "triple": [12, 31, 32], "var": 3387, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 5], "weight": 2, "sign": 1}]}
+{"clause": [3388, -5721], "records": [{"kind": "triple", "triple": [12, 31, 33], "var": 3388, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 5], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [2, 5], "weight": 1}]}
+{"clause": [3389], "records": [{"kind": "triple", "triple": [12, 31, 34], "var": 3389, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 5], "weight": 2}]}
+{"clause": [3415], "records": [{"kind": "triple", "triple": [12, 32, 33], "var": 3415, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 5], "weight": 1}]}
+{"clause": [3416], "records": [{"kind": "triple", "triple": [12, 32, 34], "var": 3416, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 5], "weight": 1}, {"kind": "phase_minus", "pair": [2, 5], "weight": 1}]}
+{"clause": [3417], "records": [{"kind": "triple", "triple": [12, 32, 35], "var": 3417, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 5], "weight": 2}]}
+{"clause": [3442], "records": [{"kind": "triple", "triple": [12, 33, 34], "var": 3442, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 5], "weight": 1}]}
+{"clause": [3443, 5721], "records": [{"kind": "triple", "triple": [12, 33, 35], "var": 3443, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 5], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [2, 5], "weight": 1}]}
+{"clause": [3468, 5721], "records": [{"kind": "triple", "triple": [12, 34, 35], "var": 3468, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 5], "weight": 2, "sign": -1}]}
+{"clause": [3519, -5722], "records": [{"kind": "triple", "triple": [12, 36, 39], "var": 3519, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 6], "weight": 4, "sign": 1}]}
+{"clause": [-3519, 5722], "records": [{"kind": "triple", "triple": [12, 36, 39], "var": 3519, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 6], "weight": 4, "sign": -1}]}
+{"clause": [3540, -5722], "records": [{"kind": "triple", "triple": [12, 37, 38], "var": 3540, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 6], "weight": 2, "sign": 1}]}
+{"clause": [3541, -5722], "records": [{"kind": "triple", "triple": [12, 37, 39], "var": 3541, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 6], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [2, 6], "weight": 1}]}
+{"clause": [3542], "records": [{"kind": "triple", "triple": [12, 37, 40], "var": 3542, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 6], "weight": 2}]}
+{"clause": [3562], "records": [{"kind": "triple", "triple": [12, 38, 39], "var": 3562, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 6], "weight": 1}]}
+{"clause": [3563], "records": [{"kind": "triple", "triple": [12, 38, 40], "var": 3563, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 6], "weight": 1}, {"kind": "phase_minus", "pair": [2, 6], "weight": 1}]}
+{"clause": [3564], "records": [{"kind": "triple", "triple": [12, 38, 41], "var": 3564, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 6], "weight": 2}]}
+{"clause": [3583], "records": [{"kind": "triple", "triple": [12, 39, 40], "var": 3583, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 6], "weight": 1}]}
+{"clause": [3584, 5722], "records": [{"kind": "triple", "triple": [12, 39, 41], "var": 3584, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 6], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [2, 6], "weight": 1}]}
+{"clause": [3603, 5722], "records": [{"kind": "triple", "triple": [12, 40, 41], "var": 3603, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 6], "weight": 2, "sign": -1}]}
+{"clause": [3642, -5723], "records": [{"kind": "triple", "triple": [12, 42, 45], "var": 3642, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 7], "weight": 4, "sign": 1}]}
+{"clause": [-3642, 5723], "records": [{"kind": "triple", "triple": [12, 42, 45], "var": 3642, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 7], "weight": 4, "sign": -1}]}
+{"clause": [3657, -5723], "records": [{"kind": "triple", "triple": [12, 43, 44], "var": 3657, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 7], "weight": 2, "sign": 1}]}
+{"clause": [3658, -5723], "records": [{"kind": "triple", "triple": [12, 43, 45], "var": 3658, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 7], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [2, 7], "weight": 1}]}
+{"clause": [3659], "records": [{"kind": "triple", "triple": [12, 43, 46], "var": 3659, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 7], "weight": 2}]}
+{"clause": [3673], "records": [{"kind": "triple", "triple": [12, 44, 45], "var": 3673, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 7], "weight": 1}]}
+{"clause": [3674], "records": [{"kind": "triple", "triple": [12, 44, 46], "var": 3674, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 7], "weight": 1}, {"kind": "phase_minus", "pair": [2, 7], "weight": 1}]}
+{"clause": [3675], "records": [{"kind": "triple", "triple": [12, 44, 47], "var": 3675, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 7], "weight": 2}]}
+{"clause": [3688], "records": [{"kind": "triple", "triple": [12, 45, 46], "var": 3688, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 7], "weight": 1}]}
+{"clause": [3689, 5723], "records": [{"kind": "triple", "triple": [12, 45, 47], "var": 3689, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 7], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [2, 7], "weight": 1}]}
+{"clause": [3702, 5723], "records": [{"kind": "triple", "triple": [12, 46, 47], "var": 3702, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 7], "weight": 2, "sign": -1}]}
+{"clause": [3729, -5724], "records": [{"kind": "triple", "triple": [12, 48, 51], "var": 3729, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 8], "weight": 4, "sign": 1}]}
+{"clause": [-3729, 5724], "records": [{"kind": "triple", "triple": [12, 48, 51], "var": 3729, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 8], "weight": 4, "sign": -1}]}
+{"clause": [3738, -5724], "records": [{"kind": "triple", "triple": [12, 49, 50], "var": 3738, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 8], "weight": 2, "sign": 1}]}
+{"clause": [3739, -5724], "records": [{"kind": "triple", "triple": [12, 49, 51], "var": 3739, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 8], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [2, 8], "weight": 1}]}
+{"clause": [3740], "records": [{"kind": "triple", "triple": [12, 49, 52], "var": 3740, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 8], "weight": 2}]}
+{"clause": [3748], "records": [{"kind": "triple", "triple": [12, 50, 51], "var": 3748, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 8], "weight": 1}]}
+{"clause": [3749], "records": [{"kind": "triple", "triple": [12, 50, 52], "var": 3749, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 8], "weight": 1}, {"kind": "phase_minus", "pair": [2, 8], "weight": 1}]}
+{"clause": [3750], "records": [{"kind": "triple", "triple": [12, 50, 53], "var": 3750, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 8], "weight": 2}]}
+{"clause": [3757], "records": [{"kind": "triple", "triple": [12, 51, 52], "var": 3757, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 8], "weight": 1}]}
+{"clause": [3758, 5724], "records": [{"kind": "triple", "triple": [12, 51, 53], "var": 3758, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 8], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [2, 8], "weight": 1}]}
+{"clause": [3765, 5724], "records": [{"kind": "triple", "triple": [12, 52, 53], "var": 3765, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 8], "weight": 2, "sign": -1}]}
+{"clause": [3780, -5725], "records": [{"kind": "triple", "triple": [12, 54, 57], "var": 3780, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 9], "weight": 4, "sign": 1}]}
+{"clause": [-3780, 5725], "records": [{"kind": "triple", "triple": [12, 54, 57], "var": 3780, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 9], "weight": 4, "sign": -1}]}
+{"clause": [3783, -5725], "records": [{"kind": "triple", "triple": [12, 55, 56], "var": 3783, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 9], "weight": 2, "sign": 1}]}
+{"clause": [3784, -5725], "records": [{"kind": "triple", "triple": [12, 55, 57], "var": 3784, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 9], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [2, 9], "weight": 1}]}
+{"clause": [3785], "records": [{"kind": "triple", "triple": [12, 55, 58], "var": 3785, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 9], "weight": 2}]}
+{"clause": [3787], "records": [{"kind": "triple", "triple": [12, 56, 57], "var": 3787, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 9], "weight": 1}]}
+{"clause": [3788], "records": [{"kind": "triple", "triple": [12, 56, 58], "var": 3788, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [2, 9], "weight": 1}, {"kind": "phase_minus", "pair": [2, 9], "weight": 1}]}
+{"clause": [3789], "records": [{"kind": "triple", "triple": [12, 56, 59], "var": 3789, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 9], "weight": 2}]}
+{"clause": [3790], "records": [{"kind": "triple", "triple": [12, 57, 58], "var": 3790, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [2, 9], "weight": 1}]}
+{"clause": [3791, 5725], "records": [{"kind": "triple", "triple": [12, 57, 59], "var": 3791, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 9], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [2, 9], "weight": 1}]}
+{"clause": [3792, 5725], "records": [{"kind": "triple", "triple": [12, 58, 59], "var": 3792, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [2, 9], "weight": 2, "sign": -1}]}
+{"clause": [3793], "records": [{"kind": "triple", "triple": [18, 19, 20], "var": 3793, "sign": -1, "weight": 1}]}
+{"clause": [3794], "records": [{"kind": "triple", "triple": [18, 19, 21], "var": 3794, "sign": -1, "weight": 1}]}
+{"clause": [3795], "records": [{"kind": "triple", "triple": [18, 19, 22], "var": 3795, "sign": -1, "weight": 1}]}
+{"clause": [3798, -5726], "records": [{"kind": "triple", "triple": [18, 19, 26], "var": 3798, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 4], "weight": 2, "sign": 1}]}
+{"clause": [3799], "records": [{"kind": "triple", "triple": [18, 19, 27], "var": 3799, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 4], "weight": 1}]}
+{"clause": [3800], "records": [{"kind": "triple", "triple": [18, 19, 28], "var": 3800, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [3, 4], "weight": 1}]}
+{"clause": [3801, 5726], "records": [{"kind": "triple", "triple": [18, 19, 29], "var": 3801, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 4], "weight": 2, "sign": -1}]}
+{"clause": [3804, -5727], "records": [{"kind": "triple", "triple": [18, 19, 32], "var": 3804, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 5], "weight": 2, "sign": 1}]}
+{"clause": [3805], "records": [{"kind": "triple", "triple": [18, 19, 33], "var": 3805, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 5], "weight": 1}]}
+{"clause": [3806], "records": [{"kind": "triple", "triple": [18, 19, 34], "var": 3806, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [3, 5], "weight": 1}]}
+{"clause": [3807, 5727], "records": [{"kind": "triple", "triple": [18, 19, 35], "var": 3807, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 5], "weight": 2, "sign": -1}]}
+{"clause": [3810, -5728], "records": [{"kind": "triple", "triple": [18, 19, 38], "var": 3810, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 6], "weight": 2, "sign": 1}]}
+{"clause": [3811], "records": [{"kind": "triple", "triple": [18, 19, 39], "var": 3811, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 6], "weight": 1}]}
+{"clause": [3812], "records": [{"kind": "triple", "triple": [18, 19, 40], "var": 3812, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [3, 6], "weight": 1}]}
+{"clause": [3813, 5728], "records": [{"kind": "triple", "triple": [18, 19, 41], "var": 3813, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 6], "weight": 2, "sign": -1}]}
+{"clause": [3816, -5729], "records": [{"kind": "triple", "triple": [18, 19, 44], "var": 3816, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 7], "weight": 2, "sign": 1}]}
+{"clause": [3817], "records": [{"kind": "triple", "triple": [18, 19, 45], "var": 3817, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 7], "weight": 1}]}
+{"clause": [3818], "records": [{"kind": "triple", "triple": [18, 19, 46], "var": 3818, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [3, 7], "weight": 1}]}
+{"clause": [3819, 5729], "records": [{"kind": "triple", "triple": [18, 19, 47], "var": 3819, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 7], "weight": 2, "sign": -1}]}
+{"clause": [3822, -5730], "records": [{"kind": "triple", "triple": [18, 19, 50], "var": 3822, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 8], "weight": 2, "sign": 1}]}
+{"clause": [3823], "records": [{"kind": "triple", "triple": [18, 19, 51], "var": 3823, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 8], "weight": 1}]}
+{"clause": [3824], "records": [{"kind": "triple", "triple": [18, 19, 52], "var": 3824, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [3, 8], "weight": 1}]}
+{"clause": [3825, 5730], "records": [{"kind": "triple", "triple": [18, 19, 53], "var": 3825, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 8], "weight": 2, "sign": -1}]}
+{"clause": [3828, -5731], "records": [{"kind": "triple", "triple": [18, 19, 56], "var": 3828, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 9], "weight": 2, "sign": 1}]}
+{"clause": [3829], "records": [{"kind": "triple", "triple": [18, 19, 57], "var": 3829, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 9], "weight": 1}]}
+{"clause": [3830], "records": [{"kind": "triple", "triple": [18, 19, 58], "var": 3830, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [3, 9], "weight": 1}]}
+{"clause": [3831, 5731], "records": [{"kind": "triple", "triple": [18, 19, 59], "var": 3831, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 9], "weight": 2, "sign": -1}]}
+{"clause": [3832], "records": [{"kind": "triple", "triple": [18, 20, 22], "var": 3832, "sign": -1, "weight": 1}]}
+{"clause": [3836, -5726], "records": [{"kind": "triple", "triple": [18, 20, 27], "var": 3836, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 4], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [3, 4], "weight": 1}]}
+{"clause": [3837], "records": [{"kind": "triple", "triple": [18, 20, 28], "var": 3837, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 4], "weight": 1}, {"kind": "phase_minus", "pair": [3, 4], "weight": 1}]}
+{"clause": [3838, 5726], "records": [{"kind": "triple", "triple": [18, 20, 29], "var": 3838, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 4], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [3, 4], "weight": 1}]}
+{"clause": [3842, -5727], "records": [{"kind": "triple", "triple": [18, 20, 33], "var": 3842, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 5], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [3, 5], "weight": 1}]}
+{"clause": [3843], "records": [{"kind": "triple", "triple": [18, 20, 34], "var": 3843, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 5], "weight": 1}, {"kind": "phase_minus", "pair": [3, 5], "weight": 1}]}
+{"clause": [3844, 5727], "records": [{"kind": "triple", "triple": [18, 20, 35], "var": 3844, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 5], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [3, 5], "weight": 1}]}
+{"clause": [3848, -5728], "records": [{"kind": "triple", "triple": [18, 20, 39], "var": 3848, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 6], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [3, 6], "weight": 1}]}
+{"clause": [3849], "records": [{"kind": "triple", "triple": [18, 20, 40], "var": 3849, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 6], "weight": 1}, {"kind": "phase_minus", "pair": [3, 6], "weight": 1}]}
+{"clause": [3850, 5728], "records": [{"kind": "triple", "triple": [18, 20, 41], "var": 3850, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 6], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [3, 6], "weight": 1}]}
+{"clause": [3854, -5729], "records": [{"kind": "triple", "triple": [18, 20, 45], "var": 3854, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 7], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [3, 7], "weight": 1}]}
+{"clause": [3855], "records": [{"kind": "triple", "triple": [18, 20, 46], "var": 3855, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 7], "weight": 1}, {"kind": "phase_minus", "pair": [3, 7], "weight": 1}]}
+{"clause": [3856, 5729], "records": [{"kind": "triple", "triple": [18, 20, 47], "var": 3856, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 7], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [3, 7], "weight": 1}]}
+{"clause": [3860, -5730], "records": [{"kind": "triple", "triple": [18, 20, 51], "var": 3860, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 8], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [3, 8], "weight": 1}]}
+{"clause": [3861], "records": [{"kind": "triple", "triple": [18, 20, 52], "var": 3861, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 8], "weight": 1}, {"kind": "phase_minus", "pair": [3, 8], "weight": 1}]}
+{"clause": [3862, 5730], "records": [{"kind": "triple", "triple": [18, 20, 53], "var": 3862, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 8], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [3, 8], "weight": 1}]}
+{"clause": [3866, -5731], "records": [{"kind": "triple", "triple": [18, 20, 57], "var": 3866, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 9], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [3, 9], "weight": 1}]}
+{"clause": [3867], "records": [{"kind": "triple", "triple": [18, 20, 58], "var": 3867, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 9], "weight": 1}, {"kind": "phase_minus", "pair": [3, 9], "weight": 1}]}
+{"clause": [3868, 5731], "records": [{"kind": "triple", "triple": [18, 20, 59], "var": 3868, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 9], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [3, 9], "weight": 1}]}
+{"clause": [-3869, -5726], "records": [{"kind": "triple", "triple": [18, 21, 24], "var": 3869, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 4], "weight": 4, "sign": 1}]}
+{"clause": [3869, 5726], "records": [{"kind": "triple", "triple": [18, 21, 24], "var": 3869, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 4], "weight": 4, "sign": -1}]}
+{"clause": [-3870], "records": [{"kind": "triple", "triple": [18, 21, 25], "var": 3870, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 4], "weight": 2}]}
+{"clause": [-3871], "records": [{"kind": "triple", "triple": [18, 21, 26], "var": 3871, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [3, 4], "weight": 2}]}
+{"clause": [-3872, -5727], "records": [{"kind": "triple", "triple": [18, 21, 30], "var": 3872, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 5], "weight": 4, "sign": 1}]}
+{"clause": [3872, 5727], "records": [{"kind": "triple", "triple": [18, 21, 30], "var": 3872, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 5], "weight": 4, "sign": -1}]}
+{"clause": [-3873], "records": [{"kind": "triple", "triple": [18, 21, 31], "var": 3873, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 5], "weight": 2}]}
+{"clause": [-3874], "records": [{"kind": "triple", "triple": [18, 21, 32], "var": 3874, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [3, 5], "weight": 2}]}
+{"clause": [-3875, -5728], "records": [{"kind": "triple", "triple": [18, 21, 36], "var": 3875, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 6], "weight": 4, "sign": 1}]}
+{"clause": [3875, 5728], "records": [{"kind": "triple", "triple": [18, 21, 36], "var": 3875, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 6], "weight": 4, "sign": -1}]}
+{"clause": [-3876], "records": [{"kind": "triple", "triple": [18, 21, 37], "var": 3876, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 6], "weight": 2}]}
+{"clause": [-3877], "records": [{"kind": "triple", "triple": [18, 21, 38], "var": 3877, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [3, 6], "weight": 2}]}
+{"clause": [-3878, -5729], "records": [{"kind": "triple", "triple": [18, 21, 42], "var": 3878, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 7], "weight": 4, "sign": 1}]}
+{"clause": [3878, 5729], "records": [{"kind": "triple", "triple": [18, 21, 42], "var": 3878, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 7], "weight": 4, "sign": -1}]}
+{"clause": [-3879], "records": [{"kind": "triple", "triple": [18, 21, 43], "var": 3879, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 7], "weight": 2}]}
+{"clause": [-3880], "records": [{"kind": "triple", "triple": [18, 21, 44], "var": 3880, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [3, 7], "weight": 2}]}
+{"clause": [3881, 5730], "records": [{"kind": "triple", "triple": [18, 21, 48], "var": 3881, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 8], "weight": 4, "sign": -1}]}
+{"clause": [-3881, -5730], "records": [{"kind": "triple", "triple": [18, 21, 48], "var": 3881, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 8], "weight": 4, "sign": 1}]}
+{"clause": [-3882], "records": [{"kind": "triple", "triple": [18, 21, 49], "var": 3882, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 8], "weight": 2}]}
+{"clause": [-3883], "records": [{"kind": "triple", "triple": [18, 21, 50], "var": 3883, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [3, 8], "weight": 2}]}
+{"clause": [3884, 5731], "records": [{"kind": "triple", "triple": [18, 21, 54], "var": 3884, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 9], "weight": 4, "sign": -1}]}
+{"clause": [-3884, -5731], "records": [{"kind": "triple", "triple": [18, 21, 54], "var": 3884, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 9], "weight": 4, "sign": 1}]}
+{"clause": [-3885], "records": [{"kind": "triple", "triple": [18, 21, 55], "var": 3885, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 9], "weight": 2}]}
+{"clause": [-3886], "records": [{"kind": "triple", "triple": [18, 21, 56], "var": 3886, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [3, 9], "weight": 2}]}
+{"clause": [-3889, 5726], "records": [{"kind": "triple", "triple": [18, 24, 27], "var": 3889, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 4], "weight": 4, "sign": -1}]}
+{"clause": [3889, -5726], "records": [{"kind": "triple", "triple": [18, 24, 27], "var": 3889, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 4], "weight": 4, "sign": 1}]}
+{"clause": [3922, -5726], "records": [{"kind": "triple", "triple": [18, 25, 26], "var": 3922, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 4], "weight": 2, "sign": 1}]}
+{"clause": [3923, -5726], "records": [{"kind": "triple", "triple": [18, 25, 27], "var": 3923, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 4], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [3, 4], "weight": 1}]}
+{"clause": [3924], "records": [{"kind": "triple", "triple": [18, 25, 28], "var": 3924, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 4], "weight": 2}]}
+{"clause": [3956], "records": [{"kind": "triple", "triple": [18, 26, 27], "var": 3956, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 4], "weight": 1}]}
+{"clause": [3957], "records": [{"kind": "triple", "triple": [18, 26, 28], "var": 3957, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 4], "weight": 1}, {"kind": "phase_minus", "pair": [3, 4], "weight": 1}]}
+{"clause": [3958], "records": [{"kind": "triple", "triple": [18, 26, 29], "var": 3958, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [3, 4], "weight": 2}]}
+{"clause": [3989], "records": [{"kind": "triple", "triple": [18, 27, 28], "var": 3989, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [3, 4], "weight": 1}]}
+{"clause": [3990, 5726], "records": [{"kind": "triple", "triple": [18, 27, 29], "var": 3990, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 4], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [3, 4], "weight": 1}]}
+{"clause": [4021, 5726], "records": [{"kind": "triple", "triple": [18, 28, 29], "var": 4021, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 4], "weight": 2, "sign": -1}]}
+{"clause": [4084, -5727], "records": [{"kind": "triple", "triple": [18, 30, 33], "var": 4084, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 5], "weight": 4, "sign": 1}]}
+{"clause": [-4084, 5727], "records": [{"kind": "triple", "triple": [18, 30, 33], "var": 4084, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 5], "weight": 4, "sign": -1}]}
+{"clause": [4111, -5727], "records": [{"kind": "triple", "triple": [18, 31, 32], "var": 4111, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 5], "weight": 2, "sign": 1}]}
+{"clause": [4112, -5727], "records": [{"kind": "triple", "triple": [18, 31, 33], "var": 4112, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 5], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [3, 5], "weight": 1}]}
+{"clause": [4113], "records": [{"kind": "triple", "triple": [18, 31, 34], "var": 4113, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 5], "weight": 2}]}
+{"clause": [4139], "records": [{"kind": "triple", "triple": [18, 32, 33], "var": 4139, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 5], "weight": 1}]}
+{"clause": [4140], "records": [{"kind": "triple", "triple": [18, 32, 34], "var": 4140, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 5], "weight": 1}, {"kind": "phase_minus", "pair": [3, 5], "weight": 1}]}
+{"clause": [4141], "records": [{"kind": "triple", "triple": [18, 32, 35], "var": 4141, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [3, 5], "weight": 2}]}
+{"clause": [4166], "records": [{"kind": "triple", "triple": [18, 33, 34], "var": 4166, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [3, 5], "weight": 1}]}
+{"clause": [4167, 5727], "records": [{"kind": "triple", "triple": [18, 33, 35], "var": 4167, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 5], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [3, 5], "weight": 1}]}
+{"clause": [4192, 5727], "records": [{"kind": "triple", "triple": [18, 34, 35], "var": 4192, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 5], "weight": 2, "sign": -1}]}
+{"clause": [4243, -5728], "records": [{"kind": "triple", "triple": [18, 36, 39], "var": 4243, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 6], "weight": 4, "sign": 1}]}
+{"clause": [-4243, 5728], "records": [{"kind": "triple", "triple": [18, 36, 39], "var": 4243, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 6], "weight": 4, "sign": -1}]}
+{"clause": [4264, -5728], "records": [{"kind": "triple", "triple": [18, 37, 38], "var": 4264, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 6], "weight": 2, "sign": 1}]}
+{"clause": [4265, -5728], "records": [{"kind": "triple", "triple": [18, 37, 39], "var": 4265, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 6], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [3, 6], "weight": 1}]}
+{"clause": [4266], "records": [{"kind": "triple", "triple": [18, 37, 40], "var": 4266, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 6], "weight": 2}]}
+{"clause": [4286], "records": [{"kind": "triple", "triple": [18, 38, 39], "var": 4286, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 6], "weight": 1}]}
+{"clause": [4287], "records": [{"kind": "triple", "triple": [18, 38, 40], "var": 4287, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 6], "weight": 1}, {"kind": "phase_minus", "pair": [3, 6], "weight": 1}]}
+{"clause": [4288], "records": [{"kind": "triple", "triple": [18, 38, 41], "var": 4288, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [3, 6], "weight": 2}]}
+{"clause": [4307], "records": [{"kind": "triple", "triple": [18, 39, 40], "var": 4307, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [3, 6], "weight": 1}]}
+{"clause": [4308, 5728], "records": [{"kind": "triple", "triple": [18, 39, 41], "var": 4308, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 6], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [3, 6], "weight": 1}]}
+{"clause": [4327, 5728], "records": [{"kind": "triple", "triple": [18, 40, 41], "var": 4327, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 6], "weight": 2, "sign": -1}]}
+{"clause": [-4366, 5729], "records": [{"kind": "triple", "triple": [18, 42, 45], "var": 4366, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 7], "weight": 4, "sign": -1}]}
+{"clause": [4366, -5729], "records": [{"kind": "triple", "triple": [18, 42, 45], "var": 4366, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 7], "weight": 4, "sign": 1}]}
+{"clause": [4381, -5729], "records": [{"kind": "triple", "triple": [18, 43, 44], "var": 4381, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 7], "weight": 2, "sign": 1}]}
+{"clause": [4382, -5729], "records": [{"kind": "triple", "triple": [18, 43, 45], "var": 4382, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 7], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [3, 7], "weight": 1}]}
+{"clause": [4383], "records": [{"kind": "triple", "triple": [18, 43, 46], "var": 4383, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 7], "weight": 2}]}
+{"clause": [4397], "records": [{"kind": "triple", "triple": [18, 44, 45], "var": 4397, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 7], "weight": 1}]}
+{"clause": [4398], "records": [{"kind": "triple", "triple": [18, 44, 46], "var": 4398, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 7], "weight": 1}, {"kind": "phase_minus", "pair": [3, 7], "weight": 1}]}
+{"clause": [4399], "records": [{"kind": "triple", "triple": [18, 44, 47], "var": 4399, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [3, 7], "weight": 2}]}
+{"clause": [4412], "records": [{"kind": "triple", "triple": [18, 45, 46], "var": 4412, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [3, 7], "weight": 1}]}
+{"clause": [4413, 5729], "records": [{"kind": "triple", "triple": [18, 45, 47], "var": 4413, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 7], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [3, 7], "weight": 1}]}
+{"clause": [4426, 5729], "records": [{"kind": "triple", "triple": [18, 46, 47], "var": 4426, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 7], "weight": 2, "sign": -1}]}
+{"clause": [4453, -5730], "records": [{"kind": "triple", "triple": [18, 48, 51], "var": 4453, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 8], "weight": 4, "sign": 1}]}
+{"clause": [-4453, 5730], "records": [{"kind": "triple", "triple": [18, 48, 51], "var": 4453, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 8], "weight": 4, "sign": -1}]}
+{"clause": [4462, -5730], "records": [{"kind": "triple", "triple": [18, 49, 50], "var": 4462, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 8], "weight": 2, "sign": 1}]}
+{"clause": [4463, -5730], "records": [{"kind": "triple", "triple": [18, 49, 51], "var": 4463, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 8], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [3, 8], "weight": 1}]}
+{"clause": [4464], "records": [{"kind": "triple", "triple": [18, 49, 52], "var": 4464, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 8], "weight": 2}]}
+{"clause": [4472], "records": [{"kind": "triple", "triple": [18, 50, 51], "var": 4472, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 8], "weight": 1}]}
+{"clause": [4473], "records": [{"kind": "triple", "triple": [18, 50, 52], "var": 4473, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 8], "weight": 1}, {"kind": "phase_minus", "pair": [3, 8], "weight": 1}]}
+{"clause": [4474], "records": [{"kind": "triple", "triple": [18, 50, 53], "var": 4474, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [3, 8], "weight": 2}]}
+{"clause": [4481], "records": [{"kind": "triple", "triple": [18, 51, 52], "var": 4481, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [3, 8], "weight": 1}]}
+{"clause": [4482, 5730], "records": [{"kind": "triple", "triple": [18, 51, 53], "var": 4482, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 8], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [3, 8], "weight": 1}]}
+{"clause": [4489, 5730], "records": [{"kind": "triple", "triple": [18, 52, 53], "var": 4489, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 8], "weight": 2, "sign": -1}]}
+{"clause": [4504, -5731], "records": [{"kind": "triple", "triple": [18, 54, 57], "var": 4504, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 9], "weight": 4, "sign": 1}]}
+{"clause": [-4504, 5731], "records": [{"kind": "triple", "triple": [18, 54, 57], "var": 4504, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 9], "weight": 4, "sign": -1}]}
+{"clause": [4507, -5731], "records": [{"kind": "triple", "triple": [18, 55, 56], "var": 4507, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 9], "weight": 2, "sign": 1}]}
+{"clause": [4508, -5731], "records": [{"kind": "triple", "triple": [18, 55, 57], "var": 4508, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 9], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [3, 9], "weight": 1}]}
+{"clause": [4509], "records": [{"kind": "triple", "triple": [18, 55, 58], "var": 4509, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 9], "weight": 2}]}
+{"clause": [4511], "records": [{"kind": "triple", "triple": [18, 56, 57], "var": 4511, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 9], "weight": 1}]}
+{"clause": [4512], "records": [{"kind": "triple", "triple": [18, 56, 58], "var": 4512, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [3, 9], "weight": 1}, {"kind": "phase_minus", "pair": [3, 9], "weight": 1}]}
+{"clause": [4513], "records": [{"kind": "triple", "triple": [18, 56, 59], "var": 4513, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [3, 9], "weight": 2}]}
+{"clause": [4514], "records": [{"kind": "triple", "triple": [18, 57, 58], "var": 4514, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [3, 9], "weight": 1}]}
+{"clause": [4515, 5731], "records": [{"kind": "triple", "triple": [18, 57, 59], "var": 4515, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 9], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [3, 9], "weight": 1}]}
+{"clause": [4516, 5731], "records": [{"kind": "triple", "triple": [18, 58, 59], "var": 4516, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [3, 9], "weight": 2, "sign": -1}]}
+{"clause": [4517], "records": [{"kind": "triple", "triple": [24, 25, 26], "var": 4517, "sign": -1, "weight": 1}]}
+{"clause": [4518], "records": [{"kind": "triple", "triple": [24, 25, 27], "var": 4518, "sign": -1, "weight": 1}]}
+{"clause": [4519], "records": [{"kind": "triple", "triple": [24, 25, 28], "var": 4519, "sign": -1, "weight": 1}]}
+{"clause": [4522, -5732], "records": [{"kind": "triple", "triple": [24, 25, 32], "var": 4522, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 5], "weight": 2, "sign": 1}]}
+{"clause": [4523], "records": [{"kind": "triple", "triple": [24, 25, 33], "var": 4523, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 5], "weight": 1}]}
+{"clause": [4524], "records": [{"kind": "triple", "triple": [24, 25, 34], "var": 4524, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [4, 5], "weight": 1}]}
+{"clause": [4525, 5732], "records": [{"kind": "triple", "triple": [24, 25, 35], "var": 4525, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 5], "weight": 2, "sign": -1}]}
+{"clause": [4528, -5733], "records": [{"kind": "triple", "triple": [24, 25, 38], "var": 4528, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 6], "weight": 2, "sign": 1}]}
+{"clause": [4529], "records": [{"kind": "triple", "triple": [24, 25, 39], "var": 4529, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 6], "weight": 1}]}
+{"clause": [4530], "records": [{"kind": "triple", "triple": [24, 25, 40], "var": 4530, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [4, 6], "weight": 1}]}
+{"clause": [4531, 5733], "records": [{"kind": "triple", "triple": [24, 25, 41], "var": 4531, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 6], "weight": 2, "sign": -1}]}
+{"clause": [4534, -5734], "records": [{"kind": "triple", "triple": [24, 25, 44], "var": 4534, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 7], "weight": 2, "sign": 1}]}
+{"clause": [4535], "records": [{"kind": "triple", "triple": [24, 25, 45], "var": 4535, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 7], "weight": 1}]}
+{"clause": [4536], "records": [{"kind": "triple", "triple": [24, 25, 46], "var": 4536, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [4, 7], "weight": 1}]}
+{"clause": [4537, 5734], "records": [{"kind": "triple", "triple": [24, 25, 47], "var": 4537, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 7], "weight": 2, "sign": -1}]}
+{"clause": [4540, -5735], "records": [{"kind": "triple", "triple": [24, 25, 50], "var": 4540, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 8], "weight": 2, "sign": 1}]}
+{"clause": [4541], "records": [{"kind": "triple", "triple": [24, 25, 51], "var": 4541, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 8], "weight": 1}]}
+{"clause": [4542], "records": [{"kind": "triple", "triple": [24, 25, 52], "var": 4542, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [4, 8], "weight": 1}]}
+{"clause": [4543, 5735], "records": [{"kind": "triple", "triple": [24, 25, 53], "var": 4543, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 8], "weight": 2, "sign": -1}]}
+{"clause": [4546, -5736], "records": [{"kind": "triple", "triple": [24, 25, 56], "var": 4546, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 9], "weight": 2, "sign": 1}]}
+{"clause": [4547], "records": [{"kind": "triple", "triple": [24, 25, 57], "var": 4547, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 9], "weight": 1}]}
+{"clause": [4548], "records": [{"kind": "triple", "triple": [24, 25, 58], "var": 4548, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [4, 9], "weight": 1}]}
+{"clause": [4549, 5736], "records": [{"kind": "triple", "triple": [24, 25, 59], "var": 4549, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 9], "weight": 2, "sign": -1}]}
+{"clause": [4550], "records": [{"kind": "triple", "triple": [24, 26, 28], "var": 4550, "sign": -1, "weight": 1}]}
+{"clause": [4554, -5732], "records": [{"kind": "triple", "triple": [24, 26, 33], "var": 4554, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 5], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [4, 5], "weight": 1}]}
+{"clause": [4555], "records": [{"kind": "triple", "triple": [24, 26, 34], "var": 4555, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 5], "weight": 1}, {"kind": "phase_minus", "pair": [4, 5], "weight": 1}]}
+{"clause": [4556, 5732], "records": [{"kind": "triple", "triple": [24, 26, 35], "var": 4556, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 5], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [4, 5], "weight": 1}]}
+{"clause": [4560, -5733], "records": [{"kind": "triple", "triple": [24, 26, 39], "var": 4560, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 6], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [4, 6], "weight": 1}]}
+{"clause": [4561], "records": [{"kind": "triple", "triple": [24, 26, 40], "var": 4561, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 6], "weight": 1}, {"kind": "phase_minus", "pair": [4, 6], "weight": 1}]}
+{"clause": [4562, 5733], "records": [{"kind": "triple", "triple": [24, 26, 41], "var": 4562, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 6], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [4, 6], "weight": 1}]}
+{"clause": [4566, -5734], "records": [{"kind": "triple", "triple": [24, 26, 45], "var": 4566, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 7], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [4, 7], "weight": 1}]}
+{"clause": [4567], "records": [{"kind": "triple", "triple": [24, 26, 46], "var": 4567, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 7], "weight": 1}, {"kind": "phase_minus", "pair": [4, 7], "weight": 1}]}
+{"clause": [4568, 5734], "records": [{"kind": "triple", "triple": [24, 26, 47], "var": 4568, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 7], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [4, 7], "weight": 1}]}
+{"clause": [4572, -5735], "records": [{"kind": "triple", "triple": [24, 26, 51], "var": 4572, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 8], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [4, 8], "weight": 1}]}
+{"clause": [4573], "records": [{"kind": "triple", "triple": [24, 26, 52], "var": 4573, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 8], "weight": 1}, {"kind": "phase_minus", "pair": [4, 8], "weight": 1}]}
+{"clause": [4574, 5735], "records": [{"kind": "triple", "triple": [24, 26, 53], "var": 4574, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 8], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [4, 8], "weight": 1}]}
+{"clause": [4578, -5736], "records": [{"kind": "triple", "triple": [24, 26, 57], "var": 4578, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 9], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [4, 9], "weight": 1}]}
+{"clause": [4579], "records": [{"kind": "triple", "triple": [24, 26, 58], "var": 4579, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 9], "weight": 1}, {"kind": "phase_minus", "pair": [4, 9], "weight": 1}]}
+{"clause": [4580, 5736], "records": [{"kind": "triple", "triple": [24, 26, 59], "var": 4580, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 9], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [4, 9], "weight": 1}]}
+{"clause": [-4581, -5732], "records": [{"kind": "triple", "triple": [24, 27, 30], "var": 4581, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 5], "weight": 4, "sign": 1}]}
+{"clause": [4581, 5732], "records": [{"kind": "triple", "triple": [24, 27, 30], "var": 4581, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 5], "weight": 4, "sign": -1}]}
+{"clause": [-4582], "records": [{"kind": "triple", "triple": [24, 27, 31], "var": 4582, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 5], "weight": 2}]}
+{"clause": [-4583], "records": [{"kind": "triple", "triple": [24, 27, 32], "var": 4583, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [4, 5], "weight": 2}]}
+{"clause": [4584, 5733], "records": [{"kind": "triple", "triple": [24, 27, 36], "var": 4584, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 6], "weight": 4, "sign": -1}]}
+{"clause": [-4584, -5733], "records": [{"kind": "triple", "triple": [24, 27, 36], "var": 4584, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 6], "weight": 4, "sign": 1}]}
+{"clause": [-4585], "records": [{"kind": "triple", "triple": [24, 27, 37], "var": 4585, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 6], "weight": 2}]}
+{"clause": [-4586], "records": [{"kind": "triple", "triple": [24, 27, 38], "var": 4586, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [4, 6], "weight": 2}]}
+{"clause": [4587, 5734], "records": [{"kind": "triple", "triple": [24, 27, 42], "var": 4587, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 7], "weight": 4, "sign": -1}]}
+{"clause": [-4587, -5734], "records": [{"kind": "triple", "triple": [24, 27, 42], "var": 4587, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 7], "weight": 4, "sign": 1}]}
+{"clause": [-4588], "records": [{"kind": "triple", "triple": [24, 27, 43], "var": 4588, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 7], "weight": 2}]}
+{"clause": [-4589], "records": [{"kind": "triple", "triple": [24, 27, 44], "var": 4589, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [4, 7], "weight": 2}]}
+{"clause": [4590, 5735], "records": [{"kind": "triple", "triple": [24, 27, 48], "var": 4590, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 8], "weight": 4, "sign": -1}]}
+{"clause": [-4590, -5735], "records": [{"kind": "triple", "triple": [24, 27, 48], "var": 4590, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 8], "weight": 4, "sign": 1}]}
+{"clause": [-4591], "records": [{"kind": "triple", "triple": [24, 27, 49], "var": 4591, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 8], "weight": 2}]}
+{"clause": [-4592], "records": [{"kind": "triple", "triple": [24, 27, 50], "var": 4592, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [4, 8], "weight": 2}]}
+{"clause": [4593, 5736], "records": [{"kind": "triple", "triple": [24, 27, 54], "var": 4593, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 9], "weight": 4, "sign": -1}]}
+{"clause": [-4593, -5736], "records": [{"kind": "triple", "triple": [24, 27, 54], "var": 4593, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 9], "weight": 4, "sign": 1}]}
+{"clause": [-4594], "records": [{"kind": "triple", "triple": [24, 27, 55], "var": 4594, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 9], "weight": 2}]}
+{"clause": [-4595], "records": [{"kind": "triple", "triple": [24, 27, 56], "var": 4595, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [4, 9], "weight": 2}]}
+{"clause": [-4598, 5732], "records": [{"kind": "triple", "triple": [24, 30, 33], "var": 4598, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 5], "weight": 4, "sign": -1}]}
+{"clause": [4598, -5732], "records": [{"kind": "triple", "triple": [24, 30, 33], "var": 4598, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 5], "weight": 4, "sign": 1}]}
+{"clause": [4625, -5732], "records": [{"kind": "triple", "triple": [24, 31, 32], "var": 4625, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 5], "weight": 2, "sign": 1}]}
+{"clause": [4626, -5732], "records": [{"kind": "triple", "triple": [24, 31, 33], "var": 4626, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 5], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [4, 5], "weight": 1}]}
+{"clause": [4627], "records": [{"kind": "triple", "triple": [24, 31, 34], "var": 4627, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 5], "weight": 2}]}
+{"clause": [4653], "records": [{"kind": "triple", "triple": [24, 32, 33], "var": 4653, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 5], "weight": 1}]}
+{"clause": [4654], "records": [{"kind": "triple", "triple": [24, 32, 34], "var": 4654, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 5], "weight": 1}, {"kind": "phase_minus", "pair": [4, 5], "weight": 1}]}
+{"clause": [4655], "records": [{"kind": "triple", "triple": [24, 32, 35], "var": 4655, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [4, 5], "weight": 2}]}
+{"clause": [4680], "records": [{"kind": "triple", "triple": [24, 33, 34], "var": 4680, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [4, 5], "weight": 1}]}
+{"clause": [4681, 5732], "records": [{"kind": "triple", "triple": [24, 33, 35], "var": 4681, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 5], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [4, 5], "weight": 1}]}
+{"clause": [4706, 5732], "records": [{"kind": "triple", "triple": [24, 34, 35], "var": 4706, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 5], "weight": 2, "sign": -1}]}
+{"clause": [4757, -5733], "records": [{"kind": "triple", "triple": [24, 36, 39], "var": 4757, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 6], "weight": 4, "sign": 1}]}
+{"clause": [-4757, 5733], "records": [{"kind": "triple", "triple": [24, 36, 39], "var": 4757, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 6], "weight": 4, "sign": -1}]}
+{"clause": [4778, -5733], "records": [{"kind": "triple", "triple": [24, 37, 38], "var": 4778, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 6], "weight": 2, "sign": 1}]}
+{"clause": [4779, -5733], "records": [{"kind": "triple", "triple": [24, 37, 39], "var": 4779, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 6], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [4, 6], "weight": 1}]}
+{"clause": [4780], "records": [{"kind": "triple", "triple": [24, 37, 40], "var": 4780, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 6], "weight": 2}]}
+{"clause": [4800], "records": [{"kind": "triple", "triple": [24, 38, 39], "var": 4800, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 6], "weight": 1}]}
+{"clause": [4801], "records": [{"kind": "triple", "triple": [24, 38, 40], "var": 4801, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 6], "weight": 1}, {"kind": "phase_minus", "pair": [4, 6], "weight": 1}]}
+{"clause": [4802], "records": [{"kind": "triple", "triple": [24, 38, 41], "var": 4802, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [4, 6], "weight": 2}]}
+{"clause": [4821], "records": [{"kind": "triple", "triple": [24, 39, 40], "var": 4821, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [4, 6], "weight": 1}]}
+{"clause": [4822, 5733], "records": [{"kind": "triple", "triple": [24, 39, 41], "var": 4822, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 6], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [4, 6], "weight": 1}]}
+{"clause": [4841, 5733], "records": [{"kind": "triple", "triple": [24, 40, 41], "var": 4841, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 6], "weight": 2, "sign": -1}]}
+{"clause": [-4880, 5734], "records": [{"kind": "triple", "triple": [24, 42, 45], "var": 4880, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 7], "weight": 4, "sign": -1}]}
+{"clause": [4880, -5734], "records": [{"kind": "triple", "triple": [24, 42, 45], "var": 4880, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 7], "weight": 4, "sign": 1}]}
+{"clause": [4895, -5734], "records": [{"kind": "triple", "triple": [24, 43, 44], "var": 4895, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 7], "weight": 2, "sign": 1}]}
+{"clause": [4896, -5734], "records": [{"kind": "triple", "triple": [24, 43, 45], "var": 4896, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 7], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [4, 7], "weight": 1}]}
+{"clause": [4897], "records": [{"kind": "triple", "triple": [24, 43, 46], "var": 4897, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 7], "weight": 2}]}
+{"clause": [4911], "records": [{"kind": "triple", "triple": [24, 44, 45], "var": 4911, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 7], "weight": 1}]}
+{"clause": [4912], "records": [{"kind": "triple", "triple": [24, 44, 46], "var": 4912, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 7], "weight": 1}, {"kind": "phase_minus", "pair": [4, 7], "weight": 1}]}
+{"clause": [4913], "records": [{"kind": "triple", "triple": [24, 44, 47], "var": 4913, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [4, 7], "weight": 2}]}
+{"clause": [4926], "records": [{"kind": "triple", "triple": [24, 45, 46], "var": 4926, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [4, 7], "weight": 1}]}
+{"clause": [4927, 5734], "records": [{"kind": "triple", "triple": [24, 45, 47], "var": 4927, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 7], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [4, 7], "weight": 1}]}
+{"clause": [4940, 5734], "records": [{"kind": "triple", "triple": [24, 46, 47], "var": 4940, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 7], "weight": 2, "sign": -1}]}
+{"clause": [-4967, 5735], "records": [{"kind": "triple", "triple": [24, 48, 51], "var": 4967, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 8], "weight": 4, "sign": -1}]}
+{"clause": [4967, -5735], "records": [{"kind": "triple", "triple": [24, 48, 51], "var": 4967, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 8], "weight": 4, "sign": 1}]}
+{"clause": [4976, -5735], "records": [{"kind": "triple", "triple": [24, 49, 50], "var": 4976, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 8], "weight": 2, "sign": 1}]}
+{"clause": [4977, -5735], "records": [{"kind": "triple", "triple": [24, 49, 51], "var": 4977, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 8], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [4, 8], "weight": 1}]}
+{"clause": [4978], "records": [{"kind": "triple", "triple": [24, 49, 52], "var": 4978, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 8], "weight": 2}]}
+{"clause": [4986], "records": [{"kind": "triple", "triple": [24, 50, 51], "var": 4986, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 8], "weight": 1}]}
+{"clause": [4987], "records": [{"kind": "triple", "triple": [24, 50, 52], "var": 4987, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 8], "weight": 1}, {"kind": "phase_minus", "pair": [4, 8], "weight": 1}]}
+{"clause": [4988], "records": [{"kind": "triple", "triple": [24, 50, 53], "var": 4988, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [4, 8], "weight": 2}]}
+{"clause": [4995], "records": [{"kind": "triple", "triple": [24, 51, 52], "var": 4995, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [4, 8], "weight": 1}]}
+{"clause": [4996, 5735], "records": [{"kind": "triple", "triple": [24, 51, 53], "var": 4996, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 8], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [4, 8], "weight": 1}]}
+{"clause": [5003, 5735], "records": [{"kind": "triple", "triple": [24, 52, 53], "var": 5003, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 8], "weight": 2, "sign": -1}]}
+{"clause": [-5018, 5736], "records": [{"kind": "triple", "triple": [24, 54, 57], "var": 5018, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 9], "weight": 4, "sign": -1}]}
+{"clause": [5018, -5736], "records": [{"kind": "triple", "triple": [24, 54, 57], "var": 5018, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 9], "weight": 4, "sign": 1}]}
+{"clause": [5021, -5736], "records": [{"kind": "triple", "triple": [24, 55, 56], "var": 5021, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 9], "weight": 2, "sign": 1}]}
+{"clause": [5022, -5736], "records": [{"kind": "triple", "triple": [24, 55, 57], "var": 5022, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 9], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [4, 9], "weight": 1}]}
+{"clause": [5023], "records": [{"kind": "triple", "triple": [24, 55, 58], "var": 5023, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 9], "weight": 2}]}
+{"clause": [5025], "records": [{"kind": "triple", "triple": [24, 56, 57], "var": 5025, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 9], "weight": 1}]}
+{"clause": [5026], "records": [{"kind": "triple", "triple": [24, 56, 58], "var": 5026, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [4, 9], "weight": 1}, {"kind": "phase_minus", "pair": [4, 9], "weight": 1}]}
+{"clause": [5027], "records": [{"kind": "triple", "triple": [24, 56, 59], "var": 5027, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [4, 9], "weight": 2}]}
+{"clause": [5028], "records": [{"kind": "triple", "triple": [24, 57, 58], "var": 5028, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [4, 9], "weight": 1}]}
+{"clause": [5029, 5736], "records": [{"kind": "triple", "triple": [24, 57, 59], "var": 5029, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 9], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [4, 9], "weight": 1}]}
+{"clause": [5030, 5736], "records": [{"kind": "triple", "triple": [24, 58, 59], "var": 5030, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [4, 9], "weight": 2, "sign": -1}]}
+{"clause": [5031], "records": [{"kind": "triple", "triple": [30, 31, 32], "var": 5031, "sign": -1, "weight": 1}]}
+{"clause": [5032], "records": [{"kind": "triple", "triple": [30, 31, 33], "var": 5032, "sign": -1, "weight": 1}]}
+{"clause": [5033], "records": [{"kind": "triple", "triple": [30, 31, 34], "var": 5033, "sign": -1, "weight": 1}]}
+{"clause": [5036, -5737], "records": [{"kind": "triple", "triple": [30, 31, 38], "var": 5036, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 6], "weight": 2, "sign": 1}]}
+{"clause": [5037], "records": [{"kind": "triple", "triple": [30, 31, 39], "var": 5037, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [5, 6], "weight": 1}]}
+{"clause": [5038], "records": [{"kind": "triple", "triple": [30, 31, 40], "var": 5038, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [5, 6], "weight": 1}]}
+{"clause": [5039, 5737], "records": [{"kind": "triple", "triple": [30, 31, 41], "var": 5039, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 6], "weight": 2, "sign": -1}]}
+{"clause": [5042, -5738], "records": [{"kind": "triple", "triple": [30, 31, 44], "var": 5042, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 7], "weight": 2, "sign": 1}]}
+{"clause": [5043], "records": [{"kind": "triple", "triple": [30, 31, 45], "var": 5043, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [5, 7], "weight": 1}]}
+{"clause": [5044], "records": [{"kind": "triple", "triple": [30, 31, 46], "var": 5044, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [5, 7], "weight": 1}]}
+{"clause": [5045, 5738], "records": [{"kind": "triple", "triple": [30, 31, 47], "var": 5045, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 7], "weight": 2, "sign": -1}]}
+{"clause": [5048, -5739], "records": [{"kind": "triple", "triple": [30, 31, 50], "var": 5048, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 8], "weight": 2, "sign": 1}]}
+{"clause": [5049], "records": [{"kind": "triple", "triple": [30, 31, 51], "var": 5049, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [5, 8], "weight": 1}]}
+{"clause": [5050], "records": [{"kind": "triple", "triple": [30, 31, 52], "var": 5050, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [5, 8], "weight": 1}]}
+{"clause": [5051, 5739], "records": [{"kind": "triple", "triple": [30, 31, 53], "var": 5051, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 8], "weight": 2, "sign": -1}]}
+{"clause": [5054, -5740], "records": [{"kind": "triple", "triple": [30, 31, 56], "var": 5054, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 9], "weight": 2, "sign": 1}]}
+{"clause": [5055], "records": [{"kind": "triple", "triple": [30, 31, 57], "var": 5055, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [5, 9], "weight": 1}]}
+{"clause": [5056], "records": [{"kind": "triple", "triple": [30, 31, 58], "var": 5056, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [5, 9], "weight": 1}]}
+{"clause": [5057, 5740], "records": [{"kind": "triple", "triple": [30, 31, 59], "var": 5057, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 9], "weight": 2, "sign": -1}]}
+{"clause": [5058], "records": [{"kind": "triple", "triple": [30, 32, 34], "var": 5058, "sign": -1, "weight": 1}]}
+{"clause": [5062, -5737], "records": [{"kind": "triple", "triple": [30, 32, 39], "var": 5062, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 6], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [5, 6], "weight": 1}]}
+{"clause": [5063], "records": [{"kind": "triple", "triple": [30, 32, 40], "var": 5063, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [5, 6], "weight": 1}, {"kind": "phase_minus", "pair": [5, 6], "weight": 1}]}
+{"clause": [5064, 5737], "records": [{"kind": "triple", "triple": [30, 32, 41], "var": 5064, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 6], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [5, 6], "weight": 1}]}
+{"clause": [5068, -5738], "records": [{"kind": "triple", "triple": [30, 32, 45], "var": 5068, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 7], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [5, 7], "weight": 1}]}
+{"clause": [5069], "records": [{"kind": "triple", "triple": [30, 32, 46], "var": 5069, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [5, 7], "weight": 1}, {"kind": "phase_minus", "pair": [5, 7], "weight": 1}]}
+{"clause": [5070, 5738], "records": [{"kind": "triple", "triple": [30, 32, 47], "var": 5070, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 7], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [5, 7], "weight": 1}]}
+{"clause": [5074, -5739], "records": [{"kind": "triple", "triple": [30, 32, 51], "var": 5074, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 8], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [5, 8], "weight": 1}]}
+{"clause": [5075], "records": [{"kind": "triple", "triple": [30, 32, 52], "var": 5075, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [5, 8], "weight": 1}, {"kind": "phase_minus", "pair": [5, 8], "weight": 1}]}
+{"clause": [5076, 5739], "records": [{"kind": "triple", "triple": [30, 32, 53], "var": 5076, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 8], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [5, 8], "weight": 1}]}
+{"clause": [5080, -5740], "records": [{"kind": "triple", "triple": [30, 32, 57], "var": 5080, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 9], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [5, 9], "weight": 1}]}
+{"clause": [5081], "records": [{"kind": "triple", "triple": [30, 32, 58], "var": 5081, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [5, 9], "weight": 1}, {"kind": "phase_minus", "pair": [5, 9], "weight": 1}]}
+{"clause": [5082, 5740], "records": [{"kind": "triple", "triple": [30, 32, 59], "var": 5082, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 9], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [5, 9], "weight": 1}]}
+{"clause": [-5083, -5737], "records": [{"kind": "triple", "triple": [30, 33, 36], "var": 5083, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 6], "weight": 4, "sign": 1}]}
+{"clause": [5083, 5737], "records": [{"kind": "triple", "triple": [30, 33, 36], "var": 5083, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 6], "weight": 4, "sign": -1}]}
+{"clause": [-5084], "records": [{"kind": "triple", "triple": [30, 33, 37], "var": 5084, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [5, 6], "weight": 2}]}
+{"clause": [-5085], "records": [{"kind": "triple", "triple": [30, 33, 38], "var": 5085, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [5, 6], "weight": 2}]}
+{"clause": [-5086, -5738], "records": [{"kind": "triple", "triple": [30, 33, 42], "var": 5086, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 7], "weight": 4, "sign": 1}]}
+{"clause": [5086, 5738], "records": [{"kind": "triple", "triple": [30, 33, 42], "var": 5086, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 7], "weight": 4, "sign": -1}]}
+{"clause": [-5087], "records": [{"kind": "triple", "triple": [30, 33, 43], "var": 5087, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [5, 7], "weight": 2}]}
+{"clause": [-5088], "records": [{"kind": "triple", "triple": [30, 33, 44], "var": 5088, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [5, 7], "weight": 2}]}
+{"clause": [5089, 5739], "records": [{"kind": "triple", "triple": [30, 33, 48], "var": 5089, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 8], "weight": 4, "sign": -1}]}
+{"clause": [-5089, -5739], "records": [{"kind": "triple", "triple": [30, 33, 48], "var": 5089, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 8], "weight": 4, "sign": 1}]}
+{"clause": [-5090], "records": [{"kind": "triple", "triple": [30, 33, 49], "var": 5090, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [5, 8], "weight": 2}]}
+{"clause": [-5091], "records": [{"kind": "triple", "triple": [30, 33, 50], "var": 5091, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [5, 8], "weight": 2}]}
+{"clause": [5092, 5740], "records": [{"kind": "triple", "triple": [30, 33, 54], "var": 5092, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 9], "weight": 4, "sign": -1}]}
+{"clause": [-5092, -5740], "records": [{"kind": "triple", "triple": [30, 33, 54], "var": 5092, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 9], "weight": 4, "sign": 1}]}
+{"clause": [-5093], "records": [{"kind": "triple", "triple": [30, 33, 55], "var": 5093, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [5, 9], "weight": 2}]}
+{"clause": [-5094], "records": [{"kind": "triple", "triple": [30, 33, 56], "var": 5094, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [5, 9], "weight": 2}]}
+{"clause": [-5097, 5737], "records": [{"kind": "triple", "triple": [30, 36, 39], "var": 5097, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 6], "weight": 4, "sign": -1}]}
+{"clause": [5097, -5737], "records": [{"kind": "triple", "triple": [30, 36, 39], "var": 5097, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 6], "weight": 4, "sign": 1}]}
+{"clause": [5118, -5737], "records": [{"kind": "triple", "triple": [30, 37, 38], "var": 5118, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 6], "weight": 2, "sign": 1}]}
+{"clause": [5119, -5737], "records": [{"kind": "triple", "triple": [30, 37, 39], "var": 5119, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 6], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [5, 6], "weight": 1}]}
+{"clause": [5120], "records": [{"kind": "triple", "triple": [30, 37, 40], "var": 5120, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [5, 6], "weight": 2}]}
+{"clause": [5140], "records": [{"kind": "triple", "triple": [30, 38, 39], "var": 5140, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [5, 6], "weight": 1}]}
+{"clause": [5141], "records": [{"kind": "triple", "triple": [30, 38, 40], "var": 5141, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [5, 6], "weight": 1}, {"kind": "phase_minus", "pair": [5, 6], "weight": 1}]}
+{"clause": [5142], "records": [{"kind": "triple", "triple": [30, 38, 41], "var": 5142, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [5, 6], "weight": 2}]}
+{"clause": [5161], "records": [{"kind": "triple", "triple": [30, 39, 40], "var": 5161, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [5, 6], "weight": 1}]}
+{"clause": [5162, 5737], "records": [{"kind": "triple", "triple": [30, 39, 41], "var": 5162, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 6], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [5, 6], "weight": 1}]}
+{"clause": [5181, 5737], "records": [{"kind": "triple", "triple": [30, 40, 41], "var": 5181, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 6], "weight": 2, "sign": -1}]}
+{"clause": [5220, -5738], "records": [{"kind": "triple", "triple": [30, 42, 45], "var": 5220, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 7], "weight": 4, "sign": 1}]}
+{"clause": [-5220, 5738], "records": [{"kind": "triple", "triple": [30, 42, 45], "var": 5220, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 7], "weight": 4, "sign": -1}]}
+{"clause": [5235, -5738], "records": [{"kind": "triple", "triple": [30, 43, 44], "var": 5235, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 7], "weight": 2, "sign": 1}]}
+{"clause": [5236, -5738], "records": [{"kind": "triple", "triple": [30, 43, 45], "var": 5236, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 7], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [5, 7], "weight": 1}]}
+{"clause": [5237], "records": [{"kind": "triple", "triple": [30, 43, 46], "var": 5237, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [5, 7], "weight": 2}]}
+{"clause": [5251], "records": [{"kind": "triple", "triple": [30, 44, 45], "var": 5251, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [5, 7], "weight": 1}]}
+{"clause": [5252], "records": [{"kind": "triple", "triple": [30, 44, 46], "var": 5252, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [5, 7], "weight": 1}, {"kind": "phase_minus", "pair": [5, 7], "weight": 1}]}
+{"clause": [5253], "records": [{"kind": "triple", "triple": [30, 44, 47], "var": 5253, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [5, 7], "weight": 2}]}
+{"clause": [5266], "records": [{"kind": "triple", "triple": [30, 45, 46], "var": 5266, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [5, 7], "weight": 1}]}
+{"clause": [5267, 5738], "records": [{"kind": "triple", "triple": [30, 45, 47], "var": 5267, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 7], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [5, 7], "weight": 1}]}
+{"clause": [5280, 5738], "records": [{"kind": "triple", "triple": [30, 46, 47], "var": 5280, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 7], "weight": 2, "sign": -1}]}
+{"clause": [5307, -5739], "records": [{"kind": "triple", "triple": [30, 48, 51], "var": 5307, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 8], "weight": 4, "sign": 1}]}
+{"clause": [-5307, 5739], "records": [{"kind": "triple", "triple": [30, 48, 51], "var": 5307, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 8], "weight": 4, "sign": -1}]}
+{"clause": [5316, -5739], "records": [{"kind": "triple", "triple": [30, 49, 50], "var": 5316, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 8], "weight": 2, "sign": 1}]}
+{"clause": [5317, -5739], "records": [{"kind": "triple", "triple": [30, 49, 51], "var": 5317, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 8], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [5, 8], "weight": 1}]}
+{"clause": [5318], "records": [{"kind": "triple", "triple": [30, 49, 52], "var": 5318, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [5, 8], "weight": 2}]}
+{"clause": [5326], "records": [{"kind": "triple", "triple": [30, 50, 51], "var": 5326, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [5, 8], "weight": 1}]}
+{"clause": [5327], "records": [{"kind": "triple", "triple": [30, 50, 52], "var": 5327, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [5, 8], "weight": 1}, {"kind": "phase_minus", "pair": [5, 8], "weight": 1}]}
+{"clause": [5328], "records": [{"kind": "triple", "triple": [30, 50, 53], "var": 5328, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [5, 8], "weight": 2}]}
+{"clause": [5335], "records": [{"kind": "triple", "triple": [30, 51, 52], "var": 5335, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [5, 8], "weight": 1}]}
+{"clause": [5336, 5739], "records": [{"kind": "triple", "triple": [30, 51, 53], "var": 5336, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 8], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [5, 8], "weight": 1}]}
+{"clause": [5343, 5739], "records": [{"kind": "triple", "triple": [30, 52, 53], "var": 5343, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 8], "weight": 2, "sign": -1}]}
+{"clause": [-5358, 5740], "records": [{"kind": "triple", "triple": [30, 54, 57], "var": 5358, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 9], "weight": 4, "sign": -1}]}
+{"clause": [5358, -5740], "records": [{"kind": "triple", "triple": [30, 54, 57], "var": 5358, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 9], "weight": 4, "sign": 1}]}
+{"clause": [5361, -5740], "records": [{"kind": "triple", "triple": [30, 55, 56], "var": 5361, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 9], "weight": 2, "sign": 1}]}
+{"clause": [5362, -5740], "records": [{"kind": "triple", "triple": [30, 55, 57], "var": 5362, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 9], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [5, 9], "weight": 1}]}
+{"clause": [5363], "records": [{"kind": "triple", "triple": [30, 55, 58], "var": 5363, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [5, 9], "weight": 2}]}
+{"clause": [5365], "records": [{"kind": "triple", "triple": [30, 56, 57], "var": 5365, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [5, 9], "weight": 1}]}
+{"clause": [5366], "records": [{"kind": "triple", "triple": [30, 56, 58], "var": 5366, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [5, 9], "weight": 1}, {"kind": "phase_minus", "pair": [5, 9], "weight": 1}]}
+{"clause": [5367], "records": [{"kind": "triple", "triple": [30, 56, 59], "var": 5367, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [5, 9], "weight": 2}]}
+{"clause": [5368], "records": [{"kind": "triple", "triple": [30, 57, 58], "var": 5368, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [5, 9], "weight": 1}]}
+{"clause": [5369, 5740], "records": [{"kind": "triple", "triple": [30, 57, 59], "var": 5369, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 9], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [5, 9], "weight": 1}]}
+{"clause": [5370, 5740], "records": [{"kind": "triple", "triple": [30, 58, 59], "var": 5370, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [5, 9], "weight": 2, "sign": -1}]}
+{"clause": [5371], "records": [{"kind": "triple", "triple": [36, 37, 38], "var": 5371, "sign": -1, "weight": 1}]}
+{"clause": [5372], "records": [{"kind": "triple", "triple": [36, 37, 39], "var": 5372, "sign": -1, "weight": 1}]}
+{"clause": [5373], "records": [{"kind": "triple", "triple": [36, 37, 40], "var": 5373, "sign": -1, "weight": 1}]}
+{"clause": [5376, -5741], "records": [{"kind": "triple", "triple": [36, 37, 44], "var": 5376, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 7], "weight": 2, "sign": 1}]}
+{"clause": [5377], "records": [{"kind": "triple", "triple": [36, 37, 45], "var": 5377, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [6, 7], "weight": 1}]}
+{"clause": [5378], "records": [{"kind": "triple", "triple": [36, 37, 46], "var": 5378, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [6, 7], "weight": 1}]}
+{"clause": [5379, 5741], "records": [{"kind": "triple", "triple": [36, 37, 47], "var": 5379, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 7], "weight": 2, "sign": -1}]}
+{"clause": [5382, -5742], "records": [{"kind": "triple", "triple": [36, 37, 50], "var": 5382, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 8], "weight": 2, "sign": 1}]}
+{"clause": [5383], "records": [{"kind": "triple", "triple": [36, 37, 51], "var": 5383, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [6, 8], "weight": 1}]}
+{"clause": [5384], "records": [{"kind": "triple", "triple": [36, 37, 52], "var": 5384, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [6, 8], "weight": 1}]}
+{"clause": [5385, 5742], "records": [{"kind": "triple", "triple": [36, 37, 53], "var": 5385, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 8], "weight": 2, "sign": -1}]}
+{"clause": [5388, -5743], "records": [{"kind": "triple", "triple": [36, 37, 56], "var": 5388, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 9], "weight": 2, "sign": 1}]}
+{"clause": [5389], "records": [{"kind": "triple", "triple": [36, 37, 57], "var": 5389, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [6, 9], "weight": 1}]}
+{"clause": [5390], "records": [{"kind": "triple", "triple": [36, 37, 58], "var": 5390, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [6, 9], "weight": 1}]}
+{"clause": [5391, 5743], "records": [{"kind": "triple", "triple": [36, 37, 59], "var": 5391, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 9], "weight": 2, "sign": -1}]}
+{"clause": [5392], "records": [{"kind": "triple", "triple": [36, 38, 40], "var": 5392, "sign": -1, "weight": 1}]}
+{"clause": [5396, -5741], "records": [{"kind": "triple", "triple": [36, 38, 45], "var": 5396, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 7], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [6, 7], "weight": 1}]}
+{"clause": [5397], "records": [{"kind": "triple", "triple": [36, 38, 46], "var": 5397, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [6, 7], "weight": 1}, {"kind": "phase_minus", "pair": [6, 7], "weight": 1}]}
+{"clause": [5398, 5741], "records": [{"kind": "triple", "triple": [36, 38, 47], "var": 5398, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 7], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [6, 7], "weight": 1}]}
+{"clause": [5402, -5742], "records": [{"kind": "triple", "triple": [36, 38, 51], "var": 5402, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 8], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [6, 8], "weight": 1}]}
+{"clause": [5403], "records": [{"kind": "triple", "triple": [36, 38, 52], "var": 5403, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [6, 8], "weight": 1}, {"kind": "phase_minus", "pair": [6, 8], "weight": 1}]}
+{"clause": [5404, 5742], "records": [{"kind": "triple", "triple": [36, 38, 53], "var": 5404, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 8], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [6, 8], "weight": 1}]}
+{"clause": [5408, -5743], "records": [{"kind": "triple", "triple": [36, 38, 57], "var": 5408, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 9], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [6, 9], "weight": 1}]}
+{"clause": [5409], "records": [{"kind": "triple", "triple": [36, 38, 58], "var": 5409, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [6, 9], "weight": 1}, {"kind": "phase_minus", "pair": [6, 9], "weight": 1}]}
+{"clause": [5410, 5743], "records": [{"kind": "triple", "triple": [36, 38, 59], "var": 5410, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 9], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [6, 9], "weight": 1}]}
+{"clause": [-5411, -5741], "records": [{"kind": "triple", "triple": [36, 39, 42], "var": 5411, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 7], "weight": 4, "sign": 1}]}
+{"clause": [5411, 5741], "records": [{"kind": "triple", "triple": [36, 39, 42], "var": 5411, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 7], "weight": 4, "sign": -1}]}
+{"clause": [-5412], "records": [{"kind": "triple", "triple": [36, 39, 43], "var": 5412, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [6, 7], "weight": 2}]}
+{"clause": [-5413], "records": [{"kind": "triple", "triple": [36, 39, 44], "var": 5413, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [6, 7], "weight": 2}]}
+{"clause": [5414, 5742], "records": [{"kind": "triple", "triple": [36, 39, 48], "var": 5414, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 8], "weight": 4, "sign": -1}]}
+{"clause": [-5414, -5742], "records": [{"kind": "triple", "triple": [36, 39, 48], "var": 5414, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 8], "weight": 4, "sign": 1}]}
+{"clause": [-5415], "records": [{"kind": "triple", "triple": [36, 39, 49], "var": 5415, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [6, 8], "weight": 2}]}
+{"clause": [-5416], "records": [{"kind": "triple", "triple": [36, 39, 50], "var": 5416, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [6, 8], "weight": 2}]}
+{"clause": [-5417, -5743], "records": [{"kind": "triple", "triple": [36, 39, 54], "var": 5417, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 9], "weight": 4, "sign": 1}]}
+{"clause": [5417, 5743], "records": [{"kind": "triple", "triple": [36, 39, 54], "var": 5417, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 9], "weight": 4, "sign": -1}]}
+{"clause": [-5418], "records": [{"kind": "triple", "triple": [36, 39, 55], "var": 5418, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [6, 9], "weight": 2}]}
+{"clause": [-5419], "records": [{"kind": "triple", "triple": [36, 39, 56], "var": 5419, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [6, 9], "weight": 2}]}
+{"clause": [-5422, 5741], "records": [{"kind": "triple", "triple": [36, 42, 45], "var": 5422, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 7], "weight": 4, "sign": -1}]}
+{"clause": [5422, -5741], "records": [{"kind": "triple", "triple": [36, 42, 45], "var": 5422, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 7], "weight": 4, "sign": 1}]}
+{"clause": [5437, -5741], "records": [{"kind": "triple", "triple": [36, 43, 44], "var": 5437, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 7], "weight": 2, "sign": 1}]}
+{"clause": [5438, -5741], "records": [{"kind": "triple", "triple": [36, 43, 45], "var": 5438, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 7], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [6, 7], "weight": 1}]}
+{"clause": [5439], "records": [{"kind": "triple", "triple": [36, 43, 46], "var": 5439, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [6, 7], "weight": 2}]}
+{"clause": [5453], "records": [{"kind": "triple", "triple": [36, 44, 45], "var": 5453, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [6, 7], "weight": 1}]}
+{"clause": [5454], "records": [{"kind": "triple", "triple": [36, 44, 46], "var": 5454, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [6, 7], "weight": 1}, {"kind": "phase_minus", "pair": [6, 7], "weight": 1}]}
+{"clause": [5455], "records": [{"kind": "triple", "triple": [36, 44, 47], "var": 5455, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [6, 7], "weight": 2}]}
+{"clause": [5468], "records": [{"kind": "triple", "triple": [36, 45, 46], "var": 5468, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [6, 7], "weight": 1}]}
+{"clause": [5469, 5741], "records": [{"kind": "triple", "triple": [36, 45, 47], "var": 5469, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 7], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [6, 7], "weight": 1}]}
+{"clause": [5482, 5741], "records": [{"kind": "triple", "triple": [36, 46, 47], "var": 5482, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 7], "weight": 2, "sign": -1}]}
+{"clause": [-5509, 5742], "records": [{"kind": "triple", "triple": [36, 48, 51], "var": 5509, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 8], "weight": 4, "sign": -1}]}
+{"clause": [5509, -5742], "records": [{"kind": "triple", "triple": [36, 48, 51], "var": 5509, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 8], "weight": 4, "sign": 1}]}
+{"clause": [5518, -5742], "records": [{"kind": "triple", "triple": [36, 49, 50], "var": 5518, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 8], "weight": 2, "sign": 1}]}
+{"clause": [5519, -5742], "records": [{"kind": "triple", "triple": [36, 49, 51], "var": 5519, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 8], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [6, 8], "weight": 1}]}
+{"clause": [5520], "records": [{"kind": "triple", "triple": [36, 49, 52], "var": 5520, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [6, 8], "weight": 2}]}
+{"clause": [5528], "records": [{"kind": "triple", "triple": [36, 50, 51], "var": 5528, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [6, 8], "weight": 1}]}
+{"clause": [5529], "records": [{"kind": "triple", "triple": [36, 50, 52], "var": 5529, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [6, 8], "weight": 1}, {"kind": "phase_minus", "pair": [6, 8], "weight": 1}]}
+{"clause": [5530], "records": [{"kind": "triple", "triple": [36, 50, 53], "var": 5530, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [6, 8], "weight": 2}]}
+{"clause": [5537], "records": [{"kind": "triple", "triple": [36, 51, 52], "var": 5537, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [6, 8], "weight": 1}]}
+{"clause": [5538, 5742], "records": [{"kind": "triple", "triple": [36, 51, 53], "var": 5538, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 8], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [6, 8], "weight": 1}]}
+{"clause": [5545, 5742], "records": [{"kind": "triple", "triple": [36, 52, 53], "var": 5545, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 8], "weight": 2, "sign": -1}]}
+{"clause": [-5560, 5743], "records": [{"kind": "triple", "triple": [36, 54, 57], "var": 5560, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 9], "weight": 4, "sign": -1}]}
+{"clause": [5560, -5743], "records": [{"kind": "triple", "triple": [36, 54, 57], "var": 5560, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 9], "weight": 4, "sign": 1}]}
+{"clause": [5563, -5743], "records": [{"kind": "triple", "triple": [36, 55, 56], "var": 5563, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 9], "weight": 2, "sign": 1}]}
+{"clause": [5564, -5743], "records": [{"kind": "triple", "triple": [36, 55, 57], "var": 5564, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 9], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [6, 9], "weight": 1}]}
+{"clause": [5565], "records": [{"kind": "triple", "triple": [36, 55, 58], "var": 5565, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [6, 9], "weight": 2}]}
+{"clause": [5567], "records": [{"kind": "triple", "triple": [36, 56, 57], "var": 5567, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [6, 9], "weight": 1}]}
+{"clause": [5568], "records": [{"kind": "triple", "triple": [36, 56, 58], "var": 5568, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [6, 9], "weight": 1}, {"kind": "phase_minus", "pair": [6, 9], "weight": 1}]}
+{"clause": [5569], "records": [{"kind": "triple", "triple": [36, 56, 59], "var": 5569, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [6, 9], "weight": 2}]}
+{"clause": [5570], "records": [{"kind": "triple", "triple": [36, 57, 58], "var": 5570, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [6, 9], "weight": 1}]}
+{"clause": [5571, 5743], "records": [{"kind": "triple", "triple": [36, 57, 59], "var": 5571, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 9], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [6, 9], "weight": 1}]}
+{"clause": [5572, 5743], "records": [{"kind": "triple", "triple": [36, 58, 59], "var": 5572, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [6, 9], "weight": 2, "sign": -1}]}
+{"clause": [5573], "records": [{"kind": "triple", "triple": [42, 43, 44], "var": 5573, "sign": -1, "weight": 1}]}
+{"clause": [5574], "records": [{"kind": "triple", "triple": [42, 43, 45], "var": 5574, "sign": -1, "weight": 1}]}
+{"clause": [5575], "records": [{"kind": "triple", "triple": [42, 43, 46], "var": 5575, "sign": -1, "weight": 1}]}
+{"clause": [5578, -5744], "records": [{"kind": "triple", "triple": [42, 43, 50], "var": 5578, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [7, 8], "weight": 2, "sign": 1}]}
+{"clause": [5579], "records": [{"kind": "triple", "triple": [42, 43, 51], "var": 5579, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [7, 8], "weight": 1}]}
+{"clause": [5580], "records": [{"kind": "triple", "triple": [42, 43, 52], "var": 5580, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [7, 8], "weight": 1}]}
+{"clause": [5581, 5744], "records": [{"kind": "triple", "triple": [42, 43, 53], "var": 5581, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [7, 8], "weight": 2, "sign": -1}]}
+{"clause": [5584, -5745], "records": [{"kind": "triple", "triple": [42, 43, 56], "var": 5584, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [7, 9], "weight": 2, "sign": 1}]}
+{"clause": [5585], "records": [{"kind": "triple", "triple": [42, 43, 57], "var": 5585, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [7, 9], "weight": 1}]}
+{"clause": [5586], "records": [{"kind": "triple", "triple": [42, 43, 58], "var": 5586, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [7, 9], "weight": 1}]}
+{"clause": [5587, 5745], "records": [{"kind": "triple", "triple": [42, 43, 59], "var": 5587, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [7, 9], "weight": 2, "sign": -1}]}
+{"clause": [5588], "records": [{"kind": "triple", "triple": [42, 44, 46], "var": 5588, "sign": -1, "weight": 1}]}
+{"clause": [5592, -5744], "records": [{"kind": "triple", "triple": [42, 44, 51], "var": 5592, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [7, 8], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [7, 8], "weight": 1}]}
+{"clause": [5593], "records": [{"kind": "triple", "triple": [42, 44, 52], "var": 5593, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [7, 8], "weight": 1}, {"kind": "phase_minus", "pair": [7, 8], "weight": 1}]}
+{"clause": [5594, 5744], "records": [{"kind": "triple", "triple": [42, 44, 53], "var": 5594, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [7, 8], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [7, 8], "weight": 1}]}
+{"clause": [5598, -5745], "records": [{"kind": "triple", "triple": [42, 44, 57], "var": 5598, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [7, 9], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [7, 9], "weight": 1}]}
+{"clause": [5599], "records": [{"kind": "triple", "triple": [42, 44, 58], "var": 5599, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [7, 9], "weight": 1}, {"kind": "phase_minus", "pair": [7, 9], "weight": 1}]}
+{"clause": [5600, 5745], "records": [{"kind": "triple", "triple": [42, 44, 59], "var": 5600, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [7, 9], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [7, 9], "weight": 1}]}
+{"clause": [5601, 5744], "records": [{"kind": "triple", "triple": [42, 45, 48], "var": 5601, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [7, 8], "weight": 4, "sign": -1}]}
+{"clause": [-5601, -5744], "records": [{"kind": "triple", "triple": [42, 45, 48], "var": 5601, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [7, 8], "weight": 4, "sign": 1}]}
+{"clause": [-5602], "records": [{"kind": "triple", "triple": [42, 45, 49], "var": 5602, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [7, 8], "weight": 2}]}
+{"clause": [-5603], "records": [{"kind": "triple", "triple": [42, 45, 50], "var": 5603, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [7, 8], "weight": 2}]}
+{"clause": [-5604, -5745], "records": [{"kind": "triple", "triple": [42, 45, 54], "var": 5604, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [7, 9], "weight": 4, "sign": 1}]}
+{"clause": [5604, 5745], "records": [{"kind": "triple", "triple": [42, 45, 54], "var": 5604, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [7, 9], "weight": 4, "sign": -1}]}
+{"clause": [-5605], "records": [{"kind": "triple", "triple": [42, 45, 55], "var": 5605, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [7, 9], "weight": 2}]}
+{"clause": [-5606], "records": [{"kind": "triple", "triple": [42, 45, 56], "var": 5606, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [7, 9], "weight": 2}]}
+{"clause": [-5609, 5744], "records": [{"kind": "triple", "triple": [42, 48, 51], "var": 5609, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [7, 8], "weight": 4, "sign": -1}]}
+{"clause": [5609, -5744], "records": [{"kind": "triple", "triple": [42, 48, 51], "var": 5609, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [7, 8], "weight": 4, "sign": 1}]}
+{"clause": [5618, -5744], "records": [{"kind": "triple", "triple": [42, 49, 50], "var": 5618, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [7, 8], "weight": 2, "sign": 1}]}
+{"clause": [5619, -5744], "records": [{"kind": "triple", "triple": [42, 49, 51], "var": 5619, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [7, 8], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [7, 8], "weight": 1}]}
+{"clause": [5620], "records": [{"kind": "triple", "triple": [42, 49, 52], "var": 5620, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [7, 8], "weight": 2}]}
+{"clause": [5628], "records": [{"kind": "triple", "triple": [42, 50, 51], "var": 5628, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [7, 8], "weight": 1}]}
+{"clause": [5629], "records": [{"kind": "triple", "triple": [42, 50, 52], "var": 5629, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [7, 8], "weight": 1}, {"kind": "phase_minus", "pair": [7, 8], "weight": 1}]}
+{"clause": [5630], "records": [{"kind": "triple", "triple": [42, 50, 53], "var": 5630, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [7, 8], "weight": 2}]}
+{"clause": [5637], "records": [{"kind": "triple", "triple": [42, 51, 52], "var": 5637, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [7, 8], "weight": 1}]}
+{"clause": [5638, 5744], "records": [{"kind": "triple", "triple": [42, 51, 53], "var": 5638, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [7, 8], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [7, 8], "weight": 1}]}
+{"clause": [5645, 5744], "records": [{"kind": "triple", "triple": [42, 52, 53], "var": 5645, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [7, 8], "weight": 2, "sign": -1}]}
+{"clause": [5660, -5745], "records": [{"kind": "triple", "triple": [42, 54, 57], "var": 5660, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [7, 9], "weight": 4, "sign": 1}]}
+{"clause": [-5660, 5745], "records": [{"kind": "triple", "triple": [42, 54, 57], "var": 5660, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [7, 9], "weight": 4, "sign": -1}]}
+{"clause": [5663, -5745], "records": [{"kind": "triple", "triple": [42, 55, 56], "var": 5663, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [7, 9], "weight": 2, "sign": 1}]}
+{"clause": [5664, -5745], "records": [{"kind": "triple", "triple": [42, 55, 57], "var": 5664, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [7, 9], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [7, 9], "weight": 1}]}
+{"clause": [5665], "records": [{"kind": "triple", "triple": [42, 55, 58], "var": 5665, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [7, 9], "weight": 2}]}
+{"clause": [5667], "records": [{"kind": "triple", "triple": [42, 56, 57], "var": 5667, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [7, 9], "weight": 1}]}
+{"clause": [5668], "records": [{"kind": "triple", "triple": [42, 56, 58], "var": 5668, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [7, 9], "weight": 1}, {"kind": "phase_minus", "pair": [7, 9], "weight": 1}]}
+{"clause": [5669], "records": [{"kind": "triple", "triple": [42, 56, 59], "var": 5669, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [7, 9], "weight": 2}]}
+{"clause": [5670], "records": [{"kind": "triple", "triple": [42, 57, 58], "var": 5670, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [7, 9], "weight": 1}]}
+{"clause": [5671, 5745], "records": [{"kind": "triple", "triple": [42, 57, 59], "var": 5671, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [7, 9], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [7, 9], "weight": 1}]}
+{"clause": [5672, 5745], "records": [{"kind": "triple", "triple": [42, 58, 59], "var": 5672, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [7, 9], "weight": 2, "sign": -1}]}
+{"clause": [5673], "records": [{"kind": "triple", "triple": [48, 49, 50], "var": 5673, "sign": -1, "weight": 1}]}
+{"clause": [5674], "records": [{"kind": "triple", "triple": [48, 49, 51], "var": 5674, "sign": -1, "weight": 1}]}
+{"clause": [5675], "records": [{"kind": "triple", "triple": [48, 49, 52], "var": 5675, "sign": -1, "weight": 1}]}
+{"clause": [5678, -5746], "records": [{"kind": "triple", "triple": [48, 49, 56], "var": 5678, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [8, 9], "weight": 2, "sign": 1}]}
+{"clause": [5679], "records": [{"kind": "triple", "triple": [48, 49, 57], "var": 5679, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [8, 9], "weight": 1}]}
+{"clause": [5680], "records": [{"kind": "triple", "triple": [48, 49, 58], "var": 5680, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [8, 9], "weight": 1}]}
+{"clause": [5681, 5746], "records": [{"kind": "triple", "triple": [48, 49, 59], "var": 5681, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [8, 9], "weight": 2, "sign": -1}]}
+{"clause": [5682], "records": [{"kind": "triple", "triple": [48, 50, 52], "var": 5682, "sign": -1, "weight": 1}]}
+{"clause": [5686, -5746], "records": [{"kind": "triple", "triple": [48, 50, 57], "var": 5686, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [8, 9], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [8, 9], "weight": 1}]}
+{"clause": [5687], "records": [{"kind": "triple", "triple": [48, 50, 58], "var": 5687, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [8, 9], "weight": 1}, {"kind": "phase_minus", "pair": [8, 9], "weight": 1}]}
+{"clause": [5688, 5746], "records": [{"kind": "triple", "triple": [48, 50, 59], "var": 5688, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [8, 9], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [8, 9], "weight": 1}]}
+{"clause": [-5689, -5746], "records": [{"kind": "triple", "triple": [48, 51, 54], "var": 5689, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [8, 9], "weight": 4, "sign": 1}]}
+{"clause": [5689, 5746], "records": [{"kind": "triple", "triple": [48, 51, 54], "var": 5689, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [8, 9], "weight": 4, "sign": -1}]}
+{"clause": [-5690], "records": [{"kind": "triple", "triple": [48, 51, 55], "var": 5690, "sign": 1, "weight": 1}, {"kind": "phase_plus", "pair": [8, 9], "weight": 2}]}
+{"clause": [-5691], "records": [{"kind": "triple", "triple": [48, 51, 56], "var": 5691, "sign": 1, "weight": 1}, {"kind": "phase_minus", "pair": [8, 9], "weight": 2}]}
+{"clause": [-5694, 5746], "records": [{"kind": "triple", "triple": [48, 54, 57], "var": 5694, "sign": 1, "weight": 1}, {"kind": "phase_sign", "pair": [8, 9], "weight": 4, "sign": -1}]}
+{"clause": [5694, -5746], "records": [{"kind": "triple", "triple": [48, 54, 57], "var": 5694, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [8, 9], "weight": 4, "sign": 1}]}
+{"clause": [5697, -5746], "records": [{"kind": "triple", "triple": [48, 55, 56], "var": 5697, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [8, 9], "weight": 2, "sign": 1}]}
+{"clause": [5698, -5746], "records": [{"kind": "triple", "triple": [48, 55, 57], "var": 5698, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [8, 9], "weight": 4, "sign": 1}, {"kind": "phase_minus", "pair": [8, 9], "weight": 1}]}
+{"clause": [5699], "records": [{"kind": "triple", "triple": [48, 55, 58], "var": 5699, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [8, 9], "weight": 2}]}
+{"clause": [5701], "records": [{"kind": "triple", "triple": [48, 56, 57], "var": 5701, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [8, 9], "weight": 1}]}
+{"clause": [5702], "records": [{"kind": "triple", "triple": [48, 56, 58], "var": 5702, "sign": -1, "weight": 1}, {"kind": "phase_plus", "pair": [8, 9], "weight": 1}, {"kind": "phase_minus", "pair": [8, 9], "weight": 1}]}
+{"clause": [5703], "records": [{"kind": "triple", "triple": [48, 56, 59], "var": 5703, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [8, 9], "weight": 2}]}
+{"clause": [5704], "records": [{"kind": "triple", "triple": [48, 57, 58], "var": 5704, "sign": -1, "weight": 1}, {"kind": "phase_minus", "pair": [8, 9], "weight": 1}]}
+{"clause": [5705, 5746], "records": [{"kind": "triple", "triple": [48, 57, 59], "var": 5705, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [8, 9], "weight": 2, "sign": -1}, {"kind": "phase_minus", "pair": [8, 9], "weight": 1}]}
+{"clause": [5706, 5746], "records": [{"kind": "triple", "triple": [48, 58, 59], "var": 5706, "sign": -1, "weight": 1}, {"kind": "phase_sign", "pair": [8, 9], "weight": 2, "sign": -1}]}
+{"clause": [5707], "records": [{"kind": "triple", "triple": [54, 55, 56], "var": 5707, "sign": -1, "weight": 1}]}
+{"clause": [5708], "records": [{"kind": "triple", "triple": [54, 55, 57], "var": 5708, "sign": -1, "weight": 1}]}
+{"clause": [5709], "records": [{"kind": "triple", "triple": [54, 55, 58], "var": 5709, "sign": -1, "weight": 1}]}
+{"clause": [5710], "records": [{"kind": "triple", "triple": [54, 56, 58], "var": 5710, "sign": -1, "weight": 1}]}
