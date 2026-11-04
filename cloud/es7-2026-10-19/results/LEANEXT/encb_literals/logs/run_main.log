@@ -1,0 +1,151 @@
+gen_b2.py sha256 3d47459a9723b5f7344205f3f2d7463e0be00b41c5070155e5da8dbf78fd40ba
+dropped statements (read sys.argv): ['m, K, t = map(int, sys.argv[1:4])', 'out = sys.argv[4]']
+extracted canon: sha256(source) = 3cacbaef952e07f808dd1dd733050da832d322e60ec693abd334e6f8b77e0451
+extracted perm_sign: sha256(source) = 1ad9c834d123456b76cc6b613e1afbc3072053aec59833cd1078cec4bfa86dcf
+extracted olit: sha256(source) = 8f5a49c359fcc6a9eef9af6a6db981fc5b90eb111c131c8b00d70ca08c08b1b5
+nested m=4 t=2 seed=101: rejected=0 orbit vars=14 Z_m-orbits=14 canon-not-invariant=0 ordered triples=336 mismatches=0 min|orient|=1.056e-01 | non-chain clauses=9 violated=0
+free   m=4 t=2 seed=101: rejected=0 orbit vars=14 Z_m-orbits=14 canon-not-invariant=0 ordered triples=336 mismatches=0 min|orient|=6.441e-02
+nested m=4 t=2 seed=102: rejected=0 orbit vars=14 Z_m-orbits=14 canon-not-invariant=0 ordered triples=336 mismatches=0 min|orient|=4.328e-03 | non-chain clauses=9 violated=0
+free   m=4 t=2 seed=102: rejected=0 orbit vars=14 Z_m-orbits=14 canon-not-invariant=0 ordered triples=336 mismatches=0 min|orient|=5.995e-02
+nested m=4 t=2 seed=103: rejected=0 orbit vars=14 Z_m-orbits=14 canon-not-invariant=0 ordered triples=336 mismatches=0 min|orient|=4.970e-02 | non-chain clauses=9 violated=0
+free   m=4 t=2 seed=103: rejected=0 orbit vars=14 Z_m-orbits=14 canon-not-invariant=0 ordered triples=336 mismatches=0 min|orient|=2.882e-02
+nested m=4 t=3 seed=104: rejected=0 orbit vars=55 Z_m-orbits=55 canon-not-invariant=0 ordered triples=1320 mismatches=0 min|orient|=7.187e-03 | non-chain clauses=38 violated=0
+free   m=4 t=3 seed=104: rejected=0 orbit vars=55 Z_m-orbits=55 canon-not-invariant=0 ordered triples=1320 mismatches=0 min|orient|=5.311e-03
+nested m=4 t=3 seed=105: rejected=0 orbit vars=55 Z_m-orbits=55 canon-not-invariant=0 ordered triples=1320 mismatches=0 min|orient|=4.867e-03 | non-chain clauses=38 violated=0
+free   m=4 t=3 seed=105: rejected=0 orbit vars=55 Z_m-orbits=55 canon-not-invariant=0 ordered triples=1320 mismatches=0 min|orient|=1.398e-02
+nested m=4 t=3 seed=106: rejected=0 orbit vars=55 Z_m-orbits=55 canon-not-invariant=0 ordered triples=1320 mismatches=0 min|orient|=1.528e-02 | non-chain clauses=38 violated=0
+free   m=4 t=3 seed=106: rejected=0 orbit vars=55 Z_m-orbits=55 canon-not-invariant=0 ordered triples=1320 mismatches=0 min|orient|=4.798e-02
+nested m=4 t=4 seed=107: rejected=0 orbit vars=140 Z_m-orbits=140 canon-not-invariant=0 ordered triples=3360 mismatches=0 min|orient|=5.616e-07 | non-chain clauses=127 violated=0
+free   m=4 t=4 seed=107: rejected=0 orbit vars=140 Z_m-orbits=140 canon-not-invariant=0 ordered triples=3360 mismatches=0 min|orient|=6.636e-03
+nested m=4 t=4 seed=108: rejected=0 orbit vars=140 Z_m-orbits=140 canon-not-invariant=0 ordered triples=3360 mismatches=0 min|orient|=2.939e-03 | non-chain clauses=127 violated=0
+free   m=4 t=4 seed=108: rejected=0 orbit vars=140 Z_m-orbits=140 canon-not-invariant=0 ordered triples=3360 mismatches=0 min|orient|=2.140e-03
+nested m=4 t=4 seed=109: rejected=0 orbit vars=140 Z_m-orbits=140 canon-not-invariant=0 ordered triples=3360 mismatches=0 min|orient|=3.898e-04 | non-chain clauses=127 violated=0
+free   m=4 t=4 seed=109: rejected=0 orbit vars=140 Z_m-orbits=140 canon-not-invariant=0 ordered triples=3360 mismatches=0 min|orient|=1.974e-03
+nested m=4 t=5 seed=110: rejected=0 orbit vars=285 Z_m-orbits=285 canon-not-invariant=0 ordered triples=6840 mismatches=0 min|orient|=2.510e-03 | non-chain clauses=316 violated=0
+free   m=4 t=5 seed=110: rejected=0 orbit vars=285 Z_m-orbits=285 canon-not-invariant=0 ordered triples=6840 mismatches=0 min|orient|=4.245e-04
+nested m=4 t=5 seed=111: rejected=0 orbit vars=285 Z_m-orbits=285 canon-not-invariant=0 ordered triples=6840 mismatches=0 min|orient|=4.561e-04 | non-chain clauses=316 violated=0
+free   m=4 t=5 seed=111: rejected=0 orbit vars=285 Z_m-orbits=285 canon-not-invariant=0 ordered triples=6840 mismatches=0 min|orient|=1.015e-03
+nested m=4 t=5 seed=112: rejected=0 orbit vars=285 Z_m-orbits=285 canon-not-invariant=0 ordered triples=6840 mismatches=0 min|orient|=3.138e-03 | non-chain clauses=316 violated=0
+free   m=4 t=5 seed=112: rejected=0 orbit vars=285 Z_m-orbits=285 canon-not-invariant=0 ordered triples=6840 mismatches=0 min|orient|=1.492e-03
+nested m=4 t=6 seed=113: rejected=0 orbit vars=506 Z_m-orbits=506 canon-not-invariant=0 ordered triples=12144 mismatches=0 min|orient|=3.471e-04 | non-chain clauses=645 violated=0
+free   m=4 t=6 seed=113: rejected=0 orbit vars=506 Z_m-orbits=506 canon-not-invariant=0 ordered triples=12144 mismatches=0 min|orient|=2.710e-03
+nested m=4 t=6 seed=114: rejected=0 orbit vars=506 Z_m-orbits=506 canon-not-invariant=0 ordered triples=12144 mismatches=0 min|orient|=8.473e-04 | non-chain clauses=645 violated=0
+free   m=4 t=6 seed=114: rejected=0 orbit vars=506 Z_m-orbits=506 canon-not-invariant=0 ordered triples=12144 mismatches=0 min|orient|=5.302e-04
+nested m=4 t=6 seed=115: rejected=0 orbit vars=506 Z_m-orbits=506 canon-not-invariant=0 ordered triples=12144 mismatches=0 min|orient|=3.007e-04 | non-chain clauses=645 violated=0
+free   m=4 t=6 seed=115: rejected=0 orbit vars=506 Z_m-orbits=506 canon-not-invariant=0 ordered triples=12144 mismatches=0 min|orient|=1.909e-03
+nested m=4 t=7 seed=116: rejected=0 orbit vars=819 Z_m-orbits=819 canon-not-invariant=0 ordered triples=19656 mismatches=0 min|orient|=6.594e-04 | non-chain clauses=1154 violated=0
+free   m=4 t=7 seed=116: rejected=0 orbit vars=819 Z_m-orbits=819 canon-not-invariant=0 ordered triples=19656 mismatches=0 min|orient|=4.503e-04
+nested m=4 t=7 seed=117: rejected=0 orbit vars=819 Z_m-orbits=819 canon-not-invariant=0 ordered triples=19656 mismatches=0 min|orient|=1.790e-04 | non-chain clauses=1154 violated=0
+free   m=4 t=7 seed=117: rejected=0 orbit vars=819 Z_m-orbits=819 canon-not-invariant=0 ordered triples=19656 mismatches=0 min|orient|=9.132e-04
+nested m=4 t=7 seed=118: rejected=0 orbit vars=819 Z_m-orbits=819 canon-not-invariant=0 ordered triples=19656 mismatches=0 min|orient|=1.773e-05 | non-chain clauses=1154 violated=0
+free   m=4 t=7 seed=118: rejected=0 orbit vars=819 Z_m-orbits=819 canon-not-invariant=0 ordered triples=19656 mismatches=0 min|orient|=1.844e-03
+nested m=5 t=2 seed=119: rejected=0 orbit vars=24 Z_m-orbits=24 canon-not-invariant=0 ordered triples=720 mismatches=0 min|orient|=2.975e-02 | non-chain clauses=24 violated=0
+free   m=5 t=2 seed=119: rejected=0 orbit vars=24 Z_m-orbits=24 canon-not-invariant=0 ordered triples=720 mismatches=0 min|orient|=4.941e-02
+nested m=5 t=2 seed=120: rejected=0 orbit vars=24 Z_m-orbits=24 canon-not-invariant=0 ordered triples=720 mismatches=0 min|orient|=1.394e-01 | non-chain clauses=24 violated=0
+free   m=5 t=2 seed=120: rejected=0 orbit vars=24 Z_m-orbits=24 canon-not-invariant=0 ordered triples=720 mismatches=0 min|orient|=1.548e-03
+nested m=5 t=2 seed=121: rejected=0 orbit vars=24 Z_m-orbits=24 canon-not-invariant=0 ordered triples=720 mismatches=0 min|orient|=4.801e-02 | non-chain clauses=24 violated=0
+free   m=5 t=2 seed=121: rejected=0 orbit vars=24 Z_m-orbits=24 canon-not-invariant=0 ordered triples=720 mismatches=0 min|orient|=8.882e-03
+nested m=5 t=3 seed=122: rejected=0 orbit vars=91 Z_m-orbits=91 canon-not-invariant=0 ordered triples=2730 mismatches=0 min|orient|=1.431e-02 | non-chain clauses=157 violated=0
+free   m=5 t=3 seed=122: rejected=0 orbit vars=91 Z_m-orbits=91 canon-not-invariant=0 ordered triples=2730 mismatches=0 min|orient|=7.791e-03
+nested m=5 t=3 seed=123: rejected=0 orbit vars=91 Z_m-orbits=91 canon-not-invariant=0 ordered triples=2730 mismatches=0 min|orient|=8.209e-03 | non-chain clauses=157 violated=0
+free   m=5 t=3 seed=123: rejected=0 orbit vars=91 Z_m-orbits=91 canon-not-invariant=0 ordered triples=2730 mismatches=0 min|orient|=2.267e-03
+nested m=5 t=3 seed=124: rejected=0 orbit vars=91 Z_m-orbits=91 canon-not-invariant=0 ordered triples=2730 mismatches=0 min|orient|=5.189e-03 | non-chain clauses=157 violated=0
+free   m=5 t=3 seed=124: rejected=0 orbit vars=91 Z_m-orbits=91 canon-not-invariant=0 ordered triples=2730 mismatches=0 min|orient|=1.945e-02
+nested m=5 t=4 seed=125: rejected=0 orbit vars=228 Z_m-orbits=228 canon-not-invariant=0 ordered triples=6840 mismatches=0 min|orient|=1.289e-03 | non-chain clauses=909 violated=0
+free   m=5 t=4 seed=125: rejected=0 orbit vars=228 Z_m-orbits=228 canon-not-invariant=0 ordered triples=6840 mismatches=0 min|orient|=1.753e-03
+nested m=5 t=4 seed=126: rejected=0 orbit vars=228 Z_m-orbits=228 canon-not-invariant=0 ordered triples=6840 mismatches=0 min|orient|=9.423e-03 | non-chain clauses=909 violated=0
+free   m=5 t=4 seed=126: rejected=0 orbit vars=228 Z_m-orbits=228 canon-not-invariant=0 ordered triples=6840 mismatches=0 min|orient|=1.280e-04
+nested m=5 t=4 seed=127: rejected=0 orbit vars=228 Z_m-orbits=228 canon-not-invariant=0 ordered triples=6840 mismatches=0 min|orient|=3.805e-04 | non-chain clauses=909 violated=0
+free   m=5 t=4 seed=127: rejected=0 orbit vars=228 Z_m-orbits=228 canon-not-invariant=0 ordered triples=6840 mismatches=0 min|orient|=8.120e-04
+nested m=5 t=5 seed=128: rejected=0 orbit vars=460 Z_m-orbits=460 canon-not-invariant=0 ordered triples=13800 mismatches=0 min|orient|=6.608e-05 | non-chain clauses=2788 violated=0
+free   m=5 t=5 seed=128: rejected=0 orbit vars=460 Z_m-orbits=460 canon-not-invariant=0 ordered triples=13800 mismatches=0 min|orient|=3.211e-04
+nested m=5 t=5 seed=129: rejected=0 orbit vars=460 Z_m-orbits=460 canon-not-invariant=0 ordered triples=13800 mismatches=0 min|orient|=1.125e-03 | non-chain clauses=2788 violated=0
+free   m=5 t=5 seed=129: rejected=0 orbit vars=460 Z_m-orbits=460 canon-not-invariant=0 ordered triples=13800 mismatches=0 min|orient|=9.103e-04
+nested m=5 t=5 seed=130: rejected=0 orbit vars=460 Z_m-orbits=460 canon-not-invariant=0 ordered triples=13800 mismatches=0 min|orient|=1.189e-03 | non-chain clauses=2788 violated=0
+free   m=5 t=5 seed=130: rejected=0 orbit vars=460 Z_m-orbits=460 canon-not-invariant=0 ordered triples=13800 mismatches=0 min|orient|=6.848e-04
+nested m=5 t=6 seed=131: rejected=0 orbit vars=812 Z_m-orbits=812 canon-not-invariant=0 ordered triples=24360 mismatches=0 min|orient|=1.346e-05 | non-chain clauses=6302 violated=0
+free   m=5 t=6 seed=131: rejected=0 orbit vars=812 Z_m-orbits=812 canon-not-invariant=0 ordered triples=24360 mismatches=0 min|orient|=3.810e-04
+nested m=5 t=6 seed=132: rejected=0 orbit vars=812 Z_m-orbits=812 canon-not-invariant=0 ordered triples=24360 mismatches=0 min|orient|=5.916e-05 | non-chain clauses=6302 violated=0
+free   m=5 t=6 seed=132: rejected=0 orbit vars=812 Z_m-orbits=812 canon-not-invariant=0 ordered triples=24360 mismatches=0 min|orient|=9.420e-06
+nested m=5 t=6 seed=133: rejected=0 orbit vars=812 Z_m-orbits=812 canon-not-invariant=0 ordered triples=24360 mismatches=0 min|orient|=4.394e-04 | non-chain clauses=6302 violated=0
+free   m=5 t=6 seed=133: rejected=0 orbit vars=812 Z_m-orbits=812 canon-not-invariant=0 ordered triples=24360 mismatches=0 min|orient|=2.149e-04
+nested m=5 t=7 seed=134: rejected=0 orbit vars=1309 Z_m-orbits=1309 canon-not-invariant=0 ordered triples=39270 mismatches=0 min|orient|=6.990e-05 | non-chain clauses=11959 violated=0
+free   m=5 t=7 seed=134: rejected=0 orbit vars=1309 Z_m-orbits=1309 canon-not-invariant=0 ordered triples=39270 mismatches=0 min|orient|=1.959e-05
+nested m=5 t=7 seed=135: rejected=0 orbit vars=1309 Z_m-orbits=1309 canon-not-invariant=0 ordered triples=39270 mismatches=0 min|orient|=2.421e-04 | non-chain clauses=11959 violated=0
+free   m=5 t=7 seed=135: rejected=0 orbit vars=1309 Z_m-orbits=1309 canon-not-invariant=0 ordered triples=39270 mismatches=0 min|orient|=1.569e-04
+nested m=5 t=7 seed=136: rejected=0 orbit vars=1309 Z_m-orbits=1309 canon-not-invariant=0 ordered triples=39270 mismatches=0 min|orient|=3.686e-04 | non-chain clauses=11959 violated=0
+free   m=5 t=7 seed=136: rejected=0 orbit vars=1309 Z_m-orbits=1309 canon-not-invariant=0 ordered triples=39270 mismatches=0 min|orient|=8.905e-04
+nested m=6 t=2 seed=137: rejected=0 orbit vars=38 Z_m-orbits=38 canon-not-invariant=0 ordered triples=1320 mismatches=0 min|orient|=8.362e-02 | non-chain clauses=25 violated=0
+free   m=6 t=2 seed=137: rejected=0 orbit vars=38 Z_m-orbits=38 canon-not-invariant=0 ordered triples=1320 mismatches=0 min|orient|=5.234e-02
+nested m=6 t=2 seed=138: rejected=0 orbit vars=38 Z_m-orbits=38 canon-not-invariant=0 ordered triples=1320 mismatches=0 min|orient|=5.249e-04 | non-chain clauses=25 violated=0
+free   m=6 t=2 seed=138: rejected=0 orbit vars=38 Z_m-orbits=38 canon-not-invariant=0 ordered triples=1320 mismatches=0 min|orient|=9.677e-03
+nested m=6 t=2 seed=139: rejected=0 orbit vars=38 Z_m-orbits=38 canon-not-invariant=0 ordered triples=1320 mismatches=0 min|orient|=2.729e-03 | non-chain clauses=25 violated=0
+free   m=6 t=2 seed=139: rejected=0 orbit vars=38 Z_m-orbits=38 canon-not-invariant=0 ordered triples=1320 mismatches=0 min|orient|=1.509e-03
+nested m=6 t=3 seed=140: rejected=0 orbit vars=138 Z_m-orbits=138 canon-not-invariant=0 ordered triples=4896 mismatches=0 min|orient|=1.153e-02 | non-chain clauses=93 violated=0
+free   m=6 t=3 seed=140: rejected=0 orbit vars=138 Z_m-orbits=138 canon-not-invariant=0 ordered triples=4896 mismatches=0 min|orient|=5.429e-04
+nested m=6 t=3 seed=141: rejected=0 orbit vars=138 Z_m-orbits=138 canon-not-invariant=0 ordered triples=4896 mismatches=0 min|orient|=8.389e-04 | non-chain clauses=93 violated=0
+free   m=6 t=3 seed=141: rejected=0 orbit vars=138 Z_m-orbits=138 canon-not-invariant=0 ordered triples=4896 mismatches=0 min|orient|=5.599e-04
+nested m=6 t=3 seed=142: rejected=0 orbit vars=138 Z_m-orbits=138 canon-not-invariant=0 ordered triples=4896 mismatches=0 min|orient|=7.845e-03 | non-chain clauses=93 violated=0
+free   m=6 t=3 seed=142: rejected=0 orbit vars=138 Z_m-orbits=138 canon-not-invariant=0 ordered triples=4896 mismatches=0 min|orient|=2.240e-03
+nested m=6 t=4 seed=143: rejected=0 orbit vars=340 Z_m-orbits=340 canon-not-invariant=0 ordered triples=12144 mismatches=0 min|orient|=2.436e-03 | non-chain clauses=276 violated=0
+free   m=6 t=4 seed=143: rejected=0 orbit vars=340 Z_m-orbits=340 canon-not-invariant=0 ordered triples=12144 mismatches=0 min|orient|=6.431e-06
+nested m=6 t=4 seed=144: rejected=0 orbit vars=340 Z_m-orbits=340 canon-not-invariant=0 ordered triples=12144 mismatches=0 min|orient|=3.089e-03 | non-chain clauses=276 violated=0
+free   m=6 t=4 seed=144: rejected=0 orbit vars=340 Z_m-orbits=340 canon-not-invariant=0 ordered triples=12144 mismatches=0 min|orient|=1.110e-04
+nested m=6 t=4 seed=145: rejected=0 orbit vars=340 Z_m-orbits=340 canon-not-invariant=0 ordered triples=12144 mismatches=0 min|orient|=6.893e-04 | non-chain clauses=276 violated=0
+free   m=6 t=4 seed=145: rejected=0 orbit vars=340 Z_m-orbits=340 canon-not-invariant=0 ordered triples=12144 mismatches=0 min|orient|=1.613e-04
+nested m=6 t=5 seed=146: rejected=0 orbit vars=680 Z_m-orbits=680 canon-not-invariant=0 ordered triples=24360 mismatches=0 min|orient|=2.856e-03 | non-chain clauses=644 violated=0
+free   m=6 t=5 seed=146: rejected=0 orbit vars=680 Z_m-orbits=680 canon-not-invariant=0 ordered triples=24360 mismatches=0 min|orient|=5.519e-04
+nested m=6 t=5 seed=147: rejected=0 orbit vars=680 Z_m-orbits=680 canon-not-invariant=0 ordered triples=24360 mismatches=0 min|orient|=6.538e-04 | non-chain clauses=644 violated=0
+free   m=6 t=5 seed=147: rejected=0 orbit vars=680 Z_m-orbits=680 canon-not-invariant=0 ordered triples=24360 mismatches=0 min|orient|=1.290e-03
+nested m=6 t=5 seed=148: rejected=0 orbit vars=680 Z_m-orbits=680 canon-not-invariant=0 ordered triples=24360 mismatches=0 min|orient|=1.366e-03 | non-chain clauses=644 violated=0
+free   m=6 t=5 seed=148: rejected=0 orbit vars=680 Z_m-orbits=680 canon-not-invariant=0 ordered triples=24360 mismatches=0 min|orient|=7.155e-04
+nested m=6 t=6 seed=149: rejected=0 orbit vars=1194 Z_m-orbits=1194 canon-not-invariant=0 ordered triples=42840 mismatches=0 min|orient|=8.355e-04 | non-chain clauses=1267 violated=0
+free   m=6 t=6 seed=149: rejected=0 orbit vars=1194 Z_m-orbits=1194 canon-not-invariant=0 ordered triples=42840 mismatches=0 min|orient|=3.375e-04
+nested m=6 t=6 seed=150: rejected=0 orbit vars=1194 Z_m-orbits=1194 canon-not-invariant=0 ordered triples=42840 mismatches=0 min|orient|=5.477e-05 | non-chain clauses=1267 violated=0
+free   m=6 t=6 seed=150: rejected=0 orbit vars=1194 Z_m-orbits=1194 canon-not-invariant=0 ordered triples=42840 mismatches=0 min|orient|=9.094e-05
+nested m=6 t=6 seed=151: rejected=0 orbit vars=1194 Z_m-orbits=1194 canon-not-invariant=0 ordered triples=42840 mismatches=0 min|orient|=5.791e-05 | non-chain clauses=1267 violated=0
+free   m=6 t=6 seed=151: rejected=0 orbit vars=1194 Z_m-orbits=1194 canon-not-invariant=0 ordered triples=42840 mismatches=0 min|orient|=8.842e-04
+nested m=6 t=7 seed=152: rejected=0 orbit vars=1918 Z_m-orbits=1918 canon-not-invariant=0 ordered triples=68880 mismatches=0 min|orient|=8.690e-05 | non-chain clauses=2215 violated=0
+free   m=6 t=7 seed=152: rejected=0 orbit vars=1918 Z_m-orbits=1918 canon-not-invariant=0 ordered triples=68880 mismatches=0 min|orient|=1.407e-04
+nested m=6 t=7 seed=153: rejected=0 orbit vars=1918 Z_m-orbits=1918 canon-not-invariant=0 ordered triples=68880 mismatches=0 min|orient|=6.688e-05 | non-chain clauses=2215 violated=0
+free   m=6 t=7 seed=153: rejected=0 orbit vars=1918 Z_m-orbits=1918 canon-not-invariant=0 ordered triples=68880 mismatches=0 min|orient|=5.177e-04
+nested m=6 t=7 seed=154: rejected=0 orbit vars=1918 Z_m-orbits=1918 canon-not-invariant=0 ordered triples=68880 mismatches=0 min|orient|=2.385e-04 | non-chain clauses=2215 violated=0
+free   m=6 t=7 seed=154: rejected=0 orbit vars=1918 Z_m-orbits=1918 canon-not-invariant=0 ordered triples=68880 mismatches=0 min|orient|=2.991e-05
+nested m=7 t=2 seed=155: rejected=0 orbit vars=52 Z_m-orbits=52 canon-not-invariant=0 ordered triples=2184 mismatches=0 min|orient|=2.453e-02 | non-chain clauses=47 violated=0
+free   m=7 t=2 seed=155: rejected=0 orbit vars=52 Z_m-orbits=52 canon-not-invariant=0 ordered triples=2184 mismatches=0 min|orient|=2.420e-02
+nested m=7 t=2 seed=156: rejected=0 orbit vars=52 Z_m-orbits=52 canon-not-invariant=0 ordered triples=2184 mismatches=0 min|orient|=1.091e-02 | non-chain clauses=47 violated=0
+free   m=7 t=2 seed=156: rejected=0 orbit vars=52 Z_m-orbits=52 canon-not-invariant=0 ordered triples=2184 mismatches=0 min|orient|=2.218e-02
+nested m=7 t=2 seed=157: rejected=0 orbit vars=52 Z_m-orbits=52 canon-not-invariant=0 ordered triples=2184 mismatches=0 min|orient|=1.797e-02 | non-chain clauses=47 violated=0
+free   m=7 t=2 seed=157: rejected=0 orbit vars=52 Z_m-orbits=52 canon-not-invariant=0 ordered triples=2184 mismatches=0 min|orient|=2.571e-03
+nested m=7 t=3 seed=158: rejected=0 orbit vars=190 Z_m-orbits=190 canon-not-invariant=0 ordered triples=7980 mismatches=0 min|orient|=3.562e-05 | non-chain clauses=270 violated=0
+free   m=7 t=3 seed=158: rejected=0 orbit vars=190 Z_m-orbits=190 canon-not-invariant=0 ordered triples=7980 mismatches=0 min|orient|=1.012e-03
+nested m=7 t=3 seed=159: rejected=0 orbit vars=190 Z_m-orbits=190 canon-not-invariant=0 ordered triples=7980 mismatches=0 min|orient|=7.723e-04 | non-chain clauses=270 violated=0
+free   m=7 t=3 seed=159: rejected=0 orbit vars=190 Z_m-orbits=190 canon-not-invariant=0 ordered triples=7980 mismatches=0 min|orient|=3.485e-03
+nested m=7 t=3 seed=160: rejected=0 orbit vars=190 Z_m-orbits=190 canon-not-invariant=0 ordered triples=7980 mismatches=0 min|orient|=1.714e-04 | non-chain clauses=270 violated=0
+free   m=7 t=3 seed=160: rejected=0 orbit vars=190 Z_m-orbits=190 canon-not-invariant=0 ordered triples=7980 mismatches=0 min|orient|=6.394e-04
+nested m=7 t=4 seed=161: rejected=0 orbit vars=468 Z_m-orbits=468 canon-not-invariant=0 ordered triples=19656 mismatches=0 min|orient|=4.042e-03 | non-chain clauses=1476 violated=0
+free   m=7 t=4 seed=161: rejected=0 orbit vars=468 Z_m-orbits=468 canon-not-invariant=0 ordered triples=19656 mismatches=0 min|orient|=3.736e-03
+nested m=7 t=4 seed=162: rejected=0 orbit vars=468 Z_m-orbits=468 canon-not-invariant=0 ordered triples=19656 mismatches=0 min|orient|=1.557e-03 | non-chain clauses=1476 violated=0
+free   m=7 t=4 seed=162: rejected=0 orbit vars=468 Z_m-orbits=468 canon-not-invariant=0 ordered triples=19656 mismatches=0 min|orient|=2.831e-03
+nested m=7 t=4 seed=163: rejected=0 orbit vars=468 Z_m-orbits=468 canon-not-invariant=0 ordered triples=19656 mismatches=0 min|orient|=2.884e-03 | non-chain clauses=1476 violated=0
+free   m=7 t=4 seed=163: rejected=0 orbit vars=468 Z_m-orbits=468 canon-not-invariant=0 ordered triples=19656 mismatches=0 min|orient|=9.693e-04
+nested m=7 t=5 seed=164: rejected=0 orbit vars=935 Z_m-orbits=935 canon-not-invariant=0 ordered triples=39270 mismatches=0 min|orient|=4.223e-04 | non-chain clauses=4467 violated=0
+free   m=7 t=5 seed=164: rejected=0 orbit vars=935 Z_m-orbits=935 canon-not-invariant=0 ordered triples=39270 mismatches=0 min|orient|=3.537e-04
+nested m=7 t=5 seed=165: rejected=0 orbit vars=935 Z_m-orbits=935 canon-not-invariant=0 ordered triples=39270 mismatches=0 min|orient|=2.641e-04 | non-chain clauses=4467 violated=0
+free   m=7 t=5 seed=165: rejected=0 orbit vars=935 Z_m-orbits=935 canon-not-invariant=0 ordered triples=39270 mismatches=0 min|orient|=1.798e-04
+nested m=7 t=5 seed=166: rejected=0 orbit vars=935 Z_m-orbits=935 canon-not-invariant=0 ordered triples=39270 mismatches=0 min|orient|=2.087e-04 | non-chain clauses=4467 violated=0
+free   m=7 t=5 seed=166: rejected=0 orbit vars=935 Z_m-orbits=935 canon-not-invariant=0 ordered triples=39270 mismatches=0 min|orient|=3.643e-05
+nested m=7 t=6 seed=167: rejected=0 orbit vars=1640 Z_m-orbits=1640 canon-not-invariant=0 ordered triples=68880 mismatches=0 min|orient|=3.440e-04 | non-chain clauses=10045 violated=0
+free   m=7 t=6 seed=167: rejected=0 orbit vars=1640 Z_m-orbits=1640 canon-not-invariant=0 ordered triples=68880 mismatches=0 min|orient|=1.155e-04
+nested m=7 t=6 seed=168: rejected=0 orbit vars=1640 Z_m-orbits=1640 canon-not-invariant=0 ordered triples=68880 mismatches=0 min|orient|=1.882e-04 | non-chain clauses=10045 violated=0
+free   m=7 t=6 seed=168: rejected=0 orbit vars=1640 Z_m-orbits=1640 canon-not-invariant=0 ordered triples=68880 mismatches=0 min|orient|=3.634e-04
+nested m=7 t=6 seed=169: rejected=0 orbit vars=1640 Z_m-orbits=1640 canon-not-invariant=0 ordered triples=68880 mismatches=0 min|orient|=2.270e-04 | non-chain clauses=10045 violated=0
+free   m=7 t=6 seed=169: rejected=0 orbit vars=1640 Z_m-orbits=1640 canon-not-invariant=0 ordered triples=68880 mismatches=0 min|orient|=3.302e-04
+nested m=7 t=7 seed=170: rejected=0 orbit vars=2632 Z_m-orbits=2632 canon-not-invariant=0 ordered triples=110544 mismatches=0 min|orient|=1.319e-04 | non-chain clauses=19012 violated=0
+free   m=7 t=7 seed=170: rejected=0 orbit vars=2632 Z_m-orbits=2632 canon-not-invariant=0 ordered triples=110544 mismatches=0 min|orient|=2.881e-04
+nested m=7 t=7 seed=171: rejected=0 orbit vars=2632 Z_m-orbits=2632 canon-not-invariant=0 ordered triples=110544 mismatches=0 min|orient|=2.787e-05 | non-chain clauses=19012 violated=0
+free   m=7 t=7 seed=171: rejected=0 orbit vars=2632 Z_m-orbits=2632 canon-not-invariant=0 ordered triples=110544 mismatches=0 min|orient|=2.115e-04
+nested m=7 t=7 seed=172: rejected=0 orbit vars=2632 Z_m-orbits=2632 canon-not-invariant=0 ordered triples=110544 mismatches=0 min|orient|=2.678e-08 | non-chain clauses=19012 violated=0
+free   m=7 t=7 seed=172: rejected=0 orbit vars=2632 Z_m-orbits=2632 canon-not-invariant=0 ordered triples=110544 mismatches=0 min|orient|=3.885e-05
+TOTAL ordered triples=3205980 mismatches=0 min|orient|=2.678e-08 violated non-chain clauses=0 configs with canon/orbit-count failure=0 runs where encoder code raised=0
+python3 -I check_literals_b.py $G ${=ARGS}  17.70s user 0.07s system 97% cpu 18.189 total
