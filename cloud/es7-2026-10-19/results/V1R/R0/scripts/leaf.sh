@@ -2,7 +2,7 @@
 # leaf.sh <i> <cube literals...>: build cubeCnf, solve, check, print one JSON line
 set -u
 i=$1; shift; lits=("$@")
-T=/tmp/claude-0/tools; W=/tmp/claude-0/work; S=$W/leaf$i; mkdir -p $S
+T=/sandbox/tools; W=/sandbox/work; S=$W/leaf$i; mkdir -p $S
 BODY=$W/body.cnf; NV=47002; NC=535454
 n=${#lits[@]}
 { echo "p cnf $NV $((NC+n))"; cat $BODY; for l in "${lits[@]}"; do echo "$l 0"; done; } > $S/f.cnf

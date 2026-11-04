@@ -1,6 +1,6 @@
 import hashlib, json, os, subprocess, sys, time, threading
 from concurrent.futures import ThreadPoolExecutor
-W = '/tmp/claude-0/w'
+W = '/sandbox/w'
 CAD = W + '/cadical/build/cadical'
 CAKE = W + '/cake_lpr/cake_lpr'
 LEAVES = sys.argv[1]; J = int(sys.argv[2]); OUT = sys.argv[3]

@@ -37,9 +37,9 @@ def git_sync(msg, paths):
             if "rejected" in r.stderr or "non-fast-forward" in r.stderr:
                 sh("git", "pull", "-q", "--rebase", "--autostash", "origin", "es7-cloud"); continue
             time.sleep(2 ** (i + 1))
-        r = sh("git", "push", "-q", "origin", "HEAD:claude/es7-w2-s3")
-        LOG.write(f"push to es7-cloud failed; pushed to claude/es7-w2-s3 rc={r.returncode} {r.stderr[-200:]}\n"); LOG.flush()
-        return "claude/es7-w2-s3"
+        r = sh("git", "push", "-q", "origin", "HEAD:cloud-fallback/es7-w2-s3")
+        LOG.write(f"push to es7-cloud failed; pushed to cloud-fallback/es7-w2-s3 rc={r.returncode} {r.stderr[-200:]}\n"); LOG.flush()
+        return "cloud-fallback/es7-w2-s3"
 def pull():
     with glock: sh("git", "pull", "-q", "--rebase", "--autostash", "origin", "es7-cloud")
 def others(case):

@@ -3,7 +3,7 @@
 # units sorted by abs, extra leaf units sorted by abs) and compare sha256 with the records.
 import sys, json, hashlib, re, os
 R, FPATH = sys.argv[1], sys.argv[2]
-src = open('/tmp/claude-0/s/a1_trees.py').read().split('# --- verified records')[0]
+src = open('/sandbox/s/a1_trees.py').read().split('# --- verified records')[0]
 sys.argv = ['x', R]; exec(src)
 raw = open(FPATH, 'rb').read()
 print('F sha256', hashlib.sha256(raw).hexdigest(), 'bytes', len(raw))

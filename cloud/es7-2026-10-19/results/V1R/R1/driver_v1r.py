@@ -2,7 +2,7 @@ import sys, os, json, hashlib, subprocess, time, threading
 from concurrent.futures import ThreadPoolExecutor
 SUB, ICNF, OUT, WORK, J, DEADLINE = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], int(sys.argv[5]), float(sys.argv[6])
 ONLY = [int(x) for x in sys.argv[7].split(',')] if len(sys.argv) > 7 else None
-CAD = '/tmp/claude-0/w/cadical/build/cadical'; CAKE = '/tmp/claude-0/w/cake_lpr/cake_lpr'
+CAD = '/sandbox/w/cadical/build/cadical'; CAKE = '/sandbox/w/cake_lpr/cake_lpr'
 raw = open(SUB, 'rb').read()
 nl = raw.index(b'\n'); hdr = raw[:nl].split(); body = raw[nl+1:]
 assert hdr[:2] == [b'p', b'cnf']; NV, NC = int(hdr[2]), int(hdr[3])

@@ -14,7 +14,7 @@ for c in rng.sample(cons, K):
     lits = list(dict.fromkeys(cube + c)); f = os.path.join(W, f"po_{os.getpid()}.cnf")
     with open(f, "w") as o:
         o.write(f"p cnf {nv} {nc + len(lits)}\n"); o.writelines(body); o.writelines(f"{l} 0\n" for l in lits)
-    t = time.time(); rc = subprocess.run([os.path.join(os.environ.get("BIN", "/tmp/claude-0/w/bin"), "cadical"), "-q", "-t", str(T), f],
+    t = time.time(); rc = subprocess.run([os.path.join(os.environ.get("BIN", "/sandbox/w/bin"), "cadical"), "-q", "-t", str(T), f],
                                          stdout=subprocess.DEVNULL).returncode
     res.append({"open_cube": c, "rc": rc, "s": round(time.time() - t, 2)}); os.remove(f)
 print(json.dumps({"case": sp, "open_cubes_total": len(opn), "consistent": len(cons), "timeout": T, "samples": res}))

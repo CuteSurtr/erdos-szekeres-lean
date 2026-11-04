@@ -2,7 +2,7 @@
 # run_open_ext.sh CNF INDEX TIMEOUT WORKDIR -> one JSON line.  INDEX is the 1-based line of
 # results/H3/logs/open_cubes_ii_interior.txt; builds G_o (open_ext.py), cadical --lrat, cake_lpr.
 set -u
-CNF=$1; I=$2; T=$3; W=$4; HERE="$(cd "$(dirname "$0")" && pwd)"; BIN=${BIN:-/tmp/claude-0/w/bin}
+CNF=$1; I=$2; T=$3; W=$4; HERE="$(cd "$(dirname "$0")" && pwd)"; BIN=${BIN:-/sandbox/w/bin}
 o=$(sed -n "${I}p" "$HERE/../../H3/logs/open_cubes_ii_interior.txt" | sed 's/ 0$//; s/ /,/g')
 d="$W/oe_$I.$$"; mkdir -p "$d"
 python3 "$HERE/open_ext.py" "$CNF" "$o" "$d/g.cnf"

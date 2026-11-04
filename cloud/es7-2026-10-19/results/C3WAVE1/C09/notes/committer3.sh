@@ -6,7 +6,7 @@ pushit() {
     git pull -q --rebase --autostash origin es7-cloud && git push -q origin es7-cloud && { echo "pushed $(date -u +%T)"; return 0; }
     sleep $((2**i))
   done
-  git push -q origin HEAD:claude/es7-c3w1-c09 && echo "PUSHED TO claude/es7-c3w1-c09 $(date -u +%T)"
+  git push -q origin HEAD:cloud-fallback/es7-c3w1-c09 && echo "PUSHED TO cloud-fallback/es7-c3w1-c09 $(date -u +%T)"
 }
 while true; do
   sleep ${PERIOD:-1500}

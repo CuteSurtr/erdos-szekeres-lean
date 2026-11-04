@@ -14,7 +14,7 @@ def push(msg):
             p = git("push", "-q", "origin", "es7-cloud")
             if p.returncode == 0: log("pushed", msg); return
             time.sleep(2 ** (i + 1))
-        p = git("push", "-q", "origin", "HEAD:claude/es7-w2-s5"); log("PUSH FALLBACK claude/es7-w2-s5", p.returncode, p.stderr[-200:])
+        p = git("push", "-q", "origin", "HEAD:cloud-fallback/es7-w2-s5"); log("PUSH FALLBACK cloud-fallback/es7-w2-s5", p.returncode, p.stderr[-200:])
 def status(c):
     with glock: git("pull", "-q", "--rebase", "--autostash", "origin", "es7-cloud")
     out = subprocess.run(["python3", "/opt/work/status.py", c], cwd=f"{REPO}/{ROOT}", capture_output=True, text=True).stdout

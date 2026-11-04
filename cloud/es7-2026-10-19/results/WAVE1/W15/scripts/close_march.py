@@ -14,7 +14,7 @@ Changes against the original:
 """
 import argparse, hashlib, json, os, re, subprocess, threading, time
 from concurrent.futures import ThreadPoolExecutor
-BIN = os.environ.get("BIN", "/tmp/claude-0/w15/bin")
+BIN = os.environ.get("BIN", "/sandbox/w15/bin")
 ap = argparse.ArgumentParser(); ap.add_argument("case"); ap.add_argument("out")
 ap.add_argument("--depth", type=int, default=7); ap.add_argument("--timeout", type=int, default=300)
 ap.add_argument("--split-depth", type=int, default=6); ap.add_argument("--jobs", type=int, default=4)

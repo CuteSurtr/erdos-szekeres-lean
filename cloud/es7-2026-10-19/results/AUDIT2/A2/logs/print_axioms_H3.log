@@ -14,7 +14,7 @@ def ETV.DimacsSatisfiable : List (List ℤ) → Prop :=
 fun cls => ∃ ν, ETV.DimacsSat cls ν
 def ETV.DimacsSat : List (List ℤ) → (ℕ → Bool) → Prop :=
 fun cls ν => ∀ c ∈ cls, ∃ l ∈ c, 0 < l ∧ ν l.natAbs = true ∨ l < 0 ∧ ν l.natAbs = false
-/tmp/claude-0/a2/Ax.lean:13:7: error(lean.unknownIdentifier): Unknown constant `ETV.LitSat`
+/sandbox/a2/Ax.lean:13:7: error(lean.unknownIdentifier): Unknown constant `ETV.LitSat`
 def Mir.yflipUnit : ℕ → ℕ → ℕ → List (List ℤ) :=
 fun N A U => [[↑((num N A U).getD (subVar N false (ETV.Var.x 0 1 2)) 0)]]
 def Mir.interiorCnf : ℕ → ℕ → List (List ℤ) :=

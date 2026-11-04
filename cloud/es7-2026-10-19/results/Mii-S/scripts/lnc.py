@@ -19,7 +19,7 @@ ap.add_argument("mode"); ap.add_argument("cnf"); ap.add_argument("specs"); ap.ad
 ap.add_argument("--timeout", type=int, default=20); ap.add_argument("--jobs", type=int, default=3)
 ap.add_argument("--maxlayers", type=int, default=3); ap.add_argument("--lrat", action="store_true")
 ap.add_argument("--k", default="4,2", help="children sampled per layer, e.g. 4,2"); ap.add_argument("--seed", type=int, default=1)
-ap.add_argument("--work", default="/tmp/claude-0/w/runs")
+ap.add_argument("--work", default="/sandbox/w/runs")
 a = ap.parse_args()
 lock = threading.Lock(); outf = open(a.out, "a")
 

@@ -46,7 +46,7 @@ for line in open(setsf):
             if not sg[(0,1,2)]: sg={t:not x for t,x in sg.items()}
         (nv,nc),b=body[mode]
         units=''.join(f"{idx[t] if s else -idx[t]} 0\n" for t,s in sg.items())
-        fn=f'/tmp/claude-0/k8/t.cnf'
+        fn=f'/sandbox/k8/t.cnf'
         open(fn,'wb').write(f"p cnf {nv} {nc+len(sg)}\n".encode()+b+units.encode())
         out=subprocess.run([cad,'-q','-n',fn],capture_output=True,text=True,timeout=600)
         st=out.stdout.strip().splitlines()[0] if out.stdout.strip() else 'rc%d'%out.returncode

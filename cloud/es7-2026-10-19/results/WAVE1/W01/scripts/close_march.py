@@ -11,7 +11,7 @@ OUTDIR/leaves.jsonl; OUTDIR/leaves.icnf (written at the end) lists every closed 
 """
 import argparse, hashlib, json, os, re, subprocess, threading, time
 from concurrent.futures import ThreadPoolExecutor
-BIN = os.environ.get("BIN", "/tmp/claude-0/w/bin")
+BIN = os.environ.get("BIN", "/sandbox/w/bin")
 WORK = os.environ.get("WORK", "/tmp/close_march_work"); os.makedirs(WORK, exist_ok=True)  # CNFs/proofs stay out of OUTDIR
 ap = argparse.ArgumentParser(); ap.add_argument("case"); ap.add_argument("out")
 ap.add_argument("--depth", type=int, default=7); ap.add_argument("--timeout", type=int, default=300)

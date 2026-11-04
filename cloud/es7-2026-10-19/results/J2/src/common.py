@@ -1,7 +1,7 @@
 """Shared helpers for task J2: run ls33 in parallel, canonical order types, logging."""
 import os, subprocess, json, time, resource, tempfile
 
-BIN = os.environ.get('J2BIN', '/tmp/claude-0/j2bin')
+BIN = os.environ.get('J2BIN', '/sandbox/j2bin')
 
 
 def child_cpu():
