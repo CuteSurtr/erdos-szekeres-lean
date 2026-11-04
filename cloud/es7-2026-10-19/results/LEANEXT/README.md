@@ -17,6 +17,7 @@ of `LAYERLEAN/LayerLemma.lean` (checked with `diff`).
 | `merged/` | `Merged.lean`: LayerLemma plus the even-m phase results in one file; `phase_ne_of_distinct_layers` and `not_same_ray_of_distinct_layers` (distinct layers have distinct phases mod 2π/m). |
 | `encb_literals/` | Python test (evidence only): encoder B's own literal code against real orientations, 5,947,032 ordered triples, 0 mismatches; 7 mutants. |
 | `linked/` | `Linked.lean`: rule B on layer indices (`orient_pos_of_layers`: middle point in the outermost layer, so the triple turns left). |
+| `keys/` | `KeyOrder.lean`: integer (cell, rank) keys sort exactly as the directions (`reduced_lt_iff_key`), with antipode cells for odd and even m. |
 | `review/` | An adversarial review of `LAYERLEAN` with no error found, and `VacuityTest.lean`: a concrete fourfold configuration discharging every hypothesis of `strict_nesting`, `layers_are_orbits`, `hullVerts_eq_orbitFS_rotAbout` and `chain_clauses_sound`. |
 
 **Still outside Lean.**
