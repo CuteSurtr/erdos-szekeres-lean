@@ -1,4 +1,4 @@
-S=/tmp/claude-0/-home-user-erdos-szekeres-lean/1128a15e-b92d-5b38-9916-29badb00b748/scratchpad
+S=/sandbox/1128a15e-b92d-5b38-9916-29badb00b748/scratchpad
 R=/home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results
 O=$R/C3H6M/logs/compose; mkdir -p $O $S/dump
 for set in fix1A fix1B setT; do

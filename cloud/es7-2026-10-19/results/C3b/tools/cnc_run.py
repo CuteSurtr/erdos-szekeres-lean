@@ -19,10 +19,10 @@ import sys
 import time
 from concurrent.futures import ThreadPoolExecutor
 
-CAD = os.environ.get("CAD", "/tmp/claude-0/build/cadical/build/cadical")
-LRAT = os.environ.get("LRATCHECK", "/tmp/claude-0/build/drat-trim/lrat-check")
-CAKE = os.environ.get("CAKE_LPR", "/tmp/claude-0/build/cake_lpr/cake_lpr")
-WORK = os.environ.get("CNC_WORK", "/tmp/claude-0/cncwork")
+CAD = os.environ.get("CAD", "/sandbox/build/cadical/build/cadical")
+LRAT = os.environ.get("LRATCHECK", "/sandbox/build/drat-trim/lrat-check")
+CAKE = os.environ.get("CAKE_LPR", "/sandbox/build/cake_lpr/cake_lpr")
+WORK = os.environ.get("CNC_WORK", "/sandbox/cncwork")
 
 
 def main():

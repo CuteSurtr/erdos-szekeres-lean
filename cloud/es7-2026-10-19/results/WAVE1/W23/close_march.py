@@ -14,7 +14,7 @@ Copy of results/Mii-S/scripts/close_march.py with these W23 changes:
 """
 import argparse, hashlib, json, os, re, subprocess, threading, time
 from concurrent.futures import ThreadPoolExecutor
-BIN = os.environ.get("BIN", "/tmp/claude-0/w23/bin")
+BIN = os.environ.get("BIN", "/sandbox/w23/bin")
 VER = "s VERIFIED UNSAT"
 ap = argparse.ArgumentParser(); ap.add_argument("case"); ap.add_argument("out")
 ap.add_argument("--depth", type=int, default=7); ap.add_argument("--timeout", type=int, default=300)

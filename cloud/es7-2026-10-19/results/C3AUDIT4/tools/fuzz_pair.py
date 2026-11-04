@@ -5,7 +5,7 @@ usage: fuzz_pair.py A B CASEFILES...   (file names case_m{m}k{k}_...)"""
 import json, os, re, subprocess, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 A, B = sys.argv[1], sys.argv[2]
-BD = "/tmp/claude-0/-home-user-erdos-szekeres-lean/a2372e58-e319-59b7-94d3-805904fed989/scratchpad/base"
+BD = "/sandbox/a2372e58-e319-59b7-94d3-805904fed989/scratchpad/base"
 st = {"files": 0, "verdict_diff": [], "open_d2_diff": [], "frontier_diff_beyond_split_nodes": [], "frontier_only_split_nodes": 0}
 for f in sys.argv[3:]:
     m, k = re.search(r"case_m(\d+)k(\d+)_", os.path.basename(f)).groups()

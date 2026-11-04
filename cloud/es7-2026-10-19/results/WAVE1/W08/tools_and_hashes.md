@@ -1,6 +1,6 @@
 # W08 tools and hash checks
 
-Tools (built in /tmp/claude-0/w08/bin):
+Tools (built in /sandbox/w08/bin):
 - CaDiCaL https://github.com/arminbiere/cadical at c60730422e758ef1cebe7aeddf2dda31c996bf04 (`./configure && make`)
 - march_cu https://github.com/marijnheule/CnC at 705b60c6491ef2b61988b3ce6ac674be1b90571d (`make CFLAGS="-O3 -fcommon"`)
 - cake_lpr https://github.com/tanyongkiam/cake_lpr at a36874a8b750b43fe4b385b8ddbf5b033e46a3fa (`make cake_lpr`);

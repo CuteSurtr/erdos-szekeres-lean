@@ -16,7 +16,7 @@ At the end: leaves.icnf = cake_lpr-verified UNSAT leaves, open.icnf = cubes stil
 """
 import argparse, hashlib, json, os, re, subprocess, threading, time
 from concurrent.futures import ThreadPoolExecutor
-BIN = os.environ.get("BIN", "/tmp/claude-0/w/bin")
+BIN = os.environ.get("BIN", "/sandbox/w/bin")
 ap = argparse.ArgumentParser(); ap.add_argument("case"); ap.add_argument("out")
 ap.add_argument("--depth", type=int, default=7); ap.add_argument("--timeout", type=int, default=300)
 ap.add_argument("--split-depth", type=int, default=6); ap.add_argument("--jobs", type=int, default=2)

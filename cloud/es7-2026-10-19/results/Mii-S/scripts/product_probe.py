@@ -12,7 +12,7 @@ for o, nm in rng.sample(pairs, min(K, len(pairs))):
     lits = list(dict.fromkeys(H.cube(*byname[nm]) + o)); f = os.path.join(W, f"pp_{os.getpid()}.cnf")
     with open(f, "w") as out:
         out.write(f"p cnf {nv} {nc + len(lits)}\n"); out.writelines(body); out.writelines(f"{l} 0\n" for l in lits)
-    t = time.time(); rc = subprocess.run([os.path.join(os.environ.get("BIN", "/tmp/claude-0/w/bin"), "cadical"), "-q", "-t", str(T), f],
+    t = time.time(); rc = subprocess.run([os.path.join(os.environ.get("BIN", "/sandbox/w/bin"), "cadical"), "-q", "-t", str(T), f],
                                          stdout=subprocess.DEVNULL).returncode
     os.remove(f)
     print(json.dumps({"case": nm, "open_cube": o, "rc": rc, "s": round(time.time() - t, 2), "timeout": T}), flush=True)

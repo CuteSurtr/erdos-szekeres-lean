@@ -15,7 +15,7 @@
 -import argparse, hashlib, json, os, re, subprocess, threading, time
 +import argparse, hashlib, json, os, re, subprocess, tempfile, threading, time
  from concurrent.futures import ThreadPoolExecutor
- BIN = os.environ.get("BIN", "/tmp/claude-0/w/bin")
+ BIN = os.environ.get("BIN", "/sandbox/w/bin")
 +WORK = os.environ.get("WORK", "/opt/work/tmp"); os.makedirs(WORK, exist_ok=True)  # F2: scratch root for mkdtemp
  ap = argparse.ArgumentParser(); ap.add_argument("case"); ap.add_argument("out")
  ap.add_argument("--depth", type=int, default=7); ap.add_argument("--timeout", type=int, default=300)

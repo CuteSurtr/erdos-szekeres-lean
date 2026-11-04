@@ -7,7 +7,7 @@ re-checked independently with DRAT proofs, and nothing else was proof-checked.
 
 ## Where it ran (`env.txt`)
 
-- **Machine.** This was a cloud VM (a managed remote Claude Code session), not the local laptop.
+- **Machine.** This was a cloud VM (a managed remote cloud session), not the local laptop.
   `uname`: Linux vm 6.18.44-fc-v139 x86_64. It has 4 cores, 15 GB RAM and no swap; the hostname is
   `vm`. The run started at 2026-10-20 00:21 UTC and stopped at about 03:40 UTC.
 - **Load.** Nothing else ran on the VM. Every pool used 4 ext_solve workers. For the last ~15

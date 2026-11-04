@@ -20,6 +20,6 @@ h = [i for i, l in enumerate(lines) if l.startswith("p cnf")][0]
 nv, nc = map(int, lines[h].split()[2:4])
 lines[h] = f"p cnf {nv} {nc + len(units)}"
 txt = "\n".join(lines).rstrip("\n") + "\n" + "".join(f"{u} 0\n" for u in sorted(units))
-r = subprocess.run(["/tmp/claude-0/build/cadical/build/cadical", "-q"], input=txt, capture_output=True, text=True)
+r = subprocess.run(["/sandbox/build/cadical/build/cadical", "-q"], input=txt, capture_output=True, text=True)
 st = [l for l in r.stdout.splitlines() if l.startswith("s ")]
 print(json.dumps({"model": sys.argv[1].split("/")[-1], "units": len(units), "c3a_status": st[0][2:] if st else "?"}))

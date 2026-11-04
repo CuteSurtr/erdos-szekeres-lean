@@ -22,4 +22,4 @@ Unchecked leaves in this shard: 0 of 1564. Every record has cake_lpr = "s VERIFI
 
 Times (s): solve sum 27572.7, median 10.67, max 358.97; check sum 6415.8, median 3.01, max 26.47.
 
-Note: one progress push (1152 leaves) was rejected by a concurrent ref update and went to claude/es7-v3b-b13. It was then pushed to es7-cloud after a retry. Everything is on es7-cloud.
+Note: one progress push (1152 leaves) was rejected by a concurrent ref update and went to cloud-fallback/es7-v3b-b13. It was then pushed to es7-cloud after a retry. Everything is on es7-cloud.

@@ -12,7 +12,7 @@ OUTDIR/open.icnf the cubes still open.  Resume: rerun the same command.
 """
 import argparse, hashlib, json, os, re, subprocess, threading, time
 from concurrent.futures import ThreadPoolExecutor
-BIN = os.environ.get("BIN", "/tmp/claude-0/w08/bin")
+BIN = os.environ.get("BIN", "/sandbox/w08/bin")
 ap = argparse.ArgumentParser(); ap.add_argument("case"); ap.add_argument("out")
 ap.add_argument("--top", required=True); ap.add_argument("--shard", type=int, default=0)
 ap.add_argument("--nshards", type=int, default=1)

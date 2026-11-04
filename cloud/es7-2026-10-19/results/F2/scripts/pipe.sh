@@ -1,6 +1,6 @@
 #!/bin/bash
 # pipe.sh NAME : verify a grown 26-set, build 32-sets, abstract checks (x and rot90)
-cd /tmp/claude-0/-home-user-erdos-szekeres-lean/7d9c6ca0-022c-5e66-8370-d636a42cff9f/scratchpad
+cd /sandbox/7d9c6ca0-022c-5e66-8370-d636a42cff9f/scratchpad
 S=/home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results/F2/scripts
 N=$1
 python3 $S/verify26.py ./brute ggs/$N.pts >> verify26.jsonl

@@ -13,7 +13,7 @@ Changes from the original:
 """
 import argparse, json, os, re, subprocess, threading, time
 from concurrent.futures import ThreadPoolExecutor
-BIN = os.environ.get("BIN", "/tmp/claude-0/w/bin")
+BIN = os.environ.get("BIN", "/sandbox/w/bin")
 ap = argparse.ArgumentParser(); ap.add_argument("case"); ap.add_argument("out")
 ap.add_argument("--top", required=True); ap.add_argument("--shard", type=int, default=0)
 ap.add_argument("--nshards", type=int, default=1)

@@ -1,6 +1,6 @@
 #!/bin/bash
 # usage: probe_leaf.sh CNF CUBES INDEX TLIM OUTJSONL  -- plain CaDiCaL (no proof) on CNF + cube units
-CAD=${CAD:-/tmp/claude-0/build/cadical/build/cadical}; W=${W:-/tmp/claude-0/cncwork}; mkdir -p $W
+CAD=${CAD:-/sandbox/build/cadical/build/cadical}; W=${W:-/sandbox/cncwork}; mkdir -p $W
 lits=$(grep "^a " $2 | sed -n "$(( $3 + 1 ))p" | sed 's/^a //; s/ 0$//')
 n=$(echo $lits | wc -w); f=$W/probe$3.cnf
 awk -v n=$n 'NR==FNR && /^p cnf/ {print "p cnf", $3, $4+n; next} {print}' $1 > $f

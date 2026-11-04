@@ -16,7 +16,7 @@ sync_out() {
 commit() {
   cd $R; git add results/WAVE2/F5; git commit -qm "WAVE2 F5: U4_L progress $(date -u +%H:%M)"
   git pull -q --rebase --autostash; for i in 1 2 3; do git push -q origin es7-cloud && return; sleep $((2*i)); git pull -q --rebase --autostash; done
-  git push -q origin HEAD:claude/es7-w2-f5 && echo "$(date -u +%T) pushed to claude/es7-w2-f5" >> $D/U4_L/manager.log
+  git push -q origin HEAD:cloud-fallback/es7-w2-f5 && echo "$(date -u +%T) pushed to cloud-fallback/es7-w2-f5" >> $D/U4_L/manager.log
 }
 start
 while true; do
