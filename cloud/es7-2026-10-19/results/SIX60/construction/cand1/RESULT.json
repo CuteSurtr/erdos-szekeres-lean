@@ -1,0 +1,66 @@
+{
+ "claim": "60-point 6-fold rotationally symmetric set in general position with no 8 points in convex position (10 nested regular hexagons, no centre)",
+ "rigor": "exact (ES8SYM pipeline: verify_cfg methods A+B, cvx2 DP1+DP2, cvxcheck DFS+DP, crosscheck_decimal; enum_convex on an affine image)",
+ "points_file": "cand1_s28.pts",
+ "points_sha256": "614469e928dbc68cdacb50b1ce20e74b7697ceea0f6689dfc95da7bf245f28b2",
+ "format": "one point per line: integer w0..w5, point = sum_j w_j zeta^j, zeta = exp(2 pi i/6); layer o = rows 6o..6o+5",
+ "layer_seeds_w0_w1": [
+  [
+   268435456,
+   0
+  ],
+  [
+   74257719,
+   6629426
+  ],
+  [
+   65544021,
+   6163452
+  ],
+  [
+   54071730,
+   10588904
+  ],
+  [
+   53501118,
+   10593050
+  ],
+  [
+   43264300,
+   15650877
+  ],
+  [
+   42748054,
+   15582152
+  ],
+  [
+   29453840,
+   15103124
+  ],
+  [
+   29453745,
+   15103180
+  ],
+  [
+   2569808,
+   3435
+  ]
+ ],
+ "convex_k_counts": {
+  "3": 34220,
+  "4": 292353,
+  "5": 1058232,
+  "6": 1454781,
+  "7": 296544,
+  "8": 0
+ },
+ "largest_convex_subset": 7,
+ "encoder_assignment_model": "cert_s28_seeds_model.json (exact assignment of cand1_s28.pts; identical to cand1_S40_model.json)",
+ "cube": "c11111",
+ "clauses_violated_of_lane_formula": 0,
+ "clauses_checked": "2104233 (S40) and the then-current files (S28), see check_clauses_s28.log",
+ "also_scale_2^40": {
+  "file": "cand1_vc.pts",
+  "sha256": "7d67447ebea6e789c1cca134c292df310083594b41285bfd30a0c152bb3b88d3"
+ }
+}

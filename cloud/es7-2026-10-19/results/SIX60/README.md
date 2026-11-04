@@ -5,7 +5,7 @@
 
 | Part | Statement | Status |
 |---|---|---|
-| Lower bound | The two sets in `sets/` have 60 points, are invariant under rotation by 60 degrees, are in general position, and contain no 8 points in convex position. | Exact computation, three independent implementations (below). |
+| Lower bound | The three sets A, B and C in `sets/` have 60 points, are invariant under rotation by 60 degrees, are in general position, and contain no 8 points in convex position. | Exact computation, three independent implementations per set (below). |
 | Upper bound | Every 6-fold symmetric set of at least 61 points in general position contains a convex octagon. | `C6UPPER` (3 November): a certificate accepted by both checkers for two separately implemented encoders. The reduction is Lean-checked (`LAYERLEAN`). The encoder steps are a written proof, reviewed but not Lean-checked. |
 
 Sizes of 6-fold sets without a centre are multiples of 6, and a general-position 6-fold set cannot contain the
@@ -27,6 +27,8 @@ Layer o is rows 6o..6o+5, outermost first.
 | `sets/c6_60pts_A.pts` | A | 2^28 | `614469e9…` |
 | `sets/c6_60pts_A_scale2p40.pts` | A (the first certified file) | 2^40 | `7d67447e…` |
 | `sets/c6_60pts_B.pts` | B | 2^28 | `2a0c981e…` |
+| `sets/c6_60pts_C.pts` | C | 10^12 | `61ed920d…` |
+| `sets/c6_60pts_C2.pts` | C' (rounding of C at 10^9; its own exact check) | 10^9 | `8ba0b2e9…` |
 
 `sets/SHA256SUMS.txt` has the full hashes. Layer radii (outer layer = 1) and phases theta_i, from the float sources:
 - **A.** A twin-layer spiral. The outer hexagon is followed by four pairs of near-twin layers: radius 0.290 / 0.256 at
@@ -35,16 +37,21 @@ Layer o is rows 6o..6o+5, outermost first.
 - **B.** A needle cluster. The outer hexagon is followed by eight layers at radii (5.2 to 4.0) x 10^-4 with phases
   28.1 to 36.0 deg, again roughly in twin pairs. The innermost hexagon has radius 1.0 x 10^-5 and phase 55.8 deg.
 
-A and B have different numbers of convex 7-subsets (296,544 and 301,674), so they are different order types. Neither
-contains a certified 54-point order type: by an exact computation with LRAT proofs checked by lrat-check (realization
-workstream, `six10-linux` campaign), neither 54-point set of `ES8SYM` extends by one hexagon.
+- **C.** Needles at the outer edge midpoints. Layers 1–8 are at radii 7.3 x 10^-3 to 3.7 x 10^-3 with phases 30.2 to
+  34.9 deg. The innermost hexagon has radius 5.4 x 10^-6 and phase 35.1 deg.
+
+A, B and C have 296,544, 301,674 and 221,976 convex 7-subsets, so they are pairwise different order types. None of them
+contains a certified 54-point order type of `ES8SYM` as nine of its layers. The realization workstream reports that
+neither 54-point order type extends by one hexagon at any nesting position: 36 SAT cases, all UNSAT, with LRAT proofs
+accepted by lrat-check (`construction/REALIZE_README.md`; not re-checked by the coordinator).
 
 ## Verification (exact computation)
 
 1. **The finder's run of the ES8SYM pipeline** (`ES8SYM/tools`). It ran `verify_cfg.py --pts` (exact algebraic and
    interval methods), `cvx2` (two dynamic programs), `cvxcheck` (depth-first search), `crosscheck_decimal.py` and
    `enum_convex` on an affine image. All report 0 convex 8-subsets and largest convex subset 7, for A at scales 2^40
-   and 2^28 and for B.
+   and 2^28 and for B. The direct-search workstream ran the same pipeline, plus its own independent checker
+   `indep_check.py`, on C and C' (`construction/SEARCH_README.md` §0).
 2. **`verify/verify60.py`**, written independently by the coordinator (standard library only).
    - It works in the oblique integer coordinates z = a + b zeta: a = w0 - w2 - w3 + w5, b = w1 + w2 - w4 - w5. This is
      an affine image with positive determinant, so orientations and convex position are preserved.
@@ -60,6 +67,8 @@ workstream, `six10-linux` campaign), neither 54-point set of `ES8SYM` extends by
 |---|---:|---:|---:|---:|---:|
 | A | 292,353 | 1,058,232 | 1,454,781 | 296,544 | 0 |
 | B | 291,927 | 1,057,422 | 1,462,500 | 301,674 | 0 |
+| C | 284,577 | 954,066 | 1,110,345 | 221,976 | 0 |
+| C' | 284,607 | 954,234 | 1,111,230 | 223,416 | 0 |
 
 Reproduce, from this directory:
 
@@ -90,9 +99,12 @@ for l in open('sets/c6_60pts_A.pts'):
 - It also shows that cube c11111 could never have become UNSAT: the "54 or 60" question could not be settled by
   the 10-layer CEGAR, only by a construction.
 
-## How the set was found (evidence; details in `construction/` when added)
+## How the sets were found (evidence; the claim rests only on the exact checks above)
 
-The set came from alternating projections between real configurations and abstract models:
+Two different methods found octagon-free 60-point sets independently, within the same hour.
+
+**Alternating projections (sets A and B, realization workstream).** The method alternates between real
+configurations and abstract models:
 1. Start from a real 10-layer configuration with few convex octagons (direct annealing; best start had 90 convex
    octagons).
 2. Steer a SAT solver over the lane formula (encoder A plus all certified cuts) toward that configuration's
@@ -100,5 +112,14 @@ The set came from alternating projections between real configurations and abstra
 3. Fit seeds to the resulting abstract model.
 4. Anneal locally on the exact number of convex octagons until it reaches 0.
 
-Then make the coordinates exact in Z[zeta_6]. The search was done by the realization workstream of the 5 November
-campaign. The working record is outside git (`six10-linux-20261105/realize/`).
+Then make the coordinates exact in Z[zeta_6]. This gave A and B, found by the realization workstream. Its full record,
+with parameters, seeds, file hashes and a reproduction recipe, is `construction/REALIZE_README.md` §4, with tools in
+`construction/tools/`.
+
+**Phase-fixed LP-CEGAR (set C, direct-search workstream).** With the phases fixed, every orientation is the sign of a
+linear form in the inverse radii u_i = 1/r_i (`ES8SYM` Lemma 1). Existence of radii for a fixed phase vector is then
+decided by SAT (encoder A with the phase units) plus an LP for the radii, adding a Farkas clause for each infeasible
+sign vector. The run alternated phase scans around annealing optima with this check. Pure annealing of the octagon
+count never got below 90. One perturbed phase vector produced, after 2,284 SAT/LP rounds, a realizable octagon-free
+sign vector with LP margin 9.3 x 10^-4. Of 400 random phase vectors all were infeasible, and 293 of 300
+perturbations: the realizable phase region is thin. Record: `construction/SEARCH_README.md`.
