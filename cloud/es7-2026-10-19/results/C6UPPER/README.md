@@ -2,6 +2,11 @@
 
 3 November 2026 (UTC). Computer-assisted.
 
+**Addendum, 5 November 2026: the exact maximum is 60.** `SIX60` gives three exact 60-point 6-fold octagon-free
+sets (ten hexagons, three order types), each checked by three independent implementations. With this certificate
+(61 and more excluded), the largest 6-fold octagon-free set has exactly 60 points. Statements below that call the
+maximum open ("54 or 60") record the state on 3–4 November.
+
 **Statement.** Every configuration of 11 nested regular hexagons about a common centre, in general position, contains
 8 points in convex position. Hence L(6,8) <= 10: every 6-fold rotationally symmetric set of at least 61 points in
 general position contains a convex octagon. The largest 6-fold symmetric set in general position with no convex octagon
@@ -184,7 +189,7 @@ the written soundness argument, the reflection unit (§2) and the canonical trip
   - the angular rules in polar form.
 - Written proofs (reviewed, not Lean-checked): the classification of phase patterns, the perturbation lemma, the step
   from code to clauses, and §2.
-- The exact maximum (54 or 60) is open. The plain encoding is SAT at 10 layers (`ROT456` §3).
+- The exact maximum (54 or 60) was open; since 5 November it is 60 (`SIX60`). The plain encoding is SAT at 10 layers (`ROT456` §3).
 - The 5-fold (13 layers) and 4-fold (17 layers) threshold cases remain open (`ROT456`).
 
 ## Reproduction

@@ -28,7 +28,7 @@ known. All point sets are in `sets/`.
 | 3-fold | 3m, 3m + 1 | 61 with centre: `sets4/c3_61pts_centre.txt`, `sets4/c3_61pts_blowup.txt` (3 November); 60 without centre: `sets2/c3_60pts_nocentre.txt`, `sets2/c3_60pts_nocentre_b.txt` (2 November); earlier 55 with centre: `c3_55points_k8.txt` | >= 61 | exact computation |
 | 4-fold | 4m | 52: `c4_52pts_13layers.pts` | >= 52 | exact computation |
 | 5-fold | 5m, 5m + 1 | 56 with centre: `sets3/c5_56pts_11layers_centre.pts` (2–3 November); earlier 51 with centre: `c5_51pts_10layers_centre.pts` | >= 56 | exact computation |
-| 6-fold | 6m | 54: `c6_54pts_9layers.pts`; a second order type: `sets3/c6_54pts_1orbit.pts` | **54 or 60** | lower bound exact computation; upper bound 60 certificate, both checkers (`C6UPPER`, 3 November) |
+| 6-fold | 6m | **60** (5 November): `../SIX60/sets/c6_60pts_{A,B,C}.pts`; earlier 54: `c6_54pts_9layers.pts`, `sets3/c6_54pts_1orbit.pts` | **60** | lower bound exact computation (`SIX60`, three implementations); upper bound 60 certificate, both checkers (`C6UPPER`, 3 November) |
 | 7-fold | 7m, 7m + 1 | 64 with centre: five order types (§6) | **64** | lower bound exact computation; upper bound certificate, both checkers (`C7UPPER`, 2–3 November) |
 | order >= 8 | 0 or 1 | the centre alone | 1 | Lean-checked |
 | mirror | 2m + b, b <= 2 on the axis | 46: `mirror_46points_k8.txt`, `mirror46_A_S.txt` | **46** | upper bound Lean-checked (`SYMLEAN/mirror`) and a corollary of Baek's theorem (refereed); certificates accepted by both checkers (§4); lower bound exact computation |
