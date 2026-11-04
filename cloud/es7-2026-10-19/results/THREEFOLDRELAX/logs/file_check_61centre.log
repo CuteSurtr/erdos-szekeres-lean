@@ -1,0 +1,6 @@
+{'base_vars': 11610, 'sat_by_base': 3801610, 'falsified_by_base': 0, 'residual': 1213575, 'multi_body': 0, 'chain_true': 30443, 'residual_violated': 0}
+        5.90 real         5.43 user         0.13 sys
+sets4/c3_61pts_centre.txt --mirror t=20: {'base_vars': 11610, 'sat_by_base': 3783690, 'falsified_by_base': 0, 'residual': 1231495, 'multi_body': 0, 'chain_true': 27725, 'residual_violated': 0}
+sets4/c3_61pts_blowup.txt  t=20: {'base_vars': 11610, 'sat_by_base': 3784350, 'falsified_by_base': 0, 'residual': 1230835, 'multi_body': 0, 'chain_true': 26851, 'residual_violated': 0}
+sets4/c3_61pts_blowup.txt --mirror t=20: {'base_vars': 11610, 'sat_by_base': 3769470, 'falsified_by_base': 0, 'residual': 1245715, 'multi_body': 0, 'chain_true': 32347, 'residual_violated': 0}
+sets4/c3_63pts_3octagons_nocentre.txt  t=21: {'base_vars': 13461, 'sat_by_base': 4591581, 'falsified_by_base': 0, 'residual': 1529571, 'multi_body': 0, 'chain_true': 32224, 'residual_violated': 1}
