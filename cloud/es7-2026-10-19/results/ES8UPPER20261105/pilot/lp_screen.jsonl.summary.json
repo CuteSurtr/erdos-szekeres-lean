@@ -1,0 +1,157 @@
+{
+ "contexts": 4096,
+ "budget": 64,
+ "workers": 26,
+ "wall_s": 11.2,
+ "lp_seconds_mean": 0.069,
+ "non_optimal": 0,
+ "closes_at_root": 0,
+ "prop_closed": 0,
+ "lp_min": 59.934289,
+ "lp_median": 60.689734,
+ "lp_max": 61.932294,
+ "lowest_lp": [
+  {
+   "ctx": 991,
+   "lp": 59.934289,
+   "lp_prop": 59.934289,
+   "forced": 0,
+   "b63_leaves": 616
+  },
+  {
+   "ctx": 1023,
+   "lp": 59.958624,
+   "lp_prop": 59.958624,
+   "forced": 0,
+   "b63_leaves": 807
+  },
+  {
+   "ctx": 4029,
+   "lp": 59.960828,
+   "lp_prop": 59.960828,
+   "forced": 0,
+   "b63_leaves": 557
+  },
+  {
+   "ctx": 1022,
+   "lp": 59.996996,
+   "lp_prop": 59.996996,
+   "forced": 0,
+   "b63_leaves": 754
+  },
+  {
+   "ctx": 1470,
+   "lp": 59.997994,
+   "lp_prop": 59.997994,
+   "forced": 0,
+   "b63_leaves": 673
+  },
+  {
+   "ctx": 983,
+   "lp": 59.998514,
+   "lp_prop": 59.998514,
+   "forced": 0,
+   "b63_leaves": 560
+  },
+  {
+   "ctx": 2423,
+   "lp": 60.001742,
+   "lp_prop": 60.001742,
+   "forced": 0,
+   "b63_leaves": 615
+  },
+  {
+   "ctx": 4087,
+   "lp": 60.016083,
+   "lp_prop": 60.016083,
+   "forced": 0,
+   "b63_leaves": 619
+  },
+  {
+   "ctx": 2911,
+   "lp": 60.017695,
+   "lp_prop": 60.017695,
+   "forced": 0,
+   "b63_leaves": 729
+  },
+  {
+   "ctx": 2931,
+   "lp": 60.025913,
+   "lp_prop": 60.025913,
+   "forced": 0,
+   "b63_leaves": 619
+  },
+  {
+   "ctx": 3583,
+   "lp": 60.029068,
+   "lp_prop": 60.029068,
+   "forced": 0,
+   "b63_leaves": 652
+  },
+  {
+   "ctx": 2942,
+   "lp": 60.037493,
+   "lp_prop": 60.037493,
+   "forced": 0,
+   "b63_leaves": 678
+  },
+  {
+   "ctx": 3006,
+   "lp": 60.040312,
+   "lp_prop": 60.040312,
+   "forced": 0,
+   "b63_leaves": 752
+  },
+  {
+   "ctx": 3295,
+   "lp": 60.040486,
+   "lp_prop": 60.040486,
+   "forced": 0,
+   "b63_leaves": 528
+  },
+  {
+   "ctx": 4031,
+   "lp": 60.044928,
+   "lp_prop": 60.044928,
+   "forced": 0,
+   "b63_leaves": 556
+  },
+  {
+   "ctx": 989,
+   "lp": 60.046697,
+   "lp_prop": 60.046697,
+   "forced": 0,
+   "b63_leaves": 684
+  },
+  {
+   "ctx": 1119,
+   "lp": 60.047228,
+   "lp_prop": 60.047228,
+   "forced": 0,
+   "b63_leaves": 460
+  },
+  {
+   "ctx": 2039,
+   "lp": 60.049559,
+   "lp_prop": 60.049559,
+   "forced": 0,
+   "b63_leaves": 662
+  },
+  {
+   "ctx": 2035,
+   "lp": 60.050465,
+   "lp_prop": 60.050465,
+   "forced": 0,
+   "b63_leaves": 778
+  },
+  {
+   "ctx": 4020,
+   "lp": 60.052795,
+   "lp_prop": 60.052795,
+   "forced": 0,
+   "b63_leaves": 628
+  }
+ ],
+ "highspy": "1.15.1",
+ "finished": "2026-11-05 16:02:06"
+}
