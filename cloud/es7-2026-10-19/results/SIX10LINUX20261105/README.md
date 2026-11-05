@@ -76,12 +76,14 @@ Two methods found 60-point sets:
 Earlier evidence from the same night: pure annealing of the octagon count stalled at 90 octagons, and adding one
 hexagon to either certified 54-point set left at least 414 octagons on fixed-radius grids.
 
-## 5. The known record sets do not extend by one layer (certificate: LRAT, lrat-check)
+## 5. The known record sets do not extend by one layer (solver UNSAT; NOT certified, see below)
 
 For each known record set, the realization workstream fixed all its layers' orbit signs and phase order, inserted
 one new layer at every nesting position and phase gap, and solved the encoder formula. The logs in `extensions/`
 record exit codes, lrat-check results and SHA-256 prefixes of each CNF and proof; the proof files themselves are
-outside Git.
+outside Git. **Caveat (added 13:10 KST):** these proofs were accepted only by lrat-check, and the lrat-check build
+used is unsound (`LRATCHECK20261105`). The statements below are therefore solver results whose proofs await a
+cake_lpr re-check. They are not certified.
 - **6-fold** (`extensions/lrat_ext_sixfold54.log`): neither 54-point order type of `ES8SYM` extends to 10 layers.
   All 36 cases are UNSAT, and lrat-check accepts 36 of 36 proofs.
   - For the nine-layer set the formula is encoder A alone.

@@ -19,13 +19,19 @@ Rigor labels: Lean-checked / certificate (an LRAT proof accepted by a checker) /
    - For m = 6 it adds 524 clauses, and it is all the local degree-2 information that prunes models.
    - It explains why the `SIX10CEGAR` "hard cores" looked hard: their SDP never received phase rows.
    - The generator covers any m.
-3. **The known record sets do not extend** (certificate, LRAT). Neither 54-point 6-fold order type extends to
+3. **The known record sets do not extend** (solver UNSAT; proofs accepted only by lrat-check, NOT certified, see item 5). Neither 54-point 6-fold order type extends to
    60 points, and the 4-fold 52-point set does not extend to 56. The 5-fold 56-point set extends only abstractly
    (innermost layer), and that extension was not realized (`SIX10LINUX20261105` §5).
 4. **The 101 hard models of SIX10CEGAR are all non-realizable** (`SIX10LINUX20261105`; exact, re-checked).
    - They are excluded by facial-reduction degree-2 certificates, by biquadratic final polynomials on 3–4 layers, and
      by GP violations.
    - Each GP family comes down to a single orbit sign.
+
+5. **The lrat-check build used in the project is unsound** (`LRATCHECK20261105`; exact, reproducible).
+   - It reports "c VERIFIED" for a bogus proof of a satisfiable formula.
+   - Claims certified only by lrat-check need a cake_lpr re-check. Claims also accepted by cake_lpr are unaffected,
+     including `C6UPPER`, `C7UPPER` and hence `SIX60`.
+   - A project-wide audit is recorded in `LRATCHECK20261105/AUDIT.md`.
 
 ## Updated table (k = 8, largest m-fold symmetric set without a convex octagon)
 
@@ -51,12 +57,12 @@ These instances are the threshold formulas of `ROT456`:
 
 Both are byte-identical to the recorded CNFs. The chord lemma's new clauses are added (882 and 801), together with
 the reflection unit (H(1), resp. Y(1,2)) and one total phase order of layers 1–4 per cube (24, resp. 12 cubes).
-CaDiCaL writes text LRAT, and each UNSAT proof is checked by lrat-check. The work directory is outside git:
+CaDiCaL writes text LRAT. Since 13:01 KST each UNSAT proof is checked by cake_lpr (supervisor v2). The work directory is outside git:
 `<rot45-work-dir>` (`results.tsv`, `cubes5/`, `cubes4/`).
 
 UNSAT of all cubes of one instance would give the m-fold case of ES(8) = 65. The soundness of the added clauses rests
-on the written chord-lemma proof and its exact case analysis; an independent review of the general-m generator was
-running at the time of writing.
+on the written chord-lemma proof and its exact case analysis. An independent review of the general-m generator
+(`CHORD20261105` §6) proved every added clause by its own exact verifier and found no violation.
 
 **State at about 04:35 KST.** Nothing has finished yet. The runs are continued until **16:00 KST** by a detached
 supervisor (`ROT45CHORD20261105`, `tools/supervisor.py`, systemd user unit `rot45-supervisor`).
