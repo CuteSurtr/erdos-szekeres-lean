@@ -32,7 +32,8 @@ Rigor labels: Lean-checked / certificate (an LRAT proof accepted by a checker) /
      cake_lpr.
    - It was rediscovered here because the Linux setup built drat-trim without the E2 patch.
    - A project-wide audit (`LRATCHECK20261105/AUDIT.md`) found every headline result unaffected except PRIMEFOLD
-     Theorem E (lrat-check only). Its cake_lpr re-check was started on 5 November.
+     Theorem E (lrat-check only). That theorem is **now certified**: 7/7 regenerated CNFs with matching hashes were
+     accepted by cake_lpr (`LRATCHECK20261105/recheck/`).
    - The 5 November items that had used lrat-check were all re-certified with cake_lpr.
 
 ## Updated table (k = 8, largest m-fold symmetric set without a convex octagon)

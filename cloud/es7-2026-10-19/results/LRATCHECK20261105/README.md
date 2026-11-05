@@ -33,9 +33,10 @@ coordinator, who at first did not know of E2. It also records what is new:
   (`ROT45CHORD20261105/tools/check_wrapper.sh`).
 - **Project-wide audit (`AUDIT.md`).** Every headline result is anchored on cake_lpr: threefold 33, the mirror cases,
   central 34, fivefold 35, fourfold 28, threefold hexagon-free 13, sixfold 60, sevenfold 64 and mirror 46.
-  - **One exception: PRIMEFOLD Theorem E** (cited in the note's abstract) was accepted by lrat-check only. Its
-    re-check with cake_lpr was started on 5 November, together with the other small lrat-check-only items listed
-    in `AUDIT.md` §4.
+  - **One exception: PRIMEFOLD Theorem E** (cited in the note's abstract) had been accepted by lrat-check only. It
+    is **now certified**: all 7 CNFs regenerated with matching full hashes and accepted by cake_lpr
+    (`recheck/README.md`). The other cheap items of `AUDIT.md` §4 were re-certified the same way, except two
+    MIRRORETV encodings whose generators were never committed.
   - Recommendation: always install drat-trim with the E2 patch, log the checker binary's SHA-256 in every run, and
     anchor every certificate on cake_lpr.
 

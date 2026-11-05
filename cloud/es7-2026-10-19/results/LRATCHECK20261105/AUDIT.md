@@ -3,8 +3,8 @@
 *This is the report of a read-only three-reader audit workflow plus a synthesis. Updates after it was written:*
 - *`SIX10LINUX20261105` §5: all 94 proofs re-certified with cake_lpr.*
 - *The 60 `ROT45CHORD20261105` transitivity patterns: re-certified with cake_lpr.*
-- *The re-checks of §4, PRIMEFOLD Theorem E first, are recorded under `<recheck-dir>`, and their outcome is noted in
-  `README.md`.*
+- *The re-checks of §4 are in `recheck/README.md`. PRIMEFOLD Theorem E is now certified (7/7 accepted by cake_lpr),
+  and so are the other cheap items, except two MIRRORETV encodings that have no committed generator.*
 
 ## 1. Headline results
 
