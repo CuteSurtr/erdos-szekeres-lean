@@ -1,0 +1,22 @@
+{
+ "manifest": "<scratch>/covneg/a/manifest-E311R.json",
+ "checks": {
+  "part_sha256": true,
+  "tree_sha256": true,
+  "budget": true,
+  "tree_is_tree": true,
+  "expected_leaves": true,
+  "base_path": true,
+  "module_leaf_counts": false,
+  "every_leaf_exactly_once": false,
+  "sum_of_module_leaves": true,
+  "skeleton": false,
+  "module_files": true
+ },
+ "written_modules": 3,
+ "leaves": 437579,
+ "modules": 618,
+ "subtree_roots": 675,
+ "PASS": false,
+ "mutation": "module 2 of the manifest loses its last subtree root"
+}

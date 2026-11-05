@@ -1,0 +1,30 @@
+lean_make: Packed current (stamp 5a0e671a88f7351f)
+lean_make: Fast current (stamp a71a7197ff4b6656)
+lean_make: WordPack current (stamp 5ef07ad103584f9d)
+lean_make: Split current (stamp 61fe059fe2b1104c)
+lean_make: Fast2 current (stamp e01c773b910f0241)
+lean_make: Path current (stamp 60a01f9ca4837a3d)
+lean_make: Fcat2650 current (stamp ed47736434a997e0)
+{"export": "<repo>/experiments/omission-compact-checker-2026-11-05/build/es311/trial/R-sub487209-L1000-B64", "modules": 7, "to_run": 7, "already_done": 0, "deps": {"Path": "60a01f9ca4837a3d99f5c346439caf4f1305cd32c8c341abff1633ae7b19add3", "Fcat2650": "ed47736434a997e0e049d4728acbe0171a4b5c23724567912a48443b32243fcb"}, "tsv": "<repo>/experiments/omission-compact-checker-2026-11-05/build/es311/trial/R-sub487209-L1000-B64/run.tsv"}
+2026-11-05T20:31:22Z ok E311R.C00001 leaves=584 kernel=8.400 wall=12.27 rss=3142520 running=1 queued=5
+2026-11-05T20:31:24Z ok E311R.C00002 leaves=935 kernel=10.700 wall=14.76 rss=3153272 running=1 queued=4
+2026-11-05T20:31:35Z ok E311R.C00003 leaves=614 kernel=8.470 wall=12.31 rss=3164300 running=1 queued=3
+2026-11-05T20:31:42Z ok E311R.C00004 leaves=985 kernel=13.200 wall=17.34 rss=3172392 running=1 queued=2
+2026-11-05T20:31:51Z ok E311R.C00005 leaves=820 kernel=11.100 wall=15.13 rss=3162600 running=1 queued=1
+2026-11-05T20:31:55Z ok E311R.C00006 leaves=662 kernel=8.620 wall=12.45 rss=3146268 running=0 queued=1
+2026-11-05T20:31:58Z ok E311R.Root leaves=4600 kernel=0.001 wall=2.42 rss=3034012 running=0 queued=0
+{"finished": "2026-11-05T20:31:59Z", "not_ok": []}
+lean_make: Packed current (stamp 5a0e671a88f7351f)
+lean_make: Fast current (stamp a71a7197ff4b6656)
+lean_make: WordPack current (stamp 5ef07ad103584f9d)
+lean_make: Split current (stamp 61fe059fe2b1104c)
+lean_make: Fast2 current (stamp e01c773b910f0241)
+lean_make: Path current (stamp 60a01f9ca4837a3d)
+lean_make: Fcat62 current (stamp 1f7212d4fbb8cef7)
+{"export": "<repo>/experiments/omission-compact-checker-2026-11-05/build/es311/trial/B-sub789369-L5000-B64", "modules": 5, "to_run": 5, "already_done": 0, "deps": {"Path": "60a01f9ca4837a3d99f5c346439caf4f1305cd32c8c341abff1633ae7b19add3", "Fcat62": "1f7212d4fbb8cef77b3005e5836cc89f34fff0aab6a092f02f67a8bdc2930046"}, "tsv": "<repo>/experiments/omission-compact-checker-2026-11-05/build/es311/trial/B-sub789369-L5000-B64/run.tsv"}
+2026-11-05T20:33:18Z ok E311B.C00001 leaves=2986 kernel=67.400 wall=76.16 rss=3488264 running=1 queued=3
+2026-11-05T20:33:37Z ok E311B.C00002 leaves=3802 kernel=84.400 wall=95.08 rss=3543696 running=1 queued=2
+2026-11-05T20:34:50Z ok E311B.C00003 leaves=3505 kernel=81.600 wall=91.69 rss=3569548 running=1 queued=1
+2026-11-05T20:35:42Z ok E311B.C00004 leaves=4771 kernel=111.000 wall=124.94 rss=3630072 running=0 queued=1
+2026-11-05T20:35:45Z ok E311B.Root leaves=15064 kernel=0.001 wall=2.64 rss=3116844 running=0 queued=0
+{"finished": "2026-11-05T20:35:46Z", "not_ok": []}

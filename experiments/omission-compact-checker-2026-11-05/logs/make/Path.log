@@ -1,0 +1,26 @@
+'CompactChecker.split_pm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompactChecker.mset_zeros' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CompactChecker.mem_mset_zero_occupied' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Command being timed: "lean -R experiments/omission-compact-checker-2026-11-05 -o experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Path.olean experiments/omission-compact-checker-2026-11-05/CompactChecker/Path.lean"
+	User time (seconds): 2.12
+	System time (seconds): 0.47
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.60
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3038816
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 60601
+	Voluntary context switches: 1095
+	Involuntary context switches: 345
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 248
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
