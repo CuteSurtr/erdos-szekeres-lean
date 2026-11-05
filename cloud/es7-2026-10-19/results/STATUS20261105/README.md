@@ -94,8 +94,8 @@ deleted on the author's instruction (manifest in `ROT45CHORD20261105/logs/`).
 
 ## Decisions pending (unchanged from STATUS20261104 unless noted)
 
-1. Push the local branch `es7-night-2026-11-01`. It contains the merge of the review branch and the 5 November
-   commits, none of which are pushed.
+1. ~~Push the branch~~. Done on 5 November, about 19:30 KST: `es7-night-2026-11-01`, including the merged review branch
+   and all 5 November commits, is on `origin`.
 2. Update and merge the k = 8 note section (now with 6-fold = 60).
 3. Send the k = 8 email (draft on the Mac). It now needs the 6-fold value 60.
 4. Optionally fast-forward `es7-cloud`.
