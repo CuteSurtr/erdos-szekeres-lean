@@ -1,29 +1,27 @@
-# LRATCHECK20261105: the lrat-check build used in this project is unsound (5 November 2026)
+# LRATCHECK20261105: the lrat-check on the Linux machine is the unpatched, unsound build (5 November 2026)
 
-**Finding (exact, reproducible with `reproduce.sh`).** `lrat-check` from drat-trim (github marijnheule/drat-trim,
-commit `2e3b2dc`, 2024-11-25, the build in `~/.local/bin` on the Linux machine) accepts a proof of a *satisfiable*
-formula:
+**This defect was already known.** `E2` found it on 20 October 2026 and patched it:
+- the record is `E2/logs/lrat_check_soundness.md`;
+- the patch is `E2/tools/lrat-check-E2.patch`;
+- `WRITEUP/CERTIFICATES.md` pins the patched binary.
 
-```
-$ cat sat_formula.cnf      p cnf 1 1 / 1 0
-$ cat bogus_proof.lrat     2 0 0
-$ lrat-check sat_formula.cnf bogus_proof.lrat
-c VERIFIED                 (exit code 0)
-```
+The headline results of the project are anchored on cake_lpr (see `AUDIT.md`). This record documents a
+**rediscovery**, made on 5 November by an independent reviewer of the threshold-run supervisor and confirmed by the
+coordinator, who at first did not know of E2. It also records what is new:
 
-The step "2 0 0" claims the empty clause with no hints. In `lrat-check.c`, the `RATs == 0` branch
-(`lrat-check_c_lines155-165.txt`) has its rejection line commented out:
-`// if (res == SUCCESS) return FAILED; // No RAT and no conflict is FAILED`. A lemma whose hints reach no conflict
-and which has no RAT candidates is therefore accepted. The defect was found by an independent reviewer of the
-5 November supervisor and confirmed by the coordinator.
-
-**cake_lpr (the verified CakeML checker) behaves correctly.** It rejects the bogus proof ("Checking failed at line:
-0. Reason: pivot must be non-zero") and prints `s VERIFIED UNSAT` for a genuine CaDiCaL proof. **It exits 0 in both
-cases**, so only the printed line can serve as a verdict.
-
-**A second pitfall.** On failure lrat-check prints `c NOT VERIFIED`, and `grep -E 'VERIFIED|FAILED'` matches that
-line. A script in the 5 November campaign (`ROT45CHORD20261105/tools/implane.sh`) fell into this. It also deleted
-the files it had "verified".
+1. **The Linux machine builds the unpatched checker.** The only drat-trim on the host (commit `2e3b2dc`, built
+   4 November 21:42, `~/.local/bin/lrat-check`) lacks the E2 patch. The "Setting up on Linux" section of
+   `STATUS20261104` does not mention the patch. Every lrat-check verdict on this machine before 13:01 KST on
+   5 November used that build.
+2. **Reproduction** (`reproduce.sh`, `reproduce.log`): for the satisfiable `p cnf 1 1 / 1 0` and the proof `2 0 0`,
+   it prints `c VERIFIED` and exits 0. cake_lpr rejects the same proof ("pivot must be non-zero") but **also exits
+   0**, so only its line `s VERIFIED UNSAT` counts.
+3. **Scope** (from reading the source, `lrat-check_c_lines155-165.txt`; the audit's reading, not tested further). The
+   unsound path is the empty clause: its pivot has intro[] = 0, so an empty clause with non-conflicting hints is
+   accepted. A non-empty lemma accepted without RAT candidates is a blocked clause, which preserves satisfiability.
+   E2's patch closes the empty-clause path.
+4. **Two parsers matched "VERIFIED" inside `c NOT VERIFIED`.** They are `Mi-2/scripts/shard.py:65` and
+   `ROT45CHORD20261105/tools/implane.sh`. No cake_lpr driver in the project has this problem.
 
 ## Consequences
 
@@ -33,7 +31,13 @@ the files it had "verified".
   certificates, both checkers for both encoders, and therefore the sixfold value 60 of `SIX60`.
 - From now on, the verdict is cake_lpr's `s VERIFIED UNSAT` line. The 5 November supervisor v2 does this
   (`ROT45CHORD20261105/tools/check_wrapper.sh`).
-- The project-wide audit of which earlier claims rest on lrat-check alone is in `AUDIT.md` (added when complete).
+- **Project-wide audit (`AUDIT.md`).** Every headline result is anchored on cake_lpr: threefold 33, the mirror cases,
+  central 34, fivefold 35, fourfold 28, threefold hexagon-free 13, sixfold 60, sevenfold 64 and mirror 46.
+  - **One exception: PRIMEFOLD Theorem E** (cited in the note's abstract) was accepted by lrat-check only. Its
+    re-check with cake_lpr was started on 5 November, together with the other small lrat-check-only items listed
+    in `AUDIT.md` §4.
+  - Recommendation: always install drat-trim with the E2 patch, log the checker binary's SHA-256 in every run, and
+    anchor every certificate on cake_lpr.
 
 ## In the 5 November campaign
 
