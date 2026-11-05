@@ -19,7 +19,7 @@ Rigor labels: Lean-checked / certificate (an LRAT proof accepted by a checker) /
    - For m = 6 it adds 524 clauses, and it is all the local degree-2 information that prunes models.
    - It explains why the `SIX10CEGAR` "hard cores" looked hard: their SDP never received phase rows.
    - The generator covers any m.
-3. **The known record sets do not extend** (solver UNSAT; proofs accepted only by lrat-check, NOT certified, see item 5). Neither 54-point 6-fold order type extends to
+3. **The known record sets do not extend** (certificate: 94 LRAT proofs accepted by cake_lpr, re-certified after item 5). Neither 54-point 6-fold order type extends to
    60 points, and the 4-fold 52-point set does not extend to 56. The 5-fold 56-point set extends only abstractly
    (innermost layer), and that extension was not realized (`SIX10LINUX20261105` §5).
 4. **The 101 hard models of SIX10CEGAR are all non-realizable** (`SIX10LINUX20261105`; exact, re-checked).

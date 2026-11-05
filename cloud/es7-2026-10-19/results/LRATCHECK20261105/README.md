@@ -40,7 +40,7 @@ the files it had "verified".
 | Claim | Before | Now |
 |---|---|---|
 | 60 transitivity patterns of the 5-/4-fold covers | lrat-check plus the grep pitfall; artifacts deleted | regenerated and re-checked with cake_lpr (`ROT45CHORD20261105/logs/imp2_results.tsv`) |
-| Record sets do not extend by one layer (`SIX10LINUX20261105` §5) | lrat-check only | **not certified** until re-checked with cake_lpr |
+| Record sets do not extend by one layer (`SIX10LINUX20261105` §5) | lrat-check only | all 94 proofs regenerated (identical hashes) and accepted by cake_lpr |
 | Threshold cubes (`ROT45CHORD20261105`) | none finished before the switch | cake_lpr verdict since 13:01 KST |
 
 Reporting the defect upstream is left to the author.

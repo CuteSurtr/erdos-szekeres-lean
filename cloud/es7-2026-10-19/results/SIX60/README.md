@@ -76,8 +76,8 @@ Layer o is rows 6o..6o+5, outermost first.
 A, B, C and D have 296,544, 301,674, 221,976 and 316,182 convex 7-subsets, so they are pairwise different order types. None of them
 contains a certified 54-point order type of `ES8SYM` as nine of its layers. The realization workstream reports that
 neither 54-point order type extends by one hexagon at any nesting position: 36 SAT cases, all UNSAT, with LRAT proofs
-accepted by lrat-check (`construction/REALIZE_README.md`). That lrat-check build is unsound (`LRATCHECK20261105`),
-so this side remark is not certified until the proofs are re-checked with cake_lpr. The theorem does not use it.
+accepted by lrat-check (`construction/REALIZE_README.md`). That lrat-check build is unsound (`LRATCHECK20261105`). All 36
+proofs were then re-certified with cake_lpr (`SIX10LINUX20261105` §5). The theorem does not use this remark.
 
 ## Verification (exact computation)
 

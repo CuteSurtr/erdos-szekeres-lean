@@ -76,14 +76,22 @@ Two methods found 60-point sets:
 Earlier evidence from the same night: pure annealing of the octagon count stalled at 90 octagons, and adding one
 hexagon to either certified 54-point set left at least 414 octagons on fixed-radius grids.
 
-## 5. The known record sets do not extend by one layer (solver UNSAT; NOT certified, see below)
+## 5. The known record sets do not extend by one layer (certificate: LRAT accepted by cake_lpr)
 
 For each known record set, the realization workstream fixed all its layers' orbit signs and phase order, inserted
 one new layer at every nesting position and phase gap, and solved the encoder formula. The logs in `extensions/`
 record exit codes, lrat-check results and SHA-256 prefixes of each CNF and proof; the proof files themselves are
-outside Git. **Caveat (added 13:10 KST):** these proofs were accepted only by lrat-check, and the lrat-check build
-used is unsound (`LRATCHECK20261105`). The statements below are therefore solver results whose proofs await a
-cake_lpr re-check. They are not certified.
+outside Git. The proofs were first accepted only by lrat-check, which is unsound (`LRATCHECK20261105`). **Re-certified
+at 13:10–13:15 KST with cake_lpr** (`extensions/recert_cake/`):
+- every case was regenerated from the saved cores, and each CNF's SHA-256 prefix equals the recorded one;
+- CaDiCaL reproduced the same proofs (identical LRAT hash prefixes);
+- every cake_lpr log is exactly "s VERIFIED UNSAT": 36/36 (6-fold), 26/26 (4-fold), 32/32 (5-fold);
+- the coordinator re-checked the verdict lines and all hash files.
+
+The CNFs and proofs (5.2 GB) are outside Git; their hashes are in `extensions/recert_cake/*/all_hashes.txt`.
+The 6-fold case `1orbit_core_p9_gNone_allextra` also contains four cut files. These are the SIX10CEGAR verified cuts,
+the model0090 cut, and lane-cut and GP snapshots, each accepted by an exact checker when produced and satisfied by
+the real 60-point sets. That case also rests on their soundness.
 - **6-fold** (`extensions/lrat_ext_sixfold54.log`): neither 54-point order type of `ES8SYM` extends to 10 layers.
   All 36 cases are UNSAT, and lrat-check accepts 36 of 36 proofs.
   - For the nine-layer set the formula is encoder A alone.
