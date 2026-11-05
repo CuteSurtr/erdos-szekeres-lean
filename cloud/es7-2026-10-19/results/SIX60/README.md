@@ -32,7 +32,8 @@ about a point O, and with no 8 points in convex position.
    - **Certificate.** For each of two separately implemented encoders (`C7UPPER/gen.py` as encoder A and
      `C6UPPER/encb/gen_b2.py` as encoder B), the formula for t = 11 with the reflection unit Y(1,2) and a 32-cube split
      on the phase order of layers 1–4 is UNSAT. Every LRAT proof is accepted by both lrat-check and the verified
-     checker cake_lpr. The proofs are archived outside Git (`es8-c6-octagon-2026-11-03`; hashes in
+     checker cake_lpr. cake_lpr's acceptance carries the certificate, because the lrat-check build is unsound
+     (`LRATCHECK20261105`). The proofs are archived outside Git (`es8-c6-octagon-2026-11-03`; hashes in
      `C6UPPER/SHA256SUMS.txt`).
    - **Written proofs, reviewed, not Lean-checked.** The soundness of the encodings (docstring of `C7UPPER/gen.py` and
      the review in `ROT456` §2), the reflection unit (`C6UPPER` §2), and the cover check (`C6UPPER/tools/verify_cover.py`).
@@ -75,7 +76,8 @@ Layer o is rows 6o..6o+5, outermost first.
 A, B, C and D have 296,544, 301,674, 221,976 and 316,182 convex 7-subsets, so they are pairwise different order types. None of them
 contains a certified 54-point order type of `ES8SYM` as nine of its layers. The realization workstream reports that
 neither 54-point order type extends by one hexagon at any nesting position: 36 SAT cases, all UNSAT, with LRAT proofs
-accepted by lrat-check (`construction/REALIZE_README.md`; not re-checked by the coordinator).
+accepted by lrat-check (`construction/REALIZE_README.md`). That lrat-check build is unsound (`LRATCHECK20261105`),
+so this side remark is not certified until the proofs are re-checked with cake_lpr. The theorem does not use it.
 
 ## Verification (exact computation)
 

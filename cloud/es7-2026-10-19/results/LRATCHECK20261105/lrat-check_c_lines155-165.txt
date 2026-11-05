@@ -1,0 +1,11 @@
+  if (res == FAILED  ) { return FAILED;  }
+
+  int *first = hints; first++; while (*first > 0) first++;
+  int start = intro[pivot ^ 1];
+
+  if (RATs == 0)      {
+//    if (res == SUCCESS) return FAILED; // No RAT and no conflict is FAILED
+    if (print) printf ("c start %i first %i\n", start, -first[0]);
+    if (start != 0) return FAILED;
+    return SUCCESS; }
+

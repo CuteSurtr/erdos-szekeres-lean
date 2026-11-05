@@ -122,7 +122,8 @@ A second reviewer, asked to refute `tools/chord_rules_m.py`, found no unsound cl
   cube files contain exactly the reviewed clauses plus their units.
 - **Caveat stated by the reviewer.** The cube cover (reflection unit and phase-order split) was not part of this
   review. It follows `ROT456`/`C7UPPER` §2. The 40 + 20 transitivity-violating patterns were refuted again with the
-  chord clauses added, with LRAT proofs accepted by lrat-check (5 November).
+  chord clauses added. The first check used lrat-check, which is unsound (`LRATCHECK20261105`). At 13:0x KST all
+  60 were regenerated and their proofs accepted by cake_lpr (`ROT45CHORD20261105/logs/imp2_results.tsv`).
 
 ## Reproduction
 

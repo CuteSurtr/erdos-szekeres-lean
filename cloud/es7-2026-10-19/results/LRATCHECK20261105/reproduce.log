@@ -1,0 +1,14 @@
+== lrat-check on a SATISFIABLE formula with a bogus proof (must be rejected):
+c parsed a formula with 1 variables and 1 clauses
+c VERIFIED
+c allocated 1024 4 10
+c Added clauses = 2.  Deleted clauses = 0.  Max live clauses = 2
+c verification time = 0.04 secs
+exit code 0
+== cake_lpr on the same input:
+c Checking failed at line: 0. Reason: pivot must be non-zero
+exit code 0 (cake_lpr exits 0 either way; only 's VERIFIED UNSAT' counts)
+== cake_lpr on a genuine CaDiCaL proof of an UNSAT formula:
+s VERIFIED UNSAT
+== the grep pitfall: 'c NOT VERIFIED' matches a plain grep for VERIFIED:
+VERIFIED
