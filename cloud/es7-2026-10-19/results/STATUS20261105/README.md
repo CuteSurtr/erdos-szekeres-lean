@@ -27,11 +27,13 @@ Rigor labels: Lean-checked / certificate (an LRAT proof accepted by a checker) /
      by GP violations.
    - Each GP family comes down to a single orbit sign.
 
-5. **The lrat-check build used in the project is unsound** (`LRATCHECK20261105`; exact, reproducible).
-   - It reports "c VERIFIED" for a bogus proof of a satisfiable formula.
-   - Claims certified only by lrat-check need a cake_lpr re-check. Claims also accepted by cake_lpr are unaffected,
-     including `C6UPPER`, `C7UPPER` and hence `SIX60`.
-   - A project-wide audit is recorded in `LRATCHECK20261105/AUDIT.md`.
+5. **The lrat-check on this Linux machine is the unpatched, unsound build** (`LRATCHECK20261105`).
+   - The defect is already known from `E2` (20 Oct), which patched it. The headline certificates are anchored on
+     cake_lpr.
+   - It was rediscovered here because the Linux setup built drat-trim without the E2 patch.
+   - A project-wide audit (`LRATCHECK20261105/AUDIT.md`) found every headline result unaffected except PRIMEFOLD
+     Theorem E (lrat-check only). Its cake_lpr re-check was started on 5 November.
+   - The 5 November items that had used lrat-check were all re-certified with cake_lpr.
 
 ## Updated table (k = 8, largest m-fold symmetric set without a convex octagon)
 
