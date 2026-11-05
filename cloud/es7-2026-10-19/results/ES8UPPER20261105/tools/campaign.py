@@ -50,6 +50,21 @@ def order():
     rest = sorted((k for k in size if k not in set(low)), key=lambda k: -size[k])
     return low + rest, size
 
+def max_running():
+    """manual throttle: campaign/max_running (integer); default WORKERS"""
+    try: return max(0, int(open(os.path.join(C, 'max_running')).read().split()[0]))
+    except Exception: return WORKERS
+
+_lowered = set()
+def lower_priority(pid):
+    """lowest CPU (nice 19) and idle I/O priority for a worker, once"""
+    if pid in _lowered: return
+    try:
+        os.setpriority(os.PRIO_PROCESS, pid, 19)
+        subprocess.run(['ionice', '-c', '3', '-p', str(pid)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        _lowered.add(pid)
+    except Exception: pass
+
 def health():
     t = None
     for h in glob.glob('/sys/class/hwmon/hwmon*/name'):
@@ -108,18 +123,23 @@ def main():
         hot = hot + 1 if (t is not None and t >= 95) else 0
         running = {k: p for k, p in live.items() if pstate(p) not in ('T', 'Z', None)}
         paused = {k: p for k, p in live.items() if pstate(p) == 'T'}
-        if (hot >= 2 or mem < 4 * 2**30) and running:
+        cap = max_running()
+        for p in live.values(): lower_priority(p)
+        if len(running) > cap:                       # manual throttle: pause the youngest extra workers (no work lost)
+            for k, p in sorted(running.items(), key=lambda kv: -pstart(kv[1]))[:len(running) - cap]:
+                os.kill(p, signal.SIGSTOP); log('THROTTLE pause ctx %d (cap %d)' % (k, cap))
+        elif (hot >= 2 or mem < 4 * 2**30) and running:
             k, p = max(running.items(), key=lambda kv: pstart(kv[1])); os.kill(p, signal.SIGSTOP); log('PAUSE ctx %d (tctl %s, mem %.1f GiB)' % (k, t, mem / 2**30))
-        elif paused and hot == 0 and (t is None or t <= 85) and mem > 8 * 2**30:
+        elif paused and len(running) < cap and hot == 0 and (t is None or t <= 85) and mem > 8 * 2**30:
             k, p = min(paused.items(), key=lambda kv: pstart(kv[1])); os.kill(p, signal.SIGCONT); log('RESUME ctx %d' % k)
-        if not stop_new and not paused and disk > 450e9 and (t is None or t < 85):
+        if not stop_new and not paused and len(live) < cap and disk > 450e9 and (t is None or t < 85):
             dset = set(done)
             for k in seq:
-                if len(alive()) >= WORKERS: break
+                if len(alive()) >= min(WORKERS, cap): break
                 if k in dset or k in live or k in children or attempts.get(k, 0) >= 2: continue
                 maxs = 0 if k in capped_once else CAP
                 os.makedirs(os.path.join(HERE, 'logs'), exist_ok=True)
-                children[k] = subprocess.Popen([PY, 'run_context.py', '--budget', '64', '--ctx', str(k), '--out', 'runs', '--progress', '900',
+                children[k] = subprocess.Popen(['nice', '-n', '19', 'ionice', '-c', '3', PY, 'run_context.py', '--budget', '64', '--ctx', str(k), '--out', 'runs', '--progress', '900',
                                                 '--max-seconds', str(maxs)], cwd=HERE, start_new_session=True,
                                                stdout=open(os.path.join(HERE, 'logs', 'ctx-%d-b64.out' % k), 'w'),
                                                stderr=open(os.path.join(HERE, 'logs', 'ctx-%d-b64.err' % k), 'w'))
