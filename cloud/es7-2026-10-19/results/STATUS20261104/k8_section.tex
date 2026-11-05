@@ -1,23 +1,26 @@
 % k8_section.tex -- draft section for the note symmetric_extremal.tex (draft of 4 November 2026).
 % Uses the note's macros (\orient, \conv, \dirn, \lean) and bibliography keys (SMQH25, Mac25, Bae25, BB25, Dum25,
 % Supp). Labels are prefixed k8: so that the section can be merged with the note; if it is merged, Lemma k8:layer
-% replaces the note's Lemma lem:layer, and the Supp entry must list C7UPPER, C6UPPER, LAYERLEAN, ROT456 and the review
-% directories C6C7REVIEW and ROTREFINE20261104.
+% replaces the note's Lemma lem:layer, and the Supp entry must list C7UPPER, C6UPPER, LAYERLEAN, ROT456, SIX60,
+% LRATCHECK20261105, CHORD20261105, ROT45CHORD20261105 and the review directories C6C7REVIEW and ROTREFINE20261104.
 
 \section{Rotational symmetry for \texorpdfstring{$k=8$}{k=8}: upper bounds}\label{sec:k8}
 
 Let $\rho$ be the rotation by $2\pi/m$ about $O$. For $m\ge3$ and $K\le 2m$ let $L(m,K)$ be the largest $t$ for which
 there are $t$ nested regular $m$-gons centred at $O$ whose union is in general position and has no $K$ points in convex
 position. By Lemma~\ref{k8:layer} below, an $m$-fold symmetric set in general position with no convex $K$-gon has at most
-$mL(m,K)+1$ points, and at most $mL(m,K)$ if $m$ is even. The lower bounds $L(7,8)\ge9$ and $L(6,8)\ge9$ come from
+$mL(m,K)+1$ points, and at most $mL(m,K)$ if $m$ is even. The lower bounds $L(7,8)\ge9$ and $L(6,8)\ge10$ come from
 explicit sets (exact computation): seven order types of sevenfold symmetric $64$-point sets (nine heptagons and the
-centre) and a sixfold symmetric $54$-point set (nine hexagons)~\cite[\dirn{ES8SYM}, \dirn{PRIMEFOLD}]{Supp}. This
-section proves the matching upper bound for $m=7$ and an upper bound one layer above the lower bound for $m=6$
-(Table~\ref{k8:tab:status}).
+centre) and five order types of sixfold symmetric $60$-point sets (ten
+hexagons)~\cite[\dirn{ES8SYM}, \dirn{PRIMEFOLD}, \dirn{SIX60}]{Supp}. This section proves the matching upper bounds for
+$m=7$ and $m=6$ (Table~\ref{k8:tab:status}).
 
-Every statement carries one of the labels Lean-checked; certificate (both checkers); exact computation; written proof
+Every statement carries one of the labels Lean-checked; certificate; exact computation; written proof
 (not refereed); evidence only. A \emph{certificate} is an LRAT proof of unsatisfiability of a CNF formula accepted by
-both lrat-check and the verified checker cake\_lpr; the solver (CaDiCaL~3.0.1) is not trusted. A certificate proves a
+the verified checker cake\_lpr (its line \texttt{s VERIFIED UNSAT}); neither the solver (CaDiCaL~3.0.1) nor lrat-check
+is trusted. The lrat-check of drat-trim at commit \texttt{2e3b2dc} accepts an invalid proof of a satisfiable formula
+unless patched, a publicly known defect (drat-trim issues \#31 and \#42, pull request \#43; \dirn{LRATCHECK20261105}), so
+its verdicts below are supporting only. A certificate proves a
 geometric statement only together with the soundness of the encoding, whose status is stated separately
 (\S\ref{k8:sec:trust}). Paths refer to the supplementary directories~\cite{Supp}.
 
@@ -115,11 +118,12 @@ its mirror image satisfy every clause of both encoders' $9$-layer formulas (exac
 the coordinates of the sixfold cyclotomic weights, \dirn{C6C7REVIEW}). On random configurations, chain clauses agree with
 brute force over all $8$-subsets, and the non-chain clauses of A and B agree on all $185{,}549$ ($m=7$) and $35{,}590$
 ($m=6$) orbit-pattern pairs compared. Calibration: for $(m,K)=(3,4),(4,5),(5,6),(6,7)$ the encoding is satisfiable
-exactly at the known maximum number of layers and unsatisfiable one layer beyond (proofs accepted by lrat-check).
+exactly at the known maximum number of layers and unsatisfiable one layer beyond (proofs first accepted by lrat-check;
+certified by cake\_lpr on 5 November, \dirn{LRATCHECK20261105/recheck}).
 
 \subsection{Sevenfold symmetry}
 
-\begin{theorem}[certificate (both checkers), two encoders; reduction Lean-checked; lower bound exact computation]
+\begin{theorem}[certificate, two encoders; reduction Lean-checked; lower bound exact computation]
 \label{k8:c7}
 Every configuration of $10$ nested regular heptagons about a common centre, in general position and without the centre,
 contains $8$ points in convex position. Hence $L(7,8)=9$: every sevenfold rotationally symmetric set of at least $65$
@@ -147,12 +151,12 @@ $k=6$ analogue in print, the fivefold $16$-point set with centre of~\cite[App.~C
 
 \subsection{Sixfold symmetry}
 
-\begin{theorem}[certificate (both checkers), two encoders, on top of a written proof (not refereed) of the reflection
-unit; reduction Lean-checked; lower bound exact computation]\label{k8:c6}
+\begin{theorem}[certificate, two encoders (for what was replayed see the proof), on top of a written proof (not
+refereed) of the reflection unit; reduction Lean-checked; lower bound exact computation]\label{k8:c6}
 Every configuration of $11$ nested regular hexagons about a common centre, in general position, contains $8$ points in
-convex position. Hence $L(6,8)\le10$: every sixfold rotationally symmetric set of at least $61$ points in general position
-contains a convex octagon, and the largest sixfold symmetric set in general position without a convex octagon has $54$
-or $60$ points.
+convex position. Hence $L(6,8)=10$: every sixfold rotationally symmetric set of at least $61$ points in general position
+contains a convex octagon, and the largest sixfold symmetric set in general position without a convex octagon has
+exactly $60$ points.
 \end{theorem}
 
 \begin{proof}[Proof sketch]
@@ -173,15 +177,21 @@ $\psi_1,\dots,\psi_4$ with $\psi_1<\psi_2$.
 
 \emph{Certificates.} For encoder A the twelve orders took $1{,}230$--$2{,}068$\,s each ($41.0$\,GB of proofs); for
 encoder B, with the same split on its own formula, $1{,}495$--$2{,}553$\,s ($45.7$\,GB). All $64$ proofs were accepted
-by lrat-check and by cake\_lpr when solved. On 4 November three randomly chosen phase-order proofs per encoder were
-replayed with both checkers against freshly generated formulas, with matching hashes (\dirn{C6C7REVIEW}); the other
-cube verdicts are as recorded at solve time. An unsplit run was stopped after $6{,}578$\,s without an answer; it
-proves nothing.
+by lrat-check and by cake\_lpr when solved (3 November); the cake\_lpr logs record cube labels, not formula or proof
+hashes. On 4 November three randomly chosen phase-order proofs per encoder were replayed with both checkers against
+freshly generated formulas, with matching hashes (\dirn{C6C7REVIEW}), so $6$ of the $64$ cake\_lpr verdicts are bound
+to hashes; the same day all $64$ proofs, with hashes matching the recorded ones, were replayed against freshly generated
+formulas, but with lrat-check only, which is not a certificate. The other $58$ cake\_lpr verdicts are as recorded at solve time; a full
+hash-bound cake\_lpr replay is planned. An unsplit run was stopped after $6{,}578$\,s without an answer; it proves
+nothing.
 
-\emph{Lower bound} (exact computation). The sixfold $54$-point set \dirn{ES8SYM/sets/c6\_54pts\_9layers}.
+\emph{Lower bound} (exact computation). The sixfold $60$-point sets A, B, C, C$'$ and D of \dirn{SIX60/sets} (ten
+hexagons, coordinates in $\mathbb{Z}[\zeta_6]$; with $296{,}544$, $301{,}674$, $221{,}976$, $223{,}416$ and $316{,}182$
+convex $7$-subsets they are of pairwise different order types), each checked by at least three independently written
+programs (\dirn{SIX60}). The earlier $54$-point set \dirn{ES8SYM/sets/c6\_54pts\_9layers} is no longer needed for the lower bound.
 \end{proof}
 
-\begin{remark}[the gap $54$ versus $60$]\label{k8:gap}
+\begin{remark}[the former gap $54$ versus $60$]\label{k8:gap}
 The plain encoding is satisfiable at $10$ layers. Adding the $3$-term Grassmann--Pl\"ucker sign relations lazily gives an
 abstract sixfold $60$-point model that satisfies all $27{,}307{,}560$ of them and has no $7$-chain; it has not been
 realized (evidence only: the best numerical fit leaves $249$ of $5{,}710$ orbit signs wrong) (\dirn{ROT456}~\S3). The reviews exclude such models one at a time for the prescribed sixfold rotation (written proof
@@ -189,8 +199,10 @@ realized (evidence only: the best numerical fit leaves $249$ of $5{,}710$ orbit 
 determinant-product cycle (\dirn{C6C7REVIEW}), and, of $40$ fully GP-consistent models of a later refinement, $36$ by
 linear identities, $2$ by directed product cycles and $1$ by a negative-definite quadratic form; the last one is
 unresolved (\dirn{ROTREFINE20261104}). These exclusions concern
-the geometric sixfold action only, not arbitrary realizations of the order types. The sixfold maximum remains $54$ or
-$60$.
+the geometric sixfold action only, not arbitrary realizations of the order types. The question was settled by
+construction: the $60$-point sets of \dirn{SIX60} exist. The orientation signs of set A extend to a model of encoder A's
+$10$-layer formula and satisfy every clause of the cut families produced up to 5 November (exact computation,
+\dirn{SIX60}); since sound cuts cannot exclude a real configuration, its cube could never have become unsatisfiable.
 \end{remark}
 
 \subsection{Trust base}\label{k8:sec:trust}
@@ -200,8 +212,9 @@ $60$.
 Lemma~\ref{k8:facts} (the polar form and rules A and B, the radius order, the soundness of the chain family, the
 reduction to exactly $t$ layers); the deductions of Theorems~\ref{k8:c7} and~\ref{k8:c6} from \lean{Sevenfold70} and
 \lean{Sixfold66}.
-\item\emph{Certificate (both checkers):} the unsatisfiability of the two sevenfold formulas and of the $64$ sixfold
-cube formulas. Trusted: lrat-check and cake\_lpr.
+\item\emph{Certificate:} the unsatisfiability of the two sevenfold formulas (cake\_lpr, both replayed against
+regenerated formulas with matching hashes) and of the $64$ sixfold cube formulas (cake\_lpr at solve time; $6$ of the
+$64$ replayed hash-bound, see the proof of Theorem~\ref{k8:c6}). Trusted: cake\_lpr.
 \item\emph{Exact computation:} the cube cover; the lower-bound sets; the real-set tests of the sixfold formulas.
 \item\emph{Written proof (not refereed), reviewed:} (i)~the classification of phase patterns, i.e.\ which of rules A and
 B applies, and to which ordered triple, as a function of the discrete phase pattern (exact integer comparisons in
@@ -229,11 +242,12 @@ $m$ & largest known octagon-free set & needed for $65$ points & formula at thres
 3 & 61 (20 orbits and centre) & 22 orbits, no centre & --- (layer lemma fails, $8>6$) & open\\
 4 & 52 (13 layers) & 17 layers & $130{,}439$ var., $4{,}658{,}852$ cl. & open\\
 5 & 56 (11 layers and centre) & 13 layers & $91{,}390$ var., $3{,}295{,}617$ cl. & open\\
-6 & 54 (9 layers) & 11 layers & --- & excluded (Thm.~\ref{k8:c6}); max.\ 54 or 60\\
+6 & 60 (10 layers) & 11 layers & --- & excluded (Thm.~\ref{k8:c6}); max.\ 60\\
 7 & 64 (9 layers and centre) & 10 layers & --- & excluded (Thm.~\ref{k8:c7}); max.\ 64\\
 \bottomrule
 \end{tabular}
-\caption{Rotational symmetry of order $3$ to $7$ and convex octagons. Lower bounds: exact computation (\dirn{ES8SYM}).}
+\caption{Rotational symmetry of order $3$ to $7$ and convex octagons. Lower bounds: exact computation (\dirn{ES8SYM},
+\dirn{SIX60}).}
 \label{k8:tab:status}
 \end{table}
 
@@ -245,9 +259,13 @@ $2.0$--$2.6\cdot10^6$ conflicts for the sixfold cubes (\dirn{ROT456}~\S4). The p
 layers. Four exact linear identities over $\mathbb{Q}(\sqrt5)$ were found and tested on the $56$-point set; one of them
 excludes a fully GP-consistent abstract $60$-point model (written proof (not refereed), verified by exact
 computation), but a strengthened $13$-layer formula still gave no answer in
-$600$\,s (\dirn{ROTREFINE20261104}).
+$600$\,s (\dirn{ROTREFINE20261104}). Threshold runs of 5 November with added chord-lemma clauses (\dirn{CHORD20261105},
+\dirn{ROT45CHORD20261105}) refuted the $40$ impossible patterns again, with proofs accepted by cake\_lpr, but closed none
+of the $24$ phase orders: $19$ of them ran for up to about $15$ hours, and $5$ were never started.
 
-\emph{Fourfold} (evidence only). One run of the $17$-layer formula stopped at $1{,}500$\,s without an answer. At $14$
+\emph{Fourfold} (evidence only). One run of the $17$-layer formula stopped at $1{,}500$\,s without an answer; the
+5 November runs with chord-lemma clauses closed none of the $12$ phase orders in about $15$ hours (one run was lost;
+\dirn{ROT45CHORD20261105}). At $14$
 layers a fully GP-consistent abstract $56$-point model exists and has not been realized (best fit: $424$ of $6{,}930$
 orbit signs wrong).
 
@@ -263,7 +281,8 @@ encodings for Erd\H{o}s--Szekeres-type problems; they also use the special case 
 noted above. Dumitru's computations for $33$ points fix convex-layer
 templates~\cite[\S7, Table~1]{Dum25}; one of them implies the fivefold case for $k=7$, with priority, and no statement on
 symmetric sets for $k\ge8$ was found in~\cite{Dum25}. For the other symmetry types at $k=8$, the mirror value $46$
-follows from Baek's theorem~\cite{Bae25}, and the half-turn value $64$ from Baek--Balko's blow-up lemma~\cite[Lemma~14]{BB25}
-with the $16$-point sets of~\cite{SMQH25,Mac25}. For Theorems~\ref{k8:c7} and~\ref{k8:c6}, no matching prior result was found in the sources inspected (those of Section~\ref{sec:lit},
-arXiv:2512.24061, and a web search on 3 November 2026); the symmetric literature inspected stops at $k=7$. This is not a
-novelty claim.
+follows from Baek's theorem~\cite{Bae25}, and the half-turn lower bound $64$ from Baek--Balko's blow-up
+lemma~\cite[Lemma~14]{BB25} with the $16$-point sets of~\cite{SMQH25,Mac25}. For Theorems~\ref{k8:c7} and~\ref{k8:c6},
+no matching prior result was found in the sources inspected (those of Section~\ref{sec:lit}, arXiv:2512.24061, a web
+search on 3 November 2026, the check of 4 November in \dirn{C6C7REVIEW/LITERATURE.md}, and searches on 6 November 2026);
+the symmetric literature inspected stops at $k=7$. This is not a novelty claim.

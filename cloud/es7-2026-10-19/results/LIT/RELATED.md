@@ -1,6 +1,7 @@
 # LIT: prior work on ES(7), ES(8), symmetric configurations, and SAT/formal approaches
 
 Search date: 21 October 2026. Task: `results/LIT/TASK.md` at 3d83517, budget H = 1.25 h.
+A second search, on 6 November 2026, is in §6; where the two differ, §6 is the later record.
 
 **How the sources were read.** In this session arXiv, Semantic Scholar, DBLP, Zenodo,
 MathOverflow, Google Scholar and alphaXiv all returned proxy 403 to direct fetches. The only
@@ -50,7 +51,7 @@ Unreviewed and non-journal claims I am aware of:
 - This repository, branch main (commit c019a54): ES(8) ≤ 311, kernel-checked in Lean.
 
 No paper from 2024 to 2026 that settles ES(7), or gives a peer-reviewed bound below 113 / 408,
-turned up. B. C. Dumitru (arXiv:2512.24061, December 2025) states that the case k = 7 is open,
+turned up. B. Dumitru (arXiv:2512.24061, December 2025) states that the case k = 7 is open,
 and the erdosproblems.com page for Problem 107 (edited 11 April 2026) lists only the asymptotic
 bound.
 
@@ -176,3 +177,95 @@ classical Erdős–Szekeres construction.
    (decomposable sets) already known to satisfy the conjecture.
 
 BibTeX for all of these is in `references.bib`.
+
+## 6. 6 November 2026 search
+
+A read-only novelty check (four literature checks, three adversarial reviews and a synthesis) repeated and extended
+the searches above. Unlike on 21 October, direct fetches worked: arXiv abstract and HTML pages, the arXiv API, Zenodo,
+PDFs and the GitHub API. Its searches are recorded in that check's session journal, not in `searches.tsv`. Every
+statement below that nothing was found is the result of a bounded search, so it is evidence, not proof of absence.
+
+**Read in full** (or the stated part in full):
+- Subercaseaux–Mackey–Qian–Heule (SMQH), arXiv:2506.00224v1.
+- Mackey, M.S. thesis CMU-CS-25-108 (May 2025).
+- Koshelev–Koshka, arXiv:2604.20120v1, including Table 1 and §9.1.2.
+- Krapivin–Przybocki–Heule, arXiv:2607.02958v1.
+- Georgiev–Gómez-Serrano–Tao–Wagner, arXiv:2511.02864v2: Section 38 only.
+- Schroeder's Zenodo preprint: the record page, and PDF pp. 1–3, §8 and Appendix C.
+- Tóth–Valtr 2005 (Theorem 1); Mojarrad–Vlachos: abstract and the Theorem 1.1 text of arXiv v2.
+- Miyata–Moriyama–Imai, RIMS Kôkyûroku 1641 (2009) 8–15.
+- drat-trim issues #31 and #42, pull request #43, and commits cbd2915 and 5cd8ac3 (GitHub API).
+- erdosproblems.com Problem 107 and its forum thread.
+- GLitchfield/erdos-szekeres-convex-poly: README, theorem statements and commit dates through the GitHub API. It was not
+  built.
+
+**Abstract, metadata or snippets only:**
+- Dumitru, arXiv:2512.24061: abstract page and version history (one reader also queried the HTML text through a fetch
+  tool's summaries). Its §7 and Table 1 were read in full on 4 November (`C6C7REVIEW/LITERATURE.md`).
+- Baek, arXiv:2206.04260: abstract page (the full text of v2 was read on 4 November).
+- Norin–Yuditsky (abstract; the ar5iv text only through a fetch tool's summary), Vlachos 2015, Heule–Scheucher 2024,
+  Marić 2019 (metadata), Fukuda–Moriyama–Nakayama arXiv:math/0510500.
+- SMQH's CICM 2025 chapter: Crossref metadata only (LNCS, 2026, pp. 29–47, doi:10.1007/978-3-032-07021-0_3).
+- Bokowski–Richter 1990 and Bokowski–Sturmfels 1989: not read; their data come from the reference list of
+  Miyata–Moriyama–Imai and a DBLP snippet.
+
+**Not accessed:** the text of SMQH's CICM chapter; a possible ACM TALG version of SMQH (one search snippet, not
+confirmed by Crossref); the JCTA version of Baek–Balko; Erdős–Tuza–Valtr 1996; Google Scholar, MathSciNet and zbMATH;
+non-English sources beyond a few Russian- and Chinese-language web searches.
+
+**Findings.**
+
+1. **Symmetric sets: still nothing for k = 8.** SMQH reaches k = 7 only: no realizable fourfold 32-point set without a
+   convex 7-gon, and a twofold 32-point realization listed as future work. It has nothing on k = 8 and no sixfold or
+   sevenfold symmetry, and its realizer "can only determine realizability, not unrealizability" (footnote 2). Mackey's
+   thesis covers only 16-point hexagon-free sets (3-, 4- and 5-fold); its §4.1 reports that an attempt at a fourfold
+   32-point 7-gon-free set reached 24 realized points. Koshelev–Koshka's symmetric statements concern other forbidden
+   configurations (empty hexagons under axial symmetry, k-fold lower bounds for h_mod(6,q)). Krapivin–Przybocki–Heule
+   mention symmetry only by citing SMQH. Georgiev et al. (AlphaEvolve, §38) give 2^{k−2}-point sets with no convex
+   k-gon for k ≤ 8, with no symmetry stated; a reviewer converted their 65-point set with exactly one convex octagon to exact
+   integers and found its distances from the centroid pairwise distinct, so that set has no rotational symmetry; no
+   64-point set of theirs was tested for symmetry. arXiv API sweeps (to 4 November),
+   Zenodo searches (to 5 November), GitHub searches and about 15 web searches found no work on symmetric octagon-free
+   sets and no symmetric 33-point heptagon result. The symmetric literature found still stops at k = 7.
+2. **Upper bounds: unchanged.** Mojarrad–Vlachos (DCG 56 (2016), Theorem 1.1, n ≥ 6) is still the peer-reviewed
+   record: ES(7) ≤ 113 and ES(8) ≤ 408. Schroeder's Zenodo record 22842891 is still version 1 (19 September 2026); its
+   Theorem 1.1 is ES(7) ≤ 81 and ES(8) ≤ 319, not peer reviewed, and its Appendix C lists eight `native_decide`
+   axioms for the octagon bound. Koshelev–Koshka's Table 1 lists 92 and 324 at n = 7, 8 in the Norin–Yuditsky row.
+   These are not (7/8)·C(2n−5, n−2) (110.25 and 404.25), the paper gives no derivation, and Norin–Yuditsky prove only a
+   limsup; so 324 is not a proved bound. This settles the column question left open in §1. The finite Vlachos values
+   114 and 414 were checked only against that table. No arXiv or Zenodo item from 2023–2026 other than Schroeder's gives
+   an explicit ES(7) or ES(8) bound. Dumitru's preprint (author Bogdan Dumitru per the arXiv metadata; the middle
+   initial used earlier was not verified) is still v1 of 30 December 2025 and calls ES(7) open.
+3. **Formal work: GLitchfield.** https://github.com/GLitchfield/erdos-szekeres-convex-poly is a public Lean 4
+   repository, created 1 August 2026 and last pushed 20 October 2026, described as "Lean formal research on the exact
+   Erdos-Szekeres happy-ending conjecture". When it became public is not known. Its theorem statements and commit
+   history show a Lean proof of the Tóth–Valtr bound C(2n−5, n−2) + 2 (so ES(8) ≤ 464; committed 14 August 2026, with
+   a self-reported audit listing no non-standard axioms), Lean proofs of explicit Suk-type and HMPT-type bounds with
+   weaker constants than the published ones (16 and 18 August 2026), and an LRAT-replayed ES(6) = 17 (September 2026).
+   So this repository's ES(8) ≤ 311 is not the first Lean-checked or kernel-only bound on ES(8), and its Suk and HMPT
+   proofs are not the only formalizations. `docs/RELATED_WORK_2026-10-14.md` lines 1450–1451 ("the only other Lean
+   formalization") are wrong on this point.
+4. **lrat-check defect: publicly known.** The project's E2 finding (20 October 2026; again in `LRATCHECK20261105`) is
+   an independent rediscovery. drat-trim issue #31 (22 July 2022) reported that lrat-check accepts an empty clause
+   without a valid derivation; commit cbd2915 (19 October 2022) fixed it; commit 5cd8ac3 (21 April 2024) commented the
+   fix out; master is still 2e3b2dc. Issue #42 and pull request #43 (both 29 September 2026, three weeks before E2)
+   report the regression with the same reproduction (`p cnf 1 1` / `1 0` with proof `2 0 0` prints `c VERIFIED`) and a
+   one-line fix; both were open with no maintainer response on 6 November. No paper on the defect was found. The
+   project anchors every certificate on cake_lpr (Tan–Heule–Myreen, TACAS 2021), whose README defines success as the
+   output line `s VERIFIED UNSAT` and does not document exit codes.
+5. **Chord lemma and certificate methods: classical.** No published statement of the chord lemma (`CHORD20261105`)
+   was found, but it is an elementary half-plane fact, and SMQH, Mackey's thesis and Dumitru use no angle-derived
+   orientation rules. The non-realizability certificates of `SIX10LINUX20261105` are of classical types:
+   - biquadratic final polynomials from the log-magnitude LP: Bokowski–Richter, Eur. J. Combin. 11 (1990) 21–34;
+   - pooling them over rotation orbits gives symmetric biquadratic final polynomials, which exist exactly when a
+     biquadratic final polynomial does: Bokowski–Sturmfels, *Computational Synthetic Geometry*, LNM 1355, Springer 1989, as stated in Theorem 1.1 of
+     Miyata–Moriyama–Imai (the book was not read);
+   - SDP certificates of non-realizability for symmetric realization problems: Miyata–Moriyama–Imai 2009;
+   - facial reduction: Borwein–Wolkowicz 1981 (catalog records only).
+
+   Models that violate 3-term Grassmann–Plücker relations are not chirotopes at all. Neither the lemma nor the
+   certificates are a new result.
+
+BibTeX for Mackey's thesis, Georgiev et al. and Miyata–Moriyama–Imai was added to `references.bib`; Koshelev–Koshka and
+Krapivin–Przybocki–Heule were already there. Bokowski–Richter, Bokowski–Sturmfels, Borwein–Wolkowicz, the GLitchfield
+repository and the drat-trim tracker are cited inline only.

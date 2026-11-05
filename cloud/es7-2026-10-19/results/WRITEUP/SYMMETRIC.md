@@ -37,7 +37,7 @@ convex 7-gon.
   proofs (§3).
 - **Credit.** No matching prior result was found in the sources inspected (§5) for Theorem A, Theorem 1 or Theorem 4.
   The mirror case is implied by Baek's theorem through the mirror reduction (Theorem 2). The fivefold case also follows
-  from a computation reported by B. C. Dumitru (Theorem 5). The fourfold case, which Theorem A does not need, was
+  from a computation reported by B. Dumitru (Theorem 5). The fourfold case, which Theorem A does not need, was
   reported by Subercaseaux, Mackey, Qian and Heule (§2). For k = 7 the results bear on their suspicion that symmetric
   constructions exist for all k ≥ 7 (arXiv:2506.00224, §7): 32-point examples exist with a half-turn or a reflection,
   while every set of 32 or more points with a rotation of order at least 3 contains a convex 7-gon (for fourfold
@@ -99,8 +99,8 @@ contains a convex 7-gon. The largest mirror-symmetric set without a convex 7-gon
     whose cake_lpr verdicts were recorded and whose proofs were not retained.
   - *Theorem 2b (34 points, none on the axis).* A single CNF of the same encoding is UNSAT, solved in 443 s. Its LRAT
     proof is retained and accepted by both checkers (`mirror34`).
-  - The case n = 7 of Baek's theorem has its own 17-point certificate (no 4-cap, no 7-gon), accepted by lrat-check
-    only (`MIRRORETV`); Balko and Valtr (ENDM 49, 2015) had reported this case from a SAT run over pseudolinear
+  - The case n = 7 of Baek's theorem has its own 17-point SAT proofs (no 4-cap, no 7-gon; `MIRRORETV`): two of four
+    encodings were certified by cake_lpr on 5 November, and two were accepted by lrat-check only (§3); Balko and Valtr (ENDM 49, 2015) had reported this case from a SAT run over pseudolinear
     colourings.
 - **Lower example.** `SYMMAX/mirror_32points.txt`: 16 mirror pairs, no point on the axis, found by search. A 32-point
   mirror set also follows from the classical construction in Lovász's form (Morris–Soltan 2000, Thm 2.6): choose the
@@ -226,12 +226,17 @@ mirror-symmetric octagon-free sets by 58 points. With Baek's theorem for n = 8 (
 fivefold P1 and L1, the central hull cover, the 120 hexagonal hulls (cake_lpr first ran on an unhashed rebuilt CNF; the
 re-check on hash-checked files is under Theorem 4), the C4CUT final proof, 7 pilot and 34 sample re-solves of central
 units, and the re-solves of 1 November: the 58 P8 pilot orbits, 44 of the 65 local-record units and 81 lane spot-check
-units by 19:43 UTC (`C2RECHECK`), and the 204 indispensable threefold σ-cube pieces (`C3PIECES`). The checkers lrat-check (2e3b2dc with the E2 patch) and cake_lpr
-(a36874a8, verified in CakeML, built locally for arm8) are trusted; CaDiCaL c6073042 (3.0.1), which produced the
-proofs, is not.
+units by 19:43 UTC (`C2RECHECK`), and the 204 indispensable threefold σ-cube pieces (`C3PIECES`). Only cake_lpr
+(a36874a8, verified in CakeML, built locally for arm8) is trusted, and a verdict counts only if it prints the line
+`s VERIFIED UNSAT`; CaDiCaL c6073042 (3.0.1), which produced the proofs, is not trusted. *Revised 6 November 2026:*
+lrat-check (2e3b2dc with the E2 patch) is a secondary check only and not part of the trust base. Unpatched, it accepts
+invalid proofs of satisfiable formulas, a publicly known drat-trim defect: reported in issue #31 (2022), fixed in
+cbd2915, reintroduced in 5cd8ac3 (2024), and reported again with a one-line fix in issue #42 and PR #43
+(29 September 2026). Where this section says "both checkers", the certificate is the cake_lpr verdict.
 
-**Certificates accepted by lrat-check only.** The second fivefold proof L2, in the hash-bound replay of 1 November
-(`AUDIT3` §5 row 1), and the 17-point case n = 7 of Baek's theorem (`MIRRORETV`).
+**Accepted by lrat-check only (not certificates).** The second fivefold proof L2, in the hash-bound replay of
+1 November (`AUDIT3` §5 row 1), and two of the four 17-point encodings for the case n = 7 of Baek's theorem
+(`MIRRORETV`); the other two were certified by cake_lpr on 5 November (`LRATCHECK20261105/recheck`).
 
 **Recorded verdicts (proofs deleted).**
 - Threefold: all 116,883 pieces, each accepted by both checkers at solve time; 26,436 records carry the proof's
@@ -274,7 +279,7 @@ The retained proofs are archived outside Git, compressed with zstd, with decompr
 - Subercaseaux–Mackey–Qian–Heule, arXiv:2506.00224v1 (full text) and its public code; the CICM 2025 chapter (Springer,
   pages 29–47): metadata only, its text was not accessible.
 - E. Mackey, CMU-CS-25-108 (thesis): abstract, contents, §3.1, §3.2.4, chapter 4 and a full-text search.
-- B. C. Dumitru, arXiv:2512.24061v1 (full text, Table 1 as rendered), the generator `bogdan27182/esc-paper` at commit
+- B. Dumitru, arXiv:2512.24061v1 (full text, Table 1 as rendered), the generator `bogdan27182/esc-paper` at commit
   9520ceac17, and his homepage.
 - J. Baek, Eur. J. Combin. 124 (2025) 104085 (arXiv:2206.04260), and its Lean 4 formalization.
 - Baek–Balko, SoCG 2025 (Definition 13, Lemma 14, §6.1 and a text search); the JCTA version: abstract only.

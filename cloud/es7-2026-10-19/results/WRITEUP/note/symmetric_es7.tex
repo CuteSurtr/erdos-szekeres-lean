@@ -7,7 +7,7 @@
 \newtheorem{corollary}[theorem]{Corollary}
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
-\title{Symmetric point sets and the Erd\H{o}s--Szekeres problem for heptagons\\[2pt]\large Draft, 1 November 2026}
+\title{Symmetric point sets and the Erd\H{o}s--Szekeres problem for heptagons\\[2pt]\large Draft, 1 November 2026; certificate wording revised 6 November 2026}
 \author{}
 \date{}
 \begin{document}
@@ -24,7 +24,7 @@ The mirror case follows from Baek's theorem on the case $a=4$ of the Erd\H{o}s--
 elementary reduction, which is also checked in Lean with a formalization of Baek's theorem; we confirm it independently
 with SAT certificates. The fivefold case also follows from a computation reported by Dumitru. The threefold and central
 cases rest on SAT case splits with formally checked bookkeeping, written soundness proofs of the encodings, proof
-certificates accepted by two checkers and, for most pieces, verdicts recorded when the proofs were checked. We also
+certificates accepted by the formally verified checker \texttt{cake\_lpr} and, for most pieces, verdicts recorded when the proofs were checked. We also
 record the largest heptagon-free sets for each symmetry type, with their antecedents. None of this settles $ES(7)$ or
 improves its upper bound.
 \end{abstract}
@@ -128,8 +128,8 @@ For the $33$-point case, a projective normal form of the labelling (\texttt{C3-S
 Lemma~\ref{lem:perturb}, gives a CNF with $168{,}399$ variables and $4{,}154{,}921$ clauses. Its unsatisfiability was
 established by splitting on the convex layers and on orientation bits of symmetric residues into $116{,}883$ certified
 pieces. A reflection of the $H6$ strata (Lemma H6M) leaves $910$ depth-$2$ roots. For each piece, CaDiCaL produced an LRAT
-proof that was accepted at solve time both by \texttt{lrat-check} and by the formally verified checker
-\texttt{cake\_lpr}~\cite{THM21}; these proofs were then deleted. Two independently written composers recompute the CNF
+proof that was accepted at solve time by the formally verified checker \texttt{cake\_lpr}~\cite{THM21}, and also by
+\texttt{lrat-check} as a secondary check (Section~\ref{sec:trust}); these proofs were then deleted. Two independently written composers recompute the CNF
 hash of every certified piece from the base formula and find all $910$ roots covered (\texttt{C3FINAL}); that the
 $73{,}567$ leaves of one explicit cut cover all $910$ roots is checked in Lean (\texttt{C3LEAN}, core Lean,
 \texttt{decide +kernel}). In addition, $2{,}120$ randomly drawn pieces were re-solved from scratch with fresh proofs and
@@ -197,8 +197,9 @@ the axis is \texttt{SYMMAX/mirror\_32points.txt}.
 \begin{remark}\label{rem:mirrorcredit}
 Theorem~\ref{thm:M}, including the cases of Theorems~\ref{thm:M33} and~\ref{thm:M34}, is therefore a consequence of
 Baek's theorem. The case $n=7$ of Theorem~\ref{thm:baek} had been verified by SAT for pseudolinear colorings by Balko
-and Valtr~\cite{BV15}, and it has its own LRAT certificate here ($17$ points, accepted by \texttt{lrat-check} only;
-\texttt{MIRRORETV}). Proposition~\ref{prop:mirrorred} and the bound $32$ are checked in Lean~4 for a
+and Valtr~\cite{BV15}, and it has its own SAT check here at $17$ points (\texttt{MIRRORETV}): of four encodings, two were regenerated with
+the recorded CNF hashes and accepted by \texttt{cake\_lpr} on 5 November (\texttt{LRATCHECK20261105/recheck}); the other
+two were accepted by \texttt{lrat-check} only and are not counted as certified. Proposition~\ref{prop:mirrorred} and the bound $32$ are checked in Lean~4 for a
 reflection in an arbitrary line, with the repository's formalization of Baek's theorem (adapted from Baek's code, with
 bridge lemmas adapted from Schroeder's archive~\cite{Sch26}) and no SAT input (\texttt{SYMLEAN/mirror}). A
 mirror-symmetric $32$-point set also follows from the classical construction in Lov\'asz's form~\cite[Thm.~2.6]{MS00},
@@ -220,7 +221,7 @@ exactly one point on the axis. Theorem~\ref{thm:M33} has a further proof (\textt
 encoding whose soundness, normal forms, case split and leaf cover are verified in Lean~4; its roughly $75{,}000$ CNF facts
 carry recorded \texttt{cake\_lpr} verdicts, and their proof files were not retained. The proofs of
 Theorems~\ref{thm:M33} and~\ref{thm:M34} by the encoding below are single CNF formulas with retained LRAT proofs accepted
-by \texttt{lrat-check} and \texttt{cake\_lpr} (\texttt{SYMZ}).
+by \texttt{cake\_lpr} and also by \texttt{lrat-check} (\texttt{SYMZ}).
 
 \paragraph{The encoding.} Put the axis on the $y$-axis, write the pairs as $L_i=(-a_i,b_i)$, $R_i=(a_i,b_i)$ with
 $a_i>0$, use homogeneous vectors $v_p=(1,x_p,y_p)$, and add one element $Z$ with vector $(0,1,0)$, the horizontal point
@@ -274,7 +275,7 @@ on the formula: each relabelling maps every base clause into the base together w
 
 \paragraph{Closure.} The $8$ covers and the $8\times287$ orbits were closed with $2{,}492$ solver runs: $2{,}385$
 unsatisfiable, $107$ without an answer within the time limit, none satisfiable. Each unsatisfiable run produced an LRAT
-proof that was accepted by \texttt{lrat-check} and \texttt{cake\_lpr} and then deleted; its proof hash, both verdicts and,
+proof that was accepted by \texttt{cake\_lpr} and also by \texttt{lrat-check} and then deleted; its proof hash, both verdicts and,
 except for seven pilot units, its CNF hash were recorded. All $2{,}589$ recorded CNF hashes were rebuilt from the base,
 and that every orbit of every case has a closed member is checked in Lean (core Lean, \texttt{decide +kernel};
 \texttt{C2FINAL}). Seven pilot units without a recorded hash were re-solved. A random sample of $24$ units recorded on the
@@ -415,18 +416,27 @@ forms and reductions of the case splits. Lemma~\ref{lem:mirror} and Proposition~
 that are also Lean-checked. Every case except mirror symmetry rests on one encoder; Theorem~\ref{thm:E} uses two normal
 forms of one encoder.
 
-\emph{Certificates} are LRAT proofs checked by \texttt{lrat-check} (with a patch for a known upstream defect) and by
-\texttt{cake\_lpr}, a checker verified in CakeML~\cite{THM21}; the checkers are trusted, the solver is not. Retained and
-accepted by both checkers are the proofs of Theorems~\ref{thm:M33}, \ref{thm:M34} and~\ref{thm:E}, of the central hull
-cover and the $120$ hexagonal hulls, of the fourfold $32$-point exclusion, and of the re-solved central units; the
-$204$ threefold pieces re-solved on 1 November are archived as well. The $17$-point case of
-Theorem~\ref{thm:baek} was accepted by \texttt{lrat-check} only. A replay of the retained certificates with logs bound to
+\emph{Certificates} are LRAT proofs accepted by \texttt{cake\_lpr}, a checker verified in CakeML~\cite{THM21}. A
+verdict counts only if \texttt{cake\_lpr} prints the line \texttt{s VERIFIED UNSAT}, since it exits with status $0$ also
+when it rejects a proof; the drivers used here read that line, not the exit status. \texttt{cake\_lpr} is trusted, the
+solver is not. Most proofs were also checked by \texttt{lrat-check} from drat-trim, which is not part of the trust base:
+on the current master (commit \texttt{2e3b2dc}) it accepts an empty-clause step whose hints reach no conflict, and hence
+invalid proofs of satisfiable formulas. This defect is publicly known: it was reported in drat-trim issue~\#31 (2022),
+fixed, reintroduced in 2024, and reported again with a one-line fix in issue~\#42 and pull request~\#43 (29 September
+2026)~\cite{DT}. The retained proofs were checked with a build carrying a one-line patch for this defect
+(\texttt{WRITEUP/CERTIFICATES.md}), but whatever the build, \texttt{lrat-check} verdicts are a secondary check only; where the text says that both checkers accepted a proof, the certificate is the
+\texttt{cake\_lpr} verdict. Retained and accepted by \texttt{cake\_lpr} (and by \texttt{lrat-check}) are the proofs of
+Theorems~\ref{thm:M33}, \ref{thm:M34} and~\ref{thm:E}, of the central hull cover and the $120$ hexagonal hulls, of the
+fourfold $32$-point exclusion, and of the re-solved central units; the $204$ threefold pieces re-solved on 1 November
+are archived as well. For the $17$-point case of Theorem~\ref{thm:baek}, two of four encodings are certified by
+\texttt{cake\_lpr} (5 November) and two were accepted by \texttt{lrat-check} only; this case is not needed, since the
+mirror bound is Lean-checked from Baek's theorem. A replay of the retained certificates with logs bound to
 the input hashes accepted four of them with both checkers (one of the two proofs of Theorem~\ref{thm:E}, the fourfold
 proof and two threefold hexagon proofs); by 1~November 2026, at 19:43~UTC, it had not been run on the mirror proofs,
 the other proof of Theorem~\ref{thm:E} or the hull cover. The hull cover was replayed with both checkers later the same day (20:10~UTC).
 
-\emph{Recorded verdicts}: for the threefold pieces and most central parallelogram pieces, both checkers accepted the proof
-at solve time, and the proof was then deleted; only the CNF hash, the proof size, the proof hash (for every central
+\emph{Recorded verdicts}: for the threefold pieces and most central parallelogram pieces, \texttt{cake\_lpr} (and
+\texttt{lrat-check}) accepted the proof at solve time, and the proof was then deleted; only the CNF hash, the proof size, the proof hash (for every central
 record and for $26{,}436$ threefold records) and the verdicts remain. The roughly $75{,}000$ CNF facts of the first proof
 of Theorem~\ref{thm:M33} carry recorded \texttt{cake\_lpr} verdicts only. These records were re-checked by random
 samples and targeted re-solves, not exhaustively.
@@ -453,7 +463,8 @@ provisional.
 \bibitem{Bae25} J.~Baek, On the Erd\H{o}s--Tuza--Valtr conjecture, \emph{European J. Combin.} 124 (2025), 104085; arXiv:2206.04260. Theorem numbers refer to the arXiv version.
 \bibitem{BB25} J.~Baek and M.~Balko, The Erd\H{o}s--Szekeres conjecture revisited, in \emph{41st International Symposium on Computational Geometry (SoCG 2025)}, LIPIcs~332, paper~13, 2025.
 \bibitem{BV15} M.~Balko and P.~Valtr, A SAT attack on the Erd\H{o}s--Szekeres conjecture, \emph{Electron. Notes Discrete Math.} 49 (2015), 425--431.
-\bibitem{Dum25} B.~C.~Dumitru, Notes on the 33-point Erd\H{o}s--Szekeres problem, arXiv:2512.24061 (2025).
+\bibitem{DT} drat-trim issue tracker, \url{https://github.com/marijnheule/drat-trim}: issue~\#31 (22 July 2022), issue~\#42 and pull request~\#43 (29 September 2026).
+\bibitem{Dum25} B.~Dumitru, Notes on the 33-point Erd\H{o}s--Szekeres problem, arXiv:2512.24061 (2025).
 \bibitem{ES35} P.~Erd\H{o}s and G.~Szekeres, A combinatorial problem in geometry, \emph{Compositio Math.} 2 (1935), 463--470.
 \bibitem{ES61} P.~Erd\H{o}s and G.~Szekeres, On some extremum problems in elementary geometry, \emph{Ann. Univ. Sci. Budapest. E\"otv\"os Sect. Math.} 3--4 (1960/61), 53--62.
 \bibitem{GGTW25} B.~Georgiev, J.~G\'omez-Serrano, T.~Tao and A.~Z.~Wagner, Mathematical exploration and discovery at scale, arXiv:2511.02864 (2025).

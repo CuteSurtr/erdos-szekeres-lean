@@ -5,8 +5,8 @@
 
 | Part | Statement | Status |
 |---|---|---|
-| Lower bound | The four sets A, B, C and D in `sets/` have 60 points, are invariant under rotation by 60 degrees, are in general position, and contain no 8 points in convex position. | Exact computation, three independent implementations per set (below). |
-| Upper bound | Every 6-fold symmetric set of at least 61 points in general position contains a convex octagon. | `C6UPPER` (3 November): a certificate accepted by both checkers for two separately implemented encoders. The reduction is Lean-checked (`LAYERLEAN`). The encoder steps are a written proof, reviewed but not Lean-checked. |
+| Lower bound | The five sets A, B, C, C' and D in `sets/` have 60 points, are invariant under rotation by 60 degrees, are in general position, and contain no 8 points in convex position. | Exact computation, three independent implementations per set (below). |
+| Upper bound | Every 6-fold symmetric set of at least 61 points in general position contains a convex octagon. | `C6UPPER` (3 November): a certificate accepted by cake_lpr for two separately implemented encoders (6 of the 64 cube verdicts hash-bound so far; see `C6UPPER` §5). The reduction is Lean-checked (`LAYERLEAN`). The encoder steps are a written proof, reviewed but not Lean-checked. |
 
 Sizes of 6-fold sets without a centre are multiples of 6, and a general-position 6-fold set cannot contain the
 centre. Together the two parts settle the question that `C6UPPER`, `SIX10REFINE`, `SIX10CEGAR` and
@@ -15,7 +15,8 @@ from "54 or 60" to **60**. The 7-fold value was already exactly 64.
 
 **Credit and priority.** The literature check of 4 November (`C6C7REVIEW/LITERATURE.md`) found no prior result on
 octagon-free rotational sets; the symmetric literature it inspected stops at k = 7. That check was not repeated on
-5 November. No priority claim is made beyond it.
+5 November; the novelty check of 6 November (`NOVELTY20261106/README.md`) found no prior or concurrent work either.
+No priority claim is made.
 
 ## Proof, with references
 
@@ -73,7 +74,7 @@ Layer o is rows 6o..6o+5, outermost first.
 - **D.** Set A after a constrained local optimisation that keeps the octagon count at 0 (`construction/tools/robustify.py`).
   All coefficients are at most 2^19 = 524,288, and the minimum normalized sine rises from 2.2e-5 to 1.3e-3.
 
-A, B, C and D have 296,544, 301,674, 221,976 and 316,182 convex 7-subsets, so they are pairwise different order types. None of them
+A, B, C, C' and D have 296,544, 301,674, 221,976, 223,416 and 316,182 convex 7-subsets, so they are pairwise different order types. None of them
 contains a certified 54-point order type of `ES8SYM` as nine of its layers. The realization workstream reports that
 neither 54-point order type extends by one hexagon at any nesting position: 36 SAT cases, all UNSAT, with LRAT proofs
 accepted by lrat-check (`construction/REALIZE_README.md`). That lrat-check build is unsound (`LRATCHECK20261105`). All 36

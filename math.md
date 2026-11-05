@@ -1265,7 +1265,16 @@ References and attribution:
 6. Paul Erdős and George Szekeres, *On some extremum problems in elementary
    geometry*, Ann. Univ. Sci. Budapest. Eötvös Sect. Math. **3–4**
    (1960–61), 53–62. The construction of §1.1 follows this paper; its
-   formalization is original to this repository.
+   formalization is original to this repository, meaning written here rather
+   than adapted. (Note added 6 November 2026: this is not a priority claim.
+   An earlier, separate Lean proof of the same construction,
+   `classical_lower_sharpness`, is in the public repository
+   [GLitchfield/erdos-szekeres-convex-poly](https://github.com/GLitchfield/erdos-szekeres-convex-poly);
+   it was committed on 1 August 2026 (commit 077d5cd, per its commit history;
+   when the repository became public is not known); that repository
+   has Lean proofs of the Tóth–Valtr bound and of explicit forms of the Suk
+   and HMPT bounds. See
+   the [survey correction](docs/RELATED_WORK_2026-10-14.md#consequences-for-this-project).)
 
 The [paper correspondence](docs/PAPER_MAP.md) distinguishes direct statements
 from replacement arguments. Original exposition is Apache-2.0; third-party

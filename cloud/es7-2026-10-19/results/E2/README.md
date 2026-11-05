@@ -14,7 +14,8 @@ the full tree at roughly 2.5·10^4 leaves at the very least, and more likely ≥
 with a heavy tail. The run is far from
 converging on 4 cores (see §4). **A side finding matters more than the run:** the
 `lrat-check` that task E used (drat-trim git 2e3b2dc, which is also current upstream
-master) accepts a forged one-line proof on a satisfiable CNF (§2). E2 re-checked E's three
+master) accepts a forged one-line proof on a satisfiable CNF (§2; already public upstream, see the note
+there). E2 re-checked E's three
 D3 proofs with a patched lrat-check and with the CakeML-verified `cake_lpr`. All three
 pass both, so E's D3 result stands as LRAT-checked UNSAT of those CNFs, now with a sound
 checker.
@@ -53,6 +54,13 @@ symmetry, centre or symmetry-breaking violations, and the largest convex subset 
 | n13k6m3c | SAT | SAT, model checked, max convex 5 | 16ab61f7 |
 
 ### lrat-check is unsound on the empty clause (`logs/lrat_check_soundness.md`)
+
+**Note added 6 November 2026: this defect was already public.** In `marijnheule/drat-trim`, issue #31 (22 July
+2022) reported it, commit `cbd2915` (19 October 2022) fixed it, and commit `5cd8ac3` (21 April 2024) commented the
+fix out again; master is still `2e3b2dc`. Issue #42 and PR #43 (both 29 September 2026) report the regression with
+the same `p cnf 1 1 / 1 0` plus `2 0 0` reproduction and a one-line fix. E2's finding below was therefore an
+independent rediscovery of a publicly known defect. The local patch and the re-checks with a sound checker stand as
+recorded (`LRATCHECK20261105`).
 
 `lrat-check` at git 2e3b2dc prints `c VERIFIED` (exit 0) for the one-line proof `2 0 0`
 on the satisfiable CNF `p cnf 1 1 / 1 0`. It does the same on n12k6m3, a SAT CNF with a
