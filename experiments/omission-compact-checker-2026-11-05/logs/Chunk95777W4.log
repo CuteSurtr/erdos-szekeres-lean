@@ -1,0 +1,116 @@
+parsing took 650ms
+parsing took 826ms
+parsing took 746ms
+parsing took 472ms
+parsing took 1.2s
+parsing took 257ms
+parsing took 766ms
+parsing took 1.82s
+parsing took 1s
+parsing took 823ms
+parsing took 665ms
+parsing took 1.79s
+parsing took 365ms
+parsing took 2.72s
+parsing took 164ms
+parsing took 1.06s
+parsing took 938ms
+parsing took 1.05s
+parsing took 2.4s
+parsing took 1.63s
+parsing took 1.65s
+parsing took 488ms
+parsing took 670ms
+.olean serialization took 382ms
+elaboration took 327ms
+linting took 479ms
+type checking took 27.7s
+elaboration took 308ms
+linting took 395ms
+type checking took 45.5s
+process pre-definitions took 106ms
+elaboration took 390ms
+linting took 635ms
+type checking took 67.7s
+elaboration took 269ms
+linting took 252ms
+type checking took 82.3s
+elaboration took 405ms
+linting took 426ms
+type checking took 110s
+elaboration took 201ms
+linting took 236ms
+type checking took 123s
+elaboration took 368ms
+linting took 489ms
+type checking took 141s
+elaboration took 506ms
+linting took 490ms
+type checking took 167s
+elaboration took 626ms
+linting took 419ms
+type checking took 190s
+elaboration took 312ms
+linting took 348ms
+type checking took 208s
+elaboration took 303ms
+linting took 323ms
+type checking took 225s
+elaboration took 453ms
+linting took 676ms
+type checking took 249s
+elaboration took 216ms
+linting took 286ms
+type checking took 262s
+elaboration took 598ms
+linting took 461ms
+type checking took 289s
+elaboration took 179ms
+linting took 299ms
+type checking took 299s
+elaboration took 447ms
+linting took 559ms
+type checking took 322s
+process pre-definitions took 104ms
+elaboration took 394ms
+linting took 363ms
+type checking took 341s
+elaboration took 412ms
+linting took 638ms
+type checking took 362s
+elaboration took 593ms
+linting took 488ms
+type checking took 392s
+elaboration took 496ms
+linting took 447ms
+type checking took 415s
+elaboration took 497ms
+linting took 471ms
+type checking took 441s
+elaboration took 305ms
+linting took 375ms
+type checking took 458s
+elaboration took 353ms
+linting took 504ms
+type checking took 476s
+'CompactChecker.Chunk95777W4.excludes' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 477s
+cumulative profiling times:
+	.olean serialization 382ms
+	attribute application 4.51ms
+	compilation (IR) 24.3ms
+	compilation (LCNF base) 34.9ms
+	compilation (LCNF mono) 25.6ms
+	elaboration 486s
+	fix level params 25.5ms
+	instantiate metavars 35.1ms
+	interpretation 10.8ms
+	let-to-have transformation 360ms
+	linting 11.1s
+	parsing 24.2s
+	process pre-definitions 1.23s
+	share common exprs 418ms
+	tactic execution 238ms
+	type checking 5.69e+03s
+	typeclass inference 354ms
+517.45 s 11512884 KB

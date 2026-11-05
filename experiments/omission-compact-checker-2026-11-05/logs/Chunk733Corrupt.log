@@ -1,0 +1,32 @@
+parsing took 472ms
+share common exprs took 137ms
+let-to-have transformation took 290ms
+process pre-definitions took 582ms
+elaboration took 4.75s
+type checking took 155ms
+linting took 1.02s
+experiments/omission-compact-checker-2026-11-05/CompactChecker/Chunk733Corrupt.lean:11:84: error: Tactic `decide` proved that the proposition
+  checkF fcat62 3131 252 62 4194304 131072 b733 mask733 = true
+is false
+type checking took 4.5s
+'CompactChecker.Chunk733Corrupt.excludes' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+elaboration took 4.86s
+cumulative profiling times:
+	attribute application 0.223ms
+	compilation (IR) 0.387ms
+	compilation (LCNF base) 2.65ms
+	compilation (LCNF mono) 0.351ms
+	elaboration 9.77s
+	fix level params 13.7ms
+	instantiate metavars 36.6ms
+	interpretation 0.14ms
+	let-to-have transformation 363ms
+	linting 1.16s
+	parsing 479ms
+	process pre-definitions 596ms
+	share common exprs 137ms
+	tactic execution 7.96ms
+	type checking 4.65s
+	typeclass inference 2.25s
+Command exited with non-zero status 1
+20.59 s 3682804 KB
