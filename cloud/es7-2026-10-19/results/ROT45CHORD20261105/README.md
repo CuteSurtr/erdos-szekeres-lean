@@ -79,12 +79,25 @@ solved on this machine without proofs, under the same load:
 | base + cube (as in `C6UPPER`) | still running at commit time (7,200 s limit) | > 5,290 s |
 | base + 642 new chord clauses + cube | UNSAT | 788 s |
 
-## Results
+## Results (final, 16:00 KST; exact bookkeeping, `logs/final_report.md`, `logs/results_final.tsv`)
 
-**At the time of this commit (about 04:30 KST) no phase-order cube had finished.** None of the 36 cubes had
-reported UNSAT or SAT. The cover's 60 transitivity patterns are refuted and checked (see Setup).
-- Final per-cube outcomes are written automatically at 16:00 KST to `final/results_final.tsv` and
-  `final/final_report.md` in the work directory (outside Git). They should be copied here and committed after review.
-- **No 5-fold or 4-fold bound is claimed.** That needs every phase-order cube UNSAT with an accepted proof, all
-  transitivity patterns refuted (done), and the written soundness obligations listed in the final report.
-- `cubes4/o1234` was lost, so the 4-fold cover cannot be completed in this run unless that cube is re-run.
+**No phase-order cube closed.** The m-fold cases of ES(8) = 65 for m = 5, 4 remain **open**, and **no bound is
+claimed.**
+
+| Instance | Phase-order cubes UNSAT (cake_lpr) | Unresolved at cutoff | Never started | Lost | Transitivity patterns (cake_lpr) |
+|---|---|---|---|---|---|
+| 5-fold, t = 13 | 0 of 24 | 19 | 5 | 0 | 40 of 40 |
+| 4-fold, t = 17 | 0 of 12 | 11 | 0 | 1 (`o1234`) | 20 of 20 |
+
+- **Run times.** The 29 original lanes ran from 01:08 to 16:00 KST, about 14.9 h each, without an answer. The
+  supervisor started `cubes5/o4123` at 04:25, and it ran about 11.6 h. The plain (no chord) runs recorded in `ROT456`
+  reached about 50 million conflicts in 6.1 h without finishing. So the chord lemma's 4.6x speed-up on the sixfold
+  control cube did not make these instances tractable within 15 h.
+- **Partial proofs.** The 30 unfinished text LRAT files (`logs/partial_lrat_sizes.tsv`) total about 1.3 TB. They are
+  unfinished and certify nothing, and CaDiCaL cannot resume from them. They remain on disk pending the author's
+  decision (delete, compress or keep). The solver outputs, CNF hashes and these records are kept regardless.
+- **What further work would need:**
+  - a finer split, for example by the position of layer 5, as `ROT456` tried; or stronger propagation (more sound
+    clause families); or much longer runs (days per cube);
+  - re-running `cubes4/o1234` and the 5 never-started 5-fold cubes;
+  - then cake_lpr checks of every proof, plus the written obligations listed in `logs/final_report.md`.

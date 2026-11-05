@@ -67,18 +67,25 @@ UNSAT of all cubes of one instance would give the m-fold case of ES(8) = 65. The
 on the written chord-lemma proof and its exact case analysis. An independent review of the general-m generator
 (`CHORD20261105` §6) proved every added clause by its own exact verifier and found no violation.
 
-**State at about 04:35 KST.** Nothing has finished yet. The runs are continued until **16:00 KST** by a detached
-supervisor (`ROT45CHORD20261105`, `tools/supervisor.py`, systemd user unit `rot45-supervisor`).
-- **Running:** 30 solvers (18 + 1 five-fold, 11 four-fold).
-- **Not yet started:** 5 five-fold cubes; they start only when a slot frees.
-- **Lost:** the 4-fold cube `o1234`, when its timeout wrapper was killed (recorded in the work directory as
-  LOST-WRAPPER-KILL).
+**Final state (16:00 KST): no phase-order cube closed.** The 5-fold count is 0 of 24 (19 unresolved, 5 never
+started) and the 4-fold count is 0 of 12 (11 unresolved, 1 lost). The transitivity patterns, 40 + 20, are all accepted
+by cake_lpr. Most lanes ran about 14.9 h. The 5-fold and 4-fold cases stay **open; no bound is claimed.** Details and
+what further work would need are in `ROT45CHORD20261105` (Results). The unfinished partial proofs (about 1.3 TB) are
+still on disk pending the author's decision.
 
-At 16:00 the supervisor writes `final/final_report.md` and `final/results_final.tsv` in the work directory. **Read
-those first**, then copy them into `ROT45CHORD20261105/logs/` and commit after review.
-- Check `final/STATUS` or `systemctl --user status rot45-supervisor` for progress.
-- **No 5-fold or 4-fold bound is claimed** unless the final report shows every cube UNSAT with an accepted proof, and
-  the written obligations it lists are accepted.
+## ES(8) upper bound (started 5 November, afternoon)
+
+- `ES8UPPER20261105/MEMO.md` is a scoping memo, built from 9 readers and reviewers. The residual side is tight over the
+  present rows. The balanced optimum lies in [64, 72], so **balanced budget 64 would give ES(8) <= 310 with no new
+  mathematics**, at about 1,100–1,450 CPU-h of search, plus a compact Lean checker.
+- **Compact checker prototype** (`experiments/omission-compact-checker-2026-11-05`). It has a soundness theorem (no
+  sorry, standard axioms only). It is 2.2x less kernel time and 24–85x less output per leaf than the current
+  pipeline. Gate G2 is narrowly missed (0.35 s per leaf against 0.3), and a concrete lookup optimisation is
+  identified.
+- **Pilot** (from 16:02 KST, `/home/jay/research/data/es8-b64-pilot-20261105`):
+  - budget 64 against 63 on 28 stratified contexts plus the 4 lowest-LP contexts;
+  - CP-SAT hunts for balanced vectors with at most 64 holes, and with at most 71 holes.
+  - The first ratios from the small deciles are 8.1–9.5, projecting about 1,430 CPU-h. The gate is at 10 (memo §3).
 
 ## Decisions pending (unchanged from STATUS20261104 unless noted)
 
