@@ -2,6 +2,13 @@
 
 Branch: `es8-c6c7-review-2026-11-04`, based on `44530b46fef0632bf8d8829c9bb5d694e271fb30`. All paths below are relative to this review directory or the parent results directory.
 
+*Note added 6 November 2026 (results branch, after 07:41 KST).* This review record is unchanged. Afterwards, the
+hash-bound cake_lpr replay (6 Nov 2026) regenerated all 64 sixfold cube formulas (32 per encoder) with their recorded
+hashes and solved them again. cake_lpr accepted every fresh proof, 64 of 64, each verdict bound to the CNF and proof
+hashes (`C6UPPER/replay-2026-11-06/README.md`, `C6UPPER/README.md` §6). The sixfold verdicts called historical below
+are therefore no longer the only cake_lpr verdicts on those formulas. Erratum: in "The other 52 sixfold proof
+verdicts" below, 52 should read 58 (29 per encoder, as in `C6UPPER` §5).
+
 **Certificate (both checkers, replayed now):** six randomly selected substantial sixfold cube proofs, three per encoder, and both complete sevenfold proofs passed `lrat-check` and `cake_lpr` against freshly generated formulas. All raw/compressed proof hashes and regenerated base hashes matched. Both 32-cube covers passed the original checker and an additional assertion-independent checker. The other 52 sixfold proof verdicts remain historical. Full commands, hashes, sampling details, timings and trust limits are in [REPLAY.md](REPLAY.md) and [replay.json](replay.json).
 
 **Written proof (reviewed, not refereed):** no blocking mathematical gap was found in the layer, perturbation, angular, nesting, chain or reflection arguments. [SOUNDNESS.md](SOUNDNESS.md) gives locations, severities and repairs. Two major qualifications matter: earlier tests called “exact” used rounded arithmetic, and the independence description overstated differences in canonical representatives and validation. Four minor issues concern the even-order antipodal boundary case, reversed implication comments, the admissible sixfold maximum values, and assertion-dependent cover checking. An empty-cover false acceptance under `python3 -I -O` was reproduced; the prescribed ordinary checker invocation is unaffected.

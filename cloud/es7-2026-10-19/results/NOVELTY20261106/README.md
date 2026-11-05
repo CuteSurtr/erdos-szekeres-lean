@@ -4,6 +4,12 @@
 each candidate result compares with it. It is not a priority claim. Absence of prior work in the sources below is
 evidence, not proof, and indexing can miss manuscripts, journal versions and non-English work.
 
+*Note added 6 November 2026, after 07:41 KST.* This record keeps its wording of the morning of 6 November. Since then
+the hash-bound cake_lpr replay (6 Nov 2026) has finished: all 64 sixfold cube formulas (32 per encoder) were regenerated
+with their recorded hashes and solved again, and cake_lpr accepted every fresh proof, 64 of 64
+(`C6UPPER/replay-2026-11-06/README.md`, `C6UPPER` §6). Where this page says that only 6 of the 64 are hash-bound, or
+that the full replay is planned, that describes the state before the replay. The novelty verdicts are unchanged.
+
 ## Purpose and scope
 
 The question was which results, if any, are worth reporting to professors, and with what wording. The check ran on
@@ -110,6 +116,8 @@ ticks each one once its change is committed.
 - [ ] `PRIMEFOLD/README.md` (lines 125–130 and the §9 table) still says Theorem E is lrat-check only. *6 Nov pass*
 - [ ] `symmetric_es7.tex` and `WRITEUP/SYMMETRIC.md` §3 name the patched lrat-check as a trusted checker. *6 Nov pass*
 - [ ] Hash-bound cake_lpr replay of all 64 sixfold cube proofs (6 of 64 now). Planned; not part of the pass.
+  *Run, 6 Nov 07:41 KST: 64 of 64 accepted (`C6UPPER/replay-2026-11-06/README.md`); to be ticked by the coordinator
+  once the records are committed.*
 - [ ] Date the claims with an arXiv note, and make the 311 check reproducible (compact checker, gate G2). User
   decisions; not part of the pass.
 - [ ] The unsent k = 8 email draft (on the Mac) still has the 6-fold value as 54 or 60. User decision.
@@ -128,7 +136,9 @@ degree-4 certificates are not in Git, and `CHORD20261105/logs` is empty.
 - Chord lemma: completeness is numerical evidence only, and the unit counts disagree (308 in `CHORD20261105` §4, 288
   in the facial records; the binary counts reconcile, 216 + 672 = 888).
 - C6UPPER: the solve-time cake_lpr logs record cube labels, not hashes, and whether the Mac lrat-check used for the
-  4 November replay was the E2-patched build is not logged.
+  4 November replay was the E2-patched build is not logged. *(6 Nov, 07:41 KST: the hash-bound cake_lpr replay (6 Nov
+  2026) now binds a cake_lpr verdict to the CNF and proof hashes of all 64 cube formulas, so the sixfold bound no
+  longer depends on the label-only logs. The lrat-check question is still unlogged.)*
 - 311: never replayed by an independent checker (lean4checker, nanoda); the compiled parts (about 500 GB) were deleted.
 - Upstream: a confirming comment on drat-trim #42/#43 is the user's call. `~/.local/bin/lrat-check` on the Linux host
   is still the unpatched build.
@@ -147,3 +157,7 @@ To be adapted by the author; about 175 words.
 > resting on a written, unrefereed encoding argument; a full re-check of the 6-fold proofs is planned. A literature
 > search on 6 November found no earlier statement of these results, but I would value your view on whether they are
 > new.
+
+*Note, 6 November after 07:41 KST:* the clause "a full re-check of the 6-fold proofs is planned" is out of date. The
+hash-bound cake_lpr replay (6 Nov 2026) certified all 64 cube formulas again (`C6UPPER` §6). The author may want to change
+it, for example to "all 6-fold cube formulas were solved again and the proofs checked by cake_lpr against hashed files".

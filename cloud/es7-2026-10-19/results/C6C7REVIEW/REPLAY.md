@@ -1,5 +1,12 @@
 # Certificate replay — 4 November 2026
 
+*Note added 6 November 2026 (results branch, after 07:41 KST).* This review record is unchanged. Afterwards, the
+hash-bound cake_lpr replay (6 Nov 2026) regenerated all 64 sixfold cube formulas (32 per encoder) with their recorded
+hashes and solved them again. cake_lpr accepted every fresh proof, 64 of 64, each verdict bound to the CNF and proof
+hashes (`C6UPPER/replay-2026-11-06/README.md`, `C6UPPER/README.md` §6). The sixfold verdicts called historical below
+are therefore no longer the only cake_lpr verdicts on those formulas. Erratum: in "The other 26 sixfold proofs per
+encoder" below, 26 should read 29 (58 in all, as in `C6UPPER` §5).
+
 **Certificate (both checkers, replayed now):** all eight selected proofs were accepted by both `lrat-check` and `cake_lpr`, against freshly generated formulas. This covers three substantial sixfold cubes per encoder and both complete sevenfold proofs. The other 26 sixfold proofs per encoder were not replayed in this review; their verdicts remain historical. The sevenfold 64-point lower-bound examples were not independently revalidated in this pass.
 
 **Exact computation:** all compressed and decompressed proof hashes matched the historical manifests. The five generated variants below matched their recorded hashes; the extended B generator also reproduced the sevenfold B formula byte for byte.

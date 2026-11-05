@@ -17,8 +17,8 @@ $m=7$ and $m=6$ (Table~\ref{k8:tab:status}).
 
 Every statement carries one of the labels Lean-checked; certificate; exact computation; written proof
 (not refereed); evidence only. A \emph{certificate} is an LRAT proof of unsatisfiability of a CNF formula accepted by
-the verified checker cake\_lpr (its line \texttt{s VERIFIED UNSAT}); neither the solver (CaDiCaL~3.0.1) nor lrat-check
-is trusted. The lrat-check of drat-trim at commit \texttt{2e3b2dc} accepts an invalid proof of a satisfiable formula
+the verified checker cake\_lpr (its line \texttt{s VERIFIED UNSAT}); neither the solver (CaDiCaL~3.0.1, and 2.1.3 for
+the re-checks of 5 November and the sixfold replay of 6 November) nor lrat-check is trusted. The lrat-check of drat-trim at commit \texttt{2e3b2dc} accepts an invalid proof of a satisfiable formula
 unless patched, a publicly known defect (drat-trim issues \#31 and \#42, pull request \#43; \dirn{LRATCHECK20261105}), so
 its verdicts below are supporting only. A certificate proves a
 geometric statement only together with the soundness of the encoding, whose status is stated separately
@@ -181,8 +181,12 @@ by lrat-check and by cake\_lpr when solved (3 November); the cake\_lpr logs reco
 hashes. On 4 November three randomly chosen phase-order proofs per encoder were replayed with both checkers against
 freshly generated formulas, with matching hashes (\dirn{C6C7REVIEW}), so $6$ of the $64$ cake\_lpr verdicts are bound
 to hashes; the same day all $64$ proofs, with hashes matching the recorded ones, were replayed against freshly generated
-formulas, but with lrat-check only, which is not a certificate. The other $58$ cake\_lpr verdicts are as recorded at solve time; a full
-hash-bound cake\_lpr replay is planned. An unsplit run was stopped after $6{,}578$\,s without an answer; it proves
+formulas, but with lrat-check only, which is not a certificate. Up to 6 November the other $58$ cake\_lpr verdicts were
+on record only at solve time. \emph{Added 6 November 2026:} in the hash-bound cake\_lpr replay (6 Nov 2026) all $64$
+cube formulas were regenerated with hashes matching the recorded ones and solved again (CaDiCaL~2.1.3), and cake\_lpr
+accepted every fresh proof, so each of the $64$ formulas now has a cake\_lpr verdict bound to its formula and proof
+hashes (\dirn{C6UPPER/replay-2026-11-06}). The $40$ fresh proofs of the contradictory patterns are byte-identical to the
+archived ones; the $24$ phase-order proofs are new. An unsplit run was stopped after $6{,}578$\,s without an answer; it proves
 nothing.
 
 \emph{Lower bound} (exact computation). The sixfold $60$-point sets A, B, C, C$'$ and D of \dirn{SIX60/sets} (ten
@@ -213,8 +217,8 @@ Lemma~\ref{k8:facts} (the polar form and rules A and B, the radius order, the so
 reduction to exactly $t$ layers); the deductions of Theorems~\ref{k8:c7} and~\ref{k8:c6} from \lean{Sevenfold70} and
 \lean{Sixfold66}.
 \item\emph{Certificate:} the unsatisfiability of the two sevenfold formulas (cake\_lpr, both replayed against
-regenerated formulas with matching hashes) and of the $64$ sixfold cube formulas (cake\_lpr at solve time; $6$ of the
-$64$ replayed hash-bound, see the proof of Theorem~\ref{k8:c6}). Trusted: cake\_lpr.
+regenerated formulas with matching hashes) and of the $64$ sixfold cube formulas (cake\_lpr; all $64$ hash-bound since
+the replay of 6 November, see the proof of Theorem~\ref{k8:c6}). Trusted: cake\_lpr.
 \item\emph{Exact computation:} the cube cover; the lower-bound sets; the real-set tests of the sixfold formulas.
 \item\emph{Written proof (not refereed), reviewed:} (i)~the classification of phase patterns, i.e.\ which of rules A and
 B applies, and to which ordered triple, as a function of the discrete phase pattern (exact integer comparisons in

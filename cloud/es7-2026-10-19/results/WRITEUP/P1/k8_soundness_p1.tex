@@ -1,11 +1,14 @@
 % k8_soundness_p1.tex -- adapted copy for preprint P1 (6 November 2026).
 % Source: WRITEUP/note/k8_soundness.tex, SHA-256 197bc2149619e05210fafb558576b45447925abe8f2537ecf176f41f68e7c32e
-% (as committed in 597961bbd). The ONLY changes are four cross-references and two footnotes: the two pointers to
-% the companion certificate section (one naming the draft STATUS20261104/k8_section.tex) now point to
+% (as committed in 597961bbd). The ONLY changes are four cross-references, two footnotes and one deleted clause: the
+% two pointers to the companion certificate section (one naming the draft STATUS20261104/k8_section.tex) now point to
 % Section~\ref{sec:cert} of P1, the trust-table row says (Section~\ref{sec:cert}) instead of (companion section),
 % 'As in the rest of the note' reads 'As in Section~\ref{sec:defs}'; a footnote after 'Lean was not rerun for this
 % section' points to the re-check of 6 November in Section~\ref{sec:layer}; and a footnote after 'fresh runs reproduce
-% the formula files byte for byte' says what is on record for the 64 sixfold cube files (Section~\ref{sec:enc}).
+% the formula files byte for byte' says what is on record for the 64 sixfold cube files (Section~\ref{sec:enc});
+% its wording was updated on 6 November 2026 after the hash-bound cake_lpr replay (C6UPPER/replay-2026-11-06), which
+% recorded matching hashes for all 64 regenerated cube files (before: the 6 sampled ones only); and, after that replay
+% finished, the clause ', since it changes as the replay proceeds' was deleted after 'is not repeated here'.
 % Mathematical text, rigor tags and the gaps (G1)-(G4) are unchanged.
 % Check with: diff WRITEUP/note/k8_soundness.tex WRITEUP/P1/k8_soundness_p1.tex
 %
@@ -803,8 +806,8 @@ of $F_B$.
 \end{proof}
 
 The hypotheses of the corollary are supplied by certificates (cake\_lpr, \texttt{s VERIFIED UNSAT}). Their status,
-including how many verdicts are bound to file hashes by a replay against freshly generated formulas, is stated in Section~\ref{sec:cert} and is not repeated here, since it changes as the replay proceeds. The link
-from the certified files to the programs analysed here is that fresh runs reproduce the formula files byte for byte\footnote{Note added in this paper: for the $64$ sixfold cube files this is on record by hash for the $6$ sampled ones and structurally for all; see Section~\ref{sec:enc}, ``Validation''.}
+including how many verdicts are bound to file hashes by a replay against freshly generated formulas, is stated in Section~\ref{sec:cert} and is not repeated here. The link
+from the certified files to the programs analysed here is that fresh runs reproduce the formula files byte for byte\footnote{Note added in this paper: for the $64$ sixfold cube files this is on record by hash for all of them since the hash-bound replay of 6 November 2026, and structurally for all; see Section~\ref{sec:enc}, ``Validation''.}
 (hashes above; \dirn{C6UPPER/logs/regen.log}, \dirn{C6C7REVIEW/REPLAY.md}).
 
 \subsection{Trust base and gaps}\label{k8s:sec:trust}

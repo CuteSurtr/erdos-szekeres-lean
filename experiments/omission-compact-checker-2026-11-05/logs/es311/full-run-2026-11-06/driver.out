@@ -1,0 +1,719 @@
+lean_make: Packed current (stamp 5a0e671a88f7351f)
+lean_make: Fast current (stamp a71a7197ff4b6656)
+lean_make: WordPack current (stamp 5ef07ad103584f9d)
+lean_make: Split current (stamp 61fe059fe2b1104c)
+lean_make: Fast2 current (stamp e01c773b910f0241)
+lean_make: Path current (stamp 60a01f9ca4837a3d)
+lean_make: Fcat2650 current (stamp ed47736434a997e0)
+lean_make: Fcat62 current (stamp 1f7212d4fbb8cef7)
+lean_make: BalancedProof.Catalog current (stamp a749a1874d3343cc)
+lean_make: BalancedCoverCutsV2 current (stamp 3f6372587da6e966)
+lean_make: Bridge311Bal current (stamp f12bf121afc4e389)
+lean_make: Residual32Bridge2650.Catalog current (stamp f30d997e1aeab112)
+lean_make: Bridge311Res current (stamp 3a971dcba15afdf7)
+{"export": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es311/full", "modules": 352, "to_run": 352, "already_done": 0, "order": ["E311B.C00022", "E311B.C00193", "E311B.C00074", "...", "E311B.Root", "E311R.Root", "E311.Final"], "leftover_scopes": [], "stray_tmp_oleans": 0, "scope_tag": "es311-8afb17cd48", "deps": {"Path": "60a01f9ca4837a3d99f5c346439caf4f1305cd32c8c341abff1633ae7b19add3", "Fcat2650": "ed47736434a997e0e049d4728acbe0171a4b5c23724567912a48443b32243fcb", "Fcat62": "1f7212d4fbb8cef77b3005e5836cc89f34fff0aab6a092f02f67a8bdc2930046", "Bridge311Bal": "f12bf121afc4e389dbea025e261e76ec4efba90ad789e9a1b93a51571824a6e0", "Bridge311Res": "3a971dcba15afdf71408af6a780d957f9645f64eea00f3fd0886e8f5774cd075"}, "tsv": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es311/full/run.tsv"}
+2026-11-05T21:48:13Z start chunk E311B.C00022 leaves=4985 running=1 queued=351
+2026-11-05T21:48:13Z start chunk E311B.C00193 leaves=4980 running=2 queued=350
+2026-11-05T21:48:13Z start chunk E311B.C00074 leaves=4960 running=3 queued=349
+2026-11-05T21:48:13Z start chunk E311B.C00075 leaves=4960 running=4 queued=348
+2026-11-05T21:48:13Z start chunk E311B.C00067 leaves=4939 running=5 queued=347
+2026-11-05T21:48:13Z start chunk E311B.C00158 leaves=4915 running=6 queued=346
+2026-11-05T21:48:13Z start chunk E311B.C00170 leaves=4910 running=7 queued=345
+2026-11-05T21:48:13Z start chunk E311B.C00039 leaves=4909 running=8 queued=344
+2026-11-05T21:50:24Z ok E311B.C00193 leaves=4980 kernel=116.000 wall=130.46 rss=3514316 cg_peak=984332 running=7 queued=344
+2026-11-05T21:50:24Z ok E311B.C00039 leaves=4909 kernel=116.000 wall=130.57 rss=3586384 cg_peak=950672 running=6 queued=344
+2026-11-05T21:50:24Z start chunk E311B.C00211 leaves=4898 running=7 queued=343
+2026-11-05T21:50:24Z start chunk E311B.C00220 leaves=4895 running=8 queued=342
+2026-11-05T21:50:29Z ok E311B.C00074 leaves=4960 kernel=121.000 wall=135.79 rss=3534316 cg_peak=1008140 running=7 queued=342
+2026-11-05T21:50:29Z ok E311B.C00067 leaves=4939 kernel=121.000 wall=135.17 rss=3645060 cg_peak=1028048 running=6 queued=342
+2026-11-05T21:50:29Z start chunk E311B.C00029 leaves=4879 running=7 queued=341
+2026-11-05T21:50:29Z start chunk E311B.C00028 leaves=4839 running=8 queued=340
+2026-11-05T21:50:32Z ok E311B.C00022 leaves=4985 kernel=124.000 wall=138.76 rss=3548424 cg_peak=1039268 running=7 queued=340
+2026-11-05T21:50:32Z start chunk E311B.C00049 leaves=4837 running=8 queued=339
+2026-11-05T21:50:41Z ok E311B.C00075 leaves=4960 kernel=132.000 wall=148.10 rss=3517752 cg_peak=975580 running=7 queued=339
+2026-11-05T21:50:41Z start chunk E311B.C00135 leaves=4830 running=8 queued=338
+2026-11-05T21:50:42Z ok E311B.C00158 leaves=4915 kernel=133.000 wall=149.14 rss=3569824 cg_peak=988804 running=7 queued=338
+2026-11-05T21:50:42Z ok E311B.C00170 leaves=4910 kernel=133.000 wall=148.58 rss=3544540 cg_peak=1009844 running=6 queued=338
+2026-11-05T21:50:42Z start chunk E311B.C00121 leaves=4829 running=7 queued=337
+2026-11-05T21:50:42Z start chunk E311B.C00159 leaves=4823 running=8 queued=336
+2026-11-05T21:52:31Z ok E311B.C00220 leaves=4895 kernel=113.000 wall=126.37 rss=3637432 cg_peak=1037724 running=7 queued=336
+2026-11-05T21:52:31Z start chunk E311B.C00143 leaves=4772 running=8 queued=335
+2026-11-05T21:52:41Z ok E311B.C00029 leaves=4879 kernel=118.000 wall=131.95 rss=3574548 cg_peak=1067976 running=7 queued=335
+2026-11-05T21:52:41Z ok E311B.C00028 leaves=4839 kernel=119.000 wall=132.05 rss=3497744 cg_peak=1005136 running=6 queued=335
+2026-11-05T21:52:41Z ok E311B.C00049 leaves=4837 kernel=115.000 wall=128.46 rss=3699140 cg_peak=1087308 running=5 queued=335
+2026-11-05T21:52:41Z start chunk E311B.C00118 leaves=4771 running=6 queued=334
+2026-11-05T21:52:41Z start chunk E311B.C00077 leaves=4748 running=7 queued=333
+2026-11-05T21:52:41Z start chunk E311B.C00164 leaves=4722 running=8 queued=332
+2026-11-05T21:52:51Z ok E311B.C00211 leaves=4898 kernel=131.000 wall=146.57 rss=3634264 cg_peak=1050780 running=7 queued=332
+2026-11-05T21:52:51Z start chunk E311B.C00191 leaves=4720 running=8 queued=331
+2026-11-05T21:52:52Z ok E311B.C00159 leaves=4823 kernel=116.000 wall=129.87 rss=3608988 cg_peak=979328 running=7 queued=331
+2026-11-05T21:52:52Z start chunk E311B.C00027 leaves=4707 running=8 queued=330
+2026-11-05T21:52:53Z ok E311B.C00135 leaves=4830 kernel=118.000 wall=132.18 rss=3637544 cg_peak=1015388 running=7 queued=330
+2026-11-05T21:52:53Z start chunk E311B.C00085 leaves=4669 running=8 queued=329
+2026-11-05T21:53:07Z ok E311B.C00121 leaves=4829 kernel=129.000 wall=143.74 rss=3633560 cg_peak=1011500 running=7 queued=329
+2026-11-05T21:53:07Z start chunk E311B.C00146 leaves=4658 running=8 queued=328
+2026-11-05T21:54:42Z ok E311B.C00143 leaves=4772 kernel=117.000 wall=130.28 rss=3663540 cg_peak=1043056 running=7 queued=328
+2026-11-05T21:54:42Z start chunk E311B.C00160 leaves=4655 running=8 queued=327
+2026-11-05T21:54:48Z ok E311B.C00077 leaves=4748 kernel=113.000 wall=126.15 rss=3549260 cg_peak=1043312 running=7 queued=327
+2026-11-05T21:54:48Z start chunk E311B.C00174 leaves=4651 running=8 queued=326
+2026-11-05T21:54:52Z ok E311B.C00118 leaves=4771 kernel=116.000 wall=129.66 rss=3466228 cg_peak=986556 running=7 queued=326
+2026-11-05T21:54:52Z start chunk E311B.C00147 leaves=4643 running=8 queued=325
+2026-11-05T21:55:06Z ok E311B.C00164 leaves=4722 kernel=129.000 wall=144.06 rss=3649980 cg_peak=1035504 running=7 queued=325
+2026-11-05T21:55:06Z start chunk E311B.C00032 leaves=4588 running=8 queued=324
+2026-11-05T21:55:08Z ok E311B.C00085 leaves=4669 kernel=120.000 wall=133.45 rss=3662188 cg_peak=1039696 running=7 queued=324
+2026-11-05T21:55:08Z start chunk E311B.C00106 leaves=4565 running=8 queued=323
+2026-11-05T21:55:12Z ok E311B.C00027 leaves=4707 kernel=125.000 wall=138.44 rss=3671612 cg_peak=1044820 running=7 queued=323
+2026-11-05T21:55:12Z start chunk E311B.C00221 leaves=4563 running=8 queued=322
+2026-11-05T21:55:14Z ok E311B.C00191 leaves=4720 kernel=126.000 wall=141.48 rss=3602160 cg_peak=975556 running=7 queued=322
+2026-11-05T21:55:14Z start chunk E311B.C00157 leaves=4522 running=8 queued=321
+2026-11-05T21:55:29Z ok E311B.C00146 leaves=4658 kernel=127.000 wall=141.74 rss=3614648 cg_peak=995596 running=7 queued=321
+2026-11-05T21:55:29Z start chunk E311B.C00144 leaves=4491 running=8 queued=320
+2026-11-05T21:56:42Z ok E311B.C00160 leaves=4655 kernel=107.000 wall=119.90 rss=3620576 cg_peak=987488 running=7 queued=320
+2026-11-05T21:56:42Z start chunk E311B.C00073 leaves=4486 running=8 queued=319
+2026-11-05T21:56:55Z ok E311B.C00174 leaves=4651 kernel=114.000 wall=126.81 rss=3620852 cg_peak=1005304 running=7 queued=319
+2026-11-05T21:56:55Z start chunk E311B.C00008 leaves=4485 running=8 queued=318
+2026-11-05T21:57:06Z ok E311B.C00032 leaves=4588 kernel=107.000 wall=119.71 rss=3595636 cg_peak=968068 running=7 queued=318
+2026-11-05T21:57:06Z start chunk E311B.C00001 leaves=4480 running=8 queued=317
+2026-11-05T21:57:10Z ok E311B.C00106 leaves=4565 kernel=109.000 wall=122.08 rss=3626552 cg_peak=1010592 running=7 queued=317
+2026-11-05T21:57:10Z start chunk E311B.C00076 leaves=4480 running=8 queued=316
+2026-11-05T21:57:13Z ok E311B.C00147 leaves=4643 kernel=126.000 wall=140.99 rss=3637728 cg_peak=1025260 running=7 queued=316
+2026-11-05T21:57:13Z start chunk E311B.C00079 leaves=4450 running=8 queued=315
+2026-11-05T21:57:26Z ok E311B.C00221 leaves=4563 kernel=120.000 wall=134.04 rss=3600508 cg_peak=979380 running=7 queued=315
+2026-11-05T21:57:26Z start chunk E311B.C00169 leaves=4435 running=8 queued=314
+2026-11-05T21:57:31Z ok E311B.C00157 leaves=4522 kernel=122.000 wall=136.42 rss=3592796 cg_peak=976324 running=7 queued=314
+2026-11-05T21:57:31Z ok E311B.C00144 leaves=4491 kernel=109.000 wall=121.29 rss=3582080 cg_peak=962332 running=6 queued=314
+2026-11-05T21:57:31Z start chunk E311B.C00177 leaves=4419 running=7 queued=313
+2026-11-05T21:57:31Z start chunk E311B.C00176 leaves=4418 running=8 queued=312
+2026-11-05T21:58:58Z ok E311B.C00008 leaves=4485 kernel=110.000 wall=122.52 rss=3616692 cg_peak=992632 running=7 queued=312
+2026-11-05T21:58:58Z start chunk E311B.C00198 leaves=4392 running=8 queued=311
+2026-11-05T21:58:59Z ok E311B.C00073 leaves=4486 kernel=123.000 wall=137.10 rss=3593052 cg_peak=952244 running=7 queued=311
+2026-11-05T21:58:59Z start chunk E311B.C00205 leaves=4365 running=8 queued=310
+2026-11-05T21:59:10Z ok E311B.C00001 leaves=4480 kernel=112.000 wall=124.14 rss=3628748 cg_peak=1000684 running=7 queued=310
+2026-11-05T21:59:10Z start chunk E311B.C00045 leaves=4331 running=8 queued=309
+2026-11-05T21:59:21Z ok E311B.C00079 leaves=4450 kernel=114.000 wall=127.48 rss=3583036 cg_peak=956892 running=7 queued=309
+2026-11-05T21:59:21Z start chunk E311B.C00099 leaves=4323 running=8 queued=308
+2026-11-05T21:59:26Z ok E311B.C00076 leaves=4480 kernel=121.000 wall=135.98 rss=3654912 cg_peak=1033944 running=7 queued=308
+2026-11-05T21:59:27Z start chunk E311B.C00012 leaves=4313 running=8 queued=307
+2026-11-05T21:59:31Z ok E311B.C00169 leaves=4435 kernel=110.000 wall=123.42 rss=3593016 cg_peak=957416 running=7 queued=307
+2026-11-05T21:59:31Z start chunk E311B.C00131 leaves=4312 running=8 queued=306
+2026-11-05T21:59:34Z ok E311B.C00177 leaves=4419 kernel=109.000 wall=122.18 rss=3618796 cg_peak=980452 running=7 queued=306
+2026-11-05T21:59:34Z start chunk E311B.C00031 leaves=4307 running=8 queued=305
+2026-11-05T21:59:47Z ok E311B.C00176 leaves=4418 kernel=120.000 wall=134.72 rss=3585256 cg_peak=959396 running=7 queued=305
+2026-11-05T21:59:47Z start chunk E311B.C00015 leaves=4296 running=8 queued=304
+2026-11-05T22:00:57Z ok E311B.C00205 leaves=4365 kernel=104.000 wall=116.29 rss=3611396 cg_peak=989588 running=7 queued=304
+2026-11-05T22:00:57Z start chunk E311B.C00062 leaves=4282 running=8 queued=303
+2026-11-05T22:00:58Z ok E311B.C00198 leaves=4392 kernel=107.000 wall=119.01 rss=3603352 cg_peak=974492 running=7 queued=303
+2026-11-05T22:00:58Z start chunk E311B.C00192 leaves=4278 running=8 queued=302
+2026-11-05T22:01:14Z ok E311B.C00045 leaves=4331 kernel=110.000 wall=123.06 rss=3619444 cg_peak=1002372 running=7 queued=302
+2026-11-05T22:01:14Z start chunk E311B.C00219 leaves=4275 running=8 queued=301
+2026-11-05T22:01:22Z ok E311B.C00099 leaves=4323 kernel=107.000 wall=119.77 rss=3604668 cg_peak=965880 running=7 queued=301
+2026-11-05T22:01:22Z start chunk E311B.C00066 leaves=4246 running=8 queued=300
+2026-11-05T22:01:28Z ok E311B.C00131 leaves=4312 kernel=104.000 wall=116.92 rss=3585144 cg_peak=957520 running=7 queued=300
+2026-11-05T22:01:28Z start chunk E311B.C00097 leaves=4212 running=8 queued=299
+2026-11-05T22:01:38Z ok E311B.C00012 leaves=4313 kernel=117.000 wall=130.59 rss=3600412 cg_peak=974168 running=7 queued=299
+2026-11-05T22:01:38Z start chunk E311B.C00173 leaves=4201 running=8 queued=298
+2026-11-05T22:01:42Z ok E311B.C00031 leaves=4307 kernel=114.000 wall=127.51 rss=3618196 cg_peak=999380 running=7 queued=298
+2026-11-05T22:01:42Z start chunk E311B.C00196 leaves=4195 running=8 queued=297
+2026-11-05T22:01:56Z ok E311B.C00015 leaves=4296 kernel=116.000 wall=129.09 rss=3608548 cg_peak=971656 running=7 queued=297
+2026-11-05T22:01:56Z start chunk E311B.C00182 leaves=4183 running=8 queued=296
+2026-11-05T22:02:54Z ok E311B.C00192 leaves=4278 kernel=104.000 wall=115.97 rss=3586420 cg_peak=952360 running=7 queued=296
+2026-11-05T22:02:54Z start chunk E311B.C00168 leaves=4140 running=8 queued=295
+2026-11-05T22:03:07Z ok E311B.C00062 leaves=4282 kernel=116.000 wall=129.46 rss=3588120 cg_peak=956684 running=7 queued=295
+2026-11-05T22:03:07Z start chunk E311B.C00014 leaves=4127 running=8 queued=294
+2026-11-05T22:03:14Z ok E311B.C00219 leaves=4275 kernel=107.000 wall=119.89 rss=3599944 cg_peak=958672 running=7 queued=294
+2026-11-05T22:03:14Z start chunk E311B.C00025 leaves=4121 running=8 queued=293
+2026-11-05T22:03:20Z ok E311B.C00066 leaves=4246 kernel=106.000 wall=118.28 rss=3581460 cg_peak=950348 running=7 queued=293
+2026-11-05T22:03:20Z start chunk E311B.C00036 leaves=4107 running=8 queued=292
+2026-11-05T22:03:37Z ok E311B.C00097 leaves=4212 kernel=116.000 wall=128.76 rss=3586608 cg_peak=943308 running=7 queued=292
+2026-11-05T22:03:37Z start chunk E311B.C00155 leaves=4082 running=8 queued=291
+2026-11-05T22:03:48Z ok E311B.C00173 leaves=4201 kernel=117.000 wall=130.01 rss=3619576 cg_peak=975296 running=7 queued=291
+2026-11-05T22:03:48Z ok E311B.C00196 leaves=4195 kernel=112.000 wall=125.98 rss=3581972 cg_peak=941612 running=6 queued=291
+2026-11-05T22:03:48Z start chunk E311B.C00197 leaves=4053 running=7 queued=290
+2026-11-05T22:03:48Z start chunk E311B.C00011 leaves=4047 running=8 queued=289
+2026-11-05T22:03:52Z ok E311B.C00182 leaves=4183 kernel=104.000 wall=116.07 rss=3616324 cg_peak=981340 running=7 queued=289
+2026-11-05T22:03:52Z start chunk E311B.C00114 leaves=4015 running=8 queued=288
+2026-11-05T22:04:46Z ok E311B.C00168 leaves=4140 kernel=100.000 wall=111.81 rss=3563396 cg_peak=931720 running=7 queued=288
+2026-11-05T22:04:46Z start chunk E311B.C00202 leaves=4014 running=8 queued=287
+2026-11-05T22:05:00Z ok E311B.C00014 leaves=4127 kernel=101.000 wall=113.02 rss=3588128 cg_peak=961548 running=7 queued=287
+2026-11-05T22:05:00Z start chunk E311B.C00148 leaves=4004 running=8 queued=286
+2026-11-05T22:05:20Z ok E311B.C00025 leaves=4121 kernel=111.000 wall=124.73 rss=3568004 cg_peak=937860 running=7 queued=286
+2026-11-05T22:05:20Z start chunk E311B.C00047 leaves=3972 running=8 queued=285
+2026-11-05T22:05:26Z ok E311B.C00036 leaves=4107 kernel=111.000 wall=124.38 rss=3583560 cg_peak=957860 running=7 queued=285
+2026-11-05T22:05:26Z start chunk E311B.C00021 leaves=3938 running=8 queued=284
+2026-11-05T22:05:35Z ok E311B.C00155 leaves=4082 kernel=105.000 wall=116.97 rss=3584744 cg_peak=959832 running=7 queued=284
+2026-11-05T22:05:35Z start chunk E311B.C00206 leaves=3929 running=8 queued=283
+2026-11-05T22:05:37Z ok E311B.C00197 leaves=4053 kernel=96.400 wall=108.18 rss=3554884 cg_peak=912000 running=7 queued=283
+2026-11-05T22:05:37Z start chunk E311B.C00038 leaves=3925 running=8 queued=282
+2026-11-05T22:05:42Z ok E311B.C00011 leaves=4047 kernel=101.000 wall=112.31 rss=3581820 cg_peak=950252 running=7 queued=282
+2026-11-05T22:05:42Z start chunk E311B.C00013 leaves=3888 running=8 queued=281
+2026-11-05T22:05:55Z ok E311B.C00114 leaves=4015 kernel=109.000 wall=121.93 rss=3579500 cg_peak=966556 running=7 queued=281
+2026-11-05T22:05:55Z start chunk E311B.C00006 leaves=3853 running=8 queued=280
+2026-11-05T22:06:46Z ok E311B.C00202 leaves=4014 kernel=106.000 wall=118.84 rss=3583012 cg_peak=962744 running=7 queued=280
+2026-11-05T22:06:46Z start chunk E311B.C00207 leaves=3852 running=8 queued=279
+2026-11-05T22:07:02Z ok E311B.C00148 leaves=4004 kernel=108.000 wall=120.88 rss=3613796 cg_peak=978372 running=7 queued=279
+2026-11-05T22:07:02Z start chunk E311B.C00053 leaves=3848 running=8 queued=278
+2026-11-05T22:07:11Z ok E311B.C00047 leaves=3972 kernel=98.600 wall=110.51 rss=3562320 cg_peak=926176 running=7 queued=278
+2026-11-05T22:07:11Z start chunk E311B.C00002 leaves=3843 running=8 queued=277
+2026-11-05T22:07:27Z ok E311B.C00038 leaves=3925 kernel=98.000 wall=109.56 rss=3580076 cg_peak=930792 running=7 queued=277
+2026-11-05T22:07:27Z start chunk E311B.C00165 leaves=3828 running=8 queued=276
+2026-11-05T22:07:28Z ok E311B.C00021 leaves=3938 kernel=109.000 wall=121.59 rss=3584420 cg_peak=950816 running=7 queued=276
+2026-11-05T22:07:28Z start chunk E311B.C00094 leaves=3827 running=8 queued=275
+2026-11-05T22:07:34Z ok E311B.C00206 leaves=3929 kernel=106.000 wall=118.32 rss=3578324 cg_peak=946168 running=7 queued=275
+2026-11-05T22:07:34Z start chunk E311B.C00017 leaves=3805 running=8 queued=274
+2026-11-05T22:07:36Z ok E311B.C00013 leaves=3888 kernel=101.000 wall=113.67 rss=3558456 cg_peak=921592 running=7 queued=274
+2026-11-05T22:07:36Z start chunk E311B.C00162 leaves=3805 running=8 queued=273
+2026-11-05T22:07:49Z ok E311B.C00006 leaves=3853 kernel=102.000 wall=113.32 rss=3572112 cg_peak=931848 running=7 queued=273
+2026-11-05T22:07:49Z start chunk E311B.C00116 leaves=3802 running=8 queued=272
+2026-11-05T22:08:42Z ok E311B.C00207 leaves=3852 kernel=103.000 wall=116.00 rss=3582088 cg_peak=930184 running=7 queued=272
+2026-11-05T22:08:42Z start chunk E311B.C00187 leaves=3795 running=8 queued=271
+2026-11-05T22:09:00Z ok E311B.C00053 leaves=3848 kernel=105.000 wall=117.85 rss=3543736 cg_peak=900960 running=7 queued=271
+2026-11-05T22:09:00Z ok E311B.C00002 leaves=3843 kernel=96.800 wall=108.70 rss=3567188 cg_peak=924564 running=6 queued=271
+2026-11-05T22:09:00Z start chunk E311B.C00119 leaves=3773 running=7 queued=270
+2026-11-05T22:09:00Z start chunk E311B.C00102 leaves=3767 running=8 queued=269
+2026-11-05T22:09:13Z ok E311B.C00165 leaves=3828 kernel=93.800 wall=105.62 rss=3554760 cg_peak=907352 running=7 queued=269
+2026-11-05T22:09:13Z start chunk E311B.C00139 leaves=3762 running=8 queued=268
+2026-11-05T22:09:24Z ok E311B.C00094 leaves=3827 kernel=104.000 wall=116.18 rss=3558964 cg_peak=910212 running=7 queued=268
+2026-11-05T22:09:24Z start chunk E311B.C00051 leaves=3759 running=8 queued=267
+2026-11-05T22:09:27Z ok E311B.C00162 leaves=3805 kernel=98.500 wall=110.41 rss=3568208 cg_peak=909132 running=7 queued=267
+2026-11-05T22:09:27Z start chunk E311B.C00070 leaves=3747 running=8 queued=266
+2026-11-05T22:09:31Z ok E311B.C00017 leaves=3805 kernel=105.000 wall=117.20 rss=3578392 cg_peak=926812 running=7 queued=266
+2026-11-05T22:09:31Z start chunk E311B.C00123 leaves=3716 running=8 queued=265
+2026-11-05T22:09:44Z ok E311B.C00116 leaves=3802 kernel=102.000 wall=114.74 rss=3575756 cg_peak=906736 running=7 queued=265
+2026-11-05T22:09:44Z start chunk E311B.C00120 leaves=3710 running=8 queued=264
+2026-11-05T22:10:28Z ok E311B.C00187 leaves=3795 kernel=94.300 wall=105.62 rss=3575836 cg_peak=917052 running=7 queued=264
+2026-11-05T22:10:28Z start chunk E311B.C00195 leaves=3708 running=8 queued=263
+2026-11-05T22:10:41Z ok E311B.C00119 leaves=3773 kernel=89.400 wall=100.29 rss=3573536 cg_peak=931212 running=7 queued=263
+2026-11-05T22:10:41Z start chunk E311B.C00034 leaves=3698 running=8 queued=262
+2026-11-05T22:10:43Z ok E311B.C00102 leaves=3767 kernel=91.100 wall=102.06 rss=3561932 cg_peak=906948 running=7 queued=262
+2026-11-05T22:10:43Z start chunk E311B.C00037 leaves=3693 running=8 queued=261
+2026-11-05T22:11:08Z ok E311B.C00051 leaves=3759 kernel=91.900 wall=102.77 rss=3527796 cg_peak=882260 running=7 queued=261
+2026-11-05T22:11:08Z start chunk E311B.C00016 leaves=3690 running=8 queued=260
+2026-11-05T22:11:10Z ok E311B.C00070 leaves=3747 kernel=90.700 wall=101.55 rss=3574800 cg_peak=937340 running=7 queued=260
+2026-11-05T22:11:10Z start chunk E311B.C00069 leaves=3686 running=8 queued=259
+2026-11-05T22:11:14Z ok E311B.C00139 leaves=3762 kernel=107.000 wall=119.92 rss=3536976 cg_peak=899888 running=7 queued=259
+2026-11-05T22:11:14Z start chunk E311B.C00151 leaves=3652 running=8 queued=258
+2026-11-05T22:11:22Z ok E311B.C00123 leaves=3716 kernel=98.000 wall=110.01 rss=3571936 cg_peak=926972 running=7 queued=258
+2026-11-05T22:11:22Z start chunk E311B.C00209 leaves=3652 running=8 queued=257
+2026-11-05T22:11:24Z ok E311B.C00120 leaves=3710 kernel=87.900 wall=98.42 rss=3538060 cg_peak=894600 running=7 queued=257
+2026-11-05T22:11:24Z start chunk E311B.C00204 leaves=3638 running=8 queued=256
+2026-11-05T22:12:21Z ok E311B.C00195 leaves=3708 kernel=100.000 wall=112.19 rss=3564180 cg_peak=923128 running=7 queued=256
+2026-11-05T22:12:21Z start chunk E311B.C00186 leaves=3636 running=8 queued=255
+2026-11-05T22:12:25Z ok E311B.C00034 leaves=3698 kernel=92.000 wall=102.79 rss=3533796 cg_peak=887128 running=7 queued=255
+2026-11-05T22:12:25Z start chunk E311B.C00163 leaves=3633 running=8 queued=254
+2026-11-05T22:12:27Z ok E311B.C00037 leaves=3693 kernel=93.000 wall=103.83 rss=3557760 cg_peak=918496 running=7 queued=254
+2026-11-05T22:12:27Z start chunk E311B.C00055 leaves=3612 running=8 queued=253
+2026-11-05T22:12:53Z ok E311B.C00016 leaves=3690 kernel=93.700 wall=104.98 rss=3562564 cg_peak=921260 running=7 queued=253
+2026-11-05T22:12:53Z start chunk E311B.C00065 leaves=3610 running=8 queued=252
+2026-11-05T22:12:55Z ok E311B.C00151 leaves=3652 kernel=90.100 wall=101.14 rss=3513188 cg_peak=861060 running=7 queued=252
+2026-11-05T22:12:55Z start chunk E311B.C00042 leaves=3609 running=8 queued=251
+2026-11-05T22:13:04Z ok E311B.C00069 leaves=3686 kernel=101.000 wall=113.43 rss=3573828 cg_peak=941252 running=7 queued=251
+2026-11-05T22:13:04Z start chunk E311B.C00041 leaves=3607 running=8 queued=250
+2026-11-05T22:13:05Z ok E311B.C00204 leaves=3638 kernel=89.900 wall=100.64 rss=3527128 cg_peak=876368 running=7 queued=250
+2026-11-05T22:13:05Z start chunk E311B.C00024 leaves=3596 running=8 queued=249
+2026-11-05T22:13:07Z ok E311B.C00209 leaves=3652 kernel=93.200 wall=104.97 rss=3548796 cg_peak=915140 running=7 queued=249
+2026-11-05T22:13:07Z start chunk E311B.C00105 leaves=3578 running=8 queued=248
+2026-11-05T22:14:09Z ok E311B.C00055 leaves=3612 kernel=90.800 wall=101.79 rss=3543116 cg_peak=902416 running=7 queued=248
+2026-11-05T22:14:09Z start chunk E311B.C00172 leaves=3572 running=8 queued=247
+2026-11-05T22:14:14Z ok E311B.C00186 leaves=3636 kernel=100.000 wall=112.59 rss=3540304 cg_peak=898084 running=7 queued=247
+2026-11-05T22:14:14Z start chunk E311B.C00145 leaves=3570 running=8 queued=246
+2026-11-05T22:14:15Z ok E311B.C00163 leaves=3633 kernel=97.700 wall=109.69 rss=3545896 cg_peak=903844 running=7 queued=246
+2026-11-05T22:14:15Z start chunk E311B.C00101 leaves=3561 running=8 queued=245
+2026-11-05T22:14:32Z ok E311B.C00042 leaves=3609 kernel=86.600 wall=96.88 rss=3520768 cg_peak=874964 running=7 queued=245
+2026-11-05T22:14:32Z start chunk E311B.C00217 leaves=3558 running=8 queued=244
+2026-11-05T22:14:42Z ok E311B.C00041 leaves=3607 kernel=87.200 wall=97.79 rss=3537716 cg_peak=895140 running=7 queued=244
+2026-11-05T22:14:42Z start chunk E311B.C00059 leaves=3544 running=8 queued=243
+2026-11-05T22:14:44Z ok E311B.C00065 leaves=3610 kernel=98.300 wall=110.50 rss=3540436 cg_peak=898640 running=7 queued=243
+2026-11-05T22:14:44Z start chunk E311B.C00010 leaves=3542 running=8 queued=242
+2026-11-05T22:14:45Z ok E311B.C00105 leaves=3578 kernel=87.700 wall=97.88 rss=3568132 cg_peak=917116 running=7 queued=242
+2026-11-05T22:14:45Z start chunk E311B.C00019 leaves=3531 running=8 queued=241
+2026-11-05T22:14:54Z ok E311B.C00024 leaves=3596 kernel=96.900 wall=108.92 rss=3544024 cg_peak=908072 running=7 queued=241
+2026-11-05T22:14:54Z start chunk E311B.C00057 leaves=3526 running=8 queued=240
+2026-11-05T22:15:44Z ok E311B.C00172 leaves=3572 kernel=84.600 wall=94.80 rss=3542648 cg_peak=904224 running=7 queued=240
+2026-11-05T22:15:44Z start chunk E311B.C00117 leaves=3505 running=8 queued=239
+2026-11-05T22:15:51Z ok E311B.C00145 leaves=3570 kernel=86.500 wall=97.01 rss=3534520 cg_peak=881048 running=7 queued=239
+2026-11-05T22:15:51Z start chunk E311B.C00189 leaves=3504 running=8 queued=238
+2026-11-05T22:15:53Z ok E311B.C00101 leaves=3561 kernel=85.900 wall=96.52 rss=3554140 cg_peak=907000 running=7 queued=238
+2026-11-05T22:15:53Z start chunk E311B.C00184 leaves=3491 running=8 queued=237
+2026-11-05T22:16:20Z ok E311B.C00019 leaves=3531 kernel=83.200 wall=93.55 rss=3507724 cg_peak=861840 running=7 queued=237
+2026-11-05T22:16:20Z start chunk E311B.C00033 leaves=3448 running=8 queued=236
+2026-11-05T22:16:21Z ok E311B.C00217 leaves=3558 kernel=95.700 wall=107.74 rss=3541012 cg_peak=895688 running=7 queued=236
+2026-11-05T22:16:21Z start chunk E311B.C00093 leaves=3442 running=8 queued=235
+2026-11-05T22:16:32Z ok E311B.C00057 leaves=3526 kernel=86.800 wall=97.14 rss=3536332 cg_peak=898980 running=7 queued=235
+2026-11-05T22:16:32Z start chunk E311B.C00026 leaves=3437 running=8 queued=234
+2026-11-05T22:16:33Z ok E311B.C00059 leaves=3544 kernel=97.900 wall=109.88 rss=3548476 cg_peak=903224 running=7 queued=234
+2026-11-05T22:16:33Z ok E311B.C00010 leaves=3542 kernel=96.100 wall=107.59 rss=3571376 cg_peak=937988 running=6 queued=234
+2026-11-05T22:16:33Z start chunk E311B.C00083 leaves=3434 running=7 queued=233
+2026-11-05T22:16:33Z start chunk E311B.C00185 leaves=3428 running=8 queued=232
+2026-11-05T22:17:21Z ok E311B.C00117 leaves=3505 kernel=85.900 wall=96.23 rss=3519432 cg_peak=872992 running=7 queued=232
+2026-11-05T22:17:21Z start chunk E311B.C00124 leaves=3418 running=8 queued=231
+2026-11-05T22:17:30Z ok E311B.C00184 leaves=3491 kernel=86.400 wall=96.82 rss=3532524 cg_peak=886956 running=7 queued=231
+2026-11-05T22:17:30Z start chunk E311B.C00103 leaves=3393 running=8 queued=230
+2026-11-05T22:17:32Z ok E311B.C00189 leaves=3504 kernel=88.700 wall=99.60 rss=3531392 cg_peak=882264 running=7 queued=230
+2026-11-05T22:17:32Z start chunk E311B.C00154 leaves=3373 running=8 queued=229
+2026-11-05T22:18:05Z ok E311B.C00093 leaves=3442 kernel=92.700 wall=104.02 rss=3510260 cg_peak=853612 running=7 queued=229
+2026-11-05T22:18:05Z start chunk E311B.C00132 leaves=3363 running=8 queued=228
+2026-11-05T22:18:06Z ok E311B.C00026 leaves=3437 kernel=83.600 wall=93.73 rss=3517756 cg_peak=869088 running=7 queued=228
+2026-11-05T22:18:06Z ok E311B.C00083 leaves=3434 kernel=83.000 wall=92.90 rss=3430320 cg_peak=869924 running=6 queued=228
+2026-11-05T22:18:06Z ok E311B.C00185 leaves=3428 kernel=83.100 wall=92.76 rss=3486080 cg_peak=919396 running=5 queued=228
+2026-11-05T22:18:06Z start chunk E311B.C00088 leaves=3362 running=6 queued=227
+2026-11-05T22:18:06Z start chunk E311B.C00078 leaves=3352 running=7 queued=226
+2026-11-05T22:18:06Z start chunk E311B.C00142 leaves=3349 running=8 queued=225
+2026-11-05T22:18:07Z ok E311B.C00033 leaves=3448 kernel=95.100 wall=106.86 rss=3512540 cg_peak=860476 running=7 queued=225
+2026-11-05T22:18:07Z start chunk E311B.C00129 leaves=3333 running=8 queued=224
+2026-11-05T22:19:00Z ok E311B.C00124 leaves=3418 kernel=88.100 wall=98.98 rss=3531584 cg_peak=883724 running=7 queued=224
+2026-11-05T22:19:00Z start chunk E311B.C00020 leaves=3314 running=8 queued=223
+2026-11-05T22:19:02Z ok E311B.C00103 leaves=3393 kernel=82.000 wall=92.10 rss=3531600 cg_peak=879308 running=7 queued=223
+2026-11-05T22:19:02Z start chunk E311B.C00152 leaves=3294 running=8 queued=222
+2026-11-05T22:19:11Z ok E311B.C00154 leaves=3373 kernel=88.200 wall=99.02 rss=3523204 cg_peak=875320 running=7 queued=222
+2026-11-05T22:19:11Z start chunk E311B.C00223 leaves=3278 running=8 queued=221
+2026-11-05T22:19:35Z ok E311B.C00129 leaves=3333 kernel=77.800 wall=87.73 rss=3503484 cg_peak=851732 running=7 queued=221
+2026-11-05T22:19:35Z start chunk E311B.C00130 leaves=3270 running=8 queued=220
+2026-11-05T22:19:36Z ok E311B.C00078 leaves=3352 kernel=79.000 wall=89.17 rss=3497584 cg_peak=852756 running=7 queued=220
+2026-11-05T22:19:36Z start chunk E311B.C00190 leaves=3264 running=8 queued=219
+2026-11-05T22:19:39Z ok E311B.C00132 leaves=3363 kernel=84.200 wall=94.32 rss=3534576 cg_peak=893844 running=7 queued=219
+2026-11-05T22:19:39Z start chunk E311B.C00199 leaves=3262 running=8 queued=218
+2026-11-05T22:19:48Z ok E311B.C00088 leaves=3362 kernel=91.000 wall=102.10 rss=3545260 cg_peak=898220 running=7 queued=218
+2026-11-05T22:19:48Z start chunk E311B.C00087 leaves=3242 running=8 queued=217
+2026-11-05T22:19:49Z ok E311B.C00142 leaves=3349 kernel=91.400 wall=102.71 rss=3534256 cg_peak=881372 running=7 queued=217
+2026-11-05T22:19:49Z start chunk E311B.C00082 leaves=3231 running=8 queued=216
+2026-11-05T22:20:39Z ok E311B.C00223 leaves=3278 kernel=77.600 wall=87.53 rss=3499488 cg_peak=839760 running=7 queued=216
+2026-11-05T22:20:39Z start chunk E311B.C00048 leaves=3223 running=8 queued=215
+2026-11-05T22:20:41Z ok E311B.C00020 leaves=3314 kernel=89.400 wall=100.47 rss=3571580 cg_peak=927192 running=7 queued=215
+2026-11-05T22:20:41Z ok E311B.C00152 leaves=3294 kernel=87.800 wall=98.71 rss=3536644 cg_peak=888232 running=6 queued=215
+2026-11-05T22:20:41Z start chunk E311B.C00110 leaves=3221 running=7 queued=214
+2026-11-05T22:20:41Z start chunk E311B.C00200 leaves=3210 running=8 queued=213
+2026-11-05T22:21:03Z ok E311B.C00130 leaves=3270 kernel=78.000 wall=87.82 rss=3526964 cg_peak=878212 running=7 queued=213
+2026-11-05T22:21:03Z start chunk E311B.C00108 leaves=3178 running=8 queued=212
+2026-11-05T22:21:08Z ok E311B.C00199 leaves=3262 kernel=77.900 wall=87.28 rss=3536344 cg_peak=884224 running=7 queued=212
+2026-11-05T22:21:08Z start chunk E311B.C00201 leaves=3168 running=8 queued=211
+2026-11-05T22:21:14Z ok E311B.C00190 leaves=3264 kernel=86.700 wall=96.96 rss=3496764 cg_peak=840912 running=7 queued=211
+2026-11-05T22:21:14Z start chunk E311B.C00127 leaves=3161 running=8 queued=210
+2026-11-05T22:21:15Z ok E311B.C00087 leaves=3242 kernel=76.400 wall=85.74 rss=3491696 cg_peak=853204 running=7 queued=210
+2026-11-05T22:21:15Z start chunk E311B.C00181 leaves=3160 running=8 queued=209
+2026-11-05T22:21:16Z ok E311B.C00082 leaves=3231 kernel=76.600 wall=85.83 rss=3522776 cg_peak=873988 running=7 queued=209
+2026-11-05T22:21:16Z start chunk E311B.C00091 leaves=3135 running=8 queued=208
+2026-11-05T22:22:06Z ok E311B.C00110 leaves=3221 kernel=74.300 wall=83.64 rss=3475828 cg_peak=831432 running=7 queued=208
+2026-11-05T22:22:06Z start chunk E311B.C00212 leaves=3129 running=8 queued=207
+2026-11-05T22:22:08Z ok E311B.C00048 leaves=3223 kernel=77.700 wall=87.50 rss=3525984 cg_peak=864564 running=7 queued=207
+2026-11-05T22:22:08Z start chunk E311B.C00003 leaves=3121 running=8 queued=206
+2026-11-05T22:22:16Z ok E311B.C00200 leaves=3210 kernel=83.500 wall=93.73 rss=3484132 cg_peak=852180 running=7 queued=206
+2026-11-05T22:22:16Z start chunk E311B.C00140 leaves=3108 running=8 queued=205
+2026-11-05T22:22:27Z ok E311B.C00108 leaves=3178 kernel=73.000 wall=82.64 rss=3528760 cg_peak=870200 running=7 queued=205
+2026-11-05T22:22:27Z start chunk E311B.C00156 leaves=3105 running=8 queued=204
+2026-11-05T22:22:38Z ok E311B.C00127 leaves=3161 kernel=74.200 wall=83.68 rss=3504844 cg_peak=863088 running=7 queued=204
+2026-11-05T22:22:38Z start chunk E311B.C00030 leaves=3103 running=8 queued=203
+2026-11-05T22:22:39Z ok E311B.C00201 leaves=3168 kernel=80.200 wall=90.79 rss=3494608 cg_peak=857108 running=7 queued=203
+2026-11-05T22:22:39Z start chunk E311B.C00098 leaves=3101 running=8 queued=202
+2026-11-05T22:22:46Z ok E311B.C00091 leaves=3135 kernel=80.200 wall=89.83 rss=3494288 cg_peak=853136 running=7 queued=202
+2026-11-05T22:22:46Z start chunk E311B.C00063 leaves=3100 running=8 queued=201
+2026-11-05T22:22:51Z ok E311B.C00181 leaves=3160 kernel=85.400 wall=95.90 rss=3517068 cg_peak=871968 running=7 queued=201
+2026-11-05T22:22:51Z start chunk E311B.C00133 leaves=3063 running=8 queued=200
+2026-11-05T22:23:32Z ok E311B.C00212 leaves=3129 kernel=76.100 wall=85.39 rss=3489616 cg_peak=840224 running=7 queued=200
+2026-11-05T22:23:32Z start chunk E311B.C00096 leaves=3054 running=8 queued=199
+2026-11-05T22:23:38Z ok E311B.C00003 leaves=3121 kernel=80.100 wall=89.95 rss=3513072 cg_peak=852812 running=7 queued=199
+2026-11-05T22:23:38Z start chunk E311B.C00218 leaves=3053 running=8 queued=198
+2026-11-05T22:23:43Z ok E311B.C00140 leaves=3108 kernel=76.900 wall=86.34 rss=3502028 cg_peak=846476 running=7 queued=198
+2026-11-05T22:23:43Z start chunk E311B.C00126 leaves=3049 running=8 queued=197
+2026-11-05T22:23:49Z ok E311B.C00156 leaves=3105 kernel=71.800 wall=81.26 rss=3501896 cg_peak=845224 running=7 queued=197
+2026-11-05T22:23:49Z start chunk E311B.C00090 leaves=3041 running=8 queued=196
+2026-11-05T22:24:01Z ok E311B.C00030 leaves=3103 kernel=73.000 wall=82.29 rss=3488304 cg_peak=824872 running=7 queued=196
+2026-11-05T22:24:01Z start chunk E311B.C00210 leaves=3020 running=8 queued=195
+2026-11-05T22:24:04Z ok E311B.C00098 leaves=3101 kernel=75.400 wall=85.14 rss=3490200 cg_peak=833544 running=7 queued=195
+2026-11-05T22:24:04Z start chunk E311B.C00216 leaves=3009 running=8 queued=194
+2026-11-05T22:24:13Z ok E311B.C00063 leaves=3100 kernel=76.700 wall=86.32 rss=3509640 cg_peak=861144 running=7 queued=194
+2026-11-05T22:24:13Z start chunk E311B.C00166 leaves=3008 running=8 queued=193
+2026-11-05T22:24:16Z ok E311B.C00133 leaves=3063 kernel=75.900 wall=85.07 rss=3520984 cg_peak=871232 running=7 queued=193
+2026-11-05T22:24:16Z start chunk E311B.C00061 leaves=2998 running=8 queued=192
+2026-11-05T22:24:55Z ok E311B.C00096 leaves=3054 kernel=73.200 wall=82.53 rss=3529072 cg_peak=871220 running=7 queued=192
+2026-11-05T22:24:55Z start chunk E311B.C00115 leaves=2986 running=8 queued=191
+2026-11-05T22:25:02Z ok E311B.C00218 leaves=3053 kernel=74.900 wall=84.23 rss=3515904 cg_peak=860020 running=7 queued=191
+2026-11-05T22:25:02Z start chunk E311B.C00044 leaves=2980 running=8 queued=190
+2026-11-05T22:25:08Z ok E311B.C00126 leaves=3049 kernel=74.800 wall=84.35 rss=3499636 cg_peak=849196 running=7 queued=190
+2026-11-05T22:25:08Z start chunk E311B.C00018 leaves=2967 running=8 queued=189
+2026-11-05T22:25:14Z ok E311B.C00090 leaves=3041 kernel=75.000 wall=84.54 rss=3484312 cg_peak=825972 running=7 queued=189
+2026-11-05T22:25:14Z start chunk E311B.C00054 leaves=2963 running=8 queued=188
+2026-11-05T22:25:25Z ok E311B.C00210 leaves=3020 kernel=74.100 wall=83.27 rss=3510252 cg_peak=852244 running=7 queued=188
+2026-11-05T22:25:25Z start chunk E311B.C00149 leaves=2952 running=8 queued=187
+2026-11-05T22:25:33Z ok E311B.C00216 leaves=3009 kernel=77.500 wall=87.77 rss=3501804 cg_peak=850944 running=7 queued=187
+2026-11-05T22:25:33Z start chunk E311B.C00214 leaves=2950 running=8 queued=186
+2026-11-05T22:25:41Z ok E311B.C00166 leaves=3008 kernel=77.100 wall=86.87 rss=3504132 cg_peak=860428 running=7 queued=186
+2026-11-05T22:25:41Z start chunk E311B.C00086 leaves=2930 running=8 queued=185
+2026-11-05T22:25:51Z ok E311B.C00061 leaves=2998 kernel=83.000 wall=93.65 rss=3518572 cg_peak=864812 running=7 queued=185
+2026-11-05T22:25:51Z start chunk E311B.C00178 leaves=2923 running=8 queued=184
+2026-11-05T22:26:19Z ok E311B.C00115 leaves=2986 kernel=73.900 wall=83.12 rss=3495524 cg_peak=839036 running=7 queued=184
+2026-11-05T22:26:19Z start chunk E311B.C00058 leaves=2910 running=8 queued=183
+2026-11-05T22:26:32Z ok E311B.C00044 leaves=2980 kernel=79.400 wall=89.06 rss=3507568 cg_peak=850852 running=7 queued=183
+2026-11-05T22:26:32Z start chunk E311B.C00081 leaves=2900 running=8 queued=182
+2026-11-05T22:26:36Z ok E311B.C00018 leaves=2967 kernel=77.200 wall=87.04 rss=3493880 cg_peak=839996 running=7 queued=182
+2026-11-05T22:26:36Z start chunk E311B.C00100 leaves=2882 running=8 queued=181
+2026-11-05T22:26:39Z ok E311B.C00054 leaves=2963 kernel=74.500 wall=83.57 rss=3492052 cg_peak=831620 running=7 queued=181
+2026-11-05T22:26:39Z start chunk E311B.C00137 leaves=2876 running=8 queued=180
+2026-11-05T22:26:55Z ok E311B.C00149 leaves=2952 kernel=78.600 wall=88.95 rss=3457780 cg_peak=794136 running=7 queued=180
+2026-11-05T22:26:55Z start chunk E311B.C00072 leaves=2874 running=8 queued=179
+2026-11-05T22:26:59Z ok E311B.C00214 leaves=2950 kernel=75.500 wall=85.46 rss=3472380 cg_peak=814348 running=7 queued=179
+2026-11-05T22:26:59Z start chunk E311B.C00179 leaves=2853 running=8 queued=178
+2026-11-05T22:27:01Z ok E311B.C00086 leaves=2930 kernel=70.400 wall=79.36 rss=3494200 cg_peak=836548 running=7 queued=178
+2026-11-05T22:27:01Z start chunk E311B.C00064 leaves=2841 running=8 queued=177
+2026-11-05T22:27:20Z ok E311B.C00178 leaves=2923 kernel=78.400 wall=88.79 rss=3451464 cg_peak=791560 running=7 queued=177
+2026-11-05T22:27:20Z start chunk E311B.C00188 leaves=2830 running=8 queued=176
+2026-11-05T22:27:36Z ok E311B.C00058 leaves=2910 kernel=67.200 wall=76.33 rss=3489076 cg_peak=824444 running=7 queued=176
+2026-11-05T22:27:36Z start chunk E311B.C00171 leaves=2829 running=8 queued=175
+2026-11-05T22:27:46Z ok E311B.C00081 leaves=2900 kernel=65.100 wall=73.61 rss=3494952 cg_peak=832072 running=7 queued=175
+2026-11-05T22:27:46Z start chunk E311B.C00141 leaves=2818 running=8 queued=174
+2026-11-05T22:27:56Z ok E311B.C00137 leaves=2876 kernel=67.900 wall=76.79 rss=3528244 cg_peak=870992 running=7 queued=174
+2026-11-05T22:27:56Z start chunk E311B.C00084 leaves=2790 running=8 queued=173
+2026-11-05T22:28:05Z ok E311B.C00100 leaves=2882 kernel=78.300 wall=88.31 rss=3491660 cg_peak=837324 running=7 queued=173
+2026-11-05T22:28:05Z start chunk E311B.C00208 leaves=2784 running=8 queued=172
+2026-11-05T22:28:10Z ok E311B.C00072 leaves=2874 kernel=66.400 wall=74.94 rss=3477648 cg_peak=819948 running=7 queued=172
+2026-11-05T22:28:10Z start chunk E311B.C00089 leaves=2732 running=8 queued=171
+2026-11-05T22:28:15Z ok E311B.C00179 leaves=2853 kernel=67.500 wall=75.59 rss=3492380 cg_peak=838416 running=7 queued=171
+2026-11-05T22:28:15Z start chunk E311B.C00153 leaves=2722 running=8 queued=170
+2026-11-05T22:28:17Z ok E311B.C00064 leaves=2841 kernel=67.100 wall=75.72 rss=3494728 cg_peak=832544 running=7 queued=170
+2026-11-05T22:28:17Z start chunk E311B.C00112 leaves=2721 running=8 queued=169
+2026-11-05T22:28:36Z ok E311B.C00188 leaves=2830 kernel=67.100 wall=75.64 rss=3470284 cg_peak=808664 running=7 queued=169
+2026-11-05T22:28:36Z start chunk E311B.C00071 leaves=2702 running=8 queued=168
+2026-11-05T22:28:53Z ok E311B.C00171 leaves=2829 kernel=67.900 wall=76.45 rss=3485288 cg_peak=821616 running=7 queued=168
+2026-11-05T22:28:53Z start chunk E311B.C00150 leaves=2693 running=8 queued=167
+2026-11-05T22:29:10Z ok E311B.C00141 leaves=2818 kernel=74.700 wall=83.97 rss=3453672 cg_peak=784360 running=7 queued=167
+2026-11-05T22:29:10Z start chunk E311B.C00004 leaves=2686 running=8 queued=166
+2026-11-05T22:29:17Z ok E311B.C00084 leaves=2790 kernel=71.200 wall=80.91 rss=3480384 cg_peak=810516 running=7 queued=166
+2026-11-05T22:29:17Z start chunk E311B.C00138 leaves=2684 running=8 queued=165
+2026-11-05T22:29:26Z ok E311B.C00208 leaves=2784 kernel=70.800 wall=80.35 rss=3452308 cg_peak=788552 running=7 queued=165
+2026-11-05T22:29:26Z start chunk E311B.C00183 leaves=2681 running=8 queued=164
+2026-11-05T22:29:28Z ok E311B.C00089 leaves=2732 kernel=68.200 wall=77.53 rss=3471288 cg_peak=802008 running=7 queued=164
+2026-11-05T22:29:28Z start chunk E311B.C00222 leaves=2678 running=8 queued=163
+2026-11-05T22:29:30Z ok E311B.C00153 leaves=2722 kernel=65.700 wall=74.35 rss=3446072 cg_peak=775384 running=7 queued=163
+2026-11-05T22:29:30Z start chunk E311B.C00125 leaves=2658 running=8 queued=162
+2026-11-05T22:29:35Z ok E311B.C00112 leaves=2721 kernel=68.300 wall=77.27 rss=3461176 cg_peak=784500 running=7 queued=162
+2026-11-05T22:29:35Z start chunk E311B.C00136 leaves=2631 running=8 queued=161
+2026-11-05T22:29:57Z ok E311B.C00071 leaves=2702 kernel=71.400 wall=80.40 rss=3449048 cg_peak=786952 running=7 queued=161
+2026-11-05T22:29:57Z start chunk E311B.C00109 leaves=2616 running=8 queued=160
+2026-11-05T22:30:10Z ok E311B.C00150 leaves=2693 kernel=67.700 wall=76.77 rss=3466296 cg_peak=799032 running=7 queued=160
+2026-11-05T22:30:10Z start chunk E311B.C00203 leaves=2602 running=8 queued=159
+2026-11-05T22:30:20Z ok E311B.C00004 leaves=2686 kernel=61.600 wall=69.93 rss=3479220 cg_peak=815404 running=7 queued=159
+2026-11-05T22:30:20Z start chunk E311R.C00124 leaves=4913 running=8 queued=158
+2026-11-05T22:30:31Z ok E311B.C00138 leaves=2684 kernel=64.100 wall=72.21 rss=3463992 cg_peak=797972 running=7 queued=158
+2026-11-05T22:30:31Z start chunk E311R.C00036 leaves=4906 running=8 queued=157
+2026-11-05T22:30:36Z ok E311B.C00183 leaves=2681 kernel=60.600 wall=68.40 rss=3490072 cg_peak=832660 running=7 queued=157
+2026-11-05T22:30:36Z start chunk E311B.C00104 leaves=2541 running=8 queued=156
+2026-11-05T22:30:38Z ok E311B.C00222 leaves=2678 kernel=60.900 wall=68.56 rss=3470876 cg_peak=807064 running=7 queued=156
+2026-11-05T22:30:38Z start chunk E311R.C00067 leaves=4827 running=8 queued=155
+2026-11-05T22:30:40Z ok E311B.C00125 leaves=2658 kernel=60.600 wall=68.34 rss=3447220 cg_peak=785844 running=7 queued=155
+2026-11-05T22:30:40Z start chunk E311R.C00060 leaves=4812 running=8 queued=154
+2026-11-05T22:30:54Z ok E311B.C00136 leaves=2631 kernel=68.800 wall=77.81 rss=3476760 cg_peak=822700 running=7 queued=154
+2026-11-05T22:30:54Z start chunk E311R.C00091 leaves=4789 running=8 queued=153
+2026-11-05T22:31:06Z ok E311B.C00109 leaves=2616 kernel=60.200 wall=67.67 rss=3458532 cg_peak=799600 running=7 queued=153
+2026-11-05T22:31:06Z start chunk E311R.C00117 leaves=4751 running=8 queued=152
+2026-11-05T22:31:26Z ok E311B.C00203 leaves=2602 kernel=65.500 wall=74.44 rss=3469796 cg_peak=811252 running=7 queued=152
+2026-11-05T22:31:26Z start chunk E311R.C00057 leaves=4748 running=8 queued=151
+2026-11-05T22:31:28Z ok E311R.C00124 leaves=4913 kernel=56.100 wall=66.90 rss=3382920 cg_peak=721904 running=7 queued=151
+2026-11-05T22:31:28Z start chunk E311R.C00098 leaves=4734 running=8 queued=150
+2026-11-05T22:31:37Z ok E311B.C00104 leaves=2541 kernel=53.800 wall=60.78 rss=3450956 cg_peak=786052 running=7 queued=150
+2026-11-05T22:31:37Z start chunk E311B.C00068 leaves=2484 running=8 queued=149
+2026-11-05T22:31:38Z ok E311R.C00036 leaves=4906 kernel=55.900 wall=66.92 rss=3388136 cg_peak=720868 running=7 queued=149
+2026-11-05T22:31:38Z start chunk E311R.C00032 leaves=4725 running=8 queued=148
+2026-11-05T22:31:42Z ok E311R.C00067 leaves=4827 kernel=53.200 wall=63.52 rss=3387272 cg_peak=727084 running=7 queued=148
+2026-11-05T22:31:42Z start chunk E311B.C00056 leaves=2482 running=8 queued=147
+2026-11-05T22:31:46Z ok E311R.C00060 leaves=4812 kernel=54.600 wall=65.45 rss=3391888 cg_peak=726580 running=7 queued=147
+2026-11-05T22:31:46Z start chunk E311R.C00102 leaves=4722 running=8 queued=146
+2026-11-05T22:31:52Z ok E311R.C00091 leaves=4789 kernel=47.500 wall=57.17 rss=3385768 cg_peak=716168 running=7 queued=146
+2026-11-05T22:31:52Z start chunk E311R.C00071 leaves=4719 running=8 queued=145
+2026-11-05T22:32:08Z ok E311R.C00117 leaves=4751 kernel=51.900 wall=61.70 rss=3381844 cg_peak=718084 running=7 queued=145
+2026-11-05T22:32:08Z start chunk E311R.C00068 leaves=4686 running=8 queued=144
+2026-11-05T22:32:23Z ok E311R.C00057 leaves=4748 kernel=47.000 wall=56.19 rss=3386452 cg_peak=726684 running=7 queued=144
+2026-11-05T22:32:23Z start chunk E311R.C00106 leaves=4652 running=8 queued=143
+2026-11-05T22:32:30Z ok E311R.C00098 leaves=4734 kernel=52.000 wall=62.10 rss=3379908 cg_peak=719868 running=7 queued=143
+2026-11-05T22:32:30Z start chunk E311B.C00035 leaves=2444 running=8 queued=142
+2026-11-05T22:32:32Z ok E311B.C00068 leaves=2484 kernel=48.300 wall=54.77 rss=3417100 cg_peak=767812 running=7 queued=142
+2026-11-05T22:32:32Z start chunk E311B.C00050 leaves=2433 running=8 queued=141
+2026-11-05T22:32:42Z ok E311R.C00032 leaves=4725 kernel=53.700 wall=63.49 rss=3376324 cg_peak=721640 running=7 queued=141
+2026-11-05T22:32:42Z ok E311B.C00056 leaves=2482 kernel=53.300 wall=59.89 rss=3415468 cg_peak=761196 running=6 queued=141
+2026-11-05T22:32:42Z start chunk E311R.C00099 leaves=4607 running=7 queued=140
+2026-11-05T22:32:42Z start chunk E311R.C00074 leaves=4600 running=8 queued=139
+2026-11-05T22:32:47Z ok E311R.C00102 leaves=4722 kernel=50.700 wall=60.55 rss=3387804 cg_peak=729064 running=7 queued=139
+2026-11-05T22:32:47Z start chunk E311R.C00120 leaves=4586 running=8 queued=138
+2026-11-05T22:32:50Z ok E311R.C00071 leaves=4719 kernel=48.700 wall=57.83 rss=3382296 cg_peak=725444 running=7 queued=138
+2026-11-05T22:32:50Z start chunk E311B.C00005 leaves=2408 running=8 queued=137
+2026-11-05T22:32:57Z ok E311R.C00068 leaves=4686 kernel=40.300 wall=48.73 rss=3377956 cg_peak=725920 running=7 queued=137
+2026-11-05T22:32:57Z start chunk E311R.C00083 leaves=4573 running=8 queued=136
+2026-11-05T22:33:12Z ok E311R.C00106 leaves=4652 kernel=40.700 wall=48.54 rss=3369092 cg_peak=705364 running=7 queued=136
+2026-11-05T22:33:12Z start chunk E311B.C00111 leaves=2395 running=8 queued=135
+2026-11-05T22:33:21Z ok E311B.C00035 leaves=2444 kernel=44.200 wall=50.21 rss=3438724 cg_peak=781084 running=7 queued=135
+2026-11-05T22:33:21Z start chunk E311R.C00049 leaves=4546 running=8 queued=134
+2026-11-05T22:33:22Z ok E311B.C00050 leaves=2433 kernel=43.500 wall=49.27 rss=3414140 cg_peak=753236 running=7 queued=134
+2026-11-05T22:33:22Z ok E311R.C00099 leaves=4607 kernel=33.100 wall=39.79 rss=3250396 cg_peak=707628 running=6 queued=134
+2026-11-05T22:33:22Z start chunk E311R.C00046 leaves=4543 running=7 queued=133
+2026-11-05T22:33:22Z start chunk E311B.C00113 leaves=2386 running=8 queued=132
+2026-11-05T22:33:25Z ok E311R.C00074 leaves=4600 kernel=35.200 wall=42.95 rss=3259880 cg_peak=704480 running=7 queued=132
+2026-11-05T22:33:25Z start chunk E311R.C00059 leaves=4517 running=8 queued=131
+2026-11-05T22:33:34Z ok E311R.C00120 leaves=4586 kernel=38.800 wall=46.46 rss=3370224 cg_peak=709780 running=7 queued=131
+2026-11-05T22:33:34Z start chunk E311B.C00060 leaves=2366 running=8 queued=130
+2026-11-05T22:33:39Z ok E311B.C00005 leaves=2408 kernel=43.800 wall=48.77 rss=3424476 cg_peak=760740 running=7 queued=130
+2026-11-05T22:33:39Z start chunk E311R.C00119 leaves=4500 running=8 queued=129
+2026-11-05T22:33:46Z ok E311R.C00083 leaves=4573 kernel=41.300 wall=48.77 rss=3370328 cg_peak=706688 running=7 queued=129
+2026-11-05T22:33:46Z start chunk E311B.C00007 leaves=2363 running=8 queued=128
+2026-11-05T22:33:56Z ok E311B.C00111 leaves=2395 kernel=39.000 wall=43.79 rss=3419240 cg_peak=742952 running=7 queued=128
+2026-11-05T22:33:56Z start chunk E311B.C00134 leaves=2357 running=8 queued=127
+2026-11-05T22:34:06Z ok E311R.C00049 leaves=4546 kernel=37.700 wall=44.76 rss=3318896 cg_peak=708064 running=7 queued=127
+2026-11-05T22:34:06Z start chunk E311R.C00086 leaves=4483 running=8 queued=126
+2026-11-05T22:34:08Z ok E311R.C00046 leaves=4543 kernel=37.700 wall=45.14 rss=3379112 cg_peak=706908 running=7 queued=126
+2026-11-05T22:34:08Z ok E311R.C00059 leaves=4517 kernel=36.000 wall=43.04 rss=3377616 cg_peak=712340 running=6 queued=126
+2026-11-05T22:34:08Z start chunk E311R.C00027 leaves=4482 running=7 queued=125
+2026-11-05T22:34:08Z start chunk E311R.C00076 leaves=4481 running=8 queued=124
+2026-11-05T22:34:13Z ok E311B.C00113 leaves=2386 kernel=45.500 wall=50.80 rss=3451408 cg_peak=781056 running=7 queued=124
+2026-11-05T22:34:13Z start chunk E311R.C00116 leaves=4392 running=8 queued=123
+2026-11-05T22:34:19Z ok E311R.C00119 leaves=4500 kernel=32.800 wall=39.70 rss=3355792 cg_peak=679288 running=7 queued=123
+2026-11-05T22:34:19Z start chunk E311B.C00215 leaves=2299 running=8 queued=122
+2026-11-05T22:34:23Z ok E311B.C00060 leaves=2366 kernel=43.100 wall=48.78 rss=3423552 cg_peak=753124 running=7 queued=122
+2026-11-05T22:34:23Z start chunk E311R.C00121 leaves=4350 running=8 queued=121
+2026-11-05T22:34:36Z ok E311B.C00007 leaves=2363 kernel=43.400 wall=49.33 rss=3431704 cg_peak=759312 running=7 queued=121
+2026-11-05T22:34:36Z start chunk E311R.C00030 leaves=4346 running=8 queued=120
+2026-11-05T22:34:40Z ok E311B.C00134 leaves=2357 kernel=38.400 wall=43.12 rss=3435996 cg_peak=768784 running=7 queued=120
+2026-11-05T22:34:40Z start chunk E311B.C00161 leaves=2277 running=8 queued=119
+2026-11-05T22:34:49Z ok E311R.C00086 leaves=4483 kernel=35.400 wall=42.14 rss=3380156 cg_peak=717236 running=7 queued=119
+2026-11-05T22:34:49Z start chunk E311R.C00063 leaves=4308 running=8 queued=118
+2026-11-05T22:34:53Z ok E311R.C00027 leaves=4482 kernel=37.300 wall=44.30 rss=3376316 cg_peak=705656 running=7 queued=118
+2026-11-05T22:34:53Z start chunk E311R.C00047 leaves=4273 running=8 queued=117
+2026-11-05T22:34:56Z ok E311R.C00116 leaves=4392 kernel=36.100 wall=42.87 rss=3375840 cg_peak=705844 running=7 queued=117
+2026-11-05T22:34:56Z start chunk E311B.C00180 leaves=2232 running=8 queued=116
+2026-11-05T22:34:58Z ok E311R.C00076 leaves=4481 kernel=41.900 wall=49.66 rss=3376240 cg_peak=714268 running=7 queued=116
+2026-11-05T22:34:59Z ok E311B.C00215 leaves=2299 kernel=34.200 wall=38.89 rss=3403012 cg_peak=723476 running=6 queued=116
+2026-11-05T22:34:59Z start chunk E311R.C00075 leaves=4221 running=7 queued=115
+2026-11-05T22:34:59Z start chunk E311B.C00095 leaves=2213 running=8 queued=114
+2026-11-05T22:35:03Z ok E311R.C00121 leaves=4350 kernel=32.500 wall=39.06 rss=3358048 cg_peak=685172 running=7 queued=114
+2026-11-05T22:35:03Z start chunk E311B.C00080 leaves=2209 running=8 queued=113
+2026-11-05T22:35:13Z ok E311R.C00030 leaves=4346 kernel=29.300 wall=35.27 rss=3379932 cg_peak=716712 running=7 queued=113
+2026-11-05T22:35:13Z start chunk E311B.C00213 leaves=2206 running=8 queued=112
+2026-11-05T22:35:20Z ok E311B.C00161 leaves=2277 kernel=33.900 wall=38.28 rss=3429936 cg_peak=757268 running=7 queued=112
+2026-11-05T22:35:20Z start chunk E311R.C00056 leaves=4190 running=8 queued=111
+2026-11-05T22:35:30Z ok E311R.C00047 leaves=4273 kernel=29.900 wall=35.58 rss=3353432 cg_peak=679236 running=7 queued=111
+2026-11-05T22:35:30Z start chunk E311B.C00043 leaves=2196 running=8 queued=110
+2026-11-05T22:35:32Z ok E311R.C00063 leaves=4308 kernel=35.000 wall=41.14 rss=3361088 cg_peak=694032 running=7 queued=110
+2026-11-05T22:35:32Z start chunk E311R.C00081 leaves=4137 running=8 queued=109
+2026-11-05T22:35:35Z ok E311R.C00075 leaves=4221 kernel=30.100 wall=35.77 rss=3217312 cg_peak=686652 running=7 queued=109
+2026-11-05T22:35:35Z start chunk E311R.C00070 leaves=4132 running=8 queued=108
+2026-11-05T22:35:36Z ok E311B.C00095 leaves=2213 kernel=32.500 wall=36.65 rss=3291488 cg_peak=746116 running=7 queued=108
+2026-11-05T22:35:36Z start chunk E311B.C00128 leaves=2171 running=8 queued=107
+2026-11-05T22:35:38Z ok E311B.C00180 leaves=2232 kernel=36.100 wall=40.34 rss=3443332 cg_peak=775808 running=7 queued=107
+2026-11-05T22:35:38Z start chunk E311B.C00122 leaves=2166 running=8 queued=106
+2026-11-05T22:35:42Z ok E311B.C00080 leaves=2209 kernel=34.600 wall=38.93 rss=3401240 cg_peak=717944 running=7 queued=106
+2026-11-05T22:35:42Z start chunk E311R.C00112 leaves=4115 running=8 queued=105
+2026-11-05T22:35:50Z ok E311B.C00213 leaves=2206 kernel=32.300 wall=36.60 rss=3429224 cg_peak=754136 running=7 queued=105
+2026-11-05T22:35:50Z start chunk E311R.C00040 leaves=4110 running=8 queued=104
+2026-11-05T22:35:52Z ok E311R.C00056 leaves=4190 kernel=26.400 wall=31.63 rss=3355068 cg_peak=686756 running=7 queued=104
+2026-11-05T22:35:52Z start chunk E311R.C00084 leaves=4099 running=8 queued=103
+2026-11-05T22:36:11Z ok E311B.C00043 leaves=2196 kernel=35.800 wall=40.35 rss=3436084 cg_peak=754952 running=7 queued=103
+2026-11-05T22:36:11Z ok E311R.C00081 leaves=4137 kernel=32.300 wall=38.44 rss=3351248 cg_peak=678040 running=6 queued=103
+2026-11-05T22:36:11Z start chunk E311R.C00021 leaves=4090 running=7 queued=102
+2026-11-05T22:36:11Z start chunk E311R.C00082 leaves=4085 running=8 queued=101
+2026-11-05T22:36:12Z ok E311B.C00128 leaves=2171 kernel=31.400 wall=35.66 rss=3409856 cg_peak=743696 running=7 queued=101
+2026-11-05T22:36:12Z start chunk E311R.C00113 leaves=4083 running=8 queued=100
+2026-11-05T22:36:14Z ok E311R.C00070 leaves=4132 kernel=32.200 wall=38.33 rss=3350272 cg_peak=679132 running=7 queued=100
+2026-11-05T22:36:14Z start chunk E311R.C00077 leaves=4080 running=8 queued=99
+2026-11-05T22:36:16Z ok E311B.C00122 leaves=2166 kernel=33.100 wall=37.26 rss=3425556 cg_peak=748664 running=7 queued=99
+2026-11-05T22:36:16Z start chunk E311B.C00175 leaves=2132 running=8 queued=98
+2026-11-05T22:36:20Z ok E311R.C00112 leaves=4115 kernel=31.300 wall=37.16 rss=3356376 cg_peak=690304 running=7 queued=98
+2026-11-05T22:36:20Z start chunk E311B.C00167 leaves=2096 running=8 queued=97
+2026-11-05T22:36:23Z ok E311R.C00084 leaves=4099 kernel=25.300 wall=30.78 rss=3343484 cg_peak=673788 running=7 queued=97
+2026-11-05T22:36:23Z start chunk E311B.C00092 leaves=2092 running=8 queued=96
+2026-11-05T22:36:24Z ok E311R.C00040 leaves=4110 kernel=28.200 wall=33.82 rss=3339952 cg_peak=669004 running=7 queued=96
+2026-11-05T22:36:24Z start chunk E311R.C00095 leaves=3942 running=8 queued=95
+2026-11-05T22:36:47Z ok E311R.C00021 leaves=4090 kernel=29.400 wall=35.20 rss=3289084 cg_peak=671572 running=7 queued=95
+2026-11-05T22:36:47Z start chunk E311B.C00040 leaves=2071 running=8 queued=94
+2026-11-05T22:36:48Z ok E311R.C00082 leaves=4085 kernel=30.100 wall=36.16 rss=3287468 cg_peak=680200 running=7 queued=94
+2026-11-05T22:36:48Z start chunk E311R.C00058 leaves=3910 running=8 queued=93
+2026-11-05T22:36:50Z ok E311R.C00113 leaves=4083 kernel=31.000 wall=37.15 rss=3326220 cg_peak=654744 running=7 queued=93
+2026-11-05T22:36:50Z start chunk E311R.C00118 leaves=3903 running=8 queued=92
+2026-11-05T22:36:51Z ok E311B.C00175 leaves=2132 kernel=30.800 wall=34.74 rss=3423428 cg_peak=746948 running=7 queued=92
+2026-11-05T22:36:51Z ok E311B.C00167 leaves=2096 kernel=27.100 wall=30.97 rss=3386008 cg_peak=702388 running=6 queued=92
+2026-11-05T22:36:51Z start chunk E311R.C00122 leaves=3885 running=7 queued=91
+2026-11-05T22:36:51Z start chunk E311R.C00089 leaves=3883 running=8 queued=90
+2026-11-05T22:36:53Z ok E311R.C00077 leaves=4080 kernel=32.500 wall=38.49 rss=3333844 cg_peak=676512 running=7 queued=90
+2026-11-05T22:36:53Z start chunk E311R.C00004 leaves=3873 running=8 queued=89
+2026-11-05T22:36:57Z ok E311R.C00095 leaves=3942 kernel=26.800 wall=32.53 rss=3327128 cg_peak=656788 running=7 queued=89
+2026-11-05T22:36:57Z start chunk E311R.C00031 leaves=3873 running=8 queued=88
+2026-11-05T22:36:58Z ok E311B.C00092 leaves=2092 kernel=30.400 wall=34.31 rss=3412336 cg_peak=735152 running=7 queued=88
+2026-11-05T22:36:58Z start chunk E311R.C00110 leaves=3867 running=8 queued=87
+2026-11-05T22:37:22Z ok E311R.C00058 leaves=3910 kernel=27.000 wall=33.55 rss=3343796 cg_peak=674300 running=7 queued=87
+2026-11-05T22:37:22Z ok E311R.C00118 leaves=3903 kernel=25.700 wall=31.85 rss=3347720 cg_peak=673944 running=6 queued=87
+2026-11-05T22:37:22Z start chunk E311R.C00024 leaves=3803 running=7 queued=86
+2026-11-05T22:37:22Z start chunk E311R.C00052 leaves=3798 running=8 queued=85
+2026-11-05T22:37:23Z ok E311B.C00040 leaves=2071 kernel=30.900 wall=35.16 rss=3394160 cg_peak=716820 running=7 queued=85
+2026-11-05T22:37:23Z start chunk E311R.C00023 leaves=3760 running=8 queued=84
+2026-11-05T22:37:24Z ok E311R.C00089 leaves=3883 kernel=26.300 wall=32.09 rss=3222664 cg_peak=683556 running=7 queued=84
+2026-11-05T22:37:24Z start chunk E311B.C00009 leaves=1970 running=8 queued=83
+2026-11-05T22:37:25Z ok E311R.C00004 leaves=3873 kernel=25.600 wall=31.15 rss=3366204 cg_peak=696360 running=7 queued=83
+2026-11-05T22:37:25Z start chunk E311R.C00097 leaves=3745 running=8 queued=82
+2026-11-05T22:37:28Z ok E311R.C00122 leaves=3885 kernel=29.800 wall=36.36 rss=3221884 cg_peak=683776 running=7 queued=82
+2026-11-05T22:37:28Z start chunk E311R.C00125 leaves=3741 running=8 queued=81
+2026-11-05T22:37:36Z ok E311R.C00031 leaves=3873 kernel=31.800 wall=38.71 rss=3341452 cg_peak=665156 running=7 queued=81
+2026-11-05T22:37:36Z start chunk E311R.C00088 leaves=3728 running=8 queued=80
+2026-11-05T22:37:40Z ok E311R.C00110 leaves=3867 kernel=34.100 wall=41.41 rss=3341464 cg_peak=668176 running=7 queued=80
+2026-11-05T22:37:40Z start chunk E311R.C00005 leaves=3707 running=8 queued=79
+2026-11-05T22:38:03Z ok E311R.C00097 leaves=3745 kernel=29.600 wall=37.31 rss=3337260 cg_peak=663536 running=7 queued=79
+2026-11-05T22:38:03Z start chunk E311R.C00115 leaves=3700 running=8 queued=78
+2026-11-05T22:38:07Z ok E311R.C00023 leaves=3760 kernel=36.000 wall=44.02 rss=3328440 cg_peak=658284 running=7 queued=78
+2026-11-05T22:38:07Z start chunk E311R.C00050 leaves=3680 running=8 queued=77
+2026-11-05T22:38:09Z ok E311R.C00024 leaves=3803 kernel=38.900 wall=47.05 rss=3332240 cg_peak=653396 running=7 queued=77
+2026-11-05T22:38:09Z start chunk E311R.C00101 leaves=3674 running=8 queued=76
+2026-11-05T22:38:10Z ok E311B.C00009 leaves=1970 kernel=40.100 wall=45.80 rss=3390356 cg_peak=712936 running=7 queued=76
+2026-11-05T22:38:10Z start chunk E311R.C00073 leaves=3658 running=8 queued=75
+2026-11-05T22:38:19Z ok E311R.C00052 leaves=3798 kernel=47.100 wall=56.42 rss=3313768 cg_peak=633904 running=7 queued=75
+2026-11-05T22:38:19Z start chunk E311R.C00029 leaves=3651 running=8 queued=74
+2026-11-05T22:38:20Z ok E311R.C00125 leaves=3741 kernel=42.900 wall=51.80 rss=3337972 cg_peak=664204 running=7 queued=74
+2026-11-05T22:38:20Z start chunk E311R.C00093 leaves=3651 running=8 queued=73
+2026-11-05T22:38:29Z ok E311R.C00088 leaves=3728 kernel=43.100 wall=52.17 rss=3342744 cg_peak=668660 running=7 queued=73
+2026-11-05T22:38:29Z start chunk E311R.C00016 leaves=3631 running=8 queued=72
+2026-11-05T22:38:31Z ok E311R.C00005 leaves=3707 kernel=42.100 wall=50.85 rss=3338652 cg_peak=659824 running=7 queued=72
+2026-11-05T22:38:31Z start chunk E311B.C00046 leaves=1905 running=8 queued=71
+2026-11-05T22:38:48Z ok E311R.C00115 leaves=3700 kernel=36.500 wall=44.91 rss=3320532 cg_peak=645760 running=7 queued=71
+2026-11-05T22:38:48Z start chunk E311B.C00052 leaves=1890 running=8 queued=70
+2026-11-05T22:38:51Z ok E311R.C00101 leaves=3674 kernel=33.900 wall=41.23 rss=3332536 cg_peak=654396 running=7 queued=70
+2026-11-05T22:38:51Z start chunk E311R.C00079 leaves=3572 running=8 queued=69
+2026-11-05T22:38:58Z ok E311R.C00050 leaves=3680 kernel=42.000 wall=50.90 rss=3338672 cg_peak=662280 running=7 queued=69
+2026-11-05T22:38:58Z start chunk E311R.C00010 leaves=3561 running=8 queued=68
+2026-11-05T22:38:59Z ok E311R.C00073 leaves=3658 kernel=39.600 wall=48.14 rss=3307480 cg_peak=630984 running=7 queued=68
+2026-11-05T22:38:59Z start chunk E311R.C00104 leaves=3549 running=8 queued=67
+2026-11-05T22:39:08Z ok E311R.C00093 leaves=3651 kernel=39.400 wall=47.74 rss=3324440 cg_peak=651876 running=7 queued=67
+2026-11-05T22:39:08Z start chunk E311B.C00107 leaves=1854 running=8 queued=66
+2026-11-05T22:39:10Z ok E311R.C00029 leaves=3651 kernel=41.700 wall=50.48 rss=3309972 cg_peak=630436 running=7 queued=66
+2026-11-05T22:39:10Z start chunk E311R.C00043 leaves=3507 running=8 queued=65
+2026-11-05T22:39:13Z ok E311R.C00016 leaves=3631 kernel=34.900 wall=43.11 rss=3314132 cg_peak=627740 running=7 queued=65
+2026-11-05T22:39:13Z start chunk E311R.C00111 leaves=3477 running=8 queued=64
+2026-11-05T22:39:24Z ok E311B.C00046 leaves=1905 kernel=44.700 wall=51.29 rss=3391504 cg_peak=722884 running=7 queued=64
+2026-11-05T22:39:24Z start chunk E311R.C00022 leaves=3467 running=8 queued=63
+2026-11-05T22:39:34Z ok E311R.C00079 leaves=3572 kernel=33.400 wall=41.82 rss=3321704 cg_peak=651808 running=7 queued=63
+2026-11-05T22:39:34Z start chunk E311R.C00103 leaves=3467 running=8 queued=62
+2026-11-05T22:39:36Z ok E311R.C00010 leaves=3561 kernel=29.700 wall=36.21 rss=3325024 cg_peak=651312 running=7 queued=62
+2026-11-05T22:39:36Z start chunk E311R.C00080 leaves=3463 running=8 queued=61
+2026-11-05T22:39:38Z ok E311B.C00052 leaves=1890 kernel=42.000 wall=48.28 rss=3391640 cg_peak=718120 running=7 queued=61
+2026-11-05T22:39:38Z start chunk E311R.C00100 leaves=3463 running=8 queued=60
+2026-11-05T22:39:43Z ok E311R.C00104 leaves=3549 kernel=35.200 wall=43.00 rss=3317624 cg_peak=641924 running=7 queued=60
+2026-11-05T22:39:43Z start chunk E311R.C00038 leaves=3454 running=8 queued=59
+2026-11-05T22:39:50Z ok E311B.C00107 leaves=1854 kernel=35.100 wall=40.41 rss=3353616 cg_peak=672108 running=7 queued=59
+2026-11-05T22:39:50Z start chunk E311R.C00066 leaves=3446 running=8 queued=58
+2026-11-05T22:39:57Z ok E311R.C00043 leaves=3507 kernel=37.500 wall=45.95 rss=3311920 cg_peak=630832 running=7 queued=58
+2026-11-05T22:39:57Z start chunk E311R.C00045 leaves=3402 running=8 queued=57
+2026-11-05T22:40:01Z ok E311R.C00022 leaves=3467 kernel=30.000 wall=36.63 rss=3317684 cg_peak=641948 running=7 queued=57
+2026-11-05T22:40:01Z start chunk E311R.C00008 leaves=3399 running=8 queued=56
+2026-11-05T22:40:03Z ok E311R.C00111 leaves=3477 kernel=40.600 wall=49.28 rss=3319992 cg_peak=648308 running=7 queued=56
+2026-11-05T22:40:03Z start chunk E311R.C00009 leaves=3380 running=8 queued=55
+2026-11-05T22:40:16Z ok E311R.C00103 leaves=3467 kernel=34.200 wall=41.22 rss=3324748 cg_peak=643300 running=7 queued=55
+2026-11-05T22:40:16Z start chunk E311R.C00041 leaves=3298 running=8 queued=54
+2026-11-05T22:40:19Z ok E311R.C00038 leaves=3454 kernel=29.000 wall=35.97 rss=3314308 cg_peak=635648 running=7 queued=54
+2026-11-05T22:40:19Z start chunk E311R.C00017 leaves=3290 running=8 queued=53
+2026-11-05T22:40:20Z ok E311R.C00080 leaves=3463 kernel=35.800 wall=43.54 rss=3330884 cg_peak=656292 running=7 queued=53
+2026-11-05T22:40:20Z start chunk E311R.C00034 leaves=3288 running=8 queued=52
+2026-11-05T22:40:24Z ok E311R.C00100 leaves=3463 kernel=37.200 wall=45.21 rss=3306112 cg_peak=628120 running=7 queued=52
+2026-11-05T22:40:24Z start chunk E311R.C00107 leaves=3282 running=8 queued=51
+2026-11-05T22:40:38Z ok E311R.C00008 leaves=3399 kernel=29.100 wall=36.27 rss=3303020 cg_peak=626688 running=7 queued=51
+2026-11-05T22:40:38Z start chunk E311R.C00019 leaves=3258 running=8 queued=50
+2026-11-05T22:40:41Z ok E311R.C00066 leaves=3446 kernel=42.300 wall=51.08 rss=3320208 cg_peak=638900 running=7 queued=50
+2026-11-05T22:40:41Z start chunk E311R.C00014 leaves=3219 running=8 queued=49
+2026-11-05T22:40:43Z ok E311R.C00009 leaves=3380 kernel=32.200 wall=39.65 rss=3306516 cg_peak=626856 running=7 queued=49
+2026-11-05T22:40:43Z start chunk E311B.C00194 leaves=1688 running=8 queued=48
+2026-11-05T22:40:44Z ok E311R.C00045 leaves=3402 kernel=38.300 wall=46.51 rss=3308876 cg_peak=621968 running=7 queued=48
+2026-11-05T22:40:44Z start chunk E311R.C00061 leaves=3194 running=8 queued=47
+2026-11-05T22:40:56Z ok E311R.C00017 leaves=3290 kernel=29.200 wall=36.57 rss=3308328 cg_peak=630576 running=7 queued=47
+2026-11-05T22:40:56Z start chunk E311R.C00064 leaves=3152 running=8 queued=46
+2026-11-05T22:40:59Z ok E311R.C00041 leaves=3298 kernel=34.700 wall=42.69 rss=3307912 cg_peak=636496 running=7 queued=46
+2026-11-05T22:40:59Z start chunk E311R.C00108 leaves=3127 running=8 queued=45
+2026-11-05T22:41:01Z ok E311R.C00034 leaves=3288 kernel=32.800 wall=40.38 rss=3291156 cg_peak=612752 running=7 queued=45
+2026-11-05T22:41:01Z start chunk E311R.C00065 leaves=3071 running=8 queued=44
+2026-11-05T22:41:07Z ok E311R.C00107 leaves=3282 kernel=34.600 wall=42.60 rss=3318620 cg_peak=639148 running=7 queued=44
+2026-11-05T22:41:07Z start chunk E311B.C00023 leaves=1609 running=8 queued=43
+2026-11-05T22:41:22Z ok E311R.C00019 leaves=3258 kernel=36.000 wall=43.88 rss=3308168 cg_peak=636992 running=7 queued=43
+2026-11-05T22:41:22Z start chunk E311R.C00090 leaves=3045 running=8 queued=42
+2026-11-05T22:41:26Z ok E311R.C00061 leaves=3194 kernel=34.000 wall=41.37 rss=3299092 cg_peak=610416 running=7 queued=42
+2026-11-05T22:41:26Z start chunk E311R.C00007 leaves=3025 running=8 queued=41
+2026-11-05T22:41:27Z ok E311R.C00014 leaves=3219 kernel=37.800 wall=45.95 rss=3298972 cg_peak=620020 running=7 queued=41
+2026-11-05T22:41:27Z ok E311B.C00194 leaves=1688 kernel=37.700 wall=43.43 rss=3383464 cg_peak=701092 running=6 queued=41
+2026-11-05T22:41:27Z start chunk E311R.C00003 leaves=2995 running=7 queued=40
+2026-11-05T22:41:27Z start chunk E311R.C00123 leaves=2963 running=8 queued=39
+2026-11-05T22:41:35Z ok E311R.C00064 leaves=3152 kernel=30.900 wall=38.19 rss=3282376 cg_peak=599132 running=7 queued=39
+2026-11-05T22:41:35Z start chunk E311R.C00042 leaves=2938 running=8 queued=38
+2026-11-05T22:41:39Z ok E311R.C00108 leaves=3127 kernel=31.600 wall=39.15 rss=3300512 cg_peak=612648 running=7 queued=38
+2026-11-05T22:41:39Z ok E311R.C00065 leaves=3071 kernel=30.300 wall=37.42 rss=3283680 cg_peak=599636 running=6 queued=38
+2026-11-05T22:41:39Z start chunk E311R.C00033 leaves=2903 running=7 queued=37
+2026-11-05T22:41:39Z start chunk E311R.C00109 leaves=2881 running=8 queued=36
+2026-11-05T22:41:50Z ok E311B.C00023 leaves=1609 kernel=36.500 wall=42.24 rss=3382136 cg_peak=690852 running=7 queued=36
+2026-11-05T22:41:50Z start chunk E311R.C00013 leaves=2859 running=8 queued=35
+2026-11-05T22:42:01Z ok E311R.C00090 leaves=3045 kernel=30.900 wall=38.23 rss=3280112 cg_peak=613168 running=7 queued=35
+2026-11-05T22:42:01Z start chunk E311R.C00001 leaves=2856 running=8 queued=34
+2026-11-05T22:42:03Z ok E311R.C00003 leaves=2995 kernel=29.200 wall=35.28 rss=3285292 cg_peak=622044 running=7 queued=34
+2026-11-05T22:42:03Z start chunk E311R.C00072 leaves=2833 running=8 queued=33
+2026-11-05T22:42:04Z ok E311R.C00007 leaves=3025 kernel=30.300 wall=37.51 rss=3304540 cg_peak=621236 running=7 queued=33
+2026-11-05T22:42:04Z start chunk E311R.C00055 leaves=2770 running=8 queued=32
+2026-11-05T22:42:08Z ok E311R.C00123 leaves=2963 kernel=33.600 wall=40.63 rss=3261116 cg_peak=598548 running=7 queued=32
+2026-11-05T22:42:08Z ok E311R.C00042 leaves=2938 kernel=26.300 wall=33.05 rss=3296124 cg_peak=611108 running=6 queued=32
+2026-11-05T22:42:08Z start chunk E311R.C00053 leaves=2748 running=7 queued=31
+2026-11-05T22:42:08Z start chunk E311R.C00025 leaves=2726 running=8 queued=30
+2026-11-05T22:42:18Z ok E311R.C00033 leaves=2903 kernel=31.300 wall=38.50 rss=3145204 cg_peak=597804 running=7 queued=30
+2026-11-05T22:42:18Z ok E311R.C00109 leaves=2881 kernel=32.000 wall=38.90 rss=3145316 cg_peak=608776 running=6 queued=30
+2026-11-05T22:42:18Z start chunk E311R.C00011 leaves=2593 running=7 queued=29
+2026-11-05T22:42:18Z start chunk E311R.C00054 leaves=2587 running=8 queued=28
+2026-11-05T22:42:26Z ok E311R.C00013 leaves=2859 kernel=29.300 wall=36.07 rss=3274672 cg_peak=583164 running=7 queued=28
+2026-11-05T22:42:26Z start chunk E311R.C00035 leaves=2564 running=8 queued=27
+2026-11-05T22:42:39Z ok E311R.C00072 leaves=2833 kernel=28.300 wall=35.39 rss=3278560 cg_peak=596344 running=7 queued=27
+2026-11-05T22:42:39Z start chunk E311R.C00015 leaves=2471 running=8 queued=26
+2026-11-05T22:42:40Z ok E311R.C00055 leaves=2770 kernel=28.900 wall=35.49 rss=3285312 cg_peak=599736 running=7 queued=26
+2026-11-05T22:42:40Z start chunk E311R.C00012 leaves=2444 running=8 queued=25
+2026-11-05T22:42:41Z ok E311R.C00001 leaves=2856 kernel=32.200 wall=39.17 rss=3304264 cg_peak=623560 running=7 queued=25
+2026-11-05T22:42:41Z ok E311R.C00053 leaves=2748 kernel=26.400 wall=32.60 rss=3256076 cg_peak=572276 running=6 queued=25
+2026-11-05T22:42:41Z ok E311R.C00011 leaves=2593 kernel=18.000 wall=22.62 rss=3262340 cg_peak=574848 running=5 queued=25
+2026-11-05T22:42:41Z start chunk E311R.C00105 leaves=2425 running=6 queued=24
+2026-11-05T22:42:41Z start chunk E311R.C00087 leaves=2369 running=7 queued=23
+2026-11-05T22:42:41Z start chunk E311R.C00018 leaves=2367 running=8 queued=22
+2026-11-05T22:42:45Z ok E311R.C00025 leaves=2726 kernel=29.500 wall=36.17 rss=3250104 cg_peak=565112 running=7 queued=22
+2026-11-05T22:42:45Z start chunk E311R.C00026 leaves=2311 running=8 queued=21
+2026-11-05T22:42:54Z ok E311R.C00054 leaves=2587 kernel=29.200 wall=35.90 rss=3268332 cg_peak=583656 running=7 queued=21
+2026-11-05T22:42:54Z ok E311R.C00035 leaves=2564 kernel=22.200 wall=27.49 rss=3255988 cg_peak=564332 running=6 queued=21
+2026-11-05T22:42:54Z start chunk E311R.C00051 leaves=2307 running=7 queued=20
+2026-11-05T22:42:54Z start chunk E311R.C00096 leaves=2248 running=8 queued=19
+2026-11-05T22:43:09Z ok E311R.C00087 leaves=2369 kernel=22.100 wall=27.90 rss=3094496 cg_peak=538612 running=7 queued=19
+2026-11-05T22:43:09Z start chunk E311R.C00002 leaves=2245 running=8 queued=18
+2026-11-05T22:43:12Z ok E311R.C00015 leaves=2471 kernel=26.500 wall=32.61 rss=3262928 cg_peak=573088 running=7 queued=18
+2026-11-05T22:43:13Z ok E311R.C00105 leaves=2425 kernel=24.700 wall=30.68 rss=3138836 cg_peak=546488 running=6 queued=18
+2026-11-05T22:43:13Z ok E311R.C00018 leaves=2367 kernel=24.600 wall=30.56 rss=3221300 cg_peak=575540 running=5 queued=18
+2026-11-05T22:43:13Z start chunk E311R.C00028 leaves=2237 running=6 queued=17
+2026-11-05T22:43:13Z start chunk E311R.C00006 leaves=2233 running=7 queued=16
+2026-11-05T22:43:13Z start chunk E311R.C00037 leaves=2222 running=8 queued=15
+2026-11-05T22:43:16Z ok E311R.C00012 leaves=2444 kernel=28.400 wall=34.82 rss=3253128 cg_peak=566868 running=7 queued=15
+2026-11-05T22:43:16Z start chunk E311R.C00092 leaves=2155 running=8 queued=14
+2026-11-05T22:43:18Z ok E311R.C00026 leaves=2311 kernel=25.900 wall=31.88 rss=3254372 cg_peak=561852 running=7 queued=14
+2026-11-05T22:43:18Z start chunk E311R.C00020 leaves=2102 running=8 queued=13
+2026-11-05T22:43:22Z ok E311R.C00051 leaves=2307 kernel=20.800 wall=26.37 rss=3240200 cg_peak=547460 running=7 queued=13
+2026-11-05T22:43:22Z start chunk E311R.C00062 leaves=2040 running=8 queued=12
+2026-11-05T22:43:26Z ok E311R.C00096 leaves=2248 kernel=24.500 wall=30.47 rss=3242220 cg_peak=550764 running=7 queued=12
+2026-11-05T22:43:26Z start chunk E311R.C00114 leaves=1948 running=8 queued=11
+2026-11-05T22:43:39Z ok E311R.C00002 leaves=2245 kernel=23.000 wall=28.48 rss=3245240 cg_peak=557812 running=7 queued=11
+2026-11-05T22:43:39Z start chunk E311R.C00078 leaves=1941 running=8 queued=10
+2026-11-05T22:43:40Z ok E311R.C00006 leaves=2233 kernel=21.100 wall=26.79 rss=3233204 cg_peak=543680 running=7 queued=10
+2026-11-05T22:43:40Z start chunk E311R.C00094 leaves=1825 running=8 queued=9
+2026-11-05T22:43:42Z ok E311R.C00028 leaves=2237 kernel=22.800 wall=28.86 rss=3249012 cg_peak=564496 running=7 queued=9
+2026-11-05T22:43:42Z start chunk E311R.C00044 leaves=1818 running=8 queued=8
+2026-11-05T22:43:43Z ok E311R.C00037 leaves=2222 kernel=24.400 wall=29.98 rss=3255624 cg_peak=573708 running=7 queued=8
+2026-11-05T22:43:43Z start chunk E311R.C00039 leaves=1766 running=8 queued=7
+2026-11-05T22:43:44Z ok E311R.C00020 leaves=2102 kernel=19.900 wall=25.19 rss=3234364 cg_peak=540548 running=7 queued=7
+2026-11-05T22:43:44Z start chunk E311R.C00069 leaves=1728 running=8 queued=6
+2026-11-05T22:43:46Z ok E311R.C00092 leaves=2155 kernel=23.700 wall=29.58 rss=3236096 cg_peak=542864 running=7 queued=6
+2026-11-05T22:43:46Z start chunk E311R.C00126 leaves=1668 running=8 queued=5
+2026-11-05T22:43:48Z ok E311R.C00062 leaves=2040 kernel=20.100 wall=25.64 rss=3226604 cg_peak=526448 running=7 queued=5
+2026-11-05T22:43:48Z start chunk E311R.C00085 leaves=1437 running=8 queued=4
+2026-11-05T22:43:54Z ok E311R.C00114 leaves=1948 kernel=22.200 wall=28.07 rss=3241832 cg_peak=550680 running=7 queued=4
+2026-11-05T22:43:54Z start chunk E311R.C00048 leaves=1224 running=8 queued=3
+2026-11-05T22:44:02Z ok E311R.C00094 leaves=1825 kernel=17.200 wall=22.08 rss=3225500 cg_peak=529872 running=7 queued=3
+2026-11-05T22:44:03Z ok E311R.C00126 leaves=1668 kernel=12.800 wall=16.74 rss=3217184 cg_peak=520932 running=6 queued=3
+2026-11-05T22:44:06Z ok E311R.C00078 leaves=1941 kernel=20.900 wall=26.40 rss=3240104 cg_peak=543224 running=5 queued=3
+2026-11-05T22:44:06Z ok E311R.C00069 leaves=1728 kernel=16.900 wall=21.57 rss=3235372 cg_peak=541696 running=4 queued=3
+2026-11-05T22:44:07Z ok E311R.C00039 leaves=1766 kernel=18.300 wall=23.29 rss=3196608 cg_peak=491344 running=3 queued=3
+2026-11-05T22:44:07Z ok E311R.C00085 leaves=1437 kernel=14.000 wall=18.38 rss=3173940 cg_peak=465700 running=2 queued=3
+2026-11-05T22:44:08Z ok E311R.C00044 leaves=1818 kernel=20.800 wall=26.00 rss=3238200 cg_peak=551448 running=1 queued=3
+2026-11-05T22:44:11Z ok E311R.C00048 leaves=1224 kernel=12.200 wall=16.40 rss=3209356 cg_peak=504224 running=0 queued=3
+2026-11-05T22:44:11Z start root E311B.Root leaves=782437 running=1 queued=2
+2026-11-05T22:44:38Z ok E311B.Root leaves=782437 kernel=0.043 wall=26.01 rss=8122948 cg_peak=5425800 running=0 queued=2
+2026-11-05T22:44:38Z start root E311R.Root leaves=437579 running=1 queued=1
+2026-11-05T22:44:48Z ok E311R.Root leaves=437579 kernel=0.029 wall=9.14 rss=4314444 cg_peak=1471284 running=0 queued=1
+2026-11-05T22:44:48Z start final E311.Final leaves=1220016 running=1 queued=0
+2026-11-05T22:45:06Z ok E311.Final leaves=1220016 kernel=nan wall=17.90 rss=9362348 cg_peak=354604 running=0 queued=0
+{"finished": "2026-11-05T22:45:07Z", "not_ok": []}
