@@ -82,7 +82,7 @@ deleted on the author's instruction (manifest in `ROT45CHORD20261105/logs/`).
   sorry, standard axioms only). It is 2.2x less kernel time and 24–85x less output per leaf than the current
   pipeline. Gate G2 is narrowly missed (0.35 s per leaf against 0.3), and a concrete lookup optimisation is
   identified.
-- **Pilot** (from 16:02 KST, `/home/jay/research/data/es8-b64-pilot-20261105`):
+- **Pilot** (from 16:02 KST, `<es8-pilot-dir>`):
   - budget 64 against 63 on 28 stratified contexts plus the 4 lowest-LP contexts;
   - CP-SAT hunts for balanced vectors with at most 64 holes, and with at most 71 holes.
   - **Pilot result:** all 32 budget-64 contexts closed, pooled ratio **9.34**. That passes the gate, and the

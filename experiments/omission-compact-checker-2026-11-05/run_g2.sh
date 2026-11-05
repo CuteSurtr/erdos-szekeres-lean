@@ -1,6 +1,6 @@
 #!/bin/bash
 # Sequential single-core compiles for gate G2 (LEAN_NUM_THREADS=1).
-cd /home/jay/research/lean/erdos-szekeres-lean
+cd <repo>
 D=experiments/omission-compact-checker-2026-11-05
 export LEAN_NUM_THREADS=1 OMP_NUM_THREADS=1
 for m in "$@"; do
