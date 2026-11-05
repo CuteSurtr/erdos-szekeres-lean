@@ -5,6 +5,15 @@ rigor and publication, k = 7 and the rest), three planners wrote roadmaps from d
 publication and rigor, feasibility at about 20% CPU), and a judge scored them and spot-checked the repo. This is a
 plan, not a result; nothing below is claimed as proved. The judge's verdict follows verbatim.
 
+*Note added 6 November 2026, after 07:41 KST.* The `c6upper-replay` job mentioned below has finished. In the hash-bound
+cake_lpr replay (6 Nov 2026), cake_lpr accepted the fresh proofs of all 64 cube formulas, 64 of 64, each verdict bound
+to the CNF and proof hashes. The job continued as unit `c6upper-replay-par` from 04:52. The record is in
+`C6UPPER/replay-2026-11-06/README.md` and `C6UPPER` §6. Step 3D was then carried out as follows:
+- the per-cube hash and verdict table is in `C6UPPER/replay-2026-11-06/README.md`, not in `C6UPPER/README.md`;
+- `C6UPPER/README.md` has a summary in §6;
+- `symmetric_extremal.tex` (abstract and the sixfold trust row) and `k8_section.tex` were updated.
+The text below is unchanged.
+
 ---
 
 ## Judge's verdict (6 Nov 2026, read-only)

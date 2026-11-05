@@ -12,6 +12,9 @@ lrat-check alone is not one) / exact computation / written proof (not refereed) 
   3 November, but those logs record cube labels, not CNF or proof hashes. A hash-bound cake_lpr replay exists for only
   6 of the 64 (4 November review); the 4 November replay of all 64 used lrat-check only. A full hash-bound cake_lpr
   replay is planned.
+  - *Update, 6 November 2026 (07:41 KST):* the hash-bound cake_lpr replay (6 Nov 2026) has finished. All 64 cube
+    formulas were regenerated with their recorded hashes and solved again, and cake_lpr accepted every fresh proof: 64
+    of 64 (`C6UPPER` §6, `C6UPPER/replay-2026-11-06/README.md`).
 - **Budget-64 search.** It runs at about 20% of the machine (6 workers, since about 22:35 KST on 5 November) while
   the machine is needed for other work. At this rate the 9 November cutoff will stop it partway unless it is extended
   (`ES8UPPER20261105/README.md`).

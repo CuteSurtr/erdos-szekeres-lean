@@ -8,6 +8,12 @@ implementations. With this certificate
 (61 and more excluded), the largest 6-fold octagon-free set has exactly 60 points. Statements below that call the
 maximum open ("54 or 60") record the state on 3–4 November.
 
+**Addendum, 6 November 2026: hash-bound cake_lpr replay of all 64 cube formulas** (§6,
+`replay-2026-11-06/README.md`). All 64 cube formulas (32 per encoder) were regenerated from the generators with the
+recorded SHA-256, solved again, and every fresh proof was accepted by cake_lpr (`s VERIFIED UNSAT`): 64 of 64, each
+verdict bound to the CNF and proof hashes. Statements below that only 6 of the 64 verdicts are hash-bound record the
+state before this replay.
+
 **Statement.** Every configuration of 11 nested regular hexagons about a common centre, in general position, contains
 8 points in convex position. Hence L(6,8) <= 10: every 6-fold rotationally symmetric set of at least 61 points in
 general position contains a convex octagon. The largest 6-fold symmetric set in general position with no convex octagon
@@ -27,6 +33,9 @@ of ES(8) = 65).
   split; its own tests are in §3b.
 - Certificate: the case split covers all 32 sign patterns of five phase-order variables, which `tools/verify_cover.py`
   (stdlib only) checks. Every one of the 32 LRAT proofs is accepted by lrat-check and by cake_lpr.
+  - In the hash-bound cake_lpr replay (6 Nov 2026), all 64 cube formulas of both encoders, regenerated with matching
+    hashes, were solved again. cake_lpr accepted every fresh proof: 64 of 64, each verdict bound to the CNF and proof
+    hashes (§6).
 - Lower bound: the certified 54-point set `ES8SYM/sets/c6_54pts_9layers`. The exact maximum is open. One layer beyond
   it, the encoding has an abstract model that satisfies all 3-term Grassmann–Plücker relations, and no attempt has
   realized it (`ROT456` §3).
@@ -201,6 +210,7 @@ python3 C6UPPER/tools/mkcubes.py m6K8t11.cnf m6K8t11.cnf.json cubes   # full_Y12
 python3 C6UPPER/tools/verify_cover.py m6K8t11.cnf m6K8t11.cnf.json cubes
 P=<work dir> S=<dir with resolve/bin/{cadical,lrat-check}> python3 C6UPPER/tools/run.py 8 $(( $(date +%s) + 7200 ))
 P=<work dir> S=<dir with resolve/bin/cake_lpr> bash C6UPPER/tools/cake.sh
+# hash-bound cake_lpr replay of all 64 cubes, both encoders (6 Nov 2026): replay-2026-11-06/README.md, "How to rerun"
 ```
 
 ## 5. Review of 4 November 2026
@@ -218,6 +228,8 @@ layer, perturbation, angular, nesting, chain or reflection arguments.
 - *Noted 6 November:* those solve-time cake_lpr logs (`logs/cake.txt`, `logs/encb_cake.txt`) record cube labels, not
   CNF or proof hashes, so only the six proofs above have a hash-bound cake_lpr replay. A full hash-bound cake_lpr
   replay of all 64 is planned.
+- *Done 6 November (07:41 KST):* the hash-bound cake_lpr replay (6 Nov 2026) covered all 64 cube formulas, with 64 of
+  64 accepted (§6).
 
 **Exact re-check (exact computation).** The review redid the real-set tests in integer arithmetic, using the
 coordinates (X, √3·Y) of the 6-fold cyclotomic weights.
@@ -238,3 +250,58 @@ coordinates (X, √3·Y) of the 6-fold cyclotomic weights.
 
 **Still to correct.** The same comment issues remain in the certified `C7UPPER/gen_b.py` and the angular-dichotomy
 docstring of `C7UPPER/gen.py`, which are left unchanged.
+
+## 6. Hash-bound cake_lpr replay (6 November 2026)
+
+Full record: `replay-2026-11-06/README.md`, with `results.tsv` (one row per cube), `replay.log`, the scripts and the
+tool and proof hashes.
+
+**Result (certificate).** cake_lpr accepted the fresh proofs of all 64 cube formulas (`s VERIFIED UNSAT`): 64 of 64
+ACCEPTED, 0 rejected, 0 NOT-UNSAT.
+The replay finished at 2026-11-06 07:41:26 KST.
+
+**Method.** For each encoder:
+- the base CNF was regenerated (A: `C7UPPER/gen.py 6 8 11`; B: `encb/gen_b2.py 6 8 11`), and its SHA-256 had to equal
+  `SHA256SUMS.txt` (`542c8a3a…`, `479e31a9…`);
+- the 32 cubes were built with `tools/mkcubes.py`, and `tools/verify_cover.py` reported "cover complete";
+- all 32 cube CNF hashes had to equal `SHA256SUMS.txt` before any solving.
+
+Then, for each cube:
+- it was solved with system CaDiCaL 2.1.3 (SHA-256 `4acf5860…`), with text LRAT output;
+- the proof was hashed;
+- it was checked by cake_lpr (SHA-256 `c14ff498…`), and only the line `s VERIFIED UNSAT` counted. This is not the
+  cake_lpr binary of the 4 November review (`2fee767a…`); building commit `033aad53` of the public cake_lpr repository
+  with its Makefile on this host reproduces it byte for byte (replay README, "Provenance of the cake_lpr binary");
+- the accepted proof was kept as `.lrat.zst`.
+
+`replay.py` ran on one lane from 01:57 KST; `replay_par.py` ran 6 lanes from 04:52. CaDiCaL wall time totalled
+63,539 s. A first attempt failed at mkcubes, before any solving, because the `cubes/` directory was missing; its log is
+kept.
+
+| | encoder A | encoder B |
+|---|---:|---:|
+| cube CNF hashes equal to the record | 32 / 32 | 32 / 32 |
+| accepted by cake_lpr | 32 | 32 |
+| fresh proof byte-identical to the 3 November proof | 20 | 20 |
+| fresh proof differs (the 12 phase orders) | 12 | 12 |
+
+**Proofs.** The proofs are about 28.4 GB of `.lrat.zst` (32.3 GB for the whole data directory, with the regenerated
+CNFs and the logs), outside Git, in `/home/jay/research/data/c6upper-replay-20261106/{A,B}/cubes`. Their hashes are in
+`replay-2026-11-06/TOOLS_AND_PROOFS.sha256`.
+- The 40 byte-identical proofs (the contradictory patterns) are the archived proofs of 3 November, which now have a
+  hash-bound cake_lpr verdict.
+- For the 24 phase-order formulas, the certificate is the fresh proof.
+- Of the 24 archived phase-order proofs, the 6 of §5 have a hash-bound cake_lpr replay (4 November). The other 18 keep
+  only their label-bound solve-time cake_lpr verdicts (and the lrat-check replay of 4 November against matching proof
+  hashes, which is not a certificate).
+
+**Independent check** (coordinator, 6 November, 07:43 KST). `results.tsv` has 64 distinct (encoder, cube) ACCEPTED
+rows. In each row:
+- the CNF hash equals `SHA256SUMS.txt` and the file on disk;
+- the CaDiCaL exit code is 20;
+- the cake_lpr line is exactly `s VERIFIED UNSAT`, and the cake_lpr log contains it;
+- the `.zst` is present with the recorded hash.
+
+**Scope.** This closes the gap that only 6 of the 64 cake_lpr verdicts were hash-bound (§5). It does not touch the
+written soundness proof of the encodings (gaps (G1)–(G4) of `WRITEUP/note/k8_soundness.tex`), the reflection unit (§2)
+or the Lean-checked reduction.

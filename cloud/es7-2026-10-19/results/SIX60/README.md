@@ -6,7 +6,7 @@
 | Part | Statement | Status |
 |---|---|---|
 | Lower bound | The five sets A, B, C, C' and D in `sets/` have 60 points, are invariant under rotation by 60 degrees, are in general position, and contain no 8 points in convex position. | Exact computation, three independent implementations per set (below). |
-| Upper bound | Every 6-fold symmetric set of at least 61 points in general position contains a convex octagon. | `C6UPPER` (3 November): a certificate accepted by cake_lpr for two separately implemented encoders (6 of the 64 cube verdicts hash-bound so far; see `C6UPPER` §5). The reduction is Lean-checked (`LAYERLEAN`). The encoder steps are a written proof, reviewed but not Lean-checked. |
+| Upper bound | Every 6-fold symmetric set of at least 61 points in general position contains a convex octagon. | `C6UPPER` (3 November): a certificate accepted by cake_lpr for two separately implemented encoders. Since the hash-bound cake_lpr replay (6 Nov 2026), all 64 cube formulas have a cake_lpr verdict bound to CNF and proof hashes (`C6UPPER` §6; on 5 November only 6 of the 64 verdicts were hash-bound). The reduction is Lean-checked (`LAYERLEAN`). The encoder steps are a written proof, reviewed but not Lean-checked. |
 
 Sizes of 6-fold sets without a centre are multiples of 6, and a general-position 6-fold set cannot contain the
 centre. Together the two parts settle the question that `C6UPPER`, `SIX10REFINE`, `SIX10CEGAR` and
@@ -36,6 +36,9 @@ about a point O, and with no 8 points in convex position.
      checker cake_lpr. cake_lpr's acceptance carries the certificate, because the lrat-check build is unsound
      (`LRATCHECK20261105`). The proofs are archived outside Git (`es8-c6-octagon-2026-11-03`; hashes in
      `C6UPPER/SHA256SUMS.txt`).
+   - *Added 6 November 2026.* In the hash-bound cake_lpr replay (6 Nov 2026), all 64 cube formulas were regenerated
+     with their recorded hashes and solved again. cake_lpr accepted every fresh proof, 64 of 64, each verdict bound to
+     the CNF and proof hashes (`C6UPPER` §6, `C6UPPER/replay-2026-11-06/README.md`).
    - **Written proofs, reviewed, not Lean-checked.** The soundness of the encodings (docstring of `C7UPPER/gen.py` and
      the review in `ROT456` §2), the reflection unit (`C6UPPER` §2), and the cover check (`C6UPPER/tools/verify_cover.py`).
    - **Lean-checked reduction** (`LAYERLEAN`, `sixfold_octagon`). From the statement for 11 hexagons (`Sixfold66`),

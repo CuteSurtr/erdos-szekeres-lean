@@ -50,8 +50,8 @@ base-$2$ Fermat pseudoprime or a power of $2$). For $k=8$ the largest sevenfold 
 without a convex octagon has exactly $64$ points and the largest sixfold symmetric one exactly $60$, so $ES(8)=65$ holds
 for these two symmetry types: the lower bounds are explicit sets (seven and five order types; exact computation), and the
 upper bounds are SAT certificates accepted by the verified checker cake\_lpr, on top of a Lean-checked reduction and a
-reviewed, unrefereed written proof of the encoding (for the sixfold bound, $6$ of the $64$ cake\_lpr verdicts are so far
-bound to file hashes). We also give a computer-assisted argument (SAT certificates accepted by cake\_lpr, on top of
+reviewed, unrefereed written proof of the encoding (for the sixfold bound, all $64$ cube formulas have cake\_lpr
+verdicts bound to file hashes since a replay of 6 November). We also give a computer-assisted argument (SAT certificates accepted by cake\_lpr, on top of
 unrefereed written proofs) that one orbit of rotated generic tiny clusters cannot reach $128$ points for $k=9$, and
 examples with $120$, $253$ and $991$ points for $k=9,10,12$. Centrally symmetric $2^{k-2}$-point sets exist for every
 $k\ne4$; this is implied by published constructions, although no source inspected states it, and for even $k$ we give an
@@ -107,7 +107,7 @@ or below it form a cup from $a$ to $b$; then $|P|$ is the sum of their sizes min
 \noindent\textbf{Rigor labels.}
 \emph{Lean-checked}: compiled with Lean~4.24.0 and the repository's Mathlib, depending only on \lean{propext},
 \lean{Classical.choice}, \lean{Quot.sound}. \emph{Certificate}: an unsatisfiability claim whose LRAT proof (produced
-by CaDiCaL~3.0.1, or 2.1.3 for the re-checks of 5 November) was accepted by the CakeML-verified checker
+by CaDiCaL~3.0.1, or 2.1.3 for the re-checks of 5 November and the sixfold replay of 6 November) was accepted by the CakeML-verified checker
 \texttt{cake\_lpr}, which prints \texttt{s VERIFIED UNSAT}; the soundness of the encoding is a written proof. Acceptance by
 \texttt{lrat-check} alone is not a certificate: the \texttt{lrat-check} of drat-trim at commit \texttt{2e3b2dc} accepts an
 invalid proof of a satisfiable formula unless patched, a publicly known defect~\cite{DT} (our record:
@@ -671,7 +671,7 @@ Lemmas~\ref{lem:blowup}, \ref{lem:modules}; Prop.~\ref{prop:orbit}; Prop.~\ref{p
 Proposition~\ref{prop:compat}; Proposition~\ref{prop:k8sizes} & core / part (a) Lean-checked; rest written proof\\
 Theorem~\ref{thm:E} & certificate (cake\_lpr: $7$ of $7$ regenerated formulas with matching hashes, and $10$ of $10$ from an independent encoder), plus written proofs\\
 $k=8$, sevenfold maximum $64$: upper bound (\texttt{C7UPPER}) & certificate (cake\_lpr, two encoders; both proofs replayed against regenerated formulas with matching hashes on 4 November); reduction Lean-checked; encoding soundness written proof (not refereed)\\
-$k=8$, sixfold maximum $60$: upper bound (\texttt{C6UPPER}) & certificate: all $64$ cube proofs ($32$ per encoder) accepted by cake\_lpr when solved (3 November), but those logs record cube labels, not formula or proof hashes; hash-bound cake\_lpr replay for $6$ of the $64$, and hash-bound replay of all $64$ with lrat-check only (4 November); a full hash-bound cake\_lpr replay is planned. Reduction Lean-checked; encoding soundness and reflection unit written proof (not refereed)\\
+$k=8$, sixfold maximum $60$: upper bound (\texttt{C6UPPER}) & certificate (cake\_lpr, two encoders): in the hash-bound cake\_lpr replay of 6 November all $64$ cube formulas ($32$ per encoder), regenerated with matching hashes, were solved again and every fresh proof was accepted, each verdict bound to the formula and proof hashes (\texttt{C6UPPER}~\S6); before it, the solve-time logs of 3 November recorded cube labels only, and $6$ of the $64$ had a hash-bound cake\_lpr replay (4 November). Reduction Lean-checked; encoding soundness and reflection unit written proof (not refereed)\\
 Theorem~\ref{thm:central-even}, Lemma~\ref{lem:cubic} & written proof, referee-style internal review\\
 Theorem~\ref{thm:central}, odd $k$ (\dirn{SYM2}) & written proof (not refereed)\\
 Theorem~\ref{thm:central}, even $k\ge8$, via Lemma~14 & written argument from a published lemma, not internally reviewed\\

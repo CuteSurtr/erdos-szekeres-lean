@@ -1,0 +1,18 @@
+2026-11-06 01:56:27 replay start pid 416512; cadical 2.1.3; cake_lpr /home/jay/research/sat/tools/cake_lpr/cake_lpr
+2026-11-06 01:56:27 $ python3 /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C7UPPER/gen.py 6 8 11 /home/jay/research/data/c6upper-replay-20261106/A/m6K8t11.cnf
+2026-11-06 01:56:30 A base CNF hash OK 542c8a3a2c4484a7d60b5fdb8efc0f3506d782031fc4b4625604b360211ad51e
+2026-11-06 01:56:30 $ python3 /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C6UPPER/tools/mkcubes.py /home/jay/research/data/c6upper-replay-20261106/A/m6K8t11.cnf /home/jay/research/data/c6upper-replay-20261106/A/m6K8t11.cnf.json /home/jay/research/data/c6upper-replay-20261106/A/cubes
+2026-11-06 01:56:30 $ python3 /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C6UPPER/tools/verify_cover.py /home/jay/research/data/c6upper-replay-20261106/A/m6K8t11.cnf /home/jay/research/data/c6upper-replay-20261106/A/m6K8t11.cnf.json /home/jay/research/data/c6upper-replay-20261106/A/cubes
+2026-11-06 01:56:30 A verify_cover FAILED: /research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C6UPPER/tools/verify_cover.py", line 20, in <module>
+    for f in sorted(os.listdir(d)):
+                    ~~~~~~~~~~^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/jay/research/data/c6upper-replay-20261106/A/cubes'
+2026-11-06 01:56:30 $ python3 /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C6UPPER/encb/gen_b2.py 6 8 11 /home/jay/research/data/c6upper-replay-20261106/B/B_m6K8t11.cnf
+2026-11-06 01:56:38 B base CNF hash OK 479e31a9e8d58d752c86b9abf02fb799c10615a7e61a88f132c49734674f37fc
+2026-11-06 01:56:38 $ python3 /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C6UPPER/tools/mkcubes.py /home/jay/research/data/c6upper-replay-20261106/B/B_m6K8t11.cnf /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C6UPPER/encb/B_m6K8t11.meta.json /home/jay/research/data/c6upper-replay-20261106/B/cubes
+2026-11-06 01:56:38 $ python3 /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C6UPPER/tools/verify_cover.py /home/jay/research/data/c6upper-replay-20261106/B/B_m6K8t11.cnf /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C6UPPER/encb/B_m6K8t11.meta.json /home/jay/research/data/c6upper-replay-20261106/B/cubes
+2026-11-06 01:56:39 B verify_cover FAILED: /research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C6UPPER/tools/verify_cover.py", line 20, in <module>
+    for f in sorted(os.listdir(d)):
+                    ~~~~~~~~~~^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/jay/research/data/c6upper-replay-20261106/B/cubes'
+2026-11-06 01:56:39 replay finished: 0 of 64 cube proofs ACCEPTED by cake_lpr (hash-bound)
