@@ -49,6 +49,12 @@ The CP-SAT hunt (`tools/witness_hunt.py`, minimising from the known 72-hole vect
 - **Restart-safe.** A context with a closed result file is never rerun.
 - **Health.** The youngest worker is paused on heat or memory pressure.
 - **Witness.** On a witness, no new jobs start and an alert is raised.
+- **Throttle** (added 19:48 KST, 5 November, at the author's request).
+  - `campaign/max_running` caps the number of running workers. Extra workers are SIGSTOPped in place, so no work is
+    lost, and resumed when the cap rises.
+  - All workers run at nice 19 with idle I/O priority.
+  - Set to 8 while the machine is needed for other work. The witness hunts were stopped then, after the 71-hole
+    result.
 - **After it finishes:**
   - if every context closes, assemble the full tree (master levels plus subtrees) and replay it exactly;
   - check it in Lean with the compact checker (`experiments/omission-compact-checker-2026-11-05`, once gate G2
