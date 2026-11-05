@@ -1,0 +1,30 @@
+parsing took 458ms
+.olean serialization took 120ms
+let-to-have transformation took 261ms
+process pre-definitions took 425ms
+elaboration took 4.01s
+type checking took 135ms
+linting took 1.05s
+elaboration took 109ms
+type checking took 72.8s
+'CompactChecker.Chunk733.excludes' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 73.1s
+cumulative profiling times:
+	.olean serialization 120ms
+	attribute application 0.195ms
+	compilation (IR) 0.386ms
+	compilation (LCNF base) 0.624ms
+	compilation (LCNF mono) 0.226ms
+	elaboration 77.3s
+	fix level params 14ms
+	instantiate metavars 30.9ms
+	interpretation 0.0576ms
+	let-to-have transformation 330ms
+	linting 1.19s
+	parsing 491ms
+	process pre-definitions 439ms
+	share common exprs 84.4ms
+	tactic execution 11.1ms
+	type checking 73s
+	typeclass inference 1.88s
+84.48 s 8229776 KB

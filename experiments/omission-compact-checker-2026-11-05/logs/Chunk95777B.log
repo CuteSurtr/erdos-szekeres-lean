@@ -1,0 +1,186 @@
+parsing took 147ms
+parsing took 209ms
+parsing took 232ms
+parsing took 131ms
+parsing took 392ms
+parsing took 124ms
+parsing took 187ms
+parsing took 292ms
+parsing took 285ms
+parsing took 211ms
+parsing took 172ms
+parsing took 313ms
+parsing took 128ms
+parsing took 334ms
+parsing took 163ms
+parsing took 365ms
+parsing took 423ms
+parsing took 398ms
+parsing took 644ms
+parsing took 425ms
+parsing took 732ms
+parsing took 216ms
+parsing took 402ms
+.olean serialization took 2.53s
+let-to-have transformation took 162ms
+process pre-definitions took 366ms
+elaboration took 2.52s
+type checking took 101ms
+linting took 975ms
+type checking took 30.4s
+let-to-have transformation took 249ms
+process pre-definitions took 232ms
+elaboration took 2.97s
+type checking took 163ms
+linting took 890ms
+type checking took 42.5s
+share common exprs took 358ms
+let-to-have transformation took 182ms
+process pre-definitions took 421ms
+elaboration took 3.61s
+linting took 1.04s
+type checking took 58.3s
+let-to-have transformation took 153ms
+process pre-definitions took 342ms
+elaboration took 2.94s
+linting took 617ms
+type checking took 67.2s
+share common exprs took 114ms
+let-to-have transformation took 107ms
+let-to-have transformation took 270ms
+process pre-definitions took 547ms
+elaboration took 4.61s
+type checking took 199ms
+linting took 1.32s
+type checking took 92.3s
+let-to-have transformation took 113ms
+process pre-definitions took 216ms
+elaboration took 2.05s
+linting took 442ms
+type checking took 102s
+share common exprs took 107ms
+let-to-have transformation took 205ms
+process pre-definitions took 404ms
+elaboration took 3.55s
+linting took 708ms
+type checking took 118s
+share common exprs took 113ms
+let-to-have transformation took 229ms
+process pre-definitions took 472ms
+elaboration took 4.26s
+type checking took 241ms
+linting took 1.2s
+type checking took 143s
+let-to-have transformation took 186ms
+process pre-definitions took 334ms
+elaboration took 3.76s
+type checking took 118ms
+linting took 755ms
+type checking took 158s
+let-to-have transformation took 174ms
+process pre-definitions took 277ms
+elaboration took 2.9s
+linting took 670ms
+type checking took 172s
+let-to-have transformation took 149ms
+process pre-definitions took 259ms
+elaboration took 2.38s
+linting took 754ms
+type checking took 186s
+share common exprs took 129ms
+let-to-have transformation took 228ms
+process pre-definitions took 514ms
+elaboration took 4.38s
+linting took 840ms
+type checking took 205s
+let-to-have transformation took 140ms
+process pre-definitions took 251ms
+elaboration took 2.76s
+linting took 476ms
+type checking took 214s
+share common exprs took 148ms
+let-to-have transformation took 242ms
+process pre-definitions took 519ms
+elaboration took 4.86s
+type checking took 147ms
+linting took 905ms
+type checking took 233s
+process pre-definitions took 209ms
+elaboration took 1.93s
+linting took 551ms
+type checking took 240s
+share common exprs took 135ms
+let-to-have transformation took 225ms
+process pre-definitions took 620ms
+elaboration took 4.65s
+linting took 766ms
+type checking took 253s
+share common exprs took 111ms
+let-to-have transformation took 187ms
+process pre-definitions took 305ms
+elaboration took 3.89s
+linting took 725ms
+type checking took 266s
+let-to-have transformation took 206ms
+process pre-definitions took 467ms
+elaboration took 4.01s
+type checking took 139ms
+linting took 769ms
+type checking took 280s
+share common exprs took 172ms
+let-to-have transformation took 304ms
+process pre-definitions took 632ms
+elaboration took 5.57s
+type checking took 105ms
+linting took 975ms
+type checking took 300s
+share common exprs took 223ms
+let-to-have transformation took 238ms
+process pre-definitions took 517ms
+elaboration took 5.25s
+type checking took 102ms
+linting took 828ms
+type checking took 314s
+typeclass inference of OfNat took 157ms
+share common exprs took 153ms
+let-to-have transformation took 271ms
+process pre-definitions took 553ms
+elaboration took 6.31s
+type checking took 143ms
+linting took 968ms
+type checking took 329s
+typeclass inference of OfNat took 104ms
+let-to-have transformation took 154ms
+process pre-definitions took 350ms
+elaboration took 4s
+type checking took 143ms
+linting took 585ms
+type checking took 339s
+let-to-have transformation took 184ms
+process pre-definitions took 327ms
+elaboration took 4.29s
+type checking took 137ms
+linting took 730ms
+type checking took 350s
+process pre-definitions took 130ms
+'CompactChecker.Chunk95777B.excludes' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 351s
+cumulative profiling times:
+	.olean serialization 2.53s
+	attribute application 3.9ms
+	compilation (IR) 17.9ms
+	compilation (LCNF base) 47.5ms
+	compilation (LCNF mono) 8.74ms
+	elaboration 439s
+	fix level params 234ms
+	instantiate metavars 674ms
+	interpretation 7.55ms
+	let-to-have transformation 5.75s
+	linting 19.4s
+	parsing 6.99s
+	process pre-definitions 9.37s
+	share common exprs 2.52s
+	tactic execution 247ms
+	type checking 4.5e+03s
+	typeclass inference 48.8s
+520.61 s 12075192 KB

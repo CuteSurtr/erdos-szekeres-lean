@@ -1,0 +1,36 @@
+{
+ "source_sha256": "acaf6323a2539be869304f42263f80a87db95be1b998e41638dba9bca4d63d72",
+ "tree_sha256": "91c0fa1be1c98221b4bb01d62337f7372df56530c563f52cbdf41e1ed93d45df",
+ "states": 252,
+ "rows": 3131,
+ "budget": 62,
+ "base": 4194304,
+ "K": 131072,
+ "exporter_sha256": "d7fd9ae46e8f400a128c3c550e68caa404f304335f3e2cc14a92e6a5cebaac90",
+ "chunks": [
+  {
+   "module": "CompactChecker.Chunk95777W4",
+   "file": "experiments/omission-compact-checker-2026-11-05/CompactChecker/Chunk95777W4.lean",
+   "root": 95777,
+   "leaves": 995,
+   "min_margin": 1,
+   "missing": [
+    71,
+    166,
+    181,
+    214
+   ],
+   "occupied": [
+    38,
+    41,
+    232
+   ],
+   "source_bytes": 2181537,
+   "blocks": true,
+   "block_limit": 64,
+   "raw_literals": true,
+   "corrupted": false,
+   "sha256": "aeffaa92d2f5620c294924a856e44529e1218e6366b46ffde7db0eb9b915970c"
+  }
+ ]
+}

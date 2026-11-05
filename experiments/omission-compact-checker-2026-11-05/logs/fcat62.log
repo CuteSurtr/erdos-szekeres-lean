@@ -1,0 +1,21 @@
+type checking took 68.1s
+'CompactChecker.fcat62_wf' depends on axioms: [propext]
+elaboration took 68.3s
+cumulative profiling times:
+	attribute application 82.8ms
+	compilation (IR) 0.306ms
+	compilation (LCNF base) 0.511ms
+	compilation (LCNF mono) 0.184ms
+	elaboration 86s
+	fix level params 65.9ms
+	instantiate metavars 152ms
+	interpretation 0.0433ms
+	let-to-have transformation 97ms
+	linting 72.9s
+	parsing 2.63s
+	process pre-definitions 2.45s
+	share common exprs 213ms
+	tactic execution 2.15ms
+	type checking 69s
+	typeclass inference 3.93s
+103.34 s 7951688 KB
