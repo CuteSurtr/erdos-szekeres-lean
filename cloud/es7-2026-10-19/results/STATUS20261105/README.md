@@ -71,7 +71,7 @@ on the written chord-lemma proof and its exact case analysis. An independent rev
 started) and the 4-fold count is 0 of 12 (11 unresolved, 1 lost). The transitivity patterns, 40 + 20, are all accepted
 by cake_lpr. Most lanes ran about 14.9 h. The 5-fold and 4-fold cases stay **open; no bound is claimed.** Details and
 what further work would need are in `ROT45CHORD20261105` (Results). The unfinished partial proofs (about 1.3 TB) are
-still on disk pending the author's decision.
+deleted on the author's instruction (manifest in `ROT45CHORD20261105/logs/`).
 
 ## ES(8) upper bound (started 5 November, afternoon)
 
@@ -85,7 +85,12 @@ still on disk pending the author's decision.
 - **Pilot** (from 16:02 KST, `/home/jay/research/data/es8-b64-pilot-20261105`):
   - budget 64 against 63 on 28 stratified contexts plus the 4 lowest-LP contexts;
   - CP-SAT hunts for balanced vectors with at most 64 holes, and with at most 71 holes.
-  - The first ratios from the small deciles are 8.1–9.5, projecting about 1,430 CPU-h. The gate is at 10 (memo §3).
+  - **Pilot result:** all 32 budget-64 contexts closed, pooled ratio **9.34**. That passes the gate, and the
+    projection is about 1,500 CPU-h.
+  - **Exact side result:** a 71-hole balanced vector satisfies all 3,131 constraints (re-checked against the
+    catalog source). So h_B^min lies in [64, 71], and the present catalogs cannot prove better than ES(8) <= 304.
+- **Full budget-64 search is running** from 17:24 KST on 28 workers: systemd user unit `es8-b64-campaign`, cutoff
+  2026-11-09 17:00 KST (`ES8UPPER20261105/README.md`). No bound below 311 is claimed before the Lean check.
 
 ## Decisions pending (unchanged from STATUS20261104 unless noted)
 

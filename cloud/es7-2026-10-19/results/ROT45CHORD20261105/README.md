@@ -93,9 +93,10 @@ claimed.**
   supervisor started `cubes5/o4123` at 04:25, and it ran about 11.6 h. The plain (no chord) runs recorded in `ROT456`
   reached about 50 million conflicts in 6.1 h without finishing. So the chord lemma's 4.6x speed-up on the sixfold
   control cube did not make these instances tractable within 15 h.
-- **Partial proofs.** The 30 unfinished text LRAT files (`logs/partial_lrat_sizes.tsv`) total about 1.3 TB. They are
-  unfinished and certify nothing, and CaDiCaL cannot resume from them. They remain on disk pending the author's
-  decision (delete, compress or keep). The solver outputs, CNF hashes and these records are kept regardless.
+- **Partial proofs.** The 30 unfinished text LRAT files, plus the 9.6 GB one of the lost `cubes4/o1234`, total
+  1.27 TB (`logs/partial_lrat_sizes.tsv`). They certify nothing, and CaDiCaL cannot resume from them. **They were
+  deleted on the author's instruction at about 17:20 KST** (manifest `logs/deleted_partial_lrats.tsv`). The solver
+  outputs, CNFs and their hashes, the 60 cake_lpr-verified transitivity proofs, and these records are kept.
 - **What further work would need:**
   - a finer split, for example by the position of layer 5, as `ROT456` tried; or stronger propagation (more sound
     clause families); or much longer runs (days per cube);
