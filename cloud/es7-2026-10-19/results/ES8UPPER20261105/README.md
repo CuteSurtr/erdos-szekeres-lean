@@ -55,6 +55,13 @@ The CP-SAT hunt (`tools/witness_hunt.py`, minimising from the known 72-hole vect
   - All workers run at nice 19 with idle I/O priority.
   - Set to 8 while the machine is needed for other work. The witness hunts were stopped then, after the 71-hole
     result.
+  - **Paused completely at about 19:50 KST, 5 November** (cap 0, at the author's request). About 82 contexts were
+    closed by then, about 4.9% of the work by budget-63 leaves. Their result files are on disk and are never redone.
+    - The in-flight contexts are frozen in RAM. A reboot would lose only their partial work; they would restart from
+      scratch.
+    - The supervisor itself only wakes every 30 s.
+    - Resume with `echo 28 > campaign/max_running`, or any smaller number, in the work directory. Extend
+      `campaign/cutoff` (2026-11-09 17:00) if needed.
 - **After it finishes:**
   - if every context closes, assemble the full tree (master levels plus subtrees) and replay it exactly;
   - check it in Lean with the compact checker (`experiments/omission-compact-checker-2026-11-05`, once gate G2
