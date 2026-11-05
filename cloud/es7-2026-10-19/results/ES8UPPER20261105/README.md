@@ -62,6 +62,12 @@ The CP-SAT hunt (`tools/witness_hunt.py`, minimising from the known 72-hole vect
     - The supervisor itself only wakes every 30 s.
     - Resume with `echo 28 > campaign/max_running`, or any smaller number, in the work directory. Extend
       `campaign/cutoff` (2026-11-09 17:00) if needed.
+  - **Resumed at about 22:35 KST, 5 November, at about 20% of the machine** (at the author's request).
+    - The cap is 6 workers, of 32 hardware threads.
+    - A hard cgroup ceiling also applies:
+      `systemctl --user set-property --runtime es8-b64-campaign CPUQuota=640% IOWeight=10`.
+    - At this rate the remaining work takes about 10 days, so the 9 November cutoff will stop it partway unless it is
+      extended.
 - **After it finishes:**
   - if every context closes, assemble the full tree (master levels plus subtrees) and replay it exactly;
   - check it in Lean with the compact checker (`experiments/omission-compact-checker-2026-11-05`, once gate G2
