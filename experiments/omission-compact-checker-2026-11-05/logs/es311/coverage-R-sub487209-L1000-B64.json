@@ -1,0 +1,60 @@
+{
+ "manifest": "build/es311/trial/R-sub487209-L1000-B64/manifest-E311R.json",
+ "checks": {
+  "part_sha256": true,
+  "tree_sha256": true,
+  "budget": true,
+  "tree_is_tree": true,
+  "expected_leaves": true,
+  "base_path": true,
+  "module_leaf_counts": true,
+  "every_leaf_exactly_once": true,
+  "sum_of_module_leaves": true,
+  "skeleton": true,
+  "module_files": true,
+  "root_references": true
+ },
+ "written_modules": 6,
+ "leaves": 4600,
+ "modules": 6,
+ "subtree_roots": 6,
+ "files": [
+  {
+   "module": "E311R.C00001",
+   "ok": true,
+   "leaf_terms": 584,
+   "blocks": 15
+  },
+  {
+   "module": "E311R.C00002",
+   "ok": true,
+   "leaf_terms": 935,
+   "blocks": 22
+  },
+  {
+   "module": "E311R.C00003",
+   "ok": true,
+   "leaf_terms": 614,
+   "blocks": 16
+  },
+  {
+   "module": "E311R.C00004",
+   "ok": true,
+   "leaf_terms": 985,
+   "blocks": 22
+  },
+  {
+   "module": "E311R.C00005",
+   "ok": true,
+   "leaf_terms": 820,
+   "blocks": 20
+  },
+  {
+   "module": "E311R.C00006",
+   "ok": true,
+   "leaf_terms": 662,
+   "blocks": 16
+  }
+ ],
+ "PASS": true
+}

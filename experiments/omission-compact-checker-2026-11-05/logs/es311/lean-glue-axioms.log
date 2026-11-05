@@ -1,0 +1,40 @@
+# lean_make.sh builds of 6 November 2026 (LM_NICE=5; one lean process under MemoryMax=12G, CPUQuota=100%). Peak RSS from /usr/bin/time -v in GB = kB/10^6 (it counts memory-mapped .olean pages).
+== CompactChecker.Path: exit 0, wall 0:02.60, peak RSS 3.04 GB, stamp 60a01f9ca4837a3d
+   CompactChecker.split_pm: [propext, Classical.choice, Quot.sound]
+   CompactChecker.mset_zeros: [propext, Classical.choice, Quot.sound]
+   CompactChecker.mem_mset_zero_occupied: [propext, Classical.choice, Quot.sound]
+== CompactChecker.Fcat2650: exit 0, wall 1:33.67, peak RSS 9.02 GB, stamp ed47736434a997e0
+   CompactChecker.fcat2650_wf: [propext]
+== CompactChecker.Bridge311Res: exit 0, wall 0:32.44, peak RSS 5.91 GB, stamp 3a971dcba15afdf7
+   CompactChecker.Bridge311Res.res_support: [propext, Classical.choice, Quot.sound]
+   CompactChecker.Bridge311Res.residual_of_root: [propext, Classical.choice, Quot.sound]
+== CompactChecker.Bridge311Bal: exit 0, wall 1:11.26, peak RSS 8.31 GB, stamp f12bf121afc4e389
+   CompactChecker.Bridge311Bal.fcat62_rows: [propext, Classical.choice, Quot.sound]
+   CompactChecker.Bridge311Bal.balanced_of_root: [propext, Classical.choice, Quot.sound]
+== CompactChecker.Bridge311Defs: exit 0, wall 0:02.84, peak RSS 3.16 GB, stamp 19ea6888a03a96b5
+   CompactChecker.Bridge311Defs.balanced_bridge_is_ExcludesHoleBudget: [propext, Classical.choice, Quot.sound]
+   CompactChecker.Bridge311Defs.residual_bridge_is_Excludes2650Zero: [propext, Classical.choice, Quot.sound]
+== BalancedProof.Catalog (external, pinned): exit 0, wall 1:59.74, peak RSS 4.85 GB, stamp a749a1874d3343cc
+   OmissionBalanced.code_correct: [propext, Classical.choice, Quot.sound]
+== BalancedCoverCutsV2 (external, pinned): exit 0, wall 25:45.09, peak RSS 15.12 GB, stamp 3f6372587da6e966
+   BalancedCoverCutsV2.cut0: [propext, Classical.choice, Quot.sound]
+   BalancedCoverCutsV2.cut25: [propext, Classical.choice, Quot.sound]
+   BalancedCoverCutsV2.cut50: [propext, Classical.choice, Quot.sound]
+   BalancedCoverCutsV2.cut75: [propext, Classical.choice, Quot.sound]
+   BalancedCoverCutsV2.cut100: [propext, Classical.choice, Quot.sound]
+   BalancedCoverCutsV2.cut125: [propext, Classical.choice, Quot.sound]
+   BalancedCoverCutsV2.cut150: [propext, Classical.choice, Quot.sound]
+   BalancedCoverCutsV2.cut175: [propext, Classical.choice, Quot.sound]
+   BalancedCoverCutsV2.cut200: [propext, Classical.choice, Quot.sound]
+   BalancedCoverCutsV2.cut225: [propext, Classical.choice, Quot.sound]
+   BalancedCoverCutsV2.cut250: [propext, Classical.choice, Quot.sound]
+   BalancedCoverCutsV2.cut275: [propext, Classical.choice, Quot.sound]
+   BalancedCoverCutsV2.cut300: [propext, Classical.choice, Quot.sound]
+   BalancedCoverCutsV2.cut325: [propext, Classical.choice, Quot.sound]
+   BalancedCoverCutsV2.cut350: [propext, Classical.choice, Quot.sound]
+   BalancedCoverCutsV2.cut375: [propext, Classical.choice, Quot.sound]
+   BalancedCoverCutsV2.cut400: [propext, Classical.choice, Quot.sound]
+   BalancedCoverCutsV2.cut425: [propext, Classical.choice, Quot.sound]
+   BalancedCoverCutsV2.all_rows: [propext, Classical.choice, Quot.sound]
+== Residual32Bridge2650.Catalog (external, pinned): exit 0, wall 2:46.36, peak RSS 5.53 GB, stamp f30d997e1aeab112
+   OmissionResidual32Bridge2650.code_correct: [propext, Classical.choice, Quot.sound]

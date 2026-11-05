@@ -1,0 +1,878 @@
+% k8_soundness_p1.tex -- adapted copy for preprint P1 (6 November 2026).
+% Source: WRITEUP/note/k8_soundness.tex, SHA-256 197bc2149619e05210fafb558576b45447925abe8f2537ecf176f41f68e7c32e
+% (as committed in 597961bbd). The ONLY changes are four cross-references and two footnotes: the two pointers to
+% the companion certificate section (one naming the draft STATUS20261104/k8_section.tex) now point to
+% Section~\ref{sec:cert} of P1, the trust-table row says (Section~\ref{sec:cert}) instead of (companion section),
+% 'As in the rest of the note' reads 'As in Section~\ref{sec:defs}'; a footnote after 'Lean was not rerun for this
+% section' points to the re-check of 6 November in Section~\ref{sec:layer}; and a footnote after 'fresh runs reproduce
+% the formula files byte for byte' says what is on record for the 64 sixfold cube files (Section~\ref{sec:enc}).
+% Mathematical text, rigor tags and the gaps (G1)-(G4) are unchanged.
+% Check with: diff WRITEUP/note/k8_soundness.tex WRITEUP/P1/k8_soundness_p1.tex
+%
+% k8_soundness.tex -- soundness of the SAT encodings behind the k = 8 rotational upper bounds
+% (C6UPPER: sixfold, 11 layers; C7UPPER: sevenfold, 10 layers).  Draft of 6 November 2026.
+%
+% An \input-able section.  It needs the macros \orient, \conv, \dirn, \lean of symmetric_extremal.tex, the theorem
+% environments theorem, lemma, proposition, corollary, definition, remark, the packages amsmath, amssymb, enumitem,
+% booktabs, array (for the >{...}p{...} columns of the trust table), hyperref, and the bibliography key Supp.
+% Labels are prefixed k8s: (the draft k8_section.tex uses k8:).
+% Compile check: k8_soundness_wrapper.tex.  The exact checks cited below are k8_soundness_checks.py (output in
+% k8_soundness_checks.log), in this directory.
+% MERGE NOTE: the section cites CHORD20261105, STATUS20261104 and WRITEUP/note as part of Supp.  The Supp entry of
+% symmetric_extremal.tex (6 November) does not list them; add them to it when this section is \input there.
+
+\providecommand{\py}[1]{{\upshape\nolinkurl{#1}}}
+\providecommand{\sgn}{\operatorname{sgn}}
+\providecommand{\dirv}{\operatorname{dir}}
+
+\section{Soundness of the encodings for the \texorpdfstring{$k=8$}{k=8} rotational upper bounds}\label{k8s:sec}
+
+The sixfold and sevenfold upper bounds for $k=8$ rest on unsatisfiability certificates for CNF formulas written by
+two programs~\cite{Supp}:
+\begin{itemize}
+\item \emph{encoder B}, \dirn{C6UPPER/encb/gen_b2.py} (SHA-256 \texttt{3d47459a\dots}), which decides the angular
+configuration of every triple by integer comparisons; at $(m,K,t)=(7,8,10)$ it reproduces byte for byte the certified
+encoder-B formula of \dirn{C7UPPER} (SHA-256 \texttt{b4d29017\dots}, written by \dirn{C7UPPER/gen_b.py}; exact
+computation, \dirn{C6UPPER}~\S3b);
+\item \emph{encoder A}, \dirn{C7UPPER/gen.py} (SHA-256 \texttt{4564e7f0\dots}), which classifies one representative
+phase vector per pattern in binary64 arithmetic.
+\end{itemize}
+This section proves that the formulas are \emph{sound}: every real configuration that the upper bounds exclude
+yields a satisfying assignment. Encoder B is the primary object; encoder A is treated as a cross-check
+(Proposition~\ref{k8s:prop:A}). The instances are $(m,K,t)=(6,8,11)$ and $(7,8,10)$; the lemmas are stated for $m\ge3$
+and $4\le K\le 2m$ where this costs nothing, except that the soundness of encoder~A is proved only for
+$m\in\{6,7\}$. The certificates themselves, and which of their cake\_lpr verdicts have
+been replayed against hashed files, are described in Section~\ref{sec:cert}; here we prove only the implication from unsatisfiability to geometry.
+
+\paragraph{Rigor labels.} \emph{Lean-checked} items are in \dirn{LAYERLEAN/LayerLemma.lean} (SHA-256
+\texttt{afb8542d\dots}, the file as committed in \texttt{393619a57}; namespace \lean{ErdosSzekeres.LayerLemma};
+Lean~4.24.0, Mathlib \texttt{f897ebcf}; the axiom check \dirn{LAYERLEAN/logs/axioms.log} reports only \lean{propext},
+\lean{Classical.choice}, \lean{Quot.sound} for every cited theorem of that file); the declaration names below were
+checked against that file, and Lean was not rerun for this section.\footnote{Note added in this paper: for this paper the file was checked again with \texttt{lake env lean} on 6 November 2026; see Section~\ref{sec:layer}, ``Build and axioms''.} \emph{Written proof (not refereed)} means a
+complete proof given here. Most of them expand arguments reviewed on 4 November 2026 with no blocking gap found
+(\dirn{C6C7REVIEW/SOUNDNESS.md}). The others have had no internal review: those marked \emph{new here} are new
+arguments, and those marked \emph{not in the review} are standard facts or assembly steps that the review does not
+contain. Line numbers refer to \dirn{gen_b2.py} with the SHA-256 above. Statements about what a program emits are
+established by reading its source (Section~\ref{k8s:sec:trust}, gap~(G1)).
+
+\subsection{Configurations and layers}\label{k8s:sec:setting}
+
+Let $O$ be the origin, $e(\varphi)=(\cos\varphi,\sin\varphi)$, and $\rho$ the counterclockwise rotation by $2\pi/m$
+about $O$ (the Lean \lean{rotAbout} with centre $O$ and angle $2\pi/m$). As in Section~\ref{sec:defs},
+$\orient(p,q,r)=(x_q-x_p)(y_r-y_p)-(y_q-y_p)(x_r-x_p)$ (the Lean \lean{orient}). It is invariant under translations
+and rotations, changes sign under reflections, and $\orient(p_{\pi(1)},p_{\pi(2)},p_{\pi(3)})=\sgn(\pi)\orient(p_1,p_2,p_3)$
+for every permutation $\pi$. A finite set $X$ is in \emph{general position} if no three of its points are collinear
+(Lean \lean{GeneralPosition}). It is in \emph{convex position} if it is convex independent: Lean \lean{ConvexPosition}
+is defined as Mathlib's \lean{ConvexIndependent} of the inclusion of $X$, and by Mathlib's
+\lean{convexIndependent_set_iff_notMem_convexHull_diff} this holds if and only if $x\notin\conv(X\setminus\{x\})$ for
+every $x\in X$. A set $S$ is \emph{$K$-free} if no $K$-element subset of $S$ is in convex position, that is, if
+$\neg\,$\lean{HasConvexNGon}$\;K\;S$. For a finite set $X$ let $\mathrm{hv}(X)=\{x\in X: x\notin\conv(X\setminus\{x\})\}$
+(Lean \lean{hullVerts}), and let $\mathrm{peel}(X,0)=X$,
+$\mathrm{peel}(X,n+1)=\mathrm{peel}(X,n)\setminus\mathrm{hv}(\mathrm{peel}(X,n))$ (Lean \lean{peel}).
+
+\begin{definition}[nested regular $m$-gons]\label{k8s:def:nested}
+A \emph{set of $t$ nested regular $m$-gons} is a set $S=L_0\cup\dots\cup L_{t-1}$, where each $L_i=\{\rho^kx_i:k\in\mathbb Z\}$
+is the orbit of a point $x_i\ne O$ (a regular $m$-gon centred at $O$ with $m$ vertices), the $L_i$ are pairwise
+disjoint, and $L_j\subseteq\conv(L_i)$ for $i<j$. Write $r_i=|x_i|$. General position and $K$-freeness are separate
+hypotheses.
+\end{definition}
+
+\begin{lemma}[layer lemma; Lean-checked (\lean{layers_are_orbits}, \lean{card_peel}, \lean{hullVerts_eq_orbitFS_rotAbout});
+the assembly below is a written step, not in the review]\label{k8s:lem:layer}
+Let $m\ge1$, $K\le2m$ and $t\ge1$, and let $S$ be a finite $\rho$-invariant $K$-free set with $O\notin S$ and $|S|=mt$.
+Put $L_n=\mathrm{hv}(\mathrm{peel}(S,n))$ for $n<t$. Then each $L_n$ is one $\rho$-orbit of exactly $m$ points, the $L_n$
+are pairwise disjoint, $\mathrm{peel}(S,n)=L_n\cup\dots\cup L_{t-1}$ (in particular $S=L_0\cup\dots\cup L_{t-1}$), and
+$L_j\subseteq\conv(L_i)$ for $i<j$. So $S$, with these layers, is a set of $t$ nested regular $m$-gons.
+\end{lemma}
+
+\begin{proof}
+For every $n$ with $\mathrm{peel}(S,n)\ne\emptyset$, \lean{layers_are_orbits} gives a point $x\in\mathrm{peel}(S,n)$ (so
+$x\ne O$) with $\mathrm{hv}(\mathrm{peel}(S,n))=\{\rho^kx:0\le k<m\}$, a set of exactly $m$ points, and
+$\mathrm{peel}(S,n+1)\subseteq\conv\mathrm{hv}(\mathrm{peel}(S,n))$; as $\rho^m=\mathrm{id}$, this set is the orbit
+$\{\rho^kx:k\in\mathbb Z\}$. Since $m(t-1)<|S|$, \lean{card_peel} gives $|\mathrm{peel}(S,n)|=|S|-mn$ for $n\le t$; so
+$\mathrm{peel}(S,n)\ne\emptyset$ for $n<t$ and $\mathrm{peel}(S,t)=\emptyset$. By definition, $\mathrm{peel}(S,n)$ is the
+disjoint union of $L_n$ and $\mathrm{peel}(S,n+1)$, since $\mathrm{hv}(X)\subseteq X$. Downward induction from
+$\mathrm{peel}(S,t)=\emptyset$ gives $\mathrm{peel}(S,n)=L_n\sqcup\dots\sqcup L_{t-1}$, a disjoint union. For $i<j$,
+$L_j\subseteq\mathrm{peel}(S,j)\subseteq\mathrm{peel}(S,i+1)\subseteq\conv(L_i)$.
+\end{proof}
+
+\begin{definition}[admissible sets]\label{k8s:def:adm}
+Let $m\ge3$, $4\le K\le2m$ and $t\ge1$. A finite set $S\subseteq\mathbb R^2$ is \emph{$(m,K,t)$-admissible} if it is
+$\rho$-invariant, $O\notin S$, $|S|=mt$, and $S$ is in general position and $K$-free. Its \emph{layers} are
+$L_n=\mathrm{hv}(\mathrm{peel}(S,n))$, $0\le n<t$. By Lemma~\ref{k8s:lem:layer}, $S$ with these layers is a set of $t$
+nested regular $m$-gons, so Definition~\ref{k8s:def:phase} below applies to it.
+\end{definition}
+
+From here on, every configuration is an admissible set with these layers. The Lean theorems are stated for
+$\mathrm{hv}(\mathrm{peel}(S,n))$ and $\mathrm{peel}(S,n)$, so they apply to the layers with no translation step.
+
+\begin{lemma}[affine images; written proof (not refereed), routine, not in the review]\label{k8s:lem:affine}
+Let $g$ be an affine bijection of $\mathbb R^2$. Then $\conv(gY)=g\conv(Y)$ for every $Y\subseteq\mathbb R^2$, so
+$\mathrm{hv}(gX)=g\,\mathrm{hv}(X)$ and $\mathrm{peel}(gX,n)=g\,\mathrm{peel}(X,n)$ for every finite $X$ and every $n$; and $g$
+preserves general position, convex position and $K$-freeness. If moreover $g(O)=O$ and $g\rho g^{-1}\in\{\rho,\rho^{-1}\}$,
+then $g$ maps every $(m,K,t)$-admissible set $S$ to an $(m,K,t)$-admissible set whose layers are
+$g(L_0),\dots,g(L_{t-1})$, in this order.
+\end{lemma}
+
+\begin{proof}
+$g$ and $g^{-1}$ map convex combinations to convex combinations, so $g\conv(Y)=\conv(gY)$. Hence, for $x\in X$,
+$x\in\conv(X\setminus\{x\})$ if and only if $gx\in\conv(gX\setminus\{gx\})$; this gives $\mathrm{hv}(gX)=g\,\mathrm{hv}(X)$,
+and, since the injective map $g$ commutes with set differences, $\mathrm{peel}(gX,n)=g\,\mathrm{peel}(X,n)$ by induction
+on $n$. The same equivalence, applied to subsets, shows that $g$ preserves convex position (in the form
+$x\notin\conv(X\setminus\{x\})$ for all $x$), hence $K$-freeness; $g$ and $g^{-1}$ preserve collinearity, hence general
+position. If $g\rho g^{-1}=\rho^{\pm1}$, then also $g^{-1}\rho g=\rho^{\pm1}$, so $\rho(gS)=g\rho^{\pm1}(S)=gS$; here
+$\rho^{-1}S=S$ because $\rho$ maps the finite set $S$ injectively into itself. Also $O=g(O)\notin gS$ and $|gS|=|S|$.
+The layers of $gS$ are $\mathrm{hv}(\mathrm{peel}(gS,n))=g\,\mathrm{hv}(\mathrm{peel}(S,n))=g(L_n)$.
+\end{proof}
+
+\begin{remark}[nested $m$-gons are admissible; written proof (not refereed), new here]\label{k8s:rem:ident}
+Let $m\ge3$ and $4\le K\le2m$. If $S$ is a set of $t$ nested regular $m$-gons $L_0,\dots,L_{t-1}$
+(Definition~\ref{k8s:def:nested}) that is in general position and $K$-free, then $S$ is $(m,K,t)$-admissible and
+$\mathrm{hv}(\mathrm{peel}(S,n))=L_n$ for $n<t$: its layers in the sense of Definition~\ref{k8s:def:adm} are the given
+ones, in the given order. This is used only to restate Theorem~\ref{k8s:thm:sound} for sets presented as nested
+$m$-gons. It is not used for Corollary~\ref{k8s:cor:geom}, so it is not part of the trust base of the upper bounds.
+\end{remark}
+
+\begin{proof}
+A nontrivial rotation about $O$ fixes only $O$, and $x_i\ne O$, so each orbit $L_i$ has exactly $m$ points and avoids
+$O$; the $L_i$ are $\rho$-orbits and pairwise disjoint, so $S$ is $\rho$-invariant, $O\notin S$ and $|S|=mt$. Let
+$U_n=L_n\cup\dots\cup L_{t-1}$; we show $\mathrm{hv}(U_n)=L_n$. Then $\mathrm{peel}(S,n)=U_n$ follows by induction on $n$,
+because $U_n\setminus L_n=U_{n+1}$.
+If $y\in L_j$ with $j>n$, then $y\in\conv(L_n)\subseteq\conv(U_n\setminus\{y\})$, so $y\notin\mathrm{hv}(U_n)$. Let
+$x\in L_n$ and $f(y)=\langle y,x\rangle$. For $y\in L_n\setminus\{x\}$ we have $f(y)=r_n^2\cos\gamma<r_n^2=f(x)$, where
+$\gamma\not\equiv0\pmod{2\pi}$ is the angle between $x$ and $y$. Hence on $\conv(L_n)$ the value $f(x)$ is attained only at
+$x$ (a convex combination with value $f(x)$ puts all its weight on $x$). Every $y\in U_n\setminus\{x\}$ lies in
+$\conv(L_n)$ and differs from $x$, so $f(y)<f(x)$; the maximum of the linear function $f$ on the polytope
+$\conv(U_n\setminus\{x\})$ is attained at a point of $U_n\setminus\{x\}$, hence is $<f(x)$, and $x\notin\conv(U_n\setminus\{x\})$.
+\end{proof}
+
+By Lemma~\ref{k8s:lem:layer} and Remark~\ref{k8s:rem:ident}, the $(m,K,t)$-admissible sets are exactly the $K$-free
+sets of $t$ nested regular $m$-gons in general position, with the same layers. Only the first direction
+(Lemma~\ref{k8s:lem:layer}) enters the proofs below.
+
+\begin{lemma}[centre exclusion; Lean-checked (\lean{centre_not_mem_of_even})]\label{k8s:lem:centre}
+If $m$ is even and $S$ is $\rho$-invariant, in general position, and contains a point $p\ne O$, then $O\notin S$.
+\end{lemma}
+
+\begin{proof}
+$\rho^{m/2}$ is the half-turn, so $-p\in S$, and $p,O,-p$ are three distinct collinear points.
+\end{proof}
+
+Hence a sixfold symmetric set in general position other than $\{O\}$ has $6t$ points, and $61$ points force $t\ge11$;
+a sevenfold one has $7t$ or $7t+1$ points, and $65$ points force $t\ge10$. The reduction of the two upper bounds to
+the propositions \lean{Sixfold66} and \lean{Sevenfold70} (every centre-free set of $66$, resp.\ $70$, points in general
+position with sixfold, resp.\ sevenfold, rotational symmetry has a convex octagon) is Lean-checked:
+\lean{convexNGon_of_layers}, \lean{sixfold_octagon}, \lean{sevenfold_octagon}. In the language of
+Definition~\ref{k8s:def:adm}, and after translating the centre to $O$, \lean{Sixfold66} says that no
+$(6,8,11)$-admissible set exists, and \lean{Sevenfold70} that no $(7,8,10)$-admissible set exists.
+
+\begin{lemma}[strict nesting and radius order; Lean-checked (\lean{strict_nesting}, \lean{dist2_le_of_later})]\label{k8s:lem:nest}
+Let $S$ be $(m,K,t)$-admissible with layers $L_n$. For $i<j$, $x\in L_i$ and $y\in L_j$ we have $\orient(x,\rho x,y)>0$;
+for $i\le j$ we have $r_j\le r_i$.
+\end{lemma}
+
+\begin{proof}
+$x\in\mathrm{hv}(\mathrm{peel}(S,i))$ by the definition of $L_i$, and $y\in L_j\subseteq\mathrm{peel}(S,j)$ (Lean
+\lean{hullVerts_subset}). Together with $\rho$-invariance, $O\notin S$, general position, $K$-freeness, $m\ge2$ and
+$K\le2m$, these are the hypotheses of \lean{strict_nesting} (layers $n=i<n'=j$) and of \lean{dist2_le_of_later}
+($n=i\le n'=j$, which gives $|y|^2\le|x|^2$), both with centre $O$.
+\end{proof}
+
+\subsection{Phases, genericity and the intended assignment}\label{k8s:sec:phases}
+
+\begin{definition}[phases, labels, genericity]\label{k8s:def:phase}
+Let $S$ be a set of $t$ nested regular $m$-gons. The directions of the points of $L_i$ form a coset of
+$(2\pi/m)\mathbb Z$ modulo $2\pi$, which meets $[0,2\pi/m)$ in exactly one value $\theta_i$, the \emph{phase} of $L_i$.
+For $(i,k)\in\Lambda=\{0,\dots,t-1\}\times\mathbb Z/m$ put $P(i,k)=r_i\,e(\theta_i+2\pi k/m)$; then $(i,k)\mapsto P(i,k)$
+is a bijection $\Lambda\to S$ and $\rho P(i,k)=P(i,k+1)$. We order $\Lambda$ lexicographically, with
+$k\in\{0,\dots,m-1\}$. The configuration is \emph{normalised} if $\theta_0=0$. Let $u=\pi/m$ for odd $m$ and $u=2\pi/m$
+for even $m$, and $\psi_i=\theta_i\bmod u\in[0,u)$; for odd $m$ let $h_i\in\{0,1\}$ with $\theta_i=\psi_i+h_i\pi/m$. The
+configuration is \emph{generic} if $\theta_i-\theta_j\notin u\mathbb Z$ for all $i\ne j$. For a normalised configuration
+this says that $\psi_1,\dots,\psi_{t-1}$ are pairwise distinct and nonzero ($\psi_0=0$); then $\theta_i\in(0,2\pi/m)$ for
+$i\ge1$, and $\theta_i\ne\pi/m$ when $m$ is odd.
+\end{definition}
+
+Genericity does not depend on the order of the layers, and it is preserved by rotations about $O$.
+
+\begin{lemma}[collinearity with the centre; written proof (not refereed), new here]\label{k8s:lem:collinear}
+A set of $t$ nested regular $m$-gons is generic if and only if any two distinct points $p,q\in S$ collinear with $O$
+satisfy: $m$ is even and $q=-p$ (so $p,q$ lie in one layer and $q=\rho^{m/2}p$).
+\end{lemma}
+
+\begin{proof}
+$P(i,k)$ and $P(j,l)$ are collinear with $O$ if and only if their directions differ by a multiple of $\pi$, that is,
+$\theta_i-\theta_j+2\pi(k-l)/m\in\pi\mathbb Z$. Now $\pi\mathbb Z+(2\pi/m)\mathbb Z=u\mathbb Z$: for odd $m$ because
+$\pi=m\cdot\frac{\pi}{m}$, $\frac{2\pi}{m}=2\cdot\frac\pi m$ and $\gcd(m,2)=1$; for even $m$ because
+$\pi=\frac m2\cdot\frac{2\pi}m$. So for $i\ne j$ some $P(i,k)$, $P(j,l)$ are collinear with $O$ if and only if
+$\theta_i-\theta_j\in u\mathbb Z$. For $i=j$ the condition is $2(k-l)\in m\mathbb Z$: for odd $m$ this forces $k=l$, and for
+even $m$ it gives $k=l$ or $l=k+m/2$, i.e.\ $P(i,l)=-P(i,k)$.
+\end{proof}
+
+\begin{lemma}[convex position is decided by orientations; written proof (not refereed), standard, not in the
+review]\label{k8s:lem:convpos}
+Let $X$ be finite and in general position, and $x\in X$. Then $x\in\conv(X\setminus\{x\})$ if and only if there are
+distinct $a,b,c\in X\setminus\{x\}$ such that $\orient(b,c,x)$, $\orient(c,a,x)$ and $\orient(a,b,x)$ all have the sign
+of $\orient(a,b,c)$. Consequently, if a bijection between two finite sets in general position preserves the sign of
+$\orient$ on all triples, it maps subsets in convex position to subsets in convex position.
+\end{lemma}
+
+\begin{proof}
+By Carath\'eodory's theorem in the plane, $x\in\conv(Y)$ implies $x\in\conv(T)$ for some $T\subseteq Y$ with
+$|T|\le3$. If $|T|\le2$, then $x$ equals a point of $T$ (impossible, $x\notin Y$) or lies on a segment between two
+points of $X$, contradicting general position. So $x\in\conv\{a,b,c\}$ with $\orient(a,b,c)\ne0$. Write
+$x=\lambda_aa+\lambda_bb+\lambda_cc$ with $\lambda_a+\lambda_b+\lambda_c=1$. Since $\orient(b,c,\cdot)$ is affine and
+vanishes at $b,c$, $\orient(b,c,x)=\lambda_a\orient(b,c,a)=\lambda_a\orient(a,b,c)$; likewise
+$\orient(c,a,x)=\lambda_b\orient(a,b,c)$ and $\orient(a,b,x)=\lambda_c\orient(a,b,c)$. Thus $x\in\conv\{a,b,c\}$ iff all
+$\lambda\ge0$, and by general position no $\lambda$ vanishes; this is the stated sign condition. Conversely, if the
+sign condition holds for distinct $a,b,c\in X\setminus\{x\}$, then $\orient(a,b,c)\ne0$, so $x$ has barycentric
+coordinates $\lambda_a,\lambda_b,\lambda_c$ with respect to $a,b,c$; the same identities show that they are positive,
+so $x\in\conv\{a,b,c\}\subseteq\conv(X\setminus\{x\})$. For the consequence, let $f:X\to X'$ be the bijection and
+$Y\subseteq X$. Subsets of a set in general position are in general position, so by the first part and the
+characterisation of convex position recalled in Section~\ref{k8s:sec:setting}, $Y$ is in convex position if and only if
+no $y\in Y$ and distinct $a,b,c\in Y\setminus\{y\}$ satisfy the sign condition. That condition refers only to signs of
+$\orient$ on triples of $Y$, which $f$ preserves; so $Y$ is in convex position if and only if $f(Y)$ is.
+\end{proof}
+
+\begin{lemma}[genericity; written proof (not refereed)]\label{k8s:lem:generic}
+Let $m\ge3$, $4\le K\le2m$.
+\begin{enumerate}[label=(\alph*)]
+\item If $m$ is even, every set of $t$ nested regular $m$-gons in general position is generic.
+\item If $m$ is odd and there is an $(m,K,t)$-admissible set, then there is a generic, normalised
+$(m,K,t)$-admissible set (with its layers as in Definition~\ref{k8s:def:adm}).
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) If $\theta_i-\theta_j\in u\mathbb Z$ with $i\ne j$, the proof of Lemma~\ref{k8s:lem:collinear} gives $k,l$ with
+$P(i,k)$, $P(j,l)$ collinear with $O$; then $P(i,k)$, $P(j,l)$ and $P(j,l+m/2)=-P(j,l)$ are three distinct points of $S$ on
+one line (the first is not in $L_j$), contradicting general position. This is the mechanism of
+Lemma~\ref{k8s:lem:centre}; no perturbation is needed.
+
+(b) Let $S$ be $(m,K,t)$-admissible, with layers $L_i$, radii $r_i$ and phases $\theta_i$ (Lemma~\ref{k8s:lem:layer},
+Definition~\ref{k8s:def:phase}). For $\delta=(\delta_1,\dots,\delta_{t-1})\in\mathbb R^{t-1}$ and $\delta_0=0$ put
+$P_\delta(i,k)=r_i\,e(\theta_i+\delta_i+2\pi k/m)$ and $S_\delta=\{P_\delta(\lambda):\lambda\in\Lambda\}$. For distinct labels
+$\lambda,\mu,\nu$ the function $\delta\mapsto\orient(P_\delta(\lambda),P_\delta(\mu),P_\delta(\nu))$ is continuous and is
+nonzero at $\delta=0$, by general position of $S$. There are finitely many label triples, so there is $\varepsilon>0$
+such that for $\|\delta\|_\infty<\varepsilon$ all these orientations have their signs at $\delta=0$. Fix such a
+$\delta$. Then:
+(1) distinct labels give distinct points, since $P_\delta(\lambda)=P_\delta(\mu)$ would make
+$\orient(P_\delta(\lambda),P_\delta(\mu),P_\delta(\nu))=0$ for any third label $\nu$; so $|S_\delta|=mt$;
+(2) $S_\delta$ is in general position;
+(3) $S_\delta$ is $\rho$-invariant and $O\notin S_\delta$ (each $L_i$ is rotated as a whole and $r_i>0$);
+(4) by Lemma~\ref{k8s:lem:convpos} applied to $P(\lambda)\mapsto P_\delta(\lambda)$ and its inverse, $S_\delta$ is $K$-free.
+So $S_\delta$ is $(m,K,t)$-admissible, and by Lemma~\ref{k8s:lem:layer} its layers are $\rho$-orbits. Its $\rho$-orbits
+are the rotated layers $\{P_\delta(i,k):k\}$ (the orbits of $\rho$ on a set are determined by the set), so its layers
+are these orbits in some order (in fact in the original order, because the nesting signs of Lemma~\ref{k8s:lem:nest}
+are preserved, but this is not needed), and their phases are $\theta_i+\delta_i\bmod 2\pi/m$. Since genericity does not
+depend on the order of the layers, $S_\delta$ is generic as soon as
+\[
+\delta\notin B=\bigcup_{0\le i<j\le t-1}\{\delta:\ \delta_i-\delta_j\in\theta_j-\theta_i+u\mathbb Z\}\qquad(\delta_0=0).
+\]
+For each pair $i<j$, the values $\delta_i-\delta_j$ on the box $(-\varepsilon,\varepsilon)^{t-1}$ lie in an interval of
+length $4\varepsilon$, which meets $\theta_j-\theta_i+u\mathbb Z$ in finitely many points $c$; each set
+$\{\delta_i-\delta_j=c\}$ (or $\{\delta_j=-c\}$ when $i=0$) is a proper affine hyperplane of $\mathbb R^{t-1}$. A finite
+union of proper hyperplanes has empty interior, so the box contains a $\delta\notin B$. Finally rotate $S_\delta$ about
+$O$ so that its outermost layer has phase $0$: by Lemma~\ref{k8s:lem:affine} (a rotation about $O$ commutes with $\rho$)
+the result is admissible with the rotated layers in the same order, and since all phases change by the same constant
+modulo $2\pi/m$, it is still generic. (If $t=1$ there is nothing to perturb.)
+\end{proof}
+
+For odd $m$ the perturbation is needed even though $S$ is in general position: a point and another point on the
+opposite ray from $O$ are collinear with $O$, which is not a point of $S$ (the centre of an original sevenfold set is
+removed in the reduction). By Lemma~\ref{k8s:lem:collinear}, after the perturbation no two points of $S$ are
+collinear with $O$.
+
+\begin{definition}[intended assignment]\label{k8s:def:assign}
+Let $S$ be a generic, normalised $(m,K,t)$-admissible set, with its layers $L_n=\mathrm{hv}(\mathrm{peel}(S,n))$. Its
+\emph{intended assignment} $\alpha_S$ gives
+\begin{itemize}
+\item the phase-order variable $Y(i,j)$, $1\le i<j\le t-1$, the value $[\psi_i<\psi_j]$;
+\item for odd $m$, the variable $H(i)$, $1\le i\le t-1$, the value $[\theta_i<\pi/m]=[h_i=0]$;
+\item the orientation variable $v_c$ of a triple orbit with representative $c=(c_0,c_1,c_2)$ (sorted in $\Lambda$;
+Definition~\ref{k8s:def:orbits}), the
+value $[\orient(P(c_0),P(c_1),P(c_2))>0]$;
+\item the chain variables the values defined in Section~\ref{k8s:sec:other} (before Lemma~\ref{k8s:lem:chain}).
+\end{itemize}
+\end{definition}
+
+In both encoders $\psi_0=0$ is the least phase and $h_0=0$. Encoder~B gives layer $0$ rank $0$ and $h=0$ (lines~91
+and~94). In encoder~A, \py{Enc.patterns} keeps only the orders that put layer $0$ first, gives it the phase
+\texttt{0.0} and no $H$ literal (\dirn{gen.py} lines 190, 211 and 218--219), and \py{ylit} returns the constants
+\texttt{True}/\texttt{False} for pairs involving layer $0$ (lines 125--135); the helper \py{hlit} is never called.
+Encoder~B numbers the variables
+$Y(i,j)$ first (lines 36--39, lexicographically in $(i,j)$), then $H(i)$ for odd $m$ (line 40), then the orientation
+variables (lines 50--55), then the chain variables on demand (lines 161--165). Encoder~A numbers the orientation
+variables first, then $Y$, then $H$, then the chain variables (\py{Enc.__init__}, \py{fam_chain}).
+
+\subsection{Triple orbits and orientation variables}\label{k8s:sec:orbits}
+
+\begin{definition}[triple orbits, orientation variables]\label{k8s:def:orbits}
+The rotation acts on $\Lambda$ by $(i,k)\mapsto(i,k+1)$ and on its $3$-element subsets; the orbits of the latter are the
+\emph{triple orbits}. Each encoder has one \emph{orientation variable} $v_c$ per triple orbit, indexed by a
+representative $c=(c_0,c_1,c_2)$ sorted in $\Lambda$, meant to express $\orient(P(c_0),P(c_1),P(c_2))>0$.
+\end{definition}
+
+Encoder~B's representative \py{canon}$(T)$ (lines 42--49) is the lexicographically least of the
+sorted lists $\rho^{-k}T$, $(i,k)\in T$; one variable is allocated per value of \py{canon} (lines 50--55). For an ordered
+triple of distinct labels, \py{olit} (lines 63--76) computes $c=$\py{canon}$(\{a,b,d\})$, takes the first point
+$(i_0,k_0)$ of the list $[a,b,d]$ such that the sorted list of $\rho^{-k_0}[a,b,d]$ equals $c$, puts
+$\mathit{rt}=\rho^{-k_0}[a,b,d]$ and lets $\omega$ be the permutation with $c_j=\mathit{rt}_{\omega(j)}$; it returns $v_c$ if
+$\sgn\omega=+1$ and $\neg v_c$ otherwise.
+
+\begin{lemma}[one variable per triple orbit; written proof (not refereed)]\label{k8s:lem:orbit}
+\begin{enumerate}[label=(\alph*)]
+\item \py{canon} is constant on each triple orbit, and \py{canon}$(T)$ lies in the orbit of $T$; so encoder~B's
+orientation variables correspond bijectively to the triple orbits.
+\item Under $\alpha_S$, the literal \py{olit}$(a,b,d)$ is true if and only if $\orient(P(a),P(b),P(d))>0$, for every
+ordered triple of distinct labels.
+\item If $\rho^s$ with $s\not\equiv0\pmod m$ maps a $3$-set $T$ onto itself, then $3\mid m$, $T=\{x,\rho^{m/3}x,\rho^{2m/3}x\}$
+lies in one layer, and $\rho^s$ permutes $T$ cyclically. Consequently the sign computed in~(b) does not depend on which
+admissible rotation is used.
+\end{enumerate}
+For $(m,t)=(6,11)$ there are $45{,}760$ triples: the $22$ triples $\{(i,k),(i,k+2),(i,k+4)\}$ form $11$ orbits of
+size~$2$ and the others $7{,}623$ orbits of size~$6$, in total $7{,}634$ orbits. For $(7,10)$ all $7{,}820$ orbits of
+the $54{,}740$ triples have size~$7$ (exact computation, \dirn{k8_soundness_checks.py}; the totals agree with the review's
+independent count, \dirn{C6C7REVIEW/SOUNDNESS.md}).
+\end{lemma}
+
+\begin{proof}
+(a) The candidates for $\rho^rT$ are the lists $\rho^{-(k+r)}\rho^rT=\rho^{-k}T$, $(i,k)\in T$, i.e.\ the candidates for
+$T$. So \py{canon}$(\rho^rT)=$\py{canon}$(T)$, and \py{canon}$(T)$ is the sorted list of some $\rho^{-k}T$. Triples in
+different orbits therefore have different representatives.
+
+(b) The loop of \py{olit} succeeds because \py{canon} is attained by one of the candidates. Let $s=-k_0$. Rotations
+about $O$ preserve $\orient$ and $P(\rho^s\lambda)=\rho^sP(\lambda)$, so
+\[
+\orient(P(a),P(b),P(d))=\orient(P(\mathit{rt}_0),P(\mathit{rt}_1),P(\mathit{rt}_2))
+=\sgn(\omega)\,\orient(P(c_0),P(c_1),P(c_2)),
+\]
+because $(c_0,c_1,c_2)$ is the permutation $\omega$ of $(\mathit{rt}_0,\mathit{rt}_1,\mathit{rt}_2)$ and a permutation and
+its inverse have the same sign. All orientations are nonzero by general position, so \py{olit}$(a,b,d)$, which is
+$v_c$ or $\neg v_c$ according to $\sgn\omega$, is true under $\alpha_S$ exactly when $\orient(P(a),P(b),P(d))>0$. The
+argument holds for every admissible choice of $s$.
+
+(c) A rotation $\rho^s\ne\mathrm{id}$ fixes no point of $\Lambda$ (it fixes only $O$), so it permutes $T$ without fixed
+points, i.e.\ as a $3$-cycle. Then $\rho^{3s}$ fixes $T$ pointwise, so $\rho^{3s}=\mathrm{id}$ and $m\mid3s$ while $m\nmid s$;
+hence $3\mid m$ and $s\equiv\pm m/3$. Rotations preserve layers, so $T\subseteq L_i$ for one $i$ and
+$T=\{x,\rho^{m/3}x,\rho^{2m/3}x\}$. Two admissible rotations $s,s'$ for $T$ differ by a rotation fixing the set
+$\rho^{s}T=c$; the two lists $\mathit{rt}$ then differ by the identity or a $3$-cycle, both even, so $\sgn\omega$ is the
+same. For $m=6$ these are the triangles $\{(i,k),(i,k+2),(i,k+4)\}$, $k\in\{0,1\}$, two per layer, each orbit of size
+$6/3=2$; for $m=7$ there are none. The counts follow: $(\binom{66}{3}-22)/6=7{,}623$ and $\binom{70}{3}/7=7{,}820$.
+\end{proof}
+
+Part~(c) is not needed for~(b); it shows that the literal map never identifies an orientation variable with its own
+negation, which is how the stabiliser question was raised in review. Encoder~A's representative is the least sorted
+list $\rho^sT$ over all $s\in\mathbb Z/m$, and its literal function \py{Enc.o} is correct by the same computation as~(b).
+Its representatives coincide with encoder~B's (exact computation over all $45{,}760$ and $54{,}740$ triples, $0$
+mismatches; \dirn{C6C7REVIEW/SOUNDNESS.md}); soundness does not use this.
+
+\subsection{Directions and the angular classification}\label{k8s:sec:angular}
+
+For $v\ne0$ let $\dirv(v)\in[0,2\pi)$ be its direction. Let $M$ be a set of layer indices, each $i\in M$ with a phase
+$\theta_i\in[0,2\pi/m)$, such that the values $\psi_i=\theta_i\bmod u$, $i\in M$, are pairwise distinct; for odd $m$
+define $h_i$ by $\theta_i=\psi_i+h_i\pi/m$ as in Definition~\ref{k8s:def:phase}. Only directions matter below, so when
+no configuration is given we put $P(i,k)=e(\theta_i+2\pi k/m)$. The two cases used are the layers of a generic
+configuration, with its points $P(i,k)$ (normalised or not), and, in Proposition~\ref{k8s:prop:A}, the layers of one
+triple with the phases sampled by encoder~A. The \emph{objects} of a label $(i,k)$, $i\in M$, are the point $P(i,k)$
+and its antipode $-P(i,k)$ (a direction, not necessarily a point of $S$). Put
+$N=2m$ for odd $m$ and $N=m$ for even $m$, and define the cell index $J\in\{0,\dots,N-1\}$ by
+\[
+J(P(i,k))=(2k+h_i)\bmod 2m,\quad J(-P(i,k))=(J(P(i,k))+m)\bmod 2m\qquad(m\text{ odd}),
+\]
+\[
+J(P(i,k))=k,\quad J(-P(i,k))=(k+m/2)\bmod m\qquad(m\text{ even}).
+\]
+A \emph{rank} is a map $\mathrm{rk}:M\to\mathbb Z$
+with $\mathrm{rk}(i)<\mathrm{rk}(j)\iff\psi_i<\psi_j$; the \emph{key} of an object $\omega$ of layer $i\in M$ is
+$\kappa(\omega)=(J(\omega),\mathrm{rk}(i))$, ordered lexicographically. These are the keys of lines 104--111.
+
+\begin{lemma}[key order; written proof (not refereed)]\label{k8s:lem:keys}
+Let $M$, the phases $\theta_i$ ($i\in M$) and a rank be as above. For objects $\omega$ of layer $i\in M$,
+$\dirv(\omega)=uJ(\omega)+\psi_i$. Hence $\dirv(\omega)<\dirv(\omega')$ if and only if
+$\kappa(\omega)<\kappa(\omega')$, and $\dirv(\omega)=\dirv(\omega')$ if and only if $\kappa(\omega)=\kappa(\omega')$. Two
+distinct objects have equal keys if and only if $m$ is even and they are $P(i,k)$ and $-P(i,k+m/2)$.
+\end{lemma}
+
+\begin{proof}
+For odd $m$, $\theta_i+2\pi k/m=\psi_i+(\pi/m)(2k+h_i)$, and reducing modulo $2\pi=2m\cdot\pi/m$ leaves
+$\psi_i+(\pi/m)J$ with $J=(2k+h_i)\bmod2m$, a value in $[0,2\pi)$ since $\psi_i<\pi/m$; the antipode adds
+$\pi=m\cdot\pi/m$. For even $m$, $\theta_i+2\pi k/m=\psi_i+(2\pi/m)k$ with $0\le k<m$, and the antipode adds
+$\pi=(m/2)\cdot2\pi/m$. The map $(J,\psi)\mapsto uJ+\psi$ from $\{0,\dots,N-1\}\times[0,u)$ to $[0,2\pi)$ is strictly
+increasing for the lexicographic order (if $J<J'$ then $uJ+\psi<u(J+1)\le uJ'+\psi'$), and replacing $\psi$ by a rank
+does not change the lexicographic order. Equal keys mean equal $J$ and equal rank, i.e.\ (the $\psi_i$, $i\in M$, are
+distinct) the same layer.
+Within one layer, two points or two antipodes with equal $J$ have equal $k$, and a point and its own antipode have $J$ differing by $m$ or $m/2$. A point $P(i,k)$ and an antipode
+$-P(i,l)$ with equal $J$ satisfy, for odd $m$, $2(k-l)\equiv m\pmod{2m}$, impossible since $m$ is odd; for even $m$,
+$k\equiv l+m/2$.
+\end{proof}
+
+We call the two orientation rules \emph{rule~A} (centre inside) and \emph{rule~B} (half-plane), as in the Lean
+docstrings; the letters are unrelated to the names of the encoders.
+
+\begin{lemma}[circular dichotomy; written proof (not refereed) for (a), Lean-checked
+(\lean{orient_polar}, \lean{orient_polar_centre_inside}, \lean{orient_polar_halfplane}, \lean{sin_add_lt}) for the signs
+in (b) and (c)]\label{k8s:lem:dich}
+Let $p_1,p_2,p_3\ne O$ be such that the six directions $\dirv(p_a)$ and $\dirv(p_a)+\pi$ are pairwise distinct modulo
+$2\pi$. Read the six objects counterclockwise as a cyclic word in the letters $\mathtt P$ (point) and $\mathtt A$
+(antipode).
+\begin{enumerate}[label=(\alph*)]
+\item The word alternates, or the three letters $\mathtt P$ are cyclically consecutive (a rotation of
+$\mathtt{PPPAAA}$); the case is determined by the word.
+\item (rule A) If it alternates, then $\orient(p_{\sigma(1)},p_{\sigma(2)},p_{\sigma(3)})>0$, where
+$p_{\sigma(1)},p_{\sigma(2)},p_{\sigma(3)}$ are the points in counterclockwise order.
+\item (rule B) If it is a rotation of $\mathtt{PPPAAA}$ and $a,b,d$ are the points in counterclockwise order from the
+first $\mathtt P$ of the block, then the counterclockwise angles $x$ from $\dirv a$ to $\dirv b$ and $y$ from $\dirv b$ to
+$\dirv d$ satisfy $x,y>0$ and $x+y<\pi$; if moreover $|b|\ge|a|$ and $|b|\ge|d|$, then $\orient(a,b,d)>0$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) Let $\alpha_1,\alpha_2,\alpha_3$ be the directions of the points in counterclockwise order, and $g_1,g_2,g_3>0$ the
+counterclockwise gaps ($g_a$ from $\alpha_a$ to $\alpha_{a+1}$, indices modulo $3$), so $g_1+g_2+g_3=2\pi$. No gap equals
+$\pi$, since then a point and the antipode of another would coincide. \emph{Case~1: all $g_a<\pi$.} Then
+$g_a<\pi<g_a+g_{a+1}$ (because $g_{a+2}<\pi$), so $\alpha_a+\pi$ lies in the open arc from $\alpha_{a+1}$ to $\alpha_{a+2}$.
+Each of the three open arcs between consecutive points thus contains the antipode of the opposite point, and there are
+only three antipodes: the word alternates. \emph{Case~2: some gap exceeds $\pi$}; at most one can, and after a cyclic
+relabelling it is $g_3$, so $g_1+g_2<\pi$. Every $\alpha_a$ lies on the closed arc of length $g_1+g_2$ starting at
+$\alpha_1$, so every antipode lies on the closed arc of length $g_1+g_2$ starting at $\alpha_1+\pi$. That arc lies inside
+the open arc from $\alpha_3=\alpha_1+g_1+g_2$ to $\alpha_1+2\pi$, because $\alpha_1+g_1+g_2<\alpha_1+\pi$ and
+$\alpha_1+\pi+g_1+g_2<\alpha_1+2\pi$. So the word is $\mathtt{PPPAAA}$ up to rotation, the block begins at $\alpha_1$, and
+$x=g_1$, $y=g_2$. The two cases give different words.
+
+(b) Case~1. Choose representatives $\alpha<\beta<\delta<\alpha+2\pi$ of the three directions in counterclockwise order.
+Then $\beta-\alpha$, $\delta-\beta$ and $\alpha-\delta+2\pi$ are the gaps, all in $(0,\pi)$, and
+\lean{orient_polar_centre_inside} (with the polar form \lean{orient_polar}) gives $\orient>0$; cyclic rotation of the
+arguments does not change $\orient$.
+
+(c) Case~2 with $\alpha=\alpha_1$, $\beta=\alpha+x$, $\delta=\alpha+x+y$: \lean{orient_polar_halfplane} needs $|a|\le|b|$,
+$|d|\le|b|$, $\beta-\alpha>0$, $\delta-\beta>0$ and $\delta-\alpha<\pi$; its proof uses
+$\sin x+\sin y>\sin(x+y)$ (\lean{sin_add_lt}), as
+\[
+\orient(a,b,d)=|a||b|\sin x+|b||d|\sin y-|d||a|\sin(x+y)\ \ge\ |a||d|\bigl(\sin x+\sin y-\sin(x+y)\bigr)>0.\qedhere
+\]
+\end{proof}
+
+The case in which the six directions are not distinct is excluded by hypothesis; for a generic configuration it
+occurs exactly for a same-layer antipodal pair with even $m$ (Lemma~\ref{k8s:lem:keys}). The written dichotomy in the
+docstring of \dirn{gen.py} omitted this third case; it is treated in Section~\ref{k8s:sec:antipodal}.
+
+\paragraph{Patterns.} Let $c$ be an orbit representative with layer set $M_c$ and free layers $F_c=M_c\setminus\{0\}$. A
+\emph{pattern} $\pi=(\mathrm{rk},h)$ consists of a bijection $\mathrm{rk}:F_c\to\{1,\dots,|F_c|\}$, extended by
+$\mathrm{rk}(0)=0$, and for odd $m$ a map $h:F_c\to\{0,1\}$, extended by $h(0)=0$. Encoder~B enumerates all patterns
+(lines 89--94) and forms the premise list $\mathrm{prem}(\pi)$ (lines 96--102): for $a<b$ in $F_c$ the literal $Y(a,b)$ if
+$\mathrm{rk}(a)<\mathrm{rk}(b)$ and $\neg Y(a,b)$ otherwise, and for odd $m$ and $L\in F_c$ the literal $H(L)$ if $h(L)=0$
+and $\neg H(L)$ otherwise. The \emph{real pattern} $\pi_S$ has $\mathrm{rk}_S(L)=1+\#\{L'\in F_c:\psi_{L'}<\psi_L\}$ and
+$h_S(L)=h_L$.
+
+\begin{lemma}[premises; written proof (not refereed)]\label{k8s:lem:prem}
+All literals of $\mathrm{prem}(\pi)$ are true under $\alpha_S$ if and only if $\pi=\pi_S$. Moreover $\mathrm{rk}_S$ is a
+rank on $M_c$ in the sense above.
+\end{lemma}
+
+\begin{proof}
+The $\psi_L$, $L\in F_c$, are distinct and positive (genericity), so $\mathrm{rk}_S$ is a bijection onto
+$\{1,\dots,|F_c|\}$ and is strictly increasing in $\psi$ also with $\mathrm{rk}_S(0)=0$, $\psi_0=0$. Under $\alpha_S$, the
+pair literal for $a<b$ is true iff $[\mathrm{rk}(a)<\mathrm{rk}(b)]=[\psi_a<\psi_b]$, and the $H$ literal iff $h(L)=h_L$.
+All pairwise comparisons determine a bijection onto $\{1,\dots,|F_c|\}$ uniquely.
+\end{proof}
+
+\begin{lemma}[angular clauses of encoder B; written proof (not refereed)]\label{k8s:lem:angB}
+Every clause emitted at lines 82--141 of \dirn{gen_b2.py} is satisfied by $\alpha_S$.
+\end{lemma}
+
+\begin{proof}
+Fix an orbit representative $c$ and its variable $v=v_c$. For each pattern $\pi$ the code computes a value
+$\ell(\pi)$, either an orientation literal or \texttt{None}, and then (lines 134--141) emits the unit clause
+$[\ell]$ if all patterns give the same literal $\ell\ne$\texttt{None}, and otherwise the clause
+$\neg\mathrm{prem}(\pi)\vee\ell(\pi)$ for every $\pi$ with $\ell(\pi)\ne$\texttt{None}. We show that $\ell(\pi_S)$ is
+\texttt{None} or true under $\alpha_S$. This suffices: $\pi_S$ is among the enumerated patterns, so a unit clause equals
+$[\ell(\pi_S)]$; and a clause for $\pi\ne\pi_S$ contains the negation of a premise literal that is false under
+$\alpha_S$ (Lemma~\ref{k8s:lem:prem}).
+
+For $\pi=\pi_S$ the keys of lines 104--111 are the keys $\kappa$ of the six objects of the labels in $c$, with the rank
+$\mathrm{rk}_S$ (Lemma~\ref{k8s:lem:prem}). If two keys coincide (line 113), then $m$ is even and $c$ contains a
+same-layer antipodal pair (Lemma~\ref{k8s:lem:keys}), and $\ell(\pi_S)=$\texttt{None}. Otherwise the six directions are
+distinct, and sorting the keys (line 118) lists the objects by increasing direction from direction $0$
+(Lemma~\ref{k8s:lem:keys}); the string \py{kinds} is the cyclic word of Lemma~\ref{k8s:lem:dich}.
+\begin{itemize}
+\item If \py{kinds} alternates (line 121), \py{seq} $=(\sigma(1),\sigma(2),\sigma(3))$ lists the points counterclockwise,
+and $\ell=v$ if $\sgn\sigma=+1$, else $\neg v$. By Lemma~\ref{k8s:lem:dich}(b),
+\[
+\orient(P(c_0),P(c_1),P(c_2))=\sgn(\sigma)\,\orient(P(c_{\sigma(1)}),P(c_{\sigma(2)}),P(c_{\sigma(3)}))
+\]
+has the sign $\sgn\sigma$, so $\ell$ is true under $\alpha_S$.
+\item Otherwise the word is a rotation of $\mathtt{PPPAAA}$ (Lemma~\ref{k8s:lem:dich}(a)). In the doubled word the
+substring $\mathtt{PPP}$ occurs exactly where the block starts, so \py{dbl.find('PPP')} (line 127) is the position of
+its first $\mathtt P$, and $(a,b,d)$ (lines 129--130) are the points in counterclockwise order from there. If
+$\mathrm{layer}(b)\le\mathrm{layer}(a),\mathrm{layer}(d)$ (line 131), Lemma~\ref{k8s:lem:nest} gives
+$r_{\mathrm{layer}(b)}\ge r_{\mathrm{layer}(a)},r_{\mathrm{layer}(d)}$, Lemma~\ref{k8s:lem:dich}(c) gives
+$\orient(P(a),P(b),P(d))>0$, and $\ell=$\py{olit}$(a,b,d)$ is true by Lemma~\ref{k8s:lem:orbit}(b). If the condition
+fails, $\ell=$\texttt{None}.
+\end{itemize}
+The assertions at lines 114, 117 and 128 are not used; they held when the formulas were generated.
+\end{proof}
+
+Exhaustively over all orbits and patterns, the six integer keys are not distinct in $622$ cases (all for $m=6$),
+alternate in $7{,}901$ ($m=6$) and $56{,}630$ ($m=7$) cases, form a $\mathtt{PPPAAA}$ block in $23{,}681$ and
+$167{,}997$ cases, and never do anything else (exact computation, \dirn{k8_soundness_checks.py}; a check of
+Lemma~\ref{k8s:lem:dich}(a), not part of the proof). For $m=6$, $t=11$ encoder~B emits $2{,}347$ angular units and
+$7{,}740$ conditional angular clauses (\dirn{C6UPPER}~\S3b).
+
+\subsection{Phase-order, nesting and chain clauses}\label{k8s:sec:other}
+
+\begin{lemma}[phase order; written proof (not refereed)]\label{k8s:lem:order}
+The clauses $\neg Y(i,j)\vee\neg Y(j,l)\vee Y(i,l)$ and $Y(i,j)\vee Y(j,l)\vee\neg Y(i,l)$, $1\le i<j<l\le t-1$ (lines
+79--81), are satisfied by $\alpha_S$.
+\end{lemma}
+
+\begin{proof}
+The $\psi_i$, $i\ge1$, are distinct reals, so $\neg Y(i,j)$ means $\psi_j<\psi_i$. The first clause is transitivity of
+$<$. If the second failed, then $\psi_j<\psi_i$, $\psi_l<\psi_j$ and $\psi_i<\psi_l$, a cycle.
+\end{proof}
+
+These clauses say that the $Y$ variables form a strict total order; they are not used in the proofs of the other
+families, which only evaluate $\alpha_S$.
+
+\begin{lemma}[nesting units; Lean-checked (\lean{strict_nesting}) for the geometry, written proof (not refereed) for
+the code]\label{k8s:lem:nestcl}
+The unit clauses \py{olit}$((i,0),(i,1),(j,k))$, $0\le i<j\le t-1$, $k\in\mathbb Z/m$ (lines 143--150), are satisfied
+by $\alpha_S$.
+\end{lemma}
+
+\begin{proof}
+$P(i,1)=\rho P(i,0)$ and $P(j,k)\in L_j$, so Lemma~\ref{k8s:lem:nest} gives $\orient(P(i,0),P(i,1),P(j,k))>0$; apply
+Lemma~\ref{k8s:lem:orbit}(b). The check at lines 148--149 only confirms that no nesting unit contradicts an angular
+unit.
+\end{proof}
+
+\paragraph{Chains.} Fix a layer $i$, the pivot $p=(i,0)$ and $Q_i=\{(j,k):j\ge i\}\setminus\{p\}$ (line 159). A
+\emph{$p$-chain of length $l\ge2$} is a sequence $q_1,\dots,q_l$ in $Q_i$ with $\orient(P(p),P(q_s),P(q_{s+1}))>0$ for
+$1\le s<l$ and $\orient(P(q_s),P(q_{s+1}),P(q_{s+2}))>0$ for $1\le s\le l-2$. Set
+$\alpha_S(F^{(i)}_l(a,b))=[$there is a $p$-chain of length $l$ with $q_1=a$, $q_2=b]$. With $L=K-1$, lines 166--190 emit,
+for the pairs $(a,b)$ whose literal \py{olit}$(p,a,b)$ is not the negation of an emitted unit (\py{okpair}):
+\begin{itemize}
+\item (base) $F_2(a,b)\vee\neg$\py{olit}$(p,a,b)$;
+\item (extension) $\neg F_l(b,d)\vee\neg$\py{olit}$(p,a,b)\vee\neg$\py{olit}$(a,b,d)\vee F_{l+1}(a,b)$ for $2\le l\le K-3$;
+\item (closing) $\neg F_{K-2}(b,d)\vee\neg$\py{olit}$(p,a,b)\vee\neg$\py{olit}$(a,b,d)$;
+\end{itemize}
+omitting the extension and closing clauses with $a\in\{b,d\}$ or with a turn literal \py{olit}$(a,b,d)$ that is the
+negation of an emitted unit. The closing clauses forbid a $p$-chain of length $K-1$, which together with $p$ would be a
+convex $K$-gon.
+
+\begin{lemma}[chain clauses; Lean-checked (\lean{chain_clauses_sound}) for the geometry, written proof (not
+refereed) for the code]\label{k8s:lem:chain}
+Let $m\ge3$ and $4\le K\le2m$. The chain clauses of lines 154--190 are satisfied by $\alpha_S$.
+\end{lemma}
+
+\begin{proof}
+Base clause: if $\orient(P(p),P(a),P(b))>0$, then $(a,b)$ is a $p$-chain of length~$2$. Extension clause: if
+$(b,d,q_3,\dots,q_l)$ is a $p$-chain and $\orient(P(p),P(a),P(b))>0$, $\orient(P(a),P(b),P(d))>0$, then
+$(a,b,d,q_3,\dots,q_l)$ is a $p$-chain of length $l+1$. (Literals are evaluated by Lemma~\ref{k8s:lem:orbit}(b).)
+Closing clause: otherwise there is a $p$-chain $(a,b,d,\dots)$ of length $K-1$, i.e.\ points $q_0,\dots,q_{K-2}$ of
+$\mathrm{peel}(S,i)\setminus\{P(p)\}$ with $\orient(P(p),q_s,q_{s+1})>0$ and $\orient(q_s,q_{s+1},q_{s+2})>0$. Here
+$P(p)\in L_i=\mathrm{hv}(\mathrm{peel}(S,i))$ by the definition of the layers; each $q_s$ is $P(\lambda)$ for a label
+$\lambda\in Q_i$ of some layer $j\ge i$, so $q_s\in L_j\subseteq\mathrm{peel}(S,i)$ (Lemma~\ref{k8s:lem:layer}), and
+$q_s\ne P(p)$ because $\lambda\ne p$ and $P$ is a bijection. \lean{chain_clauses_sound} (hypotheses
+$m\ge3$, $4\le K\le2m$, $O\notin S$, $\rho$-invariance, general position, $K$-freeness) says that no such chain exists.
+Its proof: by \lean{lin_pos_of_peel} all points of $\mathrm{peel}(S,i)$ other than $P(p)$ lie strictly on the inner side of
+the tangent to the circle of radius $r_i$ at $P(p)$; by \lean{hasConvexNGon_of_fan} a pivot and $n\ge3$ chain points in an
+open half-plane through the pivot satisfy $\orient>0$ for every triple of $(x_0,\dots,x_n)=(P(p),q_0,\dots,q_{n-1})$
+taken in sequence order, i.e.\ $\orient(x_s,x_{s'},x_{s''})>0$ for all $s<s'<s''$ (\lean{fan_positive}; identities
+\lean{orient_trans_halfplane}, \lean{fan_step}) and are therefore in convex position
+(\lean{ErdosSzekeres.Suk.convexPosition_of_positive_triples}, in \dirn{ErdosSzekeres/Suk/OrientationClique.lean},
+covered by the axiom check of \lean{hasConvexNGon_of_fan}); this gives $K$ points in convex position. Omitted
+clauses only weaken the formula.
+\end{proof}
+
+\begin{remark}[completeness; written proof (not refereed), not used]\label{k8s:rem:complete}
+Conversely, if $S$ has $K$ points $X$ in convex position, the closing clauses fail under $\alpha_S$. Let $i$ be the least
+layer met by $X$ and $P(i,k)\in X$; then $\rho^{-k}X$ is in convex position, contains $P(p)$, and its other points have
+labels in $Q_i$. Listing $\rho^{-k}X$ counterclockwise along its convex hull from $P(p)$ gives $P(p),q_1,\dots,q_{K-1}$,
+and every three vertices of a convex polygon in general position, taken in counterclockwise order, are positively
+oriented. So $(q_1,\dots,q_{K-1})$ is a $p$-chain of length $K-1$. Thus the chain family expresses $K$-freeness exactly;
+soundness needs only Lemma~\ref{k8s:lem:chain}.
+\end{remark}
+
+\paragraph{Encoder A's chains.} \py{fam_chain} of \dirn{gen.py} builds the chains forwards:
+$R_l(q,q')$ means a $p$-chain of length $l$ ending with $q,q'$, and it is assigned that truth value. The base,
+extension and closing clauses are justified as above by appending instead of prepending. Encoder~A also uses the
+emitted angular and nesting units (recorded in \py{forced}) in two ways. If the unit $[\ell]$ is emitted, it drops the
+literal $\neg\ell$ from a chain clause; since $\alpha_S$ satisfies $[\ell]$ (Proposition~\ref{k8s:prop:A}, for
+$m\in\{6,7\}$), it
+satisfies the shortened clause exactly when it satisfies the full one. If the unit $[\neg\ell]$ is emitted, it omits
+every chain clause containing $\neg\ell$, as encoder~B does; such a clause is subsumed by the unit, and omitting it is
+a weakening.
+
+\subsection{The reflection unit}\label{k8s:sec:reflection}
+
+\begin{lemma}[reflection; written proof (not refereed)]\label{k8s:lem:refl}
+Let $S$ be a generic, normalised $(m,K,t)$-admissible set, and $\tau(x,y)=(x,-y)$. Then $\tau S$ is again a generic,
+normalised $(m,K,t)$-admissible set, its layers are $\tau(L_0),\dots,\tau(L_{t-1})$ in this order, and its phases are
+$\theta'_0=0$ and, for $i\ge1$, $\theta'_i=2\pi/m-\theta_i$, with $\psi'_i=u-\psi_i$ and, for odd $m$, $h'_i=1-h_i$. Hence $\alpha_{\tau S}(Y(i,j))=\neg\alpha_S(Y(i,j))$ for $1\le i<j$, and for odd $m$
+$\alpha_{\tau S}(H(i))=\neg\alpha_S(H(i))$. In particular exactly one of $S$ and $\tau S$ satisfies the unit $Y(1,2)$
+(even $m$, $t\ge3$), resp.\ $H(1)$ (odd $m$, $t\ge2$).
+\end{lemma}
+
+\begin{proof}
+$\tau$ is a linear bijection with $\tau(O)=O$ and $\tau\rho\tau^{-1}=\rho^{-1}$. By Lemma~\ref{k8s:lem:affine}, $\tau S$ is
+$(m,K,t)$-admissible and its layers are $\tau(L_0),\dots,\tau(L_{t-1})$, in this order; $\tau(L_i)$ is the $\rho$-orbit of
+$\tau x_i$, a regular $m$-gon of radius $r_i$. Since $\tau(r\,e(\varphi))=r\,e(-\varphi)$, the directions of
+$\tau(L_i)$ are $-\theta_i+(2\pi/m)\mathbb Z$; the phase is $0$ for $i=0$ and $2\pi/m-\theta_i$ for $i\ge1$, because
+$\theta_i\in(0,2\pi/m)$. Differences of phases change sign modulo $2\pi/m\in u\mathbb Z$, so genericity is kept. For
+even $m$, $\psi'_i=\theta'_i=u-\psi_i$. For odd $m$, $\theta_i=\psi_i+h_i\pi/m$ with $\psi_i\in(0,\pi/m)$ gives
+$\theta'_i=(\pi/m-\psi_i)+(1-h_i)\pi/m$ with $\pi/m-\psi_i\in(0,\pi/m)$, so $\psi'_i=\pi/m-\psi_i$ and $h'_i=1-h_i$. The map
+$\psi\mapsto u-\psi$ reverses the order of distinct phases.
+\end{proof}
+
+The reflection need not be a symmetry of $S$: it produces another configuration of the same kind. Layer indices
+must not be permuted, since they encode the radial order used by rule~B and by the nesting and chain clauses; the
+reflection keeps them.
+
+\subsection{The soundness theorem}\label{k8s:sec:theorem}
+
+\begin{theorem}[soundness; written proof (not refereed), resting on the Lean-checked lemmas cited above]\label{k8s:thm:sound}
+Let $m\ge3$, $4\le K\le2m$ and $t\ge3$. Let $F_B$ and $F_A$ be the CNF formulas written by \dirn{gen_b2.py} and
+\dirn{gen.py} on input $(m,K,t)$, and let the \emph{reflection unit} be the unit clause $Y(1,2)$ for even $m$ and
+$H(1)$ for odd $m$, in each encoder's own numbering. Suppose that some $(m,K,t)$-admissible set exists, that is, a
+set of $mt$ points in general position, invariant under $\rho$, not containing $O$, with no $K$ points in convex
+position. By Remark~\ref{k8s:rem:ident} this holds in particular if some set of $t$ nested regular $m$-gons in general
+position has no $K$ points in convex position. Then:
+\begin{enumerate}[label=(\alph*)]
+\item $F_B$ plus the reflection unit is satisfiable;
+\item if moreover $m\in\{6,7\}$, then $F_A$ plus the reflection unit is satisfiable.
+\end{enumerate}
+\end{theorem}
+
+Part~(b) is restricted to $m\in\{6,7\}$ because encoder~A classifies triples in binary64 arithmetic, and the rounding
+bound used in Proposition~\ref{k8s:prop:A}(i) has been computed only for these two values of $m$ (it does not depend on
+$K$ or $t$). For other $m$ the same argument needs that bound for the given $m$; we make no claim about $F_A$ there.
+Encoder~B uses only integer comparisons, so part~(a) needs no such bound.
+
+For the certified instances: at $(6,8,11)$ both formulas have $78{,}059$ variables and $2{,}387{,}083$ clauses
+(SHA-256 \texttt{479e31a9\dots} for B, \texttt{542c8a3a\dots} for A), and $Y(1,2)$ is variable $1$ of $F_B$ (lines 36--39)
+and variable $7{,}635=7{,}634+1$ of $F_A$; at $(7,8,10)$ both have $80{,}080$ variables and $2{,}748{,}538$ clauses
+(\texttt{b4d29017\dots} for B, \texttt{1a7c0e70\dots} for A), and $H(1)$ is variable $\binom92+1=37$ of $F_B$ and
+$7{,}820+36+1=7{,}857$ of $F_A$. The sevenfold certificate for A is for $F_A$ plus $H(1)$ (\texttt{fa297b5b\dots}, made
+by \dirn{C7UPPER/addunits.py}); the one for B is for $F_B$ alone, which the theorem covers a fortiori. Sizes and hashes:
+\dirn{C6UPPER/README.md}, \dirn{C7UPPER/README.md}, \dirn{C7UPPER/SHA256SUMS.txt}.
+
+\begin{proof}
+Let $S$ be an $(m,K,t)$-admissible set. If $m$ is odd, replace it by the generic, normalised admissible set of
+Lemma~\ref{k8s:lem:generic}(b). If $m$ is even, $S$ with its layers is a set of nested regular $m$-gons
+(Lemma~\ref{k8s:lem:layer}) in general position, hence generic by Lemma~\ref{k8s:lem:generic}(a); rotate it about $O$ so
+that it is normalised, which keeps it admissible with the rotated layers in the same order (Lemma~\ref{k8s:lem:affine})
+and keeps it generic. By Lemma~\ref{k8s:lem:refl}, replacing $S$ by $\tau S$ if necessary, $\alpha_S$ satisfies the
+reflection unit. (a) Give the
+variables of $F_B$ their values under $\alpha_S$ (Definition~\ref{k8s:def:assign}); every variable of $F_B$ is a $Y$,
+$H$, orientation or chain variable. By reading the source, $F_B$ consists of the header (line 192) and exactly the
+clauses appended to \py{cls} at lines 80--81, 137, 141, 147, 175 and 190, that is, the families of
+Lemmas~\ref{k8s:lem:order}, \ref{k8s:lem:angB}, \ref{k8s:lem:nestcl} and \ref{k8s:lem:chain}; all are satisfied.
+(b) Let $m\in\{6,7\}$ and give the variables of $F_A$ their values under $\alpha_S$. \py{build} calls \py{fam_order}, \py{fam_angle}, \py{fam_nest} and \py{fam_chain} and nothing else (the
+Grassmann--Pl\"ucker family of the docstring is not emitted by the program). The first three are satisfied by
+Lemma~\ref{k8s:lem:order} (identical clauses) and Proposition~\ref{k8s:prop:A}, the last by the paragraph on encoder
+A's chains.
+\end{proof}
+
+\begin{proposition}[encoder A's angular and nesting clauses; written proof (not refereed), new here, and exact
+computation]\label{k8s:prop:A}
+Let $m\in\{6,7\}$, $4\le K\le2m$, $t\ge3$, and let $S$ be as in Definition~\ref{k8s:def:assign}. Every clause emitted
+by \py{fam_angle} and \py{fam_nest} of \dirn{gen.py} on input $(m,K,t)$ is satisfied by $\alpha_S$. Two independent
+justifications:
+\begin{enumerate}[label=(\roman*)]
+\item (written proof (not refereed), with the rounding bound by exact computation; new here) the argument below,
+for $m\in\{6,7\}$ and every $K$ and $t$;
+\item (exact computation, one program sharing \dirn{gen.py}'s literal translation) only for the two certified instances,
+\dirn{C6UPPER/encb/compare_ab2.py} and \dirn{C7UPPER/tests/compare_ab.py} compared, for every triple orbit having a clause
+in either encoder and every pattern of its layers, the set of orientation literals forced by A's angular and nesting
+clauses with that of B's clauses without chain variables: at $(6,8,11)$ $10{,}417$ clauses each, $5{,}297$ orbits,
+$23{,}852$ orbit--pattern pairs, $0$ mismatches (\dirn{C6UPPER/logs/encb_compare.log}); at $(7,8,10)$ $74{,}099$
+clauses each, $6{,}221$ orbits, $185{,}549$ pairs, $0$ mismatches (\dirn{C7UPPER/logs/repro_validation.log}). With
+Lemmas~\ref{k8s:lem:angB} and~\ref{k8s:lem:nestcl}, an A clause whose premises are true under $\alpha_S$ forces a literal
+that a B clause with true premises also forces, hence a true one; an A clause with a false premise is satisfied.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}[Proof of (i)]
+\py{fam_nest} emits the same nesting units as encoder~B (Lemma~\ref{k8s:lem:nestcl}). In \py{fam_angle}, a pattern is a
+permutation \py{perm} of $M_c$ with $0$ first, plus $H$ bits for odd $m$; its premises are the literals
+$[\psi_{\mathrm{perm}(r)}<\psi_{\mathrm{perm}(r+1)}]$ for consecutive entries not involving layer $0$ (\py{ylit} makes
+those constant) and the $H$ literals. Since $\psi_0=0$ is the least phase, all premises are true under $\alpha_S$ iff
+\py{perm} is the $\psi$-order of $M_c$ and the bits are the $h_L$; the emission rule is the same as in
+Lemma~\ref{k8s:lem:angB}. For the pattern of $S$, \py{patterns} supplies phases $\psi_L=u\,q_L/(n+1)$, $n=|M_c|$,
+$q_L\in\{0,\dots,n\}$ increasing along \py{perm}, and $\theta_L=\psi_L+(1-[\text{bit}])\pi/m$ for odd $m$. These realise the
+same $\psi$-order and the same $h$ as $S$ on $M_c$. Lemma~\ref{k8s:lem:keys} applies to both phase assignments on $M_c$
+(the sampled $\psi_L$ are distinct and $\theta_L\in[0,2\pi/m)$), and they give the six objects of $c$ the same keys. So the
+objects have the same cyclic word, the same counterclockwise order of points and the same block as in $S$. \py{angle_config} sorts the three directions, forms
+the gaps, returns \texttt{degenerate} if a gap is within $10^{-9}$ of $0$ or $\pi$, \texttt{in} with the sign of the
+sorting permutation if all gaps are $<\pi$, and otherwise the points in order starting after the largest gap; by
+Lemma~\ref{k8s:lem:dich} these are exactly B's three cases and outputs, \emph{provided} the floating-point decisions
+agree with the exact ones. They do: every exact direction is an integer multiple of $\delta_0=u/(n+1)$, and so is $\pi$
+($\pi=m(n+1)\delta_0$ for odd $m$, $\frac{m}{2}(n+1)\delta_0$ for even $m$); every exact direction is at most $2\pi-\delta_0$;
+and the three points have distinct directions (distinct $\psi$ for distinct layers, distinct $k$ in one layer). So each
+exact gap equals $\pi$ or lies at distance at least $\delta_0\ge\pi/(4m)$ from both $0$ and $\pi$ (exactly, the least
+such distance is $\pi/12$ for $(m,t)=(6,11)$ and $\pi/28$ for $(7,10)$). The float inputs depend only on $m$, on
+$n\in\{1,2,3\}$, on $q_L$, on the bit and on $k$, not on $K$ or $t$. Re-evaluating \dirn{gen.py}'s float expressions in
+all $54$ ($m=6$) and $105$ ($m=7$) such cases and comparing with the exact angles ($\pi$ enclosed by $36$-digit
+rationals) shows two things (exact computation, \dirn{k8_soundness_checks.py}). First, each value
+\texttt{theta[i] + 2*math.pi*k/m} that \py{angle_config} reduces is a float in $[0,\texttt{2*math.pi})$, so the
+reduction \texttt{\%~(2*math.pi)} returns it unchanged (a wrap-around would have produced an error near $2\pi$).
+Second, the value used is within $8.7\cdot10^{-16}$ of the exact direction. Hence the sorted order is
+the exact one, each computed gap is within $10^{-14}$ of the exact gap (two angle errors, the error of
+\texttt{2*math.pi}, and at most two roundings of numbers below $8$, each below $9\cdot10^{-16}$), gaps equal to $\pi$ (only same-layer antipodal
+pairs, even $m$) are reported as \texttt{degenerate}, and all other comparisons with \texttt{eps}$=10^{-9}$ and with $\pi$
+are decided correctly. The representative's classification is then that of $S$, and the emitted literal is true under
+$\alpha_S$ exactly as in Lemma~\ref{k8s:lem:angB}.
+\end{proof}
+
+\subsection{The omitted antipodal case}\label{k8s:sec:antipodal}
+
+\begin{lemma}[diameter; written proof (not refereed); the formula is not in the review]\label{k8s:lem:diam}
+Let $m$ be even, $q$ and $-q$ points of one layer, and $p$ another point. Then
+\[
+\orient(q,-q,p)=-2\det(q,p)=-2|q||p|\sin\bigl(\dirv(p)-\dirv(q)\bigr),
+\]
+so $\orient(q,-q,p)>0$ if and only if $p$ lies strictly clockwise from $q$ by less than $\pi$. For a generic normalised
+configuration this is decided by the keys of $q$, $-q$ and $p$ (Lemma~\ref{k8s:lem:keys}), i.e.\ by the phase pattern
+alone.
+\end{lemma}
+
+\begin{proof}
+$\orient(q,-q,p)=\det(-q-q,\,p-q)=-2\det(q,p)+2\det(q,q)=-2\det(q,p)$, and $\det(q,p)=|q||p|\sin(\dirv p-\dirv q)$;
+$\dirv(p)\ne\dirv(\pm q)$ by Lemma~\ref{k8s:lem:collinear}.
+\end{proof}
+
+A triple containing a same-layer antipodal pair has the centre on one of its sides, so it is neither a triangle around
+the centre nor contained in an open half-plane through the centre. For every pattern of such an orbit, encoder~B finds
+coinciding keys (line 113) and encoder~A a gap of $\pi$ (\texttt{degenerate}); neither emits an angular clause. For
+$(m,t)=(6,11)$ these are $352$ of the $7{,}634$ orbits ($11\cdot3\cdot64$ triples in orbits of size $6$; exact
+computation, \dirn{k8_soundness_checks.py}). A nesting triple $\{(i,0),(i,1),(j,k)\}$, $j>i$, contains no
+same-layer antipodal pair (as $m\ge4$), and rotations preserve this property, so none of these orbits carries a nesting
+unit either; their orientations are constrained only through the chain family. By Lemma~\ref{k8s:lem:diam} valid
+clauses for them exist and are omitted. Omitting valid clauses is a
+weakening: it can only enlarge the set of satisfying assignments, and Theorem~\ref{k8s:thm:sound} concerns only the
+emitted clauses. So the omission is not a source of unsoundness, and the certificates prove unsatisfiability without
+these clauses. More generally the encoders omit every orientation fact not covered by rules A and B (for instance
+half-plane triples whose middle point is not on the outermost layer, and the two-point-chord facts of
+\dirn{CHORD20261105}); each omission is a weakening. The chord-lemma family of \dirn{CHORD20261105} (written proof (not
+refereed), each sixfold clause checked by exact computation) contains such diameter clauses; it was not part of the
+\dirn{C6UPPER} or \dirn{C7UPPER} formulas. The \dirn{gen.py} docstring states the angular dichotomy without this third
+case (finding of \dirn{C6C7REVIEW/SOUNDNESS.md}); the emitted formulas are unaffected.
+
+\subsection{The cube cover and the passage to geometry}\label{k8s:sec:cube}
+
+\begin{lemma}[cube cover; written proof (not refereed)]\label{k8s:lem:cube}
+Let $F$ be a CNF formula and $x_1,\dots,x_n$ variables. If $F\wedge\ell_1\wedge\dots\wedge\ell_n$ is unsatisfiable for each of
+the $2^n$ choices $\ell_j\in\{x_j,\neg x_j\}$, then $F$ is unsatisfiable.
+\end{lemma}
+
+\begin{proof}
+A model $\beta$ of $F$ satisfies the cube with $\ell_j=x_j$ if $\beta(x_j)$ is true and $\ell_j=\neg x_j$ otherwise.
+\end{proof}
+
+No geometric meaning of the $x_j$ is needed, so the $20$ sign patterns of $Y(1,3),Y(1,4),Y(2,3),Y(2,4),Y(3,4)$ that
+contradict transitivity need no separate argument (their cubes were refuted anyway). For the sixfold split, $F$ is the
+base formula plus the unit $Y(1,2)$, and $x_1,\dots,x_5$ are $Y(1,3),Y(1,4),Y(2,3),Y(2,4),Y(3,4)$: variables
+$2,3,10,11,18$ in encoder B and $7{,}636,7{,}637,7{,}644,7{,}645,7{,}652$ in encoder A (by the variable numbering
+described in the paragraph after Definition~\ref{k8s:def:assign}). That each of the $32$ cube files of each encoder is the base formula byte for byte,
+with adjusted header, plus $Y(1,2)$ and the five literals of its pattern, and that the $32$ patterns are distinct, was
+checked by \dirn{C6UPPER/tools/verify_cover.py} and by the assertion-independent \dirn{C6C7REVIEW/strict_cover.py}
+(exact computation). Only the variable of the unit $Y(1,2)$ must have its geometric meaning; it is fixed by the source
+(Theorem~\ref{k8s:thm:sound}).
+
+\begin{corollary}[from unsatisfiability to the Lean propositions; written proof (not refereed), not in the review,
+with the cited Lean-checked reduction]\label{k8s:cor:geom}
+Let $F_A$, $F_B$ be as in Theorem~\ref{k8s:thm:sound}.
+\begin{enumerate}[label=(\alph*)]
+\item If, for one encoder, the $32$ formulas ``base $(6,8,11)$ + $Y(1,2)$ + cube'' are all unsatisfiable, then
+\lean{Sixfold66} holds; with \lean{sixfold_octagon} (Lean-checked), every sixfold rotationally symmetric set of at
+least $61$ points in general position contains a convex octagon.
+\item If $F_A(7,8,10)$ plus $H(1)$, or $F_B(7,8,10)$, is unsatisfiable, then \lean{Sevenfold70} holds; with
+\lean{sevenfold_octagon} (Lean-checked), every sevenfold rotationally symmetric set of at least $65$ points in general
+position contains a convex octagon.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+(a) Suppose \lean{Sixfold66} fails: some $T$ in general position, invariant under the rotation by $2\pi/6$ about a
+point $c\notin T$, with $|T|=66$, has no convex octagon. Translating $c$ to $O$ preserves these hypotheses (a translation
+is an affine bijection; Lemma~\ref{k8s:lem:affine}), so $T-c$ is $(6,8,11)$-admissible. By
+Theorem~\ref{k8s:thm:sound}(a), resp.~(b), the base formula of the encoder plus $Y(1,2)$ is satisfiable; by
+Lemma~\ref{k8s:lem:cube}, so is one of the $32$ cube formulas, a contradiction. (b) is the same with $70$ points,
+$(7,8,10)$-admissibility and $H(1)$; for $F_B$ the unit may be dropped, since a model of $F_B$ plus $H(1)$ is a model
+of $F_B$.
+\end{proof}
+
+The hypotheses of the corollary are supplied by certificates (cake\_lpr, \texttt{s VERIFIED UNSAT}). Their status,
+including how many verdicts are bound to file hashes by a replay against freshly generated formulas, is stated in Section~\ref{sec:cert} and is not repeated here, since it changes as the replay proceeds. The link
+from the certified files to the programs analysed here is that fresh runs reproduce the formula files byte for byte\footnote{Note added in this paper: for the $64$ sixfold cube files this is on record by hash for the $6$ sampled ones and structurally for all; see Section~\ref{sec:enc}, ``Validation''.}
+(hashes above; \dirn{C6UPPER/logs/regen.log}, \dirn{C6C7REVIEW/REPLAY.md}).
+
+\subsection{Trust base and gaps}\label{k8s:sec:trust}
+
+\begin{table}[ht]
+\centering\footnotesize
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.47\linewidth}>{\raggedright\arraybackslash}p{0.47\linewidth}@{}}
+\toprule
+Ingredient & Status\\
+\midrule
+Strict nesting, radius order, centre exclusion (Lemmas~\ref{k8s:lem:centre}, \ref{k8s:lem:nest}); reduction to
+\lean{Sixfold66}, \lean{Sevenfold70} & Lean-checked (\dirn{LAYERLEAN})\\
+Layer lemma (Lemma~\ref{k8s:lem:layer}) & Lean-checked core; the assembly of the peeled layers is a written proof
+(not refereed), not in the review\\
+Signs of rules A and B (Lemma~\ref{k8s:lem:dich}(b),(c)); chain soundness (Lemma~\ref{k8s:lem:chain}, geometry) &
+Lean-checked\\
+Collinearity with the centre (Lemma~\ref{k8s:lem:collinear}) & written proof (not refereed), new here\\
+Convex position via orientations; affine images (Lemmas~\ref{k8s:lem:convpos}, \ref{k8s:lem:affine}) & written proof
+(not refereed), standard; not in the review\\
+Genericity and perturbation (Lemma~\ref{k8s:lem:generic}) & written proof (not refereed); proves in full the review's
+hyperplane statement\\
+Orbit variables and stabilisers; key order; circular dichotomy (a); premises (Lemmas~\ref{k8s:lem:orbit},
+\ref{k8s:lem:keys}, \ref{k8s:lem:dich}, \ref{k8s:lem:prem}) & written proof (not refereed)\\
+Code-to-clause correspondence for both encoders (Lemmas~\ref{k8s:lem:angB}--\ref{k8s:lem:chain},
+Theorem~\ref{k8s:thm:sound}) & written proof (not refereed) by reading the source\\
+Reflection unit; cube cover (Lemmas~\ref{k8s:lem:refl}, \ref{k8s:lem:cube}) & written proof (not refereed)\\
+Encoder A's float classification, $m\in\{6,7\}$ only (Proposition~\ref{k8s:prop:A}) & exact computation (comparison
+with B at the two instances; rounding bound), and written proof (not refereed), new here\\
+Cube files equal base plus units; orbit and pattern counts; formula hashes & exact computation\\
+Omitted antipodal clauses (Lemma~\ref{k8s:lem:diam}) & written proof (not refereed), formula not in the review; a
+weakening only\\
+Passage to \lean{Sixfold66}, \lean{Sevenfold70} (Corollary~\ref{k8s:cor:geom}) & written proof (not refereed), not in
+the review\\
+Unsatisfiability of the formulas & certificate (Section~\ref{sec:cert})\\
+\midrule
+Not needed for the upper bounds: nested $m$-gons are admissible (Remark~\ref{k8s:rem:ident}) & written proof (not
+refereed), new here\\
+\bottomrule
+\end{tabular}
+\caption{What the implication ``certificates $\Rightarrow$ \lean{Sixfold66}, \lean{Sevenfold70}'' rests on.}
+\label{k8s:tab:trust}
+\end{table}
+
+\paragraph{Gaps that remain.}
+\begin{enumerate}[label=(G\arabic*)]
+\item The correspondence between the Python sources and the clause families is established by reading the code at the
+stated hashes; there is no formal semantics of the programs, and the Python interpreter is trusted to run them as
+written.
+\item No step from a DIMACS file to \lean{Sixfold66} or \lean{Sevenfold70} is formalized. The results of this
+section other than the cited Lean theorems are written proofs only.
+\item Encoder A's angular part rests on binary64 arithmetic. For the two certified instances
+Proposition~\ref{k8s:prop:A} covers it twice; for other $(K,t)$ with $m\in\{6,7\}$ only argument~(i) applies, and for
+other $m$ no claim about encoder~A is made. Argument~(i) is new here and unreviewed, and comparison~(ii) is a single
+program that uses \dirn{gen.py}'s own literal translation.
+\item The written proofs marked \emph{new here} (Lemma~\ref{k8s:lem:collinear}, Remark~\ref{k8s:rem:ident} and
+Proposition~\ref{k8s:prop:A}(i)) and those marked \emph{not in the review} (Lemmas~\ref{k8s:lem:convpos}
+and~\ref{k8s:lem:affine}, the assembly in Lemma~\ref{k8s:lem:layer}, the formula of Lemma~\ref{k8s:lem:diam}, and
+Corollary~\ref{k8s:cor:geom}) have had no internal review. The remaining written proofs expand arguments reviewed on
+4 November.
+\end{enumerate}
+
+\paragraph{Where the sources only sketched.} The docstring of \dirn{gen.py} (step~0) calls $K$-freeness a strict
+inequality in the parameters; Lemma~\ref{k8s:lem:convpos} supplies the needed fact that convex position is decided by
+orientation signs. The review states that the bad phase equalities form a finite union of proper affine hyperplanes
+near the configuration; Lemma~\ref{k8s:lem:generic}(b) proves this in full and identifies the perturbed set as an
+admissible set through Lemma~\ref{k8s:lem:layer}. The angular dichotomy is completed by the antipodal case
+(Lemma~\ref{k8s:lem:keys} and Section~\ref{k8s:sec:antipodal}), as the review asked. The chain argument of the docstring
+and of the review (a simple, locally convex fan polygon) is replaced by the Lean-checked proof through positive
+triples. Stating everything for admissible sets with their peeled layers lets the Lean theorems apply to the layers
+directly; the link to nested $m$-gons given abstractly is Remark~\ref{k8s:rem:ident}, which the upper bounds do not
+need.

@@ -1,0 +1,21 @@
+import E311B.C00001
+import E311B.C00002
+import E311B.C00003
+import E311B.C00004
+open CompactChecker
+set_option maxRecDepth 100000
+set_option Elab.async false
+set_option linter.all false
+set_option profiler true
+namespace E311B
+-- ES(8) <= 311 compact recheck, balanced side: 15064 leaves, 4 modules, 4 subtree roots, 3 skeleton nodes
+-- tree sha256 d51f0dc2cee764867a0310b10d3981d20009d3d92a38844c03a6fef4e336e545; exporter sha256 334d2d75cff1effdb4a7420501c0e3247f0dbbe645ae86bf8f8dc03887edbbfb
+theorem ex802945 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcat62 3131 252 63 (pmask (zerosF 252) [(71, 1), (166, 1), (181, 1), (232, 2), (41, 2), (38, 2), (214, 1)]) holes :=
+  split_pm fcat62 3131 252 63 (zerosF 252) [(71, 1), (166, 1), (181, 1), (232, 2), (41, 2), (38, 2), (214, 1)] 27 E311B.C00003.ex802946 E311B.C00004.ex809955
+theorem ex789370 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcat62 3131 252 63 (pmask (zerosF 252) [(71, 2), (166, 1), (181, 1), (232, 2), (41, 2), (38, 2), (214, 1)]) holes :=
+  split_pm fcat62 3131 252 63 (zerosF 252) [(71, 2), (166, 1), (181, 1), (232, 2), (41, 2), (38, 2), (214, 1)] 67 E311B.C00001.ex789371 E311B.C00002.ex795342
+theorem ex789369 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcat62 3131 252 63 (pmask (zerosF 252) [(166, 1), (181, 1), (232, 2), (41, 2), (38, 2), (214, 1)]) holes :=
+  split_pm fcat62 3131 252 63 (zerosF 252) [(166, 1), (181, 1), (232, 2), (41, 2), (38, 2), (214, 1)] 71 ex789370 ex802945
+theorem root : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcat62 3131 252 63 (pmask (zerosF 252) [(166, 1), (181, 1), (232, 2), (41, 2), (38, 2), (214, 1)]) holes := ex789369
+#print axioms root
+end E311B
