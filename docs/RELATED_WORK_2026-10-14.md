@@ -16,6 +16,12 @@ tested more than 16,000 heptagon-free 32-point sets by 14 October, all
 saturated; the committed [ES(7) record](../experiments/es7-search-2026-10-13/README.md)
 lists 8,537 distinct order types as of 13 October).
 
+**Correction, 6 November 2026.** Item 4 of
+[Consequences for this project](#consequences-for-this-project) said that
+Baek's development is the only other Lean formalization of a geometric
+Erdős–Szekeres-type theorem. That was false; the sentence is struck through
+there and followed by a dated correction.
+
 Notation. ES(n) is the least N such that every N points in general position
 contain n in convex position; some sources write N(n), f(n) or g(n) and some
 write g(n) for the largest set *without* an n-gon (then g + 1 = ES). h(k) is
@@ -73,7 +79,7 @@ Remarks on the table.
   small-n bound below 113/408 other than Schroeder's unreviewed record, was
   found. [Conlon–Fox–He–Mubayi–Suk–Verstraëte 2024](https://arxiv.org/abs/2405.03455)
   (preprint) still uses HMPT as the current upper bound.
-- [Bogdan, arXiv:2512.24061](https://arxiv.org/abs/2512.24061) (Dec 2025,
+- [Dumitru, arXiv:2512.24061](https://arxiv.org/abs/2512.24061) (Dec 2025,
   preprint) gives no numeric ES(7) bound, cites only Suk and HMPT, and states
   that "the case k = 7 remains open". The 2025 SAT literature therefore
   contains no published competitor to a heptagon catalog at n = 7.
@@ -523,7 +529,7 @@ framework also covers g(6) = 17. Transferable details:
   chirotopes on n = 29 points without 6-holes were found within a few minutes,
   but for n = 30 the computations did not terminate within months" — the
   regime before cube-and-conquer.
-- [Bogdan, arXiv:2512.24061](https://arxiv.org/abs/2512.24061) (Dec 2025,
+- [Dumitru, arXiv:2512.24061](https://arxiv.org/abs/2512.24061) (Dec 2025,
   preprint): triple-orientation variables, a 4-set convexity criterion with
   14 selector variables per 4-set (71 clauses), reduced CC-style 5-point
   axioms, and convex-layer anchoring templates with a sub-cubing parameter.
@@ -857,7 +863,7 @@ framework also covers g(6) = 17. Transferable details:
   (Lemma 2.8 in Morris–Soltan: types (3,3,2), (4,3,1), (3,4,2) force a
   pentagon); Bonnice remarked that for n = 6 a 17-point set can have 70 layer
   tuples so the approach "can hardly be applied". Marić's hull-depth indexing,
-  Strunk's hull-shape conditions and Bogdan's anchoring templates are the
+  Strunk's hull-shape conditions and Dumitru's anchoring templates are the
   same decomposition; the project's finite state catalogs are the modern
   replacement.
 - **Polygon ⇒ hole implications** (Gerken, Valtr, Scheucher) are purely
@@ -1193,7 +1199,7 @@ framework also covers g(6) = 17. Transferable details:
 | C_7 ≤ 49; C_8 ≤ 193; D_8 ≤ 124 (⇒ ES(7) ≤ 81, ES(8) ≤ 319) | weighted omission trees | full Lean rebuild 1,290 s (ARM64 macOS, 208 modules) | 4,017,399-clause primary formula, 1,989,465-addition proof; trees of 1,590 and 7,314 branches; 27 `native_decide` axioms in all | same |
 | 23 points, no 6-hole and no 7-gon (exact) | SAT modulo realizability, 128 cores | 1,727 + 2,326 core hours | all cubes UNSAT; 1,035 realizations | [Krapivin–Przybocki–Heule 2026](https://arxiv.org/abs/2607.02958) |
 | 32 points, 4-fold symmetric, no 7-gon | allsat enumeration | ≈ 1 CPU year | 310,187,713 configurations, none realizable | [Subercaseaux et al. 2025](https://arxiv.org/abs/2506.00224) |
-| 33 points, layer-anchored sub-cubes | Kissat, single thread | 2.5 × 10³ s to 2.28 × 10⁶ s per sub-cube | none reported | [Bogdan 2025](https://arxiv.org/abs/2512.24061) |
+| 33 points, layer-anchored sub-cubes | Kissat, single thread | 2.5 × 10³ s to 2.28 × 10⁶ s per sub-cube | none reported | [Dumitru 2025](https://arxiv.org/abs/2512.24061) |
 | 17 vertices, pure colorings, a = u = 6 | Glucose | did not terminate in 266 h | — | [Balko–Valtr 2015](https://eurocomb2015.w.uib.no/files/2015/08/endm1938.pdf) |
 | N ≤ 14 / 17 / 20 hole-type instances | Kissat 4.0.4 and decompositions | < 12 s / < 1,000 s / < 70,000 s; decompositions 350–880 CPU h | — | [Koshelev–Koshka 2026](https://arxiv.org/abs/2604.20120) |
 | ES(8) ≤ 313 (12 Oct 2026) | omission catalogs (balanced bound 190, residual 121), kernel-checked arithmetic | ≈ 120 CPU h kernel check | Lean kernel, three standard axioms | [313 record](../experiments/omission-final313-2026-10-11/README.md) |
@@ -1225,7 +1231,7 @@ count only the 3-/4-/5-fold symmetric ones, 0 / 18 / 92 realizable). Likewise
 no list of 32-point heptagon-free or 64-point octagon-free sets beyond the
 classical construction is published: Baek–Balko report "many examples" from
 blow-ups without data, Subercaseaux et al. release code and 16-point sets
-only, Bogdan's repository has no point sets, and PointSAT's 32-point run
+only, Dumitru's repository has no point sets, and PointSAT's 32-point run
 realized nothing. [Baek's generator](https://github.com/jcpaik/erdos-szekeres-sat)
 writes `.color` files with lines `i j k C` (or `.unsat`); its colorings are of
 the ordered hypergraph, not signotopes, so the four-point axiom must be imposed
@@ -1331,7 +1337,7 @@ and Pach 2017.
 - [Koshelev–Koshka 2026](https://arxiv.org/abs/2604.20120) (preprint): no
   case is known where the realizable value is smaller than the signotope
   value, because all maximal signotopes found are non-realizable.
-- [Bogdan 2025](https://arxiv.org/abs/2512.24061) (preprint): "the case k = 7
+- [Dumitru 2025](https://arxiv.org/abs/2512.24061) (preprint): "the case k = 7
   remains open".
 - [Balko 2025 survey](https://arxiv.org/abs/2502.02155) (preprint):
   Conjecture 3 is ES(n) = 2^{n−2} + 1, "known for n ≤ 6, open above".
@@ -1447,8 +1453,32 @@ and Pach 2017.
    per-cube certificates without an axiom; Trestle's `VEncCNF` is the natural
    home for a verified 33-point encoder; the six-step canonical-position
    lemma of EmptyHexagonLean is the formal counterpart of the projective
-   reduction. Baek's Lean development (already ported here) is the only other
-   Lean formalization of a geometric Erdős–Szekeres-type theorem.
+   reduction. ~~Baek's Lean development (already ported here) is the only other
+   Lean formalization of a geometric Erdős–Szekeres-type theorem.~~
+
+   **Correction (6 November 2026).** The struck sentence was false when
+   written. EmptyHexagonLean (above) and Schroeder's archive (Lean with
+   native evaluation; see the [upper-bounds table](#upper-bounds)) are also
+   Lean formalizations of Erdős–Szekeres-type results, and
+   [GLitchfield/erdos-szekeres-convex-poly](https://github.com/GLitchfield/erdos-szekeres-convex-poly)
+   (created 1 August 2026 (when it became public is not known), last pushed
+   20 October 2026; Lean 4 with Mathlib; MIT) is a Lean development on the convex-polygon problem itself.
+   Read through the GitHub API on 6 November 2026 (its README and the
+   statements of its three upper-bound theorems; the repository was not
+   built), it contains `tothValtr_upper`, the Tóth–Valtr 1998 bound
+   ES(n) ≤ C(2n−5, n−2) + 2 for n ≥ 3, hence ES(8) ≤ 464 (our arithmetic);
+   `hmpt_explicit_upper`, ES(n) ≤ 2^(n + 32⌊√(n⌈log₂ n⌉)⌋ + 128) for n ≥ 3;
+   `suk_explicit_upper`, ES(n) ≤ 2^(n + 64⌈n^{1/3}⌉²⌈log₂ 3n⌉ + 128) for
+   n ≥ 65; the exact values ES(3) = 3, ES(4) = 5, ES(5) = 9 and ES(6) = 17,
+   the last by replaying a CaDiCaL LRAT proof in the Lean kernel; the
+   2^{n−2}-point lower-bound construction (`classical_lower_sharpness`); and
+   the exact bound at k = 6 for the abstract decomposable class of
+   Baek–Balko. The three upper bounds are explicit forms of published bounds
+   with weaker constants and improve none of them. That these proofs use only
+   `propext`, `Classical.choice` and `Quot.sound`, so that its ES(8) ≤ 464 is
+   kernel-only, is stated in its README and was reported by the 6 November
+   novelty check; it is not verified here. The ES(8) comparison in the
+   upper-bounds table is unchanged.
 5. **Scope of the 312 proof.** Whether the omission argument uses only
    orientation (signotope-level) information has not been checked. If it
    does, the bound would also hold for pseudo-configurations and non-crossing
@@ -1466,7 +1496,7 @@ and Pach 2017.
    bounds) as Scheucher did with h(5) = 10, concurrent LRAT checking, and the
    layer-classification route of Heule–Scheucher Section 6.4 as an
    alternative to a monolithic UNSAT run. Cross-check cube statistics against
-   Bogdan's 13 finished layer vectors.
+   Dumitru's 13 finished layer vectors.
 
 ## Omitted items
 

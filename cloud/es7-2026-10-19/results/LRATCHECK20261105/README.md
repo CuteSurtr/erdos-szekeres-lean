@@ -1,9 +1,22 @@
 # LRATCHECK20261105: the lrat-check on the Linux machine is the unpatched, unsound build (5 November 2026)
 
-**This defect was already known.** `E2` found it on 20 October 2026 and patched it:
+**This defect was already known, upstream and in this project.**
+
+**Upstream** (found by the novelty check of 6 November 2026; GitHub `marijnheule/drat-trim`):
+- issue #31 (22 July 2022) reported that lrat-check accepts an empty clause with no hints;
+- commit `cbd2915` (19 October 2022) fixed it, and commit `5cd8ac3` (21 April 2024) commented the fix out again,
+  so the defect is back on master, which is still `2e3b2dc`;
+- issue #42 and PR #43 (both 29 September 2026) report this regression with the same `p cnf 1 1 / 1 0` plus `2 0 0`
+  reproduction, and PR #43 proposes a one-line fix of the same kind as E2's patch.
+
+**In this project**, `E2` found it on 20 October 2026, independently and three weeks after #42, and patched it
+locally:
 - the record is `E2/logs/lrat_check_soundness.md`;
 - the patch is `E2/tools/lrat-check-E2.patch`;
 - `WRITEUP/CERTIFICATES.md` pins the patched binary.
+
+So E2's finding was an independent rediscovery of a publicly known defect. The credit for finding it in this
+project, patching it locally and re-checking E's results with a sound checker stays with E2.
 
 The headline results of the project are anchored on cake_lpr (see `AUDIT.md`). This record documents a
 **rediscovery**, made on 5 November by an independent reviewer of the threshold-run supervisor and confirmed by the
@@ -48,4 +61,5 @@ coordinator, who at first did not know of E2. It also records what is new:
 | Record sets do not extend by one layer (`SIX10LINUX20261105` §5) | lrat-check only | all 94 proofs regenerated (identical hashes) and accepted by cake_lpr |
 | Threshold cubes (`ROT45CHORD20261105`) | none finished before the switch | cake_lpr verdict since 13:01 KST |
 
-Reporting the defect upstream is left to the author.
+Reporting the defect upstream is left to the author. It is already reported (issue #42, PR #43), so a new issue would
+be a duplicate; at most a confirming comment there is possible. Nothing has been posted.

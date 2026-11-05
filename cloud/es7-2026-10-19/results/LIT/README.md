@@ -2,15 +2,20 @@
 
 - `RELATED.md`: known values and bounds of ES(n) for n ≤ 8, prior computer-assisted and formal
   work, prior work on symmetric configurations, answers to questions (a) to (c), and what to cite.
-- `references.bib`: BibTeX for every source cited in `RELATED.md`.
-- `searches.tsv`: every search run (date, engine, query, useful results).
+  §6 records a second search, on 6 November 2026: what was read in full and what only at abstract level, and its
+  findings (no symmetric k = 8 work found; upper bounds unchanged; the GLitchfield Lean repository; drat-trim
+  issue #42 and pull request #43; classical antecedents of the chord lemma and the certificate methods).
+- `references.bib`: BibTeX for every source cited in `RELATED.md` §§1–5. Of the sources added in §6 (6 November),
+  Mackey's thesis, Georgiev et al. and Miyata–Moriyama–Imai have entries; the others are cited inline there.
+- `searches.tsv`: every search run on 21 October (the 6 November searches are recorded in that check's session
+  journal, not here).
 
-Limitation: direct page fetches to arXiv, Semantic Scholar, DBLP, Zenodo, MathOverflow, Google
-Scholar and alphaXiv were refused by the session's network proxy (HTTP 403). Sources were read
-through the abstracts and snippets that WebSearch returned. Section-level details come from the
-repository survey `docs/RELATED_WORK_2026-10-14.md` and are marked as such.
+Limitation (21 October search; on 6 November direct fetches worked): direct page fetches to arXiv,
+Semantic Scholar, DBLP, Zenodo, MathOverflow, Google Scholar and alphaXiv were refused by the session's network
+proxy (HTTP 403). Sources were read through the abstracts and snippets that WebSearch returned. Section-level
+details come from the repository survey `docs/RELATED_WORK_2026-10-14.md` and are marked as such.
 
-Short answers (details and wording in `RELATED.md` §4):
+Short answers (details and wording in `RELATED.md` §4; the 6 November search in §6 does not change them):
 - (a) We did not find prior work stating that reflection-invariant 33-point sets in general
   position contain a convex 7-gon. The closest is 4-fold rotational symmetry at 32 points
   (Subercaseaux–Mackey–Qian–Heule 2025).

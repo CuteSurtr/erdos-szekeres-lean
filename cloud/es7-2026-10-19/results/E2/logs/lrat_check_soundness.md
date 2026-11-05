@@ -3,6 +3,13 @@
 Checker: drat-trim/lrat-check, git 2e3b2dc (= upstream master on 2026-10-20; the same
 commit task E used).
 
+Note added 2026-11-06: this defect was already public. In marijnheule/drat-trim, issue #31
+(2022-07-22) reported it, commit cbd2915 (2022-10-19) fixed it, and commit 5cd8ac3
+(2024-04-21) commented the fix out again; master is still 2e3b2dc. Issue #42 and PR #43
+(both 2026-09-29) report the regression with the same reproduction as below and a one-line
+fix. The finding recorded here was an independent rediscovery of a publicly known defect
+(see also ../README.md and LRATCHECK20261105).
+
 Reproduction (any satisfiable CNF):
 
     printf 'p cnf 1 1\n1 0\n' > triv.cnf      # satisfiable: x1

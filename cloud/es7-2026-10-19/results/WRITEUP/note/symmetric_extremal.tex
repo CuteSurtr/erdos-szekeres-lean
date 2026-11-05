@@ -30,7 +30,7 @@
 \newcommand{\dirn}[1]{{\upshape\nolinkurl{#1}}}
 \newcommand{\lean}[1]{{\upshape\nolinkurl{#1}}}
 
-\title{Symmetric extremal configurations for the Erd\H{o}s--Szekeres problem\\[3pt]\large Draft, 2 November 2026}
+\title{Symmetric extremal configurations for the Erd\H{o}s--Szekeres problem\\[3pt]\large Draft, 6 November 2026}
 \author{}
 \date{}
 
@@ -46,9 +46,13 @@ conjecture) this gives the values $2,4,8,12,32,46$ for $k=3,\dots,8$, those for 
 theorem (upper bounds for $k\ge4$ Lean-checked, with no SAT input), the bounds $128\le\Nm(9)\le226$ and $188\le\Nm(10)\le316$,
 and the equivalence of the conjectured mirror values with cases of the Erd\H{o}s--Tuza--Valtr conjecture. For rotations
 we give the orbit-counting rule ($2^{k-2}$ fits a $(k-1)$-fold rotation if and only if $k-1$ is an odd prime, an odd
-base-$2$ Fermat pseudoprime or a power of $2$), seven order types of sevenfold symmetric $64$-point sets without a convex
-octagon, a computer-assisted argument (SAT certificates accepted by lrat-check, on top of unrefereed written proofs) that
-one orbit of rotated generic tiny clusters cannot reach $128$ points for $k=9$, and
+base-$2$ Fermat pseudoprime or a power of $2$). For $k=8$ the largest sevenfold symmetric set in general position
+without a convex octagon has exactly $64$ points and the largest sixfold symmetric one exactly $60$, so $ES(8)=65$ holds
+for these two symmetry types: the lower bounds are explicit sets (seven and five order types; exact computation), and the
+upper bounds are SAT certificates accepted by the verified checker cake\_lpr, on top of a Lean-checked reduction and a
+reviewed, unrefereed written proof of the encoding (for the sixfold bound, $6$ of the $64$ cake\_lpr verdicts are so far
+bound to file hashes). We also give a computer-assisted argument (SAT certificates accepted by cake\_lpr, on top of
+unrefereed written proofs) that one orbit of rotated generic tiny clusters cannot reach $128$ points for $k=9$, and
 examples with $120$, $253$ and $991$ points for $k=9,10,12$. Centrally symmetric $2^{k-2}$-point sets exist for every
 $k\ne4$; this is implied by published constructions, although no source inspected states it, and for even $k$ we give an
 independent proof. Every statement carries a rigor label.
@@ -77,7 +81,7 @@ A companion study~\cite[\dirn{WRITEUP/SYMMETRIC.md}]{Supp} shows, with computer-
 least $33$ points in general position mapped into itself by an isometry or affine bijection other than the identity
 contains a convex heptagon: the reduction to five case classes is Lean-checked, the reflection classes are Lean-checked
 consequences of Baek's theorem (Corollary~\ref{cor:small}), and the other classes rest on SAT case splits, written
-soundness proofs of the encodings, certificates accepted by two checkers and, for most threefold and half-turn pieces,
+soundness proofs of the encodings, certificates accepted by cake\_lpr and, for most threefold and half-turn pieces,
 verdicts recorded before the proofs were deleted. The fivefold case also follows from a computation
 reported earlier by Dumitru~\cite[\S7, Table~1]{Dum25} (no proof files public), which has priority. For $k=7$ only the half-turn and reflections reach
 $2^{k-2}$ (Table~\ref{tab:k8}); for $k=8$ sevenfold symmetric sets reach it too (Theorem~\ref{thm:c7}), while reflections
@@ -102,9 +106,12 @@ or below it form a cup from $a$ to $b$; then $|P|$ is the sum of their sizes min
 
 \noindent\textbf{Rigor labels.}
 \emph{Lean-checked}: compiled with Lean~4.24.0 and the repository's Mathlib, depending only on \lean{propext},
-\lean{Classical.choice}, \lean{Quot.sound}. \emph{Certificate (both checkers / lrat-check only)}: an unsatisfiability
-claim whose LRAT proof (produced by CaDiCaL~3.0.1) was accepted by \texttt{lrat-check} and by the CakeML-verified
-\texttt{cake\_lpr}, or by \texttt{lrat-check} alone; the soundness of the encoding is a written proof. \emph{Exact
+\lean{Classical.choice}, \lean{Quot.sound}. \emph{Certificate}: an unsatisfiability claim whose LRAT proof (produced
+by CaDiCaL~3.0.1, or 2.1.3 for the re-checks of 5 November) was accepted by the CakeML-verified checker
+\texttt{cake\_lpr}, which prints \texttt{s VERIFIED UNSAT}; the soundness of the encoding is a written proof. Acceptance by
+\texttt{lrat-check} alone is not a certificate: the \texttt{lrat-check} of drat-trim at commit \texttt{2e3b2dc} accepts an
+invalid proof of a satisfiable formula unless patched, a publicly known defect~\cite{DT} (our record:
+\dirn{LRATCHECK20261105}); \texttt{lrat-check} verdicts cited here are supporting only. \emph{Exact
 computation}: exact integer or algebraic arithmetic on explicit data, by at least two independently written programs
 unless stated otherwise. \emph{Written proof (not refereed)}: a complete written proof, here or in the supplementary
 material, checked by at least one independent internal review, not refereed by a journal. \emph{Published}: a refereed
@@ -112,7 +119,8 @@ published proof. \emph{Computational evidence} (tests and failed searches, never
 and \emph{refuted} (by an explicit, exactly checked counterexample).
 
 \noindent\textbf{Supplementary material.} The directories \dirn{MIRRORETV}, \dirn{SYMLEAN/mirror}, \dirn{ES8SYM},
-\dirn{PRIMEFOLD}, \dirn{SYMEVEN}, \dirn{SYM2} and the file \dirn{WRITEUP/SYMMETRIC.md} of the project repository~\cite{Supp} contain
+\dirn{PRIMEFOLD}, \dirn{SYMEVEN}, \dirn{SYM2}, \dirn{C6UPPER}, \dirn{C7UPPER}, \dirn{LAYERLEAN}, \dirn{SIX60} and the file
+\dirn{WRITEUP/SYMMETRIC.md} of the project repository~\cite{Supp} contain
 the full proofs, Lean files, point sets with SHA-256 sums, SAT encodings, logs and reproduction commands.
 
 \section{Mirror symmetry}\label{sec:mirror}
@@ -257,8 +265,9 @@ convex $n$-gon; $N(7,4,7)=16$ and $N(8,4,8)=22$ by Theorem~\ref{thm:baek}. Apply
 Theorem~\ref{thm:A}; $k=4,5$ also follow from $ES(4)=5$ and $ES(5)=9$. The Lean proofs (\lean{MirrorOdd.mirror_seven_line},
 \lean{MirrorOdd.mirror_eight_line}; \dirn{SYMLEAN/mirror}) use the repository's adaptation of Baek's formalization and
 bridge lemmas adapted from Schroeder's archive~\cite{Sch26}. Also, $N(8,4,8)\le22$ is certified by two independently
-written $23$-point SAT encodings, each accepted by both checkers (\dirn{ES8SYM}~\S4), and $N(7,4,7)\le16$ by $17$-point
-certificates accepted by lrat-check only (\dirn{MIRRORETV}~\S4).
+written $23$-point SAT encodings, each accepted by cake\_lpr (\dirn{ES8SYM}~\S4), and $N(7,4,7)\le16$ by $17$-point
+SAT encodings (\dirn{MIRRORETV}~\S4): two of the four were certified by cake\_lpr on 5 November
+(\dirn{LRATCHECK20261105/recheck}); the other two were accepted by lrat-check only and have no committed generator.
 
 \begin{proposition}[ETV equivalence; written proof (not refereed)]\label{prop:etv}
 For $j\ge2$: $\Nm(2j)=L(2j)$ if and only if $P(2j,j,2j)$ holds, and $\Nm(2j-1)=2^{2j-3}$ if and only if
@@ -407,7 +416,7 @@ points in convex position if and only if (i)~$g(x)+h(x)\le x+1$ for $x=1,\dots,m
 centre holds (odd $m$ only; \dirn{PRIMEFOLD/cluster/PROOFS.md}), and (iii)~$\mc(C)\le m$.
 \end{proposition}
 
-\begin{theorem}[limit of the family; certificate accepted by lrat-check only, on top of Lemma~\ref{lem:blowup},
+\begin{theorem}[limit of the family; certificate (cake\_lpr), on top of Lemma~\ref{lem:blowup},
 Proposition~\ref{prop:orbit}(i) and the soundness of the encoding, written proofs (not refereed); lower bounds exact
 computation]\label{thm:E}
 Let $\nu(m)$ be the largest size of a generic cluster satisfying (i). Then $\nu(4)=2$, $\nu(5)=3$, $\nu(6)=5$, $\nu(7)=9$
@@ -415,8 +424,10 @@ and $\nu(8)\le14$. Hence a rotated-cluster set with generic cluster and no $m+1$
 $8,16,30,64,112$ points for $m=4,\dots,8$; for $k=9$ this family cannot reach $2^7=128$.
 \end{theorem}
 
-A sound SAT relaxation of (i) is unsatisfiable for $(m,n)=(4,3),(5,4),(6,6),(7,10),(8,15)$ (two encoders; lrat-check
-accepted all proofs, cake\_lpr was not run); the values for $m\le7$ are attained by exactly checked sets. Not covered:
+A sound SAT relaxation of (i) is unsatisfiable for $(m,n)=(4,3),(5,4),(6,6),(7,10),(8,15)$ (two encoders, first checked
+with lrat-check only; on 5 November all seven formulas were regenerated with matching hashes and their proofs accepted by
+cake\_lpr, and an independently written encoder gave $10$ of $10$ formulas accepted by cake\_lpr;
+\dirn{LRATCHECK20261105/recheck}); the values for $m\le7$ are attained by exactly checked sets. Not covered:
 cluster segments exactly parallel to a chord, and several orbits. The family reaches $2^{k-2}$ for $k=3,4,5,6,8$ with
 clusters of $1,1,2,3,9$ points, for $k=5,6$ with the order types of Proposition~\ref{prop:small} ($k=5$: up to
 reflection; exact computation).
@@ -512,11 +523,16 @@ $S\subseteq\{O\}$. (b)~If $m\in\{4,5,6,7\}$, then $S\setminus\{O\}$ consists of 
 $|S|\ge65$ needs $t\ge17,13,11,10$ respectively.
 \end{proposition}
 
-Part (a): an orbit is a convex $m$-gon (\lean{RefuteC6.part_a}). The largest layer counts found are $13$, $10$ (with
-centre), $9$, $9$ (with centre). Since threefold sizes are $3t$ or $3t+1$ and $3\cdot21+1<65$, a threefold counterexample
-to $ES(8)=65$ exists if and only if some $22$-orbit threefold set without centre is octagon-free. Upper bounds for the
-rotation types come only from $ES(8)\le408$, giving $407$ (the repository's Lean-checked $ES(8)\le311$, not re-checked
-here, gives $310$).
+Part (a): an orbit is a convex $m$-gon (\lean{RefuteC6.part_a}). The largest layer counts found are $13$, $11$ (with
+centre), $10$, $9$ (with centre). Since threefold sizes are $3t$ or $3t+1$ and $3\cdot21+1<65$, a threefold counterexample
+to $ES(8)=65$ exists if and only if some $22$-orbit threefold set without centre is octagon-free. For $m=6,7$ the counts
+$10$ and $9$ are the largest possible: every configuration of $11$ nested regular hexagons, resp.\ $10$ nested regular
+heptagons, about a common centre and in general position contains $8$ points in convex position (certificates accepted by
+cake\_lpr for two separately implemented encoders, \dirn{C6UPPER}, \dirn{C7UPPER}; the reduction to these statements is
+Lean-checked in \dirn{LAYERLEAN}; the soundness of the encoding is a written proof (not refereed); what was replayed is
+stated in Table~\ref{tab:rigor}). With the explicit sets (exact computation; \dirn{SIX60}, Theorem~\ref{thm:c7}) the
+sixfold maximum is exactly $60$ and the sevenfold maximum exactly $64$. For $m=3,4,5$ upper bounds come only from
+$ES(8)\le408$, giving $407$ (the repository's Lean-checked $ES(8)\le311$, not re-checked here, gives $310$).
 
 \begin{table}[ht]
 \centering\footnotesize
@@ -529,16 +545,19 @@ half-turn & $2t$ & 32 & 64 & exact computation$^\dagger$ & 66\\
 3-fold & $3t$, $3t+1$ & 31 & 61 (with centre) & exact computation & 66 (no centre)\\
 4-fold & $4t$ & 28 & 52 & exact computation & 68\\
 5-fold & $5t$, $5t+1$ & 31 & 56 (with centre) & exact computation & 65\\
-6-fold & $6t$ & 30 & 54; \textbf{at most 60} & certificate, both checkers (\texttt{C6UPPER}) & 66 (excluded)\\
-7-fold & $7t$, $7t+1$ & 1 & \textbf{64, exact} (with centre) & certificate, both checkers (\texttt{C7UPPER}) & 70 (excluded)\\
+6-fold & $6t$ & 30 & \textbf{60, exact} & exact comp.; certificate (\texttt{C6UPPER}) & 66 (excluded)\\
+7-fold & $7t$, $7t+1$ & 1 & \textbf{64, exact} (with centre) & exact comp.; certificate (\texttt{C7UPPER}) & 70 (excluded)\\
 order $\ge8$ & $0,1$ & 1 & \textbf{1} (exact value) & Lean-checked & impossible\\
 \bottomrule
 \end{tabular}
 \caption{Largest symmetric sets without a convex $k$-gon. $k=7$: companion study (\texttt{WRITEUP/SYMMETRIC.md}),
 computer-assisted except reflections (Lean-checked via Baek) and orders $\ge7$; the fourfold exclusion of $32$ points
-was stated in~\cite[\S6.2]{SMQH25}, and a certificate for it (six realizability cuts and an LRAT proof, both checkers) is in
-\texttt{C4CUT}. $k=8$: sets in \texttt{ES8SYM/sets}; the half-turn value is $64$ if $ES(8)=65$, and the $7$-fold value is
-$64$ unconditionally (\texttt{C7UPPER}); $^\dagger$also implied by published results (Theorem~\ref{thm:central}). $t$ counts the orbits with more than one
+was stated in~\cite[\S6.2]{SMQH25}, and a certificate for it (six realizability cuts and an LRAT proof accepted by
+cake\_lpr) is in \texttt{C4CUT}. $k=8$: sets in \texttt{ES8SYM/sets}, and for $6$-fold in \texttt{SIX60/sets} (five
+$60$-point sets of pairwise different order types); the half-turn value is $64$ if $ES(8)=65$, and the $6$- and $7$-fold
+values are $60$ and $64$ unconditionally, with lower bounds by exact computation and upper bounds by certificates accepted
+by cake\_lpr (\texttt{C6UPPER}, \texttt{C7UPPER}; Proposition~\ref{prop:k8sizes} and Table~\ref{tab:rigor});
+$^\dagger$also implied by published results (Theorem~\ref{thm:central}). $t$ counts the orbits with more than one
 point.}
 \label{tab:k8}
 \end{table}
@@ -645,12 +664,14 @@ statement & status\\
 \midrule
 Lemma~\ref{lem:mirror}; Theorem~\ref{thm:A}; $\Nm(k)\le4,8,12,32,46$ ($k=4,\dots,8$); $\Nm(9)\le226$ & Lean-checked, no SAT input ($k=7,8,9$ via the Lean formalization of Baek's theorem)\\
 Theorems~\ref{thm:B}, \ref{thm:allk}; Prop.~\ref{prop:etv}; Lemma~\ref{lem:pascal}; $\Nm(10)\le316$ & written proof (not refereed); estimates of Thm.~\ref{thm:B} Lean-checked\\
-$N(8,4,8)\le22$; $N(7,4,7)\le16$ by SAT & certificates: both checkers (2 encodings); lrat-check only (4)\\
+$N(8,4,8)\le22$; $N(7,4,7)\le16$ by SAT & certificates (cake\_lpr), 2 encodings each; for $N(7,4,7)$ two more encodings lrat-check only\\
 Explicit mirror sets; Props.~\ref{prop:small}, \ref{prop:noneq}; Thms.~\ref{thm:c7}, \ref{thm:records}; $k=8$ lower bounds (Table~\ref{tab:k8}); central instances & exact computation\\
 Lemma~\ref{lem:layer} & Lean-checked (\texttt{LAYERLEAN}: hull vertices one orbit, layers, strict nesting in orientation form, $O\notin S$ for even $m$)\\
 Lemmas~\ref{lem:blowup}, \ref{lem:modules}; Prop.~\ref{prop:orbit}; Prop.~\ref{prop:small}(b); $k=8$ central remarks & written proof (not refereed)\\
 Proposition~\ref{prop:compat}; Proposition~\ref{prop:k8sizes} & core / part (a) Lean-checked; rest written proof\\
-Theorem~\ref{thm:E} & certificate, lrat-check only, plus written proofs\\
+Theorem~\ref{thm:E} & certificate (cake\_lpr: $7$ of $7$ regenerated formulas with matching hashes, and $10$ of $10$ from an independent encoder), plus written proofs\\
+$k=8$, sevenfold maximum $64$: upper bound (\texttt{C7UPPER}) & certificate (cake\_lpr, two encoders; both proofs replayed against regenerated formulas with matching hashes on 4 November); reduction Lean-checked; encoding soundness written proof (not refereed)\\
+$k=8$, sixfold maximum $60$: upper bound (\texttt{C6UPPER}) & certificate: all $64$ cube proofs ($32$ per encoder) accepted by cake\_lpr when solved (3 November), but those logs record cube labels, not formula or proof hashes; hash-bound cake\_lpr replay for $6$ of the $64$, and hash-bound replay of all $64$ with lrat-check only (4 November); a full hash-bound cake\_lpr replay is planned. Reduction Lean-checked; encoding soundness and reflection unit written proof (not refereed)\\
 Theorem~\ref{thm:central-even}, Lemma~\ref{lem:cubic} & written proof, referee-style internal review\\
 Theorem~\ref{thm:central}, odd $k$ (\dirn{SYM2}) & written proof (not refereed)\\
 Theorem~\ref{thm:central}, even $k\ge8$, via Lemma~14 & written argument from a published lemma, not internally reviewed\\
@@ -674,9 +695,12 @@ printed in~\cite[p.~443]{MS00}, which would give $ES(n)\le2^{n-2}$ (the lower bo
 far beyond the $23$-point instance, and Baek's method is developed for $a=4$. (2)~Is there a mirror-symmetric
 heptagon-free $32$-point set with two points on the axis (Theorem~\ref{thm:A} allows it)? (3)~Conjecture~\ref{conj:primefold}
 for $k=9$ (best $120$ of $128$; by Theorem~\ref{thm:E} one orbit of generic tiny clusters does not suffice) and $k=12$
-(best $991$ of $1024$); does a generic cluster of $93$ points satisfying Proposition~\ref{prop:orbit} exist for $m=11$? (4)~Upper bounds for the rotation types at $k=8$ below $ES(8)-1$ (so far $6$-fold: at most $60$, and $7$-fold: exactly
-$64$, by SAT certificates on top of the reviewed, unrefereed encoder proof; the $3$-, $4$- and $5$-fold cases are open);
-is some threefold $22$-orbit set octagon-free? (5)~Does every centrally symmetric set of $66$ points in general position
+(best $991$ of $1024$); does a generic cluster of $93$ points satisfying Proposition~\ref{prop:orbit} exist for $m=11$?
+(4)~Upper bounds below $ES(8)-1$ for the $3$-, $4$- and $5$-fold rotation types at $k=8$. The $6$- and $7$-fold cases are
+settled (exactly $60$ and $64$; the upper bounds by SAT certificates on top of the reviewed, unrefereed encoder proof).
+Threshold runs of 5 November on the $5$-fold ($13$ layers) and $4$-fold ($17$ layers) formulas, with added chord-lemma
+clauses, closed no phase-order cube (fivefold: $19$ of $24$ ran for up to about $15$ hours, $5$ never started;
+fourfold: $11$ of $12$ ran for about $15$ hours, one was lost; evidence only, \dirn{ROT45CHORD20261105}). Is some threefold $22$-orbit set octagon-free? (5)~Does every centrally symmetric set of $66$ points in general position
 contain a convex octagon? (6)~Formalize Theorem~\ref{thm:B}, the constructions and Lemma~\ref{lem:cubic}.
 
 \section{Literature and credit}\label{sec:lit}
@@ -707,11 +731,20 @@ Scholar). Not inspected: \cite{ETV96}, the journal versions of~\cite{Bae25,BV17,
 of~\cite{SMQH25}, the database of~\cite{AAK02}, several books and theses (\dirn{SYMEVEN/README.md}~\S6.3), paywalled
 databases and most sources not in English.
 
+\paragraph{Later checks for $k=8$} (evidence only). A check on 4 November (\dirn{C6C7REVIEW/LITERATURE.md}) and searches
+on 6 November 2026 (arXiv listings and full texts, among them~\cite{KPH26,KK26}, and the abstract and version history
+of~\cite{Dum25}; Crossref for the CICM chapter
+of~\cite{SMQH25}, whose full text was not accessed; GitHub, including the public Lean repository
+\texttt{GLitchfield/erdos-szekeres-convex-poly}, created 1 August 2026 and last pushed 20 October 2026, in which no file
+on symmetric sets was found; general web searches) found no work on symmetric sets without $8$ points in convex position.
+SMQH~\cite{SMQH25} stop at $k=7$.
+
 No matching prior result was found in these sources for: the identities of Corollary~\ref{cor:identities}, the far-flat
 construction, the odd-$k$ reduction with axis points, the even construction with two axis points,
 Proposition~\ref{prop:etv}, and the derivation of $\Nm(7)=32$ and $\Nm(8)=46$ from Baek's theorem (the odd-$k$ lower
 bound $2^{k-2}$ itself is an instance of Valtr's construction, and for $k=7$ also follows from Lov\'asz's form); rotationally symmetric sets of order at least $3$ for
-$k\ge8$ (Theorems~\ref{thm:c7}, \ref{thm:records} and the $k=8$ lower bounds), Proposition~\ref{prop:small}(b), the size rule
+$k\ge8$ (Theorems~\ref{thm:c7}, \ref{thm:records} and the $k=8$ lower bounds), the sixfold and sevenfold upper bounds for
+$k=8$ (Proposition~\ref{prop:k8sizes}), Proposition~\ref{prop:small}(b), the size rule
 stated for all $k$, the rotated-cluster family with Theorem~\ref{thm:E}, Proposition~\ref{prop:noneq} and
 Conjecture~\ref{conj:primefold} in this form; the statement of Theorem~\ref{thm:central} for even $k\ge8$, which is
 nevertheless implied by~\cite{BB25,SMQH25}; and the $k=8$ remarks at the end of Section~\ref{sec:central}. The sources
@@ -731,7 +764,10 @@ theorem, in \emph{Discrete and Computational Geometry (JCDCG 2000)}, LNCS 2098, 
 Discrete Math.} 49 (2015), 425--431.
 \bibitem{BV17} M.~Balko and P.~Valtr, A SAT attack on the Erd\H{o}s--Szekeres conjecture, \emph{European J. Combin.}
 66 (2017), 13--23 (not read).
-\bibitem{Dum25} B.~C.~Dumitru, Notes on the 33-point Erd\H{o}s--Szekeres problem, arXiv:2512.24061 (2025).
+\bibitem{DT} drat-trim, \url{https://github.com/marijnheule/drat-trim}: issue \#31 (22 July 2022), commits
+\texttt{cbd2915} (19 October 2022, fix) and \texttt{5cd8ac3} (21 April 2024, regression), issue \#42 and pull request \#43
+(29 September 2026); master at \texttt{2e3b2dc}.
+\bibitem{Dum25} B.~Dumitru, Notes on the 33-point Erd\H{o}s--Szekeres problem, arXiv:2512.24061 (2025).
 \bibitem{Epp18} D.~Eppstein, \emph{Forbidden Configurations in Discrete Geometry}, Cambridge University Press, 2018;
 the figure also as File:8-points-no-pentagon.svg on Wikimedia Commons (2007).
 \bibitem{ES35} P.~Erd\H{o}s and G.~Szekeres, A combinatorial problem in geometry, \emph{Compositio Math.} 2 (1935),
@@ -762,8 +798,11 @@ geometry, arXiv:2506.00224v1 (2025); also CICM 2025 (chapter not accessed).
 \bibitem{SP06} G.~Szekeres and L.~Peters, Computer solution to the 17-point Erd\H{o}s--Szekeres problem, \emph{ANZIAM
 J.} 48 (2006), 151--164.
 \bibitem{Supp} Supplementary material: the directories \dirn{MIRRORETV}, \dirn{SYMLEAN/mirror}, \dirn{ES8SYM},
-\dirn{PRIMEFOLD}, \dirn{SYMEVEN}, \dirn{SYM2} and the file \dirn{WRITEUP/SYMMETRIC.md} under \dirn{cloud/es7-2026-10-19/results} of
-the project repository (commit \texttt{19c286f73}).
+\dirn{PRIMEFOLD}, \dirn{SYMEVEN}, \dirn{SYM2}, \dirn{C4CUT}, \dirn{C6UPPER}, \dirn{C7UPPER}, \dirn{LAYERLEAN},
+\dirn{SIX60}, \dirn{C6C7REVIEW}, \dirn{LRATCHECK20261105}, \dirn{ROT45CHORD20261105} and the file
+\dirn{WRITEUP/SYMMETRIC.md} under \dirn{cloud/es7-2026-10-19/results} of the project repository (branch
+\texttt{es7-night-2026-11-01}; the commit is to be fixed before circulation; the previous draft cited
+\texttt{19c286f73}).
 \bibitem{TV05} G.~T\'oth and P.~Valtr, The Erd\H{o}s--Szekeres theorem: upper bounds and related results, in
 \emph{Combinatorial and Computational Geometry}, MSRI Publ. 52, Cambridge Univ. Press, 2005, 557--568.
 \end{thebibliography}

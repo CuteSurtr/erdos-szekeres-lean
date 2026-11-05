@@ -2,8 +2,9 @@
 
 3 November 2026 (UTC). Computer-assisted.
 
-**Addendum, 5 November 2026: the exact maximum is 60.** `SIX60` gives three exact 60-point 6-fold octagon-free
-sets (ten hexagons, three order types), each checked by three independent implementations. With this certificate
+**Addendum, 5 November 2026: the exact maximum is 60.** `SIX60` gives five exact 60-point 6-fold octagon-free
+sets (ten hexagons; A, B, C, C' and D, five pairwise different order types), each checked by three independent
+implementations. With this certificate
 (61 and more excluded), the largest 6-fold octagon-free set has exactly 60 points. Statements below that call the
 maximum open ("54 or 60") record the state on 3–4 November.
 
@@ -214,6 +215,9 @@ layer, perturbation, angular, nesting, chain or reflection arguments.
 - The other 58 cube proofs (29 per encoder) were not replayed in that review. On 4 November 2026 all 64 cube proofs were
   replayed with lrat-check against freshly generated CNFs: 64/64 `c VERIFIED`, every decompressed proof matching its
   recorded raw SHA-256 (`logs/replay_2026-11-04.txt`). cake_lpr was not re-run then; its verdicts of 3 November stand.
+- *Noted 6 November:* those solve-time cake_lpr logs (`logs/cake.txt`, `logs/encb_cake.txt`) record cube labels, not
+  CNF or proof hashes, so only the six proofs above have a hash-bound cake_lpr replay. A full hash-bound cake_lpr
+  replay of all 64 is planned.
 
 **Exact re-check (exact computation).** The review redid the real-set tests in integer arithmetic, using the
 coordinates (X, √3·Y) of the 6-fold cyclotomic weights.

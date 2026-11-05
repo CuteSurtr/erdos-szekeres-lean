@@ -11,13 +11,13 @@ has the largest possible size.
   power of 2 (§1; core Lean-checked). The rule is elementary: orbit counting plus Fermat's little theorem.
 - Such sets exist for k = 3, 4, 5, 6, 8 (§2, §3). k = 3 and 4 are trivial; sets for k = 5 and 6 were already in print.
 - k = 9 and k = 12 are open. The best sets found have 120 of 128 points (8-fold) and 991 of 1024 (11-fold) (§5).
-- One orbit of rotated tiny generic clusters cannot give k = 9 (§4; certificate accepted by lrat-check only, on top
-  of written proofs, not refereed).
+- One orbit of rotated tiny generic clusters cannot give k = 9 (§4; certificate accepted by cake_lpr since
+  5 November, on top of written proofs, not refereed).
 - The general statement is a conjecture (§7), a specific form of a suspicion of Subercaseaux–Mackey–Qian–Heule
   (SMQH, arXiv:2506.00224v1).
 
-Rigor labels: Lean-checked / certificate accepted by both checkers / certificate accepted by lrat-check only / exact
-computation / written proof (not refereed) / computational evidence / conjecture / refuted.
+Rigor labels: Lean-checked / certificate accepted by cake_lpr / exact computation / written proof (not refereed) /
+computational evidence / conjecture / refuted.
 
 ## 1. Size compatibility (`compat/`)
 
@@ -122,14 +122,17 @@ centre for odd m) has no convex (m+1)-gon iff (i) g(x) + h(x) ≤ x + 1 for x = 
 units of π/m from the tangent. An independent check compared it with about 72,000 exact cases (scripts not copied). A
 cluster of (2^(m−1)−1)/m points (odd m) or 2^(m−1)/m points (m = 2^a) satisfying (i)–(iii) would give k = m + 1.
 
-**Theorem E** (certificate accepted by lrat-check only; it also uses Lemma 1, Proposition C (i) and the soundness of
-the encoding, written arguments not refereed). A sound SAT relaxation of (i) is UNSAT for (m, n) = (4,3), (5,4),
-(6,6), (7,10), (8,15) (`cluster/clsat.py`, `clsat2.py`).
+**Theorem E** (certificate accepted by cake_lpr since 5 November; it also uses Lemma 1, Proposition C (i) and the
+soundness of the encoding, written arguments not refereed). A sound SAT relaxation of (i) is UNSAT for (m, n) = (4,3),
+(5,4), (6,6), (7,10), (8,15) (`cluster/clsat.py`, `clsat2.py`).
 - On 2 November the seven CNFs were regenerated with their recorded SHA-256 (e.g. `m8_n15`: `03329897…`) and
   re-solved with CaDiCaL 3.0.1; lrat-check accepted every proof (`cluster/sat/rerun.log`; the largest has
-  25,378,109 bytes). cake_lpr was not run.
+  25,378,109 bytes). cake_lpr was not run then, and lrat-check alone is not a certificate (`LRATCHECK20261105`).
+- On 5 November the seven CNFs were regenerated again with matching full SHA-256 and re-solved with CaDiCaL 2.1.3;
+  cake_lpr accepted all 7 proofs (`LRATCHECK20261105/recheck/primefold-E/`).
 - An independent encoder (`cluster/check/enc_te.py`) gives the same UNSAT results, with and without the signotope
-  axiom, and SAT at n−1. Its soundness was tested on 4,322 real clusters.
+  axiom, and SAT at n−1. Its soundness was tested on 4,322 real clusters. cake_lpr accepted its 10 UNSAT proofs on
+  5 November (same directory).
 - So a generic cluster has at most 2, 3, 5, 9, 14 points for m = 4, …, 8, and the family at most 8, 16, 30, 64, 112
   points. For m = 8 it cannot reach 128: **this family cannot give k = 9.**
 - The bounds for m = 4, …, 7 are attained by exact point sets: `sets/k5/c4_8_k5.txt`, the two sets in `sets/k6/`,
@@ -227,7 +230,7 @@ general position with no k points in convex position.
 
 **Sources inspected.**
 - SMQH arXiv:2506.00224v1 (the only arXiv version) and its code repository; Mackey CMU-CS-25-108; arXiv:2511.02864v3
-  and its repository; Baek–Balko SoCG 2025; B. C. Dumitru, arXiv:2512.24061v1.
+  and its repository; Baek–Balko SoCG 2025; B. Dumitru, arXiv:2512.24061v1.
 - Krapivin–Przybocki–Heule arXiv:2607.02958v1; Koshelev–Koshka arXiv:2604.20120v1; arXiv:2505.15366; Aichholzer et
   al. (EuroCG 2019); Szekeres–Peters 2006; Eppstein's book excerpt and blog; Wikipedia; erdosproblems.com #107;
   `LIT/RELATED.md`.
@@ -253,7 +256,7 @@ B(7); the failed searches of §6 and most of the literature notes were not re-ru
 | printed k = 5, 6 sets; k = 5 classification | exact computation; region argument written proof (not refereed) |
 | point sets of §2–§5 | exact computation (two implementations; one for the 111-point set of §4) |
 | Lemma 1, Proposition C | written proof (not refereed); wording fixes in `PROOFS.md` |
-| Theorem E | certificate accepted by lrat-check only; generic clusters only; m = 6 lower bound now exact |
+| Theorem E | certificate accepted by cake_lpr (5 November: 7/7 regenerated CNFs, and 10/10 from the independent encoder; `LRATCHECK20261105/recheck/`); generic clusters only; m = 6 lower bound now exact |
 | Theorems A and B as stated | refuted; corrected versions in §4 |
 | "no line-module of size 2..n−4" for the 8-fold sets | refuted (off by one); corrected version in §5 |
 | rule sizes B(h) | computational evidence; their maximality is a conjecture |
@@ -282,7 +285,7 @@ bash PRIMEFOLD/check120/reproduce.sh               # minutes; rewrites the logs 
 sh PRIMEFOLD/check253/run_all.sh                   # 20 s
 sh PRIMEFOLD/check991/run_all.sh <outdir>          # 35 s, GMP
 sh PRIMEFOLD/rule/run_all.sh <outdir>              # 90 s, GMP
-CADICAL=cadical LRATCHECK=lrat-check bash PRIMEFOLD/cluster/sat/run_all.sh <outdir>
+CADICAL=cadical LRATCHECK=lrat-check bash PRIMEFOLD/cluster/sat/run_all.sh <outdir>   # lrat-check only; cake_lpr check: LRATCHECK20261105/recheck/
 python3 -I PRIMEFOLD/cluster/check/m6_cluster5.py m6.signs && PRIMEFOLD/check64/cvxenum m6.signs   # after check64
 python3 -I PRIMEFOLD/cluster/thmA/zeta_cert.py PRIMEFOLD/cluster/thmA/m11_beta0_ES54.pts 11   # 2 min
 ```
