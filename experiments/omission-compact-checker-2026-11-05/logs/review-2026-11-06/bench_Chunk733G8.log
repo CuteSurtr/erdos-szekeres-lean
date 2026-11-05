@@ -1,0 +1,44 @@
+type checking took 628ms
+'CompactChecker.Chunk733G8.excludes' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 729ms
+cumulative profiling times:
+	.olean serialization 2.39ms
+	attribute application 0.0584ms
+	compilation (IR) 0.157ms
+	compilation (LCNF base) 0.271ms
+	compilation (LCNF mono) 0.0989ms
+	elaboration 820ms
+	fix level params 0.114ms
+	instantiate metavars 0.242ms
+	interpretation 0.0162ms
+	let-to-have transformation 0.821ms
+	linting 54.1ms
+	parsing 9.64ms
+	process pre-definitions 5.5ms
+	share common exprs 1.62ms
+	tactic execution 1.32ms
+	type checking 631ms
+	typeclass inference 16.6ms
+	Command being timed: "lean -R /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05 -o /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/build/CompactChecker/Chunk733G8.olean /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/CompactChecker/Chunk733G8.lean"
+	User time (seconds): 1.79
+	System time (seconds): 0.32
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.11
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3267064
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 80518
+	Voluntary context switches: 3932
+	Involuntary context switches: 33
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,127 @@
+{
+ "chunk": 733,
+ "leaf": 751,
+ "capacity": 256,
+ "entries": 196,
+ "missing": [
+  107,
+  181,
+  183
+ ],
+ "occupied": [
+  19,
+  27,
+  37,
+  41,
+  52,
+  132,
+  184,
+  210,
+  214,
+  224,
+  232
+ ],
+ "leaf_base": 8388608,
+ "K": 131072,
+ "J": 536870912,
+ "per_word": 4,
+ "tests": {
+  "genuine": {
+   "margin": 3,
+   "checkF2": true,
+   "demand_sum": 15272
+  },
+  "weight": {
+   "entry": 0,
+   "row": 2,
+   "old_weight": 32,
+   "new_weight": 33,
+   "margin": 0,
+   "checkF2": false
+  },
+  "ovf": {
+   "row": 0,
+   "support": [
+    0,
+    4,
+    8,
+    15,
+    18,
+    25,
+    27,
+    37
+   ],
+   "demand": 1,
+   "count": 64,
+   "weight": 131071,
+   "demand_sum": 8403816,
+   "demand_sum_ge_base": true,
+   "margin": -41942493,
+   "checkF2": false,
+   "no_guard_test": true
+  },
+  "ovf68": {
+   "row": 0,
+   "support": [
+    0,
+    4,
+    8,
+    15,
+    18,
+    25,
+    27,
+    37
+   ],
+   "demand": 1,
+   "count": 68,
+   "weight": 131071,
+   "demand_sum": 8928100,
+   "demand_sum_ge_base": true,
+   "margin": -44563913,
+   "checkF2": false,
+   "no_guard_test": true
+  },
+  "oor": {
+   "entry": 157,
+   "row": 1018,
+   "weight": 125,
+   "new_row": 4000,
+   "margin_without_entry": -372,
+   "checkF2": false
+  },
+  "mbound": {
+   "m": 3064,
+   "row_dropped": 3064,
+   "row_demand": 4,
+   "entries_of_row": 1,
+   "margin_without_row": -212,
+   "checkF2": false
+  },
+  "drop": {
+   "words": 49,
+   "entries_removed": 4,
+   "margin": -275,
+   "checkF2": false
+  },
+  "long": {
+   "mask_length": 253,
+   "treeF2": true,
+   "checkF2": false
+  },
+  "short": {
+   "mask_length": 234,
+   "dropped_values": [
+    0
+   ],
+   "leaf": "weight mutation",
+   "margin_full_mask": 0,
+   "treeF2": true,
+   "checkF2": false
+  }
+ },
+ "file": "CompactChecker/Chunk733G4Reject.lean",
+ "sha256": "7f857c56fec9986e13c817bd044799eadb216543fcb11cd2159b8f18aaa8f2ef",
+ "generator_sha256": "b541b05b49197407a348d8586b6c4e2b4e5a62bc56f5af5906706d5e65ddbdf6",
+ "source_sha256": "acaf6323a2539be869304f42263f80a87db95be1b998e41638dba9bca4d63d72",
+ "tree_sha256": "91c0fa1be1c98221b4bb01d62337f7372df56530c563f52cbdf41e1ed93d45df"
+}

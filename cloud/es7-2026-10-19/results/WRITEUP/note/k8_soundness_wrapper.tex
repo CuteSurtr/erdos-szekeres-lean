@@ -1,0 +1,47 @@
+% k8_soundness_wrapper.tex -- standalone compile check for k8_soundness.tex (6 November 2026).
+% pdflatex k8_soundness_wrapper && pdflatex k8_soundness_wrapper
+\documentclass[10pt]{amsart}
+\usepackage[margin=0.9in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,array}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+
+\setlist{itemsep=0pt,topsep=2pt,parsep=0pt}
+\emergencystretch=2em
+\def\UrlBreaks{\do\.\do\/\do\_}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% macros of symmetric_extremal.tex used by the section
+\newcommand{\orient}{\operatorname{orient}}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\dirn}[1]{{\upshape\nolinkurl{#1}}}
+\newcommand{\lean}[1]{{\upshape\nolinkurl{#1}}}
+
+\title{Soundness of the \texorpdfstring{$k=8$}{k=8} rotational encodings: draft section}
+\date{Standalone compile check, 6 November 2026}
+
+\begin{document}
+\maketitle
+
+\input{k8_soundness}
+
+\begin{thebibliography}{9}\footnotesize
+\bibitem{Supp} Supplementary material: the directories \dirn{C7UPPER}, \dirn{C6UPPER}, \dirn{LAYERLEAN},
+\dirn{C6C7REVIEW}, \dirn{CHORD20261105}, \dirn{STATUS20261104} and \dirn{WRITEUP/note} under
+\dirn{cloud/es7-2026-10-19/results} of the project repository.
+\end{thebibliography}
+
+\end{document}
