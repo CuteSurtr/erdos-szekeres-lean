@@ -1,0 +1,18 @@
+date: 2026-11-05T18:26:56Z
+python: Python 3.14.4
+C7UPPER/gen.py: 4564e7f0ff1d3794917414002b4847cca6f0753420bd806af9d107f2a361bace (as recorded in C7UPPER/SHA256SUMS.txt)
+C7UPPER/addunits.py: c6654fa5f1a26ec76b0aeaddb584ae84f87c565e33dc60f6a8f1c13f4787eecc (as recorded in C7UPPER/SHA256SUMS.txt)
+== gen.py 7 8 10 -> A_m7K8t10.cnf
+{"m": 7, "K": 8, "t": 10, "nv": 80080, "ncl": 2748538, "ntriple": 7820, "angle": {"unit": 2162, "cond": 71622}, "chain": [[0, 69, 767769], [1, 62, 734995], [2, 55, 498741], [3, 48, 319521], [4, 41, 189445], [5, 34, 100623], [6, 27, 45165], [7, 20, 15181], [8, 13, 2781], [9, 6, 50]]}
+seconds: gen 4, addunits 0
+A_m7K8t10.cnf: header: p cnf 80080 2748538
+A_m7K8t10.cnf: sha256: 1a7c0e706f2a7fb52b109ae20ca37d49c74940e01c1227fe152b46d742d5997f
+A_m7K8t10.cnf: recorded: 1a7c0e706f2a7fb52b109ae20ca37d49c74940e01c1227fe152b46d742d5997f
+A_m7K8t10.cnf: MATCH
+A_m7K8t10_H1.cnf: header: p cnf 80080 2748539
+A_m7K8t10_H1.cnf: sha256: fa297b5bd6608d29369fd56f8cab20d6d17ad9d335253352541a42e4c669fc49
+A_m7K8t10_H1.cnf: recorded: fa297b5bd6608d29369fd56f8cab20d6d17ad9d335253352541a42e4c669fc49
+A_m7K8t10_H1.cnf: MATCH
+last clause of A_m7K8t10_H1.cnf: 7857 0
+meta: ntriple 7820, H(1) = variable 7857, H(1..9) = [7857, 7858, 7859, 7860, 7861, 7862, 7863, 7864, 7865], unit 7857 is H(1): OK
+deleted: A_m7K8t10.cnf, A_m7K8t10.cnf.json and A_m7K8t10_H1.cnf

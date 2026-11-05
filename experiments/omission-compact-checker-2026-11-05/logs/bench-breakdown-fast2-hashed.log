@@ -1,0 +1,59 @@
+linting took 4.68ms
+linting took 5.07ms
+linting took 1.09ms
+linting took 1.99ms
+elaboration took 2.2ms
+linting took 1.36ms
+type checking took 125ms
+linting took 2.03ms
+type checking took 306ms
+linting took 2.71ms
+type checking took 134ms
+linting took 2.74ms
+elaboration took 1.3ms
+type checking took 612ms
+linting took 2.92ms
+elaboration took 1.18ms
+type checking took 606ms
+linting took 2.53ms
+cumulative profiling times:
+	attribute application 0.0639ms
+	compilation (IR) 1.08ms
+	compilation (LCNF base) 1.88ms
+	compilation (LCNF mono) 1.03ms
+	elaboration 8.19ms
+	fix level params 0.0551ms
+	instantiate metavars 0.0762ms
+	interpretation 0.118ms
+	let-to-have transformation 0.0622ms
+	linting 34.3ms
+	parsing 1.83ms
+	process pre-definitions 1.46ms
+	share common exprs 0.166ms
+	tactic execution 4.93ms
+	type checking 1.78s
+	typeclass inference 3.24ms
+	Command being timed: "lean -R experiments/omission-compact-checker-2026-11-05 experiments/omission-compact-checker-2026-11-05/scratch_bench_fast2.lean"
+	User time (seconds): 2.74
+	System time (seconds): 0.31
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.06
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3256596
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 81375
+	Voluntary context switches: 4596
+	Involuntary context switches: 30
+	Swaps: 0
+	File system inputs: 384
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+stamp Chunk733G4 20054915030dbe69e13a5680c59a3c2835304292ca0bb5a05377ab35f2e72d03 Fast2.lean sha256 bce8adfd31fa79f081b84cce0761a92d45e96614079cae816ef4d48f4a62546d load 9.78 03:57:16
