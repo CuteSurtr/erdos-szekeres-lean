@@ -47,7 +47,8 @@
   grid and the four recorded instances, Lean values on 229 instances, and kernel evaluation on 4 tiny instances,
   one of them, (4,5,1), with a two-level chain.
 - **What the clauses mean is proved for even m (M3), relative to the combinatorial `Model`.** That a geometric
-  counterexample yields a `Model` (M4–M6) and the assembly (M8) are not done; see "What is NOT yet proved" below.
+  counterexample yields a `Model` (M4–M6) and the assembly (M8) were not done as of M9; they are done since 2026-11-07
+  (section "M4–M8 (geo)", commit 57923bfb5).
 - **M9 is done (2026-11-06, 17:50–20:15 KST; not committed).** A1: the mode `twin-cube64` and
   `scripts/hash_binding.sh` bind the base and all 64 cubes of `cubes64` (by index) and 3 other instances to the
   records, 68/68 (trust item E1). A2: `EncB/Render.lean`, a Std-only printer for the twin with a proved round trip
@@ -75,7 +76,7 @@
     name: all within the three axioms (`logs/m9_d_recheck.log`). The 7 declarations of `EncB/Compose.lean` (review
     fixes; 6 theorems and the definition `parseDimacsBytes`) are queried in `logs/m9_review_fix.log`, and 5 of them
     are guarded at build time.
-- No git commit was made.
+- No git commit was made at the time; M9 was committed afterwards as 115ccda3d.
 
 ## What exists
 
@@ -168,7 +169,7 @@ How to call the exe (the `twin-*` modes print `encB`, the others print `gen`):
 - **Refusal.** On an instance where gen_b2.py raises, the exe writes nothing and exits with 1. For the twin this is
   decided by `diagCoded`.
 
-## M4–M8 (geo): the geometric half and the end-to-end theorem (2026-11-07, about 05:00–05:35 KST; not committed)
+## M4–M8 (geo): the geometric half and the end-to-end theorem (2026-11-07, about 05:00–05:35 KST; committed 57923bfb5)
 
 **What is proved.** The package `geo/` (Lean package `es8geo`, Lean 4.24.0, Mathlib `f897ebcf72cd16f8…` in
 `geo/.lake`, `encblean` required by path `..`) proves that a counterexample yields a `Model`, and composes this
@@ -365,7 +366,8 @@ PASS**; the audit itself: **AUDIT PASS**, exit 0, 47 s (`logs/m8_fix_audit.log`)
 Interface, each checked by `lake env lean` only and then by an independent verifier (compile, exact statements
 by `Expr` comparison or typed `example`, axioms, tokens, frozen hashes); logs `logs/m5m6_{M5,M6basic,G9rules}.log`.
 The G9 go/no-go spike (R2) passed on the first attempt. The integrator wrote ModelOfLabelling, Main and Audit, and
-ran the only `lake build`s (`logs/m8_build.log`) and the audit (`logs/m8_audit.log`). No git commit was made.
+ran the only `lake build`s (`logs/m8_build.log`) and the audit (`logs/m8_audit.log`). M4–M8 with the review fixes
+were committed afterwards as 57923bfb5.
 
 **Review fixes (2026-11-07, about 05:40–05:55 KST).** An independent review of M4–M8 gave 11 findings (2 major,
 9 minor); none concerned a proof. Disposition:
@@ -406,7 +408,8 @@ So the sixfold bound (every 6-fold symmetric set of ≥ 61 points in general pos
 Lean theorem whose only hypothesis is equivalent to `CubesUnsat64` (`texts_iff_cubesUnsat64`), i.e. what the 64
 cake_lpr verdicts certify given E1–E4, with E5 and E6 as the remaining trust beyond that.
 
-**P1 is not yet updated** (`WRITEUP/P1/p1.tex`, outside this package; the operator will revise it). When it is:
+**P1 was updated on 2026-11-07** (`WRITEUP/P1/README.md`, "Revision for the end-to-end Lean check (ENCBLEAN M4–M8),
+2026-11-07"). The notes written before that revision, kept for the record:
 its Rigor text (about line 131) still calls the soundness of the encodings a written proof with gaps (G1)–(G4);
 line 292 says ENCBLEAN is "standard library only, without Mathlib"; line 1057 lists closing (G1)/(G2) as future work.
 For encoder B with m = 6 the revision should cite `EncB.Geo.sixfold_es8_of_texts` (and `sixfold_es8_order6_of_texts`
@@ -1153,8 +1156,9 @@ Nothing in gen_b2.py uses floats. The angular configuration uses only integers (
 ## Trust: what the tests check and what stays trusted
 
 **Trust items E1–E6 (`DESIGN.md` §1.4) after M9.** These are the facts between the Lean theorems and the
-certificates. They are not the only thing missing for an end-to-end theorem: that a counterexample yields a
-`Model 6 8 11` (M4–M6, Mathlib) and the assembly (M8) are not proved (see "What is NOT yet proved").
+certificates. As of M9 they were not the only thing missing for an end-to-end theorem: that a counterexample yields
+a `Model 6 8 11` (M4–M6, Mathlib) and the assembly (M8) were not proved. **Since 2026-11-07 (M4–M8, section "M4–M8
+(geo)") they are the only remaining trust of the Lean route for m = 6** (`sixfold_es8_of_texts`).
 
 | item | what M9 settled | what stays trusted |
 |---|---|---|
@@ -1163,7 +1167,7 @@ certificates. They are not the only thing missing for an end-to-end theorem: tha
 | E2 provenance (R7) | `scripts/build_cake_lpr.sh`: the build recipe of commit `033aad53` with source hashes pinned from the local clone (first recorded by M9); **not run** | the binary `c14ff498…` is a build of `033aad53` (replay record), not of the vendored `a36874a8` |
 | **E3** DIMACS semantics | **narrowed, proved:** the printed text parses back, by the reference parser `parseDimacs`, to exactly `encB 6 8 11` and `cubeCnf (encB 6 8 11) c` (`parseDimacs_render`, `parseDimacs_base6811`, `parseDimacs_cube64_get`), and verdicts on the 64 parsed texts give `CubesUnsat64` (`cubesUnsat64_of_texts_get`); since the review fixes also on the UTF-8 bytes (`parseDimacsBytes_cube64_get`) and composed with M3 (`no_model_6811_of_texts`) | that cake_lpr reads every text of `parseDimacs`'s language as `parseDimacs` does, and that its `s VERIFIED UNSAT` means `¬ DimacsSatisfiable` of that list; evidence only (`m9_a2_cake_parse.log`) |
 | **E4** compiler and runtime | **narrowed:** core's `toString` (`reprFast`, `lean_string_of_usize`, the bodiless `String.Internal.append`) and the M1/M2 printers are off the twin's trust path; the header counts are inside the proved term | the Lean compiler on `encode` and on Render's printer; core's runtime (`String.push`/`++`, `Nat` arithmetic, `Nat.digitChar`, `List`/`Array`, `String.toNat?`, `putStr`); a reading of Emit's IO glue (details below) |
-| **E5** kernel, Mathlib, the paper's notions | unchanged (ENCBLEAN is Std-only; the Mathlib side starts in M4) | as before |
+| **E5** kernel, Mathlib, the paper's notions | as of M9 unchanged (EncB is Std-only). Since M4 (2026-11-07) the package `geo/` uses Mathlib `f897ebcf`, the repository's revision, with the repository's definitions vendored verbatim (`geo/VENDOR.sha256`) | the kernel; Mathlib `f897ebcf`; that `Point`, `GeneralPosition`, `HasConvexNGon`, `Invariant` and `rotAbout` mean what the paper says |
 | **E6** SHA-256 | unchanged | as before |
 
 - **The object of the theorems is `encB`, and the emitter prints `encB` through a proved renderer (M9 A2).** In
@@ -1230,14 +1234,17 @@ certificates. They are not the only thing missing for an end-to-end theorem: tha
 - **The geometric meaning of the clauses.** Since M3, `encB_satisfiable` relates every clause of `genCoded` to a
   combinatorial `Model` (orientations `chi`, the ψ-order `psiLt`, chains), for even m. Nothing yet connects a
   `Model` to points in the plane. The missing pieces are:
-  - the geometric side, labelling and `modelOfLabelling` (M4–M6, Mathlib, after the campaign cutoff 2026-11-16
-    17:00);
-  - the assembly `sixfold_es8` (M8).
+  - the geometric side, labelling and `modelOfLabelling` (M4–M6, Mathlib; planned for after the campaign cutoff,
+    done on 2026-11-07);
+  - the assembly `sixfold_es8` (M8; done on 2026-11-07).
 
-  So the sixfold bound is **not** formally verified end to end, and P1 says so.
+  So, as of M9, the sixfold bound was **not** formally verified end to end, and P1 said so.
 
   **Superseded on 2026-11-07 (section "M4–M8 (geo)"):** M4–M8 are done; `sixfold_es8_of_texts` proves the sixfold
-  bound from the meaning of the 64 verdicts, with E1–E6 as the remaining trust. P1 has not been updated yet.
+  bound from the meaning of the 64 verdicts, with E1–E6 as the remaining trust. P1 was updated on 2026-11-07
+  (`WRITEUP/P1/README.md`, "Revision for the end-to-end Lean check (ENCBLEAN M4–M8), 2026-11-07"): for m = 6 via
+  encoder B the sixfold bound is formally verified end to end, assuming the 64 cake_lpr verdicts and E1–E6; m = 7
+  stays written.
 - **The hash binding is a computation, not a proof (M9).** `scripts/hash_binding.sh` shows, by running the compiled
   exe, that the texts of `encB 6 8 11` and the 64 cubes of `cubes64` have the hashes of the certified files (68/68
   with 3 other instances; `logs/m9_hash_binding.log`, `logs/m9_a2_hash_binding.log`,
@@ -1262,7 +1269,8 @@ certificates. They are not the only thing missing for an end-to-end theorem: tha
 - **n-cube verdicts: certified (R1 resolved, 16:35).** The c6upper-noty12 run's `run.log` says at 15:40:35: "32 of
   32 NOT-Y(1,2) cube proofs accepted by cake_lpr, hash-bound (results.tsv)". Its post-run gate `verify_final64.py`
   has since run and prints PASS (`C6UPPER/noty12-2026-11-06/verify_final64.log`), so variant A has all 64 verdicts.
-  What remains for variant A is the Lean side (M4–M6 and M8 since M9 was done), not the certificates. This README step did not run the gate.
+  What remained for variant A after M9 was the Lean side (M4–M6 and M8), not the certificates; it is done since
+  2026-11-07. This README step did not run the gate.
 - **m = 7** (sevenfold) is ported for byte identity only. Its soundness is out of scope (`DESIGN.md` §1.3).
 
 ## M1 review fixes applied (2026-11-06, about 15:00 KST)

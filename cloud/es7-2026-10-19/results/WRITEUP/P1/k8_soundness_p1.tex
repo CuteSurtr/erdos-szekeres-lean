@@ -1,6 +1,8 @@
 % k8_soundness_p1.tex -- adapted copy for preprint P1 (6 November 2026).
-% Source: WRITEUP/note/k8_soundness.tex, SHA-256 52b04e633ad2255f1cb0747cb3cf9318f5ca891ca4adcf86d72073286e2c0988
-% (the note as revised on 6 November 2026, about 20:55–21:06 KST, after a claims review of its ENCBLEAN revision, in the
+% Source: WRITEUP/note/k8_soundness.tex, SHA-256 90bf626c8b57b7ad3ccfce6194bc08d10f8b5e1f0a981192609a417b52c5b99b
+% (the note after the fix round of 7 November 2026 on its ENCBLEAN M4-M8 revision, in the note and in this copy
+% alike; before that 89c54271..., the note as revised on 7 November 2026 for ENCBLEAN M4-M8; before that
+% 52b04e63..., the note as revised on 6 November 2026, about 20:55–21:06 KST, after a claims review of its ENCBLEAN revision, in the
 % note and in this copy alike; before that a01e82b5..., the note as revised about 20:10 KST for the Lean package
 % ENCBLEAN, in the note and in this copy alike; before that revision 50bcd17a..., the note as revised after 15:40 KST for C6UPPER/noty12-2026-11-06 and then
 % after a checker's round; before that round 0fe99cfe..., before the revision 248bf037... as committed
@@ -30,7 +32,12 @@
 % the 64-cube paragraph, the trust table (cube-cover row, a new last row, the caption) and gaps (G1) and (G2); the edits
 % 1-9 above are untouched. The fix round after the claims review of that revision (about 20:55–21:06 KST) changed, in
 % source and copy alike, the source's header comment, the rigor-label paragraph, the text after the proof of Lemma
-% k8s:lem:cube, the trust table's last row and gaps (G1) and (G2); the edits 1-9 are untouched.
+% k8s:lem:cube, the trust table's last row and gaps (G1) and (G2); the edits 1-9 are untouched. The revision of
+% 7 November 2026 for ENCBLEAN M4-M8 changed, in source and copy alike, the source's header comment, the rigor-label
+% paragraph, a new paragraph after the proof of Corollary k8s:cor:geom, the trust table (layer-lemma row, passage row,
+% last row, caption) and gaps (G1), (G2) (with the trust items (E1)-(E6)) and (G4); the edits 1-9 are untouched.
+% Its fix round (same day) changed, in source and copy alike, the source's header comment, the rigor-label paragraph
+% and gap (G2) (the sentence on texts_iff_cubesUnsat64, (E2), (E4)); the edits 1-9 are untouched.
 % Check with: diff WRITEUP/note/k8_soundness.tex WRITEUP/P1/k8_soundness_p1.tex
 %
 % k8_soundness.tex -- soundness of the SAT encodings behind the k = 8 rotational upper bounds
@@ -55,6 +62,17 @@
 % byte for byte and 3 are refused where gen_b2.py raises; (G2) speaks of the Lean string the printer function computes, and no longer credits cake_lpr's
 % verification for the agreement of its parser with the package's (tested on samples only). Rigor tags and the
 % mathematical text are unchanged.
+% Revised 7 November 2026 for ENCBLEAN M4-M8 (the Mathlib part ENCBLEAN/geo, Mathlib f897ebcf, commit 57923bfb5):
+% EncB.Geo.sixfold_es8_of_texts proves the sixfold bound from the meaning of the 64 encoder-B verdicts, so for m = 6
+% via encoder B the bound is Lean-checked end to end, assuming the 64 cake_lpr verdicts and the trust items E1-E6.
+% Changed: the rigor-label paragraph (the two parts of ENCBLEAN; the Lean route for m = 6); a new paragraph after the
+% proof of Corollary k8s:cor:geom (EncB.Geo.sixfold66_of_unsat); the trust table's layer-lemma row, passage row, last
+% row and caption; gap (G1) (the step from an admissible set to an EncB.Model is now Lean-checked for even m), gap (G2)
+% (now states sixfold_es8_of_texts and lists the trust items (E1)-(E6)) and the last sentence of (G4). Rigor tags of
+% the statements and the mathematical text are unchanged; m = 7 and encoder A stay written. Fix round after its review
+% (same day): the rigor-label paragraph (EncB.Geo items concern sixfold configurations; one cross-reference) and gap
+% (G2) (what texts_iff_cubesUnsat64 shows; (E2) names the Python harnesses that wrote the hash-verdict records; (E4)
+% adds a reading of the printer's IO code).
 %
 % An \input-able section.  It needs the macros \orient, \conv, \dirn, \lean of symmetric_extremal.tex, the theorem
 % environments theorem, lemma, proposition, corollary, definition, remark, the packages amsmath, amssymb, enumitem,
@@ -95,11 +113,16 @@ Lean~4.24.0, Mathlib \texttt{f897ebcf}; the axiom check \dirn{LAYERLEAN/logs/axi
 \lean{hullVerts_subset}, which is used in \lean{layers_are_orbits} and \lean{exists_layer} and so is covered by their
 checks); the declaration names below were
 checked against that file, and Lean was not rerun for this section.\footnote{Note added in this paper: for this paper the file was checked again with \texttt{lake env lean} on 6 November 2026; see Section~\ref{sec:layer}, ``Build and axioms''.} Items whose Lean names begin with \lean{EncB} are in \dirn{ENCBLEAN}, a separate
-package (Lean~4.24.0 with its standard library only, no Mathlib); its axiom check reports only \lean{propext},
-\lean{Classical.choice}, \lean{Quot.sound} for each of them (\dirn{ENCBLEAN/logs/m9_d_recheck.log}). They concern DIMACS
-clause lists in general (Lemma~\ref{k8s:lem:cube}) and a Lean definition of encoder~B's formula, not
-\dirn{gen_b2.py} itself, and no result of this section depends on them
-(gaps~(G1) and~(G2)). \emph{Written proof (not refereed)} means a
+package in two parts: names beginning with \lean{EncB.Geo} are in \dirn{ENCBLEAN/geo} (Lean~4.24.0, Mathlib
+\texttt{f897ebcf}), the others in \dirn{ENCBLEAN/EncB} (Lean~4.24.0 with its standard library only, no Mathlib); the
+axiom checks report only \lean{propext}, \lean{Classical.choice}, \lean{Quot.sound} for each of them
+(\dirn{ENCBLEAN/logs/m9_d_recheck.log}; for \dirn{ENCBLEAN/geo}, pinned by \texttt{\#guard\_msgs} in
+\dirn{ENCBLEAN/geo/ES8Geo/Audit.lean}, \dirn{ENCBLEAN/logs/m8_fix_audit.log}). They concern DIMACS
+clause lists in general (Lemma~\ref{k8s:lem:cube}), a Lean definition of encoder~B's formula, not
+\dirn{gen_b2.py} itself, and, for the names in \lean{EncB.Geo}, sixfold configurations. No result of this section depends on them. For $m=6$ they form a second route from the
+certificates of encoder~B to \lean{Sixfold66} and the sixfold bound, Lean-checked end to end and independent of the
+written proofs of this section, assuming the $64$ cake\_lpr verdicts and the trust items (E1)--(E6) listed under
+gap~(G2) (see also~(G1)). \emph{Written proof (not refereed)} means a
 complete proof given here. Most of them expand arguments reviewed on 4 November 2026 with no blocking gap found
 (\dirn{C6C7REVIEW/SOUNDNESS.md}). The others have had no internal review: those marked \emph{new here} are new
 arguments, and those marked \emph{not in the review} are standard facts or assembly steps that the review does not
@@ -905,6 +928,13 @@ contradicts Theorem~\ref{k8s:thm:sound}(b), and unsatisfiability of $F_B$ contra
 Theorem~\ref{k8s:thm:sound}(a$'$).
 \end{proof}
 
+For the Lean definition \lean{EncB.encB} of $F_B$ (gap~(G1)), the first statement of~(a) is Lean-checked without the
+written proofs of this section: \lean{EncB.Geo.sixfold66_of_unsat} derives \lean{Sixfold66} from the unsatisfiability
+of \lean{EncB.encB} at $(6,8,11)$, through a polar labelling of the peeled layers
+(\lean{EncB.Geo.labelling_of_counterexample}), the model of the formula that it defines
+(\lean{EncB.Geo.modelOfLabelling}) and \lean{EncB.encB_satisfiable}. With the cube cover, the reading of the printed
+texts and \lean{sixfold_octagon} it is part of \lean{EncB.Geo.sixfold_es8_of_texts} (gap~(G2)).
+
 The hypotheses of the corollary are supplied by certificates (cake\_lpr, \texttt{s VERIFIED UNSAT}). Their status,
 including how many verdicts are bound to file hashes by a replay against freshly generated formulas, is stated in Section~\ref{sec:cert} and is not repeated here. The link
 from the certified files to the programs analysed here is that fresh runs reproduce the formula files byte for byte\footnote{Note added in this paper: for the $64$ sixfold cube files of the hash-bound replay of 6 November 2026 this is on record by hash for all of them, and structurally for all; the $32$ cube files of encoder~B with $\neg Y(1,2)$, written on 6 November, are the regenerated base formula plus six units, checked byte for byte; see Section~\ref{sec:enc}, ``Validation''.}
@@ -921,7 +951,8 @@ Ingredient & Status\\
 Strict nesting, radius order, centre exclusion (Lemmas~\ref{k8s:lem:centre}, \ref{k8s:lem:nest}); reduction to
 \lean{Sixfold66}, \lean{Sevenfold70} & Lean-checked (\dirn{LAYERLEAN})\\
 Layer lemma (Lemma~\ref{k8s:lem:layer}) & Lean-checked core; the assembly of the peeled layers is a written proof
-(not refereed), not in the review\\
+(not refereed), not in the review; the part that the Lean route for encoder~B (last row) uses, a polar labelling of
+the layers for even $m$, is Lean-checked\\
 Signs of rules A and B (Lemma~\ref{k8s:lem:dich}(b),(c)); chain soundness (Lemma~\ref{k8s:lem:chain}, geometry) &
 Lean-checked\\
 Collinearity with the centre (Lemma~\ref{k8s:lem:collinear}) & written proof (not refereed), new here\\
@@ -941,7 +972,8 @@ Cube files equal base plus units; orbit and pattern counts; formula hashes & exa
 Omitted antipodal clauses (Lemma~\ref{k8s:lem:diam}) & written proof (not refereed), formula not in the review; a
 weakening only\\
 Passage to \lean{Sixfold66}, \lean{Sevenfold70} (Corollary~\ref{k8s:cor:geom}) & written proof (not refereed), not in
-the review\\
+the review; for encoder~B at $(6,8,11)$ also Lean-checked end to end, assuming the $64$ cake\_lpr verdicts and
+(E1)--(E6) (last row)\\
 Unsatisfiability of the formulas & certificate (Section~\ref{sec:cert})\\
 \midrule
 Not needed for the upper bounds: nested $m$-gons are admissible (Remark~\ref{k8s:rem:ident}) & written proof (not
@@ -949,16 +981,20 @@ refereed), new here\\
 Used only by encoder~A (cross-check), not for the bounds via encoder~B: the reflection unit
 (Lemma~\ref{k8s:lem:refl}) and the case $g\rho g^{-1}=\rho^{-1}$ of Lemma~\ref{k8s:lem:affine} & written proof (not
 refereed); Lemma~\ref{k8s:lem:affine} not in the review\\
-Partial Lean counterpart for encoder~B (\dirn{ENCBLEAN}; gaps~(G1), (G2)): for a Lean definition of $F_B$,
-satisfaction by the assignment of every combinatorial model, for even $m\ge2$, the $64$-cube cover at $(6,8,11)$, and
-the round trip of its printed text & Lean-checked (standard library only); that the definition equals \dirn{gen_b2.py}'s output, and
-that its printed texts are the certified files, is evidence only (compiled code, hashes)\\
+Lean route for encoder~B at $m=6$ (\dirn{ENCBLEAN}; gaps~(G1), (G2)): for a Lean definition of $F_B$,
+satisfaction by the assignment of every combinatorial model (even $m\ge2$), a model from every admissible set (even
+$m$; polar labelling of the layers), the $64$-cube cover at $(6,8,11)$, the round trip of its printed text, and the
+assembly with \lean{sixfold_octagon} (\lean{EncB.Geo.sixfold_es8_of_texts}) & Lean-checked end to end
+(\dirn{ENCBLEAN/EncB}: standard library only; \dirn{ENCBLEAN/geo}: Mathlib \texttt{f897ebcf}), assuming the $64$
+cake\_lpr verdicts and the trust items (E1)--(E6) of gap~(G2): that the printed texts are the certified files is
+evidence only (compiled code, hashes), and cake\_lpr's parser is tested, not verified; that the definition equals
+\dirn{gen_b2.py}'s output is evidence only and not used on this route; not for $m=7$\\
 \bottomrule
 \end{tabular}
 \caption{What the implication ``certificates $\Rightarrow$ \lean{Sixfold66}, \lean{Sevenfold70}'' rests on. The last three
-rows are not used for the bounds via encoder~B: the first of them is used by neither encoder, the second only by
-encoder~A, and the third is a partial Lean counterpart of the written proof for encoder~B, which that proof does not
-use.}
+rows are not used by the written proof for encoder~B: the first of them is used by neither encoder, the second only by
+encoder~A, and the third is a second route for encoder~B at $m=6$, Lean-checked end to end (assuming the $64$
+cake\_lpr verdicts and the trust items (E1)--(E6)) and independent of the written proof.}
 \label{k8s:tab:trust}
 \end{table}
 
@@ -966,29 +1002,56 @@ use.}
 \begin{enumerate}[label=(G\arabic*)]
 \item The correspondence between the Python sources and the clause families is established by reading the code at the
 stated hashes; there is no formal semantics of the programs, and the Python interpreter is trusted to run them as
-written. For encoder~B there is a partial Lean counterpart (\dirn{ENCBLEAN}): a Lean definition of its formula,
-\lean{EncB.encB}, and a Lean-checked proof that for even $m\ge2$ it is satisfied by the assignment derived from every
-\lean{EncB.Model} (\lean{EncB.encB_satisfiable}). An \lean{EncB.Model} is a combinatorial interface: an orientation of
+written. For encoder~B with $m=6$ this gap is closed in Lean on a second route (\dirn{ENCBLEAN}), for a Lean
+definition of its formula, \lean{EncB.encB}: a Lean-checked proof that for even $m\ge2$ it is satisfied by the
+assignment derived from every \lean{EncB.Model} (\lean{EncB.encB_satisfiable}), and a Lean-checked proof that for even
+$m$ every admissible set yields an \lean{EncB.Model}, through a polar labelling of its layers
+(\lean{EncB.Geo.labelling_of_counterexample}, \lean{EncB.Geo.modelOfLabelling}; with Mathlib). An \lean{EncB.Model} is a combinatorial interface: an orientation of
 each triple of labels and an order of the layer phases, together with, as hypotheses, the properties that the clause
 families use (the orientation is alternating and invariant under~$\rho$, the phase order is a strict total order with
 layer~$0$ first, rules~A and~B hold on the circular order of the points and their antipodes, the nesting relations
-hold, and there is no chain of $K-1$ points around a pivot). That \lean{EncB.encB} equals the output of
+hold, and there is no chain of $K-1$ points around a pivot). On that route the Python source is not used: the Lean
+definition is tied to the certified files by the hashes of its printed texts (trust item~(E1) under~(G2)). That
+\lean{EncB.encB} equals the output of
 \dirn{gen_b2.py} is not proved; it was checked by running compiled code (equal bytes on $222$ of the $225$ instances
 of a small grid, a refusal of the Lean program on the other $3$, where \dirn{gen_b2.py} raises, and equal bytes on the
-recorded instances, among them $F_B(6,8,11)$). That an admissible set yields an
-\lean{EncB.Model} is not Lean-checked. So (G1) stands for the written proof, which argues about \dirn{gen_b2.py}.
-\item The passage from a DIMACS file to \lean{Sixfold66} or \lean{Sevenfold70} is not formalized end to end. For
-encoder~B at $(6,8,11)$, two of its steps are Lean-checked for the Lean definition of (G1) (\dirn{ENCBLEAN}): the
-$64$-cube cover (\lean{EncB.encB_unsat_of_cubes64}), and the reading of the printed files, in that the Lean string
-the package's printer function computes for the formula alone or with one of the $64$ cubes is parsed back to exactly that clause
-list by a DIMACS parser written in the package (\lean{EncB.parseDimacs_render}, \lean{EncB.parseDimacs_cube64_get},
-\lean{EncB.cubesUnsat64_of_texts_get}). Not Lean-checked: that these texts are the certified files (their SHA-256,
-computed from the output of the compiled printer, equals the record for the base formula and all $64$ cube files;
-this is evidence that also trusts the Lean compiler and runtime); that its \texttt{s VERIFIED UNSAT} means unsatisfiability of the
-formula its own parser reads (trusted: cake\_lpr's verified HOL4/CakeML checker) and that this parser reads the files
-as the package's parser does (not verified; tested on samples only, \dirn{ENCBLEAN/logs/m9_a2_cake_parse.log}); the step from an admissible set to an \lean{EncB.Model}; and the assembly of the steps into one theorem. The
-results of this section other than the cited Lean theorems are written proofs only, and the sixfold bound is not
-formally verified end to end.
+recorded instances, among them $F_B(6,8,11)$). So (G1) stands for the written proof, which argues about
+\dirn{gen_b2.py}, and in particular for $m=7$ and for encoder~A; for $m=6$ via encoder~B the Lean route replaces it by
+the trust items of~(G2).
+\item The passage from a DIMACS file to \lean{Sixfold66} or \lean{Sevenfold70} is a written proof
+(Corollary~\ref{k8s:cor:geom}). For encoder~B at $(6,8,11)$ it is formalized end to end for the Lean definition
+of~(G1), up to the trust items (E1)--(E6) below (\dirn{ENCBLEAN}): \lean{EncB.Geo.sixfold_es8_of_texts} states that if each of the $64$ Lean strings that
+the package's printer function computes for that formula with one of the $64$ cubes is parsed, by a DIMACS parser
+written in the package, to an unsatisfiable clause list, then every set of at least $61$ points in general position
+that is invariant under the rotation by $2\pi/6$ about some point contains a convex octagon
+(\lean{EncB.Geo.sixfold_es8_order6_of_texts}: the same for the rotation by $2\pi/6$ or by $2\pi\cdot5/6$). It
+composes the round trip of the printed texts (\lean{EncB.parseDimacs_render}, \lean{EncB.parseDimacs_cube64_get},
+\lean{EncB.cubesUnsat64_of_texts_get}), the $64$-cube cover (\lean{EncB.encB_unsat_of_cubes64}), the two Lean
+proofs of~(G1) and \lean{sixfold_octagon}. Its hypothesis is equivalent to the unsatisfiability of the $64$ cube
+formulas of the Lean definition (\lean{EncB.Geo.texts_iff_cubesUnsat64}), so a failing parse cannot make it hold
+trivially; it says exactly what the $64$ verdicts are taken to certify. Not Lean-checked,
+and trusted on this route:
+\begin{enumerate}[label=(E\arabic*)]
+\item that these $64$ texts are the certified cube files: the SHA-256 of the output of the compiled printer equals the
+record for the base formula and for all $64$ cube files (\dirn{ENCBLEAN/scripts/hash_binding.sh},
+\dirn{ENCBLEAN/logs/m9_a2fix_hash_binding.log}); evidence from running compiled code, not a Lean theorem;
+\item the $64$ hash-bound cake\_lpr verdicts \texttt{s VERIFIED UNSAT} on these files, and the provenance of the
+cake\_lpr binary that gave them (the proof files are not public); the records that tie each verdict to the hash of
+its file were written by the Python harnesses of the two runs (\dirn{C6UPPER/replay-2026-11-06/replay.py},
+\dirn{C6UPPER/noty12-2026-11-06/noty12.py}) and cross-checked by \dirn{verify_final64.py};
+\item that cake\_lpr reads each of these files as the package's parser does, and that its \texttt{s VERIFIED UNSAT}
+means unsatisfiability of the clause list it read; the second half rests on cake\_lpr's verified HOL4/CakeML
+checker, the first is not verified (tested on samples only, \dirn{ENCBLEAN/logs/m9_a2_cake_parse.log});
+\item the Lean compiler and runtime, for the printing program of~(E1) (not for the theorems), and a reading of that
+program's input/output code (that it prints exactly these texts and nothing else);
+\item the Lean kernel, Mathlib \texttt{f897ebcf}, and the match of the Lean definitions (\lean{GeneralPosition},
+\lean{HasConvexNGon}, \lean{orient}, \lean{rotAbout}, \lean{Invariant}) with the notions of
+Section~\ref{k8s:sec:setting};
+\item SHA-256.
+\end{enumerate}
+So the sixfold bound is formally verified end to end via encoder~B, assuming the $64$ cake\_lpr verdicts and the trust
+items (E1)--(E6). The results of this section other than the cited Lean theorems are written proofs only, and the
+sevenfold bound and the route of encoder~A are not formally verified end to end.
 \item Encoder A's angular part rests on binary64 arithmetic. For the two certified instances
 Proposition~\ref{k8s:prop:A} covers it twice; for other $(K,t)$ with $m\in\{6,7\}$ only argument~(i) applies, and for
 other $m$ no claim about encoder~A is made. Argument~(i) is new here and unreviewed, and comparison~(ii) is a single
@@ -1001,7 +1064,7 @@ Corollary~\ref{k8s:cor:geom}) have had no internal review. The remaining written
 on 6 November, after that review; the proof of~(a$'$) is that of~(a) without the reflection step.
 Lemma~\ref{k8s:lem:refl} and the case $g\rho g^{-1}=\rho^{-1}$ of Lemma~\ref{k8s:lem:affine} are used only by
 encoder~A (cross-check); the bounds via encoder~B (Theorem~\ref{k8s:thm:sound}(a$'$), Corollary~\ref{k8s:cor:geom})
-do not depend on them.
+do not depend on them. The Lean route for encoder~B at $m=6$ of~(G2) uses none of the written proofs of this section.
 \end{enumerate}
 
 \paragraph{Where the sources only sketched.} The docstring of \dirn{gen.py} (step~0) calls $K$-freeness a strict
