@@ -1,0 +1,71 @@
+date: 2026-11-06T18:00:47+09:00 (M9 task A1: new mode twin-cube64; shared printer putCnf)
+command: cd ENCBLEAN; export PATH=$HOME/.elan/bin:$PATH; systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 /usr/bin/time -f '%e s wall, %M KB max RSS' lake build   (Tctl before: +73.6 C)
+output:
+✔ [24/26] Built EncB.Emit (1.0s)
+✔ [25/26] Built EncB.Emit:c.o (1.8s)
+✔ [26/26] Built encb_dimacs:exe (128ms)
+Build completed successfully (26 jobs).
+2.94 s wall, 416180 KB max RSS
+exit code: 0 (no warnings printed)
+exe before (M2, unchanged through M3): e9454996f7f8a21f479cc4a2540d18f2f55f6445fbd36c642d44a7f81fe96a59
+exe after:  a0dff6f2253f3331f069150c6443644110bcae7034cc1aefb0474124120a9689  .lake/build/bin/encb_dimacs (10283608 bytes, mtime 2026-11-06T18:00:50+09:00)
+EncB/Emit.lean before: ac138cb7324fadc868535f97b7bbac69ff8d8bab2f56c35ab608910a517cb9b3; after: 2164723a3f3c11de12514f6533fabb79d570798242082608112c3ce86e8f8ac9
+no other source changed:  M cloud/es7-2026-10-19/results/ENCBLEAN/EncB/Emit.lean;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_build.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_hash_binding.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/scripts/hash_binding.sh;
+
+================================================================
+M9 task A2 (EncB/Render.lean; twin printers of EncB/Emit.lean switched to it; EncB.lean imports EncB.Render)
+date: 2026-11-06T18:58:30+09:00   Tctl before: +75.5 C
+command: cd ENCBLEAN; systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake build
+exit code 0, wall 4.67 s; output (tail, verbatim):
+✔ [22/28] Built EncB.Render (1.7s)
+✔ [23/28] Built EncB (201ms)
+✔ [25/28] Built EncB.Render:c.o (494ms)
+✔ [26/28] Built EncB.Emit (1.1s)
+✔ [27/28] Built EncB.Emit:c.o (1.7s)
+✔ [28/28] Built encb_dimacs:exe (111ms)
+Build completed successfully (28 jobs).
+(no warning lines; the earlier standalone checks with 'lake env lean EncB/Render.lean' printed nothing after the fixes)
+sha256: exe .lake/build/bin/encb_dimacs 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368; EncB/Render.lean 06b99de2826a669040f45daf6542dae7b74f459ea7adf9091ede7a308c93af21; EncB/Emit.lean 9a2087a4d116adec6793931986969fe01a01e4f520120389a5b2bbcb856f081f; EncB.lean 67300d282702cebabe0fdb6502ea5d3191f1803c98f8241cd7b388b9bd590b0b
+previous exe (A1): a0dff6f2253f3331f069150c6443644110bcae7034cc1aefb0474124120a9689 (copied to the session scratchpad before this build as encb_dimacs.a1)
+
+second build (A2, after adding the ASCII/UTF-8 theorems render_ascii … cnfText_bytes, one more axiom guard and doc lines to EncB/Render.lean; theorems only, no new definition)
+date: 2026-11-06T19:06:29+09:00   Tctl before: +74.2 C
+command: cd ENCBLEAN; systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake build
+exit code 0, wall 2.88 s; output (verbatim):
+✔ [22/28] Built EncB.Render (1.8s)
+✔ [24/28] Built EncB (150ms)
+✔ [26/28] Built EncB.Emit (1.0s)
+Build completed successfully (28 jobs).
+sha256: exe 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368 (identical to the first A2 build: Render's compiled code did not change, lake did not rebuild EncB.Render:c.o); EncB/Render.lean 0b6797b82f868d782b13bbb72b642aee8476d54bbe245565cc7d10f2ebf754b3
+
+third build (A2, after the hash binding rerun: module docstring of EncB/Render.lean only — wording of the cake_lpr source search, reprFast sentence, pointers to the A2 logs)
+date: 2026-11-06T19:22:00+09:00   Tctl before: +70.5 C
+command: cd ENCBLEAN; systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake build
+exit code 0, wall 2.69 s; output (verbatim):
+✔ [22/28] Built EncB.Render (1.6s)
+✔ [24/28] Built EncB (144ms)
+✔ [26/28] Built EncB.Emit (904ms)
+Build completed successfully (28 jobs).
+sha256: exe 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368 (unchanged: the exe of the regression and of the hash binding rerun); EncB/Render.lean 9168c8f944eaf4bf2842be2d0b30f9b31103ca1ef655778bf1127a741e648705 (final); EncB/Emit.lean 9a2087a4d116adec6793931986969fe01a01e4f520120389a5b2bbcb856f081f; EncB.lean 67300d282702cebabe0fdb6502ea5d3191f1803c98f8241cd7b388b9bd590b0b
+
+================================================================
+M9 task A2 fixes (after the independent verification, logs/m9_a2_verify_rt.log): EncB/Render.lean gains
+cubesUnsat64_of_texts_get / encB_unsat_of_texts_get (the verdict interface by index, on the exact expression
+cnfText (encode 6 8 11) (cubes64.get ⟨i, hi⟩) that twin-cube64 prints) and their two #guard_msgs axiom guards (13 guards
+in all), plus 3 lines of module docstring; no definition changed. EncB/Emit.lean and EncB.lean unchanged.
+date: 2026-11-06T19:35:39+09:00   Tctl before: +73.5 C
+command: cd ENCBLEAN; export PATH=$HOME/.elan/bin:$PATH; systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake build
+exit code 0, wall 2.98 s; output (tail, verbatim):
+✔ [22/28] Built EncB.Render (1.8s)
+✔ [24/28] Built EncB (149ms)
+✔ [26/28] Built EncB.Emit (987ms)
+Build completed successfully (28 jobs).
+(no warning lines; all 13 '#guard_msgs in #print axioms' of Render.lean held, else the build would have failed)
+sha256 before: exe 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368; EncB/Render.lean 9168c8f944eaf4bf2842be2d0b30f9b31103ca1ef655778bf1127a741e648705 (A2 final)
+sha256 after:  exe 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368 (unchanged: only theorems and comments were added, no compiled code); EncB/Render.lean c8d6aed7e539db2c886230c80f891177de05a487e5041ad6f68f360b6d123e82 (890 lines); EncB/Emit.lean 9a2087a4d116adec6793931986969fe01a01e4f520120389a5b2bbcb856f081f; EncB.lean 67300d282702cebabe0fdb6502ea5d3191f1803c98f8241cd7b388b9bd590b0b
+other files changed by the fixes (no Lean): scripts/hash_binding.sh (the 'sources:' line now hashes the whole import closure of the exe root EncB/Emit.lean, 6 modules incl. EncB/Render.lean, plus lakefile.toml, and fails if Render.lean is not in it or the exe root is not EncB.Emit; 2 header comment lines), README.md, DESIGN.md (stale printer references, trust items E1/E3/E4, Appendix A item 8).
+closure snippet tested on its own before the run (session scratchpad m9/a2fix/closure_test.sh): on ENCBLEAN it lists Coded, Cover, Dimacs, Emit, Gen, Render + lakefile.toml with fail=0; on a scratch tree whose Emit.lean does not import EncB.Render and whose lakefile root is EncB.Other it prints both FAIL lines and fail=1.
+extra checks (2026-11-06T19:43, same cap): 'lake env lean EncB/Render.lean' (re-elaboration from source) exit 0, 1.71 s, 0 bytes of output (no message, every guard holds);
+negative control: a scratch file 'import EncB.Render' + a #guard_msgs claiming [propext, Quot.sound] for cubesUnsat64_of_texts_get exits 1 with "Docstring on `#guard_msgs` does not match generated message" (+ [propext, Classical.choice, Quot.sound]), so the new guards are not vacuous.
+hash binding rerun with the fixed script (logs/m9_a2fix_hash_binding.log, script sha256 29d89510a6ca9f3f9ade8131ab79a3c621184135c341f5c521dd9603bcae65e4, 2026-11-06T19:36:36 to 19:51:19): SUMMARY 68/68 MATCH, 0 FAIL lines, exe 3d43fa8b…, wall 878 s, PASS, exit code 0; its 'sources' line hashes Coded, Cover, Dimacs, Emit, Gen, Render (c8d6aed7…) and lakefile.toml.
+final sha256 of the files changed by the fixes: EncB/Render.lean c8d6aed7e539db2c886230c80f891177de05a487e5041ad6f68f360b6d123e82; scripts/hash_binding.sh 29d89510a6ca9f3f9ade8131ab79a3c621184135c341f5c521dd9603bcae65e4; README.md d44989e0ca821a6ab8eb45fe1d3ffbf5fcafd36a234d2c41a57355cbc8bd6730; DESIGN.md 9bc4a19e8d8237d93064d6bea42f069e0cf7d3ac8676f42bccbefe75ad0c84f9. No commit made; no unit touched.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.11.4)  6 NOV 2026 16:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.11.4)  6 NOV 2026 21:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -544,8 +544,8 @@ athsy.enc}])
 \openout4 = `p1.toc'.
 
  [2] [3]
-[4{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}]
-Underfull \hbox (badness 1270) in paragraph at lines 278--283
+[4]
+Underfull \hbox (badness 1270) in paragraph at lines 283--288
  []\T1/lmr/bx/n/10 (+20) Lean con-ven-tions.[] \T1/lmr/m/n/10 (+20) In Lean a p
 oint is \T1/lmtt/m/n/10 Point = Fin 2 $\OMS/lmsy/m/n/10 !$ $\U/msb/m/n/10 R$\T1
 /lmr/m/n/10 (+20) ; the pred-i-cates $\T1/lmtt/m/n/10 GeneralPosition$\T1/lmr/m
@@ -553,29 +553,30 @@ oint is \T1/lmtt/m/n/10 Point = Fin 2 $\OMS/lmsy/m/n/10 !$ $\U/msb/m/n/10 R$\T1
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-86.
+91.
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [5{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}] [6] [7] [8] (./k8_soundne
-ss_p1.tex
+) [5{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/
+enc/dvips/lm/lm-ts1.enc}] [6] [7]
+[8] (./k8_soundness_p1.tex
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 50.
+(Font)              <14.4> on input line 72.
  [9]
-Overfull \hbox (13.27254pt too wide) in paragraph at lines 106--110
+Overfull \hbox (13.27254pt too wide) in paragraph at lines 133--137
 []\T1/lmr/bx/n/10 (-20) Lemma 5.2 \T1/lmr/m/n/10 (-20) (layer lemma; Lean-check
 ed ($\T1/lmtt/m/n/10 layers _ are _ orbits$\T1/lmr/m/n/10 (-20) , $\T1/lmtt/m/n
 /10 card _ peel$\T1/lmr/m/n/10 (-20) , $\T1/lmtt/m/n/10 hullVerts _ eq _ orbitF
 S _ rotAbout$\T1/lmr/m/n/10 (-20) );
  []
 
-[10] [11] [12] [13]
+[10] [11] [12] [13] [14]
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
-445.
+472.
  (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [14{/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}] [15] [16] [17] [18] [19
-] [20] [21])
-[22] (./tables/cubes6.tex) [23] [24] (./tables/seed_c6_60pts_D.tex)
+) [15{/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}] [16] [17] [18] [19] [20
+] [21]
+[22]) [23] (./tables/cubes6.tex) [24] [25] (./tables/seed_c6_60pts_D.tex)
 (./tables/seed_c7_64pts_small.tex
 Underfull \hbox (badness 1953) in paragraph at lines 2--2
 \OT1/lmr/m/n/10 (+20) (131103\OML/lmm/m/it/10 ; \OT1/lmr/m/n/10 (+20) 11664)$\T
@@ -588,22 +589,22 @@ mm/m/it/10 ; \OT1/lmr/m/n/10 (+20) 21423)$\T1/lmr/m/n/10 (+20) , $\OT1/lmr/m/n/
 1/lmr/m/n/10 (+20) 30072)$\T1/lmr/m/n/10 (+20) ,
  []
 
-) [25] [26] [27] [28] [29] (./tables/hashes.tex) [30] (./tables/seeds6.tex)
-(./tables/seeds7.tex) [31]
-Underfull \hbox (badness 2418) in paragraph at lines 1087--1089
+) [26] [27] [28] [29] [30] [31] [32] (./tables/hashes.tex) (./tables/seeds6.tex
+) (./tables/seeds7.tex [33])
+Underfull \hbox (badness 2418) in paragraph at lines 1158--1160
 []\T1/lmr/m/n/9 (+20) P. Erd®s, Zs. Tuza and P. Valtr, Ramsey-remainder, \T1/lm
 r/m/it/9 (+20) Eu-ro-pean J. Com-bin. \T1/lmr/m/n/9 (+20) 17 (1996), 519--532,
  []
 
-[32]
-Underfull \hbox (badness 1281) in paragraph at lines 1111--1113
+[34]
+Underfull \hbox (badness 1281) in paragraph at lines 1182--1184
 []\T1/lmr/m/n/9 (+20) M. Scheucher, Two dis-joint 5-holes in point sets, \T1/lm
 r/m/it/9 (+20) Com-put. Geom. \T1/lmr/m/n/9 (+20) 91 (2020), 101670, doi:10.101
 6/
  []
 
 
-Underfull \hbox (badness 1158) in paragraph at lines 1128--1143
+Underfull \hbox (badness 1158) in paragraph at lines 1199--1214
 \T1/lmtt/m/n/9 LRATCHECK20261105$\T1/lmr/m/n/9 (+20) , $\T1/lmtt/m/n/9 CHORD202
 61105$\T1/lmr/m/n/9 (+20) , $\T1/lmtt/m/n/9 ROT456$\T1/lmr/m/n/9 (+20) , $\T1/l
 mtt/m/n/9 ROTREFINE20261104$\T1/lmr/m/n/9 (+20) , $\T1/lmtt/m/n/9 ROT45CHORD202
@@ -611,7 +612,7 @@ mtt/m/n/9 ROTREFINE20261104$\T1/lmr/m/n/9 (+20) , $\T1/lmtt/m/n/9 ROT45CHORD202
 lmtt/m/n/9 SYM5$\T1/lmr/m/n/9 (+20) ,
  []
 
-[33] (./p1.aux)
+[35] [36] (./p1.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -620,11 +621,11 @@ Package rerunfilecheck Info: File `p1.out' has not changed.
 (rerunfilecheck)             Checksum: 66F76028B3258F45433483B172AF4B34;4926.
  ) 
 Here is how much of TeX's memory you used:
- 13323 strings out of 469438
- 204712 string characters out of 5468410
- 665681 words of memory out of 5000000
+ 13333 strings out of 469438
+ 204798 string characters out of 5468410
+ 666862 words of memory out of 5000000
  41098 multiletter control sequences out of 15000+600000
- 767105 words of font info for 347 fonts, out of 8000000 for 9000
+ 767341 words of font info for 350 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  75i,12n,79p,1431b,775s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/ty
@@ -649,10 +650,10 @@ fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.
 pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texmf/fonts/t
 ype1/public/lm/lmtti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/symbols/msbm10.pfb>
-Output written on p1.pdf (33 pages, 839442 bytes).
+Output written on p1.pdf (36 pages, 853130 bytes).
 PDF statistics:
- 1071 PDF objects out of 1200 (max. 8388607)
- 938 compressed objects within 10 object streams
- 219 named destinations out of 1000 (max. 500000)
+ 1093 PDF objects out of 1200 (max. 8388607)
+ 957 compressed objects within 10 object streams
+ 223 named destinations out of 1000 (max. 500000)
  71897 words of extra memory for PDF output out of 74296 (max. 10000000)
 

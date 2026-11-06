@@ -1,0 +1,48 @@
+date: 2026-11-06T18:01 (M9 task A1, after the rebuild)
+command: cd ENCBLEAN; systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 scripts/audit.sh
+exit code: 0
+output:
+declarations mentioning the (6,8,11) instance (pattern: \b(encB|gen|genCoded|numVars|allCodes|allCodesOf|encode|diagCoded)\s+6\s+8\s+11\b|\bCubesUnsat64\b):
+  EncB/Cover.lean:110 (+4 lines): def CubesUnsat64 : Prop := ∀ c ∈ cubes64, ¬DimacsSatisfiable (cubeCnf (encB 6 8 11) c)
+  EncB/Cover.lean:114 (+4 lines): theorem encB_unsat_of_cubes64 (h : ∀ c ∈ cubes64, ¬DimacsSatisfiable (cubeCnf (encB 6 8 11) c)) :
+  EncB/Cover.lean:118 (+3 lines): theorem encB_unsat_of_cubesUnsat64 (h : CubesUnsat64) : ¬DimacsSatisfiable (encB 6 8 11) :=
+  EncB/Satisfiable.lean:43 (+9 lines): theorem encB_satisfiable_6811 (M : Model 6 8 11) : DimacsSatisfiable (encB 6 8 11) :=
+sources: EncB.lean EncB/Coded.lean EncB/Cover.lean EncB/Dimacs.lean EncB/EarlyWarning.lean EncB/Emit.lean EncB/Gen.lean EncB/KernelCheck.lean EncB/KernelCheckB.lean EncB/Model.lean EncB/ModelLemmas.lean EncB/Satisfiable.lean EncB/SortLemmas.lean EncB/SoundAng.lean EncB/SoundChain.lean EncB/SoundOlit.lean EncB/SoundOrbit.lean EncB/SoundRules.lean EncB/SoundWord.lean
+toolchain: leanprover/lean4:v4.24.0
+AUDIT PASS (no sorry/admit/native_decide/implemented_by/extern/unsafe/partial/axiom/opaque/set_option/ofReduceBool in code; Std-only; no decide/rfl/simp/omega/#eval/#reduce in a declaration that mentions the (6,8,11) instance)
+
+================================================================
+M9 task A2 (final sources; EncB/Render.lean 9168c8f944eaf4bf2842be2d0b30f9b31103ca1ef655778bf1127a741e648705): date 2026-11-06T19:23:33+09:00; command: cd ENCBLEAN; scripts/audit.sh; exit code 0; output:
+declarations mentioning the (6,8,11) instance (pattern: \b(encB|gen|genCoded|numVars|allCodes|allCodesOf|encode|diagCoded)\s+6\s+8\s+11\b|\bCubesUnsat64\b):
+  EncB/Cover.lean:110 (+4 lines): def CubesUnsat64 : Prop := ∀ c ∈ cubes64, ¬DimacsSatisfiable (cubeCnf (encB 6 8 11) c)
+  EncB/Cover.lean:114 (+4 lines): theorem encB_unsat_of_cubes64 (h : ∀ c ∈ cubes64, ¬DimacsSatisfiable (cubeCnf (encB 6 8 11) c)) :
+  EncB/Cover.lean:118 (+3 lines): theorem encB_unsat_of_cubesUnsat64 (h : CubesUnsat64) : ¬DimacsSatisfiable (encB 6 8 11) :=
+  EncB/Render.lean:791 (+6 lines): parseDimacs (renderCube (numVars 6 8 11) (encB 6 8 11) (bodyR (encB 6 8 11)) c) =
+  EncB/Render.lean:797 (+6 lines): parseDimacs (cnfText (encode 6 8 11) (cubes64.get ⟨i, h⟩)) =
+  EncB/Render.lean:803 (+8 lines): parseDimacs (renderCube (numVars 6 8 11) (encB 6 8 11) (bodyR (encB 6 8 11)) []) =
+  EncB/Render.lean:811 (+7 lines): parseDimacs (renderCube (numVars 6 8 11) (encB 6 8 11) (bodyR (encB 6 8 11)) c) = some (nv, G) →
+  EncB/Render.lean:818 (+43 lines): parseDimacs (renderCube (numVars 6 8 11) (encB 6 8 11) (bodyR (encB 6 8 11)) c) = some (nv, G) →
+  EncB/Satisfiable.lean:43 (+9 lines): theorem encB_satisfiable_6811 (M : Model 6 8 11) : DimacsSatisfiable (encB 6 8 11) :=
+sources: EncB.lean EncB/Coded.lean EncB/Cover.lean EncB/Dimacs.lean EncB/EarlyWarning.lean EncB/Emit.lean EncB/Gen.lean EncB/KernelCheck.lean EncB/KernelCheckB.lean EncB/Model.lean EncB/ModelLemmas.lean EncB/Render.lean EncB/Satisfiable.lean EncB/SortLemmas.lean EncB/SoundAng.lean EncB/SoundChain.lean EncB/SoundOlit.lean EncB/SoundOrbit.lean EncB/SoundRules.lean EncB/SoundWord.lean
+toolchain: leanprover/lean4:v4.24.0
+AUDIT PASS (no sorry/admit/native_decide/implemented_by/extern/unsafe/partial/axiom/opaque/set_option/ofReduceBool in code; Std-only; no decide/rfl/simp/omega/#eval/#reduce in a declaration that mentions the (6,8,11) instance)
+note: the Render.lean block starting at the theorem encB_unsat_of_texts runs to the end of the file because audit.sh's keyword regex is '#\w' followed by '\b', so a '#guard_msgs' line does not start a new block (checked with perl: '#guard_msgs in …' => no match, '#e x' => match); such lines join the preceding declaration, which only makes check 4 stricter.
+
+================================================================
+M9 task A2 fixes (EncB/Render.lean c8d6aed7e539db2c886230c80f891177de05a487e5041ad6f68f360b6d123e82): date 2026-11-06T19:36:25+09:00; command: cd ENCBLEAN; systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 scripts/audit.sh; exit code 0; output:
+declarations mentioning the (6,8,11) instance (pattern: \b(encB|gen|genCoded|numVars|allCodes|allCodesOf|encode|diagCoded)\s+6\s+8\s+11\b|\bCubesUnsat64\b):
+  EncB/Cover.lean:110 (+4 lines): def CubesUnsat64 : Prop := ∀ c ∈ cubes64, ¬DimacsSatisfiable (cubeCnf (encB 6 8 11) c)
+  EncB/Cover.lean:114 (+4 lines): theorem encB_unsat_of_cubes64 (h : ∀ c ∈ cubes64, ¬DimacsSatisfiable (cubeCnf (encB 6 8 11) c)) :
+  EncB/Cover.lean:118 (+3 lines): theorem encB_unsat_of_cubesUnsat64 (h : CubesUnsat64) : ¬DimacsSatisfiable (encB 6 8 11) :=
+  EncB/Render.lean:794 (+6 lines): parseDimacs (renderCube (numVars 6 8 11) (encB 6 8 11) (bodyR (encB 6 8 11)) c) =
+  EncB/Render.lean:800 (+6 lines): parseDimacs (cnfText (encode 6 8 11) (cubes64.get ⟨i, h⟩)) =
+  EncB/Render.lean:806 (+8 lines): parseDimacs (renderCube (numVars 6 8 11) (encB 6 8 11) (bodyR (encB 6 8 11)) []) =
+  EncB/Render.lean:814 (+7 lines): parseDimacs (renderCube (numVars 6 8 11) (encB 6 8 11) (bodyR (encB 6 8 11)) c) = some (nv, G) →
+  EncB/Render.lean:821 (+12 lines): parseDimacs (renderCube (numVars 6 8 11) (encB 6 8 11) (bodyR (encB 6 8 11)) c) = some (nv, G) →
+  EncB/Render.lean:833 (+9 lines): parseDimacs (cnfText (encode 6 8 11) (cubes64.get ⟨i, hi⟩)) = some (nv, G) → ¬DimacsSatisfiable G) :
+  EncB/Render.lean:842 (+48 lines): parseDimacs (cnfText (encode 6 8 11) (cubes64.get ⟨i, hi⟩)) = some (nv, G) → ¬DimacsSatisfiable G) :
+  EncB/Satisfiable.lean:43 (+9 lines): theorem encB_satisfiable_6811 (M : Model 6 8 11) : DimacsSatisfiable (encB 6 8 11) :=
+sources: EncB.lean EncB/Coded.lean EncB/Cover.lean EncB/Dimacs.lean EncB/EarlyWarning.lean EncB/Emit.lean EncB/Gen.lean EncB/KernelCheck.lean EncB/KernelCheckB.lean EncB/Model.lean EncB/ModelLemmas.lean EncB/Render.lean EncB/Satisfiable.lean EncB/SortLemmas.lean EncB/SoundAng.lean EncB/SoundChain.lean EncB/SoundOlit.lean EncB/SoundOrbit.lean EncB/SoundRules.lean EncB/SoundWord.lean
+toolchain: leanprover/lean4:v4.24.0
+AUDIT PASS (no sorry/admit/native_decide/implemented_by/extern/unsafe/partial/axiom/opaque/set_option/ofReduceBool in code; Std-only; no decide/rfl/simp/omega/#eval/#reduce in a declaration that mentions the (6,8,11) instance)
+note: the two new declarations cubesUnsat64_of_texts_get (Render.lean:833) and encB_unsat_of_texts_get (:842) are listed and contain no risk token (their proofs use intro/obtain/subst/exact and a term). The :842 block runs to the end of the file for the reason noted in the A2 section above ('#guard_msgs' does not start a block).

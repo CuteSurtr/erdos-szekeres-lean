@@ -4,7 +4,8 @@ First full draft of preprint P1, written 6 November 2026 (KST) and revised the s
 "Revision after review") and again after an audit of its bibliography, numbers and claims (see "Revision after the
 audit") and a checker's fix round (see "Fix round after the checker"), and once more after encoder B's sixfold base
 formula was certified unsatisfiable on its own (see "Revision for the encoder-B base formula" and the checker's round
-after it). Not refereed, not circulated.
+after it), and for the Lean package of encoder B, `ENCBLEAN` (see "Revision for the Lean encoder-B package"). Not
+refereed, not circulated.
 
 **Theorem of the paper.** For k = 8, the largest m-fold rotationally symmetric set in general position with no 8
 points in convex position has exactly 60 points for m = 6 and exactly 64 for m = 7. Since 6-fold sets in general
@@ -28,8 +29,8 @@ work" only.
 
 | file | content |
 |---|---|
-| `p1.tex` | the paper (33 pages since the revision for the encoder-B base formula; 31 before). Inline bibliography, no BibTeX. |
-| `p1.pdf` | compiled with pdflatex (TeX Live 2025), three passes, each exit 0: **0 errors, 0 undefined references or citations, no LaTeX warnings**; 1 overfull box (13.3 pt, the head of Lemma 5.2, from the reviewed source) and 2 underfull boxes (badness 1270 and 1953). Rebuilt on 6 November 2026 after the replay status was filled in, with the same result (30 pages). Rebuilt again on 6 November 2026 (about 10:30 KST) after the one-clause 311 update in §1 (open item 14), with the same result. Rebuilt again on 6 November 2026 (about 13:30 KST) after the proof of Corollary k8s:cor:geom was corrected (it had cited Lemma k8s:lem:affine for the translation of the centre to O, although that lemma's admissibility clause assumes g(O) = O; the translation step is now argued directly, and part (b) no longer says "the same" for a step that has no cube split): 31 pages, 0 errors, 0 undefined references, 1 overfull box. **Build after the audit: 6 November 2026, about 13:40 KST, after the audit edits ("Revision after the audit"): three passes, each exit 0; 31 pages; 0 errors, 0 undefined references or citations, 0 LaTeX warnings; the same single overfull box (13.3 pt, head of Lemma 5.2); 5 underfull boxes (the 2 earlier ones, plus 3 in the bibliography: ETV96 badness 2418, Sche20 1281, the `Supp` entry 5260).** Rebuilt once more on 6 November 2026 (about 13:55 KST) after the checker's fix round (§1.1 citation placement, §9 C7UPPER paragraph), under `systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 5`: the same result (three passes, each exit 0; 31 pages; 0 errors, 0 undefined references or citations, 0 LaTeX warnings; 1 overfull, 5 underfull boxes). **Build after the revision for the encoder-B base formula: 6 November 2026, about 16:35 KST, under the same `systemd-run` caps: three passes, each exit 0; 33 pages; 0 errors, 0 undefined references or citations, 0 LaTeX warnings; the same overfull box (13.3 pt, head of Lemma 5.2) and 5 underfull boxes (the `Supp` entry now has badness 1158 instead of 5260).** **Build after the checker's round on that revision: 6 November 2026, about 16:47 KST, under the same caps: three passes, each exit 0; 33 pages; 0 errors, 0 undefined references or citations, 0 LaTeX warnings; the same overfull box and the same 5 underfull boxes (badness 1270, 1953, 2418, 1281, 1158).** |
+| `p1.tex` | the paper (35 pages since the revision for the Lean encoder-B package; 33 since the revision for the encoder-B base formula; 31 before). Inline bibliography, no BibTeX. |
+| `p1.pdf` | compiled with pdflatex (TeX Live 2025), three passes, each exit 0: **0 errors, 0 undefined references or citations, no LaTeX warnings**; 1 overfull box (13.3 pt, the head of Lemma 5.2, from the reviewed source) and 2 underfull boxes (badness 1270 and 1953). Rebuilt on 6 November 2026 after the replay status was filled in, with the same result (30 pages). Rebuilt again on 6 November 2026 (about 10:30 KST) after the one-clause 311 update in §1 (open item 14), with the same result. Rebuilt again on 6 November 2026 (about 13:30 KST) after the proof of Corollary k8s:cor:geom was corrected (it had cited Lemma k8s:lem:affine for the translation of the centre to O, although that lemma's admissibility clause assumes g(O) = O; the translation step is now argued directly, and part (b) no longer says "the same" for a step that has no cube split): 31 pages, 0 errors, 0 undefined references, 1 overfull box. **Build after the audit: 6 November 2026, about 13:40 KST, after the audit edits ("Revision after the audit"): three passes, each exit 0; 31 pages; 0 errors, 0 undefined references or citations, 0 LaTeX warnings; the same single overfull box (13.3 pt, head of Lemma 5.2); 5 underfull boxes (the 2 earlier ones, plus 3 in the bibliography: ETV96 badness 2418, Sche20 1281, the `Supp` entry 5260).** Rebuilt once more on 6 November 2026 (about 13:55 KST) after the checker's fix round (§1.1 citation placement, §9 C7UPPER paragraph), under `systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 5`: the same result (three passes, each exit 0; 31 pages; 0 errors, 0 undefined references or citations, 0 LaTeX warnings; 1 overfull, 5 underfull boxes). **Build after the revision for the encoder-B base formula: 6 November 2026, about 16:35 KST, under the same `systemd-run` caps: three passes, each exit 0; 33 pages; 0 errors, 0 undefined references or citations, 0 LaTeX warnings; the same overfull box (13.3 pt, head of Lemma 5.2) and 5 underfull boxes (the `Supp` entry now has badness 1158 instead of 5260).** **Build after the checker's round on that revision: 6 November 2026, about 16:47 KST, under the same caps: three passes, each exit 0; 33 pages; 0 errors, 0 undefined references or citations, 0 LaTeX warnings; the same overfull box and the same 5 underfull boxes (badness 1270, 1953, 2418, 1281, 1158).** **Build after the revision for the Lean encoder-B package: 6 November 2026, about 20:10 KST, under `systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 pdflatex -interaction=nonstopmode -halt-on-error p1`: three passes, each exit 0; 35 pages; 0 errors, 0 undefined references or citations, 0 LaTeX warnings; the same overfull box (13.3 pt, head of Lemma 5.2) and the same 5 underfull boxes (badness 1270, 1953, 2418, 1281, 1158).** **Build after the fix round of that revision: 6 November 2026, about 21:07 KST, the same command: three passes, each exit 0; 36 pages; 0 errors, 0 undefined references or citations, 0 LaTeX warnings; the same overfull box and the same 5 underfull boxes; Table 7 is on the last page (see "Fix round after the reviews of the Lean encoder-B revision").** |
 | `p1.log` | the log of the third pass, kept for reviewers. |
 | `k8_soundness_p1.tex` | Section 5 of the paper: an adapted copy of `WRITEUP/note/k8_soundness.tex` (see below). |
 | `tables/*.tex` | data fragments \input by `p1.tex` (sixfold cube table, hash appendix, seeds of the point sets). Generated; do not edit. |
@@ -120,8 +121,8 @@ of all thirteen set files (twelve order types).
 
 ### Changes made to the soundness section
 
-`k8_soundness_p1.tex` is the source plus a 28-line header comment (21 lines before the revision for the encoder-B
-base formula), four cross-reference edits, two footnotes, one
+`k8_soundness_p1.tex` is the source plus a 35-line header comment (21 lines before the revision for the encoder-B
+base formula, 28 after it, 32 after the revision for the Lean encoder-B package), four cross-reference edits, two footnotes, one
 deleted clause and two provenance edits (`diff WRITEUP/note/k8_soundness.tex WRITEUP/P1/k8_soundness_p1.tex` shows
 them):
 1. "described in the section on rotational upper bounds for k = 8 (draft STATUS20261104/k8_section.tex)" →
@@ -502,7 +503,10 @@ proof checker was run, and nothing new is claimed.
    unreviewed; since the revision for the encoder-B base formula (G4) also says that Theorem 5.24(a′) and the 64-cube
    split were added after the review, and that Lemma refl and the τ case of Lemma affine are used only by encoder A.
    The ¬Y(1,2) certificates close none of (G1)–(G4); they remove Lemma refl and the τ case of Lemma affine from the
-   encoder-B route. The proof archives (`es8-c6-octagon-2026-11-03`, `es8-c7-octagon-2026-11-03`), the review archive
+   encoder-B route. Since the revision for the Lean encoder-B package, (G1) and (G2) also say what `ENCBLEAN` checks
+   for encoder B (a Lean definition of its formula: soundness relative to a combinatorial `Model`, the 64-cube cover,
+   the round trip of its printed text) and what it does not (configuration → `Model`, the assembly, cake_lpr, the
+   compiler); it closes neither gap. The proof archives (`es8-c6-octagon-2026-11-03`, `es8-c7-octagon-2026-11-03`), the review archive
    `es8-c6c7-review-2026-11-04` (regenerated formulas, models, witnesses) and the replay proofs of 6 November (`c6upper-replay-20261106`, about 28.4 GB of
    `.lrat.zst`) are not public. The replay of 6 November closes no gap among (G1)–(G4); it closes the separate gap that only 6 of the 64
    sixfold verdicts were hash-bound.
@@ -549,3 +553,106 @@ The second independent check found no mathematical problem and four wording poin
 Also corrected in the record `C6UPPER/noty12-2026-11-06/README.md`: phase-order cubes 2,320–3,921 s; 14.9 GB of
 `.lrat.zst` (16.8 GB for the data directory). The optional rewording of (G4) was not applied. `p1.pdf` rebuilt: three
 passes, 33 pages, 0 errors, 0 undefined references.
+
+## Revision for the Lean encoder-B package (6 November 2026, about 20:00–20:12 KST)
+
+The Lean package `ENCBLEAN` (Lean 4.24.0, standard library only) reached its milestone M9 (README and DESIGN of
+`ENCBLEAN`; not committed). This revision states in P1 exactly what it Lean-checks for encoder B and what it does not.
+The theorem, the certificates and every number of the paper are unchanged; nothing claims a formal end-to-end proof.
+
+**What the text now says.**
+- Lean-checked (`ENCBLEAN`; axioms only propext, Classical.choice, Quot.sound; re-queried for this revision,
+  `ENCBLEAN/logs/m9_d_recheck.log`): the 64-cube cover `EncB.encB_unsat_of_cubes64` (from the general
+  `EncB.not_dimacsSatisfiable_of_cover` and `EncB.covers_signPatterns`); `EncB.encB_satisfiable` (for even m ≥ 2, the
+  assignment derived from any combinatorial `EncB.Model` satisfies the Lean formula `EncB.encB`); the round trip of the printed text through a
+  DIMACS parser written in the package (`EncB.parseDimacs_render`, `EncB.parseDimacs_cube64_get`,
+  `EncB.cubesUnsat64_of_texts_get`).
+- Evidence only (compiled code): `EncB.encB` equals `gen_b2.py`'s output on the 225-instance grid and the recorded
+  instances; the SHA-256 of the printed base formula and 64 cube texts equal the records of the certified files, 65 of
+  65 (`ENCBLEAN/logs/m9_a2fix_hash_binding.log`).
+- Not Lean-checked: that a configuration without a convex octagon yields a `Model` (the polar labelling; ENCBLEAN
+  M4–M6); cake_lpr's verdicts (trusted: its verified HOL4/CakeML checker) and the agreement of its parser with the package's
+  `parseDimacs` (tested on samples only, `ENCBLEAN/logs/m9_a2_cake_parse.log`); the Lean
+  compiler and runtime; the assembly into one theorem. "The sixfold bound is therefore not formally verified end to
+  end" is said in §8 and in (G2).
+
+**Edits in `p1.tex`.** §1 "What is and is not claimed": one sentence (Lean-checked for encoder B, not end to end). §2
+"Rigor labels": the Lean-checked bullet says that `ENCBLEAN` uses Lean 4.24.0 with its standard library only. §3
+"What is not in Lean": one sentence pointing to the Lean code side for encoder B. §6 "Checkers": the second link of
+encoder B's sixfold files to Lean definitions (65 of 65 hashes, evidence only) and `ENCBLEAN/scripts/resolve.sh` (run
+on 2 cubes, 2 of 2 accepted). Table 7: a new row "Encoder B in Lean". §8: the last sentence of "What is trusted"
+("not formalized end to end") and a new paragraph "Encoder B in Lean". §10 "Formalization": what exists for encoder B
+and what is still missing.
+
+**Edits in the soundness section, in `WRITEUP/note/k8_soundness.tex` and `k8_soundness_p1.tex` alike.** The
+rigor-label paragraph says where the `EncB.*` theorems are and that no result of the section depends on them. Lemma
+k8s:lem:cube is tagged "written proof (not refereed); Lean-checked for DIMACS clause lists" (the only rigor tag that
+changed; its basis changed, since `EncB.not_dimacsSatisfiable_of_cover` with `EncB.covers_signPatterns` is the lemma
+for lists of DIMACS clauses), and the text after its proof names the two theorems. The 64-cube paragraph names
+`EncB.encB_unsat_of_cubes64`. The trust table: the cube-cover row says "Lean-checked for DIMACS clause lists"; a new
+last row "Partial Lean counterpart for encoder B"; the caption now speaks of the last three rows. (G1) and (G2) say what
+`ENCBLEAN` checks and what it does not. The other rigor tags, (G3), (G4) and the mathematical text are unchanged. The
+note's header has a dated revision comment; the copy's header names the new source hash
+`a01e82b5c1b82ce8178fbed047b07e980db86e1598471bff508f97dcc94199e6` (before `50bcd17a…`) and the changed places (31
+lines). A first version put the two theorem names into the lemma head; that gave a 100 pt overfull line in the note's
+standalone wrapper, so they were moved into the text after the proof.
+
+**Checks.** `diff WRITEUP/note/k8_soundness.tex WRITEUP/P1/k8_soundness_p1.tex`: the header and edits 1–9 only; the
+inserted rigor-label sentence sits after edit 9's footnote in the copy and is otherwise identical, and the other eight
+edit hunks are identical in both files. `p1.pdf`: see the file table (three passes, 35 pages, 0 errors, 0 undefined
+references, 0 LaTeX warnings, the same 1 overfull and 5 underfull boxes); theorem, lemma and table numbers are
+unchanged (Theorem 5.24, Lemma 5.27, Corollary 5.28, Tables 1–7); `p1.aux`, `p1.out`, `p1.toc` deleted.
+`WRITEUP/note/k8_soundness_wrapper.tex` compiled into a scratch directory: three passes, each exit 0; 13 pages (12
+before); 0 errors, 0 undefined references, 0 warnings, no overfull or underfull box; the committed
+`k8_soundness_wrapper.pdf` was not rebuilt. `make_tables.py` was not re-run (no table input changed). No SAT solver or
+proof checker was run for this revision.
+
+## Fix round after the reviews of the Lean encoder-B revision (6 November 2026, about 20:55–21:06 KST)
+
+A claims review of the revision above (3 medium, 9 low, 1 nit) and a Lean-soundness review of `ENCBLEAN`'s M9 were
+applied; the per-finding record is in `ENCBLEAN/README.md`, "M9 review fixes", and `ENCBLEAN/logs/m9_review_fix.log`.
+The theorem, the certificates, every number of the paper and the rigor tags are unchanged.
+
+**Edits in `p1.tex`.**
+- §1 "What is and is not claimed" and §3 "What is not in Lean": the encoder-B sentences say "with even m" (sixfold
+  only; encoder B is also used for the sevenfold bound), §3 says that `gen_b2.py` itself is not Lean-checked, and §1
+  lists the reading of the files by cake_lpr and the assembly into one theorem with `Sixfold66` as not Lean-checked.
+- Table 7, row "Encoder B in Lean": "satisfaction by the assignment of every combinatorial model (even m ≥ 2)", "a
+  DIMACS parser defined in the package", and "cake_lpr's reading of the files and the assembly into one theorem with
+  `Sixfold66` are not Lean-checked".
+- §8 "Encoder B in Lean": `every~\mbox{\lean{EncB.Model}}` (no line break inside the name); the third item speaks of
+  the Lean string the printer function computes (writing it out is compiled code, not Lean-checked); the sentence
+  after the items now cites the Lean theorem `EncB.no_model_6811_of_texts` (`ENCBLEAN/EncB/Compose.lean`, new in this
+  round, axioms in `ENCBLEAN/logs/m9_review_fix.log`) instead of saying that the composition is not a Lean theorem;
+  the trust sentence no longer credits cake_lpr's verification for the agreement of its parser with the package's
+  ("not verified; tested on samples only").
+- §10 "Formalization": "proved to be satisfied by the assignment of every combinatorial model (even m ≥ 2)".
+
+**Edits in the soundness section, in `WRITEUP/note/k8_soundness.tex` and `k8_soundness_p1.tex` alike.** The note's
+header: "about 20:10 KST" (was 20:20, later than the file's write time) and "(milestones M2 and M3, committed, and M9,
+not committed)", plus a dated comment for this round. The rigor-label paragraph: the `EncB` items concern DIMACS
+clause lists in general (Lemma k8s:lem:cube) and a Lean definition of encoder B's formula. After the proof of Lemma
+k8s:lem:cube: the lemma is the composition of two Lean-checked theorems. The trust table's last row: "satisfaction by the
+assignment of every combinatorial model, for even m ≥ 2". (G1): "for even m ≥ 2", and equal bytes on 222 of the 225
+grid instances with a refusal of the Lean program on the other 3, where `gen_b2.py` raises. (G2): "the Lean string the
+package's printer function computes"; cake_lpr's verified checker covers the meaning of its verdict on what its own
+parser reads, and the agreement of that parser with the package's is "not verified; tested on samples only". The copy's
+header names the new source hash `52b04e63…` (before `a01e82b5…`) and this round; it is now 35 lines.
+
+**Edits in this README.** The revision above: its time range (20:00–20:12 KST; was 20:25), "for even m ≥ 2, the
+assignment derived from any combinatorial `EncB.Model` satisfies …", and the cake_lpr parser item; the header-line
+count of `k8_soundness_p1.tex` in "Changes made to the soundness section" (35; it had stayed at 28).
+
+**Checks.** `diff WRITEUP/note/k8_soundness.tex WRITEUP/P1/k8_soundness_p1.tex`: the 35-line header and the 8 hunks of edits 1–9
+only, so every passage changed in this round is identical in both files (`ENCBLEAN/logs/m9_review_fix.log`). `p1.pdf`:
+see the file table (three passes, each exit 0; 36 pages; 0 errors, 0 undefined references or citations, 0 LaTeX
+warnings; the same 1 overfull and 5 underfull boxes); theorem, lemma and table numbers unchanged (Theorem 5.24, Lemma
+5.27, Corollary 5.28, Table 7); `p1.aux`, `p1.out`, `p1.toc` deleted. Not changed, for the operator: Table 7
+(`[ht]`) is printed on the last page, after the bibliography (page 36 of 36); in HEAD's `p1.pdf` it is on page 28 of
+33, and a scratch build of the revision above (20:10) already had it on the last page, so that revision deferred it;
+`[htbp]` would allow a float page in §8. `WRITEUP/note/k8_soundness_wrapper.tex` compiled into a scratch directory: three passes, each exit 0; 0 errors, 0 undefined references, 0 warnings, no overfull or underfull box (`ENCBLEAN/logs/m9_review_fix.log`); the committed `k8_soundness_wrapper.pdf` was not rebuilt. No SAT solver or proof checker was
+run for this round.
+
+**Operator, 6 November 2026, about 21:20 KST.** Table 7 (`p1.tex`:830) changed from `[ht]` to `[htbp]`; three pdflatex
+passes under the same caps, each exit 0; 36 pages; 0 errors, 0 undefined references or citations, 0 LaTeX warnings; the
+same 1 overfull and 5 underfull boxes; Table 7 is now on page 29, before the bibliography. `p1.aux`, `p1.out`, `p1.toc` deleted.

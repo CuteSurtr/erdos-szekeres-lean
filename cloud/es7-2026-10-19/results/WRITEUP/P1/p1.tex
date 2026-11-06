@@ -214,7 +214,12 @@ annealing and cluster constructions) and are verified in exact arithmetic (Secti
 
 \paragraph{What is and is not claimed.} The theorem is computer-assisted and has not been refereed. Its weakest links
 are the written parts of the soundness argument, in particular that the Python generators emit exactly the analysed
-clause families (gap~(G1) of Section~\ref{k8s:sec:trust}). Every \cakelpr{} verdict that the upper bounds use is bound
+clause families (gap~(G1) of Section~\ref{k8s:sec:trust}). For encoder~B with even $m$ (the sixfold case only), the
+soundness of the clauses with respect to a combinatorial interface and the $64$-cube cover are also Lean-checked, for a
+Lean definition of its formula whose printed text has, by a run of the compiled printer, the hashes of the certified
+sixfold files (Section~\ref{sec:trust}); the step from a configuration to that interface, the reading of the files by
+\cakelpr{} and the assembly into one theorem with \lean{Sixfold66} are not, so the sixfold bound is not formally
+verified end to end. Every \cakelpr{} verdict that the upper bounds use is bound
 to the hashes of its formula and proof files (Section~\ref{sec:cert}). The proof files are archived outside the repository and
 are not yet public. No statement here is a priority claim.
 
@@ -284,7 +289,8 @@ above.
 \paragraph{Rigor labels.} Every statement carries one of the following labels.
 \begin{itemize}
 \item \emph{Lean-checked}: compiled with Lean~4.24.0~\cite{Lean4} and Mathlib~\cite{Mathlib} at commit
-\texttt{f897ebcf}, with no \texttt{sorry}, \texttt{admit} or added axioms; \texttt{\#print axioms} reports only
+\texttt{f897ebcf} (for the encoder-B package \dirn{ENCBLEAN} of Section~\ref{sec:trust}: Lean~4.24.0 with its standard
+library only, without Mathlib), with no \texttt{sorry}, \texttt{admit} or added axioms; \texttt{\#print axioms} reports only
 \lean{propext}, \lean{Classical.choice} and \lean{Quot.sound}.
 \item \emph{Certificate}: unsatisfiability of a specific CNF file, established by an LRAT proof~\cite{LRAT17} that the
 verified checker \cakelpr~\cite{CakeLPR} accepted with the line \texttt{s VERIFIED UNSAT}. The solver
@@ -413,7 +419,10 @@ $19$, $23$\,s wall clock and $2.6$\,GB peak memory (\dirn{LAYERLEAN/logs/axioms_
 and to which ordered triple), the perturbation to generic phases, the consistency of one variable per triple orbit, the
 correspondence between the generator programs and the clause families, the reflection unit (used only by encoder~A,
 the cross-check), the cube cover and the passage from unsatisfiable DIMACS files to \lean{Sixfold66} and \lean{Sevenfold70}. These are the written proofs of
-Section~\ref{k8s:sec}.
+Section~\ref{k8s:sec}. For encoder~B with even $m$ (so not for the sevenfold formulas), a Lean counterpart of two of
+these steps (the correspondence between the clauses of a Lean definition of its formula and a combinatorial interface,
+and the cube cover) is Lean-checked in the separate package \dirn{ENCBLEAN} (Section~\ref{sec:trust}, ``Encoder~B in
+Lean''); \dirn{gen_b2.py} itself, the geometric side and the passage to \lean{Sixfold66} are not.
 
 %======================================================================================================================
 \section{The encodings}\label{sec:enc}
@@ -513,7 +522,14 @@ file. The link from a certified file to the analysed programs is regeneration: f
 the base formulas byte for byte, and the cube files are the base formula plus units, which is checked structurally and,
 for all $64$ cube files of the original split, by hash; the $32$ cube files with $\neg Y(1,2)$ were written from the
 regenerated base formula and checked byte for byte (Section~\ref{sec:enc}, ``Validation''); the link to geometry is
-Corollary~\ref{k8s:cor:geom}. \lratcheck{} also accepted every proof of the original runs (it was not used in the replay of 6 November or in the run for $\neg Y(1,2)$); by the defect described in Section~\ref{sec:defs} this is supporting information only. For the
+Corollary~\ref{k8s:cor:geom}. For encoder~B's sixfold base formula and its $64$ cube files there is a second link, to
+Lean definitions (\dirn{ENCBLEAN}; Section~\ref{sec:trust}): a compiled Lean program prints the Lean formula
+\lean{EncB.encB} at $(6,8,11)$, alone and with each of the $64$ cubes of the Lean list \lean{EncB.cubes64}, and the
+SHA-256 of each printed text equals the recorded hash of the certified file, $65$ of $65$
+(\dirn{ENCBLEAN/logs/m9_a2fix_hash_binding.log}); this is evidence only, since it rests on running compiled code. The
+script \dirn{ENCBLEAN/scripts/resolve.sh} re-solves any of these $64$ cube formulas, printed by that program, with the
+two binaries of the replay, after checking the formula's hash against its records; it was run on $2$ of them, and
+\cakelpr{} accepted both fresh proofs (\dirn{ENCBLEAN/logs/m9_resolve_fix.log}). \lratcheck{} also accepted every proof of the original runs (it was not used in the replay of 6 November or in the run for $\neg Y(1,2)$); by the defect described in Section~\ref{sec:defs} this is supporting information only. For the
 review replays of 4 November the binaries had SHA-256 \texttt{e12ecc8c\dots} (CaDiCaL), \texttt{2fee767a\dots}
 (\cakelpr) and \texttt{f2046212\dots} (\lratcheck) (\dirn{C6C7REVIEW/REPLAY.md}); for the sixfold replay of 6 November,
 \texttt{4acf5860\dots} (CaDiCaL~2.1.3) and \texttt{c14ff498\dots} (\cakelpr)
@@ -811,7 +827,7 @@ the phase-order cube $\psi_1<\psi_2<\psi_3<\psi_4$, that $10$-layer cube could n
 Table~\ref{tab:rigor} lists every ingredient of Theorem~\ref{thm:main} with its label. The soundness argument has its
 own, finer table (Table~\ref{k8s:tab:trust}) and list of gaps (G1)--(G4) in Section~\ref{k8s:sec:trust}.
 
-\begin{table}[ht]
+\begin{table}[htbp]
 \centering\footnotesize
 \begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.47\linewidth}>{\raggedright\arraybackslash}p{0.47\linewidth}@{}}
 \toprule
@@ -829,6 +845,12 @@ review} unreviewed (gap~(G4)); the reflection unit (Lemma~\ref{k8s:lem:refl}) is
 details in Table~\ref{k8s:tab:trust}\\
 Encoder A's floating-point classification, $m\in\{6,7\}$ & exact computation (comparison with B, rounding bound) and
 written proof (not refereed), Proposition~\ref{k8s:prop:A}\\
+Encoder~B in Lean (\dirn{ENCBLEAN}; ``Encoder~B in Lean'' below): for a Lean definition of its formula,
+satisfaction by the assignment of every combinatorial model (even $m\ge2$), the $64$-cube cover at $(6,8,11)$, and the
+round trip of the printed text through a DIMACS parser defined in the package & Lean-checked (standard library only);
+that the printed texts are the certified files is evidence only (compiled code; $65$ of $65$ hashes); the step from a
+configuration to a model, \cakelpr's reading of the files and the assembly into one theorem with \lean{Sixfold66} are
+not Lean-checked; a partial second route, not used by the written proof\\
 Certified files are the output of the analysed programs & exact computation: base formulas and all $64$ cube files
 of the original split regenerated with matching hashes (the cube files on 6 November); two structural checkers; the
 $32$ cube files with $\neg Y(1,2)$ written from the regenerated base formula and checked byte for byte\\
@@ -863,8 +885,49 @@ machine that ran it; the Python interpreter, to run the generators as written; t
 named for each exact computation (for the cube cover with $Y(1,2)$ two separately written checkers,
 \dirn{verify_cover.py} and \dirn{strict_cover.py}, and for encoder~B's $64$-cube cover the two checks
 \dirn{verify_cover64.py} and \dirn{verify_final64.py}, written for that run; for the lower bounds at least two per set, Section~\ref{sec:lower}); SHA-256, to identify files; and the
-reading of the generator sources on which the code-to-clause correspondence rests (gap~(G1)). No step from a DIMACS file
-to \lean{Sixfold66} or \lean{Sevenfold70} is formalized (gap~(G2)).
+reading of the generator sources on which the code-to-clause correspondence rests (gap~(G1)). The passage from a DIMACS
+file to \lean{Sixfold66} or \lean{Sevenfold70} is not formalized end to end (gap~(G2)); for encoder~B, the parts that
+are Lean-checked are listed in the next paragraph.
+
+\paragraph{Encoder~B in Lean.} The package \dirn{ENCBLEAN} (Lean~4.24.0 with its standard library only; the axiom
+check reports only \lean{propext}, \lean{Classical.choice} and \lean{Quot.sound} for every theorem named here,
+\dirn{ENCBLEAN/logs/m9_d_recheck.log}) defines encoder~B's formula as a Lean list of DIMACS clauses, \lean{EncB.encB},
+with parameters $m,K,t$, and the $64$ sign patterns of the variables $1,2,3,10,11,18$ as the list
+\lean{EncB.cubes64}. Lean-checked:
+\begin{itemize}
+\item the cube cover: if, for each of the $64$ cubes, \lean{EncB.encB} at $(6,8,11)$ together with the cube's six
+unit clauses is unsatisfiable, then so is \lean{EncB.encB} at $(6,8,11)$ (\lean{EncB.encB_unsat_of_cubes64}, from the
+general \lean{EncB.not_dimacsSatisfiable_of_cover} and \lean{EncB.covers_signPatterns};
+\dirn{ENCBLEAN/EncB/Cover.lean});
+\item soundness with respect to a combinatorial interface: for even $m\ge2$ and every $K,t$, every~\mbox{\lean{EncB.Model}}
+with these parameters gives a satisfying assignment of \lean{EncB.encB} (\lean{EncB.encB_satisfiable};
+\dirn{ENCBLEAN/EncB/Satisfiable.lean}). An \lean{EncB.Model} consists of an orientation of each triple of labels and an
+order of the layer phases, together with, as hypotheses, the properties that the clause families use: the orientation
+is alternating and invariant under the rotation, the phase order is a strict total order with layer~$0$ first, the
+sign rules~A and~B hold on the circular order of the points and their antipodes, the nesting relations hold, and there
+is no chain of $K-1$ points around a pivot;
+\item the reading of the printed text: the Lean string that the package's printer function computes for
+\lean{EncB.encB} at $(6,8,11)$ (which the compiled program writes out, a step that is not Lean-checked), alone or with
+one of the $64$ cubes, is parsed back to exactly that clause list by a DIMACS parser written in the
+package (\lean{EncB.parseDimacs_render}, \lean{EncB.parseDimacs_cube64_get}), so that unsatisfiability of the $64$
+parsed texts gives the hypothesis of the cube cover (\lean{EncB.cubesUnsat64_of_texts_get};
+\dirn{ENCBLEAN/EncB/Render.lean}).
+\end{itemize}
+The first two items together say that if the $64$ cube formulas are unsatisfiable, no \lean{EncB.Model} with
+parameters $(6,8,11)$ exists; with the third, the hypothesis is put on the $64$ printed texts, and this composition is
+the Lean theorem \lean{EncB.no_model_6811_of_texts} (\dirn{ENCBLEAN/EncB/Compose.lean}, which also states the round
+trip and the composition on the UTF-8 bytes of the texts; axioms as above, \dirn{ENCBLEAN/logs/m9_review_fix.log}). Checked by running compiled
+code (evidence, not proof): that \lean{EncB.encB} equals the output of \dirn{gen_b2.py} (equal bytes, or a refusal
+where \dirn{gen_b2.py} raises, on all $225$ instances of a small grid, and equal bytes on the recorded instances
+$(6,8,9)$, $(7,8,9)$, $(7,8,10)$ and $(6,8,11)$), and that the printed texts of the base formula and of the $64$ cube
+formulas at $(6,8,11)$ have the recorded SHA-256 of the certified files, $65$ of $65$. Not Lean-checked: that a sixfold
+configuration without a convex octagon yields an \lean{EncB.Model} (the polar labelling of the layers and the
+geometric facts behind the interface; Theorem~\ref{k8s:thm:sound}(a$'$) argues instead, in writing, about the clauses
+of \dirn{gen_b2.py}); the verdicts of \cakelpr{} (trusted: its verified HOL4/CakeML checker~\cite{CakeLPR}), and that
+its parser reads these files as the package's parser does (not verified; tested on samples only,
+\dirn{ENCBLEAN/logs/m9_a2_cake_parse.log}); the Lean compiler and runtime that ran the
+printer; and the assembly of these pieces into one theorem with \lean{Sixfold66}. The sixfold bound is therefore not
+formally verified end to end. The sevenfold bound is not covered: \lean{EncB.encB_satisfiable} needs even $m$.
 
 \paragraph{Further limitations.} (1)~The proof files ($1.7$\,GB and $1.6$\,GB for $m=7$; $41.0$\,GB and $46.5$\,GB for
 $m=6$) are in local archives (\dirn{es8-c7-octagon-2026-11-03} and \dirn{es8-c6-octagon-2026-11-03};
@@ -993,7 +1056,15 @@ without $9$ points in convex position that we know has $120$ of the $128$ points
 
 \paragraph{Formalization.} Closing gaps (G1) and (G2) would need a verified encoder, or a Lean proof that the emitted
 clauses are satisfied by every real configuration, together with a verified link from \cakelpr{} verdicts to Lean
-propositions; the encoding of the empty hexagon theorem was verified in Lean in this spirit~\cite{SNGCCH24}.
+propositions; the encoding of the empty hexagon theorem was verified in Lean in this spirit~\cite{SNGCCH24}. For
+encoder~B at $(6,8,11)$ part of this exists (Section~\ref{sec:trust}, ``Encoder~B in Lean''): a Lean definition of the
+formula, proved to be satisfied by the assignment of every combinatorial model (even $m\ge2$) and unsatisfiable if its
+$64$ cube formulas are, whose
+printed texts have the hashes of the certified files. Still missing are a Lean proof that a sixfold configuration
+without a convex octagon yields such a model (the polar labelling of the layers, with Mathlib) and the assembly into
+one theorem with \lean{Sixfold66}; the identification of the printed texts with the certified files rests on running
+compiled code and on SHA-256, and \cakelpr's verdicts and parser stay trusted. Encoder~A has no Lean counterpart, and
+for the sevenfold bound \lean{EncB.encB_satisfiable} does not apply (it needs even $m$).
 
 \section*{Acknowledgements}
 [acknowledgements, and a statement on the use of computational and AI assistance: to be written by the author]

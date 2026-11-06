@@ -1,0 +1,270 @@
+== m9 A2 independent verification (round trip), 2026-11-06T19:25:58+09:00
+cwd: /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/ENCBLEAN
+-- pre-build hashes
+3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368  .lake/build/bin/encb_dimacs
+9168c8f944eaf4bf2842be2d0b30f9b31103ca1ef655778bf1127a741e648705  EncB/Render.lean
+9a2087a4d116adec6793931986969fe01a01e4f520120389a5b2bbcb856f081f  EncB/Emit.lean
+67300d282702cebabe0fdb6502ea5d3191f1803c98f8241cd7b388b9bd590b0b  EncB.lean
+f7af57b676e5fec57576fdabaec2e3689f9bbc29a77f426c262b5797f63ad964  scripts/audit.sh
+3605a5c4a36257827dfeceafc6754bf7e9fc4b878fc757713a72fe6278c34edd  scripts/hash_binding.sh
+-rwxrwxr-x 1 jay jay 10334832 2026-11-06 18:58:34.926395995 +0900 .lake/build/bin/encb_dimacs
+-- Tctl +69.4°C
+$ systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake build
+Build completed successfully (28 jobs).
+exit 0, wall .171831936 s
+3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368  .lake/build/bin/encb_dimacs
+-- Tctl +70.1°C
+$ systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake env lean EncB/Render.lean   (fresh re-elaboration, no output files)
+maxrss 505544 KB
+exit 0, wall 1.759587265 s
+-- Tctl +69.9°C
+$ systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake env lean EncB/Emit.lean   (fresh re-elaboration, no output files)
+maxrss 400688 KB
+exit 0, wall .896908515 s
+$ scripts/audit.sh
+declarations mentioning the (6,8,11) instance (pattern: \b(encB|gen|genCoded|numVars|allCodes|allCodesOf|encode|diagCoded)\s+6\s+8\s+11\b|\bCubesUnsat64\b):
+  EncB/Cover.lean:110 (+4 lines): def CubesUnsat64 : Prop := ∀ c ∈ cubes64, ¬DimacsSatisfiable (cubeCnf (encB 6 8 11) c)
+  EncB/Cover.lean:114 (+4 lines): theorem encB_unsat_of_cubes64 (h : ∀ c ∈ cubes64, ¬DimacsSatisfiable (cubeCnf (encB 6 8 11) c)) :
+  EncB/Cover.lean:118 (+3 lines): theorem encB_unsat_of_cubesUnsat64 (h : CubesUnsat64) : ¬DimacsSatisfiable (encB 6 8 11) :=
+  EncB/Render.lean:791 (+6 lines): parseDimacs (renderCube (numVars 6 8 11) (encB 6 8 11) (bodyR (encB 6 8 11)) c) =
+  EncB/Render.lean:797 (+6 lines): parseDimacs (cnfText (encode 6 8 11) (cubes64.get ⟨i, h⟩)) =
+  EncB/Render.lean:803 (+8 lines): parseDimacs (renderCube (numVars 6 8 11) (encB 6 8 11) (bodyR (encB 6 8 11)) []) =
+  EncB/Render.lean:811 (+7 lines): parseDimacs (renderCube (numVars 6 8 11) (encB 6 8 11) (bodyR (encB 6 8 11)) c) = some (nv, G) →
+  EncB/Render.lean:818 (+43 lines): parseDimacs (renderCube (numVars 6 8 11) (encB 6 8 11) (bodyR (encB 6 8 11)) c) = some (nv, G) →
+  EncB/Satisfiable.lean:43 (+9 lines): theorem encB_satisfiable_6811 (M : Model 6 8 11) : DimacsSatisfiable (encB 6 8 11) :=
+sources: EncB.lean EncB/Coded.lean EncB/Cover.lean EncB/Dimacs.lean EncB/EarlyWarning.lean EncB/Emit.lean EncB/Gen.lean EncB/KernelCheck.lean EncB/KernelCheckB.lean EncB/Model.lean EncB/ModelLemmas.lean EncB/Render.lean EncB/Satisfiable.lean EncB/SortLemmas.lean EncB/SoundAng.lean EncB/SoundChain.lean EncB/SoundOlit.lean EncB/SoundOrbit.lean EncB/SoundRules.lean EncB/SoundWord.lean
+toolchain: leanprover/lean4:v4.24.0
+AUDIT PASS (no sorry/admit/native_decide/implemented_by/extern/unsafe/partial/axiom/opaque/set_option/ofReduceBool in code; Std-only; no decide/rfl/simp/omega/#eval/#reduce in a declaration that mentions the (6,8,11) instance)
+exit 0
+$ systemd-run ... lake env lean scratchpad/m9/verify-rt/Axioms.lean
+'EncB.parseDimacs_render' depends on axioms: [propext, Quot.sound]
+'EncB.renderCube_eq' depends on axioms: [propext, Quot.sound]
+'EncB.parseDimacs_renderCube' depends on axioms: [propext, Quot.sound]
+'EncB.cnfText_encode' depends on axioms: [propext, Quot.sound]
+'EncB.parseDimacs_cnfText' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.numVars_ge_45' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.parseDimacs_cube64' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.parseDimacs_cube64_get' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.parseDimacs_base6811' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.cubesUnsat64_of_texts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.encB_unsat_of_texts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.render_ascii' depends on axioms: [propext, Quot.sound]
+'EncB.cnfText_bytes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.renderCube_bytes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.natDigits_eq_toDigits' depends on axioms: [propext, Quot.sound]
+'EncB.pushNat_eq_append_toString' depends on axioms: [propext, Quot.sound]
+'EncB.parseDimacs_example' does not depend on any axioms
+'EncB.parseDimacs_rejects_count' does not depend on any axioms
+'EncB.parseDimacs_rejects_inner_zero' does not depend on any axioms
+'EncB.parseDimacs_rejects_big_var' does not depend on any axioms
+'EncB.parseDimacs_rejects_leading_zero' does not depend on any axioms
+'EncB.parseDimacs_rejects_leading_zero_header' does not depend on any axioms
+'EncB.parseDimacs_rejects_neg_zero' does not depend on any axioms
+'EncB.parseDimacs_rejects_double_space' does not depend on any axioms
+'EncB.parseDimacs_rejects_leading_space' does not depend on any axioms
+'EncB.parseDimacs_rejects_no_newline' does not depend on any axioms
+'EncB.parseDimacs_rejects_blank_line' does not depend on any axioms
+'EncB.parseDimacs_rejects_bare_zero' does not depend on any axioms
+'EncB.parseDimacs_rejects_comment' does not depend on any axioms
+'EncB.parseDimacs_rejects_plus' does not depend on any axioms
+'EncB.cubeCnf_nil' depends on axioms: [propext]
+'EncB.encB_unsat_of_cubes64' depends on axioms: [propext, Classical.choice, Quot.sound]
+parseDimacs_render : ∀ (nv : Nat) (F : List (List Int)),
+  (∀ (cl : List Int), cl ∈ F → ∀ (l : Int), l ∈ cl → l ≠ 0 ∧ l.natAbs ≤ nv) → parseDimacs (render nv F) = some (nv, F)
+renderCube_eq : ∀ (nv : Nat) (F : List (List Int)) (cube : List Int),
+  renderCube nv F (bodyR F) cube = render nv (cubeCnf F cube)
+parseDimacs_renderCube : ∀ (nv : Nat) (F : List (List Int)) (cube : List Int),
+  (∀ (cl : List Int), cl ∈ F → ∀ (l : Int), l ∈ cl → l ≠ 0 ∧ l.natAbs ≤ nv) →
+    (∀ (z : Int), z ∈ cube → z ≠ 0 ∧ z.natAbs ≤ nv) →
+      parseDimacs (renderCube nv F (bodyR F) cube) = some (nv, cubeCnf F cube)
+cnfText_encode : ∀ (m K t : Nat) (cube : List Int),
+  cnfText (encode m K t) cube = renderCube (numVars m K t) (encB m K t) (bodyR (encB m K t)) cube
+parseDimacs_cnfText : ∀ (m K t : Nat) (cube : List Int),
+  (∀ (z : Int), z ∈ cube → z ≠ 0 ∧ z.natAbs ≤ numVars m K t) →
+    parseDimacs (cnfText (encode m K t) cube) = some (numVars m K t, cubeCnf (encB m K t) cube)
+numVars_ge_45 : ∀ (m K : Nat), 45 ≤ numVars m K 11
+@parseDimacs_cube64 : ∀ {c : List Int},
+  c ∈ cubes64 →
+    parseDimacs (renderCube (numVars 6 8 11) (encB 6 8 11) (bodyR (encB 6 8 11)) c) =
+      some (numVars 6 8 11, cubeCnf (encB 6 8 11) c)
+parseDimacs_cube64_get : ∀ (i : Nat) (h : i < cubes64.length),
+  parseDimacs (cnfText (encode 6 8 11) (cubes64.get ⟨i, h⟩)) =
+    some (numVars 6 8 11, cubeCnf (encB 6 8 11) (cubes64.get ⟨i, h⟩))
+parseDimacs_base6811 : parseDimacs (renderCube (numVars 6 8 11) (encB 6 8 11) (bodyR (encB 6 8 11)) []) =
+  some (numVars 6 8 11, encB 6 8 11)
+cubesUnsat64_of_texts : (∀ (c : List Int),
+    c ∈ cubes64 →
+      ∀ (nv : Nat) (G : List (List Int)),
+        parseDimacs (renderCube (numVars 6 8 11) (encB 6 8 11) (bodyR (encB 6 8 11)) c) = some (nv, G) →
+          ¬DimacsSatisfiable G) →
+  CubesUnsat64
+encB_unsat_of_texts : (∀ (c : List Int),
+    c ∈ cubes64 →
+      ∀ (nv : Nat) (G : List (List Int)),
+        parseDimacs (renderCube (numVars 6 8 11) (encB 6 8 11) (bodyR (encB 6 8 11)) c) = some (nv, G) →
+          ¬DimacsSatisfiable G) →
+  ¬DimacsSatisfiable (encB 6 8 11)
+render_ascii : ∀ (nv : Nat) (F : List (List Int)) (c : Char), c ∈ (render nv F).data → c.toNat < 128
+cnfText_bytes : ∀ (e : Enc) (cube : List Int),
+  (cnfText e cube).toUTF8.data.toList = List.map (fun c => c.val.toUInt8) (cnfText e cube).data
+natDigits_eq_toDigits : ∀ (n : Nat), natDigits n = Nat.toDigits 10 n
+pushNat_eq_append_toString : ∀ (s : String) (n : Nat), pushNat s n = s ++ toString n
+def EncB.CubesUnsat64 : Prop :=
+∀ (c : List Int), c ∈ cubes64 → ¬DimacsSatisfiable (cubeCnf (encB 6 8 11) c)
+def EncB.DimacsSatisfiable : List (List Int) → Prop :=
+fun cls => ∃ ν, DimacsSat cls ν
+def EncB.DimacsSat : List (List Int) → (Nat → Bool) → Prop :=
+fun cls ν => ∀ (c : List Int), c ∈ cls → ∃ l, l ∈ c ∧ (0 < l ∧ ν l.natAbs = true ∨ l < 0 ∧ ν l.natAbs = false)
+def EncB.cubeCnf : List (List Int) → List Int → List (List Int) :=
+fun F cube => F ++ List.map (fun z => [z]) cube
+def EncB.render : Nat → List (List Int) → String :=
+fun nv F => headerR nv F.length ++ bodyR F
+def EncB.renderCube : Nat → List (List Int) → String → List Int → String :=
+fun nv F bodyF cube => headerR nv (cubeCnf F cube).length ++ cubeBodyR bodyF cube
+def EncB.cnfText : Enc → List Int → String :=
+fun e cube => renderCube e.nv e.clauses (bodyR e.clauses) cube
+def EncB.parseDimacs : String → Option (Nat × List (List Int)) :=
+fun s => parseDimacsChars s.data
+exit 0, wall .766279012 s
+$ systemd-run ... lake env lean scratchpad/m9/verify-rt/Parser.lean   (#eval parser tests)
+OK   accept: basic: got some (3, [[1, -2], [], [3]])
+OK   accept: empty formula: got some (0, [])
+OK   accept: |l| = nv: got some (3, [[-3, 3]])
+OK   accept: multi-digit: got some (78059, [[-78059, 12], [78059]])
+OK   accept: empty clause only: got some (5, [[]])
+OK   reject: count too large: got none
+OK   reject: count too small: got none
+OK   reject: 0 inside clause: got none
+OK   reject: var > nv: got none
+OK   reject: neg var > nv: got none
+OK   reject: big var nv=78059: got none
+OK   reject: leading zero lit: got none
+OK   reject: leading zero neg lit: got none
+OK   reject: leading zero header nv: got none
+OK   reject: leading zero header nc: got none
+OK   reject: -0: got none
+OK   reject: terminator 00: got none
+OK   reject: no final newline: got none
+OK   reject: no final newline empty body: got none
+OK   reject: double space in clause: got none
+OK   reject: double space between lits: got none
+OK   reject: trailing space: got none
+OK   reject: leading space before lit: got none
+OK   reject: double space header: got none
+OK   reject: trailing space header: got none
+OK   reject: CRLF: got none
+OK   reject: tab: got none
+OK   reject: blank line end: got none
+OK   reject: blank line middle: got none
+OK   reject: bare 0: got none
+OK   reject: comment first: got none
+OK   reject: comment after: got none
+OK   reject: +1: got none
+OK   reject: --2: got none
+OK   reject: - 2: got none
+OK   reject: no terminator: got none
+OK   reject: P upper: got none
+OK   reject: missing nc: got none
+OK   reject: empty string: got none
+OK   reject: arabic-indic digit: got none
+OK   reject: fullwidth digit: got none
+OK   reject: lit then newline: got none
+OK   reject: two clauses on one line: got none
+parser cases: 43, failures 0
+/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/verify-rt/Parser.lean:85:68: error: Invalid field notation: Type of
+  cl
+is not known; cannot resolve field `map`
+p cnf 3 4
+1 -2 0
+3 0
+-1 0
+2 0
+parse: some (3, [[1, -2], [3], [-1], [2]])
+cube literal > nv: none
+exit 1, wall .567781377 s
+$ (rerun after fixing a type annotation in my scratch test) systemd-run ... lake env lean scratchpad/m9/verify-rt/Parser.lean
+parser cases: 43, failures 0
+round trip instances 90, failures 0
+p cnf 3 4
+1 -2 0
+3 0
+-1 0
+2 0
+parse: some (3, [[1, -2], [3], [-1], [2]])
+cube literal > nv: none
+exit 0, wall .722153425 s
+-- (f) exe bytes vs records: scratchpad/m9/verify-rt/hash4.sh (sha256 1a7ccaf7ad7d220f…), 2026-11-06T19:27:53+09:00
+exe sha256: 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368
+$ encb_dimacs twin-base 6 8 11 | sha256sum
+  exit(pipeline) 0, wall 9.109792220 s, maxrss_kb 510208, bytes 58618857
+  stderr: 
+  name base  got 479e31a9e8d58d752c86b9abf02fb799c10615a7e61a88f132c49734674f37fc  record 479e31a9e8d58d752c86b9abf02fb799c10615a7e61a88f132c49734674f37fc  MATCH
+$ encb_dimacs twin-cube64 6 8 11 5 | sha256sum
+  exit(pipeline) 0, wall 12.695794255 s, maxrss_kb 510132, bytes 58618886
+  stderr: cubes64[5] name c11010 units [1, 2, 3, -10, 11, -18] 
+  name c11010  got e5839d1f48f18f5976a518e9e3d71f644b8c91ad59883f5d19fcbf913ea82415  record e5839d1f48f18f5976a518e9e3d71f644b8c91ad59883f5d19fcbf913ea82415  MATCH
+$ encb_dimacs twin-cube64 6 8 11 26 | sha256sum
+  exit(pipeline) 0, wall 12.924995457 s, maxrss_kb 510316, bytes 58618887
+  stderr: cubes64[26] name c00101 units [1, -2, -3, 10, -11, 18] 
+  name c00101  got 51c8a0c32f37f9cd7250e41e6d1249f4088182e5703408893eecda907e697235  record 51c8a0c32f37f9cd7250e41e6d1249f4088182e5703408893eecda907e697235  MATCH
+$ encb_dimacs twin-cube64 6 8 11 42 | sha256sum
+  exit(pipeline) 0, wall 14.079203934 s, maxrss_kb 509964, bytes 58618887
+  stderr: cubes64[42] name n10101 units [-1, 2, -3, 10, -11, 18] 
+  name n10101  got 252ae83bacb44da4fc5df6cbff1df8b49921cee35069632b415a9e7b8f2705a4  record 252ae83bacb44da4fc5df6cbff1df8b49921cee35069632b415a9e7b8f2705a4  MATCH
+SUMMARY match=4 mismatch=0
+exit 0
+-- spot regression A1 exe (a0dff6f2…) vs A2 exe (3d43fa8b…), and twin-cube vs gen cube (core toString), 2026-11-06T19:29:40+09:00
+  same rc=0/0 bytes=2775 sha=8746b71ec381 : twin-base 4 5 2
+  same rc=0/0 bytes=265565 sha=2ef817b671a1 : twin-base 7 8 3
+  same rc=0/0 bytes=2822 sha=771cab011ffe : twin-cube 4 5 2 1 -1 9 -9 10 -10 99 -100 101
+  same rc=0/0 bytes=2826 sha=eb881bd18927 : twin-cube 4 5 2 0 -0 127 -128 255 -256 78059 -78059
+  same rc=0/0 bytes=2872 sha=65076455ba95 : twin-cube 4 5 2 4294967295 -4294967296 18446744073709551615 -18446744073709551616 18446744073709551617
+  same rc=0/0 bytes=2842 sha=b51d2de8f799 : twin-cube 4 5 2 123456789012345678901234567890 -999999999999999999999999999999
+  same rc=0/0 bytes=6612936 sha=0dbfea63a901 : twin-cube64 4 5 11 0
+  same rc=0/0 bytes=6612942 sha=32362fffcee7 : twin-cube64 4 5 11 63
+  same rc=0/0 bytes=1844850 sha=30b631a2569c : twin-cube64 6 8 5 17
+  A1 vs A2: same=9 diff=0
+  gen-cube vs twin-cube same rc=0/0 bytes=2788: 4 5 2 1 -2 3
+  gen-cube vs twin-cube same rc=0/0 bytes=265583: 7 8 3 -1 2 -12345
+  gen-cube vs twin-cube same rc=0/0 bytes=1844917: 6 8 5 1 -2 3 -10 11 -18 18446744073709551616 -340282366920938463463374607431768211457
+  gen vs twin: same=3 diff=0
+$ systemd-run ... lake env lean scratchpad/m9/verify-rt/AllAxioms.lean   (collectAxioms over every constant of module EncB.Render, current build)
+/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/verify-rt/AllAxioms.lean:2:15: error: unknown namespace `Command`
+/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/verify-rt/AllAxioms.lean:4:0: error(lean.unknownIdentifier): Unknown constant `Lean.Elab.Command.CommandElab`
+/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/verify-rt/AllAxioms.lean:4:0: error(lean.unknownIdentifier): Unknown constant `Lean.Elab.throwUnsupportedSyntax`
+/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/verify-rt/AllAxioms.lean:5:12: error(lean.unknownIdentifier): Unknown identifier `getEnv`
+/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/verify-rt/AllAxioms.lean:6:18: error: Invalid field notation: Type of
+  env
+is not known; cannot resolve field `getModuleIdx?`
+/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/verify-rt/AllAxioms.lean:7:15: error: Invalid field notation: Type of
+  env
+is not known; cannot resolve field `header`
+/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/verify-rt/AllAxioms.lean:7:37: error: Invalid field notation: Type of
+  idx
+is not known; cannot resolve field `toNat`
+/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/verify-rt/AllAxioms.lean:8:17: error(lean.unknownIdentifier): Unknown identifier `Name`
+/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/verify-rt/AllAxioms.lean:12:2: error: failed to construct 'ForIn' instance for collection
+  ?m.34
+and monad
+  ?m.22
+/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/verify-rt/AllAxioms.lean:21:2: error(lean.unknownIdentifier): Unknown identifier `logInfo`
+/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/verify-rt/AllAxioms.lean:6:51: error(lean.unknownIdentifier): Unknown identifier `throwError`
+/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/verify-rt/AllAxioms.lean:21:12: error: Type mismatch
+  "EncB.Render: {n} non-internal constants ({thms} theorems), nonstandard axiom uses: {bad}"
+has type
+  String
+but is expected to have type
+  ?m.137 x✝² __discr✝¹ (?m.136 x✝² __discr✝¹)
+/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/verify-rt/AllAxioms.lean:23:0: error: elaboration function for `«command#check_module_axioms»` has not been implemented
+exit 1
+$ (rerun with import Lean added to my scratch file) systemd-run ... lake env lean scratchpad/m9/verify-rt/AllAxioms.lean
+EncB.Render: 229 non-internal constants (135 theorems), nonstandard axiom uses: 0
+exit 0
+-- summary (2026-11-06T19:32:13+09:00)
+(a) lake build exit 0 (up to date, exe 3d43fa8b… unchanged); fresh re-elaboration of EncB/Render.lean (1.8 s, no messages, 11 #guard_msgs pass) and EncB/Emit.lean exit 0; scripts/audit.sh AUDIT PASS exit 0.
+(b) #print axioms on all 15 claimed theorems + 14 examples: within [propext, Classical.choice, Quot.sound]; collectAxioms over all 229 non-internal constants of EncB.Render: 0 nonstandard.
+(c) parseDimacs: 43/43 hand cases as expected (5 accepts, 38 rejects incl. counts, inner 0, var>nv, leading zeros, -0, 00, no final newline, extra/trailing/leading spaces, CRLF, tab, blank lines, comments, +1, non-ASCII digits); round trip on 90 generated (nv, F) and equality with a toString-based layout: 0 failures.
+(d) Emit.lean: twin-base prints cnfText e [] (:193), twin-cube64 prints cnfText e (cubes64.get ⟨i,h⟩) (:182), e from encodeChecked = encode m K t (:134); cnfText = renderCube (header with (cubeCnf F cube).length, base lines, unit lines); theorems are stated on exactly these terms.
+(e) parseDimacs_cube64 / _get / _base6811 are term-mode applications; Render.lean elaborates in 1.8 s, so encB 6 8 11 is not evaluated.
+(f) exe stdout | sha256sum: base 479e31a9… MATCH; cubes64[5] c11010, [26] c00101, [42] n10101 MATCH the record files (also equal to replay/noty12 results.tsv rows). A1 vs A2 exe spot regression 9/9 same; gen cube vs twin-cube 3/3 same.
+defects: docs stale (README.md:58,329,377,651,659-673; DESIGN.md:205-206,702); scripts/hash_binding.sh:56 does not hash EncB/Render.lean.

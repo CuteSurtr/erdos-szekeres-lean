@@ -1,0 +1,54 @@
+# m9_d_recheck.log: M9 task D (write-up) re-check before citing ENCBLEAN in P1, 2026-11-06T19:55:46+09:00; Tctl +76.4°C
+# HEAD 752214b6e99f27fdf31961b418e7d79362e703d8; exe sha256 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368; Render.lean c8d6aed7e539db2c886230c80f891177de05a487e5041ad6f68f360b6d123e82; Cover.lean c59425acb5ba5e1da652fbb8d2f77d0c78d8cfc522216f64015231f7ed765f98; Satisfiable.lean 5c908151d342184a495a063de0f8c10acf55e6b7e3a94ab727dbbf870954b9b4
+## (1) command: systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake build
+Build completed successfully (28 jobs).
+exit code 0, wall .168427188 s
+exe sha256 after: 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368
+## (2) command: systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 scripts/audit.sh
+AUDIT PASS (no sorry/admit/native_decide/implemented_by/extern/unsafe/partial/axiom/opaque/set_option/ofReduceBool in code; Std-only; no decide/rfl/simp/omega/#eval/#reduce in a declaration that mentions the (6,8,11) instance)
+exit code 0, wall .214570612 s
+## (3) command: systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake env lean <scratchpad>/m9/taskd/Cited.lean   (file sha256 c27521f506e677cc09b6ca131c017a1b8012c12b19b7a935862f3d928e0774d0; it imports EncB and runs #print axioms on 14 theorems, among them the 7 cited by name in P1, and #check on 4)
+'EncB.not_dimacsSatisfiable_of_cover' depends on axioms: [propext, Quot.sound]
+'EncB.covers_signPatterns' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.encB_unsat_of_cubes64' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.encB_satisfiable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.encB_satisfiable_6811' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.dimacsSatisfiable_of_holds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.parseDimacs_render' depends on axioms: [propext, Quot.sound]
+'EncB.renderCube_eq' depends on axioms: [propext, Quot.sound]
+'EncB.cnfText_encode' depends on axioms: [propext, Quot.sound]
+'EncB.parseDimacs_cube64_get' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.parseDimacs_base6811' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.cubesUnsat64_of_texts_get' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.encB_unsat_of_texts_get' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.cnfText_bytes' depends on axioms: [propext, Classical.choice, Quot.sound]
+EncB.encB_unsat_of_cubes64 : (∀ (c : List Int),
+    c ∈ EncB.cubes64 → ¬EncB.DimacsSatisfiable (EncB.cubeCnf (EncB.encB 6 8 11) c)) →
+  ¬EncB.DimacsSatisfiable (EncB.encB 6 8 11)
+@EncB.encB_satisfiable : ∀ {m K t : Nat},
+  m % 2 = 0 → 2 ≤ m → ∀ (M : EncB.Model m K t), EncB.DimacsSatisfiable (EncB.encB m K t)
+EncB.cubesUnsat64_of_texts_get : (∀ (i : Nat) (hi : i < EncB.cubes64.length) (nv : Nat) (G : List (List Int)),
+    EncB.parseDimacs (EncB.cnfText (EncB.encode 6 8 11) (EncB.cubes64.get ⟨i, hi⟩)) = some (nv, G) →
+      ¬EncB.DimacsSatisfiable G) →
+  EncB.CubesUnsat64
+EncB.parseDimacs_render : ∀ (nv : Nat) (F : List (List Int)),
+  (∀ (cl : List Int), cl ∈ F → ∀ (l : Int), l ∈ cl → l ≠ 0 ∧ l.natAbs ≤ nv) →
+    EncB.parseDimacs (EncB.render nv F) = some (nv, F)
+exit code 0, wall .680022799 s
+
+## (4) P1 rebuild for the write-up (2026-11-06T20:11:34+09:00); cwd WRITEUP/P1
+# command (x3): systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 pdflatex -interaction=nonstopmode -halt-on-error p1
+# four rounds of three passes were run while the wording was settled (all passes exit 0); the passes of the last round:
+p1 pass 1 exit 0 wall .818991340 s
+p1 pass 2 exit 0 wall .796824177 s
+p1 pass 3 exit 0 wall .827697869 s
+p1: errors 0 undefined 0 warnings 0 overfull 1 underfull 5
+Output written on p1.pdf (35 pages, 851121 bytes).
+# p1.log of the last pass: errors 0; 'undefined' 0; LaTeX warnings 0; overfull 1 (13.27 pt, head of Lemma 5.2, as before); underfull 5 (badness 1270, 1953, 2418, 1281, 1158, as before); Pages: 35
+# p1.aux, p1.out, p1.toc deleted afterwards (created by these builds)
+# hashes: p1.tex 902fa492813d04aa85ca7b6cc8851c3165701a6b754e0a298b90d4aa39a919c7; k8_soundness_p1.tex aeb20ffe08d476a83c775558bc195925cd528f4237616af6f64427f2e5d3cb02; note/k8_soundness.tex a01e82b5c1b82ce8178fbed047b07e980db86e1598471bff508f97dcc94199e6; p1.pdf b7b9302b4ad7225a4f25e3e0d0075695285392b5f6294fa2aa98150e9b36db9b
+## (5) note wrapper compile check into the scratchpad (wrapper3), cwd WRITEUP/note
+# command (x3): systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 pdflatex -interaction=nonstopmode -halt-on-error -output-directory=<scratchpad>/m9/taskd/wrapper3 k8_soundness_wrapper
+# three passes exit 0; errors 0; undefined 0; warnings 0; overfull 0; underfull 0; Pages: 13
+# (an earlier version with the two theorem names in the head of Lemma k8s:lem:cube gave a 100.5 pt overfull line here; the names were moved into the text)
+# also: 4 wording variants of the sentence after Lemma k8s:lem:cube were compiled in a scratch copy (<scratchpad>/m9/taskd/try, 2 passes each, 'nice -n 10 pdflatex', WITHOUT the systemd-run cap, about 1 s and well under 1 GB each) to pick one with no new underfull box; the chosen one is in both copies
