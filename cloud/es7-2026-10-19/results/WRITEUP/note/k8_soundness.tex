@@ -1,5 +1,10 @@
 % k8_soundness.tex -- soundness of the SAT encodings behind the k = 8 rotational upper bounds
 % (C6UPPER: sixfold, 11 layers; C7UPPER: sevenfold, 10 layers).  Draft of 6 November 2026.
+% Revised 6 November 2026 (after 15:40 KST), when F_B(6,8,11) was certified unsatisfiable on its own by 64 cubes
+% (C6UPPER/noty12-2026-11-06): Theorem k8s:thm:sound gains part (a'), proved without Lemma k8s:lem:refl; Corollary
+% k8s:cor:geom uses (a') for encoder B; the cube-cover paragraph, the end of Section k8s:sec:reflection, a remark after
+% Lemma k8s:lem:affine, the trust table and gap (G4) say that the bounds via encoder B use neither Lemma k8s:lem:refl
+% nor the case g rho g^-1 = rho^-1 of Lemma k8s:lem:affine (encoder A's route, the cross-check, uses both).
 %
 % An \input-able section.  It needs the macros \orient, \conv, \dirn, \lean of symmetric_extremal.tex, the theorem
 % environments theorem, lemma, proposition, corollary, definition, remark, the packages amsmath, amssymb, enumitem,
@@ -114,6 +119,11 @@ position. If $g\rho g^{-1}=\rho^{\pm1}$, then also $g^{-1}\rho g=\rho^{\pm1}$, s
 $\rho^{-1}S=S$ because $\rho$ maps the finite set $S$ injectively into itself. Also $O=g(O)\notin gS$ and $|gS|=|S|$.
 The layers of $gS$ are $\mathrm{hv}(\mathrm{peel}(gS,n))=g\,\mathrm{hv}(\mathrm{peel}(S,n))=g(L_n)$.
 \end{proof}
+
+The case $g\rho g^{-1}=\rho^{-1}$ is needed only for the reflection $\tau$ of Lemma~\ref{k8s:lem:refl}, that is, only
+for parts~(a) and~(b) of Theorem~\ref{k8s:thm:sound} (formulas with the reflection unit); the bounds via encoder~B use
+part~(a$'$) and do not need it. Elsewhere $g$ is a rotation about $O$, which commutes with $\rho$, or, in
+Corollary~\ref{k8s:cor:geom}, a translation, for which only the first part of the lemma is used.
 
 \begin{remark}[nested $m$-gons are admissible; written proof (not refereed), new here]\label{k8s:rem:ident}
 Let $m\ge3$ and $4\le K\le2m$. If $S$ is a set of $t$ nested regular $m$-gons $L_0,\dots,L_{t-1}$
@@ -618,6 +628,10 @@ The reflection need not be a symmetry of $S$: it produces another configuration 
 must not be permuted, since they encode the radial order used by rule~B and by the nesting and chain clauses; the
 reflection keeps them.
 
+The reflection unit is used only by encoder~A, the cross-check. Encoder~B's formulas are certified unsatisfiable on
+their own: at $(7,8,10)$ directly, and at $(6,8,11)$ through the $64$ cubes of Section~\ref{k8s:sec:cube}. For them
+Theorem~\ref{k8s:thm:sound}(a$'$) suffices, and its proof does not use Lemma~\ref{k8s:lem:refl}.
+
 \subsection{The soundness theorem}\label{k8s:sec:theorem}
 
 \begin{theorem}[soundness; written proof (not refereed), resting on the Lean-checked lemmas cited above]\label{k8s:thm:sound}
@@ -629,6 +643,7 @@ position. By Remark~\ref{k8s:rem:ident} this holds in particular if some set of 
 position has no $K$ points in convex position. Then:
 \begin{enumerate}[label=(\alph*)]
 \item $F_B$ plus the reflection unit is satisfiable;
+\item[(a$'$)] $F_B$ is satisfiable, by an argument that does not use Lemma~\ref{k8s:lem:refl};
 \item if moreover $m\in\{6,7\}$, then $F_A$ plus the reflection unit is satisfiable.
 \end{enumerate}
 \end{theorem}
@@ -636,14 +651,21 @@ position has no $K$ points in convex position. Then:
 Part~(b) is restricted to $m\in\{6,7\}$ because encoder~A classifies triples in binary64 arithmetic, and the rounding
 bound used in Proposition~\ref{k8s:prop:A}(i) has been computed only for these two values of $m$ (it does not depend on
 $K$ or $t$). For other $m$ the same argument needs that bound for the given $m$; we make no claim about $F_A$ there.
-Encoder~B uses only integer comparisons, so part~(a) needs no such bound.
+Encoder~B uses only integer comparisons, so parts~(a) and~(a$'$) need no such bound.
+
+Part~(a$'$) follows from~(a), since a model of $F_B$ plus a unit clause is a model of $F_B$. Its own proof below omits
+the reflection step, so that the bounds via encoder~B (Corollary~\ref{k8s:cor:geom}) use neither
+Lemma~\ref{k8s:lem:refl} nor the case $g\rho g^{-1}=\rho^{-1}$ of Lemma~\ref{k8s:lem:affine}. Part~(a$'$) was added on
+6 November 2026, after $F_B(6,8,11)$ had been certified unsatisfiable on its own (Section~\ref{k8s:sec:cube}).
 
 For the certified instances: at $(6,8,11)$ both formulas have $78{,}059$ variables and $2{,}387{,}083$ clauses
 (SHA-256 \texttt{479e31a9\dots} for B, \texttt{542c8a3a\dots} for A), and $Y(1,2)$ is variable $1$ of $F_B$ (lines 36--39)
 and variable $7{,}635=7{,}634+1$ of $F_A$; at $(7,8,10)$ both have $80{,}080$ variables and $2{,}748{,}538$ clauses
 (\texttt{b4d29017\dots} for B, \texttt{1a7c0e70\dots} for A), and $H(1)$ is variable $\binom92+1=37$ of $F_B$ and
 $7{,}820+36+1=7{,}857$ of $F_A$. The sevenfold certificate for A is for $F_A$ plus $H(1)$ (\texttt{fa297b5b\dots}, made
-by \dirn{C7UPPER/addunits.py}); the one for B is for $F_B$ alone, which the theorem covers a fortiori. Sizes and hashes:
+by \dirn{C7UPPER/addunits.py}); the one for B is for $F_B$ alone, the case of part~(a$'$). At $(6,8,11)$ the
+certificate for B is also for $F_B$ alone, through $64$ cubes, and the one for A is for $F_A$ plus $Y(1,2)$, through
+$32$ cubes (Section~\ref{k8s:sec:cube}). Sizes and hashes:
 \dirn{C6UPPER/README.md}, \dirn{C7UPPER/README.md}, \dirn{C7UPPER/SHA256SUMS.txt}.
 
 \begin{proof}
@@ -651,13 +673,18 @@ Let $S$ be an $(m,K,t)$-admissible set. If $m$ is odd, replace it by the generic
 Lemma~\ref{k8s:lem:generic}(b). If $m$ is even, $S$ with its layers is a set of nested regular $m$-gons
 (Lemma~\ref{k8s:lem:layer}) in general position, hence generic by Lemma~\ref{k8s:lem:generic}(a); rotate it about $O$ so
 that it is normalised, which keeps it admissible with the rotated layers in the same order (Lemma~\ref{k8s:lem:affine})
-and keeps it generic. By Lemma~\ref{k8s:lem:refl}, replacing $S$ by $\tau S$ if necessary, $\alpha_S$ satisfies the
-reflection unit. (a) Give the
+and keeps it generic.
+(a$'$) Give the
 variables of $F_B$ their values under $\alpha_S$ (Definition~\ref{k8s:def:assign}); every variable of $F_B$ is a $Y$,
 $H$, orientation or chain variable. By reading the source, $F_B$ consists of the header (line 192) and exactly the
 clauses appended to \py{cls} at lines 80--81, 137, 141, 147, 175 and 190, that is, the families of
 Lemmas~\ref{k8s:lem:order}, \ref{k8s:lem:angB}, \ref{k8s:lem:nestcl} and \ref{k8s:lem:chain}; all are satisfied.
-(b) Let $m\in\{6,7\}$ and give the variables of $F_A$ their values under $\alpha_S$. \py{build} calls \py{fam_order}, \py{fam_angle}, \py{fam_nest} and \py{fam_chain} and nothing else (the
+Neither Lemma~\ref{k8s:lem:refl} nor the reflection $\tau$ is used.
+(a) By Lemma~\ref{k8s:lem:refl}, $\tau S$ is again a generic, normalised $(m,K,t)$-admissible set, and exactly one of
+$\alpha_S$ and $\alpha_{\tau S}$ satisfies the reflection unit; replace $S$ by $\tau S$ if necessary. Then $\alpha_S$
+satisfies the reflection unit, and by the argument of~(a$'$) it satisfies $F_B$.
+(b) Let $m\in\{6,7\}$, take $S$ as in~(a), so that $\alpha_S$ satisfies the reflection unit, and give the variables of
+$F_A$ their values under $\alpha_S$. \py{build} calls \py{fam_order}, \py{fam_angle}, \py{fam_nest} and \py{fam_chain} and nothing else (the
 Grassmann--Pl\"ucker family of the docstring is not emitted by the program). The first three are satisfied by
 Lemma~\ref{k8s:lem:order} (identical clauses) and Proposition~\ref{k8s:prop:A}, the last by the paragraph on encoder
 A's chains.
@@ -759,23 +786,39 @@ the $2^n$ choices $\ell_j\in\{x_j,\neg x_j\}$, then $F$ is unsatisfiable.
 A model $\beta$ of $F$ satisfies the cube with $\ell_j=x_j$ if $\beta(x_j)$ is true and $\ell_j=\neg x_j$ otherwise.
 \end{proof}
 
-No geometric meaning of the $x_j$ is needed, so the $20$ sign patterns of $Y(1,3),Y(1,4),Y(2,3),Y(2,4),Y(3,4)$ that
-contradict transitivity need no separate argument (their cubes were refuted anyway). For the sixfold split, $F$ is the
+No geometric meaning of the $x_j$ is needed, so sign patterns of the $Y$ variables that contradict transitivity need
+no separate argument (their cubes were refuted anyway). Two sixfold splits are used.
+
+\emph{The split of $F_B(6,8,11)$ (encoder~B, $64$ cubes).} Here $F$ is encoder~B's base formula itself, and
+$x_1,\dots,x_6$ are $Y(1,2),Y(1,3),Y(1,4),Y(2,3),Y(2,4),Y(3,4)$: variables $1,2,3,10,11,18$ (lines 36--39); $40$ of the
+$64$ patterns contradict transitivity. The $32$ cubes with $Y(1,2)$ are encoder~B's cubes of the split below; the $32$
+with $\neg Y(1,2)$ were written on 6 November 2026 in the same layout with the first unit negated. That each of the
+$64$ cube files is the base formula byte for byte, with adjusted header, plus six unit clauses on these variables, and
+that the $64$ patterns are distinct, was checked by \dirn{verify_cover64.py} and, from the files alone, by
+\dirn{verify_final64.py} (exact computation; \dirn{C6UPPER/noty12-2026-11-06}). By Lemma~\ref{k8s:lem:cube},
+unsatisfiability of the $64$ cube formulas gives that $F_B(6,8,11)$ is unsatisfiable, the first hypothesis of
+Corollary~\ref{k8s:cor:geom}(a). For this split no variable needs a geometric meaning.
+
+\emph{The split of the base formula plus $Y(1,2)$ (both encoders, $32$ cubes each).} Here $F$ is the
 base formula plus the unit $Y(1,2)$, and $x_1,\dots,x_5$ are $Y(1,3),Y(1,4),Y(2,3),Y(2,4),Y(3,4)$: variables
 $2,3,10,11,18$ in encoder B and $7{,}636,7{,}637,7{,}644,7{,}645,7{,}652$ in encoder A (by the variable numbering
-described in the paragraph after Definition~\ref{k8s:def:assign}). That each of the $32$ cube files of each encoder is the base formula byte for byte,
+described in the paragraph after Definition~\ref{k8s:def:assign}); $20$ of the $32$ patterns contradict transitivity.
+That each of the $32$ cube files of each encoder is the base formula byte for byte,
 with adjusted header, plus $Y(1,2)$ and the five literals of its pattern, and that the $32$ patterns are distinct, was
 checked by \dirn{C6UPPER/tools/verify_cover.py} and by the assertion-independent \dirn{C6C7REVIEW/strict_cover.py}
 (exact computation). Only the variable of the unit $Y(1,2)$ must have its geometric meaning; it is fixed by the source
-(Theorem~\ref{k8s:thm:sound}).
+(Theorem~\ref{k8s:thm:sound}). This is the route of encoder~A, the cross-check; for encoder~B these $32$ cubes are one
+half of the split above.
 
 \begin{corollary}[from unsatisfiability to the Lean propositions; written proof (not refereed), not in the review,
 with the cited Lean-checked reduction]\label{k8s:cor:geom}
 Let $F_A$, $F_B$ be as in Theorem~\ref{k8s:thm:sound}.
 \begin{enumerate}[label=(\alph*)]
-\item If, for one encoder, the $32$ formulas ``base $(6,8,11)$ + $Y(1,2)$ + cube'' are all unsatisfiable, then
-\lean{Sixfold66} holds; with \lean{sixfold_octagon} (Lean-checked), every sixfold rotationally symmetric set of at
-least $61$ points in general position contains a convex octagon.
+\item If $F_B(6,8,11)$ is unsatisfiable, then \lean{Sixfold66} holds; with \lean{sixfold_octagon} (Lean-checked), every
+sixfold rotationally symmetric set of at least $61$ points in general position contains a convex octagon. The same
+conclusion follows if, for one encoder, the $32$ formulas ``base $(6,8,11)$ + $Y(1,2)$ + cube'' are all unsatisfiable
+(this route uses Lemma~\ref{k8s:lem:refl}, through Theorem~\ref{k8s:thm:sound}(a), resp.~(b); it is the route of
+encoder~A, the cross-check).
 \item If $F_A(7,8,10)$ plus $H(1)$, or $F_B(7,8,10)$, is unsatisfiable, then \lean{Sevenfold70} holds; with
 \lean{sevenfold_octagon} (Lean-checked), every sevenfold rotationally symmetric set of at least $65$ points in general
 position contains a convex octagon.
@@ -790,12 +833,13 @@ general position and $8$-free by the first part of Lemma~\ref{k8s:lem:affine}, w
 (its last clause assumes $g(O)=O$ and is not used here, since $\eta(O)=-c$); it is $\rho$-invariant because
 $\eta R_c\eta^{-1}(y)=R_c(y+c)-c=\rho(y)$, so $\rho(\eta T)=\eta R_c(T)=\eta T$ (here $R_cT=T$, as $R_c$ maps the finite
 set $T$ injectively into itself); $O\notin\eta(T)$ because $c\notin T$; and $|\eta(T)|=66$. By
-Theorem~\ref{k8s:thm:sound}(a), resp.~(b), the base formula of the encoder plus $Y(1,2)$ is satisfiable; by
-Lemma~\ref{k8s:lem:cube}, so is one of the $32$ cube formulas, a contradiction. (b) Replace $2\pi/6$, $66$, $(6,8,11)$
-and $Y(1,2)$ by $2\pi/7$, $70$, $(7,8,10)$ and $H(1)$ in the first part of the argument; then $T-c$ is
-$(7,8,10)$-admissible. No cube step is needed: unsatisfiability of $F_A$ plus $H(1)$ contradicts
-Theorem~\ref{k8s:thm:sound}(b), and unsatisfiability of $F_B$ contradicts Theorem~\ref{k8s:thm:sound}(a), since a model
-of $F_B$ plus $H(1)$ is a model of $F_B$.
+Theorem~\ref{k8s:thm:sound}(a$'$), $F_B(6,8,11)$ is satisfiable, which contradicts the first hypothesis; this route does
+not use Lemma~\ref{k8s:lem:refl}. Under the second hypothesis, by Theorem~\ref{k8s:thm:sound}(a), resp.~(b), the base
+formula of the encoder plus $Y(1,2)$ is satisfiable; by Lemma~\ref{k8s:lem:cube}, so is one of the $32$ cube formulas,
+a contradiction. (b) Replace $2\pi/6$, $66$ and $(6,8,11)$ by $2\pi/7$, $70$ and $(7,8,10)$ in the first part of the
+argument; then $T-c$ is $(7,8,10)$-admissible. No cube step is needed: unsatisfiability of $F_A$ plus $H(1)$
+contradicts Theorem~\ref{k8s:thm:sound}(b), and unsatisfiability of $F_B$ contradicts
+Theorem~\ref{k8s:thm:sound}(a$'$).
 \end{proof}
 
 The hypotheses of the corollary are supplied by certificates (cake\_lpr, \texttt{s VERIFIED UNSAT}). Their status,
@@ -819,15 +863,16 @@ Layer lemma (Lemma~\ref{k8s:lem:layer}) & Lean-checked core; the assembly of the
 Signs of rules A and B (Lemma~\ref{k8s:lem:dich}(b),(c)); chain soundness (Lemma~\ref{k8s:lem:chain}, geometry) &
 Lean-checked\\
 Collinearity with the centre (Lemma~\ref{k8s:lem:collinear}) & written proof (not refereed), new here\\
-Convex position via orientations; affine images (Lemmas~\ref{k8s:lem:convpos}, \ref{k8s:lem:affine}) & written proof
-(not refereed), standard; not in the review\\
+Convex position via orientations; affine images (Lemmas~\ref{k8s:lem:convpos}, \ref{k8s:lem:affine}; for the case
+$g\rho g^{-1}=\rho^{-1}$ see the last row) & written proof (not refereed), standard; not in the review\\
 Genericity and perturbation (Lemma~\ref{k8s:lem:generic}) & written proof (not refereed); proves in full the review's
 hyperplane statement\\
 Orbit variables and stabilisers; key order; circular dichotomy (a); premises (Lemmas~\ref{k8s:lem:orbit},
 \ref{k8s:lem:keys}, \ref{k8s:lem:dich}, \ref{k8s:lem:prem}) & written proof (not refereed)\\
 Code-to-clause correspondence for both encoders (Lemmas~\ref{k8s:lem:angB}--\ref{k8s:lem:chain},
 Theorem~\ref{k8s:thm:sound}) & written proof (not refereed) by reading the source\\
-Reflection unit; cube cover (Lemmas~\ref{k8s:lem:refl}, \ref{k8s:lem:cube}) & written proof (not refereed)\\
+Cube cover (Lemma~\ref{k8s:lem:cube}; $64$ cubes for $F_B(6,8,11)$, $32$ for $F_A(6,8,11)$ plus $Y(1,2)$) & written
+proof (not refereed)\\
 Encoder A's float classification, $m\in\{6,7\}$ only (Proposition~\ref{k8s:prop:A}) & exact computation (comparison
 with B at the two instances; rounding bound), and written proof (not refereed), new here\\
 Cube files equal base plus units; orbit and pattern counts; formula hashes & exact computation\\
@@ -839,9 +884,13 @@ Unsatisfiability of the formulas & certificate (companion section)\\
 \midrule
 Not needed for the upper bounds: nested $m$-gons are admissible (Remark~\ref{k8s:rem:ident}) & written proof (not
 refereed), new here\\
+Used only by encoder~A (cross-check), not for the bounds via encoder~B: the reflection unit
+(Lemma~\ref{k8s:lem:refl}) and the case $g\rho g^{-1}=\rho^{-1}$ of Lemma~\ref{k8s:lem:affine} & written proof (not
+refereed); Lemma~\ref{k8s:lem:affine} not in the review\\
 \bottomrule
 \end{tabular}
-\caption{What the implication ``certificates $\Rightarrow$ \lean{Sixfold66}, \lean{Sevenfold70}'' rests on.}
+\caption{What the implication ``certificates $\Rightarrow$ \lean{Sixfold66}, \lean{Sevenfold70}'' rests on. The last two
+rows are not used for the bounds via encoder~B; the first of them is used by neither encoder.}
 \label{k8s:tab:trust}
 \end{table}
 
@@ -860,7 +909,11 @@ program that uses \dirn{gen.py}'s own literal translation.
 Proposition~\ref{k8s:prop:A}(i)) and those marked \emph{not in the review} (Lemmas~\ref{k8s:lem:convpos}
 and~\ref{k8s:lem:affine}, the assembly in Lemma~\ref{k8s:lem:layer}, the formula of Lemma~\ref{k8s:lem:diam}, and
 Corollary~\ref{k8s:cor:geom}) have had no internal review. The remaining written proofs expand arguments reviewed on
-4 November.
+4 November. Part~(a$'$) of Theorem~\ref{k8s:thm:sound} and the $64$-cube split of Section~\ref{k8s:sec:cube} were added
+on 6 November, after that review; the proof of~(a$'$) is that of~(a) without the reflection step.
+Lemma~\ref{k8s:lem:refl} and the case $g\rho g^{-1}=\rho^{-1}$ of Lemma~\ref{k8s:lem:affine} are used only by
+encoder~A (cross-check); the bounds via encoder~B (Theorem~\ref{k8s:thm:sound}(a$'$), Corollary~\ref{k8s:cor:geom})
+do not depend on them.
 \end{enumerate}
 
 \paragraph{Where the sources only sketched.} The docstring of \dirn{gen.py} (step~0) calls $K$-freeness a strict
