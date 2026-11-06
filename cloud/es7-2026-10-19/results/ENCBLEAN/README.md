@@ -1,4 +1,4 @@
-# ENCBLEAN: encoder B in Lean (M0 design, M1 byte-identical port, M2 functional twin and numbering bridge, M3 combinatorial soundness)
+# ENCBLEAN: encoder B in Lean (M0 design, M1 byte-identical port, M2 functional twin and numbering bridge, M3 combinatorial soundness, M9 hash binding, DIMACS round trip, re-solve script and review fixes)
 
 - **M1.** `EncB.gen m K t` is a Lean definition of the CNF that `C6UPPER/encb/gen_b2.py m K t` writes (gen_b2.py
   SHA-256 `3d47459a9723b5f7344205f3f2d7463e0be00b41c5070155e5da8dbf78fd40ba`). It has the same variable numbering,
@@ -10,9 +10,18 @@
   §2.2, frozen as `EncB/Model.lean`) makes `encB m K t` satisfiable. Proved Std-only; its only hypotheses are
   `m % 2 = 0`, `2 ≤ m` and the `Model` (section "M3" below).
 - `lake exe encb_dimacs` prints either one in gen_b2.py's DIMACS layout, and prints cubes in the layout of
-  `C6UPPER/tools/mkcubes.py`. With `twin-cubes64` the cubes are taken from the Lean list `cubes64` itself.
+  `C6UPPER/tools/mkcubes.py`. With `twin-cubes64` and `twin-cube64` the cubes are taken from the Lean list `cubes64`
+  itself.
+- **M9.** The text the exe prints for the base `encB 6 8 11` and for each of the 64 cubes of `cubes64` (by index) has
+  the recorded SHA-256: for the base the hash of the generated file (`C6UPPER/SHA256SUMS.txt:86`, `encb_gen.log`),
+  for each cube that of the file cake_lpr certified; 65/65 (plus 3 other instances, 68/68; compiled code, evidence).
+  The printer is `EncB/Render.lean`, with a proved round trip through a reference DIMACS parser
+  (`parseDimacs_render`, `cubesUnsat64_of_texts_get`; on the UTF-8 bytes, `parseDimacsBytes_cube64_get` in
+  `EncB/Compose.lean`), and `no_model_6811_of_texts` (`EncB/Compose.lean`) composes it with M3: if the 64 printed
+  texts parse to unsatisfiable lists, no `Model 6 8 11` exists. `scripts/resolve.sh` re-solves any of the 64 cubes
+  with the pinned CaDiCaL and cake_lpr (smoke test 2/2; `all` not run). Section "M9" below.
 
-**Status (2026-11-06, 17:35 KST).**
+**Status (2026-11-06, about 20:15 KST; the fixes of the two M9 reviews about 20:55–21:06 KST).**
 - **M3 is done (17:20 KST).** `encB_satisfiable` and `encB_satisfiable_6811` are proved, with no `sorry`, no
   unit statement left as a hypothesis, and axioms [propext, Classical.choice, Quot.sound] (section "M3" below).
 - **M0, M1 and M2 are done, and the three fixes of the M2 review are applied** (section "M2 review fixes" below).
@@ -30,8 +39,16 @@
   grid and the four recorded instances, Lean values on 229 instances, and kernel evaluation on 4 tiny instances,
   one of them, (4,5,1), with a two-level chain.
 - **What the clauses mean is proved for even m (M3), relative to the combinatorial `Model`.** That a geometric
-  counterexample yields a `Model` (M4–M6), the assembly (M8) and the hash binding of all 64 cubes (M9) are not done;
-  see "What is NOT yet proved" below.
+  counterexample yields a `Model` (M4–M6) and the assembly (M8) are not done; see "What is NOT yet proved" below.
+- **M9 is done (2026-11-06, 17:50–20:15 KST; not committed).** A1: the mode `twin-cube64` and
+  `scripts/hash_binding.sh` bind the base and all 64 cubes of `cubes64` (by index) and 3 other instances to the
+  records, 68/68 (trust item E1). A2: `EncB/Render.lean`, a Std-only printer for the twin with a proved round trip
+  through a reference DIMACS parser, which narrows trust items E3/E4. A3: `scripts/resolve.sh` and
+  `scripts/build_cake_lpr.sh` for E2 provenance (risk R7). Each step was checked by an independent verifier or
+  reviewer and fixed. P1 (`WRITEUP/P1/p1.tex` and the soundness note in both copies) now states what is Lean-checked
+  for encoder B and what is not. Section "M9" below; the trust table after M9 is in "Trust". The findings of two
+  reviews of M9 (Lean soundness, 6 minor; claims, 3 medium and 10 lower) were then applied (about 20:55–21:06 KST; not
+  committed; section "M9 review fixes" below).
 - **The package is Std-only:** no `[[require]]`, no Mathlib, toolchain `leanprover/lean4:v4.24.0` (Lean 4.24.0,
   commit `797c613e`).
 - **No forbidden constructs and standard axioms:**
@@ -39,23 +56,31 @@
     `set_option` or `ofReduceBool` (`scripts/audit.sh`);
   - no `decide`/`rfl`/`simp`/`omega`/`#eval`/`#reduce` anywhere in a declaration that mentions the (6,8,11) instance
     (`encB`, `gen`, `genCoded`, `numVars`, `allCodes`, `allCodesOf`, `encode` or `diagCoded` applied to 6 8 11, or
-    `CubesUnsat64`);
+    `CubesUnsat64`); since the M9 review fixes also no `simpa`, `grind`, `trivial`, `Eq.refl`, `eq_self`,
+    `Nat.decEq` or `decide_eq_true`, and a time gate: the files that state such theorems (Cover, Render,
+    Satisfiable, Compose) elaborate within 60 s each (0.3–1.8 s as built);
   - every declaration of the package, 425 named ones (180 theorems written in the source; 236 and 47 before M3)
     found by walking the environment, has axioms within {propext, Classical.choice, Quot.sound}
-    (`logs/axioms.log`); 26 of them are also guarded at build time by `#guard_msgs` (17 before M3).
+    (`logs/axioms.log`); 26 of them are also guarded at build time by `#guard_msgs` (17 before M3). These counts
+    are M3's; the declarations M9 added (Render.lean) are queried one by one in `logs/m9_axioms.log`, and 13 of them
+    are guarded at build time. For the write-up 14 theorems were queried again, among them the 7 that P1 cites by
+    name: all within the three axioms (`logs/m9_d_recheck.log`). The 7 declarations of `EncB/Compose.lean` (review
+    fixes; 6 theorems and the definition `parseDimacsBytes`) are queried in `logs/m9_review_fix.log`, and 5 of them
+    are guarded at build time.
 - No git commit was made.
 
 ## What exists
 
 | file | lines | content |
 |---|---|---|
-| `DESIGN.md` | 724 | M0: target theorem (variant A: 64 cubes on Y12 Y13 Y14 Y23 Y24 Y34), trust list E1–E6, interfaces (`Model`, `PolarLabelling`), lemma map (with the as-built M3 map in §3.2), milestones M0–M9, risks; revision notes for M2, the M2 review fixes, R1 and M3 at the top |
+| `DESIGN.md` | 770 | M0: target theorem (variant A: 64 cubes on Y12 Y13 Y14 Y23 Y24 Y34), trust list E1–E6, interfaces (`Model`, `PolarLabelling`), lemma map (with the as-built M3 map in §3.2), milestones M0–M9 (with M9's "done when" against what was built), risks; revision notes for M2, the M2 review fixes, R1, M3, M9 A2, M9 and the M9 review fixes at the top |
 | `EncB/Gen.lean` | 382 | M1: the port (`canon`, `olit`, `angOuts`, `patternLit`, `unitOf`, itertools orders, `gen`). Unchanged since M1 (`ec97b335…`) |
 | `EncB/Dimacs.lean` | 220 | M2: `DimacsSat`, `DimacsSatisfiable`, `LitSat` (copied from H/H3); `numberMap` (an `Array`), `decode`, `numberMap_getD`, `decode_numberMap`; re-proofs of Mathlib's `List.idxOf_cons_ne` and `List.getElem_idxOf`; `dedupStep` with `mem_dedup_foldl` |
 | `EncB/Coded.lean` | 460 | M2: `Var`, the codes and `decodeCode_code`; the twin `genCoded`, `allCodes`, `encB`, `numVars` (via `encode`); `mem_allCodes`, `dimacsSat_of_holds`, `encB_wf`; `diagCoded` (refusal flags for the emitter only) |
 | `EncB/Cover.lean` | 121 | M2: `CubeSat`, `Covers`, `cubeCnf`, `not_dimacsSatisfiable_of_cover` (copied from H3); `signPatterns`, `covers_signPatterns`; `cubeVars64`, `cubes64`, `CubesUnsat64`, `encB_unsat_of_cubes64` |
 | `EncB/KernelCheckB.lean` | 102 | M2: `decide +kernel` on `encB`/`numVars` at (3,4,1), (3,4,2), (6,4,1), (4,5,1), on `gen` at (4,5,1) and on `codesDecode` at (3,4,2); `#guard_msgs` axiom audit of the M2 theorems |
-| `EncB/Emit.lean` | 301 | M1's modes unchanged; M2's `twin-*` modes; `bodyL`, `cubeBody`, `cubeBody_eq` (the printed cube text is the rendering of `cubeCnf F c`) |
+| `EncB/Emit.lean` | 319 | M1's modes unchanged (with M1's printer `pushClause`/`body`/`header`/`cubeTail`, used only by them); M2's `twin-*` modes; M9 A1's `twin-cube64`. Since M9 A2 every twin mode prints through Render's `cnfText`/`renderCube`; M2's twin printer `bodyL`, `cubeBody`, `cubeBody_eq` was removed (superseded by `renderCube_eq`) |
+| `EncB/Render.lean` | 890 | M9 A2: the twin's DIMACS printer (`pushNat`, `pushInt`, `pushClauseR`, `bodyR`, `headerR`, `cubeBodyR`, `render`, `renderCube`, `cnfText`), the reference parser `parseDimacs` with 14 kernel-checked examples, the round trip `parseDimacs_render`, `renderCube_eq`, `cnfText_encode`, the (6,8,11) instances `parseDimacs_base6811`, `parseDimacs_cube64_get`, `cubesUnsat64_of_texts(_get)`, `encB_unsat_of_texts(_get)`, and `cnfText_bytes`; 13 `#guard_msgs` axiom guards (section "Trust") |
 | `EncB/KernelCheck.lean` | 35 | M1: `decide +kernel` on `gen` at (3,4,1), (3,4,2), (4,4,2) |
 | `EncB/Model.lean` | 196 | M3 (U0, frozen interface): `Model`, `ChainFrom`, `baseVal`, `tauOf`, `Model.τ`, `Model.τc`; the intermediate specs `OlitSpec`, `OrbListSpec`, `RkMono`, `PatternSpec`, `SortSpec`, `ObjLtSpec`, `objImg`, `SortedSix`, `WordSpec`; `Decidable` instances (used only by the early-warning test) |
 | `EncB/ModelLemmas.lean` | 162 | M3 (U0): literal semantics (`codeLitHolds_neg`, `holds_y`, `holds_orb`, `holds_f`), `perm012_cases`, `chi_perm3`, membership lemmas |
@@ -67,6 +92,7 @@
 | `EncB/SoundRules.lean` | 276 | M3 U4: `Rules.sortSix`, `Rules.patternSpec_of_sort`, `patternSpec_of` (helpers in `EncB.Rules`) |
 | `EncB/SoundWord.lean` | 229 | M3 U5: `wordSpec` (helpers in `EncB.Word`) |
 | `EncB/Satisfiable.lean` | 52 | M3: `genCoded_sound`, **`encB_satisfiable`**, `encB_satisfiable_6811`; `#guard_msgs` on the axioms of the last two |
+| `EncB/Compose.lean` | 104 | M9 review fixes: `parseDimacsBytes` (the reference parser on a byte list), `cnfText_ascii`, `parseDimacsBytes_cnfText`, `parseDimacsBytes_cube64_get` (the round trip on the UTF-8 bytes); **`no_model_6811_of_texts`** (M3 composed with `encB_unsat_of_texts_get`) and `no_model_6811_of_bytes`; 5 `#guard_msgs` axiom guards. Imported by `EncB.lean` only, not by the exe's root, so the exe is unchanged |
 | `EncB/EarlyWarning.lean` | 436 | M3 U6: the early-warning test (evidence only; run by `lean --run`, not imported by `EncB.lean`, not built) |
 | `scripts/ew_test.sh` | 34 | M3 U6: runs the early-warning test under the cap, logs it, exits nonzero unless `EW SUMMARY: PASS` |
 | `docs/M3PLAN.md`, `docs/m3start/` | 607 | the M3 plan (judge of two plans) and the unit start files, copied verbatim by U0 |
@@ -74,8 +100,11 @@
 | `scripts/compare_b.sh` | 34 | the 225 grid instances by SHA-256; second argument `gen` or `twin` |
 | `scripts/twin_check.sh` | 25 | M2: `encB = gen` as Lean values (no printing) on the grid plus extra instances |
 | `scripts/check_recorded.sh` | 127 | recorded instances; third argument `gen` or `twin`. Twin `big` = one emission of (6,8,11) with cubes from `cubes64`, the cube-variable check and the emitted-file check |
-| `scripts/audit.sh` | 64 | static checks (forbidden tokens, Std-only, toolchain, no kernel evaluation of the (6,8,11) instance, checked per declaration) |
-| `logs/` | | see "M3", "M2 results", "M2 review fixes" and "M1 results" below; `env.txt` has every source hash (as of M2); `axioms_enum.lean.txt` and `axioms_query.lean.txt` are the two axiom queries; M3: `m3_u0_*` (U0), `m3_build.log`, `m3_mutants.log`, `m3_early_warning.log` (U6's run), `m3_early_warning_integ.log` (Integration's rerun) |
+| `scripts/audit.sh` | 92 | static checks (forbidden tokens, Std-only, toolchain, no kernel evaluation of the (6,8,11) instance, checked per declaration) and, since the M9 review fixes, a time gate (`lake build --no-build` up to date; each file that states (6,8,11) theorems elaborates with `lake env lean` within 60 s); must run in the capped scope after `lake build` |
+| `scripts/hash_binding.sh` | 315 | M9 (E1): streams `twin-base 6 8 11`, `twin-cube64 6 8 11 I` (I = 0..63) and 3 other instances into sha256sum and compares each hash with every record of its name, read from the record files; logs the hashes of every source of the exe (the import closure of `EncB/Emit.lean`); since the M9 review fixes it stops unless `lake build --no-build` reports the build up to date, runs only a copy of the exe (hash compared at the end) and requires `twin-cube64 6 8 11 64` to be refused |
+| `scripts/resolve.sh` | 611 | M9 (E2 provenance, R7): `resolve.sh CUBES OUTDIR` emits each requested cube with `twin-cube64`, checks its hash against both records, solves it with the pinned CaDiCaL 2.1.3 and checks the proof with the pinned cake_lpr; append-only `results.tsv` (23 columns); section "M9" |
+| `scripts/build_cake_lpr.sh` | 91 | M9: the build recipe of cake_lpr commit `033aad53` (source hashes pinned from the local clone, first recorded by M9; clean environment; expected binary `c14ff498…`); **not run** |
+| `logs/` | | see "M3", "M2 results", "M2 review fixes" and "M1 results" below; `env.txt` has every source hash (as of M2); `axioms_enum.lean.txt` and `axioms_query.lean.txt` are the two axiom queries; M3: `m3_u0_*` (U0), `m3_build.log`, `m3_mutants.log`, `m3_early_warning.log` (U6's run), `m3_early_warning_integ.log` (Integration's rerun); M9: `m9_*` (A1: `m9_hash_binding.log`, `m9_hash_binding_selftest.log`, `m9_regress_modes.log`; A2: `m9_a2_*`, with sections in `m9_build.log`, `m9_audit.log`, `m9_axioms.log`; the A2 fixes: `m9_a2fix_hash_binding.log` and further sections in those three; A3: `m9_resolve_smoke.log`, `m9_review_resolve.log`, `m9_resolve_fix.log`; write-up: `m9_d_recheck.log`; reviews: `m9_review_lean_soundness.log`; review fixes: `m9_review_fix.log`, `m9_review_fix_hash_binding.log`); table in section "M9" |
 
 Lines of Lean code written in M2, without blank and comment lines: Dimacs 154, Coded 285, Cover 73, KernelCheckB 40
 (30 before the review fixes), plus 133 in Emit.lean (from 90 to 223 such lines; 132 to 301 lines in all). Scripts:
@@ -92,7 +121,7 @@ cd cloud/es7-2026-10-19/results/ENCBLEAN
 export PATH=$HOME/.elan/bin:$PATH
 CAP="systemd-run --user --scope -q -p MemoryMax=8G -p MemorySwapMax=0 nice -n 10"
 $CAP lake build                                        # clean (M2): 21 s wall, 2.1 GB peak (KernelCheckB 17-19 s, KernelCheck 11 s); the 10 M3 modules add about 10 s, 0.45 GB
-$CAP scripts/audit.sh
+$CAP scripts/audit.sh                                  # after lake build: its time gate runs lake build --no-build and lake env lean
 bash scripts/ew_test.sh [LOG]                          # M3 early-warning test, about 6 min; caps itself at 4 GB (default LOG overwrites logs/m3_early_warning.log)
 $CAP scripts/compare_b.sh ref/hashes.tsv twin          # 48 s; the 225 grid instances, encB
 $CAP scripts/compare_b.sh ref/hashes.tsv gen           # 23 s; the same, gen (M1)
@@ -102,12 +131,21 @@ $CAP scripts/check_recorded.sh SCRATCH big twin        # 16 s; (6,8,11) once, ~4
 $CAP python3 ref/make_ref.py OUT.tsv                   # 59 s; regenerates the corpus from gen_b2.py
 ```
 
+M9 ran `hash_binding.sh` under the 4 GB cap (`MemoryMax=4G`) instead of `$CAP`; `resolve.sh` caps each step itself (4 GB
+for emission and CaDiCaL, 12 GB for cake_lpr):
+
+```
+TMPDIR=SCRATCH systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 scripts/hash_binding.sh   # ~15 min; exit 0 iff 68/68
+nice -n 10 scripts/resolve.sh CUBES OUTDIR             # caps each step itself (4G emit/CaDiCaL, 12G cake_lpr); OUTDIR under /home/jay/research/data
+```
+
 How to call the exe (the `twin-*` modes print `encB`, the others print `gen`):
 
 ```
 .lake/build/bin/encb_dimacs twin-base 6 8 11 > B.cnf                    # encB 6 8 11
 .lake/build/bin/encb_dimacs twin-cube 6 8 11 1 2 3 -10 11 18 > c.cnf    # cubeCnf (encB 6 8 11) [1, 2, 3, -10, 11, 18]
 .lake/build/bin/encb_dimacs twin-cubes64 6 8 11 DIR [NAME ...]         # DIR/base.cnf + the cubes of cubes64 (all 64 if no NAME)
+.lake/build/bin/encb_dimacs twin-cube64 6 8 11 I > c.cnf                # cubeCnf (encB 6 8 11) (cubes64.get I), I = 0..63 (M9)
 .lake/build/bin/encb_dimacs twin-check 6 8 11                           # encB = gen in memory, nothing written
 .lake/build/bin/encb_dimacs twin-stats|twin-ymap|twin-profile M K T     # summary line / Y numbering / phase times
 .lake/build/bin/encb_dimacs base|stats M K T, cube M K T U..., files M K T DIR NAME...   # gen, as in M1
@@ -116,11 +154,215 @@ How to call the exe (the `twin-*` modes print `encB`, the others print `gen`):
 - **Cube names.** `cBBBBB` is the cube whose first unit is +Y12, followed by the pattern on Y13 Y14 Y23 Y24 Y34,
   where bit 1 means a positive literal; these are mkcubes' 32 cubes. `nBBBBB` is the same pattern with −Y12 first;
   these are the cubes of the c6upper-noty12 run. `twin-cubes64` derives each name from the signs of the cube
-  (`cubeName`, Emit.lean:84). It writes only cubes of `cubes64`, in list order.
+  (`cubeName`, Emit.lean:88). It writes only cubes of `cubes64`, in list order.
 - **Variable numbers.** At t = 11, Y12 Y13 Y14 Y23 Y24 Y34 are the variables 1, 2, 3, 10, 11 and 18
   (`cubeVars64`).
 - **Refusal.** On an instance where gen_b2.py raises, the exe writes nothing and exits with 1. For the twin this is
   decided by `diagCoded`.
+
+## M9: hash binding, DIMACS round trip and re-solve script (2026-11-06, 17:50–20:15 KST; not committed)
+
+**What M9 had to do** (`DESIGN.md` §4, M9 row): bind the base and the 64 cubes of `cubes64` to the recorded hashes
+by printing them from `encB` (trust item E1), write the trust table and P1's rigor text, and ship a re-solve script for
+the provenance of the verdicts (E2, risk R7). As built it also proves a DIMACS round trip for the printer, which
+narrows E3 and E4. The comparison of the row's "done when" with what was built is in `DESIGN.md` below the
+milestone table.
+
+| step | what was built or run | result | logs |
+|---|---|---|---|
+| A1 | mode `twin-cube64 M K T I` (Emit.lean); `scripts/hash_binding.sh` | 68/68 MATCH, exit 0, 908 s (exe `a0dff6f2…`); self-test with one hex digit changed in a scratch copy of a record: n10100 FAIL, 67/68, exit 1 | `m9_hash_binding.log`, `m9_hash_binding_selftest.log`; regression against the M2 exe `e9454996…` on every mode and 14 instances: 154 same, 0 unexpected (`m9_regress_modes.log`) |
+| A2 | `EncB/Render.lean`: the twin's own decimal printer, the reference parser `parseDimacs`, the round trip; every twin mode prints through it | proved (statements below); exe `3d43fa8b…` byte-identical to the A1 exe on 321/321 runs over all modes, 17 instances and edge values; 68/68 again (897 s) | `m9_a2_regress_modes.log`, `m9_a2_hash_binding.log`, `m9_a2_cake_parse.log`; build, audit and axioms in `m9_build.log`, `m9_audit.log`, `m9_axioms.log` |
+| A2 check | independent verifier: rebuild, axioms of all 229 constants of `EncB.Render`, 43 hand-written parser cases, 90 random round trips, the code path of each mode, 4 hashes | pass; defects in the log (`m9_a2_verify_rt.log:270`): stale doc passages, and the script's `sources:` line missed Render.lean; also reported by the verifier, not in the log: no theorem in the index form, E3 still trusted (disclosed) | `m9_a2_verify_rt.log` |
+| A2 fixes | the 5 fixable findings: docs; `hash_binding.sh` hashes the exe's import closure; `cubesUnsat64_of_texts_get`, `encB_unsat_of_texts_get` | 68/68, 0 FAIL, exit 0, 878 s (script `29d89510…`, exe `3d43fa8b…`) | `m9_a2fix_hash_binding.log`; sections in `m9_build.log`, `m9_audit.log`, `m9_axioms.log` |
+| A3 | `scripts/resolve.sh` (re-solve), `scripts/build_cake_lpr.sh` (build recipe, not run) | smoke test on c00100 (I = 27) and n10000 (I = 47): 2/2 ACCEPTED, exit 0, 37.4 s | `m9_resolve_smoke.log` |
+| A3 review | independent review with stub tools (no solver run) | 10 defects (D1–D10, listed with their fixes in `m9_resolve_fix.log`; the review log itself records only the fake-tool run in which the summary printed PASS for an unpinned cake_lpr's row; `m9_resolve_fix.log:5` wrongly says D1–D10 are numbered in the review log, see `m9_review_fix.log`) | `m9_review_resolve.log` |
+| A3 fixes | all 10 fixed (`resolve.sh` `22e07b3b…`, 611 lines; `build_cake_lpr.sh` `488502ba…`, 87 lines) | 39/39 stub runs with the expected exit code; real smoke test again into a new directory: 2/2 ACCEPTED, exit 0, 36.8 s, same CNF and proof hashes; rerun on it: both skipped, rows re-checked, PASS | `m9_resolve_fix.log` |
+| D | this write-up (README, DESIGN, P1's trust and gap text); `lake build`, `scripts/audit.sh` and `#print axioms` on 14 theorems, among them the 7 that P1 cites; P1 rebuilt | build exit 0 (nothing to rebuild, exe `3d43fa8b…`), AUDIT PASS, all 14 within [propext, Classical.choice, Quot.sound]; `p1.pdf` three passes exit 0, 35 pages, 0 errors, 0 undefined references | `m9_d_recheck.log`; `WRITEUP/P1/README.md`, "Revision for the Lean encoder-B package" |
+| R | two independent reviews: Lean soundness (rebuild, axioms of all constants of Render and Emit, proof terms, three mutants in a scratch copy) and claims (every name, line, number and sentence of the docs and P1) | Lean: no blocking finding, 6 minor; claims: 3 medium, 10 lower | `m9_review_lean_soundness.log`; the claims review reported to the workflow |
+| F | the review fixes (section "M9 review fixes" below) | all 19 findings fixed (none declined); new module `EncB/Compose.lean`; `lake build` exit 0, exe unchanged `3d43fa8b…`; AUDIT PASS with the time gate; hash binding 68/68, exit 0, 906 s; `p1.pdf` rebuilt (36 pages, 0 errors, 0 undefined references) | `m9_review_fix.log`, `m9_review_fix_hash_binding.log` |
+
+### What is proved (M9; Std-only, axioms within [propext, Classical.choice, Quot.sound], `logs/m9_axioms.log`)
+
+| statement | file:line | axioms |
+|---|---|---|
+| `cnfText_encode : cnfText (encode m K t) cube = renderCube (numVars m K t) (encB m K t) (bodyR (encB m K t)) cube` (by `rfl`; `cnfText e cube` is the string the exe writes) | Render.lean:156 | propext, Quot.sound |
+| `renderCube_eq : renderCube nv F (bodyR F) cube = render nv (cubeCnf F cube)` | Render.lean:164 | propext, Quot.sound |
+| **`parseDimacs_render : (∀ cl ∈ F, ∀ l ∈ cl, l ≠ 0 ∧ l.natAbs ≤ nv) → parseDimacs (render nv F) = some (nv, F)`** | Render.lean:585 | propext, Quot.sound |
+| `parseDimacs_cube64_get i h : parseDimacs (cnfText (encode 6 8 11) (cubes64.get ⟨i, h⟩)) = some (numVars 6 8 11, cubeCnf (encB 6 8 11) (cubes64.get ⟨i, h⟩))` | Render.lean:800 | propext, choice, Quot.sound |
+| `parseDimacs_base6811 : parseDimacs (renderCube (numVars 6 8 11) (encB 6 8 11) (bodyR (encB 6 8 11)) []) = some (numVars 6 8 11, encB 6 8 11)` | Render.lean:806 | propext, choice, Quot.sound |
+| **`cubesUnsat64_of_texts_get`**: if for every index `i < 64` the text `cnfText (encode 6 8 11) (cubes64.get ⟨i, _⟩)` parses (by `parseDimacs`) to some `(nv, G)` with `¬ DimacsSatisfiable G`, then `CubesUnsat64`; `encB_unsat_of_texts_get`: then `¬ DimacsSatisfiable (encB 6 8 11)` | Render.lean:833, :842 | propext, choice, Quot.sound |
+| `cnfText_bytes : (cnfText e cube).toUTF8.data.toList = (cnfText e cube).data.map (·.val.toUInt8)` (byte i is character i's code mod 256; that every character is ASCII is `render_ascii`, :683, and, stated on `cnfText`, `cnfText_ascii` below) | Render.lean:711 | propext, choice, Quot.sound |
+| `pushNat_eq_append_toString : pushNat s n = s ++ toString n` (the printer agrees with core's `toString` on `Nat`) | Render.lean:119 | propext, Quot.sound |
+| `cnfText_ascii e cube : ∀ c ∈ (cnfText e cube).data, c.toNat < 128` (review fix) | Compose.lean:45 | propext, Quot.sound |
+| `parseDimacsBytes_cnfText e cube : parseDimacsBytes (cnfText e cube).toUTF8.data.toList = parseDimacs (cnfText e cube)`, where `parseDimacsBytes bs := parseDimacsChars (bs.map fun b => Char.ofNat b.toNat)` (review fix) | Compose.lean:50 | propext, choice, Quot.sound |
+| `parseDimacsBytes_cube64_get i h : parseDimacsBytes (cnfText (encode 6 8 11) (cubes64.get ⟨i, h⟩)).toUTF8.data.toList = some (numVars 6 8 11, cubeCnf (encB 6 8 11) (cubes64.get ⟨i, h⟩))`: the round trip on the bytes `putStr` writes (review fix) | Compose.lean:61 | propext, choice, Quot.sound |
+| **`no_model_6811_of_texts`**: if for every index `i < 64` the text `cnfText (encode 6 8 11) (cubes64.get ⟨i, _⟩)` parses (by `parseDimacs`) to some `(nv, G)` with `¬ DimacsSatisfiable G`, then `Model 6 8 11 → False` (`encB_satisfiable_6811` with `encB_unsat_of_texts_get`); `no_model_6811_of_bytes`: the same with the hypothesis on the bytes, read by `parseDimacsBytes` (review fix) | Compose.lean:72, :80 | propext, choice, Quot.sound |
+
+- **No evaluation of (6,8,11).** The (6,8,11) theorems are term-mode applications of the general ones, with `encB_wf`
+  for the clauses and `numVars_ge_45` (the 45 Y codes are allocated first) for the cube literals. The only `decide`s
+  are on numerals (the 45 Y codes at t = 11 and the six cube variables). Audit check 4 lists these declarations and
+  finds no risky token; Render.lean elaborates in 1.7–1.8 s.
+- **Fourteen kernel-checked examples** (Render.lean:325-345) fix the language of `parseDimacs`: one accepted text and
+  13 rejected ones (wrong count, a 0 inside a clause, a variable above nv, leading zeros, `-0`, double or leading
+  space, no final newline, a blank line, a bare `0`, a comment line, `+1`).
+- **The composition with M3 is stated (review fix).** `no_model_6811_of_texts` (Compose.lean) is
+  `encB_satisfiable_6811` (M3) composed with `encB_unsat_of_texts_get`: if the 64 texts parse to unsatisfiable lists,
+  no `Model 6 8 11` exists; `no_model_6811_of_bytes` puts the hypothesis on the bytes. What is still missing for an
+  end-to-end theorem (a `Model` from a configuration, and `Sixfold66`) is M4–M8.
+- **Characters and bytes.** `parseDimacs_cube64_get` is about the characters of the Lean string; `cnfText_bytes` says
+  that its UTF-8 bytes are those characters' codes mapped by `·.val.toUInt8`. Since the review fixes the round trip is
+  also stated on the bytes (`parseDimacsBytes_cube64_get`, via `cnfText_ascii`). That the compiled exe writes exactly
+  these bytes is trust item E4.
+
+### Hash binding (trust item E1)
+
+- **How.** For each item the exe's stdout goes straight into sha256sum; no CNF file is written. The base is
+  `twin-base 6 8 11`; cube I (0 ≤ I < 64) is `twin-cube64 6 8 11 I`, the string `cnfText (encode 6 8 11)
+  (cubes64.get ⟨I, h⟩)` of `parseDimacs_cube64_get`. Every emitted hash is compared, on its own, with each record of
+  its name, all parsed from the record files at run time:
+  - base: `C6UPPER/SHA256SUMS.txt` and `C6UPPER/logs/encb_gen.log`;
+  - c-cubes: `C6UPPER/SHA256SUMS.txt` and the encoder-B row of `C6UPPER/replay-2026-11-06/results.tsv`, which must be
+    ACCEPTED with the cake line exactly `s VERIFIED UNSAT`;
+  - n-cubes: `C6UPPER/noty12-2026-11-06/cubes.sha256` and the row of `C6UPPER/noty12-2026-11-06/results.tsv`, under
+    the same rule, and its units column must equal the exe's units.
+- **Further checks in the same run.** 64 distinct names, 32 c and 32 n; each name agrees with the signs of its units;
+  the six variables equal the Y entries of `C6UPPER/encb/B_m6K8t11.meta.json` (1 2 3 10 11 18); every cube text ends
+  with its 6 unit lines and has the header `p cnf 78059 2387089`; every record row is used exactly once.
+- **Build provenance (review fix, finding L1).** Unless the exe is overridden, the script first requires
+  `lake build --no-build` to report every target up to date (otherwise it stops before any emission: tested with one
+  comment line added to a source, exit 1, `logs/m9_review_fix.log`), so the exe was built from the sources whose hashes
+  it logs. It copies the exe into `$TMPDIR`, runs only the copy, and compares the hashes of the copy and the original
+  with the start at the end. It requires `twin-cube64 6 8 11 64` to exit 2 with "cubes64 has 64 cubes" and nothing
+  on stdout, which ties the compiled list's length to `length_cubes64` and to the loop over I = 0..63.
+- **What exactly is bound.** For each index I, the hash of the text printed for `cubes64[I]` is compared with the
+  records of the name that the exe reports for that cube on stderr (`cubeName`, derived from the cube's signs and
+  checked against them). The index–name order (I = 63 − v) is not checked by this script; only `scripts/resolve.sh`
+  ties index and name. This is enough for the theorems, which quantify over membership in `cubes64`
+  (`cubesUnsat64_of_texts_get` covers every index), and a wrong text for a name fails (mutant B of the Lean review).
+- **Numbers** (run after the A2 fixes, `logs/m9_a2fix_hash_binding.log`): base `479e31a9…`, 58,618,857 bytes, header
+  `p cnf 78059 2387083`, 14.2 s; the 64 cubes 7.5–14.6 s each (832 s in all) at about 510 MB max RSS; whole run 878 s.
+  The three runs (A1 exe `a0dff6f2…`, A2 exe `3d43fa8b…` twice) give the same 68 hashes. A fourth run after the review fixes (`logs/m9_review_fix_hash_binding.log`; script `3c527600…`, the same exe
+  `3d43fa8b…`, run as a copy): `lake build --no-build` up to date, the range check passed, 68/68 MATCH, exit 0, 906 s
+  (base 13.4 s; cubes 8.0–14.6 s each, 855 s in all, at most 510 MB max RSS); its 68 hashes equal those of
+  `m9_a2fix_hash_binding.log`, item by item.
+- **The 3 other instances** (6,8,9), (7,8,9), (7,8,10) have no row in `ref/hashes.tsv` (the corpus stops at t = 8),
+  so they are bound against the two records each that `check_recorded.sh` uses; the log says `ref/hashes.tsv=no-row`.
+  The (7,8,9) record is gen_b2.py output, not independent (see M1).
+- **What this shows.** Compiled code printed, from the Lean terms `encB 6 8 11` and `cubes64`, the base file whose hash
+  is on record and the 64 cube files cake_lpr certified. It is a computation, not a proof: it trusts the Lean compiler and runtime (E4), SHA-256 and the record
+  files (E6, E1).
+
+### DIMACS round trip (trust items E3, E4)
+
+The details, and what stays trusted, are in "Trust" below. In short: the exe's twin modes print with Render's own
+`pushNat`/`pushInt` (core's `toString` on negative `Int` goes through the bodiless `opaque`
+`String.Internal.append` and cannot be reasoned about), and every printed character, header and count included, is
+inside a proved term. Evidence for the part that stays trusted (`logs/m9_a2_cake_parse.log`, cake_lpr `c14ff498…` in
+its one-argument parse-and-print mode): its printout of what it parsed is byte-identical to 21 small and medium twin
+texts and to the (6,8,11) base and cubes 0 (c11111) and 63 (n00000), which have the recorded hashes (about 4.2 GB
+RSS); of the 13 texts that `parseDimacs` rejects, cake_lpr rejects 5 and reads 8 the standard way (leading zeros in a
+literal or in the header, two spaces, a leading space, no final newline, a bare `0` line, a comment line, `+1`), so on
+these examples `parseDimacs` accepts the smaller language.
+
+### Re-solve script (E2 provenance, risk R7)
+
+- **Usage.** `scripts/resolve.sh CUBES OUTDIR`, with CUBES `all` or a comma-separated list of indices (0..63) and
+  names; index and name are tied by I = 63 − v, v the name read as six bits with c = 1.
+- **Per cube.** Emit with `twin-cube64 6 8 11 I` (index, name, units and Y map checked); compare the CNF hash with both
+  records before solving (otherwise CNF-MISMATCH, nothing solved); `cadical -q --lrat --binary=false` (exit 20
+  required); `cake_lpr --CML_HEAP_SIZE=8000 --CML_STACK_SIZE=4000`. ACCEPTED only with exactly one `s ` line, equal to
+  `s VERIFIED UNSAT`, exit 0, and the CNF and proof hashed again after cake_lpr unchanged. lrat-check is never used.
+- **Tools.** CaDiCaL 2.1.3 `4acf5860…` and cake_lpr `c14ff498…`, the binaries of the replay and of the noty12 run,
+  pinned from `TOOLS_AND_PROOFS.sha256` of both records. Each tool, and the exe, is copied to
+  `OUTDIR/tools/<sha256>/` and only the copy runs; its hash is checked before each cube and each run.
+- **Safeguards.** Proofs are never deleted or compressed; `results.tsv` is append-only (23 columns); a killed or failed
+  run gets a retryable verdict (`*-KILLED`, `*-ERROR`, `FILE-CHANGED`) and `RS_RETRY=1` starts a new attempt in new
+  files; the final SUMMARY re-checks every requested cube's latest row and files and counts only rows of the pinned
+  cake_lpr; it waits while Tctl ≥ 84 °C and needs 400 GiB + 6 GiB free.
+- **Smoke test** (`logs/m9_resolve_fix.log`, part B; the first run, before the review fixes, is
+  `logs/m9_resolve_smoke.log` with the same hashes):
+
+  | cube | index | CNF sha256 (= both records) | CaDiCaL | proof (= recorded proof) | cake_lpr | verdict |
+  |---|---|---|---|---|---|---|
+  | c00100 | 27 | `67bd7187…09b2` | rc 20, 0.79 s, 243 MB | `94913b2e…`, 39,771,081 B, yes | `s VERIFIED UNSAT`, rc 0, 3.88 s, 6.8 GB | ACCEPTED |
+  | n10000 | 47 | `b5cc9acd…307f` | rc 20, 0.81 s, 243 MB | `dd7b24ad…`, 39,771,102 B, yes | `s VERIFIED UNSAT`, rc 0, 3.93 s, 6.8 GB | ACCEPTED |
+
+- **Not run.** `resolve.sh all`: from the records, about 20.1 h of CaDiCaL (the 24 phase-order cubes take
+  2,320–3,921 s each, the other 40 about 1 s) plus about 1.4 h of cake_lpr, one cube at a time, and about 110 GB of
+  raw proofs plus 3.75 GB of CNF. The peak memory of CaDiCaL on a phase-order cube is not on record; under the default
+  4 GB cap such a run may be killed (verdict `CADICAL-KILLED`, retryable with a larger `RS_CAP_CADICAL`).
+  `scripts/build_cake_lpr.sh` was not run either (only its argument checks and a dry `make -n`); its fallback that
+  fetches the commit by id is untested. Its three source pins (Makefile `5e001c7e…`, basis_ffi.c `bd498883…`,
+  cake_lpr.S `d20ceae0…`) are M9's own reading of the local clone (`git show 033aad53:<file> | sha256sum`,
+  recomputed with the same values in `logs/m9_review_fix.log`); M9 is the first place they are recorded in full (the
+  replay README has only the prefix `d20ceae0`), and the script's header says so. That a build of commit `033aad53` reproduces `c14ff498…` byte for byte is the
+  replay's record (`C6UPPER/replay-2026-11-06/README.md`), not an M9 result.
+
+### Files left on disk, and minor points
+
+- `/home/jay/research/data/encblean-m9/` (kept; nothing under it may be deleted by a step, since it holds CNFs and
+  proofs): `resolve-smoke-fix/` (200 MB, the fixed script's smoke test), `resolve-smoke/` (188 MB, the first smoke
+  test; its 21-column `results.tsv` is refused by the fixed script), `resolve-negtest/` (56 MB, the CNF-MISMATCH
+  test), `review-unpinned/` (56 MB, **fake**: stub tools, an empty proof and a fake ACCEPTED row, marked by
+  `FAKE-TOOLS-NOT-A-CHECK.txt`). The operator may remove them.
+- `resolve.sh`'s header line `sources:` hashes only Emit.lean, Cover.lean and Coded.lean, as `hash_binding.sh` did
+  before its fix; the exe that runs is pinned by its own hash snapshot, so this is provenance text only. Not changed.
+- The usage text of the exe gained a line for `twin-cube64`, so the stderr of its error paths differs from the M2 exe;
+  stdout, files and exit codes of the old modes are unchanged (`m9_regress_modes.log`).
+- `scripts/audit.sh`: its keyword regex makes a `#guard_msgs` line join the previous declaration's block, which only
+  makes check 4 stricter (`m9_audit.log`).
+
+## M9 review fixes (2026-11-06, about 20:55–21:06 KST; not committed)
+
+Two independent reviews of the uncommitted M9 work: a Lean-soundness review (no blocking finding, 6 minor;
+`logs/m9_review_lean_soundness.log`) and a claims review of the docs and P1 (3 medium, 9 low, 1 nit; reported to the
+workflow, not logged by the reviewer). Every finding was applied; nothing was declined. Record:
+`logs/m9_review_fix.log` (commands, exit codes, hashes) and `logs/m9_review_fix_hash_binding.log`.
+
+| finding | outcome |
+|---|---|
+| L1 `hash_binding.sh` never checked that the exe was built from the hashed sources | **fixed:** `lake build --no-build` must report the build up to date, else the run stops before any emission (tested: one comment line added to `EncB/Compose.lean`, `lake build --no-build` exit 3, script exit 1, file restored byte for byte); only a copy of the exe in `$TMPDIR` runs, and the hashes of copy and original are compared with the start at the end; `twin-cube64 6 8 11 64` must exit 2 with "cubes64 has 64 cubes" and no stdout. Full run: 68/68 MATCH, 0 FAIL, exit 0, 906 s, the range check passed and the exe copy `3d43fa8b…` was unchanged at the end; the 68 hashes equal those of the earlier runs (`m9_review_fix_hash_binding.log`) |
+| L2 `audit.sh` check 4 missed `trivial`, `Eq.refl`, `simpa`, `grind`; its comment named only Cover.lean | **fixed:** `simpa`, `grind`, `trivial`, `Eq.refl`, `eq_self`, `Nat.decEq`, `decide_eq_true` added; new check 5, a time gate (`lake build --no-build`, then `timeout 60 lake env lean` on every file with a (6,8,11) declaration: Compose 0.6 s, Cover 0.3 s, Render 1.8 s, Satisfiable 0.4 s); comment updated. Negative tests: 8 declarations using the new tokens in a scratch copy (never compiled) are each flagged, AUDIT FAIL, exit 1; with the limit lowered to 1 s, Render.lean times out, AUDIT FAIL. The package: AUDIT PASS, exit 0 |
+| L3 the round trip is on characters, not bytes; README annotated `cnfText_bytes` "(the text is ASCII)" | **fixed:** `EncB/Compose.lean`: `parseDimacsBytes`, `cnfText_ascii`, `parseDimacsBytes_cnfText`, `parseDimacsBytes_cube64_get` (the reviewer's text, which compiled in its scratch file); README row and DESIGN E3 reworded |
+| L4 no Lean theorem joins `encB_satisfiable_6811` with `encB_unsat_of_texts_get` | **fixed:** `no_model_6811_of_texts` (and `no_model_6811_of_bytes`) in the new module `EncB/Compose.lean`, which imports Satisfiable and Render and is imported by `EncB.lean` (not by the exe, whose hash stays `3d43fa8b…`); 5 `#guard_msgs` axiom guards; P1 §8 now cites it |
+| L5 two cake_lpr source pins appear in no record | **fixed (second option):** the header of `build_cake_lpr.sh` says that M9 is the first place the three hashes are recorded in full (the replay README has only the prefix `d20ceae0`) and that they are M9's own reading of the local clone; recomputed read-only with `git show`, same values (`m9_review_fix.log`). No new record file: one written by M9 would be no more independent than the script |
+| L6 what the binding binds (name from stderr, not the index order) was not stated | **fixed:** a sentence in the script header and in "Hash binding" above |
+| C1, C2 P1 §1 and §3 dropped the even-m restriction | **fixed** as proposed; "the assembly into one theorem" reads "… with `Sixfold66`", since `no_model_6811_of_texts` now composes part of it |
+| C3 the parser agreement was credited to cake_lpr's verification | **fixed** in P1 §8, the note (G2) in both copies, P1's README and DESIGN E3 |
+| C4 "65 files cake_lpr certified" (the base was never checked by cake_lpr) | **fixed** in this README (top and "Hash binding"); P1's "65 of 65" left as it is (P1's Table 7 counts base formulas among the certified files), as the review allowed |
+| C5 two README cells cite logs that do not contain the stated counts | **fixed** (rows A2 check and A3 review); `m9_resolve_fix.log:5` ("as numbered in m9_review_resolve.log") is wrong but was not edited, since it is a record; the correction is here and in `m9_review_fix.log` |
+| C6 "even m" without m ≥ 2; "equal output" on the grid; "every Model satisfies" | **fixed** (a)–(f) as proposed (222 of 225 grid instances equal bytes, 3 refused where gen_b2.py raises: `logs/compare_tiny_twin.log`) |
+| C7 Table 7 row omitted the assembly; "through a DIMACS parser" was vague | **fixed** as proposed (with "with `Sixfold66`") |
+| C8 "the text that the printer writes" in a Lean-checked item | **fixed** in P1 §8 and the note (G2), both copies |
+| C9 the EncB items are also about DIMACS lists in general | **fixed**, including the optional rewording after the proof of Lemma k8s:lem:cube |
+| C10 revision times later than the files' write times; the milestone parenthesis | **fixed** (20:20 → 20:10 KST in the note's and the copy's headers; 20:25 → 20:12 KST in P1's README; "M2 and M3, committed, and M9, not committed"); this round adds its own dated revision comments |
+| C11 "these two under the 4 GB cap" | **fixed** ("How to build and run") |
+| C12 stale `p1.tex:299` and the pre-M9 cost estimate in DESIGN | **fixed:** `p1.tex:310-312` at both places; the cost from the records (CaDiCaL 36,873.6 s + 35,410.6 s = 72,284.2 s, summed from the two `results.tsv` in `m9_review_fix.log`; the review's "35,411 s" is the noty12 README's rounding) |
+| C13 the list of the 8 texts cake_lpr reads; a line break inside `EncB.Model` in `p1.pdf` | **fixed** (the list now matches `m9_a2_cake_parse.log:54-56`; `every~\mbox{\lean{EncB.Model}}`) |
+
+**Checks after the fixes.** All in `logs/m9_review_fix.log` unless named otherwise.
+- `lake build` (4 GB cap): exit 0; the first build after adding Compose built `EncB.Compose` (0.54 s) and `EncB`; the
+  exe stayed `3d43fa8b…` (mtime 18:58), since Compose is not in its import closure. A final `lake build`: exit 0,
+  exe unchanged.
+- `scripts/audit.sh` (script `83ffabe7…`): AUDIT PASS, exit 0; time gate Compose 0.5 s, Cover 0.3 s, Render 1.8 s,
+  Satisfiable 0.4 s. Negative tests as in row L2.
+- Axioms of the 7 declarations of Compose.lean (`#print axioms` in a scratch file importing `EncB`): `parseDimacsBytes`
+  none; `ofNat_toUInt8_ascii` [propext]; `cnfText_ascii` [propext, Quot.sound]; `parseDimacsBytes_cnfText`,
+  `parseDimacsBytes_cube64_get`, `no_model_6811_of_texts`, `no_model_6811_of_bytes` [propext, Classical.choice,
+  Quot.sound]. Five are also guarded at build time. Compose.lean elaborates in about 0.5 s; its (6,8,11) theorems
+  are term-mode applications (`(parseDimacsBytes_cnfText _ _).trans (parseDimacs_cube64_get i h)`,
+  `fun M => encB_unsat_of_texts_get h (encB_satisfiable_6811 M)`), so nothing evaluates the instance.
+- `scripts/hash_binding.sh`: 68/68 MATCH, exit 0, 906 s (`logs/m9_review_fix_hash_binding.log`); the stale-build
+  guard: exit 1 before any emission (row L1).
+- `scripts/build_cake_lpr.sh` (comment change only): `bash -n` exit 0; no argument, exit 2; an existing directory,
+  exit 2. Still not run.
+- P1: `p1.pdf` three passes, each exit 0, 36 pages (35 before; the longer §1, §3 and §8), 0 errors, 0 undefined
+  references or citations, 0 LaTeX warnings, the same 1 overfull and 5 underfull boxes; the same theorem and table
+  numbers. Not changed: Table 7 is printed on the last page (it was already there after the 20:10 revision; HEAD
+  has it on page 28 of 33). The note's wrapper compiles cleanly in a scratch directory (13 pages, no box warnings).
+  `diff` of the two note copies: the 35-line header and edits 1–9 only.
+- Not run: no SAT solver, no proof checker, nothing under `/home/jay/research/data` was written; no unit was touched;
+  no git commit.
 
 ## M3: combinatorial soundness (`encB_satisfiable`), 2026-11-06
 
@@ -178,8 +420,9 @@ theorem encB_satisfiable_6811 (M : Model 6 8 11) : DimacsSatisfiable (encB 6 8 1
   - Even m only (`heven`; odd m, the sevenfold case, stays out, `DESIGN.md` R9).
   - The theorem is about the combinatorial `Model`. That a geometric counterexample yields a `Model` is M4–M6.
 - **Read with M2.** `encB_unsat_of_cubes64` (Cover.lean:114) together with `encB_satisfiable_6811` gives:
-  `CubesUnsat64` implies that no `Model 6 8 11` exists. That one-line composition is not stated in Lean here; it
-  belongs to M8.
+  `CubesUnsat64` implies that no `Model 6 8 11` exists. That one-line composition was not stated in Lean in M3; since
+  the M9 review fixes it is stated with the hypothesis on the 64 printed texts, `no_model_6811_of_texts`
+  (Compose.lean).
 
 ### What is proved
 
@@ -326,7 +569,7 @@ outcome of them.
 | `not_dimacsSatisfiable_of_cover` (H3 `Cover.lean:98`) | Cover.lean:82 | propext, Quot.sound |
 | `length_cubes64 : cubes64.length = 64` | Cover.lean:105 | propext, Quot.sound |
 | **`encB_unsat_of_cubes64 : (∀ c ∈ cubes64, ¬ DimacsSatisfiable (cubeCnf (encB 6 8 11) c)) → ¬ DimacsSatisfiable (encB 6 8 11)`** | Cover.lean:114 | propext, choice, Quot.sound |
-| `cubeBody_eq : cubeBody (bodyL F) c = bodyL (cubeCnf F c)` (what the emitter prints for a cube) | Emit.lean:79 | propext, Quot.sound |
+| `cubeBody_eq : cubeBody (bodyL F) c = bodyL (cubeCnf F c)` (what the emitter printed for a cube in M2). **Removed in M9 A2** with `bodyL` and `cubeBody`; superseded by `renderCube_eq : renderCube nv F (bodyR F) c = render nv (cubeCnf F c)` (Render.lean:164, axioms propext, Quot.sound) | was Emit.lean:79 | propext, Quot.sound |
 
 - **The definitions.** `genCoded`, `encB`, `numVars`, `allCodes` and `cubes64` use no axioms (`#print axioms`).
 - **No kernel evaluation of (6,8,11).** `encB_unsat_of_cubes64` is
@@ -374,8 +617,9 @@ outcome of them.
    Its three labels are pairwise distinct labels of Q, so `canon` of them is a key of `orb` and this `olit` cannot
    fail. This affects only the refusal, never `encB`. On the grid the twin refuses exactly the three rows where
    Python raises.
-7. **The cube files render the list `cubeCnf F c` itself** (`cubeBody_eq`). For a non-empty F this is mkcubes'
-   layout byte for byte. Only for an empty F would mkcubes add an extra newline.
+7. **The cube files render the list `cubeCnf F c` itself** (`cubeBody_eq` in M2; since M9 A2 `renderCube_eq`,
+   Render.lean:164). For a non-empty F this is mkcubes' layout byte for byte. Only for an empty F would mkcubes add
+   an extra newline.
 
 ### Evidence (exe `e9454996…`, built twice from clean with the same hash; load average about 30 on 32 cores)
 
@@ -441,7 +685,8 @@ second and last compiled evaluation of `encB 6 8 11`.
 **Time and memory of `encB`.**
 - **About 2.4× `gen`.** At (6,8,11), `encode` alone takes 11.0 s and the emission with 8 files 15.3 s and 928 MB,
   against `gen`'s 4.6 s and M1's 6.2 s / 428 MB. That is well inside the 8 GB cap and the design's 10× allowance.
-- **Where the time goes** (`twin-profile`, `logs/twin_profile.log`):
+- **Where the time goes** (`twin-profile`, `logs/twin_profile.log`; M2's numbers, when the twin was printed by
+  `bodyL`, which M9 A2 replaced by Render's `bodyR`, byte for byte):
 
   | instance | diagCoded | genCoded | allCodesOf | renumber | bodyL | total |
   |---|---|---|---|---|---|---|
@@ -648,29 +893,78 @@ Nothing in gen_b2.py uses floats. The angular configuration uses only integers (
 | 166-172 | `okpair` | 334-345 |
 | 174-175 | base clauses `[F2(a,b), -l]` | 346-355 |
 | 176-190 | extension and closing clauses | 356-379 |
-| 191-194 | DIMACS output | Emit.lean `pushClause` 26-30, `body` 32-33, `header` 35-36 |
-| — (mkcubes.py:11-15) | cube layout | Emit.lean `cubeTail` 38-40, `cubeUnits` 42-55, `main` 82-131 |
-| 195-200 | `.map.json` and summary line | summary line only (Emit.lean `summary` 56-61); the map file is not ported |
+| 191-194 | DIMACS output | Emit.lean `pushClause` 57-60, `body` 63, `header` 66 (the gen modes; the twin prints through Render.lean's `pushClauseR` 127-130, `bodyR`, `headerR`, since M9 A2) |
+| — (mkcubes.py:11-15) | cube layout | Emit.lean `cubeTail` 69-70, `cubeUnits` 73-84, `mainGen` 264-314 (gen; twin: Render.lean `cubeBodyR` 140, `renderCube` 147-148) |
+| 195-200 | `.map.json` and summary line | summary line only (Emit.lean `summary` 94-98); the map file is not ported |
 
 ## Trust: what the tests check and what stays trusted
 
-- **The object of the theorems is `encB`, and the emitter prints `encB`.** In the `twin-*` modes the exe computes
-  `encode m K t`, whose fields are `encB m K t` and `numVars m K t` by definition. It prints the base as
-  `header numVars (length) ++ bodyL encB`, and each cube `c` of `cubes64` as
-  `header numVars (length (cubeCnf encB c)) ++ bodyL (cubeCnf encB c)` (`cubeBody_eq`). Since the package has
-  none of the escapes listed above, the compiled program is the definition the kernel reduces. That holds up to the
-  Lean compiler and core's runtime code for `Array`, `List`, `String` and `IO.FS` (trust item E4 of `DESIGN.md`
-  §1.4). The kernel and Python agree on (3,4,1), (3,4,2), (6,4,1) and (4,5,1) for `encB`; for `gen` on the M1
-  instances (3,4,1), (3,4,2) and (4,4,2), and on (4,5,1).
-- **The text rendering is unverified and trusted** (named under E3/E4 in `DESIGN.md` §1.4):
-  - `pushClause` (Emit.lean:43-47), `bodyL` (:73), `header` (:52);
-  - the file assembly in `twinMain` (Emit.lean:138-243);
-  - core's `toString` on `Int` and `Nat`.
+**Trust items E1–E6 (`DESIGN.md` §1.4) after M9.** These are the facts between the Lean theorems and the
+certificates. They are not the only thing missing for an end-to-end theorem: that a counterexample yields a
+`Model 6 8 11` (M4–M6, Mathlib) and the assembly (M8) are not proved (see "What is NOT yet proved").
 
-  `twin-check` (b, f above) now compares `encB` with `gen` as values, so a renderer bug would have to produce the
-  right bytes from the right list. That is still not excluded for the trust path (E1), since only the renderer
-  turns `encB 6 8 11` into the hashed bytes. It would be closed by a proved round trip
-  `parseDimacs (render F) = F` (not done; optional in M9).
+| item | what M9 settled | what stays trusted |
+|---|---|---|
+| **E1** emitter output | **Checked by compiled code** (not proved): the exe's text for the base and for each of the 64 cubes of `cubes64`, by index, has the recorded SHA-256 of the certified file, 65/65, plus 3 other instances; three runs, two exes (`logs/m9_hash_binding.log`, `m9_a2_hash_binding.log`, `m9_a2fix_hash_binding.log`); a one-digit change in a record is caught (`m9_hash_binding_selftest.log`) | that the compiled exe computes the Lean definitions (E4); SHA-256 and the record files (E6) |
+| **E2** verdicts | unchanged: the 64 hash-bound ACCEPTED verdicts on record (32 encoder-B rows of the replay, 32 noty12 rows). New: `scripts/resolve.sh` regenerates any of them with the pinned tools; run on 2 cubes, 2/2 ACCEPTED (twice, same CNF and proof hashes) | the other 62 verdicts are the records', not re-run; cake_lpr itself (its HOL4/CakeML verification); the proofs are not public |
+| E2 provenance (R7) | `scripts/build_cake_lpr.sh`: the build recipe of commit `033aad53` with source hashes pinned from the local clone (first recorded by M9); **not run** | the binary `c14ff498…` is a build of `033aad53` (replay record), not of the vendored `a36874a8` |
+| **E3** DIMACS semantics | **narrowed, proved:** the printed text parses back, by the reference parser `parseDimacs`, to exactly `encB 6 8 11` and `cubeCnf (encB 6 8 11) c` (`parseDimacs_render`, `parseDimacs_base6811`, `parseDimacs_cube64_get`), and verdicts on the 64 parsed texts give `CubesUnsat64` (`cubesUnsat64_of_texts_get`); since the review fixes also on the UTF-8 bytes (`parseDimacsBytes_cube64_get`) and composed with M3 (`no_model_6811_of_texts`) | that cake_lpr reads every text of `parseDimacs`'s language as `parseDimacs` does, and that its `s VERIFIED UNSAT` means `¬ DimacsSatisfiable` of that list; evidence only (`m9_a2_cake_parse.log`) |
+| **E4** compiler and runtime | **narrowed:** core's `toString` (`reprFast`, `lean_string_of_usize`, the bodiless `String.Internal.append`) and the M1/M2 printers are off the twin's trust path; the header counts are inside the proved term | the Lean compiler on `encode` and on Render's printer; core's runtime (`String.push`/`++`, `Nat` arithmetic, `Nat.digitChar`, `List`/`Array`, `String.toNat?`, `putStr`); a reading of Emit's IO glue (details below) |
+| **E5** kernel, Mathlib, the paper's notions | unchanged (ENCBLEAN is Std-only; the Mathlib side starts in M4) | as before |
+| **E6** SHA-256 | unchanged | as before |
+
+- **The object of the theorems is `encB`, and the emitter prints `encB` through a proved renderer (M9 A2).** In
+  the `twin-*` modes the exe computes `e := encode m K t` (`encodeChecked`, Emit.lean:129-136), whose fields are
+  `encB m K t` and `numVars m K t` by definition. `twin-base`, `twin-cube` and `twin-cube64` write the one string
+  `cnfText e cube` with a single `putStr` (Emit.lean:193, :200, :182; `cube = []` for the base,
+  `cube = cubes64.get ⟨i, h⟩` for `twin-cube64`), and `twin-cubes64` writes `renderCube e.nv e.clauses
+  (bodyR e.clauses) c` (:165, :169). Since the package has none of the escapes listed above, the compiled program
+  is the definition the kernel reduces, up to the Lean compiler and core's runtime (E4 below). The kernel and Python
+  agree on (3,4,1), (3,4,2), (6,4,1) and (4,5,1) for `encB`; for `gen` on the M1 instances (3,4,1), (3,4,2) and
+  (4,4,2), and on (4,5,1).
+- **What is proved about the text** (`EncB/Render.lean`, Std-only; axioms within [propext, Classical.choice,
+  Quot.sound], 13 of them guarded at build time by `#guard_msgs`, all of them in `logs/m9_axioms.log`):
+  - `cnfText_encode` (:156, `rfl`): `cnfText (encode m K t) cube = renderCube (numVars m K t) (encB m K t)
+    (bodyR (encB m K t)) cube`;
+  - `renderCube_eq` (:164): `renderCube nv F (bodyR F) cube = render nv (cubeCnf F cube)`;
+  - `parseDimacs_render` (:585): `parseDimacs (render nv F) = some (nv, F)` for every `F` whose literals are
+    nonzero with `natAbs ≤ nv` (`encB_wf` gives this for `encB`, symbolically);
+  - for (6,8,11), with no evaluation of the instance: `parseDimacs_base6811` (:806), `parseDimacs_cube64_get`
+    (:800) `: parseDimacs (cnfText (encode 6 8 11) (cubes64.get ⟨i, h⟩)) = some (numVars 6 8 11, cubeCnf (encB 6 8
+    11) (cubes64.get ⟨i, h⟩))`, and `cubesUnsat64_of_texts_get` / `encB_unsat_of_texts_get` (:833, :842): if each
+    of the 64 texts, by index, in exactly the form the exe prints and `scripts/hash_binding.sh` hashes, parses to an
+    unsatisfiable clause list, then `CubesUnsat64` and `¬ DimacsSatisfiable (encB 6 8 11)` (membership forms:
+    `cubesUnsat64_of_texts`, `encB_unsat_of_texts`, :814, :821);
+  - `cnfText_bytes` (:711): the UTF-8 encoding of the text (`String.toUTF8`, what `putStr` writes) is the list of its
+    characters' codes mapped by `·.val.toUInt8`; with `cnfText_ascii` (Compose.lean, review fix: every character is
+    ASCII) this is one byte per character, and `parseDimacsBytes_cube64_get` states the round trip on these bytes.
+
+  `parseDimacs` (:321) is a reference parser for the plain DIMACS subset the printer writes: the line
+  `p cnf <nv> <nc>`, then exactly `nc` lines `l₁ … lₖ 0` with single spaces (the empty clause is ` 0`), nonzero
+  literals with no leading zero and no `+`, `|l| ≤ nv`, every line ending in `\n`, and nothing else. Fourteen
+  kernel-checked examples (:325-345) fix one accepted text and 13 rejected ones. The header line and counts, the
+  clause lines, the unit tail and the decimal printing are all inside the proved term; the twin uses Render's own
+  `pushNat`/`pushInt`, not core's `toString`. The switch kept every byte: the A1 exe and the A2 exe agree on
+  321/321 runs over all modes (`logs/m9_a2_regress_modes.log`), and the hash binding gives 68/68 with the A2 exe
+  (`logs/m9_a2_hash_binding.log`, rerun after the fixes below in `logs/m9_a2fix_hash_binding.log`).
+- **What stays trusted for the text** (E3/E4 of `DESIGN.md` §1.4, as narrowed by A2):
+  - **E3:** cake_lpr reads every text in `parseDimacs`'s language as `parseDimacs` does, and its `s VERIFIED
+    UNSAT` means `¬ DimacsSatisfiable` of that list; `cubesUnsat64_of_texts_get` states exactly this interface.
+    `parseDimacs` is not modelled on cake_lpr's parser source, which is not on this machine (the `HOL/` and
+    `cakeml/` submodules of the cake_lpr clone at `033aad53` are empty). Evidence, not proof
+    (`logs/m9_a2_cake_parse.log`): cake_lpr's printout of what it parsed is byte-identical to 21 small and medium
+    twin texts and to the (6,8,11) base and cubes 0 and 63, which have the recorded hashes; of the 13 texts
+    `parseDimacs` rejects, cake_lpr rejects 5 and reads the other 8 the standard way, so on these examples the
+    language accepted here is the stricter one.
+  - **E4:** the Lean compiler compiles `encode` and Render's functions faithfully; core's runtime for `String.push`
+    and `++`, `Nat` arithmetic, `Nat.digitChar`, `List`/`Array`, `String.toNat?` on the arguments, and `putStr`
+    writing `s.toUTF8`; and a reading of Emit's IO glue: that the printed `e` is `encode m K t` and the printed cube
+    is `cubes64.get ⟨i, h⟩`, and that nothing else goes to stdout.
+  - **E1/E6:** SHA-256 and the record files.
+  - **No longer on the twin's trust path:** core's `toString` on `Nat` (`reprFast`, `lean_string_of_usize`) and
+    on `Int`, M2's printer `bodyL`/`cubeBody` (removed), M1's printer `pushClause`/`body`/`header`/`cubeTail`
+    (Emit.lean:57-70, used only by the gen modes) and the header counts. `toString` still formats the stderr lines
+    (summary, cube name and units), which are not hashed.
 - **`allCodes` order = Python's `new()` order is tested, not proved.** Soundness does not need it (D4):
   `dimacsSat_of_holds` holds for any duplicate-free or duplicate-containing code list, and the numbering only has
   to make the hashes match.
@@ -685,8 +979,13 @@ Nothing in gen_b2.py uses floats. The angular configuration uses only integers (
   `Model` to points in the plane. The missing pieces are:
   - the geometric side, labelling and `modelOfLabelling` (M4–M6, Mathlib, after the campaign cutoff 2026-11-16
     17:00);
-  - the assembly `sixfold_es8` (M8);
-  - the hash binding of all 64 cubes (M9; 8 of 65 files are bound so far: base and 7 cubes, in (e)).
+  - the assembly `sixfold_es8` (M8).
+
+  So the sixfold bound is **not** formally verified end to end, and P1 says so.
+- **The hash binding is a computation, not a proof (M9).** `scripts/hash_binding.sh` shows, by running the compiled
+  exe, that the texts of `encB 6 8 11` and the 64 cubes of `cubes64` have the hashes of the certified files (68/68
+  with 3 other instances; `logs/m9_hash_binding.log`, `logs/m9_a2_hash_binding.log`,
+  `logs/m9_a2fix_hash_binding.log`). That the compiled code computes the Lean definitions is trust item E4.
 - **No equality between `encB`, `gen` and gen_b2.py is proved.** It is tested:
   - by bytes on 225 + 4 instances and 7 cubes (the M2 review checked 7 more cubes in its own emission);
   - as Lean values on 229 instances;
@@ -698,11 +997,16 @@ Nothing in gen_b2.py uses floats. The angular configuration uses only integers (
     each family's clauses directly under `M.τc = M.τ ∘ decodeCode`, through `holds_y`, `holds_orb`, `holds_f` and
     `olitSpec`, which apply `decodeCode_code` to the labels at hand. The all-literals statement itself is still
     checked only by compiled code (`codesDecode`) and by the kernel at (3,4,2).
-- **The DIMACS round trip** (see Trust above) is not proved.
+- **The DIMACS round trip is proved (M9 A2)** against the reference parser `parseDimacs` (`parseDimacs_render`,
+  and for the 64 printed (6,8,11) cube texts `parseDimacs_cube64_get`). Not proved: that cake_lpr reads these texts
+  as `parseDimacs` does (trust item E3, see Trust above).
+- **The verdicts are cake_lpr's.** No Lean statement is about cake_lpr; `cubesUnsat64_of_texts_get` (and its
+  composition with M3, `no_model_6811_of_texts`) takes the 64 verdicts as its hypothesis. `scripts/resolve.sh` reproduced 2 of them (c00100, n10000) with the pinned tools; the
+  other 62 rest on the records (replay B rows, noty12), and `resolve.sh all` (about 22 h) was not run.
 - **n-cube verdicts: certified (R1 resolved, 16:35).** The c6upper-noty12 run's `run.log` says at 15:40:35: "32 of
   32 NOT-Y(1,2) cube proofs accepted by cake_lpr, hash-bound (results.tsv)". Its post-run gate `verify_final64.py`
   has since run and prints PASS (`C6UPPER/noty12-2026-11-06/verify_final64.log`), so variant A has all 64 verdicts.
-  What remains for variant A is the Lean side (M4–M9 since M3 was done), not the certificates. This README step did not run the gate.
+  What remains for variant A is the Lean side (M4–M6 and M8 since M9 was done), not the certificates. This README step did not run the gate.
 - **m = 7** (sevenfold) is ported for byte identity only. Its soundness is out of scope (`DESIGN.md` §1.3).
 
 ## M1 review fixes applied (2026-11-06, about 15:00 KST)
@@ -716,7 +1020,8 @@ All four issues of the review were checked against the files, found real, and fi
    Gen.lean hash the citations refer to.
 2. **The trust list now names the emitter's text rendering.** `DESIGN.md` E3 and E4 list Emit.lean:26-40, `main`
    (:82-131) and core's `toString`, with the round trip as the optional way to remove them. This README says the
-   same. Appendix A item 8 wrongly called `pushClause` Gen's; it now cites Emit.lean.
+   same. Appendix A item 8 wrongly called `pushClause` Gen's; it now cites Emit.lean. (Superseded in M9 A2: the
+   twin now prints through the proved `EncB/Render.lean`, and E3/E4 are narrowed; see "Trust".)
 3. **Chain-variable code collision for tiny K.** In `DESIGN.md` §3.1 the code is now
    `fBase + ((piv·FL + l)·N + ptCode a)·N + ptCode b` with `FL = max (K−1) 3`, matching Gen's `FL` (Gen:325).
    The levels that occur satisfy l < FL for every K, including K ≤ 2, where F₂ exists. The `decodeCode` row now

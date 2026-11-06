@@ -5,6 +5,21 @@
 % k8s:cor:geom uses (a') for encoder B; the cube-cover paragraph, the end of Section k8s:sec:reflection, a remark after
 % Lemma k8s:lem:affine, the trust table and gap (G4) say that the bounds via encoder B use neither Lemma k8s:lem:refl
 % nor the case g rho g^-1 = rho^-1 of Lemma k8s:lem:affine (encoder A's route, the cross-check, uses both).
+% Revised 6 November 2026 (about 20:10 KST) for the Lean package ENCBLEAN (milestones M2 and M3, committed, and M9,
+% not committed):
+% the rigor-label paragraph says where the EncB.* theorems are and that no result here depends on them; Lemma
+% k8s:lem:cube is also tagged Lean-checked for DIMACS clause lists, the only rigor tag that changed, and the text after
+% its proof names EncB.not_dimacsSatisfiable_of_cover and EncB.covers_signPatterns; the 64-cube paragraph names
+% EncB.encB_unsat_of_cubes64;
+% the trust table's cube-cover row and a new last row (with the caption) and gaps (G1) and (G2) say what ENCBLEAN
+% checks for encoder B and what it does not. The mathematical text is unchanged.
+% Revised 6 November 2026 (about 20:55–21:06 KST) after a claims review of that revision: the rigor-label paragraph says
+% the EncB.* items also concern DIMACS clause lists in general; the text after the proof of Lemma k8s:lem:cube calls
+% it the composition of two Lean theorems; the trust table's last row says "satisfaction by the assignment of every
+% combinatorial model, for even m >= 2"; (G1) says "for even m >= 2" and that 222 of the 225 grid instances agree
+% byte for byte and 3 are refused where gen_b2.py raises; (G2) speaks of the Lean string the printer function computes, and no longer credits cake_lpr's
+% verification for the agreement of its parser with the package's (tested on samples only). Rigor tags and the
+% mathematical text are unchanged.
 %
 % An \input-able section.  It needs the macros \orient, \conv, \dirn, \lean of symmetric_extremal.tex, the theorem
 % environments theorem, lemma, proposition, corollary, definition, remark, the packages amsmath, amssymb, enumitem,
@@ -43,7 +58,12 @@ been replayed against hashed files, are described in the section on rotational u
 \texttt{afb8542d\dots}, the file as committed in \texttt{393619a57}; namespace \lean{ErdosSzekeres.LayerLemma};
 Lean~4.24.0, Mathlib \texttt{f897ebcf}; the axiom check \dirn{LAYERLEAN/logs/axioms.log} reports only \lean{propext},
 \lean{Classical.choice}, \lean{Quot.sound} for every cited theorem of that file); the declaration names below were
-checked against that file, and Lean was not rerun for this section. \emph{Written proof (not refereed)} means a
+checked against that file, and Lean was not rerun for this section. Items whose Lean names begin with \lean{EncB} are in \dirn{ENCBLEAN}, a separate
+package (Lean~4.24.0 with its standard library only, no Mathlib); its axiom check reports only \lean{propext},
+\lean{Classical.choice}, \lean{Quot.sound} for each of them (\dirn{ENCBLEAN/logs/m9_d_recheck.log}). They concern DIMACS
+clause lists in general (Lemma~\ref{k8s:lem:cube}) and a Lean definition of encoder~B's formula, not
+\dirn{gen_b2.py} itself, and no result of this section depends on them
+(gaps~(G1) and~(G2)). \emph{Written proof (not refereed)} means a
 complete proof given here. Most of them expand arguments reviewed on 4 November 2026 with no blocking gap found
 (\dirn{C6C7REVIEW/SOUNDNESS.md}). The others have had no internal review: those marked \emph{new here} are new
 arguments, and those marked \emph{not in the review} are standard facts or assembly steps that the review does not
@@ -777,7 +797,7 @@ case (finding of \dirn{C6C7REVIEW/SOUNDNESS.md}); the emitted formulas are unaff
 
 \subsection{The cube cover and the passage to geometry}\label{k8s:sec:cube}
 
-\begin{lemma}[cube cover; written proof (not refereed)]\label{k8s:lem:cube}
+\begin{lemma}[cube cover; written proof (not refereed); Lean-checked for DIMACS clause lists]\label{k8s:lem:cube}
 Let $F$ be a CNF formula and $x_1,\dots,x_n$ variables. If $F\wedge\ell_1\wedge\dots\wedge\ell_n$ is unsatisfiable for each of
 the $2^n$ choices $\ell_j\in\{x_j,\neg x_j\}$, then $F$ is unsatisfiable.
 \end{lemma}
@@ -786,6 +806,9 @@ the $2^n$ choices $\ell_j\in\{x_j,\neg x_j\}$, then $F$ is unsatisfiable.
 A model $\beta$ of $F$ satisfies the cube with $\ell_j=x_j$ if $\beta(x_j)$ is true and $\ell_j=\neg x_j$ otherwise.
 \end{proof}
 
+For formulas given as lists of DIMACS clauses the lemma is the composition of two Lean-checked theorems,
+\lean{EncB.not_dimacsSatisfiable_of_cover} applied to \lean{EncB.covers_signPatterns}
+(\dirn{ENCBLEAN/EncB/Cover.lean}).
 No geometric meaning of the $x_j$ is needed, so sign patterns of the $Y$ variables that contradict transitivity need
 no separate argument (their cubes were refuted anyway). Two sixfold splits are used.
 
@@ -797,7 +820,11 @@ $64$ cube files is the base formula byte for byte, with adjusted header, plus si
 that the $64$ patterns are distinct, was checked by \dirn{verify_cover64.py} and, from the files alone, by
 \dirn{verify_final64.py} (exact computation; \dirn{C6UPPER/noty12-2026-11-06}). By Lemma~\ref{k8s:lem:cube},
 unsatisfiability of the $64$ cube formulas gives that $F_B(6,8,11)$ is unsatisfiable, the first hypothesis of
-Corollary~\ref{k8s:cor:geom}(a). For this split no variable needs a geometric meaning.
+Corollary~\ref{k8s:cor:geom}(a). For this split no variable needs a geometric meaning. For a Lean definition of
+$F_B(6,8,11)$ this application of the lemma is Lean-checked: \lean{EncB.encB_unsat_of_cubes64}, where
+\lean{EncB.cubes64} lists the $64$ sign patterns of the variables
+$1,2,3,10,11,18$ in the order of the cube files. That the printed texts of that definition and of its $64$ cubes are
+the certified files is checked by hashes only (gap~(G2)).
 
 \emph{The split of the base formula plus $Y(1,2)$ (both encoders, $32$ cubes each).} Here $F$ is the
 base formula plus the unit $Y(1,2)$, and $x_1,\dots,x_5$ are $Y(1,3),Y(1,4),Y(2,3),Y(2,4),Y(3,4)$: variables
@@ -872,7 +899,7 @@ Orbit variables and stabilisers; key order; circular dichotomy (a); premises (Le
 Code-to-clause correspondence for both encoders (Lemmas~\ref{k8s:lem:angB}--\ref{k8s:lem:chain},
 Theorem~\ref{k8s:thm:sound}) & written proof (not refereed) by reading the source\\
 Cube cover (Lemma~\ref{k8s:lem:cube}; $64$ cubes for $F_B(6,8,11)$, $32$ for $F_A(6,8,11)$ plus $Y(1,2)$) & written
-proof (not refereed)\\
+proof (not refereed); Lean-checked for DIMACS clause lists (\dirn{ENCBLEAN})\\
 Encoder A's float classification, $m\in\{6,7\}$ only (Proposition~\ref{k8s:prop:A}) & exact computation (comparison
 with B at the two instances; rounding bound), and written proof (not refereed), new here\\
 Cube files equal base plus units; orbit and pattern counts; formula hashes & exact computation\\
@@ -887,10 +914,16 @@ refereed), new here\\
 Used only by encoder~A (cross-check), not for the bounds via encoder~B: the reflection unit
 (Lemma~\ref{k8s:lem:refl}) and the case $g\rho g^{-1}=\rho^{-1}$ of Lemma~\ref{k8s:lem:affine} & written proof (not
 refereed); Lemma~\ref{k8s:lem:affine} not in the review\\
+Partial Lean counterpart for encoder~B (\dirn{ENCBLEAN}; gaps~(G1), (G2)): for a Lean definition of $F_B$,
+satisfaction by the assignment of every combinatorial model, for even $m\ge2$, the $64$-cube cover at $(6,8,11)$, and
+the round trip of its printed text & Lean-checked (standard library only); that the definition equals \dirn{gen_b2.py}'s output, and
+that its printed texts are the certified files, is evidence only (compiled code, hashes)\\
 \bottomrule
 \end{tabular}
-\caption{What the implication ``certificates $\Rightarrow$ \lean{Sixfold66}, \lean{Sevenfold70}'' rests on. The last two
-rows are not used for the bounds via encoder~B; the first of them is used by neither encoder.}
+\caption{What the implication ``certificates $\Rightarrow$ \lean{Sixfold66}, \lean{Sevenfold70}'' rests on. The last three
+rows are not used for the bounds via encoder~B: the first of them is used by neither encoder, the second only by
+encoder~A, and the third is a partial Lean counterpart of the written proof for encoder~B, which that proof does not
+use.}
 \label{k8s:tab:trust}
 \end{table}
 
@@ -898,9 +931,29 @@ rows are not used for the bounds via encoder~B; the first of them is used by nei
 \begin{enumerate}[label=(G\arabic*)]
 \item The correspondence between the Python sources and the clause families is established by reading the code at the
 stated hashes; there is no formal semantics of the programs, and the Python interpreter is trusted to run them as
-written.
-\item No step from a DIMACS file to \lean{Sixfold66} or \lean{Sevenfold70} is formalized. The results of this
-section other than the cited Lean theorems are written proofs only.
+written. For encoder~B there is a partial Lean counterpart (\dirn{ENCBLEAN}): a Lean definition of its formula,
+\lean{EncB.encB}, and a Lean-checked proof that for even $m\ge2$ it is satisfied by the assignment derived from every
+\lean{EncB.Model} (\lean{EncB.encB_satisfiable}). An \lean{EncB.Model} is a combinatorial interface: an orientation of
+each triple of labels and an order of the layer phases, together with, as hypotheses, the properties that the clause
+families use (the orientation is alternating and invariant under~$\rho$, the phase order is a strict total order with
+layer~$0$ first, rules~A and~B hold on the circular order of the points and their antipodes, the nesting relations
+hold, and there is no chain of $K-1$ points around a pivot). That \lean{EncB.encB} equals the output of
+\dirn{gen_b2.py} is not proved; it was checked by running compiled code (equal bytes on $222$ of the $225$ instances
+of a small grid, a refusal of the Lean program on the other $3$, where \dirn{gen_b2.py} raises, and equal bytes on the
+recorded instances, among them $F_B(6,8,11)$). That an admissible set yields an
+\lean{EncB.Model} is not Lean-checked. So (G1) stands for the written proof, which argues about \dirn{gen_b2.py}.
+\item The passage from a DIMACS file to \lean{Sixfold66} or \lean{Sevenfold70} is not formalized end to end. For
+encoder~B at $(6,8,11)$, two of its steps are Lean-checked for the Lean definition of (G1) (\dirn{ENCBLEAN}): the
+$64$-cube cover (\lean{EncB.encB_unsat_of_cubes64}), and the reading of the printed files, in that the Lean string
+the package's printer function computes for the formula alone or with one of the $64$ cubes is parsed back to exactly that clause
+list by a DIMACS parser written in the package (\lean{EncB.parseDimacs_render}, \lean{EncB.parseDimacs_cube64_get},
+\lean{EncB.cubesUnsat64_of_texts_get}). Not Lean-checked: that these texts are the certified files (their SHA-256,
+computed from the output of the compiled printer, equals the record for the base formula and all $64$ cube files;
+this is evidence that also trusts the Lean compiler and runtime); that its \texttt{s VERIFIED UNSAT} means unsatisfiability of the
+formula its own parser reads (trusted: cake\_lpr's verified HOL4/CakeML checker) and that this parser reads the files
+as the package's parser does (not verified; tested on samples only, \dirn{ENCBLEAN/logs/m9_a2_cake_parse.log}); the step from an admissible set to an \lean{EncB.Model}; and the assembly of the steps into one theorem. The
+results of this section other than the cited Lean theorems are written proofs only, and the sixfold bound is not
+formally verified end to end.
 \item Encoder A's angular part rests on binary64 arithmetic. For the two certified instances
 Proposition~\ref{k8s:prop:A} covers it twice; for other $(K,t)$ with $m\in\{6,7\}$ only argument~(i) applies, and for
 other $m$ no claim about encoder~A is made. Argument~(i) is new here and unreviewed, and comparison~(ii) is a single

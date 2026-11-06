@@ -1,0 +1,287 @@
+date: 2026-11-06T18:12:56+09:00 (M9 task A1)
+command: cd ENCBLEAN; systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake env lean M9AX.lean   (M9AX.lean = the 7 lines below, in the session scratchpad)
+  | import EncB.Emit
+  | #print axioms EncB.cubeCnf_nil
+  | #print axioms EncB.cubeBody_nil
+  | #print axioms EncB.putCnf
+  | #print axioms EncB.cubeBody_eq
+  | #print axioms EncB.encB_unsat_of_cubes64
+  | #print axioms twinMain
+output (exit code 0):
+'EncB.cubeCnf_nil' depends on axioms: [propext]
+'EncB.cubeBody_nil' depends on axioms: [propext]
+'EncB.putCnf' does not depend on any axioms
+'EncB.cubeBody_eq' depends on axioms: [propext, Quot.sound]
+'EncB.encB_unsat_of_cubes64' depends on axioms: [propext, Classical.choice, Quot.sound]
+'twinMain' depends on axioms: [propext]
+new declarations of M9 A1: EncB.cubeCnf_nil, EncB.cubeBody_nil (theorems), EncB.putCnf (def); all within [propext, Classical.choice, Quot.sound]
+
+================================================================
+date: 2026-11-06T19:07:07+09:00 (M9 task A2: DIMACS render round trip, EncB/Render.lean sha256 0b6797b82f868d782b13bbb72b642aee8476d54bbe245565cc7d10f2ebf754b3, final sources)
+command: cd ENCBLEAN; systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake env lean m9_a2_axioms.lean   (m9_a2_axioms.lean = the 114 lines below, in the session scratchpad: one #print axioms per declaration of EncB/Render.lean, plus twinMain and main of EncB/Emit.lean)
+  | import EncB.Emit
+  | #print axioms EncB.natDigits
+  | #print axioms EncB.intChars
+  | #print axioms EncB.pushNat
+  | #print axioms EncB.pushInt
+  | #print axioms EncB.pushNat_data
+  | #print axioms EncB.pushInt_data
+  | #print axioms EncB.toDigitsCore_ten
+  | #print axioms EncB.natDigits_eq_toDigits
+  | #print axioms EncB.pushNat_eq_append_toString
+  | #print axioms EncB.pushClauseR
+  | #print axioms EncB.bodyR
+  | #print axioms EncB.headerR
+  | #print axioms EncB.cubeBodyR
+  | #print axioms EncB.render
+  | #print axioms EncB.renderCube
+  | #print axioms EncB.cnfText
+  | #print axioms EncB.cnfText_encode
+  | #print axioms EncB.cubeCnf_nil
+  | #print axioms EncB.renderCube_eq
+  | #print axioms EncB.clauseChars
+  | #print axioms EncB.headerChars
+  | #print axioms EncB.join_spaces
+  | #print axioms EncB.foldl_pushLit_data
+  | #print axioms EncB.pushClauseR_data
+  | #print axioms EncB.foldl_pushClauseR_data
+  | #print axioms EncB.headerR_data
+  | #print axioms EncB.headerChars_append
+  | #print axioms EncB.render_data
+  | #print axioms EncB.digitVal
+  | #print axioms EncB.isPosDigit
+  | #print axioms EncB.dstep
+  | #print axioms EncB.stripPrefix
+  | #print axioms EncB.natRun
+  | #print axioms EncB.parseNatTerm
+  | #print axioms EncB.LineMode
+  | #print axioms EncB.PState
+  | #print axioms EncB.litStart
+  | #print axioms EncB.bodyStep
+  | #print axioms EncB.runBody
+  | #print axioms EncB.parseDimacsChars
+  | #print axioms EncB.parseDimacs
+  | #print axioms EncB.parseDimacs_example
+  | #print axioms EncB.parseDimacs_rejects_count
+  | #print axioms EncB.parseDimacs_rejects_inner_zero
+  | #print axioms EncB.parseDimacs_rejects_big_var
+  | #print axioms EncB.parseDimacs_rejects_leading_zero
+  | #print axioms EncB.parseDimacs_rejects_leading_zero_header
+  | #print axioms EncB.parseDimacs_rejects_neg_zero
+  | #print axioms EncB.parseDimacs_rejects_double_space
+  | #print axioms EncB.parseDimacs_rejects_leading_space
+  | #print axioms EncB.parseDimacs_rejects_no_newline
+  | #print axioms EncB.parseDimacs_rejects_blank_line
+  | #print axioms EncB.parseDimacs_rejects_bare_zero
+  | #print axioms EncB.parseDimacs_rejects_comment
+  | #print axioms EncB.parseDimacs_rejects_plus
+  | #print axioms EncB.digitChar_facts
+  | #print axioms EncB.natDigits_isDigit
+  | #print axioms EncB.natDigits_val
+  | #print axioms EncB.natDigits_zero
+  | #print axioms EncB.natDigits_pos
+  | #print axioms EncB.isPosDigit_isDigit
+  | #print axioms EncB.isPosDigit_ne_zero
+  | #print axioms EncB.ne_of_isDigit
+  | #print axioms EncB.space_not_digit
+  | #print axioms EncB.minus_not_digit
+  | #print axioms EncB.newline_not_digit
+  | #print axioms EncB.stripPrefix_append
+  | #print axioms EncB.natRun_digits
+  | #print axioms EncB.parseNatTerm_natDigits
+  | #print axioms EncB.runBody_append
+  | #print axioms EncB.runBody_cons_of
+  | #print axioms EncB.runBody_digits
+  | #print axioms EncB.LitReady
+  | #print axioms EncB.bodyStep_ready
+  | #print axioms EncB.runBody_lit
+  | #print axioms EncB.runBody_lits_sep
+  | #print axioms EncB.runBody_clause
+  | #print axioms EncB.runBody_clauses
+  | #print axioms EncB.parseDimacs_render
+  | #print axioms EncB.parseDimacs_renderCube
+  | #print axioms EncB.parseDimacs_renderCube_nil
+  | #print axioms EncB.parseDimacs_cnfText
+  | #print axioms EncB.natDigits_digitChar
+  | #print axioms EncB.digitChar_ascii
+  | #print axioms EncB.natDigits_ascii
+  | #print axioms EncB.ascii_append
+  | #print axioms EncB.ascii_cons
+  | #print axioms EncB.intChars_ascii
+  | #print axioms EncB.clauseChars_ascii
+  | #print axioms EncB.headerChars_ascii
+  | #print axioms EncB.render_ascii
+  | #print axioms EncB.utf8EncodeChar_ascii
+  | #print axioms EncB.flatMap_utf8EncodeChar_ascii
+  | #print axioms EncB.renderCube_bytes
+  | #print axioms EncB.cnfText_bytes
+  | #print axioms EncB.yCodesOf
+  | #print axioms EncB.yCodesOf_sub_allCodes
+  | #print axioms EncB.length_le_of_nodup_sub
+  | #print axioms EncB.yCodesOf_length_le_numVars
+  | #print axioms EncB.yCodesOf_nodup_11
+  | #print axioms EncB.length_yCodesOf_11
+  | #print axioms EncB.mem_signPatterns
+  | #print axioms EncB.cubeVars64_bound
+  | #print axioms EncB.cubes64_lits
+  | #print axioms EncB.numVars_ge_45
+  | #print axioms EncB.cubes64_lits_le
+  | #print axioms EncB.parseDimacs_cube64
+  | #print axioms EncB.parseDimacs_cube64_get
+  | #print axioms EncB.parseDimacs_base6811
+  | #print axioms EncB.cubesUnsat64_of_texts
+  | #print axioms EncB.encB_unsat_of_texts
+  | #print axioms twinMain
+  | #print axioms main
+output (exit code 0, wall 1.9 s, 113 lines):
+'EncB.natDigits' depends on axioms: [propext, Quot.sound]
+'EncB.intChars' depends on axioms: [propext, Quot.sound]
+'EncB.pushNat' depends on axioms: [propext, Quot.sound]
+'EncB.pushInt' depends on axioms: [propext, Quot.sound]
+'EncB.pushNat_data' depends on axioms: [propext, Quot.sound]
+'EncB.pushInt_data' depends on axioms: [propext, Quot.sound]
+'EncB.toDigitsCore_ten' depends on axioms: [propext, Quot.sound]
+'EncB.natDigits_eq_toDigits' depends on axioms: [propext, Quot.sound]
+'EncB.pushNat_eq_append_toString' depends on axioms: [propext, Quot.sound]
+'EncB.pushClauseR' depends on axioms: [propext, Quot.sound]
+'EncB.bodyR' depends on axioms: [propext, Quot.sound]
+'EncB.headerR' depends on axioms: [propext, Quot.sound]
+'EncB.cubeBodyR' depends on axioms: [propext, Quot.sound]
+'EncB.render' depends on axioms: [propext, Quot.sound]
+'EncB.renderCube' depends on axioms: [propext, Quot.sound]
+'EncB.cnfText' depends on axioms: [propext, Quot.sound]
+'EncB.cnfText_encode' depends on axioms: [propext, Quot.sound]
+'EncB.cubeCnf_nil' depends on axioms: [propext]
+'EncB.renderCube_eq' depends on axioms: [propext, Quot.sound]
+'EncB.clauseChars' depends on axioms: [propext, Quot.sound]
+'EncB.headerChars' depends on axioms: [propext, Quot.sound]
+'EncB.join_spaces' depends on axioms: [propext]
+'EncB.foldl_pushLit_data' depends on axioms: [propext, Quot.sound]
+'EncB.pushClauseR_data' depends on axioms: [propext, Quot.sound]
+'EncB.foldl_pushClauseR_data' depends on axioms: [propext, Quot.sound]
+'EncB.headerR_data' depends on axioms: [propext, Quot.sound]
+'EncB.headerChars_append' depends on axioms: [propext, Quot.sound]
+'EncB.render_data' depends on axioms: [propext, Quot.sound]
+'EncB.digitVal' does not depend on any axioms
+'EncB.isPosDigit' does not depend on any axioms
+'EncB.dstep' does not depend on any axioms
+'EncB.stripPrefix' does not depend on any axioms
+'EncB.natRun' does not depend on any axioms
+'EncB.parseNatTerm' does not depend on any axioms
+'EncB.LineMode' does not depend on any axioms
+'EncB.PState' does not depend on any axioms
+'EncB.litStart' does not depend on any axioms
+'EncB.bodyStep' does not depend on any axioms
+'EncB.runBody' does not depend on any axioms
+'EncB.parseDimacsChars' does not depend on any axioms
+'EncB.parseDimacs' does not depend on any axioms
+'EncB.parseDimacs_example' does not depend on any axioms
+'EncB.parseDimacs_rejects_count' does not depend on any axioms
+'EncB.parseDimacs_rejects_inner_zero' does not depend on any axioms
+'EncB.parseDimacs_rejects_big_var' does not depend on any axioms
+'EncB.parseDimacs_rejects_leading_zero' does not depend on any axioms
+'EncB.parseDimacs_rejects_leading_zero_header' does not depend on any axioms
+'EncB.parseDimacs_rejects_neg_zero' does not depend on any axioms
+'EncB.parseDimacs_rejects_double_space' does not depend on any axioms
+'EncB.parseDimacs_rejects_leading_space' does not depend on any axioms
+'EncB.parseDimacs_rejects_no_newline' does not depend on any axioms
+'EncB.parseDimacs_rejects_blank_line' does not depend on any axioms
+'EncB.parseDimacs_rejects_bare_zero' does not depend on any axioms
+'EncB.parseDimacs_rejects_comment' does not depend on any axioms
+'EncB.parseDimacs_rejects_plus' does not depend on any axioms
+'EncB.digitChar_facts' depends on axioms: [propext, Quot.sound]
+'EncB.natDigits_isDigit' depends on axioms: [propext, Quot.sound]
+'EncB.natDigits_val' depends on axioms: [propext, Quot.sound]
+'EncB.natDigits_zero' depends on axioms: [propext, Quot.sound]
+'EncB.natDigits_pos' depends on axioms: [propext, Quot.sound]
+'EncB.isPosDigit_isDigit' depends on axioms: [propext]
+'EncB.isPosDigit_ne_zero' depends on axioms: [propext]
+'EncB.ne_of_isDigit' does not depend on any axioms
+'EncB.space_not_digit' does not depend on any axioms
+'EncB.minus_not_digit' does not depend on any axioms
+'EncB.newline_not_digit' does not depend on any axioms
+'EncB.stripPrefix_append' depends on axioms: [propext]
+'EncB.natRun_digits' depends on axioms: [propext]
+'EncB.parseNatTerm_natDigits' depends on axioms: [propext, Quot.sound]
+'EncB.runBody_append' does not depend on any axioms
+'EncB.runBody_cons_of' depends on axioms: [propext]
+'EncB.runBody_digits' depends on axioms: [propext]
+'EncB.LitReady' does not depend on any axioms
+'EncB.bodyStep_ready' depends on axioms: [propext]
+'EncB.runBody_lit' depends on axioms: [propext, Quot.sound]
+'EncB.runBody_lits_sep' depends on axioms: [propext, Quot.sound]
+'EncB.runBody_clause' depends on axioms: [propext, Quot.sound]
+'EncB.runBody_clauses' depends on axioms: [propext, Quot.sound]
+'EncB.parseDimacs_render' depends on axioms: [propext, Quot.sound]
+'EncB.parseDimacs_renderCube' depends on axioms: [propext, Quot.sound]
+'EncB.parseDimacs_renderCube_nil' depends on axioms: [propext, Quot.sound]
+'EncB.parseDimacs_cnfText' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.natDigits_digitChar' depends on axioms: [propext, Quot.sound]
+'EncB.digitChar_ascii' depends on axioms: [propext, Quot.sound]
+'EncB.natDigits_ascii' depends on axioms: [propext, Quot.sound]
+'EncB.ascii_append' depends on axioms: [propext]
+'EncB.ascii_cons' depends on axioms: [propext]
+'EncB.intChars_ascii' depends on axioms: [propext, Quot.sound]
+'EncB.clauseChars_ascii' depends on axioms: [propext, Quot.sound]
+'EncB.headerChars_ascii' depends on axioms: [propext, Quot.sound]
+'EncB.render_ascii' depends on axioms: [propext, Quot.sound]
+'EncB.utf8EncodeChar_ascii' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.flatMap_utf8EncodeChar_ascii' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.renderCube_bytes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.cnfText_bytes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.yCodesOf' does not depend on any axioms
+'EncB.yCodesOf_sub_allCodes' depends on axioms: [propext, Quot.sound]
+'EncB.length_le_of_nodup_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.yCodesOf_length_le_numVars' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.yCodesOf_nodup_11' does not depend on any axioms
+'EncB.length_yCodesOf_11' does not depend on any axioms
+'EncB.mem_signPatterns' depends on axioms: [propext, Quot.sound]
+'EncB.cubeVars64_bound' does not depend on any axioms
+'EncB.cubes64_lits' depends on axioms: [propext, Quot.sound]
+'EncB.numVars_ge_45' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.cubes64_lits_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.parseDimacs_cube64' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.parseDimacs_cube64_get' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.parseDimacs_base6811' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.cubesUnsat64_of_texts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.encB_unsat_of_texts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'twinMain' depends on axioms: [propext, Quot.sound]
+'main' depends on axioms: [propext, Quot.sound]
+summary: 37 none;11 [propext];14 [propext, Classical.choice, Quot.sound];51 [propext, Quot.sound];
+lines outside [propext, Classical.choice, Quot.sound]: 0 (want 0)
+build-time guards: EncB/Render.lean ends with 11 '#guard_msgs in #print axioms' blocks (parseDimacs_render, renderCube_eq, parseDimacs_renderCube, parseDimacs_cnfText, parseDimacs_cube64, parseDimacs_cube64_get, parseDimacs_base6811, cubesUnsat64_of_texts, encB_unsat_of_texts, pushNat_eq_append_toString, cnfText_bytes); lake build passes them.
+removed from EncB/Emit.lean in A2 (superseded by Render.lean): bodyL, cubeBody, cubeBody_eq, cubeBody_nil, putCnf; cubeCnf_nil moved to Render.lean (same statement).
+rerun on the final EncB/Render.lean 9168c8f944eaf4bf2842be2d0b30f9b31103ca1ef655778bf1127a741e648705 (module docstring changed only): same command, exit code 0, output byte-identical to the one above.
+
+================================================================
+date: 2026-11-06T19:35:53+09:00 (M9 task A2 fixes: EncB/Render.lean c8d6aed7e539db2c886230c80f891177de05a487e5041ad6f68f360b6d123e82)
+command: cd ENCBLEAN; systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake env lean m9_a2fix_axioms.lean   (in the session scratchpad m9/a2fix; the 10 lines below)
+  | import EncB.Emit
+  | #check @EncB.cubesUnsat64_of_texts_get
+  | #check @EncB.encB_unsat_of_texts_get
+  | #print axioms EncB.cubesUnsat64_of_texts_get
+  | #print axioms EncB.encB_unsat_of_texts_get
+  | #print axioms EncB.cubesUnsat64_of_texts
+  | #print axioms EncB.encB_unsat_of_texts
+  | #print axioms EncB.parseDimacs_cube64_get
+  | #print axioms twinMain
+  | #print axioms main
+output (exit code 0, 0.53 s wall):
+EncB.cubesUnsat64_of_texts_get : (∀ (i : Nat) (hi : i < EncB.cubes64.length) (nv : Nat) (G : List (List Int)),
+    EncB.parseDimacs (EncB.cnfText (EncB.encode 6 8 11) (EncB.cubes64.get ⟨i, hi⟩)) = some (nv, G) →
+      ¬EncB.DimacsSatisfiable G) →
+  EncB.CubesUnsat64
+EncB.encB_unsat_of_texts_get : (∀ (i : Nat) (hi : i < EncB.cubes64.length) (nv : Nat) (G : List (List Int)),
+    EncB.parseDimacs (EncB.cnfText (EncB.encode 6 8 11) (EncB.cubes64.get ⟨i, hi⟩)) = some (nv, G) →
+      ¬EncB.DimacsSatisfiable G) →
+  ¬EncB.DimacsSatisfiable (EncB.encB 6 8 11)
+'EncB.cubesUnsat64_of_texts_get' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.encB_unsat_of_texts_get' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.cubesUnsat64_of_texts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.encB_unsat_of_texts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.parseDimacs_cube64_get' depends on axioms: [propext, Classical.choice, Quot.sound]
+'twinMain' depends on axioms: [propext, Quot.sound]
+'main' depends on axioms: [propext, Quot.sound]
+(this output is from a second identical run at 2026-11-06T19:41:02+09:00, exit code 0, captured to file; the first run's output, seen on the terminal, was the same)
+summary: the 2 new theorems: [propext, Classical.choice, Quot.sound]; lines outside [propext, Classical.choice, Quot.sound]: 0 (want 0)
+build-time guards: EncB/Render.lean now ends with 13 '#guard_msgs in #print axioms' blocks (the 11 of A2 plus cubesUnsat64_of_texts_get and encB_unsat_of_texts_get); lake build passes them.

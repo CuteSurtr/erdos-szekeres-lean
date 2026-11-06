@@ -14,3 +14,5 @@ import EncB.SoundAng
 import EncB.SoundRules
 import EncB.SoundWord
 import EncB.Satisfiable
+import EncB.Render
+import EncB.Compose

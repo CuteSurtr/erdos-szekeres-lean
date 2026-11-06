@@ -1,6 +1,7 @@
 import EncB.Gen
 import EncB.Coded
 import EncB.Cover
+import EncB.Render
 
 /-!
 # `lake exe encb_dimacs`
@@ -23,18 +24,31 @@ encb_dimacs twin-cube  M K T U1 ...     encB: `cubeCnf (encB M K T) [U1, ...]` o
 encb_dimacs twin-stats M K T            encB: only the summary line
 encb_dimacs twin-check M K T            encB = gen as Lean values (clauses, nv, refusal), compiled, no printing
 encb_dimacs twin-ymap  M K T            encB: DIMACS numbers of Y(i,j), i < j < min(T, 5), both directions
-encb_dimacs twin-profile M K T          encB: time the phases of `encode` (and `diagCoded`, `bodyL`) separately
+encb_dimacs twin-profile M K T          encB: time the phases of `encode` (and `diagCoded`, `bodyR`) separately
 encb_dimacs twin-cubes64 M K T DIR [NAME ...]
                                         encB: check that `cubeVars64` numbers Y12 Y13 Y14 Y23 Y24 Y34 (true iff
                                           T = 11), write DIR/base.cnf and DIR/NAME.cnf for the cubes of the Lean
                                           list `cubes64` (in its order; all 64 if no NAME is given), each file
-                                          = `cubeCnf (encB M K T) c` rendered by `bodyL`; the trust path is
-                                          M K T = 6 8 11
+                                          = `renderCube` of `cubeCnf (encB M K T) c` (Render.lean); the trust
+                                          path is M K T = 6 8 11
+encb_dimacs twin-cube64 M K T I         encB: `cubeCnf (encB M K T) (cubes64.get I)` on stdout, 0 ≤ I < 64, the
+                                          I-th cube of the Lean list `cubes64` itself (not a name lookup); writes
+                                          no file; stderr gets the cube's name (`cubeName`, as in twin-cubes64)
+                                          and its units (M9 hash binding: `scripts/hash_binding.sh`)
 ```
+Every twin mode that prints a CNF (`twin-base`, `twin-cube`, `twin-cubes64`, `twin-cube64`) prints the one string
+`renderCube nv F bodyF cube` of `EncB/Render.lean` with a single `putStr`; `twin-base`, `twin-cube` and
+`twin-cube64` print `cnfText e cube` (`= renderCube e.nv e.clauses (bodyR e.clauses) cube`) for `e = encode M K T`,
+the base being `cube = []`. `Render.lean` proves that this text parses back to `(numVars M K T, cubeCnf (encB M K T)
+cube)` under the reference parser `parseDimacs` (`parseDimacs_cnfText`; for (6,8,11) `parseDimacs_cube64_get` and
+`parseDimacs_base6811`). The twin printer uses Render's own decimal printer (`pushNat`/`pushInt`), not core's
+`toString`. The gen modes (`base`, `cube`, `files`) keep M1's printer `pushClause`/`body`/`header`/`cubeTail` below,
+unchanged.
 The summary line `{"m": .., "K": .., "t": .., "nv": .., "ncl": .., ...}` (gen_b2.py:200) goes to stderr. If
 gen_b2.py would raise on (M, K, T), nothing is written and the exit code is 1 (for the twin modes the refusal uses
 `diagCoded`).
-Only this file's string formatting and IO lie outside the definitions `EncB.gen` / `EncB.encB`.
+Outside the definitions `EncB.gen` / `EncB.encB` and the proved renderer, only this file's IO (and, for the gen
+modes, M1's printer) remains.
 -/
 
 namespace EncB
@@ -69,16 +83,6 @@ def cubeUnits (r : Result) (t : Nat) (name : String) : Option (List Int) :=
       else none
     | [] => none
 
-/-- The clause lines of a clause list (the twin's renderer; same line format as `pushClause`). -/
-def bodyL (cls : List (List Int)) : String := cls.foldl pushClause ""
-
-/-- The lines of a cube file after the header, computed from the base lines `bodyL F` (rendered once). -/
-def cubeBody (bodyF : String) (cube : List Int) : String := (cube.map fun z => [z]).foldl pushClause bodyF
-
-/-- What `cubeBody` prints is the rendering of the clause list `cubeCnf F cube` of the theorems. -/
-theorem cubeBody_eq (F : List (List Int)) (cube : List Int) : cubeBody (bodyL F) cube = bodyL (cubeCnf F cube) := by
-  simp only [cubeBody, bodyL, cubeCnf, List.foldl_append]
-
 /-- The file name of a cube: `c` (first unit positive) or `n`, then one bit per further unit (1 = positive),
 as mkcubes.py:19 and noty12.py:80 name them. -/
 def cubeName (cube : List Int) : String :=
@@ -100,7 +104,8 @@ open EncB
 def usage : String :=
   "usage: encb_dimacs base M K T | cube M K T U... | files M K T DIR NAME... | stats M K T\n" ++
   "       encb_dimacs twin-base M K T | twin-cube M K T U... | twin-stats M K T | twin-check M K T\n" ++
-  "       encb_dimacs twin-ymap M K T | twin-profile M K T | twin-cubes64 M K T DIR [NAME...]"
+  "       encb_dimacs twin-ymap M K T | twin-profile M K T | twin-cubes64 M K T DIR [NAME...]\n" ++
+  "       encb_dimacs twin-cube64 M K T I   (0 <= I < 64)"
 
 /-- Run the generator; refuse where gen_b2.py raises. -/
 def genChecked (m K t : Nat) : IO (Option Result) := do
@@ -154,32 +159,45 @@ def twinMain (mode : String) (args : List String) : IO UInt32 := do
     IO.eprintln s!"cubeVars64 = {cubeVars64}; numbers of Y12 Y13 Y14 Y23 Y24 Y34 = {fwd}; decode(cubeVars64) = {repr bwd}; every cube of cubes64 on cubeVars64: {varsOk}; {cubes64.length} cubes"
     if fwd != cubeVars64 || bwd != want || !varsOk then
       IO.eprintln "encb_dimacs: the cube variables are not Y12 Y13 Y14 Y23 Y24 Y34; nothing written"; return 1
-    let ncl := e.clauses.length
-    let bodyF := bodyL e.clauses
-    IO.FS.withFile (dir ++ "/base.cnf") .write fun h => do
-      h.putStr (header e.nv ncl); h.putStr bodyF
+    -- the base lines are rendered once and shared; each file is `renderCube e.nv e.clauses (bodyR e.clauses) c`
+    -- (= `cnfText e c`, and = `render e.nv (cubeCnf e.clauses c)` by `renderCube_eq`)
+    let bodyF := bodyR e.clauses
+    IO.FS.withFile (dir ++ "/base.cnf") .write fun h => h.putStr (renderCube e.nv e.clauses bodyF [])
     IO.eprintln s!"wrote {dir}/base.cnf"
     for (n, c) in sel do
       let path := dir ++ "/" ++ n ++ ".cnf"
-      IO.FS.withFile path .write fun h => do
-        h.putStr (header e.nv (cubeCnf e.clauses c).length); h.putStr (cubeBody bodyF c)
+      IO.FS.withFile path .write fun h => h.putStr (renderCube e.nv e.clauses bodyF c)
       IO.eprintln s!"wrote {path} units {c}"
     return 0
+  | "twin-cube64", [ms, ks, ts, istr] =>
+    let some (m, K, t) := parseMKT ms ks ts | IO.eprintln usage; return 2
+    let some i := istr.toNat? | IO.eprintln usage; return 2
+    -- the `i`-th entry of the Lean list `cubes64` itself (the theorem's definition), not a name lookup
+    if h : i < cubes64.length then
+      let c := cubes64.get ⟨i, h⟩
+      let some e ← encodeChecked m K t | return 1
+      IO.eprintln s!"cubes64[{i}] name {cubeName c} units {c}"
+      let out ← IO.getStdout
+      -- `e = encode m K t` (`encodeChecked`); the text is the one of `parseDimacs_cube64_get` for (6,8,11)
+      out.putStr (cnfText e c)
+      out.flush
+      return 0
+    else
+      IO.eprintln s!"encb_dimacs: index {i} out of range (cubes64 has {cubes64.length} cubes)"; return 2
   | _, ms :: ks :: ts :: rest =>
     let some (m, K, t) := parseMKT ms ks ts | IO.eprintln usage; return 2
     if mode == "twin-base" && rest.isEmpty then
       let some e ← encodeChecked m K t | return 1
       let out ← IO.getStdout
-      out.putStr (header e.nv e.clauses.length)
-      out.putStr (bodyL e.clauses)
+      -- the base is the empty cube (`parseDimacs_base6811` for (6,8,11))
+      out.putStr (cnfText e [])
       out.flush
       return 0
     else if mode == "twin-cube" then
       let some units := rest.mapM String.toInt? | IO.eprintln usage; return 2
       let some e ← encodeChecked m K t | return 1
       let out ← IO.getStdout
-      out.putStr (header e.nv (cubeCnf e.clauses units).length)
-      out.putStr (cubeBody (bodyL e.clauses) units)
+      out.putStr (cnfText e units)
       out.flush
       return 0
     else if mode == "twin-stats" && rest.isEmpty then
@@ -210,10 +228,10 @@ def twinMain (mode : String) (args : List String) : IO UInt32 := do
       let out := cls.map (fun cl => cl.map (renumberLit nm))
       IO.eprintln s!"renumber: {out.length} clauses"
       let t5 ← IO.monoMsNow
-      let b := bodyL out
-      IO.eprintln s!"bodyL: {b.utf8ByteSize} bytes"
+      let b := bodyR out
+      IO.eprintln s!"bodyR: {b.utf8ByteSize} bytes"
       let t6 ← IO.monoMsNow
-      IO.println s!"({m},{K},{t}) profile ms: diagCoded {t1 - t0}, genCoded {t2 - t1}, allCodesOf {t3 - t2}, numberMap {t4 - t3}, renumber {t5 - t4}, bodyL {t6 - t5}"
+      IO.println s!"({m},{K},{t}) profile ms: diagCoded {t1 - t0}, genCoded {t2 - t1}, allCodesOf {t3 - t2}, numberMap {t4 - t3}, renumber {t5 - t4}, bodyR {t6 - t5}"
       return 0
     else if mode == "twin-check" && rest.isEmpty then
       -- encB = gen as Lean values: the same refusal, the same nv, the same clause list

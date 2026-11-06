@@ -1,0 +1,184 @@
+== M9 review, LEAN-SOUNDNESS lens (2026-11-06T20:16:24+09:00); reviewer did not edit any package source; scratch: /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-lean
+-- state before
+Tctl: +77.2°C
+exe sha256 before: 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368
+src EncB/Render.lean c8d6aed7e539db2c886230c80f891177de05a487e5041ad6f68f360b6d123e82
+src EncB/Emit.lean 9a2087a4d116adec6793931986969fe01a01e4f520120389a5b2bbcb856f081f
+src EncB/Cover.lean c59425acb5ba5e1da652fbb8d2f77d0c78d8cfc522216f64015231f7ed765f98
+src EncB/Coded.lean 2727e00bbd4ce9eab7f4af634c8ad3c056c1122cac1d9bd11f080e6265a69c5f
+src EncB/Dimacs.lean 48cbeac96e085d2e3e90d3e7a44f40909b24e4fb985f545de2824c356f64f6a8
+src EncB/Gen.lean ec97b3355b9cfe39f85e9b011ae91c429b5e3764683b9d601cd25a2360a02adf
+src EncB.lean 67300d282702cebabe0fdb6502ea5d3191f1803c98f8241cd7b388b9bd590b0b
+src lakefile.toml 780b7d570523cc37606848d451a0aba686925a3ea0e9f647cbc161f6cf0b1842
+src scripts/hash_binding.sh 29d89510a6ca9f3f9ade8131ab79a3c621184135c341f5c521dd9603bcae65e4
+src scripts/audit.sh f7af57b676e5fec57576fdabaec2e3689f9bbc29a77f426c262b5797f63ad964
+src scripts/resolve.sh 22e07b3be34f49f3823bd12e4dfdb02350edacb66dceaace329ab20bd21059e0
+src scripts/build_cake_lpr.sh 488502baa677c954badfe24b4ffc78dcb2c3a03c169fe287f1205bc2dbfaf12d
+-- cmd: systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake build --no-build
+All targets up-to-date (28 jobs).
+exit 0, .170451777 s
+-- cmd: systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake build
+Build completed successfully (28 jobs).
+exit 0, .170223772 s
+exe sha256 after: 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368
+-- cmd: systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 scripts/audit.sh
+declarations mentioning the (6,8,11) instance (pattern: \b(encB|gen|genCoded|numVars|allCodes|allCodesOf|encode|diagCoded)\s+6\s+8\s+11\b|\bCubesUnsat64\b):
+  EncB/Cover.lean:110 (+4 lines): def CubesUnsat64 : Prop := ∀ c ∈ cubes64, ¬DimacsSatisfiable (cubeCnf (encB 6 8 11) c)
+  EncB/Cover.lean:114 (+4 lines): theorem encB_unsat_of_cubes64 (h : ∀ c ∈ cubes64, ¬DimacsSatisfiable (cubeCnf (encB 6 8 11) c)) :
+  EncB/Cover.lean:118 (+3 lines): theorem encB_unsat_of_cubesUnsat64 (h : CubesUnsat64) : ¬DimacsSatisfiable (encB 6 8 11) :=
+  EncB/Render.lean:794 (+6 lines): parseDimacs (renderCube (numVars 6 8 11) (encB 6 8 11) (bodyR (encB 6 8 11)) c) =
+  EncB/Render.lean:800 (+6 lines): parseDimacs (cnfText (encode 6 8 11) (cubes64.get ⟨i, h⟩)) =
+  EncB/Render.lean:806 (+8 lines): parseDimacs (renderCube (numVars 6 8 11) (encB 6 8 11) (bodyR (encB 6 8 11)) []) =
+  EncB/Render.lean:814 (+7 lines): parseDimacs (renderCube (numVars 6 8 11) (encB 6 8 11) (bodyR (encB 6 8 11)) c) = some (nv, G) →
+  EncB/Render.lean:821 (+12 lines): parseDimacs (renderCube (numVars 6 8 11) (encB 6 8 11) (bodyR (encB 6 8 11)) c) = some (nv, G) →
+  EncB/Render.lean:833 (+9 lines): parseDimacs (cnfText (encode 6 8 11) (cubes64.get ⟨i, hi⟩)) = some (nv, G) → ¬DimacsSatisfiable G) :
+  EncB/Render.lean:842 (+48 lines): parseDimacs (cnfText (encode 6 8 11) (cubes64.get ⟨i, hi⟩)) = some (nv, G) → ¬DimacsSatisfiable G) :
+  EncB/Satisfiable.lean:43 (+9 lines): theorem encB_satisfiable_6811 (M : Model 6 8 11) : DimacsSatisfiable (encB 6 8 11) :=
+sources: EncB.lean EncB/Coded.lean EncB/Cover.lean EncB/Dimacs.lean EncB/EarlyWarning.lean EncB/Emit.lean EncB/Gen.lean EncB/KernelCheck.lean EncB/KernelCheckB.lean EncB/Model.lean EncB/ModelLemmas.lean EncB/Render.lean EncB/Satisfiable.lean EncB/SortLemmas.lean EncB/SoundAng.lean EncB/SoundChain.lean EncB/SoundOlit.lean EncB/SoundOrbit.lean EncB/SoundRules.lean EncB/SoundWord.lean
+toolchain: leanprover/lean4:v4.24.0
+AUDIT PASS (no sorry/admit/native_decide/implemented_by/extern/unsafe/partial/axiom/opaque/set_option/ofReduceBool in code; Std-only; no decide/rfl/simp/omega/#eval/#reduce in a declaration that mentions the (6,8,11) instance)
+exit 0, .184534220 s
+-- scratch copy of the package sources (no .lake, no logs): /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/base; files:
+   2727e00bbd4ce9eab7f4af634c8ad3c056c1122cac1d9bd11f080e6265a69c5f  ./EncB/Coded.lean
+   c59425acb5ba5e1da652fbb8d2f77d0c78d8cfc522216f64015231f7ed765f98  ./EncB/Cover.lean
+   48cbeac96e085d2e3e90d3e7a44f40909b24e4fb985f545de2824c356f64f6a8  ./EncB/Dimacs.lean
+   38d3c2530629e1b33cd885fe36914c286ed95f545307cbce0fb1ea318a892b0b  ./EncB/EarlyWarning.lean
+   9a2087a4d116adec6793931986969fe01a01e4f520120389a5b2bbcb856f081f  ./EncB/Emit.lean
+   ec97b3355b9cfe39f85e9b011ae91c429b5e3764683b9d601cd25a2360a02adf  ./EncB/Gen.lean
+   a32673b8f5624f97326cd249109e8502f26a89f00d1ee03818b7b73ed354be2c  ./EncB/KernelCheckB.lean
+   6a141b39db41d7f35d408aeb2f9ba808c67138adcca651ca869c156b34e7cd22  ./EncB/KernelCheck.lean
+   67300d282702cebabe0fdb6502ea5d3191f1803c98f8241cd7b388b9bd590b0b  ./EncB.lean
+   42240829ba35fc9598285a15c8dcc92b1c749db4ae0f256ee537767375edca31  ./EncB/Model.lean
+   db0d368be4481a349deb4424b0426650e711d77086f95ac05b74dcdccb9e6844  ./EncB/ModelLemmas.lean
+   c8d6aed7e539db2c886230c80f891177de05a487e5041ad6f68f360b6d123e82  ./EncB/Render.lean
+   5c908151d342184a495a063de0f8c10acf55e6b7e3a94ab727dbbf870954b9b4  ./EncB/Satisfiable.lean
+   103f5bd10b8bde0788fc608ecf1018cd7452ccb303f2b60cd2ae990c4228ca4d  ./EncB/SortLemmas.lean
+   6fa1ad05bf38519fd62150ea1224098e63dcfbf9d8ad63d20589850dda5a55f7  ./EncB/SoundAng.lean
+   d2d5908189a9bf53af51074fef5e86eeb2dfe6aeda8f267dbc88f918b4f4ec2e  ./EncB/SoundChain.lean
+   48631ae6e2c94f88960c198563d0e924467ed32491da26a9ff02c95c7fc7606f  ./EncB/SoundOlit.lean
+   ce93c2011e6de4906788f2aee2a1e8aac2b73e0137117fc61ee96031a41c0ff2  ./EncB/SoundOrbit.lean
+   8cb4637efd3736a4ea589eb438c7095d5bc477ac2e20890b00ed4dcd6499268d  ./EncB/SoundRules.lean
+   c1bdb4175ee548b805154a62496bb8f7c5180cacfb9195c2b75b733e73a68807  ./EncB/SoundWord.lean
+   780b7d570523cc37606848d451a0aba686925a3ea0e9f647cbc161f6cf0b1842  ./lakefile.toml
+   42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434  ./lean-toolchain
+   687db4b455e8ae4ece21059b200bc9affa091ff5f8d1522cd213daf47e937dc7  ./ref/hashes.tsv
+   3c99a50b1c58bc29d5bd41e6acf6e2004dee9eb5b0755cafd2d76ca1266233b6  ./ref/make_ref.py
+   f7af57b676e5fec57576fdabaec2e3689f9bbc29a77f426c262b5797f63ad964  ./scripts/audit.sh
+   488502baa677c954badfe24b4ffc78dcb2c3a03c169fe287f1205bc2dbfaf12d  ./scripts/build_cake_lpr.sh
+   442cb2e2a35f14a474cd2e61f27f3b5db00e81368b91abcc5347f9a05e25af5a  ./scripts/check_recorded.sh
+   300a5b463f2ab5b74b7a975745fd8d2aa6ad9c72d2e9fbef7e94db143bafc25a  ./scripts/compare_b.sh
+   6c2d63c12bd52e64e3beb93c8b9800982ef1d3eb0df5cd038c78d92f15436daa  ./scripts/ew_test.sh
+   29d89510a6ca9f3f9ade8131ab79a3c621184135c341f5c521dd9603bcae65e4  ./scripts/hash_binding.sh
+   22e07b3be34f49f3823bd12e4dfdb02350edacb66dceaace329ab20bd21059e0  ./scripts/resolve.sh
+   657fda4dfdbcbd45f31aff3e300dfdbb70317bbc350d9edbd21d88d6ad2e9c44  ./scripts/twin_check.sh
+-- [copy base] Tctl +78.9°C; cmd (in /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/base): systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake build
+✔ [26/28] Built EncB.KernelCheckB (18s)
+✔ [27/28] Built EncB (141ms)
+Build completed successfully (28 jobs).
+0
+exit 0, 21.910906430 s; copy exe sha256 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368 (real package exe: 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368)
+26M	.lake
+-- [mutA: the definition of cubes64] /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/mutA, diff against the real package:
+   98c98
+   < def cubeVars64 : List Int := [1, 2, 3, 10, 11, 18]
+   ---
+   > def cubeVars64 : List Int := [1, 2, 3, 10, 11, 19]
+   Tctl +77.6°C; cmd (in /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/mutA): systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake build
+   ✔ [19/28] Built EncB.Cover (266ms)
+   ✔ [20/28] Built EncB.Cover:c.o (90ms)
+   ✔ [21/28] Built EncB.Render (1.9s)
+   ✔ [23/28] Built EncB.Emit (886ms)
+   ✔ [25/28] Built encb_dimacs:exe (117ms)
+   ✔ [26/28] Built EncB.KernelCheckB (19s)
+   ✔ [27/28] Built EncB (157ms)
+   exit 0, 20.503887251 s; mutA exe sha256 69778fdbc9c30a0e2a4f14446b956b70bba2215202453908b8af96c25bd3462f
+   probe: mutA exe twin-cube64 3 4 11 0 stderr (small instance, units only): cubes64[0] name c11111 units [1, 2, 3, 10, 11, 19]
+-- [mutB: the printing of one unit, IO glue] /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/mutB, diff against the real package:
+   182c182
+   <       out.putStr (cnfText e c)
+   ---
+   >       out.putStr (cnfText e (if i = 43 then c.dropLast ++ c.getLast?.toList.map (fun z => -z) else c))
+   Tctl +77.5°C; cmd (in /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/mutB): systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake build
+   ✔ [26/28] Built EncB.Emit (957ms)
+   ✔ [27/28] Built EncB.Emit:c.o (1.8s)
+   ✔ [28/28] Built encb_dimacs:exe (118ms)
+   exit 0, 3.071863002 s; mutB exe sha256 f99ce963212d93d135e395398d5f8e57be83aa50b9fb7b639bed6f03d0bd9140
+   probe: mutB exe twin-cube64 3 4 11 42: stderr 'cubes64[42] name n10101 units [-1, 2, -3, 10, -11, 18]' stdout tail '-1 0|2 0|-3 0|10 0|-11 0|18 0|'
+   probe: mutB exe twin-cube64 3 4 11 43: stderr 'cubes64[43] name n10100 units [-1, 2, -3, 10, -11, -18]' stdout tail '-1 0|2 0|-3 0|10 0|-11 0|18 0|'
+-- [mutC: the twin printer itself (an extra space before the clause terminator)] /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/mutC, diff against the real package:
+   130c130
+   <   | l :: ls => (((ls.foldl (fun acc x => pushInt (acc.push ' ') x) (pushInt s l)).push ' ').push '0').push '\n'
+   ---
+   >   | l :: ls => ((((ls.foldl (fun acc x => pushInt (acc.push ' ') x) (pushInt s l)).push ' ').push ' ').push '0').push '\n'
+   Tctl +77.4°C; cmd (in /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/mutC): systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake build encb_dimacs
+   error: EncB/Render.lean:201:14: unsolved goals
+   error: EncB/Render.lean:852:0: ❌️ Docstring on `#guard_msgs` does not match generated message:
+   error: EncB/Render.lean:858:0: ❌️ Docstring on `#guard_msgs` does not match generated message:
+   error: EncB/Render.lean:861:0: ❌️ Docstring on `#guard_msgs` does not match generated message:
+   error: EncB/Render.lean:864:0: ❌️ Docstring on `#guard_msgs` does not match generated message:
+   error: EncB/Render.lean:867:0: ❌️ Docstring on `#guard_msgs` does not match generated message:
+   error: EncB/Render.lean:870:0: ❌️ Docstring on `#guard_msgs` does not match generated message:
+   error: EncB/Render.lean:873:0: ❌️ Docstring on `#guard_msgs` does not match generated message:
+   error: EncB/Render.lean:876:0: ❌️ Docstring on `#guard_msgs` does not match generated message:
+   error: EncB/Render.lean:879:0: ❌️ Docstring on `#guard_msgs` does not match generated message:
+   error: EncB/Render.lean:882:0: ❌️ Docstring on `#guard_msgs` does not match generated message:
+   error: EncB/Render.lean:888:0: ❌️ Docstring on `#guard_msgs` does not match generated message:
+   exit 1, 1.783747407 s
+-- probe (real exe, no encoding happens on these paths): systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 .lake/build/bin/encb_dimacs twin-cube64 6 8 11 {64,064,-1}
+   I=64: exit 0 'encb_dimacs: index 64 out of range (cubes64 has 64 cubes)|'
+   I=064: exit 0 'encb_dimacs: index 64 out of range (cubes64 has 64 cubes)|'
+   I=-1: exit 0 'usage: encb_dimacs base M K T | cube M K T U... | files M K T DIR NAME... | stats M K T|       encb_dimacs twin-base M K T | twin-cube M K T U... | twin-stats M K T | twin-check M K T|'
+   (exit codes above are of a subshell pipeline, not the exe; rerun:)
+   I=64: exe exit 2
+   I=064: exe exit 2
+   I=-1: exe exit 2
+-- [audit evasion probe, text only, nothing built] /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/audtest = sources + EncB/ZZEvade.lean:
+   import EncB.Coded
+   namespace EncB
+   theorem zz1 : 0 < (encB 6 8 11).length := by trivial
+   theorem zz2 : numVars 6 8 11 = 78059 := Eq.refl _
+   theorem zz3 : 0 < numVars 6 8 11 := by simpa using (show 0 < numVars 6 8 11 by grind)
+   end EncB
+   cmd: scripts/audit.sh (in /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/audtest)
+     EncB/ZZEvade.lean:3 (+1 lines): theorem zz1 : 0 < (encB 6 8 11).length := by trivial
+     EncB/ZZEvade.lean:4 (+1 lines): theorem zz2 : numVars 6 8 11 = 78059 := Eq.refl _
+     EncB/ZZEvade.lean:5 (+1 lines): theorem zz3 : 0 < numVars 6 8 11 := by simpa using (show 0 < numVars 6 8 11 by grind)
+   sources: EncB.lean EncB/Coded.lean EncB/Cover.lean EncB/Dimacs.lean EncB/EarlyWarning.lean EncB/Emit.lean EncB/Gen.lean EncB/KernelCheck.lean EncB/KernelCheckB.lean EncB/Model.lean EncB/ModelLemmas.lean EncB/Render.lean EncB/Satisfiable.lean EncB/SortLemmas.lean EncB/SoundAng.lean EncB/SoundChain.lean EncB/SoundOlit.lean EncB/SoundOrbit.lean EncB/SoundRules.lean EncB/SoundWord.lean EncB/ZZEvade.lean
+   AUDIT PASS (no sorry/admit/native_decide/implemented_by/extern/unsafe/partial/axiom/opaque/set_option/ofReduceBool in code; Std-only; no decide/rfl/simp/omega/#eval/#reduce in a declaration that mentions the (6,8,11) instance)
+   exit 0
+-- [scratch-only fix check] cmd: systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake env lean /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-lean/Fix.lean (file sha256 49da0823bf705f37a7cd3b287d8b8f826f21b2444a014fa890d69f1404f5cb2c): exit 0, 0.39 s; output:
+   'EncB.no_model_6811_of_texts' depends on axioms: [propext, Classical.choice, Quot.sound]
+   'EncB.parseDimacsBytes_cube64_get' depends on axioms: [propext, Classical.choice, Quot.sound]
+   (declares no_model_6811_of_texts and parseDimacsBytes / parseDimacsBytes_cube64_get in the scratch file only; not added to the package)
+-- [mutant hash bindings] runner /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-lean/run_mut.sh (sha256 f25b53fa82a6708be6eccc708a28730e8d0f988dda626e0e11dd5f4f12647489): runs each copy's own scripts/hash_binding.sh with HB_C6SUMS HB_ENCBGEN HB_REPLAY HB_NOTYSHA HB_NOTYTSV HB_META HB_C7SUMS HB_K8DIR = the real record files (read only)
+   == mutA start 2026-11-06T20:19:49+09:00 Tctl 77; cmd (in /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/mutA): TMPDIR=/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/mutA/tmp systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 scripts/hash_binding.sh
+   == mutA exit 1 end 2026-11-06T20:34:10+09:00
+   == mutB start 2026-11-06T20:34:10+09:00 Tctl 78; cmd (in /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/mutB): TMPDIR=/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/mutB/tmp systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 scripts/hash_binding.sh
+   == mutB exit 1 end 2026-11-06T20:48:35+09:00
+   mutA: full log /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/mutA.binding.log (sha256 705f7963c884f7757ad889cfa801bfd686cd276116493e64bbdfaf1bb0b67b07); key lines:
+     exe: .lake/build/bin/encb_dimacs sha256 69778fdbc9c30a0e2a4f14446b956b70bba2215202453908b8af96c25bd3462f, mtime 2026-11-06T20:18:30+09:00
+     sources (import closure of the exe root EncB/Emit.lean, 6 files, + lakefile.toml): EncB/Coded.lean 2727e00bbd4ce9eab7f4af634c8ad3c056c1122cac1d9bd11f080e6265a69c5f; EncB/Cover.lean 18708db3ea6821ea20479d5d0dc10841fbc1a1cd5774212935b569577eb9a076; EncB/Dimacs.lean 48cbeac96e085d2e3e90d3e7a44f40909b24e4fb985f545de2824c356f64f6a8; EncB/Emit.lean 9a2087a4d116adec6793931986969fe01a01e4f520120389a5b2bbc
+     records: base 1+1 lines; SHA256SUMS c-cubes 32; replay encoder-B ACCEPTED 32; noty12 cubes.sha256 32; noty12 results.tsv ACCEPTED 32; meta.json Y12 Y13 Y14 Y23 Y24 Y34 = 1 2 3 10 11 18
+     SUMMARY: 4/68 MATCH (base 1, cubes64 64 by index: 32 c + 32 n, 64 distinct names; others 3); exe 69778fdbc9c30a0e2a4f14446b956b70bba2215202453908b8af96c25bd3462f; wall 861 s; FAIL
+     MATCH lines 4, FAIL lines 64
+   mutB: full log /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/mutB.binding.log (sha256 9a28ed51ec82c8d554b521a5172fe50651dd10e36c49c45846999137cf1c9bd5); key lines:
+     exe: .lake/build/bin/encb_dimacs sha256 f99ce963212d93d135e395398d5f8e57be83aa50b9fb7b639bed6f03d0bd9140, mtime 2026-11-06T20:19:15+09:00
+     sources (import closure of the exe root EncB/Emit.lean, 6 files, + lakefile.toml): EncB/Coded.lean 2727e00bbd4ce9eab7f4af634c8ad3c056c1122cac1d9bd11f080e6265a69c5f; EncB/Cover.lean c59425acb5ba5e1da652fbb8d2f77d0c78d8cfc522216f64015231f7ed765f98; EncB/Dimacs.lean 48cbeac96e085d2e3e90d3e7a44f40909b24e4fb985f545de2824c356f64f6a8; EncB/Emit.lean 170613cd9dc27d0ca3e18e40bf3e3fa53693e5a512a0e86731985b3
+     records: base 1+1 lines; SHA256SUMS c-cubes 32; replay encoder-B ACCEPTED 32; noty12 cubes.sha256 32; noty12 results.tsv ACCEPTED 32; meta.json Y12 Y13 Y14 Y23 Y24 Y34 = 1 2 3 10 11 18
+     SUMMARY: 67/68 MATCH (base 1, cubes64 64 by index: 32 c + 32 n, 64 distinct names; others 3); exe f99ce963212d93d135e395398d5f8e57be83aa50b9fb7b639bed6f03d0bd9140; wall 865 s; FAIL
+     MATCH lines 67, FAIL lines 1
+   mutA: every FAIL cube line has both record comparisons MISMATCH: 64/64; vars-not-meta-Y on 64; first FAIL line:
+     FAIL  cube I=0 c11111 units [1 2 3 10 11 19] sha=5300cae1189a38c3c41627fcc49b6376035d3381ff57595ff28fe59cddb13065 header='p cnf 78059 2387089' bytes=58618884 tail='1 0|2 0|3 0|10 0|11 0|19 0' [14.37 s wall, 13.99 s user, 509856 KB max RSS] SHA256SUMS=MISMATCH(recorded 0fa206f7b75f8653e8da78dd3b750294d3ddafd8b86da53a489d8cc63fa02a8e) replay-ACCEPTED=MISMATCH(recorded 0fa206f7b75f8653e8da78dd3b750294d3ddafd8b86da53a489d8cc63fa02a8e) vars(1 2 3 10 11 19)-not-meta-Y(1 2 3 10 11 18)
+   mutB FAIL lines:
+     FAIL  cube I=43 n10100 units [-1 2 -3 10 -11 -18] sha=252ae83bacb44da4fc5df6cbff1df8b49921cee35069632b415a9e7b8f2705a4 header='p cnf 78059 2387089' bytes=58618887 tail='-1 0|2 0|-3 0|10 0|-11 0|18 0' [14.32 s wall, 13.92 s user, 510232 KB max RSS] cubes.sha256=MISMATCH(recorded 96161b8ea82e6b365e6789294d19cf81ed7ce359aaf4025310e6410b5ea64ea7) noty12-ACCEPTED=MISMATCH(recorded 96161b8ea82e6b365e6789294d19cf81ed7ce359aaf4025310e6410b5ea64ea7) units=ok tail('-1 0|2 0|-3 0|10 0|-11 0|18 0')
+-- state after (2026-11-06T20:48:56+09:00): exe sha256 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368
+   src EncB/Render.lean c8d6aed7e539db2c886230c80f891177de05a487e5041ad6f68f360b6d123e82
+   src EncB/Emit.lean 9a2087a4d116adec6793931986969fe01a01e4f520120389a5b2bbcb856f081f
+   src EncB/Cover.lean c59425acb5ba5e1da652fbb8d2f77d0c78d8cfc522216f64015231f7ed765f98
+   src EncB.lean 67300d282702cebabe0fdb6502ea5d3191f1803c98f8241cd7b388b9bd590b0b
+   src scripts/hash_binding.sh 29d89510a6ca9f3f9ade8131ab79a3c621184135c341f5c521dd9603bcae65e4
+   src scripts/audit.sh f7af57b676e5fec57576fdabaec2e3689f9bbc29a77f426c262b5797f63ad964
+   git status (package):  M cloud/es7-2026-10-19/results/ENCBLEAN/DESIGN.md; M cloud/es7-2026-10-19/results/ENCBLEAN/EncB.lean; M cloud/es7-2026-10-19/results/ENCBLEAN/EncB/Emit.lean; M cloud/es7-2026-10-19/results/ENCBLEAN/README.md;?? cloud/es7-2026-10-19/results/ENCBLEAN/EncB/Render.lean;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_a2_cake_parse.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_a2_hash_binding.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_a2_regress_modes.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_a2_verify_rt.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_a2fix_hash_binding.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_audit.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_axioms.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_build.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_d_recheck.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_hash_binding.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_hash_binding_selftest.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_regress_modes.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_resolve_fix.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_resolve_smoke.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_review_lean_soundness.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_review_resolve.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/scripts/build_cake_lpr.sh;?? cloud/es7-2026-10-19/results/ENCBLEAN/scripts/hash_binding.sh;?? cloud/es7-2026-10-19/results/ENCBLEAN/scripts/resolve.sh;
+   scratch left in place (small, ~110 MB total incl. 4 .lake dirs): /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy and .../m9/review-lean; nothing written under /home/jay/research/data; no unit touched; no commit
+-- reviewer verdict: no blocking finding; minor/doc findings are listed in the reviewer's return value
+   cleanup: removed the reviewer's own build dirs /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/{base,mutA,mutB,mutC}/.lake (RAM-backed /tmp); sources, build outputs and binding logs of the copies kept; scratch now 2.2M
