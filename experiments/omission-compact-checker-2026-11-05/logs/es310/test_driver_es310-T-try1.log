@@ -1,0 +1,15 @@
+== 2026-11-06T04:17:06Z test_driver_es310.sh: WORKDIR /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-driver, cases: T; drive_es310.py sha256 08bf8317a19a1390
+== 2026-11-06T04:17:06Z T: two tiny compiles (one 64-leaf block each)
+2026-11-06T04:17:13Z start chunk E310BT.C000101 leaves=29 running=1 queued=0
+2026-11-06T04:17:17Z ok E310BT.C000101 leaves=29 kernel=0.855 wall=3.42 rss=3197568 cg_peak=439064 running=0 queued=0
+PASS: T: E310BT.C000101 driver exit 0 (got 0)
+PASS: T: its row is ok
+PASS: T: its .olean is written with the recorded sha256
+PASS: T: a restart runs nothing (to_run 0, already_done 1)
+2026-11-06T04:17:27Z start chunk E310BX.C000101 leaves=51 running=1 queued=0
+2026-11-06T04:17:31Z fail E310BX.C000101 leaves=51 kernel=0.511 wall=3.34 rss=3179880 cg_peak=421568 running=0 queued=0
+PASS: TX: the corrupted block: driver exit 1 (got 1), verdict fail
+PASS: TX: no .olean
+PASS: TX: the log says decide proved the proposition false
+/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-driver/TX/src/E310BX/C000101.lean:11:225: error: Ta
+== 2026-11-06T04:17:32Z summary: 7 passed, 0 failed

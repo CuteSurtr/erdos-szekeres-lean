@@ -1,0 +1,33 @@
+lean_make: Packed current (stamp 5a0e671a88f7351f)
+lean_make: Fast current (stamp a71a7197ff4b6656)
+lean_make: WordPack current (stamp 5ef07ad103584f9d)
+lean_make: Split current (stamp 61fe059fe2b1104c)
+lean_make: Fast2 current (stamp e01c773b910f0241)
+lean_make: Path current (stamp 60a01f9ca4837a3d)
+lean_make: Fcat62 current (stamp 1f7212d4fbb8cef7)
+lean_make: Fcat2650 current (stamp ed47736434a997e0)
+lean_make: BalancedProof.Catalog current (stamp a749a1874d3343cc)
+lean_make: BalancedCoverCutsV2 current (stamp 3f6372587da6e966)
+lean_make: Bridge311Bal current (stamp f12bf121afc4e389)
+lean_make: Residual32Bridge2650.Catalog current (stamp f30d997e1aeab112)
+lean_make: Bridge311Res current (stamp 3a971dcba15afdf7)
+{"export": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-e2e2", "modules": 9, "to_run": 9, "already_done": 0, "order": ["E310BT.C240701", "E310BT.C240705", "E310BT.C240603", "...", "E310BT.C240703", "E310BT.C240602", "E310BT.Root"], "final": "not full: the manifests are ['E310BT'], not exactly [E310B]", "reuse": null, "library": {"library_pinned_verified": 4952, "library_digest_sha256": "39bc40235acc18c3046a9fe2a68cf5f2560fc5c0b25ae96861ee4496645c44c0", "library_pinned_utc": "2026-11-06T00:11:21Z"}, "gate": {"tctl": 73.6, "max_tctl": 80.0, "campaign_log": "/home/jay/research/data/es8-b64-pilot-20261105/campaign/campaign.log", "campaign_log_exists": true, "campaign_pause": null, "start_gap_s": 20.0}, "memory": {"chunk_cap": "12G", "root_cap": "24G", "chunk_need_gb": 15.0, "root_need_gb": 34.0, "mem_wait_max_s": 1800.0}, "stale_after_imports": {}, "witness_files": [], "leftover_scopes": [], "stray_tmp_oleans": 0, "scope_tag": "es310-ac3ef83b65", "deps": {"Path": "60a01f9ca4837a3d99f5c346439caf4f1305cd32c8c341abff1633ae7b19add3", "Fcat62": "1f7212d4fbb8cef77b3005e5836cc89f34fff0aab6a092f02f67a8bdc2930046", "Fcat2650": "ed47736434a997e0e049d4728acbe0171a4b5c23724567912a48443b32243fcb", "Bridge311Bal": "f12bf121afc4e389dbea025e261e76ec4efba90ad789e9a1b93a51571824a6e0", "Bridge311Res": "3a971dcba15afdf71408af6a780d957f9645f64eea00f3fd0886e8f5774cd075"}, "tsv": "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-e2e2/run.tsv"}
+2026-11-06T06:27:02Z start chunk E310BT.C240701 leaves=425 running=1 queued=8
+2026-11-06T06:27:14Z ok E310BT.C240701 leaves=425 kernel=8.470 wall=11.47 rss=3308296 cg_peak=562712 running=0 queued=8
+2026-11-06T06:27:22Z start chunk E310BT.C240705 leaves=412 running=1 queued=7
+2026-11-06T06:27:35Z ok E310BT.C240705 leaves=412 kernel=9.520 wall=12.85 rss=3311048 cg_peak=559452 running=0 queued=7
+2026-11-06T06:27:42Z start chunk E310BT.C240603 leaves=392 running=1 queued=6
+2026-11-06T06:27:53Z ok E310BT.C240603 leaves=392 kernel=7.850 wall=10.81 rss=3301112 cg_peak=550380 running=0 queued=6
+2026-11-06T06:28:02Z start chunk E310BT.C240702 leaves=335 running=1 queued=5
+2026-11-06T06:28:12Z ok E310BT.C240702 leaves=335 kernel=6.760 wall=9.55 rss=3304424 cg_peak=546700 running=0 queued=5
+2026-11-06T06:28:22Z start chunk E310BT.C240704 leaves=324 running=1 queued=4
+2026-11-06T06:28:33Z ok E310BT.C240704 leaves=324 kernel=7.630 wall=10.83 rss=3262508 cg_peak=501664 running=0 queued=4
+2026-11-06T06:28:42Z start chunk E310BT.C240601 leaves=293 running=1 queued=3
+2026-11-06T06:28:53Z ok E310BT.C240601 leaves=293 kernel=7.200 wall=10.32 rss=3260128 cg_peak=508252 running=0 queued=3
+2026-11-06T06:29:02Z start chunk E310BT.C240703 leaves=285 running=1 queued=2
+2026-11-06T06:29:10Z ok E310BT.C240703 leaves=285 kernel=5.000 wall=7.44 rss=3281948 cg_peak=523296 running=0 queued=2
+2026-11-06T06:29:22Z start chunk E310BT.C240602 leaves=236 running=1 queued=1
+2026-11-06T06:29:30Z ok E310BT.C240602 leaves=236 kernel=4.670 wall=7.36 rss=3269512 cg_peak=509152 running=0 queued=1
+2026-11-06T06:29:42Z start root E310BT.Root leaves=2702 running=1 queued=0
+2026-11-06T06:29:45Z ok E310BT.Root leaves=2702 kernel=0.002 wall=2.55 rss=3070504 cg_peak=302124 running=0 queued=0
+{"finished": "2026-11-06T06:29:46Z", "not_ok": [], "not_started": 0, "stopped": null}

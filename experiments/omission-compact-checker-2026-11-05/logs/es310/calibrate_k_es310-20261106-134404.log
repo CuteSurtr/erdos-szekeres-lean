@@ -1,0 +1,40 @@
+2026-11-06T04:44:04Z lane a round 1 k=4 start (Tctl 76, lean procs 0)
+2026-11-06T04:44:06Z lane b round 1 k=8 start (Tctl 76, lean procs 0)
+2026-11-06T04:44:57Z lane a round 1 k=4 exit 0 2026-11-06T04:44:56Z ok E310BT.C240701 leaves=1781 kernel=41.000 wall=47.42 rss=3452876 cg_peak=724620 running=0 queued=0
+2026-11-06T04:44:57Z lane a round 1 k=8 start (Tctl 78, lean procs 1)
+2026-11-06T04:45:03Z lane b round 1 k=8 exit 0 2026-11-06T04:45:02Z ok E310BT.C240701 leaves=1781 kernel=43.600 wall=50.67 rss=3406032 cg_peak=675060 running=0 queued=0
+2026-11-06T04:45:03Z lane b round 1 k=16 start (Tctl 78, lean procs 1)
+2026-11-06T04:45:53Z lane a round 1 k=8 exit 0 2026-11-06T04:45:52Z ok E310BT.C240701 leaves=1781 kernel=42.900 wall=49.76 rss=3406252 cg_peak=674232 running=0 queued=0
+2026-11-06T04:45:53Z lane a round 1 k=16 start (Tctl 76, lean procs 0)
+2026-11-06T04:45:54Z lane b round 1 k=16 exit 0 2026-11-06T04:45:53Z ok E310BT.C240701 leaves=1781 kernel=38.800 wall=44.98 rss=3367576 cg_peak=640304 running=0 queued=0
+2026-11-06T04:45:54Z lane b round 1 k=4 start (Tctl 76, lean procs 0)
+2026-11-06T04:46:43Z lane a round 1 k=16 exit 0 2026-11-06T04:46:42Z ok E310BT.C240701 leaves=1781 kernel=37.100 wall=43.24 rss=3380692 cg_peak=652552 running=0 queued=0
+2026-11-06T04:46:43Z lane a round 2 k=4 start (Tctl 77, lean procs 1)
+2026-11-06T04:46:44Z lane b round 1 k=4 exit 0 2026-11-06T04:46:43Z ok E310BT.C240701 leaves=1781 kernel=38.600 wall=44.82 rss=3454264 cg_peak=732424 running=0 queued=0
+2026-11-06T04:46:44Z lane b round 2 k=8 start (Tctl 77, lean procs 0)
+2026-11-06T04:47:33Z lane a round 2 k=4 exit 0 2026-11-06T04:47:32Z ok E310BT.C240701 leaves=1781 kernel=38.000 wall=44.14 rss=3454324 cg_peak=732108 running=0 queued=0
+2026-11-06T04:47:33Z lane a round 2 k=8 start (Tctl 77, lean procs 1)
+2026-11-06T04:47:41Z lane b round 2 k=8 exit 0 2026-11-06T04:47:40Z ok E310BT.C240701 leaves=1781 kernel=43.900 wall=50.91 rss=3404268 cg_peak=678408 running=0 queued=0
+2026-11-06T04:47:41Z lane b round 2 k=16 start (Tctl 78, lean procs 1)
+2026-11-06T04:48:20Z lane a round 2 k=8 exit 0 2026-11-06T04:48:19Z ok E310BT.C240701 leaves=1781 kernel=35.500 wall=41.44 rss=3405908 cg_peak=671976 running=0 queued=0
+2026-11-06T04:48:21Z lane a round 2 k=16 start (Tctl 77, lean procs 1)
+2026-11-06T04:48:28Z lane b round 2 k=16 exit 0 2026-11-06T04:48:27Z ok E310BT.C240701 leaves=1781 kernel=35.100 wall=41.02 rss=3380784 cg_peak=656352 running=0 queued=0
+2026-11-06T04:48:28Z lane b round 2 k=4 start (Tctl 77, lean procs 1)
+2026-11-06T04:49:14Z lane b round 2 k=4 exit 0 2026-11-06T04:49:13Z ok E310BT.C240701 leaves=1781 kernel=34.800 wall=40.73 rss=3447284 cg_peak=726292 running=0 queued=0
+2026-11-06T04:49:15Z lane b round 3 k=8 start (Tctl 78, lean procs 0)
+2026-11-06T04:49:16Z lane a round 2 k=16 exit 0 2026-11-06T04:49:15Z ok E310BT.C240701 leaves=1781 kernel=43.000 wall=49.89 rss=3380840 cg_peak=660636 running=0 queued=0
+2026-11-06T04:49:16Z lane a round 3 k=4 start (Tctl 77, lean procs 0)
+2026-11-06T04:50:01Z lane b round 3 k=8 exit 0 2026-11-06T04:50:00Z ok E310BT.C240701 leaves=1781 kernel=34.700 wall=40.50 rss=3404432 cg_peak=667880 running=0 queued=0
+2026-11-06T04:50:01Z lane b round 3 k=16 start (Tctl 78, lean procs 1)
+2026-11-06T04:50:03Z lane a round 3 k=4 exit 0 2026-11-06T04:50:02Z ok E310BT.C240701 leaves=1781 kernel=35.800 wall=41.90 rss=3452784 cg_peak=730920 running=0 queued=0
+2026-11-06T04:50:03Z lane a round 3 k=8 start (Tctl 78, lean procs 0)
+2026-11-06T04:50:52Z lane a round 3 k=8 exit 0 2026-11-06T04:50:51Z ok E310BT.C240701 leaves=1781 kernel=36.800 wall=42.87 rss=3406060 cg_peak=673224 running=0 queued=0
+2026-11-06T04:50:52Z lane a round 3 k=16 start (Tctl 79, lean procs 1)
+2026-11-06T04:50:58Z lane b round 3 k=16 exit 0 2026-11-06T04:50:57Z ok E310BT.C240701 leaves=1781 kernel=43.600 wall=50.63 rss=3380508 cg_peak=646016 running=0 queued=0
+2026-11-06T04:50:58Z lane b round 3 k=4 start (Tctl 78, lean procs 1)
+2026-11-06T04:51:47Z lane a round 3 k=16 exit 0 2026-11-06T04:51:46Z ok E310BT.C240701 leaves=1781 kernel=43.000 wall=49.94 rss=3368084 cg_peak=643716 running=0 queued=0
+2026-11-06T04:51:55Z lane b round 3 k=4 exit 0 2026-11-06T04:51:54Z ok E310BT.C240701 leaves=1781 kernel=44.100 wall=51.20 rss=3452708 cg_peak=731208 running=0 queued=0
+== summary (median over runs; verdict ok only)
+k= 4 runs=6 ok=6 olean_bytes=[11493216] kernel_s=[34.8, 35.8, 38.0, 38.6, 41.0, 44.1] median=38.30 wall median=44.48 user median=43.80 rss max=3454324 cg max=732424
+k= 8 runs=6 ok=6 olean_bytes=[6606800] kernel_s=[34.7, 35.5, 36.8, 42.9, 43.6, 43.9] median=39.85 wall median=46.31 user median=45.66 rss max=3406252 cg max=678408
+k=16 runs=6 ok=6 olean_bytes=[4150688] kernel_s=[35.1, 37.1, 38.8, 43.0, 43.0, 43.6] median=40.90 wall median=47.44 user median=46.73 rss max=3380840 cg max=660636

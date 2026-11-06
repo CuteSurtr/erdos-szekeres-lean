@@ -1,0 +1,13 @@
+== 2026-11-06T04:55:39Z import probe, cap 4G; probe sha256 ebe314a452859e30
+posix_fadvise(DONTNEED) on 352 .olean files, 6.46 GB (opened O_RDONLY)
+start: Tctl 76.6 C, 0 lean processes, MemAvailable 42.4 GiB
+'E311.balanced_excludes_63' depends on axioms: [propext, Classical.choice, Quot.sound]
+'E311.residual_excludes_32' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:42.25
+	Maximum resident set size (kbytes): 6905772
+	Exit status: 0
+cgroup memory.peak: 4294967296
+cgroup memory.events: low 0 high 0 max 5662 oom 0 oom_kill 0 oom_group_kill 0 sock_throttled 0 
+build/es311/full/olean unchanged (paths, sizes, mtimes): True (352 files)
+lean exit 0, oom_kill 0, standard axiom lines 2 of 2
+PROBE PASS (cap 4G)
