@@ -1,4 +1,8 @@
-(6,8,9) MATCH recorded=9f63854369a76998e13217e1f4208e365d0821b07f253decca2b9aed1ba1d350 (C6UPPER/logs/encb_gen.log = K8EXACT regen_hashes.log) [2.68 s wall, 188200 KB max RSS] {"m": 6, "K": 8, "t": 9, "nv": 42728, "ncl": 1040348, "counts": {"unit": 1342, "cond": 3696, "chain": 1034982}}
-(7,8,9) MATCH recorded=67cd613d024e36912e61aeae1bb582e1cd992659a6902dfa936ba1f1caa300aa (K8EXACT gen_m7K8t9.log = exact_check.jsonl; gen_b2.py output, not independent) [5.12 s wall, 347940 KB max RSS] {"m": 7, "K": 8, "t": 9, "nv": 58136, "ncl": 1765351, "counts": {"unit": 1637, "cond": 48320, "chain": 1715030}}
-(7,8,10) MATCH recorded=b4d290176cb675c61ecbcf70380cc520aabf093d00e2572328a0975ae2d296e2 (C7UPPER/SHA256SUMS.txt = C6UPPER/logs/encb_gen.log) [7.60 s wall, 487588 KB max RSS] {"m": 7, "K": 8, "t": 10, "nv": 80080, "ncl": 2748538, "counts": {"unit": 2162, "cond": 71622, "chain": 2674271}}
+date: 2026-11-06T16:15:47+09:00 (M2 review-fix step; exe unchanged since M2); load: 31.05 30.96 30.86
+command: systemd-run --user --scope -q -p MemoryMax=8G -p MemorySwapMax=0 nice -n 10 scripts/check_recorded.sh SCRATCH small gen
+exe sha256: e9454996f7f8a21f479cc4a2540d18f2f55f6445fbd36c642d44a7f81fe96a59
+(6,8,9) [gen] MATCH recorded=9f63854369a76998e13217e1f4208e365d0821b07f253decca2b9aed1ba1d350 (C6UPPER/logs/encb_gen.log = K8EXACT regen_hashes.log) [2.59 s wall, 2.55 s user, 188140 KB max RSS] {"m": 6, "K": 8, "t": 9, "nv": 42728, "ncl": 1040348, "counts": {"unit": 1342, "cond": 3696, "chain": 1034982}}
+(7,8,9) [gen] MATCH recorded=67cd613d024e36912e61aeae1bb582e1cd992659a6902dfa936ba1f1caa300aa (K8EXACT gen_m7K8t9.log = exact_check.jsonl; gen_b2.py output, not independent) [4.55 s wall, 4.45 s user, 347956 KB max RSS] {"m": 7, "K": 8, "t": 9, "nv": 58136, "ncl": 1765351, "counts": {"unit": 1637, "cond": 48320, "chain": 1715030}}
+(7,8,10) [gen] MATCH recorded=b4d290176cb675c61ecbcf70380cc520aabf093d00e2572328a0975ae2d296e2 (C7UPPER/SHA256SUMS.txt = C6UPPER/logs/encb_gen.log) [7.03 s wall, 6.86 s user, 486408 KB max RSS] {"m": 7, "K": 8, "t": 10, "nv": 80080, "ncl": 2748538, "counts": {"unit": 2162, "cond": 71622, "chain": 2674271}}
 ALL MATCH
+rc=0
