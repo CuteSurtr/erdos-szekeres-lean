@@ -1,4 +1,4 @@
-# ENCBLEAN: encoder B in Lean (M0 design, M1 byte-identical port, M2 functional twin and numbering bridge)
+# ENCBLEAN: encoder B in Lean (M0 design, M1 byte-identical port, M2 functional twin and numbering bridge, M3 combinatorial soundness)
 
 - **M1.** `EncB.gen m K t` is a Lean definition of the CNF that `C6UPPER/encb/gen_b2.py m K t` writes (gen_b2.py
   SHA-256 `3d47459a9723b5f7344205f3f2d7463e0be00b41c5070155e5da8dbf78fd40ba`). It has the same variable numbering,
@@ -6,12 +6,22 @@
 - **M2.** `EncB.encB m K t` is a second definition of the same CNF, written with list functions and closed-form
   variable codes (`genCoded`), then renumbered in the order of Python's `new()` calls (`allCodes`, `numberMap`).
   The theorems are about `encB`: model transfer, well-formedness, code decoding, and the cube cover of the 64 cubes.
+- **M3.** `EncB.encB_satisfiable`: for even m ≥ 2, every `Model m K t` (the combinatorial interface of `DESIGN.md`
+  §2.2, frozen as `EncB/Model.lean`) makes `encB m K t` satisfiable. Proved Std-only; its only hypotheses are
+  `m % 2 = 0`, `2 ≤ m` and the `Model` (section "M3" below).
 - `lake exe encb_dimacs` prints either one in gen_b2.py's DIMACS layout, and prints cubes in the layout of
   `C6UPPER/tools/mkcubes.py`. With `twin-cubes64` the cubes are taken from the Lean list `cubes64` itself.
 
-**Status (2026-11-06, 16:25 KST).**
+**Status (2026-11-06, 17:35 KST).**
+- **M3 is done (17:20 KST).** `encB_satisfiable` and `encB_satisfiable_6811` are proved, with no `sorry`, no
+  unit statement left as a hypothesis, and axioms [propext, Classical.choice, Quot.sound] (section "M3" below).
 - **M0, M1 and M2 are done, and the three fixes of the M2 review are applied** (section "M2 review fixes" below).
-  The design is in `DESIGN.md` (§3.1 is M2).
+  The design is in `DESIGN.md` (§3.1 is M2, §3.2 M3; the plan M3 followed is `docs/M3PLAN.md`).
+- **Risk R1 is resolved (16:35 KST).** The unit `c6upper-noty12` finished at 15:40:35 KST: cake_lpr accepted all 32
+  n-cubes (base + ¬Y(1,2) + pattern), 32/32, each bound to the CNF and proof hashes, and `verify_final64.py` prints
+  PASS (record `C6UPPER/noty12-2026-11-06/`). With the 32 encoder-B c-cubes of the replay, every verdict that
+  `CubesUnsat64` asks for is certified, so variant A (64 cubes, no reflection) is the primary target with all 64
+  verdicts in hand; variant B and M7′ are not needed (`DESIGN.md` D1, R1).
 - **M2 in one paragraph.** `encB` is proved well formed (`encB_wf`). A model of the coded clauses transfers to a
   model of `encB` (`dimacsSat_of_holds`); membership of every code in the numbering holds by construction. The codes
   decode back to their variables (`decodeCode_code`). The 64 cubes cover all assignments, so the statement
@@ -19,8 +29,9 @@
   theorem (`encB_unsat_of_cubes64`). `encB` equals `gen` and Python on everything tested: bytes on the 225-instance
   grid and the four recorded instances, Lean values on 229 instances, and kernel evaluation on 4 tiny instances,
   one of them, (4,5,1), with a two-level chain.
-- **Nothing about what the clauses mean is proved yet.** That is M3 to M9 of `DESIGN.md`; see "What is NOT yet
-  proved" below.
+- **What the clauses mean is proved for even m (M3), relative to the combinatorial `Model`.** That a geometric
+  counterexample yields a `Model` (M4–M6), the assembly (M8) and the hash binding of all 64 cubes (M9) are not done;
+  see "What is NOT yet proved" below.
 - **The package is Std-only:** no `[[require]]`, no Mathlib, toolchain `leanprover/lean4:v4.24.0` (Lean 4.24.0,
   commit `797c613e`).
 - **No forbidden constructs and standard axioms:**
@@ -29,16 +40,16 @@
   - no `decide`/`rfl`/`simp`/`omega`/`#eval`/`#reduce` anywhere in a declaration that mentions the (6,8,11) instance
     (`encB`, `gen`, `genCoded`, `numVars`, `allCodes`, `allCodesOf`, `encode` or `diagCoded` applied to 6 8 11, or
     `CubesUnsat64`);
-  - every declaration of the package, 236 named ones (47 theorems written in the source) found by walking the
-    environment, has axioms within {propext, Classical.choice, Quot.sound} (`logs/axioms.log`); 17 of them are
-    also guarded at build time by `#guard_msgs`.
+  - every declaration of the package, 425 named ones (180 theorems written in the source; 236 and 47 before M3)
+    found by walking the environment, has axioms within {propext, Classical.choice, Quot.sound}
+    (`logs/axioms.log`); 26 of them are also guarded at build time by `#guard_msgs` (17 before M3).
 - No git commit was made.
 
 ## What exists
 
 | file | lines | content |
 |---|---|---|
-| `DESIGN.md` | 645 | M0: target theorem (variant A: 64 cubes on Y12 Y13 Y14 Y23 Y24 Y34), trust list E1–E6, interfaces (`Model`, `PolarLabelling`), lemma map, milestones M0–M9, risks; revision notes for M2 and the M2 review fixes at the top |
+| `DESIGN.md` | 724 | M0: target theorem (variant A: 64 cubes on Y12 Y13 Y14 Y23 Y24 Y34), trust list E1–E6, interfaces (`Model`, `PolarLabelling`), lemma map (with the as-built M3 map in §3.2), milestones M0–M9, risks; revision notes for M2, the M2 review fixes, R1 and M3 at the top |
 | `EncB/Gen.lean` | 382 | M1: the port (`canon`, `olit`, `angOuts`, `patternLit`, `unitOf`, itertools orders, `gen`). Unchanged since M1 (`ec97b335…`) |
 | `EncB/Dimacs.lean` | 220 | M2: `DimacsSat`, `DimacsSatisfiable`, `LitSat` (copied from H/H3); `numberMap` (an `Array`), `decode`, `numberMap_getD`, `decode_numberMap`; re-proofs of Mathlib's `List.idxOf_cons_ne` and `List.getElem_idxOf`; `dedupStep` with `mem_dedup_foldl` |
 | `EncB/Coded.lean` | 460 | M2: `Var`, the codes and `decodeCode_code`; the twin `genCoded`, `allCodes`, `encB`, `numVars` (via `encode`); `mem_allCodes`, `dimacsSat_of_holds`, `encB_wf`; `diagCoded` (refusal flags for the emitter only) |
@@ -46,12 +57,25 @@
 | `EncB/KernelCheckB.lean` | 102 | M2: `decide +kernel` on `encB`/`numVars` at (3,4,1), (3,4,2), (6,4,1), (4,5,1), on `gen` at (4,5,1) and on `codesDecode` at (3,4,2); `#guard_msgs` axiom audit of the M2 theorems |
 | `EncB/Emit.lean` | 301 | M1's modes unchanged; M2's `twin-*` modes; `bodyL`, `cubeBody`, `cubeBody_eq` (the printed cube text is the rendering of `cubeCnf F c`) |
 | `EncB/KernelCheck.lean` | 35 | M1: `decide +kernel` on `gen` at (3,4,1), (3,4,2), (4,4,2) |
+| `EncB/Model.lean` | 196 | M3 (U0, frozen interface): `Model`, `ChainFrom`, `baseVal`, `tauOf`, `Model.τ`, `Model.τc`; the intermediate specs `OlitSpec`, `OrbListSpec`, `RkMono`, `PatternSpec`, `SortSpec`, `ObjLtSpec`, `objImg`, `SortedSix`, `WordSpec`; `Decidable` instances (used only by the early-warning test) |
+| `EncB/ModelLemmas.lean` | 162 | M3 (U0): literal semantics (`codeLitHolds_neg`, `holds_y`, `holds_orb`, `holds_f`), `perm012_cases`, `chi_perm3`, membership lemmas |
+| `EncB/SortLemmas.lean` | 164 | M3 (U0): `mem_perms`, `insSort_perm`, `insSort_pairwise`, `Obj.lt_iff`, `sortSpec`, position lemmas for `ccwIn` on strictly sorted lists |
+| `EncB/SoundOlit.lean` | 94 | M3 (U0): `rotBy`, `chi_rotBy`, `orbVarC_some`, `olitSpec` (an orbit literal holds iff `chi` of its labels) |
+| `EncB/SoundOrbit.lean` | 233 | M3 U1: `orbListSpec`, `transCl_sound`, `nestLits_sound` (helpers in `EncB.Orbit`) |
+| `EncB/SoundChain.lean` | 218 | M3 U2: `chainCl_sound` (helpers in `EncB.Chain`) |
+| `EncB/SoundAng.lean` | 369 | M3 U3: `angCl_sound` (helpers in `EncB.Ang`) |
+| `EncB/SoundRules.lean` | 276 | M3 U4: `Rules.sortSix`, `Rules.patternSpec_of_sort`, `patternSpec_of` (helpers in `EncB.Rules`) |
+| `EncB/SoundWord.lean` | 229 | M3 U5: `wordSpec` (helpers in `EncB.Word`) |
+| `EncB/Satisfiable.lean` | 52 | M3: `genCoded_sound`, **`encB_satisfiable`**, `encB_satisfiable_6811`; `#guard_msgs` on the axioms of the last two |
+| `EncB/EarlyWarning.lean` | 436 | M3 U6: the early-warning test (evidence only; run by `lean --run`, not imported by `EncB.lean`, not built) |
+| `scripts/ew_test.sh` | 34 | M3 U6: runs the early-warning test under the cap, logs it, exits nonzero unless `EW SUMMARY: PASS` |
+| `docs/M3PLAN.md`, `docs/m3start/` | 607 | the M3 plan (judge of two plans) and the unit start files, copied verbatim by U0 |
 | `ref/make_ref.py`, `ref/hashes.tsv` | 80 | M1: the reference corpus (225 instances from gen_b2.py) |
 | `scripts/compare_b.sh` | 34 | the 225 grid instances by SHA-256; second argument `gen` or `twin` |
 | `scripts/twin_check.sh` | 25 | M2: `encB = gen` as Lean values (no printing) on the grid plus extra instances |
 | `scripts/check_recorded.sh` | 127 | recorded instances; third argument `gen` or `twin`. Twin `big` = one emission of (6,8,11) with cubes from `cubes64`, the cube-variable check and the emitted-file check |
 | `scripts/audit.sh` | 64 | static checks (forbidden tokens, Std-only, toolchain, no kernel evaluation of the (6,8,11) instance, checked per declaration) |
-| `logs/` | | see "M2 results", "M2 review fixes" and "M1 results" below; `env.txt` has every source hash; `axioms_enum.lean.txt` and `axioms_query.lean.txt` are the two axiom queries |
+| `logs/` | | see "M3", "M2 results", "M2 review fixes" and "M1 results" below; `env.txt` has every source hash (as of M2); `axioms_enum.lean.txt` and `axioms_query.lean.txt` are the two axiom queries; M3: `m3_u0_*` (U0), `m3_build.log`, `m3_mutants.log`, `m3_early_warning.log` (U6's run), `m3_early_warning_integ.log` (Integration's rerun) |
 
 Lines of Lean code written in M2, without blank and comment lines: Dimacs 154, Coded 285, Cover 73, KernelCheckB 40
 (30 before the review fixes), plus 133 in Emit.lean (from 90 to 223 such lines; 132 to 301 lines in all). Scripts:
@@ -67,8 +91,9 @@ directory.
 cd cloud/es7-2026-10-19/results/ENCBLEAN
 export PATH=$HOME/.elan/bin:$PATH
 CAP="systemd-run --user --scope -q -p MemoryMax=8G -p MemorySwapMax=0 nice -n 10"
-$CAP lake build                                        # clean: 21 s wall, 2.1 GB peak (KernelCheckB 17-19 s, KernelCheck 11 s)
+$CAP lake build                                        # clean (M2): 21 s wall, 2.1 GB peak (KernelCheckB 17-19 s, KernelCheck 11 s); the 10 M3 modules add about 10 s, 0.45 GB
 $CAP scripts/audit.sh
+bash scripts/ew_test.sh [LOG]                          # M3 early-warning test, about 6 min; caps itself at 4 GB (default LOG overwrites logs/m3_early_warning.log)
 $CAP scripts/compare_b.sh ref/hashes.tsv twin          # 48 s; the 225 grid instances, encB
 $CAP scripts/compare_b.sh ref/hashes.tsv gen           # 23 s; the same, gen (M1)
 $CAP scripts/twin_check.sh ref/hashes.tsv '6 8 9' '7 8 9' '7 8 10'   # 110 s; encB = gen as values
@@ -96,6 +121,191 @@ How to call the exe (the `twin-*` modes print `encB`, the others print `gen`):
   (`cubeVars64`).
 - **Refusal.** On an instance where gen_b2.py raises, the exe writes nothing and exits with 1. For the twin this is
   decided by `diagCoded`.
+
+## M3: combinatorial soundness (`encB_satisfiable`), 2026-11-06
+
+**How it was made.** The plan is `docs/M3PLAN.md`, a judge's merge of two competing plans. Unit U0 copied the
+frozen interface (`Model.lean`, `ModelLemmas.lean`, `SortLemmas.lean`, `SoundOlit.lean`; hashes in the plan) and
+built it. Six units then worked in parallel in this directory:
+- U1–U5 each proved one frozen statement in a file of its own;
+- U6 wrote the early-warning test.
+
+No unit imported another unit's file, edited an existing file or ran `lake build`; the dependencies between units
+were explicit hypotheses. An independent verifier re-checked each unit and passed all six. It checked:
+- the file hash;
+- a capped compile;
+- the `#guard_msgs` axiom guard, plus a negative control with a wrong guard, which must fail;
+- the statement against plan §2.2;
+- the audit;
+- name collisions;
+- that no other file was touched.
+
+Integration (17:18–17:40 KST) copied the judge's `Satisfiable.lean` unchanged (sha256 `5c908151…`), added six imports
+to `EncB.lean`, and ran the build, the audit, the axiom queries, the mutants and the early-warning test again.
+
+### The theorem (`EncB/Satisfiable.lean:37`, `:43`)
+
+```lean
+theorem encB_satisfiable {m K t : Nat} (heven : m % 2 = 0) (hm : 2 ≤ m) (M : Model m K t) :
+    DimacsSatisfiable (encB m K t) :=
+  dimacsSatisfiable_of_holds M.τ (genCoded_sound heven hm M)
+
+theorem encB_satisfiable_6811 (M : Model 6 8 11) : DimacsSatisfiable (encB 6 8 11) :=
+  encB_satisfiable (Nat.mul_mod_right 2 3) (Nat.le_add_left 2 4) M
+```
+
+- **Hypotheses: only `heven`, `hm` and the `Model`.**
+  - `Model m K t` is `EncB/Model.lean:81-102`: the 13 fields of `DESIGN.md` §2.2, with `Valid` replaced by Coded's
+    `PtOk` (same body).
+  - All five unit statements are proved. So the plan's fallback, which would have kept a stalled unit's statement
+    as an explicit hypothesis, was not used.
+  - The intermediate specs are discharged inside `genCoded_sound`: `OrbListSpec` by `orbListSpec m t`, and
+    `PatternSpec` by `patternSpec_of wordSpec M`.
+- **The assignment** is `M.τ` (`Model.lean`, `tauOf`):
+  - `Y(i,j) ↦ psiLt i j`;
+  - `orb [a,b,d] ↦ chi a b d`;
+  - `F(i,l,a,b) ↦ ChainFrom m t chi i l a b`, a chain of length l from pivot (i,0) starting with a, b;
+  - everything else ↦ false.
+
+  `dimacsSatisfiable_of_holds` (M2) carries it to `encB` through the numbering.
+- **Axioms:** [propext, Classical.choice, Quot.sound] for both theorems. This is checked at build time by
+  `#guard_msgs in #print axioms` (Satisfiable.lean:46-50) and by the queries in `logs/axioms.log`.
+- **No kernel evaluation of (6,8,11).**
+  - The side conditions of `encB_satisfiable_6811` are proof terms (`2 * 3 % 2 = 0` and `2 ≤ 4 + 2`), not `decide`.
+  - Audit check 4 lists this declaration and finds no risky token.
+  - `Satisfiable.lean` builds in 0.35 s.
+- **Scope.**
+  - Even m only (`heven`; odd m, the sevenfold case, stays out, `DESIGN.md` R9).
+  - The theorem is about the combinatorial `Model`. That a geometric counterexample yields a `Model` is M4–M6.
+- **Read with M2.** `encB_unsat_of_cubes64` (Cover.lean:114) together with `encB_satisfiable_6811` gives:
+  `CubesUnsat64` implies that no `Model 6 8 11` exists. That one-line composition is not stated in Lean here; it
+  belongs to M8.
+
+### What is proved
+
+Every row has axioms [propext, Classical.choice, Quot.sound].
+
+| statement | file:line | unit |
+|---|---|---|
+| `genCoded_sound heven hm M : ∀ cl ∈ genCoded m K t, ∃ x ∈ cl, CodeLitHolds M.τc x` | Satisfiable.lean:26 | Integration (judge's text) |
+| `transCl_sound M : ∀ cl ∈ transCl t, ∃ x ∈ cl, CodeLitHolds M.τc x` | SoundOrbit.lean:174 | U1 |
+| `nestLits_sound M (hm : 2 ≤ m) : ∀ l ∈ nestLits m t, CodeLitHolds M.τc l` | SoundOrbit.lean:212 | U1 |
+| `orbListSpec m t : OrbListSpec m t` (each `c ∈ orbList m t` is `[a, b, d]`, three distinct valid labels) | SoundOrbit.lean:161 | U1 |
+| `chainCl_sound M isF : ∀ i ∈ rng 0 t, ∀ cl ∈ chainCl m K t isF i, ∃ x ∈ cl, CodeLitHolds M.τc x` (every filter `isF`) | SoundChain.lean:202 | U2 |
+| `angCl_sound M heven (hOL : OrbListSpec m t) (hP : PatternSpec M) : ∀ c ∈ orbList m t, ∀ cl ∈ angClOf (angOutsC m t c).1, ∃ x ∈ cl, CodeLitHolds M.τc x` | SoundAng.lean:329 | U3 |
+| `patternSpec_of (hW : WordSpec) M : PatternSpec M` (via `Rules.sortSix` :218 and the judge's glue `Rules.patternSpec_of_sort` :139) | SoundRules.lean:270 | U4 |
+| `wordSpec : WordSpec` (a sorted word of six objects gives `AltCCW` or `BlockCCW`) | SoundWord.lean:222 | U5 |
+| `olitSpec M : OlitSpec M` (an orbit literal holds iff `chi` of its three labels) | SoundOlit.lean:38 | U0 |
+
+**The clause families of `genCoded` (Coded.lean:281-285).** Each family is covered once, and there is no other
+clause. A filter, a key set, a `none` literal or a failing `olit` only drops clauses, so the proofs hold for any
+outcome of them.
+
+| family | clause shapes | theorem |
+|---|---|---|
+| ψ-order transitivity | `[-Y ij, -Y jk, Y ik]`, `[Y ij, Y jk, -Y ik]` | `transCl_sound` |
+| angular, per orbit `c` | unit `[l]`, or `neg prem ++ [l]` per pattern; `l` from rule A (`±orbCode c`) or rule B (`olit a b cc`) | `angCl_sound` with `orbListSpec`, `patternSpec_of wordSpec` |
+| nesting units | `[olit (i,0) (i,1) (j,k)]` | `nestLits_sound` |
+| chains, per pivot | base `[F₂(a,b), -l]`, extension `[-F_lev(b,c), -lab, -lt, F_{lev+1}(a,b)]`, closing `[-F_lev(b,c), -lab, -lt]` | `chainCl_sound` |
+
+**How the proofs go.**
+- **U1, orbits and order.**
+  - `Orbit.mem_dedupBy`: `dedupBy` keeps only input elements (a fold invariant).
+  - `labels` is pairwise `ptLt`.
+  - `Orbit.canon_eq`: `canon m tri = insSort ptLt (tri.map (rotBy m s))` for some `s`, and `rotBy` is injective on
+    valid sectors. Together these give `orbListSpec`.
+  - Transitivity clauses: `psiLt_trans`; the second clause uses totality, transitivity and irreflexivity.
+  - Nesting: `olitSpec` with `M.nest`.
+- **U2, chains.**
+  - The base and extension clauses get explicit chain witnesses `q` (`Chain.chainFrom_two`,
+    `Chain.chainFrom_cons`).
+  - A closing clause would give a chain of length K − 1, which contradicts `M.noChain`.
+- **U3, angular clauses.**
+  - Existence (`Ang.exists_rkMono`): the pattern `s := insSort M.psiLt free`, with ranks `free.map s.idxOf`, follows ψ.
+  - Premises (`Ang.rkMono_of_prem`): if every premise holds, the ranks follow ψ.
+  - So a unit clause is that pattern's literal, and a conditional clause has a false premise or a true literal.
+  - `eraseDups` is handled by a structural invariant on `eraseDupsBy.loop`.
+  - `patternLit` and `angOuts` are never unfolded at a concrete list; the start file's `rfl` bridges are used instead.
+- **U4, sorting (`Rules.sortSix`).** `insSort Obj.lt` puts the six objects in `objLt` order: transitivity and
+  totality come from `Obj.lt_iff` and omega, then `insSort_pairwise`. The judge's glue turns `SortedSix` with
+  `WordSpec` into rules A and B.
+- **U5, cyclic words.** The proof reasons on positions in the sorted list (`ccwIn_getElem_iff`, omega), with no 6×6
+  case split. Alternating words give `AltCCW`, including the wrap-around; a PPP run gives `BlockCCW`.
+
+### Evidence
+
+- **(a) Build** (`logs/m3_build.log`).
+  - `lake build` under the 4 GB cap: rc 0, 2.85 s wall, 454 MB peak, no warning.
+  - It rebuilt the six new modules (0.35–2.2 s each) and `EncB`. Both `#guard_msgs` in Satisfiable.lean held.
+- **(b) Audit** (`logs/audit.log`). AUDIT PASS over 19 sources, including `Satisfiable.lean` and `EarlyWarning.lean`.
+  New negative tests in scratch copies:
+  - `encB_satisfiable_6811` written as `encB_satisfiable (by decide) (by decide) M` gives FAIL (KERNEL EVALUATION
+    RISK);
+  - an appended `sorry` gives FAIL.
+- **(c) Axioms** (`logs/axioms.log`, regenerated by both queries).
+  - 425 named declarations and 550 internal auxiliaries; none uses an axiom outside {propext, Classical.choice,
+    Quot.sound}. No `sorryAx`, no `ofReduceBool`.
+  - The two queries agree on all 425 names.
+  - The 236 M2 lines are unchanged; the 189 new names come from the U0 and M3 modules (133 theorems written in the
+    source).
+  - Build-time guards: 26 (17 before M3).
+- **(d) Mutants** (`logs/m3_mutants.log`). They ran in a scratch copy with its own `.lake`; ENCBLEAN was not touched.
+  - **Deleting any one of the 13 `Model` fields breaks the build, 13 of 13.**
+    - `chi`, `psiLt`: `Model.lean` itself fails.
+    - `chi_cycle`, `chi_swap`: `ModelLemmas` (`chi_perm3`).
+    - `chi_rot`: `SoundOlit`.
+    - `psiLt_irrefl`: SoundOrbit, SoundRules.
+    - `psiLt_trans`: SoundOrbit, SoundAng, SoundRules.
+    - `psiLt_total`: SoundOrbit, SoundAng.
+    - `psiLt_zero`: SoundAng.
+    - `ruleA`, `ruleB`: SoundRules.
+    - `nest`: SoundOrbit.
+    - `noChain`: SoundChain.
+
+    Where the failing file is a unit file, its axiom guard also reports `sorryAx`.
+  - **Negating the nesting literal** in a scratch `Coded.lean` (`nestLits` only):
+    - only `SoundOrbit` fails (`nestLits_sound`: type mismatch, and the guard sees `sorryAx`); the other four units
+      build;
+    - the early-warning run on that copy (355 s) prints `EW SUMMARY: FAIL` and exits with 1:
+      - in all 30 base runs every `Model` law holds;
+      - the unsatisfied clauses are exactly the nesting clauses, all of them (`nest_UNSAT` = `nest_clauses` =
+        `genCoded_UNSAT`: 18 at t = 3, 60 at (6,8,5)).
+  - Controls: the unmodified copy builds, and so does the copy with `Model.lean` restored after the 13 field
+    mutants.
+- **(e) Early-warning test** (`EncB/EarlyWarning.lean`, evidence only, interpreted by `lean --run`).
+  - **U6's run** (`logs/m3_early_warning.log`, 356 s): `EW SUMMARY: PASS`.
+    - 30 base runs: SIX60 sets A–D and their mirrors at (6,8,3), four at (6,8,5), non-monotone ψ, m = 4 squares, and
+      plan A's ℤ[√3] polygons.
+    - In every base run every `Model` law holds as a Bool over valid labels, and 0 of the `genCoded` clauses are
+      unsatisfied (89,530 clauses at t = 5).
+    - The `SortedSix`/`WordSpec` check finds 0 violations in 161,280 triples.
+    - All 6 controls are detected.
+  - **Integration's rerun** (`logs/m3_early_warning_integ.log`, 17:30 KST, 303 s): `EW SUMMARY: PASS`, exit 0, with
+    the same input hashes.
+    - The 162 result lines are byte-identical to U6's log once the `#` header and the per-run `(… ms)` timing lines
+      are removed.
+    - U6's log was kept; the rerun went to a new file.
+- **(f) The units' own checks** (verifier reports, summarized):
+
+  | unit | file | sha256 | lines (code) | verifier |
+  |---|---|---|---|---|
+  | U1 | SoundOrbit.lean | `ce93c201…` | 233 (176) | PASS |
+  | U2 | SoundChain.lean | `d2d59081…` | 218 (181) | PASS |
+  | U3 | SoundAng.lean | `6fa1ad05…` | 369 (293) | PASS |
+  | U4 | SoundRules.lean | `8cb4637e…` | 276 (238) | PASS |
+  | U5 | SoundWord.lean | `c1bdb417…` | 229 (180) | PASS |
+  | U6 | EarlyWarning.lean | `38d3c253…` | 436 (298) | PASS |
+
+  "Code" means not blank, not a comment and not a docstring. With the U0 files (616 lines, 467 code) and
+  `Satisfiable.lean` (52, 23), M3 adds 1,993 lines of library Lean, 1,558 of them code (DESIGN estimated 1.0–1.3k).
+
+**Minor points, none blocking.**
+- `WordSpec` has a `Distinct3 a b d` hypothesis that `wordSpec` does not use, and `EncB.Word.lt3_of_perm` is unused.
+- `EarlyWarning.lean` defines a root `main` (`lean --run` needs it), as `Emit.lean` does. No module imports both.
+- Its `main` returns `IO UInt32`, not the plan's `IO Unit`, so that `ew_test.sh` gets an exit code.
+- The module docstring of `SoundChain.lean` still calls the file a "starting point".
+
+**Not done in M3.** No git commit. `logs/env.txt` was regenerated (see its header). M4–M9 are not started.
 
 ## M2: the functional twin and the numbering bridge
 
@@ -369,7 +579,9 @@ reproducible. The load average was about 35 on 32 cores throughout, so all times
 | `n00000` | 58,618,890 | `33894742a77ef9fc56af7411d05c089d179bc2f5eb091a758d9bf94ee34d19d0` | noty12 `cubes.sha256` |
 
 The noty12 hash list is `/home/jay/research/data/c6upper-noty12-20261106/cubes.sha256`. It was only read; the
-running unit `c6upper-noty12` was not touched. Its `results.tsv` had 8 of 32 ACCEPTED at 14:43. The other 57 cubes
+running unit `c6upper-noty12` was not touched. Its `results.tsv` had 8 of 32 ACCEPTED at 14:43. (Since 16:35: the
+unit finished with 32/32 ACCEPTED; the list is also on record as `C6UPPER/noty12-2026-11-06/cubes.sha256`, with the
+same 32 hashes, and the two rows above are in it.) The other 57 cubes
 differ only in their 6-unit tail, which is printed by the same code; all 64 are checked in M9.
 
 **(d) Kernel check and audit.**
@@ -468,10 +680,9 @@ Nothing in gen_b2.py uses floats. The angular configuration uses only integers (
 
 ## What is NOT yet proved
 
-- **The meaning of the clauses.** No theorem relates the clauses of `genCoded` to orientations, ψ-orders or chains.
-  The missing pieces are:
-  - `encB_satisfiable : Model m K t → DimacsSatisfiable (encB m K t)` (M3, Std-only, can start now). It is to be
-    proved through `dimacsSatisfiable_of_holds` with `τ := M.τ` (`DESIGN.md` §2.3; `.other _ ↦ False`);
+- **The geometric meaning of the clauses.** Since M3, `encB_satisfiable` relates every clause of `genCoded` to a
+  combinatorial `Model` (orientations `chi`, the ψ-order `psiLt`, chains), for even m. Nothing yet connects a
+  `Model` to points in the plane. The missing pieces are:
   - the geometric side, labelling and `modelOfLabelling` (M4–M6, Mathlib, after the campaign cutoff 2026-11-16
     17:00);
   - the assembly `sixfold_es8` (M8);
@@ -480,19 +691,18 @@ Nothing in gen_b2.py uses floats. The angular configuration uses only integers (
   - by bytes on 225 + 4 instances and 7 cubes (the M2 review checked 7 more cubes in its own emission);
   - as Lean values on 229 instances;
   - by kernel evaluation on 4 tiny instances.
-- **Three lemmas that M3 needs first** (found by the M2 review; not M2 defects, nothing in M2 depends on them):
-  - `dedupBy` keeps only input elements: `x ∈ dedupBy key S l → x ∈ l`. M2 proved only that nothing is lost
-    (`mem_dedup_foldl`). M3 needs it so that each `c ∈ orbList` is `canon` of a triple of three distinct valid
-    labels.
-  - `canon` keeps triples valid: `canon` of three distinct valid labels gives three distinct valid labels, so that
-    `orbCode m t c` decodes to `.orb c` (via `decodeCode_code`).
-  - Every literal of `genCoded` is `±(v.code m K t)` for a `v` with `v.Valid m K t`. Today this is checked only by
-    compiled code (`codesDecode`, true at (6,8,9), (7,8,9), (7,8,10) and (6,8,11)) and by the kernel at (3,4,2)
-    (`codesDecode_3_4_2`).
+- **The three lemmas that the M2 review said M3 needs first are settled.**
+  - "`dedupBy` keeps only input elements" is `EncB.Orbit.mem_dedupBy` (SoundOrbit.lean:39).
+  - "`canon` keeps triples valid" is part of `orbListSpec` (SoundOrbit.lean:161).
+  - "Every literal of `genCoded` is `±(v.code m K t)` for a valid `v`" was not needed as a separate lemma. M3 proves
+    each family's clauses directly under `M.τc = M.τ ∘ decodeCode`, through `holds_y`, `holds_orb`, `holds_f` and
+    `olitSpec`, which apply `decodeCode_code` to the labels at hand. The all-literals statement itself is still
+    checked only by compiled code (`codesDecode`) and by the kernel at (3,4,2).
 - **The DIMACS round trip** (see Trust above) is not proved.
-- **n-cube verdicts.** The c6upper-noty12 run's `run.log` says at 15:40:35: "32 of 32 NOT-Y(1,2) cube proofs
-  accepted by cake_lpr, hash-bound (results.tsv)". This was only read. Its post-run gate `verify_final64.py` has
-  no log yet, and this step did not run it. Variant A of `DESIGN.md` needs that gate.
+- **n-cube verdicts: certified (R1 resolved, 16:35).** The c6upper-noty12 run's `run.log` says at 15:40:35: "32 of
+  32 NOT-Y(1,2) cube proofs accepted by cake_lpr, hash-bound (results.tsv)". Its post-run gate `verify_final64.py`
+  has since run and prints PASS (`C6UPPER/noty12-2026-11-06/verify_final64.log`), so variant A has all 64 verdicts.
+  What remains for variant A is the Lean side (M4–M9 since M3 was done), not the certificates. This README step did not run the gate.
 - **m = 7** (sevenfold) is ported for byte identity only. Its soundness is out of scope (`DESIGN.md` §1.3).
 
 ## M1 review fixes applied (2026-11-06, about 15:00 KST)
@@ -514,7 +724,7 @@ All four issues of the review were checked against the files, found real, and fi
    and sized `FL·N²`.)
 4. **Minor points.**
    - The `sixfold66_of_unsat` sketch now passes both side conditions, `(by decide) (by decide)` for `heven` and
-     `hm`. It also uses the name `modelOfLabelling` of §2.4 consistently, in D5 and the §2.4 heading too.
+     `hm` (superseded in M3: the sketch now calls `encB_satisfiable_6811`, see DESIGN §1.1). It also uses the name `modelOfLabelling` of §2.4 consistently, in D5 and the §2.4 heading too.
    - M9 now says to emit from the Lean list `cubes64`, not from `cubeUnits`, and to read recorded hashes from
      files.
    - `check_recorded.sh` no longer hard-codes any hash. It reads each one from its record file and requires it to

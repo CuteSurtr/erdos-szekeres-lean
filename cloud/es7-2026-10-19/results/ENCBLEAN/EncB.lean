@@ -4,3 +4,13 @@ import EncB.Dimacs
 import EncB.Coded
 import EncB.Cover
 import EncB.KernelCheckB
+import EncB.Model
+import EncB.ModelLemmas
+import EncB.SortLemmas
+import EncB.SoundOlit
+import EncB.SoundOrbit
+import EncB.SoundChain
+import EncB.SoundAng
+import EncB.SoundRules
+import EncB.SoundWord
+import EncB.Satisfiable
