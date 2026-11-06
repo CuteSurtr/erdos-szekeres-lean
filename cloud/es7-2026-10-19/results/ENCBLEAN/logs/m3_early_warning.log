@@ -1,0 +1,209 @@
+# M3 early-warning test (scripts/ew_test.sh), 2026-11-06T17:08:47+09:00
+# load average: 33.68 31.98 31.04
+# toolchain: leanprover/lean4:v4.24.0; Lean (version 4.24.0, x86_64-unknown-linux-gnu, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)
+# git HEAD: c28a98af6c961821c69897fd8437ecb0b9af4e52
+# sha256 ec97b3355b9cfe39f85e9b011ae91c429b5e3764683b9d601cd25a2360a02adf  EncB/Gen.lean
+# sha256 48cbeac96e085d2e3e90d3e7a44f40909b24e4fb985f545de2824c356f64f6a8  EncB/Dimacs.lean
+# sha256 2727e00bbd4ce9eab7f4af634c8ad3c056c1122cac1d9bd11f080e6265a69c5f  EncB/Coded.lean
+# sha256 42240829ba35fc9598285a15c8dcc92b1c749db4ae0f256ee537767375edca31  EncB/Model.lean
+# sha256 38d3c2530629e1b33cd885fe36914c286ed95f545307cbce0fb1ea318a892b0b  EncB/EarlyWarning.lean
+# command: systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake env lean --run EncB/EarlyWarning.lean
+EW: M3 early-warning test (docs/M3PLAN.md section 4), interpreted by `lean --run`; evidence only
+== (a) A (m,K,t)=(6,8,3) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 504), (blockccw_outer_triples, 234), (chainvars_true, 406)], psi ranks [0, 1, 2]
+   clauses [(trans_clauses, 0), (trans_UNSAT, 0), (ang_clauses, 75), (ang_UNSAT, 0), (nest_clauses, 18), (nest_UNSAT, 0), (chain_clauses, 10570), (chain_UNSAT, 0), (genCoded_clauses, 10663), (genCoded_UNSAT, 0)], families = genCoded: true
+   (4321 ms)
+== (a) A-mirror (m,K,t)=(6,8,3) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 504), (blockccw_outer_triples, 234), (chainvars_true, 429)], psi ranks [0, 2, 1]
+   clauses [(trans_clauses, 0), (trans_UNSAT, 0), (ang_clauses, 75), (ang_UNSAT, 0), (nest_clauses, 18), (nest_UNSAT, 0), (chain_clauses, 10570), (chain_UNSAT, 0), (genCoded_clauses, 10663), (genCoded_UNSAT, 0)], families = genCoded: true
+   (4332 ms)
+== (a) B (m,K,t)=(6,8,3) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 504), (blockccw_outer_triples, 234), (chainvars_true, 400)], psi ranks [0, 1, 2]
+   clauses [(trans_clauses, 0), (trans_UNSAT, 0), (ang_clauses, 75), (ang_UNSAT, 0), (nest_clauses, 18), (nest_UNSAT, 0), (chain_clauses, 10570), (chain_UNSAT, 0), (genCoded_clauses, 10663), (genCoded_UNSAT, 0)], families = genCoded: true
+   (4283 ms)
+== (a) B-mirror (m,K,t)=(6,8,3) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 504), (blockccw_outer_triples, 234), (chainvars_true, 419)], psi ranks [0, 2, 1]
+   clauses [(trans_clauses, 0), (trans_UNSAT, 0), (ang_clauses, 75), (ang_UNSAT, 0), (nest_clauses, 18), (nest_UNSAT, 0), (chain_clauses, 10570), (chain_UNSAT, 0), (genCoded_clauses, 10663), (genCoded_UNSAT, 0)], families = genCoded: true
+   (4301 ms)
+== (a) C (m,K,t)=(6,8,3) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 504), (blockccw_outer_triples, 234), (chainvars_true, 432)], psi ranks [0, 1, 2]
+   clauses [(trans_clauses, 0), (trans_UNSAT, 0), (ang_clauses, 75), (ang_UNSAT, 0), (nest_clauses, 18), (nest_UNSAT, 0), (chain_clauses, 10570), (chain_UNSAT, 0), (genCoded_clauses, 10663), (genCoded_UNSAT, 0)], families = genCoded: true
+   (4341 ms)
+== (a) C-mirror (m,K,t)=(6,8,3) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 504), (blockccw_outer_triples, 234), (chainvars_true, 409)], psi ranks [0, 2, 1]
+   clauses [(trans_clauses, 0), (trans_UNSAT, 0), (ang_clauses, 75), (ang_UNSAT, 0), (nest_clauses, 18), (nest_UNSAT, 0), (chain_clauses, 10570), (chain_UNSAT, 0), (genCoded_clauses, 10663), (genCoded_UNSAT, 0)], families = genCoded: true
+   (4365 ms)
+== (a) D (m,K,t)=(6,8,3) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 504), (blockccw_outer_triples, 234), (chainvars_true, 406)], psi ranks [0, 1, 2]
+   clauses [(trans_clauses, 0), (trans_UNSAT, 0), (ang_clauses, 75), (ang_UNSAT, 0), (nest_clauses, 18), (nest_UNSAT, 0), (chain_clauses, 10570), (chain_UNSAT, 0), (genCoded_clauses, 10663), (genCoded_UNSAT, 0)], families = genCoded: true
+   (4343 ms)
+== (a) D-mirror (m,K,t)=(6,8,3) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 504), (blockccw_outer_triples, 234), (chainvars_true, 429)], psi ranks [0, 2, 1]
+   clauses [(trans_clauses, 0), (trans_UNSAT, 0), (ang_clauses, 75), (ang_UNSAT, 0), (nest_clauses, 18), (nest_UNSAT, 0), (chain_clauses, 10570), (chain_UNSAT, 0), (genCoded_clauses, 10663), (genCoded_UNSAT, 0)], families = genCoded: true
+   (4319 ms)
+== (a) A (m,K,t)=(6,8,5) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 2730), (blockccw_outer_triples, 1110), (chainvars_true, 1884)], psi ranks [0, 1, 2, 3, 4]
+   clauses [(trans_clauses, 8), (trans_UNSAT, 0), (ang_clauses, 576), (ang_UNSAT, 0), (nest_clauses, 60), (nest_UNSAT, 0), (chain_clauses, 88886), (chain_UNSAT, 0), (genCoded_clauses, 89530), (genCoded_UNSAT, 0)], families = genCoded: true
+   (31608 ms)
+== (a) A-mirror (m,K,t)=(6,8,5) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 2730), (blockccw_outer_triples, 1110), (chainvars_true, 1950)], psi ranks [0, 4, 3, 2, 1]
+   clauses [(trans_clauses, 8), (trans_UNSAT, 0), (ang_clauses, 576), (ang_UNSAT, 0), (nest_clauses, 60), (nest_UNSAT, 0), (chain_clauses, 88886), (chain_UNSAT, 0), (genCoded_clauses, 89530), (genCoded_UNSAT, 0)], families = genCoded: true
+   (31527 ms)
+== (a) B-mirror (m,K,t)=(6,8,5) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 2730), (blockccw_outer_triples, 1110), (chainvars_true, 1888)], psi ranks [0, 4, 3, 2, 1]
+   clauses [(trans_clauses, 8), (trans_UNSAT, 0), (ang_clauses, 576), (ang_UNSAT, 0), (nest_clauses, 60), (nest_UNSAT, 0), (chain_clauses, 88886), (chain_UNSAT, 0), (genCoded_clauses, 89530), (genCoded_UNSAT, 0)], families = genCoded: true
+   (31435 ms)
+== (a) D (m,K,t)=(6,8,5) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 2730), (blockccw_outer_triples, 1110), (chainvars_true, 1863)], psi ranks [0, 1, 2, 3, 4]
+   clauses [(trans_clauses, 8), (trans_UNSAT, 0), (ang_clauses, 576), (ang_UNSAT, 0), (nest_clauses, 60), (nest_UNSAT, 0), (chain_clauses, 88886), (chain_UNSAT, 0), (genCoded_clauses, 89530), (genCoded_UNSAT, 0)], families = genCoded: true
+   (31433 ms)
+== (b) A[0,2,5,7,9] (m,K,t)=(6,8,5) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 2730), (blockccw_outer_triples, 1110), (chainvars_true, 1897)], psi ranks [0, 2, 3, 4, 1]
+   clauses [(trans_clauses, 8), (trans_UNSAT, 0), (ang_clauses, 576), (ang_UNSAT, 0), (nest_clauses, 60), (nest_UNSAT, 0), (chain_clauses, 88886), (chain_UNSAT, 0), (genCoded_clauses, 89530), (genCoded_UNSAT, 0)], families = genCoded: true
+   (31377 ms)
+== (b) A[0,2,5,7,9]-mirror (m,K,t)=(6,8,5) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 2730), (blockccw_outer_triples, 1110), (chainvars_true, 2124)], psi ranks [0, 3, 2, 1, 4]
+   clauses [(trans_clauses, 8), (trans_UNSAT, 0), (ang_clauses, 576), (ang_UNSAT, 0), (nest_clauses, 60), (nest_UNSAT, 0), (chain_clauses, 88886), (chain_UNSAT, 0), (genCoded_clauses, 89530), (genCoded_UNSAT, 0)], families = genCoded: true
+   (31131 ms)
+== (b) D[0,3,6,9] (m,K,t)=(6,8,4) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 1320), (blockccw_outer_triples, 564), (chainvars_true, 985)], psi ranks [0, 2, 3, 1]
+   clauses [(trans_clauses, 2), (trans_UNSAT, 0), (ang_clauses, 238), (ang_UNSAT, 0), (nest_clauses, 36), (nest_UNSAT, 0), (chain_clauses, 34912), (chain_UNSAT, 0), (genCoded_clauses, 35188), (genCoded_UNSAT, 0)], families = genCoded: true
+   (13192 ms)
+== (b) D[0,3,6,9]-mirror (m,K,t)=(6,8,4) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 1320), (blockccw_outer_triples, 564), (chainvars_true, 991)], psi ranks [0, 2, 1, 3]
+   clauses [(trans_clauses, 2), (trans_UNSAT, 0), (ang_clauses, 238), (ang_UNSAT, 0), (nest_clauses, 36), (nest_UNSAT, 0), (chain_clauses, 34912), (chain_UNSAT, 0), (genCoded_clauses, 35188), (genCoded_UNSAT, 0)], families = genCoded: true
+   (13160 ms)
+== (c) sq2 (m,K,t)=(4,6,2) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 24), (blockccw_outer_triples, 12), (chainvars_true, 33)], psi ranks [0, 1]
+   clauses [(trans_clauses, 0), (trans_UNSAT, 0), (ang_clauses, 5), (ang_UNSAT, 0), (nest_clauses, 4), (nest_UNSAT, 0), (chain_clauses, 308), (chain_UNSAT, 0), (genCoded_clauses, 317), (genCoded_UNSAT, 0)], families = genCoded: true
+   (154 ms)
+== (c) sq2-mirror (m,K,t)=(4,6,2) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 24), (blockccw_outer_triples, 12), (chainvars_true, 34)], psi ranks [0, 1]
+   clauses [(trans_clauses, 0), (trans_UNSAT, 0), (ang_clauses, 5), (ang_UNSAT, 0), (nest_clauses, 4), (nest_UNSAT, 0), (chain_clauses, 308), (chain_UNSAT, 0), (genCoded_clauses, 317), (genCoded_UNSAT, 0)], families = genCoded: true
+   (154 ms)
+== (c) sq2 (m,K,t)=(4,8,2) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 24), (blockccw_outer_triples, 12), (chainvars_true, 33)], psi ranks [0, 1]
+   clauses [(trans_clauses, 0), (trans_UNSAT, 0), (ang_clauses, 5), (ang_UNSAT, 0), (nest_clauses, 4), (nest_UNSAT, 0), (chain_clauses, 488), (chain_UNSAT, 0), (genCoded_clauses, 497), (genCoded_UNSAT, 0)], families = genCoded: true
+   (219 ms)
+== (c) sq2-mirror (m,K,t)=(4,8,2) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 24), (blockccw_outer_triples, 12), (chainvars_true, 34)], psi ranks [0, 1]
+   clauses [(trans_clauses, 0), (trans_UNSAT, 0), (ang_clauses, 5), (ang_UNSAT, 0), (nest_clauses, 4), (nest_UNSAT, 0), (chain_clauses, 488), (chain_UNSAT, 0), (genCoded_clauses, 497), (genCoded_UNSAT, 0)], families = genCoded: true
+   (219 ms)
+== (c) sq3 (m,K,t)=(4,6,3) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 120), (blockccw_outer_triples, 52), (chainvars_true, 119)], psi ranks [0, 1, 2]
+   clauses [(trans_clauses, 0), (trans_UNSAT, 0), (ang_clauses, 26), (ang_UNSAT, 0), (nest_clauses, 12), (nest_UNSAT, 0), (chain_clauses, 1640), (chain_UNSAT, 0), (genCoded_clauses, 1678), (genCoded_UNSAT, 0)], families = genCoded: true
+   (750 ms)
+== (c) sq3-mirror (m,K,t)=(4,6,3) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 120), (blockccw_outer_triples, 52), (chainvars_true, 117)], psi ranks [0, 2, 1]
+   clauses [(trans_clauses, 0), (trans_UNSAT, 0), (ang_clauses, 26), (ang_UNSAT, 0), (nest_clauses, 12), (nest_UNSAT, 0), (chain_clauses, 1640), (chain_UNSAT, 0), (genCoded_clauses, 1678), (genCoded_UNSAT, 0)], families = genCoded: true
+   (751 ms)
+== (c) sq3 (m,K,t)=(4,8,3) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 120), (blockccw_outer_triples, 52), (chainvars_true, 119)], psi ranks [0, 1, 2]
+   clauses [(trans_clauses, 0), (trans_UNSAT, 0), (ang_clauses, 26), (ang_UNSAT, 0), (nest_clauses, 12), (nest_UNSAT, 0), (chain_clauses, 2652), (chain_UNSAT, 0), (genCoded_clauses, 2690), (genCoded_UNSAT, 0)], families = genCoded: true
+   (1094 ms)
+== (c) sq3-mirror (m,K,t)=(4,8,3) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 120), (blockccw_outer_triples, 52), (chainvars_true, 117)], psi ranks [0, 2, 1]
+   clauses [(trans_clauses, 0), (trans_UNSAT, 0), (ang_clauses, 26), (ang_UNSAT, 0), (nest_clauses, 12), (nest_UNSAT, 0), (chain_clauses, 2652), (chain_UNSAT, 0), (genCoded_clauses, 2690), (genCoded_UNSAT, 0)], families = genCoded: true
+   (1093 ms)
+== (c) sq4 (m,K,t)=(4,6,4) control(noChain): as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 3)]
+   info    [(altccw_triples, 336), (blockccw_outer_triples, 136), (chainvars_true, 312)], psi ranks [0, 1, 3, 2]
+   clauses [(trans_clauses, 2), (trans_UNSAT, 0), (ang_clauses, 101), (ang_UNSAT, 0), (nest_clauses, 24), (nest_UNSAT, 0), (chain_clauses, 5688), (chain_UNSAT, 4), (genCoded_clauses, 5815), (genCoded_UNSAT, 4)], families = genCoded: true
+   (2354 ms)
+== (c) sq4-mirror (m,K,t)=(4,6,4) control(noChain): as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 6)]
+   info    [(altccw_triples, 336), (blockccw_outer_triples, 136), (chainvars_true, 330)], psi ranks [0, 3, 1, 2]
+   clauses [(trans_clauses, 2), (trans_UNSAT, 0), (ang_clauses, 101), (ang_UNSAT, 0), (nest_clauses, 24), (nest_UNSAT, 0), (chain_clauses, 5688), (chain_UNSAT, 7), (genCoded_clauses, 5815), (genCoded_UNSAT, 7)], families = genCoded: true
+   (2369 ms)
+== (c) sq4 (m,K,t)=(4,8,4) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 336), (blockccw_outer_triples, 136), (chainvars_true, 312)], psi ranks [0, 1, 3, 2]
+   clauses [(trans_clauses, 2), (trans_UNSAT, 0), (ang_clauses, 101), (ang_UNSAT, 0), (nest_clauses, 24), (nest_UNSAT, 0), (chain_clauses, 9288), (chain_UNSAT, 0), (genCoded_clauses, 9415), (genCoded_UNSAT, 0)], families = genCoded: true
+   (3481 ms)
+== (c) sq4-mirror (m,K,t)=(4,8,4) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 336), (blockccw_outer_triples, 136), (chainvars_true, 330)], psi ranks [0, 3, 1, 2]
+   clauses [(trans_clauses, 2), (trans_UNSAT, 0), (ang_clauses, 101), (ang_UNSAT, 0), (nest_clauses, 24), (nest_UNSAT, 0), (chain_clauses, 9288), (chain_UNSAT, 0), (genCoded_clauses, 9415), (genCoded_UNSAT, 0)], families = genCoded: true
+   (3512 ms)
+== (e) vs6 (m,K,t)=(6,8,2) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 120), (blockccw_outer_triples, 66), (chainvars_true, 130)], psi ranks [0, 1]
+   clauses [(trans_clauses, 0), (trans_UNSAT, 0), (ang_clauses, 19), (ang_UNSAT, 0), (nest_clauses, 6), (nest_UNSAT, 0), (chain_clauses, 2076), (chain_UNSAT, 0), (genCoded_clauses, 2101), (genCoded_UNSAT, 0)], families = genCoded: true
+   (948 ms)
+== (e) vs6 (m,K,t)=(6,8,3) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 504), (blockccw_outer_triples, 234), (chainvars_true, 430)], psi ranks [0, 2, 1]
+   clauses [(trans_clauses, 0), (trans_UNSAT, 0), (ang_clauses, 75), (ang_UNSAT, 0), (nest_clauses, 18), (nest_UNSAT, 0), (chain_clauses, 10570), (chain_UNSAT, 0), (genCoded_clauses, 10663), (genCoded_UNSAT, 0)], families = genCoded: true
+   (4369 ms)
+== (e) vs4 (m,K,t)=(4,8,3) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 120), (blockccw_outer_triples, 52), (chainvars_true, 132)], psi ranks [0, 1, 2]
+   clauses [(trans_clauses, 0), (trans_UNSAT, 0), (ang_clauses, 26), (ang_UNSAT, 0), (nest_clauses, 12), (nest_UNSAT, 0), (chain_clauses, 2652), (chain_UNSAT, 0), (genCoded_clauses, 2690), (genCoded_UNSAT, 0)], families = genCoded: true
+   (1103 ms)
+== (e) vs6b (m,K,t)=(6,10,3) base: as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 504), (blockccw_outer_triples, 234), (chainvars_true, 508)], psi ranks [0, 2, 1]
+   clauses [(trans_clauses, 0), (trans_UNSAT, 0), (ang_clauses, 75), (ang_UNSAT, 0), (nest_clauses, 18), (nest_UNSAT, 0), (chain_clauses, 14678), (chain_UNSAT, 0), (genCoded_clauses, 14771), (genCoded_UNSAT, 0)], families = genCoded: true
+   (5810 ms)
+== (ctl) A K=5 (m,K,t)=(6,5,3) control(noChain): as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 61)]
+   info    [(altccw_triples, 504), (blockccw_outer_triples, 234), (chainvars_true, 406)], psi ranks [0, 1, 2]
+   clauses [(trans_clauses, 0), (trans_UNSAT, 0), (ang_clauses, 75), (ang_UNSAT, 0), (nest_clauses, 18), (nest_UNSAT, 0), (chain_clauses, 4408), (chain_UNSAT, 195), (genCoded_clauses, 4501), (genCoded_UNSAT, 195)], families = genCoded: true
+   (2281 ms)
+== (ctl) chi(A)/psi(A-mirror) (m,K,t)=(6,8,4) control(clauses): as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 18), (ruleB_fail, 12), (nest_fail, 0), (noChain_fail, 0)]
+   info    [(altccw_triples, 1320), (blockccw_outer_triples, 564), (chainvars_true, 971)], psi ranks [0, 3, 2, 1]
+   clauses [(trans_clauses, 2), (trans_UNSAT, 0), (ang_clauses, 238), (ang_UNSAT, 3), (nest_clauses, 36), (nest_UNSAT, 0), (chain_clauses, 34912), (chain_UNSAT, 0), (genCoded_clauses, 35188), (genCoded_UNSAT, 3)], families = genCoded: true
+   (13256 ms)
+== (ctl) vs6 mirrored chi (m,K,t)=(6,8,3) control(rules): as expected
+   laws    [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 504), (ruleB_fail, 234), (nest_fail, 18), (noChain_fail, 234)]
+   info    [(altccw_triples, 504), (blockccw_outer_triples, 234), (chainvars_true, 1638)], psi ranks [0, 2, 1]
+   clauses [(trans_clauses, 0), (trans_UNSAT, 0), (ang_clauses, 75), (ang_UNSAT, 69), (nest_clauses, 18), (nest_UNSAT, 18), (chain_clauses, 10570), (chain_UNSAT, 77), (genCoded_clauses, 10663), (genCoded_UNSAT, 164)], families = genCoded: true
+   (4390 ms)
+== (d) WordCheck m=2 t=4 psi order [0, 1, 2, 3]: (triples, violations, alternating, with PPP) (192, (0, (48, 144)))
+== (d) WordCheck m=2 t=4 psi order [0, 3, 1, 2]: (triples, violations, alternating, with PPP) (192, (0, (48, 144)))
+== (d) WordCheck m=2 t=4 psi order [0, 2, 3, 1]: (triples, violations, alternating, with PPP) (192, (0, (48, 144)))
+== (d) WordCheck m=2 t=4 psi order [0, 3, 2, 1]: (triples, violations, alternating, with PPP) (192, (0, (48, 144)))
+== (d) WordCheck m=4 t=4 psi order [0, 1, 2, 3]: (triples, violations, alternating, with PPP) (2688, (0, (672, 2016)))
+== (d) WordCheck m=4 t=4 psi order [0, 3, 1, 2]: (triples, violations, alternating, with PPP) (2688, (0, (672, 2016)))
+== (d) WordCheck m=4 t=4 psi order [0, 2, 3, 1]: (triples, violations, alternating, with PPP) (2688, (0, (672, 2016)))
+== (d) WordCheck m=4 t=4 psi order [0, 3, 2, 1]: (triples, violations, alternating, with PPP) (2688, (0, (672, 2016)))
+== (d) WordCheck m=6 t=4 psi order [0, 1, 2, 3]: (triples, violations, alternating, with PPP) (10560, (0, (2640, 7920)))
+== (d) WordCheck m=6 t=4 psi order [0, 3, 1, 2]: (triples, violations, alternating, with PPP) (10560, (0, (2640, 7920)))
+== (d) WordCheck m=6 t=4 psi order [0, 2, 3, 1]: (triples, violations, alternating, with PPP) (10560, (0, (2640, 7920)))
+== (d) WordCheck m=6 t=4 psi order [0, 3, 2, 1]: (triples, violations, alternating, with PPP) (10560, (0, (2640, 7920)))
+== (d) WordCheck m=8 t=4 psi order [0, 1, 2, 3]: (triples, violations, alternating, with PPP) (26880, (0, (6720, 20160)))
+== (d) WordCheck m=8 t=4 psi order [0, 3, 1, 2]: (triples, violations, alternating, with PPP) (26880, (0, (6720, 20160)))
+== (d) WordCheck m=8 t=4 psi order [0, 2, 3, 1]: (triples, violations, alternating, with PPP) (26880, (0, (6720, 20160)))
+== (d) WordCheck m=8 t=4 psi order [0, 3, 2, 1]: (triples, violations, alternating, with PPP) (26880, (0, (6720, 20160)))
+== (ctl) WordCheck swapped picks m=6 t=4 psi order [0, 1, 2, 3]: (triples, violations, alternating, with PPP) (10560, (10560, (2640, 7920)))
+== (ctl) WordCheck swapped picks m=6 t=4 psi order [0, 3, 1, 2]: (triples, violations, alternating, with PPP) (10560, (10560, (2640, 7920)))
+== (ctl) WordCheck swapped picks m=6 t=4 psi order [0, 2, 3, 1]: (triples, violations, alternating, with PPP) (10560, (10560, (2640, 7920)))
+== (ctl) WordCheck swapped picks m=6 t=4 psi order [0, 3, 2, 1]: (triples, violations, alternating, with PPP) (10560, (10560, (2640, 7920)))
+   (52269 ms)
+EW SUMMARY: PASS | runs 35 (base 30, controls 5 + WordCheck swap) | (1) all laws hold => 0 unsatisfied clauses, every run: true | (2) base runs: laws hold, 0 unsatisfied: 30/30 | (3) WordCheck violations 0 of 161280 triples | (4) controls detected 6/6 (WordCheck swap: 42240 of 42240 triples fail) | families = genCoded, every run: true
+# exit=0 wall=356s

@@ -1,3 +1,24 @@
+date: 2026-11-06T17:21:15+09:00 (M3 Integration step; supersedes the audit.log of 2026-11-06T16:16:20+09:00, whose M2 record is kept below)
+command: systemd-run --user --scope -q -p MemoryMax=8G -p MemorySwapMax=0 nice -n 10 scripts/audit.sh
+declarations mentioning the (6,8,11) instance (pattern: \b(encB|gen|genCoded|numVars|allCodes|allCodesOf|encode|diagCoded)\s+6\s+8\s+11\b|\bCubesUnsat64\b):
+  EncB/Cover.lean:110 (+4 lines): def CubesUnsat64 : Prop := ∀ c ∈ cubes64, ¬DimacsSatisfiable (cubeCnf (encB 6 8 11) c)
+  EncB/Cover.lean:114 (+4 lines): theorem encB_unsat_of_cubes64 (h : ∀ c ∈ cubes64, ¬DimacsSatisfiable (cubeCnf (encB 6 8 11) c)) :
+  EncB/Cover.lean:118 (+3 lines): theorem encB_unsat_of_cubesUnsat64 (h : CubesUnsat64) : ¬DimacsSatisfiable (encB 6 8 11) :=
+  EncB/Satisfiable.lean:43 (+9 lines): theorem encB_satisfiable_6811 (M : Model 6 8 11) : DimacsSatisfiable (encB 6 8 11) :=
+sources: EncB.lean EncB/Coded.lean EncB/Cover.lean EncB/Dimacs.lean EncB/EarlyWarning.lean EncB/Emit.lean EncB/Gen.lean EncB/KernelCheck.lean EncB/KernelCheckB.lean EncB/Model.lean EncB/ModelLemmas.lean EncB/Satisfiable.lean EncB/SortLemmas.lean EncB/SoundAng.lean EncB/SoundChain.lean EncB/SoundOlit.lean EncB/SoundOrbit.lean EncB/SoundRules.lean EncB/SoundWord.lean
+toolchain: leanprover/lean4:v4.24.0
+AUDIT PASS (no sorry/admit/native_decide/implemented_by/extern/unsafe/partial/axiom/opaque/set_option/ofReduceBool in code; Std-only; no decide/rfl/simp/omega/#eval/#reduce in a declaration that mentions the (6,8,11) instance)
+rc=0
+
+M3 negative tests (2026-11-06 17:21 KST, each in a scratch copy of lakefile.toml, lean-toolchain, EncB.lean, EncB/ and scripts/; the package was not touched):
+  ctrl: unmodified copy (with EncB/Satisfiable.lean)                                       -> AUDIT PASS rc=0
+  a: encB_satisfiable_6811 proved as 'encB_satisfiable (by decide) (by decide) M' (DESIGN §1.1's old sketch, plan B's form) -> AUDIT FAIL rc=1
+     (KERNEL EVALUATION RISK EncB/Satisfiable.lean:43, token "decide")
+  b: appended to EncB/Satisfiable.lean: 'theorem bad_u (M : Model 6 8 11) : True' (uses genCoded_sound (by decide) (by decide) M;
+     it names no encB/gen/... applied to 6 8 11, so check 4 does not flag it, as designed) and 'theorem bad_s : True := by sorry'
+                                                                                             -> AUDIT FAIL rc=1 (FORBIDDEN sorry)
+
+==== M2 record (audit.log of 2026-11-06T16:16:20+09:00, verbatim) ====
 date: 2026-11-06T16:16:20+09:00 (M2 review-fix step; supersedes the M2 audit.log of 2026-11-06T15:40:14+09:00)
 command: systemd-run --user --scope -q -p MemoryMax=8G -p MemorySwapMax=0 nice -n 10 scripts/audit.sh
 declarations mentioning the (6,8,11) instance (pattern: \b(encB|gen|genCoded|numVars|allCodes|allCodesOf|encode|diagCoded)\s+6\s+8\s+11\b|\bCubesUnsat64\b):

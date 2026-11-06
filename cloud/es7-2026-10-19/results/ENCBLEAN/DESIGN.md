@@ -36,6 +36,49 @@ in `README.md`, "M2"):
 
 No definition or statement changed (README, "M2 review fixes").
 
+**Revision (2026-11-06, about 16:35 KST, risk R1 resolved).** The unit `c6upper-noty12` finished at 15:40:35 KST:
+cake_lpr accepted all 32 n-cubes (base + ¬Y(1,2) + pattern), 32/32, hash-bound, and `verify_final64.py` prints PASS.
+The record is `C6UPPER/noty12-2026-11-06/` (`README.md`, `results.tsv`, `cubes.sha256`, `verify_final64.log`). With
+the 32 encoder-B c-cubes of the replay, all 64 verdicts of `CubesUnsat64` are certified, so **variant A is the
+primary target with every verdict in hand**; variant B (§1.2) and M7′ are not needed. Updated here: D1, E1, E2, M9,
+R1 and Appendix B. KS line numbers in this file refer to `k8_soundness_p1.tex` before its revision of the same day
+for this record (source `248bf037…`); that revision added Theorem (a′) and moved later lines down. No definition or
+statement changed.
+
+**Revision (2026-11-06, about 17:35 KST, M3 done).** M3 is implemented as planned in `docs/M3PLAN.md`. The frozen
+interface (unit U0) is `EncB/Model.lean`, `ModelLemmas.lean`, `SortLemmas.lean` and `SoundOlit.lean`. The units are
+`SoundOrbit` (U1), `SoundChain` (U2), `SoundAng` (U3), `SoundRules` (U4) and `SoundWord` (U5). The assembly is
+`Satisfiable.lean`, and the early-warning test is `EarlyWarning.lean` (U6). `encB_satisfiable {m K t}
+(heven : m % 2 = 0) (hm : 2 ≤ m) (M : Model m K t) : DimacsSatisfiable (encB m K t)` and `encB_satisfiable_6811` are
+proved with axioms [propext, Classical.choice, Quot.sound] and no other hypothesis (README, "M3"). Deviations
+from §2.2–2.3 (plan §1.3):
+1. `Valid` is dropped in favour of Coded's `PtOk` (Coded.lean:76), which has the same body, `a.1 < t ∧ a.2 < m`.
+2. τ is `tauOf m t chi psiLt`:
+   - `.f i l a b ↦ ChainFrom m t chi i l a b`;
+   - every other variable gets the computable `baseVal`: `.y i j ↦ psiLt i j`, `.orb [a, b, d] ↦ chi a b d`, false
+     otherwise.
+
+   This covers `.h` and M2's fifth constructor `.other`. The match of §2.3 had no `.other` case and would not compile.
+   `Model.τ := tauOf m t M.chi M.psiLt` and `Model.τc n := M.τ (decodeCode m K t n)`.
+3. `ChainFrom` takes `m t chi`, not `M`.
+4. `hm : 2 ≤ m` replaces the guess `4 ≤ m` of §2.3. Only the nesting family needs it, to make `(i, 1)` a valid label.
+5. New definitions in `Model.lean` state the interfaces between the units: `OlitSpec`, `OrbListSpec`, `RkMono`,
+   `PatternSpec`, `SortSpec`, `ObjLtSpec`, `objImg`, `SortedSix` and `WordSpec`. Each is proved (`olitSpec`,
+   `orbListSpec`, `patternSpec_of`, `sortSpec`, `Obj.lt_iff`, `wordSpec`), so none is a hypothesis of the final
+   theorem.
+6. No field of `Model` changed: the judge's token comparison of §2.2 with `Model.lean` (plan §0.2) gives 806 = 806
+   tokens. M6 is therefore unaffected. `Model.lean` adds `Decidable` instances, which only the early-warning test uses.
+7. In the lemma map §3.2:
+   - H1 (`canon`) is needed only for `OrbListSpec`, not for `olit`;
+   - H6b needs one direction only (`RkMono`: if every premise holds, the local ranks follow ψ);
+   - the uniqueness part of KS prem and KS dich (a) are not needed;
+   - H7 is the `rcases` in `genCoded_sound`, not a file of its own.
+
+   The file names differ from the original M3 row of §4, which is now updated: `SoundOrder` and `SoundNest` became
+   part of `SoundOrbit`, and `SoundRules` and `SoundWord` are new. The as-built map is at the end of §3.2.
+8. §1.1's sketch now calls `encB_satisfiable_6811`. The old `encB_satisfiable (by decide) (by decide)` next to
+   `encB 6 8 11` fails `scripts/audit.sh` check 4 (tested, `logs/audit.log`).
+
 **Paths.** Paths are relative to `R = cloud/es7-2026-10-19/results/` unless they are absolute. Abbreviations:
 
 | short | file |
@@ -55,7 +98,7 @@ cited below was re-read at the given line.
 
 | # | Decision | Why |
 |---|---|---|
-| D1 | **The primary target is variant A**: F_B itself is UNSAT, shown by 64 cubes on Y(1,2), Y(1,3), Y(1,4), Y(2,3), Y(2,4), Y(3,4). No Y(1,2) symmetry breaking, so no reflection milestone (M7 is dropped). Variant B (32 cubes, Y(1,2) assumed) is kept only as a fallback (§1.2). | The re-solve `c6upper-noty12` of the 32 NOT-Y(1,2) cubes is running; 4/32 were ACCEPTED at 14:27. This drops KS Lemma refl, Lemma affine and S10 entirely. |
+| D1 | **The primary target is variant A**: F_B itself is UNSAT, shown by 64 cubes on Y(1,2), Y(1,3), Y(1,4), Y(2,3), Y(2,4), Y(3,4). No Y(1,2) symmetry breaking, so no reflection milestone (M7 is dropped). Variant B (32 cubes, Y(1,2) assumed) was kept only as a fallback (§1.2); since R1 is resolved it is not needed. | The re-solve `c6upper-noty12` of the 32 NOT-Y(1,2) cubes finished at 15:40:35 KST with 32/32 ACCEPTED and `verify_final64.py` PASS (`C6UPPER/noty12-2026-11-06`), so all 64 verdicts are certified (R1 resolved; at 14:27, when this was written, 4/32 were ACCEPTED). This drops KS Lemma refl, Lemma affine and S10 entirely. |
 | D2 | **Two packages.** `R/ENCBLEAN` is Std-only: no `[[require]]`, builds in seconds. A later `R/ENCBLEAN/geo` requires Mathlib and the repository (M4 onwards, after the campaign cutoff). | Critique §2: H's `Dimacs.lean` and H3's `Cover.lean` pull in Mathlib. The definitions are copied, not imported. |
 | D3 | **The theorem is about a functional twin `encB` of M1's `gen`** (§3.1). M1's imperative `gen` stays as a fast oracle. The emitter that binds hashes (E1) prints `encB`. | Gen is an `Id.run do` loop with mutable `Array` tables and a counter (Gen:240-380). Soundness proofs over that are brittle. Its pure helpers (`canon`, `olit`, `angOuts`, `patternLit`, `unitOf`, `perms`, `pairs`, `triples`, `permSign`, `insSort`) are reused unchanged. |
 | D4 | **Soundness never depends on numbering correctness.** Every literal of `encB` decodes, by construction, to a variable whose meaning is fixed. Python's exact numbers are checked only by bytes. | The plan's "translation validation" idea, made structural. |
@@ -93,8 +136,9 @@ theorem encB_unsat_of_cubes64 (h : CubesUnsat64) : ¬ EncB.DimacsSatisfiable (En
 theorem sixfold66_of_unsat (h : ¬ EncB.DimacsSatisfiable (EncB.encB 6 8 11)) : Sixfold66   -- LL:1102
 -- proof: intro T c hgp hc hinv hcard; by_contra hno;
 --        obtain ⟨L⟩ := labelling_of_counterexample (m := 6) (K := 8) (t := 11) … hgp hc hinv hno hcard  (M5)
---        exact h (EncB.encB_satisfiable (by decide) (by decide) (modelOfLabelling … L))           (M6, M3)
---        -- the two `by decide`s are `heven : 6 % 2 = 0` and `hm : 4 ≤ 6` (§2.3)
+--        exact h (EncB.encB_satisfiable_6811 (modelOfLabelling … L))                              (M6, M3)
+--        -- `encB_satisfiable_6811` (Satisfiable.lean:43) discharges `heven : 6 % 2 = 0` and `hm : 2 ≤ 6` with
+--        -- proof terms; a `by decide` here would fail audit check 4 (it sits next to `encB 6 8 11`)
 
 theorem sixfold66_of_cubes64 (h : CubesUnsat64) : Sixfold66 :=
   sixfold66_of_unsat (encB_unsat_of_cubes64 h)
@@ -155,8 +199,8 @@ The proof needs three extra pieces:
 
 | # | Fact | Evidence / where it is recorded |
 |---|---|---|
-| **E1** | **Emitter output.** For each `c ∈ cubes64`, printing `cubeCnf (encB 6 8 11) c` with the Std-only emitter in the layout of gen_b2.py:191-194 + mkcubes.py:11-15 gives bytes whose SHA-256 equals the recorded hash of the file cake_lpr checked. The base file is `479e31a9…`. | 32 c-cubes: `C6UPPER/SHA256SUMS.txt:88-119` and the B rows of `C6UPPER/replay-2026-11-06/results.tsv` (column 3). 32 n-cubes: `/home/jay/research/data/c6upper-noty12-20261106/cubes.sha256`, to be copied into `R/C6UPPER/` when the unit finishes. Base: `C6UPPER/SHA256SUMS.txt:86`. Check in M9. |
-| **E2** | **Verdicts.** cake_lpr printed exactly `s VERIFIED UNSAT` on each (CNF, proof) pair. Only that line certifies (lrat-check is unsound, memory note `lrat-check-unsound`). | c-cubes: replay `results.tsv`, 32/32 B rows ACCEPTED. n-cubes: the noty12 `results.tsv`, which must reach 32/32 and pass `verify_final64.py` check (5) (CNF hash ↔ row ↔ cake log ↔ proof zst hash); this closes defect 1 of the scratchpad review `rev-cover.md`. |
+| **E1** | **Emitter output.** For each `c ∈ cubes64`, printing `cubeCnf (encB 6 8 11) c` with the Std-only emitter in the layout of gen_b2.py:191-194 + mkcubes.py:11-15 gives bytes whose SHA-256 equals the recorded hash of the file cake_lpr checked. The base file is `479e31a9…`. | 32 c-cubes: `C6UPPER/SHA256SUMS.txt:88-119` and the B rows of `C6UPPER/replay-2026-11-06/results.tsv` (column 3). 32 n-cubes: `C6UPPER/noty12-2026-11-06/cubes.sha256` (written before solving; copied from `/home/jay/research/data/c6upper-noty12-20261106/` after the unit finished; also column 3 of `C6UPPER/noty12-2026-11-06/results.tsv`). Base: `C6UPPER/SHA256SUMS.txt:86`. Check in M9. |
+| **E2** | **Verdicts.** cake_lpr printed exactly `s VERIFIED UNSAT` on each (CNF, proof) pair. Only that line certifies (lrat-check is unsound, memory note `lrat-check-unsound`). | c-cubes: replay `results.tsv`, 32/32 B rows ACCEPTED. n-cubes: `C6UPPER/noty12-2026-11-06/results.tsv`, 32/32 ACCEPTED (finished 15:40:35 KST), and `verify_final64.py` PASS (`verify_final64.log`), including check (5) (CNF hash ↔ row ↔ cake log ↔ proof zst hash); this closes defect 1 of the scratchpad review `rev-cover.md`. |
 | E2 provenance | The binary is SHA `c14ff498…`, rebuilt byte-identically from cake_lpr commit `033aad53`. That is **not** the vendored source `a36874a8` (`C6UPPER/replay-2026-11-06/README.md:96-104`). The proofs are not public (p1.tex:299). | M9 ships a re-solve script (CaDiCaL + cake_lpr from a pinned commit) so a reader can regenerate proofs. The cost is about 2 × 7–10 CPU-h plus about 3 h of cake_lpr (replay README: B CaDiCaL 36,874 s for the c-half). |
 | **E3** | **DIMACS semantics.** cake_lpr's parse of each file is the Lean list, and its UNSAT verdict means `¬ EncB.DimacsSatisfiable`. This rests on cake_lpr's HOL4/CakeML verification. Its parser takes one clause per line, requires the header clause count to match exactly and every variable to be ≤ nv, and rejects stray `0` literals (tested in the scratchpad review `rev-cover.md`). **Lean side:** `encB_wf : ∀ cl ∈ encB m K t, ∀ l ∈ cl, l ≠ 0 ∧ l.natAbs ≤ numVars m K t` is proved symbolically, so each printed line is exactly one clause. **Not proved: the text rendering.** "The file is the Lean list" also depends on the emitter's unverified printing code: `pushClause` (Emit.lean:26-30), `body` (:32-33), `header` (:35-36), `cubeTail` (:38-40), the header counts and file assembly in `main` (:82-131, header calls at :89, :98, :118, :122), and core's `toString` on `Int`/`Nat` (E4). Byte equality with gen_b2.py does not exclude a printing bug that cancels a matching bug in the generator, so this code is trusted until a Std-only round trip `parseDimacs (render F) = F` for well-formed `F` is proved (optional; M2 or M9). | **Correction:** the numeral bound `l.natAbs ≤ 78059` is dropped. Proving it would need evaluation of `encB 6 8 11`. The symbolic bound is free. The value nv = 78059 in the header is bound only by E1. |
 | **E4** | **Lean compiler, runtime and the core code the emitter executes.** The compiled code of `encB` and the emitter equals the kernel definition up to the Lean compiler and core's implementation overrides. These include `Nat.repr` (`@[implemented_by reprFast]`, core `Init/Data/Repr.lean:243`), `lean_string_of_usize` (`:227`), `Array`/`Std.HashMap` runtime primitives, `String` building and `IO.FS`. It also covers the emitter's own rendering and assembly code in ENCBLEAN (Emit.lean:26-40 and `main`, :82-131; see E3), which no theorem constrains. | **Correction:** ENCBLEAN itself has no `implemented_by`, `extern`, `unsafe` or `native_decide` (grep in M8; Gen's docstring Gen:34-36 already states this). The tie to the kernel holds only at project level; core's code is part of E4. `@[csimp]` replacements are proved, so they are not trust. |
@@ -318,6 +362,9 @@ structure Model (m K t : Nat) where
       (∀ s, s + 2 < K - 1 → chi (q s) (q (s + 1)) (q (s + 2)) = true) → False
 ```
 
+**As built (M3).** This is `EncB/Model.lean:81-102`, with `Valid m t` replaced by Coded's `PtOk m t` (the same body).
+Every field is used: deleting any one of the 13 breaks the build (`logs/m3_mutants.log`).
+
 ### 2.3 The intended assignment, and what M3 proves
 
 ```lean
@@ -342,6 +389,10 @@ theorem encB_satisfiable {m K t : Nat} (heven : m % 2 = 0) (hm : 4 ≤ m) (M : M
 ```
 
 `hm : 4 ≤ m` is a guess at the side condition; M3 may weaken it. It must hold at m = 6.
+
+**As built (M3).** The proved theorem has `hm : 2 ≤ m` (`EncB/Satisfiable.lean:37`). `ChainFrom` takes `m t chi`
+instead of `M`. τ is `tauOf m t chi psiLt` (`Model.lean`), which sends `.f` to `ChainFrom` and every other variable to
+the computable `baseVal`; `.h`, `.other` and malformed `.orb` are false. See the M3 revision note at the top.
 
 ### 2.4 The bridge (M6): `modelOfLabelling`
 
@@ -450,6 +501,27 @@ needs a ghost allocation log in `Result` and `forIn` invariants (or `Std.Do`/`mv
 - KS orbit (c), the stabiliser.
 - Lemma diam: omitted clauses are a weakening.
 
+**As built (M3, 2026-11-06).** Every row is proved, and each theorem's axioms are within {propext,
+Classical.choice, Quot.sound} (`logs/axioms.log`).
+
+| Fact | Lean (file:line) | Unit |
+|---|---|---|
+| H1 canon | `Orbit.canon_eq` (SoundOrbit.lean:93): `canon m tri = insSort ptLt (tri.map (rotBy m s))` for some `s`; used only for `orbListSpec` (:161), together with `Orbit.mem_dedupBy` (:39) | U1 |
+| H2 olit | `olitSpec : OlitSpec M` (SoundOlit.lean:38), with `chi_perm3` (ModelLemmas.lean:80) | U0 |
+| H3 order | `transCl_sound` (SoundOrbit.lean:174) | U1 |
+| H4 nesting | `nestLits_sound` (SoundOrbit.lean:212), `hm : 2 ≤ m` | U1 |
+| H5 chains | `chainCl_sound` (SoundChain.lean:202), for every filter `isF` | U2 |
+| H6a patterns | `Ang.exists_rkMono` (SoundAng.lean:301): the pattern `s := insSort M.psiLt free`, ranks `free.map s.idxOf` | U3 |
+| H6b premises | `Ang.rkMono_of_prem` (SoundAng.lean:238): all premises true ⇒ `RkMono` (one direction) | U3 |
+| H6c keys | `Rules.sortSix` (SoundRules.lean:218): `insSort Obj.lt` of the six objects is a `SortedSix` (sorted in `objLt` order) | U4 |
+| H6d, H6e rules A, B | `wordSpec` (SoundWord.lean:222): a sorted word gives `AltCCW` (alternating) or `BlockCCW` (PPP run); `Rules.patternSpec_of_sort` (SoundRules.lean:139) applies `ruleA`/`ruleB` with `chi_perm3`/`olitSpec`; `patternSpec_of` (:270) | U5, U4 |
+| H6f merge | `angCl_sound` (SoundAng.lean:329): a unit is the literal of the pattern that follows ψ; a conditional clause has a false premise or a true literal | U3 |
+| H7 shapes | `genCoded_sound` (Satisfiable.lean:26): `simp only [genCoded, …]` and one `rcases` into the four families | Integration |
+
+Size: about 1.56k lines of code, not counting blank, comment and docstring lines (2.0k lines in all). That splits
+into 467 for the interface U0, 1,068 for U1–U5 (277 of them from the judge's start files) and 23 for
+`Satisfiable.lean`. The early-warning test adds 298. The estimate above summed to 0.9–1.4k.
+
 ### 3.3 M5: `labelling_of_counterexample` (Mathlib)
 
 LL line n is Capstone2 line n+8 for n ≥ 10 (§3.6), so either file can be the source.
@@ -549,16 +621,17 @@ KeyOrder and `orient_rotAbout_inv`.
 | **M0** | Design, lemma map, reference corpus | `DESIGN.md`, `ref/hashes.tsv`, `ref/make_ref.py` | This file exists. The corpus covers the tiny grid plus the four recorded instances with gen_b2.py at `3d47459a…`, including rows where Python raises. | none | done (see below) |
 | **M1** | Std-only port of gen_b2.py (both parities) and the emitter | `EncB/Gen.lean`, `EncB/Emit.lean`, `EncB/KernelCheck.lean`, `scripts/compare_b.sh`, `scripts/check_recorded.sh` | `lake build` (Std-only) is green; no `sorry`/`native_decide`/`implemented_by`/`extern`/`unsafe`. Byte-identical on the whole tiny grid and on (6,8,9) `9f638543…`, (7,8,9) `67cd613d…`, (7,8,10) `b4d29017…`, (6,8,11) base `479e31a9…`. A sample of the 64 cubes matches (the full 64 are in M9). | light, now | done by the parallel M1 step (see below) |
 | **M2** | Functional twin and numbering bridge | `EncB/Coded.lean`, `EncB/Dimacs.lean`, `EncB/Cover.lean` | `genCoded`, `allCodes`, `encB`, `numVars`, `encB_wf`, `dimacsSat_of_holds`, `covers_signPatterns` and `not_dimacsSatisfiable_of_cover` are proved; axioms ⊆ {propext, Classical.choice, Quot.sound}. `encB` = `gen` = Python on the tiny grid (kernel on 3 instances, compiled on all) and on the 4 recorded instances (compiled, once each). | light, **now** (Std-only) | **done** 2026-11-06 (README "M2") |
-| **M3** | Combinatorial soundness | `EncB/Model.lean` (frozen in §2.2), `EncB/Sound{Order,Orbit,Nest,Chain,Ang}.lean`, `EncB/Satisfiable.lean` | `encB_satisfiable` is proved, with no `sorry` and standard axioms. **Early warning:** a computable τ (orientations of an exact rational m = 6, t = 2 or 3 configuration, chain variables by least fixpoint) satisfies every clause of `encB` at that instance (compiled `#eval`, evidence only). **Mutants:** dropping a `Model` field breaks the proof. | light, **now** | 3–5 d |
+| **M3** | Combinatorial soundness | `EncB/Model.lean` (frozen in §2.2), `EncB/{ModelLemmas,SortLemmas,SoundOlit}.lean`, `EncB/Sound{Orbit,Chain,Ang,Rules,Word}.lean`, `EncB/Satisfiable.lean`; test `EncB/EarlyWarning.lean` | `encB_satisfiable` is proved, with no `sorry` and standard axioms. **Early warning:** a computable τ (orientations of exact rational m = 6 configurations, chain variables by least fixpoint) satisfies every clause of `genCoded` under `tauOf ∘ decodeCode` (hence `encB`, through M2's `dimacsSat_of_holds`) at those instances (interpreted `lean --run`, evidence only; the base runs go up to t = 5, and the M3 review added t = 10 on the whole 60-point SIX60-A set, `logs/m3_review_t10/`). **Mutants:** dropping a `Model` field breaks the proof. | light, **now** | **done** 2026-11-06 (README "M3"): `hm : 2 ≤ m`, no extra hypothesis; early warning PASS (35 runs, exact SIX60 data at K = 8 among them); 13/13 field mutants and the nesting mutant break the build; about 1.56k code lines |
 | **M4** | Merge LAYERLEAN + LEANEXT into an importable library | `geo/lakefile.toml` (requires the repo by path `../../../../..` and `encblean` by `..`), `geo/ES8Geo/{Layer,Phase,Link,PhaseClass,Capstone,Keys,Orbit}.lean` | `lake build` green in `geo`; axioms standard; statements equal to the source files (diff). **Infrastructure decision needed** (risk R5). | **Mathlib: after the cutoff (2026-11-16 17:00)** | 0.5–1 d |
 | **M5** | Labelling | `geo/ES8Geo/Labelling.lean` | `labelling_of_counterexample` (§2.1) proved | Mathlib | 1–1.5 d |
 | **M6** | Model of a labelling | `geo/ES8Geo/ModelOfLabelling.lean` | `modelOfLabelling` (§2.4) with every field proved. G9 first (go/no-go spike: 1 day) | Mathlib | 2–4 d |
 | ~~M7~~ | ~~Reflection~~ | — | dropped; becomes M7′ only if variant B is needed (§1.2) | — | (1.5–3 d) |
 | **M8** | Assembly, audit, mutants | `geo/ES8Geo/Main.lean`, `geo/ES8Geo/Audit.lean` | `sixfold_es8` (§1.1) with `#guard_msgs` on `#print axioms` = [propext, Classical.choice, Quot.sound]. A grep finds no `native_decide`/`implemented_by`/`extern`/`unsafe`/`sorry`, and no `decide`/`rfl` applied to `encB 6 8 11`. Mutation tests: changing a family in `genCoded` changes the hashes; deleting a `Model` field breaks M3. | Mathlib | 0.5 d |
-| **M9** | Hash binding and write-up | `README.md`, `logs/hash_binding.log`, `scripts/resolve.sh` | `encb_dimacs` prints base + 64 cubes from `encB`, taking the units from the Lean list `cubes64` itself (the theorem's definition, iterated in order), **not** from Emit's name-based `cubeUnits` (Emit.lean:42-55), so the hashes bind exactly the cubes the theorem quantifies over; each is hashed by streaming and deleted. The recorded hashes are read from the record files, never typed into the script. **65/65 equal the records** (base; 32 c-cubes `C6UPPER/SHA256SUMS.txt:88-119`; 32 n-cubes from noty12 `cubes.sha256`, by then copied to `R/C6UPPER/`), plus the 3 other instances. The README has the trust table (§1.4) and P1's rigor line; the re-solve script covers E2 provenance. | light (one emission ≈ 6 s with Gen; the twin's time is unknown) | 0.5 d |
+| **M9** | Hash binding and write-up | `README.md`, `logs/hash_binding.log`, `scripts/resolve.sh` | `encb_dimacs` prints base + 64 cubes from `encB`, taking the units from the Lean list `cubes64` itself (the theorem's definition, iterated in order), **not** from Emit's name-based `cubeUnits` (Emit.lean:42-55), so the hashes bind exactly the cubes the theorem quantifies over; each is hashed by streaming and deleted. The recorded hashes are read from the record files, never typed into the script. **65/65 equal the records** (base; 32 c-cubes `C6UPPER/SHA256SUMS.txt:88-119`; 32 n-cubes from `C6UPPER/noty12-2026-11-06/cubes.sha256`), plus the 3 other instances. The README has the trust table (§1.4) and P1's rigor line; the re-solve script covers E2 provenance. | light (one emission ≈ 6 s with Gen; the twin's time is unknown) | 0.5 d |
 
 **Totals (unverified):** about 1.9–2.8k new LOC (M2 0.4–0.6k, M3 1.0–1.3k, M5 0.15–0.25k, M6 0.55–0.8k, M8
-0.1k), plus about 4k moved in M4. That is about 9–15 agent-days. Calendar time is shorter, because M2–M3 (Std-only)
+0.1k), plus about 4k moved in M4. (M3 as built: about 1.56k lines of code, 2.0k in all, plus 0.3k of the
+early-warning test; §3.2.) That is about 9–15 agent-days. Calendar time is shorter, because M2–M3 (Std-only)
 can run now while M4–M6 wait for the cutoff.
 
 **Done in this workflow:**
@@ -581,7 +654,12 @@ can run now while M4–M6 wait for the cutoff.
   - kernel evaluation on (3,4,1), (3,4,2), (6,4,1) and, after the review, (4,5,1) (two chain levels).
 
   `encB 6 8 11` takes 11.0 s to compute; the emission of base + 7 cubes took 15.3 s and 928 MB.
-- **Not started:** M3–M9.
+- **M3.** Done by the M3 workflow (README "M3"; plan `docs/M3PLAN.md`):
+  - one interface unit (U0), six parallel units (U1–U6), each checked by an independent verifier, and an
+    Integration step;
+  - `encB_satisfiable` and `encB_satisfiable_6811` are proved with no `sorry`, no hypothesis beyond `heven`, `hm`
+    and the `Model`, and axioms [propext, Classical.choice, Quot.sound].
+- **Not started:** M4–M9.
 
 ---
 
@@ -589,14 +667,14 @@ can run now while M4–M6 wait for the cutoff.
 
 | # | Risk | Likelihood / impact | Mitigation |
 |---|---|---|---|
-| R1 | Some n-cube is not ACCEPTED, or `verify_final64.py` fails (4/32 ACCEPTED at 14:27, about 45–65 min each) | low / +1.5–3 d (variant B, M7′) | §1.2 is designed. The c-half alone already gives `sixfold66_of_cubesY12` once M7′ is proved. |
+| R1 | ~~Some n-cube is not ACCEPTED, or `verify_final64.py` fails (4/32 ACCEPTED at 14:27, about 45–65 min each)~~ **Resolved 2026-11-06 15:40:35 KST:** 32/32 n-cubes ACCEPTED (hash-bound) and `verify_final64.py` PASS (`C6UPPER/noty12-2026-11-06/`). All 64 verdicts of `CubesUnsat64` are certified. | closed | Variant A is the primary target with every verdict certified. §1.2 (variant B, M7′) stays only as a record of the fallback; it is not needed. |
 | R2 | M6's arc bridge G9 (key order → real arcs) stalls, as H2's `D3LabellingTarget` did (H2/README.md:179-189) | medium / blocks the end-to-end theorem | Spike G9 first in M6. Fallback: ship `sixfold66_of_unsat` conditional on a named Prop `ArcBridge`; M3 + M5 still remove most of gap G1. |
 | R3 | The functional twin `encB` is too slow or too big at 2.4M clauses inside the 8G scope | low–medium / changes M2 | Stream the numbering; or prove directly over `gen` (§3.1 alternative). E1 must print the object the theorem is about. |
 | R4 | Byte mismatch of the twin (Python dict/itertools order, `insSort` ties, numbering dedup) | low (Gen already matches everywhere) / found by testing | Gen is the oracle: compare twin against Gen at every grid point before any hash claim. |
 | R5 | **Mathlib for `geo`**: lake would put Mathlib into `geo/.lake/packages` (clone + `lake exe cache get`, ≈5 GB, network), or reuse the parent's `.lake`, which these rules forbid touching. LAYERLEAN/LEANEXT were checked with `lake env lean` from the repo root, which also uses the parent's `.lake`. | certain / needs a user decision before M4 | Options: (a) cache get in `geo`; (b) user-approved `packagesDir` pointing at the parent's packages; (c) standalone files checked from the repo root after the cutoff. |
 | R6 | Accidental kernel evaluation of `encB 6 8 11` (`decide`/`rfl`/`simp` unfolding) | low / build hangs | D9; theorems generic in m K t; review grep in M8. |
 | R7 | E2 provenance: cake_lpr build `033aad53` ≠ vendored `a36874a8`; proofs not public | certain / reviewer objection, not a soundness gap | M9 re-solve script; record the build recipe; an archived deposit is a P1 open item (p1.tex:299). |
-| R8 | Interface drift: a `Model` field turns out unprovable from geometry (e.g. an edge case in `ccwIn` with equal keys) | low–medium / rework of M3 + M6 | The early-warning evaluation in M3. Fields only constrain valid, distinct labels, and AltCCW/BlockCCW include `KeysDistinct`. |
+| R8 | Interface drift: a `Model` field turns out unprovable from geometry (e.g. an edge case in `ccwIn` with equal keys) | low–medium / rework of M3 + M6 | The early-warning evaluation in M3 (done: every law held, as a Bool over valid labels, on exact SIX60 layer data at K = 8 and on the other base configurations, with 0 unsatisfied clauses; `logs/m3_early_warning.log`). Fields only constrain valid, distinct labels, and AltCCW/BlockCCW include `KeysDistinct`. |
 | R9 | m = 7 stays written (perturbation), so P1's rigor line differs between its halves | certain / presentation | State it; m = 7 needs no byte identity (re-solve takes 802 s), only the perturbation lemma. |
 | R10 | All LOC and day estimates are guesses calibrated on H2 and EHL | — | Re-estimate after the G9 spike and after M3. |
 
@@ -642,4 +720,5 @@ can run now while M4–M6 wait for the cutoff.
   - Y(1,2), Y(1,3), Y(1,4), Y(2,3), Y(2,4), Y(3,4) = 1, 2, 3, 10, 11, 18 at t = 11: by the numbering of
     gen_b2.py:36-39, the meta file, and the M1 log tail `1 0 2 0 3 0 -10 0 11 0 18 0` for c11011.
 - **Status of `c6upper-noty12`, read-only.** `results.tsv` had 4 ACCEPTED rows (n00011, n00100, n00001, n00000)
-  at 14:27. `verify_final64.py` exists in the job directory as the post-run gate.
+  at 14:27. `verify_final64.py` exists in the job directory as the post-run gate. *Update 16:35:* the unit finished
+  at 15:40:35 with 32/32 ACCEPTED, and `verify_final64.py` printed PASS; record `C6UPPER/noty12-2026-11-06/` (R1).

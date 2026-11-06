@@ -1,0 +1,7 @@
+declarations mentioning the (6,8,11) instance (pattern: \b(encB|gen|genCoded|numVars|allCodes|allCodesOf|encode|diagCoded)\s+6\s+8\s+11\b|\bCubesUnsat64\b):
+  EncB/Cover.lean:110 (+4 lines): def CubesUnsat64 : Prop := ∀ c ∈ cubes64, ¬DimacsSatisfiable (cubeCnf (encB 6 8 11) c)
+  EncB/Cover.lean:114 (+4 lines): theorem encB_unsat_of_cubes64 (h : ∀ c ∈ cubes64, ¬DimacsSatisfiable (cubeCnf (encB 6 8 11) c)) :
+  EncB/Cover.lean:118 (+3 lines): theorem encB_unsat_of_cubesUnsat64 (h : CubesUnsat64) : ¬DimacsSatisfiable (encB 6 8 11) :=
+sources: EncB.lean EncB/Coded.lean EncB/Cover.lean EncB/Dimacs.lean EncB/Emit.lean EncB/Gen.lean EncB/KernelCheck.lean EncB/KernelCheckB.lean EncB/Model.lean EncB/ModelLemmas.lean EncB/SortLemmas.lean EncB/SoundOlit.lean
+toolchain: leanprover/lean4:v4.24.0
+AUDIT PASS (no sorry/admit/native_decide/implemented_by/extern/unsafe/partial/axiom/opaque/set_option/ofReduceBool in code; Std-only; no decide/rfl/simp/omega/#eval/#reduce in a declaration that mentions the (6,8,11) instance)
