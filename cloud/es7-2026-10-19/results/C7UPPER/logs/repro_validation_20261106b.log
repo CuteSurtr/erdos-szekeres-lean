@@ -1,0 +1,67 @@
+# Second validation run of C7UPPER/repro.sh (adjusted version, with the quoted S check), 6 November 2026,
+# 13:44:52-13:47:27 KST, Linux workstation of the project (load average about 34 on 32 hardware threads), run by the
+# independent checker of the P1 audit.
+# Command (S absolute; S/resolve/bin -> /usr/bin/cadical 2.1.3 and ~/.local/bin/lrat-check; no solve):
+#   systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 19 timeout 900 env S=<scratch> bash C7UPPER/repro.sh
+# RESULT: complete, exit 0; 2:34.64 wall clock, 152.7 s user, peak RSS 0.63 GB.
+#  - All output from "== generate" to "s SATISFIABLE" equals logs/repro_validation.log except the point-set path
+#    prefixes (checked with diff after stripping those prefixes).
+#  - Nothing was written into the repository, and the outputs in S/repro were not kept.
+#  - The solve branch was not run.
+#  - The later change that sets B after cd (so that a relative S also works) does not change behaviour for an
+#    absolute S, as used here.
+# Raw output follows (archived from the checker's session scratch file, sha256 856cee3df9cddec451521a30f321dde5871c8cb77fad85d014e2e481ac896288).
+start 2026-11-06T04:44:52Z
+== generate
+1a7c0e706f2a7fb52b109ae20ca37d49c74940e01c1227fe152b46d742d5997f  repro/m7K8t10.cnf
+fa297b5bd6608d29369fd56f8cab20d6d17ad9d335253352541a42e4c669fc49  repro/m7K8t10_H1.cnf
+bb85a9666902ab9194aff6f1695f8569cf45ac8e543376cbf7fee80f8e001c9b  repro/m7K8t9.cnf
+b4d290176cb675c61ecbcf70380cc520aabf093d00e2572328a0975ae2d296e2  repro/B_m7K8t10.cnf
+expected: 1a7c0e70... (t10), fa297b5b... (t10+H1), bb85a966... (t9), b4d29017... (B t10)
+== validation on the known 9-layer sets (must be all zeros)
+pts /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C7UPPER/../ES8SYM/sets/c7_64pts_small.pts min|det| 1.46 {'order': 0, 'angle': 0, 'nest': 0, 'chain': 0, '_clauses_read': 1765351, '_chainvars_true': 16682}
+pts /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C7UPPER/../ES8SYM/sets/c7_63pts_9layers.pts min|det| 1.57e+17 {'order': 0, 'angle': 0, 'nest': 0, 'chain': 0, '_clauses_read': 1765351, '_chainvars_true': 16865}
+pts /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C7UPPER/../PRIMEFOLD/sets/k8/c7_64_own_s1000.pts min|det| 2.64 {'order': 0, 'angle': 0, 'nest': 0, 'chain': 0, '_clauses_read': 1765351, '_chainvars_true': 16991}
+pts /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C7UPPER/../PRIMEFOLD/sets/k8/c7_64pts_9layers_centre_own.pts min|det| 3.07e+04 {'order': 0, 'angle': 0, 'nest': 0, 'chain': 0, '_clauses_read': 1765351, '_chainvars_true': 17011}
+pts /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C7UPPER/../PRIMEFOLD/sets/k8/c7_64pts_9layers_centre.pts min|det| 2.16e+17 {'order': 0, 'angle': 0, 'nest': 0, 'chain': 0, '_clauses_read': 1765351, '_chainvars_true': 16714}
+pts /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C7UPPER/../PRIMEFOLD/sets/k8/p7_compound_64.pts min|det| 1e+09 {'order': 0, 'angle': 0, 'nest': 0, 'chain': 0, '_clauses_read': 1765351, '_chainvars_true': 17852}
+pts /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C7UPPER/../PRIMEFOLD/sets/k8/p7_two_orbit_64.pts min|det| 9.99e+09 {'order': 0, 'angle': 0, 'nest': 0, 'chain': 0, '_clauses_read': 1765351, '_chainvars_true': 17852}
+pts /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C7UPPER/../PRIMEFOLD/sets/k8/rule_p7_64pts.pts min|det| 2.36e+13 {'order': 0, 'angle': 0, 'nest': 0, 'chain': 0, '_clauses_read': 1765351, '_chainvars_true': 17957}
+m7_x2_G9s_centre.pts min|det| 1.126e+22 {'order': 0, 'angle': 0, 'nest': 0, 'chain': 0, '_clauses_read': 1765351, '_chainvars_true': 18255}
+== random nested configurations (non-chain families must have 0 violations)
+random 20 configs with >=1 unsatisfied clause, per family: {'order': 0, 'angle': 0, 'nest': 0, 'chain': 19, '_clauses_read': 19, '_chainvars_true': 19}
+repro/m7K8t10.cnf angle clauses 73784 tests 221352 fails 0 skipped 0
+== encoders A and B agree on the non-chain part
+clauses A 74099 B 74099 orbits with clauses A 6221 B 6221
+orbit-pattern pairs checked 185549 mismatches 0
+== chain family vs independent DP / brute force
+repro/m7K8t2.cnf N = 40 {'free_both': 38, 'kgon_both': 2, 'MISMATCH_sound': 0, 'mismatch_exact': 0, 'nonchain_viol': 0}
+repro/m7K8t3.cnf N = 40 {'free_both': 30, 'kgon_both': 10, 'MISMATCH_sound': 0, 'mismatch_exact': 0, 'nonchain_viol': 0}
+agreements 20 disagreements 0
+== 9 layers satisfiable
+s SATISFIABLE
+	Command being timed: "systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 19 timeout 900 env S=/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/checker-c7repro bash /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C7UPPER/repro.sh"
+	User time (seconds): 152.69
+	System time (seconds): 1.50
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:34.64
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 627784
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 33
+	Minor (reclaiming a frame) page faults: 454265
+	Voluntary context switches: 244
+	Involuntary context switches: 1307
+	Swaps: 0
+	File system inputs: 4416
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+exit 0
+end 2026-11-06T04:47:27Z

@@ -108,7 +108,8 @@ binary64 sector choice, with no error bound; the exact re-check is in §5):
 | c11111 | 1<2<3<4 | 1,579 | 3.89 GB | VERIFIED | VERIFIED UNSAT |
 
 - **Runs.** CaDiCaL 3.0.1, one core per cube, 8 lanes, about 20,000 CPU seconds in total, 56 minutes wall clock,
-  1.3–1.7 GB peak RSS each (`logs/cadical_summary.txt`). The proofs total 41.0 GB.
+  1.3–2.0 GB peak RSS per phase-order cube (2,046 MB for c10000; `logs/cadical_summary.txt`). The proofs total
+  41.0 GB.
 - **Unsplit run.** A run of the whole instance (base + Y(1,2), no split, one core) was stopped after 6,578 s
   without an answer. Its partial proof was deleted.
 - **Checkers.** lrat-check ran in the same lane right after each solve (`logs/cubes.txt`), and cake_lpr ran one proof
@@ -177,8 +178,8 @@ The 12 phase orders:
 | c11110 | 1<2<4<3 | UNSAT | 2,076 | 4.20 GB | VERIFIED | VERIFIED UNSAT |
 | c11111 | 1<2<3<4 | UNSAT | 2,292 | 4.46 GB | VERIFIED | VERIFIED UNSAT |
 
-- **Runs.** About 24,700 CPU seconds in total on 6 lanes, 1 h 24 min wall clock. The proofs total 45.7 GB. cake_lpr ran
-  with heap 4,000 MB.
+- **Runs.** About 24,700 CPU seconds in total on 6 lanes, 1 h 24 min wall clock. The 12 phase-order proofs total
+  45.7 GB; all 32 proofs total 46.5 GB (46,515,397,131 bytes). cake_lpr ran with heap 4,000 MB.
 - **Checks.** All 32 proofs are accepted by lrat-check and cake_lpr (`logs/encb_cubes.txt`, `logs/encb_cake.txt`,
   `logs/encb_cadical_summary.txt`, `logs/encb_verify_cover.log`).
 - **Archive.** The proofs are in the local archive under `lrat_B/`.
