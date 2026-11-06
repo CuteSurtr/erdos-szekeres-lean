@@ -1,0 +1,19 @@
+hull vertices (ccw): [0, 1, 2, 3, 4, 5, 6]  #inner = 57
+distinct candidates tested: 25312
+nontrivial line-modules (2..n-2): 14  size histogram: {61: 7, 62: 7}
+  size 61, outside = [4, 5, 6] : complement of 3 consecutive hull vertices ; contains all inner points: True
+  size 61, outside = [0, 5, 6] : complement of 3 consecutive hull vertices ; contains all inner points: True
+  size 61, outside = [0, 1, 6] : complement of 3 consecutive hull vertices ; contains all inner points: True
+  size 61, outside = [3, 4, 5] : complement of 3 consecutive hull vertices ; contains all inner points: True
+  size 61, outside = [2, 3, 4] : complement of 3 consecutive hull vertices ; contains all inner points: True
+  size 61, outside = [1, 2, 3] : complement of 3 consecutive hull vertices ; contains all inner points: True
+  size 61, outside = [0, 1, 2] : complement of 3 consecutive hull vertices ; contains all inner points: True
+  size 62, outside = [5, 6] : complement of 2 consecutive hull vertices ; contains all inner points: True
+  size 62, outside = [0, 6] : complement of 2 consecutive hull vertices ; contains all inner points: True
+  size 62, outside = [4, 5] : complement of 2 consecutive hull vertices ; contains all inner points: True
+  size 62, outside = [3, 4] : complement of 2 consecutive hull vertices ; contains all inner points: True
+  size 62, outside = [2, 3] : complement of 2 consecutive hull vertices ; contains all inner points: True
+  size 62, outside = [1, 2] : complement of 2 consecutive hull vertices ; contains all inner points: True
+  size 62, outside = [0, 1] : complement of 2 consecutive hull vertices ; contains all inner points: True
+modules of size 2..60: 0
+all complements of one point pass the test: True

@@ -1,15 +1,22 @@
 % k8_soundness_p1.tex -- adapted copy for preprint P1 (6 November 2026).
-% Source: WRITEUP/note/k8_soundness.tex, SHA-256 197bc2149619e05210fafb558576b45447925abe8f2537ecf176f41f68e7c32e
-% (as committed in 597961bbd). The ONLY changes are four cross-references, two footnotes and one deleted clause: the
-% two pointers to the companion certificate section (one naming the draft STATUS20261104/k8_section.tex) now point to
-% Section~\ref{sec:cert} of P1, the trust-table row says (Section~\ref{sec:cert}) instead of (companion section),
-% 'As in the rest of the note' reads 'As in Section~\ref{sec:defs}'; a footnote after 'Lean was not rerun for this
-% section' points to the re-check of 6 November in Section~\ref{sec:layer}; and a footnote after 'fresh runs reproduce
-% the formula files byte for byte' says what is on record for the 64 sixfold cube files (Section~\ref{sec:enc});
+% Source: WRITEUP/note/k8_soundness.tex, SHA-256 248bf0375e6acab10f2b026d32bf89cab682f4c950eef2de634a96e8f6d90403
+% (as committed in b583d89ab, which corrected the proof of Corollary k8s:cor:geom in the note and in this copy alike;
+% the copy was first made from 197bc214... at commit 597961bbd). The ONLY changes are four cross-references, two
+% footnotes, one deleted clause and two provenance edits: the two pointers to the companion certificate section (one
+% naming the draft STATUS20261104/k8_section.tex) now point to Section~\ref{sec:cert} of P1, the trust-table row says
+% (Section~\ref{sec:cert}) instead of (companion section), 'As in the rest of the note' reads 'As in
+% Section~\ref{sec:defs}'; a footnote after 'Lean was not rerun for this section' points to the re-check of 6 November
+% in Section~\ref{sec:layer}; and a footnote after 'fresh runs reproduce the formula files byte for byte' says what is
+% on record for the 64 sixfold cube files (Section~\ref{sec:enc});
 % its wording was updated on 6 November 2026 after the hash-bound cake_lpr replay (C6UPPER/replay-2026-11-06), which
 % recorded matching hashes for all 64 regenerated cube files (before: the 6 sampled ones only); and, after that replay
 % finished, the clause ', since it changes as the replay proceeds' was deleted after 'is not repeated here'.
-% Mathematical text, rigor tags and the gaps (G1)-(G4) are unchanged.
+% Provenance edits of 6 November 2026 (after an audit of P1): the first citation of k8_soundness_checks.py in the text
+% gives its path WRITEUP/note/k8_soundness_checks.py, and the source's comment below says 'in WRITEUP/note/' instead of
+% 'in this directory' (edit 8); the rigor-label paragraph says that hullVerts_subset, which is not in the axiom log,
+% is covered through layers_are_orbits and exists_layer (edit 9).
+% Apart from these edits the copy equals the source; since 197bc214 the mathematical text changed only in the proof of
+% Corollary k8s:cor:geom (b583d89ab), in source and copy alike. Rigor tags and the gaps (G1)-(G4) are unchanged.
 % Check with: diff WRITEUP/note/k8_soundness.tex WRITEUP/P1/k8_soundness_p1.tex
 %
 % k8_soundness.tex -- soundness of the SAT encodings behind the k = 8 rotational upper bounds
@@ -20,7 +27,7 @@
 % booktabs, array (for the >{...}p{...} columns of the trust table), hyperref, and the bibliography key Supp.
 % Labels are prefixed k8s: (the draft k8_section.tex uses k8:).
 % Compile check: k8_soundness_wrapper.tex.  The exact checks cited below are k8_soundness_checks.py (output in
-% k8_soundness_checks.log), in this directory.
+% k8_soundness_checks.log), in WRITEUP/note/.
 % MERGE NOTE: the section cites CHORD20261105, STATUS20261104 and WRITEUP/note as part of Supp.  The Supp entry of
 % symmetric_extremal.tex (6 November) does not list them; add them to it when this section is \input there.
 
@@ -50,7 +57,9 @@ been replayed against hashed files, are described in Section~\ref{sec:cert}; her
 \paragraph{Rigor labels.} \emph{Lean-checked} items are in \dirn{LAYERLEAN/LayerLemma.lean} (SHA-256
 \texttt{afb8542d\dots}, the file as committed in \texttt{393619a57}; namespace \lean{ErdosSzekeres.LayerLemma};
 Lean~4.24.0, Mathlib \texttt{f897ebcf}; the axiom check \dirn{LAYERLEAN/logs/axioms.log} reports only \lean{propext},
-\lean{Classical.choice}, \lean{Quot.sound} for every cited theorem of that file); the declaration names below were
+\lean{Classical.choice}, \lean{Quot.sound} for every cited theorem of that file except the one-line
+\lean{hullVerts_subset}, which is used in \lean{layers_are_orbits} and \lean{exists_layer} and so is covered by their
+checks); the declaration names below were
 checked against that file, and Lean was not rerun for this section.\footnote{Note added in this paper: for this paper the file was checked again with \texttt{lake env lean} on 6 November 2026; see Section~\ref{sec:layer}, ``Build and axioms''.} \emph{Written proof (not refereed)} means a
 complete proof given here. Most of them expand arguments reviewed on 4 November 2026 with no blocking gap found
 (\dirn{C6C7REVIEW/SOUNDNESS.md}). The others have had no internal review: those marked \emph{new here} are new
@@ -334,7 +343,7 @@ admissible rotation is used.
 \end{enumerate}
 For $(m,t)=(6,11)$ there are $45{,}760$ triples: the $22$ triples $\{(i,k),(i,k+2),(i,k+4)\}$ form $11$ orbits of
 size~$2$ and the others $7{,}623$ orbits of size~$6$, in total $7{,}634$ orbits. For $(7,10)$ all $7{,}820$ orbits of
-the $54{,}740$ triples have size~$7$ (exact computation, \dirn{k8_soundness_checks.py}; the totals agree with the review's
+the $54{,}740$ triples have size~$7$ (exact computation, \dirn{WRITEUP/note/k8_soundness_checks.py}; the totals agree with the review's
 independent count, \dirn{C6C7REVIEW/SOUNDNESS.md}).
 \end{lemma}
 

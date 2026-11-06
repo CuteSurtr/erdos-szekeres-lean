@@ -1,7 +1,8 @@
 # P1: sixfold and sevenfold rotationally symmetric point sets without a convex octagon
 
 First full draft of preprint P1, written 6 November 2026 (KST) and revised the same day after an internal review (see
-"Revision after review"). Not refereed, not circulated.
+"Revision after review") and again after an audit of its bibliography, numbers and claims (see "Revision after the
+audit") and a checker's fix round (see "Fix round after the checker"). Not refereed, not circulated.
 
 **Theorem of the paper.** For k = 8, the largest m-fold rotationally symmetric set in general position with no 8
 points in convex position has exactly 60 points for m = 6 and exactly 64 for m = 7. Since 6-fold sets in general
@@ -21,16 +22,20 @@ work" only.
 
 | file | content |
 |---|---|
-| `p1.tex` | the paper (30 pages). Inline bibliography, no BibTeX. |
-| `p1.pdf` | compiled with pdflatex (TeX Live 2025), three passes, each exit 0: **0 errors, 0 undefined references or citations, no LaTeX warnings**; 1 overfull box (13.3 pt, the head of Lemma 5.2, from the reviewed source) and 2 underfull boxes (badness 1270 and 1953). Rebuilt on 6 November 2026 after the replay status was filled in, with the same result (30 pages). Rebuilt again on 6 November 2026 (about 10:30 KST) after the one-clause 311 update in §1 (open item 14), with the same result. Rebuilt again on 6 November 2026 (about 13:30 KST) after the proof of Corollary k8s:cor:geom was corrected (it had cited Lemma k8s:lem:affine for the translation of the centre to O, although that lemma's admissibility clause assumes g(O) = O; the translation step is now argued directly, and part (b) no longer says "the same" for a step that has no cube split): 31 pages, 0 errors, 0 undefined references, 1 overfull box. |
+| `p1.tex` | the paper (31 pages). Inline bibliography, no BibTeX. |
+| `p1.pdf` | compiled with pdflatex (TeX Live 2025), three passes, each exit 0: **0 errors, 0 undefined references or citations, no LaTeX warnings**; 1 overfull box (13.3 pt, the head of Lemma 5.2, from the reviewed source) and 2 underfull boxes (badness 1270 and 1953). Rebuilt on 6 November 2026 after the replay status was filled in, with the same result (30 pages). Rebuilt again on 6 November 2026 (about 10:30 KST) after the one-clause 311 update in §1 (open item 14), with the same result. Rebuilt again on 6 November 2026 (about 13:30 KST) after the proof of Corollary k8s:cor:geom was corrected (it had cited Lemma k8s:lem:affine for the translation of the centre to O, although that lemma's admissibility clause assumes g(O) = O; the translation step is now argued directly, and part (b) no longer says "the same" for a step that has no cube split): 31 pages, 0 errors, 0 undefined references, 1 overfull box. **Build after the audit: 6 November 2026, about 13:40 KST, after the audit edits ("Revision after the audit"): three passes, each exit 0; 31 pages; 0 errors, 0 undefined references or citations, 0 LaTeX warnings; the same single overfull box (13.3 pt, head of Lemma 5.2); 5 underfull boxes (the 2 earlier ones, plus 3 in the bibliography: ETV96 badness 2418, Sche20 1281, the `Supp` entry 5260).** Rebuilt once more on 6 November 2026 (about 13:55 KST) after the checker's fix round (§1.1 citation placement, §9 C7UPPER paragraph), under `systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 5`: the same result (three passes, each exit 0; 31 pages; 0 errors, 0 undefined references or citations, 0 LaTeX warnings; 1 overfull, 5 underfull boxes). |
 | `p1.log` | the log of the third pass, kept for reviewers. |
 | `k8_soundness_p1.tex` | Section 5 of the paper: an adapted copy of `WRITEUP/note/k8_soundness.tex` (see below). |
 | `tables/*.tex` | data fragments \input by `p1.tex` (sixfold cube table, hash appendix, seeds of the point sets). Generated; do not edit. |
 | `tools/make_tables.py` | generates `tables/` from the repository records and checks them (standard library only; calls `git show` once, read-only). |
+| `rerun-20261106/` | the re-run of the lower-bound checkers of 6 November 2026 (§7 "Re-run for this draft"): scripts, copies of the inputs, logs, timings; see its `README.txt`. |
+| `reviews/corollary-geom-review-20261106.md` | the in-session check of a draft of the corrected proof of Corollary k8s:cor:geom (open item 5). |
 
 Build: `pdflatex p1 && pdflatex p1 && pdflatex p1` in this directory (run under the session's caps with
 `systemd-run --user --scope -p MemoryMax=12G nice -n 5`; the rebuild after the replay used `-p MemoryMax=4G -p
-MemorySwapMax=0` and `nice -n 10`); then delete `p1.aux`, `p1.toc`, `p1.out` and keep `p1.log`.
+MemorySwapMax=0` and `nice -n 10`, and the rebuild after the audit used `systemd-run --user --scope -q -p MemoryMax=4G
+-p MemorySwapMax=0 nice -n 5 pdflatex -interaction=nonstopmode -halt-on-error p1`); then delete `p1.aux`, `p1.toc`,
+`p1.out` and keep `p1.log`.
 Regenerate the tables first with `python3 -I WRITEUP/P1/tools/make_tables.py` (prints `PASS`; exits 1 on any hash or
 structure mismatch).
 
@@ -49,7 +54,7 @@ from the records named next to them; they were compared with those records by ha
 
 1. Introduction: problem, SMQH and their §7 suspicion, Theorem 1.1, Corollary 1.2 (ES(8) = 65 within the two classes),
    Remark 1.3 (affine symmetries), Table 1 (m = 2..7 and m ≥ 8), method, what is and is not claimed, related work and
-   credit (Erdős–Szekeres, Szekeres–Peters, Marić, Heule–Scheucher, Subercaseaux et al. ITP 2024, SMQH CICM 2025 which
+   credit (Erdős–Szekeres, Szekeres–Peters, Marić, Scheucher, Heule–Scheucher, Subercaseaux et al. ITP 2024, SMQH CICM 2025 which
    stops at k = 7, Mackey, Baek, Baek–Balko, Dumitru with priority for fivefold k = 7, Georgiev et al.), "what we did
    not find".
 2. Definitions, Lean conventions, rigor labels.
@@ -74,10 +79,12 @@ of all thirteen set files (twelve order types).
 
 - `STATUS20261104/k8_section.tex` (SHA-256 `04af8189…`, before its replay update of 6 November): exposition reused for
   §§1, 3, 4, 6 and the open problems.
-- `WRITEUP/note/k8_soundness.tex` (SHA-256 `197bc2149619e052…`, commit 597961bbd): Section 5.
+- `WRITEUP/note/k8_soundness.tex` (SHA-256 `248bf0375e6acab1…`, commit b583d89ab, which changed the proof of
+  Corollary k8s:cor:geom in both files; the copy was first made from `197bc214…` at 597961bbd): Section 5.
 - `WRITEUP/note/symmetric_extremal.tex`: context, Table 1, literature and bibliography entries.
 - `C6UPPER/README.md`, `C6UPPER/SHA256SUMS.txt`, `C6UPPER/logs/{cadical_summary,encb_cadical_summary,cake,encb_cake,regen,replay_2026-11-04}.txt|log`.
-- `C7UPPER/README.md`, `C7UPPER/SHA256SUMS.txt`, `C7UPPER/logs/cake_{A,B}.out`, `C7UPPER/repro.sh`.
+- `C7UPPER/README.md`, `C7UPPER/SHA256SUMS.txt`, `C7UPPER/logs/cake_{A,B}.out`, `C7UPPER/repro.sh`,
+  `C7UPPER/logs/repro_validation{,_20261106,_20261106b}.log`.
 - `LAYERLEAN/README.md`, `LAYERLEAN/LayerLemma.lean` (SHA-256 `afb8542d…`), `LAYERLEAN/logs/`. Lean names were taken
   from the file itself (declaration list checked with grep) and from the axiom log.
 - `SIX60/README.md`, `SIX60/sets/` (five 60-point sets, hashes verified), `SIX60/construction/REALIZE_README.md` (set D).
@@ -90,15 +97,16 @@ of all thirteen set files (twelve order types).
   cake_lpr replay of 6 November, which fills the former `\replaystatus` placeholder.
 - `LRATCHECK20261105/README.md`, `LRATCHECK20261105/recheck/README.md` (lrat-check defect; calibration re-certified).
 - `ROT45CHORD20261105/README.md`, `ROT456` §3–4, `ROTREFINE20261104/README.md` and `m5_REPORT.md`, `THREEFOLDRELAX/README.md`
-  (open cases, evidence only); `SYMLEAN/README.md` and `SymmetricReduction.lean` (`Threefold33`), `C3FINAL/README.md`.
+  (open cases, evidence only); `SYMLEAN/README.md` and `SymmetricReduction.lean` (`Threefold33`), `C3FINAL/README.md`, `C3SPOT/README.md`.
 - `SYMLEAN/README.md` §4 and `SYMLEAN/AffineReduction.lean` (statement of `hasConvexNGon_of_affine_symmetry`, for
   Remark 1.3).
 - `NOVELTY20261106/README.md` (safe wording, credit, what not to claim), `LIT/references.bib`, `LIT/RELATED.md`.
 
 ### Changes made to the soundness section
 
-`k8_soundness_p1.tex` is the source plus a 14-line header comment, four cross-reference edits, two footnotes and one
-deleted clause (`diff WRITEUP/note/k8_soundness.tex WRITEUP/P1/k8_soundness_p1.tex` shows them):
+`k8_soundness_p1.tex` is the source plus a 21-line header comment, four cross-reference edits, two footnotes, one
+deleted clause and two provenance edits (`diff WRITEUP/note/k8_soundness.tex WRITEUP/P1/k8_soundness_p1.tex` shows
+them):
 1. "described in the section on rotational upper bounds for k = 8 (draft STATUS20261104/k8_section.tex)" →
    "described in Section~\ref{sec:cert}";
 2. "As in the rest of the note," → "As in Section~\ref{sec:defs},";
@@ -111,9 +119,17 @@ deleted clause (`diff WRITEUP/note/k8_soundness.tex WRITEUP/P1/k8_soundness_p1.t
    structurally for all; see Section~\ref{sec:enc}, ``Validation''. (Until the replay it read "by hash for the 6
    sampled ones and structurally for all"; the header comment records the change.)"
 7. after the replay of 6 November had finished: "and is not repeated here, since it changes as the replay proceeds."
-   → "and is not repeated here." (the status no longer changes; Section 6.2 gives the finished replay).
-Mathematical text, rigor tags and gaps (G1)–(G4) are unchanged; the source still hashes to `197bc214…`. If the source
-changes, re-create the copy and re-apply these seven edits.
+   → "and is not repeated here." (the status no longer changes; Section 6.2 gives the finished replay);
+8. (audit of 6 November, numbers F11) the first citation of the checks script in the text, `\dirn{k8_soundness_checks.py}`
+   in the paragraph on triple sizes, → `\dirn{WRITEUP/note/k8_soundness_checks.py}`, and in the source's own header
+   comment "in this directory." → "in WRITEUP/note/." (the script and its log exist only there); the later citations
+   stay short;
+9. (audit of 6 November, numbers F9 / claims 5) in the rigor-label paragraph, "for every cited theorem of that file)" →
+   "for every cited theorem of that file except the one-line \lean{hullVerts_subset}, which is used in
+   \lean{layers_are_orbits} and \lean{exists_layer} and so is covered by their checks)".
+Rigor tags and gaps (G1)–(G4) are unchanged. The source hashes to `248bf037…` (since b583d89ab, which changed the
+proof of Corollary k8s:cor:geom in both files; before: `197bc214…`); apart from edits 1–9 the copy equals it. If the
+source changes, re-create the copy and re-apply these nine edits.
 
 ## Checks run for this draft (6 November 2026, KST; all on copies or read-only, under the caps)
 
@@ -127,16 +143,16 @@ changes, re-create the copy and re-apply these seven edits.
   reproduced; largest convex subset 7 for all thirteen files (twelve order types).
 - **Hashes and structure.** `tools/make_tables.py` (revised version): all thirteen point-set files, encoder and tool
   sources and the Lean file hash to the recorded values; in every file the non-centre rows are distinct and are exactly
-  the cyclic shifts of the printed seeds (layer blocks in ten files; the three cluster files list rows cluster by
-  cluster); the sevenfold files have exactly one zero row (the centre); the replayed cube CNF and proof hashes in
+  the cyclic shifts of the printed seeds (layer blocks in ten files; p7_compound_64, p7_two_orbit_64 and m7_x2_G9s_centre list
+  rows cluster by cluster; rule_p7_64pts is built from clusters but stored by orbits); the sevenfold files have exactly one zero row (the centre); the replayed cube CNF and proof hashes in
   `C6C7REVIEW/replay.json` equal the recorded ones; the computed cube orders equal those of `C6UPPER/README.md`. The
-  cube table and hash appendix it now writes are byte-identical to the earlier ones; the seed lists gained the three
-  cluster files and the coefficient sizes.
-- Scratch outputs (not kept): `/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/rerun/`
-  and `/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/leancheck/`.
+  cube table and hash appendix it now writes are byte-identical to the earlier ones; the seed lists gained those three
+  files and the coefficient sizes.
+- Outputs: `LAYERLEAN/logs/axioms_recheck_20261106/` and `WRITEUP/P1/rerun-20261106/` (copied from the session
+  scratch directory on 6 November 2026; each has a `README.txt` saying where and when it ran and how to rerun it).
 
 For the revision: `make_tables.py` re-run (PASS), and three pdflatex passes under the caps (each exit 0; 30 pages; no
-warnings; 1 overfull, 2 underfull boxes). No SAT solver or proof checker was run for this draft, and no file outside
+warnings; 1 overfull, 2 underfull boxes). No SAT solver or proof checker was run for that revision, and no file outside
 `WRITEUP/P1/` was changed.
 
 For the replay update (6 November 2026, after 07:43 KST): the replay figures in `p1.tex` were taken from
@@ -193,6 +209,66 @@ acted on, two of them (public artifact, venue length) only by recording them as 
 | 19 | "known" wording; "written by an independent check" | — | "known to us", "in our records"; "written for an independent check" |
 | 20 | overfull boxes; log removed | p1.log | Theorem 7.1(a) and Table 6 overfulls removed (also a new 7.8 pt one in Table 1 that the m = 2 row caused); `p1.log` kept |
 
+## Revision after the audit (6 November 2026, about 13:30–13:45 KST)
+
+Three audits of the draft (bibliography, numbers, claims) were each re-checked by a skeptic, who confirmed, refuted or
+narrowed every finding against the records and the web. Every confirmed finding was acted on as listed below; refuted
+findings were not (bibliography 3 and 8, claims 7 for the cake_lpr build, claims 10a). Paths are under
+`cloud/es7-2026-10-19/results`.
+
+| finding | change |
+|---|---|
+| bib F1 | KKS70 title "A combinatorial problem on convex n-gons" (zbMATH 0223.52009), also in `WRITEUP/note/symmetric_extremal.tex` |
+| bib F2, numbers F2, claims 2 | `Supp`: "the records cited are those at commit b583d89ab or later; the commit to cite is to be fixed before circulation" (open item 3) |
+| bib F4 | §1.1: Lemma 14 of BB25 has its proof omitted in the conference version (journal version not read); the note also has a construction without Lemma 14, checked by exact computation |
+| bib F5, F6, F7 | SMQH25: LNCS 16136 (LNAI), published October 2025; HS24: pages 61–80; KPH26: "to appear in CICM 2026" (arXiv comment; no proceedings record on 6 November 2026) |
+| bib M1–M6 | new entries ETV96 (cited for the Erdős–Tuza–Valtr refinement, "not read"), Sche20, Sche23, SMHM24; §1: ES(6) credits (Marić, Scheucher, faster SAT proofs, SNGCCH24 §7 corollary), ES(5) credit (Makai per ES35 p. 464, Makai–Turán per ES61); §1.1: earlier symmetric constructions (MS00, Sche20, SMHM24, as credited in SMQH §1); §10: SMQH §6.2 orbit count for k = 7 |
+| extra | GGTW25 cited as arXiv:2511.02864v3; v3 (22 Dec 2025) is current and its §38 is still the Erdős–Szekeres Happy Ending section (2^{k−2} points for k ≤ 8, no symmetry stated), checked on 6 November 2026 |
+| numbers F1, F14, claims 2 | `k8_soundness_p1.tex` header: source hash `248bf037…` (b583d89ab); this README's source line and edit list updated |
+| numbers F3 | §8 and `Supp`: `es8-c6c7-review-2026-11-04` described as the review archive (regenerated formulas, models, witnesses), not a proof archive; open item 8 likewise |
+| numbers F4 | §7: "the scale of each sixfold file and the number of digits … of each sevenfold file" |
+| numbers F5, F6, claims 1 | logs kept: `LAYERLEAN/logs/axioms_recheck_20261106/` and `WRITEUP/P1/rerun-20261106/` (each with a `README.txt`), cited in §3 and §7 |
+| numbers F7 | §9: "32 hardware threads and about 64 GB of memory (59.5 GiB visible to Linux)"; host also recorded in the two archive READMEs |
+| numbers F8 | §1.1: searches of 21 October and 1–2, 3, 4, 6 November with their records (LIT, PRIMEFOLD §8, C6UPPER/README.md, C6C7REVIEW/LITERATURE.md, NOVELTY20261106) |
+| numbers F9, claims 5 | §3 and the soundness copy (edit 9): `hullVerts_subset` is not in the axiom log but covered through `layers_are_orbits` and `exists_layer` |
+| numbers F10 | §7: `rule_p7_64pts` is built from clusters but stored by orbits |
+| numbers F11 | soundness copy (edit 8): `WRITEUP/note/k8_soundness_checks.py` at its first citation; header comment "in WRITEUP/note/" |
+| numbers F12, F13 | `C6UPPER/README.md`: 1.3–2.0 GB peak RSS per phase-order cube (2,046 MB for c10000); encoder B: 12 phase-order proofs 45.7 GB, all 32 proofs 46.5 GB |
+| claims 3 | `C7UPPER/repro.sh` paths adjusted for a checkout (tools `$S/resolve/bin`, `tests/` prefix with `C7UPPER` on `PYTHONPATH`, ES8SYM/PRIMEFOLD set paths, outputs to `$S/repro`, quoted `S` check, `cd` exits on failure). The first validation run (no `solve`, 2-minute limit, `nice -n 19`, 4 GB cap, fully loaded machine) did **not** pass cleanly: it stopped at the limit during the A/B comparison, and it ran before the quoting fix (`C7UPPER/logs/repro_validation_20261106.log`). So §9 and `C7UPPER/README.md` first carried the caveat: complete run of the adjusted script not on record. A second run of the adjusted script by the independent checker (no `solve`) completed with exit 0, output equal to the original log apart from point-set paths (`C7UPPER/logs/repro_validation_20261106b.log`); §9 and `C7UPPER/README.md` now say so (fix round below) |
+| claims 4 | §10: C3FINAL verdicts recorded at solve time on hash-matched formulas, proofs not kept, 2,120 of 116,883 re-solved and accepted again (C3SPOT, added to `Supp`) |
+| claims 6 | §1 and `Supp`: `experiments/omission-final311-2026-10-14` and `experiments/omission-compact-checker-2026-11-05` cited for the 311 remark; §2 says such paths are relative to the repository root |
+| claims 7 (cover checkers) | §8 "What is trusted": the programs named for each exact computation (cube cover: `verify_cover.py`, `strict_cover.py`; lower bounds: at least two per set) |
+| claims 8 | §7: set D is `cand1r_s19.pts`; its pipeline run is in `SIX60/construction/REALIZE_README.md`, "cand1r" |
+| claims 9 | §3: the mutant thresholds are "reported in LAYERLEAN/README.md; no log of these runs was kept" |
+| claims 10b | §4: "the sixfold 54-point set ES8SYM/sets/c6_54pts_9layers.pts" instead of "the certified …" |
+| claims 11 | Table 1 caption: `RefuteC6.part_a` is a version over ℂ with centre 0; its link to §2's conventions is not formalized |
+| claims 12 | the in-session check of a draft of the corrected corollary is kept as `reviews/corollary-geom-review-20261106.md`; the paper keeps "no internal review" (open item 5) |
+| bib, typed from memory | open item 4 closed (Crossref check of the six entries) |
+
+Builds after the audit: `p1.pdf` as in the file table (31 pages, 0 errors, 0 undefined references or citations, 1
+overfull box as before). `WRITEUP/note/k8_soundness_wrapper.tex` and `WRITEUP/note/symmetric_extremal.tex` were
+compiled into a scratch directory (three passes each, exit 0; 12 pages each; 0 errors and 0 undefined references; the
+one overfull box of `symmetric_extremal`, 36.3 pt at lines 539–561, was there before). The committed
+`WRITEUP/note/symmetric_extremal.pdf` was not rebuilt, so it still shows the old KKS70 title. `make_tables.py` was not
+re-run, since no table input changed. No proof was produced or checked for this revision; the only solver call was
+the 9-layer CaDiCaL satisfiability check (s SATISFIABLE) in the checker's complete `repro.sh` run.
+
+## Fix round after the checker (6 November 2026, about 13:50–14:00 KST)
+
+An independent checker re-examined the audit edits. It passed all of them and raised four further points, each acted
+on as listed. No mathematics changed, and nothing new is claimed beyond what the cited records show.
+
+| point | change |
+|---|---|
+| 1 (C7UPPER caveat out of date) | The checker ran the adjusted `C7UPPER/repro.sh` once to completion (no `solve`, absolute `S`, CaDiCaL 2.1.3, `nice -n 19`, 4 GB cap, 15-minute limit; exit 0, 2:34.64 wall clock, peak RSS 0.63 GB). Its output from "== generate" to "s SATISFIABLE" equals `logs/repro_validation.log` apart from the point-set path prefixes (re-checked here with diff). The run is archived with a header as `C7UPPER/logs/repro_validation_20261106b.log`. The raw part after the 13 header lines has the SHA-256 of the checker's file, `856cee3d…`. §9 of `p1.tex`, `C7UPPER/README.md`, the `repro.sh` header comment and the claims 3 row above now describe both runs. §9 says "with an absolute S", since the script was changed after the run (point 2). The `solve` branch was not re-run |
+| 2 (`repro.sh` relative `S`) | `B=$S/resolve/bin` was set before `cd "$S"`, so a relative `S` other than `.` broke the CaDiCaL step and the solve branch. Now `B=$PWD/resolve/bin` is set right after `cd "$S" \|\| exit 1`. Checked with a copy of the script's head: with `S` relative and with `S` absolute, `$B/cadical --version` prints 2.1.3. For an absolute `S` the behaviour is unchanged, as the log header, the script header and `C7UPPER/README.md` say. The full script was not re-run after this change |
+| 3 (§1.1 citation placement) | "Balko and Valtr~\cite{BV17} ran a SAT attack on the Erdős–Tuza–Valtr refinement~\cite{ETV96} of the conjecture"; Sche20 and Sche23 added to "the works cited above" |
+| 4 (review provenance) | Open item 5, the file table, the claims 12 row and the header of `reviews/corollary-geom-review-20261106.md` now say that the review checked a draft written with τ and A, shortly before b583d89ab. The committed wording took up its remarks afterwards and was not re-checked. The paper is unchanged here: it still says "no internal review" |
+
+Build after the fix round: three passes, each exit 0; 31 pages; 0 errors, 0 undefined references or citations, 0 LaTeX
+warnings; 1 overfull box (13.3 pt, head of Lemma 5.2) and 5 underfull boxes, as after the audit. `p1.aux`, `p1.out`
+and `p1.toc` were deleted. No proof was produced or checked in this round.
+
 ## Open items before circulation
 
 1. **Replay placeholder: done (6 November 2026).** The hash-bound cake_lpr replay (6 Nov 2026) finished at 07:41:26
@@ -228,22 +304,34 @@ acted on, two of them (public artifact, venue length) only by recording them as 
    - The soundness copy no longer says that the replay status "changes as the replay proceeds" (edit 7 above).
 2. **Author and acknowledgements.** `[author]` on the title page; the acknowledgement paragraph is a placeholder that
    also asks for a statement on computational and AI assistance.
-3. **Commit to cite.** The `Supp` entry names branch `es7-night-2026-11-01` and says the draft was written at
-   597961bbd; fix the commit to cite once P1 is committed.
-4. **Bibliographic data from memory.** The entries for CaDiCaL 2.0 (CAV 2024), cake_lpr (Tan–Heule–Myreen, STTT 2023
-   and TACAS 2021), LRAT (Cruz-Filipe et al., CADE 2017), Lean 4 (de Moura–Ullrich, CADE 2021) and Mathlib (CPP 2020)
-   are not in `LIT/references.bib` and were entered from memory: check volumes and pages. The other entries follow
-   `LIT/references.bib` and the notes' bibliographies (Dumitru given as "B. Dumitru", as `NOVELTY20261106` asks).
+3. **Commit to cite.** The `Supp` entry names branch `es7-night-2026-11-01` and says that the records cited are
+   those at commit b583d89ab or later; fix the commit to cite once P1 is committed.
+4. **Bibliographic data from memory: done (6 November 2026).** The entries for CaDiCaL 2.0 (CAV 2024), cake_lpr
+   (Tan–Heule–Myreen, STTT 2023 and TACAS 2021), LRAT (Cruz-Filipe et al., CADE 2017), Lean 4 (de Moura–Ullrich,
+   CADE 2021) and Mathlib (CPP 2020) were entered from memory. In the bibliography audit of 6 November all six were
+   checked against their Crossref records, and volumes and pages match (CaDiCaL 133–152, LRAT 220–236, Lean 4
+   625–635, Mathlib 367–381, STTT 25(2) 167–184, TACAS 223–241). The other entries follow `LIT/references.bib` and the
+   notes' bibliographies (Dumitru given as "B. Dumitru", as `NOVELTY20261106` asks); the audit corrected or completed
+   five of them (KKS70 title, HS24 pages, SMQH25 volume, KPH26 venue, GGTW25 version) and added four (ETV96, Sche20,
+   Sche23, SMHM24; see "Revision after the audit").
 5. **Unreviewed new text.** Remark 1.3 (affine symmetries) and the proof of Corollary 1.2 (now with the step from a
-   rotation of order m to the rotation by 2π/m) are new in this draft and have had no internal review; both are labelled
-   so in the paper and in Table 7. The revision text of the review round (below) restates records and has had no
-   second review.
+   rotation of order m to the rotation by 2π/m) are new in this draft and have had no internal review; both are
+   labelled so in the paper and in Table 7. The revision text of the review round (below) restates records and has had
+   no second review. A draft of the corrected proof of Corollary k8s:cor:geom (written with τ and A, shortly before
+   b583d89ab) was checked once by a reviewer within the session (record: `reviews/corollary-geom-review-20261106.md`;
+   no defect, three wording remarks). That is not an independent review, so the paper keeps listing the corollary as
+   having had no internal review (G4). The committed text (b583d89ab) took up its wording remarks after that check, so
+   its final wording was not itself re-checked: the translation is η, not τ; R_c(x) = c + ρ(x − c) replaces the "linear
+   part" A; part (b) says that no cube step is needed; and R_c is named as `rotAbout` with centre c. Its optional
+   pointer from the sentence "after translating the centre to O" to the corollary was not added, because that would
+   change the copy away from `WRITEUP/note/k8_soundness.tex`.
 6. **Seven-fold verification count.** The paper says every sevenfold convex-subset count rests on at least two
    separately written programs, and on four or more for the five files also in `ES8SYM/sets`. `c7_64_own_s1000` has
    only the two `check64` programs on record (`m7_x2_G9s_centre` has a third DP in
    `PRIMEFOLD/cluster/thmA/cert_m7_x2_G9s_centre.log`). Running the `ES8SYM` pipeline on it would make "three programs"
    uniform for both symmetry types.
-7. **Inconsistencies found in the sources** (the paper uses the values computed from the raw records):
+7. **Inconsistencies found in the sources** (the paper uses the values computed from the raw records; the first two
+   were corrected in `C6UPPER/README.md` on 6 November 2026, audit findings F12 and F13):
    - `C6UPPER/README.md` gives 41.0 GB for encoder A's proofs (all 32 cubes) but 45.7 GB for encoder B's (the 12
      phase-order cubes only). From the byte counts in `C6UPPER/SHA256SUMS.txt`: A 40.8 GB (12) / 41.0 GB (32), B 45.7 GB
      (12) / 46.5 GB (32). The paper gives both.
@@ -254,12 +342,12 @@ acted on, two of them (public artifact, venue length) only by recording them as 
 8. **Gaps of the proof itself** (unchanged from the reviewed section): (G1) code-to-clause correspondence by reading
    the source; (G2) no formalized step from DIMACS to `Sixfold66`/`Sevenfold70`; (G3) encoder A's binary64
    classification (covered twice at the certified instances); (G4) parts marked "new here" or "not in the review" are
-   unreviewed. The proof archives (`es8-c6-octagon-2026-11-03`, `es8-c7-octagon-2026-11-03`,
-   `es8-c6c7-review-2026-11-04`) and the replay proofs of 6 November (`c6upper-replay-20261106`, about 28.4 GB of
+   unreviewed. The proof archives (`es8-c6-octagon-2026-11-03`, `es8-c7-octagon-2026-11-03`), the review archive
+   `es8-c6c7-review-2026-11-04` (regenerated formulas, models, witnesses) and the replay proofs of 6 November (`c6upper-replay-20261106`, about 28.4 GB of
    `.lrat.zst`) are not public. The replay of 6 November closes no gap among (G1)–(G4); it closes the separate gap that only 6 of the 64
    sixfold verdicts were hash-bound.
 9. **Literature.** The novelty paragraph is evidence only. Not accessed: the SMQH CICM chapter text, Baek–Balko's
-   JCTA version, Erdős–Tuza–Valtr 1996, paywalled databases. Repeat the search before submission.
+   JCTA version, Erdős–Tuza–Valtr 1996, Scheucher 2020 and 2023, Subercaseaux–Mackey–Heule–Martins 2024 (cited only as reported in HS24 and SMQH §1), paywalled databases. Repeat the search before submission.
 10. **Cosmetic.** One 13.3 pt overfull line in the head of Lemma 5.2 (long Lean names in the reviewed source; left as
     is so that the copy differs from the source only by the documented edits).
 11. **Sync.** If `WRITEUP/note/k8_soundness.tex`, `C6UPPER`, `SIX60` or `PRIMEFOLD` change, rerun

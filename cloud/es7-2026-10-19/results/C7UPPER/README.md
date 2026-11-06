@@ -82,3 +82,16 @@ CaDiCaL 3.0.1, UNSAT in 833 s and 802 s (1.6–1.7 GB). Proofs and CNFs are in t
 S=<scratch directory with resolve/bin/{cadical,lrat-check}> bash C7UPPER/repro.sh        # validation (~90 s)
 S=<...> bash C7UPPER/repro.sh solve                                                      # re-solve and check
 ```
+
+`logs/repro_validation.log` was produced in the original host layout. On 6 November 2026 the paths of `repro.sh` were
+adjusted for a checkout of the repository: tools from `$S/resolve/bin`, test scripts from `tests/` (with `C7UPPER` on
+`PYTHONPATH`, since they import `gen.py`), point sets from `../ES8SYM/sets` and `../PRIMEFOLD/sets/k8`, outputs to
+`$S/repro`. The message of the `S` check was quoted, because its unquoted `}` appended `}` to `S`, and `cd` now exits
+on failure. The first validation run (no `solve`, 2-minute limit, `nice -n 19`, 4 GB memory cap, machine under full
+load) stopped at the time limit during the A/B comparison (`logs/repro_validation_20261106.log`). It ran before the
+quoting fix, so its outputs went to the shell's working directory, outside the repository. A second run of the adjusted
+script (no `solve`, absolute `S`, CaDiCaL 2.1.3, same caps, 15-minute limit) completed with exit 0 in 2 min 35 s. Its
+output equals `logs/repro_validation.log` apart from the point-set paths (`logs/repro_validation_20261106b.log`). The
+`solve` branch has not been re-run. The "~90 s" above is the original timing. After the second run, `B` (the tool
+directory) is set after `cd "$S"`, so that a relative `S` also works; for an absolute `S`, as in that run, the
+behaviour is unchanged.

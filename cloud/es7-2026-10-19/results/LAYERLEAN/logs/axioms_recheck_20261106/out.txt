@@ -1,0 +1,45 @@
+start 2026-11-05T19:59:23Z
+'ErdosSzekeres.LayerLemma.hullVerts_eq_orbitFS' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.LayerLemma.hullVerts_eq_orbitFS_rotAbout' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.LayerLemma.layers_are_orbits' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.LayerLemma.exists_layer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.LayerLemma.card_peel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.LayerLemma.strict_nesting' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.LayerLemma.centre_not_mem_of_even' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.LayerLemma.dist2_le_of_later' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.LayerLemma.orient_polar' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.LayerLemma.orient_polar_centre_inside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.LayerLemma.orient_polar_halfplane' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.LayerLemma.sin_add_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.LayerLemma.chain_clauses_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.LayerLemma.hasConvexNGon_of_fan' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.LayerLemma.lin_pos_of_peel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.LayerLemma.fan_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.LayerLemma.convexNGon_of_layers' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.LayerLemma.sixfold_octagon' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.LayerLemma.sevenfold_octagon' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Command being timed: "lake env lean /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/leancheck/LayerLemmaAxioms.lean"
+	User time (seconds): 38.22
+	System time (seconds): 1.08
+	Percent of CPU this job got: 170%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:23.11
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2587624
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1188
+	Minor (reclaiming a frame) page faults: 130960
+	Voluntary context switches: 7873
+	Involuntary context switches: 4572
+	Swaps: 0
+	File system inputs: 108016
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+exit 0
+end 2026-11-05T19:59:46Z
