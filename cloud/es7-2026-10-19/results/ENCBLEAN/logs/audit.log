@@ -1,3 +1,20 @@
-sources: EncB.lean EncB/Emit.lean EncB/Gen.lean EncB/KernelCheck.lean
+date: 2026-11-06T16:16:20+09:00 (M2 review-fix step; supersedes the M2 audit.log of 2026-11-06T15:40:14+09:00)
+command: systemd-run --user --scope -q -p MemoryMax=8G -p MemorySwapMax=0 nice -n 10 scripts/audit.sh
+declarations mentioning the (6,8,11) instance (pattern: \b(encB|gen|genCoded|numVars|allCodes|allCodesOf|encode|diagCoded)\s+6\s+8\s+11\b|\bCubesUnsat64\b):
+  EncB/Cover.lean:110 (+4 lines): def CubesUnsat64 : Prop := ∀ c ∈ cubes64, ¬DimacsSatisfiable (cubeCnf (encB 6 8 11) c)
+  EncB/Cover.lean:114 (+4 lines): theorem encB_unsat_of_cubes64 (h : ∀ c ∈ cubes64, ¬DimacsSatisfiable (cubeCnf (encB 6 8 11) c)) :
+  EncB/Cover.lean:118 (+3 lines): theorem encB_unsat_of_cubesUnsat64 (h : CubesUnsat64) : ¬DimacsSatisfiable (encB 6 8 11) :=
+sources: EncB.lean EncB/Coded.lean EncB/Cover.lean EncB/Dimacs.lean EncB/Emit.lean EncB/Gen.lean EncB/KernelCheck.lean EncB/KernelCheckB.lean
 toolchain: leanprover/lean4:v4.24.0
-AUDIT PASS (no sorry/admit/native_decide/implemented_by/extern/unsafe/partial/axiom/opaque in code; Std-only)
+AUDIT PASS (no sorry/admit/native_decide/implemented_by/extern/unsafe/partial/axiom/opaque/set_option/ofReduceBool in code; Std-only; no decide/rfl/simp/omega/#eval/#reduce in a declaration that mentions the (6,8,11) instance)
+rc=0
+
+negative tests (2026-11-06 about 16:08 KST, each in a scratch copy of lakefile.toml, lean-toolchain, EncB.lean, EncB/ and scripts/, deleted afterwards):
+  ctrl: unmodified copy                                                      -> new audit PASS rc=0
+  a: 'example : (EncB.encB 6 8 11).length = 0 := by decide' after Cover.lean  -> new audit FAIL rc=1 (KERNEL EVALUATION RISK, token example); old audit FAIL
+  b: 'theorem bad : numVars 6 8 11 = 78059 := by' / '  decide' after Coded.lean -> new audit FAIL rc=1 (token decide on the next line); old audit PASS
+  c: 'theorem bad2 : (gen  6' / '  8 11).nv = 0 := by' / '  rfl' after KernelCheckB.lean -> new audit FAIL rc=1 (token rfl; instance split over two lines); old audit PASS
+  d: 'theorem bad3 : CubesUnsat64 := by' / '  intro c hc' / '  simp [CubesUnsat64] at *' after Cover.lean -> new audit FAIL rc=1 (token simp); old audit PASS
+  e: 'set_option debug.skipKernelTC true in' / 'theorem t : True := trivial' after Gen.lean -> new audit FAIL rc=1 (FORBIDDEN set_option, skipKernelTC); old audit PASS
+  (old audit = scripts/audit.sh of the M2 step, sha256 3a05765423850874b58274c70ac948d73c2688690de474313b5ac9170cebdede)
+M2 negative test (kept for the record): a copy with 'example : (EncB.encB 6 8 11).length = 0 := by decide' appended to EncB/Cover.lean gave AUDIT FAIL, rc=1 (2026-11-06 about 15:38 KST)

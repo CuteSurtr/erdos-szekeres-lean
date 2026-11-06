@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
-# check_recorded.sh SCRATCH_DIR [small|big|all]: compare the Lean emitter with the recorded encoder-B hashes.
+# check_recorded.sh SCRATCH_DIR [small|big|all] [gen|twin]: compare the Lean emitter with the recorded encoder-B hashes.
+#   MODE gen (default) prints M1's port `gen`; MODE twin prints M2's functional twin `encB` (the object of the
+#   theorems): small uses `twin-base`; big uses `twin-cubes64 6 8 11`, i.e. base.cnf and the cubes named below,
+#   taken from the Lean list `cubes64` (full_Y12 is not a cube of cubes64, so it is skipped in twin mode). In twin
+#   mode, big also checks (a) the exe's numbers of Y12 Y13 Y14 Y23 Y24 Y34 = cubeVars64 = the Y entries of
+#   C6UPPER/encb/B_m6K8t11.meta.json (gen_b2.py's map, sha 68b43494...), and (b) on the emitted base file, that the
+#   transitivity clauses of the triples (1,2,3), (1,2,4), (1,3,4), (2,3,4) (gen_b2.py:79-81) are written with
+#   exactly these numbers.
 #   small: (6,8,9), (7,8,9), (7,8,10), streamed straight into sha256sum (nothing written to disk);
 #   big:   (6,8,11) generated ONCE with `encb_dimacs files`: the base, full_Y12 and a few cubes in mkcubes layout
 #          (c-cubes vs C6UPPER/SHA256SUMS.txt, B/ entries; n-cubes = the not-Y(1,2) cubes, vs the hash list of the
@@ -18,7 +25,9 @@ set -u -o pipefail
 cd "$(dirname "$0")/.."
 R=..
 EXE=.lake/build/bin/encb_dimacs
-SCR=${1:?scratch dir}; WHAT=${2:-all}
+SCR=${1:?scratch dir}; WHAT=${2:-all}; MODE=${3:-gen}
+case "$MODE" in gen) BASE=base;; twin) BASE=twin-base;; *) echo "MODE must be gen or twin"; exit 2;; esac
+META=$R/C6UPPER/encb/B_m6K8t11.meta.json
 NOTY=/home/jay/research/data/c6upper-noty12-20261106/cubes.sha256
 K8=$R/K8EXACT20261106/logs
 fail=0
@@ -33,9 +42,9 @@ agree() {
 small() {  # m K t recorded-sha source
   if ! is_sha "$4"; then echo "($1,$2,$3) RECORD-ERROR (no recorded hash)"; fail=1; return; fi
   local got
-  got=$(/usr/bin/time -f '%e s wall, %M KB max RSS' -o "$SCR/time.$1$2$3" "$EXE" base "$1" "$2" "$3" 2>"$SCR/err.$1$2$3" | sha256sum | cut -c1-64)
+  got=$(/usr/bin/time -f '%e s wall, %U s user, %M KB max RSS' -o "$SCR/time.$1$2$3" "$EXE" $BASE "$1" "$2" "$3" 2>"$SCR/err.$1$2$3" | sha256sum | cut -c1-64)
   if [ "$got" = "$4" ]; then r=MATCH; else r="MISMATCH lean=$got"; fail=1; fi
-  echo "($1,$2,$3) $r recorded=$4 ($5) [$(tail -1 "$SCR/time.$1$2$3")] $(head -1 "$SCR/err.$1$2$3")"
+  echo "($1,$2,$3) [$MODE] $r recorded=$4 ($5) [$(tail -1 "$SCR/time.$1$2$3")] $(head -1 "$SCR/err.$1$2$3")"
   rm -f "$SCR/time.$1$2$3" "$SCR/err.$1$2$3"
 }
 if [ "$WHAT" = small ] || [ "$WHAT" = all ]; then
@@ -56,11 +65,50 @@ if [ "$WHAT" = small ] || [ "$WHAT" = all ]; then
 fi
 if [ "$WHAT" = big ] || [ "$WHAT" = all ]; then
   D="$SCR/b6811"; mkdir -p "$D"
-  CUBES="full_Y12 c00000 c11011 c10101 c11111 n11111 n00000"
-  /usr/bin/time -f '%e s wall, %U s user, %M KB max RSS' -o "$SCR/time.6811" "$EXE" files 6 8 11 "$D" base $CUBES 2>"$SCR/err.6811"
-  rc=$?
+  if [ "$MODE" = gen ]; then
+    CUBES="full_Y12 c00000 c11011 c10101 c11111 n11111 n00000"
+    /usr/bin/time -f '%e s wall, %U s user, %M KB max RSS' -o "$SCR/time.6811" "$EXE" files 6 8 11 "$D" base $CUBES 2>"$SCR/err.6811"
+    rc=$?
+  else
+    CUBES="c11111 c11011 c10101 c00000 n11111 n10100 n00000"
+    /usr/bin/time -f '%e s wall, %U s user, %M KB max RSS' -o "$SCR/time.6811" "$EXE" twin-cubes64 6 8 11 "$D" $CUBES 2>"$SCR/err.6811"
+    rc=$?
+  fi
   [ $rc -eq 0 ] || fail=1
-  echo "(6,8,11) encb_dimacs files rc=$rc [$(tail -1 "$SCR/time.6811")] $(head -1 "$SCR/err.6811")"
+  echo "(6,8,11) [$MODE] encb_dimacs rc=$rc [$(tail -1 "$SCR/time.6811")]"
+  grep -v '^wrote\|s wall' "$SCR/err.6811" | sed 's/^/  exe: /'
+  if [ "$MODE" = twin ]; then
+    # (a) the cube variables: exe's numbers of Y12..Y34 = cubeVars64 = gen_b2.py's map (meta.json)
+    exe_y=$(grep -o 'numbers of Y12 Y13 Y14 Y23 Y24 Y34 = \[[-0-9, ]*\]' "$SCR/err.6811" | grep -o '\[.*\]')
+    exe_cv=$(grep -o '^cubeVars64 = \[[-0-9, ]*\]' "$SCR/err.6811" | grep -o '\[.*\]')
+    meta_y=$(python3 -c "import json,sys; Y=json.load(open(sys.argv[1]))['Y']; print('[' + ', '.join(str(Y[k]) for k in ('1,2','1,3','1,4','2,3','2,4','3,4')) + ']')" "$META")
+    if [ -n "$exe_y" ] && [ "$exe_y" = "$exe_cv" ] && [ "$exe_y" = "$meta_y" ]; then
+      echo "(6,8,11) cube variables MATCH: exe Y numbers $exe_y = cubeVars64 $exe_cv = meta.json $meta_y (meta sha $(sha256sum "$META" | cut -c1-16))"
+    else
+      echo "(6,8,11) cube variables MISMATCH: exe '$exe_y' cubeVars64 '$exe_cv' meta '$meta_y'"; fail=1
+    fi
+    # (b) on the emitted file: the transitivity clauses of (1,2,3), (1,2,4), (1,3,4), (2,3,4) use these numbers
+    if python3 - "$D/base.cnf" "$META" <<'PY'
+import json, sys, itertools
+path, meta = sys.argv[1], sys.argv[2]
+Y = json.load(open(meta))['Y']; y = lambda i, j: Y['%d,%d' % (i, j)]
+trip = list(itertools.combinations(range(1, 11), 3))   # gen_b2.py:79 at t = 11
+want = {}
+for (i, j, k) in [(1, 2, 3), (1, 2, 4), (1, 3, 4), (2, 3, 4)]:
+    n = trip.index((i, j, k))
+    want[2 * n] = '%d %d %d 0' % (-y(i, j), -y(j, k), y(i, k))
+    want[2 * n + 1] = '%d %d %d 0' % (y(i, j), y(j, k), -y(i, k))
+lines = []
+with open(path) as f:
+    f.readline()
+    for _ in range(max(want) + 1): lines.append(f.readline().rstrip('\n'))
+bad = [(n, lines[n], w) for n, w in sorted(want.items()) if lines[n] != w]
+for n, w in sorted(want.items()): print('  clause %d: %s' % (n + 1, lines[n]))
+sys.exit(1 if bad else 0)
+PY
+    then echo "(6,8,11) emitted base.cnf: transitivity clauses of (1,2,3) (1,2,4) (1,3,4) (2,3,4) MATCH the meta numbers"
+    else echo "(6,8,11) emitted base.cnf: transitivity check FAILED"; fail=1; fi
+  fi
   for n in base $CUBES; do
     f="$D/$n.cnf"
     case $n in
@@ -70,7 +118,7 @@ if [ "$WHAT" = big ] || [ "$WHAT" = all ]; then
     esac
     got=$(sha256sum "$f" | cut -c1-64); sz=$(stat -c %s "$f"); tl=$(tail -c 40 "$f" | tr '\n' ' ')
     if [ -z "$want" ]; then r="NO-RECORD"; fail=1; elif [ "$got" = "$want" ]; then r=MATCH; else r=MISMATCH; fail=1; fi
-    echo "(6,8,11) $n $r lean=$got recorded=${want:--} ($src) bytes=$sz tail='$tl'"
+    echo "(6,8,11) [$MODE] $n $r lean=$got recorded=${want:--} ($src) bytes=$sz tail='$tl'"
   done
   rm -f "$D"/*.cnf "$SCR/time.6811" "$SCR/err.6811"; rmdir "$D"
   echo "deleted $D"

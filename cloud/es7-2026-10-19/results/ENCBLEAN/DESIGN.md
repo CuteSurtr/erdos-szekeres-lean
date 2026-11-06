@@ -10,6 +10,32 @@ changes in this revision: the text rendering of the emitter is named in the trus
 variable code of §3.1 uses `FL = max (K−1) 3` instead of `K`; the sketch of `sixfold66_of_unsat` passes both
 side conditions of `encB_satisfiable`; M9 emits the cubes from the Lean list `cubes64`.
 
+**Revision (2026-11-06, about 15:50 KST, M2 step).** M2 is implemented: `EncB/Dimacs.lean`, `EncB/Coded.lean`,
+`EncB/Cover.lean` and `EncB/KernelCheckB.lean`. The names of §3.1 and §1.1 are kept: `genCoded`, `allCodes`,
+`encB`, `numVars`, `numberMap_getD`, `decode_numberMap`, `decodeCode`, `dimacsSat_of_holds`, `encB_wf`,
+`covers_signPatterns`, `not_dimacsSatisfiable_of_cover`, `signPatterns`, `cubes64`, `CubesUnsat64`,
+`encB_unsat_of_cubes64`. The code-decoding theorem is `decodeCode_code`. Deviations from §3.1 (details and reasons
+in `README.md`, "M2"):
+1. `numberMap` is an `Array Nat` indexed by the code, not a `Std.HashMap`; the kernel cannot reduce `HashMap`'s
+   `USize` indexing.
+2. `orbVar := orbVarC`, a code only for three distinct valid labels, instead of `some ∘ orbCode` (mirrors Gen's
+   `orbTab` lookup and Python's `KeyError`).
+3. `okpair` is not a map; the extension step recomputes `olit p a b`.
+4. `Var` has a fifth constructor `other n` (codes outside every range; τ maps it to `False`).
+5. The even kernel instance is (6,4,1); `encB 4 4 2` exceeds 8 GB in the kernel.
+6. `encB`, `numVars` and `allCodes` are fields of one `encode m K t`, so that they are computed once
+   (`encB_eq`, `numVars_eq`, `allCodes_eq` hold by `rfl`).
+7. `cubes64 := signPatterns cubeVars64` with `cubeVars64 := [1, 2, 3, 10, 11, 18]` (the same term as §1.1).
+
+**Revision (2026-11-06, about 16:20 KST, M2 review fixes).**
+- `EncB/KernelCheckB.lean` also kernel-checks (4,5,1) for `encB` and `gen`, the only kernel instance with K > 4,
+  so a chain of two levels.
+- `scripts/audit.sh` checks every declaration that mentions the (6,8,11) instance, not just single lines, and also
+  forbids `set_option` and `ofReduceBool`.
+- `logs/axioms.log` covers every declaration of the package.
+
+No definition or statement changed (README, "M2 review fixes").
+
 **Paths.** Paths are relative to `R = cloud/es7-2026-10-19/results/` unless they are absolute. Abbreviations:
 
 | short | file |
@@ -394,7 +420,7 @@ would be brittle.
 | model transfer | `dimacsSat_of_holds : (∀ cl ∈ genCoded m K t, ∀-clause holds under τ ∘ decodeCode) → DimacsSat (encB m K t) (nuOf m K t τ)` | pattern of H `Dimacs.lean:193`; membership is now by construction | 60–100 |
 | well-formedness | `encB_wf : ∀ cl ∈ encB m K t, ∀ l ∈ cl, l ≠ 0 ∧ l.natAbs ≤ numVars m K t` | new (from `numberMap_getD`) | 30 |
 | cover | `covers_signPatterns : (∀ v ∈ vs, v ≠ 0) → Covers (signPatterns vs)`; `not_dimacsSatisfiable_of_cover` | new by induction on `vs`; copy of H3 `Cover.lean:34-48,95-108` | 40 + copy |
-| twin = oracle | on the tiny grid: kernel `decide +kernel` for 3 instances (as Gen's `KernelCheck.lean`); compiled byte comparison on the 225-instance grid and the 4 recorded instances | test, not a theorem (a proof of `encB = (gen ·).clauses.toList` is optional and hard) | — |
+| twin = oracle | on the tiny grid: kernel `decide +kernel` for 4 instances (done: (3,4,1), (3,4,2), (6,4,1), (4,5,1)); compiled byte comparison on the 225-instance grid and the 4 recorded instances (done), plus `encB = gen` as Lean values on 229 instances (done) | test, not a theorem (a proof of `encB = (gen ·).clauses.toList` is optional and hard) | — |
 
 **Alternative, if the twin is too slow.** It is a list program over about 2.4M clauses; Gen took 6 s and 426 MB at
 (6,8,11), and the twin should be within about 10×. If it is too slow, prove soundness directly over `gen`. That
@@ -522,7 +548,7 @@ KeyOrder and `orient_rotAbout_inv`.
 |---|---|---|---|---|---|
 | **M0** | Design, lemma map, reference corpus | `DESIGN.md`, `ref/hashes.tsv`, `ref/make_ref.py` | This file exists. The corpus covers the tiny grid plus the four recorded instances with gen_b2.py at `3d47459a…`, including rows where Python raises. | none | done (see below) |
 | **M1** | Std-only port of gen_b2.py (both parities) and the emitter | `EncB/Gen.lean`, `EncB/Emit.lean`, `EncB/KernelCheck.lean`, `scripts/compare_b.sh`, `scripts/check_recorded.sh` | `lake build` (Std-only) is green; no `sorry`/`native_decide`/`implemented_by`/`extern`/`unsafe`. Byte-identical on the whole tiny grid and on (6,8,9) `9f638543…`, (7,8,9) `67cd613d…`, (7,8,10) `b4d29017…`, (6,8,11) base `479e31a9…`. A sample of the 64 cubes matches (the full 64 are in M9). | light, now | done by the parallel M1 step (see below) |
-| **M2** | Functional twin and numbering bridge | `EncB/Coded.lean`, `EncB/Dimacs.lean`, `EncB/Cover.lean` | `genCoded`, `allCodes`, `encB`, `numVars`, `encB_wf`, `dimacsSat_of_holds`, `covers_signPatterns` and `not_dimacsSatisfiable_of_cover` are proved; axioms ⊆ {propext, Classical.choice, Quot.sound}. `encB` = `gen` = Python on the tiny grid (kernel on 3 instances, compiled on all) and on the 4 recorded instances (compiled, once each). | light, **now** (Std-only) | 1–2 d |
+| **M2** | Functional twin and numbering bridge | `EncB/Coded.lean`, `EncB/Dimacs.lean`, `EncB/Cover.lean` | `genCoded`, `allCodes`, `encB`, `numVars`, `encB_wf`, `dimacsSat_of_holds`, `covers_signPatterns` and `not_dimacsSatisfiable_of_cover` are proved; axioms ⊆ {propext, Classical.choice, Quot.sound}. `encB` = `gen` = Python on the tiny grid (kernel on 3 instances, compiled on all) and on the 4 recorded instances (compiled, once each). | light, **now** (Std-only) | **done** 2026-11-06 (README "M2") |
 | **M3** | Combinatorial soundness | `EncB/Model.lean` (frozen in §2.2), `EncB/Sound{Order,Orbit,Nest,Chain,Ang}.lean`, `EncB/Satisfiable.lean` | `encB_satisfiable` is proved, with no `sorry` and standard axioms. **Early warning:** a computable τ (orientations of an exact rational m = 6, t = 2 or 3 configuration, chain variables by least fixpoint) satisfies every clause of `encB` at that instance (compiled `#eval`, evidence only). **Mutants:** dropping a `Model` field breaks the proof. | light, **now** | 3–5 d |
 | **M4** | Merge LAYERLEAN + LEANEXT into an importable library | `geo/lakefile.toml` (requires the repo by path `../../../../..` and `encblean` by `..`), `geo/ES8Geo/{Layer,Phase,Link,PhaseClass,Capstone,Keys,Orbit}.lean` | `lake build` green in `geo`; axioms standard; statements equal to the source files (diff). **Infrastructure decision needed** (risk R5). | **Mathlib: after the cutoff (2026-11-16 17:00)** | 0.5–1 d |
 | **M5** | Labelling | `geo/ES8Geo/Labelling.lean` | `labelling_of_counterexample` (§2.1) proved | Mathlib | 1–1.5 d |
@@ -547,7 +573,15 @@ can run now while M4–M6 wait for the cutoff.
     I cross-checked three c-hashes against `C6UPPER/SHA256SUMS.txt:109,115,119` and n00000 against noty12
     `cubes.sha256:32`.
   - `EncB/KernelCheck.lean`: `decide +kernel` on (3,4,1), (3,4,2), (4,4,2); `#print axioms EncB.gen` = [propext].
-- **Not started:** M2–M9.
+- **M2.** Done by the M2 step (README "M2"). All the listed theorems are proved, with axioms within {propext,
+  Classical.choice, Quot.sound}. `encB` = `gen` = Python as follows:
+  - bytes on the 225-instance grid, on (6,8,9), (7,8,9) and (7,8,10), and on the (6,8,11) base and 7 cubes, taken
+    from `cubes64`;
+  - Lean values on 229 instances;
+  - kernel evaluation on (3,4,1), (3,4,2), (6,4,1) and, after the review, (4,5,1) (two chain levels).
+
+  `encB 6 8 11` takes 11.0 s to compute; the emission of base + 7 cubes took 15.3 s and 928 MB.
+- **Not started:** M3–M9.
 
 ---
 

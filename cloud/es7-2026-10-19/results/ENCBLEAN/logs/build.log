@@ -1,8 +1,39 @@
-date: 2026-11-06T14:57+09:00 (fixer step)
+date: 2026-11-06T15:40:00+09:00 (M2 step); load: 31.13 31.20 32.15
 command: rm -rf .lake/build; systemd-run --user --scope -q -p MemoryMax=8G -p MemorySwapMax=0 nice -n 10 lake build
 lean: Lean (version 4.24.0, x86_64-unknown-linux-gnu, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)
-result: Build completed successfully (9 jobs); rc=0
-  Built EncB.Gen (1.6s); EncB.Emit (639ms); EncB.Emit:c.o (542ms); EncB.Gen:c.o (3.7s); encb_dimacs:exe (383ms);
-  EncB.KernelCheck (12s); EncB (178ms)
-time: 13.98 s wall, 19.65 s user, 2129100 KB max RSS
-exe sha256: 521dd64d97cff63c4716ac6ac1cbf54863fdb3ac8d358868784a866fbdacddda (identical to the M1 build: reproducible)
+result: Build completed successfully (16 jobs).; rc=0
+  Built EncB.Dimacs (499ms)
+  Built EncB.Dimacs:c.o (103ms)
+  Built EncB.Gen (1.3s)
+  Built EncB.Coded (1.8s)
+  Built EncB.Cover (267ms)
+  Built EncB.Cover:c.o (87ms)
+  Built EncB.Emit (892ms)
+  Built EncB.Coded:c.o (1.5s)
+  Built EncB.Gen:c.o (3.7s)
+  Built EncB.Emit:c.o (1.4s)
+  Built encb_dimacs:exe (141ms)
+  Built EncB.KernelCheck (11s)
+  Built EncB.KernelCheckB (17s)
+  Built EncB (144ms)
+time: 21.26 s wall, 43.05 s user, 2062756 KB max RSS
+exe sha256: e9454996f7f8a21f479cc4a2540d18f2f55f6445fbd36c642d44a7f81fe96a59
+second clean build (2026-11-06T15:48:27+09:00): Build completed successfully (16 jobs).; 20.25 s wall, 41.61 s user, 2112540 KB max RSS; exe sha256 e9454996f7f8a21f479cc4a2540d18f2f55f6445fbd36c642d44a7f81fe96a59 = first build: reproducible
+
+== M2 review-fix step (2026-11-06T16:10:14+09:00; load 30.72 30.53 30.72) ==
+change: EncB/KernelCheckB.lean only (encB_4_5_1, gen_4_5_1 and their two axiom guards); no source of the exe changed
+command: systemd-run --user --scope -q -p MemoryMax=8G -p MemorySwapMax=0 nice -n 10 lake build -v   (incremental; .lake/build was not deleted)
+result: Build completed successfully (16 jobs).; rc=0; Built EncB.KernelCheckB (19s), Built EncB (180ms); every other job Replayed
+time: 19.58 s wall, 19.64 s user, 2112936 KB max RSS
+exe sha256: e9454996f7f8a21f479cc4a2540d18f2f55f6445fbd36c642d44a7f81fe96a59 (= the M2 clean builds)
+from-source recompilation (no lake, no .lake): each file compiled with plain 'lean -o' into scratch oleans, one at a time
+  in the same 8 GB nice-10 scope; rc=0 and no message for every file, so every #guard_msgs passed:
+  EncB/Gen.lean rc=0: 1.19 s wall, 419276 KB; messages: 0
+  EncB/Dimacs.lean rc=0: 0.48 s wall, 417316 KB; messages: 0
+  EncB/Coded.lean rc=0: 1.62 s wall, 438140 KB; messages: 0
+  EncB/Cover.lean rc=0: 0.27 s wall, 406092 KB; messages: 0
+  EncB/KernelCheck.lean rc=0: 10.51 s wall, 2083716 KB; messages: 0
+  EncB/KernelCheckB.lean rc=0: 18.55 s wall, 2173328 KB; messages: 0
+  EncB/Emit.lean rc=0: 0.97 s wall, 412468 KB; messages: 0
+  EncB.lean rc=0 messages: 0
+  (the scratch oleans were deleted afterwards)
