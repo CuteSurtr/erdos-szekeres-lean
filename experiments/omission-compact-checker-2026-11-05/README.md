@@ -654,6 +654,11 @@ ES(8) is claimed, and the full run has not been started. Evidence: `logs/es311/r
 
 ### 1. The assembly (open)
 
+*Update, same night:* the chain was built in one directory: 192 of 196 modules. `ResidualCoverCutsV2` was
+OOM-killed under a hard 24G cap, so `Residual32Bridge2650.Rows` is still missing. The three catalogs are
+byte-identical to the `build/ext/` ones. Details are in
+[the next dated section](#6-november-2026-consistent-build-of-the-geometric-chain).
+
 - **Why it is still open.** It cannot be done under this machine's 12 GB per-process cap:
   - The geometric chain behind `BalancedBudgets` and `Residual32Bridge2650.Rows` is not built here. The
     `.cache/` objects that `Residual32Bridge2650/check.py` reuses are absent, and `BalancedRows` exists only in
@@ -801,3 +806,376 @@ assumed 240 s for the two Roots and Final. The Roots of the two end-to-end subtr
   - this README: corrections in place, marked "corrected after the review".
 - **Unchanged:** `Fast.lean`, `Fast2.lean`, `Fcat62.lean`, the bridges, the exporter and the full export (every source
   sha256 as in the manifests).
+
+## 6 November 2026: consistent build of the geometric chain
+
+**Status: 192 of the 196 chain modules are built, and the assembly is still open.** The 196 modules are the
+import closure of `BalancedBudgets` and `Residual32Bridge2650.Rows`, plus `BalancedCoverCutsV2`. They were
+compiled once each, from pinned sources, in `build/chain311/`. `ResidualCoverCutsV2` needs more than the hard
+24G cap allowed here. So `OldcutsBinding`, `Transfer` and `Residual32Bridge2650.Rows` are not built, and
+`assembly/Final311Compact.lean` cannot be compiled yet.
+
+Nothing new about ES(8) is claimed. ES(8) ≤ 311 rests, as before, on the Lean check of 19 October 2026.
+
+The full run `es311-full` (not part of this work) finished at 22:45:07 UTC with all 352 modules ok, according to
+its driver log. `assemble_final311.sh --dry-run` confirms this from `run.tsv` (item 5). The real assembly was
+not run.
+
+| Item | Result | Rigor |
+|---|---|---|
+| 1. Import closure (`build/chain311/closure.json`) | 196 modules and 12 data files, every source at its pinned sha256 | exact computation |
+| 2. Build (`build_chain311.py`, `build/chain311/build.tsv`) | 192 ok; every printed axiom line standard; `ResidualCoverCutsV2` OOM-killed at the 24G cap; 3 modules depend on it | Lean-checked (the 192); measurement (costs) |
+| 3. The three catalogs against `build/ext/` and the October records | byte-identical (sha256) | exact computation |
+| 4. Against the October `.olean` records | 43 identical; 149 differ. For two of them the cause is shown to be the module name | exact computation |
+| 5. `assemble_final311.sh` | written and tested on refusals and on synthetic logs; the real compile-and-report path is untested | tested |
+| 6. Stub test | stub `E311.Final` elaborates (sorry stub; proves nothing); the full composition is blocked by the missing `Rows`; the balanced half elaborates | Lean elaboration with `sorryAx`, as intended; nothing is proved |
+| 7. Review fixes (below) | the library and the bridges' inputs pinned and re-checked, every run row's stamp checked, signal and OOM kills rejected, the scope-Result bug fixed and tested, a memory estimate, records corrected | exact computation; tested (no Lean except small probes) |
+
+### 1. The closure (`build_chain311.py --closure-only`)
+
+- **Scope.**
+  - 195 modules are in the import closure of `BalancedBudgets` and `Residual32Bridge2650.Rows`, outside Mathlib
+    and the ErdosSzekeres library (23 library modules are imported directly).
+  - `BalancedCoverCutsV2` is added. `Bridge311Bal` imports it, but it is not in that closure.
+  - The sources total 11.7 MB.
+  - Six modules (`RankCore{One,Two,Three,Four}`, `SixthRelaxedCore`, `LeanCore`) read CNF and LRAT files with
+    `include_str`. These 12 data files (0.30 MB) are part of the closure.
+- **Where the bytes come from.**
+  - 46 committed `.lean` files.
+  - Members of five committed archives:
+    - `balanced-rows-sources.tar.gz`: 85 modules;
+    - `cycles-sources.tar.gz`: 39;
+    - `blocks-sources.tar.gz`: 24;
+    - `sources.tar.gz` of the balanced-lean bundle: `BalancedProof.Catalog`;
+    - `Catalog.lean.gz`: the residual `Catalog`.
+  - Archives are extracted into `build/chain311/src`.
+- **Pins.**
+  - Every source must have the sha256 recorded in `omission-residual32-bridge2650-2026-10-11/kernel-check.json`:
+    its `modules` (compiled fresh on 11 October) or its `reused_objects` (pinned against
+    `global-cover-314-check.json`, whose sha256 the record also checks).
+  - Where other records pin the same file, they must agree: the balanced-rows, cycles, blocks and V2-cut kernel
+    checks, `balanced-rows-export.json`, `catalog-validation.json`, the 314 gate inputs and `LM_EXT` of
+    `lean_make.sh`. 153 modules have at least two agreeing pins; 43 have only the bridge record's.
+  - Data files must have the hash in their bundle's `manifest.json` or `kernel-check.json`.
+  - Hashes are checked when a source is written into `build/chain311/src` and again just before its compile.
+  - *Added after the review:* no 19 October record pins the chain's sources, so the link between this chain and
+    the 19 October check is an inference. That check's `finish.sh`
+    (`omission-final311-2026-10-14/search/finish.sh`) put `.cache/runtime/final-build` and
+    `.cache/es313/lean-export` ahead of the 11 October overlay on `LEAN_PATH`. Those directories (all of
+    `.cache/`) are gone, so which objects the 19 October check actually loaded cannot be verified.
+
+### 2. The build (`build_chain311.py`, `build/chain311/build.tsv`)
+
+- **Setup.**
+  - One toolchain: the repository's Lean 4.24.0 (x86_64, commit `797c613e`) and its `.lake` Mathlib v4.24.0.
+  - One output directory, `build/chain311/olean`. `LEAN_PATH` is lake's 11 roots plus that directory; no module
+    is provided twice.
+  - Each compile is `lean -j1 -s 32768 -R build/chain311/src`, in its own scope `chain311-<token>`:
+    `MemoryMax` 12G (light) or 24G (heavy), `MemorySwapMax=0`, `CPUQuota=100%`, nice 5.
+  - At most two compiles at once, and at most one heavy.
+  - A heavy compile started only with MemAvailable ≥ 32 GiB and the driver's latest start line a chunk. At the
+    eight heavy starts (corrected after the review; the first README said seven and missed the first-run
+    `ResidualCoverCutsV2` start at 22:02:04, MemAvailable 40.6 GiB, chunk phase) MemAvailable was 38.9–42.4 GiB,
+    and every one was in the chunk phase.
+- **Runs** (`build/chain311/runs.jsonl`; the entries for these two runs are reconstructed: "Review fixes", item 11).
+  - First run, 21:59 UTC. `RankCoreThree` and `SixthRelaxedCore` failed: their `include_str` files had not been
+    copied. The run was stopped at 22:05. Its two running compiles (`ResidualCoverCutsV2`,
+    `Residual32Bridge2650.Catalog`) were killed and recorded nothing. The script version of this run is not
+    recorded.
+  - After the fix, the run restarted at 22:05:32 with `--retry-failed` and ended at 23:22:27. That is 1 h 23 min
+    from the first start. Script `9754246b…` (the `closure.json` written at this start, whose content equals
+    today's).
+  - Sum of compile wall times: 1.96 h for the 192 ok modules, 2.63 h with the failed attempts.
+  - `.olean` output: 249 MiB.
+- **Every ok module:** Lean exited 0; the log has no error and no `sorry`; every `#print axioms` line printed is
+  within {propext, Classical.choice, Quot.sound}. Three modules print no axiom line
+  (`FourthGlobalProof.Data`, `SixthRelaxedProof.Data`, `ResidualCycleIndex`), and for the others only the
+  declarations they print are covered.
+- **Heavy modules.** Units corrected after the review: the first table mixed kB/10⁶ with bytes/10⁹. Here
+  everything is GiB (2³⁰ bytes), the unit of systemd's `MemoryMax=24G` and of MemAvailable above. Peak RSS is
+  from `time -v` and counts mapped `.olean` pages; the cgroup column is `memory.peak`; swap 0 everywhere.
+
+  | Module | Cap | Wall | Peak RSS | cgroup peak | `.olean` = October record |
+  |---|---|---|---|---|---|
+  | `BalancedCoverCutsV2` | 24G | 1,106.6 s | 18.53 GiB | 16.35 GiB | yes |
+  | `RankCoreFour` | 24G | 249.4 s | 18.68 GiB | 16.16 GiB | yes |
+  | `RankCoreTwo` | 24G | 188.5 s | 16.67 GiB | 14.09 GiB | yes |
+  | `SixthRelaxedTemplate` | 24G | 297.0 s | 15.97 GiB | 13.43 GiB | yes |
+  | `RankCoreThree` | 24G | 143.1 s | 14.21 GiB | 11.59 GiB | yes |
+  | `RankCoreOne` | 12G | 113.0 s | 11.75 GiB | 9.16 GiB | yes |
+  | `Witness` | 12G | 63.6 s | 11.14 GiB | 8.61 GiB | yes |
+  | `ResidualCoverCutsV2` | 24G | **OOM-killed** after 2,271 s (37 min 51 s) | 26.54 GiB at the kill | 24.00 GiB (the cap) | — |
+
+  The largest cgroup peak of any other module is 7.47 GiB (`LeanCore`).
+- **`ResidualCoverCutsV2`** is the one module that does not fit.
+  - Two readings of the scope's memory, taken by hand and not logged (unit as read): about 5.4 GB at 12 min and
+    17.1 GB at 32 min, an average of about 0.6 per minute. It then reached the 24 GiB cap at 37.85 min: about
+    1.2–1.4 GiB per minute over the last 6 minutes, depending on the unit of the readings (GiB or GB), about
+    twice the earlier rate. Corrected after the review: the first README said "still growing at about
+    0.7 GB/min", which does not fit the kill.
+  - The kernel OOM-killed `lean` with 23.88 GiB of anonymous memory and 2.66 GiB of file pages (kernel log:
+    `anon-rss:25041560kB, file-rss:2784796kB`; cgroup usage = limit = 25165824 kB).
+  - systemd then stopped the scope, so the log is empty. The row in `build.tsv` was corrected by hand from the
+    systemd journal and the kernel log; `build/chain311/row-notes.json` gives the values the script wrote, the
+    edited ones and their sources. `build.out` keeps the script's line (`fail`).
+  - The first README said `build_chain311.py` "now reads the scope's `Result` (`oom-kill`) itself". That code
+    did not work: it asked `systemctl show` for the bare unit name, which systemctl takes as a `.service`, so it
+    always read `success` (found by the new test). Fixed (the `.scope` suffix) and tested on a real OOM kill;
+    see "Review fixes".
+  - October's arm64 compile took 1,824 s, with no memory record. The other heavy modules took 1.2–2.6 times
+    their October time here (`BalancedCoverCutsV2` 1.2, the rank cores and the template 1.9–2.6), so this
+    one probably needs 40–80 minutes (it ran 38 minutes without finishing).
+  - **Memory needed (estimate, added after the review).** It has 1,108 cuts in 860,210 bytes against
+    `BalancedCoverCutsV2`'s 446 cuts in 361,201 bytes (ratios 2.48 and 2.38). Scaling `BalancedCoverCutsV2`'s
+    16.35 GiB cgroup peak linearly by those ratios, after an import baseline of 1–3 GiB, gives about
+    35–39 GiB (37–42 GB). This is a rough estimate: the growth sped up before the kill, and if it kept that
+    pace for the remaining time the module would not fit on this machine at all. A cap of 44G is the most this
+    machine allows under the cap + 8 GiB rule (MemTotal 59.5 GiB; MemAvailable was 51.3–52.3 GiB on
+    6 November between 00:05 and 00:25 UTC, with the campaign at about 1 GiB). Above that it needs another
+    machine or a decision to relax the 8 GiB headroom.
+  - As the ground rules require, it was not retried.
+
+### 3. The three catalogs
+
+| Module | `build/ext/` | `build/chain311/olean` |
+|---|---|---|
+| `BalancedProof.Catalog` | `d650caa8…` | `d650caa8…` |
+| `BalancedCoverCutsV2` | `6f7f0ba1…` | `6f7f0ba1…` |
+| `Residual32Bridge2650.Catalog` | `4fe35a09…` | `4fe35a09…` |
+
+- **What this settles.**
+  - All three are byte-identical, and equal to the October records.
+  - So the bridges and `E311.Final`, compiled against the `build/ext/` copies, need no recompilation:
+    `assemble_final311.sh` takes route `same`. Since the review it takes that route only when each catalog
+    equals in all three places (`build/ext`, `build/chain311`, the October record in `closure.json`), and only
+    when every CompactChecker and `build/ext` `.olean` the route uses is older than the run's first compile.
+  - It also closes the byte-identity check of `BalancedCoverCutsV2` left open by the review (item 6). The
+    `build/ext/` copy, made with swap, equals this rebuild under a hard 24G cap without swap.
+
+### 4. Against the October `.olean` records
+
+- **Identical: 43 modules.**
+  - These are the October bridge record's fresh modules, plus `BalancedProof.Catalog` and `BalancedCoverCutsV2`.
+    October compiled all of them with `--root`.
+  - The October objects were built on arm64 macOS and these on x86_64 Linux. The library objects
+    (`OmissionPacking`, `PopulationBounds`, …) also have the October hashes.
+- **Different: 149 modules.** They are all of the 84 `Geometry*`, `BalancedRows`, the residual `Catalog`,
+  `ResidualCycleIndex`, `ResidualGeometry`, the 37 `ResidualGeometry*`, `ResidualAllGeometry` and the 23
+  `ResidualBlock*`.
+- **Why.**
+  - `scripts/check_omission_{geometry,residual_geometry,residual_blocks}.py` ran `lean <file> -o <obj>` from
+    the repository root without `--root`. So Lean took the module name from the path, e.g.
+    `«.cache».«omission-balanced-rows-only».Geometry00000`.
+  - Compiled that way here, `Geometry00000` reproduces the October object `c11e7f09…` byte for byte
+    (`logs/es311/chain311-modname-test.txt`).
+  - *Second case, added after the review:* the residual `Catalog`. Compiled without `--root` from its original
+    overlay path `.cache/omission-lean-full/residual/Catalog.lean` (the path in `blocks-kernel-check.json`), it
+    reproduces the October object `2e118ef3…` byte for byte; with `-R` it gives the chain's `7f7ff8ea…`. The
+    replay command in `omission-residual-geometry-2026-10-09/README.md` (path
+    `.cache/residual-replay/arithmetic/Catalog.lean`) gives `97d6f25f…`, so that README's command does not
+    reproduce the October object. Lean 4.24.0, 12G hard cap, 38–39 s and 3.9 GiB RSS each.
+  - The other 147 were not recompiled this way. The same cause is likely, but it was checked for these two
+    modules only.
+- **What it does not affect.** The build here: every module was compiled under its import name, against this
+  directory only.
+
+### 5. `assemble_final311.sh` (written; not run for real)
+
+1. **Refuses unless the full run is finished.**
+   - The unit `es311-full` must be inactive, no `drive_es311.py` may run on the export, and no scope of its
+     driver may be left.
+   - Every one of the 352 modules (349 chunks of the two manifests, both Roots and `E311.Final`) needs a last
+     `run.tsv` row with verdict ok. That row must carry the manifest's source sha256, or the fixed template's,
+     and the `.olean` must still have the row's sha256.
+   - Every row's dependency stamp (since the review: all 352, not only `E311.Final`'s) must equal
+     `drive_es311.deps_stamp_of` recomputed from the current `lean_make` stamps. Today they are
+     `90438d39…` (balanced chunks and Root), `dcf70461…` (residual) and `dfc933ac…` (`E311.Final`).
+   - `E311.Final`'s row must show standard axioms for both theorems.
+   - All reasons are reported together.
+2. **Checks the chain, the library and the catalogs.**
+   - Every closure module needs an ok last row in `build.tsv` and an unchanged `.olean`.
+   - *Added after the review:* the library. `lean_make` stamps cover only the direct library imports of the
+     CompactChecker modules, so a rebuilt `PopulationBounds` or `Partition` would have left the chain stale
+     unnoticed. Now `build/chain311/library.json` pins Lean's own list of the chain's library closure (the
+     `header.moduleNames` of a file importing the 23 direct library imports): 4,952 `.olean` files with their
+     root and sha256, written on 6 November 00:11 UTC. Every one of those files was older than the chain's
+     first compile (newest 4 November 14:45 UTC), and the 141 ErdosSzekeres ones equal the 11 October bridge
+     record's `library_objects` (exact computation). The script requires lake's roots to be library.json's,
+     every pinned file to have its sha256, and the toolchain and lake-manifest sha256 of `closure.json` and
+     `library.json` to be today's.
+   - `LM_NO_BUILD=1 lean_make.sh` must confirm that `Path`, `Fcat62`, `Fcat2650` and the bridges are current.
+   - The three catalogs are compared between `build/ext`, `build/chain311` and the October record. Route
+     `same` needs all three equal for each. Otherwise `Bridge311Bal`, `Bridge311Res`, `Bridge311Defs` and
+     `E311.Final` are recompiled against `build/chain311` into `build/chain311/assembly` (route `rebuilt`).
+   - *Added after the review:* the inputs of the route. Route `same` uses the CompactChecker `.olean` files of
+     `Path`, `Fcat62`, `Fcat2650` and the bridges (with their imports) and the three `build/ext` catalogs: 13
+     files. Each must be older than the run's first compile (21:48:11 UTC, from `run.tsv`), so that it is the
+     file the chunks and `E311.Final` were compiled against; `lean_make` stamps alone are source-based. Their
+     sha256 and mtimes go into the report, with a comparison to `logs/es311/hardcap-rebuild.tsv` where it has
+     a hash (6 of the 13, all equal; newest input 20:29:19 UTC). Route `rebuilt` checks only the chunk side
+     (`Path`, `Fcat62`, `Fcat2650`).
+3. **Builds `LEAN_PATH`.**
+   - It is lake's roots, then `build/chain311/olean`, then a directory of symlinks to the CompactChecker
+     `.olean` files that `E311.Final` needs, the 351 chunk and Root `.olean` files and `E311/Final.olean`.
+   - Every `.olean` under every root is listed. A module provided twice, or `build/ext` or `build/` as a root,
+     is refused.
+4. **Compiles `Final311Compact.lean`**, at its pinned sha256 `b41a996a…`, in one scope with a hard cap
+   (`A311_MEM`, default 24G, at most 28G; MemAvailable must be at least cap + 8 GiB).
+   - Required: exit 0, no error, no `sorry`, and exactly one `#print axioms` line for
+     `ErdosSzekeres.Omission.Compact311.forces_convex_octagon_311`, within {propext, Classical.choice,
+     Quot.sound}.
+   - *Since the review*, "exit 0" means all of: the scope's exit status 0, a `time -v` report with
+     `Exit status: 0`, no `Command terminated by signal` line (GNU time reports `Exit status: 0` for a
+     signal-killed command and itself exits 137; tested), cgroup `oom_kill` 0, and the `.olean` written. The
+     same holds for the audit compile. Before, only the `time -v` line was read.
+   - An audit file imports the result and checks the `#check` statement `… : ErdosSzekeres.ForcesConvexNGon 311 8`.
+     It then lists every module in the environment, and each is mapped to its single root and hashed. A library
+     module that `library.json` pins must have its pinned sha256.
+5. **Writes the records:**
+   - `logs/es311/final311-compact.log`;
+   - `logs/es311/final311-compact.json`: verdict, costs, roots, run and chain summaries, the hash of every
+     non-library `.olean`, and a digest of the library ones;
+   - `logs/es311/final311-compact-imports.tsv.gz`: every imported `.olean`.
+
+Test-only switches: `--test-stub DIR`, `A311_EXTRA_ROOT` and `A311_EXPORT`. They never write to `logs/es311`.
+(Corrected after the review: `A311_EXTRA_ROOT` used to be honoured in the real mode, which writes there; the
+duplicate-module check kept it from shadowing anything, but the sentence was false. It is now refused unless
+`--test-stub` or `A311_EXPORT` is given, and a run with `A311_EXPORT` is reported as mode `test-export`.)
+
+### 6. Tests (`test_assemble_final311.sh`; `logs/es311/assemble-tests.txt`)
+
+| # | Test | Result |
+|---|---|---|
+| 1 | Stub `E311.Final`: the driver's template without the two Root imports, both theorems proved by `sorry`. Their statements are byte-identical to the template's. Elaborated against the chain's catalogs and the existing bridges. | Lean exit 0; both theorems `[propext, sorryAx, Classical.choice, Quot.sound]` (sorry stub; proves nothing) |
+| 2 | `assemble_final311.sh --test-stub` (`Final311Compact.lean` against the stub) | refused: chain incomplete (`ResidualCoverCutsV2` oom-heavy; `OldcutsBinding`, `Transfer`, `Residual32Bridge2650.Rows` not built) |
+| 2′ | The balanced half: `import BalancedBudgets` and the stub, with `balanced_population_188` copied verbatim from `Final311Compact.lean` | Lean exit 0, under 3 s; `[propext, sorryAx, Classical.choice, Quot.sound]` |
+| 3a | A copy of the export whose `run.tsv` keeps the 184 rows written before 22:30 UTC | refused: 168 of 352 modules not ok |
+| 3b | A process whose command line looks like the driver's | refused |
+| 3c | `--dry-run` on the real, finished export | 352 modules ok with all 352 dependency stamps; 4,952 library `.olean` files as pinned; catalogs equal in `build/ext`, the chain and the October records (route `same`); the 13 inputs older than the run's first compile; 13 roots and 9,990 `.olean` files with none provided twice; then refused: chain incomplete |
+| 4 | Extra root holding a copy of `BalancedBudgets.olean` | refused: module provided by two roots |
+| 5 | `build/ext` as an extra root | refused |
+| 6 | The audit file's `#check @` and `#eval` lines, on `BalancedBudgets` | Lean exit 0; 4,969 modules listed |
+| 7a | The report step on synthetic logs (no Lean) | only problem: `Final311Compact` not on `LEAN_PATH`, as constructed; 4,882 imported library modules checked against `library.json` |
+| 7b | Same, but `lean` killed by signal 9: `time -v` says `Exit status: 0`, the scope 137 | rejected: scope exit 137, terminated by a signal |
+| 7c | Same, with cgroup `oom_kill: 1` | rejected: cgroup oom_kill 1 |
+| 8a | A copy of the export with the full `run.tsv`, one chunk row's dependency stamp changed | refused: `E311B.C00022` stamp is not the current one |
+| 8b | `A311_EXTRA_ROOT` with neither `--test-stub` nor `A311_EXPORT` | refused: a test switch |
+| 9a | `check-chain` on a fake tree of symlinks to the real files | passes: route `same`, 4,952 library files, 13 inputs older than the run |
+| 9b | … with one `library.json` hash (`PopulationBounds`) changed | refused: 1 library `.olean` differs |
+| 9c | … with `closure.json`'s toolchain sha256 changed | refused |
+| 9d | … with `Fcat62.olean` replaced by a fresh copy (same bytes, newer mtime) | refused: changed after the run's first compile |
+| 9e | … with the October record of `BalancedCoverCutsV2` changed | route `rebuilt` |
+
+- **What the stub test does not show.** Test 2 was meant to show that the whole composition elaborates against
+  the real chain. That cannot run until `Rows` exists.
+- **What it does show.** The stub `E311.Final` elaborates against the chain's catalogs and the existing bridges
+  (`build/CompactChecker`'s, compiled against `build/ext`; corrected after the review, which found "the chain's
+  catalogs and bridges" misleading). The balanced half of `Final311Compact.lean` elaborates against the real
+  `BalancedBudgets`. Neither proves anything: both use `sorry`.
+- **What is untested.** The residual half, and the compile and report steps of a real assembly (tests 6 and 7
+  cover their pieces only).
+
+`test_build_chain311.py` (`logs/es311/chain311-build-tests.txt`; added after the review; compiles nothing):
+
+| # | Test | Result |
+|---|---|---|
+| 1a | `collect()` on a Python process writing 1 GiB in a 256M scope (`MemorySwapMax=0`) | the kernel OOM-killed it and systemd stopped the scope; verdict `oom-light`, Result `oom-kill` (with the old bare unit name this read `success` and gave `fail`) |
+| 1b–1c | `exit 3`; a command that writes its output and exits 0 | `fail`; `ok` |
+| 1d | A command killed by signal 9 (`time -v`: `Exit status: 0`) | not ok (classed `oom-light` by the exit-137 rule, a conservative choice) |
+| 2a–2d | `heavy_start_problem()`: cap + 8 > MemTotal; cap 51G against MemAvailable of about 51.4 GiB; 1G; nothing pending | refused (MemTotal); refused (MemAvailable); fits; no problem |
+| 3a–3b | `build_chain311.py --dry-run --retry-oom --heavy-cap 60`, `… 51` | refused up front (MemTotal; MemAvailable); nothing started |
+| 3c | `--dry-run --retry-oom --heavy-cap 1` | passes: 192 done, `ResidualCoverCutsV2` pending (the cap is only checked) |
+| 3d | `--dry-run` without `--retry-oom` | passes: the oom-heavy module is not pending |
+
+Each run of `build_chain311.py` there also re-verified `library.json` (a small Lean probe under 12G: 2.7 s,
+0.3 GiB cgroup peak).
+
+### Review fixes (6 November 2026, later)
+
+A review of this section found no path by which the assembly would accept an unsound result, and 14 gaps or
+errors. Each was checked first; all were real and are fixed as follows.
+
+1. **No memory estimate; a silent wait.** Estimate and the 44G limit of this machine in item 2 and "What
+   remains". `build_chain311.py` refuses up front when cap + 8 GiB exceeds MemTotal or MemAvailable, prints a
+   "waiting" line every 5 minutes when nothing can start, and stops after `--max-wait` minutes. Before, with
+   `--ignore-driver` and too little memory it looped forever without output (read from the code).
+   `--ignore-driver` is refused while `es311-full` is active; `--dry-run` runs every check and starts nothing.
+2. **Library `.olean` files not checked.** `build/chain311/library.json` (item 5, step 2), re-verified by every
+   later build run and by the assembly.
+3. **CompactChecker and `build/ext` inputs trusted through source stamps.** Route `same` now needs each catalog
+   equal in `build/ext`, the chain and the October record, and every input older than the run's first
+   compile; hashes and mtimes go into the report.
+4. **Only `E311.Final`'s dependency stamp re-verified.** All 352 now (test 8a).
+5. **A signal-killed `lean` read as exit 0.** The scope's exit, the signal line, cgroup `oom_kill` and the
+   written `.olean` are now required, for the main and the audit compile (tests 7b, 7c).
+6. **`A311_EXTRA_ROOT` honoured in the real mode.** Refused there now (test 8b); README sentence corrected.
+7. **Module-name cause stated as fact (builder's message).** Kept as a hedge; the second confirmed case (the
+   residual `Catalog`) is in item 4 and in `logs/es311/chain311-modname-test.txt`.
+8. **"Standard axioms only" (builder's message).** Item 2 now says "every printed axiom line" and names the
+   three modules that print none.
+9. **Mixed units.** Item 2 is in GiB throughout.
+10. **"Seven heavy starts".** Eight.
+11. **Provenance.** `closure.json` is no longer rewritten when its content is unchanged; every invocation
+    appends to `build/chain311/runs.jsonl` (the two build runs and the 23:31:44 rewrite by `656b4654…` are
+    back-filled and marked reconstructed); the hand-edited row is described in
+    `build/chain311/row-notes.json`. The Result-reading code was untested; testing it showed it never worked
+    (bare unit name read as a `.service`), and `stop_scope` had the same fault. Both fixed and tested
+    (`test_build_chain311.py`, 1a).
+12. **`OldcutsBinding` left out of the estimate.** In "What remains".
+13. **Wording of the stub test.** Item 6 and the summary table.
+14. **No 19 October pin of the chain's sources.** Stated in item 1, "Pins".
+
+### What remains
+
+1. **Build `ResidualCoverCutsV2` with a cap above 24G**, then `OldcutsBinding`, `Transfer` and
+   `Residual32Bridge2650.Rows`. The cap is the machine owner's decision. Check first, then run:
+
+   ```
+   python3 build_chain311.py --dry-run --retry-oom --heavy-cap 44 --ignore-driver   # checks only
+   python3 build_chain311.py --retry-oom --heavy-cap 44 --ignore-driver
+   ```
+
+   - **Memory.** Estimate 35–39 GiB, rough (item 2). 44G is the most this machine allows under the
+     cap + 8 GiB rule: it needs MemAvailable ≥ 52 GiB at the start, about what was free on 6 November around
+     00:15 UTC (51.3–52.3 GiB, with the campaign at about 1 GiB); with less, use 43G or free memory first.
+     The script now refuses up front when MemTotal or MemAvailable is below cap + 8 GiB, and no longer waits
+     silently (`--max-wait`, default 30 min). If 44G is not enough, the module needs another machine or a
+     relaxed headroom rule; a second OOM kill costs another 40–60 minutes.
+   - **Time.** `ResidualCoverCutsV2` 40–80 minutes. Then `OldcutsBinding` (October: 289 s and 10.0 GiB RSS on
+     arm64; here probably 6–13 minutes) under the 12G light cap. Its cgroup peak should be near 8 GiB
+     (cgroup peaks here ran about 2.5 GiB below the October RSS), but if it is OOM-killed under 12G, the script
+     retries it once under the heavy cap, adding up to 13 minutes. `Transfer` and `Rows` took about 10 s each
+     in October. In all about 45–95 minutes, up to about 110 with that retry.
+   - Everything else is already built and is not rebuilt; `library.json` is re-verified first.
+2. **Run `test_assemble_final311.sh` again.** Test 2 then compiles the full composition against the stub. Lean
+   should exit 0 with `sorryAx`, and the script should reject only for the axioms.
+3. **Run `assemble_final311.sh` once.** The `es311-full` run is finished, and its dry run passed every check
+   except the chain. Only a verified `final311-compact.json` would make the compact recheck of ES(8) ≤ 311
+   complete.
+4. **Optional:** replay the final environment with an independent checker (lean4checker is not installed).
+5. **Noticed, not changed:** `drive_es311.py` also passes bare unit names to `systemctl` (`kill_scope`'s
+   `show -p ControlGroup`, `kill`, `reset-failed`), which systemctl reads as `.service`. Its scope-emptiness
+   check therefore always saw no cgroup and relied on the process-group check alone, which covers `lean`
+   (it runs in the compile's process group). The full run is finished; fix this before the driver is used
+   again.
+
+### Files (this section)
+
+- **New scripts:**
+  - `build_chain311.py`: the closure and the build, restart-safe;
+  - `assemble_final311.sh`;
+  - `test_assemble_final311.sh`;
+  - `test_build_chain311.py` (review fixes).
+- **New logs:**
+  - `logs/es311/chain311-closure.json` and `logs/es311/chain311-build.tsv` (copies of the `build/chain311` ones);
+  - `logs/es311/chain311-library.json.gz`, `logs/es311/chain311-runs.jsonl` and
+    `logs/es311/chain311-row-notes.json` (copies of the `build/chain311` ones; review fixes);
+  - `logs/es311/chain311-modname-test.txt`;
+  - `logs/es311/assemble-tests.txt` and `logs/es311/chain311-build-tests.txt`.
+- **Changed:** this README (this section, and a pointer in "1. The assembly (open)").
+- **Git-ignored, in `build/chain311/`:**
+  - `src/` and `olean/`;
+  - `logs/` (one Lean log per attempt) and `build.out`;
+  - `stubtest/`, `modname-test/`, `selftest/`, `libprobe/` and `assembly/path` (from the dry run);
+  - `library.json`, `runs.jsonl`, `row-notes.json` (copied to `logs/es311/`).
+- **Untouched:** `build/es311/full` and `build/ext` (both only read), and every source in other experiments.

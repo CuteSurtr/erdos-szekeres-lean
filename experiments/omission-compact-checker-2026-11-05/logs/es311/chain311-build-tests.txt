@@ -1,0 +1,14 @@
+test_build_chain311.py, 2026-11-06T00:23:21Z; build_chain311.py sha256 2daa70d2e530318efeab8984a4959727a5a96032a3441db38dab599cafbdb91b
+PASS 1a OOM in a 256M scope: verdict oom-light, Result 'oom-kill', oom_kill 1, exit -15, wall nan
+PASS 1b exit 3: verdict fail, Result 'success', exit 3
+PASS 1c exit 0 with output: verdict ok, Result 'success', exit 0
+PASS 1d killed by signal 9: verdict oom-light, Result 'success', exit 137, time -v exit 0, signalled True
+PASS 2a cap + 8 > MemTotal: heavy cap 59G + 8 GiB exceeds MemTotal 59.5 GiB: ['X'] could never start on this machine
+PASS 2b cap 51G vs MemAvailable 51.4: MemAvailable 51.4 GiB < heavy cap 51G + 8 GiB: ['X'] could not start now; free memory (other jobs) or choose another --heavy-cap
+PASS 2c cap 1G: None
+PASS 2d nothing pending: None
+PASS 3a --heavy-cap 60: refused: heavy cap 60G + 8 GiB exceeds MemTotal 59.5 GiB: ['ResidualCoverCutsV2'] could never start on this machine
+PASS 3b --heavy-cap 51: refused: MemAvailable 51.3 GiB < heavy cap 51G + 8 GiB: ['ResidualCoverCutsV2'] could not start now; free memory (other jobs) or choose another --heavy-cap
+PASS 3c --heavy-cap 1 --dry-run: exit 0; pending heavy ['ResidualCoverCutsV2']; done 192; MemAvailable 51.3 GiB
+PASS 3d no --retry-oom: exit 0; the oom-heavy module is not retried without --retry-oom: pending heavy []
+ALL PASS
