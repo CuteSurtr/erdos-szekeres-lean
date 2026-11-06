@@ -98,13 +98,13 @@ FINAL_SRC_SHA=7a91d397b7020867d29093bef6aaf41cf85644c9369fad0197ff0ea742416f9e
 # export_es310.py and export_es311.py, and coverage_es310.py gets the first as --exporter-sha256.
 # EXPORTER_SHA256 is EMPTY until export_es310.py is frozen before the real export; while it is empty, the run
 # check refuses. EXPORTER311_SHA256 is export_es311.py as it wrote the verified 311 export (manifest-E311B.json).
-EXPORTER_SHA256=""
+EXPORTER_SHA256=29854a3799db7ebdb29311255c2a089a0f2c9957beaa2d839583d50033920b1f
 EXPORTER311_SHA256=334d2d75cff1effdb4a7420501c0e3247f0dbbe645ae86bf8f8dc03887edbbfb
 # The other pipeline scripts (soundness review item 6): EMPTY until freeze_es310.sh fills them with
 # EXPORTER_SHA256; while one is empty, the run check refuses. shapes_es311.py is the committed 311 file.
-MERGE_SHA256=""
-DRIVER_SHA256=""
-COVERAGE_SHA256=""
+MERGE_SHA256=3cbf428b130f6dc2a01893a8dd387d24717b97625bc713a0b801b2fa8a797940
+DRIVER_SHA256=7992026f1e94a98cdd1412e8272a30b3559120ce8364ab9c943d75e6534bdd5f
+COVERAGE_SHA256=fff949b9d6a0cadc49184c7c7afa35d97775b769f90a3116360dfcdf23254be5
 SHAPES_SHA256=9906b781d02cf54dc1af24b501f3306261a927432cc1f2af05fbe8ae91f33837
 refuse() { echo "assemble_final310: refused: $*" >&2; exit 1; }
 fail() { echo "assemble_final310: FAILED: $*" >&2; exit 1; }
