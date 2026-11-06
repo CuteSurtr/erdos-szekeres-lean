@@ -12,6 +12,12 @@ chunk; its linearity is untested. See the section of that date.
 module. A pipeline to re-check ES(8) ≤ 311 with it is built and tested: exporter, independent coverage check, Lean
 bridges with standard axioms, and a restart-safe driver. The full run (about 8 CPU-hours projected) has not been
 started. See the last section.
+**Update, 6 November 2026 (recorded about 10:30 KST):** the compact recheck of ES(8) ≤ 311 is complete. All 352
+modules of the full run are ok, the geometric chain is built (196 of 196 modules), and `assemble_final311.sh`
+verified `forces_convex_octagon_311 : ErdosSzekeres.ForcesConvexNGon 311 8` with axioms propext, Classical.choice
+and Quot.sound. This is a second complete Lean check of ES(8) ≤ 311, a reproduction with the compact checker. It is
+not a new bound and not an independent proof. See
+[the section of that date](#6-november-2026-the-compact-recheck-is-complete).
 
 ## Design
 
@@ -288,6 +294,11 @@ ES(8) is claimed. ES(8) ≤ 311 rests, as before, on the Lean check of 19 Octobe
 ([record](../omission-final311-2026-10-14/README.md)). This section prepares a second, much cheaper check of
 the same two arithmetic facts, with a different checker (`checkF2`) and exporter.
 
+*Update, 6 November 2026:* the full run and the assembly are done. ES(8) ≤ 311 now has two complete Lean checks: the
+19 October one, and this one, a reproduction with the compact checker. See
+[6 November 2026: the compact recheck is complete](#6-november-2026-the-compact-recheck-is-complete). The statements
+below about the run not being started, and about the assembly being open, describe the state when they were written.
+
 | Item | Status | Rigor |
 |---|---|---|
 | 1. Exporter, manifest, coverage | Both trees exported in full (chunk limit 5,000 leaves, block limit 64); manifests cover every leaf exactly once; independent count agrees | exact computation |
@@ -297,6 +308,8 @@ the same two arithmetic facts, with a different checker (`checkF2`) and exporter
 
 A review of this section followed the same day; its findings and the fixes are in
 [the next section](#6-november-2026-review-fixes-for-the-311-recheck). Both open items below remain open.
+*(Both closed on 6 November 2026: the full run finished with 352 of 352 modules ok, and the assembly was compiled
+and verified. See [the last section](#6-november-2026-the-compact-recheck-is-complete).)*
 
 **What remains.**
 - **The full run:** the 349 chunk modules, `E311B.Root`, `E311R.Root` and `E311.Final`, with
@@ -327,6 +340,8 @@ theorem forces_convex_octagon_311 : ForcesConvexNGon 311 8 :=
    `balanced_excludes_63` (the body of `OmissionBalanced.ExcludesHoleBudget 63`) and `residual_excludes_32` (the body
    of `OmissionResidual32Bridge2650.Excludes2650Zero 32`).
 4. **`assembly/Final311Compact.lean`** (not compiled) turns them into `ForcesConvexNGon 311 8`, as above.
+   *(Compiled and verified on 6 November 2026 by `assemble_final311.sh`; see
+   [the last section](#6-november-2026-the-compact-recheck-is-complete).)*
 
 Only Lean decides correctness. The manifests and the coverage check are bookkeeping: a missing or wrong chunk
 makes that chunk or a Root fail to compile.
@@ -555,6 +570,8 @@ trials can be different modules.
     `--root-memory 24G` if the machine allows.
 - **Against the original runs.** The 19 October chunks took about 175 CPU-hours (balanced) and the 12 October ones
   about 120 CPU-hours (residual).
+  *(Corrected 6 November 2026: "about 120" is the 313 record's estimate for a reproduction. The module times in its
+  `kernel-check.json.xz` sum to 111.9 h; see §4 of the last section.)*
 
 ### Rejection test on 311 data
 
@@ -568,6 +585,9 @@ The file differs from the genuine module only in that block's data line. In both
 of `ex8` showed `sorryAx` and no `.olean` was written, so the driver recorded `fail` (`logs/es311/reject-E311BX.C00001.log`).
 
 ### Driver (`drive_es311.py`; tested, the full run not launched)
+
+*Update, 6 November 2026:* the full run was launched later as unit `es311-full` and finished with 352 of 352 modules
+ok ([the last section](#6-november-2026-the-compact-recheck-is-complete)).
 
 - **Usage.** `python3 drive_es311.py build/es311/full --jobs N [--root-memory 24G]`, after
   `export_full_es311.sh` has written the two exports. It also writes `src/E311/Final.lean` from its fixed template.
@@ -610,7 +630,8 @@ of `ex8` showed `sorryAx` and no `.olean` was written, so the driver recorded `f
 
 - **Lean:**
   - in `CompactChecker/`: `Path.lean`, `Fcat2650.lean`, `Bridge311Res.lean`, `Bridge311Bal.lean`, `Bridge311Defs.lean`;
-  - `assembly/Final311Compact.lean`, which is not compiled.
+  - `assembly/Final311Compact.lean`, which is not compiled. *(Compiled and verified on 6 November 2026, unchanged,
+    sha256 `b41a996a…`; see the last section.)*
   - `Fast.lean`, `Fast2.lean` and `Fcat62.lean` are unchanged.
 - **Scripts:**
   - `export_es311.py` (sha256 `334d2d75…`, which wrote every trial and full export);
@@ -634,6 +655,10 @@ of `ex8` showed `sorryAx` and no `.olean` was written, so the driver recorded `f
   The build logs of the new modules are in `logs/make/`.
 - **Git-ignored** (`build/`):
   - the trial exports with their `.olean` files, logs and `run.tsv` (`build/es311/trial/`, about 0.6 GB);
+    *(6 November 2026, about 10:16 KST: deleted to free disk, except `R-L1000-B64` and `BX-L1000-B64`, the two
+    exports that `test_driver_es311.sh` copies; about 13 MB remain. The numbers are kept in the tracked logs
+    `logs/es311/trial-*.tsv`, `trial-fit.json`, `trial-run-*.out`, `e2e-*` and `mem-sample-trial.tsv`.
+    `run_trial_es311.sh` and `run_e2e_es311.sh` re-export the deleted ones.)*
   - the full export (`build/es311/full/src`, 1.65 GB);
   - the shape caches (`build/es311/shape-*.json.gz`);
   - the external `.olean` files (`build/ext/`).
@@ -652,12 +677,22 @@ ES(8) is claimed, and the full run has not been started. Evidence: `logs/es311/r
 | 5 | killing only the wrapper left an orphaned `lean` that later wrote a stray `.olean` | confirmed by reading `start`/`finish` | one named scope per compile; it is emptied and waited for before any rename or delete; leftover scopes and stray files are removed at start; one driver per export | fixed, tested |
 | 6 | `MemoryMax` does not bound swap | confirmed by experiment | `MemorySwapMax=0` everywhere; `lean_make.sh` cap configurable (`LM_MEM`); README corrected for `BalancedCoverCutsV2`, which does not fit in a hard 12 GB | fixed, tested |
 
+*Update, 6 November 2026:* gaps 1 and 2 are closed. The full run finished with 352 of 352 modules ok, and
+`Final311Compact.lean` was compiled in one consistent build (route `same`) and verified with standard axioms. See
+[the last section](#6-november-2026-the-compact-recheck-is-complete).
+
 ### 1. The assembly (open)
 
 *Update, same night:* the chain was built in one directory: 192 of 196 modules. `ResidualCoverCutsV2` was
 OOM-killed under a hard 24G cap, so `Residual32Bridge2650.Rows` is still missing. The three catalogs are
 byte-identical to the `build/ext/` ones. Details are in
 [the next dated section](#6-november-2026-consistent-build-of-the-geometric-chain).
+
+*Update, 6 November 2026 (later):* closed. `ResidualCoverCutsV2` was built at a 43G cap, then `OldcutsBinding`,
+`Transfer` and `Residual32Bridge2650.Rows` (196 of 196). `assemble_final311.sh` compiled `Final311Compact.lean`
+(route `same`) and recorded `#print axioms forces_convex_octagon_311`: propext, Classical.choice, Quot.sound. The
+optional lean4checker replay (step 4 below) was not done. See
+[the last section](#6-november-2026-the-compact-recheck-is-complete).
 
 - **Why it is still open.** It cannot be done under this machine's 12 GB per-process cap:
   - The geometric chain behind `BalancedBudgets` and `Residual32Bridge2650.Rows` is not built here. The
@@ -694,6 +729,11 @@ byte-identical to the `build/ext/` ones. Details are in
 Not launched, as the task requires. The figures in "Projection of the full run" remain a projection, including the
 assumed 240 s for the two Roots and Final. The Roots of the two end-to-end subtrees, now run by the revised driver, took
 2.7 and 2.6 s with cgroup peaks of 0.31 GB, but they import only 4 and 6 modules, not 223 and 126.
+
+*Update, 6 November 2026:* run as unit `es311-full`, 21:48:11–22:45:07 UTC on 5 November: 352 of 352 modules ok,
+57 minutes of wall time and 7.3 CPU-hours (projected: 7.9). The full Roots took 26 s (`E311B.Root`) and 9 s
+(`E311R.Root`), and `E311.Final` 18 s, against the 240 s assumed. See
+[the last section](#6-november-2026-the-compact-recheck-is-complete).
 
 ### 3. Line shapes (`shapes_es311.py`, `test_shapes_es311.py`)
 
@@ -789,7 +829,8 @@ assumed 240 s for the two Roots and Final. The Roots of the two end-to-end subtr
   So the five Lean-glue modules and two of the three external ones fit in a hard 12 GB and reproduce byte for byte.
   `BalancedCoverCutsV2` does not fit: its first build, recorded as "not killed", swapped. Its `.olean` in `build/ext/`
   is still that first build's. Rebuilding it with a hard cap needs `LM_MEM` above 12G, which these ground rules do
-  not allow; that byte-identity check is open.
+  not allow; that byte-identity check is open. *(Closed later on 6 November: the chain build compiled it under a
+  hard 24G cap, and its `.olean` equals the `build/ext/` one byte for byte; see "3. The three catalogs" below.)*
 - **Chunk compiles** fit easily: cgroup peaks of 0.44–1.02 GB for modules of up to 4,771 leaves.
 
 ### Files (review fixes)
@@ -821,6 +862,11 @@ The full run `es311-full` (not part of this work) finished at 22:45:07 UTC with 
 its driver log. `assemble_final311.sh --dry-run` confirms this from `run.tsv` (item 5). The real assembly was
 not run.
 
+*Update, 6 November 2026 (later):* the chain is complete (196 of 196) and the real assembly ran and verified
+`forces_convex_octagon_311 : ErdosSzekeres.ForcesConvexNGon 311 8` with standard axioms. ES(8) ≤ 311 now has a
+second complete Lean check, a reproduction with the compact checker; no new bound is claimed. The items below keep
+their text of the time. See [the next section](#6-november-2026-the-compact-recheck-is-complete).
+
 | Item | Result | Rigor |
 |---|---|---|
 | 1. Import closure (`build/chain311/closure.json`) | 196 modules and 12 data files, every source at its pinned sha256 | exact computation |
@@ -830,6 +876,12 @@ not run.
 | 5. `assemble_final311.sh` | written and tested on refusals and on synthetic logs; the real compile-and-report path is untested | tested |
 | 6. Stub test | stub `E311.Final` elaborates (sorry stub; proves nothing); the full composition is blocked by the missing `Rows`; the balanced half elaborates | Lean elaboration with `sorryAx`, as intended; nothing is proved |
 | 7. Review fixes (below) | the library and the bridges' inputs pinned and re-checked, every run row's stamp checked, signal and OOM kills rejected, the scope-Result bug fixed and tested, a memory estimate, records corrected | exact computation; tested (no Lean except small probes) |
+
+*Update, 6 November 2026 (later), to items 2, 5 and 6:* item 2 is 196 ok (the four missing modules were built:
+`ResidualCoverCutsV2` at a 43G heavy cap, the other three under the 12G light cap; all four `.olean` files equal
+the October records). Item 5's real compile-and-report path ran and
+verified the theorem. Item 6's full composition now elaborates against the real chain (stub rejected for `sorryAx`
+only). Details in [the next section](#6-november-2026-the-compact-recheck-is-complete).
 
 ### 1. The closure (`build_chain311.py --closure-only`)
 
@@ -907,6 +959,12 @@ not run.
   | `ResidualCoverCutsV2` | 24G | **OOM-killed** after 2,271 s (37 min 51 s) | 26.54 GiB at the kill | 24.00 GiB (the cap) | — |
 
   The largest cgroup peak of any other module is 7.47 GiB (`LeanCore`).
+
+  *Update, 6 November 2026 (unit `chain311-finish`, 00:26–01:13 UTC):* `ResidualCoverCutsV2` at a 43G cap: ok,
+  wall 2,535.5 s, peak RSS 28.78 GiB, cgroup peak 28.68 GiB, swap 0, `.olean` equal to the October record. Then
+  under the 12G light cap: `OldcutsBinding` 257.5 s, cgroup peak 11.11 GiB; `Transfer` 7.5 s, 0.47 GiB;
+  `Residual32Bridge2650.Rows` 9.4 s, 0.37 GiB. All four equal their October records and print only standard axioms
+  (`logs/es311/chain311-build.tsv`, `logs/es311/chain311-finish.out`).
 - **`ResidualCoverCutsV2`** is the one module that does not fit.
   - Two readings of the scope's memory, taken by hand and not logged (unit as read): about 5.4 GB at 12 min and
     17.1 GB at 32 min, an average of about 0.6 per minute. It then reached the 24 GiB cap at 37.85 min: about
@@ -934,6 +992,9 @@ not run.
     6 November between 00:05 and 00:25 UTC, with the campaign at about 1 GiB). Above that it needs another
     machine or a decision to relax the 8 GiB headroom.
   - As the ground rules require, it was not retried.
+  - *Update, 6 November 2026:* retried later at a 43G cap (`--retry-oom --heavy-cap 43 --ignore-driver
+    --max-wait 120`; MemAvailable 51.3 GiB at the start): ok after 42 minutes with a cgroup peak of 28.68 GiB,
+    below the 35–39 GiB estimate above.
 
 ### 3. The three catalogs
 
@@ -980,6 +1041,11 @@ not run.
   directory only.
 
 ### 5. `assemble_final311.sh` (written; not run for real)
+
+*Update, 6 November 2026:* run for real at 01:14:40–01:15:20 UTC, verdict verified (route `same`); see
+[the next section](#6-november-2026-the-compact-recheck-is-complete). The script's header comment still says
+"NOT yet run for real"; it is left unchanged because the tests and the report record the script's sha256
+(`8d7097a6…`).
 
 1. **Refuses unless the full run is finished.**
    - The unit `es311-full` must be inactive, no `drive_es311.py` may run on the export, and no scope of its
@@ -1074,6 +1140,12 @@ duplicate-module check kept it from shadowing anything, but the sentence was fal
   `BalancedBudgets`. Neither proves anything: both use `sorry`.
 - **What is untested.** The residual half, and the compile and report steps of a real assembly (tests 6 and 7
   cover their pieces only).
+- *Update, 6 November 2026:* the tests were run again after the chain was complete (01:13:25 UTC;
+  `logs/es311/assemble-tests.txt`, replaced). Test 2 now compiles the full composition against the stub: Lean exit
+  0, statement `ForcesConvexNGon 311 8`, axioms with `sorryAx`, and the script rejects it as not verified, for its
+  axioms only. Test 2′ (the balanced half alone) is no longer run, since the whole composition is. Test 3c, the dry
+  run on the real export, now passes every check. All other cases gave the same results as before. The real
+  assembly then ran (next section).
 
 `test_build_chain311.py` (`logs/es311/chain311-build-tests.txt`; added after the review; compiles nothing):
 
@@ -1127,6 +1199,9 @@ errors. Each was checked first; all were real and are fixed as follows.
 
 ### What remains
 
+*Update, 6 November 2026:* items 1–3 are done (next section). Item 4, the optional replay with an independent
+checker, was not done. Item 5 still stands: fix `drive_es311.py`'s bare unit names before the driver is used again.
+
 1. **Build `ResidualCoverCutsV2` with a cap above 24G**, then `OldcutsBinding`, `Transfer` and
    `Residual32Bridge2650.Rows`. The cap is the machine owner's decision. Check first, then run:
 
@@ -1179,3 +1254,186 @@ errors. Each was checked first; all were real and are fixed as follows.
   - `stubtest/`, `modname-test/`, `selftest/`, `libprobe/` and `assembly/path` (from the dry run);
   - `library.json`, `runs.jsonl`, `row-notes.json` (copied to `logs/es311/`).
 - **Untouched:** `build/es311/full` and `build/ext` (both only read), and every source in other experiments.
+
+## 6 November 2026: the compact recheck is complete
+
+**Status: the compact recheck of ES(8) ≤ 311 is complete end to end.** This is a second complete Lean-kernel check
+of ES(8) ≤ 311, a reproduction with the compact checker. The first is the check of 19 October 2026
+([record](../omission-final311-2026-10-14/README.md)). It is not a new bound and not an independent proof, and it is
+unrefereed. The bound, the method and the credit are unchanged: the omission method and the catalogs are Michael
+Schroeder's ([THIRD_PARTY.md](../../docs/THIRD_PARTY.md)). Nothing was pushed.
+
+The final compile printed (`logs/es311/final311-compact.log`):
+
+```
+'ErdosSzekeres.Omission.Compact311.forces_convex_octagon_311' depends on axioms: [propext, Classical.choice, Quot.sound]
+```
+
+The audit compile imports the result and printed the statement:
+
+```
+ErdosSzekeres.Omission.Compact311.forces_convex_octagon_311 : ErdosSzekeres.ForcesConvexNGon 311 8
+```
+
+| Step | How | When (UTC) | Result | Rigor |
+|---|---|---|---|---|
+| 1. Full run: 349 chunks, `E311B.Root`, `E311R.Root`, `E311.Final` | unit `es311-full`, `drive_es311.py` at commit `aeca8078e` | 5 Nov 21:48:11 – 22:45:07 | 352 of 352 ok, every expected theorem with standard axioms | Lean-checked |
+| 2. Rest of the geometric chain | unit `chain311-finish`, `build_chain311.py` (sha256 `2daa70d2…`) | 6 Nov 00:26 – 01:13 | 196 of 196 chain modules ok | Lean-checked; `.olean` hashes: exact computation |
+| 3. Assembly tests | `test_assemble_final311.sh` (`3d3a5f18…`) | 6 Nov 01:13 – 01:14 | every case as expected | tested |
+| 4. Assembly | `assemble_final311.sh` (`8d7097a6…`), real mode, route `same` | 6 Nov 01:14:40 – 01:15:20 | verified | Lean-checked |
+
+### 1. The full run
+
+- **What compiled.** All 352 modules of the full export (`export_full_es311.sh 5000 64`): 223 balanced and 126
+  residual chunk modules, the two Roots and `E311.Final`. A module counted as ok only under the driver's rules
+  (["Driver"](#driver-drive_es311py-tested-the-full-run-not-launched) and the review fixes): source sha256 and line
+  shapes as in the manifests, Lean exit 0, `.olean` written, no error and no `sorry`, and every expected theorem
+  with axioms within {propext, Classical.choice, Quot.sound}.
+- **Cost.** 57 minutes of wall time and 7.3 CPU-hours (sum of the user times in `run.tsv`; the per-module wall
+  times sum to 7.4 h), against the projected 7.9. `E311B.Root` took 26 s, `E311R.Root` 9 s and `E311.Final` 18 s,
+  against the 60, 60 and 120 s assumed. The machine was shared with the C6UPPER replay and the throttled budget-64
+  campaign (`balance.log`).
+- **Output.** 6.46 × 10⁹ bytes of `.olean` (6.0 GiB) for all 352 modules, in the git-ignored
+  `build/es311/full/olean`.
+- **Records** (`logs/es311/full-run-2026-11-06/`, committed in `7bf2430a6`):
+  - `run.tsv`: one row per module, with the source sha256, dependency stamp, verdict, kernel, elaboration, wall
+    and user time, peak RSS, cgroup peak, `.olean` size and sha256, and axioms;
+  - `driver.out`, the logs of both Roots and of `E311.Final`, and `all-module-logs.tar.xz`;
+  - `olean-digest.txt` (the sha256 of the Roots' and Final's `.olean` and a digest over all of them),
+    `E311.Final.lean`, `commit.txt` and `balance.log`.
+
+### 2. The geometric chain
+
+- `build_chain311.py` built every module of the import closure of `BalancedBudgets` and
+  `Residual32Bridge2650.Rows`, plus `BalancedCoverCutsV2`, in one directory (`build/chain311`), from sources pinned
+  by sha256 ([chain section](#6-november-2026-consistent-build-of-the-geometric-chain), item 1).
+- 192 modules were built on the night of 5–6 November. `ResidualCoverCutsV2` was OOM-killed at a hard 24G cap,
+  then built at 43G: ok, 2,535.5 s, cgroup peak 28.68 GiB. `OldcutsBinding` (257.5 s, 11.11 GiB), `Transfer`
+  (7.5 s) and `Residual32Bridge2650.Rows` (9.4 s) followed, under the 12G light cap.
+- Every printed axiom line is standard. The four new `.olean` files equal the October records, so 47 of the 196
+  now do.
+- The run re-verified the 4,952 pinned library `.olean` files against `library.json` before its first compile.
+- **Cost.** The wall times of the 196 ok compiles sum to about 2.7 hours, or 3.4 hours with the failed and
+  OOM-killed attempts. Each compile is one `lean -j1` process, so these are about the CPU times. The chain's
+  `.olean` files take 0.30 GB.
+- **Records.**
+  - `logs/es311/chain311-build.tsv` and `logs/es311/chain311-runs.jsonl`: refreshed copies of the
+    `build/chain311` files, now with the four build rows and the two invocations of 6 November.
+  - `logs/es311/chain311-finish.out`: the log of unit `chain311-finish` (build, tests, assembly), with machine
+    paths replaced by `<repo>`.
+
+### 3. The assembly
+
+- **Checks before the compile** (item 5 of the chain section):
+  - 352 of 352 run rows ok, with current dependency stamps and unchanged `.olean` files;
+  - the chain complete;
+  - the 4,952 library `.olean` files as pinned;
+  - the three catalogs byte-identical in `build/ext`, `build/chain311` and the October record. Hence route `same`:
+    the bridges and `E311.Final` are used as the run compiled them;
+  - the 13 inputs of that route older than the run's first compile;
+  - no module provided by two `LEAN_PATH` roots.
+- **Main compile** of `Final311Compact.lean` (sha256 `b41a996a…`, unchanged), under a hard 28G cap:
+  - scope exit 0, `time -v` exit status 0, no signal, cgroup `oom_kill` 0, swap 0;
+  - 22.6 s wall;
+  - cgroup peak 0.39 GB (peak RSS 9.2 GiB, 9,691,376 KiB in `time -v`, which counts mapped `.olean` pages).
+- **Audit compile.** It imports the result, prints the statement above and lists every module in the
+  environment: 5,511 imported modules, of which 4,952 are library modules, all checked against `library.json`.
+  It took 3.0 s, with a cgroup peak of 0.35 GB.
+- **Records.**
+  - `logs/es311/final311-compact.log`: both compile reports.
+  - `logs/es311/final311-compact.json`: verdict `verified: true` with no problems, the route, the caps and costs,
+    the run and chain summaries, the sha256 of the 559 non-library `.olean` files and a digest (`39bc4023…`) of
+    the library ones. `Final311Compact.olean` is `0d61d6fd…`; `E311.Final.olean` is `462f8e2e…`, as in `run.tsv`.
+  - `logs/es311/final311-compact-imports.tsv.gz`: every imported `.olean` with its root and sha256. Its sha256,
+    `185920e5…`, is recorded in the JSON.
+- **The header of `Final311Compact.lean`** still says "NOT COMPILED (6 November 2026)" and lists the requirements
+  of a consistent build. Those requirements are met, and the file was compiled and verified on 6 November 2026 by
+  `assemble_final311.sh`. The file is left unchanged on purpose: editing the comment would change its sha256, and
+  `b41a996a…` is pinned by `assemble_final311.sh` and recorded in `final311-compact.json`.
+
+### 4. Cost against the October checks
+
+| | October checks | This recheck |
+|---|---|---|
+| Certificate parts | about 175 CPU-hours (balanced: 18,066 parts with the catalog and the root, 19 October) plus about 112 (residual: 10,325 parts with the catalog and the root, 12 October), about 287 in all, on another machine (arm64 Mac) | 7.3 CPU-hours for 349 chunk modules, both Roots and `E311.Final`, on this PC (x86_64 Linux) |
+| Geometric chain | compiled before (the 11 October bridge record and earlier records) | about 2.7 CPU-hours for 196 modules |
+| Roots and final compile (wall) | 5.5 h for the balanced Root and about 11 h for the final compile; the compiled parts exceeded main memory | 26 s and 9 s for the Roots, 18 s for `E311.Final`, 23 s for `Final311Compact` |
+| Compiled output | about 500 GB of balanced parts (deleted) | 6.46 GB (6.0 GiB) of `.olean` for all 352 modules of both sides |
+| In all | about 287 CPU-hours for the certificate parts | about 10 CPU-hours |
+
+The October figures are the sums of the module times recorded in the two records' `certificate/kernel-check.json.xz`:
+175.5 h over 18,068 modules ([311 record](../omission-final311-2026-10-14/README.md)) and 111.9 h over 10,327
+modules ([313 record](../omission-final313-2026-10-11/README.md)). The 313 record's "about 120 CPU-hours" is its
+estimate for a reproduction, not a recorded time. The machines differ, so the ratio for the certificate parts, about
+40 times less CPU, is only indicative.
+
+### 5. What it shows and what it does not
+
+**It shows:**
+- The two certificate trees accepted on 19 and 12 October (balanced `d51f0dc2…`, 782,437 leaves; residual
+  `6b61f0ff…`, 437,579 leaves; hashes as recorded) are accepted again by the Lean kernel, through a different
+  encoding and checker: the packed Fast2 encoding, checked by `checkF2`, whose soundness theorem `checkF2_sound` is
+  Lean-checked.
+- Together with the bridges and the geometric chain, compiled in one consistent build, they give
+  `ForcesConvexNGon 311 8` with the standard axioms only. So no `native_decide` is used anywhere in the chain.
+- The check can be repeated on one PC in about 10 CPU-hours with under 7 GB of compiled output.
+
+**It does not show:**
+- **Independence.** It is not an independent proof. Both checks share the certificate trees (hash-pinned), the
+  catalogs, the Lean 4.24.0 kernel with Mathlib v4.24.0 and the project's statements of the geometric lemmas, and,
+  as far as source hashes show, the geometric-chain sources (pinned here to the 11 October bridge record; see "The
+  objects of 19 October" below). An error in a shared part would affect both.
+- **A new bound.** ES(8) ≤ 311 is unchanged, and unrefereed.
+- **An independent replay of the final environment** (lean4checker, nanoda). It is optional and was not done.
+- **The objects of 19 October.** The link to the objects that the 19 October check loaded is through source hashes
+  only. No 19 October record pins the chain's sources, and that check's `.cache/` is gone (chain section, item 1,
+  "Pins").
+- **Source agreement of the imports.** Lean does not check an imported `.olean` against its source. The consistency
+  of the build rests on the scripts' records (stamps, sha256, mtimes, one root per module), which
+  `assemble_final311.sh` checked.
+
+### 6. How to reproduce
+
+Run these from `experiments/omission-compact-checker-2026-11-05`, with the repository's Lean 4.24.0, Mathlib
+v4.24.0 and the ErdosSzekeres library built. They are the steps that ran here, in this order. The sequence has not
+been re-run from a clean checkout.
+
+```sh
+bash export_full_es311.sh 5000 64                         # both exports, manifests, coverage check
+python3 drive_es311.py build/es311/full --jobs N          # 349 chunks, both Roots, E311.Final
+python3 build_chain311.py --heavy-cap 43 --ignore-driver  # the 196-module chain
+bash test_assemble_final311.sh                            # tests; summary in logs/es311/assemble-tests.txt
+A311_MEM=28G bash assemble_final311.sh                    # final compile, audit, logs/es311/final311-compact.*
+```
+
+- **Prerequisites.** `drive_es311.py` first makes `Path`, the catalogs, the bridges and the three `build/ext/`
+  catalogs current with `lean_make.sh`, under its default hard 12G cap (`LM_MEM`). `BalancedCoverCutsV2` needs
+  more than that: its cgroup peak was 16.35 GiB in the chain build. On a fresh checkout, make it first with a
+  larger `LM_MEM`, for example `LM_MEM=24G bash lean_make.sh Bridge311Bal`. This was not run that way here: the
+  `build/ext` copy was built under the old soft cap, and the chain build reproduced it byte for byte.
+- **The chain.** `build_chain311.py` refuses a heavy compile unless MemAvailable is at least the cap plus 8 GiB,
+  so a 43G cap needs 51 GiB available. `ResidualCoverCutsV2` peaked at 28.68 GiB, so a smaller cap may do, but
+  only 43G was tried.
+  - `--ignore-driver` is for a build after the full run; it is refused while `es311-full` is active.
+  - The finishing run here added `--retry-oom --max-wait 120`, because of the earlier OOM kill.
+  - `--dry-run` runs every check without compiling.
+- **The assembly.** `assemble_final311.sh` refuses unless the run and the chain are complete and consistent;
+  `--dry-run` runs every check without compiling. Its default cap is 24G. The run here used 28G and peaked at
+  0.39 GB.
+- **Disk.** About 1.65 GB of sources and 6.5 GB of `.olean` for the export, and 0.3 GB for the chain.
+
+### Files (this section)
+
+- **New records:** `logs/es311/final311-compact.log`, `final311-compact.json`, `final311-compact-imports.tsv.gz`
+  and `chain311-finish.out`.
+- **Replaced:** `logs/es311/assemble-tests.txt` (test run of 01:13:25 UTC), `chain311-build.tsv` and
+  `chain311-runs.jsonl`.
+- **This README:** this section, and dated notes in the earlier sections.
+- **Unchanged:** `assembly/Final311Compact.lean` (`b41a996a…`), every script, and every source in
+  `build/es311/full`.
+- **Git-ignored, kept on disk:**
+  - `build/es311/full`: sources, `.olean` files, `run.tsv` and logs;
+  - `build/chain311`: sources, `.olean` files, logs, and `assembly/` with `Final311Compact.olean`;
+  - `build/ext`.
+
+  Whether to archive them is the author's decision.

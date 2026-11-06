@@ -72,6 +72,11 @@ The CP-SAT hunt (`tools/witness_hunt.py`, minimising from the known 72-hole vect
   - if every context closes, assemble the full tree (master levels plus subtrees) and replay it exactly;
   - check it in Lean with the compact checker (`experiments/omission-compact-checker-2026-11-05`, once gate G2
     passes);
+    *(6 Nov 2026: on the 64-leaf chunk the fused checker `checkF2` met G2's speed, size, corruption and axiom-audit
+    criteria. G2's linearity criterion (64 to 1,000 to 10,000 leaves) cannot be shown on that chunk; linearity was
+    measured later, on ES(8) ≤ 311 data, from 584 to 19,012 leaves per module. Its pipeline has since re-checked
+    ES(8) ≤ 311 end to end, a second complete Lean check of that bound, in about 10 CPU-hours; see that
+    experiment's README. A budget-64 tree would still need its own export, bridge and final file.)*
   - write `Bridge64` / `Final310` following Bridge63 / Final311, and audit the axioms.
 
   Only then can ES(8) <= 310 be claimed.

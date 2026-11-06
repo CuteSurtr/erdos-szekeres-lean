@@ -10,6 +10,21 @@ with their recorded hashes and solved again, and cake_lpr accepted every fresh p
 (`C6UPPER/replay-2026-11-06/README.md`, `C6UPPER` §6). Where this page says that only 6 of the 64 are hash-bound, or
 that the full replay is planned, that describes the state before the replay. The novelty verdicts are unchanged.
 
+*Note added 6 November 2026, about 10:30 KST: ES(8) ≤ 311 now has a second complete Lean check.* The compact recheck
+(`experiments/omission-compact-checker-2026-11-05/README.md`, section "6 November 2026: the compact recheck is
+complete") compiled the whole chain again on a second machine (x86_64 Linux) in about 10 CPU-hours:
+- the same certificate trees and catalogs (hash-pinned) and the same Lean 4.24.0 / Mathlib v4.24.0 kernel;
+- geometric-chain sources pinned to the sha256s of the 11 October bridge record (no 19 October record pins them, so
+  the link to the objects of the 19 October check is by source hash only);
+- a different certificate encoding and checker (`checkF2`, proved sound in Lean);
+- the result: `forces_convex_octagon_311 : ErdosSzekeres.ForcesConvexNGon 311 8`, with axioms propext,
+  Classical.choice and Quot.sound.
+
+It is a reproduction, not an independent proof and not a new bound; the result is still unrefereed, and the method
+and catalogs are still Schroeder's. Where this page says "one run on one machine", "not reproduced", "in a single
+run" or "That check ran once, on one machine", that describes the state before the recheck. The novelty verdicts are
+unchanged. No independent replay (lean4checker, nanoda) has been run.
+
 ## Purpose and scope
 
 The question was which results, if any, are worth reporting to professors, and with what wording. The check ran on
@@ -64,6 +79,9 @@ the other k = 8 symmetry types (half-turn ≥ 64, 3-fold ≥ 61, 4-fold ≥ 52, 
   (axioms propext, Classical.choice, Quot.sound only) in a single run on one machine, it is not peer reviewed, and it
   is built on Schroeder's omission method and catalogs. The peer-reviewed bound is 408 (Mojarrad–Vlachos); Schroeder's
   unreviewed preprint gives 319."
+  *(6 Nov 2026, after the compact recheck: "in a single run on one machine" is out of date. A possible replacement
+  is "in two complete runs on two machines, the second a reproduction with a compact certificate checker". Do not
+  call the second run independent.)*
 - **k = 8, rotational symmetry.** "ES(8) = 65 holds for 6-fold and 7-fold symmetric sets, and the largest sizes this
   allows, 60 and 64, are attained by explicit sets. This is computer-assisted and unrefereed: the lower bounds are
   exact computations, the upper bounds LRAT proofs from two encoders accepted by cake_lpr, on top of a written
@@ -120,6 +138,10 @@ ticks each one once its change is committed.
   once the records are committed.*
 - [ ] Date the claims with an arXiv note, and make the 311 check reproducible (compact checker, gate G2). User
   decisions; not part of the pass.
+  *6 Nov 2026, about 10:30 KST: the compute part of the reproducibility step is done: the compact recheck verified
+  ES(8) ≤ 311 end to end (see the note at the top). Still open: the sequence has not been re-run from a clean
+  checkout, and the records and build outputs are not yet committed, pushed or archived. The arXiv note remains a
+  user decision, so the item stays unticked.*
 - [ ] The unsent k = 8 email draft (on the Mac) still has the 6-fold value as 54 or 60. User decision.
 
 Also raised by the reviews: the "all the local degree-2 information" wording in `CHORD20261105` §4, `SIX10LINUX20261105`
@@ -140,6 +162,8 @@ degree-4 certificates are not in Git, and `CHORD20261105/logs` is empty.
   2026) now binds a cake_lpr verdict to the CNF and proof hashes of all 64 cube formulas, so the sixfold bound no
   longer depends on the label-only logs. The lrat-check question is still unlogged.)*
 - 311: never replayed by an independent checker (lean4checker, nanoda); the compiled parts (about 500 GB) were deleted.
+  *(6 Nov 2026: the Lean kernel checked the whole chain a second time, with the compact checker; its compiled certificate
+  modules (6.5 GB) are on disk. A replay by an independent checker has still not been run.)*
 - Upstream: a confirming comment on drat-trim #42/#43 is the user's call. `~/.local/bin/lrat-check` on the Linux host
   is still the unpatched build.
 
@@ -161,3 +185,8 @@ To be adapted by the author; about 175 words.
 *Note, 6 November after 07:41 KST:* the clause "a full re-check of the 6-fold proofs is planned" is out of date. The
 hash-bound cake_lpr replay (6 Nov 2026) certified all 64 cube formulas again (`C6UPPER` §6). The author may want to change
 it, for example to "all 6-fold cube formulas were solved again and the proofs checked by cake_lpr against hashed files".
+
+*Note, 6 November 2026, about 10:30 KST:* the sentence "That check ran once, on one machine" is also out of date
+after the compact recheck. A possible replacement: "The Lean kernel has checked it twice, the second time on another
+machine with a more compact certificate checker; the result is not peer reviewed." Do not present the second check
+as independent.

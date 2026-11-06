@@ -29,6 +29,8 @@ Paths are relative to `<repo>`. ES8S stands for `cloud/es7-2026-10-19/results/ES
 
 **Caveat on verification.** The 311 proof was kernel-checked only on the Mac, and its roughly 500 GB of compiled parts were deleted. Re-certifying it on this host with the current pipeline costs about 300 CPU-h.
 
+*Note added 6 November 2026:* this caveat is out of date. The compact checker re-checked ES(8) ≤ 311 end to end on this host in about 10 CPU-hours (7.3 for the 352 certificate modules, about 2.7 for the geometric chain), with 6.5 GB (6.0 GiB) of compiled certificate modules. `assemble_final311.sh` verified `forces_convex_octagon_311 : ErdosSzekeres.ForcesConvexNGon 311 8` with propext, Classical.choice and Quot.sound (`experiments/omission-compact-checker-2026-11-05/README.md`, section "6 November 2026: the compact recheck is complete"). This is a second complete Lean check, a reproduction with the same certificate trees, catalogs and kernel; the geometric-chain sources are pinned to the 11 October bridge record, so their link to the 19 October check is by source hash only. It is not an independent proof and not a new bound.
+
 ## 2. Routes to ≤ 310 and beyond, ranked
 
 | # | Route → bound | What it needs | Compute + verification | Novelty | Main risk | P (my judgement) |
@@ -48,7 +50,7 @@ Paths are relative to `<repo>`. ES8S stands for `cloud/es7-2026-10-19/results/ES
 - What it unlocks:
   - B64 can be checked on this machine at all.
   - R32 and B63 can be re-exported for whichever route is chosen.
-  - 311 can be re-certified on Linux for about 50–85 CPU-h instead of about 300.
+  - 311 can be re-certified on Linux for about 50–85 CPU-h instead of about 300. *(6 Nov 2026: done, for about 10 CPU-h; see the note under §1.)*
 
 ## 3. Recommended next steps
 
