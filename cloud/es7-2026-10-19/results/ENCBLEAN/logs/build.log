@@ -1,0 +1,8 @@
+date: 2026-11-06T14:57+09:00 (fixer step)
+command: rm -rf .lake/build; systemd-run --user --scope -q -p MemoryMax=8G -p MemorySwapMax=0 nice -n 10 lake build
+lean: Lean (version 4.24.0, x86_64-unknown-linux-gnu, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)
+result: Build completed successfully (9 jobs); rc=0
+  Built EncB.Gen (1.6s); EncB.Emit (639ms); EncB.Emit:c.o (542ms); EncB.Gen:c.o (3.7s); encb_dimacs:exe (383ms);
+  EncB.KernelCheck (12s); EncB (178ms)
+time: 13.98 s wall, 19.65 s user, 2129100 KB max RSS
+exe sha256: 521dd64d97cff63c4716ac6ac1cbf54863fdb3ac8d358868784a866fbdacddda (identical to the M1 build: reproducible)
