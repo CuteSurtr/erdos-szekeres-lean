@@ -1,0 +1,48 @@
+{
+ "note": "Rows of build.tsv corrected by hand. build.out keeps the script's own line for each.",
+ "rows": [
+  {
+   "module": "ResidualCoverCutsV2",
+   "utc_start": "2026-11-05T22:38:41Z",
+   "row_line": 145,
+   "edited": "2026-11-05, about 23:29Z (build.tsv mtime), by the builder, by hand",
+   "why": "the kernel OOM-killed lean, systemd stopped the scope, and the log stayed empty; the script (9754246b) did not read the scope's Result, so it wrote verdict fail with empty measurements",
+   "as_written_by_script": {
+    "verdict": "fail",
+    "wall_s": "nan",
+    "user_s": "nan",
+    "max_rss_kb": 0,
+    "cg_peak_bytes": 0,
+    "oom_kill": 0
+   },
+   "as_edited": {
+    "verdict": "oom-heavy",
+    "wall_s": "2271.03",
+    "user_s": "2269.21",
+    "max_rss_kb": 27826356,
+    "cg_peak_bytes": 25769803776,
+    "oom_kill": 1
+   },
+   "unchanged_fields_note": "exit -15 comes from the process return code (not from the log), cg_swap_peak 0 (MemorySwapMax=0), olean empty",
+   "sources": {
+    "systemd journal (user), chain311-3eb34cfc8d.scope, 2026-11-05T23:16:32Z": [
+     "The kernel OOM killer killed some processes in this unit.",
+     "Failed with result 'oom-kill'.",
+     "Consumed 37min 49.207s CPU time over 37min 51.030s wall clock time, 24G memory peak."
+    ],
+    "kernel log, 2026-11-05T23:16:32Z": [
+     "memory: usage 25165824kB, limit 25165824kB, failcnt 39",
+     "Memory cgroup out of memory: Killed process 612832 (lean) total-vm:41713784kB, anon-rss:25041560kB, file-rss:2784796kB, shmem-rss:0kB"
+    ]
+   },
+   "derivation": {
+    "wall_s": "37 min 51.030 s (journal)",
+    "user_s": "37 min 49.207 s: the journal's CPU time, user + system (time -v's user time is not available)",
+    "max_rss_kb": "anon-rss + file-rss at the kill = 25041560 + 2784796 kB (kernel log), not a time -v maximum",
+    "cg_peak_bytes": "the cgroup usage at the kill = the limit, 25165824 kB = 24 GiB (kernel log)",
+    "oom_kill": "1 (journal and kernel log)",
+    "verdict": "oom-heavy: OOM-killed under the 24G heavy cap"
+   }
+  }
+ ]
+}

@@ -1,0 +1,49 @@
+Why 149 of the 192 chain .olean files differ from the October records (5 November 2026, 23:2x UTC; second case added 6 November)
+
+The modules whose .olean differs are exactly those that the October checkers compiled without --root:
+scripts/check_omission_geometry.py, check_omission_residual_geometry.py and check_omission_residual_blocks.py
+run  lean -j 1 -s 32768 -M <mem> <source> -o <obj>  with cwd = the repository root, so Lean derives the main
+module name from the path relative to the cwd (e.g. «.cache».«omission-balanced-rows-only».Geometry00000),
+not "Geometry00000". build_chain311.py compiles every module with -R build/chain311/src, under its import name.
+
+Test (one module, Lean 4.24.0, under MemoryMax=12G, MemorySwapMax=0):
+  cd build/chain311/modname-test   (holds .cache/omission-balanced-rows-only/Geometry00000.lean, the pinned source)
+  LEAN_PATH=<lake LEAN_PATH>:build/chain311/olean lean -j1 -s 32768 \
+    .cache/omission-balanced-rows-only/Geometry00000.lean -o Geometry00000.noroot.olean
+  -> 30.3 s, max RSS 6.70 GB; 'OmissionBalanced.Geometry00000.row_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+  Geometry00000.noroot.olean           c11e7f093e410d7ce9462e90fb6d84d4792cb479b2cc7b99ffabe676bea537a3
+  October record (balanced-rows-kernel-check.json, global-cover-314 pins)
+                                       c11e7f093e410d7ce9462e90fb6d84d4792cb479b2cc7b99ffabe676bea537a3
+  build/chain311/olean/Geometry00000.olean (-R, module name Geometry00000)
+                                       a26e676d20f19e2e65f530ca4dee095fa61e85fbdf077a5ca72bcbff3e51260c
+
+So with the October module name the build reproduces the October object byte for byte.
+
+Second case (6 November 2026, 00:05-00:07 UTC, after the review): the residual Catalog (source sha256 f94c74ec..., from
+omission-residual-geometry-2026-10-09/Catalog.lean.gz). Its October object 2e118ef3... is pinned by
+catalog-validation.json and by blocks-kernel-check.json, whose inputs name the source
+/workspace/erdos-szekeres-lean/.cache/omission-lean-full/residual/Catalog.lean.
+Test (Lean 4.24.0, MemoryMax=12G, MemorySwapMax=0; cwd build/chain311/modname-test; LEAN_PATH = lake's roots):
+  lean -j1 -s 32768 .cache/omission-lean-full/residual/Catalog.lean -o Catalog.omission-lean-full_residual.noroot.olean
+  -> 0:39.33, max RSS 3.86 GiB; 'OmissionResidual.code_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+  lean -j1 -s 32768 .cache/residual-replay/arithmetic/Catalog.lean -o Catalog.residual-replay_arithmetic.noroot.olean
+     (the path of the replay command in omission-residual-geometry-2026-10-09/README.md)
+  -> 0:37.81, max RSS 3.81 GiB; same axioms
+
+  original overlay path, no --root     2e118ef392822f3543e9901180a3042c53489283d7ca28af39ac74a540b70a80
+  October record                       2e118ef392822f3543e9901180a3042c53489283d7ca28af39ac74a540b70a80
+  replay path of that README           97d6f25f545f89398e4c30ca995af4094e29d3d8d25e0224fb5c9810746e4fb1
+  build/chain311/olean/Catalog.olean (-R, module name Catalog)
+                                       7f7ff8eaf968d17e670a0d5453c6ac1e1386ae668568340fdfa2e0ba9bb69de2
+
+So the residual Catalog is a second module whose October object is reproduced byte for byte under the October
+module name; the replay command documented in omission-residual-geometry-2026-10-09/README.md compiles it under
+another module name and does not reproduce the October object.
+
+The other 147 differing modules (83 Geometry*, BalancedRows, ResidualCycleIndex, ResidualGeometry*,
+ResidualGeometry, ResidualBlock*, ResidualAllGeometry) were not recompiled this way; the same cause is likely
+but not checked module by module (ResidualCycleIndex and the residual geometry also import Catalog, so a
+different Catalog object changes their bytes too). The 43 modules that the October records compiled with
+--root (the 11 October bridge record's fresh modules, BalancedProof.Catalog, BalancedCoverCutsV2) are
+byte-identical as built here.
