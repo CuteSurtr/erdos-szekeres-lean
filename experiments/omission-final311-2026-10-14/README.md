@@ -15,6 +15,28 @@ since the file opens `ErdosSzekeres`, the audit prints the statement as
 is the complete per-module record. The check ran on one local machine and is
 not part of the hosted CI workflow.
 
+*Note added 6 November 2026.* A second complete Lean check of this theorem's
+statement, a reproduction with a compact checker, ran on another machine
+(x86_64 Linux) on 5–6 November 2026. It used:
+
+- this record's certificate tree (`d51f0dc2…`) and the 313 record's residual
+  tree, re-exported in a packed encoding and checked by `checkF2`, whose
+  soundness is proved in Lean;
+- the same catalogs, pinned by sha256, and geometric-chain sources pinned to
+  the sha256s of the 11 October bridge record (no record of the 19 October
+  check pins them, so the link to the objects that check loaded is by source
+  hash only);
+- the same Lean 4.24.0 and Mathlib v4.24.0.
+
+Its assembly verified
+`ErdosSzekeres.Omission.Compact311.forces_convex_octagon_311 : ErdosSzekeres.ForcesConvexNGon 311 8`
+with `[propext, Classical.choice, Quot.sound]`. It took about 10 CPU-hours and
+6.5 GB (6.0 GiB) of compiled certificate modules. See the
+[compact checker record](../omission-compact-checker-2026-11-05/README.md),
+section "6 November 2026: the compact recheck is complete". It reproduces this
+check; it is not an independent proof and does not change the bound. This
+record is unchanged.
+
 ## The route
 
 The 312 proof bounds the balanced population by 189 (at least 63 of the 252

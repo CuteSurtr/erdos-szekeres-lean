@@ -20,6 +20,20 @@ one appended `#check`; `forces_convex_octagon_311 : ForcesConvexNGon 311 8` and
 `convex_octagon_of_card_ge_311` depend only on `propext`, `Classical.choice`
 and `Quot.sound`. Not part of the hosted CI.
 
+*Note added 6 November 2026.* A second complete kernel check of the same
+statement, a reproduction with a compact checker, finished on 6 November 2026
+on another machine. It used the same certificate trees and catalogs
+(pinned by sha256), geometric-chain sources pinned to the sha256s of the
+11 October bridge record (the link to the objects of the 19 October check is
+by source hash only), the same Lean 4.24.0 and Mathlib v4.24.0, and a
+different certificate encoding and checker. It took about 10
+CPU-hours. `ErdosSzekeres.Omission.Compact311.forces_convex_octagon_311 :
+ErdosSzekeres.ForcesConvexNGon 311 8` depends only on `propext`,
+`Classical.choice` and `Quot.sound`. See the
+[compact checker record](../experiments/omission-compact-checker-2026-11-05/README.md).
+It is not an independent proof and does not change the bound. Not part of the
+hosted CI.
+
 ## ES(8) ≤ 312 — 14 October 2026
 
 The [312 record](../experiments/omission-final312-2026-10-13/README.md) lowers

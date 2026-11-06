@@ -97,6 +97,43 @@ claimed.**
   1.27 TB (`logs/partial_lrat_sizes.tsv`). They certify nothing, and CaDiCaL cannot resume from them. **They were
   deleted on the author's instruction at about 17:20 KST** (manifest `logs/deleted_partial_lrats.tsv`). The solver
   outputs, CNFs and their hashes, the 60 cake_lpr-verified transitivity proofs, and these records are kept.
+  - *Note added 6 November 2026 (disk cleanup approved by the author, about 10:16 KST).* Some of those CNFs are now
+    deleted from `<rot45-work-dir>`:
+    - the 36 unsolved phase-order cube CNFs, `cubes4/o*.cnf` (12) and `cubes5/o*.cnf` (24): 3,269,869,938 bytes;
+    - the 3 control CNFs `ctrl6/*.cnf` (`m6K8t11`, `c11111_plain`, `c11111_chord`): 164,120,052 bytes.
+
+    None of them had a certificate. No phase-order cube closed. Of the three `ctrl6` files (section "Control"
+    above): `c11111_plain` timed out at the 7,200 s limit (its `.out` is empty; `ctrl6/timing.tsv`); `c11111_chord`
+    was solved UNSAT in 788 s, without a proof; and `m6K8t11` is not a control but the `C6UPPER` base formula both
+    were built from. The sha256 of each, taken just before deletion, is in `logs/deleted-cnf-2026-11-06.sha256`.
+
+    **Kept:**
+    - the base CNFs `m4K8t17.cnf` (`4843a9e9…`) and `m5K8t13.cnf` (`d7bbb743…`);
+    - every `imp4`/`imp5` CNF with its LRAT and logs (the 60 cake_lpr-verified transitivity patterns);
+    - every manifest, `.out` and `.lock` file, `ctrl6/chord_new.clauses` (`830f2687…`) and these records.
+
+    **Regeneration** (in `<rot45-work-dir>`; the committed `tools/mkcubes_chord.py` needs its `R` set to the
+    results directory, while the work directory's copy has it set; compare the outputs with the hash file):
+    - cubes: `python3 mkcubes_chord.py 5 13 m5K8t13.cnf chord_m5t13_new.clauses cubes5` and
+      `python3 mkcubes_chord.py 4 17 m4K8t17.cnf chord_m4t17_new.clauses cubes4`. The chord files are also in
+      `CHORD20261105/data/` with the hashes of `logs/input_hashes.txt`. The script rewrites the `manifest.json` of
+      its output directory, so write into a new directory to keep the old one.
+    - The three `ctrl6` CNFs: write them into a new directory `<new-dir>`, not into `ctrl6/`.
+      - `m6K8t11.cnf` (`542c8a3a…`): `python3 <results-dir>/C7UPPER/gen.py 6 8 11 <new-dir>/m6K8t11.cnf`. It also
+        writes `<new-dir>/m6K8t11.cnf.json`; pointed at `ctrl6/`, it would overwrite the kept `m6K8t11.cnf.json`.
+      - `c11111_plain.cnf` (`e5854419…`, as in `C6UPPER/SHA256SUMS.txt`), the `C6UPPER` cube c11111:
+        `mkdir <new-dir>/cubes`, then
+        `python3 <results-dir>/C6UPPER/tools/mkcubes.py <new-dir>/m6K8t11.cnf <new-dir>/m6K8t11.cnf.json <new-dir>/cubes`
+        (it writes all 33 cube files). Identical copies of the base and of this cube are on disk in the replay
+        directory `c6upper-replay-20261106/A` (`m6K8t11.cnf`, `cubes/c11111.cnf`; `C6UPPER` §6).
+      - `c11111_chord.cnf` (`095eae17…`): the header `p cnf 78059 2387731`, then the base without its header line,
+        then `ctrl6/chord_new.clauses` (642 clauses), then the unit clauses of Y(1,2) and of cube c11111 (7635,
+        7636, 7637, 7644, 7645, 7652), in that order. With the units before the chord clauses the hash differs.
+
+        ```sh
+        { echo 'p cnf 78059 2387731'; tail -n +2 <new-dir>/m6K8t11.cnf; cat ctrl6/chord_new.clauses;
+          printf '%s 0\n' 7635 7636 7637 7644 7645 7652; } > <new-dir>/c11111_chord.cnf
+        ```
 - **What further work would need:**
   - a finer split, for example by the position of layer 5, as `ROT456` tried; or stronger propagation (more sound
     clause families); or much longer runs (days per cube);

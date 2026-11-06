@@ -5,6 +5,11 @@ These items come from `../AUDIT.md` §4. For each one:
 2. Each was solved with CaDiCaL 2.1.3.
 3. Each was checked with cake_lpr; the verdict counts only if the log contains the exact line `s VERIFIED UNSAT`.
 4. Every artifact was kept outside Git (`<recheck-dir>`, 1.5 GB), with SHA-256 in `*/all_hashes.txt`.
+   *(6 November 2026, disk cleanup approved by the author, about 10:16 KST: 6 CNFs of `rot456-layer5`, which carry no
+   verdict, were deleted, 474,280,289 bytes in all: the 5 never-run sub-cubes and a duplicate of the base CNF. Their
+   sha256 are in `rot456-layer5/deleted-cnf-2026-11-06.sha256`, with details in `rot456-layer5/README.md`.
+   `<recheck-dir>` now holds 1,131,927,627 bytes, about 1.1 GB. Every artifact behind a verdict in the table below is
+   kept.)*
 
 The coordinator re-checked every verdict line and every hash file.
 

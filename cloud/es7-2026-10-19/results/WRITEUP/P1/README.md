@@ -22,7 +22,7 @@ work" only.
 | file | content |
 |---|---|
 | `p1.tex` | the paper (30 pages). Inline bibliography, no BibTeX. |
-| `p1.pdf` | compiled with pdflatex (TeX Live 2025), three passes, each exit 0: **0 errors, 0 undefined references or citations, no LaTeX warnings**; 1 overfull box (13.3 pt, the head of Lemma 5.2, from the reviewed source) and 2 underfull boxes (badness 1270 and 1953). Rebuilt on 6 November 2026 after the replay status was filled in, with the same result (30 pages). |
+| `p1.pdf` | compiled with pdflatex (TeX Live 2025), three passes, each exit 0: **0 errors, 0 undefined references or citations, no LaTeX warnings**; 1 overfull box (13.3 pt, the head of Lemma 5.2, from the reviewed source) and 2 underfull boxes (badness 1270 and 1953). Rebuilt on 6 November 2026 after the replay status was filled in, with the same result (30 pages). Rebuilt again on 6 November 2026 (about 10:30 KST) after the one-clause 311 update in §1 (open item 14), with the same result. |
 | `p1.log` | the log of the third pass, kept for reviewers. |
 | `k8_soundness_p1.tex` | Section 5 of the paper: an adapted copy of `WRITEUP/note/k8_soundness.tex` (see below). |
 | `tables/*.tex` | data fragments \input by `p1.tex` (sixfold cube table, hash appendix, seeds of the point sets). Generated; do not edit. |
@@ -160,6 +160,11 @@ After a review of that update (same day):
 - `make_tables.py` re-run (PASS; `tables/` byte-identical). Three pdflatex passes (each exit 0; 30 pages; no errors,
   undefined references or warnings; the same 1 overfull and 2 underfull boxes).
 
+For the 311 update (6 November 2026, about 10:30 KST): one clause of §1 changed (open item 14). Three pdflatex passes
+followed, under `systemd-run --user --scope -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10`: each exit 0, 30 pages, no
+errors, undefined references or warnings, and the same 1 overfull and 2 underfull boxes. `make_tables.py` was not
+re-run, since no table input changed.
+
 ## Revision after review (6 November 2026)
 
 An internal review listed 20 findings. Each was checked against the records before acting; all 20 were confirmed and
@@ -271,6 +276,10 @@ acted on, two of them (public artifact, venue length) only by recording them as 
 14. **The ES(8) ≤ 311 mention.** §1 now cites Schroeder's unrefereed 319 and the project's own unrefereed 311 (wording
     from `NOVELTY20261106` "Safe wording"). If the author prefers not to mention 311 before its own write-up, delete that
     clause; Table 1's caption only points to §1.
+    *6 November 2026, about 10:30 KST:* "checked by the Lean kernel in a single run" now reads "in two complete runs
+    (the second a reproduction with a compact certificate checker)". The reason is the completed compact recheck
+    (`experiments/omission-compact-checker-2026-11-05/README.md`, section "6 November 2026: the compact recheck is
+    complete"). This is the only change; the paper's scope is unchanged.
 15. **Line-modules of `c7_64_own_s1000`.** Only sizes 2–20 were checked (`check64.log`); the paper says so. Running
     `PRIMEFOLD/check64/modules60` on it would bring it in line with the other annealed sets.
 

@@ -14,6 +14,30 @@ to the CNF and proof hashes. The job continued as unit `c6upper-replay-par` from
 - `symmetric_extremal.tex` (abstract and the sixfold trust row) and `k8_section.tex` were updated.
 The text below is unchanged.
 
+*Note added 6 November 2026, about 10:30 KST: destination 2 (§1 item 2, plan step 2), compute part done.* The
+compact recheck of ES(8) ≤ 311 is complete end to end on this PC (x86_64 Linux; the 19 October check ran on the arm64
+Mac). Record: `experiments/omission-compact-checker-2026-11-05/README.md`, section "6 November 2026: the compact
+recheck is complete".
+- `drive_es311.py` compiled all 352 modules: the 349 chunks of the full 782,437 + 437,579 leaves, both Roots and
+  `E311.Final`.
+- The geometric chain was built consistently (196 modules).
+- `assemble_final311.sh` verified `forces_convex_octagon_311 : ErdosSzekeres.ForcesConvexNGon 311 8` with propext,
+  Classical.choice and Quot.sound.
+- Cost: about 10 CPU-hours and 6.5 GB (6.0 GiB) of compiled certificate modules, against the 100–200 CPU-h planned
+  here.
+- Row 2's risks: chunks of up to 4,985 leaves compiled in the full run (the scaling trial had already reached
+  19,012), and every chunk module stayed at about 1 GiB or less (largest cgroup peak 1.04 GiB; the Roots at most
+  5.2 GiB). The geometric chain did not fit in 12 GB: `BalancedCoverCutsV2` peaked at 16.35 GiB under a 24G cap,
+  and `ResidualCoverCutsV2` was OOM-killed at 24G and needed a 43G cap (peak 28.68 GiB).
+
+This is a second complete Lean check (a reproduction with the compact checker). It is not an independent proof and
+not a new bound, and it is unrefereed. Records and the compiled outputs are on disk (the build directories are
+git-ignored; archiving them is open). An independent replay (lean4checker) was not done; it is optional.
+
+What remains of destination 2 is the author's: the Schroeder email (§5 item 4), and whether and when to commit,
+push or deposit the records. §5 items 1 and 2 no longer concern the 311 recheck: no campaign cores or cloud VM are
+needed for it. Apart from the two bracketed markers in §1 and §2, the text below is unchanged.
+
 ---
 
 ## Judge's verdict (6 Nov 2026, read-only)
@@ -32,14 +56,14 @@ The text below is unchanged.
    - The encoding Soundness Theorem goes in the paper as a written proof (not refereed), with encoder B as the primary encoder.
    - Lower bounds are exact computations from printed generators.
    - This is CICM/EuroCG-level work and the strongest result the project has.
-2. **ES(8) ≤ 311 made reproducible.** The compact checker runs on the full 782k + 438k leaves on a second platform, with artifacts kept. That is the precondition for the Schroeder email. The math is incremental (89 of 97 points are Schroeder's). The goal here is credibility, not a new bound.
+2. **ES(8) ≤ 311 made reproducible.** The compact checker runs on the full 782k + 438k leaves on a second platform, with artifacts kept. That is the precondition for the Schroeder email. The math is incremental (89 of 97 points are Schroeder's). The goal here is credibility, not a new bound. *[6 Nov 2026: compute part done, see the second note at the top; the Schroeder email remains the author's decision.]*
 
 ## 2. Ranked plan
 
 | # | Step | Significance / P(success) | Cost | Credibility gain / risk |
 |---|---|---|---|---|
 | 1 | P1 note: soundness section, exact Z[ζ7] clause check, Zenodo manifest, 64/64 replay recorded | Medium / ~90% | ≤1 core-h plus the running replay | High. Risk: a replay cube fails, which pauses the 6-fold claim only |
-| 2 | 311 compact recheck: lookup optimisation, Fcat bridge, residual adapter, full run, then the Schroeder email | Low–medium / ~70% | 100–200 CPU-h, on the campaign's cores after its cutoff or on a cloud VM | High for 311. Risk: never run above 995 leaves, 12 GB per module |
+| 2 | 311 compact recheck: lookup optimisation, Fcat bridge, residual adapter, full run, then the Schroeder email *[6 Nov 2026: all but the email done, about 10 CPU-h; see the second note at the top]* | Low–medium / ~70% | 100–200 CPU-h, on the campaign's cores after its cutoff or on a cloud VM | High for 311. Risk: never run above 995 leaves, 12 GB per module |
 | 3 | 4-fold t = 14 CEGAR (lift-Farkas, GP and final-polynomial cuts), with the realizer as its dual | Medium–high (exact value 52, or a 56-point set) / 20–30% | 20–200 core-h on the freed replay core; go/no-go at 24 core-h | Research bet |
 | 4 | Lean encoder B for m = 6 (EmptyHexagonLean standard) | Medium (rigor, CPP/ITP) / ~50% in 4 weeks | About 0 CPU, 2–4k LOC | Moves soundness items (i)–(iv) to Lean-checked. Does not block P1 |
 | 5 | Cheap exact side results: SMQH App. B comparison (49 vs 46 classes) and a written all-h proof of the odd-m Catalan lower bound | Low–medium / 50–60% | <10 core-h | No priority claims before every class is closed |

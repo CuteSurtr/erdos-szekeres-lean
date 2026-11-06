@@ -1,0 +1,57 @@
+===== Final311Compact.lean (2026-11-06T01:15:13Z, cap 28G, route same)
+'ErdosSzekeres.Omission.Compact311.forces_convex_octagon_311' depends on axioms: [propext, Classical.choice, Quot.sound]
+	Command being timed: "lean -j1 -R <repo>/experiments/omission-compact-checker-2026-11-05/assembly -o <repo>/experiments/omission-compact-checker-2026-11-05/build/chain311/assembly/out-olean/Final311Compact.olean <repo>/experiments/omission-compact-checker-2026-11-05/assembly/Final311Compact.lean"
+	User time (seconds): 21.93
+	System time (seconds): 0.67
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:22.62
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 9691376
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 6
+	Minor (reclaiming a frame) page faults: 126116
+	Voluntary context switches: 169
+	Involuntary context switches: 121
+	Swaps: 0
+	File system inputs: 424
+	File system outputs: 120
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+cgroup memory.peak: 391643136
+cgroup memory.swap.peak: 0
+cgroup oom_kill: 0
+===== Audit311.lean
+ErdosSzekeres.Omission.Compact311.forces_convex_octagon_311 : ErdosSzekeres.ForcesConvexNGon 311 8
+	Command being timed: "lean -j1 -R <repo>/experiments/omission-compact-checker-2026-11-05/build/chain311/assembly/audit <repo>/experiments/omission-compact-checker-2026-11-05/build/chain311/assembly/audit/Audit311.lean"
+	User time (seconds): 2.43
+	System time (seconds): 0.56
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6774012
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 97010
+	Voluntary context switches: 53
+	Involuntary context switches: 133
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 408
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+cgroup memory.peak: 351535104
+cgroup memory.swap.peak: 0
+cgroup oom_kill: 0
+(5511 module lines omitted; see the imports TSV)

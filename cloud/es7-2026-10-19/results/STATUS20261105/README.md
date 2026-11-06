@@ -18,6 +18,30 @@ lrat-check alone is not one) / exact computation / written proof (not refereed) 
 - **Budget-64 search.** It runs at about 20% of the machine (6 workers, since about 22:35 KST on 5 November) while
   the machine is needed for other work. At this rate the 9 November cutoff will stop it partway unless it is extended
   (`ES8UPPER20261105/README.md`).
+- **ES(8) ≤ 311: a second complete Lean check** (added about 10:30 KST). The compact recheck is complete end to end
+  (`experiments/omission-compact-checker-2026-11-05/README.md`, section "6 November 2026: the compact recheck is
+  complete"):
+  - all 352 modules of the full run ok (5 Nov 21:48–22:45 UTC; 7.3 CPU-hours);
+  - the geometric chain built consistently (196 modules);
+  - `assemble_final311.sh` verified `forces_convex_octagon_311 : ErdosSzekeres.ForcesConvexNGon 311 8`, with axioms
+    propext, Classical.choice and Quot.sound.
+
+  It is a reproduction with the compact checker (same certificate trees and catalogs, chain sources pinned to the
+  11 October bridge record, same Lean kernel; a different encoding and checker), at about 10 CPU-hours against
+  about 287 recorded for the October certificate checks. It is not an independent proof and not a new bound, and it
+  is unrefereed. The compute part of roadmap destination 2 is done. The Schroeder email, and committing, pushing
+  or depositing the records and archiving the build outputs, are the author's decisions.
+- **Disk cleanup** (author-approved, about 10:16 KST):
+  - deleted the 36 unsolved phase-order cube CNFs and the 3 control CNFs of `ROT45CHORD20261105`;
+  - deleted 5 never-run layer-5 sub-cubes and a duplicate base CNF of `LRATCHECK20261105/recheck/rot456-layer5`;
+  - deleted the git-ignored trial builds of the compact checker, except two.
+
+  The sha256 of each deleted CNF, taken just before deletion, is in
+  `ROT45CHORD20261105/logs/deleted-cnf-2026-11-06.sha256` and
+  `LRATCHECK20261105/recheck/rot456-layer5/deleted-cnf-2026-11-06.sha256`; the commands that regenerate them are
+  in those directories' READMEs. In those directories every CNF with a cake_lpr-certified proof is kept, with its
+  proof. The deleted trial builds have no recorded hashes: their numbers are in the tracked logs, and
+  `run_trial_es311.sh` and `run_e2e_es311.sh` re-export them (compact checker README, "Files (6 November, later)").
 
 ## New since STATUS20261104
 
@@ -103,6 +127,9 @@ deleted on the author's instruction (manifest in `ROT45CHORD20261105/logs/`).
   sorry, standard axioms only). It is 2.2x less kernel time and 24–85x less output per leaf than the current
   pipeline. Gate G2 is narrowly missed (0.35 s per leaf against 0.3), and a concrete lookup optimisation is
   identified.
+  *(6 Nov 2026: superseded. The fused checker `checkF2` met G2's speed, size, corruption and axiom criteria on a
+  64-leaf chunk, was measured linear on ES(8) ≤ 311 data from 584 to 19,012 leaves, and then re-checked ES(8) ≤ 311
+  end to end; see the 6 November bullets above and the compact checker README.)*
 - **Pilot** (from 16:02 KST, `<es8-pilot-dir>`):
   - budget 64 against 63 on 28 stratified contexts plus the 4 lowest-LP contexts;
   - CP-SAT hunts for balanced vectors with at most 64 holes, and with at most 71 holes.
