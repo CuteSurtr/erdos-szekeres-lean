@@ -1,0 +1,92 @@
+== test_coverage_es310.sh 2026-11-06 13:31:15 KST; coverage_es310.py sha256 f2c53dc435ded6332dfa25bc3147988adea6a5f278b9b4053fb9d29cf6f67517
+== A. real data: ctx 2406, 2407 (export_es310.py, merge_es310.py --subtree 11:1203)
+  export: [(2406, 921, 3, 2), (2407, 1781, 5, 4)] (ctx, leaves, modules, internal skeleton)
+  PASS  sub-partial (exit 0, 2 contexts, 2702 leaves, 35 checks, 0.5 s)
+  PASS  sub-subtree (exit 0, 2 contexts, 2702 leaves, 47 checks, 0.5 s)
+  PASS  sub-tree63 (exit 0, 2 contexts, 2702 leaves, 48 checks, 0.8 s)
+  PASS  sub-jobs2 (exit 0, 2 contexts, 2702 leaves, 47 checks, 0.4 s)
+  PASS  sub-subtree-wrong-node -> FAIL as required [ctx_manifests_present merged_manifest root_file]
+        e.g. 2 contexts in scope have no manifest, e.g. [2404, 2405]
+  PASS  partial-merge (exit 0, 2 contexts, 2702 leaves, 35 checks, 0.5 s)
+  PASS  --report written
+  PASS  exporter-pinned (exit 0, 2 contexts, 2702 leaves, 36 checks, 0.5 s)
+  PASS  exporter-pin-wrong -> FAIL as required [exporter_pinned]
+        e.g. exporter sha256 0000000000000000000000000000000000000000000000000000000000000000 is not what the manifests record
+  PASS  cache-run1 (exit 0, 2 contexts, 2702 leaves, 35 checks, 0.5 s)
+  PASS  cache-run2 (exit 0, 2 contexts, 2702 leaves, 13 checks, 0.1 s)
+  PASS  cache-run2 deep-checked 0 contexts
+  PASS  cache-after-change -> FAIL as required [block_terms]
+        e.g. E310BT.C240702: b855: node 855: split vertex 211, tree has 210
+  PASS  cache-hit-module-changed -> FAIL as required [module_sha256]
+        e.g. ctx 2406: src/E310BT/C240601.lean sha256 59d16268a7ef58aa808cd17b6c58ed76c885c0b1658aa41546dc2a898330259c != manifest
+== B. fake campaign: 4,096 synthetic contexts, merge_es310.py --complete
+  PASS  complete (exit 0, 4096 contexts, 8191 leaves, 47 checks, 2.9 s)
+  PASS  complete-partial (exit 0, 4096 contexts, 8191 leaves, 35 checks, 3.4 s)
+  PASS  fake-subtree-3:5 (exit 0, 512 contexts, 1025 leaves, 47 checks, 0.5 s)
+  PASS  complete-root-as-subtree-3:5 -> FAIL as required [merged_manifest root_imports root_references root_statement root_theorems]
+        e.g. Root: theorem root at [] := ex1000000001, expected [(41, 1), (38, 2), (214, 1)] := ex1000000013
+== C. negative tests (each must FAIL)
+  PASS  drop-context-subtree -> FAIL as required [ctx_manifests_present merged_manifest root_file]
+        e.g. 1 contexts in scope have no manifest, e.g. [2407]
+  PASS  drop-context-partial -> FAIL as required [ctx_manifests_present merged_manifest]
+        e.g. requested contexts without a manifest: [2407]
+  PASS  drop-context-complete -> FAIL as required [ctx_manifests_present merged_manifest root_file]
+        e.g. 1 contexts in scope have no manifest, e.g. [1234]
+  PASS  split-vertex-block -> FAIL as required [block_terms]
+        e.g. E310BT.C240701: b4: node 4: split vertex 108, tree has 107
+  PASS  split-vertex-block-sha-not-rerecorded -> FAIL as required [block_terms module_sha256]
+        e.g. ctx 2407: src/E310BT/C240701.lean sha256 9ba42b6913475a62c384d1711311c922371b87341cf7c6859584fec1c972959a != manifest
+  PASS  split-vertex-combination -> FAIL as required [split_vertex_children]
+        e.g. E310BT.C240703: ex1802: split_pm 168 ex1803 ex1888, tree has 167 ex1803 ex1888
+  PASS  split-vertex-root -> FAIL as required [root_vertices]
+        e.g. Root: ex1000003251: vertex 145 != 144
+  PASS  split-vertex-complete-module -> FAIL as required [split_vertex_children]
+        e.g. E310BK.C000201: ex1: split_pm 158 ex2 ex3, tree has 157 ex2 ex3
+  PASS  split-vertex-complete-root -> FAIL as required [root_vertices]
+        e.g. Root: ex1000000777: vertex 108 != 107
+  PASS  flip-path-block -> FAIL as required [statement_paths]
+        e.g. E310BT.C240602: b589: path [(127, 1), (107, 2), (85, 2), (27, 1), (144, 2), (87, 1), (7 != [(127, 2), (107, 2), (85, 2), (27, 1), (144, 2), (87, 1), (7
+  PASS  flip-base-path-ctx2407 -> FAIL as required [root_paths statement_paths]
+        e.g. E310BT.C240701: b4: path [(27, 2), (221, 2), (68, 2), (223, 2), (144, 2), (87, 1), (7 != [(27, 2), (221, 2), (68, 2), (223, 2), (144, 1), (87, 1), (7
+  PASS  flip-path-root -> FAIL as required [root_paths]
+        e.g. Root: ex1000003251: path [(87, 2), (71, 1), (19, 2), (70, 2), (84, 1), (166, 1), (181, 2), (232 != [(87, 1), (71, 1), (19, 2), (70, 2), (84, 1), (166, 1), (181, 2), (232
+  PASS  swap-two-decisions -> FAIL as required [statement_paths]
+        e.g. E310BT.C240701: b4: path [(221, 2), (27, 2), (68, 2), (223, 2), (144, 1), (87, 1), (7 != [(27, 2), (221, 2), (68, 2), (223, 2), (144, 1), (87, 1), (7
+  PASS  flip-path-complete-root -> FAIL as required [root_paths]
+        e.g. Root: ex1000000005: path [(37, 2), (214, 2)] != [(37, 1), (214, 2)]
+  PASS  duplicate-context-ref -> FAIL as required [root_context_refs root_references]
+        e.g. Root: ex1000003251: children ex240700000 ex240700000 != ex240700000 ex240800000
+  PASS  ref-from-wrong-module -> FAIL as required [root_references]
+        e.g. Root: ex240800851: children E310BT.C240703.ex852 E310BT.C240703.ex1521 != E310BT.C240702.ex852 E310BT.C240703.ex1521
+  PASS  duplicate-context-ref-complete -> FAIL as required [root_context_refs root_references]
+        e.g. Root: ex1000002048: children E310BK.C000001.ex0 E310BK.C000001.ex0 != E310BK.C000001.ex0 E310BK.C000101.ex0
+  PASS  budget-63-in-one-ex -> FAIL as required [budget_literal module_shapes]
+        e.g. E310BT.C240704: b2094: budget literals 64/63/64
+  PASS  budget-63-theorem-root -> FAIL as required [root_shape root_statement]
+        e.g. Root: theorem root has catalog/budget fcat62 3131 252 63 (budget must be 64)
+  PASS  budget-63-complete-root -> FAIL as required [root_shape root_statement]
+        e.g. Root: theorem root has catalog/budget fcat62 3131 252 63 (budget must be 64)
+  PASS  leaf-word-changed -> FAIL as required [block_terms]
+        e.g. E310BT.C240601: b4: node 7: leaf entries differ from the normalized tree weights (module 177 entries, normalized 177; module entries a subset of the tree leaf's weights: False)
+  PASS  input-hash-changed -> FAIL as required [inputs_rehash merged_manifest]
+        e.g. ctx 2406: ctx-2406-b64.json.gz changed since export (sha256/size)
+  PASS  sr-dropped -> FAIL as required [blocks_tile_subtree_roots canonical_blocks canonical_cut merged_manifest module_leaf_terms print_axioms skeleton_matches subtree_roots_cover]
+        e.g. ctx 2407: module 5 has no SR
+  PASS  root-import-dropped -> FAIL as required [root_imports]
+        e.g. Root imports 7 modules (7 distinct), expected 8: missing ['E310BT.C240705'], extra []
+== D. campaign-side negatives (a second fake campaign, mutated in place; never C)
+  PASS  fake2-baseline (exit 0, 3 contexts, 6 leaves, 35 checks, 0.1 s)
+  PASS  witness-alert -> FAIL as required [witness_absent]
+        e.g. campaign/WITNESS-ALERT.txt exists
+  PASS  witness-file -> FAIL as required [witness_absent]
+        e.g. ctx 1: WITNESS file exists
+  PASS  run-context-changed -> FAIL as required [campaign_files]
+        e.g. run_context.py sha256 recorded ['1937e9dc3e51ded192d4ee4b83de8917bd71ee9c5ab9d63e0aff490d0c6f36f6'], current a809fb603e65f73626566bca439c85620a625044f25eea085c6e5ecba4540470
+  PASS  result-capped -> FAIL as required [result_closed]
+        e.g. ctx 2: status 'capped'
+  PASS  result-replay -> FAIL as required [result_closed]
+        e.g. ctx 2: replay {'ok': False, 'leaves_checked': 3, 'pending': 12, 'minimum_margin': 1}
+  PASS  fake2-restored (exit 0, 3 contexts, 6 leaves, 35 checks, 0.1 s)
+  PASS  contexts-jsonl-prefix-vertex -> FAIL as required [contexts_jsonl]
+        e.g. ctx 1: missing/occupied differ from the path literals
+== result: 50 passed, 0 failed (log /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/logs/es310/test_coverage_es310-20261106-133114.log)

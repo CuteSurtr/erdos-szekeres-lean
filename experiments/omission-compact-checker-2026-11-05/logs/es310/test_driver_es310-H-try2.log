@@ -1,0 +1,24 @@
+== 2026-11-06T04:13:55Z test_driver_es310.sh: WORKDIR /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-driver, cases: H; drive_es310.py sha256 08bf8317a19a1390
+== 2026-11-06T04:13:55Z H: --reuse of the residual side
+PASS: H: real build/es311/full:E311R accepted (exit 0)
+PASS: H: 127 modules (126 chunks + Root), 13 route inputs verified
+PASS: H: 127 file symlinks out/reuse/E311R/<X>.olean -> build/es311/full/olean/E311R/<X>.olean, nothing else
+PASS: H: every E311R module X resolves as <reuse root>/E311R/X.olean to its own .olean
+PASS: H: final not added for a test export
+PASS: H: build/es311/full unchanged (fingerprint of every path, size, mtime, ctime, inode)
+== 2026-11-06T04:14:02Z H: scratch copy of the E311R side (cp --reflink=never)
+PASS: H: the copy shares no inode with build/es311/full (C00064.olean)
+PASS: H: the unchanged copy is accepted (exit 0), 127 modules
+PASS: H: one changed byte in a reused .olean refuses (exit 1)
+PASS: H:   ... naming E311R.C00064's .olean
+refusing to run (the reused side is never compiled here)
+PASS: H: restored byte accepted again (exit 0)
+PASS: H: a changed reused source refuses (exit 1)
+PASS: H: a later fail row refuses (exit 1)
+PASS: H: a changed dependency stamp refuses (exit 1)
+PASS: H: an incomplete reused manifest refuses (exit 1)
+PASS: H: an E311R manifest in the export refuses (exit 1)
+PASS: H: --reuse of another prefix refuses (exit 1)
+PASS: H: the real side accepted again at the end (exit 0)
+PASS: H: build/es311/full still unchanged
+== 2026-11-06T04:14:55Z summary: 19 passed, 0 failed

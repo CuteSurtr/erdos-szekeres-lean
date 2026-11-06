@@ -1,0 +1,38 @@
+== 2026-11-06T05:06:23Z test_driver_es310.sh: WORKDIR /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-driver, cases: H J; drive_es310.py sha256 868d6be910b4e07d
+== 2026-11-06T05:06:23Z H: --reuse of the residual side
+PASS: H: real build/es311/full:E311R accepted (exit 0)
+PASS: H: 127 modules (126 chunks + Root), 13 route inputs verified
+PASS: H: 127 file symlinks out/reuse/E311R/<X>.olean -> build/es311/full/olean/E311R/<X>.olean, nothing else
+PASS: H: every E311R module X resolves as <reuse root>/E311R/X.olean to its own .olean
+PASS: H: final not added for a test export
+PASS: H: on the driver's LEAN_PATH, lean --deps (import resolution only, no elaboration) finds E311R.Root at out/reuse/E311R/Root.olean
+PASS: H: while drive_es310 runs with --reuse, drive_es311.py's exclusive lock on build/es311/full is refused
+PASS: H: build/es311/full unchanged (fingerprint of every path, size, mtime, ctime, inode)
+== 2026-11-06T05:06:40Z H: scratch copy of the E311R side (cp --reflink=never)
+PASS: H: the copy shares no inode with build/es311/full (C00064.olean)
+PASS: H: the unchanged copy is accepted (exit 0), 127 modules
+PASS: H: one changed byte in a reused .olean refuses (exit 1)
+PASS: H:   ... naming E311R.C00064's .olean
+refusing to run (the reused side is never compiled here)
+PASS: H: restored byte accepted again (exit 0)
+PASS: H: a changed reused source refuses (exit 1)
+PASS: H: a later fail row refuses (exit 1)
+PASS: H: a changed dependency stamp refuses (exit 1)
+PASS: H: an incomplete reused manifest refuses (exit 1)
+PASS: H: an E311R manifest in the export refuses (exit 1)
+PASS: H: --reuse of another prefix refuses (exit 1)
+PASS: H: the real side accepted again at the end (exit 0)
+PASS: H: build/es311/full still unchanged
+== 2026-11-06T05:07:31Z J: temperature and campaign gates
+PASS: J: parse_tctl and campaign_pause unit tests
+gate unit tests ok
+PASS: J: --max-tctl 1: the driver waits (2026-11-06T05:07:36Z waiting: Tctl 79.2 C >= 1 C)
+PASS: J: a second driver on the same export is refused (exit 1)
+PASS: J: no lean started for the export
+PASS: J: STOP ends the waiting driver (exit 0)
+PASS: J: no row was written
+PASS: J: a fresh PAUSE line: the driver waits
+PASS: J: the start JSON reports the PAUSE line
+PASS: J: STOP ends it (exit 0), no row, no lean
+PASS: J: --max-tctl 90 refused (exit 1)
+== 2026-11-06T05:07:42Z summary: 31 passed, 0 failed
