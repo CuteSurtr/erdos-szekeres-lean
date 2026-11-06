@@ -500,7 +500,10 @@ grep -q 'n=$(py lean-jobs' "$HERE/assemble_final310.sh" && ! grep -q 'pgrep -xc 
   && log "13. cool() uses lean-jobs, not pgrep -xc lean" || log "13. UNEXPECTED: cool() still counts every lean process"
 
 # 14. freeze_es310.sh on a copy of the script (never on the real one here).
-FZ=$T/freeze; rm -rf "$FZ"; mkdir -p "$FZ"; cp "$HERE/assemble_final310.sh" "$FZ/assemble_final310.sh"
+FZ=$T/freeze; rm -rf "$FZ"; mkdir -p "$FZ"
+# the copy gets empty pins, so this test also works after the real script has been frozen
+sed -E 's/^(EXPORTER|MERGE|DRIVER|COVERAGE)_SHA256=.*$/\1_SHA256=""/' "$HERE/assemble_final310.sh" > "$FZ/blank.sh"
+cp "$FZ/blank.sh" "$FZ/assemble_final310.sh"
 "$HERE/freeze_es310.sh" 16 --target "$FZ/assemble_final310.sh" --record "$FZ/frozen-shas.txt" > "$FZ/freeze1.out" 2>&1
 r1=$?
 ok14=$(python3 -I - "$HERE" "$FZ/assemble_final310.sh" <<'PY'
@@ -517,8 +520,8 @@ PY
 "$HERE/freeze_es310.sh" 16 --target "$FZ/assemble_final310.sh" --record "$FZ/frozen-shas-2.txt" > "$FZ/freeze2.out" 2>&1
 r2=$?
 log "14. freeze_es310.sh 16 on a copy: exit $r1 (0 expected), $ok14; a second run: exit $r2 (1 expected): $(tail -1 "$FZ/freeze2.out" | cut -c1-160)"
-cmp -s "$HERE/assemble_final310.sh" "$FZ/assemble_final310.sh" && log "14. UNEXPECTED: the copy is unchanged" \
-  || log "14. the real assemble_final310.sh is untouched (its pins still empty: $(grep -c '^\(EXPORTER\|MERGE\|DRIVER\|COVERAGE\)_SHA256=""$' "$HERE/assemble_final310.sh") of 4)"
+cmp -s "$FZ/blank.sh" "$FZ/assemble_final310.sh" && log "14. UNEXPECTED: the copy is unchanged" \
+  || log "14. the copy was filled; the real assemble_final310.sh is untouched by this test (pins empty: $(grep -c '^\(EXPORTER\|MERGE\|DRIVER\|COVERAGE\)_SHA256=""$' "$HERE/assemble_final310.sh") of 4; frozen pins equal to the copy's: $(cmp -s "$HERE/assemble_final310.sh" "$FZ/assemble_final310.sh" && echo yes || echo no))"
 cp "$T/summary.txt" "$OUT"
 log "done $(date -u +%FT%TZ)"
 cp "$T/summary.txt" "$OUT"
