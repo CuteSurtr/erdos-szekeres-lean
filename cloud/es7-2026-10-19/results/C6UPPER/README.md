@@ -14,6 +14,16 @@ recorded SHA-256, solved again, and every fresh proof was accepted by cake_lpr (
 verdict bound to the CNF and proof hashes. Statements below that only 6 of the 64 verdicts are hash-bound record the
 state before this replay.
 
+**Addendum, 6 November 2026 (15:40 KST): encoder B's base formula is UNSAT on its own** (§7,
+`noty12-2026-11-06/README.md`; `verify_final64.log`: PASS). cake_lpr accepted the proofs of the 32 cubes
+B base + ¬Y(1,2) + pattern (32 of 32, each verdict bound to the CNF and proof hashes). With the 32 encoder-B cubes
+B base + Y(1,2) + pattern of the replay, the 64 cubes carry all 2^6 sign patterns of Y(1,2), Y(1,3), Y(1,4), Y(2,3),
+Y(2,4), Y(3,4), so `B_m6K8t11.cnf` (`479e31a9…`) is unsatisfiable (certificate: 64 cake_lpr verdicts). The bound via
+encoder B therefore no longer uses the symmetry breaking of §2 (k8_soundness Lemma `k8s:lem:refl`, nor the τ case of
+`k8s:lem:affine`). Encoder A, the cross-check, still uses the unit Y(1,2). The written soundness proof of the encoders
+(not refereed, gaps (G1)–(G4)) and the Lean-checked reduction are unchanged. Statements below that the certificate
+rests on the unit Y(1,2) hold for encoder A and, before this run, for encoder B.
+
 **Statement.** Every configuration of 11 nested regular hexagons about a common centre, in general position, contains
 8 points in convex position. Hence L(6,8) <= 10: every 6-fold rotationally symmetric set of at least 61 points in
 general position contains a convex octagon. The largest 6-fold symmetric set in general position with no convex octagon
@@ -29,6 +39,8 @@ of ES(8) = 65).
     step from code to clauses.
 - Symmetry breaking: the unit Y(1,2). This rests on the short written argument in §2, a numerical test, and an
   exact integer re-check (§5).
+  - Since 6 November (15:40 KST) only encoder A needs it: encoder B's base formula is certified UNSAT without the
+    unit, by 64 cubes on Y(1,2), …, Y(3,4) (§7, `noty12-2026-11-06/`).
 - Second encoder: `encb/gen_b2.py` (the `C7UPPER` encoder B extended to even m) gives the same verdict with the same
   split; its own tests are in §3b.
 - Certificate: the case split covers all 32 sign patterns of five phase-order variables, which `tools/verify_cover.py`
@@ -36,6 +48,8 @@ of ES(8) = 65).
   - In the hash-bound cake_lpr replay (6 Nov 2026), all 64 cube formulas of both encoders, regenerated with matching
     hashes, were solved again. cake_lpr accepted every fresh proof: 64 of 64, each verdict bound to the CNF and proof
     hashes (§6).
+  - Encoder B, 6 Nov 2026: the 32 cubes with ¬Y(1,2) were solved and accepted by cake_lpr (32 of 32, hash-bound), so
+    the encoder-B base formula itself is certified UNSAT by 64 verdicts (§7, `noty12-2026-11-06/README.md`).
 - Lower bound: the certified 54-point set `ES8SYM/sets/c6_54pts_9layers`. The exact maximum is open. One layer beyond
   it, the encoding has an abstract model that satisfies all 3-term Grassmann–Plücker relations, and no attempt has
   realized it (`ROT456` §3).
@@ -187,7 +201,8 @@ The 12 phase orders:
   once that cube itself was UNSAT. It is not part of the certificate (`logs/encb_subcube_hedge.txt`).
 
 Encoders A and B therefore give two certificates of the same statement from separately implemented encoders. They share
-the written soundness argument, the reflection unit (§2) and the canonical triple representatives.
+the written soundness argument, the reflection unit (§2) and the canonical triple representatives. Since 6 November
+encoder B no longer needs the reflection unit: its base formula is certified UNSAT on its own (§7).
 
 
 ## 4. Scope and open questions
@@ -212,6 +227,7 @@ python3 C6UPPER/tools/verify_cover.py m6K8t11.cnf m6K8t11.cnf.json cubes
 P=<work dir> S=<dir with resolve/bin/{cadical,lrat-check}> python3 C6UPPER/tools/run.py 8 $(( $(date +%s) + 7200 ))
 P=<work dir> S=<dir with resolve/bin/cake_lpr> bash C6UPPER/tools/cake.sh
 # hash-bound cake_lpr replay of all 64 cubes, both encoders (6 Nov 2026): replay-2026-11-06/README.md, "How to rerun"
+# encoder B's 32 cubes with -Y(1,2) (6 Nov 2026): noty12-2026-11-06/README.md, "How it was run" (noty12.py, verify_final64.py)
 ```
 
 ## 5. Review of 4 November 2026
@@ -305,4 +321,29 @@ rows. In each row:
 
 **Scope.** This closes the gap that only 6 of the 64 cake_lpr verdicts were hash-bound (§5). It does not touch the
 written soundness proof of the encodings (gaps (G1)–(G4) of `WRITEUP/note/k8_soundness.tex`), the reflection unit (§2)
-or the Lean-checked reduction.
+or the Lean-checked reduction. (For encoder B the reflection unit was removed from the chain by §7.)
+
+## 7. Encoder B without the reflection unit: the ¬Y(1,2) half (6 November 2026)
+
+Full record: `noty12-2026-11-06/README.md`, with `results.tsv` (one row per cube), `run.log`, `SUMMARY.txt`,
+`cubes.sha256` (written before solving), `TOOLS_AND_PROOFS.sha256`, the scripts and the two cover checks.
+
+**Result (certificate).** cake_lpr accepted the proofs of the 32 cubes B base + ¬Y(1,2) + pattern (pattern: the 2^5
+sign patterns of Y(1,3), Y(1,4), Y(2,3), Y(2,4), Y(3,4)): 32 of 32 ACCEPTED (`s VERIFIED UNSAT`), each bound to the
+CNF and proof hashes; finished 2026-11-06 15:40:35 KST. With the 32 accepted encoder-B rows of the replay (§6), the 64
+cubes carry all 2^6 sign patterns of Y(1,2), …, Y(3,4) (variables 1, 2, 3, 10, 11, 18), so the encoder-B base formula
+`B_m6K8t11.cnf` (`479e31a9…`) is unsatisfiable. `verify_final64.py`, run from the files alone after the job, prints
+PASS (`noty12-2026-11-06/verify_final64.log`).
+
+**Run.** CaDiCaL 2.1.3 (`4acf5860…`) on 4 lanes and cake_lpr (`c14ff498…`, the replay's binary) one proof at a time,
+beside the budget-64 campaign, 12:47–15:40 KST. From `results.tsv`: 35,411 s of CaDiCaL time (0.8–3,921 s per cube;
+2,320–3,921 s for each of the 12 phase-order cubes, at most 1.0 s for each of the 20 contradictory ones), 2,471 s of
+cake_lpr time, 56.3 GB of raw proofs. The proofs are kept as `.lrat.zst`: 14.9 GB for the 32 files
+(14,929,339,154 bytes), 16.8 GB for the whole data directory `/home/jay/research/data/c6upper-noty12-20261106`
+with the cube CNFs and logs; outside Git, not public.
+
+**What it changes.** The sixfold bound via encoder B needs neither the reflection lemma (§2; k8_soundness Lemma
+`k8s:lem:refl`) nor the τ case of Lemma `k8s:lem:affine`: k8_soundness Theorem `k8s:thm:sound`(a′) and Corollary
+`k8s:cor:geom`(a) (revised the same day in `WRITEUP/note/k8_soundness.tex` and P1). Encoder A, the cross-check, still
+uses the unit Y(1,2). The written soundness proof (not refereed, gaps (G1)–(G4)) and the Lean-checked reduction
+remain.

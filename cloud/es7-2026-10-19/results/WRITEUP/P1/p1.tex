@@ -6,6 +6,9 @@
 % Placeholders to fill before circulation: [author], the acknowledgement paragraph, the commit of the supplementary
 % material and its public deposit (DOI).  See README.md.  The former placeholder \replaystatus was filled in on
 % 6 November 2026 from C6UPPER/replay-2026-11-06 (hash-bound cake_lpr replay, 64 of 64 accepted).
+% Revised again on 6 November 2026 (after 15:40 KST) from C6UPPER/noty12-2026-11-06: encoder B's sixfold base formula
+% is certified unsatisfiable on its own (64 hash-bound cake_lpr verdicts), so the encoder-B route no longer uses the
+% reflection lemma (README.md, "Revision for the encoder-B base formula").
 \documentclass[10pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage[T1]{fontenc}
@@ -63,8 +66,11 @@ in general position without a convex octagon. Two separately implemented encoder
 formulas; the soundness of the
 encodings is a written proof (not refereed), and the formulas are refuted by CaDiCaL with LRAT proofs accepted by the
 verified checker \cakelpr{}. For the sixfold bound, a hash-bound \cakelpr{} replay (6 November 2026) solved all $64$
-cube formulas again, after regenerating them with hashes matching the record, and \cakelpr{} accepted every fresh
-proof. The lower
+cube formulas of the original split again, after regenerating them with hashes matching the record, and \cakelpr{}
+accepted every fresh proof. For one of the encoders, its $32$ replayed cube formulas and $32$ further ones, certified
+the same day, cover all $2^6$ sign patterns of six phase-order variables, so that encoder's sixfold base formula is
+certified unsatisfiable on its own and its route to the sixfold bound does not use the reflection symmetry breaking.
+The lower
 bounds are explicit sets with coordinates in $\mathbb Z[\zeta_6]$ and $\mathbb Z[\zeta_7]$, five sixfold and seven
 sevenfold order types, checked by exact computation with separately written programs. Every statement carries a rigor
 label. The half-turn and the threefold, fourfold and fivefold cases remain open.
@@ -115,8 +121,12 @@ points in convex position; they include at least five, resp.\ seven, pairwise di
 \end{enumerate}
 \emph{Rigor.} Part~(a) is computer-assisted: unsatisfiability certificates (\cakelpr) for two separately implemented
 encoders (Section~\ref{sec:cert}). For $m=7$ both certificates were replayed against regenerated formulas with matching
-hashes. For $m=6$ all $64$ cube formulas were regenerated with matching hashes, solved again and certified in a
-hash-bound \cakelpr{} replay (6 November 2026), $64$ of $64$ accepted. This rests on a Lean-checked reduction
+hashes. For $m=6$ all $64$ cube formulas of the original split ($32$ per encoder) were regenerated with matching
+hashes, solved again and certified in a
+hash-bound \cakelpr{} replay (6 November 2026), $64$ of $64$ accepted. For encoder~B the sixfold base formula itself
+is certified unsatisfiable by $64$ hash-bound \cakelpr{} verdicts, one for each sign pattern of the six
+phase-order variables $Y(1,2),\dots,Y(3,4)$ (Section~\ref{sec:enc}): $32$ from that replay and $32$, for the cubes with $\neg Y(1,2)$, from a run of the same day
+($32$ of $32$ accepted); so the sixfold bound via encoder~B does not use the reflection lemma (Lemma~\ref{k8s:lem:refl}). This rests on a Lean-checked reduction
 (Section~\ref{sec:layer}) and a written soundness proof of the encodings, not refereed (Section~\ref{k8s:sec}), whose
 remaining gaps are listed as (G1)--(G4) in Section~\ref{k8s:sec:trust}. Part~(b) is exact computation
 (Section~\ref{sec:lower}).
@@ -278,8 +288,7 @@ above.
 \lean{propext}, \lean{Classical.choice} and \lean{Quot.sound}.
 \item \emph{Certificate}: unsatisfiability of a specific CNF file, established by an LRAT proof~\cite{LRAT17} that the
 verified checker \cakelpr~\cite{CakeLPR} accepted with the line \texttt{s VERIFIED UNSAT}. The solver
-(CaDiCaL~3.0.1~\cite{CaDiCaL}, and 2.1.3 for the re-checks of 5 November and the sixfold
-replay of 6 November) is not trusted. Acceptance by \lratcheck{} alone is not a certificate: the
+(CaDiCaL~3.0.1~\cite{CaDiCaL}, and 2.1.3 for the re-checks of 5 November, the sixfold replay of 6 November and the run for encoder~B's cubes with $\neg Y(1,2)$ of the same day) is not trusted. Acceptance by \lratcheck{} alone is not a certificate: the
 \lratcheck{} of drat-trim at commit \texttt{2e3b2dc} accepts an invalid proof of a satisfiable formula unless
 patched, a publicly known defect~\cite{DT} (our reproduction: \dirn{LRATCHECK20261105}), so its verdicts are cited as
 supporting only. Where a \cakelpr{} verdict is on record only as a solve-time log line naming a cube label, without
@@ -402,8 +411,8 @@ $19$, $23$\,s wall clock and $2.6$\,GB peak memory (\dirn{LAYERLEAN/logs/axioms_
 \paragraph{What is not in Lean.} The assembly of the layer decomposition from the cited theorems
 (Lemmas~\ref{lem:layer} and~\ref{k8s:lem:layer}), the classification of phase patterns (which of rules~A and~B applies,
 and to which ordered triple), the perturbation to generic phases, the consistency of one variable per triple orbit, the
-correspondence between the generator programs and the clause families, the reflection unit, the cube cover and the
-passage from unsatisfiable DIMACS files to \lean{Sixfold66} and \lean{Sevenfold70}. These are the written proofs of
+correspondence between the generator programs and the clause families, the reflection unit (used only by encoder~A,
+the cross-check), the cube cover and the passage from unsatisfiable DIMACS files to \lean{Sixfold66} and \lean{Sevenfold70}. These are the written proofs of
 Section~\ref{k8s:sec}.
 
 %======================================================================================================================
@@ -443,7 +452,10 @@ independent encodings. Section~\ref{k8s:sec} treats encoder~B as the primary obj
 
 \paragraph{Symmetry breaking.} Besides $\theta_0=0$, a reflection in the $x$-axis maps a configuration to another one
 with the same layers and reversed phase order (Lemma~\ref{k8s:lem:refl}), so the unit $Y(1,2)$ (even $m$) or $H(1)$ (odd
-$m$) loses no generality. The sevenfold certificate of encoder~A uses $H(1)$; that of encoder~B uses no unit.
+$m$) loses no generality. Only encoder~A's certificates use such a unit: $H(1)$ at $(7,8,10)$ and $Y(1,2)$ at
+$(6,8,11)$. Encoder~B's formula is certified unsatisfiable on its own at both instances, at $(6,8,11)$ through a split
+into the $64$ sign patterns of $Y(1,2),\dots,Y(3,4)$ (Section~\ref{sec:c6}); so the bounds via encoder~B do not use
+Lemma~\ref{k8s:lem:refl} (Theorem~\ref{k8s:thm:sound}(a$'$)).
 
 \paragraph{Instance sizes} (exact computation). At $(6,8,11)$ both encoders write $78{,}059$ variables and
 $2{,}387{,}083$ clauses; by encoder~A's metadata (\dirn{C6UPPER/logs/regen.log}) $10{,}087$ of them are angular
@@ -464,7 +476,12 @@ hash of each was found equal to its record in \dirn{C6UPPER/SHA256SUMS.txt}
 (\dirn{C6C7REVIEW/replay.json}). The cube sets used at solve time were checked structurally against the base-formula
 hashes by \dirn{verify_cover.py} (\dirn{C6UPPER/logs/verify_cover.log}, \dirn{encb_verify_cover.log}), and the
 regenerated ones by \dirn{verify_cover.py} (4 and 6 November) and \dirn{strict_cover.py} (4 November)
-(Section~\ref{sec:cert}).
+(Section~\ref{sec:cert}). The $32$ cube files of encoder~B with $\neg Y(1,2)$ have no earlier record: they were written
+on 6 November from the regenerated base formula (hash equal to the record), their hashes were recorded before any
+solving (\dirn{C6UPPER/noty12-2026-11-06/cubes.sha256}), and \dirn{verify_cover64.py} (before solving) and
+\dirn{verify_final64.py} (after it, from the files alone) checked byte for byte that each is the base formula with
+adjusted header plus six units, and that with encoder~B's $32$ cubes with $Y(1,2)$ they form $64$ distinct sign
+patterns (exact computation).
 \item \emph{Real sets} (exact computation). The eight sevenfold $64$-point files of Section~\ref{sec:lower} and their
 mirror images, with the centre removed, give $16$ configurations of $9$ nested heptagons; with the orientation and phase
 variables computed exactly in $\mathbb Z[\zeta_7]$ and the chain variables at their least model, each satisfies all
@@ -491,17 +508,18 @@ hashes, solved again and certified by \cakelpr{} on 5 November, \dirn{LRATCHECK2
 %======================================================================================================================
 \section{The certificates}\label{sec:cert}
 
-\paragraph{Checkers.} All formulas were first solved by CaDiCaL~3.0.1 (commit \texttt{c6073042}) with text LRAT
-output and checked by \cakelpr; the sixfold replay of 6 November used CaDiCaL~2.1.3 (Section~\ref{sec:c6}). A certificate is the line \texttt{s VERIFIED UNSAT} of \cakelpr{} for a specific CNF file and LRAT
+\paragraph{Checkers.} All formulas of the original runs were solved by CaDiCaL~3.0.1 (commit \texttt{c6073042}) with text LRAT output and checked by \cakelpr; the sixfold replay of 6 November used CaDiCaL~2.1.3, and so did the run of the same day for encoder~B's $32$ cubes with $\neg Y(1,2)$, which were solved only then (Section~\ref{sec:c6}). A certificate is the line \texttt{s VERIFIED UNSAT} of \cakelpr{} for a specific CNF file and LRAT
 file. The link from a certified file to the analysed programs is regeneration: fresh runs of the generators reproduce
 the base formulas byte for byte, and the cube files are the base formula plus units, which is checked structurally and,
-for all $64$ cube files, by hash (Section~\ref{sec:enc}, ``Validation''); the link to geometry is
-Corollary~\ref{k8s:cor:geom}. \lratcheck{} also accepted every proof of the original runs (it was not used in the
-replay of 6 November); by the defect described in Section~\ref{sec:defs} this is supporting information only. For the
+for all $64$ cube files of the original split, by hash; the $32$ cube files with $\neg Y(1,2)$ were written from the
+regenerated base formula and checked byte for byte (Section~\ref{sec:enc}, ``Validation''); the link to geometry is
+Corollary~\ref{k8s:cor:geom}. \lratcheck{} also accepted every proof of the original runs (it was not used in the replay of 6 November or in the run for $\neg Y(1,2)$); by the defect described in Section~\ref{sec:defs} this is supporting information only. For the
 review replays of 4 November the binaries had SHA-256 \texttt{e12ecc8c\dots} (CaDiCaL), \texttt{2fee767a\dots}
 (\cakelpr) and \texttt{f2046212\dots} (\lratcheck) (\dirn{C6C7REVIEW/REPLAY.md}); for the sixfold replay of 6 November,
 \texttt{4acf5860\dots} (CaDiCaL~2.1.3) and \texttt{c14ff498\dots} (\cakelpr)
-(\dirn{C6UPPER/replay-2026-11-06/TOOLS_AND_PROOFS.sha256}). The replay thus used a different \cakelpr{} build from the one
+(\dirn{C6UPPER/replay-2026-11-06/TOOLS_AND_PROOFS.sha256}); the same two binaries ran for the cubes with
+$\neg Y(1,2)$, checked by hash at the start and at the end of that run
+(\dirn{C6UPPER/noty12-2026-11-06/TOOLS_AND_PROOFS.sha256}). The replay thus used a different \cakelpr{} build from the one
 used in the review of 4 November; building commit \texttt{033aad53} of the public \cakelpr{} repository
 (\texttt{github.com/tanyongkiam/cake\_lpr}) with its Makefile on the same workstation reproduces it byte for byte
 (\dirn{C6UPPER/replay-2026-11-06/README.md}).
@@ -539,6 +557,12 @@ patterns are distinct was checked by \dirn{C6UPPER/tools/verify_cover.py} and by
 \dirn{C6C7REVIEW/strict_cover.py}, which also reject a missing cube, a changed clause, a flipped unit and a changed header
 (exact computation). Twenty patterns contradict transitivity and are refuted at once (under $1$\,s each); the other twelve
 are the orders of $\psi_1,\dots,\psi_4$ with $\psi_1<\psi_2$ (Table~\ref{tab:c6cert}).
+
+For encoder~B the base formula is also split without the unit: into the $64$ sign patterns of
+$Y(1,2),Y(1,3),Y(1,4),Y(2,3),Y(2,4),Y(3,4)$ (variables $1,2,3,10,11,18$; Lemma~\ref{k8s:lem:cube} and
+Section~\ref{k8s:sec:cube}). Its $32$ cubes with $Y(1,2)$ are the cubes just described; the other $32$ carry
+$\neg Y(1,2)$, and of these, twenty patterns contradict transitivity and twelve are the orders of
+$\psi_1,\dots,\psi_4$ with $\psi_2<\psi_1$ (``The cubes with $\neg Y(1,2)$'' below).
 
 \begin{table}[ht]
 \centering\footnotesize\setlength{\tabcolsep}{4pt}
@@ -600,10 +624,27 @@ is the fresh proof.
 The run took $63{,}539$\,s of CaDiCaL wall time, first on one lane and then on six. The accepted proofs are kept
 compressed ($28.4$\,GB, outside the repository, not public).
 
+\paragraph{The cubes with $\neg Y(1,2)$ (encoder~B).} On 6 November 2026, from 12:47 to 15:40 KST, the $32$ cube
+formulas ``encoder~B base $(6,8,11)$ $+\,\neg Y(1,2)$ $+$ pattern'' were written, hashed before any solving and checked
+as stated in Section~\ref{sec:enc} (``Validation''); then each was solved with CaDiCaL~2.1.3 (four lanes) and its proof
+was hashed and checked by \cakelpr{} (one at a time), with the binaries of the replay (\dirn{C6UPPER/noty12-2026-11-06}).
+Every solver run ended UNSAT, and \cakelpr{} accepted all $32$ proofs (\texttt{s VERIFIED UNSAT}): $32$ of $32$, none
+rejected. Each verdict is recorded together with the hashes of its formula and proof (\dirn{results.tsv}). The run took
+$35{,}411$\,s of CaDiCaL time ($0.8$ to $3{,}921$\,s per cube: $2{,}320$ to $3{,}921$\,s for each of the twelve
+phase-order cubes, at most $1.0$\,s for each of the twenty others) and $2{,}471$\,s of \cakelpr{} time. The proofs
+total $56.3$\,GB; they are kept compressed ($14.9$\,GB of \texttt{.lrat.zst}, $16.8$\,GB for the whole data directory
+with the cube files and logs; outside the repository, not public). A check run after the job from the files alone
+(\dirn{verify_final64.py}, result PASS) confirmed the tool, base-formula and cube hashes, the cover of all $2^6$
+patterns, and, for each of the $32$ new cubes, that its accepted row, the file on disk, the hash list written before
+solving, the \cakelpr{} log line and the decompressed proof agree; each of the other $32$ cubes has the hash of an
+accepted encoder-B row of the replay. These $64$ certificates and Lemma~\ref{k8s:lem:cube} give that encoder~B's base
+formula $F_B(6,8,11)$ (SHA-256 \texttt{479e31a9\dots}) is unsatisfiable.
+
 \subsection{The upper bounds}
 
 \begin{theorem}[upper bounds; certificates, two encoders, each verdict bound to formula and proof hashes: for $m=7$ by
-the replay of 4 November, for $m=6$ by the hash-bound \cakelpr{} replay of 6 November ($64$ of $64$ cube formulas); on
+the replay of 4 November, for $m=6$ by the hash-bound \cakelpr{} replay of 6 November ($64$ of $64$ cube formulas)
+and the run for encoder~B's cubes with $\neg Y(1,2)$ of the same day ($32$ of $32$); on
 top of the written soundness proof (not refereed) of Section~\ref{k8s:sec} and the Lean-checked
 reduction of Proposition~\ref{prop:reduction}]\label{thm:upper}
 \lean{Sevenfold70} and \lean{Sixfold66} hold. Hence every sevenfold rotationally symmetric set of at least $65$ points in
@@ -612,10 +653,14 @@ general position, and every sixfold one of at least $61$ points, contains $8$ po
 
 \begin{proof}
 By Table~\ref{tab:c7cert}, $F_A(7,8,10)$ plus $H(1)$ and $F_B(7,8,10)$ are unsatisfiable (certificates); by
-Corollary~\ref{k8s:cor:geom}(b), \lean{Sevenfold70} holds. By the replay of 6 November (Section~\ref{sec:c6}, ``What
-has been replayed''), for each encoder all $32$ formulas ``base $(6,8,11)$ $+\,Y(1,2)$ $+$ cube'' are unsatisfiable
-(certificates); by Corollary~\ref{k8s:cor:geom}(a), \lean{Sixfold66} holds. Proposition~\ref{prop:reduction} gives the rest. One
-encoder suffices in each case; the second is a cross-check.
+Corollary~\ref{k8s:cor:geom}(b), \lean{Sevenfold70} holds. By Section~\ref{sec:c6} (``What has been replayed'' and
+``The cubes with $\neg Y(1,2)$''), the $64$ cube formulas of encoder~B's split into the $2^6$ sign patterns of
+$Y(1,2),\dots,Y(3,4)$ are unsatisfiable (certificates), so $F_B(6,8,11)$ is unsatisfiable by
+Lemma~\ref{k8s:lem:cube}; by Corollary~\ref{k8s:cor:geom}(a), \lean{Sixfold66} holds, and this route does not use the
+reflection lemma (Lemma~\ref{k8s:lem:refl}). As a cross-check, by the replay of 6 November all $32$ formulas
+``base $(6,8,11)$ $+\,Y(1,2)$ $+$ cube'' of encoder~A are unsatisfiable (certificates), which gives \lean{Sixfold66}
+again by the second part of Corollary~\ref{k8s:cor:geom}(a), with Lemma~\ref{k8s:lem:refl}.
+Proposition~\ref{prop:reduction} gives the rest. One encoder suffices in each case; the second is a cross-check.
 \end{proof}
 
 %======================================================================================================================
@@ -780,18 +825,24 @@ assembly of the peeled layers is a written proof (not refereed), not in the revi
 Soundness of the encodings: genericity, orbit variables, key order, circular dichotomy, premises, code-to-clause
 correspondence, reflection unit, cube cover, passage to the Lean propositions (Section~\ref{k8s:sec}) & written proof
 (not refereed); most parts expand arguments reviewed on 4 November; parts marked \emph{new here} or \emph{not in the
-review} unreviewed (gap~(G4)); details in Table~\ref{k8s:tab:trust}\\
+review} unreviewed (gap~(G4)); the reflection unit (Lemma~\ref{k8s:lem:refl}) is used only by encoder~A (cross-check);
+details in Table~\ref{k8s:tab:trust}\\
 Encoder A's floating-point classification, $m\in\{6,7\}$ & exact computation (comparison with B, rounding bound) and
 written proof (not refereed), Proposition~\ref{k8s:prop:A}\\
 Certified files are the output of the analysed programs & exact computation: base formulas and all $64$ cube files
-regenerated with matching hashes (the cube files on 6 November); two structural checkers\\
-Cube files are the base formula plus the stated units; the $32$ patterns are distinct & exact computation (two
-checkers)\\
+of the original split regenerated with matching hashes (the cube files on 6 November); two structural checkers; the
+$32$ cube files with $\neg Y(1,2)$ written from the regenerated base formula and checked byte for byte\\
+Cube files are the base formula plus the stated units; the $32$ patterns of each encoder's split with $Y(1,2)$, and
+the $64$ of encoder~B's split, are distinct & exact computation (two checkers for each split)\\
 Unsatisfiability, sevenfold: A $+\,H(1)$ and B & certificate (\cakelpr; both replayed against regenerated formulas with
 matching hashes)\\
-Unsatisfiability, sixfold: $64$ cube formulas & certificate: hash-bound \cakelpr{} replay (6 November 2026), $64$ of
-$64$ accepted, each verdict bound to formula and proof hashes (before it: solve-time verdicts by cube label, $6$ of $64$
-hash-bound on 4 November)\\
+Unsatisfiability, sixfold, encoder~B: the base formula $F_B(6,8,11)$, through $64$ cube formulas (all sign patterns
+of $Y(1,2),\dots,Y(3,4)$) & certificate: $64$ hash-bound \cakelpr{} verdicts ($32$ from the replay of 6 November, $32$
+from the run for $\neg Y(1,2)$ of the same day, $32$ of $32$ accepted), each bound to formula and proof hashes; with
+the cube cover (Lemma~\ref{k8s:lem:cube})\\
+Unsatisfiability, sixfold, encoder~A (cross-check): $32$ cube formulas with $Y(1,2)$ & certificate: hash-bound
+\cakelpr{} replay (6 November 2026; $64$ of $64$ accepted with encoder~B's $32$ cubes with $Y(1,2)$), each verdict bound
+to formula and proof hashes (before it: solve-time verdicts by cube label, $6$ of $64$ hash-bound on 4 November)\\
 Lower bounds: twelve order types in thirteen files & exact computation (three programs per sixfold set; at least two,
 and four or more for five of the seven, per sevenfold order type; re-run 6 November)\\
 Pairwise different order types & exact computation (convex-subset counts)\\
@@ -809,15 +860,17 @@ Absence of prior work & evidence only (bounded literature search)\\
 
 \paragraph{What is trusted.} The Lean~4 kernel and the Mathlib definitions used in the statements; \cakelpr{} and the
 machine that ran it; the Python interpreter, to run the generators as written; the programs
-named for each exact computation (for the cube cover two separately written checkers, \dirn{verify_cover.py} and
-\dirn{strict_cover.py}; for the lower bounds at least two per set, Section~\ref{sec:lower}); SHA-256, to identify files; and the
+named for each exact computation (for the cube cover with $Y(1,2)$ two separately written checkers,
+\dirn{verify_cover.py} and \dirn{strict_cover.py}, and for encoder~B's $64$-cube cover the two checks
+\dirn{verify_cover64.py} and \dirn{verify_final64.py}, written for that run; for the lower bounds at least two per set, Section~\ref{sec:lower}); SHA-256, to identify files; and the
 reading of the generator sources on which the code-to-clause correspondence rests (gap~(G1)). No step from a DIMACS file
 to \lean{Sixfold66} or \lean{Sevenfold70} is formalized (gap~(G2)).
 
 \paragraph{Further limitations.} (1)~The proof files ($1.7$\,GB and $1.6$\,GB for $m=7$; $41.0$\,GB and $46.5$\,GB for
 $m=6$) are in local archives (\dirn{es8-c7-octagon-2026-11-03} and \dirn{es8-c6-octagon-2026-11-03};
 the formulas regenerated for the replay of 4 November are in \dirn{es8-c6c7-review-2026-11-04}) and are not public, and so are the proofs of the sixfold replay of 6 November
-($28.4$\,GB compressed); no public deposit with a DOI exists yet. The formulas can be regenerated, and solved and checked
+($28.4$\,GB compressed) and those of encoder~B's cubes with $\neg Y(1,2)$ ($14.9$\,GB compressed, in
+\dirn{c6upper-noty12-20261106}); no public deposit with a DOI exists yet. The formulas can be regenerated, and solved and checked
 again, with the commands of Section~\ref{sec:repro} (a new solver run need not reproduce the same proof file; in the
 replay of 6 November, with CaDiCaL~2.1.3, $24$ of the $64$ proofs differed from the archived ones). (2)~Some program comments in \dirn{C7UPPER/gen_b.py} and the angular docstring of
 \dirn{C7UPPER/gen.py} still state chain implications in the reverse direction, and that docstring omits the antipodal
@@ -867,9 +920,13 @@ python3 -I C6C7REVIEW/replay.py --seed 1319527528443935447 ...          # the 4 
 cp C6UPPER/replay-2026-11-06/replay*.py <dir>; cd <dir>          # the 6 November hash-bound replay
 python3 replay.py          # first set R, CAKE, CAD at the top; or: LANES=6 python3 replay_par.py
 # replay_par.py: env CAKE = parallel cake_lpr runs; delete its CAMP_CAP block (host-specific; README)
+cp C6UPPER/noty12-2026-11-06/*.py <dir>; cd <dir>     # encoder B's 32 cubes with -Y(1,2) (6 November)
+LANES=4 python3 noty12.py; python3 verify_final64.py  # set the paths at the top first; must print PASS
 \end{verbatim}}
 \noindent\dirn{C6UPPER/tools/cake.sh} runs \cakelpr{} only on proofs that \lratcheck{} accepted; for an independent
 replay run \cakelpr{} on every proof, as the replay scripts of 6 November do (their README gives the details).
+\dirn{noty12.py} and \dirn{verify_final64.py} read the encoder-B base formula and cubes regenerated by the replay (its
+\texttt{B/} directory), and they name the tool binaries and these paths at the top of each script.
 
 \paragraph{Lower bounds and exact checks.}
 {\footnotesize
@@ -885,7 +942,8 @@ python3 -I WRITEUP/P1/tools/make_tables.py               # regenerates and check
 \paragraph{Run times and machines.} Recorded times are in Sections~\ref{sec:cert} and~\ref{sec:lower}. The sevenfold
 \cakelpr{} logs are in the format of the macOS \texttt{time} utility; the hardware of each original run is not
 uniformly recorded in the logs. The re-checks of 6 November ran on a Linux workstation with 32 hardware threads and
-about 64\,GB of memory (59.5\,GiB visible to Linux), under per-process memory caps; the sixfold replay of 6 November ran on the same workstation.
+about 64\,GB of memory (59.5\,GiB visible to Linux), under per-process memory caps; the sixfold replay of 6 November,
+and the run for encoder~B's cubes with $\neg Y(1,2)$, ran on the same workstation.
 
 %======================================================================================================================
 \section{Open problems}\label{sec:open}
@@ -953,7 +1011,10 @@ program files were re-hashed for this draft). The sixfold cube certificates are 
 cube formulas have the hashes recorded in \dirn{C6UPPER/SHA256SUMS.txt}. For the $40$ contradictory cubes the replay
 proofs are byte-identical to the archived proofs of 3 November, whose hashes are also in \dirn{C6UPPER/SHA256SUMS.txt}.
 For the $24$ phase-order cubes the replay proofs are new files; the second table gives the first twelve digits of their
-hashes (Table~\ref{tab:c6cert} gives those of the proofs of 3 November).
+hashes (Table~\ref{tab:c6cert} gives those of the proofs of 3 November). For encoder~B's $32$ cubes with $\neg Y(1,2)$
+the certificates are the proofs of the run of 6 November; the hashes of their formulas, proofs and compressed proofs are
+in \dirn{C6UPPER/noty12-2026-11-06/results.tsv}, the formula hashes also in \dirn{cubes.sha256} there (written before
+solving), and the tool hashes in \dirn{TOOLS_AND_PROOFS.sha256} there.
 
 {\scriptsize
 \begin{tabular}{@{}ll@{}}
@@ -1064,7 +1125,8 @@ Springer, 2026 (published October 2025), 29--47,
 doi:10.1007/978-3-032-07021-0\_3 (Crossref metadata; chapter text not accessed).
 \bibitem{Suk17} A.~Suk, On the Erd\H{o}s--Szekeres convex polygon problem, \emph{J. Amer. Math. Soc.} 30 (2017),
 1047--1053.
-\bibitem{Supp} Supplementary material: the directories \dirn{LAYERLEAN}, \dirn{C6UPPER}, \dirn{C7UPPER},
+\bibitem{Supp} Supplementary material: the directories \dirn{LAYERLEAN}, \dirn{C6UPPER} (including
+\dirn{C6UPPER/replay-2026-11-06} and \dirn{C6UPPER/noty12-2026-11-06}), \dirn{C7UPPER},
 \dirn{C6C7REVIEW}, \dirn{SIX60}, \dirn{PRIMEFOLD}, \dirn{ES8SYM}, \dirn{K8EXACT20261106}, \dirn{LRATCHECK20261105},
 \dirn{CHORD20261105}, \dirn{ROT456}, \dirn{ROTREFINE20261104}, \dirn{ROT45CHORD20261105}, \dirn{SYMLEAN}, \dirn{SYM5},
 \dirn{STATUS20261104}, \dirn{THREEFOLDRELAX}, \dirn{C3FINAL}, \dirn{C3SPOT}, \dirn{WRITEUP/note}, \dirn{WRITEUP/P1},
@@ -1073,8 +1135,9 @@ doi:10.1007/978-3-032-07021-0\_3 (Crossref metadata; chapter text not accessed).
 project repository, branch \texttt{es7-night-2026-11-01} (the records cited are those at commit \texttt{b583d89ab} or
 later; the commit to cite is to be fixed before circulation); proof archives \dirn{es8-c7-octagon-2026-11-03} and
 \dirn{es8-c6-octagon-2026-11-03}, the review archive \dirn{es8-c6c7-review-2026-11-04} (regenerated formulas, models,
-witnesses) and the proofs of the sixfold replay of
-6 November, \dirn{c6upper-replay-20261106} (not public). [A public deposit with a DOI, of
+witnesses), the proofs of the sixfold replay of
+6 November, \dirn{c6upper-replay-20261106}, and those of encoder~B's cubes with $\neg Y(1,2)$,
+\dirn{c6upper-noty12-20261106} (not public). [A public deposit with a DOI, of
 the generators, cube files, logs, proof hashes, replay logs and, where size permits, the LRAT proofs, is to be made
 before circulation.]
 \bibitem{SP06} G.~Szekeres and L.~Peters, Computer solution to the 17-point Erd\H{o}s--Szekeres problem, \emph{ANZIAM
