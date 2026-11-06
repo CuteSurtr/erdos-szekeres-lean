@@ -1,0 +1,48 @@
+== audit_geo.sh 2026-11-07T05:51:27+09:00 in /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/ENCBLEAN/geo
+   repository /home/jay/research/lean/erdos-szekeres-lean, HEAD 115ccda3d, pinned commit 115ccda3dd34
+1. pinned files
+  ok   SOURCES.sha256: 5 files OK
+  ok   VENDOR.sha256: 10 files OK
+  ok   SOURCES.sha256 lists exactly the non-unit ES8Geo files
+  ok   PINNED: 29 files OK (build configuration, manifests, ../EncB)
+  ok   no unlisted file in ../EncB
+  ok   no Lean options in geo/lakefile.toml or ../lakefile.toml
+  ok   geo manifest: Mathlib f897ebcf; every repository package at the repository's revision
+  ok   9 package checkouts at their manifest revisions, no tracked changes
+2. git cross-checks against the pinned commit 115ccda3dd34 (not HEAD)
+  ok   no unlisted file under ErdosSzekeres/
+  ok   34 files (10 vendored modules, ../EncB, ../ build files) equal commit 115ccda3dd34
+  note SOURCES.sha256 not yet committed (bound by its PINNED hash)
+  note VENDOR.sha256 not yet committed (bound by its PINNED hash)
+3. LEANEXT copies
+  ok   ES8Geo/Capstone2.lean = LEANEXT/capstone/Capstone2.lean
+  ok   ES8Geo/KeyOrder.lean = LEANEXT/keys/KeyOrder.lean
+  ok   ES8Geo/OrbitConsistency.lean = LEANEXT/orbit/OrbitConsistency.lean
+4. forbidden tokens (code only)
+  ok   22 files clean
+5. no evaluation of the (6,8,11) instance in the M5-M8 files
+  ok   ES8Geo/Labelling.lean: 0 line(s) and 0 declaration(s) mention it; all terms, no risky token near
+  ok   ES8Geo/ModelBasic.lean: 0 line(s) and 0 declaration(s) mention it; all terms, no risky token near
+  ok   ES8Geo/ArcBridge.lean: 0 line(s) and 0 declaration(s) mention it; all terms, no risky token near
+  ok   ES8Geo/ModelOfLabelling.lean: 0 line(s) and 0 declaration(s) mention it; all terms, no risky token near
+  ok   ES8Geo/Main.lean: 13 line(s) and 7 declaration(s) mention it; all terms, no risky token near
+  ok   ES8Geo/Audit.lean: 12 line(s) and 3 declaration(s) mention it; all terms, no risky token near
+6. module list
+  ok   ES8Geo.lean imports all 11 modules
+7. build gate (re-elaboration of the M5-M8 files; #guard_msgs on axioms and statements in ES8Geo/Audit.lean)
+  ok   lake build --no-build: up to date
+  ok   ES8Geo/Labelling.lean elaborates (3.6 s)
+  ok   ES8Geo/ModelBasic.lean elaborates (9.6 s)
+  ok   ES8Geo/ArcBridge.lean elaborates (6.9 s)
+  ok   ES8Geo/ModelOfLabelling.lean elaborates (4.3 s)
+  ok   ES8Geo/Main.lean elaborates (8.1 s)
+  ok   ES8Geo/Audit.lean elaborates (12.3 s)
+    'EncB.Geo.sixfold66_of_no_model' depends on axioms: [propext, Classical.choice, Quot.sound]
+    'EncB.Geo.sixfold66_of_unsat' depends on axioms: [propext, Classical.choice, Quot.sound]
+    'EncB.Geo.sixfold66_of_cubes64' depends on axioms: [propext, Classical.choice, Quot.sound]
+    'EncB.Geo.sixfold_es8' depends on axioms: [propext, Classical.choice, Quot.sound]
+    'EncB.Geo.sixfold_es8_of_texts' depends on axioms: [propext, Classical.choice, Quot.sound]
+    'EncB.Geo.sixfold_es8_order6' depends on axioms: [propext, Classical.choice, Quot.sound]
+    'EncB.Geo.sixfold_es8_order6_of_texts' depends on axioms: [propext, Classical.choice, Quot.sound]
+    'EncB.Geo.rotAbout_neg_sixth' depends on axioms: [propext, Classical.choice, Quot.sound]
+AUDIT PASS
