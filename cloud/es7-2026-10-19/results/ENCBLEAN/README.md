@@ -1,4 +1,4 @@
-# ENCBLEAN: encoder B in Lean (M0 design, M1 byte-identical port, M2 functional twin and numbering bridge, M3 combinatorial soundness, M9 hash binding, DIMACS round trip, re-solve script and review fixes)
+# ENCBLEAN: encoder B in Lean (M0 design, M1 byte-identical port, M2 functional twin and numbering bridge, M3 combinatorial soundness, M9 hash binding, DIMACS round trip, re-solve script and review fixes; M4–M8 geometric half and end-to-end theorem, package `geo/`)
 
 - **M1.** `EncB.gen m K t` is a Lean definition of the CNF that `C6UPPER/encb/gen_b2.py m K t` writes (gen_b2.py
   SHA-256 `3d47459a9723b5f7344205f3f2d7463e0be00b41c5070155e5da8dbf78fd40ba`). It has the same variable numbering,
@@ -22,6 +22,14 @@
   with the pinned CaDiCaL and cake_lpr (smoke test 2/2; `all` not run). Section "M9" below.
 
 **Status (2026-11-06, about 20:15 KST; the fixes of the two M9 reviews about 20:55–21:06 KST).**
+- **M4–M8 are done (2026-11-07, about 05:35 KST; not committed; section "M4–M8 (geo)" below).** The package `geo/`
+  (Mathlib) proves `EncB.Geo.sixfold_es8` (from `CubesUnsat64`) and `EncB.Geo.sixfold_es8_of_texts` (from the
+  hypothesis of `no_model_6811_of_texts`, which `texts_iff_cubesUnsat64` shows equivalent to `CubesUnsat64`): every
+  set of at least 61 points in general position that is invariant under the counterclockwise rotation by 2π/6 about
+  some point has a convex octagon; `sixfold_es8_order6(_of_texts)` extend this to a rotation of order 6 in either
+  direction (2π/6 or 2π·5/6). Axioms [propext, Classical.choice, Quot.sound], guarded by `#guard_msgs`;
+  `geo/scripts/audit_geo.sh` PASS and its self-test 23/23 (after the review fixes of about 05:40–05:55 KST).
+  Statements below that say M4–M8 are not done are superseded.
 - **M3 is done (17:20 KST).** `encB_satisfiable` and `encB_satisfiable_6811` are proved, with no `sorry`, no
   unit statement left as a hypothesis, and axioms [propext, Classical.choice, Quot.sound] (section "M3" below).
 - **M0, M1 and M2 are done, and the three fixes of the M2 review are applied** (section "M2 review fixes" below).
@@ -159,6 +167,251 @@ How to call the exe (the `twin-*` modes print `encB`, the others print `gen`):
   (`cubeVars64`).
 - **Refusal.** On an instance where gen_b2.py raises, the exe writes nothing and exits with 1. For the twin this is
   decided by `diagCoded`.
+
+## M4–M8 (geo): the geometric half and the end-to-end theorem (2026-11-07, about 05:00–05:35 KST; not committed)
+
+**What is proved.** The package `geo/` (Lean package `es8geo`, Lean 4.24.0, Mathlib `f897ebcf72cd16f8…` in
+`geo/.lake`, `encblean` required by path `..`) proves that a counterexample yields a `Model`, and composes this
+with M3 and M9:
+
+- **M5** `labelling_of_counterexample` (`ES8Geo/Labelling.lean`): an m-fold counterexample (any even m ≥ 2, with
+  K ≤ 2m) with `m·t` points has a polar labelling of its `t` layers (`PolarLabelling`, frozen in `ES8Geo/Interface.lean`).
+- **M6** `modelOfLabelling` (`ES8Geo/ModelOfLabelling.lean`): the labelling's intended model, `chi := L.chi`
+  (`decide (0 < orient (P a) (P b) (P d))`) and `psiLt := L.psiLt` (`decide (ψ i < ψ j)`); `modelOfLabelling_chi`
+  and `modelOfLabelling_psiLt` record this by `rfl`. The 13 fields come from `ES8Geo/ModelBasic.lean` (G1–G7:
+  the `psiLt` laws, `chi_rot`, `chi_cycle`, `chi_swap`, `nest`, `noChain`) and `ES8Geo/ArcBridge.lean` (G8–G9:
+  `objLt` is the real circular order of the directions, `ccwIn` is a real arc, and rules A/B from
+  `PhaseClassification.orient_pos_of_alternating` / `orient_pos_of_runMidB`).
+- **M8** `ES8Geo/Main.lean`: `sixfold66_of_no_model` (M5 + M6), `sixfold66_of_unsat` (+ M3),
+  `sixfold66_of_cubes64` (+ the cover), `sixfold_es8` and `sixfold_es8_of_texts` (+ `sixfold_octagon`, Capstone2),
+  and for the clockwise case `sixfold_es8_order6`, `sixfold_es8_order6_of_texts` (invariance under a rotation by
+  2π/6 or by 2π·5/6; `invariant_sixth_of_five`: invariance under ρ⁵ gives invariance under ρ²⁵ = ρ;
+  `rotAbout_neg_sixth`: the rotation by 2π·5/6 is the rotation by −2π/6). `ES8Geo/Audit.lean` adds
+  `texts_iff_cubesUnsat64`: the texts hypothesis ↔ `CubesUnsat64`.
+
+**The final statements, as `#check @…` prints them** (pinned by `#guard_msgs` in `ES8Geo/Audit.lean`):
+
+```
+EncB.Geo.sixfold_es8 : EncB.CubesUnsat64 →
+  ∀ (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point),
+    ErdosSzekeres.GeneralPosition S →
+      ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / 6)) S →
+        61 ≤ S.card → ErdosSzekeres.HasConvexNGon 8 S
+EncB.Geo.sixfold_es8_of_texts : (∀ (i : ℕ) (hi : i < EncB.cubes64.length) (nv : ℕ) (G : List (List ℤ)),
+    EncB.parseDimacs (EncB.cnfText (EncB.encode 6 8 11) (EncB.cubes64.get ⟨i, hi⟩)) = some (nv, G) →
+      ¬EncB.DimacsSatisfiable G) →
+  ∀ (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point),
+    ErdosSzekeres.GeneralPosition S →
+      ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / 6)) S →
+        61 ≤ S.card → ErdosSzekeres.HasConvexNGon 8 S
+EncB.Geo.sixfold_es8_order6 : EncB.CubesUnsat64 →
+  ∀ (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point),
+    ErdosSzekeres.GeneralPosition S →
+      ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / 6)) S ∨
+          ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi * 5 / 6)) S →
+        61 ≤ S.card → ErdosSzekeres.HasConvexNGon 8 S
+EncB.Geo.sixfold_es8_order6_of_texts : (the hypothesis of sixfold_es8_of_texts) → (the conclusion of
+  sixfold_es8_order6, from ∀ S c on)
+EncB.Geo.rotAbout_neg_sixth : ∀ (c : ErdosSzekeres.Point),
+  ErdosSzekeres.LayerLemma.rotAbout c (-(2 * Real.pi / 6)) = ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi * 5 / 6)
+EncB.Geo.texts_iff_cubesUnsat64 : (∀ (i : ℕ) (hi : i < EncB.cubes64.length) (nv : ℕ) (G : List (List ℤ)),
+    EncB.parseDimacs (EncB.cnfText (EncB.encode 6 8 11) (EncB.cubes64.get ⟨i, hi⟩)) = some (nv, G) →
+      ¬EncB.DimacsSatisfiable G) ↔
+  EncB.CubesUnsat64
+EncB.Geo.sixfold66_of_unsat : ¬EncB.DimacsSatisfiable (EncB.encB 6 8 11) → ErdosSzekeres.LayerLemma.Sixfold66
+EncB.Geo.sixfold66_of_cubes64 : EncB.CubesUnsat64 → ErdosSzekeres.LayerLemma.Sixfold66
+EncB.Geo.sixfold66_of_no_model : (∀ (a : EncB.Model 6 8 11), False) → ErdosSzekeres.LayerLemma.Sixfold66
+@EncB.Geo.modelOfLabelling : {m K t : ℕ} → 3 ≤ m → Even m → 4 ≤ K → K ≤ 2 * m →
+  {T : Finset ErdosSzekeres.Point} → {c : ErdosSzekeres.Point} → ErdosSzekeres.GeneralPosition T → c ∉ T →
+  ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / ↑m)) T →
+  ¬ErdosSzekeres.HasConvexNGon K T → EncB.Geo.PolarLabelling m t T c → EncB.Model m K t
+@EncB.Geo.labelling_of_counterexample : ∀ {m K t : ℕ}, 2 ≤ m → Even m → K ≤ 2 * m →
+  ∀ {T : Finset ErdosSzekeres.Point} {c : ErdosSzekeres.Point}, ErdosSzekeres.GeneralPosition T → c ∉ T →
+  ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / ↑m)) T →
+  ¬ErdosSzekeres.HasConvexNGon K T → T.card = m * t → Nonempty (EncB.Geo.PolarLabelling m t T c)
+```
+
+(`modelOfLabelling` and `labelling_of_counterexample` are re-wrapped here, Lean prints one binder per line, and
+`sixfold_es8_order6_of_texts` is abbreviated; `Audit.lean` pins every one of them verbatim, and also
+`modelOfLabelling_chi` and `modelOfLabelling_psiLt`.)
+`Sixfold66` (Capstone2.lean:1110) is `∀ T c, GeneralPosition T → c ∉ T → Invariant (rotAbout c (2 * Real.pi / 6)) T →
+T.card = 66 → HasConvexNGon 8 T`. The hypothesis of `sixfold_es8_of_texts` is, token for token, that of
+`EncB.no_model_6811_of_texts` (Compose.lean:72; an `example` in Audit.lean applies one to the other): each of the
+64 texts the exe prints with `twin-cube64 6 8 11 i` parses, by `parseDimacs`, to an unsatisfiable clause list. That
+is what cake_lpr's 64 verdicts are taken to mean (trust item E3). The hypothesis is not vacuous (a failing parse
+would make it trivially true): `texts_iff_cubesUnsat64` proves it equivalent to `CubesUnsat64`, by
+`cubesUnsat64_of_texts_get` one way and by `parseDimacs_cube64_get` with `Option.some.inj` the other, as a term
+(`cases` would try to reduce `encB 6 8 11`).
+
+**Axioms.** Every theorem above, and `modelOfLabelling`, depends on [propext, Classical.choice, Quot.sound];
+fourteen `#guard_msgs in #print axioms` and thirteen `#guard_msgs in #check` in `ES8Geo/Audit.lean` make
+`lake build` fail if this or a statement changes. Each unit file also ends with `#print axioms` for its own theorems (`logs/m8_build.log`).
+
+**The proof chain of `sixfold_es8_of_texts h S c hgp hinv hcard`.**
+`sixfold_octagon (sixfold66_of_no_model (EncB.no_model_6811_of_texts h)) S c hgp hinv hcard`, where
+`no_model_6811_of_texts` is M3 + M9 (Std-only) and `sixfold66_of_no_model` takes a 66-point counterexample `T`,
+casts the real `6` of `Sixfold66` to `((6 : ℕ) : ℝ)` (`MainAux.invariant_cast_six`), gets `L` from M5 with m = 6,
+K = 8, t = 11 and applies `h` to `modelOfLabelling … L`. The side conditions `3 ≤ 6`, `2 ≤ 6`, `Even 6`, `4 ≤ 8`,
+`8 ≤ 2 * 6` and `66 = 6 * 11` are one lemma, `MainAux.numerals`, closed by `norm_num`/`decide` on these numerals
+alone. Every declaration that mentions the instance (`Model 6 8 11`, `encB 6 8 11`, `CubesUnsat64`, …) is a term
+with no tactic block (`sixfold66_of_no_model` is `Classical.byContradiction` with `Nonempty.elim`), so nothing
+evaluates `encB 6 8 11`; audit check 5 enforces this.
+
+**Files** (`geo/`; line counts with comments):
+
+| file | lines | content |
+|---|---|---|
+| `ErdosSzekeres/**` (10 files) | — | verbatim copies of the repository modules at commit `115ccda3`, `VENDOR.sha256` (M4) |
+| `ES8Geo/Capstone2.lean`, `KeyOrder.lean`, `OrbitConsistency.lean` | 2132, 158, 429 | verbatim copies of `LEANEXT/{capstone,keys,orbit}/…`, `SOURCES.sha256` (M4) |
+| `ES8Geo/Orbit.lean` | 21 | `orient_rotAbout_inv` for `LayerLemma.rotAbout` (M4) |
+| `ES8Geo/Interface.lean` | 53 | `PolarLabelling`, `L.P`, `L.chi`, `L.psiLt`, frozen before the M5/M6 units (M4) |
+| `ES8Geo/Labelling.lean` | 161 | M5 (`EncB.Geo.Lab`) |
+| `ES8Geo/ModelBasic.lean` | 231 | M6 fields G1–G7 (`EncB.Geo.Basic`) |
+| `ES8Geo/ArcBridge.lean` | 497 | M6 G8–G9 and rules A/B (`EncB.Geo.Arc`) |
+| `ES8Geo/ModelOfLabelling.lean` | 52 | M6 assembly |
+| `ES8Geo/Main.lean`, `ES8Geo/Audit.lean` | 138, 202 | M8 (with the review fixes) |
+| `scripts/audit_geo.sh` | 358 | M8 audit and its `--selftest` (below) |
+
+**How to rebuild.** `lake-manifest.json` pins Mathlib, so `lake update` is **not** needed (and would move the pin).
+
+```
+cd cloud/es7-2026-10-19/results/ENCBLEAN/geo
+export PATH=$HOME/.elan/bin:$PATH
+CAP="systemd-run --user --scope -q -p MemoryMax=8G -p MemorySwapMax=0 nice -n 10"
+lake exe cache get          # Mathlib oleans for f897ebcf (7335 files, about 6 GB in geo/.lake; network)
+$CAP lake build             # M4: 32 s wall, 2176 jobs, 2.9 GB (logs/m4_build.log); M5–M8 add 6 modules, about 10 s, 2.4 GB (logs/m8_build.log, logs/m8_fix_build.log)
+scripts/audit_geo.sh        # read-only; exit 0 iff AUDIT PASS (logs/m8_fix_audit.log); about 47 s
+scripts/audit_geo.sh --selftest   # plants 22 violations in a temporary copy; exit 0 iff SELFTEST PASS (logs/m8_fix_selftest.log); about 10 s
+```
+
+`scripts/audit_geo.sh` checks (the header of the script states each one exactly):
+1. **Pinned files.** `SOURCES.sha256` verifies with exactly 5 OK lines and lists exactly the non-unit ES8Geo files;
+   `VENDOR.sha256` exactly 10. A PINNED list inside the script binds by SHA-256 the build configuration
+   (`geo/{lakefile.toml, lake-manifest.json, lean-toolchain}`, `../{lakefile.toml, lean-toolchain,
+   lake-manifest.json}`), the two manifests themselves, and the Std-only package `../EncB.lean`, `../EncB/*.lean`
+   (the definitions `Model`, `encB`, `encode`, `cubes64`, `cubeCnf`, `CubesUnsat64`, `cnfText`, `parseDimacs`,
+   `DimacsSatisfiable` that give the final theorems their meaning), with no unlisted file in `../EncB`. Neither
+   lakefile sets Lean options (`leanOptions`, `moreLeanArgs`, `weakLeanArgs`, server args, …; such an option could
+   turn off kernel checking for the build). The geo manifest pins Mathlib `f897ebcf` and every package of the
+   repository's `lake-manifest.json` at the repository's revision, and each checkout in `geo/.lake/packages` is at its
+   manifest revision with no tracked change.
+2. **Git cross-checks** against the commit recorded in `VENDOR.sha256` (`115ccda3`, the M9 commit), not the moving
+   HEAD: the 10 vendored modules and every PINNED file under `../` equal that commit (34 files); once `geo/` is
+   committed, `SOURCES.sha256` and `VENDOR.sha256` equal their committed versions. Outside a git checkout (or with
+   `AUDIT_NO_GIT=1`) these are skipped with a note; the PINNED hashes still bind every file.
+3. Capstone2, KeyOrder and OrbitConsistency equal the LEANEXT files byte for byte.
+4. No `sorry`, `sorryAx`, `admit`, `native_decide`, `axiom` declaration, `opaque`, `implemented_by`, `extern`,
+   `unsafe`, `maxHeartbeats 0`, `skipKernelTC`, `ofReduceBool`, `ofReduceNat`, `reduceBool`, `reduceNat` in the code of
+   `ES8Geo/*.lean`, `ES8Geo.lean` and `ErdosSzekeres/**` (22 files; there is no `maxHeartbeats` at all). Comments are
+   stripped by a scanner that nests block comments and keeps string and char literals, so `"/-"` in a string cannot
+   hide code.
+5. In the six M5–M8 files, a *mention* of the instance is `encB`/`gen`/`genCoded`/`numVars`/`allCodes`/`allCodesOf`/
+   `encode`/`diagCoded`/`Model` applied to `6 8 11`, a named argument `(m := 6)`/`(K := 8)`/`(t := 11)`,
+   `CubesUnsat64`, `cubes64`, `cubeVars64`, `cubeCnf`, `cnfText`, `parseDimacs*`, `encB_unsat*` or any name containing
+   `6811`. (a) No `decide`/`rfl`/`norm_num`/`simp`-family/`omega`/`trivial`/`grind`/`aesop`/`#eval`/`#reduce`/… within
+   3 lines of a mention; (b) a declaration that mentions the instance contains no `by` at all (it is a term);
+   (c) the files define no macro, syntax, elaborator or notation. Today: Main.lean 7 and Audit.lean 3 such
+   declarations, all terms. This is a text check (a local abbreviation for 6 would evade it); the time limit of
+   check 7 is the real protection.
+6. `ES8Geo.lean` imports every module.
+7. `lake build --no-build` is up to date (so every `#guard_msgs` of Audit.lean passed), and all six M5–M8 files
+   (Labelling, ModelBasic, ArcBridge, ModelOfLabelling, Main, Audit) elaborate again with `lake env lean` within
+   300 s each (3.6–12.3 s as built) with no `file:line:col: error` line; the axioms of the main theorems are printed
+   and must be the standard three. `lake env lean` uses no package Lean options, and check 1 makes sure there are
+   none, so this re-elaboration also re-runs the kernel on every declaration of the six files.
+
+`scripts/audit_geo.sh --selftest` copies `geo/` (without `.lake`), `../EncB*`, the `../` build files and the three
+LEANEXT sources to a temporary directory and plants one violation per run: a tactic, `decide`, a named-argument
+instance or `#eval` near the instance, a tactic block with no listed tactic, a macro, an `axiom`, `maxHeartbeats 0`,
+`sorryAx`, a `sorry` behind a string holding `/-`, a `sorry` after a nested block comment, a missing import, an
+edited Interface.lean (also after deleting its line from `SOURCES.sha256`), an edited or an unlisted vendored module,
+`leanOptions` in `geo/lakefile.toml`, `moreLeanArgs` in `../lakefile.toml`, an edited `lean-toolchain`, an edited
+`../EncB/Model.lean`, an extra file in `../EncB`, a changed LEANEXT source. Each must end AUDIT FAIL (exit 1), and the
+clean copy AUDIT INCOMPLETE (exit 3, the build gate is skipped in the copy). Run 2026-11-07 05:52: **23/23, SELFTEST
+PASS**; the audit itself: **AUDIT PASS**, exit 0, 47 s (`logs/m8_fix_audit.log`).
+
+**Decisions and deviations.**
+- **Vendored modules, not a path require of the repository.** Requiring the repository by path would make lake build
+  it inside the repository's own `.lake`, which is frozen and must not be touched. So the ten
+  repository modules the geometry imports (the closure of `ErdosSzekeres.{Definitions, Orientation,
+  OrientationGeometry, Suk.OrientationClique}`) are copied verbatim into `geo/ErdosSzekeres/`; every constant keeps
+  its repository name, `VENDOR.sha256` records the hashes and audit check 2 compares them with the recorded
+  commit `115ccda3`. Mathlib is
+  fetched into `geo/.lake` (R5, option (a), the author's choice of 2026-11-07).
+- **Capstone2 kept whole.** The M4 row planned to split Capstone2 into `Layer`/`Phase`/`Link`/`PhaseClass`/`Capstone`
+  modules. It is kept as one verbatim file instead, so the statements are checked by a hash (audit check 3), not by a
+  diff of a split. DESIGN's "LL line n" is Capstone2 line n + 8 (n ≥ 10).
+- **Interface: typed binders in `PolarLabelling`.** In DESIGN §2.1 the `k` of `mem_layer` is untyped and occurs only
+  as `(k : ℝ)`, so Lean would read it as a real number and the field would claim membership for every real `k`,
+  which is false for every actual configuration. `Interface.lean` types the binders (`i k : ℕ`); nothing else in
+  §2.1 changed.
+- **Binders of the field theorems.** Each takes only the standing hypotheses it uses, in the standing order and with
+  the standing names (`labelling_ruleA hm heven L`, `labelling_nest hm hK hgp hc hinv hno L`, …).
+  `labelling_of_counterexample` takes `hm : 2 ≤ m` and `hcard : T.card = m * t`, as in §2.1.
+- **Added:** `sixfold66_of_no_model`, the common core of `sixfold66_of_unsat` and `sixfold_es8_of_texts`.
+  `sixfold_es8_of_texts` goes through `no_model_6811_of_texts`, not through `CubesUnsat64`.
+- **Direction of the rotation.** `sixfold_es8` and `sixfold_es8_of_texts` are the counterclockwise case, as in
+  P1 thm:main(a) ("a rotation by 2π/6"). P1's cor:es8 and DESIGN §1.1's optional add-on also allow a rotation of order
+  6 by 2π·5/6 (= ρ⁻¹); `sixfold_es8_order6` and `sixfold_es8_order6_of_texts` cover it (invariance under ρ⁵ gives
+  invariance under ρ²⁵ = ρ, with no finiteness needed).
+- **ArcBridge** handles the three cyclic cases of `ccwIn` by lifting two directions by 2π (`Arc.lift3`) instead of
+  the cyclic relabelling through `orient_cycle` planned in DESIGN §3.4; it uses only the fields `r_pos`, `r_anti`,
+  `ψ_zero`, `ψ_pos`, `ψ_lt` (and `ψ_inj` in `rdir_eq_iff`).
+- **Not re-run in M8:** the mutation tests of the M8 row (a changed `genCoded` family changes the hashes; a deleted
+  `Model` field breaks M3). They were done in M3 (13/13 field mutants and the nesting mutant) and M9 (the hash
+  self-test); M8 changed neither `genCoded` nor `Model`.
+
+**Process.** M5 and the two M6 units (`ModelBasic`, `ArcBridge`) were written in parallel against the frozen
+Interface, each checked by `lake env lean` only and then by an independent verifier (compile, exact statements
+by `Expr` comparison or typed `example`, axioms, tokens, frozen hashes); logs `logs/m5m6_{M5,M6basic,G9rules}.log`.
+The G9 go/no-go spike (R2) passed on the first attempt. The integrator wrote ModelOfLabelling, Main and Audit, and
+ran the only `lake build`s (`logs/m8_build.log`) and the audit (`logs/m8_audit.log`). No git commit was made.
+
+**Review fixes (2026-11-07, about 05:40–05:55 KST).** An independent review of M4–M8 gave 11 findings (2 major,
+9 minor); none concerned a proof. Disposition:
+
+| finding | disposition |
+|---|---|
+| only the counterclockwise rotation by 2π/6 is covered (P1 cor:es8 also allows 2π·5/6) | **fixed:** `sixfold_es8_order6`, `sixfold_es8_order6_of_texts`, `invariant_sixth_of_five`, `rotAbout_neg_sixth` (Main.lean); "Direction of the rotation" above |
+| P1 is out of date (Rigor text, line 292 "without Mathlib", line 1057 future work) | **not edited:** P1 is outside this package and was left to the operator; the items for its revision are listed under "Trust after M4–M8" below |
+| README's "only hypothesis is the meaning of the verdicts" is imprecise; nothing shows the texts hypothesis is not vacuous | **fixed:** `texts_iff_cubesUnsat64` (Audit.lean, a term, pinned) and the sentence reworded |
+| check 5 missed `Model 6 8 11` and named arguments (`sixfold66_of_no_model` used `norm_num`/`decide` unchecked) | **fixed:** wider mention pattern; such declarations must be terms; `sixfold66_of_no_model` rewritten as a term, numerals in `MainAux.numerals` |
+| (major) the build configuration is not hash-checked; `leanOptions` could disable the kernel for unit modules that check 7 did not re-elaborate | **fixed:** PINNED hashes of both lakefiles, manifests and toolchains; grep for Lean options; manifest revisions compared with the repository's and with the checkouts; check 7 re-elaborates all six M5–M8 files |
+| (major) check 6 compared `EncB/` with the moving HEAD and omitted `EncB.lean`, `../lakefile.toml` | **fixed:** `../EncB.lean`, `../EncB/*.lean` and the `../` build files are in PINNED, and check 2 compares them with commit `115ccda3` |
+| check 2 used HEAD and needed git; check 1 did not assert the counts 5 and 10 | **fixed:** commit from the `VENDOR.sha256` header; runs without git (cross-checks skipped with a note); counts asserted; `SOURCES.sha256` must list exactly the non-unit files; the manifests themselves are pinned |
+| check-5 pattern too narrow; `FORB` lacked `sorryAx`, `ofReduceNat`, `reduceBool`, `reduceNat`; the comment stripper mangled strings | **fixed:** pattern extended (`cubes64`, `cnfText`, `parseDimacs*`, `*6811*`, …), the four tokens added, a stripper that nests block comments and keeps string/char literals |
+| only 4 statements pinned; no axiom pins for the two `rfl` lemmas | **fixed:** 13 `#check` and 14 `#print axioms` pins, including `sixfold66_of_no_model`, `modelOfLabelling(_chi/_psiLt)`, `labelling_of_counterexample` |
+| `grep -q 'error'` too loose; negative tests not reproducible | **fixed:** `^file:line:col: error`; `audit_geo.sh --selftest` (23 cases) |
+| "6-fold-type counterexample" understates M5 | **fixed:** "an m-fold counterexample (any even m ≥ 2, with K ≤ 2m)" |
+
+`lake build` after the fixes: green, 2200 jobs, 13 s, 2.5 GB (`logs/m8_fix_build.log`).
+
+**Trust after M4–M8.** M4–M8 remove the one step that was missing rather than trusted: that a geometric
+counterexample yields a `Model 6 8 11` (KS steps S5, S7, S8, the geometric side of S11–S17, and the
+composition S22; `DESIGN.md` §1.5). The composition with `sixfold_octagon` is now one Lean term. What stays trusted
+is the list E1–E6 (`DESIGN.md` §1.4, the table in "Trust" below), unchanged in content:
+- **E1** the hash binding (compiled exe) ties the texts of the hypothesis of `sixfold_es8_of_texts` to the 64 files
+  cake_lpr checked; **E2** the 64 verdicts; **E3** that cake_lpr reads those texts as `parseDimacs` does and that its
+  `s VERIFIED UNSAT` means `¬ DimacsSatisfiable`; **E4** the compiler and runtime of the exe behind E1 (not of the
+  theorems); **E6** SHA-256.
+- **E5** the kernel, Mathlib `f897ebcf…`, and that the definitions mean what the paper says: `Point`,
+  `GeneralPosition`, `HasConvexNGon` (`geo/ErdosSzekeres/Definitions.lean`), `orient`
+  (`geo/ErdosSzekeres/Orientation.lean`), `rotAbout` and `Invariant` (Capstone2). These are now the vendored copies;
+  audit checks 1–3 tie them byte for byte to the repository at commit `115ccda3` and to LEANEXT, and pin the
+  `EncB` definitions and the build configuration.
+- `sixfold_es8` instead assumes `CubesUnsat64`, a Lean statement about `cubeCnf (encB 6 8 11) c`; its tie to the
+  certificates is the same E1–E3 through `cubesUnsat64_of_texts_get`.
+
+So the sixfold bound (every 6-fold symmetric set of ≥ 61 points in general position has a convex octagon) is now a
+Lean theorem whose only hypothesis is equivalent to `CubesUnsat64` (`texts_iff_cubesUnsat64`), i.e. what the 64
+cake_lpr verdicts certify given E1–E4, with E5 and E6 as the remaining trust beyond that.
+
+**P1 is not yet updated** (`WRITEUP/P1/p1.tex`, outside this package; the operator will revise it). When it is:
+its Rigor text (about line 131) still calls the soundness of the encodings a written proof with gaps (G1)–(G4);
+line 292 says ENCBLEAN is "standard library only, without Mathlib"; line 1057 lists closing (G1)/(G2) as future work.
+For encoder B with m = 6 the revision should cite `EncB.Geo.sixfold_es8_of_texts` (and `sixfold_es8_order6_of_texts`
+for cor:es8), mention the Mathlib-based package `geo/` (Mathlib `f897ebcf`), and narrow the encoder-B (m = 6) gaps
+to E1–E6.
 
 ## M9: hash binding, DIMACS round trip and re-solve script (2026-11-06, 17:50–20:15 KST; not committed)
 
@@ -982,6 +1235,9 @@ certificates. They are not the only thing missing for an end-to-end theorem: tha
   - the assembly `sixfold_es8` (M8).
 
   So the sixfold bound is **not** formally verified end to end, and P1 says so.
+
+  **Superseded on 2026-11-07 (section "M4–M8 (geo)"):** M4–M8 are done; `sixfold_es8_of_texts` proves the sixfold
+  bound from the meaning of the 64 verdicts, with E1–E6 as the remaining trust. P1 has not been updated yet.
 - **The hash binding is a computation, not a proof (M9).** `scripts/hash_binding.sh` shows, by running the compiled
   exe, that the texts of `encB 6 8 11` and the 64 cubes of `cubes64` have the hashes of the certified files (68/68
   with 3 other instances; `logs/m9_hash_binding.log`, `logs/m9_a2_hash_binding.log`,

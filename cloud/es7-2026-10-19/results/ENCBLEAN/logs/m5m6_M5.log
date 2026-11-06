@@ -1,0 +1,17 @@
+== M5 unit, 2026-11-07T05:10:55+09:00 ==
+File: geo/ES8Geo/Labelling.lean (161 lines, sha256 489ba89f8d6fa8a5...), imports ES8Geo.Interface only.
+Proved (namespace EncB.Geo), statement exactly as in the task / DESIGN §2.1:
+  labelling_of_counterexample (hm : 2 ≤ m) (heven) (hK : K ≤ 2m) (hgp) (hc) (hinv) (hno) (hcard : T.card = m*t)
+    : Nonempty (PolarLabelling m t T c)
+Helpers (namespace EncB.Geo.Lab):
+  Lab.mem_int            -- ∀k:ℕ membership of polar c R (θ+k·2π/m) extends to k:ℤ (polar_add_int, Int.emod_add_mul_ediv)
+  Lab.exists_layer_polar -- F1-F4: for n < t, ∃ R>0, θ with polar c R (θ+z·u) ∈ hullVerts (peel T n) ∀ z:ℤ
+                            (card_peel, hullVerts_nonempty, Capstone.exists_angle/sqrt_dist2_pos/ne_of_mem,
+                             iterate_mem_hullVerts_peel, rotAbout_iterate, rotAbout_polar)
+Construction: r := R, φ := θ 0, ψ i := toIcoMod u 0 (θ i - θ 0) (values for i ≥ t are junk but ψ 0 = 0 holds for all t).
+  F5 self_sub_toIcoMod / toIcoMod_mem_Ico; F6 mem_layer via shift k - toIcoDiv; F7 ψ_inj/ψ_pos via
+  phase_ne_of_distinct_layers (ψ_pos from ψ_inj with layer 0); F8 r_anti via dist2_le_of_later + dist2_polar + nlinarith.
+Deviations: none. No sorry/admit/native_decide/axiom/opaque/extern/unsafe/maxHeartbeats.
+Check: cd geo && lake env lean ES8Geo/Labelling.lean  -> no errors, no warnings, ~4.6 s wall (4.3 s user).
+#print axioms: 'EncB.Geo.labelling_of_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+SOURCES.sha256 / VENDOR.sha256: OK after the work.

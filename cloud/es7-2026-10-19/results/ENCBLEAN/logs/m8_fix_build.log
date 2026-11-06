@@ -1,0 +1,54 @@
+== lake build (M4-M8 fixer pass) 2026-11-07T05:51:06+09:00
+ℹ [2172/2200] Replayed ES8Geo.KeyOrder
+info: ES8Geo/KeyOrder.lean:151:0: 'KeyOrder.cell_lt_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/KeyOrder.lean:152:0: 'KeyOrder.cell_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/KeyOrder.lean:153:0: 'KeyOrder.cell_lt_iff_rank' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/KeyOrder.lean:154:0: 'KeyOrder.cell_lt_iff_rank_finset' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/KeyOrder.lean:155:0: 'KeyOrder.reduce_mod_two_pi' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/KeyOrder.lean:156:0: 'KeyOrder.antipode_odd' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/KeyOrder.lean:157:0: 'KeyOrder.antipode_even' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/KeyOrder.lean:158:0: 'KeyOrder.reduced_lt_iff_key' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2193/2200] Replayed ES8Geo.Labelling
+info: ES8Geo/Labelling.lean:161:0: 'EncB.Geo.labelling_of_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2194/2200] Replayed ES8Geo.ModelBasic
+info: ES8Geo/ModelBasic.lean:219:0: 'EncB.Geo.labelling_P_rot' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/ModelBasic.lean:220:0: 'EncB.Geo.labelling_P_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/ModelBasic.lean:221:0: 'EncB.Geo.labelling_P_injOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/ModelBasic.lean:222:0: 'EncB.Geo.labelling_orient_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/ModelBasic.lean:223:0: 'EncB.Geo.labelling_psiLt_irrefl' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/ModelBasic.lean:224:0: 'EncB.Geo.labelling_psiLt_trans' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/ModelBasic.lean:225:0: 'EncB.Geo.labelling_psiLt_total' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/ModelBasic.lean:226:0: 'EncB.Geo.labelling_psiLt_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/ModelBasic.lean:227:0: 'EncB.Geo.labelling_chi_rot' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/ModelBasic.lean:228:0: 'EncB.Geo.labelling_chi_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/ModelBasic.lean:229:0: 'EncB.Geo.labelling_chi_swap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/ModelBasic.lean:230:0: 'EncB.Geo.labelling_nest' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/ModelBasic.lean:231:0: 'EncB.Geo.labelling_noChain' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2195/2200] Replayed ES8Geo.ArcBridge
+info: ES8Geo/ArcBridge.lean:490:0: 'EncB.Geo.labelling_ruleA' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/ArcBridge.lean:491:0: 'EncB.Geo.labelling_ruleB' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/ArcBridge.lean:492:0: 'EncB.Geo.Arc.objLt_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/ArcBridge.lean:493:0: 'EncB.Geo.Arc.rdir_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/ArcBridge.lean:494:0: 'EncB.Geo.Arc.ccwIn_iff_inArc' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/ArcBridge.lean:495:0: 'EncB.Geo.Arc.ccwIn_objLt_iff_inArc' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/ArcBridge.lean:496:0: 'EncB.Geo.Arc.ccwIn_objLt_iff_inArc_odir' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/ArcBridge.lean:497:0: 'EncB.Geo.Arc.arcFrame' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2196/2200] Replayed ES8Geo.ModelOfLabelling
+info: ES8Geo/ModelOfLabelling.lean:50:0: 'EncB.Geo.modelOfLabelling' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/ModelOfLabelling.lean:51:0: 'EncB.Geo.modelOfLabelling_chi' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/ModelOfLabelling.lean:52:0: 'EncB.Geo.modelOfLabelling_psiLt' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2197/2200] Replayed ES8Geo.Main
+info: ES8Geo/Main.lean:131:0: 'EncB.Geo.sixfold66_of_no_model' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/Main.lean:132:0: 'EncB.Geo.sixfold66_of_unsat' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/Main.lean:133:0: 'EncB.Geo.sixfold66_of_cubes64' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/Main.lean:134:0: 'EncB.Geo.sixfold_es8' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/Main.lean:135:0: 'EncB.Geo.sixfold_es8_of_texts' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/Main.lean:136:0: 'EncB.Geo.sixfold_es8_order6' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/Main.lean:137:0: 'EncB.Geo.sixfold_es8_order6_of_texts' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/Main.lean:138:0: 'EncB.Geo.rotAbout_neg_sixth' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [2198/2200] Built ES8Geo.Audit (10s)
+✔ [2199/2200] Built ES8Geo (1.3s)
+Build completed successfully (2200 jobs).
+	Command being timed: "lake build"
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:13.43
+	Maximum resident set size (kbytes): 2459580

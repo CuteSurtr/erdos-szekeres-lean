@@ -1,0 +1,13 @@
+# M4: verbatim copies of the checked LEANEXT sources (DESIGN.md §3.6), copied 2026-11-07.
+# geo/ES8Geo/<name> must equal results/LEANEXT/<path> byte for byte: compare these hashes with sha256sum of
+# LEANEXT/capstone/Capstone2.lean, LEANEXT/keys/KeyOrder.lean, LEANEXT/orbit/OrbitConsistency.lean.
+f8c3930c242703fb4a3b1bc2ef66ec7258ac7b2babfe70ca2518475122017b80  ES8Geo/Capstone2.lean
+6e34096cff52b86277f08be2d44f72ff9f9b4da4baf2d3b968ea47487cfdba24  ES8Geo/KeyOrder.lean
+9b843180ac3827b7c4efd279dc4eeed04688fb432e41af1f610aaeab8da5aa87  ES8Geo/OrbitConsistency.lean
+# sources:
+# f8c3930c242703fb4a3b1bc2ef66ec7258ac7b2babfe70ca2518475122017b80  LEANEXT/capstone/Capstone2.lean
+# 6e34096cff52b86277f08be2d44f72ff9f9b4da4baf2d3b968ea47487cfdba24  LEANEXT/keys/KeyOrder.lean
+# 9b843180ac3827b7c4efd279dc4eeed04688fb432e41af1f610aaeab8da5aa87  LEANEXT/orbit/OrbitConsistency.lean
+# M4/M5-M6 interface written for this package (not copies), frozen 2026-11-07 05:10 KST:
+972ffde08436c17cceabfae9b0b7e0430da7aeea81c0736cebc95c636d0056a1  ES8Geo/Interface.lean
+0de95ad32f5e61d9863198f2c31228a74f1641148bb5b29a06bde239dfda5e38  ES8Geo/Orbit.lean

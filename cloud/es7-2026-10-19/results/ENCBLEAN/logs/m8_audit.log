@@ -1,0 +1,42 @@
+== audit_geo.sh 2026-11-07T05:32:08+09:00 in /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/ENCBLEAN/geo (repo HEAD 115ccda3d)
+1. frozen hashes
+  ok   SOURCES.sha256: 5 files OK
+  ok   VENDOR.sha256: 10 files OK
+2. vendored modules equal the repository files at HEAD
+  ok   ErdosSzekeres/Basic.lean
+  ok   ErdosSzekeres/Definitions.lean
+  ok   ErdosSzekeres/OrientationGeometry.lean
+  ok   ErdosSzekeres/Orientation.lean
+  ok   ErdosSzekeres/Suk/BaseChart.lean
+  ok   ErdosSzekeres/Suk/BaseOrder.lean
+  ok   ErdosSzekeres/Suk/FourPoint.lean
+  ok   ErdosSzekeres/Suk/OrientationClique.lean
+  ok   ErdosSzekeres/Suk/SupportingLines.lean
+  ok   ErdosSzekeres/Suk/TriangleOrder.lean
+  ok   no unlisted file under ErdosSzekeres/
+3. LEANEXT copies
+  ok   ES8Geo/Capstone2.lean = LEANEXT/capstone/Capstone2.lean
+  ok   ES8Geo/KeyOrder.lean = LEANEXT/keys/KeyOrder.lean
+  ok   ES8Geo/OrbitConsistency.lean = LEANEXT/orbit/OrbitConsistency.lean
+4. forbidden tokens (code only)
+  ok   22 files clean
+5. no evaluation of the (6,8,11) instance in the M5-M8 files
+  ok   ES8Geo/Labelling.lean: 0 mention(s), no risky token near
+  ok   ES8Geo/ModelBasic.lean: 0 mention(s), no risky token near
+  ok   ES8Geo/ArcBridge.lean: 0 mention(s), no risky token near
+  ok   ES8Geo/ModelOfLabelling.lean: 0 mention(s), no risky token near
+  ok   ES8Geo/Main.lean: 4 mention(s), no risky token near
+  ok   ES8Geo/Audit.lean: 2 mention(s), no risky token near
+6. module list and the Std-only package
+  ok   ES8Geo.lean imports all 11 modules
+  ok   EncB/ unchanged against HEAD
+7. build gate (#guard_msgs on axioms and statements in ES8Geo/Audit.lean)
+  ok   lake build --no-build: up to date
+  ok   ES8Geo/Main.lean elaborates (7.2 s)
+  ok   ES8Geo/Audit.lean elaborates (8.7 s)
+    'EncB.Geo.sixfold66_of_no_model' depends on axioms: [propext, Classical.choice, Quot.sound]
+    'EncB.Geo.sixfold66_of_unsat' depends on axioms: [propext, Classical.choice, Quot.sound]
+    'EncB.Geo.sixfold66_of_cubes64' depends on axioms: [propext, Classical.choice, Quot.sound]
+    'EncB.Geo.sixfold_es8' depends on axioms: [propext, Classical.choice, Quot.sound]
+    'EncB.Geo.sixfold_es8_of_texts' depends on axioms: [propext, Classical.choice, Quot.sound]
+AUDIT PASS
