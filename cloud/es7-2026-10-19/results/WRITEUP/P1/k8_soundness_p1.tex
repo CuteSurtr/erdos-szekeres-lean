@@ -797,12 +797,18 @@ position contains a convex octagon.
 
 \begin{proof}
 (a) Suppose \lean{Sixfold66} fails: some $T$ in general position, invariant under the rotation by $2\pi/6$ about a
-point $c\notin T$, with $|T|=66$, has no convex octagon. Translating $c$ to $O$ preserves these hypotheses (a translation
-is an affine bijection; Lemma~\ref{k8s:lem:affine}), so $T-c$ is $(6,8,11)$-admissible. By
+point $c\notin T$, with $|T|=66$, has no convex octagon. Let $\eta(x)=x-c$ be the translation and $R_c$ the rotation in \lean{Sixfold66}
+(\lean{rotAbout} with centre $c$ and angle $2\pi/6$), so that $R_c(x)=c+\rho(x-c)$ (with $m=6$). Then $T-c=\eta(T)$ is $(6,8,11)$-admissible: it is in
+general position and $8$-free by the first part of Lemma~\ref{k8s:lem:affine}, which holds for every affine bijection
+(its last clause assumes $g(O)=O$ and is not used here, since $\eta(O)=-c$); it is $\rho$-invariant because
+$\eta R_c\eta^{-1}(y)=R_c(y+c)-c=\rho(y)$, so $\rho(\eta T)=\eta R_c(T)=\eta T$ (here $R_cT=T$, as $R_c$ maps the finite
+set $T$ injectively into itself); $O\notin\eta(T)$ because $c\notin T$; and $|\eta(T)|=66$. By
 Theorem~\ref{k8s:thm:sound}(a), resp.~(b), the base formula of the encoder plus $Y(1,2)$ is satisfiable; by
-Lemma~\ref{k8s:lem:cube}, so is one of the $32$ cube formulas, a contradiction. (b) is the same with $70$ points,
-$(7,8,10)$-admissibility and $H(1)$; for $F_B$ the unit may be dropped, since a model of $F_B$ plus $H(1)$ is a model
-of $F_B$.
+Lemma~\ref{k8s:lem:cube}, so is one of the $32$ cube formulas, a contradiction. (b) Replace $2\pi/6$, $66$, $(6,8,11)$
+and $Y(1,2)$ by $2\pi/7$, $70$, $(7,8,10)$ and $H(1)$ in the first part of the argument; then $T-c$ is
+$(7,8,10)$-admissible. No cube step is needed: unsatisfiability of $F_A$ plus $H(1)$ contradicts
+Theorem~\ref{k8s:thm:sound}(b), and unsatisfiability of $F_B$ contradicts Theorem~\ref{k8s:thm:sound}(a), since a model
+of $F_B$ plus $H(1)$ is a model of $F_B$.
 \end{proof}
 
 The hypotheses of the corollary are supplied by certificates (cake\_lpr, \texttt{s VERIFIED UNSAT}). Their status,
