@@ -19,22 +19,22 @@ PASS  result budget 63 (exit 1) {'refused_ctx': {'2406': "ctx 2406: result.json 
 PASS  rules.catalog_sha256 changed (exit 1) {'refused_ctx': {'2406': "ctx 2406: result.json fails ['rules.catalog_sha256']"}}
 PASS  source file with another sha256 (read_source) (exit 1) {'refused': 'source sha256 2496d10e0f683bbb942c7f2e03dbdad01a9fa47d519962871139fe928f6fb98b != acaf6323a2539be869304f42263f80a87db95be1b998e41638dba9bca4d63d72'}
 PASS  source refusal created no OUT
-PASS  WITNESS file of the context (exit 1) {'refused': "WITNESS files present: ['/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp/runs/ctx-2406-b64.WITNESS.json']"}
-PASS  WITNESS file of another context (--all-closed) (exit 1) {'refused': "WITNESS files present: ['/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp/runs/ctx-17-b64.WITNESS.json']"}
-PASS  campaign/WITNESS-ALERT.txt (exit 1) {'refused': "WITNESS files present: ['/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp/campaign/WITNESS-ALERT.txt']"}
-PASS  --out inside the campaign (exit 1) {'refused': '--out /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp/out resolves to /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp/out, inside /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp; refusing'}
+PASS  WITNESS file of the context (exit 1) {'refused': "WITNESS files present: ['/path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp/runs/ctx-2406-b64.WITNESS.json']"}
+PASS  WITNESS file of another context (--all-closed) (exit 1) {'refused': "WITNESS files present: ['/path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp/runs/ctx-17-b64.WITNESS.json']"}
+PASS  campaign/WITNESS-ALERT.txt (exit 1) {'refused': "WITNESS files present: ['/path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp/campaign/WITNESS-ALERT.txt']"}
+PASS  --out inside the campaign (exit 1) {'refused': '--out /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp/out resolves to /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp/out, inside /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp; refusing'}
 PASS  --out inside the campaign: not created
-PASS  --out through a symlink into the campaign (exit 1) {'refused': '--out /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-export-link/out resolves to /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp/runs/out, inside /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp; refusing'}
+PASS  --out through a symlink into the campaign (exit 1) {'refused': '--out /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-export-link/out resolves to /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp/runs/out, inside /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp; refusing'}
 PASS  symlinked --out: not created
-refused: /home/jay/research/data/es8-b64-pilot-20261105/x
-refused: /home/jay/research/data/es8-b64-pilot-20261105/runs/y
-refused: /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es311/full/z
-refused: /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/q
-refused: /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/ext/q
-refused: /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/chain311/q
-refused: /home/jay/research/data
-refused: /home/jay/research/lean/erdos-szekeres-lean/.lake/x
-accepted: /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-export-ok
+refused: /path/to/data/es8-b64-pilot-20261105/x
+refused: /path/to/data/es8-b64-pilot-20261105/runs/y
+refused: /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es311/full/z
+refused: /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/q
+refused: /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/ext/q
+refused: /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/chain311/q
+refused: /path/to/data
+refused: /path/to/repo/.lake/x
+accepted: /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-export-ok
 PASS  check_out refuses the real campaign, its parent and the 311 build dirs (function call only)
 PASS  tree of ctx 2407 under the name of ctx 2406 (exit 1) {'refused_ctx': {'2406': "ctx 2406: tree fails ['context', 'path == contexts.jsonl', 'missing == contexts.jsonl', 'occupied == contexts.jsonl']"}}
 PASS  contexts.jsonl: one decision of ctx 2406 flipped (exit 1) {'refused': 'contexts.jsonl ctx 2406: path bits are not k in binary'}
@@ -81,8 +81,8 @@ PASS  skipped_same [2406, 2407]
 PASS  detA unchanged by the skip run
 PASS  re-export of ctx 2407 after its manifest was removed (exit 0) {'skipped_same': [2406]}
 PASS  re-export byte-identical (modules and manifest)
-PASS  per-word 4 into an OUT exported at 8 (exit 1) {'refused': "OUT already holds ctx 2406 exported with prefix 'E310BT', params {'budget': 64, 'per_word': 8, 'chunk_leaves': 500, 'block_leaves': 64, 'catalog_base': 4194304}, campaign '/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp'; this run: 'E310BT', {'budget': 64, 'per_word': 4, 'chunk_leaves': 500, 'block_leaves': 64, 'catalog_base': 4194304}, '/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp'"}
-PASS  another prefix into the same OUT (exit 1) {'refused': "OUT already holds ctx 2406 exported with prefix 'E310BT', params {'budget': 64, 'per_word': 8, 'chunk_leaves': 500, 'block_leaves': 64, 'catalog_base': 4194304}, campaign '/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp'; this run: 'E310BK', {'budget': 64, 'per_word': 8, 'chunk_leaves': 500, 'block_leaves': 64, 'catalog_base': 4194304}, '/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp'"}
+PASS  per-word 4 into an OUT exported at 8 (exit 1) {'refused': "OUT already holds ctx 2406 exported with prefix 'E310BT', params {'budget': 64, 'per_word': 8, 'chunk_leaves': 500, 'block_leaves': 64, 'catalog_base': 4194304}, campaign '/path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp'; this run: 'E310BT', {'budget': 64, 'per_word': 4, 'chunk_leaves': 500, 'block_leaves': 64, 'catalog_base': 4194304}, '/path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp'"}
+PASS  another prefix into the same OUT (exit 1) {'refused': "OUT already holds ctx 2406 exported with prefix 'E310BT', params {'budget': 64, 'per_word': 8, 'chunk_leaves': 500, 'block_leaves': 64, 'catalog_base': 4194304}, campaign '/path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp'; this run: 'E310BK', {'budget': 64, 'per_word': 8, 'chunk_leaves': 500, 'block_leaves': 64, 'catalog_base': 4194304}, '/path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp'"}
 PASS  a context by another exporter sha256 is reported (exit 5) (exit 5) {'skipped_same': [2407], 'stale_exporter': [2406]}
 PASS  stale_exporter [2406]
 PASS  --refresh-exporter re-exports it (exit 0) {'skipped_same': [2407]}
@@ -110,19 +110,19 @@ PASS  merge --subtree 0:0 (use --complete) (exit 1) {'refused': "bad --subtree '
 PASS  re-export ctx 2407 (exit 0) {}
 PASS  merge with a tampered module source (exit 1) {'refused': 'ctx 2407: src/E310BT/C240702.lean is missing or differs from its recorded sha256'}
 PASS  merge after restoring it (exit 0) {}
-PASS  merge after one byte of ctx 2407's gz changed: ALERT (exit 2) {'alert': ['ctx 2407: tree_gz /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp/runs/ctx-2407-b64.json.gz changed (recorded sha256 3937305a179f0b4d451be1a0cc38aa65a5e377fe4c072a167c6670cad148c572)']}
+PASS  merge after one byte of ctx 2407's gz changed: ALERT (exit 2) {'alert': ['ctx 2407: tree_gz /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp/runs/ctx-2407-b64.json.gz changed (recorded sha256 3937305a179f0b4d451be1a0cc38aa65a5e377fe4c072a167c6670cad148c572)']}
 PASS  merge wrote ALERT-changed-inputs.txt
 PASS  merge ALERT: nothing else changed
 == 2026-11-06T06:30:46Z 5. ALERT: inputs of an exported context changed
 PASS  export ctx 2406 (exit 0) {}
-PASS  one byte of the gz changed (mtime kept): ALERT (exit 2) {'alert': ['ctx 2406: tree_gz /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp/runs/ctx-2406-b64.json.gz changed: sha256 0c62b3a91f37c0941ff008a41dcf189115525a5d0b2e5f8dca01e18d1230aa32 -> b7890a8f9a3b210003a3e030e2a4e0dd184f7a1cff7e044ac437c2695f903400, size 547503 -> 547503']}
-PASS  ALERT-changed-inputs.txt written: ctx 2406: tree_gz /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es31
+PASS  one byte of the gz changed (mtime kept): ALERT (exit 2) {'alert': ['ctx 2406: tree_gz /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp/runs/ctx-2406-b64.json.gz changed: sha256 0c62b3a91f37c0941ff008a41dcf189115525a5d0b2e5f8dca01e18d1230aa32 -> b7890a8f9a3b210003a3e030e2a4e0dd184f7a1cff7e044ac437c2695f903400, size 547503 -> 547503']}
+PASS  ALERT-changed-inputs.txt written: ctx 2406: tree_gz /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es31
 PASS  old export byte-identical after the ALERT
-PASS  ALERT latch: exit 2 while the ALERT file exists, even with the inputs restored (exit 2) {'alert': '/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-export-alert/ALERT-changed-inputs.txt exists; resolve it by hand first'}
-PASS  merge refuses while the ALERT file exists (exit 2) {'alert': '/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-export-alert/ALERT-changed-inputs.txt exists; resolve it by hand first'}
+PASS  ALERT latch: exit 2 while the ALERT file exists, even with the inputs restored (exit 2) {'alert': '/path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-export-alert/ALERT-changed-inputs.txt exists; resolve it by hand first'}
+PASS  merge refuses while the ALERT file exists (exit 2) {'alert': '/path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-export-alert/ALERT-changed-inputs.txt exists; resolve it by hand first'}
 PASS  after the ALERT file is removed: skipped as same (exit 0) {'skipped_same': [2406]}
 PASS  skipped_same [2406], ctx 2407 exported
-PASS  result.json of an exported context changed: ALERT (exit 2) {'alert': ['ctx 2406: result /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp/runs/ctx-2406-b64.result.json changed: sha256 8703fbc257f436c84c326c5248d21a9bfbc87a879185f91db1cb1e225c1c1c80 -> b8af9c783627c258015589aed0826148d905856bff2ba5a684d39d3ac02aa43a, size 1002 -> 979']}
+PASS  result.json of an exported context changed: ALERT (exit 2) {'alert': ['ctx 2406: result /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp/runs/ctx-2406-b64.result.json changed: sha256 8703fbc257f436c84c326c5248d21a9bfbc87a879185f91db1cb1e225c1c1c80 -> b8af9c783627c258015589aed0826148d905856bff2ba5a684d39d3ac02aa43a, size 1002 -> 979']}
 PASS  contexts.jsonl changed (one blank line added): ALERT (exit 2) {'alert': ['ctx 2406: contexts_jsonl changed: c16cc3da2171b3baf867bfdb968d81b920a48b90ff60fa0e41810d43f06aec6b -> d25b0a29d07a28186ad43d3b945d8137ae29d5b1795fb6f5f72ba2898a080ad8', 'ctx 2407: contexts_jsonl changed: c16cc3da2171b3baf867bfdb968d81b920a48b90ff60fa0e41810d43f06aec6b -> d25b0a29d07a28186ad43d3b945d8137ae29d5b1795fb6f5f72ba2898a080ad8']}
 == 2026-11-06T06:30:49Z 5b. campaign code changed after the export: a recorded warning, not an ALERT
 PASS  run_context.py changed: exit 0, no ALERT (exit 0) {'skipped_same': [2406, 2407], 'code_changed': ['run_context differs from the one recorded at export: 1937e9dc3e51ded192d4ee4b83de8917bd71ee9c5ab9d63e0aff490d0c6f36f6 -> 6e9c3c6cf4790e9f03b1577a3806fe47d3a89a893d0d187b72ace26db8e3c919']}

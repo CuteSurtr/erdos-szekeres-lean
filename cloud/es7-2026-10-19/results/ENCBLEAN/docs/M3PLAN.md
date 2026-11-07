@@ -2,7 +2,7 @@
 
 Written 2026-11-06, about 16:50 KST. No ENCBLEAN file was edited, and `lake build` was not run there. Every Lean text
 below was compiled in scratch with the toolchain's `lean` (v4.24.0, under the 4G cap, nice 10, one file at a time),
-against copies of the M2 files whose hashes match ENCBLEAN HEAD `c77541836`:
+against copies of the M2 files whose hashes match ENCBLEAN HEAD `ac634d4ec`:
 
 | file | hash |
 |---|---|
@@ -16,7 +16,7 @@ They are documentation only: risk R1 is resolved, with 64 of 64 cube verdicts ce
 needed. No Lean source changed.
 
 **Directories.**
-- `S = /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m3plan`
+- `S = /sandbox/m3plan`
 - `F = $S/final` holds the frozen U0 files and the unit starting points (`$F/SHA256SUMS`).
 - `$S/judge` holds the judge's build and checks.
 
@@ -57,7 +57,7 @@ with `ad = (orbList m t).map fun c => (angOutsC m t c).1` and
 | `Model` = DESIGN §2.2 with `Valid` → `PtOk` | A, B | mechanical token comparison of §2.2's code block against `$F/EncB/Model.lean` | **true** (806 = 806 tokens; Decidable instances and comments excluded) |
 | τ needs a `.other` case (M2's fifth `Var` constructor) | A, B | Coded:41-52 | true |
 | `hm : 2 ≤ m` suffices (only `(i,1)` in nesting) | A, B | U1 needs it only for `PtOk (i,1)`; Integration compiles with it | true |
-| M2 "is not in git" | A | `git ls-files`; commit `c77541836` at 16:20:23 | **outdated**: M2 is committed (A's snapshot was 16:15) |
+| M2 "is not in git" | A | `git ls-files`; commit `ac634d4ec` at 16:20:23 | **outdated**: M2 is committed (A's snapshot was 16:15) |
 | 8 parallel units plus a test unit | A | task limit is 6 | **too many**; merged below |
 | unit files under `EncB/M3/` | A | `scripts/audit.sh`: `SRCS=$(ls EncB.lean EncB/*.lean)` | would escape the audit; **flat `EncB/Sound*.lean`** (B, and DESIGN M3's names) needs no audit change |
 | `olit_sound` needs `Distinct3` | A | B's `OlitSpec` derives distinctness from `orbVarC` | B's form adopted (proved, 94 lines) |
@@ -267,7 +267,7 @@ end EncB
 ### 1.4 U0 task list (one agent, about 15 minutes)
 
 1. Check the M2 hashes listed at the top (`sha256sum EncB/{Gen,Dimacs,Coded,Cover}.lean`) and that HEAD contains
-   `c77541836`. On a mismatch, stop and re-run §0.3 before going on.
+   `ac634d4ec`. On a mismatch, stop and re-run §0.3 before going on.
 2. Copy `$F/EncB/{Model,ModelLemmas,SortLemmas,SoundOlit}.lean` into `ENCBLEAN/EncB/`. Verify them against
    `$F/SHA256SUMS`.
 3. Append `import EncB.Model`, `import EncB.ModelLemmas`, `import EncB.SortLemmas` and `import EncB.SoundOlit` to
@@ -585,23 +585,23 @@ means the interface is wrong: the orchestrator stops U1–U5 and returns to U0. 
 
 ## 6. Files
 
-**Frozen U0 files** (copy verbatim; hashes in `/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m3plan/final/SHA256SUMS`):
-- `/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m3plan/final/EncB/Model.lean`
-- `/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m3plan/final/EncB/ModelLemmas.lean`
-- `/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m3plan/final/EncB/SortLemmas.lean`
-- `/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m3plan/final/EncB/SoundOlit.lean`
+**Frozen U0 files** (copy verbatim; hashes in `/sandbox/m3plan/final/SHA256SUMS`):
+- `/sandbox/m3plan/final/EncB/Model.lean`
+- `/sandbox/m3plan/final/EncB/ModelLemmas.lean`
+- `/sandbox/m3plan/final/EncB/SortLemmas.lean`
+- `/sandbox/m3plan/final/EncB/SoundOlit.lean`
 
 **Unit starting points:**
-- U2: `/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m3plan/final/start/SoundChain.lean`
-- U3: `/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m3plan/final/start/SoundAng.lean`
-- U4: `/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m3plan/final/start/SoundRules.lean`
-- Integration: `/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m3plan/final/start/Satisfiable.lean`
-- U6: `/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m3plan/final/start/ew/` (`EW6_six60`, `EW6_nonmono`, `EW4_squares`, `WordCheck`, `EW_planA_mutants`)
+- U2: `/sandbox/m3plan/final/start/SoundChain.lean`
+- U3: `/sandbox/m3plan/final/start/SoundAng.lean`
+- U4: `/sandbox/m3plan/final/start/SoundRules.lean`
+- Integration: `/sandbox/m3plan/final/start/Satisfiable.lean`
+- U6: `/sandbox/m3plan/final/start/ew/` (`EW6_six60`, `EW6_nonmono`, `EW4_squares`, `WordCheck`, `EW_planA_mutants`)
 
 **Judge checks:**
-- glue: `/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m3plan/judge/src/Judge/Glue.lean`
-- integration against stubs: `/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m3plan/judge/src/Judge/Integ2.lean`
-- statement check: `/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m3plan/judge/src/Judge/WordCheck.lean`, and its mutant `WordCheckMut.lean` in the same directory
-- early-warning re-run: `/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m3plan/judge/ewb_run.log`
-- audit runs: `/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m3plan/judge/audit2/` (PASS) and `/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m3plan/judge/audit/` (plan B's example: FAIL)
-- compile helper: `/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m3plan/judge/chk.sh`
+- glue: `/sandbox/m3plan/judge/src/Judge/Glue.lean`
+- integration against stubs: `/sandbox/m3plan/judge/src/Judge/Integ2.lean`
+- statement check: `/sandbox/m3plan/judge/src/Judge/WordCheck.lean`, and its mutant `WordCheckMut.lean` in the same directory
+- early-warning re-run: `/sandbox/m3plan/judge/ewb_run.log`
+- audit runs: `/sandbox/m3plan/judge/audit2/` (PASS) and `/sandbox/m3plan/judge/audit/` (plan B's example: FAIL)
+- compile helper: `/sandbox/m3plan/judge/chk.sh`

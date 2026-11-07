@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Solve and certify the other half of the C6UPPER encoder-B split: base + NOT Y(1,2) + the 32 sign patterns of
 Y(1,3),Y(1,4),Y(2,3),Y(2,4),Y(3,4) (6 November 2026). Together with the 32 cubes base + Y(1,2) + pattern that
-cake_lpr accepted in the hash-bound replay (/home/jay/research/data/c6upper-replay-20261106, results.tsv, enc B),
+cake_lpr accepted in the hash-bound replay (/path/to/data/c6upper-replay-20261106, results.tsv, enc B),
 the 64 cubes cover every assignment of the six variables, so the encoder-B base formula itself is UNSAT and the
 reflection lemma (Y(1,2) without loss of generality) is no longer needed for the sixfold upper bound.
 
@@ -20,13 +20,13 @@ import os, sys, json, time, hashlib, itertools, threading, subprocess
 from concurrent.futures import ThreadPoolExecutor
 
 W = os.path.dirname(os.path.abspath(__file__))
-R = '/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results'
-REPLAY = '/home/jay/research/data/c6upper-replay-20261106'
+R = '/path/to/repo/cloud/es7-2026-10-19/results'
+REPLAY = '/path/to/data/c6upper-replay-20261106'
 BASE = REPLAY + '/B/B_m6K8t11.cnf'
 META = R + '/C6UPPER/encb/B_m6K8t11.meta.json'
 BASE_SHA = '479e31a9e8d58d752c86b9abf02fb799c10615a7e61a88f132c49734674f37fc'
 CAD, CAD_SHA = '/usr/bin/cadical', '4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70'
-CAKE_BIN = '/home/jay/research/sat/tools/cake_lpr/cake_lpr'
+CAKE_BIN = '/path/to/tools/cake_lpr/cake_lpr'
 CAKE_SHA = 'c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54'
 CUBES = W + '/cubes'
 TSV, LOG = W + '/results.tsv', W + '/run.log'

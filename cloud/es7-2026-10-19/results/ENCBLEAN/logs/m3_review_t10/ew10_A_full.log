@@ -3,7 +3,7 @@
    laws: 26633 ms
    clauses [(trans, (168, 0)), (ang, (7271, 0)), (nest, (270, 0)), (chain, (1602076, 0))] genCoded_clauses 1609785 genCoded_UNSAT 0 split true
    clauses: 433821 ms
-	Command being timed: "systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake env lean --run /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/skeptic/EW10.lean A full 10 8"
+	Command being timed: "systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake env lean --run /sandbox/skeptic/EW10.lean A full 10 8"
 	User time (seconds): 460.96
 	System time (seconds): 0.22
 	Percent of CPU this job got: 100%

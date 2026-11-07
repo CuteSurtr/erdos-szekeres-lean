@@ -10,9 +10,9 @@ skipped on restart. Any hash mismatch stops that encoder before solving.
 """
 import os, sys, subprocess, hashlib, time, re
 W = os.path.dirname(os.path.abspath(__file__))
-R = '/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results'
+R = '/path/to/repo/cloud/es7-2026-10-19/results'
 T = R + '/C6UPPER'
-CAKE = '/home/jay/research/sat/tools/cake_lpr/cake_lpr'
+CAKE = '/path/to/tools/cake_lpr/cake_lpr'
 CAD = '/usr/bin/cadical'
 TSV = W + '/results.tsv'
 LOG = W + '/replay.log'

@@ -9,7 +9,7 @@ Files:
                          followed by 19 '#print axioms' lines.  Its first 1,148 lines are byte-identical to
                          LayerLemma.lean (checked with diff when this archive was made).
   run.sh                 the script that ran the check.  It was run from a session scratch directory, so its
-                         paths (SCR=/tmp/claude-1000/...) point to a temporary session directory that is not
+                         paths (SCR=/sandbox/...) point to a temporary session directory that is not
                          kept; they are left as run.
   out.txt                its output: 19 lines '... depends on axioms: [propext, Classical.choice, Quot.sound]',
                          then /usr/bin/time -v (wall clock 0:23.11, maximum RSS 2,587,624 kB, exit status 0).

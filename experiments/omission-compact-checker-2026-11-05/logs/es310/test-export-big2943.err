@@ -1,5 +1,5 @@
 export_es310: ctx 2943: 8949 leaves, 1 module(s), K 131072, 7.4 s
-	Command being timed: "nice -n 19 python3 export_es310.py --campaign /home/jay/research/data/es8-b64-pilot-20261105 --source /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-cover-certificates-2026-10-10/balanced-v2-source.json --out /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-export-big2943 --ctx 2943 --chunk-leaves 12000 --block-leaves 64 --per-word 8 --prefix E310BT"
+	Command being timed: "nice -n 19 python3 export_es310.py --campaign /path/to/data/es8-b64-pilot-20261105 --source /path/to/repo/experiments/omission-cover-certificates-2026-10-10/balanced-v2-source.json --out /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-export-big2943 --ctx 2943 --chunk-leaves 12000 --block-leaves 64 --per-word 8 --prefix E310BT"
 	User time (seconds): 5.86
 	System time (seconds): 0.18
 	Percent of CPU this job got: 79%

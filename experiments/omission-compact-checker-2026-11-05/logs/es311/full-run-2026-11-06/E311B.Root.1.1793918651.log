@@ -13,7 +13,7 @@ cumulative profiling times:
 	share common exprs 12.6ms
 	type checking 42.7ms
 	typeclass inference 339ms
-	Command being timed: "lean -j1 -R /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es311/full/src -o /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es311/full/olean/E311B/Root.tmp594940-1-9cf8b35049c9.olean /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es311/full/src/E311B/Root.lean"
+	Command being timed: "lean -j1 -R /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es311/full/src -o /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es311/full/olean/E311B/Root.tmp594940-1-9cf8b35049c9.olean /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es311/full/src/E311B/Root.lean"
 	User time (seconds): 15.98
 	System time (seconds): 1.78
 	Percent of CPU this job got: 68%

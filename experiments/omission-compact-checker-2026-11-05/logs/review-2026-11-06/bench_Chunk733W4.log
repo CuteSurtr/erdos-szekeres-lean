@@ -22,7 +22,7 @@ cumulative profiling times:
 	tactic execution 1.59ms
 	type checking 13.8s
 	typeclass inference 17.7ms
-	Command being timed: "lean -R /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05 -o /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/build/CompactChecker/Chunk733W4.olean /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/CompactChecker/Chunk733W4.lean"
+	Command being timed: "lean -R /path/to/repo/experiments/omission-compact-checker-2026-11-05 -o /sandbox/build/CompactChecker/Chunk733W4.olean /path/to/repo/experiments/omission-compact-checker-2026-11-05/CompactChecker/Chunk733W4.lean"
 	User time (seconds): 17.21
 	System time (seconds): 0.51
 	Percent of CPU this job got: 99%

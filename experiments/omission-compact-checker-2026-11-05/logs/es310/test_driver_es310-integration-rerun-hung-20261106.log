@@ -1,4 +1,4 @@
-== 2026-11-06T05:10:24Z test_driver_es310.sh: WORKDIR /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-driver, cases: G H I J K L M T A B C D E F; drive_es310.py sha256 868d6be910b4e07d
+== 2026-11-06T05:10:24Z test_driver_es310.sh: WORKDIR /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-driver, cases: G H I J K L M T A B C D E F; drive_es310.py sha256 868d6be910b4e07d
 == 2026-11-06T05:10:24Z G: an old-header TSV with three ok rows
 PASS: G: driver exit 0 (got 0)
 PASS: G: the old header has 20 columns
@@ -87,6 +87,6 @@ PASS: T: a restart runs nothing (to_run 0, already_done 1)
 PASS: TX: the corrupted block: driver exit 1 (got 1), verdict fail
 PASS: TX: no .olean
 PASS: TX: the log says decide proved the proposition false
-/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es310/test-driver/TX/src/E310BX/C000101.lean:11:225: error: Ta
+/path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-driver/TX/src/E310BX/C000101.lean:11:225: error: Ta
 == 2026-11-06T05:12:47Z time: kill -9 of the 'time' process of the compile of E310BK/C038001.lean
 exit 143

@@ -1,4 +1,4 @@
-== M9 review, LEAN-SOUNDNESS lens (2026-11-06T20:16:24+09:00); reviewer did not edit any package source; scratch: /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-lean
+== M9 review, LEAN-SOUNDNESS lens (2026-11-06T20:16:24+09:00); reviewer did not edit any package source; scratch: /sandbox/m9/review-lean
 -- state before
 Tctl: +77.2°C
 exe sha256 before: 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368
@@ -38,7 +38,7 @@ sources: EncB.lean EncB/Coded.lean EncB/Cover.lean EncB/Dimacs.lean EncB/EarlyWa
 toolchain: leanprover/lean4:v4.24.0
 AUDIT PASS (no sorry/admit/native_decide/implemented_by/extern/unsafe/partial/axiom/opaque/set_option/ofReduceBool in code; Std-only; no decide/rfl/simp/omega/#eval/#reduce in a declaration that mentions the (6,8,11) instance)
 exit 0, .184534220 s
--- scratch copy of the package sources (no .lake, no logs): /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/base; files:
+-- scratch copy of the package sources (no .lake, no logs): /sandbox/m9/review-copy/base; files:
    2727e00bbd4ce9eab7f4af634c8ad3c056c1122cac1d9bd11f080e6265a69c5f  ./EncB/Coded.lean
    c59425acb5ba5e1da652fbb8d2f77d0c78d8cfc522216f64015231f7ed765f98  ./EncB/Cover.lean
    48cbeac96e085d2e3e90d3e7a44f40909b24e4fb985f545de2824c356f64f6a8  ./EncB/Dimacs.lean
@@ -71,19 +71,19 @@ exit 0, .184534220 s
    29d89510a6ca9f3f9ade8131ab79a3c621184135c341f5c521dd9603bcae65e4  ./scripts/hash_binding.sh
    22e07b3be34f49f3823bd12e4dfdb02350edacb66dceaace329ab20bd21059e0  ./scripts/resolve.sh
    657fda4dfdbcbd45f31aff3e300dfdbb70317bbc350d9edbd21d88d6ad2e9c44  ./scripts/twin_check.sh
--- [copy base] Tctl +78.9°C; cmd (in /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/base): systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake build
+-- [copy base] Tctl +78.9°C; cmd (in /sandbox/m9/review-copy/base): systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake build
 ✔ [26/28] Built EncB.KernelCheckB (18s)
 ✔ [27/28] Built EncB (141ms)
 Build completed successfully (28 jobs).
 0
 exit 0, 21.910906430 s; copy exe sha256 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368 (real package exe: 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368)
 26M	.lake
--- [mutA: the definition of cubes64] /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/mutA, diff against the real package:
+-- [mutA: the definition of cubes64] /sandbox/m9/review-copy/mutA, diff against the real package:
    98c98
    < def cubeVars64 : List Int := [1, 2, 3, 10, 11, 18]
    ---
    > def cubeVars64 : List Int := [1, 2, 3, 10, 11, 19]
-   Tctl +77.6°C; cmd (in /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/mutA): systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake build
+   Tctl +77.6°C; cmd (in /sandbox/m9/review-copy/mutA): systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake build
    ✔ [19/28] Built EncB.Cover (266ms)
    ✔ [20/28] Built EncB.Cover:c.o (90ms)
    ✔ [21/28] Built EncB.Render (1.9s)
@@ -93,24 +93,24 @@ exit 0, 21.910906430 s; copy exe sha256 3d43fa8be6e96ec3a3593551709db14240ef74b2
    ✔ [27/28] Built EncB (157ms)
    exit 0, 20.503887251 s; mutA exe sha256 69778fdbc9c30a0e2a4f14446b956b70bba2215202453908b8af96c25bd3462f
    probe: mutA exe twin-cube64 3 4 11 0 stderr (small instance, units only): cubes64[0] name c11111 units [1, 2, 3, 10, 11, 19]
--- [mutB: the printing of one unit, IO glue] /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/mutB, diff against the real package:
+-- [mutB: the printing of one unit, IO glue] /sandbox/m9/review-copy/mutB, diff against the real package:
    182c182
    <       out.putStr (cnfText e c)
    ---
    >       out.putStr (cnfText e (if i = 43 then c.dropLast ++ c.getLast?.toList.map (fun z => -z) else c))
-   Tctl +77.5°C; cmd (in /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/mutB): systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake build
+   Tctl +77.5°C; cmd (in /sandbox/m9/review-copy/mutB): systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake build
    ✔ [26/28] Built EncB.Emit (957ms)
    ✔ [27/28] Built EncB.Emit:c.o (1.8s)
    ✔ [28/28] Built encb_dimacs:exe (118ms)
    exit 0, 3.071863002 s; mutB exe sha256 f99ce963212d93d135e395398d5f8e57be83aa50b9fb7b639bed6f03d0bd9140
    probe: mutB exe twin-cube64 3 4 11 42: stderr 'cubes64[42] name n10101 units [-1, 2, -3, 10, -11, 18]' stdout tail '-1 0|2 0|-3 0|10 0|-11 0|18 0|'
    probe: mutB exe twin-cube64 3 4 11 43: stderr 'cubes64[43] name n10100 units [-1, 2, -3, 10, -11, -18]' stdout tail '-1 0|2 0|-3 0|10 0|-11 0|18 0|'
--- [mutC: the twin printer itself (an extra space before the clause terminator)] /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/mutC, diff against the real package:
+-- [mutC: the twin printer itself (an extra space before the clause terminator)] /sandbox/m9/review-copy/mutC, diff against the real package:
    130c130
    <   | l :: ls => (((ls.foldl (fun acc x => pushInt (acc.push ' ') x) (pushInt s l)).push ' ').push '0').push '\n'
    ---
    >   | l :: ls => ((((ls.foldl (fun acc x => pushInt (acc.push ' ') x) (pushInt s l)).push ' ').push ' ').push '0').push '\n'
-   Tctl +77.4°C; cmd (in /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/mutC): systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake build encb_dimacs
+   Tctl +77.4°C; cmd (in /sandbox/m9/review-copy/mutC): systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake build encb_dimacs
    error: EncB/Render.lean:201:14: unsolved goals
    error: EncB/Render.lean:852:0: ❌️ Docstring on `#guard_msgs` does not match generated message:
    error: EncB/Render.lean:858:0: ❌️ Docstring on `#guard_msgs` does not match generated message:
@@ -132,36 +132,36 @@ exit 0, 21.910906430 s; copy exe sha256 3d43fa8be6e96ec3a3593551709db14240ef74b2
    I=64: exe exit 2
    I=064: exe exit 2
    I=-1: exe exit 2
--- [audit evasion probe, text only, nothing built] /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/audtest = sources + EncB/ZZEvade.lean:
+-- [audit evasion probe, text only, nothing built] /sandbox/m9/review-copy/audtest = sources + EncB/ZZEvade.lean:
    import EncB.Coded
    namespace EncB
    theorem zz1 : 0 < (encB 6 8 11).length := by trivial
    theorem zz2 : numVars 6 8 11 = 78059 := Eq.refl _
    theorem zz3 : 0 < numVars 6 8 11 := by simpa using (show 0 < numVars 6 8 11 by grind)
    end EncB
-   cmd: scripts/audit.sh (in /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/audtest)
+   cmd: scripts/audit.sh (in /sandbox/m9/review-copy/audtest)
      EncB/ZZEvade.lean:3 (+1 lines): theorem zz1 : 0 < (encB 6 8 11).length := by trivial
      EncB/ZZEvade.lean:4 (+1 lines): theorem zz2 : numVars 6 8 11 = 78059 := Eq.refl _
      EncB/ZZEvade.lean:5 (+1 lines): theorem zz3 : 0 < numVars 6 8 11 := by simpa using (show 0 < numVars 6 8 11 by grind)
    sources: EncB.lean EncB/Coded.lean EncB/Cover.lean EncB/Dimacs.lean EncB/EarlyWarning.lean EncB/Emit.lean EncB/Gen.lean EncB/KernelCheck.lean EncB/KernelCheckB.lean EncB/Model.lean EncB/ModelLemmas.lean EncB/Render.lean EncB/Satisfiable.lean EncB/SortLemmas.lean EncB/SoundAng.lean EncB/SoundChain.lean EncB/SoundOlit.lean EncB/SoundOrbit.lean EncB/SoundRules.lean EncB/SoundWord.lean EncB/ZZEvade.lean
    AUDIT PASS (no sorry/admit/native_decide/implemented_by/extern/unsafe/partial/axiom/opaque/set_option/ofReduceBool in code; Std-only; no decide/rfl/simp/omega/#eval/#reduce in a declaration that mentions the (6,8,11) instance)
    exit 0
--- [scratch-only fix check] cmd: systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake env lean /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-lean/Fix.lean (file sha256 49da0823bf705f37a7cd3b287d8b8f826f21b2444a014fa890d69f1404f5cb2c): exit 0, 0.39 s; output:
+-- [scratch-only fix check] cmd: systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake env lean /sandbox/m9/review-lean/Fix.lean (file sha256 49da0823bf705f37a7cd3b287d8b8f826f21b2444a014fa890d69f1404f5cb2c): exit 0, 0.39 s; output:
    'EncB.no_model_6811_of_texts' depends on axioms: [propext, Classical.choice, Quot.sound]
    'EncB.parseDimacsBytes_cube64_get' depends on axioms: [propext, Classical.choice, Quot.sound]
    (declares no_model_6811_of_texts and parseDimacsBytes / parseDimacsBytes_cube64_get in the scratch file only; not added to the package)
--- [mutant hash bindings] runner /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-lean/run_mut.sh (sha256 f25b53fa82a6708be6eccc708a28730e8d0f988dda626e0e11dd5f4f12647489): runs each copy's own scripts/hash_binding.sh with HB_C6SUMS HB_ENCBGEN HB_REPLAY HB_NOTYSHA HB_NOTYTSV HB_META HB_C7SUMS HB_K8DIR = the real record files (read only)
-   == mutA start 2026-11-06T20:19:49+09:00 Tctl 77; cmd (in /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/mutA): TMPDIR=/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/mutA/tmp systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 scripts/hash_binding.sh
+-- [mutant hash bindings] runner /sandbox/m9/review-lean/run_mut.sh (sha256 f25b53fa82a6708be6eccc708a28730e8d0f988dda626e0e11dd5f4f12647489): runs each copy's own scripts/hash_binding.sh with HB_C6SUMS HB_ENCBGEN HB_REPLAY HB_NOTYSHA HB_NOTYTSV HB_META HB_C7SUMS HB_K8DIR = the real record files (read only)
+   == mutA start 2026-11-06T20:19:49+09:00 Tctl 77; cmd (in /sandbox/m9/review-copy/mutA): TMPDIR=/sandbox/m9/review-copy/mutA/tmp systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 scripts/hash_binding.sh
    == mutA exit 1 end 2026-11-06T20:34:10+09:00
-   == mutB start 2026-11-06T20:34:10+09:00 Tctl 78; cmd (in /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/mutB): TMPDIR=/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/mutB/tmp systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 scripts/hash_binding.sh
+   == mutB start 2026-11-06T20:34:10+09:00 Tctl 78; cmd (in /sandbox/m9/review-copy/mutB): TMPDIR=/sandbox/m9/review-copy/mutB/tmp systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 scripts/hash_binding.sh
    == mutB exit 1 end 2026-11-06T20:48:35+09:00
-   mutA: full log /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/mutA.binding.log (sha256 705f7963c884f7757ad889cfa801bfd686cd276116493e64bbdfaf1bb0b67b07); key lines:
+   mutA: full log /sandbox/m9/review-copy/mutA.binding.log (sha256 705f7963c884f7757ad889cfa801bfd686cd276116493e64bbdfaf1bb0b67b07); key lines:
      exe: .lake/build/bin/encb_dimacs sha256 69778fdbc9c30a0e2a4f14446b956b70bba2215202453908b8af96c25bd3462f, mtime 2026-11-06T20:18:30+09:00
      sources (import closure of the exe root EncB/Emit.lean, 6 files, + lakefile.toml): EncB/Coded.lean 2727e00bbd4ce9eab7f4af634c8ad3c056c1122cac1d9bd11f080e6265a69c5f; EncB/Cover.lean 18708db3ea6821ea20479d5d0dc10841fbc1a1cd5774212935b569577eb9a076; EncB/Dimacs.lean 48cbeac96e085d2e3e90d3e7a44f40909b24e4fb985f545de2824c356f64f6a8; EncB/Emit.lean 9a2087a4d116adec6793931986969fe01a01e4f520120389a5b2bbc
      records: base 1+1 lines; SHA256SUMS c-cubes 32; replay encoder-B ACCEPTED 32; noty12 cubes.sha256 32; noty12 results.tsv ACCEPTED 32; meta.json Y12 Y13 Y14 Y23 Y24 Y34 = 1 2 3 10 11 18
      SUMMARY: 4/68 MATCH (base 1, cubes64 64 by index: 32 c + 32 n, 64 distinct names; others 3); exe 69778fdbc9c30a0e2a4f14446b956b70bba2215202453908b8af96c25bd3462f; wall 861 s; FAIL
      MATCH lines 4, FAIL lines 64
-   mutB: full log /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/mutB.binding.log (sha256 9a28ed51ec82c8d554b521a5172fe50651dd10e36c49c45846999137cf1c9bd5); key lines:
+   mutB: full log /sandbox/m9/review-copy/mutB.binding.log (sha256 9a28ed51ec82c8d554b521a5172fe50651dd10e36c49c45846999137cf1c9bd5); key lines:
      exe: .lake/build/bin/encb_dimacs sha256 f99ce963212d93d135e395398d5f8e57be83aa50b9fb7b639bed6f03d0bd9140, mtime 2026-11-06T20:19:15+09:00
      sources (import closure of the exe root EncB/Emit.lean, 6 files, + lakefile.toml): EncB/Coded.lean 2727e00bbd4ce9eab7f4af634c8ad3c056c1122cac1d9bd11f080e6265a69c5f; EncB/Cover.lean c59425acb5ba5e1da652fbb8d2f77d0c78d8cfc522216f64015231f7ed765f98; EncB/Dimacs.lean 48cbeac96e085d2e3e90d3e7a44f40909b24e4fb985f545de2824c356f64f6a8; EncB/Emit.lean 170613cd9dc27d0ca3e18e40bf3e3fa53693e5a512a0e86731985b3
      records: base 1+1 lines; SHA256SUMS c-cubes 32; replay encoder-B ACCEPTED 32; noty12 cubes.sha256 32; noty12 results.tsv ACCEPTED 32; meta.json Y12 Y13 Y14 Y23 Y24 Y34 = 1 2 3 10 11 18
@@ -179,6 +179,6 @@ exit 0, 21.910906430 s; copy exe sha256 3d43fa8be6e96ec3a3593551709db14240ef74b2
    src scripts/hash_binding.sh 29d89510a6ca9f3f9ade8131ab79a3c621184135c341f5c521dd9603bcae65e4
    src scripts/audit.sh f7af57b676e5fec57576fdabaec2e3689f9bbc29a77f426c262b5797f63ad964
    git status (package):  M cloud/es7-2026-10-19/results/ENCBLEAN/DESIGN.md; M cloud/es7-2026-10-19/results/ENCBLEAN/EncB.lean; M cloud/es7-2026-10-19/results/ENCBLEAN/EncB/Emit.lean; M cloud/es7-2026-10-19/results/ENCBLEAN/README.md;?? cloud/es7-2026-10-19/results/ENCBLEAN/EncB/Render.lean;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_a2_cake_parse.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_a2_hash_binding.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_a2_regress_modes.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_a2_verify_rt.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_a2fix_hash_binding.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_audit.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_axioms.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_build.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_d_recheck.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_hash_binding.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_hash_binding_selftest.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_regress_modes.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_resolve_fix.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_resolve_smoke.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_review_lean_soundness.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/logs/m9_review_resolve.log;?? cloud/es7-2026-10-19/results/ENCBLEAN/scripts/build_cake_lpr.sh;?? cloud/es7-2026-10-19/results/ENCBLEAN/scripts/hash_binding.sh;?? cloud/es7-2026-10-19/results/ENCBLEAN/scripts/resolve.sh;
-   scratch left in place (small, ~110 MB total incl. 4 .lake dirs): /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy and .../m9/review-lean; nothing written under /home/jay/research/data; no unit touched; no commit
+   scratch left in place (small, ~110 MB total incl. 4 .lake dirs): /sandbox/m9/review-copy and .../m9/review-lean; nothing written under /path/to/data; no unit touched; no commit
 -- reviewer verdict: no blocking finding; minor/doc findings are listed in the reviewer's return value
-   cleanup: removed the reviewer's own build dirs /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/review-copy/{base,mutA,mutB,mutC}/.lake (RAM-backed /tmp); sources, build outputs and binding logs of the copies kept; scratch now 2.2M
+   cleanup: removed the reviewer's own build dirs /sandbox/m9/review-copy/{base,mutA,mutB,mutC}/.lake (RAM-backed /tmp); sources, build outputs and binding logs of the copies kept; scratch now 2.2M

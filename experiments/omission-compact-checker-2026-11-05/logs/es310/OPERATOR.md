@@ -8,9 +8,9 @@ Everything in sections A2-A4 and B needs the user's go-ahead first: the freeze, 
 memory caps. Nothing here touches the campaign's files, its unit `es8-b64-campaign` or `c6upper-noty12`.
 
 ```
-D=/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05
-C=/home/jay/research/data/es8-b64-pilot-20261105
-SRC=/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-cover-certificates-2026-10-10/balanced-v2-source.json
+D=/path/to/repo/experiments/omission-compact-checker-2026-11-05
+C=/path/to/data/es8-b64-pilot-20261105
+SRC=/path/to/repo/experiments/omission-cover-certificates-2026-10-10/balanced-v2-source.json
 OUT=$D/build/es310/full
 K=16      # per-word k (calibration E5: k=16 recommended, k=8 the conservative choice; user decision)
 cd $D

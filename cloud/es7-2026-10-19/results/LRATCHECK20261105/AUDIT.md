@@ -52,7 +52,7 @@ These rest on lrat-check alone, so they are **not certified**. None is shown fal
 Some items look affected but are not:
 - C's 12 spot cubes and C2's 4,535 + 749 mirror cubes were checked there by unpatched lrat-check only. H3 re-checked every one with cake_lpr on byte-identical CNFs (H3/logs/cube_lrat_*.jsonl, compare_mir.log:6-7).
 - FOURPROBE's 20 patterns are refuted by an exact falsified-clause check (scripts/check_patterns.py).
-- ROT45CHORD's 60 patterns were re-run in commit ac264dedb, and cake_lpr accepted 60 of 60.
+- ROT45CHORD's 60 patterns were re-run in commit f0ac3611c, and cake_lpr accepted 60 of 60.
 
 ## 3. Unclear claims
 
@@ -82,7 +82,7 @@ No re-check is needed for Mi-0..3, Mii-1..7 or Mx, which cake_lpr routes superse
 
 ## 5. Other findings
 
-1. **The defect itself was already known.** E2 found the empty-clause hole on 20 Oct and patched it (E2/logs/lrat_check_soundness.md; tools/lrat-check-E2.patch, sha256 52721abd…). CERTIFICATES.md:38-40 already pins the patched binary (f2046212…). Commit ac264dedb records the defect again without citing E2.
+1. **The defect itself was already known.** E2 found the empty-clause hole on 20 Oct and patched it (E2/logs/lrat_check_soundness.md; tools/lrat-check-E2.patch, sha256 52721abd…). CERTIFICATES.md:38-40 already pins the patched binary (f2046212…). Commit f0ac3611c records the defect again without citing E2.
    - *Added 6 Nov:* it was also public upstream before E2 (`marijnheule/drat-trim`). Issue #31 (2022-07-22) reported it; commit cbd2915 (2022-10-19) fixed it; commit 5cd8ac3 (2024-04-21) brought it back, and it is still on master 2e3b2dc. Issue #42 and PR #43 (both 2026-09-29) report the regression with the same `p cnf 1 1 / 1 0` + `2 0 0` reproduction and a one-line fix. So E2's 20 Oct finding was an independent rediscovery of a publicly known defect; the credit for finding and patching it locally stays with E2.
 2. **New: the Linux setup builds the unsound checker.** The host's only drat-trim (<drat-trim-src>, 2e3b2dc, built 4 Nov 21:42) is unpatched: lrat-check.c:161 is commented out and there is no E2 line. The "Setting up on Linux" section of STATUS20261104/README.md does not mention the patch.
 3. **New: the hole is narrower than the coordinator described.** This comes from reading the source, not from a test. For a non-empty lemma, acceptance with no RAT candidates also requires `intro[-pivot] == 0`, which means no clause contains the negated pivot. Such a lemma is a blocked clause, which preserves satisfiability. The unsound path is the empty clause, and that is the path E2 closes.

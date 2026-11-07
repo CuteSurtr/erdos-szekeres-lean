@@ -38,7 +38,7 @@ cumulative profiling times:
 	tactic execution 5.59ms
 	type checking 2.56s
 	typeclass inference 3.87ms
-	Command being timed: "lean -R /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05 /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/scratch_bench_fast2.lean"
+	Command being timed: "lean -R /path/to/repo/experiments/omission-compact-checker-2026-11-05 /path/to/repo/experiments/omission-compact-checker-2026-11-05/scratch_bench_fast2.lean"
 	User time (seconds): 3.53
 	System time (seconds): 0.32
 	Percent of CPU this job got: 99%

@@ -1,7 +1,7 @@
 M9 task A2: cake_lpr's own reading of the twin's texts (evidence for trust item E3; not a proof, and not a verdict: no proof file is involved)
-cake_lpr /home/jay/research/sat/tools/cake_lpr/cake_lpr, sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54 (the replay's binary). With one argument it 'Parses the DIMACS file and prints the parsed formula' (its usage text); it prints 'p cnf <largest variable used> <number of clauses>' and one line per clause, the empty clause as '0'. It exits 0 also when parsing fails (message on stderr).
-HOL4/CakeML source of its parser: not found on this machine (submodules HOL/ and cakeml/ of the clone at commit 033aad53 are empty directories; C2P/vendor/tools-src.tar.xz holds only cake_lpr.S, cake_lpr.sha256, basis_ffi.c, Makefile, README.md, LICENSE and the examples; no *.sml file found under /home/jay by 'find /home/jay -xdev -name *.sml', a search that excluded /home/jay/research/data/erdos810-20261106, which this task may not touch). parseDimacs in EncB/Render.lean is therefore the plain standard subset, not a model of cake_lpr's grammar.
-command: systemd-run --user --scope -q -p MemoryMax=12G -p MemorySwapMax=0 nice -n 10 cake_parse.sh EXE CAKE /home/jay/research/data/encblean-m9/cake-parse-a2   (EXE = the A2 exe 3d43fa8b…; the script deletes its files; script text below)
+cake_lpr /path/to/tools/cake_lpr/cake_lpr, sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54 (the replay's binary). With one argument it 'Parses the DIMACS file and prints the parsed formula' (its usage text); it prints 'p cnf <largest variable used> <number of clauses>' and one line per clause, the empty clause as '0'. It exits 0 also when parsing fails (message on stderr).
+HOL4/CakeML source of its parser: not found on this machine (submodules HOL/ and cakeml/ of the clone at commit 033aad53 are empty directories; C2P/vendor/tools-src.tar.xz holds only cake_lpr.S, cake_lpr.sha256, basis_ffi.c, Makefile, README.md, LICENSE and the examples; no *.sml file found under /path/to/home by 'find /path/to/home -xdev -name *.sml', a search that excluded /path/to/data/erdos810-20261106, which this task may not touch). parseDimacs in EncB/Render.lean is therefore the plain standard subset, not a model of cake_lpr's grammar.
+command: systemd-run --user --scope -q -p MemoryMax=12G -p MemorySwapMax=0 nice -n 10 cake_parse.sh EXE CAKE /path/to/data/encblean-m9/cake-parse-a2   (EXE = the A2 exe 3d43fa8b…; the script deletes its files; script text below)
 ---- output (exit code 0)
 start 2026-11-06T19:02:07+09:00 Tctl +74.9°C
 exe 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368; cake_lpr c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
@@ -104,7 +104,7 @@ exit $fail
 
 ================================================================
 Part (3): the real instance (6,8,11): base and cubes64 indices 0 (c11111) and 63 (n00000)
-command: systemd-run --user --scope -q -p MemoryMax=12G -p MemorySwapMax=0 nice -n 10 cake_parse_6811.sh EXE CAKE /home/jay/research/data/encblean-m9/cake-parse-a2   (the text, 58.6 MB, is written there, parsed and deleted)
+command: systemd-run --user --scope -q -p MemoryMax=12G -p MemorySwapMax=0 nice -n 10 cake_parse_6811.sh EXE CAKE /path/to/data/encblean-m9/cake-parse-a2   (the text, 58.6 MB, is written there, parsed and deleted)
 ---- output (exit code 0)
 start 2026-11-06T19:22:08+09:00 Tctl +70.5°C disk free  1.6T
 exe 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368; cake_lpr c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
