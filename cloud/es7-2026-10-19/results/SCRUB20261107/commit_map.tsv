@@ -1,0 +1,47 @@
+old_commit	new_commit	message_changed	subject
+c4b01bd29cb61c599d46288febb915a0f958c213	c4b01bd29cb61c599d46288febb915a0f958c213	no	Review rotational octagon certificates and refine sixfold models
+1e48cad8d7e7254a44a5104e3db4e9114032d9e4	1e48cad8d7e7254a44a5104e3db4e9114032d9e4	no	Record bounded rotational refinement experiments
+57a18bec81a39567d17882e03dd36bb7912bc776	57a18bec81a39567d17882e03dd36bb7912bc776	no	Assess prior work for rotational obstructions
+d3cbcbe940b252327feca7dbcf8e94e844642e00	d3cbcbe940b252327feca7dbcf8e94e844642e00	no	Replace sandbox paths and tool names in logs and scripts with neutral placeholders
+1bc033d57ae94d6fe1708442054d7926aff27d7a	ef8b788c67e4b43e452959810b6439c63b3e9ad0	yes	Merge the c6/c7 review branch into the night branch
+0c7704f76f2ee4bceb1733c5c30d475537ce23fe	354202a3616550b180f52c933b567b639540f82b	yes	Settle the sixfold octagon-free maximum at 60
+25a915613db892c7fa6b2370bd6a676606e19e84	63498f5d2036e5b571a25f5aeb8e21c616c9d4ba	yes	Add the chord lemma: radius-free orientation rules for any m
+8b16649c64219e79e36c1810ae2c4e1945c75a00	8448c56eb5311a2104f651887b0b4e0d52be01bd	yes	Add a third 60-point sixfold set and the construction records
+914b4fd4a75e093d8ccc807df3fa4232004e4e6f	637755ce53df8bc5a8cc35f00fac4d11d8e37399	yes	Record the 5 November sixfold campaign
+baa0d6d2d545a3e3d4342137b9a5888189205c89	be6f4cf334d07c71962135666af6d6ec1b137b25	yes	Point the sixfold records to the exact value 60
+cf4f066690d7e93830bc7d47a3a84a20a6dbeace	c95f242cd1b13ed4cd424a9253595df38ccba0a0	yes	Add a fourth 60-point set with coefficients below 2^19
+525aecb3c14722ca6874c66e723b36a23dcdc81c	100c15bfdc0e33d2ecf67780f9e008fca72a435b	yes	Record the independent review of the general-m chord generator
+3c225bae915d45a61d0cc469a8682d347606b5cb	48d03769b8d9eea710003fa002d5d300e6d6cbf1	yes	Add the sixfold proof outline and record the threshold runs
+46899f041a76f3703179346ce9582311abe7f30d	85a931ff61e33dcd1b55c3fa150b5fef9702a938	yes	Add the 5 November status page and the extension proofs
+ac264dedba71526cd4f1402dbd71de24987c05fc	f0ac3611c4d5affff9bd6ccf1e94b2a5f99d29d2	yes	Record that the lrat-check build is unsound and re-check with cake_lpr
+addf275b3ad081b261325d2151ea52b03e659d7e	5e1e22fa908a875a169041e7efe017897901e37d	yes	Re-certify the one-layer extension results with cake_lpr
+910fab135855de15bc7bdcaca520614b2ac418f9	59bc4085512376d533e0ffc19f54decbf90cfcf4	yes	Credit E2 for the lrat-check defect and add the project-wide audit
+6585d729afae39a17328dc553941af924e80eb69	12a30f1fc9d468ba38b03e82d2201ea2638e7899	yes	Re-certify PRIMEFOLD Theorem E and the small lrat-check-only claims
+3f56192179e2075606cbfb1a18de2e6c25147174	14b8104aa8ae0cc211435ae3d4204f6a74a5c84d	yes	Add the scoping memo for improving ES(8) <= 311
+f2ebfda88cad0aeb1abe12288814e9323ab8aef8	a66b4d4f1aa02135be233db4c51ea2e28d87e5d2	yes	Record the final outcome of the 5-fold and 4-fold threshold runs
+cc683cc710de498452de88a8146f299bb0d659bf	85466ae18ff3d8525ff8aa8e3cc99cd526b02eba	yes	Prototype a compact reflective checker for omission certificates
+b39e80ffdcc9bcb9d4303cc08697438d17f32ddf	f54c9a579b808011dc028572674eb85625fc6fee	yes	Record the budget-64 pilot, a 71-hole balanced vector and the full search
+e418e15d55058defbb2d5a3ce8bd8bc1a96d893a	78ca9909d9933a46da8bd1ffff00621ae40e805f	yes	Record the deletion of the partial proofs and the running budget-64 search
+ba86c12153b52c0d396049a3617af606762d83d7	2c2c1b91f0e2a7b94baf1cc73191f35c5e092732	yes	Replace two machine paths with placeholders
+968f19f778228e3c7fad71ae3c312cde05e32860	774953d4b1bce94a0de2c6888554ac2ba7f0a4cc	yes	Mark the branch push as done on the status page
+0fd4b57e362cf000bde05cb8fa2923a5f85f8781	fe88c952ea43dd9578a08f3f1dee1a43c96b8489	yes	Add a throttle to the budget-64 campaign
+231dbb4807c23263d9b16d3e6f2365e50575b8ba	46273900ecb1364eeb7ba2f9efe6bd259b9cd8b4	yes	Record that the budget-64 campaign is paused
+2c1090f5a086857ad99d293f9ef6e5fad4addc09	c6479cceac13412d74b7e0c6843733347072f060	yes	Record that the budget-64 campaign resumed at about 20% of the machine
+b5c85b5467e4b7b451bdf9f888c70bb506c1a7a1	ad1edc4ca069461702e7d761be7a83ea9b109836	yes	Record the 6 November novelty check and correct the records it flagged
+597961bbd32b5b4950a5fdd0cc2b7a3b135eba15	2054b945c9fdd458373657f5e4b7cee5e2494b3d	yes	Add the k = 8 soundness section, the exact 7-fold clause check, a faster compact checker and the roadmap
+aeca8078ea253e64d844cdebd9cfb6efa483d327	af5181dd6ae657b406520e01c2d4c9ee52b7b7e7	yes	Add the full ES(8) <= 311 compact recheck pipeline and the first P1 draft
+7bf2430a61e09be5ed86a0aaa85f65c5c6abd37d	27da536732704b732a6b205e00ea83faa70d4f56	yes	Record the 64/64 hash-bound C6UPPER replay and the full compact 311 run
+418c9f2730ae4618f26380e1bc805a316f43a5ac	aaf6585b5b4e2aad84f3ce5f5e373b3d502aa6ff	yes	Add the consistent geometric-chain build and the final 311 assembly scripts
+ab2a37bd0652afc93f7ff7a3e5fd18af3cbcc3dc	d4e26f9a0335344ddd66206ad5f4938d5cb04a72	yes	Record the second complete Lean check of ES(8) <= 311 and the disk cleanup
+b583d89abd27dd0c47b3eff909f7ff7a800444f0	f2a462b67a4c9c4537eb3fa6fc1e6a730103874b	yes	Correct the translation step in the proof of the sixfold/sevenfold corollary
+f2753185cd3d63044dd17485405cb49465c8a440	c8e8f8f220d1612aa6e1e87aa4e99a7beacd69b0	yes	Apply the P1 readiness audit: bibliography, numbers and rigor claims
+d7619be8309f3e69b3e5a127eaa2fb088a2ee24c	1becf6f7083b858e3a85d366f2da9f58b558f883	yes	Start the Lean-verified encoder B (ENCBLEAN): design and byte-identical Std-only port
+92fdedd5db7bc660ac833e826b71a0f5745ad5de	8dc0d6d7f571c3ac04b84ec155e7baa958783587	yes	Add the compact Lean pipeline for a check of ES(8) <= 310 (not run; nothing proved)
+ff024264dfd25c3753078b3d119f6bf66f65b45e	0acc43c630973caff8567aabdabb5764e1aafe59	yes	Freeze the ES(8) <= 310 pipeline (per-word k = 16) and start the incremental loop
+c7754183615f0bef8500bdf82f02a24347d2394c	ac634d4ec4358d09373d8436a703c876c72c0e40	yes	ENCBLEAN M2: functional twin encB, numbering bridge and the 64-cube cover theorem
+c28a98af6c961821c69897fd8437ecb0b9af4e52	3c6fd080a5cae306afb09596909a41b91370cb46	yes	Certify the encoder-B sixfold base formula UNSAT outright; drop the reflection lemma from its route
+752214b6e99f27fdf31961b418e7d79362e703d8	73928596f5e87d3962288a1bb9ef5e74367e8466	yes	ENCBLEAN M3: combinatorial soundness of encoder B (encB_satisfiable)
+115ccda3dd349d64be564c78edbc4486b6df44cc	6a4e5c3c12493cddb01049d23ee813e463c6554d	yes	ENCBLEAN M9: hash binding of all 65 sixfold files, DIMACS round trip, re-solve script; P1 trust text
+57923bfb5d194d7a4b52804298046f9725524cce	862d95ed5404af805363bb7618987f8e92d6a751	yes	ENCBLEAN M4-M8: the sixfold bound via encoder B, Lean-checked end to end
+41c3403963bd6e103f5f6f9c8cb9218cf5a2e422	ab94f3c3c8641a3dd4c4ba5ee6ef04af974a61e4	yes	P1 and the soundness note: the m = 6 bound via encoder B is Lean-checked end to end
+94aee3ead25b38f60ec23276c5cd7305cd170742	8c2e907b2ec3d55d62cf46b47249d2dc0f8a9db2	yes	Record the stop of the budget-64 campaign at 1,982 of 4,096 contexts; add the es310 loop logs
