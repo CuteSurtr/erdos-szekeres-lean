@@ -1,6 +1,6 @@
 > Archived 6 November 2026 from the session in which it was written. It records one check, by a reviewer within the
 > same session, of a draft of the corrected proof of Corollary k8s:cor:geom (written with τ for the translation and A
-> for its linear part); its wording remarks were then applied in commit b583d89ab, whose final text was not re-checked.
+> for its linear part); its wording remarks were then applied in commit f2a462b67, whose final text was not re-checked.
 > It is not an independent or external review. The paper still lists that proof as having had no internal review (G4);
 > see README.md, open item 5. The scratch path cited below (`/tmp/claude-1000/.../rev-noty12/conj.py`) is a temporary
 > session directory that is not kept. Line numbers refer to the files as they were before the audit edits of the same
