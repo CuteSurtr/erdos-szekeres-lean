@@ -20,7 +20,7 @@ written soundness proof of encoder B (not refereed, gaps G1–G4) and the Lean-c
 
 ## How it was run
 
-- Script `noty12.py` (copy of `/home/jay/research/data/c6upper-noty12-20261106/noty12.py`), systemd user unit
+- Script `noty12.py` (copy of `/path/to/data/c6upper-noty12-20261106/noty12.py`), systemd user unit
   `c6upper-noty12` (MemoryMax 44G, no swap, Nice 5), 4 CaDiCaL lanes, 1 cake_lpr at a time, beside the budget-64
   campaign; 12:47–15:40 KST.
 - Tools, checked by SHA-256 at start and again at the end (`TOOLS_AND_PROOFS.sha256`): CaDiCaL 2.1.3

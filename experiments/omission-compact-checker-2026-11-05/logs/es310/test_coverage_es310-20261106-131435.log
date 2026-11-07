@@ -83,4 +83,4 @@
         e.g. ctx 2: replay {'ok': False, 'leaves_checked': 3, 'pending': 12, 'minimum_margin': 1}
   PASS  fake2-restored (exit 0, 3 contexts, 6 leaves, 35 checks, 0.1 s)
   FAIL  contexts-jsonl-prefix-vertex: exit 1 (want 1), failing checks [], wanted 'contexts_jsonl'
-== result: 45 passed, 1 failed (log /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/logs/es310/test_coverage_es310-20261106-131435.log)
+== result: 45 passed, 1 failed (log /path/to/repo/experiments/omission-compact-checker-2026-11-05/logs/es310/test_coverage_es310-20261106-131435.log)

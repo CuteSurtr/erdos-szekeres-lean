@@ -303,7 +303,7 @@ kept.
 | fresh proof differs (the 12 phase orders) | 12 | 12 |
 
 **Proofs.** The proofs are about 28.4 GB of `.lrat.zst` (32.3 GB for the whole data directory, with the regenerated
-CNFs and the logs), outside Git, in `/home/jay/research/data/c6upper-replay-20261106/{A,B}/cubes`. Their hashes are in
+CNFs and the logs), outside Git, in `/path/to/data/c6upper-replay-20261106/{A,B}/cubes`. Their hashes are in
 `replay-2026-11-06/TOOLS_AND_PROOFS.sha256`.
 - The 40 byte-identical proofs (the contradictory patterns) are the archived proofs of 3 November, which now have a
   hash-bound cake_lpr verdict.
@@ -339,7 +339,7 @@ PASS (`noty12-2026-11-06/verify_final64.log`).
 beside the budget-64 campaign, 12:47–15:40 KST. From `results.tsv`: 35,411 s of CaDiCaL time (0.8–3,921 s per cube;
 2,320–3,921 s for each of the 12 phase-order cubes, at most 1.0 s for each of the 20 contradictory ones), 2,471 s of
 cake_lpr time, 56.3 GB of raw proofs. The proofs are kept as `.lrat.zst`: 14.9 GB for the 32 files
-(14,929,339,154 bytes), 16.8 GB for the whole data directory `/home/jay/research/data/c6upper-noty12-20261106`
+(14,929,339,154 bytes), 16.8 GB for the whole data directory `/path/to/data/c6upper-noty12-20261106`
 with the cube CNFs and logs; outside Git, not public.
 
 **What it changes.** The sixfold bound via encoder B needs neither the reflection lemma (§2; k8_soundness Lemma

@@ -81,7 +81,7 @@ base CNF hashes had already matched. `replay.py` now creates the directory first
 | tool | path | version | SHA-256 |
 |---|---|---|---|
 | CaDiCaL (solver; not trusted) | `/usr/bin/cadical` | 2.1.3 | `4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70` |
-| cake_lpr (verified checker; trusted) | `/home/jay/research/sat/tools/cake_lpr/cake_lpr` | no version string; a build of commit `033aad53` reproduces it (below) | `c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54` |
+| cake_lpr (verified checker; trusted) | `/path/to/tools/cake_lpr/cake_lpr` | no version string; a build of commit `033aad53` reproduces it (below) | `c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54` |
 
 The hashes were taken on 2026-11-06 at 07:43:01 KST (`TOOLS_AND_PROOFS.sha256`). For comparison:
 - The 3 November runs used CaDiCaL 3.0.1 (`C6UPPER` §3).
@@ -185,7 +185,7 @@ They agree with `C6UPPER/SHA256SUMS.txt` and `TOOLS_AND_PROOFS.sha256`.
 
 The accepted proofs are kept as `.lrat.zst`, about 28.4 GB in all (32.3 GB for the whole data directory, with the
 regenerated CNFs and the logs), outside Git and not public. They are in
-`/home/jay/research/data/c6upper-replay-20261106/{A,B}/cubes/<cube>.lrat.zst`, and their SHA-256 are in
+`/path/to/data/c6upper-replay-20261106/{A,B}/cubes/<cube>.lrat.zst`, and their SHA-256 are in
 `TOOLS_AND_PROOFS.sha256` and in `results.tsv` (column `zst_sha256`). The same directories hold:
 - the regenerated cube CNFs and `full_Y12.cnf`;
 - the cake_lpr logs (`<cube>.cake.log`) and the CaDiCaL outputs (`<cube>.cadical.out`);

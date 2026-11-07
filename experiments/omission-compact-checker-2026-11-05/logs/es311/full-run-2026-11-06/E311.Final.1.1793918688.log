@@ -1,6 +1,6 @@
 'E311.balanced_excludes_63' depends on axioms: [propext, Classical.choice, Quot.sound]
 'E311.residual_excludes_32' depends on axioms: [propext, Classical.choice, Quot.sound]
-	Command being timed: "lean -j1 -R /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es311/full/src -o /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es311/full/olean/E311/Final.tmp594940-1-aa95b5b38924.olean /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/es311/full/src/E311/Final.lean"
+	Command being timed: "lean -j1 -R /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es311/full/src -o /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es311/full/olean/E311/Final.tmp594940-1-aa95b5b38924.olean /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es311/full/src/E311/Final.lean"
 	User time (seconds): 17.12
 	System time (seconds): 0.73
 	Percent of CPU this job got: 99%

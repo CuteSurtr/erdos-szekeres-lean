@@ -14,7 +14,7 @@ What ran (run_lower.sh):
   timing.txt: 35.162 s for step 1; 3.142, 3.129, 2.562, 2.575, 3.510 s for dfs_convex on A, B, C, C2, D.
 
 The binaries check64/cvxenum and six60/dfs_convex of that run are not kept (rebuild from the .c files).
-run_lower.sh is kept as run: its SCR=/tmp/claude-1000/... path was a temporary session directory that is not kept,
+run_lower.sh is kept as run: its SCR=/sandbox/... path was a temporary session directory that is not kept,
 and R= is the repository's results directory on that host.
 
 To rerun from a checkout (from cloud/es7-2026-10-19/results):

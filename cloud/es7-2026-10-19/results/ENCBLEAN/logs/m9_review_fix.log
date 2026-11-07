@@ -16,7 +16,7 @@
 # before: ../WRITEUP/P1/p1.pdf sha256 b7b9302b4ad7225a4f25e3e0d0075695285392b5f6294fa2aa98150e9b36db9b (4358 lines)
 
 ## L5 check: cake_lpr source hashes recomputed read-only from the local clone (git show, no checkout)
-$ cd /home/jay/research/sat/tools/cake_lpr; for f in Makefile basis_ffi.c cake_lpr.S; do git show 033aad53d1733bd4b8ca41cf6f1b5fb5d84f8de2:$f | sha256sum; done
+$ cd /path/to/tools/cake_lpr; for f in Makefile basis_ffi.c cake_lpr.S; do git show 033aad53d1733bd4b8ca41cf6f1b5fb5d84f8de2:$f | sha256sum; done
 5e001c7eafc88afc562f05aea80cbc86bad45a3335a0b57024dbe7c53beb5342  Makefile
 bd498883fdc0577d734a771fe8197c5ff571f2abdd769b8dc95d46818db5cbbc  basis_ffi.c
 d20ceae0d8fe973a03a1ba8db623b2594161721ab9091305ae60cd581dcc78f7  cake_lpr.S
@@ -58,8 +58,8 @@ AUDIT PASS (no sorry/admit/native_decide/implemented_by/extern/unsafe/partial/ax
 exit 0
 
 ## audit negative tests (2026-11-06T20:58:16+09:00)
-### (a) check 4, static only: scratch copy /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/reviewfix/audit-neg (EncB.lean, EncB/*.lean, lakefile.toml, lean-toolchain, scripts/audit.sh; no .lake) plus EncB/ZZ.lean with 8 declarations on (6,8,11) using trivial, Eq.refl, simpa, grind, eq_self, Nat.decEq, decide_eq_true (zz7 also has rfl; zz8 has decide_eq_true and Eq.refl on a continuation line). ZZ.lean was never compiled.
-$ AUDIT_SKIP_TIMEGATE=1 nice -n 10 /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/reviewfix/audit-neg/scripts/audit.sh
+### (a) check 4, static only: scratch copy /sandbox/m9/reviewfix/audit-neg (EncB.lean, EncB/*.lean, lakefile.toml, lean-toolchain, scripts/audit.sh; no .lake) plus EncB/ZZ.lean with 8 declarations on (6,8,11) using trivial, Eq.refl, simpa, grind, eq_self, Nat.decEq, decide_eq_true (zz7 also has rfl; zz8 has decide_eq_true and Eq.refl on a continuation line). ZZ.lean was never compiled.
+$ AUDIT_SKIP_TIMEGATE=1 nice -n 10 /sandbox/m9/reviewfix/audit-neg/scripts/audit.sh
   KERNEL EVALUATION RISK EncB/ZZ.lean:4 (+1 lines, token "trivial"): theorem zz1 : 0 < (encB 6 8 11).length := by trivial
   KERNEL EVALUATION RISK EncB/ZZ.lean:5 (+1 lines, token "Eq.refl"): theorem zz2 : numVars 6 8 11 = 78059 := Eq.refl _
   KERNEL EVALUATION RISK EncB/ZZ.lean:6 (+2 lines, token "simpa"): theorem zz3 : 0 < (encB 6 8 11).length := by
@@ -73,7 +73,7 @@ sources: EncB.lean EncB/Coded.lean EncB/Compose.lean EncB/Cover.lean EncB/Dimacs
 AUDIT FAIL
 exit 1
 ### (a') control: the same copy without ZZ.lean
-$ AUDIT_SKIP_TIMEGATE=1 nice -n 10 /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/reviewfix/audit-neg/scripts/audit.sh
+$ AUDIT_SKIP_TIMEGATE=1 nice -n 10 /sandbox/m9/reviewfix/audit-neg/scripts/audit.sh
 time gate: SKIPPED (AUDIT_SKIP_TIMEGATE=1)
 AUDIT INCOMPLETE (static checks 1-4 pass; time gate 5 skipped)
 exit 3
@@ -88,14 +88,14 @@ AUDIT FAIL
 exit 1
 
 ## hash_binding.sh stale-build guard (L1), 2026-11-06T20:59:30+09:00: one comment line appended to EncB/Compose.lean (sha256 before fe9cf37e1c1577127bc33378fc737ab01eb83ce26b0ed7b1667ead3a02511b40), then restored
-$ TMPDIR=/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/reviewfix systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 scripts/hash_binding.sh
+$ TMPDIR=/sandbox/m9/reviewfix systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 scripts/hash_binding.sh
 FAIL: exe stale or build missing: lake build --no-build exit 3: - EncB.Compose
 SUMMARY: 0/68 MATCH (not run: the build is not up to date); FAIL
 exit 1
 restored EncB/Compose.lean sha256 fe9cf37e1c1577127bc33378fc737ab01eb83ce26b0ed7b1667ead3a02511b40 (equal to before: yes)
 All targets up-to-date (29 jobs).
 
-## axioms of EncB/Compose.lean (L3, L4), 2026-11-06T21:02:05+09:00; scratch file /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/reviewfix/ComposeAx.lean (sha256 e509fa876dd644b9cc8545bf2f1efd1cc95971d750236f6aedacdf60e6d2923f):
+## axioms of EncB/Compose.lean (L3, L4), 2026-11-06T21:02:05+09:00; scratch file /sandbox/m9/reviewfix/ComposeAx.lean (sha256 e509fa876dd644b9cc8545bf2f1efd1cc95971d750236f6aedacdf60e6d2923f):
     import EncB
     #print axioms EncB.parseDimacsBytes
     #print axioms EncB.ofNat_toUInt8_ascii
@@ -108,7 +108,7 @@ All targets up-to-date (29 jobs).
     #print axioms EncB.encB_satisfiable_6811
     #check @EncB.no_model_6811_of_texts
     #check @EncB.parseDimacsBytes_cube64_get
-$ systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 timeout 120 lake env lean /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/m9/reviewfix/ComposeAx.lean
+$ systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 timeout 120 lake env lean /sandbox/m9/reviewfix/ComposeAx.lean
 'EncB.parseDimacsBytes' does not depend on any axioms
 'EncB.ofNat_toUInt8_ascii' depends on axioms: [propext]
 'EncB.cnfText_ascii' depends on axioms: [propext, Quot.sound]
@@ -134,8 +134,8 @@ exit 0
 $ scripts/build_cake_lpr.sh            (no argument)
 usage: scripts/build_cake_lpr.sh WORKDIR [REPO]   (WORKDIR must not exist)
 exit 2
-$ scripts/build_cake_lpr.sh /home/jay/research/data/encblean-m9   (an existing directory)
-build_cake_lpr.sh: /home/jay/research/data/encblean-m9 exists; give a new directory
+$ scripts/build_cake_lpr.sh /path/to/data/encblean-m9   (an existing directory)
+build_cake_lpr.sh: /path/to/data/encblean-m9 exists; give a new directory
 exit 2
 (not run further: the recipe stays not run, as in M9)
 
@@ -172,7 +172,7 @@ hashes: p1.tex 5a3e0a28896308d37de68fd4c19fc63d352223497393ee64d6f79ec9c5da081b;
 wrapper pass 1 exit 0
 wrapper pass 2 exit 0
 wrapper pass 3 exit 0
-wrapper log: errors 0 undefined 0 LaTeX-warnings 0 overfull 0 underfull 0; Output written on /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/
+wrapper log: errors 0 undefined 0 LaTeX-warnings 0 overfull 0 underfull 0; Output written on /sandbox/
 git status of WRITEUP/note unchanged by the build: yes
 Pages:           13
 
@@ -208,5 +208,5 @@ exit 0
 # after: ../WRITEUP/P1/p1.pdf sha256 20a4b3026e69089b3f43f7f403c00c6b2815f51b060d3ad862363777785af6a9 (4330 lines)
 # after: .lake/build/bin/encb_dimacs sha256 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368 (21060 lines)
 # unchanged by this round: EncB/Render.lean, EncB/Emit.lean, scripts/resolve.sh, the exe
-# not done: no git commit/push/stash/checkout/reset; logs/m9_resolve_fix.log not edited (its line 5 is wrong, see README 'M9 review fixes', C5); nothing under /home/jay/research/data written; no systemd unit touched
+# not done: no git commit/push/stash/checkout/reset; logs/m9_resolve_fix.log not edited (its line 5 is wrong, see README 'M9 review fixes', C5); nothing under /path/to/data written; no systemd unit touched
 # README.md after the DESIGN line-count fix: sha256 10b53f5ab71bb1ffb38c0b5e19fbac5f1cc571fd5215117d705c1567edb90d05 (1041 lines), 2026-11-06T21:15:54+09:00

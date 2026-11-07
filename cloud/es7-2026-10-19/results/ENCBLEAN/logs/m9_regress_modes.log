@@ -1,8 +1,8 @@
 M9 task A1: every existing mode of encb_dimacs, old exe vs new exe, byte for byte; and the new mode twin-cube64 against the old exe
 old exe: e9454996f7f8a21f479cc4a2540d18f2f55f6445fbd36c642d44a7f81fe96a59 (the M2/M3 exe, copied to the session scratchpad before the rebuild)
 new exe: a0dff6f2253f3331f069150c6443644110bcae7034cc1aefb0474124120a9689
-command: systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 regress_modes.sh OLD NEW /home/jay/research/data/encblean-m9/regress   (Tctl before: +74.6 C)
-work dir /home/jay/research/data/encblean-m9/regress: the script deletes its files at the end (the empty directory stays)
+command: systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 regress_modes.sh OLD NEW /path/to/data/encblean-m9/regress   (Tctl before: +74.6 C)
+work dir /path/to/data/encblean-m9/regress: the script deletes its files at the end (the empty directory stays)
 first run 18:01:55-18:04:42 (167 s): exit 1, 6 UNEXPECTED, all of them twin-check stdout, which prints wall times (gen_ms=, encB_ms=); the script then masked '_ms=<digits>' for twin-check (as it already masked twin-profile) and was rerun:
 second run (the record below): start 2026-11-06T18:05:03+09:00; rc=0 wall=169 s end 2026-11-06T18:07:52+09:00
 ---- output of the second run

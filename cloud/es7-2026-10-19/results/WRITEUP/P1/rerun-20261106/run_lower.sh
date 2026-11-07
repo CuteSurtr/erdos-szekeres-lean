@@ -1,7 +1,7 @@
 #!/bin/bash
 # Re-run of the recorded lower-bound checkers on copies (6 Nov 2026, for the P1 draft).
-SCR=/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad
-R=/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results
+SCR=/sandbox
+R=/path/to/repo/cloud/es7-2026-10-19/results
 cd $SCR/rerun
 date -u +"start %FT%TZ" > timing.txt
 ( time sh check64/run_all.sh > /dev/null ) 2>> timing.txt

@@ -1,7 +1,7 @@
-2026-11-06 01:57:02 replay start pid 417382; cadical 2.1.3; cake_lpr /home/jay/research/sat/tools/cake_lpr/cake_lpr
+2026-11-06 01:57:02 replay start pid 417382; cadical 2.1.3; cake_lpr /path/to/tools/cake_lpr/cake_lpr
 2026-11-06 01:57:02 A base CNF hash OK 542c8a3a2c4484a7d60b5fdb8efc0f3506d782031fc4b4625604b360211ad51e
-2026-11-06 01:57:02 $ python3 /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C6UPPER/tools/mkcubes.py /home/jay/research/data/c6upper-replay-20261106/A/m6K8t11.cnf /home/jay/research/data/c6upper-replay-20261106/A/m6K8t11.cnf.json /home/jay/research/data/c6upper-replay-20261106/A/cubes
-2026-11-06 01:57:03 $ python3 /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C6UPPER/tools/verify_cover.py /home/jay/research/data/c6upper-replay-20261106/A/m6K8t11.cnf /home/jay/research/data/c6upper-replay-20261106/A/m6K8t11.cnf.json /home/jay/research/data/c6upper-replay-20261106/A/cubes
+2026-11-06 01:57:02 $ python3 /path/to/repo/cloud/es7-2026-10-19/results/C6UPPER/tools/mkcubes.py /path/to/data/c6upper-replay-20261106/A/m6K8t11.cnf /path/to/data/c6upper-replay-20261106/A/m6K8t11.cnf.json /path/to/data/c6upper-replay-20261106/A/cubes
+2026-11-06 01:57:03 $ python3 /path/to/repo/cloud/es7-2026-10-19/results/C6UPPER/tools/verify_cover.py /path/to/data/c6upper-replay-20261106/A/m6K8t11.cnf /path/to/data/c6upper-replay-20261106/A/m6K8t11.cnf.json /path/to/data/c6upper-replay-20261106/A/cubes
 2026-11-06 01:57:04 A verify_cover: OK: 32 distinct cubes, each = base + Y(1,2) + pattern; cover complete
 2026-11-06 01:57:05 A all cube CNF hashes match the record
 2026-11-06 02:21:25 A c00000 UNSAT 1354s proof 4774604b24ff ACCEPTED
@@ -30,8 +30,8 @@
 2026-11-06 04:41:25 A c10111 UNSAT 0s proof af78004e05bd ACCEPTED
 2026-11-06 04:52:00 parallel replay start pid 517905, lanes 6, cake 2
 2026-11-06 04:52:00 B base CNF hash OK 479e31a9e8d58d752c86b9abf02fb799c10615a7e61a88f132c49734674f37fc
-2026-11-06 04:52:00 $ python3 /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C6UPPER/tools/mkcubes.py /home/jay/research/data/c6upper-replay-20261106/B/B_m6K8t11.cnf /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C6UPPER/encb/B_m6K8t11.meta.json /home/jay/research/data/c6upper-replay-20261106/B/cubes
-2026-11-06 04:52:01 $ python3 /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C6UPPER/tools/verify_cover.py /home/jay/research/data/c6upper-replay-20261106/B/B_m6K8t11.cnf /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C6UPPER/encb/B_m6K8t11.meta.json /home/jay/research/data/c6upper-replay-20261106/B/cubes
+2026-11-06 04:52:00 $ python3 /path/to/repo/cloud/es7-2026-10-19/results/C6UPPER/tools/mkcubes.py /path/to/data/c6upper-replay-20261106/B/B_m6K8t11.cnf /path/to/repo/cloud/es7-2026-10-19/results/C6UPPER/encb/B_m6K8t11.meta.json /path/to/data/c6upper-replay-20261106/B/cubes
+2026-11-06 04:52:01 $ python3 /path/to/repo/cloud/es7-2026-10-19/results/C6UPPER/tools/verify_cover.py /path/to/data/c6upper-replay-20261106/B/B_m6K8t11.cnf /path/to/repo/cloud/es7-2026-10-19/results/C6UPPER/encb/B_m6K8t11.meta.json /path/to/data/c6upper-replay-20261106/B/cubes
 2026-11-06 04:52:02 B verify_cover: OK: 32 distinct cubes, each = base + Y(1,2) + pattern; cover complete
 2026-11-06 04:52:03 B all cube CNF hashes match the record
 2026-11-06 04:52:03 40 cubes to do

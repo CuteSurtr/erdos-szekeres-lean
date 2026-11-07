@@ -48,7 +48,7 @@
   one of them, (4,5,1), with a two-level chain.
 - **What the clauses mean is proved for even m (M3), relative to the combinatorial `Model`.** That a geometric
   counterexample yields a `Model` (M4–M6) and the assembly (M8) were not done as of M9; they are done since 2026-11-07
-  (section "M4–M8 (geo)", commit 57923bfb5).
+  (section "M4–M8 (geo)", commit 862d95ed5).
 - **M9 is done (2026-11-06, 17:50–20:15 KST; not committed).** A1: the mode `twin-cube64` and
   `scripts/hash_binding.sh` bind the base and all 64 cubes of `cubes64` (by index) and 3 other instances to the
   records, 68/68 (trust item E1). A2: `EncB/Render.lean`, a Std-only printer for the twin with a proved round trip
@@ -76,7 +76,7 @@
     name: all within the three axioms (`logs/m9_d_recheck.log`). The 7 declarations of `EncB/Compose.lean` (review
     fixes; 6 theorems and the definition `parseDimacsBytes`) are queried in `logs/m9_review_fix.log`, and 5 of them
     are guarded at build time.
-- No git commit was made at the time; M9 was committed afterwards as 115ccda3d.
+- No git commit was made at the time; M9 was committed afterwards as 6a4e5c3c1.
 
 ## What exists
 
@@ -145,7 +145,7 @@ for emission and CaDiCaL, 12 GB for cake_lpr):
 
 ```
 TMPDIR=SCRATCH systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 scripts/hash_binding.sh   # ~15 min; exit 0 iff 68/68
-nice -n 10 scripts/resolve.sh CUBES OUTDIR             # caps each step itself (4G emit/CaDiCaL, 12G cake_lpr); OUTDIR under /home/jay/research/data
+nice -n 10 scripts/resolve.sh CUBES OUTDIR             # caps each step itself (4G emit/CaDiCaL, 12G cake_lpr); OUTDIR under /path/to/data
 ```
 
 How to call the exe (the `twin-*` modes print `encB`, the others print `gen`):
@@ -169,7 +169,7 @@ How to call the exe (the `twin-*` modes print `encB`, the others print `gen`):
 - **Refusal.** On an instance where gen_b2.py raises, the exe writes nothing and exits with 1. For the twin this is
   decided by `diagCoded`.
 
-## M4–M8 (geo): the geometric half and the end-to-end theorem (2026-11-07, about 05:00–05:35 KST; committed 57923bfb5)
+## M4–M8 (geo): the geometric half and the end-to-end theorem (2026-11-07, about 05:00–05:35 KST; committed 862d95ed5)
 
 **What is proved.** The package `geo/` (Lean package `es8geo`, Lean 4.24.0, Mathlib `f897ebcf72cd16f8…` in
 `geo/.lake`, `encblean` required by path `..`) proves that a counterexample yields a `Model`, and composes this
@@ -262,7 +262,7 @@ evaluates `encB 6 8 11`; audit check 5 enforces this.
 
 | file | lines | content |
 |---|---|---|
-| `ErdosSzekeres/**` (10 files) | — | verbatim copies of the repository modules at commit `115ccda3`, `VENDOR.sha256` (M4) |
+| `ErdosSzekeres/**` (10 files) | — | verbatim copies of the repository modules at commit `6a4e5c3c`, `VENDOR.sha256` (M4) |
 | `ES8Geo/Capstone2.lean`, `KeyOrder.lean`, `OrbitConsistency.lean` | 2132, 158, 429 | verbatim copies of `LEANEXT/{capstone,keys,orbit}/…`, `SOURCES.sha256` (M4) |
 | `ES8Geo/Orbit.lean` | 21 | `orient_rotAbout_inv` for `LayerLemma.rotAbout` (M4) |
 | `ES8Geo/Interface.lean` | 53 | `PolarLabelling`, `L.P`, `L.chi`, `L.psiLt`, frozen before the M5/M6 units (M4) |
@@ -296,7 +296,7 @@ scripts/audit_geo.sh --selftest   # plants 22 violations in a temporary copy; ex
    turn off kernel checking for the build). The geo manifest pins Mathlib `f897ebcf` and every package of the
    repository's `lake-manifest.json` at the repository's revision, and each checkout in `geo/.lake/packages` is at its
    manifest revision with no tracked change.
-2. **Git cross-checks** against the commit recorded in `VENDOR.sha256` (`115ccda3`, the M9 commit), not the moving
+2. **Git cross-checks** against the commit recorded in `VENDOR.sha256` (`6a4e5c3c`, the M9 commit), not the moving
    HEAD: the 10 vendored modules and every PINNED file under `../` equal that commit (34 files); once `geo/` is
    committed, `SOURCES.sha256` and `VENDOR.sha256` equal their committed versions. Outside a git checkout (or with
    `AUDIT_NO_GIT=1`) these are skipped with a note; the PINNED hashes still bind every file.
@@ -337,7 +337,7 @@ PASS**; the audit itself: **AUDIT PASS**, exit 0, 47 s (`logs/m8_fix_audit.log`)
   repository modules the geometry imports (the closure of `ErdosSzekeres.{Definitions, Orientation,
   OrientationGeometry, Suk.OrientationClique}`) are copied verbatim into `geo/ErdosSzekeres/`; every constant keeps
   its repository name, `VENDOR.sha256` records the hashes and audit check 2 compares them with the recorded
-  commit `115ccda3`. Mathlib is
+  commit `6a4e5c3c`. Mathlib is
   fetched into `geo/.lake` (R5, option (a), the author's choice of 2026-11-07).
 - **Capstone2 kept whole.** The M4 row planned to split Capstone2 into `Layer`/`Phase`/`Link`/`PhaseClass`/`Capstone`
   modules. It is kept as one verbatim file instead, so the statements are checked by a hash (audit check 3), not by a
@@ -367,7 +367,7 @@ Interface, each checked by `lake env lean` only and then by an independent verif
 by `Expr` comparison or typed `example`, axioms, tokens, frozen hashes); logs `logs/m5m6_{M5,M6basic,G9rules}.log`.
 The G9 go/no-go spike (R2) passed on the first attempt. The integrator wrote ModelOfLabelling, Main and Audit, and
 ran the only `lake build`s (`logs/m8_build.log`) and the audit (`logs/m8_audit.log`). M4–M8 with the review fixes
-were committed afterwards as 57923bfb5.
+were committed afterwards as 862d95ed5.
 
 **Review fixes (2026-11-07, about 05:40–05:55 KST).** An independent review of M4–M8 gave 11 findings (2 major,
 9 minor); none concerned a proof. Disposition:
@@ -379,7 +379,7 @@ were committed afterwards as 57923bfb5.
 | README's "only hypothesis is the meaning of the verdicts" is imprecise; nothing shows the texts hypothesis is not vacuous | **fixed:** `texts_iff_cubesUnsat64` (Audit.lean, a term, pinned) and the sentence reworded |
 | check 5 missed `Model 6 8 11` and named arguments (`sixfold66_of_no_model` used `norm_num`/`decide` unchecked) | **fixed:** wider mention pattern; such declarations must be terms; `sixfold66_of_no_model` rewritten as a term, numerals in `MainAux.numerals` |
 | (major) the build configuration is not hash-checked; `leanOptions` could disable the kernel for unit modules that check 7 did not re-elaborate | **fixed:** PINNED hashes of both lakefiles, manifests and toolchains; grep for Lean options; manifest revisions compared with the repository's and with the checkouts; check 7 re-elaborates all six M5–M8 files |
-| (major) check 6 compared `EncB/` with the moving HEAD and omitted `EncB.lean`, `../lakefile.toml` | **fixed:** `../EncB.lean`, `../EncB/*.lean` and the `../` build files are in PINNED, and check 2 compares them with commit `115ccda3` |
+| (major) check 6 compared `EncB/` with the moving HEAD and omitted `EncB.lean`, `../lakefile.toml` | **fixed:** `../EncB.lean`, `../EncB/*.lean` and the `../` build files are in PINNED, and check 2 compares them with commit `6a4e5c3c` |
 | check 2 used HEAD and needed git; check 1 did not assert the counts 5 and 10 | **fixed:** commit from the `VENDOR.sha256` header; runs without git (cross-checks skipped with a note); counts asserted; `SOURCES.sha256` must list exactly the non-unit files; the manifests themselves are pinned |
 | check-5 pattern too narrow; `FORB` lacked `sorryAx`, `ofReduceNat`, `reduceBool`, `reduceNat`; the comment stripper mangled strings | **fixed:** pattern extended (`cubes64`, `cnfText`, `parseDimacs*`, `*6811*`, …), the four tokens added, a stripper that nests block comments and keeps string/char literals |
 | only 4 statements pinned; no axiom pins for the two `rfl` lemmas | **fixed:** 13 `#check` and 14 `#print axioms` pins, including `sixfold66_of_no_model`, `modelOfLabelling(_chi/_psiLt)`, `labelling_of_counterexample` |
@@ -399,7 +399,7 @@ is the list E1–E6 (`DESIGN.md` §1.4, the table in "Trust" below), unchanged i
 - **E5** the kernel, Mathlib `f897ebcf…`, and that the definitions mean what the paper says: `Point`,
   `GeneralPosition`, `HasConvexNGon` (`geo/ErdosSzekeres/Definitions.lean`), `orient`
   (`geo/ErdosSzekeres/Orientation.lean`), `rotAbout` and `Invariant` (Capstone2). These are now the vendored copies;
-  audit checks 1–3 tie them byte for byte to the repository at commit `115ccda3` and to LEANEXT, and pin the
+  audit checks 1–3 tie them byte for byte to the repository at commit `6a4e5c3c` and to LEANEXT, and pin the
   `EncB` definitions and the build configuration.
 - `sixfold_es8` instead assumes `CubesUnsat64`, a Lean statement about `cubeCnf (encB 6 8 11) c`; its tie to the
   certificates is the same E1–E3 through `cubesUnsat64_of_texts_get`.
@@ -556,7 +556,7 @@ these examples `parseDimacs` accepts the smaller language.
 
 ### Files left on disk, and minor points
 
-- `/home/jay/research/data/encblean-m9/` (kept; nothing under it may be deleted by a step, since it holds CNFs and
+- `/path/to/data/encblean-m9/` (kept; nothing under it may be deleted by a step, since it holds CNFs and
   proofs): `resolve-smoke-fix/` (200 MB, the fixed script's smoke test), `resolve-smoke/` (188 MB, the first smoke
   test; its 21-column `results.tsv` is refused by the fixed script), `resolve-negtest/` (56 MB, the CNF-MISMATCH
   test), `review-unpinned/` (56 MB, **fake**: stub tools, an empty proof and a fake ACCEPTED row, marked by
@@ -617,7 +617,7 @@ workflow, not logged by the reviewer). Every finding was applied; nothing was de
   numbers. Not changed: Table 7 is printed on the last page (it was already there after the 20:10 revision; HEAD
   has it on page 28 of 33). The note's wrapper compiles cleanly in a scratch directory (13 pages, no box warnings).
   `diff` of the two note copies: the 35-line header and edits 1–9 only.
-- Not run: no SAT solver, no proof checker, nothing under `/home/jay/research/data` was written; no unit was touched;
+- Not run: no SAT solver, no proof checker, nothing under `/path/to/data` was written; no unit was touched;
   no git commit.
 
 ## M3: combinatorial soundness (`encB_satisfiable`), 2026-11-06
@@ -1079,7 +1079,7 @@ reproducible. The load average was about 35 on 32 cores throughout, so all times
 | `n11111` | 58,618,885 | `efdf4681b3cfe45c5e0999fdf74cbce426bf627c53e71720b6a30e993e697d2d` | noty12 `cubes.sha256` |
 | `n00000` | 58,618,890 | `33894742a77ef9fc56af7411d05c089d179bc2f5eb091a758d9bf94ee34d19d0` | noty12 `cubes.sha256` |
 
-The noty12 hash list is `/home/jay/research/data/c6upper-noty12-20261106/cubes.sha256`. It was only read; the
+The noty12 hash list is `/path/to/data/c6upper-noty12-20261106/cubes.sha256`. It was only read; the
 running unit `c6upper-noty12` was not touched. Its `results.tsv` had 8 of 32 ACCEPTED at 14:43. (Since 16:35: the
 unit finished with 32/32 ACCEPTED; the list is also on record as `C6UPPER/noty12-2026-11-06/cubes.sha256`, with the
 same 32 hashes, and the two rows above are in it.) The other 57 cubes

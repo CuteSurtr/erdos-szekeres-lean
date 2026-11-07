@@ -4,8 +4,8 @@ ES(8) <= 310 is NOT proved. These are tests of the pipeline only (prefixes E310B
 build/es310/test-*). Nothing was written under the campaign directory C, no 311 build directory was touched,
 no lake build was run. Times are KST (UTC+9) unless marked Z.
 
-D = /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05
-C = /home/jay/research/data/es8-b64-pilot-20261105
+D = /path/to/repo/experiments/omission-compact-checker-2026-11-05
+C = /path/to/data/es8-b64-pilot-20261105
 
 ## 0. Start state (13:30 KST)
 - Tctl 70.2 C, MemAvailable 50 GiB, load 33.9; es8-b64-campaign and c6upper-noty12 active (not touched);

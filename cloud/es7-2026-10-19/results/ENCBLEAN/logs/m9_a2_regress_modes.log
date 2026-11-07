@@ -1,8 +1,8 @@
 M9 task A2: every mode of encb_dimacs, A1 exe against A2 exe, byte for byte (stdout, stderr, exit codes, written files)
 old exe: a0dff6f2253f3331f069150c6443644110bcae7034cc1aefb0474124120a9689 (A1; twin modes printed with core toString via pushClause/bodyL/header; copied to the session scratchpad as encb_dimacs.a1 before the A2 build)
 new exe: 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368 (A2; twin modes print renderCube/cnfText of EncB/Render.lean; the final A2 build produced the same exe hash)
-command: systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 regress_a2.sh OLD NEW /home/jay/research/data/encblean-m9/regress-a2
-work dir: the script deletes its files at the end (the empty directory /home/jay/research/data/encblean-m9/regress-a2 stays)
+command: systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 regress_a2.sh OLD NEW /path/to/data/encblean-m9/regress-a2
+work dir: the script deletes its files at the end (the empty directory /path/to/data/encblean-m9/regress-a2 stays)
 expected differences, masked by the script: twin-profile timings (digits) and its label bodyL -> bodyR; twin-check '_ms=' timings. Usage text unchanged in A2, so stderr must be equal everywhere.
 result: exit code 0, wall 344 s, 2026-11-06T19:00:35 to 19:06:19 (+09:00); SUMMARY same=321 unexpected=0; REGRESSION PASS
 ---- output

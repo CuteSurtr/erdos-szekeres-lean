@@ -69,4 +69,4 @@
         e.g. ctx 2407: module 5 has no SR
   PASS  root-import-dropped -> FAIL as required [root_imports]
         e.g. Root imports 7 modules (7 distinct), expected 8: missing ['E310BT.C240705'], extra []
-== result: 38 passed, 0 failed (log /home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/logs/es310/test_coverage_es310-20261106-131242.log)
+== result: 38 passed, 0 failed (log /path/to/repo/experiments/omission-compact-checker-2026-11-05/logs/es310/test_coverage_es310-20261106-131242.log)

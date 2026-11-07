@@ -1277,7 +1277,7 @@ ErdosSzekeres.Omission.Compact311.forces_convex_octagon_311 : ErdosSzekeres.Forc
 
 | Step | How | When (UTC) | Result | Rigor |
 |---|---|---|---|---|
-| 1. Full run: 349 chunks, `E311B.Root`, `E311R.Root`, `E311.Final` | unit `es311-full`, `drive_es311.py` at commit `aeca8078e` | 5 Nov 21:48:11 – 22:45:07 | 352 of 352 ok, every expected theorem with standard axioms | Lean-checked |
+| 1. Full run: 349 chunks, `E311B.Root`, `E311R.Root`, `E311.Final` | unit `es311-full`, `drive_es311.py` at commit `af5181dd6` | 5 Nov 21:48:11 – 22:45:07 | 352 of 352 ok, every expected theorem with standard axioms | Lean-checked |
 | 2. Rest of the geometric chain | unit `chain311-finish`, `build_chain311.py` (sha256 `2daa70d2…`) | 6 Nov 00:26 – 01:13 | 196 of 196 chain modules ok | Lean-checked; `.olean` hashes: exact computation |
 | 3. Assembly tests | `test_assemble_final311.sh` (`3d3a5f18…`) | 6 Nov 01:13 – 01:14 | every case as expected | tested |
 | 4. Assembly | `assemble_final311.sh` (`8d7097a6…`), real mode, route `same` | 6 Nov 01:14:40 – 01:15:20 | verified | Lean-checked |
@@ -1295,7 +1295,7 @@ ErdosSzekeres.Omission.Compact311.forces_convex_octagon_311 : ErdosSzekeres.Forc
   campaign (`balance.log`).
 - **Output.** 6.46 × 10⁹ bytes of `.olean` (6.0 GiB) for all 352 modules, in the git-ignored
   `build/es311/full/olean`.
-- **Records** (`logs/es311/full-run-2026-11-06/`, committed in `7bf2430a6`):
+- **Records** (`logs/es311/full-run-2026-11-06/`, committed in `27da53673`):
   - `run.tsv`: one row per module, with the source sha256, dependency stamp, verdict, kernel, elaboration, wall
     and user time, peak RSS, cgroup peak, `.olean` size and sha256, and axioms;
   - `driver.out`, the logs of both Roots and of `E311.Final`, and `all-module-logs.tar.xz`;

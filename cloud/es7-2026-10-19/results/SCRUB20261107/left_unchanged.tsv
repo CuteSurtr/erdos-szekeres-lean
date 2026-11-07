@@ -1,0 +1,17 @@
+path	sha256	lines_with_paths	reason
+cloud/es7-2026-10-19/results/C6UPPER/noty12-2026-11-06/TOOLS_AND_PROOFS.sha256	7e3633696d3aa271f05dcc5fe8b0b961e13262dd9bdfad6f554974c0bc2a2e25	2	hash-pinned: its SHA-256 is cited in m9_resolve_fix.log, m9_resolve_smoke.log
+cloud/es7-2026-10-19/results/C6UPPER/replay-2026-11-06/TOOLS_AND_PROOFS.sha256	274b48162541f2fbab077917f5b500a2ae84d3ff20c1d0f597eeb3ade8b1247f	2	hash-pinned: its SHA-256 is cited in m9_resolve_fix.log, m9_resolve_smoke.log
+cloud/es7-2026-10-19/results/ENCBLEAN/EncB/Render.lean	c8d6aed7e539db2c886230c80f891177de05a487e5041ad6f68f360b6d123e82	1	hash-pinned: its SHA-256 is cited in audit_geo.sh, m9_a2fix_hash_binding.log, m9_audit.log and others
+cloud/es7-2026-10-19/results/ENCBLEAN/scripts/build_cake_lpr.sh	fb74a08b0b31307b1dcef97a77c64514824faf9c40cdaffb713c123f717c208d	2	hash-pinned: its SHA-256 is cited in m9_review_fix.log
+cloud/es7-2026-10-19/results/ENCBLEAN/scripts/check_recorded.sh	442cb2e2a35f14a474cd2e61f27f3b5db00e81368b91abcc5347f9a05e25af5a	1	hash-pinned: its SHA-256 is cited in env.txt, m9_review_lean_soundness.log
+cloud/es7-2026-10-19/results/LRATCHECK20261105/recheck/rot456-layer5/deleted-cnf-2026-11-06.sha256	3297f2d7be539a32744aff8cd11117f4a5c066bd41a82f81aca103685dd68875	1	hash manifest (records are not edited)
+cloud/es7-2026-10-19/results/ROT45CHORD20261105/logs/deleted-cnf-2026-11-06.sha256	c71c825ce6a872d414d4efc0342035fe2f55975aff1c5b0b0658bf4de450b90f	1	hash manifest (records are not edited)
+experiments/omission-compact-checker-2026-11-05/assemble_final310.sh	a76ce0741e1ed152e29fac8e1c0ea1f1573192dc280de83be26149f725d25b0d	1	hash-pinned: its SHA-256 is cited in assemble-tests-frozen.txt, assemble-tests.txt, frozen-shas.txt
+experiments/omission-compact-checker-2026-11-05/build_chain311.py	2daa70d2e530318efeab8984a4959727a5a96032a3441db38dab599cafbdb91b	1	hash-pinned: its SHA-256 is cited in chain311-build-tests.txt, chain311-runs.jsonl
+experiments/omission-compact-checker-2026-11-05/coverage_es310.py	fff949b9d6a0cadc49184c7c7afa35d97775b769f90a3116360dfcdf23254be5	1	hash-pinned: its SHA-256 is cited in assemble-tests-frozen.txt, assemble-tests.txt, assemble_final310.sh and others
+experiments/omission-compact-checker-2026-11-05/drive_es310.py	7992026f1e94a98cdd1412e8272a30b3559120ce8364ab9c943d75e6534bdd5f	1	hash-pinned: its SHA-256 is cited in assemble-tests-frozen.txt, assemble-tests.txt, assemble_final310.sh and others
+experiments/omission-compact-checker-2026-11-05/export_es310.py	29854a3799db7ebdb29311255c2a089a0f2c9957beaa2d839583d50033920b1f	1	hash-pinned: its SHA-256 is cited in assemble-tests-frozen.txt, assemble-tests.txt, assemble_final310.sh and others
+experiments/omission-compact-checker-2026-11-05/incr_es310.sh	d1e7660bb64144ddc39b4f723f88ab1fc5f4c1e4700b897221f8d3e7c7f2a94a	2	operational: the paused hourly ES(8) <= 310 loop runs it on the Linux machine
+experiments/omission-compact-checker-2026-11-05/test_coverage_es310.sh	5b5fbb51578b943cd20e7d2d67a917042e368429f83a88d143ebddc73030af5e	1	hash-pinned: its SHA-256 is cited in fixer-shas-end.txt
+experiments/omission-compact-checker-2026-11-05/test_driver_es310.sh	0eae39bc4c45497b29e52d210ebf931c4768564a42c5603abde900a11599f726	3	hash-pinned: its SHA-256 is cited in fixer-shas-end.txt
+experiments/omission-compact-checker-2026-11-05/test_export_es310.sh	7c46abe106dfe1118a5632327698b5dc5f439433348b4b63f9762c55285f8727	3	hash-pinned: its SHA-256 is cited in fixer-shas-end.txt

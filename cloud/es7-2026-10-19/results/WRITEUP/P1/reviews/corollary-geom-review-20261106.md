@@ -2,7 +2,7 @@
 > same session, of a draft of the corrected proof of Corollary k8s:cor:geom (written with τ for the translation and A
 > for its linear part); its wording remarks were then applied in commit f2a462b67, whose final text was not re-checked.
 > It is not an independent or external review. The paper still lists that proof as having had no internal review (G4);
-> see README.md, open item 5. The scratch path cited below (`/tmp/claude-1000/.../rev-noty12/conj.py`) is a temporary
+> see README.md, open item 5. The scratch path cited below (`/sandbox/.../rev-noty12/conj.py`) is a temporary
 > session directory that is not kept. Line numbers refer to the files as they were before the audit edits of the same
 > day; the P1 copy has since gained 9 lines before the corollary (now about lines 807-820). The text below is
 > unchanged.
@@ -14,7 +14,7 @@ The new argument for part (a) is correct and complete. I found no mathematical d
 **Checks against the definitions**
 - **Rotation direction and angle match.** `rotAbout c θ p = c + [[cos θ, −sin θ],[sin θ, cos θ]](p − c)` (LAYERLEAN/LayerLemma.lean:298-300). Sixfold66 uses `rotAbout c (2π/6)` (LayerLemma.lean:1102-1104). k8_soundness_p1.tex:63-64 defines ρ as the counterclockwise rotation `rotAbout O (2π/m)`.
   - So `τR_cτ⁻¹(y) = R_c(y+c) − c = rotAbout O (2π/6) y = ρ(y)` holds exactly, coordinate by coordinate.
-  - A small numeric check agrees to 3.6e-15 for m = 6 and 7, and orient(O, e1, ρe1) > 0 confirms the counterclockwise direction (/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/rev-noty12/conj.py).
+  - A small numeric check agrees to 3.6e-15 for m = 6 and 7, and orient(O, e1, ρe1) > 0 confirms the counterclockwise direction (/sandbox/rev-noty12/conj.py).
   - The step would hold even with the opposite direction: invariance under ρ⁻¹ of a finite set gives invariance under ρ.
 - **"R_c maps T into itself" is the right hypothesis.** It is exactly `Invariant` (LayerLemma.lean:105, `∀ p ∈ S, f p ∈ S`). Upgrading it to R_cT = T needs only injectivity (`rotAbout_injective`, LayerLemma.lean:316), which the text cites. Then ρ(τT) = τR_cT = τT.
 - **Each condition of Definition k8s:def:adm (lines 102-105) holds:**

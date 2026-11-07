@@ -20,12 +20,12 @@ Prints one 'PASS' line at the end, or 'FAIL: ...' and exits 1. Use --no-zstd to 
 import sys, os, re, json, hashlib, subprocess
 
 W = os.path.dirname(os.path.abspath(__file__))
-REPLAY = '/home/jay/research/data/c6upper-replay-20261106'
-R = '/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results'
+REPLAY = '/path/to/data/c6upper-replay-20261106'
+R = '/path/to/repo/cloud/es7-2026-10-19/results'
 BASE, META = REPLAY + '/B/B_m6K8t11.cnf', R + '/C6UPPER/encb/B_m6K8t11.meta.json'
 BASE_SHA = '479e31a9e8d58d752c86b9abf02fb799c10615a7e61a88f132c49734674f37fc'
 TOOLS = {'/usr/bin/cadical': '4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70',
-         '/home/jay/research/sat/tools/cake_lpr/cake_lpr': 'c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54'}
+         '/path/to/tools/cake_lpr/cake_lpr': 'c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54'}
 UNIT = re.compile(rb'-?[1-9][0-9]* 0')
 OKLINE = 's VERIFIED UNSAT'
 

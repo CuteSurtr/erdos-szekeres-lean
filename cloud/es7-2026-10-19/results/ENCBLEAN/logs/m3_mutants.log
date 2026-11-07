@@ -1,8 +1,8 @@
 # M3 mutants (docs/M3PLAN.md section 3 step 4), Integration step, 2026-11-06T17:30:34+09:00
 # Workspace: a scratch copy (cp -a) of EncB/, EncB.lean, lakefile.toml, lean-toolchain and .lake/ in the session scratchpad
-#   (/tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/integ/mut/work); ENCBLEAN itself was not modified by any mutant.
+#   (/sandbox/integ/mut/work); ENCBLEAN itself was not modified by any mutant.
 # Each build: systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake build EncB.Satisfiable
-#   (EncB.Satisfiable imports every M3 module; Tctl < 88 C checked before each build). Full outputs: /tmp/claude-1000/-home-jay-research-lean-erdos-szekeres-lean/ed6c9cac-8b42-4af7-a7d1-a8fb17116ce4/scratchpad/integ/mut/f_<field>.out, nest.out.
+#   (EncB.Satisfiable imports every M3 module; Tctl < 88 C checked before each build). Full outputs: /sandbox/integ/mut/f_<field>.out, nest.out.
 
 == control ==
   unmodified copy: rc=0 (Build completed successfully)

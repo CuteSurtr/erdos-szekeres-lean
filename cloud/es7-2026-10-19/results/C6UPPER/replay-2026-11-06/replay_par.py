@@ -9,7 +9,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import replay as R
 
 LANES = int(os.environ.get('LANES', '6')); CAKE = int(os.environ.get('CAKE', '2'))
-CAMP_CAP = '/home/jay/research/data/es8-b64-pilot-20261105/campaign/max_running'
+CAMP_CAP = '/path/to/data/es8-b64-pilot-20261105/campaign/max_running'
 lock = threading.Lock(); cake_sem = threading.Semaphore(CAKE)
 
 def log(m):
