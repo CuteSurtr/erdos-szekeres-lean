@@ -782,11 +782,11 @@ exhaustive depth-first enumeration of all subsets in convex position with exact 
 \emph{Sevenfold}: \dirn{PRIMEFOLD/check64} (written for an independent check) verifies distinctness, exact $7$-fold
 invariance and all $41{,}664$ orientation signs exactly in $\mathbb Z[\zeta_7]$ (and again with $110$-digit decimals), and
 counts convex $k$-subsets by an anchored dynamic program and again by a separate C enumerator working on the sign table;
-the five files that are also in \dirn{ES8SYM/sets} were checked by the \dirn{ES8SYM} pipeline as well;
+the five files that are also in \dirn{ES8SYM/sets} were checked by the \dirn{ES8SYM} pipeline as well, and the other
+three on 7 November 2026 (\dirn{WRITEUP/P1/checks-20261107});
 \dirn{K8EXACT20261106} recomputed all orientation signs of all eight files with a separately written $\mathbb Z[\zeta_7]$ sign
 routine and found agreement with \dirn{PRIMEFOLD/check64/z7exact.py}. So every sevenfold
-convex-subset count rests on at least two separately written programs, and on four or more for the five \dirn{ES8SYM}
-files.
+convex-subset count rests on four or more separately written programs.
 \emph{Re-run for this draft} (6 November 2026, on copies, under the resource caps of the run): \dirn{check64/run_all.sh} on
 all eight sevenfold files ($35$\,s) and \dirn{verify60.py} and \dirn{dfs_convex.c} on all five sixfold files ($2.6$--$3.5$\,s
 each for \dirn{dfs_convex}) reproduced every hash, every collinearity count ($0$) and every convex-subset count of
@@ -838,9 +838,9 @@ order-type equivalent to any set with a rotation or reflection symmetry (exact c
 Clusters of blow-ups in the sense of Baek and Balko~\cite{BB25} are line-modules, an order-type invariant (written
 lemma, not refereed, \dirn{ES8SYM/proofs/structure.md}). So the following excludes order-type equivalence to such
 blow-ups with clusters of the stated sizes (exact computation): \dirn{c7_64pts_small} and \dirn{c7_64pts_9layers_centre}
-have no line-module with $2$ to $60$ points, \dirn{c7_64pts_9layers_centre_own} none with $2$ to $56$ (\dirn{ES8SYM}~\S6,
-\dirn{PRIMEFOLD/check64/modules60}), and \dirn{c7_64_own_s1000} none with $2$ to $20$
-(\dirn{PRIMEFOLD/check64/check64.log}; larger modules were not checked for it). The last three sets of
+have no line-module with $2$ to $60$ points, and \dirn{c7_64pts_9layers_centre_own} and \dirn{c7_64_own_s1000} none with
+$2$ to $56$ (\dirn{ES8SYM}~\S6, \dirn{PRIMEFOLD/check64/modules60}, \dirn{WRITEUP/P1/checks-20261107}); each of these two has
+$22$ non-trivial line-modules, of sizes $57$, $60$, $61$ and $62$. The last three sets of
 Table~\ref{tab:counts7} are built from $9$-point clusters and do have line-modules, among them seven of size $9$
 (\dirn{check64.log}); whether they are equivalent to blow-ups was not checked.
 
@@ -909,8 +909,8 @@ the cube cover (Lemma~\ref{k8s:lem:cube})\\
 Unsatisfiability, sixfold, encoder~A (cross-check): $32$ cube formulas with $Y(1,2)$ & certificate: hash-bound
 \cakelpr{} replay (6 November 2026; $64$ of $64$ accepted with encoder~B's $32$ cubes with $Y(1,2)$), each verdict bound
 to formula and proof hashes (before it: solve-time verdicts by cube label, $6$ of $64$ hash-bound on 4 November)\\
-Lower bounds: twelve order types in thirteen files & exact computation (three programs per sixfold set; at least two,
-and four or more for five of the seven, per sevenfold order type; re-run 6 November)\\
+Lower bounds: twelve order types in thirteen files & exact computation (three programs per sixfold set, four or more
+per sevenfold file; re-run 6 November, three sevenfold files added to the \dirn{ES8SYM} pipeline 7 November)\\
 Pairwise different order types & exact computation (convex-subset counts)\\
 Real sets satisfy the formulas; cross-encoder agreement & exact computation, used as validation only\\
 Random and brute-force tests; calibration runs; timings & evidence only (calibration proofs certified)\\
@@ -929,7 +929,7 @@ Absence of prior work & evidence only (bounded literature search)\\
 machine that ran it; the Python interpreter, to run the generators as written; the programs
 named for each exact computation (for the cube cover with $Y(1,2)$ two separately written checkers,
 \dirn{verify_cover.py} and \dirn{strict_cover.py}, and for encoder~B's $64$-cube cover the two checks
-\dirn{verify_cover64.py} and \dirn{verify_final64.py}, written for that run; for the lower bounds at least two per set, Section~\ref{sec:lower}); SHA-256, to identify files; and the
+\dirn{verify_cover64.py} and \dirn{verify_final64.py}, written for that run; for the lower bounds at least three per set, Section~\ref{sec:lower}); SHA-256, to identify files; and the
 reading of the generator sources on which the code-to-clause correspondence rests (gap~(G1)). On that route the
 passage from a DIMACS file to \lean{Sixfold66} or \lean{Sevenfold70} is a written proof (gap~(G2)). For the sixfold
 bound via encoder~B there is a second route, Lean-checked end to end (next paragraph); it trusts only the $64$
