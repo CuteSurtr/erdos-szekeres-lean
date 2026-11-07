@@ -1,0 +1,46 @@
+-- c7_64_own_s1000  m=7 centre=1
+c9942cc187fea8f59c3a7c5058333468f23ce2353ea08c809edc000e89053ea1  PRIMEFOLD/sets/k8/c7_64_own_s1000.pts
+orbits=9 centre=1 rows=64
+{'m': 7, 'C': 1, 'n': 64, 'layers': 9, 'orbit_structure': True, 'distinct': True, 'invariant': True, 'zero_orientations': 0, 'intervalB_mismatch': 0, 'intervalB_undecided': 0, 'lexorder_intervalB_bad': 0, 'layers_are_nested_convex_orbits': True, 'radii_decreasing': True, 'max_abs_coeff': 7770}
+sha256 c7_64_own_s1000.pts 705d02e3a2fc7ff203949caf2efd1db791db5575d16725f8aa0f7af73f6f5e69
+sha256 c7_64_own_s1000.otab c579b10173e741b05c5d71515105d0db25d50034f4073fee3fb89068669005a5
+sha256 c7_64_own_s1000.lex 8af6d29969f2e1bff1fd24d2f1d90672891256b622014405065bc968b7ad6b6c
+EXACT-PREP PASS
+table n=64: 0 antisymmetry/zero violations
+convex  3-gons: DP1 41664  DP2 41664
+convex  4-gons: DP1 392966  DP2 392966
+convex  5-gons: DP1 1770020  DP2 1770020
+convex  6-gons: DP1 3836413  DP2 3836413
+convex  7-gons: DP1 3328145  DP2 3328145
+convex  8-gons: DP1 0  DP2 0
+largest convex subset: DP1 7  DP2 7
+CVX2 PASS (K=8)
+table n=64: 0 antisymmetry/zero violations
+convex 3-subsets: 41664
+convex 4-subsets: 392966
+convex 5-subsets: 1770020
+convex 6-subsets: 3836413
+convex 7-subsets: 3328145
+convex 8-subsets: 0
+DP largest convex subset: 7
+n=64 points; sorted triples checked; mismatches/undecided: 0; min |det| = 2.635E+00; error bound = 4.733E-140
+CROSSCHECK PASS
+== order-type invariants and line-modules
+float cross-check disagreements (|det| not tiny): 0
+n=64, no collinear triple, table written to <out>/c7_64_own_s1000.ot
+n=64
+table_violations=0
+tri_in=6706,4998,3766,3570,2954,2660,2534,2485,2373,1498,1323,1078,896,672,483,448,609,294,434,280,210,154,133,154,168,98,98,91,56,42,70,21,35,28,35,21,7,7,28,7,42,0,21,14,21,7,0,0,0,0,0,7,0,7,0,7,0,14,0,0,0,0
+jedge=7,7,7,21,21,35,42,49,49,56,70,77,77,77,63,63,70,77,70,63,70,70,77,98,105,105,91,91,91,84,84,49
+halving_lines=49
+layers=7,7,7,7,7,7,7,7,7,1
+holes=6706,9485,6958,2639,413  (j=3..7)
+convex=41664,392966,1770020,3836413,3328145  (j=3..7)
+max_convex=7
+hull_size=7
+aut_plus=7
+mirror_automorphism=0
+canon_written=<out>/c7_64_own_s1000.ot.canon
+candidates tested: 37352
+n=64 nontrivial_line_modules=22
+size_histogram: 57:1 60:7 61:7 62:7
