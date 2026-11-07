@@ -96,3 +96,48 @@ The CP-SAT hunt (`tools/witness_hunt.py`, minimising from the known 72-hole vect
   Only then can ES(8) <= 310 be claimed.
 - A witness, if one turns up, would be exact evidence that the present catalogs cannot reach 310. The route would
   then switch to new rows (`MEMO.md` routes 2 and 5).
+
+## Mac share of the budget-64 search (started 21:39 KST, 7 November)
+
+The Linux campaign is stopped (see above). The Mac continues it, at the author's request ("you can fully utilize
+this mac"). **No bound below 311 is claimed**, and this section changes none of the claims above.
+
+- **Same inputs.** The Mac's work directory is `<mac-b64-dir>`, outside git. Each input was regenerated there and
+  matches the Linux record:
+  - `contexts.jsonl`: regenerated with `tools/extract_contexts.py` from the tree parts (concatenated SHA-256
+    `e5380cc6…`). Its SHA-256 `c16cc3da…` is the `contexts_sha256` of the es310 coverage record.
+  - LP screen: `tools/lp_screen.py` gives the same minimum, median and maximum as
+    `pilot/lp_screen.jsonl.summary.json`, and the same 20 lowest contexts in the same order. So the campaign order
+    is reproduced exactly.
+  - `pbb_strong.py`: `2aa90df2…`; the catalog: `acaf6323…`. HiGHS: `highspy` 1.15.1, the version Linux recorded.
+    Also Python 3.14.10 and numpy 2.5.4.
+  - **The driver is byte-identical to the one Linux ran** (`1937e9dc…`, the hash in the es310 coverage record).
+    The committed `tools/run_context.py` differs only in its default repository path, written as a placeholder when
+    it was committed. The Mac copy restores that default and points `ES_REPO` at a checkout of `5aa5b31f2`.
+- **Check across platforms.** Two pilot contexts, run again on the Mac, both closed with exact replay:
+  - ctx 840 gave 593 nodes against Linux's 611;
+  - ctx 122 gave 1,211 against 1,209.
+
+  The trees differ because HiGHS can return a different optimum of a degenerate LP on another platform, as the
+  `run_context.py` docstring anticipates. Each tree is replayed exactly on its own, so this is not a soundness
+  issue.
+- **Scope.** Positions 2,040 to 4,096 of the campaign order, smallest first.
+  - It skips the 10 pilot contexts in that range that the Linux campaign had closed, according to its export log
+    (`experiments/omission-compact-checker-2026-11-05/logs/es310/export-full.err`, 1,744 contexts).
+  - That leaves 2,047 contexts: an estimated 3.8 million budget-64 nodes, from 416,621 budget-63 record nodes at
+    the pilot ratio.
+  - Positions 1,733 to 2,039 are left out. The Linux campaign closed most of them after its last export, and its
+    `runs/` directory says which; about 30 were in flight at the stop.
+- **Driver.** `tools/mac_campaign.py` runs 15 workers at nice 10 under `caffeinate -i`, writes the Linux file layout
+  (`runs/ctx-<k>-b64.result.json`, `.json.gz`), and stops starting jobs on a witness.
+- **First measurement** (21:47 KST):
+  - 45 contexts closed, all with exact replay ok;
+  - ratio 8.64 against the budget-63 record (these are the smallest contexts);
+  - 0.32 CPU-s per node with all 15 cores busy (0.21 with two busy).
+
+  The projected wall time is about 22 hours.
+- **To merge the two machines.**
+  - Copy the Mac's `runs/ctx-*-b64.*` into the Linux work directory's `runs/` before resuming the Linux campaign.
+    It never reruns a context with a closed result file.
+  - Or copy the Linux results to the Mac, and lower `campaign/floor` to cover the gap.
+  - The es310 coverage and export steps then see one `runs/` directory.
