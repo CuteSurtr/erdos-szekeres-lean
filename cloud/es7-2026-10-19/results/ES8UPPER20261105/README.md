@@ -68,6 +68,20 @@ The CP-SAT hunt (`tools/witness_hunt.py`, minimising from the known 72-hole vect
       `systemctl --user set-property --runtime es8-b64-campaign CPUQuota=640% IOWeight=10`.
     - At this rate the remaining work takes about 10 days, so the 9 November cutoff will stop it partway unless it is
       extended.
+  - **6–7 November.** The cutoff was extended to 2026-11-16 17:00 KST.
+    - Stopped at 00:06 KST, 7 November, at the author's request: 933 of 4,096 contexts closed (43.2% of the work).
+    - Resumed at 03:31 KST with 30 workers, alongside the hourly ES(8) ≤ 310 Lean loop (`es310-incr`, 2 jobs).
+    - **Stopped again at 18:26 KST, 7 November, at the author's request.** The screen had started to blink with
+      all 32 threads busy, so the cap was first lowered to 26 and then the run was stopped.
+      - **1,982 of 4,096 contexts closed** (71.8% of the work by budget-63 leaves; 10,214,522 budget-64 nodes, 9.11
+        times the budget-63 record over the closed contexts).
+      - No witness and no worker errors.
+      - The 310 loop had compiled 1,074 chunks, none failed. 670 queued chunks were not started; the loop picks
+        them up when it is restarted.
+    - Nothing was deleted. The roughly 30 contexts in flight restart from scratch on resume, since each took under
+      25 minutes. The steps to resume are in `campaign/SHUTDOWN-20261107.txt` in the work directory.
+    - Choose the worker cap with the author before resuming. Full load (30 workers plus 2 Lean jobs) made the
+      display blink.
 - **After it finishes:**
   - if every context closes, assemble the full tree (master levels plus subtrees) and replay it exactly;
   - check it in Lean with the compact checker (`experiments/omission-compact-checker-2026-11-05`, once gate G2
