@@ -135,6 +135,16 @@ criterion and additional geometric omission inequalities. These are
 explained in [math.md](math.md); they do not improve HMPT's asymptotic
 coefficient.
 
+## ES(7) research note
+
+For the separate ES(7) search, a
+[short technical note](docs/MINIMAL12_OBSTRUCTION.md) gives a twelve-point
+minimal nonrealizability obstruction with threefold symmetry, explicit
+integer realizations of every proper deletion, and a 28-sign realizability
+filter. Its small exact verifiers require only Python's standard library.
+Historical novelty of the example remains unestablished; it is not
+Lean-formalized and does not give a new general ES(7) bound.
+
 ## Beyond 311
 
 No bound below 311 is claimed here. The 313, 312 and 311 certificates are far
