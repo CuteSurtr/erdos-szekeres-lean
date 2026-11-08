@@ -113,7 +113,7 @@ this mac"). **No bound below 311 is claimed**, and this section changes none of 
     Also Python 3.14.10 and numpy 2.5.4.
   - **The driver is byte-identical to the one Linux ran** (`1937e9dc…`, the hash in the es310 coverage record).
     The committed `tools/run_context.py` differs only in its default repository path, written as a placeholder when
-    it was committed. The Mac copy restores that default and points `ES_REPO` at a checkout of `5aa5b31f2`.
+    it was committed. The Mac copy restores that default and points `ES_REPO` at a checkout of `e49379023`.
 - **Check across platforms.** Two pilot contexts, run again on the Mac, both closed with exact replay:
   - ctx 840 gave 593 nodes against Linux's 611;
   - ctx 122 gave 1,211 against 1,209.

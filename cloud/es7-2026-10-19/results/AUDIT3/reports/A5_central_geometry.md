@@ -1,6 +1,6 @@
 # A5: central 34, geometric and combinatorial reductions
 
-Component audit, 1 November 2026 (UTC), against `es7-cloud` at 9cf4949a5. Texts returned by the auditor and by the independent verifier of each finding, lightly edited: machine paths replaced by placeholders and internal job names by descriptions; trust-table labels as explained in `../README.md`, §7.
+Component audit, 1 November 2026 (UTC), against `es7-cloud` at 471d5f63a. Texts returned by the auditor and by the independent verifier of each finding, lightly edited: machine paths replaced by placeholders and internal job names by descriptions; trust-table labels as explained in `../README.md`, §7.
 
 **Component.** CENTRAL 34: geometric and combinatorial reductions (angular normal form, hull cubes, reduction A, second-layer split and covers, reduction B, interaction with the base formula's symmetry breaking)
 

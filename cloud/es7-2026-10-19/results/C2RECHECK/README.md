@@ -1,7 +1,7 @@
 # C2RECHECK: re-checks of the central 34-point records
 
 Local runs on an Apple M5 Pro, 1–2 November 2026 (UTC). The records re-checked are those of `C2FINAL` (`es7-cloud` at
-a15dd2ce3, unchanged since).
+1946685ae, unchanged since).
 
 **Status.** §1–§3 are complete. §4 and §5 were still running when the table in §6 was made. This directory reports
 re-checks only. Whether the 34-point statement is claimed is decided in `C2FINAL` and `WRITEUP`.

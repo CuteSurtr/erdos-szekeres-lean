@@ -1,6 +1,6 @@
 # A2: threefold 33 (Theorem 1)
 
-Component audit, 1 November 2026 (UTC), against `es7-cloud` at 9cf4949a5. Texts returned by the auditor and by the independent verifier of each finding, lightly edited: machine paths replaced by placeholders and internal job names by descriptions; trust-table labels as explained in `../README.md`, §7.
+Component audit, 1 November 2026 (UTC), against `es7-cloud` at 471d5f63a. Texts returned by the auditor and by the independent verifier of each finding, lightly edited: machine paths replaced by placeholders and internal job names by descriptions; trust-table labels as explained in `../README.md`, §7.
 
 **Component.** THREEFOLD 33 (Theorem 1): every 33-point set in general position invariant under a rotation of order 3 contains a convex 7-gon (C3a chain encoding + C3-S normal form + Lemma H6M + sigma-cube refinements; 116,883 certified pieces; C3FINAL composition; C3SPOT spot check)
 
@@ -358,7 +358,7 @@ Of the 485 spot-checked nodes with a recorded proof_sha256, 480 reproduced the i
 
 ### F8 (note): Independent recomputations by this audit all agree with the recorded claims
 
-(a) The base CNF regenerates with the documented header and sha. (b) My own composer reproduces 116,883 records / 116,741 nodes / 26,748 cube nodes / 26,436 proof hashes, re-derives all CNF hashes with 0 mismatches, finds the class covered and all 910 roots covered, and detects 11 of 11 tampering cases. (c) The record files used by C3FINAL are unchanged between f788780c and HEAD 9cf4949a5; only C3FINAL and C3SPOT were added. (d) The exact-integer encoding tests found 0 failures: 1,630 (set, k) cases, 3,260 frames, 1,155 k-gon-free; at m = 11 all 11 top cases were hit, 55 sets with no 8- or 9-gon satisfied the whole m = 11 formula, and 40 sets tested with k = 7 all contain a 7-gon, as Theorem 1 predicts. One test boundary: the k = 7 gon clauses can only be tested on in-class sets up to m = 10, because no 33-point in-class set is known.
+(a) The base CNF regenerates with the documented header and sha. (b) My own composer reproduces 116,883 records / 116,741 nodes / 26,748 cube nodes / 26,436 proof hashes, re-derives all CNF hashes with 0 mismatches, finds the class covered and all 910 roots covered, and detects 11 of 11 tampering cases. (c) The record files used by C3FINAL are unchanged between f788780c and HEAD 471d5f63a; only C3FINAL and C3SPOT were added. (d) The exact-integer encoding tests found 0 failures: 1,630 (set, k) cases, 3,260 frames, 1,155 k-gon-free; at m = 11 all 11 top cases were hit, 55 sets with no 8- or 9-gon satisfied the whole m = 11 formula, and 40 sets tested with k = 7 all contain a 7-gon, as Theorem 1 predicts. One test boundary: the k = 7 gon clauses can only be tested on in-class sets up to m = 10, because no 33-point in-class set is known.
 
 *Evidence.* logs/base_m11k7_info.json, logs/a2compose.log, logs/mutate_results.txt, logs/aggregate_tests.txt, logs/indep_symmax_m10.log, logs/indep_extend_*.log, logs/check_spot.log.
 
@@ -367,7 +367,7 @@ Of the 485 spot-checked nodes with a recorded proof_sha256, 480 reproduced the i
 ## Tests run by the auditor
 
 - gen_base_stream.py 11 7 (streaming, vendored byte-identical c3cnf.py): header p cnf 168399 4154921, sha256 bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da (match); check_stream_small.sh: stream output byte-identical to C3Enc.write for (3,5),(4,7),(5,6),(6,7)
-- git diff f788780c..9cf4949a5 over the C3 directories (only C3FINAL and C3SPOT added); all 280 record files present, 128,803 records
+- git diff f788780c..471d5f63a over the C3 directories (only C3FINAL and C3SPOT added); all 280 record files present, 128,803 records
 - a2compose.py (independent composer, own units, own sha derivation, own tree and phi maps) over the 280 files: class_covered true, 0 CNF-hash mismatches, 0 units-field mismatches, own units equal hullcase.node_units on all 116,741 names, all 910 recorded roots covered, explicit cut 73,567 nodes, 39 s, 535 MB RSS
 - a2compose.py --skip-cube-format: not covered (5 open H3 pairs), so the cover depends on the 396 sigma_cubes-format nodes
 - mutate_records.py + 11 composer runs (drop, cnf_sha alteration, cake_lpr string alteration, node rename on 3 cut pieces): all 11 report class_covered false

@@ -13,7 +13,7 @@
 #      in geo/.lake/packages is at its manifest revision with no tracked change (skipped with AUDIT_SKIP_BUILD=1).
 #   2. git cross-checks (skipped, with a note, outside a git checkout or with AUDIT_NO_GIT=1): every vendored
 #      ErdosSzekeres/<p> and every PINNED file under ../ equals the repository file at the commit recorded in
-#      VENDOR.sha256 (6a4e5c3c, the M9 commit; not the moving HEAD); once geo/ is committed, SOURCES.sha256 and
+#      VENDOR.sha256 (536800bf, the M9 commit; not the moving HEAD); once geo/ is committed, SOURCES.sha256 and
 #      VENDOR.sha256 equal their committed versions at HEAD. No unlisted file under ErdosSzekeres/.
 #   3. ES8Geo/{Capstone2,KeyOrder,OrbitConsistency}.lean equal results/LEANEXT/{capstone,keys,orbit}/<name> byte
 #      for byte;
@@ -54,14 +54,14 @@ NEW_NAMES="Labelling ModelBasic ArcBridge ModelOfLabelling Main Audit"
 NEW=""; for n in $NEW_NAMES; do NEW="$NEW ES8Geo/$n.lean"; done
 
 # ---------------------------------------------------------------------------------------------------------------
-# PINNED: recorded 2026-11-07 (M4-M8 fixer pass). The ../ entries equal the M9 commit 6a4e5c3c1249 (checked by
+# PINNED: recorded 2026-11-07 (M4-M8 fixer pass). The ../ entries equal the M9 commit 536800bfe8a3 (checked by
 # check 2 when git is available); the geo/ entries are the M4 build configuration and the two frozen manifests.
 PINNED=$(cat <<'EOF'
 e96bed27ce6745176081d29f8bfa9b2c17d82ea812d54d745ffbcce2b318f576  lakefile.toml
 9ed052f266fc14a4ef704c1e1aa7cbc92998b340ac007b47e782f846fcc56fd7  lake-manifest.json
 42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434  lean-toolchain
 52cf436dd8be4633a82d05de1450dd3671c0256f6bdeac45b98098639416a5e2  SOURCES.sha256
-8060ed40c53094599a5c93e105b1374cafb32d9fc8f3fd500f3203e634225ca2  VENDOR.sha256
+c192e80811b105abe718cd44fb6ea440cb6cc49cfc8199184d7d0172f8f1f6a5  VENDOR.sha256
 780b7d570523cc37606848d451a0aba686925a3ea0e9f647cbc161f6cf0b1842  ../lakefile.toml
 42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434  ../lean-toolchain
 b5add1d30739f96940dce83505ee98a93765a127a3f68854f312ac50fb0d1a41  ../lake-manifest.json

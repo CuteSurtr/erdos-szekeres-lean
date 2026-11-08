@@ -1,5 +1,5 @@
 # Verbatim copies of repository modules (the transitive closure of ErdosSzekeres.{Definitions,Orientation,
-# OrientationGeometry,Suk.OrientationClique}), copied 2026-11-07 from commit 6a4e5c3c12493cddb01049d23ee813e463c6554d.
+# OrientationGeometry,Suk.OrientationClique}), copied 2026-11-07 from commit 536800bfe8a3e6a6b8cc887dbdf8db5e2d622c47.
 # Check: (cd geo && sha256sum -c VENDOR.sha256) and compare with the repository paths of the same name.
 13667aa2d3dc83efd803c807e3cc1b9f692361b7d4f7853919796c1e3d154dc4  ErdosSzekeres/Basic.lean
 2425500eefd181ad4ebc30dc4cb1542a17bfb3605e5ee0d25bbbf4843406710e  ErdosSzekeres/Definitions.lean

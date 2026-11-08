@@ -1,6 +1,6 @@
 # A6: certificate trail
 
-Component audit, 1 November 2026 (UTC), against `es7-cloud` at 9cf4949a5. Texts returned by the auditor and by the independent verifier of each finding, lightly edited: machine paths replaced by placeholders and internal job names by descriptions; trust-table labels as explained in `../README.md`, §7.
+Component audit, 1 November 2026 (UTC), against `es7-cloud` at 471d5f63a. Texts returned by the auditor and by the independent verifier of each finding, lightly edited: machine paths replaced by placeholders and internal job names by descriptions; trust-table labels as explained in `../README.md`, §7.
 
 **Component.** CERTIFICATE TRAIL (A6): retained proof archives, checker logs vs recorded (CNF hash, proof hash) pairs, SYMMETRIC.md §3 replay and retention claims, tool versions
 
@@ -48,7 +48,7 @@ Tool versions recorded: CaDiCaL 3.0.1 c6073042 (printed in every solver log), lr
 
 ### A6-1 (major): The write-up's trust base does not cover the central-34 and C4CUT certificates the overall claim rests on
 
-SYMMETRIC.md §3 (revised 2026-10-29) still calls the central 34-point case open. It still assumes the published fourfold exclusion in Corollary 3, and lists replayed checks only for threefold, mirror and fivefold. It never says that the central-34 parallelogram part rests on about 2,385 check-and-delete records (proofs deleted, verdicts recorded). Only 38 of those units were re-solved with archived proofs: 7 pilot and 31 sample, including 2 reproducibility tests. It also omits the C4CUT certificate. CERTIFICATES.md has no entries for the three 2026-11-01 archives (es7-c4-32-cuts, es7-central34-pilot-resolve, es7-central34-resample), and its central34-cover entry still says the case 'remains open'. The C4CUT README still says 'An independent review is pending', although commit 755081b76 recorded one. No certificate failed, but the overall claim cannot be stated with this trust base as written.
+SYMMETRIC.md §3 (revised 2026-10-29) still calls the central 34-point case open. It still assumes the published fourfold exclusion in Corollary 3, and lists replayed checks only for threefold, mirror and fivefold. It never says that the central-34 parallelogram part rests on about 2,385 check-and-delete records (proofs deleted, verdicts recorded). Only 38 of those units were re-solved with archived proofs: 7 pilot and 31 sample, including 2 reproducibility tests. It also omits the C4CUT certificate. CERTIFICATES.md has no entries for the three 2026-11-01 archives (es7-c4-32-cuts, es7-central34-pilot-resolve, es7-central34-resample), and its central34-cover entry still says the case 'remains open'. The C4CUT README still says 'An independent review is pending', although commit fcf202869 recorded one. No certificate failed, but the overall claim cannot be stated with this trust base as written.
 
 *Evidence.* WRITEUP/SYMMETRIC.md §1 (Corollary 3), §3 and §4; WRITEUP/CERTIFICATES.md (central34-cover; no 2026-11-01 entries); C4CUT/README.md line 14; C2FINAL/README.md §8 finding 6; C2P/README.md ('Every UNSAT proof was checked ... and then deleted')
 
@@ -61,13 +61,13 @@ Every factual part of the finding checks out except one misattribution: it is §
 Confirmed:
 - SYMMETRIC.md is dated "Revised 2026-10-29". Corollary 3 (line 59) assumes the published fourfold exclusion. "Checks actually replayed" lists only threefold, mirror and fivefold. C4CUT, C2P, C2FINAL and the deleted central-34 proofs are not mentioned anywhere.
 - CERTIFICATES.md has no entry for es7-c4-32-cuts, es7-central34-pilot-resolve or es7-central34-resample. Its central34-cover entry says the case "remains open" (line 154).
-- C4CUT/README.md line 14 still says "An independent review is pending", and line 81 still says "conditional on the encoder review". Commit 755081b76 edited that README and added review/README.md ("No blocking or major finding") without changing either line.
+- C4CUT/README.md line 14 still says "An independent review is pending", and line 81 still says "conditional on the encoder review". Commit fcf202869 edited that README and added review/README.md ("No blocking or major finding") without changing either line.
 
 My own recount (recount_a61.py) agrees with the auditor's numbers:
 - 2,492 records (2,424 from the waves, 68 from the pilot).
 - 2,385 UNSAT, all with both checker verdicts; 107 UNKNOWN; no proof kept. lane.py and lane3.py delete the proof after checking.
 - The records cover the 2,304 facts the claim needs (8 covers plus 8 x 287 orbits); there are 2,321 distinct certified units.
-- At the audited commit 9cf4949a5, exactly 38 units have archived re-solved proofs: 7 pilot, 2 reproducibility tests, 21 main sample, 8 extra sample. All are accepted by both checkers and pass the decompression round trip, and all 31 sample re-solves reproduce the recorded proof SHA-256.
+- At the audited commit 471d5f63a, exactly 38 units have archived re-solved proofs: 7 pilot, 2 reproducibility tests, 21 main sample, 8 extra sample. All are accepted by both checkers and pass the decompression round trip, and all 31 sample re-solves reproduce the recorded proof SHA-256.
 
 Further staleness the auditor did not cite, all in the same direction:
 - The LaTeX note (line 122 assumes the fourfold exclusion of SMQH25; line 248 says the parallelogram cases are open).
@@ -82,7 +82,7 @@ Severity:
 
 One part of the suggested fix is lighter than stated. Per-file archive SHA-256 values for the pilot-resolve and resample archives are already in the repository (C2FINAL/pilot/out.jsonl, sample/out.jsonl, extra_out.jsonl); they only need collecting into CERTIFICATES.md. The C4 archive (.zst) hashes exist only in the archive's own SHA256SUMS, outside Git.
 
-Context outside the audited snapshot: after 9cf4949a5, P6_9-11 and P7_1-15 were re-solved in the work directory (repro3b.jsonl, uncommitted). Both reproduced the recorded proof and passed both checkers. P8_1-10 was still running. This does not change the finding.
+Context outside the audited snapshot: after 471d5f63a, P6_9-11 and P7_1-15 were re-solved in the work directory (repro3b.jsonl, uncommitted). Both reproduced the recorded proof and passed both checkers. P8_1-10 was still running. This does not change the finding.
 
 *Verifier's evidence.* Scripts and outputs are in AUDIT3/A6_certificates/verify_A6-1/ (recount_a61.py/.out, doccheck_a61.py/.out).
 
@@ -98,7 +98,7 @@ doccheck results, with R = results:
   - line 154 "the central 34-point case remains open"
   - no entry for es7-c4-32-cuts, es7-central34-pilot-resolve or es7-central34-resample
   - "Not in the archive" covers only the threefold and mirror-chain proofs
-- R/C4CUT/README.md line 14 "An independent review is pending", line 81 "conditional on the encoder review above". Commit 755081b76 changed this README in 2 hunks and added review/README.md (line 7: "No blocking or major finding").
+- R/C4CUT/README.md line 14 "An independent review is pending", line 81 "conditional on the encoder review above". Commit fcf202869 changed this README in 2 hunks and added review/README.md (line 7: "No blocking or major finding").
 - R/C4CUT/final.json has no .zst SHA-256. The archive's SHA256SUMS lists c4_n32L_cuts.cnf.zst as 3dcb8921... and c4cuts.lrat.zst as 0bf2d79e...; git grep finds neither hash in the repository.
 - R/C2FINAL/README.md: line 7 "not yet claimed"; line 163 is finding 6 (Minor: SYMMETRIC.md still describes the parallelogram cases as open); deleted proofs are mentioned only for the 7 pilot records (lines 51-53).
 - R/C2P/README.md line 10 "Every UNSAT proof was checked by lrat-check and cake_lpr and then deleted"; R/C2P/tools/lane.py line 120 and lane3.py line 134 call os.remove on the proof.
@@ -191,7 +191,7 @@ The finding's factual core is right. One comparative claim is wrong, and the arc
 
 Confirmed:
 1. c4final.sh keeps only the first grep'd line of each checker's output (line 25 for lrat-check, line 27 for cake_lpr). Exit codes are not kept either. final.json says archive_roundtrip "ok" but records no SHA-256 of the .zst files.
-2. Neither 3dcb8921... nor 0bf2d79e... appears anywhere in the repo working tree at 9cf4949a5.
+2. Neither 3dcb8921... nor 0bf2d79e... appears anywhere in the repo working tree at 471d5f63a.
 3. The archive's SHA256SUMS lists 11 files, but the script copies only the two .zst files (line 30) and five small files (line 31). So c4cut.log, controls.py, c4final.sh and final.json were added by hand; all four have mtime 16:26, the same as SHA256SUMS. The SHA256SUMS written by line 40 was then regenerated outside the script. All 11 entries verify.
 4. The archived verify_cuts.py is the pre-review version. It lacks the distinct-anchor assert, the type(w) is int check and the map-hash print.
 
@@ -243,7 +243,7 @@ My logs (all in AUDIT3/A6_certificates/verify_A6-3/):
 - verify_cuts_both.log: the archived and repo verify_cuts.py both print "6 cuts verified".
 - scripts/lrat_fingerprint.awk and scripts/lrat_ids_cuts.awk
 
-Repo grep at 9cf4949a5: no file contains 3dcb8921 or 0bf2d79e.
+Repo grep at 471d5f63a: no file contains 3dcb8921 or 0bf2d79e.
 
 ### A6-4 (minor): The 'independent audit' replays are not logged anywhere in the repository
 
@@ -266,7 +266,7 @@ Smaller corrections to the auditor:
 
 I agree that the lrat-check replays cannot be repeated under the rules. The CNFs are 620 MB and 283 MB, both over the 50 MB in-memory limit, and lrat-check holds the whole formula in memory.
 
-*Verifier's evidence.* The repository (worktree at 9cf4949a5 and all refs) has no replay logs:
+*Verifier's evidence.* The repository (worktree at 471d5f63a and all refs) has no replay logs:
 - git grep HEAD for 'verification time = (45.x|17.x|18.x) secs' finds nothing.
 - Pickaxe search over all refs for the lrat-check count lines 'Added clauses = 41860266' (mirror34) and 'Added clauses = 18748988' (L1) finds only the original logs, added in 40eec3337 and 1406f90d4. Their verification times are 58.14 s, 50.15 s and 14.26 s.
 - git log --all finds no commit touching *lrat-replay*, *composition-replay* or the audit directory.
@@ -311,7 +311,7 @@ The finding is correct, and minor is the right severity.
 2. **One part of the finding is weak on its own.** "tools/symmetric holds no logs" is true; it holds only source files. But the sentence can be read as "spread over the three directories", and on that reading this is not a defect by itself. The real defect is that the c3hex log is in none of the three directories, nor anywhere else in the repository.
 
 3. **Two extra imprecisions in the same sentence.**
-   - The cover logs are in results/C2FINAL/evidence, not in the three named directories. They were added in e294d5c2a on 2026-11-01, after the sentence was written in 189ab709a on 2026-10-29.
+   - The cover logs are in results/C2FINAL/evidence, not in the three named directories. They were added in 57bc5a901 on 2026-11-01, after the sentence was written in 189ab709a on 2026-10-29.
    - c3hex is the only certificate with no solver log anywhere. It was solved with -q, and the original session's scratch folder has no c3hex CaDiCaL log either.
 
 4. **The archived log is as described.** It has 179 bytes and 4 lines: the file stems, the p cnf headers and the two verdicts. It has no hashes, no proof file names, no timings and no tool identity. A byte-identical copy survives only in a temporary work folder.
@@ -348,7 +348,7 @@ The finding is correct, and minor is the right severity.
 - es7w/cloud/es7-2026-10-19/tools/symmetric holds source files only.
 - results/SYMMAX/k6 holds the CNF .gz files only: no logs and no proofs.
 - In the archive, <proof-archives>/es7-symmetry/c3hex/chk_c3hex.log has 4 lines and SHA-256 e510ad14...b90, with no input hashes. The c3hex folder there has no cad_*.out.
-- The cover logs live in results/C2FINAL/evidence/central34-cover. They were added in e294d5c2a on 2026-11-01 and are not in the directories the sentence names.
+- The cover logs live in results/C2FINAL/evidence/central34-cover. They were added in 57bc5a901 on 2026-11-01 and are not in the directories the sentence names.
 
 ### A6-6 (minor): The random re-solve sample is incomplete in the repository, and the draw cannot be reproduced
 
@@ -363,7 +363,7 @@ Three of the 24 main-sample units have no record: P6_9-11, P7_1-15 and P8_1-10, 
 Half of the finding holds and half is overstated.
 
 What holds:
-- At the repository tip 9cf4949a5 (= origin/es7-cloud), sample.txt lists 24 units: 2 H and 1 Q per case. out.jsonl has 23 lines: the 2 reproducibility tests plus 21 main-sample units (16 H, 5 Q).
+- At the repository tip 471d5f63a (= origin/es7-cloud), sample.txt lists 24 units: 2 H and 1 Q per case. out.jsonl has 23 lines: the 2 reproducibility tests plus 21 main-sample units (16 H, 5 Q).
 - P6_9-11@C2P3/M31, P7_1-15@C2P/M40 and P8_1-10@C2P2/M02 have no record. All three are Q.
 - C2FINAL's own status line says the theorem is not yet claimed for this reason. No other document (C2C34 'open', SYMMETRIC.md, CERTIFICATES.md) claims it, so nothing is overclaimed. The gap is real but disclosed.
 - No draw script exists anywhere in git history. `git log -S` finds the seeds only in the README, and reproduce.py takes the units as arguments.
@@ -378,7 +378,7 @@ What is wrong:
 - Extra draw: Random(20261102); for each case, sample 1 H from the H units not already in the main sample. This gives 8/8 in order.
 - Neighbouring seeds and the string seed do not give the list. A chance match is negligible: about 1 in 200^16 × 56^8.
 - So the selection is a fixed function of a date seed and the committed records, and it could not have depended on re-solve outcomes.
-- Git alone cannot show the wall-clock order: sample.txt was first committed in 6c3e61ba7 together with 5 result lines. That matters little once the seeded selection reproduces. Local files agree with the timing claim: resolve/sample.txt was created at 07:16:23Z, before the first re-solve at 07:33:27Z.
+- Git alone cannot show the wall-clock order: sample.txt was first committed in 7cf0a65eb together with 5 result lines. That matters little once the seeded selection reproduces. Local files agree with the timing claim: resolve/sample.txt was created at 07:16:23Z, before the first re-solve at 07:33:27Z.
 - What remains is documentation: the dedup and sort rules and the exclusion rule for the extra draw are not written down.
 - Small slip: the P7_1-15 archive's mtime is 21:12:40 local, not 21:05. zstd copies the proof's mtime; the record finished at 21:16:13 local, and its solve only started at 21:05:26 local.
 
@@ -405,7 +405,7 @@ Severity: minor. This is fixable bookkeeping that does not threaten the claim: c
   - P7_1-15: 4592627388 bytes, sha 8384801a…, equal to the C2P/M40 record.
 - **Git**
   - `git grep` of the tip finds neither archive hash and no seed outside C2FINAL/README.md.
-  - The C2FINAL/sample history is 6c3e61ba7 (adds sample.txt, reproduce.py and out.jsonl with 5 lines), e294d5c2a, then 9cf4949a5 (adds extra_sample.txt and extra_out.jsonl).
+  - The C2FINAL/sample history is 7cf0a65eb (adds sample.txt, reproduce.py and out.jsonl with 5 lines), 57bc5a901, then 471d5f63a (adds extra_sample.txt and extra_out.jsonl).
 - **Timestamps**
   - `stat` of P7_1-15.lrat.zst gives birth and mod time 2026-11-01 21:12:40 KST, not 21:05.
   - resolve/reproduce.log: P7_1-15 solve started 12:05:26Z and ended 12:16:13Z.

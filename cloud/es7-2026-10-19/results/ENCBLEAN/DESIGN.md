@@ -114,7 +114,7 @@ Deviations:
    `Orbit.lean` restates `orient_rotAbout_inv` for `LayerLemma.rotAbout`. "LL line n" is Capstone2 line n + 8.
 3. The repository is not required by path (the M4 row said `../../../../..`): lake would build it inside the
    repository's frozen `.lake`. Its ten modules that the geometry imports are vendored verbatim into
-   `geo/ErdosSzekeres/` (`geo/VENDOR.sha256`, compared by the audit with the recorded commit `6a4e5c3c`).
+   `geo/ErdosSzekeres/` (`geo/VENDOR.sha256`, compared by the audit with the recorded commit `536800bf`).
 4. The field theorems take only the standing hypotheses they use (e.g. rules A/B: `hm heven L`); `sixfold66_of_no_model`
    is added as the common core; ArcBridge lifts directions by 2π instead of relabelling cyclically (§3.4).
 Updated here: the M4, M5, M6 and M8 rows of §4 and its done list, and R2 and R5 of §5. No definition or statement
@@ -127,7 +127,7 @@ minor), all about the audit, the docs and the scope of the final statement; none
 texts hypothesis equivalent to `CubesUnsat64`; every final statement and the two `rfl` lemmas are pinned by
 `#guard_msgs`; `sixfold66_of_no_model` is a term with its numeral side conditions in `EncB.Geo.MainAux`;
 `geo/scripts/audit_geo.sh` now pins the build configuration and the `EncB` definitions by hash, forbids Lean options in
-the lakefiles, compares with commit `6a4e5c3c` instead of HEAD, runs without git, re-elaborates all six M5–M8 files,
+the lakefiles, compares with commit `536800bf` instead of HEAD, runs without git, re-elaborates all six M5–M8 files,
 treats `Model 6 8 11`, named arguments and the cube/text names as mentions of the instance and requires the
 declarations that mention it to be terms, and has a committed `--selftest` (23 cases). P1 is not edited (outside the
 package). The statements of §1.1, §2.1 and §2.4 are unchanged.

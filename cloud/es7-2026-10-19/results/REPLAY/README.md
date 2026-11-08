@@ -1,6 +1,6 @@
 # REPLAY: hash-bound replay of retained certificates
 
-Local runs on an Apple M5 Pro, 1 November 2026 (UTC), 14:10–18:02, against `es7-cloud` at 9cf4949a5.
+Local runs on an Apple M5 Pro, 1 November 2026 (UTC), 14:10–18:02, against `es7-cloud` at 471d5f63a.
 
 **Status.**
 - All 191 manifest entries passed the hash check: archive, proof and CNF.
@@ -16,7 +16,7 @@ claim of independence.
 ## 1. Manifest (`build_manifest.py`, `manifest.json`, `manifest.tsv`, `plan.py`)
 
 - **Sources.** Every value is copied from a record named in the entry's `source` field:
-  - `repo:<path>@9cf4949a5`: committed;
+  - `repo:<path>@9cf4949a5`: committed (the commit is 471d5f63a since `SCRUB20261109`);
   - `archive-self:<file>`: written into the archive by the job that made it;
   - `live:<file>`: records of that night's local re-solve jobs, not committed here.
 - **Entries.** 191 in all:

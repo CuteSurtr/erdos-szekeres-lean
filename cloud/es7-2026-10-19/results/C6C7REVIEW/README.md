@@ -1,6 +1,6 @@
 # Sixfold and sevenfold octagon review — 4 November 2026
 
-Branch: `es8-c6c7-review-2026-11-04`, based on `44530b46fef0632bf8d8829c9bb5d694e271fb30`. All paths below are relative to this review directory or the parent results directory.
+Branch: `es8-c6c7-review-2026-11-04`, based on `57785fbabcc8de62c19d9f3b93002c9ca9a8997c`. All paths below are relative to this review directory or the parent results directory.
 
 *Note added 6 November 2026 (results branch, after 07:41 KST).* This review record is unchanged. Afterwards, the
 hash-bound cake_lpr replay (6 Nov 2026) regenerated all 64 sixfold cube formulas (32 per encoder) with their recorded

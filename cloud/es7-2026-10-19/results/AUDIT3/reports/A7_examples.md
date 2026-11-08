@@ -1,6 +1,6 @@
 # A7: lower-bound examples
 
-Component audit, 1 November 2026 (UTC), against `es7-cloud` at 9cf4949a5. Texts returned by the auditor and by the independent verifier of each finding, lightly edited: machine paths replaced by placeholders and internal job names by descriptions; trust-table labels as explained in `../README.md`, §7.
+Component audit, 1 November 2026 (UTC), against `es7-cloud` at 471d5f63a. Texts returned by the auditor and by the independent verifier of each finding, lightly edited: machine paths replaced by placeholders and internal job names by descriptions; trust-table labels as explained in `../README.md`, §7.
 
 **Component.** LOWER-BOUND EXAMPLES (SYMMAX 3-/4-/5-/6-fold and mirror sets, SYMMAX/k6 hexagon sets, SYM2 central 32-point set, SYM5/c5_31minus_centre)
 
@@ -159,5 +159,5 @@ mirror_32 (a mirror and no point on the axis) and sym7_32 (central symmetry) are
 - centre collinearity check for centre-free sets (centre_collinearity.log)
 - Project's own verifyg.py / verify5.py + brute.c run on copies of all 15 files in my output directory: all PASS with the same numbers (project_checkers_on_copies/project_checkers.log)
 - Orientation tables compared entry by entry with the project's .orient output: identical for all 15 files (orient_table_comparison.log)
-- git status of the read-only worktree after the audit: clean, HEAD 9cf4949a5
+- git status of the read-only worktree after the audit: clean, HEAD 471d5f63a
 

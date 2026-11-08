@@ -1,6 +1,6 @@
 # A1: reduction to the case theorems
 
-Component audit, 1 November 2026 (UTC), against `es7-cloud` at 9cf4949a5. Texts returned by the auditor and by the independent verifier of each finding, lightly edited: machine paths replaced by placeholders and internal job names by descriptions; trust-table labels as explained in `../README.md`, §7.
+Component audit, 1 November 2026 (UTC), against `es7-cloud` at 471d5f63a. Texts returned by the auditor and by the independent verifier of each finding, lightly edited: machine paths replaced by placeholders and internal job names by descriptions; trust-table labels as explained in `../README.md`, §7.
 
 **Component.** REDUCTION: Corollary 3 (WRITEUP/SYMMETRIC.md §1-2, note/symmetric_es7.tex Lemma sizes, Cor. cor:only, Prop. prop:C), extended by the central 34-point case, plus the table of largest symmetric 7-gon-free sizes
 
@@ -77,7 +77,7 @@ No document states and proves the overall claim. SYMMETRIC.md is out of date in 
 
 The finding is correct in substance. It is documentation only and does not threaten the claim, so minor stands.
 
-1. The assembled theorem is not written anywhere. At tip 9cf4949a5 no document states "every set of >= 33 points in general position with a nontrivial symmetry contains a convex 7-gon", with or without C2-34 as a hypothesis. The nearest statements fall short:
+1. The assembled theorem is not written anywhere. At tip 471d5f63a no document states "every set of >= 33 points in general position with a nontrivial symmetry contains a convex 7-gon", with or without C2-34 as a hypothesis. The nearest statements fall short:
 - SYMMETRIC.md Cor. 3 and tex cor:only still assume the published fourfold exclusion and leave the half-turn case.
 - SYMMAX/README.md:29 states only the 33-point version.
 
@@ -137,7 +137,7 @@ The finding is correct, and minor is the right severity. It is a documentation a
 
 3. **SYM5 inconsistency.** SYM5 §4 (lines 123-134) says the authors found that none of the inner 12-point configurations is realizable. It says the exclusion "rests on the enumeration" and that "the abstract route fails". The first two statements conflict with C4CUT's view of the source's rigor. The third is outdated, because C4CUT closes the abstract route with six cuts. C4CUT/review/README.md item 5 already records that SYM5 §4 is waiting for an update.
 
-4. **Stale wording in C4CUT.** C4CUT/README.md lines 13-14 say "no independent review" and "An independent review is pending", and line 81 says "conditional on the encoder review above". The review is recorded with the verdict "No blocking or major finding". Git shows that the review commit, 755081b76, edited C4CUT/README.md (it added the map hash and reworded the "match" claim) but left those lines unchanged.
+4. **Stale wording in C4CUT.** C4CUT/README.md lines 13-14 say "no independent review" and "An independent review is pending", and line 81 says "conditional on the encoder review above". The review is recorded with the verdict "No blocking or major finding". Git shows that the review commit, fcf202869, edited C4CUT/README.md (it added the map hash and reworded the "match" claim) but left those lines unchanged.
 
 5. **Redundancy for the 33-point claim.** I checked this by argument and by script for orders up to 60 and sizes up to 600. A fourfold rotation squared is the half-turn, so a fourfold set has size 4k >= 36, and 17 of its antipodal pairs give a C2-34 instance. With C2-34, the fourfold result is redundant for every n >= 33.
 
@@ -154,13 +154,13 @@ The finding is correct, and minor is the right severity. It is a documentation a
 
 *Verifier's evidence.* Paper text (arxiv.org/html/2506.00224v1, sha256 55b82919...): §6.2: "We attempted to realize several of them using heuristics ... the inner 12 points were never realizable. Afterwards we observed that all 310 million solutions have only 6 different configurations to the inner 12 points and none of those are realizable." §6.1 footnote 2: "The realizer tool can only determine realizability, not unrealizability." The public repository bsubercaseaux/automatic-symmetries (19 files) has only 16-point experiments.
 
-Repository at 9cf4949a5:
+Repository at 471d5f63a:
 - C4CUT/README.md lines 10-14 and 81 as quoted.
 - SYM5/README.md lines 123-134.
 - SYMMETRIC.md lines 59-60, 81 and 200-202.
 - tex lines 21-23, 37, 122-123, 165-166 and 249-251.
 - C2FINAL/README.md: "not yet claimed".
-- git show 755081b76: README edited, pending lines untouched.
+- git show fcf202869: README edited, pending lines untouched.
 - C4CUT/review/README.md item 5.
 
 My outputs, in AUDIT3/A1_reduction/verify_A1-F2/:
@@ -222,7 +222,7 @@ Checksums: SHA256SUMS.txt in the same folder.
 
 ### A1-F4 (note): The overall claim depends on C2-34, which C2FINAL does not yet claim
 
-At repository snapshot 9cf4949a5, C2FINAL/README.md says the C2-34 statement is not yet claimed: 21/24 main sample units and 8/8 extra units were done. The live run directory, outside the repository, shows two of the three missing Q units, P6_9-11 and P7_1-15, re-solved and accepted by both checkers (resolve/repro3b.jsonl). P8_1-10 was still running at about 21:24. The reduction itself has no gap. Until C2FINAL releases its claim, the overall theorem should be described as conditional on C2-34.
+At repository snapshot 471d5f63a, C2FINAL/README.md says the C2-34 statement is not yet claimed: 21/24 main sample units and 8/8 extra units were done. The live run directory, outside the repository, shows two of the three missing Q units, P6_9-11 and P7_1-15, re-solved and accepted by both checkers (resolve/repro3b.jsonl). P8_1-10 was still running at about 21:24. The reduction itself has no gap. Until C2FINAL releases its claim, the overall theorem should be described as conditional on C2-34.
 
 *Evidence.* C2FINAL/README.md lines 5-7, 93-99; C2FINAL/sample/out.jsonl (23 lines); <night run>/repro3b.jsonl
 

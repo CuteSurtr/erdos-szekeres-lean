@@ -1,7 +1,7 @@
 # ES8SLACK: where the slack is in the omission proof of ES(8) ≤ 311
 
 Local computations on an Apple M5 Pro, 1 November 2026 (UTC), over the omission records on `es7-cloud` at
-9cf4949a5.
+471d5f63a.
 
 **Status.** Negative results and planning evidence. Nothing here improves ES(8) ≤ 311.
 - Residual side: no slack. Over the present 2,650 rows with state 0 occupied, at least 33 holes are forced
@@ -128,7 +128,7 @@ the residual side needs additional valid rows.
 - `math.md` §6.7 already states that the present rows admit 33-hole assignments, so residual budget 33 cannot be
   excluded over them.
 - Witnesses 1 and 2 came from HiGHS MIP runs; witness 2 is the solution in `probes/p9_res_diversity.json`, and the
-  run that produced witness 1 was not kept. Neither occurs in the 2,504 JSON files of the repository at 9cf4949a5
+  run that produced witness 1 was not kept. Neither occurs in the 2,504 JSON files of the repository at 471d5f63a
   that were scanned (`review/C3_residual/search_repo_witnesses.py`, run before this directory existed).
 
 **Checks.**
@@ -419,7 +419,7 @@ eight times" (`math.md` §6.7).
   - the run that produced residual witness 1;
   - the inline two-column LP;
   - the scripts that wrote `review/C3_residual/negative_controls_out.json` and `fourth_vector_check_out.txt`.
-- `review/C3_residual/search_repo_witnesses.py` scanned the repository at 9cf4949a5, before this directory existed,
+- `review/C3_residual/search_repo_witnesses.py` scanned the repository at 471d5f63a, before this directory existed,
   and peaked at about 1.9 GB. Run from its committed location it also reads this directory, whose files contain the
   witnesses.
 - **Transfer from ES(7)** (C17; conjecture). The symmetric ES(7) theorems of this branch do not constrain these
@@ -578,4 +578,4 @@ cd $D
 - The seeds of the randomized runs and the time limits of `p10` were not recorded. The time limits of the other
   recorded runs are in their file names or in `probe_results.json`.
 - The review compiled `EarlyVertex.lean` in a checkout of branch `main`. All 50 `ErdosSzekeres` modules it
-  imports, directly or transitively, are byte-identical to those on `es7-cloud` at 9cf4949a5.
+  imports, directly or transitively, are byte-identical to those on `es7-cloud` at 471d5f63a.

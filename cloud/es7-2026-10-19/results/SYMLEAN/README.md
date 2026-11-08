@@ -260,7 +260,7 @@ and with its own scripts. None found an error in the implication. Apart from the
 not in this directory. The tenth claim, a floating-point check that the map formulas send the project's example sets
 onto themselves (computational evidence), was not checked again.
 - **Build.** The file compiled with exit 0 and no messages. Four checks rebuilt the imported repository modules from
-  the sources at 9cf4949a5 (one of them together with H and H3, §5) and compiled the file against them. One of them
+  the sources at 471d5f63a (one of them together with H and H3, §5) and compiled the file against them. One of them
   re-sent all 114 compiled constants (95 theorems, 19 definitions, auxiliaries included) to the kernel. All were
   accepted, and a mismatched proof was rejected.
 - **Statements.** The main theorem and the variant were restated with explicit coordinate formulas outside the
@@ -297,7 +297,7 @@ repository root (Lean 4.24.0, Mathlib `f897ebcf`). The Mac was also running SAT 
 - The max RSS is mostly memory-mapped Mathlib files. The reviews measured a private footprint of at most 0.47 GB.
 - The imported repository modules (`Definitions`, `Basic`, `Orientation`, `OrientationGeometry`, `Suk/TriangleOrder`,
   `Suk/BaseChart`, `Suk/BaseOrder`, `Suk/SupportingLines`) are byte-identical in the checkout used and on
-  `es7-cloud` at 9cf4949a5.
+  `es7-cloud` at 471d5f63a.
 - Paths in the logs are relative to `cloud/es7-2026-10-19/results`. `logs/runs.tsv` adds start times and CPU times.
 - `review/VariantChecks.lean` was compiled once more in the review of this directory, with the same output (14.9 s,
   2.24 GB).

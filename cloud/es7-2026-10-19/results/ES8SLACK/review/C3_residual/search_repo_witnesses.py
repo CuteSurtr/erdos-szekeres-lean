@@ -3,7 +3,7 @@
 either as hole-index lists (any order) or as 0/1 vectors of length 154 (1 = hole) or occupied-state
 lists (complements).  JSON and gzipped JSON files up to 40 MB are scanned; also a raw text search of
 the compact and spaced sorted prefixes.
-The recorded scan ran on the repository at 9cf4949a5, before ES8SLACK existed. Run from ES8SLACK, the
+The recorded scan ran on the repository at 471d5f63a, before ES8SLACK existed. Run from ES8SLACK, the
 scan also reads ES8SLACK's own files, which contain the witnesses (witnesses.json and others).
 Peak memory about 1.9 GB.
 Usage: python3 -I search_repo_witnesses.py

@@ -1,6 +1,6 @@
 # A4: fivefold, layer lemma and the even-m layered encoder
 
-Component audit, 1 November 2026 (UTC), against `es7-cloud` at 9cf4949a5. Texts returned by the auditor and by the independent verifier of each finding, lightly edited: machine paths replaced by placeholders and internal job names by descriptions; trust-table labels as explained in `../README.md`, §7. "Bogdan" below is B. C. Dumitru, the author of arXiv:2512.24061 (`../README.md`, §5 row 7).
+Component audit, 1 November 2026 (UTC), against `es7-cloud` at 471d5f63a. Texts returned by the auditor and by the independent verifier of each finding, lightly edited: machine paths replaced by placeholders and internal job names by descriptions; trust-table labels as explained in `../README.md`, §7. "Bogdan" below is B. C. Dumitru, the author of arXiv:2512.24061 (`../README.md`, §5 row 7).
 
 **Component.** FIVEFOLD >= 35, the layer lemma, and the even-m layered encoder (SYM5 + C4CUT)
 
@@ -240,12 +240,12 @@ C4CUT/README.md still says the even-m encoder has 'no independent review. An ind
 
 **Independent check:** real = yes; severity minor -> **minor**.
 
-The finding is correct, and minor is the right severity. I checked every quoted statement against the committed files at HEAD 9cf4949a5. All of them exist where the auditor says.
+The finding is correct, and minor is the right severity. I checked every quoted statement against the committed files at HEAD 471d5f63a. All of them exist where the auditor says.
 
 **The C4CUT README is plainly stale.**
 - It still says the even-m encoder has "no independent review. An independent review is pending." It also says N(C4) = 28 is "conditional on the encoder review above".
 - C4CUT/review/README.md, dated 1 Nov 2026, reviewed exactly that encoder (symcnf_layers.py with m = 4). Its verdict is "No blocking or major finding".
-- Commit 755081b76, which recorded the review, edited C4CUT/README.md in two other places but left these lines unchanged.
+- Commit fcf202869, which recorded the review, edited C4CUT/README.md in two other places but left these lines unchanged.
 
 **The other documents still lean on the paper.**
 - SYM5 §4 still says the exclusion "rests on the enumeration in arXiv 2506.00224".
@@ -271,7 +271,7 @@ The finding is correct, and minor is the right severity. I checked every quoted 
 2. The list of stale places is incomplete. Further statements cite the paper or leave C4CUT out; the evidence field lists them.
 3. Two of the cited items are already flagged as pending by the project itself (review item 5, and C4CUT §5 "WRITEUP itself is not changed here"). The "review is pending" line was never flagged.
 
-*Verifier's evidence.* **Committed text at HEAD 9cf4949a5** (paths relative to R = results):
+*Verifier's evidence.* **Committed text at HEAD 471d5f63a** (paths relative to R = results):
 - C4CUT/README.md
   - l.12-14: "...one real-set test (`SYM5/validate_z2.py`) and no independent review. **An independent review is pending.**"
   - l.81: "Hence N(C4) = 28, conditional on the encoder review above."
@@ -281,7 +281,7 @@ The finding is correct, and minor is the right severity. I checked every quoted 
   - l.7: "No blocking or major finding."
   - l.11: the encoder symcnf_layers.py with m = 4 was checked for every clause family.
   - l.68: "`SYM5/README.md` §4 still cites the enumeration; it will be updated with the write-up."
-- `git show 755081b76`: the review commit changes C4CUT/README.md only at the map-hash line and the "matching the six patterns" wording.
+- `git show fcf202869`: the review commit changes C4CUT/README.md only at the map-hash line and the "matching the six patterns" wording.
 - SYM5/README.md
   - l.124: "(arXiv 2506.00224, §6.2)"
   - l.133-134: "the abstract route fails, and the exclusion rests on the enumeration in arXiv 2506.00224".
@@ -301,7 +301,7 @@ The finding is correct, and minor is the right severity. I checked every quoted 
   - SYMZ/README.md l.82
   - WRITEUP/CERTIFICATES.md: no C4CUT archive entry
   - `git grep 'C4CUT|es7-c4-32-cuts'` outside C4CUT/: no hits.
-- Central-34 status: C2FINAL/README.md l.7 says the statement "is **not yet claimed**". Commit 9cf4949a5 says "the claim stays open".
+- Central-34 status: C2FINAL/README.md l.7 says the statement "is **not yet claimed**". Commit 471d5f63a says "the claim stays open".
 
 **Paper** (arXiv HTML v1, downloaded to verify_A4-4/download_arxiv/):
 - §6.2: "We attempted to realize several of them using heuristics ... all 310 million solutions have only 6 different configurations to the inner 12 points and none of those are realizable. Thus, there does not exist a realizable 4-fold symmetry on 32 points without a 7-gon."
@@ -331,7 +331,7 @@ results/E2 found that upstream lrat-check (drat-trim 2e3b2dc) accepts a forged o
 The finding is correct, and minor is the right severity. It is a real gap in the records, but the claim does not depend on it.
 
 What I confirmed:
-- c4final.sh takes the binary directory as $2. Nothing names the lrat-check and cake_lpr builds used or their hashes: not final.json (repo or archive copy), README §3, the archive's SHA256SUMS, or the commit messages 4292bd34b and 755081b76.
+- c4final.sh takes the binary directory as $2. Nothing names the lrat-check and cake_lpr builds used or their hashes: not final.json (repo or archive copy), README §3, the archive's SHA256SUMS, or the commit messages 33ac934d4 and fcf202869.
 - The project does pin its tools elsewhere (the CERTIFICATES.md tools table and es7-symmetry/tools/tools_sha256.txt). C4CUT never appears in CERTIFICATES.md, so it departs from the project's own practice.
 - The gap matters in principle. The unsound upstream build is on this machine: sha bd7eb805…, at <local-tools>/sat/src/drat-trim/lrat-check (drat-trim git 2e3b2dc), with a copy under work/m10. It is the same size as the patched build (36,552 bytes) and prints the exact string final.json stores, "c VERIFIED".
 - My controls on the satisfiable CNF "1 0": bd7eb805 accepts both "2 0 0" and "2 0 1 0" (exit 0). The patched builds f2046212 and 66780e68 reject both.

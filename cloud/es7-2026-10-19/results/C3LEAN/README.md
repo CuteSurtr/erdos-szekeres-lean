@@ -1,6 +1,6 @@
 # C3LEAN: a Lean check of the threefold 33-point composition
 
-Local runs on an Apple M5 Pro, 1 November 2026 (UTC), over the run records on `es7-cloud` at 9cf4949a5.
+Local runs on an Apple M5 Pro, 1 November 2026 (UTC), over the run records on `es7-cloud` at 471d5f63a.
 
 **Statement (Lean-checked).** Each of the 910 depth-2 roots of the reduced threefold case split is covered by the
 73,567 leaves named in `C3Cover.lean`, through layer splits and σ-splits. The roots are computed in Lean from the
@@ -130,8 +130,8 @@ certified record.
   - **All 73,707 certified records behind the 73,567 leaves match, 0 mismatches** (`review/logs/indep_audit.json`;
     21 s, 1.39 GB). `compose.py` had matched all 116,883 certified records in `C3FINAL`.
 - **Inputs unchanged.** The git blob ids of the 280 record files are the same at f788780c (the `C3FINAL` snapshot), at
-  9cf4949a5 and in the checkout. `C3U2/tools/compose.py`, `C3U2/tools/hullcase.py` and `C3a/c3cnf.py` are the same at
-  cad4e050 (the `compose.py` version that `C3FINAL` ran), f788780c and 9cf4949a5.
+  471d5f63a and in the checkout. `C3U2/tools/compose.py`, `C3U2/tools/hullcase.py` and `C3a/c3cnf.py` are the same at
+  cad4e050 (the `compose.py` version that `C3FINAL` ran), f788780c and 471d5f63a.
 
 **What a certified record says.** Each one records that both checkers accepted its proof when it was solved. The
 proofs were not kept. 26,436 of the 116,883 certified records carry the proof's SHA-256 (`C3FINAL/run_final.log`). So
@@ -227,7 +227,7 @@ the trust base of Theorem 1 (§3 there) is unchanged. `WRITEUP` itself is not ch
 From `cloud/es7-2026-10-19/results`, with Python 3 and Lean 4.24.0 (no Mathlib needed); `OUT` is any empty directory:
 
 ```sh
-python3 -B C3LEAN/tools/gen_c3lean.py . OUT 9cf4949a5    # OUT/C3Cover.lean has SHA-256 4b64293d…
+python3 -B C3LEAN/tools/gen_c3lean.py . OUT 9cf4949a5    # OUT/C3Cover.lean has SHA-256 4b64293d…; the label 9cf4949a5 is the commit 471d5f63a since SCRUB20261109
 lean -j1 C3LEAN/C3Cover.lean                             # 253 s and 1.14 GB here
 lean C3LEAN/Control_record.lean                          # must fail
 lean C3LEAN/Control_sibling.lean                         # must fail

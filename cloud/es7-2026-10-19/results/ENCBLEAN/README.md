@@ -48,7 +48,7 @@
   one of them, (4,5,1), with a two-level chain.
 - **What the clauses mean is proved for even m (M3), relative to the combinatorial `Model`.** That a geometric
   counterexample yields a `Model` (M4–M6) and the assembly (M8) were not done as of M9; they are done since 2026-11-07
-  (section "M4–M8 (geo)", commit 862d95ed5).
+  (section "M4–M8 (geo)", commit ae42e816d).
 - **M9 is done (2026-11-06, 17:50–20:15 KST; not committed).** A1: the mode `twin-cube64` and
   `scripts/hash_binding.sh` bind the base and all 64 cubes of `cubes64` (by index) and 3 other instances to the
   records, 68/68 (trust item E1). A2: `EncB/Render.lean`, a Std-only printer for the twin with a proved round trip
@@ -76,7 +76,7 @@
     name: all within the three axioms (`logs/m9_d_recheck.log`). The 7 declarations of `EncB/Compose.lean` (review
     fixes; 6 theorems and the definition `parseDimacsBytes`) are queried in `logs/m9_review_fix.log`, and 5 of them
     are guarded at build time.
-- No git commit was made at the time; M9 was committed afterwards as 6a4e5c3c1.
+- No git commit was made at the time; M9 was committed afterwards as 536800bfe.
 
 ## What exists
 
@@ -169,7 +169,7 @@ How to call the exe (the `twin-*` modes print `encB`, the others print `gen`):
 - **Refusal.** On an instance where gen_b2.py raises, the exe writes nothing and exits with 1. For the twin this is
   decided by `diagCoded`.
 
-## M4–M8 (geo): the geometric half and the end-to-end theorem (2026-11-07, about 05:00–05:35 KST; committed 862d95ed5)
+## M4–M8 (geo): the geometric half and the end-to-end theorem (2026-11-07, about 05:00–05:35 KST; committed ae42e816d)
 
 **What is proved.** The package `geo/` (Lean package `es8geo`, Lean 4.24.0, Mathlib `f897ebcf72cd16f8…` in
 `geo/.lake`, `encblean` required by path `..`) proves that a counterexample yields a `Model`, and composes this
@@ -262,7 +262,7 @@ evaluates `encB 6 8 11`; audit check 5 enforces this.
 
 | file | lines | content |
 |---|---|---|
-| `ErdosSzekeres/**` (10 files) | — | verbatim copies of the repository modules at commit `6a4e5c3c`, `VENDOR.sha256` (M4) |
+| `ErdosSzekeres/**` (10 files) | — | verbatim copies of the repository modules at commit `536800bf`, `VENDOR.sha256` (M4) |
 | `ES8Geo/Capstone2.lean`, `KeyOrder.lean`, `OrbitConsistency.lean` | 2132, 158, 429 | verbatim copies of `LEANEXT/{capstone,keys,orbit}/…`, `SOURCES.sha256` (M4) |
 | `ES8Geo/Orbit.lean` | 21 | `orient_rotAbout_inv` for `LayerLemma.rotAbout` (M4) |
 | `ES8Geo/Interface.lean` | 53 | `PolarLabelling`, `L.P`, `L.chi`, `L.psiLt`, frozen before the M5/M6 units (M4) |
@@ -296,7 +296,7 @@ scripts/audit_geo.sh --selftest   # plants 22 violations in a temporary copy; ex
    turn off kernel checking for the build). The geo manifest pins Mathlib `f897ebcf` and every package of the
    repository's `lake-manifest.json` at the repository's revision, and each checkout in `geo/.lake/packages` is at its
    manifest revision with no tracked change.
-2. **Git cross-checks** against the commit recorded in `VENDOR.sha256` (`6a4e5c3c`, the M9 commit), not the moving
+2. **Git cross-checks** against the commit recorded in `VENDOR.sha256` (`536800bf`, the M9 commit), not the moving
    HEAD: the 10 vendored modules and every PINNED file under `../` equal that commit (34 files); once `geo/` is
    committed, `SOURCES.sha256` and `VENDOR.sha256` equal their committed versions. Outside a git checkout (or with
    `AUDIT_NO_GIT=1`) these are skipped with a note; the PINNED hashes still bind every file.
@@ -337,7 +337,7 @@ PASS**; the audit itself: **AUDIT PASS**, exit 0, 47 s (`logs/m8_fix_audit.log`)
   repository modules the geometry imports (the closure of `ErdosSzekeres.{Definitions, Orientation,
   OrientationGeometry, Suk.OrientationClique}`) are copied verbatim into `geo/ErdosSzekeres/`; every constant keeps
   its repository name, `VENDOR.sha256` records the hashes and audit check 2 compares them with the recorded
-  commit `6a4e5c3c`. Mathlib is
+  commit `536800bf`. Mathlib is
   fetched into `geo/.lake` (R5, option (a), the author's choice of 2026-11-07).
 - **Capstone2 kept whole.** The M4 row planned to split Capstone2 into `Layer`/`Phase`/`Link`/`PhaseClass`/`Capstone`
   modules. It is kept as one verbatim file instead, so the statements are checked by a hash (audit check 3), not by a
@@ -367,7 +367,7 @@ Interface, each checked by `lake env lean` only and then by an independent verif
 by `Expr` comparison or typed `example`, axioms, tokens, frozen hashes); logs `logs/m5m6_{M5,M6basic,G9rules}.log`.
 The G9 go/no-go spike (R2) passed on the first attempt. The integrator wrote ModelOfLabelling, Main and Audit, and
 ran the only `lake build`s (`logs/m8_build.log`) and the audit (`logs/m8_audit.log`). M4–M8 with the review fixes
-were committed afterwards as 862d95ed5.
+were committed afterwards as ae42e816d.
 
 **Review fixes (2026-11-07, about 05:40–05:55 KST).** An independent review of M4–M8 gave 11 findings (2 major,
 9 minor); none concerned a proof. Disposition:
@@ -379,7 +379,7 @@ were committed afterwards as 862d95ed5.
 | README's "only hypothesis is the meaning of the verdicts" is imprecise; nothing shows the texts hypothesis is not vacuous | **fixed:** `texts_iff_cubesUnsat64` (Audit.lean, a term, pinned) and the sentence reworded |
 | check 5 missed `Model 6 8 11` and named arguments (`sixfold66_of_no_model` used `norm_num`/`decide` unchecked) | **fixed:** wider mention pattern; such declarations must be terms; `sixfold66_of_no_model` rewritten as a term, numerals in `MainAux.numerals` |
 | (major) the build configuration is not hash-checked; `leanOptions` could disable the kernel for unit modules that check 7 did not re-elaborate | **fixed:** PINNED hashes of both lakefiles, manifests and toolchains; grep for Lean options; manifest revisions compared with the repository's and with the checkouts; check 7 re-elaborates all six M5–M8 files |
-| (major) check 6 compared `EncB/` with the moving HEAD and omitted `EncB.lean`, `../lakefile.toml` | **fixed:** `../EncB.lean`, `../EncB/*.lean` and the `../` build files are in PINNED, and check 2 compares them with commit `6a4e5c3c` |
+| (major) check 6 compared `EncB/` with the moving HEAD and omitted `EncB.lean`, `../lakefile.toml` | **fixed:** `../EncB.lean`, `../EncB/*.lean` and the `../` build files are in PINNED, and check 2 compares them with commit `536800bf` |
 | check 2 used HEAD and needed git; check 1 did not assert the counts 5 and 10 | **fixed:** commit from the `VENDOR.sha256` header; runs without git (cross-checks skipped with a note); counts asserted; `SOURCES.sha256` must list exactly the non-unit files; the manifests themselves are pinned |
 | check-5 pattern too narrow; `FORB` lacked `sorryAx`, `ofReduceNat`, `reduceBool`, `reduceNat`; the comment stripper mangled strings | **fixed:** pattern extended (`cubes64`, `cnfText`, `parseDimacs*`, `*6811*`, …), the four tokens added, a stripper that nests block comments and keeps string/char literals |
 | only 4 statements pinned; no axiom pins for the two `rfl` lemmas | **fixed:** 13 `#check` and 14 `#print axioms` pins, including `sixfold66_of_no_model`, `modelOfLabelling(_chi/_psiLt)`, `labelling_of_counterexample` |
@@ -399,7 +399,7 @@ is the list E1–E6 (`DESIGN.md` §1.4, the table in "Trust" below), unchanged i
 - **E5** the kernel, Mathlib `f897ebcf…`, and that the definitions mean what the paper says: `Point`,
   `GeneralPosition`, `HasConvexNGon` (`geo/ErdosSzekeres/Definitions.lean`), `orient`
   (`geo/ErdosSzekeres/Orientation.lean`), `rotAbout` and `Invariant` (Capstone2). These are now the vendored copies;
-  audit checks 1–3 tie them byte for byte to the repository at commit `6a4e5c3c` and to LEANEXT, and pin the
+  audit checks 1–3 tie them byte for byte to the repository at commit `536800bf` and to LEANEXT, and pin the
   `EncB` definitions and the build configuration.
 - `sixfold_es8` instead assumes `CubesUnsat64`, a Lean statement about `cubeCnf (encB 6 8 11) c`; its tie to the
   certificates is the same E1–E3 through `cubesUnsat64_of_texts_get`.

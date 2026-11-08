@@ -1,6 +1,6 @@
 # AUDIT3: adversarial audit of the symmetric ES(7) claim
 
-Local runs on an Apple M5 Pro, 1 November 2026 (UTC), about 12:10–13:50, against `es7-cloud` at 9cf4949a5. The
+Local runs on an Apple M5 Pro, 1 November 2026 (UTC), about 12:10–13:50, against `es7-cloud` at 471d5f63a. The
 status of the follow-up checks (§5) is as of 19:43 UTC the same day.
 
 **Statement audited.** Every set of at least 33 points in general position with a nontrivial symmetry, isometric or
@@ -10,11 +10,11 @@ affine, contains a convex 7-gon.
 minor or major was checked again by a separate verifier. One finding remains major: the write-up's trust base
 (`WRITEUP/SYMMETRIC.md`, `WRITEUP/CERTIFICATES.md`) did not yet cover the central-34 and C4CUT certificates (A6-1).
 The other 58 findings are minor (24) or notes (34). This directory records an audit; it claims no theorem. At
-9cf4949a5 the statement depends on the central 34-point theorem C2-34, which `C2FINAL` had not yet claimed.
+471d5f63a the statement depends on the central 34-point theorem C2-34, which `C2FINAL` had not yet claimed.
 
 ## 1. Method
 
-- **Seven component audits** (A1–A7). Each reviewer got the repository at 9cf4949a5 and the local proof archives,
+- **Seven component audits** (A1–A7). Each reviewer got the repository at 471d5f63a and the local proof archives,
   both read-only, and wrote its own scripts.
 - **Limits.** At most 1.5 GB per process, no SAT solve longer than 15 minutes or on a CNF above 100 MB, no CNF above
   50 MB loaded into memory, and no run of cake_lpr. So no large certificate was replayed. Certificates were checked
@@ -43,7 +43,7 @@ case is on no critical path once C2-34 holds: a fourfold set in general position
 | M34 (Theorem 2b) | certificate accepted by both checkers (retained proof `98e4d02a…` on CNF `b175eac0…`, checked at solve time; one lrat-check replay of 29 October, log untracked, A3-F1); encoding: written proof (reviewed in A3) | A3, A6 |
 | C5 ≥ 35 | two certificates accepted by both checkers at solve time (P1 `eff67c0f…` on `ead55228…`, L1 `8625b321…` on `90dea1cf…`; L1 also passed a hash-bound lrat-check replay, §5 row 1); two normal forms of one encoder (A4-3), written proof (reviewed in A4) and computational evidence; layer lemma: written proof (proved in full by A4, A4-7) | A4, A6 |
 | C2-34: hull cover and the 120 hexagonal hulls | certificates accepted by both checkers, proofs retained (cover `3255391a…` on `bb60facb…`); for the hexagons cake_lpr first ran on a rebuilt CNF that was not hashed, and the re-check on hash-checked files accepted all 120 (§5 row 3b) | A5, A6 |
-| C2-34: the 8 parallelogram cases | 2,385 UNSAT records, each accepted by both checkers when solved (for the 58 P8 pilot orbits, cake_lpr ran on an unhashed rebuilt CNF), proofs deleted (recorded verdicts); 38 units re-solved with archived proofs by 9cf4949a5, more since (§5 rows 3a, 3c); 60 orbit facts and the P1–P5 covers rested only on the Mac's LOCAL records, which keep no record of the tools used; 44 of these 65 were re-solved by 1 November 2026, 19:43 UTC (§5 row 2); reductions A and B: written proof (reviewed) and exact computation at the CNF level (A5-1); bookkeeping Lean-checked (`C2FINAL` §6) | A5, A6, A8 |
+| C2-34: the 8 parallelogram cases | 2,385 UNSAT records, each accepted by both checkers when solved (for the 58 P8 pilot orbits, cake_lpr ran on an unhashed rebuilt CNF), proofs deleted (recorded verdicts); 38 units re-solved with archived proofs by 471d5f63a, more since (§5 rows 3a, 3c); 60 orbit facts and the P1–P5 covers rested only on the Mac's LOCAL records, which keep no record of the tools used; 44 of these 65 were re-solved by 1 November 2026, 19:43 UTC (§5 row 2); reductions A and B: written proof (reviewed) and exact computation at the CNF level (A5-1); bookkeeping Lean-checked (`C2FINAL` §6) | A5, A6, A8 |
 | C2-34: the encoder `SYMZ/zcnf.py rot 17 7 --m 2 --hull` | computational evidence only at audit time (234 full-base labellings in A5); a written proof was completed later that day and refereed (§5 row 5) | A5, A8 |
 | lower-bound examples (the threshold 33 is sharp) | exact computation, two independent exact methods per file | A7 |
 
@@ -67,7 +67,7 @@ A4-2 from minor to note.
 "auditor" is the severity the auditor gave; "checked" is the verifier's. Notes were not re-checked (—). A2 numbered
 its findings F1–F8; they are cited here as A2-F1 … A2-F8.
 
-**The major finding (A6-1, confirmed).** At 9cf4949a5, `WRITEUP/SYMMETRIC.md` (revised 2026-10-29) still calls the
+**The major finding (A6-1, confirmed).** At 471d5f63a, `WRITEUP/SYMMETRIC.md` (revised 2026-10-29) still calls the
 central 34-point case open (in §4; the auditor first wrote §3) and assumes the published fourfold exclusion in
 Corollary 3. Its list of replayed checks covers only the threefold, mirror and fivefold cases. It does not say that
 the parallelogram part of C2-34 rests on recorded verdicts of deleted proofs: of the 2,304 facts the case split needs
@@ -244,7 +244,7 @@ status column says whether each missing check is now closed, partly closed or op
   hull cover.
 - At audit time about 98% of the pieces in the threefold cut and about 98% of the central orbit facts rested on
   recorded verdicts of deleted proofs. The re-checks are samples or targeted re-solves: 2,120 threefold pieces in
-  `C3SPOT` (1,337 of them in the cut) and the 204 pieces of §5 row 4 (all certified); 38 central units by 9cf4949a5, plus
+  `C3SPOT` (1,337 of them in the cut) and the 204 pieces of §5 row 4 (all certified); 38 central units by 471d5f63a, plus
   the units of §5 rows 3a, 3c, 2 and 8: 224 of the 2,304 central facts by 1 November 2026, 19:43 UTC (§5 row 3d).
 - No step from a CNF to its Lean case class is Lean-checked. Encoder soundness rests everywhere on written proofs and
   computational evidence.

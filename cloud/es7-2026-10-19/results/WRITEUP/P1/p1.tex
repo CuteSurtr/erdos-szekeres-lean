@@ -9,7 +9,7 @@
 % Revised again on 6 November 2026 (after 15:40 KST) from C6UPPER/noty12-2026-11-06: encoder B's sixfold base formula
 % is certified unsatisfiable on its own (64 hash-bound cake_lpr verdicts), so the encoder-B route no longer uses the
 % reflection lemma (README.md, "Revision for the encoder-B base formula").
-% Revised 7 November 2026 for ENCBLEAN M4-M8 (commit 862d95ed5): for m = 6 via encoder B the sixfold bound is
+% Revised 7 November 2026 for ENCBLEAN M4-M8 (commit ae42e816d): for m = 6 via encoder B the sixfold bound is
 % Lean-checked end to end (EncB.Geo.sixfold_es8_of_texts), assuming the 64 cake_lpr verdicts and the trust items
 % (E1)-(E6) of the soundness section; m = 7 stays written (README.md, "Revision for the end-to-end Lean check").
 \documentclass[10pt]{article}
@@ -948,7 +948,7 @@ and cross-checked by \dirn{verify_final64.py}; they belong to (E1) and~(E2).
 with its standard library only; milestones M0--M3 and~M9) defines encoder~B's formula as a Lean list of DIMACS
 clauses, \lean{EncB.encB}, with parameters $m,K,t$, and the $64$ sign patterns of the variables $1,2,3,10,11,18$ as
 the list \lean{EncB.cubes64}. Its part \dirn{ENCBLEAN/geo} (Lean~4.24.0 with Mathlib at commit \texttt{f897ebcf}, the
-commit of the repository; milestones M4--M6 and~M8, committed in \texttt{862d95ed5}; the planned milestone M7, a
+commit of the repository; milestones M4--M6 and~M8, committed in \texttt{ae42e816d}; the planned milestone M7, a
 reflection step, was dropped because the $64$ cubes make it unnecessary) adds the geometric half and the assembly. It
 contains byte-identical copies of the repository modules it needs and of the Lean file
 \dirn{LEANEXT/capstone/Capstone2.lean}, which contains the text of \dirn{LAYERLEAN/LayerLemma.lean} apart from its
@@ -1302,7 +1302,7 @@ doi:10.1007/978-3-032-07021-0\_3 (Crossref metadata; chapter text not accessed).
 \dirn{STATUS20261104}, \dirn{THREEFOLDRELAX}, \dirn{C3FINAL}, \dirn{C3SPOT}, \dirn{WRITEUP/note}, \dirn{WRITEUP/P1},
 \dirn{NOVELTY20261106} and \dirn{LIT} under \dirn{cloud/es7-2026-10-19/results}, and, for the $ES(8)\le311$ remark,
 \dirn{experiments/omission-final311-2026-10-14} and \dirn{experiments/omission-compact-checker-2026-11-05}, of the
-project repository, branch \texttt{es7-night-2026-11-01} (the records cited are those at commit \texttt{f2a462b67} or
+project repository, branch \texttt{es7-night-2026-11-01} (the records cited are those at commit \texttt{31d905a6e} or
 later; the commit to cite is to be fixed before circulation); proof archives \dirn{es8-c7-octagon-2026-11-03} and
 \dirn{es8-c6-octagon-2026-11-03}, the review archive \dirn{es8-c6c7-review-2026-11-04} (regenerated formulas, models,
 witnesses), the proofs of the sixfold replay of

@@ -1,6 +1,6 @@
 # A3: mirror cases (Theorems 2, 2a, 2b)
 
-Component audit, 1 November 2026 (UTC), against `es7-cloud` at 9cf4949a5. Texts returned by the auditor and by the independent verifier of each finding, lightly edited: machine paths replaced by placeholders and internal job names by descriptions; trust-table labels as explained in `../README.md`, §7.
+Component audit, 1 November 2026 (UTC), against `es7-cloud` at 471d5f63a. Texts returned by the auditor and by the independent verifier of each finding, lightly edited: machine paths replaced by placeholders and internal job names by descriptions; trust-table labels as explained in `../README.md`, §7.
 
 **Component.** MIRROR (Theorems 2, 2a, 2b): SYMZ encoder zcnf.py / zcnf_v1.py with the reflection's point at infinity Z, its written soundness proof, the mirror33 / mirror34 certificates, the 32-point lower example, and the earlier Lean chain for 2a (MIRROR.md)
 
@@ -61,7 +61,7 @@ mirror33 (Theorem 2a, new proof) was checked only at solve time (chk_m33_def_*.o
 The finding has two halves. The mirror33 half is correct. The mirror34 half is partly wrong.
 
 (1) Mirror33 (Theorem 2a, new proof) was never replayed independently. The only checker verdicts are the solve-time chk_m33_def_lrat-check.out and chk_m33_def_cake_lpr.out, written in the solving session at 12:37 and 12:42 KST on 2026-10-29. I searched for any other record and found none. Places searched:
-- the HEAD tree (9cf4949a5);
+- the HEAD tree (471d5f63a);
 - every git ref, including local checkpoint refs;
 - the main repo's experiments/ folder (text files under 5 MB);
 - the proof archive;
@@ -89,7 +89,7 @@ I did not replay any proof myself. The audit rules forbid cake_lpr and loading C
 *Verifier's evidence.* Replay record (exists, uncommitted):
 - Files: <audit-2026-10-29>/mirror34-lrat-replay.log (sha256 323d79bd…) and mirror34-lrat-replay.json (sha256 77949512…).
 - Git status in the main working tree: "?? <audit-2026-10-29>/".
-- The directory is not in the HEAD 9cf4949a5 tree. Only two local checkpoint refs contain it, and those copies are byte-identical to the files on disk.
+- The directory is not in the HEAD 471d5f63a tree. Only two local checkpoint refs contain it, and those copies are byte-identical to the files on disk.
 - Cited nowhere: CERTIFICATES.md:39, SYMZ/README.md:108-109, SYMMETRIC.md:56,163 and note/symmetric_es7.tex:239-240 claim the replay but give no path.
 - The JSON records exit_code 0 and elapsed 45.448623 s. Its three hashes appear in CERTIFICATES.md. Its lrat-check statistics equal those in results/SYMZ/logs/chk_mr34_def_lrat-check.out.
 - The audit's REPORT.md says cake_lpr was "not rerun here" and that "the older 33-point proof chain was not fully replayed". Its session.json gives 03:18:25Z to 03:38:06Z.
