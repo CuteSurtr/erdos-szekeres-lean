@@ -1,0 +1,47 @@
+label	kind	lean_name	file_line	note
+sr:def:iso	definition	ErdosSzekeres.SymReduction.eDist2; ErdosSzekeres.SymReduction.IsEucIsometry	SYMLEAN/SymmetricReduction.lean:265; SYMLEAN/SymmetricReduction.lean:268	export label
+sr:rem:sup	remark	-	-	remark: Mathlib sup metric on Point; why eDist2 is used
+sr:def:inv	definition	ErdosSzekeres.SymReduction.Invariant	SYMLEAN/SymmetricReduction.lean:271	same notion as fd:def:inv (maps into)
+sr:def:complex	definition	ErdosSzekeres.SymReduction.toC; ErdosSzekeres.SymReduction.ofC	SYMLEAN/SymmetricReduction.lean:274; SYMLEAN/SymmetricReduction.lean:277	-
+sr:lem:complex	lemma	ErdosSzekeres.SymReduction.toC_re; ErdosSzekeres.SymReduction.toC_im; ErdosSzekeres.SymReduction.ofC_zero; ErdosSzekeres.SymReduction.ofC_one; ErdosSzekeres.SymReduction.toC_ofC; ErdosSzekeres.SymReduction.ofC_toC; ErdosSzekeres.SymReduction.toC_injective; ErdosSzekeres.SymReduction.eDist2_eq_normSq; ErdosSzekeres.SymReduction.eDist2_pos_of_ne; ErdosSzekeres.SymReduction.point_ext	SYMLEAN/SymmetricReduction.lean:279; SYMLEAN/SymmetricReduction.lean:280; SYMLEAN/SymmetricReduction.lean:281; SYMLEAN/SymmetricReduction.lean:282; SYMLEAN/SymmetricReduction.lean:284; SYMLEAN/SymmetricReduction.lean:287; SYMLEAN/SymmetricReduction.lean:291; SYMLEAN/SymmetricReduction.lean:294; SYMLEAN/SymmetricReduction.lean:297; SYMLEAN/SymmetricReduction.lean:502	-
+sr:def:maps	definition	ErdosSzekeres.SymReduction.crot; ErdosSzekeres.SymReduction.rotAbout; ErdosSzekeres.SymReduction.halfTurn; ErdosSzekeres.SymReduction.reflLine	SYMLEAN/SymmetricReduction.lean:349; SYMLEAN/SymmetricReduction.lean:400; SYMLEAN/SymmetricReduction.lean:413; SYMLEAN/SymmetricReduction.lean:423	rotAbout is the formula of fd:def:rot
+sr:def:classes	definition	ErdosSzekeres.SymReduction.HalfTurn34; ErdosSzekeres.SymReduction.Threefold33; ErdosSzekeres.SymReduction.Fivefold35; ErdosSzekeres.SymReduction.MirrorOneAxis33; ErdosSzekeres.SymReduction.MirrorNoAxis34; ErdosSzekeres.SymReduction.Fourfold32	SYMLEAN/SymmetricReduction.lean:467; SYMLEAN/SymmetricReduction.lean:472; SYMLEAN/SymmetricReduction.lean:477; SYMLEAN/SymmetricReduction.lean:482; SYMLEAN/SymmetricReduction.lean:488; SYMLEAN/SymmetricReduction.lean:496	export label; Props used only as hypotheses; none proved in this section
+sr:rem:records	remark	-	-	remark: project records supplying each class, with the rigor labels that the records claim (C4CUT states Fourfold32 without one)
+sr:lem:iterate	lemma	ErdosSzekeres.SymReduction.iterate_mem; ErdosSzekeres.SymReduction.Invariant.iterate	SYMLEAN/SymmetricReduction.lean:69; SYMLEAN/SymmetricReduction.lean:309	-
+sr:lem:pigeon	lemma	-	-	written step (local statement pigeon in isometry_structure)
+sr:def:minper	definition	-	-	written step (Mathlib Function.minimalPeriod)
+sr:lem:minper	lemma	-	-	written step (Mathlib minimal-period facts, proved)
+sr:def:orbitFS	definition	ErdosSzekeres.SymReduction.orbitFS	SYMLEAN/SymmetricReduction.lean:65	-
+sr:lem:orbitFS	lemma	ErdosSzekeres.SymReduction.card_orbitFS_of_minimalPeriod; ErdosSzekeres.SymReduction.mem_orbitFS_self; ErdosSzekeres.SymReduction.orbitFS_subset; ErdosSzekeres.SymReduction.orbitFS_invariant; ErdosSzekeres.SymReduction.card_orbitFS	SYMLEAN/SymmetricReduction.lean:111; SYMLEAN/SymmetricReduction.lean:90; SYMLEAN/SymmetricReduction.lean:93; SYMLEAN/SymmetricReduction.lean:99; SYMLEAN/SymmetricReduction.lean:76	-
+sr:lem:orbit-core	lemma	-	-	written step (the induction shared by orbit_select and orbit_select_minimalPeriod)
+sr:lem:orbit	lemma	ErdosSzekeres.SymReduction.orbit_select_minimalPeriod; ErdosSzekeres.SymReduction.orbit_select	SYMLEAN/SymmetricReduction.lean:123; SYMLEAN/SymmetricReduction.lean:194	export label
+sr:lem:crot	lemma	ErdosSzekeres.SymReduction.toC_crot; ErdosSzekeres.SymReduction.crot_one; ErdosSzekeres.SymReduction.crot_comp; ErdosSzekeres.SymReduction.crot_iterate; ErdosSzekeres.SymReduction.crot_eq_self_iff; ErdosSzekeres.SymReduction.crot_injective; ErdosSzekeres.SymReduction.eDist2_crot_center	SYMLEAN/SymmetricReduction.lean:351; SYMLEAN/SymmetricReduction.lean:354; SYMLEAN/SymmetricReduction.lean:359; SYMLEAN/SymmetricReduction.lean:364; SYMLEAN/SymmetricReduction.lean:370; SYMLEAN/SymmetricReduction.lean:384; SYMLEAN/SymmetricReduction.lean:394	-
+sr:lem:rot-half	lemma	ErdosSzekeres.SymReduction.rotAbout_eq_crot; ErdosSzekeres.SymReduction.halfTurn_eq_crot	SYMLEAN/SymmetricReduction.lean:404; SYMLEAN/SymmetricReduction.lean:415	-
+sr:lem:refl	lemma	ErdosSzekeres.SymReduction.toC_reflLine; ErdosSzekeres.SymReduction.reflLine_involutive; ErdosSzekeres.SymReduction.cross_of_reflLine_fixed; ErdosSzekeres.SymReduction.orient_eq_zero_of_cross	SYMLEAN/SymmetricReduction.lean:427; SYMLEAN/SymmetricReduction.lean:435; SYMLEAN/SymmetricReduction.lean:447; SYMLEAN/SymmetricReduction.lean:455	-
+sr:lem:toC-iso	lemma	ErdosSzekeres.SymReduction.IsEucIsometry.injective; ErdosSzekeres.SymReduction.isometry_toC_conj	SYMLEAN/SymmetricReduction.lean:301; SYMLEAN/SymmetricReduction.lean:313	-
+sr:thm:structure	theorem	ErdosSzekeres.SymReduction.isometry_complex_cases; ErdosSzekeres.SymReduction.isometry_structure	SYMLEAN/SymmetricReduction.lean:321; SYMLEAN/SymmetricReduction.lean:869	export label; written proof of part (a) by an elementary argument instead of the Mathlib results used in Lean (a construction and a theorem)
+sr:lem:supports	lemma	ErdosSzekeres.Suk.convexPosition_of_strict_supports	ErdosSzekeres/Suk/SupportingLines.lean:28	main-library dependency of convexPosition_of_concyclic; same declaration as fd:lem:strict-supports (proof repeated)
+sr:lem:concyclic	lemma	ErdosSzekeres.SymReduction.convexPosition_of_concyclic	SYMLEAN/SymmetricReduction.lean:509	export label
+sr:cor:concyclic	corollary	ErdosSzekeres.SymReduction.hasConvexNGon_of_concyclic	SYMLEAN/SymmetricReduction.lean:522	-
+sr:lem:center	lemma	ErdosSzekeres.SymReduction.center_not_mem_of_halfTurn	SYMLEAN/SymmetricReduction.lean:528	-
+sr:def:prim	definition	-	-	written step (Mathlib IsPrimitiveRoot, orderOf)
+sr:lem:prim	lemma	-	-	written step (Mathlib facts on roots of unity, proved)
+sr:lem:rot345	lemma	ErdosSzekeres.SymReduction.isPrimitiveRoot_rot3; ErdosSzekeres.SymReduction.isPrimitiveRoot_rot5; ErdosSzekeres.SymReduction.isPrimitiveRoot_rot4	SYMLEAN/SymmetricReduction.lean:584; SYMLEAN/SymmetricReduction.lean:591; SYMLEAN/SymmetricReduction.lean:598	-
+sr:lem:root-cases	lemma	ErdosSzekeres.SymReduction.root_cases	SYMLEAN/SymmetricReduction.lean:552	-
+sr:lem:prime-cases	lemma	ErdosSzekeres.SymReduction.prime_cases	SYMLEAN/SymmetricReduction.lean:572	-
+sr:lem:root-cases2	lemma	ErdosSzekeres.SymReduction.root_cases2	SYMLEAN/SymmetricReduction.lean:607	-
+sr:lem:halfturn-facts	lemma	ErdosSzekeres.SymReduction.halfTurn_facts	SYMLEAN/SymmetricReduction.lean:647	-
+sr:lem:case-halfturn	lemma	ErdosSzekeres.SymReduction.case_halfTurn	SYMLEAN/SymmetricReduction.lean:670	conditional; takes hypotheses: HalfTurn34
+sr:lem:rot-erase	lemma	ErdosSzekeres.SymReduction.rot_erase_facts	SYMLEAN/SymmetricReduction.lean:676	-
+sr:lem:rot-big	lemma	ErdosSzekeres.SymReduction.case_rot_big	SYMLEAN/SymmetricReduction.lean:711	no general position assumed
+sr:lem:odd-prime	lemma	ErdosSzekeres.SymReduction.case_odd_prime	SYMLEAN/SymmetricReduction.lean:736	conditional; takes hypotheses: Threefold33, Fivefold35
+sr:lem:fourfold	lemma	ErdosSzekeres.SymReduction.case_fourfold	SYMLEAN/SymmetricReduction.lean:763	conditional; takes hypotheses: Fourfold32
+sr:lem:mirror	lemma	ErdosSzekeres.SymReduction.case_mirror	SYMLEAN/SymmetricReduction.lean:811	conditional; takes hypotheses: MirrorOneAxis33, MirrorNoAxis34
+sr:thm:main	theorem	ErdosSzekeres.SymReduction.heptagon_of_nontrivial_isometry	SYMLEAN/SymmetricReduction.lean:997	export label; conditional; takes hypotheses: HalfTurn34, Threefold33, Fivefold35, MirrorOneAxis33, MirrorNoAxis34; axioms log SYMLEAN/logs/SymmetricReductionAxioms.out
+sr:rem:main	remark	-	-	remark: conditional status of the main theorem; the unconditional statement is a project claim (WRITEUP/SYMMETRIC.md, Theorem A), established here only as the implication
+sr:thm:variant	theorem	ErdosSzekeres.SymReduction.halfTurn_of_symmetric_counterexample	SYMLEAN/SymmetricReduction.lean:1024	export label; conditional; takes hypotheses: Threefold33, Fourfold32, Fivefold35, MirrorOneAxis33, MirrorNoAxis34; axioms log SYMLEAN/logs/SymmetricReductionAxioms.out
+sr:rem:variant	remark	-	-	remark: per-symmetry, isometries only; the group form VariantChecks.group_form (review file SYMLEAN/review/VariantChecks.lean:1168, log SYMLEAN/logs/VariantChecks.out) with a written argument, not restated as a numbered statement
+sr:def:exclusion-line	definition	ErdosSzekeres.SymReduction.MirrorExclusionLineCopy	SYMLEAN/SymmetricReduction.lean:1052	text of Mir.MirrorExclusionLine (H3/MirrorEncoding/Line.lean:94)
+sr:lem:mirror-line	lemma	ErdosSzekeres.SymReduction.mirrorOneAxis33_of_exclusionLine	SYMLEAN/SymmetricReduction.lean:1056	export label; conditional; takes hypotheses: MirrorExclusionLineCopy
+sr:rem:mirror-line	remark	-	-	remark: the H3 statement is Lean-checked only conditionally on CNF facts (V2L.mirrorExclusionLine_final) and is identified with MirrorExclusionLineCopy by its text; the converse and the equivalence (review file SYMLEAN/review/ReviewSanity.lean:1593 and 1629) with a written argument, not restated as numbered statements
+sr:rem:redundant	remark	-	-	remark: hypotheses of the classes implied by the others (not used)

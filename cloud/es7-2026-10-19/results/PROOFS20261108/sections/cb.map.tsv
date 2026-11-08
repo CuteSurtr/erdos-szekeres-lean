@@ -1,0 +1,101 @@
+label	kind	lean_name	file_line	note
+cb:lem:bits	lemma	-	-	written step; binary digits of an or-fold
+cb:def:m	definition	C3Cover.m	C3LEAN/C3Cover.lean:34	definition
+cb:def:tok	definition	C3Cover.Tok	C3LEAN/C3Cover.lean:38	definition
+cb:def:layer	definition	C3Cover.Layer	C3LEAN/C3Cover.lean:41	definition
+cb:def:node	definition	C3Cover.Node	C3LEAN/C3Cover.lean:45	definition
+cb:def:used	definition	C3Cover.Node.used	C3LEAN/C3Cover.lean:51	definition
+cb:rem:reading	remark	-	-	commentary; intended meaning, not used in proofs
+cb:def:pairoptions	definition	C3Cover.pairOptions	C3LEAN/C3Cover.lean:54	definition
+cb:def:layeroptions	definition	C3Cover.layerOptions	C3LEAN/C3Cover.lean:61	definition; rem is a local abbreviation inside layerOptions
+cb:def:instok	definition	C3Cover.insTok	C3LEAN/C3Cover.lean:66	definition
+cb:def:sorttok	definition	C3Cover.sortTok	C3LEAN/C3Cover.lean:71	definition
+cb:def:topcases	definition	C3Cover.topCases	C3LEAN/C3Cover.lean:77	definition
+cb:def:okey	definition	C3Cover.okey	C3LEAN/C3Cover.lean:82	definition
+cb:def:lexle	definition	C3Cover.lexLe	C3LEAN/C3Cover.lean:85	definition
+cb:def:mirror	definition	C3Cover.mirror	C3LEAN/C3Cover.lean:91	definition
+cb:def:phi	definition	C3Cover.phi	C3LEAN/C3Cover.lean:95	definition
+cb:def:refl	definition	C3Cover.refl	C3LEAN/C3Cover.lean:101	definition
+cb:def:kept	definition	C3Cover.keptOptions	C3LEAN/C3Cover.lean:109	definition
+cb:def:roots	definition	C3Cover.roots	C3LEAN/C3Cover.lean:113	definition
+cb:def:free	definition	C3Cover.Node.free	C3LEAN/C3Cover.lean:116	definition
+cb:def:bitsof	definition	C3Cover.bitsOf	C3LEAN/C3Cover.lean:120	definition
+cb:def:addbits	definition	C3Cover.addBits	C3LEAN/C3Cover.lean:123	definition
+cb:def:sigmachildren	definition	C3Cover.Node.sigmaChildren	C3LEAN/C3Cover.lean:127	definition; bits is a local abbreviation
+cb:def:conflicts	definition	C3Cover.conflicts	C3LEAN/C3Cover.lean:132	definition
+cb:def:layerchildren	definition	C3Cover.Node.layerChildren	C3LEAN/C3Cover.lean:137	definition
+cb:rem:children	remark	-	-	commentary; reading of the children, not used in proofs
+cb:def:covered	definition	C3Cover.Covered	C3LEAN/C3Cover.lean:146	inductive predicate; least predicate closed under the three constructors
+cb:lem:mono	lemma	C3Cover.Covered.mono	C3LEAN/C3Cover.lean:153	Lean-checked (dependency of all_roots_covered); written proof by rule induction
+cb:def:decodetok	definition	C3Cover.decodeTok	C3LEAN/C3Cover.lean:165	definition
+cb:def:decodelayer	definition	C3Cover.decodeLayer	C3LEAN/C3Cover.lean:167	definition
+cb:def:decodelayers	definition	C3Cover.decodeLayers	C3LEAN/C3Cover.lean:172	definition
+cb:def:decodecube	definition	C3Cover.decodeCube	C3LEAN/C3Cover.lean:180	definition
+cb:def:decodekey	definition	C3Cover.decodeKey	C3LEAN/C3Cover.lean:191	definition
+cb:rem:keys	remark	-	-	commentary; uses the control rev_parent_decodes (C3LEAN/review/RevCtrl_pass.lean:315); decodeKey not injective
+cb:def:tokcode	definition	C3Cover.tokCode	C3LEAN/C3Cover.lean:223	definition
+cb:def:layercode	definition	C3Cover.layerCode	C3LEAN/C3Cover.lean:226	definition
+cb:def:rootcode	definition	C3Cover.rootCode	C3LEAN/C3Cover.lean:232	definition
+cb:def:decoderoot	definition	C3Cover.decodeRoot	C3LEAN/C3Cover.lean:238	definition
+cb:def:beqlist	definition	C3Cover.beqList	C3LEAN/C3Cover.lean:194	definition
+cb:def:beqtok	definition	C3Cover.beqTok	C3LEAN/C3Cover.lean:199	definition
+cb:def:beqnode	definition	C3Cover.beqNode	C3LEAN/C3Cover.lean:202	definition
+cb:def:beqlayer	definition	C3Cover.beqLayer	C3LEAN/C3Cover.lean:335	definition
+cb:lem:beqlist	lemma	C3Cover.beqList_eq	C3LEAN/C3Cover.lean:204	Lean-checked (dependency of printed theorems); written proof
+cb:lem:beqtok	lemma	C3Cover.beqTok_eq	C3LEAN/C3Cover.lean:213	Lean-checked (dependency of printed theorems); written proof
+cb:lem:beqnode	lemma	C3Cover.beqNode_eq	C3LEAN/C3Cover.lean:218	Lean-checked (dependency of printed theorems); written proof
+cb:lem:beq-refl	lemma	-	-	written step; reflexivity of the Boolean equalities
+cb:def:cert	definition	C3Cover.Cert	C3LEAN/C3Cover.lean:245	definition
+cb:def:unpack	definition	C3Cover.unpack	C3LEAN/C3Cover.lean:251	definition
+cb:def:keys	definition	C3Cover.Cert.keys	C3LEAN/C3Cover.lean:259	definition
+cb:def:run	definition	C3Cover.run	C3LEAN/C3Cover.lean:262	definition
+cb:def:checkroot	definition	C3Cover.checkRoot	C3LEAN/C3Cover.lean:277	definition
+cb:rem:cert	remark	-	-	commentary; how a certificate is read; final test and fuel not needed for soundness
+cb:lem:run	lemma	C3Cover.run_sound, C3Cover.checkRoot_sound	C3LEAN/C3Cover.lean:279, C3LEAN/C3Cover.lean:323	export label; Lean-checked, axioms propext and Quot.sound; written proof by induction on fuel
+cb:lem:append	lemma	C3Cover.all_append_of	C3LEAN/C3Cover.lean:327	Lean-checked (dependency of all_checked); written proof
+cb:def:tsv	definition	C3Cover.tsvRootCodes	C3LEAN/C3Cover.lean:413	generated data (910 root codes); identification with the TSV file checked in Python only
+cb:def:certsN	definition	C3Cover.certs0	C3LEAN/C3Cover.lean:423	generated data; family certs0..certs126 at lines 423-1711 (certs126 at 1668)
+cb:def:certs	definition	C3Cover.certs	C3LEAN/C3Cover.lean:1714	generated data; right-nested append
+cb:def:bounds	definition	C3Cover.bounds	C3LEAN/C3Cover.lean:1717	generated data; unused by any theorem
+cb:def:certifiedkeys	definition	C3Cover.certifiedKeys	C3LEAN/C3Cover.lean:1737	generated data; also defines the leaf predicate S-star of the main theorem
+cb:def:isoption	definition	C3Cover.isOption	C3LEAN/C3Cover.lean:340	definition
+cb:def:distinctcodes	definition	C3Cover.distinctCodes	C3LEAN/C3Cover.lean:346	definition
+cb:def:codeset	definition	C3Cover.codeSet	C3LEAN/C3Cover.lean:351	definition
+cb:def:reflectionfacts	definition	C3Cover.reflectionFacts	C3LEAN/C3Cover.lean:356	definition
+cb:lem:codes	lemma	-	-	written step; characterization of distinctCodes and codeSet
+cb:fact:batches	fact	C3Cover.batch0	C3LEAN/C3Cover.lean:1740	computer-assisted (decide +kernel); family batch0..batch126 at lines 1740+4N; no hand proof
+cb:lem:all-checked	lemma	C3Cover.all_checked	C3LEAN/C3Cover.lean:2247	Lean-checked, axioms propext; computer-assisted (joins the 127 computer-assisted batch facts by all_append_of)
+cb:fact:refl-h3	fact	C3Cover.reflection_facts_H3	C3LEAN/C3Cover.lean:367	Lean-checked, axioms propext; computer-assisted in Lean (decide +kernel); written proof in cb:prop:refl
+cb:fact:refl-h6	fact	C3Cover.reflection_facts_H6_1_0	C3LEAN/C3Cover.lean:370	Lean-checked, axioms propext; computer-assisted in Lean (decide +kernel); ten theorems reflection_facts_H6_1_0..H6_5_1 at lines 370+3(2a+s-2); written proof in cb:prop:refl
+cb:fact:topcases	fact	C3Cover.topCases_eq	C3LEAN/C3Cover.lean:401	Lean-checked, no axioms; computer-assisted in Lean (decide +kernel); written proof in cb:prop:refl
+cb:fact:strata	fact	C3Cover.strata	C3LEAN/C3Cover.lean:406	Lean-checked, no axioms; computer-assisted in Lean (decide +kernel); written proof in cb:prop:refl
+cb:fact:roots-match	fact	C3Cover.roots_match	C3LEAN/C3Cover.lean:1720	Lean-checked, no axioms; computer-assisted in Lean (decide +kernel); written proof in cb:prop:roots-match
+cb:fact:roots-codes	fact	C3Cover.roots_codes_match	C3LEAN/C3Cover.lean:1725	computer-assisted (decide +kernel on generated certificate data), no axioms; no hand proof
+cb:fact:roots-tsv	fact	C3Cover.roots_eq_tsv	C3LEAN/C3Cover.lean:1730	computer-assisted (decide +kernel on generated data), axioms propext; no hand proof
+cb:lem:sort	lemma	-	-	written step
+cb:lem:options	lemma	-	-	written step; structure and count of layerOptions
+cb:lem:decode	lemma	-	-	written step; decoding lemma (decodeRoot after rootCode is the identity on valid depth-2 nodes)
+cb:lem:lex	lemma	-	-	written step; lexLe is a total order
+cb:lem:orbits	lemma	-	-	written step; one kept member per orbit of the reflection
+cb:prop:refl	proposition	-	-	written step; hand proof of reflection_facts_*, topCases_eq, strata
+cb:prop:roots-match	proposition	-	-	written step; hand proof of roots_match
+cb:cor:roots	corollary	-	-	written step; computer-assisted (uses roots_codes_match and roots_eq_tsv)
+cb:thm:c3	theorem	C3Cover.all_roots_covered	C3LEAN/C3Cover.lean:2251	export label; Lean-checked, axioms propext and Quot.sound; no hypotheses; computer-assisted (uses the computer-assisted batch facts and roots_codes_match); leaf set is the certificates' own key list (the run records of the leaves are checked outside Lean)
+cb:rem:use	remark	-	-	commentary; scope and intended use (geometry, SAT verdicts, run records of the leaves not established)
+cb:def:inner	definition	Central34.inner	C2FINAL/Central34Orbits.lean:21	definition
+cb:def:choose2	definition	Central34.choose2	C2FINAL/Central34Orbits.lean:24	definition
+cb:def:choose3	definition	Central34.choose3	C2FINAL/Central34Orbits.lean:29	definition
+cb:def:subcases	definition	Central34.subcases	C2FINAL/Central34Orbits.lean:34	definition
+cb:def:mask	definition	Central34.mask	C2FINAL/Central34Orbits.lean:37	definition
+cb:def:c2refl	definition	Central34.refl	C2FINAL/Central34Orbits.lean:40	definition
+cb:def:bitset	definition	Central34.bitset	C2FINAL/Central34Orbits.lean:43	definition
+cb:def:uncovered	definition	Central34.uncovered	C2FINAL/Central34Orbits.lean:46	definition
+cb:def:closedP	definition	Central34.closedP1	C2FINAL/Central34Orbits.lean:51	generated data; family closedP1..closedP8 at lines 51-264 (287 entries each, 288 for closedP6)
+cb:def:closed	definition	Central34.closed	C2FINAL/Central34Orbits.lean:267	definition
+cb:rem:c2-reading	remark	-	-	commentary; intended meaning, not used in proofs
+cb:lem:c2-subsets	lemma	-	-	written step; subcases enumerate the 2- and 3-subsets
+cb:thm:c2-refl	theorem	Central34.subcases_reflection	C2FINAL/Central34Orbits.lean:273	Lean-checked according to the record (no saved Lean output; C2FINAL/README.md section 6 records propext only); computer-assisted in Lean (decide +kernel); written proof given
+cb:fact:c2-sub	fact	Central34.closed_are_subcases	C2FINAL/Central34Orbits.lean:284	Lean-checked according to the record (no saved Lean output; C2FINAL/README.md section 6 records propext only); computer-assisted (decide +kernel on generated lists); no hand proof
+cb:thm:c2	theorem	Central34.all_cases_closed	C2FINAL/Central34Orbits.lean:291	export label; Lean-checked according to the record (no saved Lean output; C2FINAL/README.md section 6 records propext only); computer-assisted (decide +kernel on generated lists closedP1..closedP8); no hypotheses
+cb:cor:c2	corollary	-	-	written step; computer-assisted (a consequence of cb:thm:c2)
+cb:rem:c2-scope	remark	-	-	commentary; scope (refutation of the listed subcases, covers, reductions A and B not established)

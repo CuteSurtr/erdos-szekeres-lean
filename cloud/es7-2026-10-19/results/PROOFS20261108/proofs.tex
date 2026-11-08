@@ -1,0 +1,122 @@
+% proofs.tex -- written proofs of Lean-checked results, Stage 1 (symmetric point sets).
+% Build: pdflatex -interaction=nonstopmode -halt-on-error proofs  (three passes).
+\documentclass[10pt]{amsart}
+\input{preamble}
+\hypersetup{pdftitle={Written proofs of Lean-checked results, Stage 1: symmetric point sets}}
+
+\title[Written proofs of Lean-checked results, Stage~1: symmetric point sets]{Written proofs of Lean-checked
+  results,\\ Stage~1: symmetric point sets}
+\date{8 November 2026}
+
+\begin{document}
+
+\begin{abstract}
+The Erd\H{o}s--Szekeres project checks some of its results in Lean~4. This document is Stage~1 of a series of written
+proofs of these results. It treats the Lean files listed under ``Scope of Stage~1'' below, which concern mainly
+symmetric point sets, and the foundations they use; other Lean-checked results of the project, among them further
+results on symmetric point sets, are left to later stages. Each section restates the Lean-checked theorems of one
+part, faithfully to the Lean declarations, and gives a written proof that a mathematician can check without Lean,
+with two exceptions. Two published theorems that the Lean code uses, Baek's theorem and the cups--caps theorem of
+Erd\H{o}s and Szekeres, are cited and not reproved. Statements marked computer-assisted are reduced to a finite
+computation that is stated precisely and carried out by a machine; it is not carried out by hand, except where a
+section gives a proof by hand as well. The Lean checks remain the primary evidence for these theorems; the proofs
+here are written proofs and have not been refereed. Where a Lean theorem takes unproved propositions or
+satisfiability verdicts as hypotheses, it is stated with those hypotheses and is established here only as that
+conditional statement.
+\end{abstract}
+
+\maketitle
+\tableofcontents
+
+\phantomsection
+\section*{Scope of Stage~1}
+
+Paths follow the convention of Section~\ref{fd:sec}: a path that begins with \dirn{ErdosSzekeres/}, \dirn{docs/},
+\dirn{experiments/} or \dirn{scripts/} is relative to the root of the project repository, and every other path is
+relative to its research-records directory \dirn{cloud/es7-2026-10-19/results}.
+
+\paragraph{Treated here.}
+The sections restate the Lean-checked results of the following files and give written proofs of them. They also
+restate declarations of the main library \dirn{ErdosSzekeres/} that these files use: the foundations
+(Section~\ref{fd:sec}), and the formalizations of Baek's theorem and of the cups--caps theorem with their bridge files
+(Section~\ref{mb:sec}); a few such declarations are also restated in Sections~\ref{sr:sec} and~\ref{mm:sec}. These
+four sections list the main-library files concerned, with their hashes.
+\begin{itemize}
+\item \dirn{LAYERLEAN/LayerLemma.lean}, mainly in Sections~\ref{ll:sec} and~\ref{lg:sec};
+\item the subdirectories \dirn{orbit}, \dirn{merged}, \dirn{keys}, \dirn{phase}, \dirn{linked}, \dirn{capstone} and
+  \dirn{es7corr} of \dirn{LEANEXT}, in Sections~\ref{oc:sec}, \ref{pc:sec} and~\ref{ec:sec};
+\item \dirn{ES8SYM/lean} and \dirn{PRIMEFOLD/compat/lean}, in Section~\ref{ec:sec};
+\item \dirn{SYMLEAN/SymmetricReduction.lean} and \dirn{SYMLEAN/AffineReduction.lean}, in Sections~\ref{sr:sec}
+  and~\ref{ar:sec}, and \dirn{SYMLEAN/mirror/ReductionThreeClasses.lean}, in Section~\ref{mb:sec};
+\item \dirn{MIRRORETV/lean}, in Sections~\ref{mm:sec} and~\ref{mb:sec};
+\item \dirn{C3LEAN} and \dirn{C2FINAL} (the declarations of the latter are Lean-checked according to the record), in
+  Section~\ref{cb:sec};
+\item \dirn{AUDIT3/A1_reduction} and \dirn{ES7SPLIT/review/equivalence}, in Section~\ref{sa:sec}.
+\end{itemize}
+Not restated, although they belong to these records: verbatim copies, tests and controls, \texttt{\#print} and
+\texttt{\#check} commands, the review files in \dirn{LEANEXT/review}, \dirn{SYMLEAN/review} and
+\dirn{MIRRORETV/review} (re-checks, independent formalizations and tests; a few of their theorems are mentioned in
+remarks), \dirn{MIRRORETV/lean/FarFlat.lean} (estimates for a lower-bound construction) and a few further
+declarations. The Coverage paragraph at the end of each section gives the details and the reasons. The Lean files of
+\dirn{C3L} (a generator of CNF formulas) and of \dirn{AUDIT2} (audit scripts) state no theorems and are not treated.
+
+\paragraph{Left to later stages.}
+The following Lean-checked work of the project is not treated in this document. Planned for Stage~2, the SAT
+encodings:
+\begin{itemize}
+\item \dirn{ENCBLEAN}: encoder~B of the sixfold case of the $k=8$ problem as a Lean program, with its soundness, and
+  the geometric assembly in \dirn{ENCBLEAN/geo}, which derives its copy of \lean{Sixfold66}
+  (Definition~\ref{ll:def:66-70}) from the unsatisfiability of $64$ cube formulas
+  (\lean{EncB.Geo.sixfold66_of_cubes64}; see Remark~\ref{ll:rem:hyp});
+\item \dirn{H} and \dirn{H2}: Lean versions of clause generators of the project's SAT encodings, among them
+  mirror-symmetric and $D_3$-symmetric ones, with their soundness;
+\item \dirn{H3}, \dirn{V1-L}, \dirn{V2-L} and \dirn{V2-L2}: the derivation of the mirror statement
+  \lean{Mir.MirrorExclusionLine} from hypotheses asserting that certain CNF formulas are unsatisfiable
+  (Remark~\ref{sr:rem:mirror-line}).
+\end{itemize}
+Planned for Stage~3:
+\begin{itemize}
+\item \dirn{experiments/omission-compact-checker-2026-11-05}: the compact checker of omission certificates, with its
+  Lean check of $\mathrm{ES}(8)\le311$;
+\item the main library beyond the declarations treated here.
+\end{itemize}
+The Lean files of \dirn{ES8SLACK} are not treated here; written proofs of its lemmas are in
+\dirn{ES8SLACK/proofs.md}.
+
+\paragraph{Evidence outside Lean.}
+Some hypotheses of conditional theorems are supported in the project by SAT certificates. For these the project
+counts only the verdicts of the proof checker cake\_lpr~\cite{CakeLPR}; the checker lrat-check of
+drat-trim~\cite{DT} is a secondary check, whose verdicts are not counted (\dirn{WRITEUP/SYMMETRIC.md}, \S3, and
+\dirn{LRATCHECK20261105}). None of this evidence is checked in this document.
+
+\paragraph{Works cited.}
+The sections cite published works inline, by author together with title or arXiv number, by author alone or by
+name; the References list them. They are: Lean~4
+\cite{Lean4} and Mathlib \cite{Mathlib}; textbooks for standard facts \cite{Roc70,Rud76}; the theorems of
+Baek~\cite{Bae25} and of Erd\H{o}s and Szekeres~\cite{ES35}, which are cited and not reproved
+(Theorems~\ref{mb:thm:baek} and~\ref{mb:thm:capcup}); earlier work with priority for the fivefold case
+(Dumitru~\cite{Dum25}) and for the fourfold case (Subercaseaux, Mackey, Qian and Heule~\cite{SMQH25}; see
+Remark~\ref{sr:rem:records}); and the archive of M.~Schroeder~\cite{Sch26}, from which six of the bridge files of
+Section~\ref{mb:sec} are adapted.
+
+\input{sections/fd}
+\input{sections/ll}
+\input{sections/lg}
+\input{sections/oc}
+\input{sections/pc}
+\input{sections/ec}
+\input{sections/sr}
+\input{sections/ar}
+\input{sections/mm}
+\input{sections/mb}
+\input{sections/cb}
+\input{sections/sa}
+
+\appendix
+\begingroup\esmapbreaks
+\input{appendix_map}
+\endgroup
+
+\input{bibliography}
+
+\end{document}

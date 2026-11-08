@@ -1,0 +1,52 @@
+# Fixes of section `sa`, round 2
+
+Inputs: `reviews/sa-r1-math.md` and `reviews/sa-r1-claims.md`. They report no blocker or major finding and 15 minor ones. Snapshot
+before editing: `snapshots/sa-r2-pre/` (`sa.tex`, `sa.map.tsv`).
+
+Result: all 15 findings fixed, none declined. Two of them needed a small correction while fixing:
+- Finding 9: `List.IsChain` is defined in Batteries, not in Mathlib.
+- Finding 14: the report names the file `SYM2/sym7_32points.txt` at line 107, not at line 93.
+
+Statements re-read against the Lean sources for the parts touched:
+- `AUDIT3/A1_reduction/SizeArith.lean` (all 20 heads; only the item labels changed) and `AssembledSizes.lean` (lines 23-31);
+- `ES7SPLIT/review/equivalence/BaekSeven.lean` and `BaekSeven.out`;
+- `LEANEXT/es7corr/ES7Corollaries.lean` 1157-1233 (`Fivefold35`, `Fourfold32`, `fivefold_heptagon`, `fourfold_heptagon`);
+- `MIRRORETV/lean/MirrorMain.lean` 1527-1537 (`capacity16`) and its use at 1701 in `mirror_seven_of`;
+- `ErdosSzekeres/Vendor/ETV/Config/Defs.lean` 20-67 and `ErdosSzekeres/Vendor/ETV/Lib/List/Defs.lean` 19-49.
+
+No statement head and no Lean-faithful statement changed. Only the item labels in Propositions `sa:prop:rot`, `mirror`, `order` and
+`table` now carry the `A1.` prefix.
+
+| # | finding | action | where |
+|---|---|---|---|
+| 1 | Scope statements in `sa:rem:use` miss Lean-checked counterparts (Fourfold32 "only sr:thm:variant"; "conditional on the classes") | **Fixed.** In the s=4 bullet: "Among the reduction theorems only Theorem sr:thm:variant uses this class; a same-text copy, `LayerLemma.Fourfold32`, is the hypothesis of Theorem ec:thm:fourfold; item (5) uses the class for the size table." In item (5): the mirror row is unconditional. The bound 32 is Lean-checked with no class hypothesis (mb:thm:refl32(b) for reflLine, derived from mb:thm:seven(b)), and the mirror classes are theorems (mb:thm:classes). The half-turn, threefold and sixfold rows and part (f) are conditional on HalfTurn34 or Threefold33. The fourfold bound 28 and the fivefold bound 31 are conditional on Fourfold32 and Fivefold35. They have Lean-checked conditional forms that include the geometric modelling: ec:thm:fourfold (at least 29 points, so at most 28) and ec:thm:fivefold (at least 32 points, so at most 31), each with its same-text LayerLemma copy as hypothesis. Re-read `ES7Corollaries.lean` 1164, 1183 and 1216. | `sa.tex` s=4 bullet of item (1); end of item (5) |
+| 2 | "they are not Lean-checked" under-reports the Lean coverage of the modelling | **Fixed.** The text now says that Lemma sa:lem:model is a written step and not a declaration of these files. It lists the related facts that are Lean-checked in other forms: ec:thm:compat(a),(b) (abstract form of n = s*k+e); the orbit selection sr:lem:orbit and the counting in the Lean proof of sr:thm:main; ll:thm:layers and ll:thm:card-peel, through which the Lean proofs of ec:thm:fourfold and ec:thm:fivefold pass to subsets of exactly 32 or 35 points; ll:lem:minperiod and lg:lem:centre, which the written proof uses. It adds that no Lean theorem connects these facts with the files of this section. All cited labels are export labels. The Coverage sentence now reads "which these files do not formalise". | paragraph "What the files do not contain"; Coverage |
+| 3 | `sa:rem:baek-seven`(3): records out of date; "for their use at n = 7" is not in the records | **Fixed.** The record is now quoted verbatim (`ES7SPLIT/README.md` 78-79; `split_theorem.md` 13-15 says the same). The remark says that the records were committed in 9793c06e0 (2 Nov 2026, 01:03 +0900) and predate `MirrorOdd.capacity16` (`MIRRORETV/lean/MirrorMain.lean:1529`, added in 83c80f38f at 03:41). That theorem is the geometric 7-gon form, with configurations in the sense of mm:def:config, and it is Lean-checked: `mirror_seven_of` uses it, and the axioms printed for `mirror_seven` and `mirror_seven_line` (`MirrorMain.out` 848 and 850) cover it. The remark also says that whether it covers the z-split use in ES7SPLIT is not examined here and that the ES7SPLIT theorems remain written proofs. Commit times were checked with `git log`; `git log -S capacity16` shows 83c80f38f as the commit that introduces it. | Remark sa:rem:baek-seven (3) |
+| 4 | General position of the mirror subsets not justified in `sa:rem:use`(2) | **Fixed.** Both the 34-point and the 33-point set are now "in general position and mapped into itself by sigma (Lemma sa:lem:model(c))". A parenthesis explains the fixed-point claims: the fixed points of sigma are the points of L, as shown in the proof of sa:lem:model(b), and the pairs lie in S \ L. | item (2) |
+| 5 | `sa:rem:use`(4): "each item exhibits a subset T" ignores s >= 7; Lean form names only sr:thm:main | **Fixed.** New text: "Except for the orders s >= 7 in item (1), which need no class, items (1) and (2) exhibit a subset T ...; item (3) reduces every Euclidean isometry other than the identity to items (1) and (2), and affine symmetries to Euclidean isometries. The Lean-checked form of this implication is Theorem sr:thm:main for Euclidean isometries, with Theorem ar:thm:main for affine symmetries." | item (4) |
+| 6 | The "(or sa:prop:assembled(c)/(f))" citations give only part of the conclusions | **Fixed.** s=5: "Proposition sa:prop:rot(b) gives n >= 35 and k >= 7 (Proposition sa:prop:assembled(c) gives n >= 35 only)". s=4: "... (Proposition sa:prop:assembled(f) gives 2k >= 17 only)". The other alternatives, (a), (b), (d) and (e), give the full conclusions stated and are unchanged. | item (1), bullets s=5 and s=4 |
+| 7 | Map has no rows for the four remarks | **Fixed.** Added rows for `sa:rem:big-order`, `sa:rem:control`, `sa:rem:baek-seven` and `sa:rem:use`, in document order. The `sa:rem:control` row has lean_name `-`, file_line `AUDIT3/A1_reduction/verify_A1-F1/AssembledSizes.lean:30`, and a note: anonymous example, accepted by Lean (no error in the log), not covered by `#print axioms`. The `sa:lem:model` note now names the related Lean-checked forms. Checks: a script confirmed that the 13 rows match the 13 statement environments in order, kind, names and file:line. The appendix generator accepted the map on a copy (`build/sa_r2_app/`), and the full document built there in 3 passes with exit 0 and no undefined reference. The only overfull box is the one already reported in round 1, in an appendix row of another section (ENCBLEAN path). | `sa.map.tsv` |
+| 8 | A1 names shortened in running text | **Fixed.** All 26 short occurrences of names in namespace `A1`, in running text and in item labels, now carry the `A1.` prefix (none is left): the axioms list of the Sources bullet, the items of sa:prop:rot, mirror, order and table, and the `A1.c5_reduce` comment in item (1). Names of `AssembledSizes.lean` and `baek_seven` are in the root namespace and unchanged. | Sources list; Propositions; item (1) |
+| 9 | The definition site of the ETV notions is imprecise | **Fixed, with a correction.** Added `List.In` (line 22) and `List.Chain3'` (line 46, through the inductive `List.Chain3` of line 42) of `ErdosSzekeres/Vendor/ETV/Lib/List/Defs.lean`. The finding says that `List.IsChain` comes from Mathlib. In fact it is defined in Batteries (`Batteries/Data/List/Basic.lean:562`), at the revision 8da40b72 pinned in `lake-manifest.json`; Mathlib's `Data/List/Chain.lean` only proves results about it. The text now says "List.IsChain, which Mathlib takes from its dependency Batteries". | start of subsection sa:ssec:baek |
+| 10 | Nits: (1) what `decide` evaluates in `order_split`; (2) the `big_order_orbit` item attributed to report lines 103-106 | **Fixed.** (1) New text: "closed by decide, that is, by kernel evaluation of the decision procedure for the whole closed disjunction (for s=5, for example, this evaluates the remainders of 5 on division by 2, 3 and 5) ... The five instances are true because of the disjuncts 2\|2, 3\|3, 2\|4, 5\|5 and 2\|6 used above, so the written proof establishes each of them by hand; hence ... not computer-assisted." (2) The list attributed to the report no longer contains the orbit item. A new sentence says that the file states `big_order_orbit` at its line 24 and that the report's description of the file (line 106) does not mention it. | proof of sa:lem:split; item (2) of the file list |
+| 11 | The table cites logs by bare name before their full paths | **Fixed.** The sentence before the table now says: "The table lists the three Lean files and their logs by file name; their full paths are given in the list that follows it." | Sources and evidence |
+| 12 | Same as 5 (claims lens) | **Fixed** together with 5. | item (4) |
+| 13 | Same as 3 (claims lens) | **Fixed** together with 3. The text does not claim that the ES7SPLIT theorems become Lean-checked. | Remark sa:rem:baek-seven (3) |
+| 14 | The control remark adds content to the file comment | **Fixed.** The comment of `AssembledSizes.lean:29` is now quoted verbatim. The description of the set is attributed to the A1 report: half-turn symmetric about (0,0), centre not in the set, no collinear triple, largest subset in convex position of 6 points (`AUDIT3/reports/A1_reduction.md`, line 93 for the description and line 107 for the file name `SYM2/sym7_32points.txt`, which line 93 does not give). It is still said that the set is not examined in this section. | Remark sa:rem:control |
+| 15 | Underfull lines in the Coverage paragraph | **Fixed.** The Coverage block is set ragged right inside a local group, `{\raggedright \paragraph{Coverage.} ... \par}`, with no new macro. The standalone compile now has 0 underfull hboxes. The 2 underfull vboxes during page output are at page breaks; they are not hbox warnings and not overfull boxes. | Coverage |
+
+## Compile check
+
+`build/sa_wrapper.tex` was run twice with `nice -n 15 pdflatex -interaction=nonstopmode -halt-on-error`:
+- both passes exit 0, with 8 pages;
+- no `!` error, no "Missing", no multiply defined label;
+- 0 overfull boxes and 0 underfull hboxes;
+- 26 undefined references, all `fd:` labels or contract export labels (none `sa:`).
+
+## Hygiene
+
+- `sa.tex` and `sa.map.tsv` contain no machine path and no tool name.
+- They contain no "verified" or "certified".
+- "proved" occurs only negated or as "proved here as a written step"; "Lean proves" describes the Lean proofs, as in round 1.
+- No `\lean`/`\dirn` argument contains a space.
+- The map is ASCII, with 5 fields per row and a final newline.

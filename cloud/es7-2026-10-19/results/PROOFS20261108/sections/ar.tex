@@ -1,0 +1,814 @@
+\section{Affine symmetries}\label{ar:sec}
+\begingroup\sloppy\emergencystretch=\linewidth
+
+This section extends the reduction of Theorem~\ref{sr:thm:main} from Euclidean isometries to affine symmetries. Its
+central statement is a transfer principle (Theorem~\ref{ar:thm:transfer}). Let $N\ge3$ and $n$ be natural numbers, and
+suppose that every finite set in general position with at least $N$ points that is mapped into itself by a Euclidean
+isometry other than the identity contains $n$ points in convex position. Then the same holds with an injective affine
+map $p\mapsto Lp+b$ in place of the isometry. The Euclidean statement is a \emph{hypothesis} of the transfer (a
+parameter of the theorem), so the transfer is an implication and asserts neither statement on its own.
+Corollary~\ref{ar:cor:transfer-forms} restates the transfer for Mathlib affine maps, for affine equivalences and for
+maps given in coordinates. With $N=33$, $n=7$ and the Euclidean statement supplied by Theorem~\ref{sr:thm:main}, the
+transfer gives five forms of the statement ``a set of at least $33$ points in general
+position with a non-trivial affine symmetry contains $7$ points in convex position'' (Theorem~\ref{ar:thm:main}). Like
+Theorem~\ref{sr:thm:main}, these five theorems take five of the six case classes of Definition~\ref{sr:def:classes}
+(all except \lean{Fourfold32}) as hypotheses, so they are conditional (Remark~\ref{ar:rem:classes}).
+
+The idea is as follows. The symmetry $g(p)=Lp+b$ permutes the finite set $S$, and $S$ contains three non-collinear
+points, because it is in general position and has at least $N\ge3$ points. So some power $g^m$ with $m\ge1$ fixes these
+three points, and then its linear part satisfies $L^m=1$. The averaged quadratic form $z\mapsto\sum_{k<m}\operatorname{nsq}(L^kz)$, where $\operatorname{nsq}$ is the squared
+Euclidean norm, is $L$-invariant and positive definite. Writing it as $\operatorname{nsq}(Tz)$ with an explicit upper
+triangular matrix $T$ (a Cholesky factor) turns $g$ into the Euclidean isometry $T\circ g\circ T^{-1}$ of the set
+$T(S)$. Finally, $T$ preserves general position and cardinality, and $T^{-1}$ carries $n$ points of $T(S)$ in convex
+position back to $n$ points of $S$ in convex position.
+
+\paragraph{Sources.}
+All declarations of this section are in the namespace \lean{ErdosSzekeres.SymReduction} of the file
+\dirn{SYMLEAN/AffineReduction.lean} (SHA-256 \texttt{41cfc0b60aec}\dots), lines 1059--1533 (its \S\S9--10).
+\begin{itemize}
+\item Lines 1--1058 of that file are byte-identical to lines 1--1058 of \dirn{SYMLEAN/SymmetricReduction.lean}
+(SHA-256 \texttt{6d5ec90a4215}\dots). Their declarations, among them \lean{eDist2}, \lean{IsEucIsometry},
+\lean{Invariant}, the case classes and \lean{heptagon_of_nontrivial_isometry} (line 997 in both files), are treated in
+the section of Theorem~\ref{sr:thm:main}; the theorems of this section use the copies in
+\dirn{SYMLEAN/AffineReduction.lean}.
+\item The repository definitions \lean{Point}, \lean{GeneralPosition}, \lean{ConvexPosition} and \lean{HasConvexNGon}
+are in \dirn{ErdosSzekeres/Definitions.lean} (SHA-256 \texttt{2425500eefd1}\dots), and \lean{orient} is in
+\dirn{ErdosSzekeres/Orientation.lean:9} (SHA-256 \texttt{f67955ac7091}\dots).
+\item Two reformulations of these definitions are used. The first is \lean{convexPosition_iff}, at
+\dirn{ErdosSzekeres/Basic.lean:15} (file SHA-256 \texttt{13667aa2d3dc}\dots). The second is
+\lean{generalPosition_iff_orient_ne_zero}, at \dirn{ErdosSzekeres/OrientationGeometry.lean:66} (file SHA-256
+\texttt{c7db9bbbb65e}\dots).
+\item Toolchain: Lean 4.24.0, Mathlib \texttt{f897ebcf}.
+\end{itemize}
+
+\paragraph{Rigor and axioms.}
+Every statement below that carries a Lean reference is \emph{Lean-checked}. The evidence is as follows.
+\begin{itemize}
+\item The file \dirn{SYMLEAN/AffineReductionAxioms.lean} (SHA-256 \texttt{f6cb9372b174}\dots) consists of the 1533
+lines of \dirn{SYMLEAN/AffineReduction.lean}, followed by a blank line, nine \texttt{\#print axioms} lines and one
+\texttt{\#check} line.
+\item The run table \dirn{SYMLEAN/logs/runs.tsv} records that \dirn{SYMLEAN/AffineReduction.lean} and
+\dirn{SYMLEAN/AffineReductionAxioms.lean} were each compiled on 1 November 2026 with exit code 0.
+\item The recorded output \dirn{SYMLEAN/logs/AffineReductionAxioms.out} (SHA-256 \texttt{38d0b6f59398}\dots) of the
+axioms file states
+that each of the following nine theorems depends on exactly the axioms \texttt{propext}, \texttt{Classical.choice} and
+\texttt{Quot.sound}: \lean{heptagon_of_nontrivial_affineEquiv}, \lean{heptagon_of_nontrivial_affineEquiv_image},
+\lean{heptagon_of_nontrivial_affineMap}, \lean{heptagon_of_nontrivial_affine},
+\lean{heptagon_of_nontrivial_affine_coords}, \lean{hasConvexNGon_of_affine_symmetry},
+\lean{generalPosition_image_affineEquiv}, \lean{hasConvexNGon_image_affine} and
+\lean{heptagon_of_nontrivial_isometry}.
+\item Every other declaration of this section is used, directly or through other declarations, in the proof of one of
+these nine theorems. So it depends on no further axiom. For \lean{lin2_fst} and \lean{lin2_snd}
+(Lemma~\ref{ar:lem:lin2}(a)) this inference needs a supplement. Their Lean proofs are \lean{rfl}, and they are used only inside
+\texttt{simp only} (\dirn{SYMLEAN/AffineReduction.lean}, lines 1180, 1187, 1193 and 1197), which may apply such lemmas as definitional rewrites without
+recording them in the proof term. So they need not occur in the proof terms from which \texttt{\#print axioms}
+collects the axioms of the nine theorems. Apart from equality and \lean{rfl}, which use no axiom, their statements and
+proofs mention only \lean{lin2} applied to points and the coordinates, additions and multiplications in the definition
+of \lean{lin2}. The axioms check of \lean{hasConvexNGon_of_affine_symmetry} reaches all of these, because its proof applies
+the map $T$ of Proposition~\ref{ar:prop:averaging}(b), a value of \lean{lin2}, to points (Lean lines 1373--1376), and the
+check also follows definitions. So these two lemmas depend on no
+further axiom either.
+\item The compilation log \dirn{SYMLEAN/logs/AffineReduction.out} of \dirn{SYMLEAN/AffineReduction.lean} is empty
+(no message). So no declaration of the file uses \lean{sorry}.
+\item The five case classes are definitions of type \lean{Prop} that occur as explicit premises, not axioms. The
+output of the \texttt{\#check} line, in the same log as the axioms, displays them as premises of
+\lean{heptagon_of_nontrivial_affineEquiv}.
+\item No proof uses \lean{decide} or \lean{native_decide}. Nothing in this section is a computation.
+\end{itemize}
+The proofs below are \emph{written proofs (not refereed)}. They follow the Lean proofs step by step unless a proof says
+otherwise. Statements tagged ``written step'' are not Lean declarations.
+
+\paragraph{Dependencies.}
+From the foundations: Definitions~\ref{fd:def:point}, \ref{fd:def:orient}, \ref{fd:def:gp}, \ref{fd:def:cp},
+\ref{fd:def:ngon} and~\ref{fd:def:inv}; Lemma~\ref{fd:lem:collinear} (general position in terms of $\orient$); and
+Lemma~\ref{fd:lem:cp-hull} (convex position in terms of convex hulls). The lemmas below re-prove, in the exact form
+used here, the facts summarised in Lemmas~\ref{fd:lem:affine-orient} and~\ref{fd:lem:affine-cp}. From the reduction
+for isometries: Definition~\ref{sr:def:iso} (\lean{eDist2} and \lean{IsEucIsometry}),
+Definition~\ref{sr:def:classes} (the case classes) and Theorem~\ref{sr:thm:main}.
+
+\subsection{Conventions}
+
+\paragraph{Points, matrices, iterates.}
+Points are elements of $\R^2$ (Lean \lean{Point}, the functions from the index type \lean{Fin}~$2$ to the reals),
+written
+$p=(p_0,p_1)$. Points and vectors are the same objects, and $p\pm q$ and $\lambda p$ are taken coordinatewise.
+\begin{itemize}
+\item A \emph{matrix} is a real $2\times2$ matrix $M=(M_{ij})_{i,j\in\{0,1\}}$ (Lean: a
+\lean{Matrix} with rows and columns indexed by \lean{Fin}~$2$ and real entries).
+\item $Mz$ is the matrix--vector product, $(Mz)_i=\sum_{j\in\{0,1\}}M_{ij}z_j$ (Lean \lean{Matrix.mulVec}). It is
+linear in $z$, and $M(M'z)=(MM')z$ for matrices $M,M'$.
+\item $M^k$ is the $k$-th matrix power, with $M^0=1$, the identity matrix, and $M^{k+1}=M^kM=MM^k$.
+\item $\det M=M_{00}M_{11}-M_{01}M_{10}$ (Mathlib \lean{Matrix.det_fin_two}).
+\item For a map $g:\R^2\to\R^2$, $g^k$ is the $k$-fold iterate (Lean \texttt{g\textasciicircum[k]}, from \lean{Nat.iterate}): $g^0=\mathrm{id}$ and
+$g^{k+1}=g\circ g^k$. (The definition of \lean{Nat.iterate} recurses on the other side, $g^{k+1}=g^k\circ g$. The
+form used here, $g^{k+1}(p)=g(g^k(p))$, is the lemma \lean{Function.iterate_succ_apply'}, which the Lean proof of
+Lemma~\ref{ar:lem:iter} uses.)
+\item ``$g\ne\mathrm{id}$'' is always an inequality of maps of the whole plane.
+\end{itemize}
+
+\paragraph{Finite sets.}
+A finite set is a Lean \lean{Finset} of points, and $\card S$ is its cardinality. For a finite set $S$ and a map $f$,
+$f(S)=\{f(p):p\in S\}$ is again a finite set (Lean \lean{Finset.image}); if $f$ is injective, then $\card{f(S)}=\card S$.
+``$f$ maps $S$ into $S$'' means \lean{Invariant}~$f$~$S$: $f(p)\in S$ for all $p\in S$ (Definition~\ref{fd:def:inv};
+Lean \dirn{SYMLEAN/AffineReduction.lean:271}). General position, convex position and \lean{HasConvexNGon} are as in
+Definitions~\ref{fd:def:gp}, \ref{fd:def:cp} and~\ref{fd:def:ngon}. By Lemma~\ref{fd:lem:collinear}, a finite set $S$
+is in general position if and only if $\orient(a,b,c)\ne0$ for all pairwise distinct $a,b,c\in S$. By
+Lemma~\ref{fd:lem:cp-hull}, $S$ is in convex position if and only if $p\notin\conv(S\setminus\{p\})$ for every $p\in
+S$. Here $\conv(A)$ is the convex hull, the smallest convex set containing $A$. Finally, \lean{HasConvexNGon}~$n$~$S$
+means that some $U\subseteq S$ with $\card U=n$ is in convex position.
+
+\paragraph{Euclidean isometries.}
+$\operatorname{eDist2}(p,q)=(p_0-q_0)^2+(p_1-q_1)^2$, and a map $h:\R^2\to\R^2$ is a \emph{Euclidean isometry}
+(\lean{IsEucIsometry}~$h$) if $\operatorname{eDist2}(h(p),h(q))=\operatorname{eDist2}(p,q)$ for \emph{all}
+$p,q\in\R^2$ (Definition~\ref{sr:def:iso}; Lean \dirn{SYMLEAN/AffineReduction.lean:265} and~\dirn{:268}). The squared
+distance is written out because the metric that Mathlib puts on \lean{Point} is the sup metric, not the Euclidean
+one.
+
+\paragraph{Affine maps (Mathlib).}
+\begin{itemize}
+\item An \emph{affine map} $f$ of $\R^2$ (Mathlib \lean{AffineMap}) is a map $f:\R^2\to\R^2$ together with a linear
+map $f_{\mathrm{lin}}:\R^2\to\R^2$ (Lean \lean{f.linear}) such that $f(v+p)=f_{\mathrm{lin}}(v)+f(p)$ for all
+$v,p\in\R^2$. The same letter denotes the map. A linear map $\varphi$ is an affine map with
+$\varphi_{\mathrm{lin}}=\varphi$ (Lean \lean{LinearMap.toAffineMap}).
+\item An \emph{affine equivalence} $f$ of $\R^2$ (Mathlib \lean{AffineEquiv}) is a bijection $f$ of $\R^2$ together
+with a linear bijection $f_{\mathrm{lin}}$ with the same property. Its underlying affine map
+(\lean{AffineEquiv.toAffineMap}) has the same map and the same linear part.
+\item $\mathrm{refl}$ denotes the identity affine equivalence of $\R^2$, whose map is $\mathrm{id}$ (Lean
+\lean{AffineEquiv.refl}, for the reals and \lean{Point}).
+\item Two affine equivalences with the same map are equal (\lean{AffineEquiv.ext}), because the linear part is
+determined by the map: $f_{\mathrm{lin}}(v)=f(v)-f(0)$, by the defining property with $p=0$. Hence, for an affine
+equivalence $g$, $g\ne\mathrm{refl}$ holds if and only if $g\ne\mathrm{id}$ as maps.
+\item For a linear map $\varphi$ of $\R^2$, $M_\varphi$ is the matrix whose $j$-th column is $\varphi(e_j)$, where
+$e_0=(1,0)$ and $e_1=(0,1)$ (Lean \lean{LinearMap.toMatrix'}). Then $M_\varphi z=\varphi(z)$ for every $z$, since
+$\varphi(z)=z_0\varphi(e_0)+z_1\varphi(e_1)$ (\lean{LinearMap.toMatrix'_mulVec}). The matrix of a composition is the
+product of the matrices.
+\end{itemize}
+
+\subsection{The averaged quadratic form}
+
+\begin{definition}[squared norm; \leanref{ErdosSzekeres.SymReduction.nsq}{SYMLEAN/AffineReduction.lean:1088}]\label{ar:def:nsq}
+For $v\in\R^2$, $\operatorname{nsq}(v)=v_0^2+v_1^2$.
+\end{definition}
+
+\begin{lemma}[coordinates of $Az$; \leanref{ErdosSzekeres.SymReduction.mulVec2_fst}{SYMLEAN/AffineReduction.lean:1097}, \leanref{ErdosSzekeres.SymReduction.mulVec2_snd}{SYMLEAN/AffineReduction.lean:1101}]\label{ar:lem:mulvec}
+For every matrix $A$ and every $z\in\R^2$: $(Az)_0=A_{00}z_0+A_{01}z_1$ \textup{(}\lean{mulVec2_fst}\textup{)} and
+$(Az)_1=A_{10}z_0+A_{11}z_1$ \textup{(}\lean{mulVec2_snd}\textup{)}.
+\end{lemma}
+
+\begin{proof}
+This is the definition $(Az)_i=\sum_{j\in\{0,1\}}A_{ij}z_j$, written out for $i=0$ and $i=1$.
+\end{proof}
+
+\begin{lemma}[elementary facts on $\operatorname{nsq}$; \leanref{ErdosSzekeres.SymReduction.nsq_nonneg}{SYMLEAN/AffineReduction.lean:1090}, \leanref{ErdosSzekeres.SymReduction.eDist2_eq_nsq}{SYMLEAN/AffineReduction.lean:1094}]\label{ar:lem:nsq}
+The following hold.
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item \textup{(}\lean{nsq_nonneg}\textup{)} $0\le\operatorname{nsq}(v)$ for every $v\in\R^2$.
+\item \textup{(}\lean{eDist2_eq_nsq}\textup{)} $\operatorname{eDist2}(p,q)=\operatorname{nsq}(p-q)$ for all
+$p,q\in\R^2$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) $\operatorname{nsq}(v)$ is a sum of two squares. (b) $(p-q)_i=p_i-q_i$, so
+$\operatorname{nsq}(p-q)=(p_0-q_0)^2+(p_1-q_1)^2=\operatorname{eDist2}(p,q)$.
+\end{proof}
+
+\begin{definition}[Gram entries; \leanref{ErdosSzekeres.SymReduction.gA}{SYMLEAN/AffineReduction.lean:1106}, \leanref{ErdosSzekeres.SymReduction.gB}{SYMLEAN/AffineReduction.lean:1107}, \leanref{ErdosSzekeres.SymReduction.gC}{SYMLEAN/AffineReduction.lean:1108}]\label{ar:def:gram}
+For a matrix $A$,
+\[
+g_A(A)=A_{00}^2+A_{10}^2,\qquad g_B(A)=A_{00}A_{01}+A_{10}A_{11},\qquad g_C(A)=A_{01}^2+A_{11}^2
+\]
+(Lean \lean{gA}, \lean{gB}, \lean{gC}). These are the entries of the Gram matrix of the two columns of $A$.
+\end{definition}
+
+\begin{lemma}[squared norm of $Az$; \leanref{ErdosSzekeres.SymReduction.nsq_mulVec}{SYMLEAN/AffineReduction.lean:1110}]\label{ar:lem:nsq-mulvec}
+For every matrix $A$ and every $z\in\R^2$,
+$\operatorname{nsq}(Az)=g_A(A)\,z_0^2+2\,g_B(A)\,z_0z_1+g_C(A)\,z_1^2$.
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{ar:lem:mulvec}, $\operatorname{nsq}(Az)=(A_{00}z_0+A_{01}z_1)^2+(A_{10}z_0+A_{11}z_1)^2$. Expanding gives
+$(A_{00}^2+A_{10}^2)z_0^2+2(A_{00}A_{01}+A_{10}A_{11})z_0z_1+(A_{01}^2+A_{11}^2)z_1^2$.
+\end{proof}
+
+\begin{definition}[the averaged form; \leanref{ErdosSzekeres.SymReduction.avgQ}{SYMLEAN/AffineReduction.lean:1116}, \leanref{ErdosSzekeres.SymReduction.qA}{SYMLEAN/AffineReduction.lean:1120}, \leanref{ErdosSzekeres.SymReduction.qB}{SYMLEAN/AffineReduction.lean:1121}, \leanref{ErdosSzekeres.SymReduction.qC}{SYMLEAN/AffineReduction.lean:1122}]\label{ar:def:avgq}
+For a matrix $L$, $n\in\N$ and $z\in\R^2$,
+\[
+\operatorname{avgQ}(L,n,z)=\sum_{k=0}^{n-1}\operatorname{nsq}(L^kz),
+\]
+\[
+q_A(L,n)=\sum_{k=0}^{n-1}g_A(L^k),\qquad q_B(L,n)=\sum_{k=0}^{n-1}g_B(L^k),\qquad q_C(L,n)=\sum_{k=0}^{n-1}g_C(L^k)
+\]
+(Lean \lean{avgQ}, \lean{qA}, \lean{qB}, \lean{qC}; the sums run over \lean{Finset.range}~$n$, and they are $0$ for
+$n=0$).
+\end{definition}
+
+\begin{lemma}[coefficients of the averaged form; \leanref{ErdosSzekeres.SymReduction.avgQ_eq}{SYMLEAN/AffineReduction.lean:1124}]\label{ar:lem:avgq-eq}
+For every matrix $L$, every $n\in\N$ and every $z\in\R^2$,
+\[
+\operatorname{avgQ}(L,n,z)=q_A(L,n)\,z_0^2+2\,q_B(L,n)\,z_0z_1+q_C(L,n)\,z_1^2 .
+\]
+\end{lemma}
+
+\begin{proof}
+Apply Lemma~\ref{ar:lem:nsq-mulvec} to $A=L^k$ for each $k<n$ and add the $n$ equalities. On the left this gives
+$\operatorname{avgQ}(L,n,z)$. On the right, the coefficients of $z_0^2$, $2z_0z_1$ and $z_1^2$ add up to $q_A(L,n)$,
+$q_B(L,n)$ and $q_C(L,n)$. (Lean argues by induction on $n$; each induction step is the addition of one such
+equality.)
+\end{proof}
+
+\begin{lemma}[positivity of the averaged form; \leanref{ErdosSzekeres.SymReduction.avgQ_ge}{SYMLEAN/AffineReduction.lean:1133}, \leanref{ErdosSzekeres.SymReduction.qA_pos}{SYMLEAN/AffineReduction.lean:1152}, \leanref{ErdosSzekeres.SymReduction.qdisc_pos}{SYMLEAN/AffineReduction.lean:1158}]\label{ar:lem:avgq-pos}
+Let $L$ be a matrix and $n\in\N$ with $0<n$. Then:
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item \textup{(}\lean{avgQ_ge}\textup{)} $\operatorname{nsq}(z)\le\operatorname{avgQ}(L,n,z)$ for every $z\in\R^2$;
+\item \textup{(}\lean{qA_pos}\textup{)} $0<q_A(L,n)$;
+\item \textup{(}\lean{qdisc_pos}\textup{)} $0<q_A(L,n)\,q_C(L,n)-q_B(L,n)^2$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) Since $n>0$, the sum defining $\operatorname{avgQ}(L,n,z)$ contains the term $k=0$, which is
+$\operatorname{nsq}(L^0z)=\operatorname{nsq}(z)$. The other terms are $\ge0$ by Lemma~\ref{ar:lem:nsq}(a).
+
+Write $\alpha=q_A(L,n)$, $\beta=q_B(L,n)$, $\gamma=q_C(L,n)$.
+
+(b) Apply (a) to $z=(1,0)$ and use Lemma~\ref{ar:lem:avgq-eq}: $1=\operatorname{nsq}(1,0)\le\operatorname{avgQ}(L,n,(1,0))
+=\alpha$. Hence $\alpha\ge1>0$.
+
+(c) Apply (a) to $z=(-\beta,\alpha)$ and use Lemma~\ref{ar:lem:avgq-eq}:
+\[
+\alpha^2+\beta^2=\operatorname{nsq}(-\beta,\alpha)\le\alpha\beta^2+2\beta(-\beta)\alpha+\gamma\alpha^2
+=\alpha(\alpha\gamma-\beta^2).
+\]
+Hence $\alpha(\alpha\gamma-\beta^2)\ge\alpha^2+\beta^2\ge\alpha^2>0$, where the last step uses (b). Since $\alpha>0$, we
+get $\alpha\gamma-\beta^2>0$.
+\end{proof}
+
+\begin{lemma}[invariance of the averaged form; \leanref{ErdosSzekeres.SymReduction.avgQ_mulVec}{SYMLEAN/AffineReduction.lean:1139}]\label{ar:lem:avgq-inv}
+Let $L$ be a matrix and $n\in\N$ with $L^n=1$. Then $\operatorname{avgQ}(L,n,Lz)=\operatorname{avgQ}(L,n,z)$ for every
+$z\in\R^2$.
+\end{lemma}
+
+\begin{proof}
+Put $f(k)=\operatorname{nsq}(L^kz)$ for $k\in\N$. Since $L^k(Lz)=(L^kL)z=L^{k+1}z$, we have
+$\operatorname{avgQ}(L,n,Lz)=\sum_{k=0}^{n-1}f(k+1)$. Splitting off the last term, respectively the first term, of
+$\sum_{k=0}^{n}f(k)$ gives
+\[
+\sum_{k=0}^{n-1}f(k)+f(n)=\sum_{k=0}^{n}f(k)=\sum_{k=0}^{n-1}f(k+1)+f(0).
+\]
+Here $f(n)=\operatorname{nsq}(L^nz)=\operatorname{nsq}(z)=\operatorname{nsq}(L^0z)=f(0)$, because $L^n=1=L^0$. Hence
+$\sum_{k=0}^{n-1}f(k+1)=\sum_{k=0}^{n-1}f(k)=\operatorname{avgQ}(L,n,z)$. No positivity of $n$ is needed; for $n=0$
+both sides are $0$.
+\end{proof}
+
+\subsection{Linear maps with explicit matrices; the Cholesky factor}
+
+\begin{definition}[the linear map $\operatorname{lin2}$; \leanref{ErdosSzekeres.SymReduction.lin2}{SYMLEAN/AffineReduction.lean:1167}]\label{ar:def:lin2}
+For $a,b,c,d\in\R$, $\operatorname{lin2}(a,b,c,d):\R^2\to\R^2$ is the $\R$-linear map
+$p\mapsto(ap_0+bp_1,\ cp_0+dp_1)$, that is, multiplication by the matrix
+$\begin{pmatrix}a&b\\c&d\end{pmatrix}$. In Lean it is a bundled linear map; its additivity and homogeneity are
+discharged inside the definition by coordinate computations.
+\end{definition}
+
+\begin{lemma}[coordinates and orientation for $\operatorname{lin2}$; \leanref{ErdosSzekeres.SymReduction.lin2_fst}{SYMLEAN/AffineReduction.lean:1174}, \leanref{ErdosSzekeres.SymReduction.lin2_snd}{SYMLEAN/AffineReduction.lean:1175}, \leanref{ErdosSzekeres.SymReduction.orient_lin2}{SYMLEAN/AffineReduction.lean:1177}]\label{ar:lem:lin2}
+Let $a,b,c,d\in\R$ and $\Lambda=\operatorname{lin2}(a,b,c,d)$.
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item \textup{(}\lean{lin2_fst}, \lean{lin2_snd}\textup{)} $(\Lambda p)_0=ap_0+bp_1$ and $(\Lambda p)_1=cp_0+dp_1$ for
+every $p\in\R^2$.
+\item \textup{(}\lean{orient_lin2}\textup{)} $\orient(\Lambda x,\Lambda y,\Lambda z)=(ad-bc)\orient(x,y,z)$ for all
+$x,y,z\in\R^2$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) This is the definition. (b) By definition, $\orient(X,Y,Z)=(Y-X)_0(Z-X)_1-(Y-X)_1(Z-X)_0$. Put $u=y-x$ and $w=z-x$.
+By linearity, $\Lambda y-\Lambda x=\Lambda u$ and $\Lambda z-\Lambda x=\Lambda w$. Hence, by (a),
+\[
+\orient(\Lambda x,\Lambda y,\Lambda z)=(au_0+bu_1)(cw_0+dw_1)-(cu_0+du_1)(aw_0+bw_1)=(ad-bc)(u_0w_1-u_1w_0),
+\]
+and $u_0w_1-u_1w_0=\orient(x,y,z)$. This is the case $v=0$ of Lemma~\ref{fd:lem:affine-orient}.
+\end{proof}
+
+\begin{lemma}[the Cholesky factor and its inverse; \leanref{ErdosSzekeres.SymReduction.nsq_lin2_chol}{SYMLEAN/AffineReduction.lean:1184}, \leanref{ErdosSzekeres.SymReduction.lin2_chol_inv_left}{SYMLEAN/AffineReduction.lean:1191}, \leanref{ErdosSzekeres.SymReduction.lin2_chol_inv_right}{SYMLEAN/AffineReduction.lean:1195}]\label{ar:lem:chol}
+Let $s,t,\beta\in\R$. Put $T=\operatorname{lin2}(s,\beta/s,0,t)$ and $T'=\operatorname{lin2}(1/s,\,-\beta/(s^2t),\,0,\,1/t)$.
+\textup(Division follows the Lean convention $x/0=0$, so $T$ and $T'$ are defined for all $s,t,\beta$; each part
+below states the non-vanishing it assumes.\textup)
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item \textup{(}\lean{nsq_lin2_chol}\textup{)} If $s\ne0$, then for every $z\in\R^2$,
+\[
+\operatorname{nsq}(Tz)=s^2z_0^2+2\beta z_0z_1+\Bigl(\frac{\beta^2}{s^2}+t^2\Bigr)z_1^2 .
+\]
+\item \textup{(}\lean{lin2_chol_inv_left}\textup{)} If $s\ne0$ and $t\ne0$, then $T'(Tx)=x$ for every $x\in\R^2$.
+\item \textup{(}\lean{lin2_chol_inv_right}\textup{)} If $s\ne0$ and $t\ne0$, then $T(T'x)=x$ for every $x\in\R^2$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{ar:lem:lin2}(a), $Tz=(sz_0+(\beta/s)z_1,\ tz_1)$ and $T'x=(x_0/s-\beta x_1/(s^2t),\ x_1/t)$.
+
+(a) $\operatorname{nsq}(Tz)=s^2z_0^2+2s(\beta/s)z_0z_1+(\beta/s)^2z_1^2+t^2z_1^2$, and $s(\beta/s)=\beta$ because
+$s\ne0$.
+
+(b) The first coordinate of $T'(Tx)$ is $\frac1s\bigl(sx_0+\frac\beta sx_1\bigr)-\frac{\beta}{s^2t}\,tx_1
+=x_0+\frac{\beta x_1}{s^2}-\frac{\beta x_1}{s^2}=x_0$. The second is $\frac1t\,tx_1=x_1$.
+
+(c) The first coordinate of $T(T'x)$ is $s\bigl(\frac{x_0}s-\frac{\beta x_1}{s^2t}\bigr)+\frac\beta s\cdot\frac{x_1}t
+=x_0-\frac{\beta x_1}{st}+\frac{\beta x_1}{st}=x_0$. The second is $t\cdot\frac{x_1}t=x_1$.
+\end{proof}
+
+\subsection{Affine maps in matrix form}
+
+In this subsection, $g:\R^2\to\R^2$ is a map, $L$ a matrix and $b\in\R^2$; ``$g(p)=Lp+b$ for all $p$'' is the Lean
+hypothesis \lean{hg}.
+
+\begin{lemma}[differences of iterates; \leanref{ErdosSzekeres.SymReduction.iterate_sub_of_affine}{SYMLEAN/AffineReduction.lean:1199}]\label{ar:lem:iter}
+If $g(p)=Lp+b$ for all $p\in\R^2$, then $g^k(p)-g^k(q)=L^k(p-q)$ for all $k\in\N$ and $p,q\in\R^2$.
+\end{lemma}
+
+\begin{proof}
+Induction on $k$. For $k=0$ both sides equal $p-q$, as $L^0=1$. If the claim holds for $k$, then
+\[
+g^{k+1}(p)-g^{k+1}(q)=\bigl(Lg^k(p)+b\bigr)-\bigl(Lg^k(q)+b\bigr)=L\bigl(g^k(p)-g^k(q)\bigr)=L\bigl(L^k(p-q)\bigr)
+=L^{k+1}(p-q).\qedhere
+\]
+\end{proof}
+
+\begin{lemma}[periodic points; \leanref{ErdosSzekeres.SymReduction.exists_periodic_of_injective}{SYMLEAN/AffineReduction.lean:1208}]\label{ar:lem:periodic}
+Let $g:\R^2\to\R^2$ be injective, let $S$ be a finite set that $g$ maps into itself, and let $q\in S$. Then there is
+$m\in\N$ with $0<m$ and $g^m(q)=q$.
+\end{lemma}
+
+\begin{proof}
+By induction on $i$, $g^i(q)\in S$ for every $i\in\N$: $g^0(q)=q\in S$, and $g^{i+1}(q)=g(g^i(q))\in S$ because $g$
+maps $S$ into itself. (In Lean this is \lean{iterate_mem}, \dirn{SYMLEAN/AffineReduction.lean:69}.) Since $\N$ is
+infinite and $S$ is finite, the map $i\mapsto g^i(q)$ from $\N$ to $S$ is not injective (pigeonhole). So there are
+$i<j$ with $g^i(q)=g^j(q)$. Put $m=j-i>0$. Then $g^i(g^m(q))=g^{i+m}(q)=g^j(q)=g^i(q)$. The map $g^i$ is injective, as
+a composition of injective maps, so $g^m(q)=q$.
+\end{proof}
+
+\begin{lemma}[a matrix fixing two independent vectors; \leanref{ErdosSzekeres.SymReduction.matrix_eq_one_of_fix}{SYMLEAN/AffineReduction.lean:1217}]\label{ar:lem:fix}
+Let $M$ be a matrix and $u,w\in\R^2$ with $u_0w_1-u_1w_0\ne0$, $Mu=u$ and $Mw=w$. Then $M=1$.
+\end{lemma}
+
+\begin{proof}
+Put $\delta=u_0w_1-u_1w_0$. By Lemma~\ref{ar:lem:mulvec}, the hypotheses say that the four quantities
+\[
+E_1=M_{00}u_0+M_{01}u_1-u_0,\quad E_2=M_{10}u_0+M_{11}u_1-u_1,\quad
+E_3=M_{00}w_0+M_{01}w_1-w_0,\quad E_4=M_{10}w_0+M_{11}w_1-w_1
+\]
+vanish. Expanding gives the polynomial identities
+\[
+w_1E_1-u_1E_3=(M_{00}-1)\delta,\quad -w_0E_1+u_0E_3=M_{01}\delta,\quad
+w_1E_2-u_1E_4=M_{10}\delta,\quad -w_0E_2+u_0E_4=(M_{11}-1)\delta .
+\]
+So all four right-hand sides vanish. As $\delta\ne0$, we get $M_{00}=1$, $M_{01}=0$, $M_{10}=0$ and $M_{11}=1$, that
+is, $M=1$.
+\end{proof}
+
+\begin{lemma}[orientation under affine maps; \leanref{ErdosSzekeres.SymReduction.orient_affine}{SYMLEAN/AffineReduction.lean:1241}]\label{ar:lem:orient-affine}
+If $g(p)=Lp+b$ for all $p\in\R^2$, then $\orient(g(x),g(y),g(z))=\det(L)\,\orient(x,y,z)$ for all $x,y,z\in\R^2$.
+\end{lemma}
+
+\begin{proof}
+We have $g(y)-g(x)=L(y-x)$ and $g(z)-g(x)=L(z-x)$, since the translation $b$ cancels. So the computation in the proof
+of Lemma~\ref{ar:lem:lin2}(b), with the entries $L_{00},L_{01},L_{10},L_{11}$ in place of the four parameters of
+$\operatorname{lin2}$, gives the factor $L_{00}L_{11}-L_{01}L_{10}=\det L$. This is Lemma~\ref{fd:lem:affine-orient}.
+\end{proof}
+
+\begin{lemma}[injectivity; \leanref{ErdosSzekeres.SymReduction.injective_of_affine}{SYMLEAN/AffineReduction.lean:1305}]\label{ar:lem:inj}
+If $g(p)=Lp+b$ for all $p\in\R^2$ and $\det L\ne0$, then $g$ is injective.
+\end{lemma}
+
+\begin{proof}
+Let $g(p)=g(q)$ and put $v=p-q$. Then $Lv=Lp-Lq=(Lp+b)-(Lq+b)=g(p)-g(q)=0$. So
+$h_0:=L_{00}v_0+L_{01}v_1=0$ and $h_1:=L_{10}v_0+L_{11}v_1=0$ by Lemma~\ref{ar:lem:mulvec}. Then
+\[
+(\det L)\,v_0=L_{11}h_0-L_{01}h_1=0,\qquad (\det L)\,v_1=L_{00}h_1-L_{10}h_0=0,
+\]
+so $v=0$ because $\det L\ne0$. Hence $p=q$.
+\end{proof}
+
+\begin{lemma}[matrix form of a Mathlib affine map; \leanref{ErdosSzekeres.SymReduction.affineMap_eq_mulVec}{SYMLEAN/AffineReduction.lean:1284}]\label{ar:lem:matrix-form}
+Let $f$ be an affine map of $\R^2$ \textup(Mathlib \lean{AffineMap}\textup) and let $M_f$ be the matrix of its linear
+part $f_{\mathrm{lin}}$ \textup(Lean \lean{LinearMap.toMatrix'} applied to \lean{f.linear}\textup). Then $f(p)=M_fp+f(0)$ for every
+$p\in\R^2$.
+\end{lemma}
+
+\begin{proof}
+By the defining property of an affine map with $v=p$ and base point $0$, $f(p)=f(p+0)=f_{\mathrm{lin}}(p)+f(0)$ (in
+Mathlib, \lean{AffineMap.decomp}). By the conventions, $f_{\mathrm{lin}}(p)=M_fp$.
+\end{proof}
+
+\subsection{Transport of general position and convex position}
+
+\begin{lemma}[general position under orientation-scaling maps; \leanref{ErdosSzekeres.SymReduction.generalPosition_image_of_orient}{SYMLEAN/AffineReduction.lean:1249}]\label{ar:lem:gp-orient}
+Let $f:\R^2\to\R^2$ be a map and $D\in\R$ with $D\ne0$ and $\orient(f(x),f(y),f(z))=D\,\orient(x,y,z)$ for all
+$x,y,z\in\R^2$. If a finite set $S$ is in general position, then so is $f(S)$.
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{fd:lem:collinear} it suffices to show $\orient(X,Y,Z)\ne0$ for pairwise distinct $X,Y,Z\in f(S)$. Write
+$X=f(x)$, $Y=f(y)$, $Z=f(z)$ with $x,y,z\in S$. Then $x,y,z$ are pairwise distinct: for instance $x=y$ would give
+$X=Y$. By Lemma~\ref{fd:lem:collinear} again, $\orient(x,y,z)\ne0$, and so
+$\orient(X,Y,Z)=D\,\orient(x,y,z)\ne0$. Injectivity of $f$ is not assumed and not needed.
+\end{proof}
+
+\begin{lemma}[general position under affine maps; \leanref{ErdosSzekeres.SymReduction.generalPosition_image_affine}{SYMLEAN/AffineReduction.lean:1278}, \leanref{ErdosSzekeres.SymReduction.generalPosition_image_affineEquiv}{SYMLEAN/AffineReduction.lean:1290}]\label{ar:lem:gp-affine}
+The following hold.
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item \textup{(}\lean{generalPosition_image_affine}\textup{)} Let $g:\R^2\to\R^2$, $L$ a matrix and $b\in\R^2$ with
+$g(p)=Lp+b$ for all $p$, and $\det L\ne0$. If a finite set $S$ is in general position, then so is $g(S)$.
+\item \textup{(}\lean{generalPosition_image_affineEquiv}\textup{)} If a finite set $S$ is in general position and $f$
+is an affine equivalence of $\R^2$ \textup(Mathlib \lean{AffineEquiv}\textup), then $f(S)$ is in general position.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) By Lemma~\ref{ar:lem:orient-affine}, the map $g$ satisfies the hypothesis of Lemma~\ref{ar:lem:gp-orient} with
+$D=\det L\ne0$.
+
+(b) By Lemma~\ref{ar:lem:matrix-form}, applied to the underlying affine map, $f(p)=Mp+f(0)$ for all $p$, where $M$ is
+the matrix of $f_{\mathrm{lin}}$. The linear bijection $f_{\mathrm{lin}}$ has a linear inverse $\psi$. The product $MM_\psi$
+is the matrix of $f_{\mathrm{lin}}\circ\psi=\mathrm{id}$, so $MM_\psi=1$ and $\det M\cdot\det M_\psi=1$; hence $\det
+M\ne0$. (Lean uses \lean{LinearMap.det_toMatrix'} and \lean{LinearEquiv.isUnit_det'}.) Now apply (a).
+\end{proof}
+
+\begin{lemma}[convex position under injective affine maps; \leanref{ErdosSzekeres.SymReduction.convexPosition_image_affine}{SYMLEAN/AffineReduction.lean:1263}]\label{ar:lem:cp-affine}
+Let $S$ be a finite set in convex position and let $f$ be an affine map of $\R^2$ \textup(Mathlib
+\lean{AffineMap}\textup) that is injective. Then $f(S)$ is in convex position.
+\end{lemma}
+
+\begin{proof}
+\emph{Step 1: $f(\conv A)=\conv(f(A))$ for every $A\subseteq\R^2$} (in Mathlib, \lean{AffineMap.image_convexHull}). By
+Lemma~\ref{ar:lem:matrix-form}, $f(p)=Mp+c$ with $M=M_f$ and $c=f(0)$. So for $x,y\in\R^2$ and $\lambda\in[0,1]$,
+\[
+f\bigl((1-\lambda)x+\lambda y\bigr)=(1-\lambda)Mx+\lambda My+\bigl((1-\lambda)+\lambda\bigr)c
+=(1-\lambda)f(x)+\lambda f(y).
+\]
+Hence images and preimages of convex sets under $f$ are convex. Let $C$ be convex. If $X=f(x)$ and $Y=f(y)$ with
+$x,y\in C$, then $(1-\lambda)x+\lambda y\in C$, so $(1-\lambda)X+\lambda Y=f((1-\lambda)x+\lambda y)\in f(C)$. Let
+$C'$ be convex. If $f(x),f(y)\in C'$, then $f((1-\lambda)x+\lambda y)=(1-\lambda)f(x)+\lambda f(y)\in C'$, so
+$(1-\lambda)x+\lambda y\in f^{-1}(C')$. Now $f(\conv A)$ is a convex set containing $f(A)$, so
+it contains $\conv(f(A))$. And $f^{-1}(\conv(f(A)))$ is a convex set containing $A$, so it contains $\conv A$; that is,
+$f(\conv A)\subseteq\conv(f(A))$.
+
+\emph{Step 2.} By Lemma~\ref{fd:lem:cp-hull} we must show $P\notin\conv(f(S)\setminus\{P\})$ for every $P\in f(S)$.
+Write $P=f(q)$ with $q\in S$. Since $f$ is injective, $f(S)\setminus\{f(q)\}=f(S\setminus\{q\})$. Indeed, if $r\in S$
+and $f(r)\ne f(q)$ then $r\ne q$; conversely, if $r\in S$ and $r\ne q$ then $f(r)\ne f(q)$. Suppose
+$f(q)\in\conv(f(S)\setminus\{f(q)\})$. By this identity and Step~1, this set is
+$\conv(f(S\setminus\{q\}))=f(\conv(S\setminus\{q\}))$. So $f(q)=f(r)$ for some $r\in\conv(S\setminus\{q\})$.
+Injectivity gives $q=r\in\conv(S\setminus\{q\})$, which contradicts the convex position of $S$
+(Lemma~\ref{fd:lem:cp-hull}).
+\end{proof}
+
+\begin{lemma}[convex $n$-gons under injective affine maps; \leanref{ErdosSzekeres.SymReduction.hasConvexNGon_image_affine}{SYMLEAN/AffineReduction.lean:1298}]\label{ar:lem:ngon-affine}
+Let $n\in\N$, let $S$ be a finite set with \lean{HasConvexNGon}~$n$~$S$, and let $f$ be an injective affine map of $\R^2$
+\textup(Mathlib \lean{AffineMap}\textup). Then \lean{HasConvexNGon}~$n$ holds for $f(S)$.
+\end{lemma}
+
+\begin{proof}
+Take $U\subseteq S$ with $\card U=n$ in convex position. Then $f(U)\subseteq f(S)$, $\card{f(U)}=\card U=n$ since $f$ is
+injective, and $f(U)$ is in convex position by Lemma~\ref{ar:lem:cp-affine}.
+\end{proof}
+
+\subsection{The transfer theorem}
+
+\begin{definition}[the Euclidean statement $\mathcal E(N,n)$; written step]\label{ar:def:E}
+For $N,n\in\N$, $\mathcal E(N,n)$ is the following proposition. \emph{For every finite set $S'\subseteq\R^2$ and every
+map $h:\R^2\to\R^2$: if $S'$ is in general position, $N\le\card{S'}$, $h$ is a Euclidean isometry \textup(that is,
+$\operatorname{eDist2}(h(p),h(q))=\operatorname{eDist2}(p,q)$ for all $p,q\in\R^2$\textup), $h\ne\mathrm{id}$, and
+$h(p)\in S'$ for all $p\in S'$, then \lean{HasConvexNGon}~$n$~$S'$.} This is the type of the hypothesis \lean{hE} of
+Theorem~\ref{ar:thm:transfer} and Corollary~\ref{ar:cor:transfer-forms}, up to two changes of notation: the bound
+variables, \lean{S} and \lean{g} in Lean, are called $S'$ and $h$ here, and \lean{IsEucIsometry} and \lean{Invariant} are
+unfolded. The quantifiers, the five premises and their order, and the conclusion are those of Lean. It has no name in
+Lean.
+\end{definition}
+
+The next proposition collects the steps of the proof of Theorem~\ref{ar:thm:transfer} that construct the Euclidean
+isometry. It is stated separately because the remark on affine symmetries in \dirn{WRITEUP/P1/p1.tex} (Remark
+\texttt{rem:affine}) uses this construction.
+
+\begin{proposition}[averaging an affine symmetry; written step]\label{ar:prop:averaging}
+Let $S$ be a finite set in general position with $\card S\ge3$. Let $L$ be a matrix, $b\in\R^2$ and
+$g:\R^2\to\R^2$ with $g(p)=Lp+b$ for all $p$. Assume that $g$ is injective and maps $S$ into itself.
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item There is an integer $m\ge1$ with $L^m=1$ and $g^m=\mathrm{id}$.
+\item Fix any integer $m\ge1$ with $L^m=1$, and put $\alpha=q_A(L,m)$, $\beta=q_B(L,m)$, $\gamma=q_C(L,m)$. Then
+$\alpha>0$ and $\alpha\gamma-\beta^2>0$. Put
+\[
+s=\sqrt\alpha,\qquad t=\sqrt{(\alpha\gamma-\beta^2)/\alpha},\qquad
+T=\operatorname{lin2}(s,\beta/s,0,t),\qquad T'=\operatorname{lin2}(1/s,\,-\beta/(s^2t),\,0,\,1/t).
+\]
+Then $s>0$ and $t>0$. The maps $T$ and $T'$ are mutually inverse linear bijections of $\R^2$. Moreover
+$\orient(Tx,Ty,Tz)=st\cdot\orient(x,y,z)$ for all $x,y,z$, with $st>0$, and
+$\operatorname{nsq}(Tz)=\operatorname{avgQ}(L,m,z)$ for every $z$.
+\item With $m$, $T$, $T'$ as in \textup{(b)}, the map $h=T\circ g\circ T'$ is a Euclidean isometry, and $h$ maps
+$T(S)$ into $T(S)$.
+\item $h^k=T\circ g^k\circ T'$ for every $k\in\N$. Hence $h^k=\mathrm{id}$ if and only if $g^k=\mathrm{id}$. In
+particular, $h\ne\mathrm{id}$ if and only if $g\ne\mathrm{id}$, and $h$ and $g$ have the same order (the least $k\ge1$
+with $g^k=\mathrm{id}$, which exists by \textup{(a)}).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(a) Since $\card S\ge3$, $S$ contains pairwise distinct points $p_0,p_1,p_2$. By general position and
+Lemma~\ref{fd:lem:collinear}, $\delta:=\orient(p_0,p_1,p_2)\ne0$. By Lemma~\ref{ar:lem:periodic} there are
+$m_0,m_1,m_2\ge1$ with $g^{m_i}(p_i)=p_i$. Put $m=m_0m_1m_2\ge1$. For each $i$, $m=r_im_i$ for an integer $r_i\ge1$. By
+induction on $r$, $g^{rm_i}(p_i)=p_i$: for $r=0$ this is $g^0(p_i)=p_i$, and
+$g^{(r+1)m_i}(p_i)=g^{m_i}(g^{rm_i}(p_i))=g^{m_i}(p_i)=p_i$. So $g^m(p_i)=p_i$ for $i=0,1,2$.
+
+Put $u=p_1-p_0$ and $w=p_2-p_0$. By Lemma~\ref{ar:lem:iter}, $L^mu=g^m(p_1)-g^m(p_0)=p_1-p_0=u$, and likewise
+$L^mw=w$. By the definition of $\orient$, $u_0w_1-u_1w_0=\orient(p_0,p_1,p_2)=\delta\ne0$. So Lemma~\ref{ar:lem:fix}
+gives $L^m=1$.
+
+Finally, for every $p\in\R^2$, Lemma~\ref{ar:lem:iter} gives $g^m(p)-g^m(p_0)=L^m(p-p_0)=p-p_0$. Since
+$g^m(p_0)=p_0$, this gives $g^m(p)=p$. So $g^m=\mathrm{id}$. (The Lean proof derives $L^m=1$ in the same way, as its
+step \lean{hLm}. It does not derive or use $g^m=\mathrm{id}$.)
+
+(b) By Lemma~\ref{ar:lem:avgq-pos}(b),(c) with $n=m\ge1$, $\alpha>0$ and $\alpha\gamma-\beta^2>0$. So
+$(\alpha\gamma-\beta^2)/\alpha>0$; hence $s>0$, $t>0$, $s^2=\alpha$ and $t^2=(\alpha\gamma-\beta^2)/\alpha$. As $s\ne0$
+and $t\ne0$, Lemma~\ref{ar:lem:chol}(b),(c) gives $T'(Tx)=x$ and $T(T'x)=x$ for all $x$. So $T$ and $T'$ are mutually
+inverse bijections; they are linear by Definition~\ref{ar:def:lin2}. By Lemma~\ref{ar:lem:lin2}(b), applied to
+$T=\operatorname{lin2}(s,\beta/s,0,t)$, the orientation factor is $st-(\beta/s)\cdot0=st>0$. Finally, by
+Lemma~\ref{ar:lem:chol}(a),
+$\operatorname{nsq}(Tz)=s^2z_0^2+2\beta z_0z_1+(\beta^2/s^2+t^2)z_1^2$. Here $s^2=\alpha$ and
+\[
+\frac{\beta^2}{s^2}+t^2=\frac{\beta^2}{\alpha}+\frac{\alpha\gamma-\beta^2}{\alpha}=\gamma .
+\]
+So $\operatorname{nsq}(Tz)=\alpha z_0^2+2\beta z_0z_1+\gamma z_1^2=\operatorname{avgQ}(L,m,z)$ by
+Lemma~\ref{ar:lem:avgq-eq}.
+
+(c) Let $x,y\in\R^2$ and put $w=T'x-T'y$. Since $g(T'x)-g(T'y)=(LT'x+b)-(LT'y+b)=Lw$ and $T$ is linear,
+\begin{align*}
+\operatorname{eDist2}(h(x),h(y))
+&=\operatorname{nsq}\bigl(T(g(T'x))-T(g(T'y))\bigr) &&\text{Lemma~\ref{ar:lem:nsq}(b)}\\
+&=\operatorname{nsq}\bigl(T(Lw)\bigr)=\operatorname{avgQ}(L,m,Lw) &&\text{linearity of $T$; part (b)}\\
+&=\operatorname{avgQ}(L,m,w)=\operatorname{nsq}(Tw) &&\text{Lemma~\ref{ar:lem:avgq-inv} ($L^m=1$); part (b)}\\
+&=\operatorname{nsq}\bigl(T(T'x)-T(T'y)\bigr)=\operatorname{nsq}(x-y) &&\text{linearity of $T$; $TT'=\mathrm{id}$}\\
+&=\operatorname{eDist2}(x,y) &&\text{Lemma~\ref{ar:lem:nsq}(b).}
+\end{align*}
+So $h$ is a Euclidean isometry. If $X\in T(S)$, write $X=Tp$ with $p\in S$. Then $h(X)=T(g(T'(Tp)))=T(g(p))\in T(S)$,
+because $g(p)\in S$.
+
+(d) Induction on $k$. For $k=0$: $h^0=\mathrm{id}=T\circ T'=T\circ g^0\circ T'$. If $h^k=T\circ g^k\circ T'$, then
+$h^{k+1}=h\circ h^k=T\circ g\circ(T'\circ T)\circ g^k\circ T'=T\circ g^{k+1}\circ T'$, because $T'\circ T=\mathrm{id}$.
+
+If $g^k=\mathrm{id}$, then $h^k=T\circ T'=\mathrm{id}$. If $h^k=\mathrm{id}$, then for every $p$,
+$T(g^k(p))=T(g^k(T'(Tp)))=h^k(Tp)=Tp$, so $g^k(p)=p$ because $T$ is injective. The case $k=1$ gives $h\ne\mathrm{id}$
+if and only if $g\ne\mathrm{id}$. Since $h^k=\mathrm{id}\Leftrightarrow g^k=\mathrm{id}$ for every $k$, the least
+$k\ge1$ with this property is the same for $g$ and $h$.
+
+\emph{Relation to Lean.} Parts (b) and (c) are steps of the Lean proof of
+\lean{hasConvexNGon_of_affine_symmetry}, where $T'$ is called \lean{Ti}. These steps are: the positivity of $\alpha$,
+of $\alpha\gamma-\beta^2$, of $s$ and of $t$; the inverse identities \lean{hTiT} and \lean{hTTi}, and the injectivity of
+$T$ and $T'$ derived from them (\lean{hTinj}, \lean{hTiinj}); the identity \lean{hnT}; the orientation factor
+$st-(\beta/s)\cdot0$ of $T$, which Lean uses only inside the step \lean{hgp'} (general position of $T(S)$, through
+\lean{generalPosition_image_of_orient} and \lean{orient_lin2}); and the steps \lean{hiso} and \lean{hinv'}. Of
+part (d), only the implication $g\ne\mathrm{id}\Rightarrow h\ne\mathrm{id}$ is in Lean (step \lean{hne'}).
+\end{proof}
+
+\begin{theorem}[affine-to-Euclidean transfer; \leanref{ErdosSzekeres.SymReduction.hasConvexNGon_of_affine_symmetry}{SYMLEAN/AffineReduction.lean:1330}]\label{ar:thm:transfer}
+Let $N,n\in\N$. Assume
+\begin{itemize}
+\item[\textup{(hE)}] for every finite set $S'\subseteq\R^2$ and every map $h:\R^2\to\R^2$: if $S'$ is in general
+position, $N\le\card{S'}$, $h$ is a Euclidean isometry \textup(\lean{IsEucIsometry}~$h$: $\operatorname{eDist2}(h(p),
+h(q))=\operatorname{eDist2}(p,q)$ for all $p,q\in\R^2$\textup), $h\ne\mathrm{id}$, and $h(p)\in S'$ for all $p\in S'$,
+then \lean{HasConvexNGon}~$n$~$S'$
+\end{itemize}
+\textup(that is, assume $\mathcal E(N,n)$ of Definition~\textup{\ref{ar:def:E}}\textup), and assume $3\le N$. Let $S$
+be a finite set, $g:\R^2\to\R^2$ a map, $L$ a matrix and $b\in\R^2$, such that $g(p)=Lp+b$ for every $p\in\R^2$, $g$ is
+injective, $S$ is in general position, $N\le\card S$, $g\ne\mathrm{id}$, and $g(p)\in S$ for every $p\in S$. Then
+\lean{HasConvexNGon}~$n$~$S$: some $n$ points of $S$ are in convex position.
+\end{theorem}
+
+\begin{proof}
+Since $\card S\ge N\ge3$, Proposition~\ref{ar:prop:averaging} applies. Fix $m\ge1$ with $L^m=1$ (part (a)), and let
+$T$, $T'$ and $h=T\circ g\circ T'$ be as in parts (b) and (c). We check the hypotheses of (hE) for $S'=T(S)$ and $h$.
+\begin{itemize}
+\item $T(S)$ is in general position, by Lemma~\ref{ar:lem:gp-orient} with $f=T$ and $D=st\ne0$
+(Proposition~\ref{ar:prop:averaging}(b)).
+\item $N\le\card S=\card{T(S)}$, because $T$ is injective ($T'\circ T=\mathrm{id}$).
+\item $h$ is a Euclidean isometry and maps $T(S)$ into $T(S)$ (Proposition~\ref{ar:prop:averaging}(c)).
+\item $h\ne\mathrm{id}$, by Proposition~\ref{ar:prop:averaging}(d), since $g\ne\mathrm{id}$.
+\end{itemize}
+So (hE) gives $U\subseteq T(S)$ with $\card U=n$ in convex position. Put $V=T'(U)$.
+\begin{itemize}
+\item $V\subseteq S$: every $y\in V$ is $y=T'(x)$ with $x\in U\subseteq T(S)$, so $x=Tp$ with $p\in S$, and
+$y=T'(Tp)=p\in S$.
+\item $\card V=\card U=n$, because $T'$ is injective ($T\circ T'=\mathrm{id}$).
+\item $V$ is in convex position, by Lemma~\ref{ar:lem:cp-affine} applied to $T'$. This is a linear map, hence an
+affine map (Lean \lean{Ti.toAffineMap}), and it is injective.
+\end{itemize}
+Hence \lean{HasConvexNGon}~$n$~$S$.
+\end{proof}
+
+\begin{remark}[the hypothesis (hE), and what the statement forgets]\label{ar:rem:hE}
+The following three points concern the hypotheses of Theorem~\ref{ar:thm:transfer} and what its statement does not
+record.
+\begin{enumerate}[label=(\arabic*)]
+\item The hypothesis (hE) is a parameter of Theorem~\ref{ar:thm:transfer}: the Euclidean statement $\mathcal E(N,n)$
+for the \emph{same} $N$ and $n$. The theorem is the implication from $\mathcal E(N,n)$ to the corresponding statement
+for injective affine maps. It involves no unproved claim of the project.
+\item (hE) is used once, for the set $T(S)$ and the isometry $h=T\circ g\circ T'$. Since (hE) quantifies over
+\emph{all} Euclidean isometries other than the identity, the statement does not record which isometry $h$ is. The
+written Proposition~\ref{ar:prop:averaging}(d) adds that $h$ has the same order as $g$. This is not part of any Lean
+statement. An order-preserving form of the transfer, whose Euclidean hypothesis concerns only isometries of the order
+of $g$, is not formalized. The remark on affine symmetries in \dirn{WRITEUP/P1/p1.tex} (Remark \texttt{rem:affine})
+needs such a form, and says that it is not formalized.
+\item The hypothesis $3\le N$ is used only to find three distinct points of $S$. Injectivity of $g$ is a separate
+hypothesis. It follows from $\det L\ne0$ (Lemma~\ref{ar:lem:inj}), and that is how
+Corollary~\ref{ar:cor:transfer-forms}(c) supplies it.
+\end{enumerate}
+\end{remark}
+
+\begin{corollary}[the transfer for other presentations of the map; \leanref{ErdosSzekeres.SymReduction.hasConvexNGon_of_affineMap_symmetry}{SYMLEAN/AffineReduction.lean:1423}, \leanref{ErdosSzekeres.SymReduction.hasConvexNGon_of_affineEquiv_symmetry}{SYMLEAN/AffineReduction.lean:1433}, \leanref{ErdosSzekeres.SymReduction.hasConvexNGon_of_affine_coords_symmetry}{SYMLEAN/AffineReduction.lean:1444}]\label{ar:cor:transfer-forms}
+Let $N,n\in\N$. Assume \textup{(hE)}, exactly as in Theorem~\textup{\ref{ar:thm:transfer}} \textup(the statement
+$\mathcal E(N,n)$\textup), and assume $3\le N$. Let $S$ be a finite set in general position with $N\le\card S$.
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item \textup{(}\lean{hasConvexNGon_of_affineMap_symmetry}\textup{)} If $f$ is an affine map of $\R^2$ \textup(Mathlib
+\lean{AffineMap}\textup) that is injective, $f\ne\mathrm{id}$ as maps, and $f(p)\in S$ for all $p\in S$, then
+\lean{HasConvexNGon}~$n$~$S$.
+\item \textup{(}\lean{hasConvexNGon_of_affineEquiv_symmetry}\textup{)} If $f$ is an affine equivalence of $\R^2$
+\textup(Mathlib \lean{AffineEquiv}\textup) with $f\ne\mathrm{refl}$ and $f(p)\in S$ for all $p\in S$, then
+\lean{HasConvexNGon}~$n$~$S$.
+\item \textup{(}\lean{hasConvexNGon_of_affine_coords_symmetry}\textup{)} If $g:\R^2\to\R^2$ is a map and
+$a,b,c,d,e,f\in\R$ \textup(here $f$ is a real number\textup) satisfy $ad-bc\ne0$,
+$g(p)=(ap_0+bp_1+e,\ cp_0+dp_1+f)$ for every $p\in\R^2$, $g\ne\mathrm{id}$, and $g(p)\in S$ for all $p\in S$, then
+\lean{HasConvexNGon}~$n$~$S$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+(a) By Lemma~\ref{ar:lem:matrix-form}, $f(p)=M_fp+f(0)$ for every $p$. Apply Theorem~\ref{ar:thm:transfer} with $g=f$,
+$L=M_f$ and $b=f(0)$; the remaining hypotheses are those of (a).
+
+(b) The underlying affine map of $f$ has the same map, which is injective because $f$ is a bijection. It differs from
+$\mathrm{id}$: if the map $f$ were $\mathrm{id}$, then $f$ and $\mathrm{refl}$ would have the same map, so
+$f=\mathrm{refl}$ by \lean{AffineEquiv.ext}, a contradiction. Now apply (a).
+
+(c) Let $L=\begin{pmatrix}a&b\\c&d\end{pmatrix}$ and $b'=(e,f)$. By Lemma~\ref{ar:lem:mulvec},
+$Lp+b'=(ap_0+bp_1+e,\ cp_0+dp_1+f)=g(p)$ for every $p$. Moreover $\det L=ad-bc\ne0$ (Mathlib
+\lean{Matrix.det_fin_two_of}), so $g$ is injective by Lemma~\ref{ar:lem:inj}. Apply Theorem~\ref{ar:thm:transfer}.
+\end{proof}
+
+\subsection{Affine symmetries and convex heptagons}
+
+\begin{theorem}[convex heptagons from affine symmetries, conditional on the five case classes; \leanref{ErdosSzekeres.SymReduction.heptagon_of_nontrivial_affineEquiv}{SYMLEAN/AffineReduction.lean:1501}, \leanref{ErdosSzekeres.SymReduction.heptagon_of_nontrivial_affineEquiv_image}{SYMLEAN/AffineReduction.lean:1510}, \leanref{ErdosSzekeres.SymReduction.heptagon_of_nontrivial_affineMap}{SYMLEAN/AffineReduction.lean:1489}, \leanref{ErdosSzekeres.SymReduction.heptagon_of_nontrivial_affine}{SYMLEAN/AffineReduction.lean:1477}, \leanref{ErdosSzekeres.SymReduction.heptagon_of_nontrivial_affine_coords}{SYMLEAN/AffineReduction.lean:1521}]\label{ar:thm:main}
+Assume, as hypotheses, the five propositions \lean{HalfTurn34}, \lean{Threefold33}, \lean{Fivefold35},
+\lean{MirrorOneAxis33} and \lean{MirrorNoAxis34} of Definition~\textup{\ref{sr:def:classes}}. Let $S\subseteq\R^2$ be a
+finite set in general position with $33\le\card S$.
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item \textup{(}\lean{heptagon_of_nontrivial_affineEquiv}\textup{)} If $g$ is an affine equivalence of $\R^2$
+\textup(Mathlib \lean{AffineEquiv}\textup) with $g\ne\mathrm{refl}$ and $g(p)\in S$ for all $p\in S$, then
+\lean{HasConvexNGon}~$7$~$S$.
+\item \textup{(}\lean{heptagon_of_nontrivial_affineEquiv_image}\textup{)} If $g$ is an affine equivalence of $\R^2$
+with $g\ne\mathrm{refl}$ and $g(S)\subseteq S$ \textup(an inclusion of sets: the image of $S$ under $g$ is contained in
+$S$\textup), then \lean{HasConvexNGon}~$7$~$S$.
+\item \textup{(}\lean{heptagon_of_nontrivial_affineMap}\textup{)} If $f$ is an affine map of $\R^2$ \textup(Mathlib
+\lean{AffineMap}\textup) that is injective, $f\ne\mathrm{id}$ as maps, and $f(p)\in S$ for all $p\in S$, then
+\lean{HasConvexNGon}~$7$~$S$.
+\item \textup{(}\lean{heptagon_of_nontrivial_affine}\textup{)} If $g:\R^2\to\R^2$ is a map, $L$ a matrix and
+$b\in\R^2$, with $g(p)=Lp+b$ for every $p$, $g$ injective, $g\ne\mathrm{id}$, and $g(p)\in S$ for all $p\in S$, then
+\lean{HasConvexNGon}~$7$~$S$.
+\item \textup{(}\lean{heptagon_of_nontrivial_affine_coords}\textup{)} If $g:\R^2\to\R^2$ is a map and
+$a,b,c,d,e,f\in\R$ \textup(in this part $b$ and $f$ are real numbers\textup) satisfy $ad-bc\ne0$,
+$g(p)=(ap_0+bp_1+e,\ cp_0+dp_1+f)$ for every $p\in\R^2$, $g\ne\mathrm{id}$, and $g(p)\in S$ for all $p\in S$, then
+\lean{HasConvexNGon}~$7$~$S$.
+\end{enumerate}
+In each case, \lean{HasConvexNGon}~$7$~$S$ means that some $7$ points of $S$ are in convex position.
+\end{theorem}
+
+\begin{proof}
+By Theorem~\ref{sr:thm:main} (\lean{heptagon_of_nontrivial_isometry}, applied to the five hypotheses), the following
+holds. \emph{For every finite set $S'$ and every map $h:\R^2\to\R^2$: if $S'$ is in general position, $33\le\card{S'}$,
+$h$ is a Euclidean isometry, $h\ne\mathrm{id}$ and $h$ maps $S'$ into $S'$, then \lean{HasConvexNGon}~$7$~$S'$.} This is
+exactly $\mathcal E(33,7)$, the hypothesis (hE) with $N=33$ and $n=7$. Moreover $3\le33$.
+
+(a) Apply Corollary~\ref{ar:cor:transfer-forms}(b).
+
+(b) For $p\in S$ we have $g(p)\in g(S)\subseteq S$, so $g$ maps $S$ into $S$. Now apply (a).
+
+(c) Apply Corollary~\ref{ar:cor:transfer-forms}(a).
+
+(d) Apply Theorem~\ref{ar:thm:transfer}.
+
+(e) Apply Corollary~\ref{ar:cor:transfer-forms}(c).
+
+The Lean proofs are the same applications, each a two-line term. For (a), (c), (d) and (e) they pass
+\lean{heptagon_of_nontrivial_isometry}, applied to the five hypotheses \lean{h2}, \lean{h3}, \lean{h5}, \lean{hm1} and
+\lean{hm0}, as \lean{hE}, and prove $3\le33$ by \lean{norm_num}. For (b) the Lean proof passes no \lean{hE}: it applies
+\lean{heptagon_of_nontrivial_affineEquiv}, that is (a), after turning the inclusion into maps-into.
+\end{proof}
+
+\begin{remark}[the five hypotheses]\label{ar:rem:classes}
+Theorem~\ref{ar:thm:main} is a conditional statement. Its five hypotheses enter only through
+Theorem~\ref{sr:thm:main}. In Lean they are definitions of type \lean{Prop} that occur as explicit premises
+(\lean{h2}, \lean{h3}, \lean{h5}, \lean{hm1}, \lean{hm0}), not axioms. In short, each class says that a finite set in
+general position contains $7$ points in convex position if it has one of the following: exactly $34$ points and a
+half-turn symmetry whose centre is not in the set; exactly $33$ points and a symmetry under the rotation by $2\pi/3$
+about a centre not in the set; exactly $35$ points and a symmetry under the rotation by $2\pi/5$ about a centre not in
+the set; exactly $33$ points, a reflection symmetry in a line, and exactly one point of the set on that line; exactly
+$34$ points, a reflection symmetry, and no point of the set on the line. See Definition~\ref{sr:def:classes} for the
+exact statements. In the project they are supplied as follows (\dirn{SYMLEAN/README.md}, \S\S5, 6 and~9;
+\dirn{WRITEUP/SYMMETRIC.md}, \S\S1, 3 and~4).
+\begin{itemize}
+\item \lean{MirrorOneAxis33} and \lean{MirrorNoAxis34} are Lean-checked theorems: \lean{mirrorOneAxis33_proved}
+(line 4274) and \lean{mirrorNoAxis34_proved} (line 4282) of \dirn{SYMLEAN/mirror/ReductionThreeClasses.lean}
+(Theorem~\ref{mb:thm:classes}). These two theorems are about the copies of the class definitions in that file. It does
+not import \dirn{SYMLEAN/AffineReduction.lean}; lines 38--1559 of \dirn{SYMLEAN/mirror/ReductionThreeClasses.lean} are
+byte-identical to lines 12--1533 of \dirn{SYMLEAN/AffineReduction.lean}. So the two theorems discharge the premises
+\lean{hm1} and \lean{hm0} of Theorem~\ref{ar:thm:main} only through the identity of the two texts. Their axioms log
+\dirn{SYMLEAN/mirror/axioms.out} lists only \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}. They
+are obtained without SAT input from the repository's Lean formalization of Baek's theorem
+(Theorem~\ref{mb:thm:baek}) and the mirror reduction. The same file restates part (a) with
+only the three rotation classes as hypotheses (\lean{heptagon_of_nontrivial_affineEquiv_3}, line 4303;
+Theorem~\ref{mb:thm:main3}). Both mirror classes also have SAT certificates (record \dirn{SYMZ}).
+\item \lean{HalfTurn34}, \lean{Threefold33} and \lean{Fivefold35} are not Lean-checked. They are computer-assisted
+claims of the records \dirn{C2FINAL} (with \dirn{C2C34} and \dirn{C2P}--\dirn{C2P5}), \dirn{C3FINAL} and \dirn{SYM5}.
+They rest on four kinds of evidence.
+\begin{itemize}
+\item \emph{SAT certificates.} Every certificate that these claims use, including those of the pieces of their case
+splits, carries a recorded acceptance by the proof checker \texttt{cake\_lpr}. Since a revision of 6 November 2026 this is the
+only checker in the project's trust base; the second checker, \texttt{lrat-check}, is a secondary check only
+(\dirn{WRITEUP/SYMMETRIC.md}, \S3; \dirn{SYMLEAN/README.md}, \S9, which predates that revision, still names both). For
+the parallelogram pieces of \lean{HalfTurn34} and the $116{,}883$ pieces of \lean{Threefold33}, the proof files were
+deleted after checking, so for most of these pieces only the recorded verdicts remain. Some of these pieces were
+re-solved (\dirn{C2FINAL}, \S\S4, 5 and~9; \dirn{C2RECHECK}; \dirn{C3SPOT}; \dirn{C3PIECES}).
+\item \emph{Written proofs, reviewed or audited within the project} (listed in \dirn{WRITEUP/SYMMETRIC.md}, \S3).
+Among them are the soundness proofs of the encoders; the reductions A and B of the parallelogram cases of
+\lean{HalfTurn34}; the normal form of \lean{Threefold33} (\dirn{C3-S/soundness.md}) and Lemma~5 and Lemma~H6M of its
+case split; and, for \lean{Threefold33} and \lean{Fivefold35}, a perturbation argument for centres that lie on a line
+through two points of different orbits.
+\item \emph{Exact computations} that compose the pieces (\dirn{C2FINAL}, \dirn{C3FINAL}). Two bookkeeping steps are
+computer-assisted because their finite checks are kernel evaluations (\texttt{decide +kernel}): the cover of the $910$
+threefold roots, which is Lean-checked (Theorem~\ref{cb:thm:c3}), and the closure of the central parallelogram orbits,
+which is Lean-checked according to the record (\dirn{C2FINAL/README.md}, \S6; Theorem~\ref{cb:thm:c2}). Lean does not
+see the records: that every leaf named by the keys of the certificates of Theorem~\ref{cb:thm:c3}
+and every subcase listed in the data of Theorem~\ref{cb:thm:c2} has a record with the checker verdicts and a CNF hash equal to that of the rebuilt formula is an exact computation outside
+Lean.
+\item \emph{The match between the classes and the formulas.} No formal link joins a Lean class to its CNF formulas.
+That each class states what its certificates prove was checked by reading (\dirn{SYMLEAN/README.md}, \S6).
+\end{itemize}
+The records list the remaining caveats and open checks (\dirn{WRITEUP/SYMMETRIC.md}, \S4).
+\end{itemize}
+The unconditional statement, Theorem~\ref{ar:thm:main} without its five hypotheses, is claimed in the project as
+computer-assisted (Theorem~A of \dirn{WRITEUP/SYMMETRIC.md}, \S0, in its form for affine bijections), with the evidence
+listed above; it is not Lean-checked as a whole. This document establishes it only conditionally: as
+Theorem~\ref{ar:thm:main} and, for part~(a) with three hypotheses, as Theorem~\ref{mb:thm:main3}.
+\end{remark}
+
+\begin{remark}[what the statements of this section do not say]\label{ar:rem:scope}
+The statements of this section are limited in four ways.
+\begin{enumerate}[label=(\arabic*)]
+\item The symmetry is a map of the whole plane: an affine equivalence, an injective affine map, or an injective map
+$p\mapsto Lp+b$. A permutation of $S$ that is not the restriction of such a map is not treated.
+\item One symmetry is treated at a time. Nothing is stated about the full symmetry group of $S$.
+\item The variant without \lean{HalfTurn34} (Theorem~\ref{sr:thm:variant}) has no affine version in the Lean files
+(\dirn{SYMLEAN/README.md}, \S9).
+\item The order of the symmetry is not tracked (Remark~\ref{ar:rem:hE}(2)).
+\end{enumerate}
+\end{remark}
+
+\paragraph{Coverage.}
+This section covers every declaration of \dirn{SYMLEAN/AffineReduction.lean}, lines 1059--1533:
+\begin{itemize}
+\item \lean{nsq} (Definition~\ref{ar:def:nsq}); \lean{mulVec2_fst} and \lean{mulVec2_snd}
+(Lemma~\ref{ar:lem:mulvec}); \lean{nsq_nonneg} and \lean{eDist2_eq_nsq} (Lemma~\ref{ar:lem:nsq});
+\item \lean{gA}, \lean{gB} and \lean{gC} (Definition~\ref{ar:def:gram}); \lean{nsq_mulVec}
+(Lemma~\ref{ar:lem:nsq-mulvec});
+\item \lean{avgQ}, \lean{qA}, \lean{qB} and \lean{qC} (Definition~\ref{ar:def:avgq}); \lean{avgQ_eq}
+(Lemma~\ref{ar:lem:avgq-eq}); \lean{avgQ_ge}, \lean{qA_pos} and \lean{qdisc_pos} (Lemma~\ref{ar:lem:avgq-pos});
+\lean{avgQ_mulVec} (Lemma~\ref{ar:lem:avgq-inv});
+\item \lean{lin2} (Definition~\ref{ar:def:lin2}); \lean{lin2_fst}, \lean{lin2_snd} and \lean{orient_lin2}
+(Lemma~\ref{ar:lem:lin2}); \lean{nsq_lin2_chol}, \lean{lin2_chol_inv_left} and \lean{lin2_chol_inv_right}
+(Lemma~\ref{ar:lem:chol});
+\item \lean{iterate_sub_of_affine} (Lemma~\ref{ar:lem:iter}); \lean{exists_periodic_of_injective}
+(Lemma~\ref{ar:lem:periodic}); \lean{matrix_eq_one_of_fix} (Lemma~\ref{ar:lem:fix}); \lean{orient_affine}
+(Lemma~\ref{ar:lem:orient-affine}); \lean{injective_of_affine} (Lemma~\ref{ar:lem:inj}); \lean{affineMap_eq_mulVec}
+(Lemma~\ref{ar:lem:matrix-form});
+\item \lean{generalPosition_image_of_orient} (Lemma~\ref{ar:lem:gp-orient}); \lean{generalPosition_image_affine} and
+\lean{generalPosition_image_affineEquiv} (Lemma~\ref{ar:lem:gp-affine}); \lean{convexPosition_image_affine}
+(Lemma~\ref{ar:lem:cp-affine}); \lean{hasConvexNGon_image_affine} (Lemma~\ref{ar:lem:ngon-affine});
+\item \lean{hasConvexNGon_of_affine_symmetry} (Theorem~\ref{ar:thm:transfer}, conditional on (hE));
+\lean{hasConvexNGon_of_affineMap_symmetry}, \lean{hasConvexNGon_of_affineEquiv_symmetry} and
+\lean{hasConvexNGon_of_affine_coords_symmetry} (Corollary~\ref{ar:cor:transfer-forms}, conditional on (hE));
+\item \lean{heptagon_of_nontrivial_affineEquiv}, \lean{heptagon_of_nontrivial_affineEquiv_image},
+\lean{heptagon_of_nontrivial_affineMap}, \lean{heptagon_of_nontrivial_affine} and
+\lean{heptagon_of_nontrivial_affine_coords} (Theorem~\ref{ar:thm:main}, conditional on the case classes
+\lean{HalfTurn34}, \lean{Threefold33}, \lean{Fivefold35}, \lean{MirrorOneAxis33} and \lean{MirrorNoAxis34}).
+\end{itemize}
+Definition~\ref{ar:def:E} and Proposition~\ref{ar:prop:averaging} are written steps, not Lean declarations.
+
+Deliberately not covered here:
+\begin{itemize}
+\item Lines 1--1058 of \dirn{SYMLEAN/AffineReduction.lean}. They are a verbatim duplicate of lines 1--1058 of
+\dirn{SYMLEAN/SymmetricReduction.lean} and are treated in the section of Theorem~\ref{sr:thm:main}. Of them, \lean{iterate_mem}
+(line 69) is re-derived inside the proof of Lemma~\ref{ar:lem:periodic}, and \lean{point_ext} (line 502: two points
+with equal coordinates are equal) is used tacitly.
+\item \dirn{SYMLEAN/AffineReductionAxioms.lean}. It is the same file followed by a blank line, nine
+\texttt{\#print axioms} lines and one \texttt{\#check} line, and it is used here only as evidence for the axioms.
+\item The verbatim copy of lines 12--1533 inside \dirn{SYMLEAN/mirror/ReductionThreeClasses.lean} (the declarations of
+this section sit there at their line number plus 26). The own content of that file is treated
+in the section of Theorem~\ref{mb:thm:main3}.
+\end{itemize}
+\endgroup

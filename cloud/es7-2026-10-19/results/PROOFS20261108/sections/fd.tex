@@ -1,0 +1,1332 @@
+\section{Conventions and foundations}\label{fd:sec}
+
+\paragraph{Purpose of this document.}
+This document collects human-readable proofs of results of a research project on the
+Erd\H{o}s--Szekeres problem whose formal versions have been checked with the interactive theorem prover
+Lean~4 and its mathematical library Mathlib. The Lean checks remain the primary evidence for these results. The
+written proofs are meant to make the arguments accessible to a mathematician who does not read Lean:
+every statement that corresponds to a Lean declaration is stated exactly as in Lean, with the name of
+the declaration and its file and line, and it receives a complete proof that can be checked without
+Lean. There are two exceptions. A statement labelled computer-assisted is reduced to a finite
+computation, which is stated precisely and need not be carried out by hand; where this document also
+gives a complete written proof by hand, the label is qualified as ``computer-assisted in Lean'' (see the
+rigor labels below). A few
+published theorems that the Lean code uses (for example Baek's theorem, Theorem~\ref{mb:thm:baek}) are
+cited in the exact form in which they are used and are not reproved. A convenient variant of a Lean
+statement, for example one in a different generality, is labelled as a variant. These written proofs
+have not been refereed. Where a Lean theorem assumes propositions that are not proved in Lean (for
+example verdicts of SAT solvers), the statement says so and the theorem is presented as a conditional
+statement.
+
+\paragraph{Files, commit and versions.}
+All files belong to the project repository at commit \dirn{7e32ee259} (branch
+\dirn{es7-night-2026-11-01}; Lean package \dirn{erdos_szekeres}). A path that begins with
+\dirn{ErdosSzekeres/}, \dirn{docs/}, \dirn{experiments/} or \dirn{scripts/} is relative to the
+repository root, and so are the files \dirn{lean-toolchain}, \dirn{lake-manifest.json} and
+\dirn{lakefile.toml} at the top of the repository. The directory \dirn{ErdosSzekeres/} is the \emph{main
+library}, the default build target of the package. Every other path, for example
+\dirn{LAYERLEAN/LayerLemma.lean:298}, is relative to the research-records directory, whose path from the
+repository root is \dirn{cloud/es7-2026-10-19/results}. The Lean files of the research records are not
+part of the build target; they are checked separately, for example with \texttt{lake env lean} run from
+the repository root (as \dirn{LAYERLEAN/logs/axioms_recheck_20261106/README.txt} records for a copy of
+\dirn{LAYERLEAN/LayerLemma.lean} followed by \texttt{\#print axioms} commands), and each section names the
+build and axioms logs it relies on. After a section has cited a file with its full path, it may refer to
+it by its bare file name. A suffix \dirn{:N} is a line number; for a declaration it is the line that
+carries the declaration keyword (\lean{theorem}, \lean{lemma}, \lean{def}, \lean{abbrev},
+\lean{structure} or \lean{inductive}, possibly preceded by an attribute such as \texttt{@[simp]} or a
+modifier such as \lean{noncomputable} or \lean{private}). A bare \dirn{:N} written after a file has been
+cited refers to line~$N$ of that file. Lean declarations
+are given by their full names in statement heads, for
+example \lean{ErdosSzekeres.Suk.convexPosition_of_four_subsets}; in running text we sometimes omit the
+common prefix \lean{ErdosSzekeres.} (so \lean{Suk.orient_reflectY} is
+\lean{ErdosSzekeres.Suk.orient_reflectY}). Names in a namespace outside \lean{ErdosSzekeres}, such as
+\lean{MirrorOdd.hasConvexNGon_of_le} in the top-level namespace \lean{MirrorOdd}, are always written in
+full. Mathlib declarations are named as in Mathlib. Lean expressions are quoted in typewriter type, for
+example \texttt{Finset Point}.
+The Lean files were checked with Lean 4.24.0 (file \dirn{lean-toolchain}) and Mathlib at revision
+\dirn{f897ebcf} (full hash \dirn{f897ebcf72cd16f89ab4577d0c826cd14afaafc7}, file
+\dirn{lake-manifest.json}).
+
+\paragraph{Rigor labels.}
+We use exactly three labels; the first and the third also occur in a qualified form, defined below.
+\begin{itemize}
+\item \emph{Lean-checked}: the statement is a Lean declaration that Lean~4.24.0 with Mathlib
+  \dirn{f897ebcf} accepted, using no axioms other than the three standard axioms \lean{propext},
+  \lean{Classical.choice} and \lean{Quot.sound}; for a declaration whose proof uses Lean's
+  \texttt{native\_decide}, directly or through a declaration on which it depends, the two further axioms
+  \lean{Lean.ofReduceBool} and \lean{Lean.trustCompiler} that \texttt{native\_decide} adds are allowed as
+  well, and the section that cites such a declaration names them (no declaration cited in this section is
+  of this kind). The evidence is the saved output of
+  Lean's command \texttt{\#print axioms}, for the declaration itself or for a declaration whose statement
+  or proof uses it (this command reports every axiom in the dependency closure, which contains the
+  declarations used in statements as well as in proofs). Each section names the build and axioms logs
+  on which this label rests. Where a declaration is not covered by such an output, the section says so
+  and names the evidence used instead, which is of one of two kinds:
+  \begin{enumerate}[label=(\alph*)]
+  \item evidence that the current version of the file that contains the declaration compiled without
+    errors (exit status~$0$), namely a saved compile or build log of that file, or a project record of
+    such a build when saved Lean output of a build that includes the file (for example an axiom audit)
+    exists as well; together with a text search of the file and of the project files it imports that
+    finds no \texttt{sorry} (a declaration that uses \texttt{sorry} compiles with a warning only, so the
+    search, not the exit status, excludes it), no \texttt{admit}, no \texttt{axiom} declaration, no
+    \texttt{native\_decide}, no \texttt{+native} (as in \texttt{decide +native}, of which
+    \texttt{native\_decide} is a synonym), no \lean{Lean.ofReduceBool} or \lean{Lean.ofReduceNat} (the
+    axioms through which values computed by Lean's compiler or interpreter enter a proof) and no
+    \lean{debug.skipKernelTC} (an option that skips the kernel's type check);
+  \item a \texttt{\#guard\_msgs} command, compiled in a build whose log is saved, that pins the output of
+    \texttt{\#print axioms} for the declaration or for a declaration whose statement or proof uses it.
+  \end{enumerate}
+  A text search of every Lean file of the repository that this document cites, and of the project files
+  these import, finds none of the strings \texttt{+native}, \texttt{ofReduceBool}, \texttt{ofReduceNat}
+  and \texttt{skipKernelTC}, so every application of~(a) in this document remains valid, also where it
+  reports only a search for \texttt{sorry}, \texttt{admit}, \texttt{axiom} declarations and
+  \texttt{native\_decide}.
+  If no Lean output of any kind (compile or build log, axiom output, pinned message) is saved for a
+  build that includes a file, and the label of its declarations rests only on the statement of a project
+  record such as a README, we write \emph{Lean-checked according to the record}.
+\item \emph{Written proof (not refereed)}: every proof in this document. It is meant to be checkable by a
+  mathematician without Lean; it has not been refereed.
+\item \emph{Computer-assisted}: a statement that rests on a finite computation carried out by a machine.
+  This is the case, first, when the Lean proof of the statement, or of one of its parts, is itself a
+  finite computation: that statement or part is decided by kernel evaluation of a decision procedure (Lean's
+  \texttt{decide} or \texttt{decide +kernel}, which add no axiom) or by compiled evaluation (Lean's
+  \texttt{native\_decide}, which adds the axioms \lean{Lean.ofReduceBool} and \lean{Lean.trustCompiler}
+  and trusts the compiler), or it is obtained by evaluating generated data or by replaying a certificate
+  produced by an external program (for example an LRAT refutation found by a SAT solver, replayed in Lean
+  and checked by the kernel). It is the case, second, when the written proof of the statement uses a
+  machine computation that it does not carry out by hand, for example by applying a statement of the
+  first kind that has no written proof by hand. For a computer-assisted statement we give the
+  mathematical reduction to the computation and describe the computation precisely; we do not claim to
+  have carried out by hand a computation for which no written proof by hand is given. If the Lean proof
+  of a statement is a finite computation and this document also gives a complete written proof of the
+  statement that does not use the computation, the statement is labelled \emph{computer-assisted in
+  Lean}, usually with a pointer to the written proof (as in ``computer-assisted in Lean; written proof by
+  hand''); that written proof can be checked without a machine. A Lean proof that uses \texttt{decide}
+  only for side facts inside the proof of a statement that is not itself a finite computation (such as
+  $0<1$ in $\mathrm{Fin}\,4$, or closed instances that the written proof checks by hand) does not make the
+  statement computer-assisted. Certificates may also be checked by programs outside Lean. For the SAT
+  certificates of the project only the checker \texttt{cake\_lpr} counts, and a verdict of it counts only
+  if it prints the line \texttt{s VERIFIED UNSAT}; verdicts of \texttt{lrat-check} alone are not counted
+  (\dirn{LRATCHECK20261105/README.md}; \dirn{WRITEUP/SYMMETRIC.md}, section~3). A section may report that
+  a result of the project's records, such as an unsatisfiability verdict, is computer-assisted; this is a
+  claim of the records, which this document does not prove, and a Lean theorem that takes such a result
+  as a hypothesis is presented as conditional on it.
+\end{itemize}
+A statement, or a part of a statement, whose head names a declaration of the project in the form
+``Lean: name, file:line'' is Lean-checked in this sense. For a definition this records only that Lean
+accepted the definition: a definition asserts nothing, and what this document claims for it is that the
+written definition restates the Lean definition. A part marked ``written step'' does not carry this
+label, even where the text names a Lean counterpart of it elsewhere, and a Mathlib declaration named in a
+head only identifies the Mathlib counterpart of a statement that is proved here. A Lean theorem that
+takes unproved propositions as hypotheses is Lean-checked only as the conditional statement it is, and
+the hypotheses are named. We use no other words of this kind (such as ``verified'' or ``certified'') for
+the results of this document.
+
+\paragraph{Lean's arithmetic, written explicitly.}
+Lean statements often use natural numbers inside real expressions and subtract natural numbers. We make
+both explicit. A natural number $m$ used as a real number is written $(m:\R)$ whenever the cast matters;
+for example the Lean angle \texttt{2 * Real.pi / m} with \lean{m} a natural number is $2\pi/(m:\R)$. Real
+division in Lean is total, with $x/0=0$; hence $2\pi/(m:\R)=0$ when $m=0$. Subtraction of natural
+numbers in Lean is truncated ($a-b=0$ when $a<b$); whenever a Lean statement subtracts natural numbers we
+write the difference as $\max(a-b,0)$, or as $a\mathbin{\dot-}b=\max(a-b,0)$ where a section defines this
+symbol, or we state the inequality $b\le a$ that makes it an ordinary difference.
+$\mathrm{Fin}\,n=\{0,1,\dots,n-1\}$ carries its natural order. For a map $f$ we write $f^{[n]}$ for its
+$n$-th iterate ($f^{[0]}=\mathrm{id}$, $f^{[n+1]}=f^{[n]}\circ f$), as Lean does; the recursion
+$f^{[n+1]}=f\circ f^{[n]}$ defines the same maps (see the proof of Lemma~\ref{fd:lem:inv-image}(c)).
+Mathlib's \lean{Function.minimalPeriod} $f$ $x$ is the least $n>0$ with $f^{[n]}(x)=x$, or $0$ if there
+is no such $n$.
+
+\paragraph{Default notation.}
+Points, finite sets and $\card S$ are as in Definition~\ref{fd:def:point}; $\orient$ is
+Definition~\ref{fd:def:orient}; $\conv$ is the convex hull of Definition~\ref{fd:def:conv}. For a finite
+set $X$ of points, $\hv(X)=\{x\in X: x\notin\conv(X\setminus\{x\})\}$ is the set of hull vertices
+(Lean \lean{hullVerts}) and $\peel(X,0)=X$, $\peel(X,n+1)=\peel(X,n)\setminus\hv(\peel(X,n))$
+(Lean \lean{peel}); these two notions are defined formally, with their Lean names, in
+Definitions~\ref{ll:def:hv} and~\ref{ll:def:peel}. ``$S$ is $K$-free'' means
+$\neg\,\mathrm{HasConvexNGon}\,K\,S$ (Definition~\ref{fd:def:ngon}). We write $\rho_{c,\theta}$ for the
+rotation $\mathrm{rotAbout}\,c\,\theta$ of Definition~\ref{fd:def:rot}; rotations act counterclockwise
+(Lemma~\ref{fd:lem:rot}(e)). In this section $R_\theta$ always denotes the rotation matrix of
+Lemma~\ref{fd:lem:rot}, not a map. The notation of this paragraph and of the previous one is the
+default for the whole document. A later section may write the same objects differently, for example
+$\mathrm{rotAbout}(c,\theta)$ or $\mathrm{rotAbout}_{c,\theta}$ for $\rho_{c,\theta}$, a letter such as
+$R$ with subscripts for the rotation map itself and another letter for its matrix, $f^n$ for $f^{[n]}$,
+or $\mathrm{HasConvexNGon}$ in another typeface; such a section defines its symbols where it introduces
+them.
+
+\paragraph{This section.}
+We define points, the orientation function, general position, convex position, convex $n$-gons,
+$K$-freeness, forcing, invariance and rotations exactly as the Lean code does, and we prove the basic
+facts that all later sections use: the symmetries of $\orient$ and its behaviour under affine maps; the
+equivalence of $\orient(a,b,c)=0$ with collinearity; the hull form of convex position; monotonicity;
+invariance of convex and general position under injective affine maps; Carath\'eodory's theorem in the
+plane; the four-point criteria for convex position; the criterion that points whose increasing triples
+are all counterclockwise are in convex position; and the separation of a point from a finite set. This
+section relies on no other section. Its sources, with the first 12 hexadecimal digits of their SHA-256
+hashes, are listed in the following table, the table of sources.
+\begin{longtable}{ll}
+\toprule
+file & SHA-256 (prefix)\\
+\midrule
+\endfirsthead
+\toprule
+file & SHA-256 (prefix)\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\dirn{ErdosSzekeres/Definitions.lean} & \texttt{2425500eefd1}\\
+\dirn{ErdosSzekeres/Orientation.lean} & \texttt{f67955ac7091}\\
+\dirn{ErdosSzekeres/OrientationGeometry.lean} & \texttt{c7db9bbbb65e}\\
+\dirn{ErdosSzekeres/Basic.lean} & \texttt{13667aa2d3dc}\\
+\dirn{ErdosSzekeres/Suk/FourPoint.lean} & \texttt{f3783fe9766f}\\
+\dirn{ErdosSzekeres/Suk/SupportingLines.lean} & \texttt{6a8e12677685}\\
+\dirn{ErdosSzekeres/Suk/OrientationClique.lean} & \texttt{cf63d5219b47}\\
+\dirn{ErdosSzekeres/ConvexCycleCuts.lean} & \texttt{b4ad0ba9e583}\\
+\dirn{ErdosSzekeres/Suk/Reflection.lean} & \texttt{8b99cbf5fa2b}\\
+\dirn{LAYERLEAN/LayerLemma.lean} & \texttt{afb8542dceb0}\\
+\dirn{SYMLEAN/SymmetricReduction.lean} & \texttt{6d5ec90a4215}\\
+\dirn{SYMLEAN/AffineReduction.lean} & \texttt{41cfc0b60aec}\\
+\dirn{LEANEXT/orbit/OrbitConsistency.lean} & \texttt{9b843180ac38}\\
+\dirn{MIRRORETV/lean/MirrorMain.lean} & \texttt{ca623e55a1b9}\\
+\dirn{SYMLEAN/mirror/ReductionThreeClasses.lean} & \texttt{0cc83994fe8c}\\
+\end{longtable}
+
+\paragraph{Axioms evidence.}
+{\raggedright
+In this paragraph, ``line~$N$'' without a file name refers to the log, audit or report named last
+before it.
+A declaration said to be used ``at'' a file and line is used on that line, inside the proof named; the
+line is not the line of its own declaration.
+\begin{itemize}
+\item \emph{Main library, printed theorems.} The saved axiom audit
+  \dirn{docs/validation/axiom-audit-lower-bound-2026-10-11.txt} reports exactly the axioms \lean{propext},
+  \lean{Classical.choice}, \lean{Quot.sound} for \lean{ErdosSzekeres.hasConvexNGon_of_positive_cycle}
+  (line~87), \lean{ErdosSzekeres.Suk.convexPosition_of_four_subsets} (line~103),
+  \lean{ErdosSzekeres.Suk.convexPosition_of_strict_supports} (line~113),
+  \lean{ErdosSzekeres.Suk.convexPosition_four_of_positive} (line~114),
+  \lean{ErdosSzekeres.Suk.convexPosition_of_positive_triples} (line~119),
+  \lean{ErdosSzekeres.HasConvexNGon.linearEquiv} (line~175) and
+  \lean{ErdosSzekeres.Suk.generalPosition_reflectY} (line~176).
+\item \emph{Main library, declarations used by these theorems.} Since \texttt{\#print axioms} reports every
+  axiom used anywhere in the dependency closure of a declaration, these lines also cover the declarations
+  used in those proofs: \lean{Suk.convexPosition_of_subsets_card_le_four}, \lean{convexPosition_iff},
+  \lean{ConvexPosition.mono}, \lean{Suk.convex_orient_positive}, \lean{Suk.orient_affine_combination},
+  \lean{Suk.orient_support_sum}, \lean{Suk.reflectY}, \lean{Suk.orient_reflectY},
+  \lean{generalPosition_iff_orient_ne_zero} and \lean{orient_eq_zero_iff_collinear}
+  (\lean{Suk.generalPosition_reflectY} uses \lean{generalPosition_iff_orient_ne_zero} at
+  \dirn{ErdosSzekeres/Suk/Reflection.lean:55}, and the proof of the latter uses
+  \lean{orient_eq_zero_iff_collinear}).
+\item \emph{Main library, further theorems of the audit.} Other theorems printed in the same audit, with
+  the same three axioms, cover further declarations through their statements or proofs:
+  \begin{itemize}
+  \item line~725, \lean{conjecturedBound_le_of_forces}, uses \lean{ForcesConvexNGon.mono} at
+    \dirn{ErdosSzekeres/LowerBound/Construction.lean:118};
+  \item line~732, \lean{esNumber_three} (declared at \dirn{ErdosSzekeres/LowerBound/Number.lean:40}), uses
+    \lean{forces_triangle}, whose proof uses \lean{forcesConvexNGon_iff_exact} and
+    \lean{convexPosition_of_card_three} at \dirn{ErdosSzekeres/Basic.lean:73} and \dirn{:75}; the proof
+    of \lean{forcesConvexNGon_iff_exact} uses \lean{GeneralPosition.mono} and \lean{HasConvexNGon.mono} at
+    \dirn{ErdosSzekeres/Basic.lean:45};
+  \item line~720, \lean{LowerBound.exists_cupCapFree}, uses \lean{LowerBound.generalPosition_translate}
+    at \dirn{ErdosSzekeres/LowerBound/Construction.lean:54}, whose proof uses \lean{orient_translate} at
+    \dirn{ErdosSzekeres/LowerBound/Placement.lean:20};
+  \item line~624, \lean{Omission.Configuration.orient_ne_of_distinct}, uses \lean{orient_swap} and
+    \lean{orient_cycle} at \dirn{ErdosSzekeres/OrientationObstructions.lean:64} and \dirn{:68};
+  \item line~132, \lean{Suk.AdjacentCapFrames.glue_chain_caps}, uses \lean{ConvexPosition.hasConvexNGon}
+    at \dirn{ErdosSzekeres/Suk/SpikeChain.lean:140};
+  \item line~49, \lean{VisibleEdgeInsertion.convexPosition_insert_of_one_visible_edge}, uses
+    \lean{Suk.convex_orient_nonnegative} at \dirn{ErdosSzekeres/VisibleEdgeInsertion.lean:77};
+  \item line~178, \lean{Suk.horizontal_finite_density_bound}, uses \lean{Suk.hasConvexNGon_of_reflectY} at
+    \dirn{ErdosSzekeres/Suk/FiniteDensityBound.lean:66};
+  \item line~88 prints \lean{convexCycleCut_of_avoids}, whose statement contains \lean{ConvexCycleCut};
+  \item line~529 prints \lean{Omission.BoundaryGeometry.exposed_not_in_hull} (declared at
+    \dirn{ErdosSzekeres/Omission/BoundaryGeometry.lean:30}), which the Coverage paragraph names.
+  \end{itemize}
+  The definitions \lean{Point}, \lean{orient}, \lean{GeneralPosition}, \lean{ConvexPosition},
+  \lean{HasConvexNGon} and \lean{ForcesConvexNGon} occur in the statements of the printed theorems above
+  (for example in those of lines 87, 103, 176 and 725), so they are covered as well. Every main-library
+  file named in this paragraph is unchanged since commit \dirn{7f0868fdb} (11~October 2026), which added
+  the audit.
+\item \emph{Main library, remaining declarations.} The remaining main-library declarations named in this
+  section, \lean{HasConvexNGon.card_le}, \lean{Suk.convexPosition_of_negative_triples} and the three
+  simplification lemmas \lean{Suk.reflectY_x}, \lean{Suk.reflectY_y}, \lean{Suk.reflectY_reflectY} of
+  Remark~\ref{fd:rem:affine-cp-lean}, are not covered by a printed line that we identified. For them the
+  evidence is of kind~(a) of the rigor labels: the build record \dirn{docs/VALIDATION.md:73} (on
+  11~October 2026 the main library, which contains their files, builds with \texttt{lake build
+  -{}-wfail}, which fails on any warning, in particular on the warning that Lean issues for a declaration
+  that uses \texttt{sorry}); the audit above, saved Lean output of the same library, whose printed
+  theorems include theorems of \dirn{ErdosSzekeres/Suk/OrientationClique.lean} and
+  \dirn{ErdosSzekeres/Suk/Reflection.lean} and depend on declarations of \dirn{ErdosSzekeres/Basic.lean};
+  and a text search of their files and of the main-library files these import
+  (\dirn{ErdosSzekeres/Suk/BaseOrder.lean}, \dirn{ErdosSzekeres/Suk/BaseChart.lean},
+  \dirn{ErdosSzekeres/Suk/TriangleOrder.lean}, \dirn{ErdosSzekeres/Suk/CupsCaps.lean} and the four files
+  of \dirn{ErdosSzekeres/Vendor/ErdosSzekeresConvex/}, besides the files in the table of sources), which
+  finds no \texttt{sorry}, \texttt{admit}, \texttt{axiom} declaration or \texttt{native\_decide}, and no
+  \texttt{implemented\_by} or \texttt{extern} attribute.
+\item \emph{The layer-lemma file.} The review report \dirn{LEANEXT/review/REPORT.md} (item~1) records that
+  \dirn{LAYERLEAN/LayerLemma.lean}, in its current version (1148 lines, SHA-256 prefix \texttt{afb8542d}),
+  compiles with exit code~0 and no messages. The re-check
+  \dirn{LAYERLEAN/logs/axioms_recheck_20261106/out.txt} records exit status~0 for a file whose first 1148
+  lines are byte-identical to \dirn{LAYERLEAN/LayerLemma.lean}, followed by 19 \texttt{\#print axioms}
+  commands; the only Lean output in it is the 19 printed axiom lines. (The log
+  \dirn{LAYERLEAN/logs/build.log} names no file hash; it was committed with the first, 454-line version of
+  the file and has not been updated since, and we do not use it.) The review log
+  \dirn{LEANEXT/review/axioms.log}, which prints the axioms of the theorems of
+  \dirn{LAYERLEAN/LayerLemma.lean}, lists \lean{ErdosSzekeres.LayerLemma.iterate_mem} with \lean{propext}
+  and \lean{Quot.sound} only (line~1) and \lean{ErdosSzekeres.LayerLemma.rotAbout_eq_crot} (line~22),
+  \lean{ErdosSzekeres.LayerLemma.rotAbout_injective} (line~23),
+  \lean{ErdosSzekeres.LayerLemma.hullVerts_eq_orbitFS_rotAbout} (line~26; its proof uses
+  \lean{ErdosSzekeres.LayerLemma.rotAff} at \dirn{LAYERLEAN/LayerLemma.lean:368}) and
+  \lean{ErdosSzekeres.LayerLemma.rotAbout_iterate} (line~33) with the three standard axioms.
+\item \emph{The symmetric and affine reduction files.} \dirn{SYMLEAN/logs/runs.tsv} records that
+  \dirn{SYMLEAN/SymmetricReduction.lean} (SHA-256 prefix \texttt{6d5ec90a}, the current file) compiles
+  with exit code~0 and no output (line~2), and so does \dirn{SYMLEAN/AffineReduction.lean} (prefix
+  \texttt{41cfc0b6}, the current file; line~4). The file \dirn{SYMLEAN/AffineReductionAxioms.lean} is
+  \dirn{SYMLEAN/AffineReduction.lean} followed by nine \texttt{\#print axioms} commands and one
+  \texttt{\#check} command; it compiles with exit code~0 (\dirn{SYMLEAN/logs/runs.tsv}, line~5), and its
+  output \dirn{SYMLEAN/logs/AffineReductionAxioms.out} lists with the three standard axioms
+  \begin{itemize}
+  \item \lean{ErdosSzekeres.SymReduction.heptagon_of_nontrivial_affine_coords} (lines~9--11), whose proof
+    uses \lean{ErdosSzekeres.SymReduction.hasConvexNGon_of_affine_coords_symmetry} at
+    \dirn{SYMLEAN/AffineReduction.lean:1528}, whose proof in turn uses
+    \lean{ErdosSzekeres.SymReduction.injective_of_affine} at \dirn{SYMLEAN/AffineReduction.lean:1462};
+  \item \lean{ErdosSzekeres.SymReduction.generalPosition_image_affineEquiv} (lines~13--15), whose proof
+    uses \lean{ErdosSzekeres.SymReduction.generalPosition_image_affine} at
+    \dirn{SYMLEAN/AffineReduction.lean:1295}, whose proof in turn uses
+    \lean{ErdosSzekeres.SymReduction.orient_affine} at \dirn{SYMLEAN/AffineReduction.lean:1281};
+  \item \lean{ErdosSzekeres.SymReduction.hasConvexNGon_image_affine} (line~16), whose proof uses
+    \lean{ErdosSzekeres.SymReduction.convexPosition_image_affine} at
+    \dirn{SYMLEAN/AffineReduction.lean:1303}.
+  \end{itemize}
+\item \emph{The orbit-consistency file.} \dirn{LEANEXT/orbit/logs/build.log} records exit code~0 for the
+  build of \dirn{LEANEXT/orbit/OrbitConsistency.lean}; the log contains only the exit code, and the report
+  \dirn{LEANEXT/orbit/REPORT.md} that accompanies these logs identifies the checked file (line~3: 429
+  lines, SHA-256 prefix \texttt{9b843180}, the current file). \dirn{LEANEXT/orbit/logs/axioms.log} lists
+  the two theorems of that file named in this section,
+  \lean{ErdosSzekeres.OrbitConsistency.orient_rotAbout_inv} (line~1) and
+  \lean{ErdosSzekeres.OrbitConsistency.orient3_perm} (line~5), with the three standard axioms. From
+  \dirn{SYMLEAN/SymmetricReduction.lean} and \dirn{LEANEXT/orbit/OrbitConsistency.lean} we otherwise cite
+  only definitions.
+\item \emph{The mirror files.} \lean{MirrorOdd.hasConvexNGon_of_le} is used at
+  \dirn{MIRRORETV/lean/MirrorMain.lean:2520}, in the proof of \lean{MirrorOdd.mirror_odd_general}
+  (declared at \dirn{MIRRORETV/lean/MirrorMain.lean:2498}), which the compile log
+  \dirn{MIRRORETV/lean/MirrorMain.out} of that file (warnings, no errors) lists with the three standard
+  axioms (line~858). Its verbatim copy in \dirn{SYMLEAN/mirror/ReductionThreeClasses.lean} is used in the
+  same way, at \dirn{SYMLEAN/mirror/ReductionThreeClasses.lean:4079}, in the proof of the copy of
+  \lean{MirrorOdd.mirror_odd_general} (declared at \dirn{SYMLEAN/mirror/ReductionThreeClasses.lean:4057}),
+  which line~11 of \dirn{SYMLEAN/mirror/axioms.out} lists with the three standard axioms; and
+  \dirn{SYMLEAN/mirror/README.md} records that this file compiles with exit code~0 and no errors.
+\item \emph{Text search.} A text search of the six research files of the table of sources finds no
+  \texttt{sorry}, \texttt{admit}, \texttt{axiom} declaration or \texttt{native\_decide}, and no
+  \texttt{implemented\_by} or \texttt{extern} attribute.
+\end{itemize}
+\par}
+
+%======================================================================
+\subsection{Definitions}\label{fd:sec-defs}
+
+\begin{definition}[Points and finite point sets; \leanref{ErdosSzekeres.Point}{ErdosSzekeres/Definitions.lean:9}]\label{fd:def:point}\sloppy
+A \emph{point} is an element of $\R^2$. In Lean, \lean{Point} abbreviates the type of functions from
+$\mathrm{Fin}\,2=\{0,1\}$ to $\R$; we write $p=(p_0,p_1)$, where $p_0=p(0)$ is the first
+($x$-)coordinate and $p_1=p(1)$ the second ($y$-)coordinate. Addition, subtraction and multiplication by
+real numbers are coordinatewise.
+
+A \emph{finite set of points} is a Lean \texttt{Finset Point}: a finite set, without multiplicities. We use
+ordinary set notation for finite sets: $S\subseteq T$, $S\cup T$, $S\setminus T$, $S\setminus\{c\}$
+(Lean \texttt{S.erase c}), $\card S$ (Lean \lean{S.card}), and $f(S)=\{f(p):p\in S\}$ for a map $f$ (Lean
+\texttt{S.image f}, again a finite set, with $\card{f(S)}=\card S$ when $f$ is injective). Where Lean needs
+a set rather than a finite set, for example as the argument of a convex hull, it uses the coercion of $S$
+to a \texttt{Set Point}, which has the same elements; we do not distinguish the two. Brace notation
+$\{a,b,c\}$ denotes the set with these elements; it has fewer than three elements when two of $a,b,c$
+coincide.
+\end{definition}
+
+\begin{remark}[Norm and topology]\label{fd:rem:norm}
+Mathlib gives the Lean type of points its default sup norm $\max(\abs{p_0},\abs{p_1})$. No statement of
+this section uses a norm or a metric; Euclidean quantities are always written out in coordinates (as in
+Lemma~\ref{fd:lem:separation}). The only topological argument of this section is the compactness
+argument in the proof of Lemma~\ref{fd:lem:separation}, which takes place in $\R^m$ with its usual
+topology. (On $\R^2$ the sup norm and the Euclidean norm define the same, usual, topology.)
+\end{remark}
+
+\begin{definition}[Orientation; \leanref{ErdosSzekeres.orient}{ErdosSzekeres/Orientation.lean:9}]\label{fd:def:orient}\sloppy
+Let $R$ be a commutative ring and let $a,b,c\in R^2$ (in Lean: functions from $\mathrm{Fin}\,2$ to
+$R$). Then
+\[
+  \orient(a,b,c)=(b_0-a_0)(c_1-a_1)-(b_1-a_1)(c_0-a_0)\in R .
+\]
+Unless stated otherwise $R=\R$; Lean also evaluates $\orient$ over $\mathbb{Q}$ and $\Z$ in exact
+certificate checks. Equivalently, $\orient(a,b,c)=\det\bigl(b-a\;\big|\;c-a\bigr)$ is the determinant of
+the $2\times2$ matrix with columns $b-a$ and $c-a$, that is, twice the signed area of the triangle $abc$.
+Positive orientation means counterclockwise; for example $\orient((0,0),(1,0),(0,1))=1>0$. For $a\ne b$
+we say that $c$ lies (strictly) to the \emph{left} of the line through $a$ and $b$ directed from $a$ to
+$b$ if $\orient(a,b,c)>0$, and to the \emph{right} if $\orient(a,b,c)<0$.
+\end{definition}
+
+\begin{definition}[Convex sets, convex hulls, affine maps; Mathlib \lean{Convex}, \lean{convexHull}, \lean{AffineIndependent}, \lean{AffineMap}, \lean{AffineEquiv}]\label{fd:def:conv}
+A set $K\subseteq\R^2$ is \emph{convex} if $\lambda x+\mu y\in K$ for all $x,y\in K$ and all reals
+$\lambda,\mu\ge0$ with $\lambda+\mu=1$ (Mathlib \lean{Convex}). The \emph{convex hull} $\conv Y$ of a set
+$Y\subseteq\R^2$ is the intersection of all convex sets that contain $Y$ (Mathlib \lean{convexHull},
+defined as the smallest convex superset). A \emph{convex combination} of points $y_1,\dots,y_k$
+($k\ge1$) is a point $\sum_{i=1}^k\lambda_iy_i$ with all $\lambda_i\ge0$ and $\sum_i\lambda_i=1$. A finite
+set $T\subseteq\R^2$ is \emph{affinely independent} if the only family of reals $(\mu_y)_{y\in T}$ with
+$\sum_{y\in T}\mu_y=0$ and $\sum_{y\in T}\mu_y\,y=0$ is the zero family (equivalent to Mathlib's
+\lean{AffineIndependent} for the inclusion map of $T$). An \emph{affine map} of $\R^2$ is a map
+$g(x)=Ax+v$, where $A$ is a real $2\times2$ matrix (the \emph{linear part} of $g$) and $v\in\R^2$.
+In Mathlib, an affine map $f$ from the plane to itself (\lean{AffineMap}) is a map $f\colon\R^2\to\R^2$
+together with a linear map $f_{\mathrm{lin}}\colon\R^2\to\R^2$ (Lean \lean{f.linear}) such that
+$f(w+p)=f_{\mathrm{lin}}(w)+f(p)$ for all $p,w\in\R^2$. These are exactly the affine maps just defined:
+taking $p=0$ gives $f(x)=A_fx+f(0)$, where $A_f$ is the matrix of $f_{\mathrm{lin}}$; conversely,
+$g(x)=Ax+v$ satisfies $g(w+p)=Aw+g(p)$, so it is a Mathlib affine map whose linear map is $x\mapsto Ax$.
+A Mathlib \emph{affine equivalence} of the plane (\lean{AffineEquiv}) is a bijection $f$ of $\R^2$
+together with a linear bijection $f_{\mathrm{lin}}$ of $\R^2$ with the same property; in particular it
+is an injective affine map.
+\end{definition}
+
+\begin{definition}[General position; \leanref{ErdosSzekeres.GeneralPosition}{ErdosSzekeres/Definitions.lean:12}]\label{fd:def:gp}\sloppy
+A set $X\subseteq\R^2$ is \emph{collinear} (Mathlib \lean{Collinear}) if the linear span of the set of
+differences $\{p-q:p,q\in X\}$ (Mathlib \lean{vectorSpan}) has dimension at most~$1$ (in Lean:
+\lean{Module.rank} of this span is at most $1$). A finite set $S$ of points is \emph{in general
+position} if for all $a,b,c\in S$ with $a\ne b$, $a\ne c$ and $b\ne c$ the set $\{a,b,c\}$ is not
+collinear.
+\end{definition}
+
+\begin{definition}[Convex position; \leanref{ErdosSzekeres.ConvexPosition}{ErdosSzekeres/Definitions.lean:17}]\label{fd:def:cp}\sloppy
+A finite set $S$ of points is \emph{in convex position} if the inclusion map of $S$ into $\R^2$ is
+convex independent over $\R$ (Mathlib \lean{ConvexIndependent}). Mathlib calls a family
+$p\colon\iota\to\R^2$ convex independent if for every set $t\subseteq\iota$ and every $x\in\iota$,
+$p(x)\in\conv p(t)$ implies $x\in t$. For the inclusion map of $S$ the index set is $S$ itself (in Lean,
+the type of elements of $S$) and $p$ is the identity on it, so the definition says: \emph{for every
+$T\subseteq S$ and every $x\in S$, if $x\in\conv T$ then $x\in T$.} Lemma~\ref{fd:lem:cp-hull} gives the
+familiar form: no point of $S$ lies in the convex hull of the other points of $S$.
+\end{definition}
+
+\begin{definition}[Convex $n$-gons and $K$-free sets; \leanref{ErdosSzekeres.HasConvexNGon}{ErdosSzekeres/Definitions.lean:21}]\label{fd:def:ngon}\sloppy
+For $n\in\N$ and a finite set $S$ of points, $\mathrm{HasConvexNGon}\,n\,S$ holds if there is a finite
+set $T\subseteq S$ with $\card T=n$ that is in convex position. There is no emptiness condition: points
+of $S\setminus T$ may lie in $\conv T$. For $K\in\N$ we say that $S$ is \emph{$K$-free} if
+$\neg\,\mathrm{HasConvexNGon}\,K\,S$.
+\end{definition}
+
+\begin{remark}\label{fd:rem:ngon}
+$\mathrm{HasConvexNGon}\,0\,S$ holds for every $S$ (Lemma~\ref{fd:lem:small}(a)), so no set is
+$0$-free, and a hypothesis ``$S$ is $0$-free'' is contradictory. If $S$ is $K$-free and $K\le K'$, then
+$S$ is $K'$-free (contrapositive of Lemma~\ref{fd:lem:mono}(d)). If $\mathrm{HasConvexNGon}\,n\,S$, then
+$n\le\card S$ (Lemma~\ref{fd:lem:ngon-basic}(a)).
+\end{remark}
+
+\begin{definition}[Forcing a convex $n$-gon; \leanref{ErdosSzekeres.ForcesConvexNGon}{ErdosSzekeres/Definitions.lean:25}]\label{fd:def:forces}\sloppy
+For $N,n\in\N$, $\mathrm{ForcesConvexNGon}\,N\,n$ holds if every finite set $S$ of points that is in
+general position and satisfies $N\le\card S$ satisfies $\mathrm{HasConvexNGon}\,n\,S$.
+\end{definition}
+
+\begin{definition}[Invariant sets; \leanref{ErdosSzekeres.LayerLemma.Invariant}{LAYERLEAN/LayerLemma.lean:105}, \leanref{ErdosSzekeres.SymReduction.Invariant}{SYMLEAN/SymmetricReduction.lean:271}, \leanref{ErdosSzekeres.OrbitConsistency.Invariant}{LEANEXT/orbit/OrbitConsistency.lean:47}]\label{fd:def:inv}\sloppy
+For a map $f\colon\R^2\to\R^2$ and a finite set $S$ of points, $\mathrm{Invariant}\,f\,S$ holds if
+$f(p)\in S$ for every $p\in S$; that is, $f$ maps $S$ \emph{into} $S$. For injective $f$ this is
+equivalent to $f(S)=S$, and then also $f^{-1}(S)=\{p\in\R^2:f(p)\in S\}=S$
+(Lemma~\ref{fd:lem:inv-image}). The three cited Lean definitions are textually identical.
+\end{definition}
+
+\begin{lemma}[Invariance and images; (a), (b) written step; (c) \leanref{ErdosSzekeres.LayerLemma.iterate_mem}{LAYERLEAN/LayerLemma.lean:52}]\label{fd:lem:inv-image}\sloppy
+Let $X$ be a set, let $f\colon X\to X$ be a map and let $S$ be a finite subset of $X$.
+\begin{enumerate}[label=(\alph*)]
+\item If $X=\R^2$ and $f$ is injective, then $\mathrm{Invariant}\,f\,S$ holds if and only if $f(S)=S$.
+\item If $X=\R^2$, $f$ is injective and $\mathrm{Invariant}\,f\,S$ holds, then $\{p\in\R^2:f(p)\in S\}=S$.
+\item If $f(y)\in S$ for every $y\in S$, then $f^{[i]}(x)\in S$ for every $x\in S$ and every $i\in\N$.
+\end{enumerate}
+Part (c) is stated for an arbitrary set $X$, as in Lean, where $X$ is an arbitrary type; parts (a) and
+(b) take $X=\R^2$ because $\mathrm{Invariant}$ is defined for maps of the plane.
+\end{lemma}
+
+\begin{proof}
+(a) If $f(S)=S$, then $f(p)\in f(S)=S$ for every $p\in S$. Conversely, if $\mathrm{Invariant}\,f\,S$
+holds, then $f(S)\subseteq S$; since $f$ is injective, $\card{f(S)}=\card S$, and a subset of a finite
+set with the same number of elements is the whole set, so $f(S)=S$. (Lean uses this argument in the step
+at line~165 of the proof of \lean{ErdosSzekeres.LayerLemma.map_mem_hullVerts},
+\dirn{LAYERLEAN/LayerLemma.lean:162}.)
+
+(b) If $p\in S$ then $f(p)\in S$ by invariance. If $f(p)\in S$, then by (a) $f(p)\in f(S)$, so
+$f(p)=f(q)$ for some $q\in S$, and $p=q\in S$ by injectivity.
+
+(c) Induction on $i$. For $i=0$, $f^{[0]}(x)=x\in S$. If $f^{[i]}(x)\in S$, then
+$f^{[i+1]}(x)=f\bigl(f^{[i]}(x)\bigr)\in S$ by the hypothesis applied to $y=f^{[i]}(x)$. Here we used
+$f^{[i+1]}=f\circ f^{[i]}$, which follows from the definition $f^{[i+1]}=f^{[i]}\circ f$ by induction on
+$i$ ($f^{[1]}=f^{[0]}\circ f=f=f\circ f^{[0]}$, and $f^{[i+2]}=f^{[i+1]}\circ f=f\circ f^{[i]}\circ
+f=f\circ f^{[i+1]}$; Mathlib's \lean{Function.iterate_succ_apply'}). This is the Lean proof.
+\end{proof}
+
+\begin{definition}[Rotation about a point; \leanref{ErdosSzekeres.LayerLemma.rotAbout}{LAYERLEAN/LayerLemma.lean:298}, \leanref{ErdosSzekeres.SymReduction.rotAbout}{SYMLEAN/SymmetricReduction.lean:400}, \leanref{ErdosSzekeres.OrbitConsistency.rotAbout}{LEANEXT/orbit/OrbitConsistency.lean:93}]\label{fd:def:rot}\sloppy
+For $c\in\R^2$ and $\theta\in\R$, the map $\rho_{c,\theta}=\mathrm{rotAbout}\,c\,\theta\colon\R^2\to\R^2$
+is
+\[
+  \rho_{c,\theta}(p)=\bigl(c_0+\cos\theta\,(p_0-c_0)-\sin\theta\,(p_1-c_1),\;
+  c_1+\sin\theta\,(p_0-c_0)+\cos\theta\,(p_1-c_1)\bigr).
+\]
+In complex notation, identifying $p$ with $p_0+ip_1$ and $c$ with $c_0+ic_1$, this is
+$z\mapsto c+e^{i\theta}(z-c)$ (Lemma~\ref{fd:lem:rot}(a)): the counterclockwise rotation about $c$ by
+the angle $\theta$ (Lemma~\ref{fd:lem:rot}(e)). The three cited Lean definitions are textually
+identical; a text search of the research records finds 19 definitions of \lean{rotAbout}, all with this
+same body.
+\end{definition}
+
+\begin{remark}[Angles $2\pi/m$]\label{fd:rem:angles}
+In later sections the angle is usually written \texttt{2 * Real.pi / m} in Lean with \lean{m} a natural
+number, that is, $\theta=2\pi/(m:\R)$. For $m=0$ Lean's division gives $\theta=0$, and $\rho_{c,0}$ is
+the identity (Lemma~\ref{fd:lem:rot}(c)). The propositions \lean{Sixfold66} and \lean{Sevenfold70}
+(Definition~\ref{ll:def:66-70}) write their angles as \texttt{2 * Real.pi / 6} and
+\texttt{2 * Real.pi / 7} with real numerals; since the real numbers $6$ and $7$ are the casts of the
+natural numbers $6$ and $7$, these are the angles $2\pi/(m:\R)$ for $m=6$ and $m=7$.
+\end{remark}
+
+\begin{lemma}[Basic properties of rotations; (a) \leanref{ErdosSzekeres.LayerLemma.rotAbout_eq_crot}{LAYERLEAN/LayerLemma.lean:302}; (b) \leanref{ErdosSzekeres.LayerLemma.rotAff}{LAYERLEAN/LayerLemma.lean:311}; (c) \leanref{ErdosSzekeres.LayerLemma.rotAbout_iterate}{LAYERLEAN/LayerLemma.lean:465}; (d) \leanref{ErdosSzekeres.LayerLemma.rotAbout_injective}{LAYERLEAN/LayerLemma.lean:319}; (e), (f) written step]\label{fd:lem:rot}\sloppy
+Let $c\in\R^2$ and $\theta,\alpha,\beta\in\R$. Write $\rho_\theta=\rho_{c,\theta}$ and
+$R_\theta=\begin{pmatrix}\cos\theta&-\sin\theta\\ \sin\theta&\cos\theta\end{pmatrix}$.
+\begin{enumerate}[label=(\alph*)]
+\item For every $p\in\R^2$, the complex number $\rho_\theta(p)_0+i\,\rho_\theta(p)_1$ equals
+  $\gamma+e^{i\theta}(z-\gamma)$, where $z=p_0+ip_1$ and $\gamma=c_0+ic_1$. (In Lean:
+  $\mathrm{rotAbout}\,c\,\theta=\mathrm{crot}\,(\mathrm{toC}\,c)\,(\exp(\theta i))$, where
+  $\mathrm{toC}\,p=p_0+ip_1$ and $\mathrm{crot}\,\gamma\,w\,p$ is the point with complex coordinate
+  $\gamma+w(\mathrm{toC}\,p-\gamma)$.)
+\item $\rho_\theta(p)=c+R_\theta(p-c)=R_\theta\,p+(c-R_\theta\,c)$ for every $p$; thus $\rho_\theta$ is an
+  affine map with linear part $R_\theta$, that is, $\rho_\theta(p+v)=\rho_\theta(p)+R_\theta v$ for all
+  $p,v\in\R^2$. In particular $\rho_\theta(c)=c$. (The Lean definition \lean{LayerLemma.rotAff} cited for (b)
+  packages $\rho_\theta$ as an affine map with linear part $R_\theta$, its defining property being the
+  identity $\rho_\theta(p+v)=\rho_\theta(p)+R_\theta v$. The matrix form
+  $\rho_\theta(p)=c+R_\theta(p-c)=R_\theta\,p+(c-R_\theta\,c)$ of Definition~\ref{fd:def:rot} and the
+  identity $\rho_\theta(c)=c$ are written steps here; Lean proves the latter in the step at line~330 of the
+  proof of \lean{ErdosSzekeres.LayerLemma.invariant_erase_centre}, \dirn{LAYERLEAN/LayerLemma.lean:325}.)
+\item $\rho_\alpha\circ\rho_\beta=\rho_{\alpha+\beta}$ and $\rho_0=\mathrm{id}$. Hence
+  $\rho_\alpha^{[j]}=\rho_{(j:\R)\alpha}$ for every $j\in\N$. (The Lean declaration cited for (c) is this
+  iterate formula; the composition law and $\rho_0=\mathrm{id}$ are written steps here.)
+\item $\rho_\theta$ is a bijection of $\R^2$ with inverse $\rho_{-\theta}$; in particular it is
+  injective. (The Lean declaration cited for (d) states injectivity; bijectivity and the inverse are a
+  written step here.)
+\item $\orient\bigl(c,p,\rho_\theta(p)\bigr)=\sin\theta\,\bigl((p_0-c_0)^2+(p_1-c_1)^2\bigr)$ for every
+  $p$. Hence, if $0<\theta<\pi$ and $p\ne c$, then $\orient(c,p,\rho_\theta(p))>0$: the rotation turns
+  counterclockwise.
+\item $(\rho_\theta(p)_0-c_0)^2+(\rho_\theta(p)_1-c_1)^2=(p_0-c_0)^2+(p_1-c_1)^2$ for every $p$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+We give direct proofs in coordinates; the Lean proofs of (c) and (d) pass through the complex form (a).
+Put $u=p-c$. By definition,
+\[
+  \rho_\theta(p)-c=\bigl(\cos\theta\,u_0-\sin\theta\,u_1,\;\sin\theta\,u_0+\cos\theta\,u_1\bigr)
+  =R_\theta\,u .
+\]
+(b) This is the displayed identity; $R_\theta(p-c)=R_\theta p-R_\theta c$ by linearity. Hence
+$\rho_\theta(p+v)=c+R_\theta(p-c)+R_\theta v=\rho_\theta(p)+R_\theta v$, and $p=c$ gives $u=0$ and
+$\rho_\theta(c)=c$.
+
+(a) By Euler's formula $e^{i\theta}=\cos\theta+i\sin\theta$, and
+$(\cos\theta+i\sin\theta)(u_0+iu_1)=(\cos\theta\,u_0-\sin\theta\,u_1)+i(\sin\theta\,u_0+\cos\theta\,u_1)$.
+Adding $\gamma=c_0+ic_1$ gives the two coordinates of $\rho_\theta(p)$.
+
+(c) By (b), $\rho_\alpha(\rho_\beta(p))=c+R_\alpha R_\beta(p-c)$. By the addition formulas
+$\cos(\alpha+\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta$ and
+$\sin(\alpha+\beta)=\sin\alpha\cos\beta+\cos\alpha\sin\beta$,
+\[
+  R_\alpha R_\beta=
+  \begin{pmatrix}\cos\alpha\cos\beta-\sin\alpha\sin\beta&-(\sin\alpha\cos\beta+\cos\alpha\sin\beta)\\
+  \sin\alpha\cos\beta+\cos\alpha\sin\beta&\cos\alpha\cos\beta-\sin\alpha\sin\beta\end{pmatrix}
+  =R_{\alpha+\beta},
+\]
+so $\rho_\alpha\circ\rho_\beta=\rho_{\alpha+\beta}$. Since $R_0$ is the identity matrix, $\rho_0=\mathrm{id}$.
+Now induct on $j$: $\rho_\alpha^{[0]}=\mathrm{id}=\rho_0=\rho_{(0:\R)\alpha}$, and
+$\rho_\alpha^{[j+1]}=\rho_\alpha^{[j]}\circ\rho_\alpha=\rho_{(j:\R)\alpha}\circ\rho_\alpha
+=\rho_{(j:\R)\alpha+\alpha}=\rho_{(j+1:\R)\alpha}$.
+
+(d) By (c), $\rho_{-\theta}\circ\rho_\theta=\rho_0=\mathrm{id}$ and $\rho_\theta\circ\rho_{-\theta}=\mathrm{id}$.
+
+(e) With $u=p-c$ as above,
+\[
+  \orient(c,p,\rho_\theta(p))=u_0(\sin\theta\,u_0+\cos\theta\,u_1)-u_1(\cos\theta\,u_0-\sin\theta\,u_1)
+  =\sin\theta\,(u_0^2+u_1^2).
+\]
+If $0<\theta<\pi$ then $\sin\theta>0$, and if $p\ne c$ then $u_0^2+u_1^2>0$.
+
+(f) $(\cos\theta\,u_0-\sin\theta\,u_1)^2+(\sin\theta\,u_0+\cos\theta\,u_1)^2
+=(\cos^2\theta+\sin^2\theta)(u_0^2+u_1^2)=u_0^2+u_1^2$, the cross terms cancelling.
+\end{proof}
+
+%======================================================================
+\subsection{Facts}\label{fd:sec-facts}
+
+\begin{lemma}[Symmetries of the orientation; (a) \leanref{ErdosSzekeres.orient_swap}{ErdosSzekeres/Orientation.lean:12}; (b) \leanref{ErdosSzekeres.orient_cycle}{ErdosSzekeres/Orientation.lean:15}; (c) \leanref{ErdosSzekeres.orient_translate}{ErdosSzekeres/Orientation.lean:18}; (d), (e) written step]\label{fd:lem:orient}\sloppy
+Let $R$ be a commutative ring and let $a,b,c,v\in R^2$.
+\begin{enumerate}[label=(\alph*)]
+\item $\orient(a,c,b)=-\orient(a,b,c)$.
+\item $\orient(b,c,a)=\orient(a,b,c)$. Consequently $\orient(a,b,c)=\orient(b,c,a)=\orient(c,a,b)$.
+\item $\orient(a+v,b+v,c+v)=\orient(a,b,c)$.
+\item For all $p_1,p_2,p_3\in R^2$ and every permutation $\pi$ of $\{1,2,3\}$,
+  $\orient(p_{\pi(1)},p_{\pi(2)},p_{\pi(3)})=\sgn(\pi)\,\orient(p_1,p_2,p_3)$.
+\item $\orient(a,b,c)=0$ whenever two of $a,b,c$ are equal. Consequently, if $\orient(a,b,c)\ne0$, then
+  $a,b,c$ are pairwise distinct.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The Lean proofs of (a)--(c) expand both sides and compare polynomials (\texttt{unfold orient; ring} for
+(a) and (b), \texttt{simp only [orient, Pi.add\_apply]; ring} for (c)); we organise the same
+computation. For $x,y\in R^2$ put $[x,y]=x_0y_1-x_1y_0$. Then $[\cdot,\cdot]$ is
+bilinear, $[y,x]=-[x,y]$ and $[x,x]=0$. Expanding the definition (the terms $a_0a_1$ cancel),
+\[
+  \orient(a,b,c)=a_0b_1-a_1b_0+b_0c_1-b_1c_0+c_0a_1-c_1a_0=[a,b]+[b,c]+[c,a].
+\]
+(b) $\orient(b,c,a)=[b,c]+[c,a]+[a,b]=\orient(a,b,c)$. Applying this twice gives the second statement.
+
+(a) $\orient(a,c,b)=[a,c]+[c,b]+[b,a]=-[c,a]-[b,c]-[a,b]=-\orient(a,b,c)$.
+
+(c) The defining formula involves only the differences $b-a$ and $c-a$, and
+$(b+v)-(a+v)=b-a$, $(c+v)-(a+v)=c-a$.
+
+(d) The permutation group of $\{1,2,3\}$ has six elements. The identity and the two $3$-cycles have sign
+$+1$; they give $\orient(p_1,p_2,p_3)$, $\orient(p_2,p_3,p_1)$ and $\orient(p_3,p_1,p_2)$, which are equal
+by (b). The three transpositions have sign $-1$; they give $\orient(p_1,p_3,p_2)$, $\orient(p_2,p_1,p_3)$
+and $\orient(p_3,p_2,p_1)$. The first equals $-\orient(p_1,p_2,p_3)$ by (a). By (b) applied to the triple
+$(p_2,p_1,p_3)$ we get $\orient(p_1,p_3,p_2)=\orient(p_2,p_1,p_3)$, and by (b) applied to
+$(p_3,p_2,p_1)$ we get $\orient(p_2,p_1,p_3)=\orient(p_3,p_2,p_1)$; so all three equal
+$-\orient(p_1,p_2,p_3)$.
+
+(e) If $a=b$ the first factors $b_0-a_0$ and $b_1-a_1$ vanish; if $a=c$ the factors $c_1-a_1$ and
+$c_0-a_0$ vanish; if $b=c$ the two products $(b_0-a_0)(b_1-a_1)$ and $(b_1-a_1)(b_0-a_0)$ are equal. In
+each case $\orient(a,b,c)=0$.
+\end{proof}
+
+\begin{remark}[The real case of (d) in Lean]\label{fd:rem:orient-lean}\sloppy
+For $R=\R$, part (d) of Lemma~\ref{fd:lem:orient} is the Lean theorem
+\lean{ErdosSzekeres.OrbitConsistency.orient3_perm} (\dirn{LEANEXT/orbit/OrbitConsistency.lean:178};
+Lemma~\ref{oc:lem:perm}). It is stated for ordered triples $t\colon\mathrm{Fin}\,3\to\R^2$, with
+$\orient_3(t)=\orient(t(0),t(1),t(2))$ (Lean \lean{orient3},
+\dirn{LEANEXT/orbit/OrbitConsistency.lean:168}), and says that
+$\orient_3(t\circ\sigma)=\sgn(\sigma)\,\orient_3(t)$ for every permutation $\sigma$ of
+$\mathrm{Fin}\,3=\{0,1,2\}$ and every $t$. Put $t(i)=p_{i+1}$ and $\sigma(i)=\pi(i+1)-1$; then
+$\sigma=s^{-1}\circ\pi\circ s$ for the bijection $s(i)=i+1$ from $\{0,1,2\}$ to $\{1,2,3\}$, so $\sigma$
+has the same cycle type and hence the same sign as $\pi$, and $(t\circ\sigma)(i)=p_{\pi(i+1)}$. So
+$\orient_3(t\circ\sigma)=\orient(p_{\pi(1)},p_{\pi(2)},p_{\pi(3)})$ and $\orient_3(t)=\orient(p_1,p_2,p_3)$,
+and the Lean statement is (d) for $R=\R$. Parts (d) for a general commutative ring and (e) are written
+steps.
+\end{remark}
+
+\begin{lemma}[Orientation under affine maps; \leanref{ErdosSzekeres.SymReduction.orient_affine}{SYMLEAN/AffineReduction.lean:1241}; (i) \leanref{ErdosSzekeres.OrbitConsistency.orient_rotAbout_inv}{LEANEXT/orbit/OrbitConsistency.lean:117}; (ii) written step]\label{fd:lem:affine-orient}\sloppy
+Let $g\colon\R^2\to\R^2$ be a map, let $A$ be a real $2\times2$ matrix and $v\in\R^2$, and suppose that
+$g(x)=Ax+v$ for every $x\in\R^2$. Then for all $a,b,c\in\R^2$
+\[
+  \orient\bigl(g(a),g(b),g(c)\bigr)=\det(A)\,\orient(a,b,c).
+\]
+(In Lean, $g$ is an arbitrary map with the hypothesis that $g(p)=L\,p+w$ for every $p$, where $L$ is a
+real $2\times2$ matrix and $w\in\R^2$ (Lean's \lean{b}), and the conclusion is
+$\orient(g(x),g(y),g(z))=\det(L)\,\orient(x,y,z)$ for all $x,y,z$; this is the statement above with
+$L=A$ and $w=v$.)
+In particular:
+\begin{enumerate}[label=(\roman*)]
+\item (rotations have determinant $1$) for all $o\in\R^2$, $\theta\in\R$ and $a,b,d\in\R^2$,
+  $\orient(\rho_{o,\theta}(a),\rho_{o,\theta}(b),\rho_{o,\theta}(d))=\orient(a,b,d)$, because the linear part
+  $R_\theta$ of $\rho_{o,\theta}$ (Lemma~\ref{fd:lem:rot}(b)) has $\det R_\theta=\cos^2\theta+\sin^2\theta=1$;
+\item (reflections have determinant $-1$) for $o\in\R^2$ and $\varphi\in\R$ let
+  $F_\varphi=\begin{pmatrix}\cos2\varphi&\sin2\varphi\\ \sin2\varphi&-\cos2\varphi\end{pmatrix}$ and
+  $\sigma(x)=o+F_\varphi(x-o)$, the reflection in the line through $o$ with direction
+  $u=(\cos\varphi,\sin\varphi)$ (indeed $F_\varphi u=u$ and $F_\varphi u^\perp=-u^\perp$ for
+  $u^\perp=(-\sin\varphi,\cos\varphi)$). Then
+  $\orient(\sigma(a),\sigma(b),\sigma(d))=-\orient(a,b,d)$ for all $a,b,d$, because
+  $\det F_\varphi=-\cos^22\varphi-\sin^22\varphi=-1$. For $o=0$ and $\varphi=0$, $\sigma$ is the reflection
+  $(p_0,p_1)\mapsto(p_0,-p_1)$ in the first coordinate axis.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+By Definition~\ref{fd:def:orient}, $\orient(a,b,c)=\det(b-a\mid c-a)$. Since $g(b)-g(a)=A(b-a)$ and
+$g(c)-g(a)=A(c-a)$, the matrix with columns $g(b)-g(a)$ and $g(c)-g(a)$ is the product $A\,(b-a\mid c-a)$,
+and the determinant of a product of $2\times2$ matrices is the product of the determinants (a polynomial
+identity in the eight entries, checked by expanding both sides). This proves the formula. (The Lean proof
+substitutes $g(p)=Lp+w$, writes $\det L=L_{00}L_{11}-L_{01}L_{10}$, expands both sides in coordinates
+and compares polynomials, which is the same computation.)
+
+(i) $\rho_{o,\theta}(x)=R_\theta x+(o-R_\theta o)$ by Lemma~\ref{fd:lem:rot}(b), and
+$\det R_\theta=\cos\theta\cdot\cos\theta-(-\sin\theta)\sin\theta=1$.
+
+(ii) $\sigma(x)=F_\varphi x+(o-F_\varphi o)$ has linear part $F_\varphi$, and
+$\det F_\varphi=-\cos^22\varphi-\sin^22\varphi=-1$. Using $\cos2\varphi\cos\varphi+\sin2\varphi\sin\varphi
+=\cos\varphi$ and $\sin2\varphi\cos\varphi-\cos2\varphi\sin\varphi=\sin\varphi$ (the subtraction formulas for
+$2\varphi-\varphi$) one gets $F_\varphi u=u$ and $F_\varphi u^\perp=(\sin\varphi,-\cos\varphi)=-u^\perp$, so
+$\sigma$ fixes the line $o+\R u$ pointwise and reverses the perpendicular direction. For $\varphi=0$,
+$F_0=\mathrm{diag}(1,-1)$.
+\end{proof}
+
+\begin{remark}[The formula and its special cases in Lean]\label{fd:rem:affine-orient-lean}\sloppy
+The general formula is the Lean theorem \lean{ErdosSzekeres.SymReduction.orient_affine}, cited in the
+head; a verbatim copy, with the same name, is at \dirn{SYMLEAN/mirror/ReductionThreeClasses.lean:1267}.
+Part (i) is a separate Lean theorem, \lean{ErdosSzekeres.OrbitConsistency.orient_rotAbout_inv}, also
+cited in the head (Lemma~\ref{oc:lem:rot-inv}). It is stated for the copy
+\lean{ErdosSzekeres.OrbitConsistency.rotAbout} of the rotation of Definition~\ref{fd:def:rot}, and it
+calls the centre $c$ instead of $o$. Part (ii) is a written step. Its case $o=0$, $\varphi=0$, the sign
+change under $(p_0,p_1)\mapsto(p_0,-p_1)$, is the Lean theorem \lean{ErdosSzekeres.Suk.orient_reflectY}
+(\dirn{ErdosSzekeres/Suk/Reflection.lean:47}).
+\end{remark}
+
+\begin{lemma}[Collinearity through a point; Mathlib \lean{collinear_iff_of_mem}; written step]\label{fd:lem:collinear-mem}
+Let $X\subseteq\R^2$ and $p^*\in X$. Then $X$ is collinear if and only if there is $v\in\R^2$ such that
+every $p\in X$ can be written $p=p^*+r\,v$ with $r\in\R$.
+\end{lemma}
+
+\begin{proof}
+Let $W$ be the linear span of $\{p-q:p,q\in X\}$. Since $p^*\in X$, $W$ is also the span of
+$\{p-p^*:p\in X\}$: these vectors are among the differences, and conversely
+$p-q=(p-p^*)-(q-p^*)$. If $X$ is collinear, then $\dim W\le1$, so $W\subseteq\R v$ for some $v$ (take
+$v=0$ if $W=0$, and a basis vector of $W$ if $\dim W=1$); then $p-p^*\in W$ gives $p=p^*+rv$ for some
+$r$. Conversely, if every $p-p^*$ lies in $\R v$, then $W\subseteq\R v$ and $\dim W\le\dim\R v\le1$.
+\end{proof}
+
+\begin{lemma}[Orientation and collinearity; (a) \leanref{ErdosSzekeres.orient_eq_zero_iff_collinear}{ErdosSzekeres/OrientationGeometry.lean:36}; (b) \leanref{ErdosSzekeres.generalPosition_iff_orient_ne_zero}{ErdosSzekeres/OrientationGeometry.lean:66}]\label{fd:lem:collinear}\sloppy\tolerance=10000
+The orientation detects collinearity, and hence general position.
+\begin{enumerate}[label=(\alph*)]
+\item For all $a,b,c\in\R^2$: $\orient(a,b,c)=0$ if and only if the set $\{a,b,c\}$ is collinear. This
+  includes degenerate triples, in which two or three of the points coincide.
+\item A finite set $S$ of points is in general position if and only if $\orient(a,b,c)\ne0$ for all
+  $a,b,c\in S$ with $a\ne b$, $a\ne c$ and $b\ne c$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+We follow the Lean proof. (a) We use Lemma~\ref{fd:lem:collinear-mem} with $X=\{a,b,c\}$ and $p^*=a$.
+
+Suppose $\{a,b,c\}$ is collinear. Then there are $v$ and reals $r,s$ with $b=a+rv$ and $c=a+sv$, so
+$\orient(a,b,c)=(rv_0)(sv_1)-(rv_1)(sv_0)=0$.
+
+Suppose $\orient(a,b,c)=0$. If $b=a$, put $v=c-a$; then $a=a+0\cdot v$, $b=a+0\cdot v$ and $c=a+1\cdot v$, so
+$\{a,b,c\}$ is collinear. If $b\ne a$, put $u=b-a\ne0$ and $w=c-a$; then
+$u_0w_1-u_1w_0=\orient(a,b,c)=0$. We find $r$ with $w=ru$. If $u_0\ne0$, let $r=w_0/u_0$; then $ru_0=w_0$
+and $ru_1=w_0u_1/u_0=u_0w_1/u_0=w_1$. If $u_0=0$, then $u_1\ne0$ and $0=u_0w_1-u_1w_0=-u_1w_0$ gives
+$w_0=0$; let $r=w_1/u_1$, so that $ru_0=0=w_0$ and $ru_1=w_1$. Now $a=a+0\cdot u$, $b=a+1\cdot u$ and
+$c=a+r\,u$, so $\{a,b,c\}$ is collinear.
+
+(b) By Definition~\ref{fd:def:gp}, $S$ is in general position iff $\{a,b,c\}$ is not collinear for all
+pairwise distinct $a,b,c\in S$; by (a) this says $\orient(a,b,c)\ne0$ for all such triples.
+\end{proof}
+
+\begin{lemma}[Convex hulls; written step]\label{fd:lem:hull}
+Let $Y,Y'\subseteq\R^2$.
+\begin{enumerate}[label=(\alph*)]
+\item $Y\subseteq\conv Y$; $\conv Y$ is convex; and $\conv Y\subseteq K$ for every convex set $K$ with
+  $Y\subseteq K$. If $Y\subseteq Y'$ then $\conv Y\subseteq\conv Y'$. Moreover $\conv\emptyset=\emptyset$
+  and $\conv\{y\}=\{y\}$.
+\item $\conv Y$ is the set of all convex combinations of finitely many points of $Y$.
+\item If $F=\{y_1,\dots,y_m\}$ is a finite set of $m\ge1$ distinct points, then
+  $\conv F=\bigl\{\sum_{i=1}^m\lambda_iy_i:\lambda_i\ge0,\ \sum_i\lambda_i=1\bigr\}$. In particular
+  $\conv\{y,z\}=\{\lambda y+(1-\lambda)z:0\le\lambda\le1\}$.
+\item For $w\in\R^2$ and $\alpha\in\R$, the open half-plane $\{z\in\R^2:w_0z_0+w_1z_1<\alpha\}$ is
+  convex.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) An intersection of convex sets is convex, so $\conv Y$ is convex; it contains $Y$; and it is contained
+in each convex $K\supseteq Y$, being the intersection of all of them. If $Y\subseteq Y'$, every convex
+set containing $Y'$ contains $Y$, so $\conv Y\subseteq\conv Y'$. The empty set and $\{y\}$ are convex
+(for $\{y\}$: $\lambda y+\mu y=y$ when $\lambda+\mu=1$), which gives the last two claims.
+
+(b) Let $C$ be the set of convex combinations of finitely many points of $Y$. Every $y\in Y$ is the convex
+combination $1\cdot y$, so $Y\subseteq C$. $C$ is convex: if $x=\sum_i\lambda_iy_i$ and
+$x'=\sum_j\lambda'_jy'_j$ are in $C$ and $\lambda,\mu\ge0$ with $\lambda+\mu=1$, then
+$\lambda x+\mu x'=\sum_i(\lambda\lambda_i)y_i+\sum_j(\mu\lambda'_j)y'_j$ has nonnegative coefficients
+with sum $\lambda+\mu=1$. Hence $\conv Y\subseteq C$ by (a). Conversely, let $K\supseteq Y$ be convex; we
+show by induction on $k$ that every convex combination $x=\sum_{i=1}^k\lambda_iy_i$ of points of $Y$
+lies in $K$. For $k=1$, $x=y_1\in K$. For $k+1$ terms: if $\lambda_{k+1}=1$, all other coefficients
+vanish and $x=y_{k+1}\in K$; otherwise $s=\sum_{i\le k}\lambda_i=1-\lambda_{k+1}>0$, the point
+$x'=\sum_{i\le k}(\lambda_i/s)y_i$ is a convex combination of $k$ points of $Y$, so $x'\in K$, and
+$x=s\,x'+\lambda_{k+1}y_{k+1}$ with $s+\lambda_{k+1}=1$ lies in $K$ by convexity. Taking $K=\conv Y$
+gives $C\subseteq\conv Y$.
+
+(c) By (b), $\conv F$ is the set of convex combinations of points of $F$. In such a combination we may
+merge the terms that use the same point of $F$ (adding their coefficients) and add the missing points of
+$F$ with coefficient $0$; this gives the stated form, and conversely every point of the stated form is a
+convex combination. For $F=\{y,z\}$ with $y\ne z$ this is the segment; for $y=z$ both sides are $\{y\}$.
+
+(d) If $w_0z_0+w_1z_1<\alpha$ and $w_0z'_0+w_1z'_1<\alpha$, and $\lambda,\mu\ge0$ with $\lambda+\mu=1$,
+then $w_0(\lambda z_0+\mu z'_0)+w_1(\lambda z_1+\mu z'_1)<\lambda\alpha+\mu\alpha=\alpha$, because at least
+one of $\lambda,\mu$ is positive and the other term is at most the corresponding multiple of $\alpha$.
+\end{proof}
+
+\begin{lemma}[Convex position via hulls; \leanref{ErdosSzekeres.convexPosition_iff}{ErdosSzekeres/Basic.lean:15}]\label{fd:lem:cp-hull}\sloppy
+A finite set $S$ of points is in convex position if and only if $p\notin\conv(S\setminus\{p\})$ for
+every $p\in S$.
+\end{lemma}
+
+\begin{proof}
+In Lean this is Mathlib's \lean{convexIndependent_set_iff_notMem_convexHull_diff} applied to $S$; we give
+a direct proof from the form of Definition~\ref{fd:def:cp}.
+
+Suppose $S$ is in convex position and $p\in S$. If $p\in\conv(S\setminus\{p\})$, then the definition with
+$T=S\setminus\{p\}$ and $x=p$ gives $p\in S\setminus\{p\}$, which is absurd.
+
+Conversely, suppose $p\notin\conv(S\setminus\{p\})$ for every $p\in S$. Let $T\subseteq S$ and $x\in S$
+with $x\in\conv T$, and suppose $x\notin T$. Then $T\subseteq S\setminus\{x\}$, so
+$x\in\conv T\subseteq\conv(S\setminus\{x\})$ by Lemma~\ref{fd:lem:hull}(a), a contradiction. Hence
+$x\in T$, and $S$ is in convex position.
+\end{proof}
+
+\begin{lemma}[Monotonicity; (a) \leanref{ErdosSzekeres.ConvexPosition.mono}{ErdosSzekeres/Basic.lean:11}; (b) \leanref{ErdosSzekeres.GeneralPosition.mono}{ErdosSzekeres/Basic.lean:6}; (c) \leanref{ErdosSzekeres.HasConvexNGon.mono}{ErdosSzekeres/Basic.lean:20}; (d) \leanref{MirrorOdd.hasConvexNGon_of_le}{MIRRORETV/lean/MirrorMain.lean:2182}]\label{fd:lem:mono}\sloppy
+Let $s,t,S$ be finite sets of points and $n,n'\in\N$.
+\begin{enumerate}[label=(\alph*)]
+\item If $s$ is in convex position and $t\subseteq s$, then $t$ is in convex position.
+\item If $s$ is in general position and $t\subseteq s$, then $t$ is in general position.
+\item If $\mathrm{HasConvexNGon}\,n\,s$ and $s\subseteq t$, then $\mathrm{HasConvexNGon}\,n\,t$.
+\item If $\mathrm{HasConvexNGon}\,n\,S$ and $n'\le n$, then $\mathrm{HasConvexNGon}\,n'\,S$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) Let $p\in t$. Then $t\setminus\{p\}\subseteq s\setminus\{p\}$, so
+$\conv(t\setminus\{p\})\subseteq\conv(s\setminus\{p\})$ (Lemma~\ref{fd:lem:hull}(a)), and the latter does
+not contain $p$ by Lemma~\ref{fd:lem:cp-hull}, since $p\in s$. By Lemma~\ref{fd:lem:cp-hull} again, $t$ is
+in convex position. (Lean uses Mathlib's \lean{ConvexIndependent.mono}.)
+
+(b) Pairwise distinct $a,b,c\in t$ are pairwise distinct points of $s$, so $\{a,b,c\}$ is not collinear.
+This is the Lean proof.
+
+(c) A witness $T\subseteq s$ with $\card T=n$ in convex position satisfies $T\subseteq t$. This is the
+Lean proof.
+
+(d) Let $T\subseteq S$ with $\card T=n$ be in convex position. Since $n'\le n=\card T$, there is
+$T'\subseteq T$ with $\card{T'}=n'$; it is in convex position by (a), and $T'\subseteq S$. This is the
+Lean proof (it applies Lemma~\ref{fd:lem:ngon-basic}(b) to $T$ and then part (c) above). The same declaration, with the same name and
+proof, also appears at \dirn{SYMLEAN/mirror/ReductionThreeClasses.lean:3741}.
+\end{proof}
+
+\begin{lemma}[Sizes of convex subsets; (a) \leanref{ErdosSzekeres.HasConvexNGon.card_le}{ErdosSzekeres/Basic.lean:25}; (b) \leanref{ErdosSzekeres.ConvexPosition.hasConvexNGon}{ErdosSzekeres/Basic.lean:31}]\label{fd:lem:ngon-basic}\sloppy
+Let $s$ be a finite set of points and $n\in\N$.
+\begin{enumerate}[label=(\alph*)]
+\item If $\mathrm{HasConvexNGon}\,n\,s$, then $n\le\card s$.
+\item If $s$ is in convex position and $n\le\card s$, then $\mathrm{HasConvexNGon}\,n\,s$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) A witness $T\subseteq s$ has $n=\card T\le\card s$. (b) Choose $T\subseteq s$ with $\card T=n$; it is
+in convex position by Lemma~\ref{fd:lem:mono}(a). Both are the Lean proofs.
+\end{proof}
+
+\begin{lemma}[Forcing; (a) \leanref{ErdosSzekeres.ForcesConvexNGon.mono}{ErdosSzekeres/Basic.lean:47}; (b) \leanref{ErdosSzekeres.forcesConvexNGon_iff_exact}{ErdosSzekeres/Basic.lean:37}]\label{fd:lem:forces-basic}\sloppy
+Let $N,M,n\in\N$.
+\begin{enumerate}[label=(\alph*)]
+\item If $\mathrm{ForcesConvexNGon}\,N\,n$ and $N\le M$, then $\mathrm{ForcesConvexNGon}\,M\,n$.
+\item $\mathrm{ForcesConvexNGon}\,N\,n$ holds if and only if every finite set $S$ of points in general
+  position with $\card S=N$ satisfies $\mathrm{HasConvexNGon}\,n\,S$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) If $S$ is in general position and $M\le\card S$, then $N\le\card S$. (b) The forward direction is the
+case $\card S=N$. Conversely, let $S$ be in general position with $N\le\card S$. Choose $T\subseteq S$ with
+$\card T=N$. By Lemma~\ref{fd:lem:mono}(b) $T$ is in general position, so $\mathrm{HasConvexNGon}\,n\,T$
+by hypothesis, and $\mathrm{HasConvexNGon}\,n\,S$ by Lemma~\ref{fd:lem:mono}(c). Both are the Lean
+proofs.
+\end{proof}
+
+\begin{lemma}[At most three points; written step, the last assertion \leanref{ErdosSzekeres.convexPosition_of_card_three}{ErdosSzekeres/Basic.lean:58}]\label{fd:lem:small}\sloppy
+Sets of at most three points behave as follows.
+\begin{enumerate}[label=(\alph*)]
+\item For every finite set $S$ of points, $\mathrm{HasConvexNGon}\,0\,S$ holds.
+\item Every finite set of at most two points is in convex position.
+\item Let $a,b,c$ be pairwise distinct points. Then $\{a,b,c\}$ is in convex position if and only if
+  $\{a,b,c\}$ is not collinear. In particular, if a finite set $s$ is in general position and
+  $\card s=3$, then $s$ is in convex position.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) $T=\emptyset$ is a subset of $S$ with $0$ elements, and it is in convex position by
+Lemma~\ref{fd:lem:cp-hull} (there is nothing to check).
+
+(b) We use Lemma~\ref{fd:lem:cp-hull} and Lemma~\ref{fd:lem:hull}(a). For $\emptyset$ there is nothing to
+check; for $\{x\}$, $x\notin\conv\emptyset=\emptyset$; for $\{x,y\}$ with $x\ne y$,
+$x\notin\conv\{y\}=\{y\}$ and $y\notin\conv\{x\}=\{x\}$.
+
+(c) Since $a,b,c$ are pairwise distinct, $\{a,b,c\}\setminus\{a\}=\{b,c\}$, and similarly for $b$ and
+$c$.
+
+Suppose $\{a,b,c\}$ is not collinear. If $a\in\conv\{b,c\}$, then by Lemma~\ref{fd:lem:hull}(c)
+$a=\lambda b+(1-\lambda)c$ for some $\lambda\in[0,1]$; with $v=b-c$ we get $a=c+\lambda v$, $b=c+1\cdot v$
+and $c=c+0\cdot v$, so $\{a,b,c\}$ is collinear by Lemma~\ref{fd:lem:collinear-mem} (with $p^*=c$), a
+contradiction. The same argument with the roles of $a,b,c$ exchanged shows $b\notin\conv\{a,c\}$ and
+$c\notin\conv\{a,b\}$. By Lemma~\ref{fd:lem:cp-hull}, $\{a,b,c\}$ is in convex position.
+
+Suppose $\{a,b,c\}$ is collinear. By Lemma~\ref{fd:lem:collinear-mem} with $p^*=a$ there are $v$ and
+reals $r_b,r_c$ with $b=a+r_bv$ and $c=a+r_cv$; put $\tau(a)=0$, $\tau(b)=r_b$, $\tau(c)=r_c$, so that
+every $x\in\{a,b,c\}$ equals $a+\tau(x)v$. Since the points are pairwise distinct, the three reals
+$0,r_b,r_c$ are pairwise distinct (equal parameters would give equal points). Let $x$ be the point whose
+parameter $\tau(x)$ is the middle one of the three, and let
+$y,z$ be the other two points, with $\tau(y)<\tau(x)<\tau(z)$. With
+$\lambda=(\tau(z)-\tau(x))/(\tau(z)-\tau(y))\in(0,1)$ we have
+$\tau(x)=\lambda\tau(y)+(1-\lambda)\tau(z)$, hence $x=\lambda y+(1-\lambda)z\in\conv\{y,z\}
+=\conv(\{a,b,c\}\setminus\{x\})$, and $\{a,b,c\}$ is not in convex position by
+Lemma~\ref{fd:lem:cp-hull}.
+
+Finally, if $s$ is in general position and $\card s=3$, then $s=\{a,b,c\}$ with $a,b,c$ pairwise distinct
+and $\{a,b,c\}$ not collinear, so $s$ is in convex position. (The Lean proof of this last assertion
+derives affine independence of $a,b,c$ from non-collinearity and uses that affinely independent families
+are convex independent; we argued directly.)
+\end{proof}
+
+\begin{lemma}[Injective affine maps; (a) Mathlib \lean{AffineMap.image_convexHull}; (b$'$) \leanref{ErdosSzekeres.SymReduction.convexPosition_image_affine}{SYMLEAN/AffineReduction.lean:1263}; (c$'$) \leanref{ErdosSzekeres.SymReduction.generalPosition_image_affine}{SYMLEAN/AffineReduction.lean:1278}, \leanref{ErdosSzekeres.SymReduction.generalPosition_image_affineEquiv}{SYMLEAN/AffineReduction.lean:1290}; (d$'$) \leanref{ErdosSzekeres.SymReduction.hasConvexNGon_image_affine}{SYMLEAN/AffineReduction.lean:1298}; (e$'$) \leanref{ErdosSzekeres.SymReduction.injective_of_affine}{SYMLEAN/AffineReduction.lean:1305}; the rest written step]\label{fd:lem:affine-cp}\raggedright
+Let $g\colon\R^2\to\R^2$ be an affine map, $g(x)=Ax+v$.
+\begin{enumerate}[label=(\alph*)]
+\item For every $Y\subseteq\R^2$, $g(\conv Y)=\conv\bigl(g(Y)\bigr)$.
+\end{enumerate}
+Suppose moreover that $g$ is injective. Then $\det A\ne0$, and $g$ is a bijection of $\R^2$ whose inverse
+$y\mapsto A^{-1}(y-v)$ is affine. For every finite set $S$ of points and every $n\in\N$ (with $g(S)$ the
+image set, $\card{g(S)}=\card S$):
+\begin{enumerate}[label=(\alph*),resume]
+\item $S$ is in convex position if and only if $g(S)$ is in convex position;
+\item $S$ is in general position if and only if $g(S)$ is in general position;
+\item $\mathrm{HasConvexNGon}\,n\,S$ holds if and only if $\mathrm{HasConvexNGon}\,n\,g(S)$ holds.
+\end{enumerate}
+The forward directions of (b)--(d), and the converse of the implication ``$g$ injective $\Rightarrow$
+$\det A\ne0$'', are Lean theorems in the following forms. Here $S$ is a finite set of points, $n\in\N$,
+$f$ is an affine map of $\R^2$ in the sense of Mathlib (\lean{AffineMap}; Definition~\ref{fd:def:conv}),
+and $h\colon\R^2\to\R^2$ is a map with $h(p)=Lp+w$ for every $p\in\R^2$, where $L$ is a real $2\times2$
+matrix and $w\in\R^2$ (Lean's \lean{b}).
+\begin{enumerate}[label=(\alph*$'$),start=2]
+\item If $S$ is in convex position and $f$ is injective, then $f(S)$ is in convex position.
+\item If $\det L\ne0$ and $S$ is in general position, then $h(S)$ is in general position. If $S$ is in
+  general position and $\phi$ is an affine equivalence of $\R^2$ in the sense of Mathlib
+  (\lean{AffineEquiv}; Definition~\ref{fd:def:conv}), then $\phi(S)$ is in general position.
+\item If $\mathrm{HasConvexNGon}\,n\,S$ and $f$ is injective, then $\mathrm{HasConvexNGon}\,n\,f(S)$.
+\item If $\det L\ne0$, then $h$ is injective.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+For $x,x'\in\R^2$ and reals $\lambda,\mu$ with $\lambda+\mu=1$,
+\begin{equation*}
+  g(\lambda x+\mu x')=\lambda Ax+\mu Ax'+(\lambda+\mu)v=\lambda g(x)+\mu g(x'). \tag{$*$}
+\end{equation*}
+
+(a) By $(*)$, $g(\conv Y)$ is convex: any two of its points have the form $g(x),g(x')$ with
+$x,x'\in\conv Y$, and for
+$\lambda,\mu\ge0$ with $\lambda+\mu=1$, $\lambda g(x)+\mu g(x')=g(\lambda x+\mu x')$ with
+$\lambda x+\mu x'\in\conv Y$. It contains $g(Y)$, so $\conv(g(Y))\subseteq g(\conv Y)$ by
+Lemma~\ref{fd:lem:hull}(a). Conversely, the set $K=\{x:g(x)\in\conv(g(Y))\}$ is convex by $(*)$ and
+contains $Y$, so $\conv Y\subseteq K$, that is, $g(\conv Y)\subseteq\conv(g(Y))$. (This is the proof of
+Mathlib's \lean{AffineMap.image_convexHull}.)
+
+Now let $g$ be injective, and write $A=\begin{pmatrix}\alpha&\beta\\ \gamma&\delta\end{pmatrix}$. If
+$\det A=\alpha\delta-\beta\gamma=0$, there is $x\ne0$ with $Ax=0$: if $(\alpha,\beta)\ne(0,0)$ take
+$x=(\beta,-\alpha)$, for which $Ax=(\alpha\beta-\beta\alpha,\ \gamma\beta-\delta\alpha)=(0,0)$; if
+$\alpha=\beta=0$ take $x=(\delta,-\gamma)$ when $(\gamma,\delta)\ne(0,0)$, for which
+$Ax=(0,\gamma\delta-\delta\gamma)=(0,0)$, and any $x\ne0$ when $A=0$. Then $g(x)=v=g(0)$ with $x\ne0$,
+contradicting injectivity. So $\det A\ne0$, $A$ has the inverse
+$A^{-1}=(\det A)^{-1}\begin{pmatrix}\delta&-\beta\\ -\gamma&\alpha\end{pmatrix}$, and $g$ is bijective with
+inverse $y\mapsto A^{-1}(y-v)$, which is affine. Injectivity gives $\card{g(S)}=\card S$.
+
+(b) The points of $g(S)$ are the $g(p)$ with $p\in S$, and $g(S)\setminus\{g(p)\}=g(S\setminus\{p\})$ by
+injectivity. By (a), $\conv\bigl(g(S)\setminus\{g(p)\}\bigr)=g\bigl(\conv(S\setminus\{p\})\bigr)$, and by
+injectivity $g(p)$ belongs to this set if and only if $p\in\conv(S\setminus\{p\})$. Lemma~\ref{fd:lem:cp-hull}
+applied to $S$ and to $g(S)$ gives (b).
+
+(c) Every triple of points of $g(S)$ has the form $(g(a),g(b),g(c))$ with $a,b,c\in S$; by injectivity
+$g(a),g(b),g(c)$ are pairwise distinct if and only if $a,b,c$ are; and
+$\orient(g(a),g(b),g(c))=\det(A)\,\orient(a,b,c)$ (Lemma~\ref{fd:lem:affine-orient}) with $\det A\ne0$, so
+one orientation vanishes if and only if the other does. Lemma~\ref{fd:lem:collinear}(b) gives (c).
+
+(d) If $T\subseteq S$, $\card T=n$, is in convex position, then $g(T)\subseteq g(S)$, $\card{g(T)}=n$, and
+$g(T)$ is in convex position by (b). Conversely, let $T'\subseteq g(S)$ with $\card{T'}=n$ be in convex
+position, and let $T=\{p\in S:g(p)\in T'\}$. Since every point of $T'$ is $g(p)$ for some $p\in S$, we have
+$g(T)=T'$; hence $\card T=\card{T'}=n$ by injectivity, $T$ is in convex position by (b), and $T\subseteq S$.
+
+(b$'$)--(e$'$). By Definition~\ref{fd:def:conv}, a Mathlib affine map $f$ of $\R^2$ has the form
+$f(x)=A_fx+f(0)$, where $A_f$ is the matrix of its linear part (in Lean:
+\lean{ErdosSzekeres.SymReduction.affineMap_eq_mulVec}, \dirn{SYMLEAN/AffineReduction.lean:1284}). So
+(b$'$) and (d$'$) are the forward directions of (b) and (d) for $g=f$. (e$'$): if $h(p)=h(q)$, then
+$L(p-q)=(Lp+w)-(Lq+w)=h(p)-h(q)=0$. Write $L=\begin{pmatrix}\alpha&\beta\\ \gamma&\delta\end{pmatrix}$; the
+matrix $L^\sharp=\begin{pmatrix}\delta&-\beta\\ -\gamma&\alpha\end{pmatrix}$ satisfies
+$L^\sharp L=(\det L)\,I$ (multiply out), so $(\det L)(p-q)=L^\sharp L(p-q)=0$, and $p=q$ because
+$\det L\ne0$. (c$'$): if $\det L\ne0$, then $h$ is an affine map with linear part $L$, and it is injective
+by (e$'$), so the forward direction of (c) applies to $g=h$. A Mathlib affine equivalence $\phi$ of
+$\R^2$ is an injective affine map (Definition~\ref{fd:def:conv}), so the forward direction of (c) applies
+to $g=\phi$ as well. (The Lean proofs follow the same routes:
+\lean{SymReduction.convexPosition_image_affine} uses \lean{AffineMap.image_convexHull} and injectivity as
+in (b); \lean{SymReduction.generalPosition_image_affine} uses \lean{SymReduction.orient_affine}, that is,
+Lemma~\ref{fd:lem:affine-orient}; \lean{SymReduction.generalPosition_image_affineEquiv} derives
+$\det\ne0$ for the matrix of the linear part of $\phi$ from the invertibility of that linear part.)
+\end{proof}
+
+\begin{remark}[Special cases in the main library]\label{fd:rem:affine-cp-lean}\sloppy
+Besides the general forms (b$'$)--(e$'$), the main library proves special cases of
+Lemma~\ref{fd:lem:affine-cp} in \dirn{ErdosSzekeres/Suk/Reflection.lean}.
+\lean{ErdosSzekeres.HasConvexNGon.linearEquiv} (\dirn{ErdosSzekeres/Suk/Reflection.lean:6}) transports
+$\mathrm{HasConvexNGon}\,n\,S$ to $\mathrm{HasConvexNGon}\,n\,e(S)$ for a linear bijection $e$ of the
+plane (Mathlib \lean{LinearEquiv}): the forward direction of (d) for $g=e$. The reflection
+$\sigma(p_0,p_1)=(p_0,-p_1)$ is the linear bijection \lean{ErdosSzekeres.Suk.reflectY}
+(\dirn{ErdosSzekeres/Suk/Reflection.lean:34}); the simplification lemmas \lean{Suk.reflectY_x} and
+\lean{Suk.reflectY_y} (\dirn{ErdosSzekeres/Suk/Reflection.lean:42} and \dirn{:43}) give its two
+coordinates, and \lean{Suk.reflectY_reflectY} (\dirn{ErdosSzekeres/Suk/Reflection.lean:44}) says that
+$\sigma(\sigma(p))=p$. \lean{ErdosSzekeres.Suk.generalPosition_reflectY}
+(\dirn{ErdosSzekeres/Suk/Reflection.lean:52}) transports general position from $S$ to $\sigma(S)$ (the
+forward direction of (c) for $g=\sigma$), and \lean{ErdosSzekeres.Suk.hasConvexNGon_of_reflectY}
+(\dirn{ErdosSzekeres/Suk/Reflection.lean:64}) says that $\mathrm{HasConvexNGon}\,n\,\sigma(S)$ implies
+$\mathrm{HasConvexNGon}\,n\,S$ (the reverse direction of (d) for $g=\sigma$).
+\end{remark}
+
+\begin{lemma}[Carath\'eodory's theorem in the plane; written step]\label{fd:lem:caratheodory}
+Let $Y\subseteq\R^2$ and $x\in\conv Y$. Then there is a finite, affinely independent set $Y'\subseteq Y$
+with $\card{Y'}\le3$ and $x\in\conv Y'$.
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{fd:lem:hull}(b), $x$ is a convex combination of finitely many points of $Y$; if $T_0$ is the
+finite set of these points, then $x\in\conv T_0$ by Lemma~\ref{fd:lem:hull}(c). Among all finite sets
+$T\subseteq Y$ with $x\in\conv T$ choose one, $T=\{y_1,\dots,y_k\}$ with distinct $y_i$, of least
+cardinality $k$. Then $k\ge1$ because $\conv\emptyset=\emptyset$. By Lemma~\ref{fd:lem:hull}(c),
+$x=\sum_i\lambda_iy_i$ with $\lambda_i\ge0$ and $\sum_i\lambda_i=1$. Every $\lambda_j$ is positive: if
+$k=1$ then $\lambda_1=1$, and if $k\ge2$ and $\lambda_j=0$, then $x$ is a convex combination of the points
+of $T\setminus\{y_j\}$, so $x\in\conv(T\setminus\{y_j\})$, contradicting minimality.
+
+$T$ is affinely independent. Otherwise there are reals $\mu_1,\dots,\mu_k$, not all zero, with
+$\sum_i\mu_i=0$ and $\sum_i\mu_iy_i=0$. Some $\mu_i$ is positive (they sum to $0$ and are not all zero).
+Let $t=\min\{\lambda_i/\mu_i:\mu_i>0\}>0$, attained at $i=j$, and put $\lambda'_i=\lambda_i-t\mu_i$. Then
+$\lambda'_i\ge0$ for all $i$ (if $\mu_i\le0$ then $\lambda'_i\ge\lambda_i$; if $\mu_i>0$ then
+$t\le\lambda_i/\mu_i$), $\lambda'_j=0$, $\sum_i\lambda'_i=1-t\cdot0=1$ and
+$\sum_i\lambda'_iy_i=x-t\cdot0=x$. So $x$ is a convex combination of the points of $T\setminus\{y_j\}$,
+contradicting minimality again (note $k\ge2$ here, since $\sum\lambda'_i=1$ forces some
+$\lambda'_i\ne0$, $i\ne j$).
+
+Finally $k\le3$: if $k\ge4$, the $k-1\ge3$ vectors $y_2-y_1,\dots,y_k-y_1$ in the two-dimensional space
+$\R^2$ are linearly dependent, $\sum_{i\ge2}\nu_i(y_i-y_1)=0$ with $\nu\ne0$; then $\mu_1=-\sum_{i\ge2}\nu_i$
+and $\mu_i=\nu_i$ ($i\ge2$) satisfy $\sum_i\mu_i=0$ and $\sum_i\mu_iy_i=\sum_{i\ge2}\nu_i(y_i-y_1)=0$, with
+$\mu\ne0$, contradicting affine independence. Take $Y'=T$.
+
+The Lean code uses Mathlib's version of this theorem (module \lean{Mathlib.Analysis.Convex.Caratheodory},
+with \lean{Caratheodory.minCardFinsetOfMemConvexHull}), whose proof is the same minimal-cardinality
+argument; the bound $\card{Y'}\le3$ is derived in Lean from affine independence as
+$\card{Y'}\le\dim+1=3$.
+\end{proof}
+
+\begin{lemma}[Four-point criteria; (a) \leanref{ErdosSzekeres.Suk.convexPosition_of_subsets_card_le_four}{ErdosSzekeres/Suk/FourPoint.lean:10}; (b) \leanref{ErdosSzekeres.Suk.convexPosition_of_four_subsets}{ErdosSzekeres/Suk/FourPoint.lean:40}]\label{fd:lem:four-subsets}\raggedright
+Let $s$ be a finite set of points.
+\begin{enumerate}[label=(\alph*)]
+\item If every $t\subseteq s$ with $\card t\le4$ is in convex position, then $s$ is in convex position.
+\item If $4\le\card s$ and every $t\subseteq s$ with $\card t=4$ is in convex position, then $s$ is in
+  convex position.
+\end{enumerate}
+No general-position assumption is made.
+\end{lemma}
+
+\begin{proof}
+We follow the Lean proofs. (a) By Lemma~\ref{fd:lem:cp-hull} we must show $p\notin\conv(s\setminus\{p\})$
+for every $p\in s$. Suppose $p\in\conv(s\setminus\{p\})$. By Lemma~\ref{fd:lem:caratheodory} there is a
+finite $Y'\subseteq s\setminus\{p\}$ with $\card{Y'}\le3$ and $p\in\conv Y'$. Let $u=Y'\cup\{p\}\subseteq s$.
+Since $p\notin Y'$, $\card u=\card{Y'}+1\le4$ and $u\setminus\{p\}=Y'$. By hypothesis $u$ is in convex
+position, so $p\notin\conv(u\setminus\{p\})=\conv Y'$ by Lemma~\ref{fd:lem:cp-hull}, a contradiction.
+
+(b) Let $t\subseteq s$ with $\card t\le4$. Since $\card s\ge4$, we can add $4-\card t$ points of
+$s\setminus t$ to $t$ (there are $\card s-\card t\ge4-\card t$ of them) and obtain $u$ with
+$t\subseteq u\subseteq s$ and $\card u=4$. By hypothesis $u$ is in convex position, hence so is $t$
+(Lemma~\ref{fd:lem:mono}(a)). Now (a) applies.
+\end{proof}
+
+\begin{lemma}[Half-planes of the orientation; (a) \leanref{ErdosSzekeres.Suk.orient_affine_combination}{ErdosSzekeres/Suk/SupportingLines.lean:6}; (b) \leanref{ErdosSzekeres.Suk.convex_orient_positive}{ErdosSzekeres/Suk/SupportingLines.lean:11}; (c) \leanref{ErdosSzekeres.Suk.convex_orient_nonnegative}{ErdosSzekeres/Suk/SupportingLines.lean:21}]\label{fd:lem:halfplane}\raggedright
+The orientation is affine in its third argument, and its half-planes are convex.
+\begin{enumerate}[label=(\alph*)]
+\item For $p,q,a,b\in\R^2$ and $u,v\in\R$ with $u+v=1$:
+  $\orient(p,q,u\,a+v\,b)=u\,\orient(p,q,a)+v\,\orient(p,q,b)$.
+\item For $p,q\in\R^2$ the set $\{r\in\R^2:0<\orient(p,q,r)\}$ is convex.
+\item For $p,q\in\R^2$ the set $\{r\in\R^2:0\le\orient(p,q,r)\}$ is convex.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) $\orient(p,q,r)=(q_0-p_0)(r_1-p_1)-(q_1-p_1)(r_0-p_0)$ is a linear function of $r-p$. For
+$r=ua+vb$ with $u+v=1$ we have $r-p=u(a-p)+v(b-p)$, and the claim follows. (Lean closes the same
+polynomial identity with the certificate $(p_1q_0-p_0q_1)(u+v-1)$.)
+
+(b) Let $\orient(p,q,a)>0$, $\orient(p,q,b)>0$ and $u,v\ge0$ with $u+v=1$. By (a) the value at $ua+vb$ is
+$u\,\orient(p,q,a)+v\,\orient(p,q,b)$. If $u=0$ then $v=1$ and this is $\orient(p,q,b)>0$; otherwise
+$u>0$, the first term is positive and the second is nonnegative.
+
+(c) By (a) the value at $ua+vb$ is a sum of two nonnegative terms.
+\end{proof}
+
+\begin{lemma}[Strict supporting lines; \leanref{ErdosSzekeres.Suk.convexPosition_of_strict_supports}{ErdosSzekeres/Suk/SupportingLines.lean:28}]\label{fd:lem:strict-supports}\sloppy
+Let $s$ be a finite set of points such that for every $p\in s$ there is $q\in\R^2$ with
+$0<\orient(p,q,r)$ for every $r\in s$ with $r\ne p$. Then $s$ is in convex position.
+\end{lemma}
+
+\begin{proof}
+We follow the Lean proof. Let $p\in s$ and choose $q$ as in the hypothesis. The set
+$H=\{r:0<\orient(p,q,r)\}$ is convex (Lemma~\ref{fd:lem:halfplane}(b)) and contains $s\setminus\{p\}$, so
+$\conv(s\setminus\{p\})\subseteq H$ by Lemma~\ref{fd:lem:hull}(a). But $\orient(p,q,p)=0$
+(Lemma~\ref{fd:lem:orient}(e)), so $p\notin H$ and hence $p\notin\conv(s\setminus\{p\})$. By
+Lemma~\ref{fd:lem:cp-hull}, $s$ is in convex position.
+\end{proof}
+
+\begin{lemma}[A support identity; \leanref{ErdosSzekeres.Suk.orient_support_sum}{ErdosSzekeres/Suk/SupportingLines.lean:40}]\label{fd:lem:support-sum}\sloppy
+For all $a,p,b,r\in\R^2$: $\orient(p,\,p+b-a,\,r)=\orient(a,p,r)+\orient(p,b,r)$.
+\end{lemma}
+
+\begin{proof}
+For $w\in\R^2$, $\orient(p,p+w,r)=\det(w\mid r-p)$ is linear in $w$. With $w=b-a=(p-a)+(b-p)$ we get
+$\orient(p,p+b-a,r)=\det(p-a\mid r-p)+\det(b-p\mid r-p)$. The second term is $\orient(p,b,r)$. For the
+first, $\orient(a,p,r)=\det(p-a\mid r-a)=\det(p-a\mid (r-p)+(p-a))=\det(p-a\mid r-p)$, since a determinant
+with two equal columns vanishes. (The Lean proof expands both sides.)
+\end{proof}
+
+\begin{lemma}[Four counterclockwise points; \leanref{ErdosSzekeres.Suk.convexPosition_four_of_positive}{ErdosSzekeres/Suk/SupportingLines.lean:47}]\label{fd:lem:four-positive}\sloppy
+Let $a,b,c,d\in\R^2$ with
+\[
+  0<\orient(a,b,c),\qquad 0<\orient(a,b,d),\qquad 0<\orient(a,c,d),\qquad 0<\orient(b,c,d).
+\]
+Then the finite set $\{a,b,c,d\}$ is in convex position.
+\end{lemma}
+
+\begin{proof}
+We follow the Lean proof, which exhibits a strict supporting line at each of the four points and applies
+Lemma~\ref{fd:lem:strict-supports}. (The hypotheses imply, by Lemma~\ref{fd:lem:orient}(e), that the four
+points are pairwise distinct, but the argument does not need this.) Write $o_{abc}=\orient(a,b,c)$,
+$o_{abd}=\orient(a,b,d)$, $o_{acd}=\orient(a,c,d)$ and $o_{bcd}=\orient(b,c,d)$, all positive. By
+Lemma~\ref{fd:lem:orient}(b) every cyclic rotation of the arguments leaves $\orient$ unchanged, and by
+Lemma~\ref{fd:lem:orient}(e) $\orient$ vanishes when two arguments are equal. For $p\in\{a,b,c,d\}$ and
+$r\in\{a,b,c,d\}$ with $r\ne p$, the point $r$ is one of the three letters other than $p$ (as a point, $r$
+differs from $p$), so it suffices to check the three letters other than $p$. Each line below applies
+Lemma~\ref{fd:lem:support-sum}.
+\begin{itemize}
+\item $p=a$, $q=a+b-d$: $\orient(a,q,r)=\orient(d,a,r)+\orient(a,b,r)$. For $r=b$:
+  $\orient(d,a,b)+0=o_{abd}$. For $r=c$: $\orient(d,a,c)+o_{abc}=o_{acd}+o_{abc}$. For $r=d$:
+  $0+o_{abd}$.
+\item $p=b$, $q=b+c-a$: $\orient(b,q,r)=\orient(a,b,r)+\orient(b,c,r)$. For $r=a$:
+  $0+\orient(b,c,a)=o_{abc}$. For $r=c$: $o_{abc}+0$. For $r=d$: $o_{abd}+o_{bcd}$.
+\item $p=c$, $q=c+d-b$: $\orient(c,q,r)=\orient(b,c,r)+\orient(c,d,r)$. For $r=a$:
+  $\orient(b,c,a)+\orient(c,d,a)=o_{abc}+o_{acd}$. For $r=b$: $0+\orient(c,d,b)=o_{bcd}$. For $r=d$:
+  $o_{bcd}+0$.
+\item $p=d$, $q=d+a-c$: $\orient(d,q,r)=\orient(c,d,r)+\orient(d,a,r)$. For $r=a$:
+  $\orient(c,d,a)+0=o_{acd}$. For $r=b$: $\orient(c,d,b)+\orient(d,a,b)=o_{bcd}+o_{abd}$. For $r=c$:
+  $0+\orient(d,a,c)=o_{acd}$.
+\end{itemize}
+All twelve values are positive, so each of $a,b,c,d$ has a strict supporting line, and
+Lemma~\ref{fd:lem:strict-supports} shows that $\{a,b,c,d\}$ is in convex position.
+\end{proof}
+
+\begin{lemma}[Positive triples; \leanref{ErdosSzekeres.Suk.convexPosition_of_positive_triples}{ErdosSzekeres/Suk/OrientationClique.lean:9}]\label{fd:lem:pos-triples}\sloppy
+Let $\iota$ be a type with a linear order $<$, let $p\colon\iota\to\R^2$ be injective, and let $s$ be a
+finite subset of $\iota$ with $4\le\card s$. Suppose that $0<\orient(p(i),p(j),p(k))$ for all
+$i,j,k\in s$ with $i<j$ and $j<k$. Then the finite set $p(s)=\{p(i):i\in s\}$ is in convex position.
+\end{lemma}
+
+\begin{proof}
+We follow the Lean proof. Since $p$ is injective, $\card{p(s)}=\card s\ge4$, so by
+Lemma~\ref{fd:lem:four-subsets}(b) it suffices to show that every $t\subseteq p(s)$ with $\card t=4$ is in
+convex position. Let $u=\{i\in s:p(i)\in t\}$. Since $t\subseteq p(s)$, $p(u)=t$, and $\card u=\card t=4$ by
+injectivity. List the elements of the finite subset $u$ of the linearly ordered set $\iota$ in increasing
+order, $e_0<e_1<e_2<e_3$. Then $t=\{p(e_0),p(e_1),p(e_2),p(e_3)\}$, and the hypothesis applied to the
+increasing triples $(e_0,e_1,e_2)$, $(e_0,e_1,e_3)$, $(e_0,e_2,e_3)$ and $(e_1,e_2,e_3)$ of elements of
+$s$ gives exactly the four hypotheses of Lemma~\ref{fd:lem:four-positive} for
+$(a,b,c,d)=(p(e_0),p(e_1),p(e_2),p(e_3))$. Hence $t$ is in convex position.
+\end{proof}
+
+\begin{remark}\label{fd:rem:pos-triples}
+(i) Only $s$ is assumed finite; $\iota$ may be infinite, and injectivity is assumed for $p$ on all of
+$\iota$. (ii) The Lean proof discharges the order facts $0<1<2<3$ in $\mathrm{Fin}\,4$ and the equality
+of the set of all elements of $\mathrm{Fin}\,4$ with $\{0,1,2,3\}$ by \texttt{decide}, which the kernel
+evaluates without any additional axiom. These are side facts inside the proof of a statement that is not
+itself a finite computation, and the written proof above needs no machine computation; so the statement
+is not computer-assisted in the sense of the rigor labels. (iii) The
+hypothesis $4\le\card s$ is needed by the Lean proof (through Lemma~\ref{fd:lem:four-subsets}(b)). As a
+variant, not part of the Lean statement: the conclusion also holds when $\card s\le3$, by
+Lemma~\ref{fd:lem:small}(b) when $\card{p(s)}\le2$, and when $\card s=3$ because the three points then
+have nonzero orientation, hence are pairwise distinct and not collinear
+(Lemmas~\ref{fd:lem:orient}(e) and~\ref{fd:lem:collinear}(a)), so Lemma~\ref{fd:lem:small}(c) applies.
+\end{remark}
+
+\begin{lemma}[Negative triples; \leanref{ErdosSzekeres.Suk.convexPosition_of_negative_triples}{ErdosSzekeres/Suk/OrientationClique.lean:33}]\label{fd:lem:neg-triples}\sloppy
+Let $\iota$ be a type with a linear order $<$, let $p\colon\iota\to\R^2$ be injective, and let $s$ be a
+finite subset of $\iota$ with $4\le\card s$. Suppose that $\orient(p(i),p(j),p(k))<0$ for all
+$i,j,k\in s$ with $i<j$ and $j<k$. Then $p(s)$ is in convex position.
+\end{lemma}
+
+\begin{proof}
+We follow the Lean proof, which applies Lemma~\ref{fd:lem:pos-triples} to the reversed order. Let
+$i\prec j$ mean $j<i$; this is a linear order on $\iota$. If $i,j,k\in s$ with $i\prec j\prec k$, then
+$k<j<i$, so $\orient(p(k),p(j),p(i))<0$ by hypothesis, and by Lemma~\ref{fd:lem:orient}(d) (the
+transposition of the first and third arguments has sign $-1$)
+$\orient(p(i),p(j),p(k))=-\orient(p(k),p(j),p(i))>0$. Lemma~\ref{fd:lem:pos-triples} for $(\iota,\prec)$
+gives the claim.
+\end{proof}
+
+\begin{lemma}[Positive cycles; \leanref{ErdosSzekeres.hasConvexNGon_of_positive_cycle}{ErdosSzekeres/ConvexCycleCuts.lean:11}]\label{fd:lem:pos-cycle}\sloppy
+Let $N,k\in\N$ with $4\le k$. Let $p\colon\mathrm{Fin}\,N\to\R^2$ be injective, let
+$e\colon\mathrm{Fin}\,k\to\mathrm{Fin}\,N$ be an embedding (an injective map; Lean type
+\texttt{Fin k}~$\hookrightarrow$~\texttt{Fin N}), and let $P$ be a finite set of points with $p(e(i))\in P$
+for every $i\in\mathrm{Fin}\,k$. Suppose that
+\[
+  0<\orient\bigl(p(e(i)),\,p(e(j)),\,p(e(l))\bigr)\qquad\text{for all } i,j,l\in\mathrm{Fin}\,k
+  \text{ with } i<j \text{ and } j<l .
+\]
+Then $\mathrm{HasConvexNGon}\,k\,P$.
+\end{lemma}
+
+\begin{proof}
+We follow the Lean proof. The map $q=p\circ e\colon\mathrm{Fin}\,k\to\R^2$ is injective, as a composition of
+injective maps. Let $T=q(\mathrm{Fin}\,k)=\{q(0),\dots,q(k-1)\}$. Then $T\subseteq P$ by hypothesis and
+$\card T=k$ by injectivity. Lemma~\ref{fd:lem:pos-triples}, applied to $\iota=\mathrm{Fin}\,k$ with its
+natural order, the injective map $q$ and $s=\mathrm{Fin}\,k$ (so $\card s=k\ge4$), shows that $T=q(s)$ is
+in convex position; its hypothesis is exactly the assumed positivity. So $T$ witnesses
+$\mathrm{HasConvexNGon}\,k\,P$.
+\end{proof}
+
+\begin{remark}\label{fd:rem:pos-cycle}\sloppy
+The hypothesis concerns all increasing triples of the ordering $e$, not only consecutive ones. The name
+refers to the clause family \lean{ConvexCycleCut} (\dirn{ErdosSzekeres/ConvexCycleCuts.lean:8}), which is
+used as cuts in the SMT coordinate-repair searches described in \dirn{docs/SAT.md:168}--\dirn{233}:
+\lean{convexCycleCut_of_avoids}
+(\dirn{ErdosSzekeres/ConvexCycleCuts.lean:31}) is the
+contrapositive of Lemma~\ref{fd:lem:pos-cycle}: under the same hypotheses on $k$, $p$, $e$ and $P$
+(without the positivity hypothesis), if $P$ is $k$-free then some $i<j<l$ in $\mathrm{Fin}\,k$ has
+$\orient(p(e(i)),p(e(j)),p(e(l)))\le0$.
+\end{remark}
+
+\begin{lemma}[Separation of a point from a finite set; written step]\label{fd:lem:separation}
+Let $F\subseteq\R^2$ be finite and $x\in\R^2$. Then $x\notin\conv F$ if and only if there is a linear
+functional $\ell\colon\R^2\to\R$ (that is, $\ell(z)=w_0z_0+w_1z_1$ for some $w\in\R^2$) with
+$\ell(x)>\ell(y)$ for every $y\in F$.
+\end{lemma}
+
+\begin{proof}
+Write $\langle w,z\rangle=w_0z_0+w_1z_1$ and $\lVert z\rVert^2=\langle z,z\rangle$ (the Euclidean norm,
+written out).
+
+($\Leftarrow$, elementary.) Let $\ell(z)=\langle w,z\rangle$ satisfy $\ell(x)>\ell(y)$ for all $y\in F$.
+The set $H=\{z:\ell(z)<\ell(x)\}$ is convex by Lemma~\ref{fd:lem:hull}(d) and contains $F$, so
+$\conv F\subseteq H$ by Lemma~\ref{fd:lem:hull}(a); since $x\notin H$, $x\notin\conv F$. (If $F=\emptyset$
+this is also clear from $\conv\emptyset=\emptyset$.)
+
+($\Rightarrow$.) Suppose $x\notin\conv F$. If $F=\emptyset$, the functional $\ell=0$ satisfies the
+condition vacuously. Otherwise write $F=\{y_1,\dots,y_m\}$ with $m\ge1$ distinct points and let
+$\Delta=\{\lambda\in\R^m:\lambda_i\ge0,\ \sum_i\lambda_i=1\}$. The set $\Delta$ is closed and bounded, hence
+compact by the Heine--Borel theorem (a closed and bounded subset of $\R^m$ is compact; W.~Rudin,
+\emph{Principles of Mathematical Analysis}, 3rd ed., Theorem~2.41), and the function
+$h(\lambda)=\lVert x-\sum_i\lambda_iy_i\rVert^2$ is a polynomial in $\lambda$, hence continuous; so $h$
+attains its minimum on the nonempty compact set $\Delta$ at some $\lambda^*$ (a continuous real function on
+a nonempty compact metric space attains its minimum; Rudin, op.\ cit., Theorem~4.16). Put
+$q=\sum_i\lambda^*_iy_i$. By Lemma~\ref{fd:lem:hull}(c), $\conv F=\{\sum_i\lambda_iy_i:\lambda\in\Delta\}$,
+so $q\in\conv F$ and
+\begin{equation*}
+  \lVert x-q\rVert^2\le\lVert x-z\rVert^2\qquad\text{for every }z\in\conv F. \tag{$**$}
+\end{equation*}
+Since $x\notin\conv F$, $x\ne q$; put $w=x-q\ne0$ and $\ell(z)=\langle w,z\rangle$. Let $y\in F$ and
+$0<t\le1$. The point $z_t=(1-t)q+ty$ lies in $\conv F$ (convexity, Lemma~\ref{fd:lem:hull}(a)), and
+$x-z_t=w-t(y-q)$, so by $(**)$
+\[
+  \lVert w\rVert^2\le\lVert w-t(y-q)\rVert^2=\lVert w\rVert^2-2t\langle w,y-q\rangle+t^2\lVert y-q\rVert^2 .
+\]
+Hence $2\langle w,y-q\rangle\le t\lVert y-q\rVert^2$ for every $t\in(0,1]$, and letting $t\to0$ gives
+$\langle w,y-q\rangle\le0$, that is, $\ell(y)\le\ell(q)$. Finally
+$\ell(x)-\ell(q)=\langle w,x-q\rangle=\lVert w\rVert^2>0$, so $\ell(y)\le\ell(q)<\ell(x)$.
+\end{proof}
+
+\paragraph{Coverage.}
+{\raggedright
+\begin{itemize}
+\item \emph{Covered definitions, with the label of the statement.} \lean{ErdosSzekeres.Point}
+  (\ref{fd:def:point}), \lean{ErdosSzekeres.orient} (\ref{fd:def:orient}),
+  \lean{ErdosSzekeres.GeneralPosition} (\ref{fd:def:gp}), \lean{ErdosSzekeres.ConvexPosition}
+  (\ref{fd:def:cp}), \lean{ErdosSzekeres.HasConvexNGon} (\ref{fd:def:ngon}),
+  \lean{ErdosSzekeres.ForcesConvexNGon} (\ref{fd:def:forces}), the three copies of \lean{Invariant}
+  (\ref{fd:def:inv}) and the three cited copies of \lean{rotAbout} (\ref{fd:def:rot}), together with the
+  Mathlib notions \lean{Convex}, \lean{convexHull}, \lean{AffineIndependent}, \lean{AffineMap},
+  \lean{AffineEquiv} (\ref{fd:def:conv}), \lean{Collinear} (\ref{fd:def:gp}) and \lean{ConvexIndependent}
+  (\ref{fd:def:cp}).
+\item \emph{Covered facts, with the label of the statement.} \lean{orient_swap}, \lean{orient_cycle},
+  \lean{orient_translate} (\ref{fd:lem:orient}); \lean{SymReduction.orient_affine} and, for part (i),
+  \lean{OrbitConsistency.orient_rotAbout_inv} (\ref{fd:lem:affine-orient});
+  \lean{orient_eq_zero_iff_collinear}, \lean{generalPosition_iff_orient_ne_zero} (\ref{fd:lem:collinear});
+  \lean{convexPosition_iff} (\ref{fd:lem:cp-hull}); \lean{ConvexPosition.mono}, \lean{GeneralPosition.mono},
+  \lean{HasConvexNGon.mono}, \lean{MirrorOdd.hasConvexNGon_of_le} (\ref{fd:lem:mono});
+  \lean{HasConvexNGon.card_le}, \lean{ConvexPosition.hasConvexNGon} (\ref{fd:lem:ngon-basic});
+  \lean{ForcesConvexNGon.mono}, \lean{forcesConvexNGon_iff_exact} (\ref{fd:lem:forces-basic});
+  \lean{convexPosition_of_card_three} (\ref{fd:lem:small}); \lean{SymReduction.convexPosition_image_affine},
+  \lean{SymReduction.generalPosition_image_affine}, \lean{SymReduction.generalPosition_image_affineEquiv},
+  \lean{SymReduction.hasConvexNGon_image_affine}, \lean{SymReduction.injective_of_affine}
+  (\ref{fd:lem:affine-cp}, parts (b$'$)--(e$'$)); \lean{Suk.convexPosition_of_subsets_card_le_four},
+  \lean{Suk.convexPosition_of_four_subsets} (\ref{fd:lem:four-subsets}); \lean{Suk.orient_affine_combination},
+  \lean{Suk.convex_orient_positive}, \lean{Suk.convex_orient_nonnegative} (\ref{fd:lem:halfplane});
+  \lean{Suk.convexPosition_of_strict_supports} (\ref{fd:lem:strict-supports}); \lean{Suk.orient_support_sum}
+  (\ref{fd:lem:support-sum}); \lean{Suk.convexPosition_four_of_positive} (\ref{fd:lem:four-positive});
+  \lean{Suk.convexPosition_of_positive_triples} (\ref{fd:lem:pos-triples});
+  \lean{Suk.convexPosition_of_negative_triples} (\ref{fd:lem:neg-triples});
+  \lean{hasConvexNGon_of_positive_cycle} (\ref{fd:lem:pos-cycle}); \lean{LayerLemma.iterate_mem}
+  (\ref{fd:lem:inv-image}); \lean{LayerLemma.rotAbout_eq_crot}, \lean{LayerLemma.rotAff},
+  \lean{LayerLemma.rotAbout_iterate}, \lean{LayerLemma.rotAbout_injective} (\ref{fd:lem:rot}).
+\item \emph{Written steps.} The following statements and parts carry no Lean tag in this section, and
+  their proofs above are written steps. We found no declaration in the files of the table of sources that
+  states one of them in the form given here. Several of them have Lean counterparts in another form,
+  special cases or variants, in the project or in Mathlib; we name some of these, here or in the remark
+  indicated, but the research records contain many further copies and variants of such elementary facts,
+  and we do not list them all. Naming a counterpart does not make a written step Lean-checked in the sense
+  of the rigor labels; we give axioms evidence for such a counterpart only where we say so. The written
+  steps are:
+  \begin{itemize}
+  \item \ref{fd:lem:orient}(d) for a general commutative ring (its real case is
+    \lean{OrbitConsistency.orient3_perm}, Remark~\ref{fd:rem:orient-lean}) and (e);
+  \item part (ii) of \ref{fd:lem:affine-orient} (its case $o=0$, $\varphi=0$ is \lean{Suk.orient_reflectY},
+    Remark~\ref{fd:rem:affine-orient-lean}; with the line given by a unit direction vector instead of the
+    angle $\varphi$, (ii) is stated in the research file \dirn{H2/D3Encoding/Geometry.lean} as
+    \lean{D3.orient_reflC} (\dirn{:87}));
+  \item \ref{fd:lem:collinear-mem} (Mathlib's \lean{collinear_iff_of_mem}) and \ref{fd:lem:hull};
+  \item \ref{fd:lem:inv-image}(a),(b) (the argument of (a) is a step of the proof of
+    \lean{LayerLemma.map_mem_hullVerts});
+  \item in \ref{fd:lem:rot}, the matrix form of Definition~\ref{fd:def:rot} and the identity
+    $\rho_\theta(c)=c$ in (b) (the latter a step of the proof of \lean{LayerLemma.invariant_erase_centre}),
+    the composition law and $\rho_0=\mathrm{id}$ in (c), the bijectivity and the inverse in (d), and (e),
+    (f) (the identity $\rho_\theta(c)=c$ and the identity of (e) are stated, for the copy of
+    \lean{rotAbout} in the review file \dirn{SYMLEAN/review/ReviewSanity.lean}, as
+    \lean{SymReduction.Review.rotAbout_center} (\dirn{:1086}) and \lean{SymReduction.Review.orient_rotAbout}
+    (\dirn{:1091}, which writes $(p_0-c_0)^2+(p_1-c_1)^2$ as \texttt{eDist2 p c}); we do not cite them as
+    Lean-checked, because none of the theorems whose axioms the saved output
+    \dirn{SYMLEAN/logs/ReviewSanity.out} of that file prints uses them);
+  \item \ref{fd:lem:small}(a)--(c) apart from its last assertion;
+  \item in \ref{fd:lem:affine-cp}, part (a) (Mathlib's \lean{AffineMap.image_convexHull}), the implication
+    ``injective $\Rightarrow$ $\det A\ne0$'' with the inverse, and the reverse directions of (b)--(d) (for
+    the reflection $(p_0,p_1)\mapsto(p_0,-p_1)$, the reverse direction of (d) is
+    \lean{Suk.hasConvexNGon_of_reflectY}; Remark~\ref{fd:rem:affine-cp-lean} also names the
+    forward-direction special cases \lean{HasConvexNGon.linearEquiv} and \lean{Suk.generalPosition_reflectY});
+  \item \ref{fd:lem:caratheodory} (Mathlib's Carath\'eodory module);
+  \item \ref{fd:lem:separation} (a variant of its easy direction is the main-library theorem
+    \lean{Omission.BoundaryGeometry.exposed_not_in_hull},
+    \dirn{ErdosSzekeres/Omission/BoundaryGeometry.lean:30}: if $S$ is a set of points, $p$ a point and
+    $A,B,C$ reals with $Ap_0+Bp_1+C=0$ and $Aq_0+Bq_1+C>0$ for every $q\in S\setminus\{p\}$, then
+    $p\notin\conv(S\setminus\{p\})$).
+  \end{itemize}
+\item \emph{Other declarations named.} Other declarations of the project that are named in statements,
+  remarks, proofs or this paragraph as Lean counterparts, as definitions and lemmas that these rely on, or
+  as the location of a proof step: \lean{OrbitConsistency.orient3_perm} and \lean{OrbitConsistency.orient3},
+  \lean{Suk.orient_reflectY}, \lean{HasConvexNGon.linearEquiv}, \lean{Suk.reflectY}, \lean{Suk.reflectY_x},
+  \lean{Suk.reflectY_y}, \lean{Suk.reflectY_reflectY}, \lean{Suk.generalPosition_reflectY},
+  \lean{Suk.hasConvexNGon_of_reflectY}, \lean{ConvexCycleCut}, \lean{convexCycleCut_of_avoids},
+  \lean{SymReduction.affineMap_eq_mulVec}, \lean{LayerLemma.map_mem_hullVerts},
+  \lean{LayerLemma.invariant_erase_centre}, \lean{D3.orient_reflC}, \lean{SymReduction.Review.rotAbout_center},
+  \lean{SymReduction.Review.orient_rotAbout} and \lean{Omission.BoundaryGeometry.exposed_not_in_hull}.
+\item \emph{Deliberately not covered.} Of the declarations of the main-library files in the table of
+  sources, all others are listed here: in \dirn{ErdosSzekeres/Definitions.lean}, the bound function
+  \lean{conjecturedBound} ($n\mapsto2^{\max(n-2,0)}+1$) and the open conjectures
+  \lean{ErdosSzekeresConjecture} and \lean{HeptagonConjecture} (propositions that are defined but not
+  asserted), none of which is used by the facts of this section; in \dirn{ErdosSzekeres/Orientation.lean}
+  and \dirn{ErdosSzekeres/OrientationGeometry.lean}, \lean{rationalToReal}, \lean{orient_rationalToReal},
+  \lean{orient_rationalToReal_ne_zero}, \lean{RationalGeneralPosition} and
+  \lean{generalPosition_of_rational} (transfer of exact rational certificates to real points, outside the
+  foundations list), and the private helper \lean{exists_smul_of_det_zero} (absorbed into the proof of
+  Lemma~\ref{fd:lem:collinear}); in \dirn{ErdosSzekeres/Basic.lean},
+  \lean{convexIndependent_of_affineIndependent} (a bridge to Mathlib's affine independence, used in the
+  main library only for \lean{convexPosition_of_card_three}, which we prove directly) and
+  \lean{forces_triangle}, \lean{conjecture_case_three}, \lean{conjecture_implies_seven},
+  \lean{counterexample_refutes_conjecture} (small corollaries about the conjecture, not used by the facts
+  of this section; \lean{forces_triangle} is named above only in the axioms evidence); and in
+  \dirn{ErdosSzekeres/Suk/OrientationClique.lean}, \lean{convexPosition_insert_of_positive_triples} and
+  \lean{convexPosition_insert_of_negative_triples} (outside the foundations list). Of the research files
+  in the table, only the declarations named in the statements, remarks or proofs of this section belong to
+  its scope; the theorems named in the axioms-evidence paragraph only as evidence, and the other
+  declarations of these files, are treated in other sections or lie outside Stage~1. In particular,
+  \lean{toC}, \lean{ofC}, \lean{crot} and their lemmas in \dirn{LAYERLEAN/LayerLemma.lean} and its copies
+  are implementation devices for complex coordinates, replaced here by the direct complex form in
+  Lemma~\ref{fd:lem:rot}(a).
+\end{itemize}
+\par}

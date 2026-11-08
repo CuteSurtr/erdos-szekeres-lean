@@ -1,0 +1,1014 @@
+\section{Phase patterns and angular rules}\label{pc:sec}
+\begingroup\sloppy
+
+Fix a centre $c\in\R^2$ and three directions $\alpha<\beta<\delta<\alpha+2\pi$, read counterclockwise around
+$c$. Together with the three antipodal directions $\alpha+\pi$, $\beta+\pi$, $\delta+\pi$ they give six points on
+the circle of directions, distinct unless one of the gaps $\beta-\alpha$, $\delta-\beta$, $\alpha+2\pi-\delta$
+equals $\pi$, in which case a direction and an antipode coincide (Remark~\ref{pc:rem:reading}). This section gives
+written proofs of the Lean-checked results that classify the cyclic pattern of these points, expressed by the arc
+predicates of Definition~\ref{pc:def:arc} (which are defined in every case), and connect it with the sign of
+$\orient$ for three points in polar form about $c$.
+\begin{itemize}
+\item The pattern alternates (every open arc between consecutive directions contains an antipode; pattern
+  $PAPAPA$) if and only if all three gaps are smaller than $\pi$ (Theorem~\ref{pc:thm:alternating}).
+\item A run $PPP$ with middle point $\beta$ (no antipode in the arcs $(\alpha,\beta)$ and $(\beta,\delta)$) is
+  equivalent to $\delta-\alpha<\pi$, provided $\alpha+2\pi-\delta\neq\pi$ (Theorem~\ref{pc:thm:runB}).
+\item If no gap equals $\pi$, the pattern alternates or has a run, and alternation excludes every run
+  (Theorem~\ref{pc:thm:trichotomy}).
+\item Rule~A: an alternating triple at positive radii turns counterclockwise (Theorem~\ref{pc:thm:rule-alt}).
+  Rule~B: a triple with a run turns counterclockwise if the gap not adjacent to the middle point of the run
+  differs from $\pi$, and the other two radii are positive and at most the radius of the middle point
+  (Theorem~\ref{pc:thm:rule-run}). The two rules combined (Theorem~\ref{pc:thm:phase}), and a version for
+  arbitrary real directions (Theorem~\ref{pc:thm:sign}).
+\item The dichotomy for cyclic Boolean words of length $6$ (Theorem~\ref{pc:thm:word}; computer-assisted in
+  Lean, with a written proof by hand here).
+\item Rule~B on the convex layers of a rotationally symmetric set, where the radius condition follows from the
+  layer indices (Theorem~\ref{pc:thm:layers}).
+\end{itemize}
+
+\paragraph{Sources.} File paths are relative to the results directory \dirn{cloud/es7-2026-10-19/results} of
+the repository. The Lean sources are:
+\begin{itemize}
+\item \dirn{LEANEXT/phase/PhaseClassification.lean} (545 lines, SHA-256 \texttt{490efcd0a7e4}\dots), namespace
+  \lean{PhaseClassification} (\dirn{LEANEXT/phase/REPORT.md} gives 540 lines for this file, with the same hash
+  prefix);
+\item \dirn{LEANEXT/linked/Linked.lean} (1416 lines, SHA-256 \texttt{f1e18c119276}\dots); its new lines are
+  1385--1416 (\lean{dist2_polar} and \lean{orient_pos_of_layers}, namespace \lean{ErdosSzekeres.LayerLemma});
+\item \dirn{LEANEXT/capstone/Capstone.lean} (2004 lines, SHA-256 \texttt{dc382395ca55}\dots); its new lines are
+  1966--2004 (namespace \lean{ErdosSzekeres.Capstone});
+\item \dirn{LEANEXT/capstone/Capstone2.lean} (2132 lines, SHA-256 \texttt{f8c3930c2427}\dots); its new lines are
+  2004--2132.
+\end{itemize}
+The following relations were checked with \texttt{diff}. Lines 40--102 of \dirn{PhaseClassification.lean}
+repeat lines 931--996 of \dirn{LAYERLEAN/LayerLemma.lean} (\lean{polar}, \lean{orient_polar},
+\lean{orient_polar_centre_inside}, \lean{sin_add_lt}, \lean{orient_polar_halfplane}) as new constants of the
+namespace \lean{PhaseClassification}; only the docstrings differ. Lines 1--1147 of \dirn{Linked.lean} are
+lines 1--1147 of \dirn{LAYERLEAN/LayerLemma.lean}, and lines 1--1384 of \dirn{Linked.lean} are those of
+\dirn{LEANEXT/merged/Merged.lean}. \dirn{Capstone.lean} consists of an 18-line header, lines 11--1416 of
+\dirn{Linked.lean} (as its lines 19--1424), a blank line, lines 6--545 of \dirn{PhaseClassification.lean} (as
+its lines 1426--1965) and the new lines 1966--2004. Lines 1--2003 of \dirn{Capstone2.lean} are those of
+\dirn{Capstone.lean}. Hence a declaration at line $L$ of \dirn{PhaseClassification.lean} reappears at line
+$L+1420$ of \dirn{Capstone.lean} and \dirn{Capstone2.lean}, and one at line $L\ge 11$ of \dirn{Linked.lean}
+reappears at line $L+8$. We cite every declaration at its first occurrence. \dirn{Capstone2.lean} is
+byte-identical to the copy \dirn{ENCBLEAN/geo/ES8Geo/Capstone2.lean} that the ENCBLEAN geometric package
+imports (hash list \dirn{ENCBLEAN/geo/SOURCES.sha256}). Further Lean files cited below, with the first 12 hex
+digits of their SHA-256: \dirn{LAYERLEAN/LayerLemma.lean} (\texttt{afb8542dceb0}), \dirn{LEANEXT/merged/Merged.lean}
+(\texttt{245b7d65407a}), \dirn{ENCBLEAN/geo/ES8Geo/Audit.lean} (\texttt{39f214bbf30b}),
+\dirn{ENCBLEAN/geo/ES8Geo/Labelling.lean} (\texttt{489ba89f8d6f}), \dirn{ENCBLEAN/geo/ES8Geo/ArcBridge.lean}
+(\texttt{46966b48a101}), \dirn{ENCBLEAN/geo/ES8Geo/ModelOfLabelling.lean} (\texttt{5b532f49cc11}) and
+\dirn{ENCBLEAN/EncB/SoundWord.lean} (\texttt{c1bdb4175ee5}). The files were built with Lean 4.24.0 and, except
+\dirn{ENCBLEAN/EncB/SoundWord.lean} (part of a package without Mathlib), with Mathlib \texttt{f897ebcf}; these
+are the repository's pins.
+
+\paragraph{Rigor and axioms.} Every definition, lemma, proposition, theorem and corollary below whose head or one
+of whose parts carries a Lean reference is \emph{Lean-checked}; the proofs given here are written proofs (not
+refereed). Remarks are commentary and, even when they name Lean declarations, are not Lean-checked as a whole; the
+mathematical claims they add to the Lean statements are written steps and are not Lean-checked. The log
+\dirn{LEANEXT/phase/logs/axioms.log} records the output of \texttt{\#print axioms} for 16 theorems of
+\dirn{PhaseClassification.lean} (\lean{alternating_iff_gaps_lt_pi}, \lean{alternating_exactly_one},
+\lean{runMidB_iff}, \lean{gap_classification}, \lean{phase_trichotomy}, \lean{orient_pos_of_alternating},
+\lean{orient_pos_of_runMidA}, \lean{orient_pos_of_runMidB}, \lean{orient_pos_of_runMidD},
+\lean{orient_pos_of_phase}, \lean{orient_sign_of_phase}, \lean{centre_inside_of_alternating},
+\lean{halfplane_of_runMidB}, \lean{exists_polar}, \lean{polar_toIcoMod}, \lean{word_dichotomy}); each depends
+only on \lean{propext}, \lean{Classical.choice} and \lean{Quot.sound}. Every other declaration of that file
+covered here is used in the statement or the proof of one of these 16 theorems, so its axioms are among these
+three. For the new
+declarations of \dirn{Linked.lean}, \dirn{Capstone.lean} and \dirn{Capstone2.lean} no axiom output is saved in
+\dirn{LEANEXT}; \dirn{LEANEXT/linked/REPORT.md} and \dirn{LEANEXT/capstone/REPORT.md} state the same three
+axioms. Of these declarations, \lean{dist2_polar}, \lean{Capstone.polar_eq}, \lean{Capstone.exists_angle},
+\lean{Capstone.sqrt_dist2_pos} and \lean{Capstone.ne_of_mem} (with \lean{Capstone.polar_zero}, used in the
+proof of \lean{sqrt_dist2_pos}) are used, together with \lean{PhaseClassification.orient_pos_of_alternating},
+\lean{PhaseClassification.orient_pos_of_runMidB} and \lean{PhaseClassification.polar_add_int_two_pi}, through the
+byte-identical copy of \dirn{Capstone2.lean}, in proofs in \dirn{ENCBLEAN/geo/ES8Geo/Labelling.lean} and
+\dirn{ENCBLEAN/geo/ES8Geo/ArcBridge.lean} on which the declarations \lean{EncB.Geo.labelling_of_counterexample}
+(in \dirn{Labelling.lean}) and \lean{EncB.Geo.modelOfLabelling} (in
+\dirn{ENCBLEAN/geo/ES8Geo/ModelOfLabelling.lean}) depend. The axioms of these two declarations are pinned to the
+same three by \texttt{\#guard\_msgs} in \dirn{ENCBLEAN/geo/ES8Geo/Audit.lean}, lines 45--49. The package compiles
+the copy from the same sources, against the same imports, as the original file: besides the byte-identical copy
+and the common Lean and Mathlib pins (see Sources), the ten repository modules that \dirn{Capstone2.lean} needs
+(its imports \lean{ErdosSzekeres.Definitions}, \lean{ErdosSzekeres.Orientation},
+\lean{ErdosSzekeres.OrientationGeometry} and \lean{ErdosSzekeres.Suk.OrientationClique}, with the repository
+modules they import) are compiled there from verbatim copies, whose SHA-256 hashes are listed in
+\dirn{ENCBLEAN/geo/VENDOR.sha256} and agree with those of the repository files. So the axioms of the declarations
+used are among these three as well. The remaining new declarations (\lean{orient_pos_of_layers},
+the six layer rules of \lean{ErdosSzekeres.Capstone} and \lean{Capstone.orient_pos_of_alternating_polar}) are not
+used in the ENCBLEAN geometric package outside the copy itself, and no \texttt{\#print axioms} output is saved
+for them; besides the axiom statements of the two
+reports, the evidence for them is the clean builds stated in these reports and the ENCBLEAN build log
+\dirn{ENCBLEAN/logs/m4_build.log}, a successful build of the package that imports the byte-identical copy of
+\dirn{Capstone2.lean} as a module, in which only the \lean{KeyOrder} module prints messages (its axiom lines). A
+text search of the four files finds no \lean{sorry}, \lean{admit}, \lean{axiom}
+declaration or \lean{native_decide}; among the declarations of this section, \lean{decide} occurs only in the
+proof of \lean{word_dichotomy}.
+
+\paragraph{Dependencies.} We use Definitions~\ref{fd:def:point}, \ref{fd:def:orient}, \ref{fd:def:rot},
+\ref{fd:def:inv} and \ref{fd:def:ngon}, and Lemma~\ref{fd:lem:orient}. From the layer sections we use the hull
+vertices $\hv$ and the peeling $\peel$ (Definitions~\ref{ll:def:hv} and~\ref{ll:def:peel}), the constant
+\lean{LayerLemma.polar} (Definition~\ref{lg:def:polar}), its polar formula and angular rules
+(Lemmas~\ref{lg:lem:polar}, \ref{lg:lem:ruleA}, \ref{lg:lem:sinadd} and~\ref{lg:lem:ruleB}), and the radius
+order of the layers (Theorem~\ref{lg:thm:radius}).
+
+\subsection{Conventions and polar points}
+
+Points are elements of $\R^2$, written $p=(p_0,p_1)$ (Lean \lean{Point}, Definition~\ref{fd:def:point}); two
+points are equal when both coordinates agree. We use
+$\orient(a,b,d)=(b_0-a_0)(d_1-a_1)-(b_1-a_1)(d_0-a_0)$ (Definition~\ref{fd:def:orient}), which is positive when
+$a,b,d$ turn counterclockwise, and from Lemma~\ref{fd:lem:orient}: $\orient(a,d,b)=-\orient(a,b,d)$
+(\lean{orient_swap}), $\orient(b,d,a)=\orient(a,b,d)$ (\lean{orient_cycle}) and
+$\orient(a+v,b+v,d+v)=\orient(a,b,d)$ (\lean{orient_translate}). Angles are arbitrary real numbers. The number
+$\pi>0$ is Lean's \lean{Real.pi}, and an integer $k$ is identified with its image in $\R$ (Lean writes this cast
+explicitly).
+
+\emph{Reduction modulo $2\pi$.} For $\alpha,\theta\in\R$ we write $\operatorname{toIcoMod}(\alpha,\theta)$ for
+Mathlib's \lean{toIcoMod} with period $2\pi$ (its positivity argument is \lean{Real.two_pi_pos}), base point
+$\alpha$ and argument $\theta$. By definition $\operatorname{toIcoMod}(\alpha,\theta)=\theta-2\pi n$, where
+$n=\operatorname{toIcoDiv}(\alpha,\theta)$ is the unique integer with $\theta-2\pi n\in[\alpha,\alpha+2\pi)$,
+namely $n=\lfloor(\theta-\alpha)/(2\pi)\rfloor$. Only two properties are used (Mathlib \lean{toIcoMod_mem_Ico}
+and \lean{toIcoMod_add_toIcoDiv_zsmul}):
+\begin{enumerate}[label=(T\arabic*)]
+\item $\alpha\le\operatorname{toIcoMod}(\alpha,\theta)<\alpha+2\pi$;
+\item $\theta=\operatorname{toIcoMod}(\alpha,\theta)+n\cdot 2\pi$ with the integer
+  $n=\operatorname{toIcoDiv}(\alpha,\theta)$.
+\end{enumerate}
+
+\begin{definition}[polar points and squared distance; \leanref{PhaseClassification.polar}{LEANEXT/phase/PhaseClassification.lean:41}, \leanref{ErdosSzekeres.LayerLemma.dist2}{LAYERLEAN/LayerLemma.lean:999}]\label{pc:def:polar}
+For $c\in\R^2$ and $r,\theta\in\R$,
+\[
+  \operatorname{polar}(c,r,\theta)=(c_0+r\cos\theta,\ c_1+r\sin\theta).
+\]
+No sign condition is imposed on $r$. For $c,y\in\R^2$, $\operatorname{dist2}(c,y)=(y_0-c_0)^2+(y_1-c_1)^2$.
+\end{definition}
+
+The constant \lean{ErdosSzekeres.LayerLemma.polar} (Definition~\ref{lg:def:polar};
+\dirn{LAYERLEAN/LayerLemma.lean:932}, repeated at \dirn{LEANEXT/linked/Linked.lean:932} and
+\dirn{LEANEXT/capstone/Capstone2.lean:940}) is a different Lean constant given by the same formula;
+Lemma~\ref{pc:lem:helpers}(a) records that the two agree. We write $\operatorname{polar}$ for both; every
+statement below that involves $\operatorname{polar}$ says, directly or through the convention of its subsection,
+which of the two constants its Lean version uses. The definition of $\operatorname{dist2}$ is repeated at
+\dirn{LEANEXT/linked/Linked.lean:999} and \dirn{LEANEXT/capstone/Capstone2.lean:1007}.
+
+\subsection{The polar orientation formula and the two rules}
+
+\begin{lemma}[polar formula, rule A, rule B; \leanref{PhaseClassification.orient_polar}{LEANEXT/phase/PhaseClassification.lean:44} for (a), and the declarations cited in (b)--(e)]\label{pc:lem:polar-facts}
+Let $c\in\R^2$; all other letters denote real numbers, and $\operatorname{polar}$ is
+\lean{PhaseClassification.polar}.
+\begin{enumerate}[label=(\alph*)]
+\item $\orient(\operatorname{polar}(c,r_a,\alpha),\operatorname{polar}(c,r_b,\beta),\operatorname{polar}(c,r_d,\delta))
+  =r_ar_b\sin(\beta-\alpha)+r_br_d\sin(\delta-\beta)+r_dr_a\sin(\alpha-\delta)$.
+\item \textup{(\leanref{PhaseClassification.orient_polar_centre}{LEANEXT/phase/PhaseClassification.lean:407}.)}
+  $\orient(\operatorname{polar}(c,r_a,\alpha),\operatorname{polar}(c,r_b,\beta),c)=r_ar_b\sin(\beta-\alpha)$.
+\item \textup{(Rule A; \leanref{PhaseClassification.orient_polar_centre_inside}{LEANEXT/phase/PhaseClassification.lean:51}.)}
+  If $0<r_a$, $0<r_b$, $0<r_d$, $0<\beta-\alpha$, $\beta-\alpha<\pi$, $0<\delta-\beta$,
+  $\delta-\beta<\pi$, $0<\alpha-\delta+2\pi$ and $\alpha-\delta+2\pi<\pi$, then
+  $0<\orient(\operatorname{polar}(c,r_a,\alpha),\operatorname{polar}(c,r_b,\beta),\operatorname{polar}(c,r_d,\delta))$.
+\item \textup{(\leanref{PhaseClassification.sin_add_lt}{LEANEXT/phase/PhaseClassification.lean:64}.)}
+  If $0<x$, $x<\pi$, $0<y$ and $y<\pi$, then $\sin(x+y)<\sin x+\sin y$.
+\item \textup{(Rule B; \leanref{PhaseClassification.orient_polar_halfplane}{LEANEXT/phase/PhaseClassification.lean:80}.)}
+  If $0<r_a$, $0<r_d$, $r_a\le r_b$, $r_d\le r_b$, $0<\beta-\alpha$, $0<\delta-\beta$ and
+  $\delta-\alpha<\pi$, then
+  $0<\orient(\operatorname{polar}(c,r_a,\alpha),\operatorname{polar}(c,r_b,\beta),\operatorname{polar}(c,r_d,\delta))$.
+\end{enumerate}
+\end{lemma}
+
+Parts (a), (c) and (e) are the statements of Lemmas~\ref{lg:lem:polar}, \ref{lg:lem:ruleA}
+and~\ref{lg:lem:ruleB} with the constant \lean{PhaseClassification.polar} in place of \lean{LayerLemma.polar}, and
+part (d) is the statement of Lemma~\ref{lg:lem:sinadd}; the Lean proofs are the same. For completeness we repeat
+the short arguments.
+
+\begin{proof}
+(a) Put $u=(r_a\cos\alpha,r_a\sin\alpha)$, $v=(r_b\cos\beta,r_b\sin\beta)$, $w=(r_d\cos\delta,r_d\sin\delta)$,
+so that the three points are $c+u$, $c+v$, $c+w$, and write $[x,y]=x_0y_1-x_1y_0$ for $x,y\in\R^2$. By
+translation invariance, $\orient(c+u,c+v,c+w)=\orient(u,v,w)=[v-u,w-u]$, and by bilinearity and antisymmetry of
+$[\cdot,\cdot]$,
+\[
+  [v-u,w-u]=[v,w]-[v,u]-[u,w]+[u,u]=[u,v]+[v,w]+[w,u].
+\]
+Finally $[u,v]=r_ar_b(\cos\alpha\sin\beta-\sin\alpha\cos\beta)=r_ar_b\sin(\beta-\alpha)$, and in the same way
+$[v,w]=r_br_d\sin(\delta-\beta)$ and $[w,u]=r_dr_a\sin(\alpha-\delta)$.
+
+(b) For every $\delta$, $\operatorname{polar}(c,0,\delta)=c$. Hence (b) is (a) with $r_d=0$. (Lean expands the
+definitions directly; the computation is the same.)
+
+(c) By (a) the orientation is $r_ar_b\sin(\beta-\alpha)+r_br_d\sin(\delta-\beta)+r_dr_a\sin(\alpha-\delta)$. The
+sine is positive on $(0,\pi)$, so $\sin(\beta-\alpha)>0$, $\sin(\delta-\beta)>0$ and
+$\sin(\alpha-\delta)=\sin(\alpha-\delta+2\pi)>0$. All radii are positive, so all three terms are positive.
+
+(d) By the addition formula, $\sin x+\sin y-\sin(x+y)=\sin x\,(1-\cos y)+\sin y\,(1-\cos x)$. Here $\sin x>0$
+and $\sin y>0$. Moreover $\cos x<1$ and $\cos y<1$, because $\cos$ is strictly decreasing on $[0,\pi]$ with
+$\cos 0=1$. So both products are positive.
+
+(e) Put $x=\beta-\alpha>0$ and $y=\delta-\beta>0$. Then $x+y=\delta-\alpha<\pi$, so $x,y\in(0,\pi)$, and
+$\alpha-\delta=-(x+y)$. By (a), the orientation $O$ in (e) satisfies
+\begin{align*}
+  O&=r_ar_b\sin x+r_br_d\sin y-r_dr_a\sin(x+y)\\
+   &=r_a(r_b-r_d)\sin x+r_d(r_b-r_a)\sin y+r_ar_d\bigl(\sin x+\sin y-\sin(x+y)\bigr).
+\end{align*}
+The first two terms are $\ge0$ (as $r_a,r_d>0$, $r_b-r_d\ge0$, $r_b-r_a\ge0$, $\sin x,\sin y>0$), and the last
+is $>0$ by (d) and $r_ar_d>0$. (Positivity of $r_b$ is not assumed; it follows from $r_b\ge r_a>0$.)
+\end{proof}
+
+\subsection{Periodicity and polar forms}
+
+\begin{lemma}[periodicity; \leanref{PhaseClassification.polar_add_int_two_pi}{LEANEXT/phase/PhaseClassification.lean:106}, \leanref{PhaseClassification.polar_add_two_pi}{LEANEXT/phase/PhaseClassification.lean:111}, \leanref{PhaseClassification.polar_toIcoMod}{LEANEXT/phase/PhaseClassification.lean:485}]\label{pc:lem:periodic}
+Let $c\in\R^2$ and $r,\theta,\alpha\in\R$, and let $\operatorname{polar}$ be \lean{PhaseClassification.polar}.
+\begin{enumerate}[label=(\alph*)]
+\item For every $k\in\Z$, $\operatorname{polar}(c,r,\theta+k\cdot2\pi)=\operatorname{polar}(c,r,\theta)$.
+\item $\operatorname{polar}(c,r,\theta+2\pi)=\operatorname{polar}(c,r,\theta)$.
+\item $\operatorname{polar}(c,r,\operatorname{toIcoMod}(\alpha,\theta))=\operatorname{polar}(c,r,\theta)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) $\cos(\theta+2\pi k)=\cos\theta$ and $\sin(\theta+2\pi k)=\sin\theta$ for $k\in\Z$. (b) is (a) with $k=1$.
+(c) By (T2), $\theta=\operatorname{toIcoMod}(\alpha,\theta)+n\cdot2\pi$ with $n\in\Z$, so by (a)
+$\operatorname{polar}(c,r,\theta)=\operatorname{polar}(c,r,\operatorname{toIcoMod}(\alpha,\theta)+n\cdot2\pi)
+=\operatorname{polar}(c,r,\operatorname{toIcoMod}(\alpha,\theta))$.
+\end{proof}
+
+\begin{lemma}[every point other than the centre has a polar form; \leanref{PhaseClassification.exists_polar}{LEANEXT/phase/PhaseClassification.lean:459}]\label{pc:lem:exists-polar}
+For all $c,p\in\R^2$ with $p\neq c$ there are $r,\theta\in\R$ with $0<r$ and $p=\operatorname{polar}(c,r,\theta)$,
+where $\operatorname{polar}$ is \lean{PhaseClassification.polar}.
+\end{lemma}
+
+\begin{proof}
+Let $u=p-c\neq0$ and $r=\sqrt{u_0^2+u_1^2}>0$, and put $t=u_0/r\in[-1,1]$; note $1-t^2=u_1^2/r^2$. Recall that
+$\arccos t\in[0,\pi]$, $\cos(\arccos t)=t$ and $\sin(\arccos t)=\sqrt{1-t^2}=\abs{u_1}/r$. If $u_1\ge0$, let
+$\theta=\arccos t$; then $\cos\theta=u_0/r$ and $\sin\theta=\abs{u_1}/r=u_1/r$. If $u_1<0$, let
+$\theta=-\arccos t$; then $\cos\theta=t=u_0/r$ and $\sin\theta=-\abs{u_1}/r=u_1/r$. Hence
+$p=c+u=(c_0+r\cos\theta,c_1+r\sin\theta)=\operatorname{polar}(c,r,\theta)$. (The Lean proof takes
+$r=\abs{z}$ and $\theta=\arg z$ for the complex number $z=u_0+iu_1$, using $\abs{z}\cos(\arg z)=\operatorname{Re}z$
+and $\abs{z}\sin(\arg z)=\operatorname{Im}z$; this is the same polar representation.)
+\end{proof}
+
+\begin{lemma}[helpers for layered points; \leanref{ErdosSzekeres.Capstone.polar_eq}{LEANEXT/capstone/Capstone.lean:2001}, \leanref{ErdosSzekeres.Capstone.polar_zero}{LEANEXT/capstone/Capstone2.lean:2051}, \leanref{ErdosSzekeres.LayerLemma.dist2_polar}{LEANEXT/linked/Linked.lean:1390}, \leanref{ErdosSzekeres.Capstone.exists_angle}{LEANEXT/capstone/Capstone2.lean:2056}, \leanref{ErdosSzekeres.Capstone.sqrt_dist2_pos}{LEANEXT/capstone/Capstone2.lean:2064}, \leanref{ErdosSzekeres.Capstone.ne_of_mem}{LEANEXT/capstone/Capstone2.lean:2073}]\label{pc:lem:helpers}
+Let $c,p\in\R^2$ and $r,\theta\in\R$. In \textup{(b)--(e)}, $\operatorname{polar}$ is the constant
+\lean{LayerLemma.polar}.
+\begin{enumerate}[label=(\alph*)]
+\item $\text{\lean{LayerLemma.polar}}(c,r,\theta)=\text{\lean{PhaseClassification.polar}}(c,r,\theta)$.
+\item $\operatorname{polar}(c,0,\theta)=c$.
+\item $\operatorname{dist2}(c,\operatorname{polar}(c,r,\theta))=r^2$.
+\item If $p\neq c$, there is $\theta\in\R$ with $p=\operatorname{polar}\bigl(c,\sqrt{\operatorname{dist2}(c,p)},\theta\bigr)$.
+\item If $p\neq c$, then $0<\sqrt{\operatorname{dist2}(c,p)}$.
+\item If $S$ is a finite set of points with $c\notin S$ and $p\in S$, then $p\neq c$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) Both constants are defined by the formula of Definition~\ref{pc:def:polar} (in Lean the proof is
+\lean{rfl}). (b) $c_0+0\cdot\cos\theta=c_0$ and $c_1+0\cdot\sin\theta=c_1$.
+(c) $(r\cos\theta)^2+(r\sin\theta)^2=r^2(\cos^2\theta+\sin^2\theta)=r^2$.
+(d) By Lemma~\ref{pc:lem:exists-polar} and (a) there are $r>0$ and $\theta$ with $p=\operatorname{polar}(c,r,\theta)$.
+By (c), $\operatorname{dist2}(c,p)=r^2$, and $\sqrt{r^2}=r$ because $r\ge0$. Hence
+$p=\operatorname{polar}(c,\sqrt{\operatorname{dist2}(c,p)},\theta)$.
+(e) The square root is $\ge0$. If it were $0$, then by (d) and (b) $p=\operatorname{polar}(c,0,\theta)=c$, a
+contradiction.
+(f) If $p=c$, then $c=p\in S$, contrary to $c\notin S$.
+\end{proof}
+
+\subsection{Arcs and phase patterns}
+
+\begin{definition}[arcs and phase patterns; \leanref{PhaseClassification.inArc}{LEANEXT/phase/PhaseClassification.lean:117}, \leanref{PhaseClassification.arcHasAntipode}{LEANEXT/phase/PhaseClassification.lean:120}, \leanref{PhaseClassification.Alternating}{LEANEXT/phase/PhaseClassification.lean:126}, \leanref{PhaseClassification.RunMidB}{LEANEXT/phase/PhaseClassification.lean:132}, \leanref{PhaseClassification.RunMidD}{LEANEXT/phase/PhaseClassification.lean:136}, \leanref{PhaseClassification.RunMidA}{LEANEXT/phase/PhaseClassification.lean:140}]\label{pc:def:arc}
+For $s,g,\theta\in\R$,
+\[
+  \operatorname{inArc}(s,g,\theta)\ :\Longleftrightarrow\ \exists k\in\Z:\ s<\theta+2\pi k\ \text{ and }\ \theta+2\pi k<s+g .
+\]
+For $\alpha,\beta,\delta,s,g\in\R$,
+\[
+  \operatorname{arcHasAntipode}(\alpha,\beta,\delta,s,g)\ :\Longleftrightarrow\
+  \operatorname{inArc}(s,g,\alpha+\pi)\vee\operatorname{inArc}(s,g,\beta+\pi)\vee\operatorname{inArc}(s,g,\delta+\pi).
+\]
+For $\alpha,\beta,\delta\in\R$ abbreviate (this notation is not a Lean name)
+\begin{align*}
+  H_1&=\operatorname{arcHasAntipode}(\alpha,\beta,\delta,\alpha,\beta-\alpha),\\
+  H_2&=\operatorname{arcHasAntipode}(\alpha,\beta,\delta,\beta,\delta-\beta),\\
+  H_3&=\operatorname{arcHasAntipode}(\alpha,\beta,\delta,\delta,\alpha+2\pi-\delta),
+\end{align*}
+and write $H_j(\alpha,\beta,\delta)$ when the triple has to be shown. Then
+\begin{align*}
+  \operatorname{Alternating}(\alpha,\beta,\delta)&:\Longleftrightarrow H_1\wedge H_2\wedge H_3,&
+  \operatorname{RunMidB}(\alpha,\beta,\delta)&:\Longleftrightarrow \neg H_1\wedge\neg H_2,\\
+  \operatorname{RunMidD}(\alpha,\beta,\delta)&:\Longleftrightarrow \neg H_2\wedge\neg H_3,&
+  \operatorname{RunMidA}(\alpha,\beta,\delta)&:\Longleftrightarrow \neg H_3\wedge\neg H_1 .
+\end{align*}
+\end{definition}
+
+\begin{remark}[reading the definitions]\label{pc:rem:reading}
+For $0<g\le2\pi$, $\operatorname{inArc}(s,g,\theta)$ says that the direction $\theta$, taken modulo $2\pi$, lies
+on the open counterclockwise arc from $s$ to $s+g$. When $\alpha<\beta<\delta<\alpha+2\pi$, the arcs of
+$H_1,H_2,H_3$ are the open arcs $(\alpha,\beta)$, $(\beta,\delta)$, $(\delta,\alpha+2\pi)$ between
+counterclockwise-consecutive directions (for $H_3$, $s+g=\delta+(\alpha+2\pi-\delta)=\alpha+2\pi$), and $H_j$ says
+that the $j$-th arc contains the direction of an antipode. We use the gaps $g_1=\beta-\alpha$,
+$g_2=\delta-\beta$, $g_3=\alpha+2\pi-\delta$; they satisfy $g_1+g_2+g_3=2\pi$, and $g_1,g_2,g_3>0$ when
+$\alpha<\beta<\delta<\alpha+2\pi$. Note $g_1+g_2=\delta-\alpha$, $g_2+g_3=\alpha+2\pi-\beta$ and
+$g_3+g_1=\beta+2\pi-\delta$. If $\alpha<\beta<\delta<\alpha+2\pi$ and no gap equals $\pi$, the six directions
+$\alpha,\beta,\delta,\alpha+\pi,\beta+\pi,\delta+\pi$ are distinct modulo $2\pi$ (a direction and an antipode
+coincide modulo $2\pi$ exactly when $\beta-\alpha$, $\delta-\beta$ or $\delta-\alpha$ equals $\pi$, that is, when
+$g_1$, $g_2$ or $g_3$ equals $\pi$). In that case, writing $P$ for a direction and $A$ for an antipode,
+$\operatorname{Alternating}$ is the cyclic pattern $PAPAPA$, and $\operatorname{RunMidB}$ (resp.\
+$\operatorname{RunMidD}$, $\operatorname{RunMidA}$) is a cyclic run $PPP$ whose middle point is $\beta$ (resp.\
+$\delta$, $\alpha$). The definitions themselves assume no order; every result below states the order it uses.
+\end{remark}
+
+\begin{lemma}[membership and non-membership; \leanref{PhaseClassification.inArc_of}{LEANEXT/phase/PhaseClassification.lean:143}, \leanref{PhaseClassification.not_inArc}{LEANEXT/phase/PhaseClassification.lean:147}]\label{pc:lem:inarc}
+Let $s,g,\theta\in\R$.
+\begin{enumerate}[label=(\alph*)]
+\item For every $k\in\Z$: if $s<\theta+2\pi k$ and $\theta+2\pi k<s+g$, then $\operatorname{inArc}(s,g,\theta)$.
+\item For every $m\in\Z$: if $s+g\le\theta+2\pi m$ and $\theta+2\pi m\le s+2\pi$, then
+  $\neg\operatorname{inArc}(s,g,\theta)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) is the definition, with witness $k$.
+(b) Suppose $k\in\Z$ satisfies $s<\theta+2\pi k<s+g$. If $k\ge m$, then $\theta+2\pi k\ge\theta+2\pi m\ge s+g$
+(as $\pi>0$), contradicting $\theta+2\pi k<s+g$. If $k\le m-1$, then
+$\theta+2\pi k\le\theta+2\pi m-2\pi\le s$, contradicting $s<\theta+2\pi k$. (The Lean proof makes the same case
+split on the sign of $k-m$.)
+\end{proof}
+
+\begin{lemma}[shift invariance and relabelling; written step]\label{pc:lem:shift}
+Let $s,g,\theta,\alpha,\beta,\delta\in\R$ and $n\in\Z$.
+\begin{enumerate}[label=(\alph*)]
+\item $\operatorname{inArc}(s,g,\theta+2\pi n)\iff\operatorname{inArc}(s,g,\theta)$.
+\item $\operatorname{inArc}(s+2\pi n,g,\theta)\iff\operatorname{inArc}(s,g,\theta)$.
+\item $\operatorname{RunMidD}(\alpha,\beta,\delta)\iff\operatorname{RunMidB}(\beta,\delta,\alpha+2\pi)$.
+\item $\operatorname{RunMidA}(\alpha,\beta,\delta)\iff\operatorname{RunMidB}(\delta,\alpha+2\pi,\beta+2\pi)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) If $s<\theta+2\pi n+2\pi k<s+g$, then $k'=n+k$ witnesses $\operatorname{inArc}(s,g,\theta)$; conversely a
+witness $k'$ for $\theta$ gives the witness $k'-n$ for $\theta+2\pi n$.
+(b) $s+2\pi n<\theta+2\pi k<s+2\pi n+g$ is equivalent to $s<\theta+2\pi(k-n)<s+g$.
+
+(c) For all $s,g$, $\operatorname{arcHasAntipode}(\beta,\delta,\alpha+2\pi,s,g)$ is the disjunction of
+$\operatorname{inArc}(s,g,\beta+\pi)$, $\operatorname{inArc}(s,g,\delta+\pi)$ and
+$\operatorname{inArc}(s,g,\alpha+\pi+2\pi)$; by (a) with $n=1$ the last one is equivalent to
+$\operatorname{inArc}(s,g,\alpha+\pi)$. Hence
+$\operatorname{arcHasAntipode}(\beta,\delta,\alpha+2\pi,s,g)\iff\operatorname{arcHasAntipode}(\alpha,\beta,\delta,s,g)$
+for all $s,g$. By definition, $\operatorname{RunMidB}(\beta,\delta,\alpha+2\pi)$ is the conjunction of
+$\neg\operatorname{arcHasAntipode}(\beta,\delta,\alpha+2\pi,\beta,\delta-\beta)$ and
+$\neg\operatorname{arcHasAntipode}(\beta,\delta,\alpha+2\pi,\delta,(\alpha+2\pi)-\delta)$, which are therefore
+equivalent to $\neg H_2$ and $\neg H_3$ (of $(\alpha,\beta,\delta)$). So it is equivalent to
+$\operatorname{RunMidD}(\alpha,\beta,\delta)$.
+
+(d) As in (c), $\operatorname{arcHasAntipode}(\delta,\alpha+2\pi,\beta+2\pi,s,g)\iff
+\operatorname{arcHasAntipode}(\alpha,\beta,\delta,s,g)$ for all $s,g$ (the antipodes
+$\alpha+2\pi+\pi$, $\beta+2\pi+\pi$ are shifted by $2\pi$). $\operatorname{RunMidB}(\delta,\alpha+2\pi,\beta+2\pi)$
+is the conjunction of $\neg\operatorname{arcHasAntipode}(\delta,\alpha+2\pi,\beta+2\pi,\delta,(\alpha+2\pi)-\delta)$,
+equivalent to $\neg H_3$, and of
+$\neg\operatorname{arcHasAntipode}(\delta,\alpha+2\pi,\beta+2\pi,\alpha+2\pi,(\beta+2\pi)-(\alpha+2\pi))$. Since
+$(\beta+2\pi)-(\alpha+2\pi)=\beta-\alpha$ and, by (b) with $n=1$,
+$\operatorname{inArc}(\alpha+2\pi,\beta-\alpha,\theta)\iff\operatorname{inArc}(\alpha,\beta-\alpha,\theta)$ for
+every $\theta$, the second conjunct is equivalent to $\neg H_1$. So the conjunction is equivalent to
+$\neg H_3\wedge\neg H_1=\operatorname{RunMidA}(\alpha,\beta,\delta)$.
+
+The Lean proofs of \lean{orient_pos_of_runMidD} and \lean{orient_pos_of_runMidA}
+(\dirn{LEANEXT/phase/PhaseClassification.lean}, lines 323--335 and 346--362) prove the implications from left to right
+inside the proofs, disjunct by disjunct, keeping the witness $k$ or changing it by $+1$ or $-1$, as (a) and (b)
+do above.
+\end{proof}
+
+\begin{lemma}[empty arcs; \leanref{PhaseClassification.arc1_empty}{LEANEXT/phase/PhaseClassification.lean:161}, \leanref{PhaseClassification.arc2_empty}{LEANEXT/phase/PhaseClassification.lean:169}, \leanref{PhaseClassification.arc2_empty'}{LEANEXT/phase/PhaseClassification.lean:177}, \leanref{PhaseClassification.arc3_empty}{LEANEXT/phase/PhaseClassification.lean:185}, \leanref{PhaseClassification.arc3_empty'}{LEANEXT/phase/PhaseClassification.lean:193}, \leanref{PhaseClassification.arc1_empty'}{LEANEXT/phase/PhaseClassification.lean:201}]\label{pc:lem:empty}
+Let $\alpha,\beta,\delta\in\R$, with $H_1,H_2,H_3$ as in Definition~\ref{pc:def:arc}.
+\begin{enumerate}[label=(\alph*)]
+\item \textup{(\lean{arc1_empty})} If $\alpha<\beta$, $\beta<\delta$ and $\delta-\alpha\le\pi$, then $\neg H_1$.
+\item \textup{(\lean{arc2_empty})} If $\alpha<\beta$, $\beta<\delta$ and $\delta-\alpha\le\pi$, then $\neg H_2$.
+\item \textup{(\lean{arc2_empty'})} If $\beta<\delta$, $\delta<\alpha+2\pi$ and $\alpha+2\pi-\beta\le\pi$, then $\neg H_2$.
+\item \textup{(\lean{arc3_empty})} If $\beta<\delta$, $\delta<\alpha+2\pi$ and $\alpha+2\pi-\beta\le\pi$, then $\neg H_3$.
+\item \textup{(\lean{arc3_empty'})} If $\alpha<\beta$, $\delta<\alpha+2\pi$ and $\beta+2\pi-\delta\le\pi$, then $\neg H_3$.
+\item \textup{(\lean{arc1_empty'})} If $\alpha<\beta$, $\delta<\alpha+2\pi$ and $\beta+2\pi-\delta\le\pi$, then $\neg H_1$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+In each part we apply Lemma~\ref{pc:lem:inarc}(b) to each of the three antipodes $\theta\in\{\alpha+\pi,
+\beta+\pi,\delta+\pi\}$ with the integer $m$ indicated, and verify the two inequalities
+$s+g\le\theta+2\pi m\le s+2\pi$ for the arc in question; this excludes all three disjuncts of
+$\operatorname{arcHasAntipode}$. Throughout we use $\pi>0$. (The Lean proof uses the same integers $m$.)
+
+(a) Arc $H_1$: $s=\alpha$, $s+g=\beta$, $s+2\pi=\alpha+2\pi$. From $\beta<\delta$ and $\delta-\alpha\le\pi$ we get
+$\beta<\alpha+\pi$ and $\beta-\alpha<\pi$.
+$\theta=\alpha+\pi$, $m=0$: $\beta\le\alpha+\pi\le\alpha+2\pi$.
+$\theta=\beta+\pi$, $m=0$: $\beta\le\beta+\pi$, and $\beta+\pi\le\alpha+2\pi$ as $\beta-\alpha<\pi$.
+$\theta=\delta+\pi$, $m=0$: $\beta\le\delta+\pi$ as $\beta<\delta$, and $\delta+\pi\le\alpha+2\pi$ as $\delta-\alpha\le\pi$.
+
+(b) Arc $H_2$: $s=\beta$, $s+g=\delta$, $s+2\pi=\beta+2\pi$. From $\alpha<\beta$ and $\delta-\alpha\le\pi$ we get
+$\delta-\beta<\pi$.
+$\theta=\alpha+\pi$, $m=0$: $\delta\le\alpha+\pi$, and $\alpha+\pi\le\beta+2\pi$ as $\alpha<\beta$.
+$\theta=\beta+\pi$, $m=0$: $\delta\le\beta+\pi$ as $\delta-\beta<\pi$, and $\beta+\pi\le\beta+2\pi$.
+$\theta=\delta+\pi$, $m=0$: $\delta\le\delta+\pi$, and $\delta+\pi\le\beta+2\pi$ as $\delta-\beta<\pi$.
+
+(c) Arc $H_2$ as in (b). The hypothesis says $\alpha+\pi\le\beta$; with $\delta<\alpha+2\pi$ this gives
+$\delta<\beta+\pi$.
+$\theta=\alpha+\pi$, $m=1$: $\delta\le\alpha+3\pi$ as $\delta<\alpha+2\pi$, and $\alpha+3\pi\le\beta+2\pi$ as
+$\alpha+\pi\le\beta$.
+$\theta=\beta+\pi$, $m=0$: $\delta\le\beta+\pi$, and $\beta+\pi\le\beta+2\pi$.
+$\theta=\delta+\pi$, $m=0$: $\delta\le\delta+\pi$, and $\delta+\pi\le\beta+2\pi$ as $\delta<\beta+\pi$.
+
+(d) Arc $H_3$: $s=\delta$, $s+g=\alpha+2\pi$, $s+2\pi=\delta+2\pi$. The hypothesis says $\alpha+\pi\le\beta$; with
+$\beta<\delta$ this gives $\alpha+\pi<\delta$.
+$\theta=\alpha+\pi$, $m=1$: $\alpha+2\pi\le\alpha+3\pi$, and $\alpha+3\pi\le\delta+2\pi$ as $\alpha+\pi<\delta$.
+$\theta=\beta+\pi$, $m=0$: $\alpha+2\pi\le\beta+\pi$ as $\alpha+\pi\le\beta$, and $\beta+\pi\le\delta+2\pi$ as
+$\beta<\delta$.
+$\theta=\delta+\pi$, $m=0$: $\alpha+2\pi\le\delta+\pi$ as $\alpha+\pi<\delta$, and $\delta+\pi\le\delta+2\pi$.
+
+(e) Arc $H_3$ as in (d). The hypothesis says $\beta+\pi\le\delta$; with $\alpha<\beta$ this gives
+$\alpha+\pi<\delta$.
+$\theta=\alpha+\pi$, $m=1$: $\alpha+2\pi\le\alpha+3\pi$, and $\alpha+3\pi\le\delta+2\pi$ as $\alpha+\pi<\delta$.
+$\theta=\beta+\pi$, $m=1$: $\alpha+2\pi\le\beta+3\pi$ as $\alpha<\beta$, and $\beta+3\pi\le\delta+2\pi$ as
+$\beta+\pi\le\delta$.
+$\theta=\delta+\pi$, $m=0$: $\alpha+2\pi\le\delta+\pi$ as $\alpha+\pi<\delta$, and $\delta+\pi\le\delta+2\pi$.
+
+(f) Arc $H_1$ as in (a). The hypothesis says $\beta+\pi\le\delta$; with $\delta<\alpha+2\pi$ this gives
+$\beta<\alpha+\pi$ and $\beta+\pi<\alpha+2\pi$.
+$\theta=\alpha+\pi$, $m=0$: $\beta\le\alpha+\pi\le\alpha+2\pi$.
+$\theta=\beta+\pi$, $m=0$: $\beta\le\beta+\pi$, and $\beta+\pi\le\alpha+2\pi$.
+$\theta=\delta+\pi$, $m=-1$: $\beta\le\delta-\pi$ as $\beta+\pi\le\delta$, and $\delta-\pi\le\alpha+2\pi$ as
+$\delta<\alpha+2\pi$.
+\end{proof}
+
+\begin{lemma}[a long arc meets an antipode; \leanref{PhaseClassification.arc12_nonempty}{LEANEXT/phase/PhaseClassification.lean:229}]\label{pc:lem:arc12}
+Let $\alpha,\beta,\delta\in\R$ with $\alpha<\beta$, $\beta<\delta$, $\delta<\alpha+2\pi$ and $\pi<\delta-\alpha$.
+Then $H_1\vee H_2$.
+\end{lemma}
+
+\begin{proof}
+We give a three-case proof; the Lean proof uses a finer case split (on $\delta-\beta$ against $\pi$ first, then
+on $\beta-\alpha$), each case again exhibiting one antipode with an explicit witness $k$.
+
+Case $\beta-\alpha<\pi$: the antipode $\alpha+\pi$ lies in the arc of $H_2$ with $k=0$, since
+$\beta<\alpha+\pi$ and $\alpha+\pi<\delta$ (the latter is $\pi<\delta-\alpha$). So $H_2$.
+
+Case $\beta-\alpha>\pi$: $\alpha+\pi$ lies in the arc of $H_1$ with $k=0$, since $\alpha<\alpha+\pi<\beta$. So $H_1$.
+
+Case $\beta-\alpha=\pi$: the antipode $\delta+\pi$ lies in the arc of $H_1$ with $k=-1$: indeed
+$\alpha<\delta-\pi$ is $\pi<\delta-\alpha$, and $\delta-\pi<\beta=\alpha+\pi$ is $\delta<\alpha+2\pi$. So $H_1$.
+\end{proof}
+
+\subsection{Alternation and runs}
+
+\begin{theorem}[alternation iff all gaps are $<\pi$; \leanref{PhaseClassification.alternating_iff_gaps_lt_pi}{LEANEXT/phase/PhaseClassification.lean:210}]\label{pc:thm:alternating}
+Let $\alpha,\beta,\delta\in\R$ with $\alpha<\beta$, $\beta<\delta$ and $\delta<\alpha+2\pi$. Then
+\[
+  \operatorname{Alternating}(\alpha,\beta,\delta)\iff
+  \bigl(\beta-\alpha<\pi\ \wedge\ \delta-\beta<\pi\ \wedge\ \alpha+2\pi-\delta<\pi\bigr).
+\]
+\end{theorem}
+
+\begin{proof}
+($\Rightarrow$) Assume $H_1\wedge H_2\wedge H_3$. If $\beta-\alpha\ge\pi$, then $\alpha+2\pi-\beta\le\pi$, and
+Lemma~\ref{pc:lem:empty}(c) (with $\beta<\delta<\alpha+2\pi$) gives $\neg H_2$, a contradiction. If
+$\delta-\beta\ge\pi$, then $\beta+2\pi-\delta\le\pi$, and Lemma~\ref{pc:lem:empty}(e) (with $\alpha<\beta$,
+$\delta<\alpha+2\pi$) gives $\neg H_3$. If $\alpha+2\pi-\delta\ge\pi$, then $\delta-\alpha\le\pi$, and
+Lemma~\ref{pc:lem:empty}(a) gives $\neg H_1$. Hence all three gaps are $<\pi$.
+
+($\Leftarrow$) Assume $g_1,g_2,g_3<\pi$. By Lemma~\ref{pc:lem:inarc}(a):
+$H_1$ holds through $\delta+\pi$ with $k=-1$, since $\alpha<\delta-\pi$ (that is $g_3<\pi$) and $\delta-\pi<\beta$
+(that is $g_2<\pi$);
+$H_2$ holds through $\alpha+\pi$ with $k=0$, since $\beta<\alpha+\pi$ ($g_1<\pi$) and $\alpha+\pi<\delta$
+($g_3<\pi$);
+$H_3$ holds through $\beta+\pi$ with $k=0$, since $\delta<\beta+\pi$ ($g_2<\pi$) and
+$\beta+\pi<\delta+(\alpha+2\pi-\delta)=\alpha+2\pi$ ($g_1<\pi$).
+\end{proof}
+
+\begin{remark}[a gap equal to $\pi$]\label{pc:rem:alt-boundary}
+No genericity is assumed: a gap may equal $\pi$, and then alternation fails. For example, if $\beta-\alpha=\pi$,
+the antipode $\alpha+\pi$ is the endpoint $\beta$ of the open arc $(\beta,\delta)$, and
+Lemma~\ref{pc:lem:empty}(c) shows that this arc contains no antipode.
+\end{remark}
+
+\begin{proposition}[each arc of an alternating pattern holds exactly the opposite antipode; \leanref{PhaseClassification.alternating_exactly_one}{LEANEXT/phase/PhaseClassification.lean:386}]\label{pc:prop:exactly-one}
+Let $\alpha,\beta,\delta\in\R$ with $\alpha<\beta$, $\beta<\delta$, $\delta<\alpha+2\pi$ and
+$\operatorname{Alternating}(\alpha,\beta,\delta)$. Then
+\begin{enumerate}[label=(\roman*)]
+\item $\operatorname{inArc}(\alpha,\beta-\alpha,\delta+\pi)$, $\neg\operatorname{inArc}(\alpha,\beta-\alpha,\alpha+\pi)$ and
+  $\neg\operatorname{inArc}(\alpha,\beta-\alpha,\beta+\pi)$;
+\item $\operatorname{inArc}(\beta,\delta-\beta,\alpha+\pi)$, $\neg\operatorname{inArc}(\beta,\delta-\beta,\beta+\pi)$ and
+  $\neg\operatorname{inArc}(\beta,\delta-\beta,\delta+\pi)$;
+\item $\operatorname{inArc}(\delta,\alpha+2\pi-\delta,\beta+\pi)$,
+  $\neg\operatorname{inArc}(\delta,\alpha+2\pi-\delta,\alpha+\pi)$ and
+  $\neg\operatorname{inArc}(\delta,\alpha+2\pi-\delta,\delta+\pi)$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+By Theorem~\ref{pc:thm:alternating}, $g_1,g_2,g_3<\pi$. The three memberships were shown in the proof of
+Theorem~\ref{pc:thm:alternating}, ($\Leftarrow$). For the non-memberships we use Lemma~\ref{pc:lem:inarc}(b):
+\begin{itemize}
+\item arc $(\alpha,\beta)$, i.e.\ $s+g=\beta$, $s+2\pi=\alpha+2\pi$: for $\alpha+\pi$ with $m=0$,
+  $\beta\le\alpha+\pi$ ($g_1<\pi$) and $\alpha+\pi\le\alpha+2\pi$; for $\beta+\pi$ with $m=0$, $\beta\le\beta+\pi$
+  and $\beta+\pi\le\alpha+2\pi$ ($g_1<\pi$);
+\item arc $(\beta,\delta)$, i.e.\ $s+g=\delta$, $s+2\pi=\beta+2\pi$: for $\beta+\pi$ with $m=0$,
+  $\delta\le\beta+\pi$ ($g_2<\pi$) and $\beta+\pi\le\beta+2\pi$; for $\delta+\pi$ with $m=0$, $\delta\le\delta+\pi$
+  and $\delta+\pi\le\beta+2\pi$ ($g_2<\pi$);
+\item arc $(\delta,\alpha+2\pi)$, i.e.\ $s+g=\alpha+2\pi$, $s+2\pi=\delta+2\pi$: for $\alpha+\pi$ with $m=1$,
+  $\alpha+2\pi\le\alpha+3\pi$ and $\alpha+3\pi\le\delta+2\pi$ ($g_3<\pi$); for $\delta+\pi$ with $m=0$,
+  $\alpha+2\pi\le\delta+\pi$ ($g_3<\pi$) and $\delta+\pi\le\delta+2\pi$.\qedhere
+\end{itemize}
+\end{proof}
+
+\begin{theorem}[a run with middle $\beta$ iff an open half-plane; \leanref{PhaseClassification.runMidB_iff}{LEANEXT/phase/PhaseClassification.lean:251}]\label{pc:thm:runB}
+Let $\alpha,\beta,\delta\in\R$ with $\alpha<\beta$, $\beta<\delta$, $\delta<\alpha+2\pi$ and
+$\alpha+2\pi-\delta\neq\pi$. Then
+\[
+  \operatorname{RunMidB}(\alpha,\beta,\delta)\iff\delta-\alpha<\pi .
+\]
+\end{theorem}
+
+\begin{proof}
+($\Leftarrow$) If $\delta-\alpha<\pi$, then $\delta-\alpha\le\pi$, and Lemma~\ref{pc:lem:empty}(a),(b) give
+$\neg H_1$ and $\neg H_2$.
+($\Rightarrow$) Assume $\neg H_1\wedge\neg H_2$ and, for a contradiction, $\delta-\alpha\ge\pi$. Since
+$\alpha+2\pi-\delta\neq\pi$ we have $\delta-\alpha\neq\pi$, hence $\pi<\delta-\alpha$, and
+Lemma~\ref{pc:lem:arc12} gives $H_1\vee H_2$, a contradiction.
+\end{proof}
+
+\begin{remark}[the gap hypothesis is needed]\label{pc:rem:runB-example}
+The direction ($\Rightarrow$) fails without $\alpha+2\pi-\delta\neq\pi$. Take any $\alpha<\beta<\delta$ with
+$\delta-\alpha=\pi$, for instance $(\alpha,\beta,\delta)=(0,\pi/2,\pi)$. Then $\delta<\alpha+2\pi$, and
+$\operatorname{RunMidB}(\alpha,\beta,\delta)$ holds by Lemma~\ref{pc:lem:empty}(a),(b) (their hypothesis is
+$\delta-\alpha\le\pi$), but $\delta-\alpha<\pi$ is false. Geometrically, points at positive radii in the
+directions $\alpha$ and $\delta=\alpha+\pi$ lie on opposite rays from $c$, so no open half-plane bounded by a line
+through $c$ contains both (compare Proposition~\ref{pc:prop:halfplane}). The direction ($\Leftarrow$) does not use
+the gap hypothesis.
+\end{remark}
+
+\subsection{Classification under genericity}
+
+\begin{proposition}[gap classification; \leanref{PhaseClassification.gap_classification}{LEANEXT/phase/PhaseClassification.lean:268}]\label{pc:prop:gaps}
+Let $\alpha,\beta,\delta\in\R$ with $\alpha<\beta$, $\beta<\delta$, $\delta<\alpha+2\pi$, $\beta-\alpha\neq\pi$,
+$\delta-\beta\neq\pi$ and $\alpha+2\pi-\delta\neq\pi$. Then
+\[
+  \bigl(\beta-\alpha<\pi\wedge\delta-\beta<\pi\wedge\alpha+2\pi-\delta<\pi\bigr)\ \vee\ \delta-\alpha<\pi\ \vee\
+  \alpha+2\pi-\beta<\pi\ \vee\ \beta+2\pi-\delta<\pi .
+\]
+\end{proposition}
+
+\begin{proof}
+The gaps $g_1,g_2,g_3$ are positive and sum to $2\pi$, and none equals $\pi$, so each is $<\pi$ or $>\pi$. If all
+three are $<\pi$, the first disjunct holds. Two gaps cannot both exceed $\pi$: their sum would exceed $2\pi$,
+whereas it equals $2\pi$ minus the (positive) third gap. If exactly one gap exceeds $\pi$, the other two sum to
+less than $\pi$: if $g_3>\pi$ then $\delta-\alpha=g_1+g_2=2\pi-g_3<\pi$; if $g_1>\pi$ then
+$\alpha+2\pi-\beta=g_2+g_3<\pi$; if $g_2>\pi$ then $\beta+2\pi-\delta=g_3+g_1<\pi$. (The Lean proof runs through
+the same $2^3$ sign cases, closing the impossible ones by linear arithmetic.)
+\end{proof}
+
+\begin{remark}[boundary cases and exclusivity]\label{pc:rem:gaps}
+(1) Genericity cannot be dropped here: for $(\alpha,\beta,\delta)=(0,\pi,3\pi/2)$ all hypotheses hold except
+$\beta-\alpha\neq\pi$ (here $g_1=\pi$, $g_2=g_3=\pi/2$), and the four disjuncts read $\pi<\pi$ (first conjunct of the first disjunct), $3\pi/2<\pi$, $\pi<\pi$ and $3\pi/2<\pi$, all
+false.
+
+(2) The docstring of \lean{gap_classification} speaks of exactly one case; the Lean statement is only the
+disjunction above. The disjuncts are in fact mutually exclusive whenever $\alpha<\beta<\delta<\alpha+2\pi$ (a
+written step, not part of the Lean statement): if all gaps are $<\pi$, then each sum of two gaps is
+$2\pi$ minus the third, hence $>\pi$; and two of the last three disjuncts together give, after adding,
+$2\pi+g_j<2\pi$ for some $j$, which contradicts $g_j>0$.
+\end{remark}
+
+\begin{theorem}[phase trichotomy; \leanref{PhaseClassification.phase_trichotomy}{LEANEXT/phase/PhaseClassification.lean:285}]\label{pc:thm:trichotomy}
+Let $\alpha,\beta,\delta\in\R$ with $\alpha<\beta$, $\beta<\delta$, $\delta<\alpha+2\pi$, $\beta-\alpha\neq\pi$,
+$\delta-\beta\neq\pi$ and $\alpha+2\pi-\delta\neq\pi$. Then
+\begin{enumerate}[label=(\roman*)]
+\item $\operatorname{Alternating}(\alpha,\beta,\delta)\vee\operatorname{RunMidA}(\alpha,\beta,\delta)\vee
+  \operatorname{RunMidB}(\alpha,\beta,\delta)\vee\operatorname{RunMidD}(\alpha,\beta,\delta)$, and
+\item $\operatorname{Alternating}(\alpha,\beta,\delta)\Rightarrow\bigl(\neg\operatorname{RunMidA}(\alpha,\beta,\delta)
+  \wedge\neg\operatorname{RunMidB}(\alpha,\beta,\delta)\wedge\neg\operatorname{RunMidD}(\alpha,\beta,\delta)\bigr)$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i) Apply Proposition~\ref{pc:prop:gaps}. If all gaps are $<\pi$, Theorem~\ref{pc:thm:alternating} gives
+$\operatorname{Alternating}$. If $\delta-\alpha<\pi$, Lemma~\ref{pc:lem:empty}(a),(b) give $\neg H_1\wedge\neg H_2$,
+i.e.\ $\operatorname{RunMidB}$. If $\alpha+2\pi-\beta<\pi$, Lemma~\ref{pc:lem:empty}(c),(d) give
+$\neg H_2\wedge\neg H_3$, i.e.\ $\operatorname{RunMidD}$. If $\beta+2\pi-\delta<\pi$, Lemma~\ref{pc:lem:empty}(e),(f)
+give $\neg H_3\wedge\neg H_1$, i.e.\ $\operatorname{RunMidA}$. (Each strict inequality implies the weak one
+required by the lemma.)
+
+(ii) $\operatorname{Alternating}$ is $H_1\wedge H_2\wedge H_3$. Its conjunct $H_3$ contradicts the first conjunct
+$\neg H_3$ of $\operatorname{RunMidA}$, $H_1$ contradicts the first conjunct $\neg H_1$ of $\operatorname{RunMidB}$,
+and $H_2$ contradicts the first conjunct $\neg H_2$ of $\operatorname{RunMidD}$. This part uses none of the
+hypotheses.
+\end{proof}
+
+\begin{remark}[what Theorem~\ref{pc:thm:trichotomy} does not state]\label{pc:rem:runs}
+The Lean statement is the conjunction of the disjunction (i) and the implication (ii). It does \emph{not} state
+that the three runs exclude each other. They do (a written step, not Lean-checked): if
+$\alpha<\beta<\delta<\alpha+2\pi$, then $H_1\vee H_2\vee H_3$. Indeed $\alpha<\alpha+\pi<\alpha+2\pi$. If
+$\alpha+\pi<\beta$, the antipode $\alpha+\pi$ gives $H_1$ (with $k=0$); if $\beta<\alpha+\pi<\delta$, it gives $H_2$;
+if $\delta<\alpha+\pi$, it gives $H_3$, since $\alpha+\pi<\alpha+2\pi$. If $\alpha+\pi=\beta$, then
+$\delta\in(\alpha+\pi,\alpha+2\pi)$, so $\delta-\pi\in(\alpha,\beta)$, and $\delta+\pi$ gives $H_1$ with $k=-1$. If
+$\alpha+\pi=\delta$, then $\beta\in(\alpha,\alpha+\pi)$, so $\beta+\pi\in(\delta,\alpha+2\pi)$, and $\beta+\pi$ gives
+$H_3$ with $k=0$. Any two of $\operatorname{RunMidA}$, $\operatorname{RunMidB}$, $\operatorname{RunMidD}$ together
+give $\neg H_1\wedge\neg H_2\wedge\neg H_3$, which is therefore impossible. Hence, under the hypotheses of
+Theorem~\ref{pc:thm:trichotomy}, exactly one of the four patterns holds.
+\end{remark}
+
+\subsection{The rules in pattern form}
+
+In this subsection $c\in\R^2$, $r_a,r_b,r_d,\alpha,\beta,\delta\in\R$, $\operatorname{polar}$ is
+\lean{PhaseClassification.polar}, and
+\[
+  a=\operatorname{polar}(c,r_a,\alpha),\qquad b=\operatorname{polar}(c,r_b,\beta),\qquad d=\operatorname{polar}(c,r_d,\delta).
+\]
+
+\begin{theorem}[rule A from the pattern; \leanref{PhaseClassification.orient_pos_of_alternating}{LEANEXT/phase/PhaseClassification.lean:301}]\label{pc:thm:rule-alt}
+If $0<r_a$, $0<r_b$, $0<r_d$, $\alpha<\beta$, $\beta<\delta$, $\delta<\alpha+2\pi$ and
+$\operatorname{Alternating}(\alpha,\beta,\delta)$, then $0<\orient(a,b,d)$.
+\end{theorem}
+
+\begin{proof}
+By Theorem~\ref{pc:thm:alternating}, $\beta-\alpha<\pi$, $\delta-\beta<\pi$ and $\alpha+2\pi-\delta<\pi$; the
+ordering gives $0<\beta-\alpha$, $0<\delta-\beta$ and $0<\alpha-\delta+2\pi$. Lemma~\ref{pc:lem:polar-facts}(c)
+applies.
+\end{proof}
+
+\begin{theorem}[rule B from a run; \leanref{PhaseClassification.orient_pos_of_runMidB}{LEANEXT/phase/PhaseClassification.lean:310}, \leanref{PhaseClassification.orient_pos_of_runMidD}{LEANEXT/phase/PhaseClassification.lean:318}, \leanref{PhaseClassification.orient_pos_of_runMidA}{LEANEXT/phase/PhaseClassification.lean:342}]\label{pc:thm:rule-run}
+Let $c$, $r_a,r_b,r_d,\alpha,\beta,\delta$ and $a,b,d$ be as above.
+\begin{enumerate}[label=(\Alph*)]
+\item[\textup{(B)}] If $0<r_a$, $0<r_d$, $\alpha<\beta$, $\beta<\delta$, $\delta<\alpha+2\pi$,
+  $\alpha+2\pi-\delta\neq\pi$, $\operatorname{RunMidB}(\alpha,\beta,\delta)$, $r_a\le r_b$ and $r_d\le r_b$, then
+  $0<\orient(a,b,d)$.
+\item[\textup{(D)}] If $0<r_a$, $0<r_b$, $\alpha<\beta$, $\beta<\delta$, $\delta<\alpha+2\pi$, $\beta-\alpha\neq\pi$,
+  $\operatorname{RunMidD}(\alpha,\beta,\delta)$, $r_b\le r_d$ and $r_a\le r_d$, then $0<\orient(a,b,d)$.
+\item[\textup{(A)}] If $0<r_b$, $0<r_d$, $\alpha<\beta$, $\beta<\delta$, $\delta<\alpha+2\pi$, $\delta-\beta\neq\pi$,
+  $\operatorname{RunMidA}(\alpha,\beta,\delta)$, $r_b\le r_a$ and $r_d\le r_a$, then $0<\orient(a,b,d)$.
+\end{enumerate}
+In each case the radius of the middle point of the run is not assumed positive.
+\end{theorem}
+
+\begin{proof}
+(B) Theorem~\ref{pc:thm:runB} turns $\operatorname{RunMidB}(\alpha,\beta,\delta)$ into $\delta-\alpha<\pi$. With
+$0<\beta-\alpha$ and $0<\delta-\beta$ from the ordering, Lemma~\ref{pc:lem:polar-facts}(e) gives the claim.
+
+(D) Put $(\alpha',\beta',\delta')=(\beta,\delta,\alpha+2\pi)$. Then $\alpha'<\beta'$ ($\beta<\delta$),
+$\beta'<\delta'$ ($\delta<\alpha+2\pi$) and $\delta'<\alpha'+2\pi$ ($\alpha+2\pi<\beta+2\pi$, from $\alpha<\beta$).
+Further $\alpha'+2\pi-\delta'=\beta-\alpha\neq\pi$, and $\operatorname{RunMidB}(\alpha',\beta',\delta')$ holds by
+Lemma~\ref{pc:lem:shift}(c). Apply (B) to these directions with the radii $(r_b,r_d,r_a)$ in place of
+$(r_a,r_b,r_d)$; its radius hypotheses $0<r_b$, $0<r_a$, $r_b\le r_d$, $r_a\le r_d$ are among ours. It gives
+$0<\orient(\operatorname{polar}(c,r_b,\beta),\operatorname{polar}(c,r_d,\delta),\operatorname{polar}(c,r_a,\alpha+2\pi))$.
+By Lemma~\ref{pc:lem:periodic}(b) the last point is $a$, so $0<\orient(b,d,a)=\orient(a,b,d)$ by cyclic invariance.
+
+(A) Put $(\alpha',\beta',\delta')=(\delta,\alpha+2\pi,\beta+2\pi)$. Then $\delta<\alpha+2\pi$,
+$\alpha+2\pi<\beta+2\pi$ and $\beta+2\pi<\delta+2\pi$, so $\alpha'<\beta'<\delta'<\alpha'+2\pi$; further
+$\alpha'+2\pi-\delta'=\delta-\beta\neq\pi$, and $\operatorname{RunMidB}(\alpha',\beta',\delta')$ holds by
+Lemma~\ref{pc:lem:shift}(d). Apply (B) with the radii $(r_d,r_a,r_b)$ in place of $(r_a,r_b,r_d)$; its radius
+hypotheses $0<r_d$, $0<r_b$, $r_d\le r_a$, $r_b\le r_a$ are among ours. It gives
+$0<\orient(\operatorname{polar}(c,r_d,\delta),\operatorname{polar}(c,r_a,\alpha+2\pi),
+\operatorname{polar}(c,r_b,\beta+2\pi))=\orient(d,a,b)$ by Lemma~\ref{pc:lem:periodic}(b), and
+$\orient(d,a,b)=\orient(a,b,d)$ by cyclic invariance.
+\end{proof}
+
+\begin{theorem}[sign from the phase pattern, sorted directions; \leanref{PhaseClassification.orient_pos_of_phase}{LEANEXT/phase/PhaseClassification.lean:372}]\label{pc:thm:phase}
+Assume $0<r_a$, $0<r_b$, $0<r_d$, $\alpha<\beta$, $\beta<\delta$, $\delta<\alpha+2\pi$, $\beta-\alpha\neq\pi$,
+$\delta-\beta\neq\pi$, $\alpha+2\pi-\delta\neq\pi$, and
+\begin{itemize}
+\item $\operatorname{RunMidA}(\alpha,\beta,\delta)\Rightarrow(r_b\le r_a\wedge r_d\le r_a)$,
+\item $\operatorname{RunMidB}(\alpha,\beta,\delta)\Rightarrow(r_a\le r_b\wedge r_d\le r_b)$,
+\item $\operatorname{RunMidD}(\alpha,\beta,\delta)\Rightarrow(r_b\le r_d\wedge r_a\le r_d)$.
+\end{itemize}
+Then $0<\orient(a,b,d)$.
+\end{theorem}
+
+\begin{proof}
+By Theorem~\ref{pc:thm:trichotomy}(i) one of four cases holds. If $\operatorname{Alternating}(\alpha,\beta,\delta)$,
+apply Theorem~\ref{pc:thm:rule-alt}. If $\operatorname{RunMidA}$, the first implication gives $r_b\le r_a$ and
+$r_d\le r_a$, and Theorem~\ref{pc:thm:rule-run}(A) applies (with $0<r_b$, $0<r_d$, $\delta-\beta\neq\pi$). If
+$\operatorname{RunMidB}$, the second gives $r_a\le r_b$, $r_d\le r_b$, and (B) applies (with $0<r_a$, $0<r_d$,
+$\alpha+2\pi-\delta\neq\pi$). If $\operatorname{RunMidD}$, the third gives $r_b\le r_d$, $r_a\le r_d$, and (D)
+applies (with $0<r_a$, $0<r_b$, $\beta-\alpha\neq\pi$).
+\end{proof}
+
+The two patterns have a direct geometric meaning.
+
+\begin{proposition}[alternation puts the centre inside the triangle; \leanref{PhaseClassification.centre_inside_of_alternating}{LEANEXT/phase/PhaseClassification.lean:414}]\label{pc:prop:centre}
+If $0<r_a$, $0<r_b$, $0<r_d$, $\alpha<\beta$, $\beta<\delta$, $\delta<\alpha+2\pi$ and
+$\operatorname{Alternating}(\alpha,\beta,\delta)$, then
+\[
+  0<\orient(a,b,c),\qquad 0<\orient(b,d,c),\qquad 0<\orient(d,a,c).
+\]
+\end{proposition}
+
+\begin{proof}
+By Theorem~\ref{pc:thm:alternating}, $\beta-\alpha$, $\delta-\beta$ and $\alpha+2\pi-\delta$ lie in $(0,\pi)$. By
+Lemma~\ref{pc:lem:polar-facts}(b), applied to the pairs $(a,b)$, $(b,d)$ and $(d,a)$,
+\[
+  \orient(a,b,c)=r_ar_b\sin(\beta-\alpha),\quad \orient(b,d,c)=r_br_d\sin(\delta-\beta),\quad
+  \orient(d,a,c)=r_dr_a\sin(\alpha-\delta),
+\]
+and $\sin(\alpha-\delta)=\sin(\alpha+2\pi-\delta)$. All three sines and all radii are positive.
+\end{proof}
+
+\begin{proposition}[a run with middle $\beta$ lies in an open half-plane through the centre; \leanref{PhaseClassification.halfplane_of_runMidB}{LEANEXT/phase/PhaseClassification.lean:431}]\label{pc:prop:halfplane}
+If $0<r_a$, $0<r_b$, $0<r_d$, $\alpha<\beta$, $\beta<\delta$, $\delta<\alpha+2\pi$, $\alpha+2\pi-\delta\neq\pi$ and
+$\operatorname{RunMidB}(\alpha,\beta,\delta)$, then there is $\varphi\in\R$ such that for every
+$p\in\{a,b,d\}$,
+\[
+  0<(p_0-c_0)\cos\varphi+(p_1-c_1)\sin\varphi .
+\]
+\end{proposition}
+
+\begin{proof}
+By Theorem~\ref{pc:thm:runB}, $\delta-\alpha<\pi$. Take $\varphi=(\alpha+\delta)/2$. For $p=\operatorname{polar}(c,r,\theta)$,
+\[
+  (p_0-c_0)\cos\varphi+(p_1-c_1)\sin\varphi=r(\cos\theta\cos\varphi+\sin\theta\sin\varphi)=r\cos(\theta-\varphi).
+\]
+For $\theta\in\{\alpha,\beta,\delta\}\subseteq[\alpha,\delta]$ we have
+$\abs{\theta-\varphi}\le(\delta-\alpha)/2<\pi/2$, so $\cos(\theta-\varphi)>0$; the radius $r\in\{r_a,r_b,r_d\}$ is
+positive.
+\end{proof}
+
+\subsection{Arbitrary real directions}
+
+\begin{theorem}[sign for arbitrary directions; \leanref{PhaseClassification.orient_sign_of_phase}{LEANEXT/phase/PhaseClassification.lean:496}]\label{pc:thm:sign}
+Let $c\in\R^2$ and $r_a,r_b,r_d,\alpha,\beta,\delta\in\R$ with $0<r_a$, $0<r_b$, $0<r_d$, and let
+$a=\operatorname{polar}(c,r_a,\alpha)$, $b=\operatorname{polar}(c,r_b,\beta)$, $d=\operatorname{polar}(c,r_d,\delta)$,
+where $\operatorname{polar}$ is \lean{PhaseClassification.polar}. Put $\beta'=\operatorname{toIcoMod}(\alpha,\beta)$
+and $\delta'=\operatorname{toIcoMod}(\alpha,\delta)$, and assume $\beta'\neq\alpha$ and $\delta'\neq\alpha$. Then
+both of the following hold.
+\begin{enumerate}[label=(\roman*)]
+\item If $\beta'<\delta'$, $\beta'-\alpha\neq\pi$, $\delta'-\beta'\neq\pi$, $\alpha+2\pi-\delta'\neq\pi$,
+  $\operatorname{RunMidA}(\alpha,\beta',\delta')\Rightarrow(r_b\le r_a\wedge r_d\le r_a)$,
+  $\operatorname{RunMidB}(\alpha,\beta',\delta')\Rightarrow(r_a\le r_b\wedge r_d\le r_b)$ and
+  $\operatorname{RunMidD}(\alpha,\beta',\delta')\Rightarrow(r_b\le r_d\wedge r_a\le r_d)$, then $0<\orient(a,b,d)$.
+\item If $\delta'<\beta'$, $\delta'-\alpha\neq\pi$, $\beta'-\delta'\neq\pi$, $\alpha+2\pi-\beta'\neq\pi$,
+  $\operatorname{RunMidA}(\alpha,\delta',\beta')\Rightarrow(r_d\le r_a\wedge r_b\le r_a)$,
+  $\operatorname{RunMidB}(\alpha,\delta',\beta')\Rightarrow(r_a\le r_d\wedge r_b\le r_d)$ and
+  $\operatorname{RunMidD}(\alpha,\delta',\beta')\Rightarrow(r_d\le r_b\wedge r_a\le r_b)$, then $\orient(a,b,d)<0$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+By (T1), $\alpha\le\beta'<\alpha+2\pi$ and $\alpha\le\delta'<\alpha+2\pi$; with $\beta'\neq\alpha$ and
+$\delta'\neq\alpha$ we get $\alpha<\beta'$ and $\alpha<\delta'$. By Lemma~\ref{pc:lem:periodic}(c),
+$b=\operatorname{polar}(c,r_b,\beta')$ and $d=\operatorname{polar}(c,r_d,\delta')$.
+
+(i) The directions $(\alpha,\beta',\delta')$ satisfy $\alpha<\beta'<\delta'<\alpha+2\pi$, and the remaining
+hypotheses of (i) are exactly the gap conditions and radius implications of Theorem~\ref{pc:thm:phase} for these
+directions and the radii $(r_a,r_b,r_d)$. Hence $0<\orient(a,b,d)$.
+
+(ii) Apply Theorem~\ref{pc:thm:phase} to the directions $(\alpha,\delta',\beta')$, which satisfy
+$\alpha<\delta'<\beta'<\alpha+2\pi$, and the radii $(r_a,r_d,r_b)$ in place of $(r_a,r_b,r_d)$. Its gap conditions
+are $\delta'-\alpha\neq\pi$, $\beta'-\delta'\neq\pi$, $\alpha+2\pi-\beta'\neq\pi$, and its radius implications,
+with $r_b$ and $r_d$ interchanged, are exactly the three implications of (ii). Hence
+$0<\orient(a,\operatorname{polar}(c,r_d,\delta'),\operatorname{polar}(c,r_b,\beta'))=\orient(a,d,b)=-\orient(a,b,d)$,
+so $\orient(a,b,d)<0$.
+\end{proof}
+
+\begin{remark}[scope of Theorem~\ref{pc:thm:sign}]\label{pc:rem:sign-scope}
+The case $\beta'=\delta'$ (the points $b$ and $d$ on one ray from $c$) is not covered, and $\beta'=\alpha$ or
+$\delta'=\alpha$ is excluded by hypothesis. In Lean this theorem is not combined with the layer theorems of
+Subsection~\ref{pc:sub:layers} (\dirn{LEANEXT/capstone/REPORT.md}, open issues).
+\end{remark}
+
+\subsection{The discrete dichotomy of cyclic words}
+
+Let $\mathrm{Fin}\,6=\{0,1,\dots,5\}$ with addition modulo $6$, and $\mathrm{Bool}=\{\mathrm{true},\mathrm{false}\}$
+with negation $\neg$. A Boolean value $x$ used as a statement means $x=\mathrm{true}$.
+
+\begin{theorem}[discrete dichotomy, computer-assisted in Lean; written proof by hand; \leanref{PhaseClassification.word_dichotomy}{LEANEXT/phase/PhaseClassification.lean:539}]\label{pc:thm:word}
+For every $s\colon\mathrm{Fin}\,6\to\mathrm{Bool}$ such that $s(i+3)=\neg s(i)$ for all $i\in\mathrm{Fin}\,6$:
+\begin{enumerate}[label=(\roman*)]
+\item $\bigl(\forall i:\ s(i+1)=\neg s(i)\bigr)\ \vee\ \bigl(\exists i:\ s(i)\wedge s(i+1)\wedge s(i+2)\bigr)$, and
+\item $\neg\Bigl(\bigl(\forall i:\ s(i+1)=\neg s(i)\bigr)\wedge\bigl(\exists i:\ s(i)\wedge s(i+1)\wedge s(i+2)\bigr)\Bigr)$.
+\end{enumerate}
+\end{theorem}
+
+\paragraph{How Lean checks it.} The statement quantifies over the finite type of functions
+$\mathrm{Fin}\,6\to\mathrm{Bool}$, which has $2^6=64$ elements, and inside over $\mathrm{Fin}\,6$; all atoms are
+equalities of Booleans. Lean therefore has a decision procedure for it. For each of the $64$ functions $s$, the
+procedure decides the implication from the premise (the six equalities $s(i+3)=\neg s(i)$) to the conclusion
+(i)~$\wedge$~(ii), whose atoms are the six equalities $s(i+1)=\neg s(i)$ of the alternation condition and the six
+triples $s(i),s(i+1),s(i+2)$ of the run condition. Lean's decision procedure for an implication evaluates the
+premise first and the conclusion only when the premise holds, so the conclusion is evaluated only for the $8$
+functions listed in the proof below. The tactic \lean{decide} evaluates the procedure during elaboration, and the
+Lean kernel evaluates it again, to \lean{true}, when it type-checks the resulting proof term
+(\lean{of_decide_eq_true} applied to \lean{Eq.refl}~\lean{true}). No
+\lean{native_decide} is used, so no \lean{Lean.ofReduceBool} axiom enters; \dirn{LEANEXT/phase/logs/axioms.log}
+records the three standard axioms. Mutant M7 of the mutation script \dirn{LEANEXT/phase/mutants.py} replaces the
+premise by \lean{True}; the mutation log \dirn{LEANEXT/phase/logs/mutants.log}, which calls this mutant ``drop
+antipodal premise in \lean{word_dichotomy}'', records that it fails to compile with the error ``Tactic
+\lean{decide} proved that the proposition'' (the script logs only the first line of the first error message;
+Lean's message continues with the proposition and ``is false''). The mutated statement is indeed false: for
+example, the word $PPAPPA$ (with $P=\mathrm{true}$, $A=\mathrm{false}$; it violates the premise, as $s(3)=s(0)$) is
+neither alternating nor contains a cyclic $PPP$.
+
+\begin{proof}[Written proof (by hand)]
+Let $s$ satisfy the premise and put $x=s(0)$, $y=s(1)$, $z=s(2)$. The premise gives $s(3)=\neg x$, $s(4)=\neg y$,
+$s(5)=\neg z$, so $s=(x,y,z,\neg x,\neg y,\neg z)$ and there are exactly eight such words. Conversely each of
+these eight words satisfies the premise, since $s(i+3)=\neg s(i)$ for $i=0,1,2$ gives it for $i=3,4,5$ as well. In
+the notation $P=\mathrm{true}$, $A=\mathrm{false}$, and listing positions $0,\dots,5$, they are:
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+$(x,y,z)$ & word & property \\
+\midrule
+$(P,P,P)$ & $PPPAAA$ & run $PPP$ at $i=0$ \\
+$(P,P,A)$ & $PPAAAP$ & run at $i=5$ (positions $5,0,1$) \\
+$(P,A,P)$ & $PAPAPA$ & alternating \\
+$(P,A,A)$ & $PAAAPP$ & run at $i=4$ (positions $4,5,0$) \\
+$(A,P,P)$ & $APPPAA$ & run at $i=1$ \\
+$(A,P,A)$ & $APAPAP$ & alternating \\
+$(A,A,P)$ & $AAPPPA$ & run at $i=2$ \\
+$(A,A,A)$ & $AAAPPP$ & run at $i=3$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+This proves (i). For (ii): if $s(i+1)=\neg s(i)$ for all $i$, then $s(i)$ and $s(i+1)$ are never both true, so
+there is no cyclic run. (A shorter argument for (i): if $s$ is not alternating, then $s(i+1)=s(i)$ for some $i$, and
+then also $s(i+4)=\neg s(i+1)=\neg s(i)=s(i+3)$; one of the equal pairs $\{i,i+1\}$, $\{i+3,i+4\}$ consists of two
+$P$'s, say at $j,j+1$. If $s(j+2)=P$ there is a run at $j$; otherwise $s(j-1)=s(j+5)=\neg s(j+2)=P$ and there is a
+run at $j-1$.)
+\end{proof}
+
+\begin{remark}[scope of Theorem~\ref{pc:thm:word}]\label{pc:rem:word-scope}
+This is a statement about Boolean words only. The layered encoders read the six directions $\alpha,\beta,\delta,
+\alpha+\pi,\beta+\pi,\delta+\pi$, sorted counterclockwise, as such a word ($P$ for a direction, $A$ for an
+antipode). That this sorted word satisfies $s(i+3)=\neg s(i)$, and that a cyclic $PPP$ in it is
+$\operatorname{RunMidA}$, $\operatorname{RunMidB}$ or $\operatorname{RunMidD}$ of the middle point, is not proved in
+\dirn{LEANEXT} (\dirn{LEANEXT/phase/REPORT.md}, ``Not in Lean'', item 2). For encoder~B, the Lean version of the
+encoder in the ENCBLEAN package has a Lean-checked counterpart of the second link that does not use
+Theorem~\ref{pc:thm:word}: \lean{EncB.wordSpec} (\dirn{ENCBLEAN/EncB/SoundWord.lean:222}) derives the rule-B
+pattern \lean{EncB.BlockCCW} from three cyclically consecutive points of the encoder's sorted word, and, in
+\dirn{ENCBLEAN/geo/ES8Geo/ArcBridge.lean}, \lean{EncB.Geo.Arc.arcFrame} (line 393) identifies, for a polar labelling
+of the layers, the arc tests of this pattern with the tests $\operatorname{arcHasAntipode}$ for true directions
+$\alpha<\beta<\delta<\alpha+2\pi$, from which \lean{EncB.Geo.labelling_ruleB} (line 473) obtains
+$\operatorname{RunMidB}(\alpha,\beta,\delta)$ and applies Theorem~\ref{pc:thm:rule-run}(B). These three
+declarations depend only on \lean{propext}, \lean{Classical.choice} and \lean{Quot.sound}: for \lean{wordSpec} by
+the \texttt{\#guard\_msgs} pin that follows it (\dirn{ENCBLEAN/EncB/SoundWord.lean}, lines 228--229; the module is
+built in \dirn{ENCBLEAN/logs/m3_build.log}, line 9, and \dirn{ENCBLEAN/logs/axioms.log}, line 446, gives the same
+list), and for \lean{arcFrame} and \lean{labelling_ruleB} by their \texttt{\#print axioms} output in
+\dirn{ENCBLEAN/logs/m8_fix_build.log}, lines 35 and 29, and by the pin of \lean{EncB.Geo.modelOfLabelling} (which
+uses \lean{labelling_ruleB}) described under Rigor and axioms. The case split for real directions that is
+Lean-checked here is Theorem~\ref{pc:thm:trichotomy}.
+\end{remark}
+
+\subsection{Rule B on the layers of a symmetric set}\label{pc:sub:layers}
+
+In this subsection $S$ is a finite set of points, $c\in\R^2$, $m,K\in\N$, and $\rho=\operatorname{rotAbout}(c,2\pi/m)$
+is the counterclockwise rotation about $c$ by $2\pi/m$ (Definition~\ref{fd:def:rot}; $m$ is cast to $\R$). We say that
+\emph{the layer hypotheses \textup{(L)} hold} if
+\[
+  0<m,\qquad K\le 2m,\qquad c\notin S,\qquad \operatorname{Invariant}(\rho,S),\qquad \neg\operatorname{HasConvexNGon}(K,S),
+\]
+where $\operatorname{Invariant}(\rho,S)$ means $\rho(p)\in S$ for all $p\in S$ (Definition~\ref{fd:def:inv}) and
+$\operatorname{HasConvexNGon}(K,S)$ means that some $K$-element subset of $S$ is in convex position
+(Definition~\ref{fd:def:ngon}). In this subsection $\operatorname{polar}$ is \lean{LayerLemma.polar}; by
+Lemma~\ref{pc:lem:helpers}(a) it is the same function as \lean{PhaseClassification.polar}, so the results of the
+previous subsections apply to it.
+
+We use two facts from the layer sections. First, $\peel(S,n)\subseteq S$ and $\hv(T)\subseteq T$ for all $n$ and
+all finite $T$ (Lean \lean{peel_subset}, \lean{hullVerts_subset}): $\hv(T)$ is defined as a subset of $T$
+(Definition~\ref{ll:def:hv}), and $\peel(S,n+1)=\peel(S,n)\setminus\hv(\peel(S,n))\subseteq\peel(S,n)$
+(Definition~\ref{ll:def:peel}), so induction on $n$ gives the first inclusion. Second, the radius order of the
+layers (Theorem~\ref{lg:thm:radius}; Lean \lean{ErdosSzekeres.LayerLemma.dist2_le_of_later},
+\dirn{LAYERLEAN/LayerLemma.lean:1012}, repeated at \dirn{LEANEXT/linked/Linked.lean:1012} and
+\dirn{LEANEXT/capstone/Capstone2.lean:1020}): \emph{if \textup{(L)} holds, $n\le n'$, $x\in\hv(\peel(S,n))$ and
+$y\in\peel(S,n')$, then $\operatorname{dist2}(c,y)\le\operatorname{dist2}(c,x)$.} We also use the elementary fact
+that $0<r$, $0<r'$ and $r^2\le r'^2$ imply $r\le r'$ (otherwise $r^2-r'^2=(r-r')(r+r')>0$).
+
+\begin{theorem}[rule B on the convex layers; \leanref{ErdosSzekeres.LayerLemma.orient_pos_of_layers}{LEANEXT/linked/Linked.lean:1398} for (a), and the six declarations of \lean{ErdosSzekeres.Capstone} cited in (b)--(e)]\label{pc:thm:layers}
+Assume \textup{(L)}. Let $n_a,n_b,n_d\in\N$ and $a,b,d\in\R^2$. For real $r_a,r_b,r_d,\alpha,\beta,\delta$ let
+\textup{(P)} denote the conditions
+\[
+  0<r_a,\quad 0<r_b,\quad 0<r_d,\quad a=\operatorname{polar}(c,r_a,\alpha),\quad b=\operatorname{polar}(c,r_b,\beta),
+  \quad d=\operatorname{polar}(c,r_d,\delta),
+\]
+and for real $\alpha,\beta,\delta$ let \textup{(P$\surd$)} denote the conditions
+\[
+  a=\operatorname{polar}\bigl(c,\sqrt{\operatorname{dist2}(c,a)},\alpha\bigr),\quad
+  b=\operatorname{polar}\bigl(c,\sqrt{\operatorname{dist2}(c,b)},\beta\bigr),\quad
+  d=\operatorname{polar}\bigl(c,\sqrt{\operatorname{dist2}(c,d)},\delta\bigr).
+\]
+\begin{enumerate}[label=(\alph*)]
+\item \textup{(\lean{orient_pos_of_layers})} If $a\in\peel(S,n_a)$, $b\in\hv(\peel(S,n_b))$, $d\in\peel(S,n_d)$,
+  $n_b\le n_a$, $n_b\le n_d$, and $r_a,r_b,r_d,\alpha,\beta,\delta\in\R$ satisfy \textup{(P)}, $0<\beta-\alpha$,
+  $0<\delta-\beta$ and $\delta-\alpha<\pi$, then $0<\orient(a,b,d)$.
+\item \textup{(\leanref{ErdosSzekeres.Capstone.orient_pos_of_layers_runMidB}{LEANEXT/capstone/Capstone.lean:1977}.)}
+  If $a\in\peel(S,n_a)$, $b\in\hv(\peel(S,n_b))$,
+  $d\in\peel(S,n_d)$, $n_b\le n_a$, $n_b\le n_d$, and $r_a,r_b,r_d,\alpha,\beta,\delta\in\R$ satisfy \textup{(P)},
+  $\alpha<\beta$, $\beta<\delta$, $\delta<\alpha+2\pi$, $\alpha+2\pi-\delta\neq\pi$ and
+  $\operatorname{RunMidB}(\alpha,\beta,\delta)$, then $0<\orient(a,b,d)$.
+\item \textup{(\leanref{ErdosSzekeres.Capstone.orient_pos_of_layers_runMidD}{LEANEXT/capstone/Capstone2.lean:2011}.)}
+  If $a\in\peel(S,n_a)$, $b\in\peel(S,n_b)$,
+  $d\in\hv(\peel(S,n_d))$, $n_d\le n_a$, $n_d\le n_b$, and $r_a,r_b,r_d,\alpha,\beta,\delta\in\R$ satisfy
+  \textup{(P)}, $\alpha<\beta$, $\beta<\delta$, $\delta<\alpha+2\pi$, $\beta-\alpha\neq\pi$ and
+  $\operatorname{RunMidD}(\alpha,\beta,\delta)$, then $0<\orient(a,b,d)$.
+\item \textup{(\leanref{ErdosSzekeres.Capstone.orient_pos_of_layers_runMidA}{LEANEXT/capstone/Capstone2.lean:2031}.)}
+  If $a\in\hv(\peel(S,n_a))$, $b\in\peel(S,n_b)$,
+  $d\in\peel(S,n_d)$, $n_a\le n_b$, $n_a\le n_d$, and $r_a,r_b,r_d,\alpha,\beta,\delta\in\R$ satisfy \textup{(P)},
+  $\alpha<\beta$, $\beta<\delta$, $\delta<\alpha+2\pi$, $\delta-\beta\neq\pi$ and
+  $\operatorname{RunMidA}(\alpha,\beta,\delta)$, then $0<\orient(a,b,d)$.
+\item \textup{(The \lean{_intrinsic} versions.)} Let $\alpha,\beta,\delta\in\R$. Then $0<\orient(a,b,d)$ in each
+  of the following three cases:
+  \begin{enumerate}[label=(e\arabic*)]
+  \item \textup{(\leanref{ErdosSzekeres.Capstone.orient_pos_of_layers_runMidB_intrinsic}{LEANEXT/capstone/Capstone2.lean:2082}.)}
+    $a\in\peel(S,n_a)$, $b\in\hv(\peel(S,n_b))$,
+    $d\in\peel(S,n_d)$, $n_b\le n_a$, $n_b\le n_d$, \textup{(P$\surd$)}, $\alpha<\beta$, $\beta<\delta$,
+    $\delta<\alpha+2\pi$, $\alpha+2\pi-\delta\neq\pi$ and $\operatorname{RunMidB}(\alpha,\beta,\delta)$;
+  \item \textup{(\leanref{ErdosSzekeres.Capstone.orient_pos_of_layers_runMidD_intrinsic}{LEANEXT/capstone/Capstone2.lean:2098}.)}
+    $a\in\peel(S,n_a)$, $b\in\peel(S,n_b)$,
+    $d\in\hv(\peel(S,n_d))$, $n_d\le n_a$, $n_d\le n_b$, \textup{(P$\surd$)}, $\alpha<\beta$, $\beta<\delta$,
+    $\delta<\alpha+2\pi$, $\beta-\alpha\neq\pi$ and $\operatorname{RunMidD}(\alpha,\beta,\delta)$;
+  \item \textup{(\leanref{ErdosSzekeres.Capstone.orient_pos_of_layers_runMidA_intrinsic}{LEANEXT/capstone/Capstone2.lean:2115}.)}
+    $a\in\hv(\peel(S,n_a))$, $b\in\peel(S,n_b)$,
+    $d\in\peel(S,n_d)$, $n_a\le n_b$, $n_a\le n_d$, \textup{(P$\surd$)}, $\alpha<\beta$, $\beta<\delta$,
+    $\delta<\alpha+2\pi$, $\delta-\beta\neq\pi$ and $\operatorname{RunMidA}(\alpha,\beta,\delta)$.
+  \end{enumerate}
+\end{enumerate}
+General position of $S$ is not assumed.
+\end{theorem}
+
+\begin{proof}
+(a) Apply the radius order with $(n,n',x,y)=(n_b,n_a,b,a)$ and with $(n_b,n_d,b,d)$: this gives
+$\operatorname{dist2}(c,a)\le\operatorname{dist2}(c,b)$ and $\operatorname{dist2}(c,d)\le\operatorname{dist2}(c,b)$. By
+(P) and Lemma~\ref{pc:lem:helpers}(c) these read $r_a^2\le r_b^2$ and $r_d^2\le r_b^2$, hence $r_a\le r_b$ and
+$r_d\le r_b$ as all radii are positive. Rule~B, Lemma~\ref{pc:lem:polar-facts}(e) (in Lean the \lean{LayerLemma}
+copy, Lemma~\ref{lg:lem:ruleB}), with $0<r_a$, $0<r_d$, $0<\beta-\alpha$, $0<\delta-\beta$ and $\delta-\alpha<\pi$
+gives $0<\orient(a,b,d)$.
+
+(b) By Theorem~\ref{pc:thm:runB} (with $\alpha<\beta<\delta<\alpha+2\pi$ and $\alpha+2\pi-\delta\neq\pi$),
+$\operatorname{RunMidB}(\alpha,\beta,\delta)$ gives $\delta-\alpha<\pi$. Together with $0<\beta-\alpha$ and
+$0<\delta-\beta$, part (a) applies.
+
+(c) The radius order with $(n_d,n_a,d,a)$ and $(n_d,n_b,d,b)$ gives $\operatorname{dist2}(c,a)\le\operatorname{dist2}(c,d)$
+and $\operatorname{dist2}(c,b)\le\operatorname{dist2}(c,d)$, so $r_a^2\le r_d^2$ and $r_b^2\le r_d^2$, hence
+$r_a\le r_d$ and $r_b\le r_d$. Theorem~\ref{pc:thm:rule-run}(D), with $0<r_a$, $0<r_b$, the ordering,
+$\beta-\alpha\neq\pi$, $\operatorname{RunMidD}(\alpha,\beta,\delta)$, $r_b\le r_d$ and $r_a\le r_d$, gives
+$0<\orient(a,b,d)$.
+
+(d) The radius order with $(n_a,n_b,a,b)$ and $(n_a,n_d,a,d)$ gives $r_b^2\le r_a^2$ and $r_d^2\le r_a^2$, hence
+$r_b\le r_a$ and $r_d\le r_a$. Theorem~\ref{pc:thm:rule-run}(A), with $0<r_b$, $0<r_d$, the ordering,
+$\delta-\beta\neq\pi$, $\operatorname{RunMidA}(\alpha,\beta,\delta)$, $r_b\le r_a$ and $r_d\le r_a$, gives
+$0<\orient(a,b,d)$.
+
+(e) In each case $a,b,d\in S$: a point of $\peel(S,n)$ lies in $S$, and a point of $\hv(\peel(S,n))$ lies in
+$\peel(S,n)\subseteq S$. As $c\notin S$, Lemma~\ref{pc:lem:helpers}(f) gives $a,b,d\neq c$, and
+Lemma~\ref{pc:lem:helpers}(e) gives $0<\sqrt{\operatorname{dist2}(c,a)}$, $0<\sqrt{\operatorname{dist2}(c,b)}$ and
+$0<\sqrt{\operatorname{dist2}(c,d)}$. So (P) holds with $r_a=\sqrt{\operatorname{dist2}(c,a)}$,
+$r_b=\sqrt{\operatorname{dist2}(c,b)}$, $r_d=\sqrt{\operatorname{dist2}(c,d)}$, and (e1), (e2), (e3) follow from (b),
+(c), (d) respectively.
+\end{proof}
+
+\begin{corollary}[rule A restated; \leanref{ErdosSzekeres.Capstone.orient_pos_of_alternating_polar}{LEANEXT/capstone/Capstone.lean:1992}]\label{pc:cor:alt-polar}
+Let $c\in\R^2$ and $r_a,r_b,r_d,\alpha,\beta,\delta\in\R$ with $0<r_a$, $0<r_b$, $0<r_d$, $\alpha<\beta$,
+$\beta<\delta$, $\delta<\alpha+2\pi$ and $\operatorname{Alternating}(\alpha,\beta,\delta)$. Then, with
+$\operatorname{polar}$ the constant \lean{LayerLemma.polar},
+$0<\orient(\operatorname{polar}(c,r_a,\alpha),\operatorname{polar}(c,r_b,\beta),\operatorname{polar}(c,r_d,\delta))$.
+No layer hypotheses are involved.
+\end{corollary}
+
+\begin{proof}
+By Lemma~\ref{pc:lem:helpers}(a) this is Theorem~\ref{pc:thm:rule-alt}. (The Lean proof repeats the proof of
+Theorem~\ref{pc:thm:rule-alt} with the \lean{LayerLemma} copy of rule~A, Lemma~\ref{lg:lem:ruleA}.)
+\end{proof}
+
+\begin{remark}[what the layer theorems assume]\label{pc:rem:layers-scope}
+In Theorem~\ref{pc:thm:layers} the polar forms (with radius variables in (a)--(d), with the intrinsic radii
+$\sqrt{\operatorname{dist2}(c,\cdot)}$ in (e)) and the conditions on the given directions are hypotheses: in (a)
+the conditions $0<\beta-\alpha$, $0<\delta-\beta$ and $\delta-\alpha<\pi$; in (b)--(e) the strict order
+$\alpha<\beta<\delta<\alpha+2\pi$, the gap condition $\neq\pi$ and the pattern. They are not derived from the
+symmetry or from general position. Directions with (P$\surd$) exist for every point other than $c$
+(Lemma~\ref{pc:lem:helpers}(d)), but choosing them in sorted order and excluding gaps equal to $\pi$ is left to the
+user of these theorems; the reduction of arbitrary directions in Theorem~\ref{pc:thm:sign} is not combined with
+the layer hypotheses in Lean. The middle point (the point $b$ of the middle direction in (a), the middle point of
+the run in (b)--(e)) is required to be a hull vertex of a layer whose index is at most the indices of the layers
+of the other two points, and the conclusion is about the fixed order $(a,b,d)$.
+\end{remark}
+
+\paragraph{Coverage.} All declarations of \dirn{LEANEXT/phase/PhaseClassification.lean} are covered:
+\lean{polar} (Definition~\ref{pc:def:polar}); \lean{orient_polar}, \lean{orient_polar_centre},
+\lean{orient_polar_centre_inside}, \lean{sin_add_lt}, \lean{orient_polar_halfplane}
+(Lemma~\ref{pc:lem:polar-facts}; except \lean{orient_polar_centre}, these are the copies of lines 931--996 of
+\dirn{LAYERLEAN/LayerLemma.lean}, whose originals also have written proofs in the section on layer geometry);
+\lean{polar_add_int_two_pi},
+\lean{polar_add_two_pi}, \lean{polar_toIcoMod} (Lemma~\ref{pc:lem:periodic}); \lean{exists_polar}
+(Lemma~\ref{pc:lem:exists-polar}); \lean{inArc}, \lean{arcHasAntipode}, \lean{Alternating}, \lean{RunMidB},
+\lean{RunMidD}, \lean{RunMidA} (Definition~\ref{pc:def:arc}); \lean{inArc_of}, \lean{not_inArc}
+(Lemma~\ref{pc:lem:inarc}); \lean{arc1_empty}, \lean{arc2_empty}, \lean{arc2_empty'}, \lean{arc3_empty},
+\lean{arc3_empty'}, \lean{arc1_empty'} (Lemma~\ref{pc:lem:empty}); \lean{arc12_nonempty}
+(Lemma~\ref{pc:lem:arc12}); \lean{alternating_iff_gaps_lt_pi} (Theorem~\ref{pc:thm:alternating});
+\lean{alternating_exactly_one} (Proposition~\ref{pc:prop:exactly-one}); \lean{runMidB_iff}
+(Theorem~\ref{pc:thm:runB}); \lean{gap_classification} (Proposition~\ref{pc:prop:gaps}); \lean{phase_trichotomy}
+(Theorem~\ref{pc:thm:trichotomy}); \lean{orient_pos_of_alternating} (Theorem~\ref{pc:thm:rule-alt});
+\lean{orient_pos_of_runMidB}, \lean{orient_pos_of_runMidD}, \lean{orient_pos_of_runMidA}
+(Theorem~\ref{pc:thm:rule-run}); \lean{orient_pos_of_phase} (Theorem~\ref{pc:thm:phase});
+\lean{centre_inside_of_alternating} (Proposition~\ref{pc:prop:centre}); \lean{halfplane_of_runMidB}
+(Proposition~\ref{pc:prop:halfplane}); \lean{orient_sign_of_phase} (Theorem~\ref{pc:thm:sign});
+\lean{word_dichotomy} (Theorem~\ref{pc:thm:word}, computer-assisted in Lean; written proof by hand). The new declarations of
+\dirn{LEANEXT/linked/Linked.lean} are covered: \lean{dist2_polar} (Lemma~\ref{pc:lem:helpers}(c)) and
+\lean{orient_pos_of_layers} (Theorem~\ref{pc:thm:layers}(a)); so are those of \dirn{LEANEXT/capstone/Capstone.lean}:
+\lean{orient_pos_of_layers_runMidB} (Theorem~\ref{pc:thm:layers}(b)), \lean{orient_pos_of_alternating_polar}
+(Corollary~\ref{pc:cor:alt-polar}) and \lean{polar_eq} (Lemma~\ref{pc:lem:helpers}(a)); and those of
+\dirn{LEANEXT/capstone/Capstone2.lean}: \lean{orient_pos_of_layers_runMidD}, \lean{orient_pos_of_layers_runMidA}
+(Theorem~\ref{pc:thm:layers}(c),(d)), \lean{polar_zero}, \lean{exists_angle}, \lean{sqrt_dist2_pos},
+\lean{ne_of_mem} (Lemma~\ref{pc:lem:helpers}(b),(d),(e),(f)) and the three \lean{_intrinsic} theorems
+(Theorem~\ref{pc:thm:layers}(e)). Deliberately not covered separately: lines 1--1384 of \dirn{Linked.lean} and the
+corresponding lines of \dirn{Capstone.lean} and \dirn{Capstone2.lean} (copies of \dirn{LAYERLEAN/LayerLemma.lean}
+and of \dirn{LEANEXT/merged/Merged.lean}, treated in the sections on the layer lemma, layer geometry and orbit
+literals), and lines 1426--1965 of \dirn{Capstone.lean} and \dirn{Capstone2.lean} (verbatim copies of
+\dirn{PhaseClassification.lean}, whose statements and proofs are those covered above, at line offset $+1420$).
+The helper Lemma~\ref{pc:lem:shift} is a written step that makes explicit two \lean{have} steps of the Lean proofs
+of \lean{orient_pos_of_runMidD} and \lean{orient_pos_of_runMidA}; Remarks~\ref{pc:rem:alt-boundary}, \ref{pc:rem:runB-example}, \ref{pc:rem:gaps} and~\ref{pc:rem:runs} contain
+further written steps (with proofs) that are not Lean statements.
+\par\endgroup

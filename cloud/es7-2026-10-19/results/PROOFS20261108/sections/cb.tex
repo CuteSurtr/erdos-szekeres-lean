@@ -1,0 +1,1528 @@
+\section{Case-split bookkeeping: the threefold cover and the central 34-point split}\label{cb:sec}
+
+\subsection{Overview}\label{cb:sec:overview}
+
+This section is about two Lean files that check the \emph{bookkeeping} of two case splits of the project, that is, the
+purely combinatorial statement that an explicitly named family of nodes covers the split.
+
+\begin{enumerate}[label=(\arabic*)]
+\item The file \dirn{C3LEAN/C3Cover.lean} models the split of threefold rotationally symmetric sets of 33 points
+  (11 orbits of the rotation by $120^\circ$, indexed by the residues $0,\dots,10$) by their convex layers; such sets
+  are the subject of the case class \lean{Threefold33} of Definition~\ref{sr:def:classes}. Its headline is
+  Theorem~\ref{cb:thm:c3} (\lean{C3Cover.all_roots_covered}): each of the 910 depth-two \emph{roots} of the reduced
+  split is \emph{covered}, through layer splits and $\sigma$-splits, by the nodes named by the keys of 910 generated
+  certificates. The proof combines a soundness lemma for a certificate checker (Lemma~\ref{cb:lem:run}, with a
+  complete written proof here) with a kernel evaluation of the checker on the 910 certificates
+  (Fact~\ref{cb:fact:batches}), the computer-assisted match of the codes of the roots with the roots of the
+  certificates (Fact~\ref{cb:fact:roots-codes}), and the decoding of each root from its code
+  (Fact~\ref{cb:fact:roots-match}, which also has a written proof here).
+\item The file \dirn{C2FINAL/Central34Orbits.lean} models the second-layer split of the parallelogram hull cases of
+  centrally symmetric sets of 34 points (17 antipodal classes $0,\dots,16$; the case class \lean{HalfTurn34} of
+  Definition~\ref{sr:def:classes}). Its headline is Theorem~\ref{cb:thm:c2} (\lean{Central34.all_cases_closed}): for
+  each hull case $P_a$, $1\le a\le 8$, each of the 560 second-layer subcases, or its image under the reflection that
+  sends $i$ to the residue of $a-i$ modulo $17$, belongs (as a set) to an explicit generated list.
+\end{enumerate}
+
+\paragraph{What is not established here.} Both headline theorems are statements about finite lists of natural numbers.
+They mention no points, no convexity, no CNF formula and no SAT solver, and they take no hypotheses. The following are
+\emph{not} established by them, and are not proved in this document:
+\begin{enumerate}[label=(\roman*)]
+\item the geometric meaning of the splits: that every set of the class lies below some root (the top cases, and the
+  reduction of the second layer by Lemma~5 and Lemma~H6M of the project's written arguments \dirn{C3-S/soundness.md}
+  and \dirn{C3H6M/soundness_h6m.md}; for the central split, the reductions A and B reviewed in \dirn{C2P/review}),
+  and that a layer split or a $\sigma$-split loses no set (Lemma~4 of \dirn{C3-S/soundness.md}, rules~2 and~3 of
+  \dirn{C3U2/sigma_split.md}; the second-layer covers of the central split);
+\item the CNF encodings of the nodes;
+\item the SAT verdicts of the leaves, and even the fact that the leaves are nodes for which the project holds a run
+  record in which both proof checkers, \texttt{cake\_lpr} and \texttt{lrat-check}, are recorded as accepting the proof
+  (the project's term for such a record: ``certified''). In Theorem~\ref{cb:thm:c3} the set of leaves is, by
+  definition, the set of nodes named by the keys of the certificates themselves, and in Theorem~\ref{cb:thm:c2} the
+  lists $\mathsf{closedP}_a$ are just
+  lists. Which nodes were put there was decided outside Lean from the run records (by
+  \dirn{C3LEAN/tools/gen_c3lean.py}, audited by \dirn{C3LEAN/tools/audit_keys.py} and
+  \dirn{C3LEAN/review/indep_audit.py}; by \dirn{C2FINAL/gen_lean.py} with \dirn{C2FINAL/hashmatch.py}).
+\end{enumerate}
+So neither theorem implies \lean{Threefold33} or \lean{HalfTurn34}. They check one step, ``the named nodes form a cut
+of the split'', which the project combines with (i)--(iii); see Remarks~\ref{cb:rem:use} and~\ref{cb:rem:c2-scope}.
+
+\paragraph{Sources and toolchain.} Paths are relative to the results directory \dirn{cloud/es7-2026-10-19/results}
+of the repository.
+\begin{itemize}
+\item \dirn{C3LEAN/C3Cover.lean} (2{,}327 lines, SHA-256 \texttt{4b64293df2ea}\dots). Its lines 29--329 (the
+  definitions of the model and of the checker, and the conceptual proofs) are byte-identical to lines 1--301 of
+  \dirn{C3LEAN/tools/prelude.lean} (SHA-256 \texttt{cdcf96de7739}\dots), from which the generator
+  \dirn{C3LEAN/tools/gen_c3lean.py} copies them. Lines 330--2299 hold the auxiliary definitions \lean{beqLayer},
+  \lean{isOption}, \lean{distinctCodes}, \lean{codeSet} and \lean{reflectionFacts} (lines 335--365), the facts about
+  the roots (lines 367--409 and 1720--1733), the generated data (lines 413, 423--1717 and 1737), the batch theorems
+  (lines 1740--2245), the theorem \lean{all_checked} (line 2247), the main theorem (line 2251) and seven negative
+  controls (lines 2266--2297); lines 2301--2327 are \texttt{\#print axioms} commands.
+\item \dirn{C2FINAL/Central34Orbits.lean} (298 lines, SHA-256 \texttt{b396a26b2430}\dots), written by
+  \dirn{C2FINAL/gen_lean.py}.
+\end{itemize}
+Both files are checked with Lean~4.24.0 according to their READMEs; for \dirn{C3LEAN/C3Cover.lean} a compile log is
+saved, for \dirn{C2FINAL/Central34Orbits.lean} no Lean output (paragraph ``Axioms'' below). Neither has an \texttt{import}: only the core library is used, and the
+repository's Mathlib (pinned at \texttt{f897ebcf}) plays no role. Every finite computation is closed by the tactic
+\texttt{decide +kernel}: the Lean kernel itself evaluates the Boolean expression to \texttt{true} by definitional
+unfolding, using its built-in arbitrary-precision arithmetic on natural-number literals (part of the kernel, not an
+axiom). No \texttt{native\_decide} is used, so the axiom \lean{Lean.ofReduceBool} does not occur. The option
+\texttt{Elab.async false} set at line~27 of \dirn{C3LEAN/C3Cover.lean} only affects elaboration.
+
+\paragraph{Axioms.} For \dirn{C3LEAN/C3Cover.lean}, the compile log \dirn{C3LEAN/logs/compile.log} (and the identical
+axiom lines of the review's recompilation, \dirn{C3LEAN/review/logs/main_compile.log}) records: \lean{all_roots_covered},
+\lean{run_sound} and \lean{checkRoot_sound} depend on \lean{propext} and \lean{Quot.sound}; the eleven theorems
+\lean{reflection_facts_H3}, \lean{reflection_facts_H6_1_0}, \dots, \lean{reflection_facts_H6_5_1}, and
+\lean{roots_eq_tsv} and \lean{all_checked} on \lean{propext} only; \lean{topCases_eq}, \lean{strata},
+\lean{roots_match} and \lean{roots_codes_match} on no axiom. The lemmas \lean{Covered.mono}, \lean{beqList_eq},
+\lean{beqTok_eq}, \lean{beqNode_eq}, \lean{all_append_of} and the 127 batch theorems are not printed separately; each is
+used by a printed theorem (\lean{run_sound}, \lean{all_checked} or \lean{all_roots_covered}), so its axioms are among
+\lean{propext} and \lean{Quot.sound}. No theorem of the file depends on \lean{Classical.choice}, \lean{sorryAx} or
+\lean{Lean.ofReduceBool}. For \dirn{C2FINAL/Central34Orbits.lean} no compile or axioms log is committed: the file ends
+with three \texttt{\#print axioms} commands (lines 296--298) whose output is not in the repository, and
+\dirn{C2FINAL/README.md} (\S6) records ``axioms \texttt{propext} only, about 6 s''. As no Lean output of any kind
+(compile or build log, axiom output, pinned message) is saved for this file, the labels of its declarations rest on
+that record alone: its three theorems and its definitions are \emph{Lean-checked according to the record}, the
+qualified label defined with the rigor labels at the beginning of this document.
+
+\paragraph{Rigor labels and dependencies.} The Lean theorems of \dirn{C3LEAN/C3Cover.lean} keep the label
+\emph{Lean-checked}, and the three theorems of \dirn{C2FINAL/Central34Orbits.lean} (Theorem~\ref{cb:thm:c2-refl},
+Fact~\ref{cb:fact:c2-sub} and Theorem~\ref{cb:thm:c2}) carry the label \emph{Lean-checked according to the record},
+as do its definitions (paragraph ``Axioms'' above); the proofs written
+here are \emph{written proofs (not refereed)}. Every statement that Lean proves by kernel evaluation is marked
+\emph{computer-assisted} in its statement, and so is every statement whose proof uses one of the computer-assisted
+statements on generated data (Lemma~\ref{cb:lem:all-checked}, Corollary~\ref{cb:cor:roots},
+Theorem~\ref{cb:thm:c3} and Corollary~\ref{cb:cor:c2}). For the kernel evaluations on explicit generated data
+(Facts~\ref{cb:fact:batches}, \ref{cb:fact:roots-codes}, \ref{cb:fact:roots-tsv} and~\ref{cb:fact:c2-sub}, and
+Theorem~\ref{cb:thm:c2}) we state exactly what is evaluated, and we give no hand proof. For the kernel evaluations of
+the definitions alone (Facts~\ref{cb:fact:refl-h3} to~\ref{cb:fact:roots-match} and Theorem~\ref{cb:thm:c2-refl}) we
+also give complete written proofs that do not use the computation; the statement names the written proof. Each Lean
+declaration of the two files other than the seven negative controls of \dirn{C3LEAN/C3Cover.lean} (tests, listed in
+\S\ref{cb:sec:coverage}), or each uniform family of generated declarations (\lean{certs0}, \dots, \lean{certs126};
+\lean{batch0}, \dots, \lean{batch126}; the ten theorems \lean{reflection_facts_H6_1_0}, \dots,
+\lean{reflection_facts_H6_5_1}; \lean{closedP1}, \dots, \lean{closedP8}), has a statement below whose head carries
+its Lean reference; for a family the head cites the first member, and the statement locates the others.
+The head of Lemma~\ref{cb:lem:run} carries the two declarations \lean{run_sound} and \lean{checkRoot_sound}. The
+proofs of this section use no other section.
+
+\subsection{Notation}\label{cb:sec:notation}
+
+\paragraph{Numbers.} $\N=\{0,1,2,\dots\}$. For $x,y\in\N$ with $y>0$, $\lfloor x/y\rfloor$ and $x\bmod y$ are the
+quotient and the remainder of Euclidean division (Lean's division and remainder on $\N$), and
+$x\mathbin{\dot-}y=\max(x-y,0)$ is Lean's truncated subtraction on $\N$. For an integer $x$ and $y\in\N$ with
+$y>0$, $x\bmod y$ denotes the least nonnegative residue of $x$ modulo $y$; for $x\in\N$ this is the remainder above.
+For $\sigma,f\in\{0,1\}$,
+$\sigma\oplus f=(\sigma+f)\bmod 2$.
+
+\paragraph{Lists.} We write $[x_0,\dots,x_{k-1}]$ for a list, $[]$ for the empty list, $x\mathbin{::}l$ for the list
+with head $x$ and tail $l$, $l_1\mathbin{+\!\!+}l_2$ for concatenation, $\card{l}$ for the length, and $x\in l$ if $x$
+is an entry of $l$; $\mathrm{set}(l)$ is the set of entries of $l$. A list is \emph{duplicate-free} if entries at
+different positions are different; then $\card{l}=\card{\mathrm{set}(l)}$. The list functions are those of Lean's core
+library: $\mathsf{range}(n)=[0,1,\dots,n-1]$; $\mathsf{map}(g,l)=[g(x_0),\dots,g(x_{k-1})]$;
+$\mathsf{flatMap}(g,l)=g(x_0)\mathbin{+\!\!+}\cdots\mathbin{+\!\!+}g(x_{k-1})$; $\mathsf{filter}(p,l)$ is the list of
+the entries $x$ of $l$ with $p(x)=\mathsf{true}$, in their order; $\mathsf{take}(K,l)$ is the list of the first
+$\min(K,\card l)$ entries; $\mathsf{zip}(l,l')=[(x_0,x'_0),(x_1,x'_1),\dots]$ has length $\min(\card l,\card{l'})$;
+$\mathsf{foldl}(g,z,l)=g(\cdots g(g(z,x_0),x_1)\cdots,x_{k-1})$; $\mathsf{replicate}(k,x)$ is the list of $k$ copies of
+$x$. The Boolean-valued functions are: $\mathsf{contains}(l,x)=\mathsf{true}$ iff $x\in l$;
+$\mathsf{all}(l,p)=\mathsf{true}$ iff $p(x)=\mathsf{true}$ for every $x\in l$; $\mathsf{any}(l,p)=\mathsf{true}$ iff
+$p(x)=\mathsf{true}$ for some $x\in l$; $\mathsf{isEmpty}(l)=\mathsf{true}$ iff $l=[]$. We use without comment the
+following facts, each immediate by induction on $l$ from the defining equations:
+\begin{enumerate}[label=(L\arabic*)]
+\item $\mathsf{all}(l_1\mathbin{+\!\!+}l_2,p)=\mathsf{all}(l_1,p)\wedge\mathsf{all}(l_2,p)$;
+\item $y\in\mathsf{flatMap}(g,l)$ iff $y\in g(x)$ for some $x\in l$;
+\item $\card{\mathsf{map}(g,l)}=\card l$, and $\card{\mathsf{flatMap}(g,l)}$ is the sum of $\card{g(x)}$ over the
+  positions of $l$;
+\item $y\in\mathsf{map}(g,l)$ iff $y=g(x)$ for some $x\in l$.
+\end{enumerate}
+
+\paragraph{Booleans.} The Booleans are $\mathsf{true}$ and $\mathsf{false}$. In Boolean expressions $\wedge$, $\vee$,
+$\neg$ denote Lean's Boolean conjunction, disjunction and negation, and a decidable proposition $P$ used where a Boolean
+is expected stands for $\mathsf{decide}(P)$, the Boolean that is $\mathsf{true}$ iff $P$ holds (Lean inserts this
+coercion). For $x,y\in\N$, Lean's Boolean equality tests (written \texttt{x == y} or \texttt{Nat.beq x y}) are
+$\mathsf{true}$ iff $x=y$, and \texttt{x != y} is the negation of \texttt{x == y}. A statement ``$b=\mathsf{true}$'' is a
+Lean proposition about a Boolean $b$.
+
+\paragraph{Binary digits.} For $n\in\N$ let $\beta(n)=\{i\in\N:\lfloor n/2^i\rfloor\text{ is odd}\}$, the set of
+positions of the digit $1$ in the binary expansion of $n$. Then $n=\sum_{i\in\beta(n)}2^i$, and $n\mapsto\beta(n)$ is a
+bijection from $\N$ onto the set of finite subsets of $\N$ (uniqueness of the binary expansion). In Lean, shifting $1$
+left by $c$ places gives $2^c$, so $\beta(2^c)=\{c\}$; the bitwise or of $x$ and $y$, written here
+$x\mathbin{\mathsf{or}}y$, is the number with $\beta(x\mathbin{\mathsf{or}}y)=\beta(x)\cup\beta(y)$; and
+$\mathsf{testBit}(n,i)$ (Lean's \texttt{Nat.testBit n i}) is $\mathsf{true}$ iff $i\in\beta(n)$.
+
+\begin{lemma}[Or-folds; written step]\label{cb:lem:bits}
+Let $z\in\N$, let $l$ be a list of elements of a set $X$, and let $g:X\to\N$. Then
+\[
+\beta\big(\mathsf{foldl}((acc,x)\mapsto acc\mathbin{\mathsf{or}}2^{g(x)},\ z,\ l)\big)=\beta(z)\cup\{g(x):x\in l\}.
+\]
+\end{lemma}
+
+\begin{proof}
+Induction on $l$, for all $z$ at once. For $l=[]$ the fold is $z$. For $l=x\mathbin{::}l'$ the fold equals
+$\mathsf{foldl}((acc,y)\mapsto acc\mathbin{\mathsf{or}}2^{g(y)},\ z\mathbin{\mathsf{or}}2^{g(x)},\ l')$, whose set of
+binary digits is, by induction, $\beta(z)\cup\{g(x)\}\cup\{g(y):y\in l'\}$.
+\end{proof}
+
+\subsection{The threefold split: the model}\label{cb:sec:model}
+
+Every Lean reference in a statement head of \S\S\ref{cb:sec:model}--\ref{cb:sec:c3} is to
+\dirn{C3LEAN/C3Cover.lean}, namespace \lean{C3Cover}; the statements tagged ``written step'' have no Lean
+counterpart. The definitions transcribe the project's Python implementation of the split
+(\dirn{C3U2/tools/hullcase.py}); that the transcription agrees with the Python code is tested in the project
+(\dirn{C3LEAN/README.md}, \S3), not proved, and plays no role in the theorems.
+
+\begin{definition}[Orbits; \leanref{C3Cover.m}{C3LEAN/C3Cover.lean:34}]\label{cb:def:m}
+$m=11$. Below we write $11$ for $m$ wherever it occurs.
+\end{definition}
+
+\begin{definition}[Tokens; \leanref{C3Cover.Tok}{C3LEAN/C3Cover.lean:38}]\label{cb:def:tok}
+A \emph{token} is a pair $t=(r,s)\in\N\times\N$; we write $t.1=r$ and $t.2=s$.
+\end{definition}
+
+\begin{definition}[Layers; \leanref{C3Cover.Layer}{C3LEAN/C3Cover.lean:41}]\label{cb:def:layer}
+A \emph{layer} is a list of tokens.
+\end{definition}
+
+\begin{definition}[Nodes; \leanref{C3Cover.Node}{C3LEAN/C3Cover.lean:45}]\label{cb:def:node}
+A \emph{node} $n=\langle\Lambda,C\rangle$ is a pair consisting of a list $n.\mathsf{layers}=\Lambda$ of layers and a
+list $n.\mathsf{cube}=C$ of pairs $(r,v)\in\N\times\N$. Two nodes are equal iff both components are equal.
+\end{definition}
+
+\begin{definition}[Used residues; \leanref{C3Cover.Node.used}{C3LEAN/C3Cover.lean:51}]\label{cb:def:used}
+For a node $n$,
+\[
+\mathsf{used}(n)=\mathsf{flatMap}\big(L\mapsto\mathsf{map}(t\mapsto t.1,\ L),\ n.\mathsf{layers}\big),
+\]
+the first components of the tokens of all layers, in order.
+\end{definition}
+
+\begin{remark}[Intended reading]\label{cb:rem:reading}
+In the project, a token $(r,s)$ stands for the orbit with residue $r\in\{0,\dots,10\}$ together with its $\sigma$
+value $s\in\{0,1\}$ (the side of a fixed line through the centre on which the point with label $r$ lies), and $s=2$
+stands for ``no $\sigma$'', which is used for a layer of one orbit other than the top layer (the one-orbit top
+layer $[(0,0)]$ carries $s=0$). A layer of one or two tokens is a convex layer of
+one or two orbits; the layers of a node are listed from the convex hull inwards, and the cube fixes the $\sigma$ values
+$v$ of some further residues $r$. The top layer is $\mathsf{H3}=[(0,0)]$ (a hull of one orbit) or
+$\mathsf{H6}(a,s)=[(0,0),(a,s)]$ with $1\le a\le5$ and $s\in\{0,1\}$ (a hull of the orbits $0$ and $a$, with
+$\sigma_a=s$); see Lemma~2 of \dirn{C3-S/soundness.md}. Nothing in the Lean types restricts $r\le10$ or $s\le2$: all such
+bounds used below are consequences of how particular lists are built. This reading is not used in any proof.
+\end{remark}
+
+\begin{definition}[Pair options; \leanref{C3Cover.pairOptions}{C3LEAN/C3Cover.lean:54}]\label{cb:def:pairoptions}
+For a list $l$ of naturals,
+\[
+\mathsf{pairOptions}([])=[],\qquad
+\mathsf{pairOptions}(b\mathbin{::}l)=\mathsf{flatMap}\big(c\mapsto Q_{b,c},\ l\big)\mathbin{+\!\!+}\mathsf{pairOptions}(l),
+\]
+where $Q_{b,c}=\big[\,[(b,0),(c,0)],\ [(b,0),(c,1)],\ [(b,1),(c,0)],\ [(b,1),(c,1)]\,\big]$.
+\end{definition}
+
+\begin{definition}[Layer options; \leanref{C3Cover.layerOptions}{C3LEAN/C3Cover.lean:61}]\label{cb:def:layeroptions}
+For a list $U$ of naturals let $\mathsf{rem}(U)=\mathsf{filter}\big(r\mapsto\neg\mathsf{contains}(U,r),\
+\mathsf{range}(11)\big)$ (a local abbreviation inside \lean{layerOptions}), and
+\[
+\mathsf{layerOptions}(U)=\mathsf{map}\big(r\mapsto[(r,2)],\ \mathsf{rem}(U)\big)\mathbin{+\!\!+}
+\mathsf{pairOptions}(\mathsf{rem}(U)).
+\]
+\end{definition}
+
+\begin{definition}[Insertion; \leanref{C3Cover.insTok}{C3LEAN/C3Cover.lean:66}]\label{cb:def:instok}
+For a pair $t\in\N\times\N$ and a list of such pairs: $\mathsf{insTok}(t,[])=[t]$;
+$\mathsf{insTok}(t,u\mathbin{::}us)=t\mathbin{::}u\mathbin{::}us$ if $t.1\le u.1$, and
+$\mathsf{insTok}(t,u\mathbin{::}us)=u\mathbin{::}\mathsf{insTok}(t,us)$ if $t.1>u.1$.
+\end{definition}
+
+\begin{definition}[Sorting; \leanref{C3Cover.sortTok}{C3LEAN/C3Cover.lean:71}]\label{cb:def:sorttok}
+$\mathsf{sortTok}([])=[]$ and $\mathsf{sortTok}(t\mathbin{::}ts)=\mathsf{insTok}(t,\mathsf{sortTok}(ts))$.
+\end{definition}
+
+\begin{definition}[Top cases; \leanref{C3Cover.topCases}{C3LEAN/C3Cover.lean:77}]\label{cb:def:topcases}
+The list of top cases is
+\[
+\mathsf{topCases}=[(0,0)]\mathbin{::}\mathsf{flatMap}\big(i\mapsto\big[\,[(0,0),(i+1,0)],\ [(0,0),(i+1,1)]\,\big],\
+\mathsf{range}(5)\big).
+\]
+We write $\mathsf{H3}=[(0,0)]$ and $\mathsf{H6}(a,s)=[(0,0),(a,s)]$.
+\end{definition}
+
+\begin{definition}[Option keys; \leanref{C3Cover.okey}{C3LEAN/C3Cover.lean:82}]\label{cb:def:okey}
+For a layer $L$, $\mathsf{okey}(L)=\mathsf{map}(\kappa,\mathsf{sortTok}(L))$, where $\kappa(r,s)=3r$ if $s=2$ and
+$\kappa(r,s)=3r+s+1$ if $s\ne2$.
+\end{definition}
+
+\begin{definition}[Lexicographic order; \leanref{C3Cover.lexLe}{C3LEAN/C3Cover.lean:85}]\label{cb:def:lexle}
+For lists of naturals: $\mathsf{lexLe}([],y)=\mathsf{true}$; $\mathsf{lexLe}(x\mathbin{::}xs,[])=\mathsf{false}$; and
+$\mathsf{lexLe}(x\mathbin{::}xs,\,y\mathbin{::}ys)=(x<y)\vee\big((x=y)\wedge\mathsf{lexLe}(xs,ys)\big)$.
+\end{definition}
+
+\begin{definition}[Mirror; \leanref{C3Cover.mirror}{C3LEAN/C3Cover.lean:91}]\label{cb:def:mirror}
+For a layer $L$,
+\[
+\mathsf{mirror}(L)=\mathsf{sortTok}(\mathsf{map}(\mu,L)),\qquad
+\mu(r,s)=\big((11\mathbin{\dot-}r)\bmod11,\ s'\big),\quad s'=\begin{cases}2&\text{if }s=2,\\
+1\mathbin{\dot-}s&\text{if }s\ne2.\end{cases}
+\]
+\end{definition}
+
+\begin{definition}[The map phi; \leanref{C3Cover.phi}{C3LEAN/C3Cover.lean:95}]\label{cb:def:phi}
+For $a,s\in\N$ and a layer $L$,
+\[
+\mathsf{phi}(a,s,L)=\mathsf{sortTok}(\mathsf{map}(\varphi_{a,s},L)),\qquad
+\varphi_{a,s}(r,\sigma)=\big(((a+11)\mathbin{\dot-}r)\bmod11,\ \sigma'\big),
+\]
+where $\sigma'=2$ if $\sigma=2$; $\sigma'=1\mathbin{\dot-}\sigma$ if $\sigma\ne2$ and exactly one of the conditions
+$r<a$, $s=0$ holds; and $\sigma'=\sigma$ if $\sigma\neq2$ and both or neither of them hold.
+\end{definition}
+
+\begin{definition}[Reflection; \leanref{C3Cover.refl}{C3LEAN/C3Cover.lean:101}]\label{cb:def:refl}
+For layers $top$ and $o$: $\mathsf{refl}(top,o)=\mathsf{mirror}(o)$ if $top=[(0,0)]$;
+$\mathsf{refl}(top,o)=\mathsf{phi}(a,s,o)$ if $top=[(0,0),(a,s)]$ for some $a,s\in\N$; and
+$\mathsf{refl}(top,o)=o$ for every other list $top$.
+\end{definition}
+
+\begin{definition}[Kept options; \leanref{C3Cover.keptOptions}{C3LEAN/C3Cover.lean:109}]\label{cb:def:kept}
+For a layer $top$,
+\begin{align*}
+\mathsf{keptOptions}(top)&=\mathsf{filter}\big(\mathsf{kept}_{top},\ \mathsf{layerOptions}(\mathsf{map}(u\mapsto
+u.1,\ top))\big),\quad\text{where}\\
+\mathsf{kept}_{top}(o)&=\mathsf{lexLe}\big(\mathsf{okey}(o),\ \mathsf{okey}(\mathsf{refl}(top,o))\big).
+\end{align*}
+\end{definition}
+
+\begin{definition}[Roots; \leanref{C3Cover.roots}{C3LEAN/C3Cover.lean:113}]\label{cb:def:roots}
+The list of roots is
+\[
+\mathsf{roots}=\mathsf{flatMap}\big(t\mapsto\mathsf{map}(o\mapsto\langle[t,o],[]\rangle,\ \mathsf{keptOptions}(t)),\
+\mathsf{topCases}\big).
+\]
+\end{definition}
+
+\begin{definition}[Free residues; \leanref{C3Cover.Node.free}{C3LEAN/C3Cover.lean:116}]\label{cb:def:free}
+For a node $n$,
+\[
+\mathsf{free}(n)=\mathsf{filter}\big(r\mapsto(r\ne0)\wedge\neg\mathsf{contains}(\mathsf{used}(n),r)\wedge
+\neg\mathsf{contains}(\mathsf{map}(c\mapsto c.1,\ n.\mathsf{cube}),r),\ \mathsf{range}(11)\big).
+\]
+\end{definition}
+
+\begin{definition}[Bits; \leanref{C3Cover.bitsOf}{C3LEAN/C3Cover.lean:120}]\label{cb:def:bitsof}
+For $K,i\in\N$,
+\[
+\mathsf{bitsOf}(K,i)=\mathsf{map}\big(j\mapsto\lfloor i/2^{(K\mathbin{\dot-}1)\mathbin{\dot-}j}\rfloor\bmod2,\
+\mathsf{range}(K)\big).
+\]
+\end{definition}
+
+\begin{definition}[Adding bits; \leanref{C3Cover.addBits}{C3LEAN/C3Cover.lean:123}]\label{cb:def:addbits}
+For lists $C$ and $new$ of pairs of naturals,
+\[
+\mathsf{addBits}(C,new)=\mathsf{foldl}\big((c,t)\mapsto\mathsf{insTok}(t,c),\ C,\ new\big).
+\]
+\end{definition}
+
+\begin{definition}[Sigma children; \leanref{C3Cover.Node.sigmaChildren}{C3LEAN/C3Cover.lean:127}]\label{cb:def:sigmachildren}
+For a node $n$ and $K\in\N$, with the local abbreviation $bits=\mathsf{take}(K,\mathsf{free}(n))$,
+\[
+\mathsf{sigmaChildren}(n,K)=\mathsf{map}\Big(i\mapsto\big\langle n.\mathsf{layers},\
+\mathsf{addBits}\big(n.\mathsf{cube},\ \mathsf{zip}(bits,\mathsf{bitsOf}(K,i))\big)\big\rangle,\
+\mathsf{range}(2^K)\Big).
+\]
+\end{definition}
+
+\begin{definition}[Conflicts; \leanref{C3Cover.conflicts}{C3LEAN/C3Cover.lean:132}]\label{cb:def:conflicts}
+For a layer $L$ and a list $C$ of pairs of naturals,
+\[
+\mathsf{conflicts}(L,C)=\mathsf{any}\big(L,\ t\mapsto(t.2\ne2)\wedge\mathsf{any}(C,\ c\mapsto(c.1=t.1)\wedge(c.2\ne
+t.2))\big).
+\]
+\end{definition}
+
+\begin{definition}[Layer children; \leanref{C3Cover.Node.layerChildren}{C3LEAN/C3Cover.lean:137}]\label{cb:def:layerchildren}
+For a node $n$,
+\[
+\mathsf{layerChildren}(n)=\mathsf{map}\Big(o\mapsto\langle n.\mathsf{layers}\mathbin{+\!\!+}[o],\
+n.\mathsf{cube}\rangle,\ \mathsf{filter}\big(o\mapsto\neg\mathsf{conflicts}(o,n.\mathsf{cube}),\
+\mathsf{layerOptions}(\mathsf{used}(n))\big)\Big).
+\]
+\end{definition}
+
+\begin{remark}[Reading of the children]\label{cb:rem:children}
+If $K\le\card{\mathsf{free}(n)}$ and $b_0<\dots<b_{K-1}$ are the first $K$ entries of $\mathsf{free}(n)$ (the $K$
+smallest residues in $\{1,\dots,10\}$ that occur neither in a layer nor in the cube of $n$), then the $i$-th
+$\sigma$-child, $0\le i<2^K$, has the layers of $n$ and the cube of $n$ with the pairs $(b_j,v_j)$ inserted, where
+$v_j=\lfloor i/2^{K-1-j}\rfloor\bmod2$ is the binary digit of $i$ at position $K-1-j$; as $i$ runs through
+$0,\dots,2^K-1$, $(v_0,\dots,v_{K-1})$ runs through $\{0,1\}^K$. A layer child of $n$ appends to the layers of $n$ one
+layer option on the residues not used by $n$, except the options that give some residue of the cube an explicit
+$\sigma$ value (not $2$) different from the cube's value. No reduction by a reflection is applied to layer children.
+This reading is not used in any proof.
+\end{remark}
+
+\subsection{The cover predicate}\label{cb:sec:covered}
+
+\begin{definition}[Covered nodes; \leanref{C3Cover.Covered}{C3LEAN/C3Cover.lean:146}]\label{cb:def:covered}
+Let $S$ be a predicate on nodes. A predicate $P$ on nodes is \emph{$S$-closed} if for every node $n$ the following
+three rules hold.
+\begin{description}
+\item[(cert)] If $S(n)$, then $P(n)$.
+\item[(layer)] If $2\le\card{n.\mathsf{layers}}$, $\mathsf{layerChildren}(n)\ne[]$, and $P(c)$ for every
+  $c\in\mathsf{layerChildren}(n)$, then $P(n)$.
+\item[(sigma)] If $K\in\N$, $2\le\card{n.\mathsf{layers}}$, $0<K$, $K\le\card{\mathsf{free}(n)}$, and $P(c)$ for every
+  $c\in\mathsf{sigmaChildren}(n,K)$, then $P(n)$.
+\end{description}
+$\mathsf{Covered}(S)$ is the least $S$-closed predicate: $\mathsf{Covered}(S)(n)$ holds iff $P(n)$ holds for every
+$S$-closed predicate $P$.
+\end{definition}
+
+In each rule the predicate occurs in the premises only positively, so an intersection of $S$-closed predicates is
+$S$-closed; hence $\mathsf{Covered}(S)$ is itself $S$-closed. We use the two resulting principles:
+\emph{closure} ($\mathsf{Covered}(S)$ satisfies (cert), (layer), (sigma)) and \emph{induction} (if $P$ is $S$-closed,
+then $\mathsf{Covered}(S)(n)$ implies $P(n)$ for every node $n$). In Lean, \texttt{Covered S} is an inductive predicate
+whose three constructors \lean{Covered.cert}, \lean{Covered.layer}, \lean{Covered.sigma} are exactly these three rules,
+with these premises in this order, and whose recursor yields the induction principle. The Lean predicate is therefore
+$S$-closed and contained in every $S$-closed predicate, so it coincides with the predicate defined above.
+
+\begin{lemma}[Monotonicity; \leanref{C3Cover.Covered.mono}{C3LEAN/C3Cover.lean:153}]\label{cb:lem:mono}
+Let $S,T$ be predicates on nodes such that $S(n)$ implies $T(n)$ for every node $n$. Then for every node $n$,
+$\mathsf{Covered}(S)(n)$ implies $\mathsf{Covered}(T)(n)$.
+\end{lemma}
+
+\begin{proof}
+As in Lean, by induction on the derivation. The predicate $P=\mathsf{Covered}(T)$ is $S$-closed: for (cert), $S(n)$
+gives $T(n)$, hence $P(n)$ by the rule (cert) for $T$; the rules (layer) and (sigma) have the same side conditions for
+$S$ and for $T$, so they hold for $P$ because $\mathsf{Covered}(T)$ satisfies the rules (layer) and (sigma) for $T$. By
+the induction principle, $\mathsf{Covered}(S)(n)$ implies $P(n)$.
+\end{proof}
+
+\subsection{Keys, codes and Boolean equality}\label{cb:sec:keys}
+
+\begin{definition}[Token decoding; \leanref{C3Cover.decodeTok}{C3LEAN/C3Cover.lean:165}]\label{cb:def:decodetok}
+For $x\in\N$, $\mathsf{decodeTok}(x)=(\lfloor x/3\rfloor,\ x\bmod3)$.
+\end{definition}
+
+\begin{definition}[Layer decoding; \leanref{C3Cover.decodeLayer}{C3LEAN/C3Cover.lean:167}]\label{cb:def:decodelayer}
+For $c\in\N$,
+\[
+\mathsf{decodeLayer}(c)=\begin{cases}[\mathsf{decodeTok}(c\mathbin{\dot-}1)]&\text{if }c\le33,\\
+\big[\mathsf{decodeTok}(\lfloor(c\mathbin{\dot-}34)/33\rfloor),\ \mathsf{decodeTok}((c\mathbin{\dot-}34)\bmod33)\big]
+&\text{if }c>33.\end{cases}
+\]
+\end{definition}
+
+\begin{definition}[Decoding layers; \leanref{C3Cover.decodeLayers}{C3LEAN/C3Cover.lean:172}]\label{cb:def:decodelayers}
+For $f,lk\in\N$ and a list $acc$ of layers: $\mathsf{decodeLayers}(0,lk,acc)=acc$;
+$\mathsf{decodeLayers}(f+1,lk,acc)=acc$ if $lk=0$; and $\mathsf{decodeLayers}(f+1,lk,acc)=\mathsf{decodeLayers}\big(f,\
+\lfloor lk/2048\rfloor,\ \mathsf{decodeLayer}(lk\bmod2048)\mathbin{::}acc\big)$ if $lk\ne0$.
+\end{definition}
+
+\begin{definition}[Cube decoding; \leanref{C3Cover.decodeCube}{C3LEAN/C3Cover.lean:180}]\label{cb:def:decodecube}
+For $f,r,cm,cv\in\N$: $\mathsf{decodeCube}(0,r,cm,cv)=[]$; $\mathsf{decodeCube}(f+1,r,cm,cv)=[]$ if $cm=0$; and if
+$cm\neq0$, $\mathsf{decodeCube}(f+1,r,cm,cv)$ is $(r,\ cv\bmod2)\mathbin{::}D$ when $cm\bmod2=1$ and $D$ when
+$cm\bmod2\ne1$, where $D=\mathsf{decodeCube}(f,\ r+1,\ \lfloor cm/2\rfloor,\ \lfloor cv/2\rfloor)$.
+\end{definition}
+
+\begin{definition}[Key decoding; \leanref{C3Cover.decodeKey}{C3LEAN/C3Cover.lean:191}]\label{cb:def:decodekey}
+For $k\in\N$,
+\[
+\mathsf{decodeKey}(k)=\big\langle\mathsf{decodeLayers}(12,\ \lfloor k/2^{22}\rfloor,\ []),\
+\mathsf{decodeCube}(11,\ 0,\ \lfloor k/2^{11}\rfloor\bmod2^{11},\ k\bmod2^{11})\big\rangle.
+\]
+(In Lean the constants are written $4194304=2^{22}$ and $2048=2^{11}$.)
+\end{definition}
+
+\begin{remark}[Keys]\label{cb:rem:keys}
+Read in base $2048$, the number $\lfloor k/2^{22}\rfloor$ lists the layer codes of $\mathsf{decodeKey}(k)$, its most
+significant digit giving the top layer (each step of $\mathsf{decodeLayers}$ puts the layer of the least significant
+remaining digit in front of the layers decoded so far); the next $11$ binary digits of $k$ are the set of cube residues
+and the last $11$ their values. For example (the review's theorem \lean{C3Cover.rev_parent_decodes},
+\dirn{C3LEAN/review/RevCtrl_pass.lean:315}, whose Lean proof is \texttt{decide +kernel}; its file compiles with exit status~0,
+\dirn{C3LEAN/review/logs/revctrl_pass.log}, but the axioms of this theorem are not printed),
+$\mathsf{decodeKey}(8615616512)=\langle[[(0,0)],[(1,2)]],\ [(2,0),(3,0),(4,0),(5,0),(6,0),(7,0)]\rangle$. The map
+$\mathsf{decodeKey}$ is not injective: value digits outside the residue mask are ignored, and a zero digit inside the
+layer part decodes to the layer $[(0,0)]$. Nothing below needs injectivity: the leaves are defined as decoded keys, and
+the checker compares nodes, not keys.
+\end{remark}
+
+\begin{definition}[Token code; \leanref{C3Cover.tokCode}{C3LEAN/C3Cover.lean:223}]\label{cb:def:tokcode}
+For a token $t$, $\mathsf{tokCode}(t)=3\,t.1+t.2$.
+\end{definition}
+
+\begin{definition}[Layer code; \leanref{C3Cover.layerCode}{C3LEAN/C3Cover.lean:226}]\label{cb:def:layercode}
+For tokens $t,u$: $\mathsf{layerCode}([t])=1+\mathsf{tokCode}(t)$,
+$\mathsf{layerCode}([t,u])=34+33\,\mathsf{tokCode}(t)+\mathsf{tokCode}(u)$, and $\mathsf{layerCode}(L)=0$ for every
+layer $L$ with no or more than two tokens.
+\end{definition}
+
+\begin{definition}[Root code; \leanref{C3Cover.rootCode}{C3LEAN/C3Cover.lean:232}]\label{cb:def:rootcode}
+For a node $n$: $\mathsf{rootCode}(n)=\mathsf{layerCode}(A)\cdot1123+\mathsf{layerCode}(B)$ if
+$n.\mathsf{layers}=[A,B]$, and $\mathsf{rootCode}(n)=0$ otherwise.
+\end{definition}
+
+\begin{definition}[Root decoding; \leanref{C3Cover.decodeRoot}{C3LEAN/C3Cover.lean:238}]\label{cb:def:decoderoot}
+For $c\in\N$, $\mathsf{decodeRoot}(c)=\big\langle[\mathsf{decodeLayer}(\lfloor c/1123\rfloor),\
+\mathsf{decodeLayer}(c\bmod1123)],\ []\big\rangle$.
+\end{definition}
+
+\begin{definition}[List equality; \leanref{C3Cover.beqList}{C3LEAN/C3Cover.lean:194}]\label{cb:def:beqlist}
+For a type $\alpha$ and a Boolean-valued function $eq$ of two arguments in $\alpha$:
+$\mathsf{beqList}(eq,[],[])=\mathsf{true}$;
+$\mathsf{beqList}(eq,\,a\mathbin{::}as,\,b\mathbin{::}bs)=eq(a,b)\wedge\mathsf{beqList}(eq,as,bs)$; and
+$\mathsf{beqList}(eq,l_1,l_2)=\mathsf{false}$ if exactly one of $l_1,l_2$ is empty.
+\end{definition}
+
+\begin{definition}[Token equality; \leanref{C3Cover.beqTok}{C3LEAN/C3Cover.lean:199}]\label{cb:def:beqtok}
+For pairs $a,b$ of naturals, $\mathsf{beqTok}(a,b)=\mathsf{Nat.beq}(a.1,b.1)\wedge\mathsf{Nat.beq}(a.2,b.2)$.
+\end{definition}
+
+\begin{definition}[Node equality; \leanref{C3Cover.beqNode}{C3LEAN/C3Cover.lean:202}]\label{cb:def:beqnode}
+For nodes $a,b$,
+\[
+\mathsf{beqNode}(a,b)=\mathsf{beqList}\big(\mathsf{beqList}(\mathsf{beqTok},\cdot,\cdot),\
+a.\mathsf{layers},\ b.\mathsf{layers}\big)\wedge\mathsf{beqList}(\mathsf{beqTok},\ a.\mathsf{cube},\ b.\mathsf{cube}).
+\]
+\end{definition}
+
+\begin{definition}[Layer equality; \leanref{C3Cover.beqLayer}{C3LEAN/C3Cover.lean:335}]\label{cb:def:beqlayer}
+For layers $L,L'$, $\mathsf{beqLayer}(L,L')=\mathsf{beqList}(\mathsf{beqTok},L,L')$.
+\end{definition}
+
+\begin{lemma}[List equality; \leanref{C3Cover.beqList_eq}{C3LEAN/C3Cover.lean:204}]\label{cb:lem:beqlist}
+Let $\alpha$ be a type and $eq$ a Boolean-valued function on $\alpha\times\alpha$ such that $eq(a,b)=\mathsf{true}$
+implies $a=b$ for all $a,b\in\alpha$. Then for all lists $l_1,l_2$ over $\alpha$,
+$\mathsf{beqList}(eq,l_1,l_2)=\mathsf{true}$ implies $l_1=l_2$.
+\end{lemma}
+
+\begin{proof}
+As in Lean, by induction on $l_1$, for all $l_2$. If both lists are empty they are equal. If exactly one is empty,
+$\mathsf{beqList}$ is $\mathsf{false}$, contrary to the assumption. If $l_1=a\mathbin{::}as$ and $l_2=b\mathbin{::}bs$,
+the assumption gives $eq(a,b)=\mathsf{true}$ and $\mathsf{beqList}(eq,as,bs)=\mathsf{true}$; so $a=b$ by the hypothesis
+on $eq$, and $as=bs$ by induction; hence $l_1=l_2$.
+\end{proof}
+
+\begin{lemma}[Token equality; \leanref{C3Cover.beqTok_eq}{C3LEAN/C3Cover.lean:213}]\label{cb:lem:beqtok}
+For all tokens $a,b$: $\mathsf{beqTok}(a,b)=\mathsf{true}$ implies $a=b$.
+\end{lemma}
+
+\begin{proof}
+$\mathsf{Nat.beq}(x,y)=\mathsf{true}$ implies $x=y$, so both components of $a$ and $b$ agree.
+\end{proof}
+
+\begin{lemma}[Node equality; \leanref{C3Cover.beqNode_eq}{C3LEAN/C3Cover.lean:218}]\label{cb:lem:beqnode}
+For all nodes $a,b$: $\mathsf{beqNode}(a,b)=\mathsf{true}$ implies $a=b$.
+\end{lemma}
+
+\begin{proof}
+By Lemmas~\ref{cb:lem:beqtok} and~\ref{cb:lem:beqlist}, $\mathsf{beqList}(\mathsf{beqTok},\cdot,\cdot)$ satisfies the
+hypothesis of Lemma~\ref{cb:lem:beqlist} on the type of layers, and $\mathsf{beqTok}$ satisfies it on pairs of
+naturals. Applying Lemma~\ref{cb:lem:beqlist} to the two conjuncts of $\mathsf{beqNode}(a,b)=\mathsf{true}$ gives
+$a.\mathsf{layers}=b.\mathsf{layers}$ and $a.\mathsf{cube}=b.\mathsf{cube}$, hence $a=b$.
+\end{proof}
+
+\begin{lemma}[Converses; written step]\label{cb:lem:beq-refl}
+$\mathsf{Nat.beq}(x,x)$, $\mathsf{beqTok}(t,t)$, $\mathsf{beqLayer}(L,L)$ and $\mathsf{beqNode}(n,n)$ are
+$\mathsf{true}$ for every $x\in\N$, pair $t$, layer $L$ and node $n$. Consequently $\mathsf{beqTok}$,
+$\mathsf{beqLayer}$, $\mathsf{beqNode}$ and $\mathsf{beqList}(\mathsf{Nat.beq},\cdot,\cdot)$ return $\mathsf{true}$
+exactly on equal arguments.
+\end{lemma}
+
+\begin{proof}
+If $eq(x,x)=\mathsf{true}$ for all $x$, then $\mathsf{beqList}(eq,l,l)=\mathsf{true}$ for every list $l$, by induction on
+$l$. Apply this to $eq=\mathsf{Nat.beq}$ (reflexive), to $\mathsf{beqTok}$ (reflexive since $\mathsf{Nat.beq}$ is) and to
+$\mathsf{beqList}(\mathsf{beqTok},\cdot,\cdot)$; for nodes both conjuncts are then $\mathsf{true}$. The other direction
+is Lemmas~\ref{cb:lem:beqlist} (with $eq=\mathsf{Nat.beq}$ or $eq=\mathsf{beqTok}$), \ref{cb:lem:beqtok}
+and~\ref{cb:lem:beqnode}.
+\end{proof}
+
+\subsection{Certificates and the checker}\label{cb:sec:checker}
+
+\begin{definition}[Certificates; \leanref{C3Cover.Cert}{C3LEAN/C3Cover.lean:245}]\label{cb:def:cert}
+A \emph{certificate} is a triple $c=\langle c.\mathsf{root},\ c.\mathsf{ds},\ c.\mathsf{ks}\rangle$ of natural numbers.
+\end{definition}
+
+\begin{definition}[Unpacking; \leanref{C3Cover.unpack}{C3LEAN/C3Cover.lean:251}]\label{cb:def:unpack}
+For all $f,x\in\N$ we have $\mathsf{unpack}(0,x)=[]$; $\mathsf{unpack}(f+1,x)=[]$ if $x=0$; and
+$\mathsf{unpack}(f+1,x)=(x\bmod2^{64})\mathbin{::}\mathsf{unpack}(f,\lfloor x/2^{64}\rfloor)$ if $x\ne0$ (in Lean
+$2^{64}$ is written $18446744073709551616$).
+\end{definition}
+
+\begin{definition}[Keys of a certificate; \leanref{C3Cover.Cert.keys}{C3LEAN/C3Cover.lean:259}]\label{cb:def:keys}
+For a certificate $c$, $\mathsf{keys}(c)=\mathsf{unpack}(100000,\ c.\mathsf{ks})$.
+\end{definition}
+
+\begin{definition}[The checker; \leanref{C3Cover.run}{C3LEAN/C3Cover.lean:262}]\label{cb:def:run}
+For $f,ds\in\N$, a list $stk$ of nodes and a list $ks$ of naturals, the Boolean $\mathsf{run}(f,stk,ds,ks)$ is
+defined by recursion on $f$ (the first applicable clause is used):
+\begin{enumerate}[label=(R\arabic*)]
+\item $\mathsf{run}(f,[],ds,ks)=(ds=0)\wedge\mathsf{isEmpty}(ks)$, for every $f$;
+\item $\mathsf{run}(0,\ n\mathbin{::}rest,\ ds,ks)=\mathsf{false}$;
+\item $\mathsf{run}(f+1,\ n\mathbin{::}rest,\ ds,ks)$ is computed from $d=ds\bmod16$ and $ds'=\lfloor ds/16\rfloor$:
+  \begin{itemize}
+  \item if $d=0$: it is $\mathsf{false}$ if $ks=[]$, and it is
+    $\mathsf{beqNode}(n,\mathsf{decodeKey}(k))\wedge\mathsf{run}(f,rest,ds',ks')$ if $ks=k\mathbin{::}ks'$;
+  \item if $d=1$: it is $\mathsf{decide}(2\le\card{n.\mathsf{layers}})\wedge
+    \neg\mathsf{isEmpty}(\mathsf{layerChildren}(n))\wedge
+    \mathsf{run}\big(f,\ \mathsf{layerChildren}(n)\mathbin{+\!\!+}rest,\ ds',\ ks\big)$;
+  \item if $d\ge2$: it is $\mathsf{decide}(2\le\card{n.\mathsf{layers}})\wedge
+    \mathsf{decide}(d\mathbin{\dot-}1\le\card{\mathsf{free}(n)})\wedge
+    \mathsf{run}\big(f,\ \mathsf{sigmaChildren}(n,d\mathbin{\dot-}1)\mathbin{+\!\!+}rest,\ ds',\ ks\big)$.
+  \end{itemize}
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Root check; \leanref{C3Cover.checkRoot}{C3LEAN/C3Cover.lean:277}]\label{cb:def:checkroot}
+For a node $\rho$ and a certificate $c$,
+$\mathsf{checkRoot}(\rho,c)=\mathsf{run}(10^6,\ [\rho],\ c.\mathsf{ds},\ \mathsf{keys}(c))$ (in Lean $10^6$ is written
+$1000000$).
+\end{definition}
+
+\begin{remark}[How a certificate is read]\label{cb:rem:cert}
+The stack starts as $[\rho]$. At each step the first node $n$ is removed and the least significant base-$16$ digit $d$ of
+$ds$ is consumed: $d=0$ declares $n$ a \emph{leaf}, which must be equal, as a node, to the decoded next key, and that
+key is consumed; $d=1$ declares a layer split, and $d=1+K$ with $1\le K\le14$ a $\sigma$-split on the $K$ smallest
+free residues of $n$ ($K$ $\sigma$ bits, $2^K$ children). For a
+split the checker computes the children itself and puts them in front of the remaining stack. A certificate thus only
+chooses the kind of split at each node and names the leaves, in depth-first order; it never supplies children. When
+the stack is empty, the check succeeds iff no nonzero digit and no key is left. This makes the check strict (the
+negative controls listed in \S\ref{cb:sec:coverage} exercise it), but it is not used in the soundness proof below.
+Running out of fuel makes the check fail, so the bound $10^6$ is irrelevant for soundness; each step treats one node
+of the cover tree, and the largest certificate has 849 of them (\dirn{C3LEAN/README.md}, \S1).
+\end{remark}
+
+\begin{lemma}[Checker soundness; \leanref{C3Cover.run_sound}{C3LEAN/C3Cover.lean:279}, \leanref{C3Cover.checkRoot_sound}{C3LEAN/C3Cover.lean:323}]\label{cb:lem:run}
+The following hold.
+\begin{enumerate}[label=(\alph*)]
+\item (\lean{run_sound}) Let $S$ be a predicate on nodes and $f\in\N$. For every list $stk$ of nodes, every $ds\in\N$
+  and every list $ks$ of naturals: if $\mathsf{run}(f,stk,ds,ks)=\mathsf{true}$ and $S(\mathsf{decodeKey}(k))$ holds
+  for every $k\in ks$, then $\mathsf{Covered}(S)(n)$ holds for every $n\in stk$.
+\item (\lean{checkRoot_sound}) Let $\rho$ be a node and $c$ a certificate with
+  $\mathsf{checkRoot}(\rho,c)=\mathsf{true}$. Then $\mathsf{Covered}(S_c)(\rho)$, where $S_c(n)$ means: there is
+  $k\in\mathsf{keys}(c)$ with $\mathsf{decodeKey}(k)=n$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+We follow the Lean proof.
+
+(a) Fix $S$. We prove by induction on $f$ the statement $\Phi(f)$: \emph{for all $stk$, $ds$, $ks$, if
+$\mathsf{run}(f,stk,ds,ks)=\mathsf{true}$ and $S(\mathsf{decodeKey}(k))$ for every $k\in ks$, then
+$\mathsf{Covered}(S)(n)$ for every $n\in stk$.} If $stk=[]$ there is nothing to show, for every $f$; so let
+$stk=n_0\mathbin{::}rest$.
+
+\emph{Case $f=0$.} By (R2), $\mathsf{run}(0,n_0\mathbin{::}rest,ds,ks)=\mathsf{false}$; the hypothesis fails, and
+$\Phi(0)$ holds.
+
+\emph{Step from $f$ to $f+1$.} Assume $\Phi(f)$, $\mathsf{run}(f+1,n_0\mathbin{::}rest,ds,ks)=\mathsf{true}$ and
+$S(\mathsf{decodeKey}(k))$ for every $k\in ks$. Let $d=ds\bmod16$ and $ds'=\lfloor ds/16\rfloor$. We show that $n_0$
+and every $n\in rest$ are covered, i.e.\ satisfy $\mathsf{Covered}(S)$.
+\begin{itemize}
+\item Case $d=0$. If $ks=[]$, the value would be $\mathsf{false}$; so $ks=k\mathbin{::}ks'$, with
+  $\mathsf{beqNode}(n_0,\mathsf{decodeKey}(k))=\mathsf{true}$ and $\mathsf{run}(f,rest,ds',ks')=\mathsf{true}$. By
+  Lemma~\ref{cb:lem:beqnode}, $n_0=\mathsf{decodeKey}(k)$; as $k\in ks$, $S(n_0)$ holds, and $n_0$ is covered by the
+  rule (cert). Every $k'\in ks'$ lies in $ks$, so $S(\mathsf{decodeKey}(k'))$; hence $\Phi(f)$, applied to
+  $(rest,ds',ks')$, shows that every $n\in rest$ is covered.
+\item Case $d=1$. The three conjuncts are $\mathsf{true}$: $2\le\card{n_0.\mathsf{layers}}$;
+  $\mathsf{isEmpty}(\mathsf{layerChildren}(n_0))=\mathsf{false}$, i.e.\ $\mathsf{layerChildren}(n_0)\ne[]$; and
+  $\mathsf{run}(f,\mathsf{layerChildren}(n_0)\mathbin{+\!\!+}rest,ds',ks)=\mathsf{true}$. By $\Phi(f)$, applied to
+  $(\mathsf{layerChildren}(n_0)\mathbin{+\!\!+}rest,ds',ks)$ with the same keys, every entry of
+  $\mathsf{layerChildren}(n_0)$ and every entry of $rest$ is covered. The rule (layer) shows that $n_0$ is covered.
+\item Case $d\ge2$. Put $K=d\mathbin{\dot-}1=d-1$, so $K\ge1>0$. The conjuncts give $2\le\card{n_0.\mathsf{layers}}$,
+  $K\le\card{\mathsf{free}(n_0)}$ and $\mathsf{run}(f,\mathsf{sigmaChildren}(n_0,K)\mathbin{+\!\!+}rest,ds',ks)=
+  \mathsf{true}$. By $\Phi(f)$ every entry of $\mathsf{sigmaChildren}(n_0,K)$ and of $rest$ is covered, and the rule
+  (sigma) with this $K$ shows that $n_0$ is covered.
+\end{itemize}
+This proves $\Phi(f+1)$, and (a) follows. (Keys are consumed only at leaves; this is why the key hypothesis passes
+unchanged to the recursive call in the two split cases.)
+
+(b) Apply (a) with $S=S_c$, $f=10^6$, $stk=[\rho]$, $ds=c.\mathsf{ds}$ and $ks=\mathsf{keys}(c)$. The first hypothesis
+of (a) is $\mathsf{checkRoot}(\rho,c)=\mathsf{true}$, and for every $k\in\mathsf{keys}(c)$ the statement
+$S_c(\mathsf{decodeKey}(k))$ holds with witness $k$. Since $\rho\in[\rho]$, $\mathsf{Covered}(S_c)(\rho)$.
+\end{proof}
+
+\begin{lemma}[Concatenation; \leanref{C3Cover.all_append_of}{C3LEAN/C3Cover.lean:327}]\label{cb:lem:append}
+Let $\alpha$ be a type, $f$ a Boolean-valued function on $\alpha$, and $l_1,l_2$ lists over $\alpha$. If
+$\mathsf{all}(l_1,f)=\mathsf{true}$ and $\mathsf{all}(l_2,f)=\mathsf{true}$, then
+$\mathsf{all}(l_1\mathbin{+\!\!+}l_2,f)=\mathsf{true}$.
+\end{lemma}
+
+\begin{proof}
+By (L1), $\mathsf{all}(l_1\mathbin{+\!\!+}l_2,f)=\mathsf{all}(l_1,f)\wedge\mathsf{all}(l_2,f)=\mathsf{true}$. (Lean:
+simplification with \lean{List.all_append}.)
+\end{proof}
+
+\subsection{Generated data and the computer-assisted facts}\label{cb:sec:data}
+
+\begin{definition}[TSV root codes; \leanref{C3Cover.tsvRootCodes}{C3LEAN/C3Cover.lean:413}]\label{cb:def:tsv}
+$\mathsf{tsvRootCodes}$ is an explicit list of natural numbers. According to its docstring and
+\dirn{C3LEAN/README.md} (\S4) it is the root column of \dirn{C3FINAL/C3FINAL_mirrorh6_roots.tsv}, in file order,
+written as root codes; this identification is checked by a Python script (\dirn{C3LEAN/tools/audit_keys.py}), not in
+Lean.
+\end{definition}
+
+\begin{definition}[Certificate lists; \leanref{C3Cover.certs0}{C3LEAN/C3Cover.lean:423}]\label{cb:def:certsN}
+$\mathsf{certs}_0,\dots,\mathsf{certs}_{126}$ (Lean \lean{certs0}, \dots, \lean{certs126}, at lines 423--1711; the
+last, \lean{certs126}, at line 1668) are explicit lists of certificates, each certificate written as a triple of
+numerals.
+\end{definition}
+
+\begin{definition}[All certificates; \leanref{C3Cover.certs}{C3LEAN/C3Cover.lean:1714}]\label{cb:def:certs}
+The list of all certificates is, nested to the right,
+\[
+\mathsf{certs}=\mathsf{certs}_0\mathbin{+\!\!+}\big(\mathsf{certs}_1\mathbin{+\!\!+}\big(\cdots
+\mathbin{+\!\!+}(\mathsf{certs}_{125}\mathbin{+\!\!+}\mathsf{certs}_{126})\cdots\big)\big).
+\]
+\end{definition}
+
+\begin{definition}[Batch sizes; \leanref{C3Cover.bounds}{C3LEAN/C3Cover.lean:1717}]\label{cb:def:bounds}
+$\mathsf{bounds}$ is an explicit list of 127 numbers, the sizes of the lists $\mathsf{certs}_N$ (between 1 and 85, with
+sum 910). No theorem uses it.
+\end{definition}
+
+\begin{definition}[Key list; \leanref{C3Cover.certifiedKeys}{C3LEAN/C3Cover.lean:1737}]\label{cb:def:certifiedkeys}
+$\mathsf{certifiedKeys}=\mathsf{flatMap}(\mathsf{keys},\mathsf{certs})$, the concatenation of the key lists of all
+certificates. The \emph{leaf predicate} of the main theorem is
+\[
+S^\star(n)\quad:\Longleftrightarrow\quad\text{there is }k\in\mathsf{certifiedKeys}\text{ with }\mathsf{decodeKey}(k)=n.
+\]
+\end{definition}
+
+The data were written by \dirn{C3LEAN/tools/gen_c3lean.py} from the run records of the project. Despite the name,
+$\mathsf{certifiedKeys}$ is just the list of the keys of the certificates; nothing in Lean says which records exist.
+
+\begin{definition}[Options; \leanref{C3Cover.isOption}{C3LEAN/C3Cover.lean:340}]\label{cb:def:isoption}
+For a list $U$ of naturals and a layer $L$:
+$\mathsf{isOption}(U,[(r,s)])=(r<11)\wedge\neg\mathsf{contains}(U,r)\wedge(s=2)$;
+$\mathsf{isOption}(U,[(b,\sigma),(c,\tau)])=(b<c)\wedge(c<11)\wedge\neg\mathsf{contains}(U,b)\wedge
+\neg\mathsf{contains}(U,c)\wedge(\sigma<2)\wedge(\tau<2)$; and $\mathsf{isOption}(U,L)=\mathsf{false}$ if $L$ has no
+or more than two tokens.
+\end{definition}
+
+\begin{definition}[Distinct codes; \leanref{C3Cover.distinctCodes}{C3LEAN/C3Cover.lean:346}]\label{cb:def:distinctcodes}
+For a list $l$ of naturals and $acc\in\N$: $\mathsf{distinctCodes}([],acc)=\mathsf{true}$ and
+$\mathsf{distinctCodes}(x\mathbin{::}l,acc)=\neg\mathsf{testBit}(acc,x)\wedge\mathsf{distinctCodes}(l,\
+acc\mathbin{\mathsf{or}}2^x)$.
+\end{definition}
+
+\begin{definition}[Code sets; \leanref{C3Cover.codeSet}{C3LEAN/C3Cover.lean:351}]\label{cb:def:codeset}
+For a list $l$ of naturals, $\mathsf{codeSet}(l)=\mathsf{foldl}((acc,x)\mapsto acc\mathbin{\mathsf{or}}2^x,\ 0,\ l)$.
+\end{definition}
+
+\begin{definition}[Reflection facts; \leanref{C3Cover.reflectionFacts}{C3LEAN/C3Cover.lean:356}]\label{cb:def:reflectionfacts}
+For a layer $t$, let $U=\mathsf{map}(u\mapsto u.1,t)$, $O=\mathsf{layerOptions}(U)$, $\iota(o)=\mathsf{refl}(t,o)$, and
+let $\mathsf{kept}_t$ be as in Definition~\ref{cb:def:kept}. Then $\mathsf{reflectionFacts}(t)$ is the $6$-tuple of
+the following values:
+\begin{enumerate}[label=(F\arabic*)]
+\item $\card{O}$;
+\item $\mathsf{all}(O,\ \mathsf{isOption}(U,\cdot))\wedge\mathsf{distinctCodes}(\mathsf{map}(\mathsf{layerCode},O),\
+  0)$;
+\item $\mathsf{all}\big(O,\ o\mapsto\mathsf{isOption}(U,\iota(o))\wedge\mathsf{beqLayer}(\iota(\iota(o)),o)\big)$;
+\item $\card{\mathsf{filter}(o\mapsto\mathsf{beqLayer}(\iota(o),o),\ O)}$;
+\item $\card{\mathsf{keptOptions}(t)}$;
+\item $\mathsf{all}\big(O,\ o\mapsto(\mathsf{kept}_t(o)\vee\mathsf{kept}_t(\iota(o)))\wedge
+  (\mathsf{beqLayer}(\iota(o),o)\vee\neg(\mathsf{kept}_t(o)\wedge\mathsf{kept}_t(\iota(o))))\big)$.
+\end{enumerate}
+\end{definition}
+
+\begin{lemma}[Distinctness and code sets; written step]\label{cb:lem:codes}
+Let $l$ be a list of naturals and $acc\in\N$. Then $\mathsf{distinctCodes}(l,acc)=\mathsf{true}$ iff $l$ is
+duplicate-free and no entry of $l$ lies in $\beta(acc)$. In particular $\mathsf{distinctCodes}(l,0)=\mathsf{true}$ iff $l$ is
+duplicate-free. Moreover $\beta(\mathsf{codeSet}(l))=\mathrm{set}(l)$, so for lists $l,l'$ of naturals
+$\mathsf{codeSet}(l)=\mathsf{codeSet}(l')$ iff $\mathrm{set}(l)=\mathrm{set}(l')$.
+\end{lemma}
+
+\begin{proof}
+Induction on $l$, for all $acc$. For $l=[]$ both sides hold. For $l=x\mathbin{::}l'$ the value is $\mathsf{true}$ iff
+$x\notin\beta(acc)$ and $\mathsf{distinctCodes}(l',acc\mathbin{\mathsf{or}}2^x)=\mathsf{true}$; by induction and
+$\beta(acc\mathbin{\mathsf{or}}2^x)=\beta(acc)\cup\{x\}$, this holds iff $x\notin\beta(acc)$, $l'$ is duplicate-free,
+and no entry of $l'$ lies in $\beta(acc)\cup\{x\}$; that is exactly the statement that $x\mathbin{::}l'$ is
+duplicate-free with no entry in $\beta(acc)$. For $\beta(0)=\emptyset$ this gives the second sentence. The claim on
+$\mathsf{codeSet}$ is Lemma~\ref{cb:lem:bits} with $z=0$ and $g$ the identity, together with the injectivity of
+$\beta$.
+\end{proof}
+
+\begin{fact}[Batches; \leanref{C3Cover.batch0}{C3LEAN/C3Cover.lean:1740}]\label{cb:fact:batches}
+(Computer-assisted.) For every $N\in\{0,\dots,126\}$,
+\[
+\mathsf{all}\big(\mathsf{certs}_N,\ c\mapsto\mathsf{checkRoot}(\mathsf{decodeRoot}(c.\mathsf{root}),c)\big)=
+\mathsf{true}.
+\]
+These are the 127 theorems \lean{C3Cover.batch0}, \lean{C3Cover.batch1}, \dots,
+\lean{C3Cover.batch126}; the one for $N$ is at line $1740+4N$ (the last, \lean{batch126}, at line 2244).
+\end{fact}
+
+Each of the 127 theorems is Lean-checked by kernel evaluation (\texttt{decide +kernel}); no hand
+proof is given. What is evaluated: for each of the 910 certificates $c$ in the lists $\mathsf{certs}_N$, the node
+$\mathsf{decodeRoot}(c.\mathsf{root})$ and the list $\mathsf{keys}(c)$ are computed, and $\mathsf{run}$ is evaluated
+step by step as in Definition~\ref{cb:def:run}; at every split node the kernel computes $\mathsf{layerChildren}$, or
+$\mathsf{free}$ and $\mathsf{sigmaChildren}$, from the definitions, and at every leaf it compares the node with the
+decoded key by $\mathsf{beqNode}$. Over all 910 certificates this treats 76{,}256 nodes: 73{,}567 leaves, 1{,}747
+$\sigma$-splits and 942 layer splits (counts recorded in \dirn{C3LEAN/c3cover_summary.json}; the review's independent
+transcription of the checker into Python obtained the same counts, \dirn{C3LEAN/review/logs/indep_audit.json}). For
+554 of the 910 roots the decision field $c.\mathsf{ds}$ of the certificate $c$ is the numeral $0$ and
+$\mathsf{keys}(c)$ has one entry, so the certificate consists of the root itself as the only leaf. This number is our
+own count from the certificate data of \dirn{C3LEAN/C3Cover.lean}; it is not a Lean statement, and no project record
+states it.
+
+\begin{lemma}[All checked; \leanref{C3Cover.all_checked}{C3LEAN/C3Cover.lean:2247}]\label{cb:lem:all-checked}
+(Computer-assisted: the proof uses Fact~\ref{cb:fact:batches}.) Every certificate passes:
+\[
+\mathsf{all}\big(\mathsf{certs},\ c\mapsto\mathsf{checkRoot}(\mathsf{decodeRoot}(c.\mathsf{root}),c)\big)=\mathsf{true}.
+\]
+\end{lemma}
+
+\begin{proof}
+As in Lean. Let $p(c)=\mathsf{checkRoot}(\mathsf{decodeRoot}(c.\mathsf{root}),c)$, and let $T_{126}=\mathsf{certs}_{126}$
+and $T_N=\mathsf{certs}_N\mathbin{+\!\!+}T_{N+1}$ for $N=125,\dots,0$, so that $T_0=\mathsf{certs}$ by
+Definition~\ref{cb:def:certs}. By Fact~\ref{cb:fact:batches}, $\mathsf{all}(T_{126},p)=\mathsf{true}$; and if
+$\mathsf{all}(T_{N+1},p)=\mathsf{true}$, then Lemma~\ref{cb:lem:append} together with Fact~\ref{cb:fact:batches} for
+$\mathsf{certs}_N$ gives $\mathsf{all}(T_N,p)=\mathsf{true}$. Descending from $N=125$ to $N=0$ (126 applications of
+\lean{all_append_of}, as in the Lean term) gives the claim.
+\end{proof}
+
+\begin{fact}[Reflection facts below H3; \leanref{C3Cover.reflection_facts_H3}{C3LEAN/C3Cover.lean:367}]\label{cb:fact:refl-h3}
+(Computer-assisted in Lean, by kernel evaluation; written proof in Proposition~\ref{cb:prop:refl}.)
+$\mathsf{reflectionFacts}(\mathsf{H3})=(190,\mathsf{true},\mathsf{true},10,100,\mathsf{true})$.
+\end{fact}
+
+\begin{fact}[Reflection facts below H6; \leanref{C3Cover.reflection_facts_H6_1_0}{C3LEAN/C3Cover.lean:370}]\label{cb:fact:refl-h6}
+(Computer-assisted in Lean, by kernel evaluation; written proof in Proposition~\ref{cb:prop:refl}.)
+For each $a\in\{1,\dots,5\}$ and $s\in\{0,1\}$:
+$\mathsf{reflectionFacts}(\mathsf{H6}(a,s))=(153,\mathsf{true},\mathsf{true},9,81,\mathsf{true})$. These are the ten
+theorems \lean{reflection_facts_H6_1_0}, \lean{reflection_facts_H6_1_1}, \lean{reflection_facts_H6_2_0}, \dots,
+\lean{reflection_facts_H6_5_1}; the one for $(a,s)$ is at line $370+3(2a+s-2)$ (the last at line 397).
+\end{fact}
+
+\begin{fact}[Top cases; \leanref{C3Cover.topCases_eq}{C3LEAN/C3Cover.lean:401}]\label{cb:fact:topcases}
+(Computer-assisted in Lean, by kernel evaluation; written proof in Proposition~\ref{cb:prop:refl}.)
+The list of top cases is
+\[
+\mathsf{topCases}=[\mathsf{H3},\mathsf{H6}(1,0),\mathsf{H6}(1,1),\mathsf{H6}(2,0),\mathsf{H6}(2,1),\mathsf{H6}(3,0),
+\mathsf{H6}(3,1),\mathsf{H6}(4,0),\mathsf{H6}(4,1),\mathsf{H6}(5,0),\mathsf{H6}(5,1)].
+\]
+\end{fact}
+
+\begin{fact}[Strata; \leanref{C3Cover.strata}{C3LEAN/C3Cover.lean:406}]\label{cb:fact:strata}
+(Computer-assisted in Lean, by kernel evaluation; written proof in Proposition~\ref{cb:prop:refl}.)
+The numbers of kept options with one and with two tokens are
+\begin{align*}
+\mathsf{map}\big(t\mapsto\card{\mathsf{filter}(o\mapsto(\card o=1),\ \mathsf{keptOptions}(t))},\
+\mathsf{topCases}\big)&=\mathsf{replicate}(11,5),\\
+\mathsf{map}\big(t\mapsto\card{\mathsf{filter}(o\mapsto(\card o=2),\ \mathsf{keptOptions}(t))},\
+\mathsf{topCases}\big)&=95\mathbin{::}\mathsf{replicate}(10,76).
+\end{align*}
+\end{fact}
+
+Each of the 13 theorems of Facts~\ref{cb:fact:refl-h3}--\ref{cb:fact:strata} is Lean-checked by kernel evaluation of
+the definitions; Proposition~\ref{cb:prop:refl} below gives a complete written proof of all of them. They are not used
+in the proof of Theorem~\ref{cb:thm:c3}; they record that $\mathsf{roots}$ has the properties that the reductions of
+the second layer need (Remark~\ref{cb:rem:use}).
+
+\begin{fact}[Roots; \leanref{C3Cover.roots_match}{C3LEAN/C3Cover.lean:1720}]\label{cb:fact:roots-match}
+(Computer-assisted in Lean, by kernel evaluation; written proof in Proposition~\ref{cb:prop:roots-match}.)
+The list of roots has $910$ entries, and each is recovered from its code:
+\[
+\card{\mathsf{roots}}=910\quad\text{and}\quad
+\mathsf{all}\big(\mathsf{roots},\ \rho\mapsto\mathsf{beqNode}(\mathsf{decodeRoot}(\mathsf{rootCode}(\rho)),\rho)\big)
+=\mathsf{true}.
+\]
+\end{fact}
+
+Lean-checked by kernel evaluation of the definitions (the kernel computes the list $\mathsf{roots}$);
+Proposition~\ref{cb:prop:roots-match} below gives a complete written proof that does not use the computation.
+
+\begin{fact}[Root codes; \leanref{C3Cover.roots_codes_match}{C3LEAN/C3Cover.lean:1725}]\label{cb:fact:roots-codes}
+(Computer-assisted.) The codes of the roots match the roots of the certificates:
+\[
+\mathsf{beqList}\big(\mathsf{Nat.beq},\ \mathsf{map}(\mathsf{rootCode},\mathsf{roots}),\
+\mathsf{map}(c\mapsto c.\mathsf{root},\mathsf{certs})\big)=\mathsf{true}.
+\]
+\end{fact}
+
+\begin{fact}[TSV codes; \leanref{C3Cover.roots_eq_tsv}{C3LEAN/C3Cover.lean:1730}]\label{cb:fact:roots-tsv}
+(Computer-assisted.) The following four statements hold (as one conjunction):
+\begin{gather*}
+\card{\mathsf{tsvRootCodes}}=910,\qquad \mathsf{distinctCodes}(\mathsf{tsvRootCodes},0)=\mathsf{true},\\
+\mathsf{distinctCodes}(\mathsf{map}(c\mapsto c.\mathsf{root},\mathsf{certs}),0)=\mathsf{true},\\
+\mathsf{codeSet}(\mathsf{map}(c\mapsto c.\mathsf{root},\mathsf{certs}))=\mathsf{codeSet}(\mathsf{tsvRootCodes}).
+\end{gather*}
+\end{fact}
+
+Facts~\ref{cb:fact:roots-codes} and~\ref{cb:fact:roots-tsv} are computer-assisted and Lean-checked by kernel
+evaluation: the kernel compares the 910 codes $\mathsf{rootCode}(\rho)$, computed from the definitions, entry by entry
+and in order with the 910 generated numerals $c.\mathsf{root}$, and it tests, with the bit-set accumulator of
+$\mathsf{distinctCodes}$ and the or-fold $\mathsf{codeSet}$, that the latter and the 910 numerals of
+$\mathsf{tsvRootCodes}$ are duplicate-free lists with equal sets. No hand proof of them is given.
+
+\subsection{Written proofs of the facts about the roots}\label{cb:sec:written}
+
+Call a token $(r,s)$ \emph{valid} if $r\le10$ and $s\le2$, and a layer \emph{valid} if it consists of one or two valid
+tokens.
+
+\begin{lemma}[Sorting short lists; written step]\label{cb:lem:sort}
+$\mathsf{sortTok}([t])=[t]$; $\mathsf{sortTok}([t,u])=[t,u]$ if $t.1\le u.1$, and $\mathsf{sortTok}([t,u])=[u,t]$ if
+$t.1>u.1$. In particular a two-token list with distinct residues is put into increasing order of residue, and a layer
+of one token, or of two tokens with increasing residues, is fixed by $\mathsf{sortTok}$.
+\end{lemma}
+
+\begin{proof}
+$\mathsf{sortTok}([t])=\mathsf{insTok}(t,[])=[t]$, and $\mathsf{sortTok}([t,u])=\mathsf{insTok}(t,[u])$, which is
+$[t,u]$ if $t.1\le u.1$ and $u\mathbin{::}\mathsf{insTok}(t,[])=[u,t]$ otherwise.
+\end{proof}
+
+\begin{lemma}[Layer options; written step]\label{cb:lem:options}
+The following hold.
+\begin{enumerate}[label=(\alph*)]
+\item Let $l$ be a strictly increasing list of naturals. Then $\mathsf{pairOptions}(l)$ is duplicate-free, has
+  $4\binom{\card l}{2}$ entries, and its entries are exactly the lists $[(b,\sigma),(c,\tau)]$ with $b,c\in l$, $b<c$
+  and $\sigma,\tau\in\{0,1\}$.
+\item Let $U$ be a list of naturals, $R=\{r\in\{0,\dots,10\}:r\notin U\}$ and $f=\card R$. Then
+  $\mathsf{layerOptions}(U)$ is duplicate-free, has $f+4\binom f2$ entries, and its set of entries is
+  \[
+  \mathcal O(U)=\{[(r,2)]:r\in R\}\cup\{[(b,\sigma),(c,\tau)]:b,c\in R,\ b<c,\ \sigma,\tau\in\{0,1\}\}.
+  \]
+  Moreover, for every layer $L$: $\mathsf{isOption}(U,L)=\mathsf{true}$ iff $L\in\mathcal O(U)$.
+\item Every element of $\mathcal O(U)$ is a valid layer and is fixed by $\mathsf{sortTok}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) Induction on $l$. For $l=[]$ the list is empty and $\binom02=0$. Let $l=b\mathbin{::}l'$; then $l'$ is strictly
+increasing and all its entries exceed $b$. The first part $\mathsf{flatMap}(c\mapsto Q_{b,c},l')$ consists of the
+$4\card{l'}$ lists $[(b,\sigma),(c,\tau)]$ with $c\in l'$ and $\sigma,\tau\in\{0,1\}$; they are pairwise distinct
+(distinct triples $(c,\sigma,\tau)$, as $l'$ is duplicate-free) and all have first residue $b$. By induction,
+$\mathsf{pairOptions}(l')$ is duplicate-free with $4\binom{\card{l'}}2$ entries, all with first residue in $l'$, hence
+different from $b$. So $\mathsf{pairOptions}(l)$ is duplicate-free with
+$4\card{l'}+4\binom{\card{l'}}2=4\binom{\card{l'}+1}2$ entries, and each entry has the stated form ($b<c$ in the first
+part since $c\in l'$; by induction in the second). Conversely, let $b',c'\in l$ with $b'<c'$ and
+$\sigma,\tau\in\{0,1\}$. If $b'=b$, then $c'\ne b$, so $c'\in l'$, and $[(b,\sigma),(c',\tau)]$ is in the first part.
+If $b'\ne b$, then $b'\in l'$, so $c'>b'>b$ and $c'\in l'$; by induction the list is in $\mathsf{pairOptions}(l')$.
+
+(b) $\mathsf{rem}(U)$ is the list of the elements of $R$ in increasing order (filtering keeps the order of
+$\mathsf{range}(11)$). The first part $\mathsf{map}(r\mapsto[(r,2)],\mathsf{rem}(U))$ is duplicate-free with $f$
+one-token entries; the second part $\mathsf{pairOptions}(\mathsf{rem}(U))$ is described by (a), and its entries have
+two tokens. So $\mathsf{layerOptions}(U)$ is duplicate-free with $f+4\binom f2$ entries, and its set of entries is
+$\mathcal O(U)$. By Definition~\ref{cb:def:isoption}, $\mathsf{isOption}(U,[(r,s)])=\mathsf{true}$ iff $r\le10$,
+$r\notin U$ and $s=2$; $\mathsf{isOption}(U,[(b,\sigma),(c,\tau)])=\mathsf{true}$ iff $b<c\le10$, $b,c\notin U$ and
+$\sigma,\tau\in\{0,1\}$; and $\mathsf{isOption}(U,L)=\mathsf{false}$ for the other layers. This is membership in
+$\mathcal O(U)$.
+
+(c) The residues are at most $10$, the second components lie in $\{0,1,2\}$, and a two-token element has increasing
+residues; apply Lemma~\ref{cb:lem:sort}.
+\end{proof}
+
+\begin{lemma}[Decoding; written step]\label{cb:lem:decode}
+The following hold.
+\begin{enumerate}[label=(\alph*)]
+\item $\mathsf{decodeTok}(\mathsf{tokCode}(r,s))=(r,s)$ for all $r\in\N$ and $s\le2$.
+\item For every valid layer $L$: $1\le\mathsf{layerCode}(L)\le1122$ and
+  $\mathsf{decodeLayer}(\mathsf{layerCode}(L))=L$. In particular $\mathsf{layerCode}$ is injective on valid layers.
+\item For valid layers $A,B$:
+  $\mathsf{decodeRoot}\big(\mathsf{rootCode}(\langle[A,B],[]\rangle)\big)=\langle[A,B],[]\rangle$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) $\mathsf{tokCode}(r,s)=3r+s$ with $0\le s<3$, so $\lfloor(3r+s)/3\rfloor=r$ and $(3r+s)\bmod3=s$.
+
+(b) A valid token $t=(r,s)$ has $\mathsf{tokCode}(t)=3r+s\le30+2=32$. If $L=[t]$, then
+$c=\mathsf{layerCode}(L)=1+\mathsf{tokCode}(t)\in[1,33]$; as $c\le33$,
+$\mathsf{decodeLayer}(c)=[\mathsf{decodeTok}(c\mathbin{\dot-}1)]=[\mathsf{decodeTok}(\mathsf{tokCode}(t))]=[t]$ by (a).
+If $L=[t,u]$, let $x=\mathsf{tokCode}(t)$ and $y=\mathsf{tokCode}(u)$, both in $[0,32]$. Then
+$c=34+33x+y\in[34,\ 34+33\cdot32+32]=[34,1122]$; as $c>33$, $\mathsf{decodeLayer}(c)$ is computed from
+$c\mathbin{\dot-}34=33x+y$, and since $0\le y<33$, $\lfloor(33x+y)/33\rfloor=x$ and $(33x+y)\bmod33=y$; by (a),
+$\mathsf{decodeLayer}(c)=[\mathsf{decodeTok}(x),\mathsf{decodeTok}(y)]=[t,u]$.
+
+(c) $\mathsf{rootCode}(\langle[A,B],[]\rangle)=q\cdot1123+r$ with $q=\mathsf{layerCode}(A)$ and
+$r=\mathsf{layerCode}(B)\in[1,1122]$ by (b). As $0\le r<1123$, $\lfloor(q\cdot1123+r)/1123\rfloor=q$ and
+$(q\cdot1123+r)\bmod1123=r$. Hence $\mathsf{decodeRoot}$ returns
+$\langle[\mathsf{decodeLayer}(q),\mathsf{decodeLayer}(r)],[]\rangle=\langle[A,B],[]\rangle$ by (b).
+\end{proof}
+
+\begin{lemma}[The order lexLe; written step]\label{cb:lem:lex}
+For all lists $x,y$ of naturals: (a) $\mathsf{lexLe}(x,x)=\mathsf{true}$; (b) $\mathsf{lexLe}(x,y)=\mathsf{true}$ or
+$\mathsf{lexLe}(y,x)=\mathsf{true}$; (c) if $\mathsf{lexLe}(x,y)=\mathsf{lexLe}(y,x)=\mathsf{true}$, then $x=y$.
+\end{lemma}
+
+\begin{proof}
+Induction on $x$, for all $y$.
+(a) $\mathsf{lexLe}([],[])=\mathsf{true}$, and
+$\mathsf{lexLe}(a\mathbin{::}as,a\mathbin{::}as)=(a<a)\vee((a=a)\wedge\mathsf{lexLe}(as,as))=\mathsf{lexLe}(as,as)$,
+which is $\mathsf{true}$ by induction.
+(b) If $x=[]$ or $y=[]$, the empty list is $\mathsf{lexLe}$ the other one. Let $x=a\mathbin{::}as$ and
+$y=b\mathbin{::}bs$. If $a<b$, then $\mathsf{lexLe}(x,y)=\mathsf{true}$; if $b<a$, then $\mathsf{lexLe}(y,x)=\mathsf{true}$;
+if $a=b$, then $\mathsf{lexLe}(x,y)=\mathsf{lexLe}(as,bs)$ and $\mathsf{lexLe}(y,x)=\mathsf{lexLe}(bs,as)$, and one of
+them is $\mathsf{true}$ by induction.
+(c) If $x=[]$, then $\mathsf{lexLe}(y,[])=\mathsf{true}$ forces $y=[]$. If $x=a\mathbin{::}as$, then
+$\mathsf{lexLe}(x,y)=\mathsf{true}$ forces $y=b\mathbin{::}bs$, and the hypotheses say: $a<b$ or ($a=b$ and
+$\mathsf{lexLe}(as,bs)=\mathsf{true}$); and $b<a$ or ($b=a$ and $\mathsf{lexLe}(bs,as)=\mathsf{true}$). Since $a<b$
+excludes both $b<a$ and $b=a$, and $b<a$ excludes $a=b$, we get $a=b$ and
+$\mathsf{lexLe}(as,bs)=\mathsf{lexLe}(bs,as)=\mathsf{true}$; so $as=bs$ by induction, and $x=y$.
+\end{proof}
+
+\begin{lemma}[Counting kept options; written step]\label{cb:lem:orbits}
+Let $X$ be a duplicate-free list of valid layers, each fixed by $\mathsf{sortTok}$, and let $\iota$ be a map from
+layers to layers with $\iota(x)\in X$ and $\iota(\iota(x))=x$ for every $x\in X$. For $x\in X$ let
+$k(x)=\mathsf{lexLe}(\mathsf{okey}(x),\mathsf{okey}(\iota(x)))$, and let $F$ be the number of $x\in X$ with
+$\iota(x)=x$. Then:
+\begin{enumerate}[label=(\alph*)]
+\item if $\iota(x)=x$, then $k(x)=\mathsf{true}$;
+\item if $\iota(x)\ne x$, then exactly one of $k(x)$, $k(\iota(x))$ is $\mathsf{true}$;
+\item $\card{\mathsf{filter}(k,X)}=F+(\card X-F)/2$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) $k(x)=\mathsf{lexLe}(\mathsf{okey}(x),\mathsf{okey}(x))=\mathsf{true}$ by Lemma~\ref{cb:lem:lex}(a).
+
+(b) For $y\in X$ we have $\mathsf{sortTok}(y)=y$, so $\mathsf{okey}(y)=\mathsf{map}(\kappa,y)$. On tokens with second
+component $s\le2$, $\kappa(r,s)=3r+e(s)$ with $e(2)=0$, $e(0)=1$, $e(1)=2$, and $e$ is a bijection of $\{0,1,2\}$;
+so $r=\lfloor\kappa(r,s)/3\rfloor$ and $e(s)=\kappa(r,s)\bmod3$ determine $(r,s)$, and $\kappa$ is injective on valid
+tokens. Hence $\mathsf{map}(\kappa,\cdot)$ is injective on lists of valid tokens (equal images have equal lengths and
+equal entries), and $\mathsf{okey}$ is injective on $\mathrm{set}(X)$. Let $\iota(x)\ne x$; both lie in $X$, so
+$\mathsf{okey}(x)\ne\mathsf{okey}(\iota(x))$. Moreover
+$k(\iota(x))=\mathsf{lexLe}(\mathsf{okey}(\iota(x)),\mathsf{okey}(\iota(\iota(x))))
+=\mathsf{lexLe}(\mathsf{okey}(\iota(x)),\mathsf{okey}(x))$. By Lemma~\ref{cb:lem:lex}(b) at least one of $k(x)$,
+$k(\iota(x))$ is $\mathsf{true}$, and by Lemma~\ref{cb:lem:lex}(c) not both.
+
+(c) As $X$ is duplicate-free, $\card{\mathsf{filter}(k,X)}$ is the number of elements $x$ of $\mathrm{set}(X)$ with
+$k(x)=\mathsf{true}$. The map $\iota$ restricted to $\mathrm{set}(X)$ is an involution of $\mathrm{set}(X)$, so
+$\mathrm{set}(X)$ is the disjoint union of its $F$ fixed points and of $(\card X-F)/2$ two-element orbits
+$\{x,\iota(x)\}$. By (a) every fixed point is counted, and by (b) exactly one element of each two-element orbit.
+\end{proof}
+
+\begin{proposition}[Proof of the reflection facts; written step]\label{cb:prop:refl}
+Facts~\ref{cb:fact:refl-h3}, \ref{cb:fact:refl-h6}, \ref{cb:fact:topcases} and~\ref{cb:fact:strata} hold. More
+precisely, let $t$ be $\mathsf{H3}$, with $R=\{1,\dots,10\}$, or $\mathsf{H6}(a,s)$ with $1\le a\le5$, $s\in\{0,1\}$,
+with $R=\{1,\dots,10\}\setminus\{a\}$; let $O=\mathsf{layerOptions}(\mathsf{map}(u\mapsto u.1,t))$ and
+$\iota=\mathsf{refl}(t,\cdot)$. Then $\iota$ maps $\mathrm{set}(O)$ into itself, is an involution of it, preserves the
+number of tokens, and its fixed points are:
+\begin{itemize}
+\item for $\mathsf{H3}$: the ten layers $[(b,\sigma),(11-b,1-\sigma)]$ with $1\le b\le5$ and $\sigma\in\{0,1\}$;
+\item for $\mathsf{H6}(a,s)$: the layer $[(r_0,2)]$, where $r_0=a/2$ if $a$ is even and $r_0=(a+11)/2$ if $a$ is odd
+  (so $r_0=6,1,7,2,8$ for $a=1,\dots,5$), and the eight layers $[(b,\sigma),(b^*,\sigma\oplus f_b)]$ with $b\in R$,
+  $b<b^*$ and $\sigma\in\{0,1\}$; here $r^*=((a+11)\mathbin{\dot-}r)\bmod11$ for $r\in R$ (that is, $r^*=a-r$ if $r<a$
+  and $r^*=a+11-r$ if $r>a$), and $f_b=1$ if exactly one of $b<a$, $s=0$ holds and $f_b=0$ otherwise.
+\end{itemize}
+\end{proposition}
+
+\begin{proof}
+Lean checks these facts by evaluation; the following proof does not use the evaluation.
+
+\emph{The used residues and the options.} For $t=\mathsf{H3}$, $\mathsf{map}(u\mapsto u.1,t)=[0]$; for
+$t=\mathsf{H6}(a,s)$ it is $[0,a]$. So $R$ is the set of Lemma~\ref{cb:lem:options}(b), with $f=\card R=10$, resp.\
+$9$. By that lemma, $O$ is duplicate-free with $\mathrm{set}(O)=\mathcal O$ (the set $\mathcal O(U)$ of the lemma),
+and $\card O=10+4\binom{10}2=190$, resp.\ $9+4\binom92=153$. Let $X_1$ and $X_2$ be the sublists of one-token and of
+two-token entries of $O$; they have $10$ and $180$, resp.\ $9$ and $144$, entries.
+
+\emph{The map below $\mathsf{H3}$.} Here $\iota=\mathsf{mirror}$ (first case of Definition~\ref{cb:def:refl}). For
+$r\in\{1,\dots,10\}$, $(11\mathbin{\dot-}r)\bmod11=11-r\in\{1,\dots,10\}$, and for $\sigma\in\{0,1\}$,
+$1\mathbin{\dot-}\sigma=1-\sigma$. Hence, by Lemma~\ref{cb:lem:sort},
+\[
+\mathsf{mirror}([(r,2)])=[(11-r,2)],\qquad
+\mathsf{mirror}([(b,\sigma),(c,\tau)])=[(11-c,1-\tau),(11-b,1-\sigma)]\quad(b<c),
+\]
+the second because $11-b>11-c$. Both results lie in $\mathcal O$, and applying the formulas twice returns the original
+layer ($11-(11-r)=r$, $1-(1-\sigma)=\sigma$). So $\iota$ is an involution of $\mathcal O$ preserving the number of
+tokens. A one-token option is never fixed ($11-r=r$ is impossible). A two-token option $[(b,\sigma),(c,\tau)]$, $b<c$,
+is fixed iff $11-c=b$, $1-\tau=\sigma$, $11-b=c$ and $1-\sigma=\tau$, i.e.\ iff $c=11-b$ and $\tau=1-\sigma$; with
+$b<c=11-b$ this means $1\le b\le5$. So $F=10$: none in $X_1$ and ten in $X_2$.
+
+\emph{The map below $\mathsf{H6}(a,s)$.} Here $\iota=\mathsf{phi}(a,s,\cdot)$ (second case of
+Definition~\ref{cb:def:refl}, with this $a$ and $s$). For $r\in R$ let $r^*=((a+11)\mathbin{\dot-}r)\bmod11$, as
+in the statement. Since $r\le10<a+11$, $(a+11)\mathbin{\dot-}r=a+11-r$. If $r<a$, then $a+11-r\in[12,a+10]$, so $r^*=a-r\in[1,a-1]$; if $r>a$,
+then $a+11-r\in[a+1,10]$, so $r^*=a+11-r\in[a+1,10]$. In both cases $r^*\in R$, $[r^*<a]=[r<a]$ and $(r^*)^*=r$ (indeed
+$a-(a-r)=r$, resp.\ $a+11-(a+11-r)=r$). So $r\mapsto r^*$ is an involution of $R$. For $\sigma\in\{0,1\}$ the second
+component of $\varphi_{a,s}(r,\sigma)$ is $\sigma\oplus f_r$, where $f_r=1$ if exactly one of $r<a$, $s=0$ holds and
+$f_r=0$ otherwise (because $1\mathbin{\dot-}\sigma=\sigma\oplus1$); for $\sigma=2$ it is $2$. As $[r^*<a]=[r<a]$, we
+have $f_{r^*}=f_r$. Hence, by Lemma~\ref{cb:lem:sort},
+\[
+\mathsf{phi}(a,s,[(r,2)])=[(r^*,2)],\qquad
+\mathsf{phi}(a,s,[(b,\sigma),(c,\tau)])=\mathsf{sortTok}\big([(b^*,\sigma\oplus f_b),(c^*,\tau\oplus f_c)]\big),
+\]
+the latter being these two tokens in increasing order of residue ($b^*\ne c^*$ since $r\mapsto r^*$ is injective).
+Both results lie in $\mathcal O$. The token map $h(r,\sigma)=(r^*,\sigma\oplus f_r)$, $h(r,2)=(r^*,2)$, satisfies
+$h(h(x))=x$ on the tokens of options, since $(r^*)^*=r$ and $\sigma\oplus f_r\oplus f_{r^*}=\sigma$. For a two-token
+option $o$, $\mathsf{sortTok}(\mathsf{map}(h,o))$ is $\mathsf{map}(h,o)$ or its reversal; applying $\mathsf{map}(h,\cdot)$
+gives $o$ or its reversal, and $\mathsf{sortTok}$ of that is $o$, since $o$ has increasing residues. So $\iota$ is an
+involution of $\mathcal O$ preserving the number of tokens.
+
+Fixed points: $[(r,2)]$ is fixed iff $r^*=r$, i.e.\ iff $a=2r$ (case $r<a$) or $a+11=2r$ (case $r>a$). For even $a$
+only the first equation has an integer solution, $r_0=a/2\in[1,a-1]$; for odd $a$ only the second,
+$r_0=(a+11)/2\in[a+1,10]$ (as $a\le5$). So $r\mapsto r^*$ has exactly one fixed point $r_0$ in $R$, $X_1$ has exactly
+one fixed entry, and $R\setminus\{r_0\}$ splits into four two-element orbits $\{b,b^*\}$. Let $o=[(b,\sigma),(c,\tau)]$
+with $b<c$. If $\iota(o)=o$, the residues satisfy $\{b^*,c^*\}=\{b,c\}$; $b^*=b$ and $c^*=c$ is impossible (only one
+fixed residue), so $c=b^*$ and $b=c^*$. In that case
+$\iota(o)=\mathsf{sortTok}([(c,\sigma\oplus f_b),(b,\tau\oplus f_c)])=[(b,\tau\oplus f_c),(c,\sigma\oplus f_b)]$,
+which equals $o$ iff $\tau\oplus f_c=\sigma$ and $\sigma\oplus f_b=\tau$; as $f_c=f_{b^*}=f_b$, both conditions say
+$\tau=\sigma\oplus f_b$. So each of the four orbits $\{b<c\}$ carries exactly two fixed options (one for each
+$\sigma$), and $F=9$: one in $X_1$ and eight in $X_2$.
+
+\emph{Counting.} The lists $O$, $X_1$, $X_2$ satisfy the hypotheses of Lemma~\ref{cb:lem:orbits} with this $\iota$
+(Lemma~\ref{cb:lem:options}(c); $\iota$ maps $\mathcal O$ to itself, preserves the number of tokens and is an
+involution), and then $k=\mathsf{kept}_t$. Hence the numbers of kept entries are:
+for $\mathsf{H3}$, $10+(190-10)/2=100$ in $O$, $0+10/2=5$ in $X_1$ and $10+(180-10)/2=95$ in $X_2$;
+for $\mathsf{H6}(a,s)$, $9+(153-9)/2=81$ in $O$, $1+(9-1)/2=5$ in $X_1$ and $8+(144-8)/2=76$ in $X_2$.
+
+\emph{The six components.} (F1) is $\card O=190$, resp.\ $153$. (F2): $\mathsf{all}(O,\mathsf{isOption}(U,\cdot))=
+\mathsf{true}$ by Lemma~\ref{cb:lem:options}(b); the list $\mathsf{map}(\mathsf{layerCode},O)$ is duplicate-free
+because $O$ is and $\mathsf{layerCode}$ is injective on valid layers (Lemma~\ref{cb:lem:decode}(b)), so
+$\mathsf{distinctCodes}(\cdot,0)=\mathsf{true}$ by Lemma~\ref{cb:lem:codes}. (F3): for $o\in O$, $\iota(o)\in\mathcal O$,
+so $\mathsf{isOption}(U,\iota(o))=\mathsf{true}$, and $\iota(\iota(o))=o$, so $\mathsf{beqLayer}(\iota(\iota(o)),o)=
+\mathsf{true}$ by Lemma~\ref{cb:lem:beq-refl}. (F4): by Lemma~\ref{cb:lem:beq-refl},
+$\mathsf{beqLayer}(\iota(o),o)=\mathsf{true}$ iff $\iota(o)=o$, so the value is $F=10$, resp.\ $9$. (F5):
+$\mathsf{keptOptions}(t)=\mathsf{filter}(\mathsf{kept}_t,O)$ has $100$, resp.\ $81$, entries. (F6): for $o\in O$, by
+Lemma~\ref{cb:lem:orbits}(a),(b) at least one of $\mathsf{kept}_t(o)$, $\mathsf{kept}_t(\iota(o))$ is $\mathsf{true}$;
+and if $\mathsf{beqLayer}(\iota(o),o)=\mathsf{false}$, then $\iota(o)\ne o$ and not both are $\mathsf{true}$. This
+proves Facts~\ref{cb:fact:refl-h3} and~\ref{cb:fact:refl-h6}.
+
+\emph{Top cases and strata.} Unfolding Definition~\ref{cb:def:topcases} with $\mathsf{range}(5)=[0,1,2,3,4]$ gives the
+list of Fact~\ref{cb:fact:topcases}. In $\mathsf{keptOptions}(t)$ the entries with one token are the kept entries of
+$X_1$ and those with two tokens the kept entries of $X_2$. In the order of $\mathsf{topCases}$ ($\mathsf{H3}$ first,
+then the ten $\mathsf{H6}(a,s)$), the counts are therefore $5$ eleven times, and $95$ followed by $76$ ten times. This
+is Fact~\ref{cb:fact:strata}.
+\end{proof}
+
+\begin{proposition}[Proof of roots\_match; written step]\label{cb:prop:roots-match}
+$\card{\mathsf{roots}}=910$, and for every $\rho\in\mathsf{roots}$,
+$\mathsf{decodeRoot}(\mathsf{rootCode}(\rho))=\rho$ and
+$\mathsf{beqNode}(\mathsf{decodeRoot}(\mathsf{rootCode}(\rho)),\rho)=\mathsf{true}$. Hence
+Fact~\ref{cb:fact:roots-match} holds.
+\end{proposition}
+
+\begin{proof}
+By (L3), $\card{\mathsf{roots}}=\sum_t\card{\mathsf{keptOptions}(t)}$ over the 11 entries of $\mathsf{topCases}$, which
+is $100+10\cdot81=910$ by Proposition~\ref{cb:prop:refl}. By (L2) and (L4), every $\rho\in\mathsf{roots}$ is
+$\langle[t,o],[]\rangle$ with $t\in\mathsf{topCases}$ and $o\in\mathsf{keptOptions}(t)$, so
+$o\in\mathcal O(\mathsf{map}(u\mapsto u.1,t))$ (Lemma~\ref{cb:lem:options}(b)). The layer $t$ is valid
+($\mathsf{H3}=[(0,0)]$, or $\mathsf{H6}(a,s)=[(0,0),(a,s)]$ with $a\le5$ and $s\le1$, by the unfolding of
+$\mathsf{topCases}$ in Proposition~\ref{cb:prop:refl}), and $o$ is valid by Lemma~\ref{cb:lem:options}(c).
+Lemma~\ref{cb:lem:decode}(c) gives $\mathsf{decodeRoot}(\mathsf{rootCode}(\rho))=\rho$, and
+Lemma~\ref{cb:lem:beq-refl} gives $\mathsf{beqNode}(\rho,\rho)=\mathsf{true}$.
+\end{proof}
+
+\begin{corollary}[Roots and certificates; written step]\label{cb:cor:roots}
+(Computer-assisted: the proof uses Facts~\ref{cb:fact:roots-codes} and~\ref{cb:fact:roots-tsv}.) The following hold.
+\begin{enumerate}[label=(\alph*)]
+\item $\mathsf{map}(\mathsf{rootCode},\mathsf{roots})=\mathsf{map}(c\mapsto c.\mathsf{root},\mathsf{certs})$ as lists,
+  and $\card{\mathsf{certs}}=910$.
+\item The 910 entries of $\mathsf{roots}$ are pairwise distinct nodes, and
+  $\{\mathsf{rootCode}(\rho):\rho\in\mathsf{roots}\}=\mathrm{set}(\mathsf{tsvRootCodes})$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+(a) Lemma~\ref{cb:lem:beqlist} with $eq=\mathsf{Nat.beq}$ (whose value $\mathsf{true}$ implies equality) turns
+Fact~\ref{cb:fact:roots-codes} into the equality of lists; then
+$\card{\mathsf{certs}}=\card{\mathsf{map}(\mathsf{rootCode},\mathsf{roots})}=910$ by (L3) and
+Fact~\ref{cb:fact:roots-match}.
+(b) By Fact~\ref{cb:fact:roots-tsv} and Lemma~\ref{cb:lem:codes}, $\mathsf{map}(c\mapsto c.\mathsf{root},\mathsf{certs})$
+is duplicate-free, hence so is $\mathsf{map}(\mathsf{rootCode},\mathsf{roots})$ by (a); two positions of
+$\mathsf{roots}$ holding the same node would give equal codes, so $\mathsf{roots}$ is duplicate-free. The equality of
+the $\mathsf{codeSet}$ values and Lemma~\ref{cb:lem:codes} give
+$\mathrm{set}(\mathsf{map}(c\mapsto c.\mathsf{root},\mathsf{certs}))=\mathrm{set}(\mathsf{tsvRootCodes})$, and (a)
+identifies the left side with the set of root codes of the roots.
+\end{proof}
+
+The roots are distinct also by a hand argument (distinct top cases and distinct options give distinct nodes), but their
+identification with $\mathsf{tsvRootCodes}$ rests on the computer-assisted Facts~\ref{cb:fact:roots-codes}
+and~\ref{cb:fact:roots-tsv}.
+
+\subsection{The threefold cover theorem}\label{cb:sec:c3}
+
+\begin{theorem}[Roots covered; \leanref{C3Cover.all_roots_covered}{C3LEAN/C3Cover.lean:2251}]\label{cb:thm:c3}
+(Computer-assisted: the proof uses Facts~\ref{cb:fact:batches} and~\ref{cb:fact:roots-codes}.) For every
+$\rho\in\mathsf{roots}$, $\mathsf{Covered}(S^\star)(\rho)$, where $S^\star(n)$ means that there is
+$k\in\mathsf{certifiedKeys}$ with $\mathsf{decodeKey}(k)=n$.
+\end{theorem}
+
+The theorem is Lean-checked (axioms \lean{propext}, \lean{Quot.sound}) and has no hypotheses. Its proof uses the
+computer-assisted Facts~\ref{cb:fact:batches} (through Lemma~\ref{cb:lem:all-checked}) and~\ref{cb:fact:roots-codes},
+and Fact~\ref{cb:fact:roots-match}, which also has the written proof of Proposition~\ref{cb:prop:roots-match}.
+
+\begin{proof}
+We follow the Lean proof. Let $\rho\in\mathsf{roots}$.
+\begin{enumerate}[label=(\arabic*)]
+\item By Fact~\ref{cb:fact:roots-match} (or Proposition~\ref{cb:prop:roots-match}), we have
+  $\mathsf{beqNode}(\mathsf{decodeRoot}(\mathsf{rootCode}(\rho)),\rho)=\mathsf{true}$, so
+  $\mathsf{decodeRoot}(\mathsf{rootCode}(\rho))=\rho$ by Lemma~\ref{cb:lem:beqnode}.
+\item By Corollary~\ref{cb:cor:roots}(a), $\mathsf{map}(\mathsf{rootCode},\mathsf{roots})=\mathsf{map}(c\mapsto
+  c.\mathsf{root},\mathsf{certs})$. As $\mathsf{rootCode}(\rho)$ is an entry of the left side (L4), there is
+  $c\in\mathsf{certs}$ with $c.\mathsf{root}=\mathsf{rootCode}(\rho)$.
+\item By Lemma~\ref{cb:lem:all-checked}, $\mathsf{checkRoot}(\mathsf{decodeRoot}(c.\mathsf{root}),c)=\mathsf{true}$.
+  By (1) and (2), $\mathsf{decodeRoot}(c.\mathsf{root})=\mathsf{decodeRoot}(\mathsf{rootCode}(\rho))=\rho$, so
+  $\mathsf{checkRoot}(\rho,c)=\mathsf{true}$.
+\item By Lemma~\ref{cb:lem:run}(b), $\mathsf{Covered}(S_c)(\rho)$, with $S_c(n)$: there is $k\in\mathsf{keys}(c)$ with
+  $\mathsf{decodeKey}(k)=n$.
+\item If $S_c(n)$ holds with witness $k\in\mathsf{keys}(c)$, then $k\in\mathsf{flatMap}(\mathsf{keys},\mathsf{certs})=
+  \mathsf{certifiedKeys}$ by (L2), since $c\in\mathsf{certs}$; so $S^\star(n)$. Lemma~\ref{cb:lem:mono} turns
+  $\mathsf{Covered}(S_c)(\rho)$ into $\mathsf{Covered}(S^\star)(\rho)$.\qedhere
+\end{enumerate}
+\end{proof}
+
+\begin{remark}[What the theorem says, and how the project uses it]\label{cb:rem:use}
+\emph{The leaf set.} Theorem~\ref{cb:thm:c3} is only as informative as the predicate $S^\star$, which is read off the
+certificates themselves. A certificate that names its root as the only leaf satisfies the checker; this is the case for
+554 of the 910 roots (our count from the certificate data; see the paragraph after Fact~\ref{cb:fact:batches}), and
+for those roots the statement is immediate. The substantial
+claim of the project, that every node satisfying $S^\star$ names a run record in which both checkers are recorded as
+accepting the proof (the criterion of \dirn{C3U2/tools/compose.py}; \dirn{C3LEAN/README.md}, \S4) and whose CNF hash
+matches the base formula plus the units of the node, is checked outside Lean by
+the Python scripts \dirn{C3LEAN/tools/audit_keys.py} and \dirn{C3LEAN/review/indep_audit.py} (73{,}567 leaves,
+73{,}707 records, no mismatch; \dirn{C3LEAN/review/logs/indep_audit.json}). The review demonstrates the gap with a
+certificate that collapses an inner $\sigma$-split of root~0 into one leaf naming a node without such a record and
+still passes (\lean{C3Cover.rev_uncertified_leaf_passes}, \dirn{C3LEAN/review/RevCtrl_pass.lean:307}). The verdicts
+themselves are recorded fields, and the proofs were not kept (\dirn{C3LEAN/README.md}, \S4). The project later recorded that
+acceptance by \texttt{lrat-check} alone is not a certificate and that \texttt{lrat-check} verdicts are supporting only
+(lines 111--114 of \dirn{WRITEUP/note/symmetric_extremal.tex}; \dirn{LRATCHECK20261105}); of the two recorded
+verdicts, only the \texttt{cake\_lpr} verdict counts as a certificate (\dirn{WRITEUP/SYMMETRIC.md}, \S3).
+
+\emph{Intended use (not established here).} By the induction principle of Definition~\ref{cb:def:covered}, the theorem
+gives $P(\rho)$ for every root $\rho$ and every $S^\star$-closed predicate $P$. In the project, $P(n)$ is ``no set of
+the class (threefold symmetric, 33 points, general position, no convex $7$-gon, with its canonical labelling) is
+contained in the node $n$''. That $P$ is $S^\star$-closed amounts to three claims: (i) $P(n)$ for every leaf, which is
+the record-based fact above together with the soundness of the CNF encoding; (ii) the rule (layer), which is Lemma~4
+of \dirn{C3-S/soundness.md} and, for nodes with a nonempty cube, rule~3 of \dirn{C3U2/sigma_split.md} (Lean's rule
+(layer) applies to such nodes, whereas the project's composer \dirn{C3U2/tools/compose.py} also requires a layer-split
+record there, \dirn{C3LEAN/README.md}, \S5, finding~3); (iii) the rule (sigma), which is rule~2 of
+\dirn{C3U2/sigma_split.md}. The passage from ``$P$ holds at every root'' to ``the class is empty'' is the cover
+theorem with the reduced cut in \dirn{C3H6M/soundness_h6m.md}, which uses Lemma~5 of \dirn{C3-S/soundness.md} and
+Lemma~H6M; the $90$ options below $\mathsf{H3}$ and the $720$ options below the ten $\mathsf{H6}(a,s)$ that these
+reductions drop ($190-100$ and $10\cdot(153-81)$) are not roots of the file, so Theorem~\ref{cb:thm:c3} says nothing
+about them. Facts~\ref{cb:fact:refl-h3}
+and~\ref{cb:fact:refl-h6} record that the computed second layers have the properties those reductions need:
+$\mathsf{refl}$ is an involution of the options, and the kept options contain exactly one member of each pair and every
+fixed option. None of (i)--(iii), and none of the written arguments cited here, is Lean-checked or proved in this
+document. The project's own list of what the Lean check leaves open, with the status it records for each part, is
+\S6 of \dirn{C3LEAN/README.md}; its trust base for the threefold theorem (Theorem~1 of
+\dirn{WRITEUP/SYMMETRIC.md}) is \S3 of that file.
+\end{remark}
+
+\subsection{The central 34-point split}\label{cb:sec:c2}
+
+Every Lean reference in a statement head of this subsection is to \dirn{C2FINAL/Central34Orbits.lean}, namespace
+\lean{Central34}; the statements tagged ``written step'' have no Lean counterpart.
+
+\begin{definition}[Inner classes; \leanref{Central34.inner}{C2FINAL/Central34Orbits.lean:21}]\label{cb:def:inner}
+For $a\in\N$,
+\[
+\mathsf{inner}(a)=\mathsf{filter}\big(i\mapsto(i\ne0)\wedge(i\ne a),\ \mathsf{range}(17)\big).
+\]
+\end{definition}
+
+\begin{definition}[Pairs; \leanref{Central34.choose2}{C2FINAL/Central34Orbits.lean:24}]\label{cb:def:choose2}
+For lists of naturals,
+\[
+\mathsf{choose2}([])=[],\qquad
+\mathsf{choose2}(x\mathbin{::}xs)=\mathsf{map}\big(y\mapsto[x,y],\ xs\big)\mathbin{+\!\!+}\mathsf{choose2}(xs).
+\]
+\end{definition}
+
+\begin{definition}[Triples; \leanref{Central34.choose3}{C2FINAL/Central34Orbits.lean:29}]\label{cb:def:choose3}
+For lists of naturals,
+\[
+\mathsf{choose3}([])=[],\qquad
+\mathsf{choose3}(x\mathbin{::}xs)=\mathsf{map}\big(W\mapsto x\mathbin{::}W,\ \mathsf{choose2}(xs)\big)
+\mathbin{+\!\!+}\mathsf{choose3}(xs).
+\]
+\end{definition}
+
+\begin{definition}[Subcases; \leanref{Central34.subcases}{C2FINAL/Central34Orbits.lean:34}]\label{cb:def:subcases}
+For $a\in\N$, $\mathsf{subcases}(a)=\mathsf{choose2}(\mathsf{inner}(a))\mathbin{+\!\!+}\mathsf{choose3}(\mathsf{inner}(a))$.
+\end{definition}
+
+\begin{definition}[Masks; \leanref{Central34.mask}{C2FINAL/Central34Orbits.lean:37}]\label{cb:def:mask}
+For a list $V$ of naturals,
+\[
+\mathsf{mask}(V)=\mathsf{foldl}\big((acc,i)\mapsto acc\mathbin{\mathsf{or}}2^i,\ 0,\ V\big).
+\]
+\end{definition}
+
+\begin{definition}[Central reflection; \leanref{Central34.refl}{C2FINAL/Central34Orbits.lean:40}]\label{cb:def:c2refl}
+For $a\in\N$ and a list $V$ of naturals,
+\[
+\mathsf{refl}(a,V)=\mathsf{map}\big(i\mapsto((a+17)\mathbin{\dot-}i)\bmod17,\ V\big).
+\]
+(This is \lean{Central34.refl}, not to be confused with \lean{C3Cover.refl}.)
+\end{definition}
+
+\begin{definition}[Bit sets; \leanref{Central34.bitset}{C2FINAL/Central34Orbits.lean:43}]\label{cb:def:bitset}
+For a list $L$ of lists of naturals,
+\[
+\mathsf{bitset}(L)=\mathsf{foldl}\big((acc,W)\mapsto acc\mathbin{\mathsf{or}}2^{\mathsf{mask}(W)},\ 0,\ L\big).
+\]
+\end{definition}
+
+\begin{definition}[Uncovered subcases; \leanref{Central34.uncovered}{C2FINAL/Central34Orbits.lean:46}]\label{cb:def:uncovered}
+For $a\in\N$ and a list $C$ of lists of naturals, with the local abbreviation $B=\mathsf{bitset}(C)$,
+\[
+\mathsf{uncovered}(a,C)=\mathsf{filter}\Big(V\mapsto\neg\big(\mathsf{testBit}(B,\mathsf{mask}(V))\vee
+\mathsf{testBit}(B,\mathsf{mask}(\mathsf{refl}(a,V)))\big),\ \mathsf{subcases}(a)\Big).
+\]
+\end{definition}
+
+\begin{definition}[Closed lists; \leanref{Central34.closedP1}{C2FINAL/Central34Orbits.lean:51}]\label{cb:def:closedP}
+The lists $\mathsf{closedP}_1,\dots,\mathsf{closedP}_8$ (Lean \lean{closedP1}, \dots, \lean{closedP8}, at lines 51,
+78, 105, 132, 159, 186, 213, 240; the data end at line 264) are explicit lists of lists of naturals with $287$ entries
+each, except $288$ for $\mathsf{closedP}_6$.
+\end{definition}
+
+\begin{definition}[Closed subcases; \leanref{Central34.closed}{C2FINAL/Central34Orbits.lean:267}]\label{cb:def:closed}
+For $a\in\N$: $\mathsf{closed}(a)=\mathsf{closedP}_a$ if $1\le a\le8$, and $\mathsf{closed}(a)=[]$ otherwise.
+\end{definition}
+
+By Lemma~\ref{cb:lem:bits}, $\beta(\mathsf{mask}(V))=\mathrm{set}(V)$, so $\mathsf{mask}(V)=\mathsf{mask}(W)$ iff
+$\mathrm{set}(V)=\mathrm{set}(W)$; and $\beta(\mathsf{bitset}(L))=\{\mathsf{mask}(W):W\in L\}$, so
+$\mathsf{testBit}(\mathsf{bitset}(L),\mathsf{mask}(V))=\mathsf{true}$ iff $\mathrm{set}(V)=\mathrm{set}(W)$ for some
+$W\in L$. For $1\le a\le16$ put $I_a=\{1,\dots,16\}\setminus\{a\}$.
+
+\begin{remark}[Intended reading]\label{cb:rem:c2-reading}
+In the project (header of the file and \dirn{C2FINAL/README.md}, \S1), a centrally symmetric $34$-point set consists of
+$17$ antipodal classes $0,\dots,16$; in the hull case $P_a$, $1\le a\le8$, the hull is the parallelogram on the classes
+$0$ and $a$, and the second convex layer is spanned by $2$ or $3$ of the other $15$ classes, which gives the subcases;
+the reflection $i\mapsto(a-i)\bmod17$ is reduction~B. The lists $\mathsf{closedP}_a$ were generated by
+\dirn{C2FINAL/gen_lean.py} as the subcases with a run record in which both checkers, \texttt{cake\_lpr} and
+\texttt{lrat-check}, are recorded as accepting the proof and whose CNF hash was
+rebuilt and matched by \dirn{C2FINAL/hashmatch.py} (or a re-solve of \dirn{C2FINAL/README.md}, \S4). This reading is not
+used in any proof.
+\end{remark}
+
+\begin{lemma}[The subcases; written step]\label{cb:lem:c2-subsets}
+Let $l$ be a strictly increasing list of $k$ naturals. Then $\mathsf{choose2}(l)$ is duplicate-free with $\binom k2$
+entries, which are exactly the lists $[x,y]$ with $x,y\in l$, $x<y$; and $\mathsf{choose3}(l)$ is duplicate-free with
+$\binom k3$ entries, which are exactly the lists $[x,y,z]$ with $x,y,z\in l$, $x<y<z$. Consequently, for
+$1\le a\le16$, $\mathsf{subcases}(a)$ is a duplicate-free list of $\binom{15}2+\binom{15}3=105+455=560$ strictly
+increasing lists, and $V\mapsto\mathrm{set}(V)$ is a bijection from its entries onto the set of subsets of $I_a$ with
+two or three elements.
+\end{lemma}
+
+\begin{proof}
+Induction on $l$; for $l=[]$ both lists are empty. Let $l=x\mathbin{::}xs$, so $xs$ is strictly increasing with $k-1$
+entries, all larger than $x$. The first part of $\mathsf{choose2}(l)$ consists of the $k-1$ distinct lists $[x,y]$,
+$y\in xs$, all increasing and with head $x$; by induction $\mathsf{choose2}(xs)$ is duplicate-free with
+$\binom{k-1}2$ increasing entries, with heads in $xs$, hence different from $x$. So $\mathsf{choose2}(l)$ is
+duplicate-free with $k-1+\binom{k-1}2=\binom k2$ entries. Every increasing pair $[u,v]$ of elements of $l$ occurs: if
+$u=x$, then $v\in xs$ and $[x,v]$ is in the first part; otherwise $u,v\in xs$ (as $v>u>x$) and the pair is in
+$\mathsf{choose2}(xs)$ by induction. Likewise the first part of $\mathsf{choose3}(l)$ consists of the
+$\binom{k-1}2$ distinct lists $x\mathbin{::}W$ with $W\in\mathsf{choose2}(xs)$, increasing with head $x$, and
+$\mathsf{choose3}(xs)$ contributes $\binom{k-1}3$ increasing triples with heads in $xs$; the total is
+$\binom{k-1}2+\binom{k-1}3=\binom k3$, without repetition, and every increasing triple of elements of $l$ occurs (the
+same case distinction on its first element). For $1\le a\le16$, $\mathsf{inner}(a)$ is the increasing list of the
+$15$ elements of $I_a$. The pairs and the triples are disjoint by length, and a strictly increasing list is determined
+by its set of entries; this gives the bijection.
+\end{proof}
+
+\begin{theorem}[Orbits; \leanref{Central34.subcases_reflection}{C2FINAL/Central34Orbits.lean:273}]\label{cb:thm:c2-refl}
+(Computer-assisted in Lean, by kernel evaluation; written proof below.) The statement is
+\[
+\mathsf{all}\big(\mathsf{range}(8),\ k\mapsto Q(k+1)\big)=\mathsf{true},
+\]
+where for $a\in\N$, with $S_a=\mathsf{bitset}(\mathsf{subcases}(a))$, $Q(a)$ is the Boolean conjunction of
+\begin{enumerate}[label=(\roman*)]
+\item $\card{\mathsf{subcases}(a)}=560$;
+\item $\mathsf{all}\big(\mathsf{subcases}(a),\ V\mapsto\mathrm{Img}_a(V)\wedge\mathrm{Inv}_a(V)\big)$, where
+  $\mathrm{Img}_a(V)=\mathsf{testBit}(S_a,\mathsf{mask}(\mathsf{refl}(a,V)))$ and
+  $\mathrm{Inv}_a(V)=\big(\mathsf{mask}(\mathsf{refl}(a,\mathsf{refl}(a,V)))=\mathsf{mask}(V)\big)$;
+\item $\card{\mathsf{filter}\big(V\mapsto\mathsf{mask}(V)\le\mathsf{mask}(\mathsf{refl}(a,V)),\
+  \mathsf{subcases}(a)\big)}=287$;
+\item $\card{\mathsf{filter}\big(V\mapsto\mathsf{mask}(V)=\mathsf{mask}(\mathsf{refl}(a,V)),\
+  \mathsf{subcases}(a)\big)}=14$.
+\end{enumerate}
+In words: for every $a\in\{1,\dots,8\}$, the statements (i)--(iv) hold.
+\end{theorem}
+
+The theorem is Lean-checked according to the record (paragraph ``Axioms'' in \S\ref{cb:sec:overview}), by kernel
+evaluation of the definitions. The following written proof does not use the
+evaluation.
+
+\begin{proof}
+Since $\mathsf{range}(8)=[0,\dots,7]$, the statement says that $Q(a)=\mathsf{true}$ for $a=1,\dots,8$. Fix such an
+$a$ and let $\rho_a(i)=((a+17)\mathbin{\dot-}i)\bmod17$ for $i\in\{0,\dots,16\}$. As $i<a+17$,
+$\rho_a(i)=(a+17-i)\bmod17$, so $\rho_a(i)\equiv a-i\pmod{17}$ and $\rho_a(i)\in\{0,\dots,16\}$; hence
+$\rho_a(\rho_a(i))\equiv i$, and $\rho_a(\rho_a(i))=i$. Also $\rho_a(0)=a$ and $\rho_a(a)=0$. So $\rho_a$ is an
+involution of $\{0,\dots,16\}$ that maps $I_a$ onto itself. For $V\in\mathsf{subcases}(a)$ the entries of $V$ lie in
+$I_a$, $\mathsf{refl}(a,V)=\mathsf{map}(\rho_a,V)$ and $\mathrm{set}(\mathsf{refl}(a,V))=\rho_a(\mathrm{set}(V))$.
+
+By Lemma~\ref{cb:lem:c2-subsets} there is, for each $V\in\mathsf{subcases}(a)$, a unique entry $V'$ of
+$\mathsf{subcases}(a)$ with $\mathrm{set}(V')=\rho_a(\mathrm{set}(V))$, since $\rho_a(\mathrm{set}(V))\subseteq I_a$
+has $\card{\mathrm{set}(V)}\in\{2,3\}$ elements; and $(V')'=V$ because $\rho_a\circ\rho_a$ is the identity. Moreover
+$\mathsf{mask}(\mathsf{refl}(a,V))=\mathsf{mask}(V')$.
+
+(i) is Lemma~\ref{cb:lem:c2-subsets}. (ii): $\mathrm{Img}_a(V)=\mathsf{true}$, because the number
+$\mathsf{mask}(\mathsf{refl}(a,V))=\mathsf{mask}(V')$ lies in $\beta(S_a)$, as $V'\in\mathsf{subcases}(a)$; and
+$\mathrm{Inv}_a(V)=\mathsf{true}$, because
+$\mathrm{set}(\mathsf{refl}(a,\mathsf{refl}(a,V)))=\rho_a(\rho_a(\mathrm{set}(V)))=\mathrm{set}(V)$, so the two masks
+agree.
+
+(iv): $\mathsf{mask}(V)=\mathsf{mask}(\mathsf{refl}(a,V))$ iff $\mathrm{set}(V)=\rho_a(\mathrm{set}(V))$, i.e.\ iff
+$\mathrm{set}(V)$ is a union of orbits of $\rho_a$ on $I_a$. A point $i\in I_a$ is fixed iff $2i\equiv a\pmod{17}$; as
+$2\cdot9\equiv1\pmod{17}$, this means $i\equiv9a\pmod{17}$, so there is exactly one fixed point $x_0=9a\bmod17$ in
+$\{0,\dots,16\}$, and $x_0\in I_a$ because $9a\not\equiv0$ and $9a\not\equiv a\pmod{17}$ for $1\le a\le8$ ($x_0=9,1,10,
+2,11,3,12,4$ for $a=1,\dots,8$). The other $14$ elements of $I_a$ form $7$ two-element orbits. A union of orbits with
+two elements is one of these $7$ orbits; one with three elements is $\{x_0\}$ together with one of them. So exactly
+$7+7=14$ entries $V$ satisfy the condition.
+
+(iii): if $\mathsf{mask}(V)=\mathsf{mask}(\mathsf{refl}(a,V))$, the condition $\le$ holds; this accounts for $14$
+entries. The other $546$ entries are paired by $V\leftrightarrow V'$ with $V'\ne V$, and $\mathsf{mask}(V)$,
+$\mathsf{mask}(V')$ are distinct naturals; as $\mathsf{mask}(\mathsf{refl}(a,V))=\mathsf{mask}(V')$ and
+$\mathsf{mask}(\mathsf{refl}(a,V'))=\mathsf{mask}(V)$, exactly one member of each pair satisfies the condition. So the
+count is $14+546/2=287$.
+\end{proof}
+
+\begin{fact}[Lists; \leanref{Central34.closed_are_subcases}{C2FINAL/Central34Orbits.lean:284}]\label{cb:fact:c2-sub}
+(Computer-assisted.) The statement is
+\[
+\mathsf{all}\Big(\mathsf{range}(8),\ k\mapsto\mathsf{all}\big(\mathsf{closed}(k+1),\ V\mapsto
+\mathsf{testBit}(\mathsf{bitset}(\mathsf{subcases}(k+1)),\mathsf{mask}(V))\big)\Big)=\mathsf{true}.
+\]
+Equivalently (by Lemma~\ref{cb:lem:c2-subsets} and the remarks after Definition~\ref{cb:def:closed}): for every
+$a\in\{1,\dots,8\}$ and every $V\in\mathsf{closedP}_a$, $\mathrm{set}(V)$ is a subset of $I_a$ with two or three
+elements.
+\end{fact}
+
+Lean-checked according to the record (paragraph ``Axioms'' in \S\ref{cb:sec:overview}), by kernel evaluation over
+the explicit lists: for each $a$, the kernel computes the
+masks of the $560$ subcases and their or-fold, and tests the mask of each of the $287$ (for $a=6$: $288$) entries of
+$\mathsf{closedP}_a$ against it. No hand proof is given.
+
+\begin{theorem}[Closure; \leanref{Central34.all_cases_closed}{C2FINAL/Central34Orbits.lean:291}]\label{cb:thm:c2}
+(Computer-assisted.) The statement is
+\[
+\mathsf{all}\big(\mathsf{range}(8),\ k\mapsto\mathsf{isEmpty}(\mathsf{uncovered}(k+1,\mathsf{closed}(k+1)))\big)=
+\mathsf{true};
+\]
+that is, $\mathsf{uncovered}(a,\mathsf{closedP}_a)=[]$ for every $a\in\{1,\dots,8\}$.
+\end{theorem}
+
+The theorem is Lean-checked according to the record (paragraph ``Axioms'' in \S\ref{cb:sec:overview}), by kernel
+evaluation; no hand proof is given, and none is possible
+without the explicit lists. What is evaluated: for each $a\in\{1,\dots,8\}$ the kernel computes
+$B_a=\mathsf{bitset}(\mathsf{closedP}_a)$, the or-fold of $2^{\mathsf{mask}(W)}$ over the $287$ (for $a=6$: $288$)
+entries $W$, and then, for each of the $560$ entries $V$ of $\mathsf{subcases}(a)$, the disjunction of the bits of
+$B_a$ at $\mathsf{mask}(V)$ and at $\mathsf{mask}(\mathsf{refl}(a,V))$ (the second bit is needed only when the first
+is $0$); the disjunction is $\mathsf{true}$ for every $V$, so the filtered list is empty. The two formulations in the statement agree because $\mathsf{range}(8)=[0,\dots,7]$,
+$\mathsf{closed}(a)=\mathsf{closedP}_a$ for $1\le a\le8$, and $\mathsf{isEmpty}(l)=\mathsf{true}$ iff $l=[]$. The
+statement is not vacuous: $\mathsf{uncovered}(a,[])=\mathsf{subcases}(a)$ has $560$ entries.
+
+\begin{corollary}[Set form; written step]\label{cb:cor:c2}
+(Computer-assisted: a consequence of Theorem~\ref{cb:thm:c2}.) Let $a\in\{1,\dots,8\}$, and for $i\in\{0,\dots,16\}$
+let $\rho_a(i)=((a+17)\mathbin{\dot-}i)\bmod17$, the residue of $a-i$ modulo $17$. For every subset $T\subseteq I_a$
+with two or three elements there is $W\in\mathsf{closedP}_a$ with $\mathrm{set}(W)=T$ or
+$\mathrm{set}(W)=\rho_a(T)$.
+\end{corollary}
+
+\begin{proof}
+This is a consequence of Theorem~\ref{cb:thm:c2}. By Lemma~\ref{cb:lem:c2-subsets}, $T=\mathrm{set}(V)$ for some
+$V\in\mathsf{subcases}(a)$. Since $V$ is not an entry of $\mathsf{uncovered}(a,\mathsf{closedP}_a)=[]$,
+$\mathsf{testBit}(B_a,\mathsf{mask}(V))$ or $\mathsf{testBit}(B_a,\mathsf{mask}(\mathsf{refl}(a,V)))$ is
+$\mathsf{true}$, where $B_a=\mathsf{bitset}(\mathsf{closedP}_a)$. By the remarks after Definition~\ref{cb:def:closed},
+there is $W\in\mathsf{closedP}_a$ with $\mathrm{set}(W)=\mathrm{set}(V)=T$ or
+$\mathrm{set}(W)=\mathrm{set}(\mathsf{refl}(a,V))$; and $\mathrm{set}(\mathsf{refl}(a,V))=\rho_a(\mathrm{set}(V))=
+\rho_a(T)$, because $\mathsf{refl}(a,V)=\mathsf{map}(\rho_a,V)$ by Definition~\ref{cb:def:c2refl}, the entries of $V$
+lying in $I_a\subseteq\{0,\dots,16\}$.
+\end{proof}
+
+\begin{remark}[Scope of the central theorem]\label{cb:rem:c2-scope}
+Theorem~\ref{cb:thm:c2} and Corollary~\ref{cb:cor:c2} say that the explicit lists meet every orbit $\{T,\rho_a(T)\}$ of
+second-layer subcases, for each of the eight hull cases. That the listed subcases are refuted is not part of the
+statement: the lists were selected outside Lean from run records (Remark~\ref{cb:rem:c2-reading}), and according to
+\dirn{C2FINAL/README.md} (Status and \S9) most parallelogram pieces rest on recorded checker verdicts whose proofs
+were deleted after checking. As in Remark~\ref{cb:rem:use}, of the two recorded checker verdicts only the
+\texttt{cake\_lpr} verdict counts as a certificate; the project's trust base for its central theorem (Theorem~4 of
+\dirn{WRITEUP/SYMMETRIC.md}) is \S3 of that file. The second-layer covers of the cases $P_a$, the $120$ hexagonal hull cases, the hull
+cover, the reductions A ($P_a\sim P_{17-a}$) and B (the reflection), and the soundness of the encoder (\dirn{C2ENC})
+are written arguments or records outside Lean and outside this document. By inspection of the data, the list
+$\mathsf{closedP}_6$ contains both members of exactly one orbit, $[1,7]$ and $[5,16]$ (as sets,
+$\{5,16\}=\rho_6(\{1,7\})$); this accounts for its $288$ entries. The header comment
+of the file mentions a list \lean{pilotUnhashed} that the file does not define (stale text of the generator); it has
+no effect on the theorems.
+\end{remark}
+
+\subsection{Coverage}\label{cb:sec:coverage}
+
+\paragraph{Covered.} From \dirn{C3LEAN/C3Cover.lean}, every definition of the scope is covered by a definition above
+(the generated family \lean{certs0}, \dots, \lean{certs126} by a single one):
+\lean{m}, \lean{Tok}, \lean{Layer}, \lean{Node}, \lean{Node.used}, \lean{pairOptions}, \lean{layerOptions},
+\lean{insTok}, \lean{sortTok}, \lean{topCases}, \lean{okey}, \lean{lexLe}, \lean{mirror}, \lean{phi}, \lean{refl},
+\lean{keptOptions}, \lean{roots} (Definitions~\ref{cb:def:m}--\ref{cb:def:roots}); \lean{Node.free}, \lean{bitsOf},
+\lean{addBits}, \lean{Node.sigmaChildren}, \lean{conflicts}, \lean{Node.layerChildren}
+(Definitions~\ref{cb:def:free}--\ref{cb:def:layerchildren}); \lean{Covered} (Definition~\ref{cb:def:covered});
+\lean{decodeTok}, \lean{decodeLayer}, \lean{decodeLayers}, \lean{decodeCube}, \lean{decodeKey}, \lean{tokCode},
+\lean{layerCode}, \lean{rootCode}, \lean{decodeRoot}, \lean{beqList}, \lean{beqTok}, \lean{beqNode}, \lean{beqLayer}
+(Definitions~\ref{cb:def:decodetok}--\ref{cb:def:beqlayer}); \lean{Cert}, \lean{unpack}, \lean{Cert.keys}, \lean{run},
+\lean{checkRoot} (Definitions~\ref{cb:def:cert}--\ref{cb:def:checkroot}); \lean{tsvRootCodes},
+\lean{certs0}--\lean{certs126}, \lean{certs}, \lean{bounds}, \lean{certifiedKeys}
+(Definitions~\ref{cb:def:tsv}--\ref{cb:def:certifiedkeys}; the data are described, not reproduced); \lean{isOption},
+\lean{distinctCodes}, \lean{codeSet}, \lean{reflectionFacts} (Definitions~\ref{cb:def:isoption}--%
+\ref{cb:def:reflectionfacts}). The theorems: \lean{Covered.mono} (Lemma~\ref{cb:lem:mono}); \lean{beqList_eq},
+\lean{beqTok_eq}, \lean{beqNode_eq} (Lemmas~\ref{cb:lem:beqlist}--\ref{cb:lem:beqnode}); \lean{run_sound} and
+\lean{checkRoot_sound} (Lemma~\ref{cb:lem:run}); \lean{all_append_of} (Lemma~\ref{cb:lem:append});
+\lean{batch0}--\lean{batch126} (Fact~\ref{cb:fact:batches}); \lean{all_checked} (Lemma~\ref{cb:lem:all-checked});
+\lean{reflection_facts_H3} (Fact~\ref{cb:fact:refl-h3}); the ten \lean{reflection_facts_H6_1_0}, \dots,
+\lean{reflection_facts_H6_5_1} (Fact~\ref{cb:fact:refl-h6}); \lean{topCases_eq} (Fact~\ref{cb:fact:topcases});
+\lean{strata} (Fact~\ref{cb:fact:strata}); these four with the written proof of Proposition~\ref{cb:prop:refl};
+\lean{roots_match} (Fact~\ref{cb:fact:roots-match}, with Proposition~\ref{cb:prop:roots-match});
+\lean{roots_codes_match} and \lean{roots_eq_tsv} (Facts~\ref{cb:fact:roots-codes} and~\ref{cb:fact:roots-tsv}, with
+Corollary~\ref{cb:cor:roots}); \lean{all_roots_covered} (Theorem~\ref{cb:thm:c3}). From
+\dirn{C2FINAL/Central34Orbits.lean}: \lean{inner}, \lean{choose2}, \lean{choose3}, \lean{subcases}, \lean{mask},
+\lean{refl}, \lean{bitset}, \lean{uncovered}, \lean{closedP1}--\lean{closedP8} (by a single definition), \lean{closed}
+(Definitions~\ref{cb:def:inner}--\ref{cb:def:closed}); \lean{subcases_reflection} (Theorem~\ref{cb:thm:c2-refl}),
+\lean{closed_are_subcases} (Fact~\ref{cb:fact:c2-sub}) and \lean{all_cases_closed} (Theorem~\ref{cb:thm:c2}, with
+Corollary~\ref{cb:cor:c2}).
+
+\paragraph{Not covered, deliberately.}
+\begin{itemize}
+\item The seven negative controls at the end of \dirn{C3LEAN/C3Cover.lean}, which are tests, not results:
+  \lean{control_missing_record} (line 2266; root~0 with its fourth key removed is rejected),
+  \lean{control_missing_sigma_child} (2270; root~0 without the subtree of the last child of its first $\sigma$-split),
+  \lean{control_swapped_keys} (2274; two adjacent keys swapped), \lean{control_missing_layer_child} (2278; root~100,
+  code $41560$, without the key of its last layer child), \lean{control_wrong_root} (2282; the certificate of root~0
+  does not pass for root~1), \lean{control_strict_reduction} (2286; a strict comparison in the reduction would leave
+  $810$ roots; this agrees with Proposition~\ref{cb:prop:refl}, as $810=(100-10)+10\cdot(81-9)$) and
+  \lean{control_phi_mutant} (2292; $\mathsf{phi}$ without its $[s=0]$ term would keep options below $\mathsf{H6}(1,0)$
+  whose root codes are not all in $\mathsf{tsvRootCodes}$). The \texttt{\#print axioms} commands (lines 2301--2327 of
+  \dirn{C3LEAN/C3Cover.lean}, lines 296--298 of \dirn{C2FINAL/Central34Orbits.lean}) are not statements.
+\item \dirn{C3LEAN/tools/prelude.lean} (SHA-256 \texttt{cdcf96de7739}\dots) is the verbatim source of lines 29--329 of
+  \dirn{C3LEAN/C3Cover.lean}; its declarations are covered through that file.
+\item \dirn{C3LEAN/Control_record.lean} (SHA-256 \texttt{5f755e897c30}\dots) and \dirn{C3LEAN/Control_sibling.lean}
+  (\texttt{fb68b330e6e3}\dots): must-fail files, each a verbatim copy of the prelude plus one theorem (line 305)
+  asserting that a mutated certificate of root~0 passes; they fail to compile, as intended
+  (\dirn{C3LEAN/logs/control_record.log}, \dirn{C3LEAN/logs/control_sibling.log}).
+\item \dirn{C3LEAN/review/RevCtrl_mut.lean} (\texttt{49bf2cce1b73}\dots): a copy of the prelude plus nine reviewer
+  controls stating that mutated certificates are rejected (\lean{rev_extra_decision} has the same certificate as
+  \lean{rev_extra_key}). \dirn{C3LEAN/review/RevCtrl_pass.lean} (\texttt{a135e2b92e6a}\dots): a copy of the prelude plus
+  two controls stating that two non-genuine certificates pass (\lean{rev_uncertified_leaf_passes}, used in
+  Remark~\ref{cb:rem:use}; \lean{rev_noncanonical_key_passes}) and the evaluation \lean{rev_parent_decodes} (used in
+  Remark~\ref{cb:rem:keys}). \dirn{C3LEAN/review/RevDiff.lean} (\texttt{5aa3f6172026}\dots): a copy of the prelude plus
+  an \texttt{\#eval} harness, without theorems of its own. These review files are tests and audits, not results;
+  their prelude copies duplicate covered declarations.
+\item The Lean package \dirn{C3L}: \dirn{C3L/C3Encoding.lean} (only imports) with \dirn{C3L/C3Encoding/Gen.lean},
+  \dirn{C3L/C3Encoding/Case.lean} and \dirn{C3L/C3Encoding/Emit.lean}. It is a Lean program that writes, for
+  parameters $m$ and $k$, the base CNF of the project's threefold encoding and the node CNFs (the base CNF followed by
+  the unit clauses of a node) as DIMACS files, and it states no theorem (\dirn{C3L/README.md}). Its $41$ declarations
+  are $39$ definitions, a structure and an abbreviation. In \dirn{C3L/C3Encoding/Gen.lean}, namespace \lean{C3}: the
+  enumerations \lean{pairs}, \lean{triples}, \lean{quads}, \lean{perms2}, \lean{others}; the helpers \lean{key3},
+  \lean{paritySort}, \lean{rot}, \lean{eps}; the variables and literal tables \lean{orbits}, the structure
+  \lean{Tables}, \lean{mkTables}, \lean{Tables.s}, \lean{Tables.sig}, \lean{Tables.Cl}, \lean{Tables.Tl},
+  \lean{Tables.invv}, \lean{Tables.Bvv}, \lean{Tables.B}, \lean{Tables.ccw}, \lean{chainVars}, \lean{numVars}; the
+  clauses \lean{addCl}, \lean{push}, \lean{xor0}, \lean{secSig}, \lean{secSb}, \lean{secPrefix}, \lean{secForced},
+  \lean{secXorB}, \lean{secXorT}, \lean{secChain} and the base formula \lean{baseClauses}. In
+  \dirn{C3L/C3Encoding/Case.lean}, namespace \lean{C3}: the abbreviation \lean{Layer}, \lean{parseLayers},
+  \lean{layerOrder} and \lean{layerUnits} (the unit clauses of a node). In \dirn{C3L/C3Encoding/Emit.lean}, root
+  namespace: \lean{clauseLine}, \lean{body}, \lean{writeCnf} and \lean{main}, the output routines of the executable
+  \texttt{c3\_dimacs}. That the output agrees with the CNF files of the project's Python generator is recorded in
+  \dirn{C3L/logs} (comparisons outside Lean); the soundness theorem planned in \dirn{C3L/PLAN.md} (named
+  \texttt{c3\_base\_sound} there) is not in the repository. CNF encodings are outside this document (item~(ii) of the
+  paragraph ``What is not established here'' in \S\ref{cb:sec:overview}).
+\end{itemize}
+
+\paragraph{Treated in another section.} The Lean-checked files \dirn{AUDIT3/A1_reduction/SizeArith.lean} and
+\dirn{AUDIT3/A1_reduction/verify_A1-F1/AssembledSizes.lean} (the size arithmetic of the reduction of the symmetric
+$k=7$ statement to its case classes) and \dirn{ES7SPLIT/review/equivalence/BaekSeven.lean} (an instance of Baek's
+theorem for abstract configurations) are outside the scope of this section; they are treated in the last section,
+on size arithmetic.
+
+\paragraph{Audit scripts of results outside Stage~1.} The five Lean files of \dirn{AUDIT2}, an adversarial review of
+the project's mirror-class result, state no theorem of their own. \dirn{AUDIT2/A1/A1Dump.lean} defines \lean{cube}
+(line~5) and \lean{main} (line~6), an input--output program that writes the data \lean{V2L.caseTable} (with the
+leaves of the trees \lean{V2L.treeOf}), \lean{V2L.upTable} and \lean{V1L.hullLeaves} to a file, for comparison with a
+Python decoding of their source files. \dirn{AUDIT2/A1/A1Audit.lean}, \dirn{AUDIT2/A2/Ax.lean},
+\dirn{AUDIT2/A2/Ax2.lean} and \dirn{AUDIT2/A6/scripts/A6Check.lean} contain, apart from \texttt{import}, \texttt{open}
+and \texttt{set\_option} lines and comments, only \texttt{\#check}, \texttt{\#print}, \texttt{\#print axioms} and
+\texttt{\#eval} commands. The theorems they audit, such as \lean{V2L.mirrorExclusionLine_final},
+\lean{V1L.hullVertexLine_of_leaves} and \lean{Mir.mirrorExclusionLine_of_unsat}, belong to the Lean developments in
+\dirn{H3}, \dirn{V1-L} and \dirn{V2-L}, which lie outside Stage~1; this document does not restate them.

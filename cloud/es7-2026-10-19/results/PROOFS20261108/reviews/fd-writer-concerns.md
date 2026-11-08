@@ -1,0 +1,28 @@
+# Writer report for section `fd` (from the writing stage; machine paths may appear here, never copy them)
+
+## concerns
+- PREAMBLE/TYPESETTING (affects every section): amsthm puts the theorem head, including the \leanref note, in a box. If a statement body starts directly with a list, the head cannot break at all (I saw 770pt and 1232pt overfull boxes); otherwise it breaks only at spaces, and long \nolinkurl names give 50-165pt overflows. I fixed this locally without new macros: every statement starts with a sentence before any list, \sloppy follows each \label of a statement with a Lean head (and \tolerance=10000 in one lemma), and the axioms paragraph sits in a local \sloppy group. Only 2pt and 5pt overflows remain. A preamble fix (e.g. a theorem style that puts the note on its own line) is recommended for all sections.
+- PREAMBLE: \lean and \dirn use \nolinkurl, which silently drops spaces, so \lean{Finset Point} prints as 'FinsetPoint'. I use \texttt for multi-word Lean expressions. Other sections will probably hit the same problem; suggest a macro for Lean expressions or a note in the contract.
+- AXIOMS EVIDENCE GAP: 13 cited declarations are not covered by any saved #print axioms output I could identify: orient_swap, orient_cycle, orient_translate, GeneralPosition.mono, HasConvexNGon.mono, HasConvexNGon.card_le, ConvexPosition.hasConvexNGon, forcesConvexNGon_iff_exact, ForcesConvexNGon.mono, convexPosition_of_card_three, Suk.convex_orient_nonnegative, Suk.convexPosition_of_negative_triples and MirrorOdd.hasConvexNGon_of_le. For these, their Lean-checked status rests on compilation (library build; MirrorMain.out shows no errors) plus a word-level source scan of their files and imports (no sorry/admit/axiom/native_decide). I worded the rigor-label definition of 'Lean-checked' to allow such explicitly named evidence. Other sections and verifiers should apply the same rule.
+- The rigor-label definitions, path conventions and arithmetic notation are fixed here: max(a-b,0) or an explicit b<=a for Lean's truncated subtraction, (m:R) for casts, and x/0=0. Sections written in parallel may use other notation (for example a dotted minus) and should be harmonized.
+- Forward references to the export labels ll:def:hv, ll:def:peel, ll:def:66-70 and oc:lem:rot-inv resolve only if sections ll and oc define them.
+- Internal auxiliary labels added (allowed, but other sections cannot \ref them under the contract): fd:def:conv, fd:lem:inv-image, fd:lem:rot, fd:lem:collinear-mem, fd:lem:hull, fd:lem:ngon-basic, fd:lem:forces-basic, fd:lem:small, fd:lem:halfplane, fd:lem:strict-supports, fd:lem:support-sum, fd:lem:neg-triples, plus remarks. fd:lem:rot (complex form, affine form, composition and iterates, injectivity, counterclockwise identity, distance), fd:lem:hull and fd:lem:small are widely useful; consider adding them to the export list.
+- Outputs: STAGE/sections/fd.tex and STAGE/sections/fd.map.tsv (32 rows). The compile wrapper is STAGE/build/fd_wrapper.tex; both pdflatex passes exit 0 and produce 13 pages. The sympy identity checks are STAGE/build/fd_checks/check1.py, check2.py and check3.py; all pass.
+
+## contract_discrepancies
+- No contract fd statement was found false or mismatched with its Lean declaration. Every listed name, file and line was checked: Definitions.lean :9/:12/:17/:21/:25, Orientation.lean :9/:12/:15/:18, OrientationGeometry.lean :36/:66, Basic.lean :6/:11/:15/:20, FourPoint.lean :10/:40, SupportingLines.lean :47, OrientationClique.lean :9, ConvexCycleCuts.lean :11, LayerLemma.lean :298, SymmetricReduction.lean :400, OrbitConsistency.lean :93.
+- Informational: fd:lem:mono(d) has a Lean declaration that the contract does not name, MirrorOdd.hasConvexNGon_of_le (MIRRORETV/lean/MirrorMain.lean:2182; verbatim copy at SYMLEAN/mirror/ReductionThreeClasses.lean:3741). It is used as the tag of (d).
+- Informational: in fd:lem:affine-cp the identity g(conv Y)=conv(gY) holds for every affine map, not only injective ones, and is stated in that generality. The preserve/reflect claims use injectivity, as in the contract.
+- Informational: fd:lem:orient(d), fd:lem:affine-orient, fd:lem:affine-cp, fd:lem:caratheodory and fd:lem:separation have no repository Lean declaration and are marked as written steps. The Lean special cases (OrbitConsistency.orient_rotAbout_inv, Suk.orient_reflectY, HasConvexNGon.linearEquiv, Suk.generalPosition_reflectY) are named in remarks.
+
+## not_covered
+- Definitions.lean: conjecturedBound, ErdosSzekeresConjecture, HeptagonConjecture (open-conjecture statements, outside the fd list)
+- Orientation.lean / OrientationGeometry.lean: rationalToReal, orient_rationalToReal, orient_rationalToReal_ne_zero, RationalGeneralPosition, generalPosition_of_rational (rational-certificate transfer, outside the fd list)
+- OrientationGeometry.lean: private helper exists_smul_of_det_zero (absorbed into the proof of fd:lem:collinear)
+- Basic.lean: convexIndependent_of_affineIndependent (bridge used only for convexPosition_of_card_three, which is proved directly), forces_triangle, conjecture_case_three, conjecture_implies_seven, counterexample_refutes_conjecture
+- OrientationClique.lean: convexPosition_insert_of_positive_triples, convexPosition_insert_of_negative_triples (outside the given range and the fd list)
+- ConvexCycleCuts.lean: ConvexCycleCut and convexCycleCut_of_avoids (mentioned in a remark only, as the contrapositive of fd:lem:pos-cycle)
+- LayerLemma.lean and copies: toC, ofC, crot and their lemmas (implementation devices; replaced by the direct complex form in fd:lem:rot(a))
+
+## Overfull boxes > 1pt in the full-document build (line numbers refer to sections/fd.tex as of the snapshot)
+- none

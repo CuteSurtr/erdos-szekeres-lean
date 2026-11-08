@@ -1,0 +1,24 @@
+--- a/sections/sa.tex
++++ b/sections/sa.tex
+@@ -427,7 +427,10 @@
+ 
+ The following lemma is the modelling of the header comment of \dirn{SizeArith.lean}, proved here as a written step.
+ For $c\in\R^2$ and $\theta\in\R$, $\rho_{c,\theta}$ is the rotation of Definition~\ref{fd:def:rot}; in complex
+-notation it is $z\mapsto c+e^{i\theta}(z-c)$. For a map $f$ we write $f^{[i]}$ for its $i$-th iterate.
++notation it is $z\mapsto c+e^{i\theta}(z-c)$. For a map $f$ we write $f^{[i]}$ for its $i$-th iterate. The names
++\lean{HalfTurn34}, \lean{Threefold33}, \lean{Fivefold35}, \lean{MirrorOneAxis33}, \lean{MirrorNoAxis34} and
++\lean{Fourfold32} denote the case classes of Definition~\ref{sr:def:classes}, in the namespace
++\lean{ErdosSzekeres.SymReduction}.
+ 
+ \begin{lemma}[orbit counts; written step]\label{sa:lem:model}
+ Let $S\subseteq\R^2$ be a finite set and $n=\card S$.
+@@ -523,7 +526,8 @@
+   \lean{SymReduction.case_fourfold} that its proof uses take this class as a hypothesis (so do some checks of that
+   theorem in the review file \dirn{SYMLEAN/review/VariantChecks.lean}, among them its group form
+   \lean{SymReduction.VariantChecks.group_form}); a same-text copy, \lean{LayerLemma.Fourfold32}, is the hypothesis of
+-  Theorem~\ref{ec:thm:fourfold} and of the form \lean{LayerLemma.fourfold_heptagon_of_erase} that its proof uses;
++  Theorem~\ref{ec:thm:fourfold} and of its layer form \lean{LayerLemma.fourfold_heptagon_of_erase}, which its proof
++  uses;
+   item~(5) uses the class for the size table.)
+ \item $s=6$: Proposition~\ref{sa:prop:rot}(d) gives $2k\ge11$ and $3k\ge17$. Here $\rho^{[2]}=\rho_{c,2\pi/3}$ has
+   $2k$ orbits of size $3$ and $\rho^{[3]}=\rho_{c,\pi}$ has $3k$ pairs (Lemma~\ref{sa:lem:model}(a) for these

@@ -1,0 +1,944 @@
+\section{Orbit literals, rays and phases, key order}\label{oc:sec}
+% Long Lean names and file paths: allow loose lines in this section (group closed at the end).
+\begingroup\sloppy\emergencystretch=15em
+
+This section gives written proofs of the Lean-checked results of three files of the \dirn{LEANEXT}
+unit. They are the geometric and arithmetic facts behind three features of the layered SAT encoders
+for point sets with $m$-fold rotational symmetry about a centre $c$.
+\begin{enumerate}[label=(\Alph*)]
+\item \emph{Orbit literals} (\S\ref{oc:sub:rot}, \S\ref{oc:sub:perm}). Rotations about $c$ preserve
+  $\orient$, and permuting an ordered triple multiplies its orientation
+  $\orient_3(t)=\orient(t(0),t(1),t(2))$ by the sign of the permutation. Hence, if an ordered triple
+  $C$ of points arises from an ordered triple $t$ by a permutation $\sigma$ of the positions followed by
+  a composition of rotations by integer multiples of $2\pi/m$, and $\orient_3(t)\ne0$, then
+  ``$\orient_3(t)>0$'' is equivalent to ``$\orient_3(C)>0$, negated when $\sgn\sigma=-1$''
+  (Theorems~\ref{oc:thm:literal} and~\ref{oc:thm:encoder}). This is the rule ``one SAT variable per
+  orbit of ordered triples''.
+\item \emph{Rays and phases for even $m>0$} (\S\ref{oc:sub:even}, \S\ref{oc:sub:layers}). For even
+  $m>0$, a finite set in general position that is mapped into itself by the rotation $\rho$ by $2\pi/m$
+  about $c$ contains the antipode $2c-x$ of each of its points, and no two of its points lie on one open
+  ray from $c$ (Lemma~\ref{oc:lem:same-ray}). Consequently two of its points whose directions agree
+  modulo $2\pi/m$ lie in one $\rho$-orbit (Theorem~\ref{oc:thm:phase-orbit}). Combined with the layer
+  lemma (under its hypotheses: $c$ is not in the set, and the set has no $K$ points in convex position
+  for some $K\le2m$), hull vertices of distinct layers never lie on one open ray from $c$ through a
+  rotated point and have directions that are incongruent modulo $2\pi/m$
+  (Theorems~\ref{oc:thm:layers-ray} and~\ref{oc:thm:layers-phase}). Thus, for even $m>0$, this
+  distinctness of phases is obtained without any perturbation argument.
+\item \emph{Key order} (\S\ref{oc:sub:keys}). For $u>0$, real numbers $Ju+\psi$ with $J\in\Z$ and
+  $0\le\psi<u$ are ordered lexicographically by $(J,\psi)$, or by $(J,\operatorname{rank}\psi)$ for a
+  strictly increasing rank; reduction modulo $2\pi$ into $[0,2\pi)$ replaces $J$ by $J\bmod N$ when
+  $Nu=2\pi$; and the antipode $\theta+\pi$ has an explicit cell (Theorem~\ref{oc:thm:key},
+  Lemma~\ref{oc:lem:antipode-cell}).
+\end{enumerate}
+
+\paragraph{Sources.} File paths are relative to the results directory of the project, except that paths
+beginning with \dirn{ErdosSzekeres/} are relative to the repository root; a bare file name such as
+\dirn{OrbitConsistency.lean}, \dirn{Merged.lean} or \dirn{KeyOrder.lean} refers to the file of that
+name listed below. SHA-256 digests are abbreviated to their first 12 hexadecimal digits.
+\begin{itemize}
+\item \dirn{LEANEXT/orbit/OrbitConsistency.lean} (429 lines, SHA-256 \texttt{9b843180ac38}), namespace
+  \lean{ErdosSzekeres.OrbitConsistency}. The new content starts at line 114. Lines 39--112 repeat
+  definitions and basic lemmas of \dirn{LAYERLEAN/LayerLemma.lean} as separate constants
+  (Remark~\ref{oc:rem:copies}).
+\item \dirn{LEANEXT/merged/Merged.lean} (1385 lines, SHA-256 \texttt{245b7d65407a}), namespace
+  \lean{ErdosSzekeres.LayerLemma}, section~13 (lines 1149--1383). Lines 1--1147 of this file coincide
+  line by line with lines 1--1147 of \dirn{LAYERLEAN/LayerLemma.lean} (SHA-256 \texttt{afb8542dceb0});
+  hull vertices, peels and the layer lemma used in \S\ref{oc:sub:layers} come from there. The seven
+  declarations at lines 1160--1311 of \dirn{Merged.lean} restate those at lines 273--427 of
+  \dirn{OrbitConsistency.lean} over the definitions of the namespace \lean{ErdosSzekeres.LayerLemma};
+  the proofs are identical and only the doc comments differ.
+\item \dirn{LEANEXT/keys/KeyOrder.lean} (158 lines, SHA-256 \texttt{6e34096cff52}), namespace
+  \lean{KeyOrder}; it imports Mathlib only.
+\end{itemize}
+Byte-identical copies of \dirn{OrbitConsistency.lean} and \dirn{KeyOrder.lean} (same digests) are
+\dirn{ENCBLEAN/geo/ES8Geo/OrbitConsistency.lean} and \dirn{ENCBLEAN/geo/ES8Geo/KeyOrder.lean}. Lines
+1148--1383 of \dirn{Merged.lean} reappear verbatim as lines 1148--1383 of
+\dirn{LEANEXT/linked/Linked.lean} and as lines 1156--1391 of \dirn{LEANEXT/capstone/Capstone.lean} and
+of \dirn{LEANEXT/capstone/Capstone2.lean}; \dirn{ENCBLEAN/geo/ES8Geo/Capstone2.lean} is a byte-identical
+copy of the last (SHA-256 \texttt{f8c3930c2427}). The files are compiled from the repository root
+(\dirn{LEANEXT/README.md:6}), whose pinned toolchain is Lean 4.24.0 with Mathlib \texttt{f897ebcf}.
+
+\paragraph{Axioms.} \dirn{LEANEXT/orbit/logs/axioms.log} records \texttt{\#print axioms} for the 15 main
+theorems of \dirn{OrbitConsistency.lean} (\lean{orient_rotAbout_inv}, \lean{RotComp.preservesOrient},
+\lean{rotComp_iterate}, \lean{orient3_swap}, \lean{orient3_perm}, \lean{orient3_rot_perm},
+\lean{sign_eq_of_two_reps}, \lean{orient3_of_common_rep}, \lean{literal_sound},
+\lean{encoder_literal_sound}, \lean{antipode_mem_of_even}, \lean{same_ray_false},
+\lean{eq_iterate_of_phase_eq}, \lean{eq_iterate_of_phase_eq_int}, \lean{phase_ne_of_not_mem_orbit}),
+each depending on \texttt{[propext, Classical.choice, Quot.sound]}, with exit status 0.
+\dirn{LEANEXT/merged/axioms.log} records the same three axioms for
+\lean{ErdosSzekeres.LayerLemma.phase_ne_of_distinct_layers},
+\lean{ErdosSzekeres.LayerLemma.not_same_ray_of_distinct_layers} and
+\lean{ErdosSzekeres.LayerLemma.phase_ne_of_not_mem_orbit} (and for the copies in \dirn{Merged.lean} of
+three theorems of \dirn{LAYERLEAN/LayerLemma.lean}: \lean{layers_are_orbits},
+\lean{convexNGon_of_layers} and \lean{sevenfold_octagon}). Lines 151--158 of \dirn{KeyOrder.lean} print
+the axioms of its eight theorems; that output, again the same three axioms, is recorded for the
+byte-identical copy in \dirn{ENCBLEAN/logs/m4_build.log} (lines 3--10), not inside \dirn{LEANEXT}. The
+remaining theorems of the scope that carry a Lean reference below (the copied lemmas
+\lean{iterate_mem} and \lean{rotAbout_iterate} of \dirn{OrbitConsistency.lean}, both used by
+\lean{antipode_mem_of_even}; the helpers \lean{preservesOrient_id}, \lean{PreservesOrient.comp},
+\lean{preservesOrient_rotAbout}, \lean{rotAbout_polar}, \lean{polar_add_int}; the other
+\dirn{Merged.lean} restatements; and \lean{not_mem_hullVerts_peel_of_lt},
+\lean{not_mem_hullVerts_peel_of_ne}, \lean{iterate_mem_hullVerts_peel}) are used by printed theorems,
+and \texttt{\#print axioms} reports the axioms of all transitive dependencies; so their axioms are among
+the three listed. There are two exceptions. (i) \lean{PreservesOrient.iterate} is used by no printed
+theorem, and no axiom output is recorded for it; that it compiles is recorded by the build log of the
+whole file, \dirn{LEANEXT/orbit/logs/build.log} (exit status 0). (ii) Lemmas~\ref{oc:lem:iterate}
+and~\ref{oc:lem:iter-mem} also cite the \dirn{LAYERLEAN} declarations
+\lean{ErdosSzekeres.LayerLemma.rotAbout_iterate} and \lean{ErdosSzekeres.LayerLemma.iterate_mem}. Their
+axioms are recorded in \dirn{LEANEXT/review/axioms.log} (lines 33 and 1), from the review of 4 November
+2026 of \dirn{LAYERLEAN/LayerLemma.lean} (\dirn{LEANEXT/review/REPORT.md}, lines 3--4): the three axioms
+above for \lean{rotAbout_iterate}, and only \lean{propext} and \lean{Quot.sound} for
+\lean{iterate_mem}. None of the three files contains \lean{sorry}, \lean{admit}, an \lean{axiom}
+declaration or \lean{native_decide}. Within the scope of this section the only \lean{decide} (kernel
+evaluation, no extra axiom) is the side goal $-1\ne1$ in $\Z^\times$ at
+\dirn{OrbitConsistency.lean:236}; the copied part of \dirn{Merged.lean} has one more, for
+$\mathrm{Even}(6)$ at line 1125.
+
+\paragraph{Rigor.} Every statement below that carries a Lean reference is \emph{Lean-checked} in the
+sense of the records above (for a definition: it is part of the compiled file). The proofs in this
+section are \emph{written proofs (not refereed)}. They
+follow the Lean proofs; where they take a different route, this is said in the proof
+(Lemma~\ref{oc:lem:iterate}: addition formulas instead of complex exponentials;
+Lemma~\ref{oc:lem:swap}: the symmetries of $\orient$ instead of a six-case expansion;
+Lemma~\ref{oc:lem:closed}: $\rho^{[m]}=\mathrm{id}$ directly instead of the minimal period). No
+statement of this section takes an unproved proposition or a SAT verdict as a hypothesis.
+
+\paragraph{Dependencies.} From the foundations section we use the definitions of points, $\orient$,
+general position, \lean{HasConvexNGon}, invariance and rotations (Definitions~\ref{fd:def:point},
+\ref{fd:def:orient}, \ref{fd:def:gp}, \ref{fd:def:ngon}, \ref{fd:def:inv}, \ref{fd:def:rot}), the
+symmetries of $\orient$ (Lemma~\ref{fd:lem:orient}), the orientation test for general position
+(Lemma~\ref{fd:lem:collinear}) and the monotonicity of \lean{HasConvexNGon} (Lemma~\ref{fd:lem:mono});
+Lemma~\ref{fd:lem:affine-orient} is cited only in a note on notation in
+Definition~\ref{oc:def:basic}(b) and in a parenthetical comparison in the proof of
+Lemma~\ref{oc:lem:rot-inv}, and the example in Remark~\ref{oc:rem:layers} uses
+Lemmas~\ref{fd:lem:cp-hull} and~\ref{fd:lem:separation}. From the layer-lemma section we use the hull
+vertices and peels (Definitions~\ref{ll:def:hv} and~\ref{ll:def:peel}), Lemma~\ref{ll:lem:antitone},
+Lemma~\ref{ll:lem:inv-peel} and Theorem~\ref{ll:thm:core-rot}; Lemma~\ref{ll:lem:minperiod} is cited
+only in a comparison with the Lean proof (proof of Lemma~\ref{oc:lem:closed}). From the layer-geometry
+section we use the definition of $\operatorname{polar}$ (Definition~\ref{lg:def:polar}) and, only in
+comments on hypotheses (Lemma~\ref{oc:lem:same-ray} and Remark~\ref{oc:rem:layers}),
+Lemma~\ref{lg:lem:centre}. \S\ref{oc:sub:keys} uses no other section.
+
+\subsection{Conventions and copied definitions}\label{oc:sub:conv}
+
+Points are elements $p=(p_0,p_1)$ of $\R^2$ (Definition~\ref{fd:def:point}); sums, differences and scalar multiples
+of points are taken coordinatewise, and the Lean term \texttt{![u, v]} denotes the point $(u,v)$. All sets
+of points in this section are finite (Lean \texttt{Finset Point}).
+$\orient(a,b,d)=(b_0-a_0)(d_1-a_1)-(b_1-a_1)(d_0-a_0)$ (Definition~\ref{fd:def:orient}); equivalently
+$\orient(a,b,d)=\det\bigl(b-a\mid d-a\bigr)$, the determinant of the $2\times2$ matrix with columns $b-a$
+and $d-a$. For a map $f:X\to X$ the iterates are $f^{[0]}=\mathrm{id}$ and
+$f^{[s+1]}=f\circ f^{[s]}$ ($=f^{[s]}\circ f$). For $m\in\N$, the real number $2\pi/m$ is $2\pi$ divided
+by $m$ cast to $\R$, with Lean's convention $x/0=0$, so that $2\pi/0=0$. ``$m$ is even'' means $m=k+k$
+for some $k\in\N$ (Mathlib's \lean{Even}); then the natural-number quotient $m/2$ equals $k$.
+
+\begin{definition}[invariance, rotations, polar points; \leanref{ErdosSzekeres.OrbitConsistency.Invariant}{LEANEXT/orbit/OrbitConsistency.lean:47}, \leanref{ErdosSzekeres.OrbitConsistency.rotAbout}{LEANEXT/orbit/OrbitConsistency.lean:93}, \leanref{ErdosSzekeres.OrbitConsistency.polar}{LEANEXT/orbit/OrbitConsistency.lean:112}]\label{oc:def:basic}
+Let $f:\R^2\to\R^2$, $S$ a finite set of points, $c,p\in\R^2$ and $r,\theta\in\R$.
+\begin{enumerate}[label=(\alph*)]
+\item $f$ \emph{maps $S$ into $S$} (Lean \texttt{Invariant f S}) if $f(p)\in S$ for every $p\in S$
+  (Definition~\ref{fd:def:inv}).
+\item The rotation by $\theta$ about $c$ (Lean \lean{rotAbout}; Definition~\ref{fd:def:rot}) is
+  \[R_{c,\theta}(p)=\bigl(c_0+\cos\theta\,(p_0-c_0)-\sin\theta\,(p_1-c_1),\;
+     c_1+\sin\theta\,(p_0-c_0)+\cos\theta\,(p_1-c_1)\bigr),\]
+  that is, $R_{c,\theta}(p)=c+M_\theta(p-c)$ with $M_\theta=\begin{pmatrix}\cos\theta&-\sin\theta\\
+  \sin\theta&\cos\theta\end{pmatrix}$; it turns counterclockwise. For $m\in\N$ we write
+  $\rho=R_{c,2\pi/m}$ when $c$ and $m$ are clear. (Notation: Definition~\ref{fd:def:rot} and the
+  layer-lemma section write $\rho_{c,\theta}$ for the map $R_{c,\theta}$, so that our $\rho$ is their
+  $\rho_{c,2\pi/m}$; the foundations and layer-geometry sections write $R_\theta$ for the matrix
+  $M_\theta$, for instance in Lemma~\ref{fd:lem:affine-orient}. In this section $R_{c,\theta}$ always
+  denotes the map, never a matrix.)
+\item $\operatorname{polar}(c,r,\theta)=(c_0+r\cos\theta,\;c_1+r\sin\theta)$, for every real $r$
+  (Definition~\ref{lg:def:polar}).
+\end{enumerate}
+\end{definition}
+
+\begin{remark}[two copies of the definitions]\label{oc:rem:copies}
+Lines 39--112 of \dirn{OrbitConsistency.lean} define their own \lean{iterate_mem}, \lean{Invariant},
+\lean{toC}, \lean{ofC}, \lean{crot}, \lean{rotAbout}, \lean{rotAbout_iterate}, \lean{polar} and some
+helper lemmas, with the same declaration text as the corresponding declarations of
+\dirn{LAYERLEAN/LayerLemma.lean} (\lean{iterate_mem} at line 52, \lean{Invariant} at 105, the
+complex-coordinate helpers among lines 231--308, \lean{rotAbout} at 298, \lean{rotAbout_iterate} at
+465, \lean{polar} at 932), except that \lean{iterate_mem} declares its type variable in its own binder
+(in \dirn{LAYERLEAN/LayerLemma.lean} it is a section variable) and that the doc comment of \lean{polar} is
+worded differently; neither difference affects the meaning. These are distinct Lean constants with identical
+defining formulas; for instance, the Lean theorem \lean{EncB.Geo.rotAbout_eq_orbitConsistency}
+(\dirn{ENCBLEAN/geo/ES8Geo/Orbit.lean:13}) states the equality of the two \lean{rotAbout}, with proof
+\lean{rfl} (in that build \lean{ErdosSzekeres.LayerLemma.rotAbout} is the copy in
+\dirn{ENCBLEAN/geo/ES8Geo/Capstone2.lean}, whose text equals that of
+\dirn{LAYERLEAN/LayerLemma.lean:298}). The theorems of \dirn{OrbitConsistency.lean} are stated with the
+\lean{OrbitConsistency} copies, those of \dirn{Merged.lean} with the \lean{LayerLemma} copies
+(\lean{ErdosSzekeres.LayerLemma.Invariant}, \dirn{LAYERLEAN/LayerLemma.lean:105};
+\lean{ErdosSzekeres.LayerLemma.rotAbout}, \dirn{LAYERLEAN/LayerLemma.lean:298};
+\lean{ErdosSzekeres.LayerLemma.polar}, \dirn{LAYERLEAN/LayerLemma.lean:932}). Mathematically each pair
+is one and the same function, so we state each result once and list both Lean names where both exist;
+the statement then reads verbatim for either copy.
+\end{remark}
+
+\begin{lemma}[composition of rotations about one centre; written step]\label{oc:lem:rot-add}
+For all $c,p\in\R^2$ and $\alpha,\beta\in\R$:
+\begin{enumerate}[label=(\alph*)]
+\item $R_{c,\alpha}(R_{c,\beta}(p))=R_{c,\alpha+\beta}(p)$;
+\item $R_{c,0}=\mathrm{id}$, $R_{c,2\pi}=\mathrm{id}$ and $R_{c,\pi}(p)=(2c_0-p_0,\;2c_1-p_1)$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(a) Put $v=p-c$. Then $R_{c,\beta}(p)-c=(\cos\beta\,v_0-\sin\beta\,v_1,\;\sin\beta\,v_0+\cos\beta\,v_1)$, and
+applying $R_{c,\alpha}$ gives $c$ plus the vector with coordinates
+\begin{align*}
+&\cos\alpha(\cos\beta\,v_0-\sin\beta\,v_1)-\sin\alpha(\sin\beta\,v_0+\cos\beta\,v_1)
+ =\cos(\alpha+\beta)\,v_0-\sin(\alpha+\beta)\,v_1,\\
+&\sin\alpha(\cos\beta\,v_0-\sin\beta\,v_1)+\cos\alpha(\sin\beta\,v_0+\cos\beta\,v_1)
+ =\sin(\alpha+\beta)\,v_0+\cos(\alpha+\beta)\,v_1,
+\end{align*}
+by the addition formulas $\cos(\alpha+\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta$ and
+$\sin(\alpha+\beta)=\sin\alpha\cos\beta+\cos\alpha\sin\beta$. This is $R_{c,\alpha+\beta}(p)-c$.
+(b) Substitute $\cos0=\cos2\pi=1$, $\sin0=\sin2\pi=0$, and $\cos\pi=-1$, $\sin\pi=0$: then
+$R_{c,0}(p)=R_{c,2\pi}(p)=c+(p-c)=p$ and $R_{c,\pi}(p)=c-(p-c)=2c-p$.
+\end{proof}
+
+\begin{lemma}[iterates of a rotation; \leanref{ErdosSzekeres.OrbitConsistency.rotAbout_iterate}{LEANEXT/orbit/OrbitConsistency.lean:105}, \leanref{ErdosSzekeres.LayerLemma.rotAbout_iterate}{LAYERLEAN/LayerLemma.lean:465}]\label{oc:lem:iterate}
+For all $c\in\R^2$, $\alpha\in\R$ and $j\in\N$: $(R_{c,\alpha})^{[j]}=R_{c,j\alpha}$.
+\end{lemma}
+\begin{proof}
+Induction on $j$. For $j=0$ both sides are the identity (Lemma~\ref{oc:lem:rot-add}(b)). If the claim
+holds for $j$, then $(R_{c,\alpha})^{[j+1]}=R_{c,\alpha}\circ(R_{c,\alpha})^{[j]}=R_{c,\alpha}\circ
+R_{c,j\alpha}=R_{c,\alpha+j\alpha}=R_{c,(j+1)\alpha}$ by Lemma~\ref{oc:lem:rot-add}(a). (The Lean proof
+writes $R_{c,\alpha}$ as $z\mapsto c+e^{i\alpha}(z-c)$ and uses $(e^{i\alpha})^j=e^{ij\alpha}$; the
+argument above is an equivalent elementary route.)
+\end{proof}
+
+\begin{corollary}[period and half-turn; written step]\label{oc:cor:period}
+Let $c\in\R^2$, $m\in\N$ with $0<m$, and $\rho=R_{c,2\pi/m}$. Then $\rho^{[m]}=\mathrm{id}$. If moreover
+$m$ is even, then $\rho^{[m/2]}(p)=(2c_0-p_0,\;2c_1-p_1)$ for every $p\in\R^2$.
+\end{corollary}
+\begin{proof}
+Since $m\ne0$, $m\cdot(2\pi/m)=2\pi$, so $\rho^{[m]}=R_{c,2\pi}=\mathrm{id}$ by
+Lemmas~\ref{oc:lem:iterate} and~\ref{oc:lem:rot-add}(b). If $m=k+k$, then $k\ge1$ (as $m>0$), $m/2=k$
+and $k\cdot\frac{2\pi}{2k}=\pi$, so $\rho^{[m/2]}=R_{c,\pi}$, and Lemma~\ref{oc:lem:rot-add}(b) applies.
+\end{proof}
+
+\begin{lemma}[iterates stay in a set mapped into itself; \leanref{ErdosSzekeres.OrbitConsistency.iterate_mem}{LEANEXT/orbit/OrbitConsistency.lean:39}, \leanref{ErdosSzekeres.LayerLemma.iterate_mem}{LAYERLEAN/LayerLemma.lean:52}]\label{oc:lem:iter-mem}
+Let $X$ be a type, $f:X\to X$, $S$ a finite subset of $X$ with $f(y)\in S$ for every $y\in S$, and $x\in
+S$. Then $f^{[i]}(x)\in S$ for every $i\in\N$.
+\end{lemma}
+\begin{proof}
+Induction on $i$: $f^{[0]}(x)=x\in S$, and if $f^{[i]}(x)\in S$ then $f^{[i+1]}(x)=f(f^{[i]}(x))\in S$.
+\end{proof}
+
+\subsection{Rotations preserve orientation}\label{oc:sub:rot}
+
+\begin{lemma}[rotation invariance of the orientation; \leanref{ErdosSzekeres.OrbitConsistency.orient_rotAbout_inv}{LEANEXT/orbit/OrbitConsistency.lean:117}]\label{oc:lem:rot-inv}
+For all $c\in\R^2$, $\theta\in\R$ and $a,b,d\in\R^2$,
+\[\orient\bigl(R_{c,\theta}(a),\,R_{c,\theta}(b),\,R_{c,\theta}(d)\bigr)=\orient(a,b,d).\]
+There are no further hypotheses.
+\end{lemma}
+\begin{proof}
+Write $M=M_\theta$. Since $R_{c,\theta}(p)=c+M(p-c)$, we have $R_{c,\theta}(b)-R_{c,\theta}(a)=M(b-a)$
+and $R_{c,\theta}(d)-R_{c,\theta}(a)=M(d-a)$. Hence
+\begin{align*}
+\orient\bigl(R_{c,\theta}(a),R_{c,\theta}(b),R_{c,\theta}(d)\bigr)
+ &=\det\bigl(M(b-a)\mid M(d-a)\bigr)=\det M\cdot\det\bigl(b-a\mid d-a\bigr)\\
+ &=(\cos^2\theta+\sin^2\theta)\,\orient(a,b,d),
+\end{align*}
+and $\cos^2\theta+\sin^2\theta=1$. (This is the case $\det=1$ of Lemma~\ref{fd:lem:affine-orient},
+item~(i), which writes the map $R_{o,\theta}$ as $\rho_{o,\theta}$ and the matrix $M_\theta$ as
+$R_\theta$.) The Lean proof is the same computation in expanded form: the difference of the two sides equals
+$\orient(a,b,d)\,(\sin^2\theta+\cos^2\theta-1)$ as a polynomial identity in the coordinates and in
+$\cos\theta,\sin\theta$ (\lean{linear_combination} with \lean{Real.sin_sq_add_cos_sq}).
+\end{proof}
+
+\begin{definition}[orientation-preserving maps; \leanref{ErdosSzekeres.OrbitConsistency.PreservesOrient}{LEANEXT/orbit/OrbitConsistency.lean:124}]\label{oc:def:preserves}
+A map $f:\R^2\to\R^2$ \emph{preserves orientation} if $\orient(f(a),f(b),f(d))=\orient(a,b,d)$ for all
+$a,b,d\in\R^2$.
+\end{definition}
+
+\begin{definition}[compositions of rotations by multiples of $2\pi/m$; \leanref{ErdosSzekeres.OrbitConsistency.RotComp}{LEANEXT/orbit/OrbitConsistency.lean:145}]\label{oc:def:rotcomp}
+Let $c\in\R^2$ and $m\in\N$, and put $u=2\pi/m$ (so $u=0$ if $m=0$). $\mathrm{RotComp}(c,m)$ is the
+inductively defined set of maps $\R^2\to\R^2$ given by two rules:
+\begin{itemize}
+\item[(id)] $\mathrm{id}\in\mathrm{RotComp}(c,m)$;
+\item[(step)] if $g\in\mathrm{RotComp}(c,m)$ and $k\in\Z$, then $R_{c,ku}\circ g\in\mathrm{RotComp}(c,m)$.
+\end{itemize}
+It is the smallest set of maps that contains $\mathrm{id}$ and is closed under (step). Its elements are
+exactly the maps $R_{c,k_nu}\circ\dots\circ R_{c,k_1u}$ with $n\ge0$ and $k_1,\dots,k_n\in\Z$ (the
+identity for $n=0$): this set of compositions contains $\mathrm{id}$ and is closed under (step), and each
+of its elements arises from $\mathrm{id}$ by $n$ applications of (step). Proofs about
+$\mathrm{RotComp}(c,m)$ use \emph{rule induction}: a property of maps that holds for $\mathrm{id}$ and
+passes from $g$ to $R_{c,ku}\circ g$ holds for every element of $\mathrm{RotComp}(c,m)$.
+\end{definition}
+
+\begin{lemma}[orientation-preserving maps and rotation compositions; \leanref{ErdosSzekeres.OrbitConsistency.preservesOrient_id}{LEANEXT/orbit/OrbitConsistency.lean:127}, \leanref{ErdosSzekeres.OrbitConsistency.PreservesOrient.comp}{LEANEXT/orbit/OrbitConsistency.lean:129}, \leanref{ErdosSzekeres.OrbitConsistency.PreservesOrient.iterate}{LEANEXT/orbit/OrbitConsistency.lean:134}, \leanref{ErdosSzekeres.OrbitConsistency.preservesOrient_rotAbout}{LEANEXT/orbit/OrbitConsistency.lean:141}, \leanref{ErdosSzekeres.OrbitConsistency.RotComp.preservesOrient}{LEANEXT/orbit/OrbitConsistency.lean:150}, \leanref{ErdosSzekeres.OrbitConsistency.rotComp_iterate}{LEANEXT/orbit/OrbitConsistency.lean:157}]\label{oc:lem:rotcomp-pres}
+The following properties of orientation-preserving maps (Definition~\ref{oc:def:preserves}) and of
+the sets $\mathrm{RotComp}(c,m)$ (Definition~\ref{oc:def:rotcomp}) hold.
+\begin{enumerate}[label=(\alph*)]
+\item The identity preserves orientation. If $f$ and $g$ preserve orientation, so does $f\circ g$. If $f$
+  preserves orientation, so does $f^{[n]}$ for every $n\in\N$. For all $c\in\R^2$ and $\theta\in\R$ the
+  rotation $R_{c,\theta}$ preserves orientation.
+\item Let $c\in\R^2$ and $m\in\N$ (any $m$, including $m=0$). Every $g\in\mathrm{RotComp}(c,m)$ preserves
+  orientation.
+\item Let $c\in\R^2$, $m\in\N$ (any $m$) and $\rho=R_{c,2\pi/m}$. Then $\rho^{[s]}\in\mathrm{RotComp}(c,m)$
+  for every $s\in\N$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(a) For the identity there is nothing to show. If $f$ and $g$ preserve orientation, then for all $a,b,d$,
+$\orient(f(g(a)),f(g(b)),f(g(d)))=\orient(g(a),g(b),g(d))=\orient(a,b,d)$, using first $f$ (at the
+points $g(a),g(b),g(d)$) and then $g$. For the iterates use induction on $n$: $f^{[0]}=\mathrm{id}$, and
+$f^{[n+1]}=f^{[n]}\circ f$ is a composition of two orientation-preserving maps. Rotations preserve
+orientation by Lemma~\ref{oc:lem:rot-inv}.
+
+(b) Rule induction (Definition~\ref{oc:def:rotcomp}): the identity preserves orientation, and if $g$
+does, then so does $R_{c,ku}\circ g$, as a composition of two orientation-preserving maps by (a).
+
+(c) Induction on $s$. $\rho^{[0]}=\mathrm{id}\in\mathrm{RotComp}(c,m)$ by (id). If
+$\rho^{[s]}\in\mathrm{RotComp}(c,m)$, then $\rho^{[s+1]}=\rho\circ\rho^{[s]}=R_{c,1\cdot u}\circ\rho^{[s]}$
+with $u=2\pi/m$, which lies in $\mathrm{RotComp}(c,m)$ by (step) with $k=1$.
+\end{proof}
+
+For $m=0$ we have $u=0$ and $R_{c,0}=\mathrm{id}$, so every element of $\mathrm{RotComp}(c,0)$ is the
+identity; the statements of this subsection and the next hold for every $m\in\N$.
+
+\subsection{Permutations and orbit literals}\label{oc:sub:perm}
+
+\begin{definition}[orientation of an ordered triple; \leanref{ErdosSzekeres.OrbitConsistency.orient3}{LEANEXT/orbit/OrbitConsistency.lean:168}]\label{oc:def:orient3}
+An \emph{ordered triple} is a map $t:\{0,1,2\}\to\R^2$ (in Lean a function \texttt{Fin 3} $\to$
+\lean{Point}), and $\orient_3(t)=\orient(t(0),t(1),t(2))$. For a permutation $\sigma$ of $\{0,1,2\}$ and a
+map $g:\R^2\to\R^2$, the triples $t\circ\sigma$ and $g\circ t\circ\sigma$ are $i\mapsto t(\sigma(i))$ and
+$i\mapsto g(t(\sigma(i)))$.
+\end{definition}
+
+\begin{fact}[the sign of a permutation; cited, Mathlib \lean{Equiv.Perm.sign}]\label{oc:fact:sign}
+Let $F$ be a finite set and $\mathrm{Perm}(F)$ the group of its permutations, with product
+$(\sigma\tau)(i)=\sigma(\tau(i))$. Mathlib's sign is a group homomorphism
+$\sgn:\mathrm{Perm}(F)\to\Z^\times$ with the following properties, which are all we use.
+\begin{itemize}
+\item[(S1)] $\Z^\times=\{1,-1\}$ (\lean{Int.units_eq_one_or}).
+\item[(S2)] $\sgn(\sigma\tau)=\sgn(\sigma)\sgn(\tau)$ (\lean{Equiv.Perm.sign_mul}); hence, with (S1),
+  $\sgn(\mathrm{id})=1$ and $\sgn(\sigma^{-1})=\sgn(\sigma)^{-1}=\sgn(\sigma)$.
+\item[(S3)] $\sgn(\mathrm{swap}(x,y))=-1$ for $x\ne y$, where $\mathrm{swap}(x,y)$ exchanges $x$ and $y$
+  (\lean{Equiv.Perm.sign_swap}).
+\item[(S4)] Every permutation of $F$ is a product of transpositions; in the form used: if a property $P$
+  of permutations holds for $\mathrm{id}$, and $P(f)$ implies $P(\mathrm{swap}(x,y)\,f)$ for every $f$ and
+  all $x\ne y$, then $P$ holds for every permutation (\lean{Equiv.Perm.swap_induction_on}).
+\end{itemize}
+In real formulas $\sgn\sigma$ stands for the image of the unit $\sgn\sigma$ under $\Z^\times\to\Z\to\R$,
+the real number $1$ or $-1$. This map is multiplicative, as a composite of monoid homomorphisms, so
+(S2) also holds for these real numbers; and it is injective because $1\ne-1$ in $\R$.
+\end{fact}
+
+\begin{lemma}[a transposition negates the orientation; \leanref{ErdosSzekeres.OrbitConsistency.orient3_swap}{LEANEXT/orbit/OrbitConsistency.lean:171}]\label{oc:lem:swap}
+For every ordered triple $t$ and all $x,y\in\{0,1,2\}$ with $x\ne y$:
+$\orient_3(t\circ\mathrm{swap}(x,y))=-\orient_3(t)$.
+\end{lemma}
+\begin{proof}
+Since $\mathrm{swap}(x,y)=\mathrm{swap}(y,x)$, it suffices to treat $\{x,y\}=\{1,2\},\{0,1\},\{0,2\}$.
+Write $t_i=t(i)$ and $o=\orient(t_0,t_1,t_2)$; we use $\orient(a,c,b)=-\orient(a,b,c)$ and
+$\orient(b,c,a)=\orient(a,b,c)$ (Lemma~\ref{fd:lem:orient}(a),(b)).
+For $\{1,2\}$: $t\circ\mathrm{swap}(1,2)=(t_0,t_2,t_1)$ and $\orient(t_0,t_2,t_1)=-o$.
+For $\{0,1\}$: $t\circ\mathrm{swap}(0,1)=(t_1,t_0,t_2)$, and the cyclic rule applied to $(t_1,t_0,t_2)$
+gives $\orient(t_1,t_0,t_2)=\orient(t_0,t_2,t_1)=-o$.
+For $\{0,2\}$: $t\circ\mathrm{swap}(0,2)=(t_2,t_1,t_0)$, and the cyclic rule applied to $(t_2,t_1,t_0)$
+gives $\orient(t_2,t_1,t_0)=\orient(t_1,t_0,t_2)=-o$ by the previous case.
+(The Lean proof runs through the six ordered pairs $(x,y)$ and expands $\orient$.)
+\end{proof}
+
+\begin{lemma}[permutations multiply the orientation by the sign; \leanref{ErdosSzekeres.OrbitConsistency.orient3_perm}{LEANEXT/orbit/OrbitConsistency.lean:178}]\label{oc:lem:perm}
+For every permutation $\sigma$ of $\{0,1,2\}$ and every ordered triple $t$,
+\[\orient_3(t\circ\sigma)=\sgn(\sigma)\cdot\orient_3(t).\]
+\end{lemma}
+\begin{proof}
+We follow the Lean proof, an induction over transpositions (Fact~\ref{oc:fact:sign}(S4)) for the
+property $P(\sigma)$: ``$\orient_3(t\circ\sigma)=\sgn(\sigma)\orient_3(t)$ for \emph{every} triple
+$t$''. $P(\mathrm{id})$ holds since $t\circ\mathrm{id}=t$ and $\sgn(\mathrm{id})=1$. Assume $P(f)$ and
+$x\ne y$, and let $t$ be any triple. Since $(\mathrm{swap}(x,y)\,f)(i)=\mathrm{swap}(x,y)(f(i))$, we have
+$t\circ(\mathrm{swap}(x,y)\,f)=(t\circ\mathrm{swap}(x,y))\circ f$. By $P(f)$ for the triple
+$t\circ\mathrm{swap}(x,y)$ and by Lemma~\ref{oc:lem:swap},
+\[\orient_3\bigl(t\circ(\mathrm{swap}(x,y)\,f)\bigr)=\sgn(f)\,\orient_3(t\circ\mathrm{swap}(x,y))
+ =-\sgn(f)\,\orient_3(t),\]
+and $\sgn(\mathrm{swap}(x,y)\,f)=\sgn(\mathrm{swap}(x,y))\sgn(f)=-\sgn(f)$ by (S2) and (S3). So
+$P(\mathrm{swap}(x,y)\,f)$ holds, and (S4) gives $P(\sigma)$ for all $\sigma$.
+\end{proof}
+
+\begin{lemma}[rotations and permutations together; \leanref{ErdosSzekeres.OrbitConsistency.orient3_rot_perm}{LEANEXT/orbit/OrbitConsistency.lean:194}]\label{oc:lem:rot-perm}
+Let $c\in\R^2$, $m\in\N$, $g\in\mathrm{RotComp}(c,m)$, $\sigma$ a permutation of $\{0,1,2\}$, and $t,t'$
+ordered triples with $t'=g\circ t\circ\sigma$. Then $\orient_3(t')=\sgn(\sigma)\cdot\orient_3(t)$.
+\end{lemma}
+\begin{proof}
+By Lemma~\ref{oc:lem:rotcomp-pres}(b), $g$ preserves orientation, so
+$\orient_3(t')=\orient\bigl(g(t(\sigma(0))),g(t(\sigma(1))),g(t(\sigma(2)))\bigr)
+=\orient\bigl(t(\sigma(0)),t(\sigma(1)),t(\sigma(2))\bigr)=\orient_3(t\circ\sigma)$, and
+$\orient_3(t\circ\sigma)=\sgn(\sigma)\orient_3(t)$ by Lemma~\ref{oc:lem:perm}.
+\end{proof}
+
+\begin{lemma}[two representations of one triple; \leanref{ErdosSzekeres.OrbitConsistency.sign_eq_of_two_reps}{LEANEXT/orbit/OrbitConsistency.lean:204}, \leanref{ErdosSzekeres.OrbitConsistency.orient3_of_common_rep}{LEANEXT/orbit/OrbitConsistency.lean:216}]\label{oc:lem:two-reps}
+Let $c\in\R^2$, $m\in\N$ and $g_1,g_2\in\mathrm{RotComp}(c,m)$, and let $\sigma_1,\sigma_2$ be permutations
+of $\{0,1,2\}$.
+\begin{enumerate}[label=(\alph*)]
+\item (\lean{sign_eq_of_two_reps}) If $t,t'$ are ordered triples with $t'=g_1\circ t\circ\sigma_1$ and
+  $t'=g_2\circ t\circ\sigma_2$, and $\orient_3(t)\ne0$, then $\sgn\sigma_1=\sgn\sigma_2$ in $\Z^\times$.
+\item (\lean{orient3_of_common_rep}) If $t_1,t_2,C$ are ordered triples with $C=g_1\circ t_1\circ\sigma_1$
+  and $C=g_2\circ t_2\circ\sigma_2$, then $\sgn(\sigma_1)\orient_3(t_1)=\sgn(\sigma_2)\orient_3(t_2)$ in
+  $\R$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(a) Lemma~\ref{oc:lem:rot-perm}, applied to both representations, gives
+$\sgn(\sigma_1)\orient_3(t)=\orient_3(t')=\sgn(\sigma_2)\orient_3(t)$. Since $\orient_3(t)\ne0$, the real
+numbers $\sgn\sigma_1$ and $\sgn\sigma_2$ are equal, and so are the units (Fact~\ref{oc:fact:sign}: the
+map $\Z^\times\to\R$ is injective). (b) By Lemma~\ref{oc:lem:rot-perm} both sides equal $\orient_3(C)$.
+\end{proof}
+
+\begin{definition}[the literal of the encoder; \leanref{ErdosSzekeres.OrbitConsistency.litVal}{LEANEXT/orbit/OrbitConsistency.lean:223}]\label{oc:def:litval}
+For $\varepsilon\in\Z^\times$ and an ordered triple $C$, $\operatorname{litVal}(\varepsilon,C)$ is the
+proposition ``$0<\orient_3(C)$'' if $\varepsilon=1$, and the proposition ``not $0<\orient_3(C)$''
+otherwise (that is, if $\varepsilon=-1$). It models the SAT literal ``variable of the triple $C$, negated
+when the parity $\varepsilon$ is odd'', where the variable of $C$ stands for $0<\orient_3(C)$.
+\end{definition}
+
+\begin{theorem}[literal soundness; \leanref{ErdosSzekeres.OrbitConsistency.literal_sound}{LEANEXT/orbit/OrbitConsistency.lean:228}]\label{oc:thm:literal}
+Let $c\in\R^2$, $m\in\N$, $g\in\mathrm{RotComp}(c,m)$, $\sigma$ a permutation of $\{0,1,2\}$, and $t,C$
+ordered triples with $C=g\circ t\circ\sigma$ and $\orient_3(t)\ne0$. Then
+\[0<\orient_3(t)\iff\operatorname{litVal}(\sgn\sigma,\,C).\]
+\end{theorem}
+\begin{proof}
+By Lemma~\ref{oc:lem:rot-perm}, $\orient_3(C)=\sgn(\sigma)\orient_3(t)$. By (S1), $\sgn\sigma=1$ or
+$\sgn\sigma=-1$.
+If $\sgn\sigma=1$, then $\operatorname{litVal}(\sgn\sigma,C)$ is ``$0<\orient_3(C)$'' and
+$\orient_3(C)=\orient_3(t)$, so the two sides coincide.
+If $\sgn\sigma=-1$, then $\sgn\sigma\ne1$, so $\operatorname{litVal}(\sgn\sigma,C)$ is ``not
+$0<\orient_3(C)$'', and $\orient_3(C)=-\orient_3(t)$. If $0<\orient_3(t)$, then $-\orient_3(t)<0$, so the
+literal holds. Conversely, if the literal holds, then $-\orient_3(t)\le0$, i.e.\ $\orient_3(t)\ge0$, and
+$\orient_3(t)\ne0$ gives $0<\orient_3(t)$.
+\end{proof}
+
+\begin{theorem}[literal soundness, label-level form modelled on the encoder; \leanref{ErdosSzekeres.OrbitConsistency.encoder_literal_sound}{LEANEXT/orbit/OrbitConsistency.lean:253}]\label{oc:thm:encoder}
+Let $\iota$ be any type (of labels), $P:\iota\to\R^2$ and $r:\iota\to\iota$ maps, $c\in\R^2$, $m\in\N$, and
+$\rho=R_{c,2\pi/m}$. Assume
+\[P(r(i))=\rho(P(i))\qquad\text{for every } i\in\iota .\]
+Let $T,T_0,C:\{0,1,2\}\to\iota$, let $\sigma_1,\sigma_2$ be permutations of $\{0,1,2\}$, and $s\in\N$, with
+\[T_0=T\circ\sigma_1\qquad\text{and}\qquad C=r^{[s]}\circ T_0\circ\sigma_2 .\]
+If $\orient_3(P\circ T)\ne0$, then
+\[0<\orient_3(P\circ T)\iff\operatorname{litVal}\bigl(\sgn\sigma_1\cdot\sgn\sigma_2,\;P\circ C\bigr).\]
+Nothing else is assumed: $P$ need not be injective, and $m$ is arbitrary (for $m=0$,
+$\rho=R_{c,0}=\mathrm{id}$). Distinctness of the labels $T(0),T(1),T(2)$ is not a separate hypothesis; it
+follows from $\orient_3(P\circ T)\ne0$, because $\orient$ vanishes when two of its arguments are equal
+(Lemma~\ref{fd:lem:orient}(e)).
+\end{theorem}
+\begin{proof}
+\emph{Step 1: $P\circ r^{[s]}=\rho^{[s]}\circ P$.} Induction on $s$: for $s=0$ both sides are $P$; if it
+holds for $s$, then for every label $i$,
+$P(r^{[s+1]}(i))=P(r(r^{[s]}(i)))=\rho(P(r^{[s]}(i)))=\rho(\rho^{[s]}(P(i)))=\rho^{[s+1]}(P(i))$.
+
+\emph{Step 2: $P\circ C=\rho^{[s]}\circ(P\circ T)\circ(\sigma_1\sigma_2)$.} For $i\in\{0,1,2\}$,
+$P(C(i))=P\bigl(r^{[s]}(T_0(\sigma_2(i)))\bigr)=\rho^{[s]}\bigl(P(T(\sigma_1(\sigma_2(i))))\bigr)$ by
+Step~1 and $T_0=T\circ\sigma_1$, and $\sigma_1(\sigma_2(i))=(\sigma_1\sigma_2)(i)$.
+
+\emph{Step 3.} $\rho^{[s]}\in\mathrm{RotComp}(c,m)$ by Lemma~\ref{oc:lem:rotcomp-pres}(c). Theorem~\ref{oc:thm:literal}
+with $g=\rho^{[s]}$, $\sigma=\sigma_1\sigma_2$, $t=P\circ T$ and the triple $P\circ C$ (Step~2), and
+$\orient_3(P\circ T)\ne0$, gives $0<\orient_3(P\circ T)\iff\operatorname{litVal}(\sgn(\sigma_1\sigma_2),P\circ
+C)$. Finally $\sgn(\sigma_1\sigma_2)=\sgn\sigma_1\cdot\sgn\sigma_2$ by (S2).
+\end{proof}
+
+\begin{remark}[parity by counting inversions is not modelled in Lean]\label{oc:rem:parity}
+The encoders compute parities by counting inversions, in Python. For a list $a$ of three labels let
+$\mathrm{inv}(a)$ be the number of pairs $i<j$ of positions with $a(i)>a(j)$. The function
+\texttt{sortpar} of \dirn{C7UPPER/gen.py} (line 108) bubble-sorts $a$ and flips the parity at each
+exchange of adjacent entries; each exchange removes exactly one inversion and the sorted list has none,
+so it returns $(-1)^{\mathrm{inv}(a)}$. It is applied to the ordered label triple (line 120) and to the
+rotations of the sorted triple (line 78); these give the parities that play the roles of
+$\sgn\sigma_1$ and $\sgn\sigma_2$. The function \texttt{perm\_sign} of \dirn{C6UPPER/encb/gen_b2.py}
+(line 56) counts the inversions of its argument and also returns $(-1)^{\mathrm{inv}(a)}$; it is
+applied (lines 72--73) to the list $\sigma(0)\sigma(1)\sigma(2)$ of the permutation $\sigma$ that sorts
+the rotated triple, so this encoder corresponds to $\sigma_1=\mathrm{id}$ and $\sigma_2=\sigma$.
+Theorem~\ref{oc:thm:encoder} is stated with Mathlib's $\sgn$ instead. The two agree on lists of three
+distinct labels, by a six-case check. Write a permutation $\tau$ of $\{0,1,2\}$ as the list $\tau(0)\tau(1)\tau(2)$; so
+$\mathrm{inv}(\tau)$ is the number of pairs $i<j$ with $\tau(i)>\tau(j)$. If $\sigma$ sorts a list $a$ of
+three distinct labels, i.e.\ $a\circ\sigma$ is increasing, then $a(i)>a(j)$ iff
+$\sigma^{-1}(i)>\sigma^{-1}(j)$, so $\mathrm{inv}(a)=\mathrm{inv}(\sigma^{-1})$. For the six
+permutations $\tau$ one has
+\begin{center}
+\begin{tabular}{cccc}
+\toprule
+$\tau$ & $\tau$ as a product of transpositions & $\mathrm{inv}(\tau)$ & $\sgn\tau$ by (S2), (S3)\\
+\midrule
+$012$ & $\mathrm{id}$ & $0$ & $1$\\
+$102$ & $\mathrm{swap}(0,1)$ & $1$ & $-1$\\
+$021$ & $\mathrm{swap}(1,2)$ & $1$ & $-1$\\
+$210$ & $\mathrm{swap}(0,2)$ & $3$ & $-1$\\
+$120$ & $\mathrm{swap}(0,1)\,\mathrm{swap}(1,2)$ & $2$ & $1$\\
+$201$ & $\mathrm{swap}(1,2)\,\mathrm{swap}(0,1)$ & $2$ & $1$\\
+\bottomrule
+\end{tabular}
+\end{center}
+so $(-1)^{\mathrm{inv}(\tau)}=\sgn\tau$ for every $\tau$. Hence \texttt{perm\_sign}, applied to the
+list of a permutation $\sigma$, returns $(-1)^{\mathrm{inv}(\sigma)}=\sgn\sigma$; and \texttt{sortpar},
+applied to a list $a$ of distinct labels that $\sigma$ sorts, returns
+$(-1)^{\mathrm{inv}(a)}=(-1)^{\mathrm{inv}(\sigma^{-1})}=\sgn(\sigma^{-1})=\sgn(\sigma)$ by (S2). This
+six-case argument, the reading of the code above and the correspondence between the generator code and
+the data $T,T_0,C,\sigma_1,\sigma_2,s$ of Theorem~\ref{oc:thm:encoder} are \emph{not} part of any Lean
+statement.
+The Python script \dirn{LEANEXT/orbit/check_literals.py} checked (lines 36--39) that \texttt{sortpar}
+sorts each of the six orders of $(0,1,2)$ and returns the same parity as the script's own inversion
+count \texttt{perm\_sign} (lines 25--31); this compares two inversion counts, not \texttt{sortpar} with
+Mathlib's $\sgn$. The same script compared the literal code of \dirn{C7UPPER/gen.py} with
+floating-point orientations on 368,814 ordered triples with no mismatch
+(\dirn{LEANEXT/orbit/logs/check_literals.log}, lines 1--5). These Python checks are evidence, not
+proof. The design notes of the ENCBLEAN route record, in their entry for this theorem, the mismatch
+between $\sgn$ and the inversion count and that a six-case bridge would be needed, and give the verdict
+``Not used'' (\dirn{ENCBLEAN/DESIGN.md:625}).
+\end{remark}
+
+\begin{remark}[how the theorems are used]\label{oc:rem:literal-use}
+As described in the doc comment of \lean{encoder_literal_sound}, the encoder keeps one Boolean variable
+$V(C)$ per canonical representative $C$ of an orbit of ordered label triples under the label rotation $r$
+and the permutations of the positions; $V(C)$ is meant to be $[0<\orient_3(P\circ C)]$. For an ordered
+triple $T$ it sorts $T$ ($T_0=T\circ\sigma_1$), maps the sorted triple to the representative
+($C=r^{[s]}\circ T_0\circ\sigma_2$), and uses $V(C)$, negated when $\sgn\sigma_1\sgn\sigma_2=-1$. Under the semiconjugacy $P\circ r=\rho\circ P$ and
+$\orient_3(P\circ T)\ne0$ (which holds when the three points are distinct points of a set in general
+position, by Lemma~\ref{fd:lem:collinear}), Theorem~\ref{oc:thm:encoder} says that this literal is true
+exactly when $\orient(P(T(0)),P(T(1)),P(T(2)))>0$, whichever representation is chosen;
+Lemma~\ref{oc:lem:two-reps} shows directly that the sign does not depend on the representation.
+\end{remark}
+
+\subsection{Even order: antipodes, rays and phases}\label{oc:sub:even}
+
+\begin{lemma}[antipodes; \leanref{ErdosSzekeres.OrbitConsistency.antipode_mem_of_even}{LEANEXT/orbit/OrbitConsistency.lean:273}, \leanref{ErdosSzekeres.LayerLemma.antipode_mem_of_even}{LEANEXT/merged/Merged.lean:1160}]\label{oc:lem:antipode}
+Let $S$ be a finite set of points, $c\in\R^2$ and $m\in\N$ with $m$ even and $0<m$, and assume that
+$\rho=R_{c,2\pi/m}$ maps $S$ into $S$. If $x\in S$, then the point $(2c_0-x_0,\;2c_1-x_1)=2c-x$ belongs
+to $S$.
+\end{lemma}
+\begin{proof}
+By Lemma~\ref{oc:lem:iter-mem}, $\rho^{[m/2]}(x)\in S$, and $\rho^{[m/2]}(x)=(2c_0-x_0,2c_1-x_1)$ by
+Corollary~\ref{oc:cor:period}.
+\end{proof}
+
+\begin{lemma}[no two points on one open ray from the centre; \leanref{ErdosSzekeres.OrbitConsistency.same_ray_false}{LEANEXT/orbit/OrbitConsistency.lean:295}, \leanref{ErdosSzekeres.LayerLemma.same_ray_false}{LEANEXT/merged/Merged.lean:1181}]\label{oc:lem:same-ray}
+Let $S$ be a finite set of points, $c\in\R^2$ and $m\in\N$ with $m$ even and $0<m$; assume that
+$\rho=R_{c,2\pi/m}$ maps $S$ into $S$ and that $S$ is in general position. Let $x,y\in S$ with $x\ne y$,
+and $l\in\R$ with $l>0$. Then
+\[y-c\ne l\,(x-c).\]
+(In Lean the equation $y-c=l\,(x-c)$ is a hypothesis and the conclusion is \lean{False}; this is the
+same statement.) The condition $c\notin S$ is not a hypothesis; it follows from the others by
+Lemma~\ref{lg:lem:centre}, since $x\ne y$ gives a point of $S$ other than $c$, but the proof below does
+not use it.
+\end{lemma}
+\begin{proof}
+Suppose $y-c=l(x-c)$, i.e.\ $y=c+l(x-c)$. Let $q=2c-x$; then $q\in S$ by Lemma~\ref{oc:lem:antipode}.
+\begin{enumerate}[label=(\roman*)]
+\item $x\ne c$: if $x=c$, then $y=c+l\cdot0=c=x$, contrary to $x\ne y$.
+\item $x\ne q$: $x=q$ means $2(x-c)=0$, i.e.\ $x=c$, excluded by (i).
+\item $y\ne q$: $y=q$ means $c+l(x-c)=2c-x$, i.e.\ $(l+1)(x-c)=0$; as $l+1>0$, this gives $x=c$, excluded by
+  (i).
+\item $\orient(x,y,q)=0$: $y-x=(l-1)(x-c)$ and $q-x=-2(x-c)$, so
+  $\orient(x,y,q)=\det\bigl(y-x\mid q-x\bigr)=-2(l-1)\det\bigl(x-c\mid x-c\bigr)=0$.
+\end{enumerate}
+Thus $x,y,q$ are pairwise distinct points of $S$ with $\orient(x,y,q)=0$, which contradicts general
+position by Lemma~\ref{fd:lem:collinear} (\lean{generalPosition_iff_orient_ne_zero},
+\dirn{ErdosSzekeres/OrientationGeometry.lean:66}).
+\end{proof}
+
+\begin{remark}[the hypothesis $l>0$]\label{oc:rem:ray}
+The proof uses $l>0$ only through $l+1\ne0$. The hypothesis cannot be replaced by $l\ne0$: for any
+$x\in S$ with $x\ne c$, the antipode $y=2c-x$ lies in $S$ (Lemma~\ref{oc:lem:antipode}), $y\ne x$, and
+$y-c=(-1)(x-c)$. Such $S$ exist, for example $m=2$ and $S=\{x,2c-x\}$ with $x\ne c$ (general position
+holds because $S$ has only two points).
+\end{remark}
+
+\begin{lemma}[rotating and shifting polar points; \leanref{ErdosSzekeres.OrbitConsistency.rotAbout_polar}{LEANEXT/orbit/OrbitConsistency.lean:355}, \leanref{ErdosSzekeres.OrbitConsistency.polar_add_int}{LEANEXT/orbit/OrbitConsistency.lean:383}, \leanref{ErdosSzekeres.LayerLemma.rotAbout_polar}{LEANEXT/merged/Merged.lean:1241}, \leanref{ErdosSzekeres.LayerLemma.polar_add_int}{LEANEXT/merged/Merged.lean:1269}]\label{oc:lem:polar-rot}
+A rotation about $c$ adds its angle to the angle of a polar point about $c$, and polar points are
+$2\pi$-periodic in the angle:
+\begin{enumerate}[label=(\alph*)]
+\item (\lean{rotAbout_polar}) For all $c\in\R^2$ and $r,\theta,\varphi\in\R$:
+  $R_{c,\varphi}(\operatorname{polar}(c,r,\theta))=\operatorname{polar}(c,r,\theta+\varphi)$.
+\item (\lean{polar_add_int}) For all $c\in\R^2$, $r,\theta\in\R$ and $n\in\Z$:
+  $\operatorname{polar}(c,r,\theta+n\cdot2\pi)=\operatorname{polar}(c,r,\theta)$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(a) $\operatorname{polar}(c,r,\theta)-c=(r\cos\theta,r\sin\theta)$, so $R_{c,\varphi}$ maps the point to
+$c+\bigl(r(\cos\varphi\cos\theta-\sin\varphi\sin\theta),\;r(\sin\varphi\cos\theta+\cos\varphi\sin\theta)\bigr)
+=c+\bigl(r\cos(\theta+\varphi),\;r\sin(\theta+\varphi)\bigr)$ by the addition formulas.
+(b) $\cos$ and $\sin$ have period $2\pi$, so $\cos(\theta+2\pi n)=\cos\theta$ and
+$\sin(\theta+2\pi n)=\sin\theta$ for $n\in\Z$.
+\end{proof}
+
+\begin{lemma}[equal phases modulo $2\pi/m$, natural form; \leanref{ErdosSzekeres.OrbitConsistency.eq_iterate_of_phase_eq}{LEANEXT/orbit/OrbitConsistency.lean:363}, \leanref{ErdosSzekeres.LayerLemma.eq_iterate_of_phase_eq}{LEANEXT/merged/Merged.lean:1249}]\label{oc:lem:phase-nat}
+Let $S$ be a finite set of points, $c\in\R^2$ and $m\in\N$ with $m$ even and $0<m$; assume that
+$\rho=R_{c,2\pi/m}$ maps $S$ into $S$ and that $S$ is in general position. Let $r,r',\alpha,\beta\in\R$
+with $r>0$, $r'>0$, $\operatorname{polar}(c,r,\alpha)\in S$ and $\operatorname{polar}(c,r',\beta)\in S$,
+and let $k\in\N$ with $\beta=\alpha+k\cdot(2\pi/m)$. Then
+\[\operatorname{polar}(c,r',\beta)=\rho^{[k]}\bigl(\operatorname{polar}(c,r,\alpha)\bigr).\]
+\end{lemma}
+\begin{proof}
+Let $z=\rho^{[k]}(\operatorname{polar}(c,r,\alpha))$ and $y=\operatorname{polar}(c,r',\beta)$. By
+Lemma~\ref{oc:lem:iterate}, $\rho^{[k]}=R_{c,k(2\pi/m)}$, so by Lemma~\ref{oc:lem:polar-rot}(a),
+$z=\operatorname{polar}(c,r,\alpha+k(2\pi/m))=\operatorname{polar}(c,r,\beta)$; and $z\in S$ by
+Lemma~\ref{oc:lem:iter-mem}. Suppose $y\ne z$. Then
+\[y-c=(r'\cos\beta,\,r'\sin\beta)=\tfrac{r'}{r}\,(r\cos\beta,\,r\sin\beta)=\tfrac{r'}{r}\,(z-c),\]
+with $r'/r>0$. So $z,y\in S$, $z\ne y$ and $y-c=l(z-c)$ with $l=r'/r>0$, which
+Lemma~\ref{oc:lem:same-ray} (applied with $x:=z$) excludes. Hence $y=z$.
+\end{proof}
+
+\begin{lemma}[equal phases modulo $2\pi/m$, integer form; \leanref{ErdosSzekeres.OrbitConsistency.eq_iterate_of_phase_eq_int}{LEANEXT/orbit/OrbitConsistency.lean:389}, \leanref{ErdosSzekeres.LayerLemma.eq_iterate_of_phase_eq_int}{LEANEXT/merged/Merged.lean:1275}]\label{oc:lem:phase-int}
+Let $S$ be a finite set of points, $c\in\R^2$ and $m\in\N$ with $m$ even and $0<m$; assume that
+$\rho=R_{c,2\pi/m}$ maps $S$ into $S$ and that $S$ is in general position. Let $r,r',\alpha,\beta\in\R$
+with $r>0$, $r'>0$, $\operatorname{polar}(c,r,\alpha)\in S$ and $\operatorname{polar}(c,r',\beta)\in S$,
+and let $k\in\Z$ with $\beta=\alpha+k\cdot(2\pi/m)$. Then there is $j\in\N$ with
+\[\operatorname{polar}(c,r',\beta)=\rho^{[j]}\bigl(\operatorname{polar}(c,r,\alpha)\bigr).\]
+(The proof takes for $j$ the remainder of $k$ modulo $m$.)
+\end{lemma}
+\begin{proof}
+Since $m>0$, Euclidean division of $k$ by $m$ gives $q=\lfloor k/m\rfloor\in\Z$ and a remainder
+$j=k-mq\in\{0,1,\dots,m-1\}$, which we regard as a natural number (Lean: \texttt{(k \% m).toNat}, with
+$0\le k\bmod m$ by \lean{Int.emod_nonneg} and $k=(k\bmod m)+m\lfloor k/m\rfloor$ by
+\lean{Int.emod_add_mul_ediv}). Then $k=j+mq$, and, as $m\ne0$,
+$k\cdot\frac{2\pi}{m}=j\cdot\frac{2\pi}{m}+q\cdot2\pi$. Put $\beta'=\alpha+j\cdot(2\pi/m)$; then
+$\beta=\beta'+q\cdot2\pi$, so $\operatorname{polar}(c,r',\beta)=\operatorname{polar}(c,r',\beta')$ by
+Lemma~\ref{oc:lem:polar-rot}(b). In particular $\operatorname{polar}(c,r',\beta')\in S$, and
+Lemma~\ref{oc:lem:phase-nat} (with $\beta'$ and the natural number $j$) gives
+$\operatorname{polar}(c,r',\beta')=\rho^{[j]}(\operatorname{polar}(c,r,\alpha))$. Hence the claim.
+\end{proof}
+
+\begin{theorem}[points outside an orbit have different phases; \leanref{ErdosSzekeres.OrbitConsistency.phase_ne_of_not_mem_orbit}{LEANEXT/orbit/OrbitConsistency.lean:420}, \leanref{ErdosSzekeres.LayerLemma.phase_ne_of_not_mem_orbit}{LEANEXT/merged/Merged.lean:1304}]\label{oc:thm:phase-orbit}
+Let $S$ be a finite set of points, $c\in\R^2$ and $m\in\N$ with $m$ even and $0<m$; assume that
+$\rho=R_{c,2\pi/m}$ maps $S$ into $S$ and that $S$ is in general position. Let $r,r',\alpha,\beta\in\R$
+with $r>0$, $r'>0$, $\operatorname{polar}(c,r,\alpha)\in S$, $\operatorname{polar}(c,r',\beta)\in S$, and
+\[\operatorname{polar}(c,r',\beta)\ne\rho^{[j]}\bigl(\operatorname{polar}(c,r,\alpha)\bigr)\qquad\text{for
+every } j\in\N .\]
+Then $\beta\ne\alpha+k\cdot(2\pi/m)$ for every $k\in\Z$.
+\end{theorem}
+\begin{proof}
+Let $k\in\Z$ and suppose $\beta=\alpha+k(2\pi/m)$. Lemma~\ref{oc:lem:phase-int} gives $j\in\N$ with
+$\operatorname{polar}(c,r',\beta)=\rho^{[j]}(\operatorname{polar}(c,r,\alpha))$, contrary to the
+hypothesis.
+\end{proof}
+
+\begin{remark}[what is and is not claimed]\label{oc:rem:phase-orbit}
+The doc comment of the \dirn{OrbitConsistency.lean} version of \lean{phase_ne_of_not_mem_orbit} adds that,
+with the encoder's labelling (layer~$0$ has a point of direction~$0$), the phases of distinct layers differ
+and the phases of the layers $i\ge1$ are nonzero. That reading needs facts that are not hypotheses of
+Theorem~\ref{oc:thm:phase-orbit}: that a point of one layer is not in the $\rho$-orbit of a point of
+another layer (this is what the proof of Theorem~\ref{oc:thm:layers-phase} below establishes, from
+Lemmas~\ref{oc:lem:disjoint} and~\ref{oc:lem:closed}), and the normalisation that layer~$0$ contains a
+point of direction~$0$, together with the definition of the phases relative to it, which is not part of
+any Lean statement of this section.
+\end{remark}
+
+\subsection{Distinct layers: rays and phases}\label{oc:sub:layers}
+
+We use the hull vertices $\hv(X)=\{x\in X: x\notin\conv(X\setminus\{x\})\}$ of a finite set $X$
+(Definition~\ref{ll:def:hv}) and the peels $\peel(S,0)=S$, $\peel(S,n+1)=\peel(S,n)\setminus\hv(\peel(S,n))$
+(Definition~\ref{ll:def:peel}); the $n$-th layer of $S$ is $\hv(\peel(S,n))$. We use three facts from the layer-lemma
+section:
+\begin{itemize}
+\item[(L1)] $\hv(X)\subseteq X$ (by definition), and $\peel(S,n')\subseteq\peel(S,n)$ for $n\le n'$
+  (Lemma~\ref{ll:lem:antitone}); in particular $\peel(S,n)\subseteq\peel(S,0)=S$.
+\item[(L2)] (Lemma~\ref{ll:lem:inv-peel}) If $0<m$, $c\notin S$ and $\rho=R_{c,2\pi/m}$ maps $S$ into
+  $S$, then $\rho$ maps every $\peel(S,n)$ into itself.
+\item[(L3)] (Theorem~\ref{ll:thm:core-rot}, \lean{hullVerts_eq_orbitFS_rotAbout},
+  \dirn{LAYERLEAN/LayerLemma.lean:364}) If $0<m$, $K\le2m$, $X$ is a finite set of points with $c\notin X$,
+  $\rho$ maps $X$ into $X$, $X$ has no $K$ points in convex position, and $x\in\hv(X)$, then
+  $\hv(X)=\{\rho^{[a]}(x):0\le a<m\}$ (Lean: \lean{orbitFS} of $\rho$, $m$ and $x$).
+\end{itemize}
+``$S$ has no $K$ points in convex position'' is $\neg\,$\texttt{HasConvexNGon K S} (Definition~\ref{fd:def:ngon}).
+
+\begin{lemma}[distinct layers are disjoint; \leanref{ErdosSzekeres.LayerLemma.not_mem_hullVerts_peel_of_lt}{LEANEXT/merged/Merged.lean:1316}, \leanref{ErdosSzekeres.LayerLemma.not_mem_hullVerts_peel_of_ne}{LEANEXT/merged/Merged.lean:1322}]\label{oc:lem:disjoint}
+Let $S$ be a finite set of points (no other hypothesis).
+\begin{enumerate}[label=(\alph*)]
+\item If $i<j$ and $y\in\hv(\peel(S,j))$, then $y\notin\hv(\peel(S,i))$.
+\item If $i\ne j$, then no point $y$ satisfies both $y\in\hv(\peel(S,i))$ and $y\in\hv(\peel(S,j))$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(a) By (L1) and $i+1\le j$: $y\in\hv(\peel(S,j))\subseteq\peel(S,j)\subseteq\peel(S,i+1)
+=\peel(S,i)\setminus\hv(\peel(S,i))$, so $y\notin\hv(\peel(S,i))$. (b) If $i<j$, apply (a) to $y$ as a
+point of layer $j$; if $j<i$, apply (a) with $i$ and $j$ exchanged.
+\end{proof}
+
+\begin{lemma}[each layer is closed under the rotation; \leanref{ErdosSzekeres.LayerLemma.iterate_mem_hullVerts_peel}{LEANEXT/merged/Merged.lean:1330}]\label{oc:lem:closed}
+Let $S$ be a finite set of points, $c\in\R^2$, and $m,K\in\N$ with $0<m$ and $K\le2m$; assume $c\notin S$,
+that $\rho=R_{c,2\pi/m}$ maps $S$ into $S$, and that $S$ has no $K$ points in convex position. If
+$i\in\N$ and $x\in\hv(\peel(S,i))$, then $\rho^{[k]}(x)\in\hv(\peel(S,i))$ for every $k\in\N$.
+\end{lemma}
+\begin{proof}
+Put $X=\peel(S,i)$. By (L1), $X\subseteq S$; hence $c\notin X$, and $X$ has no $K$ points in convex
+position (such points would be $K$ points of $S$ in convex position; Lemma~\ref{fd:lem:mono}(c)). By (L2),
+$\rho$ maps $X$ into $X$. By (L3), $\hv(X)=O:=\{\rho^{[a]}(x):0\le a<m\}$. The set $O$ is mapped into
+itself by $\rho$: for $a+1<m$, $\rho(\rho^{[a]}(x))=\rho^{[a+1]}(x)\in O$, and for $a=m-1$,
+$\rho(\rho^{[m-1]}(x))=\rho^{[m]}(x)=x=\rho^{[0]}(x)\in O$, because $\rho^{[m]}=\mathrm{id}$
+(Corollary~\ref{oc:cor:period}). Since $x=\rho^{[0]}(x)\in O$ (as $0<m$), Lemma~\ref{oc:lem:iter-mem}
+gives $\rho^{[k]}(x)\in O=\hv(X)$ for every $k$. (The Lean proof obtains $\rho^{[m]}(x)=x$ from
+$x\ne c$ and the minimal period, Lemma~\ref{ll:lem:minperiod}; the direct identity
+$\rho^{[m]}=\mathrm{id}$ used here needs neither.)
+\end{proof}
+
+\begin{theorem}[distinct layers never share a ray through a rotated point; \leanref{ErdosSzekeres.LayerLemma.not_same_ray_of_distinct_layers}{LEANEXT/merged/Merged.lean:1350}]\label{oc:thm:layers-ray}
+Let $S$ be a finite set of points, $c\in\R^2$, and $m,K\in\N$ with $2\le m$, $m$ even and $K\le2m$; assume
+$c\notin S$, that $\rho=R_{c,2\pi/m}$ maps $S$ into $S$, that $S$ is in general position, and that $S$
+has no $K$ points in convex position. Let $i,j\in\N$ with $i\ne j$, $x\in\hv(\peel(S,i))$,
+$y\in\hv(\peel(S,j))$, $k\in\N$ and $l\in\R$ with $l>0$. Then
+\[y-c\ne l\,\bigl(\rho^{[k]}(x)-c\bigr).\]
+(In Lean the equation is a hypothesis and the conclusion is \lean{False}.)
+\end{theorem}
+\begin{proof}
+We have $0<m$. Put $x'=\rho^{[k]}(x)$; then $x'\in\hv(\peel(S,i))$ by Lemma~\ref{oc:lem:closed}. Also
+$x'\ne y$: otherwise $y$ would lie in $\hv(\peel(S,i))$ and in $\hv(\peel(S,j))$, contrary to
+Lemma~\ref{oc:lem:disjoint}(b). By (L1), $x',y\in S$. If $y-c=l(x'-c)$, then
+Lemma~\ref{oc:lem:same-ray} (with $x:=x'$, using $m$ even, $0<m$, invariance and general position) gives a
+contradiction.
+\end{proof}
+
+\begin{theorem}[distinct layers have phases incongruent modulo $2\pi/m$; \leanref{ErdosSzekeres.LayerLemma.phase_ne_of_distinct_layers}{LEANEXT/merged/Merged.lean:1367}]\label{oc:thm:layers-phase}
+Let $S$ be a finite set of points, $c\in\R^2$, and $m,K\in\N$ with $2\le m$, $m$ even and $K\le2m$; assume
+$c\notin S$, that $\rho=R_{c,2\pi/m}$ maps $S$ into $S$, that $S$ is in general position, and that $S$
+has no $K$ points in convex position. Let $i,j\in\N$ with $i\ne j$, and $r,r',\alpha,\beta\in\R$ with
+$r>0$, $r'>0$,
+\[\operatorname{polar}(c,r,\alpha)\in\hv(\peel(S,i))\qquad\text{and}\qquad
+  \operatorname{polar}(c,r',\beta)\in\hv(\peel(S,j)).\]
+Then $\beta-\alpha\ne k\cdot(2\pi/m)$ for every $k\in\Z$.
+\end{theorem}
+\begin{proof}
+We apply Theorem~\ref{oc:thm:phase-orbit}. Its hypotheses hold: $m$ is even and $0<m$; $\rho$ maps $S$
+into $S$; $S$ is in general position; $r,r'>0$; both points lie in $S$ by (L1). For the orbit
+hypothesis, suppose $\operatorname{polar}(c,r',\beta)=\rho^{[n]}(\operatorname{polar}(c,r,\alpha))$ for
+some $n\in\N$; then this point lies in $\hv(\peel(S,i))$ by Lemma~\ref{oc:lem:closed}, and also in
+$\hv(\peel(S,j))$, contrary to Lemma~\ref{oc:lem:disjoint}(b). Now let $k\in\Z$ and suppose
+$\beta-\alpha=k(2\pi/m)$. Then $\beta=\alpha+k(2\pi/m)$, which Theorem~\ref{oc:thm:phase-orbit} excludes.
+\end{proof}
+
+\begin{remark}[on the hypotheses and the conclusion]\label{oc:rem:layers}
+(1) The hypothesis $c\notin S$ of Theorems~\ref{oc:thm:layers-ray} and~\ref{oc:thm:layers-phase} follows
+from the others, although Lean keeps it as a hypothesis: the two given points are distinct by
+Lemma~\ref{oc:lem:disjoint}(b), so $S$ contains a point $p\ne c$, and Lemma~\ref{lg:lem:centre}
+(\lean{centre_not_mem_of_even}: $0<m$, $m$ even, $\rho$ maps $S$ into $S$, $S$ in general position,
+$p\in S$, $p\ne c$) gives $c\notin S$.
+(2) The points of Theorem~\ref{oc:thm:layers-phase} are given in polar form with positive radii; no
+statement of this section produces such a form from a point.
+(3) The modulus $2\pi/m$ cannot be replaced by $\pi/m$. Take $m=4$, $c=(0,0)$, $K=8$ and
+$S=\{(\pm2,0),(0,\pm2),(\pm\tfrac12,\pm\tfrac12)\}$, with four outer points $(\pm2,0),(0,\pm2)$ and four
+inner points $(\pm\frac12,\pm\frac12)$. The rotation by $\pi/2$ maps $S$ onto itself and $c\notin S$.
+$S$ is in general position: among any three points of $S$ two are of the same kind (outer or inner), so
+it suffices that the line through two points of the same kind contains no third point of $S$. The lines
+through two of the outer points are $x\pm y=\pm2$, $x=0$ and $y=0$, and the lines through two of the
+inner points are $x=\pm\frac12$, $y=\pm\frac12$ and $x=\pm y$; no third point of $S$ lies on any of them,
+since inner points have $\abs{x}=\abs{y}=\frac12$ and outer points have one coordinate $0$ and the other
+$\pm2$. For $\varepsilon_1,\varepsilon_2\in\{1,-1\}$,
+\[\bigl(\tfrac{\varepsilon_1}2,\tfrac{\varepsilon_2}2\bigr)=\tfrac38(2\varepsilon_1,0)+\tfrac38(0,2\varepsilon_2)
+  +\tfrac18(-2\varepsilon_1,0)+\tfrac18(0,-2\varepsilon_2),\]
+a convex combination of the outer points; hence no inner point is a hull vertex of $S$, $S$ is not in
+convex position (Lemma~\ref{fd:lem:cp-hull}), and $S$ (which has $8$ points) has no $8$ points in convex
+position. Each outer point is a hull vertex of $S$, since it is the only point of $S$
+maximising one of the linear functions $\pm x$, $\pm y$ (easy direction of
+Lemma~\ref{fd:lem:separation}); so layer~$0$ consists of the four outer points. Likewise each inner point
+is the only point of $\peel(S,1)$ (the four inner points) maximising one of $\pm x\pm y$, so layer~$1$
+consists of the inner points. With
+$(2,0)=\operatorname{polar}(c,2,0)$ in layer~$0$ and
+$(\frac12,\frac12)=\operatorname{polar}(c,\frac{\sqrt2}2,\frac\pi4)$ in layer~$1$, all hypotheses of
+Theorem~\ref{oc:thm:layers-phase} hold and $\beta-\alpha=\frac\pi4=1\cdot\frac{\pi}{m}$.
+\end{remark}
+
+\subsection{Key order}\label{oc:sub:keys}
+
+This subsection concerns only real numbers and integers. Throughout, intervals $[a,b)=\{y\in\R:a\le y<b\}$
+are half-open: the left end is included and the right end is not.
+
+\begin{definition}[reduction modulo $p$, Euclidean division, lexicographic order, strict monotonicity; Mathlib]\label{oc:def:keys}
+We use the following notions, as defined in Mathlib and in the Lean core library.
+\begin{enumerate}[label=(\alph*)]
+\item Let $p>0$ and $a,b\in\R$. There is exactly one $n\in\Z$ with $b-np\in[a,a+p)$: for existence take
+  $n=\lfloor(b-a)/p\rfloor$, so that $np\le b-a<np+p$; for uniqueness, if $b-np$ and $b-n'p$ both lie in
+  $[a,a+p)$ then $\abs{(n'-n)p}<p$, so $n=n'$. Mathlib calls this integer \lean{toIcoDiv} and defines
+  $\operatorname{toIcoMod}_p(a,b)=b-np$ (\texttt{toIcoMod hp a b}, where \lean{hp} is a proof of $0<p$).
+  In \dirn{KeyOrder.lean}, $p=2\pi$ (with \lean{Real.two_pi_pos}) and $a=0$:
+  $\operatorname{toIcoMod}_{2\pi}(0,x)$ is the representative of $x$ modulo $2\pi$ in $[0,2\pi)$.
+\item For $N\in\Z$ with $N>0$ and $J\in\Z$, Lean's integer quotient \texttt{J / N} (\lean{Int.ediv}) is
+  $\lfloor J/N\rfloor$, the floor of the rational number $J/N$, and Lean's remainder \texttt{J \% N}
+  (\lean{Int.emod}) is $J\bmod N=J-N\lfloor J/N\rfloor$. Thus $0\le J\bmod N\le N-1$
+  (\lean{Int.emod_nonneg}, \lean{Int.emod_lt_of_pos}) and $J=(J\bmod N)+N\lfloor J/N\rfloor$
+  (\lean{Int.emod_add_mul_ediv}).
+\item On $\Z\times\N$ the lexicographic order (Lean \lean{toLex} into $\Z\times_\ell\N$) is
+  $(a,b)<_{\mathrm{lex}}(a',b')$ iff $a<a'$, or $a=a'$ and $b<b'$ (\lean{Prod.Lex.lt_iff}).
+\item A map $\operatorname{rank}:\R\to\N$ is \emph{strictly increasing on} $S\subseteq\R$
+  (\texttt{StrictMonoOn rank S}) if $\operatorname{rank}(a)<\operatorname{rank}(b)$ for all $a,b\in S$ with
+  $a<b$.
+\end{enumerate}
+\end{definition}
+
+\begin{lemma}[characterisation of $\operatorname{toIcoMod}$; written step (Mathlib \lean{toIcoMod_eq_iff})]\label{oc:lem:toico}
+Let $p>0$ and $a,b,y\in\R$. Then $\operatorname{toIcoMod}_p(a,b)=y$ if and only if $a\le y<a+p$ and
+$b=y+zp$ for some $z\in\Z$. In particular $\operatorname{toIcoMod}_p(a,b)\in[a,a+p)$.
+\end{lemma}
+\begin{proof}
+Let $n$ be the integer of Definition~\ref{oc:def:keys}(a). If $y=\operatorname{toIcoMod}_p(a,b)=b-np$, then
+$y\in[a,a+p)$ and $b=y+np$. Conversely, if $y\in[a,a+p)$ and $b=y+zp$ with $z\in\Z$, then
+$b-zp=y\in[a,a+p)$, so $z=n$ by uniqueness, and $\operatorname{toIcoMod}_p(a,b)=b-zp=y$.
+\end{proof}
+
+\begin{lemma}[cells: order and equality; \leanref{KeyOrder.cell_lt_iff}{LEANEXT/keys/KeyOrder.lean:23}, \leanref{KeyOrder.cell_eq_iff}{LEANEXT/keys/KeyOrder.lean:45}]\label{oc:lem:cell}
+Let $u\in\R$ with $u>0$, $J_1,J_2\in\Z$, and $\psi_1,\psi_2\in\R$ with $0\le\psi_1<u$ and $0\le\psi_2<u$.
+Then
+\begin{enumerate}[label=(\alph*)]
+\item $J_1u+\psi_1<J_2u+\psi_2$ if and only if $J_1<J_2$, or $J_1=J_2$ and $\psi_1<\psi_2$;
+\item $J_1u+\psi_1=J_2u+\psi_2$ if and only if $J_1=J_2$ and $\psi_1=\psi_2$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(a) ``If'': when $J_1<J_2$, we have $J_1+1\le J_2$, hence
+$J_1u+\psi_1<J_1u+u=(J_1+1)u\le J_2u\le J_2u+\psi_2$, using $\psi_1<u$, $u>0$ and $\psi_2\ge0$; when
+$J_1=J_2$ and $\psi_1<\psi_2$, add $J_1u$ to $\psi_1<\psi_2$.
+``Only if'': assume $J_1u+\psi_1<J_2u+\psi_2$. If $J_1<J_2$ we are done. If $J_1=J_2$, cancelling $J_1u$
+gives $\psi_1<\psi_2$. If $J_1>J_2$, then $J_1-J_2-1\ge0$ and
+\[(J_1u+\psi_1)-(J_2u+\psi_2)=(J_1-J_2-1)\,u+\psi_1+(u-\psi_2)>0,\]
+since the three terms are $\ge0$, $\ge0$ and $>0$; this contradicts the assumption.
+(b) ``If'' is clear. ``Only if'': if $J_1u+\psi_1=J_2u+\psi_2$, then neither side is smaller than the
+other, so by (a), applied in both orders, $J_1\not<J_2$ and $J_2\not<J_1$, hence $J_1=J_2$; and then
+$\psi_1\not<\psi_2$ and $\psi_2\not<\psi_1$, hence $\psi_1=\psi_2$.
+\end{proof}
+
+\begin{lemma}[cells and ranks; \leanref{KeyOrder.cell_lt_iff_rank}{LEANEXT/keys/KeyOrder.lean:62}, \leanref{KeyOrder.cell_lt_iff_rank_finset}{LEANEXT/keys/KeyOrder.lean:71}]\label{oc:lem:rank}
+Let $u\in\R$ with $u>0$, let $S\subseteq\R$, and let $\operatorname{rank}:\R\to\N$ be strictly increasing
+on $S$. Let $J_1,J_2\in\Z$ and $\psi_1,\psi_2\in S$ with $0\le\psi_1<u$ and $0\le\psi_2<u$. Then
+\[J_1u+\psi_1<J_2u+\psi_2\iff(J_1,\operatorname{rank}\psi_1)<_{\mathrm{lex}}(J_2,\operatorname{rank}\psi_2)
+\quad\text{in }\Z\times_\ell\N.\]
+\lean{cell_lt_iff_rank} is this statement for a set $S$ (a Lean \lean{Set} of reals);
+\lean{cell_lt_iff_rank_finset} is the same statement for a finite set $S$ (a Lean \lean{Finset} of reals,
+with strict monotonicity on the underlying set and $\psi_1,\psi_2\in S$).
+\end{lemma}
+\begin{proof}
+By Lemma~\ref{oc:lem:cell}(a), the left side is equivalent to ``$J_1<J_2$, or $J_1=J_2$ and
+$\psi_1<\psi_2$''. By Definition~\ref{oc:def:keys}(c), the right side is ``$J_1<J_2$, or $J_1=J_2$ and
+$\operatorname{rank}\psi_1<\operatorname{rank}\psi_2$''. It remains to show
+$\operatorname{rank}\psi_1<\operatorname{rank}\psi_2\iff\psi_1<\psi_2$ for $\psi_1,\psi_2\in S$
+(\lean{StrictMonoOn.lt_iff_lt}). ``If'' is strict monotonicity. ``Only if'': if $\psi_1\not<\psi_2$, then
+either $\psi_1=\psi_2$, and then $\operatorname{rank}\psi_1=\operatorname{rank}\psi_2$, or $\psi_2<\psi_1$,
+and then $\operatorname{rank}\psi_2<\operatorname{rank}\psi_1$; in both cases
+$\operatorname{rank}\psi_1\not<\operatorname{rank}\psi_2$. The finite-set version is the set version
+applied to the set of elements of the finite set.
+\end{proof}
+
+\begin{lemma}[reduction modulo $2\pi$; \leanref{KeyOrder.reduce_mod_two_pi}{LEANEXT/keys/KeyOrder.lean:81}]\label{oc:lem:reduce}
+Let $N\in\Z$ with $N>0$, $u\in\R$ with $u>0$ and $Nu=2\pi$, $J\in\Z$, and $\psi\in\R$ with $0\le\psi<u$.
+Then
+\[\operatorname{toIcoMod}_{2\pi}(0,\,Ju+\psi)=(J\bmod N)\,u+\psi .\]
+\end{lemma}
+\begin{proof}
+Let $R=J\bmod N$ and $Q=\lfloor J/N\rfloor$, so that $0\le R\le N-1$ and $J=R+NQ$
+(Definition~\ref{oc:def:keys}(b)). By Lemma~\ref{oc:lem:toico} (with $p=2\pi$, $a=0$) it suffices to show
+(i) $0\le Ru+\psi$, (ii) $Ru+\psi<2\pi$, and (iii) $Ju+\psi=(Ru+\psi)+Q\cdot2\pi$.
+(i) holds as $R\ge0$, $u>0$ and $\psi\ge0$. (ii): $2\pi-(Ru+\psi)=Nu-Ru-\psi=(N-1-R)u+(u-\psi)>0$, since
+$N-1-R\ge0$ and $\psi<u$. (iii): $Ju+\psi=(R+NQ)u+\psi=Ru+\psi+Q(Nu)=Ru+\psi+Q\cdot2\pi$.
+\end{proof}
+
+\begin{lemma}[cells of antipodes; \leanref{KeyOrder.antipode_odd}{LEANEXT/keys/KeyOrder.lean:100}, \leanref{KeyOrder.antipode_even}{LEANEXT/keys/KeyOrder.lean:115}]\label{oc:lem:antipode-cell}
+Adding $\pi$ to a direction and reducing modulo $2\pi$ changes its cell index as follows and keeps its
+phase $\psi$:
+\begin{enumerate}[label=(\alph*)]
+\item (\lean{antipode_odd}, units $\pi/m$) Let $m\in\N$ with $0<m$, $J\in\Z$ and $\psi\in\R$ with
+  $0\le\psi<\pi/m$. Then
+  \[\operatorname{toIcoMod}_{2\pi}\bigl(0,\;J\cdot\tfrac{\pi}{m}+\psi+\pi\bigr)
+    =\bigl((J+m)\bmod 2m\bigr)\cdot\tfrac{\pi}{m}+\psi .\]
+\item (\lean{antipode_even}, units $2\pi/m$) Let $m\in\N$ with $0<m$ and $m$ even, $J\in\Z$ and
+  $\psi\in\R$ with $0\le\psi<2\pi/m$. Then
+  \[\operatorname{toIcoMod}_{2\pi}\bigl(0,\;J\cdot\tfrac{2\pi}{m}+\psi+\pi\bigr)
+    =\bigl((J+m/2)\bmod m\bigr)\cdot\tfrac{2\pi}{m}+\psi,\]
+  where $m/2$ is the natural-number quotient, cast to $\Z$.
+\end{enumerate}
+In (a) the integers $J+m$ and $2m$ are formed in $\Z$; oddness of $m$ is not assumed (the name refers to
+the encoder's use of units $\pi/m$ for odd $m$).
+\end{lemma}
+\begin{proof}
+(a) As $m\ne0$, $m\cdot\frac{\pi}{m}=\pi$, so $J\frac{\pi}{m}+\psi+\pi=(J+m)\frac{\pi}{m}+\psi$. Apply
+Lemma~\ref{oc:lem:reduce} with $N=2m>0$, $u=\pi/m>0$ (indeed $Nu=2m\cdot\frac{\pi}{m}=2\pi$), the integer
+$J+m$, and $\psi$, which satisfies $0\le\psi<u$.
+(b) Write $m=k+k$ with $k\in\N$; then $k\ge1$ and $m/2=k$. Since $k\cdot\frac{2\pi}{2k}=\pi$, we get
+$J\frac{2\pi}{m}+\psi+\pi=(J+k)\frac{2\pi}{m}+\psi$. Apply Lemma~\ref{oc:lem:reduce} with $N=m>0$,
+$u=2\pi/m>0$ (so $Nu=2\pi$), the integer $J+k=J+m/2$, and $\psi$, which satisfies $0\le\psi<u$.
+\end{proof}
+
+\begin{theorem}[sorting reduced directions by integer keys; \leanref{KeyOrder.reduced_lt_iff_key}{LEANEXT/keys/KeyOrder.lean:139}]\label{oc:thm:key}
+Let $N\in\Z$ with $N>0$, $u\in\R$ with $u>0$ and $Nu=2\pi$, $S\subseteq\R$, and $\operatorname{rank}:\R\to\N$
+strictly increasing on $S$. Let $J_1,J_2\in\Z$ and $\psi_1,\psi_2\in S$ with $0\le\psi_1<u$ and
+$0\le\psi_2<u$. Then
+\[\operatorname{toIcoMod}_{2\pi}(0,J_1u+\psi_1)<\operatorname{toIcoMod}_{2\pi}(0,J_2u+\psi_2)
+\iff(J_1\bmod N,\operatorname{rank}\psi_1)<_{\mathrm{lex}}(J_2\bmod N,\operatorname{rank}\psi_2).\]
+\end{theorem}
+\begin{proof}
+By Lemma~\ref{oc:lem:reduce}, applied twice,
+$\operatorname{toIcoMod}_{2\pi}(0,J_1u+\psi_1)=(J_1\bmod N)u+\psi_1$ and
+$\operatorname{toIcoMod}_{2\pi}(0,J_2u+\psi_2)=(J_2\bmod N)u+\psi_2$. Lemma~\ref{oc:lem:rank}, applied to
+the integers $J_1\bmod N$ and $J_2\bmod N$ and to $\psi_1,\psi_2$ (with the same $u$, $S$ and rank),
+gives the claim.
+\end{proof}
+
+\begin{remark}[half-open intervals]\label{oc:rem:halfopen}
+(1) The strict bound $\psi<u$ cannot be weakened to $\psi\le u$: for $J_1=0$, $\psi_1=u$, $J_2=1$,
+$\psi_2=0$ we get $J_1u+\psi_1=u=J_2u+\psi_2$, so the left side of Lemma~\ref{oc:lem:cell}(a) is false
+while its right side ($0<1$) is true, and Lemma~\ref{oc:lem:cell}(b) fails as well.
+(2) The reduction lands in the half-open interval $[0,2\pi)$: for instance $J=N$ and $\psi=0$ give
+$\operatorname{toIcoMod}_{2\pi}(0,2\pi)=0=(N\bmod N)u+0$, in accordance with Lemma~\ref{oc:lem:reduce}.
+\end{remark}
+
+\begin{remark}[what remains outside Lean]\label{oc:rem:keys-outside}
+The statements of this subsection are about real numbers already written as $Ju+\psi$ with $0\le\psi<u$,
+and about a rank map assumed strictly increasing on the phases. Three steps are not part of any Lean
+statement here: that the encoder's directions have this form (encoder~B computes the cell index as
+$J=2k+h_i$, reduced modulo $2m$, for odd $m$, and as $J=k$ for even $m$;
+\dirn{C6UPPER/encb/gen_b2.py}, lines 106--109); that its ranks (which are local ranks) are strictly
+increasing on the phases; and that sorting the keys gives the circular order of the actual points. The
+first two are listed as hypotheses in \dirn{LEANEXT/keys/REPORT.md} (lines 22--25; see also
+\dirn{ENCBLEAN/DESIGN.md:626}), the third as outside Lean in \dirn{LEANEXT/README.md} (line~25). (Lines
+16--17 of \dirn{LEANEXT/keys/REPORT.md} call \lean{reduced_lt_iff_key} the step ``sorting keys gives the
+circular order'' in \dirn{C6UPPER/encb/gen_b2.py}; Theorem~\ref{oc:thm:key} states that step only for real numbers
+already in the form above, with a rank as above.) For even $m\ge2$, under the hypotheses of
+Theorem~\ref{oc:thm:layers-phase} on the point set (it does not contain $c$, $\rho$ maps it into itself,
+it is in general position, and it has no $K$ points in convex position for some $K\le2m$), that theorem
+gives, for hull vertices of distinct layers given in polar form with positive radii, directions that are
+incongruent modulo $2\pi/m$; once these directions are written as $Ju+\psi$ with $u=2\pi/m$ and $0\le\psi<u$, it follows
+that their phases $\psi$ differ. This distinctness of the phases of distinct layers is what a strictly
+increasing rank needs.
+\end{remark}
+
+\subsection{Coverage}\label{oc:sub:coverage}
+
+\emph{Covered.} From \dirn{LEANEXT/orbit/OrbitConsistency.lean}: \lean{orient_rotAbout_inv}
+(Lemma~\ref{oc:lem:rot-inv}); \lean{PreservesOrient} (Definition~\ref{oc:def:preserves}); \lean{RotComp}
+(Definition~\ref{oc:def:rotcomp}); \lean{preservesOrient_id}, \lean{PreservesOrient.comp},
+\lean{PreservesOrient.iterate}, \lean{preservesOrient_rotAbout}, \lean{RotComp.preservesOrient},
+\lean{rotComp_iterate} (Lemma~\ref{oc:lem:rotcomp-pres}); \lean{orient3}
+(Definition~\ref{oc:def:orient3}); \lean{orient3_swap} (Lemma~\ref{oc:lem:swap}); \lean{orient3_perm}
+(Lemma~\ref{oc:lem:perm}); \lean{orient3_rot_perm} (Lemma~\ref{oc:lem:rot-perm});
+\lean{sign_eq_of_two_reps}, \lean{orient3_of_common_rep} (Lemma~\ref{oc:lem:two-reps}); \lean{litVal}
+(Definition~\ref{oc:def:litval}); \lean{literal_sound} (Theorem~\ref{oc:thm:literal});
+\lean{encoder_literal_sound} (Theorem~\ref{oc:thm:encoder}); \lean{antipode_mem_of_even}
+(Lemma~\ref{oc:lem:antipode}); \lean{same_ray_false} (Lemma~\ref{oc:lem:same-ray});
+\lean{rotAbout_polar}, \lean{polar_add_int} (Lemma~\ref{oc:lem:polar-rot}); \lean{eq_iterate_of_phase_eq}
+(Lemma~\ref{oc:lem:phase-nat}); \lean{eq_iterate_of_phase_eq_int} (Lemma~\ref{oc:lem:phase-int});
+\lean{phase_ne_of_not_mem_orbit} (Theorem~\ref{oc:thm:phase-orbit}). Of the copied block (lines 39--112):
+\lean{Invariant}, \lean{rotAbout}, \lean{polar} (Definition~\ref{oc:def:basic}), \lean{rotAbout_iterate}
+(Lemma~\ref{oc:lem:iterate}) and \lean{iterate_mem} (Lemma~\ref{oc:lem:iter-mem}).
+From \dirn{LEANEXT/merged/Merged.lean}, section~13: the seven restatements \lean{antipode_mem_of_even},
+\lean{same_ray_false}, \lean{rotAbout_polar}, \lean{eq_iterate_of_phase_eq}, \lean{polar_add_int},
+\lean{eq_iterate_of_phase_eq_int}, \lean{phase_ne_of_not_mem_orbit} in the namespace
+\lean{ErdosSzekeres.LayerLemma} (same labels as their originals); \lean{not_mem_hullVerts_peel_of_lt},
+\lean{not_mem_hullVerts_peel_of_ne} (Lemma~\ref{oc:lem:disjoint}); \lean{iterate_mem_hullVerts_peel}
+(Lemma~\ref{oc:lem:closed}); \lean{not_same_ray_of_distinct_layers} (Theorem~\ref{oc:thm:layers-ray});
+\lean{phase_ne_of_distinct_layers} (Theorem~\ref{oc:thm:layers-phase}).
+From \dirn{LEANEXT/keys/KeyOrder.lean}: \lean{cell_lt_iff}, \lean{cell_eq_iff} (Lemma~\ref{oc:lem:cell});
+\lean{cell_lt_iff_rank}, \lean{cell_lt_iff_rank_finset} (Lemma~\ref{oc:lem:rank});
+\lean{reduce_mod_two_pi} (Lemma~\ref{oc:lem:reduce}); \lean{antipode_odd}, \lean{antipode_even}
+(Lemma~\ref{oc:lem:antipode-cell}); \lean{reduced_lt_iff_key} (Theorem~\ref{oc:thm:key}).
+
+\emph{Not covered, deliberately.} (i) The complex-coordinate helpers of the copied block of
+\dirn{OrbitConsistency.lean} (lines 49--90 and 97--103: \lean{toC}, \lean{ofC}, \lean{toC_re}, \lean{toC_im},
+\lean{ofC_zero}, \lean{ofC_one}, \lean{toC_ofC}, \lean{ofC_toC}, \lean{toC_injective}, \lean{crot},
+\lean{toC_crot}, \lean{crot_one}, \lean{crot_comp}, \lean{crot_iterate}, \lean{rotAbout_eq_crot}): copies
+of declarations among lines 231--308 of \dirn{LAYERLEAN/LayerLemma.lean}, which belong to the
+layer-lemma unit; our proofs do not need them (the written proof of Lemma~\ref{oc:lem:iterate} uses the
+addition formulas). (ii) Lines 1--1147 of \dirn{Merged.lean}: a copy of \dirn{LAYERLEAN/LayerLemma.lean},
+treated in the layer-lemma and layer-geometry sections. (iii) Lines 151--158 of \dirn{KeyOrder.lean}:
+\texttt{\#print axioms} commands, not results. (iv) The verbatim copies listed under ``Sources'' (section~13
+of \dirn{Merged.lean} in \dirn{LEANEXT/linked/Linked.lean}, \dirn{LEANEXT/capstone/Capstone.lean},
+\dirn{LEANEXT/capstone/Capstone2.lean} and \dirn{ENCBLEAN/geo/ES8Geo/Capstone2.lean}; the byte-identical
+\dirn{ENCBLEAN/geo/ES8Geo/OrbitConsistency.lean} and \dirn{ENCBLEAN/geo/ES8Geo/KeyOrder.lean}), which
+are the same declarations. (v) The Python scripts and logs of \dirn{LEANEXT/orbit} (evidence, cited in
+Remark~\ref{oc:rem:parity}) and the mutant logs (audit only).
+\endgroup

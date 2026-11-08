@@ -1,0 +1,805 @@
+\section{The layer lemma and the reduction to exactly \texorpdfstring{$mt$}{mt} points}\label{ll:sec}
+
+This section gives written proofs of the declarations of the Lean file \dirn{LAYERLEAN/LayerLemma.lean} (namespace
+\lean{ErdosSzekeres.LayerLemma}) that concern hull vertices, orbits of a map of finite period, the layer lemma, the
+peeling of convex layers, and the reduction of the sixfold and sevenfold octagon bounds to statements about sets of
+exactly $mt$ points. The main results are:
+\begin{itemize}
+\item the layer lemma in abstract form (Theorem~\ref{ll:thm:core}): if an injective affine map $f$ sends a finite set
+  $S$ into itself, every point of $S$ has minimal period $m>0$ under $f$, and no $K$ points of $S$ are in convex
+  position for some $K\le 2m$, then for every hull vertex $x$ of $S$ the hull vertices of $S$ are exactly the points
+  $x,f(x),\dots,f^{m-1}(x)$, so that, if $S$ is nonempty, they form a single $f$-orbit; no general position is
+  assumed;
+\item its rotation form (Theorem~\ref{ll:thm:core-rot}), the description of all convex layers
+  (Theorem~\ref{ll:thm:layers}, Lemma~\ref{ll:lem:exists-layer}) and of their sizes (Theorem~\ref{ll:thm:card-peel});
+\item the reduction to exactly $mt$ points (Theorem~\ref{ll:thm:reduction}) and the sixfold and sevenfold octagon
+  theorems (Theorems~\ref{ll:thm:sixfold} and~\ref{ll:thm:sevenfold}). The last two are \emph{conditional}: they take
+  the propositions \lean{Sixfold66} and \lean{Sevenfold70} (Definition~\ref{ll:def:66-70}) as hypotheses, and these
+  propositions are not proved in Lean (Remark~\ref{ll:rem:hyp}).
+\end{itemize}
+
+\paragraph{Sources.} The Lean source is \dirn{LAYERLEAN/LayerLemma.lean} (1148 lines, SHA-256
+\texttt{afb8542dceb0}\dots). This section treats its lines 1--469 and 1034--1148; the geometric lemmas of lines
+471--1032 (strict nesting, the centre for even $m$, chains, polar rules, radius order) belong to other sections (for
+example Theorem~\ref{lg:thm:nesting} and Lemma~\ref{lg:lem:centre}). The notions of point, general position, convex
+position and \lean{HasConvexNGon} come from \dirn{ErdosSzekeres/Definitions.lean} (SHA-256 \texttt{2425500eefd1}\dots)
+and are recalled in Definitions~\ref{fd:def:point}, \ref{fd:def:gp}, \ref{fd:def:cp} and~\ref{fd:def:ngon}.
+
+\paragraph{Lean evidence.} The file was checked with Lean 4.24.0 and Mathlib \texttt{f897ebcf} (the repository's pins)
+by \texttt{lake env lean}, run from the repository root. It is not a module of the default build target, so a plain
+\texttt{lake build} does not re-check it. Two records show that the current file compiles. The review report
+\dirn{LEANEXT/review/REPORT.md} of 4 November 2026 (item~1) records exit code~0 and no messages for the reviewed file,
+which it identifies by its SHA-256 \texttt{afb8542d}\dots{} and its 1148 lines. The re-check
+\dirn{LAYERLEAN/logs/axioms_recheck_20261106/out.txt} of 6 November 2026 records exit status~0 for a file whose first
+1148 lines are byte-identical to \dirn{LAYERLEAN/LayerLemma.lean}, followed by 19 \texttt{\#print axioms} commands;
+its only Lean output is the 19 printed axiom lines. The log \dirn{LAYERLEAN/logs/build.log} (exit code~0, no
+messages) names no file hash; it was committed with the first version of the file (454 lines, SHA-256
+\texttt{804b1d25f79a}\dots, commit \texttt{6429e9a70}) and was not updated by the five later commits that changed the
+file, so we do not use it. Axioms: \dirn{LAYERLEAN/logs/axioms.log} (28 theorems) and the re-check output just named
+(19 theorems) report exactly the axioms \lean{propext}, \lean{Classical.choice} and \lean{Quot.sound} for every
+printed theorem. The review log
+\dirn{LEANEXT/review/axioms.log} prints 59 theorems, namely all theorems of the file that are not \texttt{@[simp]}
+lemmas, among them every theorem of this section except the seven \texttt{@[simp]} lemmas of
+Lemma~\ref{ll:lem:complex}(a)--(b); it reports the same three axioms for each printed theorem, except that
+\lean{iterate_mem} depends only on \lean{propext} and \lean{Quot.sound}. This log comes from the review whose report is
+named above; the check file from which the axioms were printed is not kept in the record, so the identification of
+the printed theorems with those of this file rests on the report. The seven \texttt{@[simp]} lemmas are printed in
+none of the three logs; their proofs (lines 236--255) are
+\texttt{rfl}, extensionality (\lean{Complex.ext}, \texttt{funext}) and, for \lean{toC_crot}, the lemma
+\lean{toC_ofC}. The file contains no \texttt{sorry}, \texttt{admit}, \texttt{axiom} or \texttt{native\_decide}, and its
+only \texttt{decide} (line 1125) proves that $6$ is even and is evaluated by the kernel. So no statement of this
+section depends on \lean{sorryAx}, on \lean{Lean.ofReduceBool} (\texttt{native\_decide}) or on an axiom of the
+project. Every lemma and theorem below whose head names a Lean declaration is \emph{Lean-checked} in this sense
+(Theorems~\ref{ll:thm:sixfold} and~\ref{ll:thm:sevenfold} as implications from their hypotheses); for
+Lemma~\ref{ll:lem:rot}(b) the Lean declaration is the definition \lean{rotAff}, whose affine-map property is a proof
+obligation discharged inside the definition and checked with it. The definitions whose heads name a Lean declaration restate Lean
+definitions, which the same build type-checks; being definitions, they are not Lean-checked claims. In particular,
+Definition~\ref{ll:def:66-70} only introduces the propositions \lean{Sixfold66} and \lean{Sevenfold70}, which are not
+proved (Remark~\ref{ll:rem:hyp}). The proofs below are \emph{written proofs (not refereed)}; for each statement that
+corresponds to a Lean declaration we say whether its proof follows the Lean proof.
+
+\paragraph{Dependencies.} From the foundations section we use Definitions~\ref{fd:def:point}, \ref{fd:def:orient},
+\ref{fd:def:gp}, \ref{fd:def:cp}, \ref{fd:def:ngon}, \ref{fd:def:inv}, \ref{fd:def:rot}, Lemmas~\ref{fd:lem:cp-hull},
+\ref{fd:lem:mono}, \ref{fd:lem:collinear} and~\ref{fd:lem:affine-cp}, and the lemma of that section titled ``Convex
+hulls'' (in (C3) below). Theorem~\ref{ll:thm:sixfold} uses Lemma~\ref{lg:lem:centre} (exclusion of the centre for
+even $m$); for the case needed we also include the short argument. Nothing else from other sections is used.
+
+\subsection{Conventions}
+
+Points are elements of $\R^2$ (Lean \lean{Point}, defined as \texttt{Fin 2} $\to\R$), written $p=(p_0,p_1)$. We use
+the following conventions and standard facts.
+\begin{enumerate}[label=(C\arabic*)]
+\item \emph{Finite sets.} A finite set of points is a Lean \texttt{Finset Point}; $\card S$ is its cardinality;
+  $S\setminus\{c\}$ is Lean \texttt{S.erase c}; ``$S$ is nonempty'' is Lean \lean{S.Nonempty}.
+\item \emph{Iterates and minimal period.} For a set $\alpha$ and $f:\alpha\to\alpha$ put $f^0=\mathrm{id}$ and
+  $f^{i+1}=f\circ f^i$. Lean's \texttt{f\textasciicircum[i]} (\lean{Nat.iterate}) is defined by the other recursion,
+  $f^{i+1}=f^i\circ f$; an easy induction shows that both recursions define the same maps (Mathlib's
+  \lean{Function.iterate_succ'}), and $f^{i+j}=f^i\circ f^j$ (Mathlib's \lean{Function.iterate_add}). The
+  \emph{minimal period}
+  $\operatorname{per}_f(x)$ of $x\in\alpha$ is Mathlib's \texttt{Function.minimalPeriod f x}: the least $n\ge1$ with
+  $f^n(x)=x$ if such an $n$ exists, and $0$ otherwise. Directly from this definition:
+  \begin{itemize}
+  \item[(P1)] $f^{\operatorname{per}_f(x)}(x)=x$ for every $x$ (if no period exists, $f^0(x)=x$);
+  \item[(P2)] if $n\ge1$ and $f^n(x)=x$, then $1\le\operatorname{per}_f(x)\le n$.
+  \end{itemize}
+\item \emph{Convex hulls.} For $A\subseteq\R^2$, $\conv(A)$ is the smallest convex set containing $A$ (Mathlib
+  \lean{convexHull}). It is the set of all convex combinations $\sum_{i=1}^r\lambda_ia_i$ with $r\ge1$, $a_i\in A$,
+  $\lambda_i\ge0$ and $\sum_i\lambda_i=1$. This is part~(b) of the lemma titled ``Convex hulls'' in the foundations
+  section, where it is proved for the whole document (see also R.~T.~Rockafellar, \emph{Convex Analysis}, Princeton
+  1970, Theorem~2.3). Hence: $A\subseteq\conv(A)$; $A\subseteq B$ implies $\conv(A)\subseteq\conv(B)$; if
+  $A\subseteq C$ with $C$ convex
+  then $\conv(A)\subseteq C$, so $\conv(\conv(A))=\conv(A)$; $\conv(\emptyset)=\emptyset$; a convex combination of
+  points of a convex set $C$ lies in $C$. Merging equal points and deleting zero coefficients, every point of
+  $\conv(A)$ is a convex combination of pairwise distinct points of $A$ with positive coefficients and at least one
+  term.
+\item \emph{Extreme points.} A point $x$ is an \emph{extreme point} of $A\subseteq\R^2$ (Mathlib
+  \lean{Set.extremePoints}) if $x\in A$ and, whenever $x=ax_1+bx_2$ with $x_1,x_2\in A$, $a,b>0$ and $a+b=1$,
+  we have $x_1=x$. This is Mathlib's definition at the pinned revision (with $x$ in the open segment between $x_1$ and
+  $x_2$); exchanging the roles of $x_1$ and $x_2$ shows that then also $x_2=x$.
+\item \emph{Affine maps.} A Lean affine map $f$, an element of the type \texttt{Point}~$\to^{\mathrm a}[\R]$~\texttt{Point},
+  consists of a map $f:\R^2\to\R^2$ and a linear map $L$ with $f(v+p)=Lv+f(p)$ for all $v,p$; taking $p=0$,
+$f(v)=Lv+b$ with $b=f(0)$, and conversely every map
+  $p\mapsto Lp+b$ with $L$ linear is of this form. ``$f$ is injective'' refers to the underlying map on all of $\R^2$.
+  If $\sum_i\lambda_i=1$ then $f(\sum_i\lambda_ia_i)=\sum_i\lambda_i(La_i+b)=\sum_i\lambda_if(a_i)$; hence, by (C3),
+  $\conv(f(A))\subseteq f(\conv(A))$ for every $A\subseteq\R^2$ (this inclusion is part of
+  Lemma~\ref{fd:lem:affine-cp}).
+\item \emph{Convex position.} Convex position, general position and \lean{HasConvexNGon} are as in
+  Definitions~\ref{fd:def:cp}, \ref{fd:def:gp} and~\ref{fd:def:ngon}: \lean{HasConvexNGon} $K$ $S$ means that some
+  $T\subseteq S$ with $\card T=K$ is in convex position, and ``$S$ is $K$-free'' means $\neg\,$\lean{HasConvexNGon}
+  $K$ $S$. We use Lemma~\ref{fd:lem:cp-hull} ($S$ is in convex position iff $p\notin\conv(S\setminus\{p\})$ for every
+  $p\in S$) and Lemma~\ref{fd:lem:mono} (monotonicity). In particular the empty set is in convex position, so
+  \lean{HasConvexNGon} $0$ $S$ holds for every $S$.
+\item \emph{Angles.} In Lean the angle $2\pi/m$ is \texttt{2 * Real.pi / m} with $m\in\N$ cast to $\R$; division by
+  $0$ gives $0$. For $t\in\N$ the subtraction $t\mathbin{\dot{-}}1$ is truncated ($0\mathbin{\dot{-}}1=0$).
+\end{enumerate}
+
+\subsection{Orbit segments}
+
+\begin{definition}[orbit segment; \leanref{ErdosSzekeres.LayerLemma.orbitFS}{LAYERLEAN/LayerLemma.lean:48}]
+\label{ll:def:orbit}
+Let $\alpha$ be a set (Lean: a type with decidable equality), $f:\alpha\to\alpha$, $p\in\N$ and $x\in\alpha$. The
+\emph{orbit segment} is the finite set
+\[\operatorname{orb}_p(f,x)=\{f^i(x):\ i\in\N,\ 0\le i<p\}\]
+(Lean \texttt{orbitFS f p x}, the image of $\{0,\dots,p-1\}$ under $i\mapsto f^i(x)$). It is empty for $p=0$.
+\end{definition}
+
+\begin{lemma}[orbit segments; \leanref{ErdosSzekeres.LayerLemma.iterate_mem}{LAYERLEAN/LayerLemma.lean:52},
+\leanref{ErdosSzekeres.LayerLemma.mem_orbitFS_self}{LAYERLEAN/LayerLemma.lean:59},
+\leanref{ErdosSzekeres.LayerLemma.orbitFS_subset}{LAYERLEAN/LayerLemma.lean:62},
+\leanref{ErdosSzekeres.LayerLemma.orbitFS_invariant}{LAYERLEAN/LayerLemma.lean:68},
+\leanref{ErdosSzekeres.LayerLemma.card_orbitFS_of_minimalPeriod}{LAYERLEAN/LayerLemma.lean:80},
+\leanref{ErdosSzekeres.LayerLemma.mem_orbitFS_of_not_disjoint}{LAYERLEAN/LayerLemma.lean:91}]\label{ll:lem:orbit}
+Let $\alpha$ be a set and $f:\alpha\to\alpha$.
+\begin{enumerate}[label=(\alph*)]
+\item (\lean{iterate_mem}) If $S\subseteq\alpha$ is finite, $f(y)\in S$ for every $y\in S$, and $x\in S$, then
+  $f^i(x)\in S$ for every $i\in\N$.
+\item (\lean{mem_orbitFS_self}) If $0<p$, then $x\in\operatorname{orb}_p(f,x)$ for every $x\in\alpha$.
+\item (\lean{orbitFS_subset}) If $S\subseteq\alpha$ is finite, $f(y)\in S$ for every $y\in S$, and $x\in S$, then
+  $\operatorname{orb}_p(f,x)\subseteq S$ for every $p\in\N$.
+\item (\lean{orbitFS_invariant}) If $0<p$ and $f^p(x)=x$, then $f(y)\in\operatorname{orb}_p(f,x)$ for every
+  $y\in\operatorname{orb}_p(f,x)$.
+\item (\lean{card_orbitFS_of_minimalPeriod}) If $\operatorname{per}_f(x)=p$, then
+  $\card{\operatorname{orb}_p(f,x)}=p$.
+\item (\lean{mem_orbitFS_of_not_disjoint}) If $0<p$, $f^p(x)=x$, $f^p(y)=y$ and the sets $\operatorname{orb}_p(f,x)$
+  and $\operatorname{orb}_p(f,y)$ are not disjoint, then $y\in\operatorname{orb}_p(f,x)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+We follow the Lean proofs.
+(a) Induction on $i$: $f^0(x)=x\in S$, and if $f^i(x)\in S$ then $f^{i+1}(x)=f(f^i(x))\in S$.
+(b) Take $i=0<p$: $f^0(x)=x$.
+(c) Every element of $\operatorname{orb}_p(f,x)$ is some $f^i(x)$, which lies in $S$ by (a).
+(d) Let $y=f^i(x)$ with $0\le i<p$; then $f(y)=f^{i+1}(x)$. If $i+1<p$ this lies in $\operatorname{orb}_p(f,x)$.
+Otherwise $i+1=p$ and $f(y)=f^p(x)=x\in\operatorname{orb}_p(f,x)$ by (b).
+(e) If $p=0$, then $\operatorname{orb}_0(f,x)=\emptyset$ has $0$ elements. Let $p\ge1$. It suffices to show that
+$f^0(x),\dots,f^{p-1}(x)$ are pairwise distinct. By (P1), $f^p(x)=x$. Suppose $f^i(x)=f^j(x)$ with $0\le i<j\le p-1$.
+Applying $f^{p-j}$ gives
+\[f^{p-j+i}(x)=f^{p-j}(f^i(x))=f^{p-j}(f^j(x))=f^p(x)=x .\]
+Since $j\le p-1$ and $i\le j-1$, we have $1\le p-j+i\le p-1$, so (P2) gives $\operatorname{per}_f(x)\le p-j+i<p$, a
+contradiction.
+(f) Let $z$ lie in both sets, say $z=f^j(y)$ with $0\le j<p$. Then $f^{p-j}(z)=f^{p}(y)=y$. By (d), $f$ maps the finite
+set $\operatorname{orb}_p(f,x)$ into itself, and $z\in\operatorname{orb}_p(f,x)$; so by (a), applied to this set,
+$y=f^{p-j}(z)\in\operatorname{orb}_p(f,x)$.
+\end{proof}
+
+\begin{definition}[invariance; \leanref{ErdosSzekeres.LayerLemma.Invariant}{LAYERLEAN/LayerLemma.lean:105}]
+\label{ll:def:inv}
+For a map $f:\R^2\to\R^2$ and a finite set $S\subseteq\R^2$, $S$ is \emph{$f$-invariant} (Lean
+\texttt{Invariant f S}) if $f(p)\in S$ for every $p\in S$, that is, $f$ maps $S$ \emph{into} itself. This is the notion of
+Definition~\ref{fd:def:inv}. (For injective $f$ it implies $f(S)=S$; see the proof of Lemma~\ref{ll:lem:map-hv}.)
+\end{definition}
+
+\subsection{Hull vertices}
+
+\begin{definition}[hull vertices; \leanref{ErdosSzekeres.LayerLemma.hullVerts}{LAYERLEAN/LayerLemma.lean:111}]
+\label{ll:def:hv}
+For a finite set $S\subseteq\R^2$ let
+\[\hv(S)=\{x\in S:\ x\notin\conv(S\setminus\{x\})\}\]
+(Lean \texttt{hullVerts S}, the subset of $S$ cut out by this condition). Its elements are the \emph{hull vertices} of
+$S$.
+\end{definition}
+
+\begin{lemma}[membership; \leanref{ErdosSzekeres.LayerLemma.mem_hullVerts}{LAYERLEAN/LayerLemma.lean:114},
+\leanref{ErdosSzekeres.LayerLemma.hullVerts_subset}{LAYERLEAN/LayerLemma.lean:118}]\label{ll:lem:hv-basic}
+Let $S$ be a finite set of points. (a) For every point $x$: $x\in\hv(S)$ if and only if $x\in S$ and
+$x\notin\conv(S\setminus\{x\})$. (b) $\hv(S)\subseteq S$.
+\end{lemma}
+
+\begin{proof}
+As in Lean: (a) is Definition~\ref{ll:def:hv}, and (b) follows from (a).
+\end{proof}
+
+\begin{lemma}[hull vertices; \leanref{ErdosSzekeres.LayerLemma.convexPosition_hullVerts}{LAYERLEAN/LayerLemma.lean:121},
+\leanref{ErdosSzekeres.LayerLemma.extreme_mem_hullVerts}{LAYERLEAN/LayerLemma.lean:130},
+\leanref{ErdosSzekeres.LayerLemma.subset_convexHull_hullVerts}{LAYERLEAN/LayerLemma.lean:146},
+\leanref{ErdosSzekeres.LayerLemma.hullVerts_nonempty}{LAYERLEAN/LayerLemma.lean:139}]\label{ll:lem:hv}
+Let $S$ be a finite set of points.
+\begin{enumerate}[label=(\alph*)]
+\item (\lean{convexPosition_hullVerts}) $\hv(S)$ is in convex position.
+\item (\lean{extreme_mem_hullVerts}) Every extreme point of $\conv(S)$ belongs to $\hv(S)$.
+\item (\lean{subset_convexHull_hullVerts}) $S\subseteq\conv(\hv(S))$.
+\item (\lean{hullVerts_nonempty}) If $S$ is nonempty, then $\hv(S)$ is nonempty.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The proof of (a) follows Lean. For (b)--(d) we give elementary proofs, different from the Lean proofs. Lean proves (b)
+with two Mathlib facts: the extreme points of $\conv(S)$ lie in $S$, and ``$x$ is an extreme point of a convex set $C$
+iff $x\in C$ and $C\setminus\{x\}$ is convex''. It deduces (d) from (b) and the existence of an extreme point of the
+nonempty compact set $\conv(S)$ (Mathlib's Krein--Milman lemma), and (c) from (b) and the Krein--Milman theorem
+($\conv(S)$ is the closure of the convex hull of its extreme points).
+
+(a) By Lemma~\ref{fd:lem:cp-hull} we must show $x\notin\conv(\hv(S)\setminus\{x\})$ for every $x\in\hv(S)$. Since
+$\hv(S)\setminus\{x\}\subseteq S\setminus\{x\}$, (C3) gives $\conv(\hv(S)\setminus\{x\})\subseteq\conv(S\setminus\{x\})$,
+and $x\notin\conv(S\setminus\{x\})$ because $x\in\hv(S)$.
+
+(b) Let $x$ be an extreme point of $C=\conv(S)$. We first show:
+\begin{itemize}
+\item[$(*)$] if $x=\sum_{i=1}^r\lambda_is_i$ with $r\ge1$, $s_i\in C$, $\lambda_i>0$ and $\sum_i\lambda_i=1$, then
+  $s_i=x$ for every $i$.
+\end{itemize}
+If $r=1$ then $\lambda_1=1$ and $s_1=x$. Let $r\ge2$ and fix $j$. Then $0<\lambda_j<1$, since some other coefficient is
+positive. The point $y_j=\sum_{i\ne j}\frac{\lambda_i}{1-\lambda_j}s_i$ is a convex combination of points of the convex
+set $C$, so $y_j\in C$ by (C3), and $x=\lambda_js_j+(1-\lambda_j)y_j$. By (C4), applied with $x_1=s_j$, $x_2=y_j$,
+$a=\lambda_j$, $b=1-\lambda_j$, we get $s_j=x$. This proves $(*)$.
+
+Since $x\in C$, by (C3) $x=\sum_{i=1}^r\lambda_is_i$ with $r\ge1$, $s_i\in S\subseteq C$, $\lambda_i>0$,
+$\sum_i\lambda_i=1$; by $(*)$, $x=s_1\in S$. Suppose $x\in\conv(S\setminus\{x\})$. Then $x=\sum_{i=1}^r\mu_it_i$ with
+$r\ge1$, $t_i\in S\setminus\{x\}\subseteq C$, $\mu_i>0$, $\sum_i\mu_i=1$, and $(*)$ gives $t_1=x$, contradicting
+$t_1\ne x$. Hence $x\notin\conv(S\setminus\{x\})$, and $x\in\hv(S)$.
+
+(c) Strong induction on $\card S$. If $\hv(S)=S$, then $S\subseteq\conv(S)=\conv(\hv(S))$; this covers $S=\emptyset$.
+Otherwise choose $y\in S\setminus\hv(S)$; then $y\in\conv(S')$ where $S'=S\setminus\{y\}$. As $\card{S'}<\card S$, the
+induction hypothesis gives $S'\subseteq\conv(\hv(S'))$.
+
+We claim $\hv(S')\subseteq\hv(S)$. Let $z\in\hv(S')$, so $z\in S'$ (in particular $z\in S$ and $z\ne y$) and
+$z\notin\conv(A)$, where $A=S'\setminus\{z\}=S\setminus\{y,z\}$. Suppose $z\in\conv(S\setminus\{z\})$. Since
+$S\setminus\{z\}=A\cup\{y\}$ and $S'=A\cup\{z\}$, (C3) and merging of equal points give
+\[z=\sum_{a\in A}\alpha_aa+\lambda y,\qquad y=\sum_{a\in A}\beta_aa+\mu z,\]
+with all $\alpha_a,\beta_a,\lambda,\mu\ge0$, $\sum_a\alpha_a+\lambda=1$ and $\sum_a\beta_a+\mu=1$ (the second
+representation exists because $y\in\conv(S')$). Substituting the second into the first,
+\[(1-\lambda\mu)\,z=\sum_{a\in A}(\alpha_a+\lambda\beta_a)\,a .\]
+If $\lambda\mu<1$, the coefficients $(\alpha_a+\lambda\beta_a)/(1-\lambda\mu)$ are nonnegative with sum
+$\bigl((1-\lambda)+\lambda(1-\mu)\bigr)/(1-\lambda\mu)=1$, so $z\in\conv(A)$, a contradiction. If $\lambda\mu=1$, then
+$\lambda=\mu=1$ because $\lambda,\mu\in[0,1]$; so all $\alpha_a=0$ and $z=y$, contradicting $z\ne y$. This proves the
+claim.
+
+By the claim and (C3), $S'\subseteq\conv(\hv(S'))\subseteq\conv(\hv(S))$, and then
+$y\in\conv(S')\subseteq\conv(\conv(\hv(S)))=\conv(\hv(S))$. Hence $S=S'\cup\{y\}\subseteq\conv(\hv(S))$.
+
+(d) If $\hv(S)=\emptyset$, then by (c) $S\subseteq\conv(\emptyset)=\emptyset$, so $S$ is empty.
+\end{proof}
+
+\begin{lemma}[affine invariance of hull vertices;
+\leanref{ErdosSzekeres.LayerLemma.map_mem_hullVerts}{LAYERLEAN/LayerLemma.lean:162}]\label{ll:lem:map-hv}
+Let $f$ be an affine map of $\R^2$ (Lean: $f$ of type \texttt{Point}~$\to^{\mathrm a}[\R]$~\texttt{Point}) that is
+injective, and let $S$ be a finite set
+with $f(y)\in S$ for every $y\in S$. If $x\in\hv(S)$, then $f(x)\in\hv(S)$.
+\end{lemma}
+
+\begin{proof}
+We follow the Lean proof. (1) $f(S)=S$: as $f$ is injective, $\card{f(S)}=\card S$, and $f(S)\subseteq S$ with $S$
+finite. (2) $f(x)\in S$, since $x\in S$. (3) Suppose $f(x)\in\conv(S\setminus\{f(x)\})$. Every $y\in S$ with
+$y\ne f(x)$ is, by (1), of the form $y=f(z)$ with $z\in S$, and $z\ne x$ since $y\ne f(x)$; thus
+$S\setminus\{f(x)\}\subseteq f(S\setminus\{x\})$. By (C3) and (C5),
+\[f(x)\in\conv\bigl(f(S\setminus\{x\})\bigr)\subseteq f\bigl(\conv(S\setminus\{x\})\bigr),\]
+so $f(x)=f(u)$ for some $u\in\conv(S\setminus\{x\})$. Injectivity of $f$ on all of $\R^2$ (note that $u$ need not lie
+in $S$) gives $x=u\in\conv(S\setminus\{x\})$, contradicting $x\in\hv(S)$. By Lemma~\ref{ll:lem:hv-basic}(a), (2) and
+(3) give $f(x)\in\hv(S)$.
+\end{proof}
+
+\subsection{The core lemma}
+
+\begin{theorem}[layer lemma, abstract form;
+\leanref{ErdosSzekeres.LayerLemma.hullVerts_eq_orbitFS}{LAYERLEAN/LayerLemma.lean:189}]\label{ll:thm:core}
+Let $f$ be an affine map of $\R^2$ (Lean: $f$ of type \texttt{Point}~$\to^{\mathrm a}[\R]$~\texttt{Point}) that is
+injective, let $S$ be a finite set of
+points, and let $m,K\in\N$ with $0<m$ and $K\le 2m$. Assume:
+\begin{enumerate}[label=(\roman*)]
+\item $f(y)\in S$ for every $y\in S$;
+\item $\operatorname{per}_f(y)=m$ for every $y\in S$;
+\item $S$ is $K$-free, i.e.\ $\neg\,$\lean{HasConvexNGon} $K$ $S$.
+\end{enumerate}
+Then for every $x\in\hv(S)$,
+\[\hv(S)=\operatorname{orb}_m(f,x)=\{f^i(x):\ 0\le i<m\}.\]
+\end{theorem}
+
+\begin{proof}
+We follow the Lean proof. Write $H=\hv(S)$, a finite set with $H\subseteq S$ (Lemma~\ref{ll:lem:hv-basic}).
+
+Step 1. $f(y)\in H$ for every $y\in H$, by Lemma~\ref{ll:lem:map-hv} and (i).
+
+Step 2. $f^m(y)=y$ for every $y\in S$, by (ii) and (P1).
+
+Step 3. $\operatorname{orb}_m(f,x)\subseteq H$, by Lemma~\ref{ll:lem:orbit}(c) applied to the finite set $H$
+(Step~1) and $x\in H$.
+
+Step 4. $H\subseteq\operatorname{orb}_m(f,x)$. Let $y\in H$ and suppose $y\notin\operatorname{orb}_m(f,x)$. Both $x$ and
+$y$ lie in $S$, so $f^m(x)=x$ and $f^m(y)=y$ by Step~2. If $\operatorname{orb}_m(f,x)$ and $\operatorname{orb}_m(f,y)$
+were not disjoint, Lemma~\ref{ll:lem:orbit}(f) (with $p=m>0$) would give $y\in\operatorname{orb}_m(f,x)$; so they are
+disjoint. Both are contained in $H$, by Step~1 and Lemma~\ref{ll:lem:orbit}(c), and each has exactly $m$ elements by
+(ii) and Lemma~\ref{ll:lem:orbit}(e). Hence
+\[\card H\ \ge\ \card{\operatorname{orb}_m(f,x)\cup\operatorname{orb}_m(f,y)}=2m\ \ge\ K .\]
+Choose $T\subseteq H$ with $\card T=K$. By Lemma~\ref{ll:lem:hv}(a) and Lemma~\ref{fd:lem:mono}(a), $T$ is in convex
+position, and $T\subseteq H\subseteq S$. So \lean{HasConvexNGon} $K$ $S$ holds, contradicting (iii). Hence
+$y\in\operatorname{orb}_m(f,x)$.
+
+Steps 3 and 4 give $H=\operatorname{orb}_m(f,x)$.
+\end{proof}
+
+\begin{lemma}[invariance of $S\setminus\hv(S)$;
+\leanref{ErdosSzekeres.LayerLemma.invariant_sdiff_hullVerts}{LAYERLEAN/LayerLemma.lean:217}]\label{ll:lem:inv-sdiff}
+Let $f$ be an affine map of $\R^2$ that is injective, $S$ a finite set and $m\in\N$ with $0<m$. Assume $f(y)\in S$ for
+every $y\in S$ and $f^m(y)=y$ for every $y\in S$. Then $f(y)\in S\setminus\hv(S)$ for every $y\in S\setminus\hv(S)$.
+\end{lemma}
+
+\begin{proof}
+We follow the Lean proof. Let $y\in S\setminus\hv(S)$. Then $f(y)\in S$. Suppose $f(y)\in\hv(S)$. By
+Lemma~\ref{ll:lem:map-hv}, $f$ maps the finite set $\hv(S)$ into itself, so Lemma~\ref{ll:lem:orbit}(a) gives
+$f^{m-1}(f(y))\in\hv(S)$. As $m\ge1$, $f^{m-1}(f(y))=f^m(y)=y$, so $y\in\hv(S)$, a contradiction. Hence
+$f(y)\in S\setminus\hv(S)$.
+\end{proof}
+
+\begin{remark}[on Theorem~\ref{ll:thm:core}]\label{ll:rem:core}
+(1) The proof uses only two geometric facts: an injective affine map that sends $S$ into itself sends $\hv(S)$ into
+itself, hence permutes the finite set $\hv(S)$ (Lemma~\ref{ll:lem:map-hv}), and the hull vertices are in convex
+position (Lemma~\ref{ll:lem:hv}(a)). No general
+position is assumed, and $f$ need not be a rotation.
+(2) If $K=0$, hypothesis (iii) is false by (C6), and the theorem is vacuous; if $\hv(S)=\emptyset$, which by
+Lemma~\ref{ll:lem:hv}(d) happens only for $S=\emptyset$, there is no $x$.
+(3) Under the hypotheses of the theorem, if $S\ne\emptyset$ then $\hv(S)$ contains some $x$ (Lemma~\ref{ll:lem:hv}(d)),
+and the conclusion with Lemma~\ref{ll:lem:orbit}(e) and (ii) gives $\card{\hv(S)}=m$.
+\end{remark}
+
+\subsection{Rotations}
+
+\begin{definition}[complex coordinates; \leanref{ErdosSzekeres.LayerLemma.toC}{LAYERLEAN/LayerLemma.lean:231},
+\leanref{ErdosSzekeres.LayerLemma.ofC}{LAYERLEAN/LayerLemma.lean:234},
+\leanref{ErdosSzekeres.LayerLemma.crot}{LAYERLEAN/LayerLemma.lean:252}]\label{ll:def:complex}
+For $p\in\R^2$ let $\operatorname{toC}(p)=p_0+ip_1\in\C$; for $z\in\C$ let $\operatorname{ofC}(z)=(\operatorname{Re}z,
+\operatorname{Im}z)\in\R^2$; for $\gamma,w\in\C$ and $p\in\R^2$ let
+\[\operatorname{crot}_{\gamma,w}(p)=\operatorname{ofC}\bigl(\gamma+w\,(\operatorname{toC}(p)-\gamma)\bigr)\]
+(Lean \texttt{crot c w p}, where $c\in\C$ plays the role of $\gamma$).
+\end{definition}
+
+\begin{lemma}[complex coordinates; \leanref{ErdosSzekeres.LayerLemma.toC_re}{LAYERLEAN/LayerLemma.lean:236},
+\leanref{ErdosSzekeres.LayerLemma.toC_im}{LAYERLEAN/LayerLemma.lean:237},
+\leanref{ErdosSzekeres.LayerLemma.ofC_zero}{LAYERLEAN/LayerLemma.lean:238},
+\leanref{ErdosSzekeres.LayerLemma.ofC_one}{LAYERLEAN/LayerLemma.lean:239},
+\leanref{ErdosSzekeres.LayerLemma.toC_ofC}{LAYERLEAN/LayerLemma.lean:241},
+\leanref{ErdosSzekeres.LayerLemma.ofC_toC}{LAYERLEAN/LayerLemma.lean:244},
+\leanref{ErdosSzekeres.LayerLemma.toC_injective}{LAYERLEAN/LayerLemma.lean:248},
+\leanref{ErdosSzekeres.LayerLemma.toC_crot}{LAYERLEAN/LayerLemma.lean:254},
+\leanref{ErdosSzekeres.LayerLemma.crot_one}{LAYERLEAN/LayerLemma.lean:257},
+\leanref{ErdosSzekeres.LayerLemma.crot_comp}{LAYERLEAN/LayerLemma.lean:262},
+\leanref{ErdosSzekeres.LayerLemma.crot_iterate}{LAYERLEAN/LayerLemma.lean:267},
+\leanref{ErdosSzekeres.LayerLemma.crot_eq_self_iff}{LAYERLEAN/LayerLemma.lean:273},
+\leanref{ErdosSzekeres.LayerLemma.crot_injective}{LAYERLEAN/LayerLemma.lean:287}]\label{ll:lem:complex}
+For all $p\in\R^2$, $z,\gamma,w,v\in\C$ and $k\in\N$:
+\begin{enumerate}[label=(\alph*)]
+\item (\lean{toC_re}, \lean{toC_im}, \lean{ofC_zero}, \lean{ofC_one}, \lean{toC_ofC}, \lean{ofC_toC},
+  \lean{toC_injective}) $\operatorname{Re}\operatorname{toC}(p)=p_0$, $\operatorname{Im}\operatorname{toC}(p)=p_1$,
+  $\operatorname{ofC}(z)_0=\operatorname{Re}z$, $\operatorname{ofC}(z)_1=\operatorname{Im}z$,
+  $\operatorname{toC}(\operatorname{ofC}(z))=z$ and $\operatorname{ofC}(\operatorname{toC}(p))=p$; in particular
+  $\operatorname{toC}$ is injective;
+\item (\lean{toC_crot}) $\operatorname{toC}(\operatorname{crot}_{\gamma,w}(p))=\gamma+w(\operatorname{toC}(p)-\gamma)$;
+\item (\lean{crot_one}) $\operatorname{crot}_{\gamma,1}=\mathrm{id}$;
+\item (\lean{crot_comp}) $\operatorname{crot}_{\gamma,w}(\operatorname{crot}_{\gamma,v}(p))
+  =\operatorname{crot}_{\gamma,wv}(p)$;
+\item (\lean{crot_iterate}) $(\operatorname{crot}_{\gamma,w})^k=\operatorname{crot}_{\gamma,w^k}$;
+\item (\lean{crot_eq_self_iff}) if $w\ne1$, then $\operatorname{crot}_{\gamma,w}(p)=p$ if and only if
+  $\operatorname{toC}(p)=\gamma$;
+\item (\lean{crot_injective}) if $w\ne0$, then $\operatorname{crot}_{\gamma,w}$ is injective.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+We follow the Lean proofs. (a) The four coordinate identities are the definitions; they give
+$\operatorname{toC}(\operatorname{ofC}(z))=\operatorname{Re}z+i\operatorname{Im}z=z$ and
+$\operatorname{ofC}(\operatorname{toC}(p))=(p_0,p_1)=p$, and a map with a left inverse is injective.
+(b) follows from $\operatorname{toC}\circ\operatorname{ofC}=\mathrm{id}$.
+(c) By (b), $\operatorname{toC}(\operatorname{crot}_{\gamma,1}(p))=\gamma+(\operatorname{toC}(p)-\gamma)
+=\operatorname{toC}(p)$; apply injectivity of $\operatorname{toC}$.
+(d) By (b) twice, $\operatorname{toC}$ of the left side is $\gamma+w\bigl((\gamma+v(\operatorname{toC}(p)-\gamma))
+-\gamma\bigr)=\gamma+wv(\operatorname{toC}(p)-\gamma)$, which is $\operatorname{toC}$ of the right side; apply
+injectivity.
+(e) Induction on $k$: $(\operatorname{crot}_{\gamma,w})^0=\mathrm{id}=\operatorname{crot}_{\gamma,1}$ by (c), and
+$(\operatorname{crot}_{\gamma,w})^{k+1}(p)=\operatorname{crot}_{\gamma,w}(\operatorname{crot}_{\gamma,w^k}(p))
+=\operatorname{crot}_{\gamma,w\,w^k}(p)$ by (d).
+(f) Write $u=\operatorname{toC}(p)$. By (a) and (b), $\operatorname{crot}_{\gamma,w}(p)=p$ iff $\gamma+w(u-\gamma)=u$,
+i.e.\ iff $(w-1)(u-\gamma)=0$, i.e.\ (as $w\ne1$ and $\C$ is a field) iff $u=\gamma$.
+(g) If $\operatorname{crot}_{\gamma,w}(p)=\operatorname{crot}_{\gamma,w}(q)$, then by (b)
+$w(\operatorname{toC}(p)-\operatorname{toC}(q))=0$, so $\operatorname{toC}(p)=\operatorname{toC}(q)$ as $w\ne0$, and
+$p=q$ by (a).
+\end{proof}
+
+\begin{definition}[rotation about a point; \leanref{ErdosSzekeres.LayerLemma.rotAbout}{LAYERLEAN/LayerLemma.lean:298}]
+\label{ll:def:rot}
+For $c\in\R^2$ and $\theta\in\R$ let $\rho_{c,\theta}:\R^2\to\R^2$ (Lean \texttt{rotAbout c}~$\theta$) be
+\[\rho_{c,\theta}(p)=\bigl(c_0+\cos\theta\,(p_0-c_0)-\sin\theta\,(p_1-c_1),\ \
+c_1+\sin\theta\,(p_0-c_0)+\cos\theta\,(p_1-c_1)\bigr).\]
+This is the map of Definition~\ref{fd:def:rot}, the counterclockwise rotation by $\theta$ about $c$. For $m\in\N$ the
+map $\rho_{c,2\pi/m}$ is Lean's \texttt{rotAbout c (2 * Real.pi / m)}, with the convention (C7) on the angle.
+\end{definition}
+
+\begin{lemma}[rotations; \leanref{ErdosSzekeres.LayerLemma.rotAbout_eq_crot}{LAYERLEAN/LayerLemma.lean:302},
+\leanref{ErdosSzekeres.LayerLemma.rotAff}{LAYERLEAN/LayerLemma.lean:311},
+\leanref{ErdosSzekeres.LayerLemma.rotAbout_injective}{LAYERLEAN/LayerLemma.lean:319},
+\leanref{ErdosSzekeres.LayerLemma.rotAbout_iterate}{LAYERLEAN/LayerLemma.lean:465}]\label{ll:lem:rot}
+Let $c\in\R^2$, $\theta,\alpha\in\R$ and $j\in\N$.
+\begin{enumerate}[label=(\alph*)]
+\item (\lean{rotAbout_eq_crot}) $\rho_{c,\theta}=\operatorname{crot}_{\operatorname{toC}(c),\,e^{i\theta}}$.
+\item (\lean{rotAff}) For all $p,v\in\R^2$, $\rho_{c,\theta}(v+p)=A_\theta v+\rho_{c,\theta}(p)$, where $A_\theta$ is the
+  linear map with matrix $\begin{pmatrix}\cos\theta&-\sin\theta\\ \sin\theta&\cos\theta\end{pmatrix}$ acting on column
+  vectors. So $\rho_{c,\theta}$ is an affine map with linear part $A_\theta$; Lean's \texttt{rotAff c}~$\theta$ is this
+  affine map, and its underlying map is $\rho_{c,\theta}$.
+\item (\lean{rotAbout_injective}) $\rho_{c,\theta}$ is injective.
+\item (\lean{rotAbout_iterate}) $(\rho_{c,\alpha})^j=\rho_{c,j\alpha}$ (with $j$ cast to $\R$).
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+We follow the Lean proofs.
+(a) Let $u=\operatorname{toC}(p)=p_0+ip_1$, $\gamma=\operatorname{toC}(c)=c_0+ic_1$ and
+$e^{i\theta}=\cos\theta+i\sin\theta$. Then
+\[\gamma+e^{i\theta}(u-\gamma)=\bigl(c_0+\cos\theta(p_0-c_0)-\sin\theta(p_1-c_1)\bigr)
++i\bigl(c_1+\sin\theta(p_0-c_0)+\cos\theta(p_1-c_1)\bigr),\]
+whose real and imaginary parts are the coordinates of $\rho_{c,\theta}(p)$. Applying $\operatorname{ofC}$
+(Lemma~\ref{ll:lem:complex}(a)) gives $\operatorname{crot}_{\gamma,e^{i\theta}}(p)=\rho_{c,\theta}(p)$.
+(b) The formula of Definition~\ref{ll:def:rot} reads $\rho_{c,\theta}(p)=A_\theta(p-c)+c$. Hence
+$\rho_{c,\theta}(v+p)=A_\theta(v+p-c)+c=A_\theta v+\rho_{c,\theta}(p)$ by linearity of $A_\theta$.
+(c) By (a), $\rho_{c,\theta}=\operatorname{crot}_{\gamma,e^{i\theta}}$ with $e^{i\theta}\ne0$; apply
+Lemma~\ref{ll:lem:complex}(g).
+(d) By (a) and Lemma~\ref{ll:lem:complex}(e), $(\rho_{c,\alpha})^j=\operatorname{crot}_{\gamma,(e^{i\alpha})^j}$, and
+$(e^{i\alpha})^j=e^{ij\alpha}$; by (a) again this is $\rho_{c,j\alpha}$.
+\end{proof}
+
+\begin{lemma}[invariance of $S\setminus\{c\}$;
+\leanref{ErdosSzekeres.LayerLemma.invariant_erase_centre}{LAYERLEAN/LayerLemma.lean:325}]\label{ll:lem:erase}
+Let $S$ be a finite set, $c$ a point and $\theta\in\R$. If $S$ is $\rho_{c,\theta}$-invariant, then $S\setminus\{c\}$
+is $\rho_{c,\theta}$-invariant.
+\end{lemma}
+
+\begin{proof}
+We follow the Lean proof. Write $\rho=\rho_{c,\theta}$. Putting $p=c$ in Definition~\ref{ll:def:rot} gives $\rho(c)=c$.
+Let $p\in S\setminus\{c\}$. Then $\rho(p)\in S$. If $\rho(p)=c=\rho(c)$, then $p=c$ by Lemma~\ref{ll:lem:rot}(c), which
+is false. Hence $\rho(p)\in S\setminus\{c\}$.
+\end{proof}
+
+\begin{lemma}[exact period of the rotation;
+\leanref{ErdosSzekeres.LayerLemma.minimalPeriod_rotAbout}{LAYERLEAN/LayerLemma.lean:336}]\label{ll:lem:minperiod}
+Let $c$ be a point, $m\in\N$ with $0<m$, and $y$ a point with $y\ne c$. Then
+$\operatorname{per}_{\rho}(y)=m$ for $\rho=\rho_{c,2\pi/m}$.
+\end{lemma}
+
+\begin{proof}
+We follow the Lean proof. Let $\gamma=\operatorname{toC}(c)$ and $\omega=e^{2\pi i/m}$, where $2\pi/m$ is the real
+number of (C7). By Lemma~\ref{ll:lem:rot}(a), $\rho=\operatorname{crot}_{\gamma,\omega}$, and by
+Lemma~\ref{ll:lem:complex}(e), $\rho^k=\operatorname{crot}_{\gamma,\omega^k}$ for $k\in\N$. We have
+$\omega^k=e^{2\pi ik/m}=\cos(2\pi k/m)+i\sin(2\pi k/m)$. Hence $\omega^m=\cos2\pi+i\sin2\pi=1$, and for $0<k<m$ we have
+$0<2\pi k/m<2\pi$, so $\cos(2\pi k/m)<1$ and $\omega^k\ne1$. (That is, $\omega$ is a primitive $m$-th root of unity;
+Lean uses Mathlib's \lean{Complex.isPrimitiveRoot_exp}.)
+
+By Lemma~\ref{ll:lem:complex}(e) and~(c),
+$\rho^m=\operatorname{crot}_{\gamma,\omega^m}=\operatorname{crot}_{\gamma,1}=\mathrm{id}$, so $\rho^m(y)=y$ with $m\ge1$, and
+(P2) gives $1\le q\le m$ for $q=\operatorname{per}_\rho(y)$. Suppose $q<m$. By (P1), $\operatorname{crot}_{\gamma,
+\omega^q}(y)=\rho^q(y)=y$, where $\omega^q\ne1$ because $0<q<m$. Lemma~\ref{ll:lem:complex}(f) gives
+$\operatorname{toC}(y)=\gamma=\operatorname{toC}(c)$, hence $y=c$ by Lemma~\ref{ll:lem:complex}(a), a contradiction.
+So $q=m$.
+\end{proof}
+
+\begin{theorem}[layer lemma, rotations;
+\leanref{ErdosSzekeres.LayerLemma.hullVerts_eq_orbitFS_rotAbout}{LAYERLEAN/LayerLemma.lean:364}]\label{ll:thm:core-rot}
+Let $m,K\in\N$ with $0<m$ and $K\le 2m$, let $S$ be a finite set and $c$ a point with $c\notin S$. Assume that $S$ is
+$\rho$-invariant for $\rho=\rho_{c,2\pi/m}$ and that $S$ is $K$-free. Then for every $x\in\hv(S)$,
+\[\hv(S)=\operatorname{orb}_m(\rho,x)=\{\rho^i(x):\ 0\le i<m\}.\]
+\end{theorem}
+
+\begin{proof}
+As in Lean, apply Theorem~\ref{ll:thm:core} to the affine map $f=\rho$ (Lemma~\ref{ll:lem:rot}(b); Lean's
+\texttt{rotAff c (2 * Real.pi / m)}, whose underlying map is $\rho$), which is injective by Lemma~\ref{ll:lem:rot}(c).
+Its hypotheses hold: $0<m$ and $K\le2m$; (i) is the invariance of $S$; for (ii), every $y\in S$ satisfies $y\ne c$
+because $c\notin S$, so $\operatorname{per}_\rho(y)=m$ by Lemma~\ref{ll:lem:minperiod}; (iii) is the $K$-freeness of
+$S$.
+\end{proof}
+
+\subsection{Peeling the layers}
+
+\begin{definition}[peeling; \leanref{ErdosSzekeres.LayerLemma.peel}{LAYERLEAN/LayerLemma.lean:374}]\label{ll:def:peel}
+For a finite set $S$ define finite sets $\peel(S,n)$, $n\in\N$, by
+\[\peel(S,0)=S,\qquad \peel(S,n+1)=\peel(S,n)\setminus\hv(\peel(S,n)).\]
+So $\peel(S,n)$ is $S$ with its $n$ outermost convex layers removed, and $\hv(\peel(S,n))$ is the $n$-th convex layer
+of $S$ (counting from $0$).
+\end{definition}
+
+\begin{lemma}[peeling, basic facts; \leanref{ErdosSzekeres.LayerLemma.peel_succ}{LAYERLEAN/LayerLemma.lean:378},
+\leanref{ErdosSzekeres.LayerLemma.peel_subset}{LAYERLEAN/LayerLemma.lean:381}]\label{ll:lem:peel-basic}
+Let $S$ be a finite set. (a) $\peel(S,n+1)=\peel(S,n)\setminus\hv(\peel(S,n))$ for every $n\in\N$. (b)
+$\peel(S,n)\subseteq S$ for every $n\in\N$.
+\end{lemma}
+
+\begin{proof}
+As in Lean: (a) is the definition. (b) By induction: $\peel(S,0)=S$, and
+$\peel(S,n+1)\subseteq\peel(S,n)\subseteq S$.
+\end{proof}
+
+\begin{lemma}[peeling is antitone; \leanref{ErdosSzekeres.LayerLemma.peel_antitone}{LAYERLEAN/LayerLemma.lean:460}]
+\label{ll:lem:antitone}
+Let $S$ be a finite set and $n,n'\in\N$ with $n\le n'$. Then $\peel(S,n')\subseteq\peel(S,n)$.
+\end{lemma}
+
+\begin{proof}
+Induction on $n'\ge n$, as in Lean: for $n'=n$ there is nothing to prove, and
+$\peel(S,n'+1)\subseteq\peel(S,n')\subseteq\peel(S,n)$ by Lemma~\ref{ll:lem:peel-basic}(a).
+\end{proof}
+
+\begin{lemma}[the peels are invariant; \leanref{ErdosSzekeres.LayerLemma.invariant_peel}{LAYERLEAN/LayerLemma.lean:386}]
+\label{ll:lem:inv-peel}
+Let $m\in\N$ with $0<m$, let $S$ be a finite set and $c$ a point with $c\notin S$, and assume that $S$ is
+$\rho$-invariant for $\rho=\rho_{c,2\pi/m}$. Then $\peel(S,n)$ is $\rho$-invariant for every $n\in\N$.
+\end{lemma}
+
+\begin{proof}
+Induction on $n$, as in Lean. For $n=0$ this is the hypothesis. Assume $\peel(S,n)$ is $\rho$-invariant. Every
+$y\in\peel(S,n)$ lies in $S$ (Lemma~\ref{ll:lem:peel-basic}(b)), so $y\ne c$, so $\operatorname{per}_\rho(y)=m$ by
+Lemma~\ref{ll:lem:minperiod} and $\rho^m(y)=y$ by (P1). Lemma~\ref{ll:lem:inv-sdiff}, applied to the finite set
+$\peel(S,n)$ and the injective affine map $\rho$ (Lemma~\ref{ll:lem:rot}(b),(c)), shows that $\rho$ maps
+$\peel(S,n)\setminus\hv(\peel(S,n))=\peel(S,n+1)$ into itself.
+\end{proof}
+
+\begin{theorem}[every layer is one orbit;
+\leanref{ErdosSzekeres.LayerLemma.layers_are_orbits}{LAYERLEAN/LayerLemma.lean:402}]\label{ll:thm:layers}
+Let $m,K\in\N$ with $0<m$ and $K\le2m$, let $S$ be a finite set and $c$ a point with $c\notin S$, and write
+$\rho=\rho_{c,2\pi/m}$. Assume that $S$ is $\rho$-invariant and $K$-free, and let $n\in\N$ be such that $\peel(S,n)$
+is nonempty. Then there is $x\in\peel(S,n)$ such that
+\begin{enumerate}[label=(\alph*)]
+\item $\hv(\peel(S,n))=\operatorname{orb}_m(\rho,x)$;
+\item $\card{\operatorname{orb}_m(\rho,x)}=m$;
+\item $\peel(S,n+1)\subseteq\conv\bigl(\hv(\peel(S,n))\bigr)$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+We follow the Lean proof. By Lemma~\ref{ll:lem:hv}(d) there is $x\in\hv(\peel(S,n))$, and $x\in\peel(S,n)$ by
+Lemma~\ref{ll:lem:hv-basic}(b). The finite set $U=\peel(S,n)$ satisfies the hypotheses of
+Theorem~\ref{ll:thm:core-rot}: $c\notin U$ since $U\subseteq S$ (Lemma~\ref{ll:lem:peel-basic}(b)); $U$ is
+$\rho$-invariant (Lemma~\ref{ll:lem:inv-peel}); and $U$ is $K$-free, since a $K$-element subset of $U$ in convex position
+would be one of $S$ (Lemma~\ref{fd:lem:mono}(c)). Theorem~\ref{ll:thm:core-rot} gives (a). Since $x\in U$, $x\ne c$, so
+$\operatorname{per}_\rho(x)=m$ (Lemma~\ref{ll:lem:minperiod}) and (b) follows from Lemma~\ref{ll:lem:orbit}(e). For (c),
+$\peel(S,n+1)=U\setminus\hv(U)\subseteq U\subseteq\conv(\hv(U))$ by Lemma~\ref{ll:lem:hv}(c).
+\end{proof}
+
+\begin{lemma}[the layers exhaust $S$; \leanref{ErdosSzekeres.LayerLemma.exists_layer}{LAYERLEAN/LayerLemma.lean:419}]
+\label{ll:lem:exists-layer}
+Let $S$ be a finite set of points and $y\in S$. Then there is $n\in\N$ with $y\in\hv(\peel(S,n))$.
+\end{lemma}
+
+\begin{proof}
+We follow the Lean proof. There are no other hypotheses: no symmetry, no general position, no $K$-freeness.
+
+Claim: for every $n$, either $\card{\peel(S,n)}+n\le\card S$ or $\peel(S,n)=\emptyset$. For $n=0$ the first alternative
+holds. Assume the claim for $n$. If $\peel(S,n)=\emptyset$, then $\peel(S,n+1)=\emptyset\setminus\hv(\emptyset)
+=\emptyset$. Otherwise the first alternative holds for $n$; moreover $\hv(\peel(S,n))$ is a nonempty subset of
+$\peel(S,n)$ (Lemmas~\ref{ll:lem:hv}(d) and~\ref{ll:lem:hv-basic}(b)), so
+$\card{\peel(S,n+1)}\le\card{\peel(S,n)}-1$ and $\card{\peel(S,n+1)}+(n+1)\le\card{\peel(S,n)}+n\le\card S$.
+
+Taking $n=\card S+1$: if $y\in\peel(S,\card S+1)$, this set is nonempty, so
+$\card{\peel(S,\card S+1)}+\card S+1\le\card S$, which is impossible. Hence $y\notin\peel(S,k)$ for some $k$; let $k$ be
+the least such index. Since $\peel(S,0)=S\ni y$, $k\ne0$; write $k=n+1$. By minimality $y\in\peel(S,n)$, and
+$y\notin\peel(S,n+1)=\peel(S,n)\setminus\hv(\peel(S,n))$, so $y\in\hv(\peel(S,n))$.
+\end{proof}
+
+\begin{theorem}[each peel removes exactly $m$ points;
+\leanref{ErdosSzekeres.LayerLemma.card_peel}{LAYERLEAN/LayerLemma.lean:1037}]\label{ll:thm:card-peel}
+Let $m,K\in\N$ with $0<m$ and $K\le2m$, let $S$ be a finite set and $c$ a point with $c\notin S$, and assume that $S$ is
+$\rho_{c,2\pi/m}$-invariant and $K$-free. Let $t\in\N$ with $m\cdot(t\mathbin{\dot{-}}1)<\card S$. Then for every
+$n\le t$,
+\[\card{\peel(S,n)}+m\cdot n=\card S .\]
+\end{theorem}
+
+\begin{proof}
+Induction on $n$, as in Lean. For $n=0$: $\card{\peel(S,0)}+0=\card S$. Let $n+1\le t$ and assume
+$\card{\peel(S,n)}+mn=\card S$ (the case $n\le t$ of the induction hypothesis). Then $t\ge1$ and
+$n\le t-1=t\mathbin{\dot{-}}1$, so $mn\le m(t\mathbin{\dot{-}}1)<\card S$ and $\card{\peel(S,n)}=\card S-mn>0$: the set
+$\peel(S,n)$ is nonempty. Theorem~\ref{ll:thm:layers} gives $x$ with $\hv(\peel(S,n))=\operatorname{orb}_m(\rho,x)$ and
+$\card{\operatorname{orb}_m(\rho,x)}=m$, so $\card{\hv(\peel(S,n))}=m$. As $\hv(\peel(S,n))\subseteq\peel(S,n)$, we have
+$\card{\peel(S,n)}\ge m$ and
+\[\card{\peel(S,n+1)}=\card{\peel(S,n)\setminus\hv(\peel(S,n))}=\card{\peel(S,n)}-m .\]
+Hence $\card{\peel(S,n+1)}+m(n+1)=\card{\peel(S,n)}-m+mn+m=\card S$.
+\end{proof}
+
+The next corollary is not a Lean declaration; it assembles the preceding results into the layer decomposition of a set
+of exactly $mt$ points.
+
+\begin{corollary}[layer decomposition; written step]\label{ll:cor:decomp}
+Let $m,K,t\in\N$ with $0<m$ and $K\le2m$, let $S$ be a finite set and $c$ a point with $c\notin S$, and write
+$\rho=\rho_{c,2\pi/m}$. Assume that $S$ is $\rho$-invariant and $K$-free and that $\card S=mt$. For $n<t$ put
+$L_n=\hv(\peel(S,n))$. Then:
+\begin{enumerate}[label=(\alph*)]
+\item for every $n<t$ there is $x_n\in\peel(S,n)$ with $L_n=\operatorname{orb}_m(\rho,x_n)$ and $\card{L_n}=m$;
+\item for every $n\le t$, $\peel(S,n)$ is the disjoint union of $L_n,L_{n+1},\dots,L_{t-1}$; in particular
+  $\peel(S,t)=\emptyset$ and $S=L_0\sqcup\dots\sqcup L_{t-1}$;
+\item $L_j\subseteq\peel(S,i+1)\subseteq\conv(L_i)$ for all $i<j<t$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+If $t=0$, then $S=\emptyset$; (a) and (c) are vacuous and (b) says $\peel(S,0)=\emptyset$. Let $t\ge1$. Then
+$m(t\mathbin{\dot{-}}1)=mt-m<mt=\card S$, so Theorem~\ref{ll:thm:card-peel} gives $\card{\peel(S,n)}=m(t-n)$ for $n\le t$.
+Thus $\peel(S,n)\ne\emptyset$ for $n<t$, and $\peel(S,t)=\emptyset$. (a) is Theorem~\ref{ll:thm:layers}(a),(b). For
+(b): for $n<t$, $L_n\subseteq\peel(S,n)$ and $\peel(S,n+1)=\peel(S,n)\setminus L_n$, so $\peel(S,n)$ is the disjoint
+union of $L_n$ and $\peel(S,n+1)$; downward induction on $n$, starting from $\peel(S,t)=\emptyset$, gives (b). For (c):
+$L_j\subseteq\peel(S,j)\subseteq\peel(S,i+1)$ by Lemma~\ref{ll:lem:antitone} ($i+1\le j$), and
+$\peel(S,i+1)\subseteq\conv(L_i)$ by Theorem~\ref{ll:thm:layers}(c), applicable since $\peel(S,i)\ne\emptyset$.
+\end{proof}
+
+\subsection{Reduction to exactly \texorpdfstring{$mt$}{mt} points and the octagon theorems}
+
+\begin{theorem}[reduction to exactly $mt$ points;
+\leanref{ErdosSzekeres.LayerLemma.convexNGon_of_layers}{LAYERLEAN/LayerLemma.lean:1066}]\label{ll:thm:reduction}
+Let $m,K,t\in\N$ with $0<m$ and $K\le 2m$, and assume the premise
+\begin{itemize}
+\item[(H)] for every finite set $T$ and every point $c'$: if $T$ is in general position, $c'\notin T$, $T$ is
+  $\rho_{c',2\pi/m}$-invariant and $\card T=m\cdot t$, then \lean{HasConvexNGon} $K$ $T$.
+\end{itemize}
+Then for every finite set $S$ and every point $c$: if $S$ is in general position, $S$ is $\rho_{c,2\pi/m}$-invariant,
+and $m\cdot(t\mathbin{\dot{-}}1)<\card{S\setminus\{c\}}$, then \lean{HasConvexNGon} $K$ $S$.
+\end{theorem}
+
+In Lean the bound centre in (H) is also called $c$; we rename it $c'$. The size condition is on $S\setminus\{c\}$
+(Lean \texttt{S.erase c}), not on $S$, and $c\in S$ is allowed. The premise (H) is an explicit hypothesis of the
+theorem, and no theorem of \dirn{LAYERLEAN/LayerLemma.lean} proves it. In the two applications below it is supplied by
+the propositions \lean{Sixfold66} and \lean{Sevenfold70}, which are themselves hypotheses (Remark~\ref{ll:rem:hyp}).
+
+\begin{proof}
+We follow the Lean proof. Write $\rho=\rho_{c,2\pi/m}$ and suppose that $S$ is $K$-free. Put $S'=S\setminus\{c\}$. Then
+$c\notin S'$; $S'$ is $\rho$-invariant by Lemma~\ref{ll:lem:erase}; and $S'$ is $K$-free by
+Lemma~\ref{fd:lem:mono}(c), since $S'\subseteq S$.
+
+Theorem~\ref{ll:thm:card-peel} applies to $S'$ with the given $t$ (its size hypothesis $m(t\mathbin{\dot{-}}1)<\card{S'}$
+is our hypothesis on $\card{S\setminus\{c\}}$), and with $n=t$ it gives $\card{\peel(S',t)}+mt=\card{S'}$.
+Let $T=S'\setminus\peel(S',t)$. Since $\peel(S',t)\subseteq S'$ (Lemma~\ref{ll:lem:peel-basic}(b)),
+$\card T=\card{S'}-\card{\peel(S',t)}=mt$.
+
+$T$ is $\rho$-invariant. Let $y\in T$, so $y\in S'$ and $y\notin\peel(S',t)$. Then $\rho(y)\in S'$. Suppose
+$\rho(y)\in\peel(S',t)$. By Lemma~\ref{ll:lem:inv-peel} (applied to $S'$; $c\notin S'$) the set $\peel(S',t)$ is
+$\rho$-invariant, so $\rho^{m-1}(\rho(y))\in\peel(S',t)$ by Lemma~\ref{ll:lem:orbit}(a). As $y\in S'$, $y\ne c$, so
+$\operatorname{per}_\rho(y)=m$ (Lemma~\ref{ll:lem:minperiod}) and, by (P1) and $m\ge1$,
+$\rho^{m-1}(\rho(y))=\rho^m(y)=y$. Hence $y\in\peel(S',t)$, a contradiction. So $\rho(y)\in T$.
+
+Moreover $T\subseteq S'\subseteq S$, so $T$ is in general position (Lemma~\ref{fd:lem:mono}(b)), and $c\notin T$. By (H)
+with $c'=c$, \lean{HasConvexNGon} $K$ $T$, hence \lean{HasConvexNGon} $K$ $S$ (Lemma~\ref{fd:lem:mono}(c)),
+contradicting the assumption. Hence \lean{HasConvexNGon} $K$ $S$.
+\end{proof}
+
+\begin{definition}[the propositions \lean{Sixfold66} and \lean{Sevenfold70};
+\leanref{ErdosSzekeres.LayerLemma.Sixfold66}{LAYERLEAN/LayerLemma.lean:1102},
+\leanref{ErdosSzekeres.LayerLemma.Sevenfold70}{LAYERLEAN/LayerLemma.lean:1107}]\label{ll:def:66-70}
+\lean{Sixfold66} is the proposition: for every finite set $T$ and every point $c$, if $T$ is in general position,
+$c\notin T$, $T$ is $\rho_{c,2\pi/6}$-invariant and $\card T=66$, then \lean{HasConvexNGon} $8$ $T$.
+
+\lean{Sevenfold70} is the proposition: for every finite set $T$ and every point $c$, if $T$ is in general position,
+$c\notin T$, $T$ is $\rho_{c,2\pi/7}$-invariant and $\card T=70$, then \lean{HasConvexNGon} $8$ $T$.
+
+In both, the angle is written with a real numeral, \texttt{2 * Real.pi / 6} and \texttt{2 * Real.pi / 7}
+(Remark~\ref{ll:rem:numerals}). Both are definitions of propositions; neither is proved in Lean
+(Remark~\ref{ll:rem:hyp}).
+\end{definition}
+
+\begin{theorem}[sixfold octagon theorem, conditional on \lean{Sixfold66};
+\leanref{ErdosSzekeres.LayerLemma.sixfold_octagon}{LAYERLEAN/LayerLemma.lean:1113}]\label{ll:thm:sixfold}
+Assume the proposition \lean{Sixfold66} (a hypothesis, not proved in Lean; Remark~\ref{ll:rem:hyp}). Let $S$ be a finite
+set of points and $c$ a point such that $S$ is in general position, $S$ is $\rho_{c,2\pi/6}$-invariant, and
+$61\le\card S$. Then \lean{HasConvexNGon} $8$ $S$: some $8$ points of $S$ are in convex position.
+\end{theorem}
+
+\begin{proof}
+We follow the Lean proof. Write $\rho=\rho_{c,2\pi/6}$; by Remark~\ref{ll:rem:numerals} this is $\rho_{c,2\pi/m}$ for the
+natural number $m=6$.
+
+Step 1. There is $p\in S$ with $p\ne c$: otherwise $S\subseteq\{c\}$ and $\card S\le1<61$.
+
+Step 2. $c\notin S$. This is Lemma~\ref{lg:lem:centre} (Lean \lean{centre_not_mem_of_even}) with $m=6$, which is
+positive and even, applied to the $\rho$-invariant set $S$ in general position and the point $p$ of Step~1. For
+completeness, the argument in this case: suppose $c\in S$. By Lemma~\ref{ll:lem:rot}(d),
+$\rho^3=\rho_{c,3\cdot2\pi/6}=\rho_{c,\pi}$, and since $\cos\pi=-1$, $\sin\pi=0$, Definition~\ref{ll:def:rot} gives
+$q:=\rho^3(p)=2c-p$, which lies in $S$ by Lemma~\ref{ll:lem:orbit}(a). The points $p,c,q$ of $S$ are pairwise distinct:
+$p\ne c$; $q=c$ and $q=p$ would each give $p=c$. But, by the formula of Definition~\ref{fd:def:orient},
+\[\orient(p,c,2c-p)=(c_0-p_0)\cdot2(c_1-p_1)-(c_1-p_1)\cdot2(c_0-p_0)=0,\]
+so $\{p,c,q\}$ is collinear by Lemma~\ref{fd:lem:collinear}, contradicting general position
+(Definition~\ref{fd:def:gp}).
+
+Step 3. Apply Theorem~\ref{ll:thm:reduction} with $m=6$, $K=8$, $t=11$: $0<6$ and $8\le12$. Premise (H) holds: for $T$
+and $c'$ as there (the rotation $\rho_{c',2\pi/m}$ with $m=6$ is $\rho_{c',2\pi/6}$, Remark~\ref{ll:rem:numerals}),
+$\card T=6\cdot11=66$, and \lean{Sixfold66} gives \lean{HasConvexNGon} $8$ $T$. $S$ is in general
+position and $\rho$-invariant. By Step~2, $S\setminus\{c\}=S$, so $6\cdot(11\mathbin{\dot{-}}1)=60<61\le\card S
+=\card{S\setminus\{c\}}$. Theorem~\ref{ll:thm:reduction} gives \lean{HasConvexNGon} $8$ $S$.
+\end{proof}
+
+\begin{theorem}[sevenfold octagon theorem, conditional on \lean{Sevenfold70};
+\leanref{ErdosSzekeres.LayerLemma.sevenfold_octagon}{LAYERLEAN/LayerLemma.lean:1136}]\label{ll:thm:sevenfold}
+Assume the proposition \lean{Sevenfold70} (a hypothesis, not proved in Lean; Remark~\ref{ll:rem:hyp}). Let $S$ be a
+finite set of points and $c$ a point such that $S$ is in general position, $S$ is $\rho_{c,2\pi/7}$-invariant, and
+$65\le\card S$. Then \lean{HasConvexNGon} $8$ $S$. (The centre $c$ may belong to $S$.)
+\end{theorem}
+
+\begin{proof}
+We follow the Lean proof. Apply Theorem~\ref{ll:thm:reduction} with $m=7$, $K=8$, $t=10$ (Remark~\ref{ll:rem:numerals}
+for the angle): $0<7$ and $8\le14$. Premise (H) holds: for $T$ and $c'$ as there (the rotation is
+$\rho_{c',2\pi/7}$), $\card T=7\cdot10=70$, and
+\lean{Sevenfold70} gives \lean{HasConvexNGon} $8$ $T$. $S$ is in general position and $\rho_{c,2\pi/7}$-invariant, and
+$\card{S\setminus\{c\}}\ge\card S-1\ge64>63=7\cdot(10\mathbin{\dot{-}}1)$. Theorem~\ref{ll:thm:reduction} gives
+\lean{HasConvexNGon} $8$ $S$. No exclusion of the centre is needed.
+\end{proof}
+
+\begin{remark}[status of \lean{Sixfold66} and \lean{Sevenfold70}]\label{ll:rem:hyp}
+\lean{Sixfold66} and \lean{Sevenfold70} are Lean definitions of propositions (\texttt{def ... : Prop}), neither theorems
+nor axioms. Nothing in \dirn{LAYERLEAN/LayerLemma.lean} proves them; Theorems~\ref{ll:thm:sixfold}
+and~\ref{ll:thm:sevenfold} take them as explicit hypotheses, so they do not enter the axiom lists of these theorems.
+Among the Lean files of the repository, the only theorems whose conclusion is \lean{Sixfold66} are in
+\dirn{ENCBLEAN/geo/ES8Geo/Main.lean} and take further hypotheses (see below), and no theorem has the conclusion
+\lean{Sevenfold70}. What is Lean-checked is the implication: \lean{Sixfold66} implies that every
+$\rho_{c,2\pi/6}$-invariant set of at least $61$ points in general position has $8$ points in convex position, and
+\lean{Sevenfold70} implies the same for $\rho_{c,2\pi/7}$ and at least $65$ points. These octagon statements are
+therefore established here only conditionally.
+
+In the project, the two propositions are supported as follows; none of this is part of the present section. The
+record \dirn{C6UPPER} gives the unsatisfiability of SAT encodings of octagon-free configurations of eleven nested
+regular hexagons in general position, by cake\_lpr verdicts on cube formulas whose cover is checked there: the formula
+of encoder~B (\dirn{C6UPPER/encb/gen_b2.py}) alone, through $64$ cubes, and that of encoder~A
+(\dirn{C7UPPER/gen.py}) with an added symmetry-breaking unit clause, through $32$ cubes. The record \dirn{C7UPPER}
+gives the unsatisfiability of two separately implemented encodings of the same kind for ten nested regular heptagons
+(encoder~A's with an added symmetry-breaking unit clause, encoder~B's alone), each by a cake\_lpr verdict. In the
+terms of this document these unsatisfiability results are \emph{computer-assisted}: they rest on LRAT proofs checked
+by cake\_lpr, outside Lean. The project's records call such a result a ``certificate'' (an unsatisfiability claim whose
+LRAT proof cake\_lpr accepted; \dirn{WRITEUP/note/symmetric_extremal.tex}, lines 109--114); that is a label of the
+project, not one of the labels of this document. The step from these unsatisfiability results to \lean{Sixfold66} and
+\lean{Sevenfold70} is the written soundness proof of the encodings in \dirn{WRITEUP/note/k8_soundness.tex} (a written
+proof, not refereed), which also covers the symmetry breaking and the
+cube cover. That note lists the gaps that remain, (G1)--(G4): the correspondence between the generating programs and
+their clauses is established by reading the source code; the passage from the formulas to \lean{Sixfold66} and
+\lean{Sevenfold70} is a written proof; the angular part of encoder~A rests on binary64 floating-point arithmetic;
+and several of its written proofs have had no internal review. For $m=6$ the unit \dirn{ENCBLEAN} also contains a Lean
+derivation of \lean{Sixfold66}, \lean{EncB.Geo.sixfold66_of_cubes64}; its \lean{Sixfold66} is that of
+\dirn{ENCBLEAN/geo/ES8Geo/Capstone2.lean}, which contains a verbatim copy of the declarations of this file (over a
+byte-identical copy of \dirn{ErdosSzekeres/Definitions.lean}). Its hypothesis \lean{EncB.CubesUnsat64} is the
+unsatisfiability of the $64$ cube formulas built from a Lean definition of encoder~B's formula (\lean{EncB.encB}).
+Neither the identity of the printed texts of these formulas with the cube files that carry the cake\_lpr verdicts nor
+the reading of those verdicts as unsatisfiability is Lean-checked; both rest on the trust items (E1)--(E6) listed
+under gap~(G2) of that note.
+
+The link with nested polygons is Corollary~\ref{ll:cor:decomp}: a set $T$ that violates \lean{Sixfold66} is in general
+position, centre-free, $\rho_{c,2\pi/6}$-invariant, $8$-free and has $66=6\cdot11$ points, so (with $m=6$, $K=8\le12$,
+$t=11$) it is the disjoint union of eleven $\rho_{c,2\pi/6}$-orbits $L_0,\dots,L_{10}$ of $6$ points each, with
+$L_j\subseteq\conv(L_i)$ for $i<j$; likewise a set violating \lean{Sevenfold70} is the disjoint union of ten orbits of
+$7$ points.
+\end{remark}
+
+\begin{remark}[real-cast numerals]\label{ll:rem:numerals}
+In the general statements of this section the angle is \texttt{2 * Real.pi / m} with $m\in\N$ cast to $\R$ (C7). In
+\lean{Sixfold66}, \lean{Sevenfold70}, \lean{sixfold_octagon} and \lean{sevenfold_octagon} the angle is
+\texttt{2 * Real.pi / 6}, resp.\ \texttt{2 * Real.pi / 7}, where $6$ and $7$ are real numerals. The cast of the
+natural number
+$6$ is the real number $6$ (likewise for $7$), so $\rho_{c,2\pi/6}$ is the same map in both readings; the Lean proofs
+bridge the two forms with \texttt{exact\_mod\_cast}, and the cardinality conditions $\card T=6\cdot 11$ and $\card T=66$
+(resp.\ $7\cdot10$ and $70$) with \texttt{simpa}. Mathematically nothing changes.
+\end{remark}
+
+\paragraph{Coverage.}
+All declarations of this section's scope in \dirn{LAYERLEAN/LayerLemma.lean} are covered:
+\lean{orbitFS} (Definition~\ref{ll:def:orbit});
+\lean{iterate_mem}, \lean{mem_orbitFS_self}, \lean{orbitFS_subset}, \lean{orbitFS_invariant},
+\lean{card_orbitFS_of_minimalPeriod}, \lean{mem_orbitFS_of_not_disjoint} (Lemma~\ref{ll:lem:orbit});
+\lean{Invariant} (Definition~\ref{ll:def:inv});
+\lean{hullVerts} (Definition~\ref{ll:def:hv}); \lean{mem_hullVerts}, \lean{hullVerts_subset}
+(Lemma~\ref{ll:lem:hv-basic}); \lean{convexPosition_hullVerts}, \lean{extreme_mem_hullVerts},
+\lean{subset_convexHull_hullVerts}, \lean{hullVerts_nonempty} (Lemma~\ref{ll:lem:hv}; the proofs of (b)--(d) are
+elementary and differ from the Lean proofs, which use two Mathlib facts on extreme points for (b), the Krein--Milman
+theorem for (c) and the Krein--Milman lemma for (d));
+\lean{map_mem_hullVerts} (Lemma~\ref{ll:lem:map-hv});
+\lean{hullVerts_eq_orbitFS} (Theorem~\ref{ll:thm:core});
+\lean{invariant_sdiff_hullVerts} (Lemma~\ref{ll:lem:inv-sdiff});
+\lean{toC}, \lean{ofC}, \lean{crot} (Definition~\ref{ll:def:complex});
+\lean{toC_re}, \lean{toC_im}, \lean{ofC_zero}, \lean{ofC_one}, \lean{toC_ofC}, \lean{ofC_toC}, \lean{toC_injective},
+\lean{toC_crot}, \lean{crot_one}, \lean{crot_comp}, \lean{crot_iterate}, \lean{crot_eq_self_iff}, \lean{crot_injective}
+(Lemma~\ref{ll:lem:complex});
+\lean{rotAbout} (Definition~\ref{ll:def:rot});
+\lean{rotAbout_eq_crot}, \lean{rotAff}, \lean{rotAbout_injective}, \lean{rotAbout_iterate} (Lemma~\ref{ll:lem:rot});
+\lean{invariant_erase_centre} (Lemma~\ref{ll:lem:erase});
+\lean{minimalPeriod_rotAbout} (Lemma~\ref{ll:lem:minperiod});
+\lean{hullVerts_eq_orbitFS_rotAbout} (Theorem~\ref{ll:thm:core-rot});
+\lean{peel} (Definition~\ref{ll:def:peel}); \lean{peel_succ}, \lean{peel_subset} (Lemma~\ref{ll:lem:peel-basic});
+\lean{peel_antitone} (Lemma~\ref{ll:lem:antitone});
+\lean{invariant_peel} (Lemma~\ref{ll:lem:inv-peel});
+\lean{layers_are_orbits} (Theorem~\ref{ll:thm:layers});
+\lean{exists_layer} (Lemma~\ref{ll:lem:exists-layer});
+\lean{card_peel} (Theorem~\ref{ll:thm:card-peel});
+\lean{convexNGon_of_layers} (Theorem~\ref{ll:thm:reduction});
+\lean{Sixfold66}, \lean{Sevenfold70} (Definition~\ref{ll:def:66-70});
+\lean{sixfold_octagon} (Theorem~\ref{ll:thm:sixfold}, conditional on \lean{Sixfold66});
+\lean{sevenfold_octagon} (Theorem~\ref{ll:thm:sevenfold}, conditional on \lean{Sevenfold70}).
+Corollary~\ref{ll:cor:decomp} is a written step, not a Lean declaration. Nothing in the scope is deliberately left out.
+The declarations of lines 471--1032 of the same file (from \lean{orient_rotAbout} to \lean{dist2_le_of_later}) are
+outside this section's scope; \lean{rotAbout_iterate} (line 465) is included here because it lies in the range of this
+section, and Step~2 of our proof of Theorem~\ref{ll:thm:sixfold} uses it.

@@ -1,0 +1,32 @@
+label	kind	lean_name	file_line	note
+ll:def:orbit	definition	ErdosSzekeres.LayerLemma.orbitFS	LAYERLEAN/LayerLemma.lean:48	-
+ll:lem:orbit	lemma	ErdosSzekeres.LayerLemma.iterate_mem; ErdosSzekeres.LayerLemma.mem_orbitFS_self; ErdosSzekeres.LayerLemma.orbitFS_subset; ErdosSzekeres.LayerLemma.orbitFS_invariant; ErdosSzekeres.LayerLemma.card_orbitFS_of_minimalPeriod; ErdosSzekeres.LayerLemma.mem_orbitFS_of_not_disjoint	LAYERLEAN/LayerLemma.lean:52; LAYERLEAN/LayerLemma.lean:59; LAYERLEAN/LayerLemma.lean:62; LAYERLEAN/LayerLemma.lean:68; LAYERLEAN/LayerLemma.lean:80; LAYERLEAN/LayerLemma.lean:91	-
+ll:def:inv	definition	ErdosSzekeres.LayerLemma.Invariant	LAYERLEAN/LayerLemma.lean:105	-
+ll:def:hv	definition	ErdosSzekeres.LayerLemma.hullVerts	LAYERLEAN/LayerLemma.lean:111	export label
+ll:lem:hv-basic	lemma	ErdosSzekeres.LayerLemma.mem_hullVerts; ErdosSzekeres.LayerLemma.hullVerts_subset	LAYERLEAN/LayerLemma.lean:114; LAYERLEAN/LayerLemma.lean:118	-
+ll:lem:hv	lemma	ErdosSzekeres.LayerLemma.convexPosition_hullVerts; ErdosSzekeres.LayerLemma.extreme_mem_hullVerts; ErdosSzekeres.LayerLemma.subset_convexHull_hullVerts; ErdosSzekeres.LayerLemma.hullVerts_nonempty	LAYERLEAN/LayerLemma.lean:121; LAYERLEAN/LayerLemma.lean:130; LAYERLEAN/LayerLemma.lean:146; LAYERLEAN/LayerLemma.lean:139	export label; (b)-(d) proved by elementary arguments, different from the Lean proofs (Lean: (b) by two Mathlib facts on extreme points, (c) by the Krein-Milman theorem, (d) by the Krein-Milman lemma)
+ll:lem:map-hv	lemma	ErdosSzekeres.LayerLemma.map_mem_hullVerts	LAYERLEAN/LayerLemma.lean:162	-
+ll:thm:core	theorem	ErdosSzekeres.LayerLemma.hullVerts_eq_orbitFS	LAYERLEAN/LayerLemma.lean:189	export label; no general position
+ll:lem:inv-sdiff	lemma	ErdosSzekeres.LayerLemma.invariant_sdiff_hullVerts	LAYERLEAN/LayerLemma.lean:217	-
+ll:rem:core	remark	-	-	remark on hypotheses and degenerate cases of hullVerts_eq_orbitFS
+ll:def:complex	definition	ErdosSzekeres.LayerLemma.toC; ErdosSzekeres.LayerLemma.ofC; ErdosSzekeres.LayerLemma.crot	LAYERLEAN/LayerLemma.lean:231; LAYERLEAN/LayerLemma.lean:234; LAYERLEAN/LayerLemma.lean:252	-
+ll:lem:complex	lemma	ErdosSzekeres.LayerLemma.toC_re; ErdosSzekeres.LayerLemma.toC_im; ErdosSzekeres.LayerLemma.ofC_zero; ErdosSzekeres.LayerLemma.ofC_one; ErdosSzekeres.LayerLemma.toC_ofC; ErdosSzekeres.LayerLemma.ofC_toC; ErdosSzekeres.LayerLemma.toC_injective; ErdosSzekeres.LayerLemma.toC_crot; ErdosSzekeres.LayerLemma.crot_one; ErdosSzekeres.LayerLemma.crot_comp; ErdosSzekeres.LayerLemma.crot_iterate; ErdosSzekeres.LayerLemma.crot_eq_self_iff; ErdosSzekeres.LayerLemma.crot_injective	LAYERLEAN/LayerLemma.lean:236; LAYERLEAN/LayerLemma.lean:237; LAYERLEAN/LayerLemma.lean:238; LAYERLEAN/LayerLemma.lean:239; LAYERLEAN/LayerLemma.lean:241; LAYERLEAN/LayerLemma.lean:244; LAYERLEAN/LayerLemma.lean:248; LAYERLEAN/LayerLemma.lean:254; LAYERLEAN/LayerLemma.lean:257; LAYERLEAN/LayerLemma.lean:262; LAYERLEAN/LayerLemma.lean:267; LAYERLEAN/LayerLemma.lean:273; LAYERLEAN/LayerLemma.lean:287	includes the seven @[simp] lemmas (toC_re, toC_im, ofC_zero, ofC_one, toC_ofC, ofC_toC, toC_crot)
+ll:def:rot	definition	ErdosSzekeres.LayerLemma.rotAbout	LAYERLEAN/LayerLemma.lean:298	-
+ll:lem:rot	lemma	ErdosSzekeres.LayerLemma.rotAbout_eq_crot; ErdosSzekeres.LayerLemma.rotAff; ErdosSzekeres.LayerLemma.rotAbout_injective; ErdosSzekeres.LayerLemma.rotAbout_iterate	LAYERLEAN/LayerLemma.lean:302; LAYERLEAN/LayerLemma.lean:311; LAYERLEAN/LayerLemma.lean:319; LAYERLEAN/LayerLemma.lean:465	rotAff is a def (affine-map structure); rotAbout_iterate is line 465
+ll:lem:erase	lemma	ErdosSzekeres.LayerLemma.invariant_erase_centre	LAYERLEAN/LayerLemma.lean:325	-
+ll:lem:minperiod	lemma	ErdosSzekeres.LayerLemma.minimalPeriod_rotAbout	LAYERLEAN/LayerLemma.lean:336	export label
+ll:thm:core-rot	theorem	ErdosSzekeres.LayerLemma.hullVerts_eq_orbitFS_rotAbout	LAYERLEAN/LayerLemma.lean:364	export label
+ll:def:peel	definition	ErdosSzekeres.LayerLemma.peel	LAYERLEAN/LayerLemma.lean:374	export label
+ll:lem:peel-basic	lemma	ErdosSzekeres.LayerLemma.peel_succ; ErdosSzekeres.LayerLemma.peel_subset	LAYERLEAN/LayerLemma.lean:378; LAYERLEAN/LayerLemma.lean:381	-
+ll:lem:antitone	lemma	ErdosSzekeres.LayerLemma.peel_antitone	LAYERLEAN/LayerLemma.lean:460	export label
+ll:lem:inv-peel	lemma	ErdosSzekeres.LayerLemma.invariant_peel	LAYERLEAN/LayerLemma.lean:386	export label
+ll:thm:layers	theorem	ErdosSzekeres.LayerLemma.layers_are_orbits	LAYERLEAN/LayerLemma.lean:402	export label
+ll:lem:exists-layer	lemma	ErdosSzekeres.LayerLemma.exists_layer	LAYERLEAN/LayerLemma.lean:419	export label
+ll:thm:card-peel	theorem	ErdosSzekeres.LayerLemma.card_peel	LAYERLEAN/LayerLemma.lean:1037	export label
+ll:cor:decomp	corollary	-	-	written step (not a Lean declaration): decomposition of a set of exactly m*t points into t nested orbits
+ll:thm:reduction	theorem	ErdosSzekeres.LayerLemma.convexNGon_of_layers	LAYERLEAN/LayerLemma.lean:1066	export label; takes the premise H (every invariant centre-free set of exactly m*t points in general position has a convex K-gon) as an explicit hypothesis
+ll:def:66-70	definition	ErdosSzekeres.LayerLemma.Sixfold66; ErdosSzekeres.LayerLemma.Sevenfold70	LAYERLEAN/LayerLemma.lean:1102; LAYERLEAN/LayerLemma.lean:1107	export label; propositions (Lean def ... : Prop), not proved in Lean; real numerals 6 and 7 in the angle
+ll:thm:sixfold	theorem	ErdosSzekeres.LayerLemma.sixfold_octagon	LAYERLEAN/LayerLemma.lean:1113	export label; takes hypotheses: Sixfold66; uses lg:lem:centre (argument also included)
+ll:thm:sevenfold	theorem	ErdosSzekeres.LayerLemma.sevenfold_octagon	LAYERLEAN/LayerLemma.lean:1136	export label; takes hypotheses: Sevenfold70
+ll:rem:hyp	remark	-	-	status of Sixfold66/Sevenfold70: not proved in Lean; supported by C6UPPER/C7UPPER cake_lpr verdicts (computer-assisted: LRAT proofs checked by cake_lpr outside Lean; the project's records call such a result a certificate, a label this document does not use; encoder B's formula alone, encoder A's with a symmetry-breaking unit clause) plus the written soundness proof in WRITEUP/note/k8_soundness.tex (not refereed; gaps G1-G4); ENCBLEAN Lean route for m=6 assumes EncB.CubesUnsat64 (trust items E1-E6)
+ll:rem:numerals	remark	-	-	real-cast numerals 6, 7 versus (m : R)

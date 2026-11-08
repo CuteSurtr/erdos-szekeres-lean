@@ -1,0 +1,89 @@
+--- a/proofs.tex
++++ b/proofs.tex
+@@ -49,7 +49,7 @@
+ \item \dirn{SYMLEAN/SymmetricReduction.lean} and \dirn{SYMLEAN/AffineReduction.lean}, in Sections~\ref{sr:sec}
+   and~\ref{ar:sec}, and \dirn{SYMLEAN/mirror/ReductionThreeClasses.lean}, in Section~\ref{mb:sec};
+ \item \dirn{MIRRORETV/lean}, in Sections~\ref{mm:sec} and~\ref{mb:sec};
+-\item \dirn{C3LEAN}, and \dirn{C2FINAL}, whose declarations are Lean-checked according to the record, in
++\item \dirn{C3LEAN} and \dirn{C2FINAL} (the declarations of the latter are Lean-checked according to the record), in
+   Section~\ref{cb:sec};
+ \item \dirn{AUDIT3/A1_reduction} and \dirn{ES7SPLIT/review/equivalence}, in Section~\ref{sa:sec}.
+ \end{itemize}
+--- a/sections/sr.tex
++++ b/sections/sr.tex
+@@ -295,7 +295,8 @@
+   full names and the same text. Both classes are also supplied by SAT certificates in \dirn{SYMZ} (Theorems 2a and 2b
+   of \dirn{WRITEUP/SYMMETRIC.md}, claimed in the records as computer-assisted), and \lean{MirrorOneAxis33} also,
+   conditionally, by the Lean chain of \dirn{H3} and \dirn{V2-L} (Remark~\ref{sr:rem:mirror-line}).
+-\item \lean{Fourfold32} (used only by Theorem~\ref{sr:thm:variant}): claimed in \dirn{C4CUT}, which states it without a
++\item \lean{Fourfold32} (among the statements of this section, a hypothesis only of Theorem~\ref{sr:thm:variant} and
++  of Lemma~\ref{sr:lem:fourfold}, which its proof uses): claimed in \dirn{C4CUT}, which states it without a
+   rigor label. It rests on a final certificate accepted by both checkers, on six cuts checked by exact computation and
+   on a written proof of the encoder's soundness. The statement is due to Subercaseaux, Mackey, Qian and Heule
+   (arXiv:2506.00224, \S6.2).
+--- a/sections/sa.tex
++++ b/sections/sa.tex
+@@ -518,12 +518,13 @@
+   complex notation, $c+e^{i\alpha}\bigl(c+e^{i\beta}(z-c)-c\bigr)=c+e^{i(\alpha+\beta)}(z-c)$), so
+   $\rho^{[2]}=\rho_{c,\pi}$ is the
+   half-turn; Lemma~\ref{sa:lem:model}(a) for it gives $n=2k'$, and $k'=2k\ge17$, so the case $s=2$ applies. (Eight of
+-  the $k$ orbits would give the $32$ points of the class \lean{Fourfold32}. Among the reduction theorems stated in this
+-  document, only Theorem~\ref{sr:thm:variant} and the case lemma \lean{case_fourfold} that its proof uses take this
+-  class as a hypothesis (so do some checks of that theorem in the review file
+-  \dirn{SYMLEAN/review/VariantChecks.lean}, among them its group form \lean{VariantChecks.group_form}); a same-text
+-  copy, \lean{LayerLemma.Fourfold32}, is the hypothesis of Theorem~\ref{ec:thm:fourfold}; item~(5) uses the class for
+-  the size table.)
++  the $k$ orbits would give the $32$ points of the class \lean{Fourfold32}. Among the reduction theorems and case
++  lemmas stated in this document, only Theorem~\ref{sr:thm:variant} and the case lemma
++  \lean{SymReduction.case_fourfold} that its proof uses take this class as a hypothesis (so do some checks of that
++  theorem in the review file \dirn{SYMLEAN/review/VariantChecks.lean}, among them its group form
++  \lean{SymReduction.VariantChecks.group_form}); a same-text copy, \lean{LayerLemma.Fourfold32}, is the hypothesis of
++  Theorem~\ref{ec:thm:fourfold} and of the form \lean{LayerLemma.fourfold_heptagon_of_erase} that its proof uses;
++  item~(5) uses the class for the size table.)
+ \item $s=6$: Proposition~\ref{sa:prop:rot}(d) gives $2k\ge11$ and $3k\ge17$. Here $\rho^{[2]}=\rho_{c,2\pi/3}$ has
+   $2k$ orbits of size $3$ and $\rho^{[3]}=\rho_{c,\pi}$ has $3k$ pairs (Lemma~\ref{sa:lem:model}(a) for these
+   rotations, with $n=6k$), so both the threefold and the half-turn case apply.
+--- a/sections/ar.tex
++++ b/sections/ar.tex
+@@ -743,8 +743,8 @@
+ computer-assisted because their finite checks are kernel evaluations (\texttt{decide +kernel}): the cover of the $910$
+ threefold roots, which is Lean-checked (Theorem~\ref{cb:thm:c3}), and the closure of the central parallelogram orbits,
+ which is Lean-checked according to the record (\dirn{C2FINAL/README.md}, \S6; Theorem~\ref{cb:thm:c2}). Lean does not
+-see the records: that every piece named in the data of these two theorems has a
+-record with the checker verdicts and a CNF hash equal to that of the rebuilt formula is an exact computation outside
++see the records: that every leaf named by the keys of the certificates of Theorem~\ref{cb:thm:c3}
++and every subcase listed in the data of Theorem~\ref{cb:thm:c2} has a record with the checker verdicts and a CNF hash equal to that of the rebuilt formula is an exact computation outside
+ Lean.
+ \item \emph{The match between the classes and the formulas.} No formal link joins a Lean class to its CNF formulas.
+ That each class states what its certificates prove was checked by reading (\dirn{SYMLEAN/README.md}, \S6).
+--- a/sections/cb.tex
++++ b/sections/cb.tex
+@@ -59,8 +59,8 @@
+ \item \dirn{C2FINAL/Central34Orbits.lean} (298 lines, SHA-256 \texttt{b396a26b2430}\dots), written by
+   \dirn{C2FINAL/gen_lean.py}.
+ \end{itemize}
+-Both files are checked with Lean~4.24.0 (for \dirn{C2FINAL/Central34Orbits.lean} according to its README; see
+-the paragraph ``Axioms'' below). Neither has an \texttt{import}: only the core library is used, and the
++Both files are checked with Lean~4.24.0 according to their READMEs; for \dirn{C3LEAN/C3Cover.lean} a compile log is
++saved, for \dirn{C2FINAL/Central34Orbits.lean} no Lean output (paragraph ``Axioms'' below). Neither has an \texttt{import}: only the core library is used, and the
+ repository's Mathlib (pinned at \texttt{f897ebcf}) plays no role. Every finite computation is closed by the tactic
+ \texttt{decide +kernel}: the Lean kernel itself evaluates the Boolean expression to \texttt{true} by definitional
+ unfolding, using its built-in arbitrary-precision arithmetic on natural-number literals (part of the kernel, not an
+@@ -80,13 +80,13 @@
+ with three \texttt{\#print axioms} commands (lines 296--298) whose output is not in the repository, and
+ \dirn{C2FINAL/README.md} (\S6) records ``axioms \texttt{propext} only, about 6 s''. As no Lean output of any kind
+ (compile or build log, axiom output, pinned message) is saved for this file, the labels of its declarations rest on
+-that record alone: its three theorems are \emph{Lean-checked according to the record}, the qualified label defined
+-with the rigor labels at the beginning of this document, and so are its definitions.
++that record alone: its three theorems and its definitions are \emph{Lean-checked according to the record}, the
++qualified label defined with the rigor labels at the beginning of this document.
+ 
+ \paragraph{Rigor labels and dependencies.} The Lean theorems of \dirn{C3LEAN/C3Cover.lean} keep the label
+ \emph{Lean-checked}, and the three theorems of \dirn{C2FINAL/Central34Orbits.lean} (Theorem~\ref{cb:thm:c2-refl},
+-Fact~\ref{cb:fact:c2-sub} and Theorem~\ref{cb:thm:c2}) carry the label \emph{Lean-checked according to the record}
+-(paragraph ``Axioms'' above); the proofs written
++Fact~\ref{cb:fact:c2-sub} and Theorem~\ref{cb:thm:c2}) carry the label \emph{Lean-checked according to the record},
++as do its definitions (paragraph ``Axioms'' above); the proofs written
+ here are \emph{written proofs (not refereed)}. Every statement that Lean proves by kernel evaluation is marked
+ \emph{computer-assisted} in its statement, and so is every statement whose proof uses one of the computer-assisted
+ statements on generated data (Lemma~\ref{cb:lem:all-checked}, Corollary~\ref{cb:cor:roots},
