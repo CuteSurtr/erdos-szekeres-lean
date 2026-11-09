@@ -141,3 +141,7 @@ this mac"). **No bound below 311 is claimed**, and this section changes none of 
     It never reruns a context with a closed result file.
   - Or copy the Linux results to the Mac, and lower `campaign/floor` to cover the gap.
   - The es310 coverage and export steps then see one `runs/` directory.
+
+  *(10 Nov 2026: superseded. The Mac share finished on 8 November, 2,047 of 2,047 closed. The Mac result files
+  record a Mac path for `pbb_strong.py`, which the frozen exporter and merge refuse on Linux, so a plain copy would
+  stop the export. Import them with `ES8B64MAC20261110/tools/import_mac_runs.py`; see that record.)*
