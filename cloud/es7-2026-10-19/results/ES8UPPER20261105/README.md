@@ -145,3 +145,5 @@ this mac"). **No bound below 311 is claimed**, and this section changes none of 
   *(10 Nov 2026: superseded. The Mac share finished on 8 November, 2,047 of 2,047 closed. The Mac result files
   record a Mac path for `pbb_strong.py`, which the frozen exporter and merge refuse on Linux, so a plain copy would
   stop the export. Import them with `ES8B64MAC20261110/tools/import_mac_runs.py`; see that record.)*
+
+**10 November 2026: ES(8) ≤ 310 is Lean-checked** (compact checker, unrefereed). All 4,096 contexts are closed, 1,982 on Linux and 2,114 from the Mac (`ES8B64MAC20261110`). `assemble_final310.sh` reports VERIFIED in real mode with standard axioms only; see the section of 10 November 2026 in `experiments/omission-compact-checker-2026-11-05/README.md`.

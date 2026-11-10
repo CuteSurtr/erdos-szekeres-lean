@@ -1437,3 +1437,47 @@ A311_MEM=28G bash assemble_final311.sh                    # final compile, audit
   - `build/ext`.
 
   Whether to archive them is the author's decision.
+
+## 10 November 2026: ES(8) ≤ 310 is Lean-checked (compact checker, unrefereed)
+
+```
+VERIFIED ErdosSzekeres.Omission.Compact310.forces_convex_octagon_310 :
+  ErdosSzekeres.ForcesConvexNGon 310 8 (standard axioms only)
+```
+
+`assemble_final310.sh` ran in real mode at 23:17 KST. `logs/es310/final310-compact.json` records `"verified": true`,
+`"mode": "real"`, the axioms `propext, Classical.choice, Quot.sound` and `"problems": []`. The import list is in
+`final310-compact-imports.tsv.gz`, and the run logs are `assemble-{dry,real}-20261110.txt`. All six gates of
+`logs/es310/OPERATOR.md` §C passed.
+
+**Label: Lean-checked by the compact checker, not refereed.** This improves the project's ES(8) ≤ 311 by one point.
+
+**The gates.**
+1. **The campaign is complete.** `campaign.log` says `ALL 4096 CONTEXTS CLOSED` at 19:18:10 KST, and there is no
+   WITNESS file.
+   - **Where the contexts came from.** 1,982 contexts were closed on Linux (5–7 November). The Mac closed the other
+     2,114 (`results/ES8B64MAC20261110`).
+   - **The bundle.** It arrived by USB. The tar's sha256 is `36ccce70…`, and all 4,272 files match its `SHA256SUMS`.
+   - **The import.** `import_mac_runs.py` imported 2,114 contexts after a dry run. It skipped 22 contexts that Linux
+     already had, and its log is `<C>/import-mac-runs.tsv`.
+   - **The restarted campaign** started no worker and logged the line at once.
+2. **The export.** There are 4,096 context manifests, all from the pinned exporter `29854a37…` with per-word k = 16.
+   The minimum margin is 1, and the export reported `not_ready` {} and `refused_ctx` {}.
+   - **Operator note.** The first export of the day ran while the imported results were less than 120 s old, so it
+     skipped them as not ready. The rerun 14 minutes later exported all 2,114.
+3. **Coverage.** `coverage_es310.py --complete` gives PASS: 4,096 contexts deep-checked, 7,048,218 leaves, no
+   warnings (`logs/es310/coverage-complete.json`).
+   - The merge gives 4,096 modules and a Root with 4,095 skeleton theorems, sha256 `e92fa460…`.
+   - `shapes_es311.py` gives PASS.
+4. **The compile.** All 4,096 E310B chunks, `E310B.Root` and `E310.Final` compiled ok, and a final `--dry-run` shows
+   `"to_run": 0`. E311R's 127 modules were reused in place.
+   - **Totals.** 36.7 CPU-h of Lean in all, of which 3,024 modules (15.2 CPU-h) ran on 10 November. That run used
+     8 jobs, nice 10, and Tctl ≤ 85 °C.
+   - **Operator note.** The driver was restarted once with `--start-gap 4` instead of 20. At 20 s only about 1.5
+     jobs ran on the 26–40 s chunks. It was stopped with the STOP file; nothing failed and nothing was lost.
+   - The Root took 61 s and 20.7 GB RSS. `E310.Final` covers 7,485,797 leaves.
+5. **The assembly** in real mode: VERIFIED, as above.
+6. **The frozen scripts.** All nine pins of `logs/es310/frozen-shas.txt` matched at the start of the day. The
+   assembly re-checks them itself.
+
+Machine paths in the new logs are written as `/path/to/repo` and `/path/to/data`, as in `SCRUB20261107`.
