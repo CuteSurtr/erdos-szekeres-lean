@@ -151,6 +151,7 @@ h ≤ 6; h = 7 (about 2.3 GB) was computed in the session and its log was not ke
   byte for byte (`rule/logs/rerun/rebuild.log`). The first two have the orientation tables of
   `sets/k6/rule_p5_16pts.pts` and `sets/k8/rule_p7_64pts.pts`.
 - Conjecture: B(h) is the largest cluster of this design, so the rule stops at 991 points for m = 11.
+- 10 November 2026 (`CATALAN20261110`): an explicit tree family of size C(2h, h−1) − C(2h, h−2) for every h, with a written proof (not refereed; via Lemma 1 and Proposition C) that it gives an m-fold set of m·B(h) + 1 points with no convex (m+1)-gon for every odd m; exact checks for h = 2..5. Maximality is still open.
 
 **Flat clusters.** Theorems A and B of `PROOFS.md` are **refuted** as stated.
 - `cluster/thmA/m11_beta0_ES54.pts` (111 points, 11-fold, radial flattening x = m/2) meets conditions (a)–(c), yet has

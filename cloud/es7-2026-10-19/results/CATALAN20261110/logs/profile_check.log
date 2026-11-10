@@ -1,0 +1,8 @@
+h=1 m=3 n=1 (Cat(h+1)-Cat(h)=1) max cup=1 max cap=1 g=[1, 1] hh=[1, 1] mc<= 1  -> OK
+h=2 m=5 n=3 (Cat(h+1)-Cat(h)=3) max cup=2 max cap=3 g=[1, 2, 2, 2] hh=[1, 1, 1, 3] mc<= 3  -> OK
+h=3 m=7 n=9 (Cat(h+1)-Cat(h)=9) max cup=3 max cap=4 g=[1, 2, 3, 3, 3, 3] hh=[1, 1, 1, 1, 3, 4] mc<= 5  -> OK
+h=4 m=9 n=28 (Cat(h+1)-Cat(h)=28) max cup=4 max cap=5 g=[1, 2, 3, 4, 4, 4, 4, 4] hh=[1, 1, 1, 1, 1, 3, 4, 5] mc<= 7  -> OK
+h=5 m=11 n=90 (Cat(h+1)-Cat(h)=90) max cup=5 max cap=6 g=[1, 2, 3, 4, 5, 5, 5, 5, 5, 5] hh=[1, 1, 1, 1, 1, 1, 3, 4, 5, 6] mc<= 9  -> OK
+h=6 m=13 n=297 (Cat(h+1)-Cat(h)=297) max cup=6 max cap=7 g=[1, 2, 3, 4, 5, 6, 6, 6, 6, 6, 6, 6] hh=[1, 1, 1, 1, 1, 1, 1, 3, 4, 5, 6, 7] mc<= 11  -> OK
+h=7 m=15 n=1001 (Cat(h+1)-Cat(h)=1001) max cup=7 max cap=8 g=[1, 2, 3, 4, 5, 6, 7, 7, 7, 7, 7, 7, 7, 7] hh=[1, 1, 1, 1, 1, 1, 1, 1, 3, 4, 5, 6, 7, 8] mc<= 13  -> OK
+ALL OK

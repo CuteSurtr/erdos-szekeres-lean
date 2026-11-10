@@ -1,0 +1,11 @@
+count_check + profile_check: 10 s; ALL OK, ALL OK
+h=2: generated file identical to sets/ftree_h2.pts
+h=2: sym_cvx exit 0, 0 s: method A (farthest-vertex DP, whole set): largest convex subset = 5; PASS (K=6)
+h=3: generated file identical to sets/ftree_h3.pts
+h=3: sym_cvx exit 0, 0 s: method A (farthest-vertex DP, whole set): largest convex subset = 7; PASS (K=8)
+h=4: generated file identical to sets/ftree_h4.pts
+h=4: sym_cvx exit 0, 1 s: method A (farthest-vertex DP, whole set): largest convex subset = 9; PASS (K=10)
+h=4: sample size 188185, mismatches/undecided 0, min |det| 6.796E+17, error bound 1.008E-64 INDEPENDENT SAMPLE CHECK PASS 
+h=5: generated file identical to sets/ftree_h5.pts
+h=5: sym_cvx exit 0, 62 s: method A (farthest-vertex DP, whole set): largest convex subset = 11; PASS (K=12)
+h=5: sample size 196385, mismatches/undecided 0, min |det| 4.124E+18, error bound 1.004E-48 INDEPENDENT SAMPLE CHECK PASS 
