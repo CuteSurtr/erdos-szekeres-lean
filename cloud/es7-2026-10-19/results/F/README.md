@@ -270,6 +270,9 @@ heuristic evidence only; no non-realizability certificate was computed.
   sets stayed unrealized at 120 CPU-s.
 - Budgets are small (60 + 90 CPU-s per 32-point model) because the machine was shared. KPH used
   15 s per model with Localizer on dedicated cores; we do not know the CPU-time equivalence.
+- 10 November 2026 (`SYM16FIVE20261110`): all 49 realized 5-fold classes also have exactly 5-fold symmetric
+  realizations in Z[ζ₅] (sym_cvx PASS), and they are 49 distinct order types (relabelling and reflection merged), against
+  the 46 of SMQH arXiv v1 Appendix B.
 - The 5-fold count (98 / 932) exceeds the published 92. The paper's realizability test is
   heuristic, and its 948 vs 932 counts are inconsistent, so this is not a contradiction. Our
   realizations are exact and can be checked from `data/sym16/m5/*.pts` with
