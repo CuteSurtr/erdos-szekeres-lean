@@ -1,0 +1,15 @@
+tests/Reject.lean:12:44: error: Tactic `decide` proved that the proposition
+  checkAll 5 mirN46Nat = true
+is false
+tests/Reject.lean:15:70: error: Tactic `decide` proved that the proposition
+  gpOK ((0, 0) :: (1, 1) :: (2, 2) :: mirN46Nat) = true
+is false
+tests/Reject.lean:19:81: error: Tactic `decide` proved that the proposition
+  (List.map (fun p => (p.1, p.2.1 + 2, p.2.2)) (List.take 1 c7N64L)).all
+      (G.certOK G.lo7 G.D7 c7N64Sc c7N64Shift.1 c7N64Shift.2 c7N64Mx) =
+    true
+is false
+
+real	0m1.879s
+user	0m1.536s
+sys	0m0.368s

@@ -1,0 +1,159 @@
+== lake build ErdosSzekeres (2026-11-11 22:29:26 KST)
+✔ [1510/1522] Built ErdosSzekeres.Orientation (791ms)
+✔ [1512/1522] Built ErdosSzekeres.Definitions (1.0s)
+✔ [1513/1522] Built ErdosSzekeres.Basic (1.2s)
+✔ [1514/1522] Built ErdosSzekeres.OrientationGeometry (1.2s)
+✔ [1515/1522] Built ErdosSzekeres.Suk.FourPoint (1.5s)
+✔ [1516/1522] Built ErdosSzekeres.Suk.TriangleOrder (2.3s)
+✔ [1517/1522] Built ErdosSzekeres.Suk.BaseChart (1.6s)
+✔ [1518/1522] Built ErdosSzekeres.Suk.BaseOrder (1.2s)
+✔ [1519/1522] Built ErdosSzekeres.Suk.SupportingLines (2.3s)
+✔ [1520/1522] Built ErdosSzekeres.Suk.OrientationClique (1.6s)
+✔ [1521/1522] Built ErdosSzekeres.Suk.TriangleMembership (2.5s)
+Build completed successfully (1522 jobs).
+   step wall 12.80 s, peak RSS 2040932 KB, exit 0
+== lake build LeanLB.Checker (2026-11-11 22:29:39 KST)
+✔ [2/2] Built LeanLB.Checker (170ms)
+Build completed successfully (2 jobs).
+   step wall 0.51 s, peak RSS 674396 KB, exit 0
+== lake build LeanLB.CheckerSound (2026-11-11 22:29:39 KST)
+✔ [837/837] Built LeanLB.CheckerSound (1.4s)
+Build completed successfully (837 jobs).
+   step wall 1.86 s, peak RSS 1647760 KB, exit 0
+== lake build LeanLB.Statement (2026-11-11 22:29:41 KST)
+✔ [1939/1943] Built LeanLB.Data.C6N60 (232ms)
+✔ [1940/1944] Built LeanLB.Data.C4N52 (326ms)
+✔ [1941/1945] Built LeanLB.Data.MirN46 (195ms)
+✔ [1943/1947] Built LeanLB.Data.C2N64 (416ms)
+✔ [1944/1947] Built LeanLB.Data.C3N61 (331ms)
+✔ [1945/1947] Built LeanLB.Data.C5N56 (1.1s)
+✔ [1946/1947] Built LeanLB.Data.C7N64 (1.7s)
+✔ [1947/1947] Built LeanLB.Statement (976ms)
+Build completed successfully (1947 jobs).
+   step wall 4.15 s, peak RSS 2212284 KB, exit 0
+== lake build LeanLB.Bridge (2026-11-11 22:29:45 KST)
+✔ [1521/1521] Built LeanLB.Bridge (1.2s)
+Build completed successfully (1521 jobs).
+   step wall 1.67 s, peak RSS 2010840 KB, exit 0
+== lake build LeanLB.Geometry (2026-11-11 22:29:47 KST)
+⚠ [2019/2019] Built LeanLB.Geometry (2.8s)
+warning: LeanLB/Geometry.lean:138:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Build completed successfully (2019 jobs).
+   step wall 3.40 s, peak RSS 2375144 KB, exit 0
+== lake build LeanLB.G.Sound (2026-11-11 22:29:51 KST)
+✔ [693/1153] Built LeanLB.G.Checker (180ms)
+✔ [1523/1523] Built LeanLB.G.Sound (1.6s)
+Build completed successfully (1523 jobs).
+   step wall 2.18 s, peak RSS 2050044 KB, exit 0
+== lake build LeanLB.G.Bridge (2026-11-11 22:29:53 KST)
+✔ [1524/1524] Built LeanLB.G.Bridge (984ms)
+Build completed successfully (1524 jobs).
+   step wall 1.46 s, peak RSS 2008392 KB, exit 0
+== lake build LeanLB.G.Approx (2026-11-11 22:29:54 KST)
+✔ [1525/1525] Built LeanLB.G.Approx (4.4s)
+Build completed successfully (1525 jobs).
+   step wall 4.88 s, peak RSS 2075792 KB, exit 0
+== lake build LeanLB.G.Cyclo (2026-11-11 22:29:59 KST)
+⚠ [2019/2020] Replayed LeanLB.Geometry
+warning: LeanLB/Geometry.lean:138:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [2020/2020] Built LeanLB.G.Cyclo (1.4s)
+Build completed successfully (2020 jobs).
+   step wall 2.14 s, peak RSS 2302860 KB, exit 0
+== lake build LeanLB.G.Five (2026-11-11 22:30:01 KST)
+⚠ [2019/2025] Replayed LeanLB.Geometry
+warning: LeanLB/Geometry.lean:138:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [2025/2025] Built LeanLB.G.Five (1.0s)
+Build completed successfully (2025 jobs).
+   step wall 2.62 s, peak RSS 2325848 KB, exit 0
+== lake build LeanLB.G.Seven (2026-11-11 22:30:04 KST)
+⚠ [2019/2025] Replayed LeanLB.Geometry
+warning: LeanLB/Geometry.lean:138:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [2025/2025] Built LeanLB.G.Seven (2.4s)
+Build completed successfully (2025 jobs).
+   step wall 3.11 s, peak RSS 2351252 KB, exit 0
+== lake build LeanLB.Check.Rows (2026-11-11 22:30:07 KST)
+✔ [10/10] Built LeanLB.Check.Rows (187ms)
+Build completed successfully (10 jobs).
+   step wall 0.52 s, peak RSS 672296 KB, exit 0
+== lake build LeanLB.Check.MirN46 (2026-11-11 22:30:08 KST)
+⚠ [2019/2020] Replayed LeanLB.Geometry
+warning: LeanLB/Geometry.lean:138:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [2020/2020] Built LeanLB.Check.MirN46 (31s)
+Build completed successfully (2020 jobs).
+   step wall 32.49 s, peak RSS 4174928 KB, exit 0
+== lake build LeanLB.Check.C4N52 (2026-11-11 22:30:40 KST)
+⚠ [2019/2020] Replayed LeanLB.Geometry
+warning: LeanLB/Geometry.lean:138:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [2020/2020] Built LeanLB.Check.C4N52 (53s)
+Build completed successfully (2020 jobs).
+   step wall 54.01 s, peak RSS 4849092 KB, exit 0
+== lake build LeanLB.Check.C6N60 (2026-11-11 22:31:34 KST)
+⚠ [2019/2020] Replayed LeanLB.Geometry
+warning: LeanLB/Geometry.lean:138:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [2020/2020] Built LeanLB.Check.C6N60 (96s)
+Build completed successfully (2020 jobs).
+   step wall 96.72 s, peak RSS 6322592 KB, exit 0
+== lake build LeanLB.Check.C2N64 (2026-11-11 22:33:11 KST)
+⚠ [2019/2020] Replayed LeanLB.Geometry
+warning: LeanLB/Geometry.lean:138:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [2020/2020] Built LeanLB.Check.C2N64 (122s)
+Build completed successfully (2020 jobs).
+   step wall 122.73 s, peak RSS 7009988 KB, exit 0
+== lake build LeanLB.Check.C3N61 (2026-11-11 22:35:14 KST)
+⚠ [2019/2020] Replayed LeanLB.Geometry
+warning: LeanLB/Geometry.lean:138:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [2020/2020] Built LeanLB.Check.C3N61 (92s)
+Build completed successfully (2020 jobs).
+   step wall 92.95 s, peak RSS 6202560 KB, exit 0
+== lake build LeanLB.Check.C5N56 (2026-11-11 22:36:47 KST)
+⚠ [2019/2026] Replayed LeanLB.Geometry
+warning: LeanLB/Geometry.lean:138:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [2026/2026] Built LeanLB.Check.C5N56 (85s)
+Build completed successfully (2026 jobs).
+   step wall 86.22 s, peak RSS 5793928 KB, exit 0
+== lake build LeanLB.Check.C7N64 (2026-11-11 22:38:13 KST)
+⚠ [2019/2026] Replayed LeanLB.Geometry
+warning: LeanLB/Geometry.lean:138:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [2026/2026] Built LeanLB.Check.C7N64 (145s)
+Build completed successfully (2026 jobs).
+   step wall 146.25 s, peak RSS 7683420 KB, exit 0
+== lake build LeanLB (2026-11-11 22:40:39 KST)
+⚠ [2019/2038] Replayed LeanLB.Geometry
+warning: LeanLB/Geometry.lean:138:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [2035/2038] Built LeanLB.Main (1.3s)
+ℹ [2036/2038] Built LeanLB.Audit (8.9s)
+info: LeanLB/Audit.lean:41:0: 'LeanLB.sixfold60' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LeanLB/Audit.lean:42:0: 'LeanLB.fourfold52' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LeanLB/Audit.lean:43:0: 'LeanLB.halfturn64' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LeanLB/Audit.lean:44:0: 'LeanLB.mirror46' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LeanLB/Audit.lean:45:0: 'LeanLB.threefold61' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LeanLB/Audit.lean:46:0: 'LeanLB.sevenfold64' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LeanLB/Audit.lean:47:0: 'LeanLB.fivefold56' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [2037/2038] Built LeanLB (874ms)
+Build completed successfully (2038 jobs).
+   step wall 11.60 s, peak RSS 2293440 KB, exit 0
+== total wall 685 s (2026-11-11 22:40:51 KST)
