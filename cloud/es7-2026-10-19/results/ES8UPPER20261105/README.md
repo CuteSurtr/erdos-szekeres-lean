@@ -3,6 +3,9 @@
 Started 5 November 2026. **No bound below 311 is claimed.** `MEMO.md` is the scoping memo: a read-only workflow of
 5 readers, 3 proposals and a judge.
 
+*Note added 12 November 2026: this route was completed on 10 November; ES(8) ≤ 310 is Lean-checked (compact checker,
+unrefereed). See the last section. The sections in between keep their dated wording.*
+
 ## The route
 
 The omission bound is T = 406 − b_B − b_R, with b_B and b_R the largest excluded hole budgets over the balanced and
