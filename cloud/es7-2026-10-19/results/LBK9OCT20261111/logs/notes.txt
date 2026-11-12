@@ -1,0 +1,49 @@
+21:56:37 stopped guided run on k9_128_best phases (stuck in core relaxation >5 min); to be re-run as plain filter
+21:59:46 lpc8.py: plain filter solve added before the (guided) CEGAR loop; insertion scans ins_a/ins_b started before this change (plain mode, equivalent first solve)
+22:00:34 stopped S1 (base16+Y12, unsplit) after ~18 min without answer to free memory for the phase scans; its partial LRAT deleted
+22:08:43 stopped univ experiment (sampled universal units, SAT check unfinished after ~4 min); superseded by exact cone rules (tools/cone_rules.py) and run S3
+22:09:07 stopped S2 (base16+mono, no cone rules) after ~27 min without answer: superseded by S3 (same cube plus cone rules, strictly stronger formula); partial LRAT deleted
+22:12:14 stopped ins_b (insertion scan, 2nd half) to free a slot; results so far kept in real/ins/log_ins_b.txt
+22:18:53 no-threshold experiment: phase-CNF of the k9_128_final phases WITHOUT threshold clauses still unsolved after 9.5 min (stopped); with threshold clauses such phase-CNFs are refuted in 1-4 min -> threshold information matters
+22:21:32 stopped S3 (cone, mono; 14 min), S4 (cone, Y12; 13 min), S3x (sampled thresholds; exploration, 4 min) and the outer-octagon scan (f_del0 part 12/23 done, all phase-UNSAT): superseded by S5/S6 (rigorous threshold rules thr2 added); partial LRATs deleted
+22:21:40 started S5, S6 and S5u (S5's CNF with cadical --unsat)
+22:22:54 paused ins_a (11/47 done) for the cake_lpr feasibility test; remaining list real/ins/rest_a.txt
+22:29:29 cake_lpr scaling test: 9.16M-clause UNSAT instance (12 layers of the near miss) VERIFIED with heap 2500 MB, exhausted at 1800 MB; the 29.5M-clause formula exhausted heap 3500 MB -> expect ~8-12 GB heap for t=16
+22:29:44 resumed ins_a as ins_a2 on the remaining 35 phase vectors
+22:34:12 stopped S5u (S5 CNF, --unsat preset, 13 min) to run S7 (S5 + cell rules B=2 + bin-order clauses)
+22:37:53 stopped S6 (17 min) and S7 (6 min): superseded by S8 (mono) and S9 (Y12) = order rules + cell rules B=2 (cone and threshold) + bin-order clauses
+22:39:02 stopped S5 (order rules, mono; 17.5 min, 147k conflicts) - dominated by S8 (same cube, plus cell rules)
+22:44:45 S8c15 (S8 + Z(1..15)=1: monotone order, all phases below 22.5 deg) UNSAT in 281 s (38,651 conflicts, LRAT 1.09 GB). Stopped S8 (5 min) and S9 (5 min) - switching to cube-and-conquer over the 16 B=2 sub-cubes of the monotone cube; paused ins_a2 (remaining list real/ins/rest_a2.txt)
+22:46:28 cake_lpr: S8c15 VERIFIED UNSAT (51 s, heap 11000 MB; heap 7000 MB exhausted). Moved to sat/cubes/c_15. Started 3 solve lanes for cubes c_0..c_14
+23:07:39 NOTE: tools/cubes_mono.sh was edited (heap retry, NZ parameter) while the three solve lanes were running it; restored to the original bytes (as written at 22:45) so that the running shells reach EOF after their loops; the new version is tools/cubes.sh
+23:11:34 all 16 monotone cubes UNSAT by CaDiCaL (165-372 s each); started cake_lpr check lane (heap 11000 MB, exclusive memory)
+23:25:33 cake_lpr: 16 of 16 monotone cube proofs VERIFIED UNSAT
+23:25:33 started G3 = S11 cubes (monotone on layers 1..14, layer 15 free; decision list on Z_1..Z_14; 2 lanes) and S10 (all orders, Y12, cell rules B=4)
+23:27:36 resumed the insertion scan on the remaining 69 phase vectors (ins_rest)
+23:29:34 stopped S10 (all orders, B=4; no answer) to run the G4 family (layer 1 free: psi_2 < ... < psi_15) as cubes on Z_2..Z_15
+23:30:25 replaced G4 by G5 = S13 (monotone on layers 2..14; layers 1 and 15 free), cubes on Z_2..Z_14 (14 cubes); first cube r=13 (Z_2..Z_14 true) as difficulty probe
+23:35:48 coordinator: limits now 8 threads / 16 GB; gate before any impossibility claim: written soundness per family + positive controls (both 120-point sets, mirrors, layer subsets, random configs) + checkable cube cover step
+23:37:52 G5 probe cube c_13 UNSAT in 424 s; stopped G3 (4 of 15 cubes done, all UNSAT; G5 contains G3) and run G5 cubes c_0..c_12 in 3 lanes
+23:40:22 stopped ins_rest (insertion scan) to free memory for the t=15 cube-level positive controls
+23:42:43 random checks: gen.py nest units are violated by random configurations that are NOT convex layers (only radius-ordered): expected, the nest family needs strict nesting of the convex layers (layer lemma). All other families passed on such (weaker) configurations. Rerun with the nesting filter NEST=1.
+23:43:24 G6 probe: S14 (monotone on layers 3..13; layers 1, 2, 14, 15 free), cube Z_3..Z_13 true
+23:59:10 G6 probe cube (Z_3..Z_13 true) UNSAT in 642 s; started G6 lane 0 on the other 11 cubes
+00:25:39 G6: lane 0 replaced by 3 lock-aware lanes (unsolved cubes restarted)
+00:25:40 G7 probe started: S15 (monotone on layers 4..12), cube Z_4..Z_12 true
+00:26:11 cake_lpr: 14 of 14 G5 (Theorem 2) cube proofs VERIFIED UNSAT; cover and round trips OK
+00:58:51 stopped the G7 probe (window 4..12, cube Z_4..Z_12) after 1933 s without answer: G7 cannot finish tonight. Instead: windows 1..13 (W1) and 3..15 (W3) of length 13, which with Theorem 2 (window 2..14) give: no monotone run of 13 consecutive layers
+00:59:11 started window lane wl0 and the after-G6 script (checks, then 3 more window lanes)
+00:59:36 correction: windows 1..13 and 3..15 contain 3..13 (G6), so they are implied by G6; stopped them. New plan: windows 1..12 (V1) and 4..15 (V4); with G6 (3..13, contained in 2..13 and 3..14) they give: no monotone run of 12 consecutive layers
+00:59:52 started window lane vl0 (V1 then V4) and after_g6c (G6 checks, then 3 more V lanes)
+01:14:44 extra lane (unit name lb-k9oct-g6x2 reused so that the post-G6 script also waits for it): V4 cube c_12
+01:29:59 extra lane (name lb-k9oct-g6x2): V1 cubes 11, 10
+01:43:31 stopped the extra lane after V1 c_11 (V1 c_10 reset)
+01:43:38 G6 solve lanes finished (12 cubes solved); starting G6 cake_lpr checks
+01:58:42 G6 checks done: 12 verified; ALL OK
+01:58:42 started 3 more window lanes (V1, V4)
+01:59:10 Theorem 3 (window 3..13) certified: 12/12 cake_lpr verdicts, cover and round trips OK
+02:47:24 replaced after_v by after_v2 (V1 checks once at most one V lane is active)
+03:15:40 at most one V lane active: starting V1 cake_lpr checks
+03:31:48 V1 checks done: 13 verified; ALL OK
+03:31:48 V lanes finished: V4 13/13 solved
+03:46:14 V4 checks done: 13 verified; ALL OK

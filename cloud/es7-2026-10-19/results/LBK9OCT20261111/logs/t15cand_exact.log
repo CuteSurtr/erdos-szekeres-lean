@@ -1,0 +1,24 @@
+t=15 n=120 triple vars 35105 Y vars 91; phase order (psi increasing): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+table n=120: 0 violations (nonzero / cyclic / antisymmetric)
+convex  3-gons: DPA 280840  DPB 280840
+convex  4-gons: DPA 5419058  DPB 5419058
+convex  5-gons: DPA 54588512  DPB 54588512
+convex  6-gons: DPA 298410024  DPB 298410024
+convex  7-gons: DPA 871843824  DPB 871843824
+convex  8-gons: DPA 1153006585  DPB 1153006585
+convex  9-gons: DPA 0  DPB 0
+convex 10-gons: DPA 0  DPB 0
+largest convex subset (<= K): DPA 8  DPB 8  (K-gon count is 0, so exact)
+DPA == DPB
+{'m': 8, 'C': 0, 'n': 120, 'layers': 15, 'orbit_structure': True, 'distinct': True, 'invariant': True, 'zero_orientations': 0, 'intervalB_mismatch': 0, 'intervalB_undecided': 0, 'lexorder_intervalB_bad': 0, 'layers_are_nested_convex_orbits': True, 'radii_decreasing': True, 'max_abs_coeff': 587044099564, 'z8_sqrt2_mismatch': 0}
+sha256 t15cand.vc.pts 1137f8873e23eed0c0fb047acde5d1e6f84ac9f476d422b66edbe4e11c1d3ba4
+sha256 t15cand.vc.otab 3725d77658e5f13916abed55f0654af4b84fc1c807018855021883d4b2a75a28
+sha256 t15cand.vc.lex 984afa60db0ff4cde4860931535f2578513f5fd680b5c51cd2741412cca6e141
+EXACT-PREP PASS
+convex  6-gons: DP1 298410024  DP2 298410024
+convex  7-gons: DP1 871843824  DP2 871843824
+convex  8-gons: DP1 1153006585  DP2 1153006585
+convex  9-gons: DP1 0  DP2 0
+largest convex subset: DP1 8  DP2 8
+CVX2 PASS (K=9)
+182bb9b0c52b6d7be150f186afaf5e49f8e8fb089c19105d10aa6bd59e638231  <lb-k9oct-work-dir>/real/test15g/t15cand.pts

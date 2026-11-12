@@ -1,0 +1,15 @@
+cover: every assignment of Z_4..Z_15 lies in exactly one of the 13 cubes
+c_0  cube -497701                                  cnf cb7e20e38c4c3ac3 hash OK  cake_lpr VERIFIED UNSAT
+c_1  cube 497701 -497702                           cnf 6c72286c375b38e5 hash OK  cake_lpr VERIFIED UNSAT
+c_2  cube 497701 497702 -497703                    cnf 7bbece60dd7fecbe hash OK  cake_lpr VERIFIED UNSAT
+c_3  cube 497701 497702 497703 -497704             cnf a8f4a9d552ca3d2d hash OK  cake_lpr VERIFIED UNSAT
+c_4  cube 497701 497702 497703 497704 -497705      cnf f9afd40ac204a6fa hash OK  cake_lpr VERIFIED UNSAT
+c_5  cube 497701 497702 497703 497704 497705 -4977 cnf 031e64f69ace0e3a hash OK  cake_lpr VERIFIED UNSAT
+c_6  cube 497701 497702 497703 497704 497705 49770 cnf aab3dde2e1fcaeb9 hash OK  cake_lpr VERIFIED UNSAT
+c_7  cube 497701 497702 497703 497704 497705 49770 cnf 3d4c8764fe81f994 hash OK  cake_lpr VERIFIED UNSAT
+c_8  cube 497701 497702 497703 497704 497705 49770 cnf f9d97f60819163e5 hash OK  cake_lpr VERIFIED UNSAT
+c_9  cube 497701 497702 497703 497704 497705 49770 cnf 8b3c098ae68f7bd8 hash OK  cake_lpr VERIFIED UNSAT
+c_10 cube 497701 497702 497703 497704 497705 49770 cnf cb2fb8b7c4e4a447 hash OK  cake_lpr VERIFIED UNSAT
+c_11 cube 497701 497702 497703 497704 497705 49770 cnf 400277df82e56346 hash OK  cake_lpr VERIFIED UNSAT
+c_12 cube 497701 497702 497703 497704 497705 49770 cnf 7e1ae2edb98bc056 hash OK  cake_lpr VERIFIED UNSAT
+ALL OK

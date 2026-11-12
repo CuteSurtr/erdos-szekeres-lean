@@ -1,0 +1,23 @@
+22:01:16 base built: t=13, 22763 triple vars
+22:01:30 phase s_0to12: th(deg)=[0.0, 4.1925, 4.3168, 4.4161, 4.4942, 4.6619, 4.9529, 5.4278, 5.4808, 5.5853, 6.0154, 6.4311, 6.4804]
+22:01:30   forced 14651, free 8112, kept rule clauses 390, threshold 858, chain 7072015, conflicts 0, build 14.5 s
+22:01:30   guided: 8112 hint assumptions
+22:01:30   phase-SAT (first solve) 0.4 s
+22:01:31   relax 1: core 50, 8062 assumptions left
+22:01:31   relax 21: core 116, 5897 assumptions left
+22:01:31   it 24 relax 23 assum 5632 cuts 1 last support 3 delta -8.443e-01  1.2 s
+22:01:37   it 100 relax 23 assum 5632 cuts 77 last support 4 delta -1.981e-01  7.0 s
+22:01:45   it 200 relax 23 assum 5632 cuts 177 last support 6 delta -1.742e-01  14.7 s
+22:01:53   it 300 relax 23 assum 5632 cuts 277 last support 7 delta -1.668e-01  22.4 s
+22:02:00   it 400 relax 23 assum 5632 cuts 377 last support 4 delta -2.450e-01  30.2 s
+22:02:08   it 500 relax 23 assum 5632 cuts 477 last support 8 delta -1.426e-01  38.0 s
+22:02:15   it 600 relax 24 assum 5448 cuts 576 last support 8 delta -2.141e-01  45.3 s
+22:02:23   it 700 relax 24 assum 5448 cuts 676 last support 4 delta -2.152e-01  52.5 s
+22:02:30   it 800 relax 24 assum 5448 cuts 776 last support 3 delta -2.288e-01  59.6 s
+22:02:37   it 900 relax 24 assum 5448 cuts 876 last support 5 delta -6.818e-02  66.6 s
+22:02:44   it 1000 relax 24 assum 5448 cuts 976 last support 6 delta -5.349e-02  73.6 s
+22:02:50   it 1100 relax 24 assum 5448 cuts 1076 last support 8 delta -6.163e-02  80.3 s
+22:02:58   it 1200 relax 24 assum 5448 cuts 1176 last support 7 delta -6.779e-02  87.5 s
+22:03:00   TIMEOUT after 1235 iterations, 1211 cuts, 90.1 s
+22:03:00 RESULT real/sub/s_0to12.json ('TIMEOUT', 1235, 1211)
+22:03:00 done

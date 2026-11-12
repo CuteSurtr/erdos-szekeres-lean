@@ -1,0 +1,60 @@
+c --- [ banner ] -------------------------------------------------------------
+c CaDiCaL SAT Solver
+c Copyright (c) 2016-2024
+c A. Biere, M. Fleury, N. Froleyks, K. Fazekas, F. Pollitt, T. Faller
+c JKU Linz, University of Freiburg, TU Wien
+c Version 2.1.3
+c g++-15.2.0
+c Dec 15 2025 01:04:17
+c --- [ proof tracing ] ------------------------------------------------------
+c opening file to write '<lb-k9oct-work-dir>/sat/S8/proof.lrat'
+c writing non-binary proof trace to '<lb-k9oct-work-dir>/sat/S8/proof.lrat'
+c --- [ parsing input ] ------------------------------------------------------
+c reading DIMACS file from '<lb-k9oct-work-dir>/sat/S8/S8.cnf'
+c opening file to read '<lb-k9oct-work-dir>/sat/S8/S8.cnf'
+c found 'p cnf 497712 29778767' header
+c parsed 29778767 clauses in 5.32 seconds process time
+c --- [ options ] ------------------------------------------------------------
+c   --binary=false                 (different from default 'true')
+c   --lrat=true                    (different from default 'false')
+c --- [ solving ] ------------------------------------------------------------
+c time measured in process time since initialization
+c  seconds    reductions  redundant   irredundant
+c          MB     restarts       trail         variables
+c            level   conflicts       glue            remaining
+c *  5.32 2825  0 0   0    0    0  0% 0 27461404 294822 59%
+c  seconds    reductions  redundant    irredundant
+c          MB     restarts       trail          variables
+c            level   conflicts       glue             remaining
+c 2 63.70 3228 183 3 240 5003 34562 42% 9 11436282 294569 59%
+c  seconds     reductions   redundant    irredundant
+c          MB      restarts         trail         variables
+c             level   conflicts         glue            remaining
+c  seconds     reductions   redundant    irredundant
+c           MB     restarts        trail         variables
+c             level    conflicts       glue            remaining
+c 2 171.97 3129 119 5 365 15003 13948 49% 9 8256566 202135 41%
+c  seconds     reductions    redundant   irredundant
+c           MB     restarts         trail        variables
+c             level    conflicts        glue           remaining
+c 2 254.18 3130 44 7 1034 30003 16365 30% 9 8241586 201988 41%
+c  seconds     reductions     redundant    irredundant
+c           MB     restarts          trail         variables
+c             level     conflicts        glue            remaining
+c 3 391.28 3128 18 10 1094 50003 22600 23% 10 7371106 186513 37%
+c 2 392.16 3128 18 10 1094 50003 22942 23% 10 7351425 186513 37%
+c caught signal 15 (SIGTERM)
+c --- [ result ] -------------------------------------------------------------
+c UNKNOWN
+c --- [ run-time profiling ] -------------------------------------------------
+c process time taken by individual solving procedures
+c (percentage relative to process time for solving)
+c       343.15   84.70% search
+c       214.93   53.05% stable
+c       121.85   30.08% unstable
+c        61.99   15.30% simplify
+c        19.22    4.74% vivify
+c        12.07    2.98% elim
+c        10.77    2.66% subsume
+c         8.96    2.21% probe
+c         5.72    1.41% walk

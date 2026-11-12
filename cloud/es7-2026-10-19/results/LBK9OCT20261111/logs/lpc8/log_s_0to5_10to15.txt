@@ -1,0 +1,15 @@
+22:04:59 base built: t=12, 17860 triple vars
+22:05:07 phase s_0to5_10to15: th(deg)=[0.0, 4.1925, 4.3168, 4.4161, 4.4942, 4.6619, 6.0154, 6.4311, 6.4804, 7.1874, 7.3977, 20.8174]
+22:05:07   forced 11524, free 6336, kept rule clauses 330, threshold 726, chain 5145192, conflicts 0, build 8.6 s
+22:05:07   guided: 6336 hint assumptions
+22:05:07   phase-SAT (first solve) 0.3 s
+22:05:07   relax 1: core 53, 6283 assumptions left
+22:05:08   it 6 relax 5 assum 6115 cuts 1 last support 7 delta -1.841e-02  0.5 s
+22:05:13   it 100 relax 10 assum 5773 cuts 90 last support 4 delta -5.159e-01  5.6 s
+22:05:18   it 200 relax 11 assum 5719 cuts 189 last support 7 delta -1.753e-02  11.1 s
+22:05:24   it 300 relax 12 assum 5661 cuts 288 last support 3 delta -1.497e-01  16.7 s
+22:05:29   it 400 relax 15 assum 5439 cuts 385 last support 11 delta -9.498e-04  22.2 s
+22:05:35   it 500 relax 15 assum 5439 cuts 485 last support 9 delta -1.305e-03  27.9 s
+22:05:38   [it 558 relax 15] REALIZABLE sign vector: delta=2.364e-05 float N9=0 mindet=1.30e-08 lr=[-0.0, -1.368823, -1.393442, -1.396255, -1.397727, -1.400555, -1.67986, -1.68328, -1.683676, -1.700732, -1.703236, -6.313525]
+22:05:38 RESULT real/sub/s_0to5_10to15.json ('CAND', 558, 542)
+22:05:38 done

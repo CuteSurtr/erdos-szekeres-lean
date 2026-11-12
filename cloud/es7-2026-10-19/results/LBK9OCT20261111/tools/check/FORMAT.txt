@@ -1,0 +1,27 @@
+Certificate directories (one per point set): NAME/NAME.{cfg,pts,otab,lex,log}
+
+NAME.cfg   float search output of pfnest (lines "lr th": layer circumradius e^lr, phase th); provenance only.
+NAME.pts   THE CERTIFIED SET.  One point per line: integers w_0..w_{m-1}, point = sum_j w_j zeta^j,
+           zeta = e^{2 pi i/m}.  Rows o*m .. o*m+m-1 are layer o (outermost first), row o*m+k = zeta^k * row o*m.
+           For odd m with centre, the last row is 0 (the centre).
+NAME.otab  exact orientation table: first line "n", then n^3 signed bytes orient(a,b,c) (a major, then b, then c).
+NAME.lex   rank of each point in the exact (Im, Re) lexicographic order (used by DP2 of cvx2.c).
+NAME.log   full output of verify/make_cert.sh, including SHA-256 of the four files.
+
+Checks in the log (all exact unless stated):
+ 1. verify/verify_cfg.py: distinct points, orbit structure, invariance under zeta, no zero orientation among all
+    C(n,3) triples (method A: sign in Q(2cos(2pi/m)), exact), the same signs from rigorous fixed-point interval
+    arithmetic (method B, 2^-300 resolution, outward rounding; must be decided and agree), for m = 8 also from
+    exact Z[sqrt2] coordinates (method C); every layer is a convex orbit with all later layers strictly inside;
+    radii strictly decreasing.
+ 2. verify/cvx2.c: two DPs with different anchorings (DP1: minimum-index vertex + its CCW successor, coordinate
+    free; DP2: lowest vertex in the exact (Im,Re) order).  Both give the number of convex k-gons for k = 3..K and
+    the size of a largest convex subset; all must agree, the K-gon count must be 0.
+ 3. Re-check from NAME.pts alone (verify_cfg.py --pts): the orientation table must be byte-identical.
+ 4. Third implementation: largest convex subset by the DP of the cvxcheck.c of the first 7-fold search (a copy, compiled
+    unchanged; its DFS part is run only up to k = 4).
+
+Reproduce from the point file alone (only verify_cfg.py, zm.py and cvx2.c are copied to this directory; the
+.cfg, .otab and .lex files and make_cert.sh are not):
+            python3 verify_cfg.py --pts NAME.pts m C K x && ./cvx2 x K
+Compiler: cc -O3 -o cvx2 cvx2.c   (on macOS add -isysroot <SDK path> if the default SDK is not found)

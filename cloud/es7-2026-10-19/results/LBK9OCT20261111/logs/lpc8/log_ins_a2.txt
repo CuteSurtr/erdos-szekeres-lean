@@ -1,0 +1,27 @@
+22:29:47 base built: t=16, 42672 triple vars
+22:30:21 phase c8_120pts_15layers_s09_0: th(deg)=[0.0, 3.6874, 3.7028, 3.8516, 4.0086, 4.1798, 4.4734, 4.6788, 5.0533, 5.2538, 5.4544, 5.6679, 5.9962, 6.6526, 7.0949, 18.2525]
+22:30:21   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16148306, conflicts 0, build 34.6 s
+22:32:51   PHASE-UNSAT (first solve, no cuts, no assumptions) 149.9 s
+22:32:51 RESULT real/ins/c8_120pts_15layers_s09_0.json ('UNSAT', 0, 0)
+22:33:33 phase c8_120pts_15layers_s09_2: th(deg)=[0.0, 3.6874, 3.7028, 3.8516, 4.0086, 4.1798, 4.4734, 4.6788, 5.0533, 5.7544, 5.4544, 5.6679, 5.9962, 6.6526, 7.0949, 18.2525]
+22:33:33   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16145149, conflicts 0, build 41.2 s
+22:33:55   PHASE-UNSAT (first solve, no cuts, no assumptions) 22.2 s
+22:33:55 RESULT real/ins/c8_120pts_15layers_s09_2.json ('UNSAT', 0, 0)
+22:34:29 phase c8_120pts_15layers_s10_1: th(deg)=[0.0, 3.6874, 3.7028, 3.8516, 4.0086, 4.1798, 4.4734, 4.6788, 5.0533, 5.4544, 5.1544, 5.6679, 5.9962, 6.6526, 7.0949, 18.2525]
+22:34:29   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16147132, conflicts 0, build 34.2 s
+22:34:58   PHASE-UNSAT (first solve, no cuts, no assumptions) 28.7 s
+22:34:58 RESULT real/ins/c8_120pts_15layers_s10_1.json ('UNSAT', 0, 0)
+22:35:38 phase c8_120pts_15layers_s11_0: th(deg)=[0.0, 3.6874, 3.7028, 3.8516, 4.0086, 4.1798, 4.4734, 4.6788, 5.0533, 5.4544, 5.6679, 5.832, 5.9962, 6.6526, 7.0949, 18.2525]
+22:35:38   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16148306, conflicts 0, build 39.8 s
+22:39:35   PHASE-UNSAT (first solve, no cuts, no assumptions) 236.5 s
+22:39:35 RESULT real/ins/c8_120pts_15layers_s11_0.json ('UNSAT', 0, 0)
+22:40:12 phase c8_120pts_15layers_s11_2: th(deg)=[0.0, 3.6874, 3.7028, 3.8516, 4.0086, 4.1798, 4.4734, 4.6788, 5.0533, 5.4544, 5.6679, 6.2962, 5.9962, 6.6526, 7.0949, 18.2525]
+22:40:12   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16147987, conflicts 0, build 36.6 s
+22:40:28   PHASE-UNSAT (first solve, no cuts, no assumptions) 16.3 s
+22:40:28 RESULT real/ins/c8_120pts_15layers_s11_2.json ('UNSAT', 0, 0)
+22:41:02 phase c8_120pts_15layers_s12_1: th(deg)=[0.0, 3.6874, 3.7028, 3.8516, 4.0086, 4.1798, 4.4734, 4.6788, 5.0533, 5.4544, 5.6679, 5.9962, 5.6962, 6.6526, 7.0949, 18.2525]
+22:41:02   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16147987, conflicts 0, build 34.2 s
+22:41:31   PHASE-UNSAT (first solve, no cuts, no assumptions) 28.2 s
+22:41:31 RESULT real/ins/c8_120pts_15layers_s12_1.json ('UNSAT', 0, 0)
+22:42:01 phase c8_120pts_15layers_s13_0: th(deg)=[0.0, 3.6874, 3.7028, 3.8516, 4.0086, 4.1798, 4.4734, 4.6788, 5.0533, 5.4544, 5.6679, 5.9962, 6.6526, 6.8737, 7.0949, 18.2525]
+22:42:01   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16148306, conflicts 0, build 30.1 s

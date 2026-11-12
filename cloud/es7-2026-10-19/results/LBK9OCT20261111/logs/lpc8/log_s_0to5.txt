@@ -1,0 +1,18 @@
+21:59:37 base built: t=6, 2162 triple vars
+21:59:37 phase s_0to5: th(deg)=[0.0, 4.1925, 4.3168, 4.4161, 4.4942, 4.6619]
+21:59:37   forced 1442, free 720, kept rule clauses 75, threshold 165, chain 328831, conflicts 0, build 0.4 s
+21:59:37   guided: 720 hint assumptions
+21:59:37   relax 1: core 12, 708 assumptions left
+21:59:37   [it 2 relax 1] REALIZABLE sign vector: delta=7.316e-05 float N9=0 mindet=1.28e-06 lr=[-0.0, -2.106662, -2.112175, -2.118115, -2.119557, -2.12241]
+21:59:37 RESULT real/sub/s_0to5.json ('CAND', 2, 0)
+21:59:37 done
+21:59:47 base built: t=6, 2162 triple vars
+21:59:47 phase s_0to5: th(deg)=[0.0, 4.1925, 4.3168, 4.4161, 4.4942, 4.6619]
+21:59:47   forced 1442, free 720, kept rule clauses 75, threshold 165, chain 328831, conflicts 0, build 0.4 s
+21:59:47   guided: 720 hint assumptions
+21:59:47   phase-SAT (first solve) 0.0 s
+21:59:47   relax 1: core 19, 701 assumptions left
+21:59:47   it 2 relax 1 assum 701 cuts 1 last support 5 delta -5.079e-03  0.0 s
+21:59:47   [it 7 relax 1] REALIZABLE sign vector: delta=2.620e-05 float N9=0 mindet=1.88e-06 lr=[-0.0, -1.132647, -1.13972, -1.145348, -1.147096, -1.149644]
+21:59:47 RESULT real/sub/s_0to5.json ('CAND', 7, 5)
+21:59:47 done

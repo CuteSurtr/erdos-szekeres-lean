@@ -1,0 +1,14 @@
+m=8 t=16 clauses 4296 by length {1: 2616, 2: 1680}
+m=8 t=16 cone-rule clauses 64197 (units 17787) by length {1: 17787, 2: 2730, 3: 43680}
+m=8 t=16 threshold-order clauses (v2) 8550; {'tested': 40500, 'clauses': 8550, 'rejected': 31950}
+m=8 t=16 B=2: 191930 clauses (cell cone rules 191930, ladder 0)
+m=8 t=16 B=2 cell threshold-order clauses 29700; {'tested': 131520, 'clauses': 29700, 'rejected': 101820, 'dup': 25080}
+913949348af47f09bb0fd873e0b519ad2fe8dc535845dda9d4dcba2d0441422e  A16.cnf
+e64a228f13d34b379b44d85ae3aed51baebd3cc5c65d9224903788fe7e484322  chord.clauses
+15143b30ec5068b9033f1ff3f196e319b62207e933cae9aff75a3210517a5829  cone.clauses
+175a15084ae5ca044d66edac06ad56edca5089b2ed3cfdc458a7503c86b52583  thr2.clauses
+4648c0b2e41c66f575e92a71a8f9405ab21f0a6a27284136cf326c68546b74a8  cellB2.clauses
+512d23ceadd3b23e140d8f4f0d309154fc00eb61eead60ccbbb4f108a5a0ec2f  cellthrB2.clauses
+0e7f377904ebe9b8b6ec95d16a8db2e3d92f663c160482ff9623d76f034afacc  binorder.clauses
+21deeb042d5437d244ec557f44f35e350160be694ddbf4409ee2bde7ded765c7  mono.units
+cacb288c429d8e283cec6139facfddaae5e844af934c2c90874dd04451ffce13  BASE.cnf
