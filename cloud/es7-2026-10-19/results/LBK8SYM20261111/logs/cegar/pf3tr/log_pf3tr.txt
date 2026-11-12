@@ -1,0 +1,11 @@
+22:30:29   c3_64_3oct_p0_K1500: units 8300 (conflicts with hint 0) fixed 3922 imps 104 chain clauses 730246 vars 82008, built in 1.3 s
+22:30:29 RESULT c3_64_3oct_p0 K 1500 N8(hint) 3 -> UNSAT it 1 best -9.000e+00 (1.4 s)
+22:30:31   c3_64_3oct_p0_K4000: units 8300 (conflicts with hint 0) fixed 2747 imps 104 chain clauses 1123710 vars 92125, built in 1.9 s
+22:30:32 RESULT c3_64_3oct_p0 K 4000 N8(hint) 3 -> UNSAT it 1 best -9.000e+00 (2.1 s)
+22:30:34   c3_64_3oct_p0_K8000: units 8300 (conflicts with hint 0) fixed 1820 imps 104 chain clauses 1429202 vars 100218, built in 2.4 s
+22:32:41   c3_64_3oct_p0_K8000: it 500 delta -6.493e-01 best -7.695e-02 126 s
+22:34:57   c3_64_3oct_p0_K8000: it 1000 delta -6.141e-01 best -7.185e-02 262 s
+22:37:20   c3_64_3oct_p0_K8000: it 1500 delta -6.748e-01 best -7.185e-02 405 s
+22:39:46   c3_64_3oct_p0_K8000: it 2000 delta -4.889e-01 best -7.185e-02 552 s
+22:40:35 RESULT c3_64_3oct_p0 K 8000 N8(hint) 3 -> TIMEOUT it 2173 best -7.185e-02 (602.9 s)
+22:40:35 done

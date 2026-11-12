@@ -1,0 +1,25 @@
+22:02:20 start {'m': 3, 't': 21, 'centre': True, 'out': '/home/jay/research/data/lb-k8sym-20261111/runs/p3a', 'seed': 401, 'init': 'pool3/c3_64_3oct.json', 'ansatz': 'init', 'stop_at': 0, 'hours': 2.0, 'steps_per_T': 4000, 'T0': 0.05, 'Tmin': 0.005, 'alpha': 0.93, 'w7': 0.02, 'restart_evals': 300000, 'tag': 'p3a', 'perturb': 0.0, 'pfocus': 0.5}
+22:02:20 restart 1 init init N8 3 N7 701691
+22:03:20 r1 ev 84000 acc 0.610 ab 0.389 T 0.0109 cur N8 3 N7 700056 | best N8 3 N7 604314
+22:04:23 r1 ev 168000 acc 0.612 ab 0.388 T 0.0073 cur N8 3 N7 689154 | best N8 3 N7 593835
+22:05:25 r1 ev 252000 acc 0.615 ab 0.385 T 0.0063 cur N8 3 N7 640290 | best N8 3 N7 529683
+22:06:04 end restart 1 init evals 300000 best N8 3 N7 502263 found 0
+22:06:04 restart 2 init init N8 3 N7 701691
+22:07:07 r2 ev 84000 acc 0.609 ab 0.391 T 0.0109 cur N8 3 N7 596691 | best N8 3 N7 569925
+22:08:08 r2 ev 164000 acc 0.616 ab 0.384 T 0.0112 cur N8 3 N7 602355 | best N8 3 N7 551046
+22:09:09 r2 ev 240000 acc 0.622 ab 0.377 T 0.0150 cur N8 3 N7 547803 | best N8 3 N7 547803
+22:09:58 end restart 2 init evals 300000 best N8 3 N7 547803 found 0
+22:09:58 restart 3 init init N8 3 N7 701691
+22:10:58 r3 ev 80000 acc 0.602 ab 0.398 T 0.0117 cur N8 3 N7 587385 | best N8 3 N7 521271
+22:12:00 r3 ev 164000 acc 0.615 ab 0.385 T 0.0121 cur N8 3 N7 633483 | best N8 3 N7 521271
+22:13:04 r3 ev 240000 acc 0.623 ab 0.376 T 0.0097 cur N8 3 N7 648651 | best N8 3 N7 517641
+22:13:51 end restart 3 init evals 300000 best N8 3 N7 488532 found 0
+22:13:51 restart 4 init init N8 3 N7 701691
+22:14:54 r4 ev 92000 acc 0.580 ab 0.420 T 0.0094 cur N8 3 N7 642057 | best N8 3 N7 555270
+22:15:56 r4 ev 180000 acc 0.598 ab 0.402 T 0.0058 cur N8 3 N7 630270 | best N8 3 N7 550728
+22:16:57 r4 ev 268000 acc 0.603 ab 0.396 T 0.0130 cur N8 3 N7 647883 | best N8 3 N7 487749
+22:17:20 end restart 4 init evals 300000 best N8 3 N7 487749 found 0
+22:17:20 restart 5 init init N8 3 N7 701691
+22:18:22 r5 ev 92000 acc 0.589 ab 0.411 T 0.0094 cur N8 3 N7 579231 | best N8 3 N7 507156
+22:19:22 r5 ev 176000 acc 0.607 ab 0.392 T 0.0068 cur N8 3 N7 614949 | best N8 3 N7 507156
+22:20:23 r5 ev 264000 acc 0.607 ab 0.393 T 0.0051 cur N8 3 N7 788190 | best N8 3 N7 507156

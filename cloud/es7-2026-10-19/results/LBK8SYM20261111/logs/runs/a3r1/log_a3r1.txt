@@ -1,0 +1,4 @@
+22:13:53 start {'m': 3, 't': 21, 'centre': True, 'out': '/home/jay/research/data/lb-k8sym-20261111/runs/a3r1', 'seed': 801, 'init': None, 'ansatz': 'clusters,twoorbit,spiral11,needle11,free', 'stop_at': 0, 'hours': 2.0, 'steps_per_T': 4000, 'T0': 0.5, 'Tmin': 0.02, 'alpha': 0.93, 'w7': 0.02, 'restart_evals': 600000, 'tag': 'a3r1', 'perturb': 0.0, 'pfocus': 0.0}
+22:13:53 restart 1 twoorbit init N8 2922966 N7 3947982
+22:14:56 r1 ev 56000 acc 0.944 ab 0.006 T 0.1810 cur N8 863517 N7 1647903 | best N8 210372 N7 677589
+22:15:57 r1 ev 116000 acc 0.865 ab 0.057 T 0.0610 cur N8 9471 N7 163647 | best N8 7671 N7 171828

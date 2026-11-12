@@ -1,0 +1,21 @@
+21:58:38 start {'m': 4, 't': 14, 'centre': False, 'out': '/home/jay/research/data/lb-k8sym-20261111/runs/p4a', 'seed': 301, 'init': 'pool4/a4n1_7.json,pool4/a4n2_17.json', 'ansatz': 'init', 'stop_at': 0, 'hours': 1.0, 'steps_per_T': 4000, 'T0': 0.08, 'Tmin': 0.01, 'alpha': 0.93, 'w7': 0.02, 'restart_evals': 300000, 'tag': 'p4a', 'perturb': 0.0005, 'pfocus': 0.5}
+21:58:38 restart 1 init init N8 12362 N7 127820
+21:59:39 r1 ev 176000 acc 0.600 ab 0.395 T 0.0223 cur N8 17 N7 137736 | best N8 17 N7 94620
+22:00:23 end restart 1 init evals 300000 best N8 17 N7 94596 found 0
+22:00:23 restart 2 init init N8 98478 N7 336932
+22:01:24 r2 ev 136000 acc 0.598 ab 0.381 T 0.0167 cur N8 33 N7 202432 | best N8 33 N7 166540
+22:02:26 r2 ev 296000 acc 0.585 ab 0.404 T 0.0180 cur N8 17 N7 172056 | best N8 17 N7 113828
+22:02:27 end restart 2 init evals 300000 best N8 17 N7 113828 found 0
+22:02:27 restart 3 init init N8 257 N7 100148
+22:03:28 r3 ev 168000 acc 0.624 ab 0.373 T 0.0155 cur N8 17 N7 113960 | best N8 17 N7 88052
+22:04:17 end restart 3 init evals 300000 best N8 17 N7 87320 found 0
+22:04:17 restart 4 init init N8 23546 N7 218876
+22:05:18 r4 ev 164000 acc 0.587 ab 0.409 T 0.0100 cur N8 18 N7 185428 | best N8 18 N7 161300
+22:06:14 end restart 4 init evals 300000 best N8 18 N7 136340 found 0
+22:06:14 restart 5 init init N8 219 N7 101384
+22:07:15 r5 ev 164000 acc 0.606 ab 0.391 T 0.0125 cur N8 17 N7 111052 | best N8 17 N7 97740
+22:08:07 end restart 5 init evals 300000 best N8 17 N7 89776 found 0
+22:08:07 restart 6 init init N8 32264 N7 238568
+22:09:07 r6 ev 156000 acc 0.532 ab 0.462 T 0.0155 cur N8 18 N7 205416 | best N8 18 N7 123616
+22:10:06 end restart 6 init evals 300000 best N8 17 N7 111104 found 0
+22:10:06 restart 7 init init N8 257 N7 99892

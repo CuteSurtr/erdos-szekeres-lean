@@ -1,0 +1,44 @@
+21:42:47 start {'m': 4, 't': 14, 'centre': False, 'out': '/home/jay/research/data/lb-k8sym-20261111/runs/a4n1', 'seed': 101, 'init': None, 'ansatz': 'needle11,needle12,needle21,needle1', 'stop_at': 0, 'hours': 1.2, 'steps_per_T': 4000, 'T0': 0.5, 'Tmin': 0.02, 'alpha': 0.93, 'w7': 0.02, 'restart_evals': 600000, 'tag': 'a4n1', 'perturb': 0.0}
+21:42:47 restart 1 needle12 init N8 64504505 N7 23167056
+21:43:48 r1 ev 104000 acc 0.817 ab 0.123 T 0.0758 cur N8 517 N7 161784 | best N8 401 N7 122656
+21:44:49 r1 ev 252000 acc 0.718 ab 0.253 T 0.0437 cur N8 308 N7 108876 | best N8 278 N7 115128
+21:45:49 r1 ev 400000 acc 0.677 ab 0.299 T 0.0304 cur N8 213 N7 114488 | best N8 194 N7 115164
+21:46:50 r1 ev 556000 acc 0.654 ab 0.327 T 0.1122 cur N8 198 N7 131900 | best N8 154 N7 125404
+21:47:07 end restart 1 needle12 evals 600000 best N8 154 N7 117764 found 0
+21:47:07 restart 2 needle21 init N8 193738 N7 457004
+21:48:08 r2 ev 100000 acc 0.833 ab 0.098 T 0.0815 cur N8 1876 N7 142732 | best N8 1305 N7 84688
+21:49:09 r2 ev 264000 acc 0.648 ab 0.316 T 0.0584 cur N8 235 N7 74044 | best N8 173 N7 70360
+21:50:09 r2 ev 436000 acc 0.603 ab 0.370 T 0.0283 cur N8 202 N7 117960 | best N8 173 N7 69476
+21:51:09 r2 ev 596000 acc 0.592 ab 0.384 T 0.0970 cur N8 221 N7 72424 | best N8 171 N7 75860
+21:51:11 end restart 2 needle21 evals 600000 best N8 171 N7 75860 found 0
+21:51:11 restart 3 needle1 init N8 237938 N7 427580
+21:52:12 r3 ev 100000 acc 0.837 ab 0.093 T 0.0815 cur N8 597 N7 208100 | best N8 552 N7 205500
+21:53:12 r3 ev 244000 acc 0.715 ab 0.246 T 0.0470 cur N8 31 N7 221588 | best N8 27 N7 188380
+21:54:13 r3 ev 400000 acc 0.667 ab 0.306 T 0.0351 cur N8 19 N7 163984 | best N8 17 N7 170076
+21:55:14 r3 ev 556000 acc 0.646 ab 0.334 T 0.1297 cur N8 17 N7 179780 | best N8 17 N7 169980
+21:55:30 end restart 3 needle1 evals 600000 best N8 7 N7 169700 found 0
+21:55:30 restart 4 needle11 init N8 472766 N7 834068
+21:56:30 r4 ev 96000 acc 0.851 ab 0.070 T 0.0876 cur N8 3892 N7 89596 | best N8 2807 N7 70832
+21:57:32 r4 ev 248000 acc 0.688 ab 0.271 T 0.0437 cur N8 2 N7 125276 | best N8 2 N7 98716
+21:58:32 r4 ev 384000 acc 0.652 ab 0.319 T 0.0351 cur N8 2 N7 117488 | best N8 2 N7 95536
+21:59:33 r4 ev 552000 acc 0.633 ab 0.345 T 0.1395 cur N8 2 N7 120908 | best N8 2 N7 93536
+21:59:50 end restart 4 needle11 evals 600000 best N8 2 N7 93536 found 0
+21:59:50 restart 5 needle12 init N8 23662510 N7 13028740
+22:00:51 r5 ev 96000 acc 0.832 ab 0.105 T 0.0876 cur N8 1231 N7 63276 | best N8 793 N7 61432
+22:01:52 r5 ev 232000 acc 0.679 ab 0.280 T 0.0726 cur N8 272 N7 140368 | best N8 138 N7 106964
+22:02:53 r5 ev 388000 acc 0.633 ab 0.336 T 0.0327 cur N8 33 N7 222112 | best N8 32 N7 157444
+22:03:53 r5 ev 532000 acc 0.620 ab 0.355 T 0.0211 cur N8 18 N7 193028 | best N8 18 N7 166600
+22:04:19 end restart 5 needle12 evals 600000 best N8 18 N7 123984 found 0
+22:04:19 restart 6 needle21 init N8 543142 N7 861808
+22:05:19 r6 ev 96000 acc 0.850 ab 0.076 T 0.0876 cur N8 14259 N7 117492 | best N8 3514 N7 85224
+22:06:19 r6 ev 236000 acc 0.708 ab 0.255 T 0.0584 cur N8 57 N7 117956 | best N8 57 N7 110744
+22:07:20 r6 ev 380000 acc 0.670 ab 0.305 T 0.0351 cur N8 57 N7 128240 | best N8 57 N7 104384
+22:08:22 r6 ev 520000 acc 0.656 ab 0.324 T 0.0211 cur N8 57 N7 112196 | best N8 57 N7 101844
+22:08:55 end restart 6 needle21 evals 600000 best N8 57 N7 93460 found 0
+22:08:55 restart 7 needle1 init N8 279966396 N7 71251248
+22:09:57 r7 ev 84000 acc 0.879 ab 0.047 T 0.1089 cur N8 57155 N7 260964 | best N8 11110 N7 157056
+22:10:58 r7 ev 228000 acc 0.706 ab 0.251 T 0.0675 cur N8 50 N7 92836 | best N8 42 N7 84848
+22:12:00 r7 ev 384000 acc 0.665 ab 0.304 T 0.0437 cur N8 42 N7 86920 | best N8 42 N7 83280
+22:13:01 r7 ev 520000 acc 0.653 ab 0.321 T 0.0327 cur N8 42 N7 91564 | best N8 42 N7 82724
+22:13:38 end restart 7 needle1 evals 600000 best N8 42 N7 82724 found 0
+22:13:38 restart 8 needle11 init N8 360503 N7 646332

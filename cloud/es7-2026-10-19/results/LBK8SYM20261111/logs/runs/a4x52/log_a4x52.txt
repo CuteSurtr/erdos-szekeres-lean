@@ -1,0 +1,21 @@
+21:42:47 start {'m': 4, 't': 14, 'centre': False, 'out': '/home/jay/research/data/lb-k8sym-20261111/runs/a4x52', 'seed': 104, 'init': '/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/ES8SYM/sets/c4_52pts_13layers.pts', 'ansatz': 'init', 'stop_at': 0, 'hours': 1.2, 'steps_per_T': 4000, 'T0': 0.2, 'Tmin': 0.02, 'alpha': 0.93, 'w7': 0.02, 'restart_evals': 600000, 'tag': 'a4x52', 'perturb': 0.0}
+21:42:47 restart 1 init init N8 6164 N7 92808
+21:43:48 r1 ev 128000 acc 0.674 ab 0.295 T 0.0200 cur N8 794 N7 74072 | best N8 786 N7 60988
+21:44:49 r1 ev 272000 acc 0.657 ab 0.320 T 0.0519 cur N8 818 N7 48172 | best N8 784 N7 51876
+21:45:49 r1 ev 420000 acc 0.648 ab 0.333 T 0.0200 cur N8 818 N7 72440 | best N8 766 N7 55828
+21:46:49 r1 ev 564000 acc 0.640 ab 0.341 T 0.0558 cur N8 778 N7 75220 | best N8 583 N7 64116
+21:47:04 end restart 1 init evals 600000 best N8 509 N7 64188 found 0
+21:47:04 restart 2 init init N8 14025 N7 132444
+21:48:06 r2 ev 128000 acc 0.658 ab 0.292 T 0.0200 cur N8 330 N7 106352 | best N8 330 N7 104416
+21:49:06 r2 ev 284000 acc 0.621 ab 0.347 T 0.0600 cur N8 322 N7 108256 | best N8 322 N7 108256
+21:50:07 r2 ev 444000 acc 0.607 ab 0.368 T 0.0200 cur N8 338 N7 117420 | best N8 322 N7 108156
+21:51:08 r2 ev 596000 acc 0.601 ab 0.375 T 0.0200 cur N8 330 N7 109760 | best N8 322 N7 108104
+21:51:10 end restart 2 init evals 600000 best N8 322 N7 108104 found 0
+21:51:10 restart 3 init init N8 29524 N7 180776
+21:52:10 r3 ev 128000 acc 0.695 ab 0.274 T 0.0600 cur N8 281 N7 143148 | best N8 281 N7 143148
+21:53:12 r3 ev 276000 acc 0.682 ab 0.300 T 0.0483 cur N8 281 N7 150720 | best N8 281 N7 139256
+21:54:13 r3 ev 428000 acc 0.671 ab 0.316 T 0.0336 cur N8 281 N7 149652 | best N8 281 N7 116940
+21:55:15 r3 ev 576000 acc 0.667 ab 0.322 T 0.0449 cur N8 107 N7 157952 | best N8 107 N7 105316
+21:55:24 end restart 3 init evals 600000 best N8 107 N7 105316 found 0
+21:55:24 restart 4 init init N8 7050 N7 98380
+21:56:25 r4 ev 152000 acc 0.622 ab 0.363 T 0.0483 cur N8 313 N7 86732 | best N8 245 N7 75652

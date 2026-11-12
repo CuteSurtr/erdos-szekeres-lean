@@ -1,0 +1,28 @@
+21:42:47 start {'m': 4, 't': 14, 'centre': False, 'out': '/home/jay/research/data/lb-k8sym-20261111/runs/a4n2', 'seed': 102, 'init': None, 'ansatz': 'clusters,needle13,twoorbit,needle22', 'stop_at': 0, 'hours': 1.2, 'steps_per_T': 4000, 'T0': 0.5, 'Tmin': 0.02, 'alpha': 0.93, 'w7': 0.02, 'restart_evals': 600000, 'tag': 'a4n2', 'perturb': 0.0}
+21:42:47 restart 1 needle13 init N8 3280393 N7 3534720
+21:43:48 r1 ev 100000 acc 0.845 ab 0.077 T 0.0815 cur N8 3108 N7 77740 | best N8 2540 N7 78064
+21:44:50 r1 ev 244000 acc 0.722 ab 0.235 T 0.0543 cur N8 525 N7 106044 | best N8 481 N7 104768
+21:45:51 r1 ev 388000 acc 0.692 ab 0.275 T 0.0304 cur N8 368 N7 115832 | best N8 304 N7 104320
+21:46:52 r1 ev 548000 acc 0.670 ab 0.304 T 0.1207 cur N8 204 N7 92808 | best N8 193 N7 96540
+21:47:12 end restart 1 needle13 evals 600000 best N8 193 N7 96540 found 0
+21:47:12 restart 2 twoorbit init N8 60337250 N7 25228632
+21:48:13 r2 ev 96000 acc 0.857 ab 0.069 T 0.0876 cur N8 1016 N7 85076 | best N8 968 N7 86384
+21:49:13 r2 ev 244000 acc 0.695 ab 0.262 T 0.0781 cur N8 154 N7 84512 | best N8 117 N7 65796
+21:50:14 r2 ev 400000 acc 0.661 ab 0.308 T 0.0406 cur N8 41 N7 100876 | best N8 41 N7 92312
+21:51:14 r2 ev 560000 acc 0.646 ab 0.329 T 0.1395 cur N8 17 N7 119548 | best N8 17 N7 95304
+21:51:29 end restart 2 twoorbit evals 600000 best N8 17 N7 95304 found 0
+21:51:29 restart 3 needle22 init N8 624512 N7 928412
+21:52:30 r3 ev 96000 acc 0.855 ab 0.064 T 0.0876 cur N8 20293 N7 122900 | best N8 9274 N7 113040
+21:53:30 r3 ev 272000 acc 0.624 ab 0.328 T 0.0283 cur N8 198 N7 157412 | best N8 197 N7 138040
+21:54:32 r3 ev 440000 acc 0.597 ab 0.364 T 0.0781 cur N8 684 N7 152128 | best N8 197 N7 132000
+21:55:32 r3 ev 600000 acc 0.589 ab 0.375 T 0.0437 cur N8 293 N7 132492 | best N8 197 N7 132000
+21:55:32 end restart 3 needle22 evals 600000 best N8 197 N7 132000 found 0
+21:55:32 restart 4 clusters init N8 14652358 N7 8249344
+21:56:33 r4 ev 96000 acc 0.860 ab 0.061 T 0.0876 cur N8 2818 N7 88076 | best N8 2509 N7 91324
+21:57:33 r4 ev 240000 acc 0.696 ab 0.259 T 0.0543 cur N8 270 N7 141872 | best N8 215 N7 137084
+21:58:34 r4 ev 368000 acc 0.663 ab 0.302 T 0.0437 cur N8 231 N7 147024 | best N8 215 N7 137084
+21:59:35 r4 ev 516000 acc 0.644 ab 0.324 T 0.0227 cur N8 231 N7 157276 | best N8 215 N7 137084
+22:00:08 end restart 4 clusters evals 600000 best N8 135 N7 138240 found 0
+22:00:08 restart 5 needle13 init N8 14353885 N7 8228972
+22:01:09 r5 ev 88000 acc 0.870 ab 0.056 T 0.1013 cur N8 4145 N7 62340 | best N8 3875 N7 56820
+22:02:09 r5 ev 220000 acc 0.726 ab 0.234 T 0.1207 cur N8 332 N7 88264 | best N8 153 N7 74120

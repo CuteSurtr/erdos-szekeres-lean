@@ -1,0 +1,32 @@
+21:59:40 start {'m': 4, 't': 14, 'centre': False, 'out': '/home/jay/research/data/lb-k8sym-20261111/runs/p4b', 'seed': 302, 'init': 'pool4/a4n1_2.json', 'ansatz': 'init', 'stop_at': 0, 'hours': 1.0, 'steps_per_T': 4000, 'T0': 0.05, 'Tmin': 0.005, 'alpha': 0.93, 'w7': 0.02, 'restart_evals': 200000, 'tag': 'p4b', 'perturb': 0.0003, 'pfocus': 0.5}
+21:59:40 restart 1 init init N8 7974 N7 117304
+22:00:40 r1 ev 184000 acc 0.546 ab 0.445 T 0.0054 cur N8 2 N7 112344 | best N8 2 N7 94264
+22:00:46 end restart 1 init evals 200000 best N8 2 N7 94264 found 0
+22:00:46 restart 2 init init N8 2 N7 94884
+22:01:46 r2 ev 164000 acc 0.570 ab 0.426 T 0.0090 cur N8 2 N7 124096 | best N8 2 N7 94884
+22:01:57 end restart 2 init evals 200000 best N8 2 N7 94884 found 0
+22:01:57 restart 3 init init N8 8 N7 92948
+22:02:58 r3 ev 184000 acc 0.574 ab 0.420 T 0.0073 cur N8 2 N7 111896 | best N8 2 N7 94692
+22:03:04 end restart 3 init evals 200000 best N8 2 N7 94692 found 0
+22:03:04 restart 4 init init N8 8 N7 93952
+22:04:04 r4 ev 172000 acc 0.565 ab 0.428 T 0.0068 cur N8 2 N7 124464 | best N8 2 N7 95736
+22:04:13 end restart 4 init evals 200000 best N8 2 N7 95736 found 0
+22:04:13 restart 5 init init N8 3 N7 93064
+22:05:13 r5 ev 184000 acc 0.577 ab 0.417 T 0.0068 cur N8 2 N7 124536 | best N8 2 N7 94336
+22:05:19 end restart 5 init evals 200000 best N8 2 N7 94336 found 0
+22:05:19 restart 6 init init N8 7898 N7 115236
+22:06:19 r6 ev 164000 acc 0.579 ab 0.415 T 0.0084 cur N8 2 N7 120180 | best N8 2 N7 103300
+22:06:32 end restart 6 init evals 200000 best N8 2 N7 97392 found 0
+22:06:32 restart 7 init init N8 8 N7 93748
+22:07:33 r7 ev 172000 acc 0.565 ab 0.428 T 0.0078 cur N8 2 N7 114984 | best N8 2 N7 95316
+22:07:43 end restart 7 init evals 200000 best N8 2 N7 95316 found 0
+22:07:43 restart 8 init init N8 7898 N7 115236
+22:08:43 r8 ev 160000 acc 0.570 ab 0.424 T 0.0104 cur N8 2 N7 118832 | best N8 2 N7 94128
+22:08:56 end restart 8 init evals 200000 best N8 2 N7 94128 found 0
+22:08:56 restart 9 init init N8 7684 N7 114244
+22:09:57 r9 ev 168000 acc 0.563 ab 0.430 T 0.0090 cur N8 2 N7 106548 | best N8 2 N7 96456
+22:10:09 end restart 9 init evals 200000 best N8 2 N7 96456 found 0
+22:10:09 restart 10 init init N8 8 N7 94188
+22:11:10 r10 ev 188000 acc 0.538 ab 0.452 T 0.0051 cur N8 2 N7 119064 | best N8 2 N7 96420
+22:11:13 end restart 10 init evals 200000 best N8 2 N7 96420 found 0
+22:11:13 restart 11 init init N8 7593 N7 113964

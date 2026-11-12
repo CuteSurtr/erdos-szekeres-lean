@@ -1,0 +1,35 @@
+== layer_order
+orbits=14 centre=0 rows=56
+rc=0
+== verify_cfg
+{'m': 4, 'C': 0, 'n': 56, 'layers': 14, 'orbit_structure': True, 'distinct': True, 'invariant': True, 'zero_orientations': 0, 'intervalB_mismatch': 0, 'intervalB_undecided': 0, 'lexorder_intervalB_bad': 0, 'layers_are_nested_convex_orbits': False, 'radii_decreasing': True, 'max_abs_coeff': 925931956103}
+sha256 c.pts 9115cd8990cf800e74937a855cc5ce6d28766bad3b0d65ea07eb080c865e08c9
+sha256 c.otab 46a0d3985278f5d27e888e2d927e868d70eb152ff71090a62bcfca00a9478fec
+sha256 c.lex c88537ccab4119e0b1278c1d580c551f21129fa3f986c47ff149e8dbfb08d218
+EXACT-PREP FAIL
+rc=1
+== cvx2
+table n=56: 0 antisymmetry/zero violations
+convex  3-gons: DP1 27720  DP2 27720
+convex  4-gons: DP1 197670  DP2 197670
+convex  5-gons: DP1 461560  DP2 461560
+convex  6-gons: DP1 402142  DP2 402142
+convex  7-gons: DP1 115148  DP2 115148
+convex  8-gons: DP1 2  DP2 2
+largest convex subset: DP1 8  DP2 8
+CVX2 FAIL (K=8)
+rc=1
+== cvxcheck
+table n=56: 0 antisymmetry/zero violations
+convex 3-subsets: 27720
+convex 4-subsets: 197670
+convex 5-subsets: 461560
+convex 6-subsets: 402142
+convex 7-subsets: 115148
+convex 8-subsets: 2
+DP largest convex subset: 8
+rc=0
+== crosscheck_decimal
+n=56 points; sorted triples checked; mismatches/undecided: 0; min |det| = 7.506E+12; error bound = 2.195E-124
+CROSSCHECK PASS
+rc=0

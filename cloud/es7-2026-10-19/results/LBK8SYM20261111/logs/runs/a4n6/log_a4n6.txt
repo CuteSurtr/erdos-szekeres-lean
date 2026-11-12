@@ -1,0 +1,10 @@
+22:27:23 start {'m': 4, 't': 14, 'centre': False, 'out': '/home/jay/research/data/lb-k8sym-20261111/runs/a4n6', 'seed': 107, 'init': None, 'ansatz': 'needle11,spiral11,needle11,twoorbit,spiral12,needle1', 'stop_at': 0, 'hours': 3.0, 'steps_per_T': 4000, 'T0': 0.5, 'Tmin': 0.02, 'alpha': 0.93, 'w7': 0.02, 'restart_evals': 400000, 'tag': 'a4n6', 'perturb': 0.0, 'pfocus': 0.0}
+22:27:23 restart 1 spiral11 init N8 4012856 N7 2722312
+22:28:23 r1 ev 100000 acc 0.852 ab 0.068 T 0.0815 cur N8 16756 N7 102860 | best N8 6737 N7 65248
+22:29:23 r1 ev 248000 acc 0.707 ab 0.249 T 0.0437 cur N8 317 N7 114560 | best N8 297 N7 88744
+22:30:22 end restart 1 spiral11 evals 400000 best N8 57 N7 100712 found 0
+22:30:22 restart 2 needle11 init N8 233492274 N7 60508696
+22:31:22 r2 ev 100000 acc 0.843 ab 0.083 T 0.0815 cur N8 56 N7 124972 | best N8 56 N7 110520
+22:32:23 r2 ev 256000 acc 0.713 ab 0.255 T 0.0675 cur N8 41 N7 118400 | best N8 41 N7 97732
+22:33:20 end restart 2 needle11 evals 400000 best N8 41 N7 93500 found 0
+22:33:20 restart 3 twoorbit init N8 23577853 N7 12385660

@@ -1,0 +1,80 @@
+00:25:04   c5_55nc_s0.002_1_KNone_rc0: units 3372 (conflicts with hint 0) fixed 0 imps 220 pair cuts 279479 chain clauses 731147 vars 45772, built in 3.6 s
+00:25:04   CAND delta 4.488e-05 float N8 0 N7 2270675 -> cegar/cal56/cand_c5_55nc_s0.002_1_KNone_rc0_1.json
+00:25:04 RESULT c5_55nc_s0.002_1 K None N8(hint) 0 -> CAND it 1 best 4.488e-05 (4.0 s)
+00:25:07   c5_55nc_s0.002_2_KNone_rc0: units 3372 (conflicts with hint 0) fixed 0 imps 220 pair cuts 279526 chain clauses 731147 vars 45772, built in 3.3 s
+00:25:08   c5_55nc_s0.002_2_KNone_rc0: it 1 new best delta -2.639e-03; L1 point: 71 violated rows, float N8 60
+00:25:08   c5_55nc_s0.002_2_KNone_rc0: it 2 new best delta -2.638e-03; L1 point: 91 violated rows, float N8 504940
+00:25:08   c5_55nc_s0.002_2_KNone_rc0: it 3 new best delta -2.079e-03; L1 point: 98 violated rows, float N8 457945
+00:25:08   c5_55nc_s0.002_2_KNone_rc0: it 4 new best delta -2.072e-03; L1 point: 95 violated rows, float N8 443935
+00:25:08   c5_55nc_s0.002_2_KNone_rc0: it 5 new best delta -1.996e-03; L1 point: 86 violated rows, float N8 33645
+00:25:09   c5_55nc_s0.002_2_KNone_rc0: it 8 new best delta -1.996e-03; L1 point: 80 violated rows, float N8 477600
+00:25:09   c5_55nc_s0.002_2_KNone_rc0: it 9 new best delta -1.995e-03; L1 point: 79 violated rows, float N8 34460
+00:25:09   c5_55nc_s0.002_2_KNone_rc0: it 10 new best delta -1.979e-03; L1 point: 82 violated rows, float N8 447245
+00:25:09   c5_55nc_s0.002_2_KNone_rc0: it 11 new best delta -1.903e-03; L1 point: 83 violated rows, float N8 6910
+00:25:09   c5_55nc_s0.002_2_KNone_rc0: it 12 new best delta -1.418e-03; L1 point: 76 violated rows, float N8 11935
+00:25:10   c5_55nc_s0.002_2_KNone_rc0: it 16 new best delta -1.384e-03; L1 point: 67 violated rows, float N8 6945
+00:25:10   c5_55nc_s0.002_2_KNone_rc0: it 17 new best delta -1.383e-03; L1 point: 62 violated rows, float N8 7175
+00:25:10   c5_55nc_s0.002_2_KNone_rc0: it 18 new best delta -1.383e-03; L1 point: 63 violated rows, float N8 10980
+00:25:11   c5_55nc_s0.002_2_KNone_rc0: it 25 new best delta -1.381e-03; L1 point: 73 violated rows, float N8 10020
+00:25:12   c5_55nc_s0.002_2_KNone_rc0: it 29 new best delta -1.375e-03; L1 point: 81 violated rows, float N8 14160
+00:25:12   c5_55nc_s0.002_2_KNone_rc0: it 30 new best delta -1.300e-03; L1 point: 70 violated rows, float N8 12590
+00:25:12   c5_55nc_s0.002_2_KNone_rc0: it 32 new best delta -1.294e-03; L1 point: 76 violated rows, float N8 10590
+00:25:13   c5_55nc_s0.002_2_KNone_rc0: it 35 new best delta -1.285e-03; L1 point: 65 violated rows, float N8 6425
+00:25:15   c5_55nc_s0.002_2_KNone_rc0: it 53 new best delta -1.280e-03; L1 point: 49 violated rows, float N8 8475
+00:25:17   c5_55nc_s0.002_2_KNone_rc0: it 65 new best delta -1.278e-03; L1 point: 42 violated rows, float N8 36890
+00:25:17   c5_55nc_s0.002_2_KNone_rc0: it 66 new best delta -1.271e-03; L1 point: 44 violated rows, float N8 30290
+00:25:18   c5_55nc_s0.002_2_KNone_rc0: it 67 new best delta -1.108e-03; L1 point: 37 violated rows, float N8 24205
+00:25:23 RESULT c5_55nc_s0.002_2 K None N8(hint) 74440 -> TIMEOUT it 101 best -1.108e-03 (18.6 s)
+00:25:27   c5_55nc_s0.002_3_KNone_rc0: units 3372 (conflicts with hint 0) fixed 0 imps 220 pair cuts 279402 chain clauses 731147 vars 45772, built in 3.9 s
+00:25:27   c5_55nc_s0.002_3_KNone_rc0: it 1 new best delta -2.103e-03; L1 point: 59 violated rows, float N8 0
+00:25:27   CAND (L1 point) -> cegar/cal56/cand_c5_55nc_s0.002_3_KNone_rc0_1_l1point.json
+00:25:27 RESULT c5_55nc_s0.002_3 K None N8(hint) 24680 -> CAND it 1 best -2.103e-03 (4.2 s)
+00:25:30   c5_55nc_s0.002_4_KNone_rc0: units 3372 (conflicts with hint 0) fixed 0 imps 220 pair cuts 279467 chain clauses 731147 vars 45772, built in 3.6 s
+00:25:31   CAND delta 3.976e-05 float N8 0 N7 2304325 -> cegar/cal56/cand_c5_55nc_s0.002_4_KNone_rc0_1.json
+00:25:31 RESULT c5_55nc_s0.002_4 K None N8(hint) 0 -> CAND it 1 best 3.976e-05 (3.9 s)
+00:25:35   c5_55nc_s0.002_5_KNone_rc0: units 3372 (conflicts with hint 0) fixed 0 imps 220 pair cuts 279493 chain clauses 731147 vars 45772, built in 3.8 s
+00:25:35   c5_55nc_s0.002_5_KNone_rc0: it 1 new best delta -2.659e-03; L1 point: 77 violated rows, float N8 390
+00:25:35   c5_55nc_s0.002_5_KNone_rc0: it 3 new best delta -2.658e-03; L1 point: 84 violated rows, float N8 5510
+00:25:35   c5_55nc_s0.002_5_KNone_rc0: it 4 new best delta -2.080e-03; L1 point: 80 violated rows, float N8 8525
+00:25:35   c5_55nc_s0.002_5_KNone_rc0: it 5 new best delta -2.072e-03; L1 point: 85 violated rows, float N8 13040
+00:25:36   c5_55nc_s0.002_5_KNone_rc0: it 6 new best delta -1.991e-03; L1 point: 65 violated rows, float N8 482700
+00:25:36   c5_55nc_s0.002_5_KNone_rc0: it 10 new best delta -1.989e-03; L1 point: 73 violated rows, float N8 471965
+00:25:36   c5_55nc_s0.002_5_KNone_rc0: it 11 new best delta -1.989e-03; L1 point: 72 violated rows, float N8 10145
+00:25:36   c5_55nc_s0.002_5_KNone_rc0: it 12 new best delta -1.989e-03; L1 point: 70 violated rows, float N8 9450
+00:25:37   c5_55nc_s0.002_5_KNone_rc0: it 13 new best delta -1.890e-03; L1 point: 84 violated rows, float N8 12360
+00:25:37   c5_55nc_s0.002_5_KNone_rc0: it 14 new best delta -1.465e-03; L1 point: 82 violated rows, float N8 12805
+00:25:38   c5_55nc_s0.002_5_KNone_rc0: it 20 new best delta -1.458e-03; L1 point: 71 violated rows, float N8 9565
+00:25:39   c5_55nc_s0.002_5_KNone_rc0: it 28 new best delta -1.405e-03; L1 point: 55 violated rows, float N8 14440
+00:25:39   c5_55nc_s0.002_5_KNone_rc0: it 29 new best delta -1.389e-03; L1 point: 64 violated rows, float N8 10800
+00:25:42   c5_55nc_s0.002_5_KNone_rc0: it 50 new best delta -1.146e-03; L1 point: 62 violated rows, float N8 7435
+00:25:43   c5_55nc_s0.002_5_KNone_rc0: it 54 new best delta -1.142e-03; L1 point: 61 violated rows, float N8 15235
+00:25:43   c5_55nc_s0.002_5_KNone_rc0: it 57 new best delta -1.122e-03; L1 point: 58 violated rows, float N8 19145
+00:25:44   c5_55nc_s0.002_5_KNone_rc0: it 60 new best delta -1.103e-03; L1 point: 56 violated rows, float N8 15975
+00:25:46   c5_55nc_s0.002_5_KNone_rc0: it 79 new best delta -8.172e-04; L1 point: 54 violated rows, float N8 15475
+00:25:46   c5_55nc_s0.002_5_KNone_rc0: it 80 new best delta -8.172e-04; L1 point: 49 violated rows, float N8 9335
+00:25:47   c5_55nc_s0.002_5_KNone_rc0: it 87 new best delta -8.157e-04; L1 point: 50 violated rows, float N8 8710
+00:25:48   c5_55nc_s0.002_5_KNone_rc0: it 88 new best delta -8.157e-04; L1 point: 45 violated rows, float N8 3900
+00:25:48   c5_55nc_s0.002_5_KNone_rc0: it 89 new best delta -8.154e-04; L1 point: 41 violated rows, float N8 3540
+00:25:50   c5_55nc_s0.002_5_KNone_rc0: it 100 new best delta -8.152e-04; L1 point: 41 violated rows, float N8 16795
+00:25:50 RESULT c5_55nc_s0.002_5 K None N8(hint) 74085 -> TIMEOUT it 100 best -8.152e-04 (19.1 s)
+00:25:54   c5_55nc_s0.002_6_KNone_rc0: units 3372 (conflicts with hint 0) fixed 0 imps 220 pair cuts 279446 chain clauses 731147 vars 45772, built in 3.9 s
+00:25:54   CAND delta 4.950e-05 float N8 0 N7 2421420 -> cegar/cal56/cand_c5_55nc_s0.002_6_KNone_rc0_1.json
+00:25:54 RESULT c5_55nc_s0.002_6 K None N8(hint) 0 -> CAND it 1 best 4.950e-05 (4.2 s)
+00:25:58   c5_55nc_s0.002_7_KNone_rc0: units 3372 (conflicts with hint 0) fixed 0 imps 220 pair cuts 279631 chain clauses 731147 vars 45772, built in 3.7 s
+00:26:04   c5_55nc_s0.002_7_KNone_rc0: it 39 new best delta -6.788e-03; L1 point: 91 violated rows, float N8 42375
+00:26:04   c5_55nc_s0.002_7_KNone_rc0: it 40 new best delta -6.444e-03; L1 point: 104 violated rows, float N8 149695
+00:26:04   c5_55nc_s0.002_7_KNone_rc0: it 41 new best delta -4.575e-03; L1 point: 106 violated rows, float N8 251670
+00:26:05   c5_55nc_s0.002_7_KNone_rc0: it 42 new best delta -3.035e-03; L1 point: 80 violated rows, float N8 338150
+00:26:05   c5_55nc_s0.002_7_KNone_rc0: it 43 new best delta -3.028e-03; L1 point: 104 violated rows, float N8 343125
+00:26:05   c5_55nc_s0.002_7_KNone_rc0: it 44 new best delta -3.024e-03; L1 point: 128 violated rows, float N8 432095
+00:26:05   c5_55nc_s0.002_7_KNone_rc0: it 45 new best delta -3.024e-03; L1 point: 112 violated rows, float N8 483755
+00:26:05   c5_55nc_s0.002_7_KNone_rc0: it 46 new best delta -3.024e-03; L1 point: 112 violated rows, float N8 750100
+00:26:05   c5_55nc_s0.002_7_KNone_rc0: it 47 new best delta -1.656e-03; L1 point: 95 violated rows, float N8 416505
+00:26:06   c5_55nc_s0.002_7_KNone_rc0: it 48 new best delta -1.538e-03; L1 point: 95 violated rows, float N8 418040
+00:26:06   c5_55nc_s0.002_7_KNone_rc0: it 49 new best delta -1.514e-03; L1 point: 96 violated rows, float N8 621830
+00:26:06   c5_55nc_s0.002_7_KNone_rc0: it 50 new best delta -1.509e-03; L1 point: 95 violated rows, float N8 285835
+00:26:13 RESULT c5_55nc_s0.002_7 K None N8(hint) 164400 -> TIMEOUT it 98 best -1.509e-03 (19.0 s)
+00:26:16   c5_55nc_s0.002_8_KNone_rc0: units 3372 (conflicts with hint 0) fixed 0 imps 220 pair cuts 279372 chain clauses 731147 vars 45772, built in 3.2 s
+00:26:16   CAND delta 3.071e-05 float N8 0 N7 2303825 -> cegar/cal56/cand_c5_55nc_s0.002_8_KNone_rc0_1.json
+00:26:17 RESULT c5_55nc_s0.002_8 K None N8(hint) 0 -> CAND it 1 best 3.071e-05 (3.5 s)
+00:26:17 done

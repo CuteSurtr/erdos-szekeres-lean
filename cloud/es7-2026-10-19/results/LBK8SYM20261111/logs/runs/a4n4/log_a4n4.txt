@@ -1,0 +1,11 @@
+21:54:30 start {'m': 4, 't': 14, 'centre': False, 'out': '/home/jay/research/data/lb-k8sym-20261111/runs/a4n4', 'seed': 105, 'init': None, 'ansatz': 'twoorbit,clusters,needle1,twoorbit', 'stop_at': 0, 'hours': 1.0, 'steps_per_T': 4000, 'T0': 0.5, 'Tmin': 0.02, 'alpha': 0.93, 'w7': 0.02, 'restart_evals': 600000, 'tag': 'a4n4', 'perturb': 0.0}
+21:54:30 restart 1 clusters init N8 10885506 N7 7570416
+21:55:31 r1 ev 96000 acc 0.852 ab 0.075 T 0.0876 cur N8 875 N7 75500 | best N8 857 N7 74656
+21:56:32 r1 ev 240000 acc 0.720 ab 0.242 T 0.0584 cur N8 321 N7 93172 | best N8 245 N7 97020
+21:57:34 r1 ev 384000 acc 0.694 ab 0.279 T 0.0327 cur N8 122 N7 146148 | best N8 122 N7 122380
+21:58:35 r1 ev 504000 acc 0.678 ab 0.300 T 0.0351 cur N8 48 N7 138452 | best N8 48 N7 135220
+21:59:15 end restart 1 clusters evals 600000 best N8 42 N7 135480 found 0
+21:59:15 restart 2 needle1 init N8 585359222 N7 116553248
+22:00:16 r2 ev 92000 acc 0.863 ab 0.061 T 0.0942 cur N8 18780 N7 122644 | best N8 7880 N7 94112
+22:01:16 r2 ev 220000 acc 0.732 ab 0.229 T 0.1122 cur N8 748 N7 95736 | best N8 321 N7 112568
+22:02:17 r2 ev 356000 acc 0.693 ab 0.278 T 0.0903 cur N8 416 N7 113796 | best N8 321 N7 105552

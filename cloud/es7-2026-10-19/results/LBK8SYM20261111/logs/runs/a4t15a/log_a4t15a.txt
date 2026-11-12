@@ -1,0 +1,15 @@
+22:02:25 start {'m': 4, 't': 15, 'centre': False, 'out': '/home/jay/research/data/lb-k8sym-20261111/runs/a4t15a', 'seed': 501, 'init': None, 'ansatz': 'needle1,needle1,twoorbit,needle11', 'stop_at': 0, 'hours': 2.0, 'steps_per_T': 4000, 'T0': 0.5, 'Tmin': 0.02, 'alpha': 0.93, 'w7': 0.02, 'restart_evals': 600000, 'tag': 'a4t15a', 'perturb': 0.0, 'pfocus': 0.0}
+22:02:25 restart 1 needle1 init N8 525009550 N7 121835364
+22:03:27 r1 ev 72000 acc 0.900 ab 0.030 T 0.1354 cur N8 200087 N7 571212 | best N8 31059 N7 202760
+22:04:27 r1 ev 168000 acc 0.747 ab 0.193 T 0.0237 cur N8 638 N7 123812 | best N8 638 N7 123332
+22:05:28 r1 ev 288000 acc 0.673 ab 0.282 T 0.0970 cur N8 633 N7 176476 | best N8 446 N7 155164
+22:06:30 r1 ev 392000 acc 0.662 ab 0.300 T 0.1207 cur N8 1213 N7 151016 | best N8 425 N7 176868
+22:07:31 r1 ev 500000 acc 0.652 ab 0.315 T 0.1297 cur N8 501 N7 195896 | best N8 425 N7 176380
+22:08:33 r1 ev 600000 acc 0.647 ab 0.323 T 0.0211 cur N8 430 N7 180036 | best N8 382 N7 173832
+22:08:33 end restart 1 needle1 evals 600000 best N8 382 N7 173832 found 0
+22:08:33 restart 2 twoorbit init N8 42642561 N7 23337700
+22:09:36 r2 ev 68000 acc 0.907 ab 0.025 T 0.1456 cur N8 146715 N7 534704 | best N8 35114 N7 232480
+22:10:37 r2 ev 152000 acc 0.776 ab 0.156 T 0.0317 cur N8 3955 N7 121220 | best N8 3240 N7 116160
+22:11:38 r2 ev 244000 acc 0.736 ab 0.191 T 0.0628 cur N8 3110 N7 214108 | best N8 1581 N7 218300
+22:12:40 r2 ev 360000 acc 0.692 ab 0.247 T 0.0781 cur N8 1547 N7 287280 | best N8 789 N7 235528
+22:13:41 r2 ev 480000 acc 0.652 ab 0.298 T 0.0675 cur N8 21 N7 231564 | best N8 21 N7 217844
