@@ -1,5 +1,20 @@
 # Finite octagon status and remaining work
 
+**10 November 2026: ES(8) ≤ 310 is Lean-checked (not refereed).**
+`ErdosSzekeres.Omission.Compact310.forces_convex_octagon_310` in
+[Final310Compact.lean](../experiments/omission-compact-checker-2026-11-05/assembly/Final310Compact.lean)
+lowers the balanced population bound to 187: a budget-64 branch-and-bound over
+the balanced catalog (at least 65 of 252 states missing) closed all 4,096
+contexts with 7,048,218 leaves, checked in blocks by the compact reflective
+checker, 36.7 CPU-hours of Lean; see the
+[310 record](../experiments/omission-compact-checker-2026-11-05/README.md) and the
+[search record](../cloud/es7-2026-10-19/results/ES8UPPER20261105/README.md).
+Octagon-free sets therefore have at most 309 points. Further steps are costly
+or blocked: balanced budget 65 has not been attempted, an exact 71-hole vector
+satisfying all 3,131 balanced rows rules out budgets of 71 or more over the
+present rows, and residual budget 33 needs new geometric rows, because
+33-hole assignments satisfy all current residual rows.
+
 **19 October 2026: ES(8) ≤ 311 is proved.** `ErdosSzekeres.Omission.forces_convex_octagon_311`
 in [Final311/Final.lean](../experiments/omission-final311-2026-10-14/Final311/Final.lean)
 lowers the balanced population bound to 188 with a 782,437-leaf certificate over

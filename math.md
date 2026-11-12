@@ -5,14 +5,14 @@
 This article describes three completed Lean proofs of upper bounds: Suk's
 asymptotic bound, the ordinary real-point specialization of the
 Holmsen–Mojarrad–Pach–Tardos (HMPT) bound, and the finite bound
-$`\mathrm{ES}(8)\le311`$. Together with the classical lower bound proved
-in §1.1, the octagon result gives $`65\le\mathrm{ES}(8)\le311`$.
+$`\mathrm{ES}(8)\le310`$. Together with the classical lower bound proved
+in §1.1, the octagon result gives $`65\le\mathrm{ES}(8)\le310`$.
 
 The [finite octagon proof](#2-geometric-configurations-and-finite-state-spaces)
 begins in §§2–3 with the geometric reduction and the intermediate bound 314.
 Section 4 treats the [asymptotic bounds](#4-the-asymptotic-arguments).
 The [stronger residual inequalities](#5-stronger-residual-inequalities) of
-§§5–6 complete the proof of 313.
+§§5–6 complete the proof of 313, and §§6.6–6.8 sharpen it to 312, 311 and 310.
 
 A finite set $`P\subset\mathbb R^2`$ is in **general position** if no three
 distinct points are collinear. It is in **convex position** if
@@ -44,7 +44,7 @@ for every integer $`n\ge n_0`$,
 \right).
 ```
 
-**(3) Finite octagon bound.** $`\mathsf F(311,8)`$; the earlier proofs give $`\mathsf F(314,8)`$, $`\mathsf F(313,8)`$ and $`\mathsf F(312,8)`$.
+**(3) Finite octagon bound.** $`\mathsf F(310,8)`$; the earlier proofs give $`\mathsf F(314,8)`$, $`\mathsf F(313,8)`$, $`\mathsf F(312,8)`$ and $`\mathsf F(311,8)`$.
 
 The first two statements are eventual bounds; their quantifiers do not permit
 an unverified substitution of $`n=8`$. The HMPT statement retains every
@@ -64,7 +64,8 @@ $`\lceil\log u\rceil`$, $`\lfloor\log u\rfloor`$ for Lean's
 | Convex-hull characterization; equivalence with sets of exactly $`N`$ points; monotonicity in $`N`$ | `convexPosition_iff`, `forcesConvexNGon_iff_exact`, `ForcesConvexNGon.mono` in [Basic](ErdosSzekeres/Basic.lean), with prefix `ErdosSzekeres` |
 | Suk bound | `ErdosSzekeres.Suk.theorem2016` in [Suk/Asymptotic](ErdosSzekeres/Suk/Asymptotic.lean) |
 | HMPT bound | `ErdosSzekeres.HMPT.theorem2020` in [HMPT/Asymptotic](ErdosSzekeres/HMPT/Asymptotic.lean) |
-| Finite octagon bound | `ErdosSzekeres.Omission.forces_convex_octagon_311`, `convex_octagon_of_card_ge_311` in [Final311/Final](experiments/omission-final311-2026-10-14/Final311/Final.lean) |
+| Finite octagon bound | `ErdosSzekeres.Omission.Compact310.forces_convex_octagon_310` in [Final310Compact](experiments/omission-compact-checker-2026-11-05/assembly/Final310Compact.lean) |
+| Intermediate bound 311 | `ErdosSzekeres.Omission.forces_convex_octagon_311`, `convex_octagon_of_card_ge_311` in [Final311/Final](experiments/omission-final311-2026-10-14/Final311/Final.lean) |
 | Intermediate bound 312 | `ErdosSzekeres.Omission.forces_convex_octagon_312`, `convex_octagon_of_card_ge_312` in [Final312/Final](experiments/omission-final312-2026-10-13/Final312/Final.lean) |
 | Intermediate bound 313 | `ErdosSzekeres.Omission.forces_convex_octagon_313`, `convex_octagon_of_card_ge_313` in [Final313/Final](experiments/omission-final313-2026-10-11/Final313/Final.lean) |
 | Intermediate bound 314 | `ErdosSzekeres.Omission.forces_convex_octagon_314`, `convex_octagon_of_card_ge_314` in [FinalCover314B61FusedR31Fused](experiments/omission-global-assembly-2026-10-10/FinalCover314B61FusedR31Fused.lean) |
@@ -74,7 +75,7 @@ $`\forall n\ge3,\ \mathsf F(2^{n-2}+1,n)`$; for octagons its threshold is
 $`65`$. The classical construction in §1.1 proves that no smaller threshold
 is possible, so the conjecture asserts exactly that $`2^{n-2}+1`$ is the
 least forcing number. The conjecture is not proved here; the bound
-$`311`$ is proved in §§6.5–6.7.
+$`310`$ is proved in §§6.5–6.8.
 
 ### 1.1. The classical lower bound
 
@@ -82,7 +83,7 @@ $`311`$ is proved in §§6.5–6.7.
 of $`2^{n-2}`$ points in general position with no $`n`$ points in convex
 position. Consequently $`\mathsf F(N,n)`$ implies $`N\ge2^{n-2}+1`$. In
 particular every $`N`$ with $`\mathsf F(N,8)`$ satisfies $`N\ge65`$, and
-together with Theorem 1.1(3), $`65\le\mathrm{ES}(8)\le311`$.
+together with Theorem 1.1(3), $`65\le\mathrm{ES}(8)\le310`$.
 
 Put $`[a,b,c]=\det(b-a,c-a)`$, compare points by their first coordinates,
 and let $`\sigma\in\{1,-1\}`$.
@@ -160,9 +161,9 @@ The final set has $`\sum_{i=0}^{n-2}\binom{n-2}{i}=2^{n-2}`$ points.
 | Realization by translation | `ErdosSzekeres.LowerBound.exists_stacked` in [LowerBound/Placement](ErdosSzekeres/LowerBound/Placement.lean) |
 
 The upper bound in `esNumber_le_choose` is the classical cups-caps bound
-already used by Suk's proof. The stronger value $`311`$ is the archived
+already used by Suk's proof. The stronger value $`310`$ is the archived
 theorem of Theorem 1.1(3): applying `esNumber_le_of_forces` to
-`Omission.forces_convex_octagon_311` gives `esNumber 8 ≤ 311`. The script
+`Omission.Compact310.forces_convex_octagon_310` gives `esNumber 8 ≤ 310`. The script
 [es_lower_bound_witness.py](scripts/es_lower_bound_witness.py) builds the
 same sets with exact integer coordinates and independently confirms that
 the largest convex subsets of the witnesses for $`n=3,\ldots,8`$ have
@@ -172,12 +173,12 @@ $`n-1`$ points. It is a numerical control, not part of the proof.
 
 The literature search of **14 October 2026** ([survey](docs/RELATED_WORK_2026-10-14.md))
 found no earlier universal planar bound as strong as $`\mathrm{ES}(8)\le312`$,
-hence none as strong as $`\mathrm{ES}(8)\le311`$; the best published value is
+hence none as strong as $`\mathrm{ES}(8)\le310`$; the best published value is
 $`408`$ (Mojarrad–Vlachos 2016). The strongest directly comparable public
 announcement located was Michael Schroeder's
 [version-1 preprint](https://michaelschroeder.ai/research/ErdosSzekeres/erdos_szekeres_upper_bounds_v1.pdf),
 19 September 2026: Theorem 1.1 states $`\mathrm{ES}(8)\le319`$.
-Theorem 1.1(3) improves that threshold by eight. This comparison supports an
+Theorem 1.1(3) improves that threshold by nine. This comparison supports an
 apparently new best known bound; it does not establish exhaustive priority
 or imply external peer review of either proof.
 
@@ -1212,10 +1213,39 @@ the kernel. Hence
 [Final311/Final.lean](experiments/omission-final311-2026-10-14/Final311/Final.lean),
 with only the standard axioms, and an octagon-free set has at most
 $`1+188+121=310`$ points. The [311 record](experiments/omission-final311-2026-10-14/README.md)
-gives the certificate and the reproduction procedure. The next steps are
-costly or blocked: budget 64 on the balanced side is projected at roughly
-eight times this certificate, and residual budget 33 is impossible over the
-present rows, which admit 33-hole assignments, so it needs new geometric rows.
+gives the certificate and the reproduction procedure.
+
+### 6.8. The balanced step to 310
+
+With budget 64 the same bridge needs every 0/1 vector with at most 64 holes
+excluded over the 3,131-row balanced catalog; this gives the balanced
+population bound 187. The branch-and-bound of §6.6 was rerun with budget 64
+from the 4,096 depth-12 contexts of the budget-63 tree. Every context closed,
+with 7,048,218 leaves in all, about nine times the nodes of the budget-63 tree.
+At this size the per-leaf export of §6.7 is impractical, so the leaves were
+checked in blocks by a compact reflective checker whose soundness theorem,
+`CompactChecker.checkF2_sound`, has the conclusion of the per-leaf check. Hence
+
+```math
+\mathsf F(310,8),
+```
+
+`ErdosSzekeres.Omission.Compact310.forces_convex_octagon_310` in
+[Final310Compact.lean](experiments/omission-compact-checker-2026-11-05/assembly/Final310Compact.lean),
+with only the standard axioms, and an octagon-free set has at most
+$`1+187+121=309`$ points. The 4,096 certificate modules are generated by the
+recorded pipeline, not stored in Git; the
+[310 record](experiments/omission-compact-checker-2026-11-05/README.md)
+gives the coverage check, the axiom report and the reproduction procedure
+(36.7 CPU-hours of Lean), and the
+[search record](cloud/es7-2026-10-19/results/ES8UPPER20261105/README.md)
+the budget-64 search. The result is Lean-checked and not refereed.
+
+The next steps are costly or blocked. Balanced budget 65 has not been
+attempted. An exact 71-hole vector satisfies all 3,131 balanced rows (same
+search record), so budgets of 71 or more cannot be excluded over the present
+rows. Residual budget 33 is impossible over the present rows, which admit
+33-hole assignments, so it needs new geometric rows.
 
 ## 7. Validation and attribution
 
@@ -1233,11 +1263,13 @@ exposition, not a separately checked translation.
 | Closed real-point theorem $`\mathsf F(314,8)`$ | [Final assembly record](experiments/omission-global-assembly-2026-10-10/global-cover-314-check.json) and [axiom output](experiments/omission-global-assembly-2026-10-10/global-cover-314-axioms.txt) |
 | Later residual rows and normalization | Standalone continuation checks in the [validation ledger](docs/VALIDATION.md) and source bundles linked in §§5–6 |
 | Closed real-point theorem $`\mathsf F(313,8)`$ | [Final proof record](experiments/omission-final313-2026-10-11/README.md), [assembly report](experiments/omission-final313-2026-10-11/final-report.json) and [axiom output](experiments/omission-final313-2026-10-11/final-audit.out) |
+| Closed real-point theorem $`\mathsf F(310,8)`$ | [Compact-checker record](experiments/omission-compact-checker-2026-11-05/README.md), [assembly report](experiments/omission-compact-checker-2026-11-05/logs/es310/final310-compact.json) and [coverage check](experiments/omission-compact-checker-2026-11-05/logs/es310/coverage-complete.json) |
 
 The large arithmetic proofs have complete preserved kernel records distinct
 from the maintained-library build. The completed 314 theorem uses the
 2,295-row residual catalog and excludes budget 31. The 313 theorem uses the
-2,650-row catalog and excludes budget 32 under $`h_0=0`$. Hosted CI checks
+2,650-row catalog and excludes budget 32 under $`h_0=0`$; the 312, 311 and 310
+theorems reuse that residual exclusion with balanced budgets 62, 63 and 64. Hosted CI checks
 the maintained library and selected continuation proofs; it does not rebuild
 the entire large certificate. The asymptotic proofs are independent of the
 omission-search experiments.
