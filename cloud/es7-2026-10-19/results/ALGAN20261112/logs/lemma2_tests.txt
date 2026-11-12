@@ -1,0 +1,70 @@
+# two-layer thresholds, m=8 K=9 and m=4 K=8 (bisection, float counter)
+D= 0.010 deg  nesting f=0.999928   2-layer K-gon threshold g=0.999928   g/f=1.000000
+D= 0.050 deg  nesting f=0.999639   2-layer K-gon threshold g=0.999638   g/f=0.999999
+D= 0.100 deg  nesting f=0.999279   2-layer K-gon threshold g=0.999276   g/f=0.999996
+D= 0.200 deg  nesting f=0.998562   2-layer K-gon threshold g=0.998548   g/f=0.999986
+D= 0.375 deg  nesting f=0.997318   2-layer K-gon threshold g=0.997268   g/f=0.999950
+D= 0.500 deg  nesting f=0.996436   2-layer K-gon threshold g=0.996347   g/f=0.999911
+D= 1.000 deg  nesting f=0.992973   2-layer K-gon threshold g=0.992619   g/f=0.999643
+D= 2.000 deg  nesting f=0.986342   2-layer K-gon threshold g=0.984935   g/f=0.998573
+D= 3.000 deg  nesting f=0.980096   2-layer K-gon threshold g=0.976951   g/f=0.996791
+D= 5.000 deg  nesting f=0.968715   2-layer K-gon threshold g=0.960094   g/f=0.991101
+D= 8.000 deg  nesting f=0.954275   2-layer K-gon threshold g=0.932621   g/f=0.977308
+D=11.250 deg  nesting f=0.941979   2-layer K-gon threshold g=0.899976   g/f=0.955410
+D=15.000 deg  nesting f=0.931852   2-layer K-gon threshold g=0.858719   g/f=0.921519
+D=20.000 deg  nesting f=0.924760   2-layer K-gon threshold g=0.798023   g/f=0.862952
+D=22.400 deg  nesting f=0.923881   2-layer K-gon threshold g=0.766702   g/f=0.829870
+D= 0.010 deg  nesting f=0.999826   2-layer K-gon threshold g=0.999826   g/f=1.000000
+D= 0.050 deg  nesting f=0.999128   2-layer K-gon threshold g=0.999128   g/f=1.000000
+D= 0.100 deg  nesting f=0.998259   2-layer K-gon threshold g=0.998259   g/f=1.000000
+D= 0.200 deg  nesting f=0.996528   2-layer K-gon threshold g=0.996528   g/f=1.000000
+D= 0.375 deg  nesting f=0.993519   2-layer K-gon threshold g=0.993519   g/f=1.000000
+D= 0.500 deg  nesting f=0.991386   2-layer K-gon threshold g=0.991386   g/f=1.000000
+D= 1.000 deg  nesting f=0.982994   2-layer K-gon threshold g=0.982994   g/f=1.000000
+D= 2.000 deg  nesting f=0.966847   2-layer K-gon threshold g=0.966847   g/f=1.000000
+D= 3.000 deg  nesting f=0.951506   2-layer K-gon threshold g=0.951506   g/f=1.000000
+D= 5.000 deg  nesting f=0.923062   2-layer K-gon threshold g=0.923062   g/f=1.000000
+D= 8.000 deg  nesting f=0.885394   2-layer K-gon threshold g=0.885394   g/f=1.000000
+D=11.250 deg  nesting f=0.850430   2-layer K-gon threshold g=0.850430   g/f=1.000000
+D=15.000 deg  nesting f=0.816497   2-layer K-gon threshold g=0.816497   g/f=1.000000
+D=20.000 deg  nesting f=0.780206   2-layer K-gon threshold g=0.780206   g/f=1.000000
+D=22.400 deg  nesting f=0.765922   2-layer K-gon threshold g=0.765922   g/f=1.000000
+
+# critical triples
+D= 0.375 triples flipping at threshold: [('v0', 'w0', 'w1'), ('v1', 'w1', 'w2'), ('v2', 'w2', 'w3'), ('v3', 'w3', 'w4'), ('v4', 'w4', 'w5'), ('v5', 'w5', 'w6'), ('v6', 'w6', 'w7'), ('v7', 'w0', 'w7')] 8
+  g=0.997268  cos(2pi/m)/cos(2pi/m-D)=0.993519
+D= 5 triples flipping at threshold: [('v0', 'w0', 'w1'), ('v1', 'w1', 'w2'), ('v2', 'w2', 'w3'), ('v3', 'w3', 'w4'), ('v4', 'w4', 'w5'), ('v5', 'w5', 'w6'), ('v6', 'w6', 'w7'), ('v7', 'w0', 'w7')] 8
+  g=0.960094  cos(2pi/m)/cos(2pi/m-D)=0.923062
+D= 15 triples flipping at threshold: [('v0', 'w0', 'w1'), ('v1', 'w1', 'w2'), ('v2', 'w2', 'w3'), ('v3', 'w3', 'w4'), ('v4', 'w4', 'w5'), ('v5', 'w5', 'w6'), ('v6', 'w6', 'w7'), ('v7', 'w0', 'w7')] 8
+  g=0.858719  cos(2pi/m)/cos(2pi/m-D)=0.816497
+
+# convex 9-subsets just above threshold
+D=0.375 rho=0.9972700  convex 9-sets: 2200
+    ['v0', 'v1', 'v2', 'v3', 'v4', 'v5', 'v6', 'w6', 'w7']
+    ['v0', 'v1', 'v2', 'v3', 'v4', 'v5', 'v7', 'w5', 'w6']
+    ['v0', 'v1', 'v2', 'v3', 'v4', 'v5', 'w5', 'w6', 'w7']
+    ['v0', 'v1', 'v2', 'v3', 'v4', 'v6', 'v7', 'w4', 'w5']
+D=5 rho=0.9600959  convex 9-sets: 2200
+    ['v0', 'v1', 'v2', 'v3', 'v4', 'v5', 'v6', 'w6', 'w7']
+    ['v0', 'v1', 'v2', 'v3', 'v4', 'v5', 'v7', 'w5', 'w6']
+    ['v0', 'v1', 'v2', 'v3', 'v4', 'v5', 'w5', 'w6', 'w7']
+    ['v0', 'v1', 'v2', 'v3', 'v4', 'v6', 'v7', 'w4', 'w5']
+D=15 rho=0.8587207  convex 9-sets: 2200
+    ['v0', 'v1', 'v2', 'v3', 'v4', 'v5', 'v6', 'w6', 'w7']
+    ['v0', 'v1', 'v2', 'v3', 'v4', 'v5', 'v7', 'w5', 'w6']
+    ['v0', 'v1', 'v2', 'v3', 'v4', 'v5', 'w5', 'w6', 'w7']
+    ['v0', 'v1', 'v2', 'v3', 'v4', 'v6', 'v7', 'w4', 'w5']
+
+# random tests
+MISMATCH m 3 D 0.29714395927143994 rho 0.44517347895288667 G 0.4490485438251501 has True
+MISMATCH m 3 D 1.8666146641635204 rho 0.5715047551605792 G 0.5830454792658815 has True
+m=3 done, mismatches so far 205
+m=4 done, mismatches so far 205
+m=5 done, mismatches so far 205
+m=6 done, mismatches so far 205
+m=7 done, mismatches so far 205
+m=8 done, mismatches so far 205
+m=9 done, mismatches so far 205
+m=10 done, mismatches so far 205
+m=11 done, mismatches so far 205
+total tests 6428 mismatches 205
