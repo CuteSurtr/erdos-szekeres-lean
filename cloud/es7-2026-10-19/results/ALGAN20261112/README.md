@@ -13,9 +13,9 @@ symmetric problems, rather than larger SAT runs? The problems are:
   ρ > G_m(δ) = cos(π/m + δ)/cos(π/m), for m ≥ 4.
   - It sits next to the nesting bound f_m(δ) = cos(π/m)/cos(π/m − δ), with G/f = 1 − sin²δ / cos²(π/m).
   - Status:
-    - written proof (not refereed) for every **even** m ≥ 4, which includes m = 8;
-    - for odd m, one sub-case of "only if" (polygon on one side of the centre) is open, with 0 counterexamples in
-      21,350 stress tests (§5);
+    - written proof (not refereed) for every m ≥ 4, which includes m = 8. The odd-m half-plane sub-case, open in the
+      first version, was closed on the evening of 12 November by a near-chain argument that uses only nesting (§5,
+      step 4);
     - false for m = 3;
     - the key identities are Lean-checked.
   - It turns the pairwise layer conditions at K = m+1 into a causal-cone condition on the cylinder (−log r, ψ).
@@ -197,7 +197,7 @@ orient(w_{k−2}, w_{k−1}, v_k) > 0 ⟺ ρ > g(2π/m − D). And G_m(δ) = max
 6. So P_{k+1} is empty. The map k ↦ k + 1 injects full pairs into empty pairs, so P ≤ e. Contradiction.
 7. If instead ρ < g(2π/m − D), the mirror image of the argument applies. ∎
 
-**Proof of "only if" when O ∉ int conv(X)** (written proof for even m; open for odd m).
+**Proof of "only if" when O ∉ int conv(X)** (written proof for every m ≥ 4).
 1. Then X lies in a closed half-plane bounded by a line through O, so all angles of X lie in a closed arc of length π.
 2. Such an arc contains at most ⌊m/2⌋ + 1 outer and ⌊m/2⌋ + 1 inner vertices.
 3. **Even m:** the two counts cannot both reach m/2 + 1, because that needs the arc to start and end at outer
@@ -207,11 +207,42 @@ orient(w_{k−2}, w_{k−1}, v_k) > 0 ⟺ ρ > g(2π/m − D). And G_m(δ) = max
    - the other m − 1 points lie strictly on one side of it, in angular order along the rest of the boundary;
    - that boundary run contains a consecutive triple (v_j, w_j, v_{j+1}) (m ≥ 4), whose turn is a right turn by
      nesting. Contradiction.
-4. **Odd m:** again X must be all m + 1 slots of the arc, but the end points are not antipodal, and an inner point can
-   lie on the near side of pq. **This case is not proved.** The stress tests below show no counterexample.
+4. **Odd m = 2h + 1 ≥ 5** (written proof, added 12 November evening; this closes the gap of the first version).
+   - **Shape of X.** A closed arc of length π contains at most h + 1 outer and h + 1 inner vertices, so X is h + 1
+     consecutive outer and h + 1 consecutive inner vertices. Each run spans π − π/m, so the runs start within π/m of
+     each other. After a rotation, and the reflection (x, y) ↦ (x, −y) if needed (it replaces D by 2π/m − D), we may
+     take X = {v_0, …, v_h} ∪ {w_0, …, w_h} with 0 < D ≤ π/m. By angle: v_0, w_0, v_1, w_1, …, v_h, w_h, spanning
+     π − π/m + D ≤ π.
+   - **Two facts from nesting.** Since ρ < G < f_m(δ):
+     - (N1) each w_j lies strictly on O's side of the chord v_j v_{j+1}. Its support value is ρ cos(π/m − D) <
+       cos(π/m).
+     - (N2) each v_{j+1} lies strictly on the far side of the chord w_j w_{j+1}. Its support value
+       cos(π/m − D) > cos(π/m) > ρ cos(π/m). Hence orient(w_j, v_{j+1}, w_{j+1}) > 0.
+   - **Case D = π/m.** Then v_0 and w_h are antipodal, so O ∈ conv(X) and the triangle O v_0 v_1 lies in conv(X). By
+     (N1) and 0 < D < 2π/m, w_0 is in the interior of that triangle, so it is not a vertex. Contradiction.
+   - **Case D < π/m.** X lies in an open half-plane through O, so O ∉ conv(X).
+     - The extreme angles are attained only at v_0 and w_h. So the boundary of conv(X) splits there into a far chain
+       and a near chain, each monotone in angle.
+     - Listed by increasing angle, the far chain turns left at each vertex and the near chain turns right.
+     - For j ≤ h − 1, the ray from O through w_j meets the segment v_j v_{j+1} ⊂ conv(X) strictly beyond w_j (N1).
+       So w_j is not on the far chain. Since its angle is not extreme, if it is a vertex it is on the near chain.
+     - So in convex position all of w_0, …, w_h lie on the near chain.
+     - In angular order, the only point of X between w_j and w_{j+1} is v_{j+1}. It cannot come between them on the
+       near chain, because (N2) makes that a left turn. So w_j and w_{j+1} are consecutive on the near chain for
+       every j.
+     - Since h ≥ 2, w_0, w_1, w_2 are then three consecutive near-chain vertices. But orient(w_0, w_1, w_2) > 0 (the
+       inner polygon is convex and counter-clockwise), a left turn. Contradiction.
+   - **Remarks.**
+     - This case uses only nesting (ρ < f_m(δ)), not ρ < G. The threshold G enters only through the pairing argument.
+     - For m = 3 (h = 1) there are only two inner points and the argument fails, as it must: Lemma 2 is false for
+       m = 3.
+   - **Check** (`tools/oddhalf.py`, floats, evidence only).
+     - Odd m = 5, …, 13, 4,000 random (D ≤ π/m, ρ < f) each: X is never in convex position.
+     - m = 3: X is convex in 955 of 4,000 cases.
+     - Control with ρ > f: X is convex in every case, so the test is not vacuous.
 
-So Lemma 2 is a **written proof for every even m ≥ 4** (in particular m = 8, k = 9) and for odd m apart from the case
-in step 4.
+So Lemma 2 is a **written proof for every m ≥ 4** (in particular m = 8, k = 9). It is not refereed and not
+Lean-checked; its key identities are (`lean/Identities.lean`).
 
 **Tests** (`tools/lemma2L.py`, float counter `cnt9.c`, computational evidence):
 - 6,428 random (m, D, ρ), m = 3..11, with ρ on both sides of G and at relative distances 1e-5 to 0.3.
@@ -369,7 +400,32 @@ PySAT). Loop:
     soundness. Two sparse 5-layer certificates passed `tools/verify_certs_indep.py`.
   - Clauses are loaded and written with duplicate literals and duplicate clauses removed (stage 2's 609,307 added
     clauses are 392,635 distinct).
-  - Results will be added here. Then 6 layers, or BFP on all 56 points with constraint generation.
+  - **Result (ended 20:11 KST at the 6-hour limit): no verdict.** 163 rounds; no UNSAT and no model clean on all 3-,
+    4- and 5-layer subsets. Forbidden in stage 3: 11 three-layer, 1,838 four-layer and 4,222 five-layer patterns
+    (6,071 exact certificates, all sparse, none failed; distinct frame triples per 5-layer certificate 35–273, median
+    89). All 6,071 pass `tools/verify_certs_indep.py`. Peak memory 5.5 GB; 21.4 CPU-hours.
+  - **No sign of convergence.** Bad 5-layer subsets per model, over the 24 rounds that reached the 5-layer test:
+    269 209 187 76 300 225 179 167 191 182 139 361 111 64 192 238 191 115 108 96 210 163 84 165. Each model the solver
+    returns is still refuted by symmetric final polynomials, but new models keep appearing.
+  - Files: `logs/bfp_cegar_stage3.log`, `logs/certs_stage3.tar.xz`; the 1.5 GB `added_clauses3.cnf` stays in the work
+    directory (not committed).
+  - **Assessment.** Layer-local cuts of size ≤ 5 do not visibly close the problem. Escalating to 6 layers (3,003
+    subsets, far longer tests) is not recommended.
+- **Global sparse search** (`tools/global_sparse.py`, 12 November evening).
+  - **Question.** On the stage-2 model (`bfp4clean_model_30`, clean on ≤ 4 layers, 217 bad 5-layer subsets), is there
+    a sparse obstruction that uses more layers but fewer orbits than the local ones?
+  - **Method.** Column generation over every comparison row of the 56-point model: 4,774,770 relations up to
+    rotation, 9,549,540 columns, 6,930 orbits. Reweighted-L1 costs; the final support is made exact by `find_cert` and
+    re-checked by `check_cert`.
+  - **Result: no.**
+    - From three seeds, the method found exact certificates with 27, 39 and 39 orbits (8, 19 and 16 relations).
+    - Pricing added up to 67,000 columns from outside each seed, but every final support lies on the seed's 5 layers.
+    - The local baseline over all 217 bad subsets (`tools/local_baseline.py`) gives 32–103 orbits, median 62.
+  - **Conclusion.** The obstructions of this model are genuinely 5-layer and use about 27–100 orbits, so each cut
+    excludes only a small part of the sign space. Together with stage 3, this suggests BFP-CEGAR on encoder A is
+    enumerating, not converging. **Recommendation: stop this line for Problem A.**
+  - A minimum-orbit certificate (an MILP) could still find shorter cuts. It was not tried.
+  - Logs: `logs/global_sparse_m30.txt`, `logs/local_sparse_m30.txt`.
 
 **What a final UNSAT would mean.**
 - Status would be "cake_lpr-certified SAT + written soundness". Encoder A soundness is the same as for C6UPPER/C7UPPER
@@ -482,10 +538,14 @@ Plan for Lemma 2 in Lean:
 | 08:13 | symmetric BFP on its 364 three-layer subsets | **80 infeasible**; exact certificates for (9,10,13) and (11,12,13), rechecked |
 | 08:14–08:16 | BFP-CEGAR stage 1 (3-layer cuts) | 15 patterns, then a model clean on all 3-layer subsets |
 | 08:17–08:21 | its 4-layer subsets | **85 of 1,001 infeasible** |
-| 08:22– | BFP-CEGAR stage 2 (3- and 4-layer cuts) | running (`logs/bfp_cegar2.log`) |
+| 08:22–08:36 | BFP-CEGAR stage 2 (3- and 4-layer cuts) | model clean on all 3- and 4-layer subsets; 272 certificates |
+| 08:40 | its 5-layer subsets | 217 of 2,002 infeasible (LP) |
+| 14:11–20:11 | stage 3 (sparse certificates, 5-layer cuts) | time limit, no verdict; 6,071 certificates, all rechecked |
+| 20:30 | global sparse search on the stage-2 model | no obstruction sparser than the local ones; stop this line |
+| 20:40 | Lemma 2, odd m, half-plane case | **proved** (near-chain argument, nesting only); float check 0/20,000 for m = 5..13 |
 
 **What worked:**
-- exact two-layer threshold (Lemma 2) with a clean proof for even m;
+- exact two-layer threshold (Lemma 2) with a written proof for every m ≥ 4;
 - symmetric BFP certificates refute the abstract t = 14 models, with small reusable 12- and 16-point obstructions.
 
 **What failed:**
@@ -497,6 +557,6 @@ Plan for Lemma 2 in Lean:
 
 **What remains open:**
 - Problems A, B and C themselves;
-- Lemma 2 for odd m in the half-plane case;
+- a Lean proof of Lemma 2 (only its identities are Lean-checked);
 - the general two-layer table G_{m,K} for m + 1 < K < 2m;
 - exact/interval replacements for the three floating-point steps under LBK9OCT.

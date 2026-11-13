@@ -1,0 +1,165 @@
+stage3 start: distinct clauses loaded {'gp_m4K8t14.work.cnf': 3764693, 'added_clauses.cnf': 392635} existing stage-3 patterns {3: 0, 4: 0, 5: 0}
+iter 0 solve 34s GP violations 832 clauses 3328
+iter 1 solve 0s size 4 bad subsets 56 test 31s certs 5s new patterns 56 new clauses 24024 patterns {3: 0, 4: 56, 5: 0} elapsed 88s
+iter 2 solve 123s GP violations 3600 clauses 14400
+iter 3 solve 0s size 4 bad subsets 138 test 30s certs 12s new patterns 138 new clauses 33033 patterns {3: 0, 4: 194, 5: 0} elapsed 262s
+iter 4 solve 14s size 4 bad subsets 130 test 30s certs 12s new patterns 130 new clauses 40040 patterns {3: 0, 4: 324, 5: 0} elapsed 323s
+iter 5 solve 32s GP violations 4048 clauses 16192
+iter 6 solve 147s GP violations 416 clauses 1664
+iter 7 solve 0s size 4 bad subsets 89 test 31s certs 8s new patterns 89 new clauses 25025 patterns {3: 0, 4: 413, 5: 0} elapsed 552s
+iter 8 solve 58s size 4 bad subsets 36 test 30s certs 3s new patterns 36 new clauses 13013 patterns {3: 0, 4: 449, 5: 0} elapsed 648s
+iter 9 solve 0s size 4 bad subsets 30 test 31s certs 3s new patterns 30 new clauses 15015 patterns {3: 0, 4: 479, 5: 0} elapsed 687s
+iter 10 solve 36s GP violations 824 clauses 3296
+iter 11 solve 0s size 4 bad subsets 19 test 32s certs 2s new patterns 19 new clauses 2002 patterns {3: 0, 4: 498, 5: 0} elapsed 765s
+iter 12 solve 33s size 4 bad subsets 35 test 31s certs 3s new patterns 35 new clauses 19019 patterns {3: 0, 4: 533, 5: 0} elapsed 838s
+iter 13 solve 143s GP violations 824 clauses 3296
+iter 14 solve 0s size 4 bad subsets 79 test 31s certs 8s new patterns 79 new clauses 44044 patterns {3: 0, 4: 612, 5: 0} elapsed 1027s
+iter 15 solve 11s GP violations 2880 clauses 11520
+iter 16 solve 0s size 3 bad subsets 2 test 2s certs 0s new patterns 2 new clauses 2184 patterns {3: 2, 4: 612, 5: 0} elapsed 1046s
+iter 17 solve 0s size 4 bad subsets 73 test 31s certs 7s new patterns 73 new clauses 49049 patterns {3: 2, 4: 685, 5: 0} elapsed 1089s
+iter 18 solve 50s size 4 bad subsets 113 test 31s certs 10s new patterns 113 new clauses 34034 patterns {3: 2, 4: 798, 5: 0} elapsed 1184s
+iter 19 solve 8s GP violations 2056 clauses 8224
+iter 20 solve 0s size 4 bad subsets 12 test 32s certs 1s new patterns 12 new clauses 6006 patterns {3: 2, 4: 810, 5: 0} elapsed 1233s
+iter 21 solve 0s GP violations 416 clauses 1664
+iter 22 solve 0s size 5 bad subsets 269 test 346s certs 110s new patterns 269 new clauses 306306 patterns {3: 2, 4: 810, 5: 269} elapsed 1728s
+iter 23 solve 35s GP violations 832 clauses 3328
+iter 24 solve 0s size 4 bad subsets 20 test 32s certs 2s new patterns 20 new clauses 14014 patterns {3: 2, 4: 830, 5: 269} elapsed 1805s
+iter 25 solve 14s GP violations 1824 clauses 7296
+iter 26 solve 0s size 3 bad subsets 9 test 2s certs 0s new patterns 9 new clauses 4368 patterns {3: 11, 4: 830, 5: 269} elapsed 1827s
+iter 27 solve 69s GP violations 824 clauses 3296
+iter 28 solve 0s size 4 bad subsets 66 test 32s certs 6s new patterns 66 new clauses 20020 patterns {3: 11, 4: 896, 5: 269} elapsed 1942s
+iter 29 solve 0s GP violations 2416 clauses 9664
+iter 30 solve 0s size 4 bad subsets 19 test 31s certs 2s new patterns 19 new clauses 10010 patterns {3: 11, 4: 915, 5: 269} elapsed 1984s
+iter 31 solve 13s GP violations 816 clauses 3264
+iter 32 solve 0s size 4 bad subsets 8 test 32s certs 1s new patterns 8 new clauses 5005 patterns {3: 11, 4: 923, 5: 269} elapsed 2038s
+iter 33 solve 0s GP violations 1640 clauses 6560
+iter 34 solve 0s size 4 bad subsets 10 test 32s certs 1s new patterns 10 new clauses 8008 patterns {3: 11, 4: 933, 5: 269} elapsed 2080s
+iter 35 solve 48s GP violations 832 clauses 3328
+iter 36 solve 0s size 4 bad subsets 69 test 32s certs 7s new patterns 69 new clauses 26026 patterns {3: 11, 4: 1002, 5: 269} elapsed 2174s
+iter 37 solve 0s size 4 bad subsets 14 test 32s certs 1s new patterns 14 new clauses 8008 patterns {3: 11, 4: 1016, 5: 269} elapsed 2212s
+iter 38 solve 41s GP violations 2472 clauses 9888
+iter 39 solve 0s size 4 bad subsets 30 test 32s certs 3s new patterns 30 new clauses 18018 patterns {3: 11, 4: 1046, 5: 269} elapsed 2297s
+iter 40 solve 0s size 4 bad subsets 3 test 32s certs 1s new patterns 3 new clauses 2002 patterns {3: 11, 4: 1049, 5: 269} elapsed 2335s
+iter 41 solve 89s GP violations 2040 clauses 8160
+iter 42 solve 17s size 4 bad subsets 18 test 31s certs 2s new patterns 18 new clauses 12012 patterns {3: 11, 4: 1067, 5: 269} elapsed 2482s
+iter 43 solve 54s GP violations 1456 clauses 5824
+iter 44 solve 0s size 4 bad subsets 43 test 32s certs 4s new patterns 43 new clauses 28028 patterns {3: 11, 4: 1110, 5: 269} elapsed 2579s
+iter 45 solve 23s GP violations 3696 clauses 14784
+iter 46 solve 0s size 4 bad subsets 28 test 33s certs 4s new patterns 28 new clauses 14014 patterns {3: 11, 4: 1138, 5: 269} elapsed 2647s
+iter 47 solve 220s GP violations 1640 clauses 6560
+iter 48 solve 0s size 4 bad subsets 6 test 32s certs 1s new patterns 6 new clauses 3003 patterns {3: 11, 4: 1144, 5: 269} elapsed 2908s
+iter 49 solve 184s GP violations 416 clauses 1664
+iter 50 solve 0s size 4 bad subsets 21 test 33s certs 2s new patterns 21 new clauses 10010 patterns {3: 11, 4: 1165, 5: 269} elapsed 3134s
+iter 51 solve 0s GP violations 1640 clauses 6560
+iter 52 solve 46s GP violations 2440 clauses 9760
+iter 53 solve 0s GP violations 824 clauses 3296
+iter 54 solve 0s size 4 bad subsets 24 test 33s certs 3s new patterns 24 new clauses 15015 patterns {3: 11, 4: 1189, 5: 269} elapsed 3230s
+iter 55 solve 0s GP violations 1632 clauses 6528
+iter 56 solve 248s size 4 bad subsets 24 test 32s certs 2s new patterns 24 new clauses 9009 patterns {3: 11, 4: 1213, 5: 269} elapsed 3521s
+iter 57 solve 19s GP violations 3264 clauses 13056
+iter 58 solve 0s size 4 bad subsets 15 test 33s certs 1s new patterns 15 new clauses 6006 patterns {3: 11, 4: 1228, 5: 269} elapsed 3582s
+iter 59 solve 0s GP violations 416 clauses 1664
+iter 60 solve 0s size 5 bad subsets 209 test 358s certs 89s new patterns 209 new clauses 264264 patterns {3: 11, 4: 1228, 5: 478} elapsed 4068s
+iter 61 solve 0s GP violations 1248 clauses 4992
+iter 62 solve 0s size 4 bad subsets 9 test 33s certs 1s new patterns 9 new clauses 6006 patterns {3: 11, 4: 1237, 5: 478} elapsed 4110s
+iter 63 solve 76s size 4 bad subsets 18 test 32s certs 2s new patterns 18 new clauses 15015 patterns {3: 11, 4: 1255, 5: 478} elapsed 4225s
+iter 64 solve 96s GP violations 1640 clauses 6560
+iter 65 solve 106s size 4 bad subsets 37 test 32s certs 4s new patterns 37 new clauses 19019 patterns {3: 11, 4: 1292, 5: 478} elapsed 4470s
+iter 66 solve 13s size 4 bad subsets 44 test 32s certs 4s new patterns 44 new clauses 15015 patterns {3: 11, 4: 1336, 5: 478} elapsed 4524s
+iter 67 solve 17s GP violations 1648 clauses 6592
+iter 68 solve 0s size 4 bad subsets 20 test 33s certs 2s new patterns 20 new clauses 12012 patterns {3: 11, 4: 1356, 5: 478} elapsed 4584s
+iter 69 solve 0s size 4 bad subsets 5 test 33s certs 1s new patterns 5 new clauses 4004 patterns {3: 11, 4: 1361, 5: 478} elapsed 4622s
+iter 70 solve 0s size 5 bad subsets 187 test 360s certs 80s new patterns 187 new clauses 204204 patterns {3: 11, 4: 1361, 5: 665} elapsed 5101s
+iter 71 solve 0s size 4 bad subsets 5 test 32s certs 1s new patterns 5 new clauses 2002 patterns {3: 11, 4: 1366, 5: 665} elapsed 5139s
+iter 72 solve 0s size 5 bad subsets 76 test 367s certs 35s new patterns 76 new clauses 52052 patterns {3: 11, 4: 1366, 5: 741} elapsed 5579s
+iter 73 solve 242s size 4 bad subsets 19 test 32s certs 2s new patterns 19 new clauses 6006 patterns {3: 11, 4: 1385, 5: 741} elapsed 5860s
+iter 74 solve 4s GP violations 1240 clauses 4960
+iter 75 solve 0s size 4 bad subsets 12 test 32s certs 1s new patterns 12 new clauses 8008 patterns {3: 11, 4: 1397, 5: 741} elapsed 5906s
+iter 76 solve 0s size 5 bad subsets 300 test 402s certs 131s new patterns 300 new clauses 278278 patterns {3: 11, 4: 1397, 5: 1041} elapsed 6477s
+iter 77 solve 296s GP violations 2808 clauses 11232
+iter 78 solve 0s GP violations 816 clauses 3264
+iter 79 solve 0s size 4 bad subsets 9 test 33s certs 1s new patterns 9 new clauses 5005 patterns {3: 11, 4: 1406, 5: 1041} elapsed 6818s
+iter 80 solve 0s size 4 bad subsets 3 test 33s certs 1s new patterns 3 new clauses 2002 patterns {3: 11, 4: 1409, 5: 1041} elapsed 6857s
+iter 81 solve 68s GP violations 816 clauses 3264
+iter 82 solve 0s size 4 bad subsets 9 test 33s certs 1s new patterns 9 new clauses 9009 patterns {3: 11, 4: 1418, 5: 1041} elapsed 6967s
+iter 83 solve 81s GP violations 416 clauses 1664
+iter 84 solve 0s size 4 bad subsets 20 test 32s certs 2s new patterns 20 new clauses 7007 patterns {3: 11, 4: 1438, 5: 1041} elapsed 7090s
+iter 85 solve 0s size 5 bad subsets 225 test 356s certs 89s new patterns 225 new clauses 198198 patterns {3: 11, 4: 1438, 5: 1266} elapsed 7572s
+iter 86 solve 379s GP violations 416 clauses 1664
+iter 87 solve 0s size 4 bad subsets 39 test 33s certs 4s new patterns 39 new clauses 16016 patterns {3: 11, 4: 1477, 5: 1266} elapsed 7996s
+iter 88 solve 28s GP violations 1632 clauses 6528
+iter 89 solve 0s size 4 bad subsets 7 test 33s certs 1s new patterns 7 new clauses 3003 patterns {3: 11, 4: 1484, 5: 1266} elapsed 8066s
+iter 90 solve 0s size 5 bad subsets 179 test 360s certs 75s new patterns 179 new clauses 96096 patterns {3: 11, 4: 1484, 5: 1445} elapsed 8540s
+iter 91 solve 0s GP violations 816 clauses 3264
+iter 92 solve 0s size 4 bad subsets 12 test 33s certs 2s new patterns 12 new clauses 2002 patterns {3: 11, 4: 1496, 5: 1445} elapsed 8584s
+iter 93 solve 0s size 5 bad subsets 167 test 366s certs 67s new patterns 167 new clauses 142142 patterns {3: 11, 4: 1496, 5: 1612} elapsed 9055s
+iter 94 solve 4s GP violations 416 clauses 1664
+iter 95 solve 0s size 4 bad subsets 2 test 33s certs 1s new patterns 2 new clauses 1001 patterns {3: 11, 4: 1498, 5: 1612} elapsed 9100s
+iter 96 solve 0s size 5 bad subsets 191 test 363s certs 82s new patterns 191 new clauses 232232 patterns {3: 11, 4: 1498, 5: 1803} elapsed 9584s
+iter 97 solve 2s size 4 bad subsets 4 test 33s certs 1s new patterns 4 new clauses 3003 patterns {3: 11, 4: 1502, 5: 1803} elapsed 9625s
+iter 98 solve 86s size 4 bad subsets 3 test 33s certs 1s new patterns 3 new clauses 3003 patterns {3: 11, 4: 1505, 5: 1803} elapsed 9749s
+iter 99 solve 0s GP violations 416 clauses 1664
+iter 100 solve 0s size 5 bad subsets 182 test 403s certs 76s new patterns 182 new clauses 280280 patterns {3: 11, 4: 1505, 5: 1985} elapsed 10271s
+iter 101 solve 0s size 4 bad subsets 1 test 33s certs 0s new patterns 1 new clauses 1001 patterns {3: 11, 4: 1506, 5: 1985} elapsed 10310s
+iter 102 solve 0s size 5 bad subsets 139 test 369s certs 59s new patterns 139 new clauses 198198 patterns {3: 11, 4: 1506, 5: 2124} elapsed 10778s
+iter 103 solve 72s GP violations 416 clauses 1664
+iter 104 solve 0s size 4 bad subsets 11 test 33s certs 1s new patterns 11 new clauses 5005 patterns {3: 11, 4: 1517, 5: 2124} elapsed 10892s
+iter 105 solve 371s size 4 bad subsets 21 test 33s certs 2s new patterns 21 new clauses 7007 patterns {3: 11, 4: 1538, 5: 2124} elapsed 11304s
+iter 106 solve 0s size 5 bad subsets 361 test 355s certs 157s new patterns 361 new clauses 290290 patterns {3: 11, 4: 1538, 5: 2485} elapsed 11855s
+iter 107 solve 238s GP violations 832 clauses 3328
+iter 108 solve 0s size 4 bad subsets 71 test 33s certs 7s new patterns 71 new clauses 26026 patterns {3: 11, 4: 1609, 5: 2485} elapsed 12140s
+iter 109 solve 1s GP violations 1240 clauses 4960
+iter 110 solve 0s size 4 bad subsets 17 test 33s certs 2s new patterns 17 new clauses 14014 patterns {3: 11, 4: 1626, 5: 2485} elapsed 12185s
+iter 111 solve 0s size 4 bad subsets 1 test 33s certs 0s new patterns 1 new clauses 1001 patterns {3: 11, 4: 1627, 5: 2485} elapsed 12224s
+iter 112 solve 0s GP violations 1200 clauses 4800
+iter 113 solve 68s GP violations 416 clauses 1664
+iter 114 solve 0s size 4 bad subsets 14 test 33s certs 2s new patterns 14 new clauses 9009 patterns {3: 11, 4: 1641, 5: 2485} elapsed 12338s
+iter 115 solve 0s size 4 bad subsets 7 test 33s certs 1s new patterns 7 new clauses 5005 patterns {3: 11, 4: 1648, 5: 2485} elapsed 12378s
+iter 116 solve 0s size 4 bad subsets 6 test 33s certs 1s new patterns 6 new clauses 3003 patterns {3: 11, 4: 1654, 5: 2485} elapsed 12417s
+iter 117 solve 0s size 4 bad subsets 8 test 33s certs 1s new patterns 8 new clauses 4004 patterns {3: 11, 4: 1662, 5: 2485} elapsed 12457s
+iter 118 solve 0s size 4 bad subsets 2 test 33s certs 1s new patterns 2 new clauses 1001 patterns {3: 11, 4: 1664, 5: 2485} elapsed 12496s
+iter 119 solve 0s size 4 bad subsets 2 test 33s certs 1s new patterns 2 new clauses 1001 patterns {3: 11, 4: 1666, 5: 2485} elapsed 12535s
+iter 120 solve 0s size 5 bad subsets 111 test 364s certs 51s new patterns 111 new clauses 174174 patterns {3: 11, 4: 1666, 5: 2596} elapsed 12989s
+iter 121 solve 0s GP violations 1240 clauses 4960
+iter 122 solve 0s size 4 bad subsets 1 test 33s certs 1s new patterns 1 new clauses 1001 patterns {3: 11, 4: 1667, 5: 2596} elapsed 13032s
+iter 123 solve 0s size 5 bad subsets 64 test 366s certs 29s new patterns 64 new clauses 100100 patterns {3: 11, 4: 1667, 5: 2660} elapsed 13465s
+iter 124 solve 92s size 5 bad subsets 192 test 363s certs 82s new patterns 192 new clauses 156156 patterns {3: 11, 4: 1667, 5: 2852} elapsed 14040s
+iter 125 solve 1483s GP violations 416 clauses 1664
+iter 126 solve 0s size 4 bad subsets 14 test 34s certs 2s new patterns 14 new clauses 8008 patterns {3: 11, 4: 1681, 5: 2852} elapsed 15567s
+iter 127 solve 0s size 4 bad subsets 5 test 34s certs 1s new patterns 5 new clauses 3003 patterns {3: 11, 4: 1686, 5: 2852} elapsed 15607s
+iter 128 solve 0s size 4 bad subsets 1 test 34s certs 1s new patterns 1 new clauses 1001 patterns {3: 11, 4: 1687, 5: 2852} elapsed 15647s
+iter 129 solve 0s GP violations 1232 clauses 4928
+iter 130 solve 0s size 4 bad subsets 5 test 34s certs 1s new patterns 5 new clauses 2002 patterns {3: 11, 4: 1692, 5: 2852} elapsed 15691s
+iter 131 solve 0s size 4 bad subsets 3 test 34s certs 1s new patterns 3 new clauses 1001 patterns {3: 11, 4: 1695, 5: 2852} elapsed 15731s
+iter 132 solve 0s size 4 bad subsets 4 test 34s certs 1s new patterns 4 new clauses 2002 patterns {3: 11, 4: 1699, 5: 2852} elapsed 15771s
+iter 133 solve 0s size 5 bad subsets 238 test 363s certs 103s new patterns 238 new clauses 226226 patterns {3: 11, 4: 1699, 5: 3090} elapsed 16276s
+iter 134 solve 128s size 4 bad subsets 8 test 33s certs 1s new patterns 8 new clauses 6006 patterns {3: 11, 4: 1707, 5: 3090} elapsed 16443s
+iter 135 solve 0s size 4 bad subsets 1 test 33s certs 1s new patterns 1 new clauses 1001 patterns {3: 11, 4: 1708, 5: 3090} elapsed 16482s
+iter 136 solve 0s size 5 bad subsets 191 test 363s certs 85s new patterns 191 new clauses 172172 patterns {3: 11, 4: 1708, 5: 3281} elapsed 16967s
+iter 137 solve 27s GP violations 832 clauses 3328
+iter 138 solve 0s size 4 bad subsets 10 test 34s certs 1s new patterns 10 new clauses 3003 patterns {3: 11, 4: 1718, 5: 3281} elapsed 17039s
+iter 139 solve 0s size 5 bad subsets 115 test 374s certs 51s new patterns 115 new clauses 140140 patterns {3: 11, 4: 1718, 5: 3396} elapsed 17503s
+iter 140 solve 101s GP violations 1568 clauses 6272
+iter 141 solve 0s size 4 bad subsets 15 test 34s certs 2s new patterns 15 new clauses 3003 patterns {3: 11, 4: 1733, 5: 3396} elapsed 17648s
+iter 142 solve 0s size 4 bad subsets 3 test 34s certs 1s new patterns 3 new clauses 1001 patterns {3: 11, 4: 1736, 5: 3396} elapsed 17688s
+iter 143 solve 0s GP violations 416 clauses 1664
+iter 144 solve 0s size 5 bad subsets 108 test 372s certs 45s new patterns 108 new clauses 46046 patterns {3: 11, 4: 1736, 5: 3504} elapsed 18148s
+iter 145 solve 32s size 4 bad subsets 42 test 33s certs 4s new patterns 42 new clauses 19019 patterns {3: 11, 4: 1778, 5: 3504} elapsed 18222s
+iter 146 solve 113s GP violations 416 clauses 1664
+iter 147 solve 0s size 4 bad subsets 1 test 34s certs 0s new patterns 1 new clauses 1001 patterns {3: 11, 4: 1779, 5: 3504} elapsed 18378s
+iter 148 solve 0s size 5 bad subsets 96 test 367s certs 44s new patterns 96 new clauses 124124 patterns {3: 11, 4: 1779, 5: 3600} elapsed 18828s
+iter 149 solve 4s GP violations 1032 clauses 4128
+iter 150 solve 0s size 4 bad subsets 18 test 34s certs 2s new patterns 18 new clauses 6006 patterns {3: 11, 4: 1797, 5: 3600} elapsed 18878s
+iter 151 solve 0s GP violations 816 clauses 3264
+iter 152 solve 0s size 4 bad subsets 5 test 33s certs 1s new patterns 5 new clauses 1001 patterns {3: 11, 4: 1802, 5: 3600} elapsed 18920s
+iter 153 solve 0s size 4 bad subsets 5 test 33s certs 1s new patterns 5 new clauses 2002 patterns {3: 11, 4: 1807, 5: 3600} elapsed 18960s
+iter 154 solve 0s size 5 bad subsets 210 test 363s certs 94s new patterns 210 new clauses 154154 patterns {3: 11, 4: 1807, 5: 3810} elapsed 19457s
+iter 155 solve 9s size 4 bad subsets 19 test 34s certs 2s new patterns 19 new clauses 3003 patterns {3: 11, 4: 1826, 5: 3810} elapsed 19507s
+iter 156 solve 22s GP violations 208 clauses 832
+iter 157 solve 0s size 4 bad subsets 3 test 33s certs 1s new patterns 3 new clauses 1001 patterns {3: 11, 4: 1829, 5: 3810} elapsed 19571s
+iter 158 solve 0s size 5 bad subsets 163 test 370s certs 73s new patterns 163 new clauses 100100 patterns {3: 11, 4: 1829, 5: 3973} elapsed 20053s
+iter 159 solve 93s size 5 bad subsets 84 test 368s certs 36s new patterns 84 new clauses 96096 patterns {3: 11, 4: 1829, 5: 4057} elapsed 20589s
+iter 160 solve 520s GP violations 416 clauses 1664
+iter 161 solve 0s size 4 bad subsets 9 test 33s certs 1s new patterns 9 new clauses 5005 patterns {3: 11, 4: 1838, 5: 4057} elapsed 21152s
+iter 162 solve 1s size 5 bad subsets 165 test 359s certs 67s new patterns 165 new clauses 116116 patterns {3: 11, 4: 1838, 5: 4222} elapsed 21617s
+time limit; patterns {3: 11, 4: 1838, 5: 4222} elapsed 21617s

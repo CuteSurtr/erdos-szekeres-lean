@@ -1,0 +1,45 @@
+== eps 0.01
+     0s orbits 6930
+     2s relations 4774770 columns 9549540
+     2s initial columns 38760 eps 0.01
+     3s round 0 support 224 orbits used 280 layers [0, 2, 5, 11, 12] cg iters 0 columns 38760
+     3s round 1 support 13 orbits used 34 layers [0, 2, 5, 11, 12] cg iters 0 columns 38760
+     3s round 2 support 12 orbits used 32 layers [0, 2, 5, 11, 12] cg iters 0 columns 38760
+     4s round 3 support 12 orbits used 32 layers [0, 2, 5, 11, 12] cg iters 0 columns 38760
+     4s round 4 support 12 orbits used 32 layers [0, 2, 5, 11, 12] cg iters 0 columns 38760
+     4s round 5 support 12 orbits used 32 layers [0, 2, 5, 11, 12] cg iters 0 columns 38760
+     5s round 6 support 12 orbits used 32 layers [0, 2, 5, 11, 12] cg iters 0 columns 38760
+     5s round 7 support 12 orbits used 32 layers [0, 2, 5, 11, 12] cg iters 0 columns 38760
+     5s round 8 support 12 orbits used 32 layers [0, 2, 5, 11, 12] cg iters 0 columns 38760
+     5s round 9 support 12 orbits used 32 layers [0, 2, 5, 11, 12] cg iters 0 columns 38760
+     5s exact certificate: True multisets equal relations 12 orbits used 32 layers [0, 2, 5, 11, 12]
+== eps 0.1
+     0s orbits 6930
+     2s relations 4774770 columns 9549540
+     2s initial columns 38760 eps 0.1
+     3s round 0 support 224 orbits used 280 layers [0, 2, 5, 11, 12] cg iters 0 columns 38760
+     3s round 1 support 18 orbits used 42 layers [0, 2, 5, 11, 12] cg iters 0 columns 38760
+     3s round 2 support 8 orbits used 27 layers [0, 2, 5, 11, 12] cg iters 0 columns 38760
+     4s round 3 support 8 orbits used 27 layers [0, 2, 5, 11, 12] cg iters 0 columns 38760
+     4s round 4 support 8 orbits used 27 layers [0, 2, 5, 11, 12] cg iters 0 columns 38760
+     4s round 5 support 8 orbits used 27 layers [0, 2, 5, 11, 12] cg iters 0 columns 38760
+     5s round 6 support 8 orbits used 27 layers [0, 2, 5, 11, 12] cg iters 0 columns 38760
+     5s round 7 support 8 orbits used 27 layers [0, 2, 5, 11, 12] cg iters 0 columns 38760
+     5s round 8 support 8 orbits used 27 layers [0, 2, 5, 11, 12] cg iters 0 columns 38760
+     5s round 9 support 8 orbits used 27 layers [0, 2, 5, 11, 12] cg iters 0 columns 38760
+     5s exact certificate: True multisets equal relations 8 orbits used 27 layers [0, 2, 5, 11, 12]
+== eps 1
+     0s orbits 6930
+     2s relations 4774770 columns 9549540
+     2s initial columns 38760 eps 1.0
+     3s round 0 support 224 orbits used 280 layers [0, 2, 5, 11, 12] cg iters 0 columns 38760
+     3s round 1 support 18 orbits used 42 layers [0, 2, 5, 11, 12] cg iters 0 columns 38760
+     3s round 2 support 8 orbits used 27 layers [0, 2, 5, 11, 12] cg iters 0 columns 38760
+     5s round 3 support 8 orbits used 27 layers [0, 2, 5, 11, 12] cg iters 4 columns 39367
+     5s round 4 support 8 orbits used 27 layers [0, 2, 5, 11, 12] cg iters 0 columns 39367
+     5s round 5 support 8 orbits used 27 layers [0, 2, 5, 11, 12] cg iters 0 columns 39367
+     6s round 6 support 8 orbits used 27 layers [0, 2, 5, 11, 12] cg iters 0 columns 39367
+     6s round 7 support 8 orbits used 27 layers [0, 2, 5, 11, 12] cg iters 0 columns 39367
+     6s round 8 support 8 orbits used 27 layers [0, 2, 5, 11, 12] cg iters 0 columns 39367
+     7s round 9 support 8 orbits used 27 layers [0, 2, 5, 11, 12] cg iters 0 columns 39367
+     7s exact certificate: True multisets equal relations 8 orbits used 27 layers [0, 2, 5, 11, 12]
