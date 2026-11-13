@@ -1,0 +1,389 @@
+c3_61pts_centre.txt m=3 orbits=20 centre=True base n8=0 maxlen=7
+  single moves=9720 free=0 best=(18, 'D', 5, 1) (34s)
+DONE c3_61pts_centre.txt
+c3_61pts_blowup.txt m=3 orbits=20 centre=True base n8=0 maxlen=7
+  single moves=9720 free=0 best=(18, 'D', 4, 1) (33s)
+DONE c3_61pts_blowup.txt
+c3_60pts_nocentre.txt m=3 orbits=20 centre=False base n8=0 maxlen=7
+  single moves=9680 free=0 best=(189, 'D', 5, 1) (36s)
+DONE c3_60pts_nocentre.txt
+c3_60pts_nocentre_b.txt m=3 orbits=20 centre=False base n8=0 maxlen=7
+  single moves=9680 free=0 best=(192, 'D', 6, 1) (36s)
+DONE c3_60pts_nocentre_b.txt
+base60_cost3_minus12.txt m=3 orbits=20 centre=False base n8=0 maxlen=7
+  single moves=9680 free=0 best=(3, 'D', 6, 1) (32s)
+DONE base60_cost3_minus12.txt
+base60_cost3_minus19.txt m=3 orbits=20 centre=False base n8=0 maxlen=7
+  single moves=9680 free=0 best=(3, 'D', 6, 1) (32s)
+DONE base60_cost3_minus19.txt
+base60_cost3_minus20.txt m=3 orbits=20 centre=False base n8=0 maxlen=7
+  single moves=9680 free=0 best=(3, 'A', None, -4) (30s)
+DONE base60_cost3_minus20.txt
+base60_cost3_minus3.txt m=3 orbits=20 centre=False base n8=0 maxlen=7
+  single moves=9680 free=0 best=(3, 'D', 1, 1) (32s)
+DONE base60_cost3_minus3.txt
+base60_cost3_minus4.txt m=3 orbits=20 centre=False base n8=0 maxlen=7
+  single moves=9680 free=0 best=(3, 'D', 1, 1) (33s)
+DONE base60_cost3_minus4.txt
+base60_cost3_minus6.txt m=3 orbits=20 centre=False base n8=0 maxlen=7
+  single moves=9680 free=0 best=(3, 'D', 5, 1) (32s)
+DONE base60_cost3_minus6.txt
+base60_cost3_minus7.txt m=3 orbits=20 centre=False base n8=0 maxlen=7
+  single moves=9680 free=0 best=(3, 'D', 1, 1) (32s)
+DONE base60_cost3_minus7.txt
+base60_cost3_minus9.txt m=3 orbits=20 centre=False base n8=0 maxlen=7
+  single moves=9680 free=0 best=(3, 'D', 1, 1) (32s)
+DONE base60_cost3_minus9.txt
+c3_61pts_centre.txt remove=0 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=412 best=(0, 'D', 0, 1) (26s)
+   free single ('D', 0, 1, (4735842813826697, 4253076117618256))
+   free single ('D', 0, 1, (7772382224757392, 7057538901292212))
+   free single ('D', 0, 1, (7772589521479237, 7057793493351436))
+   free single ('D', 0, 1, (7772645971118688, 7057901505144615))
+   free single ('D', 0, 1, (5829079935795471, 5293500856596989))
+  pairs=22356 found=0 best=(453, ('D', 0, 1, (4735842813826697, 4253076117618256)), ('A', None, -4, (4755531400077850, 4270802783241485))) (113s)
+DONE c3_61pts_centre.txt remove=0
+c3_61pts_centre.txt remove=1 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=73 best=(0, 'D', 0, 1) (27s)
+   free single ('D', 0, 1, (156117713262621155, 140522243835661657))
+   free single ('D', 0, 1, (209614876156483336, 188749762525350080))
+   free single ('D', 0, 1, (209615083453205181, 188750017117409304))
+   free single ('D', 0, 1, (209615139902844632, 188750125129202483))
+   free single ('D', 0, 1, (108082715833407279, 97324252012594535))
+  pairs=2694 found=0 best=(453, ('D', 0, 1, (156117713262621155, 140522243835661657)), ('A', None, -4, (156137401848872308, 140539970501284886))) (38s)
+DONE c3_61pts_centre.txt remove=1
+c3_61pts_centre.txt remove=2 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=75 best=(0, 'D', 0, 1) (26s)
+   free single ('D', 0, 1, (155268055892392504, 139797902201366248))
+   free single ('D', 0, 1, (209614876156483336, 188749762525350080))
+   free single ('D', 0, 1, (209615083453205181, 188750017117409304))
+   free single ('D', 0, 1, (209615139902844632, 188750125129202483))
+   free single ('D', 0, 1, (108082715833407279, 97324252012594535))
+  pairs=2986 found=0 best=(618, ('D', 0, 1, (155268055892392504, 139797902201366248)), ('D', 1, 1, (52111084826316916, 46770508963290078))) (39s)
+DONE c3_61pts_centre.txt remove=2
+c3_61pts_centre.txt remove=3 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=38 best=(0, 'D', 4, 1) (25s)
+   free single ('D', 4, 1, (9909687781070695, 104961163615067611))
+   free single ('D', 4, 1, (9743062587860698, 108995879404038258))
+   free single ('D', 4, 1, (-582704037839824, 6375317697717984))
+   free single ('D', 4, 1, (-787517785069987, 3163839936130059))
+   free single ('D', 4, 1, (-744300490550662, 1649665395105767))
+  pairs=408 found=0 best=(18, ('D', 4, 1, (9909687781070695, 104961163615067611)), ('D', 5, 1, (6875682998860, 15605929685855))) (27s)
+DONE c3_61pts_centre.txt remove=3
+c3_61pts_centre.txt remove=4 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=75 best=(0, 'D', 0, 1) (25s)
+   free single ('D', 0, 1, (155268055892392504, 139797902201366248))
+   free single ('D', 0, 1, (209614876156483336, 188749762525350080))
+   free single ('D', 0, 1, (209615083453205181, 188750017117409304))
+   free single ('D', 0, 1, (209615139902844632, 188750125129202483))
+   free single ('D', 0, 1, (108082715833407279, 97324252012594535))
+  pairs=2986 found=0 best=(600, ('D', 0, 1, (155268055892392504, 139797902201366248)), ('D', 1, 1, (51310280853160137, 46147397540309876))) (37s)
+DONE c3_61pts_centre.txt remove=4
+c3_61pts_centre.txt remove=5 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=20 best=(0, 'D', 5, 1) (27s)
+   free single ('D', 5, 1, (260351130740252, 2704184031744080))
+   free single ('D', 5, 1, (87439164754722, 6725894321145868))
+   free single ('D', 5, 1, (-341020569285232, 5166856590659335))
+   free single ('D', 5, 1, (-591652041151716, 3467541850202033))
+   free single ('D', 5, 1, (-433519246405053, 2371106548838956))
+  pairs=136 found=0 best=(18, ('D', 5, 1, (260351130740252, 2704184031744080)), ('D', 6, 1, (39502083395630, 50299774976208))) (27s)
+DONE c3_61pts_centre.txt remove=5
+c3_61pts_centre.txt remove=6 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=20 best=(0, 'D', 5, 1) (27s)
+   free single ('D', 5, 1, (9910474007447140, 104961684370887786))
+   free single ('D', 5, 1, (9743062587860698, 108995879404038258))
+   free single ('D', 5, 1, (-209487899449647, 4321001527039064))
+   free single ('D', 5, 1, (-460119371316131, 2621686786581762))
+   free single ('D', 5, 1, (-787517785069987, 3163839936130059))
+  pairs=136 found=0 best=(18, ('D', 5, 1, (9910474007447140, 104961684370887786)), ('D', 6, 1, (39502083395630, 50299774976208))) (27s)
+DONE c3_61pts_centre.txt remove=6
+c3_61pts_centre.txt remove=7 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=20 best=(0, 'D', 5, 1) (26s)
+   free single ('D', 5, 1, (9909687781070695, 104961163615067611))
+   free single ('D', 5, 1, (9743062587860698, 108995879404038258))
+   free single ('D', 5, 1, (-209487899449647, 4321001527039064))
+   free single ('D', 5, 1, (-460119371316131, 2621686786581762))
+   free single ('D', 5, 1, (-787517785069987, 3163839936130059))
+  pairs=136 found=0 best=(18, ('D', 5, 1, (9909687781070695, 104961163615067611)), ('D', 6, 1, (6875682998860, 15605929685855))) (27s)
+DONE c3_61pts_centre.txt remove=7
+c3_61pts_centre.txt remove=8 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=20 best=(0, 'D', 5, 1) (26s)
+   free single ('D', 5, 1, (9909687781070695, 104961163615067611))
+   free single ('D', 5, 1, (9743062587860698, 108995879404038258))
+   free single ('D', 5, 1, (-209487899449647, 4321001527039064))
+   free single ('D', 5, 1, (-460119371316131, 2621686786581762))
+   free single ('D', 5, 1, (-787517785069987, 3163839936130059))
+  pairs=136 found=0 best=(18, ('D', 5, 1, (9909687781070695, 104961163615067611)), ('D', 6, 1, (6395984600958, 12536031475297))) (27s)
+DONE c3_61pts_centre.txt remove=8
+c3_61pts_centre.txt remove=9 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=30 best=(0, 'D', 13, 1) (26s)
+   free single ('D', 13, 1, (1511971335743970, 56606787715337))
+   free single ('D', 13, 1, (2390093752416085, 199681289048615))
+   free single ('D', 13, 1, (2278234542475044, 396724853413540))
+   free single ('D', 13, 1, (1999581136345423, 501021751577502))
+   free single ('D', 13, 1, (1251677972299352, 318015238451276))
+  pairs=0 found=0 best=None (26s)
+DONE c3_61pts_centre.txt remove=9
+c3_61pts_centre.txt remove=10 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=6 best=(0, 'D', 10, 1) (26s)
+   free single ('D', 10, 1, (953723906801268, 393463672914464))
+   free single ('D', 10, 1, (809301952779672, 335822504061272))
+   free single ('D', 10, 1, (500399178473706, 223963294120231))
+   free single ('D', 10, 1, (-953723906801268, -393463672914464))
+   free single ('D', 10, 1, (-809301952779672, -335822504061272))
+  pairs=0 found=0 best=None (26s)
+DONE c3_61pts_centre.txt remove=10
+c3_61pts_centre.txt remove=11 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=6 best=(0, 'D', 10, 1) (26s)
+   free single ('D', 10, 1, (423078212790694, 174405770996821))
+   free single ('D', 10, 1, (1024425752893029, 426884518105054))
+   free single ('D', 10, 1, (1097905281512100, 473007120273132))
+   free single ('D', 10, 1, (-423078212790694, -174405770996821))
+   free single ('D', 10, 1, (-1024425752893029, -426884518105054))
+  pairs=0 found=0 best=None (26s)
+DONE c3_61pts_centre.txt remove=11
+c3_61pts_centre.txt remove=12 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=10 best=(0, 'D', 12, 1) (26s)
+   free single ('D', 12, 1, (1333648473147268, 537178483209227))
+   free single ('D', 12, 1, (1343354110294973, 546669220762023))
+   free single ('D', 12, 1, (1406401043161466, 585368654579632))
+   free single ('D', 12, 1, (1817349161829057, 883912065147349))
+   free single ('D', 12, 1, (1407414121084232, 717604927201930))
+  pairs=0 found=0 best=None (26s)
+DONE c3_61pts_centre.txt remove=12
+c3_61pts_centre.txt remove=13 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=10 best=(0, 'D', 12, 1) (26s)
+   free single ('D', 12, 1, (1783416232784414, 719409517872768))
+   free single ('D', 12, 1, (1344707635215097, 546889099375578))
+   free single ('D', 12, 1, (703200521580733, 292684327289816))
+   free single ('D', 12, 1, (1562248847767823, 773691545771212))
+   free single ('D', 12, 1, (1508446387523091, 772052855206308))
+  pairs=0 found=0 best=None (26s)
+DONE c3_61pts_centre.txt remove=13
+c3_61pts_centre.txt remove=14 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=36 best=(0, 'D', 9, 1) (26s)
+   free single ('D', 9, 1, (1439700502098748, 15009150652384691))
+   free single ('D', 9, 1, (1382560075120834, 18953298194603372))
+   free single ('D', 9, 1, (-107073839862288, 5035385111808199))
+   free single ('D', 9, 1, (-157516444818766, 1822960165292379))
+   free single ('D', 9, 1, (-227327221319347, 1135306247007836))
+  pairs=360 found=0 best=(6927, ('D', 9, 1, (-125013573216391, 220307345317680)), ('D', 14, 1, (688462074940165, 340227618023308))) (28s)
+DONE c3_61pts_centre.txt remove=14
+c3_61pts_centre.txt remove=15 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=36 best=(0, 'D', 9, 1) (26s)
+   free single ('D', 9, 1, (1439700502098748, 15009150652384691))
+   free single ('D', 9, 1, (1382560075120834, 18953298194603372))
+   free single ('D', 9, 1, (-107073839862288, 5035385111808199))
+   free single ('D', 9, 1, (-157516444818766, 1822960165292379))
+   free single ('D', 9, 1, (-227327221319347, 1135306247007836))
+  pairs=360 found=0 best=(6927, ('D', 9, 1, (-437619162654695, 751237134610466)), ('D', 14, 1, (833908652178366, 396101950857553))) (28s)
+DONE c3_61pts_centre.txt remove=15
+c3_61pts_centre.txt remove=16 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=46 best=(0, 'D', 17, 1) (26s)
+   free single ('D', 17, 1, (491833440998636, 317695490212574))
+   free single ('D', 17, 1, (716574790573773, 492120143451063))
+   free single ('D', 17, 1, (897385925579595, 698493771792195))
+   free single ('D', 17, 1, (733065458522002, 572227040870479))
+   free single ('D', 17, 1, (720679877579992, 589648264003372))
+  pairs=816 found=0 best=(459, ('D', 17, 1, (491833440998636, 317695490212574)), ('D', 18, 1, (834114327004501, 248727333337113))) (28s)
+DONE c3_61pts_centre.txt remove=16
+c3_61pts_centre.txt remove=17 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=42 best=(0, 'D', 17, 1) (26s)
+   free single ('D', 17, 1, (491833440998636, 317695490212574))
+   free single ('D', 17, 1, (716574790573773, 492120143451063))
+   free single ('D', 17, 1, (897385925579595, 698493771792195))
+   free single ('D', 17, 1, (733065458522002, 572227040870479))
+   free single ('D', 17, 1, (720679877579992, 589648264003372))
+  pairs=640 found=0 best=(459, ('D', 17, 1, (491833440998636, 317695490212574)), ('D', 18, 1, (834114327004501, 248727333337113))) (28s)
+DONE c3_61pts_centre.txt remove=17
+c3_61pts_centre.txt remove=18 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=42 best=(0, 'D', 17, 1) (26s)
+   free single ('D', 17, 1, (491938342968413, 317783385840401))
+   free single ('D', 17, 1, (1166378415280182, 841160469863324))
+   free single ('D', 17, 1, (1347224517609263, 1047563396747065))
+   free single ('D', 17, 1, (1338494270922268, 1054439079745925))
+   free single ('D', 17, 1, (1326108689980258, 1071860302878818))
+  pairs=640 found=0 best=(459, ('D', 17, 1, (491938342968413, 317783385840401)), ('D', 18, 1, (834184261651019, 248785930422331))) (28s)
+DONE c3_61pts_centre.txt remove=18
+c3_61pts_centre.txt remove=19 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=46 best=(0, 'D', 16, 1) (27s)
+   free single ('D', 16, 1, (-105881229174133, 58643875978824))
+   free single ('D', 16, 1, (-628022439518534, 210862164719754))
+   free single ('D', 16, 1, (-1045239032271945, 302579405298318))
+   free single ('D', 16, 1, (-1052114715270805, 286973475612463))
+   free single ('D', 16, 1, (-1069535938403698, 257166671537560))
+  pairs=960 found=0 best=(459, ('D', 16, 1, (-105881229174133, 58643875978824)), ('D', 18, 1, (769691530344838, 400518664402065))) (30s)
+DONE c3_61pts_centre.txt remove=19
+c3_61pts_blowup.txt remove=0 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=346 best=(0, 'D', 0, 1) (26s)
+   free single ('D', 0, 1, (187139231873862308, 15282978578291891))
+   free single ('D', 0, 1, (249519381005298606, 20377868911817788))
+   free single ('D', 0, 1, (187140006364037246, 15283824721116956))
+   free single ('D', 0, 1, (187141202331625728, 15284480323547560))
+   free single ('D', 0, 1, (124761009043375619, 10189749495097293))
+  pairs=18790 found=0 best=(120, ('D', 0, 1, (187139231873862308, 15282978578291891)), ('D', 2, 1, (81874925723200384, 36238609303184989))) (95s)
+DONE c3_61pts_blowup.txt remove=0
+c3_61pts_blowup.txt remove=1 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=6 best=(0, 'D', 1, 1) (25s)
+   free single ('D', 1, 1, (11569971828925746, 2633001760853336))
+   free single ('D', 1, 1, (-11569971828925746, -2633001760853336))
+   free single ('D', 2, 1, (61406439751479542, 27179043961463968))
+   free single ('D', 2, 1, (81874925723200384, 36238609303184989))
+   free single ('D', 2, 1, (-61406439751479542, -27179043961463968))
+  pairs=16 found=0 best=(120, ('D', 1, 1, (11569971828925746, 2633001760853336)), ('D', 2, 1, (81874925723200384, 36238609303184989))) (25s)
+DONE c3_61pts_blowup.txt remove=1
+c3_61pts_blowup.txt remove=2 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=6 best=(0, 'D', 1, 1) (25s)
+   free single ('D', 1, 1, (23139633086666785, 5265892388683366))
+   free single ('D', 1, 1, (-23139633086666785, -5265892388683366))
+   free single ('D', 2, 1, (61406344673354148, 27179008868067431))
+   free single ('D', 2, 1, (81874925723200384, 36238609303184989))
+   free single ('D', 2, 1, (-61406344673354148, -27179008868067431))
+  pairs=16 found=0 best=(120, ('D', 1, 1, (23139633086666785, 5265892388683366)), ('D', 2, 1, (81874925723200384, 36238609303184989))) (25s)
+DONE c3_61pts_blowup.txt remove=2
+c3_61pts_blowup.txt remove=3 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=6 best=(0, 'D', 1, 1) (26s)
+   free single ('D', 1, 1, (23139577029645114, 5265872106974868))
+   free single ('D', 1, 1, (-23139577029645114, -5265872106974868))
+   free single ('D', 2, 1, (15351688344763076, 6794789589588586))
+   free single ('D', 2, 1, (35820478479657820, 15854466289299728))
+   free single ('D', 2, 1, (-15351688344763076, -6794789589588586))
+  pairs=16 found=0 best=(120, ('D', 1, 1, (23139577029645114, 5265872106974868)), ('D', 2, 1, (35820478479657820, 15854466289299728))) (26s)
+DONE c3_61pts_blowup.txt remove=3
+c3_61pts_blowup.txt remove=4 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=62 best=(0, 'D', 4, 1) (26s)
+   free single ('D', 4, 1, (64027036960669645, 94496305731699302))
+   free single ('D', 4, 1, (64890051446433139, 95799627156335304))
+   free single ('D', 4, 1, (64890023562526716, 95799711401153215))
+   free single ('D', 4, 1, (48667558166253184, 71849861419110304))
+   free single ('D', 4, 1, (48667140603583554, 71849273151379119))
+  pairs=1912 found=0 best=(18, ('D', 4, 1, (64027036960669645, 94496305731699302)), ('D', 5, 1, (8495494481305607, 40172465675150404))) (32s)
+DONE c3_61pts_blowup.txt remove=4
+c3_61pts_blowup.txt remove=5 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=62 best=(0, 'D', 4, 1) (25s)
+   free single ('D', 4, 1, (48236541862019607, 71198979182995383))
+   free single ('D', 4, 1, (48668049104901354, 71850639895313384))
+   free single ('D', 4, 1, (48668021220994931, 71850724140131295))
+   free single ('D', 4, 1, (64890751319940617, 95801069900291658))
+   free single ('D', 4, 1, (48667863872253708, 71850524115107463))
+  pairs=1912 found=0 best=(18, ('D', 4, 1, (48236541862019607, 71198979182995383)), ('D', 5, 1, (8495555072106147, 40172484479592248))) (31s)
+DONE c3_61pts_blowup.txt remove=5
+c3_61pts_blowup.txt remove=6 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=62 best=(0, 'D', 4, 1) (25s)
+   free single ('D', 4, 1, (48236541862019607, 71198979182995383))
+   free single ('D', 4, 1, (48668049104901354, 71850639895313384))
+   free single ('D', 4, 1, (48668021220994931, 71850724140131295))
+   free single ('D', 4, 1, (64890751319940617, 95801069900291658))
+   free single ('D', 4, 1, (48667863872253708, 71850524115107463))
+  pairs=1912 found=0 best=(18, ('D', 4, 1, (48236541862019607, 71198979182995383)), ('D', 5, 1, (16991110144212294, 80344968959184496))) (32s)
+DONE c3_61pts_blowup.txt remove=6
+c3_61pts_blowup.txt remove=7 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=62 best=(0, 'D', 4, 1) (25s)
+   free single ('D', 4, 1, (48236541862019607, 71198979182995383))
+   free single ('D', 4, 1, (48668049104901354, 71850639895313384))
+   free single ('D', 4, 1, (48668021220994931, 71850724140131295))
+   free single ('D', 4, 1, (64890751319940617, 95801069900291658))
+   free single ('D', 4, 1, (48667863872253708, 71850524115107463))
+  pairs=1912 found=0 best=(18, ('D', 4, 1, (48236541862019607, 71198979182995383)), ('D', 6, 1, (16989026492258731, 80344600134519198))) (32s)
+DONE c3_61pts_blowup.txt remove=7
+c3_61pts_blowup.txt remove=8 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=62 best=(0, 'D', 4, 1) (25s)
+   free single ('D', 4, 1, (48236541862019607, 71198979182995383))
+   free single ('D', 4, 1, (48668049104901354, 71850639895313384))
+   free single ('D', 4, 1, (48668021220994931, 71850724140131295))
+   free single ('D', 4, 1, (64890751319940617, 95801069900291658))
+   free single ('D', 4, 1, (48667863872253708, 71850524115107463))
+  pairs=1912 found=0 best=(18, ('D', 4, 1, (48236541862019607, 71198979182995383)), ('D', 6, 1, (16989207720098815, 80344173394682998))) (31s)
+DONE c3_61pts_blowup.txt remove=8
+c3_61pts_blowup.txt remove=9 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=10 best=(0, 'D', 9, 1) (25s)
+   free single ('D', 9, 1, (41591781959471492, 39161401222556869))
+   free single ('D', 9, 1, (124480453165122294, 117246471338329710))
+   free single ('D', 9, 1, (165974174052070687, 156328996972192430))
+   free single ('D', 9, 1, (103159270603730993, 98425350689688012))
+   free single ('D', 9, 1, (51755972343590165, 66855615355405240))
+  pairs=0 found=0 best=None (25s)
+DONE c3_61pts_blowup.txt remove=9
+c3_61pts_blowup.txt remove=10 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=10 best=(0, 'D', 9, 1) (25s)
+   free single ('D', 9, 1, (85152814090293339, 79911676201711437))
+   free single ('D', 9, 1, (165974738376711037, 156329395379501561))
+   free single ('D', 9, 1, (88915197410665212, 83748140781564144))
+   free single ('D', 9, 1, (106788943456526530, 106887778383361962))
+   free single ('D', 9, 1, (116652941319860320, 124601732036648165))
+  pairs=0 found=0 best=None (25s)
+DONE c3_61pts_blowup.txt remove=10
+c3_61pts_blowup.txt remove=11 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=4 best=(0, 'D', 11, 1) (25s)
+   free single ('D', 11, 1, (-1549117556031, 576009211079))
+   free single ('D', 11, 1, (1549117556031, -576009211079))
+   free single ('D', 12, 1, (-75997622553650412, 6568883216168887))
+   free single ('D', 12, 1, (75997622553650412, -6568883216168887))
+  pairs=8 found=0 best=(582, ('D', 11, 1, (-1549117556031, 576009211079)), ('D', 12, 1, (-75997622553650412, 6568883216168887))) (25s)
+DONE c3_61pts_blowup.txt remove=11
+c3_61pts_blowup.txt remove=12 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=2 best=(0, 'D', 12, 1) (25s)
+   free single ('D', 12, 1, (-1836742179873, 642818468784))
+   free single ('D', 12, 1, (1836742179873, -642818468784))
+  pairs=0 found=0 best=None (25s)
+DONE c3_61pts_blowup.txt remove=12
+c3_61pts_blowup.txt remove=13 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=2 best=(0, 'D', 12, 1) (25s)
+   free single ('D', 12, 1, (-1836742179873, 642818468784))
+   free single ('D', 12, 1, (1836742179873, -642818468784))
+  pairs=0 found=0 best=None (25s)
+DONE c3_61pts_blowup.txt remove=13
+c3_61pts_blowup.txt remove=14 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=22 best=(0, 'D', 14, 1) (25s)
+   free single ('D', 14, 1, (58512030023538293, 20107499754316946))
+   free single ('D', 14, 1, (65013501750647724, 22341854440606140))
+   free single ('D', 14, 1, (65014322290516245, 22342541686135626))
+   free single ('D', 14, 1, (97522389813686651, 33514283337847044))
+   free single ('D', 14, 1, (48762995731324457, 16758421612173737))
+  pairs=0 found=0 best=None (25s)
+DONE c3_61pts_blowup.txt remove=14
+c3_61pts_blowup.txt remove=15 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=22 best=(0, 'D', 14, 1) (25s)
+   free single ('D', 14, 1, (97520482982211507, 33512174430866662))
+   free single ('D', 14, 1, (97520970062176738, 33512861813031818))
+   free single ('D', 14, 1, (97521790602045259, 33513549058561304))
+   free single ('D', 14, 1, (97522986569633741, 33514204660991908))
+   free single ('D', 14, 1, (50926483107517648, 18499683716314328))
+  pairs=0 found=0 best=None (25s)
+DONE c3_61pts_blowup.txt remove=15
+c3_61pts_blowup.txt remove=16 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=46 best=(0, 'D', 17, 1) (25s)
+   free single ('D', 17, 1, (-15453910395381564, 32445461472900872))
+   free single ('D', 17, 1, (-30907975694884182, 64889910534731909))
+   free single ('D', 17, 1, (-30908663077049338, 64889710232531984))
+   free single ('D', 17, 1, (-30909350322578824, 64889843526871019))
+   free single ('D', 17, 1, (-30910005925009428, 64890383892028897))
+  pairs=1040 found=0 best=(492, ('D', 17, 1, (-15453910395381564, 32445461472900872)), ('D', 18, 1, (74396560309210455, 71763674367568969))) (29s)
+DONE c3_61pts_blowup.txt remove=16
+c3_61pts_blowup.txt remove=17 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=36 best=(0, 'D', 18, 1) (24s)
+   free single ('D', 18, 1, (74396560309210455, 71763674367568969))
+   free single ('D', 18, 1, (41444496672247366, 45308071003522033))
+   free single ('D', 18, 1, (8393257066957216, 12391199191193678))
+   free single ('D', 18, 1, (3231609516998718, 4770988598100550))
+   free single ('D', 18, 1, (19171752557977976, 28304381223989817))
+  pairs=0 found=0 best=None (24s)
+DONE c3_61pts_blowup.txt remove=17
+c3_61pts_blowup.txt remove=18 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=46 best=(0, 'D', 16, 1) (25s)
+   free single ('D', 16, 1, (8111414886803576, 11974938075107996))
+   free single ('D', 16, 1, (40556193400587534, 59873850157075032))
+   free single ('D', 16, 1, (43259881126877432, 63865586146238504))
+   free single ('D', 16, 1, (27037482814287992, 39916431781397841))
+   free single ('D', 16, 1, (48667925594164904, 71850541502363637))
+  pairs=1040 found=0 best=(492, ('D', 16, 1, (8111414886803576, 11974938075107996)), ('D', 18, 1, (74396560309210455, 71763674367568969))) (28s)
+DONE c3_61pts_blowup.txt remove=18
+c3_61pts_blowup.txt remove=19 m=3 orbits=19 centre=True base n8=0 maxlen=7
+  single moves=8778 free=62 best=(0, 'D', 16, 1) (25s)
+   free single ('D', 16, 1, (8111414886803576, 11974938075107996))
+   free single ('D', 16, 1, (40556193400587534, 59873850157075032))
+   free single ('D', 16, 1, (43259881126877432, 63865586146238504))
+   free single ('D', 16, 1, (27037482814287992, 39916431781397841))
+   free single ('D', 16, 1, (48667925594164904, 71850541502363637))
+  pairs=2392 found=0 best=(492, ('D', 16, 1, (8111414886803576, 11974938075107996)), ('D', 17, 1, (32444634146183113, 47898937102487853))) (33s)
+DONE c3_61pts_blowup.txt remove=19
