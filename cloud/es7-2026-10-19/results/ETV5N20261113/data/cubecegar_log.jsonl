@@ -1,0 +1,11 @@
+{"event": "cube", "tag": "10111", "status": "SAT", "secs": 38.9, "holes": [12, 13, 22, 25, 29, 38, 39, 41, 42, 44, 45, 53, 54, 56, 66, 67, 68, 69], "rows": 290242, "t": "09:37:39"}
+{"event": "cube", "tag": "11010", "status": "UNSAT", "secs": 104.2, "holes": null, "rows": 290242, "t": "09:37:39"}
+{"event": "cube", "tag": "11011", "status": "UNSAT", "secs": 114.4, "holes": null, "rows": 290242, "t": "09:37:39"}
+{"event": "cube", "tag": "11100", "status": "UNSAT", "secs": 99.8, "holes": null, "rows": 290242, "t": "09:37:39"}
+{"event": "cube", "tag": "11101", "status": "UNSAT", "secs": 97.9, "holes": null, "rows": 290242, "t": "09:37:39"}
+{"event": "cube", "tag": "11110", "status": "UNSAT", "secs": 99.7, "holes": null, "rows": 290242, "t": "09:37:39"}
+{"event": "cube", "tag": "11111", "status": "UNSAT", "secs": 97.5, "holes": null, "rows": 290242, "t": "09:37:39"}
+{"event": "probe", "stats": {"sat": 64, "unsat": 6, "unknown": 0}, "found": 6, "t": "09:37:46"}
+{"event": "transport", "cores": [16, 13, 15, 13, 14], "new_rows": 14848, "per_core": [22, 25, 74, 1647, 16304], "secs": 274, "t": "09:38:56"}
+{"event": "cube", "tag": "10111", "status": "UNSAT", "secs": 101.3, "holes": null, "rows": 305090, "t": "09:40:39"}
+{"event": "CUBES_FINAL", "status": {"10111": "UNSAT", "11010": "UNSAT", "11011": "UNSAT", "11100": "UNSAT", "11101": "UNSAT", "11110": "UNSAT", "11111": "UNSAT"}, "t": "09:40:39"}
