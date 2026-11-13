@@ -1,0 +1,106 @@
+c --- [ banner ] -------------------------------------------------------------
+c 
+c CaDiCaL SAT Solver
+c Copyright (c) 2016-2026
+c A. Biere, M. Fleury, N. Froleyks, K. Fazekas, F. Pollitt, T. Faller
+c JKU Linz, University of Freiburg, TU Wien
+c 
+c Version 3.0.1 c60730422e758ef1cebe7aeddf2dda31c996bf04
+c Apple clang version 21.0.0 (clang-2100.1.1.101) -Wall -Wextra -O3 -DNDEBUG -DNCLOSEFROM
+c [build date and host line removed]
+c 
+c --- [ limit ] --------------------------------------------------------------
+c 
+c setting time limit to 1800 seconds real time (due to '-t 1800')
+c 
+c --- [ parsing input ] ------------------------------------------------------
+c 
+c reading DIMACS file from 'r4_t7k7.cnf'
+c opening file to read 'r4_t7k7.cnf'
+c found 'p cnf 124768 2898357' header
+c parsed 2898357 clauses in 0.47 seconds process time
+c 
+c --- [ options ] ------------------------------------------------------------
+c 
+c all options are set to their default value
+c 
+c --- [ solving ] ------------------------------------------------------------
+c 
+c time measured in process time since initialization
+c 
+c  seconds  reduction conflicts       size tier2         variables
+c         MB    restarts   redundant    glue  trail            remaining
+c          level     rate       size/glu tier1   irredundant
+c 
+c *  0.47  0  0 0   0  0    0    0 0.0 0 0 2 6  0% 2898330 124664 100%
+c )  0.55  0  0 0   0  0    0    0 0.0 0 0 2 6  0% 2898330 124664 100%
+c {  0.59  0  0 0   0  0    0    0 0.0 0 0 2 6  0% 2898330 124664 100%
+c -  0.89  0 33792 1  35 718  300  164 2.4 21 9 2 6 49% 2050434 124664 100%
+c }  1.08  0 16474 1  98 385  618  455 2.5 27 11 2 6 25% 2050434 124664 100%
+c 1  1.08  0 16474 1  98 385  618  455 2.5 27 11 2 6 25% 2050434 124664 100%
+c 
+c --- [ result ] -------------------------------------------------------------
+c 
+s SATISFIABLE
+c 
+c --- [ run-time profiling ] -------------------------------------------------
+c 
+c process time taken by individual solving procedures
+c (percentage relative to process time for solving)
+c 
+c         0.61   99.99% search
+c         0.50   80.82% unstable
+c         0.47   76.27% parse
+c         0.12   19.16% lucky
+c         0.00    0.00% simplify
+c   =================================
+c         0.61   56.30% solve
+c 
+c last line shows process time for solving
+c (percentage relative to total process time)
+c 
+c --- [ statistics ] ---------------------------------------------------------
+c 
+c chronological:               375        60.68 %  of conflicts
+c conflicts:                   618      1006.66    per second
+c decisions:                305361    497401.10    per second
+c fixed:                       104         0.08 %  of all variables
+c learned:                     564        91.26 %  per conflict
+c learned_lits:              18939       100.00 %  learned literals
+c minimized:                     0         0.00 %  learned literals
+c shrunken:                   1697         8.96 %  learned literals
+c minishrunken:               2215        11.70 %  learned literals
+c otfs:                          3         0.49 %  of conflict
+c propagations:             829981         1.35 M  per second
+c reduced:                      96        15.53 %  per conflict
+c restarts:                     98         6.31    interval
+c subsumed:                     13         0.00 %  of all clauses
+c strengthened:                  3         0.00 %  of all clauses
+c ticks:                  37200390        44.82    propagation
+c 
+c seconds are measured in process time for solving
+c 
+c --- [ glue usage ] ---------------------------------------------------------
+c 
+c focused glue 5 used 29 clauses 8.454% accumulated 56.85% tier1
+c focused glue 6 used 24 clauses 6.997% accumulated 63.84%
+c focused glue 7-9 used 46 clauses 13.41% accumulated 77.25%
+c focused glue 10 used 10 clauses 2.915% accumulated 80.17%
+c focused glue 11 used 9 clauses 2.623% accumulated 82.79% tier2
+c 
+c stable glue 2 used 0 clauses 0.000% accumulated 0.000% tier1
+c stable glue 3 used 0 clauses 0.000% accumulated 0.000%
+c stable glue 4 used 0 clauses 0.000% accumulated 0.000%
+c stable glue 5 used 0 clauses 0.000% accumulated 0.000%
+c stable glue 6 used 0 clauses 0.000% accumulated 0.000% tier2
+c 
+c 
+c --- [ resources ] ----------------------------------------------------------
+c 
+c total process time since initialization:         1.09    seconds
+c total real time since initialization:            1.09    seconds
+c maximum resident set size of process:          477.78    MB
+c 
+c --- [ shutting down ] ------------------------------------------------------
+c 
+c exit 10

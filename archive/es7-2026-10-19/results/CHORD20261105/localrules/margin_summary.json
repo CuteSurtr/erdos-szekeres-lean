@@ -1,0 +1,10 @@
+{
+ "what": "per (orbit, sign, total phase order): t* = min over 0<=lambda<=100 of lambda_max(sum of rows), all rows incl. nesting",
+ "cases": 46412,
+ "covered_by_local_rules": 6844,
+ "covered_tstar_max": "<=1e-6 (6399 singular optimum ~0, 445 strictly negative)",
+ "not_covered": 39568,
+ "not_covered_min_tstar": 0.10355339,
+ "note": "min equals (sqrt2-1)/4; rerun of the 800 smallest with box 1e4 unchanged; no borderline case",
+ "nesting_rows_used_by_any_certificate": 0
+}

@@ -1,0 +1,37 @@
+{
+  "scope": "Full balanced row-code catalog and one conditional leaf; not a complete omission tree or geometric bound",
+  "namespace": "OmissionFastPilot",
+  "catalog_rows": 2685,
+  "catalog_chunks": 21,
+  "chunk_size": 128,
+  "states": 252,
+  "base": 33554432,
+  "leaf_node": 12943,
+  "leaf_selected_rows": 202,
+  "hole_budget": 59,
+  "source_sha256": "23363c9e341a7edf4de28b6bf21970983cc6d4cafa6f2bdef54ce3d25b1c5a94",
+  "tree_sha256": "334330a4992a0daba611510508b746e8e275ee633782b591d993ebb5b1f4a8b0",
+  "catalog_and_leaf_lean_exit_codes": [
+    0,
+    0
+  ],
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "full_tree_lean_checked": false,
+  "geometric_transfer_checked": false,
+  "files": {
+    "Catalog.lean": "f54303dbb39483e19768a0169c35229a3c2a5c2298bf423f13883f14aec7f47c",
+    "Leaf.lean": "4c96d5475a9d70baf525f0f71104c4802435b5d77331850ce86519c597caf00d"
+  },
+  "failed_attempts": [
+    "Unchunked catalog hit stack overflow",
+    "A monolithic concatenated catalog check was interrupted after reaching approximately 17 GB RSS"
+  ],
+  "successful_profile_logs": {
+    "catalog": "import took 955ms\nparsing took 103ms\nparsing took 102ms\nparsing took 102ms\nparsing took 104ms\nparsing took 102ms\n.olean serialization took 475ms\nelaboration took 283ms\ntype checking took 872ms\nelaboration took 361ms\ntype checking took 899ms\nelaboration took 340ms\ntype checking took 934ms\nelaboration took 389ms\ntype checking took 965ms\nelaboration took 424ms\ntype checking took 1.01s\nelaboration took 457ms\ntype checking took 1.02s\nelaboration took 492ms\ntype checking took 954ms\nelaboration took 517ms\ntype checking took 929ms\nelaboration took 287ms\ntype checking took 883ms\nelaboration took 312ms\ntype checking took 923ms\nelaboration took 344ms\ntype checking took 916ms\nelaboration took 363ms\ntype checking took 921ms\nelaboration took 386ms\ntype checking took 942ms\nelaboration took 391ms\ntype checking took 948ms\nelaboration took 399ms\ntype checking took 924ms\nelaboration took 408ms\ntype checking took 936ms\nelaboration took 432ms\ntype checking took 929ms\nelaboration took 449ms\ntype checking took 860ms\nelaboration took 459ms\ntype checking took 860ms\nelaboration took 472ms\ntype checking took 852ms\nelaboration took 481ms\ntype checking took 806ms\n'OmissionFastPilot.code_correct' depends on axioms: [propext, Classical.choice, Quot.sound]\ncumulative profiling times:\n\t.olean serialization 475ms\n\tattribute application 0.41ms\n\tblocked (unaccounted) 39.5s\n\tcompilation (IR) 800ms\n\tcompilation (LCNF base) 907ms\n\tcompilation (LCNF mono) 989ms\n\tcongr simp thm 0.631ms\n\telaboration 8.51s\n\tfix level params 1.67ms\n\timport 955ms\n\tinitialization 15.4ms\n\tinstantiate metavars 31.6ms\n\tinterpretation 2.05s\n\tlet-to-have transformation 85.3ms\n\tlinting 102ms\n\tnorm_num 0.29ms\n\tparsing 1.9s\n\tprocess pre-definitions 328ms\n\tshare common exprs 32.2ms\n\tsimp 8.78ms\n\ttactic execution 37ms\n\ttype checking 19.4s\n\ttypeclass inference 8.32s\n",
+    "leaf": "import took 976ms\ntype checking took 826ms\ntype checking took 873ms\n'OmissionFastPilot.leaf_excludes' depends on axioms: [propext, Classical.choice, Quot.sound]\ncumulative profiling times:\n\t.olean serialization 9.26ms\n\tattribute application 0.0362ms\n\tblocked (unaccounted) 2.56s\n\tcompilation (IR) 14.1ms\n\tcompilation (LCNF base) 14ms\n\tcompilation (LCNF mono) 12ms\n\telaboration 143ms\n\tfix level params 0.0838ms\n\timport 976ms\n\tinitialization 15.3ms\n\tinstantiate metavars 0.246ms\n\tinterpretation 417ms\n\tlet-to-have transformation 2.22ms\n\tlinting 2.84ms\n\tparsing 8.62ms\n\tprocess pre-definitions 3.94ms\n\tshare common exprs 0.555ms\n\ttactic execution 81.9ms\n\ttype checking 1.72s\n\ttypeclass inference 70.4ms\n"
+  }
+}

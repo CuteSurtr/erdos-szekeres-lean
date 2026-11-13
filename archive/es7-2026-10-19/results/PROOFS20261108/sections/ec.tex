@@ -1,0 +1,925 @@
+\section{Small corollaries for \texorpdfstring{$k=7$}{k=7} and \texorpdfstring{$k=8$}{k=8}}\label{ec:sec}
+% Local to this section: the statement heads contain long unbreakable Lean names; \sloppy lets TeX break them at spaces.
+\begingroup\sloppy
+
+This section gives written proofs for a group of short Lean files about rotationally symmetric point sets.
+\begin{enumerate}[label=(\arabic*)]
+\item \emph{Conditional $ES(7)$ corollaries} (Subsection~\ref{ec:ssec:es7}). If the case classes
+  $\mathrm{Fivefold35}$ and $\mathrm{Fourfold32}$ hold (they are hypotheses of the Lean theorems), then every finite
+  set of points in general position that is invariant under the rotation by $2\pi/5$ about some point and has at
+  least $32$ points, and every such set for the rotation by $2\pi/4$ with at least $29$ points, has $7$ points in
+  convex position.
+\item \emph{Rotations of order at least $8$} (Subsection~\ref{ec:ssec:order8}). A subset of $\C$ that is mapped into
+  itself by $z\mapsto e^{2\pi i/m}z$ with $m\ge8$ and contains no $8$ points in convex position is contained in
+  $\{0\}$. Also the threshold arithmetic for $m=4,5,6,7$: for all $t,e\in\N$ with $e\le1$, $65\le4t\iff t\ge17$,
+  $65\le5t+e\iff t\ge13$, $65\le6t\iff t\ge11$ and $65\le7t+e\iff t\ge10$.
+\item \emph{Orientations in inverse-radius polar form} (Subsection~\ref{ec:ssec:polar}): the sign of the orientation of
+  three points $(\cos\varphi_k,\sin\varphi_k)/u_k$, and its consequences for layered configurations and for nested
+  regular $m$-gons.
+\item \emph{Size compatibility} (Subsections~\ref{ec:ssec:compat} and~\ref{ec:ssec:l0}): the orbit count
+  $\card S\equiv[0\in S]\pmod m$ for finite sets invariant under an element of exact order $m$, its converse under
+  explicit hypotheses, the classification of the $m$ with $2^{m-1}\bmod m\in\{0,1\}$, and the consequence for
+  $m$-fold symmetric sets of $2^{m-1}$ points.
+\end{enumerate}
+
+\paragraph{Sources.} Paths are relative to \dirn{cloud/es7-2026-10-19/results}. We computed the SHA-256 of each file;
+the table gives the first $12$ hexadecimal digits. The line ranges are the scope of this section; the Coverage paragraph
+at the end lists what in them is not covered.
+\begin{center}\footnotesize
+\begin{tabular}{@{}lll@{}}
+\toprule
+Lean file (lines in scope) & SHA-256 & axioms log\\
+\midrule
+\dirn{LEANEXT/es7corr/ES7Corollaries.lean} (1148--1233) & \texttt{5883c8ebac55} & \dirn{LEANEXT/es7corr/axioms.log}\\
+\dirn{ES8SYM/lean/C6check.lean} (1--123) & \texttt{92f15b5cc907} & \dirn{ES8SYM/lean/C6check.out}\\
+\dirn{ES8SYM/lean/PolarOrient.lean} (1--132) & \texttt{6e54f5f83a19} & \dirn{ES8SYM/lean/PolarOrient.out}\\
+\dirn{PRIMEFOLD/compat/lean/PCompatCore.lean} (1--291) & \texttt{ebc6aacefadb} & \dirn{PRIMEFOLD/compat/lean/PCompatCore.out}\\
+\dirn{PRIMEFOLD/compat/lean/L0Check.lean} (1--152) & \texttt{05a67c3b8b16} & \dirn{PRIMEFOLD/compat/lean/L0Check.out}\\
+\bottomrule
+\end{tabular}
+\end{center}
+According to the records, all five files were compiled with the repository's pins, Lean~4.24.0 and Mathlib
+\texttt{f897ebcf}; nothing was re-run for this document. The hashes of \dirn{LEANEXT/es7corr/ES7Corollaries.lean} and
+of the two Lean files in \dirn{PRIMEFOLD/compat/lean} agree with the prefixes recorded in \dirn{LEANEXT/es7corr/REPORT.md}
+and \dirn{PRIMEFOLD/README.md}. For the two \dirn{ES8SYM} files, \dirn{ES8SYM/README.md} (lines 258--260) records the
+prefixes \texttt{8c090168} and \texttt{4d42e2fb} for the compiled files and states that the present copies differ from
+them only in four comment lines; we could not check this, so the logs of these two files refer to the compiled
+versions.
+
+\paragraph{Axioms.} The logs list the following theorems, each depending on at most the standard axioms
+\lean{propext}, \lean{Classical.choice} and \lean{Quot.sound}: the five $ES(7)$ corollaries,
+Theorems~\ref{ec:thm:fivefold-erase}--\ref{ec:thm:fourfold} (\dirn{LEANEXT/es7corr/axioms.log}); \lean{RefuteC6.part_a}
+and \lean{RefuteC6.thr_m4}--\lean{thr_m7} (\dirn{ES8SYM/lean/C6check.out}); the six theorems \lean{C7.orient_polar},
+\lean{orient_polar_cross}, \lean{orient_layered}, \lean{orient_layered_scale}, \lean{nested_regular_orient},
+\lean{orient_centre} (\dirn{ES8SYM/lean/PolarOrient.out}); \lean{PCompat.dvd_card}, \lean{card_mod},
+\lean{exists_iff}, \lean{compat_even}, \lean{compat_odd}, \lean{classification}, and \lean{PCompat.ex341}, which
+depends on \lean{propext} only (\dirn{PRIMEFOLD/compat/lean/PCompatCore.out}); \lean{L0Check.L0_rot}
+(\dirn{PRIMEFOLD/compat/lean/L0Check.out}). Every other declaration covered here occurs in the statement or the proof
+of one of these, so the same logs cover it, except \lean{RefuteC6.m4_with_centre_counter}, which has no axiom line (it is a closed
+arithmetic statement whose Lean proof is \lean{omega}; the compile log of its file shows no error). No file uses \lean{sorry},
+\lean{native_decide} or new axioms; \lean{PCompat.ex341} is checked by kernel evaluation (\lean{decide}).
+
+\paragraph{Rigor and dependencies.} The theorems with a Lean reference are Lean-checked, with the axioms above; for the
+two \dirn{ES8SYM} files this rests on the logs of the compiled versions, which according to the records differ from the
+present copies only in comment lines (see Sources). The proofs below are written proofs (not refereed). Statements
+tagged ``written step'' are not declarations of the five Lean files: Fact~\ref{ec:fact:prim} restates Mathlib lemmas,
+and Corollary~\ref{ec:cor:planar} has no Lean counterpart. The theorems of Subsection~\ref{ec:ssec:es7} are
+conditional on the propositions $\mathrm{Fivefold35}$ and $\mathrm{Fourfold32}$, and Lemma~\ref{ec:lem:pc-exist} and
+Theorem~\ref{ec:thm:compat}(c) take hypotheses on $r$ that Lean does not discharge (Remark~\ref{ec:rem:compat}). We
+use Theorem~\ref{ll:thm:reduction} (reduction to exactly $mt$ points) and Lemma~\ref{lg:lem:centre} (even orders
+exclude the centre), and the conventions of Definitions~\ref{fd:def:point}, \ref{fd:def:orient}, \ref{fd:def:gp},
+\ref{fd:def:cp}, \ref{fd:def:ngon}, \ref{fd:def:inv} and~\ref{fd:def:rot}; remarks also refer to
+Lemma~\ref{ll:lem:minperiod}, Theorems~\ref{ll:thm:layers} and~\ref{ll:thm:card-peel}, Lemma~\ref{lg:lem:polar},
+Lemmas~\ref{oc:lem:rot-inv}, \ref{oc:lem:perm} and~\ref{oc:lem:same-ray}, Theorem~\ref{oc:thm:phase-orbit} and
+Definition~\ref{sr:def:classes}. The other subsections are self-contained apart from standard facts, which we state
+where they are used.
+
+%---------------------------------------------------------------------------------------------------------------------
+\subsection{Conditional \texorpdfstring{$ES(7)$}{ES(7)} corollaries for fivefold and fourfold symmetry}\label{ec:ssec:es7}
+
+The source is Section~11 of \dirn{LEANEXT/es7corr/ES7Corollaries.lean} (lines 1148--1233, namespace
+\lean{ErdosSzekeres.LayerLemma}). Lines 1--1147 of this file coincide line by line with lines 1--1147 of
+\dirn{LAYERLEAN/LayerLemma.lean} (we checked this with \texttt{diff}; the latter file has one more line, its closing
+\texttt{end}). Hence the declarations \lean{Invariant}, \lean{rotAbout}, \lean{centre_not_mem_of_even} and
+\lean{convexNGon_of_layers} used below are verbatim copies of those of \dirn{LAYERLEAN/LayerLemma.lean}, at the same
+lines ($105$, $298$, $582$, $1066$).
+
+\emph{Conventions.} $S$ is a finite set of points (Lean \texttt{Finset Point}) and $c$ a point. $\mathrm{rotAbout}(c,\theta)$
+is the counterclockwise rotation by $\theta$ about $c$ (Definition~\ref{fd:def:rot}). ``$S$ is invariant under $f$''
+means $f(p)\in S$ for every $p\in S$ (Definition~\ref{fd:def:inv}). General position is
+Definition~\ref{fd:def:gp}, and $\mathrm{HasConvexNGon}(n,S)$ means that some $n$-element subset of $S$ is in convex
+position (Definition~\ref{fd:def:ngon}; no emptiness condition). We write $S\setminus\{c\}$ for Lean's
+\texttt{S.erase c}. In the statements below the angles are $2\pi/5$ and $2\pi/4$ with real numerals $5$ and $4$; in
+Theorem~\ref{ll:thm:reduction} and Lemma~\ref{lg:lem:centre} (items (R) and (C) below) the angle is $2\pi/m$ with
+$m\in\N$ cast to $\R$. For $m=5$ and $m=4$ these are the same real numbers (the Lean proofs pass between the two forms
+with the cast-normalizing tactic \lean{exact_mod_cast}).
+
+\begin{definition}[the case classes; \leanref{ErdosSzekeres.LayerLemma.Fivefold35}{LEANEXT/es7corr/ES7Corollaries.lean:1157}, \leanref{ErdosSzekeres.LayerLemma.Fourfold32}{LEANEXT/es7corr/ES7Corollaries.lean:1164}]\label{ec:def:cases}
+$\mathrm{Fivefold35}$ is the proposition: for every finite set $S$ of points and every point $c$, if $S$ is in
+general position, $\card S=35$, $c\notin S$, and $S$ is invariant under $\mathrm{rotAbout}(c,2\pi/5)$, then
+$\mathrm{HasConvexNGon}(7,S)$.
+
+$\mathrm{Fourfold32}$ is the proposition: for every finite set $S$ of points and every point $c$, if $S$ is in general
+position, $\card S=32$, $c\notin S$, and $S$ is invariant under $\mathrm{rotAbout}(c,2\pi/4)$, then
+$\mathrm{HasConvexNGon}(7,S)$.
+\end{definition}
+
+\begin{remark}[status of the case classes]\label{ec:rem:cases}
+No Lean theorem proves $\mathrm{Fivefold35}$ or $\mathrm{Fourfold32}$. The theorems of this subsection take them as
+hypotheses and are therefore conditional. In the project they are supported by computer-assisted results outside
+Lean, which also rest on written arguments. For SAT certificates the project counts only the verdicts of the proof
+checker cake\_lpr (\dirn{WRITEUP/SYMMETRIC.md}, Section~3). The records also show acceptances by a second checker,
+lrat-check, which the project does not count: it is a secondary check only, and its unpatched upstream build is
+unsound on the empty clause (\dirn{E2/logs/lrat_check_soundness.md}; \dirn{LRATCHECK20261105}).
+\begin{itemize}
+\item $\mathrm{Fivefold35}$: \dirn{SYM5} (\dirn{SYM5/README.md}). Two formulas for the $35$-point fivefold case, an
+  angle form and a layer form of one SAT encoder (not independent encodings: audit \dirn{AUDIT3}, finding A4-3), are
+  recorded as unsatisfiable; the LRAT proofs of both were accepted by cake\_lpr. The passage from
+  these verdicts to $\mathrm{Fivefold35}$ uses the soundness of the encoder (recorded as a written proof, reviewed in
+  the audit, \dirn{AUDIT3}, A4), a normal-form lemma for the labelling (for the layer form, the layer lemma), and the
+  centre-perturbation lemma, which makes the centre generic (\dirn{C2ENC/perturbation.md}, recorded there as a
+  complete written proof, not Lean-checked, refereed within the project on the day it was written:
+  \dirn{C2ENC/referee/NOTES.md}, Section~4). \dirn{C2ENC/class_table.md} summarizes this chain for the constant of
+  the same text in \dirn{SYMLEAN} (see below).
+\item $\mathrm{Fourfold32}$: \dirn{C4CUT} (\dirn{C4CUT/README.md}). The layered formula for the $32$-point fourfold
+  case with six realizability cuts, each justified by a Grassmann--Pl\"ucker certificate checked in exact rational
+  arithmetic, is recorded as unsatisfiable; its LRAT proof was accepted by cake\_lpr. The final run does not record
+  which checker builds it used (\dirn{AUDIT3}, A4-5, which concludes that the claim is carried by the cake\_lpr verdict);
+  the replay \dirn{REPLAY}, with hash-checked files and checker binaries, accepted the proof again with cake\_lpr. The
+  passage to $\mathrm{Fourfold32}$ uses the soundness of the layered encoder (recorded in \dirn{C4CUT/README.md} as a
+  written proof, refereed within the project: the review of 1~November 2026, \dirn{C4CUT/review/README.md}), the
+  layer lemma, and the sector normal form: each of the other orbits has exactly one
+  point in the open quadrant between the rays from the centre through two consecutive points of the outermost orbit.
+  The audit found the argument for this not written down (\dirn{AUDIT3}, A4-1); \dirn{C4CUT/README.md}, Section~1,
+  now gives it in one sentence: a point of another orbit on a bounding ray would be collinear with two antipodal
+  points of the outermost orbit.
+\end{itemize}
+The reviews, audits and refereeing named in this list were all made within the project (internal reviews); none of
+them is an external peer review. Apart from the layer lemma and the ray fact for even orders behind the sector
+normal form, none of these written arguments is checked in Lean. Both have Lean-checked forms. For the layer lemma
+it is Theorem~\ref{ll:thm:layers}.
+For the ray fact it is Lemma~\ref{oc:lem:same-ray} together with Theorem~\ref{oc:thm:phase-orbit}
+(\dirn{LEANEXT/orbit/OrbitConsistency.lean}): for even $m>0$, no two points of a finite set in general position that
+is invariant under $\mathrm{rotAbout}(c,2\pi/m)$ lie on one open ray from $c$; and if $x$ and $y$ are points of such a
+set, both different from $c$, and $y$ is not in the orbit of $x$ under that rotation, then the directions of $x$ and
+$y$ at $c$ differ by no integer multiple of $2\pi/m$. The
+remaining step, that each of the other orbits has exactly one point in the open quadrant, is a counting argument and
+is not in Lean. The rotation invariance of orientations and their sign rule under permutations, on which the
+encoders' single variable per orbit of triples rests, are Lean-checked too (Lemmas~\ref{oc:lem:rot-inv}
+and~\ref{oc:lem:perm}). Nothing in Lean connects any of these Lean-checked forms to the formulas, and no Lean theorem
+links a formula or a certificate to these propositions. Propositions with the same text occur in
+\dirn{SYMLEAN/SymmetricReduction.lean:477} and \dirn{SYMLEAN/SymmetricReduction.lean:496}
+(Definition~\ref{sr:def:classes}); they are different Lean constants (namespace \lean{ErdosSzekeres.SymReduction},
+built on that file's own copies of \lean{Invariant} and \lean{rotAbout}), and no Lean theorem identifies the two
+versions. The docstring of \lean{Fourfold32}, copied from \dirn{SYMLEAN}, says that it is used only by a variant
+theorem of \dirn{SYMLEAN}; in \dirn{LEANEXT/es7corr/ES7Corollaries.lean} it is the hypothesis of
+Theorems~\ref{ec:thm:fourfold-erase} and~\ref{ec:thm:fourfold}.
+\end{remark}
+
+We use two Lean-checked results whose written proofs are in other sections, in the following form.
+\begin{itemize}
+\item[(R)] Theorem~\ref{ll:thm:reduction} (\lean{convexNGon_of_layers}, \dirn{LAYERLEAN/LayerLemma.lean:1066}). Let
+  $m,K,t\in\N$ with $0<m$ and $K\le2m$, and assume: \emph{for every finite set $T$ and every point $c'$, if $T$ is in
+  general position, $c'\notin T$, $T$ is invariant under $\mathrm{rotAbout}(c',2\pi/m)$ and $\card T=m\cdot t$, then
+  $\mathrm{HasConvexNGon}(K,T)$}. Then for every finite set $S$ and every point $c$ such that $S$ is in general
+  position, $S$ is invariant under $\mathrm{rotAbout}(c,2\pi/m)$ and $m\cdot(t\mathbin{\dot{-}}1)<\card{S\setminus\{c\}}$,
+  we have $\mathrm{HasConvexNGon}(K,S)$. Here $t\mathbin{\dot{-}}1=\max(t-1,0)$ is Lean's truncated subtraction
+  on $\N$ (the notation of the layer-lemma section).
+\item[(C)] Lemma~\ref{lg:lem:centre} (\lean{centre_not_mem_of_even}, \dirn{LAYERLEAN/LayerLemma.lean:582}). Let
+  $m\in\N$, let $S$ be a finite set of points and $c$ a point. If $0<m$, $m$ is even, $S$ is invariant under
+  $\mathrm{rotAbout}(c,2\pi/m)$ and in general position, and some $p\in S$ satisfies $p\ne c$, then $c\notin S$. (In
+  this section, for a map $f$ and $n\in\N$, $f^n$ is the $n$-fold composite of $f$, written $f^{[n]}$ in the
+  foundations section; so $f^0=\mathrm{id}$. The power $\mathrm{rotAbout}(c,2\pi/m)^{m/2}$ is the half-turn
+  $p\mapsto 2c-p$, and $p$, $c$, $2c-p$ would be three distinct collinear points of $S$.)
+\end{itemize}
+
+In each of the following five theorems the case class is a hypothesis (Definition~\ref{ec:def:cases} and
+Remark~\ref{ec:rem:cases}).
+
+\begin{theorem}[fivefold, layer form; \leanref{ErdosSzekeres.LayerLemma.fivefold_heptagon_of_erase}{LEANEXT/es7corr/ES7Corollaries.lean:1170}]\label{ec:thm:fivefold-erase}
+Assume $\mathrm{Fivefold35}$. Let $S$ be a finite set of points and $c$ a point such that $S$ is in general position,
+$S$ is invariant under $\mathrm{rotAbout}(c,2\pi/5)$, and $30<\card{S\setminus\{c\}}$. Then
+$\mathrm{HasConvexNGon}(7,S)$.
+\end{theorem}
+
+\begin{proof}
+We follow the Lean proof. Apply (R) with $m=5$, $K=7$, $t=7$; here $0<5$ and $K=7\le10=2m$. The assumption of (R)
+holds: let $T$ be finite and $c'$ a point such that $T$ is in general position, $c'\notin T$, $T$ is invariant under
+$\mathrm{rotAbout}(c',2\pi/5)$ and $\card T=5\cdot7=35$. These are the four hypotheses of $\mathrm{Fivefold35}$ for
+$T$ and $c'$ (listed there in a different order), so $\mathrm{Fivefold35}$ gives $\mathrm{HasConvexNGon}(7,T)$. The
+size condition of (R) is $5\cdot(7\mathbin{\dot{-}}1)=5\cdot6=30<\card{S\setminus\{c\}}$, which is our hypothesis. So (R) gives
+$\mathrm{HasConvexNGon}(7,S)$.
+\end{proof}
+
+\begin{theorem}[fivefold; \leanref{ErdosSzekeres.LayerLemma.fivefold_heptagon}{LEANEXT/es7corr/ES7Corollaries.lean:1183}]\label{ec:thm:fivefold}
+Assume $\mathrm{Fivefold35}$. Let $S$ be a finite set of points and $c$ a point such that $S$ is in general position,
+$S$ is invariant under $\mathrm{rotAbout}(c,2\pi/5)$, and $32\le\card S$. Then $\mathrm{HasConvexNGon}(7,S)$.
+\end{theorem}
+
+\begin{proof}
+As in Lean: removing one element lowers the cardinality by at most one, so
+$\card{S\setminus\{c\}}\ge\card S-1\ge31>30$, and Theorem~\ref{ec:thm:fivefold-erase} applies.
+\end{proof}
+
+\begin{theorem}[centre-free; \leanref{ErdosSzekeres.LayerLemma.fivefold_heptagon_of_centre_not_mem}{LEANEXT/es7corr/ES7Corollaries.lean:1193}]\label{ec:thm:fivefold-nc}
+Assume $\mathrm{Fivefold35}$. Let $S$ be a finite set of points and $c$ a point such that $S$ is in general position,
+$S$ is invariant under $\mathrm{rotAbout}(c,2\pi/5)$, $c\notin S$, and $31\le\card S$. Then
+$\mathrm{HasConvexNGon}(7,S)$.
+\end{theorem}
+
+\begin{proof}
+As in Lean: since $c\notin S$, $S\setminus\{c\}=S$, so $\card{S\setminus\{c\}}=\card S\ge31>30$, and
+Theorem~\ref{ec:thm:fivefold-erase} applies.
+\end{proof}
+
+\begin{theorem}[fourfold, layer form; \leanref{ErdosSzekeres.LayerLemma.fourfold_heptagon_of_erase}{LEANEXT/es7corr/ES7Corollaries.lean:1203}]\label{ec:thm:fourfold-erase}
+Assume $\mathrm{Fourfold32}$. Let $S$ be a finite set of points and $c$ a point such that $S$ is in general position,
+$S$ is invariant under $\mathrm{rotAbout}(c,2\pi/4)$, and $28<\card{S\setminus\{c\}}$. Then
+$\mathrm{HasConvexNGon}(7,S)$.
+\end{theorem}
+
+\begin{proof}
+We follow the Lean proof. Apply (R) with $m=4$, $K=7$, $t=8$; here $0<4$ and $K=7\le8=2m$. The assumption of (R)
+holds by $\mathrm{Fourfold32}$, exactly as in the proof of Theorem~\ref{ec:thm:fivefold-erase}, since $4\cdot8=32$.
+The size condition of (R) is $4\cdot(8\mathbin{\dot{-}}1)=4\cdot7=28<\card{S\setminus\{c\}}$, our hypothesis.
+\end{proof}
+
+\begin{theorem}[fourfold; \leanref{ErdosSzekeres.LayerLemma.fourfold_heptagon}{LEANEXT/es7corr/ES7Corollaries.lean:1216}]\label{ec:thm:fourfold}
+Assume $\mathrm{Fourfold32}$. Let $S$ be a finite set of points and $c$ a point such that $S$ is in general position,
+$S$ is invariant under $\mathrm{rotAbout}(c,2\pi/4)$, and $29\le\card S$. Then $\mathrm{HasConvexNGon}(7,S)$.
+\end{theorem}
+
+\begin{proof}
+We follow the Lean proof. Since $\card S\ge29>1$, $S$ is not contained in $\{c\}$, so some $p\in S$ satisfies $p\ne
+c$. Apply (C) with $m=4$: $0<4$, $4$ is even, $S$ is in general position, and $S$ is invariant under
+$\mathrm{rotAbout}(c,2\pi/4)$, which is the rotation $\mathrm{rotAbout}(c,2\pi/m)$ of (C) for $m=4$ (the cast angle
+$2\pi/m$ equals $2\pi/4$ for $m=4$; see the Conventions). So $c\notin S$. Hence $S\setminus\{c\}=S$ and
+$\card{S\setminus\{c\}}=\card S\ge29>28$, and
+Theorem~\ref{ec:thm:fourfold-erase} applies.
+\end{proof}
+
+\begin{remark}[what the theorems give]\label{ec:rem:es7-sharp}
+Under $\mathrm{Fivefold35}$, Theorem~\ref{ec:thm:fivefold} says that a finite set in general position that is
+invariant under $\mathrm{rotAbout}(c,2\pi/5)$ for some $c$ and has no $7$ points in convex position has at most $31$
+points; under $\mathrm{Fourfold32}$, Theorem~\ref{ec:thm:fourfold} gives at most $28$ points for
+$\mathrm{rotAbout}(c,2\pi/4)$. These are the upper bounds $N(C_5)\le31$ and $N(C_4)\le28$ of the symmetric $ES(7)$
+note (\dirn{WRITEUP/note/symmetric_es7.tex}, the proposition labelled \texttt{prop:C}), where they are derived from
+the $35$-point fivefold and the $32$-point fourfold case by orbit counting (the lemma labelled \texttt{lem:sizes}). A set
+with symmetry $C_s$ in the sense of the note is invariant under a rotation $\rho$ of order $s$ about some point $c$,
+that is $\rho=\mathrm{rotAbout}(c,2\pi k/s)$ for an integer $k$ with $\gcd(k,s)=1$. Choose $j\in\N$ with
+$jk\equiv1\pmod s$. By the complex form of Definition~\ref{fd:def:rot},
+$\rho^j=\mathrm{rotAbout}(c,2\pi jk/s)=\mathrm{rotAbout}(c,2\pi/s)$, since the two angles differ by a multiple of
+$2\pi$; and a set mapped into itself by $\rho$ is mapped into itself by $\rho^j$. So the two theorems apply to every
+finite set in general position with symmetry $C_5$, respectively $C_4$. The matching lower-bound examples \dirn{SYMMAX/c5_31points.txt} and
+\dirn{SYMMAX/c4_28points.txt} rest on exact computations outside Lean, which were not repeated for this document. The
+logs \dirn{LEANEXT/es7corr/mutant31.log} and \dirn{LEANEXT/es7corr/mutant28.log} record that the Lean proofs fail at their
+final arithmetic step when the thresholds $32$ and $29$ are lowered to $31$ and $28$; this audits the proof scripts
+only.
+\end{remark}
+
+\begin{remark}[a route without the layer lemma]\label{ec:rem:orbits}
+Theorems~\ref{ec:thm:fivefold-erase} and~\ref{ec:thm:fourfold-erase} also follow by orbit counting, the argument
+of the symmetric $ES(7)$ note. Let $\rho=\mathrm{rotAbout}(c,2\pi/m)$ with $m\in\{4,5\}$. The map $\rho$ fixes $c$ and
+is injective, so it maps $S'=S\setminus\{c\}$ into itself, hence onto itself ($S'$ is finite). Every $y\ne c$ has
+minimal period $m$ under $\rho$ (Lemma~\ref{ll:lem:minperiod}), so the $\rho$-orbits $\{y,\rho y,\dots,\rho^{m-1}y\}$
+of the points $y\in S'$ have exactly $m$ elements and partition $S'$. If $m(t-1)<\card{S'}$, with $t=7$ for $m=5$ and
+$t=8$ for $m=4$, then $S'$ consists of at least $t$ orbits; the union $T$ of $t$ of them has $mt$ points ($35$,
+respectively $32$), satisfies $c\notin T$, is in general position (as a subset of $S$) and is invariant under
+$\rho$. The case class applies to $T$, and $7$ points of $T$ in convex position lie in $S$. The Lean proofs use
+Theorem~\ref{ll:thm:reduction} instead, which takes for $T$ the $t$ outermost convex layers of $S'$.
+\end{remark}
+
+%---------------------------------------------------------------------------------------------------------------------
+\subsection{Rotations of order at least eight}\label{ec:ssec:order8}
+
+The source is \dirn{ES8SYM/lean/C6check.lean} (namespace \lean{RefuteC6}; it imports Mathlib only, not the project
+library). It is the Lean check of a complex form of part (a) of Lemma~2 of \dirn{ES8SYM/proofs/layers.md} (the planar
+form is Corollary~\ref{ec:cor:planar}, a written step) and of the arithmetic of part (b) of that lemma.
+
+\emph{Conventions.} In this subsection points are complex numbers. $\C$ is a real vector space of dimension $2$,
+$\abs z$ is the modulus (the Euclidean norm), and for $r\in\R$ we write $B_r=\{z\in\C:\abs z\le r\}$ (Lean
+\texttt{closedBall 0 r}); the circle $\{z\in\C:\abs z=r\}$ is Lean's \texttt{sphere 0 r}, and both sets are empty if
+$r<0$. $\conv$ is the convex hull over $\R$, the smallest convex set containing the given set. The following notions are
+Mathlib's.
+\begin{itemize}
+\item An \emph{extreme point} of $A\subseteq\C$ (Mathlib \lean{Set.extremePoints}) is a point $x\in A$ such that
+  whenever $x_1,x_2\in A$, $a,b\in\R$, $a>0$, $b>0$, $a+b=1$ and $x=ax_1+bx_2$, we have $x_1=x$.
+\item A family $f:\iota\to\C$ is \emph{convex independent} over $\R$ (Mathlib \lean{ConvexIndependent}) if for every
+  set $s\subseteq\iota$ and every $x\in\iota$, $f(x)\in\conv f(s)$ implies $x\in s$.
+\item $\zeta\in\C$ is a \emph{primitive $m$-th root of unity} (Mathlib \lean{IsPrimitiveRoot}) if $\zeta^m=1$ and,
+  for every $l\in\N$, $\zeta^l=1$ implies $m\mid l$.
+\end{itemize}
+$\mathrm{Fin}\,8=\{0,1,\dots,7\}$. A finite set of points is in convex position (Definition~\ref{fd:def:cp}) if the
+inclusion family of the set is convex independent; Corollary~\ref{ec:cor:planar} makes the passage between injective
+families in $\C$ and finite sets of points precise.
+
+\begin{lemma}[points of a circle are extreme points of the disc; \leanref{RefuteC6.sphere_subset_extremePoints}{ES8SYM/lean/C6check.lean:24}]\label{ec:lem:sphere}
+For every $r\in\R$, every $x\in\C$ with $\abs x=r$ is an extreme point of $B_r$.
+\end{lemma}
+
+\begin{proof}
+We follow the Lean proof, which uses the strict convexity of the norm of $\C$; we make it explicit. For
+$x_1,x_2\in\C$ and real $a,b$ with $a+b=1$,
+\begin{equation*}
+\abs{ax_1+bx_2}^2=a\abs{x_1}^2+b\abs{x_2}^2-ab\,\abs{x_1-x_2}^2 .
+\end{equation*}
+Indeed, with $\langle z,w\rangle=\operatorname{Re}(z\bar w)$ the left side is
+$a^2\abs{x_1}^2+b^2\abs{x_2}^2+2ab\langle x_1,x_2\rangle$, the right side is
+$(a-ab)\abs{x_1}^2+(b-ab)\abs{x_2}^2+2ab\langle x_1,x_2\rangle$, and $a-ab=a(1-b)=a^2$, $b-ab=b^2$.
+
+Let $\abs x=r$. Then $x\in B_r$. Let $x_1,x_2\in B_r$ and $a,b>0$ with $a+b=1$ and $x=ax_1+bx_2$. If $x_1=x_2$, then
+$x=(a+b)x_1=x_1$. Suppose $x_1\ne x_2$. Since $0\le\abs{x_1}\le r$ we have $r\ge0$ and $\abs{x_1}^2\le r^2$, and
+likewise $\abs{x_2}^2\le r^2$; also $ab\abs{x_1-x_2}^2>0$. The identity gives
+$r^2=\abs x^2<ar^2+br^2=r^2$, a contradiction. Hence $x_1=x$.
+\end{proof}
+
+\begin{lemma}[injective families on a circle are convex independent; \leanref{RefuteC6.convexIndependent_of_norm_eq}{ES8SYM/lean/C6check.lean:43}]\label{ec:lem:ci-circle}
+Let $\iota$ be any type, $f:\iota\to\C$ injective, and $r\in\R$ with $\abs{f(i)}=r$ for every $i\in\iota$. Then $f$ is
+convex independent over $\R$.
+\end{lemma}
+
+\begin{proof}
+Step 1. \emph{If $x$ is an extreme point of a convex set $A\subseteq\C$, then $A\setminus\{x\}$ is convex.} Let
+$y,z\in A\setminus\{x\}$, $a,b\ge0$ real with $a+b=1$, and $w=ay+bz$; then $w\in A$. If $w=x$: for $b=0$ we get
+$w=y\ne x$, for $a=0$ we get $w=z\ne x$, and for $a,b>0$ extremality gives $y=x$; each case is a contradiction. So
+$w\in A\setminus\{x\}$.
+
+Step 2. The disc $B_r$ is convex: for $y,z\in B_r$ and $a,b\ge0$ with $a+b=1$, $\abs{ay+bz}\le a\abs y+b\abs
+z\le r$. Let $s\subseteq\iota$ and $x\in\iota$ with $f(x)\in\conv f(s)$, and suppose $x\notin s$. For $j\in s$ we have
+$\abs{f(j)}=r$, so $f(j)\in B_r$, and $j\ne x$, so $f(j)\ne f(x)$ by injectivity. Thus $f(s)\subseteq
+B_r\setminus\{f(x)\}$. Since $\abs{f(x)}=r$, $f(x)$ is an extreme point of $B_r$ (Lemma~\ref{ec:lem:sphere}), so
+$B_r\setminus\{f(x)\}$ is convex by Step~1, and therefore contains $\conv f(s)$. This contradicts $f(x)\in\conv f(s)$.
+Hence $x\in s$.
+
+(The Lean proof uses Mathlib's reformulation of convex independence, ``$f(i)\notin\conv f(s\setminus\{i\})$ for all
+$i,s$'', with the same two steps.)
+\end{proof}
+
+\begin{definition}[the generator; \leanref{RefuteC6.zeta}{ES8SYM/lean/C6check.lean:60}]\label{ec:def:zeta}
+For $m\in\N$, $\zeta_m=\exp(2\pi i/m)\in\C$, with $m$ cast to $\C$. (For $m=0$, Lean's division gives $2\pi i/0=0$ and
+$\zeta_0=1$; this case is not used.) Rotation by $2\pi/m$ about $0$ is $z\mapsto\zeta_mz$.
+\end{definition}
+
+\begin{lemma}[primitive root; \leanref{RefuteC6.zeta_prim}{ES8SYM/lean/C6check.lean:62}]\label{ec:lem:zeta}
+For $m\in\N$ with $m\ne0$, $\zeta_m$ is a primitive $m$-th root of unity.
+\end{lemma}
+
+\begin{proof}
+This is Mathlib's \lean{Complex.isPrimitiveRoot_exp}, a standard fact. Proof: $\exp(w)=1$ if and only if
+$w\in2\pi i\Z$ (periodicity of the exponential function), and $\zeta_m^l=\exp(2\pi il/m)$ for $l\in\N$. Hence
+$\zeta_m^l=1$ if and only if $l/m\in\Z$, that is $m\mid l$; in particular $\zeta_m^m=1$.
+\end{proof}
+
+\begin{fact}[properties of primitive roots; written step]\label{ec:fact:prim}
+Let $m\ge1$ and let $\zeta\in\C$ be a primitive $m$-th root of unity. Then
+\textup{(i)} $\zeta\ne0$; \textup{(ii)} $\abs\zeta=1$; \textup{(iii)} if $i,j<m$ and $\zeta^i=\zeta^j$, then $i=j$;
+\textup{(iv)} $\zeta^j\ne1$ for $0<j<m$.
+\end{fact}
+
+\begin{proof}
+(i) $\zeta^m=1\ne0$ and $m\ge1$. (ii) $\abs\zeta^m=\abs{\zeta^m}=1$ with $\abs\zeta\ge0$, and $x\mapsto x^m$ is
+strictly increasing on $[0,\infty)$, so $\abs\zeta=1$. (iii) Say $i\le j$. Then
+$\zeta^i\zeta^{j-i}=\zeta^j=\zeta^i$, and $\zeta^i\ne0$ by (i), so $\zeta^{j-i}=1$, hence $m\mid j-i$; as $0\le
+j-i<m$, $j=i$. (iv) $\zeta^j=1$ would give $m\mid j$, impossible for $0<j<m$. (In Mathlib these are
+\lean{IsPrimitiveRoot.ne_zero}, \lean{IsPrimitiveRoot.norm'_eq_one}, \lean{IsPrimitiveRoot.pow_inj} and
+\lean{IsPrimitiveRoot.pow_ne_one_of_pos_of_lt}.)
+\end{proof}
+
+\begin{lemma}[eight points of an orbit; \leanref{RefuteC6.orbit_injective}{ES8SYM/lean/C6check.lean:66}, \leanref{RefuteC6.orbit_convexIndependent}{ES8SYM/lean/C6check.lean:75}]\label{ec:lem:orbit8}
+Let $m\in\N$ with $8\le m$ and $p\in\C$ with $p\ne0$, and let $F:\mathrm{Fin}\,8\to\C$, $F(k)=p\,\zeta_m^k$. Then
+\textup{(a)} $F$ is injective, and \textup{(b)} $F$ is convex independent over $\R$.
+\end{lemma}
+
+\begin{proof}
+Since $m\ne0$, $\zeta_m$ is a primitive $m$-th root of unity (Lemma~\ref{ec:lem:zeta}).
+(a) If $p\zeta_m^j=p\zeta_m^k$, then $\zeta_m^j=\zeta_m^k$ because $p\ne0$, and $j,k<8\le m$, so $j=k$ by
+Fact~\ref{ec:fact:prim}(iii).
+(b) $\abs{F(k)}=\abs p\,\abs{\zeta_m}^k=\abs p$ by Fact~\ref{ec:fact:prim}(ii). Apply Lemma~\ref{ec:lem:ci-circle}
+with $r=\abs p$ and (a).
+\end{proof}
+
+\begin{theorem}[order at least $8$; \leanref{RefuteC6.part_a}{ES8SYM/lean/C6check.lean:85}]\label{ec:thm:big-order}
+Let $m\in\N$ with $8\le m$, and let $S\subseteq\C$ be any set \textup{(}not necessarily finite\textup{)} such that
+$\exp(2\pi i/m)\,z\in S$ for every $z\in S$. Assume that for every injective $f:\mathrm{Fin}\,8\to\C$ with $f(k)\in S$
+for all $k$, $f$ is not convex independent over $\R$. Then $S\subseteq\{0\}$.
+\end{theorem}
+
+\begin{proof}
+We follow the Lean proof. Let $p\in S$ and suppose $p\ne0$. By induction, $p\zeta_m^k\in S$ for every $k\in\N$:
+$p\zeta_m^0=p\in S$, and if $p\zeta_m^k\in S$, then $\exp(2\pi i/m)\,(p\zeta_m^k)=p\zeta_m^{k+1}\in S$ by the hypothesis
+(note $\exp(2\pi i/m)=\zeta_m$ by definition). Hence the family $F$ of Lemma~\ref{ec:lem:orbit8} takes values in $S$; it
+is injective and convex independent by that lemma, contradicting the assumption. So $p=0$.
+\end{proof}
+
+\begin{remark}\label{ec:rem:big-order}
+The theorem uses no finiteness and no general position, and only the forward invariance $\zeta_mS\subseteq S$. Its
+conclusion says $S=\emptyset$ or $S=\{0\}$; both sets satisfy the hypotheses, since an injective family of $8$ values
+needs $8$ distinct points. The planar statement used in the project (\dirn{ES8SYM/proofs/layers.md}, Lemma~2(a),
+stated there for sets in general position; the row ``order $\ge8$'', labelled Lean-checked, of the $k=8$ tables in
+\dirn{ES8SYM/README.md} and \dirn{WRITEUP/note/symmetric_extremal.tex}) follows from the following corollary, which
+does not assume general position. Lemma~2(a) is stated for the rotation by $2\pi/m$, and the corollary applies to it
+directly. The tables concern any rotation $\rho$ of order $m$ (\dirn{WRITEUP/note/symmetric_extremal.tex}, line~338),
+that is $\rho=\mathrm{rotAbout}(c,2\pi k/m)$ with $\gcd(k,m)=1$; as in Remark~\ref{ec:rem:es7-sharp}, the power
+$\rho^j$ with $j\in\N$ and $jk\equiv1\pmod m$ is $\mathrm{rotAbout}(c,2\pi/m)$ and maps every $\rho$-invariant set
+into itself, so the corollary applies to $\rho^j$. Lean checks only the complex form, Theorem~\ref{ec:thm:big-order};
+the passage to the plane is not formalized in Lean, and a written proof follows.
+\end{remark}
+
+\begin{corollary}[planar form of Theorem~\ref{ec:thm:big-order}; written step]\label{ec:cor:planar}
+Let $m\in\N$ with $m\ge8$, let $c$ be a point, and let $S$ be a finite set of points that is invariant under
+$\mathrm{rotAbout}(c,2\pi/m)$ and satisfies $\neg\,\mathrm{HasConvexNGon}(8,S)$. Then $S\subseteq\{c\}$.
+\end{corollary}
+
+\begin{proof}
+Let $\varphi:\R^2\to\C$, $\varphi(p)=(p_0-c_0)+i(p_1-c_1)$. It is a bijection and an affine map of real vector spaces,
+with inverse $\psi(z)=(c_0+\operatorname{Re}z,\;c_1+\operatorname{Im}z)$. By the complex form of
+Definition~\ref{fd:def:rot}, $\varphi(\mathrm{rotAbout}(c,\theta)\,p)=e^{i\theta}\varphi(p)$ for all $\theta\in\R$ and
+all points $p$. We also use the standard fact that an affine map $\alpha$ between real vector spaces satisfies
+$\alpha(\conv Y)=\conv\alpha(Y)$, because $\conv Y$ is the set of finite convex combinations of points of $Y$ and
+$\alpha$ preserves convex combinations. Let $\tilde S=\varphi(S)\subseteq\C$.
+
+\emph{Invariance.} Let $z=\varphi(p)$ with $p\in S$. With $\theta=2\pi/m$ we have $e^{i\theta}=\exp(2\pi i/m)$, so
+$\exp(2\pi i/m)\,z=\varphi(\mathrm{rotAbout}(c,2\pi/m)\,p)\in\tilde S$, because $\mathrm{rotAbout}(c,2\pi/m)\,p\in S$.
+
+\emph{No convex independent $8$-family.} Let $f:\mathrm{Fin}\,8\to\C$ be injective with values in $\tilde S$, and
+suppose $f$ is convex independent. Put $g=\psi\circ f$; it is injective with values in $S$, so $T=g(\mathrm{Fin}\,8)$
+is an $8$-element subset of $S$. We show that $T$ is in convex position, i.e.\ (Definition~\ref{fd:def:cp}) that for
+every $U\subseteq T$ and every $x\in T$, $x\in\conv U$ implies $x\in U$. Write $x=g(k)$ and
+$s=\{j\in\mathrm{Fin}\,8: g(j)\in U\}$; then $U=g(s)$, and $\varphi\circ g=f$. From $x\in\conv U$ we get
+$f(k)=\varphi(x)\in\varphi(\conv U)=\conv\varphi(U)=\conv f(s)$, so $k\in s$ by convex independence of $f$, that is
+$x=g(k)\in U$. Hence $\mathrm{HasConvexNGon}(8,S)$, a contradiction.
+
+So $\tilde S$ satisfies the hypotheses of Theorem~\ref{ec:thm:big-order}, and $\tilde S\subseteq\{0\}$. Since
+$\varphi(p)=0$ only for $p=c$, $S\subseteq\{c\}$.
+\end{proof}
+
+\begin{proposition}[threshold arithmetic; \leanref{RefuteC6.thr_m4}{ES8SYM/lean/C6check.lean:108}, \leanref{RefuteC6.thr_m5}{ES8SYM/lean/C6check.lean:109}, \leanref{RefuteC6.thr_m6}{ES8SYM/lean/C6check.lean:110}, \leanref{RefuteC6.thr_m7}{ES8SYM/lean/C6check.lean:111}, \leanref{RefuteC6.m4_with_centre_counter}{ES8SYM/lean/C6check.lean:115}]\label{ec:prop:thr}
+In $\N$:
+\begin{enumerate}[label=(\roman*)]
+\item \textup{(\lean{thr_m4})} for every $t$: $65\le4t\iff17\le t$;
+\item \textup{(\lean{thr_m5})} for all $t,e$ with $e\le1$: $65\le5t+e\iff13\le t$;
+\item \textup{(\lean{thr_m6})} for every $t$: $65\le6t\iff11\le t$;
+\item \textup{(\lean{thr_m7})} for all $t,e$ with $e\le1$: $65\le7t+e\iff10\le t$;
+\item \textup{(\lean{m4_with_centre_counter})} $65\le4\cdot16+1$ and $\neg(17\le16)$.
+\end{enumerate}
+\textup{(}In Lean the variable $e$ is called \texttt{c}.\textup{)}
+\end{proposition}
+
+\begin{proof}
+(i) If $t\ge17$ then $4t\ge68$; if $t\le16$ then $4t\le64$. (ii) If $t\ge13$ then $5t+e\ge65$; if $t\le12$ then
+$5t+e\le60+1=61$. (iii) If $t\ge11$ then $6t\ge66$; if $t\le10$ then $6t\le60$. (iv) If $t\ge10$ then $7t+e\ge70$; if
+$t\le9$ then $7t+e\le63+1=64$. (v) $4\cdot16+1=65$, and $17>16$. (Lean proves each line with \lean{omega}, a decision
+procedure for linear arithmetic over $\N$ and $\Z$ whose proof term is checked by the kernel.)
+\end{proof}
+
+\begin{remark}[the geometric part of Lemma~2(b), not in this file]\label{ec:rem:thr}
+In \dirn{ES8SYM/proofs/layers.md}, Lemma~2(b), the proposition is applied to a finite set $S$ in general position,
+invariant under $\mathrm{rotAbout}(c,2\pi/m)$ with $m\in\{4,5,6,7\}$ and without $8$ points in convex position. The
+set $S\setminus\{c\}$ is again invariant (the rotation is injective and fixes $c$), and the layer results applied to it
+(Theorems~\ref{ll:thm:layers} and~\ref{ll:thm:card-peel}, with $K=8\le2m$) give $\card{S\setminus\{c\}}=mt$, where
+$t$ is the number of convex layers of $S\setminus\{c\}$. If moreover $S\not\subseteq\{c\}$ (for instance if
+$\card S\ge2$), then $c\notin S$ for even $m$ (Lemma~\ref{lg:lem:centre}). So $\card S=mt+e$ with $e=[c\in S]\le1$,
+and $e=0$ for $m=4,6$ when $\card S\ge2$. Then Proposition~\ref{ec:prop:thr} turns $\card S\ge65$ into
+$t\ge17,13,11,10$. This geometric input is not part of \dirn{ES8SYM/lean/C6check.lean}, so Lemma~2(b) as a whole is
+not Lean-checked there. Item (v) records the arithmetic behind the
+remark of \dirn{ES8SYM/proofs/layers.md} (lines 41--42) that general position is needed: with the centre allowed for
+$m=4$, $16$ orbits and the centre would already give $65$ points.
+\end{remark}
+
+%---------------------------------------------------------------------------------------------------------------------
+\subsection{Orientations in inverse-radius polar form}\label{ec:ssec:polar}
+
+The source is \dirn{ES8SYM/lean/PolarOrient.lean} (namespace \lean{C7}; Mathlib only). It is the Lean check of
+Lemma~1 of \dirn{ES8SYM/proofs/layers.md} (lines 15--23) and of part of the consequence stated after it (lines 25--29;
+see Remark~\ref{ec:rem:polar}(iii)). For $x\in\R$, $\operatorname{sign}x\in\{-1,0,1\}$ is
+Mathlib's \lean{SignType.sign}: $1$ if $x>0$, $0$ if $x=0$, $-1$ if $x<0$. We use
+$\operatorname{sign}(xy)=\operatorname{sign}(x)\operatorname{sign}(y)$ and $\operatorname{sign}(x)=1$ for $x>0$; hence
+$\operatorname{sign}(xP)=\operatorname{sign}(x)$ whenever $P>0$. For $p\in\R\times\R$ we write $p=(p_1,p_2)$ (Lean
+\lean{p.1}, \lean{p.2}).
+
+\begin{definition}[cross product, inverse-radius points, layered coefficients; \leanref{C7.cross}{ES8SYM/lean/PolarOrient.lean:45}, \leanref{C7.pt}{ES8SYM/lean/PolarOrient.lean:48}, \leanref{C7.coef}{ES8SYM/lean/PolarOrient.lean:63}, \leanref{C7.phase}{ES8SYM/lean/PolarOrient.lean:94}, \leanref{C7.ngonPt}{ES8SYM/lean/PolarOrient.lean:97}]\label{ec:def:polar}
+The following objects are used in this subsection.
+\begin{enumerate}[label=(\roman*)]
+\item For $p,q,r\in\R\times\R$:
+  $\mathrm{cross}(p,q,r)=(q_1-p_1)(r_2-p_2)-(q_2-p_2)(r_1-p_1)$.
+\item For $\varphi,u\in\R$: $\mathrm{pt}(\varphi,u)=(\cos\varphi/u,\ \sin\varphi/u)\in\R\times\R$, the point with
+  direction $\varphi$ and inverse radius $u$ (Lean's division gives $x/0=0$; only $u>0$ is used).
+\item For a type $\iota$, $t\in\N$, $L:\iota\to\mathrm{Fin}\,t$, $\varphi:\iota\to\R$ and $i,j,k\in\iota$, the vector
+  $\mathrm{coef}_{L,\varphi}(i,j,k)\in\R^{\mathrm{Fin}\,t}$ is
+  \begin{equation*}
+  \mathrm{coef}_{L,\varphi}(i,j,k)=\sin(\varphi_k-\varphi_j)\,e_{L(i)}+\sin(\varphi_i-\varphi_k)\,e_{L(j)}
+  +\sin(\varphi_j-\varphi_i)\,e_{L(k)},
+  \end{equation*}
+  where $\varphi_i=\varphi(i)$ and $e_o$ is the $o$-th unit vector (Lean \lean{Pi.single}); when two of
+  $L(i),L(j),L(k)$ coincide, the coefficients add.
+\item For $m,t\in\N$, $\theta:\mathrm{Fin}\,t\to\R$ and $(o,k)\in\mathrm{Fin}\,t\times\mathrm{Fin}\,m$:
+  $\mathrm{phase}_{m,\theta}(o,k)=\theta_o+2\pi k/m$, computed in $\R$ as $(2\pi k)/m$ with $k$ and $m$ cast to $\R$.
+\item For moreover $r:\mathrm{Fin}\,t\to\R$: $\mathrm{ngonPt}_{m,\theta,r}(o,k)=\bigl(r_o\cos\mathrm{phase}_{m,\theta}(o,k),\
+  r_o\sin\mathrm{phase}_{m,\theta}(o,k)\bigr)$, vertex $k$ of the regular $m$-gon with centre $0$, radius $r_o$ and
+  phase $\theta_o$.
+\end{enumerate}
+\end{definition}
+
+For the rest of this subsection, for real $\varphi_1,\varphi_2,\varphi_3,u_1,u_2,u_3$ let
+\begin{equation*}
+D=\det\begin{pmatrix}\cos\varphi_1/u_1&\sin\varphi_1/u_1&1\\ \cos\varphi_2/u_2&\sin\varphi_2/u_2&1\\
+\cos\varphi_3/u_3&\sin\varphi_3/u_3&1\end{pmatrix},\qquad
+\Sigma=u_1\sin(\varphi_3-\varphi_2)+u_2\sin(\varphi_1-\varphi_3)+u_3\sin(\varphi_2-\varphi_1).
+\end{equation*}
+
+\begin{lemma}[the value identity; \leanref{C7.det_mul_eq}{ES8SYM/lean/PolarOrient.lean:24}]\label{ec:lem:det-mul}
+For all real $\varphi_1,\varphi_2,\varphi_3,u_1,u_2,u_3$ with $u_1\ne0$, $u_2\ne0$, $u_3\ne0$: $D\cdot(u_1u_2u_3)=\Sigma$.
+\end{lemma}
+
+\begin{proof}
+Write $x_k=\cos\varphi_k/u_k$ and $y_k=\sin\varphi_k/u_k$. Expanding the determinant along its third column,
+\begin{equation*}
+D=(x_2y_3-x_3y_2)+(x_3y_1-x_1y_3)+(x_1y_2-x_2y_1).
+\end{equation*}
+For indices $a\ne b$, the subtraction formula $\sin(\beta-\alpha)=\sin\beta\cos\alpha-\cos\beta\sin\alpha$ gives
+$x_ay_b-x_by_a=(\cos\varphi_a\sin\varphi_b-\cos\varphi_b\sin\varphi_a)/(u_au_b)=\sin(\varphi_b-\varphi_a)/(u_au_b)$.
+Multiplying by $u_1u_2u_3$ turns the three terms into $u_1\sin(\varphi_3-\varphi_2)$, $u_2\sin(\varphi_1-\varphi_3)$
+and $u_3\sin(\varphi_2-\varphi_1)$. (The Lean proof expands the determinant by \lean{Matrix.det_fin_three}, applies
+the subtraction formula, clears denominators and normalizes; it is the same computation.)
+\end{proof}
+
+\begin{lemma}[polar orientation formula; \leanref{C7.orient_polar}{ES8SYM/lean/PolarOrient.lean:37}]\label{ec:lem:polar-u}
+For all real $\varphi_1,\varphi_2,\varphi_3,u_1,u_2,u_3$ with $u_1>0$, $u_2>0$, $u_3>0$:
+$\operatorname{sign}D=\operatorname{sign}\Sigma$.
+\end{lemma}
+
+\begin{proof}
+Let $P=u_1u_2u_3>0$. By Lemma~\ref{ec:lem:det-mul}, $\operatorname{sign}\Sigma=\operatorname{sign}(DP)=\operatorname{sign}D$.
+\end{proof}
+
+\begin{lemma}[cross-product form; \leanref{C7.orient_polar_cross}{ES8SYM/lean/PolarOrient.lean:50}]\label{ec:lem:polar-cross}
+For all real $\varphi_1,\varphi_2,\varphi_3,u_1,u_2,u_3$ with $u_1>0$, $u_2>0$, $u_3>0$:
+\begin{equation*}
+\operatorname{sign}\mathrm{cross}\bigl(\mathrm{pt}(\varphi_1,u_1),\mathrm{pt}(\varphi_2,u_2),\mathrm{pt}(\varphi_3,u_3)\bigr)
+=\operatorname{sign}\Sigma .
+\end{equation*}
+\end{lemma}
+
+\begin{proof}
+With $x_k,y_k$ as before, $\mathrm{pt}(\varphi_k,u_k)=(x_k,y_k)$, and expanding,
+\begin{equation*}
+(x_2-x_1)(y_3-y_1)-(y_2-y_1)(x_3-x_1)=(x_2y_3-x_3y_2)+(x_3y_1-x_1y_3)+(x_1y_2-x_2y_1),
+\end{equation*}
+the same three-term expression as $D$. So $\mathrm{cross}(\dots)\cdot u_1u_2u_3=\Sigma$ by the computation in the proof
+of Lemma~\ref{ec:lem:det-mul}, and the sign argument of Lemma~\ref{ec:lem:polar-u} applies.
+\end{proof}
+
+\begin{proposition}[layered configurations; \leanref{C7.orient_layered}{ES8SYM/lean/PolarOrient.lean:68}]\label{ec:prop:layered}
+Let $\iota$ be a type, $t\in\N$, $L:\iota\to\mathrm{Fin}\,t$, $\varphi:\iota\to\R$, and $u:\mathrm{Fin}\,t\to\R$ with
+$u(o)>0$ for every $o$. Then for all $i,j,k\in\iota$ \textup{(}not necessarily distinct\textup{)}:
+\begin{equation*}
+\operatorname{sign}\mathrm{cross}\bigl(\mathrm{pt}(\varphi_i,u(L(i))),\mathrm{pt}(\varphi_j,u(L(j))),\mathrm{pt}(\varphi_k,u(L(k)))\bigr)
+=\operatorname{sign}\sum_{o\in\mathrm{Fin}\,t}\mathrm{coef}_{L,\varphi}(i,j,k)_o\,u(o).
+\end{equation*}
+\end{proposition}
+
+\begin{proof}
+For $a\in\mathrm{Fin}\,t$ and $v\in\R$, $\sum_o(v\,e_a)_o\,u(o)=v\,u(a)$, and the sum is linear in the coefficient
+vector, so
+\begin{equation*}
+\sum_o\mathrm{coef}_{L,\varphi}(i,j,k)_o\,u(o)=u(L(i))\sin(\varphi_k-\varphi_j)+u(L(j))\sin(\varphi_i-\varphi_k)
++u(L(k))\sin(\varphi_j-\varphi_i),
+\end{equation*}
+also when some of $L(i),L(j),L(k)$ coincide. This is $\Sigma$ for $(\varphi_1,\varphi_2,\varphi_3)=(\varphi_i,\varphi_j,\varphi_k)$
+and $(u_1,u_2,u_3)=(u(L(i)),u(L(j)),u(L(k)))$, all positive; apply Lemma~\ref{ec:lem:polar-cross}.
+\end{proof}
+
+\begin{corollary}[scaling; \leanref{C7.orient_layered_scale}{ES8SYM/lean/PolarOrient.lean:80}]\label{ec:cor:scale}
+In the setting of Proposition~\ref{ec:prop:layered}, let $\lambda\in\R$ with $\lambda>0$. Then for all $i,j,k\in\iota$,
+\begin{multline*}
+\operatorname{sign}\mathrm{cross}\bigl(\mathrm{pt}(\varphi_i,\lambda u(L(i))),\mathrm{pt}(\varphi_j,\lambda u(L(j))),\mathrm{pt}(\varphi_k,\lambda u(L(k)))\bigr)\\
+=\operatorname{sign}\mathrm{cross}\bigl(\mathrm{pt}(\varphi_i,u(L(i))),\mathrm{pt}(\varphi_j,u(L(j))),\mathrm{pt}(\varphi_k,u(L(k)))\bigr).
+\end{multline*}
+\end{corollary}
+
+\begin{proof}
+The function $o\mapsto\lambda u(o)$ is positive, so Proposition~\ref{ec:prop:layered} applies to it and to $u$. With
+$c_o=\mathrm{coef}_{L,\varphi}(i,j,k)_o$, the left side is
+$\operatorname{sign}\sum_oc_o\lambda u(o)=\operatorname{sign}\bigl(\lambda\sum_oc_ou(o)\bigr)=\operatorname{sign}\sum_oc_ou(o)$,
+which is the right side. (Directly: $\mathrm{pt}(\varphi,\lambda u)=\lambda^{-1}\mathrm{pt}(\varphi,u)$ and
+$\mathrm{cross}$ is homogeneous of degree $2$.)
+\end{proof}
+
+\begin{lemma}[polygon vertices in inverse-radius form; \leanref{C7.ngonPt_eq_pt}{ES8SYM/lean/PolarOrient.lean:100}]\label{ec:lem:ngon-pt}
+Let $m,t\in\N$, $\theta,r:\mathrm{Fin}\,t\to\R$ with $r_o>0$ for every $o$, and $p\in\mathrm{Fin}\,t\times\mathrm{Fin}\,m$.
+Then $\mathrm{ngonPt}_{m,\theta,r}(p)=\mathrm{pt}\bigl(\mathrm{phase}_{m,\theta}(p),\,1/r_{p_1}\bigr)$, where $p_1$ is
+the first component of $p$.
+\end{lemma}
+
+\begin{proof}
+For $r_o\ne0$ and every real $\phi$, $\cos\phi/(1/r_o)=r_o\cos\phi$ and $\sin\phi/(1/r_o)=r_o\sin\phi$.
+\end{proof}
+
+\begin{theorem}[nested regular $m$-gons; \leanref{C7.nested_regular_orient}{ES8SYM/lean/PolarOrient.lean:108}]\label{ec:thm:nested}
+Let $m,t\in\N$ and $\theta,r:\mathrm{Fin}\,t\to\R$ with $r_o>0$ for every $o$. Then for all
+$a,b,c\in\mathrm{Fin}\,t\times\mathrm{Fin}\,m$:
+\begin{equation*}
+\operatorname{sign}\mathrm{cross}\bigl(\mathrm{ngonPt}_{m,\theta,r}(a),\mathrm{ngonPt}_{m,\theta,r}(b),\mathrm{ngonPt}_{m,\theta,r}(c)\bigr)
+=\operatorname{sign}\sum_{o\in\mathrm{Fin}\,t}\mathrm{coef}_{\pi_1,\mathrm{phase}_{m,\theta}}(a,b,c)_o\cdot\frac1{r_o},
+\end{equation*}
+where $\pi_1:\mathrm{Fin}\,t\times\mathrm{Fin}\,m\to\mathrm{Fin}\,t$ is the first projection \textup{(}Lean
+\lean{Prod.fst}\textup{)}. The coefficient vector depends only on $m$ and $\theta$, not on $r$.
+\end{theorem}
+
+\begin{proof}
+By Lemma~\ref{ec:lem:ngon-pt}, $\mathrm{ngonPt}_{m,\theta,r}(a)=\mathrm{pt}(\mathrm{phase}_{m,\theta}(a),u(\pi_1(a)))$
+with $u(o)=1/r_o>0$, and likewise for $b$ and $c$. Apply Proposition~\ref{ec:prop:layered} with
+$\iota=\mathrm{Fin}\,t\times\mathrm{Fin}\,m$, $L=\pi_1$, $\varphi=\mathrm{phase}_{m,\theta}$ and this $u$.
+\end{proof}
+
+\begin{lemma}[triples with the centre; \leanref{C7.orient_centre}{ES8SYM/lean/PolarOrient.lean:116}]\label{ec:lem:centre-u}
+For all real $\varphi_1,\varphi_2,u_1,u_2$ with $u_1>0$ and $u_2>0$:
+$\operatorname{sign}\mathrm{cross}\bigl(\mathrm{pt}(\varphi_1,u_1),\mathrm{pt}(\varphi_2,u_2),(0,0)\bigr)=\operatorname{sign}\sin(\varphi_2-\varphi_1)$.
+\end{lemma}
+
+\begin{proof}
+With $x_k,y_k$ as before, $\mathrm{cross}((x_1,y_1),(x_2,y_2),(0,0))=(x_2-x_1)(-y_1)-(y_2-y_1)(-x_1)=x_1y_2-x_2y_1
+=\sin(\varphi_2-\varphi_1)/(u_1u_2)$. Multiply by $u_1u_2>0$ and argue as in Lemma~\ref{ec:lem:polar-u}.
+\end{proof}
+
+\begin{remark}[scope of the polar lemmas]\label{ec:rem:polar}
+(i) If $\hat p$ denotes the point with coordinates $\hat p_0=p_1$, $\hat p_1=p_2$, then
+$\mathrm{cross}(p,q,r)=\orient(\hat p,\hat q,\hat r)$ by the formulas (Definition~\ref{fd:def:orient}), so a positive
+value means counterclockwise; Lean has no link between \lean{C7.cross} and \lean{ErdosSzekeres.orient}. By the
+expansions in the proofs of Lemmas~\ref{ec:lem:det-mul} and~\ref{ec:lem:polar-cross}, $\mathrm{cross}(p,q,r)$ is
+the determinant of the matrix with rows $(p_1,p_2,1)$, $(q_1,q_2,1)$, $(r_1,r_2,1)$.
+(ii) Lemma~\ref{ec:lem:polar-u} is not the theorem \lean{orient_polar} of \dirn{LAYERLEAN/LayerLemma.lean:935}
+(Lemma~\ref{lg:lem:polar}), which is a radius form about a centre $c$:
+$\orient(\mathrm{polar}(c,r_a,\alpha),\mathrm{polar}(c,r_b,\beta),\mathrm{polar}(c,r_d,\delta))=r_ar_b\sin(\beta-\alpha)
++r_br_d\sin(\delta-\beta)+r_dr_a\sin(\alpha-\delta)$, where $\mathrm{polar}(c,r,\alpha)=(c_0+r\cos\alpha,\,c_1+r\sin\alpha)$.
+For $u\ne0$ the point $\mathrm{pt}(\varphi,u)$ corresponds as in (i) to $\mathrm{polar}(0,1/u,\varphi)$, and for
+$r_a=1/u_1$, $r_b=1/u_2$, $r_d=1/u_3$ this right side times $u_1u_2u_3$ is $\Sigma$ with
+$(\varphi_1,\varphi_2,\varphi_3)=(\alpha,\beta,\delta)$, so the two agree in substance,
+but they are distinct declarations; the name \lean{orient_polar} in \dirn{WRITEUP/P1/p1.tex} and
+\dirn{WRITEUP/note/k8_soundness.tex} refers to the radius form.
+(iii) Theorem~\ref{ec:thm:nested} assumes only $r_o>0$: no nesting, no order of the radii, no distinctness of the
+points and no general position. It says that for fixed phases every orientation sign is the sign of a linear form in
+$(1/r_o)_o$ whose coefficients depend only on $\theta$ and $m$; Corollary~\ref{ec:cor:scale} adds that the signs do
+not change when all inverse radii are multiplied by the same $\lambda>0$. Lemma~\ref{ec:lem:centre-u} treats triples
+that contain the centre $(0,0)$, which have no finite inverse radius. The further statement of
+\dirn{ES8SYM/proofs/layers.md} (lines 26--27) that for fixed phases the order type is constant on the cells of a
+central hyperplane arrangement is not formalized as such.
+\end{remark}
+
+%---------------------------------------------------------------------------------------------------------------------
+\subsection{Size compatibility in a group with zero}\label{ec:ssec:compat}
+
+The source is \dirn{PRIMEFOLD/compat/lean/PCompatCore.lean} (namespace \lean{PCompat}). Here the plane is replaced
+by an arbitrary commutative group with zero $K$ (Mathlib \lean{CommGroupWithZero}: a commutative monoid with zero in
+which $0\ne1$, with an inverse map such that $aa^{-1}=1$ for every $a\ne0$ and $0^{-1}=0$; the structure also carries a
+division and integer powers, which are not used here), with decidable equality (Lean needs it to form finite sets by
+image, difference, erasure and insertion, and for the test $0\in S$ in Theorem~\ref{ec:thm:compat}(b); mathematically
+it is no restriction). In the application $K=\C$, the centre is $0$ and the rotation is
+$z\mapsto\zeta z$; a rotation about another centre reduces to this by a translation. We use only these consequences of
+the axioms: $0\cdot a=0$; if $a\ne0$ and $ab=ac$, then $b=c$ (multiply by $a^{-1}$); if $a\ne0$ and $b\ne0$, then
+$ab\ne0$ (otherwise $b=a^{-1}(ab)=0$); hence $a^j\ne0$ for $a\ne0$. For a finite $T\subseteq K$, ``$T$ is
+$\zeta$-invariant'' means $\zeta z\in T$ for every $z\in T$. We write $[P]$ for $1$ if $P$ holds and $0$ otherwise,
+and $N\bmod m$ for the remainder (Lean \texttt{N \% m}). The hypotheses on $m\in\N$, $\zeta\in K$ and $r:\N\to K$ are:
+\begin{itemize}
+\item[(O)] $0<m$, $\zeta^m=1$, and $\zeta^j\ne1$ for every $j$ with $0<j<m$ \ ($\zeta$ has exact order $m$);
+\item[(R0)] $r_i\ne0$ for every $i\in\N$;
+\item[(RD)] for all $i,i',j,j'\in\N$ with $j<m$ and $j'<m$: if $\zeta^jr_i=\zeta^{j'}r_{i'}$, then $i=i'$ \ (the
+  orbits of the $r_i$ are pairwise disjoint).
+\end{itemize}
+
+\begin{lemma}[powers; \leanref{PCompat.ne_zero_of_order}{PRIMEFOLD/compat/lean/PCompatCore.lean:36}, \leanref{PCompat.pow_inj_of_order}{PRIMEFOLD/compat/lean/PCompatCore.lean:43}, \leanref{PCompat.pow_mul_mem}{PRIMEFOLD/compat/lean/PCompatCore.lean:58}]\label{ec:lem:pc-basic}
+Let $K$ be a commutative group with zero, $m\in\N$ and $\zeta\in K$.
+\begin{enumerate}[label=(\alph*)]
+\item If $0<m$ and $\zeta^m=1$, then $\zeta\ne0$.
+\item If \textup{(O)} holds, $i<m$, $j<m$ and $\zeta^i=\zeta^j$, then $i=j$.
+\item If $T\subseteq K$ is finite and $\zeta$-invariant and $z\in T$, then $\zeta^jz\in T$ for every $j\in\N$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) If $\zeta=0$, then $\zeta^m=0$ since $m>0$, so $0=1$, which is false in $K$.
+(b) By (a), $\zeta\ne0$. Suppose $i<j$. Then $\zeta^i\zeta^{j-i}=\zeta^j=\zeta^i=\zeta^i\cdot1$, and $\zeta^i\ne0$, so
+$\zeta^{j-i}=1$ with $0<j-i<m$, contradicting (O). The case $j<i$ is symmetric. Hence $i=j$.
+(c) Induction on $j$: $\zeta^0z=z\in T$, and $\zeta^{j+1}z=\zeta(\zeta^jz)\in T$ by invariance.
+\end{proof}
+
+\begin{lemma}[the converse constructions; \leanref{PCompat.exists_card0}{PRIMEFOLD/compat/lean/PCompatCore.lean:129}, \leanref{PCompat.exists_card1}{PRIMEFOLD/compat/lean/PCompatCore.lean:160}]\label{ec:lem:pc-exist}
+Let $K$ be a commutative group with zero, $m\in\N$, $\zeta\in K$ and $r:\N\to K$, and assume \textup{(O)},
+\textup{(R0)} and \textup{(RD)}. Then for every $t\in\N$:
+\begin{enumerate}[label=(\alph*)]
+\item there is a finite $\zeta$-invariant $S\subseteq K$ with $0\notin S$ and $\card S=mt$;
+\item there is a finite $\zeta$-invariant $S\subseteq K$ with $\card S=mt+1$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) Let $P=\{0,\dots,m-1\}\times\{0,\dots,t-1\}$ and $S=\{\zeta^jr_i:(j,i)\in P\}$. \emph{Invariance:} for $(j,i)\in
+P$, if $j+1<m$ then $\zeta\cdot\zeta^jr_i=\zeta^{j+1}r_i$ with $(j+1,i)\in P$; if $j+1=m$ then
+$\zeta\cdot\zeta^jr_i=\zeta^mr_i=r_i=\zeta^0r_i$ with $(0,i)\in P$ (as $0<m$). \emph{$0\notin S$:} $\zeta\ne0$ by
+Lemma~\ref{ec:lem:pc-basic}(a), so $\zeta^j\ne0$, and $r_i\ne0$ by (R0), so $\zeta^jr_i\ne0$. \emph{Cardinality:} the
+map $(j,i)\mapsto\zeta^jr_i$ is injective on $P$: if $\zeta^jr_i=\zeta^{j'}r_{i'}$ with $(j,i),(j',i')\in P$, then
+$i=i'$ by (RD), then $\zeta^j=\zeta^{j'}$ by cancelling $r_i\ne0$, then $j=j'$ by Lemma~\ref{ec:lem:pc-basic}(b). Hence
+$\card S=\card P=mt$.
+
+(b) Take $S$ from (a) and $S'=S\cup\{0\}$. It is $\zeta$-invariant ($\zeta\cdot0=0$), and $\card{S'}=mt+1$ because
+$0\notin S$.
+\end{proof}
+
+\begin{definition}[size condition; \leanref{PCompat.Compat}{PRIMEFOLD/compat/lean/PCompatCore.lean:205}]\label{ec:def:compat}
+For $m,N\in\N$, $\mathrm{Compat}(m,N)$ means: $N\bmod m=0$ or $N\bmod m=1\bmod m$. (For every $m\ge1$ this is the
+same condition as $N\bmod m\in\{0,1\}$: for $m\ge2$, $1\bmod m=1$, and for $m=1$ both conditions hold, since
+$N\bmod1=0$. The form $1\bmod m$ matches the right side of Theorem~\ref{ec:thm:compat}(b). For $m=0$, Lean's
+convention $N\bmod0=N$ applies, but $m=0$ is not used.)
+\end{definition}
+
+\begin{proposition}[parity; \leanref{PCompat.compat_even}{PRIMEFOLD/compat/lean/PCompatCore.lean:208}, \leanref{PCompat.compat_odd}{PRIMEFOLD/compat/lean/PCompatCore.lean:235}]\label{ec:prop:parity}
+Both parts are statements about natural numbers.
+\begin{enumerate}[label=(\alph*)]
+\item For every even $m\in\N$ with $2\le m$: $\mathrm{Compat}(m,2^{m-1})$ holds if and only if $m=2^a$ for some
+  $a\ge1$.
+\item For every odd $m\in\N$ with $3\le m$: $\mathrm{Compat}(m,2^{m-1})$ holds if and only if $2^{m-1}\bmod m=1$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+We use the standard fact (unique factorization; Mathlib \lean{Nat.dvd_prime_pow}) that the divisors of $2^n$ are
+exactly $2^0,2^1,\dots,2^n$. In both parts $m\ge2$, so $1\bmod m=1$ and $\mathrm{Compat}(m,2^{m-1})$ says
+$2^{m-1}\bmod m\in\{0,1\}$.
+
+(a) Suppose $2^{m-1}\bmod m=0$. Then $m\mid2^{m-1}$, so $m=2^a$ with $a\le m-1$, and $a\ne0$ because $m\ge2$. Suppose
+$2^{m-1}\bmod m=1$. Write $2^{m-1}=qm+1$; since $2\mid m$, $2^{m-1}$ is odd. But $m-1\ge1$, so $2^{m-1}$ is even, a
+contradiction. Conversely, let $m=2^a$ with $a\ge1$. Since $a<2^a=m$, we have $a\le m-1$, so $m=2^a\mid2^{m-1}$ and
+$2^{m-1}\bmod m=0$.
+
+(b) Suppose $2^{m-1}\bmod m=0$. Then $m=2^a$ for some $a$; $a=0$ gives $m=1<3$, and $a\ge1$ makes $m$ even; both are
+impossible. So $\mathrm{Compat}(m,2^{m-1})$ holds exactly when $2^{m-1}\bmod m=1$.
+\end{proof}
+
+\begin{theorem}[compatibility; \leanref{PCompat.dvd_card}{PRIMEFOLD/compat/lean/PCompatCore.lean:67}, \leanref{PCompat.card_mod}{PRIMEFOLD/compat/lean/PCompatCore.lean:112}, \leanref{PCompat.exists_iff}{PRIMEFOLD/compat/lean/PCompatCore.lean:174}, \leanref{PCompat.classification}{PRIMEFOLD/compat/lean/PCompatCore.lean:253}]\label{ec:thm:compat}
+Let $m\in\N$, and in \textup{(a)}--\textup{(c)} let $K$ be a commutative group with zero and $\zeta\in K$.
+\begin{enumerate}[label=(\alph*)]
+\item \textup{(\lean{dvd_card})} If \textup{(O)} holds, then every finite $\zeta$-invariant $T\subseteq K$ with
+  $0\notin T$ satisfies $m\mid\card T$.
+\item \textup{(\lean{card_mod})} If \textup{(O)} holds, then every finite $\zeta$-invariant $S\subseteq K$ satisfies
+  $\card S\bmod m=[0\in S]\bmod m$.
+\item \textup{(\lean{exists_iff})} Let $r:\N\to K$. If \textup{(O)}, \textup{(R0)} and \textup{(RD)} hold, then for
+  every $N\in\N$: there is a finite $\zeta$-invariant $S\subseteq K$ with $\card S=N$ if and only if $N\bmod m=0$ or
+  $N\bmod m=1\bmod m$ \textup{(}that is, $\mathrm{Compat}(m,N)$\textup{)}.
+\item \textup{(\lean{classification}; this part does not involve $K$ and $\zeta$)} If $1\le m$, then
+  $\mathrm{Compat}(m,2^{m-1})$ holds if and only if $m=1$, or $m=2^a$ for some $a\ge1$, or \textup{(}$m$ is odd,
+  $3\le m$ and $2^{m-1}\bmod m=1$\textup{)}.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+We follow the Lean proofs.
+
+(a) By Lemma~\ref{ec:lem:pc-basic}(a), $\zeta\ne0$. We use strong induction on $\card T$. If $T=\emptyset$, then
+$m\mid0$. Otherwise pick $z\in T$; $z\ne0$ because $0\notin T$. Let $O=\{\zeta^jz:0\le j<m\}$. By
+Lemma~\ref{ec:lem:pc-basic}(c), $O\subseteq T$. The map $j\mapsto\zeta^jz$ is injective on $\{0,\dots,m-1\}$: if
+$\zeta^iz=\zeta^jz$, then $\zeta^i=\zeta^j$ (cancel $z\ne0$) and $i=j$ by Lemma~\ref{ec:lem:pc-basic}(b). So
+$\card O=m$, and $\card T=\card{T\setminus O}+m$. The set $T\setminus O$ omits $0$ and is $\zeta$-invariant: let
+$w\in T\setminus O$; then $\zeta w\in T$. Suppose $\zeta w\in O$, say $\zeta w=\zeta^jz$ with $j<m$. If $j=0$, then
+$\zeta^{m-1}z=\zeta^{m-1}\zeta w=\zeta^mw=w$, so $w\in O$ (as $m-1<m$). If $j\ge1$, then
+$\zeta w=\zeta\cdot\zeta^{j-1}z$, so $w=\zeta^{j-1}z\in O$ (cancel $\zeta\ne0$). Both contradict $w\notin O$, so
+$\zeta w\in T\setminus O$. Since $z\in O$, $\card{T\setminus O}<\card T$, and the induction hypothesis gives
+$m\mid\card{T\setminus O}$. Hence $m\mid\card T$.
+
+(b) Let $T_0=S\setminus\{0\}$. Then $0\notin T_0$, and $T_0$ is $\zeta$-invariant: for $z\in T_0$, $\zeta z\in S$ and
+$\zeta z\ne0$ since $\zeta\ne0$ and $z\ne0$. By (a), $\card{T_0}=mt$ for some $t$. If $0\in S$, then $\card S=mt+1$
+and $\card S\bmod m=1\bmod m=[0\in S]\bmod m$. If $0\notin S$, then $S=T_0$ and $\card S\bmod m=0=[0\in S]\bmod m$.
+
+(c) ($\Rightarrow$) Let $S$ be finite, $\zeta$-invariant, with $\card S=N$. By (b), $N\bmod m=1\bmod m$ if $0\in S$,
+and $N\bmod m=0\bmod m=0$ if $0\notin S$. ($\Leftarrow$) Write $N=m\lfloor N/m\rfloor+(N\bmod m)$. If $N\bmod m=0$,
+Lemma~\ref{ec:lem:pc-exist}(a) with $t=\lfloor N/m\rfloor$ gives a $\zeta$-invariant $S$ with $\card S=N$. Otherwise
+$N\bmod m=1\bmod m$. Then $m\ne1$ (for $m=1$ every remainder is $0$), so $m>1$, $1\bmod m=1$, $N=m\lfloor N/m\rfloor+1$,
+and Lemma~\ref{ec:lem:pc-exist}(b) with $t=\lfloor N/m\rfloor$ gives the set.
+
+(d) If $m$ is even, then $m\ge2$, and by Proposition~\ref{ec:prop:parity}(a) $\mathrm{Compat}(m,2^{m-1})$ holds iff
+$m=2^a$ with $a\ge1$; the other two alternatives of the right side are false for even $m$. If $m$ is odd, then $m=1$ or
+$m\ge3$. For $m=1$ both sides hold: $2^0\bmod1=0$, and $m=1$. For odd $m\ge3$, by Proposition~\ref{ec:prop:parity}(b)
+the left side holds iff $2^{m-1}\bmod m=1$; on the right side $m=1$ is false and $m=2^a$ with $a\ge1$ is impossible
+($m$ is odd), so the right side holds iff $2^{m-1}\bmod m=1$.
+\end{proof}
+
+\begin{proposition}[$m=341$; computer-assisted in Lean; written proof by hand; \leanref{PCompat.ex341}{PRIMEFOLD/compat/lean/PCompatCore.lean:277}]\label{ec:prop:ex341}
+$\mathrm{Compat}(341,2^{341-1})$; $341=11\cdot31$; $341$ is not prime; $2^{10}\bmod11=1$; $2^{10}\bmod31=1$;
+$2^{10}\bmod341=1$.
+\end{proposition}
+
+\begin{proof}
+This is a finite computation with closed numerals. Lean checks the five numerical claims by kernel evaluation
+(\lean{decide}, with \lean{exponentiation.threshold} raised to $400$; no \lean{native_decide}) and non-primality by
+Mathlib's \lean{Nat.not_prime_mul} with $11\ne1$ and $31\ne1$; the log lists only \lean{propext}. The computation is
+small enough to do by hand, as follows. $11\cdot31=341$, and $11$ is a divisor with
+$1<11<341$, so $341$ is not prime. Further $2^{10}=1024=93\cdot11+1=33\cdot31+1=3\cdot341+1$, which gives the three
+remainders. Finally $2^{340}=(2^{10})^{34}\equiv1^{34}=1\pmod{341}$, so $2^{340}\bmod341=1=1\bmod341$ and
+$\mathrm{Compat}(341,2^{340})$ holds by its second alternative.
+\end{proof}
+
+\begin{remark}[what is and is not formalized]\label{ec:rem:compat}
+(i) For $K=\C$ and $\zeta=\zeta_m=e^{2\pi i/m}$ with $m\ge1$, (O) holds by Lemma~\ref{ec:lem:zeta} and
+Fact~\ref{ec:fact:prim}(iv). (ii) In Theorem~\ref{ec:thm:compat}(c) the hypotheses (R0) and (RD) on $r$ are not
+discharged in Lean for $\C$. They hold for $K=\C$, $\zeta=\zeta_m$ and $r_i=i+1$ (a written step): (R0) is clear, and
+$\abs{\zeta_m^jr_i}=\abs{\zeta_m}^j(i+1)=i+1$ by Fact~\ref{ec:fact:prim}(ii), so $\zeta_m^jr_i=\zeta_m^{j'}r_{i'}$ forces
+$i+1=i'+1$. The sets of Lemma~\ref{ec:lem:pc-exist} need not be in general position (for $m=2$ and $r_i=i+1$ they lie
+on the real axis); the existence of size-compatible sets in general position
+(\dirn{WRITEUP/note/symmetric_extremal.tex}, the proposition labelled \texttt{prop:compat}) is not formalized.
+(iii) Fermat's little theorem is not formalized: the third alternative of Theorem~\ref{ec:thm:compat}(d) is the
+arithmetic condition $2^{m-1}\bmod m=1$; by Fermat's little theorem it holds for every odd prime $m$, and for odd
+composite $m$ it says that $m$ is a base-$2$ Fermat pseudoprime, as for $m=341$.
+\end{remark}
+
+%---------------------------------------------------------------------------------------------------------------------
+\subsection{Symmetric sets of \texorpdfstring{$2^{m-1}$}{2\^{}(m-1)} points}\label{ec:ssec:l0}
+
+The source is \dirn{PRIMEFOLD/compat/lean/L0Check.lean} (namespace \lean{L0Check}), an independent check of Lemma~0
+of \dirn{PRIMEFOLD/cluster/PROOFS.md}. The plane is $\C$, the centre is $0$, and the rotation by $2\pi/m$ is
+multiplication by a primitive $m$-th root of unity. Mathlib's base-$2$ Fermat pseudoprimes are defined by
+\begin{equation*}
+\mathrm{FermatPsp}(m,2)\iff m\mid2^{m-1}-1,\ m\text{ is not prime, and }1<m
+\end{equation*}
+(\lean{Nat.FermatPsp}, with natural subtraction; $2^{m-1}\ge1$, so $2^{m-1}-1$ is the usual difference).
+
+\begin{lemma}[arithmetic core; \leanref{L0Check.arith}{PRIMEFOLD/compat/lean/L0Check.lean:21}]\label{ec:lem:arith}
+Let $m,t,e\in\N$ with $2\le m$, $e\le1$ and $mt+e=2^{m-1}$. Then either \textup{(}$m$ is odd, $e=1$, and $m$ is prime
+or $\mathrm{FermatPsp}(m,2)$\textup{)}, or \textup{(}$e=0$ and $m=2^j$ for some $j\in\N$\textup{)}.
+\end{lemma}
+
+\begin{proof}
+\emph{$m$ even.} Then $mt$ is even, and $2^{m-1}$ is even because $m-1\ge1$. Hence $e=2^{m-1}-mt$ is even, and $e\le1$
+gives $e=0$. Then $mt=2^{m-1}$, so $m\mid2^{m-1}$ and $m=2^j$ for some $j$ (the divisors of $2^n$ are powers of $2$).
+The second alternative holds.
+
+\emph{$m$ odd.} If $e\ne1$, then $e=0$, $m\mid2^{m-1}$ and $m=2^j$; $j=0$ gives $m=1<2$, and $j\ge1$ makes $m$ even;
+both are impossible. So $e=1$ and $mt+1=2^{m-1}$, hence $m\mid mt=2^{m-1}-1$. If $m$ is prime, the first
+alternative holds; otherwise $m\mid2^{m-1}-1$, $m$ is not prime and $1<m$, which is $\mathrm{FermatPsp}(m,2)$.
+\end{proof}
+
+\begin{lemma}[orbit counting in $\C$; \leanref{L0Check.orbit_dvd}{PRIMEFOLD/compat/lean/L0Check.lean:60}]\label{ec:lem:orbit-dvd}
+Let $m\in\N$ with $0<m$, and let $\zeta\in\C$ be a primitive $m$-th root of unity. Then every finite $T\subseteq\C$
+with $0\notin T$ and $\zeta z\in T$ for all $z\in T$ satisfies $m\mid\card T$.
+\end{lemma}
+
+\begin{proof}
+$\C$ is a commutative group with zero, $\zeta^m=1$, and $\zeta^j\ne1$ for $0<j<m$ by Fact~\ref{ec:fact:prim}(iv); so
+(O) holds and Theorem~\ref{ec:thm:compat}(a) applies. (The Lean file proves this statement again, independently, by
+the same strong induction, using Mathlib's \lean{IsPrimitiveRoot.pow_inj} for the size of an orbit.)
+\end{proof}
+
+\begin{theorem}[sets of $2^{m-1}$ points; \leanref{L0Check.L0}{PRIMEFOLD/compat/lean/L0Check.lean:122}, \leanref{L0Check.L0_rot}{PRIMEFOLD/compat/lean/L0Check.lean:144}]\label{ec:thm:l0}
+Let $m\in\N$ with $2\le m$.
+\begin{enumerate}[label=(\alph*)]
+\item \textup{(\lean{L0})} Let $\zeta\in\C$ be a primitive $m$-th root of unity, and let $S\subseteq\C$ be finite with
+  $\zeta z\in S$ for all $z\in S$ and $\card S=2^{m-1}$. Then either \textup{(}$m$ is odd, $0\in S$, and $m$ is prime
+  or $\mathrm{FermatPsp}(m,2)$\textup{)}, or \textup{(}$0\notin S$ and $m=2^j$ for some $j\in\N$\textup{)}.
+\item \textup{(\lean{L0_rot})} Let $S\subseteq\C$ be finite with $\exp(2\pi i/m)\,z\in S$ for all $z\in S$ and
+  $\card S=2^{m-1}$. Then the same conclusion holds.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(a) By Fact~\ref{ec:fact:prim}(i), $\zeta\ne0$. The set $T=S\setminus\{0\}$ omits $0$ and is invariant: for $z\in T$,
+$\zeta z\in S$ and $\zeta z\ne0$. By Lemma~\ref{ec:lem:orbit-dvd}, $\card T=mt$ for some $t\in\N$. If $0\in S$, then
+$mt+1=\card S=2^{m-1}$, and Lemma~\ref{ec:lem:arith} with $e=1$ gives the first alternative of the lemma (the second
+needs $e=0$); together with $0\in S$ this is the first alternative of the theorem. If $0\notin S$, then $T=S$ and
+$mt+0=2^{m-1}$; Lemma~\ref{ec:lem:arith} with $e=0$ excludes its first alternative (which needs $e=1$), so $m=2^j$ for
+some $j$, and with $0\notin S$ this is the second alternative of the theorem.
+
+(b) $\exp(2\pi i/m)=\zeta_m$ is a primitive $m$-th root of unity by Lemma~\ref{ec:lem:zeta} ($m\ge2>0$); apply (a).
+\end{proof}
+
+\begin{remark}[on the hypotheses]\label{ec:rem:l0}
+No general-position or convexity hypothesis is assumed. For even $m$ the centre is excluded by parity, as in the proof
+of Lemma~\ref{ec:lem:arith}: $\card S=2^{m-1}$ is even and $\card{S\setminus\{0\}}$ is a multiple of $m$. (Lemma~0 of
+\dirn{PRIMEFOLD/cluster/PROOFS.md} excludes the centre by general position instead; the Lean statement does not
+need it.) For odd $m$ the theorem only says that $m$ is prime or a base-$2$ Fermat pseudoprime; that every odd prime
+actually satisfies $2^{m-1}\equiv1\pmod m$ is Fermat's little theorem, which is not used and not formalized here. For
+a rotation about a centre $c\ne0$, translate by $-c$ first. For $k=8$, i.e.\ $m=7$ and $2^{m-1}=64=7\cdot9+1$: a
+finite $S\subseteq\C$ with $e^{2\pi i/7}S\subseteq S$ and $\card S=64$ contains $0$, by part (b), since $7$ is odd and
+not a power of $2$.
+\end{remark}
+
+%---------------------------------------------------------------------------------------------------------------------
+\paragraph{Coverage.} Covered, by label:
+\begin{itemize}
+\item \dirn{LEANEXT/es7corr/ES7Corollaries.lean}, Section~11: \lean{Fivefold35} and \lean{Fourfold32}
+  (Definition~\ref{ec:def:cases}); \lean{fivefold_heptagon_of_erase} (Theorem~\ref{ec:thm:fivefold-erase});
+  \lean{fivefold_heptagon} (Theorem~\ref{ec:thm:fivefold}); \lean{fivefold_heptagon_of_centre_not_mem}
+  (Theorem~\ref{ec:thm:fivefold-nc}); \lean{fourfold_heptagon_of_erase} (Theorem~\ref{ec:thm:fourfold-erase});
+  \lean{fourfold_heptagon} (Theorem~\ref{ec:thm:fourfold}). The three fivefold theorems are conditional on
+  \lean{Fivefold35}, the two fourfold theorems on \lean{Fourfold32}.
+\item \dirn{ES8SYM/lean/C6check.lean}: \lean{sphere_subset_extremePoints} (Lemma~\ref{ec:lem:sphere});
+  \lean{convexIndependent_of_norm_eq} (Lemma~\ref{ec:lem:ci-circle}); \lean{zeta} (Definition~\ref{ec:def:zeta});
+  \lean{zeta_prim} (Lemma~\ref{ec:lem:zeta}); \lean{orbit_injective} and \lean{orbit_convexIndependent}
+  (Lemma~\ref{ec:lem:orbit8}); \lean{part_a} (Theorem~\ref{ec:thm:big-order}); \lean{thr_m4}--\lean{thr_m7} and
+  \lean{m4_with_centre_counter} (Proposition~\ref{ec:prop:thr}).
+\item \dirn{ES8SYM/lean/PolarOrient.lean}: \lean{cross}, \lean{pt}, \lean{coef}, \lean{phase}, \lean{ngonPt}
+  (Definition~\ref{ec:def:polar}); \lean{det_mul_eq} (Lemma~\ref{ec:lem:det-mul}); \lean{orient_polar}
+  (Lemma~\ref{ec:lem:polar-u}); \lean{orient_polar_cross} (Lemma~\ref{ec:lem:polar-cross}); \lean{orient_layered}
+  (Proposition~\ref{ec:prop:layered}); \lean{orient_layered_scale} (Corollary~\ref{ec:cor:scale});
+  \lean{ngonPt_eq_pt} (Lemma~\ref{ec:lem:ngon-pt}); \lean{nested_regular_orient} (Theorem~\ref{ec:thm:nested});
+  \lean{orient_centre} (Lemma~\ref{ec:lem:centre-u}).
+\item \dirn{PRIMEFOLD/compat/lean/PCompatCore.lean}: \lean{ne_zero_of_order}, \lean{pow_inj_of_order},
+  \lean{pow_mul_mem} (Lemma~\ref{ec:lem:pc-basic}); \lean{exists_card0}, \lean{exists_card1}
+  (Lemma~\ref{ec:lem:pc-exist}); \lean{Compat} (Definition~\ref{ec:def:compat}); \lean{compat_even},
+  \lean{compat_odd} (Proposition~\ref{ec:prop:parity}); \lean{dvd_card}, \lean{card_mod}, \lean{exists_iff},
+  \lean{classification} (Theorem~\ref{ec:thm:compat}); \lean{ex341} (Proposition~\ref{ec:prop:ex341}, a finite
+  computation).
+\item \dirn{PRIMEFOLD/compat/lean/L0Check.lean}: \lean{arith} (Lemma~\ref{ec:lem:arith}); \lean{orbit_dvd}
+  (Lemma~\ref{ec:lem:orbit-dvd}); \lean{L0}, \lean{L0_rot} (Theorem~\ref{ec:thm:l0}).
+\end{itemize}
+Not covered, deliberately: lines 1--1147 of \dirn{LEANEXT/es7corr/ES7Corollaries.lean} (outside the scope of this
+section), a verbatim copy of lines 1--1147 of \dirn{LAYERLEAN/LayerLemma.lean}, which belongs to the layer-lemma
+sections (we use Theorem~\ref{ll:thm:reduction} and Lemma~\ref{lg:lem:centre} from there); the \texttt{\#print axioms}
+commands at the ends of the four other files (\dirn{ES8SYM/lean/C6check.lean}, lines 119--123;
+\dirn{ES8SYM/lean/PolarOrient.lean}, lines 127--132; \dirn{PRIMEFOLD/compat/lean/PCompatCore.lean}, lines 285--291;
+\dirn{PRIMEFOLD/compat/lean/L0Check.lean}, line 152), which produce the logs cited above and are not results. Out of
+scope for this section: the Lean files of \dirn{ES8SLACK} (\dirn{ES8SLACK/review/C6_early_vertex/EarlyVertex.lean},
+\dirn{ES8SLACK/review/C2_identity/Identity.lean}, and the two files that according to \dirn{ES8SLACK/README.md} have
+not been compiled, \dirn{ES8SLACK/review/C1_certificates/Composition311.lean} and
+\dirn{ES8SLACK/review/C3_residual/TemplateRowsC3.lean}); written proofs of the \dirn{ES8SLACK} lemmas are in
+\dirn{ES8SLACK/proofs.md}. Fact~\ref{ec:fact:prim}, Corollary~\ref{ec:cor:planar} and the example in
+Remark~\ref{ec:rem:compat}(ii) are written steps and not declarations of the five Lean files; only the Fact has Lean
+counterparts, the Mathlib lemmas named in its proof.
+\endgroup

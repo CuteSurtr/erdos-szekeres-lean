@@ -1,0 +1,25 @@
+U12_L4: 128 leaves; cover CNF with the last leaf dropped: cadical rc 10 (s SATISFIABLE)
+control: real U12_L4 manifest, real records
+  old: rc 0: cases 1 accepted 1 leaves verified 128 of 128
+  v2:  rc 0: cases 1 accepted 1 leaves verified 128 of 128
+A4 (a): leaf dropped + forged cover with the empty-cube note
+  old: rc 0: cases 1 accepted 1 leaves verified 127 of 127
+  v2:  rc 0: cases 1 accepted 0 leaves verified 127 of 127 | PROBLEM cover U12_L4: VERIFIED record rejected by v2: note 'the empty cube is a leaf' but the leaf list is not exactly [[]] (127 leaves) (nleaves 127)
+A4 (b): leaf dropped + forged cover cnf_sha256 0...0, cake_lpr ''
+  old: rc 0: cases 1 accepted 1 leaves verified 127 of 127
+  v2:  rc 0: cases 1 accepted 0 leaves verified 127 of 127 | PROBLEM cover U12_L4: VERIFIED record rejected by v2: cake_lpr '' (nleaves 127)
+extra (c): leaf dropped + forged cover with the right cnf_sha256 but cake_lpr ''
+  old: rc 0: cases 1 accepted 1 leaves verified 127 of 127
+  v2:  rc 0: cases 1 accepted 0 leaves verified 127 of 127 | PROBLEM cover U12_L4: VERIFIED record rejected by v2: cake_lpr '' (nleaves 127)
+extra (d): leaf dropped + forged cover with right sha and line but rc 10
+  old: rc 0: cases 1 accepted 1 leaves verified 127 of 127
+  v2:  rc 0: cases 1 accepted 0 leaves verified 127 of 127 | PROBLEM cover U12_L4: VERIFIED record rejected by v2: rc 10 (nleaves 127)
+extra (f): every record of leaf 0 of U12_L4 with cake_lpr '' (verdict still VERIFIED)
+  old: rc 0: cases 1 accepted 1 leaves verified 128 of 128
+  v2:  rc 0: cases 1 accepted 0 leaves verified 127 of 128 | PROBLEM leaf U12_L4 [-504, -1112, 1134, 1194, 1212, 1229, 1245]: no VERIFIED record with matching cnf_sha256, rc 20 and the exact line
+extra (f): every record of leaf 0 of U12_L4 with rc 10 (verdict still VERIFIED)
+  old: rc 0: cases 1 accepted 1 leaves verified 128 of 128
+  v2:  rc 0: cases 1 accepted 0 leaves verified 127 of 128 | PROBLEM leaf U12_L4 [-504, -1112, 1134, 1194, 1212, 1229, 1245]: no VERIFIED record with matching cnf_sha256, rc 20 and the exact line
+extra (g): F with one extra clause
+  old: rc 0: cases 1 accepted 0 leaves verified 0 of 128 | PROBLEM leaf U12_L4 [-504, -1112, 1134, 1194, 1212, 1229, 1245]: cnf_sha256 mismatch
+  v2:  rc 2: FATAL F sha256 df6d4ca6ae695ec1174054b8f8cd498c6e19469aa92479681ce1ac9f05dab4f4 is not 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d

@@ -1,0 +1,38 @@
+{
+  "status": "stopped_before_Lean_export",
+  "scope": "Conditional exact integer subtree replay and compression only; no new Lean theorem or global bound.",
+  "reason_stopped": "A32-hole assignment satisfies every frozen2469 row, so a global exclusion from that catalog is impossible.",
+  "source_uncompressed_sha256": "f03eebb1d20eae3bd25dbb5024eaacdfdcc5bcd8ed964d190bdfa59c73aeb909",
+  "external_inputs": {
+    "experiments/omission-residual32-research-2026-10-10/source.json.gz": "138a9fd6e3c773437411e9cca487153a221928e6d5d85d09b8d73e4919f5e8c3",
+    "experiments/omission-residual32-research-2026-10-10/pending-contexts.json": "723ad9f3cbe5474769ee87d7080f018bef8278d8b4939474378906919e22af9d",
+    "experiments/omission-residual32-resume-2026-10-10/check.py": "b3f33a623b12a1ba5985f8d8fa8f3d556501cec0704a21b20eae28e6f9810040",
+    "scripts/omission_tree_compact.py": "e70957a48b8e387d7a6ca00ac5c48c193b13d6ab656e670501eea05f048beebd",
+    "scripts/omission_lean_export.py": "af6df59bcab2e2ca68ff6d165314e16cf36a67ec6569da4251442b9c673c9f59",
+    "scripts/omission_row_probe.py": "70e1cf0ecea170079855469325f0e88203bc202f407000209d727bfad250adb9",
+    "experiments/omission-residual32-resume-2026-10-10/closed-context-485514.json.gz": "179314c427f54a95deb4e87eb67e726df361c028b56cc65d30a62d8abd70fba7",
+    "experiments/omission-residual32-resume-2026-10-10/closed-context-485512.json.gz": "0fae10af22a51655312485e3e19722beb32fc900cfdedd1ba1d20a8f872dcd20",
+    "experiments/omission-residual32-resume-2026-10-10/closed-context-485506.json.gz": "edc6f70e67948a5ed8e9351fae3f4b67a6f58c5554f7b44e9769153d2fb2a955",
+    "experiments/omission-residual32-resume-2026-10-10/closed-context-485509.json.gz": "1cb976ce6fccc8443d76ac37a6321706213aaa40c9abbea04b95b784602a821b",
+    "experiments/omission-residual32-resume-2026-10-10/closed-context-492350.json.gz": "eaae0614d3f88fcae9cbf1afd75ebcd5316bd94337add86d062b8809d6bd761c",
+    "experiments/omission-residual32-resume-2026-10-10/closed-context-485503.json.gz": "c93d7feb4f29813f46e1fd33fc45f9c557a658921ea79fa3c4c67f7d09d317f1",
+    "experiments/omission-residual32-resume-2026-10-10/closed-context-492346.json.gz": "e777bb64760d7a2c101ddc6bbb99a5beff4377bd1f5aaecd1bd9830e197034a7",
+    "experiments/omission-residual32-resume-2026-10-10/closed-context-492344.json.gz": "ca32e0ea11d90308e4fa9d477b946d35963ecab69eb4f1d529e2e08bb2f08961",
+    "experiments/omission-residual32-resume-2026-10-10/closed-context-11.json.gz": "e4352f20cd6c4f661d36a6a6a8ad1229c50fd0b81f352874a15b26b9cd3c7398",
+    "experiments/omission-residual32-resume-2026-10-10/closed-context-9.json.gz": "7908e0faa769a385cf6ce1c8218156aeb3d07e8967940ea5ef86fa44b25f928e"
+  },
+  "files": {
+    "compressed-context-11.json.gz": "3e07f945670764c240309f7532e3d135916bef86eb7fbae9af4632906a5b5110",
+    "compressed-context-485503.json.gz": "2f03b1469f739afe7dbe6c132bcebdafc33d493099aab2c64cfc0be47a2aa206",
+    "compressed-context-485506.json.gz": "cc4da00a2ebfe8315af6f30a788d7cb3fefb28585bd7751385ee5df466021538",
+    "compressed-context-485509.json.gz": "81bc03ec5ad6f554a0b381d74c6aeef8b052b370c0aabdf09203ca979f2003c5",
+    "compressed-context-485512.json.gz": "147e5b0dc55e1ee772f2efb94e00cf97b66b1185954b78862e134a70361f2b46",
+    "compressed-context-485514.json.gz": "e0295dcc91a714cd9ebae4cbee293f59de86c3e94299526796a706e7628f1228",
+    "compressed-context-492344.json.gz": "0a7068778db974cd66a5bfbc3616cc3ada59e58695a332699b000aa756bfce26",
+    "compressed-context-492346.json.gz": "e80ddd788d586b3aaf19add2aa72ac606aa016155c4aecf012474487d703e7ac",
+    "compressed-context-492350.json.gz": "90a9ddee1c20fd529dfb14d9c04c94fc86267113cd8b8a77cf0da7396478de91",
+    "compressed-context-9.json.gz": "b5e37dd8da4aa30070ba97200dd7f6b1f6e6557b19d3a10e0a0bd788883a7743",
+    "compression.json": "f87a2944ea3b0d8c4dfd76b2351c9633b95c66f263ed1deb328829485603893c",
+    "prepare.py": "40bc0df296d44d06e420a1c9a6202927f9217bdcdb21654c22d8db1ba7520c23"
+  }
+}

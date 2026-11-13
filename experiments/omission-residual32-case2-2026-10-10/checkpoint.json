@@ -1,0 +1,75 @@
+{
+  "scope": "Conditional context2 integer tree only, not global; occupied43and54 assumed",
+  "missing": [],
+  "occupied": [
+    43,
+    54
+  ],
+  "original_node": 2,
+  "original_tree_sha256": "46ec6b7d5f580c68f88affa2dd61f100862e05ca9fc05a86cded449d4a501050",
+  "reuse_closed": 18,
+  "reuse_pool_size": 512,
+  "optimized_capacity": true,
+  "source": ".cache/residual32-case2-2026-10-10/source.json",
+  "source_sha256": "f03eebb1d20eae3bd25dbb5024eaacdfdcc5bcd8ed964d190bdfa59c73aeb909",
+  "seed_tree": ".cache/residual32-case2-2026-10-10/seed.json",
+  "seed_tree_sha256": "9fa4bf5b41c738ceb39d6bca36cd26c244526e3551031ba0c858040cd54835d9",
+  "script_sha256": "88e3cd958b1f0218ba12932b15f46a0235c295738f1a446308a53d8e32c4cfcf",
+  "solver": "HiGHS 1.15.1",
+  "strategy": "pseudocost",
+  "maximum_weight_scale": 10000,
+  "strong_candidates": 4,
+  "strong_lookahead_depth": 8,
+  "hole_budget": 32,
+  "root": 0,
+  "initial_pending": 1,
+  "initial_nodes": 1,
+  "seconds": 124.7264069590019,
+  "processed_lp_nodes": 18351,
+  "new_exact_leaves": 9164,
+  "new_branches": 9177,
+  "forced_branches": 11,
+  "lp_resets": 0,
+  "lp_failures": {},
+  "leaf_scales": {
+    "256": 2567,
+    "100": 4354,
+    "1000": 1302,
+    "32": 524,
+    "10000": 390
+  },
+  "nodes_count": 18355,
+  "pending_count": 14,
+  "status": "unknown",
+  "complete": false,
+  "final": true,
+  "stop_reason": "Stopped gracefully after another root case supplied an exact 32-hole witness to the whole original catalog; no global exclusion possible for that catalog.",
+  "cache_tree": {
+    "path": ".cache/residual32-case2-2026-10-10/round1.json.gz",
+    "sha256": "83ca8f95a13bcd31d0bb56ab9cb2203e3438040b1848e3e478b913143aa8037d",
+    "bytes": 2589218,
+    "included_in_repository": false
+  },
+  "independent_replay": {
+    "nodes": 18355,
+    "leaves": 9178,
+    "pending": 14,
+    "complete": false,
+    "minimum_margin": 1,
+    "scope": "Conditional on occupied states 43 and 54 only; not a global obstruction",
+    "missing": [],
+    "occupied": [
+      43,
+      54
+    ]
+  },
+  "original_context": {
+    "missing": [],
+    "occupied": [
+      43,
+      54
+    ]
+  },
+  "global_claim": false,
+  "source_reference": "../omission-residual32-research-2026-10-10/source.json.gz"
+}

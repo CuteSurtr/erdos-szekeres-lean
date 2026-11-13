@@ -1,0 +1,37 @@
+{
+  "status": "kernel-checked",
+  "rows": 28,
+  "support_size": 13,
+  "demand": 1,
+  "roots": [
+    "ErdosSzekeres.Omission.CoupledTemplateFifth.context_impossible",
+    "ErdosSzekeres.Omission.CoupledTemplateFifth.hole_bound",
+    "ErdosSzekeres.Omission.CoupledTemplateFifth.check_sound",
+    "ErdosSzekeres.Omission.CoupledFifthVariants.checked",
+    "ErdosSzekeres.Omission.CoupledFifthVariants.all_rows"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "prerequisites_per_row": {
+    "empty_direction": 30,
+    "domain": 18,
+    "fixed_sign": 98
+  },
+  "scope": "All 28 supports are necessary for actual residual configurations. Complement-of-support independence against the frozen2427 rows is an exact Python diagnostic, not a Lean independence theorem. No numerical or asymptotic bound is asserted.",
+  "build": {
+    "command": "lake build ErdosSzekeres.Omission.CoupledFifthVariants --wfail",
+    "exit_code": 0
+  },
+  "sha256": {
+    "ErdosSzekeres/Omission/CoupledTemplateFifth.lean": "12ea677d162c3b404298d9ceb24db95800c7cb4f5612f199c6ea0869d554791e",
+    "ErdosSzekeres/Omission/CoupledTemplateFifthCheck.lean": "38cf84e34fb9e5e193204ba0792a2157e279a34f95a9ae1d48e78d89aabf183e",
+    "ErdosSzekeres/Omission/CoupledTemplateFifthGeometry.lean": "f1a869b893537e2df9209dd29352643758b0495d8a2c9aa3d3d4eedcb3473993",
+    "ErdosSzekeres/Omission/CoupledFifthVariants.lean": "34eb7f7332a1524c6c3f8ea49857227dd7e207fccf78b3f852e63bfb8df5ad10",
+    "experiments/omission-coupled-fifth-2026-10-10/template-variants.json": "08c7483f6d65d6af15bc316aec2fd013c9bd43dfaac231504f340116fbcdfd30",
+    "experiments/omission-coupled-fifth-2026-10-10/template-selection-diagnostic.json": "32f4f5f31533abfc7b3a515b5f58cbe48af07b8c37d7dc4f7629f8d4d378335d",
+    "experiments/omission-coupled-fifth-2026-10-10/template-axiom-audit.txt": "80f014ba34e66f923687e83997dffe71fdd2cd0ba3ed397e23e7f876568b6c51"
+  }
+}

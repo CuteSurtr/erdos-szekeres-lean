@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-10",
+  "library_build": "lake build --wfail: success (3247 jobs)",
+  "axiom_roots": 453,
+  "optional_solver_and_lean_tests": 70,
+  "loose_lean_files_scanned": 163,
+  "placeholder_or_custom_axiom_hits": [],
+  "tracked_cache_or_build_artifacts": [],
+  "separate_irredundancy_audit_roots": 10,
+  "global_bound_claimed": false,
+  "sources": {
+    "ErdosSzekeres/Omission/AdditionalResidualRows.lean": "299b205ca0d8efe6006fdf67c63894917faee7a4ce67967656a7fd3d16783b1e",
+    "ErdosSzekeres/HMPT/ParameterBarrier.lean": "216b92996578c05084bbb6eb9ac6c661c739eb713a081071d7e7bc08ddb0036a",
+    "scripts/check_additional_residual_rows.py": "e3c12d3ff41797215512815b5d41197e0233060c0fde02c5a2c831888f37f5a7",
+    "scripts/test_additional_residual_rows.py": "1f2c6376f01e7257f55a830c0ce25da770dd2ef2d038630bc6e3d0749b1e59c4",
+    ".github/workflows/ci.yml": "ad573a3073da907f9d5658eb7045d343e1a760e4c2c8260190dfc4a254213739"
+  },
+  "ci_additional_row_lean_controls_enabled": true
+}

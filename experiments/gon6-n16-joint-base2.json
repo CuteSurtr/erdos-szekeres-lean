@@ -1,0 +1,82 @@
+{
+  "scope": "all models of the canonical upstream CNF on one fixed x-grid",
+  "source_manifest": "experiments/gon6-n16-seed0.json",
+  "points": 16,
+  "gon": 6,
+  "x_grid_base": 2,
+  "cnf_clauses_independently_checked": 13156,
+  "z3_version": "5.1.0",
+  "status": "sat",
+  "seconds": 0.7428219579160213,
+  "coordinates": [
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      4,
+      153468688320825765858598005
+    ],
+    [
+      8,
+      460404910323274163821876575
+    ],
+    [
+      16,
+      1074326107765774112576603955
+    ],
+    [
+      32,
+      2302168791310574793524538075
+    ],
+    [
+      64,
+      4757320691392519694417998379
+    ],
+    [
+      128,
+      9668528518851226382845591755
+    ],
+    [
+      256,
+      19490474152138871890541469195
+    ],
+    [
+      512,
+      39136160534504873957966944395
+    ],
+    [
+      1024,
+      78421049243688656886001362315
+    ],
+    [
+      2048,
+      157005087057003731471374251915
+    ],
+    [
+      4096,
+      314144594526390058412482470795
+    ],
+    [
+      8192,
+      628365903240041574325497295755
+    ],
+    [
+      16384,
+      1257038775655503472232426806155
+    ],
+    [
+      32768,
+      2514384520486709162382988403595
+    ]
+  ],
+  "general_position": true,
+  "all_orientation_signs_match": true,
+  "forbidden_polygon": null,
+  "exact_witness_verified": true,
+  "verification": "independent exact Python integers; not yet Lean-certified"
+}

@@ -1,0 +1,45 @@
+== c8_120pts_15layers
+6d8a4a09555fbdf7
+t=15 n=120 triple vars 35105 Y vars 91; phase order (psi increasing): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+<lb-k9oct-work-dir>/cnf/A_m8K9t15.cnf: clauses 22680241, fully assigned 45637, VIOLATED 0, with other vars 22634604 
+<lb-k9oct-work-dir>/cnf/chord_m8t15.clauses: clauses 3758, fully assigned 3758, VIOLATED 0, with other vars 0 
+<lb-k9oct-work-dir>/cnf/cone_m8t15.clauses: clauses 52108, fully assigned 52108, VIOLATED 0, with other vars 0 
+<lb-k9oct-work-dir>/cnf/thr2_m8t15.clauses: clauses 7448, fully assigned 7448, VIOLATED 0, with other vars 0 
+TOTAL VIOLATED 0
+c8_120pts_15layers.pts: t=15, Z = 11111111111111, clauses 180082, VIOLATED 0
+== f_del0
+804f85e1b6e58ae8
+t=15 n=120 triple vars 35105 Y vars 91; phase order (psi increasing): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+<lb-k9oct-work-dir>/cnf/A_m8K9t15.cnf: clauses 22680241, fully assigned 45637, VIOLATED 0, with other vars 22634604 
+<lb-k9oct-work-dir>/cnf/chord_m8t15.clauses: clauses 3758, fully assigned 3758, VIOLATED 0, with other vars 0 
+<lb-k9oct-work-dir>/cnf/cone_m8t15.clauses: clauses 52108, fully assigned 52108, VIOLATED 0, with other vars 0 
+<lb-k9oct-work-dir>/cnf/thr2_m8t15.clauses: clauses 7448, fully assigned 7448, VIOLATED 0, with other vars 0 
+TOTAL VIOLATED 0
+f_del0.pts: t=15, Z = 11111111111111, clauses 180082, VIOLATED 0
+== c8_120pts_blowup2orb
+c2193cdcf362de04
+t=15 n=120 triple vars 35105 Y vars 91; phase order (psi increasing): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+<lb-k9oct-work-dir>/cnf/A_m8K9t15.cnf: clauses 22680241, fully assigned 45637, VIOLATED 0, with other vars 22634604 
+<lb-k9oct-work-dir>/cnf/chord_m8t15.clauses: clauses 3758, fully assigned 3758, VIOLATED 0, with other vars 0 
+<lb-k9oct-work-dir>/cnf/cone_m8t15.clauses: clauses 52108, fully assigned 52108, VIOLATED 0, with other vars 0 
+<lb-k9oct-work-dir>/cnf/thr2_m8t15.clauses: clauses 7448, fully assigned 7448, VIOLATED 0, with other vars 0 
+TOTAL VIOLATED 0
+c8_120pts_blowup2orb.pts: t=15, Z = 11111111111111, clauses 180082, VIOLATED 0
+== c8_120pts_blowup3orb
+85214521cfc6e261
+t=15 n=120 triple vars 35105 Y vars 91; phase order (psi increasing): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+<lb-k9oct-work-dir>/cnf/A_m8K9t15.cnf: clauses 22680241, fully assigned 45637, VIOLATED 0, with other vars 22634604 
+<lb-k9oct-work-dir>/cnf/chord_m8t15.clauses: clauses 3758, fully assigned 3758, VIOLATED 0, with other vars 0 
+<lb-k9oct-work-dir>/cnf/cone_m8t15.clauses: clauses 52108, fully assigned 52108, VIOLATED 0, with other vars 0 
+<lb-k9oct-work-dir>/cnf/thr2_m8t15.clauses: clauses 7448, fully assigned 7448, VIOLATED 0, with other vars 0 
+TOTAL VIOLATED 0
+c8_120pts_blowup3orb.pts: t=15, Z = 11111111111110, clauses 180082, VIOLATED 0
+== k9_128_final
+b06ba08be108d6dd
+t=16 n=128 triple vars 42672 Y vars 105; phase order (psi increasing): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+<lb-k9oct-work-dir>/cnf/A_m8K9t16.cnf: clauses 29479779, fully assigned 56249, VIOLATED 0, with other vars 29423530 
+<lb-k9oct-work-dir>/cnf/chord_m8t16.clauses: clauses 4296, fully assigned 4296, VIOLATED 0, with other vars 0 
+<lb-k9oct-work-dir>/cnf/cone_m8t16.clauses: clauses 64197, fully assigned 64197, VIOLATED 0, with other vars 0 
+<lb-k9oct-work-dir>/cnf/thr2_m8t16.clauses: clauses 8550, fully assigned 8550, VIOLATED 0, with other vars 0 
+TOTAL VIOLATED 0
+k9_128_final.pts: t=16, Z = 111111111111111, clauses 221630, VIOLATED 0

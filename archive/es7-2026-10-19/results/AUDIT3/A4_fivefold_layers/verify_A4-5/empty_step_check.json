@@ -1,0 +1,48 @@
+{
+ "proof_archive": "<proof-archives>/es7-c4-32-cuts-2026-11-01/c4cuts.lrat.zst",
+ "cnf_archive": "<proof-archives>/es7-c4-32-cuts-2026-11-01/c4_n32L_cuts.cnf.zst",
+ "proof_sha256": "6e1199aa2ecd80dc7edbad9c16dba8aac1c69e9d9f20a1bf9eeb61a1196ba9c4",
+ "proof_bytes": 1040775249,
+ "proof_lines": 8773778,
+ "addition_lines": 6493272,
+ "deletion_lines": 2280506,
+ "additions_with_negative_hints": 0,
+ "first_lemma_id": 5272501,
+ "last_lemma_id": 11765772,
+ "empty_clause_steps": [
+  {
+   "line": 8773778,
+   "id": 11765772,
+   "n_hints": 4,
+   "hints_head": [
+    11765265,
+    11765756,
+    11764908,
+    11764905
+   ],
+   "hints_tail": [
+    11765265,
+    11765756,
+    11764908,
+    11764905
+   ]
+  }
+ ],
+ "cnf_sha256": "2aa18f1e89152959c13adec575d3fda4a01b0dedaef2388984ba6fe6bfdb78d1",
+ "cnf_bytes": 183470218,
+ "cnf_header": "p cnf 287296 5272500",
+ "cnf_clause_lines": 5272500,
+ "replays": [
+  {
+   "line": 8773778,
+   "id": 11765772,
+   "n_hints": 4,
+   "status": "CONFLICT",
+   "conflict_at_hint_index": 3,
+   "hints_from_cnf": 0,
+   "hints_from_lemmas": 4,
+   "units_propagated": 3
+  }
+ ],
+ "elapsed_s": 8.5
+}

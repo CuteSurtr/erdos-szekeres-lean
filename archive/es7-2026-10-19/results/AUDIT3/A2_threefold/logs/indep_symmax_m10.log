@@ -1,0 +1,36 @@
+== c3_30points m=10 k=7
+built C3Enc(10,7): 2791471 clauses in 3.4s
+{"path": "0s0-1s1_2s1-9s1_5s1-6s1_3s1-8s1_4s1-7s1", "largest_convex": 6, "has_kgon": false, "n_canonical_frames": 3, "unique_path": true, "mirror_ok": true, "mirror_mut_nosigma_ok": true, "kept_self": true, "kept_self_or_mirror": true, "nongon_false": [0, 0, 0], "gon_false": [0, 0, 0], "false_units": 0, "mut_reversed_false_units": [480, 480, 480], "mut_flipped_cube_false_units": null, "mut_sigma_flip_nongon_false": [449, 456, 455], "fail": []}
+{"path": "0s0-1s1_2s1-9s1_5s1-6s1_3s1-8s1_4s1-7s1", "largest_convex": 6, "has_kgon": false, "n_canonical_frames": 3, "unique_path": true, "mirror_ok": true, "mirror_mut_nosigma_ok": true, "kept_self": true, "kept_self_or_mirror": true, "nongon_false": [0, 0, 0], "gon_false": [0, 0, 0], "false_units": 0, "mut_reversed_false_units": [480, 480, 480], "mut_flipped_cube_false_units": null, "mut_sigma_flip_nongon_false": [450, 461, 455], "fail": []}
+{"path": "0s0-1s1_2s1-9s1_5s1-6s1_3s1-8s1_4s1-7s1", "largest_convex": 6, "has_kgon": false, "n_canonical_frames": 3, "unique_path": true, "mirror_ok": true, "mirror_mut_nosigma_ok": true, "kept_self": true, "kept_self_or_mirror": true, "nongon_false": [0, 0, 0], "gon_false": [0, 0, 0], "false_units": 0, "mut_reversed_false_units": [480, 480, 480], "mut_flipped_cube_false_units": null, "mut_sigma_flip_nongon_false": [464, 456, 446], "fail": []}
+        4.52 real         4.36 user         0.07 sys
+           307937280  maximum resident set size
+           296993440  peak memory footprint
+== c6_30points m=10 k=7
+Traceback (most recent call last):
+  File "AUDIT3/A2_threefold/indep_eval.py", line 622, in <module>
+    main()
+    ~~~~^^
+  File "AUDIT3/A2_threefold/indep_eval.py", line 606, in main
+    assert general_position(pts)
+           ~~~~~~~~~~~~~~~~^^^^^
+AssertionError
+        0.10 real         0.07 user         0.01 sys
+            34619392  maximum resident set size
+            23904712  peak memory footprint
+== c6_30points perturbed, m=10 k=7
+perturbed (attempt 0): all 4060 triple orientations kept
+built C3Enc(10,7): 2791471 clauses in 3.3s
+{"path": "0s0-1s1_8s1-9s0_6s0-7s1_2s0-3s1_4s0-5s1", "largest_convex": 6, "has_kgon": false, "n_canonical_frames": 3, "unique_path": true, "mirror_ok": true, "mirror_mut_nosigma_ok": true, "kept_self": false, "kept_self_or_mirror": true, "nongon_false": [0, 0, 0], "gon_false": [0, 0, 0], "false_units": 0, "mut_reversed_false_units": [480, 480, 480], "mut_flipped_cube_false_units": null, "mut_sigma_flip_nongon_false": [449, 453, 458], "fail": []}
+{"path": "0s0-1s1_8s1-9s0_6s0-7s1_2s0-3s1_4s0-5s1", "largest_convex": 6, "has_kgon": false, "n_canonical_frames": 3, "unique_path": true, "mirror_ok": true, "mirror_mut_nosigma_ok": true, "kept_self": false, "kept_self_or_mirror": true, "nongon_false": [0, 0, 0], "gon_false": [0, 0, 0], "false_units": 0, "mut_reversed_false_units": [480, 480, 480], "mut_flipped_cube_false_units": null, "mut_sigma_flip_nongon_false": [450, 453, 455], "fail": []}
+{"path": "0s0-1s1_8s1-9s0_6s0-7s1_2s0-3s1_4s0-5s1", "largest_convex": 6, "has_kgon": false, "n_canonical_frames": 3, "unique_path": true, "mirror_ok": true, "mirror_mut_nosigma_ok": true, "kept_self": false, "kept_self_or_mirror": true, "nongon_false": [0, 0, 0], "gon_false": [0, 0, 0], "false_units": 0, "mut_reversed_false_units": [480, 480, 480], "mut_flipped_cube_false_units": null, "mut_sigma_flip_nongon_false": [461, 448, 453], "fail": []}
+== c3_31points minus centre, m=10 k=7
+built C3Enc(10,7): 2791471 clauses in 3.3s
+{"path": "0s0-1s1_3s1-9s1_2s1-8s1_5s1-7s1_4s1-6s1", "largest_convex": 6, "has_kgon": false, "n_canonical_frames": 3, "unique_path": true, "mirror_ok": true, "mirror_mut_nosigma_ok": true, "kept_self": false, "kept_self_or_mirror": true, "nongon_false": [0, 0, 0], "gon_false": [0, 0, 0], "false_units": 0, "mut_reversed_false_units": [480, 480, 480], "mut_flipped_cube_false_units": null, "mut_sigma_flip_nongon_false": [459, 464, 463], "fail": []}
+{"path": "0s0-1s1_3s1-9s1_2s1-8s1_5s1-7s1_4s1-6s1", "largest_convex": 6, "has_kgon": false, "n_canonical_frames": 3, "unique_path": true, "mirror_ok": true, "mirror_mut_nosigma_ok": true, "kept_self": false, "kept_self_or_mirror": true, "nongon_false": [0, 0, 0], "gon_false": [0, 0, 0], "false_units": 0, "mut_reversed_false_units": [480, 480, 480], "mut_flipped_cube_false_units": null, "mut_sigma_flip_nongon_false": [453, 464, 460], "fail": []}
+{"path": "0s0-1s1_3s1-9s1_2s1-8s1_5s1-7s1_4s1-6s1", "largest_convex": 6, "has_kgon": false, "n_canonical_frames": 3, "unique_path": true, "mirror_ok": true, "mirror_mut_nosigma_ok": true, "kept_self": false, "kept_self_or_mirror": true, "nongon_false": [0, 0, 0], "gon_false": [0, 0, 0], "false_units": 0, "mut_reversed_false_units": [480, 480, 480], "mut_flipped_cube_false_units": null, "mut_sigma_flip_nongon_false": [456, 438, 459], "fail": []}
+== c3_27points, m=9 k=7
+built C3Enc(9,7): 1794727 clauses in 2.1s
+{"path": "0s0_7s1-8s0_4s0-6s1_3s0-5s1_1s0-2s0", "largest_convex": 6, "has_kgon": false, "n_canonical_frames": 3, "unique_path": true, "mirror_ok": true, "mirror_mut_nosigma_ok": false, "kept_self": false, "kept_self_or_mirror": true, "nongon_false": [0, 0, 0], "gon_false": [0, 0, 0], "false_units": 0, "mut_reversed_false_units": [387, 387, 387], "mut_flipped_cube_false_units": null, "mut_sigma_flip_nongon_false": [371, 369, 366], "fail": []}
+{"path": "0s0_7s1-8s0_4s0-6s1_3s0-5s1_1s0-2s0", "largest_convex": 6, "has_kgon": false, "n_canonical_frames": 3, "unique_path": true, "mirror_ok": true, "mirror_mut_nosigma_ok": false, "kept_self": false, "kept_self_or_mirror": true, "nongon_false": [0, 0, 0], "gon_false": [0, 0, 0], "false_units": 0, "mut_reversed_false_units": [387, 387, 387], "mut_flipped_cube_false_units": null, "mut_sigma_flip_nongon_false": [359, 374, 366], "fail": []}
+{"path": "0s0_7s1-8s0_4s0-6s1_3s0-5s1_1s0-2s0", "largest_convex": 6, "has_kgon": false, "n_canonical_frames": 3, "unique_path": true, "mirror_ok": true, "mirror_mut_nosigma_ok": false, "kept_self": false, "kept_self_or_mirror": true, "nongon_false": [0, 0, 0], "gon_false": [0, 0, 0], "false_units": 0, "mut_reversed_false_units": [387, 387, 387], "mut_flipped_cube_false_units": null, "mut_sigma_flip_nongon_false": [374, 358, 366], "fail": []}

@@ -1,0 +1,43 @@
+2026-11-06 12:46:31 tool hashes OK: cadical 4acf586001aa, cake_lpr c14ff49853e8
+2026-11-06 12:46:31 base CNF hash OK 479e31a9e8d58d752c86b9abf02fb799c10615a7e61a88f132c49734674f37fc
+2026-11-06 12:46:37 verify_cover64: OK: 32 n-cubes (base + -Y(1,2) + pattern) and 32 replayed c-cubes (hashes = accepted rows); 64 distinct patterns on 6 variables; cover complete
+2026-11-06 12:46:38 32 cube CNFs written; 12 are consistent phase orders
+2026-11-06 12:47:08 start pid 948487, lanes 4, cake 1
+2026-11-06 12:47:08 tool hashes OK: cadical 4acf586001aa, cake_lpr c14ff49853e8
+2026-11-06 12:47:08 base CNF hash OK 479e31a9e8d58d752c86b9abf02fb799c10615a7e61a88f132c49734674f37fc
+2026-11-06 12:47:13 verify_cover64: OK: 32 n-cubes (base + -Y(1,2) + pattern) and 32 replayed c-cubes (hashes = accepted rows); 64 distinct patterns on 6 variables; cover complete
+2026-11-06 12:47:14 32 cube CNFs written; 12 are consistent phase orders
+2026-11-06 12:47:14 32 cubes to do (0 already accepted)
+2026-11-06 13:35:11 n00011 UNSAT 2628s proof 16411966b966 (4326921437 bytes) cake 224s ACCEPTED
+2026-11-06 13:37:57 n00100 UNSAT 2694s proof 2928f805258c (4118828048 bytes) cake 166s ACCEPTED
+2026-11-06 13:41:57 n00001 UNSAT 2764s proof d8f8931f95f1 (5152818356 bytes) cake 233s ACCEPTED
+2026-11-06 13:56:46 n00000 UNSAT 3921s proof b917eafba273 (5360573359 bytes) cake 217s ACCEPTED
+2026-11-06 14:32:11 n00110 UNSAT 3173s proof 345466b3bb5e (4840663560 bytes) cake 216s ACCEPTED
+2026-11-06 14:35:21 n00111 UNSAT 3180s proof 211c785401a8 (4488453500 bytes) cake 192s ACCEPTED
+2026-11-06 14:38:48 n01111 UNSAT 2320s proof 4d65aa3e2ced (4095917163 bytes) cake 178s ACCEPTED
+2026-11-06 14:43:44 n01011 UNSAT 3449s proof c9441a0225df (5239752888 bytes) cake 224s ACCEPTED
+2026-11-06 15:18:07 n10110 UNSAT 2359s proof fbefb536773a (4160540922 bytes) cake 181s ACCEPTED
+2026-11-06 15:21:08 n00010 UNSAT 1s proof d13da8d45095 (39777613 bytes) cake 4s ACCEPTED
+2026-11-06 15:21:13 n00101 UNSAT 1s proof f534ac9949c7 (39778113 bytes) cake 4s ACCEPTED
+2026-11-06 15:21:18 n01000 UNSAT 1s proof 90ef58c69862 (39778166 bytes) cake 4s ACCEPTED
+2026-11-06 15:21:24 n01001 UNSAT 1s proof 90ef58c69862 (39778166 bytes) cake 4s ACCEPTED
+2026-11-06 15:21:29 n01010 UNSAT 1s proof 6e661581ee18 (39778186 bytes) cake 4s ACCEPTED
+2026-11-06 15:21:30 n10100 UNSAT 2727s proof bc062bbc64eb (4877416808 bytes) cake 200s ACCEPTED
+2026-11-06 15:21:34 n01100 UNSAT 1s proof 86732bb856bd (39778090 bytes) cake 4s ACCEPTED
+2026-11-06 15:21:38 n01101 UNSAT 1s proof 86732bb856bd (39778090 bytes) cake 4s ACCEPTED
+2026-11-06 15:21:41 n01110 UNSAT 1s proof 774d4fbe64ed (39778110 bytes) cake 3s ACCEPTED
+2026-11-06 15:21:45 n10000 UNSAT 1s proof dd7b24adc280 (39771102 bytes) cake 3s ACCEPTED
+2026-11-06 15:21:49 n10001 UNSAT 1s proof dd7b24adc280 (39771102 bytes) cake 4s ACCEPTED
+2026-11-06 15:21:53 n10010 UNSAT 1s proof dd7b24adc280 (39771102 bytes) cake 4s ACCEPTED
+2026-11-06 15:21:57 n10011 UNSAT 1s proof dd7b24adc280 (39771102 bytes) cake 4s ACCEPTED
+2026-11-06 15:22:01 n10101 UNSAT 1s proof 32aa26cb3c66 (39779546 bytes) cake 4s ACCEPTED
+2026-11-06 15:22:05 n10111 UNSAT 1s proof 1d38254d5477 (39778750 bytes) cake 4s ACCEPTED
+2026-11-06 15:22:09 n11000 UNSAT 1s proof 62e58c28ebda (39770031 bytes) cake 4s ACCEPTED
+2026-11-06 15:22:13 n11001 UNSAT 1s proof 62e58c28ebda (39770031 bytes) cake 4s ACCEPTED
+2026-11-06 15:22:17 n11010 UNSAT 1s proof 62e58c28ebda (39770031 bytes) cake 4s ACCEPTED
+2026-11-06 15:22:21 n11011 UNSAT 1s proof 62e58c28ebda (39770031 bytes) cake 4s ACCEPTED
+2026-11-06 15:22:25 n11100 UNSAT 1s proof 84e0192faf8e (39770051 bytes) cake 4s ACCEPTED
+2026-11-06 15:22:29 n11101 UNSAT 1s proof 84e0192faf8e (39770051 bytes) cake 4s ACCEPTED
+2026-11-06 15:31:46 n11110 UNSAT 3005s proof 44092acf62f6 (4196410590 bytes) cake 149s ACCEPTED
+2026-11-06 15:40:35 n11111 UNSAT 3172s proof 6bb86d5f68af (4642713537 bytes) cake 212s ACCEPTED
+2026-11-06 15:40:35 2026-11-06 15:40:35: 32 of 32 NOT-Y(1,2) cube proofs accepted by cake_lpr, hash-bound (results.tsv)

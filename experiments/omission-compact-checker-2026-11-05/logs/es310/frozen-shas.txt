@@ -1,0 +1,11 @@
+# ES(8) <= 310 pipeline frozen 2026-11-06 15:32:49 KST by freeze_es310.sh; per-word k = 16
+# every export_es310.py command from now on: --per-word 16 --chunk-leaves 12000 --block-leaves 64
+29854a3799db7ebdb29311255c2a089a0f2c9957beaa2d839583d50033920b1f  export_es310.py
+3cbf428b130f6dc2a01893a8dd387d24717b97625bc713a0b801b2fa8a797940  merge_es310.py
+7992026f1e94a98cdd1412e8272a30b3559120ce8364ab9c943d75e6534bdd5f  drive_es310.py
+fff949b9d6a0cadc49184c7c7afa35d97775b769f90a3116360dfcdf23254be5  coverage_es310.py
+334d2d75cff1effdb4a7420501c0e3247f0dbbe645ae86bf8f8dc03887edbbfb  export_es311.py
+9906b781d02cf54dc1af24b501f3306261a927432cc1f2af05fbe8ae91f33837  shapes_es311.py
+7a91d397b7020867d29093bef6aaf41cf85644c9369fad0197ff0ea742416f9e  assembly/Final310Compact.lean
+8a0b1f49370a24d5c39a1a3fafc49c0be6e058f669a1b42593be973e72648c40  freeze_es310.sh
+a76ce0741e1ed152e29fac8e1c0ea1f1573192dc280de83be26149f725d25b0d  assemble_final310.sh (after filling the pins)

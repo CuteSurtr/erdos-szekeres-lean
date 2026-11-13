@@ -1,0 +1,26 @@
+# C3W4 task: wave 4 of the 3-fold class with σ-cube splitting, one machine
+
+Your prompt gives these values: V (your machine name, for example H07), LIST (a file in `results/C3W4/lists/`), j (your shard), N (the number of shards of LIST), SLICE (hours per root), H (your time budget in hours) and Z (the commit of this file). Replace {V}, {LIST}, {j}, {N}, {SLICE}, {H} and {Z} by those values. Everything else in this file is to be followed exactly.
+
+This wave is part of the search for a counterexample to ES(7) = 33: a 3-fold-symmetric 33-point set in general position with no 7 points in convex position. Every SAT answer is a candidate counterexample. The mirror class is excluded and the 3-fold class is the only other symmetry class a counterexample can have, so this wave aims to finish it.
+
+General rules: exactly as in `results/C3W3/TASK.md` (paths under `cloud/es7-2026-10-19/`), with `results/C3W4/{V}/` as your only directory and the fallback branch `es7-fallback-c3w4-{V}` (lower case): commit identity CuteSurtr <133225877+CuteSurtr@users.noreply.github.com> (check `git var GIT_AUTHOR_IDENT` and `GIT_COMMITTER_IDENT`), `env.txt` committed at once, commits only inside your directory with plain messages and no AI co-author or attribution trailers, `git pull --rebase --autostash` before every push, progress pushed at least every 25 minutes, the last 12 minutes for the README, no CNF or proof files, no file over 50 MB, and do not end your turn while work is running (wait in the foreground with bounded until-loops of at most 10 minutes per tool call).
+
+## Why σ-cubes
+
+The σ-cube pilots closed 20 of 20 hard two-orbit nodes with 8 cubes on 3 σ bits at 0.06–0.13 of the layer-split cost (`results/C3SIG`). On one-orbit roots and H3 roots, all 3-bit cubes timed out at 300 s while every 6-bit cube that ran was certified, at about 100–250 s each (`results/C3SIG2`); the layer split closed none of 30 H3 roots in 3 hours (`results/C3W3/B*`). The split is implemented in `results/C3U/tools` (commit 95cafa93); `results/C3AUDIT3/REPORT.md` accepted its specification, `hullcase.py` and `close_tree.py`. Its `compose.py` has a known bug and is being fixed in `results/C3U2`, so **do not run any `compose.py`**: your records will be composed by the fixed composer later.
+
+## Steps
+
+1. Tools: `git worktree add /opt/c3u 95cafa93`; TOOLS = `/opt/c3u/cloud/es7-2026-10-19/results/C3U/tools`, used unmodified. Build CaDiCaL c6073042, cake_lpr a36874a8 and lrat-check 2e3b2dc with the E2 patch exactly as step 1 of `results/C3WAVE2/TASK.md`, with its checker sanity test. Build the base CNF with `python3 $TOOLS/gen_case.py 11 7 none` into `/opt/work/base.cnf` and check header `p cnf 168399 4154921` and sha256 `bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da`. Record everything in `results/C3W4/{V}/tools.txt`. If any check fails, stop and report.
+2. Your roots: the rows of `results/C3W4/lists/{LIST}` with row ≡ {j} (mod {N}), in file order. Write them to `roots.tsv`. Do not seed any earlier records: every root starts fresh, so that the σ route is taken from the root (earlier records stay valid and are composed together with yours).
+3. Options, by list:
+   - `W4_H3.tsv` and `W4_one.tsv`: `--sigma-split 3 --sigma-levels 2 --caps 1,1,300,600 --cadopts=--sat` (no `--split-singles`). Cap 1 at the root and at the first σ level makes those nodes time out at once, so each root goes straight to its 64 cubes on 6 σ bits at cap 300; a 6-bit cube that times out gets the layer split at cap 600.
+   - `W4_two.tsv`: `--sigma-split 3 --sigma-levels 2 --caps 300,300,600 --cadopts=--sat --split-singles` (direct attempt at 300 s first).
+4. Run one runner with `setsid nohup` (copy it to `runner.sh`). For each root R in order, while the time left before END = (your start + {H} hours − 15 minutes) is positive: `cd $TOOLS && python3 close_tree.py /opt/work/base.cnf /opt/work/out.jsonl R --jobs 3 OPTIONS --hours S` with S = min({SLICE}, hours left before END), logging `=== ROOT R start` / `=== ROOT R end` lines and close_tree's final output (`open_frontier`) to `/opt/work/driver.log`.
+   - On `SAT FOUND`: stop everything, commit the model and the solver output at once, and report it first. It would be a 33-point configuration to realize and check.
+   - On `PROOF NOT ACCEPTED` (or a certified-looking record with cake_lpr `none`): re-check that node alone with `--jobs 1`; if both checkers then accept, record both results in `recheck.jsonl` and continue, otherwise stop and report. A checker killed at END gives `none`; re-check such nodes the same way before you finish.
+   - Report every split record with `"children": 0` (a timed-out node without children): it is open, whatever `open_frontier` says.
+5. Every 25 minutes and at the end, copy `/opt/work/out.jsonl` to `results/C3W4/{V}/out.jsonl`, the last 100 lines of the driver log to `driver.log.tail`, commit and push.
+
+README.md and final message: the tool commits and the base check; per root: closed (open frontier 0 and no childless timed-out node) / partial (open frontier) / not reached, with certified nodes by depth and σ level, timeouts, and solve and check seconds; totals per stratum; any SAT, proof rejection or memory problem.

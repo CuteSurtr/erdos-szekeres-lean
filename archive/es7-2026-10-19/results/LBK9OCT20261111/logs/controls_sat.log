@@ -1,0 +1,8 @@
+# CaDiCaL 2.1.3 controls (exact assignments of label8.py as unit clauses); verdict lines from ctrl/*.out
+t15: A(8,9,15) + c8_120pts_15layers units: s SATISFIABLE
+t15: A(8,9,15) + chord + cone + c8_120pts_15layers units: s SATISFIABLE
+t15: A(8,9,15) + chord + cone + thr2 + c8_120pts_15layers units: s SATISFIABLE [cnf sha256 6d543ebe...]
+t15: A(8,9,15) + chord + cone + thr2 + f_del0 units: s SATISFIABLE [cnf sha256 c5e5053d...]
+t16: A(8,9,16) + chord + k9_128_final units: s UNSATISFIABLE
+t16: A(8,9,16) + chord + cone + thr2 + k9_128_final units: s UNSATISFIABLE
+t12: A(8,9,12) + first 12 layers of k9_128_final as units: s UNSATISFIABLE; LRAT 36 MB; cake_lpr: s VERIFIED UNSAT with heap 2500 MB (1800 MB: heap exhausted)

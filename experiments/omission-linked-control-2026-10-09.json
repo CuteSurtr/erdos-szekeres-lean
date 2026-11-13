@@ -1,0 +1,41 @@
+{
+  "scope": "Successful import and standard-axiom audit of actual production subtrees from both certificate families; not the full roots or a global bound",
+  "source_sha256": "15fa65595d66de49d77f6d88cc33b91341d4bc79a3059ebbb1098987e4f598d0",
+  "exit": 0,
+  "seconds": 1.897,
+  "axioms": {
+    "OmissionBalanced.code_correct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OmissionBalanced.node0": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OmissionResidual.code_correct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OmissionResidual.node1501": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "stdout": "'OmissionBalanced.code_correct' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OmissionBalanced.node0' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OmissionResidual.code_correct' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OmissionResidual.node1501' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "stderr": "",
+  "input_sha256": {
+    ".cache/omission-balanced-linked/export.json": "4e2f95bc5fd694704211dbf4c2aebe5bafd6420293663fe0ac5b18e1d71b0b84",
+    ".cache/omission-balanced-linked/BalancedProof/Catalog.olean": "d650caa857c8351dfd842004c11dedd326433a84e219f630211e980a21251c64",
+    ".cache/omission-balanced-linked/BalancedProof/Part00000.olean": "aa51dc88d4f481ff8310daba8f4fb0b6ef54902132e9c8024914eb49869d30b3",
+    ".cache/omission-lean-full/residual/export.json": "4de6ce291b08c362022e9843b16b12212444e6e7400b0d53532ebf0563daaf40",
+    ".cache/omission-lean-full/residual/Catalog.olean": "2e118ef392822f3543e9901180a3042c53489283d7ca28af39ac74a540b70a80",
+    ".cache/omission-lean-full/residual/Part00380.olean": "1f67a6032a255eb9ffedbde223ca3aef1801513aa8e15ed7d44d98ef9164c368"
+  },
+  "lean": "Lean (version 4.24.0, arm64-apple-darwin23.6.0, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)",
+  "full_tree_lean_checked": false,
+  "global_bound_proved": false
+}

@@ -1,0 +1,22 @@
+(1) build.py sym(7, X=50, Y=10000, K=3): n=32; file n=32; same ordered list: True; same set: True
+(1) build.py sym(9, X=10**15, Y=10**15, K=10**9): n=128; file n=128; same ordered list: True; same set: True
+    control sym(7, X=50, Y=10000, K=2) equals file: False
+    control sym(7, X=50, Y=10000, K=4) equals file: False
+    control sym(7, X=49, Y=10000, K=3) equals file: False
+    control sym(7, X=50, Y=9999, K=3) equals file: False
+    control sym(7, X=1000000, Y=1000000, K=None) equals file: False
+(2) distinct points: True; file sorted: True; max |coord| = 1250000
+(2) centrally symmetric (p in S <=> -p in S): True; origin absent: True
+(2) clusters by x-gaps: sizes [1, 5, 10, 10, 5, 1] (expected C(5,i) = [1, 5, 10, 10, 5, 1])
+    cluster 0: q=-5 size=1 bbox-mid*2=(-500, -2500000) expected (-500, -2500000); inner max |dx|=0
+    cluster 1: q=-3 size=5 bbox-mid*2=(-300, -540000) expected (-300, -540000); inner max |dx|=24
+    cluster 2: q=-1 size=10 bbox-mid*2=(-100, -20000) expected (-100, -20000); inner max |dx|=54
+    cluster 3: q=+1 size=10 bbox-mid*2=(100, 20000) expected (100, 20000); inner max |dx|=54
+    cluster 4: q=+3 size=5 bbox-mid*2=(300, 540000) expected (300, 540000); inner max |dx|=24
+    cluster 5: q=+5 size=1 bbox-mid*2=(500, 2500000) expected (500, 2500000); inner max |dx|=0
+(2) every cluster centred at (50 q, 10000 q^3) on the cubic: True
+    cluster 0: single point (G(2,7) has 1 point)
+    cluster 1 (G(3,6), 5 pts): no 3-cup True, no 6-cap True; has 2-cup True, has 5-cap True
+    cluster 2 (G(4,5), 10 pts): no 4-cup True, no 5-cap True; has 3-cup True, has 4-cap True
+(2) cluster n-i = half-turn of cluster i for all i: True
+(3) collinear ordered triples among distinct indices: 0 (general position iff 0)

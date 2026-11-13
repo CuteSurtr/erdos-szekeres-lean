@@ -1,0 +1,21 @@
+memgate: start at mem 30015 MB after 0s wait
+{"records": 128803, "certified_names": 116741, "certificates": 910, "keys": 73567, "distinct_key_names": 73567, "failures": 0, "sample_failures": []}
+        1.32 real         1.11 user         0.07 sys
+            45350912  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                3433  page reclaims
+                  80  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 563  voluntary context switches
+                1925  involuntary context switches
+         22615627579  instructions retired
+          4459993163  cycles elapsed
+            37110240  peak memory footprint
+memgate: exit 0

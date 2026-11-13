@@ -1,0 +1,60 @@
+c --- [ banner ] -------------------------------------------------------------
+c CaDiCaL SAT Solver
+c Copyright (c) 2016-2024
+c A. Biere, M. Fleury, N. Froleyks, K. Fazekas, F. Pollitt, T. Faller
+c JKU Linz, University of Freiburg, TU Wien
+c Version 2.1.3
+c g++-15.2.0
+c Dec 15 2025 01:04:17
+c --- [ proof tracing ] ------------------------------------------------------
+c opening file to write '<lb-k9oct-work-dir>/sat/S7/proof.lrat'
+c writing non-binary proof trace to '<lb-k9oct-work-dir>/sat/S7/proof.lrat'
+c --- [ parsing input ] ------------------------------------------------------
+c reading DIMACS file from '<lb-k9oct-work-dir>/sat/S7/A16_chord_cone_thr2_cellB2_mono.cnf'
+c opening file to read '<lb-k9oct-work-dir>/sat/S7/A16_chord_cone_thr2_cellB2_mono.cnf'
+c found 'p cnf 497712 29749067' header
+c parsed 29749067 clauses in 6.04 seconds process time
+c --- [ options ] ------------------------------------------------------------
+c   --binary=false                 (different from default 'true')
+c   --lrat=true                    (different from default 'false')
+c --- [ solving ] ------------------------------------------------------------
+c time measured in process time since initialization
+c  seconds    reductions  redundant   irredundant
+c          MB     restarts       trail         variables
+c            level   conflicts       glue            remaining
+c *  6.04 2822  0 0   0    0    0  0% 0 27434404 294822 59%
+c 2 62.07 3250 76 3 152 5000 27772 18% 11 11449590 294822 59%
+c  seconds     reductions   redundant    irredundant
+c           MB     restarts        trail          variables
+c             level    conflicts       glue             remaining
+c 2 169.35 3158 20 5 199 15000 12573 24% 11 8299175 202692 41%
+c caught signal 15 (SIGTERM)
+c --- [ result ] -------------------------------------------------------------
+c UNKNOWN
+c --- [ run-time profiling ] -------------------------------------------------
+c process time taken by individual solving procedures
+c (percentage relative to process time for solving)
+c       181.01   84.70% search
+c        92.89   43.46% stable
+c        83.70   39.16% unstable
+c        32.70   15.30% simplify
+c        10.97    5.13% vivify
+c         6.77    3.17% elim
+c         6.04    2.82% parse
+c         6.03    2.82% subsume
+c         3.59    1.68% walk
+c         3.16    1.48% probe
+c         2.59    1.21% ternary
+c         0.84    0.39% lucky
+c   =================================
+c       213.72   97.25% solve
+c last line shows process time for solving
+c (percentage relative to total process time)
+c --- [ statistics ] ---------------------------------------------------------
+c chronological:              8940        35.93 %  of conflicts
+c conflicts:                 24885       116.44    per second
+c decisions:                 58549       273.96    per second
+c eliminated:                92094        18.50 %  of all variables
+c fixed:                    202934        40.77 %  of all variables
+c learned:                   23966        96.31 %  per conflict
+c learned_lits:            1727636       100.00 %  learned literals

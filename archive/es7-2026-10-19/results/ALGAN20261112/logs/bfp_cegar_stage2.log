@@ -1,0 +1,32 @@
+stage2 start: base+GP clauses 3768137 stage-1 patterns re-added 15
+iter 0 solve 14s size 3 bad subsets 2 new patterns 1 patterns {3: 1, 4: 0} elapsed 25s
+iter 1 solve 102s GP violations 4080
+iter 2 solve 0s size 3 bad subsets 10 new patterns 3 patterns {3: 4, 4: 0} elapsed 136s
+iter 3 solve 48s GP violations 1656
+iter 4 solve 0s size 3 bad subsets 3 new patterns 1 patterns {3: 5, 4: 0} elapsed 191s
+iter 5 solve 0s size 4 bad subsets 48 new patterns 29 patterns {3: 5, 4: 29} elapsed 232s
+iter 6 solve 26s GP violations 1240
+iter 7 solve 0s size 3 bad subsets 22 new patterns 4 patterns {3: 9, 4: 29} elapsed 267s
+iter 8 solve 33s GP violations 1664
+iter 9 solve 46s GP violations 416
+iter 10 solve 0s size 4 bad subsets 104 new patterns 36 patterns {3: 9, 4: 65} elapsed 399s
+iter 11 solve 26s GP violations 2056
+iter 12 solve 0s size 4 bad subsets 89 new patterns 51 patterns {3: 9, 4: 116} elapsed 474s
+iter 13 solve 44s GP violations 832
+iter 14 solve 0s size 3 bad subsets 2 new patterns 1 patterns {3: 10, 4: 116} elapsed 526s
+iter 15 solve 0s GP violations 832
+iter 16 solve 0s size 4 bad subsets 58 new patterns 31 patterns {3: 10, 4: 147} elapsed 571s
+iter 17 solve 0s GP violations 3016
+iter 18 solve 0s size 3 bad subsets 2 new patterns 2 patterns {3: 12, 4: 147} elapsed 578s
+iter 19 solve 0s size 4 bad subsets 15 new patterns 11 patterns {3: 12, 4: 158} elapsed 615s
+iter 20 solve 0s GP violations 416
+iter 21 solve 0s size 4 bad subsets 13 new patterns 12 patterns {3: 12, 4: 170} elapsed 654s
+iter 22 solve 7s GP violations 1224
+iter 23 solve 0s size 4 bad subsets 68 new patterns 20 patterns {3: 12, 4: 190} elapsed 704s
+iter 24 solve 0s GP violations 416
+iter 25 solve 0s size 4 bad subsets 95 new patterns 57 patterns {3: 12, 4: 247} elapsed 756s
+iter 26 solve 7s size 3 bad subsets 1 new patterns 1 patterns {3: 13, 4: 247} elapsed 768s
+iter 27 solve 0s size 4 bad subsets 31 new patterns 10 patterns {3: 13, 4: 257} elapsed 805s
+iter 28 solve 0s GP violations 208
+iter 29 solve 0s size 4 bad subsets 4 new patterns 2 patterns {3: 13, 4: 259} elapsed 842s
+iter 30 model GP-consistent and BFP-clean on all 3- and 4-layer subsets -> saved

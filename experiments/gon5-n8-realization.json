@@ -1,0 +1,50 @@
+{
+  "scope": "one abstract model and one fixed x-grid",
+  "source_manifest": "experiments/gon5-n8-seed0.json",
+  "points": 8,
+  "gon": 5,
+  "x_grid_base": 1,
+  "cnf_clauses_independently_checked": 436,
+  "z3_version": "5.1.0",
+  "status": "sat",
+  "seconds": 0.002295666025020182,
+  "coordinates": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      52
+    ],
+    [
+      3,
+      101
+    ],
+    [
+      4,
+      151
+    ],
+    [
+      5,
+      189
+    ],
+    [
+      6,
+      235
+    ],
+    [
+      7,
+      280
+    ]
+  ],
+  "general_position": true,
+  "all_orientation_signs_match": true,
+  "forbidden_polygon": null,
+  "exact_witness_verified": true,
+  "verification": "independent exact Python integers; not yet Lean-certified"
+}

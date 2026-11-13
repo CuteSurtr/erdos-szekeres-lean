@@ -1,0 +1,9 @@
+Task: results/C3W4/TASK.md at 3fd8a4d8; V=H18, LIST=W4_H3.tsv, j=18, N=30, SLICE=2.0, H=5.0. Start 2026-10-24 11:31:25 UTC (epoch 1792841485), END = start + 5 h - 15 min = 16:16:25 UTC.
+Tools: git worktree /opt/c3u at 95cafa93; TOOLS=/opt/c3u/cloud/es7-2026-10-19/results/C3U/tools, unmodified.
+CaDiCaL c60730422e758ef1cebe7aeddf2dda31c996bf04 (3.0.1, ./configure && make) -> /opt/bin/cadical
+cake_lpr a36874a8b750b43fe4b385b8ddbf5b033e46a3fa (make cake_lpr) -> /opt/bin/cake_lpr; example.cnf/example.lpr: s VERIFIED UNSAT
+drat-trim lrat-check 2e3b2dc0ecf938addbd779d42877b6ed69d9a985 + results/E2/tools/lrat-check-E2.patch (normal diff, applied with patch(1); adds the size==0 check at line 156) -> /opt/bin/lrat-check
+Sanity check on CNF {1},{-1}: LRAT "3 0 0" rejected by lrat-check (c FAILED: empty clause without a RUP conflict) and by cake_lpr (no s VERIFIED UNSAT; "pivot must be non-zero"); "3 0 1 2 0" accepted by both (c VERIFIED / s VERIFIED UNSAT).
+Base CNF: python3 $TOOLS/gen_case.py 11 7 none -o /opt/work/base.cnf (this version needs -o): header p cnf 168399 4154921, sha256 bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da (matches).
+Roots: rows 18, 48, 78 of lists/W4_H3.tsv (row = 18 mod 30), no seeding.
+Options: --jobs 3 --sigma-split 3 --sigma-levels 2 --caps 1,1,300,600 --cadopts=--sat, slices min(2.0, hours left).

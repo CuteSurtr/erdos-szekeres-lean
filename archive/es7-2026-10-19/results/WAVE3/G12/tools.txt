@@ -1,0 +1,5 @@
+cadical 3.0.1 https://github.com/arminbiere/cadical commit c60730422e758ef1cebe7aeddf2dda31c996bf04 (3.0.1)
+march_cu https://github.com/marijnheule/CnC commit 705b60c6491ef2b61988b3ce6ac674be1b90571d, built in march_cu/ with CFLAGS='-O3 -fno-strict-aliasing -Wall -DNDEBUG -fcommon'
+cake_lpr https://github.com/tanyongkiam/cake_lpr commit a36874a8b750b43fe4b385b8ddbf5b033e46a3fa, make cake_lpr; example.cnf/example.lpr -> s VERIFIED UNSAT
+F: /opt/work/F.cnf sha256 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d
+U_L16 case CNF sha256 edd50c2727d7103c5470b8390ae206c656d601677f08ecc012978e2321b31c9a (matches cases.jsonl)

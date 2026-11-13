@@ -1,0 +1,586 @@
+{
+  "scope": "Literal finite row system only; no geometric theorem",
+  "source_sha256": "405f18f960e2ecb3ba149758ff811fdae5ccc7f8b6373e5ae881b1555f663789",
+  "tree_sha256": "a515ccebed19eb64d7e90e642146a56510996c65fca3793695962f03bfa60cb0",
+  "exporter_sha256": "af6df59bcab2e2ca68ff6d165314e16cf36a67ec6569da4251442b9c673c9f59",
+  "states": 252,
+  "rows": 2905,
+  "budget": 60,
+  "base": 33554432,
+  "namespace": "OmissionBalancedCover60",
+  "module_prefix": "BalancedCover60Proof",
+  "root": 0,
+  "full_tree_root": 0,
+  "exported_leaves": 3954,
+  "exported_parts": 92,
+  "parts": [
+    {
+      "module": "Part00000",
+      "root": 7733,
+      "leaves": 40
+    },
+    {
+      "module": "Part00001",
+      "root": 7734,
+      "leaves": 48
+    },
+    {
+      "module": "Part00002",
+      "root": 7579,
+      "leaves": 33
+    },
+    {
+      "module": "Part00003",
+      "root": 7580,
+      "leaves": 45
+    },
+    {
+      "module": "Part00004",
+      "root": 7437,
+      "leaves": 33
+    },
+    {
+      "module": "Part00005",
+      "root": 7438,
+      "leaves": 38
+    },
+    {
+      "module": "Part00006",
+      "root": 7291,
+      "leaves": 32
+    },
+    {
+      "module": "Part00007",
+      "root": 7292,
+      "leaves": 42
+    },
+    {
+      "module": "Part00008",
+      "root": 7159,
+      "leaves": 37
+    },
+    {
+      "module": "Part00009",
+      "root": 7160,
+      "leaves": 28
+    },
+    {
+      "module": "Part00010",
+      "root": 7015,
+      "leaves": 42
+    },
+    {
+      "module": "Part00011",
+      "root": 7016,
+      "leaves": 31
+    },
+    {
+      "module": "Part00012",
+      "root": 6775,
+      "leaves": 62
+    },
+    {
+      "module": "Part00013",
+      "root": 6776,
+      "leaves": 58
+    },
+    {
+      "module": "Part00014",
+      "root": 6523,
+      "leaves": 60
+    },
+    {
+      "module": "Part00015",
+      "root": 6525,
+      "leaves": 37
+    },
+    {
+      "module": "Part00016",
+      "root": 6526,
+      "leaves": 29
+    },
+    {
+      "module": "Part00017",
+      "root": 6267,
+      "leaves": 64
+    },
+    {
+      "module": "Part00018",
+      "root": 6269,
+      "leaves": 38
+    },
+    {
+      "module": "Part00019",
+      "root": 6270,
+      "leaves": 27
+    },
+    {
+      "module": "Part00020",
+      "root": 6097,
+      "leaves": 38
+    },
+    {
+      "module": "Part00021",
+      "root": 6098,
+      "leaves": 45
+    },
+    {
+      "module": "Part00022",
+      "root": 5961,
+      "leaves": 26
+    },
+    {
+      "module": "Part00023",
+      "root": 5962,
+      "leaves": 43
+    },
+    {
+      "module": "Part00024",
+      "root": 5707,
+      "leaves": 62
+    },
+    {
+      "module": "Part00025",
+      "root": 5709,
+      "leaves": 35
+    },
+    {
+      "module": "Part00026",
+      "root": 5710,
+      "leaves": 30
+    },
+    {
+      "module": "Part00027",
+      "root": 5499,
+      "leaves": 51
+    },
+    {
+      "module": "Part00028",
+      "root": 5500,
+      "leaves": 54
+    },
+    {
+      "module": "Part00029",
+      "root": 5267,
+      "leaves": 57
+    },
+    {
+      "module": "Part00030",
+      "root": 5268,
+      "leaves": 58
+    },
+    {
+      "module": "Part00031",
+      "root": 5063,
+      "leaves": 47
+    },
+    {
+      "module": "Part00032",
+      "root": 5064,
+      "leaves": 56
+    },
+    {
+      "module": "Part00033",
+      "root": 4893,
+      "leaves": 58
+    },
+    {
+      "module": "Part00034",
+      "root": 4894,
+      "leaves": 27
+    },
+    {
+      "module": "Part00035",
+      "root": 4729,
+      "leaves": 50
+    },
+    {
+      "module": "Part00036",
+      "root": 4730,
+      "leaves": 33
+    },
+    {
+      "module": "Part00037",
+      "root": 4571,
+      "leaves": 52
+    },
+    {
+      "module": "Part00038",
+      "root": 4572,
+      "leaves": 27
+    },
+    {
+      "module": "Part00039",
+      "root": 4417,
+      "leaves": 44
+    },
+    {
+      "module": "Part00040",
+      "root": 4418,
+      "leaves": 34
+    },
+    {
+      "module": "Part00041",
+      "root": 4223,
+      "leaves": 46
+    },
+    {
+      "module": "Part00042",
+      "root": 4224,
+      "leaves": 47
+    },
+    {
+      "module": "Part00043",
+      "root": 4073,
+      "leaves": 38
+    },
+    {
+      "module": "Part00044",
+      "root": 4074,
+      "leaves": 38
+    },
+    {
+      "module": "Part00045",
+      "root": 3943,
+      "leaves": 37
+    },
+    {
+      "module": "Part00046",
+      "root": 3944,
+      "leaves": 28
+    },
+    {
+      "module": "Part00047",
+      "root": 3832,
+      "leaves": 56
+    },
+    {
+      "module": "Part00048",
+      "root": 3615,
+      "leaves": 58
+    },
+    {
+      "module": "Part00049",
+      "root": 3616,
+      "leaves": 51
+    },
+    {
+      "module": "Part00050",
+      "root": 3409,
+      "leaves": 50
+    },
+    {
+      "module": "Part00051",
+      "root": 3410,
+      "leaves": 52
+    },
+    {
+      "module": "Part00052",
+      "root": 3147,
+      "leaves": 60
+    },
+    {
+      "module": "Part00053",
+      "root": 3149,
+      "leaves": 52
+    },
+    {
+      "module": "Part00054",
+      "root": 3150,
+      "leaves": 20
+    },
+    {
+      "module": "Part00055",
+      "root": 2973,
+      "leaves": 42
+    },
+    {
+      "module": "Part00056",
+      "root": 2974,
+      "leaves": 45
+    },
+    {
+      "module": "Part00057",
+      "root": 2773,
+      "leaves": 46
+    },
+    {
+      "module": "Part00058",
+      "root": 2774,
+      "leaves": 55
+    },
+    {
+      "module": "Part00059",
+      "root": 2561,
+      "leaves": 57
+    },
+    {
+      "module": "Part00060",
+      "root": 2562,
+      "leaves": 47
+    },
+    {
+      "module": "Part00061",
+      "root": 2427,
+      "leaves": 30
+    },
+    {
+      "module": "Part00062",
+      "root": 2428,
+      "leaves": 38
+    },
+    {
+      "module": "Part00063",
+      "root": 2289,
+      "leaves": 40
+    },
+    {
+      "module": "Part00064",
+      "root": 2290,
+      "leaves": 30
+    },
+    {
+      "module": "Part00065",
+      "root": 2055,
+      "leaves": 50
+    },
+    {
+      "module": "Part00066",
+      "root": 2057,
+      "leaves": 33
+    },
+    {
+      "module": "Part00067",
+      "root": 2058,
+      "leaves": 33
+    },
+    {
+      "module": "Part00068",
+      "root": 1897,
+      "leaves": 26
+    },
+    {
+      "module": "Part00069",
+      "root": 1898,
+      "leaves": 54
+    },
+    {
+      "module": "Part00070",
+      "root": 1755,
+      "leaves": 33
+    },
+    {
+      "module": "Part00071",
+      "root": 1756,
+      "leaves": 39
+    },
+    {
+      "module": "Part00072",
+      "root": 1593,
+      "leaves": 39
+    },
+    {
+      "module": "Part00073",
+      "root": 1594,
+      "leaves": 40
+    },
+    {
+      "module": "Part00074",
+      "root": 1409,
+      "leaves": 54
+    },
+    {
+      "module": "Part00075",
+      "root": 1410,
+      "leaves": 39
+    },
+    {
+      "module": "Part00076",
+      "root": 1211,
+      "leaves": 41
+    },
+    {
+      "module": "Part00077",
+      "root": 1212,
+      "leaves": 58
+    },
+    {
+      "module": "Part00078",
+      "root": 1023,
+      "leaves": 47
+    },
+    {
+      "module": "Part00079",
+      "root": 1024,
+      "leaves": 48
+    },
+    {
+      "module": "Part00080",
+      "root": 879,
+      "leaves": 28
+    },
+    {
+      "module": "Part00081",
+      "root": 880,
+      "leaves": 43
+    },
+    {
+      "module": "Part00082",
+      "root": 643,
+      "leaves": 49
+    },
+    {
+      "module": "Part00083",
+      "root": 645,
+      "leaves": 30
+    },
+    {
+      "module": "Part00084",
+      "root": 646,
+      "leaves": 40
+    },
+    {
+      "module": "Part00085",
+      "root": 461,
+      "leaves": 36
+    },
+    {
+      "module": "Part00086",
+      "root": 462,
+      "leaves": 55
+    },
+    {
+      "module": "Part00087",
+      "root": 305,
+      "leaves": 28
+    },
+    {
+      "module": "Part00088",
+      "root": 306,
+      "leaves": 51
+    },
+    {
+      "module": "Part00089",
+      "root": 15,
+      "leaves": 28
+    },
+    {
+      "module": "Part00090",
+      "root": 17,
+      "leaves": 56
+    },
+    {
+      "module": "Part00091",
+      "root": 18,
+      "leaves": 62
+    }
+  ],
+  "contexts": {
+    "missing": [],
+    "occupied": []
+  },
+  "python_check": {
+    "nodes": 7907,
+    "leaves": 3954,
+    "pending": 0,
+    "complete": true,
+    "minimum_margin": 1
+  },
+  "lean_checked": false,
+  "files": {
+    "BalancedCover60Proof/Catalog.lean": "90defa1135d7f2d3148c0832484b44ab805473117cc8f6ffb6c158ef8cf4c695",
+    "BalancedCover60Proof/Part00000.lean": "856e1eb919b541086da32a0db782c9fa2799d7c9d7c3a2e682ab3708b773d816",
+    "BalancedCover60Proof/Part00001.lean": "7457f83a9104ec4b31b6f6c074991358ebc66e28a8a73c45e95c15c3b18bd896",
+    "BalancedCover60Proof/Part00002.lean": "675216e7a3597a136de181ca1a1bd5f683a0f826da75df89fa3cd97951a8a5fc",
+    "BalancedCover60Proof/Part00003.lean": "7684443cf30a57a9e3b2b229e474225dddef3c8d15e69f03a399d8e51642c06c",
+    "BalancedCover60Proof/Part00004.lean": "7ae53ed41ed9ad45dd0f7f3d55aa869abf658bc1b88e326159368c3274424567",
+    "BalancedCover60Proof/Part00005.lean": "5a756b2ea97dc114930faeb53e6da4c6ccd41c1b6c2788cd921948953f379f53",
+    "BalancedCover60Proof/Part00006.lean": "d72f0a92b3374415603142ae3504edc9a1b032fcffdb25e210282eda4f5aedb9",
+    "BalancedCover60Proof/Part00007.lean": "4602f75615f90f893a0c9dc58624a30033219d9e3718f959c565fe0c0a1cfd46",
+    "BalancedCover60Proof/Part00008.lean": "70cc749ca9f73b9bd7c95a562669e0ed0c73fc670163f442e7d14a960d3eee0c",
+    "BalancedCover60Proof/Part00009.lean": "f8141bb01eb9d5060912bc752ee21338b7c234231410572a33dd183ca32e9143",
+    "BalancedCover60Proof/Part00010.lean": "9c1f500c8a1adcaa40397544495faa51f7fad4c6c26d9f45e51f484898fd09f4",
+    "BalancedCover60Proof/Part00011.lean": "a748ee1a41766530178f7cd8311af4460d652b661179309c541a3c955d8d2eac",
+    "BalancedCover60Proof/Part00012.lean": "241e21d51a56465942ba3a829c89b2075a83f5c5263f899a529b2ae7c4bf69dd",
+    "BalancedCover60Proof/Part00013.lean": "8e8ed8a21bba24f02cd2293304bd06aab8a80e109eaf89826f702a0ba2f5162c",
+    "BalancedCover60Proof/Part00014.lean": "3f18653f88ece6613dc8ac656415ead399904a779a7d2ed81f7996a721766e78",
+    "BalancedCover60Proof/Part00015.lean": "2eff5941f5afb2c10c6f4664c606b039d2fc31f0bdfe5ab711652cbd459d3baf",
+    "BalancedCover60Proof/Part00016.lean": "60f98badcf1f41ab479f40fecad4daa55835000024f654883c4395399a47a8ff",
+    "BalancedCover60Proof/Part00017.lean": "efdb9ee64ebf5a24703c149598fe4d1b22035b42bc81a8bf75ab747533e6b1dc",
+    "BalancedCover60Proof/Part00018.lean": "5b47c99e32dc1ac239b492fceb6cbd416769aaa636de0bd4012a77d21c7981ea",
+    "BalancedCover60Proof/Part00019.lean": "338f69afc3321b23f2fed674fc3f9cf142f1adbb36f02b00793f515b946f1ae0",
+    "BalancedCover60Proof/Part00020.lean": "4fea1c25f9fe6a084e4c9a14d8806300b94228eaf8e6e52db7bb0cf15e7b02c1",
+    "BalancedCover60Proof/Part00021.lean": "2864fab7c0595cd20b260b95a3cd64bfd5ddf16fc8c7426b7a1184fb48e558ca",
+    "BalancedCover60Proof/Part00022.lean": "6da526831f1197b41c5efdd33b75f8ce26d6b52704ee19f452f07f8839837498",
+    "BalancedCover60Proof/Part00023.lean": "6a246a8d9090d3d51f13517d63fd0f1bbbef6695d361f449733a9b8cbf224cd9",
+    "BalancedCover60Proof/Part00024.lean": "a09c728176c59495a559c371741e048ebfe21bde10058644da75fb750480cc5c",
+    "BalancedCover60Proof/Part00025.lean": "12b0558d7e258928782129a20c20ac444b9f447c78087a4ff48581b9014682e4",
+    "BalancedCover60Proof/Part00026.lean": "18efaa849f63f344f1abd99fc0c78aa8507c61846db6f78e5e08a33bd8513c88",
+    "BalancedCover60Proof/Part00027.lean": "8499bf45267dd1b3f49950f658c91a615f38a49e49ec94433c4502118ab05f51",
+    "BalancedCover60Proof/Part00028.lean": "ea41ba926cfd0f65269b40c8b64ad038b7d28737a5b3b7013b18f67f47a5405b",
+    "BalancedCover60Proof/Part00029.lean": "f4487859e47128262b27a80c7263df2f3103f71f7fb9ae48101ba82978d00bfb",
+    "BalancedCover60Proof/Part00030.lean": "be2e0b1cab4c0578422f10b27f714c249bb23f034fb9f320b3c8497e7d8f6bfa",
+    "BalancedCover60Proof/Part00031.lean": "2953a7683222da9b70567ea836f2127bf6ef2b975a8b74c700f5467f00139b0b",
+    "BalancedCover60Proof/Part00032.lean": "1ace28f872adcd5ebbef3baa4f42746b9f3cc291b2d94e5ffbac2e602bc6bcdf",
+    "BalancedCover60Proof/Part00033.lean": "71230f2957d5fda8d2c036372ab4be8c2996eec1a6be2dc09ee520731fe754b4",
+    "BalancedCover60Proof/Part00034.lean": "e68484c51a1394855ff98fd4c684dbf32c91ac33f28b8f9537e34fc6d0d6003f",
+    "BalancedCover60Proof/Part00035.lean": "6cc9b8843c6d179383b833ab713a90b6d700f6b4a564ddcf999aa1f2349e499d",
+    "BalancedCover60Proof/Part00036.lean": "e92609d27fe1757854a557c8f2c2f2099bf8b001e2ac211359619c5329c75ee2",
+    "BalancedCover60Proof/Part00037.lean": "10f9f0cc75fe1bb3666be8023dcb3f0f558fbd92b0188d74fb3498ca53ba009a",
+    "BalancedCover60Proof/Part00038.lean": "06b39d9e5c252d34ff77f4ebe3524cd3cfa7821ec0c28f75ce4a9a5ca263ecfa",
+    "BalancedCover60Proof/Part00039.lean": "767fb7872fdff2f21a36e4af8f1d070611b99ef28fb913f440e0267680069965",
+    "BalancedCover60Proof/Part00040.lean": "d322c60192c12fb00618731ef904cbe7b759cd28ec23b28d0c6a1fb70021c8bc",
+    "BalancedCover60Proof/Part00041.lean": "6bb4b5bcdabcd97c1d6f5970edd932816db04933e6a8a1215ce955e8bb586a80",
+    "BalancedCover60Proof/Part00042.lean": "3ec203023a8af3c20014b84fe236fbdabdf9c2d9eefb9c6563f3e23848cd580a",
+    "BalancedCover60Proof/Part00043.lean": "b9bfef37ae366a65adfc5292f605378afaba20221f2bc1f0fc9042745201e198",
+    "BalancedCover60Proof/Part00044.lean": "ebbe480eb4f97585505b0203e6a03f5798a979883323107e251a1b2fc73af9a3",
+    "BalancedCover60Proof/Part00045.lean": "3001a23f0679008fdea669a29d9d908ea24e60fc52f25e446ea4798cca598278",
+    "BalancedCover60Proof/Part00046.lean": "6bd48a4cb47294aebc9745839766eacb8ef66d79d4995b0085d76ed02bfee44f",
+    "BalancedCover60Proof/Part00047.lean": "b3c57d5a52324615cf22f5ca912550fa19a003516a7c2c62e1d2ca2a2cc6c6fa",
+    "BalancedCover60Proof/Part00048.lean": "9c968815866c3867c0bfe2339da040729b53304e51d69b8f7c2f75ab25edc1a4",
+    "BalancedCover60Proof/Part00049.lean": "a89b77236a723b14ae1fb0547548f567a93770e8cfddbd5ba27265b79c7aca35",
+    "BalancedCover60Proof/Part00050.lean": "6dd062f9c6c8649ce2b34b108e7ace768b9636f5cb8b4e4a81ac541fc9c1f5a0",
+    "BalancedCover60Proof/Part00051.lean": "59ca33e7a5375ee588f52213eed4b397c7bd5bfe21f53bf6f71609800130478d",
+    "BalancedCover60Proof/Part00052.lean": "7c164bf8beb35fab66c6c6e1e4456bce94ef9b2a54d0cd3b1111a512856e660f",
+    "BalancedCover60Proof/Part00053.lean": "c83b78f24dd884a4a1c96074f09e13108b0d54e26c683da45f601ffed3a8b9f9",
+    "BalancedCover60Proof/Part00054.lean": "f14d24a1e73ab574a1c77c97607580c911f796c7590a5d0bca42e0021ca7bd2a",
+    "BalancedCover60Proof/Part00055.lean": "b4d4938b160b2a235f9d3e6b84ff81d07eb3ab0f5cd386e1770d390846068db4",
+    "BalancedCover60Proof/Part00056.lean": "6ab56d7a21a0b972b353fd0b91a035908021fe215d5a333c463facade7ea6754",
+    "BalancedCover60Proof/Part00057.lean": "e72e1ad80a3a03fa3cd19255042685e51e4602175cc58bdf127c2be9f805d4a3",
+    "BalancedCover60Proof/Part00058.lean": "475f90586bf33b8c7d7d5cc7f4d239986e56a12b7f0171855a2ef0622a74d960",
+    "BalancedCover60Proof/Part00059.lean": "e00a23b94cdf1c608ab77b6162c9aaa998e5791801ddaaca7c3b8b41f020a264",
+    "BalancedCover60Proof/Part00060.lean": "a9fd9a1e6cd88ae68350cd92c3e426dd5f258ec184103497d5cc5da08e2dcb78",
+    "BalancedCover60Proof/Part00061.lean": "14fde0aca0db917df9ebf6aecbffd7bc197fb84a28fcd29ef6c7bbd52cfa1590",
+    "BalancedCover60Proof/Part00062.lean": "a4ce76fdbc3c2888f5a3d5d6e14c3de31f2a4d5b1d9c737b31aa7d592832e6f6",
+    "BalancedCover60Proof/Part00063.lean": "15adc2ba6d9f27c3fd18e924b4140d211cb526e067a5b3f01612a52c7cdb090c",
+    "BalancedCover60Proof/Part00064.lean": "69aee433f62fdef96c10e4af15e0304cd73857990aff447ec7c21d9311219aaf",
+    "BalancedCover60Proof/Part00065.lean": "dd94cb89bf9666b78b9fa1c1d3b950e7734931642bb1311d75142fce8075ed35",
+    "BalancedCover60Proof/Part00066.lean": "b4e48ed78e3d62b36fd46ca196c919ab6dceeec31abee7aec46a3dad4f6ceec3",
+    "BalancedCover60Proof/Part00067.lean": "2509493aab0ce40476f6443ad69870e5a8da74b339c0fe0b84bcdd599d4d8259",
+    "BalancedCover60Proof/Part00068.lean": "75b32b49a996357c4c1c35e048aa18003d361cebe2c429736c695ef779f2f6ce",
+    "BalancedCover60Proof/Part00069.lean": "69bd4e324e56e45a517068bea7b4406c6bf52ab934a61ef7ea986735a704ec33",
+    "BalancedCover60Proof/Part00070.lean": "33d5a7e77b6a52ad4372c23e46086797017c473bf6d4d51077dcb1e4a778f558",
+    "BalancedCover60Proof/Part00071.lean": "bb2ac9a135c37271eb95f326100debcfba489b070d130f2242b28fded7782e0e",
+    "BalancedCover60Proof/Part00072.lean": "ef4c780560989e622827c7fc48d4757c092269efe633c51e6497bdfab2c9418c",
+    "BalancedCover60Proof/Part00073.lean": "5dfe117fb0089fbac2cb628b7a7e3d7032e40c83069f2a98c6a2215251e81dbf",
+    "BalancedCover60Proof/Part00074.lean": "6f1dc087fb19a7080cf845e74bfe6ee5abd91134914a3edceb57329690f9e17e",
+    "BalancedCover60Proof/Part00075.lean": "1928af4bc095ba8d3b61849b94d45b5dceae13d62815d39f306fe5caf1a7217e",
+    "BalancedCover60Proof/Part00076.lean": "f66f59621f60faf440c84d20243037c95af9179efc1cdb9b248a48e26e2e5953",
+    "BalancedCover60Proof/Part00077.lean": "472652757fde47e5ed2b91d16178e5e826ae030cc00ee0d4e1985fc8e4bd0a7f",
+    "BalancedCover60Proof/Part00078.lean": "f19a75d3b8fd0976fafe729195efbf7e95ac38d1156b728ec05de128510a7d8a",
+    "BalancedCover60Proof/Part00079.lean": "4b3af0725a05f761dbf1093e2ad529776069f3b23dad8d98df94dad345977b9b",
+    "BalancedCover60Proof/Part00080.lean": "f8915ba4427beeeeaf0d92823f5c948f5994c1d1d772874a25dfa77c06c04cfd",
+    "BalancedCover60Proof/Part00081.lean": "9539a1f5b6cea8390f2a08961c261ca08e0ebc0a579ee6778ef2e87abede9e36",
+    "BalancedCover60Proof/Part00082.lean": "b2b27edb6238cc8caab676bf4e7607cb03a7828365649ee621216cb22f60eea9",
+    "BalancedCover60Proof/Part00083.lean": "f0b8138aee108ba5c4df34a5dba9880a7f48c9e69f248b61355ec3528f5069f3",
+    "BalancedCover60Proof/Part00084.lean": "75b35bcebd81e2ffe67bbec137c6c5bc08d4ed0cdd0de267d5e7f284ee7bc5b9",
+    "BalancedCover60Proof/Part00085.lean": "1d374d19b054682892a65db2569968e7532f2718a51d0e9334e83bea7d53fe86",
+    "BalancedCover60Proof/Part00086.lean": "a1a8c77f68c16301bc02828dabcab2cb9a223c203fdb1d701da0c9fd2e38f387",
+    "BalancedCover60Proof/Part00087.lean": "5e9129df893f33c0d8eedc891df156a4394c2ea8df8a6b662c62158432de0833",
+    "BalancedCover60Proof/Part00088.lean": "e99a3c49b37020aa81e018ca30bd0cd785d0136d3ef1164385b214646d9dfdff",
+    "BalancedCover60Proof/Part00089.lean": "84c39b5a7940b44f2c99f46af1eeccc282e772bd6b0ad26f44835b0d85aa5813",
+    "BalancedCover60Proof/Part00090.lean": "aad4c8f3fd56616be2822eef6f8adc85e4ad6d6e1cae9b4e25d417f8145de278",
+    "BalancedCover60Proof/Part00091.lean": "f52ddbcd649cd3dd976d4c5b51eef0ab8f5fe3c687be8d04a95f014805b6af5c",
+    "BalancedCover60Proof/Root.lean": "22fbdb227c9ded115b5d8a3ec7eef8a4fb6bb4be1b889761e93fe8b53520daff"
+  }
+}

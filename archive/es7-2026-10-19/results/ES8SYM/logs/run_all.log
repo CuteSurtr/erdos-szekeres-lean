@@ -1,0 +1,591 @@
+# sh ES8SYM/tools/run_all.sh ES8SYM out   (run from cloud/es7-2026-10-19/results; started 2026-11-01T17:59:40Z)
+== 1. sets in Z[zeta_m] (name m centre)
+-- c4_52pts_13layers  m=4 centre=0
+dc4cf91396f8efe5e03b54ef8a4ff5d569385fcec7b9f5a016f72431c980c65b  ES8SYM/sets/c4_52pts_13layers.pts
+orbits=13 centre=0 rows=52
+{'m': 4, 'C': 0, 'n': 52, 'layers': 13, 'orbit_structure': True, 'distinct': True, 'invariant': True, 'zero_orientations': 0, 'intervalB_mismatch': 0, 'intervalB_undecided': 0, 'lexorder_intervalB_bad': 0, 'layers_are_nested_convex_orbits': True, 'radii_decreasing': True, 'max_abs_coeff': 955562502739027}
+sha256 c4_52pts_13layers.pts 8f22e17fb470ea73f958dec1d2d28e8af55e316b26a669c7b19bccce83d47bfb
+sha256 c4_52pts_13layers.otab 463d53d66822419d36c805c3ac6be75610bde465e6768a2cc713cd63a6add247
+sha256 c4_52pts_13layers.lex f6c35e1ce517058b6f33da4b7525460aac81aacf6a4b66239ea759e12a77b750
+EXACT-PREP PASS
+table n=52: 0 antisymmetry/zero violations
+convex  3-gons: DP1 22100  DP2 22100
+convex  4-gons: DP1 141809  DP2 141809
+convex  5-gons: DP1 269804  DP2 269804
+convex  6-gons: DP1 196770  DP2 196770
+convex  7-gons: DP1 45220  DP2 45220
+convex  8-gons: DP1 0  DP2 0
+largest convex subset: DP1 7  DP2 7
+CVX2 PASS (K=8)
+table n=52: 0 antisymmetry/zero violations
+convex 3-subsets: 22100
+convex 4-subsets: 141809
+convex 5-subsets: 269804
+convex 6-subsets: 196770
+convex 7-subsets: 45220
+convex 8-subsets: 0
+DP largest convex subset: 7
+n=52 points; sorted triples checked; mismatches/undecided: 0; min |det| = 1.390E+22; error bound = 2.338E-118
+CROSSCHECK PASS
+-- c5_51pts_10layers_centre  m=5 centre=1
+6d7aae98f4e1b5d5f39bf9c891221ca2f85952ad27aa019ca7e9616e710243ab  ES8SYM/sets/c5_51pts_10layers_centre.pts
+orbits=10 centre=1 rows=51
+{'m': 5, 'C': 1, 'n': 51, 'layers': 10, 'orbit_structure': True, 'distinct': True, 'invariant': True, 'zero_orientations': 0, 'intervalB_mismatch': 0, 'intervalB_undecided': 0, 'lexorder_intervalB_bad': 0, 'layers_are_nested_convex_orbits': True, 'radii_decreasing': True, 'max_abs_coeff': 26630804735585}
+sha256 c5_51pts_10layers_centre.pts dcc824eb8e169be5f5d03617d51b054a9b1e4e0dfa26fc1ec33d89c7f9074c00
+sha256 c5_51pts_10layers_centre.otab 4ad30ff45a09f90edd3238f9304ef69846fec2d46b21bb2b03d8a9df1037e567
+sha256 c5_51pts_10layers_centre.lex 39ce8eabbe99dd7f07ed216698b48dd547ff144492f0e90306b914d445cb8e4c
+EXACT-PREP PASS
+table n=51: 0 antisymmetry/zero violations
+convex  3-gons: DP1 20825  DP2 20825
+convex  4-gons: DP1 128980  DP2 128980
+convex  5-gons: DP1 314845  DP2 314845
+convex  6-gons: DP1 303090  DP2 303090
+convex  7-gons: DP1 88920  DP2 88920
+convex  8-gons: DP1 0  DP2 0
+largest convex subset: DP1 7  DP2 7
+CVX2 PASS (K=8)
+table n=51: 0 antisymmetry/zero violations
+convex 3-subsets: 20825
+convex 4-subsets: 128980
+convex 5-subsets: 314845
+convex 6-subsets: 303090
+convex 7-subsets: 88920
+convex 8-subsets: 0
+DP largest convex subset: 7
+n=51 points; sorted triples checked; mismatches/undecided: 0; min |det| = 8.289E+18; error bound = 2.837E-121
+CROSSCHECK PASS
+-- c6_54pts_9layers  m=6 centre=0
+235472b5c604421d11458865e2035b9977a8aa628f699f82bfad74536bf12c95  ES8SYM/sets/c6_54pts_9layers.pts
+orbits=9 centre=0 rows=54
+{'m': 6, 'C': 0, 'n': 54, 'layers': 9, 'orbit_structure': True, 'distinct': True, 'invariant': True, 'zero_orientations': 0, 'intervalB_mismatch': 0, 'intervalB_undecided': 0, 'lexorder_intervalB_bad': 0, 'layers_are_nested_convex_orbits': True, 'radii_decreasing': True, 'max_abs_coeff': 5456768675859}
+sha256 c6_54pts_9layers.pts 6a9c578e16555d0a64b0c7d268c375be00c1027dcdb1a95368431dde022a73a7
+sha256 c6_54pts_9layers.otab f5a5a543cb50dd7de6f92a1a91aa596bd1a7674930a5b744bc2abc9afe48905b
+sha256 c6_54pts_9layers.lex 47d5a863b62d4063c63586473922790771994c4938d91caf5b13b25e6dae5558
+EXACT-PREP PASS
+table n=54: 0 antisymmetry/zero violations
+convex  3-gons: DP1 24804  DP2 24804
+convex  4-gons: DP1 188055  DP2 188055
+convex  5-gons: DP1 592362  DP2 592362
+convex  6-gons: DP1 689353  DP2 689353
+convex  7-gons: DP1 70134  DP2 70134
+convex  8-gons: DP1 0  DP2 0
+largest convex subset: DP1 7  DP2 7
+CVX2 PASS (K=8)
+table n=54: 0 antisymmetry/zero violations
+convex 3-subsets: 24804
+convex 4-subsets: 188055
+convex 5-subsets: 592362
+convex 6-subsets: 689353
+convex 7-subsets: 70134
+convex 8-subsets: 0
+DP largest convex subset: 7
+n=54 points; sorted triples checked; mismatches/undecided: 0; min |det| = 6.779E+17; error bound = 1.715E-122
+CROSSCHECK PASS
+-- c7_63pts_9layers  m=7 centre=0
+811b47a62e5aa9c7047a06fcdd512743c3197743863b6e766d189f5c01958d1b  ES8SYM/sets/c7_63pts_9layers.pts
+orbits=9 centre=0 rows=63
+{'m': 7, 'C': 0, 'n': 63, 'layers': 9, 'orbit_structure': True, 'distinct': True, 'invariant': True, 'zero_orientations': 0, 'intervalB_mismatch': 0, 'intervalB_undecided': 0, 'lexorder_intervalB_bad': 0, 'layers_are_nested_convex_orbits': True, 'radii_decreasing': True, 'max_abs_coeff': 529357497410}
+sha256 c7_63pts_9layers.pts d4987f5e852078c1d2fe588afdd0ffa2003354f0627c6d781abed5682150e2f6
+sha256 c7_63pts_9layers.otab 6305347f507afd7de929a420afd64c6e3812bef5f8b026089baa9ad04e78baba
+sha256 c7_63pts_9layers.lex 55cb1983cc9d336a7e22f23a7d5fa8e8849ddcb141a439193834434e33c9718a
+EXACT-PREP PASS
+table n=63: 0 antisymmetry/zero violations
+convex  3-gons: DP1 39711  DP2 39711
+convex  4-gons: DP1 382137  DP2 382137
+convex  5-gons: DP1 1811523  DP2 1811523
+convex  6-gons: DP1 4220167  DP2 4220167
+convex  7-gons: DP1 4001636  DP2 4001636
+convex  8-gons: DP1 0  DP2 0
+largest convex subset: DP1 7  DP2 7
+CVX2 PASS (K=8)
+table n=63: 0 antisymmetry/zero violations
+convex 3-subsets: 39711
+convex 4-subsets: 382137
+convex 5-subsets: 1811523
+convex 6-subsets: 4220167
+convex 7-subsets: 4001636
+convex 8-subsets: 0
+DP largest convex subset: 7
+n=63 points; sorted triples checked; mismatches/undecided: 0; min |det| = 1.569E+17; error bound = 2.197E-124
+CROSSCHECK PASS
+-- c7_64pts_small  m=7 centre=1
+ebe028f65c3856a9a7c6fa595a3e735eb49a362f833b76089eea1b9f35a0ecc3  ES8SYM/sets/c7_64pts_small.pts
+orbits=9 centre=1 rows=64
+{'m': 7, 'C': 1, 'n': 64, 'layers': 9, 'orbit_structure': True, 'distinct': True, 'invariant': True, 'zero_orientations': 0, 'intervalB_mismatch': 0, 'intervalB_undecided': 0, 'lexorder_intervalB_bad': 0, 'layers_are_nested_convex_orbits': True, 'radii_decreasing': True, 'max_abs_coeff': 661}
+sha256 c7_64pts_small.pts 21f92da3bc4861479c59c2ad4c65674a1c5fb875143bd006c3b21e586d07ba90
+sha256 c7_64pts_small.otab 9e0d4d914d66b87098bc88664a4f4c7a191edc41959a056008e459f501cd7d06
+sha256 c7_64pts_small.lex 59a0b2d7af63391fe7a61931ccb1201ed568033750abe4e2e5e0fb9bf9c12496
+EXACT-PREP PASS
+table n=64: 0 antisymmetry/zero violations
+convex  3-gons: DP1 41664  DP2 41664
+convex  4-gons: DP1 416052  DP2 416052
+convex  5-gons: DP1 2077152  DP2 2077152
+convex  6-gons: DP1 5009081  DP2 5009081
+convex  7-gons: DP1 4688763  DP2 4688763
+convex  8-gons: DP1 0  DP2 0
+largest convex subset: DP1 7  DP2 7
+CVX2 PASS (K=8)
+table n=64: 0 antisymmetry/zero violations
+convex 3-subsets: 41664
+convex 4-subsets: 416052
+convex 5-subsets: 2077152
+convex 6-subsets: 5009081
+convex 7-subsets: 4688763
+convex 8-subsets: 0
+DP largest convex subset: 7
+n=64 points; sorted triples checked; mismatches/undecided: 0; min |det| = 1.462E+00; error bound = 3.425E-142
+CROSSCHECK PASS
+-- c7_64pts_9layers_centre  m=7 centre=1
+23e1389d3d1258617a4fac848bbf90e055a8af8a089ce4777437150790bf5502  ES8SYM/sets/c7_64pts_9layers_centre.pts
+orbits=9 centre=1 rows=64
+{'m': 7, 'C': 1, 'n': 64, 'layers': 9, 'orbit_structure': True, 'distinct': True, 'invariant': True, 'zero_orientations': 0, 'intervalB_mismatch': 0, 'intervalB_undecided': 0, 'lexorder_intervalB_bad': 0, 'layers_are_nested_convex_orbits': True, 'radii_decreasing': True, 'max_abs_coeff': 509924072692}
+sha256 c7_64pts_9layers_centre.pts 6576305895a4d53f05adab0f5ad842c156ff768f0682d5918f72314fb5ef3aa4
+sha256 c7_64pts_9layers_centre.otab b76fba674a03b1143d53df9f11616a39b785ab69d4027ec87b1e2e32e6bad591
+sha256 c7_64pts_9layers_centre.lex 5fc10fa6e88c61010ca179b07651f1317d8ea4e765eb6f04086203ba251a2c82
+EXACT-PREP PASS
+table n=64: 0 antisymmetry/zero violations
+convex  3-gons: DP1 41664  DP2 41664
+convex  4-gons: DP1 416220  DP2 416220
+convex  5-gons: DP1 2078804  DP2 2078804
+convex  6-gons: DP1 5011594  DP2 5011594
+convex  7-gons: DP1 4691381  DP2 4691381
+convex  8-gons: DP1 0  DP2 0
+largest convex subset: DP1 7  DP2 7
+CVX2 PASS (K=8)
+table n=64: 0 antisymmetry/zero violations
+convex 3-subsets: 41664
+convex 4-subsets: 416220
+convex 5-subsets: 2078804
+convex 6-subsets: 5011594
+convex 7-subsets: 4691381
+convex 8-subsets: 0
+DP largest convex subset: 7
+n=64 points; sorted triples checked; mismatches/undecided: 0; min |det| = 2.160E+17; error bound = 2.039E-124
+CROSSCHECK PASS
+-- c7_64pts_9layers_centre_own  m=7 centre=1
+ec48146993b86fc27952cb690cea8aaeea5475ab296ba422b87b9712179951ef  ES8SYM/sets/c7_64pts_9layers_centre_own.pts
+orbits=9 centre=1 rows=64
+{'m': 7, 'C': 1, 'n': 64, 'layers': 9, 'orbit_structure': True, 'distinct': True, 'invariant': True, 'zero_orientations': 0, 'intervalB_mismatch': 0, 'intervalB_undecided': 0, 'lexorder_intervalB_bad': 0, 'layers_are_nested_convex_orbits': True, 'radii_decreasing': True, 'max_abs_coeff': 777042}
+sha256 c7_64pts_9layers_centre_own.pts feef0f7acccffde25b9440676e1db32507c923705d2b0d262312486737d53ced
+sha256 c7_64pts_9layers_centre_own.otab 6f44c33880294fcb0942f22a83930984ee1b43f9f3ce5d26a1be78bb6846efb2
+sha256 c7_64pts_9layers_centre_own.lex 8af6d29969f2e1bff1fd24d2f1d90672891256b622014405065bc968b7ad6b6c
+EXACT-PREP PASS
+table n=64: 0 antisymmetry/zero violations
+convex  3-gons: DP1 41664  DP2 41664
+convex  4-gons: DP1 392553  DP2 392553
+convex  5-gons: DP1 1760612  DP2 1760612
+convex  6-gons: DP1 3786951  DP2 3786951
+convex  7-gons: DP1 3252475  DP2 3252475
+convex  8-gons: DP1 0  DP2 0
+largest convex subset: DP1 7  DP2 7
+CVX2 PASS (K=8)
+table n=64: 0 antisymmetry/zero violations
+convex 3-subsets: 41664
+convex 4-subsets: 392553
+convex 5-subsets: 1760612
+convex 6-subsets: 3786951
+convex 7-subsets: 3252475
+convex 8-subsets: 0
+DP largest convex subset: 7
+n=64 points; sorted triples checked; mismatches/undecided: 0; min |det| = 3.065E+04; error bound = 4.734E-136
+CROSSCHECK PASS
+-- rule_p7_64pts  m=7 centre=1
+bb38d29ae956172065280be5c48f6232b283e5992cc555691c65860355b5c8b2  ES8SYM/sets/rule_p7_64pts.pts
+orbits=9 centre=1 rows=64
+{'m': 7, 'C': 1, 'n': 64, 'layers': 9, 'orbit_structure': True, 'distinct': True, 'invariant': True, 'zero_orientations': 0, 'intervalB_mismatch': 0, 'intervalB_undecided': 0, 'lexorder_intervalB_bad': 0, 'layers_are_nested_convex_orbits': True, 'radii_decreasing': True, 'max_abs_coeff': 1019085068556}
+sha256 rule_p7_64pts.pts 74af77ed72a8f02f2c7e605cf9b760bdba02681fe709fa55acf1c7a117115827
+sha256 rule_p7_64pts.otab 624bfe7be041a0fb8388e162337be0f8b8cd8a22e4d5b891f77e411c111ea246
+sha256 rule_p7_64pts.lex bf4308ade40bf6d63d020ad908d11192c63ff0989f608938b55fcc6737d3e2c6
+EXACT-PREP PASS
+table n=64: 0 antisymmetry/zero violations
+convex  3-gons: DP1 41664  DP2 41664
+convex  4-gons: DP1 487711  DP2 487711
+convex  5-gons: DP1 3585162  DP2 3585162
+convex  6-gons: DP1 15450148  DP2 15450148
+convex  7-gons: DP1 30031745  DP2 30031745
+convex  8-gons: DP1 0  DP2 0
+largest convex subset: DP1 7  DP2 7
+CVX2 PASS (K=8)
+table n=64: 0 antisymmetry/zero violations
+convex 3-subsets: 41664
+convex 4-subsets: 487711
+convex 5-subsets: 3585162
+convex 6-subsets: 15450148
+convex 7-subsets: 30031745
+convex 8-subsets: 0
+DP largest convex subset: 7
+n=64 points; sorted triples checked; mismatches/undecided: 0; min |det| = 2.364E+13; error bound = 8.142E-124
+CROSSCHECK PASS
+-- p7_compound_64  m=7 centre=1
+ef50ee00829d9781f3f3500bf2456d9d8bc9fcfb5da3296fdbbb1f7f41cbe4da  ES8SYM/sets/p7_compound_64.pts
+orbits=9 centre=1 rows=64
+{'m': 7, 'C': 1, 'n': 64, 'layers': 9, 'orbit_structure': True, 'distinct': True, 'invariant': True, 'zero_orientations': 0, 'intervalB_mismatch': 0, 'intervalB_undecided': 0, 'lexorder_intervalB_bad': 0, 'layers_are_nested_convex_orbits': True, 'radii_decreasing': True, 'max_abs_coeff': 10000003833766}
+sha256 p7_compound_64.pts ab73ffd4a88c87f5c78a474d623e2bc6287baf20ba4e2d20608b95bb8926c3d8
+sha256 p7_compound_64.otab 30ec4f906c3dc8f99194ffaeb5f3be74d3c8eb918514656068557c44ab4ef93c
+sha256 p7_compound_64.lex f1758bc4c9ec1daa21ada71bf9a01d47dbef600f2a28a2db3978bba2d3e1cb5b
+EXACT-PREP PASS
+table n=64: 0 antisymmetry/zero violations
+convex  3-gons: DP1 41664  DP2 41664
+convex  4-gons: DP1 470764  DP2 470764
+convex  5-gons: DP1 3142335  DP2 3142335
+convex  6-gons: DP1 11670659  DP2 11670659
+convex  7-gons: DP1 18396499  DP2 18396499
+convex  8-gons: DP1 0  DP2 0
+largest convex subset: DP1 7  DP2 7
+CVX2 PASS (K=8)
+table n=64: 0 antisymmetry/zero violations
+convex 3-subsets: 41664
+convex 4-subsets: 470764
+convex 5-subsets: 3142335
+convex 6-subsets: 11670659
+convex 7-subsets: 18396499
+convex 8-subsets: 0
+DP largest convex subset: 7
+n=64 points; sorted triples checked; mismatches/undecided: 0; min |det| = 9.998E+08; error bound = 7.840E-122
+CROSSCHECK PASS
+== 2. sets with integer (or Eisenstein) coordinates (name symmetry)
+-- c2_64points_k8  C2
+25576cf253fb969b01777c2e8945dfbdecfef10fad8b8c15a3eb70b1c4a8811f  ES8SYM/sets/c2_64points_k8.txt
+{'points': 64, 'distinct': True, 'max_abs_coord': 64000000000000, 'symmetric': True, 'collinear_triples': 0, 'largest_convex_subset': 7}
+PASS
+n=64 duplicates=0 collinear_triples=0
+symmetry(C2)=1 origin_in_set=0
+orientation signs differing from out/c2_64points_k8.txt.orient: 0
+convex 3-gons: 41664
+convex 4-gons: 345986
+convex 5-gons: 1177512
+convex 6-gons: 1792349
+convex 7-gons: 1032956
+largest convex subset: 7
+-- c2_64points_k8_bb  C2
+9880dc424863da3e750921241c43e5d3840b2842e43c66fad4449b42885d7333  ES8SYM/sets/c2_64points_k8_bb.txt
+{'points': 64, 'distinct': True, 'max_abs_coord': 184485510490, 'symmetric': True, 'collinear_triples': 0, 'largest_convex_subset': 7}
+PASS
+n=64 duplicates=0 collinear_triples=0
+symmetry(C2)=1 origin_in_set=0
+orientation signs differing from out/c2_64points_k8_bb.txt.orient: 0
+convex 3-gons: 41664
+convex 4-gons: 366356
+convex 5-gons: 1300778
+convex 6-gons: 1889458
+convex 7-gons: 841636
+largest convex subset: 7
+-- c3_55points_k8  C3
+fdfad364aa585572a169dd5035111113e548d4cab7d73bd42f2ded2c838b8291  ES8SYM/sets/c3_55points_k8.txt
+{'points': 55, 'distinct': True, 'max_abs_coord': 2472, 'symmetric': True, 'collinear_triples': 0, 'largest_convex_subset': 7}
+PASS
+n=55 duplicates=0 collinear_triples=0
+orientation signs differing from out/c3_55points_k8.txt.orient: 0
+convex 3-gons: 26235
+convex 4-gons: 191739
+convex 5-gons: 568611
+convex 6-gons: 671808
+convex 7-gons: 244887
+largest convex subset: 7
+-- mirror_46points_k8  M
+bf3b8e95f20d61ffe605ac18d768be17d99677e4da9012160f933f7f7c6cd263  ES8SYM/sets/mirror_46points_k8.txt
+{'points': 46, 'distinct': True, 'max_abs_coord': 1000000000150299, 'symmetric': True, 'collinear_triples': 0, 'largest_convex_subset': 7}
+PASS
+n=46 duplicates=0 collinear_triples=0
+symmetry(M)=1 origin_in_set=0
+orientation signs differing from out/mirror_46points_k8.txt.orient: 0
+convex 3-gons: 15180
+convex 4-gons: 106853
+convex 5-gons: 380002
+convex 6-gons: 652911
+convex 7-gons: 427054
+largest convex subset: 7
+-- mirror46_A_S  MX
+ac4a3e22c5d3b7e24ac28ec17b0ff3515b619af7410e978371773fd971c021e2  ES8SYM/sets/mirror46_A_S.txt
+{'points': 46, 'distinct': True, 'max_abs_coord': 7956, 'symmetric': True, 'collinear_triples': 0, 'largest_convex_subset': 7}
+PASS
+n=46 duplicates=0 collinear_triples=0
+symmetry(M)=1 origin_in_set=0
+orientation signs differing from out/mirror46_A_S.txt.orient: 0
+convex 3-gons: 15180
+convex 4-gons: 106131
+convex 5-gons: 373412
+convex 6-gons: 637114
+convex 7-gons: 416878
+largest convex subset: 7
+-- deep42  C2
+71167a1554eff79c3d8e1ca72bd5bfaafe983c6645b3437fbe2c5fccd5660d78  ES8SYM/sets/deep42.txt
+{'points': 42, 'distinct': True, 'max_abs_coord': 1000000139804, 'symmetric': True, 'collinear_triples': 0, 'largest_convex_subset': 7}
+PASS
+n=42 duplicates=0 collinear_triples=0
+symmetry(C2)=1 origin_in_set=0
+orientation signs differing from out/deep42.txt.orient: 0
+convex 3-gons: 11480
+convex 4-gons: 68500
+convex 5-gons: 172106
+convex 6-gons: 153415
+convex 7-gons: 6180
+largest convex subset: 7
+-- control_wide_middle_k8 (same construction with a wide middle cluster; must contain octagons)
+n=64 duplicates=0 collinear_triples=0
+symmetry(C2)=1 origin_in_set=0
+convex 3-gons: 41664
+convex 4-gons: 373554
+convex 5-gons: 1461800
+convex 6-gons: 2565681
+convex 7-gons: 1743458
+convex 8-gons: 179421
+largest convex subset: 8
+== 3. refuted lemmas
+-- rotation-chain lemma as first written: 6-fold and 4-fold chains (rows a c1 c2 c3 Qa, 1-based)
+[decimal]
+  Qa == -a: True
+  layer CCW: True
+  c1: right of a->Qa (ccw half) = True   in conv(L) = True
+  c2: right of a->Qa (ccw half) = True   in conv(L) = True
+  c3: right of a->Qa (ccw half) = True   in conv(L) = True
+  turns at c1,c2,c3 strictly left: [True, True, True]
+  |cross| magnitudes: ['6.552e+23', '2.827e+22', '3.369e+23']
+  distinct: True
+[exact]
+  Qa == -a: True
+  layer CCW: True
+  c1: right of a->Qa (ccw half) = True   in conv(L) = True
+  c2: right of a->Qa (ccw half) = True   in conv(L) = True
+  c3: right of a->Qa (ccw half) = True   in conv(L) = True
+  turns at c1,c2,c3 strictly left: [True, True, True]
+  distinct: True
+d(j+1) = 2*4 = 8 > K-1 = 7: the conclusion of Lemma 3 fails for this chain
+[decimal]
+  Qa == -a: True
+  layer CCW: True
+  c1: right of a->Qa (ccw half) = True   in conv(L) = True
+  c2: right of a->Qa (ccw half) = True   in conv(L) = True
+  c3: right of a->Qa (ccw half) = True   in conv(L) = True
+  turns at c1,c2,c3 strictly left: [True, True, True]
+  |cross| magnitudes: ['1.415e+30', '1.635e+27', '7.750e+28']
+  distinct: True
+[exact]
+  Qa == -a: True
+  layer CCW: True
+  c1: right of a->Qa (ccw half) = True   in conv(L) = True
+  c2: right of a->Qa (ccw half) = True   in conv(L) = True
+  c3: right of a->Qa (ccw half) = True   in conv(L) = True
+  turns at c1,c2,c3 strictly left: [True, True, True]
+  distinct: True
+d(j+1) = 2*4 = 8 > K-1 = 7: the conclusion of Lemma 3 fails for this chain
+-- needle of c7_64pts_small (rows 7 15 23 31 36 44 49 60, 0-based)
+points [7, 15, 23, 31, 36, 44, 49, 60]
+convex subsets by size: {3: 56, 4: 45, 5: 12, 6: 0, 7: 0, 8: 0}
+largest convex subset: 5, e.g. [15, 23, 44, 49, 60]
+-- central chains and the projective image of c2_64points_k8
+A. halves (start, longest outward, longest inward, #outward 4-chains, #closing, largest closing j):
+   (0, 4, 7, 4610, 0, 3)
+   (1, 5, 7, 6717, 0, 3)
+   (2, 6, 7, 8773, 0, 3)
+   (3, 6, 7, 10709, 0, 3)
+   (4, 6, 7, 12462, 0, 3)
+   (5, 7, 7, 14077, 0, 3)
+   (6, 7, 7, 15347, 0, 3)
+   (7, 7, 7, 16218, 0, 3)
+   (8, 7, 7, 16682, 0, 3)
+   (9, 7, 7, 16625, 0, 3)
+   (10, 6, 7, 16017, 0, 3)
+   (11, 6, 7, 14816, 0, 3)
+   (12, 6, 7, 13848, 0, 3)
+   (13, 6, 7, 13086, 0, 3)
+   (14, 6, 7, 12509, 0, 3)
+   (15, 6, 7, 12102, 0, 3)
+   (16, 6, 7, 11668, 0, 3)
+   (17, 6, 7, 11248, 0, 3)
+   (18, 6, 7, 10833, 0, 3)
+   (19, 6, 7, 10420, 0, 3)
+   (20, 6, 7, 9904, 0, 3)
+   (21, 6, 7, 9303, 0, 3)
+   (22, 6, 7, 8623, 0, 3)
+   (23, 6, 7, 7841, 0, 3)
+   (24, 6, 7, 6948, 0, 3)
+   (25, 5, 7, 5954, 0, 3)
+   (26, 5, 6, 5012, 0, 3)
+   (27, 5, 6, 4320, 0, 3)
+   (28, 5, 6, 3866, 0, 3)
+   (29, 5, 6, 3644, 0, 3)
+   (30, 5, 6, 3654, 0, 3)
+   (31, 4, 6, 3902, 0, 3)
+  min/max longest outward: 4 7  min/max longest inward: 6 7
+  outward 4-chains that close (would give a symmetric octagon): total 0
+  largest centrally symmetric convex polygon: 2 * 3
+  example outward 4-chain (half start 0): [(100000, 36542), (999986000000, 999999266000), (1999995000000, 7999999917700), (4000000000000, 64000000000000)]
+    inner turns: [1, 1]  closing turns orient(p3,p4,-p1), orient(-p4,p1,p2): 1 -1
+B. T mirror-symmetric under (u,w)->(u,-w): True   points with w>0: 32
+   triples violating chi_T = -chi_S * sgn(y'y'y'): 0
+   wrote out/k8proj_T.bin out/k8proj_T_sides.txt
+convex 3-gons: 41664
+convex 4-gons: 377650
+convex 5-gons: 1934926
+convex 6-gons: 6498469
+convex 7-gons: 15305662
+convex 8-gons: 25739849  (one side: 0, crossing: 25739849)
+convex 9-gons: 30330332  (one side: 0, crossing: 30330332)
+convex 10-gons: 23757669  (one side: 0, crossing: 23757669)
+convex 11-gons: 11091066  (one side: 0, crossing: 11091066)
+convex 12-gons: 2329917  (one side: 0, crossing: 2329917)
+convex 13-gons: 1656  (one side: 0, crossing: 1656)
+convex 14-gons: 1  (one side: 0, crossing: 1)
+largest convex subset: 14
+-- deep halves
+violating pairs per half: [300, 327, 325, 325, 327, 325, 325, 327, 331, 337, 345, 395, 387, 381, 377, 375, 365, 357, 351, 347, 345, 345, 347, 351, 357, 365, 380, 376, 374, 374, 376, 365]
+halves satisfying the deep hypothesis: 0
+violating pairs per half: [0, 115, 112, 111, 112, 115, 105, 97, 91, 87, 85, 75, 77, 81, 87, 89, 99, 111, 122, 138, 155]
+halves satisfying the deep hypothesis: 1
+== 4. mirror: regenerate both CNFs for 23 points
+n=23: 12102 variables, 144991 clauses -> out/r23.cnf
+n=23 K=8 mode=full vars=8521 clauses=124939 -> out/es_n23_K8.cnf
+47f4cc187cde5932b458e1dcb4b1fd0696bcb72b18403aa15c70df0fb1aae928  out/r23.cnf
+d7088e452363000256403f9f4221c45030606993a132ce1ceb132a97f1dde881  out/es_n23_K8.cnf
+== 5. order-type invariants and line-modules of the 64-point sets
+float cross-check disagreements (|det| not tiny): 0
+n=64, no collinear triple, table written to out/c7_64pts_small.ot
+float cross-check disagreements (|det| not tiny): 0
+n=64, no collinear triple, table written to out/c7_64pts_9layers_centre.ot
+float cross-check disagreements (|det| not tiny): 0
+n=64, no collinear triple, table written to out/c7_64pts_9layers_centre_own.ot
+float cross-check disagreements (|det| not tiny): 0
+n=64, no collinear triple, table written to out/rule_p7_64pts.ot
+float cross-check disagreements (|det| not tiny): 0
+n=64, no collinear triple, table written to out/p7_compound_64.ot
+n=64, no collinear triple, table written to out/c2_64points_k8.ot
+n=64, no collinear triple, table written to out/es_64.ot
+-- c7_64pts_small
+n=64
+table_violations=0
+tri_in=6468,5019,4242,3661,3122,2828,2779,2303,2674,1659,1435,1036,826,693,476,413,420,245,294,84,217,133,112,126,105,35,28,35,49,21,49,14,7,7,7,0,14,0,0,14,0,7,0,0,0,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+jedge=7,7,14,21,28,35,49,49,56,63,63,70,70,70,63,77,77,70,84,77,84,98,98,84,84,98,77,70,77,70,77,49
+halving_lines=49
+layers=7,7,7,7,7,7,7,7,7,1
+holes=6468,8694,5971,2086,294  (j=3..7)
+convex=41664,416052,2077152,5009081,4688763  (j=3..7)
+max_convex=7
+hull_size=7
+aut_plus=7
+mirror_automorphism=0
+canon_written=out/c7_64pts_small.ot.canon
+candidates tested: 43981
+n=64 nontrivial_line_modules=14
+size_histogram: 61:7 62:7
+-- c7_64pts_9layers_centre
+n=64
+table_violations=0
+tri_in=6580,4956,4109,3752,3087,2751,2800,2380,2674,1743,1400,1022,826,672,462,420,413,301,259,98,189,147,105,119,112,28,28,42,42,35,35,14,7,7,7,0,14,0,7,7,0,7,0,0,0,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+jedge=7,7,14,21,28,35,49,49,56,63,63,70,70,70,63,84,70,77,70,77,91,98,98,84,91,91,77,70,77,70,84,42
+halving_lines=42
+layers=7,7,7,7,7,7,7,7,7,1
+holes=6580,9065,6433,2345,350  (j=3..7)
+convex=41664,416220,2078804,5011594,4691381  (j=3..7)
+max_convex=7
+hull_size=7
+aut_plus=7
+mirror_automorphism=0
+canon_written=out/c7_64pts_9layers_centre.ot.canon
+candidates tested: 43939
+n=64 nontrivial_line_modules=14
+size_histogram: 61:7 62:7
+-- c7_64pts_9layers_centre_own
+n=64
+table_violations=0
+tri_in=6671,4998,3773,3577,2975,2625,2590,2338,2450,1554,1281,1113,889,644,518,448,595,308,427,287,210,140,154,147,168,98,98,84,63,42,70,21,35,28,35,21,7,7,28,7,42,0,21,14,21,7,0,0,0,0,0,7,0,7,0,7,0,14,0,0,0,0
+jedge=7,7,7,21,21,35,42,49,49,56,70,77,77,77,63,63,70,63,84,63,70,70,77,98,105,105,91,91,84,91,84,49
+halving_lines=49
+layers=7,7,7,7,7,7,7,7,7,1
+holes=6671,9380,6839,2576,399  (j=3..7)
+convex=41664,392553,1760612,3786951,3252475  (j=3..7)
+max_convex=7
+hull_size=7
+aut_plus=7
+mirror_automorphism=0
+canon_written=out/c7_64pts_9layers_centre_own.ot.canon
+candidates tested: 37317
+n=64 nontrivial_line_modules=22
+size_histogram: 57:1 60:7 61:7 62:7
+-- rule_p7_64pts
+n=64
+table_violations=0
+tri_in=7189,6146,6153,4683,3864,3360,2331,2331,2331,1575,630,378,189,189,189,63,63,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+jedge=7,14,21,28,35,42,49,56,63,70,77,84,91,98,105,98,84,63,70,77,63,70,77,63,70,63,63,70,70,70,70,35
+halving_lines=35
+layers=7,7,7,7,7,7,7,7,7,1
+holes=7189,11025,8771,3577,595  (j=3..7)
+convex=41664,487711,3585162,15450148,30031745  (j=3..7)
+max_convex=7
+hull_size=7
+aut_plus=7
+mirror_automorphism=0
+canon_written=out/rule_p7_64pts.ot.canon
+candidates tested: 65975
+n=64 nontrivial_line_modules=98
+size_histogram: 2:35 3:21 5:7 6:14 8:7 9:7 62:7
+-- p7_compound_64
+n=64
+table_violations=0
+tri_in=7063,5201,4956,3675,3801,3927,3087,2898,2709,2016,1134,819,252,126,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+jedge=7,14,21,28,35,42,49,56,63,70,77,84,84,84,84,77,70,63,70,77,63,77,91,84,91,77,63,70,70,70,70,35
+halving_lines=35
+layers=7,7,7,7,7,7,7,7,7,1
+holes=7063,10591,8211,3255,525  (j=3..7)
+convex=41664,470764,3142335,11670659,18396499  (j=3..7)
+max_convex=7
+hull_size=7
+aut_plus=7
+mirror_automorphism=0
+canon_written=out/p7_compound_64.ot.canon
+candidates tested: 65604
+n=64 nontrivial_line_modules=98
+size_histogram: 2:42 3:21 5:14 6:7 9:7 62:7
+-- c2_64points_k8
+n=64
+table_violations=0
+tri_in=7024,4992,4320,3250,2610,2336,1688,1664,1640,1616,972,930,900,862,840,536,518,516,514,512,110,166,208,216,238,238,210,234,258,282,186,196,210,224,238,12,14,16,18,20,22,12,12,12,12,12,12,12,12,12,0,0,0,0,0,0,0,0,0,0,0,0
+jedge=4,10,16,22,28,34,28,34,40,46,52,48,54,60,66,64,68,70,64,62,54,88,94,100,106,104,110,116,114,116,112,32
+halving_lines=32
+layers=4,6,6,4,6,6,6,4,4,6,4,6,2
+holes=7024,10529,8218,3302,542  (j=3..7)
+convex=41664,345986,1177512,1792349,1032956  (j=3..7)
+max_convex=7
+hull_size=4
+aut_plus=2
+mirror_automorphism=0
+canon_written=out/c2_64points_k8.ot.canon
+candidates tested: 57164
+n=64 nontrivial_line_modules=44
+size_histogram: 2:14 3:8 4:2 5:4 6:2 7:2 9:4 10:2 57:2 62:4
+-- es_64
+n=64
+table_violations=0
+tri_in=7254,5250,4604,3518,2892,2638,1932,1932,1932,1932,1072,1072,1072,1072,1072,484,484,484,484,484,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+jedge=7,14,21,28,35,42,35,42,49,56,63,60,67,74,81,78,83,86,81,80,72,64,70,76,82,80,86,92,90,92,88,42
+halving_lines=42
+layers=7,7,7,5,6,7,6,5,3,4,5,2
+holes=7254,11264,9097,3772,638  (j=3..7)
+convex=41664,422186,2171562,5252469,4720996  (j=3..7)
+max_convex=7
+hull_size=7
+aut_plus=1
+mirror_automorphism=0
+canon_written=out/es_64.ot.canon
+candidates tested: 71912
+n=64 nontrivial_line_modules=187
+size_histogram: 2:48 3:32 4:16 5:16 6:8 7:6 9:10 10:4 12:3 14:4 15:2 16:3 19:3 20:1 21:4 22:2 32:1 35:2 38:1 41:4 42:2 50:1 52:1 56:4 57:2 62:7
+-- hull vertices of the first two 7-fold sets are not deep (exact certificates)
+q=0 |V_q|=1596 max angular gap (float, info) = 2.633 rad; exact certificate: ([(48, 41), (50, 37), (31, 22)], [1, 1, 1])
+q=1 |V_q|=1596 max angular gap (float, info) = 2.633 rad; exact certificate: ([(17, 25), (50, 37), (29, 19)], [1, 1, 1])
+q=2 |V_q|=1596 max angular gap (float, info) = 2.633 rad; exact certificate: ([(33, 24), (50, 37), (15, 60)], [1, 1, 1])
+q=3 |V_q|=1596 max angular gap (float, info) = 2.633 rad; exact certificate: ([(31, 14), (50, 37), (24, 39)], [1, 1, 1])
+q=4 |V_q|=1596 max angular gap (float, info) = 2.633 rad; exact certificate: ([(32, 15), (28, 26), (24, 39)], [1, 1, 1])
+q=5 |V_q|=1596 max angular gap (float, info) = 2.633 rad; exact certificate: ([(55, 35), (29, 27), (46, 39)], [1, 1, 1])
+q=6 |V_q|=1596 max angular gap (float, info) = 2.633 rad; exact certificate: ([(48, 41), (34, 17), (30, 21)], [1, 1, 1])
+ALL HULL VERTICES NON-DEEP (exact): True
+q=0 |V_q|=1596 max angular gap (float, info) = 2.634 rad; exact certificate: ([(39, 59), (21, 29), (31, 22)], [1, 1, 1])
+q=1 |V_q|=1596 max angular gap (float, info) = 2.634 rad; exact certificate: ([(33, 62), (21, 29), (29, 19)], [1, 1, 1])
+q=2 |V_q|=1596 max angular gap (float, info) = 2.634 rad; exact certificate: ([(33, 24), (21, 29), (15, 60)], [1, 1, 1])
+q=3 |V_q|=1596 max angular gap (float, info) = 2.634 rad; exact certificate: ([(31, 14), (21, 29), (24, 34)], [1, 1, 1])
+q=4 |V_q|=1596 max angular gap (float, info) = 2.634 rad; exact certificate: ([(32, 15), (28, 26), (24, 34)], [1, 1, 1])
+q=5 |V_q|=1596 max angular gap (float, info) = 2.634 rad; exact certificate: ([(26, 34), (29, 27), (46, 39)], [1, 1, 1])
+q=6 |V_q|=1596 max angular gap (float, info) = 2.634 rad; exact certificate: ([(39, 59), (34, 17), (30, 21)], [1, 1, 1])
+ALL HULL VERTICES NON-DEEP (exact): True
+== done
+exit=0  finished 2026-11-01T18:00:22Z

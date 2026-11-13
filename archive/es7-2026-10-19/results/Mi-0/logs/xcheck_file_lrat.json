@@ -1,0 +1,40 @@
+[
+ {
+  "origin": 24,
+  "cube": [
+   1015,
+   580,
+   1421,
+   -1919,
+   1825,
+   -588,
+   -714
+  ],
+  "status": [
+   "s UNSATISFIABLE"
+  ],
+  "solve_s": 0.9,
+  "proof_lines": 155370,
+  "file_lrat_check": "VERIFIED",
+  "truncated_proof_check": "NOT VERIFIED"
+ },
+ {
+  "origin": 100,
+  "cube": [
+   -1015,
+   525,
+   1135,
+   1022,
+   -532,
+   1048,
+   638
+  ],
+  "status": [
+   "s UNSATISFIABLE"
+  ],
+  "solve_s": 54.4,
+  "proof_lines": 533261,
+  "file_lrat_check": "VERIFIED",
+  "truncated_proof_check": "NOT VERIFIED"
+ }
+]

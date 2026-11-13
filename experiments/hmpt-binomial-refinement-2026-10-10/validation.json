@@ -1,0 +1,143 @@
+{
+  "complete": true,
+  "scope": "Ordinary finite real planar point sets in general position; improves this repository finite counting interface, not the HMPT leading coefficient or a literature-priority claim",
+  "checked_theorem_roots": [
+    "ErdosSzekeres.HMPT.convexSubsets_card_le_choose",
+    "ErdosSzekeres.HMPT.convex_two_scale_binomial_bound",
+    "ErdosSzekeres.HMPT.two_scale_binomial_bound",
+    "ErdosSzekeres.HMPT.twoScaleBinomialThreshold_le",
+    "ErdosSzekeres.HMPT.twoScaleBinomialThreshold_lt",
+    "ErdosSzekeres.HMPT.two_scale_factorial_exponential_bound",
+    "ErdosSzekeres.HMPT.integer_two_scale_factorial_bound",
+    "ErdosSzekeres.HMPT.twoScaleFactorialExponent_le",
+    "ErdosSzekeres.HMPT.suk_two_scale_factorial_bound",
+    "ErdosSzekeres.HMPT.BinomialRefinementExample.strict_exponent_example"
+  ],
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "proof_placeholder_scan": "Passed for both new Lean source files",
+  "commands": [
+    "ELAN_HOME=\"$PWD/.elan\" .elan/bin/lake env lean -M1500 ErdosSzekeres/HMPT/BinomialRefinement.lean",
+    "ELAN_HOME=\"$PWD/.elan\" .elan/bin/lake build ErdosSzekeres.HMPT.BinomialRefinement",
+    "ELAN_HOME=\"$PWD/.elan\" .elan/bin/lake env lean -M1500 .cache/hmpt-refinement/Audit.lean",
+    "ELAN_HOME=\"$PWD/.elan\" .elan/bin/lake env lean -M1500 experiments/hmpt-binomial-refinement-2026-10-10/StrictExponentExample.lean"
+  ],
+  "numeric_kernel_example": {
+    "m": 3,
+    "n": 4,
+    "d": 26,
+    "old_exponent": 129,
+    "new_exponent": 128,
+    "purpose": "Arithmetic strictness, not a competitive bound for ES(4)"
+  },
+  "python_diagnostics": {
+    "arithmetic": "exact Python integers",
+    "kernel_numeric_instances": false,
+    "scope": "sharper repository finite formula; no priority or best-known numerical claim",
+    "results": [
+      {
+        "n": 128,
+        "m": 4,
+        "a": 3,
+        "input_exponent": 1159,
+        "product_clog": 2142,
+        "factorial_log": 6,
+        "old_exponent": 3644,
+        "new_exponent": 3643,
+        "saved": 1,
+        "exact_budget_check": true,
+        "wall_seconds": 2.9708025977015495e-05
+      },
+      {
+        "n": 4096,
+        "m": 16,
+        "a": 5,
+        "input_exponent": 2505,
+        "product_clog": 259005,
+        "factorial_log": 48,
+        "old_exponent": 10046,
+        "new_exponent": 10044,
+        "saved": 2,
+        "exact_budget_check": true,
+        "wall_seconds": 0.011521499953232706
+      },
+      {
+        "n": 4096,
+        "m": 32,
+        "a": 6,
+        "input_exponent": 3461,
+        "product_clog": 473518,
+        "factorial_log": 122,
+        "old_exponent": 10224,
+        "new_exponent": 10223,
+        "saved": 1,
+        "exact_budget_check": true,
+        "wall_seconds": 0.012350416975095868
+      },
+      {
+        "n": 8192,
+        "m": 32,
+        "a": 6,
+        "input_exponent": 3461,
+        "product_clog": 946574,
+        "factorial_log": 122,
+        "old_exponent": 15480,
+        "new_exponent": 15479,
+        "saved": 1,
+        "exact_budget_check": true,
+        "wall_seconds": 0.05439133301842958
+      },
+      {
+        "n": 8192,
+        "m": 64,
+        "a": 7,
+        "input_exponent": 4651,
+        "product_clog": 1767656,
+        "factorial_log": 302,
+        "old_exponent": 15932,
+        "new_exponent": 15930,
+        "saved": 2,
+        "exact_budget_check": true,
+        "wall_seconds": 0.047138000023551285
+      },
+      {
+        "n": 16384,
+        "m": 64,
+        "a": 7,
+        "input_exponent": 4651,
+        "product_clog": 3534126,
+        "factorial_log": 302,
+        "old_exponent": 25429,
+        "new_exponent": 25427,
+        "saved": 2,
+        "exact_budget_check": true,
+        "wall_seconds": 0.15540145803242922
+      }
+    ]
+  },
+  "primary_sources": [
+    "https://arxiv.org/abs/1710.11415",
+    "https://arxiv.org/html/1710.11415v3"
+  ],
+  "files": {
+    "ErdosSzekeres/HMPT/BinomialRefinement.lean": {
+      "sha256": "45fcaed894e68ea98572d251566736ff4d1a0413210013542345f6537364d8b9",
+      "bytes": 8750
+    },
+    "experiments/hmpt-binomial-refinement-2026-10-10/StrictExponentExample.lean": {
+      "sha256": "9a55f33d337f006f53df075255fd5c56ba7ef93aae076ee75d3d634570a33064",
+      "bytes": 666
+    },
+    "experiments/hmpt-binomial-refinement-2026-10-10/README.md": {
+      "sha256": "b048763560bef592477406e7e66237c3b1ebc09a2072201035803b564210e4aa",
+      "bytes": 3251
+    },
+    "experiments/hmpt-binomial-refinement-2026-10-10/axiom-audit.txt": {
+      "sha256": "88b07a776eea4e4c7a3a0a7769661a0444073d6d4a8070be907951c33fb718d1",
+      "bytes": 1127
+    }
+  }
+}

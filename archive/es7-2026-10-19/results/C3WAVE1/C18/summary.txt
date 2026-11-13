@@ -1,0 +1,18 @@
+root	status	certified_by_depth	splits	solve_s	check_s	open_leaves
+0s0-1s0_2s1-10s0	CLOSED	{2: 1}	0	12	18	0
+0s0-1s0_3s0-6s1	CLOSED	{2: 1}	0	70	46	0
+0s0-1s0_4s0-5s0	CLOSED	{2: 1}	0	4	20	0
+0s0-1s0_5s0-10s1	CLOSED	{2: 1}	0	36	42	0
+0s0-1s0_6s0-8s0	CLOSED	{2: 1}	0	6	23	0
+0s0-1s0_7s1-9s1	CLOSED	{2: 1}	0	5	23	0
+0s0-1s1_2s0-5s1	open	{3: 34}	8	1438	1026	512
+0s0-1s1_2s1-9s1	CLOSED	{3: 84, 4: 462}	8	6249	9579	0
+0s0-1s1_3s1-7s0	open	{4: 135}	8	1088	2090	411
+
+depth	certified	split	open
+2	6	3	0
+3	118	21	134
+4	597	0	789
+
+SAT records: []
+UNSAT not certified: ['0s0-1s1_2s0-5s1_3_4']

@@ -1,0 +1,25 @@
+.cache/es7/final-2026-11-04/lean_merge/scratch/Mutant3.lean:1377:8: error: linarith failed to find a contradiction
+case h1.h
+S : Finset Point
+c : Point
+m K : ℕ
+hm : 2 ≤ m
+heven : Even m
+hK : K ≤ 2 * m
+hc : c ∉ S
+hinv : Invariant (rotAbout c (2 * Real.pi / ↑m)) S
+hgp : GeneralPosition S
+hno : ¬HasConvexNGon K S
+i j : ℕ
+hij : i ≠ j
+r r' α β : ℝ
+hr : 0 < r
+hr' : 0 < r'
+hx : polar c r α ∈ hullVerts (peel S i)
+hy : polar c r' β ∈ hullVerts (peel S j)
+hm0 : 0 < m
+k : ℤ
+hk : β - α = ↑k * (Real.pi / ↑m)
+a✝ : β < α + ↑k * (2 * Real.pi / ↑m)
+⊢ False
+failed

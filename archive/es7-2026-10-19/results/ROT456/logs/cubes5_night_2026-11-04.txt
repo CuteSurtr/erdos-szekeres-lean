@@ -1,0 +1,12 @@
+# 5-fold night run, 4 November 2026 (KST 01:59-08:30): m5K8t13 + H(1) cubes; CaDiCaL 3.0.1, LRAT streamed to zstd
+02:34:58 d000111 UNKNOWN(-15) 801.7s
+02:34:58 lane retired (maxlanes 2)
+08:29:59 d001111 UNKNOWN(0) 22102.2s
+08:29:59 d010100 UNKNOWN(0) 22102.2s
+08:29:59 runner done
+# memory guard (yields to other jobs at 28 GB total RAM)
+02:34:58 RAM 28.0 GB: maxlanes 2, stopped cadical 74907
+# final CaDiCaL statistics (conflicts, decisions, peak RSS MB)
+d001111: conflicts 50758899 decisions 188666100 rss 2448.22
+d010100: conflicts 50441973 decisions 188033057 rss 2634.44
+d000111: conflicts 2137339 decisions 10312332 rss 2276.92

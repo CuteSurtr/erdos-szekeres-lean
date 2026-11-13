@@ -1,0 +1,68 @@
+Running HiGHS 1.15.1 (git hash: 04024d7): Copyright (c) 2026 under MIT licence terms
+Includes third-party software components, see THIRD_PARTY_NOTICES.md for full details
+MIP has 2651 rows; 154 cols; 36503 nonzeros; 154 integer variables (153 binary)
+Coefficient ranges:
+  Matrix  [1e+00, 1e+00]
+  Cost    [1e+00, 1e+00]
+  Bound   [1e+00, 1e+00]
+  RHS     [1e+00, 3e+01]
+Presolving model
+2651 rows, 153 cols, 36406 nonzeros 0s
+2632 rows, 153 cols, 36017 nonzeros 0s
+Presolve reductions: rows 2632(-19); columns 153(-1); nonzeros 36017(-486) 
+Objective function is integral with scale 1
+
+Solving MIP model with:
+   2632 rows
+   153 cols (153 binary, 0 integer, 0 implied int., 0 continuous, 0 domain fixed)
+   36017 nonzeros
+   Thread count 1 (of 32 threads). Using 1 max workers. Parallel search off
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic;
+     I => Shifting; J => Feasibility jump; L => Sub-MIP; P => Empty MIP; R => Randomized rounding;
+     S => Solve LP; T => Evaluate node; U => Unbounded; X => User solution; Y => HiGHS solution;
+     Z => ZI Round; l => Trivial lower; p => Trivial point; u => Trivial upper; z => Trivial zero
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+ u       0       0         0   0.00%   -inf            153                Large        0      0      0         0     0.0s
+ J       0       0         0   0.00%   -inf            152                Large        0      0      0         0     0.1s
+ S       0       0         0   0.00%   0               77               100.00%        0      0      0         0     0.1s
+ R       0       0         0   0.00%   35.33333333     76                53.51%        0      0      0       198     0.1s
+ S       0       0         0   0.00%   36              71                49.30%     4509     17      2      1229     0.6s
+ L       0       0         0   0.00%   36              40                10.00%     4509     17      2      1229     0.8s
+ L       0       0         0   0.00%   36              38                 5.26%     4509     16      2      3091     1.7s
+ T      28       0         4   0.00%   36              37                 2.70%     4524     16     66     10367     2.3s
+ B     199       0        81  75.01%   36              36                 0.00%     6685      8    217     43941     4.6s
+       201       0        81 100.00%   36              36                 0.00%     6685      8    218     43975     4.6s
+
+Solving report
+  Status            Optimal
+  Primal bound      36
+  Dual bound        36
+  Gap               0%
+  P-D integral      0.583264060699
+  Solution status   feasible
+                    36 (objective)
+                    0 (bound viol.)
+                    7.33857419277e-14 (int. viol.)
+                    0 (row viol.)
+  Timing            4.55
+                    0.09 (Presolve)
+                        MIP    time [calls] = 0.03 [1]
+                        subMIP time [calls] = 0.06 [8]
+                    4.47 (Solve)
+                        MIP    time [calls] = 3.43 [1]
+                        subMIP time [calls] = 1.03 [8]
+                    0.00 (Postsolve)
+                        MIP    time [calls] = 0.00 [1]
+                        subMIP time [calls] = 0.00 [8]
+  Max sub-MIP depth 8
+  Nodes             201
+  Repair LPs        0
+  LP iterations     43975
+                    19618 (strong br.)
+                    1200 (separation)
+                    7363 (heuristics)
+c=54: status HighsModelStatus.kOptimal incumbent 35.99999999999999 dual bound 35.99999999999999 nodes 201 t=5s

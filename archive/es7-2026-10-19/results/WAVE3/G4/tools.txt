@@ -1,0 +1,9 @@
+cadical    https://github.com/arminbiere/cadical  commit c60730422e758ef1cebe7aeddf2dda31c996bf04  version 3.0.1  (./configure && make)
+march_cu   https://github.com/marijnheule/CnC     commit 705b60c6491ef2b61988b3ce6ac674be1b90571d  built with CFLAGS="-O3 -fno-strict-aliasing -Wall -DNDEBUG -fcommon"
+cake_lpr   https://github.com/tanyongkiam/cake_lpr commit a36874a8b750b43fe4b385b8ddbf5b033e46a3fa  make cake_lpr; bundled example: s VERIFIED UNSAT
+sha256:
+838ef22ce24f60e29378c3d890490369801dc225f1609870a6b3c376be003db0  cadical
+afcbb47642a922676693b325ed19d88698c6b8f700943fa2753d98126579f222  march_cu
+1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca  cake_lpr
+F.cnf: 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d (expected 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d)
+U15_L.cnf: 3f479f9f29a96f5cc39130124ce2a6402a6bc2b2bec73262b0de9fbb3c5adc8e (cases.jsonl 3f479f9f29a96f5cc39130124ce2a6402a6bc2b2bec73262b0de9fbb3c5adc8e)

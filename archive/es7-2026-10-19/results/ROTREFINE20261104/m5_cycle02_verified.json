@@ -1,0 +1,131 @@
+{
+  "candidate_clause": [
+    -1,
+    -2,
+    -8,
+    -10,
+    -11,
+    -64,
+    -65,
+    -67,
+    -374,
+    422,
+    -471
+  ],
+  "comparisons": 3,
+  "exact56": {
+    "all_orbit_injections": true,
+    "arithmetic": "integer Z[zeta_5] and A+B sqrt(5) sign comparison",
+    "arithmetic_source_sha256": "b9354812e74145b4f6b74615f5910da084c0b7067af50ebd8cb19d5b365a2417",
+    "directions_and_sign_flips": true,
+    "embeddings": 2200,
+    "forbidden_matches": 0,
+    "nonzero_triples": 26235,
+    "points_without_centre": 55,
+    "relative_shifts_complete": true,
+    "source_layers": [
+      0,
+      2
+    ],
+    "source_sha256": "4cdd24bbeaa56d437420b1d1f63ca5ecb0fba64482ceb78ba6f1f7a496cf3387",
+    "table_sha256": "2a780b6ce4bf794eee1893dc557260f53bff2c65e87027ab077c63a61ba0ffed"
+  },
+  "kind": "rotation_product_cycle",
+  "m": 5,
+  "model_sha256": "25600122ca05afaddffff428014c624f78a9daa5ade96a70fa30cd758afc104d",
+  "pattern": [
+    [
+      [
+        0,
+        1,
+        2
+      ],
+      1
+    ],
+    [
+      [
+        0,
+        1,
+        3
+      ],
+      1
+    ],
+    [
+      [
+        0,
+        1,
+        10
+      ],
+      1
+    ],
+    [
+      [
+        0,
+        1,
+        12
+      ],
+      1
+    ],
+    [
+      [
+        0,
+        1,
+        13
+      ],
+      1
+    ],
+    [
+      [
+        0,
+        2,
+        11
+      ],
+      1
+    ],
+    [
+      [
+        0,
+        2,
+        12
+      ],
+      1
+    ],
+    [
+      [
+        0,
+        2,
+        14
+      ],
+      1
+    ],
+    [
+      [
+        0,
+        10,
+        12
+      ],
+      1
+    ],
+    [
+      [
+        0,
+        11,
+        12
+      ],
+      -1
+    ],
+    [
+      [
+        0,
+        12,
+        14
+      ],
+      1
+    ]
+  ],
+  "scope": "realizations invariant under the specified fivefold rotation",
+  "source_search_not_imported": true,
+  "t": 12,
+  "verified_by": "encoder A map and exact coefficient/exponent comparisons",
+  "witness_sha256": "83169994f3759f05ac18250404bd1f3a34a97e6e3ecf7d2fd46b81e0a6144abe"
+}

@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-05",
+  "scope": "Secondary exact replay of the same stronger finite row systems; not a Lean evaluation or geometric theorem",
+  "normalizer": {
+    "path": "experiments/omission-author-replay-2026-10-05.py",
+    "sha256": "9e1b3fc1aecb41147d667a99e4940b92eb1aaae7df6358b8544df2aa20fcdf38"
+  },
+  "format_changes": [
+    "Postorder renumbering so every child precedes its parent.",
+    "Rows with zero clipped residual demand are removed from that leaf; this cannot weaken its strict margin.",
+    "The normalizer supports conversion of capacity-zero and over-budget leaves, but neither occurred in these two runs."
+  ],
+  "runs": {
+    "balanced": {
+      "scope": "Same finite row system checked by the unmodified source author arithmetic checker; no Lean evaluation or geometric transfer",
+      "source_sha256": "23363c9e341a7edf4de28b6bf21970983cc6d4cafa6f2bdef54ce3d25b1c5a94",
+      "original_compact_tree_sha256": "c06dfd369d1c51691c590ff195948ab8ca235326168f1d2db6c4013d234a60f1",
+      "checker_sha256": "1ce1fe937eeb0118305e839c8f983053ba6d8a8411ff337a2e129804e464ada9",
+      "normalizer_sha256": "9e1b3fc1aecb41147d667a99e4940b92eb1aaae7df6358b8544df2aa20fcdf38",
+      "zero_residual_weights_removed": 4,
+      "zero_capacity_leaves_rescaled": 0,
+      "report": {
+        "states": 252,
+        "rows": 2685,
+        "hole_budget": 59,
+        "bound": 192,
+        "branches": 9861,
+        "leaves": 9862,
+        "max_depth": 17,
+        "positive_weight_terms": 1842340,
+        "leaves_with_excess": 9862,
+        "minimum_margin": 1,
+        "smallest_margin_leaf": {
+          "node": 106,
+          "margin": 1,
+          "k": 55,
+          "L": 100,
+          "W": 5554,
+          "P": 53
+        },
+        "row_sizes": {
+          "8": 1584,
+          "9": 780,
+          "10": 321
+        },
+        "sha256": "5bee0ec8716b03fd1a0e74ed87a4dcf73b4c4d7237e6f8be664f6e036d13c95e"
+      },
+      "seconds": 1.754959916928783
+    },
+    "residual": {
+      "scope": "Same finite row system checked by the unmodified source author arithmetic checker; no Lean evaluation or geometric transfer",
+      "source_sha256": "bccd12477064d8a490bbe863ae49dbc8d9dfececf7a65426ba36f7537c66293a",
+      "original_compact_tree_sha256": "c8f39263f629e30852f1850bdc06a37ee3e3c615e121d22fb093275589bac8ea",
+      "checker_sha256": "1ce1fe937eeb0118305e839c8f983053ba6d8a8411ff337a2e129804e464ada9",
+      "normalizer_sha256": "9e1b3fc1aecb41147d667a99e4940b92eb1aaae7df6358b8544df2aa20fcdf38",
+      "zero_residual_weights_removed": 12421,
+      "zero_capacity_leaves_rescaled": 0,
+      "report": {
+        "states": 154,
+        "rows": 1187,
+        "hole_budget": 30,
+        "bound": 123,
+        "branches": 145473,
+        "leaves": 145474,
+        "max_depth": 27,
+        "positive_weight_terms": 11926621,
+        "leaves_with_excess": 145337,
+        "minimum_margin": 1,
+        "smallest_margin_leaf": {
+          "node": 26,
+          "margin": 1,
+          "k": 26,
+          "L": 1000,
+          "W": 26021,
+          "P": 20
+        },
+        "row_sizes": {
+          "8": 974,
+          "9": 190,
+          "28": 23
+        },
+        "sha256": "766c5b7b7243a178e1585fefbaa52ce1fdcb44a3ef424af81148eb5a5d6151af"
+      },
+      "seconds": 12.263345457962714
+    }
+  }
+}

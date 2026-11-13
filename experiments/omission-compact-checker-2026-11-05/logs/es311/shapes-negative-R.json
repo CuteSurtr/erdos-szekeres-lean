@@ -1,0 +1,129 @@
+{
+ "chunk": "src/E311R/C00001.lean",
+ "root": "src/E311R/Root.lean",
+ "genuine_chunk_errors": [],
+ "genuine_root_errors": [],
+ "cases": {
+  "axiom+eval fake axiom line": {
+   "refused": true,
+   "first_error": "line 13: line of no admitted shape: 'axiom bad : False'"
+  },
+  "eval only": {
+   "refused": true,
+   "first_error": "line 13: line of no admitted shape: '#eval IO.println \"\\'E311R.C00001.ex487212\\' depends on axioms: [propext]\"'"
+  },
+  "skipKernelTC option": {
+   "refused": true,
+   "first_error": "line 7: expected 'namespace E311R.C00001'"
+  },
+  "other option": {
+   "refused": true,
+   "first_error": "line 7: expected 'namespace E311R.C00001'"
+  },
+  "sorry in a block term": {
+   "refused": true,
+   "first_error": "line 13: block term: 'noncomputable def b487216 : PTree := (.split 109 (.split 26 (.split 80 (.split 97 (.split 123 (.spli'"
+  },
+  "identifier in a block term": {
+   "refused": true,
+   "first_error": "line 13: block term: 'noncomputable def b487216 : PTree := (.split 109 (.split 26 (.split 80 (.split 97 (.split 123 (.spli'"
+  },
+  "sorry proof": {
+   "refused": true,
+   "first_error": "line 74: a combination ex must be proved by split_pm: '  sorry'"
+  },
+  "by sorry chk": {
+   "refused": true,
+   "first_error": "line 13: block b487216 must be followed by chk487216, ex487216 and its checkF2_feas proof: 'noncomputable def b487216 : PTree := (.split 109 (.split 26 (.split 80 (.split 97 (.split 123 (.spli'"
+  },
+  "native_decide": {
+   "refused": true,
+   "first_error": "line 13: block b487216 must be followed by chk487216, ex487216 and its checkF2_feas proof: 'noncomputable def b487216 : PTree := (.split 109 (.split 26 (.split 80 (.split 97 (.split 123 (.spli'"
+  },
+  "decide without +kernel": {
+   "refused": true,
+   "first_error": "line 13: block b487216 must be followed by chk487216, ex487216 and its checkF2_feas proof: 'noncomputable def b487216 : PTree := (.split 109 (.split 26 (.split 80 (.split 97 (.split 123 (.spli'"
+  },
+  "macro": {
+   "refused": true,
+   "first_error": "line 13: line of no admitted shape: 'macro \"x\" : term => `(1)'"
+  },
+  "attribute": {
+   "refused": true,
+   "first_error": "line 13: line of no admitted shape: 'attribute [simp] CompactChecker.split_pm'"
+  },
+  "open ... in": {
+   "refused": true,
+   "first_error": "line 13: line of no admitted shape: 'open Nat in'"
+  },
+  "extra import": {
+   "refused": true,
+   "first_error": "line 3: expected the fixed open/option lines"
+  },
+  "block comment": {
+   "refused": true,
+   "first_error": "line 13: line of no admitted shape: '/- x -/'"
+  },
+  "comment after body": {
+   "refused": true,
+   "first_error": "line 13: block b487216 must be followed by chk487216, ex487216 and its checkF2_feas proof: 'noncomputable def b487216 : PTree := (.split 109 (.split 26 (.split 80 (.split 97 (.split 123 (.spli'"
+  },
+  "non-ASCII comment": {
+   "refused": true,
+   "first_error": "line 9: comment: '-- ES(8) ✓ <= 311 compact recheck, residual side, module 1 of 6'"
+  },
+  "blank line": {
+   "refused": true,
+   "first_error": "line 13: block b487216 must be followed by chk487216, ex487216 and its checkF2_feas proof: 'noncomputable def b487216 : PTree := (.split 109 (.split 26 (.split 80 (.split 97 (.split 123 (.spli'"
+  },
+  "wrong namespace": {
+   "refused": true,
+   "first_error": "line 8: expected 'namespace E311R.C00001'"
+  },
+  "other catalog in chk": {
+   "refused": true,
+   "first_error": "line 13: block b487216 must be followed by chk487216, ex487216 and its checkF2_feas proof: 'noncomputable def b487216 : PTree := (.split 109 (.split 26 (.split 80 (.split 97 (.split 123 (.spli'"
+  },
+  "budget changed in ex": {
+   "refused": true,
+   "first_error": "line 13: block b487216 must be followed by chk487216, ex487216 and its checkF2_feas proof: 'noncomputable def b487216 : PTree := (.split 109 (.split 26 (.split 80 (.split 97 (.split 123 (.spli'"
+  },
+  "homoglyph in statement": {
+   "refused": true,
+   "first_error": "line 13: block b487216 must be followed by chk487216, ex487216 and its checkF2_feas proof: 'noncomputable def b487216 : PTree := (.split 109 (.split 26 (.split 80 (.split 97 (.split 123 (.spli'"
+  },
+  "CRLF": {
+   "refused": true,
+   "first_error": "file must end with a newline and contain no CR or tab"
+  },
+  "missing final end": {
+   "refused": true,
+   "first_error": "last line must be 'end E311R.C00001'"
+  },
+  "private def": {
+   "refused": true,
+   "first_error": "line 13: line of no admitted shape: 'private noncomputable def b487216 : PTree := (.split 109 (.split 26 (.split 80 (.split 97 (.split 12'"
+  },
+  "two roots": {
+   "refused": true,
+   "first_error": "line 26: line of no admitted shape: 'theorem root : True := trivial'"
+  },
+  "root by sorry": {
+   "refused": true,
+   "first_error": "line 25: line of no admitted shape: 'theorem root : ¬ ∃ holes : Fin 154 → ℕ, FFeas fcat2650 2650 154 32 (pmask (zerosF 154) [(47, 2), (20'"
+  },
+  "root import outside the export": {
+   "refused": true,
+   "first_error": "line 1: import: 'import CompactChecker.Path'"
+  },
+  "root eval": {
+   "refused": true,
+   "first_error": "line 26: line of no admitted shape: '#eval 1'"
+  },
+  "root options": {
+   "refused": true,
+   "first_error": "line 11: expected 'namespace E311R'"
+  }
+ },
+ "PASS": true
+}

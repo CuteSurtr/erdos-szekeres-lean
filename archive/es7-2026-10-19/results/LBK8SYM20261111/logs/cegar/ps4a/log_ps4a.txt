@@ -1,0 +1,184 @@
+21:59:40 Enc built: m=4 t=14 6930 triple vars, 78 Y, 0 H
+21:59:40 401 phase vectors
+21:59:42   fresh solver with 4642 root units, 1.8 s
+21:59:42 phase a4n1_2_p0: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.7313, 62.74, 60.3856, 82.855, 84.2998, 84.3633, 85.2967, 85.4276] units 4564 impl 91
+21:59:43   UNSAT after 1 iterations, 0 cuts, 0.8 s
+21:59:43 RESULT a4n1_2_p0 ('UNSAT', 1, 0)
+21:59:45   fresh solver with 4642 root units, 1.8 s
+21:59:45 phase a4n1_2_s0_1: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 64.9236, 63.5107, 62.0681, 83.1357, 84.2998, 83.377, 86.9435, 85.6364] units 4564 impl 91
+21:59:45   UNSAT after 1 iterations, 0 cuts, 0.9 s
+21:59:45 RESULT a4n1_2_s0_1 ('UNSAT', 1, 0)
+21:59:47   fresh solver with 4642 root units, 1.6 s
+21:59:47 phase a4n1_2_s0_2: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.65, 61.9797, 60.914, 83.9255, 84.2998, 84.0321, 84.0316, 85.2042] units 4564 impl 91
+21:59:50   UNSAT after 55 iterations, 54 cuts, 3.1 s
+21:59:50 RESULT a4n1_2_s0_2 ('UNSAT', 55, 54)
+21:59:52   fresh solver with 4642 root units, 1.6 s
+21:59:52 phase a4n1_2_s0_3: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 64.9356, 62.872, 59.7342, 83.5421, 84.2998, 83.1903, 85.4565, 84.7807] units 4564 impl 91
+21:59:53   UNSAT after 1 iterations, 0 cuts, 1.0 s
+21:59:53 RESULT a4n1_2_s0_3 ('UNSAT', 1, 0)
+21:59:54   fresh solver with 4642 root units, 1.5 s
+21:59:54 phase a4n1_2_s0_4: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.868, 62.5365, 60.3242, 82.6993, 84.2998, 84.4685, 85.7471, 85.5464] units 4564 impl 91
+21:59:56   UNSAT after 1 iterations, 0 cuts, 1.2 s
+21:59:56 RESULT a4n1_2_s0_4 ('UNSAT', 1, 0)
+21:59:57   fresh solver with 4642 root units, 1.6 s
+21:59:57 phase a4n1_2_s0_5: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.7204, 63.0529, 60.1982, 82.7768, 84.2998, 84.4162, 84.8526, 85.8875] units 4564 impl 91
+21:59:58   UNSAT after 1 iterations, 0 cuts, 1.0 s
+21:59:58 RESULT a4n1_2_s0_5 ('UNSAT', 1, 0)
+22:00:00   fresh solver with 4642 root units, 1.6 s
+22:00:00 phase a4n1_2_s0_6: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 66.6796, 60.3649, 57.5213, 84.2375, 84.2998, 83.6372, 85.2815, 84.4248] units 4564 impl 91
+22:00:01   UNSAT after 1 iterations, 0 cuts, 1.1 s
+22:00:01 RESULT a4n1_2_s0_6 ('UNSAT', 1, 0)
+22:00:03   fresh solver with 4642 root units, 1.6 s
+22:00:03 phase a4n1_2_s0_7: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.8318, 62.5641, 60.2042, 82.5817, 84.2998, 84.424, 85.1526, 85.4656] units 4564 impl 91
+22:00:03   UNSAT after 1 iterations, 0 cuts, 0.8 s
+22:00:03 RESULT a4n1_2_s0_7 ('UNSAT', 1, 0)
+22:00:05   fresh solver with 4642 root units, 1.6 s
+22:00:05 phase a4n1_2_s0_8: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.7343, 62.6357, 60.2781, 82.6865, 84.2998, 84.5445, 85.2416, 85.4989] units 4564 impl 91
+22:00:06   UNSAT after 1 iterations, 0 cuts, 1.0 s
+22:00:06 RESULT a4n1_2_s0_8 ('UNSAT', 1, 0)
+22:00:08   fresh solver with 4642 root units, 1.6 s
+22:00:08 phase a4n1_2_s0_9: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 66.3398, 61.9945, 60.4619, 83.8679, 84.2998, 85.5815, 85.9438, 86.112] units 4564 impl 91
+22:00:08   UNSAT after 1 iterations, 0 cuts, 0.8 s
+22:00:08 RESULT a4n1_2_s0_9 ('UNSAT', 1, 0)
+22:00:10   fresh solver with 4642 root units, 1.6 s
+22:00:10 phase a4n1_2_s0_10: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.7534, 62.7941, 60.3859, 82.8039, 84.2998, 84.4014, 85.2598, 85.4756] units 4564 impl 91
+22:00:11   UNSAT after 1 iterations, 0 cuts, 1.0 s
+22:00:11 RESULT a4n1_2_s0_10 ('UNSAT', 1, 0)
+22:00:13   fresh solver with 4642 root units, 1.6 s
+22:00:13 phase a4n1_2_s0_11: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.6806, 62.6706, 60.2182, 82.8951, 84.2998, 84.4775, 85.1269, 85.217] units 4564 impl 91
+22:00:14   UNSAT after 1 iterations, 0 cuts, 0.9 s
+22:00:14 RESULT a4n1_2_s0_11 ('UNSAT', 1, 0)
+22:00:15   fresh solver with 4642 root units, 1.5 s
+22:00:15 phase a4n1_2_s0_12: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.9176, 63.0153, 59.8956, 82.7424, 84.2998, 84.4962, 85.2718, 85.3803] units 4564 impl 91
+22:00:16   UNSAT after 1 iterations, 0 cuts, 0.9 s
+22:00:16 RESULT a4n1_2_s0_12 ('UNSAT', 1, 0)
+22:00:18   fresh solver with 4642 root units, 1.6 s
+22:00:18 phase a4n1_2_s0_13: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.725, 62.7405, 60.3909, 82.8663, 84.2998, 84.3537, 85.3023, 85.4303] units 4564 impl 91
+22:00:19   UNSAT after 1 iterations, 0 cuts, 1.0 s
+22:00:19 RESULT a4n1_2_s0_13 ('UNSAT', 1, 0)
+22:00:20   fresh solver with 4642 root units, 1.6 s
+22:00:20 phase a4n1_2_s0_14: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.3371, 62.7401, 61.1927, 82.1662, 84.2998, 84.9032, 84.8219, 85.3002] units 4564 impl 91
+22:00:21   UNSAT after 1 iterations, 0 cuts, 1.0 s
+22:00:21 RESULT a4n1_2_s0_14 ('UNSAT', 1, 0)
+22:00:23   fresh solver with 4642 root units, 1.6 s
+22:00:23 phase a4n1_2_s0_15: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.6966, 62.7403, 60.3823, 82.9669, 84.2998, 84.4145, 85.35, 85.42] units 4564 impl 91
+22:00:24   UNSAT after 1 iterations, 0 cuts, 0.9 s
+22:00:24 RESULT a4n1_2_s0_15 ('UNSAT', 1, 0)
+22:00:26   fresh solver with 4642 root units, 1.6 s
+22:00:26 phase a4n1_2_s0_16: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.1306, 60.1731, 59.5123, 81.5868, 84.2998, 85.4242, 84.6417, 83.8724] units 4564 impl 91
+22:00:26   UNSAT after 1 iterations, 0 cuts, 0.7 s
+22:00:26 RESULT a4n1_2_s0_16 ('UNSAT', 1, 0)
+22:00:28   fresh solver with 4642 root units, 1.5 s
+22:00:28 phase a4n1_2_s0_17: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.7454, 62.7423, 60.3661, 82.8201, 84.2998, 84.3559, 85.2892, 85.4204] units 4564 impl 91
+22:00:29   UNSAT after 1 iterations, 0 cuts, 0.7 s
+22:00:29 RESULT a4n1_2_s0_17 ('UNSAT', 1, 0)
+22:00:30   fresh solver with 4642 root units, 1.6 s
+22:00:30 phase a4n1_2_s0_18: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.7298, 62.7543, 60.3766, 82.8709, 84.2998, 84.3401, 85.2457, 85.462] units 4564 impl 91
+22:00:31   UNSAT after 1 iterations, 0 cuts, 0.8 s
+22:00:31 RESULT a4n1_2_s0_18 ('UNSAT', 1, 0)
+22:00:33   fresh solver with 4642 root units, 1.5 s
+22:00:33 phase a4n1_2_s0_19: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.7518, 62.71, 60.3354, 82.6534, 84.2998, 84.3561, 85.3102, 85.4443] units 4564 impl 91
+22:00:34   UNSAT after 1 iterations, 0 cuts, 0.8 s
+22:00:34 RESULT a4n1_2_s0_19 ('UNSAT', 1, 0)
+22:00:35   fresh solver with 4642 root units, 1.6 s
+22:00:35 phase a4n1_2_s0_20: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.7668, 62.7108, 60.3476, 82.8187, 84.2998, 84.3946, 85.2717, 85.364] units 4564 impl 91
+22:00:36   UNSAT after 1 iterations, 0 cuts, 0.8 s
+22:00:36 RESULT a4n1_2_s0_20 ('UNSAT', 1, 0)
+22:00:38   fresh solver with 4642 root units, 1.5 s
+22:00:38 phase a4n1_2_s0_21: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 66.841, 62.4928, 61.5671, 85.459, 84.2998, 82.9291, 83.9811, 83.6928] units 4564 impl 91
+22:00:39   UNSAT after 1 iterations, 0 cuts, 1.2 s
+22:00:39 RESULT a4n1_2_s0_21 ('UNSAT', 1, 0)
+22:00:41   fresh solver with 4642 root units, 1.8 s
+22:00:41 phase a4n1_2_s0_22: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.8168, 62.7831, 60.4232, 83.0008, 84.2998, 84.3696, 85.1954, 85.4215] units 4564 impl 91
+22:00:42   UNSAT after 1 iterations, 0 cuts, 1.0 s
+22:00:42 RESULT a4n1_2_s0_22 ('UNSAT', 1, 0)
+22:00:43   fresh solver with 4642 root units, 1.8 s
+22:00:43 phase a4n1_2_s0_23: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.7288, 62.7676, 60.3862, 82.8728, 84.2998, 84.3828, 85.3077, 85.4071] units 4564 impl 91
+22:00:44   UNSAT after 1 iterations, 0 cuts, 0.8 s
+22:00:44 RESULT a4n1_2_s0_23 ('UNSAT', 1, 0)
+22:00:46   fresh solver with 4642 root units, 1.7 s
+22:00:46 phase a4n1_2_s0_24: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.7226, 62.6019, 60.1947, 82.7463, 84.2998, 84.2813, 85.2861, 85.3401] units 4564 impl 91
+22:00:47   UNSAT after 1 iterations, 0 cuts, 0.9 s
+22:00:47 RESULT a4n1_2_s0_24 ('UNSAT', 1, 0)
+22:00:49   fresh solver with 4642 root units, 1.7 s
+22:00:49 phase a4n1_2_s0_25: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.6901, 60.3616, 57.8086, 83.1768, 84.2998, 85.6932, 85.985, 85.6392] units 4564 impl 91
+22:00:50   UNSAT after 1 iterations, 0 cuts, 0.9 s
+22:00:50 RESULT a4n1_2_s0_25 ('UNSAT', 1, 0)
+22:00:51   fresh solver with 4642 root units, 1.7 s
+22:00:51 phase a4n1_2_s0_26: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.7499, 62.7299, 60.3775, 82.8372, 84.2998, 84.3978, 85.2892, 85.4522] units 4564 impl 91
+22:00:52   UNSAT after 1 iterations, 0 cuts, 0.9 s
+22:00:52 RESULT a4n1_2_s0_26 ('UNSAT', 1, 0)
+22:00:54   fresh solver with 4642 root units, 1.8 s
+22:00:54 phase a4n1_2_s0_27: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.6224, 61.1461, 61.1188, 80.3605, 84.2998, 83.4917, 81.7288, 89.5694] units 4564 impl 91
+22:00:57   UNSAT after 58 iterations, 57 cuts, 2.8 s
+22:00:57 RESULT a4n1_2_s0_27 ('UNSAT', 58, 57)
+22:00:59   fresh solver with 4642 root units, 1.8 s
+22:00:59 phase a4n1_2_s0_28: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 66.8996, 63.0063, 59.8013, 82.6144, 84.2998, 86.1671, 84.8692, 84.8296] units 4564 impl 91
+22:01:00   UNSAT after 1 iterations, 0 cuts, 1.1 s
+22:01:00 RESULT a4n1_2_s0_28 ('UNSAT', 1, 0)
+22:01:02   fresh solver with 4642 root units, 1.8 s
+22:01:02 phase a4n1_2_s0_29: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.6801, 62.7787, 60.3947, 82.8682, 84.2998, 84.3624, 85.3373, 85.3798] units 4564 impl 91
+22:01:03   UNSAT after 1 iterations, 0 cuts, 0.9 s
+22:01:03 RESULT a4n1_2_s0_29 ('UNSAT', 1, 0)
+22:01:05   fresh solver with 4642 root units, 1.8 s
+22:01:05 phase a4n1_2_s0_30: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.7792, 63.1685, 60.563, 83.1341, 84.2998, 84.2254, 85.4751, 85.6207] units 4564 impl 91
+22:01:05   UNSAT after 1 iterations, 0 cuts, 0.8 s
+22:01:05 RESULT a4n1_2_s0_30 ('UNSAT', 1, 0)
+22:01:07   fresh solver with 4642 root units, 1.7 s
+22:01:07 phase a4n1_2_s0_31: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.7247, 62.7406, 60.4044, 82.8445, 84.2998, 84.3743, 85.2923, 85.4459] units 4564 impl 91
+22:01:08   UNSAT after 1 iterations, 0 cuts, 0.8 s
+22:01:08 RESULT a4n1_2_s0_31 ('UNSAT', 1, 0)
+22:01:10   fresh solver with 4642 root units, 1.7 s
+22:01:10 phase a4n1_2_s0_32: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 64.9389, 62.2911, 61.1379, 83.2718, 84.2998, 84.6864, 85.021, 85.599] units 4564 impl 91
+22:01:10   UNSAT after 1 iterations, 0 cuts, 0.6 s
+22:01:10 RESULT a4n1_2_s0_32 ('UNSAT', 1, 0)
+22:01:12   fresh solver with 4642 root units, 1.7 s
+22:01:12 phase a4n1_2_s0_33: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 66.251, 63.1497, 61.8948, 81.1754, 84.2998, 85.0655, 86.3688, 87.7199] units 4564 impl 91
+22:01:13   UNSAT after 1 iterations, 0 cuts, 0.7 s
+22:01:13 RESULT a4n1_2_s0_33 ('UNSAT', 1, 0)
+22:01:15   fresh solver with 4642 root units, 1.8 s
+22:01:15 phase a4n1_2_s0_34: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.7283, 62.7479, 60.3058, 82.8569, 84.2998, 84.3585, 85.304, 85.4399] units 4564 impl 91
+22:01:15   UNSAT after 1 iterations, 0 cuts, 0.7 s
+22:01:15 RESULT a4n1_2_s0_34 ('UNSAT', 1, 0)
+22:01:17   fresh solver with 4642 root units, 1.7 s
+22:01:17 phase a4n1_2_s0_35: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.5126, 62.5213, 60.6472, 82.8217, 84.2998, 84.2592, 85.1723, 85.1594] units 4564 impl 91
+22:01:18   UNSAT after 1 iterations, 0 cuts, 1.1 s
+22:01:18 RESULT a4n1_2_s0_35 ('UNSAT', 1, 0)
+22:01:20   fresh solver with 4642 root units, 1.7 s
+22:01:20 phase a4n1_2_s0_36: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 66.2864, 63.4128, 60.9124, 83.5164, 84.2998, 84.0899, 85.8606, 85.5699] units 4564 impl 91
+22:01:22   UNSAT after 1 iterations, 0 cuts, 1.6 s
+22:01:22 RESULT a4n1_2_s0_36 ('UNSAT', 1, 0)
+22:01:23   fresh solver with 4642 root units, 1.7 s
+22:01:23 phase a4n1_2_s0_37: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.7139, 62.7438, 60.396, 82.8716, 84.2998, 84.3612, 85.2857, 85.4399] units 4564 impl 91
+22:01:24   UNSAT after 1 iterations, 0 cuts, 0.6 s
+22:01:24 RESULT a4n1_2_s0_37 ('UNSAT', 1, 0)
+22:01:26   fresh solver with 4642 root units, 1.7 s
+22:01:26 phase a4n1_2_s0_38: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.8328, 62.499, 60.2455, 82.3066, 84.2998, 84.4468, 85.3043, 85.3824] units 4564 impl 91
+22:01:26   UNSAT after 1 iterations, 0 cuts, 0.6 s
+22:01:26 RESULT a4n1_2_s0_38 ('UNSAT', 1, 0)
+22:01:28   fresh solver with 4642 root units, 1.7 s
+22:01:28 phase a4n1_2_s0_39: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 64.1904, 63.0185, 59.7216, 81.6436, 84.2998, 85.0084, 84.2439, 84.6199] units 4564 impl 91
+22:01:29   UNSAT after 1 iterations, 0 cuts, 1.3 s
+22:01:29 RESULT a4n1_2_s0_39 ('UNSAT', 1, 0)
+22:01:31   fresh solver with 4642 root units, 1.5 s
+22:01:31 phase a4n1_2_s0_40: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.8279, 62.7287, 60.3976, 82.8313, 84.2998, 84.2332, 85.3233, 85.5516] units 4564 impl 91
+22:01:32   UNSAT after 1 iterations, 0 cuts, 0.6 s
+22:01:32 RESULT a4n1_2_s0_40 ('UNSAT', 1, 0)
+22:01:33   fresh solver with 4642 root units, 1.5 s
+22:01:33 phase a4n1_2_s0_41: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.4933, 62.7131, 60.0338, 83.2325, 84.2998, 83.6974, 85.6536, 85.5046] units 4564 impl 91
+22:01:34   UNSAT after 1 iterations, 0 cuts, 0.7 s
+22:01:34 RESULT a4n1_2_s0_41 ('UNSAT', 1, 0)
+22:01:35   fresh solver with 4642 root units, 1.5 s
+22:01:35 phase a4n1_2_s0_42: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.0618, 62.8972, 60.4729, 83.7138, 84.2998, 85.2428, 86.4351, 85.2178] units 4564 impl 91
+22:01:36   UNSAT after 1 iterations, 0 cuts, 0.9 s
+22:01:36 RESULT a4n1_2_s0_42 ('UNSAT', 1, 0)
+22:01:38   fresh solver with 4642 root units, 1.6 s
+22:01:38 phase a4n1_2_s0_43: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 69.5296, 61.4794, 59.2859, 88.4345, 84.2998, 80.8059, 84.199, 89.0172] units 4564 impl 91
+22:01:39   UNSAT after 1 iterations, 0 cuts, 1.3 s
+22:01:39 RESULT a4n1_2_s0_43 ('UNSAT', 1, 0)
+22:01:41   fresh solver with 4642 root units, 1.5 s
+22:01:41 phase a4n1_2_s0_44: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 64.2907, 62.6675, 62.6561, 83.5529, 84.2998, 84.448, 86.24, 86.6167] units 4564 impl 91
+22:01:41   UNSAT after 1 iterations, 0 cuts, 0.7 s
+22:01:41 RESULT a4n1_2_s0_44 ('UNSAT', 1, 0)
+22:01:43   fresh solver with 4642 root units, 1.5 s
+22:01:43 phase a4n1_2_s0_45: th(deg)=[0.0, 76.3916, 74.8492, 72.7208, 60.6561, 66.3029, 65.7184, 62.7661, 60.3844, 82.8411, 84.2998, 84.3615, 85.295, 85.4218] units 4564 impl 91

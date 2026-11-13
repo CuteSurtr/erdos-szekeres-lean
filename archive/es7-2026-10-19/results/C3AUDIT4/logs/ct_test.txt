@@ -1,0 +1,18 @@
+== C3U T1
+{"root": "0s0_1s0-2s0", "open_frontier": 0}
+records in OUT: 1; split records with 0 children: 0; solve records: 1
+== C3U T2
+{"root": "0s0_1s0-2s0", "open_frontier": 0}
+records in OUT: 18; split records with 0 children: 6; solve records: 9
+== C3U T3
+{"root": "0s0_1s0-2s0_3_4", "open_frontier": 0}
+records in OUT: 1; split records with 0 children: 1; solve records: 0
+== C3U2 T1
+{"root": "0s0_1s0-2s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+records in OUT: 9; split records with 0 children: 0; solve records: 8
+== C3U2 T2
+{"root": "0s0_1s0-2s0", "open_frontier": 6, "unsplittable": 6, "unsplittable_nodes": ["0s0_1s0-2s0_3_4", "0s0_1s0-2s0_3s0-4s0", "0s0_1s0-2s0_3s0-4s1", "0s0_1s0-2s0_3s1-4s0", "0s0_1s0-2s0_3s1-4s1", "0s0_1s0-2s0_4_3"]}
+records in OUT: 12; split records with 0 children: 0; solve records: 9
+== C3U2 T3
+{"root": "0s0_1s0-2s0_3_4", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+records in OUT: 2; split records with 0 children: 1; solve records: 1

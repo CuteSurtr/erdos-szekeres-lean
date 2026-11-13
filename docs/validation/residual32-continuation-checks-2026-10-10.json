@@ -1,0 +1,48 @@
+{
+  "scope": "Final source and packaging checks for standalone residual32 continuation. No complete32-hole exclusion or313-point theorem. Existing314 gate inputs were rehashed unchanged earlier in this continuation.",
+  "lean_sources": {
+    "experiments/omission-residual32-context-certificates-2026-10-10/ZeroState.lean": "97264450d559dae3b1d82aa5be513b69791a4366e42e32fd3ddc15ec4ea7da61",
+    "experiments/omission-residual32-context-certificates-2026-10-10/Residual32ContextsProof/Catalog.lean": "053f35ea49b7ec2b95818e96ab18bcd7628c09190d0e97bfc1552f3937b606bd",
+    "experiments/omission-residual32-context-certificates-2026-10-10/Residual32ContextsProof/Node30.lean": "ce57a1b5ad6c5093964ed827f98db5a3375bcc8e3893ba259306ce86d9629bde",
+    "experiments/omission-residual32-context-certificates-2026-10-10/Residual32ContextsProof/Node485523.lean": "37e5e4c2074f709389289ea1a4e0dd11b13cbacd781166a54c59527521ec76ee",
+    "experiments/omission-residual32-context-certificates-2026-10-10/Residual32ContextsProof/Node492360.lean": "24761799c04025f0ff8f08cbada88628c3abe5bbcd16bb78a6567202b062cbd7",
+    "experiments/omission-residual32-context-certificates-2026-10-10/Residual32ContextsProof/Node485522.lean": "4c67bf42a80526538eaed8a95b9f61ee52f3fc975434d2239f521188f744ea4a",
+    "experiments/omission-residual32-context-certificates-2026-10-10/Residual32ContextsProof/Audit.lean": "9748948a615adc3da71f0479922f0bf29cdef678e1de06932f885cd79d17ff78",
+    "experiments/omission-residual32-context-certificates-2026-10-10/Residual32ContextsProof/Node492359.lean": "f38e54bebc7385010e74970d0e82f9459a85db5f9fbe39a31a22a5e4dbc034df",
+    "experiments/omission-residual32-transfer-2026-10-10/OriginalBinding.lean": "96c06b4e602d3da50739ec547e930c3387bfa6f24712956532262e7c7bd76741",
+    "experiments/omission-residual32-transfer-2026-10-10/NewCuts.lean": "dfa218062a8583ef980c28506a333c688e39cd29e4e809e9fd0496fe4a27e0fd",
+    "experiments/omission-residual32-transfer-2026-10-10/ContextGeometry.lean": "3b7e7fb8e8fbbf5bc841b08b4e587ae2513f990a53b06a3d24baf8d397de82dd",
+    "experiments/omission-residual32-transfer-2026-10-10/GeometricBinding.lean": "b1700f75afa4acd5413a8e1fec446a3ef88ee6b154d5406f9b3ded2f85e21c2f",
+    "experiments/omission-residual32-transfer-2026-10-10/Transfer.lean": "e19e3d99f0b409eed8f176d1400d6f77dfd6d3b2fec840453c2a12e4d5985e8d",
+    "experiments/omission-residual32-transfer-2026-10-10/OldcutsBinding.lean": "5f8bfe7a36322272fb28bb68598a240f9e99a52ae95f7fa67af70be2f4ea7aa3",
+    "experiments/omission-residual32-resume-lean-2026-10-10/Residual32ResumeProof/Context29.lean": "20a4777ea5d20da9a3e0f5c5c4ae49f56c0c10ebc4643717b5790f79866e9469",
+    "experiments/omission-residual32-resume-lean-2026-10-10/Residual32ResumeProof/Context492355.lean": "2d873b5185cd7eebc1f1ff1dc6a977f1c2f5ada19468015f630fd5c6c95ceeb5",
+    "experiments/omission-residual32-resume-lean-2026-10-10/Residual32ResumeProof/Context485517.lean": "4e1da40fb0bc6f1e7bb89c807474f16b844d96ae2a49265af1a13dfa5546dd9f",
+    "experiments/omission-residual32-resume-lean-2026-10-10/Residual32ResumeProof/Context24.lean": "ba7e1679d0fef4d553a58cfd619369674015465b3a8cb61e362eae6c54deec08",
+    "experiments/omission-residual32-resume-lean-2026-10-10/Residual32ResumeProof/Geometry.lean": "eb082cdafbb398b1df92edc954c6008b3e8817b6568ce4ac1b743582180619dc",
+    "experiments/omission-residual32-resume-lean-2026-10-10/Residual32ResumeProof/Context492357.lean": "91bdc266845908331198e077d1edb5109b1a27581a23e2409543e2e550f55c5b",
+    "experiments/omission-residual32-resume-lean-2026-10-10/Residual32ResumeProof/Context485519.lean": "9287387faad84d8004b8189fe56ff865b7713e15b0ccc51d3572665a743bbdc4"
+  },
+  "proof_placeholder_or_custom_axiom_findings": [],
+  "bundle_hash_mismatches": [],
+  "records": {
+    "experiments/omission-residual32-context-certificates-2026-10-10/kernel-check.json": "97e0ee37ccb03e6d89466831b5cfbdc2c222738c9a90acc5f442c45ddd4b97c4",
+    "experiments/omission-residual32-context-certificates-2026-10-10/zero-state-check.json": "2a502e366f20d5fd5b0154748fad3a41f346e02efdb6450fd30e00a6aef4a914",
+    "experiments/omission-residual32-context-certificates-2026-10-10/manifest.json": "bf9dbfda1e15488b39cc3693949abaae1beec6e8e72f41e1bf4817012b357393",
+    "experiments/omission-residual32-transfer-2026-10-10/kernel-check.json": "b3b5a658aa2d25c4797243fa997eba688fe9dee3ee8064b7a6331d40e348b504",
+    "experiments/omission-residual32-transfer-2026-10-10/validation.json": "52230336e8164fdb17beba7a87f303d0ea2bb0654fe7dfabd9d60a25116fa21c",
+    "experiments/omission-residual32-resume-2026-10-10/manifest.json": "9684ed8e25b12e15f5adbd9a9c8852e3ef36c99238304cc9f450ef60ea4077b0",
+    "experiments/omission-residual32-resume-lean-2026-10-10/kernel-check.json": "9a43d6e17519765de55a5c21c3cc2b4f0f2498e7136addb4fbdcb0bf638886ff",
+    "experiments/omission-residual32-resume-lean-2026-10-10/manifest.json": "12897d92d47f1108450c67fcef92b187a0b9e130be17dda4a04d0e2c260bf3b7",
+    "experiments/omission-balanced62-sat-2026-10-10/result.json": "8c06589442227fee331c3cb09b887d2c2c16499ef1e6a0514ce338ff9dc01c17"
+  },
+  "negative_tests": {
+    "resumed_integer_replay": 6,
+    "original_context_preflight": 1,
+    "resumed_lean_preflight": 1,
+    "all_passed": true
+  },
+  "unchanged_314_gate_input_count": 3929,
+  "maintained_library_modified": false,
+  "hosted_ci": "Check separately on final pushed commit."
+}

@@ -1,0 +1,96 @@
+{
+  "scope": "Additional geometric rows and their abstract irredundancy; no population bound",
+  "lean": "Lean (version 4.24.0, arm64-apple-darwin23.6.0, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)",
+  "catalog_sha256": "f94c74ecade3b2714f961cd3ee7826ad0804342886f0e86ab2ca3908f86cb7da",
+  "library_source_sha256": "299b205ca0d8efe6006fdf67c63894917faee7a4ce67967656a7fd3d16783b1e",
+  "library_object_sha256": "0b42ccd98eb3ccc45388699677b2995e82fba3a093a95b2d0aeb4b3b1022aa13",
+  "modules": {
+    "Catalog": {
+      "source_sha256": "f94c74ecade3b2714f961cd3ee7826ad0804342886f0e86ab2ca3908f86cb7da",
+      "olean_sha256": "853ac2b7851fe271f411657805ccbc5ac151f17394e491810e230fca9e74c970",
+      "exit": 0,
+      "seconds": 22.44,
+      "axioms": {
+        "OmissionResidual.code_correct": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "stdout": "'OmissionResidual.code_correct' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    "CycleIndependence": {
+      "source_sha256": "9589243f2308d34d0f256975d663bc8505740abd92164339329e28fc7ddaad4e",
+      "olean_sha256": "f4e4c75ca031ac62ecb3352379d54d129757d55c1acaddf8bcd3e138c9bc8d22",
+      "exit": 0,
+      "seconds": 101.144,
+      "axioms": {
+        "AdditionalResidualStrictness.original_rows_allow_each_cycle": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "AdditionalResidualStrictness.each_cycle_violates_its_new_row": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "stdout": "'AdditionalResidualStrictness.original_rows_allow_each_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AdditionalResidualStrictness.each_cycle_violates_its_new_row' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n"
+    },
+    "BlockIndependence": {
+      "source_sha256": "49056b131b67766e25860ea0530bc674905642577a17d82057a04283eb7bc065",
+      "olean_sha256": "cc109c6bb90b2cf8c33fd64c967735c4b993702c96c3d405dd1054276353a874",
+      "exit": 0,
+      "seconds": 17.184,
+      "axioms": {
+        "AdditionalResidualStrictness.original_rows_allow_block": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "AdditionalResidualStrictness.new_cycles_allow_block": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "AdditionalResidualStrictness.block_witness_checked": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "stdout": "'AdditionalResidualStrictness.original_rows_allow_block' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AdditionalResidualStrictness.new_cycles_allow_block' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AdditionalResidualStrictness.block_witness_checked' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    "Irredundancy": {
+      "source_sha256": "684814cc28dfc0c651d144c6cbd4528ae2010f4ea6fc8738091d3d82cd6f72ed",
+      "olean_sha256": "2cdaddd083ad2f106aaa678c9fcfecf7773047cd397684f57d41cd7290445107",
+      "exit": 0,
+      "seconds": 2.97,
+      "axioms": {
+        "AdditionalResidualStrictness.original_rows_allow_witness": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "AdditionalResidualStrictness.other_new_rows_allow_witness": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "AdditionalResidualStrictness.own_row_fails": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ],
+        "AdditionalResidualStrictness.independent_each_additional_row": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "stdout": "'AdditionalResidualStrictness.original_rows_allow_witness' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AdditionalResidualStrictness.other_new_rows_allow_witness' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AdditionalResidualStrictness.own_row_fails' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AdditionalResidualStrictness.independent_each_additional_row' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n"
+    }
+  },
+  "complete": true
+}

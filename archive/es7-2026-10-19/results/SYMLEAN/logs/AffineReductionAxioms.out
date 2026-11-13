@@ -1,0 +1,27 @@
+'ErdosSzekeres.SymReduction.heptagon_of_nontrivial_affineEquiv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.SymReduction.heptagon_of_nontrivial_affineEquiv_image' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.SymReduction.heptagon_of_nontrivial_affineMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.SymReduction.heptagon_of_nontrivial_affine' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.SymReduction.heptagon_of_nontrivial_affine_coords' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.SymReduction.hasConvexNGon_of_affine_symmetry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.SymReduction.generalPosition_image_affineEquiv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.SymReduction.hasConvexNGon_image_affine' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.SymReduction.heptagon_of_nontrivial_isometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+ErdosSzekeres.SymReduction.heptagon_of_nontrivial_affineEquiv : ErdosSzekeres.SymReduction.HalfTurn34 →
+  ErdosSzekeres.SymReduction.Threefold33 →
+    ErdosSzekeres.SymReduction.Fivefold35 →
+      ErdosSzekeres.SymReduction.MirrorOneAxis33 →
+        ErdosSzekeres.SymReduction.MirrorNoAxis34 →
+          ∀ (S : Finset ErdosSzekeres.Point) (g : ErdosSzekeres.Point ≃ᵃ[ℝ] ErdosSzekeres.Point),
+            ErdosSzekeres.GeneralPosition S →
+              33 ≤ S.card →
+                g ≠ AffineEquiv.refl ℝ ErdosSzekeres.Point →
+                  ErdosSzekeres.SymReduction.Invariant (⇑g) S → ErdosSzekeres.HasConvexNGon 7 S

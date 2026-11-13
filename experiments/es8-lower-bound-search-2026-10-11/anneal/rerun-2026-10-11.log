@@ -1,0 +1,129 @@
+# Re-run on 11 October 2026 from the packaged copy (one core; cgon built from the retained cgon.c
+# with -O2 -Wall -Wextra -lm, SDKROOT set to an installed macOS SDK).
+## Replay of two control runs originally made with the first build (compare out/controls.log):
+anneal K=6 N=16 raw=0 T0=0.5 T1=0.01 mu=0.000 seed=1 iters=300000 best=0 accepted=28057 gprej=963 evals=36132 dwellE0/1/2/3+=1/757/158/35216 acc_at_best=447 cpu=0.4s
+c16_s1.txt: point set identical to out/c16_s1.txt
+anneal K=6 N=17 raw=0 T0=0.5 T1=0.01 mu=0.000 seed=1 iters=300000 best=1 accepted=144438 gprej=12839 evals=287161 dwellE0/1/2/3+=0/229682/5749/51730 acc_at_best=101010 cpu=3.2s
+c17_s1.txt: point set identical to out/c17_s1.txt
+## Replay of runs originally made with the second build (compare out/batch2B.log, out/batch2A.log):
+addpoint K=7 base=32 valid=37284 min=1 at (21,198873) hist[0,1,2,3-9,10-99,1e2-1e3,1e3-1e4,>=1e4]=0,9455,38,199,1074,5379,12479,8660
+addpoint K=8 base=64 valid=19371 min=1 at (42,1644488) hist[0,1,2,3-9,10-99,1e2-1e3,1e3-1e4,>=1e4]=0,4223,14,46,111,626,2380,11971
+addpoint K=8 base=64 valid=3855 min=1 at (292193409,-111) hist[0,1,2,3-9,10-99,1e2-1e3,1e3-1e4,>=1e4]=0,761,4,6,21,124,555,2384
+anneal K=7 N=33 raw=1 T0=1.5 T1=0.05 mu=0.000 seed=1 iters=400000 best=1 accepted=60922 gprej=6834 evals=393166 dwellE0/1/2/3+=0/12710/340286/40170 acc_at_best=1711 cpu=34.9s
+c33w_s1.txt: point set identical to out/c33w_s1.txt
+## bash batch4_coreB.sh (reconstructed driver; compare out/batch4B.log):
+anneal K=8 N=64 raw=1 T0=2 T1=0.05 mu=0.000 seed=92 iters=200000 best=43 accepted=54455 gprej=6633 evals=193367 dwellE0/1/2/3+=0/0/0/193367 acc_at_best=41201 cpu=147.3s
+== DONE
+r64_cont_s92.txt: point set identical to out/r64_cont_s92.txt
+r64_cont_s92.err: identical to out/r64_cont_s92.err apart from t= timings
+time: real 147.96
+time: user 146.61
+time: sys 0.73
+## bash make_inputs.sh:
+make_inputs: w5-w8, v8_1-v8_3, init_w8p_1-4 and init_w6p reproduced byte for byte
+## bash verify_all.sh (wall time 12.36 s):
+== repository DP: exactly one convex octagon (common core of all maximum convex subsets)
+m65w_raw_s1.txt: N=65 general_position=True largest_convex_subset=8 common_core_size=8 => exactly one convex 8-gon
+m65w_mu_s71.txt: N=65 general_position=True largest_convex_subset=8 common_core_size=8 => exactly one convex 8-gon
+== cgon count against brute force: random small sets; witness(5)+1 and witness(6)+1
+brute-force agreement on 200 random sets (n=4..11, all k)
+n=5: 300 witness+1 sets, brute force == cgon, all have >=1 convex 5-gon
+n=6: 25 witness+1 sets, brute force == cgon, all have >=1 convex 6-gon
+== cgon count: 64-point inputs
+w8.txt: N=64 c3=41664 c4=422186 c5=2171562 c6=5252469 c7=4720996 c8=0 maxconvex=7
+v8_1.txt: N=64 c3=41664 c4=422186 c5=2171562 c6=5252469 c7=4720996 c8=0 maxconvex=7
+v8_2.txt: N=64 c3=41664 c4=422186 c5=2171562 c6=5252469 c7=4720996 c8=0 maxconvex=7
+v8_3.txt: N=64 c3=41664 c4=422186 c5=2171562 c6=5252469 c7=4720996 c8=0 maxconvex=7
+== cgon count: 64/65-point outputs and starting sets
+init_w8p_1.txt: N=65 c3=43680 c4=447214 c5=2300580 c6=5454313 c7=4722445 c8=1 maxconvex=8
+init_w8p_2.txt: N=65 c3=43680 c4=451414 c5=2382136 c6=5968292 c7=5592901 c8=1 maxconvex=8
+init_w8p_3.txt: N=65 c3=43680 c4=441012 c5=2232449 c6=5311797 c7=4722445 c8=1 maxconvex=8
+init_w8p_4.txt: N=65 c3=43680 c4=438512 c5=2205283 c6=5267309 c7=4722445 c8=1 maxconvex=8
+init_v8p_1.txt: N=65 c3=43680 c4=433662 c5=2193349 c6=5266630 c7=4722445 c8=1 maxconvex=8
+init_v8p_2.txt: N=65 c3=43680 c4=444578 c5=2276200 c6=5458887 c7=4854938 c8=1 maxconvex=8
+init_v8p_3.txt: N=65 c3=43680 c4=433426 c5=2193349 c6=5266630 c7=4722445 c8=1 maxconvex=8
+out/m65v_s1.txt: N=65 c3=43680 c4=433662 c5=2193349 c6=5266630 c7=4722445 c8=1 maxconvex=8
+out/m65v_s2.txt: N=65 c3=43680 c4=444578 c5=2276200 c6=5458887 c7=4854938 c8=1 maxconvex=8
+out/m65v_s3.txt: N=65 c3=43680 c4=433426 c5=2193349 c6=5266630 c7=4722445 c8=1 maxconvex=8
+out/m65w_mu_s71.txt: N=65 c3=43680 c4=441012 c5=2232449 c6=5311797 c7=4722445 c8=1 maxconvex=8
+out/m65w_plateau_s81.txt: N=65 c3=43680 c4=438512 c5=2205283 c6=5267309 c7=4722445 c8=1 maxconvex=8
+out/m65w_raw_s1.txt: N=65 c3=43680 c4=447214 c5=2300580 c6=5454313 c7=4722445 c8=1 maxconvex=8
+out/m65w_raw_s2.txt: N=65 c3=43680 c4=451414 c5=2382136 c6=5968292 c7=5592901 c8=1 maxconvex=8
+out/m65w_raw_s3.txt: N=65 c3=43680 c4=441012 c5=2232449 c6=5311797 c7=4722445 c8=1 maxconvex=8
+out/m65w_raw_s4.txt: N=65 c3=43680 c4=438512 c5=2205283 c6=5267309 c7=4722445 c8=1 maxconvex=8
+out/r64_cont_s92.txt: N=64 c3=41664 c4=398815 c5=1915454 c6=4301555 c7=2896382 c8=43 maxconvex=8
+out/r64_s91.txt: N=64 c3=41664 c4=402492 c5=1955907 c6=4455239 c7=3064864 c8=46 maxconvex=8
+out/r65_s7.txt: N=65 c3=43680 c4=378354 c5=1335545 c6=2053950 c7=1212306 c8=15 maxconvex=8
+== repository DP: 64-point inputs
+w8.txt: N=64 general_position=True largest_convex_subset=7
+v8_1.txt: N=64 general_position=True largest_convex_subset=7
+v8_2.txt: N=64 general_position=True largest_convex_subset=7
+v8_3.txt: N=64 general_position=True largest_convex_subset=7
+== order type: orientation of every index triple of v8_1-v8_3 compared with w8
+v8_1.txt: 41664 of 41664 triple orientations equal those of w8.txt
+v8_2.txt: 41664 of 41664 triple orientations equal those of w8.txt
+v8_3.txt: 41664 of 41664 triple orientations equal those of w8.txt
+== repository DP (and brute-force hexagon count for N=16,17): controls
+c16_s1.txt: N=16 general_position=True largest_convex_subset=5 brute_c6=0
+c16_s10.txt: N=16 general_position=True largest_convex_subset=5 brute_c6=0
+c16_s11.txt: N=16 general_position=True largest_convex_subset=5 brute_c6=0
+c16_s12.txt: N=16 general_position=True largest_convex_subset=5 brute_c6=0
+c16_s13.txt: N=16 general_position=True largest_convex_subset=5 brute_c6=0
+c16_s14.txt: N=16 general_position=True largest_convex_subset=5 brute_c6=0
+c16_s15.txt: N=16 general_position=True largest_convex_subset=5 brute_c6=0
+c16_s16.txt: N=16 general_position=True largest_convex_subset=5 brute_c6=0
+c16_s17.txt: N=16 general_position=True largest_convex_subset=5 brute_c6=0
+c16_s18.txt: N=16 general_position=True largest_convex_subset=5 brute_c6=0
+c16_s19.txt: N=16 general_position=True largest_convex_subset=5 brute_c6=0
+c16_s2.txt: N=16 general_position=True largest_convex_subset=5 brute_c6=0
+c16_s20.txt: N=16 general_position=True largest_convex_subset=5 brute_c6=0
+c16_s3.txt: N=16 general_position=True largest_convex_subset=5 brute_c6=0
+c16_s4.txt: N=16 general_position=True largest_convex_subset=5 brute_c6=0
+c16_s5.txt: N=16 general_position=True largest_convex_subset=5 brute_c6=0
+c16_s6.txt: N=16 general_position=True largest_convex_subset=5 brute_c6=0
+c16_s7.txt: N=16 general_position=True largest_convex_subset=5 brute_c6=0
+c16_s8.txt: N=16 general_position=True largest_convex_subset=5 brute_c6=0
+c16_s9.txt: N=16 general_position=True largest_convex_subset=5 brute_c6=0
+c17_s1.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17_s10.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17_s11.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17_s12.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17_s13.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17_s14.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17_s15.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17_s16.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17_s17.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17_s18.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17_s19.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17_s2.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17_s20.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17_s3.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17_s4.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17_s5.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17_s6.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17_s7.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17_s8.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17_s9.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17w_s1.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17w_s10.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17w_s2.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17w_s3.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17w_s4.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17w_s5.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17w_s6.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17w_s7.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17w_s8.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c17w_s9.txt: N=17 general_position=True largest_convex_subset=6 brute_c6=1
+c32_s1.txt: N=32 general_position=True largest_convex_subset=6
+c32_s2.txt: N=32 general_position=True largest_convex_subset=6
+c32_s3.txt: N=32 general_position=True largest_convex_subset=6
+c32_s4.txt: N=32 general_position=True largest_convex_subset=6
+c32_s5.txt: N=32 general_position=True largest_convex_subset=6
+c32_s6.txt: N=32 general_position=True largest_convex_subset=6
+c33_s1.txt: N=33 general_position=True largest_convex_subset=7
+c33_s2.txt: N=33 general_position=True largest_convex_subset=7
+c33_s3.txt: N=33 general_position=True largest_convex_subset=7
+c33w_s1.txt: N=33 general_position=True largest_convex_subset=7
+c33w_s2.txt: N=33 general_position=True largest_convex_subset=7
+c33w_s3.txt: N=33 general_position=True largest_convex_subset=7
+== DONE

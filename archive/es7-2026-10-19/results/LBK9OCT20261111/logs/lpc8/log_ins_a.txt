@@ -1,0 +1,51 @@
+21:56:40 base built: t=16, 42672 triple vars
+21:57:05 phase c8_120pts_15layers_s01_0: th(deg)=[0.0, 1.8437, 3.6874, 3.7028, 3.8516, 4.0086, 4.1798, 4.4734, 4.6788, 5.0533, 5.4544, 5.6679, 5.9962, 6.6526, 7.0949, 18.2525]
+21:57:05   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16148306, conflicts 0, build 25.3 s
+22:00:04   UNSAT after 1 iterations, 0 cuts, 178.3 s (no radii for these phases; float cuts: evidence)
+22:00:04 RESULT real/ins/c8_120pts_15layers_s01_0.json ('UNSAT', 1, 0)
+22:00:36 phase c8_120pts_15layers_s01_2: th(deg)=[0.0, 3.9874, 3.6874, 3.7028, 3.8516, 4.0086, 4.1798, 4.4734, 4.6788, 5.0533, 5.4544, 5.6679, 5.9962, 6.6526, 7.0949, 18.2525]
+22:00:36   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16148367, conflicts 0, build 32.4 s
+22:00:57   UNSAT after 1 iterations, 0 cuts, 21.1 s (no radii for these phases; float cuts: evidence)
+22:00:57 RESULT real/ins/c8_120pts_15layers_s01_2.json ('UNSAT', 1, 0)
+22:01:36 phase c8_120pts_15layers_s02_1: th(deg)=[0.0, 3.6874, 3.3874, 3.7028, 3.8516, 4.0086, 4.1798, 4.4734, 4.6788, 5.0533, 5.4544, 5.6679, 5.9962, 6.6526, 7.0949, 18.2525]
+22:01:36   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16154348, conflicts 0, build 38.0 s
+22:02:24   UNSAT after 1 iterations, 0 cuts, 48.4 s (no radii for these phases; float cuts: evidence)
+22:02:24 RESULT real/ins/c8_120pts_15layers_s02_1.json ('UNSAT', 1, 0)
+22:02:55 phase c8_120pts_15layers_s03_0: th(deg)=[0.0, 3.6874, 3.7028, 3.7772, 3.8516, 4.0086, 4.1798, 4.4734, 4.6788, 5.0533, 5.4544, 5.6679, 5.9962, 6.6526, 7.0949, 18.2525]
+22:02:55   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16148306, conflicts 0, build 31.1 s
+22:06:32   UNSAT after 1 iterations, 0 cuts, 216.9 s (no radii for these phases; float cuts: evidence)
+22:06:32 RESULT real/ins/c8_120pts_15layers_s03_0.json ('UNSAT', 1, 0)
+22:07:08 phase c8_120pts_15layers_s03_2: th(deg)=[0.0, 3.6874, 3.7028, 4.1516, 3.8516, 4.0086, 4.1798, 4.4734, 4.6788, 5.0533, 5.4544, 5.6679, 5.9962, 6.6526, 7.0949, 18.2525]
+22:07:08   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16147360, conflicts 0, build 35.3 s
+22:07:46   UNSAT after 1 iterations, 0 cuts, 38.2 s (no radii for these phases; float cuts: evidence)
+22:07:46 RESULT real/ins/c8_120pts_15layers_s03_2.json ('UNSAT', 1, 0)
+22:08:22 phase c8_120pts_15layers_s04_1: th(deg)=[0.0, 3.6874, 3.7028, 3.8516, 3.5516, 4.0086, 4.1798, 4.4734, 4.6788, 5.0533, 5.4544, 5.6679, 5.9962, 6.6526, 7.0949, 18.2525]
+22:08:22   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16152190, conflicts 0, build 36.0 s
+22:09:09   UNSAT after 1 iterations, 0 cuts, 46.6 s (no radii for these phases; float cuts: evidence)
+22:09:09 RESULT real/ins/c8_120pts_15layers_s04_1.json ('UNSAT', 1, 0)
+22:09:43 phase c8_120pts_15layers_s05_0: th(deg)=[0.0, 3.6874, 3.7028, 3.8516, 4.0086, 4.0942, 4.1798, 4.4734, 4.6788, 5.0533, 5.4544, 5.6679, 5.9962, 6.6526, 7.0949, 18.2525]
+22:09:43   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16148306, conflicts 0, build 33.5 s
+22:12:31   UNSAT after 1 iterations, 0 cuts, 168.5 s (no radii for these phases; float cuts: evidence)
+22:12:31 RESULT real/ins/c8_120pts_15layers_s05_0.json ('UNSAT', 1, 0)
+22:13:12 phase c8_120pts_15layers_s05_2: th(deg)=[0.0, 3.6874, 3.7028, 3.8516, 4.0086, 4.4798, 4.1798, 4.4734, 4.6788, 5.0533, 5.4544, 5.6679, 5.9962, 6.6526, 7.0949, 18.2525]
+22:13:12   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16144567, conflicts 0, build 40.5 s
+22:13:54   UNSAT after 1 iterations, 0 cuts, 41.9 s (no radii for these phases; float cuts: evidence)
+22:13:54 RESULT real/ins/c8_120pts_15layers_s05_2.json ('UNSAT', 1, 0)
+22:14:32 phase c8_120pts_15layers_s06_1: th(deg)=[0.0, 3.6874, 3.7028, 3.8516, 4.0086, 4.1798, 3.8798, 4.4734, 4.6788, 5.0533, 5.4544, 5.6679, 5.9962, 6.6526, 7.0949, 18.2525]
+22:14:32   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16146557, conflicts 0, build 37.7 s
+22:15:20   UNSAT after 1 iterations, 0 cuts, 47.8 s (no radii for these phases; float cuts: evidence)
+22:15:20 RESULT real/ins/c8_120pts_15layers_s06_1.json ('UNSAT', 1, 0)
+22:15:54 phase c8_120pts_15layers_s07_0: th(deg)=[0.0, 3.6874, 3.7028, 3.8516, 4.0086, 4.1798, 4.4734, 4.5761, 4.6788, 5.0533, 5.4544, 5.6679, 5.9962, 6.6526, 7.0949, 18.2525]
+22:15:54   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16148306, conflicts 0, build 34.2 s
+22:18:53   UNSAT after 1 iterations, 0 cuts, 179.3 s (no radii for these phases; float cuts: evidence)
+22:18:53 RESULT real/ins/c8_120pts_15layers_s07_0.json ('UNSAT', 1, 0)
+22:19:30 phase c8_120pts_15layers_s07_2: th(deg)=[0.0, 3.6874, 3.7028, 3.8516, 4.0086, 4.1798, 4.4734, 4.9788, 4.6788, 5.0533, 5.4544, 5.6679, 5.9962, 6.6526, 7.0949, 18.2525]
+22:19:30   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16147257, conflicts 0, build 36.6 s
+22:20:14   UNSAT after 1 iterations, 0 cuts, 43.8 s (no radii for these phases; float cuts: evidence)
+22:20:14 RESULT real/ins/c8_120pts_15layers_s07_2.json ('UNSAT', 1, 0)
+22:20:55 phase c8_120pts_15layers_s08_1: th(deg)=[0.0, 3.6874, 3.7028, 3.8516, 4.0086, 4.1798, 4.4734, 4.6788, 4.3788, 5.0533, 5.4544, 5.6679, 5.9962, 6.6526, 7.0949, 18.2525]
+22:20:55   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16144404, conflicts 0, build 40.5 s
+22:21:21   UNSAT after 1 iterations, 0 cuts, 26.3 s (no radii for these phases; float cuts: evidence)
+22:21:21 RESULT real/ins/c8_120pts_15layers_s08_1.json ('UNSAT', 1, 0)
+22:22:00 phase c8_120pts_15layers_s09_0: th(deg)=[0.0, 3.6874, 3.7028, 3.8516, 4.0086, 4.1798, 4.4734, 4.6788, 5.0533, 5.2538, 5.4544, 5.6679, 5.9962, 6.6526, 7.0949, 18.2525]
+22:22:00   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16148306, conflicts 0, build 38.4 s

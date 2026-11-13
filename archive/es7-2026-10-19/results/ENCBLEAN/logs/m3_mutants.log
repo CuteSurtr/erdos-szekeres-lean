@@ -1,0 +1,96 @@
+# M3 mutants (docs/M3PLAN.md section 3 step 4), Integration step, 2026-11-06T17:30:34+09:00
+# Workspace: a scratch copy (cp -a) of EncB/, EncB.lean, lakefile.toml, lean-toolchain and .lake/ in the session scratchpad
+#   (/sandbox/integ/mut/work); ENCBLEAN itself was not modified by any mutant.
+# Each build: systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake build EncB.Satisfiable
+#   (EncB.Satisfiable imports every M3 module; Tctl < 88 C checked before each build). Full outputs: /sandbox/integ/mut/f_<field>.out, nest.out.
+
+== control ==
+  unmodified copy: rc=0 (Build completed successfully)
+  copy after the 13 field mutants, Model.lean restored (cmp identical): rc=0, every module rebuilt (Model ... SoundRules), no error
+
+== 1. delete one field of 'structure Model' (EncB/Model.lean:81-102; the field's line and its continuation lines) ==
+  every one of the 13 mutants fails (rc=1). 'failed' = the modules lake reports as failed; their dependents are not built.
+  chi           rc=1  failed: EncB.Model                               first error: EncB/Model.lean:88:16: Function expected at
+  psiLt         rc=1  failed: EncB.Model                               first error: EncB/Model.lean:83:22: Function expected at
+  psiLt_irrefl  rc=1  failed: EncB.SoundOrbit EncB.SoundRules          first error: EncB/SoundOrbit.lean:207:14: Invalid field `psiLt_irrefl`: The environment does not contain `EncB.Model.psiLt_irrefl`
+  psiLt_trans   rc=1  failed: EncB.SoundOrbit EncB.SoundAng EncB.SoundRules first error: EncB/SoundOrbit.lean:194:44: Invalid field `psiLt_trans`: The environment does not contain `EncB.Model.psiLt_trans`
+  psiLt_total   rc=1  failed: EncB.SoundOrbit EncB.SoundAng            first error: EncB/SoundOrbit.lean:203:13: Invalid field `psiLt_total`: The environment does not contain `EncB.Model.psiLt_total`
+  psiLt_zero    rc=1  failed: EncB.SoundAng                            first error: EncB/SoundAng.lean:177:10: Invalid field `psiLt_zero`: The environment does not contain `EncB.Model.psiLt_zero`
+  chi_rot       rc=1  failed: EncB.SoundOlit                           first error: EncB/SoundOlit.lean:23:6: Invalid field `chi_rot`: The environment does not contain `EncB.Model.chi_rot`
+  chi_cycle     rc=1  failed: EncB.ModelLemmas                         first error: EncB/ModelLemmas.lean:86:14: Invalid field `chi_cycle`: The environment does not contain `EncB.Model.chi_cycle`
+  chi_swap      rc=1  failed: EncB.ModelLemmas                         first error: EncB/ModelLemmas.lean:87:14: Invalid field `chi_swap`: The environment does not contain `EncB.Model.chi_swap`
+  ruleA         rc=1  failed: EncB.SoundRules                          first error: EncB/SoundRules.lean:154:17: Invalid field `ruleA`: The environment does not contain `EncB.Model.ruleA`
+  ruleB         rc=1  failed: EncB.SoundRules                          first error: EncB/SoundRules.lean:168:17: Invalid field `ruleB`: The environment does not contain `EncB.Model.ruleB`
+  nest          rc=1  failed: EncB.SoundOrbit                          first error: EncB/SoundOrbit.lean:220:62: Invalid field `nest`: The environment does not contain `EncB.Model.nest`
+  noChain       rc=1  failed: EncB.SoundChain                          first error: EncB/SoundChain.lean:185:16: Invalid field `noChain`: The environment does not contain `EncB.Model.noChain`
+  When the failing module is a unit file, its '#guard_msgs in #print axioms' also fails, now seeing sorryAx, e.g.
+    psiLt_zero: + info: 'EncB.angCl_sound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+    noChain:    + info: 'EncB.chainCl_sound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+  result: 13/13 field deletions break the build.
+
+== 2. negate the nesting literal in a scratch Coded.lean (nestLits only; diagCoded's copy of the same olit is left as is) ==
+  diff against EncB/Coded.lean:
+    212c212
+    <     olit m (orbVarC m t) (i, 0) (i, 1) (j, k)
+    ---
+    >     (olit m (orbVarC m t) (i, 0) (i, 1) (j, k)).map (fun l => -l)
+  (a) build: rc=1; only EncB.SoundOrbit fails:
+    ✔ [4/14] Built EncB.Coded (1.5s)
+    ✔ [5/14] Built EncB.Model (409ms)
+    ✔ [6/14] Built EncB.ModelLemmas (1.0s)
+    ✔ [7/14] Built EncB.SortLemmas (552ms)
+    ✔ [8/14] Built EncB.SoundOlit (980ms)
+    ✖ [9/14] Building EncB.SoundOrbit (747ms)
+    error: EncB/SoundOrbit.lean:220:53: Application type mismatch: The argument
+    error: EncB/SoundOrbit.lean:231:0: ❌️ Docstring on `#guard_msgs` does not match generated message:
+    - info: 'EncB.nestLits_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+    ✔ [10/14] Built EncB.SoundAng (719ms)
+    ✔ [11/14] Built EncB.SoundChain (864ms)
+    ✔ [12/14] Built EncB.SoundWord (1.4s)
+    ✔ [13/14] Built EncB.SoundRules (1.8s)
+    - EncB.SoundOrbit
+    error: EncB/SoundOrbit.lean:231:0: ❌️ Docstring on `#guard_msgs` does not match generated message:
+    
+    - info: 'EncB.nestLits_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+  (b) early-warning test on the mutant copy (lake env lean --run EncB/EarlyWarning.lean, 4G cap, nice 10):
+      exit=1 wall=355s
+      EW SUMMARY: FAIL | runs 35 (base 30, controls 5 + WordCheck swap) | (1) all laws hold => 0 unsatisfied clauses, every run: false | (2) base runs: laws hold, 0 unsatisfied: 0/30 | (3) WordCheck violations 0 of 161280 triples | (4) controls detected 3/6 (WordCheck swap: 42240 of 42240 triples fail) | families = genCoded, every run: true
+      In all 30 base runs every Model law count is 0 and the unsatisfied clauses are exactly the nesting clauses, all of them:
+      run | nest_clauses | nest_UNSAT | genCoded_UNSAT
+      (a) A (m,K,t)=(6,8,3) base (UNEXPECTED) | 18 | 18 | 18
+      (a) A-mirror (m,K,t)=(6,8,3) base (UNEXPECTED) | 18 | 18 | 18
+      (a) B (m,K,t)=(6,8,3) base (UNEXPECTED) | 18 | 18 | 18
+      (a) B-mirror (m,K,t)=(6,8,3) base (UNEXPECTED) | 18 | 18 | 18
+      (a) C (m,K,t)=(6,8,3) base (UNEXPECTED) | 18 | 18 | 18
+      (a) C-mirror (m,K,t)=(6,8,3) base (UNEXPECTED) | 18 | 18 | 18
+      (a) D (m,K,t)=(6,8,3) base (UNEXPECTED) | 18 | 18 | 18
+      (a) D-mirror (m,K,t)=(6,8,3) base (UNEXPECTED) | 18 | 18 | 18
+      (a) A (m,K,t)=(6,8,5) base (UNEXPECTED) | 60 | 60 | 60
+      (a) A-mirror (m,K,t)=(6,8,5) base (UNEXPECTED) | 60 | 60 | 60
+      (a) B-mirror (m,K,t)=(6,8,5) base (UNEXPECTED) | 60 | 60 | 60
+      (a) D (m,K,t)=(6,8,5) base (UNEXPECTED) | 60 | 60 | 60
+      (b) A[0,2,5,7,9] (m,K,t)=(6,8,5) base (UNEXPECTED) | 60 | 60 | 60
+      (b) A[0,2,5,7,9]-mirror (m,K,t)=(6,8,5) base (UNEXPECTED) | 60 | 60 | 60
+      (b) D[0,3,6,9] (m,K,t)=(6,8,4) base (UNEXPECTED) | 36 | 36 | 36
+      (b) D[0,3,6,9]-mirror (m,K,t)=(6,8,4) base (UNEXPECTED) | 36 | 36 | 36
+      (c) sq2 (m,K,t)=(4,6,2) base (UNEXPECTED) | 4 | 4 | 4
+      (c) sq2-mirror (m,K,t)=(4,6,2) base (UNEXPECTED) | 4 | 4 | 4
+      (c) sq2 (m,K,t)=(4,8,2) base (UNEXPECTED) | 4 | 4 | 4
+      (c) sq2-mirror (m,K,t)=(4,8,2) base (UNEXPECTED) | 4 | 4 | 4
+      (c) sq3 (m,K,t)=(4,6,3) base (UNEXPECTED) | 12 | 12 | 12
+      (c) sq3-mirror (m,K,t)=(4,6,3) base (UNEXPECTED) | 12 | 12 | 12
+      (c) sq3 (m,K,t)=(4,8,3) base (UNEXPECTED) | 12 | 12 | 12
+      (c) sq3-mirror (m,K,t)=(4,8,3) base (UNEXPECTED) | 12 | 12 | 12
+      (c) sq4 (m,K,t)=(4,6,4) control(noChain) (UNEXPECTED) | 24 | 24 | 27
+      (c) sq4-mirror (m,K,t)=(4,6,4) control(noChain) (UNEXPECTED) | 24 | 24 | 29
+      (c) sq4 (m,K,t)=(4,8,4) base (UNEXPECTED) | 24 | 24 | 24
+      (c) sq4-mirror (m,K,t)=(4,8,4) base (UNEXPECTED) | 24 | 24 | 24
+      (e) vs6 (m,K,t)=(6,8,2) base (UNEXPECTED) | 6 | 6 | 6
+      (e) vs6 (m,K,t)=(6,8,3) base (UNEXPECTED) | 18 | 18 | 18
+      (e) vs4 (m,K,t)=(4,8,3) base (UNEXPECTED) | 12 | 12 | 12
+      (e) vs6b (m,K,t)=(6,10,3) base (UNEXPECTED) | 18 | 18 | 18
+      (ctl) A K=5 (m,K,t)=(6,5,3) control(noChain) (UNEXPECTED) | 18 | 18 | 142
+      (ctl) chi(A)/psi(A-mirror) (m,K,t)=(6,8,4) control(clauses) (as expected) | 36 | 36 | 39
+      (ctl) vs6 mirrored chi (m,K,t)=(6,8,3) control(rules) (as expected) | 18 | 0 | 207
+      (the vs6 mirrored-chi control has nest_UNSAT 0: with chi mirrored the negated literal is true there.)
+  result: nestLits_sound breaks, and the early-warning test reports nest_UNSAT > 0 in every base run (FAIL), as the plan requires.

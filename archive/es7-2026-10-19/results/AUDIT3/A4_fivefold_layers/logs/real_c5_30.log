@@ -1,0 +1,30 @@
+SYMMAX/c5_30points.txt: 30 points, centre included: False, 6 orbits
+  mirror=False: 30 points, largest convex subset 6, layers single orbits: True, layer orbit order [1, 5, 0, 3, 4, 2]
+    stream N=30 enc=L mirror=False subset=(0, 1, 2, 3, 4, 5) key=3: {'T': 0, 'D': 0, 'K': 0} (7 s)
+    stream N=30 enc=L mirror=False subset=(0, 1, 2, 3, 4, 5) key=4: {'T': 0, 'D': 0, 'K': 0} (7 s)
+    stream N=30 enc=A mirror=False subset=(0, 1, 2, 3, 4, 5) key=(1, 0): {'T': 0, 'D': 0, 'K': 0} (7 s)
+  after mirror=False: {'subsets': 57, 'evaluations': 1183, 'T': 0, 'D': 0, 'K': 0, 'stream_evaluations': 3}
+  mirror=True: 30 points, largest convex subset 6, layers single orbits: True, layer orbit order [1, 5, 0, 3, 4, 2]
+    stream N=30 enc=L mirror=True subset=(0, 1, 2, 3, 4, 5) key=4: {'T': 0, 'D': 0, 'K': 0} (7 s)
+    stream N=30 enc=L mirror=True subset=(0, 1, 2, 3, 4, 5) key=1: {'T': 0, 'D': 0, 'K': 0} (8 s)
+    stream N=30 enc=A mirror=True subset=(0, 1, 2, 3, 4, 5) key=(1, 0): {'T': 0, 'D': 0, 'K': 0} (8 s)
+  after mirror=True: {'subsets': 114, 'evaluations': 2366, 'T': 0, 'D': 0, 'K': 0, 'stream_evaluations': 6}
+TOTAL {"subsets": 114, "evaluations": 2366, "T": 0, "D": 0, "K": 0, "stream_evaluations": 6}
+       91.75 real        90.30 user         0.84 sys
+          1090535424  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              161651  page reclaims
+                  87  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  37  voluntary context switches
+               24294  involuntary context switches
+       1829454416414  instructions retired
+        348977229559  cycles elapsed
+          1080100208  peak memory footprint

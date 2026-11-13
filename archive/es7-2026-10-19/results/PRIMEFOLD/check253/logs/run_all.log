@@ -1,0 +1,141 @@
+file PRIMEFOLD/sets/k10/rule_p9_253pts.pts p 9 t 28 centre 1 n 253
+const c20 width (units 2^-256): 1 float check ok
+const c40 width (units 2^-256): 5 float check ok
+const s20 width (units 2^-256): 4 float check ok
+const s40 width (units 2^-256): 9 float check ok
+const s60 width (units 2^-256): 1 float check ok
+coefficient formulas: float sanity ok
+exact y-order and x-order computed (all points distinct); exact ties in y: 0 ties in x: 0 0.0s
+cross table built and antisymmetric 0.2s
+  i=0 0s
+  i=25 0s
+  i=50 1s
+  i=75 1s
+  i=100 1s
+  i=125 2s
+  i=150 2s
+  i=175 2s
+  i=200 2s
+  i=225 2s
+  i=250 2s
+triples: 2667126 positive 1430678 negative 1236448 collinear(zero) 0 undecided 0 needed 1024-bit fallback 0 1.7s
+smallest |orient| among filter-certified triples ~ 7.9188e+17 at triple (63, 72, 81)
+wrote orient_upper.bin (n^3 bytes; entry [i][j][k] for i<j<k: 1 = ccw, 255 = cw)
+sha256 orient_upper.bin eec1c00545658e81daef940eb70cffcd202a5d3065ccba57cced231a1c65a694
+GENERAL POSITION (no three collinear, all signs certified): YES
+rotation/cyclic/antisymmetry consistency on 300000 random triples: violations 0
+n=253  table entries not +-1 among i<j<k: 0
+subset size 253
+M1y (lowest-vertex anchor) max convex subset = 9  witness ok=1 : 0 1 10 19 28 171 90 36 9
+M1x (leftmost-vertex anchor) max convex subset = 9  witness ok=1 : 4 175 184 193 8 17 26 35 252
+M2 (cup+cap) max convex subset = 9  witness ok=1 : 5 14 23 32 175 94 40 13 4
+angular-order violations (must be 0): 0
+RESULT 9 9 9 AGREE
+Decimal(150) recomputation of all 2667126 triples: sign mismatches vs exact table = 0
+smallest |det| = 7.918844E+17 at (69, 78, 87) ; coordinate magnitudes <= 1.001E+22 ; estimated arithmetic error < 1E-90
+A kind=0 size=16  DP 9 9 9  brute 9  ok
+A kind=1 size=16  DP 7 7 7  brute 7  ok
+A kind=2 size=16  DP 8 8 8  brute 8  ok
+A kind=3 size=18  DP 7 7 7  brute 7  ok
+A kind=4 size=18  DP 9 9 9  brute 9  ok
+A kind=5 size=15  DP 9 9 9  brute 9  ok
+A kind=0 size=17  DP 8 8 8  brute 8  ok
+A kind=1 size=18  DP 7 7 7  brute 7  ok
+A kind=2 size=16  DP 8 8 8  brute 8  ok
+A kind=3 size=18  DP 8 8 8  brute 8  ok
+A kind=4 size=19  DP 9 9 9  brute 9  ok
+A kind=5 size=15  DP 7 7 7  brute 7  ok
+A kind=0 size=17  DP 9 9 9  brute 9  ok
+A kind=1 size=20  DP 7 7 7  brute 7  ok
+A kind=2 size=16  DP 8 8 8  brute 8  ok
+A kind=3 size=17  DP 7 7 7  brute 7  ok
+A kind=4 size=19  DP 9 9 9  brute 9  ok
+A kind=5 size=17  DP 8 8 8  brute 8  ok
+A kind=0 size=18  DP 9 9 9  brute 9  ok
+A kind=1 size=19  DP 7 7 7  brute 7  ok
+A kind=2 size=16  DP 8 8 8  brute 8  ok
+A kind=3 size=15  DP 7 7 7  brute 7  ok
+A kind=4 size=18  DP 9 9 9  brute 9  ok
+A kind=5 size=15  DP 7 7 7  brute 7  ok
+A kind=0 size=14  DP 9 9 9  brute 9  ok
+A kind=1 size=20  DP 7 7 7  brute 7  ok
+A kind=2 size=15  DP 7 7 7  brute 7  ok
+A kind=3 size=16  DP 7 7 7  brute 7  ok
+A kind=4 size=18  DP 9 9 9  brute 9  ok
+A kind=5 size=16  DP 8 8 8  brute 8  ok
+A kind=0 size=18  DP 8 8 8  brute 8  ok
+A kind=1 size=14  DP 7 7 7  brute 7  ok
+A kind=2 size=17  DP 9 9 9  brute 9  ok
+A kind=3 size=18  DP 7 7 7  brute 7  ok
+A kind=4 size=18  DP 9 9 9  brute 9  ok
+A kind=5 size=18  DP 9 9 9  brute 9  ok
+A kind=0 size=16  DP 9 9 9  brute 9  ok
+A kind=1 size=15  DP 6 6 6  brute 6  ok
+A kind=2 size=18  DP 9 9 9  brute 9  ok
+A kind=3 size=15  DP 7 7 7  brute 7  ok
+A kind=4 size=18  DP 9 9 9  brute 9  ok
+A kind=5 size=16  DP 8 8 8  brute 8  ok
+A kind=0 size=15  DP 9 9 9  brute 9  ok
+A kind=1 size=18  DP 7 7 7  brute 7  ok
+A kind=2 size=16  DP 8 8 8  brute 8  ok
+A kind=3 size=17  DP 7 7 7  brute 7  ok
+A kind=4 size=18  DP 9 9 9  brute 9  ok
+A kind=5 size=16  DP 9 9 9  brute 9  ok
+A kind=0 size=18  DP 9 9 9  brute 9  ok
+A kind=1 size=18  DP 7 7 7  brute 7  ok
+A kind=2 size=17  DP 8 8 8  brute 8  ok
+A kind=3 size=17  DP 8 8 8  brute 8  ok
+A kind=4 size=18  DP 9 9 9  brute 9  ok
+A kind=5 size=16  DP 9 9 9  brute 9  ok
+A kind=0 size=18  DP 8 8 8  brute 8  ok
+A kind=1 size=15  DP 7 7 7  brute 7  ok
+A kind=2 size=15  DP 7 7 7  brute 7  ok
+A kind=3 size=17  DP 8 8 8  brute 8  ok
+A kind=4 size=19  DP 9 9 9  brute 9  ok
+A kind=5 size=16  DP 7 7 7  brute 7  ok
+B mode=uniform size=16  DP 9 9 9  brute 9  ok
+B mode=circle size=17  DP 15 15 15  brute 15  ok
+B mode=cluster size=12  DP 7 7 7  brute 7  ok
+B mode=uniform size=12  DP 7 7 7  brute 7  ok
+B mode=circle size=17  DP 13 13 13  brute 13  ok
+B mode=cluster size=15  DP 7 7 7  brute 7  ok
+B mode=uniform size=13  DP 9 9 9  brute 9  ok
+B mode=circle size=13  DP 12 12 12  brute 12  ok
+B mode=cluster size=16  DP 8 8 8  brute 8  ok
+B mode=uniform size=15  DP 8 8 8  brute 8  ok
+B mode=circle size=14  DP 11 11 11  brute 11  ok
+B mode=cluster size=15  DP 8 8 8  brute 8  ok
+B mode=uniform size=12  DP 7 7 7  brute 7  ok
+B mode=circle size=15  DP 15 15 15  brute 15  ok
+B mode=cluster size=13  DP 8 8 8  brute 8  ok
+B mode=uniform size=16  DP 8 8 8  brute 8  ok
+B mode=circle size=16  DP 14 14 14  brute 14  ok
+B mode=cluster size=14  DP 10 10 10  brute 10  ok
+B mode=uniform size=17  DP 9 9 9  brute 9  ok
+B mode=circle size=13  DP 12 12 12  brute 12  ok
+B mode=cluster size=13  DP 7 7 7  brute 7  ok
+B mode=uniform size=16  DP 9 9 9  brute 9  ok
+B mode=circle size=15  DP 13 13 13  brute 13  ok
+B mode=cluster size=12  DP 9 9 9  brute 9  ok
+B mode=uniform size=15  DP 8 8 8  brute 8  ok
+B mode=circle size=12  DP 10 10 10  brute 10  ok
+B mode=cluster size=14  DP 7 7 7  brute 7  ok
+B mode=uniform size=16  DP 8 8 8  brute 8  ok
+B mode=circle size=16  DP 14 14 14  brute 14  ok
+B mode=cluster size=16  DP 7 7 7  brute 7  ok
+B mode=uniform size=15  DP 8 8 8  brute 8  ok
+B mode=circle size=12  DP 11 11 11  brute 11  ok
+B mode=cluster size=17  DP 8 8 8  brute 8  ok
+B mode=uniform size=13  DP 8 8 8  brute 8  ok
+B mode=circle size=13  DP 13 13 13  brute 13  ok
+B mode=cluster size=13  DP 7 7 7  brute 7  ok
+B mode=uniform size=13  DP 7 7 7  brute 7  ok
+B mode=circle size=13  DP 11 11 11  brute 11  ok
+B mode=cluster size=16  DP 8 8 8  brute 8  ok
+B mode=uniform size=17  DP 9 9 9  brute 9  ok
+B mode=circle size=15  DP 14 14 14  brute 14  ok
+B mode=cluster size=13  DP 7 7 7  brute 7  ok
+B mode=uniform size=16  DP 9 9 9  brute 9  ok
+B mode=circle size=17  DP 14 14 14  brute 14  ok
+B mode=cluster size=12  DP 8 8 8  brute 8  ok
+TOTAL tests 105 mismatches 0

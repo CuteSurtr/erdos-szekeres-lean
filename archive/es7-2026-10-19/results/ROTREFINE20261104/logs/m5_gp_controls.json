@@ -1,0 +1,16 @@
+{
+  "checker_sha256": "7bb2e1535755438daeedb3dc68561abed94458945d87c2dedce9c53917a03c6c",
+  "exact_table_sha256": "2a780b6ce4bf794eee1893dc557260f53bff2c65e87027ab077c63a61ba0ffed",
+  "checks": [
+    {
+      "input": "exact55",
+      "result": "relations 17393805 violated 0",
+      "control_passed": true
+    },
+    {
+      "input": "flipped_one_bracket",
+      "result": "relations 17393805 violated 1280",
+      "control_passed": true
+    }
+  ]
+}

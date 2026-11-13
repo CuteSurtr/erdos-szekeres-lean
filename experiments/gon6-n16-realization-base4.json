@@ -1,0 +1,11 @@
+{
+  "scope": "one abstract model and one fixed x-grid",
+  "source_manifest": "experiments/gon6-n16-seed0.json",
+  "points": 16,
+  "gon": 6,
+  "x_grid_base": 4,
+  "cnf_clauses_independently_checked": 13156,
+  "z3_version": "5.1.0",
+  "status": "unsat",
+  "seconds": 0.03203462506644428
+}

@@ -1,0 +1,10 @@
+input commit Z = 066eaa98 (worktree /opt/in), ROOT=/opt/in/cloud/es7-2026-10-19
+verify/v3 commit = bdf319cf
+v3_jsonl_leaves results/WAVE1 jtree1: dirs 119 leaf lines 30151 skipped records 71
+v3_jsonl_leaves results/WAVE2 jtree2: dirs 86 leaf lines 5156 skipped records 0
+v3_jsonl_leaves results/WAVE3 jtree3: dirs 5 leaf lines 232 skipped records 0
+v3_manifest: leaves 35153 cases with leaves 253 problems 0
+sha256(M.jsonl)  = 22b6f6a782cd2b2e6319c61c7bc7029032d10aa5fd583dcfbba47ec627e1c549 (35153 lines)
+VERIFIED keys from 21 files (V3T/**/*.jsonl, V3A/*/out.jsonl; no V3B out.jsonl at Z): 10121 (all 10121 matched and removed)
+n = 25032
+sha256(Mt.jsonl) = 605e39d27b8a11c8b8de36b167d1760f91dc3e6c4e49a2e570bf607689e7cfe7

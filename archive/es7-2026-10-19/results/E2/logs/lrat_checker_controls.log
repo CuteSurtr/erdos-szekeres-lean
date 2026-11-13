@@ -1,0 +1,8 @@
+== checker controls (cadical 3.0.1 proofs, --binary=0)
+n18k6m3 genuine proof | expect ACCEPT | lrat-check-orig: c VERIFIED | lrat-check-E2patch: c VERIFIED | cake_lpr: s VERIFIED UNSAT
+x1 (SAT) + '2 0 0' | expect REJECT | lrat-check-orig: c VERIFIED | lrat-check-E2patch: c NOT VERIFIED | cake_lpr: c Checking failed at line: 0. Reason: pivot must be non-zero
+n12k6m3 (SAT) + hintless empty clause | expect REJECT | lrat-check-orig: c VERIFIED | lrat-check-E2patch: c NOT VERIFIED | cake_lpr: c Checking failed at line: 0. Reason: pivot must be non-zero
+n15k6m3 proof vs n18k6m3 | expect REJECT | lrat-check-orig: c NOT VERIFIED | lrat-check-E2patch: c NOT VERIFIED | cake_lpr: c Checking failed at line: 0. Reason: clause not empty or singleton after reduction
+n18 proof, empty clause hints removed | expect REJECT | lrat-check-orig: c VERIFIED | lrat-check-E2patch: c NOT VERIFIED | cake_lpr: c Checking failed at line: 95796. Reason: pivot must be non-zero
+n18 proof, last empty-clause hint removed | expect REJECT | lrat-check-orig: c VERIFIED | lrat-check-E2patch: c NOT VERIFIED | cake_lpr: c Checking failed at line: 95796. Reason: pivot must be non-zero
+n18 proof, a middle lemma's literal flipped | expect REJECT | lrat-check-orig: c NOT VERIFIED | lrat-check-E2patch: c NOT VERIFIED | cake_lpr: c Checking failed at line: 49746. Reason: clause not empty or singleton after reduction

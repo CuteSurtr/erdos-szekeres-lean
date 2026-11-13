@@ -1,0 +1,30 @@
+0. GP identity holds on 3000 random integer quintuples; wrong-sign control fails on 200 / 200
+1. map: 4960 triples, 1240 variables; signs consistent with rho; classes = rotation orbits
+   map SHA-256: f72b186e254d098b3f499aebc5845af52505b2a7cc7b08650fc5ef3d08d09c56
+2/3. cut 0: 55 inner variables, 149 rows, weights 333..177980: certificate valid
+2/3. cut 1: 55 inner variables, 144 rows, weights 303..156210: certificate valid
+2/3. cut 2: 55 inner variables, 146 rows, weights 864..493635: certificate valid
+2/3. cut 3: 55 inner variables, 142 rows, weights 1212..135174: certificate valid
+2/3. cut 4: 55 inner variables, 152 rows, weights 6756..564351: certificate valid
+2/3. cut 5: 55 inner variables, 146 rows, weights 64..29435: certificate valid
+   the six forbidden inner chirotopes are pairwise distinct
+4. mutation controls rejected: 282 / 282 (literal flips on used variables, weight change, dropped row); variables not used by any row, summed over cuts: 60
+ALL CHECKS PASSED
+        0.33 real         0.32 user         0.00 sys
+            24428544  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                2298  page reclaims
+                  41  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   2  voluntary context switches
+                  65  involuntary context switches
+          5471403290  instructions retired
+          1043376303  cycles elapsed
+            14107104  peak memory footprint

@@ -1,0 +1,88 @@
+records total 2424
+sources 282 LOCAL sources ['C2P/LOCAL', 'C2P/LOCAL_DEEP', 'C2P/LOCAL_L3', 'C2P2/LOCAL', 'C2P3/LOCAL', 'C2P4/LOCAL', 'C2P5/LOCAL']
+  ('P1', 'H', 'UNSATISFIABLE', True, False) 227
+  ('P1', 'H', 'UNSATISFIABLE', True, True) 4
+  ('P1', 'Q', 'UNSATISFIABLE', True, False) 56
+  ('P1', 'cover', 'UNSATISFIABLE', True, True) 1
+  ('P2', 'H', 'UNSATISFIABLE', True, False) 232
+  ('P2', 'H', 'UNSATISFIABLE', True, True) 5
+  ('P2', 'Q', 'UNSATISFIABLE', True, False) 56
+  ('P2', 'cover', 'UNSATISFIABLE', True, True) 1
+  ('P3', 'H', 'UNSATISFIABLE', True, False) 218
+  ('P3', 'H', 'UNSATISFIABLE', True, True) 39
+  ('P3', 'Q', 'UNSATISFIABLE', True, False) 57
+  ('P3', 'cover', 'UNSATISFIABLE', True, True) 1
+  ('P4', 'H', 'UNKNOWN', False, False) 1
+  ('P4', 'H', 'UNSATISFIABLE', True, False) 231
+  ('P4', 'H', 'UNSATISFIABLE', True, True) 16
+  ('P4', 'Q', 'UNKNOWN', False, False) 15
+  ('P4', 'Q', 'UNSATISFIABLE', True, False) 56
+  ('P4', 'cover', 'UNSATISFIABLE', True, True) 1
+  ('P5', 'H', 'UNKNOWN', False, False) 5
+  ('P5', 'H', 'UNSATISFIABLE', True, False) 213
+  ('P5', 'H', 'UNSATISFIABLE', True, True) 18
+  ('P5', 'Q', 'UNKNOWN', False, False) 13
+  ('P5', 'Q', 'UNSATISFIABLE', True, False) 54
+  ('P5', 'Q', 'UNSATISFIABLE', True, True) 4
+  ('P5', 'cover', 'UNSATISFIABLE', True, True) 1
+  ('P6', 'H', 'UNKNOWN', False, False) 2
+  ('P6', 'H', 'UNSATISFIABLE', True, False) 224
+  ('P6', 'H', 'UNSATISFIABLE', True, True) 15
+  ('P6', 'Q', 'UNKNOWN', False, False) 18
+  ('P6', 'Q', 'UNSATISFIABLE', True, False) 57
+  ('P6', 'Q', 'UNSATISFIABLE', True, True) 1
+  ('P6', 'cover', 'UNSATISFIABLE', True, False) 1
+  ('P7', 'H', 'UNKNOWN', False, False) 2
+  ('P7', 'H', 'UNSATISFIABLE', True, False) 225
+  ('P7', 'H', 'UNSATISFIABLE', True, True) 10
+  ('P7', 'Q', 'UNKNOWN', False, False) 27
+  ('P7', 'Q', 'UNSATISFIABLE', True, False) 55
+  ('P7', 'Q', 'UNSATISFIABLE', True, True) 1
+  ('P7', 'cover', 'UNSATISFIABLE', True, False) 1
+  ('P8', 'H', 'UNSATISFIABLE', True, False) 178
+  ('P8', 'H', 'UNSATISFIABLE', True, True) 10
+  ('P8', 'Q', 'UNKNOWN', False, False) 20
+  ('P8', 'Q', 'UNKNOWN', False, True) 1
+  ('P8', 'Q', 'UNSATISFIABLE', True, False) 43
+  ('P8', 'Q', 'UNSATISFIABLE', True, True) 7
+  ('P8', 'cover', 'UNSATISFIABLE', True, True) 1
+
+main sample: 24 units; out.jsonl lines: 23
+  P1_5-6-11@C2P5/M94     kind=H certified_record=True in_out=True (True, True, True, 'verified')
+  P1_2-3-5@C2P5/M54      kind=H certified_record=True in_out=True (True, True, True, 'verified')
+  P2_3-7-15@C2P5/M75     kind=H certified_record=True in_out=True (True, True, True, 'verified')
+  P2_1-4-12@C2P5/M82     kind=H certified_record=True in_out=True (True, True, True, 'verified')
+  P3_1-12-13@C2P5/M71    kind=H certified_record=True in_out=True (True, True, True, 'verified')
+  P3_1-12-14@C2P5/M72    kind=H certified_record=True in_out=True (True, True, True, 'verified')
+  P4_1-6-15@C2P4/M09     kind=H certified_record=True in_out=True (True, True, True, 'verified')
+  P4_1-8-10@C2P5/M31     kind=H certified_record=True in_out=True (True, True, True, 'verified')
+  P5_1-2-8@C2P3/M44      kind=H certified_record=True in_out=True (True, True, True, 'verified')
+  P5_1-3-12@C2P3/M10     kind=H certified_record=True in_out=True (True, True, True, 'verified')
+  P6_2-9-12@C2P/M39      kind=H certified_record=True in_out=True (True, True, True, 'verified')
+  P6_8-9-11@C2P4/M31     kind=H certified_record=True in_out=True (True, True, True, 'verified')
+  P7_9-10-11@C2P/M01     kind=H certified_record=True in_out=True (True, True, True, 'verified')
+  P7_2-4-13@C2P/M23      kind=H certified_record=True in_out=True (True, True, True, 'verified')
+  P8_1-3-15@C2P/M11      kind=H certified_record=True in_out=True (True, True, True, 'verified')
+  P8_4-12-13@C2P/M13     kind=H certified_record=True in_out=True (True, True, True, 'verified')
+  P1_2-3@C2P5/M56        kind=Q certified_record=True in_out=True (True, True, True, 'verified')
+  P2_6-7@C2P5/M90        kind=Q certified_record=True in_out=True (True, True, True, 'verified')
+  P3_6-7@C2P5/M70        kind=Q certified_record=True in_out=True (True, True, True, 'verified')
+  P4_5-10@C2P4/M38       kind=Q certified_record=True in_out=True (True, True, True, 'verified')
+  P5_6-11@C2P4/M30       kind=Q certified_record=True in_out=True (True, True, True, 'verified')
+  P6_9-11@C2P3/M31       kind=Q certified_record=True in_out=False 
+  P7_1-15@C2P/M40        kind=Q certified_record=True in_out=False 
+  P8_1-10@C2P2/M02       kind=Q certified_record=True in_out=False 
+missing from out.jsonl: [('P6_9-11@C2P3/M31', 'Q'), ('P7_1-15@C2P/M40', 'Q'), ('P8_1-10@C2P2/M02', 'Q')]
+extra records in out.jsonl not in sample: [('P2_7-9-10', 'C2P5/M97'), ('P6_7-8-9', 'C2P/M02')]
+
+extra sample: 8 units; extra_out.jsonl lines: 8
+  P1_4-11-12@C2P5/M87    kind=H in_out=True (True, True, True)
+  P2_1-4-14@C2P5/M84     kind=H in_out=True (True, True, True)
+  P3_4-13-14@C2P5/M51    kind=H in_out=True (True, True, True)
+  P4_5-8-9@C2P5/M13      kind=H in_out=True (True, True, True)
+  P5_6-8-12@C2P4/M47     kind=H in_out=True (True, True, True)
+  P6_1-3-16@C2P2/M24     kind=H in_out=True (True, True, True)
+  P7_1-2-6@C2P/M09       kind=H in_out=True (True, True, True)
+  P8_2-4-6@C2P/M23       kind=H in_out=True (True, True, True)
+
+per-case kinds in main sample: {'P1': {'H': 2, 'Q': 1}, 'P2': {'H': 2, 'Q': 1}, 'P3': {'H': 2, 'Q': 1}, 'P4': {'H': 2, 'Q': 1}, 'P5': {'H': 2, 'Q': 1}, 'P6': {'H': 2, 'Q': 1}, 'P7': {'H': 2, 'Q': 1}, 'P8': {'H': 2, 'Q': 1}}

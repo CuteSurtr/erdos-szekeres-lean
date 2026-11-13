@@ -1,0 +1,8 @@
+date: 2026-11-06T15:47:40+09:00 (M2 step, final exe); load: 29.94 30.37 31.37
+command: systemd-run --user --scope -q -p MemoryMax=8G -p MemorySwapMax=0 nice -n 10 /usr/bin/time .lake/build/bin/encb_dimacs twin-check 6 8 11   (in memory: encB 6 8 11 = (gen 6 8 11).clauses.toList, numVars = nv; nothing written; second and last compiled evaluation of encB 6 8 11)
+exe sha256: e9454996f7f8a21f479cc4a2540d18f2f55f6445fbd36c642d44a7f81fe96a59
+gen: nv 78059, ncl 2387083
+encB: nv 78059, ncl 2387083
+(6,8,11) EQUAL nv=78059 ncl=2387083 gen_ms=4605 encB_ms=11044
+total 17.33 s wall, 17.21 s user, 747756 KB max RSS
+rc=0

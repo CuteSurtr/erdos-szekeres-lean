@@ -1,0 +1,12 @@
+/opt/work/rej/rec_badsha.jsonl: record 1 node 0s0-1s0_10_2 cnf_sha256 changed
+/opt/work/rej/rec_badbase.jsonl: record 1 node 0s0-1s0_10_2 base_sha256 changed
+old python3   correct base, original records: rc 0: {"certified_nodes": 288, "class_covered": false, "uncovered_frontier_nodes": 355, "uncovered_sample": ["0s0", "0s0-1s0_2", "0s0-1s0_3", "0s0-1s0_4", "0s0-1s0_5", "0s0-1s0_6", "0s0-1s0_7", "0s0-1s0_8", "0s0-1s0_9", "0s0-1s0_2s0-3s0"]}
+old python3   wrong base: rc 1: AssertionError: ('sha mismatch', '0s0-1s0_10_2')
+old python3   wrong cnf_sha256 in one record: rc 1: AssertionError: ('sha mismatch', '0s0-1s0_10_2')
+old python3 -O wrong cnf_sha256 in one record: rc 0: {"certified_nodes": 288, "class_covered": false, "uncovered_frontier_nodes": 355, "uncovered_sample": ["0s0", "0s0-1s0_2", "0s0-1s0_3", "0s0-1s0_4", "0s0-1s0_5", "0s0-1s0_6", "0s0-1s0_7", "0s0-1s0_8", "0s0-1s0_9", "0s0-1s0_2s0-3s0"]}
+old python3   wrong base_sha256 in one record: rc 0: {"certified_nodes": 288, "class_covered": false, "uncovered_frontier_nodes": 355, "uncovered_sample": ["0s0", "0s0-1s0_2", "0s0-1s0_3", "0s0-1s0_4", "0s0-1s0_5", "0s0-1s0_6", "0s0-1s0_7", "0s0-1s0_8", "0s0-1s0_9", "0s0-1s0_2s0-3s0"]}
+new python3   correct base, original records: rc 0: {"certified_nodes": 288, "class_covered": false, "uncovered_frontier_nodes": 355, "uncovered_sample": ["0s0", "0s0-1s0_2", "0s0-1s0_3", "0s0-1s0_4", "0s0-1s0_5", "0s0-1s0_6", "0s0-1s0_7", "0s0-1s0_8", "0s0-1s0_9", "0s0-1s0_2s0-3s0"], "certified_records": 288, 
+new python3   wrong base: rc 1: {"error": "BASE /opt/work/rej/base_bad.cnf has sha256 6296584f2a3e99780d7e4f3d8d3fc147b9d8727dcea66800f3a306531714bcd5, not bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da"}
+new python3   wrong cnf_sha256 in one record: rc 1: {"error": "/opt/work/rej/rec_badsha.jsonl line 2: node 0s0-1s0_10_2: cnf_sha256 88b2aaa50b74bd3d439d282e262364c22e4bd8f546ff52034f9d0a9f6ee569d0 is not the re-derived 88b2aaa50b74bd3d439d282e262364c22e4bd8f546ff52034f9d0a9f6ee569dc"}
+new python3 -O wrong cnf_sha256 in one record: rc 1: {"error": "/opt/work/rej/rec_badsha.jsonl line 2: node 0s0-1s0_10_2: cnf_sha256 88b2aaa50b74bd3d439d282e262364c22e4bd8f546ff52034f9d0a9f6ee569d0 is not the re-derived 88b2aaa50b74bd3d439d282e262364c22e4bd8f546ff52034f9d0a9f6ee569dc"}
+new python3   wrong base_sha256 in one record: rc 1: {"error": "/opt/work/rej/rec_badbase.jsonl line 2: base_sha256 bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6d0 is not bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da"}

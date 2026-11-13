@@ -1,0 +1,2234 @@
+{
+  "date": "2026-10-05",
+  "scope": "Finite omission-row systems and formal certificate lemmas. No improved planar theorem or HMPT coefficient is claimed.",
+  "source": {
+    "doi": "10.5281/zenodo.22842891",
+    "version": 1,
+    "author": "Michael Schroeder",
+    "data_license": "CC BY 4.0",
+    "archive_sha256": "706786a26ec7537396c069fcedf89ab298618e0064a4be5944e96982e85a5fc2"
+  },
+  "lean": {
+    "build_jobs": 3194,
+    "axiom_audit_theorems": 191,
+    "new_statements": [
+      "ErdosSzekeres.packetValid_iff_eight_patterns",
+      "ErdosSzekeres.packetValid_of_xordered",
+      "ErdosSzekeres.OmissionCertificates.weighted_capacity_bound",
+      "ErdosSzekeres.OmissionCertificates.excludes_budget",
+      "ErdosSzekeres.OmissionCertificates.triangle_excludes_one",
+      "ErdosSzekeres.OmissionCertificates.sum_after_fixing",
+      "ErdosSzekeres.OmissionCertificates.conditioned_excludes_budget",
+      "ErdosSzekeres.OmissionCertificates.CertificateTree.check_sound",
+      "ErdosSzekeres.OmissionCertificates.CertificateTree.excludes_of_check",
+      "ErdosSzekeres.OmissionCertificates.pack_succ",
+      "ErdosSzekeres.OmissionCertificates.pack_injective_of_lt",
+      "ErdosSzekeres.OmissionCertificates.pack_load",
+      "ErdosSzekeres.OmissionCertificates.load_eq_of_packed"
+    ],
+    "standard_axioms_only": true,
+    "pilot_checks": [
+      {
+        "record_artifact": {
+          "path": ".cache/omission-leaf-pilot.json",
+          "sha256": "b485f78b3e20404402fbfb7ed54ba252fe53a12357a2c929114f5ec4e4418701",
+          "bytes": 2529
+        },
+        "record": {
+          "node": 12943,
+          "scope": "One maximum-length leaf only; not a full tree or geometric theorem",
+          "seconds": 34.21017016598489,
+          "exit_code": 0,
+          "source_sha256": "bbf46e33059daa6f4818a379e8f2eea39d59b55b7e7cbc7b9878756a1f8d590a",
+          "states": 252,
+          "weighted_rows": 202,
+          "certificate": ".cache/omission-tree/balanced-plus1-v3.json",
+          "certificate_sha256": "4fdeb858246540d359c9baa55724602be5c40d31467d8f4d28b56d3055553beb",
+          "source_catalog_sha256": "23363c9e341a7edf4de28b6bf21970983cc6d4cafa6f2bdef54ce3d25b1c5a94",
+          "checked_source": "experiments/omission-balanced-leaf12943.lean",
+          "proof_log": "'OmissionLeafPilot.margin' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+          "row_indices": [
+            3,
+            7,
+            11,
+            19,
+            21,
+            26,
+            31,
+            33,
+            44,
+            46,
+            50,
+            61,
+            73,
+            77,
+            78,
+            79,
+            80,
+            81,
+            84,
+            85,
+            87,
+            90,
+            94,
+            100,
+            101,
+            114,
+            115,
+            116,
+            117,
+            118,
+            130,
+            133,
+            134,
+            136,
+            158,
+            165,
+            167,
+            171,
+            172,
+            179,
+            180,
+            185,
+            188,
+            190,
+            194,
+            206,
+            213,
+            216,
+            220,
+            221,
+            222,
+            224,
+            226,
+            227,
+            229,
+            234,
+            244,
+            247,
+            248,
+            255,
+            264,
+            266,
+            269,
+            273,
+            276,
+            277,
+            287,
+            288,
+            291,
+            292,
+            297,
+            301,
+            308,
+            309,
+            313,
+            315,
+            320,
+            330,
+            337,
+            352,
+            353,
+            355,
+            362,
+            364,
+            365,
+            366,
+            370,
+            372,
+            375,
+            376,
+            385,
+            387,
+            398,
+            404,
+            405,
+            408,
+            420,
+            431,
+            443,
+            466,
+            470,
+            473,
+            475,
+            477,
+            489,
+            499,
+            516,
+            517,
+            556,
+            575,
+            578,
+            579,
+            597,
+            598,
+            608,
+            611,
+            612,
+            615,
+            619,
+            628,
+            629,
+            636,
+            640,
+            644,
+            651,
+            656,
+            658,
+            666,
+            678,
+            686,
+            689,
+            690,
+            691,
+            692,
+            693,
+            694,
+            695,
+            705,
+            706,
+            710,
+            718,
+            721,
+            722,
+            723,
+            724,
+            726,
+            736,
+            740,
+            741,
+            742,
+            744,
+            746,
+            747,
+            748,
+            761,
+            762,
+            781,
+            784,
+            787,
+            805,
+            814,
+            818,
+            819,
+            830,
+            831,
+            832,
+            833,
+            835,
+            838,
+            847,
+            854,
+            884,
+            886,
+            898,
+            918,
+            919,
+            930,
+            931,
+            934,
+            935,
+            936,
+            937,
+            955,
+            958,
+            963,
+            971,
+            972,
+            973,
+            975,
+            978,
+            980,
+            981,
+            990,
+            1008,
+            1012,
+            1013,
+            1015,
+            1018,
+            1024,
+            1596,
+            2359,
+            2439
+          ]
+        }
+      },
+      {
+        "record_artifact": {
+          "path": ".cache/omission-packed-leaf-pilot.json",
+          "sha256": "4bedfcd005dcc36bc18b4cba4d99df7c665700456a09cf12cb49c53ece7b3620",
+          "bytes": 2570
+        },
+        "record": {
+          "node": 12943,
+          "scope": "One maximum-length leaf with packed column coefficients; not a full tree or geometric theorem",
+          "seconds": 12.785769374924712,
+          "exit_code": 0,
+          "source_sha256": "db7649ad1e84af3b6f3785aacf52b87494f644d797f0030a95073d4076712a34",
+          "states": 252,
+          "weighted_rows": 202,
+          "certificate": ".cache/omission-tree/balanced-plus1-v3.json",
+          "certificate_sha256": "4fdeb858246540d359c9baa55724602be5c40d31467d8f4d28b56d3055553beb",
+          "source_catalog_sha256": "23363c9e341a7edf4de28b6bf21970983cc6d4cafa6f2bdef54ce3d25b1c5a94",
+          "row_indices": [
+            3,
+            7,
+            11,
+            19,
+            21,
+            26,
+            31,
+            33,
+            44,
+            46,
+            50,
+            61,
+            73,
+            77,
+            78,
+            79,
+            80,
+            81,
+            84,
+            85,
+            87,
+            90,
+            94,
+            100,
+            101,
+            114,
+            115,
+            116,
+            117,
+            118,
+            130,
+            133,
+            134,
+            136,
+            158,
+            165,
+            167,
+            171,
+            172,
+            179,
+            180,
+            185,
+            188,
+            190,
+            194,
+            206,
+            213,
+            216,
+            220,
+            221,
+            222,
+            224,
+            226,
+            227,
+            229,
+            234,
+            244,
+            247,
+            248,
+            255,
+            264,
+            266,
+            269,
+            273,
+            276,
+            277,
+            287,
+            288,
+            291,
+            292,
+            297,
+            301,
+            308,
+            309,
+            313,
+            315,
+            320,
+            330,
+            337,
+            352,
+            353,
+            355,
+            362,
+            364,
+            365,
+            366,
+            370,
+            372,
+            375,
+            376,
+            385,
+            387,
+            398,
+            404,
+            405,
+            408,
+            420,
+            431,
+            443,
+            466,
+            470,
+            473,
+            475,
+            477,
+            489,
+            499,
+            516,
+            517,
+            556,
+            575,
+            578,
+            579,
+            597,
+            598,
+            608,
+            611,
+            612,
+            615,
+            619,
+            628,
+            629,
+            636,
+            640,
+            644,
+            651,
+            656,
+            658,
+            666,
+            678,
+            686,
+            689,
+            690,
+            691,
+            692,
+            693,
+            694,
+            695,
+            705,
+            706,
+            710,
+            718,
+            721,
+            722,
+            723,
+            724,
+            726,
+            736,
+            740,
+            741,
+            742,
+            744,
+            746,
+            747,
+            748,
+            761,
+            762,
+            781,
+            784,
+            787,
+            805,
+            814,
+            818,
+            819,
+            830,
+            831,
+            832,
+            833,
+            835,
+            838,
+            847,
+            854,
+            884,
+            886,
+            898,
+            918,
+            919,
+            930,
+            931,
+            934,
+            935,
+            936,
+            937,
+            955,
+            958,
+            963,
+            971,
+            972,
+            973,
+            975,
+            978,
+            980,
+            981,
+            990,
+            1008,
+            1012,
+            1013,
+            1015,
+            1018,
+            1024,
+            1596,
+            2359,
+            2439
+          ],
+          "checked_source": "experiments/omission-balanced-leaf12943-packed.lean",
+          "proof_log": "'OmissionPackedLeafPilot.margin' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+        }
+      }
+    ]
+  },
+  "tests": {
+    "core": 28,
+    "optional_z3": 12,
+    "optional_highs": 1,
+    "local_total": 41
+  },
+  "published_tree_independent_replay": [
+    {
+      "name": "balanced",
+      "source": {
+        "path": ".cache/schroeder-release/es7_es8_bounds_81_319_v1/certificates/balanced.json",
+        "sha256": "23363c9e341a7edf4de28b6bf21970983cc6d4cafa6f2bdef54ce3d25b1c5a94",
+        "bytes": 4060115
+      },
+      "replay": {
+        "nodes": 3181,
+        "leaves": 1591,
+        "pending": 0,
+        "complete": true,
+        "minimum_margin": 21
+      }
+    },
+    {
+      "name": "residual",
+      "source": {
+        "path": ".cache/schroeder-release/es7_es8_bounds_81_319_v1/certificates/residual.json",
+        "sha256": "bccd12477064d8a490bbe863ae49dbc8d9dfececf7a65426ba36f7537c66293a",
+        "bytes": 9323978
+      },
+      "replay": {
+        "nodes": 14629,
+        "leaves": 7315,
+        "pending": 0,
+        "complete": true,
+        "minimum_margin": 1
+      }
+    }
+  ],
+  "prefix": {
+    "path": "experiments/omission-prefix6-2026-10-05.json",
+    "sha256": "8743971d94085b8ca44bf93f31d1d7a355a17aea901b54f39dc51f612287bed3",
+    "bytes": 69320
+  },
+  "cnf_runs": [
+    {
+      "record_artifact": {
+        "path": ".cache/omission-cnf/balanced-59-seed0/result.json",
+        "sha256": "ca645470f5c27d5b017a04ba5e328cb4c384eea29676af633d3a5d00c358cbde",
+        "bytes": 1604
+      },
+      "record": {
+        "source": ".cache/schroeder-release/es7_es8_bounds_81_319_v1/certificates/balanced.json",
+        "source_sha256": "23363c9e341a7edf4de28b6bf21970983cc6d4cafa6f2bdef54ce3d25b1c5a94",
+        "script_sha256": "c7be17cdbf831b0e66a55587dbd01ec9c98b7971c80e735af0537e6df3fb0967",
+        "states": 252,
+        "rows": 2685,
+        "hole_budget_tested": 59,
+        "seconds_limit": 600,
+        "seed": 0,
+        "encoder": "Z3 5.1.0: simplify, card2bv sorting, tseitin-cnf",
+        "solver_version": "3.0.1",
+        "solver_sha256": "83c5bd0ebe482332cf7b678f1770c1aefed0a95107349652c619943cd34d0618",
+        "solver_command": [
+          ".cache/cadical/build/cadical",
+          "--no-colors",
+          "--sat",
+          "--seed=0",
+          "-t",
+          "600",
+          ".cache/omission-cnf/balanced-59-seed0/instance.cnf",
+          ".cache/omission-cnf/balanced-59-seed0/proof.drat"
+        ],
+        "variables": 9817,
+        "clauses": 44090,
+        "scope": "Omission-row relaxation; CNF translation and geometric transfer are not Lean-certified",
+        "status": "unknown",
+        "artifacts": {
+          "cnf": {
+            "path": ".cache/omission-cnf/balanced-59-seed0/instance.cnf",
+            "sha256": "deb4c85980c7332f5aaf9d22f020e46d8505b0671df2a62066657573cd0468c5"
+          },
+          "proof": {
+            "path": ".cache/omission-cnf/balanced-59-seed0/proof.drat",
+            "sha256": "f7c2920e662ca4c47be5f206ded28137e026a0fc0adbb3ce34f708ca386b1efc",
+            "bytes": 5241384856
+          },
+          "solver_log": {
+            "path": ".cache/omission-cnf/balanced-59-seed0/solver.log",
+            "sha256": "e032474fd6de921900a02920f0bee962fb4854653dc2c090f0da11ffbb872853",
+            "bytes": 190325
+          }
+        },
+        "seconds": 600.0300277919741,
+        "solver_exit_code": 0
+      }
+    },
+    {
+      "record_artifact": {
+        "path": ".cache/omission-cnf/residual-30-seed0/result.json",
+        "sha256": "20f69d2e49ef63f9a878ce176c50403778ea0250a07cb511994618cc13525678",
+        "bytes": 1603
+      },
+      "record": {
+        "source": ".cache/schroeder-release/es7_es8_bounds_81_319_v1/certificates/residual.json",
+        "source_sha256": "bccd12477064d8a490bbe863ae49dbc8d9dfececf7a65426ba36f7537c66293a",
+        "script_sha256": "c7be17cdbf831b0e66a55587dbd01ec9c98b7971c80e735af0537e6df3fb0967",
+        "states": 154,
+        "rows": 1187,
+        "hole_budget_tested": 30,
+        "seconds_limit": 600,
+        "seed": 0,
+        "encoder": "Z3 5.1.0: simplify, card2bv sorting, tseitin-cnf",
+        "solver_version": "3.0.1",
+        "solver_sha256": "83c5bd0ebe482332cf7b678f1770c1aefed0a95107349652c619943cd34d0618",
+        "solver_command": [
+          ".cache/cadical/build/cadical",
+          "--no-colors",
+          "--sat",
+          "--seed=0",
+          "-t",
+          "600",
+          ".cache/omission-cnf/residual-30-seed0/instance.cnf",
+          ".cache/omission-cnf/residual-30-seed0/proof.drat"
+        ],
+        "variables": 3751,
+        "clauses": 15011,
+        "scope": "Omission-row relaxation; CNF translation and geometric transfer are not Lean-certified",
+        "status": "unknown",
+        "artifacts": {
+          "cnf": {
+            "path": ".cache/omission-cnf/residual-30-seed0/instance.cnf",
+            "sha256": "755cebc4f168a855016a0cedec6f8ca059224b5f5231aa5010ddcdd2761625f5"
+          },
+          "proof": {
+            "path": ".cache/omission-cnf/residual-30-seed0/proof.drat",
+            "sha256": "9113e6317fa2be0f5dd1018baf53905c14264eb375d124c8a70b387949b0bc21",
+            "bytes": 2971057854
+          },
+          "solver_log": {
+            "path": ".cache/omission-cnf/residual-30-seed0/solver.log",
+            "sha256": "3125443d9f3da454f0c0c523341eae81d8bfd2852e66563b69c6ca0c575702a0",
+            "bytes": 196128
+          }
+        },
+        "seconds": 600.056177083985,
+        "solver_exit_code": 0
+      }
+    },
+    {
+      "record_artifact": {
+        "path": ".cache/omission-cnf/balanced-59-prefix6-seed0/result.json",
+        "sha256": "523d5ef2c025f46fe6aca18b51f7d2686b358a2a2d37c2f63982b576ed369cc4",
+        "bytes": 1939
+      },
+      "record": {
+        "source": ".cache/schroeder-release/es7_es8_bounds_81_319_v1/certificates/balanced.json",
+        "source_sha256": "23363c9e341a7edf4de28b6bf21970983cc6d4cafa6f2bdef54ce3d25b1c5a94",
+        "script_sha256": "9ae2aba2b33ebd12c271678f395e6e9fa01faf8b20e61d183fca6f87f6c79613",
+        "states": 252,
+        "rows": 2685,
+        "hole_budget_tested": 59,
+        "seconds_limit": 600,
+        "seed": 0,
+        "encoder": "Z3 5.1.0: simplify, card2bv sorting, tseitin-cnf",
+        "solver_version": "3.0.1",
+        "solver_sha256": "83c5bd0ebe482332cf7b678f1770c1aefed0a95107349652c619943cd34d0618",
+        "solver_command": [
+          ".cache/cadical/build/cadical",
+          "--no-colors",
+          "--sat",
+          "--seed=0",
+          "-t",
+          "600",
+          ".cache/omission-cnf/balanced-59-prefix6-seed0/instance.cnf",
+          ".cache/omission-cnf/balanced-59-prefix6-seed0/proof.drat"
+        ],
+        "variables": 10149,
+        "clauses": 46420,
+        "scope": "Omission-row relaxation; CNF translation and geometric transfer are not Lean-certified",
+        "status": "unknown",
+        "artifacts": {
+          "cnf": {
+            "path": ".cache/omission-cnf/balanced-59-prefix6-seed0/instance.cnf",
+            "sha256": "de7f85e1061d4d50ef12f34a8b4c599368b18698045449e66ffcf346d9c7dc7d"
+          },
+          "proof": {
+            "path": ".cache/omission-cnf/balanced-59-prefix6-seed0/proof.drat",
+            "sha256": "e19d27b69639e27fd574d4605826516842a130518fe465d624bc726fb6b59885",
+            "bytes": 5167664520
+          },
+          "solver_log": {
+            "path": ".cache/omission-cnf/balanced-59-prefix6-seed0/solver.log",
+            "sha256": "0970ca758ab6dab38d7763506c3b6190415edbf52ac431ddd23ba91eb73f7ea8",
+            "bytes": 188929
+          }
+        },
+        "prefix": {
+          "path": ".cache/omission-cnf/prefix6-v1.json",
+          "sha256": "8743971d94085b8ca44bf93f31d1d7a355a17aea901b54f39dc51f612287bed3",
+          "alternatives": 333,
+          "scope": "Experimental actual-rank prefix restriction; its enumeration and geometric transfer are not certified"
+        },
+        "seconds": 600.0624945830787,
+        "solver_exit_code": 0
+      }
+    },
+    {
+      "record_artifact": {
+        "path": ".cache/omission-cnf/control-sat/result.json",
+        "sha256": "d5252921b77482a54633f24c5eb7c566940a2ed76634c16251a5fd8390629f53",
+        "bytes": 1610
+      },
+      "record": {
+        "source": ".cache/omission-cnf/fixture.json",
+        "source_sha256": "4281bf1978389f2f944948ea8ffa0b5b5de0889f68b5b32931227c9f5c557461",
+        "script_sha256": "9ae2aba2b33ebd12c271678f395e6e9fa01faf8b20e61d183fca6f87f6c79613",
+        "states": 3,
+        "rows": 2,
+        "hole_budget_tested": 1,
+        "seconds_limit": 30,
+        "seed": 0,
+        "encoder": "Z3 5.1.0: simplify, card2bv sorting, tseitin-cnf",
+        "solver_version": "3.0.1",
+        "solver_sha256": "83c5bd0ebe482332cf7b678f1770c1aefed0a95107349652c619943cd34d0618",
+        "solver_command": [
+          ".cache/cadical/build/cadical",
+          "--no-colors",
+          "--sat",
+          "--seed=0",
+          "-t",
+          "30",
+          ".cache/omission-cnf/control-sat/instance.cnf",
+          ".cache/omission-cnf/control-sat/proof.drat"
+        ],
+        "variables": 4,
+        "clauses": 6,
+        "scope": "Omission-row relaxation; CNF translation and geometric transfer are not Lean-certified",
+        "status": "sat",
+        "artifacts": {
+          "cnf": {
+            "path": ".cache/omission-cnf/control-sat/instance.cnf",
+            "sha256": "b74ad3d326a3df5280bad276be46e828ce4891b8e22028b20b513d3755a1c1f7"
+          },
+          "proof": {
+            "path": ".cache/omission-cnf/control-sat/proof.drat",
+            "sha256": "bde0abd1bc2a682b8dc9ed3f2c1800fe887a8c03aa6c63da5c8ab4bbcf38987a",
+            "bytes": 27
+          },
+          "solver_log": {
+            "path": ".cache/omission-cnf/control-sat/solver.log",
+            "sha256": "a546935736a3952ce3e349ff17fbcd8bb3d681731d9572d2595f0b6acf8e7a23",
+            "bytes": 4521
+          }
+        },
+        "seconds": 0.006076833000406623,
+        "solver_exit_code": 10,
+        "cnf_clauses_checked": 6,
+        "holes": [
+          1
+        ],
+        "occupied": 2,
+        "all_rows_exactly_checked": true
+      }
+    },
+    {
+      "record_artifact": {
+        "path": ".cache/omission-cnf/control-unsat/result.json",
+        "sha256": "897994787ae0e94b65b283bdb184eb0b8f20158d458b16cd7148f4ae82bb7641",
+        "bytes": 1804
+      },
+      "record": {
+        "source": ".cache/omission-cnf/fixture.json",
+        "source_sha256": "4281bf1978389f2f944948ea8ffa0b5b5de0889f68b5b32931227c9f5c557461",
+        "script_sha256": "c7be17cdbf831b0e66a55587dbd01ec9c98b7971c80e735af0537e6df3fb0967",
+        "states": 3,
+        "rows": 2,
+        "hole_budget_tested": 0,
+        "seconds_limit": 30,
+        "seed": 0,
+        "encoder": "Z3 5.1.0: simplify, card2bv sorting, tseitin-cnf",
+        "solver_version": "3.0.1",
+        "solver_sha256": "83c5bd0ebe482332cf7b678f1770c1aefed0a95107349652c619943cd34d0618",
+        "solver_command": [
+          ".cache/cadical/build/cadical",
+          "--no-colors",
+          "--sat",
+          "--seed=0",
+          "-t",
+          "30",
+          ".cache/omission-cnf/control-unsat/instance.cnf",
+          ".cache/omission-cnf/control-unsat/proof.drat"
+        ],
+        "variables": 3,
+        "clauses": 5,
+        "scope": "Omission-row relaxation; CNF translation and geometric transfer are not Lean-certified",
+        "status": "unsat",
+        "artifacts": {
+          "cnf": {
+            "path": ".cache/omission-cnf/control-unsat/instance.cnf",
+            "sha256": "d12e258f47dbce8a374471a28d0794ac3576a6dc106a5be35eff84dfa34cacad"
+          },
+          "checker_log": {
+            "path": ".cache/omission-cnf/control-unsat/checker.log",
+            "sha256": "8f277d9ec25e9b66c312b133b636694e5489b7e001a5b71b961e8e59ff3ad7f0"
+          },
+          "proof": {
+            "path": ".cache/omission-cnf/control-unsat/proof.drat",
+            "sha256": "e9b7d3e77a85e7b587adc3334c70c7fd119404eaba8689139223d83a6b8a85e1",
+            "bytes": 11
+          },
+          "solver_log": {
+            "path": ".cache/omission-cnf/control-unsat/solver.log",
+            "sha256": "80120b0ffd6dc826c71f5111c8c1376e65f71bb09ba770884aad58390648e46f",
+            "bytes": 4301
+          }
+        },
+        "seconds": 0.005802792031317949,
+        "solver_exit_code": 20,
+        "drat_verified": true,
+        "checker_sha256": "b3b33df8faee9372feacec77e40d155236bb7b235d04d9bfbbd1c00b31a5a66c"
+      }
+    }
+  ],
+  "selected_leaf_runs": [
+    {
+      "record_artifact": {
+        "path": ".cache/omission-cnf/balanced-leaf-campaign/result.json",
+        "sha256": "e248a07b3aba655827d6e8db808063dffdaeab78a4841873106b8c65a2fb4288",
+        "bytes": 5758
+      },
+      "record": {
+        "scope": "Selected branches of an omission-row relaxation; no exhaustive new cover, no planar bound",
+        "source_sha256": "23363c9e341a7edf4de28b6bf21970983cc6d4cafa6f2bdef54ce3d25b1c5a94",
+        "base_cnf_sha256": "deb4c85980c7332f5aaf9d22f020e46d8505b0671df2a62066657573cd0468c5",
+        "script_sha256": "5b886b7d3f8eae60f6c6d5476f32d9d35c82b35378e4cddb7ed3c930d1c29bcc",
+        "budget": 59,
+        "pending_branches_total": 1589,
+        "seconds_per_branch": 30,
+        "results": [
+          {
+            "node": 1736,
+            "missing": [
+              67,
+              124,
+              128,
+              132,
+              162,
+              212
+            ],
+            "occupied": [
+              89,
+              102,
+              123,
+              127
+            ],
+            "new_margin": -999979,
+            "capacity": 1000000,
+            "total_lower_bound_numerator": 58000021,
+            "status": "unknown",
+            "seconds": 30.043506500078365,
+            "cnf_sha256": "a597d571a56839bc13f48630925606b69e944bf614d6ccda63199471070790cf",
+            "proof_sha256": "2ccc73876f768dcfaa96fca6c24cafcefd5f7c81056da7f03db0872a855e4fdb",
+            "solver_log_sha256": "659a1782cc3e4bc9520d47328cb46d75fb891a90986f72c71f8726dcd57a1e67"
+          },
+          {
+            "node": 835,
+            "missing": [
+              68,
+              84,
+              105,
+              120,
+              124,
+              144,
+              149
+            ],
+            "occupied": [
+              102,
+              123,
+              162,
+              212
+            ],
+            "new_margin": -99994080,
+            "capacity": 100000000,
+            "total_lower_bound_numerator": 5800005920,
+            "status": "unknown",
+            "seconds": 30.030501500004902,
+            "cnf_sha256": "5fba7ebcf92ae5c5e0f95c3c11feb21660c527e72fc91039eeccdb7c280bb43e",
+            "proof_sha256": "690cb8aca3709f45658719b8ccd7e5977392669210e0e88cfb6f36448127f5fe",
+            "solver_log_sha256": "38ece029d553ad6e02f8ee2a78c4eeebfe97551805b1a325f37aa1cc9f987037"
+          },
+          {
+            "node": 229,
+            "missing": [
+              138,
+              148,
+              160,
+              166,
+              213
+            ],
+            "occupied": [
+              107,
+              126,
+              149,
+              162,
+              184
+            ],
+            "new_margin": -99986709,
+            "capacity": 100000000,
+            "total_lower_bound_numerator": 5800013291,
+            "status": "unknown",
+            "seconds": 30.019749791943468,
+            "cnf_sha256": "66016990ba7c8cdec06aa0628d4cd4e8290fe5b3d13ea74bfb47d13f1ba96fc6",
+            "proof_sha256": "de0e216b469eb9beeac34b6218a2d3c6c539d753c1f6036ad6a18fc30981597b",
+            "solver_log_sha256": "c7e0571bec0c43b1e3a3c17977dd9b9d40f93258d430f29035ba8ef4b9eb50ce"
+          },
+          {
+            "node": 1233,
+            "missing": [
+              82,
+              102,
+              104,
+              109,
+              131,
+              149,
+              195
+            ],
+            "occupied": [
+              91,
+              99,
+              120,
+              162,
+              221
+            ],
+            "new_margin": -999853,
+            "capacity": 1000000,
+            "total_lower_bound_numerator": 58000147,
+            "status": "unknown",
+            "seconds": 30.028606666019186,
+            "cnf_sha256": "45c5d075a512cc442362a6a2376b3ee88e9d2ffe0059baf540ea569f1e046e27",
+            "proof_sha256": "6472b2ce1a6255d5cefd8c086e399016ddab023667ccf2faf671258a11c252d4",
+            "solver_log_sha256": "61200087a002c45c512ba068462567a922afabc7b0f8bbfae409b6e3e451b688"
+          },
+          {
+            "node": 30,
+            "missing": [
+              183,
+              186
+            ],
+            "occupied": [
+              107,
+              125,
+              138,
+              144,
+              149,
+              162,
+              169
+            ],
+            "new_margin": -999823,
+            "capacity": 1000000,
+            "total_lower_bound_numerator": 58000177,
+            "status": "unknown",
+            "seconds": 30.0469550419366,
+            "cnf_sha256": "07f7fb4e7200b50a3bf59f9bd34488f4956d9879141241e593d521bcffe9fa90",
+            "proof_sha256": "af2724acb7aca420466de88351a05e2962e1e936d317e3ea45bd19ebef587318",
+            "solver_log_sha256": "26ca0648fc6d0cdca058e85b253d22d60ed01014aa2e44352a8f08c69a3bf838"
+          },
+          {
+            "node": 952,
+            "missing": [
+              120,
+              122,
+              123,
+              138,
+              144,
+              149
+            ],
+            "occupied": [
+              102,
+              110,
+              119,
+              125,
+              162
+            ],
+            "new_margin": -997680,
+            "capacity": 1000000,
+            "total_lower_bound_numerator": 58002320,
+            "status": "unknown",
+            "seconds": 30.054471333976835,
+            "cnf_sha256": "ab4cbaf8c704e6df5d8035897e5ea4e2ae0a63ccc622a983f2f452938a1111d0",
+            "proof_sha256": "0fdc573f8474d37335642a026de8581fc8cf1da9e4d59ad265ad3396e0227825",
+            "solver_log_sha256": "4bd7fc71cd30b24dd459421d1b959f081f498b8733569c3f8fdc8e93eb400f14"
+          },
+          {
+            "node": 2813,
+            "missing": [
+              89,
+              126,
+              141,
+              162,
+              169
+            ],
+            "occupied": [
+              109,
+              163,
+              183,
+              185
+            ],
+            "new_margin": -997457,
+            "capacity": 1000000,
+            "total_lower_bound_numerator": 58002543,
+            "status": "unknown",
+            "seconds": 30.054477082914673,
+            "cnf_sha256": "38406a7f0d2d967837d755b21f42302aa4e7ec6f75ed12fccfc7ec15a989f01e",
+            "proof_sha256": "c2f6e62532262b0906925f665579dab7b29566a59314423e3ec0a49da9ea3e5b",
+            "solver_log_sha256": "5bcd4f28020eceb6f926e638926d21f3435165a71a954f07607f44a85184b581"
+          },
+          {
+            "node": 614,
+            "missing": [
+              106,
+              107,
+              109,
+              127,
+              131,
+              144
+            ],
+            "occupied": [
+              122,
+              141,
+              148,
+              149,
+              162
+            ],
+            "new_margin": -996467,
+            "capacity": 1000000,
+            "total_lower_bound_numerator": 58003533,
+            "status": "unknown",
+            "seconds": 30.063059707987122,
+            "cnf_sha256": "4bca724be4d7b5085176e4d6f15ac7ffeb154631d93decdeb8957f05e5d589e4",
+            "proof_sha256": "9b561e852d9ece06b2b52a3d448ed686069622140f6d86534410011c4098bc9a",
+            "solver_log_sha256": "2a4ac41299578463f18fa08e74e39396b995dbcd924538d7256599ae070db7b4"
+          }
+        ]
+      }
+    },
+    {
+      "record_artifact": {
+        "path": ".cache/omission-cnf/residual-leaf-campaign/result.json",
+        "sha256": "50c034dd044a358314dbdb5d86cdf57e785a5ddd5d7d50a49808f4ceb2cd030b",
+        "bytes": 6076
+      },
+      "record": {
+        "scope": "Selected branches of an omission-row relaxation; no exhaustive new cover, no planar bound",
+        "source_sha256": "bccd12477064d8a490bbe863ae49dbc8d9dfececf7a65426ba36f7537c66293a",
+        "base_cnf_sha256": "755cebc4f168a855016a0cedec6f8ca059224b5f5231aa5010ddcdd2761625f5",
+        "script_sha256": "5b886b7d3f8eae60f6c6d5476f32d9d35c82b35378e4cddb7ed3c930d1c29bcc",
+        "budget": 30,
+        "pending_branches_total": 7315,
+        "seconds_per_branch": 30,
+        "results": [
+          {
+            "node": 10542,
+            "missing": [
+              25,
+              56,
+              66,
+              78,
+              88,
+              89,
+              101,
+              107
+            ],
+            "occupied": [
+              68,
+              76,
+              91,
+              99,
+              118,
+              122
+            ],
+            "new_margin": -999999,
+            "capacity": 1000000,
+            "total_lower_bound_numerator": 29000001,
+            "status": "unknown",
+            "seconds": 30.022295041941106,
+            "cnf_sha256": "35215760d09ff26614ead08d30f919d9cec46ca8aa806fa491b4247e48bb289c",
+            "proof_sha256": "c8874ec0e9a7e869c0a69c61917f9eb9b9ec6f4f5a2b80c4f49c699a08269976",
+            "solver_log_sha256": "70609c7d43bcb5dba4b849627509a26fb9abb7257aede774c302071977005fdc"
+          },
+          {
+            "node": 5789,
+            "missing": [
+              54,
+              100,
+              101,
+              109,
+              127
+            ],
+            "occupied": [
+              25,
+              56,
+              66,
+              87,
+              97,
+              106,
+              122,
+              124,
+              126
+            ],
+            "new_margin": -99999405,
+            "capacity": 100000000,
+            "total_lower_bound_numerator": 2900000595,
+            "status": "unknown",
+            "seconds": 30.038368458044715,
+            "cnf_sha256": "1a259c81c0eb51c7818262fa68d8f8b951dc0e4e14c23462433f97d202212083",
+            "proof_sha256": "bcda2a6ce7827003fa6ee4382ccec2367b4d33863b46c7d8d5dde5fe2737da9c",
+            "solver_log_sha256": "368e33e85a15e74cdf80ea9c6619b18f5f071546027beb52e01eb81c7f1fa8d0"
+          },
+          {
+            "node": 10134,
+            "missing": [
+              56,
+              66,
+              76,
+              101,
+              107,
+              117,
+              130,
+              139
+            ],
+            "occupied": [
+              78,
+              90,
+              99,
+              118,
+              119,
+              122
+            ],
+            "new_margin": -999958,
+            "capacity": 1000000,
+            "total_lower_bound_numerator": 29000042,
+            "status": "unknown",
+            "seconds": 30.03113520902116,
+            "cnf_sha256": "c87f406cce3fc878046e33b8bb98bb0f6537b8f69feec223cd49cb92cc266bbc",
+            "proof_sha256": "190e6ec0de97ff0ec94fb60aeb1f02b499a9c23a173dac9791f54b97563f9da8",
+            "solver_log_sha256": "33320764e7e943ba17ee72c4367ffb5b789a718c940fb5571566f70ac67729ac"
+          },
+          {
+            "node": 9996,
+            "missing": [
+              56,
+              66,
+              68,
+              76,
+              88,
+              101,
+              118,
+              133
+            ],
+            "occupied": [
+              54,
+              78,
+              99,
+              117,
+              119,
+              122,
+              130
+            ],
+            "new_margin": -999935,
+            "capacity": 1000000,
+            "total_lower_bound_numerator": 29000065,
+            "status": "unknown",
+            "seconds": 30.050904958043247,
+            "cnf_sha256": "c5339808ed4f963cdc9a72b28e2a513c1df3c142754e626ff3be296644d7a5b5",
+            "proof_sha256": "89595ce048b50cb4ad75c5143e6e9d711e1a19d2417402827336899af21ffdbe",
+            "solver_log_sha256": "24a60a9762018fbd070c5460323fcc8a8d042b4c7a010ddf281232082421d461"
+          },
+          {
+            "node": 1665,
+            "missing": [
+              44,
+              54,
+              66,
+              77,
+              117,
+              119,
+              133
+            ],
+            "occupied": [
+              67,
+              88,
+              90,
+              101,
+              110,
+              122,
+              132
+            ],
+            "new_margin": -999899,
+            "capacity": 1000000,
+            "total_lower_bound_numerator": 29000101,
+            "status": "unknown",
+            "seconds": 30.041930124978535,
+            "cnf_sha256": "86d30f7cad5595272e056e3cf852e4144d40d589ba0f8c3c4fb1dc4fe6cfb4d3",
+            "proof_sha256": "8e790dfa81a88651bfee49088c2d59781bd6f365899b85e8a27d30bf94fb0997",
+            "solver_log_sha256": "c3990d8975e62ab6ca68fa6bc69d70017c70278e26c062f1f2141bfc7b83d100"
+          },
+          {
+            "node": 10839,
+            "missing": [
+              33,
+              54,
+              55,
+              56,
+              66,
+              68,
+              78,
+              101,
+              109
+            ],
+            "occupied": [
+              86,
+              90,
+              99,
+              119,
+              122
+            ],
+            "new_margin": -999871,
+            "capacity": 1000000,
+            "total_lower_bound_numerator": 29000129,
+            "status": "unknown",
+            "seconds": 30.05921754206065,
+            "cnf_sha256": "c5fc8faa9ab6771d87266fda9f76cefb7795fac65b02bfe8201564ec2d5dfa0e",
+            "proof_sha256": "2810a23165db9e169f0251f005e7fd84897a996fe890259cd20e02809491f2be",
+            "solver_log_sha256": "affbef05493a96e42faf7daba2ec41db1920c1c03b7527d3b4b2da6100b284b4"
+          },
+          {
+            "node": 1703,
+            "missing": [
+              44,
+              88,
+              100,
+              117,
+              119
+            ],
+            "occupied": [
+              33,
+              66,
+              67,
+              90,
+              101,
+              122,
+              132
+            ],
+            "new_margin": -999842,
+            "capacity": 1000000,
+            "total_lower_bound_numerator": 29000158,
+            "status": "unknown",
+            "seconds": 30.026689917081967,
+            "cnf_sha256": "d59be3c1c48b032e7ce6eafcc2891522331efb6946d499f9b0544008cefa506f",
+            "proof_sha256": "f13908c0c681edef6a2853dc9113af7dc5ce6fb7f00d35d54349a9c1a10a5706",
+            "solver_log_sha256": "3ae4d86ec62479d3ac51e3977b216f3007067f94d41932c66906a5d7655311e1"
+          },
+          {
+            "node": 11670,
+            "missing": [
+              56,
+              99,
+              100,
+              101,
+              133,
+              141
+            ],
+            "occupied": [
+              54,
+              74,
+              98,
+              108,
+              110,
+              114,
+              119,
+              122
+            ],
+            "new_margin": -999826,
+            "capacity": 1000000,
+            "total_lower_bound_numerator": 29000174,
+            "status": "unknown",
+            "seconds": 30.032817291095853,
+            "cnf_sha256": "647857ad1bb59e1c069bde33748fc3a065ba99759ef86af1fcbb2e2925998eb4",
+            "proof_sha256": "8f51df86f0542c71de825830c3ba4ce8964409e825c84ddb3844bdd98e781ffe",
+            "solver_log_sha256": "1dd3b2a553056f829e10dc8118fd70d22b7fa1089869546d341fcd8812ca9097"
+          }
+        ]
+      }
+    }
+  ],
+  "mip_discovery": {
+    "warning": "Floating-point infeasibility and dual bounds are not certificates. Only listed hole assignments were checked exactly. Nonfinite JSON numbers are represented as strings in this manifest.",
+    "script_final_development_version": {
+      "path": "experiments/omission-mip-discovery-2026-10-05.py",
+      "sha256": "e9956474a6d616f6fb79e440543a21a0329ce0034e7875e1c0ee13376f855fc3",
+      "bytes": 2394
+    },
+    "historical_script_note": "The discovery prototype evolved during the optimization runs; the final copy is not claimed to match every historical invocation. The two feasibility runs used the final version.",
+    "runs": [
+      {
+        "record_artifact": {
+          "path": ".cache/omission-cnf/balanced-mip.json",
+          "sha256": "5e9a8e9b59b9ac04f0e6137cb33ca7504dc27fb3c136f0c45dfbe9d41ab87733",
+          "bytes": 1161
+        },
+        "record": {
+          "scope": "Floating-point MIP discovery; only reported hole assignments receive exact checks. Numerical lower bounds are not certificates.",
+          "source_sha256": "23363c9e341a7edf4de28b6bf21970983cc6d4cafa6f2bdef54ce3d25b1c5a94",
+          "solver": "HiGHS 1.15.1",
+          "status": "HighsModelStatus.kTimeLimit",
+          "seconds": 180.00326545897406,
+          "reported_objective": 74.0,
+          "reported_dual_bound": 57.0,
+          "prefix": false,
+          "nodes": 7530,
+          "holes": [
+            7,
+            12,
+            13,
+            18,
+            19,
+            28,
+            36,
+            38,
+            41,
+            47,
+            49,
+            62,
+            63,
+            66,
+            67,
+            68,
+            70,
+            71,
+            74,
+            78,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            91,
+            101,
+            102,
+            103,
+            104,
+            105,
+            107,
+            119,
+            122,
+            123,
+            124,
+            125,
+            126,
+            127,
+            128,
+            129,
+            135,
+            144,
+            146,
+            147,
+            148,
+            149,
+            160,
+            163,
+            164,
+            165,
+            166,
+            167,
+            168,
+            169,
+            171,
+            180,
+            183,
+            184,
+            185,
+            199,
+            200,
+            202,
+            203,
+            204,
+            210,
+            215,
+            220,
+            223,
+            224,
+            229,
+            232,
+            239
+          ],
+          "occupied": 178,
+          "holes_count": 74,
+          "rows_exactly_verified": true
+        }
+      },
+      {
+        "record_artifact": {
+          "path": ".cache/omission-cnf/residual-mip.json",
+          "sha256": "8b9df49abe6172ed9824e3dba6a5b9e21050334e8c44cf72cb071038b583d253",
+          "bytes": 790
+        },
+        "record": {
+          "scope": "Floating-point MIP discovery; only reported hole assignments receive exact checks. Numerical lower bounds are not certificates.",
+          "source_sha256": "bccd12477064d8a490bbe863ae49dbc8d9dfececf7a65426ba36f7537c66293a",
+          "solver": "HiGHS 1.15.1",
+          "status": "HighsModelStatus.kTimeLimit",
+          "seconds": 180.0053899169434,
+          "reported_objective": 32.0,
+          "reported_dual_bound": 29.0,
+          "prefix": false,
+          "nodes": 41064,
+          "holes": [
+            12,
+            26,
+            27,
+            33,
+            44,
+            45,
+            46,
+            47,
+            54,
+            56,
+            67,
+            68,
+            69,
+            70,
+            71,
+            78,
+            85,
+            89,
+            97,
+            98,
+            99,
+            100,
+            101,
+            109,
+            111,
+            117,
+            119,
+            124,
+            126,
+            127,
+            132,
+            138
+          ],
+          "occupied": 122,
+          "holes_count": 32,
+          "rows_exactly_verified": true
+        }
+      },
+      {
+        "record_artifact": {
+          "path": ".cache/omission-cnf/balanced-prefix-mip.json",
+          "sha256": "41fa1e7ee2fc962d506f917835faca49f475d6782012369badb8c083bb2185c1",
+          "bytes": 1175
+        },
+        "record": {
+          "scope": "Floating-point MIP discovery; only reported hole assignments receive exact checks. Numerical lower bounds are not certificates.",
+          "source_sha256": "23363c9e341a7edf4de28b6bf21970983cc6d4cafa6f2bdef54ce3d25b1c5a94",
+          "solver": "HiGHS 1.15.1",
+          "status": "HighsModelStatus.kTimeLimit",
+          "seconds": 180.00343525002245,
+          "reported_objective": 73.99999999999999,
+          "reported_dual_bound": 56.0,
+          "prefix": true,
+          "nodes": 4835,
+          "holes": [
+            12,
+            19,
+            20,
+            22,
+            27,
+            38,
+            39,
+            40,
+            41,
+            42,
+            54,
+            55,
+            56,
+            57,
+            59,
+            66,
+            67,
+            68,
+            69,
+            70,
+            85,
+            88,
+            89,
+            90,
+            91,
+            92,
+            104,
+            105,
+            106,
+            107,
+            109,
+            110,
+            113,
+            123,
+            124,
+            125,
+            127,
+            128,
+            129,
+            140,
+            141,
+            142,
+            144,
+            145,
+            146,
+            147,
+            148,
+            149,
+            154,
+            160,
+            163,
+            164,
+            165,
+            166,
+            167,
+            168,
+            169,
+            171,
+            180,
+            181,
+            198,
+            199,
+            200,
+            203,
+            204,
+            210,
+            212,
+            213,
+            214,
+            215,
+            232,
+            233,
+            234,
+            240
+          ],
+          "occupied": 178,
+          "holes_count": 74,
+          "rows_exactly_verified": true
+        }
+      },
+      {
+        "record_artifact": {
+          "path": ".cache/omission-cnf/balanced-feasible-mip.json",
+          "sha256": "c875ff3864f57857a6e46499eff0a70883c42b558b21a4655084ce8f05198d1a",
+          "bytes": 469
+        },
+        "record": {
+          "scope": "Floating-point MIP discovery; only reported hole assignments receive exact checks. Numerical lower bounds are not certificates.",
+          "source_sha256": "23363c9e341a7edf4de28b6bf21970983cc6d4cafa6f2bdef54ce3d25b1c5a94",
+          "solver": "HiGHS 1.15.1",
+          "status": "HighsModelStatus.kInfeasible",
+          "seconds": 70.33562470902689,
+          "reported_objective": "inf",
+          "reported_dual_bound": "inf",
+          "prefix": false,
+          "feasibility_budget": 59,
+          "nodes": 1653
+        }
+      },
+      {
+        "record_artifact": {
+          "path": ".cache/omission-cnf/residual-feasible-mip.json",
+          "sha256": "e8fd2d20a18eeb3753d5c8f911eb2888cdc2e2384b24a81bf692610dec7fdf8c",
+          "bytes": 470
+        },
+        "record": {
+          "scope": "Floating-point MIP discovery; only reported hole assignments receive exact checks. Numerical lower bounds are not certificates.",
+          "source_sha256": "bccd12477064d8a490bbe863ae49dbc8d9dfececf7a65426ba36f7537c66293a",
+          "solver": "HiGHS 1.15.1",
+          "status": "HighsModelStatus.kInfeasible",
+          "seconds": 68.45259462494869,
+          "reported_objective": "inf",
+          "reported_dual_bound": "inf",
+          "prefix": false,
+          "feasibility_budget": 30,
+          "nodes": 12305
+        }
+      }
+    ]
+  },
+  "proof_logging": {
+    "roundingsat_commit": "d4edbf7908a9bb951fd181940919e0f3ac7ab1ee",
+    "veripb_commit": "3e00f697fbeaefcb4890562f9c310809817c30ac",
+    "roundingsat_binary": {
+      "path": "/private/tmp/erdos-rs-d4edbf7/roundingsat",
+      "sha256": "4ca6fc6eca4464672dc50ad53f4c2fcd8eb8837bf4886bc92f897e4da0cd701b",
+      "bytes": 5430088
+    },
+    "veripb_binary": {
+      "path": ".cache/VeriPB/target/release/veripb",
+      "sha256": "d6e78f757d8023f13e967dab86f34f9d2eec3d3f29587c6a0aa96c0260992951",
+      "bytes": 3953840
+    },
+    "build_patch": {
+      "path": "experiments/omission-toolchain-2026-10-05.patch",
+      "sha256": "f4961ea06d1854ea94ee4e5bb9ee9116370e6a7e406162be0845b5e9d5ceed6e",
+      "bytes": 1002
+    },
+    "build_dependencies": {
+      "rust": "1.92.0",
+      "boost": "1.89.0",
+      "soplex": "7.1.6",
+      "macos_sdk": "15.4"
+    },
+    "controls": [
+      {
+        "record_artifact": {
+          "path": ".cache/omission-opb/control-v2-0/result.json",
+          "sha256": "1e9ee45771556a299b17f64c34747fbe8af0b6b8fd8143f9681e9628f34f55b8",
+          "bytes": 2176
+        },
+        "record": {
+          "scope": "Exact Boolean omission rows; geometric transfer is not certified here",
+          "source": "/workspace/erdos-szekeres-lean/.cache/omission-cnf/fixture.json",
+          "source_sha256": "4281bf1978389f2f944948ea8ffa0b5b5de0889f68b5b32931227c9f5c557461",
+          "script_sha256": "2d2ac65a4358f30e5dbb528f180cf31637069e061b8beddf2ccc538e2a96d10a",
+          "states": 3,
+          "rows": 2,
+          "hole_budget_tested": 0,
+          "seconds_limit": 10,
+          "checker_seconds_limit": 10,
+          "solver_command": [
+            "/private/tmp/erdos-rs-d4edbf7/roundingsat",
+            "/workspace/erdos-szekeres-lean/.cache/omission-opb/control-v2-0/instance.opb",
+            "--time-limit=10",
+            "--proof-log=/workspace/erdos-szekeres-lean/.cache/omission-opb/control-v2-0/proof.pbp",
+            "--print-sol=1"
+          ],
+          "solver_sha256": "4ca6fc6eca4464672dc50ad53f4c2fcd8eb8837bf4886bc92f897e4da0cd701b",
+          "checker_sha256": "d6e78f757d8023f13e967dab86f34f9d2eec3d3f29587c6a0aa96c0260992951",
+          "status": "unsat",
+          "veripb_verified": true,
+          "artifacts": {
+            "instance": {
+              "path": "/workspace/erdos-szekeres-lean/.cache/omission-opb/control-v2-0/instance.opb",
+              "sha256": "9109c12ff980040c98619e79698c2b40bf18992dc364f109a57ec87c89eeb324"
+            },
+            "proof": {
+              "path": "/workspace/erdos-szekeres-lean/.cache/omission-opb/control-v2-0/proof.pbp",
+              "sha256": "ab6984d7fbbce3adb1da8af7da14765d4dd6cd3b10e761d852d2faac57b684a7",
+              "bytes": 204
+            },
+            "solver_log": {
+              "path": "/workspace/erdos-szekeres-lean/.cache/omission-opb/control-v2-0/solver.log",
+              "sha256": "4cb0cb96f355113312ff9b202dd5afc85dc494ea6ed270d818f94505186e6560",
+              "bytes": 2309
+            },
+            "checker_log": {
+              "path": "/workspace/erdos-szekeres-lean/.cache/omission-opb/control-v2-0/checker.log",
+              "sha256": "b284debfad709d4d1708561771e4d228ed7ec150f9ad2520d715356640a68497",
+              "bytes": 143
+            }
+          },
+          "solver_exit_code": 0,
+          "seconds": 0.005892625078558922,
+          "checker_command": [
+            "/workspace/erdos-szekeres-lean/.cache/VeriPB/target/release/veripb",
+            "/workspace/erdos-szekeres-lean/.cache/omission-opb/control-v2-0/instance.opb",
+            "/workspace/erdos-szekeres-lean/.cache/omission-opb/control-v2-0/proof.pbp"
+          ],
+          "checker_exit_code": 0
+        }
+      },
+      {
+        "record_artifact": {
+          "path": ".cache/omission-opb/control-v2-1/result.json",
+          "sha256": "0e914e730c56e1d01c49d14acd94572bdb52c8f9467eab5a5291bc45adc246ce",
+          "bytes": 2174
+        },
+        "record": {
+          "scope": "Exact Boolean omission rows; geometric transfer is not certified here",
+          "source": "/workspace/erdos-szekeres-lean/.cache/omission-cnf/fixture.json",
+          "source_sha256": "4281bf1978389f2f944948ea8ffa0b5b5de0889f68b5b32931227c9f5c557461",
+          "script_sha256": "2d2ac65a4358f30e5dbb528f180cf31637069e061b8beddf2ccc538e2a96d10a",
+          "states": 3,
+          "rows": 2,
+          "hole_budget_tested": 1,
+          "seconds_limit": 10,
+          "checker_seconds_limit": 10,
+          "solver_command": [
+            "/private/tmp/erdos-rs-d4edbf7/roundingsat",
+            "/workspace/erdos-szekeres-lean/.cache/omission-opb/control-v2-1/instance.opb",
+            "--time-limit=10",
+            "--proof-log=/workspace/erdos-szekeres-lean/.cache/omission-opb/control-v2-1/proof.pbp",
+            "--print-sol=1"
+          ],
+          "solver_sha256": "4ca6fc6eca4464672dc50ad53f4c2fcd8eb8837bf4886bc92f897e4da0cd701b",
+          "checker_sha256": "d6e78f757d8023f13e967dab86f34f9d2eec3d3f29587c6a0aa96c0260992951",
+          "status": "sat",
+          "veripb_verified": true,
+          "artifacts": {
+            "instance": {
+              "path": "/workspace/erdos-szekeres-lean/.cache/omission-opb/control-v2-1/instance.opb",
+              "sha256": "aecbd0925cb829e6506d5b6b9cbf30ca66f1e8a64e5ca9d7c5b5128f2be33fc4"
+            },
+            "proof": {
+              "path": "/workspace/erdos-szekeres-lean/.cache/omission-opb/control-v2-1/proof.pbp",
+              "sha256": "c02f290fc34781c09e46a4a21e5ab74dbf649272b85f25b7f709d58a03ea04bb",
+              "bytes": 113
+            },
+            "solver_log": {
+              "path": "/workspace/erdos-szekeres-lean/.cache/omission-opb/control-v2-1/solver.log",
+              "sha256": "eee65e8f67b73a1235be1d0bab7fa5c03634d7e2dfc69d4ff32a6f3bbfd3d539",
+              "bytes": 2357
+            },
+            "checker_log": {
+              "path": "/workspace/erdos-szekeres-lean/.cache/omission-opb/control-v2-1/checker.log",
+              "sha256": "29c0faacb6294102f7e5360dd6b5b1629a8564be9b0ccbda8436be634403f5ab",
+              "bytes": 141
+            }
+          },
+          "solver_exit_code": 0,
+          "seconds": 0.011072417022660375,
+          "checker_command": [
+            "/workspace/erdos-szekeres-lean/.cache/VeriPB/target/release/veripb",
+            "/workspace/erdos-szekeres-lean/.cache/omission-opb/control-v2-1/instance.opb",
+            "/workspace/erdos-szekeres-lean/.cache/omission-opb/control-v2-1/proof.pbp"
+          ],
+          "checker_exit_code": 0
+        }
+      }
+    ],
+    "rejected_proofs": {
+      "record_artifact": {
+        "path": ".cache/omission-opb/control-v2-0/rejection-controls.json",
+        "sha256": "7e296887bf6c00e36036fae4ac179c11076a22c7b630f3b7a956299c877aeb8a",
+        "bytes": 694
+      },
+      "record": [
+        {
+          "name": "bad-conclusion",
+          "exit_code": 1,
+          "stdout": "Running VeriPB version 3.0.2\n",
+          "stderr": "Info: Switched to proof version 2.0 (it is recommended to migrate to proof version 3.0).\nError: Checking error at .cache/omission-opb/control-v2-0/bad-conclusion.pbp:10\n\nCaused by:\n\tThe constraint with ID 1 is not contradicting, as specified by the hint.\n"
+        },
+        {
+          "name": "missing-footer",
+          "exit_code": 1,
+          "stdout": "Running VeriPB version 3.0.2\ns VERIFIED UNSATISFIABLE\n",
+          "stderr": "Info: Switched to proof version 2.0 (it is recommended to migrate to proof version 3.0).\nError: The proof is missing the 'end pseudo-Boolean proof' line.\n"
+        }
+      ]
+    },
+    "runs": [
+      {
+        "record_artifact": {
+          "path": ".cache/omission-opb/balanced-plus1-v1/result.json",
+          "sha256": "3865bad34466de8f54d80d3c1ba425485a088d9a40e039dd20849d445a79b2c9",
+          "bytes": 1758
+        },
+        "record": {
+          "scope": "Exact Boolean omission rows; geometric transfer is not certified here",
+          "source": "/workspace/erdos-szekeres-lean/.cache/schroeder-release/es7_es8_bounds_81_319_v1/certificates/balanced.json",
+          "source_sha256": "23363c9e341a7edf4de28b6bf21970983cc6d4cafa6f2bdef54ce3d25b1c5a94",
+          "script_sha256": "3028a43e21dd011c8929c846fc2e4724bfebf0adc4c947e6f3410292b95eb13a",
+          "states": 252,
+          "rows": 2685,
+          "hole_budget_tested": 59,
+          "seconds_limit": 600,
+          "checker_seconds_limit": 600,
+          "solver_command": [
+            "/private/tmp/erdos-rs-d4edbf7/roundingsat",
+            "/workspace/erdos-szekeres-lean/.cache/omission-opb/balanced-plus1-v1/instance.opb",
+            "--time-limit=600",
+            "--proof-log=/workspace/erdos-szekeres-lean/.cache/omission-opb/balanced-plus1-v1/proof.pbp",
+            "--print-sol=1"
+          ],
+          "solver_sha256": "4ca6fc6eca4464672dc50ad53f4c2fcd8eb8837bf4886bc92f897e4da0cd701b",
+          "checker_sha256": "d6e78f757d8023f13e967dab86f34f9d2eec3d3f29587c6a0aa96c0260992951",
+          "status": "unknown",
+          "veripb_verified": false,
+          "artifacts": {
+            "instance": {
+              "path": "/workspace/erdos-szekeres-lean/.cache/omission-opb/balanced-plus1-v1/instance.opb",
+              "sha256": "db23aa97a3bb2f80cb53bb8ca09d86b733c4334f416c41a82cc27968df66c4a7"
+            },
+            "proof": {
+              "path": "/workspace/erdos-szekeres-lean/.cache/omission-opb/balanced-plus1-v1/proof.pbp",
+              "sha256": "9de35e0f464536efcac17a08e50c024088176f58986623d05605a1bdb2bdfb2f",
+              "bytes": 3410357375
+            },
+            "solver_log": {
+              "path": "/workspace/erdos-szekeres-lean/.cache/omission-opb/balanced-plus1-v1/solver.log",
+              "sha256": "36e2ba45157c560167f24e204a064274cfd231d1a5e4b1899dfb249a995e740e",
+              "bytes": 76985
+            }
+          },
+          "solver_exit_code": 4,
+          "seconds": 601.8094781249529
+        }
+      },
+      {
+        "record_artifact": {
+          "path": ".cache/omission-opb/residual-plus1-v1/result.json",
+          "sha256": "4b801144ab0b5b534bae8e1c21279b13b58fd40eeeb573b2bbbc2743a3128dd0",
+          "bytes": 1758
+        },
+        "record": {
+          "scope": "Exact Boolean omission rows; geometric transfer is not certified here",
+          "source": "/workspace/erdos-szekeres-lean/.cache/schroeder-release/es7_es8_bounds_81_319_v1/certificates/residual.json",
+          "source_sha256": "bccd12477064d8a490bbe863ae49dbc8d9dfececf7a65426ba36f7537c66293a",
+          "script_sha256": "3028a43e21dd011c8929c846fc2e4724bfebf0adc4c947e6f3410292b95eb13a",
+          "states": 154,
+          "rows": 1187,
+          "hole_budget_tested": 30,
+          "seconds_limit": 600,
+          "checker_seconds_limit": 600,
+          "solver_command": [
+            "/private/tmp/erdos-rs-d4edbf7/roundingsat",
+            "/workspace/erdos-szekeres-lean/.cache/omission-opb/residual-plus1-v1/instance.opb",
+            "--time-limit=600",
+            "--proof-log=/workspace/erdos-szekeres-lean/.cache/omission-opb/residual-plus1-v1/proof.pbp",
+            "--print-sol=1"
+          ],
+          "solver_sha256": "4ca6fc6eca4464672dc50ad53f4c2fcd8eb8837bf4886bc92f897e4da0cd701b",
+          "checker_sha256": "d6e78f757d8023f13e967dab86f34f9d2eec3d3f29587c6a0aa96c0260992951",
+          "status": "unknown",
+          "veripb_verified": false,
+          "artifacts": {
+            "instance": {
+              "path": "/workspace/erdos-szekeres-lean/.cache/omission-opb/residual-plus1-v1/instance.opb",
+              "sha256": "e535c913c641d787e03a83c074ad61a1af334cd337a01c0bb4bece21b258fd56"
+            },
+            "proof": {
+              "path": "/workspace/erdos-szekeres-lean/.cache/omission-opb/residual-plus1-v1/proof.pbp",
+              "sha256": "510fb341889461cacb70430f89ccff357dc7d1a596b223b0587acfbe31bddc42",
+              "bytes": 3110955190
+            },
+            "solver_log": {
+              "path": "/workspace/erdos-szekeres-lean/.cache/omission-opb/residual-plus1-v1/solver.log",
+              "sha256": "dacdc5f838e646d59985152f8889629867ad8616553ee357edb69e708e4f30af",
+              "bytes": 47301
+            }
+          },
+          "solver_exit_code": 4,
+          "seconds": 601.8289383749943
+        }
+      }
+    ]
+  },
+  "exact_tree_refinement": [
+    {
+      "record_artifact": {
+        "path": ".cache/omission-tree/balanced-plus1-v1.json",
+        "sha256": "2dfc5de2ad57683bf4de3d5836732673abeeebe6200d4b398ae041829cb4092e",
+        "bytes": 1561676
+      },
+      "record": {
+        "scope": "Exact finite omission-row tree; JSON traversal and geometric transfer are not Lean-certified",
+        "source": ".cache/schroeder-release/es7_es8_bounds_81_319_v1/certificates/balanced.json",
+        "source_sha256": "23363c9e341a7edf4de28b6bf21970983cc6d4cafa6f2bdef54ce3d25b1c5a94",
+        "script_sha256": "db87d426ab4714b88b5cabe88060ca02b62a27b4051754345204595c258a59f1",
+        "checker_sha256": "35cb30503c3b1eb8886069cac4cb260351712e80075142fb0a4510c06055a8bb",
+        "seed_tree": null,
+        "seed_tree_sha256": null,
+        "solver": "HiGHS 1.15.1",
+        "hole_budget": 59,
+        "seconds_limit": 300.0,
+        "node_limit": 20000,
+        "seconds": 23.063963041990064,
+        "processed_lp_nodes": 1103,
+        "new_exact_leaves": 593,
+        "initial": {
+          "nodes": 3181,
+          "leaves": 1591,
+          "pending": 1589,
+          "complete": false,
+          "minimum_margin": 69008
+        },
+        "checked": {
+          "nodes": 4199,
+          "leaves": 2100,
+          "pending": 1505,
+          "complete": false,
+          "minimum_margin": 863
+        },
+        "stop_reason": "HighsModelStatus.kTimeLimit",
+        "status": "unknown",
+        "holes": null,
+        "root": 3180
+      },
+      "independent_replay": {
+        "nodes": 4199,
+        "leaves": 2100,
+        "pending": 1505,
+        "complete": false,
+        "minimum_margin": 863
+      }
+    },
+    {
+      "record_artifact": {
+        "path": ".cache/omission-tree/balanced-plus1-v2.json",
+        "sha256": "c17b233e2bddafea25d52b4f8a409ef1a9361ddc1299442963a0b0833c3d0fbc",
+        "bytes": 20918007
+      },
+      "record": {
+        "scope": "Exact finite omission-row tree; JSON traversal and geometric transfer are not Lean-certified",
+        "source": ".cache/schroeder-release/es7_es8_bounds_81_319_v1/certificates/balanced.json",
+        "source_sha256": "23363c9e341a7edf4de28b6bf21970983cc6d4cafa6f2bdef54ce3d25b1c5a94",
+        "script_sha256": "8d6d763bbe14630080eb5abc891ebddbf283ed11e8d4b3a742abd38a9de4f217",
+        "checker_sha256": "35cb30503c3b1eb8886069cac4cb260351712e80075142fb0a4510c06055a8bb",
+        "seed_tree": ".cache/omission-tree/balanced-plus1-v1.json",
+        "seed_tree_sha256": "2dfc5de2ad57683bf4de3d5836732673abeeebe6200d4b398ae041829cb4092e",
+        "solver": "HiGHS 1.15.1",
+        "hole_budget": 59,
+        "seconds_limit": 300.0,
+        "node_limit": 100000,
+        "seconds": 301.01556245808024,
+        "processed_lp_nodes": 14695,
+        "new_exact_leaves": 7995,
+        "initial": {
+          "nodes": 4199,
+          "leaves": 2100,
+          "pending": 1505,
+          "complete": false,
+          "minimum_margin": 863
+        },
+        "checked": {
+          "nodes": 17597,
+          "leaves": 8799,
+          "pending": 209,
+          "complete": false,
+          "minimum_margin": 3
+        },
+        "stop_reason": "HighsModelStatus.kTimeLimit",
+        "status": "unknown",
+        "holes": null,
+        "root": 3180
+      },
+      "independent_replay": {
+        "nodes": 17597,
+        "leaves": 8799,
+        "pending": 209,
+        "complete": false,
+        "minimum_margin": 3
+      }
+    },
+    {
+      "record_artifact": {
+        "path": ".cache/omission-tree/balanced-plus1-v3.json",
+        "sha256": "4fdeb858246540d359c9baa55724602be5c40d31467d8f4d28b56d3055553beb",
+        "bytes": 24010086
+      },
+      "record": {
+        "scope": "Exact finite omission-row tree; JSON traversal and geometric transfer are not Lean-certified",
+        "source": ".cache/schroeder-release/es7_es8_bounds_81_319_v1/certificates/balanced.json",
+        "source_sha256": "23363c9e341a7edf4de28b6bf21970983cc6d4cafa6f2bdef54ce3d25b1c5a94",
+        "script_sha256": "8d6d763bbe14630080eb5abc891ebddbf283ed11e8d4b3a742abd38a9de4f217",
+        "checker_sha256": "35cb30503c3b1eb8886069cac4cb260351712e80075142fb0a4510c06055a8bb",
+        "seed_tree": ".cache/omission-tree/balanced-plus1-v2.json",
+        "seed_tree_sha256": "c17b233e2bddafea25d52b4f8a409ef1a9361ddc1299442963a0b0833c3d0fbc",
+        "solver": "HiGHS 1.15.1",
+        "hole_budget": 59,
+        "seconds_limit": 240.0,
+        "node_limit": 100000,
+        "seconds": 49.69311191595625,
+        "processed_lp_nodes": 2335,
+        "new_exact_leaves": 1272,
+        "initial": {
+          "nodes": 17597,
+          "leaves": 8799,
+          "pending": 209,
+          "complete": false,
+          "minimum_margin": 3
+        },
+        "checked": {
+          "nodes": 19723,
+          "leaves": 9862,
+          "pending": 0,
+          "complete": true,
+          "minimum_margin": 3
+        },
+        "stop_reason": "complete",
+        "status": "unsat",
+        "holes": null,
+        "root": 3180
+      },
+      "independent_replay": {
+        "nodes": 19723,
+        "leaves": 9862,
+        "pending": 0,
+        "complete": true,
+        "minimum_margin": 3
+      }
+    },
+    {
+      "record_artifact": {
+        "path": ".cache/omission-tree/residual-plus1-v1.json",
+        "sha256": "32431c5b9da54529aa200451dde7434c401e49857352f9277f594d6943bb089d",
+        "bytes": 4603516
+      },
+      "record": {
+        "scope": "Exact finite omission-row tree; JSON traversal and geometric transfer are not Lean-certified",
+        "source": ".cache/schroeder-release/es7_es8_bounds_81_319_v1/certificates/residual.json",
+        "source_sha256": "bccd12477064d8a490bbe863ae49dbc8d9dfececf7a65426ba36f7537c66293a",
+        "script_sha256": "db87d426ab4714b88b5cabe88060ca02b62a27b4051754345204595c258a59f1",
+        "checker_sha256": "35cb30503c3b1eb8886069cac4cb260351712e80075142fb0a4510c06055a8bb",
+        "seed_tree": null,
+        "seed_tree_sha256": null,
+        "solver": "HiGHS 1.15.1",
+        "hole_budget": 30,
+        "seconds_limit": 300.0,
+        "node_limit": 20000,
+        "seconds": 27.409145625075325,
+        "processed_lp_nodes": 6450,
+        "new_exact_leaves": 3308,
+        "initial": {
+          "nodes": 14629,
+          "leaves": 7315,
+          "pending": 7315,
+          "complete": false,
+          "minimum_margin": null
+        },
+        "checked": {
+          "nodes": 20911,
+          "leaves": 10456,
+          "pending": 7148,
+          "complete": false,
+          "minimum_margin": 208
+        },
+        "stop_reason": "HighsModelStatus.kTimeLimit",
+        "status": "unknown",
+        "holes": null,
+        "root": 14628
+      },
+      "independent_replay": {
+        "nodes": 20911,
+        "leaves": 10456,
+        "pending": 7148,
+        "complete": false,
+        "minimum_margin": 208
+      }
+    },
+    {
+      "record_artifact": {
+        "path": ".cache/omission-tree/residual-plus1-v2.json",
+        "sha256": "d61fa8bdb48a7d419a1477454efcea72618d893901a7b1ad075ef494c49769a3",
+        "bytes": 52654946
+      },
+      "record": {
+        "scope": "Exact finite omission-row tree; JSON traversal and geometric transfer are not Lean-certified",
+        "source": ".cache/schroeder-release/es7_es8_bounds_81_319_v1/certificates/residual.json",
+        "source_sha256": "bccd12477064d8a490bbe863ae49dbc8d9dfececf7a65426ba36f7537c66293a",
+        "script_sha256": "8d6d763bbe14630080eb5abc891ebddbf283ed11e8d4b3a742abd38a9de4f217",
+        "checker_sha256": "35cb30503c3b1eb8886069cac4cb260351712e80075142fb0a4510c06055a8bb",
+        "seed_tree": ".cache/omission-tree/residual-plus1-v1.json",
+        "seed_tree_sha256": "32431c5b9da54529aa200451dde7434c401e49857352f9277f594d6943bb089d",
+        "solver": "HiGHS 1.15.1",
+        "hole_budget": 30,
+        "seconds_limit": 300.0,
+        "node_limit": 100000,
+        "seconds": 302.5008088329341,
+        "processed_lp_nodes": 79970,
+        "new_exact_leaves": 41031,
+        "initial": {
+          "nodes": 20911,
+          "leaves": 10456,
+          "pending": 7148,
+          "complete": false,
+          "minimum_margin": 208
+        },
+        "checked": {
+          "nodes": 98787,
+          "leaves": 49394,
+          "pending": 5055,
+          "complete": false,
+          "minimum_margin": 6
+        },
+        "stop_reason": "HighsModelStatus.kTimeLimit",
+        "status": "unknown",
+        "holes": null,
+        "root": 14628
+      },
+      "independent_replay": {
+        "nodes": 98787,
+        "leaves": 49394,
+        "pending": 5055,
+        "complete": false,
+        "minimum_margin": 6
+      }
+    },
+    {
+      "record_artifact": {
+        "path": ".cache/omission-tree/residual-plus1-v3.json",
+        "sha256": "1c463344954bfc6939c353084675a5eca5eac6214b1c8d1b932365dfd1ad398a",
+        "bytes": 169713109
+      },
+      "record": {
+        "scope": "Exact finite omission-row tree; JSON traversal and geometric transfer are not Lean-certified",
+        "source": ".cache/schroeder-release/es7_es8_bounds_81_319_v1/certificates/residual.json",
+        "source_sha256": "bccd12477064d8a490bbe863ae49dbc8d9dfececf7a65426ba36f7537c66293a",
+        "script_sha256": "8d6d763bbe14630080eb5abc891ebddbf283ed11e8d4b3a742abd38a9de4f217",
+        "checker_sha256": "35cb30503c3b1eb8886069cac4cb260351712e80075142fb0a4510c06055a8bb",
+        "seed_tree": ".cache/omission-tree/residual-plus1-v2.json",
+        "seed_tree_sha256": "d61fa8bdb48a7d419a1477454efcea72618d893901a7b1ad075ef494c49769a3",
+        "solver": "HiGHS 1.15.1",
+        "hole_budget": 30,
+        "seconds_limit": 900.0,
+        "node_limit": 400000,
+        "seconds": 727.4542723329505,
+        "processed_lp_nodes": 197215,
+        "new_exact_leaves": 101135,
+        "initial": {
+          "nodes": 98787,
+          "leaves": 49394,
+          "pending": 5055,
+          "complete": false,
+          "minimum_margin": 6
+        },
+        "checked": {
+          "nodes": 290947,
+          "leaves": 145474,
+          "pending": 0,
+          "complete": true,
+          "minimum_margin": 2
+        },
+        "stop_reason": "complete",
+        "status": "unsat",
+        "holes": null,
+        "root": 14628
+      },
+      "independent_replay": {
+        "nodes": 290947,
+        "leaves": 145474,
+        "pending": 0,
+        "complete": true,
+        "minimum_margin": 2
+      }
+    }
+  ],
+  "trust_boundary": [
+    "Finite prefix ranks and enumeration are not Lean-certified.",
+    "OPB/CNF exporters and Python tree traversal are not Lean-certified.",
+    "Numerical MIP infeasibility alone is not a certificate; complete exact tree replays are recorded separately.",
+    "Geometric necessity of the full row systems and final planar transfer remain unformalized in this repository."
+  ],
+  "historical_scripts": "Earlier CNF runs used development versions whose recorded hashes can differ from the final script. Hashed emitted CNFs are the preserved actual solver inputs.",
+  "compacted_certificates": [
+    {
+      "record_artifact": {
+        "path": ".cache/omission-tree/balanced-plus1-compact.json",
+        "sha256": "c06dfd369d1c51691c590ff195948ab8ca235326168f1d2db6c4013d234a60f1",
+        "bytes": 18427447
+      },
+      "record": {
+        "scope": "Exact finite omission-row tree; JSON traversal and geometric transfer are not Lean-certified",
+        "source": ".cache/schroeder-release/es7_es8_bounds_81_319_v1/certificates/balanced.json",
+        "source_sha256": "23363c9e341a7edf4de28b6bf21970983cc6d4cafa6f2bdef54ce3d25b1c5a94",
+        "parent_tree": ".cache/omission-tree/balanced-plus1-v3.json",
+        "parent_tree_sha256": "4fdeb858246540d359c9baa55724602be5c40d31467d8f4d28b56d3055553beb",
+        "script_sha256": "e70957a48b8e387d7a6ca00ac5c48c193b13d6ab656e670501eea05f048beebd",
+        "checker_sha256": "35cb30503c3b1eb8886069cac4cb260351712e80075142fb0a4510c06055a8bb",
+        "hole_budget": 59,
+        "root": 3180,
+        "status": "unsat",
+        "before": {
+          "nodes": 19723,
+          "leaves": 9862,
+          "pending": 0,
+          "complete": true,
+          "minimum_margin": 3
+        },
+        "checked": {
+          "nodes": 19723,
+          "leaves": 9862,
+          "pending": 0,
+          "complete": true,
+          "minimum_margin": 1
+        },
+        "changed_leaves": 9850
+      },
+      "stored_gzip": {
+        "path": "experiments/omission-balanced-59-2026-10-05.json.gz",
+        "sha256": "334330a4992a0daba611510508b746e8e275ee633782b591d993ebb5b1f4a8b0",
+        "bytes": 6177921
+      },
+      "independent_replay": {
+        "nodes": 19723,
+        "leaves": 9862,
+        "pending": 0,
+        "complete": true,
+        "minimum_margin": 1
+      }
+    },
+    {
+      "record_artifact": {
+        "path": ".cache/omission-tree/residual-plus1-compact.json",
+        "sha256": "c8f39263f629e30852f1850bdc06a37ee3e3c615e121d22fb093275589bac8ea",
+        "bytes": 128833338
+      },
+      "record": {
+        "scope": "Exact finite omission-row tree; JSON traversal and geometric transfer are not Lean-certified",
+        "source": ".cache/schroeder-release/es7_es8_bounds_81_319_v1/certificates/residual.json",
+        "source_sha256": "bccd12477064d8a490bbe863ae49dbc8d9dfececf7a65426ba36f7537c66293a",
+        "parent_tree": ".cache/omission-tree/residual-plus1-v3.json",
+        "parent_tree_sha256": "1c463344954bfc6939c353084675a5eca5eac6214b1c8d1b932365dfd1ad398a",
+        "script_sha256": "e70957a48b8e387d7a6ca00ac5c48c193b13d6ab656e670501eea05f048beebd",
+        "checker_sha256": "35cb30503c3b1eb8886069cac4cb260351712e80075142fb0a4510c06055a8bb",
+        "hole_budget": 30,
+        "root": 14628,
+        "status": "unsat",
+        "before": {
+          "nodes": 290947,
+          "leaves": 145474,
+          "pending": 0,
+          "complete": true,
+          "minimum_margin": 2
+        },
+        "checked": {
+          "nodes": 290947,
+          "leaves": 145474,
+          "pending": 0,
+          "complete": true,
+          "minimum_margin": 1
+        },
+        "changed_leaves": 145365
+      },
+      "stored_gzip": {
+        "path": "experiments/omission-residual-30-2026-10-05.json.gz",
+        "sha256": "0242b57e9f2f921bf0afda493c68606ce041b0ca11694eda5b180eeafda147c9",
+        "bytes": 37233015
+      },
+      "independent_replay": {
+        "nodes": 290947,
+        "leaves": 145474,
+        "pending": 0,
+        "complete": true,
+        "minimum_margin": 1
+      }
+    }
+  ],
+  "finite_result": {
+    "balanced_occupancy_at_most": 192,
+    "residual_occupancy_at_most": 123,
+    "candidate_ES8_bound_after_unproved_geometric_transfer": 317,
+    "planar_theorem_proved": false,
+    "HMPT_asymptotic_improvement_proved": false
+  }
+}

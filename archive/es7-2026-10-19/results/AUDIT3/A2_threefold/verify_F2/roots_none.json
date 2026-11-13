@@ -1,0 +1,42 @@
+{
+ "files": 280,
+ "compose_summary": {
+  "certified_nodes": 116741,
+  "class_covered": true,
+  "uncovered_frontier_nodes": 0,
+  "uncovered_sample": [],
+  "certified_records": 116883,
+  "certified_with_proof_sha256": {
+   "records": 26436,
+   "nodes": 26436
+  },
+  "sha_checked": false,
+  "mirror_h6": true,
+  "certified_cube_nodes": 26748,
+  "sigma_splits_used": 1747
+ },
+ "mycompose_summary": {
+  "m": 11,
+  "k": 7,
+  "certified_records": 116883,
+  "certified_nodes": 116741,
+  "certified_cube_nodes": 26748,
+  "sha_checked": 0,
+  "sigma_split_nodes": 1754,
+  "sigma_splits_used": 1752,
+  "cube_layer_split_nodes": 3053,
+  "class_covered": false,
+  "uncovered_frontier": 2260,
+  "uncovered_sample": [
+   "0s0-1s1_10_9_5s0-6s1",
+   "0s0-1s1_10_9_5s0-7s0",
+   "0s0-1s1_10_9_5s0-7s1",
+   "0s0-1s1_10_9_5s0-8s0",
+   "0s0-1s1_10_9_5s0-8s1"
+  ]
+ },
+ "roots": 910,
+ "open_roots_compose": [],
+ "open_roots_mycompose": [],
+ "root_status_differences": []
+}

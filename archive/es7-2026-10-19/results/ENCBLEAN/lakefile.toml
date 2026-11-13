@@ -1,0 +1,12 @@
+name = "encblean"
+version = "0.1.0"
+defaultTargets = ["EncB", "encb_dimacs"]
+
+# Std-only: no `[[require]]`, so no Mathlib; a clean build takes seconds.
+
+[[lean_lib]]
+name = "EncB"
+
+[[lean_exe]]
+name = "encb_dimacs"
+root = "EncB.Emit"

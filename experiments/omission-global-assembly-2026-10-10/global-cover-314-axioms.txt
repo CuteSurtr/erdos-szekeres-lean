@@ -1,0 +1,51 @@
+'OmissionResidual.feasible_holes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual.residual_bound_of_arithmetic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual.forces_317_of_arithmetic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual.excludes_hole_budget_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual.residual_bound_of_hole_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual.forces_of_hole_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual.forces_318_of_twenty_nine_holes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual.forces_317_of_thirty_holes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Omission.Partition.asymmetric_of_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Omission.Partition.forces_of_population_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.Partition.avoiding_card_le_of_population_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.Partition.forces_318_of_population_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.Partition.forces_317_of_population_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OmissionResidual.excludes_hole_budget_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual.residual_bound_of_hole_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual.forces_of_hole_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual.forces_318_of_twenty_nine_holes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual.forces_317_of_thirty_holes' depends on axioms: [propext, Classical.choice, Quot.sound]
+@ErdosSzekeres.Omission.Partition.forces_of_population_bounds : ∀ {B R : ℕ},
+  1 ≤ B + R →
+    ErdosSzekeres.Omission.Partition.BalancedBound B →
+      ErdosSzekeres.Omission.Partition.ResidualBound R → ErdosSzekeres.ForcesConvexNGon (B + R + 2) 8
+OmissionResidual.forces_318_of_twenty_nine_holes : ErdosSzekeres.Omission.Partition.BalancedBound 192 →
+  OmissionResidual.ExcludesHoleBudget 29 → ErdosSzekeres.ForcesConvexNGon 318 8
+OmissionResidual.forces_317_of_thirty_holes : ErdosSzekeres.Omission.Partition.BalancedBound 192 →
+  OmissionResidual.ExcludesHoleBudget 30 → ErdosSzekeres.ForcesConvexNGon 317 8
+'OmissionBalanced.feasible_holes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalanced.balanced_bound_of_hole_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidualCover31Fused.base_catalog_matches' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidualCover31Fused.cut_catalog_matches' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidualCover31Fused.all_cover_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidualCover31Fused.exclusion_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalancedCover61Fused.base_catalog_matches' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalancedCover61Fused.cut_catalog_matches' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalancedCover61Fused.all_cover_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionBalancedCover61Fused.exclusion_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Omission.balanced_population_190' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Omission.residual_population_122' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Omission.forces_convex_octagon_314' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Omission.convex_octagon_of_card_ge_314' depends on axioms: [propext, Classical.choice, Quot.sound]
+forces_convex_octagon_314 : ForcesConvexNGon 314 8
+convex_octagon_of_card_ge_314 : ∀ (S : Finset (Fin 2 → ℝ)),
+  GeneralPosition S → 314 ≤ S.card → ∃ T ⊆ S, T.card = 8 ∧ ConvexIndependent ℝ fun p => ↑p

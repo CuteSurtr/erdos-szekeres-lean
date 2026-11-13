@@ -1,0 +1,51 @@
+22:00:37 base built: t=16, 42672 triple vars
+22:01:13 phase f_del0_outer_00: th(deg)=[0.0, 44.0, 44.1243, 44.2236, 44.3017, 44.4694, 44.7604, 0.2352, 0.2883, 0.3928, 0.8229, 1.2386, 1.2879, 1.9948, 2.2052, 15.6248]
+22:01:13   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16133765, conflicts 0, build 36.4 s
+22:02:05   PHASE-UNSAT (first solve, no cuts, no assumptions) 52.0 s
+22:02:06 RESULT real/ins/f_del0_outer_00.json ('UNSAT', 0, 0)
+22:02:38 phase f_del0_outer_01: th(deg)=[0.0, 42.0, 42.1243, 42.2236, 42.3017, 42.4694, 42.7604, 43.2352, 43.2883, 43.3928, 43.8229, 44.2386, 44.2879, 44.9948, 0.2052, 13.6248]
+22:02:38   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16132969, conflicts 0, build 32.6 s
+22:03:29   PHASE-UNSAT (first solve, no cuts, no assumptions) 50.6 s
+22:03:29 RESULT real/ins/f_del0_outer_01.json ('UNSAT', 0, 0)
+22:03:58 phase f_del0_outer_02: th(deg)=[0.0, 40.0, 40.1243, 40.2236, 40.3017, 40.4694, 40.7604, 41.2352, 41.2883, 41.3928, 41.8229, 42.2386, 42.2879, 42.9948, 43.2052, 11.6248]
+22:03:58   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16136467, conflicts 0, build 29.2 s
+22:04:56   PHASE-UNSAT (first solve, no cuts, no assumptions) 57.6 s
+22:04:56 RESULT real/ins/f_del0_outer_02.json ('UNSAT', 0, 0)
+22:05:31 phase f_del0_outer_03: th(deg)=[0.0, 38.0, 38.1243, 38.2236, 38.3017, 38.4694, 38.7604, 39.2352, 39.2883, 39.3928, 39.8229, 40.2386, 40.2879, 40.9948, 41.2052, 9.6248]
+22:05:31   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16136467, conflicts 0, build 35.2 s
+22:06:39   PHASE-UNSAT (first solve, no cuts, no assumptions) 67.7 s
+22:06:39 RESULT real/ins/f_del0_outer_03.json ('UNSAT', 0, 0)
+22:07:14 phase f_del0_outer_04: th(deg)=[0.0, 36.0, 36.1243, 36.2236, 36.3017, 36.4694, 36.7604, 37.2352, 37.2883, 37.3928, 37.8229, 38.2386, 38.2879, 38.9948, 39.2052, 7.6248]
+22:07:14   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16137667, conflicts 0, build 34.6 s
+22:08:26   PHASE-UNSAT (first solve, no cuts, no assumptions) 72.2 s
+22:08:26 RESULT real/ins/f_del0_outer_04.json ('UNSAT', 0, 0)
+22:08:59 phase f_del0_outer_05: th(deg)=[0.0, 34.0, 34.1243, 34.2236, 34.3017, 34.4694, 34.7604, 35.2352, 35.2883, 35.3928, 35.8229, 36.2386, 36.2879, 36.9948, 37.2052, 5.6248]
+22:08:59   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16137942, conflicts 0, build 33.1 s
+22:10:08   PHASE-UNSAT (first solve, no cuts, no assumptions) 68.8 s
+22:10:09 RESULT real/ins/f_del0_outer_05.json ('UNSAT', 0, 0)
+22:10:44 phase f_del0_outer_06: th(deg)=[0.0, 32.0, 32.1243, 32.2236, 32.3017, 32.4694, 32.7604, 33.2352, 33.2883, 33.3928, 33.8229, 34.2386, 34.2879, 34.9948, 35.2052, 3.6248]
+22:10:44   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16137942, conflicts 0, build 35.5 s
+22:11:57   PHASE-UNSAT (first solve, no cuts, no assumptions) 72.9 s
+22:11:57 RESULT real/ins/f_del0_outer_06.json ('UNSAT', 0, 0)
+22:12:30 phase f_del0_outer_07: th(deg)=[0.0, 30.0, 30.1243, 30.2236, 30.3017, 30.4694, 30.7604, 31.2352, 31.2883, 31.3928, 31.8229, 32.2386, 32.2879, 32.9948, 33.2052, 1.6248]
+22:12:30   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16137942, conflicts 0, build 33.1 s
+22:13:51   PHASE-UNSAT (first solve, no cuts, no assumptions) 80.4 s
+22:13:51 RESULT real/ins/f_del0_outer_07.json ('UNSAT', 0, 0)
+22:14:27 phase f_del0_outer_08: th(deg)=[0.0, 28.0, 28.1243, 28.2236, 28.3017, 28.4694, 28.7604, 29.2352, 29.2883, 29.3928, 29.8229, 30.2386, 30.2879, 30.9948, 31.2052, 44.6248]
+22:14:27   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16139546, conflicts 0, build 36.3 s
+22:15:46   PHASE-UNSAT (first solve, no cuts, no assumptions) 78.6 s
+22:15:46 RESULT real/ins/f_del0_outer_08.json ('UNSAT', 0, 0)
+22:16:22 phase f_del0_outer_09: th(deg)=[0.0, 26.0, 26.1243, 26.2236, 26.3017, 26.4694, 26.7604, 27.2352, 27.2883, 27.3928, 27.8229, 28.2386, 28.2879, 28.9948, 29.2052, 42.6248]
+22:16:22   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16139546, conflicts 0, build 36.3 s
+22:17:43   PHASE-UNSAT (first solve, no cuts, no assumptions) 81.0 s
+22:17:44 RESULT real/ins/f_del0_outer_09.json ('UNSAT', 0, 0)
+22:18:17 phase f_del0_outer_10: th(deg)=[0.0, 24.0, 24.1243, 24.2236, 24.3017, 24.4694, 24.7604, 25.2352, 25.2883, 25.3928, 25.8229, 26.2386, 26.2879, 26.9948, 27.2052, 40.6248]
+22:18:17   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16139546, conflicts 0, build 33.9 s
+22:19:34   PHASE-UNSAT (first solve, no cuts, no assumptions) 75.9 s
+22:19:34 RESULT real/ins/f_del0_outer_10.json ('UNSAT', 0, 0)
+22:20:05 phase f_del0_outer_11: th(deg)=[0.0, 22.0, 22.1243, 22.2236, 22.3017, 22.4694, 22.7604, 23.2352, 23.2883, 23.3928, 23.8229, 24.2386, 24.2879, 24.9948, 25.2052, 38.6248]
+22:20:05   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16138679, conflicts 0, build 31.0 s
+22:20:44   PHASE-UNSAT (first solve, no cuts, no assumptions) 39.4 s
+22:20:44 RESULT real/ins/f_del0_outer_11.json ('UNSAT', 0, 0)
+22:21:23 phase f_del0_outer_12: th(deg)=[0.0, 20.0, 20.1243, 20.2236, 20.3017, 20.4694, 20.7604, 21.2352, 21.2883, 21.3928, 21.8229, 22.2386, 22.2879, 22.9948, 23.2052, 36.6248]
+22:21:23   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16145227, conflicts 0, build 39.1 s

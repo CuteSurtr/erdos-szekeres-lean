@@ -1,0 +1,37 @@
+{
+  "complete": true,
+  "scope": "Only the existing HMPT normalizedBudget entropy interface at fixed positive scale. Not a geometric lower bound, universal barrier, or a statement about the factorial-refined criterion.",
+  "theorem_roots": [
+    "ErdosSzekeres.HMPT.entropy_slack_negative_at_endpoint",
+    "ErdosSzekeres.HMPT.roundedScale_sq_ge_of_log_budget",
+    "ErdosSzekeres.HMPT.normalizedBudget_neg_at_endpoint",
+    "ErdosSzekeres.HMPT.budget_eventually_negative_at_published",
+    "ErdosSzekeres.HMPT.budget_eventually_negative_at_or_below_published"
+  ],
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "proof_placeholder_scan": "Passed for the new Lean module",
+  "commands": [
+    "ELAN_HOME=\"$PWD/.elan\" .elan/bin/lake env lean -M1500 ErdosSzekeres/HMPT/EndpointBarrier.lean",
+    "ELAN_HOME=\"$PWD/.elan\" .elan/bin/lake build ErdosSzekeres.HMPT.EndpointBarrier",
+    "ELAN_HOME=\"$PWD/.elan\" .elan/bin/lake env lean -M1500 .cache/hmpt-refinement/EndpointAudit.lean"
+  ],
+  "primary_source": "https://arxiv.org/abs/1710.11415",
+  "files": {
+    "ErdosSzekeres/HMPT/EndpointBarrier.lean": {
+      "sha256": "7fad2db3d0c6e39c99ebc8e807a329b050ffc2c9366fc849c84f980e6f5a6fe7",
+      "bytes": 5650
+    },
+    "experiments/hmpt-endpoint-barrier-2026-10-10/README.md": {
+      "sha256": "eff0b7ef191e35e5e2d46448099e407ae126f67fda7da8f6921bcda768e447d2",
+      "bytes": 1920
+    },
+    "experiments/hmpt-endpoint-barrier-2026-10-10/axiom-audit.txt": {
+      "sha256": "829ce9885f8c4d89ddb31a41d2b1b2fe958de82d7653a5527f55f3f6a5977ea9",
+      "bytes": 592
+    }
+  }
+}

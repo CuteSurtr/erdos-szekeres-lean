@@ -1,0 +1,44 @@
+== 2026-11-06 15:26:55 KST E3 rerun: export, merge, coverage, shapes, driver; Tctl +74.0°C
+export exit 0: export: 2.15 s wall, 120160 KB max RSS
+  exported [(2406, 921, 3, 2, 131072, 1), (2407, 1781, 5, 4, 131072, 1)] (ctx, leaves, modules, skeleton nodes, K, min margin); refused_ctx {} code_changed []
+merge exit 0: export_root 1000003251 skeleton theorems 7 modules 8 leaves 2702
+coverage exit 0: PASS True checks 47 contexts 2 leaves 2702 warnings 0 exporter 29854a3799db
+shapes exit 0: "PASS": true
+== 15:26:58 driver (at most 2 Lean jobs, MemoryMax 12G chunks / 24G Root, nice 10, Tctl < 80 C, start gap 20 s)
+driver exit 0
+2026-11-06T06:27:02Z start chunk E310BT.C240701 leaves=425 running=1 queued=8
+2026-11-06T06:27:14Z ok E310BT.C240701 leaves=425 kernel=8.470 wall=11.47 rss=3308296 cg_peak=562712 running=0 queued=8
+2026-11-06T06:27:22Z start chunk E310BT.C240705 leaves=412 running=1 queued=7
+2026-11-06T06:27:35Z ok E310BT.C240705 leaves=412 kernel=9.520 wall=12.85 rss=3311048 cg_peak=559452 running=0 queued=7
+2026-11-06T06:27:42Z start chunk E310BT.C240603 leaves=392 running=1 queued=6
+2026-11-06T06:27:53Z ok E310BT.C240603 leaves=392 kernel=7.850 wall=10.81 rss=3301112 cg_peak=550380 running=0 queued=6
+2026-11-06T06:28:02Z start chunk E310BT.C240702 leaves=335 running=1 queued=5
+2026-11-06T06:28:12Z ok E310BT.C240702 leaves=335 kernel=6.760 wall=9.55 rss=3304424 cg_peak=546700 running=0 queued=5
+2026-11-06T06:28:22Z start chunk E310BT.C240704 leaves=324 running=1 queued=4
+2026-11-06T06:28:33Z ok E310BT.C240704 leaves=324 kernel=7.630 wall=10.83 rss=3262508 cg_peak=501664 running=0 queued=4
+2026-11-06T06:28:42Z start chunk E310BT.C240601 leaves=293 running=1 queued=3
+2026-11-06T06:28:53Z ok E310BT.C240601 leaves=293 kernel=7.200 wall=10.32 rss=3260128 cg_peak=508252 running=0 queued=3
+2026-11-06T06:29:02Z start chunk E310BT.C240703 leaves=285 running=1 queued=2
+2026-11-06T06:29:10Z ok E310BT.C240703 leaves=285 kernel=5.000 wall=7.44 rss=3281948 cg_peak=523296 running=0 queued=2
+2026-11-06T06:29:22Z start chunk E310BT.C240602 leaves=236 running=1 queued=1
+2026-11-06T06:29:30Z ok E310BT.C240602 leaves=236 kernel=4.670 wall=7.36 rss=3269512 cg_peak=509152 running=0 queued=1
+2026-11-06T06:29:42Z start root E310BT.Root leaves=2702 running=1 queued=0
+2026-11-06T06:29:45Z ok E310BT.Root leaves=2702 kernel=0.002 wall=2.55 rss=3070504 cg_peak=302124 running=0 queued=0
+{"finished": "2026-11-06T06:29:46Z", "not_ok": [], "not_started": 0, "stopped": null}
+restart dry-run exit 0: to_run 0 already_done 9 stale_after_imports {}
+== 15:29:50 rows
+| module | leaves | verdict | kernel s | wall s | RSS KB | cgroup peak KB | .olean bytes | axioms |
+|---|---|---|---|---|---|---|---|---|
+| E310BT.C240701 | 425 | ok | 8.470 | 11.47 | 3308296 | 562712 | 1039928 | E310BT.C240701.ex2=[propext, Classical.choice, Quot.sound] |
+| E310BT.C240705 | 412 | ok | 9.520 | 12.85 | 3311048 | 559452 | 997552 | E310BT.C240705.ex2738=[propext, Classical.choice, Quot.sound] |
+| E310BT.C240603 | 392 | ok | 7.850 | 10.81 | 3301112 | 550380 | 975120 | E310BT.C240603.ex1058=[propext, Classical.choice, Quot.sound] |
+| E310BT.C240702 | 335 | ok | 6.760 | 9.55 | 3304424 | 546700 | 838280 | E310BT.C240702.ex852=[propext, Classical.choice, Quot.sound] |
+| E310BT.C240704 | 324 | ok | 7.630 | 10.83 | 3262508 | 501664 | 813648 | E310BT.C240704.ex2091=[propext, Classical.choice, Quot.sound] |
+| E310BT.C240601 | 293 | ok | 7.200 | 10.32 | 3260128 | 508252 | 745952 | E310BT.C240601.ex1=[propext, Classical.choice, Quot.sound] |
+| E310BT.C240703 | 285 | ok | 5.000 | 7.44 | 3281948 | 523296 | 708488 | E310BT.C240703.ex1521=[propext, Classical.choice, Quot.sound] |
+| E310BT.C240602 | 236 | ok | 4.670 | 7.36 | 3269512 | 509152 | 606096 | E310BT.C240602.ex587=[propext, Classical.choice, Quot.sound] |
+| E310BT.Root | 2702 | ok | 0.002 | 2.55 | 3070504 | 302124 | 53360 | E310BT.root=[propext, Classical.choice, Quot.sound] |
+chunks ok 8, leaves 2702, kernel 57.1 s (21.1 ms/leaf), .olean 6725064 B (2.49 KB/leaf)
+all ok: True ; standard axioms only: True
+== 2026-11-06 15:29:50 KST E3 done
+rc=0

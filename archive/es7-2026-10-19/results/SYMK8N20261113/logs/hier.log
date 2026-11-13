@@ -1,0 +1,38 @@
+DONE m=4 centre=False K=6 best depth=3 nodes=58 counts={1: 1, 2: 2, 3: 8} time=0s
+example: [(1, 0), (2, 1), (3, 1)]
+DONE m=4 centre=False K=7 best depth=4 nodes=442 counts={1: 1, 2: 2, 3: 8, 4: 48} time=0s
+example: [(1, 0), (2, 1), (3, 1), (4, 1)]
+DONE m=4 centre=False K=8 best depth=5 nodes=4282 counts={1: 1, 2: 2, 3: 8, 4: 48, 5: 384} time=1s
+example: [(1, 0), (2, 1), (3, 1), (4, 1), (5, 1)]
+DONE m=3 centre=False K=6 best depth=3 nodes=420 counts={1: 1, 2: 4, 3: 32} time=0s
+example: [(1, 0), (3, 1), (4, 1)]
+DONE m=3 centre=True K=6 best depth=3 nodes=420 counts={1: 1, 2: 4, 3: 32} time=0s
+example: [(1, 0), (3, 1), (4, 1)]
+DONE m=3 centre=False K=7 best depth=5 nodes=32164 counts={1: 1, 2: 4, 3: 32, 4: 384, 5: 1280} time=3s
+example: [(1, 0), (3, 1), (4, 1), (5, 2), (4, 3)]
+DONE m=3 centre=True K=7 best depth=5 nodes=21284 counts={1: 1, 2: 4, 3: 32, 4: 384, 5: 736} time=2s
+example: [(1, 0), (3, 1), (4, 1), (4, 3), (11, 3)]
+Traceback (most recent call last):
+  File "/home/jay/research/data/symk8-20261113/tools/hier_all.py", line 83, in <module>
+    print('m=%d K=%d levels=%d: configurations=%d, with a convex %d-gon: %d, largest convex subset over all: %d (%.0fs)'
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+          % (m, K, s, len(nxt), K, bad, K, mx, time.time() - t0), flush=True)
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: not all arguments converted during string formatting
+base60_cost3_minus12.txt orbits=20 centre=False n8=0 free_cuts=[1, 16, 18] all_free_n8=0
+base60_cost3_minus19.txt orbits=20 centre=False n8=0 free_cuts=[1, 16, 18] all_free_n8=0
+base60_cost3_minus20.txt orbits=20 centre=False n8=0 free_cuts=[16, 18] all_free_n8=0
+base60_cost3_minus3.txt orbits=20 centre=False n8=0 free_cuts=[1, 16, 18] all_free_n8=0
+base60_cost3_minus4.txt orbits=20 centre=False n8=0 free_cuts=[1, 16, 18] all_free_n8=0
+base60_cost3_minus6.txt orbits=20 centre=False n8=0 free_cuts=[1, 5, 16, 18] all_free_n8=0
+base60_cost3_minus7.txt orbits=20 centre=False n8=0 free_cuts=[1, 16, 18] all_free_n8=0
+base60_cost3_minus9.txt orbits=20 centre=False n8=0 free_cuts=[1, 16, 18] all_free_n8=0
+c3_60pts_nocentre.txt orbits=20 centre=False n8=0 free_cuts=[1, 18] all_free_n8=0
+c3_60pts_nocentre_b.txt orbits=20 centre=False n8=0 free_cuts=[1, 16, 18] all_free_n8=0
+c3_61pts_blowup.txt orbits=20 centre=True n8=0 free_cuts=[1, 9, 16] all_free_n8=0
+c3_61pts_centre.txt orbits=20 centre=True n8=0 free_cuts=[1, 16] all_free_n8=0
+c3_63pts_3octagons_nocentre.txt orbits=21 centre=False n8=3 free_cuts=[8, 11, 17, 19] all_free_n8=3
+c3_64pts_3octagons.txt orbits=21 centre=True n8=3 free_cuts=[8, 11, 17, 19] all_free_n8=3
+control_cost3_63pts.txt orbits=21 centre=False n8=3 free_cuts=[1, 17, 19] all_free_n8=3
+DONE m=4 centre=False K=5 best depth=2 nodes=10 counts={1: 1, 2: 2} time=0s
+example: [(1, 0), (2, 1)]

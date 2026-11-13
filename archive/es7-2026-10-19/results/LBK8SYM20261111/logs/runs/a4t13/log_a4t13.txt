@@ -1,0 +1,17 @@
+23:09:27 start {'m': 4, 't': 13, 'centre': False, 'out': '/home/jay/research/data/lb-k8sym-20261111/runs/a4t13', 'seed': 901, 'init': None, 'ansatz': 'needle11,spiral11,needle1,twoorbit,spiral1', 'stop_at': 0, 'hours': 0.3, 'steps_per_T': 4000, 'T0': 0.5, 'Tmin': 0.02, 'alpha': 0.93, 'w7': 0.02, 'restart_evals': 150000, 'tag': 'a4t13', 'perturb': 0.0, 'pfocus': 0.0}
+23:09:27 restart 1 spiral11 init N8 92885 N7 291828
+23:10:25 end restart 1 spiral11 evals 152000 best N8 62 N7 46320 found 0
+23:10:25 restart 2 needle1 init N8 257735716 N7 62791360
+23:11:23 end restart 2 needle1 evals 152000 best N8 68 N7 68580 found 0
+23:11:23 restart 3 twoorbit init N8 17016442 N7 10517576
+23:12:21 end restart 3 twoorbit evals 152000 best N8 57 N7 50136 found 0
+23:12:21 restart 4 spiral1 init N8 738943 N7 797324
+23:13:15 end restart 4 spiral1 evals 152000 best N8 82 N7 42796 found 0
+23:13:15 restart 5 needle11 init N8 867579 N7 1219804
+23:14:13 end restart 5 needle11 evals 152000 best N8 81 N7 41472 found 0
+23:14:13 restart 6 spiral11 init N8 1323787 N7 1415148
+23:15:13 r6 ev 140000 acc 0.761 ab 0.192 T 0.0394 cur N8 26 N7 63784 | best N8 26 N7 43492
+23:15:16 end restart 6 spiral11 evals 152000 best N8 26 N7 43492 found 0
+23:15:16 restart 7 needle1 init N8 345906 N7 462472
+23:16:14 end restart 7 needle1 evals 152000 best N8 83 N7 48652 found 0
+23:16:14 restart 8 twoorbit init N8 12277344 N7 8812124

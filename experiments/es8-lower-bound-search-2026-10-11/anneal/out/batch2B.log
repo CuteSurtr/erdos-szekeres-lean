@@ -1,0 +1,17 @@
+== addpoint on witness(7) (32 pts), K=7
+addpoint K=7 base=32 valid=37284 min=1 at (21,198873) hist[0,1,2,3-9,10-99,1e2-1e3,1e3-1e4,>=1e4]=0,9455,38,199,1074,5379,12479,8660
+== addpoint on witness(8) (64 pts), K=8, 20000 candidates
+addpoint K=8 base=64 valid=19371 min=1 at (42,1644488) hist[0,1,2,3-9,10-99,1e2-1e3,1e3-1e4,>=1e4]=0,4223,14,46,111,626,2380,11971
+== scan: single-point-move neighbourhoods of witness(8)+1 configurations
+scan K=8 N=65 E0=1 points_in_some_Kgon=8 valid_moves=62833 min_after_one_move=1 hist[0,1,2,3-9,10-99,1e2-1e3,1e3-1e4,>=1e4]=0,3643,2561,775,1390,3355,11969,39140 per_point_min_hist=0,63,2,0,0,0,0,0
+scan K=8 N=65 E0=1 points_in_some_Kgon=8 valid_moves=62817 min_after_one_move=1 hist[0,1,2,3-9,10-99,1e2-1e3,1e3-1e4,>=1e4]=0,3447,2470,900,1543,6319,8256,39882 per_point_min_hist=0,61,4,0,0,0,0,0
+== scan: witness(7)+1 (33 pts) and witness(6)+1 (17 pts)
+scan K=7 N=33 E0=1 points_in_some_Kgon=7 valid_moves=93059 min_after_one_move=1 hist[0,1,2,3-9,10-99,1e2-1e3,1e3-1e4,>=1e4]=0,11088,5078,2319,4766,23310,32061,14437 per_point_min_hist=0,33,0,0,0,0,0,0
+scan K=6 N=17 E0=1 points_in_some_Kgon=6 valid_moves=46771 min_after_one_move=1 hist[0,1,2,3-9,10-99,1e2-1e3,1e3-1e4,>=1e4]=0,8038,1986,1477,13880,21390,0,0 per_point_min_hist=0,17,0,0,0,0,0,0
+== R65: N=65 K=8 random start control (log energy)
+anneal K=8 N=65 raw=0 T0=0.5 T1=0.01 mu=0.000 seed=7 iters=100000 best=15 accepted=63534 gprej=4018 cpu=152.3s
+== C33w: N=33 K=7 from witness(7)+1, raw energy
+anneal K=7 N=33 raw=1 T0=1.5 T1=0.05 mu=0.000 seed=1 iters=400000 best=1 accepted=60922 gprej=6834 cpu=58.9s
+anneal K=7 N=33 raw=1 T0=1.5 T1=0.05 mu=0.000 seed=2 iters=400000 best=1 accepted=75357 gprej=13209 cpu=56.0s
+anneal K=7 N=33 raw=1 T0=1.5 T1=0.05 mu=0.000 seed=3 iters=400000 best=1 accepted=71829 gprej=10236 cpu=61.4s
+== DONE

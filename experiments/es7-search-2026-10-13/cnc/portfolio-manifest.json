@@ -1,0 +1,101 @@
+{
+  "purpose": "ES(7): 33 points, no convex heptagon; signotope CNF with hull+mirror symmetry breaking (see ../trackB-sat/gen_cnf.py)",
+  "solver": "CaDiCaL",
+  "solver_version": "3.0.1",
+  "cnf": "trackB-sat/cnf/n33k7hm.cnf",
+  "cnf_sha256": "86a1a1f68d18f2a3aaeff20a8776b921599a9ca51e10a834a2078b9f5845caf6",
+  "time_limit_s": 43200,
+  "proof_output": "none (no DRAT/LRAT requested)",
+  "result_before_stop": "UNKNOWN (no s-line in any log)",
+  "runs": [
+    {
+      "pid": 13357,
+      "cpu_percent": 84.8,
+      "rss_mb": 439,
+      "elapsed": "03:04:06",
+      "command": "../../cadical/build/cadical --seed=101 -t 43200 -w model-default-101.txt -n ../trackB-sat/cnf/n33k7hm.cnf",
+      "mode": "default",
+      "seed": 101,
+      "log": "log-default-101.txt",
+      "last_stats_line": "c O 10265.60  0 59 132 196990  1 8515268 454624 2.6 78 30 5 16 50% 625892 25566 54%"
+    },
+    {
+      "pid": 13358,
+      "cpu_percent": 88.8,
+      "rss_mb": 313,
+      "elapsed": "03:04:06",
+      "command": "../../cadical/build/cadical --sat --seed=102 -t 43200 -w model-sat-102.txt -n ../trackB-sat/cnf/n33k7hm.cnf",
+      "mode": "sat",
+      "seed": 102,
+      "log": "log-sat-102.txt",
+      "last_stats_line": "c w 10245.10  0 50 155 2095  1 11852441 100868 2.7 77 28 6 18 51% 647453 25568 54%"
+    },
+    {
+      "pid": 13359,
+      "cpu_percent": 93.1,
+      "rss_mb": 463,
+      "elapsed": "03:04:06",
+      "command": "../../cadical/build/cadical --unsat --seed=103 -t 43200 -w model-unsat-103.txt -n ../trackB-sat/cnf/n33k7hm.cnf",
+      "mode": "unsat",
+      "seed": 103,
+      "log": "log-unsat-103.txt",
+      "last_stats_line": "c w 10213.18  0 63 117 361438  6 6592914 537075 3.2 43 13 4 12 53% 626711 25566 54%"
+    },
+    {
+      "pid": 13360,
+      "cpu_percent": 86.7,
+      "rss_mb": 391,
+      "elapsed": "03:04:06",
+      "command": "../../cadical/build/cadical --seed=104 -t 43200 -w model-default-104.txt -n ../trackB-sat/cnf/n33k7hm.cnf",
+      "mode": "default",
+      "seed": 104,
+      "log": "log-default-104.txt",
+      "last_stats_line": "c w 10242.69  0 56 133 199050  1 8566442 362502 3.1 85 28 5 15 53% 625867 25566 54%"
+    },
+    {
+      "pid": 13361,
+      "cpu_percent": 84.9,
+      "rss_mb": 288,
+      "elapsed": "03:04:06",
+      "command": "../../cadical/build/cadical --sat --seed=105 -t 43200 -w model-sat-105.txt -n ../trackB-sat/cnf/n33k7hm.cnf",
+      "mode": "sat",
+      "seed": 105,
+      "log": "log-sat-105.txt",
+      "last_stats_line": "c w 10228.51  0 46 155 2095  1 11852302 98772 2.6 66 25 6 18 48% 647463 25568 54%"
+    },
+    {
+      "pid": 13362,
+      "cpu_percent": 97.8,
+      "rss_mb": 492,
+      "elapsed": "03:04:06",
+      "command": "../../cadical/build/cadical --seed=106 -t 43200 -w model-default-106.txt -n ../trackB-sat/cnf/n33k7hm.cnf",
+      "mode": "default",
+      "seed": 106,
+      "log": "log-default-106.txt",
+      "last_stats_line": "c w 10267.00  0 56 132 193348  1 8435892 370398 2.6 76 29 5 16 50% 625896 25566 54%"
+    },
+    {
+      "pid": 13363,
+      "cpu_percent": 85.0,
+      "rss_mb": 305,
+      "elapsed": "03:04:06",
+      "command": "../../cadical/build/cadical --sat --seed=107 -t 43200 -w model-sat-107.txt -n ../trackB-sat/cnf/n33k7hm.cnf",
+      "mode": "sat",
+      "seed": 107,
+      "log": "log-sat-107.txt",
+      "last_stats_line": "c O 10267.28  0 42 155 2113  1 11935322 175124 2.6 65 25 6 18 49% 647425 25568 54%"
+    },
+    {
+      "pid": 13364,
+      "cpu_percent": 95.7,
+      "rss_mb": 411,
+      "elapsed": "03:04:06",
+      "command": "../../cadical/build/cadical --unsat --seed=108 -t 43200 -w model-unsat-108.txt -n ../trackB-sat/cnf/n33k7hm.cnf",
+      "mode": "unsat",
+      "seed": 108,
+      "log": "log-unsat-108.txt",
+      "last_stats_line": "c F 10227.54  0 64 117 364764  6 6670218 610065 3.2 43 14 4 12 53% 626681 25566 54%"
+    }
+  ],
+  "note": "Independent randomized runs of the SAME formula (portfolio), not a partition of the search space; terminated runs cannot be resumed."
+}

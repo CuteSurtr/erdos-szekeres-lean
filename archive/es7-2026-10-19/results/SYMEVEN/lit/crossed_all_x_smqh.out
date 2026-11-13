@@ -1,0 +1,13 @@
+labels LLLLLLLRLRRRRRRR s [1, 2, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 2, 1]
+crossed pairs (right-labelled i < left-labelled j): [(8, 9, 4, 4, 2)]
+x=0 k=6: (a) ok=True, (b) violations=[], half-turn-compatible=True, size=16, 2^(k-2)=16
+x=1 k=8: (a) ok=True, (b) violations=[], half-turn-compatible=True, size=64, 2^(k-2)=64
+x=2 k=10: (a) ok=True, (b) violations=[], half-turn-compatible=True, size=256, 2^(k-2)=256
+x=3 k=12: (a) ok=True, (b) violations=[], half-turn-compatible=True, size=1024, 2^(k-2)=1024
+x=4 k=14: (a) ok=True, (b) violations=[], half-turn-compatible=True, size=4096, 2^(k-2)=4096
+x=5 k=16: (a) ok=True, (b) violations=[], half-turn-compatible=True, size=16384, 2^(k-2)=16384
+x=6 k=18: (a) ok=True, (b) violations=[], half-turn-compatible=True, size=65536, 2^(k-2)=65536
+x=7 k=20: (a) ok=True, (b) violations=[], half-turn-compatible=True, size=262144, 2^(k-2)=262144
+x=8 k=22: (a) ok=True, (b) violations=[], half-turn-compatible=True, size=1048576, 2^(k-2)=1048576
+x=9 k=24: (a) ok=True, (b) violations=[], half-turn-compatible=True, size=4194304, 2^(k-2)=4194304
+x=10 k=26: (a) ok=True, (b) violations=[], half-turn-compatible=True, size=16777216, 2^(k-2)=16777216

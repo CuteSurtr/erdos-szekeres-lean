@@ -1,0 +1,441 @@
+{
+ "NMAX": 600,
+ "SMAX": 60,
+ "minimal_set_failures": [],
+ "cor3_failures": [],
+ "theorems_used_by_minimal_set": {
+  "T_C3": [
+   "C12",
+   "C15",
+   "C18",
+   "C21",
+   "C24",
+   "C27",
+   "C3",
+   "C30",
+   "C33",
+   "C36",
+   "C39",
+   "C42",
+   "C45",
+   "C48",
+   "C51",
+   "C54",
+   "C57",
+   "C6",
+   "C60",
+   "C9"
+  ],
+  "T_REG": [
+   "C10",
+   "C11",
+   "C12",
+   "C13",
+   "C14",
+   "C15",
+   "C16",
+   "C17",
+   "C18",
+   "C19",
+   "C20",
+   "C21",
+   "C22",
+   "C23",
+   "C24",
+   "C25",
+   "C26",
+   "C27",
+   "C28",
+   "C29",
+   "C30",
+   "C31",
+   "C32",
+   "C33",
+   "C34",
+   "C35",
+   "C36",
+   "C37",
+   "C38",
+   "C39",
+   "C40",
+   "C41",
+   "C42",
+   "C43",
+   "C44",
+   "C45",
+   "C46",
+   "C47",
+   "C48",
+   "C49",
+   "C50",
+   "C51",
+   "C52",
+   "C53",
+   "C54",
+   "C55",
+   "C56",
+   "C57",
+   "C58",
+   "C59",
+   "C60",
+   "C7",
+   "C8",
+   "C9"
+  ],
+  "T_M33": [
+   "mirror b=1",
+   "mirror b=2"
+  ],
+  "T_C2": [
+   "C10",
+   "C12",
+   "C14",
+   "C16",
+   "C18",
+   "C2",
+   "C20",
+   "C22",
+   "C24",
+   "C26",
+   "C28",
+   "C30",
+   "C32",
+   "C34",
+   "C36",
+   "C38",
+   "C4",
+   "C40",
+   "C42",
+   "C44",
+   "C46",
+   "C48",
+   "C50",
+   "C52",
+   "C54",
+   "C56",
+   "C58",
+   "C6",
+   "C60",
+   "C8"
+  ],
+  "T_M34": [
+   "mirror b=0"
+  ],
+  "T_C5": [
+   "C10",
+   "C15",
+   "C20",
+   "C25",
+   "C30",
+   "C35",
+   "C40",
+   "C45",
+   "C5",
+   "C50",
+   "C55",
+   "C60"
+  ]
+ },
+ "dropping_each_minimal_theorem_first_uncovered": {
+  "T_C2": [
+   "C2",
+   34,
+   17,
+   0
+  ],
+  "T_C3": [
+   "C3",
+   33,
+   11,
+   0
+  ],
+  "T_C5": [
+   "C5",
+   35,
+   7,
+   0
+  ],
+  "T_M33": [
+   "mirror",
+   33,
+   16,
+   1
+  ],
+  "T_M34": [
+   "mirror",
+   34,
+   17,
+   0
+  ],
+  "T_REG": [
+   "C11",
+   33,
+   3,
+   0
+  ]
+ },
+ "redundancy": {
+  "C4 covered without T_C4 and without T_C3": true,
+  "C6 covered without T_C4": true,
+  "C8 covered without T_C4 and without T_C3": true,
+  "C12 covered without T_C4": true
+ },
+ "table_N_with_all_theorems": {
+  "C2": [
+   32,
+   16,
+   0
+  ],
+  "C3": [
+   31,
+   10,
+   1
+  ],
+  "C4": [
+   28,
+   7,
+   0
+  ],
+  "C5": [
+   31,
+   6,
+   1
+  ],
+  "C6": [
+   30,
+   5,
+   0
+  ],
+  "C7": [
+   1,
+   0,
+   1
+  ],
+  "C8": [
+   0,
+   0,
+   0
+  ],
+  "mirror": [
+   32,
+   15,
+   2
+  ]
+ },
+ "table_matches_claim": {
+  "C2": true,
+  "C3": true,
+  "C4": true,
+  "C5": true,
+  "C6": true,
+  "mirror": true
+ },
+ "Cs_s_ge_7_all_N_equal_1": true,
+ "table_without_T_C4": {
+  "C2": [
+   32,
+   16,
+   0
+  ],
+  "C4": [
+   32,
+   8,
+   0
+  ],
+  "C6": [
+   30,
+   5,
+   0
+  ]
+ },
+ "table_without_T_C2": {
+  "C2": [
+   600,
+   300,
+   0
+  ],
+  "C4": [
+   28,
+   7,
+   0
+  ],
+  "C6": [
+   30,
+   5,
+   0
+  ]
+ },
+ "possible_sizes_28_40": {
+  "C2": [
+   28,
+   30,
+   32,
+   34,
+   36,
+   38,
+   40
+  ],
+  "C3": [
+   28,
+   30,
+   31,
+   33,
+   34,
+   36,
+   37,
+   39,
+   40
+  ],
+  "C4": [
+   28,
+   32,
+   36,
+   40
+  ],
+  "C5": [
+   30,
+   31,
+   35,
+   36,
+   40
+  ],
+  "C6": [
+   30,
+   36
+  ],
+  "mirror": [
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40
+  ]
+ },
+ "per_size_33_40": {
+  "33": [
+   "C3(k=11,centre=0): T_C3",
+   "C11(k=3,centre=0): T_REG",
+   "C33(k=1,centre=0): T_C3+T_REG",
+   "mirror(pairs=16,axis=1): T_M33"
+  ],
+  "34": [
+   "C2(k=17,centre=0): T_C2",
+   "C3(k=11,centre=1): T_C3",
+   "C11(k=3,centre=1): T_REG",
+   "C17(k=2,centre=0): T_REG",
+   "C33(k=1,centre=1): T_C3+T_REG",
+   "C34(k=1,centre=0): T_C2+T_REG",
+   "mirror(pairs=17,axis=0): T_M34",
+   "mirror(pairs=16,axis=2): T_M33"
+  ],
+  "35": [
+   "C5(k=7,centre=0): T_C5",
+   "C7(k=5,centre=0): T_REG",
+   "C17(k=2,centre=1): T_REG",
+   "C35(k=1,centre=0): T_C5+T_REG",
+   "mirror(pairs=17,axis=1): T_M33"
+  ],
+  "36": [
+   "C2(k=18,centre=0): T_C2",
+   "C3(k=12,centre=0): T_C3",
+   "C4(k=9,centre=0): T_C2",
+   "C5(k=7,centre=1): T_C5",
+   "C6(k=6,centre=0): T_C2+T_C3",
+   "C7(k=5,centre=1): T_REG",
+   "C9(k=4,centre=0): T_C3+T_REG",
+   "C12(k=3,centre=0): T_C2+T_C3+T_REG",
+   "C18(k=2,centre=0): T_C2+T_C3+T_REG",
+   "C35(k=1,centre=1): T_C5+T_REG",
+   "C36(k=1,centre=0): T_C2+T_C3+T_REG",
+   "mirror(pairs=18,axis=0): T_M34",
+   "mirror(pairs=17,axis=2): T_M33"
+  ],
+  "37": [
+   "C3(k=12,centre=1): T_C3",
+   "C9(k=4,centre=1): T_C3+T_REG",
+   "C37(k=1,centre=0): T_REG",
+   "mirror(pairs=18,axis=1): T_M33"
+  ],
+  "38": [
+   "C2(k=19,centre=0): T_C2",
+   "C19(k=2,centre=0): T_REG",
+   "C37(k=1,centre=1): T_REG",
+   "C38(k=1,centre=0): T_C2+T_REG",
+   "mirror(pairs=19,axis=0): T_M34",
+   "mirror(pairs=18,axis=2): T_M33"
+  ],
+  "39": [
+   "C3(k=13,centre=0): T_C3",
+   "C13(k=3,centre=0): T_REG",
+   "C19(k=2,centre=1): T_REG",
+   "C39(k=1,centre=0): T_C3+T_REG",
+   "mirror(pairs=19,axis=1): T_M33"
+  ],
+  "40": [
+   "C2(k=20,centre=0): T_C2",
+   "C3(k=13,centre=1): T_C3",
+   "C4(k=10,centre=0): T_C2",
+   "C5(k=8,centre=0): T_C5",
+   "C8(k=5,centre=0): T_C2+T_REG",
+   "C10(k=4,centre=0): T_C2+T_C5+T_REG",
+   "C13(k=3,centre=1): T_REG",
+   "C20(k=2,centre=0): T_C2+T_C5+T_REG",
+   "C39(k=1,centre=1): T_C3+T_REG",
+   "C40(k=1,centre=0): T_C2+T_C5+T_REG",
+   "mirror(pairs=20,axis=0): T_M34",
+   "mirror(pairs=19,axis=2): T_M33"
+  ]
+ },
+ "non_elementary_theorems_touched_per_size": {
+  "33": [
+   "T_C3",
+   "T_M33"
+  ],
+  "34": [
+   "T_C2",
+   "T_C3",
+   "T_M33",
+   "T_M34"
+  ],
+  "35": [
+   "T_C5",
+   "T_M33"
+  ],
+  "36": [
+   "T_C2",
+   "T_C3",
+   "T_C5",
+   "T_M33",
+   "T_M34"
+  ],
+  "37": [
+   "T_C3",
+   "T_M33"
+  ],
+  "38": [
+   "T_C2",
+   "T_M33",
+   "T_M34"
+  ],
+  "39": [
+   "T_C3",
+   "T_M33"
+  ],
+  "40": [
+   "T_C2",
+   "T_C3",
+   "T_C5",
+   "T_M33",
+   "T_M34"
+  ]
+ },
+ "ALL_OK": true
+}

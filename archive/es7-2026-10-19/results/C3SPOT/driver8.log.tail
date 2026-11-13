@@ -1,0 +1,60 @@
+{"node": "0s0-2s1_5_7s0-10s0__1s0-3s0-4s1-6s0-7s0-8s0", "status": "UNSATISFIABLE", "solve_s": 4.1, "certified": true}
+{"root": "0s0-2s1_5_7s0-10s0__1s0-3s0-4s1-6s0-7s0-8s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0-2s1_5_7s0-10s0__1s0-3s0-4s1-6s0-7s0-8s0 end 2026-10-28T20:42:16Z
+=== UNIT 0s0-5s0_8__1s1-2s0-3s1-4s0-6s0-7s1 start 2026-10-28T20:42:16Z expect a7266276bd3c69593f9864d9fab36bcc751c0e1e4ccebdbc35ca09951d17e384 from C3W4/O00/out.jsonl
+{"node": "0s0-5s0_8__1s1-2s0-3s1-4s0-6s0-7s1", "status": "UNSATISFIABLE", "solve_s": 34.9, "certified": true}
+{"root": "0s0-5s0_8__1s1-2s0-3s1-4s0-6s0-7s1", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0-5s0_8__1s1-2s0-3s1-4s0-6s0-7s1 end 2026-10-28T20:43:05Z
+=== UNIT 0s0-2s1_1s0-5s1_7s0-8s0 start 2026-10-28T20:43:05Z expect 45a99682b4e10731ac9b209824c9323288307d4f07d2d0f7658993c652bbd20d from C3W3/C15/out.jsonl
+{"node": "0s0-2s1_1s0-5s1_7s0-8s0", "status": "UNSATISFIABLE", "solve_s": 8.3, "certified": true}
+{"root": "0s0-2s1_1s0-5s1_7s0-8s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0-2s1_1s0-5s1_7s0-8s0 end 2026-10-28T20:43:20Z
+=== UNIT 0s0-1s1_2s0-9s0_3s0-4s0 start 2026-10-28T20:43:20Z expect e0af7026f5837bb67ebecce0cc838c5e6746f90de16d622cf7d627086b2fcb89 from C3WAVE1/C01/out.jsonl
+{"node": "0s0-1s1_2s0-9s0_3s0-4s0", "status": "UNSATISFIABLE", "solve_s": 11.3, "certified": true}
+{"root": "0s0-1s1_2s0-9s0_3s0-4s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0-1s1_2s0-9s0_3s0-4s0 end 2026-10-28T20:43:40Z
+=== UNIT 0s0_2__1s0-3s1-4s1-5s1-6s0-7s1-8s1-9s0-10s1 start 2026-10-28T20:43:40Z expect fa92c01cda4bafa1627d851eb6c111a9e7c8d957d15b2316b37490536aa951f9 from C3W7/LOCAL2/out.jsonl
+{"node": "0s0_2__1s0-3s1-4s1-5s1-6s0-7s1-8s1-9s0-10s1", "status": "UNSATISFIABLE", "solve_s": 650.5, "certified": true}
+{"root": "0s0_2__1s0-3s1-4s1-5s1-6s0-7s1-8s1-9s0-10s1", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0_2__1s0-3s1-4s1-5s1-6s0-7s1-8s1-9s0-10s1 end 2026-10-28T20:55:21Z
+=== UNIT 0s0-1s1_6_3_7s0-10s1 start 2026-10-28T20:55:22Z expect 00eefb02fc8c43c3dfb8cb1e18ae2732f9b0477a9a75ac856c06271244645402 from C3WAVE1/C22/out.jsonl
+{"node": "0s0-1s1_6_3_7s0-10s1", "status": "UNSATISFIABLE", "solve_s": 31.5, "certified": true}
+{"root": "0s0-1s1_6_3_7s0-10s1", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0-1s1_6_3_7s0-10s1 end 2026-10-28T20:56:05Z
+=== UNIT 0s0-1s1_4s1-7s0_6_3s0-9s1 start 2026-10-28T20:56:06Z expect 46dab098abee264958d0b44386e6a4a7c50755e634db874a3339106b1f2dfcec from C3WAVE2/K13/out.jsonl
+{"node": "0s0-1s1_4s1-7s0_6_3s0-9s1", "status": "UNSATISFIABLE", "solve_s": 1.4, "certified": true}
+{"root": "0s0-1s1_4s1-7s0_6_3s0-9s1", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0-1s1_4s1-7s0_6_3s0-9s1 end 2026-10-28T20:56:11Z
+=== UNIT 0s0-1s1_2s0-6s1_4_5s0-9s0 start 2026-10-28T20:56:11Z expect a5c77b74c9dbbc5554b0c7f8ae59525af04366e67b4c3875114a19837a68aba9 from C3WAVE1/C20/out.jsonl
+{"node": "0s0-1s1_2s0-6s1_4_5s0-9s0", "status": "UNSATISFIABLE", "solve_s": 1.6, "certified": true}
+{"root": "0s0-1s1_2s0-6s1_4_5s0-9s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0-1s1_2s0-6s1_4_5s0-9s0 end 2026-10-28T20:56:17Z
+=== UNIT 0s0_3__1s0-2s1-4s1-5s0-6s0-7s0-8s1-9s1-10s1 start 2026-10-28T20:56:18Z expect 164ee4453d6a9d42774b7858bb8ca82366dccf06ccfee42d438fb2b6c6b086a1 from C3W7/LOCAL/out.jsonl
+{"node": "0s0_3__1s0-2s1-4s1-5s0-6s0-7s0-8s1-9s1-10s1", "status": "UNSATISFIABLE", "solve_s": 688.6, "certified": true}
+{"root": "0s0_3__1s0-2s1-4s1-5s0-6s0-7s0-8s1-9s1-10s1", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0_3__1s0-2s1-4s1-5s0-6s0-7s0-8s1-9s1-10s1 end 2026-10-28T21:08:36Z
+=== UNIT 0s0-1s1_4s1-6s0_2_8s1-9s1 start 2026-10-28T21:08:37Z expect 3618c4dfe54678cca387f282ffb353db233d7199d13560a5d9a0f6b95dd402b4 from C3WAVE1/C17/out.jsonl
+{"node": "0s0-1s1_4s1-6s0_2_8s1-9s1", "status": "UNSATISFIABLE", "solve_s": 3.6, "certified": true}
+{"root": "0s0-1s1_4s1-6s0_2_8s1-9s1", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0-1s1_4s1-6s0_2_8s1-9s1 end 2026-10-28T21:08:46Z
+=== UNIT 0s0-1s1_6s1-9s0_7_4s1-10s1 start 2026-10-28T21:08:46Z expect 0a3149b6f237c222cc31be824b0fd3d9f2abca5970a62b83e6032c7cdfa28a91 from C3WAVE1/C13/out.jsonl
+{"node": "0s0-1s1_6s1-9s0_7_4s1-10s1", "status": "UNSATISFIABLE", "solve_s": 3.1, "certified": true}
+{"root": "0s0-1s1_6s1-9s0_7_4s1-10s1", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0-1s1_6s1-9s0_7_4s1-10s1 end 2026-10-28T21:08:54Z
+=== UNIT 0s0-2s1_4s1-6s0_7_1s0-10s0 start 2026-10-28T21:08:54Z expect 8e5ef290e87dedf1bd6f49ef54bc23ac22031f2474f7d4a90dcfac7a48d1b0de from C3W3/C7/out.jsonl
+{"node": "0s0-2s1_4s1-6s0_7_1s0-10s0", "status": "UNSATISFIABLE", "solve_s": 2.1, "certified": true}
+{"root": "0s0-2s1_4s1-6s0_7_1s0-10s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0-2s1_4s1-6s0_7_1s0-10s0 end 2026-10-28T21:09:02Z
+=== UNIT 0s0-2s1_4s1-8s0_6_9s1-10s0 start 2026-10-28T21:09:02Z expect e3a286d97281c423875f16fbb5a1eebf1d2f5a4664b42da795047aee113ccc19 from C3W3/C10/out.jsonl
+{"node": "0s0-2s1_4s1-8s0_6_9s1-10s0", "status": "UNSATISFIABLE", "solve_s": 3.4, "certified": true}
+{"root": "0s0-2s1_4s1-8s0_6_9s1-10s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0-2s1_4s1-8s0_6_9s1-10s0 end 2026-10-28T21:09:11Z
+=== UNIT 0s0_1s0-9s1_4_3s1-6s0 start 2026-10-28T21:09:11Z expect 838c4c02508607d20649a79c90d7c2bda3428c0f9458ec0c55c647c115e301f3 from C3W3/B8/out.jsonl
+{"node": "0s0_1s0-9s1_4_3s1-6s0", "status": "UNSATISFIABLE", "solve_s": 28.5, "certified": true}
+{"root": "0s0_1s0-9s1_4_3s1-6s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0_1s0-9s1_4_3s1-6s0 end 2026-10-28T21:09:50Z
+=== UNIT 0s0_1s1-5s1__2s0-3s1-4s1-6s0-7s1-8s0 start 2026-10-28T21:09:50Z expect 803d9113cf857dda4299a9798fbf335ce9cb4dc4c320930947270c8dbf034986 from C3W6/P21/out.jsonl
+{"node": "0s0_1s1-5s1__2s0-3s1-4s1-6s0-7s1-8s0", "status": "UNSATISFIABLE", "solve_s": 102.6, "certified": true}
+{"root": "0s0_1s1-5s1__2s0-3s1-4s1-6s0-7s1-8s0", "open_frontier": 0, "unsplittable": 0, "unsplittable_nodes": []}
+=== UNIT 0s0_1s1-5s1__2s0-3s1-4s1-6s0-7s1-8s0 end 2026-10-28T21:11:49Z
+=== END, lane 8 exits 2026-10-28T21:11:49Z

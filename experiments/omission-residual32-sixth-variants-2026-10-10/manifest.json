@@ -1,0 +1,22 @@
+{
+  "scope": "Three generic Lean template modules plus Python-only redundant-map diagnostics",
+  "kernel_check_sha256": "e29d3c6a1bf31dca987f979a805355149c8a038a262dd7461329799b323aa82b",
+  "generic_lean_modules": 3,
+  "audited_theorems": 4,
+  "literal_variants_lean_checked": false,
+  "files": {
+    "README.md": "168b76a414a0d8245a8229a981c80b3f87c3a6444d7786782dba1c380e164221",
+    "SixthTemplate.lean": "676880f8f670f163060ecb109fa453c7e578da9c39afa5914488eee51796e239",
+    "SixthTemplateCheck.lean": "d75f2f8d0de868c3df65887255b49d8c120e403c01127665beaca963de36f5b0",
+    "SixthTemplateGeometry.lean": "c57b4ca13d4d971924b90a8d357d2ecf737d166a7927f30ae7bf912787172027",
+    "axioms.txt": "5e7affe88439e73f7ac8123f7130e14c8e2a56e0ff331701ba45e5f246e4ec3b",
+    "check.py": "78a16e1b7ed7bd04a0f2c552a51639373d583b159f1497a6499530416ad70baf",
+    "check_lean.py": "9d7064834e96259fda464ea60a0ce89e08ee3fa7944385f4d833fa3a67e866a6",
+    "diagnostic-check.json": "63a931737324366ea03160d864334ef05b387653dcaf94c208c960728a8d02b6",
+    "discover.py": "08995705256b434410ec1c8f3eb0b262c122fd7b29f2855b80ebd0b09d92ac8b",
+    "generate.py": "fd89ab66b48655d7b3680aa887ced8e6656413c5de9f7c8228492d8cd800e98b",
+    "kernel-check.json": "e29d3c6a1bf31dca987f979a805355149c8a038a262dd7461329799b323aa82b",
+    "row-bindings.json": "121b272c2acb460d32f12028a24ae44ef11ca910eb717c5d6b0ab9472b42feb5",
+    "variants.json": "eeeeef72b1f35c8bd07588c8716b4cb18c68e7844c9891580583d762bb518f00"
+  }
+}

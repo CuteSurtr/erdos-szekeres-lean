@@ -1,0 +1,36 @@
+{
+  "scope": "Catalog support/demand equality and conditional arithmetic transfer only; no closed global bound",
+  "source": "experiments/omission-global-assembly-2026-10-10/Residual124Bridge.lean",
+  "source_sha256": "3daf429070fca703331d45667c2b6b57e9524a8923901916d1bdb7bfe552b9fd",
+  "olean_sha256": "a3c61656b2b10ab7c42cf80177e622038f665dd4525ff8a7177450e70c209b08",
+  "exit": 0,
+  "stdout": "'OmissionResidual124.catalog_matches' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OmissionResidual124.exclusion_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "axioms": {
+    "OmissionResidual124.catalog_matches": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OmissionResidual124.exclusion_transfer": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "inputs": {
+    ".cache/omission-residual124-linked/Residual124/Catalog.olean": "443c9389d514b9d53baca5581823f10443e4dd46b51581ab4e21da36a9e7b3d1",
+    ".cache/omission-lean-full/residual/Catalog.olean": "2e118ef392822f3543e9901180a3042c53489283d7ca28af39ac74a540b70a80",
+    ".cache/omission-global-assembly/ResidualBudgets.olean": "51b29d0fb69757b403b05f2be9ee097e67845a0a2ccf725acb1844912754dd0d",
+    ".cache/omission-global-assembly/ResidualReduction.olean": "5ef5c56906ed9f5da5ab543b43af284467a8f7e6714b8c91d3564a6f055c8301",
+    "lean-toolchain": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434",
+    "lake-manifest.json": "bc21802066bdf7c94b0eb1e7bd3d3389ae0d416c2ed69c6e5dae03e74945c8e7"
+  },
+  "command": "lake env lean -j 1 -M 2500 experiments/omission-global-assembly-2026-10-10/Residual124Bridge.lean -o .cache/omission-global-assembly/Residual124Bridge.olean",
+  "lean_path": [
+    ".cache/omission-global-assembly",
+    ".cache/omission-residual124-linked",
+    ".cache/omission-residual-blocks",
+    ".cache/omission-residual-geometry",
+    ".cache/omission-lean-full/residual"
+  ]
+}

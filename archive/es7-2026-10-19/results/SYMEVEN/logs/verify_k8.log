@@ -1,0 +1,13 @@
+file: k8_points.txt  k = 8  N = 64  max|coord| = 12500000000000
+symmetry: {'n': 64, 'distinct': True, 'centrally_symmetric': True, 'origin_absent': True}
+size == 2^(k-2): True
+distinct x-coordinates: True
+collinear triples: 0   (checked 41664 triples, 0.0s)
+(A) angular DP: largest convex subset = 7  (0.1s)
+    witness of size 7 independently in convex position (hull test): True
+    witness: [(-500000000000, -12500000000000), (100024181703, 100000001134), (100020727174, 100000001093), (100006909058, 99999999048), (347468, 84348), (-99975818297, -99999998865), (-299991363677, -2699999999869)]
+(B) cup+cap DP: largest convex subset = 7  (0.2s)
+counting DP: number of convex L-subsets, L=3..9: [41664, 345986, 1177512, 1792349, 1032956, 0, 0]  (0.2s)
+    count[3] == C(N,3): True
+(C) random subsets: 300 trials, mismatches A/B/brute = 0, brute maxima histogram {5: 37, 6: 85, 7: 178}  (3.6s)
+RESULT: PASS

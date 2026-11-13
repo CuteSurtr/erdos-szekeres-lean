@@ -1,0 +1,108 @@
+{
+  "checks": {
+    "R^5=I": true,
+    "I+R+phi R^3=0": true,
+    "I-R^4+R-R^2=-sqrt5 R^3": true,
+    "I+R^2+phi R=sqrt5 R": true,
+    "B=A sqrt5": true,
+    "C=A phi": true,
+    "eight_actual_normalized_triangle_rows_sum_to_zero": true,
+    "P(a;b)=-sqrt5 det(a,b3)": true,
+    "P(b0;d)=-sqrt5 det(b0,d3)": true,
+    "Q=-sqrt5 det(a,d1)": true,
+    "det(b3,d1)=det(b0,d3)": true
+  },
+  "source": "../ROTREFINE20261104/m5_quadratic.md, fully GP-consistent source section",
+  "normalized_rows": [
+    {
+      "triangle": [
+        5,
+        35,
+        39
+      ],
+      "weight_Qsqrt5": [
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "triangle": [
+        5,
+        36,
+        37
+      ],
+      "weight_Qsqrt5": [
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "triangle": [
+        5,
+        40,
+        45
+      ],
+      "weight_Qsqrt5": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "triangle": [
+        5,
+        41,
+        47
+      ],
+      "weight_Qsqrt5": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "triangle": [
+        35,
+        45,
+        49
+      ],
+      "weight_Qsqrt5": [
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "triangle": [
+        35,
+        46,
+        47
+      ],
+      "weight_Qsqrt5": [
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "triangle": [
+        5,
+        38,
+        46
+      ],
+      "weight_Qsqrt5": [
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "triangle": [
+        5,
+        43,
+        46
+      ],
+      "weight_Qsqrt5": [
+        "1/2",
+        "1/2"
+      ]
+    }
+  ],
+  "arithmetic": "fractions.Fraction pairs in Q(sqrt(5)); formal polynomials in 8 independent seed coordinates",
+  "scope": "Algebraic derivation only; source model binding and signs rely on previously retained exact campaign checks."
+}

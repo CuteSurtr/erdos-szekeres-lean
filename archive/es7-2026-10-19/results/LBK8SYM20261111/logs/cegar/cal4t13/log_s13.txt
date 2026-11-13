@@ -1,0 +1,511 @@
+00:29:40   s13_0: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 251317 chain clauses 660062 vars 45140, built in 3.2 s
+00:29:43   s13_1: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 228427 chain clauses 653221 vars 44638, built in 2.5 s
+00:29:44   s13_1: it 7 new best delta -4.621e-03; L1 point: 37 violated rows, float N8 8188
+00:29:45   s13_1: it 9 new best delta -3.958e-03; L1 point: 35 violated rows, float N8 8182
+00:29:46   s13_1: it 22 new best delta -3.862e-03; L1 point: 26 violated rows, float N8 7856
+00:29:47   s13_1: it 25 new best delta -2.887e-03; L1 point: 37 violated rows, float N8 14188
+00:29:47   s13_1: it 27 new best delta -2.049e-03; L1 point: 25 violated rows, float N8 7972
+00:29:47   s13_1: it 32 new best delta -2.042e-03; L1 point: 21 violated rows, float N8 4870
+00:29:48   s13_1: it 34 new best delta -2.039e-03; L1 point: 25 violated rows, float N8 9616
+00:29:48   s13_1: it 35 new best delta -1.831e-03; L1 point: 23 violated rows, float N8 7754
+00:29:48   s13_1: it 36 new best delta -1.521e-03; L1 point: 21 violated rows, float N8 4818
+00:29:48   s13_1: it 37 new best delta -1.520e-03; L1 point: 21 violated rows, float N8 4830
+00:29:48   s13_1: it 39 new best delta -1.438e-03; L1 point: 27 violated rows, float N8 9062
+00:29:49   s13_1: it 48 new best delta -1.437e-03; L1 point: 21 violated rows, float N8 7214
+00:29:50   s13_1: it 51 new best delta -1.437e-03; L1 point: 19 violated rows, float N8 7434
+00:29:50   s13_1: it 53 new best delta -1.434e-03; L1 point: 25 violated rows, float N8 8166
+00:29:53   s13_1: it 76 new best delta -1.433e-03; L1 point: 20 violated rows, float N8 12488
+00:29:53   s13_1: it 77 new best delta -1.430e-03; L1 point: 15 violated rows, float N8 12018
+00:29:55   s13_1: it 92 new best delta -1.429e-03; L1 point: 21 violated rows, float N8 14103
+00:29:55   s13_1: it 96 new best delta -1.427e-03; L1 point: 16 violated rows, float N8 5234
+00:29:56   s13_1: it 100 new best delta -1.424e-03; L1 point: 15 violated rows, float N8 8606
+00:29:56   s13_1: it 101 new best delta -1.424e-03; L1 point: 20 violated rows, float N8 9978
+00:29:56   s13_1: it 102 new best delta -1.424e-03; L1 point: 20 violated rows, float N8 10072
+00:29:56   s13_1: it 103 new best delta -1.312e-03; L1 point: 17 violated rows, float N8 9830
+00:30:16   s13_2: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 312757 chain clauses 658144 vars 45208, built in 2.7 s
+00:30:23   s13_2: it 62 new best delta -0.000e+00; L1 point: 6 violated rows, float N8 4248
+00:30:24   CAND delta 1.922e-02 float N8 0 N7 51692 -> cegar/cal4t13/cand_s13_2_67.json
+00:30:27   s13_3: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 296652 chain clauses 656659 vars 45124, built in 3.3 s
+00:30:31   s13_4: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 304012 chain clauses 652834 vars 44938, built in 3.2 s
+00:30:35   s13_5: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 230097 chain clauses 654098 vars 44872, built in 3.7 s
+00:30:35   s13_5: it 1 new best delta -1.465e-02; L1 point: 84 violated rows, float N8 23130
+00:30:38   s13_5: it 21 new best delta -1.198e-02; L1 point: 122 violated rows, float N8 96166
+00:30:38   s13_5: it 23 new best delta -1.192e-02; L1 point: 120 violated rows, float N8 97810
+00:30:38   s13_5: it 24 new best delta -1.149e-02; L1 point: 119 violated rows, float N8 91184
+00:30:38   s13_5: it 25 new best delta -1.144e-02; L1 point: 117 violated rows, float N8 82082
+00:30:39   s13_5: it 29 new best delta -1.144e-02; L1 point: 115 violated rows, float N8 79650
+00:30:39   s13_5: it 30 new best delta -1.119e-02; L1 point: 124 violated rows, float N8 90746
+00:30:39   s13_5: it 31 new best delta -8.961e-03; L1 point: 123 violated rows, float N8 91204
+00:30:40   s13_5: it 42 new best delta -8.944e-03; L1 point: 116 violated rows, float N8 80326
+00:30:40   s13_5: it 43 new best delta -8.944e-03; L1 point: 124 violated rows, float N8 62772
+00:30:41   s13_5: it 51 new best delta -8.684e-03; L1 point: 117 violated rows, float N8 44634
+00:30:42   s13_5: it 53 new best delta -8.677e-03; L1 point: 113 violated rows, float N8 103054
+00:30:43   s13_5: it 64 new best delta -8.322e-03; L1 point: 106 violated rows, float N8 53741
+00:30:43   s13_5: it 65 new best delta -8.273e-03; L1 point: 114 violated rows, float N8 68619
+00:30:44   s13_5: it 68 new best delta -8.194e-03; L1 point: 114 violated rows, float N8 88047
+00:30:44   s13_5: it 69 new best delta -7.130e-03; L1 point: 103 violated rows, float N8 58437
+00:30:44   s13_5: it 71 new best delta -7.130e-03; L1 point: 105 violated rows, float N8 55749
+00:30:44   s13_5: it 73 new best delta -6.888e-03; L1 point: 128 violated rows, float N8 141306
+00:30:50   s13_5: it 114 new best delta -6.884e-03; L1 point: 93 violated rows, float N8 78785
+00:31:08   s13_6: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 259505 chain clauses 661628 vars 45224, built in 3.3 s
+00:31:21   s13_6: it 103 new best delta -4.492e-02; L1 point: 22 violated rows, float N8 14162
+00:31:21   s13_6: it 107 new best delta -4.235e-02; L1 point: 19 violated rows, float N8 8970
+00:31:21   s13_6: it 109 new best delta -0.000e+00; L1 point: 19 violated rows, float N8 19564
+00:31:29   s13_6: it 174 new best delta 1.168e-15; L1 point: 18 violated rows, float N8 8226
+00:31:30   s13_6: it 178 new best delta 1.237e-15; L1 point: 27 violated rows, float N8 20568
+00:31:31   s13_6: it 189 new best delta 1.292e-15; L1 point: 19 violated rows, float N8 12308
+00:31:36   s13_6: it 231 new best delta 1.728e-15; L1 point: 24 violated rows, float N8 18720
+00:31:42   s13_7: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 227702 chain clauses 655100 vars 44876, built in 3.4 s
+00:31:46   s13_8: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 268689 chain clauses 656745 vars 45098, built in 3.5 s
+00:31:50   s13_9: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 218443 chain clauses 654344 vars 44672, built in 3.6 s
+00:31:50   s13_9: it 1 new best delta -1.723e-02; L1 point: 33 violated rows, float N8 19242
+00:31:51   s13_9: it 7 new best delta -4.283e-03; L1 point: 16 violated rows, float N8 9474
+00:31:51   s13_9: it 8 new best delta -4.277e-03; L1 point: 16 violated rows, float N8 9450
+00:31:52   s13_9: it 9 new best delta -4.147e-03; L1 point: 16 violated rows, float N8 8860
+00:31:52   s13_9: it 10 new best delta -0.000e+00; L1 point: 16 violated rows, float N8 15534
+00:32:23   s13_10: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 276048 chain clauses 656027 vars 45152, built in 3.4 s
+00:32:56   s13_11: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 250443 chain clauses 661870 vars 45188, built in 2.7 s
+00:33:15   s13_11: it 159 new best delta -4.595e-02; L1 point: 16 violated rows, float N8 22128
+00:33:16   s13_11: it 160 new best delta -4.594e-02; L1 point: 17 violated rows, float N8 22128
+00:33:16   s13_11: it 162 new best delta -2.943e-02; L1 point: 15 violated rows, float N8 51870
+00:33:16   s13_11: it 163 new best delta -2.550e-02; L1 point: 14 violated rows, float N8 52124
+00:33:16   s13_11: it 164 new best delta -2.517e-02; L1 point: 11 violated rows, float N8 21672
+00:33:22   s13_11: it 216 new best delta -1.310e-02; L1 point: 23 violated rows, float N8 23076
+00:33:23   s13_11: it 217 new best delta -3.604e-03; L1 point: 23 violated rows, float N8 23076
+00:33:23   s13_11: it 218 new best delta -8.186e-04; L1 point: 25 violated rows, float N8 52936
+00:33:23   s13_11: it 219 new best delta -5.429e-04; L1 point: 25 violated rows, float N8 53032
+00:33:23   s13_11: it 220 new best delta -5.230e-04; L1 point: 27 violated rows, float N8 55486
+00:33:23   s13_11: it 221 new best delta -5.229e-04; L1 point: 22 violated rows, float N8 52734
+00:33:29   s13_12: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 250523 chain clauses 655130 vars 44666, built in 2.6 s
+00:33:29   s13_12: it 2 new best delta -3.212e-02; L1 point: 42 violated rows, float N8 25288
+00:33:30   s13_12: it 3 new best delta -1.540e-02; L1 point: 37 violated rows, float N8 30928
+00:33:30   s13_12: it 4 new best delta -1.392e-02; L1 point: 35 violated rows, float N8 12334
+00:33:30   s13_12: it 6 new best delta -1.296e-02; L1 point: 32 violated rows, float N8 12374
+00:33:30   s13_12: it 7 new best delta -1.236e-02; L1 point: 24 violated rows, float N8 8910
+00:33:30   s13_12: it 8 new best delta -1.214e-02; L1 point: 24 violated rows, float N8 10542
+00:33:31   s13_12: it 11 new best delta -7.766e-03; L1 point: 27 violated rows, float N8 9404
+00:33:31   s13_12: it 12 new best delta -6.948e-03; L1 point: 16 violated rows, float N8 8694
+00:33:32   s13_12: it 25 new best delta -6.525e-03; L1 point: 18 violated rows, float N8 5154
+00:33:32   s13_12: it 26 new best delta -6.119e-03; L1 point: 27 violated rows, float N8 5566
+00:33:32   s13_12: it 27 new best delta -2.414e-03; L1 point: 29 violated rows, float N8 15484
+00:33:38   s13_12: it 77 new best delta -1.323e-03; L1 point: 12 violated rows, float N8 6194
+00:33:38   s13_12: it 79 new best delta -1.169e-03; L1 point: 20 violated rows, float N8 2986
+00:33:38   s13_12: it 80 new best delta -1.141e-03; L1 point: 20 violated rows, float N8 2180
+00:33:38   s13_12: it 81 new best delta -1.089e-03; L1 point: 19 violated rows, float N8 1522
+00:33:38   s13_12: it 82 new best delta -1.065e-03; L1 point: 18 violated rows, float N8 1040
+00:33:38   s13_12: it 83 new best delta -1.018e-03; L1 point: 13 violated rows, float N8 1258
+00:33:43   s13_12: it 129 new best delta -0.000e+00; L1 point: 31 violated rows, float N8 45970
+00:34:03   s13_13: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 236991 chain clauses 655704 vars 44862, built in 3.2 s
+00:34:07   s13_14: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 281055 chain clauses 651873 vars 44778, built in 3.8 s
+00:34:40   s13_15: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 291534 chain clauses 653470 vars 44794, built in 3.3 s
+00:34:43   s13_16: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 224814 chain clauses 661310 vars 45210, built in 2.6 s
+00:35:04   s13_16: it 154 new best delta 1.161e-13; L1 point: 43 violated rows, float N8 31457
+00:35:17   s13_17: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 249800 chain clauses 652211 vars 44672, built in 3.7 s
+00:35:21   s13_18: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 232917 chain clauses 655879 vars 45002, built in 3.6 s
+00:35:22   s13_18: it 5 new best delta -1.638e-02; L1 point: 59 violated rows, float N8 20437
+00:35:22   s13_18: it 6 new best delta -1.604e-02; L1 point: 83 violated rows, float N8 28671
+00:35:24   s13_18: it 18 new best delta -1.603e-02; L1 point: 80 violated rows, float N8 24271
+00:35:24   s13_18: it 20 new best delta -1.588e-02; L1 point: 66 violated rows, float N8 34929
+00:35:24   s13_18: it 21 new best delta -1.563e-02; L1 point: 54 violated rows, float N8 24636
+00:35:29   s13_18: it 64 new best delta -1.553e-02; L1 point: 61 violated rows, float N8 52946
+00:35:29   s13_18: it 65 new best delta -1.553e-02; L1 point: 70 violated rows, float N8 79638
+00:35:29   s13_18: it 66 new best delta -1.549e-02; L1 point: 64 violated rows, float N8 59034
+00:35:30   s13_18: it 67 new best delta -1.549e-02; L1 point: 78 violated rows, float N8 88744
+00:35:30   s13_18: it 69 new best delta -1.441e-02; L1 point: 56 violated rows, float N8 51859
+00:35:30   s13_18: it 70 new best delta -1.436e-02; L1 point: 55 violated rows, float N8 55057
+00:35:30   s13_18: it 71 new best delta -1.432e-02; L1 point: 56 violated rows, float N8 38897
+00:35:30   s13_18: it 72 new best delta -1.432e-02; L1 point: 48 violated rows, float N8 19229
+00:35:31   s13_18: it 80 new best delta -1.425e-02; L1 point: 74 violated rows, float N8 105037
+00:35:31   s13_18: it 81 new best delta -1.408e-02; L1 point: 70 violated rows, float N8 75658
+00:35:32   s13_18: it 84 new best delta -1.397e-02; L1 point: 69 violated rows, float N8 42606
+00:35:32   s13_18: it 85 new best delta -1.390e-02; L1 point: 72 violated rows, float N8 57197
+00:35:32   s13_18: it 86 new best delta -1.382e-02; L1 point: 70 violated rows, float N8 63925
+00:35:35   s13_18: it 107 new best delta -1.344e-02; L1 point: 74 violated rows, float N8 52576
+00:35:35   s13_18: it 108 new best delta -1.334e-02; L1 point: 71 violated rows, float N8 36488
+00:35:35   s13_18: it 110 new best delta -1.322e-02; L1 point: 70 violated rows, float N8 33402
+00:35:36   s13_18: it 115 new best delta -1.312e-02; L1 point: 62 violated rows, float N8 52388
+00:35:36   s13_18: it 119 new best delta -1.214e-02; L1 point: 77 violated rows, float N8 26609
+00:35:37   s13_18: it 121 new best delta -1.195e-02; L1 point: 71 violated rows, float N8 27191
+00:35:37   s13_18: it 122 new best delta -1.195e-02; L1 point: 55 violated rows, float N8 23782
+00:35:37   s13_18: it 124 new best delta -1.194e-02; L1 point: 66 violated rows, float N8 66499
+00:35:38   s13_18: it 129 new best delta -1.190e-02; L1 point: 56 violated rows, float N8 34481
+00:35:41   s13_18: it 152 new best delta -1.189e-02; L1 point: 64 violated rows, float N8 50486
+00:35:44   s13_18: it 182 new best delta -1.186e-02; L1 point: 56 violated rows, float N8 68809
+00:35:49   s13_18: it 221 new best delta -1.166e-02; L1 point: 63 violated rows, float N8 78652
+00:35:50   s13_18: it 227 new best delta -1.165e-02; L1 point: 78 violated rows, float N8 107597
+00:35:50   s13_18: it 228 new best delta -1.162e-02; L1 point: 54 violated rows, float N8 47310
+00:35:51   s13_18: it 235 new best delta -1.155e-02; L1 point: 62 violated rows, float N8 66178
+00:35:55   s13_19: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 317953 chain clauses 651478 vars 44714, built in 3.2 s
+00:35:57   s13_19: it 9 new best delta 4.096e-14; L1 point: 3 violated rows, float N8 2664
+00:35:57   CAND delta 1.358e-01 float N8 0 N7 54776 -> cegar/cal4t13/cand_s13_19_10.json
+00:36:01   s13_20: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 229904 chain clauses 653396 vars 44672, built in 3.3 s
+00:36:05   s13_20: it 32 new best delta -1.132e-04; L1 point: 38 violated rows, float N8 30784
+00:36:05   s13_20: it 33 new best delta -1.106e-04; L1 point: 37 violated rows, float N8 30784
+00:36:05   s13_20: it 34 new best delta -1.097e-04; L1 point: 33 violated rows, float N8 30306
+00:36:05   s13_20: it 35 new best delta -1.058e-04; L1 point: 29 violated rows, float N8 35090
+00:36:05   s13_20: it 36 new best delta -1.041e-04; L1 point: 28 violated rows, float N8 34632
+00:36:05   s13_20: it 37 new best delta -5.308e-05; L1 point: 27 violated rows, float N8 34632
+00:36:05   s13_20: it 38 new best delta -5.066e-05; L1 point: 24 violated rows, float N8 33986
+00:36:06   s13_20: it 39 new best delta -0.000e+00; L1 point: 26 violated rows, float N8 33986
+00:36:19   s13_20: it 150 new best delta 5.654e-12; L1 point: 21 violated rows, float N8 24101
+00:36:20   s13_20: it 152 new best delta 5.658e-12; L1 point: 20 violated rows, float N8 24101
+00:36:20   s13_20: it 153 new best delta 5.659e-12; L1 point: 20 violated rows, float N8 24169
+00:36:20   CAND delta 3.559e-09 float N8 164 N7 44059 -> cegar/cal4t13/cand_s13_20_154.json
+00:36:23   s13_21: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 277932 chain clauses 654887 vars 44886, built in 3.3 s
+00:36:27   s13_22: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 317902 chain clauses 651478 vars 44714, built in 3.1 s
+00:36:29   s13_22: it 14 new best delta -4.364e-02; L1 point: 28 violated rows, float N8 15218
+00:36:29   s13_22: it 15 new best delta -1.385e-02; L1 point: 22 violated rows, float N8 8496
+00:36:30   s13_22: it 16 new best delta -6.316e-03; L1 point: 22 violated rows, float N8 8300
+00:36:30   s13_22: it 17 new best delta -0.000e+00; L1 point: 15 violated rows, float N8 6268
+00:37:00   s13_23: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 217354 chain clauses 654344 vars 44672, built in 3.6 s
+00:37:02   s13_23: it 7 new best delta -2.062e-02; L1 point: 140 violated rows, float N8 63859
+00:37:02   s13_23: it 8 new best delta -2.036e-02; L1 point: 141 violated rows, float N8 83607
+00:37:03   s13_23: it 15 new best delta -1.746e-02; L1 point: 106 violated rows, float N8 29841
+00:37:04   s13_23: it 16 new best delta -1.738e-02; L1 point: 109 violated rows, float N8 46351
+00:37:04   s13_23: it 17 new best delta -1.699e-02; L1 point: 113 violated rows, float N8 52147
+00:37:04   s13_23: it 18 new best delta -1.692e-02; L1 point: 108 violated rows, float N8 56561
+00:37:04   s13_23: it 19 new best delta -1.689e-02; L1 point: 104 violated rows, float N8 50787
+00:37:04   s13_23: it 21 new best delta -1.682e-02; L1 point: 115 violated rows, float N8 103537
+00:37:05   s13_23: it 22 new best delta -1.682e-02; L1 point: 105 violated rows, float N8 58033
+00:37:05   s13_23: it 23 new best delta -1.670e-02; L1 point: 103 violated rows, float N8 52899
+00:37:05   s13_23: it 24 new best delta -1.659e-02; L1 point: 106 violated rows, float N8 46145
+00:37:06   s13_23: it 29 new best delta -1.650e-02; L1 point: 110 violated rows, float N8 71543
+00:37:06   s13_23: it 32 new best delta -1.631e-02; L1 point: 102 violated rows, float N8 38165
+00:37:06   s13_23: it 33 new best delta -1.627e-02; L1 point: 104 violated rows, float N8 39865
+00:37:07   s13_23: it 36 new best delta -1.622e-02; L1 point: 119 violated rows, float N8 27957
+00:37:07   s13_23: it 39 new best delta -1.621e-02; L1 point: 111 violated rows, float N8 45010
+00:37:15   s13_23: it 106 new best delta -1.377e-02; L1 point: 113 violated rows, float N8 235285
+00:37:19   s13_23: it 132 new best delta -1.340e-02; L1 point: 103 violated rows, float N8 94889
+00:37:19   s13_23: it 137 new best delta -1.336e-02; L1 point: 105 violated rows, float N8 110669
+00:37:19   s13_23: it 138 new best delta -1.299e-02; L1 point: 99 violated rows, float N8 147986
+00:37:21   s13_23: it 143 new best delta -1.178e-02; L1 point: 111 violated rows, float N8 34457
+00:37:21   s13_23: it 148 new best delta -1.121e-02; L1 point: 116 violated rows, float N8 59983
+00:37:22   s13_23: it 149 new best delta -1.115e-02; L1 point: 111 violated rows, float N8 58511
+00:37:34   s13_24: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 220784 chain clauses 654099 vars 44672, built in 3.5 s
+00:37:37   s13_24: it 15 new best delta -4.540e-02; L1 point: 57 violated rows, float N8 31480
+00:37:38   s13_24: it 22 new best delta -4.363e-02; L1 point: 64 violated rows, float N8 117188
+00:37:39   s13_24: it 25 new best delta -4.070e-02; L1 point: 64 violated rows, float N8 164325
+00:37:39   s13_24: it 26 new best delta -3.454e-02; L1 point: 57 violated rows, float N8 63803
+00:37:40   s13_24: it 33 new best delta -3.220e-02; L1 point: 52 violated rows, float N8 46045
+00:37:41   s13_24: it 38 new best delta -3.192e-02; L1 point: 56 violated rows, float N8 68102
+00:37:41   s13_24: it 40 new best delta -2.921e-02; L1 point: 47 violated rows, float N8 24135
+00:37:43   s13_24: it 53 new best delta -2.920e-02; L1 point: 48 violated rows, float N8 76534
+00:37:43   s13_24: it 57 new best delta -2.897e-02; L1 point: 46 violated rows, float N8 34257
+00:37:43   s13_24: it 58 new best delta -2.797e-02; L1 point: 42 violated rows, float N8 54667
+00:37:45   s13_24: it 67 new best delta -2.773e-02; L1 point: 42 violated rows, float N8 35158
+00:37:45   s13_24: it 68 new best delta -2.757e-02; L1 point: 51 violated rows, float N8 47403
+00:37:45   s13_24: it 70 new best delta -2.633e-02; L1 point: 51 violated rows, float N8 37031
+00:37:45   s13_24: it 71 new best delta -2.411e-02; L1 point: 42 violated rows, float N8 46429
+00:37:46   s13_24: it 72 new best delta -2.361e-02; L1 point: 42 violated rows, float N8 48345
+00:37:46   s13_24: it 73 new best delta -2.141e-02; L1 point: 39 violated rows, float N8 48983
+00:37:46   s13_24: it 74 new best delta -2.141e-02; L1 point: 42 violated rows, float N8 44561
+00:38:04   s13_24: it 199 new best delta -2.100e-02; L1 point: 37 violated rows, float N8 10853
+00:38:08   s13_25: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 234867 chain clauses 652946 vars 44638, built in 3.5 s
+00:38:09   s13_25: it 4 new best delta -2.262e-02; L1 point: 25 violated rows, float N8 18496
+00:38:11   s13_25: it 15 new best delta -2.226e-02; L1 point: 25 violated rows, float N8 4794
+00:38:11   s13_25: it 17 new best delta -2.201e-02; L1 point: 26 violated rows, float N8 7976
+00:38:11   s13_25: it 18 new best delta -7.549e-03; L1 point: 32 violated rows, float N8 21050
+00:38:12   s13_25: it 24 new best delta -4.492e-03; L1 point: 21 violated rows, float N8 9922
+00:38:12   s13_25: it 25 new best delta -5.350e-04; L1 point: 20 violated rows, float N8 13532
+00:38:13   s13_25: it 26 new best delta -3.320e-04; L1 point: 17 violated rows, float N8 9794
+00:38:13   s13_25: it 27 new best delta -0.000e+00; L1 point: 15 violated rows, float N8 21808
+00:38:42   s13_26: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 216679 chain clauses 661775 vars 45210, built in 3.2 s
+00:38:43   s13_26: it 9 new best delta -9.678e-03; L1 point: 10 violated rows, float N8 10040
+00:38:44   s13_26: it 17 new best delta -8.942e-04; L1 point: 19 violated rows, float N8 21948
+00:38:44   s13_26: it 18 new best delta -0.000e+00; L1 point: 21 violated rows, float N8 12760
+00:39:15   s13_27: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 223295 chain clauses 661385 vars 45210, built in 3.2 s
+00:39:19   CAND delta 1.179e-02 float N8 0 N7 54536 -> cegar/cal4t13/cand_s13_27_30.json
+00:39:22   s13_28: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 232031 chain clauses 654525 vars 44702, built in 3.5 s
+00:39:26   s13_29: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 290952 chain clauses 658961 vars 45208, built in 2.9 s
+00:39:35   s13_29: it 63 new best delta -0.000e+00; L1 point: 3 violated rows, float N8 4948
+00:39:35   CAND delta 1.959e-05 float N8 0 N7 52300 -> cegar/cal4t13/cand_s13_29_65.json
+00:39:39   s13_30: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 221487 chain clauses 654099 vars 44672, built in 3.4 s
+00:39:47   s13_30: it 58 new best delta -2.611e-02; L1 point: 72 violated rows, float N8 79983
+00:39:47   s13_30: it 59 new best delta -2.267e-02; L1 point: 68 violated rows, float N8 76903
+00:39:48   s13_30: it 60 new best delta -2.195e-02; L1 point: 59 violated rows, float N8 34825
+00:39:48   s13_30: it 61 new best delta -1.867e-02; L1 point: 76 violated rows, float N8 54358
+00:39:48   s13_30: it 62 new best delta -1.638e-02; L1 point: 71 violated rows, float N8 65017
+00:39:50   s13_30: it 77 new best delta -1.622e-02; L1 point: 43 violated rows, float N8 9167
+00:39:50   s13_30: it 78 new best delta -8.593e-03; L1 point: 33 violated rows, float N8 14352
+00:39:50   s13_30: it 79 new best delta -4.835e-03; L1 point: 30 violated rows, float N8 7706
+00:39:51   s13_30: it 80 new best delta -3.445e-03; L1 point: 28 violated rows, float N8 22096
+00:39:51   s13_30: it 83 new best delta -2.515e-03; L1 point: 21 violated rows, float N8 18334
+00:39:51   s13_30: it 85 new best delta -2.335e-03; L1 point: 23 violated rows, float N8 14170
+00:39:52   s13_30: it 87 new best delta -1.730e-03; L1 point: 17 violated rows, float N8 4658
+00:39:52   s13_30: it 89 new best delta -1.730e-03; L1 point: 23 violated rows, float N8 5978
+00:39:52   s13_30: it 90 new best delta -8.810e-04; L1 point: 22 violated rows, float N8 5054
+00:39:52   s13_30: it 91 new best delta -8.287e-05; L1 point: 19 violated rows, float N8 5275
+00:39:52   s13_30: it 92 new best delta -6.026e-05; L1 point: 21 violated rows, float N8 5281
+00:39:52   s13_30: it 93 new best delta -0.000e+00; L1 point: 23 violated rows, float N8 3024
+00:40:11   s13_31: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 226276 chain clauses 661190 vars 45210, built in 2.5 s
+00:40:30   s13_31: it 149 new best delta -4.818e-02; L1 point: 48 violated rows, float N8 6810
+00:40:30   s13_31: it 155 new best delta -3.965e-02; L1 point: 58 violated rows, float N8 7336
+00:40:31   s13_31: it 164 new best delta -3.471e-02; L1 point: 50 violated rows, float N8 21090
+00:40:32   s13_31: it 166 new best delta -3.317e-02; L1 point: 47 violated rows, float N8 20016
+00:40:32   s13_31: it 170 new best delta -1.677e-02; L1 point: 30 violated rows, float N8 5686
+00:40:32   s13_31: it 171 new best delta -4.183e-03; L1 point: 26 violated rows, float N8 3132
+00:40:32   s13_31: it 172 new best delta -0.000e+00; L1 point: 22 violated rows, float N8 5128
+00:40:44   s13_32: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 236552 chain clauses 655309 vars 44658, built in 2.6 s
+00:40:45   s13_32: it 4 new best delta -2.138e-02; L1 point: 29 violated rows, float N8 14790
+00:40:45   s13_32: it 5 new best delta -1.101e-02; L1 point: 26 violated rows, float N8 7532
+00:40:45   s13_32: it 6 new best delta -1.098e-02; L1 point: 28 violated rows, float N8 25432
+00:40:45   s13_32: it 7 new best delta -4.585e-03; L1 point: 32 violated rows, float N8 11108
+00:40:45   s13_32: it 8 new best delta -4.513e-03; L1 point: 31 violated rows, float N8 11122
+00:40:45   s13_32: it 9 new best delta -4.462e-03; L1 point: 33 violated rows, float N8 10974
+00:40:46   s13_32: it 10 new best delta -4.276e-03; L1 point: 26 violated rows, float N8 10674
+00:40:46   s13_32: it 11 new best delta -4.222e-03; L1 point: 21 violated rows, float N8 8638
+00:40:46   s13_32: it 12 new best delta -1.767e-03; L1 point: 20 violated rows, float N8 4896
+00:40:46   s13_32: it 13 new best delta -1.148e-03; L1 point: 19 violated rows, float N8 11194
+00:40:46   s13_32: it 14 new best delta -1.112e-03; L1 point: 17 violated rows, float N8 11752
+00:40:46   s13_32: it 15 new best delta -0.000e+00; L1 point: 12 violated rows, float N8 12746
+00:41:17   s13_33: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 302694 chain clauses 657287 vars 45196, built in 2.8 s
+00:41:21   s13_33: it 26 new best delta -2.306e-02; L1 point: 24 violated rows, float N8 6842
+00:41:21   s13_33: it 27 new best delta -3.376e-03; L1 point: 24 violated rows, float N8 3902
+00:41:21   s13_33: it 28 new best delta -5.779e-04; L1 point: 17 violated rows, float N8 3776
+00:41:21   s13_33: it 29 new best delta -0.000e+00; L1 point: 14 violated rows, float N8 3416
+00:41:46   CAND delta 1.870e-06 float N8 0 N7 53392 -> cegar/cal4t13/cand_s13_33_230.json
+00:41:49   s13_34: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 282579 chain clauses 651614 vars 44642, built in 3.1 s
+00:41:50   s13_34: it 1 new best delta -1.478e-02; L1 point: 34 violated rows, float N8 13512
+00:41:50   s13_34: it 3 new best delta -1.188e-02; L1 point: 37 violated rows, float N8 12392
+00:41:50   s13_34: it 4 new best delta -1.188e-02; L1 point: 35 violated rows, float N8 13796
+00:41:51   s13_34: it 11 new best delta -1.172e-02; L1 point: 25 violated rows, float N8 10316
+00:41:51   s13_34: it 12 new best delta -1.002e-02; L1 point: 27 violated rows, float N8 8372
+00:41:51   s13_34: it 14 new best delta -2.324e-03; L1 point: 25 violated rows, float N8 9786
+00:41:52   s13_34: it 16 new best delta -2.215e-03; L1 point: 12 violated rows, float N8 4658
+00:41:52   s13_34: it 18 new best delta -2.157e-03; L1 point: 22 violated rows, float N8 3480
+00:41:52   s13_34: it 20 new best delta -1.304e-03; L1 point: 22 violated rows, float N8 4260
+00:41:52   s13_34: it 21 new best delta -1.129e-03; L1 point: 16 violated rows, float N8 4228
+00:41:53   s13_34: it 23 new best delta -0.000e+00; L1 point: 21 violated rows, float N8 8942
+00:42:23   s13_35: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 288165 chain clauses 655669 vars 45120, built in 3.4 s
+00:42:57   s13_36: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 302497 chain clauses 654255 vars 45118, built in 3.3 s
+00:42:59   s13_37: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 254847 chain clauses 655797 vars 44830, built in 2.5 s
+00:43:02   s13_38: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 284608 chain clauses 653502 vars 44802, built in 2.5 s
+00:43:05   s13_39: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 256314 chain clauses 659483 vars 45214, built in 2.5 s
+00:43:08   s13_40: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 291151 chain clauses 657276 vars 45138, built in 2.7 s
+00:43:11   s13_41: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 222971 chain clauses 660572 vars 45174, built in 2.6 s
+00:43:18   s13_42: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 232175 chain clauses 660840 vars 45210, built in 2.5 s
+00:43:20   s13_42: it 12 new best delta -4.784e-02; L1 point: 38 violated rows, float N8 47943
+00:43:20   s13_42: it 13 new best delta -4.170e-02; L1 point: 28 violated rows, float N8 18493
+00:43:20   s13_42: it 16 new best delta -2.710e-02; L1 point: 28 violated rows, float N8 16833
+00:43:21   s13_42: it 19 new best delta -2.492e-02; L1 point: 20 violated rows, float N8 10739
+00:43:21   s13_42: it 20 new best delta -2.052e-02; L1 point: 19 violated rows, float N8 5977
+00:43:21   s13_42: it 21 new best delta -1.666e-02; L1 point: 16 violated rows, float N8 10355
+00:43:23   s13_42: it 33 new best delta -1.641e-02; L1 point: 15 violated rows, float N8 10355
+00:43:23   s13_42: it 34 new best delta -1.437e-02; L1 point: 23 violated rows, float N8 3467
+00:43:23   s13_42: it 38 new best delta -1.322e-02; L1 point: 14 violated rows, float N8 872
+00:43:23   s13_42: it 39 new best delta -2.040e-03; L1 point: 18 violated rows, float N8 2308
+00:43:24   s13_42: it 42 new best delta -0.000e+00; L1 point: 17 violated rows, float N8 2326
+00:43:51   s13_43: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 303129 chain clauses 659027 vars 45212, built in 2.7 s
+00:43:55   s13_43: it 31 new best delta 1.181e-13; L1 point: 2 violated rows, float N8 852
+00:43:56   CAND delta 1.321e-02 float N8 0 N7 54692 -> cegar/cal4t13/cand_s13_43_32.json
+00:43:59   s13_44: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 217663 chain clauses 661775 vars 45210, built in 3.5 s
+00:44:00   s13_44: it 5 new best delta -1.206e-02; L1 point: 133 violated rows, float N8 26830
+00:44:00   s13_44: it 6 new best delta -1.001e-02; L1 point: 114 violated rows, float N8 24935
+00:44:00   s13_44: it 7 new best delta -9.212e-03; L1 point: 108 violated rows, float N8 23608
+00:44:01   s13_44: it 8 new best delta -8.486e-03; L1 point: 104 violated rows, float N8 21616
+00:44:01   s13_44: it 11 new best delta -8.407e-03; L1 point: 115 violated rows, float N8 25130
+00:44:01   s13_44: it 12 new best delta -7.983e-03; L1 point: 89 violated rows, float N8 26207
+00:44:01   s13_44: it 13 new best delta -7.648e-03; L1 point: 90 violated rows, float N8 26981
+00:44:02   s13_44: it 22 new best delta -7.399e-03; L1 point: 77 violated rows, float N8 16631
+00:44:03   s13_44: it 30 new best delta -6.837e-03; L1 point: 96 violated rows, float N8 34021
+00:44:04   s13_44: it 34 new best delta -6.816e-03; L1 point: 87 violated rows, float N8 21925
+00:44:07   s13_44: it 61 new best delta -6.460e-03; L1 point: 78 violated rows, float N8 25458
+00:44:09   s13_44: it 74 new best delta -6.295e-03; L1 point: 78 violated rows, float N8 16584
+00:44:09   s13_44: it 75 new best delta -6.006e-03; L1 point: 81 violated rows, float N8 18004
+00:44:11   s13_44: it 95 new best delta -5.933e-03; L1 point: 78 violated rows, float N8 35553
+00:44:13   s13_44: it 106 new best delta -5.923e-03; L1 point: 80 violated rows, float N8 40575
+00:44:14   s13_44: it 116 new best delta -5.755e-03; L1 point: 81 violated rows, float N8 56327
+00:44:14   s13_44: it 117 new best delta -5.732e-03; L1 point: 76 violated rows, float N8 73525
+00:44:32   s13_45: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 221692 chain clauses 661490 vars 45210, built in 2.8 s
+00:44:41   CAND delta 1.556e-01 float N8 0 N7 53416 -> cegar/cal4t13/cand_s13_45_74.json
+00:44:44   s13_46: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 220684 chain clauses 653989 vars 44672, built in 2.9 s
+00:44:49   s13_46: it 27 new best delta -0.000e+00; L1 point: 9 violated rows, float N8 5378
+00:44:49   CAND delta 8.843e-03 float N8 0 N7 48792 -> cegar/cal4t13/cand_s13_46_30.json
+00:44:53   s13_47: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 302309 chain clauses 659027 vars 45212, built in 4.0 s
+00:45:06   s13_47: it 88 new best delta -0.000e+00; L1 point: 4 violated rows, float N8 1736
+00:45:07   CAND delta 9.683e-03 float N8 0 N7 53356 -> cegar/cal4t13/cand_s13_47_100.json
+00:45:10   s13_48: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 287843 chain clauses 657927 vars 45192, built in 2.7 s
+00:45:16   s13_48: it 47 new best delta -3.605e-02; L1 point: 41 violated rows, float N8 55664
+00:45:21   s13_48: it 82 new best delta -2.904e-02; L1 point: 42 violated rows, float N8 27862
+00:45:21   s13_48: it 83 new best delta -2.719e-02; L1 point: 45 violated rows, float N8 33746
+00:45:21   s13_48: it 87 new best delta -2.341e-02; L1 point: 43 violated rows, float N8 12006
+00:45:22   s13_48: it 88 new best delta -9.627e-03; L1 point: 40 violated rows, float N8 8168
+00:45:22   s13_48: it 90 new best delta -5.935e-03; L1 point: 39 violated rows, float N8 10300
+00:45:22   s13_48: it 92 new best delta -5.906e-03; L1 point: 39 violated rows, float N8 16578
+00:45:23   s13_48: it 96 new best delta -5.573e-03; L1 point: 44 violated rows, float N8 15274
+00:45:23   s13_48: it 97 new best delta -5.355e-03; L1 point: 40 violated rows, float N8 40050
+00:45:23   s13_48: it 98 new best delta -5.032e-03; L1 point: 31 violated rows, float N8 17508
+00:45:23   s13_48: it 100 new best delta -5.013e-03; L1 point: 30 violated rows, float N8 14084
+00:45:23   s13_48: it 101 new best delta -4.231e-03; L1 point: 43 violated rows, float N8 28316
+00:45:24   s13_48: it 102 new best delta -4.162e-03; L1 point: 41 violated rows, float N8 33562
+00:45:24   s13_48: it 104 new best delta -2.972e-03; L1 point: 40 violated rows, float N8 43138
+00:45:24   s13_48: it 106 new best delta -2.696e-03; L1 point: 32 violated rows, float N8 12584
+00:45:25   s13_48: it 113 new best delta -1.863e-03; L1 point: 35 violated rows, float N8 24558
+00:45:25   s13_48: it 115 new best delta -1.663e-03; L1 point: 24 violated rows, float N8 9518
+00:45:26   s13_48: it 117 new best delta -1.648e-03; L1 point: 25 violated rows, float N8 7460
+00:45:26   s13_48: it 118 new best delta -1.504e-03; L1 point: 25 violated rows, float N8 8214
+00:45:26   s13_48: it 119 new best delta -8.351e-04; L1 point: 27 violated rows, float N8 5958
+00:45:26   s13_48: it 120 new best delta -7.771e-04; L1 point: 28 violated rows, float N8 9638
+00:45:26   s13_48: it 121 new best delta -3.916e-04; L1 point: 32 violated rows, float N8 12932
+00:45:26   s13_48: it 122 new best delta -0.000e+00; L1 point: 32 violated rows, float N8 17232
+00:45:43   s13_49: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 252945 chain clauses 654609 vars 44730, built in 2.6 s
+00:45:46   s13_50: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 228434 chain clauses 657471 vars 45054, built in 2.5 s
+00:45:48   s13_51: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 226713 chain clauses 654445 vars 44792, built in 2.4 s
+00:45:52   s13_52: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 254318 chain clauses 660034 vars 45096, built in 2.8 s
+00:45:55   s13_53: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 272917 chain clauses 653692 vars 44694, built in 2.8 s
+00:46:29   s13_54: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 231374 chain clauses 653001 vars 44638, built in 3.7 s
+00:46:29   s13_54: it 5 new best delta -1.879e-02; L1 point: 61 violated rows, float N8 35075
+00:46:32   s13_54: it 22 new best delta -8.315e-03; L1 point: 58 violated rows, float N8 27741
+00:46:32   s13_54: it 23 new best delta -6.721e-03; L1 point: 52 violated rows, float N8 25191
+00:46:32   s13_54: it 24 new best delta -6.642e-03; L1 point: 52 violated rows, float N8 27621
+00:46:32   s13_54: it 26 new best delta -5.953e-03; L1 point: 49 violated rows, float N8 17667
+00:46:32   s13_54: it 27 new best delta -3.926e-03; L1 point: 42 violated rows, float N8 13078
+00:46:33   s13_54: it 28 new best delta -3.738e-03; L1 point: 38 violated rows, float N8 12359
+00:46:33   s13_54: it 29 new best delta -3.045e-03; L1 point: 33 violated rows, float N8 9785
+00:46:33   s13_54: it 30 new best delta -3.024e-03; L1 point: 35 violated rows, float N8 12827
+00:46:33   s13_54: it 31 new best delta -2.691e-03; L1 point: 35 violated rows, float N8 14745
+00:46:34   s13_54: it 36 new best delta -2.688e-03; L1 point: 24 violated rows, float N8 14329
+00:46:34   s13_54: it 37 new best delta -2.673e-03; L1 point: 21 violated rows, float N8 10183
+00:46:36   s13_54: it 51 new best delta -1.975e-03; L1 point: 26 violated rows, float N8 21923
+00:46:36   s13_54: it 52 new best delta -1.972e-03; L1 point: 22 violated rows, float N8 14131
+00:46:36   s13_54: it 53 new best delta -1.783e-03; L1 point: 21 violated rows, float N8 12315
+00:46:36   s13_54: it 54 new best delta -9.081e-04; L1 point: 14 violated rows, float N8 11650
+00:46:40   s13_54: it 87 new best delta -8.473e-04; L1 point: 15 violated rows, float N8 3221
+00:46:44   s13_54: it 113 new best delta -0.000e+00; L1 point: 9 violated rows, float N8 4858
+00:46:48   CAND delta 6.156e-03 float N8 0 N7 50372 -> cegar/cal4t13/cand_s13_54_145.json
+00:46:52   s13_55: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 317083 chain clauses 655976 vars 45140, built in 3.6 s
+00:47:24   s13_56: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 256755 chain clauses 657082 vars 45152, built in 2.5 s
+00:47:58   s13_57: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 217085 chain clauses 654344 vars 44672, built in 3.1 s
+00:47:59   s13_57: it 6 new best delta -2.765e-02; L1 point: 141 violated rows, float N8 174263
+00:47:59   s13_57: it 7 new best delta -2.530e-02; L1 point: 116 violated rows, float N8 30246
+00:47:59   s13_57: it 8 new best delta -2.368e-02; L1 point: 117 violated rows, float N8 25144
+00:47:59   s13_57: it 9 new best delta -2.286e-02; L1 point: 112 violated rows, float N8 27740
+00:48:00   s13_57: it 10 new best delta -2.189e-02; L1 point: 97 violated rows, float N8 19004
+00:48:00   s13_57: it 11 new best delta -2.122e-02; L1 point: 96 violated rows, float N8 20766
+00:48:01   s13_57: it 17 new best delta -1.929e-02; L1 point: 103 violated rows, float N8 30248
+00:48:01   s13_57: it 18 new best delta -1.929e-02; L1 point: 98 violated rows, float N8 47056
+00:48:01   s13_57: it 19 new best delta -1.872e-02; L1 point: 87 violated rows, float N8 63738
+00:48:06   s13_57: it 52 new best delta -1.419e-02; L1 point: 51 violated rows, float N8 32060
+00:48:06   s13_57: it 55 new best delta -7.762e-03; L1 point: 32 violated rows, float N8 29385
+00:48:06   s13_57: it 56 new best delta -7.673e-03; L1 point: 30 violated rows, float N8 31673
+00:48:06   s13_57: it 57 new best delta -4.723e-03; L1 point: 26 violated rows, float N8 29964
+00:48:07   s13_57: it 58 new best delta -4.346e-03; L1 point: 23 violated rows, float N8 30696
+00:48:07   s13_57: it 59 new best delta -2.428e-03; L1 point: 26 violated rows, float N8 47226
+00:48:07   s13_57: it 60 new best delta -1.395e-03; L1 point: 27 violated rows, float N8 20336
+00:48:07   s13_57: it 61 new best delta -8.171e-04; L1 point: 21 violated rows, float N8 20748
+00:48:07   s13_57: it 62 new best delta -8.171e-04; L1 point: 26 violated rows, float N8 20162
+00:48:12   s13_57: it 94 new best delta -8.130e-04; L1 point: 25 violated rows, float N8 9508
+00:48:12   s13_57: it 95 new best delta -8.126e-04; L1 point: 25 violated rows, float N8 7676
+00:48:12   s13_57: it 96 new best delta -6.690e-05; L1 point: 24 violated rows, float N8 7628
+00:48:12   s13_57: it 97 new best delta -0.000e+00; L1 point: 25 violated rows, float N8 7608
+00:48:31   s13_58: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 216892 chain clauses 661760 vars 45210, built in 3.0 s
+00:48:33   s13_58: it 14 new best delta -4.116e-02; L1 point: 45 violated rows, float N8 19708
+00:48:34   s13_58: it 20 new best delta -3.750e-02; L1 point: 45 violated rows, float N8 42144
+00:48:35   s13_58: it 23 new best delta -3.442e-02; L1 point: 38 violated rows, float N8 25144
+00:48:35   s13_58: it 26 new best delta -1.684e-02; L1 point: 27 violated rows, float N8 38840
+00:48:35   s13_58: it 29 new best delta -1.649e-02; L1 point: 23 violated rows, float N8 31056
+00:48:39   s13_58: it 56 new best delta -1.627e-02; L1 point: 18 violated rows, float N8 1852
+00:48:39   s13_58: it 58 new best delta -5.144e-03; L1 point: 24 violated rows, float N8 8258
+00:48:39   s13_58: it 59 new best delta -0.000e+00; L1 point: 28 violated rows, float N8 37246
+00:49:05   s13_59: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 290421 chain clauses 653222 vars 44690, built in 3.5 s
+00:49:19   s13_59: it 100 new best delta -4.896e-02; L1 point: 41 violated rows, float N8 11619
+00:49:22   s13_59: it 115 new best delta -4.712e-02; L1 point: 40 violated rows, float N8 10257
+00:49:23   s13_59: it 122 new best delta -4.609e-02; L1 point: 49 violated rows, float N8 21221
+00:49:23   s13_59: it 123 new best delta -2.611e-02; L1 point: 35 violated rows, float N8 12123
+00:49:24   s13_59: it 128 new best delta -2.005e-02; L1 point: 40 violated rows, float N8 12346
+00:49:24   s13_59: it 129 new best delta -1.329e-02; L1 point: 32 violated rows, float N8 11802
+00:49:24   s13_59: it 130 new best delta -4.066e-03; L1 point: 28 violated rows, float N8 11832
+00:49:24   s13_59: it 133 new best delta -0.000e+00; L1 point: 22 violated rows, float N8 26522
+00:49:39   s13_60: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 313316 chain clauses 658154 vars 45208, built in 3.4 s
+00:49:43   s13_60: it 29 new best delta -1.495e-14; L1 point: 8 violated rows, float N8 3212
+00:50:00   CAND delta 7.918e-03 float N8 0 N7 57412 -> cegar/cal4t13/cand_s13_60_156.json
+00:50:02   s13_61: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 216217 chain clauses 654344 vars 44672, built in 2.6 s
+00:50:04   s13_61: it 8 new best delta -4.663e-02; L1 point: 31 violated rows, float N8 49144
+00:50:04   s13_61: it 9 new best delta -3.835e-02; L1 point: 35 violated rows, float N8 65630
+00:50:04   s13_61: it 10 new best delta -9.832e-03; L1 point: 30 violated rows, float N8 47604
+00:50:04   s13_61: it 11 new best delta -7.661e-03; L1 point: 24 violated rows, float N8 30808
+00:50:05   s13_61: it 18 new best delta -5.872e-03; L1 point: 24 violated rows, float N8 34800
+00:50:06   s13_61: it 24 new best delta -3.357e-03; L1 point: 20 violated rows, float N8 16154
+00:50:06   s13_61: it 25 new best delta -2.976e-03; L1 point: 9 violated rows, float N8 1772
+00:50:07   s13_61: it 26 new best delta -2.572e-03; L1 point: 8 violated rows, float N8 2144
+00:50:11   s13_61: it 61 new best delta -2.424e-03; L1 point: 5 violated rows, float N8 1820
+00:50:16   s13_61: it 95 new best delta -1.280e-03; L1 point: 17 violated rows, float N8 4078
+00:50:16   s13_61: it 96 new best delta -0.000e+00; L1 point: 15 violated rows, float N8 10862
+00:50:36   s13_62: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 227759 chain clauses 653482 vars 44672, built in 3.0 s
+00:50:37   s13_62: it 5 new best delta -3.991e-02; L1 point: 39 violated rows, float N8 11000
+00:50:37   s13_62: it 7 new best delta -5.246e-03; L1 point: 22 violated rows, float N8 7366
+00:50:37   s13_62: it 8 new best delta -3.294e-03; L1 point: 23 violated rows, float N8 7366
+00:50:37   s13_62: it 9 new best delta -0.000e+00; L1 point: 24 violated rows, float N8 7422
+00:51:10   s13_63: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 223478 chain clauses 653924 vars 44672, built in 3.7 s
+00:51:13   s13_63: it 18 new best delta -8.579e-05; L1 point: 26 violated rows, float N8 21108
+00:51:16   s13_63: it 37 new best delta -8.144e-05; L1 point: 27 violated rows, float N8 10928
+00:51:16   s13_63: it 38 new best delta -7.135e-05; L1 point: 22 violated rows, float N8 18486
+00:51:16   s13_63: it 39 new best delta -7.017e-05; L1 point: 19 violated rows, float N8 16940
+00:51:16   s13_63: it 41 new best delta -6.788e-05; L1 point: 18 violated rows, float N8 16450
+00:51:37   s13_63: it 176 new best delta -0.000e+00; L1 point: 17 violated rows, float N8 18772
+00:51:38   s13_63: it 188 new best delta 2.723e-13; L1 point: 11 violated rows, float N8 3952
+00:51:39   s13_63: it 195 new best delta 4.016e-13; L1 point: 6 violated rows, float N8 3952
+00:51:40   s13_63: it 196 new best delta 4.650e-13; L1 point: 9 violated rows, float N8 3840
+00:51:44   s13_64: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 227777 chain clauses 657490 vars 45156, built in 4.1 s
+00:51:48   s13_65: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 222479 chain clauses 659430 vars 45142, built in 3.5 s
+00:51:53   s13_66: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 254923 chain clauses 651756 vars 44724, built in 3.6 s
+00:51:57   s13_67: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 301556 chain clauses 658712 vars 45212, built in 3.7 s
+00:52:30   s13_68: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 231481 chain clauses 654304 vars 44738, built in 2.5 s
+00:53:03   s13_69: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 256770 chain clauses 657887 vars 45032, built in 2.7 s
+00:53:06   s13_70: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 216917 chain clauses 661775 vars 45210, built in 2.6 s
+00:53:07   s13_70: it 2 new best delta -3.988e-02; L1 point: 34 violated rows, float N8 18620
+00:53:07   s13_70: it 3 new best delta -1.971e-02; L1 point: 33 violated rows, float N8 16614
+00:53:07   s13_70: it 7 new best delta -1.842e-02; L1 point: 33 violated rows, float N8 16638
+00:53:07   s13_70: it 8 new best delta -1.629e-02; L1 point: 32 violated rows, float N8 16654
+00:53:08   s13_70: it 10 new best delta -0.000e+00; L1 point: 24 violated rows, float N8 7308
+00:53:40   s13_71: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 229951 chain clauses 659323 vars 45138, built in 3.3 s
+00:53:44   s13_72: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 237619 chain clauses 657921 vars 45100, built in 4.0 s
+00:54:13   s13_73: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 315590 chain clauses 653990 vars 45114, built in 2.8 s
+00:54:17   s13_74: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 243128 chain clauses 659332 vars 45196, built in 3.1 s
+00:54:33   s13_74: it 127 new best delta -7.339e-13; L1 point: 2 violated rows, float N8 0
+00:54:33   CAND (L1 point) -> cegar/cal4t13/cand_s13_74_127_l1point.json
+00:54:36   s13_75: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 258103 chain clauses 654427 vars 44674, built in 2.9 s
+00:54:42   s13_75: it 42 new best delta -3.741e-03; L1 point: 19 violated rows, float N8 24064
+00:54:42   s13_75: it 43 new best delta -0.000e+00; L1 point: 19 violated rows, float N8 23820
+00:55:10   s13_76: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 248141 chain clauses 656404 vars 45096, built in 3.3 s
+00:55:25   s13_76: it 118 new best delta -2.992e-02; L1 point: 119 violated rows, float N8 89710
+00:55:25   s13_76: it 119 new best delta -2.771e-02; L1 point: 105 violated rows, float N8 46889
+00:55:25   s13_76: it 121 new best delta -2.769e-02; L1 point: 109 violated rows, float N8 34012
+00:55:25   s13_76: it 124 new best delta -2.684e-02; L1 point: 115 violated rows, float N8 52356
+00:55:28   s13_76: it 145 new best delta -2.205e-02; L1 point: 91 violated rows, float N8 25838
+00:55:28   s13_76: it 146 new best delta -1.957e-02; L1 point: 92 violated rows, float N8 23945
+00:55:28   s13_76: it 148 new best delta -1.956e-02; L1 point: 81 violated rows, float N8 20826
+00:55:30   s13_76: it 160 new best delta -1.788e-02; L1 point: 93 violated rows, float N8 34460
+00:55:43   s13_77: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 226056 chain clauses 662055 vars 45200, built in 3.2 s
+00:55:47   s13_78: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 311435 chain clauses 651376 vars 44710, built in 3.2 s
+00:55:51   s13_78: it 26 new best delta -4.431e-02; L1 point: 36 violated rows, float N8 39458
+00:55:51   s13_78: it 27 new best delta -2.402e-02; L1 point: 27 violated rows, float N8 8024
+00:55:51   s13_78: it 28 new best delta -2.032e-02; L1 point: 32 violated rows, float N8 54490
+00:56:11   s13_78: it 180 new best delta -1.983e-02; L1 point: 10 violated rows, float N8 11730
+00:56:11   s13_78: it 181 new best delta -1.945e-02; L1 point: 11 violated rows, float N8 8274
+00:56:11   s13_78: it 182 new best delta -1.945e-02; L1 point: 12 violated rows, float N8 9068
+00:56:12   s13_78: it 185 new best delta -1.763e-03; L1 point: 8 violated rows, float N8 13354
+00:56:15   CAND delta 7.178e-04 float N8 0 N7 47524 -> cegar/cal4t13/cand_s13_78_210.json
+00:56:19   s13_79: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 292137 chain clauses 660007 vars 45216, built in 3.7 s
+00:56:25   s13_79: it 39 new best delta -3.249e-02; L1 point: 1 violated rows, float N8 0
+00:56:25   CAND (L1 point) -> cegar/cal4t13/cand_s13_79_39_l1point.json
+00:56:28   s13_80: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 217558 chain clauses 654522 vars 44756, built in 3.3 s
+00:56:37   s13_81: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 317269 chain clauses 657164 vars 45200, built in 2.9 s
+00:56:41   s13_81: it 31 new best delta -6.251e-03; L1 point: 17 violated rows, float N8 12361
+00:56:41   s13_81: it 33 new best delta -5.575e-03; L1 point: 19 violated rows, float N8 20168
+00:56:42   s13_81: it 37 new best delta -1.626e-03; L1 point: 14 violated rows, float N8 9964
+00:56:42   s13_81: it 38 new best delta -2.816e-04; L1 point: 17 violated rows, float N8 20974
+00:56:42   s13_81: it 39 new best delta -1.536e-04; L1 point: 16 violated rows, float N8 20978
+00:56:42   s13_81: it 44 new best delta -1.508e-04; L1 point: 24 violated rows, float N8 11502
+00:56:43   s13_81: it 49 new best delta -0.000e+00; L1 point: 20 violated rows, float N8 15738
+00:57:10   s13_82: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 227233 chain clauses 662055 vars 45200, built in 3.1 s
+00:57:13   s13_83: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 252574 chain clauses 657675 vars 45044, built in 2.6 s
+00:57:17   s13_84: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 250508 chain clauses 662439 vars 45228, built in 3.1 s
+00:57:19   s13_84: it 18 new best delta -2.828e-02; L1 point: 7 violated rows, float N8 3942
+00:57:19   s13_84: it 19 new best delta -0.000e+00; L1 point: 9 violated rows, float N8 3612
+00:57:50   s13_85: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 229018 chain clauses 653935 vars 44788, built in 3.1 s
+00:57:55   s13_85: it 45 new best delta -4.932e-02; L1 point: 47 violated rows, float N8 14294
+00:57:57   s13_85: it 54 new best delta -4.914e-02; L1 point: 42 violated rows, float N8 18426
+00:57:57   s13_85: it 55 new best delta -4.913e-02; L1 point: 52 violated rows, float N8 21166
+00:58:24   s13_86: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 260481 chain clauses 655100 vars 45084, built in 3.3 s
+00:58:28   s13_87: units 3653 (conflicts with hint 0) fixed 0 imps 78 pair cuts 228143 chain clauses 660282 vars 45196, built in 3.3 s

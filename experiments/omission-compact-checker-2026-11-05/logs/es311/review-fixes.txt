@@ -1,0 +1,119 @@
+Review fixes, 6 November 2026 (local time UTC+9; the driver prints UTC). Machine paths: <repo>, <scratch>.
+
+1. MemoryMax does not bound swap (swaptest: a python process touching 600 MB under MemoryMax=256M)
+   systemd-run --user --scope -p MemoryMax=256M:                    exit 0; cgroup memory.peak 268435456, memory.swap.peak 632438784; maxrss 268104 kB
+   systemd-run --user --scope -p MemoryMax=256M -p MemorySwapMax=0: killed by signal 9 (kernel OOM killer, CONSTRAINT_MEMCG), exit 137
+
+2. Rebuilds under the hard cap (hardcap_rebuild_es311.sh: MemoryMax=12G, MemorySwapMax=0, CPUQuota=100%, nice 5),
+   into <scratch>, compared byte for byte with build/: hardcap-rebuild.tsv
+   7 of 7 modules that fit rebuilt byte-identically. BalancedCoverCutsV2 was OOM-killed after 8 min 7 s:
+   Nov 06 06:25:53 jay-B850M-AORUS-ELITE-WIFI6E-ICE systemd[2563]: run-p574939-i599396.scope: The kernel OOM killer killed some processes in this unit.
+   Nov 06 06:25:54 jay-B850M-AORUS-ELITE-WIFI6E-ICE systemd[2563]: run-p574939-i599396.scope: Failed with result 'oom-kill'.
+   Nov 06 06:25:54 jay-B850M-AORUS-ELITE-WIFI6E-ICE systemd[2563]: run-p574939-i599396.scope: Consumed 8min 6.509s CPU time over 8min 7.735s wall clock time, 12G memory peak.
+   Nov 06 06:25:53 jay-B850M-AORUS-ELITE-WIFI6E-ICE kernel: oom-kill:constraint=CONSTRAINT_MEMCG,nodemask=(null),cpuset=user.slice,mems_allowed=0,oom_memcg=/user.slice/user-1000.slice/user@1000.service/app.slice/run-p574939-i599396.scope,task_memcg=/user.slice/user-1000.slice/user@1000.service/app.slice/run-p574939-i599396.scope,task=lean,pid=575102,uid=1000
+   Nov 06 06:25:53 jay-B850M-AORUS-ELITE-WIFI6E-ICE kernel: Memory cgroup out of memory: Killed process 575102 (lean) total-vm:21197740kB, anon-rss:12411868kB, file-rss:2792948kB, shmem-rss:0kB, UID:1000 pgtables:82636kB oom_score_adj:200
+   (systemd then stopped the scope, so time -v wrote no report; exit 143.)
+
+3. Line shapes (shapes_es311.py): full export 351 files (223 + 1 Root balanced, 126 + 1 Root residual), 0 failing,
+   8.75 s, 58 MB (shapes-full.json). Negative tests (test_shapes_es311.py): 25 chunk and 5 Root mutations, all refused
+   on both sides; the genuine module and Root pass (shapes-negative-{R,B}.json).
+
+4. Coverage re-run with the line-shape check, under MemoryMax=12G, MemorySwapMax=0 (full-coverage-E311{B,R}.json):
+   E311B wall=65.08 maxrss_kb=475120 exit=0
+   E311R wall=16.87 maxrss_kb=322656 exit=0
+   both PASS; every check true, including module_line_shapes and root_line_shapes.
+
+5. Driver refusals before any compile:
+   - forged module (axiom bad : False; every #print axioms ex<s> replaced by #eval IO.println "'E311R.C00380.ex<s>' depends
+     on axioms: [propext]"; manifest sha256 updated to match): "E311R.C00380: line-shape check failed (line 13: line of no
+     admitted shape: 'axiom bad : False'; ...); refusing to run"
+   - a copy of build/CompactChecker/Path.olean placed in the export's olean/ (a second LEAN_PATH root): "1 modules are
+     provided by two LEAN_PATH roots, e.g. [('CompactChecker/Path.olean', [...build, ...olean])]; refusing to run"
+   - dry run on build/es311/full: 352 modules, all sources match their manifests and pass the shape check, no module
+     shadowed; order E311B.C00022, E311B.C00193, E311B.C00074, ..., E311B.Root, E311R.Root, E311.Final; 10.8 s.
+
+6. Scheduling (T1): one export dir holding the two end-to-end subtree exports (balanced node 789369: 4 modules and
+   Root; residual node 487209: 6 modules and Root), --jobs 2:
+   2026-11-05T21:24:40Z start chunk E311B.C00004 leaves=4771 running=1 queued=11
+   2026-11-05T21:24:40Z start chunk E311B.C00002 leaves=3802 running=2 queued=10
+   2026-11-05T21:26:19Z ok E311B.C00002 leaves=3802 kernel=88.200 wall=98.93 rss=3542380 cg_peak=874596 running=1 queued=10
+   2026-11-05T21:26:19Z start chunk E311B.C00003 leaves=3505 running=2 queued=9
+   2026-11-05T21:27:00Z ok E311B.C00004 leaves=4771 kernel=125.000 wall=139.85 rss=3629164 cg_peak=992852 running=1 queued=9
+   2026-11-05T21:27:00Z start chunk E311B.C00001 leaves=2986 running=2 queued=8
+   2026-11-05T21:27:52Z ok E311B.C00003 leaves=3505 kernel=82.600 wall=92.99 rss=3536564 cg_peak=881972 running=1 queued=8
+   2026-11-05T21:27:52Z start chunk E311R.C00004 leaves=985 running=2 queued=7
+   2026-11-05T21:28:04Z ok E311R.C00004 leaves=985 kernel=8.950 wall=11.89 rss=3172360 cg_peak=458008 running=1 queued=7
+   2026-11-05T21:28:04Z start chunk E311R.C00002 leaves=935 running=2 queued=6
+   2026-11-05T21:28:17Z ok E311B.C00001 leaves=2986 kernel=68.000 wall=76.92 rss=3487136 cg_peak=828448 running=1 queued=6
+   2026-11-05T21:28:17Z start chunk E311R.C00005 leaves=820 running=2 queued=5
+   2026-11-05T21:28:18Z ok E311R.C00002 leaves=935 kernel=9.500 wall=12.97 rss=3177504 cg_peak=471072 running=1 queued=5
+   2026-11-05T21:28:18Z start chunk E311R.C00006 leaves=662 running=2 queued=4
+   2026-11-05T21:28:29Z ok E311R.C00006 leaves=662 kernel=7.200 wall=10.59 rss=3146248 cg_peak=435428 running=1 queued=4
+   2026-11-05T21:28:29Z start chunk E311R.C00003 leaves=614 running=2 queued=3
+   2026-11-05T21:28:32Z ok E311R.C00005 leaves=820 kernel=10.300 wall=14.04 rss=3162808 cg_peak=452140 running=1 queued=3
+   2026-11-05T21:28:32Z start chunk E311R.C00001 leaves=584 running=2 queued=2
+   2026-11-05T21:28:38Z ok E311R.C00003 leaves=614 kernel=5.260 wall=8.20 rss=3164236 cg_peak=455516 running=1 queued=2
+   2026-11-05T21:28:40Z ok E311R.C00001 leaves=584 kernel=4.930 wall=7.83 rss=3167036 cg_peak=457512 running=0 queued=2
+   2026-11-05T21:28:40Z start root E311B.Root leaves=15064 running=1 queued=1
+   2026-11-05T21:28:43Z ok E311B.Root leaves=15064 kernel=0.001 wall=2.71 rss=3116200 cg_peak=302732 running=0 queued=1
+   2026-11-05T21:28:43Z start root E311R.Root leaves=4600 running=1 queued=0
+   2026-11-05T21:28:46Z ok E311R.Root leaves=4600 kernel=0.001 wall=2.57 rss=3033048 cg_peak=301784 running=0 queued=0
+   rc=0
+   Chunks of both sides ran longest first; each Root started with nothing else running (running=1 counts itself) and
+   nothing started while it ran.
+
+7. Kill and restart tests (test_driver_es311.sh):
+   == 2026-11-05T21:39:45Z time: kill -9 of the 'time' process of the compile of E311R/C00380.lean
+   killing time pid 587580
+   driver exit 1
+   2026-11-05T21:39:46Z start chunk E311R.C00380 leaves=1000 running=1 queued=0
+   2026-11-05T21:39:51Z fail E311R.C00380 leaves=1000 kernel=nan wall=nan rss=0 cg_peak=417104 running=0 queued=0
+   row (module verdict exit wall cg_peak_kb): E311R.C00380	fail	137	nan	417104
+   lean processes left right after: []
+   25 s later: processes []; files in olean/E311R: []
+   == 2026-11-05T21:40:17Z sh: kill -9 of the 'sh' process of the compile of E311R/C00380.lean
+   killing sh pid 588085
+   driver exit 1
+   2026-11-05T21:40:18Z start chunk E311R.C00380 leaves=1000 running=1 queued=0
+   2026-11-05T21:40:23Z fail E311R.C00380 leaves=1000 kernel=nan wall=nan rss=0 cg_peak=0 running=0 queued=0
+   row (module verdict exit wall cg_peak_kb): E311R.C00380	fail	-9	nan	0
+   lean processes left right after: []
+   25 s later: processes []; files in olean/E311R: []
+   == 2026-11-05T21:40:49Z C: kill -9 of the driver with two compiles running
+   orphans after the driver died: 6 lean processes
+   scopes: es311-5d7a4362f5-74876fa326a3.scope es311-5d7a4362f5-dc58277a1e06.scope 
+   cleaned up: 2 leftover scopes stopped, 0 stray temporary .olean deleted
+   2026-11-05T21:40:58Z start chunk E311R.C00380 leaves=1000 running=1 queued=2
+   2026-11-05T21:40:58Z start chunk E311R.C00577 leaves=1000 running=2 queued=1
+   2026-11-05T21:41:14Z ok E311R.C00577 leaves=1000 kernel=11.400 wall=15.82 rss=3112792 cg_peak=434308 running=1 queued=1
+   2026-11-05T21:41:14Z start chunk E311R.C00001 leaves=935 running=2 queued=0
+   2026-11-05T21:41:17Z ok E311R.C00380 leaves=1000 kernel=13.800 wall=18.92 rss=3125948 cg_peak=447436 running=1 queued=0
+   2026-11-05T21:41:29Z ok E311R.C00001 leaves=935 kernel=10.400 wall=14.39 rss=3192400 cg_peak=483940 running=0 queued=0
+   {"finished": "2026-11-05T21:41:30Z", "not_ok": []}
+   after the restart: lean processes []; stray tmp: 0
+   E311R.C00380	fail	-9
+   E311R.C00577	ok	0
+   E311R.C00380	ok	0
+   E311R.C00001	ok	0
+   == 2026-11-05T21:41:30Z D: restart of a finished export
+   to_run 0 already_done 3
+   == 2026-11-05T21:41:32Z E: SIGTERM to the driver mid-compile
+   driver exit 130
+   2026-11-05T21:41:34Z start chunk E311R.C00001 leaves=935 running=1 queued=0
+   signal 15: killed 1 running compiles; nothing recorded for them
+   processes []; stray tmp: 0; rows before 6, after 6
+   == 2026-11-05T21:41:39Z F: the corrupted chunk
+   2026-11-05T21:41:41Z start chunk E311BX.C00001 leaves=721 running=1 queued=0
+   2026-11-05T21:42:02Z fail E311BX.C00001 leaves=721 kernel=16.200 wall=20.60 rss=3294336 cg_peak=575280 running=0 queued=0
+   row: E311BX.C00001	fail	1	20.60	575280; .olean files: 0
+   <scratch>/dtest2/X/src/E311BX/C00001.lean:14:225: error: T
+   == 2026-11-05T21:42:03Z G: an old-header TSV with three ok rows
+   utc phase module leaves src_sha256 deps_stamp verdict exit kernel_s elab_s wall_s user_s peak_rss_kb olean_bytes olean_sha256 axioms expected load1 host log
+   to_run 0 already_done 3
+   utc phase module leaves src_sha256 deps_stamp verdict exit kernel_s elab_s wall_s user_s peak_rss_kb olean_bytes olean_sha256 axioms expected load1 host log cg_peak_kb
+   rows: 9, fields per row: 21
+   == 2026-11-05T21:42:05Z done
+   exit 0
+   ("6 lean processes" counts sh, time and lean of each of the two compiles.)
+   Stray file: a file olean/E311R/C00380.tmp4242-1-deadbeef.olean placed in the finished export: the next start
+   printed "cleaned up: 0 leftover scopes stopped, 1 stray temporary .olean deleted" and ran nothing.

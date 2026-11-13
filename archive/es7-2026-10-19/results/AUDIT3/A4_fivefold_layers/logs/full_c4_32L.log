@@ -1,0 +1,24 @@
+big/c4_n32L.cnf: vars 287296 clauses 5272494
+{"single_orbit_layers": true, "largest_convex": 9, "conv7": 9412, "conv7_over_m": 2353, "results": [["normal", {"T": 0, "D": 0, "K": 2353}, 4], ["negative", {"T": 4, "D": 0, "K": 2353}, 4]], "sec": 9}
+{"single_orbit_layers": true, "largest_convex": 9, "conv7": 6124, "conv7_over_m": 1531, "results": [["normal", {"T": 0, "D": 0, "K": 1531}, 4], ["negative", {"T": 10, "D": 0, "K": 1531}, 4]], "sec": 9}
+{"single_orbit_layers": true, "largest_convex": 9, "conv7": 8504, "conv7_over_m": 2126, "results": [["normal", {"T": 0, "D": 0, "K": 2126}, 4], ["negative", {"T": 10, "D": 0, "K": 2126}, 4]], "sec": 8}
+{"single_orbit_layers": true, "largest_convex": 8, "conv7": 5436, "conv7_over_m": 1359, "results": [["normal", {"T": 0, "D": 0, "K": 1359}, 4], ["negative", {"T": 1, "D": 0, "K": 1359}, 4]], "sec": 8}
+TOTAL {"configs": 4, "T": 0, "D": 0, "K_mismatch": 0, "neg": 4, "neg_caught": 4}
+       36.60 real        30.17 user         4.50 sys
+           798031872  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             2563071  page reclaims
+                  48  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  96  voluntary context switches
+               38578  involuntary context switches
+        636425546997  instructions retired
+        121480183414  cycles elapsed
+           786170912  peak memory footprint

@@ -1,0 +1,242 @@
+====================================================================================================
+1. Passages cited by the finding
+====================================================================================================
+--- WRITEUP/SYMMETRIC.md lines 59-72
+  59: **Corollary 3.** Assume Theorems 1 and 2, the fivefold exclusion of §2 and the published fourfold exclusion
+  60: (arXiv:2506.00224, §6.2). Then every set of at least 33 points in general position without a convex 7-gon has one of
+  61: two forms:
+  62: - it has no nontrivial symmetry; or
+  63: - its symmetry group is exactly the half-turn group C2, and it then has an even number of points, at least 34.
+  64: 
+  65: Proof:
+  66: - A finite symmetry group fixes the centroid, so it is cyclic or dihedral. Reflections are excluded by Theorem 2.
+  67: - A rotation of order s >= 7 has orbits that are regular s-gons, so it gives a convex 7-gon.
+  68: - Orders 3, 4 and 5 are excluded by deleting whole orbits. Order 6 contains order 3.
+  69: - What remains is the half-turn. Its centre is collinear with every antipodal pair, so it is not a point of the set, and
+  70:   the size is even.
+  71: 
+  72: The same holds for affine symmetries, after a change of inner product that makes the finite group orthogonal.
+--- WRITEUP/SYMMETRIC.md lines 83-83
+  83: | 2-fold rotation | at least 32; exactly 32 if ES(7) = 33 | `SYM2/sym7_32points.txt` | open (§4) |
+--- WRITEUP/SYMMETRIC.md lines 181-198
+ 181: ## 4. What remains open
+ 182: 
+ 183: - **ES(7).** Still open; no unrestricted bound is improved.
+ 184: - **The last symmetric route.** Accepting the exclusions above, only **centrally symmetric sets of even size at least
+ 185:   34** remain as symmetric counterexamples. Excluding 34 points excludes all of them, since pairs can be deleted.
+ 186: - **Status of the central 34-point search (2026-10-29; details in `results/C2C34`).**
+ 187:   - The encoding has the centre as an element, and the first point is a hull vertex. The convex hull of a counterexample
+ 188:     is a centrally symmetric quadrilateral or hexagon, which gives 136 cases (32 up to rotation and reflection). Their
+ 189:     coverage of the formula is certified by an LRAT proof accepted by both checkers.
+ 190:   - All 120 hexagonal-hull cases are UNSAT, each with a retained LRAT proof accepted by both lrat-check and cake_lpr
+ 191:     (`results/C2C34/logs/hex_cases.tsv`).
+ 192:   - So a centrally symmetric 34-point counterexample would have a parallelogram hull (a computer-assisted theorem,
+ 193:     `results/C2C34`).
+ 194:   - The 8 canonical parallelogram cases are open. A split at the second convex layer gives 560 subcases each; nested
+ 195:     parallelograms are the hard core.
+ 196:   - A pilot on the canonical case P8 refuted 64 of its 287 subcase orbits with both checks (`results/C2C34` §6). A
+ 197:     compact encoding of the whole parallelogram case (`results/C2SGN`) certified its second-layer split and some pieces.
+ 198:     Neither closes the case.
+--- WRITEUP/note/symmetric_es7.tex lines 16-27
+  16: \begin{abstract}
+  17: Let $ES(7)$ be the least $n$ such that every $n$ points in general position in the plane contain $7$ points in convex
+  18: position; the Erd\H{o}s--Szekeres conjecture predicts $ES(7)=33$. We show, with computer-assisted proofs, that every
+  19: $33$-point set in general position with a threefold rotational symmetry contains a convex heptagon, and that every
+  20: mirror-symmetric set of at least $33$ points does. Together with explicit examples, the largest threefold-symmetric and
+  21: mirror-symmetric sets without a convex heptagon have exactly $31$ and $32$ points. Combined with the fourfold result of
+  22: Subercaseaux, Mackey, Qian and Heule and a fivefold exclusion, the only symmetric sets of at least $33$ points that could
+  23: still avoid a convex heptagon are centrally symmetric sets of even size at least $34$. As companion material we record
+  24: exact maxima for other symmetry types, with their antecedents, and an explicit centrally symmetric $32$-point example,
+  25: which is a special case of a construction of Valtr described by Baek and Balko. None of this settles $ES(7)$ or improves
+  26: its upper bound.
+  27: \end{abstract}
+--- WRITEUP/note/symmetric_es7.tex lines 121-131
+ 121: \begin{corollary}\label{cor:only}
+ 122: Assume Theorems~\ref{thm:A} and~\ref{thm:M}, Theorem~\ref{thm:E} below and the fourfold exclusion
+ 123: of~\cite[\S6.2]{SMQH25}. Then a set of at least $33$ points in general position without a convex heptagon either has no
+ 124: nontrivial symmetry or has symmetry group exactly the half-turn group, and then it has an even number of points, at
+ 125: least $34$.
+ 126: \end{corollary}
+ 127: \begin{proof}
+ 128: Reflections are excluded by Theorem~\ref{thm:M}. Rotations of order $s\ge7$ are excluded by Lemma~\ref{lem:sizes}(a), and
+ 129: orders $3$, $4$ and $5$ by deleting whole orbits; order $6$ contains order $3$. The half-turn remains, and by
+ 130: Lemma~\ref{lem:sizes}(b) its centre is not a point of the set.
+ 131: \end{proof}
+--- WRITEUP/note/symmetric_es7.tex lines 157-161
+ 157: \begin{proposition}\label{prop:C}
+ 158: Let $N(\Gamma)$ be the largest size of a set in general position with symmetry $\Gamma$ and no $7$ points in convex
+ 159: position. Then $N(C_3)=31$ and $N(\text{mirror})=32$ (Theorems~\ref{thm:A} and~\ref{thm:M}), $N(C_6)=30$, $N(C_4)=28$,
+ 160: $N(C_5)=31$ and $N(C_2)\ge 32$, with $N(C_2)=32$ if $ES(7)=33$.
+ 161: \end{proposition}
+--- WRITEUP/note/symmetric_es7.tex lines 242-251
+ 242: \section{What remains open}
+ 243: $ES(7)$ itself is open, and no unrestricted bound is improved here. By Corollary~\ref{cor:only}, the remaining symmetric
+ 244: route to a counterexample is a centrally symmetric set of even size at least $34$; excluding $34$ points would exclude
+ 245: all of them. For the analogous encoding with the centre $c$ as an element ($v_c=(v_p+v_{-p})/2$, so
+ 246: $\chi(c,p,q)=\chi(-p,p,q)$), a split by the convex hull into $136$ cases has a certified cover. All $120$
+ 247: hexagonal-hull cases are refuted, each with a retained proof accepted by both checkers, so a centrally symmetric $34$-point counterexample would
+ 248: have a parallelogram hull. The parallelogram cases are open; nested parallelograms, the layer structure of the extremal $32$-point sets,
+ 249: are the hard core (\texttt{C2C34}). An abstract centre imposes no metric midpoint condition and no
+ 250: realizability: the fourfold $32$-point formula of the same kind is satisfiable, as~\cite{SMQH25} also observed for its own
+ 251: model, although no real set exists. Only an unsatisfiable answer, with a justified case cover, would settle the case.
+--- C2FINAL/README.md lines 5-7
+   5: **Status.** Every piece of the case split is accounted for and every recorded CNF hash matches a rebuilt CNF. An
+   6: independent review (§8) found no blocking error. The statement "every centrally symmetric set of 34 points in general
+   7: position contains a convex 7-gon" is **not yet claimed**: the random re-solve sample (§5) stopped before its Q units were done.
+--- C2FINAL/README.md lines 163-164
+ 163: 6. *Minor*: `C2C34/README.md` and `WRITEUP/SYMMETRIC.md` still describe the parallelogram cases as open. They will be
+ 164:    updated with the write-up.
+
+[OK ] WRITEUP/SYMMETRIC.md:59-60 contains 'published fourfold exclusion'
+[OK ] WRITEUP/SYMMETRIC.md:63-63 contains 'exactly the half-turn group C2'
+[OK ] WRITEUP/SYMMETRIC.md:83-83 contains 'at least 32; exactly 32 if ES(7) = 33'
+[OK ] WRITEUP/SYMMETRIC.md:83-83 contains 'open (§4)'
+[OK ] WRITEUP/SYMMETRIC.md:184-185 contains 'Excluding 34 points excludes all of them, since pairs can be deleted.'
+[OK ] WRITEUP/SYMMETRIC.md:194-195 contains 'The 8 canonical parallelogram cases are open.'
+[OK ] WRITEUP/SYMMETRIC.md:196-198 contains 'Neither closes the case.'
+[OK ] WRITEUP/note/symmetric_es7.tex:21-24 contains 'Combined with the fourfold result'
+[OK ] WRITEUP/note/symmetric_es7.tex:22-24 contains 'centrally symmetric sets of even size at least $34$'
+[OK ] WRITEUP/note/symmetric_es7.tex:122-123 contains 'the fourfold exclusion'
+[OK ] WRITEUP/note/symmetric_es7.tex:160-160 contains '$N(C_2)\\ge 32$, with $N(C_2)=32$ if $ES(7)=33$'
+[OK ] WRITEUP/note/symmetric_es7.tex:244-245 contains 'excluding $34$ points would'
+[OK ] WRITEUP/note/symmetric_es7.tex:248-248 contains 'The parallelogram cases are open'
+[OK ] C2FINAL/README.md:6-7 contains '**not yet claimed**'
+[OK ] C2FINAL/README.md:163-164 contains '`C2C34/README.md` and `WRITEUP/SYMMETRIC.md` still describe the parallelogram cases as open'
+all quoted phrases present: True
+C2FINAL item 6 mentions 'symmetric_es7.tex': False
+C2FINAL item 6 mentions 'note': False
+C2FINAL item 6 mentions 'Corollary': False
+C2FINAL item 6 mentions 'Cor.': False
+C2FINAL item 6 mentions 'table': False
+C2FINAL item 6 mentions 'N(C2)': False
+C2FINAL item 6 mentions 'assembled': False
+C2FINAL item 6 mentions 'theorem': False
+
+====================================================================================================
+2. Paragraphs about symmetric sets of 33 or more points (candidates for an assembled theorem)
+====================================================================================================
+### C3AUDIT/TASK.md:13
+Paths are under `cloud/es7-2026-10-19/`.
+- **Symmetry reduction:** a 33-point counterexample to ES(7) = 33 (33 points in general position, no 7 in convex position) with a nontrivial symmetry has a reflection or a rotation by 120°; the class with both (D3) is excluded in `results/E` and `results/E2`. Find where each step is argued (`results/C3-S`, `results/C`, `results/C2`, `results/E`, `results/E2` and their READMEs).
+- **Base encoding of the 3-fold class:** `results/C3a` (`c3cnf.py`, `validate.py`, `check_identities.py`, `controls`), `results/C3b` (`DERIVATION.md`), and `results/C3-S/tools/gen_case.py`. The base CNF `gen_case.py 11 7 none` has header `p cnf 168399 4154921` and sha256 `bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da`, said to be byte-identical to C3a's chain CNF.
+- **Decomposition:** `results/C3-S/soundness.md` (Lemmas 1 to 5 and the cover theorem), `results/C3-S/tools/hullcase.py`, the root manifest `manifest_depth2.tsv` (11 top cases, 1,630 depth-2 roots), and the validation tools and logs listed in `results/C3-S/README.md`.
+- **Drivers and records:** `results/C3-S/tools/close_node.py`, `close_tree.py` and `compose.py`; the records `results/C3WAVE1/C*/out.jsonl` (and `results/C3WAVE2/K*/out.jsonl` as they arrive).
+
+### Caudit/README.md:183
+**Would not establish:**
+- anything about sets without a reflection symmetry. This is not ES(7) = 33;
+- anything about mirror sets with an even number of points and no axis point. Heptagon-free
+  mirror 32-point sets exist, and from size 34 on such sets have no symmetric 33-point
+  subset;
+- anything about rotational symmetry, or about sets not in general position;
+- a machine-checked theorem, while the mirror, hull, interior and substitution steps remain
+  paper proofs.
+
+### LIT/RELATED.md:58
+- **Szekeres–Peters 2006** (ANZIAM J. 48, 151–164): ES(6) = 17, by an exhaustive search over a
+  combinatorial model of "signature functions" that contains every realizable configuration.
+  Three independent implementations were made, at a cost of roughly 1,500 CPU hours (secondary sources).
+- **Marić 2019** (J. Autom. Reason. 62, 301–329): a new representation plus symmetry breaking
+  and a SAT solver reduces the ES(6) = 17 proof to about half an hour, and the reduction is
+  formalized in Isabelle/HOL.
+- **Balko–Valtr 2017** (Eur. J. Combin. 66, 13–23; ENDM 49, 2015): a SAT attack on the
+  Erdős–Tuza–Valtr refinement of the conjecture. It refutes a stronger conjecture of Peters and
+  Szekeres about red–blue colorings of ordered 3-uniform hypergraphs. Instance generator at
+  kam.mff.cuni.cz/~balko/ES_SAT.
+- **Scheucher 2023** (Comput. Geom. Topol.; arXiv:2105.08406): a SAT model over acyclic
+  chirotopes for Erdős–Szekeres numbers in dimensions 3 to 5 (for example g^(3)(7) = 13).
+- **Heule–Scheucher 2024** (TACAS 2024; arXiv:2403.00737): h(6) = 30. Every 30 points in
+  general position contain an empty hexagon, via an O(n⁴)-clause CNF solved in about 17,300 CPU
+  hours with a checked proof. The paper also re-proves ES(6) = 17 in seconds, and shows that
+  every 24 points contain a 6-hole or a 7-gon.
+- **Subercaseaux–Nawrocki–Gallicchio–Codel–Carneiro–Heule 2024** (ITP 2024, LIPIcs 35;
+  arXiv:2403.17370): Lean 4 verification of the h(6) = 30 encoding, with the LRAT proof check
+
+### LIT/RELATED.md:135
+**(b) Possible symmetries of a 33-point 7-gon-free set, and the D3 case.** We did not find prior
+work stating that a 33-point set in general position with no convex 7-gon can only have a
+reflection, a 120° rotation, or both as nontrivial symmetries, and we did not find prior work
+excluding the D3 case. The closest known result is the 3-fold UNSAT result for 16 points without
+a convex hexagon (Subercaseaux et al. 2025), which is a different (n, k).
+
+### LIT/TASK.md:13
+What prior work exists on the Erdős–Szekeres problem for 7 and 8 points (the "happy ending problem": ES(7) = 33 is conjectured), on symmetric point sets without large convex polygons, and on SAT-based or formally verified approaches to these problems? Is any of the following already known?
+- (a) Every set of 33 points in the plane in general position that is invariant under a reflection contains 7 points in convex position. This is this repository's result: `cloud/es7-2026-10-19/results/V3Z/summary.md`, `results/V2-L/README.md` §9, `results/FINAL/README.md`.
+- (b) For 33 points in general position with no 7 in convex position, the only possible nontrivial symmetries are a reflection, a rotation by 120°, or both, and the case with both (D3) is impossible (`results/E`, `results/E2`, `results/C3-S`).
+- (c) The upper bound ES(8) ≤ 311, proved on the main branch (commit c019a54, "Prove ES(8) <= 311"; `git fetch origin main` and read its README). What is the best previously published upper bound for ES(8)? (The lower bound ES(8) ≥ 65 is the classical 2^(n−2) + 1 construction; only its Lean formalization is ours.)
+
+### SYMMAX/README.md:29
+`results/C3FINAL` with the mirror class gives: every set of 33 points in general position with a nontrivial symmetry
+contains 7 points in convex position. So a 33-point counterexample to ES(7) = 33 has no symmetry.
+
+### SYMZ/README.md:11
+**Theorem 2.** Every mirror-symmetric set of at least 33 points in general position contains a convex 7-gon. The
+largest mirror-symmetric set without one has exactly 32 points (`results/SYMMAX/mirror_32points.txt`).
+- At most two points lie on the axis.
+- With none, keep 17 mirror pairs. This gives Theorem 2b's case.
+- With one or two, keep 16 mirror pairs and one axis point. This gives Theorem 2a's case.
+
+### WRITEUP/SYMMETRIC.md:59
+**Corollary 3.** Assume Theorems 1 and 2, the fivefold exclusion of §2 and the published fourfold exclusion
+(arXiv:2506.00224, §6.2). Then every set of at least 33 points in general position without a convex 7-gon has one of
+two forms:
+- it has no nontrivial symmetry; or
+- its symmetry group is exactly the half-turn group C2, and it then has an even number of points, at least 34.
+
+### WRITEUP/note/symmetric_es7.tex:16
+\begin{abstract}
+Let $ES(7)$ be the least $n$ such that every $n$ points in general position in the plane contain $7$ points in convex
+position; the Erd\H{o}s--Szekeres conjecture predicts $ES(7)=33$. We show, with computer-assisted proofs, that every
+$33$-point set in general position with a threefold rotational symmetry contains a convex heptagon, and that every
+mirror-symmetric set of at least $33$ points does. Together with explicit examples, the largest threefold-symmetric and
+mirror-symmetric sets without a convex heptagon have exactly $31$ and $32$ points. Combined with the fourfold result of
+Subercaseaux, Mackey, Qian and Heule and a fivefold exclusion, the only symmetric sets of at least $33$ points that could
+still avoid a convex heptagon are centrally symmetric sets of even size at least $34$. As companion material we record
+exact maxima for other symmetry types, with their antecedents, and an explicit centrally symmetric $32$-point example,
+which is a special case of a construction of Valtr described by Baek and Balko. None of this settles $ES(7)$ or improves
+its upper bound.
+\end{abstract}
+
+### WRITEUP/note/symmetric_es7.tex:77
+\section{Mirror symmetry}\label{sec:mirror}
+\begin{theorem}[computer-assisted]\label{thm:M}
+Every mirror-symmetric set of at least $33$ points in general position contains $7$ points in convex position. The largest
+mirror-symmetric set in general position without a convex heptagon has exactly $32$ points.
+\end{theorem}
+\begin{proof}[Assembly]
+By general position at most two points lie on the axis. If none does, the size is even, hence at least $34$, and $17$
+mirror pairs form an axis-free $34$-point mirror set: this is excluded by Theorem~\ref{thm:M34}. If one or two do, $16$
+mirror pairs and one axis point form a $33$-point mirror set with exactly one point on the axis: this is excluded by
+Theorem~\ref{thm:M33}. An exact $32$-point example with $16$ pairs is \texttt{SYMMAX/mirror\_32points.txt}.
+\end{proof}
+
+### WRITEUP/note/symmetric_es7.tex:121
+\begin{corollary}\label{cor:only}
+Assume Theorems~\ref{thm:A} and~\ref{thm:M}, Theorem~\ref{thm:E} below and the fourfold exclusion
+of~\cite[\S6.2]{SMQH25}. Then a set of at least $33$ points in general position without a convex heptagon either has no
+nontrivial symmetry or has symmetry group exactly the half-turn group, and then it has an even number of points, at
+least $34$.
+\end{corollary}
+\begin{proof}
+Reflections are excluded by Theorem~\ref{thm:M}. Rotations of order $s\ge7$ are excluded by Lemma~\ref{lem:sizes}(a), and
+orders $3$, $4$ and $5$ by deleting whole orbits; order $6$ contains order $3$. The half-turn remains, and by
+Lemma~\ref{lem:sizes}(b) its centre is not a point of the set.
+\end{proof}
+
+candidate paragraphs: 11
+
+====================================================================================================
+3. Files that still call the central 34-point case open / unsolved
+====================================================================================================
+B3/README.md:7: **Status: OPEN.** Nothing was decided. No model was found, so there is no counterexample, and
+C2C34/README.md:12: **Status: open.** Certified so far:
+C2C34/README.md:22: The parallelogram cases are not solved, so the question stays open.
+SYMMAX/README.md:13: | 2-fold rotation (central symmetry) | 2m (no centre) | `results/SYM2/sym7_32points.txt` (32; an explicit case of the Valtr construction described by Baek and Balko, see `results/SYM2`) | a 34-point s
+SYMMAX/README.md:41: Not excluded: centrally symmetric sets of 34 or more points. They are the only remaining symmetric route; see
+SYMZ/README.md:126: ## 5. Centrally symmetric sets of 34 points: status (open)
+WAVE1/W03/README.md:56: **Shard status: OPEN.** 6 of 11 top cubes are closed. The run can resume:
+WRITEUP/CERTIFICATES.md:154: themselves are not all solved, and the central 34-point case remains open.
+WRITEUP/SYMMETRIC.md:83: | 2-fold rotation | at least 32; exactly 32 if ES(7) = 33 | `SYM2/sym7_32points.txt` | open (§4) |
+WRITEUP/SYMMETRIC.md:194: - The 8 canonical parallelogram cases are open. A split at the second convex layer gives 560 subcases each; nested
+WRITEUP/note/symmetric_es7.tex:160: $N(C_5)=31$ and $N(C_2)\ge 32$, with $N(C_2)=32$ if $ES(7)=33$.
+WRITEUP/note/symmetric_es7.tex:248: have a parallelogram hull. The parallelogram cases are open; nested parallelograms, the layer structure of the extremal $32$-point sets,

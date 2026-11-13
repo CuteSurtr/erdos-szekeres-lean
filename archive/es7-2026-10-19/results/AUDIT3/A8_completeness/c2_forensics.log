@@ -1,0 +1,25 @@
+records 2492 certified 2385
+field layouts: 3
+   2320 19 ('unit', 'case', 'kind', 'status', 'cap_s', 'solve_s') ...
+   104 11 ('unit', 'case', 'kind', 'status', 'cap_s', 'solve_s') ...
+   68 17 ('unit', 'kind', 'representative', 'status', 'cap_s', 'solve_s') ...
+proof hashes shared by different (unit, CNF) pairs: 0 []
+units with more than one CNF hash among certified records: 0 []
+lrat-check MB/s: n=2385 min 12.7 median 60.4 p99 108.3 max 130.9
+   top 3: [(130.86610907692307, 'C2P/LOCAL', 'P7_2-10-13'), (130.57576910569105, 'C2P5/LOCAL', 'P3_5-8-14'), (126.51684043243243, 'C2C34/pilot', 'P8_cover')]
+cake_lpr MB/s: n=2385 min 1.5 median 10.5 p99 27.1 max 34.9
+   top 3: [(34.933458275154, 'C2P/LOCAL', 'P7_2-10-13'), (34.09940467091295, 'C2P5/LOCAL', 'P3_5-8-14'), (32.685669009100096, 'C2P5/LOCAL', 'P3_1-13-15')]
+proof MB per solve s: n=2385 min 1.4 median 9.5 p99 34.0 max 47.4
+   top 3: [(47.352461873459326, 'C2P5/LOCAL', 'P3_4-9-11'), (40.415253852526924, 'C2P3/LOCAL', 'P6_8-12-13'), (40.35411105498349, 'C2C34/pilot', 'P8_9-11-12')]
+odd records: 0 []
+   cake MB/s C2C34/cloud: n=65 median 25.6 max 32.5
+   cake MB/s C2P/LOCAL: n=18 median 26.9 max 34.9
+   cake MB/s C2P/cloud: n=418 median 11.1 max 16.9
+   cake MB/s C2P2/LOCAL: n=8 median 22.8 max 27.1
+   cake MB/s C2P2/cloud: n=168 median 10.7 max 14.0
+   cake MB/s C2P3/LOCAL: n=22 median 24.8 max 25.7
+   cake MB/s C2P3/cloud: n=275 median 10.6 max 13.3
+   cake MB/s C2P4/LOCAL: n=34 median 6.2 max 26.7
+   cake MB/s C2P4/cloud: n=269 median 10.3 max 12.4
+   cake MB/s C2P5/LOCAL: n=54 median 23.2 max 34.1
+   cake MB/s C2P5/cloud: n=1054 median 10.0 max 13.0

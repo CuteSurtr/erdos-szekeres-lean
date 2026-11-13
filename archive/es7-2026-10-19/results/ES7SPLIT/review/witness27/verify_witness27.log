@@ -1,0 +1,17 @@
+file witness27_copy.txt: 27 points; designated b = index 26 = (0, 0)
+general position: True
+hull (gift wrapping): 5 vertices: [(0, 0), (31, -110353), (30, -19442), (25, -1272), (15, -16)]
+b is a hull vertex: True
+layer profile: [5, 6, 5, 6, 4, 1]
+  layer 1: [(0, 0), (31, -110353), (30, -19442), (25, -1272), (15, -16)]
+  layer 2: [(6, -55), (26, -19452), (29, -19443), (24, -1274), (14, -19), (12, -22)]
+  layer 3: [(7, -53), (27, -19448), (28, -19445), (23, -1275), (13, -21)]
+  layer 4: [(8, -52), (16, -1311), (19, -1305), (22, -1280), (11, -44), (9, -47)]
+  layer 5: [(10, -46), (17, -1308), (18, -1306), (21, -1281)]
+  layer 6: [(20, -1283)]
+method B k=5: subsets 80730, convex 17823 | containing b 14950, convex containing b 2001
+method B k=6: subsets 296010, convex 9632 | containing b 65780, convex containing b 0
+method B k=7: subsets 888030, convex 0 | containing b 230230, convex containing b 0
+method C: 5-subsets through b tested 14950, convex 2001
+method C: 6-subsets through b tested 65780, convex 0
+method C: 7-subsets through b tested 230230, convex 0

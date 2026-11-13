@@ -1,0 +1,7 @@
+m=5 t=11; theta (deg) = ['0.0', '0.141210171595', '0.154748616684', '0.182587753237', '0.200814944131', '0.253502036311', '18.9576493847', '19.2112365882', '19.2062759385', '19.3737506462', '19.3724578057']
+genericity margin (min of psi gaps, psi_i, |theta_i - 180/m|, W - theta_i) = 0.00129284 degrees
+collinear triples among canonical orbits: 0
+nested (convex layers, exact): True
+chord clauses 1472, applicable (condition part false) 552, VIOLATED 0
+gen.py order/angle/nest clauses 66177, violated 0
+regen_m5t11.clauses: 1472 clauses verified (4342 cases), 0 failed {}

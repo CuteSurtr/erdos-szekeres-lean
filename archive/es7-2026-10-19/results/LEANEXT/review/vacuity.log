@@ -1,0 +1,31 @@
+'ErdosSzekeres.LayerLemma.Review.nest4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.LayerLemma.Review.orbit4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.LayerLemma.Review.layers4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.LayerLemma.Review.chain4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.LayerLemma.Review.inv6' depends on axioms: [propext, Classical.choice, Quot.sound]
+ErdosSzekeres.LayerLemma.sixfold_octagon : ErdosSzekeres.LayerLemma.Sixfold66 →
+  ∀ (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point),
+    ErdosSzekeres.GeneralPosition S →
+      ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / 6)) S →
+        61 ≤ S.card → ErdosSzekeres.HasConvexNGon 8 S
+ErdosSzekeres.LayerLemma.sevenfold_octagon : ErdosSzekeres.LayerLemma.Sevenfold70 →
+  ∀ (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point),
+    ErdosSzekeres.GeneralPosition S →
+      ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / 7)) S →
+        65 ≤ S.card → ErdosSzekeres.HasConvexNGon 8 S
+def ErdosSzekeres.LayerLemma.Sixfold66 : Prop :=
+∀ (T : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point),
+  ErdosSzekeres.GeneralPosition T →
+    c ∉ T →
+      ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / 6)) T →
+        T.card = 66 → ErdosSzekeres.HasConvexNGon 8 T
+def ErdosSzekeres.LayerLemma.Sevenfold70 : Prop :=
+∀ (T : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point),
+  ErdosSzekeres.GeneralPosition T →
+    c ∉ T →
+      ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / 7)) T →
+        T.card = 70 → ErdosSzekeres.HasConvexNGon 8 T
+real 28.46
+user 45.57
+sys 1.80
+exit=0

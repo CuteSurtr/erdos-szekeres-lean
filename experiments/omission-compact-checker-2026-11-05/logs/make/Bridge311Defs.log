@@ -1,0 +1,29 @@
+'CompactChecker.Bridge311Defs.balanced_bridge_is_ExcludesHoleBudget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'CompactChecker.Bridge311Defs.residual_bridge_is_Excludes2650Zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+	Command being timed: "lean -R experiments/omission-compact-checker-2026-11-05 -o experiments/omission-compact-checker-2026-11-05/build/CompactChecker/Bridge311Defs.olean experiments/omission-compact-checker-2026-11-05/CompactChecker/Bridge311Defs.lean"
+	User time (seconds): 2.12
+	System time (seconds): 0.49
+	Percent of CPU this job got: 92%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.84
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3162880
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 606
+	Minor (reclaiming a frame) page faults: 67504
+	Voluntary context switches: 3170
+	Involuntary context switches: 332
+	Swaps: 0
+	File system inputs: 178776
+	File system outputs: 112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

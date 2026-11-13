@@ -1,0 +1,179 @@
+# Finite octagon status and remaining work
+
+**10 November 2026: ES(8) ≤ 310 is Lean-checked (not refereed).**
+`ErdosSzekeres.Omission.Compact310.forces_convex_octagon_310` in
+[Final310Compact.lean](../experiments/omission-compact-checker-2026-11-05/assembly/Final310Compact.lean)
+lowers the balanced population bound to 187: a budget-64 branch-and-bound over
+the balanced catalog (at least 65 of 252 states missing) closed all 4,096
+contexts with 7,048,218 leaves, checked in blocks by the compact reflective
+checker, 36.7 CPU-hours of Lean; see the
+[310 record](../experiments/omission-compact-checker-2026-11-05/README.md) and the
+[search record](../archive/es7-2026-10-19/results/ES8UPPER20261105/README.md).
+Octagon-free sets therefore have at most 309 points. Further steps are costly
+or blocked: balanced budget 65 has not been attempted, an exact 71-hole vector
+satisfying all 3,131 balanced rows rules out budgets of 71 or more over the
+present rows, and residual budget 33 needs new geometric rows, because
+33-hole assignments satisfy all current residual rows.
+
+**19 October 2026: ES(8) ≤ 311 is proved.** `ErdosSzekeres.Omission.forces_convex_octagon_311`
+in [Final311/Final.lean](../experiments/omission-final311-2026-10-14/Final311/Final.lean)
+lowers the balanced population bound to 188 with a 782,437-leaf certificate over
+the balanced catalog (at least 64 of 252 states missing); see the
+[311 record](../experiments/omission-final311-2026-10-14/README.md). Octagon-free
+sets therefore have at most 310 points. Further steps are costly or blocked:
+balanced budget 64 is projected at roughly eight times this certificate, and
+residual budget 33 needs new geometric rows, because 33-hole assignments
+satisfy all current residual rows.
+
+**14 October 2026: ES(8) ≤ 312 is proved.** `ErdosSzekeres.Omission.forces_convex_octagon_312`
+in [Final312/Final.lean](../experiments/omission-final312-2026-10-13/Final312/Final.lean)
+lowers the balanced population bound to 189 with a 93,988-leaf certificate over
+the balanced catalog (at least 63 of 252 states missing); see the
+[312 record](../experiments/omission-final312-2026-10-13/README.md). Octagon-free
+sets therefore have at most 311 points.
+
+**12 October 2026: ES(8) ≤ 313 is proved.** `ErdosSzekeres.Omission.forces_convex_octagon_313`
+in [Final313/Final.lean](../experiments/omission-final313-2026-10-11/Final313/Final.lean)
+combines the [conditional bridge](../experiments/omission-residual32-bridge2650-2026-10-11/README.md)
+with an exact 437,580-leaf certificate excluding at most 32 residual holes over
+the 2,650-row catalog. The whole chain was kernel-checked locally with only the
+standard axioms; see the [313 record](../experiments/omission-final313-2026-10-11/README.md).
+Sections below that describe 313 as open record the state before this result.
+
+# Finite octagon status and remaining work
+
+**10 October 2026: ES(8) ≤ 314 is proved. No geometric transfer or arithmetic
+obligation remains for that theorem.** This also settles every former project
+target from 317 down to 315. Their earlier proof records remain preserved.
+
+The closed results are `ErdosSzekeres.Omission.forces_convex_octagon_314` and
+`convex_octagon_of_card_ge_314`, in
+[FinalCover314B61FusedR31Fused.lean](../experiments/omission-global-assembly-2026-10-10/FinalCover314B61FusedR31Fused.lean).
+The [complete check record](../experiments/omission-global-assembly-2026-10-10/global-cover-314-check.json)
+binds 3,929 unchanged inputs and contains successful final axiom reports.
+It uses only `propext`, `Classical.choice` and `Quot.sound`. Its scope is
+arbitrary finite real planar point sets in general position, with no
+emptiness requirement for the polygon.
+
+## What closed the geometric transfer
+
+The projective chart removes one point and excludes 7-caps. The minimum-slope
+partition gives balanced and residual induced configurations with all needed
+avoidance and junction conditions. Actual attained ranks inject those points
+into the 252- and 154-state catalogs. All 2,685 balanced and 1,187 residual
+constraints are proved for those assignments, including the Baek block bound
+and its supporting-line transfer to convex real polygons.
+
+The checked arithmetic exclusions rule out at most 61 balanced holes and at
+most 31 residual holes, giving populations at most 190 and 122. Thus an
+avoiding original set has at most `190 + 122 + 1 = 313` points. The next integer
+314 is the forcing threshold. No abstract-model realizability assumption is
+used in that implication. The balanced and residual arithmetic certificates
+contain 22,318 and 50,945 leaves, respectively; their 446 and 1,108 rounding
+cuts and exact catalog identifications are also checked in Lean.
+
+## Lower bound and the 11 October searches
+
+The lower bound **ES(8) ≥ 65** is now proved in Lean as the classical
+Erdős–Szekeres construction; see [§1.1 of the exposition](../math.md#11-the-classical-lower-bound).
+Raising it would disprove the Erdős–Szekeres conjecture. The
+[lower-bound search record](../experiments/es8-lower-bound-search-2026-10-11/README.md)
+shows by an exact face-by-face computation that no 65th point can be added
+to the 64-point witness without a convex octagon. A heuristic annealing search
+from such extended sets never reduced their single convex octagon, and was
+too weak to rediscover a 64-point octagon-free set from a random start.
+Neither result constrains other 65-point sets.
+
+The [CP-SAT residual record](../experiments/omission-residual32-cpsat-2026-10-11/README.md)
+ran fifty minutes on twelve workers against the 2,650-row catalog. It found
+33-hole assignments but left the lower bound at 28, against the LP value 27.
+A discovery round around the saved one-row 32-hole near-model found no new
+row. The status of 313 below is unchanged.
+
+The [conditional bridge](../experiments/omission-residual32-bridge2650-2026-10-11/README.md)
+now proves in Lean that ES(8) ≤ 313 follows from one finite arithmetic
+statement, `Excludes2650Zero 32`: no 0/1 hole vector with state zero occupied
+satisfies all 2,650 rows with at most 32 holes. Every row is bound literally to
+its geometric theorem. That statement itself is not yet proved; an exact
+branch-and-bound certificate for it is the remaining step.
+
+A further [family test](../experiments/es8-lower-bound-search-2026-10-11/README.md#a-family-of-stacking-constructions-added-11-october-2026)
+found 76 saturated 64-point octagon-free stacking constructions, covering 75
+order types, and showed that the stacking bound recursion cannot certify 65
+points.
+
+## Stronger research targets, not completed bounds
+
+| Target | Required work | Unknowns and rough size |
+| --- | --- | --- |
+| 313 through the balanced side | Exclude at most 62 balanced holes, export and check a complete arithmetic proof, then reuse the proved geometric interface. | The bounded witness search was inconclusive. No exclusion or 62-hole witness was found. The geometric transfer for the present catalog is already available, but there is no reliable search or proof-size estimate. |
+| 313 through the residual side | Exclude at most 32 holes using stronger geometry, check the complete arithmetic certificate and its literal row binding, then compose the result with the partition. | The old 2,469-row catalog admits a Lean-checked 32-hole witness, so its full exclusion is impossible. A new core, 128 Fourth-template rows, 48 relaxed Sixth-template rows, and four further coupled rows are geometrically proved. The resulting 2,650-row system excludes that witness, but bounded searches remain inconclusive. A prior partial tree already had 391,293 leaves; a successful new proof could differ radically in size. There is no reliable completion-time or proof-size estimate. |
+| Further improvements | Find stronger necessary constraints or a stronger counting argument, and prove the complete resulting reduction. | The newer coupled and structural geometric rows are individually proved. They do not themselves establish a stronger population bound, and no reliable estimate for another global improvement is available. |
+
+The enlarged residual model has 2,469 rows, including twelve arithmetic
+consequences. Its [full literal geometric binding](../experiments/omission-residual32-transfer-2026-10-10/README.md)
+is now proved in Lean. `OmissionResidual32Transfer.all_rows` establishes every
+indexed row for the same actual residual assignment, and `feasible_holes`
+proves the population equation `sum holes + n = 154`. The conditional theorem
+`residual_bound_of_hole_budget` isolates the arithmetic exclusion still needed;
+it does not supply that exclusion. The existing chart and partition can then
+be reused. The old model is now proved to admit 32 holes; that conditional
+interface cannot be discharged from these rows alone.
+
+The [case-4 witness](../experiments/omission-residual32-case4-2026-10-10/README.md)
+is checked in Lean and satisfies every old row, the branch context, and
+occupation of state zero. Cases 2 and 7 remain incomplete. Their partial
+certificates cannot change the feasibility of case 4. The
+[new coupled obstruction](../experiments/omission-residual32-witness-coupled-2026-10-10/README.md)
+proves that this witness is not geometrically realizable and supplies a valid
+new row. The [128-row Fourth-template family](../experiments/omission-residual32-fourth-global-variants-2026-10-10/README.md)
+is also Lean-checked. A [relaxed Sixth template](../experiments/omission-residual32-sixth-relaxed-2026-10-10/README.md)
+adds 48 further Lean-checked inequalities. Four further [coupled certificates](../experiments/omission-residual32-rank-certificates-2026-10-10/README.md)
+bring the current total to 2,650 rows. The strengthened model
+has no complete exclusion or feasible 32-hole witness at this checkpoint;
+one saved 32-hole candidate still violates only row 973, while the other saved
+basins now fail additional new rows. The geometric necessity of
+these additional rows is finished. Whether the combined inequalities force
+at least 33 holes is unknown.
+The separately proved [attained-rank restriction](../experiments/omission-residual-rank-attainment-2026-10-10/README.md)
+bounds an edge's cup label by its source height plus one. It removes 13,832
+candidate edge labels, but produces no new incompatible pair or bounding-box
+forced triple sign in the finite assessment. Two of the new certificates use
+16 and 3 instances of its coupled clause. However, the new
+[normalization theorem](../experiments/omission-residual-rank-normalization-2026-10-10/README.md)
+proves that this bound does not change satisfiability of the abstract coupled
+model: clipping cup labels preserves all its constraints on the same occupied
+states. Thus it can help individual proof certificates but cannot alone
+exclude more abstract supports. The theorem does not cover additional
+equations expressing exact attained ranks or establish realizability.
+
+The four new rows successively strengthen the previous conjunction, as
+checked by exact 33-hole countermodels. They also exclude the entire saved
+306-vertex single-swap component of 33-hole assignments. This is a finite
+local-search result, not an enumeration of all 33-hole assignments or a
+global 32-hole exclusion. The [2,650-row search record](../experiments/omission-residual32-rank-global-2026-10-10/README.md)
+separates these checks from the bounded solver runs.
+See [MATH.md](MATH.md) for the exact population calculation and certificate logic.
+
+The [new residual checkpoint](../experiments/omission-residual32-resume-2026-10-10/README.md)
+preserves the resumed tree's identity and sixteen closed conditional subtrees;
+the earlier frozen tree remains unchanged. The [five-cut Lean bundle](../experiments/omission-residual32-context-certificates-2026-10-10/README.md)
+and transfer bundle distinguish checked theorems from integer search evidence.
+The [six resumed Lean subtrees](../experiments/omission-residual32-resume-lean-2026-10-10/README.md)
+discharge 44 splits and 50 weighted leaves and supply actual geometric corollaries.
+The [balanced search diagnostic](../experiments/omission-balanced62-research-2026-10-10/README.md)
+and [SAT continuation](../experiments/omission-balanced62-sat-2026-10-10/README.md)
+are inconclusive. The separately proved occupancy of state zero is an additional
+actual-rank restriction; fixing it closed no extra original context in the
+numerical probe. No stronger bound follows from these partial results.
+
+A Lean-checked 32-hole abstract witness satisfies all 1,187 original residual
+rows and all 45 earlier additions. Later searches found further witnesses for
+some intermediate models. These expose limitations of those specific Boolean
+models; they do not provide real residual configurations or Erdős–Szekeres lower
+bounds, and they do not establish tightness of the newest strengthened model.
+
+The source method and comparison remain Michael Schroeder's
+[version-1 archive](https://doi.org/10.5281/zenodo.22842891). No currently-best-bound
+or priority claim is made. These finite improvements do not change HMPT's
+asymptotic coefficient.

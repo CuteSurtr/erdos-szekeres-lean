@@ -1,0 +1,11 @@
+Part A: 46080 literal configurations (720 index placements x 64 sign patterns); mismatches 0
+mirror t=4 K=5 axis=0: header p cnf 60 3502; orig == nofast (clause multiset): True; fast-path clauses 2112 of 3502 (132 hits); M6 leaves fast-path clauses unchanged: True; M6 changes 1052 non-fast clauses
+mirror t=4 K=5 axis=1: header p cnf 104 8380; orig == nofast (clause multiset): True; fast-path clauses 5952 of 8380 (372 hits); M6 leaves fast-path clauses unchanged: True; M6 changes 1508 non-fast clauses
+mirror t=4 K=5 axis=2: header p cnf 169 16695; orig == nofast (clause multiset): True; fast-path clauses 12608 of 16695 (788 hits); M6 leaves fast-path clauses unchanged: True; M6 changes 2428 non-fast clauses
+mirror t=5 K=6 axis=0: header p cnf 286 15426; orig == nofast (clause multiset): True; fast-path clauses 11360 of 15426 (710 hits); M6 leaves fast-path clauses unchanged: True; M6 changes 2580 non-fast clauses
+mirror t=5 K=6 axis=1: header p cnf 481 28822; orig == nofast (clause multiset): True; fast-path clauses 22560 of 28822 (1410 hits); M6 leaves fast-path clauses unchanged: True; M6 changes 3340 non-fast clauses
+mirror t=5 K=6 axis=2: header p cnf 767 49079; orig == nofast (clause multiset): True; fast-path clauses 39520 of 49079 (2470 hits); M6 leaves fast-path clauses unchanged: True; M6 changes 4840 non-fast clauses
+mirror t=6 K=7 axis=0: header p cnf 1218 47229; orig == nofast (clause multiset): True; fast-path clauses 37440 of 47229 (2340 hits); M6 leaves fast-path clauses unchanged: True; M6 changes 5110 non-fast clauses
+mirror t=6 K=7 axis=1: header p cnf 2015 77332; orig == nofast (clause multiset): True; fast-path clauses 63040 of 77332 (3940 hits); M6 leaves fast-path clauses unchanged: True; M6 changes 6250 non-fast clauses
+mirror t=6 K=6 axis=2: header p cnf 1701 118045; orig == nofast (clause multiset): True; fast-path clauses 98880 of 118045 (6180 hits); M6 leaves fast-path clauses unchanged: True; M6 changes 8470 non-fast clauses
+RESULT PASS

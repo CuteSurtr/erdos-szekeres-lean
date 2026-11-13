@@ -1,0 +1,2 @@
+# run.sh (start epoch 1793451697 = Sat Oct 31 13:01:37 UTC 2026, END 1793459797 = Sat Oct 31 15:16:37 UTC 2026)
+setsid nohup python3 /home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results/C2P/tools/lane.py /opt/work /home/user/erdos-szekeres-lean/cloud/es7-2026-10-19/results /opt/work/units.tsv /opt/work/out.jsonl 1793459797 > /opt/work/lane.stdout 2>&1 &

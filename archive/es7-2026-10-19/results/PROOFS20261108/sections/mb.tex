@@ -1,0 +1,1220 @@
+\section{Mirror bounds via Baek's theorem and the three-class reduction}\label{mb:sec}
+
+\paragraph{What this section proves.}
+Let $S\subset\R^2$ be a finite set in general position that is mapped into itself by the reflection in a line. We prove
+that $\card S\le 32$ if $S$ contains no $7$ points in convex position, $\card S\le 46$ if it contains no $8$ points in
+convex position, and $\card S\le 226$ if it contains no $9$ points in convex position
+(Theorems~\ref{mb:thm:seven}, \ref{mb:thm:eight} and~\ref{mb:thm:nine}; each has a version for the $x$-axis and a version
+for an arbitrary line). The bounds for $7$ and $8$ rest on Baek's theorem on $4$-caps, the bound for $9$ in addition on
+the cups--caps theorem of Erd\H{o}s and Szekeres. These two theorems are \emph{cited}, in the exact form in which the Lean
+code uses them (Theorems~\ref{mb:thm:baek} and~\ref{mb:thm:capcup}). Everything between their abstract, purely
+combinatorial statements and the geometric notions is proved here in full (written proofs, not refereed): the bridge
+from Baek's configurations to points of the plane (Subsection~\ref{mb:ssec:bridge}), the capacity bounds $16$ and $22$
+(Subsection~\ref{mb:ssec:cap}) and $113$ (Subsection~\ref{mb:ssec:nine}) and the mirror reductions
+(Subsections~\ref{mb:ssec:red}--\ref{mb:ssec:nine}); the latter use the general mirror lemma
+and the general reductions of Theorems~\ref{mm:thm:mirror-polygon}, \ref{mm:thm:axis-polygon}, \ref{mm:thm:odd}
+and~\ref{mm:thm:line}, which are proved elsewhere in this document. Finally (Subsection~\ref{mb:ssec:three})
+we identify the two parametrisations of line reflections that occur in the Lean files of this section
+(Theorem~\ref{mb:thm:refl32}), prove the two mirror case classes of Definition~\ref{sr:def:classes}
+(Theorem~\ref{mb:thm:classes}), and restate the reduction Theorem~\ref{sr:thm:main} and part~(a) of
+Theorem~\ref{ar:thm:main} (the \lean{AffineEquiv} form) with the three remaining case classes as their only case-class
+hypotheses (Theorem~\ref{mb:thm:main3}, which is
+\emph{conditional} on these three statements; they are not proved in Lean or in this document, see
+Remark~\ref{mb:rem:main3}).
+
+\paragraph{Sources.}
+Paths beginning with \dirn{ErdosSzekeres/} or \dirn{docs/} are relative to the repository root; all other paths (such
+as \dirn{MIRRORETV/...}, \dirn{SYMLEAN/...} and the record directories named in Remark~\ref{mb:rem:main3}) are relative
+to the results directory of the project. A file name without a directory, such as \dirn{MirrorMain.lean}, is short for
+the file of that name whose full path is given in this section. The declarations treated here are in the following
+files (SHA-256, first $12$ hexadecimal digits):
+\begin{itemize}
+\item \dirn{MIRRORETV/lean/MirrorMain.lean} (\texttt{ca623e55a1b9}), namespace \lean{MirrorOdd};
+\item \dirn{MIRRORETV/lean/MirrorNine_append.lean} (\texttt{c2afca380211}), namespace \lean{C12Check}; this file is not
+  standalone: it was compiled appended to \dirn{MirrorMain.lean}; line numbers below refer to the file itself;
+\item \dirn{SYMLEAN/mirror/ReductionThreeClasses.lean} (\texttt{0cc83994fe8c}), called RTC below; its Part~C (lines
+  4238--4322) is treated in Subsection~\ref{mb:ssec:three};
+\item the vendored formalization of Baek's theorem (adapted from Baek's Lean code, Apache-2.0 licence):
+  \begin{itemize}
+  \item \dirn{ErdosSzekeres/Vendor/ETV/Main/Main.lean} (\texttt{83dd0a214204}),
+  \item \dirn{ErdosSzekeres/Vendor/ETV/Main/CapCup.lean} (\texttt{fb8fbefac260}),
+  \item \dirn{ErdosSzekeres/Vendor/ETV/Config/Defs.lean} (\texttt{ce2ccf7c1d28}),
+  \item \dirn{ErdosSzekeres/Vendor/ETV/Config/Lemmas.lean} (\texttt{5395e27a82cc}),
+  \item \dirn{ErdosSzekeres/Vendor/ETV/Lib/List/Defs.lean} (\texttt{46d750763528});
+  \end{itemize}
+\item the bridge files: \dirn{ErdosSzekeres/Omission/Realization.lean} (\texttt{ae4970e0808e}), which is the project's
+  own code (it has no adaptation header; \dirn{docs/THIRD_PARTY.md} says that its connections were added in the
+  project, using the strategy of M.~Schroeder's archive~\cite{Sch26}), and six files adapted from that archive (MIT
+  licence):
+  \begin{itemize}
+  \item \dirn{ErdosSzekeres/Omission/ActualRanks.lean} (\texttt{3788f5149b3a}),
+  \item \dirn{ErdosSzekeres/Omission/PlanarChains.lean} (\texttt{21161d053dc0}),
+  \item \dirn{ErdosSzekeres/Omission/ListGeometry.lean} (\texttt{1a03c283176b}),
+  \item \dirn{ErdosSzekeres/Omission/BoundaryGeometry.lean} (\texttt{f55a711e7aa9}),
+  \item \dirn{ErdosSzekeres/Omission/BaekGeometry.lean} (\texttt{db8ac3c30dc0}),
+  \item \dirn{ErdosSzekeres/Omission/Baek.lean} (\texttt{3433c3c2124d}).
+  \end{itemize}
+\end{itemize}
+
+\paragraph{Lean version and axioms.}
+The files were compiled with Lean 4.24.0 and Mathlib \texttt{f897ebcf}. The recorded \texttt{\#print axioms} outputs
+report exactly the three standard axioms \lean{propext}, \lean{Classical.choice}, \lean{Quot.sound} for the following
+declarations.
+\begin{itemize}
+\item \dirn{MIRRORETV/lean/MirrorMain.out} (\texttt{c6024155067e}), lines 848--863: the $16$ main theorems of
+  \lean{MirrorOdd}, among them \lean{mirror_seven} (line 848), \lean{mirror_eight} (849), \lean{mirror_seven_line} (850),
+  \lean{mirror_eight_line} (851), \lean{mirror_odd_general} (858) and \lean{mirror_odd_general_line} (862). The log
+  records no error.
+\item \dirn{MIRRORETV/lean/MirrorNine.out} (\texttt{976fda168e70}), lines 879--882: \lean{C12Check.config_capacity113},
+  \lean{C12Check.capacity113}, \lean{C12Check.mirror_nine}, \lean{C12Check.mirror_nine_line}. This log records the
+  compilation of the concatenation of \dirn{MirrorMain.lean} and \dirn{MirrorNine_append.lean}; in it, the lines of the
+  appended file are shifted by $2677$.
+\item \dirn{SYMLEAN/mirror/axioms.out} (\texttt{ab92257c6f17}): the six Part~C theorems \lean{reflLine_eq_lineRefl},
+  \lean{card_le_32_of_reflLine}, \lean{mirrorOneAxis33_proved}, \lean{mirrorNoAxis34_proved},
+  \lean{heptagon_of_nontrivial_isometry_3}, \lean{heptagon_of_nontrivial_affineEquiv_3}, and the $16$ \lean{MirrorOdd}
+  theorems in their copy inside RTC. This file is a filtered excerpt of the compile output: some lines are repeated,
+  and of the five \texttt{\#check} commands of RTC (lines 4312--4316) only the two for the \lean{_3} theorems have
+  output in it (lines 17--20, the first one again at lines 39--40), truncated after the binders \lean{HalfTurn34} and
+  \lean{Threefold33}.
+\end{itemize}
+Since \texttt{\#print axioms} reports the axioms of the whole dependency cone, these lines also cover the declarations
+that are used but not printed individually. Every other Lean declaration named in the head of a statement below is
+used by one of the printed theorems, for example \lean{capacity16}, \lean{capacity22g}, \lean{hasNGon_heptagon}, the
+bridge lemmas of Subsection~\ref{mb:ssec:bridge}, and the vendored theorems \lean{main} and \lean{Config.cap_cup}. In
+the three files of this section the tactic
+\lean{decide} occurs only on comparisons of small indices and on the binomial values $\binom62=15$, $\binom82=28$,
+$\binom93=84$, which the kernel evaluates; no \lean{native_decide}, \lean{sorry} or added axiom occurs in them or in the
+vendored and bridge files listed above. The logs were produced by the project and were not
+re-run for this document.
+
+\paragraph{Copies of the same code.}
+RTC lines 1562--4236 are byte-identical to \dirn{MIRRORETV/lean/MirrorMain.lean} lines 3--2677, so line $L$ of
+\dirn{MirrorMain.lean} is line $L+1559$ of RTC; we cite \lean{MirrorOdd} declarations by their lines in
+\dirn{MirrorMain.lean}. RTC lines 38--1559 are byte-identical to \dirn{SYMLEAN/AffineReduction.lean} lines 12--1533, and
+RTC lines 38--1084 to \dirn{SYMLEAN/SymmetricReduction.lean} lines 12--1058 (so a line $L$ of
+\dirn{SymmetricReduction.lean} is line $L+26$ of RTC). These identities can be checked with \texttt{sed} and \texttt{diff}.
+
+\paragraph{Dependencies and rigour.}
+We use the foundations (Definitions~\ref{fd:def:point}, \ref{fd:def:orient}, \ref{fd:def:gp}, \ref{fd:def:cp},
+\ref{fd:def:ngon}, \ref{fd:def:inv} and Lemmas~\ref{fd:lem:orient}, \ref{fd:lem:affine-orient}, \ref{fd:lem:collinear},
+\ref{fd:lem:cp-hull}, \ref{fd:lem:mono}, \ref{fd:lem:affine-cp}, \ref{fd:lem:separation}), the mirror lemma and the
+general reductions of Definition~\ref{mm:def:config} and Theorems~\ref{mm:thm:mirror-polygon},
+\ref{mm:thm:axis-polygon}, \ref{mm:thm:odd}, \ref{mm:thm:line}, and in
+Subsection~\ref{mb:ssec:three} Definitions~\ref{sr:def:iso}, \ref{sr:def:classes} and Theorems~\ref{sr:thm:main},
+\ref{ar:thm:main}. Three remarks refer to further results that no proof of this section uses:
+Remark~\ref{mb:rem:generated} (on the Lean proofs of Lemma~\ref{mb:lem:polygons}) to Lemma~\ref{fd:lem:pos-cycle},
+Remark~\ref{mb:rem:eight} (on the second Lean proof \texttt{mirror\_eight\textquotesingle} of
+Theorem~\ref{mb:thm:eight}(a)) to Theorem~\ref{mm:thm:even},
+and Remark~\ref{mb:rem:main3} (on the hypotheses of Theorem~\ref{mb:thm:main3}) to Theorems~\ref{ll:thm:layers},
+\ref{lg:thm:nesting}, \ref{cb:thm:c2} and~\ref{cb:thm:c3}. Every Lean declaration stated below is
+\emph{Lean-checked} (axioms evidence above); the proofs given here are \emph{written proofs (not refereed)}.
+Theorems~\ref{mb:thm:baek} and~\ref{mb:thm:capcup} are cited published theorems; their vendored formalizations are
+Lean-checked as part of the dependency cone above, but this document does not reprove them. Theorem~\ref{mb:thm:main3}
+takes as hypotheses three propositions that are not proved in Lean or in this document.
+
+\paragraph{Conventions.}
+Points are $p=(p_0,p_1)\in\R^2$ (Lean \lean{Point}, Definition~\ref{fd:def:point}); we also write $x(p):=p_0$ and
+$y(p):=p_1$, which avoids double subscripts for points that carry an index. $\orient$ is as in
+Definition~\ref{fd:def:orient}. We write
+$[n]:=\{0,1,\dots,n-1\}$ (Lean \texttt{Finset.range n}). Where $[m]$ is the index set of a configuration of $m$
+points, or the domain or codomain of a cap map (such as $f\colon[k]\to[n]$ in Subsection~\ref{mb:ssec:bridge}), it is
+the same set viewed as Lean's \texttt{Fin m}, as in Definition~\ref{mm:def:config}.
+``$S$ contains $k$ points in convex position'' means
+$\mathsf{HasConvexNGon}(k,S)$ of Definition~\ref{fd:def:ngon}: some $k$-element subset of $S$ is in convex position
+(Definition~\ref{fd:def:cp}); no emptiness is required. We use without comment the identities
+$\orient(a,c,b)=-\orient(a,b,c)$, $\orient(b,c,a)=\orient(a,b,c)$, $\orient(b,a,c)=-\orient(a,b,c)$,
+$\orient(a,b,a)=\orient(a,b,b)=0$ (Lemma~\ref{fd:lem:orient}; the last two are immediate from the formula of
+Definition~\ref{fd:def:orient}), and the fact that $\orient(a,b,w)$ is an affine function
+of $w$ for fixed $a,b$ (it equals $(x(b)-x(a))(y(w)-y(a))-(y(b)-y(a))(x(w)-x(a))$).
+
+%======================================================================
+\subsection{Baek's configurations and the two cited theorems}\label{mb:ssec:baek}
+
+\begin{definition}[configurations, caps, cups and gons;\\
+  \leanref{Config}{ErdosSzekeres/Vendor/ETV/Config/Defs.lean:20},\\
+  \leanref{Config.Cap3}{ErdosSzekeres/Vendor/ETV/Config/Defs.lean:30},\\
+  \leanref{Config.Cap}{ErdosSzekeres/Vendor/ETV/Config/Defs.lean:38},\\
+  \leanref{Config.Cup}{ErdosSzekeres/Vendor/ETV/Config/Defs.lean:41},\\
+  \leanref{Config.Gon}{ErdosSzekeres/Vendor/ETV/Config/Defs.lean:45},\\
+  \leanref{Config.NGon}{ErdosSzekeres/Vendor/ETV/Config/Defs.lean:57},\\
+  \leanref{Config.HasNCap}{ErdosSzekeres/Vendor/ETV/Config/Defs.lean:60},\\
+  \leanref{Config.HasNCup}{ErdosSzekeres/Vendor/ETV/Config/Defs.lean:63},\\
+  \leanref{Config.HasNGon}{ErdosSzekeres/Vendor/ETV/Config/Defs.lean:66}]\label{mb:def:config}
+Let $(\alpha,<)$ be a linearly ordered set. A \emph{configuration} $C$ on $\alpha$ is a ternary relation
+$\mathrm{Cup3}_C$ on $\alpha$ (in Lean a structure with the field \lean{Cup3} and a decidability witness, which plays no
+mathematical role). Put $\mathrm{Cap3}_C(a,b,c):\Leftrightarrow\neg\,\mathrm{Cup3}_C(a,b,c)$ (\lean{Config.Cap3}).
+Let $l=(l_0,\dots,l_{r-1})$ be a finite list of elements of $\alpha$, of length $\card l=r$.
+\begin{enumerate}[label=(\alph*)]
+\item $l$ is a \emph{$C$-cap} if $l_0<l_1<\dots<l_{r-1}$ and $\mathrm{Cap3}_C(l_i,l_{i+1},l_{i+2})$ for every $i$ with
+  $i+2<r$; $l$ is a \emph{$C$-cup} if $l_0<l_1<\dots<l_{r-1}$ and $\mathrm{Cup3}_C(l_i,l_{i+1},l_{i+2})$ for every $i$
+  with $i+2<r$. Only consecutive triples are constrained; every strictly increasing list of length at most $2$ is both a
+  $C$-cap and a $C$-cup.
+\item A pair $(l,l')$ of lists is a \emph{$C$-gon} if $\card l\ge2$, $l$ is a $C$-cap, $\card{l'}\ge2$, $l'$ is a
+  $C$-cup, and $l$ and $l'$ have the same first entry and the same last entry. It is an \emph{$n$-gon of $C$} if moreover
+  $\card l+\card{l'}=n+2$.
+\item For a finite set $S\subseteq\alpha$, $\mathsf{HasNCap}_C(n,S)$ means that some $C$-cap of length $n$ has all its
+  entries in $S$; $\mathsf{HasNCup}_C(n,S)$ means the same for $C$-cups; and $\mathsf{HasNGon}_C(n,S)$ means that some
+  $n$-gon $(l,l')$ of $C$ has all entries of $l$ and of $l'$ in $S$.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}\label{mb:rem:config}
+In Lean, ``strictly increasing'' is \lean{List.IsChain} for the relation $<$ (consecutive entries increase, hence all
+entries are in increasing order), the condition on consecutive triples is \texttt{List.Chain3\textquotesingle}
+(\dirn{ErdosSzekeres/Vendor/ETV/Lib/List/Defs.lean:46}), ``same first entry'' is the equality
+\texttt{l.head? = l\textquotesingle.head?} of the optional first entries and ``same last entry'' is \texttt{l.getLast? = l\textquotesingle.getLast?};
+since both lists are nonempty these are the stated equalities. ``All entries in $S$'' is
+\lean{List.In} (\dirn{ErdosSzekeres/Vendor/ETV/Lib/List/Defs.lean:22}). An $n$-gon $(l,l')$ consists of $n$ entries if
+the two lists share only their end entries; this is the reason for the normalisation $\card l+\card{l'}=n+2$. Nothing
+else is required of a gon (Baek calls such gons \emph{weak}): for an arbitrary relation $\mathrm{Cup3}_C$ there is no
+geometric content. The geometric meaning enters only in Subsection~\ref{mb:ssec:bridge}.
+\end{remark}
+
+\begin{lemma}[monotonicity, and cups as gons;\\
+  \leanref{hasNCap_supset}{ErdosSzekeres/Vendor/ETV/Config/Lemmas.lean:293},\\
+  \leanref{hasNGon_supset}{ErdosSzekeres/Vendor/ETV/Config/Lemmas.lean:305},\\
+  \leanref{ncup_is_ngon}{ErdosSzekeres/Vendor/ETV/Config/Lemmas.lean:275}]\label{mb:lem:config-mono}
+Let $C$ be a configuration on a linearly ordered set $\alpha$ and $n\in\N$.
+\begin{enumerate}[label=(\alph*)]
+\item If $S_1\subseteq S_2\subseteq\alpha$ are finite, then $\mathsf{HasNCap}_C(n,S_1)$ implies
+  $\mathsf{HasNCap}_C(n,S_2)$, and $\mathsf{HasNGon}_C(n,S_1)$ implies $\mathsf{HasNGon}_C(n,S_2)$.
+\item If $S\subseteq\alpha$ is finite, $2\le n$ and $\mathsf{HasNCup}_C(n,S)$, then $\mathsf{HasNGon}_C(n,S)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) The same lists are witnesses, since their entries lie in $S_1\subseteq S_2$.
+
+(b) Let $l=(l_0,\dots,l_{n-1})$ be a $C$-cup with all entries in $S$. As $n\ge2$ and $l$ is strictly increasing,
+$l_0<l_{n-1}$. The list $(l_0,l_{n-1})$ is strictly increasing and has no consecutive triple, so it is a $C$-cap of
+length $2$; its entries lie in $S$; it has the same first entry $l_0$ and the same last entry $l_{n-1}$ as $l$; and
+$2+n=n+2$. Hence $((l_0,l_{n-1}),l)$ is an $n$-gon of $C$ with all entries in $S$.
+\end{proof}
+
+\begin{theorem}[Baek's theorem, cited;\\
+  \leanref{main}{ErdosSzekeres/Vendor/ETV/Main/Main.lean:87}]\label{mb:thm:baek}
+Let $(\gamma,<)$ be a linearly ordered set, $n\in\N$, $C$ a configuration on $\gamma$, and $S\subseteq\gamma$ a finite
+set with $\binom{n+2}{2}+2\le\card S$. Then $\mathsf{HasNCap}_C(4,S)$ or $\mathsf{HasNGon}_C(n+3,S)$.
+\end{theorem}
+
+\begin{remark}[source, status and index shift]\label{mb:rem:baek}
+(1) \emph{Source.} J.~Baek, \emph{On the Erd\H{o}s--Tuza--Valtr conjecture}, Eur.\ J.\ Combin.\ 124 (2025) 104085;
+arXiv:2206.04260. Its geometric main theorem (Theorem~1.6 in the arXiv numbering, quoted in
+\dirn{MIRRORETV/PROOFS.md}, proof of Corollary~7.2) says: for every $N\ge3$, every set of $\binom{N-1}{2}+2$ points in
+the plane in general position with pairwise distinct $x$-coordinates contains a $4$-cap or $N$ points in convex
+position. Theorem~\ref{mb:thm:baek} is a combinatorial statement, for an arbitrary ternary relation and weak gons. It
+is the theorem \lean{main} of the vendored file \dirn{ErdosSzekeres/Vendor/ETV/Main/Main.lean}, which is adapted from
+Baek's own Lean code (according to its header, the changes concern only imports and compatibility with Lean/Mathlib
+4.24.0); the vendored file is compiled with the repository, so the axioms evidence above covers it.
+\dirn{MIRRORETV/README.md}, \S8, states that Baek's Theorem~2.7 holds for all colourings with weak gons; we have not
+compared the wording of that theorem with Theorem~\ref{mb:thm:baek}. In this document Theorem~\ref{mb:thm:baek} is
+cited, not reproved.
+
+(2) \emph{Index shift.} The Lean theorem \lean{main} at $n$ is Baek's statement for gons of size $N=n+3$: indeed
+$\binom{n+2}{2}+2=\binom{N-1}{2}+2$. We use $n=4$ ($N=7$, threshold $\binom62+2=17$), $n=5$ ($N=8$, threshold
+$\binom72+2=23$) and $n=6$ ($N=9$, threshold $\binom82+2=30$). Equivalently: if a finite set $S$ contains no $4$-cap and
+no $N$-gon of $C$, then $\card S\le\binom{N-1}{2}+1$, which is $16$, $22$, $29$ for $N=7,8,9$.
+
+(3) \emph{Geometric meaning.} For the configuration $C_c$ of a point configuration $c$ of $n$ points
+(Definition~\ref{mb:def:color}), $C_c$-caps and $C_c$-cups with entries in $[n]$ are geometric caps and cups
+(Lemma~\ref{mb:lem:lists}), and for $N\in\{7,8,9\}$ every $N$-gon of $C_c$ with entries in $[n]$ yields $N$ of the
+points of $c$ in convex position (Proposition~\ref{mb:prop:gon}; its proof does not use the value of $N$).
+\end{remark}
+
+\begin{theorem}[cups--caps theorem, cited;\\
+  \leanref{Config.cap_cup}{ErdosSzekeres/Vendor/ETV/Main/CapCup.lean:46}]\label{mb:thm:capcup}
+Let $C$ be a configuration on a linearly ordered set $\alpha$, let $a,b\in\N$, and let $S\subseteq\alpha$ be finite with
+$\binom{a+b}{a}<\card S$. Then $\mathsf{HasNCap}_C(a+2,S)$ or $\mathsf{HasNCup}_C(b+2,S)$.
+\end{theorem}
+
+\begin{remark}\label{mb:rem:capcup}
+This is the cups--caps theorem of P.~Erd\H{o}s and G.~Szekeres, \emph{A combinatorial problem in geometry}, Compositio
+Math.\ 2 (1935) 463--470. Its classical proof (induction on $a+b$; split $S$ into the first entries of $(a+1)$-caps,
+that is, of caps one entry shorter than the target $(a+2)$-cap, and the rest) uses only consecutive triples, hence holds
+for every configuration; the vendored file contains a Lean proof of this form, which we cite. The proof of
+Theorem~\ref{mb:thm:nine}(a) below repeats its induction step once (target $5$-cap, split by the first entries of
+$4$-caps).
+\end{remark}
+
+\begin{lemma}[Baek's theorem for $8$-gons;\\
+  \leanref{ErdosSzekeres.Omission.Baek.four_cap_or_eight_gon}{ErdosSzekeres/Omission/Baek.lean:12},\\
+  \leanref{ErdosSzekeres.Omission.Baek.capacity22}{ErdosSzekeres/Omission/Baek.lean:16}]\label{mb:lem:baek8}
+Let $C$ be a configuration on a linearly ordered set $\alpha$ and $S\subseteq\alpha$ finite.
+\begin{enumerate}[label=(\alph*)]
+\item If $23\le\card S$, then $\mathsf{HasNCap}_C(4,S)$ or $\mathsf{HasNGon}_C(8,S)$.
+\item If $\neg\mathsf{HasNCap}_C(4,S)$ and $\neg\mathsf{HasNGon}_C(8,S)$, then $\card S\le22$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) is Theorem~\ref{mb:thm:baek} with $n=5$, because $\binom{7}{2}+2=23$. (b) If $\card S\ge23$, then (a) contradicts the
+two hypotheses; hence $\card S\le22$.
+\end{proof}
+
+%======================================================================
+\subsection{From configurations to points of the plane}\label{mb:ssec:bridge}
+
+We use the $x$-sorted point configurations of Definition~\ref{mm:def:config}. A \emph{configuration of $n$ points}
+(Lean \lean{ErdosSzekeres.Omission.Configuration}, \dirn{ErdosSzekeres/Omission/Realization.lean:9}) is a map
+$c\colon[n]\to\R^2$, $i\mapsto c_i$, with $x(c_i)<x(c_j)$ for all $i<j$ and $\orient(c_i,c_j,c_k)\ne0$ for all
+$i<j<k$. For $k\in\N$, $c.\mathsf{HasCap}(k)$ (\lean{Configuration.HasCap}, \dirn{ErdosSzekeres/Omission/Realization.lean:64})
+means that there is a strictly increasing $f\colon[k]\to[n]$ with $\orient(c_{f(i)},c_{f(j)},c_{f(l)})<0$ for \emph{all}
+$i<j<l$ in $[k]$. We write $\mathcal P(c):=\{c_0,\dots,c_{n-1}\}$ for the set of points of $c$ (Lean
+\texttt{Finset.univ.image c.point}; it is the point set $\mathrm{pts}(c)$ of Definition~\ref{mm:def:config}(a)); since
+$x$ is strictly increasing along $c$, $\card{\mathcal P(c)}=n$. (A
+configuration of $n$ points is not a configuration in the sense of Definition~\ref{mb:def:config}; the link between the
+two notions is the configuration $C_c$ of Definition~\ref{mb:def:color}.)
+
+\begin{definition}[the configuration $C_c$ of a point configuration;\\
+  \leanref{ErdosSzekeres.Omission.Configuration.cup}{ErdosSzekeres/Omission/Realization.lean:33},\\
+  \leanref{ErdosSzekeres.Omission.ActualRanks.colorConfig}{ErdosSzekeres/Omission/ActualRanks.lean:28},\\
+  \leanref{ErdosSzekeres.Omission.ListGeometry.pointAt}{ErdosSzekeres/Omission/ListGeometry.lean:13}]\label{mb:def:color}\raggedright
+Let $c$ be a configuration of $n$ points. For $i,j,k\in\N$ put $c.\mathrm{cup}(i,j,k)=\mathrm{true}$ if $i,j,k<n$ and
+$\orient(c_i,c_j,c_k)>0$, and $c.\mathrm{cup}(i,j,k)=\mathrm{false}$ otherwise. Let $C_c$ be the configuration on
+$(\N,<)$ with $\mathrm{Cup3}_{C_c}(i,j,k)$ if and only if $c.\mathrm{cup}(i,j,k)=\mathrm{true}$ (Lean
+\texttt{colorConfig c.cup true}). Finally $\mathrm{pointAt}(c,i):=c_i$ for $i<n$ and $\mathrm{pointAt}(c,i):=(0,0)$ for
+$i\ge n$; for indices $i<n$, which are the only ones occurring below, we simply write $c_i$.
+\end{definition}
+
+\begin{lemma}[signs of the colouring;\\
+  \leanref{ErdosSzekeres.Omission.Configuration.cup_true_iff}{ErdosSzekeres/Omission/Realization.lean:39},\\
+  \leanref{ErdosSzekeres.Omission.ListGeometry.cup_sign}{ErdosSzekeres/Omission/ListGeometry.lean:19},\\
+  \leanref{ErdosSzekeres.Omission.ListGeometry.cap_sign}{ErdosSzekeres/Omission/ListGeometry.lean:24}]\label{mb:lem:signs}\raggedright
+Let $c$ be a configuration of $n$ points and $a,b,d\in\N$ with $a,b,d<n$. Then $c.\mathrm{cup}(a,b,d)=\mathrm{true}$,
+that is $\mathrm{Cup3}_{C_c}(a,b,d)$, holds if and only if $\orient(c_a,c_b,c_d)>0$. If moreover $a<b<d$, then
+$c.\mathrm{cup}(a,b,d)\ne\mathrm{true}$, that is $\mathrm{Cap3}_{C_c}(a,b,d)$, holds if and only if
+$\orient(c_a,c_b,c_d)<0$.
+\end{lemma}
+
+\begin{proof}
+The first claim is Definition~\ref{mb:def:color}, since $a,b,d<n$. If $a<b<d$, then $\orient(c_a,c_b,c_d)\ne0$ because
+$c$ is a configuration; so $\mathrm{Cap3}_{C_c}(a,b,d)$, which is $\neg(\orient(c_a,c_b,c_d)>0)$, is equivalent to
+$\orient(c_a,c_b,c_d)<0$. (In Lean, \lean{cup_true_iff} states the first claim with indices $i,j,k$ in \texttt{Fin n}
+and the points \texttt{c.point i}; \lean{cup_sign} and \lean{cap_sign} state the two claims for natural numbers
+$a,b,d$, with the bounds $a,b,d<n$ as hypotheses and the points $\mathrm{pointAt}(c,a)$, which equal $c_a$ for $a<n$.
+The companion \lean{Configuration.cup_false_iff} (\dirn{ErdosSzekeres/Omission/Realization.lean:44}), the second claim
+with indices in \texttt{Fin n} and the equation $c.\mathrm{cup}(i,j,k)=\mathrm{false}$, is not used on the proof paths
+of this section and is not covered here.)
+\end{proof}
+
+\begin{lemma}[four $x$-sorted points;\\
+  \leanref{ErdosSzekeres.Omission.PlanarChains.four_point_identity_left}{ErdosSzekeres/Omission/PlanarChains.lean:15},\\
+  \leanref{ErdosSzekeres.Omission.PlanarChains.four_point_identity_right}{ErdosSzekeres/Omission/PlanarChains.lean:19},\\
+  \leanref{ErdosSzekeres.Omission.PlanarChains.positive_four}{ErdosSzekeres/Omission/PlanarChains.lean:23},\\
+  \leanref{ErdosSzekeres.Omission.PlanarChains.negative_four}{ErdosSzekeres/Omission/PlanarChains.lean:35}]\label{mb:lem:four}\raggedright
+For all $a,b,c,d\in\R^2$,
+\begin{align}
+(x(c)-x(b))\,\orient(a,b,d)&=(x(d)-x(b))\,\orient(a,b,c)+(x(b)-x(a))\,\orient(b,c,d),\label{mb:eq:four-left}\\
+(x(c)-x(b))\,\orient(a,c,d)&=(x(d)-x(c))\,\orient(a,b,c)+(x(c)-x(a))\,\orient(b,c,d).\label{mb:eq:four-right}
+\end{align}
+Let moreover $x(a)<x(b)<x(c)<x(d)$. If $\orient(a,b,c)>0$ and $\orient(b,c,d)>0$, then $\orient(a,b,d)>0$ and
+$\orient(a,c,d)>0$. If $\orient(a,b,c)<0$ and $\orient(b,c,d)<0$, then $\orient(a,b,d)<0$ and $\orient(a,c,d)<0$.
+\end{lemma}
+
+\begin{proof}
+Both identities are polynomial identities in the eight coordinates; expanding both sides gives the same polynomial (we
+checked this symbolically; it is also the Lean proof, \texttt{unfold orient; ring}). Under $x(a)<x(b)<x(c)<x(d)$ the
+coefficients $x(d)-x(b)$, $x(b)-x(a)$, $x(d)-x(c)$, $x(c)-x(a)$ on the right are positive, so each right-hand side is
+positive (negative) when $\orient(a,b,c)$ and $\orient(b,c,d)$ are both positive (negative). Dividing by
+$x(c)-x(b)>0$ gives the claims.
+\end{proof}
+
+\begin{lemma}[closure of chain conditions;\\
+  \leanref{ErdosSzekeres.Omission.PlanarChains.chain3_all}{ErdosSzekeres/Omission/PlanarChains.lean:58}]\label{mb:lem:chain}\raggedright
+Let $(\alpha,<)$ be a linearly ordered set, $R$ a ternary relation on $\alpha$, and $D\subseteq\alpha$ such that for all
+$a,b,c,d\in D$ with $a<b<c<d$,
+\begin{equation}\label{mb:eq:trans}
+R(a,b,c)\ \text{and}\ R(b,c,d)\ \Longrightarrow\ R(a,b,d)\ \text{and}\ R(a,c,d).
+\end{equation}
+Let $l=(l_0,\dots,l_{r-1})$ be a list of elements of $D$ with $l_0<l_1<\dots<l_{r-1}$ and
+$R(l_i,l_{i+1},l_{i+2})$ for all $i$ with $i+2<r$. Then $R(a,b,c)$ holds for all entries $a,b,c$ of $l$ with $a<b<c$
+(Lean: \texttt{OrderedTriples R l}).
+\end{lemma}
+
+\begin{proof}
+Since $l$ is strictly increasing, the claim says $R(l_i,l_j,l_k)$ for all $0\le i<j<k<r$. We prove by downward induction
+on $i$ the statement $Q(i)$: $R(l_i,l_j,l_k)$ for all $j,k$ with $i<j<k<r$. For $i\ge r-2$ there is nothing to prove.
+Let $i\le r-3$ and assume $Q(i')$ for all $i'>i$.
+
+\emph{Step A: $R(l_i,l_{i+1},l_k)$ for $i+2\le k<r$.} Induction on $k$. For $k=i+2$ this is a hypothesis on consecutive
+triples. For $k>i+2$ we have $R(l_i,l_{i+1},l_{k-1})$ by the inner induction hypothesis and $R(l_{i+1},l_{k-1},l_k)$ by
+$Q(i+1)$; the first conclusion of \eqref{mb:eq:trans} for $l_i<l_{i+1}<l_{k-1}<l_k$ gives $R(l_i,l_{i+1},l_k)$.
+
+\emph{Step B: $R(l_i,l_j,l_k)$ for $i+1<j<k<r$.} By Step~A, $R(l_i,l_{i+1},l_j)$; by $Q(i+1)$, $R(l_{i+1},l_j,l_k)$;
+the second conclusion of \eqref{mb:eq:trans} for $l_i<l_{i+1}<l_j<l_k$ gives $R(l_i,l_j,l_k)$.
+
+Steps A ($j=i+1$) and B ($j>i+1$) give $Q(i)$. All points used lie in $D$. (The Lean proof is an induction on the list,
+with the same two steps.)
+\end{proof}
+
+\begin{lemma}[$C_c$-caps and $C_c$-cups are geometric;\\
+  \leanref{ErdosSzekeres.Omission.ListGeometry.cup_list_all}{ErdosSzekeres/Omission/ListGeometry.lean:39},\\
+  \leanref{ErdosSzekeres.Omission.ListGeometry.cap_list_all}{ErdosSzekeres/Omission/ListGeometry.lean:53},\\
+  \leanref{ErdosSzekeres.Omission.ListGeometry.hasCap_of_list}{ErdosSzekeres/Omission/ListGeometry.lean:85}]\label{mb:lem:lists}\raggedright
+Let $c$ be a configuration of $n$ points and $l$ a list all of whose entries are $<n$.
+\begin{enumerate}[label=(\alph*)]
+\item If $l$ is a $C_c$-cup, then $\orient(c_a,c_b,c_d)>0$ for all entries $a<b<d$ of $l$.
+\item If $l$ is a $C_c$-cap, then $\orient(c_a,c_b,c_d)<0$ for all entries $a<b<d$ of $l$.
+\item For every $k\in\N$, $\mathsf{HasNCap}_{C_c}(k,[n])$ implies $c.\mathsf{HasCap}(k)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(b) Apply Lemma~\ref{mb:lem:chain} with $\alpha=\N$, $D=[n]$ and $R(a,b,d):\Leftrightarrow\mathrm{Cap3}_{C_c}(a,b,d)$.
+Hypothesis \eqref{mb:eq:trans}: let $a<b<d<e$ be in $[n]$ with $R(a,b,d)$ and $R(b,d,e)$. By Lemma~\ref{mb:lem:signs},
+$\orient(c_a,c_b,c_d)<0$ and $\orient(c_b,c_d,c_e)<0$; since $c$ is a configuration,
+$x(c_a)<x(c_b)<x(c_d)<x(c_e)$; Lemma~\ref{mb:lem:four} gives $\orient(c_a,c_b,c_e)<0$ and $\orient(c_a,c_d,c_e)<0$, that
+is $R(a,b,e)$ and $R(a,d,e)$ by Lemma~\ref{mb:lem:signs}. The list $l$ is strictly increasing with entries in $[n]$, and
+its consecutive triples satisfy $\mathrm{Cap3}_{C_c}=R$ because $l$ is a $C_c$-cap. Lemma~\ref{mb:lem:chain} gives
+$R(a,b,d)$ for all entries $a<b<d$ of $l$, i.e.\ $\orient(c_a,c_b,c_d)<0$ by Lemma~\ref{mb:lem:signs}.
+
+(a) The same argument with $R=\mathrm{Cup3}_{C_c}$ and the positive half of Lemma~\ref{mb:lem:four}.
+
+(c) Let $l=(l_0,\dots,l_{k-1})$ be a $C_c$-cap of length $k$ with entries in $[n]$, and put $f(i):=l_i$. Then
+$f\colon[k]\to[n]$ is strictly increasing because $l$ is, and for $i<j<m$ in $[k]$, (b) applied to the entries
+$l_i<l_j<l_m$ gives $\orient(c_{f(i)},c_{f(j)},c_{f(m)})<0$. Hence $c.\mathsf{HasCap}(k)$.
+\end{proof}
+
+The next lemma is the geometric heart of the bridge: a geometric cup and a geometric cap with the same two end points
+form a convex polygon. (This is the direction ``$\Leftarrow$'' of \dirn{MIRRORETV/PROOFS.md}, Lemma~2.3.)
+
+\begin{lemma}[cup and cap with common ends;\\
+  \leanref{ErdosSzekeres.Omission.BoundaryGeometry.boundary_polygon}{ErdosSzekeres/Omission/BoundaryGeometry.lean:403},\\
+  \leanref{ErdosSzekeres.Omission.BoundaryGeometry.Boundary.card}{ErdosSzekeres/Omission/BoundaryGeometry.lean:359},\\
+  \leanref{ErdosSzekeres.Omission.BoundaryGeometry.boundary_convex_position}{ErdosSzekeres/Omission/BoundaryGeometry.lean:317}]\label{mb:lem:boundary}\raggedright
+Let $s,t\in\N$. Let $u_0,\dots,u_{s+1}\in\R^2$ satisfy $x(u_0)<x(u_1)<\dots<x(u_{s+1})$ and $\orient(u_i,u_j,u_m)>0$ for
+all $i<j<m$, and let $v_0,\dots,v_{t+1}\in\R^2$ satisfy $x(v_0)<\dots<x(v_{t+1})$ and $\orient(v_i,v_j,v_m)<0$ for all
+$i<j<m$. Assume $u_0=v_0$ and $u_{s+1}=v_{t+1}$, and let $B:=\{u_0,\dots,u_{s+1}\}\cup\{v_0,\dots,v_{t+1}\}$. Then
+\begin{enumerate}[label=(\alph*)]
+\item $\card B=s+t+2$;
+\item $p\notin\conv(B\setminus\{p\})$ for every $p\in B$; equivalently (Lemma~\ref{fd:lem:cp-hull}), $B$ is in convex
+  position;
+\item for every finite $S\subset\R^2$ with $B\subseteq S$, $S$ contains $s+t+2$ points in convex position.
+\end{enumerate}
+\end{lemma}
+
+\begin{remark}[the Lean encoding]\label{mb:rem:boundary}
+Lean stores this data as a \texttt{Boundary s t} (\dirn{ErdosSzekeres/Omission/BoundaryGeometry.lean:120}): the lower
+arc \lean{lower} is $(u_i)$, a \texttt{CupArc s} (strictly increasing $x$, all ordered triples positive, line 56), and the
+upper arc is stored through its mirror image \lean{upperReflected}${}=(\rho(v_j))$, a \texttt{CupArc t}, where
+$\rho(p)=(p_0,-p_1)$ is \lean{BoundaryGeometry.reflect} (line 69); the fields \lean{first_eq} and \lean{last_eq} say
+$u_0=\rho(\rho(v_0))=v_0$ and $u_{s+1}=v_{t+1}$, and \lean{Boundary.points} is $B$. Since $\rho$ preserves $x$ and
+$\orient(\rho a,\rho b,\rho d)=-\orient(a,b,d)$, $(\rho(v_j))$ is a \lean{CupArc} if and only if $(v_j)$ has strictly
+increasing $x$ and all ordered triples negative. So Lemma~\ref{mb:lem:boundary} is \lean{boundary_polygon} (part (c)),
+\lean{Boundary.card} (part (a)) and \lean{boundary_convex_position} (part (b)) after the change of variables
+$v_j=\rho(w_j)$, where $(w_j)$ is \lean{upperReflected}. This change of variables is a bijection between the data
+$(u_i)$, $(v_j)$ of the lemma and the values of type \texttt{Boundary s t}, and \lean{Boundary.card} counts the finite
+set \lean{Boundary.finite}, which is $B$; so the lemma is the Lean statement in this encoding, not a variant of it.
+\end{remark}
+
+\begin{proof}[Proof of Lemma~\ref{mb:lem:boundary}]
+Put $L:=u_0=v_0$, $R:=u_{s+1}=v_{t+1}$, $U:=\{u_0,\dots,u_{s+1}\}$ and $V:=\{v_0,\dots,v_{t+1}\}$. The $u_i$ are pairwise
+distinct and the $v_j$ are pairwise distinct (their $x$-coordinates are), so $\card U=s+2$, $\card V=t+2$, and
+$x(L)<x(R)$, in particular $L\ne R$. The proof follows the Lean proof.
+
+\emph{Step 1 (the chord $LR$).} For $0<i<s+1$, $\orient(L,R,u_i)=-\orient(u_0,u_i,u_{s+1})<0$; for $i\in\{0,s+1\}$,
+$\orient(L,R,u_i)=0$. For $0<j<t+1$, $\orient(L,R,v_j)=-\orient(v_0,v_j,v_{t+1})>0$; for $j\in\{0,t+1\}$,
+$\orient(L,R,v_j)=0$. (Lean: \lean{chord_negative}, \lean{chord_nonpositive}.)
+
+\emph{Step 2 (only the ends are shared; part (a)).} If $u_i=v_j$, then $\orient(L,R,u_i)=\orient(L,R,v_j)\ge0$ by
+Step~1, so $i\in\{0,s+1\}$ by Step~1 again, i.e.\ $u_i\in\{L,R\}$. Hence $U\cap V=\{L,R\}$ (both $L$ and $R$ lie in
+$U\cap V$), and $\card B=\card U+\card V-\card{U\cap V}=(s+2)+(t+2)-2=s+t+2$. (Lean: \lean{shared_only_endpoints},
+\lean{Boundary.card}.)
+
+\emph{Step 3 (the lower edges support $B$).} We claim: for $0\le i\le s$ and $w\in B$,
+\begin{equation}\label{mb:eq:edge}
+\orient(u_i,u_{i+1},w)\ge0,\quad\text{with strict inequality if } w\notin\{u_i,u_{i+1}\}.
+\end{equation}
+If $w=u_j$: for $j\in\{i,i+1\}$ the orientation is $0$; for $j<i$ it equals $\orient(u_j,u_i,u_{i+1})>0$ (cyclic
+invariance); for $j>i+1$ it is $\orient(u_i,u_{i+1},u_j)>0$. If $w=v_j$ with $j\in\{0,t+1\}$, then $w\in\{L,R\}\subseteq
+U$ and the previous case applies. If $w=v_j$ with $0<j<t+1$, we use the identity (valid for all points, checked
+symbolically; Lean \lean{chord_identity}, line 64)
+\begin{equation}\label{mb:eq:chord}
+\begin{split}
+(x(R)-x(L))\,\orient(a,b,w)&=(x(R)-x(w))\,\orient(a,b,L)+(x(w)-x(L))\,\orient(a,b,R)\\
+&\quad+(x(b)-x(a))\,\orient(L,R,w)
+\end{split}
+\end{equation}
+with $a=u_i$, $b=u_{i+1}$. Here $x(L)<x(w)<x(R)$ because the $x(v_j)$ increase, $\orient(u_i,u_{i+1},L)\ge0$ and
+$\orient(u_i,u_{i+1},R)\ge0$ by the case $w\in U$ (as $L=u_0$, $R=u_{s+1}$), $x(u_{i+1})-x(u_i)>0$, and
+$\orient(L,R,w)>0$ by Step~1. So the right-hand side of \eqref{mb:eq:chord} is positive, and dividing by $x(R)-x(L)>0$
+gives $\orient(u_i,u_{i+1},w)>0$. (In this last case $w\notin U$ by Step~2.) (Lean: \lean{edge_nonnegative},
+\lean{edge_positive}, \lean{cross_edge_positive}, \lean{lower_edge_support}.)
+
+\emph{Step 4 (the upper edges support $B$).} We claim: for $0\le j\le t$ and $w\in B$,
+\begin{equation}\label{mb:eq:upper-edge}
+\orient(v_{j+1},v_j,w)\ge0,\quad\text{with strict inequality if } w\notin\{v_j,v_{j+1}\}.
+\end{equation}
+Let $\rho(p)=(p_0,-p_1)$; then $x(\rho p)=x(p)$ and $\orient(\rho a,\rho b,\rho d)=-\orient(a,b,d)$
+(Lemma~\ref{fd:lem:affine-orient}, $\det\rho=-1$). The points $\rho(v_0),\dots,\rho(v_{t+1})$ therefore satisfy the
+hypotheses on the $u$'s (with $t$ in place of $s$), the points $\rho(u_0),\dots,\rho(u_{s+1})$ satisfy the hypotheses on
+the $v$'s, and $\rho(v_0)=\rho(u_0)$, $\rho(v_{t+1})=\rho(u_{s+1})$; the set of all these points is $\rho(B)$. Step~3 for
+this reflected data, applied to the edge $(\rho v_j,\rho v_{j+1})$ and the point $\rho w\in\rho(B)$, gives
+$\orient(\rho v_j,\rho v_{j+1},\rho w)\ge0$, strictly if $\rho w\notin\{\rho v_j,\rho v_{j+1}\}$, i.e.\ (as $\rho$ is
+injective) if $w\notin\{v_j,v_{j+1}\}$. Finally
+$\orient(\rho v_j,\rho v_{j+1},\rho w)=-\orient(v_j,v_{j+1},w)=\orient(v_{j+1},v_j,w)$. (Lean: \lean{Boundary.flip},
+\lean{upper_edge_support}.)
+
+\emph{Step 5 (exposing functions; part (b)).} We use the following elementary fact (the easy direction of
+Lemma~\ref{fd:lem:separation}; Lean \lean{exposed_not_in_hull}, line 30): \emph{if $g\colon\R^2\to\R$ is affine, $g(p)=0$
+and $g(w)>0$ for every $w$ in a finite set $F$, then $p\notin\conv F$.} Indeed every point of $\conv F$ is
+$\sum_k\lambda_kw_k$ with $w_k\in F$, $\lambda_k\ge0$, $\sum_k\lambda_k=1$, and $g(\sum_k\lambda_kw_k)=\sum_k\lambda_k
+g(w_k)>0$. So it suffices to find, for every $p\in B$, an affine $g$ with $g(p)=0$ and $g>0$ on $B\setminus\{p\}$. Every $p\in B$ is $L$, $R$, some $u_i$ with $0<i<s+1$, or some $v_j$ with $0<j<t+1$.
+\begin{itemize}
+\item $p=L$: $g(w)=x(w)-x(L)$. Every $w\in B\setminus\{L\}$ is $u_i$ or $v_j$ with $i\ge1$ or $j\ge1$, so $x(w)>x(L)$.
+  (Lean \lean{boundary_first_exposed}.)
+\item $p=R$: $g(w)=x(R)-x(w)$, symmetrically. (Lean \lean{boundary_last_exposed}.)
+\item $p=u_i$, $0<i<s+1$: $g(w)=\orient(u_{i-1},u_i,w)+\orient(u_i,u_{i+1},w)$, which is affine with $g(u_i)=0$. Let
+  $w\in B\setminus\{u_i\}$. If $w=u_{i-1}$, the first term is $0$ and the second is $>0$ by \eqref{mb:eq:edge}, since
+  $u_{i-1}\notin\{u_i,u_{i+1}\}$. If $w\ne u_{i-1}$, the first term is $>0$ and the second $\ge0$ by \eqref{mb:eq:edge}.
+  (Lean \lean{two_edges_expose}, \lean{lower_interior_exposed}.)
+\item $p=v_j$, $0<j<t+1$: $g(w)=\orient(v_{j+1},v_j,w)+\orient(v_j,v_{j-1},w)$, affine with $g(v_j)=0$. For
+  $w\in B\setminus\{v_j\}$: if $w=v_{j+1}$ the first term is $0$ and the second is $>0$ by \eqref{mb:eq:upper-edge}
+  (since $v_{j+1}\notin\{v_{j-1},v_j\}$); otherwise the first term is $>0$ and the second $\ge0$. (Lean
+  \lean{upper_interior_exposed}.)
+\end{itemize}
+So $p\notin\conv(B\setminus\{p\})$ for every $p\in B$, which is (b); by Lemma~\ref{fd:lem:cp-hull}, $B$ is in convex
+position.
+
+\emph{Step 6 (part (c)).} $B\subseteq S$, $\card B=s+t+2$ and $B$ is in convex position, so $B$ witnesses
+$\mathsf{HasConvexNGon}(s+t+2,S)$.
+\end{proof}
+
+\begin{proposition}[gons of $C_c$ are convex polygons;\\
+  \leanref{MirrorOdd.hasNGon_heptagon}{MIRRORETV/lean/MirrorMain.lean:1512},\\
+  \leanref{ErdosSzekeres.Omission.BaekGeometry.hasNGon_octagon}{ErdosSzekeres/Omission/BaekGeometry.lean:94},\\
+  \leanref{C12Check.hasNGon_nonagon}{MIRRORETV/lean/MirrorNine_append.lean:99}]\label{mb:prop:gon}\raggedright
+Let $c$ be a configuration of $n$ points and $m\in\{7,8,9\}$. If $\mathsf{HasNGon}_{C_c}(m,[n])$, then $\mathcal P(c)$
+contains $m$ points in convex position. (For $m=7,8,9$ this is \lean{hasNGon_heptagon}, \lean{hasNGon_octagon},
+\lean{hasNGon_nonagon} respectively.)
+\end{proposition}
+
+\begin{proof}
+The three Lean proofs are identical up to the number $m$, which plays no role. Let $(l,l')$ be an $m$-gon of $C_c$ with
+all entries in $[n]$: $l$ is a $C_c$-cap, $l'$ a $C_c$-cup, $\card l,\card{l'}\ge2$, the first entries agree, the last
+entries agree, and $\card l+\card{l'}=m+2$. Put $s:=\card{l'}-2$ and $t:=\card l-2$ (Lean calls these numbers \lean{l} and
+\lean{k}), so that $s+t+2=m$, and put $u_i:=c_{l'_i}$ ($0\le i\le s+1$) and $v_j:=c_{l_j}$ ($0\le j\le t+1$). The lists
+are strictly increasing and $c$ is $x$-sorted, so $x(u_0)<\dots<x(u_{s+1})$ and $x(v_0)<\dots<x(v_{t+1})$. By
+Lemma~\ref{mb:lem:lists}(a), $\orient(u_i,u_j,u_k)>0$ for $i<j<k$; by Lemma~\ref{mb:lem:lists}(b),
+$\orient(v_i,v_j,v_k)<0$ for $i<j<k$. Equal first entries give $u_0=v_0$ and equal last entries give $u_{s+1}=v_{t+1}$.
+All $u_i$ and $v_j$ lie in $\mathcal P(c)$. Lemma~\ref{mb:lem:boundary}(c) with $S=\mathcal P(c)$ gives $s+t+2=m$ points
+of $\mathcal P(c)$ in convex position. (In Lean, \lean{boundaryOfGon}, \dirn{ErdosSzekeres/Omission/BaekGeometry.lean:62},
+builds the \lean{Boundary} from the two lists, and \lean{boundaryOfGon_inside}, line 77, says that its points lie in
+$\mathcal P(c)$.)
+\end{proof}
+
+%======================================================================
+\subsection{The capacity bounds 16 and 22}\label{mb:ssec:cap}
+
+\begin{proposition}[Baek at $N=7$ for point configurations;\\
+  \leanref{MirrorOdd.capacity16}{MIRRORETV/lean/MirrorMain.lean:1529}]\label{mb:prop:cap16}
+Let $c$ be a configuration of $n$ points with $\neg\,c.\mathsf{HasCap}(4)$ such that $\mathcal P(c)$ does not contain $7$
+points in convex position. Then $n\le16$.
+\end{proposition}
+
+\begin{proof}
+Suppose $n\ge17$. Then $\binom{4+2}{2}+2=17\le n=\card{[n]}$ (the value $\binom62=15$ is evaluated by \lean{decide}), so
+Theorem~\ref{mb:thm:baek} with the value $4$ for its parameter (called $n$ there), $C=C_c$ and $S=[n]$ gives
+$\mathsf{HasNCap}_{C_c}(4,[n])$ or
+$\mathsf{HasNGon}_{C_c}(7,[n])$. In the first case $c.\mathsf{HasCap}(4)$ by Lemma~\ref{mb:lem:lists}(c); in the second,
+$\mathcal P(c)$ contains $7$ points in convex position by Proposition~\ref{mb:prop:gon}. Both contradict the hypotheses.
+\end{proof}
+
+\begin{lemma}[Baek at $N=8$ on index sets;\\
+  \leanref{ErdosSzekeres.Omission.BaekGeometry.geometric_capacity22}{ErdosSzekeres/Omission/BaekGeometry.lean:111}]\label{mb:lem:gc22}\raggedright
+Let $c$ be a configuration of $n$ points and $S\subseteq[n]$ such that $\neg\mathsf{HasNCap}_{C_c}(4,S)$ and
+$\mathcal P(c)$ does not contain $8$ points in convex position. Then $\card S\le22$.
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{mb:lem:baek8}(b) it suffices to show $\neg\mathsf{HasNGon}_{C_c}(8,S)$. An $8$-gon of $C_c$ with entries in
+$S$ is one with entries in $[n]$ (Lemma~\ref{mb:lem:config-mono}(a)), so it would give $8$ points of $\mathcal P(c)$ in
+convex position by Proposition~\ref{mb:prop:gon}.
+\end{proof}
+
+\begin{proposition}[Baek at $N=8$ for point configurations;\\
+  \leanref{MirrorOdd.capacity22g}{MIRRORETV/lean/MirrorMain.lean:1812}]\label{mb:prop:cap22}
+Let $c$ be a configuration of $n$ points with $\neg\,c.\mathsf{HasCap}(4)$ such that $\mathcal P(c)$ does not contain $8$
+points in convex position. Then $n\le22$.
+\end{proposition}
+
+\begin{proof}
+Apply Lemma~\ref{mb:lem:gc22} with $S=[n]$: a $C_c$-cap of length $4$ in $[n]$ would give $c.\mathsf{HasCap}(4)$ by
+Lemma~\ref{mb:lem:lists}(c). Hence $n=\card{[n]}\le22$.
+\end{proof}
+
+%======================================================================
+\subsection{Mirror-symmetric sets: notation and reduction lemmas}\label{mb:ssec:red}
+
+The Lean declarations stated in this subsection, and those of Definition~\ref{mb:def:frame} and
+Lemmas~\ref{mb:lem:frame}, \ref{mb:lem:affine} and~\ref{mb:lem:transport} below, are also stated (and, where they are
+lemmas, proved) in the section of Theorem~\ref{mm:thm:odd}; we repeat them here, with proofs, so that this section is
+self-contained.
+
+\begin{definition}[the reflection in the $x$-axis; upper and axis parts;\\
+  \leanref{MirrorOdd.mir}{MIRRORETV/lean/MirrorMain.lean:16},\\
+  \leanref{MirrorOdd.Rset}{MIRRORETV/lean/MirrorMain.lean:1598},\\
+  \leanref{MirrorOdd.Aset}{MIRRORETV/lean/MirrorMain.lean:1599}]\label{mb:def:mir}
+$\operatorname{mir}(p):=(p_0,-p_1)$. For a finite $S\subset\R^2$, $R(S):=\{p\in S:y(p)>0\}$ and
+$A(S):=\{p\in S:y(p)=0\}$. We say that $S$ is \emph{$\operatorname{mir}$-symmetric} if $\operatorname{mir}(p)\in S$ for
+all $p\in S$ (this is the hypothesis $\forall p\in S,\ \operatorname{mir}(p)\in S$, named \lean{sym}, of the Lean
+statements; for finite $S$ it is equivalent to $\operatorname{mir}(S)=S$, because $\operatorname{mir}$ is injective).
+\end{definition}
+
+Note that $\operatorname{mir}(\operatorname{mir}(p))=p$ (\lean{MirrorOdd.mir_mir}, line 1543), that
+$\operatorname{mir}(a)=a$ if $y(a)=0$, and that $\orient(\operatorname{mir}a,\operatorname{mir}b,\operatorname{mir}d)
+=-\orient(a,b,d)$ (Lemma~\ref{fd:lem:affine-orient}).
+
+\begin{lemma}[splitting a mirror-symmetric set;\\
+  \leanref{MirrorOdd.card_split}{MIRRORETV/lean/MirrorMain.lean:1601},\\
+  \leanref{MirrorOdd.card_A_le}{MIRRORETV/lean/MirrorMain.lean:1636},\\
+  \leanref{MirrorOdd.injOn_x}{MIRRORETV/lean/MirrorMain.lean:1647}]\label{mb:lem:split}
+Let $S\subset\R^2$ be finite.
+\begin{enumerate}[label=(\alph*)]
+\item If $S$ is $\operatorname{mir}$-symmetric, then $\card S=2\card{R(S)}+\card{A(S)}$.
+\item If $S$ is in general position, then $\card{A(S)}\le2$.
+\item Let $S$ be in general position and $\operatorname{mir}$-symmetric, and let $T\subseteq S$ be such that $y(p)\ge0$
+  for all $p\in T$ and $p=q$ for all $p,q\in T$ with $y(p)=0=y(q)$. Then $p\mapsto x(p)$ is injective on $T$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) Let $N:=\{p\in S:y(p)<0\}$; $S$ is the disjoint union of $R(S)$, $A(S)$ and $N$. For $p\in R(S)$,
+$\operatorname{mir}(p)\in S$ and $y(\operatorname{mir}p)=-y(p)<0$, so $\operatorname{mir}$ maps $R(S)$ into $N$; likewise
+it maps $N$ into $R(S)$. As $\operatorname{mir}\circ\operatorname{mir}=\mathrm{id}$, these two maps are mutually inverse,
+so $\card N=\card{R(S)}$ and $\card S=\card{R(S)}+\card{A(S)}+\card N=2\card{R(S)}+\card{A(S)}$.
+
+(b) If $A(S)$ had three distinct points $a,b,d$, then $\orient(a,b,d)=(x(b)-x(a))\cdot0-0\cdot(x(d)-x(a))=0$, contradicting
+general position (Lemma~\ref{fd:lem:collinear}).
+
+(c) First let $p,q\in T$ with $y(p)>0$ and $x(p)=x(q)$, and suppose $p\ne q$. Then $p\ne\operatorname{mir}(p)$ (as
+$y(p)\ne-y(p)$) and $q\ne\operatorname{mir}(p)$ (as $y(q)\ge0>-y(p)$), so $p,q,\operatorname{mir}(p)$ are three pairwise
+distinct points of $S$. Since $x(q)=x(p)=x(\operatorname{mir}p)$,
+$\orient(p,q,\operatorname{mir}p)=(x(q)-x(p))(-2y(p))-(y(q)-y(p))\cdot0=0$, contradicting general position. So $p=q$. Now
+let $p,q\in T$ with $x(p)=x(q)$. If $y(p)>0$ or $y(q)>0$, the first part (with the roles of $p,q$ exchanged if needed)
+gives $p=q$; otherwise $y(p)=y(q)=0$ and $p=q$ by hypothesis.
+\end{proof}
+
+\begin{lemma}[sorting by abscissa;\\
+  \leanref{MirrorOdd.cfg}{MIRRORETV/lean/MirrorMain.lean:1584},\\
+  \leanref{MirrorOdd.sortPt_image}{MIRRORETV/lean/MirrorMain.lean:1576}]\label{mb:lem:sort}
+Let $T\subset\R^2$ be finite and in general position, and let $p\mapsto x(p)$ be injective on $T$. Then there is a
+configuration $\mathrm{cfg}(T)$ of $\card T$ points (Lean \texttt{cfg T hx hgp}, with points \texttt{sortPt T hx}) all
+of whose points lie in $T$, and $\mathcal P(\mathrm{cfg}(T))=T$.
+\end{lemma}
+
+\begin{proof}
+This is the sorting of Definition~\ref{mm:def:config}. As $x$ is injective on $T$, the set $\{x(p):p\in T\}$ has $\card T$
+elements $\xi_0<\dots<\xi_{\card T-1}$ (Lean \lean{Finset.orderEmbOfFin}); let $t_i$ be the point of $T$ with
+$x(t_i)=\xi_i$. Then $x(t_i)$ is strictly increasing in $i$, so $i\mapsto t_i$ is injective and its image is a subset of
+$T$ with $\card T$ elements, i.e.\ all of $T$. For $i<j<k$ the points $t_i,t_j,t_k$ are pairwise distinct points of $T$,
+so $\orient(t_i,t_j,t_k)\ne0$ by general position (Lemma~\ref{fd:lem:collinear}). Hence $(t_i)$ is a configuration of
+$\card T$ points with $\mathcal P=T$.
+\end{proof}
+
+\begin{lemma}[an axis point is not an interior point of a cap; written step]\label{mb:lem:interior}
+Let $p,a,q\in\R^2$ with $x(p)<x(a)<x(q)$, $y(p)\ge0$, $y(q)\ge0$ and $y(a)=0$. Then $\orient(p,a,q)\ge0$.
+\end{lemma}
+
+\begin{proof}
+If $y(a)=0$, then $\orient(p,a,q)=(x(a)-x(p))\,y(q)+y(p)\,(x(q)-x(a))$ (expand; checked symbolically), and both products
+are $\ge0$. (In Lean this is the local claim \lean{interior} inside the proof of \lean{mirror_seven_of}.)
+\end{proof}
+
+The next lemma consists of four machine-generated Lean statements. We state them exactly and derive them from the
+general mirror lemma of Theorems~\ref{mm:thm:mirror-polygon} and~\ref{mm:thm:axis-polygon}; this is a different proof
+from the Lean one (see Remark~\ref{mb:rem:generated}).
+
+\begin{lemma}[mirror heptagons and octagon;\\
+  \leanref{MirrorOdd.cap_mirror_heptagon}{MIRRORETV/lean/MirrorMain.lean:212},\\
+  \leanref{MirrorOdd.cap_mirror_octagon}{MIRRORETV/lean/MirrorMain.lean:392},\\
+  \leanref{MirrorOdd.axis_left_heptagon}{MIRRORETV/lean/MirrorMain.lean:639},\\
+  \leanref{MirrorOdd.axis_right_heptagon}{MIRRORETV/lean/MirrorMain.lean:816}]\label{mb:lem:polygons}
+Let $P\subset\R^2$ be finite.
+\begin{enumerate}[label=(\alph*)]
+\item Let $c_0,c_1,c_2,c_3\in\R^2$ with $x(c_0)<x(c_1)<x(c_2)<x(c_3)$,
+  $y(c_0),y(c_1),y(c_2),y(c_3)>0$ and $\orient(c_0,c_1,c_2)$, $\orient(c_0,c_1,c_3)$, $\orient(c_0,c_2,c_3)$,
+  $\orient(c_1,c_2,c_3)<0$. If $P$ contains $c_0$, $\operatorname{mir}c_1$, $\operatorname{mir}c_2$,
+  $\operatorname{mir}c_3$, $c_3$, $c_2$, $c_1$, then $P$ contains $7$ points in convex position.
+  (\lean{cap_mirror_heptagon})
+\item Under the same hypotheses on $c_0,\dots,c_3$: if $P$ contains $\operatorname{mir}c_0$,
+  $\operatorname{mir}c_1$, $\operatorname{mir}c_2$, $\operatorname{mir}c_3$, $c_3$, $c_2$, $c_1$, $c_0$, then $P$
+  contains $8$ points in convex position. (\lean{cap_mirror_octagon})
+\item Let $a,c_0,c_1,c_2\in\R^2$ with $y(a)=0$, $x(a)<x(c_0)<x(c_1)<x(c_2)$,
+  $y(c_0),y(c_1),y(c_2)>0$ and $\orient(a,c_0,c_1)$, $\orient(a,c_0,c_2)$, $\orient(a,c_1,c_2)$,
+  $\orient(c_0,c_1,c_2)<0$. If $P$ contains $a$, $\operatorname{mir}c_0$, $\operatorname{mir}c_1$,
+  $\operatorname{mir}c_2$, $c_2$, $c_1$, $c_0$, then $P$ contains $7$ points in convex position.
+  (\lean{axis_left_heptagon})
+\item Let $a,c_0,c_1,c_2\in\R^2$ with $y(a)=0$, $x(c_0)<x(c_1)<x(c_2)<x(a)$,
+  $y(c_0),y(c_1),y(c_2)>0$ and $\orient(c_0,c_1,c_2)$, $\orient(c_0,c_1,a)$, $\orient(c_0,c_2,a)$,
+  $\orient(c_1,c_2,a)<0$. If $P$ contains $\operatorname{mir}c_0$, $\operatorname{mir}c_1$, $\operatorname{mir}c_2$, $a$,
+  $c_2$, $c_1$, $c_0$, then $P$ contains $7$ points in convex position. (\lean{axis_right_heptagon})
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+We use the Lean statements of the general mirror lemma. Theorem~\ref{mm:thm:mirror-polygon} (\lean{cap_mirror_polygon},
+\dirn{MIRRORETV/lean/MirrorMain.lean:2233}) says: if $m\ge2$, $(e_0,\dots,e_{m-1})$ has strictly increasing $x$,
+$y(e_i)>0$ for all $i$, $\orient(e_i,e_j,e_l)<0$ for all $i<j<l$, and the finite set $P$ contains every $e_i$ and every
+$\operatorname{mir}e_i$, then $P$ contains $2m$ points in convex position. Theorem~\ref{mm:thm:axis-polygon}
+(\lean{axis_left_polygon}, line 2309; \lean{axis_right_polygon}, line 2403) says: if $m\ge3$, $(e_0,\dots,e_{m-1})$ has
+strictly increasing $x$, $\orient(e_i,e_j,e_l)<0$ for all $i<j<l$, $P$ contains every $e_i$ and every
+$\operatorname{mir}e_i$, and either $y(e_0)=0$ and $y(e_i)>0$ for $i>0$ (left), or $y(e_{m-1})=0$ and $y(e_i)>0$ for
+$i<m-1$ (right), then $P$ contains $2m-1$ points in convex position.
+
+(b) Apply the first statement with $m=4$ and $e=(c_0,c_1,c_2,c_3)$: the $x$-coordinates increase, all $y(c_i)>0$, the
+four triples $i<j<l$ of $\{0,1,2,3\}$ are exactly the four given negative orientations, and $P$ contains all $c_i$ and
+all $\operatorname{mir}c_i$. So $P$ contains $2\cdot4=8$ points in convex position.
+
+(a) Let $P':=P\cup\{\operatorname{mir}c_0\}$. By (b) applied to $P'$ there is $T\subseteq P'$ with $\card T=8$ in convex
+position. Then $T':=T\setminus\{\operatorname{mir}c_0\}\subseteq P$, $\card{T'}\ge7$, and $T'$ is in convex position
+(Lemma~\ref{fd:lem:mono}(a)). So $P$ contains $\card{T'}$ points in convex position, hence $7$
+(Lemma~\ref{fd:lem:mono}(d)).
+
+(c) Apply the left form of the second statement with $m=4$ and $e=(a,c_0,c_1,c_2)$: the $x$-coordinates increase,
+$y(e_0)=y(a)=0$, $y(e_i)>0$ for $i=1,2,3$, the four triples of $\{0,1,2,3\}$ are the four given negative orientations,
+and $P$ contains $e_0=a$, $\operatorname{mir}e_0=\operatorname{mir}a=a$ (as $y(a)=0$), and $c_i$, $\operatorname{mir}c_i$
+for $i=0,1,2$. So $P$ contains $2\cdot4-1=7$ points in convex position.
+
+(d) Apply the right form with $m=4$ and $e=(c_0,c_1,c_2,a)$: $y(e_3)=y(a)=0$, $y(e_i)>0$ for $i<3$, the four triples are
+$(c_0,c_1,c_2)$, $(c_0,c_1,a)$, $(c_0,c_2,a)$, $(c_1,c_2,a)$, and $\operatorname{mir}a=a\in P$. So $P$ contains $7$ points
+in convex position.
+\end{proof}
+
+\begin{remark}[the Lean proofs of Lemma~\ref{mb:lem:polygons}]\label{mb:rem:generated}
+In Lean these four statements are proved by generated code (\dirn{MIRRORETV/lean/MirrorMain.lean}, lines 22--991,
+including the wrappers \lean{cyc7} and \lean{cyc8}; the rest of the generated block, up to line 1506, contains the
+smaller mirror polygons used for $k=4,5,6$ and their wrappers): the listed points are taken in the cyclic order in which
+they appear in the hypotheses
+(for example $c_0,\operatorname{mir}c_1,\operatorname{mir}c_2,\operatorname{mir}c_3,c_3,c_2,c_1$ in (a)); pairwise
+distinctness is read off from $x$- or $y$-coordinates; each of the $\binom73=35$ (for (b): $\binom83=56$) orientation
+inequalities $\orient(q_i,q_j,q_k)>0$, $i<j<k$, is proved by \lean{linarith}, with hints found offline, from the
+hypotheses and from products of a positive ordinate and a positive difference of abscissae, $y(c_i)\,(x(q)-x(q'))>0$
+with $q,q'$ two of the four given points and $x(q')<x(q)$ (for example $y(c_0)\,(x(c_0)-x(a))$ in (c)); and the
+positive-cycle criterion of Lemma~\ref{fd:lem:pos-cycle} (through the wrappers \lean{cyc7}, \lean{cyc8}) concludes. The
+general lemmas used above (Theorems~\ref{mm:thm:mirror-polygon} and~\ref{mm:thm:axis-polygon}) are proved in Lean by
+the same method in general form. Statements (b), (c) and (d) are special cases of them ($m=4$), and (a) follows from (b)
+applied to $P\cup\{\operatorname{mir}c_0\}$ by deleting the point $\operatorname{mir}c_0$; so nothing is lost by the
+derivation above.
+\end{remark}
+
+%======================================================================
+\subsection{Seven points: the bound 32}\label{mb:ssec:seven}
+
+\begin{lemma}[the reduction for $k=7$;\\
+  \leanref{MirrorOdd.mirror_seven_of}{MIRRORETV/lean/MirrorMain.lean:1676}]\label{mb:lem:seven-of}
+Let (Hcap), (HL) and (HR) denote the statements of Lemma~\ref{mb:lem:polygons}(a), (c) and (d) respectively, each
+universally quantified over the four points ($c_0,\dots,c_3$, resp.\ $a,c_0,c_1,c_2$) and over all finite $P\subset\R^2$.
+Assume (Hcap), (HL) and (HR). Let $S\subset\R^2$ be finite, in general position and $\operatorname{mir}$-symmetric, and
+suppose that $S$ does not contain $7$ points in convex position. Then $\card S\le32$.
+\end{lemma}
+
+\begin{proof}
+\emph{Key claim.} Let $T\subseteq S$ with $y(p)\ge0$ for all $p\in T$ and with $p=q$ for all $p,q\in T$ such that
+$y(p)=0=y(q)$ (at most one point of $T$ on the axis). Then $\card T\le16$.
+
+By Lemma~\ref{mb:lem:split}(c), $x$ is injective on $T$; $T$ is in general position (Lemma~\ref{fd:lem:mono}(b)). Let
+$c:=\mathrm{cfg}(T)$ be the configuration of $\card T$ points of Lemma~\ref{mb:lem:sort}, so $\mathcal P(c)=T$. We apply
+Proposition~\ref{mb:prop:cap16} to $c$. Its second hypothesis holds because $\mathcal P(c)=T\subseteq S$ and $S$ does not
+contain $7$ points in convex position (Lemma~\ref{fd:lem:mono}(c)). For the first, suppose $c.\mathsf{HasCap}(4)$, with
+$f\colon[4]\to[\card T]$ strictly increasing, and put $d_i:=c_{f(i)}$. Then $d_0,\dots,d_3\in T\subseteq S$,
+$x(d_0)<x(d_1)<x(d_2)<x(d_3)$, $\orient(d_i,d_j,d_l)<0$ for all $i<j<l$, $\operatorname{mir}(d_i)\in S$ by symmetry, and
+$y(d_i)\ge0$. We distinguish cases.
+\begin{itemize}
+\item $y(d_0),y(d_1),y(d_2),y(d_3)>0$. Then (Hcap) with $P=S$ shows that $S$ contains $7$ points in convex position:
+  contradiction.
+\item $y(d_0)>0$, $y(d_3)>0$, $y(d_1)>0$, $y(d_2)=0$. Lemma~\ref{mb:lem:interior} for $(d_1,d_2,d_3)$ gives
+  $\orient(d_1,d_2,d_3)\ge0$: contradiction.
+\item $y(d_0)>0$, $y(d_3)>0$, $y(d_1)=0$. Lemma~\ref{mb:lem:interior} for $(d_0,d_1,d_2)$ gives
+  $\orient(d_0,d_1,d_2)\ge0$: contradiction.
+\item $y(d_0)>0$, $y(d_3)=0$. If $y(d_1)=0$, then $d_1=d_3$ (at most one axis point in $T$), contradicting
+  $x(d_1)<x(d_3)$; so $y(d_1)>0$, and likewise $y(d_2)>0$. Then (HR) with $a=d_3$ and $(c_0,c_1,c_2)=(d_0,d_1,d_2)$, and
+  $P=S$, gives $7$ points of $S$ in convex position: contradiction. (The hypotheses of (HR) are $y(d_3)=0$, the order
+  $x(d_0)<x(d_1)<x(d_2)<x(d_3)$, the signs $y(d_i)>0$ for $i<3$, the four negative orientations, and $\operatorname{mir}
+  d_0,\operatorname{mir}d_1,\operatorname{mir}d_2,d_3,d_2,d_1,d_0\in S$.)
+\item $y(d_0)=0$. As before, $y(d_i)>0$ for $i=1,2,3$ (otherwise $d_i=d_0$, contradicting $x(d_0)<x(d_i)$). Then (HL) with
+  $a=d_0$ and $(c_0,c_1,c_2)=(d_1,d_2,d_3)$, and $P=S$ (which contains $d_0,\operatorname{mir}d_1,\operatorname{mir}d_2,
+  \operatorname{mir}d_3,d_3,d_2,d_1$), gives a contradiction.
+\end{itemize}
+These cases are exhaustive (since every $y(d_i)\ge0$). Hence $\neg\,c.\mathsf{HasCap}(4)$, and
+Proposition~\ref{mb:prop:cap16} gives $\card T=\card{\mathcal P(c)}\le16$.
+
+\emph{Counting.} Write $R=R(S)$ and $A=A(S)$. By Lemma~\ref{mb:lem:split}(a),(b), $\card S=2\card R+\card A$ and
+$\card A\le2$. The key claim applies to $T=R$ (all $y>0$, no axis point), so $\card R\le16$. If $A=\emptyset$, then
+$\card S=2\card R\le32$. Otherwise pick $a\in A$; then $a\notin R$, and $T=R\cup\{a\}\subseteq S$ has all $y\ge0$ and
+exactly one axis point, so the key claim gives $\card R+1\le16$, and $\card S=2\card R+\card A\le2\cdot15+2=32$.
+\end{proof}
+
+\begin{definition}[reflection in a line given by a unit normal; the frame;\\
+  \leanref{MirrorOdd.lineRefl}{MIRRORETV/lean/MirrorMain.lean:1879},\\
+  \leanref{MirrorOdd.frame}{MIRRORETV/lean/MirrorMain.lean:1883},\\
+  \leanref{MirrorOdd.unframe}{MIRRORETV/lean/MirrorMain.lean:1892}]\label{mb:def:frame}
+For $n_0,n_1,c\in\R$ and $p,q\in\R^2$ put
+\begin{align*}
+\mathrm{lineRefl}_{n_0,n_1,c}(p)&:=\bigl(p_0-2(n_0p_0+n_1p_1-c)\,n_0,\ p_1-2(n_0p_0+n_1p_1-c)\,n_1\bigr),\\
+\mathrm{frame}_{n_0,n_1,c}(p)&:=\bigl(n_1(p_0-cn_0)-n_0(p_1-cn_1),\ n_0(p_0-cn_0)+n_1(p_1-cn_1)\bigr),\\
+\mathrm{unframe}_{n_0,n_1,c}(q)&:=\bigl(n_1q_0+n_0q_1+cn_0,\ -n_0q_0+n_1q_1+cn_1\bigr).
+\end{align*}
+$\mathrm{unframe}$ is an affine map (Lean: a Mathlib \lean{AffineMap} of \lean{Point}) with linear part
+$(q_0,q_1)\mapsto(n_1q_0+n_0q_1,-n_0q_0+n_1q_1)$ (\lean{MirrorOdd.unframeLin}, line 1886). When $n_0^2+n_1^2=1$,
+$\mathrm{lineRefl}$ is the Euclidean reflection in the line $\{p:n_0p_0+n_1p_1=c\}$ (every line has this form), and
+$\mathrm{frame}$ is a rotation composed with a translation which takes this line onto the $x$-axis; no condition on
+$n_0,n_1$ is built into the definitions.
+\end{definition}
+
+\begin{lemma}[identities of the frame;\\
+  \leanref{MirrorOdd.frame_lineRefl}{MIRRORETV/lean/MirrorMain.lean:1914},\\
+  \leanref{MirrorOdd.orient_frame}{MIRRORETV/lean/MirrorMain.lean:1920},\\
+  \leanref{MirrorOdd.unframe_frame}{MIRRORETV/lean/MirrorMain.lean:1900},\\
+  \leanref{MirrorOdd.frame_unframe}{MIRRORETV/lean/MirrorMain.lean:1907},\\
+  \leanref{MirrorOdd.frame_injective}{MIRRORETV/lean/MirrorMain.lean:1925},\\
+  \leanref{MirrorOdd.unframe_injective}{MIRRORETV/lean/MirrorMain.lean:1930}]\label{mb:lem:frame}
+Let $n_0^2+n_1^2=1$ and $c\in\R$; write $\mathrm{frame}$, $\mathrm{unframe}$, $\mathrm{lineRefl}$ for the maps with these
+parameters. Then for all $p,q,a,b,d\in\R^2$:
+\begin{enumerate}[label=(\alph*)]
+\item $\mathrm{frame}(\mathrm{lineRefl}(p))=\operatorname{mir}(\mathrm{frame}(p))$;
+\item $\orient(\mathrm{frame}(a),\mathrm{frame}(b),\mathrm{frame}(d))=\orient(a,b,d)$;
+\item $\mathrm{unframe}(\mathrm{frame}(p))=p$ and $\mathrm{frame}(\mathrm{unframe}(q))=q$; in particular $\mathrm{frame}$
+  and $\mathrm{unframe}$ are injective.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Put $\nu:=n_0^2+n_1^2$. Expanding the definitions gives the following polynomial identities, valid for all values of the
+variables (we checked each symbolically; they are the \lean{linear_combination} certificates of the Lean proofs):
+\begin{align*}
+\mathrm{frame}(\mathrm{lineRefl}\,p)-\operatorname{mir}(\mathrm{frame}\,p)&=\bigl(0,\ -2(n_0p_0+n_1p_1)(\nu-1)\bigr),\\
+\orient(\mathrm{frame}\,a,\mathrm{frame}\,b,\mathrm{frame}\,d)-\orient(a,b,d)&=(\nu-1)\,\orient(a,b,d),\\
+\mathrm{unframe}(\mathrm{frame}\,p)-p&=(\nu-1)\,(p_0-cn_0,\ p_1-cn_1),\\
+\mathrm{frame}(\mathrm{unframe}\,q)-q&=(\nu-1)\,(q_0,\ q_1).
+\end{align*}
+With $\nu=1$ all right-hand sides vanish, which proves (a), (b) and the two equalities in (c); a map with a left inverse
+is injective, and $\mathrm{frame}$ and $\mathrm{unframe}$ are left inverses of each other. (Conceptually,
+$\mathrm{frame}(p)=M(p-c\,n)$ and $\mathrm{unframe}(q)=M^{\mathsf T}q+c\,n$ with $n=(n_0,n_1)$ and
+$M=\left(\begin{smallmatrix}n_1&-n_0\\ n_0&n_1\end{smallmatrix}\right)$, $\det M=\nu$, $M^{\mathsf T}M=MM^{\mathsf T}=\nu I$;
+(b) is then Lemma~\ref{fd:lem:affine-orient}, and the second coordinate of $\mathrm{frame}(p)$ is $n_0p_0+n_1p_1-c\nu$,
+which for $\nu=1$ is the signed distance from $p$ to the line.)
+\end{proof}
+
+\begin{lemma}[convex polygons under injective affine maps;\\
+  \leanref{MirrorOdd.hasConvexNGon_affineMap}{MIRRORETV/lean/MirrorMain.lean:1859}]\label{mb:lem:affine}
+Let $S\subset\R^2$ be finite, $n\in\N$, and $g\colon\R^2\to\R^2$ an injective affine map. If $S$ contains $n$ points in
+convex position, then so does $g(S)$.
+\end{lemma}
+
+\begin{proof}
+Let $T\subseteq S$ with $\card T=n$ be in convex position. Then $g(T)\subseteq g(S)$, $\card{g(T)}=n$ because $g$ is
+injective, and $g(T)$ is in convex position by Lemma~\ref{fd:lem:affine-cp}. (Lean argues directly: if
+$g(p)\in\conv(g(T)\setminus\{g(p)\})=\conv(g(T\setminus\{p\}))=g(\conv(T\setminus\{p\}))$, injectivity gives
+$p\in\conv(T\setminus\{p\})$.)
+\end{proof}
+
+\begin{lemma}[transport to the $x$-axis;\\
+  \leanref{MirrorOdd.transport}{MIRRORETV/lean/MirrorMain.lean:1937}]\label{mb:lem:transport}
+Let $n_0,n_1,c\in\R$ with $n_0^2+n_1^2=1$, let $S\subset\R^2$ be finite and $m\in\N$, and assume that $S$ is in general
+position, that $\mathrm{lineRefl}_{n_0,n_1,c}(p)\in S$ for all $p\in S$, and that $S$ does not contain $m$ points in
+convex position. Put $S':=\mathrm{frame}_{n_0,n_1,c}(S)$. Then $S'$ is in general position, $S'$ is
+$\operatorname{mir}$-symmetric, $S'$ does not contain $m$ points in convex position, and $\card{S'}=\card S$.
+\end{lemma}
+
+\begin{proof}
+The same statement is part (a) of Theorem~\ref{mm:thm:line}; we include the short proof to keep this section
+self-contained. We use Lemma~\ref{mb:lem:frame} throughout. $\card{S'}=\card S$ because $\mathrm{frame}$ is injective. General position:
+let $q_1,q_2,q_3\in S'$ be pairwise distinct, $q_k=\mathrm{frame}(p_k)$ with $p_k\in S$; the $p_k$ are pairwise distinct,
+so $\orient(q_1,q_2,q_3)=\orient(p_1,p_2,p_3)\ne0$ by Lemma~\ref{mb:lem:frame}(b) and Lemma~\ref{fd:lem:collinear}; by
+Lemma~\ref{fd:lem:collinear} again $S'$ is in general position. Symmetry: for $q=\mathrm{frame}(p)\in S'$,
+$\operatorname{mir}(q)=\mathrm{frame}(\mathrm{lineRefl}(p))\in S'$ because $\mathrm{lineRefl}(p)\in S$. No $m$ points in
+convex position: if $S'$ contained $m$ points in convex position, then so would $\mathrm{unframe}(S')$ by
+Lemma~\ref{mb:lem:affine} ($\mathrm{unframe}$ is affine and injective); but $\mathrm{unframe}(S')=S$ by
+Lemma~\ref{mb:lem:frame}(c).
+\end{proof}
+
+\begin{theorem}[mirror-symmetric sets without convex heptagons;\\
+  \leanref{MirrorOdd.mirror_seven}{MIRRORETV/lean/MirrorMain.lean:1803},\\
+  \leanref{MirrorOdd.mirror_seven_line}{MIRRORETV/lean/MirrorMain.lean:1969}]\label{mb:thm:seven}
+The following two statements hold, (a) for the reflection in the $x$-axis and (b) for the reflection in an arbitrary
+line.
+\begin{enumerate}[label=(\alph*)]
+\item Let $S\subset\R^2$ be finite, in general position and $\operatorname{mir}$-symmetric. If $S$ does not contain $7$
+  points in convex position, then $\card S\le32$.
+\item Let $n_0,n_1,c\in\R$ with $n_0^2+n_1^2=1$, and let $S\subset\R^2$ be finite, in general position, with
+  $\mathrm{lineRefl}_{n_0,n_1,c}(p)\in S$ for every $p\in S$. If $S$ does not contain $7$ points in convex position, then
+  $\card S\le32$.
+\end{enumerate}
+\end{theorem}
+
+Status: Lean-checked (\dirn{MIRRORETV/lean/MirrorMain.out}, lines 848 and 850; also \dirn{SYMLEAN/mirror/axioms.out}).
+The proof below is a written proof (not refereed); it rests on the cited Theorem~\ref{mb:thm:baek} (through
+Proposition~\ref{mb:prop:cap16}) and on Theorems~\ref{mm:thm:mirror-polygon} and~\ref{mm:thm:axis-polygon}.
+
+\begin{proof}
+(a) By Lemma~\ref{mb:lem:polygons}(a), (c), (d), the statements (Hcap), (HL), (HR) of Lemma~\ref{mb:lem:seven-of} hold;
+that lemma gives $\card S\le32$. (Lean: \texttt{mirror\_seven\_of cap\_mirror\_heptagon axis\_left\_heptagon
+axis\_right\_heptagon}.)
+
+(b) By Lemma~\ref{mb:lem:transport} with $m=7$, $S'=\mathrm{frame}_{n_0,n_1,c}(S)$ is in general position,
+$\operatorname{mir}$-symmetric, does not contain $7$ points in convex position, and $\card{S'}=\card S$. By (a),
+$\card S=\card{S'}\le32$.
+\end{proof}
+
+\begin{remark}\label{mb:rem:seven}
+Lean also contains \texttt{MirrorOdd.}\allowbreak\texttt{mirror\_seven\textquotesingle} (\dirn{MIRRORETV/lean/MirrorMain.lean:2631}),
+which proves the statement of Theorem~\ref{mb:thm:seven}(a) again as the instance $j=3$, $M=16$ of
+Theorem~\ref{mm:thm:odd} (\lean{mirror_odd_general}), with the hypothesis on $M$ supplied by
+Proposition~\ref{mb:prop:cap16}. This is a second Lean proof: in place of \lean{mirror_seven_of} and the generated
+polygon lemmas of Lemma~\ref{mb:lem:polygons} it uses the general reduction \lean{mirror_odd_general}, which rests on
+the general mirror lemma (Theorems~\ref{mm:thm:mirror-polygon} and~\ref{mm:thm:axis-polygon}).
+\end{remark}
+
+%======================================================================
+\subsection{Eight points: the bound 46}\label{mb:ssec:eight}
+
+\begin{theorem}[mirror-symmetric sets without convex octagons;\\
+  \leanref{MirrorOdd.mirror_eight}{MIRRORETV/lean/MirrorMain.lean:1820},\\
+  \leanref{MirrorOdd.mirror_eight_line}{MIRRORETV/lean/MirrorMain.lean:1977}]\label{mb:thm:eight}
+The following two statements hold, (a) for the reflection in the $x$-axis and (b) for the reflection in an arbitrary
+line.
+\begin{enumerate}[label=(\alph*)]
+\item Let $S\subset\R^2$ be finite, in general position and $\operatorname{mir}$-symmetric. If $S$ does not contain $8$
+  points in convex position, then $\card S\le46$.
+\item Let $n_0,n_1,c\in\R$ with $n_0^2+n_1^2=1$, and let $S\subset\R^2$ be finite, in general position, with
+  $\mathrm{lineRefl}_{n_0,n_1,c}(p)\in S$ for every $p\in S$. If $S$ does not contain $8$ points in convex position, then
+  $\card S\le46$.
+\end{enumerate}
+\end{theorem}
+
+Status: Lean-checked (\dirn{MIRRORETV/lean/MirrorMain.out}, lines 849 and 851). The proof below is a written proof (not
+refereed); it rests on the cited Theorem~\ref{mb:thm:baek} (through Proposition~\ref{mb:prop:cap22}) and on
+Theorem~\ref{mm:thm:mirror-polygon}.
+
+\begin{proof}
+(a) Let $R=R(S)$ and $A=A(S)$. Then $R\subseteq S$ and $y>0$ on $R$, so $x$ is injective on $R$ by
+Lemma~\ref{mb:lem:split}(c) (the condition on axis points is vacuous), and $R$ is in general position
+(Lemma~\ref{fd:lem:mono}(b)). Let $c:=\mathrm{cfg}(R)$ (Lemma~\ref{mb:lem:sort}), so $\mathcal P(c)=R$. We apply
+Proposition~\ref{mb:prop:cap22} to $c$. Its second hypothesis holds since $\mathcal P(c)=R\subseteq S$
+(Lemma~\ref{fd:lem:mono}(c)). For the first, suppose $c.\mathsf{HasCap}(4)$ with $f\colon[4]\to[\card R]$ and put
+$d_i:=c_{f(i)}$: then $x(d_0)<\dots<x(d_3)$, all four ordered triples have negative orientation, $y(d_i)>0$ (as
+$d_i\in R$), and $d_i,\operatorname{mir}(d_i)\in S$. Lemma~\ref{mb:lem:polygons}(b) with $P=S$ shows that $S$ contains $8$
+points in convex position: a contradiction. Hence $\card R\le22$, and by Lemma~\ref{mb:lem:split}(a),(b)
+$\card S=2\card R+\card A\le44+2=46$.
+
+(b) By Lemma~\ref{mb:lem:transport} with $m=8$ and part (a), $\card S=\card{\mathrm{frame}(S)}\le46$.
+\end{proof}
+
+\begin{remark}\label{mb:rem:eight}
+Lean also contains \texttt{MirrorOdd.}\allowbreak\texttt{mirror\_eight\textquotesingle}
+(\dirn{MIRRORETV/lean/MirrorMain.lean:2636}), which re-derives Theorem~\ref{mb:thm:eight}(a) as the instance $j=4$,
+$M=22$ of Theorem~\ref{mm:thm:even} (\lean{mirror_even_general}) with Proposition~\ref{mb:prop:cap22}.
+Only the points strictly above the axis are used in (a); the two possible axis points are simply counted.
+\end{remark}
+
+%======================================================================
+\subsection{Nine points: the bound 226}\label{mb:ssec:nine}
+
+\begin{theorem}[the capacity bound 113; mirror-symmetric sets without convex nonagons;\\
+  \leanref{C12Check.config_capacity113}{MIRRORETV/lean/MirrorNine_append.lean:24},\\
+  \leanref{C12Check.mirror_nine}{MIRRORETV/lean/MirrorNine_append.lean:131},\\
+  \leanref{C12Check.mirror_nine_line}{MIRRORETV/lean/MirrorNine_append.lean:136}]\label{mb:thm:nine}\raggedright
+The following three statements hold: (a) is a capacity bound in Baek's model of Definition~\ref{mb:def:config} (no
+$5$-cap and no $9$-gon), (b) and (c) are the mirror bounds for the reflection in the $x$-axis and in an arbitrary line.
+\begin{enumerate}[label=(\alph*)]
+\item Let $(\alpha,<)$ be a linearly ordered set, $C$ a configuration on $\alpha$ and $S\subseteq\alpha$ finite with
+  $\neg\mathsf{HasNCap}_C(5,S)$ and $\neg\mathsf{HasNGon}_C(9,S)$. Then $\card S\le113$.
+\item Let $S\subset\R^2$ be finite, in general position and $\operatorname{mir}$-symmetric. If $S$ does not contain $9$
+  points in convex position, then $\card S\le226$.
+\item Let $n_0,n_1,c\in\R$ with $n_0^2+n_1^2=1$, and let $S\subset\R^2$ be finite, in general position, with
+  $\mathrm{lineRefl}_{n_0,n_1,c}(p)\in S$ for every $p\in S$. If $S$ does not contain $9$ points in convex position, then
+  $\card S\le226$.
+\end{enumerate}
+\end{theorem}
+
+Status: Lean-checked (\dirn{MIRRORETV/lean/MirrorNine.out}, lines 879, 881 and 882). The proofs below are written proofs
+(not refereed); they rest on the cited Theorems~\ref{mb:thm:baek} and~\ref{mb:thm:capcup} and, for (b) and (c), on
+Theorems~\ref{mm:thm:odd} and~\ref{mm:thm:line}. Part (a) is proved first; Proposition~\ref{mb:prop:cap113} transfers
+it to point configurations; (b) and (c) follow.
+
+\begin{proof}[Proof of Theorem~\ref{mb:thm:nine}(a)]
+We follow the Lean proof. Let $T$ be the set of $p\in S$ that are the first entry of some $C$-cap of length $4$ with all
+entries in $S$. Then $T\subseteq S$ and $\card S=\card{S\setminus T}+\card T$.
+
+\emph{Claim 1: $\card{S\setminus T}\le29$.} Suppose $\card{S\setminus T}\ge30=\binom{6+2}{2}+2$ (with $\binom82=28$).
+Theorem~\ref{mb:thm:baek} with $n=6$ gives $\mathsf{HasNCap}_C(4,S\setminus T)$ or $\mathsf{HasNGon}_C(9,S\setminus T)$.
+In the first case let $(h,\dots)$ be a $C$-cap of length $4$ with entries in $S\setminus T$; its entries lie in $S$, so
+its first entry $h$ lies in $T$ by definition of $T$, while $h\in S\setminus T$: a contradiction. In the second case
+Lemma~\ref{mb:lem:config-mono}(a) gives $\mathsf{HasNGon}_C(9,S)$, contrary to the hypothesis.
+
+\emph{Claim 2: $\card T\le84$.} Suppose $\card T>84=\binom{3+6}{3}$. Theorem~\ref{mb:thm:capcup} with $a=3$, $b=6$ gives
+$\mathsf{HasNCap}_C(5,T)$ or $\mathsf{HasNCup}_C(8,T)$. The first is impossible, since a $5$-cap in $T$ is one in $S$
+(Lemma~\ref{mb:lem:config-mono}(a)). In the second case let $(z_0,\dots,z_7)$ be a $C$-cup with entries in $T$, and put
+$p:=z_6$, $q:=z_7$. As $q\in T$, there is a $C$-cap $(q,r,r_2,r_3)$ with entries in $S$. Note $p<q<r$, since cups and
+caps are strictly increasing.
+\begin{itemize}
+\item If $\mathrm{Cup3}_C(p,q,r)$, then $(z_0,\dots,z_7,r)$ is strictly increasing and all its consecutive triples
+  satisfy $\mathrm{Cup3}_C$ (those of the cup, and $(z_6,z_7,r)=(p,q,r)$), so it is a $C$-cup of length $9$ with entries
+  in $S$ (as $T\subseteq S$). By Lemma~\ref{mb:lem:config-mono}(b) (with $9\ge2$), $\mathsf{HasNGon}_C(9,S)$: a
+  contradiction.
+\item If $\mathrm{Cap3}_C(p,q,r)$, then $(p,q,r,r_2,r_3)$ is strictly increasing and all its consecutive triples satisfy
+  $\mathrm{Cap3}_C$ (the triple $(p,q,r)$ and those of the cap), so it is a $C$-cap of length $5$ with entries in $S$
+  ($p\in T\subseteq S$): a contradiction with $\neg\mathsf{HasNCap}_C(5,S)$.
+\end{itemize}
+
+Hence $\card S=\card{S\setminus T}+\card T\le29+84=113$.
+\end{proof}
+
+\begin{proposition}[the capacity bound 113 for point configurations;\\
+  \leanref{C12Check.capacity113}{MIRRORETV/lean/MirrorNine_append.lean:116}]\label{mb:prop:cap113}
+Let $c$ be a configuration of $n$ points with $\neg\,c.\mathsf{HasCap}(5)$ such that $\mathcal P(c)$ does not contain $9$
+points in convex position. Then $n\le113$.
+\end{proposition}
+
+\begin{proof}
+Apply Theorem~\ref{mb:thm:nine}(a) (proved above) to $C=C_c$ and $S=[n]$. A $C_c$-cap of length $5$ in $[n]$ would give
+$c.\mathsf{HasCap}(5)$ (Lemma~\ref{mb:lem:lists}(c)), and a $9$-gon of $C_c$ in $[n]$ would give $9$ points of
+$\mathcal P(c)$ in convex position (Proposition~\ref{mb:prop:gon}). Hence $n=\card{[n]}\le113$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{mb:thm:nine}(b) and~(c)]
+Theorem~\ref{mm:thm:odd} (\lean{mirror_odd_general}, \dirn{MIRRORETV/lean/MirrorMain.lean:2498}) states: let $j\ge2$ and
+$M$ be natural numbers such that every configuration $e$ of $r$ points (for every $r\in\N$) with
+$\neg\,e.\mathsf{HasCap}(j+1)$ and without $2j+1$ points of $\mathcal P(e)$ in convex position has $r\le M$; then every
+finite $\operatorname{mir}$-symmetric set in general position without $2j+1$ points in convex position has at most $2M$
+points. Theorem~\ref{mm:thm:line} contains the same statement for $\mathrm{lineRefl}_{n_0,n_1,c}$-symmetric sets with
+$n_0^2+n_1^2=1$ (\lean{mirror_odd_general_line}, line 2641).
+
+Take $j=4$ and $M=113$. Then $j\ge2$, $j+1=5$, $2j+1=9$, and the hypothesis on $M$ is exactly
+Proposition~\ref{mb:prop:cap113}. So (b) follows from \lean{mirror_odd_general} and (c) from
+\lean{mirror_odd_general_line}, with $2M=226$. (Alternatively, (c) follows from (b) by Lemma~\ref{mb:lem:transport}.)
+\end{proof}
+
+%======================================================================
+\subsection{Reflections given by a point and a direction; the three-class reduction}\label{mb:ssec:three}
+
+The case classes of Definition~\ref{sr:def:classes} use a second parametrisation of reflections.
+
+\begin{definition}[reflection through a point with a unit direction;\\
+  \leanref{ErdosSzekeres.SymReduction.reflLine}{SYMLEAN/mirror/ReductionThreeClasses.lean:449}]\label{mb:def:reflline}
+For $a,u,p\in\R^2$ put $d:=(p_0-a_0)u_0+(p_1-a_1)u_1$ and
+\[
+\mathrm{reflLine}_{a,u}(p):=\bigl(a_0+2du_0-(p_0-a_0),\ a_1+2du_1-(p_1-a_1)\bigr).
+\]
+For $u_0^2+u_1^2=1$ this is the reflection in the line $a+\R u$. (The same definition is
+\dirn{SYMLEAN/SymmetricReduction.lean:423}; the class statements use it with the hypothesis $u_0^2+u_1^2=1$.)
+\end{definition}
+
+\begin{theorem}[the two reflections agree; the bound 32 for $\mathrm{reflLine}$;\\
+  \leanref{ErdosSzekeres.SymReduction.reflLine_eq_lineRefl}{SYMLEAN/mirror/ReductionThreeClasses.lean:4253},\\
+  \leanref{ErdosSzekeres.SymReduction.card_le_32_of_reflLine}{SYMLEAN/mirror/ReductionThreeClasses.lean:4264}]\label{mb:thm:refl32}\raggedright
+Let $a,u\in\R^2$ with $u_0^2+u_1^2=1$.
+\begin{enumerate}[label=(\alph*)]
+\item $\mathrm{reflLine}_{a,u}=\mathrm{lineRefl}_{n_0,n_1,c}$ as maps $\R^2\to\R^2$, where $n_0=-u_1$, $n_1=u_0$ and
+  $c=-u_1a_0+u_0a_1$.
+\item Let $S\subset\R^2$ be finite and in general position with $\mathrm{reflLine}_{a,u}(p)\in S$ for every $p\in S$
+  (Lean \texttt{Invariant (reflLine a u) S}, Definition~\ref{fd:def:inv}). If $S$ does not contain $7$ points in convex
+  position, then $\card S\le32$.
+\end{enumerate}
+\end{theorem}
+
+Status: Lean-checked (\dirn{SYMLEAN/mirror/axioms.out}). Part (b) puts no condition on the number of points of $S$ on the
+mirror. The written proof of (b) rests on Theorem~\ref{mb:thm:seven}(b), hence on the cited Theorem~\ref{mb:thm:baek}
+and on Theorems~\ref{mm:thm:mirror-polygon} and~\ref{mm:thm:axis-polygon}.
+
+\begin{proof}
+(a) Fix $p$ and put $w:=p-a$. In the first coordinate,
+\[
+\mathrm{reflLine}_{a,u}(p)_0-\mathrm{lineRefl}_{n_0,n_1,c}(p)_0=(2a_0-p_0+2du_0)-\bigl(p_0+2(-u_1p_0+u_0p_1-c)u_1\bigr)
+=2w_0\,(u_0^2+u_1^2-1),
+\]
+using $d=w_0u_0+w_1u_1$ and $-u_1p_0+u_0p_1-c=-u_1w_0+u_0w_1$; in the second coordinate the difference is
+$(2a_1-p_1+2du_1)-\bigl(p_1-2(-u_1w_0+u_0w_1)u_0\bigr)=2w_1\,(u_0^2+u_1^2-1)$. (We checked both identities symbolically;
+they are the Lean certificates \texttt{linear\_combination (2 * (p i - a i)) * hu}.) Both vanish since $u_0^2+u_1^2=1$.
+Geometrically: $n=(-u_1,u_0)$ is $u$ turned by $90^\circ$, $(u,n)$ is an orthonormal basis, $w=\langle w,u\rangle u+\langle
+w,n\rangle n$, $\langle n,p\rangle-c=\langle n,w\rangle$, and both maps send $p$ to $a+\langle w,u\rangle u-\langle w,n
+\rangle n$.
+
+(b) $n_0^2+n_1^2=u_1^2+u_0^2=1$, and for $p\in S$, $\mathrm{lineRefl}_{n_0,n_1,c}(p)=\mathrm{reflLine}_{a,u}(p)\in S$ by
+(a). Theorem~\ref{mb:thm:seven}(b) gives $\card S\le32$.
+\end{proof}
+
+\begin{theorem}[the two mirror case classes hold;\\
+  \leanref{ErdosSzekeres.SymReduction.mirrorOneAxis33_proved}{SYMLEAN/mirror/ReductionThreeClasses.lean:4274},\\
+  \leanref{ErdosSzekeres.SymReduction.mirrorNoAxis34_proved}{SYMLEAN/mirror/ReductionThreeClasses.lean:4282}]\label{mb:thm:classes}\raggedright
+The propositions \lean{MirrorOneAxis33} and \lean{MirrorNoAxis34} of Definition~\ref{sr:def:classes} hold. Explicitly:
+\begin{enumerate}[label=(\alph*)]
+\item Let $S\subset\R^2$ be finite and $a,u\in\R^2$ with $u_0^2+u_1^2=1$. If $S$ is in general position, $\card S=33$,
+  $\mathrm{reflLine}_{a,u}(p)\in S$ for all $p\in S$, and there is $x\in S$ with $\mathrm{reflLine}_{a,u}(x)=x$ such that
+  every $y\in S$ with $\mathrm{reflLine}_{a,u}(y)=y$ equals $x$, then $S$ contains $7$ points in convex position.
+\item Let $S\subset\R^2$ be finite and $a,u\in\R^2$ with $u_0^2+u_1^2=1$. If $S$ is in general position, $\card S=34$,
+  $\mathrm{reflLine}_{a,u}(p)\in S$ for all $p\in S$, and $\mathrm{reflLine}_{a,u}(p)\ne p$ for all $p\in S$, then $S$
+  contains $7$ points in convex position.
+\end{enumerate}
+\end{theorem}
+
+Status: Lean-checked (\dirn{SYMLEAN/mirror/axioms.out}); no SAT certificate and no unproved hypothesis is involved; the
+written proof rests, through Theorems~\ref{mb:thm:refl32}(b) and~\ref{mb:thm:seven}(b), on the cited
+Theorem~\ref{mb:thm:baek} and on Theorems~\ref{mm:thm:mirror-polygon} and~\ref{mm:thm:axis-polygon}.
+
+\begin{proof}
+In both cases, if $S$ did not contain $7$ points in convex position, Theorem~\ref{mb:thm:refl32}(b) would give
+$\card S\le32$, contradicting $\card S=33$, resp.\ $\card S=34$. The last hypothesis of (a) (exactly one point on the
+mirror) and of (b) (no point on the mirror) is not used.
+\end{proof}
+
+\begin{theorem}[the reduction with three case classes; \emph{conditional};\\
+  \leanref{ErdosSzekeres.SymReduction.heptagon_of_nontrivial_isometry_3}{SYMLEAN/mirror/ReductionThreeClasses.lean:4292},\\
+  \leanref{ErdosSzekeres.SymReduction.heptagon_of_nontrivial_affineEquiv_3}{SYMLEAN/mirror/ReductionThreeClasses.lean:4303}]\label{mb:thm:main3}\raggedright
+Assume the three propositions \lean{HalfTurn34}, \lean{Threefold33} and \lean{Fivefold35} of
+Definition~\ref{sr:def:classes} (they are explicit hypotheses of both statements).
+\begin{enumerate}[label=(\alph*)]
+\item Let $S\subset\R^2$ be finite and in general position with $33\le\card S$, and let $g\colon\R^2\to\R^2$ be a map
+  with $\mathrm{eDist2}(g(p),g(q))=\mathrm{eDist2}(p,q)$ for all $p,q\in\R^2$ (\texttt{IsEucIsometry g},
+  Definition~\ref{sr:def:iso}; $\mathrm{eDist2}$ is the squared Euclidean distance; no continuity or surjectivity is
+  assumed), $g\ne\mathrm{id}$, and $g(p)\in S$ for all $p\in S$. Then $S$ contains $7$ points in convex position.
+\item Let $S\subset\R^2$ be finite and in general position with $33\le\card S$, and let $g$ be an affine bijection of
+  $\R^2$ (Lean: $g$ is an \lean{AffineEquiv} of \lean{Point}) with $g\ne\mathrm{id}$ (Lean: $g$ differs from
+  \lean{AffineEquiv.refl}; two affine equivalences are equal iff they agree at every point) and $g(p)\in S$ for all
+  $p\in S$ (the invariance uses $g$ as a map). Then $S$ contains $7$ points in convex position.
+\end{enumerate}
+\end{theorem}
+
+Status: Lean-checked \emph{as a conditional statement} (\dirn{SYMLEAN/mirror/axioms.out}: only the three standard axioms;
+the three case classes are binders of the theorems, not axioms). The theorem does not establish its conclusion
+unconditionally; see Remark~\ref{mb:rem:main3}.
+
+\begin{proof}
+(a) Theorem~\ref{sr:thm:main} (\lean{heptagon_of_nontrivial_isometry}) gives the conclusion under the five hypotheses
+\lean{HalfTurn34}, \lean{Threefold33}, \lean{Fivefold35}, \lean{MirrorOneAxis33}, \lean{MirrorNoAxis34}, for exactly the
+$S$ and $g$ of (a). The last two hold by Theorem~\ref{mb:thm:classes}. (Lean: \texttt{heptagon\_of\_nontrivial\_isometry
+h2 h3 h5 mirrorOneAxis33\_proved mirrorNoAxis34\_proved S g hgp hcard hg hne hinv}.)
+
+(b) Likewise from Theorem~\ref{ar:thm:main}(a) (\lean{heptagon_of_nontrivial_affineEquiv}) and Theorem~\ref{mb:thm:classes}.
+
+The theorems used are the copies in RTC (lines 1023 and 1527), which are byte-identical with
+\dirn{SYMLEAN/SymmetricReduction.lean:997} and \dirn{SYMLEAN/AffineReduction.lean:1501} (see the paragraph on copies at
+the beginning of this section), so the written proofs of Theorems~\ref{sr:thm:main} and~\ref{ar:thm:main} apply
+verbatim.
+\end{proof}
+
+\begin{remark}[status of the hypotheses of Theorem~\ref{mb:thm:main3}]\label{mb:rem:main3}
+\lean{HalfTurn34}, \lean{Threefold33} and \lean{Fivefold35} are not proved in Lean. In the project they are
+computer-assisted claims, supplied by the following records (\dirn{SYMLEAN/mirror/README.md}, \S4, and the table in
+\dirn{SYMLEAN/README.md}, \S5). The project trusts one proof checker, \texttt{cake\_lpr}: where a proof is said below to
+have been accepted by both proof checkers, \texttt{cake\_lpr} accepted it, and that is the verdict that counts;
+\texttt{lrat-check} is only a secondary check, whose verdicts the project does not count (\dirn{WRITEUP/SYMMETRIC.md},
+\S3; an unpatched build of it accepts invalid proofs, \dirn{LRATCHECK20261105}).
+\begin{itemize}
+\item \lean{HalfTurn34}: claimed in \dirn{C2FINAL}. The hull cover and the $120$ hexagonal hulls of \dirn{C2C34} have
+  retained proofs; most parallelogram pieces (\dirn{C2P}--\dirn{C2P5}) rest on verdicts recorded at solve time (both
+  proof checkers accepted the proof, which was then deleted), with re-solved samples and re-checks (status paragraph
+  of \dirn{C2FINAL/README.md}; \dirn{C2RECHECK}). The bookkeeping of the subcase orbits, namely that the listed
+  subcases of the eight canonical parallelogram hull cases $P_1,\dots,P_8$ (to which reduction~A reduces the others)
+  meet every orbit of second-layer subcases, is Lean-checked according to the record (\dirn{C2FINAL/README.md},
+  \S6), by kernel evaluation, so computer-assisted (Theorem~\ref{cb:thm:c2}); that the listed subcases are refuted
+  rests on the records. The encoder and the two reductions of the case split have written proofs.
+\item \lean{Threefold33}: \dirn{C3FINAL}. Its $116{,}883$ piece records carry verdicts recorded at solve time (both
+  proof checkers accepted the proof); the proofs were not kept (\dirn{C3LEAN/README.md}, \S4), and $2{,}120$ randomly
+  chosen pieces were re-solved (\dirn{C3SPOT}). \dirn{C3LEAN} Lean-checks, by kernel evaluation and so
+  computer-assisted (Theorem~\ref{cb:thm:c3}), only that the leaves named in it cover the $910$ roots of the reduced
+  case split (that every leaf has such a record is checked outside Lean); the normal form
+  \dirn{C3-S/soundness.md}, the encoding \dirn{C3a}, the exhaustiveness of the splits and the reductions of the case
+  split are written proofs.
+\item \lean{Fivefold35}: \dirn{SYM5}, two normal forms of one encoder, each with a retained proof accepted by both proof
+  checkers; the encoder has a written proof. The angle normal form (proof P1) needs no layer lemma; the layer normal
+  form (proof L1) uses the layer lemma of \dirn{SYM5/README.md}, \S2, whose statement that every convex layer is one
+  orbit, and the strict nesting of the layers, are Lean-checked (Theorems~\ref{ll:thm:layers}
+  and~\ref{lg:thm:nesting}).
+\end{itemize}
+\lean{Threefold33} and \lean{Fivefold35} also rest on the written centre-perturbation lemma
+\dirn{C2ENC/perturbation.md}. For none of the three is the step from a certificate to the Lean proposition formal: that
+each class states what its certificate proves was checked by reading (\dirn{SYMLEAN/README.md}, \S6 and \S9). So the
+three hypotheses are not Lean-checked, and Theorem~\ref{mb:thm:main3} reduces the statement ``every finite set of at
+least $33$ points in general position with a non-identity isometric (or affine) symmetry contains $7$ points in convex
+position'' to them and proves it only under them. Only the isometric form and the
+\lean{AffineEquiv} form have three-class versions in RTC; the other affine variants
+\lean{heptagon_of_nontrivial_affine}, \lean{heptagon_of_nontrivial_affineMap},
+\lean{heptagon_of_nontrivial_affineEquiv_image}, \lean{heptagon_of_nontrivial_affine_coords} (RTC lines 1503, 1515,
+1536, 1547) and \lean{halfTurn_of_symmetric_counterexample} (RTC line 1050) still take all five classes (the last one with
+\lean{Fourfold32} in place of \lean{HalfTurn34}) as hypotheses.
+\end{remark}
+
+\begin{remark}[the axis hypotheses]\label{mb:rem:axis}
+Theorem~\ref{mb:thm:refl32}(b) shows more than Theorem~\ref{mb:thm:classes}: for $u_0^2+u_1^2=1$, every finite
+$\mathrm{reflLine}_{a,u}$-invariant set in general position with at least $33$ points, whatever the number of its points on the mirror, contains $7$ points
+in convex position. In particular the proposition \lean{MirrorExclusionLineCopy} (RTC line 1078, a copy of the text of
+the statement \lean{Mir.MirrorExclusionLine} of \dirn{H3}: for all $S,a,u$ with $u_0^2+u_1^2=1$, $S$ in general position,
+$\card S=33$ and $\mathrm{reflLine}_{a,u}(q)\in S$ for all $q\in S$, the set $S$ contains $7$ points in convex position)
+follows at once from Theorem~\ref{mb:thm:refl32}(b); RTC does not state this implication as a theorem.
+\end{remark}
+
+\paragraph{Coverage.}
+Covered, by label: the cited vendored theorems \lean{main} (Theorem~\ref{mb:thm:baek}) and \lean{Config.cap_cup}
+(Theorem~\ref{mb:thm:capcup}); the definitions \lean{Config}, \lean{Config.Cap3}, \lean{Config.Cap}, \lean{Config.Cup},
+\lean{Config.Gon}, \lean{Config.NGon}, \lean{Config.HasNCap}, \lean{Config.HasNCup}, \lean{Config.HasNGon}
+(Definition~\ref{mb:def:config}, with \texttt{List.Chain3\textquotesingle} and \lean{List.In} in Remark~\ref{mb:rem:config});
+\lean{hasNCap_supset}, \lean{hasNGon_supset}, \lean{ncup_is_ngon}
+(Lemma~\ref{mb:lem:config-mono}); \lean{Baek.four_cap_or_eight_gon}, \lean{Baek.capacity22} (Lemma~\ref{mb:lem:baek8});
+\lean{Configuration} and \lean{Configuration.HasCap} (described at the beginning of Subsection~\ref{mb:ssec:bridge} and
+stated as Definition~\ref{mm:def:config});
+\lean{Configuration.cup}, \lean{colorConfig}, \lean{pointAt} (Definition~\ref{mb:def:color}); \lean{cup_true_iff},
+\lean{cup_sign}, \lean{cap_sign} (Lemma~\ref{mb:lem:signs}); \lean{four_point_identity_left},
+\lean{four_point_identity_right}, \lean{positive_four}, \lean{negative_four} (Lemma~\ref{mb:lem:four});
+\lean{chain3_all} (Lemma~\ref{mb:lem:chain}); \lean{cup_list_all}, \lean{cap_list_all}, \lean{hasCap_of_list}
+(Lemma~\ref{mb:lem:lists}); \lean{boundary_polygon}, \lean{Boundary.card}, \lean{boundary_convex_position} with the
+helpers named in its proof (Lemma~\ref{mb:lem:boundary}); \lean{hasNGon_heptagon}, \lean{hasNGon_octagon},
+\lean{hasNGon_nonagon} with \lean{boundaryOfGon}, \lean{boundaryOfGon_inside} (Proposition~\ref{mb:prop:gon});
+\lean{capacity16} (Proposition~\ref{mb:prop:cap16}); \lean{geometric_capacity22} (Lemma~\ref{mb:lem:gc22});
+\lean{capacity22g} (Proposition~\ref{mb:prop:cap22}); \lean{config_capacity113} (Theorem~\ref{mb:thm:nine}(a));
+\lean{capacity113} (Proposition~\ref{mb:prop:cap113}); \lean{mir}, \lean{Rset}, \lean{Aset}
+(Definition~\ref{mb:def:mir}); \lean{card_split}, \lean{card_A_le}, \lean{injOn_x} (Lemma~\ref{mb:lem:split});
+\lean{cfg}, \lean{sortPt_image} (Lemma~\ref{mb:lem:sort}); \lean{cap_mirror_heptagon}, \lean{cap_mirror_octagon},
+\lean{axis_left_heptagon}, \lean{axis_right_heptagon} (Lemma~\ref{mb:lem:polygons}, by a different proof);
+\lean{mirror_seven_of} (Lemma~\ref{mb:lem:seven-of}); \lean{lineRefl}, \lean{frame}, \lean{unframe}
+(Definition~\ref{mb:def:frame}); \lean{frame_lineRefl}, \lean{orient_frame}, \lean{unframe_frame}, \lean{frame_unframe},
+\lean{frame_injective}, \lean{unframe_injective} (Lemma~\ref{mb:lem:frame}); \lean{hasConvexNGon_affineMap}
+(Lemma~\ref{mb:lem:affine}); \lean{transport} (Lemma~\ref{mb:lem:transport}); \lean{mirror_seven},
+\lean{mirror_seven_line} (Theorem~\ref{mb:thm:seven}); \lean{mirror_eight}, \lean{mirror_eight_line}
+(Theorem~\ref{mb:thm:eight}); \lean{mirror_nine}, \lean{mirror_nine_line} (Theorem~\ref{mb:thm:nine}(b),(c)); \lean{reflLine}
+(Definition~\ref{mb:def:reflline}); \lean{reflLine_eq_lineRefl}, \lean{card_le_32_of_reflLine}
+(Theorem~\ref{mb:thm:refl32}); \lean{mirrorOneAxis33_proved}, \lean{mirrorNoAxis34_proved}
+(Theorem~\ref{mb:thm:classes}); \lean{heptagon_of_nontrivial_isometry_3}, \lean{heptagon_of_nontrivial_affineEquiv_3}
+(Theorem~\ref{mb:thm:main3}, conditional on \lean{HalfTurn34}, \lean{Threefold33} and \lean{Fivefold35}). The
+declarations stated in Subsection~\ref{mb:ssec:red}, in
+Definition~\ref{mb:def:frame} and in Lemmas~\ref{mb:lem:frame}--\ref{mb:lem:transport} are also stated in the section
+of Theorem~\ref{mm:thm:odd} (see the beginning of Subsection~\ref{mb:ssec:red}).
+
+Not covered here, deliberately:
+\begin{itemize}
+\item the Lean proofs of \lean{main} and \lean{Config.cap_cup} (cited published theorems);
+\item the generated Lean proofs of the four polygon lemmas and the wrappers \lean{cyc7}, \lean{cyc8} that they use
+  (replaced by the derivation from Theorems~\ref{mm:thm:mirror-polygon} and~\ref{mm:thm:axis-polygon},
+  Remark~\ref{mb:rem:generated}), and the rest of the generated block (the wrappers \lean{cyc4}--\lean{cyc6} and the
+  smaller mirror polygons, which serve the cases $k=4,5,6$);
+\item \texttt{mirror\_seven\textquotesingle} and \texttt{mirror\_eight\textquotesingle} (consistency duplicates,
+  Remarks~\ref{mb:rem:seven} and~\ref{mb:rem:eight});
+\item the general mirror lemma \lean{cap_mirror_polygon}, \lean{axis_left_polygon}, \lean{axis_right_polygon},
+  \lean{cap_below_lines}, the general reductions \lean{mirror_odd_general}, \lean{mirror_even_general} and their
+  \lean{_line} versions, and \lean{mirror_four}, \lean{mirror_five}, \lean{mirror_six} with their \lean{_line} versions
+  and their helpers \lean{hasCap3_of}, \lean{capacity_cup} (they are the subject of Lemma~\ref{mm:lem:slope} and of
+  Theorems~\ref{mm:thm:mirror-polygon}, \ref{mm:thm:axis-polygon}, \ref{mm:thm:odd}, \ref{mm:thm:even},
+  \ref{mm:thm:line} and~\ref{mm:thm:small}, or are used in their proofs; Part~B of RTC is \dirn{MirrorMain.lean}
+  verbatim after its two import lines);
+\item the Part~A content of RTC (the subject of Definitions~\ref{sr:def:iso}, \ref{sr:def:classes} and
+  Theorems~\ref{sr:thm:main}, \ref{ar:thm:main} and the statements around them);
+\item helpers absorbed into the proofs above, among them: \lean{mir_zero}, \lean{mir_one}, \lean{mir_mir}, \lean{xset},
+  \lean{xset_card}, \lean{emb}, \lean{emb_mem}, \lean{sortPt}, \lean{sortPt_mem}, \lean{sortPt_x},
+  \lean{sortPt_strictMono}, \lean{sortPt_injective}, \lean{unframeLin}, \lean{unframe_apply}; \lean{pointAt_eq},
+  \lean{pointAt_order}, \lean{OrderedTriples}, \lean{arcOfList}, \lean{cupArc}, \lean{capArc}, \lean{same_first},
+  \lean{same_last}; from \dirn{BoundaryGeometry.lean}, besides the lemmas named in the proof of
+  Lemma~\ref{mb:lem:boundary}, \lean{CupArc}, \lean{first}, \lean{last}, \lean{reflect}, \lean{reflect_reflect},
+  \lean{orient_reflect}, \lean{Boundary}, \lean{Boundary.points}, \lean{Boundary.flip}, \lean{reflect_mem_flip},
+  \lean{Boundary.finite}, \lean{Boundary.finite_coe}, \lean{affine}, \lean{affine_mix}, \lean{affine_positive_convex},
+  \lean{supporting_edges_expose}, \lean{point_x_bounds}, \lean{first_x_strict}, \lean{last_x_strict}; and, from the
+  vendored library, \lean{Config.NCap}, \lean{Config.NCup} (caps and cups of a given length), the decidability instance
+  \lean{Config.DecidableCap3}, and list lemmas such as \lean{List.takeHead}, \lean{List.takeHead2},
+  \lean{List.takeLast2}, \lean{List.in_superset}, \lean{List.cons_in};
+\item the other declarations of the bridge files, which these proofs do not use: \lean{Configuration.cup_false_iff},
+  \lean{hasCup_of_list}, \lean{hasNCup_octagon}, \lean{chain3_of_all}, \lean{listCup_of_hasCup},
+  \lean{listCap_of_hasCap}, \lean{PlanarChains.cup_all}, and the declarations of \dirn{Realization.lean} and
+  \dirn{ActualRanks.lean} not named in this section (they belong to the project's \dirn{ErdosSzekeres/Omission}
+  development and are outside this section);
+\item the \texttt{\#print axioms} and \texttt{\#check} lines.
+\end{itemize}

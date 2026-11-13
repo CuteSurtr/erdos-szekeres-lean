@@ -1,0 +1,8 @@
+Node 0s0-1s1_6_2_4s1-8s1: driver record had lrat_check "c VERIFIED", cake_lpr "none" (no output),
+while 4 cake_lpr processes (CML_HEAP_SIZE=12000 each) ran on a 15 GB VM; free memory was ~1 GB.
+Re-run alone at 2026-10-20T09:52:29Z:
+  gen_case.py 11 7 0s0-1s1_6_2_4s1-8s1 -> sha256 4d2ab16ddc3fe7fd59b64686545ec3f81c490e628342e7d0c7faac4348c8f41c (matches record)
+  cadical -q -t 600 --sat --lrat --binary=false: s UNSATISFIABLE in 24 s, proof 147279344 bytes
+  lrat-check (E2): c VERIFIED
+  cake_lpr: s VERIFIED UNSAT
+Cause: memory. Driver resumed with --jobs 3; the node is re-solved by the driver and recorded there.

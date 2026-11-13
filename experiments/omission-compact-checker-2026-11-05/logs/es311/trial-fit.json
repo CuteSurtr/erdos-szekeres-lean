@@ -1,0 +1,126 @@
+{
+ "balanced": {
+  "wall_s": {
+   "a": 0.9656,
+   "b": 0.027404,
+   "r2": 0.99732,
+   "n": 17
+  },
+  "user_s": {
+   "a": 0.2633,
+   "b": 0.027287,
+   "r2": 0.99732,
+   "n": 17
+  },
+  "kernel_s": {
+   "a": -0.9904,
+   "b": 0.024866,
+   "r2": 0.99721,
+   "n": 17
+  },
+  "elab_s": {
+   "a": -0.051,
+   "b": 0.001246,
+   "r2": 0.99838,
+   "n": 17
+  },
+  "peak_rss_gb": {
+   "a": 3.1828,
+   "b": 9.7e-05,
+   "r2": 0.98987,
+   "n": 17
+  },
+  "olean_bytes": {
+   "a": 86337.2968,
+   "b": 6611.588557,
+   "r2": 0.99982,
+   "n": 17
+  },
+  "entries_per_leaf": 178.24,
+  "by_chunk_limit": {
+   "1000": {
+    "runs": 6,
+    "leaves": 5424,
+    "wall_ms_per_leaf": 30.656,
+    "kernel_ms_per_leaf": 25.645,
+    "user_ms_per_leaf": 29.95
+   },
+   "5000": {
+    "runs": 10,
+    "leaves": 43904,
+    "wall_ms_per_leaf": 27.321,
+    "kernel_ms_per_leaf": 24.38,
+    "user_ms_per_leaf": 27.013
+   },
+   "20000": {
+    "runs": 1,
+    "leaves": 19012,
+    "wall_ms_per_leaf": 27.531,
+    "kernel_ms_per_leaf": 24.879,
+    "user_ms_per_leaf": 27.395
+   }
+  }
+ },
+ "residual": {
+  "wall_s": {
+   "a": 3.5997,
+   "b": 0.01442,
+   "r2": 0.99833,
+   "n": 22
+  },
+  "user_s": {
+   "a": 2.9454,
+   "b": 0.014334,
+   "r2": 0.9984,
+   "n": 22
+  },
+  "kernel_s": {
+   "a": 1.1463,
+   "b": 0.01241,
+   "r2": 0.99829,
+   "n": 22
+  },
+  "elab_s": {
+   "a": 0.2047,
+   "b": 0.001022,
+   "r2": 0.99839,
+   "n": 22
+  },
+  "peak_rss_gb": {
+   "a": 3.0845,
+   "b": 6.6e-05,
+   "r2": 0.98101,
+   "n": 22
+  },
+  "olean_bytes": {
+   "a": -44365.9899,
+   "b": 3015.850103,
+   "r2": 0.99951,
+   "n": 22
+  },
+  "entries_per_leaf": 77.04,
+  "by_chunk_limit": {
+   "1000": {
+    "runs": 15,
+    "leaves": 13405,
+    "wall_ms_per_leaf": 17.691,
+    "kernel_ms_per_leaf": 12.972,
+    "user_ms_per_leaf": 16.849
+   },
+   "5000": {
+    "runs": 6,
+    "leaves": 25192,
+    "wall_ms_per_leaf": 15.783,
+    "kernel_ms_per_leaf": 13.167,
+    "user_ms_per_leaf": 15.557
+   },
+   "20000": {
+    "runs": 1,
+    "leaves": 18804,
+    "wall_ms_per_leaf": 14.473,
+    "kernel_ms_per_leaf": 12.338,
+    "user_ms_per_leaf": 14.35
+   }
+  }
+ }
+}

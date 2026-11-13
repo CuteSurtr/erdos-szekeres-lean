@@ -1,0 +1,25 @@
+{
+ "commit": "9cf4949a5",
+ "records": 128803,
+ "certified_records": 116883,
+ "certified_nodes": 116741,
+ "roots": 910,
+ "cap": 800,
+ "batches": 127,
+ "cover_nodes": 76256,
+ "certified_leaves": 73567,
+ "sigma_splits": 1747,
+ "layer_splits": 942,
+ "lean_sha256": "4b64293df2ea2183a05a87fff5fb635f42bcfeccf94e29f39e79189a7b41fe34",
+ "controls": {
+  "missing_record": 0,
+  "missing_sigma_child": [
+   0,
+   73,
+   64
+  ],
+  "swapped": 0,
+  "missing_layer_child": 100,
+  "wrong_root": 0
+ }
+}

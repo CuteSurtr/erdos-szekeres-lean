@@ -1,0 +1,12 @@
+{
+  "source": "experiments/omission-cover-certificates-2026-10-10/balanced-v2-source.json",
+  "source_sha256": "acaf6323a2539be869304f42263f80a87db95be1b998e41638dba9bca4d63d72",
+  "source_rows": 3131,
+  "primary_variables": 252,
+  "variables": 69584,
+  "clauses": 258379,
+  "budget": 62,
+  "positive_variable_means": "state is missing",
+  "cnf_sha256": "55bca1e6846415defa1025715d6937b0f91debe47b57fec79b2235b79e446f03",
+  "small_encoding_checks": "passed; exhaustive primary assignments n<=6 and gate truth table"
+}

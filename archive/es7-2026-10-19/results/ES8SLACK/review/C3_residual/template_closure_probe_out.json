@@ -1,0 +1,109 @@
+{
+ "templates": {
+  "Base": {
+   "complete": true,
+   "maps": 54,
+   "distinct_supports": 54,
+   "not_in_catalog": 12,
+   "seconds": 2.085
+  },
+  "Second": {
+   "complete": true,
+   "maps": 45,
+   "distinct_supports": 45,
+   "not_in_catalog": 10,
+   "seconds": 6.15
+  },
+  "Third": {
+   "complete": true,
+   "maps": 122,
+   "distinct_supports": 122,
+   "not_in_catalog": 115,
+   "seconds": 5.267
+  },
+  "Fourth": {
+   "complete": true,
+   "maps": 248,
+   "distinct_supports": 248,
+   "not_in_catalog": 96,
+   "seconds": 1.899
+  },
+  "Fifth": {
+   "complete": true,
+   "maps": 1420,
+   "distinct_supports": 1420,
+   "not_in_catalog": 1391,
+   "seconds": 1.894
+  },
+  "Nine": {
+   "complete": true,
+   "maps": 54,
+   "distinct_supports": 54,
+   "not_in_catalog": 49,
+   "seconds": 10.088
+  },
+  "Sixth": {
+   "complete": true,
+   "maps": 30,
+   "distinct_supports": 30,
+   "not_in_catalog": 29,
+   "seconds": 1.187
+  },
+  "SixthRelaxed": {
+   "complete": true,
+   "maps": 707,
+   "distinct_supports": 707,
+   "not_in_catalog": 658,
+   "seconds": 43.248
+  }
+ },
+ "new_supports_total": 2322,
+ "witnesses_violating_extended": [
+  2,
+  1,
+  2
+ ],
+ "milp": {
+  "status": 1,
+  "message": "Time limit reached. (HiGHS Status 13: Time limit reached)",
+  "seconds": 300.0,
+  "holes": [
+   12,
+   17,
+   25,
+   27,
+   33,
+   34,
+   35,
+   36,
+   44,
+   45,
+   57,
+   58,
+   60,
+   62,
+   72,
+   81,
+   85,
+   88,
+   92,
+   96,
+   98,
+   100,
+   101,
+   107,
+   109,
+   111,
+   116,
+   117,
+   119,
+   124,
+   126,
+   127,
+   138
+  ],
+  "num_holes": 33,
+  "exact_recheck_all_extended_rows": true,
+  "objective_bound": 29.0
+ }
+}

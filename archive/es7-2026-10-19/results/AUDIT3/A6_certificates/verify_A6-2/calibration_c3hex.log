@@ -1,0 +1,7 @@
+# calibration: own fp vs lrat-check (E2 build f2046212) on the archived c3hex pairs
+## c3_n15k6
+own: C=126785 deleted_ids=79490 max_live=126786 input_plus_additions=156685 
+lrat-check: c parsed a formula with 1646 variables and 126785 clauses c Added clauses = 156685.  Deleted clauses = 79490.  Max live clauses = 126786 
+## c3_n16k6c
+own: C=129171 deleted_ids=49704 max_live=129172 input_plus_additions=145359 
+lrat-check: c parsed a formula with 2256 variables and 129171 clauses c Added clauses = 145359.  Deleted clauses = 49704.  Max live clauses = 129172 

@@ -1,0 +1,138 @@
+{
+ "name": "k6_c5_16",
+ "path": "SYMMAX/k6/c5_16points.txt",
+ "fmt": "Z5",
+ "K": 6,
+ "claimed_size": 16,
+ "parsed_points": 16,
+ "parse_anomalies": [],
+ "size_ok": true,
+ "distinct": true,
+ "distinct_affine": true,
+ "max_abs_native_coordinate": 164340,
+ "origin_in_set": true,
+ "centre_claim_ok": true,
+ "symmetry": {
+  "C5": {
+   "invariant": true,
+   "orbit_sizes": [
+    1,
+    5,
+    5,
+    5
+   ],
+   "num_orbits": 4,
+   "fixed_points": 1,
+   "numeric_isometry_max_error": "1.000e-84"
+  }
+ },
+ "other_symmetries_tested": {
+  "C5": true,
+  "neg(half-turn)": false,
+  "conj(real-axis mirror)": false
+ },
+ "collinear_triples": 0,
+ "orient_methodB_mismatches": 0,
+ "orient_numeric_mismatches": 0,
+ "min_abs_numeric_cross": "3.663044e+07",
+ "order_ties": [
+  0,
+  0
+ ],
+ "dp_max_convex_four_orders": [
+  5,
+  5,
+  5,
+  5
+ ],
+ "dp_witness": [
+  [
+   -46581,
+   20453,
+   60917,
+   91597
+  ],
+  [
+   109151,
+   27874,
+   86749,
+   164340
+  ],
+  [
+   98798,
+   99596,
+   76579,
+   138010
+  ],
+  [
+   -81277,
+   -22402,
+   55189,
+   -109151
+  ],
+  [
+   67034,
+   107498,
+   138178,
+   46581
+  ]
+ ],
+ "dp_witnesses_verified": [
+  true,
+  true,
+  true,
+  true
+ ],
+ "brute_output": [
+  "n=16 table: zero_entries_on_distinct_triples=0 alternation_violations=0",
+  "k=6 subsets=8008 convex_TRI=0 convex_WRAP=0 disagreements=0",
+  "k=5 subsets=4368 convex_TRI=723 convex_WRAP=723 disagreements=0"
+ ],
+ "random_subset_checks": {
+  "count": 40,
+  "mismatches": 0,
+  "dp_value_histogram": {
+   "5": 39,
+   "4": 1
+  }
+ },
+ "convex_layers": [
+  {
+   "size": 5,
+   "orbits": [
+    2
+   ],
+   "is_single_orbit": true
+  },
+  {
+   "size": 5,
+   "orbits": [
+    1
+   ],
+   "is_single_orbit": true
+  },
+  {
+   "size": 5,
+   "orbits": [
+    0
+   ],
+   "is_single_orbit": true
+  },
+  {
+   "size": 1,
+   "orbits": [
+    3
+   ],
+   "is_single_orbit": true
+  }
+ ],
+ "seconds": 0.4,
+ "brute_K_minus_1_convex": {
+  "k": "5",
+  "subsets": "4368",
+  "convex_TRI": "723",
+  "convex_WRAP": "723",
+  "disagreements": "0"
+ },
+ "VERDICT": "PASS"
+}

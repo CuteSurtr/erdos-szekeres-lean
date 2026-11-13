@@ -1,0 +1,19 @@
+# phase-compression (needle-limit) test
+== 8-fold 120
+eps=1      convex9=0  convex4=5419058  min_rel_det=2.53e-06
+eps=0.5    convex9=13391760  convex4=5338298  min_rel_det=8.69e-07
+eps=0.2    convex9=53415752  convex4=5324698  min_rel_det=7.76e-06
+eps=0.1    convex9=67796512  convex4=5327402  min_rel_det=1.63e-06
+eps=0.03   convex9=75403424  convex4=5317154  min_rel_det=6.33e-07
+eps=0.01   convex9=139490848  convex4=5305258  min_rel_det=5.12e-07
+eps=0.003  convex9=300100728  convex4=5294706  min_rel_det=1.37e-07
+eps=0.001  convex9=361123192  convex4=5292626  min_rel_det=1.34e-07
+== 4-fold 52
+eps=1      convex8=0  convex4=141809  min_rel_det=5.75e-07
+eps=0.5    convex8=9442  convex4=141517  min_rel_det=1.13e-06
+eps=0.2    convex8=10312  convex4=141081  min_rel_det=1.09e-06
+eps=0.1    convex8=10062  convex4=141093  min_rel_det=1.08e-06
+eps=0.03   convex8=9698  convex4=141145  min_rel_det=6.48e-07
+eps=0.01   convex8=11606  convex4=140941  min_rel_det=2.16e-07
+eps=0.003  convex8=12986  convex4=140833  min_rel_det=6.48e-08
+eps=0.001  convex8=14042  convex4=140897  min_rel_det=2.16e-08

@@ -1,0 +1,346 @@
+{
+ "examples": {
+  "C3 (Eisenstein coords)": {
+   "order": 3,
+   "centroid": [
+    "0",
+    "0"
+   ],
+   "scatter_positive_definite": true,
+   "type": "C3",
+   "element_orders": [
+    1,
+    3,
+    3
+   ],
+   "reflections": 0,
+   "points_on_reflection_axes": [],
+   "contains_identity": true,
+   "closed_under_composition": true,
+   "all_fix_centroid": true,
+   "all_det_pm1": true,
+   "scatter_invariant_L_Sig_LT_eq_Sig": true,
+   "averaged_gram_invariant": true,
+   "classification_ok(refl: L^2=I,tr=0; rot: tr=2cos(2pi j/k))": true,
+   "orthogonal_in_given_coordinates": false,
+   "float_whitening_max_orthogonality_error": 4.440892098500626e-16,
+   "ok": true,
+   "points": 31,
+   "general_position": true
+  },
+  "C4": {
+   "order": 4,
+   "centroid": [
+    "0",
+    "0"
+   ],
+   "scatter_positive_definite": true,
+   "type": "C4",
+   "element_orders": [
+    1,
+    2,
+    4,
+    4
+   ],
+   "reflections": 0,
+   "points_on_reflection_axes": [],
+   "contains_identity": true,
+   "closed_under_composition": true,
+   "all_fix_centroid": true,
+   "all_det_pm1": true,
+   "scatter_invariant_L_Sig_LT_eq_Sig": true,
+   "averaged_gram_invariant": true,
+   "classification_ok(refl: L^2=I,tr=0; rot: tr=2cos(2pi j/k))": true,
+   "orthogonal_in_given_coordinates": true,
+   "float_whitening_max_orthogonality_error": 0.0,
+   "ok": true,
+   "points": 28,
+   "general_position": true
+  },
+  "C5 (Q(sqrt5) coords)": {
+   "order": 5,
+   "centroid": [
+    "0",
+    "0"
+   ],
+   "scatter_positive_definite": true,
+   "type": "C5",
+   "element_orders": [
+    1,
+    5,
+    5,
+    5,
+    5
+   ],
+   "reflections": 0,
+   "points_on_reflection_axes": [],
+   "contains_identity": true,
+   "closed_under_composition": true,
+   "all_fix_centroid": true,
+   "all_det_pm1": true,
+   "scatter_invariant_L_Sig_LT_eq_Sig": true,
+   "averaged_gram_invariant": true,
+   "classification_ok(refl: L^2=I,tr=0; rot: tr=2cos(2pi j/k))": true,
+   "orthogonal_in_given_coordinates": false,
+   "float_whitening_max_orthogonality_error": 4.440892098500626e-16,
+   "ok": true,
+   "points": 31,
+   "general_position": true
+  },
+  "C6 (Eisenstein coords)": {
+   "order": 6,
+   "centroid": [
+    "0",
+    "0"
+   ],
+   "scatter_positive_definite": true,
+   "type": "C6",
+   "element_orders": [
+    1,
+    2,
+    3,
+    3,
+    6,
+    6
+   ],
+   "reflections": 0,
+   "points_on_reflection_axes": [],
+   "contains_identity": true,
+   "closed_under_composition": true,
+   "all_fix_centroid": true,
+   "all_det_pm1": true,
+   "scatter_invariant_L_Sig_LT_eq_Sig": true,
+   "averaged_gram_invariant": true,
+   "classification_ok(refl: L^2=I,tr=0; rot: tr=2cos(2pi j/k))": true,
+   "orthogonal_in_given_coordinates": false,
+   "float_whitening_max_orthogonality_error": 4.440892098500626e-16,
+   "ok": true,
+   "points": 30,
+   "general_position": true
+  },
+  "mirror": {
+   "order": 2,
+   "centroid": [
+    "0",
+    "359/8"
+   ],
+   "scatter_positive_definite": true,
+   "type": "D1",
+   "element_orders": [
+    1,
+    2
+   ],
+   "reflections": 1,
+   "points_on_reflection_axes": [
+    0
+   ],
+   "contains_identity": true,
+   "closed_under_composition": true,
+   "all_fix_centroid": true,
+   "all_det_pm1": true,
+   "scatter_invariant_L_Sig_LT_eq_Sig": true,
+   "averaged_gram_invariant": true,
+   "classification_ok(refl: L^2=I,tr=0; rot: tr=2cos(2pi j/k))": true,
+   "orthogonal_in_given_coordinates": true,
+   "float_whitening_max_orthogonality_error": 0.0,
+   "ok": true,
+   "points": 32,
+   "general_position": true
+  },
+  "C2": {
+   "order": 2,
+   "centroid": [
+    "0",
+    "0"
+   ],
+   "scatter_positive_definite": true,
+   "type": "C2",
+   "element_orders": [
+    1,
+    2
+   ],
+   "reflections": 0,
+   "points_on_reflection_axes": [],
+   "contains_identity": true,
+   "closed_under_composition": true,
+   "all_fix_centroid": true,
+   "all_det_pm1": true,
+   "scatter_invariant_L_Sig_LT_eq_Sig": true,
+   "averaged_gram_invariant": true,
+   "classification_ok(refl: L^2=I,tr=0; rot: tr=2cos(2pi j/k))": true,
+   "orthogonal_in_given_coordinates": true,
+   "float_whitening_max_orthogonality_error": 4.440892098500626e-16,
+   "ok": true,
+   "points": 32,
+   "general_position": true
+  }
+ },
+ "controls": {
+  "affine image of C3 (Eisenstein coords)": {
+   "A": [
+    [
+     -4,
+     -4
+    ],
+    [
+     1,
+     -5
+    ]
+   ],
+   "det": 24,
+   "t": [
+    423,
+    -912
+   ],
+   "chirotope_equals_signdet_times_original": true,
+   "group_order": 3,
+   "type": "C3",
+   "same_group_as_original": true,
+   "all_fix_centroid": true,
+   "scatter_invariant": true,
+   "orthogonal_in_given_coordinates": false,
+   "ok": true
+  },
+  "affine image of C4": {
+   "A": [
+    [
+     -5,
+     5
+    ],
+    [
+     -2,
+     -1
+    ]
+   ],
+   "det": 15,
+   "t": [
+    -326,
+    -744
+   ],
+   "chirotope_equals_signdet_times_original": true,
+   "group_order": 4,
+   "type": "C4",
+   "same_group_as_original": true,
+   "all_fix_centroid": true,
+   "scatter_invariant": true,
+   "orthogonal_in_given_coordinates": false,
+   "ok": true
+  },
+  "affine image of C6 (Eisenstein coords)": {
+   "A": [
+    [
+     -3,
+     2
+    ],
+    [
+     3,
+     2
+    ]
+   ],
+   "det": -12,
+   "t": [
+    -814,
+    -721
+   ],
+   "chirotope_equals_signdet_times_original": true,
+   "group_order": 6,
+   "type": "C6",
+   "same_group_as_original": true,
+   "all_fix_centroid": true,
+   "scatter_invariant": true,
+   "orthogonal_in_given_coordinates": false,
+   "ok": true
+  },
+  "affine image of mirror": {
+   "A": [
+    [
+     4,
+     -5
+    ],
+    [
+     0,
+     -5
+    ]
+   ],
+   "det": -20,
+   "t": [
+    7,
+    -206
+   ],
+   "chirotope_equals_signdet_times_original": true,
+   "group_order": 2,
+   "type": "D1",
+   "same_group_as_original": true,
+   "all_fix_centroid": true,
+   "scatter_invariant": true,
+   "orthogonal_in_given_coordinates": false,
+   "ok": true
+  },
+  "affine image of C2": {
+   "A": [
+    [
+     -4,
+     2
+    ],
+    [
+     -5,
+     -3
+    ]
+   ],
+   "det": 22,
+   "t": [
+    400,
+    604
+   ],
+   "chirotope_equals_signdet_times_original": true,
+   "group_order": 2,
+   "type": "C2",
+   "same_group_as_original": true,
+   "all_fix_centroid": true,
+   "scatter_invariant": true,
+   "orthogonal_in_given_coordinates": true,
+   "ok": true
+  },
+  "regular hexagon (expect D6, 12)": {
+   "order": 12,
+   "type": "D6",
+   "orthogonal_in_given_coordinates": false,
+   "all_fix_centroid": true,
+   "ok": true
+  },
+  "regular pentagon (expect D5, 10)": {
+   "order": 10,
+   "type": "D5",
+   "orthogonal_in_given_coordinates": false,
+   "all_fix_centroid": true,
+   "ok": true
+  },
+  "square (expect D4, 8)": {
+   "order": 8,
+   "type": "D4",
+   "orthogonal_in_given_coordinates": true,
+   "all_fix_centroid": true,
+   "ok": true
+  },
+  "sheared mirror_32 (expect D1, 2, oblique reflection)": {
+   "order": 2,
+   "type": "D1",
+   "orthogonal_in_given_coordinates": false,
+   "all_fix_centroid": true,
+   "ok": true
+  },
+  "random 14 points #0 (expect 1)": {
+   "order": 1,
+   "ok": true
+  },
+  "random 14 points #1 (expect 1)": {
+   "order": 1,
+   "ok": true
+  },
+  "random 14 points #2 (expect 1)": {
+   "order": 1,
+   "ok": true
+  }
+ },
+ "ALL_OK": true
+}

@@ -1,0 +1,6 @@
+cadical    https://github.com/arminbiere/cadical  c60730422e758ef1cebe7aeddf2dda31c996bf04  (./configure && make)
+march_cu   https://github.com/marijnheule/CnC     705b60c6491ef2b61988b3ce6ac674be1b90571d  (march_cu/Makefile CFLAGS += -fcommon)
+cake_lpr   https://github.com/tanyongkiam/cake_lpr a36874a8b750b43fe4b385b8ddbf5b033e46a3fa  (make cake_lpr; example.cnf/example.lpr -> s VERIFIED UNSAT)
+sha256 cadical  5ebf45a7f8f0b46da3da41658901d78ebb259b134b9fd6dc70b2178ce57e778b
+sha256 march_cu afcbb47642a922676693b325ed19d88698c6b8f700943fa2753d98126579f222
+sha256 cake_lpr 1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca

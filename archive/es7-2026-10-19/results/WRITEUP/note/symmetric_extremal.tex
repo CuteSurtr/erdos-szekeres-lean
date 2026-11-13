@@ -1,0 +1,810 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,array}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+
+\setlist{itemsep=0pt,topsep=2pt,parsep=0pt}
+\emergencystretch=2em
+\def\UrlBreaks{\do\.\do\/\do\_}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Nm}{N_{\mathrm{mir}}}
+\newcommand{\orient}{\operatorname{orient}}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\mc}{\operatorname{mc}}
+\newcommand{\dirn}[1]{{\upshape\nolinkurl{#1}}}
+\newcommand{\lean}[1]{{\upshape\nolinkurl{#1}}}
+
+\title{Symmetric extremal configurations for the Erd\H{o}s--Szekeres problem\\[3pt]\large Draft, 6 November 2026}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We study planar point sets in general position that are invariant under a non-trivial isometry and contain no $k$
+points in convex position, and compare their largest sizes with the Erd\H{o}s--Szekeres value $2^{k-2}$. For reflections
+the problem reduces exactly to the Erd\H{o}s--Tuza--Valtr function: the largest mirror-symmetric set has $2N(k,k/2,k)+2$
+points for even $k$ and $2N(k,(k+1)/2,k)$ for odd $k$. With Baek's published theorem (the case $a=4$ of that
+conjecture) this gives the values $2,4,8,12,32,46$ for $k=3,\dots,8$, those for $k=7,8$ being corollaries of Baek's
+theorem (upper bounds for $k\ge4$ Lean-checked, with no SAT input), the bounds $128\le\Nm(9)\le226$ and $188\le\Nm(10)\le316$,
+and the equivalence of the conjectured mirror values with cases of the Erd\H{o}s--Tuza--Valtr conjecture. For rotations
+we give the orbit-counting rule ($2^{k-2}$ fits a $(k-1)$-fold rotation if and only if $k-1$ is an odd prime, an odd
+base-$2$ Fermat pseudoprime or a power of $2$). For $k=8$ the largest sevenfold symmetric set in general position
+without a convex octagon has exactly $64$ points and the largest sixfold symmetric one exactly $60$, so $ES(8)=65$ holds
+for these two symmetry types: the lower bounds are explicit sets (seven and five order types; exact computation), and the
+upper bounds are SAT certificates accepted by the verified checker cake\_lpr, on top of a Lean-checked reduction and a
+reviewed, unrefereed written proof of the encoding (for the sixfold bound, all $64$ cube formulas have cake\_lpr
+verdicts bound to file hashes since a replay of 6 November). We also give a computer-assisted argument (SAT certificates accepted by cake\_lpr, on top of
+unrefereed written proofs) that one orbit of rotated generic tiny clusters cannot reach $128$ points for $k=9$, and
+examples with $120$, $253$ and $991$ points for $k=9,10,12$. Centrally symmetric $2^{k-2}$-point sets exist for every
+$k\ne4$; this is implied by published constructions, although no source inspected states it, and for even $k$ we give an
+independent proof. Every statement carries a rigor label.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+
+Let $ES(k)$ be the least $n$ such that every set of $n$ points in general position in the plane contains $k$ points in
+convex position. Erd\H{o}s and Szekeres proved that $ES(k)$ exists~\cite{ES35}, constructed $2^{k-2}$ points in general
+position without $k$ points in convex position~\cite{ES61}, and conjectured $ES(k)=2^{k-2}+1$. The conjecture holds for
+$k\le6$: $ES(4)=5$ (E.~Klein, see~\cite{ES35}), $ES(5)=9$ (Makai; first published proof by Kalbfleisch, Kalbfleisch and
+Stanton~\cite{KKS70}) and $ES(6)=17$ (Szekeres and Peters~\cite{SP06}). It is open for $k=7$; for $k=8$ the refereed
+upper bound we use is $ES(8)\le408$~\cite{MV16}.
+
+\paragraph{Symmetric search spaces.}
+Imposing a symmetry shrinks the search space, and optimality may be easier to prove for structured sets.
+Subercaseaux, Mackey, Qian and Heule (SMQH)~\cite{SMQH25} built rotational symmetry into SAT encodings and found
+symmetric extremal sets for $k=6$, a fourfold one and a fivefold one with centre~\cite[App.~C, Tables~1--2]{SMQH25}
+(also~\cite[Figs.~3.28, 3.33]{Mac25}). They wrote~\cite[\S7]{SMQH25}: ``for the Erd\H{o}s--Szekeres problem, we suspect
+that there are symmetric constructions for all $k\ge7$, and proving this could represent progress toward the conjectured
+bound $g(k)=2^{k-2}+1$, since it might be easier to prove optimality for more structured solutions.'' They name no
+symmetry type or order. This note collects what we can say for each type.
+
+\paragraph{The case $k=7$.}
+A companion study~\cite[\dirn{WRITEUP/SYMMETRIC.md}]{Supp} shows, with computer-assisted proofs, that every set of at
+least $33$ points in general position mapped into itself by an isometry or affine bijection other than the identity
+contains a convex heptagon: the reduction to five case classes is Lean-checked, the reflection classes are Lean-checked
+consequences of Baek's theorem (Corollary~\ref{cor:small}), and the other classes rest on SAT case splits, written
+soundness proofs of the encodings, certificates accepted by cake\_lpr and, for most threefold and half-turn pieces,
+verdicts recorded before the proofs were deleted. The fivefold case also follows from a computation
+reported earlier by Dumitru~\cite[\S7, Table~1]{Dum25} (no proof files public), which has priority. For $k=7$ only the half-turn and reflections reach
+$2^{k-2}$ (Table~\ref{tab:k8}); for $k=8$ sevenfold symmetric sets reach it too (Theorem~\ref{thm:c7}), while reflections
+stop at $46$. Sections~\ref{sec:mirror}--\ref{sec:central} treat reflections, rotations and the half-turn;
+Section~\ref{sec:rigor} summarizes rigor, refuted statements and open problems, and Section~\ref{sec:lit} gives credit
+and the sources inspected.
+
+\subsection{Conventions and rigor labels}
+
+\emph{General position} means that no three points are collinear; a set is in \emph{convex position} if no point lies
+in the convex hull of the others; a \emph{convex $k$-gon} of $X$ is a $k$-subset in convex position, and $\mc(X)$ is
+the largest size of one. Let $\orient(p,q,r)=(x_q-x_p)(y_r-y_p)-(y_q-y_p)(x_r-x_p)$. A set is \emph{$x$-distinct} if its
+points have distinct $x$-coordinates. A sequence $p_1,\dots,p_m$ with increasing $x$ is an \emph{$m$-cap} if
+$\orient(p_{i-1},p_i,p_{i+1})<0$ for $1<i<m$ (slopes decrease) and an \emph{$m$-cup} if these are $>0$; sequences of at
+most two points are both.
+
+\begin{lemma}[cap--cup decomposition; standard, published~\cite{ES35}]\label{lem:capcup}
+Let $P$ be $x$-distinct and in general position, $|P|\ge3$, with leftmost point $a$ and rightmost point $b$. Then $P$ is
+in convex position if and only if the points of $P$ on or above the line $ab$ form a cap from $a$ to $b$ and those on
+or below it form a cup from $a$ to $b$; then $|P|$ is the sum of their sizes minus $2$.
+\end{lemma}
+
+\noindent\textbf{Rigor labels.}
+\emph{Lean-checked}: compiled with Lean~4.24.0 and the repository's Mathlib, depending only on \lean{propext},
+\lean{Classical.choice}, \lean{Quot.sound}. \emph{Certificate}: an unsatisfiability claim whose LRAT proof (produced
+by CaDiCaL~3.0.1, or 2.1.3 for the re-checks of 5 November and the sixfold replay of 6 November) was accepted by the CakeML-verified checker
+\texttt{cake\_lpr}, which prints \texttt{s VERIFIED UNSAT}; the soundness of the encoding is a written proof. Acceptance by
+\texttt{lrat-check} alone is not a certificate: the \texttt{lrat-check} of drat-trim at commit \texttt{2e3b2dc} accepts an
+invalid proof of a satisfiable formula unless patched, a publicly known defect~\cite{DT} (our record:
+\dirn{LRATCHECK20261105}); \texttt{lrat-check} verdicts cited here are supporting only. \emph{Exact
+computation}: exact integer or algebraic arithmetic on explicit data, by at least two independently written programs
+unless stated otherwise. \emph{Written proof (not refereed)}: a complete written proof, here or in the supplementary
+material, checked by at least one independent internal review, not refereed by a journal. \emph{Published}: a refereed
+published proof. \emph{Computational evidence} (tests and failed searches, never used as proofs), \emph{conjecture},
+and \emph{refuted} (by an explicit, exactly checked counterexample).
+
+\noindent\textbf{Supplementary material.} The directories \dirn{MIRRORETV}, \dirn{SYMLEAN/mirror}, \dirn{ES8SYM},
+\dirn{PRIMEFOLD}, \dirn{SYMEVEN}, \dirn{SYM2}, \dirn{C6UPPER}, \dirn{C7UPPER}, \dirn{LAYERLEAN}, \dirn{SIX60} and the file
+\dirn{WRITEUP/SYMMETRIC.md} of the project repository~\cite{Supp} contain
+the full proofs, Lean files, point sets with SHA-256 sums, SAT encodings, logs and reproduction commands.
+
+\section{Mirror symmetry}\label{sec:mirror}
+
+\subsection{The Erd\H{o}s--Tuza--Valtr function}
+
+\begin{definition}
+For $n\ge3$ and $a,b\ge2$, $N(n,a,b)$ is the largest size of an $x$-distinct set in general position with no $n$ points
+in convex position, no $a$-cap and no $b$-cup (Baek's notation~\cite[Def.~1.3]{Bae25}); by the cups--caps theorem
+$N(n,a,b)\le\binom{a+b-4}{a-2}$~\cite{ES35}. Put $E(n,a,b)=\sum_{i=n-b}^{a-2}\binom{n-2}{i}$. The
+\emph{Erd\H{o}s--Tuza--Valtr (ETV) conjecture}~\cite{ETV96} states $N(n,a,b)=E(n,a,b)$ for $2\le a,b\le n\le a+b-2$;
+$P(n,a,b)$ denotes this statement for one triple, and $P(n,n,n)$ is the Erd\H{o}s--Szekeres conjecture for $n$. Let
+$\Nm(k)$ be the largest size of a set in general position, invariant under the reflection in some line, with no $k$
+points in convex position. Put $L(k)=2^{k-2}$ for odd $k$ and $L(k)=2^{k-2}-\binom{k-2}{k/2-1}+2$ for even $k$.
+\end{definition}
+
+As an $n$-cup is a convex $n$-gon, $N(n,a,n)$ is the largest size of an $x$-distinct set in general position with no
+$a$-cap and no convex $n$-gon. One has $E(2j,j,2j)=\bigl(2^{2j-2}-\binom{2j-2}{j-1}\bigr)/2=1,5,22,93,386$ and
+$E(2j-1,j,2j-1)=2^{2j-4}=1,4,16,64,256$ for $j=2,\dots,6$, and $L(k)=2,4,8,12,32,46,128,188,512,774,2048,3174$ for
+$k=3,\dots,14$.
+
+\begin{theorem}[Baek~{\cite[Thm.~1.6]{Bae25}}; published]\label{thm:baek}
+For every $n\ge3$, $N(n,4,n)=\binom{n-1}{2}+1$: every $x$-distinct set of $\binom{n-1}{2}+2$ points in general position
+contains a $4$-cap or $n$ points in convex position.
+\end{theorem}
+
+Baek formalized his theorem in Lean~4; an adaptation underlies the Lean-checked bounds below. Balko and
+Valtr~\cite{BV15} had reported $N(7,4,7)=16$ and $N(8,4,8)=22$ (their $N(4,7,7)$, $N(4,8,8)$) from SAT computations.
+
+\begin{theorem}[Erd\H{o}s--Szekeres~\cite{ES61}, Erd\H{o}s--Tuza--Valtr~\cite{ETV96}; published]\label{thm:etvlower}
+$N(n,a,b)\ge E(n,a,b)$ whenever $2\le a,b\le n\le a+b-2$.
+\end{theorem}
+
+It uses blocks $T_i=G(n-i,i+2)$, $n-b\le i\le a-2$, where $G(c,d)$ is a cups--caps set of $\binom{c+d-4}{c-2}$ points
+with no $c$-cup and no $d$-cap (proof also in \dirn{MIRRORETV/PROOFS.md}~\S6). \emph{Known cases of the ETV conjecture}
+in the sources inspected: $n\ge a+b-3$ (cups--caps theorem); $a=4$ or $b=4$ (Theorem~\ref{thm:baek}; the range then
+forces $b\ge n-2$, resp.\ $a\ge n-2$); $n\le6$ (from $ES(n)=2^{n-2}+1$ for $n\le6$ and~\cite[Thm.~1.5]{Bae25}; for $n=6$
+also~\cite{BV15}). Schroeder reports $N(7,5,6)=25$
+(unreviewed)~\cite{Sch26}.
+
+\subsection{The mirror lemma}
+
+Put the mirror on the $x$-axis and write $\mu(x,y)=(x,-y)$.
+
+\begin{lemma}[mirror lemma; Lean-checked]\label{lem:mirror}
+Let $C=(c_1,\dots,c_m)$ be a cap with $y(c_1),y(c_m)\ge0$ (if $m=1$, $y(c_1)>0$). Then $C\cup\mu(C)$ is in convex
+position and has $2m-e$ points, where $e$ is the number of end points of $C$ on the axis.
+\end{lemma}
+
+\begin{proof}
+Let $m\ge2$ and let $f$ be the piecewise-linear interpolation of $C$ on $I=[x(c_1),x(c_m)]$. It is concave and
+non-negative at both ends, hence $f\ge0$, and interior points of $C$ lie strictly above the axis. The region
+$Q=\{(x,y):x\in I,\ |y|\le f(x)\}$ is convex (a strip intersected with the hypograph of $f$ and the epigraph of $-f$)
+and contains $C\cup\mu(C)$. The end points $c_1,c_m$ are extreme points of $Q$, being the highest points of $Q$ on the
+boundary lines of the strip. An interior $c_i$ is extreme because $f$ has a strict slope decrease at $x(c_i)$: a line
+through $c_i$ with slope strictly between the two slopes of $f$ there meets $Q$ only in $c_i$. By symmetry the points of
+$\mu(C)$ are extreme too, and a finite set of extreme points of a convex set is in convex position. The $2m$ points are
+distinct except that $c=\mu(c)$ for an end point on the axis.
+\end{proof}
+
+\begin{remark}[simplicity]\label{rem:simple}
+Checking that the closed polygon $c_1\cdots c_m\,\mu(c_m)\cdots\mu(c_1)$ turns to the same side at every vertex does not
+suffice: the closed pentagon $(-18,-62),(1,66),(-88,-82),(37,-76),(-7,49)$ turns left at every vertex, winds twice,
+and its vertex $(-18,-62)$ lies strictly inside the triangle $(-88,-82),(37,-76),(1,66)$ (exact check). A closed polygon
+turning to one side at every vertex is convex if it is also simple. Here it is simple because its two chains are the
+graphs of $f\ge0$ and $-f\le0$ over one interval; the region argument avoids winding numbers. (An earlier project
+write-up used turn signs only; the lemma is true.)
+\end{remark}
+
+\subsection{The reduction and its converse}
+
+\begin{theorem}[upper bounds; Lean-checked]\label{thm:A}
+For every $j\ge2$: $\Nm(2j)\le2N(2j,j,2j)+2$ and $\Nm(2j-1)\le2N(2j-1,j,2j-1)$.
+\end{theorem}
+
+\begin{proof}
+Let $S$ be symmetric in the $x$-axis, in general position, without $k$ points in convex position; put
+$R=S\cap\{y>0\}$ and $A=S\cap\{y=0\}$. Then $|S|=2|R|+|A|$ and $|A|\le2$. $R\cup A$ is $x$-distinct: two points $p\ne q$
+of $R$ with equal abscissa give the collinear triple $p,q,\mu(p)$, and $p\in R$, $a\in A$ give $p,a,\mu(p)$. By
+Lemma~\ref{lem:mirror}, $R$ has no $j$-cap, which would give $2j\ge k$ points in convex position. For $k=2j$, $R$ has no
+$j$-cap and no convex $2j$-gon, so $|R|\le N(2j,j,2j)$ and $|S|\le2N(2j,j,2j)+2$. For $k=2j-1$ and $A=\emptyset$, $|S|=2|R|\le2N(2j-1,j,2j-1)$.
+Otherwise take $a\in A$ and $X=R\cup\{a\}$. A $j$-cap of $X$ would contain $a$, not as an interior point (it lies
+strictly below the chord of its neighbours, which lie above the axis), so as an end point, and Lemma~\ref{lem:mirror}
+would give $2j-1=k$ points of $S$ in convex position. Hence $|R|+1\le N(2j-1,j,2j-1)$ and $|S|\le2|R|+2\le
+2N(2j-1,j,2j-1)$.
+\end{proof}
+
+\noindent\emph{Formalization.} \dirn{MIRRORETV/lean/MirrorMain.lean} proves Theorem~\ref{thm:A} for any mirror line,
+with $N$ as a hypothesis (\lean{MirrorOdd.mirror_even_general_line}, and \lean{MirrorOdd.mirror_odd_general_line} for
+odd $k\ge5$); \dirn{MIRRORETV/review} reformalizes it for all $j\ge2$ (\lean{MirrorA.theoremA_even_line},
+\lean{MirrorA.theoremA_odd_line}) and Lemma~\ref{lem:mirror}, importing only Mathlib.
+
+\begin{theorem}[far-flat construction; written proof (not refereed), orientation estimates Lean-checked]\label{thm:B}
+Let $j\ge2$ and let $X$ be $x$-distinct, in general position, with no $j$-cap. (i)~If $X$ has no convex $2j$-gon, there
+is a mirror-symmetric set of $2|X|+2$ points in general position without a convex $2j$-gon. (ii)~If $X$ has no convex
+$(2j-1)$-gon, there is one of $2|X|$ points without a convex $(2j-1)$-gon.
+\end{theorem}
+
+\noindent\emph{Construction.} Translate $X$ so that $\min x=\min y=0$; let $W=\max x$, $h=\max y$ and $g$ the least gap
+between consecutive abscissae ($g=1$ if $|X|=1$). In case (i) put $D=W+2$ and $A=\{(W+1,0),(W+2,0)\}$; in case (ii)
+$D=\max(W,1)$ and $A=\emptyset$. Choose $H$ with $Hg>hD$, and put $R=X+(0,H)$ and $S=R\cup\mu(R)\cup A$.
+
+\begin{lemma}[cap lemma; written proof (not refereed), estimates Lean-checked]\label{lem:caplemma}
+If $P\subseteq S$ is in convex position and $P\not\subseteq R$, then $P\cap R$ is a cap.
+\end{lemma}
+
+\begin{proof}
+Otherwise, by Lemma~\ref{lem:capcup}, $P\cap R$ has a leftmost point $u$, a rightmost point $w$ and a point $q$ strictly
+below the line $uw$, with $x_u+g\le x_q\le x_w-g$. Take $z\in P\setminus R$; then $y_z\le0$ and $|x_z-x_p|\le D$ for
+$p\in R$. Hence $\orient(w,z,q)=(x_z-x_w)(y_q-y_w)+(y_w-y_z)(x_q-x_w)\le Dh-Hg<0$,
+$\orient(z,u,q)=(x_q-x_u)(y_z-y_u)-(y_q-y_u)(x_z-x_u)\le-gH+hD<0$ and $\orient(u,w,q)<0$. These three numbers sum to
+$\orient(u,w,z)$, so $q$ lies inside the triangle $uwz$, a contradiction.
+\end{proof}
+
+\noindent\emph{Proof of Theorem~\ref{thm:B} (outline; \dirn{MIRRORETV/PROOFS.md}~\S5).} General position follows from
+$Hg>hD$. Let $P\subseteq S$ be in convex position. If $P$ lies in $R$ or in $\mu(R)$, then $|P|\le\mc(X)$. Otherwise
+$P\cap R$ and $\mu(P\cap\mu(R))$ are caps of $R$ (Lemma~\ref{lem:caplemma} for $P$ and $\mu(P)$), so
+$|P|\le2(j-1)+|P\cap A|$; this proves (ii). In case (i), $|P|\le2j-1$ unless $A\subseteq P$; then either $P$ misses $R$ or
+$\mu(R)$ and $|P|\le(j-1)+2\le2j-1$, or it contains $p\in R$ and $q\in\mu(R)$, the segment $pq$ crosses the axis left of
+$(W+1,0)$, and $(W+1,0)$ lies inside the triangle $p\,q\,(W+2,0)$. In fact $\mc(S)=\max(\mc(X),\,2\operatorname{cap}(X)+
+[A\ne\emptyset])$, where $\operatorname{cap}(X)$ is the largest size of a cap of $X$. The orientation bounds and the barycentric step are formalized in \dirn{MIRRORETV/lean/FarFlat.lean}
+and \dirn{MIRRORETV/review/FarFlatExtra.lean}; the combinatorial steps are not. \hfill$\square$
+
+\begin{corollary}[exact reduction; upper bounds Lean-checked, lower bounds written proof (not refereed)]\label{cor:identities}
+For every $j\ge2$: $\Nm(2j)=2N(2j,j,2j)+2$ and $\Nm(2j-1)=2N(2j-1,j,2j-1)$.
+\end{corollary}
+
+\subsection{Consequences}
+
+\begin{corollary}[exact values for $k\le8$]\label{cor:small}
+$\Nm(k)=2,4,8,12,32,46$ for $k=3,4,5,6,7,8$. \emph{Status:} the upper bounds for $k=4,\dots,8$ are Lean-checked for
+every mirror line, with no SAT input (for $k=7,8$ through the repository's formalization of Theorem~\ref{thm:baek});
+$k=3$ is elementary; the lower bounds are exact computations on explicit sets and follow from Theorem~\ref{thm:B}.
+\end{corollary}
+
+\begin{proof}
+$N(3,2,3)=N(4,2,4)=1$ (a $2$-cap is any pair); $N(n,3,n)=n-1$, since a set with no $3$-cap is a cup and an $n$-cup is a
+convex $n$-gon; $N(7,4,7)=16$ and $N(8,4,8)=22$ by Theorem~\ref{thm:baek}. Apply Corollary~\ref{cor:identities}.
+\end{proof}
+
+\noindent\emph{Credit.} The values for $k=7,8$ are corollaries of Baek's theorem through the elementary
+Theorem~\ref{thm:A}; $k=4,5$ also follow from $ES(4)=5$ and $ES(5)=9$. The Lean proofs (\lean{MirrorOdd.mirror_seven_line},
+\lean{MirrorOdd.mirror_eight_line}; \dirn{SYMLEAN/mirror}) use the repository's adaptation of Baek's formalization and
+bridge lemmas adapted from Schroeder's archive~\cite{Sch26}. Also, $N(8,4,8)\le22$ is certified by two independently
+written $23$-point SAT encodings, each accepted by cake\_lpr (\dirn{ES8SYM}~\S4), and $N(7,4,7)\le16$ by $17$-point
+SAT encodings (\dirn{MIRRORETV}~\S4): two of the four were certified by cake\_lpr on 5 November
+(\dirn{LRATCHECK20261105/recheck}); the other two were accepted by lrat-check only and have no committed generator.
+
+\begin{proposition}[ETV equivalence; written proof (not refereed)]\label{prop:etv}
+For $j\ge2$: $\Nm(2j)=L(2j)$ if and only if $P(2j,j,2j)$ holds, and $\Nm(2j-1)=2^{2j-3}$ if and only if
+$P(2j-1,j,2j-1)$ holds. Both hold if $ES(k)=2^{k-2}+1$ for the corresponding $k$.
+\end{proposition}
+
+\begin{proof}
+The equivalences follow from Corollary~\ref{cor:identities}, Theorem~\ref{thm:etvlower} and the values of $E$. For the
+last sentence: Erd\H{o}s, Tuza and Valtr showed that $ES(n)=2^{n-2}+1$ implies $N(n,a,b)\le E(n,a,b)$ for all
+$a,b$ with $2\le a,b\le n\le a+b-2$~\cite[Thm.~1.5]{Bae25} (reproved in \dirn{MIRRORETV/PROOFS.md}, Prop.~7.1). For odd $k$ it also follows from
+$\Nm(k)\le ES(k)-1$.
+\end{proof}
+
+So the conjectured mirror values are exactly the ETV statements $P(k,\lceil k/2\rceil,k)$; nothing mirror-specific
+remains. They are known for $k\le8$ ($k=7,8$ by Baek); in the sources inspected they are open from $k=9$ on.
+
+\begin{lemma}[Pascal step; written proof (not refereed), the argument of~\cite{ES35}]\label{lem:pascal}
+For $a,b\ge3$: $N(n,a,b)\le N(n,a-1,b)+N(n,a,b-1)$.
+\end{lemma}
+
+\begin{proof}
+Let $X$ be extremal and $E\subseteq X$ the set of last points of $(a-1)$-caps. $X\setminus E$ has no $(a-1)$-cap. If
+$c_1\cdots c_{b-1}$ were a cup in $E$, then $c_1$ would end an $(a-1)$-cap $d_1\cdots d_{a-2}c_1$, and either
+$d_{a-2}c_1c_2$ is a cap triple (an $a$-cap) or $d_{a-2}c_1\cdots c_{b-1}$ is a $b$-cup. Both parts inherit the other
+conditions.
+\end{proof}
+
+\begin{corollary}[$k=9,10$]\label{cor:910}
+$128\le\Nm(9)\le226$ and $188\le\Nm(10)\le316$. \emph{Status:} the upper bound for $k=9$ is Lean-checked (through the
+formalization of Theorem~\ref{thm:baek} at $n=9$; \lean{C12Check.mirror_nine_line}); for $k=10$ it is a written proof
+(not refereed) resting on Theorem~\ref{thm:baek}; the lower bounds are written proofs (not refereed), realized by
+explicit sets (exact computation).
+\end{corollary}
+
+\begin{proof}
+By Lemma~\ref{lem:pascal}, Theorem~\ref{thm:baek} and the cups--caps bound, $N(9,5,9)\le29+\binom93=113$ and
+$N(10,5,10)\le37+\binom{10}3=157$; apply Corollary~\ref{cor:identities}. The lower bounds are $2\cdot64$ and $2\cdot93+2$
+(Theorems~\ref{thm:etvlower} and~\ref{thm:B}). Without Baek's theorem the cups--caps bound gives $240$ and $332$.
+\end{proof}
+
+\subsection{Constructions for every \texorpdfstring{$k$}{k}}
+
+\begin{theorem}[written proof (not refereed); explicit sets for $k\le14$: exact computation]\label{thm:allk}
+For every $k\ge3$, $\Nm(k)\ge L(k)$, realized with no point on the axis for odd $k$ and two for even $k$.
+\end{theorem}
+
+\begin{proof}
+Apply Theorem~\ref{thm:B} to the set of Theorem~\ref{thm:etvlower} with $(n,a,b)=(k,\lceil k/2\rceil,k)$.
+\end{proof}
+
+The sets for $k=4,\dots,14$ (\dirn{MIRRORETV/sets}; $k=3$ is trivial) have largest convex subset $k-1$, by two or three independently
+written exact programs (for $k=13,14$ by one exact dynamic program and an exact check of the hypotheses of the relevant
+lemma), and for $k\le8$ also by brute force (none of the $260{,}932{,}815$ eight-subsets of the $46$-point set is
+convex).
+
+\begin{remark}\label{rem:mirrorcredit}
+A second construction places the Erd\H{o}s--Szekeres blocks $T_i=G(k-i,i+2)$ so that $\mu$ maps block $i$ to block
+$k-2-i$, the self-paired middle block (even $k$) becoming two axis points (\dirn{MIRRORETV/PROOFS.md}~\S9). For odd $k$
+it is an instance of Valtr's construction for an arbitrary skeleton as described by Baek and Balko~\cite[\S4]{BB25}
+(stated there without proof, citing~\cite{ES61,ETV96}), with a mirror-symmetric skeleton; they do not state the mirror
+case. For $k=7$ a $32$-point mirror set also follows from the classical construction in Lov\'asz's form~\cite[Thm.~2.6]{MS00},
+with mirrored clusters (\dirn{WRITEUP/SYMMETRIC.md}). By Theorem~\ref{thm:allk}, for odd $k$ reflections reach $2^{k-2}$; for even $k$ they fall short by
+$\binom{k-2}{k/2-1}-2$ if and only if $P(k,k/2,k)$ holds (unconditionally $12<16$ for $k=6$ and $46<64$ for $k=8$).
+\end{remark}
+
+\section{Rotational symmetry}\label{sec:rot}
+
+Let $\rho$ be a rotation of order $m$ about $O$; orbits of points other than $O$ are regular $m$-gons.
+
+\begin{lemma}[layer lemma; Lean-checked (\texttt{LAYERLEAN})]\label{lem:layer}
+Let $m\ge3$, $K\le2m$, and let $S$ be finite, in general position, $\rho$-invariant, with no $K$ points in convex
+position. Then $S\setminus\{O\}$ is the union of regular $m$-gons $L_1,\dots,L_t$ centred at $O$ (its convex layers),
+each strictly inside the convex hull of the previous one. If $m$ is even and $S\ne\{O\}$, then $O\notin S$.
+\end{lemma}
+
+\begin{proof}
+The vertex set of $\conv(S\setminus\{O\})$ is $\rho$-invariant, hence a union of orbits of $m$ points; two orbits would be
+$2m\ge K$ points in convex position, so it is one orbit. The other points lie strictly inside its hull (not on an edge,
+by general position); repeat. For even $m$, $\rho^{m/2}$ is the half-turn and $O,p,-p$ are collinear.
+\end{proof}
+
+SMQH~\cite[\S3.2]{SMQH25} use the special case of $16$ points, fourfold symmetry and no convex hexagon (four layers of
+four points).
+
+\begin{proposition}[size compatibility; Lean-checked core]\label{prop:compat}
+A finite $\rho$-invariant set has $mt+[O\in S]$ points. Hence an $m$-fold symmetric set of $2^{m-1}$ points ($m\ge2$)
+can exist only if $m$ is a power of $2$ (and $O\notin S$) or $m$ is an odd prime or an odd base-$2$ Fermat pseudoprime
+(and $O\in S$); for these $m$ such sets in general position exist. So $2^{k-2}$ is a possible size for $(k-1)$-fold
+symmetry exactly for $k=3,4,5,6,8,9,12,14,17,18,20,24,\dots$ and $k=342,562,646,\dots$ (from $m=341,561,645$).
+\end{proposition}
+
+\begin{proof}
+Only $O$ is fixed by $\rho^i$, $0<i<m$. If $m$ is even, $mt$ and $2^{m-1}$ are even, so $O\notin S$ and $m\mid2^{m-1}$,
+i.e.\ $m=2^a$. If $m>1$ is odd, $m\nmid2^{m-1}$, so $O\in S$ and $2^{m-1}\equiv1\pmod m$: $m$ is prime or, by
+definition, a base-$2$ pseudoprime; every odd prime qualifies by Fermat's little theorem. Conversely take orbits with
+distinct radii and generic phases (and $O$ if needed).
+\end{proof}
+
+\noindent\emph{Status.} Lean-checked (\dirn{PRIMEFOLD/compat/lean}): the orbit count, the classification of $m$ with
+$2^{m-1}\equiv0,1\pmod m$, and that $|S|=2^{m-1}$ forces the stated alternative. Not formalized here: the step that every
+odd prime is compatible (Fermat's little theorem) and the genericity step (written proof, not refereed). Antecedents: Fermat's little theorem; SMQH~\cite[\S6.2]{SMQH25}
+apply the same count to $32$ points, and Mackey's $16$-point layer formations~\cite{Mac25} are the same count. In
+particular $k=7$ is not compatible ($32\equiv2\pmod6$).
+
+\subsection{Small \texorpdfstring{$k$}{k}}
+
+\begin{proposition}[$k=5,6$]\label{prop:small}
+(a)~\emph{Exact computation.} Eppstein's $8$-point pentagon-free figure~\cite[Fig.~1.2]{Epp18} (two nested squares) is
+fourfold symmetric and in general position: the book's circle centres are exactly symmetric (up to print rounding), and
+the 2007 SVG version becomes so when $342.002$ is replaced by $342$, with the same orientations.
+(b)~\emph{Exact computation and written proof (not refereed).} Up to reflection there is exactly one order type of
+fourfold symmetric pentagon-free $8$-point sets in general position: with squares $\{1,i,-1,-i\}$ and $\{i^\ell b\}$,
+$b=x+iy$, $x,y>0$, $x+y<1$, the set qualifies if and only if $x^2+y^2<|x-y|$; e.g.\
+$\{(\pm10,0),(0,\pm10),(3,1),(-1,3),(-3,-1),(1,-3)\}$.
+(c)~\emph{Exact computation.} The fivefold $16$-point set of~\cite[Table~2]{SMQH25} (orbits of $(-12,-17)$, $(-15,2)$,
+$(-13,0)$ and the centre) is in general position without a convex hexagon.
+\end{proposition}
+
+Both sizes are maximal by $ES(5)=9$ and $ES(6)=17$. The texts inspected do not call Eppstein's figure symmetric; (b) may
+be implicit in the order-type database of~\cite{AAK02}, which we did not consult.
+
+\subsection{Rotated clusters and their limit at \texorpdfstring{$k=9$}{k=9}}
+
+For a finite set $C$ and an open arc $I$ of directions, $f_C(I)$ is the largest number of points of a chain of $C$
+whose edge directions lie in $I$ and increase counter-clockwise.
+
+\begin{lemma}[blow-up formula for tiny clusters; written proof (not refereed)]\label{lem:blowup}
+Let $B$ be finite in general position, let $C_b$ ($b\in B$) be finite sets in general position, and assume that no
+segment of any $C_b$ is parallel to a line through two points of $B$. For small $\varepsilon>0$ the set
+$S_\varepsilon=\bigcup_b(b+\varepsilon C_b)$ is in general position and
+$\mc(S_\varepsilon)=\max\bigl(\max_b\mc(C_b),\ \max_{B'}\sum_{b\in B'}f_{C_b}(I_b(B'))\bigr)$, where $B'$ runs over
+subsets of $B$ in convex position with $|B'|\ge2$ and $I_b(B')$ is the open arc of directions from
+$\overrightarrow{b^-b}$ counter-clockwise to $\overrightarrow{bb^+}$, $b^\pm$ being the neighbours of $b$ in $B'$.
+\end{lemma}
+
+This is the tiny-cluster form, with rotated cluster directions, of the blow-up method of Erd\H{o}s and
+Szekeres~\cite{ES61}, Valtr, and Baek and Balko~\cite{BB25}. Without the parallelism hypothesis it is false
+($B=\{(0,0),(1,0)\}$, $C_1=\{(0,0),(1,0)\}$, $C_2=\{(0,1)\}$). The \emph{rotated-cluster family} replaces each vertex of a
+regular $m$-gon by the same tiny cluster $C$, rotated with the vertex, and adds the centre for odd $m$. Measure
+directions in the frame of a vertex from the counter-clockwise tangent, in units of $\pi/m$, and let $g(x)$, $h(x)$ be the
+longest counter-clockwise chains of $C$ with directions in $(0,x)$ and in $(-x,0)$.
+
+\begin{proposition}[one orbit; written proof (not refereed)]\label{prop:orbit}
+For a generic cluster $C$ (as in Lemma~\ref{lem:blowup}) and small $\varepsilon$, the rotated-cluster set has no $m+1$
+points in convex position if and only if (i)~$g(x)+h(x)\le x+1$ for $x=1,\dots,m-1$, (ii)~a condition involving the
+centre holds (odd $m$ only; \dirn{PRIMEFOLD/cluster/PROOFS.md}), and (iii)~$\mc(C)\le m$.
+\end{proposition}
+
+\begin{theorem}[limit of the family; certificate (cake\_lpr), on top of Lemma~\ref{lem:blowup},
+Proposition~\ref{prop:orbit}(i) and the soundness of the encoding, written proofs (not refereed); lower bounds exact
+computation]\label{thm:E}
+Let $\nu(m)$ be the largest size of a generic cluster satisfying (i). Then $\nu(4)=2$, $\nu(5)=3$, $\nu(6)=5$, $\nu(7)=9$
+and $\nu(8)\le14$. Hence a rotated-cluster set with generic cluster and no $m+1$ points in convex position has at most
+$8,16,30,64,112$ points for $m=4,\dots,8$; for $k=9$ this family cannot reach $2^7=128$.
+\end{theorem}
+
+A sound SAT relaxation of (i) is unsatisfiable for $(m,n)=(4,3),(5,4),(6,6),(7,10),(8,15)$ (two encoders, first checked
+with lrat-check only; on 5 November all seven formulas were regenerated with matching hashes and their proofs accepted by
+cake\_lpr, and an independently written encoder gave $10$ of $10$ formulas accepted by cake\_lpr;
+\dirn{LRATCHECK20261105/recheck}); the values for $m\le7$ are attained by exactly checked sets. Not covered:
+cluster segments exactly parallel to a chord, and several orbits. The family reaches $2^{k-2}$ for $k=3,4,5,6,8$ with
+clusters of $1,1,2,3,9$ points, for $k=5,6$ with the order types of Proposition~\ref{prop:small} ($k=5$: up to
+reflection; exact computation).
+
+\begin{remark}[explicit and flat clusters]\label{rem:rule}
+A max/min recursion gives clusters of $B(h)=1,3,9,28,90,297,1001$ points for $h=1,\dots,7$ ($m=2h+1$; no log kept for
+$h=7$), realized exactly for $h=2,\dots,5$ ($16,64,253,991$ points). For these $h$, $B(h)=\binom{2h}{h-1}-\binom{2h}{h-2}$
+(A000245~\cite{OEIS}), which equals $(2^{m-1}-1)/m$ for $m=3,5,7$, its floor for $m=9$, and is smaller for $m=11,13,15$
+(computational evidence; maximality of $B(h)$ is a conjecture). One orbit of \emph{flat} clusters with generic flattening directions has fewer than $2^{m-1}$ points for
+$m\ge7$ (written proof (not refereed)); without genericity it fails: the last set of Table~\ref{tab:c7} is one orbit of
+chord-aligned flat $9$-point clusters plus the centre.
+\end{remark}
+
+\subsection{Sevenfold symmetric \texorpdfstring{$64$}{64}-point sets}
+
+\begin{theorem}[exact computation]\label{thm:c7}
+The seven sets of Table~\ref{tab:c7} are sevenfold symmetric sets of $64$ points in general position (the centre and
+nine orbits, hence nine nested regular heptagons) with no $8$ points in convex position, and they are pairwise
+non-equivalent order types.
+\end{theorem}
+
+The coordinates are integer combinations of powers of $\zeta_7$, so the symmetry is exact; all $41{,}664$ orientations
+are nonzero (exact, and again with $110$-digit decimals), and convex $k$-gons were counted by two programs. The numbers
+of convex $4$-gons differ and are invariant under relabelling and reflection.
+
+\begin{table}[ht]
+\centering\footnotesize
+\begin{tabular}{@{}llrrl@{}}
+\toprule
+set (\texttt{PRIMEFOLD/sets/k8}) & origin & convex 4-gons & convex 7-gons & line-modules\\
+\midrule
+\texttt{c7\_64pts\_small}$^*$ & annealing of radii and phases & 416,052 & 4,688,763 & none of size 2--60\\
+\texttt{c7\_64pts\_9layers\_centre}$^*$ & same, other rounding scale & 416,220 & 4,691,381 & none of size 2--60\\
+\texttt{c7\_64\_own\_s1000} & second annealer & 392,966 & 3,328,145 & none of size 2--20\\
+\texttt{c7\_64pts\_9layers\_centre\_own}$^*$ & second annealer, other scale & 392,553 & 3,252,475 & none of size 2--56\\
+\texttt{p7\_compound\_64}$^*$ & two-level 9-point clusters & 470,764 & 18,396,499 & 91 of size 2--20, seven of size 9\\
+\texttt{rule\_p7\_64pts}$^*$ & cluster rule, $h=3$ & 487,711 & 30,031,745 & 91 of size 2--20, seven of size 9\\
+\texttt{m7\_x2\_G9s\_centre} & flat 9-point clusters & 462,581 & 14,719,287 & 77 of size 2--20, seven of size 9\\
+\bottomrule
+\end{tabular}
+\caption{Sevenfold symmetric $64$-point sets without a convex octagon (exact computation); $^*$: also in
+\texttt{ES8SYM/sets}. For comparison, the classical Erd\H{o}s--Szekeres $64$-point set has $422{,}186$ convex $4$-gons
+and the centrally symmetric set of Section~\ref{sec:central} has $345{,}986$.}
+\label{tab:c7}
+\end{table}
+
+A subset $C\subseteq S$ is a \emph{line-module} of $S$ if no line through two points of $S\setminus C$ separates two
+points of $C$; it is trivial if $|C|\le1$ or $|C|\ge|S|-1$. This depends only on the orientations, so the multiset of
+module sizes is an order-type invariant, also under reflection.
+
+\begin{lemma}[line-modules; written proof (not refereed)]\label{lem:modules}
+(a)~Every cluster of an $(X,Y)$-blow-up~\cite[Def.~13]{BB25} of a base with at least two points is a line-module.
+(b)~In a blow-up by sufficiently small generic clusters as in Lemma~\ref{lem:blowup}, every cluster is a line-module.
+\end{lemma}
+
+(For (a): lines through two other clusters see all of $C$ like the corresponding base point, and the almost-vertical
+condition handles lines inside one cluster; \dirn{ES8SYM/proofs/structure.md}.)
+
+\begin{proposition}[exact computation, with Lemma~\ref{lem:modules}]\label{prop:noneq}
+(a)~For each starred set of Table~\ref{tab:c7}, the only permutations preserving all orientations are the seven
+rotations, and none reverses all orientations. The classical Erd\H{o}s--Szekeres $64$-point set has no non-trivial
+automorphism, so no set with a rotation or reflection symmetry is order-type equivalent to it.
+(b)~\dirn{c7_64pts_small} and \dirn{c7_64pts_9layers_centre} have no line-module with $2$ to $60$ points (their only
+non-trivial modules are the complements of two or three consecutive hull vertices), and
+\dirn{c7_64pts_9layers_centre_own} has none with $2$ to $56$. So none of them is order-type equivalent to a blow-up as in
+Lemma~\ref{lem:modules} with a cluster of that size; in particular not to the classical construction (modules of $6$,
+$15$, $20$ points), to Valtr's construction in the form of~\cite[\S6.1]{BB25} (clusters of $\binom6i$ points) or to the
+sets of~\cite[Thm.~19]{BB25} for $k=8$ (clusters of $7$ or $22$ points).
+\end{proposition}
+
+The last three sets of Table~\ref{tab:c7} are seven $9$-point clusters around a heptagon plus the centre; whether they
+are equivalent to some Baek--Balko blow-up was not checked.
+
+\subsection{Records for \texorpdfstring{$k=9,10,12$}{k=9,10,12}}
+
+\begin{theorem}[exact computation]\label{thm:records}
+There are an eightfold symmetric set of $120$ points ($15$ nested regular octagons) without $9$ points in convex position,
+a ninefold symmetric set of $253$ points ($28$ layers and the centre) without $10$, and an elevenfold symmetric set of
+$991$ points ($90$ layers and the centre) without $12$ (\dirn{PRIMEFOLD/sets}).
+\end{theorem}
+
+All orientations ($280{,}840$, $2{,}667{,}126$, $161{,}716{,}335$) are exactly nonzero, and largest convex subsets were
+computed by two or three programs. The $253$- and $991$-point sets come from the rule of Remark~\ref{rem:rule}. As
+ninefold sizes are $9t$ or $9t+1$, $253$ is the largest possible ninefold size if $ES(10)=257$. By Theorem~\ref{thm:E} the
+$120$-point set is not one orbit of generic tiny clusters; no eightfold set found ($104$, $112$, $120$ points) has a
+line-module with $2$ to $n-5$ points. Searches for one more layer failed (computational evidence only).
+
+\subsection{The case \texorpdfstring{$k=8$}{k=8}}
+
+\begin{proposition}[$k=8$; (a) and the arithmetic of (b) Lean-checked, the rest written proof (not refereed)]\label{prop:k8sizes}
+Let $S$ be $m$-fold symmetric, in general position, without $8$ points in convex position. (a)~If $m\ge8$, then
+$S\subseteq\{O\}$. (b)~If $m\in\{4,5,6,7\}$, then $S\setminus\{O\}$ consists of $t$ layers (Lemma~\ref{lem:layer}), and
+$|S|\ge65$ needs $t\ge17,13,11,10$ respectively.
+\end{proposition}
+
+Part (a): an orbit is a convex $m$-gon (\lean{RefuteC6.part_a}). The largest layer counts found are $13$, $11$ (with
+centre), $10$, $9$ (with centre). Since threefold sizes are $3t$ or $3t+1$ and $3\cdot21+1<65$, a threefold counterexample
+to $ES(8)=65$ exists if and only if some $22$-orbit threefold set without centre is octagon-free. For $m=6,7$ the counts
+$10$ and $9$ are the largest possible: every configuration of $11$ nested regular hexagons, resp.\ $10$ nested regular
+heptagons, about a common centre and in general position contains $8$ points in convex position (certificates accepted by
+cake\_lpr for two separately implemented encoders, \dirn{C6UPPER}, \dirn{C7UPPER}; the reduction to these statements is
+Lean-checked in \dirn{LAYERLEAN}; the soundness of the encoding is a written proof (not refereed); what was replayed is
+stated in Table~\ref{tab:rigor}). With the explicit sets (exact computation; \dirn{SIX60}, Theorem~\ref{thm:c7}) the
+sixfold maximum is exactly $60$ and the sevenfold maximum exactly $64$. For $m=3,4,5$ upper bounds come only from
+$ES(8)\le408$, giving $407$ (the repository's Lean-checked $ES(8)\le311$, not re-checked here, gives $310$).
+
+\begin{table}[ht]
+\centering\footnotesize
+\begin{tabular}{@{}llllll@{}}
+\toprule
+symmetry & sizes & $k=7$: maximum & $k=8$: largest known & $k=8$: status & least size violating $ES(8)=65$\\
+\midrule
+reflection & $2t+b$, $b\le2$ & 32 & \textbf{46} (exact value) & Cor.~\ref{cor:small} (via Baek) & impossible\\
+half-turn & $2t$ & 32 & 64 & exact computation$^\dagger$ & 66\\
+3-fold & $3t$, $3t+1$ & 31 & 61 (with centre) & exact computation & 66 (no centre)\\
+4-fold & $4t$ & 28 & 52 & exact computation & 68\\
+5-fold & $5t$, $5t+1$ & 31 & 56 (with centre) & exact computation & 65\\
+6-fold & $6t$ & 30 & \textbf{60, exact} & exact comp.; certificate (\texttt{C6UPPER}) & 66 (excluded)\\
+7-fold & $7t$, $7t+1$ & 1 & \textbf{64, exact} (with centre) & exact comp.; certificate (\texttt{C7UPPER}) & 70 (excluded)\\
+order $\ge8$ & $0,1$ & 1 & \textbf{1} (exact value) & Lean-checked & impossible\\
+\bottomrule
+\end{tabular}
+\caption{Largest symmetric sets without a convex $k$-gon. $k=7$: companion study (\texttt{WRITEUP/SYMMETRIC.md}),
+computer-assisted except reflections (Lean-checked via Baek) and orders $\ge7$; the fourfold exclusion of $32$ points
+was stated in~\cite[\S6.2]{SMQH25}, and a certificate for it (six realizability cuts and an LRAT proof accepted by
+cake\_lpr) is in \texttt{C4CUT}. $k=8$: sets in \texttt{ES8SYM/sets}, and for $6$-fold in \texttt{SIX60/sets} (five
+$60$-point sets of pairwise different order types); the half-turn value is $64$ if $ES(8)=65$, and the $6$- and $7$-fold
+values are $60$ and $64$ unconditionally, with lower bounds by exact computation and upper bounds by certificates accepted
+by cake\_lpr (\texttt{C6UPPER}, \texttt{C7UPPER}; Proposition~\ref{prop:k8sizes} and Table~\ref{tab:rigor});
+$^\dagger$also implied by published results (Theorem~\ref{thm:central}). $t$ counts the orbits with more than one
+point.}
+\label{tab:k8}
+\end{table}
+
+\begin{conjecture}[conjecture]\label{conj:primefold}
+For every $k\ge3$ for which $2^{k-2}$ is compatible with $(k-1)$-fold symmetry (Proposition~\ref{prop:compat}) there is a
+$(k-1)$-fold rotationally symmetric set of $2^{k-2}$ points in general position without $k$ points in convex position.
+\end{conjecture}
+
+It holds for $k=3,4,5,6,8$ (trivially for $k=3,4$; Proposition~\ref{prop:small} and Theorem~\ref{thm:c7}) and is open
+for $k=9,12,14,17,\dots$. It is a specific form of the SMQH suspicion quoted in Section~\ref{sec:intro}.
+
+\section{Central symmetry}\label{sec:central}
+
+A centrally symmetric set in general position with at least two points does not contain its centre, so its size is
+even; four points $\pm p,\pm q$ in general position form a parallelogram.
+
+\begin{theorem}[implied by published constructions; status by case below]\label{thm:central}
+For every $k\ge3$ with $k\ne4$ there is a set $S=-S$ of $2^{k-2}$ points in general position, $0\notin S$, with no $k$
+points in convex position. For $k=4$ there is none.
+\end{theorem}
+
+\noindent\emph{Credit and status.}
+\emph{Odd $k$}: Valtr's construction as described by Baek and Balko~\cite[Def.~13, Lemma~14, \S6.1]{BB25}, with a
+centrally symmetric base and paired clusters; the companion study (directory \dirn{SYM2}) gives a cubic specialization
+with a direct proof (written proof (not refereed), re-derived in an internal audit) and exact coordinates, for $k=7$ the
+twofold $32$-point set asked for in~\cite[\S7]{SMQH25}. \emph{$k=6$}: the fourfold $16$-point sets
+of~\cite[App.~C, Table~1]{SMQH25} and~\cite[Fig.~3.28]{Mac25} are centrally symmetric (exact computation); neither source
+says so. \emph{Even $k\ge8$}: implied by~\cite[Lemma~14]{BB25} applied to either $16$-point set with a half-turn-symmetric
+labelling that is not a threshold (Remark~\ref{rem:lemma14}); a written argument from the published Lemma~14 (whose
+proof is omitted in the conference version and which we did not see), with exactly computed base data, not covered by
+the internal review of Theorem~\ref{thm:central-even}; no source inspected states this consequence.
+\emph{Even $k\ge6$, independently}: Theorem~\ref{thm:central-even}, which does not use Lemma~14.
+
+\medskip\noindent\emph{The construction for even $k$.} Fix even $k\ge6$, $n=k-2$, and base abscissae
+$\{x_0<\dots<x_n\}=\{-(n-1),\dots,-3,-1,0,1,3,\dots,n-1\}$, so $x_{n/2}=0$ and $x_{n-j}=-x_j$; three distinct base
+abscissae sum to $0$ only in the forced triples $\{x_j,0,-x_j\}$ (three odd numbers have an odd sum). Put
+$q_j=(x_j,x_j^3)$. For $j<n/2$ let $B_j=\{q_j+(\varepsilon u,\varepsilon^2v):(u,v)\in G(j+2,k-j)\}$ and
+$B_{n-j}=-B_j$; let $B_{n/2}=\varepsilon^2M_0$, where $M_0=-M_0$ is an $x$-distinct set of $\binom{n}{n/2}$ points in
+general position, $0\notin M_0$, with no $(k/2+1)$-cup or cap, slopes in $(-\frac12,\frac12)$ and $|v|<|u|/2$ for all
+its points (a small copy of $G(k/2,k/2+1)$ with its negative). Then $|S_\varepsilon|=\sum_j\binom{k-2}{j}=2^{k-2}$.
+
+\begin{lemma}[blow-up lemma for the cubic base; written proof, checked by a referee-style independent review, not
+journal-refereed]\label{lem:cubic}
+Let $S$ be finite, in general position, partitioned into clusters $B_0,\dots,B_n$ such that: (H0)~$S$ is $x$-distinct;
+(H1)~$B_i$ lies left of $B_j$ for $i<j$; (H2)~every slope between two clusters exceeds every slope inside a cluster;
+(H3)~for $a<b<c$ with $x_a+x_b+x_c\ne0$ and $p\in B_a$, $q\in B_b$, $r\in B_c$, $\operatorname{sign}\orient(p,q,r)=
+\operatorname{sign}(x_a+x_b+x_c)$; (H4)~for $j<n/2$, $p\in B_j$, $q\in B_{n/2}$, $r\in B_{n-j}$ with $x(p)+x(r)\ne0$,
+$\operatorname{sign}\orient(p,q,r)=-\operatorname{sign}(x(p)+x(r))$; (H5)~$B_j$ has no $(j+2)$-cup and no $(k-j)$-cap.
+Then $S$ has no $k$ points in convex position.
+\end{lemma}
+
+\begin{proof}[Sketch; full proof in \dirn{SYMEVEN/PROOF.md}]
+Let $P$ be convex with leftmost point in $B_l$ and rightmost point in $B_r$. If $l=r$, $|P|\le k-2$ by (H5) and
+Lemma~\ref{lem:capcup}. Otherwise (H2) makes the lower cup of $P$ a cup in $B_l$ followed by single points of later
+clusters, and the upper cap single points followed by a cap in $B_r$; with $t$ and $s$ single points,
+$|P|\le k-(r-l)+t+s$. By (H3) the turns at the first single point of the cup and the last single point of the cap put
+these single points in disjoint clusters strictly between $l$ and $r$, so $|P|\le k-1$, except when both chains pass
+through the middle cluster and $r=n-l$; there (H4) and (H0) leave only $P=\{u_0,q,q',w\}$. This is the only use of
+$k\ge6$.
+\end{proof}
+
+\begin{theorem}[written proof, checked by a referee-style independent review (correct and complete); not
+journal-refereed, not machine-checked]\label{thm:central-even}
+For every even $k\ge6$ and all sufficiently small $\varepsilon>0$, $S_\varepsilon$ is in general position,
+$S_\varepsilon=-S_\varepsilon$, $0\notin S_\varepsilon$, $|S_\varepsilon|=2^{k-2}$, and (H0)--(H5) hold; hence
+$S_\varepsilon$ has no $k$ points in convex position.
+\end{theorem}
+
+The decisive condition is (H4): $\orient(p,q,r)=x_j^3(x(p)+x(r))+O(\varepsilon^2)$, so the middle cluster must be small
+compared with $\varepsilon$ times the least $x$-gap of the outer clusters; at the outer scale convex $k$-gons appear (exact
+computations for $k=6,8$). \emph{Exact instances} (\dirn{SYMEVEN}): integer sets for $k=6,8,10$ with $16$, $64$, $256$
+points satisfy (H0)--(H5) and general position exactly and have largest convex subsets $5,7,9$ (two dynamic programs
+each, re-checked by the review with its own code).
+
+\begin{remark}[the route through Lemma~14]\label{rem:lemma14}
+By Lemma~14 of~\cite{BB25}, an $(X,Y)$-blow-up of an $x$-sorted base $p_1,\dots,p_N$ in general position has no $k$
+points in convex position if $x_i,y_i\ge0$, $x_i+y_i\le k-1$ and $x_i+y_j\le k-1-s_{i,j}$ ($i<j$), $s_{i,j}$ being the
+largest convex subset with leftmost point $p_i$ and rightmost point $p_j$. Sweep a $16$-point set of~\cite{SMQH25,Mac25} so that
+$p_{17-i}=-p_i$, label positions $1$--$7$ and $9$ left and the others right, and give a left point $(x,k-1-x-s_i)$ and a
+right point $(k-1-x-s_i,x)$, $k=6+2x$, where $s_i$ is the largest convex subset with $p_i$ as rightmost (left points) or
+leftmost point (right points). The conditions reduce to exactly checked facts about the base, the size is $2^{k-2}$, and
+clusters can be paired with their negatives. Explicit $64$- and $256$-point sets from this route have largest convex
+subsets $7$ and $9$ (exact computation); on these bases the threshold labelling of~\cite[Cor.~15]{BB25} gives at most
+$62$ points for $k=8$.
+\end{remark}
+
+\noindent\emph{The case $k=8$.} As sizes are even, ``the central maximum is $64$'' is exactly the centrally symmetric
+case of $ES(8)=65$, and any proof must be tight on the $64$-point examples. The mirror argument does not transfer
+(written proofs (not refereed), \dirn{ES8SYM/proofs/central.md}): the projective map $(x,y)\mapsto(x/y,1/y)$ turns a
+half-turn into a reflection but preserves convex position only inside an open half-plane; an outward chain
+$p_1,\dots,p_j$ ($j\ge3$, increasing angles in a half-plane, left turns) gives $2j$ points $\pm p_i$ in convex position if
+and only if $\orient(p_{j-1},p_j,-p_1)>0$ and $\orient(-p_j,p_1,p_2)>0$, which outwardness does not imply
+($p=(10,1),(0,10),(-1,3)$); and a set with a ``deep'' half $H$ (the origin and $-H$ strictly on one side of every
+line through two points of $H$) has at most $56$ points.
+
+\section{What is proved, and open problems}\label{sec:rigor}
+
+\begin{table}[ht]
+\centering\footnotesize
+\begin{tabular}{@{}p{0.50\textwidth}p{0.45\textwidth}@{}}
+\toprule
+statement & status\\
+\midrule
+Lemma~\ref{lem:mirror}; Theorem~\ref{thm:A}; $\Nm(k)\le4,8,12,32,46$ ($k=4,\dots,8$); $\Nm(9)\le226$ & Lean-checked, no SAT input ($k=7,8,9$ via the Lean formalization of Baek's theorem)\\
+Theorems~\ref{thm:B}, \ref{thm:allk}; Prop.~\ref{prop:etv}; Lemma~\ref{lem:pascal}; $\Nm(10)\le316$ & written proof (not refereed); estimates of Thm.~\ref{thm:B} Lean-checked\\
+$N(8,4,8)\le22$; $N(7,4,7)\le16$ by SAT & certificates (cake\_lpr), 2 encodings each; for $N(7,4,7)$ two more encodings lrat-check only\\
+Explicit mirror sets; Props.~\ref{prop:small}, \ref{prop:noneq}; Thms.~\ref{thm:c7}, \ref{thm:records}; $k=8$ lower bounds (Table~\ref{tab:k8}); central instances & exact computation\\
+Lemma~\ref{lem:layer} & Lean-checked (\texttt{LAYERLEAN}: hull vertices one orbit, layers, strict nesting in orientation form, $O\notin S$ for even $m$)\\
+Lemmas~\ref{lem:blowup}, \ref{lem:modules}; Prop.~\ref{prop:orbit}; Prop.~\ref{prop:small}(b); $k=8$ central remarks & written proof (not refereed)\\
+Proposition~\ref{prop:compat}; Proposition~\ref{prop:k8sizes} & core / part (a) Lean-checked; rest written proof\\
+Theorem~\ref{thm:E} & certificate (cake\_lpr: $7$ of $7$ regenerated formulas with matching hashes, and $10$ of $10$ from an independent encoder), plus written proofs\\
+$k=8$, sevenfold maximum $64$: upper bound (\texttt{C7UPPER}) & certificate (cake\_lpr, two encoders; both proofs replayed against regenerated formulas with matching hashes on 4 November); reduction Lean-checked; encoding soundness written proof (not refereed)\\
+$k=8$, sixfold maximum $60$: upper bound (\texttt{C6UPPER}) & certificate (cake\_lpr, two encoders): in the hash-bound cake\_lpr replay of 6 November all $64$ cube formulas ($32$ per encoder), regenerated with matching hashes, were solved again and every fresh proof was accepted, each verdict bound to the formula and proof hashes (\texttt{C6UPPER}~\S6); before it, the solve-time logs of 3 November recorded cube labels only, and $6$ of the $64$ had a hash-bound cake\_lpr replay (4 November). Reduction Lean-checked; encoding soundness and reflection unit written proof (not refereed)\\
+Theorem~\ref{thm:central-even}, Lemma~\ref{lem:cubic} & written proof, referee-style internal review\\
+Theorem~\ref{thm:central}, odd $k$ (\dirn{SYM2}) & written proof (not refereed)\\
+Theorem~\ref{thm:central}, even $k\ge8$, via Lemma~14 & written argument from a published lemma, not internally reviewed\\
+$B(h)$ (Remark~\ref{rem:rule}); failed searches & computational evidence\\
+Conjecture~\ref{conj:primefold}; maximality of $B(h)$; $\Nm(k)=L(k)$, $k\ge9$ & conjecture\\
+\bottomrule
+\end{tabular}
+\caption{Rigor of the main statements; details and reproduction commands are in the README of each directory.}
+\label{tab:rigor}
+\end{table}
+
+\paragraph{Refuted statements} (exactly checked counterexamples). (1)~A rotation-chain lemma assuming only left turns
+(counterexamples in the $52$- and $54$-point sets; corrected form: written proof (not refereed)). (2)~``An outward chain
+with its antipodes is in convex position.'' (3)~``The mirror bound $58$ transfers to central symmetry'' and (4)~``the
+projective map preserves octagon-freeness'' (the $64$-point central sets). (5)~``Rotations of order $\ge3$ fall short of
+$2^{k-2}$, as for $k=7$'' (Theorem~\ref{thm:c7}). (6)~The flat-cluster bound without genericity. (7)~The ETV inequality as
+printed in~\cite[p.~443]{MS00}, which would give $ES(n)\le2^{n-2}$ (the lower bound is presumably meant).
+
+\paragraph{Open problems.}
+(1)~$P(9,5,9)$ and $P(10,5,10)$: is $\Nm(9)=128$ and $\Nm(10)=188$? Likewise every $k\ge9$; SAT at $65$ or $94$ points is
+far beyond the $23$-point instance, and Baek's method is developed for $a=4$. (2)~Is there a mirror-symmetric
+heptagon-free $32$-point set with two points on the axis (Theorem~\ref{thm:A} allows it)? (3)~Conjecture~\ref{conj:primefold}
+for $k=9$ (best $120$ of $128$; by Theorem~\ref{thm:E} one orbit of generic tiny clusters does not suffice) and $k=12$
+(best $991$ of $1024$); does a generic cluster of $93$ points satisfying Proposition~\ref{prop:orbit} exist for $m=11$?
+(4)~Upper bounds below $ES(8)-1$ for the $3$-, $4$- and $5$-fold rotation types at $k=8$. The $6$- and $7$-fold cases are
+settled (exactly $60$ and $64$; the upper bounds by SAT certificates on top of the reviewed, unrefereed encoder proof).
+Threshold runs of 5 November on the $5$-fold ($13$ layers) and $4$-fold ($17$ layers) formulas, with added chord-lemma
+clauses, closed no phase-order cube (fivefold: $19$ of $24$ ran for up to about $15$ hours, $5$ never started;
+fourfold: $11$ of $12$ ran for about $15$ hours, one was lost; evidence only, \dirn{ROT45CHORD20261105}). Is some threefold $22$-orbit set octagon-free? (5)~Does every centrally symmetric set of $66$ points in general position
+contain a convex octagon? (6)~Formalize Theorem~\ref{thm:B}, the constructions and Lemma~\ref{lem:cubic}.
+
+\section{Literature and credit}\label{sec:lit}
+
+\paragraph{Antecedents.} Erd\H{o}s--Szekeres~\cite{ES35,ES61}: the conjecture, the cups--caps theorem, the
+$2^{k-2}$-point construction. Erd\H{o}s--Tuza--Valtr~\cite{ETV96}: the ETV conjecture, its lower bound and its derivation
+from the Erd\H{o}s--Szekeres conjecture. Baek~\cite{Bae25}: the case $a=4$ and its Lean formalization, which imply the
+mirror values for $k=7,8$ (reported by SAT in~\cite{BV15}). Baek--Balko~\cite{BB25}: $(X,Y)$-blow-ups, Lemma~14 and
+Valtr's construction, which imply the odd-$k$ mirror lower bound and, with the $16$-point sets of~\cite{SMQH25,Mac25},
+the central sets. Morris--Soltan~\cite{MS00}: Lov\'asz's form of the classical construction (the mirror set for $k=7$).
+SMQH~\cite{SMQH25} and Mackey~\cite{Mac25}: symmetric encodings, the $k=6$ sets, the special case of the layer lemma, the
+orbit count for $32$ points, the statement of the fourfold $32$-point exclusion for $k=7$, the suspicion of
+Section~\ref{sec:intro}. Eppstein~\cite{Epp18}: the
+figure for $k=5$. Fermat: the size rule. Schroeder~\cite{Sch26}: Lean bridge lemmas. Dumitru~\cite{Dum25}: a reported
+computation implying the fivefold case for $k=7$, with priority; no statement on symmetric sets for $k\ge8$ was found in
+it.
+
+\paragraph{Sources inspected} (1--2 November 2026; logged searches in \dirn{MIRRORETV/lit}, \dirn{PRIMEFOLD/lit}; list in
+\dirn{SYMEVEN/README.md}~\S6.3).
+Read in full: \cite{Bae25} (arXiv v2), \cite{BB25} (SoCG version), \cite{SMQH25} (arXiv v1) and its code, \cite{Mac25},
+\cite{ES61} (\S\S1--2), \cite{MS00}, \cite{BK01}, \cite{TV05}, \cite{BV15}, \cite{SP06} (\S5), Aichholzer et al.\
+(EuroCG 2019). Searched: \cite{KPH26}, \cite{GGTW25} ($2^{k-2}$-point sets for $k\le8$, no symmetry stated),
+\cite{KK26} (empty hexagons in axially symmetric sets, a different property), \cite{Dum25}, \cite{Sch26}, \cite{MV16},
+arXiv:2203.07518, 2312.01223, 1602.03075, 2502.02155, 1801.07238, 2505.15366, SSRN~7334758, Oberwolfach Report 2024/3,
+Wikipedia, MathWorld, erdosproblems.com~\#107, the OEIS ($4,12,46,188,774$: no entry; $1,5,22,93,386$ is A000346, with no
+geometric comment), and indexes (arXiv, OpenAlex, Semantic Scholar, Crossref, zbMATH Open, MathOverflow, partly Google
+Scholar). Not inspected: \cite{ETV96}, the journal versions of~\cite{Bae25,BV17,BB25}, the CICM chapter
+of~\cite{SMQH25}, the database of~\cite{AAK02}, several books and theses (\dirn{SYMEVEN/README.md}~\S6.3), paywalled
+databases and most sources not in English.
+
+\paragraph{Later checks for $k=8$} (evidence only). A check on 4 November (\dirn{C6C7REVIEW/LITERATURE.md}) and searches
+on 6 November 2026 (arXiv listings and full texts, among them~\cite{KPH26,KK26}, and the abstract and version history
+of~\cite{Dum25}; Crossref for the CICM chapter
+of~\cite{SMQH25}, whose full text was not accessed; GitHub, including the public Lean repository
+\texttt{GLitchfield/erdos-szekeres-convex-poly}, created 1 August 2026 and last pushed 20 October 2026, in which no file
+on symmetric sets was found; general web searches) found no work on symmetric sets without $8$ points in convex position.
+SMQH~\cite{SMQH25} stop at $k=7$.
+
+No matching prior result was found in these sources for: the identities of Corollary~\ref{cor:identities}, the far-flat
+construction, the odd-$k$ reduction with axis points, the even construction with two axis points,
+Proposition~\ref{prop:etv}, and the derivation of $\Nm(7)=32$ and $\Nm(8)=46$ from Baek's theorem (the odd-$k$ lower
+bound $2^{k-2}$ itself is an instance of Valtr's construction, and for $k=7$ also follows from Lov\'asz's form); rotationally symmetric sets of order at least $3$ for
+$k\ge8$ (Theorems~\ref{thm:c7}, \ref{thm:records} and the $k=8$ lower bounds), the sixfold and sevenfold upper bounds for
+$k=8$ (Proposition~\ref{prop:k8sizes}), Proposition~\ref{prop:small}(b), the size rule
+stated for all $k$, the rotated-cluster family with Theorem~\ref{thm:E}, Proposition~\ref{prop:noneq} and
+Conjecture~\ref{conj:primefold} in this form; the statement of Theorem~\ref{thm:central} for even $k\ge8$, which is
+nevertheless implied by~\cite{BB25,SMQH25}; and the $k=8$ remarks at the end of Section~\ref{sec:central}. The sources
+contain symmetric sets only for $k\le7$. This is not a novelty claim.
+
+\begin{thebibliography}{99}\footnotesize
+\setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}
+\bibitem{AAK02} O.~Aichholzer, F.~Aurenhammer and H.~Krasser, Enumerating order types for small point sets with
+applications, \emph{Order} 19 (2002), 265--281.
+\bibitem{Bae25} J.~Baek, On the Erd\H{o}s--Tuza--Valtr conjecture, \emph{European J. Combin.} 124 (2025), 104085;
+arXiv:2206.04260. Theorem numbers refer to the arXiv version.
+\bibitem{BB25} J.~Baek and M.~Balko, The Erd\H{o}s--Szekeres conjecture revisited, in \emph{SoCG 2025}, LIPIcs 332,
+13:1--13:15. Journal version: \emph{J. Combin. Theory Ser.~A} 222 (2026), 106195 (not read).
+\bibitem{BK01} I.~B\'ar\'any and G.~K\'arolyi, Problems and results around the Erd\H{o}s--Szekeres convex polygon
+theorem, in \emph{Discrete and Computational Geometry (JCDCG 2000)}, LNCS 2098, Springer, 2001, 91--105.
+\bibitem{BV15} M.~Balko and P.~Valtr, A SAT attack on the Erd\H{o}s--Szekeres conjecture, \emph{Electron. Notes
+Discrete Math.} 49 (2015), 425--431.
+\bibitem{BV17} M.~Balko and P.~Valtr, A SAT attack on the Erd\H{o}s--Szekeres conjecture, \emph{European J. Combin.}
+66 (2017), 13--23 (not read).
+\bibitem{DT} drat-trim, \url{https://github.com/marijnheule/drat-trim}: issue \#31 (22 July 2022), commits
+\texttt{cbd2915} (19 October 2022, fix) and \texttt{5cd8ac3} (21 April 2024, regression), issue \#42 and pull request \#43
+(29 September 2026); master at \texttt{2e3b2dc}.
+\bibitem{Dum25} B.~Dumitru, Notes on the 33-point Erd\H{o}s--Szekeres problem, arXiv:2512.24061 (2025).
+\bibitem{Epp18} D.~Eppstein, \emph{Forbidden Configurations in Discrete Geometry}, Cambridge University Press, 2018;
+the figure also as File:8-points-no-pentagon.svg on Wikimedia Commons (2007).
+\bibitem{ES35} P.~Erd\H{o}s and G.~Szekeres, A combinatorial problem in geometry, \emph{Compositio Math.} 2 (1935),
+463--470.
+\bibitem{ES61} P.~Erd\H{o}s and G.~Szekeres, On some extremum problems in elementary geometry, \emph{Ann. Univ. Sci.
+Budapest. E\"otv\"os Sect. Math.} 3--4 (1960/61), 53--62.
+\bibitem{ETV96} P.~Erd\H{o}s, Zs.~Tuza and P.~Valtr, Ramsey-remainder, \emph{European J. Combin.} 17 (1996), 519--532
+(not accessed; read through~\cite{Bae25,BV15,BB25}).
+\bibitem{GGTW25} B.~Georgiev, J.~G\'omez-Serrano, T.~Tao and A.~Z.~Wagner, Mathematical exploration and discovery at
+scale, arXiv:2511.02864 (2025).
+\bibitem{KKS70} J.~D.~Kalbfleisch, J.~G.~Kalbfleisch and R.~G.~Stanton, A combinatorial problem on convex $n$-gons, in
+\emph{Proc. Louisiana Conf. Combinatorics, Graph Theory and Computing}, Baton Rouge, 1970, 180--188.
+\bibitem{KK26} V.~Koshelev and A.~Koshka, Combinatorial geometry of Erd\H{o}s--Szekeres type problems: SAT/ASP
+modeling and linear subreduction, arXiv:2604.20120 (2026).
+\bibitem{KPH26} A.~Krapivin, B.~Przybocki and M.~J.~H.~Heule, Toward satisfiability modulo realizability,
+arXiv:2607.02958 (2026).
+\bibitem{Mac25} E.~Mackey, \emph{Pinwheels and Polygons: Symmetric Realizations of Polygon-Free Point Placements via
+SAT}, M.S. thesis, Carnegie Mellon University, Technical Report CMU-CS-25-108 (2025).
+\bibitem{MS00} W.~Morris and V.~Soltan, The Erd\H{o}s--Szekeres problem on points in convex position -- a survey,
+\emph{Bull. Amer. Math. Soc.} 37 (2000), 437--458.
+\bibitem{MV16} H.~Nassajian Mojarrad and G.~Vlachos, An improved upper bound for the Erd\H{o}s--Szekeres conjecture,
+\emph{Discrete Comput. Geom.} 56 (2016), 165--180.
+\bibitem{OEIS} The On-Line Encyclopedia of Integer Sequences, sequences A000245 and A000346, \texttt{oeis.org}.
+\bibitem{Sch26} M.~Schroeder, Erd\H{o}s--Szekeres: upper bounds for convex heptagons and octagons, archive version~1,
+19 September 2026, doi:10.5281/zenodo.22842891 (unreviewed).
+\bibitem{SMQH25} B.~Subercaseaux, E.~Mackey, L.~Qian and M.~J.~H.~Heule, Automated symmetric constructions in discrete
+geometry, arXiv:2506.00224v1 (2025); also CICM 2025 (chapter not accessed).
+\bibitem{SP06} G.~Szekeres and L.~Peters, Computer solution to the 17-point Erd\H{o}s--Szekeres problem, \emph{ANZIAM
+J.} 48 (2006), 151--164.
+\bibitem{Supp} Supplementary material: the directories \dirn{MIRRORETV}, \dirn{SYMLEAN/mirror}, \dirn{ES8SYM},
+\dirn{PRIMEFOLD}, \dirn{SYMEVEN}, \dirn{SYM2}, \dirn{C4CUT}, \dirn{C6UPPER}, \dirn{C7UPPER}, \dirn{LAYERLEAN},
+\dirn{SIX60}, \dirn{C6C7REVIEW}, \dirn{LRATCHECK20261105}, \dirn{ROT45CHORD20261105} and the file
+\dirn{WRITEUP/SYMMETRIC.md} under \dirn{cloud/es7-2026-10-19/results} of the project repository (branch
+\texttt{es7-night-2026-11-01}; the commit is to be fixed before circulation; the previous draft cited
+\texttt{19c286f73}).
+\bibitem{TV05} G.~T\'oth and P.~Valtr, The Erd\H{o}s--Szekeres theorem: upper bounds and related results, in
+\emph{Combinatorial and Computational Geometry}, MSRI Publ. 52, Cambridge Univ. Press, 2005, 557--568.
+\end{thebibliography}
+
+\end{document}

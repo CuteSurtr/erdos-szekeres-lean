@@ -1,0 +1,28 @@
+{
+  "result": "Bounded inconclusive search; no 62-hole witness found. No UNSAT or geometric impossibility claim.",
+  "source": "experiments/omission-cover-certificates-2026-10-10/balanced-v2-source.json",
+  "source_sha256": "acaf6323a2539be869304f42263f80a87db95be1b998e41638dba9bca4d63d72",
+  "states": 252,
+  "rows": 3131,
+  "target_holes": 62,
+  "tabu_seconds": 120.84853637497872,
+  "tabu_iterations": 114916,
+  "tabu_best_exact_deficit": 60,
+  "tabu_best_violated_rows": 59,
+  "scip_stopped_at": "2026-10-09 23:53 UTC; before the 23:54 deadline",
+  "scip_last_progress": "  487s| 16700 |   831 |  5669k| 338.7 |   145M |  36 | 252 |6609 |3137 |2057 |  1 |8962 |  12 | 0.000000e+00 |      --      |    Inf | unknown",
+  "scip_threads": 1,
+  "source_hash_verified_unchanged": true,
+  "research_archive": {
+    "path": "research-sources-and-logs.json.gz",
+    "sha256": "380c9e13efa56ab6b6c9884b6dac52cd4dee96de566340f6a93cdfdf865767a6",
+    "contents": [
+      "search.py",
+      "scip.py",
+      "scip-run.json",
+      "search.log",
+      "scip.log",
+      "result.json"
+    ]
+  }
+}

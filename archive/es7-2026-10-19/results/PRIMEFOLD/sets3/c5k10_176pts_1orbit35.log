@@ -1,0 +1,30 @@
+# certify5.sh runs/s176_e5_s40.pts c5k10_176pts_1orbit35 10   (Tue Nov  3 06:50:11 KST 2026)
+32679bde346eaef30da5421dbe8058063308e13573796d5b0e14032c56c55d64  push3/c5k10/cert/c5k10_176pts_1orbit35.pts
+## 1. theory orient.py
+float cross-check disagreements (|det| not tiny): 0
+n=176, no collinear triple, table written to push3/c5k10/cert/c5k10_176pts_1orbit35.ot
+## 2. tab_cyclo.py
+{'n': 176, 'm': 5, 'layers': 35, 'centre': True, 'distinct': True, 'invariant': True, 'zero_orientations': 0, 'rows_are_orbits': True, 'nested_layers': True}
+STRUCTURE PASS
+## 3. table comparison
+TABLES IDENTICAL
+## 4. dpcheck (check253)
+n=176  table entries not +-1 among i<j<k: 0
+subset size 176
+M1y (lowest-vertex anchor) max convex subset = 9  witness ok=1 : 0 1 6 26 76 20 15 10 5
+M1x (leftmost-vertex anchor) max convex subset = 9  witness ok=1 : 2 63 68 73 78 22 17 12 7
+M2 (cup+cap) max convex subset = 9  witness ok=1 : 3 8 28 78 22 17 12 7 2
+angular-order violations (must be 0): 0
+RESULT 9 9 9 AGREE
+## 5. mydp
+n=176 table violations (zero/antisymmetry): 0
+angular-order violations: 0
+largest convex subset (anchor-pair DP) = 9 ; witness convex=1 : 0 1 6 26 76 20 15 10 5
+convex 10-gons counted by the DP: 0
+MYDP 9 OK
+## 6. crosscheck_decimal
+n=176 points; sorted triples checked; mismatches/undecided: 0; min |det| = 1.541E+61; error bound = 4.000E-68
+CROSSCHECK PASS
+32679bde346eaef30da5421dbe8058063308e13573796d5b0e14032c56c55d64  push3/c5k10/cert/c5k10_176pts_1orbit35.pts
+ad53c3d5a75abf6bbb664b9d20aaf9d6a0d422af20724c7ae4f43cc814beb69e  push3/c5k10/cert/c5k10_176pts_1orbit35.ot.gz
+a4de8bbfaa071a4feee8a1f6cd53553d451096b1ae104021b164e5952339e86d  push3/c5k10/cert/c5k10_176pts_1orbit35.ranks.txt

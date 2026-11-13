@@ -1,0 +1,56 @@
+=== m5m6 unit G9rules (DESIGN risk R2) -- 2026-11-07 ===
+File: geo/ES8Geo/ArcBridge.lean (497 lines, import ES8Geo.Interface only)
+sha256 46966b48a101fa42a11e104cbd20440e93f0255b7d28804faf8bb0b00b277839
+Status: PROVED (both rules closed; no gap, no named-Prop fallback needed).
+
+Go/no-go spike on G9 (05:13): ccwIn_iff_inArc_of_lt / _of_gt (core arithmetic) compiled on the
+first attempt in a scratch file (2.9 s) -> GO. G8 + reduced directions next (3.6 s), then the
+frame lemma and both rules (whole draft 5.1 s, 2.5 GB). Final file elaborated 05:24:47.
+
+Check: cd geo && lake env lean ES8Geo/ArcBridge.lean -> exit 0, no errors, no warnings,
+wall 7.0 s, max RSS 2.5 GB (one Lean process at a time; no lake build, no .olean written).
+
+Main theorems (namespace EncB.Geo, the task's statements; binders = subset of the standing
+hypotheses, in order: {m t} (hm : 3 ≤ m) (heven : Even m) {T} {c} (L : PolarLabelling m t T c)):
+  labelling_ruleA : ∀ a b d, PtOk a → PtOk b → PtOk d → Distinct3 a b d →
+                    AltCCW m L.psiLt a b d → L.chi a b d = true
+  labelling_ruleB : ∀ a b d, PtOk a → PtOk b → PtOk d → Distinct3 a b d →
+                    BlockCCW m L.psiLt a b d → b.1 ≤ a.1 → b.1 ≤ d.1 → L.chi a b d = true
+  K is not taken (unused; an unused implicit K could not be inferred at the call site).
+  Integration test (scratch copy, not delivered): `ruleA := labelling_ruleA hm heven L`,
+  `ruleB := labelling_ruleB hm heven L` typecheck as fields of EncB.Model m K t with
+  chi := L.chi, psiLt := L.psiLt, and at (6, 8, 11).
+
+Helpers (namespace EncB.Geo.Arc):
+  rdir L o := cell m o * (2π/m) + ψ o.1.1 ; odir L o := φ + ψ + k*(2π/m) (+π for the antipode)
+  rdir_nonneg, rdir_lt (rdir ∈ [0,2π)); rdir_false (antipode ≡ point + π, via
+  KeyOrder.antipode_even); odir_eq (odir ≡ φ + rdir mod 2π); P_eq_odir, antipode_eq_odir
+  (object (a,false) is 2•c - P a, via polar_add_pi); P_eq_polar (any lift, Capstone.polar_eq).
+  G8: objLt_iff (objLt ↔ rdir <, via KeyOrder.cell_lt_iff); rdir_eq_iff (equal rdir ↔ same cell
+      and layer, via KeyOrder.cell_eq_iff + ψ_inj).
+  G9: ccwIn_iff_inArc_of_lt/_of_gt, ccwIn_iff_inArc (reals in [0,2π), gap arcGap X Y),
+      ccwIn_objLt_iff_inArc (reduced dirs), ccwIn_objLt_iff_inArc_odir (true directions),
+      inArc_congr (inArc depends on θ - s mod 2π), lift3 (G9 for a ccw triple: lifts
+      A < β < δ < A + 2π, each arc's ccwIn = inArc), arcHasAntipode_iff_of, arcHasAntipode_rdir,
+      arcFrame (true directions α<β<δ<α+2π of P a,P b,P d; ArcHasAntipode ↔ arcHasAntipode on
+      the three arcs; KeysDistinct → α + 2π - δ ≠ π).
+  ruleA = PhaseClassification.orient_pos_of_alternating on the frame.
+  ruleB = PhaseClassification.orient_pos_of_runMidB on the frame; hg3 from KeysDistinct
+      ((d,true) vs (a,false)); radii from L.r_anti with b.1 ≤ a.1, b.1 ≤ d.1.
+  Deviation from the DESIGN §3.4 plan: no cyclic relabelling via orient_cycle; the three cyclic
+  cases of ccwIn are absorbed by lifting B, D by 2π (lift3) and polar_add_int_two_pi.
+  The rules use only r_pos, r_anti, ψ_zero, ψ_pos, ψ_lt of L (mem_layer unused).
+
+#print axioms (verbatim):
+'EncB.Geo.labelling_ruleA' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo.labelling_ruleB' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo.Arc.objLt_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo.Arc.rdir_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo.Arc.ccwIn_iff_inArc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo.Arc.ccwIn_objLt_iff_inArc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo.Arc.ccwIn_objLt_iff_inArc_odir' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.Geo.Arc.arcFrame' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+Scans: no sorry/admit/native_decide/axiom/opaque/implemented_by/extern/unsafe/maxHeartbeats
+in the file; nothing evaluates EncB.encB. SOURCES.sha256 (5) and VENDOR.sha256 (10) all OK.
+Only geo/ES8Geo/ArcBridge.lean and this log were written in the package/logs.

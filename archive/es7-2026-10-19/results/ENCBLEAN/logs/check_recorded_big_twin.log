@@ -1,0 +1,28 @@
+date: 2026-11-06T15:47:17+09:00 (M2 step, final exe); load: 30.03 30.42 31.41
+command: systemd-run --user --scope -q -p MemoryMax=8G -p MemorySwapMax=0 nice -n 10 scripts/check_recorded.sh SCRATCH big twin   (SCRATCH = session scratchpad encblean/; the one emission of (6,8,11) from encB)
+exe sha256: e9454996f7f8a21f479cc4a2540d18f2f55f6445fbd36c642d44a7f81fe96a59
+(6,8,11) [twin] encb_dimacs rc=0 [15.26 s wall, 14.94 s user, 927792 KB max RSS]
+  exe: {"m": 6, "K": 8, "t": 11, "nv": 78059, "ncl": 2387083, "encoder": "encB", "codesDecode": true}
+  exe: cubeVars64 = [1, 2, 3, 10, 11, 18]; numbers of Y12 Y13 Y14 Y23 Y24 Y34 = [1, 2, 3, 10, 11, 18]; decode(cubeVars64) = [EncB.Var.y 1 2, EncB.Var.y 1 3, EncB.Var.y 1 4, EncB.Var.y 2 3, EncB.Var.y 2 4, EncB.Var.y 3 4]; every cube of cubes64 on cubeVars64: true; 64 cubes
+(6,8,11) cube variables MATCH: exe Y numbers [1, 2, 3, 10, 11, 18] = cubeVars64 [1, 2, 3, 10, 11, 18] = meta.json [1, 2, 3, 10, 11, 18] (meta sha 68b434944aeb1fd8)
+  clause 1: -1 -10 2 0
+  clause 2: 1 10 -2 0
+  clause 3: -1 -11 3 0
+  clause 4: 1 11 -3 0
+  clause 17: -2 -18 3 0
+  clause 18: 2 18 -3 0
+  clause 73: -10 -18 11 0
+  clause 74: 10 18 -11 0
+(6,8,11) emitted base.cnf: transitivity clauses of (1,2,3) (1,2,4) (1,3,4) (2,3,4) MATCH the meta numbers
+(6,8,11) [twin] base MATCH lean=479e31a9e8d58d752c86b9abf02fb799c10615a7e61a88f132c49734674f37fc recorded=479e31a9e8d58d752c86b9abf02fb799c10615a7e61a88f132c49734674f37fc (C6UPPER/SHA256SUMS.txt) bytes=58618857 tail='78051 -7677 7677 0 -78051 -7676 -7676 0 '
+(6,8,11) [twin] c11111 MATCH lean=0fa206f7b75f8653e8da78dd3b750294d3ddafd8b86da53a489d8cc63fa02a8e recorded=0fa206f7b75f8653e8da78dd3b750294d3ddafd8b86da53a489d8cc63fa02a8e (C6UPPER/SHA256SUMS.txt) bytes=58618884 tail='7676 -7676 0 1 0 2 0 3 0 10 0 11 0 18 0 '
+(6,8,11) [twin] c11011 MATCH lean=32bdbdc2a615a6a8b110de612f5a3138c74559ba8f45b6d2aecc055322f4ad45 recorded=32bdbdc2a615a6a8b110de612f5a3138c74559ba8f45b6d2aecc055322f4ad45 (C6UPPER/SHA256SUMS.txt) bytes=58618885 tail='676 -7676 0 1 0 2 0 3 0 -10 0 11 0 18 0 '
+(6,8,11) [twin] c10101 MATCH lean=5bfddfed9e280468eb3d616d7844886235bc5321ae94d44b8de8019cd7f68ec3 recorded=5bfddfed9e280468eb3d616d7844886235bc5321ae94d44b8de8019cd7f68ec3 (C6UPPER/SHA256SUMS.txt) bytes=58618886 tail='76 -7676 0 1 0 2 0 -3 0 10 0 -11 0 18 0 '
+(6,8,11) [twin] c00000 MATCH lean=206f2b4f3ebfbcceb2ba5dc5eb6ec68bef51059a8ca734fac9d837567d19f396 recorded=206f2b4f3ebfbcceb2ba5dc5eb6ec68bef51059a8ca734fac9d837567d19f396 (C6UPPER/SHA256SUMS.txt) bytes=58618889 tail='-7676 0 1 0 -2 0 -3 0 -10 0 -11 0 -18 0 '
+(6,8,11) [twin] n11111 MATCH lean=efdf4681b3cfe45c5e0999fdf74cbce426bf627c53e71720b6a30e993e697d2d recorded=efdf4681b3cfe45c5e0999fdf74cbce426bf627c53e71720b6a30e993e697d2d (c6upper-noty12/cubes.sha256) bytes=58618885 tail='676 -7676 0 -1 0 2 0 3 0 10 0 11 0 18 0 '
+(6,8,11) [twin] n10100 MATCH lean=96161b8ea82e6b365e6789294d19cf81ed7ce359aaf4025310e6410b5ea64ea7 recorded=96161b8ea82e6b365e6789294d19cf81ed7ce359aaf4025310e6410b5ea64ea7 (c6upper-noty12/cubes.sha256) bytes=58618888 tail=' -7676 0 -1 0 2 0 -3 0 10 0 -11 0 -18 0 '
+(6,8,11) [twin] n00000 MATCH lean=33894742a77ef9fc56af7411d05c089d179bc2f5eb091a758d9bf94ee34d19d0 recorded=33894742a77ef9fc56af7411d05c089d179bc2f5eb091a758d9bf94ee34d19d0 (c6upper-noty12/cubes.sha256) bytes=58618890 tail='7676 0 -1 0 -2 0 -3 0 -10 0 -11 0 -18 0 '
+deleted /sandbox/encblean/b6811
+ALL MATCH
+rc=0
+after: Coded.before-Q.lean ax.lean ax2.lean build.out build.time build1.out k341.lean k341.out k342.lean k342.out k342b.lean k342b.out k442.lean k442.out k641.lean k641.out kcb.out kp.lean lit441.txt lit641.txt make_ref.out py_441.cnf py_641.cnf 

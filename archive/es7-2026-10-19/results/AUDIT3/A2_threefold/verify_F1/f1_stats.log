@@ -1,0 +1,87 @@
+records 128803; certified records 116883; certified nodes 116741; certified records with proof_sha256 26436; nodes with a hashed record 26436
+odd: {'no_node_or_meta': 37}
+status counts: {'UNSATISFIABLE': 116909, 'UNKNOWN': 4670, None: 7185, 's UNSATISFIABLE': 2}
+UNSAT records by (lrat_check, cake_lpr, certified):
+    ('c VERIFIED', 's VERIFIED UNSAT', True) 116883
+    ('c VERIFIED', 'none', False) 26
+
+per source dir: records / certified / certified with proof_sha256 / cube-format certified
+  C3COMP1             43      15      15     0
+  C3H1                18      12      12     0
+  C3H1/LOCAL          91      37      37     0
+  C3H1/LOCAL2        683     603     603     0
+  C3S0               658     577       0     0
+  C3SIG              160     160       0   160
+  C3SIG2             351     221       0   221
+  C3W3             49712   48141       0     0
+  C3W3S              190     171       0   151
+  C3W4             24620   19155   19155     0
+  C3W5               761     593     593     0
+  C3W6              3793    3312    3312     0
+  C3W6/LOCAL         561     561     561     0
+  C3W6/LOCAL2         39      39      39     0
+  C3W6/LOCAL3        197     197     197     0
+  C3W7              3223     564     564     0
+  C3W7/LOCAL         650     650     650     0
+  C3W7/LOCAL2        698     698     698     0
+  C3WAVE1          23290   22625       0     0
+  C3WAVE2          19028   18552       0     0
+
+cut size 73567; cut names without a certified record: 0
+cut names with >=1 certified record carrying proof_sha256: 24733 (33.62%)
+cut names with >1 certified record: 140
+cut names per source dir (any certified record there) / with a hashed record there / only that dir
+  C3COMP1             15      15      15
+  C3H1                 1       1       1
+  C3H1/LOCAL          37      37      37
+  C3H1/LOCAL2        603     603     603
+  C3S0               120       0     120
+  C3SIG              120       0     120
+  C3SIG2             221       0      92
+  C3W3             33442       0   33439
+  C3W3S              155       0     145
+  C3W4             17463   17463   17334
+  C3W5               593     593     586
+  C3W6              3312    3312    3312
+  C3W6/LOCAL         561     561     561
+  C3W6/LOCAL2         39      39      39
+  C3W6/LOCAL3        197     197     197
+  C3W7               564     564     564
+  C3W7/LOCAL         650     650     650
+  C3W7/LOCAL2        698     698     698
+  C3WAVE1           7321       0    7321
+  C3WAVE2           7594       0    7594
+cut names whose certified records are all sigma_cubes-format (outside C3SPOT's frame): 340
+cut cost (first record): solve 1266.4 h, check 476.2 h, proof 10.46 TB; fields missing: {}
+cut cost (min_solve record): solve 1266.2 h, check 476.2 h, proof 10.46 TB; fields missing: {}
+all certified records: solve 1471.9 h, check 696.7 h, proof 13.42 TB; fields missing: {}
+
+C3SPOT: sample rows 3084, re-solved 2120 (distinct 2120), pass 2120
+re-solved nodes whose sample sha equals a certified record's cnf_sha256: 2120
+re-solved and passing nodes that lie in the cut: 1337; cut names never re-solved: 72230 (98.18%)
+sample rows (all 3,084) that lie in the cut: 1932
+re-solved rows with a hashed original: 485; identical proof sha 480; different 5; original without proof hash 1635
+   differs: ('0s0_3__1s0-2s0-4s0-5s1-6s0-7s0-8s0-9s1-10s0', 'C3W7/Q14/out.jsonl', [(['-q', '-t', '900', '--sat', '--lrat', '--binary=false'], 900)], ['-q', '-t', '3600', '--sat', '--lrat', '--binary=false'])
+   differs: ('0s0_2s0-6s0__1s0-3s1-4s0-5s1-7s0-8s1', 'C3W4/H16/out.jsonl', [(['-q', '-t', '300', '--sat', '--lrat', '--binary=false'], 300)], ['-q', '-t', '3600', '--sat', '--lrat', '--binary=false'])
+   differs: ('0s0-2s0_1__3s1-4s1-5s0-6s1-7s1-8s0', 'C3W4/O04/out.jsonl', [(['-q', '-t', '300', '--sat', '--lrat', '--binary=false'], 300)], ['-q', '-t', '3600', '--sat', '--lrat', '--binary=false'])
+   differs: ('0s0_1_3__2s0-3s1-4s0-5s0-6s0-7s0', 'C3H1/X2/out.jsonl', [(['-q', '-t', '3600', '--sat', '--lrat', '--binary=false'], 3600)], ['-q', '-t', '3600', '--sat', '--lrat', '--binary=false'])
+   differs: ('0s0-5s1_7__1s1-2s1-3s1-4s1-6s1-8s0', 'C3W4/O04/out.jsonl', [(['-q', '-t', '300', '--sat', '--lrat', '--binary=false'], 300)], ['-q', '-t', '3600', '--sat', '--lrat', '--binary=false'])
+re-solved cut nodes by the sample's recorded source dir: {'C3COMP1': 3, 'C3H1/LOCAL2': 10, 'C3S0': 3, 'C3W3': 622, 'C3W3S': 6, 'C3W4': 300, 'C3W5': 13, 'C3W6': 57, 'C3W6/LOCAL': 16, 'C3W6/LOCAL2': 2, 'C3W6/LOCAL3': 3, 'C3W7': 18, 'C3W7/LOCAL': 15, 'C3W7/LOCAL2': 17, 'C3WAVE1': 109, 'C3WAVE2': 143}
+        1.13 real         1.01 user         0.07 sys
+           316686336  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               20034  page reclaims
+                  41  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 218  voluntary context switches
+                 900  involuntary context switches
+         15006613645  instructions retired
+          4187012315  cycles elapsed
+           308576928  peak memory footprint

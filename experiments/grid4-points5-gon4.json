@@ -1,0 +1,12 @@
+{
+  "scope": "integer grid only; not all planar order types",
+  "grid_side": 4,
+  "points": 5,
+  "gon": 4,
+  "total_grid_subsets": 4368,
+  "checked_subsets": 4368,
+  "general_position_subsets_checked": 1668,
+  "grid_exhausted": true,
+  "avoiding_configuration": null,
+  "verification": "exact Python integer arithmetic; not Lean-certified"
+}

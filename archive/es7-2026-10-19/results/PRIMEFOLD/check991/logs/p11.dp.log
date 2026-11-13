@@ -1,0 +1,71 @@
+loaded p=11 layers=90 centre=1 n=991
+each layer is a convex p-gon in rotation order: yes; layer pairs (smaller layer not strictly inside larger polygon): 0 of 4005, point-edge violations 0
+  subset  0 (mode 0, 22 pts): method1 7  method2 7  brute-force 7 
+  subset  1 (mode 1, 22 pts): method1 8  method2 8  brute-force 8 
+  subset  2 (mode 2, 22 pts): method1 7  method2 7  brute-force 7 
+  subset  3 (mode 3, 22 pts): method1 10  method2 10  brute-force 10 
+  subset  4 (mode 0, 22 pts): method1 9  method2 9  brute-force 9 
+  subset  5 (mode 1, 22 pts): method1 9  method2 9  brute-force 9 
+  subset  6 (mode 2, 22 pts): method1 10  method2 10  brute-force 10 
+  subset  7 (mode 3, 22 pts): method1 10  method2 10  brute-force 10 
+  subset  8 (mode 0, 22 pts): method1 8  method2 8  brute-force 8 
+  subset  9 (mode 1, 22 pts): method1 9  method2 9  brute-force 9 
+  subset 10 (mode 2, 22 pts): method1 8  method2 8  brute-force 8 
+  subset 11 (mode 3, 22 pts): method1 10  method2 10  brute-force 10 
+  subset 12 (mode 0, 22 pts): method1 8  method2 8  brute-force 8 
+  subset 13 (mode 1, 22 pts): method1 8  method2 8  brute-force 8 
+  subset 14 (mode 2, 22 pts): method1 8  method2 8  brute-force 8 
+  subset 15 (mode 3, 22 pts): method1 10  method2 10  brute-force 10 
+  subset 16 (mode 0, 22 pts): method1 9  method2 9  brute-force 9 
+  subset 17 (mode 1, 22 pts): method1 9  method2 9  brute-force 9 
+  subset 18 (mode 2, 22 pts): method1 8  method2 8  brute-force 8 
+  subset 19 (mode 3, 22 pts): method1 10  method2 10  brute-force 10 
+  subset 20 (mode 0, 22 pts): method1 8  method2 8  brute-force 8 
+  subset 21 (mode 1, 22 pts): method1 9  method2 9  brute-force 9 
+  subset 22 (mode 2, 22 pts): method1 10  method2 10  brute-force 10 
+  subset 23 (mode 3, 22 pts): method1 11  method2 11  brute-force 11 
+  subset 24 (mode 0, 22 pts): method1 9  method2 9  brute-force 9 
+  subset 25 (mode 1, 22 pts): method1 9  method2 9  brute-force 9 
+  subset 26 (mode 2, 22 pts): method1 8  method2 8  brute-force 8 
+  subset 27 (mode 3, 22 pts): method1 11  method2 11  brute-force 11 
+  subset 28 (mode 0, 22 pts): method1 8  method2 8  brute-force 8 
+  subset 29 (mode 1, 22 pts): method1 8  method2 8  brute-force 8 
+  subset 30 (mode 2, 22 pts): method1 8  method2 8  brute-force 8 
+  subset 31 (mode 3, 22 pts): method1 11  method2 11  brute-force 11 
+  subset 32 (mode 0, 22 pts): method1 9  method2 9  brute-force 9 
+  subset 33 (mode 1, 22 pts): method1 9  method2 9  brute-force 9 
+  subset 34 (mode 2, 22 pts): method1 9  method2 9  brute-force 9 
+  subset 35 (mode 3, 22 pts): method1 10  method2 10  brute-force 10 
+  subset 36 (mode 0, 22 pts): method1 8  method2 8  brute-force 8 
+  subset 37 (mode 1, 22 pts): method1 9  method2 9  brute-force 9 
+  subset 38 (mode 2, 22 pts): method1 8  method2 8  brute-force 8 
+  subset 39 (mode 3, 22 pts): method1 10  method2 10  brute-force 10 
+subset cross-checks: 40 subsets, 0 mismatches
+  method2 anchor layer 0 (u=990): best so far 11  [0.0s]
+  method2 anchor layer 10 (u=880): best so far 11  [0.4s]
+  method2 anchor layer 20 (u=770): best so far 11  [0.7s]
+  method2 anchor layer 30 (u=660): best so far 11  [0.8s]
+  method2 anchor layer 40 (u=550): best so far 11  [0.9s]
+  method2 anchor layer 50 (u=440): best so far 11  [1.0s]
+  method2 anchor layer 60 (u=330): best so far 11  [1.0s]
+  method2 anchor layer 70 (u=220): best so far 11  [1.0s]
+  method2 anchor layer 80 (u=110): best so far 11  [1.0s]
+METHOD2 (farthest-from-origin anchor, symmetry, 90 anchors): largest convex subset = 11  [1.0s]
+  witness (11): 0(L0,s0) 1(L0,s1) 12(L1,s1) 23(L2,s1) 34(L3,s1) 45(L4,s1) 682(L62,s0) 374(L34,s0) 165(L15,s0) 55(L5,s0) 11(L1,s0)
+  witness all turns left: yes, convex position (no point in triangle of 3 others): yes
+  method1 anchor rank 0 (u=990): best so far 11  [0.0s]
+  method1 anchor rank 100 (u=890): best so far 11  [3.5s]
+  method1 anchor rank 200 (u=790): best so far 11  [5.7s]
+  method1 anchor rank 300 (u=690): best so far 11  [7.6s]
+  method1 anchor rank 400 (u=590): best so far 11  [8.9s]
+  method1 anchor rank 500 (u=490): best so far 11  [10.0s]
+  method1 anchor rank 600 (u=390): best so far 11  [10.6s]
+  method1 anchor rank 700 (u=290): best so far 11  [11.0s]
+  method1 anchor rank 800 (u=190): best so far 11  [11.2s]
+  method1 anchor rank 900 (u=90): best so far 11  [11.2s]
+METHOD1 (lowest-vertex anchor, all 991 anchors, no symmetry): largest convex subset = 11  [11.2s]
+  witness (11): 8(L0,s8) 9(L0,s9) 20(L1,s9) 31(L2,s9) 42(L3,s9) 53(L4,s9) 690(L62,s8) 382(L34,s8) 173(L15,s8) 63(L5,s8) 19(L1,s8)
+  witness all turns left: yes, convex position: yes
+METHOD2' (farthest-from-origin anchor, all 990 anchors, no symmetry): largest convex subset = 11  [10.8s]
+RESULT largest_convex_subset method1=11 method2=11 subset_mismatches=0
+exit 0

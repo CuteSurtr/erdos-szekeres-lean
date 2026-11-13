@@ -1,0 +1,4 @@
+{'file': 'c3_31points.txt', 'mirror': False, 'nest': False, 'K': 7, 't': 10, 'clauses': 231578, 'violations': {}}
+{'file': 'c3_31points.txt', 'mirror': True, 'nest': False, 'K': 7, 't': 10, 'clauses': 231578, 'violations': {}}
+{'file': 'c3_31points.txt', 'mirror': False, 'nest': True, 'K': 7, 't': 10, 'clauses': 193985, 'violations': {'nest': 24, 'chain': 286}}
+{'base_vars': 1405, 'sat_by_base': 171455, 'falsified_by_base': 0, 'residual': 60123, 'multi_body': 0, 'chain_true': 3187, 'residual_violated': 0}

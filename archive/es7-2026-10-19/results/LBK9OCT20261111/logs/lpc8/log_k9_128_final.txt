@@ -1,0 +1,11 @@
+21:50:36 base built: t=16, 42672 triple vars
+21:51:07 phase k9_128_final: th(deg)=[0.0, 4.1925, 4.3168, 4.4161, 4.4942, 4.6619, 4.9529, 5.4278, 5.4808, 5.5853, 6.0154, 6.4311, 6.4804, 7.1874, 7.3977, 20.8174]
+21:51:07   forced 27312, free 15360, kept rule clauses 600, threshold 1320, chain 16148306, conflicts 0, build 30.7 s
+21:51:07   guided: 15360 hint assumptions
+21:51:07   relax 1: core 42, 15318 assumptions left
+21:51:09   relax 21: core 139, 12910 assumptions left
+21:51:10   relax 41: core 221, 9925 assumptions left
+21:54:30   relax 61: core 39, 753 assumptions left
+21:54:33   UNSAT after 65 iterations, 0 cuts, 205.6 s (no radii for these phases; float cuts: evidence)
+21:54:33 RESULT real/ph/k9_128_final.json ('UNSAT', 65, 0)
+21:54:33 done

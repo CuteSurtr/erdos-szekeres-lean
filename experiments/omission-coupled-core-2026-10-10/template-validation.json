@@ -1,0 +1,75 @@
+{
+  "status": "kernel-checked",
+  "rows": 42,
+  "support_size": 13,
+  "demand": 1,
+  "roots": [
+    "ErdosSzekeres.Omission.CoupledTemplate.context_impossible",
+    "ErdosSzekeres.Omission.CoupledTemplate.hole_bound",
+    "ErdosSzekeres.Omission.CoupledTemplate.check_sound",
+    "ErdosSzekeres.Omission.CoupledVariants.checked",
+    "ErdosSzekeres.Omission.CoupledVariants.all_rows"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "scope": "Every literal row is necessary for real residual configurations under the original no6cap/no8gon/noJunction hypotheses. The combined first/second57-row union now has a separate kernel-checked nine-independent/48redundant classification against the frozen original1187+prior45system. All42first-family rows are satisfied by the next abstract32-hole witness.",
+  "prerequisites_per_row": {
+    "empty_direction": 27,
+    "domain": 21,
+    "fixed_sign": 110
+  },
+  "method": "The same frozen407-clause LRAT proof is reused with generic state-dependent premises. Named maps are checked through a Boolean list-all checker whose soundness implies Compatible; decide+kernel evaluates only finite literal checks.",
+  "runtime_review": "The original flat function-vector / Decidable Compatible build was interrupted after approximately20minutes with no theorem failure. An isolated Boolean checker passed in6.99seconds. Named maps plus this checker completed all42 rows cleanly within approximately4minutes under-M1200. Original source/log preserved in.cache/geometric-six-hour for diagnostic provenance; not part of the trusted proof.",
+  "no_sorry": true,
+  "no_custom_axioms": true,
+  "no_native_decide_or_ofReduceBool": true,
+  "export_commands": [
+    "python3 scripts/export_omission_coupled_template.py",
+    "python3 scripts/export_omission_coupled_variants.py"
+  ],
+  "sha256": {
+    "ErdosSzekeres/Omission/CoupledTemplate.lean": "d0c381225b435538aeef54cc6d5545d739d10b6c0efdc03fa5e6d05d99502fab",
+    "ErdosSzekeres/Omission/CoupledTemplateGeometry.lean": "e81297676a73e6a578b514007e5beca743a2e31650d5a5c7741ecf52be1060e6",
+    "ErdosSzekeres/Omission/CoupledTemplateCheck.lean": "67770f2249c98b6f241dfa9ffcc679c893c73b5ebfb1ace1520a5a2fd4b91ff2",
+    "ErdosSzekeres/Omission/CoupledVariants.lean": "362afa01ccfb71ea96a5de6fc6abd8ef82a2ccfa2d5c2b23432bf6456beb5903",
+    "scripts/export_omission_coupled_template.py": "e71d28d7fdbfc8622b5bfc493ff35441dfb91b670b06f35862960b7bb7aaa636",
+    "scripts/export_omission_coupled_variants.py": "68822b3e7dfd32bd52976e1ff6068f299b8b258a125993403d79dba88ed77b17",
+    "experiments/omission-coupled-core-2026-10-10/template-variants.json": "b520dba47a94ea04637817ecdcac44ce6347a7bebf77532dea7e94815f187c70",
+    "experiments/omission-coupled-core-2026-10-10/template-axiom-audit.txt": "814dd3ca33a160a4564a5260a3ecd047b59567fa912ccd988d2c7b01c94329c4"
+  },
+  "finite_redundancy_review": {
+    "status": "kernel-checked classification of the frozen57-row union",
+    "distinct_union_rows": 57,
+    "cross_family_duplicates": 20,
+    "rows_implied_by_an_original_row": 48,
+    "independent_of_original_1187_prior_45_and_other_56": 9,
+    "first_family_zero_based_indices": [
+      6,
+      7,
+      10,
+      24,
+      25,
+      28,
+      38
+    ],
+    "second_family_zero_based_indices": [
+      8,
+      23
+    ],
+    "witness": "For support S, occupy precisely S and put holes on its complement. Each witness has 141 holes. This establishes row independence without a 32-hole cardinality restriction; it does not prove geometric realizability.",
+    "redundancy_reason": "For every one of the other 48 supports S, some original row R of demand d has |R \\ S| < d. With holes bounded by one, that original row forces at least one hole in S.",
+    "separate_kernel_strictness": "The two core Strictness.lean artifacts prove separation using exactly 32-hole witnesses; the second includes every first-template row among its premises.",
+    "diagnostic_source": "experiments/omission-coupled-union-2026-10-10/exact-check.json",
+    "diagnostic_sha256": "da056a00dadd2976df81df20a58fad80ba653da4526fcd1ccb108a918dad5edf",
+    "kernel_roots": [
+      "ErdosSzekeres.Omission.CoupledUnion.independent_each_selected_row",
+      "ErdosSzekeres.Omission.CoupledUnion.redundant_rows_implied"
+    ],
+    "kernel_record": "experiments/omission-coupled-union-2026-10-10/kernel-check.json",
+    "kernel_record_sha256": "9f2dde3a446e0d4cad1595a04a5e9a242e8f89ba4ee8979980c9eb4ce8893cb0",
+    "scope": "Exactly the original1187rows, prior45geometric rows, and other56members of this frozen57-row union. Later constraints can change which earlier rows are independent."
+  }
+}

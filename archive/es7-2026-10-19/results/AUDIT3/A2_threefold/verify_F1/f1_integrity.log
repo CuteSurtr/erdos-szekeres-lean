@@ -1,0 +1,44 @@
+(a) UNSAT but not certified: 26
+    fate of those nodes: {'certified elsewhere': 26}
+    e.g. C3WAVE1/C00/out.jsonl 0s0-1s0_10_2s1-9s1 {'lrat_check': 'c VERIFIED', 'cake_lpr': 'none', 'proof_bytes': 121081802, 'check_s': 22.4, 'certified': False}
+    e.g. C3WAVE1/C01/out.jsonl 0s0-1s0_2_3s0-8s1 {'lrat_check': 'c VERIFIED', 'cake_lpr': 'none', 'proof_bytes': 49488887, 'check_s': 71.4, 'certified': False}
+    e.g. C3WAVE1/C02/out.jsonl 0s0-1s1_6s0-7s1_2_5 {'lrat_check': 'c VERIFIED', 'cake_lpr': 'none', 'proof_bytes': 20634413, 'check_s': 19.9, 'certified': False}
+    e.g. C3WAVE1/C03/out.jsonl 0s0-1s1_3s0-6s1_2_4 {'lrat_check': 'c VERIFIED', 'cake_lpr': 'none', 'proof_bytes': 20119412, 'check_s': 20.3, 'certified': False}
+    e.g. C3WAVE1/C04/out.jsonl 0s0-1s0_9_4s0-6s1 {'lrat_check': 'c VERIFIED', 'cake_lpr': 'none', 'proof_bytes': 88983692, 'check_s': 15.4, 'certified': False}
+    e.g. C3WAVE1/C05/out.jsonl 0s0-1s1_2s1-3s0_4_6 {'lrat_check': 'c VERIFIED', 'cake_lpr': 'none', 'proof_bytes': 20518639, 'check_s': 19.1, 'certified': False}
+    proof_bytes of failed records: min 0.00 GB, max 0.40 GB
+(b) odd status strings: 2
+     C3WAVE1/C11/rechecks.jsonl {'node': '0s0-1s1_2s0-10s0_3_7', 'status': 's UNSATISFIABLE', 'certified': None, 'lrat_check': 'c VERIFIED', 'cake_lpr': 's VERIFIED UNSAT'}
+     C3WAVE1/C11/rechecks.jsonl {'node': '0s0-1s1_2s0-10s0_3s0-4s0', 'status': 's UNSATISFIABLE', 'certified': None, 'lrat_check': 'c VERIFIED', 'cake_lpr': 's VERIFIED UNSAT'}
+(c) certified records with proof_bytes and check_s: 116883 missing: 0
+    check throughput MB/s: median 2.5, p99 21.6, p99.9 25.0, max 36.1
+    top 5 throughputs:
+      32.0 MB/s C3H1/LOCAL2/out.jsonl 0s0_4__1s1-2s1-3s0-5s0-6s0-7s0-8s1-9s1-10s1 proof 1405.0 MB check_s 43.9 solve_s 465.2
+      32.1 MB/s C3W7/LOCAL2/out.jsonl 0s0_1__2s0-3s0-4s0-5s0-6s0-7s1-8s1-9s0-10s0 proof 963.6 MB check_s 30.0 solve_s 490.6
+      32.2 MB/s C3H1/LOCAL2/out.jsonl 0s0_4__1s1-2s0-3s1-5s1-6s1-7s1-8s1-9s1-10s1 proof 1158.0 MB check_s 36.0 solve_s 412.3
+      32.4 MB/s C3W7/LOCAL2/out.jsonl 0s0_1__2s0-3s0-4s0-5s0-6s0-7s1-8s1-9s0-10s1 proof 999.9 MB check_s 30.9 solve_s 521.9
+      36.1 MB/s C3H1/LOCAL2/out.jsonl 0s0_4__1s1-2s0-3s1-5s1-6s1-7s1-8s1-9s0-10s1 proof 1244.9 MB check_s 34.5 solve_s 362.3
+    certified records with proof_bytes < 1000: 0
+    certified records with solve_s <= 0 or missing: 0
+(d) nodes with >1 certified record: 142 ; cnf sha disagreements: 0 ; nodes with >=2 proof hashes: 0 of which all identical: 0
+(e) record files contributing to the cut: 236 ; with 0 re-solved cut pieces: 67 holding 1899 cut pieces
+      C3WAVE2/K17/out.jsonl 188
+      C3W3/A7/out.jsonl 113
+      C3W6/P07/out.jsonl 94
+      C3W6/P15/out.jsonl 94
+      C3W6/P19/out.jsonl 93
+      C3W6/P24/out.jsonl 93
+      C3W6/P27/out.jsonl 93
+      C3W6/P31/out.jsonl 93
+      C3W6/P38/out.jsonl 93
+      C3W3S/S0/out_sigma.jsonl 72
+      C3W4/O07/out.jsonl 64
+      C3W6/P43/out.jsonl 61
+      C3W6/P12/out.jsonl 53
+      C3W7/Q20/out.jsonl 52
+      C3SIG2/G6/out.jsonl 49
+(f) field signatures of the first certified record of each cut piece:
+      48477 ('base_sha256', 'cadical_opts', 'cap')
+      24597 ('base_sha256', 'cadical_args', 'cadical_opts', 'cap', 'proof_sha256')
+      476 ('cadical_opts', 'cap', 'cube')
+      17 ('base_sha256',)

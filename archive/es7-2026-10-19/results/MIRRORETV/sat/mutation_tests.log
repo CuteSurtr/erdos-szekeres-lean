@@ -1,0 +1,4 @@
+line 2002: '-32 36 -343 0' -> '32 36 -343 0': lrat-check exit=1, c FAILED: multiple literals unassigned in hint 2001: 32 36
+line 20001: '576 -580 585 0' -> '-576 -580 585 0': lrat-check exit=0, c VERIFIED
+line 30002: '-151 -3058 0' -> '151 -3058 0': lrat-check exit=0, c VERIFIED
+line 35001: '-3282 351 0' -> '3282 351 0': lrat-check exit=0, c VERIFIED

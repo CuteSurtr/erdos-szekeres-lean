@@ -1,0 +1,212 @@
+# m9_review_fix.log: fixes of the two M9 reviews (Lean-soundness review L1-L6, logs/m9_review_lean_soundness.log; claims review C1-C13, reported to the workflow, not logged by the reviewer), 2026-11-06T20:56:29+09:00
+# host jay-B850M-AORUS-ELITE-WIFI6E-ICE; Tctl +79.8°C; load 29.37 29.50 29.81; git HEAD 752214b6e
+# before: exe .lake/build/bin/encb_dimacs sha256 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368
+# before: EncB.lean sha256 67300d282702cebabe0fdb6502ea5d3191f1803c98f8241cd7b388b9bd590b0b (17 lines)
+# before: EncB/Render.lean sha256 c8d6aed7e539db2c886230c80f891177de05a487e5041ad6f68f360b6d123e82 (890 lines)
+# before: EncB/Emit.lean sha256 9a2087a4d116adec6793931986969fe01a01e4f520120389a5b2bbcb856f081f (319 lines)
+# before: scripts/audit.sh sha256 f7af57b676e5fec57576fdabaec2e3689f9bbc29a77f426c262b5797f63ad964 (64 lines)
+# before: scripts/hash_binding.sh sha256 29d89510a6ca9f3f9ade8131ab79a3c621184135c341f5c521dd9603bcae65e4 (278 lines)
+# before: scripts/build_cake_lpr.sh sha256 488502baa677c954badfe24b4ffc78dcb2c3a03c169fe287f1205bc2dbfaf12d (87 lines)
+# before: README.md sha256 4b20caae2178c98d834183de366004289d3b286e6c24693de51c77596155edfc (946 lines)
+# before: DESIGN.md sha256 f430633a62b3b8cbfc0bc0123f16468917931885bc97cda7d211a9f33a814d81 (758 lines)
+# before: ../WRITEUP/P1/p1.tex sha256 902fa492813d04aa85ca7b6cc8851c3165701a6b754e0a298b90d4aa39a919c7 (1213 lines)
+# before: ../WRITEUP/P1/README.md sha256 f9111c1716c215160ea66461007d6a08191365b7cd6b3b5fe50af845b982c1f5 (607 lines)
+# before: ../WRITEUP/note/k8_soundness.tex sha256 a01e82b5c1b82ce8178fbed047b07e980db86e1598471bff508f97dcc94199e6 (970 lines)
+# before: ../WRITEUP/P1/k8_soundness_p1.tex sha256 aeb20ffe08d476a83c775558bc195925cd528f4237616af6f64427f2e5d3cb02 (1002 lines)
+# before: ../WRITEUP/P1/p1.pdf sha256 b7b9302b4ad7225a4f25e3e0d0075695285392b5f6294fa2aa98150e9b36db9b (4358 lines)
+
+## L5 check: cake_lpr source hashes recomputed read-only from the local clone (git show, no checkout)
+$ cd /path/to/tools/cake_lpr; for f in Makefile basis_ffi.c cake_lpr.S; do git show 033aad53d1733bd4b8ca41cf6f1b5fb5d84f8de2:$f | sha256sum; done
+5e001c7eafc88afc562f05aea80cbc86bad45a3335a0b57024dbe7c53beb5342  Makefile
+bd498883fdc0577d734a771fe8197c5ff571f2abdd769b8dc95d46818db5cbbc  basis_ffi.c
+d20ceae0d8fe973a03a1ba8db623b2594161721ab9091305ae60cd581dcc78f7  cake_lpr.S
+records searched (grep -r over cloud/es7-2026-10-19/results): d20ceae0 only in C6UPPER/replay-2026-11-06/README.md:103 (prefix) and M9 files; 5e001c7e and bd498883 only in ENCBLEAN/logs/m9_resolve_smoke.log, m9_resolve_fix.log and scripts/build_cake_lpr.sh
+
+## build after adding EncB/Compose.lean and its import in EncB.lean (2026-11-06T20:57:45+09:00, Tctl +79.1°C)
+$ systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake build
+✔ [27/29] Built EncB.Compose (538ms)
+✔ [28/29] Built EncB (147ms)
+Build completed successfully (29 jobs).
+exit 0; 0.77 s wall, 403892 KB max RSS (of the scope process)
+exe sha256 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368, mtime 2026-11-06T18:58:34+09:00
+
+## audit (L2: extended RISK list, time gate 5), 2026-11-06T20:57:52+09:00, Tctl +79.1°C, script sha256 17ff23da56db14080b69ff976656b7e1f83b239c751e8feb8990fcfc0f8e4ecc
+$ systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 scripts/audit.sh
+declarations mentioning the (6,8,11) instance (pattern: \b(encB|gen|genCoded|numVars|allCodes|allCodesOf|encode|diagCoded)\s+6\s+8\s+11\b|\bCubesUnsat64\b):
+  EncB/Compose.lean:61 (+11 lines): parseDimacsBytes (cnfText (encode 6 8 11) (cubes64.get ⟨i, h⟩)).toUTF8.data.toList =
+  EncB/Compose.lean:72 (+8 lines): parseDimacs (cnfText (encode 6 8 11) (cubes64.get ⟨i, hi⟩)) = some (nv, G) → ¬DimacsSatisfiable G) :
+  EncB/Compose.lean:80 (+24 lines): parseDimacsBytes (cnfText (encode 6 8 11) (cubes64.get ⟨i, hi⟩)).toUTF8.data.toList = some (nv, G) →
+  EncB/Cover.lean:110 (+4 lines): def CubesUnsat64 : Prop := ∀ c ∈ cubes64, ¬DimacsSatisfiable (cubeCnf (encB 6 8 11) c)
+  EncB/Cover.lean:114 (+4 lines): theorem encB_unsat_of_cubes64 (h : ∀ c ∈ cubes64, ¬DimacsSatisfiable (cubeCnf (encB 6 8 11) c)) :
+  EncB/Cover.lean:118 (+3 lines): theorem encB_unsat_of_cubesUnsat64 (h : CubesUnsat64) : ¬DimacsSatisfiable (encB 6 8 11) :=
+  EncB/Render.lean:794 (+6 lines): parseDimacs (renderCube (numVars 6 8 11) (encB 6 8 11) (bodyR (encB 6 8 11)) c) =
+  EncB/Render.lean:800 (+6 lines): parseDimacs (cnfText (encode 6 8 11) (cubes64.get ⟨i, h⟩)) =
+  EncB/Render.lean:806 (+8 lines): parseDimacs (renderCube (numVars 6 8 11) (encB 6 8 11) (bodyR (encB 6 8 11)) []) =
+  EncB/Render.lean:814 (+7 lines): parseDimacs (renderCube (numVars 6 8 11) (encB 6 8 11) (bodyR (encB 6 8 11)) c) = some (nv, G) →
+  EncB/Render.lean:821 (+12 lines): parseDimacs (renderCube (numVars 6 8 11) (encB 6 8 11) (bodyR (encB 6 8 11)) c) = some (nv, G) →
+  EncB/Render.lean:833 (+9 lines): parseDimacs (cnfText (encode 6 8 11) (cubes64.get ⟨i, hi⟩)) = some (nv, G) → ¬DimacsSatisfiable G) :
+  EncB/Render.lean:842 (+48 lines): parseDimacs (cnfText (encode 6 8 11) (cubes64.get ⟨i, hi⟩)) = some (nv, G) → ¬DimacsSatisfiable G) :
+  EncB/Satisfiable.lean:43 (+9 lines): theorem encB_satisfiable_6811 (M : Model 6 8 11) : DimacsSatisfiable (encB 6 8 11) :=
+time gate: lake build --no-build: up to date
+time gate: EncB/Compose.lean elaborated in 0.6 s (limit 60 s)
+time gate: EncB/Cover.lean elaborated in 0.3 s (limit 60 s)
+time gate: EncB/Render.lean elaborated in 1.8 s (limit 60 s)
+time gate: EncB/Satisfiable.lean elaborated in 0.4 s (limit 60 s)
+sources: EncB.lean EncB/Coded.lean EncB/Compose.lean EncB/Cover.lean EncB/Dimacs.lean EncB/EarlyWarning.lean EncB/Emit.lean EncB/Gen.lean EncB/KernelCheck.lean EncB/KernelCheckB.lean EncB/Model.lean EncB/ModelLemmas.lean EncB/Render.lean EncB/Satisfiable.lean EncB/SortLemmas.lean EncB/SoundAng.lean EncB/SoundChain.lean EncB/SoundOlit.lean EncB/SoundOrbit.lean EncB/SoundRules.lean EncB/SoundWord.lean
+toolchain: leanprover/lean4:v4.24.0
+AUDIT PASS (no sorry/admit/native_decide/implemented_by/extern/unsafe/partial/axiom/opaque/set_option/ofReduceBool in code; Std-only; no decide/rfl/simp/simpa/omega/grind/trivial/Eq.refl/#eval/#reduce in a declaration that mentions the (6,8,11) instance; the files stating (6,8,11) theorems elaborate within 60 s each)
+exit 0
+
+## audit negative tests (2026-11-06T20:58:16+09:00)
+### (a) check 4, static only: scratch copy /sandbox/m9/reviewfix/audit-neg (EncB.lean, EncB/*.lean, lakefile.toml, lean-toolchain, scripts/audit.sh; no .lake) plus EncB/ZZ.lean with 8 declarations on (6,8,11) using trivial, Eq.refl, simpa, grind, eq_self, Nat.decEq, decide_eq_true (zz7 also has rfl; zz8 has decide_eq_true and Eq.refl on a continuation line). ZZ.lean was never compiled.
+$ AUDIT_SKIP_TIMEGATE=1 nice -n 10 /sandbox/m9/reviewfix/audit-neg/scripts/audit.sh
+  KERNEL EVALUATION RISK EncB/ZZ.lean:4 (+1 lines, token "trivial"): theorem zz1 : 0 < (encB 6 8 11).length := by trivial
+  KERNEL EVALUATION RISK EncB/ZZ.lean:5 (+1 lines, token "Eq.refl"): theorem zz2 : numVars 6 8 11 = 78059 := Eq.refl _
+  KERNEL EVALUATION RISK EncB/ZZ.lean:6 (+2 lines, token "simpa"): theorem zz3 : 0 < (encB 6 8 11).length := by
+  KERNEL EVALUATION RISK EncB/ZZ.lean:8 (+2 lines, token "grind"): theorem zz4 : 0 < (encB 6 8 11).length := by
+  KERNEL EVALUATION RISK EncB/ZZ.lean:10 (+1 lines, token "eq_self"): theorem zz5 : (numVars 6 8 11 = 78059) = True := eq_self _
+  KERNEL EVALUATION RISK EncB/ZZ.lean:11 (+1 lines, token "Nat.decEq"): theorem zz6 : Decidable (numVars 6 8 11 = 78059) := Nat.decEq _ _
+  KERNEL EVALUATION RISK EncB/ZZ.lean:12 (+1 lines, token "decide_eq_true"): theorem zz7 : numVars 6 8 11 = 78059 := of_eq_true (decide_eq_true rfl)
+  KERNEL EVALUATION RISK EncB/ZZ.lean:13 (+3 lines, token "decide_eq_true"): theorem zz8 : numVars 6 8 11 = 78059 :=
+time gate: SKIPPED (AUDIT_SKIP_TIMEGATE=1)
+sources: EncB.lean EncB/Coded.lean EncB/Compose.lean EncB/Cover.lean EncB/Dimacs.lean EncB/EarlyWarning.lean EncB/Emit.lean EncB/Gen.lean EncB/KernelCheck.lean EncB/KernelCheckB.lean EncB/Model.lean EncB/ModelLemmas.lean EncB/Render.lean EncB/Satisfiable.lean EncB/SortLemmas.lean EncB/SoundAng.lean EncB/SoundChain.lean EncB/SoundOlit.lean EncB/SoundOrbit.lean EncB/SoundRules.lean EncB/SoundWord.lean EncB/ZZ.lean
+AUDIT FAIL
+exit 1
+### (a') control: the same copy without ZZ.lean
+$ AUDIT_SKIP_TIMEGATE=1 nice -n 10 /sandbox/m9/reviewfix/audit-neg/scripts/audit.sh
+time gate: SKIPPED (AUDIT_SKIP_TIMEGATE=1)
+AUDIT INCOMPLETE (static checks 1-4 pass; time gate 5 skipped)
+exit 3
+### (b) check 5 fires: the real package with the limit lowered to 1 s (Render.lean needs about 1.8 s)
+$ AUDIT_LEAN_TIMEOUT=1 systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 scripts/audit.sh
+time gate: lake build --no-build: up to date
+time gate: EncB/Compose.lean elaborated in 0.6 s (limit 1 s)
+time gate: EncB/Cover.lean elaborated in 0.3 s (limit 1 s)
+time gate: EncB/Render.lean FAILED after 1.0 s (limit 1 s, exit 124, timeout)
+time gate: EncB/Satisfiable.lean elaborated in 0.4 s (limit 1 s)
+AUDIT FAIL
+exit 1
+
+## hash_binding.sh stale-build guard (L1), 2026-11-06T20:59:30+09:00: one comment line appended to EncB/Compose.lean (sha256 before fe9cf37e1c1577127bc33378fc737ab01eb83ce26b0ed7b1667ead3a02511b40), then restored
+$ TMPDIR=/sandbox/m9/reviewfix systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 scripts/hash_binding.sh
+FAIL: exe stale or build missing: lake build --no-build exit 3: - EncB.Compose
+SUMMARY: 0/68 MATCH (not run: the build is not up to date); FAIL
+exit 1
+restored EncB/Compose.lean sha256 fe9cf37e1c1577127bc33378fc737ab01eb83ce26b0ed7b1667ead3a02511b40 (equal to before: yes)
+All targets up-to-date (29 jobs).
+
+## axioms of EncB/Compose.lean (L3, L4), 2026-11-06T21:02:05+09:00; scratch file /sandbox/m9/reviewfix/ComposeAx.lean (sha256 e509fa876dd644b9cc8545bf2f1efd1cc95971d750236f6aedacdf60e6d2923f):
+    import EncB
+    #print axioms EncB.parseDimacsBytes
+    #print axioms EncB.ofNat_toUInt8_ascii
+    #print axioms EncB.cnfText_ascii
+    #print axioms EncB.parseDimacsBytes_cnfText
+    #print axioms EncB.parseDimacsBytes_cube64_get
+    #print axioms EncB.no_model_6811_of_texts
+    #print axioms EncB.no_model_6811_of_bytes
+    #print axioms EncB.encB_unsat_of_texts_get
+    #print axioms EncB.encB_satisfiable_6811
+    #check @EncB.no_model_6811_of_texts
+    #check @EncB.parseDimacsBytes_cube64_get
+$ systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 timeout 120 lake env lean /sandbox/m9/reviewfix/ComposeAx.lean
+'EncB.parseDimacsBytes' does not depend on any axioms
+'EncB.ofNat_toUInt8_ascii' depends on axioms: [propext]
+'EncB.cnfText_ascii' depends on axioms: [propext, Quot.sound]
+'EncB.parseDimacsBytes_cnfText' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.parseDimacsBytes_cube64_get' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.no_model_6811_of_texts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.no_model_6811_of_bytes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.encB_unsat_of_texts_get' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EncB.encB_satisfiable_6811' depends on axioms: [propext, Classical.choice, Quot.sound]
+EncB.no_model_6811_of_texts : (∀ (i : Nat) (hi : i < EncB.cubes64.length) (nv : Nat) (G : List (List Int)),
+    EncB.parseDimacs (EncB.cnfText (EncB.encode 6 8 11) (EncB.cubes64.get ⟨i, hi⟩)) = some (nv, G) →
+      ¬EncB.DimacsSatisfiable G) →
+  ∀ (a : EncB.Model 6 8 11), False
+EncB.parseDimacsBytes_cube64_get : ∀ (i : Nat) (h : i < EncB.cubes64.length),
+  EncB.parseDimacsBytes (EncB.cnfText (EncB.encode 6 8 11) (EncB.cubes64.get ⟨i, h⟩)).toUTF8.data.toList =
+    some (EncB.numVars 6 8 11, EncB.cubeCnf (EncB.encB 6 8 11) (EncB.cubes64.get ⟨i, h⟩))
+exit 0
+## C12b check (2026-11-06T21:02:46+09:00): CaDiCaL solve_s summed from the records: replay results.tsv enc B 32 rows 36873.60 s; noty12 results.tsv 32 rows 35410.60 s (cake_s 2471.40 s); total 72284.20 s
+
+## build_cake_lpr.sh after the L5 header edit (comment lines only), 2026-11-06T21:06:41+09:00, sha256 fb74a08b0b31307b1dcef97a77c64514824faf9c40cdaffb713c123f717c208d
+$ bash -n scripts/build_cake_lpr.sh
+exit 0
+$ scripts/build_cake_lpr.sh            (no argument)
+usage: scripts/build_cake_lpr.sh WORKDIR [REPO]   (WORKDIR must not exist)
+exit 2
+$ scripts/build_cake_lpr.sh /path/to/data/encblean-m9   (an existing directory)
+build_cake_lpr.sh: /path/to/data/encblean-m9 exists; give a new directory
+exit 2
+(not run further: the recipe stays not run, as in M9)
+
+## P1 rebuild (2026-11-06T21:07:12+09:00, Tctl +79.1°C); cwd WRITEUP/P1
+# command (x3): systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 pdflatex -interaction=nonstopmode -halt-on-error p1
+p1 pass 1 exit 0 wall .835874354 s
+p1 pass 2 exit 0 wall .755876392 s
+p1 pass 3 exit 0 wall .833914439 s
+p1.log: errors 0 undefined 0 LaTeX-warnings 0 overfull 1 underfull 5
+Underfull \hbox (badness 1270) in paragraph at lines 283--288
+Overfull \hbox (13.27254pt too wide) in paragraph at lines 133--137
+Underfull \hbox (badness 1953) in paragraph at lines 2--2
+Underfull \hbox (badness 2418) in paragraph at lines 1158--1160
+Underfull \hbox (badness 1281) in paragraph at lines 1182--1184
+Underfull \hbox (badness 1158) in paragraph at lines 1199--1214
+Output written on p1.pdf (36 pages, 853136 bytes).
+labels (p1.aux of the last pass): Theorem 5.24 k8s:thm:sound, Lemma 5.27 k8s:lem:cube, Corollary 5.28 k8s:cor:geom, Table 2 k8s:tab:trust, Section 8 sec:trust, Table 7 tab:rigor (page 36): the same numbers as before
+observation, not changed: Table 7 (tab:rigor, [ht]) is on the last page (36 of 36, after the bibliography); in HEAD's p1.pdf it is on page 28 of 33, and in the scratch build of the ENCBLEAN revision (scratchpad m9/taskd/try/p1.pdf, 20:10) already on page 35 of 35; so the earlier revision deferred it, not this round. A placement [htbp] would let it go on a float page in Section 8; left to the operator
+pdftotext: 'every EncB.Model' (Section 8, first item) no longer breaks inside the name
+p1.aux, p1.out, p1.toc deleted (created by these builds)
+hashes: p1.tex 5a3e0a28896308d37de68fd4c19fc63d352223497393ee64d6f79ec9c5da081b; k8_soundness_p1.tex 846b8a1d9c3897476b039d612336f6c5338c86f1263852ff092f1587c8c22b9a; note/k8_soundness.tex 52b04e633ad2255f1cb0747cb3cf9318f5ca891ca4adcf86d72073286e2c0988; p1.pdf 20a4b3026e69089b3f43f7f403c00c6b2815f51b060d3ad862363777785af6a9 (853136 bytes); p1.log cd01255f7ebba5f4e74693499f7395955ff2b9ddb6d619a7504100140d06ac8b
+## note copies: diff WRITEUP/note/k8_soundness.tex WRITEUP/P1/k8_soundness_p1.tex (2026-11-06T21:07:58+09:00)
+0a1,35
+29c64
+54,55c89
+60,61c94,97
+76c112
+354c390
+873,875c909,910
+910c945
+(0a1,35 is the copy's header; the other 8 hunks are edits 1-9, unchanged; every section changed in this round is identical in both files)
+## note wrapper compile check into the scratchpad (2026-11-06T21:08:23+09:00); cwd WRITEUP/note
+# command (x3): systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 pdflatex -interaction=nonstopmode -halt-on-error -output-directory=<scratchpad>/m9/reviewfix/wrapper k8_soundness_wrapper
+wrapper pass 1 exit 0
+wrapper pass 2 exit 0
+wrapper pass 3 exit 0
+wrapper log: errors 0 undefined 0 LaTeX-warnings 0 overfull 0 underfull 0; Output written on /sandbox/
+git status of WRITEUP/note unchanged by the build: yes
+Pages:           13
+
+## final checks (2026-11-06T21:15:16+09:00, Tctl +79.2°C)
+hash binding: logs/m9_review_fix_hash_binding.log: SUMMARY 68/68 MATCH, 0 FAIL, exit 0, wall 906 s; script 3c527600… (= the current file); exe copy 3d43fa8b… (copy and original unchanged at the end); the 68 (item, hash) pairs equal those of logs/m9_a2fix_hash_binding.log
+$ systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake build
+Build completed successfully (29 jobs).
+exit 0; exe sha256 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368, mtime 2026-11-06T18:58:34+09:00
+$ systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 scripts/audit.sh   (script sha256 83ffabe72c53c43d3ad2f3697b75fb8cd2b7c8f212ef685f8c5e96aeb6b8ac5e)
+time gate: lake build --no-build: up to date
+time gate: EncB/Compose.lean elaborated in 0.5 s (limit 60 s)
+time gate: EncB/Cover.lean elaborated in 0.3 s (limit 60 s)
+time gate: EncB/Render.lean elaborated in 1.8 s (limit 60 s)
+time gate: EncB/Satisfiable.lean elaborated in 0.4 s (limit 60 s)
+AUDIT PASS (no sorry/admit/native_decide/implemented_by/extern/unsafe/partial/axiom/opaque/set_option/ofReduceBool in code; Std-only; no decide/rfl/simp/simpa/omega/grind/trivial/Eq.refl/#eval/#reduce in a declaration that mentions the (6,8,11) instance; the files stating (6,8,11) theorems elaborate within 60 s each)
+exit 0
+
+## after (2026-11-06T21:15:48+09:00)
+# after: EncB.lean sha256 3ed1714e4cf6b8da2dfdab7c78aee8e710f67e4c404c8e6aa45e977e487d43d0 (18 lines)
+# after: EncB/Compose.lean sha256 fe9cf37e1c1577127bc33378fc737ab01eb83ce26b0ed7b1667ead3a02511b40 (104 lines)
+# after: EncB/Render.lean sha256 c8d6aed7e539db2c886230c80f891177de05a487e5041ad6f68f360b6d123e82 (890 lines)
+# after: EncB/Emit.lean sha256 9a2087a4d116adec6793931986969fe01a01e4f520120389a5b2bbcb856f081f (319 lines)
+# after: scripts/audit.sh sha256 83ffabe72c53c43d3ad2f3697b75fb8cd2b7c8f212ef685f8c5e96aeb6b8ac5e (92 lines)
+# after: scripts/hash_binding.sh sha256 3c527600afadf1eaa6487c0325c02b590d056e4ffaa87a07da197de7ee34981e (315 lines)
+# after: scripts/build_cake_lpr.sh sha256 fb74a08b0b31307b1dcef97a77c64514824faf9c40cdaffb713c123f717c208d (91 lines)
+# after: scripts/resolve.sh sha256 22e07b3be34f49f3823bd12e4dfdb02350edacb66dceaace329ab20bd21059e0 (611 lines)
+# after: README.md sha256 ac9c32f92dd9ad18a438441fb8bf82cc95ee08658b2a67dc5b9d7cb39008e3ca (1041 lines)
+# after: DESIGN.md sha256 b8a14ac93b2db17b8b0366d015c24945ef188fe17a10260e981fa814288d1308 (770 lines)
+# after: ../WRITEUP/P1/p1.tex sha256 5a3e0a28896308d37de68fd4c19fc63d352223497393ee64d6f79ec9c5da081b (1221 lines)
+# after: ../WRITEUP/P1/README.md sha256 0fee8ef55f93c7aa4f0e9a915a784e7913009e894fb35c545fc6787a092c100f (654 lines)
+# after: ../WRITEUP/note/k8_soundness.tex sha256 52b04e633ad2255f1cb0747cb3cf9318f5ca891ca4adcf86d72073286e2c0988 (981 lines)
+# after: ../WRITEUP/P1/k8_soundness_p1.tex sha256 846b8a1d9c3897476b039d612336f6c5338c86f1263852ff092f1587c8c22b9a (1016 lines)
+# after: ../WRITEUP/P1/p1.pdf sha256 20a4b3026e69089b3f43f7f403c00c6b2815f51b060d3ad862363777785af6a9 (4330 lines)
+# after: .lake/build/bin/encb_dimacs sha256 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368 (21060 lines)
+# unchanged by this round: EncB/Render.lean, EncB/Emit.lean, scripts/resolve.sh, the exe
+# not done: no git commit/push/stash/checkout/reset; logs/m9_resolve_fix.log not edited (its line 5 is wrong, see README 'M9 review fixes', C5); nothing under /path/to/data written; no systemd unit touched
+# README.md after the DESIGN line-count fix: sha256 10b53f5ab71bb1ffb38c0b5e19fbac5f1cc571fd5215117d705c1567edb90d05 (1041 lines), 2026-11-06T21:15:54+09:00

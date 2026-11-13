@@ -1,0 +1,23 @@
+{'m': 8, 'C': 0, 'n': 128, 'layers': 16, 'orbit_structure': True, 'distinct': True, 'invariant': True, 'zero_orientations': 0, 'intervalB_mismatch': 0, 'intervalB_undecided': 0, 'lexorder_intervalB_bad': 0, 'layers_are_nested_convex_orbits': True, 'radii_decreasing': True, 'max_abs_coeff': 180591192030, 'z8_sqrt2_mismatch': 0}
+sha256 k9_128_best.pts 9ab18e4eb206e7110b62a25b3173fdd68b8bb6c2350671e4e99ee85e79d95aa2
+sha256 k9_128_best.otab 79986f00a8b07c15e9563bc22cdac1513bc5d8c549dbfe64a619cf25ae29c52f
+sha256 k9_128_best.lex 5e1367b7fd2d4eb1b08c84d56d7a276aa0edc31ab6bb8cf3ecf5f2644e6e06af
+EXACT-PREP PASS
+table n=128: 0 antisymmetry/zero violations
+convex  3-gons: DP1 341376  DP2 341376
+convex  4-gons: DP1 7029368  DP2 7029368
+convex  5-gons: DP1 75985968  DP2 75985968
+convex  6-gons: DP1 455460740  DP2 455460740
+convex  7-gons: DP1 1495818064  DP2 1495818064
+convex  8-gons: DP1 2272789868  DP2 2272789868
+convex  9-gons: DP1 1192  DP2 1192
+largest convex subset: DP1 9  DP2 9
+CVX2 FAIL (K=9)
+{'m': 8, 'C': 0, 'n': 128, 'layers': 16, 'orbit_structure': True, 'distinct': True, 'invariant': True, 'zero_orientations': 0, 'intervalB_mismatch': 0, 'intervalB_undecided': 0, 'lexorder_intervalB_bad': 0, 'layers_are_nested_convex_orbits': True, 'radii_decreasing': True, 'max_abs_coeff': 180591192030, 'z8_sqrt2_mismatch': 0}
+sha256 k9_128_best.re.pts 9612a5e17397a14261fb1a399b8589477cedd9b67da8f2b0e96ddd17ea1deeba
+sha256 k9_128_best.re.otab 79986f00a8b07c15e9563bc22cdac1513bc5d8c549dbfe64a619cf25ae29c52f
+sha256 k9_128_best.re.lex 5e1367b7fd2d4eb1b08c84d56d7a276aa0edc31ab6bb8cf3ecf5f2644e6e06af
+EXACT-PREP PASS
+OTAB-RECHECK IDENTICAL
+9ab18e4eb206e7110b62a25b3173fdd68b8bb6c2350671e4e99ee85e79d95aa2  cert/k9_128_best.pts
+79986f00a8b07c15e9563bc22cdac1513bc5d8c549dbfe64a619cf25ae29c52f  cert/k9_128_best.otab

@@ -1,0 +1,21 @@
+drive_es311.py tests, 6 November 2026 (copy of trial/R-L1000-B64 in the session scratchpad, module E311R.C00380)
+1. Re-run of a finished export dir (trial/R-L1000-B64): "to_run": 0, "already_done": 3.
+2. SIGTERM to the driver 9 s into a compile: "signal 15: killed 1 running compiles; nothing recorded for them";
+   no lean process left, no .olean installed, no TSV row. Next start: compiled once, verdict ok (kernel 10.5 s,
+   wall 14.72 s); the start after that ran nothing.
+3. One comment line appended to the chunk source: the driver stops before compiling with
+   "source sha256 cfab48c3... differs from the manifest (dbc7b978...); refusing to run".
+4. One byte appended to the installed .olean: the module is no longer counted as done ("to_run": 1).
+5. Corrupted chunk (trial/BX-L1000-B64, E311BX.C00001): Lean exit 1, error "Tactic `decide` proved that the
+   proposition ... is false" at chk12 (the block holding leaf node 48), sorryAx in the axiom report, no .olean;
+   verdict fail in both runs (logs/es311/reject-E311BX.C00001.log).
+Bug found and fixed during the trial: in --bench mode two concurrent runs of the same module shared one
+temporary .olean name; one row of trial/B-L1000-B256 (E311B.C00711, run 2) is marked fail although Lean exited 0.
+The temporary name now includes the attempt number; that module was compiled once more afterwards.
+6. Final template (E311.Final, as written by the driver into build/es311/full/src/E311/Final.lean) type-checks
+   against two scaffold Root modules (session scratchpad only, never in an export) that state exactly the
+   `theorem root` lines of the full export's E311B/Root.lean and E311R/Root.lean but prove them by `sorry`:
+   lean exit 0; the axiom reports of E311.balanced_excludes_63 and E311.residual_excludes_32 then list sorryAx,
+   which the driver's axiom check rejects. This tests only the template's statements, not the Roots.
+7. Dry run on the full export (build/es311/full): 352 modules to run (349 chunks, 2 Roots, Final), all sources
+   matching their manifests; nothing compiled.

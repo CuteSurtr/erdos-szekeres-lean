@@ -1,0 +1,129 @@
+test_rejects_missing_wrong_malformed_and_duplicate_reports (test_axiom_audit.AxiomAuditTests.test_rejects_missing_wrong_malformed_and_duplicate_reports) ... ok
+test_rejects_nonstandard_axioms (test_axiom_audit.AxiomAuditTests.test_rejects_nonstandard_axioms) ... ok
+test_standard_and_axiom_free_reports (test_axiom_audit.AxiomAuditTests.test_standard_and_axiom_free_reports) ... ok
+test_assignment_validation (test_certificates.CertificateTests.test_assignment_validation) ... ok
+test_saved_integer_witness (test_certificates.CertificateTests.test_saved_integer_witness) ... ok
+test_wrapped_model (test_certificates.CertificateTests.test_wrapped_model) ... ok
+test_balancing_against_independent_dp (test_counting.CountingTests.test_balancing_against_independent_dp) ... ok
+test_profiles_respect_relaxed_constraints (test_counting.CountingTests.test_profiles_respect_relaxed_constraints) ... ok
+test_vandermonde_compression (test_counting.CountingTests.test_vandermonde_compression) ... ok
+test_one_allowance_is_not_counterexample (test_extension_solver.ExtensionSolverTests.test_one_allowance_is_not_counterexample) ... Verified input: 4 points; method=exact DP
+Found 4 convex 3-gons; starting full-plane extension search
+Extension verdict: near_miss; 0 cuts
+ok
+test_zero_allowance (test_extension_solver.ExtensionSolverTests.test_zero_allowance) ... Verified input: 4 points; method=exact DP
+Found 4 convex 3-gons; starting full-plane extension search
+Extension verdict: unsat; 3 cuts
+ok
+test_dynamic_program_against_exhaustive (test_extensions.ExtensionTests.test_dynamic_program_against_exhaustive) ... ok
+test_line_representation (test_extensions.ExtensionTests.test_line_representation) ... ok
+test_near_miss_identification (test_extensions.ExtensionTests.test_near_miss_identification) ... ok
+test_visible_edge_criterion (test_extensions.ExtensionTests.test_visible_edge_criterion) ... ok
+test_against_direct_determinants (test_joint_repair.JointCoefficientTests.test_against_direct_determinants) ... ok
+test_five_points_unsat (test_joint_repair.JointSolverTests.test_five_points_unsat) ... (0, 1, 2, 3, 4): unsat, 17 cuts
+ok
+test_four_points_sat (test_joint_repair.JointSolverTests.test_four_points_sat) ... (0, 1, 2, 3): sat, 1 cuts
+ok
+test_corrupted_fixture_rejected (test_mixed_cap_certificate.MixedCapTests.test_corrupted_fixture_rejected) ... ok
+test_full_replay (test_mixed_cap_certificate.MixedCapTests.test_full_replay) ... ok
+test_interior_certificates_against_hull (test_mixed_cap_certificate.MixedCapTests.test_interior_certificates_against_hull) ... ok
+test_cycle_parser_does_not_read_box_data_or_accept_code (test_omission_geometry.OmissionGeometryTests.test_cycle_parser_does_not_read_box_data_or_accept_code) ... ok
+test_geometry_manifest_rejects_source_tampering_and_gaps (test_omission_geometry.OmissionGeometryTests.test_geometry_manifest_rejects_source_tampering_and_gaps) ... ok
+test_lean_accepts_cycle_and_rejects_corrupted_order (test_omission_geometry.OmissionGeometryTests.test_lean_accepts_cycle_and_rejects_corrupted_order) ... ok
+test_literal_state_order_matches_arithmetic_source (test_omission_geometry.OmissionGeometryTests.test_literal_state_order_matches_arithmetic_source) ... ok
+test_prefixed_export_and_required_occupancy_source (test_omission_geometry.OmissionGeometryTests.test_prefixed_export_and_required_occupancy_source) ... ok
+test_prefixed_occupancy_links_with_unprefixed_tree (test_omission_geometry.OmissionGeometryTests.test_prefixed_occupancy_links_with_unprefixed_tree) ... Catalog: exit=0, audited=True, 4.131 seconds
+Part00000: exit=0, audited=True, 1.809 seconds
+Root: exit=0, audited=True, 1.583 seconds
+Catalog: exit=0, audited=True, 1.628 seconds
+Part00000: exit=0, audited=True, 2.018 seconds
+Root: exit=0, audited=True, 1.584 seconds
+ok
+test_axiom_audit_rejects_missing_and_nonstandard (test_omission_lean_export.OmissionLeanExportTests.test_axiom_audit_rejects_missing_and_nonstandard) ... ok
+test_branches_partition_and_manifest (test_omission_lean_export.OmissionLeanExportTests.test_branches_partition_and_manifest) ... ok
+test_invalid_worker_and_memory_limits_fail_before_access (test_omission_lean_export.OmissionLeanExportTests.test_invalid_worker_and_memory_limits_fail_before_access) ... ok
+test_normalization_discards_satisfied_rows (test_omission_lean_export.OmissionLeanExportTests.test_normalization_discards_satisfied_rows) ... ok
+test_rejects_corrupt_certificate_before_writing (test_omission_lean_export.OmissionLeanExportTests.test_rejects_corrupt_certificate_before_writing) ... ok
+test_subtree_retains_context_and_has_no_global_claim (test_omission_lean_export.OmissionLeanExportTests.test_subtree_retains_context_and_has_no_global_claim) ... ok
+test_corrupted_column_is_rejected_by_lean (test_omission_lean_export.OmissionLeanIntegrationTests.test_corrupted_column_is_rejected_by_lean) ... Catalog: exit=0, audited=True, 1.629 seconds
+Part00000: exit=1, audited=False, 1.95 seconds
+Part00001: exit=0, audited=True, 1.949 seconds
+ok
+test_parallel_selected_parts_resume_into_complete_root (test_omission_lean_export.OmissionLeanIntegrationTests.test_parallel_selected_parts_resume_into_complete_root) ... Catalog: exit=0, audited=True, 1.637 seconds
+Part00001: exit=0, audited=True, 1.958 seconds
+Part00000: exit=0, audited=True, 1.959 seconds
+Catalog: verified resume record
+Part00000: verified resume record
+Part00001: verified resume record
+Root: exit=0, audited=True, 1.585 seconds
+ok
+test_prefixed_trees_link_without_module_collisions (test_omission_lean_export.OmissionLeanIntegrationTests.test_prefixed_trees_link_without_module_collisions) ... Catalog: exit=0, audited=True, 1.639 seconds
+Part00000: exit=0, audited=True, 1.615 seconds
+Part00001: exit=0, audited=True, 1.62 seconds
+Root: exit=0, audited=True, 1.602 seconds
+Catalog: exit=0, audited=True, 1.598 seconds
+Part00000: exit=0, audited=True, 1.625 seconds
+Part00001: exit=0, audited=True, 1.61 seconds
+Root: exit=0, audited=True, 1.584 seconds
+ok
+test_weighted_and_overbudget_trees_compile (test_omission_lean_export.OmissionLeanIntegrationTests.test_weighted_and_overbudget_trees_compile) ... Catalog: exit=0, audited=True, 1.607 seconds
+Part00000: exit=0, audited=True, 1.602 seconds
+Part00001: exit=0, audited=True, 1.613 seconds
+Root: exit=0, audited=True, 1.595 seconds
+Catalog: verified resume record
+Part00000: verified resume record
+Part00001: verified resume record
+Root: verified resume record
+Catalog: exit=0, audited=True, 1.652 seconds
+Part00000: exit=0, audited=True, 1.641 seconds
+Part00001: exit=0, audited=True, 1.692 seconds
+Root: exit=0, audited=True, 1.687 seconds
+Catalog: verified resume record
+Part00000: verified resume record
+Part00001: verified resume record
+Root: verified resume record
+ok
+test_all_assignments_and_budgets (test_omission_opb.OmissionOpbTests.test_all_assignments_and_budgets) ... ok
+test_rejects_invalid_constraints (test_omission_opb.OmissionOpbTests.test_rejects_invalid_constraints) ... ok
+test_kernel_rejects_broken_compression (test_omission_residual_blocks.ResidualBlockTests.test_kernel_rejects_broken_compression) ... ok
+test_literal_parser_rejects_code_and_missing_rows (test_omission_residual_blocks.ResidualBlockTests.test_literal_parser_rejects_code_and_missing_rows) ... ok
+test_manifest_requires_all_23_blocks_and_matching_sources (test_omission_residual_blocks.ResidualBlockTests.test_manifest_requires_all_23_blocks_and_matching_sources) ... ok
+test_cycle_parser_does_not_read_box_data_or_accept_code (test_omission_residual_geometry.OmissionResidualGeometryTests.test_cycle_parser_does_not_read_box_data_or_accept_code) ... ok
+test_geometry_manifest_rejects_source_tampering_and_gaps (test_omission_residual_geometry.OmissionResidualGeometryTests.test_geometry_manifest_rejects_source_tampering_and_gaps) ... ok
+test_lean_accepts_cycle_and_rejects_corrupted_order (test_omission_residual_geometry.OmissionResidualGeometryTests.test_lean_accepts_cycle_and_rejects_corrupted_order) ... ok
+test_literal_state_order_matches_arithmetic_source (test_omission_residual_geometry.OmissionResidualGeometryTests.test_literal_state_order_matches_arithmetic_source) ... ok
+test_exact_counts_and_invalid_rows (test_omission_rows.OmissionRowTests.test_exact_counts_and_invalid_rows) ... ok
+test_cnf_against_all_original_assignments (test_omission_rows.OmissionSolverTests.test_cnf_against_all_original_assignments) ... ok
+test_one_hole_sat (test_omission_rows.OmissionSolverTests.test_one_hole_sat) ... ok
+test_zero_holes_unsat (test_omission_rows.OmissionSolverTests.test_zero_holes_unsat) ... ok
+test_branching_and_resume (test_omission_tree.OmissionTreeSearchTests.test_branching_and_resume) ... {"source": "/var/folders/gp/sfzpwjns7yv_qfny5ktpm3_w0000gn/T/tmpx32rrxrh/source.json", "source_sha256": "4281bf1978389f2f944948ea8ffa0b5b5de0889f68b5b32931227c9f5c557461", "script_sha256": "70e1cf0ecea170079855469325f0e88203bc202f407000209d727bfad250adb9", "scope": "Boolean omission-row relaxation only; not a planar realization or theorem", "states": 3, "rows": 2, "hole_budget_tested": 1, "status": "sat", "solver": "Z3 5.1.0", "seconds_limit": 5, "seed": 0, "seconds": 0.0005360000068321824, "holes": [1], "occupied": 2, "all_rows_exactly_checked": true}
+{"source": "/var/folders/gp/sfzpwjns7yv_qfny5ktpm3_w0000gn/T/tmpqmk2z2r_/source.json", "source_sha256": "4281bf1978389f2f944948ea8ffa0b5b5de0889f68b5b32931227c9f5c557461", "script_sha256": "70e1cf0ecea170079855469325f0e88203bc202f407000209d727bfad250adb9", "scope": "Boolean omission-row relaxation only; not a planar realization or theorem", "states": 3, "rows": 2, "hole_budget_tested": 0, "status": "unsat", "solver": "Z3 5.1.0", "seconds_limit": 5, "seed": 0, "seconds": 0.000256291008554399}
+{"scope": "Exact finite omission-row tree; JSON traversal and geometric transfer are not Lean-certified", "source": "/var/folders/gp/sfzpwjns7yv_qfny5ktpm3_w0000gn/T/tmplqnnls_8/source.json", "source_sha256": "116ea0d06793a35b0bd6cff1947e7200eb56550fb94a80d2fe54d260bfe153bc", "script_sha256": "8d6d763bbe14630080eb5abc891ebddbf283ed11e8d4b3a742abd38a9de4f217", "checker_sha256": "35cb30503c3b1eb8886069cac4cb260351712e80075142fb0a4510c06055a8bb", "seed_tree": null, "seed_tree_sha256": null, "solver": "HiGHS 1.15.1", "hole_budget": 2, "seconds_limit": 5, "node_limit": 1, "seconds": 0.00033166701905429363, "processed_lp_nodes": 1, "new_exact_leaves": 0, "initial": {"nodes": 1, "leaves": 1, "pending": 1, "complete": false, "minimum_margin": null}, "checked": {"nodes": 3, "leaves": 2, "pending": 2, "complete": false, "minimum_margin": null}, "stop_reason": "node_limit", "status": "unknown", "holes": null, "root": 0}
+{"scope": "Exact finite omission-row tree; JSON traversal and geometric transfer are not Lean-certified", "source": "/var/folders/gp/sfzpwjns7yv_qfny5ktpm3_w0000gn/T/tmplqnnls_8/source.json", "source_sha256": "116ea0d06793a35b0bd6cff1947e7200eb56550fb94a80d2fe54d260bfe153bc", "script_sha256": "8d6d763bbe14630080eb5abc891ebddbf283ed11e8d4b3a742abd38a9de4f217", "checker_sha256": "35cb30503c3b1eb8886069cac4cb260351712e80075142fb0a4510c06055a8bb", "seed_tree": "/var/folders/gp/sfzpwjns7yv_qfny5ktpm3_w0000gn/T/tmplqnnls_8/first.json", "seed_tree_sha256": "d3b8d6c36a4e8cd127c763b934936061d06dad9ce4cad1f42ea69adb647a8df8", "solver": "HiGHS 1.15.1", "hole_budget": 2, "seconds_limit": 5, "node_limit": 20000, "seconds": 0.00024433399084955454, "processed_lp_nodes": 2, "new_exact_leaves": 2, "initial": {"nodes": 3, "leaves": 2, "pending": 2, "complete": false, "minimum_margin": null}, "checked": {"nodes": 3, "leaves": 2, "pending": 0, "complete": true, "minimum_margin": 500000}, "stop_reason": "complete", "status": "unsat", "holes": null, "root": 0}
+{"scope": "Exact finite omission-row tree; JSON traversal and geometric transfer are not Lean-certified", "source": "/var/folders/gp/sfzpwjns7yv_qfny5ktpm3_w0000gn/T/tmplqnnls_8/source.json", "source_sha256": "116ea0d06793a35b0bd6cff1947e7200eb56550fb94a80d2fe54d260bfe153bc", "script_sha256": "8d6d763bbe14630080eb5abc891ebddbf283ed11e8d4b3a742abd38a9de4f217", "checker_sha256": "35cb30503c3b1eb8886069cac4cb260351712e80075142fb0a4510c06055a8bb", "seed_tree": null, "seed_tree_sha256": null, "solver": "HiGHS 1.15.1", "hole_budget": 3, "seconds_limit": 5, "node_limit": 20000, "seconds": 0.00022012495901435614, "processed_lp_nodes": 3, "new_exact_leaves": 0, "initial": {"nodes": 1, "leaves": 1, "pending": 1, "complete": false, "minimum_margin": null}, "checked": {"nodes": 5, "leaves": 3, "pending": 3, "complete": false, "minimum_margin": null}, "stop_reason": "exact_row_assignment", "status": "sat", "holes": [0, 1, 3], "root": 0}
+ok
+test_compaction_preserves_a_strict_certificate (test_omission_tree.OmissionTreeTests.test_compaction_preserves_a_strict_certificate) ... ok
+test_every_small_leaf_against_assignments (test_omission_tree.OmissionTreeTests.test_every_small_leaf_against_assignments) ... ok
+test_tree_coverage_and_corruptions (test_omission_tree.OmissionTreeTests.test_tree_coverage_and_corruptions) ... ok
+test_polynomial_signs_against_direct_geometry (test_planar_repair.PlanarPolynomialTests.test_polynomial_signs_against_direct_geometry) ... ok
+test_algebraic_model_preserves_orientation (test_planar_repair.PlanarSolverTests.test_algebraic_model_preserves_orientation) ... ok
+test_cut_transfer_between_searches (test_planar_repair.PlanarSolverTests.test_cut_transfer_between_searches) ... (1, 2): sat, 2 cuts
+ok
+test_five_points_unsat (test_planar_repair.PlanarSolverTests.test_five_points_unsat) ... (3, 4): 10 rounds, 15 convex-cycle cuts
+(3, 4): unsat, 24 cuts
+ok
+test_four_points_sat (test_planar_repair.PlanarSolverTests.test_four_points_sat) ... (1, 2): sat, 1 cuts
+ok
+test_invalid_resume_cycle_rejected (test_planar_repair.PlanarSolverTests.test_invalid_resume_cycle_rejected) ... ok
+test_ranks_by_exhaustive_chains (test_prefix_states.PrefixStateTests.test_ranks_by_exhaustive_chains) ... ok
+test_cups_caps_against_exhaustive (test_region_blowup.RegionBlowupTests.test_cups_caps_against_exhaustive) ... ok
+test_product_and_convexity_obstruction (test_region_blowup.RegionBlowupTests.test_product_and_convexity_obstruction) ... ok
+test_against_triangle_criterion (test_search.GeometryTests.test_against_triangle_criterion) ... ok
+test_degeneracies (test_search.GeometryTests.test_degeneracies) ... ok
+test_grid_search (test_search.GeometryTests.test_grid_search) ... ok
+test_known_shapes (test_search.GeometryTests.test_known_shapes) ... ok
+
+----------------------------------------------------------------------
+Ran 67 tests in 65.263s
+
+OK

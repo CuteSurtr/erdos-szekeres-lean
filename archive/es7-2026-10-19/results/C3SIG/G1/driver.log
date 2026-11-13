@@ -1,0 +1,51 @@
+=== 0s0-1s1_3s1-4s0 K=3 start 04:41:09 deadline 05:01:55
+{"node": "0s0-1s1_3s1-4s0", "cube": {"2": 0, "5": 0, "6": 0}, "status": "UNSATISFIABLE", "solve_s": 149.0, "certified": true}
+{"node": "0s0-1s1_3s1-4s0", "cube": {"2": 0, "5": 0, "6": 1}, "status": "UNSATISFIABLE", "solve_s": 199.7, "certified": true}
+{"node": "0s0-1s1_3s1-4s0", "cube": {"2": 0, "5": 1, "6": 0}, "status": "UNSATISFIABLE", "solve_s": 145.0, "certified": true}
+{"node": "0s0-1s1_3s1-4s0", "cube": {"2": 0, "5": 1, "6": 1}, "status": "UNSATISFIABLE", "solve_s": 132.4, "certified": true}
+{"node": "0s0-1s1_3s1-4s0", "cube": {"2": 1, "5": 0, "6": 0}, "status": "UNSATISFIABLE", "solve_s": 119.0, "certified": true}
+{"node": "0s0-1s1_3s1-4s0", "cube": {"2": 1, "5": 0, "6": 1}, "status": "UNSATISFIABLE", "solve_s": 175.7, "certified": true}
+{"node": "0s0-1s1_3s1-4s0", "cube": {"2": 1, "5": 1, "6": 0}, "status": "UNSATISFIABLE", "solve_s": 164.8, "certified": true}
+{"node": "0s0-1s1_3s1-4s0", "cube": {"2": 1, "5": 1, "6": 1}, "status": "UNSATISFIABLE", "solve_s": 210.3, "certified": true}
+=== 0s0-1s1_3s1-4s0 K=3 end 04:51:39
+=== 0s0-1s1_3s0-4s1 K=3 start 04:51:39 deadline 05:14:59
+{"node": "0s0-1s1_3s0-4s1", "cube": {"2": 0, "5": 0, "6": 0}, "status": "UNSATISFIABLE", "solve_s": 185.2, "certified": true}
+{"node": "0s0-1s1_3s0-4s1", "cube": {"2": 0, "5": 0, "6": 1}, "status": "UNSATISFIABLE", "solve_s": 153.5, "certified": true}
+{"node": "0s0-1s1_3s0-4s1", "cube": {"2": 0, "5": 1, "6": 0}, "status": "UNSATISFIABLE", "solve_s": 159.8, "certified": true}
+{"node": "0s0-1s1_3s0-4s1", "cube": {"2": 0, "5": 1, "6": 1}, "status": "UNSATISFIABLE", "solve_s": 130.0, "certified": true}
+{"node": "0s0-1s1_3s0-4s1", "cube": {"2": 1, "5": 0, "6": 0}, "status": "UNSATISFIABLE", "solve_s": 132.5, "certified": true}
+{"node": "0s0-1s1_3s0-4s1", "cube": {"2": 1, "5": 0, "6": 1}, "status": "UNSATISFIABLE", "solve_s": 182.6, "certified": true}
+{"node": "0s0-1s1_3s0-4s1", "cube": {"2": 1, "5": 1, "6": 0}, "status": "UNSATISFIABLE", "solve_s": 146.6, "certified": true}
+{"node": "0s0-1s1_3s0-4s1", "cube": {"2": 1, "5": 1, "6": 1}, "status": "UNSATISFIABLE", "solve_s": 196.2, "certified": true}
+=== 0s0-1s1_3s0-4s1 K=3 end 05:02:10
+=== 0s0-1s1_7s1-9s0 K=3 start 05:02:10 deadline 05:29:46
+{"node": "0s0-1s1_7s1-9s0", "cube": {"2": 0, "3": 0, "4": 0}, "status": "UNSATISFIABLE", "solve_s": 86.5, "certified": true}
+{"node": "0s0-1s1_7s1-9s0", "cube": {"2": 0, "3": 0, "4": 1}, "status": "UNSATISFIABLE", "solve_s": 119.9, "certified": true}
+{"node": "0s0-1s1_7s1-9s0", "cube": {"2": 0, "3": 1, "4": 0}, "status": "UNSATISFIABLE", "solve_s": 104.7, "certified": true}
+{"node": "0s0-1s1_7s1-9s0", "cube": {"2": 0, "3": 1, "4": 1}, "status": "UNSATISFIABLE", "solve_s": 165.9, "certified": true}
+{"node": "0s0-1s1_7s1-9s0", "cube": {"2": 1, "3": 0, "4": 0}, "status": "UNSATISFIABLE", "solve_s": 129.8, "certified": true}
+{"node": "0s0-1s1_7s1-9s0", "cube": {"2": 1, "3": 0, "4": 1}, "status": "UNSATISFIABLE", "solve_s": 164.4, "certified": true}
+{"node": "0s0-1s1_7s1-9s0", "cube": {"2": 1, "3": 1, "4": 0}, "status": "UNSATISFIABLE", "solve_s": 141.8, "certified": true}
+{"node": "0s0-1s1_7s1-9s0", "cube": {"2": 1, "3": 1, "4": 1}, "status": "UNSATISFIABLE", "solve_s": 165.5, "certified": true}
+=== 0s0-1s1_7s1-9s0 K=3 end 05:11:25
+=== 0s0-1s1_5s0-7s1 K=3 start 05:11:25 deadline 05:48:12
+{"node": "0s0-1s1_5s0-7s1", "cube": {"2": 0, "3": 0, "4": 0}, "status": "UNSATISFIABLE", "solve_s": 130.2, "certified": true}
+{"node": "0s0-1s1_5s0-7s1", "cube": {"2": 0, "3": 0, "4": 1}, "status": "UNSATISFIABLE", "solve_s": 211.2, "certified": true}
+{"node": "0s0-1s1_5s0-7s1", "cube": {"2": 0, "3": 1, "4": 0}, "status": "UNSATISFIABLE", "solve_s": 204.6, "certified": true}
+{"node": "0s0-1s1_5s0-7s1", "cube": {"2": 0, "3": 1, "4": 1}, "status": "UNSATISFIABLE", "solve_s": 177.0, "certified": true}
+{"node": "0s0-1s1_5s0-7s1", "cube": {"2": 1, "3": 0, "4": 0}, "status": "UNSATISFIABLE", "solve_s": 168.1, "certified": true}
+{"node": "0s0-1s1_5s0-7s1", "cube": {"2": 1, "3": 0, "4": 1}, "status": "UNSATISFIABLE", "solve_s": 156.7, "certified": true}
+{"node": "0s0-1s1_5s0-7s1", "cube": {"2": 1, "3": 1, "4": 0}, "status": "UNSATISFIABLE", "solve_s": 183.8, "certified": true}
+{"node": "0s0-1s1_5s0-7s1", "cube": {"2": 1, "3": 1, "4": 1}, "status": "UNSATISFIABLE", "solve_s": 114.9, "certified": true}
+=== 0s0-1s1_5s0-7s1 K=3 end 05:22:11
+=== 0s0-1s1_5s1-7s0 K=3 start 05:22:11 deadline 06:25:00
+{"node": "0s0-1s1_5s1-7s0", "cube": {"2": 0, "3": 0, "4": 0}, "status": "UNSATISFIABLE", "solve_s": 126.6, "certified": true}
+{"node": "0s0-1s1_5s1-7s0", "cube": {"2": 0, "3": 0, "4": 1}, "status": "UNSATISFIABLE", "solve_s": 135.7, "certified": true}
+{"node": "0s0-1s1_5s1-7s0", "cube": {"2": 0, "3": 1, "4": 0}, "status": "UNSATISFIABLE", "solve_s": 135.0, "certified": true}
+{"node": "0s0-1s1_5s1-7s0", "cube": {"2": 0, "3": 1, "4": 1}, "status": "UNSATISFIABLE", "solve_s": 251.3, "certified": true}
+{"node": "0s0-1s1_5s1-7s0", "cube": {"2": 1, "3": 0, "4": 0}, "status": "UNSATISFIABLE", "solve_s": 119.2, "certified": true}
+{"node": "0s0-1s1_5s1-7s0", "cube": {"2": 1, "3": 0, "4": 1}, "status": "UNSATISFIABLE", "solve_s": 222.4, "certified": true}
+{"node": "0s0-1s1_5s1-7s0", "cube": {"2": 1, "3": 1, "4": 0}, "status": "UNSATISFIABLE", "solve_s": 186.5, "certified": true}
+{"node": "0s0-1s1_5s1-7s0", "cube": {"2": 1, "3": 1, "4": 1}, "status": "UNSATISFIABLE", "solve_s": 166.6, "certified": true}
+=== 0s0-1s1_5s1-7s0 K=3 end 05:33:17
+=== RUNNER DONE 05:33:17

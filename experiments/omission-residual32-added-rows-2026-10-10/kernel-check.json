@@ -1,0 +1,70 @@
+{
+  "scope": "Literal geometric validity of the ordered129 additions only; no global32-hole exclusion or improved planar bound.",
+  "complete": true,
+  "lean": "Lean (version 4.24.0, arm64-apple-darwin23.6.0, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)",
+  "manifest_sha256": "7cf54b7aa434865df42cb83e4251a2085be78954c8e1d8733dd038deced37689",
+  "checker_sha256": "17ba9f7e466271abf91ef9bfc71fa0ccd9decbe258a2692693a2546397c81778",
+  "validated_identities": {
+    "experiments/omission-residual32-2598-primal-2026-10-10/source-2598.json.gz": "02507ea568e78813d74620b7bc354bc64c921cfd6f5fd5dc40391425884c0f65",
+    "experiments/omission-residual32-research-2026-10-10/source.json.gz": "138a9fd6e3c773437411e9cca487153a221928e6d5d85d09b8d73e4919f5e8c3",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/manifest.json": "5ff4ff8dd6d51eb8a6d7f45495878994a50abeea12a2f6f1431a0cafd42f3585",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/row-bindings.json": "dbb78c914bcce4e5dcc7bf083eec96568f65e82c6f2176b25c558c4f86a7563a",
+    "experiments/omission-residual32-witness-coupled-2026-10-10/core13.json": "364bb7ec0bcdef8673b9d40656f1a4d53349b66d5144e497ccec1deb53df22ba",
+    "experiments/omission-residual32-witness-coupled-2026-10-10/core13.cnf": "65131b14dc05fd25216339a714b0a5e531371b55d5b40cb4055572e34e28dc9f",
+    "experiments/omission-residual32-witness-coupled-2026-10-10/core13.lrat": "33a3b20f5230cb5aeb065ee463ba4751afbf0af555191a7e90d6a1ff3e734f19",
+    "experiments/omission-residual32-witness-coupled-2026-10-10/LeanCore.lean": "d77d900f228f2f91e71f39b1af303c59c765c5eefaa978b8aa8bc45050168133",
+    "experiments/omission-residual32-witness-coupled-2026-10-10/Geometry.lean": "9b47934dc5e8ab8ad85a7697f03e32f1c3eb3c130e397c04f211734107bc27a3",
+    "experiments/omission-residual32-case4-2026-10-10/Witness.lean": "d08045fbc41158704a4a50ab7ea0c61a5a6b99cf629766c5ecb1e74dc2bea518",
+    "experiments/omission-residual32-context-certificates-2026-10-10/Residual32ContextsProof/Catalog.lean": "053f35ea49b7ec2b95818e96ab18bcd7628c09190d0e97bfc1552f3937b606bd",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Data.lean": "2f123817e11626fc8184334a3e8c52cac4ee4e9c27fe7c08fb3e178c43458093",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part00.lean": "08c9ed535f13d9ab62af7dd71eef124d446407478422a2003a60df6b44c8c309",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part01.lean": "b74dccc5619d60b9a2f6cd0f180aea20fc68f71b834b56f8d84b7869213704d1",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part02.lean": "77c2563bd2ef9cefa2246c83dfffa3fa207877d4c68e0a371afa3afe690f21da",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part03.lean": "f94945db6262a0d26355b0497e315b4e0addc546c0dcd0d948c82c20f9c54045",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part04.lean": "0f0b833f757803372923781dd7b113c4c824b0cd3dd5da0a3502e286561f323c",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part05.lean": "ae279c587c29eccdec1555118e3f5cc2324031605176695a60c8de21ce4e8d52",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part06.lean": "921850417f665a8a2b5b0a4ea54b63215a894bd25f70eb965ceda6a7052be8ab",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part07.lean": "2579691f46928121b67a2aaea58fb75b5f1f4b010b70964ea26eba8451959c38",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Root.lean": "734435b2469547dabc1c5c446d8a46446ef9eb5e1515d52414a97a286485a8a0",
+    "experiments/omission-residual32-added-rows-2026-10-10/AddedRows.lean": "8ccbbbc7e177dacb8808d74acd92185ed34ba6d156f62e1f8d4d2839e31b22a0",
+    "experiments/omission-residual32-added-rows-2026-10-10/generate.py": "f0451a91c5073a495f5e6cd1de4e7b9e739d78de7fcf05aa0ffcf803963cc2ee"
+  },
+  "imported_checked_objects": {
+    ".cache/residual32-context-certificates-2026-10-10/Residual32ContextsProof/Catalog.olean": "710097ed4b1c00033aec31c1d9138d0fcbe08e6ccfabfd8c0e7f2cec26acf664",
+    "experiments/omission-residual32-context-certificates-2026-10-10/kernel-check.json": "97e0ee37ccb03e6d89466831b5cfbdc2c222738c9a90acc5f442c45ddd4b97c4",
+    ".cache/residual32-case4-2026-10-10/Witness.olean": "55eb933c88c1824264b5c5f7324907022a7fe96851793461aca33bebceaca15c",
+    "experiments/omission-residual32-case4-2026-10-10/kernel-check.json": "792389cc3302820d71cc065aed45239b76c0a62a4aeb43ae65e4b316366632f6",
+    ".cache/residual32-witness-coupled-2026-10-10/LeanCore.olean": "97144c2bda20b3086f3f9d446df386fd850eb0c148005571a94696e46699ec50",
+    ".cache/residual32-witness-coupled-2026-10-10/Geometry.olean": "b74d044ccf250ca7685501208505a86163bdf1ac75d1c002d2002d5daebf00dd",
+    "experiments/omission-residual32-witness-coupled-2026-10-10/kernel-check.json": "9893a340c4ee42357560408b46d760bd71a800883452bb3c2fa671684da7cd74",
+    ".cache/residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Data.olean": "c992cbb38b64b0e012b9b4664719643a838741819757e06c6bcfa77efa6c7a0a",
+    ".cache/residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part00.olean": "32ee03ae6b471f4666f444e807c6507768c18667b0f56c477847362d71c0f28c",
+    ".cache/residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part01.olean": "12db7e0def12cb2780da5a1c5f69f6c39eac974aec0f2cad51ac32a431edf0e3",
+    ".cache/residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part02.olean": "b527988c9691906882d8e6768aa2c7f4695be98ee22a51d0e5d7e017e35a4ea2",
+    ".cache/residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part03.olean": "1bb89c7f40212b6dee7e13012bc9610843b55d42b9912ea30990010412208b36",
+    ".cache/residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part04.olean": "4b5fe7c5595572c8dfb3a8887a3c4549ace280803050ce939753e7330804d825",
+    ".cache/residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part05.olean": "3dd6d60d254b62a3bfcfc0ccb248580097f31e2ac734839ffa50b6a982e0dd25",
+    ".cache/residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part06.olean": "421200a73bb21636e504203e1c009b5109b6c8fc0dced88cc17070bad1807614",
+    ".cache/residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Part07.olean": "1d4b5f80a2fbe09cbdebf81f3759e308167f2e177610f569518154ab6c5de41e",
+    ".cache/residual32-fourth-global-variants-2026-10-10/FourthGlobalProof/Root.olean": "fe7ca44fec7912eae140909b5080164219ce33d9b7e897622711f7731ed64345",
+    "experiments/omission-residual32-fourth-global-variants-2026-10-10/kernel-check.json": "7416f0e4b2de2c0a63d46cee0923dfe5f1ae8e578f872c3aedc506e358358a99"
+  },
+  "source_sha256": "8ccbbbc7e177dacb8808d74acd92185ed34ba6d156f62e1f8d4d2839e31b22a0",
+  "exit": 0,
+  "seconds": 13.979,
+  "log_sha256": "606bc605fa1f06d3e6f548ecc06e0c45204289197e3816a5dd70f2baf517b490",
+  "axioms": {
+    "ErdosSzekeres.Omission.Residual32AddedRows.literal_binding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "ErdosSzekeres.Omission.Residual32AddedRows.all_rows": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "olean_sha256": "4a390029ec513487a720f003ef4ac103a6e4cb67c49021edfef01ab458aea04e",
+  "axioms_sha256": "606bc605fa1f06d3e6f548ecc06e0c45204289197e3816a5dd70f2baf517b490"
+}

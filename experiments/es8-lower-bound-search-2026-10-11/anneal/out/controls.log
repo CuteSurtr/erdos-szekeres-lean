@@ -1,0 +1,65 @@
+== C16: N=16 K=6 random starts
+anneal K=6 N=16 mu=0.000 seed=1 iters=300000 best=0 accepted=28057 gprej=963 cpu=0.5s
+anneal K=6 N=16 mu=0.000 seed=2 iters=300000 best=0 accepted=33282 gprej=1073 cpu=0.6s
+anneal K=6 N=16 mu=0.000 seed=3 iters=300000 best=0 accepted=21118 gprej=773 cpu=0.4s
+anneal K=6 N=16 mu=0.000 seed=4 iters=300000 best=0 accepted=25467 gprej=914 cpu=0.4s
+anneal K=6 N=16 mu=0.000 seed=5 iters=300000 best=0 accepted=18939 gprej=707 cpu=0.3s
+anneal K=6 N=16 mu=0.000 seed=6 iters=300000 best=0 accepted=12060 gprej=344 cpu=0.2s
+anneal K=6 N=16 mu=0.000 seed=7 iters=300000 best=0 accepted=29858 gprej=955 cpu=0.5s
+anneal K=6 N=16 mu=0.000 seed=8 iters=300000 best=0 accepted=10309 gprej=295 cpu=0.2s
+anneal K=6 N=16 mu=0.000 seed=9 iters=300000 best=0 accepted=18358 gprej=673 cpu=0.3s
+anneal K=6 N=16 mu=0.000 seed=10 iters=300000 best=0 accepted=16389 gprej=522 cpu=0.3s
+anneal K=6 N=16 mu=0.000 seed=11 iters=300000 best=0 accepted=16866 gprej=529 cpu=0.3s
+anneal K=6 N=16 mu=0.000 seed=12 iters=300000 best=0 accepted=16670 gprej=590 cpu=0.3s
+anneal K=6 N=16 mu=0.000 seed=13 iters=300000 best=0 accepted=6752 gprej=230 cpu=0.1s
+anneal K=6 N=16 mu=0.000 seed=14 iters=300000 best=0 accepted=28003 gprej=878 cpu=0.5s
+anneal K=6 N=16 mu=0.000 seed=15 iters=300000 best=0 accepted=15433 gprej=534 cpu=0.3s
+anneal K=6 N=16 mu=0.000 seed=16 iters=300000 best=0 accepted=14054 gprej=424 cpu=0.2s
+anneal K=6 N=16 mu=0.000 seed=17 iters=300000 best=0 accepted=27500 gprej=945 cpu=0.5s
+anneal K=6 N=16 mu=0.000 seed=18 iters=300000 best=0 accepted=16146 gprej=571 cpu=0.3s
+anneal K=6 N=16 mu=0.000 seed=19 iters=300000 best=0 accepted=26824 gprej=1063 cpu=0.5s
+anneal K=6 N=16 mu=0.000 seed=20 iters=300000 best=0 accepted=7476 gprej=249 cpu=0.1s
+== C17: N=17 K=6 random starts
+anneal K=6 N=17 mu=0.000 seed=1 iters=300000 best=1 accepted=144438 gprej=12839 cpu=4.2s
+anneal K=6 N=17 mu=0.000 seed=2 iters=300000 best=1 accepted=144969 gprej=11007 cpu=4.3s
+anneal K=6 N=17 mu=0.000 seed=3 iters=300000 best=1 accepted=142545 gprej=13458 cpu=4.2s
+anneal K=6 N=17 mu=0.000 seed=4 iters=300000 best=1 accepted=142618 gprej=13303 cpu=4.2s
+anneal K=6 N=17 mu=0.000 seed=5 iters=300000 best=1 accepted=141013 gprej=12660 cpu=4.2s
+anneal K=6 N=17 mu=0.000 seed=6 iters=300000 best=1 accepted=144258 gprej=10191 cpu=4.2s
+anneal K=6 N=17 mu=0.000 seed=7 iters=300000 best=1 accepted=143387 gprej=11225 cpu=4.2s
+anneal K=6 N=17 mu=0.000 seed=8 iters=300000 best=1 accepted=141947 gprej=13864 cpu=4.1s
+anneal K=6 N=17 mu=0.000 seed=9 iters=300000 best=1 accepted=143413 gprej=9421 cpu=4.3s
+anneal K=6 N=17 mu=0.000 seed=10 iters=300000 best=1 accepted=145034 gprej=11530 cpu=4.2s
+anneal K=6 N=17 mu=0.000 seed=11 iters=300000 best=1 accepted=146313 gprej=11465 cpu=4.3s
+anneal K=6 N=17 mu=0.000 seed=12 iters=300000 best=1 accepted=144939 gprej=9729 cpu=4.3s
+anneal K=6 N=17 mu=0.000 seed=13 iters=300000 best=1 accepted=145774 gprej=10889 cpu=4.3s
+anneal K=6 N=17 mu=0.000 seed=14 iters=300000 best=1 accepted=145809 gprej=10349 cpu=4.2s
+anneal K=6 N=17 mu=0.000 seed=15 iters=300000 best=1 accepted=143731 gprej=11091 cpu=4.2s
+anneal K=6 N=17 mu=0.000 seed=16 iters=300000 best=1 accepted=142776 gprej=11194 cpu=4.3s
+anneal K=6 N=17 mu=0.000 seed=17 iters=300000 best=1 accepted=144625 gprej=11860 cpu=4.2s
+anneal K=6 N=17 mu=0.000 seed=18 iters=300000 best=1 accepted=142721 gprej=12592 cpu=4.3s
+anneal K=6 N=17 mu=0.000 seed=19 iters=300000 best=1 accepted=146471 gprej=12544 cpu=4.3s
+anneal K=6 N=17 mu=0.000 seed=20 iters=300000 best=1 accepted=143505 gprej=9745 cpu=4.3s
+== C17w: N=17 K=6 from witness(6)+1 point
+anneal K=6 N=17 mu=0.000 seed=1 iters=300000 best=1 accepted=128208 gprej=9916 cpu=4.2s
+anneal K=6 N=17 mu=0.000 seed=2 iters=300000 best=1 accepted=123735 gprej=11679 cpu=4.1s
+anneal K=6 N=17 mu=0.000 seed=3 iters=300000 best=1 accepted=127391 gprej=11500 cpu=4.2s
+anneal K=6 N=17 mu=0.000 seed=4 iters=300000 best=1 accepted=123236 gprej=9266 cpu=4.3s
+anneal K=6 N=17 mu=0.000 seed=5 iters=300000 best=1 accepted=129135 gprej=9523 cpu=4.3s
+anneal K=6 N=17 mu=0.000 seed=6 iters=300000 best=1 accepted=126974 gprej=9093 cpu=4.3s
+anneal K=6 N=17 mu=0.000 seed=7 iters=300000 best=1 accepted=121948 gprej=12286 cpu=4.3s
+anneal K=6 N=17 mu=0.000 seed=8 iters=300000 best=1 accepted=120663 gprej=9449 cpu=4.4s
+anneal K=6 N=17 mu=0.000 seed=9 iters=300000 best=1 accepted=125358 gprej=11415 cpu=4.2s
+anneal K=6 N=17 mu=0.000 seed=10 iters=300000 best=1 accepted=126572 gprej=10894 cpu=4.3s
+== C32: N=32 K=7 random starts
+anneal K=7 N=32 mu=0.000 seed=1 iters=600000 best=0 accepted=155139 gprej=7142 cpu=25.6s
+anneal K=7 N=32 mu=0.000 seed=2 iters=600000 best=0 accepted=160083 gprej=6986 cpu=26.9s
+anneal K=7 N=32 mu=0.000 seed=3 iters=600000 best=0 accepted=169251 gprej=7958 cpu=29.5s
+anneal K=7 N=32 mu=0.000 seed=4 iters=600000 best=0 accepted=144269 gprej=6259 cpu=23.9s
+anneal K=7 N=32 mu=0.000 seed=5 iters=600000 best=0 accepted=223112 gprej=13694 cpu=48.6s
+anneal K=7 N=32 mu=0.000 seed=6 iters=600000 best=0 accepted=152109 gprej=6739 cpu=25.3s
+== C33: N=33 K=7 random starts
+anneal K=7 N=33 mu=0.000 seed=1 iters=600000 best=1 accepted=312898 gprej=22795 cpu=84.2s
+anneal K=7 N=33 mu=0.000 seed=2 iters=600000 best=1 accepted=299579 gprej=19689 cpu=85.0s
+anneal K=7 N=33 mu=0.000 seed=3 iters=600000 best=1 accepted=300854 gprej=22805 cpu=83.8s
+== DONE

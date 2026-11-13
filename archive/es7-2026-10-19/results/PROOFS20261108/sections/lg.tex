@@ -1,0 +1,966 @@
+\section{Geometry of the layers: nesting, chains and polar rules}\label{lg:sec}
+
+This section proves the geometric facts about the convex layers of a rotation-invariant finite point set that the
+layered encoders rely on, together with the elementary identities behind them. In the statements about the layers
+(Lemmas~\ref{lg:lem:layer} and~\ref{lg:lem:halfplane}, Theorems~\ref{lg:thm:nesting}, \ref{lg:thm:radius}
+and~\ref{lg:thm:chain}) and in Lemma~\ref{lg:lem:centre}, $S$ is a finite set of points that is mapped into itself by
+the counterclockwise rotation $\rho$ by $2\pi/m$ ($m\ge1$) about a point $c$; in all of them except
+Lemma~\ref{lg:lem:centre}, also $c\notin S$ and $S$ has no $K$ points in convex position for some $K\le 2m$.
+Theorem~\ref{lg:thm:fan}, the only other statement with a set $S$, involves no centre and no rotation. The section
+contains:
+\begin{itemize}
+\item \emph{rotations and regular polygons} (\S\ref{lg:ssec:rot}): iterates of a rotation, the orientation of three
+  vertices of a regular polygon (Lemmas~\ref{lg:lem:orient-rot}, \ref{lg:lem:trig}, \ref{lg:lem:regular},
+  \ref{lg:lem:next-prev}) and the position of the vertices relative to the tangent at a vertex
+  (Lemmas~\ref{lg:lem:lin-rot}, \ref{lg:lem:lin-orbit});
+\item \emph{convexity} of the sets $\{q:0\le\orient(a,b,q)\}$ (closed half-planes when $a\ne b$) and of closed disks
+  (\S\ref{lg:ssec:convex});
+\item \emph{nesting, centre and radii} (\S\ref{lg:ssec:nest}): if $m\ge2$ and $S$ is in general position, every point
+  of a later layer lies strictly to the left of every edge $x\to\rho(x)$ of an earlier layer
+  (Theorem~\ref{lg:thm:nesting}); if $m\ge2$ is even and $S$ is in general position and has a point other than $c$,
+  then $c\notin S$ (Lemma~\ref{lg:lem:centre}); the points of a layer and of all later layers are no farther from $c$
+  than the vertices of that layer (Theorem~\ref{lg:thm:radius});
+\item \emph{fans and chains} (\S\ref{lg:ssec:chain}): a pivot followed by $n\ge3$ chain points with positive fan and
+  turn orientations, all in an open half-plane whose boundary line passes through the pivot, gives $n+1$ points in
+  convex position (Theorem~\ref{lg:thm:fan}; by its proof, the pivot and the chain points themselves); if $m\ge3$ and
+  $S$ is in general position, all other points of the layers $\ge i$ lie strictly on the inner side of the tangent at
+  a vertex of layer $i$ (Lemma~\ref{lg:lem:halfplane}); hence, if moreover $K\ge4$, no vertex of layer $i$ is the pivot
+  of a sequence of $K-1$ points of the layers $\ge i$, all different from it, with positive fan and turn orientations
+  (Theorem~\ref{lg:thm:chain}), which is the geometric content of the chain clauses (see the paragraph
+  \emph{Encoders} below);
+\item \emph{polar rules} (\S\ref{lg:ssec:polar}): the orientation of three points given in polar coordinates about $c$
+  (Lemma~\ref{lg:lem:polar}) and the angular rules A and B (Lemmas~\ref{lg:lem:ruleA}, \ref{lg:lem:ruleB}).
+\end{itemize}
+
+\paragraph{Sources.} Every Lean declaration that heads a statement of this section is in the file
+\dirn{LAYERLEAN/LayerLemma.lean} (namespace \lean{ErdosSzekeres.LayerLemma}, 1148 lines, SHA-256
+\texttt{afb8542dceb0}\dots), lines 465--1032; its README is \dirn{LAYERLEAN/README.md} (SHA-256
+\texttt{9eaec241a1d2}\dots). The declarations of the same file that \S\ref{lg:ssec:notation} recalls lie outside
+these lines and are restated in the section on the layer lemma. The Lean proofs of the declarations stated here use the following
+declarations of the main library; the foundations section restates them and proves the lemmas among them.
+\begin{itemize}
+\item The definitions \lean{Point}, \lean{GeneralPosition}, \lean{ConvexPosition} and \lean{HasConvexNGon}
+  of\newline \dirn{ErdosSzekeres/Definitions.lean} (SHA-256 \texttt{2425500eefd1}\dots).
+\item The orientation \lean{ErdosSzekeres.orient} and the lemma \lean{ErdosSzekeres.orient_cycle},\newline
+  in \dirn{ErdosSzekeres/Orientation.lean}, lines 9 and 15 (SHA-256 \texttt{f67955ac7091}\dots).
+\item The lemma \lean{ErdosSzekeres.generalPosition_iff_orient_ne_zero},\newline
+  in \dirn{ErdosSzekeres/OrientationGeometry.lean:66} (SHA-256 \texttt{c7db9bbbb65e}\dots).
+\item The lemma \lean{ErdosSzekeres.Suk.convexPosition_of_positive_triples},\newline
+  in \dirn{ErdosSzekeres/Suk/OrientationClique.lean:9} (SHA-256 \texttt{cf63d5219b47}\dots).
+\end{itemize}
+The written proofs use the results listed under \emph{Dependencies} below, among them Lemma~\ref{fd:lem:mono}(c)
+(Lean \lean{HasConvexNGon.mono}, \dirn{ErdosSzekeres/Basic.lean:20}), which the Lean proofs do not use.
+
+The file was checked with Lean~4.24.0 and Mathlib \texttt{f897ebcf} by \texttt{lake env lean} from the repository root;
+it is not part of the default \texttt{lake build} target. The log \dirn{LAYERLEAN/logs/build.log} (exit code~0, no
+messages) names no file hash; it was committed with the first version of the file (454 lines, commit
+\texttt{6429e9a70}) and was not updated by the five later commits that changed the file, so it is not a record of the
+present file, and we do not use it. The records for the present file are the review report
+\dirn{LEANEXT/review/REPORT.md} of 4 November 2026, which reports exit~0 and no messages for the reviewed file, whose
+SHA-256 it gives as \texttt{afb8542d}\dots{} (1148 lines), and the axiom re-check of 6 November 2026 (whose output is
+named below), which compiled
+\dirn{LAYERLEAN/logs/axioms_recheck_20261106/LayerLemmaAxioms.lean}, whose first 1148 lines are this file, with exit
+status~0; the files \dirn{README.txt} and \dirn{run.sh} of that directory record the toolchain and the command given
+above. The file contains no \lean{sorry}, \lean{admit}, \lean{axiom} or \lean{native_decide}.
+
+\paragraph{Axioms.} The log \dirn{LAYERLEAN/logs/axioms.log} (SHA-256 \texttt{3c4b7aac502e}\dots) prints the axioms of
+16 of the 23 theorems of this section: all except \lean{rotAbout_iterate}, \lean{orient_rotAbout},
+\lean{convex_orient_nonneg}, \lean{orient_eq_lin}, \lean{lin_rotAbout}, \lean{lin_orbit_pos} and
+\lean{orient_next_prev_pos}. The review log \dirn{LEANEXT/review/axioms.log} of 4 November 2026 (SHA-256
+\texttt{386c4f578725}\dots) prints all 23. It covers 59 declarations of the reviewed file (SHA-256
+\texttt{afb8542d}\dots, the file above), namely all its \texttt{theorem} declarations except the 7 marked
+\texttt{@[simp]}; the file has 66 in all, and \dirn{LEANEXT/review/REPORT.md} speaks of ``all 59 theorem
+declarations''. In each of the two logs, every theorem of this section that it prints depends only on the standard
+axioms \lean{propext}, \lean{Classical.choice} and \lean{Quot.sound}. The re-check
+\dirn{LAYERLEAN/logs/axioms_recheck_20261106/out.txt} (SHA-256 \texttt{a59c3816cbe7}\dots) gives the same result for
+the 11 of them that it lists.
+
+\paragraph{Rigor.} Each lemma or theorem below whose head carries a Lean name is \emph{Lean-checked}, with the axioms
+just listed; none of them takes an unproved proposition as a hypothesis, and none is a finite computation. Each definition
+whose head carries a Lean name restates that Lean definition. The proofs written
+here are \emph{written proofs (not refereed)}. They follow the structure of the Lean proofs. Where Lean checks an
+algebraic identity or inequality with an automatic tactic (such as \lean{ring}, \lean{linear_combination},
+\lean{nlinarith} or \lean{positivity}), the written proof derives it by hand; every other difference from the Lean
+proof is stated in a remark or in a parenthetical note in the proof. Statements tagged ``written step'' are not Lean
+declarations, and they are proved here. Lemma~\ref{lg:lem:layer} collects the opening steps of the Lean proofs of
+Theorems~\ref{lg:thm:nesting} and~\ref{lg:thm:radius} and Lemma~\ref{lg:lem:halfplane}. Lemma~\ref{lg:lem:rotfacts} collects
+elementary facts about rotations that the Lean proofs obtain differently (through the complex form of the rotation,
+by direct computation, or through minimal periods). Lemma~\ref{lg:lem:cramer} is a general identity of which Lean
+checks only the three instances used, each by \lean{ring}. Corollary~\ref{lg:cor:period} restates
+Lemma~\ref{lg:lem:rot-iter} for $\rho$ and adds $\rho^m=\mathrm{id}$, which replaces a minimal-period argument of the
+Lean proof of Lemma~\ref{lg:lem:halfplane}.
+
+\paragraph{Encoders.} Several results below are the geometric facts behind parts of the project's layered encoders:
+Theorem~\ref{lg:thm:nesting} behind the nesting clauses, Theorem~\ref{lg:thm:chain} behind the chain clauses, and
+Lemmas~\ref{lg:lem:ruleA} and~\ref{lg:lem:ruleB}, with the weak radius order of Theorem~\ref{lg:thm:radius} that
+rule~B needs, behind the angular rules A and B, which the encoders apply to triples of points. Only the geometric
+facts are stated and proved here. That the
+encoders' programs emit exactly these clause families, and which rule they apply to which triple, are not part of
+\dirn{LAYERLEAN/LayerLemma.lean}; \dirn{LAYERLEAN/README.md} lists both under ``What is not in Lean'' and gives their
+status as ``written proof, review and tests''. For the encoders of the $k=8$ bounds the code-to-clause step is
+recorded as gap~(G1) of \dirn{WRITEUP/note/k8_soundness.tex}: it rests on a written proof (not refereed) by reading
+the code, with the Python interpreter trusted to run the programs as written. For encoder~B at $m=6$ that note also
+records a second route on which the step is Lean-checked for a Lean definition of the formula (\dirn{ENCBLEAN}). On
+that route the note lists, under gap~(G2), the trust items (E1)--(E6), which are not Lean-checked: among them, that the
+texts printed from this definition are the $64$ cube files that carry the cake\_lpr verdicts is (E1), evidence from
+running compiled code and not a Lean theorem, and those $64$ verdicts and their provenance are covered by (E2).
+
+\paragraph{Dependencies.} The section uses the conventions and facts of the foundations section
+(Definitions~\ref{fd:def:point}, \ref{fd:def:orient}, \ref{fd:def:gp}, \ref{fd:def:cp}, \ref{fd:def:ngon},
+\ref{fd:def:inv}, \ref{fd:def:rot} and Lemmas~\ref{fd:lem:orient}, \ref{fd:lem:collinear}, \ref{fd:lem:mono},
+\ref{fd:lem:pos-triples}) and, from the section on the layer lemma, Definitions~\ref{ll:def:hv} and~\ref{ll:def:peel},
+Lemmas~\ref{ll:lem:hv}, \ref{ll:lem:antitone}, \ref{ll:lem:inv-peel} and Theorem~\ref{ll:thm:core-rot}. These,
+except Lemma~\ref{fd:lem:pos-triples}, which is used only in Step~3 of the proof of Theorem~\ref{lg:thm:fan}, are
+recalled in \S\ref{lg:ssec:notation}.
+
+\subsection{Notation and the results used}\label{lg:ssec:notation}
+
+\paragraph{Vectors.} Points are elements of $\R^2$, written $p=(p_0,p_1)$ (Definition~\ref{fd:def:point}; Lean
+\lean{Point}). For $X,Y\in\R^2$ put
+\[
+  \det(X,Y)=X_0Y_1-X_1Y_0,\qquad \langle X,Y\rangle=X_0Y_0+X_1Y_1,\qquad \abs{X}^2=\langle X,X\rangle,\qquad
+  JX=(-X_1,X_0).
+\]
+So $J$ is the counterclockwise quarter turn, $\det$ is bilinear and antisymmetric, and $\det(X,Y)=\langle JX,Y\rangle$.
+In particular
+\begin{equation}\label{lg:eq:J}
+\begin{gathered}
+  \det(X,X)=0,\qquad \det(X,JX)=\abs{X}^2,\qquad \det(JX,X)=-\abs{X}^2,\\
+  \det(JX,JX)=0,\qquad \langle X,JX\rangle=0 .
+\end{gathered}
+\end{equation}
+
+\paragraph{Orientation.} We use the following facts about $\orient$ (Definition~\ref{fd:def:orient}).
+\begin{itemize}
+\item[(O1)] $\orient(a,b,d)=(b_0-a_0)(d_1-a_1)-(b_1-a_1)(d_0-a_0)=\det(b-a,\,d-a)$.
+\item[(O2)] $\orient$ is invariant under cyclic permutations of its three arguments (Lemma~\ref{fd:lem:orient}(b)).
+  Hence $\orient(a,b,o)=\orient(o,a,b)=\det(a-o,\,b-o)$ for all points $a,b,o$.
+\item[(O3)] $\orient(a,b,d)=0$ whenever two of $a,b,d$ coincide. Indeed, by (O1), $\orient(a,a,d)=\det(0,d-a)=0$,
+  $\orient(a,b,a)=\det(b-a,0)=0$ and $\orient(a,b,b)=\det(b-a,b-a)=0$.
+\item[(O4)] For fixed $a,b$ the map $q\mapsto\orient(a,b,q)=\det(b-a,\,q-a)$ is affine: if $u+v=1$ then
+  $\orient(a,b,uq_1+vq_2)=u\orient(a,b,q_1)+v\orient(a,b,q_2)$, because $(uq_1+vq_2)-a=u(q_1-a)+v(q_2-a)$ and $\det$ is
+  linear in its second argument.
+\end{itemize}
+
+\paragraph{Rotations.} For $\theta\in\R$ let $R_\theta$ be the matrix with rows $(\cos\theta,-\sin\theta)$ and
+$(\sin\theta,\cos\theta)$, so that $R_\theta X=\cos\theta\,X+\sin\theta\,JX$. Definition~\ref{fd:def:rot} reads
+\[
+  \operatorname{rotAbout}(c,\theta)(p)=c+R_\theta(p-c)
+  =\bigl(c_0+\cos\theta\,(p_0-c_0)-\sin\theta\,(p_1-c_1),\;c_1+\sin\theta\,(p_0-c_0)+\cos\theta\,(p_1-c_1)\bigr).
+\]
+For a map $f$ and $j\in\N$, $f^{j}$ is the $j$-fold iterate: $f^{0}=\mathrm{id}$ and $f^{j+1}=f\circ f^{j}$
+($=f^{j}\circ f$; Lean \texttt{f\^{}[j]}). For $m\in\N$ the angle $2\pi/m$ is the real number $2\pi/(m:\R)$ (Lean
+\texttt{2 * Real.pi / m}, with $m$ cast to $\R$; Lean's convention would give $0$ for $m=0$, but every statement of
+this section in which $2\pi/m$ occurs assumes $m\ge1$).
+Whenever $c$ and $m$ are given we write
+\[
+  \rho=\operatorname{rotAbout}(c,2\pi/m).
+\]
+A natural-number subtraction such as $m-1$ or $K-1$ is truncated at $0$ in Lean; in every use below the minuend is at
+least the subtrahend, so it is the ordinary difference.
+
+\paragraph{Sine and cosine.} Besides the values at $0$, $\pi$ and $2\pi$, the addition, subtraction and double-angle
+formulas, $\sin^2+\cos^2=1$, the oddness of the sine and the $2\pi$-periodicity, we use two standard facts about the real sine
+and cosine (see, e.g., W.~Rudin, \emph{Principles of Mathematical Analysis}, 3rd ed., Chapter~8; in Mathlib
+\lean{Real.sin_pos_of_pos_of_lt_pi}, \lean{Real.cos_le_one} and \lean{Real.cos_eq_one_iff}):
+\begin{itemize}
+\item[(S1)] $\sin\theta>0$ for $0<\theta<\pi$; hence $\sin\theta\ge0$ for $0\le\theta\le\pi$, as $\sin0=\sin\pi=0$;
+\item[(S2)] $\cos\theta\le1$ for every $\theta\in\R$, and $\cos\theta=1$ if and only if $\theta\in2\pi\Z$.
+\end{itemize}
+
+\paragraph{Hypotheses on $S$.} All point sets are finite (Lean \texttt{Finset Point}). ``$\rho$ maps $S$ into $S$'' is the
+Lean hypothesis \texttt{Invariant (rotAbout c (2 * Real.pi / m)) S}, i.e.\ $\rho(p)\in S$ for all $p\in S$
+(Definition~\ref{fd:def:inv}); by induction on $i$ it implies $\rho^{i}(p)\in S$ for all $p\in S$ and $i\in\N$.
+``$S$ is $K$-free'' means $\neg$\,\texttt{HasConvexNGon K S}: no $K$-element subset of $S$ is in convex position
+(Definitions~\ref{fd:def:cp}, \ref{fd:def:ngon}). By Lemma~\ref{fd:lem:mono}(c), every subset of a $K$-free set is
+$K$-free. ``General position'' is Definition~\ref{fd:def:gp}; by Lemma~\ref{fd:lem:collinear}, $S$ is in general
+position if and only if $\orient(a,b,d)\ne0$ for all pairwise distinct $a,b,d\in S$.
+
+\paragraph{Convexity.} A set $C\subseteq\R^2$ is convex (Mathlib \lean{Convex}) if $uy_1+vy_2\in C$ whenever
+$y_1,y_2\in C$, $u,v\ge0$ and $u+v=1$. The convex hull $\conv(A)$ is the smallest convex set containing $A$; so
+$A\subseteq C$ with $C$ convex implies $\conv(A)\subseteq C$ (Mathlib \lean{convexHull_min}).
+
+\paragraph{Layers.} $\hv(X)=\{x\in X: x\notin\conv(X\setminus\{x\})\}\subseteq X$ (Definition~\ref{ll:def:hv}), and
+$\peel(S,0)=S$, $\peel(S,n+1)=\peel(S,n)\setminus\hv(\peel(S,n))$ (Definition~\ref{ll:def:peel}). For a map $f$, a
+number $k\in\N$ and a point $x$, Lean's \texttt{orbitFS f k x} (\dirn{LAYERLEAN/LayerLemma.lean:48}) is the finite set
+$\{f^{j}(x):0\le j<k\}$. We use the following results of the section on the layer lemma.
+\begin{itemize}
+\item[(L1)] For every finite $X$: $X\subseteq\conv(\hv(X))$ (Lemma~\ref{ll:lem:hv}(c), \lean{subset_convexHull_hullVerts}).
+\item[(L2)] If $n\le n'$ then $\peel(S,n')\subseteq\peel(S,n)$ (Lemma~\ref{ll:lem:antitone}); in particular
+  $\peel(S,n)\subseteq\peel(S,0)=S$.
+\item[(L3)] If $0<m$, $c\notin S$ and $\rho$ maps $S$ into $S$, then $\rho$ maps $\peel(S,n)$ into $\peel(S,n)$ for every
+  $n$ (Lemma~\ref{ll:lem:inv-peel}, \lean{invariant_peel}).
+\item[(L4)] If $0<m$, $K\le 2m$, $c\notin S$, $\rho$ maps $S$ into $S$, $S$ is $K$-free and $x\in\hv(S)$, then
+  $\hv(S)=\{\rho^{j}(x):0\le j<m\}$ (Theorem~\ref{ll:thm:core-rot}, \lean{hullVerts_eq_orbitFS_rotAbout}).
+\end{itemize}
+
+The Lean proofs of Theorems~\ref{lg:thm:nesting} and~\ref{lg:thm:radius} and of Lemma~\ref{lg:lem:halfplane} each
+begin with the same few steps; we collect them once.
+
+\begin{lemma}[layers of a layered configuration; written step]\label{lg:lem:layer}
+Let $m,K\in\N$ with $0<m$ and $K\le 2m$, let $S$ be a finite set and $c$ a point with $c\notin S$, let
+$\rho=\operatorname{rotAbout}(c,2\pi/m)$ map $S$ into $S$, and let $S$ be $K$-free. Let $n\in\N$, put
+$L=\hv(\peel(S,n))$, and let $x\in L$. Then:
+\begin{enumerate}[label=(\alph*)]
+\item $L=\{\rho^{j}(x):0\le j<m\}$; in particular $\rho^{j}(x)\in L$ for $0\le j<m$;
+\item $L\subseteq\peel(S,n)\subseteq S$, and $x\neq c$;
+\item $\peel(S,n')\subseteq\conv(L)$ for every $n'\ge n$;
+\item $\peel(S,n')\cap L=\emptyset$ for every $n'>n$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+By (L2), $\peel(S,n)\subseteq S$. Hence $c\notin\peel(S,n)$, and $\peel(S,n)$ is $K$-free (a $K$-element subset of
+$\peel(S,n)$ in convex position would be one of $S$). By (L3), $\rho$ maps $\peel(S,n)$ into itself. So (L4) applies to
+the finite set $\peel(S,n)$ and its hull vertex $x$, and gives (a).
+(b) $L\subseteq\peel(S,n)$ by the definition of $\hv$, and $\peel(S,n)\subseteq S$; since $x\in L\subseteq S$ and
+$c\notin S$, $x\ne c$.
+(c) If $n'\ge n$ then $\peel(S,n')\subseteq\peel(S,n)\subseteq\conv(\hv(\peel(S,n)))=\conv(L)$ by (L2) and (L1).
+(d) If $n'>n$ then $n+1\le n'$, so $\peel(S,n')\subseteq\peel(S,n+1)=\peel(S,n)\setminus L$ by (L2) and the definition
+of $\peel$.
+\end{proof}
+
+\subsection{Rotations and regular polygons}\label{lg:ssec:rot}
+
+\begin{lemma}[rotation facts; written step]\label{lg:lem:rotfacts}
+For all points $c,p$ and all $\alpha,\beta,\theta\in\R$:
+\begin{enumerate}[label=(\alph*)]
+\item $\operatorname{rotAbout}(c,0)(p)=p$;
+\item $\operatorname{rotAbout}(c,\alpha)\bigl(\operatorname{rotAbout}(c,\beta)(p)\bigr)=\operatorname{rotAbout}(c,\alpha+\beta)(p)$;
+\item $\operatorname{rotAbout}(c,2\pi)(p)=p$;
+\item $\abs{\operatorname{rotAbout}(c,\theta)(p)-c}^2=\abs{p-c}^2$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Put $u=p-c$, so that $\operatorname{rotAbout}(c,\theta)(p)=c+R_\theta u$.
+(a), (c): $\cos0=\cos2\pi=1$ and $\sin0=\sin2\pi=0$, so $R_0u=R_{2\pi}u=u$.
+(b) $\operatorname{rotAbout}(c,\beta)(p)-c=R_\beta u$, hence
+$\operatorname{rotAbout}(c,\alpha)(\operatorname{rotAbout}(c,\beta)(p))=c+R_\alpha R_\beta u$. The product
+$R_\alpha R_\beta$ has rows $(\cos\alpha\cos\beta-\sin\alpha\sin\beta,\;-(\sin\alpha\cos\beta+\cos\alpha\sin\beta))$ and
+$(\sin\alpha\cos\beta+\cos\alpha\sin\beta,\;\cos\alpha\cos\beta-\sin\alpha\sin\beta)$, which is $R_{\alpha+\beta}$ by
+the addition formulas $\cos(\alpha+\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta$ and
+$\sin(\alpha+\beta)=\sin\alpha\cos\beta+\cos\alpha\sin\beta$.
+(d) $\abs{R_\theta u}^2=(\cos\theta\,u_0-\sin\theta\,u_1)^2+(\sin\theta\,u_0+\cos\theta\,u_1)^2
+=(\cos^2\theta+\sin^2\theta)(u_0^2+u_1^2)=\abs{u}^2$; the mixed terms cancel.
+\end{proof}
+
+\begin{lemma}[iterates of the rotation about a point; \leanref{ErdosSzekeres.LayerLemma.rotAbout_iterate}{LAYERLEAN/LayerLemma.lean:465}]\label{lg:lem:rot-iter}
+For every point $c$, every $\alpha\in\R$ and every $j\in\N$,
+\[
+  \bigl(\operatorname{rotAbout}(c,\alpha)\bigr)^{j}=\operatorname{rotAbout}(c,\,j\alpha)
+\]
+as maps $\R^2\to\R^2$, where $j$ is cast to $\R$.
+\end{lemma}
+
+\begin{proof}
+Induction on $j$. For $j=0$ the left side is the identity by definition of the iterate, and the right side is
+$\operatorname{rotAbout}(c,0)=\mathrm{id}$ by Lemma~\ref{lg:lem:rotfacts}(a). If the claim holds for $j$, then
+\[
+  \bigl(\operatorname{rotAbout}(c,\alpha)\bigr)^{j+1}=\operatorname{rotAbout}(c,\alpha)\circ\operatorname{rotAbout}(c,j\alpha)
+  =\operatorname{rotAbout}(c,\alpha+j\alpha)=\operatorname{rotAbout}(c,(j+1)\alpha)
+\]
+by Lemma~\ref{lg:lem:rotfacts}(b). (Lean argues instead with the complex form: in the complex coordinate $z$, with
+$\gamma=c_0+ic_1$, the map $\operatorname{rotAbout}(c,\alpha)$ is $z\mapsto\gamma+e^{i\alpha}(z-\gamma)$
+(\lean{rotAbout_eq_crot}, line 302), whose $j$-th iterate is $z\mapsto\gamma+(e^{i\alpha})^{j}(z-\gamma)$
+(\lean{crot_iterate}, line 267), and $(e^{i\alpha})^{j}=e^{ij\alpha}$.)
+\end{proof}
+
+\begin{corollary}[$\rho^m$ is the identity; written step]\label{lg:cor:period}
+Let $c$ be a point, $m\in\N$ with $0<m$, and $\rho=\operatorname{rotAbout}(c,2\pi/m)$. Then $\rho^{j}=
+\operatorname{rotAbout}(c,2\pi j/m)$ for every $j\in\N$, and $\rho^{m}(p)=p$ for every point $p$.
+\end{corollary}
+
+\begin{proof}
+By Lemma~\ref{lg:lem:rot-iter}, $\rho^{j}=\operatorname{rotAbout}(c,j\cdot(2\pi/m))$. For $j=m$ the angle is
+$m\cdot(2\pi/m)=2\pi$ because $(m:\R)\ne0$, and $\operatorname{rotAbout}(c,2\pi)=\mathrm{id}$ by
+Lemma~\ref{lg:lem:rotfacts}(c).
+\end{proof}
+
+\begin{lemma}[orientation of a regular-polygon triple; \leanref{ErdosSzekeres.LayerLemma.orient_rotAbout}{LAYERLEAN/LayerLemma.lean:472}]\label{lg:lem:orient-rot}
+For all points $c,x$ and all $\alpha,\beta\in\R$,
+\[
+  \orient\bigl(x,\operatorname{rotAbout}(c,\alpha)(x),\operatorname{rotAbout}(c,\beta)(x)\bigr)
+  =\bigl((x_0-c_0)^2+(x_1-c_1)^2\bigr)\bigl((\cos\alpha-1)\sin\beta-\sin\alpha\,(\cos\beta-1)\bigr).
+\]
+\end{lemma}
+
+\begin{proof}
+Put $u=x-c$, $b=\operatorname{rotAbout}(c,\alpha)(x)$ and $d=\operatorname{rotAbout}(c,\beta)(x)$. Then
+$b-x=R_\alpha u-u=(\cos\alpha-1)u+\sin\alpha\,Ju$ and $d-x=(\cos\beta-1)u+\sin\beta\,Ju$. By (O1), bilinearity of
+$\det$ and~\eqref{lg:eq:J},
+\begin{align*}
+  \orient(x,b,d)=\det(b-x,d-x)
+  &=(\cos\alpha-1)(\cos\beta-1)\det(u,u)+(\cos\alpha-1)\sin\beta\,\det(u,Ju)\\
+  &\quad+\sin\alpha\,(\cos\beta-1)\det(Ju,u)+\sin\alpha\sin\beta\,\det(Ju,Ju)\\
+  &=\bigl((\cos\alpha-1)\sin\beta-\sin\alpha\,(\cos\beta-1)\bigr)\abs{u}^2,
+\end{align*}
+and $\abs{u}^2=(x_0-c_0)^2+(x_1-c_1)^2$. No relation between $\cos$ and $\sin$ is used: this is a polynomial identity in
+$\cos\alpha,\sin\alpha,\cos\beta,\sin\beta$ and the coordinates, which is how Lean proves it (\lean{ring}).
+\end{proof}
+
+\begin{lemma}[a product formula for the orientation factor; \leanref{ErdosSzekeres.LayerLemma.trig_layer}{LAYERLEAN/LayerLemma.lean:480}]\label{lg:lem:trig}
+For all $s,t\in\R$,
+\[
+  (\cos 2t-1)\sin 2s-\sin 2t\,(\cos 2s-1)=4\sin t\,\sin s\,\sin(s-t).
+\]
+\end{lemma}
+
+\begin{proof}
+By the double-angle formulas, $\cos2t-1=-2\sin^2t$, $\cos2s-1=-2\sin^2s$, $\sin2s=2\sin s\cos s$ and
+$\sin2t=2\sin t\cos t$. Hence the left side equals
+\[
+  -4\sin^2t\,\sin s\cos s+4\sin t\cos t\,\sin^2s=4\sin t\,\sin s\,(\sin s\cos t-\cos s\sin t)=4\sin t\,\sin s\,\sin(s-t).
+\]
+(Lean rewrites with $\cos2x=2\cos^2x-1$ and $\sin2x=2\sin x\cos x$ for $x=s,t$ and with the subtraction formula for
+$\sin(s-t)$, and closes the remaining polynomial identity by \lean{linear_combination} with $\sin^2+\cos^2=1$ for $s$
+and for $t$.)
+\end{proof}
+
+\begin{lemma}[vertices lie weakly left of each edge; \leanref{ErdosSzekeres.LayerLemma.orient_regular_nonneg}{LAYERLEAN/LayerLemma.lean:488}]\label{lg:lem:regular}
+Let $c,x$ be points, $m\in\N$ with $0<m$, $j\in\N$ with $j\le m$, and $\rho=\operatorname{rotAbout}(c,2\pi/m)$. Then
+\[
+  0\le\orient\bigl(x,\rho(x),\rho^{j}(x)\bigr).
+\]
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{lg:lem:rot-iter}, $\rho^{j}(x)=\operatorname{rotAbout}(c,\beta)(x)$ with $\beta=j\cdot(2\pi/m)$. By
+Lemma~\ref{lg:lem:orient-rot} with $\alpha=2\pi/m$,
+\[
+  \orient(x,\rho(x),\rho^{j}(x))=\abs{x-c}^2\,F,\qquad F=(\cos\alpha-1)\sin\beta-\sin\alpha\,(\cos\beta-1).
+\]
+The first factor is $\ge0$; we show $F\ge0$. If $j=0$ then $\beta=0$, so $\sin\beta=0=\cos\beta-1$ and $F=0$. Let
+$1\le j\le m$ and put $t=\pi/m$. Then $\alpha=2t$ and $\beta=2(jt)$, so Lemma~\ref{lg:lem:trig} with $s=jt$ gives
+\[
+  F=4\sin t\,\sin(jt)\,\sin(jt-t).
+\]
+Since $m\ge1$, $0<t\le\pi$; since $j\le m$, $0\le jt=j\pi/m\le\pi$; and since $j\ge1$, $0\le jt-t=(j-1)t\le jt\le\pi$.
+By (S1) the sine is $\ge0$ on $[0,\pi]$, so all three factors are $\ge0$, and $F\ge0$.
+\end{proof}
+
+\begin{remark}
+The proof shows $\orient(x,\rho(x),\rho^{j}(x))=4\abs{x-c}^2\sin(\pi/m)\sin(j\pi/m)\sin((j-1)\pi/m)$ for
+$1\le j\le m$: every vertex of the regular $m$-gon $\{\rho^{j}(x)\}$ lies weakly to the left of the directed edge
+$x\to\rho(x)$. (If moreover $x\ne c$ and $m\ge2$, then by (S1) $\sin(\pi/m)>0$, $\sin(j\pi/m)=0$ only for $j=m$ and
+$\sin((j-1)\pi/m)=0$ only for $j=1$, so the value is $0$ exactly for $j\in\{1,m\}$; this refinement is not used.)
+\end{remark}
+
+\begin{definition}[lin; \leanref{ErdosSzekeres.LayerLemma.lin}{LAYERLEAN/LayerLemma.lean:625}]\label{lg:def:lin}
+For points $w,a,y$,
+\[
+  \operatorname{lin}(w,a,y)=w_0(y_0-a_0)+w_1(y_1-a_1)=\langle w,\,y-a\rangle .
+\]
+\end{definition}
+
+For $w\ne0$, $\{y:\operatorname{lin}(w,a,y)>0\}$ is the open half-plane bounded by the line through $a$ orthogonal to
+$w$, on the side into which $w$ points. Note $\operatorname{lin}(w,a,a)=0$.
+
+\begin{lemma}[the tangent functional on the orbit; \leanref{ErdosSzekeres.LayerLemma.lin_rotAbout}{LAYERLEAN/LayerLemma.lean:794}]\label{lg:lem:lin-rot}
+For all points $c,p$ and every $\beta\in\R$,
+\[
+  \operatorname{lin}\bigl(c-p,\;p,\;\operatorname{rotAbout}(c,\beta)(p)\bigr)=\bigl((p_0-c_0)^2+(p_1-c_1)^2\bigr)(1-\cos\beta),
+\]
+where $c-p$ is the coordinatewise difference.
+\end{lemma}
+
+\begin{proof}
+Put $u=p-c$; then $c-p=-u$ and $\operatorname{rotAbout}(c,\beta)(p)-p=R_\beta u-u=(\cos\beta-1)u+\sin\beta\,Ju$. Hence,
+by~\eqref{lg:eq:J},
+\[
+  \operatorname{lin}(c-p,p,\operatorname{rotAbout}(c,\beta)(p))=\langle-u,(\cos\beta-1)u+\sin\beta\,Ju\rangle
+  =(1-\cos\beta)\abs{u}^2-\sin\beta\,\langle u,Ju\rangle=(1-\cos\beta)\abs{u}^2.\qedhere
+\]
+\end{proof}
+
+\begin{lemma}[other vertices lie strictly inside the tangent; \leanref{ErdosSzekeres.LayerLemma.lin_orbit_pos}{LAYERLEAN/LayerLemma.lean:801}]\label{lg:lem:lin-orbit}
+Let $c,p$ be points with $p\ne c$, let $m\in\N$ with $0<m$, let $j\in\N$ with $0<j$ and $j<m$, and let
+$\rho=\operatorname{rotAbout}(c,2\pi/m)$. Then
+\[
+  0<\operatorname{lin}\bigl(c-p,\;p,\;\rho^{j}(p)\bigr).
+\]
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{lg:lem:rot-iter}, $\rho^{j}(p)=\operatorname{rotAbout}(c,\theta)(p)$ with $\theta=j\cdot(2\pi/m)$, so by
+Lemma~\ref{lg:lem:lin-rot} the value is $\abs{p-c}^2(1-\cos\theta)$. Since $p\ne c$, one of $p_0-c_0$, $p_1-c_1$ is
+non-zero, so $\abs{p-c}^2>0$. Since $0<j<m$, $0<\theta<2\pi$. By (S2), $\cos\theta\le1$, and $\cos\theta=1$ only for
+$\theta\in2\pi\Z$, which has no point in $(0,2\pi)$; hence $1-\cos\theta>0$, and the product is positive.
+\end{proof}
+
+\begin{lemma}[next and previous vertex; \leanref{ErdosSzekeres.LayerLemma.orient_next_prev_pos}{LAYERLEAN/LayerLemma.lean:830}]\label{lg:lem:next-prev}
+Let $c,p$ be points with $p\ne c$, let $m\in\N$ with $3\le m$, and let $\rho=\operatorname{rotAbout}(c,2\pi/m)$. Then
+\[
+  0<\orient\bigl(p,\rho(p),\rho^{m-1}(p)\bigr).
+\]
+\end{lemma}
+
+\begin{proof}
+As $m\ge1$, the natural number $m-1$ has real cast $(m:\R)-1$. By Lemma~\ref{lg:lem:rot-iter},
+$\rho^{m-1}(p)=\operatorname{rotAbout}(c,\beta)(p)$ with $\beta=(m-1)\cdot(2\pi/m)$. By Lemma~\ref{lg:lem:orient-rot}
+with $\alpha=2\pi/m$, the orientation equals $\abs{p-c}^2F$ with $F$ as in the proof of Lemma~\ref{lg:lem:regular}.
+Put $t=\pi/m$, so $mt=\pi$, $\alpha=2t$ and $\beta=2((m-1)t)$. Lemma~\ref{lg:lem:trig} with $s=(m-1)t$ gives
+\[
+  F=4\sin t\,\sin((m-1)t)\,\sin((m-1)t-t)=4\sin t\,\sin(\pi-t)\,\sin(\pi-2t).
+\]
+Since $m\ge3$, $0<t\le\pi/3$; hence $t$, $\pi-t$ and $\pi-2t$ (which is $\ge\pi/3$) all lie in the open interval
+$(0,\pi)$, where the sine is positive by (S1). So $F>0$; also $\abs{p-c}^2>0$ as $p\ne c$. The product is positive.
+\end{proof}
+
+\subsection{Convexity of half-planes and disks}\label{lg:ssec:convex}
+
+\begin{lemma}[$\{\orient(a,b,\cdot)\ge0\}$ is convex; \leanref{ErdosSzekeres.LayerLemma.convex_orient_nonneg}{LAYERLEAN/LayerLemma.lean:516}]\label{lg:lem:halfplane-convex}
+For all points $a,b$ the set $\{q\in\R^2:0\le\orient(a,b,q)\}$ is convex.
+\end{lemma}
+
+\begin{proof}
+Let $q_1,q_2$ be in the set and $u,v\ge0$ with $u+v=1$. By (O4),
+$\orient(a,b,uq_1+vq_2)=u\orient(a,b,q_1)+v\orient(a,b,q_2)$, a sum of two products of non-negative numbers.
+\end{proof}
+
+For $a\ne b$ this set is the closed half-plane to the left of the directed line $a\to b$, the line included; for
+$a=b$ it is the whole plane, since $\orient(a,a,q)=0$ by (O3).
+
+\begin{definition}[dist2; \leanref{ErdosSzekeres.LayerLemma.dist2}{LAYERLEAN/LayerLemma.lean:999}]\label{lg:def:dist2}
+For points $c,y$, $\operatorname{dist2}(c,y)=(y_0-c_0)^2+(y_1-c_1)^2=\abs{y-c}^2$, the squared Euclidean distance
+(defined by this formula, not through a norm).
+\end{definition}
+
+\begin{lemma}[disks; \leanref{ErdosSzekeres.LayerLemma.convex_disk}{LAYERLEAN/LayerLemma.lean:1002}]\label{lg:lem:disk}
+For every point $c$ and every $R\in\R$ the set $\{y\in\R^2:\operatorname{dist2}(c,y)\le R\}$ is convex.
+\end{lemma}
+
+\begin{proof}
+Let $y_1,y_2$ be in the set and $u,v\ge0$ with $u+v=1$. Put $A=y_1-c$ and $B=y_2-c$. Since $u+v=1$,
+$(uy_1+vy_2)-c=uA+vB$, and, using $1-u=v$ and $1-v=u$,
+\[
+  u\abs{A}^2+v\abs{B}^2-\abs{uA+vB}^2=u(1-u)\abs{A}^2+v(1-v)\abs{B}^2-2uv\langle A,B\rangle=uv\,\abs{A-B}^2\ge0.
+\]
+Hence $\operatorname{dist2}(c,uy_1+vy_2)=\abs{uA+vB}^2\le u\abs{A}^2+v\abs{B}^2\le uR+vR=R$. (Lean proves the same
+inequality with \lean{nlinarith}, from the non-negativity of the squares of the coordinate differences of $y_1,y_2$ and
+of $uv$.)
+\end{proof}
+
+For $R\ge0$ the set is the closed disk of radius $\sqrt R$ about $c$; for $R<0$ it is empty.
+
+\subsection{Strict nesting, the centre, and the radius order}\label{lg:ssec:nest}
+
+\begin{theorem}[strict nesting of the convex layers; \leanref{ErdosSzekeres.LayerLemma.strict_nesting}{LAYERLEAN/LayerLemma.lean:529}]\label{lg:thm:nesting}
+Let $S$ be a finite set of points, $c$ a point, and $m,K\in\N$ with $2\le m$ and $K\le 2m$; let
+$\rho=\operatorname{rotAbout}(c,2\pi/m)$. Assume that $c\notin S$, that $\rho$ maps $S$ into $S$, that $S$ is $K$-free,
+and that $S$ is in general position. Let $n,n'\in\N$ with $n<n'$, let $x\in\hv(\peel(S,n))$ and $y\in\peel(S,n')$. Then
+\[
+  0<\orient\bigl(x,\rho(x),y\bigr).
+\]
+\end{theorem}
+
+\begin{proof}
+Since $m\ge2$, also $0<m$, so Lemma~\ref{lg:lem:layer} applies to $n$ and $x$. Put $L=\hv(\peel(S,n))$. By
+Lemma~\ref{lg:lem:layer}(a), $L=\{\rho^{j}(x):0\le j<m\}$; by (c), applied with $n'\ge n$, $y\in\conv(L)$; by (d),
+applied with $n'>n$, $y\notin L$.
+
+\emph{Weak inequality.} Let $H=\{q:0\le\orient(x,\rho(x),q)\}$. Every element of $L$ is $\rho^{j}(x)$ with $j<m$, in
+particular $j\le m$, so it lies in $H$ by Lemma~\ref{lg:lem:regular}. $H$ is convex by
+Lemma~\ref{lg:lem:halfplane-convex} (with $a=x$, $b=\rho(x)$). Hence $\conv(L)\subseteq H$, and $y\in H$, that is,
+$0\le\orient(x,\rho(x),y)$.
+
+\emph{Strict inequality.} As $1<m$, $\rho(x)=\rho^{1}(x)\in L$ by Lemma~\ref{lg:lem:layer}(a). The three points
+$x,\rho(x),y$ lie in $S$: $x,\rho(x)\in L\subseteq S$ by Lemma~\ref{lg:lem:layer}(b), and $y\in\peel(S,n')\subseteq S$
+by (L2). They are pairwise distinct:
+\begin{itemize}
+\item $x\ne\rho(x)$: $x\ne c$ by Lemma~\ref{lg:lem:layer}(b), so Lemma~\ref{lg:lem:lin-orbit} with $p=x$ and $j=1$
+  ($0<1<m$) gives $0<\operatorname{lin}(c-x,x,\rho(x))$, whereas $\operatorname{lin}(c-x,x,x)=0$;
+\item $y\ne x$ and $y\ne\rho(x)$, because $x,\rho(x)\in L$ and $y\notin L$.
+\end{itemize}
+By general position and Lemma~\ref{fd:lem:collinear}, $\orient(x,\rho(x),y)\ne0$. Together with the weak inequality,
+$0<\orient(x,\rho(x),y)$.
+\end{proof}
+
+\begin{remark}
+(1) Lean proves $x\ne\rho(x)$ differently: $x\ne c$ has minimal period $m\ge2$ under $\rho$
+(Lemma~\ref{ll:lem:minperiod}), while a fixed point of $\rho$ has minimal period $1$.
+(2) For $m=2$ the hypotheses of Theorem~\ref{lg:thm:nesting} are never all satisfied. Indeed, then
+$L=\{x,\rho(x)\}$ and $y\in\conv\{x,\rho(x)\}$. The segment $\{(1-\lambda)x+\lambda\rho(x):0\le\lambda\le1\}$ contains
+$L$ and is convex (a convex combination of the points with parameters $\lambda_1,\lambda_2$ is the point with the
+parameter given by the same combination of $\lambda_1,\lambda_2$), so it contains $\conv\{x,\rho(x)\}$, and
+$y=(1-\lambda)x+\lambda\rho(x)$ with $0\le\lambda\le1$. By (O4)
+and (O3) $\orient(x,\rho(x),y)=(1-\lambda)\orient(x,\rho(x),x)+\lambda\orient(x,\rho(x),\rho(x))=0$, contradicting the
+conclusion. So for $m=2$ the theorem says that, under its hypotheses on $S$, $\peel(S,n')=\emptyset$ for all $n'>n$ as
+soon as $\hv(\peel(S,n))\ne\emptyset$.
+(3) The theorem is the orientation statement behind the nesting clauses of the layered encoders. That the encoders
+emit exactly these clauses is not part of \dirn{LAYERLEAN/LayerLemma.lean}; see the paragraph \emph{Encoders} at the
+beginning of this section.
+\end{remark}
+
+\begin{lemma}[even orders exclude the centre; \leanref{ErdosSzekeres.LayerLemma.centre_not_mem_of_even}{LAYERLEAN/LayerLemma.lean:582}]\label{lg:lem:centre}
+Let $S$ be a finite set, $c$ a point, and $m\in\N$ with $0<m$ and $m$ even; let $\rho=\operatorname{rotAbout}(c,2\pi/m)$.
+Assume that $\rho$ maps $S$ into $S$ and that $S$ is in general position. Let $p$ be a point with $p\in S$ and
+$p\ne c$. Then $c\notin S$.
+\end{lemma}
+
+\begin{proof}
+Suppose $c\in S$. Since $m$ is even, $m=k+k$ for some $k\in\N$ (Mathlib's \lean{Even}); $k\ge1$ because $m>0$, and the
+natural-number quotient $m/2$ equals $k$. Let $q=\rho^{k}(p)$ (Lean: $\rho^{m/2}(p)$). Since $\rho$ maps $S$ into $S$,
+$q\in S$. By Corollary~\ref{lg:cor:period}, $\rho^{k}=\operatorname{rotAbout}(c,2\pi k/m)$, and
+$2\pi k/m=2\pi k/(2k)=\pi$. As $\cos\pi=-1$ and $\sin\pi=0$,
+\[
+  q=\operatorname{rotAbout}(c,\pi)(p)=\bigl(c_0-(p_0-c_0),\;c_1-(p_1-c_1)\bigr)=2c-p .
+\]
+By (O1), $\orient(p,c,q)=\det(c-p,\,2c-2p)=2\det(c-p,\,c-p)=0$. The points $p,c,q$ are pairwise distinct: $p\ne c$ by
+hypothesis; $q=c$ would mean $2c-p=c$, i.e.\ $p=c$; and $p=q$ would mean $p=2c-p$, i.e.\ $p=c$. Since $p,c,q\in S$,
+general position and Lemma~\ref{fd:lem:collinear} give $\orient(p,c,q)\ne0$, a contradiction. Hence $c\notin S$.
+\end{proof}
+
+\begin{remark}
+There is no $K$-freeness hypothesis and no hypothesis $c\notin S$. The hypothesis that $S$ has a point $p\neq c$ cannot be
+dropped: $S=\{c\}$ is mapped into itself by $\rho$, is in general position (it has no three distinct points), and
+contains $c$.
+\end{remark}
+
+\begin{theorem}[the radius order of the layers; \leanref{ErdosSzekeres.LayerLemma.dist2_le_of_later}{LAYERLEAN/LayerLemma.lean:1012}]\label{lg:thm:radius}
+Let $S$ be a finite set, $c$ a point, and $m,K\in\N$ with $0<m$ and $K\le 2m$; let $\rho=\operatorname{rotAbout}(c,2\pi/m)$.
+Assume that $c\notin S$, that $\rho$ maps $S$ into $S$, and that $S$ is $K$-free. Let $n,n'\in\N$ with $n\le n'$, let
+$x\in\hv(\peel(S,n))$ and $y\in\peel(S,n')$. Then
+\[
+  \operatorname{dist2}(c,y)\le\operatorname{dist2}(c,x).
+\]
+\end{theorem}
+
+\begin{proof}
+Put $L=\hv(\peel(S,n))$. By Lemma~\ref{lg:lem:layer}(a), $L=\{\rho^{j}(x):0\le j<m\}$. For each $j$,
+$\rho^{j}(x)=\operatorname{rotAbout}(c,2\pi j/m)(x)$ by Corollary~\ref{lg:cor:period}, so
+$\operatorname{dist2}(c,\rho^{j}(x))=\operatorname{dist2}(c,x)$ by Lemma~\ref{lg:lem:rotfacts}(d). Hence $L$ is
+contained in $D=\{z:\operatorname{dist2}(c,z)\le\operatorname{dist2}(c,x)\}$, which is convex by Lemma~\ref{lg:lem:disk}
+(with $R=\operatorname{dist2}(c,x)$). So $\conv(L)\subseteq D$. By Lemma~\ref{lg:lem:layer}(c) (as $n'\ge n$),
+$y\in\conv(L)\subseteq D$.
+\end{proof}
+
+\begin{remark}
+Only the weak inequality is stated, for $n\le n'$ (including $n=n'$), and general position is not assumed. Strictly
+decreasing radii are not claimed here. Rule~B (Lemma~\ref{lg:lem:ruleB}) uses only weak inequalities between radii.
+\end{remark}
+
+\subsection{Fans and the chain clauses}\label{lg:ssec:chain}
+
+The two orientation identities behind the fan lemma, and the identity behind Lemma~\ref{lg:lem:halfplane}, are all
+instances of one vector identity in the plane.
+
+\begin{lemma}[a Cramer identity; written step]\label{lg:lem:cramer}
+For all $X,Y,Z\in\R^2$,
+\[
+  \det(X,Y)\,Z+\det(Y,Z)\,X+\det(Z,X)\,Y=0 .
+\]
+Consequently, for all $w,V\in\R^2$,
+\begin{align*}
+  \det(X,Y)\langle w,Z\rangle+\det(Y,Z)\langle w,X\rangle+\det(Z,X)\langle w,Y\rangle&=0,\\
+  \det(X,Y)\det(V,Z)+\det(Y,Z)\det(V,X)+\det(Z,X)\det(V,Y)&=0.
+\end{align*}
+\end{lemma}
+
+\begin{proof}
+Fix $k\in\{0,1\}$ and consider the $3\times3$ matrix with rows $(X_k,Y_k,Z_k)$, $(X_0,Y_0,Z_0)$, $(X_1,Y_1,Z_1)$. Two of
+its rows are equal, so its determinant vanishes. Expanding along the first row gives
+$X_k\det(Y,Z)-Y_k\det(X,Z)+Z_k\det(X,Y)=0$, which is the $k$-th coordinate of the first identity because
+$-\det(X,Z)=\det(Z,X)$. The other two identities follow by applying the linear maps $v\mapsto\langle w,v\rangle$ and
+$v\mapsto\det(V,v)$.
+\end{proof}
+
+\begin{lemma}[transitivity in a half-plane; \leanref{ErdosSzekeres.LayerLemma.orient_trans_halfplane}{LAYERLEAN/LayerLemma.lean:629}]\label{lg:lem:trans}
+Let $a,b,c,e,w$ be points (here $c$ is an arbitrary point, not a centre). If
+\[
+  0<\operatorname{lin}(w,a,b),\quad 0<\operatorname{lin}(w,a,c),\quad 0<\operatorname{lin}(w,a,e),\quad
+  0<\orient(a,b,c),\quad 0<\orient(a,c,e),
+\]
+then $0<\orient(a,b,e)$.
+\end{lemma}
+
+\begin{proof}
+Put $B=b-a$, $C=c-a$, $E=e-a$. By (O1) and Definition~\ref{lg:def:lin}, $\orient(a,b,c)=\det(B,C)$,
+$\orient(a,c,e)=\det(C,E)$, $\orient(a,b,e)=\det(B,E)$, and $\operatorname{lin}(w,a,z)=\langle w,z-a\rangle$. The
+second identity of Lemma~\ref{lg:lem:cramer} with $(X,Y,Z)=(B,C,E)$ reads
+$\det(B,C)\langle w,E\rangle+\det(C,E)\langle w,B\rangle+\det(E,B)\langle w,C\rangle=0$. Since $\det(E,B)=-\det(B,E)$,
+this is
+\begin{equation}\label{lg:eq:trans}
+  \orient(a,b,e)\operatorname{lin}(w,a,c)=\orient(a,b,c)\operatorname{lin}(w,a,e)+\orient(a,c,e)\operatorname{lin}(w,a,b).
+\end{equation}
+The right side is a sum of two products of positive numbers, hence positive. As $\operatorname{lin}(w,a,c)>0$, it
+follows that $\orient(a,b,e)>0$. (Lean checks identity~\eqref{lg:eq:trans} directly by \lean{ring}, without
+Lemma~\ref{lg:lem:cramer}.)
+\end{proof}
+
+In words: inside an open half-plane bounded by a line through $a$, the counterclockwise angular order around $a$ is
+transitive.
+
+\begin{lemma}[fan step; \leanref{ErdosSzekeres.LayerLemma.fan_step}{LAYERLEAN/LayerLemma.lean:641}]\label{lg:lem:fan-step}
+Let $p,a,b,c,e$ be points (here $c$ is an arbitrary point, not a centre). If
+\[
+  0<\orient(b,c,e),\quad 0<\orient(p,c,e),\quad 0<\orient(p,b,c),\quad 0<\orient(a,b,c),\quad 0<\orient(p,a,c),
+\]
+then $0<\orient(a,c,e)$.
+\end{lemma}
+
+\begin{proof}
+Put $P=p-c$, $A=a-c$, $B=b-c$, $E=e-c$. By (O2) (cyclic invariance, and $\orient(x,y,c)=\det(x-c,y-c)$ for all
+$x,y$),
+\begin{gather*}
+  \orient(p,b,c)=\det(P,B),\qquad \orient(a,b,c)=\det(A,B),\qquad \orient(p,a,c)=\det(P,A),\\
+  \orient(a,c,e)=\orient(e,a,c)=\det(E,A),\qquad \orient(p,c,e)=\orient(e,p,c)=\det(E,P),\\
+  \orient(b,c,e)=\orient(e,b,c)=\det(E,B).
+\end{gather*}
+The third identity of Lemma~\ref{lg:lem:cramer} with $(X,Y,Z,V)=(P,B,A,E)$ reads
+\[
+  \det(P,B)\det(E,A)+\det(B,A)\det(E,P)+\det(A,P)\det(E,B)=0.
+\]
+Since $\det(B,A)=-\det(A,B)$ and $\det(A,P)=-\det(P,A)$, this is
+\begin{equation}\label{lg:eq:fanstep}
+  \orient(p,b,c)\orient(a,c,e)=\orient(p,c,e)\orient(a,b,c)+\orient(b,c,e)\orient(p,a,c).
+\end{equation}
+By the hypotheses the right side is positive, and $\orient(p,b,c)>0$; hence $\orient(a,c,e)>0$. (Lean checks
+identity~\eqref{lg:eq:fanstep} directly by \lean{ring}, without Lemma~\ref{lg:lem:cramer}.)
+\end{proof}
+
+\begin{lemma}[orientation as a linear functional; \leanref{ErdosSzekeres.LayerLemma.orient_eq_lin}{LAYERLEAN/LayerLemma.lean:653}]\label{lg:lem:orient-lin}
+For all points $p,x,y$,
+\[
+  \orient(p,x,y)=\operatorname{lin}\bigl((-(x_1-p_1),\;x_0-p_0),\;x,\;y\bigr).
+\]
+\end{lemma}
+
+\begin{proof}
+By (O1), $\orient(p,x,y)=\det(x-p,\,y-p)=\det(x-p,\,y-x)+\det(x-p,\,x-p)=\det(x-p,\,y-x)=\langle J(x-p),\,y-x\rangle$,
+and $J(x-p)=(-(x_1-p_1),\,x_0-p_0)$.
+\end{proof}
+
+So, for $x\ne p$, $\{y:\orient(p,x,y)>0\}$ is the open half-plane to the left of the directed line $p\to x$; its
+bounding line passes through $x$.
+
+\begin{lemma}[fan chains have all triples positive; \leanref{ErdosSzekeres.LayerLemma.fan_positive}{LAYERLEAN/LayerLemma.lean:658}]\label{lg:lem:fan-pos}
+Let $p,w$ be points, $q:\N\to\R^2$ a sequence of points (write $q_s=q(s)$), and $n\in\N$. Assume
+\begin{itemize}
+\item[(H)] $0<\operatorname{lin}(w,p,q_s)$ for all $s<n$;
+\item[(F)] $0<\orient(p,q_s,q_{s+1})$ for all $s$ with $s+1<n$;
+\item[(T)] $0<\orient(q_s,q_{s+1},q_{s+2})$ for all $s$ with $s+2<n$.
+\end{itemize}
+Then (a) $0<\orient(p,q_j,q_k)$ for all $j,k$ with $j<k$ and $k<n$; and (b) $0<\orient(q_i,q_j,q_k)$ for all $i,j,k$
+with $i<j$, $j<k$ and $k<n$.
+\end{lemma}
+
+\begin{proof}
+(a) Fix $j$. We show by induction on $k\ge j+1$ that $k<n$ implies $\orient(p,q_j,q_k)>0$. For $k=j+1$ this is (F)
+with $s=j$. Let $k\ge j+1$ satisfy the claim and let $k+1<n$. Then $k<n$, so $\orient(p,q_j,q_k)>0$; (F) with $s=k$
+gives $\orient(p,q_k,q_{k+1})>0$; and (H) gives $\operatorname{lin}(w,p,q_t)>0$ for $t\in\{j,k,k+1\}$, all of which
+are $<n$. Lemma~\ref{lg:lem:trans} with $(a,b,c,e)=(p,q_j,q_k,q_{k+1})$ gives $\orient(p,q_j,q_{k+1})>0$.
+
+(b$_0$) We first show: for all $i<s$ with $s+1<n$, $\orient(q_i,q_s,q_{s+1})>0$. Fix $i$ and induct on $s\ge i+1$. For
+$s=i+1$ this is (T) with $s=i$ (note $i+2<n$). Let $s\ge i+1$ satisfy the claim and let $s+2<n$. Apply
+Lemma~\ref{lg:lem:fan-step} with $(p,a,b,c,e)=(p,q_i,q_s,q_{s+1},q_{s+2})$; its five hypotheses hold:
+$\orient(q_s,q_{s+1},q_{s+2})>0$ by (T); $\orient(p,q_{s+1},q_{s+2})>0$ by (F) with $s+1$; $\orient(p,q_s,q_{s+1})>0$ by
+(F) with $s$; $\orient(q_i,q_s,q_{s+1})>0$ by the induction hypothesis (as $s+1<n$); and $\orient(p,q_i,q_{s+1})>0$ by
+(a), since $i<s+1<n$. The conclusion is $\orient(q_i,q_{s+1},q_{s+2})>0$.
+
+(b) Fix $i<j$ and induct on $k\ge j+1$, showing that $k<n$ implies $\orient(q_i,q_j,q_k)>0$. For $k=j+1$ this is
+(b$_0$) with $s=j$. Let $k\ge j+1$ satisfy the claim and let $k+1<n$. Put $w'=(-(q_{i,1}-p_1),\,q_{i,0}-p_0)$, where
+$q_i=(q_{i,0},q_{i,1})$. By Lemma~\ref{lg:lem:orient-lin}, $\operatorname{lin}(w',q_i,y)=\orient(p,q_i,y)$ for every $y$,
+so by (a) $\operatorname{lin}(w',q_i,q_t)>0$ for every $t$ with $i<t<n$, in particular for $t\in\{j,k,k+1\}$. Moreover
+$\orient(q_i,q_j,q_k)>0$ by the induction hypothesis (as $k<n$), and $\orient(q_i,q_k,q_{k+1})>0$ by (b$_0$) with
+$s=k$ (as $i<k$ and $k+1<n$). Lemma~\ref{lg:lem:trans} with $(a,b,c,e,w)=(q_i,q_j,q_k,q_{k+1},w')$ gives
+$\orient(q_i,q_j,q_{k+1})>0$.
+\end{proof}
+
+\begin{definition}[fan points; \leanref{ErdosSzekeres.LayerLemma.fanPt}{LAYERLEAN/LayerLemma.lean:694}]\label{lg:def:fanpt}
+For $n\in\N$, a point $p$, $q:\N\to\R^2$ and $i\in\{0,1,\dots,n\}$ (Lean \texttt{Fin (n + 1)}; $n$ is an implicit
+argument),
+\[
+  \operatorname{fanPt}(p,q)(i)=\begin{cases} p & \text{if } i=0,\\ q(i-1) & \text{otherwise.}\end{cases}
+\]
+\end{definition}
+
+\begin{theorem}[fan chains give convex polygons; \leanref{ErdosSzekeres.LayerLemma.hasConvexNGon_of_fan}{LAYERLEAN/LayerLemma.lean:700}]\label{lg:thm:fan}
+Let $S$ be a finite set, $p,w$ points, $q:\N\to\R^2$ (write $q_s=q(s)$) and $n\in\N$ with $3\le n$. Assume that $p\in S$,
+that $q_s\in S$ for all $s<n$, and that (H), (F) and (T) of Lemma~\ref{lg:lem:fan-pos} hold:
+$0<\operatorname{lin}(w,p,q_s)$ for all $s<n$; $0<\orient(p,q_s,q_{s+1})$ for all $s$ with $s+1<n$; and
+$0<\orient(q_s,q_{s+1},q_{s+2})$ for all $s$ with $s+2<n$. Then \texttt{HasConvexNGon (n + 1) S}: some $(n+1)$-element
+subset of $S$ is in convex position.
+\end{theorem}
+
+\begin{proof}
+Let $x_i=\operatorname{fanPt}(p,q)(i)$ for $i\in\{0,\dots,n\}$; so $x_0=p$ and $x_i=q_{i-1}$ for $1\le i\le n$.
+
+\emph{Step 1: every increasing triple is positive.} Let $0\le i<j<k\le n$. If $i=0$, then $j,k\ge1$ and
+$\orient(x_0,x_j,x_k)=\orient(p,q_{j-1},q_{k-1})>0$ by Lemma~\ref{lg:lem:fan-pos}(a), since $j-1<k-1<n$. If $i\ge1$,
+then $\orient(x_i,x_j,x_k)=\orient(q_{i-1},q_{j-1},q_{k-1})>0$ by Lemma~\ref{lg:lem:fan-pos}(b), since
+$i-1<j-1<k-1<n$.
+
+\emph{Step 2: the points $x_0,\dots,x_n$ are pairwise distinct.} Suppose $x_i=x_j$ with $i\ne j$. As $n+1\ge4>2$, there
+is $k\in\{0,\dots,n\}$ different from $i$ and $j$. Arrange $i,j,k$ increasingly as $i'<j'<k'$. By Step~1,
+$\orient(x_{i'},x_{j'},x_{k'})>0$; but two of these three points are equal (namely $x_i$ and $x_j$), so the orientation
+is $0$ by (O3), a contradiction. (Lean chooses $k$ explicitly and treats the possible orders of $i,j,k$ one by one,
+using \lean{orient_cycle} and $\orient(a,a,d)=0$; the argument is the same.)
+
+\emph{Step 3: convex position.} Apply Lemma~\ref{fd:lem:pos-triples} (\lean{Suk.convexPosition_of_positive_triples})
+with the linearly ordered index set $\{0,\dots,n\}$ (Lean \texttt{Fin (n + 1)} with its usual order), the injective map
+$i\mapsto x_i$ (Step~2), and the full index set, which has $n+1\ge4$ elements; its hypothesis is Step~1. Hence
+$T=\{x_0,\dots,x_n\}$ is in convex position.
+
+\emph{Step 4.} $T\subseteq S$, since $x_0=p\in S$ and $x_i=q_{i-1}\in S$ for $1\le i\le n$ (as $i-1<n$); and
+$\card T=n+1$ by Step~2. Hence \texttt{HasConvexNGon (n + 1) S}.
+\end{proof}
+
+\begin{remark}
+General position is not assumed, and the chain points are not assumed distinct: distinctness of $p,q_0,\dots,q_{n-1}$
+follows from the positivity of the orientations (Step~2), and the proof shows that $\{p,q_0,\dots,q_{n-1}\}$ itself is
+the convex $(n+1)$-gon.
+\end{remark}
+
+\begin{lemma}[inner side of the tangent in the layers; \leanref{ErdosSzekeres.LayerLemma.lin_pos_of_peel}{LAYERLEAN/LayerLemma.lean:864}]\label{lg:lem:halfplane}
+Let $S$ be a finite set, $c$ a point, and $m,K\in\N$ with $3\le m$ and $K\le 2m$; let $\rho=\operatorname{rotAbout}(c,2\pi/m)$.
+Assume that $c\notin S$, that $\rho$ maps $S$ into $S$, that $S$ is $K$-free, and that $S$ is in general position. Let
+$i\in\N$, $p\in\hv(\peel(S,i))$, and $y\in\peel(S,i)$ with $y\ne p$. Then
+\[
+  0<\operatorname{lin}(c-p,\;p,\;y).
+\]
+\end{lemma}
+
+\begin{proof}
+Since $m\ge3$, $0<m$ and Lemma~\ref{lg:lem:layer} applies to $i$ and $p$. Put $L=\hv(\peel(S,i))$; then
+$L=\{\rho^{j}(p):0\le j<m\}$ and $p\ne c$.
+
+\emph{Case $y\in L$.} Then $y=\rho^{j}(p)$ for some $j<m$, and $j\ne0$ because $\rho^{0}(p)=p\ne y$. So $0<j<m$, and
+Lemma~\ref{lg:lem:lin-orbit} gives $0<\operatorname{lin}(c-p,p,y)$.
+
+\emph{Case $y\notin L$.} Then $y\in\peel(S,i)\setminus L=\peel(S,i+1)$. Let $p'=\rho^{m-1}(p)$. Since $m-1<m$,
+$p'\in L$ by Lemma~\ref{lg:lem:layer}(a); and $\rho(p')=\rho^{m}(p)=p$ by Corollary~\ref{lg:cor:period}. We collect
+five positive quantities.
+\begin{itemize}
+\item[(e1)] $\orient(p,\rho(p),y)>0$: Theorem~\ref{lg:thm:nesting} with $(n,n',x)=(i,i+1,p)$ (its hypotheses hold:
+  $2\le m$, $K\le2m$, $c\notin S$, invariance, $K$-freeness, general position, $p\in\hv(\peel(S,i))$,
+  $y\in\peel(S,i+1)$).
+\item[(e2)] $\orient(p',p,y)>0$: Theorem~\ref{lg:thm:nesting} with $(n,n',x)=(i,i+1,p')$ gives
+  $\orient(p',\rho(p'),y)>0$, and $\rho(p')=p$.
+\item[(w1)] $\operatorname{lin}(c-p,p,\rho(p))>0$: Lemma~\ref{lg:lem:lin-orbit} with $j=1$ (as $0<1<m$).
+\item[(w2)] $\operatorname{lin}(c-p,p,p')>0$: Lemma~\ref{lg:lem:lin-orbit} with $j=m-1$ (as $0<m-1<m$).
+\item[(o)] $\orient(p,\rho(p),p')>0$: Lemma~\ref{lg:lem:next-prev} (as $p\ne c$ and $m\ge3$).
+\end{itemize}
+Now put $B=\rho(p)-p$, $C=p'-p$, $E=y-p$ and $w=c-p$. By (O1) and (O2),
+$\orient(p,\rho(p),p')=\det(B,C)$, $\orient(p,\rho(p),y)=\det(B,E)$ and $\orient(p',p,y)=\orient(p,y,p')=\det(E,C)$;
+and $\operatorname{lin}(w,p,z)=\langle w,z-p\rangle$. The second identity of Lemma~\ref{lg:lem:cramer} with
+$(X,Y,Z)=(B,C,E)$ gives $\det(B,C)\langle w,E\rangle=-\det(C,E)\langle w,B\rangle-\det(E,B)\langle w,C\rangle
+=\det(E,C)\langle w,B\rangle+\det(B,E)\langle w,C\rangle$, that is,
+\begin{equation}\label{lg:eq:key}
+  \orient(p,\rho(p),p')\operatorname{lin}(c-p,p,y)
+  =\orient(p',p,y)\operatorname{lin}(c-p,p,\rho(p))+\orient(p,\rho(p),y)\operatorname{lin}(c-p,p,p').
+\end{equation}
+By (e2), (w1), (e1) and (w2) the right side is positive, and by (o) $\orient(p,\rho(p),p')>0$. Hence
+$\operatorname{lin}(c-p,p,y)>0$.
+\end{proof}
+
+\begin{remark}
+(1) Geometrically, $\{y:\operatorname{lin}(c-p,p,y)=0\}$ is the tangent at $p$ to the circle about $c$ through $p$, and
+the lemma says that every other point of the layers $\ge i$ lies strictly on the side of the centre. Identity
+\eqref{lg:eq:key} holds for arbitrary points $p,\rho(p),p',y,c$; Lean proves it by \lean{ring}.
+(2) Lean obtains $\rho(p')=\rho^{m}(p)=p$ from the minimal period of $p$ (Lemma~\ref{ll:lem:minperiod}); we used
+Corollary~\ref{lg:cor:period} instead.
+\end{remark}
+
+\begin{theorem}[geometric chain soundness; \leanref{ErdosSzekeres.LayerLemma.chain_clauses_sound}{LAYERLEAN/LayerLemma.lean:914}]\label{lg:thm:chain}
+Let $S$ be a finite set, $c$ a point, and $m,K\in\N$ with $3\le m$, $4\le K$ and $K\le 2m$; let
+$\rho=\operatorname{rotAbout}(c,2\pi/m)$. Assume that $c\notin S$, that $\rho$ maps $S$ into $S$, that $S$ is $K$-free,
+and that $S$ is in general position. Let $i\in\N$, $p\in\hv(\peel(S,i))$, and $q:\N\to\R^2$ (write $q_s=q(s)$) be such
+that
+\begin{itemize}
+\item[(C1)] $q_s\in\peel(S,i)$ for all $s<K-1$;
+\item[(C2)] $q_s\ne p$ for all $s<K-1$;
+\item[(C3)] $0<\orient(p,q_s,q_{s+1})$ for all $s$ with $s+1<K-1$;
+\item[(C4)] $0<\orient(q_s,q_{s+1},q_{s+2})$ for all $s$ with $s+2<K-1$.
+\end{itemize}
+Then a contradiction follows (the Lean conclusion is \lean{False}). In other words, no such $i$, $p$ and $q$ exist.
+\end{theorem}
+
+\begin{proof}
+Since $K\ge4$, $K-1\ge3$ is the ordinary difference. We have $p\in\peel(S,i)$, as $\hv(\peel(S,i))\subseteq\peel(S,i)$.
+For every $s<K-1$, Lemma~\ref{lg:lem:halfplane} with $y=q_s$ (which lies in $\peel(S,i)$ by (C1) and differs from $p$
+by (C2)) gives $0<\operatorname{lin}(c-p,p,q_s)$. Apply Theorem~\ref{lg:thm:fan} to the finite set $\peel(S,i)$, the
+pivot $p$, the vector $w=c-p$, the sequence $q$ and $n=K-1\ge3$: its hypotheses are $p\in\peel(S,i)$, (C1), the
+half-plane inequalities just proved, (C3) and (C4). Hence $\peel(S,i)$ contains $(K-1)+1=K$ points in convex position.
+Since $\peel(S,i)\subseteq S$ by (L2), so does $S$ (Lemma~\ref{fd:lem:mono}(c)), contradicting the $K$-freeness of
+$S$. (Lean unfolds the definition of \lean{HasConvexNGon} here instead of citing Lemma~\ref{fd:lem:mono}(c).)
+\end{proof}
+
+\begin{remark}
+The chain points $q_s$ are not assumed distinct, and they may lie in any layer $\ge i$. The theorem is the geometric
+statement behind the chain clauses of the layered encoders (``no pivot of layer $i$ with $K-1$ chain points whose
+consecutive fan and turn orientations are positive''). That the encoders' clauses express exactly this family
+(including, where auxiliary chain variables are used, that their least-fixpoint values satisfy every chain clause;
+\dirn{LEANEXT/review/REPORT.md}, finding F5) is a code-level step outside \dirn{LAYERLEAN/LayerLemma.lean}; see the
+paragraph \emph{Encoders} at the beginning of this section.
+\end{remark}
+
+\subsection{Polar coordinates and the angular rules}\label{lg:ssec:polar}
+
+\begin{definition}[polar; \leanref{ErdosSzekeres.LayerLemma.polar}{LAYERLEAN/LayerLemma.lean:932}]\label{lg:def:polar}
+For a point $c$ and $r,\theta\in\R$,
+\[
+  \operatorname{polar}(c,r,\theta)=\bigl(c_0+r\cos\theta,\;c_1+r\sin\theta\bigr).
+\]
+There is no sign condition on $r$.
+\end{definition}
+
+\begin{lemma}[orientation of three points in polar form; \leanref{ErdosSzekeres.LayerLemma.orient_polar}{LAYERLEAN/LayerLemma.lean:935}]\label{lg:lem:polar}
+For every point $c$ and all $r_a,r_b,r_d,\alpha,\beta,\delta\in\R$,
+\[
+  \orient\bigl(\operatorname{polar}(c,r_a,\alpha),\operatorname{polar}(c,r_b,\beta),\operatorname{polar}(c,r_d,\delta)\bigr)
+  =r_ar_b\sin(\beta-\alpha)+r_br_d\sin(\delta-\beta)+r_dr_a\sin(\alpha-\delta).
+\]
+\end{lemma}
+
+\begin{proof}
+Write $e(\varphi)=(\cos\varphi,\sin\varphi)$ and let $a,b,d$ be the three points; then $a-c=A:=r_ae(\alpha)$,
+$b-c=B:=r_be(\beta)$, $d-c=D:=r_de(\delta)$, so $b-a=B-A$ and $d-a=D-A$. By (O1) and bilinearity and antisymmetry of
+$\det$,
+\begin{align*}
+  \orient(a,b,d)=\det(B-A,D-A)&=\det(B,D)-\det(B,A)-\det(A,D)+\det(A,A)\\
+  &=\det(A,B)+\det(B,D)+\det(D,A).
+\end{align*}
+Finally, for all $r,s,\varphi,\psi\in\R$,
+$\det(re(\varphi),se(\psi))=rs(\cos\varphi\sin\psi-\sin\varphi\cos\psi)=rs\sin(\psi-\varphi)$; applied to the three
+terms this gives the formula. (Lean expands the three sines on the right by the subtraction formula and concludes with
+\lean{ring}.)
+\end{proof}
+
+\begin{lemma}[rule A, centre inside; \leanref{ErdosSzekeres.LayerLemma.orient_polar_centre_inside}{LAYERLEAN/LayerLemma.lean:943}]\label{lg:lem:ruleA}
+(Angular rule A: centre inside the triangle.)
+Let $c$ be a point and $r_a,r_b,r_d,\alpha,\beta,\delta\in\R$ with $0<r_a$, $0<r_b$, $0<r_d$, and
+\[
+  0<\beta-\alpha<\pi,\qquad 0<\delta-\beta<\pi,\qquad 0<\alpha-\delta+2\pi<\pi .
+\]
+Then $0<\orient\bigl(\operatorname{polar}(c,r_a,\alpha),\operatorname{polar}(c,r_b,\beta),\operatorname{polar}(c,r_d,\delta)\bigr)$.
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{lg:lem:polar} the orientation is $r_ar_b\sin(\beta-\alpha)+r_br_d\sin(\delta-\beta)+r_dr_a\sin(\alpha-\delta)$.
+By (S1) the sine is positive on $(0,\pi)$, so $\sin(\beta-\alpha)>0$, $\sin(\delta-\beta)>0$, and, by
+$2\pi$-periodicity, $\sin(\alpha-\delta)=\sin(\alpha-\delta+2\pi)>0$. With $r_a,r_b,r_d>0$ all three terms are
+positive.
+\end{proof}
+
+The hypotheses say $\alpha<\beta<\delta<\alpha+2\pi$ with all three counterclockwise gaps $\beta-\alpha$,
+$\delta-\beta$, $\alpha+2\pi-\delta$ (which sum to $2\pi$) in $(0,\pi)$. The name of the rule refers to the position of
+$c$ inside the triangle; that geometric fact is neither stated nor used here, and only the orientation statement is
+proved. Lean states only the positive orientation.
+
+\begin{lemma}[sine of a sum below the sum of the sines; \leanref{ErdosSzekeres.LayerLemma.sin_add_lt}{LAYERLEAN/LayerLemma.lean:956}]\label{lg:lem:sinadd}
+For all $x,y\in\R$ with $0<x<\pi$ and $0<y<\pi$: $\sin(x+y)<\sin x+\sin y$.
+\end{lemma}
+
+\begin{proof}
+By (S1), $\sin x>0$ and $\sin y>0$. Moreover $\cos x<1$: by (S2), $\cos x\le1$, and $\cos x=1$ only for
+$x\in2\pi\Z$, which has no point in $(0,\pi)$; likewise $\cos y<1$. Hence $\sin x\cos y<\sin x$ and $\cos x\sin y<\sin y$, and
+$\sin(x+y)=\sin x\cos y+\cos x\sin y<\sin x+\sin y$.
+\end{proof}
+
+\begin{lemma}[rule B, middle point outermost; \leanref{ErdosSzekeres.LayerLemma.orient_polar_halfplane}{LAYERLEAN/LayerLemma.lean:974}]\label{lg:lem:ruleB}
+(Angular rule B: open half-plane, angularly middle point outermost.)
+Let $c$ be a point and $r_a,r_b,r_d,\alpha,\beta,\delta\in\R$ with
+\[
+  0<r_a,\quad 0<r_d,\quad r_a\le r_b,\quad r_d\le r_b,\quad 0<\beta-\alpha,\quad 0<\delta-\beta,\quad \delta-\alpha<\pi .
+\]
+Then $0<\orient\bigl(\operatorname{polar}(c,r_a,\alpha),\operatorname{polar}(c,r_b,\beta),\operatorname{polar}(c,r_d,\delta)\bigr)$.
+\end{lemma}
+
+\begin{proof}
+Let $a,b,d$ denote the three points $\operatorname{polar}(c,r_a,\alpha)$, $\operatorname{polar}(c,r_b,\beta)$,
+$\operatorname{polar}(c,r_d,\delta)$. Put $x=\beta-\alpha>0$ and $y=\delta-\beta>0$. Then $x+y=\delta-\alpha<\pi$, so
+$x=(x+y)-y<\pi$ and $y=(x+y)-x<\pi$. Since $\alpha-\delta=-(x+y)$ and the sine is odd, Lemma~\ref{lg:lem:polar} gives
+\begin{align*}
+  \orient(a,b,d)&=r_ar_b\sin x+r_br_d\sin y-r_dr_a\sin(x+y)\\
+  &=r_a(r_b-r_d)\sin x+r_d(r_b-r_a)\sin y+r_ar_d\bigl(\sin x+\sin y-\sin(x+y)\bigr).
+\end{align*}
+Here $\sin x,\sin y>0$ by (S1) (arguments in $(0,\pi)$), $r_a,r_d>0$ and $r_b-r_d,\,r_b-r_a\ge0$, so the first two terms are
+$\ge0$; the third is $>0$ by Lemma~\ref{lg:lem:sinadd} and $r_ar_d>0$. Hence the orientation is positive. (Lean uses
+$r_ar_b\sin x\ge r_ar_d\sin x$, $r_br_d\sin y\ge r_ar_d\sin y$ and Lemma~\ref{lg:lem:sinadd}, and concludes with
+\lean{nlinarith}; this is the same estimate.)
+\end{proof}
+
+\begin{remark}
+The radius hypotheses are weak inequalities ($r_b>0$ follows from $0<r_a\le r_b$). This is the form of the radius
+order of Theorem~\ref{lg:thm:radius}, which gives $\operatorname{dist2}(c,y)\le\operatorname{dist2}(c,x)$, that is,
+$r_y\le r_x$ for the radii $r=\sqrt{\operatorname{dist2}(c,\cdot)}$. The rules apply to points given in polar form
+with explicit angle representatives. No Lean statement of this file writes the points of a layered configuration in
+that form (a point $y$ as $\operatorname{polar}(c,r,\theta)$ with $r^2=\operatorname{dist2}(c,y)$, and a layer as
+$\{\operatorname{polar}(c,r_i,\theta_i+2\pi k/m)\}$; \dirn{LEANEXT/review/REPORT.md}, finding F2); that step, and the
+choice of which rule applies to which triple, are outside these statements (see the paragraph \emph{Encoders} at the
+beginning of this section).
+\end{remark}
+
+\paragraph{Coverage.}
+All 27 declarations of the scope of this section, which are all the declarations of lines 465--1032 of
+\dirn{LAYERLEAN/LayerLemma.lean} (23 theorems and 4 definitions), are covered:
+\lean{rotAbout_iterate} (Lemma~\ref{lg:lem:rot-iter}; the section on the layer lemma restates it as well),
+\lean{orient_rotAbout} (Lemma~\ref{lg:lem:orient-rot}),
+\lean{trig_layer} (Lemma~\ref{lg:lem:trig}, stated just before Lemma~\ref{lg:lem:regular}, whose proof uses it),
+\lean{orient_regular_nonneg} (Lemma~\ref{lg:lem:regular}),
+\lean{lin} (Definition~\ref{lg:def:lin}),
+\lean{lin_rotAbout} (Lemma~\ref{lg:lem:lin-rot}),
+\lean{lin_orbit_pos} (Lemma~\ref{lg:lem:lin-orbit}),
+\lean{orient_next_prev_pos} (Lemma~\ref{lg:lem:next-prev}),
+\lean{convex_orient_nonneg} (Lemma~\ref{lg:lem:halfplane-convex}),
+\lean{dist2} (Definition~\ref{lg:def:dist2}),
+\lean{convex_disk} (Lemma~\ref{lg:lem:disk}),
+\lean{strict_nesting} (Theorem~\ref{lg:thm:nesting}),
+\lean{centre_not_mem_of_even} (Lemma~\ref{lg:lem:centre}),
+\lean{dist2_le_of_later} (Theorem~\ref{lg:thm:radius}),
+\lean{orient_trans_halfplane} (Lemma~\ref{lg:lem:trans}),
+\lean{fan_step} (Lemma~\ref{lg:lem:fan-step}),
+\lean{orient_eq_lin} (Lemma~\ref{lg:lem:orient-lin}),
+\lean{fan_positive} (Lemma~\ref{lg:lem:fan-pos}),
+\lean{fanPt} (Definition~\ref{lg:def:fanpt}),
+\lean{hasConvexNGon_of_fan} (Theorem~\ref{lg:thm:fan}),
+\lean{lin_pos_of_peel} (Lemma~\ref{lg:lem:halfplane}),
+\lean{chain_clauses_sound} (Theorem~\ref{lg:thm:chain}),
+\lean{polar} (Definition~\ref{lg:def:polar}),
+\lean{orient_polar} (Lemma~\ref{lg:lem:polar}),
+\lean{orient_polar_centre_inside} (Lemma~\ref{lg:lem:ruleA}),
+\lean{sin_add_lt} (Lemma~\ref{lg:lem:sinadd}) and
+\lean{orient_polar_halfplane} (Lemma~\ref{lg:lem:ruleB}); all in \dirn{LAYERLEAN/LayerLemma.lean}, namespace
+\lean{ErdosSzekeres.LayerLemma}.
+The written steps (Lemmas~\ref{lg:lem:layer}, \ref{lg:lem:rotfacts}, \ref{lg:lem:cramer} and
+Corollary~\ref{lg:cor:period}) are not Lean declarations; the paragraph \emph{Rigor} at the beginning of the section
+says how each relates to the Lean proofs.
+Deliberately not covered here:
+\begin{itemize}
+\item \lean{peel_antitone} (line 460) and \lean{card_peel} (line 1037, docstring at line 1036), which adjoin these
+  lines but belong to the section on the layer lemma (Lemma~\ref{ll:lem:antitone}, Theorem~\ref{ll:thm:card-peel});
+\item the verbatim copies of these declarations in other units, which are duplicates. The following eight files
+  contain lines 11--1147 of \dirn{LAYERLEAN/LayerLemma.lean} verbatim (checked with \texttt{diff}); a search of the
+  uncompressed files of the repository finds no further copy:\newline
+  \dirn{LEANEXT/capstone/Capstone.lean};\newline
+  \dirn{LEANEXT/capstone/Capstone2.lean};\newline
+  \dirn{LEANEXT/merged/Merged.lean};\newline
+  \dirn{LEANEXT/linked/Linked.lean};\newline
+  \dirn{LEANEXT/es7corr/ES7Corollaries.lean};\newline
+  \dirn{LEANEXT/review/VacuityTest.lean} (all 1148 lines, followed by the tests of the next item);\newline
+  \dirn{ENCBLEAN/geo/ES8Geo/Capstone2.lean};\newline
+  \dirn{LAYERLEAN/logs/axioms_recheck_20261106/LayerLemmaAxioms.lean};
+\item the 19 declarations of \dirn{LEANEXT/review/tests_tail.lean} (namespace
+  \lean{ErdosSzekeres.LayerLemma.Review}), which no section covers: the definitions \lean{L4}, \lean{S4}, \lean{H6} and
+  the theorems \lean{mem_S4}, \lean{card_S4}, \lean{angle4}, \lean{rot4}, \lean{hc4}, \lean{inv4}, \lean{gp4},
+  \lean{inner4}, \lean{hno4}, \lean{hv4}, \lean{peel1_4}, \lean{nest4}, \lean{orbit4}, \lean{layers4}, \lean{chain4}
+  and \lean{inv6}. They are non-vacuity tests, not results (\dirn{LEANEXT/review/REPORT.md}, item~6). For the eight
+  points $S_4=\{(\pm2,0),(0,\pm2),(\pm1/2,\pm1/2)\}$, the centre $c=0$, $m=4$ and $K=8$, the theorems \lean{hc4},
+  \lean{inv4}, \lean{gp4} and \lean{hno4} state that $c\notin S_4$, that $\operatorname{rotAbout}(0,2\pi/4)$ maps $S_4$
+  into $S_4$, that $S_4$ is in general position and that $S_4$ is $8$-free; \lean{hv4} and \lean{peel1_4} state that
+  $(2,0)\in\hv(S_4)$ and $(1/2,1/2)\in\peel(S_4,1)$; and \lean{nest4}, \lean{orbit4}, \lean{layers4} and \lean{chain4}
+  apply \lean{strict_nesting} (Theorem~\ref{lg:thm:nesting}), \lean{hullVerts_eq_orbitFS_rotAbout}
+  (Theorem~\ref{ll:thm:core-rot}), \lean{layers_are_orbits} (Theorem~\ref{ll:thm:layers}) and
+  \lean{chain_clauses_sound} (Theorem~\ref{lg:thm:chain}) to this instance. \lean{inv6} states that
+  $\operatorname{rotAbout}(0,2\pi/6)$ maps the set \lean{H6} of the six points $(\cos(k\pi/3),\sin(k\pi/3))$,
+  $0\le k<6$ (a regular hexagon), into itself. \dirn{LEANEXT/review/VacuityTest.lean} consists of all 1148 lines of
+  \dirn{LAYERLEAN/LayerLemma.lean} followed by the 149 lines of \dirn{LEANEXT/review/tests_tail.lean}, as lines
+  1149--1297 (both parts checked with \texttt{cmp}), so the same 19 declarations stand there at lines 1160--1276. Both
+  files end with \texttt{\#print axioms}, \texttt{\#check} and \texttt{\#print} commands, which are not declarations;
+\item declarations in other namespaces that share a short name with one of the 27 (in
+  \lean{ErdosSzekeres.OrbitConsistency}, \lean{PhaseClassification}, \lean{C7} and
+  \lean{ErdosSzekeres.SymReduction.Review}); they are separate Lean declarations. Those of
+  \dirn{LEANEXT/phase/PhaseClassification.lean} (\lean{polar}, \lean{orient_polar}, \lean{orient_polar_centre_inside},
+  \lean{sin_add_lt} and \lean{orient_polar_halfplane}) are treated in the section on phase patterns.
+\end{itemize}

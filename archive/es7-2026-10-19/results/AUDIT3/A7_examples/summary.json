@@ -1,0 +1,2247 @@
+[
+ {
+  "name": "c3_27",
+  "path": "SYMMAX/c3_27points.txt",
+  "fmt": "EIS",
+  "K": 7,
+  "claimed_size": 27,
+  "parsed_points": 27,
+  "parse_anomalies": [],
+  "size_ok": true,
+  "distinct": true,
+  "distinct_affine": true,
+  "max_abs_native_coordinate": 287,
+  "origin_in_set": false,
+  "centre_claim_ok": true,
+  "symmetry": {
+   "C3E": {
+    "invariant": true,
+    "orbit_sizes": [
+     3,
+     3,
+     3,
+     3,
+     3,
+     3,
+     3,
+     3,
+     3
+    ],
+    "num_orbits": 9,
+    "fixed_points": 0,
+    "numeric_isometry_max_error": "1.000e-87"
+   }
+  },
+  "other_symmetries_tested": {
+   "C3E": true,
+   "C6E": false,
+   "C2E": false,
+   "conj(real-axis mirror)": false
+  },
+  "collinear_triples": 0,
+  "orient_methodB_mismatches": 0,
+  "orient_numeric_mismatches": 0,
+  "min_abs_numeric_cross": "6.928203e+00",
+  "order_ties": [
+   0,
+   0
+  ],
+  "dp_max_convex_four_orders": [
+   6,
+   6,
+   6,
+   6
+  ],
+  "dp_witness": [
+   [
+    -195,
+    -287
+   ],
+   [
+    -55,
+    -65
+   ],
+   [
+    -53,
+    -58
+   ],
+   [
+    -41,
+    4
+   ],
+   [
+    -71,
+    -6
+   ],
+   [
+    -108,
+    -19
+   ]
+  ],
+  "dp_witnesses_verified": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "brute_output": [
+   "n=27 table: zero_entries_on_distinct_triples=0 alternation_violations=0",
+   "k=7 subsets=888030 convex_TRI=0 convex_WRAP=0 disagreements=0",
+   "k=6 subsets=296010 convex_TRI=9214 convex_WRAP=9214 disagreements=0"
+  ],
+  "random_subset_checks": {
+   "count": 60,
+   "mismatches": 0,
+   "dp_value_histogram": {
+    "6": 39,
+    "5": 21
+   }
+  },
+  "convex_layers": [
+   {
+    "size": 3,
+    "orbits": [
+     2
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 6,
+    "orbits": [
+     0,
+     7
+    ],
+    "is_single_orbit": false
+   },
+   {
+    "size": 6,
+    "orbits": [
+     3,
+     4
+    ],
+    "is_single_orbit": false
+   },
+   {
+    "size": 6,
+    "orbits": [
+     1,
+     8
+    ],
+    "is_single_orbit": false
+   },
+   {
+    "size": 6,
+    "orbits": [
+     5,
+     6
+    ],
+    "is_single_orbit": false
+   }
+  ],
+  "seconds": 0.3,
+  "brute_K_minus_1_convex": {
+   "k": "6",
+   "subsets": "296010",
+   "convex_TRI": "9214",
+   "convex_WRAP": "9214",
+   "disagreements": "0"
+  },
+  "VERDICT": "PASS"
+ },
+ {
+  "name": "c3_30",
+  "path": "SYMMAX/c3_30points.txt",
+  "fmt": "EIS",
+  "K": 7,
+  "claimed_size": 30,
+  "parsed_points": 30,
+  "parse_anomalies": [],
+  "size_ok": true,
+  "distinct": true,
+  "distinct_affine": true,
+  "max_abs_native_coordinate": 306,
+  "origin_in_set": false,
+  "centre_claim_ok": true,
+  "symmetry": {
+   "C3E": {
+    "invariant": true,
+    "orbit_sizes": [
+     3,
+     3,
+     3,
+     3,
+     3,
+     3,
+     3,
+     3,
+     3,
+     3
+    ],
+    "num_orbits": 10,
+    "fixed_points": 0,
+    "numeric_isometry_max_error": "1.000e-87"
+   }
+  },
+  "other_symmetries_tested": {
+   "C3E": true,
+   "C6E": false,
+   "C2E": false,
+   "conj(real-axis mirror)": false
+  },
+  "collinear_triples": 0,
+  "orient_methodB_mismatches": 0,
+  "orient_numeric_mismatches": 0,
+  "min_abs_numeric_cross": "1.125833e+01",
+  "order_ties": [
+   0,
+   0
+  ],
+  "dp_max_convex_four_orders": [
+   6,
+   6,
+   6,
+   6
+  ],
+  "dp_witness": [
+   [
+    -299,
+    -125
+   ],
+   [
+    -177,
+    -59
+   ],
+   [
+    -125,
+    -26
+   ],
+   [
+    -86,
+    22
+   ],
+   [
+    -87,
+    28
+   ],
+   [
+    -144,
+    162
+   ]
+  ],
+  "dp_witnesses_verified": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "brute_output": [
+   "n=30 table: zero_entries_on_distinct_triples=0 alternation_violations=0",
+   "k=7 subsets=2035800 convex_TRI=0 convex_WRAP=0 disagreements=0",
+   "k=6 subsets=593775 convex_TRI=19393 convex_WRAP=19393 disagreements=0"
+  ],
+  "random_subset_checks": {
+   "count": 60,
+   "mismatches": 0,
+   "dp_value_histogram": {
+    "6": 37,
+    "5": 21,
+    "4": 2
+   }
+  },
+  "convex_layers": [
+   {
+    "size": 6,
+    "orbits": [
+     4,
+     8
+    ],
+    "is_single_orbit": false
+   },
+   {
+    "size": 6,
+    "orbits": [
+     2,
+     9
+    ],
+    "is_single_orbit": false
+   },
+   {
+    "size": 6,
+    "orbits": [
+     1,
+     3
+    ],
+    "is_single_orbit": false
+   },
+   {
+    "size": 6,
+    "orbits": [
+     5,
+     6
+    ],
+    "is_single_orbit": false
+   },
+   {
+    "size": 6,
+    "orbits": [
+     0,
+     7
+    ],
+    "is_single_orbit": false
+   }
+  ],
+  "seconds": 0.4,
+  "brute_K_minus_1_convex": {
+   "k": "6",
+   "subsets": "593775",
+   "convex_TRI": "19393",
+   "convex_WRAP": "19393",
+   "disagreements": "0"
+  },
+  "VERDICT": "PASS"
+ },
+ {
+  "name": "c3_31",
+  "path": "SYMMAX/c3_31points.txt",
+  "fmt": "EIS",
+  "K": 7,
+  "claimed_size": 31,
+  "parsed_points": 31,
+  "parse_anomalies": [],
+  "size_ok": true,
+  "distinct": true,
+  "distinct_affine": true,
+  "max_abs_native_coordinate": 1017,
+  "origin_in_set": true,
+  "centre_claim_ok": true,
+  "symmetry": {
+   "C3E": {
+    "invariant": true,
+    "orbit_sizes": [
+     1,
+     3,
+     3,
+     3,
+     3,
+     3,
+     3,
+     3,
+     3,
+     3,
+     3
+    ],
+    "num_orbits": 11,
+    "fixed_points": 1,
+    "numeric_isometry_max_error": "5.000e-87"
+   }
+  },
+  "other_symmetries_tested": {
+   "C3E": true,
+   "C6E": false,
+   "C2E": false,
+   "conj(real-axis mirror)": false
+  },
+  "collinear_triples": 0,
+  "orient_methodB_mismatches": 0,
+  "orient_numeric_mismatches": 0,
+  "min_abs_numeric_cross": "1.039230e+01",
+  "order_ties": [
+   0,
+   0
+  ],
+  "dp_max_convex_four_orders": [
+   6,
+   6,
+   6,
+   6
+  ],
+  "dp_witness": [
+   [
+    -1017,
+    -436
+   ],
+   [
+    -152,
+    -49
+   ],
+   [
+    -114,
+    -19
+   ],
+   [
+    -98,
+    16
+   ],
+   [
+    -93,
+    75
+   ],
+   [
+    -456,
+    480
+   ]
+  ],
+  "dp_witnesses_verified": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "brute_output": [
+   "n=31 table: zero_entries_on_distinct_triples=0 alternation_violations=0",
+   "k=7 subsets=2629575 convex_TRI=0 convex_WRAP=0 disagreements=0",
+   "k=6 subsets=736281 convex_TRI=23082 convex_WRAP=23082 disagreements=0"
+  ],
+  "random_subset_checks": {
+   "count": 60,
+   "mismatches": 0,
+   "dp_value_histogram": {
+    "6": 37,
+    "5": 22,
+    "4": 1
+   }
+  },
+  "convex_layers": [
+   {
+    "size": 6,
+    "orbits": [
+     3,
+     4
+    ],
+    "is_single_orbit": false
+   },
+   {
+    "size": 6,
+    "orbits": [
+     5,
+     8
+    ],
+    "is_single_orbit": false
+   },
+   {
+    "size": 6,
+    "orbits": [
+     1,
+     6
+    ],
+    "is_single_orbit": false
+   },
+   {
+    "size": 6,
+    "orbits": [
+     2,
+     10
+    ],
+    "is_single_orbit": false
+   },
+   {
+    "size": 6,
+    "orbits": [
+     7,
+     9
+    ],
+    "is_single_orbit": false
+   },
+   {
+    "size": 1,
+    "orbits": [
+     0
+    ],
+    "is_single_orbit": true
+   }
+  ],
+  "seconds": 0.6,
+  "brute_K_minus_1_convex": {
+   "k": "6",
+   "subsets": "736281",
+   "convex_TRI": "23082",
+   "convex_WRAP": "23082",
+   "disagreements": "0"
+  },
+  "VERDICT": "PASS"
+ },
+ {
+  "name": "c4_28",
+  "path": "SYMMAX/c4_28points.txt",
+  "fmt": "Z2",
+  "K": 7,
+  "claimed_size": 28,
+  "parsed_points": 28,
+  "parse_anomalies": [],
+  "size_ok": true,
+  "distinct": true,
+  "distinct_affine": true,
+  "max_abs_native_coordinate": 147,
+  "origin_in_set": false,
+  "centre_claim_ok": true,
+  "symmetry": {
+   "C4": {
+    "invariant": true,
+    "orbit_sizes": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "num_orbits": 7,
+    "fixed_points": 0,
+    "numeric_isometry_max_error": "0.000e+00"
+   }
+  },
+  "other_symmetries_tested": {
+   "C2": true,
+   "C4": true,
+   "M_y-axis": false,
+   "M_x-axis": false,
+   "M_diag": false,
+   "M_antidiag": false
+  },
+  "collinear_triples": 0,
+  "orient_methodB_mismatches": 0,
+  "orient_numeric_mismatches": 0,
+  "min_abs_numeric_cross": "8.000000e+00",
+  "order_ties": [
+   0,
+   0
+  ],
+  "dp_max_convex_four_orders": [
+   6,
+   6,
+   6,
+   6
+  ],
+  "dp_witness": [
+   [
+    -147,
+    -43
+   ],
+   [
+    -90,
+    -22
+   ],
+   [
+    -66,
+    -10
+   ],
+   [
+    -58,
+    -4
+   ],
+   [
+    -22,
+    90
+   ],
+   [
+    -43,
+    147
+   ]
+  ],
+  "dp_witnesses_verified": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "brute_output": [
+   "n=28 table: zero_entries_on_distinct_triples=0 alternation_violations=0",
+   "k=7 subsets=1184040 convex_TRI=0 convex_WRAP=0 disagreements=0",
+   "k=6 subsets=376740 convex_TRI=3050 convex_WRAP=3050 disagreements=0"
+  ],
+  "random_subset_checks": {
+   "count": 60,
+   "mismatches": 0,
+   "dp_value_histogram": {
+    "5": 28,
+    "6": 31,
+    "4": 1
+   }
+  },
+  "convex_layers": [
+   {
+    "size": 4,
+    "orbits": [
+     1
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 4,
+    "orbits": [
+     3
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 4,
+    "orbits": [
+     2
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 4,
+    "orbits": [
+     0
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 4,
+    "orbits": [
+     4
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 4,
+    "orbits": [
+     6
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 4,
+    "orbits": [
+     5
+    ],
+    "is_single_orbit": true
+   }
+  ],
+  "seconds": 0.4,
+  "brute_K_minus_1_convex": {
+   "k": "6",
+   "subsets": "376740",
+   "convex_TRI": "3050",
+   "convex_WRAP": "3050",
+   "disagreements": "0"
+  },
+  "VERDICT": "PASS"
+ },
+ {
+  "name": "c5_30",
+  "path": "SYMMAX/c5_30points.txt",
+  "fmt": "Z5",
+  "K": 7,
+  "claimed_size": 30,
+  "parsed_points": 30,
+  "parse_anomalies": [],
+  "size_ok": true,
+  "distinct": true,
+  "distinct_affine": true,
+  "max_abs_native_coordinate": 457,
+  "origin_in_set": false,
+  "centre_claim_ok": true,
+  "symmetry": {
+   "C5": {
+    "invariant": true,
+    "orbit_sizes": [
+     5,
+     5,
+     5,
+     5,
+     5,
+     5
+    ],
+    "num_orbits": 6,
+    "fixed_points": 0,
+    "numeric_isometry_max_error": "1.000e-87"
+   }
+  },
+  "other_symmetries_tested": {
+   "C5": true,
+   "neg(half-turn)": false,
+   "conj(real-axis mirror)": false
+  },
+  "collinear_triples": 0,
+  "orient_methodB_mismatches": 0,
+  "orient_numeric_mismatches": 0,
+  "min_abs_numeric_cross": "8.339493e+00",
+  "order_ties": [
+   0,
+   0
+  ],
+  "dp_max_convex_four_orders": [
+   6,
+   6,
+   6,
+   6
+  ],
+  "dp_witness": [
+   [
+    -179,
+    9,
+    278,
+    78
+   ],
+   [
+    -78,
+    -257,
+    -69,
+    200
+   ],
+   [
+    -130,
+    -101,
+    -50,
+    -28
+   ],
+   [
+    -47,
+    -136,
+    28,
+    -23
+   ],
+   [
+    80,
+    109,
+    58,
+    197
+   ],
+   [
+    29,
+    80,
+    102,
+    130
+   ]
+  ],
+  "dp_witnesses_verified": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "brute_output": [
+   "n=30 table: zero_entries_on_distinct_triples=0 alternation_violations=0",
+   "k=7 subsets=2035800 convex_TRI=0 convex_WRAP=0 disagreements=0",
+   "k=6 subsets=593775 convex_TRI=3270 convex_WRAP=3270 disagreements=0"
+  ],
+  "random_subset_checks": {
+   "count": 40,
+   "mismatches": 0,
+   "dp_value_histogram": {
+    "5": 15,
+    "6": 24,
+    "4": 1
+   }
+  },
+  "convex_layers": [
+   {
+    "size": 5,
+    "orbits": [
+     1
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 5,
+    "orbits": [
+     5
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 5,
+    "orbits": [
+     0
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 5,
+    "orbits": [
+     3
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 5,
+    "orbits": [
+     4
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 5,
+    "orbits": [
+     2
+    ],
+    "is_single_orbit": true
+   }
+  ],
+  "seconds": 0.9,
+  "brute_K_minus_1_convex": {
+   "k": "6",
+   "subsets": "593775",
+   "convex_TRI": "3270",
+   "convex_WRAP": "3270",
+   "disagreements": "0"
+  },
+  "VERDICT": "PASS"
+ },
+ {
+  "name": "c5_31",
+  "path": "SYMMAX/c5_31points.txt",
+  "fmt": "Z5",
+  "K": 7,
+  "claimed_size": 31,
+  "parsed_points": 31,
+  "parse_anomalies": [],
+  "size_ok": true,
+  "distinct": true,
+  "distinct_affine": true,
+  "max_abs_native_coordinate": 292,
+  "origin_in_set": true,
+  "centre_claim_ok": true,
+  "symmetry": {
+   "C5": {
+    "invariant": true,
+    "orbit_sizes": [
+     1,
+     5,
+     5,
+     5,
+     5,
+     5,
+     5
+    ],
+    "num_orbits": 7,
+    "fixed_points": 1,
+    "numeric_isometry_max_error": "2.000e-87"
+   }
+  },
+  "other_symmetries_tested": {
+   "C5": true,
+   "neg(half-turn)": false,
+   "conj(real-axis mirror)": false
+  },
+  "collinear_triples": 0,
+  "orient_methodB_mismatches": 0,
+  "orient_numeric_mismatches": 0,
+  "min_abs_numeric_cross": "4.886549e-01",
+  "order_ties": [
+   0,
+   0
+  ],
+  "dp_max_convex_four_orders": [
+   6,
+   6,
+   6,
+   6
+  ],
+  "dp_witness": [
+   [
+    13,
+    52,
+    62,
+    292
+   ],
+   [
+    -86,
+    -10,
+    3,
+    74
+   ],
+   [
+    97,
+    76,
+    92,
+    145
+   ],
+   [
+    -46,
+    19,
+    86,
+    -33
+   ],
+   [
+    76,
+    89,
+    160,
+    86
+   ],
+   [
+    39,
+    49,
+    279,
+    -13
+   ]
+  ],
+  "dp_witnesses_verified": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "brute_output": [
+   "n=31 table: zero_entries_on_distinct_triples=0 alternation_violations=0",
+   "k=7 subsets=2629575 convex_TRI=0 convex_WRAP=0 disagreements=0",
+   "k=6 subsets=736281 convex_TRI=8445 convex_WRAP=8445 disagreements=0"
+  ],
+  "random_subset_checks": {
+   "count": 40,
+   "mismatches": 0,
+   "dp_value_histogram": {
+    "5": 20,
+    "6": 20
+   }
+  },
+  "convex_layers": [
+   {
+    "size": 5,
+    "orbits": [
+     3
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 5,
+    "orbits": [
+     2
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 5,
+    "orbits": [
+     1
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 5,
+    "orbits": [
+     4
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 5,
+    "orbits": [
+     5
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 5,
+    "orbits": [
+     6
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 1,
+    "orbits": [
+     0
+    ],
+    "is_single_orbit": true
+   }
+  ],
+  "seconds": 0.9,
+  "brute_K_minus_1_convex": {
+   "k": "6",
+   "subsets": "736281",
+   "convex_TRI": "8445",
+   "convex_WRAP": "8445",
+   "disagreements": "0"
+  },
+  "VERDICT": "PASS"
+ },
+ {
+  "name": "c6_30",
+  "path": "SYMMAX/c6_30points.txt",
+  "fmt": "EIS",
+  "K": 7,
+  "claimed_size": 30,
+  "parsed_points": 30,
+  "parse_anomalies": [],
+  "size_ok": true,
+  "distinct": true,
+  "distinct_affine": true,
+  "max_abs_native_coordinate": 456,
+  "origin_in_set": false,
+  "centre_claim_ok": true,
+  "symmetry": {
+   "C6E": {
+    "invariant": true,
+    "orbit_sizes": [
+     6,
+     6,
+     6,
+     6,
+     6
+    ],
+    "num_orbits": 5,
+    "fixed_points": 0,
+    "numeric_isometry_max_error": "2.000e-87"
+   },
+   "C3E": {
+    "invariant": true,
+    "orbit_sizes": [
+     3,
+     3,
+     3,
+     3,
+     3,
+     3,
+     3,
+     3,
+     3,
+     3
+    ],
+    "num_orbits": 10,
+    "fixed_points": 0,
+    "numeric_isometry_max_error": "2.000e-87"
+   }
+  },
+  "other_symmetries_tested": {
+   "C3E": true,
+   "C6E": true,
+   "C2E": true,
+   "conj(real-axis mirror)": false
+  },
+  "collinear_triples": 0,
+  "orient_methodB_mismatches": 0,
+  "orient_numeric_mismatches": 0,
+  "min_abs_numeric_cross": "5.196152e+00",
+  "order_ties": [
+   0,
+   0
+  ],
+  "dp_max_convex_four_orders": [
+   6,
+   6,
+   6,
+   6
+  ],
+  "dp_witness": [
+   [
+    -456,
+    -89
+   ],
+   [
+    -367,
+    -456
+   ],
+   [
+    -162,
+    -179
+   ],
+   [
+    -158,
+    -173
+   ],
+   [
+    -139,
+    -53
+   ],
+   [
+    -179,
+    -17
+   ]
+  ],
+  "dp_witnesses_verified": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "brute_output": [
+   "n=30 table: zero_entries_on_distinct_triples=0 alternation_violations=0",
+   "k=7 subsets=2035800 convex_TRI=0 convex_WRAP=0 disagreements=0",
+   "k=6 subsets=593775 convex_TRI=25244 convex_WRAP=25244 disagreements=0"
+  ],
+  "random_subset_checks": {
+   "count": 60,
+   "mismatches": 0,
+   "dp_value_histogram": {
+    "6": 41,
+    "5": 16,
+    "4": 3
+   }
+  },
+  "convex_layers": [
+   {
+    "size": 6,
+    "orbits": [
+     3
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 6,
+    "orbits": [
+     2
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 6,
+    "orbits": [
+     4
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 6,
+    "orbits": [
+     1
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 6,
+    "orbits": [
+     0
+    ],
+    "is_single_orbit": true
+   }
+  ],
+  "seconds": 0.3,
+  "brute_K_minus_1_convex": {
+   "k": "6",
+   "subsets": "593775",
+   "convex_TRI": "25244",
+   "convex_WRAP": "25244",
+   "disagreements": "0"
+  },
+  "VERDICT": "PASS"
+ },
+ {
+  "name": "mirror_32",
+  "path": "SYMMAX/mirror_32points.txt",
+  "fmt": "Z2",
+  "K": 7,
+  "claimed_size": 32,
+  "parsed_points": 32,
+  "parse_anomalies": [],
+  "size_ok": true,
+  "distinct": true,
+  "distinct_affine": true,
+  "max_abs_native_coordinate": 614,
+  "origin_in_set": false,
+  "centre_claim_ok": true,
+  "symmetry": {
+   "M": {
+    "invariant": true,
+    "orbit_sizes": [
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "num_orbits": 16,
+    "fixed_points": 0,
+    "numeric_isometry_max_error": "0.000e+00"
+   }
+  },
+  "points_on_mirror_axis": 0,
+  "axis_claim_ok": true,
+  "other_symmetries_tested": {
+   "C2": false,
+   "C4": false,
+   "M_y-axis": true,
+   "M_x-axis": false,
+   "M_diag": false,
+   "M_antidiag": false
+  },
+  "collinear_triples": 0,
+  "orient_methodB_mismatches": 0,
+  "orient_numeric_mismatches": 0,
+  "min_abs_numeric_cross": "6.000000e+00",
+  "order_ties": [
+   0,
+   0
+  ],
+  "dp_max_convex_four_orders": [
+   6,
+   6,
+   6,
+   6
+  ],
+  "dp_witness": [
+   [
+    -614,
+    -50
+   ],
+   [
+    -226,
+    16
+   ],
+   [
+    -172,
+    47
+   ],
+   [
+    -103,
+    238
+   ],
+   [
+    -117,
+    300
+   ],
+   [
+    -190,
+    541
+   ]
+  ],
+  "dp_witnesses_verified": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "brute_output": [
+   "n=32 table: zero_entries_on_distinct_triples=0 alternation_violations=0",
+   "k=7 subsets=3365856 convex_TRI=0 convex_WRAP=0 disagreements=0",
+   "k=6 subsets=906192 convex_TRI=23184 convex_WRAP=23184 disagreements=0"
+  ],
+  "random_subset_checks": {
+   "count": 60,
+   "mismatches": 0,
+   "dp_value_histogram": {
+    "5": 24,
+    "6": 34,
+    "4": 2
+   }
+  },
+  "convex_layers": [
+   {
+    "size": 6
+   },
+   {
+    "size": 6
+   },
+   {
+    "size": 6
+   },
+   {
+    "size": 6
+   },
+   {
+    "size": 6
+   },
+   {
+    "size": 2
+   }
+  ],
+  "seconds": 0.6,
+  "brute_K_minus_1_convex": {
+   "k": "6",
+   "subsets": "906192",
+   "convex_TRI": "23184",
+   "convex_WRAP": "23184",
+   "disagreements": "0"
+  },
+  "VERDICT": "PASS"
+ },
+ {
+  "name": "k6_c2_16",
+  "path": "SYMMAX/k6/c2_16points.txt",
+  "fmt": "Z2",
+  "K": 6,
+  "claimed_size": 16,
+  "parsed_points": 16,
+  "parse_anomalies": [],
+  "size_ok": true,
+  "distinct": true,
+  "distinct_affine": true,
+  "max_abs_native_coordinate": 1613549,
+  "origin_in_set": false,
+  "centre_claim_ok": true,
+  "symmetry": {
+   "C2": {
+    "invariant": true,
+    "orbit_sizes": [
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "num_orbits": 8,
+    "fixed_points": 0,
+    "numeric_isometry_max_error": "0.000e+00"
+   }
+  },
+  "other_symmetries_tested": {
+   "C2": true,
+   "C4": false,
+   "M_y-axis": false,
+   "M_x-axis": false,
+   "M_diag": false,
+   "M_antidiag": false
+  },
+  "collinear_triples": 0,
+  "orient_methodB_mismatches": 0,
+  "orient_numeric_mismatches": 0,
+  "min_abs_numeric_cross": "1.163284e+09",
+  "order_ties": [
+   0,
+   0
+  ],
+  "dp_max_convex_four_orders": [
+   5,
+   5,
+   5,
+   5
+  ],
+  "dp_witness": [
+   [
+    -1556323,
+    -153182
+   ],
+   [
+    -119475,
+    -353770
+   ],
+   [
+    -14401,
+    -17642
+   ],
+   [
+    -24523,
+    10347
+   ],
+   [
+    -1145916,
+    -71776
+   ]
+  ],
+  "dp_witnesses_verified": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "brute_output": [
+   "n=16 table: zero_entries_on_distinct_triples=0 alternation_violations=0",
+   "k=6 subsets=8008 convex_TRI=0 convex_WRAP=0 disagreements=0",
+   "k=5 subsets=4368 convex_TRI=272 convex_WRAP=272 disagreements=0"
+  ],
+  "random_subset_checks": {
+   "count": 60,
+   "mismatches": 0,
+   "dp_value_histogram": {
+    "5": 52,
+    "4": 8
+   }
+  },
+  "convex_layers": [
+   {
+    "size": 4,
+    "orbits": [
+     3,
+     6
+    ],
+    "is_single_orbit": false
+   },
+   {
+    "size": 4,
+    "orbits": [
+     0,
+     1
+    ],
+    "is_single_orbit": false
+   },
+   {
+    "size": 4,
+    "orbits": [
+     2,
+     5
+    ],
+    "is_single_orbit": false
+   },
+   {
+    "size": 4,
+    "orbits": [
+     4,
+     7
+    ],
+    "is_single_orbit": false
+   }
+  ],
+  "seconds": 0.2,
+  "brute_K_minus_1_convex": {
+   "k": "5",
+   "subsets": "4368",
+   "convex_TRI": "272",
+   "convex_WRAP": "272",
+   "disagreements": "0"
+  },
+  "VERDICT": "PASS"
+ },
+ {
+  "name": "k6_c3_13",
+  "path": "SYMMAX/k6/c3_13points.txt",
+  "fmt": "EIS",
+  "K": 6,
+  "claimed_size": 13,
+  "parsed_points": 13,
+  "parse_anomalies": [],
+  "size_ok": true,
+  "distinct": true,
+  "distinct_affine": true,
+  "max_abs_native_coordinate": 360185,
+  "origin_in_set": true,
+  "centre_claim_ok": true,
+  "symmetry": {
+   "C3E": {
+    "invariant": true,
+    "orbit_sizes": [
+     1,
+     3,
+     3,
+     3,
+     3
+    ],
+    "num_orbits": 5,
+    "fixed_points": 1,
+    "numeric_isometry_max_error": "1.000e-84"
+   }
+  },
+  "other_symmetries_tested": {
+   "C3E": true,
+   "C6E": false,
+   "C2E": false,
+   "conj(real-axis mirror)": false
+  },
+  "collinear_triples": 0,
+  "orient_methodB_mismatches": 0,
+  "orient_numeric_mismatches": 0,
+  "min_abs_numeric_cross": "3.149417e+08",
+  "order_ties": [
+   0,
+   0
+  ],
+  "dp_max_convex_four_orders": [
+   5,
+   5,
+   5,
+   5
+  ],
+  "dp_witness": [
+   [
+    -180303,
+    -360185
+   ],
+   [
+    -71381,
+    -165699
+   ],
+   [
+    -88584,
+    29581
+   ],
+   [
+    -94318,
+    71381
+   ],
+   [
+    -179882,
+    180303
+   ]
+  ],
+  "dp_witnesses_verified": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "brute_output": [
+   "n=13 table: zero_entries_on_distinct_triples=0 alternation_violations=0",
+   "k=6 subsets=1716 convex_TRI=0 convex_WRAP=0 disagreements=0",
+   "k=5 subsets=1287 convex_TRI=90 convex_WRAP=90 disagreements=0"
+  ],
+  "random_subset_checks": {
+   "count": 60,
+   "mismatches": 0,
+   "dp_value_histogram": {
+    "5": 57,
+    "4": 3
+   }
+  },
+  "convex_layers": [
+   {
+    "size": 3,
+    "orbits": [
+     2
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 3,
+    "orbits": [
+     0
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 3,
+    "orbits": [
+     3
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 3,
+    "orbits": [
+     1
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 1,
+    "orbits": [
+     4
+    ],
+    "is_single_orbit": true
+   }
+  ],
+  "seconds": 0.1,
+  "brute_K_minus_1_convex": {
+   "k": "5",
+   "subsets": "1287",
+   "convex_TRI": "90",
+   "convex_WRAP": "90",
+   "disagreements": "0"
+  },
+  "VERDICT": "PASS"
+ },
+ {
+  "name": "k6_c4_16",
+  "path": "SYMMAX/k6/c4_16points.txt",
+  "fmt": "Z2",
+  "K": 6,
+  "claimed_size": 16,
+  "parsed_points": 16,
+  "parse_anomalies": [],
+  "size_ok": true,
+  "distinct": true,
+  "distinct_affine": true,
+  "max_abs_native_coordinate": 737049,
+  "origin_in_set": false,
+  "centre_claim_ok": true,
+  "symmetry": {
+   "C4": {
+    "invariant": true,
+    "orbit_sizes": [
+     4,
+     4,
+     4,
+     4
+    ],
+    "num_orbits": 4,
+    "fixed_points": 0,
+    "numeric_isometry_max_error": "0.000e+00"
+   }
+  },
+  "other_symmetries_tested": {
+   "C2": true,
+   "C4": true,
+   "M_y-axis": false,
+   "M_x-axis": false,
+   "M_diag": false,
+   "M_antidiag": false
+  },
+  "collinear_triples": 0,
+  "orient_methodB_mismatches": 0,
+  "orient_numeric_mismatches": 0,
+  "min_abs_numeric_cross": "5.955373e+08",
+  "order_ties": [
+   0,
+   0
+  ],
+  "dp_max_convex_four_orders": [
+   5,
+   5,
+   5,
+   5
+  ],
+  "dp_witness": [
+   [
+    -737049,
+    -315992
+   ],
+   [
+    -275082,
+    -83243
+   ],
+   [
+    -211144,
+    -23017
+   ],
+   [
+    -83243,
+    275082
+   ],
+   [
+    -315992,
+    737049
+   ]
+  ],
+  "dp_witnesses_verified": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "brute_output": [
+   "n=16 table: zero_entries_on_distinct_triples=0 alternation_violations=0",
+   "k=6 subsets=8008 convex_TRI=0 convex_WRAP=0 disagreements=0",
+   "k=5 subsets=4368 convex_TRI=280 convex_WRAP=280 disagreements=0"
+  ],
+  "random_subset_checks": {
+   "count": 60,
+   "mismatches": 0,
+   "dp_value_histogram": {
+    "5": 58,
+    "4": 2
+   }
+  },
+  "convex_layers": [
+   {
+    "size": 4,
+    "orbits": [
+     3
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 4,
+    "orbits": [
+     2
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 4,
+    "orbits": [
+     0
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 4,
+    "orbits": [
+     1
+    ],
+    "is_single_orbit": true
+   }
+  ],
+  "seconds": 0.1,
+  "brute_K_minus_1_convex": {
+   "k": "5",
+   "subsets": "4368",
+   "convex_TRI": "280",
+   "convex_WRAP": "280",
+   "disagreements": "0"
+  },
+  "VERDICT": "PASS"
+ },
+ {
+  "name": "k6_c5_16",
+  "path": "SYMMAX/k6/c5_16points.txt",
+  "fmt": "Z5",
+  "K": 6,
+  "claimed_size": 16,
+  "parsed_points": 16,
+  "parse_anomalies": [],
+  "size_ok": true,
+  "distinct": true,
+  "distinct_affine": true,
+  "max_abs_native_coordinate": 164340,
+  "origin_in_set": true,
+  "centre_claim_ok": true,
+  "symmetry": {
+   "C5": {
+    "invariant": true,
+    "orbit_sizes": [
+     1,
+     5,
+     5,
+     5
+    ],
+    "num_orbits": 4,
+    "fixed_points": 1,
+    "numeric_isometry_max_error": "1.000e-84"
+   }
+  },
+  "other_symmetries_tested": {
+   "C5": true,
+   "neg(half-turn)": false,
+   "conj(real-axis mirror)": false
+  },
+  "collinear_triples": 0,
+  "orient_methodB_mismatches": 0,
+  "orient_numeric_mismatches": 0,
+  "min_abs_numeric_cross": "3.663044e+07",
+  "order_ties": [
+   0,
+   0
+  ],
+  "dp_max_convex_four_orders": [
+   5,
+   5,
+   5,
+   5
+  ],
+  "dp_witness": [
+   [
+    -46581,
+    20453,
+    60917,
+    91597
+   ],
+   [
+    109151,
+    27874,
+    86749,
+    164340
+   ],
+   [
+    98798,
+    99596,
+    76579,
+    138010
+   ],
+   [
+    -81277,
+    -22402,
+    55189,
+    -109151
+   ],
+   [
+    67034,
+    107498,
+    138178,
+    46581
+   ]
+  ],
+  "dp_witnesses_verified": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "brute_output": [
+   "n=16 table: zero_entries_on_distinct_triples=0 alternation_violations=0",
+   "k=6 subsets=8008 convex_TRI=0 convex_WRAP=0 disagreements=0",
+   "k=5 subsets=4368 convex_TRI=723 convex_WRAP=723 disagreements=0"
+  ],
+  "random_subset_checks": {
+   "count": 40,
+   "mismatches": 0,
+   "dp_value_histogram": {
+    "5": 39,
+    "4": 1
+   }
+  },
+  "convex_layers": [
+   {
+    "size": 5,
+    "orbits": [
+     2
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 5,
+    "orbits": [
+     1
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 5,
+    "orbits": [
+     0
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 1,
+    "orbits": [
+     3
+    ],
+    "is_single_orbit": true
+   }
+  ],
+  "seconds": 0.4,
+  "brute_K_minus_1_convex": {
+   "k": "5",
+   "subsets": "4368",
+   "convex_TRI": "723",
+   "convex_WRAP": "723",
+   "disagreements": "0"
+  },
+  "VERDICT": "PASS"
+ },
+ {
+  "name": "k6_mirror_12",
+  "path": "SYMMAX/k6/mirror_12points.txt",
+  "fmt": "Z2",
+  "K": 6,
+  "claimed_size": 12,
+  "parsed_points": 12,
+  "parse_anomalies": [],
+  "size_ok": true,
+  "distinct": true,
+  "distinct_affine": true,
+  "max_abs_native_coordinate": 286260,
+  "origin_in_set": false,
+  "centre_claim_ok": true,
+  "symmetry": {
+   "M": {
+    "invariant": true,
+    "orbit_sizes": [
+     1,
+     1,
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "num_orbits": 7,
+    "fixed_points": 2,
+    "numeric_isometry_max_error": "0.000e+00"
+   }
+  },
+  "points_on_mirror_axis": 2,
+  "axis_claim_ok": true,
+  "other_symmetries_tested": {
+   "C2": false,
+   "C4": false,
+   "M_y-axis": true,
+   "M_x-axis": false,
+   "M_diag": false,
+   "M_antidiag": false
+  },
+  "collinear_triples": 0,
+  "orient_methodB_mismatches": 0,
+  "orient_numeric_mismatches": 0,
+  "min_abs_numeric_cross": "5.549624e+07",
+  "order_ties": [
+   0,
+   0
+  ],
+  "dp_max_convex_four_orders": [
+   5,
+   5,
+   5,
+   5
+  ],
+  "dp_witness": [
+   [
+    -173636,
+    -8792
+   ],
+   [
+    -61999,
+    -5680
+   ],
+   [
+    -24047,
+    6679
+   ],
+   [
+    -19389,
+    13022
+   ],
+   [
+    -89257,
+    30601
+   ]
+  ],
+  "dp_witnesses_verified": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "brute_output": [
+   "n=12 table: zero_entries_on_distinct_triples=0 alternation_violations=0",
+   "k=6 subsets=924 convex_TRI=0 convex_WRAP=0 disagreements=0",
+   "k=5 subsets=792 convex_TRI=58 convex_WRAP=58 disagreements=0"
+  ],
+  "random_subset_checks": {
+   "count": 60,
+   "mismatches": 0,
+   "dp_value_histogram": {
+    "5": 57,
+    "4": 3
+   }
+  },
+  "convex_layers": [
+   {
+    "size": 4
+   },
+   {
+    "size": 4
+   },
+   {
+    "size": 4
+   }
+  ],
+  "seconds": 0.1,
+  "brute_K_minus_1_convex": {
+   "k": "5",
+   "subsets": "792",
+   "convex_TRI": "58",
+   "convex_WRAP": "58",
+   "disagreements": "0"
+  },
+  "VERDICT": "PASS"
+ },
+ {
+  "name": "sym2_32",
+  "path": "SYM2/sym7_32points.txt",
+  "fmt": "Z2",
+  "K": 7,
+  "claimed_size": 32,
+  "parsed_points": 32,
+  "parse_anomalies": [],
+  "size_ok": true,
+  "distinct": true,
+  "distinct_affine": true,
+  "max_abs_native_coordinate": 1250000,
+  "origin_in_set": false,
+  "centre_claim_ok": true,
+  "symmetry": {
+   "C2": {
+    "invariant": true,
+    "orbit_sizes": [
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "num_orbits": 16,
+    "fixed_points": 0,
+    "numeric_isometry_max_error": "0.000e+00"
+   }
+  },
+  "other_symmetries_tested": {
+   "C2": true,
+   "C4": false,
+   "M_y-axis": false,
+   "M_x-axis": false,
+   "M_diag": false,
+   "M_antidiag": false
+  },
+  "collinear_triples": 0,
+  "orient_methodB_mismatches": 0,
+  "orient_numeric_mismatches": 0,
+  "min_abs_numeric_cross": "7.200000e+01",
+  "order_ties": [
+   0,
+   0
+  ],
+  "dp_max_convex_four_orders": [
+   6,
+   6,
+   6,
+   6
+  ],
+  "dp_witness": [
+   [
+    -250,
+    -1250000
+   ],
+   [
+    -138,
+    -269828
+   ],
+   [
+    -144,
+    -269834
+   ],
+   [
+    -150,
+    -269852
+   ],
+   [
+    -156,
+    -269914
+   ],
+   [
+    -162,
+    -270172
+   ]
+  ],
+  "dp_witnesses_verified": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "brute_output": [
+   "n=32 table: zero_entries_on_distinct_triples=0 alternation_violations=0",
+   "k=7 subsets=3365856 convex_TRI=0 convex_WRAP=0 disagreements=0",
+   "k=6 subsets=906192 convex_TRI=27055 convex_WRAP=27055 disagreements=0"
+  ],
+  "random_subset_checks": {
+   "count": 60,
+   "mismatches": 0,
+   "dp_value_histogram": {
+    "6": 37,
+    "5": 20,
+    "4": 3
+   }
+  },
+  "convex_layers": [
+   {
+    "size": 4,
+    "orbits": [
+     0,
+     1
+    ],
+    "is_single_orbit": false
+   },
+   {
+    "size": 6,
+    "orbits": [
+     2,
+     5,
+     6
+    ],
+    "is_single_orbit": false
+   },
+   {
+    "size": 6,
+    "orbits": [
+     3,
+     4,
+     7
+    ],
+    "is_single_orbit": false
+   },
+   {
+    "size": 6,
+    "orbits": [
+     8,
+     9,
+     15
+    ],
+    "is_single_orbit": false
+   },
+   {
+    "size": 6,
+    "orbits": [
+     10,
+     12,
+     14
+    ],
+    "is_single_orbit": false
+   },
+   {
+    "size": 4,
+    "orbits": [
+     11,
+     13
+    ],
+    "is_single_orbit": false
+   }
+  ],
+  "seconds": 0.6,
+  "brute_K_minus_1_convex": {
+   "k": "6",
+   "subsets": "906192",
+   "convex_TRI": "27055",
+   "convex_WRAP": "27055",
+   "disagreements": "0"
+  },
+  "VERDICT": "PASS"
+ },
+ {
+  "name": "c5_31minus_centre",
+  "path": "SYM5/c5_31minus_centre.txt",
+  "fmt": "Z5",
+  "K": 7,
+  "claimed_size": 30,
+  "parsed_points": 30,
+  "parse_anomalies": [],
+  "size_ok": true,
+  "distinct": true,
+  "distinct_affine": true,
+  "max_abs_native_coordinate": 292,
+  "origin_in_set": false,
+  "centre_claim_ok": true,
+  "symmetry": {
+   "C5": {
+    "invariant": true,
+    "orbit_sizes": [
+     5,
+     5,
+     5,
+     5,
+     5,
+     5
+    ],
+    "num_orbits": 6,
+    "fixed_points": 0,
+    "numeric_isometry_max_error": "2.000e-87"
+   }
+  },
+  "other_symmetries_tested": {
+   "C5": true,
+   "neg(half-turn)": false,
+   "conj(real-axis mirror)": false
+  },
+  "collinear_triples": 0,
+  "orient_methodB_mismatches": 0,
+  "orient_numeric_mismatches": 0,
+  "min_abs_numeric_cross": "4.886549e-01",
+  "order_ties": [
+   0,
+   0
+  ],
+  "dp_max_convex_four_orders": [
+   6,
+   6,
+   6,
+   6
+  ],
+  "dp_witness": [
+   [
+    13,
+    52,
+    62,
+    292
+   ],
+   [
+    -86,
+    -10,
+    3,
+    74
+   ],
+   [
+    97,
+    76,
+    92,
+    145
+   ],
+   [
+    -46,
+    19,
+    86,
+    -33
+   ],
+   [
+    76,
+    89,
+    160,
+    86
+   ],
+   [
+    39,
+    49,
+    279,
+    -13
+   ]
+  ],
+  "dp_witnesses_verified": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "brute_output": [
+   "n=30 table: zero_entries_on_distinct_triples=0 alternation_violations=0",
+   "k=7 subsets=2035800 convex_TRI=0 convex_WRAP=0 disagreements=0",
+   "k=6 subsets=593775 convex_TRI=6525 convex_WRAP=6525 disagreements=0"
+  ],
+  "random_subset_checks": {
+   "count": 40,
+   "mismatches": 0,
+   "dp_value_histogram": {
+    "6": 23,
+    "5": 16,
+    "4": 1
+   }
+  },
+  "convex_layers": [
+   {
+    "size": 5,
+    "orbits": [
+     2
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 5,
+    "orbits": [
+     1
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 5,
+    "orbits": [
+     0
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 5,
+    "orbits": [
+     3
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 5,
+    "orbits": [
+     4
+    ],
+    "is_single_orbit": true
+   },
+   {
+    "size": 5,
+    "orbits": [
+     5
+    ],
+    "is_single_orbit": true
+   }
+  ],
+  "seconds": 0.9,
+  "brute_K_minus_1_convex": {
+   "k": "6",
+   "subsets": "593775",
+   "convex_TRI": "6525",
+   "convex_WRAP": "6525",
+   "disagreements": "0"
+  },
+  "VERDICT": "PASS"
+ }
+]

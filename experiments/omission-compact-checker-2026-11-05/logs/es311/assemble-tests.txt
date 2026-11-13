@@ -1,0 +1,34 @@
+assemble_final311.sh tests, 2026-11-06T01:13:25Z; assemble_final311.sh sha256 8d7097a6714fac78fa453fe75e78d5d6c5ed4dcad3dd6fdca1d1bd552ae7fad5
+stub source: 2744669cfb2c3e1860f6737b8dc76b8f50c258b5a010ee15681e971a23eadc33; statements byte-identical to the template's
+1. stub E311.Final: lean exit 0; 2 sorry warnings; 'E311.balanced_excludes_63' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound] 'E311.residual_excludes_32' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound] 
+2. --test-stub: exit 1 (1 expected); assemble_final311: FAILED: not verified (see <repo>/experiments/omission-compact-checker-2026-11-05/build/chain311/stubtest/out/final311-compact.json)
+   lean main compile: wall 0:03.68, cgroup peak 0.33 GB, RSS 3.22 GB
+   statement: ErdosSzekeres.Omission.Compact311.forces_convex_octagon_311 : ErdosSzekeres.ForcesConvexNGon 311 8
+   axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+   verified: False; problems: ['nonstandard axioms for ErdosSzekeres.Omission.Compact311.forces_convex_octagon_311: [propext, sorryAx, Classical.choice, Quot.sound]']
+   imported modules: 5160 (library 4952); top-level: BalancedBudgets 9aa322437a49, CompactChecker.Bridge311Bal 08e7fc1b8074, CompactChecker.Bridge311Res 21dc7075517f, E311.Final cdf13eb57473, Final311Compact 0d61d6fd38e6, Residual32Bridge2650.Rows e2cee6472837
+   RESULT as expected: Lean exit 0, ForcesConvexNGon 311 8, sorryAx, rejected only for its axioms
+   main compile log: Exit status 0
+3a. run.tsv with 184 of 352 rows: exit 1 (1 expected): assemble_final311: refused: run.tsv: 168 of 352 modules are not ok, e.g. ['E311B.C00004: no row', 'E311B.C00005: no row', 'E311B.C00007: no row', 'E311B.C00009: no row']; 
+3b. a process named like the driver: exit 1 (1 expected): assemble_final311: refused: a drive_es311.py runs on the export; 
+3c. --dry-run on the real export: exit 0 (0 expected):
+    assemble_final311: 2026-11-06T01:13:59Z full run complete: {"rows": 352, "modules_ok": 352, "deps_stamps_ok": 352, "first_compile_start_utc": "2026-11-05T21:48:11Z", "final_row_utc": "2026-11-05T22:45:06Z", "final_olean_sha256": "462f8e2ee6c0c2b712de8bd2aafb757a8d8fb0466ad8d46f21910883c19a7dc3", "final_deps_stamp": "dfc933ac35bfd333ff20c81039f921543199e8e184d84343448742a8424138b6"}
+    assemble_final311: 2026-11-06T01:14:02Z library: 4952 pinned .olean files as in library.json (2026-11-06T00:11:21Z)
+    assemble_final311: 2026-11-06T01:14:02Z catalogs (build/ext = build/chain311 = October record?): {'BalancedProof.Catalog': True, 'BalancedCoverCutsV2': True, 'Residual32Bridge2650.Catalog': True}; route same
+    assemble_final311: 2026-11-06T01:14:03Z inputs of route same: 13 files, all older than the first compile of the run, 2026-11-05T21:48:11Z
+    assemble_final311: 2026-11-06T01:14:03Z LEAN_PATH: 13 roots, 9994 .olean files, no module provided twice
+    assemble_final311: 2026-11-06T01:14:03Z dry run: all checks passed; nothing compiled
+4. extra root with a copy of BalancedBudgets.olean: exit 1 (1 expected): assemble_final311: refused: LEAN_PATH: 1 modules are provided by two LEAN_PATH roots, e.g. [('BalancedBudgets.olean', ['<repo>/experiments/omission-compact-checker-2026-11-05/build/chain311/olean', '<repo>/experiments/omission-compact-checker-2026-11-05/build/chain311/stubtest/shadow'])]
+5. build/ext as an extra root: exit 1 (1 expected): assemble_final311: refused: LEAN_PATH: <repo>/experiments/omission-compact-checker-2026-11-05/build/ext must not be on LEAN_PATH
+6. audit probe: lean exit 0; 4969 module lines (BalancedBudgets listed: 1); #check prints: @OmissionBalanced.balanced_bound_of_hole_budget : ∀ {budget : ℕ},
+7a. report on synthetic logs: exit 1 (1 expected): {"verified": false, "problems": ["1 imported modules not found exactly once on LEAN_PATH, e.g. ['Final311Compact']"], "axioms": "propext, Classical.choice, Quot.sound"}
+   statement: ErdosSzekeres.Omission.Compact311.forces_convex_octagon_311 : ErdosSzekeres.ForcesConvexNGon 311 8 | imported 4969 library 4882 (checked against library.json: 4882 ) | non-library ['BalancedBudgets', 'BalancedProof.Catalog', 'BalancedRows'] ...
+7b. report, lean killed by signal 9 (time -v: Exit status 0; scope 137): exit 1 (1 expected): {"verified": false, "problems": ["scope exit status 137", "terminated by a signal", "1 imported modules not found exactly once on LEAN_PATH, e.g. ['Final311Compact']"], "axioms": "propext, Classical.choice, Quot.sound"}
+7c. report, cgroup oom_kill 1: exit 1 (1 expected): {"verified": false, "problems": ["cgroup oom_kill 1", "1 imported modules not found exactly once on LEAN_PATH, e.g. ['Final311Compact']"], "axioms": "propext, Classical.choice, Quot.sound"}
+8a. run.tsv with one chunk's dependency stamp changed: exit 1 (1 expected): assemble_final311: refused: run.tsv: 1 of 352 modules are not ok, e.g. ['E311B.C00022: dependency stamp 00008d39986d is not the current one']; 
+8b. A311_EXTRA_ROOT without --test-stub or A311_EXPORT: exit 1 (1 expected): assemble_final311: refused: A311_EXTRA_ROOT is a test switch (only with --test-stub or A311_EXPORT)
+9a. fake tree, unchanged: exit 0 (0 expected); route same | library verified 4952 | inputs 13 older than 2026-11-05T21:48:11Z | equal to the hard-cap record: ['CompactChecker/Bridge311Bal', 'CompactChecker/Bridge311Res', 'CompactChecker/Fcat2650', 'CompactChecker/Path', 'ext/BalancedProof/Catalog', 'ext/Residual32Bridge2650/Catalog']
+9b. library.json hash of PopulationBounds changed: exit 1 (1 expected): library: 1 library .olean files differ from library.json, e.g. ['ErdosSzekeres.Omission.PopulationBounds'] (the chain's .olean files may be stale)
+9c. closure.json toolchain sha256 changed: exit 1 (1 expected): library: lean-toolchain differs from closure.json (the chain's .olean files may be stale)
+9d. a copy of Fcat62.olean written now (same bytes, newer mtime): exit 1 (1 expected): route same: ['CompactChecker/Fcat62'] changed after the run's first compile (2026-11-05T21:48:11Z); the run was not compiled against them
+9e. October record of BalancedCoverCutsV2 changed: exit 0 (0 expected); route rebuilt (rebuilt expected)

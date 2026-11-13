@@ -1,0 +1,27 @@
+name = "es8geo"
+version = "0.1.0"
+defaultTargets = ["ES8Geo"]
+
+# ENCBLEAN milestones M4-M8 (DESIGN.md §4). Mathlib lives in this package's own .lake (risk R5, option (a),
+# chosen by the author on 2026-11-07). The repository is NOT required by path: lake would build it inside the
+# repository's frozen .lake. Instead the ten repository modules that the geometry imports are copied verbatim
+# into ErdosSzekeres/ (hashes in VENDOR.sha256), so every constant keeps its repository name.
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "f897ebcf72cd16f89ab4577d0c826cd14afaafc7"
+
+[[require]]
+name = "encblean"
+path = ".."
+
+[[lean_lib]]
+name = "ErdosSzekeres"
+globs = ["ErdosSzekeres.Basic", "ErdosSzekeres.Definitions", "ErdosSzekeres.Orientation",
+  "ErdosSzekeres.OrientationGeometry", "ErdosSzekeres.Suk.BaseChart", "ErdosSzekeres.Suk.BaseOrder",
+  "ErdosSzekeres.Suk.FourPoint", "ErdosSzekeres.Suk.OrientationClique", "ErdosSzekeres.Suk.SupportingLines",
+  "ErdosSzekeres.Suk.TriangleOrder"]
+
+[[lean_lib]]
+name = "ES8Geo"

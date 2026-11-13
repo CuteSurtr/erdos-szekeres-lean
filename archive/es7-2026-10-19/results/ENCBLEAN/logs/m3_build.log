@@ -1,0 +1,13 @@
+date: 2026-11-06T17:18:55+09:00  (M3 Integration: lake build after adding SoundOrbit, SoundChain, SoundAng, SoundRules, SoundWord, Satisfiable to EncB.lean)
+command: systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 /usr/bin/time -v lake build
+rc=0; Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.85; Maximum resident set size (kbytes): 454492
+Only the six new modules and EncB were rebuilt (M2 and U0 modules were up to date from U0's build at 16:53). No warning or error was printed; the #guard_msgs on #print axioms in EncB/Satisfiable.lean held.
+---- lake output ----
+✔ [19/26] Built EncB.SoundOrbit (661ms)
+✔ [20/26] Built EncB.SoundAng (621ms)
+✔ [21/26] Built EncB.SoundChain (900ms)
+✔ [22/26] Built EncB.SoundWord (1.4s)
+✔ [23/26] Built EncB.SoundRules (2.2s)
+✔ [24/26] Built EncB.Satisfiable (351ms)
+✔ [25/26] Built EncB (163ms)
+Build completed successfully (26 jobs).

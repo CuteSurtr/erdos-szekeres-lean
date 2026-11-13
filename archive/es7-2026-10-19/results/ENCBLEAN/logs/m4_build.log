@@ -1,0 +1,35 @@
+Sat Nov  7 05:04:59 AM KST 2026
+ℹ [2166/2176] Built ES8Geo.KeyOrder (5.2s)
+info: ES8Geo/KeyOrder.lean:151:0: 'KeyOrder.cell_lt_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/KeyOrder.lean:152:0: 'KeyOrder.cell_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/KeyOrder.lean:153:0: 'KeyOrder.cell_lt_iff_rank' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/KeyOrder.lean:154:0: 'KeyOrder.cell_lt_iff_rank_finset' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/KeyOrder.lean:155:0: 'KeyOrder.reduce_mod_two_pi' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/KeyOrder.lean:156:0: 'KeyOrder.antipode_odd' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/KeyOrder.lean:157:0: 'KeyOrder.antipode_even' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ES8Geo/KeyOrder.lean:158:0: 'KeyOrder.reduced_lt_iff_key' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (2176 jobs).
+	Command being timed: "lake build"
+	User time (seconds): 80.72
+	System time (seconds): 5.64
+	Percent of CPU this job got: 266%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:32.43
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2862632
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 287
+	Minor (reclaiming a frame) page faults: 779197
+	Voluntary context switches: 38184
+	Involuntary context switches: 30433
+	Swaps: 0
+	File system inputs: 49512
+	File system outputs: 34344
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+Sat Nov  7 05:05:31 AM KST 2026

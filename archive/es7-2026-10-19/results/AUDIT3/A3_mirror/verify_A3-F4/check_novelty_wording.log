@@ -1,0 +1,29 @@
+line 53: **Theorem 2b (34 points, no point on the axis; new, `results/SYMZ`).**
+PASS line 53 is the Theorem 2b heading
+PASS line 53 contains the bare word 'new'
+PASS line 53 does not use the convention phrase
+
+whole-word 'new' in SYMMETRIC.md:
+  47: - **New proof of 2026-10-29** (`results/SYMZ`): a different encoding that adds the reflection's point at infinity as an
+  53: **Theorem 2b (34 points, no point on the axis; new, `results/SYMZ`).**
+  98: - **What may be new.** The exact 31-point fivefold example, and the retained, double-checked certificates.
+  110: set). They are not a new general construction method. The 32-point set is not known to be the central maximum; that
+  164: - Mirror 33 points (new encoding): the retained proof was accepted by both checkers.
+  175: 3. Check each new proof with both checkers, keep the compressed proofs, and compose again.
+
+uses of 'No matching ...' outside the Scope paragraph: []
+PASS the defined phrase is never used in the body (disclaimer covers no actual statement)
+PASS Scope paragraph disclaims priority only for the defined phrase
+PASS Scope paragraph does not mention the word 'new'
+PASS LaTeX note has one thm:M34 statement (line [92])
+PASS LaTeX thm:M34 statement carries no 'new'
+PASS SYMZ/README.md states Theorem 2b once (line [5])
+PASS SYMZ/README.md Theorem 2b carries no 'new'
+PASS LIT/TASK.md contains the rule 'never claim priority or novelty'
+PASS MIRROR.md uses the model wording ('We did not find prior work stating ...; No priority is claimed')
+
+first commit with the Theorem 2b heading: 189ab709a
+  subject: Revise the symmetric write-up after a correctness and novelty audit: lead with the threefold and mirror theorems, credit prior work, record the certificates and their limits
+PASS before that commit the axis-free 34-point mirror case was listed as open
+
+ALL CHECKS PASS

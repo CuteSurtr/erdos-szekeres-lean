@@ -1,0 +1,44 @@
+{
+ "sides": {
+  "balanced": {
+   "modules": 223,
+   "leaves": 782437,
+   "chunk_leaves": 5000,
+   "block_leaves": 64,
+   "wall_cpu_hours": 6.02,
+   "user_cpu_hours": 5.95,
+   "largest_module_s": 137.6,
+   "olean_gb": 5.19,
+   "source_gb": 1.318,
+   "peak_rss_gb_fit_at_largest": 3.67
+  },
+  "residual": {
+   "modules": 126,
+   "leaves": 437579,
+   "chunk_leaves": 5000,
+   "block_leaves": 64,
+   "wall_cpu_hours": 1.88,
+   "user_cpu_hours": 1.85,
+   "largest_module_s": 74.4,
+   "olean_gb": 1.31,
+   "source_gb": 0.333,
+   "peak_rss_gb_fit_at_largest": 3.41
+  }
+ },
+ "parallel": {
+  "16": {
+   "chunk_phase_hours": 0.5,
+   "total_wall_hours": 0.56
+  },
+  "28": {
+   "chunk_phase_hours": 0.29,
+   "total_wall_hours": 0.35
+  }
+ },
+ "chunks_cpu_hours": 7.89,
+ "roots_and_final_s": 240.0,
+ "disk_gb": {
+  "sources": 1.65,
+  "oleans": 6.51
+ }
+}

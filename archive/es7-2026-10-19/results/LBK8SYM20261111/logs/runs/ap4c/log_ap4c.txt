@@ -1,0 +1,13 @@
+22:16:15 start 1 a4n5_2.json N8 2 N7 115148
+22:16:25   rnd 0 trust K 5000 free 5020 octagon vars 28 result True
+22:16:30   rnd 0 d(M,R)= 414 wrong(M,fit)= 938 N8(fit)= 176131 N7 428420 tsat 10.3 tfit 5.7
+22:16:43   rnd 1 trust K 5000 free 5978 octagon vars 3001 result True
+22:16:48   rnd 1 d(M,R)= 240 wrong(M,fit)= 240 N8(fit)= 176131 N7 428420 tsat 12.6 tfit 4.8
+22:17:02   rnd 2 trust K 5000 free 5978 octagon vars 3001 result True
+22:17:07   rnd 2 d(M,R)= 240 wrong(M,fit)= 240 N8(fit)= 176131 N7 428420 tsat 14.4 tfit 4.5
+22:17:23 start 1 anneal from N8 176131 -> 3918 N7 82052
+22:17:23 start 2 a4n1_2.json N8 2 N7 93536
+22:18:16   rnd 0 trust K 5000 free 5020 octagon vars 28 result True
+22:18:30   rnd 0 d(M,R)= 411 wrong(M,fit)= 1102 N8(fit)= 64694 N7 239752 tsat 52.7 tfit 14.4
+22:18:51   rnd 1 trust K 5000 free 6463 octagon vars 4513 result True
+22:19:00   rnd 1 d(M,R)= 525 wrong(M,fit)= 942 N8(fit)= 15949 N7 130760 tsat 21.0 tfit 9.0

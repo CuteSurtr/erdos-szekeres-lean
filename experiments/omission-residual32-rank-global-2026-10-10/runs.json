@@ -1,0 +1,124 @@
+{
+  "scope": "Bounded solver diagnostics. UNKNOWN and time limits are not exclusion certificates. Geometric rows are audited separately.",
+  "encoder": "experiments/omission-residual32-sat-resume-2026-10-10/shared_counter.py",
+  "encoder_sha256": "b126de85857ad3290a1d26c75070f80e47ffb0e428e68db22caa7a2344f2b4a6",
+  "sat_runner": "experiments/omission-residual32-sat-resume-2026-10-10/run.py",
+  "sat_runner_sha256": "a46070cd888d30b9887c766a22db154050fd5aadae832cbd57d4aa7452d43e44",
+  "sat_runs": [
+    {
+      "states": 154,
+      "rows": 2647,
+      "budget": 32,
+      "occupied_required": [
+        0
+      ],
+      "variables": 31109,
+      "clauses": 128121,
+      "seed": 3,
+      "seconds_limit": 600,
+      "status": "unknown",
+      "solver_version": "3.0.1",
+      "solver_sha256": "83c5bd0ebe482332cf7b678f1770c1aefed0a95107349652c619943cd34d0618",
+      "solver_exit_code": 0,
+      "seconds": 600.040141625097,
+      "cnf_sha256": "b5ef8e60d7ed2655b7393ba77fd588e03c32761088df772f7c0fd2223c96a0cc",
+      "name": "global2647-seed3",
+      "configuration": "unsat",
+      "log": "global2647-seed3.log.gz",
+      "log_sha256": "7046e1a3c9e68abc99e8bdf80f9e70b7534f01d52d6ecc7ebe49ecc5056a509c",
+      "conflicts": 7957132
+    },
+    {
+      "states": 154,
+      "rows": 2650,
+      "budget": 32,
+      "occupied_required": [
+        0
+      ],
+      "variables": 31109,
+      "clauses": 128124,
+      "seed": 11,
+      "seconds_limit": 600,
+      "status": "unknown",
+      "solver_version": "3.0.1",
+      "solver_sha256": "83c5bd0ebe482332cf7b678f1770c1aefed0a95107349652c619943cd34d0618",
+      "solver_exit_code": 0,
+      "seconds": 600.0372438749764,
+      "cnf_sha256": "d1d168abd1015d6720e2a0b6b6fe64c81823412bd4eea5ef5c43348a6b19f0c7",
+      "name": "global2650-seed11",
+      "configuration": "sat",
+      "log": "global2650-seed11.log.gz",
+      "log_sha256": "7bc3acb136476bc48615833b93792dd53dc3b9a0be1d94aaf842daa06dda14bf",
+      "conflicts": 15811730
+    }
+  ],
+  "scip_runs": [
+    {
+      "scope": "Exploratory integer feasibility probe, not an exact certificate or Lean theorem. New rows prospective until separate kernel audits pass.",
+      "base": "experiments/omission-residual32-sixth-relaxed-2026-10-10/source-2646.json.gz",
+      "base_decompressed_sha256": "151ea1bfb175f6507d910521eb96961c82b54add2fb7e49e13b864b87241123e",
+      "rows": 2649,
+      "new_supports": [
+        [
+          33,
+          43,
+          53,
+          65,
+          74,
+          77,
+          85,
+          89,
+          91,
+          96,
+          107,
+          110,
+          125
+        ],
+        [
+          1,
+          2,
+          7,
+          12,
+          18,
+          20,
+          27,
+          30,
+          33,
+          34,
+          39,
+          43,
+          53
+        ],
+        [
+          33,
+          43,
+          53,
+          65,
+          75,
+          77,
+          87,
+          89,
+          91,
+          99,
+          110,
+          111,
+          118
+        ]
+      ],
+      "hole_budget": 32,
+      "occupied_required": [
+        0
+      ],
+      "limit_seconds": 600,
+      "status": "timelimit",
+      "seconds": 599.9951497080037,
+      "nodes": 127809,
+      "solver": "SCIP",
+      "version": "10.0.2",
+      "script_sha256": "ddb814735b54bcb8ad99508781f17fbef38982b712e2b4afb74050b3dafe7afe",
+      "script": "search/scip2649.py",
+      "log": "scip2649.log.gz",
+      "log_sha256": "f886cfbf38caf982e6aa0fc09268d3a93b12d4e7db2fc42d7d04cb079f1becdf"
+    }
+  ]
+}

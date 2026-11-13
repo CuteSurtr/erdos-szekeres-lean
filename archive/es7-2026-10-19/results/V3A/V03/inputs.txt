@@ -1,0 +1,8 @@
+input commit a033a13 (ROOT=/opt/in/cloud/es7-2026-10-19), verify/v3 commit 7c6d70c
+v3_jsonl_leaves.py ROOT results/WAVE1 jtree: dirs 72 leaf lines 17942 skipped records 47
+v3_manifest.py ROOT M.jsonl C.jsonl results/WAVE1 jtree: leaves 17989 cases with leaves 100 problems 0
+M.jsonl sha256 4282db60c19aa5cb61a3e27e12f25f134f788d112821fef0ca32ea428940f07e (17989 lines)
+C.jsonl sha256 8724fba58ba65d45c331522be734f781199a55e7abaaec42fe0e60a77f89b82b (450 lines)
+matches the reference run (17,989 leaves, 100 cases, 0 problems)
+Mr.jsonl: removed cases with result ACCEPTED in results/V3T/accepted.tsv (40 cases), idx renumbered
+Mr.jsonl n 17632 leaves, 60 cases, sha256 5f114f4ea0b3f71682f08375dfe977e1bfec9e86142fb0f55eef7396f5825def

@@ -1,0 +1,83 @@
+closed forms of cos/sin(2 pi m/5) vs 80-digit Taylor values: max abs diff = 3.700e-79
+====================================================================================================
+c5_30: 30 points, 30 distinct, orbit sizes [5, 5, 5, 5, 5, 5], closed under *zeta: yes (asserted)
+  j=1: collinear triples=0, exact/numeric sign mismatches=0, min|det|=8.339e+00 (max 4.921e+05), rot err=1.6e-76, antisym=True | max convex: B&B=6, DP=6 -> no convex 7-gon
+        convex k-subset counts (k=4..6): [15145, 19161, 3270] ; convex 7-subsets: 0
+        random-subset cross-check (25 subsets of size 6..11): brute == B&B == DP failures: 0  [0.1s]
+  j=2: collinear triples=0, exact/numeric sign mismatches=0, min|det|=8.006e+00 (max 1.049e+05), rot err=1.0e-76, antisym=True | max convex: B&B=10, DP=10 -> HAS a convex 7-gon
+        witness convex 10-gon (4-point criterion: True; cyclic left turns: True), orbits used [0, 1, 2]:
+        [-51 -28 -75 -164]  [-90 -29 17 -80]  [-47 -136 28 -23]  [269 69 -9 -188]  [164 113 136 89]  [80 -10 51 97]  [23 -24 -113 51]  [188 457 257 179]  [-89 75 24 47]  [-97 -17 -107 -46]
+        random-subset cross-check (25 subsets of size 6..11): brute == B&B == DP failures: 0  [0.1s]
+  j=3: collinear triples=0, exact/numeric sign mismatches=0, min|det|=8.006e+00 (max 1.049e+05), rot err=2.8e-76, antisym=True | max convex: B&B=10, DP=10 -> HAS a convex 7-gon
+        witness convex 10-gon (4-point criterion: True; cyclic left turns: True), orbits used [0, 1, 2]:
+        [-97 -17 -107 -46]  [-89 75 24 47]  [188 457 257 179]  [23 -24 -113 51]  [80 -10 51 97]  [164 113 136 89]  [269 69 -9 -188]  [-47 -136 28 -23]  [-90 -29 17 -80]  [-51 -28 -75 -164]
+        random-subset cross-check (25 subsets of size 6..11): brute == B&B == DP failures: 0  [0.1s]
+  j=4: collinear triples=0, exact/numeric sign mismatches=0, min|det|=8.339e+00 (max 4.921e+05), rot err=3.3e-76, antisym=True | max convex: B&B=6, DP=6 -> no convex 7-gon
+        convex k-subset counts (k=4..6): [15145, 19161, 3270] ; convex 7-subsets: 0
+        random-subset cross-check (25 subsets of size 6..11): brute == B&B == DP failures: 0  [0.1s]
+====================================================================================================
+c5_31: 31 points, 31 distinct, orbit sizes [1, 5, 5, 5, 5, 5, 5], closed under *zeta: yes (asserted)
+  j=1: collinear triples=0, exact/numeric sign mismatches=0, min|det|=4.887e-01 (max 1.564e+05), rot err=1.5e-76, antisym=True | max convex: B&B=6, DP=6 -> no convex 7-gon
+        convex k-subset counts (k=4..6): [17005, 22546, 8445] ; convex 7-subsets: 0
+        random-subset cross-check (25 subsets of size 6..11): brute == B&B == DP failures: 0  [0.1s]
+  j=2: collinear triples=0, exact/numeric sign mismatches=0, min|det|=3.900e+01 (max 1.459e+05), rot err=8.0e-77, antisym=True | max convex: B&B=10, DP=10 -> HAS a convex 7-gon
+        witness convex 10-gon (4-point criterion: True; cyclic left turns: True), orbits used [1, 6]:
+        [-71 6 -25 -46]  [-46 19 86 -33]  [-31 -52 -6 -77]  [67 -52 -19 -65]  [46 -25 52 21]  [33 -13 52 119]  [77 46 25 71]  [65 132 13 46]  [-21 25 -46 31]  [-119 -86 -132 -67]
+        random-subset cross-check (25 subsets of size 6..11): brute == B&B == DP failures: 0  [0.1s]
+  j=3: collinear triples=0, exact/numeric sign mismatches=0, min|det|=3.900e+01 (max 1.459e+05), rot err=2.1e-76, antisym=True | max convex: B&B=10, DP=10 -> HAS a convex 7-gon
+        witness convex 10-gon (4-point criterion: True; cyclic left turns: True), orbits used [1, 6]:
+        [-119 -86 -132 -67]  [-21 25 -46 31]  [65 132 13 46]  [77 46 25 71]  [33 -13 52 119]  [46 -25 52 21]  [67 -52 -19 -65]  [-31 -52 -6 -77]  [-46 19 86 -33]  [-71 6 -25 -46]
+        random-subset cross-check (25 subsets of size 6..11): brute == B&B == DP failures: 0  [0.1s]
+  j=4: collinear triples=0, exact/numeric sign mismatches=0, min|det|=4.887e-01 (max 1.564e+05), rot err=2.4e-76, antisym=True | max convex: B&B=6, DP=6 -> no convex 7-gon
+        convex k-subset counts (k=4..6): [17005, 22546, 8445] ; convex 7-subsets: 0
+        random-subset cross-check (25 subsets of size 6..11): brute == B&B == DP failures: 0  [0.1s]
+====================================================================================================
+c5_31minus_centre: 30 points, 30 distinct, orbit sizes [5, 5, 5, 5, 5, 5], closed under *zeta: yes (asserted)
+  j=1: collinear triples=0, exact/numeric sign mismatches=0, min|det|=4.887e-01 (max 1.564e+05), rot err=1.5e-76, antisym=True | max convex: B&B=6, DP=6 -> no convex 7-gon
+        convex k-subset counts (k=4..6): [14885, 18966, 6525] ; convex 7-subsets: 0
+        random-subset cross-check (25 subsets of size 6..11): brute == B&B == DP failures: 0  [0.1s]
+  j=2: collinear triples=0, exact/numeric sign mismatches=0, min|det|=3.900e+01 (max 1.459e+05), rot err=8.0e-77, antisym=True | max convex: B&B=10, DP=10 -> HAS a convex 7-gon
+        witness convex 10-gon (4-point criterion: True; cyclic left turns: True), orbits used [0, 5]:
+        [-71 6 -25 -46]  [-46 19 86 -33]  [-31 -52 -6 -77]  [67 -52 -19 -65]  [46 -25 52 21]  [33 -13 52 119]  [77 46 25 71]  [65 132 13 46]  [-21 25 -46 31]  [-119 -86 -132 -67]
+        random-subset cross-check (25 subsets of size 6..11): brute == B&B == DP failures: 0  [0.1s]
+  j=3: collinear triples=0, exact/numeric sign mismatches=0, min|det|=3.900e+01 (max 1.459e+05), rot err=2.1e-76, antisym=True | max convex: B&B=10, DP=10 -> HAS a convex 7-gon
+        witness convex 10-gon (4-point criterion: True; cyclic left turns: True), orbits used [0, 5]:
+        [-119 -86 -132 -67]  [-21 25 -46 31]  [65 132 13 46]  [77 46 25 71]  [33 -13 52 119]  [46 -25 52 21]  [67 -52 -19 -65]  [-31 -52 -6 -77]  [-46 19 86 -33]  [-71 6 -25 -46]
+        random-subset cross-check (25 subsets of size 6..11): brute == B&B == DP failures: 0  [0.1s]
+  j=4: collinear triples=0, exact/numeric sign mismatches=0, min|det|=4.887e-01 (max 1.564e+05), rot err=2.4e-76, antisym=True | max convex: B&B=6, DP=6 -> no convex 7-gon
+        convex k-subset counts (k=4..6): [14885, 18966, 6525] ; convex 7-subsets: 0
+        random-subset cross-check (25 subsets of size 6..11): brute == B&B == DP failures: 0  [0.1s]
+====================================================================================================
+k6/c5_16: 16 points, 16 distinct, orbit sizes [1, 5, 5, 5], closed under *zeta: yes (asserted)
+  j=1: collinear triples=0, exact/numeric sign mismatches=0, min|det|=3.663e+07 (max 5.696e+10), rot err=8.0e-74, antisym=True | max convex: B&B=5, DP=5 -> no convex 6-gon
+        convex k-subset counts (k=4..5): [1100, 723] ; convex 6-subsets: 0
+        random-subset cross-check (25 subsets of size 6..11): brute == B&B == DP failures: 0  [0.0s]
+  j=2: collinear triples=0, exact/numeric sign mismatches=0, min|det|=2.255e+08 (max 7.462e+10), rot err=4.0e-74, antisym=True | max convex: B&B=7, DP=7 -> HAS a convex 6-gon
+        witness convex 7-gon (4-point criterion: True; cyclic left turns: True), orbits used [0, 1]:
+        [-138010 -39212 -38414 -61431]  [798 -22219 39212 -98798]  [77591 -86749 22402 -58875]  [61431 -76579 22219 23017]  [98798 99596 76579 138010]  [58875 136466 -27874 81277]  [-23017 38414 -99596 -798]
+        random-subset cross-check (25 subsets of size 6..11): brute == B&B == DP failures: 0  [0.0s]
+  j=3: collinear triples=0, exact/numeric sign mismatches=0, min|det|=2.255e+08 (max 7.462e+10), rot err=1.0e-73, antisym=True | max convex: B&B=7, DP=7 -> HAS a convex 6-gon
+        witness convex 7-gon (4-point criterion: True; cyclic left turns: True), orbits used [0, 1]:
+        [-23017 38414 -99596 -798]  [58875 136466 -27874 81277]  [98798 99596 76579 138010]  [61431 -76579 22219 23017]  [77591 -86749 22402 -58875]  [798 -22219 39212 -98798]  [-138010 -39212 -38414 -61431]
+        random-subset cross-check (25 subsets of size 6..11): brute == B&B == DP failures: 0  [0.0s]
+  j=4: collinear triples=0, exact/numeric sign mismatches=0, min|det|=3.663e+07 (max 5.696e+10), rot err=1.0e-73, antisym=True | max convex: B&B=5, DP=5 -> no convex 6-gon
+        convex k-subset counts (k=4..5): [1100, 723] ; convex 6-subsets: 0
+        random-subset cross-check (25 subsets of size 6..11): brute == B&B == DP failures: 0  [0.0s]
+        1.27 real         1.24 user         0.01 sys
+            23052288  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                2156  page reclaims
+                  41  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   1  voluntary context switches
+                 493  involuntary context switches
+         19934369707  instructions retired
+          4508174222  cycles elapsed
+            14434784  peak memory footprint

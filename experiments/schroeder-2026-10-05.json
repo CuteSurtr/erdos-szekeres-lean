@@ -1,0 +1,217 @@
+{
+  "date": "2026-10-05",
+  "source": {
+    "author": "Michael Schroeder",
+    "title": "Erd\u0151s\u2013Szekeres: Upper Bounds for Convex Heptagons and Octagons",
+    "version": 1,
+    "publication_date": "2026-09-19",
+    "doi": "10.5281/zenodo.22842891",
+    "companion": "https://michaelschroeder.ai/research/ErdosSzekeres/companion",
+    "archive_url": "https://zenodo.org/api/records/22842891/files/es7_es8_bounds_81_319_v1.zip/content",
+    "archive_sha256": "706786a26ec7537396c069fcedf89ab298618e0064a4be5944e96982e85a5fc2"
+  },
+  "local_verification": {
+    "archive_sha256_matches": true,
+    "manifest_entries_verified": 322,
+    "all_manifest_hashes_match": true,
+    "checker": "tools/check_octagon_finite.py",
+    "checker_sha256": "9c9c48954c155270c0c0baa8cff686608705583657cc73fcb72c8cce866929b5",
+    "arithmetic_checker_sha256": "1ce1fe937eeb0118305e839c8f983053ba6d8a8411ff337a2e129804e464ada9",
+    "report": {
+      "balanced": {
+        "families": 2685,
+        "triple_orders": 1156464,
+        "empty_difference_orders": 774276,
+        "forced_orders": 382188,
+        "directed_boxes": 63504,
+        "omission_tree": {
+          "states": 252,
+          "rows": 2685,
+          "hole_budget": 58,
+          "bound": 193,
+          "branches": 1590,
+          "leaves": 1591,
+          "max_depth": 14,
+          "positive_weight_terms": 306922,
+          "leaves_with_excess": 119,
+          "minimum_margin": 21,
+          "smallest_margin_leaf": {
+            "node": 1736,
+            "margin": 21,
+            "k": 52,
+            "L": 1000000,
+            "W": 52000021,
+            "P": 0
+          },
+          "row_sizes": {
+            "8": 1584,
+            "9": 780,
+            "10": 321
+          },
+          "sha256": "23363c9e341a7edf4de28b6bf21970983cc6d4cafa6f2bdef54ce3d25b1c5a94"
+        },
+        "rejection_controls": [
+          "reversed cycle",
+          "duplicate state",
+          "incomplete branch"
+        ]
+      },
+      "residual": {
+        "families": 1164,
+        "triple_orders": 423024,
+        "empty_difference_orders": 288730,
+        "forced_orders": 134294,
+        "directed_boxes": 23716,
+        "blocks": {
+          "blocks": 23,
+          "source_states": 28,
+          "occupied_capacity": 22,
+          "checked_growth_implications": 8581,
+          "row_ids": [
+            973,
+            1165,
+            1166,
+            1167,
+            1168,
+            1169,
+            1170,
+            1171,
+            1172,
+            1173,
+            1174,
+            1175,
+            1176,
+            1177,
+            1178,
+            1179,
+            1180,
+            1181,
+            1182,
+            1183,
+            1184,
+            1185,
+            1186
+          ]
+        },
+        "omission_tree": {
+          "states": 154,
+          "rows": 1187,
+          "hole_budget": 29,
+          "bound": 124,
+          "branches": 7314,
+          "leaves": 7315,
+          "max_depth": 21,
+          "positive_weight_terms": 662561,
+          "leaves_with_excess": 1532,
+          "minimum_margin": 1,
+          "smallest_margin_leaf": {
+            "node": 10542,
+            "margin": 1,
+            "k": 21,
+            "L": 1000000,
+            "W": 21000001,
+            "P": 0
+          },
+          "row_sizes": {
+            "8": 974,
+            "9": 190,
+            "28": 23
+          },
+          "sha256": "bccd12477064d8a490bbe863ae49dbc8d9dfececf7a65426ba36f7537c66293a"
+        },
+        "rejection_controls": [
+          "reversed cycle",
+          "duplicate state",
+          "incomplete branch",
+          "invalid block threshold"
+        ]
+      },
+      "status": "PASS",
+      "seconds": 2.996,
+      "scope": "All ES8 finite capacity conditions and both complete omission trees; geometric transfer uses the proved lemmas.",
+      "lean_or_native_evaluation_used": false
+    },
+    "scope": "Local reproduction of the release author's separately implemented Python checker. Not a new checker implementation; not an independent Lean rebuild."
+  },
+  "not_verified_here": [
+    "Full Lean 4.32.0-rc1 rebuild of the published endpoints",
+    "Heptagon LRAT replay",
+    "Any strict improvement of a finite bound or the HMPT asymptotic coefficient"
+  ],
+  "row_probes": [
+    {
+      "source_doi": "10.5281/zenodo.22842891",
+      "source_file": "balanced.json",
+      "source_sha256": "23363c9e341a7edf4de28b6bf21970983cc6d4cafa6f2bdef54ce3d25b1c5a94",
+      "scope": "Published omission-row relaxation only; no planar geometry or new theorem",
+      "states": 252,
+      "rows": 2685,
+      "hole_budget_tested": 59,
+      "status": "unknown",
+      "solver": "Z3 5.1.0",
+      "seconds": 180.01850441703573,
+      "reason": "timeout",
+      "seed": 0,
+      "seconds_limit": 180,
+      "prototype_script_sha256": "0ad164bde7a579d822614b4a15d2dbdc1095e58c7316ec3c62e73348ca0e8640"
+    },
+    {
+      "source_doi": "10.5281/zenodo.22842891",
+      "source_file": "residual.json",
+      "source_sha256": "bccd12477064d8a490bbe863ae49dbc8d9dfececf7a65426ba36f7537c66293a",
+      "scope": "Published omission-row relaxation only; no planar geometry or new theorem",
+      "states": 154,
+      "rows": 1187,
+      "hole_budget_tested": 30,
+      "status": "unknown",
+      "solver": "Z3 5.1.0",
+      "seconds": 180.00659854197875,
+      "reason": "timeout",
+      "seed": 0,
+      "seconds_limit": 180,
+      "prototype_script_sha256": "0ad164bde7a579d822614b4a15d2dbdc1095e58c7316ec3c62e73348ca0e8640"
+    },
+    {
+      "source": ".cache/schroeder-inspect/balanced.json",
+      "source_sha256": "23363c9e341a7edf4de28b6bf21970983cc6d4cafa6f2bdef54ce3d25b1c5a94",
+      "script_sha256": "70e1cf0ecea170079855469325f0e88203bc202f407000209d727bfad250adb9",
+      "scope": "Boolean omission-row relaxation only; not a planar realization or theorem",
+      "states": 252,
+      "rows": 2685,
+      "hole_budget_tested": 59,
+      "status": "unknown",
+      "solver": "Z3 5.1.0",
+      "seconds_limit": 180.0,
+      "seed": 1,
+      "seconds": 180.0134605000494,
+      "reason": "timeout"
+    },
+    {
+      "source": ".cache/schroeder-inspect/residual.json",
+      "source_sha256": "bccd12477064d8a490bbe863ae49dbc8d9dfececf7a65426ba36f7537c66293a",
+      "script_sha256": "70e1cf0ecea170079855469325f0e88203bc202f407000209d727bfad250adb9",
+      "scope": "Boolean omission-row relaxation only; not a planar realization or theorem",
+      "states": 154,
+      "rows": 1187,
+      "hole_budget_tested": 30,
+      "status": "unknown",
+      "solver": "Z3 5.1.0",
+      "seconds_limit": 180.0,
+      "seed": 1,
+      "seconds": 180.01633137499448,
+      "reason": "timeout"
+    }
+  ],
+  "prototype_script": "from pathlib import Path\nimport hashlib,json,sys,time\nimport z3\nname=sys.argv[1]\np=Path('.cache/schroeder-inspect')/(name+'.json')\nd=json.loads(p.read_text()); n=len(d['states']); budget=d['hole_budget']+1\nrows=[(row,len(row)-7) for row in d['cuts']] if name=='balanced' else [(r['support'],r['rhs']) for r in d['constraints']]\nholes=[z3.Bool(f'h_{i}') for i in range(n)]\ns=z3.Solver();s.set(timeout=180000,random_seed=0)\nfor K,a in rows:s.add(z3.PbGe([(holes[i],1) for i in K],a))\ns.add(z3.PbLe([(h,1) for h in holes],budget))\nt=time.monotonic();v=s.check()\nr={'source_doi':'10.5281/zenodo.22842891','source_file':name+'.json','source_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'scope':'Published omission-row relaxation only; no planar geometry or new theorem','states':n,'rows':len(rows),'hole_budget_tested':budget,'status':str(v),'solver':'Z3 '+z3.get_version_string(),'seconds':time.monotonic()-t}\nif v==z3.sat:\n O=[i for i,h in enumerate(holes) if z3.is_true(s.model().eval(h,model_completion=True))]\n assert len(O)<=budget and all(len(set(K)&set(O))>=a for K,a in rows)\n r.update(holes=O,occupied=n-len(O),all_rows_exactly_checked=True)\nelif v==z3.unknown:r['reason']=s.reason_unknown()\nout=Path('.cache/schroeder-inspect')/(name+'-one-step-probe.json')\nassert not out.exists();out.write_text(json.dumps(r,indent=2)+'\\n');print(json.dumps(r))\n",
+  "status": "finite_replay_passed_searches_inconclusive",
+  "row_probe_summary": {
+    "attempts": 4,
+    "seeds": [
+      0,
+      1
+    ],
+    "seconds_limit_each": 180,
+    "all_statuses": "unknown",
+    "new_bound_proved": false
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "scope": "Bounded ignored part-level conjunction prototype only. No performance gain established; stopped without changing production sources/exporters/gates.",
+  "checks": "Each leaf retains the same five fused arithmetic conditions; one joint conjunction supplies each leaf by projection.",
+  "full47": {
+    "exit": 1,
+    "seconds": 122.783,
+    "user_seconds": 120.385,
+    "system_seconds": 1.894,
+    "maximum_rss_bytes": null,
+    "failure": "Decidable-instance synthesis failed for the large conjunction; no kernel-checked full proof.",
+    "same_part_historical_fused_seconds": 81.154,
+    "peak_rss_unavailable_reason": "macOS time could not read sysctl in this sandbox."
+  },
+  "positive4": {
+    "exit": 0,
+    "seconds": 11.879,
+    "user_seconds": 11.002,
+    "system_seconds": 0.835,
+    "maximum_rss_bytes": 3896360960,
+    "axiom_audits": {
+      "OmissionBalancedCover61.node44215": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "OmissionBalancedCover61.node44217": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "OmissionBalancedCover61.node44218": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "OmissionBalancedCover61.node44213": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "OmissionBalancedCover61.batch_checks": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "historical_fused_seconds": 8.566
+  },
+  "corrupted4": {
+    "exit": 1,
+    "seconds": 12.12,
+    "user_seconds": 11.692,
+    "system_seconds": 0.789,
+    "maximum_rss_bytes": 3266428928,
+    "mutation": "First packed coefficient951 replaced by952",
+    "expected_arithmetic_rejection": true
+  },
+  "comparison_limits": "Historical baseline timings are from the same host and identical leaf data; resource limits and concurrent load differed. No full47 positive proof was obtained.",
+  "source_hashes": {
+    ".cache/part-conjunction-prototype/FusedPart.lean": "eecd8e134884679854db98c6e2dff1aefec5cfa41777f712f01353ffe23fc6fd",
+    ".cache/part-conjunction-prototype/BatchedPart.lean": "756e103ffe7743107335f239fe91f7830b04477ac43590ebbf235c8b5d892dbf",
+    ".cache/part-conjunction-prototype/CorruptBatchedPart.lean": "2776bee0eb0556126d32ae2c3c4dbffe0356a99b2cc005b19113861e2d2cb9f2",
+    ".cache/part-conjunction-prototype/FusedFour.lean": "4a6e582c04be81c42d50c2f435e45befe0b0617760a31b2e19ff14b0c5a0ace9",
+    ".cache/part-conjunction-prototype/BatchedFour.lean": "57b71c8a1eb9c625dd851e11c6b81d990f1c88241f8e0c9a8acbeb2950f4eaed",
+    ".cache/part-conjunction-prototype/CorruptBatchedFour.lean": "f4efdef89080800bf78dad5fd0c61b3605957fe66c5cd6005197f0613dddac89",
+    ".cache/part-conjunction-prototype/prepare.py": "0bcc006b6e6f76cbf76601a35648fabd52db0714c4730cd2a6f080b94853d975",
+    ".cache/part-conjunction-prototype/prepare-four.py": "aaf940c6e2f389264e9b2a2e2aa2d27a06172e6d66b959abe6fa52c2ff215af5",
+    ".cache/part-conjunction-prototype/run.py": "5a7f7d3d10d3d0cd061ae2cc75a442ad808fb3baa88128a4210660dadb206f67",
+    ".cache/fused-packing-prototype/FusedPacking.lean": "75cfe14c4985ae21f720fa58e807283d019d0da9c784e4d309b5b758d904bbad",
+    ".cache/fused-packing-prototype/FusedPacking.olean": "49ae401658f51f0a8c4ac38feafaf71cc9916367b6d74b60539bded77718b33a",
+    ".cache/omission-balanced-cover61-linked/BalancedCover61Proof/Catalog.lean": "61ecd4949e498038155279f8f4807d9b17f749cd2299ff994a4acdf9d2126911",
+    ".cache/omission-balanced-cover61-linked/BalancedCover61Proof/Catalog.olean": "4170e39e29defcf04ab0f1bcc29e6ffff9faf49eea5e5877798d4bba07aae218",
+    "lean-toolchain": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434",
+    "lake-manifest.json": "bc21802066bdf7c94b0eb1e7bd3d3389ae0d416c2ed69c6e5dae03e74945c8e7"
+  }
+}

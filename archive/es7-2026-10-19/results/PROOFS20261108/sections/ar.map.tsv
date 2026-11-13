@@ -1,0 +1,31 @@
+label	kind	lean_name	file_line	note
+ar:def:nsq	definition	ErdosSzekeres.SymReduction.nsq	SYMLEAN/AffineReduction.lean:1088	-
+ar:lem:mulvec	lemma	ErdosSzekeres.SymReduction.mulVec2_fst; ErdosSzekeres.SymReduction.mulVec2_snd	SYMLEAN/AffineReduction.lean:1097; SYMLEAN/AffineReduction.lean:1101	-
+ar:lem:nsq	lemma	ErdosSzekeres.SymReduction.nsq_nonneg; ErdosSzekeres.SymReduction.eDist2_eq_nsq	SYMLEAN/AffineReduction.lean:1090; SYMLEAN/AffineReduction.lean:1094	-
+ar:def:gram	definition	ErdosSzekeres.SymReduction.gA; ErdosSzekeres.SymReduction.gB; ErdosSzekeres.SymReduction.gC	SYMLEAN/AffineReduction.lean:1106; SYMLEAN/AffineReduction.lean:1107; SYMLEAN/AffineReduction.lean:1108	-
+ar:lem:nsq-mulvec	lemma	ErdosSzekeres.SymReduction.nsq_mulVec	SYMLEAN/AffineReduction.lean:1110	-
+ar:def:avgq	definition	ErdosSzekeres.SymReduction.avgQ; ErdosSzekeres.SymReduction.qA; ErdosSzekeres.SymReduction.qB; ErdosSzekeres.SymReduction.qC	SYMLEAN/AffineReduction.lean:1116; SYMLEAN/AffineReduction.lean:1120; SYMLEAN/AffineReduction.lean:1121; SYMLEAN/AffineReduction.lean:1122	-
+ar:lem:avgq-eq	lemma	ErdosSzekeres.SymReduction.avgQ_eq	SYMLEAN/AffineReduction.lean:1124	-
+ar:lem:avgq-pos	lemma	ErdosSzekeres.SymReduction.avgQ_ge; ErdosSzekeres.SymReduction.qA_pos; ErdosSzekeres.SymReduction.qdisc_pos	SYMLEAN/AffineReduction.lean:1133; SYMLEAN/AffineReduction.lean:1152; SYMLEAN/AffineReduction.lean:1158	each part assumes 0 < n
+ar:lem:avgq-inv	lemma	ErdosSzekeres.SymReduction.avgQ_mulVec	SYMLEAN/AffineReduction.lean:1139	assumes L^n = 1 only (no positivity of n)
+ar:def:lin2	definition	ErdosSzekeres.SymReduction.lin2	SYMLEAN/AffineReduction.lean:1167	bundled linear map
+ar:lem:lin2	lemma	ErdosSzekeres.SymReduction.lin2_fst; ErdosSzekeres.SymReduction.lin2_snd; ErdosSzekeres.SymReduction.orient_lin2	SYMLEAN/AffineReduction.lean:1174; SYMLEAN/AffineReduction.lean:1175; SYMLEAN/AffineReduction.lean:1177	-
+ar:lem:chol	lemma	ErdosSzekeres.SymReduction.nsq_lin2_chol; ErdosSzekeres.SymReduction.lin2_chol_inv_left; ErdosSzekeres.SymReduction.lin2_chol_inv_right	SYMLEAN/AffineReduction.lean:1184; SYMLEAN/AffineReduction.lean:1191; SYMLEAN/AffineReduction.lean:1195	(a) assumes s != 0; (b),(c) assume s != 0 and t != 0
+ar:lem:iter	lemma	ErdosSzekeres.SymReduction.iterate_sub_of_affine	SYMLEAN/AffineReduction.lean:1199	-
+ar:lem:periodic	lemma	ErdosSzekeres.SymReduction.exists_periodic_of_injective	SYMLEAN/AffineReduction.lean:1208	-
+ar:lem:fix	lemma	ErdosSzekeres.SymReduction.matrix_eq_one_of_fix	SYMLEAN/AffineReduction.lean:1217	-
+ar:lem:orient-affine	lemma	ErdosSzekeres.SymReduction.orient_affine	SYMLEAN/AffineReduction.lean:1241	-
+ar:lem:inj	lemma	ErdosSzekeres.SymReduction.injective_of_affine	SYMLEAN/AffineReduction.lean:1305	-
+ar:lem:matrix-form	lemma	ErdosSzekeres.SymReduction.affineMap_eq_mulVec	SYMLEAN/AffineReduction.lean:1284	-
+ar:lem:gp-orient	lemma	ErdosSzekeres.SymReduction.generalPosition_image_of_orient	SYMLEAN/AffineReduction.lean:1249	injectivity of f not assumed
+ar:lem:gp-affine	lemma	ErdosSzekeres.SymReduction.generalPosition_image_affine; ErdosSzekeres.SymReduction.generalPosition_image_affineEquiv	SYMLEAN/AffineReduction.lean:1278; SYMLEAN/AffineReduction.lean:1290	-
+ar:lem:cp-affine	lemma	ErdosSzekeres.SymReduction.convexPosition_image_affine	SYMLEAN/AffineReduction.lean:1263	-
+ar:lem:ngon-affine	lemma	ErdosSzekeres.SymReduction.hasConvexNGon_image_affine	SYMLEAN/AffineReduction.lean:1298	-
+ar:def:E	definition	-	-	written step: the proposition E(N,n), the type of the hypothesis hE (no Lean name)
+ar:prop:averaging	proposition	-	-	written step; L^m = 1 and parts (b),(c) and g != id => h != id are steps inside the Lean proof of hasConvexNGon_of_affine_symmetry; g^m = id and the rest of (d) (orders) are not in Lean
+ar:thm:transfer	theorem	ErdosSzekeres.SymReduction.hasConvexNGon_of_affine_symmetry	SYMLEAN/AffineReduction.lean:1330	export label; takes hypothesis hE (the Euclidean statement E(N,n) for the same N and n, a parameter) and 3 <= N
+ar:rem:hE	remark	-	-	role of hE; order of g not tracked; order-preserving form not formalized
+ar:cor:transfer-forms	corollary	ErdosSzekeres.SymReduction.hasConvexNGon_of_affineMap_symmetry; ErdosSzekeres.SymReduction.hasConvexNGon_of_affineEquiv_symmetry; ErdosSzekeres.SymReduction.hasConvexNGon_of_affine_coords_symmetry	SYMLEAN/AffineReduction.lean:1423; SYMLEAN/AffineReduction.lean:1433; SYMLEAN/AffineReduction.lean:1444	takes hypothesis hE (E(N,n)) and 3 <= N
+ar:thm:main	theorem	ErdosSzekeres.SymReduction.heptagon_of_nontrivial_affineEquiv; ErdosSzekeres.SymReduction.heptagon_of_nontrivial_affineEquiv_image; ErdosSzekeres.SymReduction.heptagon_of_nontrivial_affineMap; ErdosSzekeres.SymReduction.heptagon_of_nontrivial_affine; ErdosSzekeres.SymReduction.heptagon_of_nontrivial_affine_coords	SYMLEAN/AffineReduction.lean:1501; SYMLEAN/AffineReduction.lean:1510; SYMLEAN/AffineReduction.lean:1489; SYMLEAN/AffineReduction.lean:1477; SYMLEAN/AffineReduction.lean:1521	export label; takes hypotheses: HalfTurn34, Threefold33, Fivefold35, MirrorOneAxis33, MirrorNoAxis34
+ar:rem:classes	remark	-	-	what supplies the five class hypotheses and with which rigor label; the mirror theorems concern byte-identical copies in SYMLEAN/mirror/ReductionThreeClasses.lean; the unconditional statement is a project claim (WRITEUP/SYMMETRIC.md, Theorem A), established here only conditionally
+ar:rem:scope	remark	-	-	what the statements do not say

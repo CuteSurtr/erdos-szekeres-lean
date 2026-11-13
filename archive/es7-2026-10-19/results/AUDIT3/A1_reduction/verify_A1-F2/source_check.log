@@ -1,0 +1,30 @@
+source: https://arxiv.org/html/2506.00224v1 (only version per abs page), fetched 2026-11-01
+55b82919c8d9bc7eda6245297e85bdd85f6c061aefde06c1452767d46e3cc139  AUDIT3/A1_reduction/verify_A1-F2/dl_arxiv/2506.00224v1.html
+=== Section 6.2 verbatim ===
+6.2. Avoiding $7$ -Gons
+
+We also sought a symmetric solution for 32 points without a $7$ -gon. On 32 points, only $7$ -gon-free $s$ -fold rotational symmetries could exist with $s\in\{1,2,4\}$ . We focused our experiments on $s=4$ as that symmetry reduces the search space the most. The resulting formula is easy to satisfy, but the initial solutions that we obtained were hard to realize.
+We therefore decided to enumerate all solutions on a supercomputer, which took about 1 CPU year. The number of non-isomorphic configurations is staggering: 310 187 713. We attempted to realize several of them using heuristics to determine which ones would be more likely to be realizable. During those experiments, we observed that the outer 28 points can frequently be realized (so only the inner 4 points not), while the inner 12 points were never realizable. Afterwards we observed that all 310 million solutions have only 6 different configurations to the inner 12 points and none of those are realizable. Thus, there does not exist a realizable 4-fold symmetry on 32 points without a $7$ -gon.
+=== Section 6.1 footnote 2 verbatim ===
+The realizer tool can only
+determine realizability, not unrealizability. However, for several of the configurations for which the tool was unable to find a realization, we were able to find a subset 10-point configuration that is known to be unrealizable.. Out
+=== public code repo bsubercaseaux/automatic-symmetries: file list (no 32-point / 7-gon artefacts) ===
+.gitignore
+README.md
+encoders/erdos_szekeres.py
+encoders/everywhere_unbalanced.py
+encoders/everywhere_unbalanced_unsat.py
+experiments/16-6-4sym.sh
+experiments/16-6-5sym.sh
+formulas/.gitkeep
+orientations/.gitkeep
+realizations/.gitkeep
+realizations/helpers/16-6-4fold-fix.txt
+realizations/helpers/16-6-4fold-sym.txt
+realizations/helpers/16-6-5fold-sym.txt
+scripts/axiom_proof.py
+scripts/convex_tester.py
+scripts/decoder.py
+scripts/plotter.py
+scripts/run_realizer.py
+solutions/.gitkeep

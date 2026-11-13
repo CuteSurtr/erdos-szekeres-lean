@@ -1,0 +1,10 @@
+Controls run 2026-10-20 ~00:40-00:50 UTC (this cloud VM).
+1. brute.c vs independent Python (capcup DP + chiro.largest_convex_subset) on 5 pool 26-subsets and 5 uniform random 26-sets:
+   all 10 agree on max cap, max cup, largest convex subset (pool: lcs 6; random: lcs 9-11).
+   Bit flips in a SAT model (3 single flips): brute reports 14, 16, 20 axiom violations.
+2. Realizer calibration on 12 x-sorted 26-point subsets of pool sets (realizable, extremal): 6/12 realized at 4 CPU-s (ins-ff,lp), all exact.
+3. check32.py on 2 pool 32-sets (distinct_K7_p2a lines 1-2): general position, lcs 6, brute_kgon 0 convex 7-subsets,
+   sat.c 109,337 faces = Euler count, 0 bad candidates; ext_solve 33/33 UNSAT.  (Matches results/A and results/F.)
+   sat.c on the same set minus its last point (31 points): 14 bad candidates (positive control).
+4. build32.py deep-below lemma check on 6 random small sets S: predicted lcs(S+T) = max(lcs(S), 6, cap(S)+2) equals the
+   exact lcs in 6/6.

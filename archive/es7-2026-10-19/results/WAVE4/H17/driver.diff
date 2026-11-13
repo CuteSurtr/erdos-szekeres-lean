@@ -1,0 +1,12 @@
+results/WAVE4/H17/close_march.py is a byte-for-byte copy of results/WAVE2/F2/close_march.py (cmp: identical, no diff).
+sha256 2e0975aa98c7dbcc2cf535993b54f57db764f7bf50f64fc54b9ff2860e67c855
+
+Checked:
+(a) every solver job uses tempfile.mkdtemp(prefix="s_{k}_", dir=WORK) (line 83) and every march_cu job
+    tempfile.mkdtemp(prefix="m_{tag}_", dir=WORK) (line 39): a fresh directory per job, removed afterwards.
+(b) finalize() writes leaves.icnf and open.icnf with tempfile.mkstemp in the output directory and
+    os.replace into place (lines 136-143).
+(c) the first record of a new leaves.jsonl is {"case": --name, "case_sha256": sha256 of CASE.cnf} (lines 117-119);
+    run with --name U_L2.
+Also: leaves.icnf takes only records with cake_lpr == "s VERIFIED UNSAT" (line 141; AUDIT BUG-1 fixed).
+Run: BIN=/opt/work/bin WORK=/opt/work/tmp python3 close_march.py /opt/work/CASE.cnf /opt/work/out/U_L2 --name U_L2 --top /opt/work/top.icnf --depth 7 --timeout 300 --split-depth 6 --jobs 4 --hours 2.22

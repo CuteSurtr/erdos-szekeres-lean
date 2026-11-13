@@ -1,0 +1,37 @@
+22:41:18 start {'m': 4, 't': 14, 'centre': False, 'out': '/home/jay/research/data/lb-k8sym-20261111/runs/a4n7', 'seed': 108, 'init': None, 'ansatz': 'spiral1,needle11,spiral11,needle1', 'stop_at': 0, 'hours': 3.0, 'steps_per_T': 4000, 'T0': 0.5, 'Tmin': 0.02, 'alpha': 0.93, 'w7': 0.02, 'restart_evals': 400000, 'tag': 'a4n7', 'perturb': 0.0, 'pfocus': 0.0}
+22:41:18 restart 1 needle11 init N8 931346 N7 1239340
+22:42:19 r1 ev 100000 acc 0.845 ab 0.078 T 0.0815 cur N8 10192 N7 125092 | best N8 3924 N7 78996
+22:43:19 r1 ev 236000 acc 0.730 ab 0.219 T 0.0675 cur N8 1688 N7 117372 | best N8 784 N7 61128
+22:44:19 r1 ev 380000 acc 0.694 ab 0.269 T 0.0543 cur N8 448 N7 101512 | best N8 432 N7 83584
+22:44:28 end restart 1 needle11 evals 400000 best N8 432 N7 83584 found 0
+22:44:28 restart 2 spiral11 init N8 2184184 N7 1823440
+22:45:28 r2 ev 92000 acc 0.841 ab 0.097 T 0.0942 cur N8 475 N7 101120 | best N8 411 N7 101360
+22:46:29 r2 ev 256000 acc 0.652 ab 0.311 T 0.0437 cur N8 93 N7 146492 | best N8 79 N7 148528
+22:47:28 end restart 2 spiral11 evals 400000 best N8 55 N7 140236 found 0
+22:47:28 restart 3 needle1 init N8 134804 N7 301708
+22:48:29 r3 ev 88000 acc 0.865 ab 0.059 T 0.1013 cur N8 46597 N7 279704 | best N8 6100 N7 78736
+22:49:30 r3 ev 220000 acc 0.700 ab 0.246 T 0.1500 cur N8 642 N7 81496 | best N8 642 N7 81496
+22:50:31 r3 ev 380000 acc 0.666 ab 0.293 T 0.0628 cur N8 42 N7 100060 | best N8 42 N7 77296
+22:50:38 end restart 3 needle1 evals 400000 best N8 42 N7 77296 found 0
+22:50:38 restart 4 spiral1 init N8 215096126 N7 60836612
+22:51:40 r4 ev 104000 acc 0.838 ab 0.085 T 0.0758 cur N8 3192 N7 96328 | best N8 1845 N7 107668
+22:52:40 r4 ev 272000 acc 0.679 ab 0.283 T 0.0327 cur N8 172 N7 84656 | best N8 152 N7 98172
+22:53:26 end restart 4 spiral1 evals 400000 best N8 148 N7 98164 found 0
+22:53:26 restart 5 needle11 init N8 318083416 N7 72439592
+22:54:27 r5 ev 108000 acc 0.825 ab 0.107 T 0.0705 cur N8 924 N7 86420 | best N8 792 N7 82844
+22:55:27 r5 ev 256000 acc 0.715 ab 0.246 T 0.0406 cur N8 605 N7 78796 | best N8 577 N7 78128
+22:56:26 end restart 5 needle11 evals 400000 best N8 457 N7 79804 found 0
+22:56:26 restart 6 spiral11 init N8 41031616 N7 21201296
+22:57:26 r6 ev 104000 acc 0.831 ab 0.097 T 0.0758 cur N8 1244 N7 92016 | best N8 971 N7 95208
+22:58:27 r6 ev 264000 acc 0.687 ab 0.268 T 0.0327 cur N8 342 N7 143472 | best N8 193 N7 121952
+22:59:19 end restart 6 spiral11 evals 400000 best N8 193 N7 121952 found 0
+22:59:19 restart 7 needle1 init N8 740015040 N7 136636148
+23:00:19 r7 ev 100000 acc 0.844 ab 0.082 T 0.0815 cur N8 2656 N7 69672 | best N8 2312 N7 59188
+23:01:20 r7 ev 248000 acc 0.702 ab 0.250 T 0.0584 cur N8 168 N7 109448 | best N8 119 N7 97004
+23:02:18 end restart 7 needle1 evals 400000 best N8 41 N7 209408 found 0
+23:02:18 restart 8 spiral1 init N8 687486770 N7 130240072
+23:03:19 r8 ev 104000 acc 0.837 ab 0.087 T 0.0758 cur N8 1727 N7 98304 | best N8 1480 N7 95172
+23:04:19 r8 ev 248000 acc 0.720 ab 0.240 T 0.0437 cur N8 740 N7 72220 | best N8 716 N7 66908
+23:05:17 end restart 8 spiral1 evals 400000 best N8 42 N7 84284 found 0
+23:05:17 restart 9 needle11 init N8 445085 N7 815248
+23:06:19 r9 ev 108000 acc 0.795 ab 0.156 T 0.0705 cur N8 728 N7 103872 | best N8 490 N7 100216

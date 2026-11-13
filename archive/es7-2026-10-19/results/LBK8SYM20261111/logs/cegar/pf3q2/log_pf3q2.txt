@@ -1,0 +1,43 @@
+23:48:47   live_c3_63_cost3_s0.05_5_p0_KNone_rc0: units 8440 (conflicts with hint 0) fixed 0 imps 87 pair cuts 1947429 chain clauses 1934570 vars 106794, built in 33.9 s
+23:51:37   live_c3_63_cost3_s0.05_5_p0_KNone_rc0: it 500 delta -1.384e-01 best -9.988e-02 min N8 at LP points 2356833 170 s
+23:54:28   live_c3_63_cost3_s0.05_5_p0_KNone_rc0: it 1000 delta -6.339e-01 best -9.335e-02 min N8 at LP points 545382 341 s
+23:56:40 RESULT live_c3_63_cost3_s0.05_5_p0 K None N8(hint) 133971 -> UNSAT it 1361 best -9.331e-02 (507.5 s)
+23:57:13   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: units 8440 (conflicts with hint 0) fixed 0 imps 87 pair cuts 1946732 chain clauses 1935246 vars 106730, built in 32.3 s
+23:59:57   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 500 delta -1.025e+00 best -1.034e-01 min N8 at LP points 545382 165 s
+00:01:59   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 863 new best delta -4.652e-02; L1 point: 277 violated rows, float N8 2147460
+00:02:00   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 867 new best delta -4.551e-02; L1 point: 276 violated rows, float N8 1967778
+00:02:01   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 868 new best delta -4.309e-02; L1 point: 250 violated rows, float N8 1824105
+00:02:05   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 880 new best delta -4.124e-02; L1 point: 255 violated rows, float N8 1902345
+00:02:11   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 899 new best delta -3.344e-02; L1 point: 217 violated rows, float N8 1005798
+00:02:16   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 913 new best delta -3.291e-02; L1 point: 205 violated rows, float N8 745905
+00:02:16   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 914 new best delta -3.291e-02; L1 point: 205 violated rows, float N8 743115
+00:02:19   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 921 new best delta -3.280e-02; L1 point: 205 violated rows, float N8 706614
+00:02:19   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 922 new best delta -3.280e-02; L1 point: 202 violated rows, float N8 655362
+00:02:21   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 926 new best delta -3.274e-02; L1 point: 190 violated rows, float N8 881916
+00:02:47   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 1000 delta -5.309e-02 best -3.274e-02 min N8 at LP points 545382 334 s
+00:03:42   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 1160 new best delta -3.273e-02; L1 point: 189 violated rows, float N8 951213
+00:03:42   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 1161 new best delta -3.148e-02; L1 point: 176 violated rows, float N8 777225
+00:03:43   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 1162 new best delta -3.115e-02; L1 point: 175 violated rows, float N8 790410
+00:03:54   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 1192 new best delta -3.115e-02; L1 point: 173 violated rows, float N8 774219
+00:04:33   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 1312 new best delta -3.114e-02; L1 point: 164 violated rows, float N8 715800
+00:04:34   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 1315 new best delta -3.102e-02; L1 point: 162 violated rows, float N8 684945
+00:04:40   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 1332 new best delta -3.102e-02; L1 point: 159 violated rows, float N8 709920
+00:05:27   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 1472 new best delta -3.100e-02; L1 point: 164 violated rows, float N8 824085
+00:05:28   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 1473 new best delta -3.098e-02; L1 point: 174 violated rows, float N8 784779
+00:05:28   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 1475 new best delta -3.082e-02; L1 point: 182 violated rows, float N8 986274
+00:05:29   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 1476 new best delta -3.056e-02; L1 point: 176 violated rows, float N8 883299
+00:05:37   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 1500 delta -1.591e-01 best -3.056e-02 min N8 at LP points 545382 505 s
+00:06:33   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 1665 new best delta -3.037e-02; L1 point: 154 violated rows, float N8 696900
+00:06:37   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 1675 new best delta -3.036e-02; L1 point: 142 violated rows, float N8 619671
+00:06:37   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 1676 new best delta -3.034e-02; L1 point: 132 violated rows, float N8 568878
+00:06:38   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 1677 new best delta -3.034e-02; L1 point: 137 violated rows, float N8 699684
+00:06:38   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 1678 new best delta -3.033e-02; L1 point: 136 violated rows, float N8 806202
+00:08:38   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 2000 delta -4.385e-01 best -3.033e-02 min N8 at LP points 514212 686 s
+00:11:48   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 2500 delta -1.264e-01 best -3.033e-02 min N8 at LP points 514212 875 s
+00:15:07   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 3000 delta -1.898e-01 best -3.033e-02 min N8 at LP points 514212 1075 s
+00:18:31   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 3500 delta -6.222e-01 best -3.033e-02 min N8 at LP points 514212 1278 s
+00:21:45   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 4000 delta -2.585e-01 best -3.033e-02 min N8 at LP points 514212 1472 s
+00:25:28   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 4500 delta -2.673e-01 best -3.033e-02 min N8 at LP points 514212 1696 s
+00:29:00   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 5000 delta -1.285e-01 best -3.033e-02 min N8 at LP points 514212 1907 s
+00:32:08   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 5500 delta -1.019e-01 best -3.033e-02 min N8 at LP points 514212 2096 s
+00:35:19   live_c3_63_cost3_s0.05_6_p0_KNone_rc0: it 6000 delta -7.342e-02 best -3.033e-02 min N8 at LP points 514212 2287 s

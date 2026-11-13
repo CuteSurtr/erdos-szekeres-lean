@@ -1,0 +1,28 @@
+23:07:28   live_c3_63_cost3_s0.05_1_p0_KNone_rc0: units 8440 (conflicts with hint 0) fixed 0 imps 87 pair cuts 1946664 chain clauses 1935246 vars 106730, built in 27.1 s
+23:09:27   live_c3_63_cost3_s0.05_1_p0_KNone_rc0: it 379 new best delta -4.452e-02; L1 point: 201 violated rows, float N8 1401438
+23:09:29   live_c3_63_cost3_s0.05_1_p0_KNone_rc0: it 386 new best delta -4.448e-02; L1 point: 202 violated rows, float N8 1980471
+23:09:29   live_c3_63_cost3_s0.05_1_p0_KNone_rc0: it 387 new best delta -4.327e-02; L1 point: 201 violated rows, float N8 1575525
+23:09:30   live_c3_63_cost3_s0.05_1_p0_KNone_rc0: it 388 new best delta -4.321e-02; L1 point: 189 violated rows, float N8 1359816
+23:09:30   live_c3_63_cost3_s0.05_1_p0_KNone_rc0: it 389 new best delta -3.904e-02; L1 point: 202 violated rows, float N8 1088553
+23:09:39   live_c3_63_cost3_s0.05_1_p0_KNone_rc0: it 417 new best delta -3.826e-02; L1 point: 170 violated rows, float N8 643569
+23:09:40   live_c3_63_cost3_s0.05_1_p0_KNone_rc0: it 420 new best delta -3.825e-02; L1 point: 185 violated rows, float N8 787269
+23:09:40   live_c3_63_cost3_s0.05_1_p0_KNone_rc0: it 421 new best delta -3.774e-02; L1 point: 170 violated rows, float N8 586989
+23:09:41   live_c3_63_cost3_s0.05_1_p0_KNone_rc0: it 423 new best delta -3.762e-02; L1 point: 168 violated rows, float N8 571416
+23:10:05   live_c3_63_cost3_s0.05_1_p0_KNone_rc0: it 500 delta -6.933e-02 best -3.762e-02 min N8 at LP points 999381 157 s
+23:10:13   live_c3_63_cost3_s0.05_1_p0_KNone_rc0: it 526 new best delta -3.654e-02; L1 point: 166 violated rows, float N8 599220
+23:10:18   live_c3_63_cost3_s0.05_1_p0_KNone_rc0: it 540 new best delta -3.651e-02; L1 point: 163 violated rows, float N8 577080
+23:10:30   live_c3_63_cost3_s0.05_1_p0_KNone_rc0: it 578 new best delta -3.651e-02; L1 point: 131 violated rows, float N8 906849
+23:11:29   live_c3_63_cost3_s0.05_1_p0_KNone_rc0: it 768 new best delta -3.644e-02; L1 point: 162 violated rows, float N8 1009926
+23:11:30   live_c3_63_cost3_s0.05_1_p0_KNone_rc0: it 770 new best delta -3.638e-02; L1 point: 157 violated rows, float N8 852258
+23:11:36   live_c3_63_cost3_s0.05_1_p0_KNone_rc0: it 788 new best delta -3.521e-02; L1 point: 162 violated rows, float N8 687153
+23:12:46   live_c3_63_cost3_s0.05_1_p0_KNone_rc0: it 1000 delta -2.753e-01 best -3.521e-02 min N8 at LP points 722148 318 s
+23:15:51   live_c3_63_cost3_s0.05_1_p0_KNone_rc0: it 1500 delta -2.105e-01 best -3.521e-02 min N8 at LP points 722148 504 s
+23:18:52   live_c3_63_cost3_s0.05_1_p0_KNone_rc0: it 2000 delta -1.729e-01 best -3.521e-02 min N8 at LP points 722148 684 s
+23:21:54   live_c3_63_cost3_s0.05_1_p0_KNone_rc0: it 2500 delta -1.262e-01 best -3.521e-02 min N8 at LP points 585594 866 s
+23:24:53   live_c3_63_cost3_s0.05_1_p0_KNone_rc0: it 3000 delta -2.985e-01 best -3.521e-02 min N8 at LP points 585594 1045 s
+23:27:51   live_c3_63_cost3_s0.05_1_p0_KNone_rc0: it 3500 delta -3.920e-01 best -3.521e-02 min N8 at LP points 585594 1223 s
+23:30:46   live_c3_63_cost3_s0.05_1_p0_KNone_rc0: it 4000 delta -4.005e-01 best -3.521e-02 min N8 at LP points 585594 1398 s
+23:33:42   live_c3_63_cost3_s0.05_1_p0_KNone_rc0: it 4500 delta -3.726e-01 best -3.521e-02 min N8 at LP points 333468 1574 s
+23:36:38   live_c3_63_cost3_s0.05_1_p0_KNone_rc0: it 5000 delta -1.316e-01 best -3.521e-02 min N8 at LP points 333468 1750 s
+23:39:04 RESULT live_c3_63_cost3_s0.05_1_p0 K None N8(hint) 187566 -> UNSAT it 5410 best -3.521e-02 (1923.4 s)
+23:39:04 done

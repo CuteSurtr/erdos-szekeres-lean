@@ -1,0 +1,26 @@
+pos	row	node	stratum	result	direct	L1 cert/run	L2 cert/run	solve_s	check_s	wall
+4	296	0s0-5s1_7s0-9s0	H6(5,1)/two	closed directly	UNSAT cert	-	-	41.4	37.4	wall=80s
+16	284	0s0-5s1_6s0-8s1	H6(5,1)/two	closed at sigma level 1	UNKNO	8/8	-	1505.9	383.9	wall=1040s
+28	272	0s0-5s1_2s1-6s1	H6(5,1)/two	closed directly	UNSAT cert	-	-	95.2	43.1	wall=139s
+40	260	0s0-5s1_2s0-6s0	H6(5,1)/two	closed directly	UNSAT cert	-	-	41.2	35.5	wall=77s
+52	248	0s0-5s1_1s1-6s0	H6(5,1)/two	closed at sigma level 1	UNKNO	8/8	-	798.5	275.1	wall=1081s
+64	236	0s0-5s1_1s0-7s1	H6(5,1)/two	closed directly	UNSAT cert	-	-	280.3	40.9	wall=322s
+76	224	0s0-4s1_7s1-8s1	H6(4,1)/two	closed directly	UNSAT cert	-	-	43.7	29.1	wall=73s
+88	212	0s0-4s1_6s0-7s1	H6(4,1)/two	closed at sigma level 1	UNKNO	8/8	-	1687.9	311.2	wall=964s
+100	200	0s0-4s1_5s0-8s0	H6(4,1)/two	closed directly	UNSAT cert	-	-	45.3	29.0	wall=75s
+112	188	0s0-4s1_2s0-7s0	H6(4,1)/two	closed directly	UNSAT cert	-	-	166.6	36.5	wall=204s
+124	176	0s0-4s1_1s1-7s0	H6(4,1)/two	closed directly	UNSAT cert	-	-	227.3	40.6	wall=269s
+136	164	0s0-4s1_1s0-8s1	H6(4,1)/two	closed directly	UNSAT cert	-	-	93.6	33.5	wall=128s
+148	152	0s0-4s1_1s0-10s0	H6(4,1)/two	closed at sigma level 1	UNKNO	8/8	-	1057.9	313.9	wall=761s
+160	140	0s0-3s1_5s1-7s0	H6(3,1)/two	closed at sigma level 2	UNKNO	7/8	8/8	2101.7	564.8	wall=1458s
+172	128	0s0-3s1_4s1-9s0	H6(3,1)/two	closed at sigma level 1	UNKNO	8/8	-	670.8	260.7	wall=1671s
+184	116	0s0-3s1_4s0-8s1	H6(3,1)/two	closed at sigma level 1	UNKNO	8/8	-	1126.9	299.1	wall=745s
+196	104	0s0-3s1_1s1-8s1	H6(3,1)/two	closed at sigma level 1	UNKNO	8/8	-	1341.1	300.4	wall=1130s
+208	92	0s0-3s1_1s1-10s0	H6(3,1)/two	closed directly	UNSAT cert	-	-	54.8	31.6	wall=87s
+220	80	0s0-3s1_1s0-10s1	H6(3,1)/two	closed directly	UNSAT cert	-	-	101.8	26.3	wall=129s
+232	68	0s0-2s1_5s0-6s1	H6(2,1)/two	closed at sigma level 1	UNKNO	8/8	-	1736.1	328.3	wall=967s
+244	56	0s0-2s1_4s0-8s0	H6(2,1)/two	skipped (C2)	-	-	-	0.0	0.0	
+256	44	0s0-2s1_3s1-10s1	H6(2,1)/two	skipped (C8)	-	-	-	0.0	0.0	
+268	32	0s0-2s1_1s0-6s1	H6(2,1)/two	skipped (C14)	-	-	-	0.0	0.0	
+280	20	0s0-2s1_3s1-6s0	H6(2,1)/two	skipped (C2)	-	-	-	0.0	0.0	
+292	8	0s0-1s1_3s1-9s1	H6(1,1)/two	skipped (C8)	-	-	-	0.0	0.0	

@@ -1,0 +1,41 @@
+=== Part A: k = 5, Eppstein 8-point figure ===
+symmetrized set closed under 90-degree rotation about (180,180): True
+as-drawn set closed under the same rotation: False
+as-drawn: max over points of distance from R(p) to the set = sqrt(1/250000) = 0.002; relative to diameter 458.207: 4.36e-06
+outer quadruple is a square: True | inner quadruple is a square: True | union = symmetrized set: True
+inner square strictly inside outer square: True
+[SVG symmetrized (342.002 -> 342)] n=8; collinear triples: 0; min |orient| = 8019
+   convex k-subsets (methods A and B agree): {3: 56, 4: 38, 5: 0}
+[SVG as drawn (342.002)] n=8; collinear triples: 0; min |orient| = 4009473/500
+   convex k-subsets (methods A and B agree): {3: 56, 4: 38, 5: 0}
+   symmetrized and as-drawn have identical orientation tables: True
+[book Fig 1.2 (parsed centres)] centroid (2204.64875, 1037.5); exactly 4-fold about centroid: False; max mismatch 0.006374 stream units (side 972)
+[book Fig 1.2 (parsed centres)] n=8; collinear triples: 0; min |orient| = 28866537/400
+   convex k-subsets (methods A and B agree): {4: 38, 5: 0}
+[book Fig 1.2 (start-point centres)] centroid (2204.65, 1037.5); exactly 4-fold about centroid: True; max mismatch 0 stream units (side 972)
+[book Fig 1.2 (start-point centres)] n=8; collinear triples: 0; min |orient| = 72171
+   convex k-subsets (methods A and B agree): {4: 38, 5: 0}
+book (start-point centres) == image of symmetrized SVG set under (x,y) -> (c - 3(x-180), c' + 3(y-180)): True
+
+=== Part B: k = 6, SMQH App. C Table 2 (5-fold, centre point) ===
+exact identity cos^2 + sin^2 = 1: True
+sanity: cos(2pi/5) > 0, sin(2pi/5) > 0, cos(2pi/5) < 1/2: True True True | approx 0.30901699437494745 0.9510565162951535
+rho^5 = id on all generators (exact): True;  n = 16 ; distinct: True
+set closed under rho (exact 5-fold symmetry about the origin): True
+centre point (0,0) included: True
+exact signs: 560 triples, zero orientations: 0
+smallest |det| (float evaluation of the exact value): 1.433551 at ['rho^4(-12, -17)', 'rho^0(-15, 2)', 'rho^0(-13, 0)']
+exact certificate |det| > 1.43 for all 560 triples: True
+exact certificate |det| > 1.434 for all 560 triples: False
+rational-interval method: all 560 intervals exclude 0 and agree with exact signs: True; min |det| lower bound 1.433551; widest interval 7.91e-47
+[SMQH Table 2 exact] convex k-subsets (methods A and B agree): {4: 1185, 5: 978, 6: 0}
+Mackey Fig 3.33 point i vs SMQH Table 2 point i: max coordinate deviation 4.68e-05 (6-decimal rounding)
+[Mackey Fig 3.33 as printed] n=16; collinear triples: 0; min |orient| = 17917167/12500000
+   convex k-subsets (methods A and B agree): {4: 1185, 5: 978, 6: 0}
+   Mackey printed set has the same orientation table as the exact SMQH set (index-matched): True
+   Mackey printed set: max |rho(p) - nearest point| = 9.22e-05 (diameter ~ 39.58)
+
+=== Part C (context): Wikipedia File:16nohexagon.svg ===
+[Wikipedia 16nohexagon.svg] n=16; collinear triples: 0; min |orient| = 73337/1250
+   convex k-subsets (methods A and B agree): {6: 0}
+   best relative rotation mismatch by order (0 = symmetric): {2: 0.27, 3: 0.217, 4: 0.195, 5: 0.203, 6: 0.236, 7: 0.229, 8: 0.241}

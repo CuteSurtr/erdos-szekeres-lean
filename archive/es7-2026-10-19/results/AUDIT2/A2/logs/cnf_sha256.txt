@@ -1,0 +1,8 @@
+69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d  F.cnf
+69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d  F_lean.cnf
+bfbc2d6096e4099ba751130d421eca9da18b72559991103cc2d4b4bc0d92757d  H.cnf
+bfbc2d6096e4099ba751130d421eca9da18b72559991103cc2d4b4bc0d92757d  H_lean.cnf
+d3752e13db190fc808767c2a3cb661bd952c3ca68db19fc6cb95011f203c581a  hm33k7.cnf
+029dad6c68463fd006888cbc1f843476913651680f372821a0a23442986aaff4  m33k7.cnf
+cmp F_lean.cnf (lake exe mir_dimacs interior 33 7) F.cnf (python): identical
+cmp H_lean.cnf (lake exe mir_dimacs hull 33 7) H.cnf (python): identical

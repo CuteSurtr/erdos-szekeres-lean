@@ -1,0 +1,43 @@
+{
+  "rigor": "exact computation; soundness is written linear determinant proof",
+  "witness_sha256": "e9ee077335549b61eabf96fc548ebc58d4aec4e7e4e3ae2658a5e032d7a82a41",
+  "model_sha256": "f14272ab098cf201293b90a14f43f394e7fdc9693e064f2dc7bd859c8061cd45",
+  "support": 9,
+  "source_layers": [
+    0,
+    2,
+    3,
+    5
+  ],
+  "candidate_clause": [
+    460,
+    625,
+    -722,
+    -843,
+    -2882,
+    3133,
+    -3138,
+    4085,
+    -4086
+  ],
+  "direct_symbolic_identity": true,
+  "reverse_direction_identity": true,
+  "positive_integer_weights": true,
+  "exact54_sha256": "235472b5c604421d11458865e2035b9977a8aa628f699f82bfad74536bf12c95",
+  "exact54_tests": 5225472,
+  "exact54_forbidden_matches": 0,
+  "exact54_test_scope": "exhaustive ordered embeddings",
+  "exact54_true_literal_histogram": {
+    "4": 1860988,
+    "5": 1860988,
+    "6": 663776,
+    "3": 663776,
+    "2": 85920,
+    "7": 85920,
+    "1": 2052,
+    "8": 2052
+  },
+  "elapsed_seconds": 18.731,
+  "peak_rss_bytes": 37240832,
+  "status": "PASS"
+}

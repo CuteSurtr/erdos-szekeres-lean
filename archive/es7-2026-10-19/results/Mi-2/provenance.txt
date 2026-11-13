@@ -1,0 +1,20 @@
+tools (built from source on this VM, see env.txt):
+cadical c60730422e758ef1cebe7aeddf2dda31c996bf04
+drat-trim 2e3b2dc0ecf938addbd779d42877b6ed69d9a985
+CnC 705b60c6491ef2b61988b3ce6ac674be1b90571d
+cadical version 3.0.1
+march_cu built with: make (failed on multiple definitions) then make CFLAGS="-O3 -fcommon"
+lrat-check built with: gcc -O2 -o lrat-check lrat-check.c
+
+CNF: results/C/scripts/make_cnfs.sh <dir>  (gen_etv.py + mirgen.py)
+bfbc2d6096e4099ba751130d421eca9da18b72559991103cc2d4b4bc0d92757d  hm33k7.sub.cnf
+d3752e13db190fc808767c2a3cb661bd952c3ca68db19fc6cb95011f203c581a  hm33k7.cnf
+hm33k7.sub.cnf header: p cnf 47002 535454
+No sha256 for hm33k7.sub.cnf is recorded in results/C or results/C2 (searched); header matches the
+vars/clauses in results/C/README.md (47,002 vars incl. aux, 535,454 clauses).
+
+Cubes: march_cu hm33k7.sub.cnf -d 7 -o cubes.icnf  (368 s)
+c number of cubes 128, including 0 refuted leaves
+lines in cubes.icnf: 128 (all "a ... 0" lines)
+2a1b47b50879f6f3b594ea412239ef2dfd20c69acf63e8fe2fab3ec62ac8764d  cubes.icnf
+Shard 2 = lines with 0-based index i, i % 4 == 2: 32 cubes.

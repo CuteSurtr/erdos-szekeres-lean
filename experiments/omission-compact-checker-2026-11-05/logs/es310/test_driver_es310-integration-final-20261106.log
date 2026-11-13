@@ -1,0 +1,132 @@
+== 2026-11-06T05:22:06Z test_driver_es310.sh: WORKDIR /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-driver, cases: G H I J K L M T A B C D E F; drive_es310.py sha256 868d6be910b4e07d
+== 2026-11-06T05:22:06Z G: an old-header TSV with three ok rows
+PASS: G: driver exit 0 (got 0)
+PASS: G: the old header has 20 columns
+PASS: G: to_run 0, already_done 3
+PASS: G: header upgraded to 21 columns
+PASS: G: all 9 rows have 21 fields
+PASS: G: no reuse links without --reuse
+== 2026-11-06T05:22:10Z H: --reuse of the residual side
+PASS: H: real build/es311/full:E311R accepted (exit 0)
+PASS: H: 127 modules (126 chunks + Root), 13 route inputs verified
+PASS: H: 127 file symlinks out/reuse/E311R/<X>.olean -> build/es311/full/olean/E311R/<X>.olean, nothing else
+PASS: H: every E311R module X resolves as <reuse root>/E311R/X.olean to its own .olean
+PASS: H: final not added for a test export
+PASS: H: on the driver's LEAN_PATH, lean --deps (import resolution only, no elaboration) finds E311R.Root at out/reuse/E311R/Root.olean
+PASS: H: while drive_es310 runs with --reuse, drive_es311.py's exclusive lock on build/es311/full is refused
+PASS: H: build/es311/full unchanged (fingerprint of every path, size, mtime, ctime, inode)
+== 2026-11-06T05:22:28Z H: scratch copy of the E311R side (cp --reflink=never)
+PASS: H: the copy shares no inode with build/es311/full (C00064.olean)
+PASS: H: the unchanged copy is accepted (exit 0), 127 modules
+PASS: H: one changed byte in a reused .olean refuses (exit 1)
+PASS: H:   ... naming E311R.C00064's .olean
+refusing to run (the reused side is never compiled here)
+PASS: H: restored byte accepted again (exit 0)
+PASS: H: a changed reused source refuses (exit 1)
+PASS: H: a later fail row refuses (exit 1)
+PASS: H: a changed dependency stamp refuses (exit 1)
+PASS: H: an incomplete reused manifest refuses (exit 1)
+PASS: H: an E311R manifest in the export refuses (exit 1)
+PASS: H: --reuse of another prefix refuses (exit 1)
+PASS: H: the real side accepted again at the end (exit 0)
+PASS: H: build/es311/full still unchanged
+== 2026-11-06T05:23:22Z I: unit names (a transient scope running sleep, no Lean)
+PASS: I: the bare name resolves to no cgroup (what drive_es311.py asked for)
+PASS: I: 'es310-unittest-48189353.scope' resolves to the scope's cgroup (/user.slice/user-1000.slice/user@1000.service/app.slice/es310-unittest-48189353.scope)
+drive_es311.kill_scope(bare): True
+PASS: I: drive_es311.kill_scope with the bare name leaves the sleep running
+drive_es310.kill_scope(bare): True
+PASS: I: drive_es310.kill_scope with the bare name returns True
+PASS: I: the sleep is gone and the scope is not active
+PASS: I: every systemctl call in drive_es310.py names the scope (kill_scope converts first)
+== 2026-11-06T05:23:22Z J: temperature and campaign gates
+PASS: J: parse_tctl and campaign_pause unit tests
+gate unit tests ok
+PASS: J: --max-tctl 1: the driver waits (2026-11-06T05:23:27Z waiting: Tctl 79.5 C >= 1 C)
+PASS: J: a second driver on the same export is refused (exit 1)
+PASS: J: no lean started for the export
+PASS: J: STOP ends the waiting driver (exit 0)
+PASS: J: no row was written
+PASS: J: a fresh PAUSE line: the driver waits
+PASS: J: the start JSON reports the PAUSE line
+PASS: J: STOP ends it (exit 0), no row, no lean
+PASS: J: --max-tctl 90 refused (exit 1)
+== 2026-11-06T05:23:33Z K: E310.Final
+PASS: K: full_status, FINAL_TEMPLATE = 311 template with only names and 63->64 changed, expected names, tag
+K ok
+== 2026-11-06T05:23:33Z L: refusals
+PASS: L: unknown --only refused (exit 1)
+PASS: L: a corrupted module without --only refused (exit 1)
+PASS: L: a source sha256 mismatch refused (exit 1)
+PASS: L: a '#eval' line refused by the shape check (exit 1)
+PASS: L: --memory 12 (no unit) refused (exit 1)
+PASS: L: --root-memory infinity refused (exit 1)
+PASS: L: an export in build/es311 refused (exit 1)
+PASS: L:   ... before its .driver.lock was opened (size and mtime unchanged)
+PASS: L: an export in the campaign directory refused (exit 1)
+PASS: L: an overlapping --reuse refused (exit 1)
+== 2026-11-06T05:23:50Z M: prepare(), stamps, library pins, memory gate, one hash per .olean
+PASS: M: prepare passes LM_NO_BUILD=1 and the 5 names; stamps equal all 127 E311R rows and the E311.Final row; mem_gb
+M unit ok: {'Path': '60a01f9ca483', 'Fcat62': '1f7212d4fbb8', 'Fcat2650': 'ed47736434a9', 'Bridge311Bal': 'f12bf121afc4', 'Bridge311Res': '3a971dcba15a'}
+PASS: M: dry-run exit 0 (got 0)
+PASS: M: JSON deps has exactly the 5 STAMPED names
+PASS: M: library pins verified (4952 .olean files)
+PASS: M: memory needs: chunk 10+5, Root/Final 10+24
+PASS: M: each of the 3 .olean files hashed exactly once per start
+olean hashes per start: [1, 1, 1] 3
+== 2026-11-06T05:24:00Z T: two tiny compiles (one block of <= 64 leaves each)
+2026-11-06T05:24:07Z start chunk E310BT.C000101 leaves=29 running=1 queued=0
+2026-11-06T05:24:11Z ok E310BT.C000101 leaves=29 kernel=0.837 wall=3.32 rss=3197440 cg_peak=436424 running=0 queued=0
+PASS: T: E310BT.C000101 driver exit 0 (got 0)
+PASS: T: its row is ok
+PASS: T: its .olean is written with the recorded sha256
+PASS: T: a restart runs nothing (to_run 0, already_done 1)
+2026-11-06T05:24:21Z start chunk E310BX.C000101 leaves=51 running=1 queued=0
+2026-11-06T05:24:25Z fail E310BX.C000101 leaves=51 kernel=0.552 wall=3.63 rss=3179692 cg_peak=417360 running=0 queued=0
+PASS: TX: the corrupted block: driver exit 1 (got 1), verdict fail
+PASS: TX: no .olean
+PASS: TX: the log says decide proved the proposition false
+/path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-driver/TX/src/E310BX/C000101.lean:11:225: error: Ta
+== 2026-11-06T05:24:26Z time: kill -9 of the 'time' process of the compile of E310BK/C038001.lean
+killing time pid 1234182
+2026-11-06T05:24:30Z start chunk E310BK.C038001 leaves=1000 running=1 queued=0
+2026-11-06T05:24:35Z fail E310BK.C038001 leaves=1000 kernel=nan wall=nan rss=0 cg_peak=385644 running=0 queued=0
+PASS: time: driver exit 1 (got 1), verdict fail
+PASS: time: no lean left right after
+PASS: time: 25 s later no lean and no .olean
+== 2026-11-06T05:25:01Z sh: kill -9 of the 'sh' process of the compile of E310BK/C038001.lean
+killing sh pid 1237949
+2026-11-06T05:25:06Z waiting: Tctl 80.4 C >= 80 C
+2026-11-06T05:25:36Z start chunk E310BK.C038001 leaves=1000 running=1 queued=0
+2026-11-06T05:25:41Z fail E310BK.C038001 leaves=1000 kernel=nan wall=nan rss=0 cg_peak=0 running=0 queued=0
+PASS: sh: driver exit 1 (got 1), verdict fail
+PASS: sh: no lean left right after
+PASS: sh: 25 s later no lean and no .olean
+== 2026-11-06T05:26:08Z C: kill -9 of the driver with two compiles running
+orphans after the driver died: 6 lean processes
+scopes: es310-73bce9a9a3-b21bffde578b.scope es310-73bce9a9a3-e6bfcdada680.scope 
+cleaned up: 2 leftover scopes stopped, 0 stray temporary .olean deleted
+2026-11-06T05:28:27Z waiting: Tctl 80.5 C >= 80 C
+2026-11-06T05:29:58Z start chunk E310BK.C038001 leaves=1000 running=1 queued=2
+2026-11-06T05:29:58Z start chunk E310BK.C057701 leaves=1000 running=2 queued=1
+2026-11-06T05:30:13Z ok E310BK.C057701 leaves=1000 kernel=10.600 wall=14.67 rss=3192388 cg_peak=432868 running=1 queued=1
+2026-11-06T05:30:15Z ok E310BK.C038001 leaves=1000 kernel=10.800 wall=15.13 rss=3207280 cg_peak=451896 running=0 queued=1
+2026-11-06T05:31:45Z start chunk E310BK.C000101 leaves=935 running=1 queued=0
+2026-11-06T05:31:59Z ok E310BK.C000101 leaves=935 kernel=9.920 wall=13.90 rss=3233896 cg_peak=483592 running=0 queued=0
+{"finished": "2026-11-06T05:32:00Z", "not_ok": []}
+PASS: C: the restart cleaned up the leftover scopes
+PASS: C: no lean left, no stray tmp
+PASS: C: all three modules ok
+== 2026-11-06T05:32:00Z D: restart of a finished export
+PASS: D: to_run 0, already_done 3
+== 2026-11-06T05:32:04Z E: SIGTERM to the driver mid-compile
+2026-11-06T05:32:08Z start chunk E310BK.C000101 leaves=935 running=1 queued=0
+signal 15: killed 1 running compiles; nothing recorded for them
+PASS: E: driver exit 130 (got 130), no process, no stray tmp, no new row
+== 2026-11-06T05:32:14Z F: the corrupted chunk
+2026-11-06T05:32:18Z start chunk E310BX.C000101 leaves=721 running=1 queued=0
+2026-11-06T05:32:41Z fail E310BX.C000101 leaves=721 kernel=17.500 wall=22.40 rss=3336100 cg_peak=591756 running=0 queued=0
+PASS: F: verdict fail, no .olean
+PASS: F: decide proved the proposition false
+== 2026-11-06T05:32:42Z summary: 80 passed, 0 failed
+exit 0

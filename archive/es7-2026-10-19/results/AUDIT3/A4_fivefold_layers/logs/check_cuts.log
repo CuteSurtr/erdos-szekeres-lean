@@ -1,0 +1,12 @@
+1. symbolic: [abc][ade] - [abd][ace] + [abe][acd] == 0 identically; [abc] == orientation determinant
+map sha256: f72b186e254d098b3f499aebc5845af52505b2a7cc7b08650fc5ef3d08d09c56
+cuts sha256: 3852ece5c7c5496a9bc0d5576e9894ddc182ed847b20b51102dc0a46df54c7de
+cut 0: OK  (55 literals, 149 rows, weight sum 7308811, max weight 177980)
+cut 1: OK  (55 literals, 144 rows, weight sum 5945518, max weight 156210)
+cut 2: OK  (55 literals, 146 rows, weight sum 11398474, max weight 493635)
+cut 3: OK  (55 literals, 142 rows, weight sum 5877820, max weight 135174)
+cut 4: OK  (55 literals, 152 rows, weight sum 24794733, max weight 564351)
+cut 5: OK  (55 literals, 146 rows, weight sum 984744, max weight 29435)
+2. all 6 cuts verified; patterns pairwise distinct; each is an abstract rotation-invariant uniform acyclic chirotope on labels 20..31
+   pairwise numbers of differing triple signs: [[0, 40, 32, 104, 72, 64], [40, 0, 24, 64, 64, 72], [32, 24, 0, 72, 72, 64], [104, 64, 72, 0, 32, 40], [72, 64, 72, 32, 0, 24], [64, 72, 64, 40, 24, 0]]
+3. mutations rejected: 36/36

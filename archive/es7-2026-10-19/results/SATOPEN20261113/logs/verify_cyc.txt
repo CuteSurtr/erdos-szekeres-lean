@@ -1,0 +1,8 @@
+cyc4: order [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 1, 2, 3, 4]; expected cyclic spiral: True; VERIFIED_LINES 1 cnf c6dcc2b55187ef26 proof dbc9b45de7547462 | recomputed cnf hash MATCH
+cyc5: order [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 1, 2, 3, 4, 5]; expected cyclic spiral: True; VERIFIED_LINES 1 cnf 7976983d87bb209f proof 1fbc5462d85fae14 | recomputed cnf hash MATCH
+cyc6: order [7, 8, 9, 10, 11, 12, 13, 14, 15, 1, 2, 3, 4, 5, 6]; expected cyclic spiral: True; VERIFIED_LINES 1 cnf 089e1907ddc0aa60 proof 8d8ea4ca6dd37865 | recomputed cnf hash MATCH
+cyc7: order [8, 9, 10, 11, 12, 13, 14, 15, 1, 2, 3, 4, 5, 6, 7]; expected cyclic spiral: True; VERIFIED_LINES 1 cnf ecbb6ee887085040 proof 625f0ed044966d23 | recomputed cnf hash MATCH
+cyc8: order [9, 10, 11, 12, 13, 14, 15, 1, 2, 3, 4, 5, 6, 7, 8]; expected cyclic spiral: True; VERIFIED_LINES 1 cnf 0e76fa31477f0c99 proof 4c30d320e51af384 | recomputed cnf hash MATCH
+cyc9: order [10, 11, 12, 13, 14, 15, 1, 2, 3, 4, 5, 6, 7, 8, 9]; expected cyclic spiral: True; VERIFIED_LINES 1 cnf 078fb5ddb06f1356 proof 8fff6d2a1ef90094 | recomputed cnf hash MATCH
+cyc10: order [11, 12, 13, 14, 15, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; expected cyclic spiral: True; VERIFIED_LINES 1 cnf e8613478dde1476e proof 3ec6e10e12afcf03 | recomputed cnf hash MATCH
+cyc11: order [12, 13, 14, 15, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]; expected cyclic spiral: True; VERIFIED_LINES 1 cnf 4459a2c7159fb175 proof d80073ed12b6c9e0 | recomputed cnf hash MATCH

@@ -1,0 +1,1733 @@
+{
+  "scope": "Diagnostic minimization with additional universally valid geometric clauses; no Lean proof yet",
+  "source_reference": "experiments/omission-residual32-witness-coupled-2026-10-10/core13.json",
+  "source_sha256": "364bb7ec0bcdef8673b9d40656f1a4d53349b66d5144e497ccec1deb53df22ba",
+  "raw_source_sha256": "0c69f07ebc515369ad679271be52436ba393ba54e3bcf92c2d6770717992ebe4",
+  "z3_version": "5.1.0",
+  "initial_state_clauses": 159,
+  "initial_unsat_core": 143,
+  "retained_state_clauses": 41,
+  "retained_clauses": 166519,
+  "retained_state_source_indices": [
+    166479,
+    166504,
+    166511,
+    166512,
+    166513,
+    166515,
+    166516,
+    166517,
+    166518,
+    166519,
+    166520,
+    166523,
+    166536,
+    166537,
+    166540,
+    166554,
+    166557,
+    166559,
+    166560,
+    166562,
+    166565,
+    166577,
+    166589,
+    166591,
+    166593,
+    166600,
+    166602,
+    166612,
+    166614,
+    166615,
+    166621,
+    166623,
+    166624,
+    166627,
+    166629,
+    166630,
+    166632,
+    166633,
+    166635,
+    166636,
+    166637
+  ],
+  "retained_kind_counts": {
+    "order_transitive": 572,
+    "growth": 17160,
+    "packet": 137280,
+    "convex_four": 11440,
+    "no_octagon": 26,
+    "empty_direction": 4,
+    "domain": 6,
+    "fixed_sign": 31
+  },
+  "checks": [
+    {
+      "source_clause": 166479,
+      "kind": "empty_direction",
+      "detail": [
+        1,
+        0
+      ],
+      "status": "sat",
+      "seconds": 0.031289
+    },
+    {
+      "source_clause": 166482,
+      "kind": "empty_direction",
+      "detail": [
+        6,
+        0
+      ],
+      "status": "unsat",
+      "seconds": 0.025103
+    },
+    {
+      "source_clause": 166483,
+      "kind": "empty_direction",
+      "detail": [
+        7,
+        0
+      ],
+      "status": "unsat",
+      "seconds": 0.167726
+    },
+    {
+      "source_clause": 166484,
+      "kind": "empty_direction",
+      "detail": [
+        11,
+        0
+      ],
+      "status": "unsat",
+      "seconds": 0.016356
+    },
+    {
+      "source_clause": 166485,
+      "kind": "empty_direction",
+      "detail": [
+        2,
+        1
+      ],
+      "status": "unsat",
+      "seconds": 0.021185
+    },
+    {
+      "source_clause": 166486,
+      "kind": "empty_direction",
+      "detail": [
+        3,
+        1
+      ],
+      "status": "unsat",
+      "seconds": 0.015336
+    },
+    {
+      "source_clause": 166488,
+      "kind": "empty_direction",
+      "detail": [
+        6,
+        1
+      ],
+      "status": "unsat",
+      "seconds": 0.017789
+    },
+    {
+      "source_clause": 166489,
+      "kind": "empty_direction",
+      "detail": [
+        10,
+        1
+      ],
+      "status": "unsat",
+      "seconds": 0.017989
+    },
+    {
+      "source_clause": 166490,
+      "kind": "empty_direction",
+      "detail": [
+        3,
+        2
+      ],
+      "status": "unsat",
+      "seconds": 0.020498
+    },
+    {
+      "source_clause": 166491,
+      "kind": "empty_direction",
+      "detail": [
+        4,
+        2
+      ],
+      "status": "unsat",
+      "seconds": 0.023025
+    },
+    {
+      "source_clause": 166492,
+      "kind": "empty_direction",
+      "detail": [
+        6,
+        2
+      ],
+      "status": "unsat",
+      "seconds": 0.028755
+    },
+    {
+      "source_clause": 166493,
+      "kind": "empty_direction",
+      "detail": [
+        10,
+        2
+      ],
+      "status": "unsat",
+      "seconds": 0.019596
+    },
+    {
+      "source_clause": 166494,
+      "kind": "empty_direction",
+      "detail": [
+        5,
+        3
+      ],
+      "status": "unsat",
+      "seconds": 0.039952
+    },
+    {
+      "source_clause": 166495,
+      "kind": "empty_direction",
+      "detail": [
+        6,
+        3
+      ],
+      "status": "unsat",
+      "seconds": 0.020718
+    },
+    {
+      "source_clause": 166496,
+      "kind": "empty_direction",
+      "detail": [
+        8,
+        3
+      ],
+      "status": "unsat",
+      "seconds": 0.033078
+    },
+    {
+      "source_clause": 166497,
+      "kind": "empty_direction",
+      "detail": [
+        10,
+        3
+      ],
+      "status": "unsat",
+      "seconds": 0.01995
+    },
+    {
+      "source_clause": 166498,
+      "kind": "empty_direction",
+      "detail": [
+        5,
+        4
+      ],
+      "status": "unsat",
+      "seconds": 0.02574
+    },
+    {
+      "source_clause": 166499,
+      "kind": "empty_direction",
+      "detail": [
+        8,
+        5
+      ],
+      "status": "unsat",
+      "seconds": 0.029861
+    },
+    {
+      "source_clause": 166500,
+      "kind": "empty_direction",
+      "detail": [
+        9,
+        6
+      ],
+      "status": "unsat",
+      "seconds": 0.053059
+    },
+    {
+      "source_clause": 166501,
+      "kind": "domain",
+      "detail": [
+        6,
+        10,
+        1,
+        5
+      ],
+      "status": "unsat",
+      "seconds": 0.023507
+    },
+    {
+      "source_clause": 166502,
+      "kind": "domain",
+      "detail": [
+        6,
+        10,
+        2,
+        5
+      ],
+      "status": "unsat",
+      "seconds": 0.0452
+    },
+    {
+      "source_clause": 166503,
+      "kind": "domain",
+      "detail": [
+        6,
+        10,
+        3,
+        5
+      ],
+      "status": "unsat",
+      "seconds": 0.032098
+    },
+    {
+      "source_clause": 166504,
+      "kind": "empty_direction",
+      "detail": [
+        10,
+        6
+      ],
+      "status": "sat",
+      "seconds": 0.033466
+    },
+    {
+      "source_clause": 166506,
+      "kind": "empty_direction",
+      "detail": [
+        11,
+        7
+      ],
+      "status": "unsat",
+      "seconds": 0.058058
+    },
+    {
+      "source_clause": 166507,
+      "kind": "empty_direction",
+      "detail": [
+        9,
+        8
+      ],
+      "status": "unsat",
+      "seconds": 0.02888
+    },
+    {
+      "source_clause": 166508,
+      "kind": "empty_direction",
+      "detail": [
+        12,
+        9
+      ],
+      "status": "unsat",
+      "seconds": 0.050441
+    },
+    {
+      "source_clause": 166511,
+      "kind": "domain",
+      "detail": [
+        10,
+        11,
+        2,
+        4
+      ],
+      "status": "sat",
+      "seconds": 0.041825
+    },
+    {
+      "source_clause": 166512,
+      "kind": "domain",
+      "detail": [
+        10,
+        11,
+        2,
+        5
+      ],
+      "status": "sat",
+      "seconds": 0.048258
+    },
+    {
+      "source_clause": 166513,
+      "kind": "domain",
+      "detail": [
+        10,
+        11,
+        2,
+        6
+      ],
+      "status": "sat",
+      "seconds": 0.01709
+    },
+    {
+      "source_clause": 166515,
+      "kind": "domain",
+      "detail": [
+        10,
+        11,
+        3,
+        4
+      ],
+      "status": "sat",
+      "seconds": 0.019136
+    },
+    {
+      "source_clause": 166516,
+      "kind": "domain",
+      "detail": [
+        10,
+        11,
+        3,
+        5
+      ],
+      "status": "sat",
+      "seconds": 0.016528
+    },
+    {
+      "source_clause": 166517,
+      "kind": "domain",
+      "detail": [
+        10,
+        11,
+        3,
+        6
+      ],
+      "status": "sat",
+      "seconds": 0.016449
+    },
+    {
+      "source_clause": 166518,
+      "kind": "empty_direction",
+      "detail": [
+        12,
+        10
+      ],
+      "status": "sat",
+      "seconds": 0.04414
+    },
+    {
+      "source_clause": 166519,
+      "kind": "empty_direction",
+      "detail": [
+        12,
+        11
+      ],
+      "status": "sat",
+      "seconds": 0.066545
+    },
+    {
+      "source_clause": 166520,
+      "kind": "fixed_sign",
+      "detail": [
+        0,
+        1,
+        2,
+        true
+      ],
+      "status": "sat",
+      "seconds": 0.024196
+    },
+    {
+      "source_clause": 166521,
+      "kind": "fixed_sign",
+      "detail": [
+        0,
+        1,
+        3,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.050269
+    },
+    {
+      "source_clause": 166522,
+      "kind": "fixed_sign",
+      "detail": [
+        0,
+        1,
+        6,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.031572
+    },
+    {
+      "source_clause": 166523,
+      "kind": "fixed_sign",
+      "detail": [
+        0,
+        1,
+        7,
+        true
+      ],
+      "status": "sat",
+      "seconds": 0.020646
+    },
+    {
+      "source_clause": 166524,
+      "kind": "fixed_sign",
+      "detail": [
+        0,
+        1,
+        10,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.042078
+    },
+    {
+      "source_clause": 166525,
+      "kind": "fixed_sign",
+      "detail": [
+        0,
+        1,
+        11,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.029035
+    },
+    {
+      "source_clause": 166526,
+      "kind": "fixed_sign",
+      "detail": [
+        0,
+        2,
+        3,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.037012
+    },
+    {
+      "source_clause": 166527,
+      "kind": "fixed_sign",
+      "detail": [
+        0,
+        2,
+        6,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.026845
+    },
+    {
+      "source_clause": 166528,
+      "kind": "fixed_sign",
+      "detail": [
+        0,
+        2,
+        7,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.056373
+    },
+    {
+      "source_clause": 166529,
+      "kind": "fixed_sign",
+      "detail": [
+        0,
+        2,
+        10,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.036552
+    },
+    {
+      "source_clause": 166530,
+      "kind": "fixed_sign",
+      "detail": [
+        0,
+        3,
+        6,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.052524
+    },
+    {
+      "source_clause": 166531,
+      "kind": "fixed_sign",
+      "detail": [
+        0,
+        3,
+        7,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.042245
+    },
+    {
+      "source_clause": 166532,
+      "kind": "fixed_sign",
+      "detail": [
+        0,
+        3,
+        10,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.039569
+    },
+    {
+      "source_clause": 166533,
+      "kind": "fixed_sign",
+      "detail": [
+        0,
+        6,
+        7,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.043809
+    },
+    {
+      "source_clause": 166534,
+      "kind": "fixed_sign",
+      "detail": [
+        0,
+        6,
+        10,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.059348
+    },
+    {
+      "source_clause": 166535,
+      "kind": "fixed_sign",
+      "detail": [
+        0,
+        7,
+        10,
+        false
+      ],
+      "status": "unsat",
+      "seconds": 0.043492
+    },
+    {
+      "source_clause": 166536,
+      "kind": "fixed_sign",
+      "detail": [
+        0,
+        7,
+        11,
+        false
+      ],
+      "status": "sat",
+      "seconds": 0.023195
+    },
+    {
+      "source_clause": 166537,
+      "kind": "fixed_sign",
+      "detail": [
+        1,
+        2,
+        3,
+        true
+      ],
+      "status": "sat",
+      "seconds": 0.017303
+    },
+    {
+      "source_clause": 166538,
+      "kind": "fixed_sign",
+      "detail": [
+        1,
+        2,
+        4,
+        false
+      ],
+      "status": "unsat",
+      "seconds": 0.04571
+    },
+    {
+      "source_clause": 166539,
+      "kind": "fixed_sign",
+      "detail": [
+        1,
+        2,
+        6,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.052728
+    },
+    {
+      "source_clause": 166540,
+      "kind": "fixed_sign",
+      "detail": [
+        1,
+        2,
+        7,
+        true
+      ],
+      "status": "sat",
+      "seconds": 0.067708
+    },
+    {
+      "source_clause": 166541,
+      "kind": "fixed_sign",
+      "detail": [
+        1,
+        2,
+        10,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.067019
+    },
+    {
+      "source_clause": 166542,
+      "kind": "fixed_sign",
+      "detail": [
+        1,
+        3,
+        5,
+        false
+      ],
+      "status": "unsat",
+      "seconds": 0.053755
+    },
+    {
+      "source_clause": 166543,
+      "kind": "fixed_sign",
+      "detail": [
+        1,
+        3,
+        6,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.039452
+    },
+    {
+      "source_clause": 166544,
+      "kind": "fixed_sign",
+      "detail": [
+        1,
+        3,
+        7,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.086564
+    },
+    {
+      "source_clause": 166545,
+      "kind": "fixed_sign",
+      "detail": [
+        1,
+        3,
+        10,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.08107
+    },
+    {
+      "source_clause": 166547,
+      "kind": "fixed_sign",
+      "detail": [
+        1,
+        4,
+        11,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.0585
+    },
+    {
+      "source_clause": 166549,
+      "kind": "fixed_sign",
+      "detail": [
+        1,
+        5,
+        11,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.083181
+    },
+    {
+      "source_clause": 166550,
+      "kind": "fixed_sign",
+      "detail": [
+        1,
+        6,
+        7,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.075642
+    },
+    {
+      "source_clause": 166551,
+      "kind": "fixed_sign",
+      "detail": [
+        1,
+        6,
+        9,
+        false
+      ],
+      "status": "unsat",
+      "seconds": 0.048057
+    },
+    {
+      "source_clause": 166552,
+      "kind": "fixed_sign",
+      "detail": [
+        1,
+        6,
+        10,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.051521
+    },
+    {
+      "source_clause": 166553,
+      "kind": "fixed_sign",
+      "detail": [
+        1,
+        7,
+        10,
+        false
+      ],
+      "status": "unsat",
+      "seconds": 0.075721
+    },
+    {
+      "source_clause": 166554,
+      "kind": "fixed_sign",
+      "detail": [
+        1,
+        7,
+        11,
+        false
+      ],
+      "status": "sat",
+      "seconds": 0.040988
+    },
+    {
+      "source_clause": 166555,
+      "kind": "fixed_sign",
+      "detail": [
+        1,
+        9,
+        11,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.081902
+    },
+    {
+      "source_clause": 166556,
+      "kind": "fixed_sign",
+      "detail": [
+        1,
+        10,
+        12,
+        false
+      ],
+      "status": "unsat",
+      "seconds": 0.083259
+    },
+    {
+      "source_clause": 166557,
+      "kind": "fixed_sign",
+      "detail": [
+        1,
+        11,
+        12,
+        false
+      ],
+      "status": "sat",
+      "seconds": 0.122881
+    },
+    {
+      "source_clause": 166558,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        3,
+        5,
+        false
+      ],
+      "status": "unsat",
+      "seconds": 0.117071
+    },
+    {
+      "source_clause": 166559,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        3,
+        6,
+        true
+      ],
+      "status": "sat",
+      "seconds": 0.038047
+    },
+    {
+      "source_clause": 166560,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        3,
+        7,
+        true
+      ],
+      "status": "sat",
+      "seconds": 0.041894
+    },
+    {
+      "source_clause": 166561,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        3,
+        10,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.10816
+    },
+    {
+      "source_clause": 166562,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        4,
+        5,
+        true
+      ],
+      "status": "sat",
+      "seconds": 0.026433
+    },
+    {
+      "source_clause": 166563,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        4,
+        8,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.105572
+    },
+    {
+      "source_clause": 166564,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        4,
+        9,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.133082
+    },
+    {
+      "source_clause": 166565,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        4,
+        10,
+        true
+      ],
+      "status": "sat",
+      "seconds": 0.03278
+    },
+    {
+      "source_clause": 166566,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        4,
+        11,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.104835
+    },
+    {
+      "source_clause": 166567,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        4,
+        12,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.077273
+    },
+    {
+      "source_clause": 166568,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        5,
+        8,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.104346
+    },
+    {
+      "source_clause": 166569,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        5,
+        9,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.107314
+    },
+    {
+      "source_clause": 166570,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        5,
+        10,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.128754
+    },
+    {
+      "source_clause": 166571,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        5,
+        11,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.048571
+    },
+    {
+      "source_clause": 166572,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        5,
+        12,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.121522
+    },
+    {
+      "source_clause": 166573,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        6,
+        7,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.062432
+    },
+    {
+      "source_clause": 166574,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        6,
+        9,
+        false
+      ],
+      "status": "unsat",
+      "seconds": 0.128987
+    },
+    {
+      "source_clause": 166575,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        6,
+        10,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.045665
+    },
+    {
+      "source_clause": 166576,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        7,
+        10,
+        false
+      ],
+      "status": "unsat",
+      "seconds": 0.151312
+    },
+    {
+      "source_clause": 166577,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        7,
+        11,
+        false
+      ],
+      "status": "sat",
+      "seconds": 0.097621
+    },
+    {
+      "source_clause": 166578,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        8,
+        9,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.153187
+    },
+    {
+      "source_clause": 166579,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        8,
+        10,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.115457
+    },
+    {
+      "source_clause": 166580,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        8,
+        11,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.130954
+    },
+    {
+      "source_clause": 166581,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        8,
+        12,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.144906
+    },
+    {
+      "source_clause": 166582,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        9,
+        10,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.127541
+    },
+    {
+      "source_clause": 166583,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        9,
+        11,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.147494
+    },
+    {
+      "source_clause": 166584,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        9,
+        12,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.115126
+    },
+    {
+      "source_clause": 166585,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        10,
+        12,
+        false
+      ],
+      "status": "unsat",
+      "seconds": 0.218271
+    },
+    {
+      "source_clause": 166586,
+      "kind": "fixed_sign",
+      "detail": [
+        2,
+        11,
+        12,
+        false
+      ],
+      "status": "unsat",
+      "seconds": 0.139698
+    },
+    {
+      "source_clause": 166588,
+      "kind": "fixed_sign",
+      "detail": [
+        3,
+        5,
+        11,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.209909
+    },
+    {
+      "source_clause": 166589,
+      "kind": "fixed_sign",
+      "detail": [
+        3,
+        6,
+        7,
+        true
+      ],
+      "status": "sat",
+      "seconds": 0.04551
+    },
+    {
+      "source_clause": 166591,
+      "kind": "fixed_sign",
+      "detail": [
+        3,
+        6,
+        10,
+        true
+      ],
+      "status": "sat",
+      "seconds": 0.032804
+    },
+    {
+      "source_clause": 166592,
+      "kind": "fixed_sign",
+      "detail": [
+        3,
+        7,
+        10,
+        false
+      ],
+      "status": "unsat",
+      "seconds": 0.266957
+    },
+    {
+      "source_clause": 166593,
+      "kind": "fixed_sign",
+      "detail": [
+        3,
+        7,
+        11,
+        false
+      ],
+      "status": "sat",
+      "seconds": 0.050534
+    },
+    {
+      "source_clause": 166598,
+      "kind": "fixed_sign",
+      "detail": [
+        3,
+        10,
+        12,
+        false
+      ],
+      "status": "unsat",
+      "seconds": 0.246697
+    },
+    {
+      "source_clause": 166599,
+      "kind": "fixed_sign",
+      "detail": [
+        3,
+        11,
+        12,
+        false
+      ],
+      "status": "unsat",
+      "seconds": 0.193101
+    },
+    {
+      "source_clause": 166600,
+      "kind": "fixed_sign",
+      "detail": [
+        4,
+        5,
+        8,
+        true
+      ],
+      "status": "sat",
+      "seconds": 0.151223
+    },
+    {
+      "source_clause": 166601,
+      "kind": "fixed_sign",
+      "detail": [
+        4,
+        5,
+        9,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.28292
+    },
+    {
+      "source_clause": 166602,
+      "kind": "fixed_sign",
+      "detail": [
+        4,
+        5,
+        10,
+        true
+      ],
+      "status": "sat",
+      "seconds": 0.086392
+    },
+    {
+      "source_clause": 166603,
+      "kind": "fixed_sign",
+      "detail": [
+        4,
+        5,
+        11,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.207493
+    },
+    {
+      "source_clause": 166604,
+      "kind": "fixed_sign",
+      "detail": [
+        4,
+        5,
+        12,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.154042
+    },
+    {
+      "source_clause": 166605,
+      "kind": "fixed_sign",
+      "detail": [
+        4,
+        8,
+        9,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.116266
+    },
+    {
+      "source_clause": 166606,
+      "kind": "fixed_sign",
+      "detail": [
+        4,
+        8,
+        10,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.204221
+    },
+    {
+      "source_clause": 166607,
+      "kind": "fixed_sign",
+      "detail": [
+        4,
+        8,
+        11,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.078411
+    },
+    {
+      "source_clause": 166608,
+      "kind": "fixed_sign",
+      "detail": [
+        4,
+        8,
+        12,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.192333
+    },
+    {
+      "source_clause": 166609,
+      "kind": "fixed_sign",
+      "detail": [
+        4,
+        9,
+        10,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.223531
+    },
+    {
+      "source_clause": 166610,
+      "kind": "fixed_sign",
+      "detail": [
+        4,
+        9,
+        11,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.194211
+    },
+    {
+      "source_clause": 166611,
+      "kind": "fixed_sign",
+      "detail": [
+        4,
+        9,
+        12,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.269432
+    },
+    {
+      "source_clause": 166612,
+      "kind": "fixed_sign",
+      "detail": [
+        4,
+        10,
+        12,
+        false
+      ],
+      "status": "sat",
+      "seconds": 0.114515
+    },
+    {
+      "source_clause": 166613,
+      "kind": "fixed_sign",
+      "detail": [
+        4,
+        11,
+        12,
+        false
+      ],
+      "status": "unsat",
+      "seconds": 0.322411
+    },
+    {
+      "source_clause": 166614,
+      "kind": "fixed_sign",
+      "detail": [
+        5,
+        8,
+        9,
+        true
+      ],
+      "status": "sat",
+      "seconds": 0.067694
+    },
+    {
+      "source_clause": 166615,
+      "kind": "fixed_sign",
+      "detail": [
+        5,
+        8,
+        10,
+        true
+      ],
+      "status": "sat",
+      "seconds": 0.071402
+    },
+    {
+      "source_clause": 166616,
+      "kind": "fixed_sign",
+      "detail": [
+        5,
+        8,
+        11,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.318235
+    },
+    {
+      "source_clause": 166617,
+      "kind": "fixed_sign",
+      "detail": [
+        5,
+        8,
+        12,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.22522
+    },
+    {
+      "source_clause": 166618,
+      "kind": "fixed_sign",
+      "detail": [
+        5,
+        9,
+        10,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.072293
+    },
+    {
+      "source_clause": 166619,
+      "kind": "fixed_sign",
+      "detail": [
+        5,
+        9,
+        11,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.253658
+    },
+    {
+      "source_clause": 166620,
+      "kind": "fixed_sign",
+      "detail": [
+        5,
+        9,
+        12,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.083403
+    },
+    {
+      "source_clause": 166621,
+      "kind": "fixed_sign",
+      "detail": [
+        5,
+        10,
+        12,
+        false
+      ],
+      "status": "sat",
+      "seconds": 0.183712
+    },
+    {
+      "source_clause": 166622,
+      "kind": "fixed_sign",
+      "detail": [
+        5,
+        11,
+        12,
+        false
+      ],
+      "status": "unsat",
+      "seconds": 0.247739
+    },
+    {
+      "source_clause": 166623,
+      "kind": "fixed_sign",
+      "detail": [
+        6,
+        7,
+        10,
+        false
+      ],
+      "status": "sat",
+      "seconds": 0.150118
+    },
+    {
+      "source_clause": 166624,
+      "kind": "fixed_sign",
+      "detail": [
+        6,
+        7,
+        11,
+        false
+      ],
+      "status": "sat",
+      "seconds": 0.043301
+    },
+    {
+      "source_clause": 166626,
+      "kind": "fixed_sign",
+      "detail": [
+        6,
+        9,
+        11,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.322079
+    },
+    {
+      "source_clause": 166627,
+      "kind": "fixed_sign",
+      "detail": [
+        6,
+        10,
+        12,
+        false
+      ],
+      "status": "sat",
+      "seconds": 0.162032
+    },
+    {
+      "source_clause": 166628,
+      "kind": "fixed_sign",
+      "detail": [
+        6,
+        11,
+        12,
+        false
+      ],
+      "status": "unsat",
+      "seconds": 0.299568
+    },
+    {
+      "source_clause": 166629,
+      "kind": "fixed_sign",
+      "detail": [
+        7,
+        10,
+        11,
+        true
+      ],
+      "status": "sat",
+      "seconds": 0.077586
+    },
+    {
+      "source_clause": 166630,
+      "kind": "fixed_sign",
+      "detail": [
+        8,
+        9,
+        10,
+        true
+      ],
+      "status": "sat",
+      "seconds": 0.111325
+    },
+    {
+      "source_clause": 166631,
+      "kind": "fixed_sign",
+      "detail": [
+        8,
+        9,
+        11,
+        true
+      ],
+      "status": "unsat",
+      "seconds": 0.353962
+    },
+    {
+      "source_clause": 166632,
+      "kind": "fixed_sign",
+      "detail": [
+        8,
+        9,
+        12,
+        true
+      ],
+      "status": "sat",
+      "seconds": 0.053027
+    },
+    {
+      "source_clause": 166633,
+      "kind": "fixed_sign",
+      "detail": [
+        8,
+        10,
+        12,
+        false
+      ],
+      "status": "sat",
+      "seconds": 0.043133
+    },
+    {
+      "source_clause": 166634,
+      "kind": "fixed_sign",
+      "detail": [
+        8,
+        11,
+        12,
+        false
+      ],
+      "status": "unsat",
+      "seconds": 0.308721
+    },
+    {
+      "source_clause": 166635,
+      "kind": "fixed_sign",
+      "detail": [
+        9,
+        10,
+        12,
+        false
+      ],
+      "status": "sat",
+      "seconds": 0.070119
+    },
+    {
+      "source_clause": 166636,
+      "kind": "fixed_sign",
+      "detail": [
+        9,
+        11,
+        12,
+        false
+      ],
+      "status": "sat",
+      "seconds": 0.102286
+    },
+    {
+      "source_clause": 166637,
+      "kind": "fixed_sign",
+      "detail": [
+        10,
+        11,
+        12,
+        false
+      ],
+      "status": "sat",
+      "seconds": 0.022747
+    }
+  ],
+  "seconds": 22.006031
+}

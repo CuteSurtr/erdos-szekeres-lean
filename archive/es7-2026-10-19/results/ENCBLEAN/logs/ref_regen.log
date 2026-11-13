@@ -1,0 +1,7 @@
+date: 2026-11-06T14:59:18+09:00 (make_ref.py rerun by the fixer step; output to a scratch file, not over ref/hashes.tsv)
+gen_b2.py: 3d47459a9723b5f7344205f3f2d7463e0be00b41c5070155e5da8dbf78fd40ba
+wall: 58.83 s wall (nice 10, 8G scope, load ~35 on 32 cores)
+rows: 225 (ref/hashes.tsv: 225)
+columns m K t status sha256 bytes nv ncl unit cond chain: IDENTICAL on all rows (only 'seconds' differs)
+sha256 of the regenerated file's columns 1-11: 5eba6a368dc947e22abe5850a68ba345e1a86e581597efd3a2652adf77f270af
+sha256 of ref/hashes.tsv columns 1-11:        5eba6a368dc947e22abe5850a68ba345e1a86e581597efd3a2652adf77f270af

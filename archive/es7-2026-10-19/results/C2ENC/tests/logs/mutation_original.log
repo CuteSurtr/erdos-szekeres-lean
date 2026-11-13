@@ -1,0 +1,7 @@
+=== original: control: the unmodified encoder
+  t4k5_hull: map_check=ok; spec: PASS; real labellings 24, with violated clauses 0 ; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT']
+  t5k6_hull: map_check=ok; spec: PASS; real labellings 24, with violated clauses 0 ; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT']
+  t6k6_hull: map_check=ok; spec: PASS; real labellings 24, with violated clauses 0 ; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT']
+  t5k6_no-sb: map_check=ok; spec: PASS; real labellings 24, with violated clauses 0 ; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['SAT', 'SAT', 'SAT', 'SAT', 'SAT', 'SAT']
+  t8k7_hull: map_check=ok; spec: PASS; real labellings 18, with violated clauses 0 ; identity-inconsistent 0; zero-pattern-mismatch 0; two-way SAT tests ['SAT', 'SAT', 'SAT', 'SAT']
+  t9k6 free solve (18 points, no convex hexagon; ES(6) = 17 so no real set): UNSAT

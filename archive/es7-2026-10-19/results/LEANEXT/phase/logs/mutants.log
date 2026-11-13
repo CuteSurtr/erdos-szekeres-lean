@@ -1,0 +1,8 @@
+M1 drop rd<=rb from rule-B radius hyp in orient_pos_of_phase: exit=1 errors=4 first=Mutant1.lean:381:56: error: Invalid projection: Expected a value whose type is a structure
+M2 weaken alpha<beta to alpha<=beta in alternating_iff_gaps_lt_pi: exit=1 errors=6 first=Mutant2.lean:218:24: error: Application type mismatch: The argument
+M3 drop genericity g3 != pi in runMidB_iff: exit=1 errors=3 first=Mutant3.lean:256:67: error: Function expected at
+M4 flip sign in orient_sign_of_phase second case: exit=1 errors=1 first=Mutant4.lean:530:4: error: linarith failed to find a contradiction
+M5 strict half-plane replaced by pi+1 bound in orient_polar_halfplane: exit=1 errors=3 first=Mutant5.lean:88:61: error: linarith failed to find a contradiction
+M6 replace alternation hyp by True in orient_pos_of_alternating: exit=1 errors=2 first=Mutant6.lean:305:68: error: Application type mismatch: The argument
+M7 drop antipodal premise in word_dichotomy: exit=1 errors=1 first=Mutant7.lean:543:2: error: Tactic `decide` proved that the proposition
+M8 drop r>0 in exists_polar conclusion replaced by r<0: exit=1 errors=1 first=Mutant8.lean:470:30: error: Application type mismatch: The argument

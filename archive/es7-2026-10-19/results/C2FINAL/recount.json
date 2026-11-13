@@ -1,0 +1,123 @@
+{
+ "records": 2492,
+ "status_counts": {
+  "UNSATISFIABLE": 2385,
+  "UNKNOWN": 107
+ },
+ "cases": {
+  "P1": {
+   "subcases": 560,
+   "orbits": 287,
+   "fixed": 14,
+   "closed": 287,
+   "open": [],
+   "cover_certified": 1,
+   "cover_srcs": [
+    "C2P3/LOCAL:5"
+   ],
+   "orbits_closed_only_by_pilot_records": 0,
+   "subunit_names_ignored": 0
+  },
+  "P2": {
+   "subcases": 560,
+   "orbits": 287,
+   "fixed": 14,
+   "closed": 287,
+   "open": [],
+   "cover_certified": 1,
+   "cover_srcs": [
+    "C2P3/LOCAL:4"
+   ],
+   "orbits_closed_only_by_pilot_records": 0,
+   "subunit_names_ignored": 0
+  },
+  "P3": {
+   "subcases": 560,
+   "orbits": 287,
+   "fixed": 14,
+   "closed": 287,
+   "open": [],
+   "cover_certified": 1,
+   "cover_srcs": [
+    "C2P3/LOCAL:3"
+   ],
+   "orbits_closed_only_by_pilot_records": 0,
+   "subunit_names_ignored": 0
+  },
+  "P4": {
+   "subcases": 560,
+   "orbits": 287,
+   "fixed": 14,
+   "closed": 287,
+   "open": [],
+   "cover_certified": 1,
+   "cover_srcs": [
+    "C2P3/LOCAL:2"
+   ],
+   "orbits_closed_only_by_pilot_records": 0,
+   "subunit_names_ignored": 0
+  },
+  "P5": {
+   "subcases": 560,
+   "orbits": 287,
+   "fixed": 14,
+   "closed": 287,
+   "open": [],
+   "cover_certified": 1,
+   "cover_srcs": [
+    "C2P3/LOCAL:1"
+   ],
+   "orbits_closed_only_by_pilot_records": 0,
+   "subunit_names_ignored": 0
+  },
+  "P6": {
+   "subcases": 560,
+   "orbits": 287,
+   "fixed": 14,
+   "closed": 287,
+   "open": [],
+   "cover_certified": 1,
+   "cover_srcs": [
+    "C2P2/M36:1"
+   ],
+   "orbits_closed_only_by_pilot_records": 0,
+   "subunit_names_ignored": 0
+  },
+  "P7": {
+   "subcases": 560,
+   "orbits": 287,
+   "fixed": 14,
+   "closed": 287,
+   "open": [],
+   "cover_certified": 1,
+   "cover_srcs": [
+    "C2P/M10:6"
+   ],
+   "orbits_closed_only_by_pilot_records": 0,
+   "subunit_names_ignored": 0
+  },
+  "P8": {
+   "subcases": 560,
+   "orbits": 287,
+   "fixed": 14,
+   "closed": 287,
+   "open": [],
+   "cover_certified": 1,
+   "cover_srcs": [
+    "C2C34/pilot:2"
+   ],
+   "orbits_closed_only_by_pilot_records": 64,
+   "subunit_names_ignored": 16
+  }
+ },
+ "certified_units_without_any_cnf_hash": [
+  "P8_1-3",
+  "P8_2-12-15",
+  "P8_2-4-11",
+  "P8_3-4-15",
+  "P8_3-4-5",
+  "P8_9-13-15",
+  "P8_cover"
+ ],
+ "problems": []
+}

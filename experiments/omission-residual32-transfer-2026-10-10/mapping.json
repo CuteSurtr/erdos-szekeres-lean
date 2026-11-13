@@ -1,0 +1,1002 @@
+{
+  "source_sha256": "f03eebb1d20eae3bd25dbb5024eaacdfdcc5bcd8ed964d190bdfa59c73aeb909",
+  "geometric_rows": [
+    {
+      "row": 2295,
+      "support_expression": "AdditionalResidualRows.support 0",
+      "demand_expression": "AdditionalResidualRows.demand 0",
+      "theorem": "AdditionalResidualRows.all_rows"
+    },
+    {
+      "row": 2296,
+      "support_expression": "AdditionalResidualRows.support 1",
+      "demand_expression": "AdditionalResidualRows.demand 1",
+      "theorem": "AdditionalResidualRows.all_rows"
+    },
+    {
+      "row": 2297,
+      "support_expression": "AdditionalResidualRows.support 2",
+      "demand_expression": "AdditionalResidualRows.demand 2",
+      "theorem": "AdditionalResidualRows.all_rows"
+    },
+    {
+      "row": 2298,
+      "support_expression": "AdditionalResidualRows.support 3",
+      "demand_expression": "AdditionalResidualRows.demand 3",
+      "theorem": "AdditionalResidualRows.all_rows"
+    },
+    {
+      "row": 2299,
+      "support_expression": "AdditionalResidualRows.support 4",
+      "demand_expression": "AdditionalResidualRows.demand 4",
+      "theorem": "AdditionalResidualRows.all_rows"
+    },
+    {
+      "row": 2300,
+      "support_expression": "AdditionalResidualRows.support 5",
+      "demand_expression": "AdditionalResidualRows.demand 5",
+      "theorem": "AdditionalResidualRows.all_rows"
+    },
+    {
+      "row": 2301,
+      "support_expression": "AdditionalResidualRows.support 6",
+      "demand_expression": "AdditionalResidualRows.demand 6",
+      "theorem": "AdditionalResidualRows.all_rows"
+    },
+    {
+      "row": 2302,
+      "support_expression": "AdditionalResidualRows.support 7",
+      "demand_expression": "AdditionalResidualRows.demand 7",
+      "theorem": "AdditionalResidualRows.all_rows"
+    },
+    {
+      "row": 2303,
+      "support_expression": "AdditionalResidualRows.support 8",
+      "demand_expression": "AdditionalResidualRows.demand 8",
+      "theorem": "AdditionalResidualRows.all_rows"
+    },
+    {
+      "row": 2304,
+      "support_expression": "AdditionalResidualRows.support 9",
+      "demand_expression": "AdditionalResidualRows.demand 9",
+      "theorem": "AdditionalResidualRows.all_rows"
+    },
+    {
+      "row": 2305,
+      "support_expression": "AdditionalResidualRows.support 10",
+      "demand_expression": "AdditionalResidualRows.demand 10",
+      "theorem": "AdditionalResidualRows.all_rows"
+    },
+    {
+      "row": 2306,
+      "support_expression": "AdditionalResidualRows.support 11",
+      "demand_expression": "AdditionalResidualRows.demand 11",
+      "theorem": "AdditionalResidualRows.all_rows"
+    },
+    {
+      "row": 2307,
+      "support_expression": "AdditionalResidualRows.support 12",
+      "demand_expression": "AdditionalResidualRows.demand 12",
+      "theorem": "AdditionalResidualRows.all_rows"
+    },
+    {
+      "row": 2308,
+      "support_expression": "AdditionalResidualRows.support 13",
+      "demand_expression": "AdditionalResidualRows.demand 13",
+      "theorem": "AdditionalResidualRows.all_rows"
+    },
+    {
+      "row": 2309,
+      "support_expression": "AdditionalResidualRows.support 14",
+      "demand_expression": "AdditionalResidualRows.demand 14",
+      "theorem": "AdditionalResidualRows.all_rows"
+    },
+    {
+      "row": 2310,
+      "support_expression": "AdditionalResidualRows.support 15",
+      "demand_expression": "AdditionalResidualRows.demand 15",
+      "theorem": "AdditionalResidualRows.all_rows"
+    },
+    {
+      "row": 2311,
+      "support_expression": "AdditionalResidualRows.support 16",
+      "demand_expression": "AdditionalResidualRows.demand 16",
+      "theorem": "AdditionalResidualRows.all_rows"
+    },
+    {
+      "row": 2312,
+      "support_expression": "AdditionalResidualRows.support 17",
+      "demand_expression": "AdditionalResidualRows.demand 17",
+      "theorem": "AdditionalResidualRows.all_rows"
+    },
+    {
+      "row": 2313,
+      "support_expression": "AdditionalResidualRows.support 18",
+      "demand_expression": "AdditionalResidualRows.demand 18",
+      "theorem": "AdditionalResidualRows.all_rows"
+    },
+    {
+      "row": 2314,
+      "support_expression": "AdditionalResidualRows.support 19",
+      "demand_expression": "AdditionalResidualRows.demand 19",
+      "theorem": "AdditionalResidualRows.all_rows"
+    },
+    {
+      "row": 2315,
+      "support_expression": "AdditionalResidualRows.support 20",
+      "demand_expression": "AdditionalResidualRows.demand 20",
+      "theorem": "AdditionalResidualRows.all_rows"
+    },
+    {
+      "row": 2316,
+      "support_expression": "GeneralResidualBlocks.support 0",
+      "demand_expression": "GeneralResidualBlocks.demand 0",
+      "theorem": "GeneralResidualBlocks.all_rows"
+    },
+    {
+      "row": 2317,
+      "support_expression": "GeneralResidualBlocks.support 1",
+      "demand_expression": "GeneralResidualBlocks.demand 1",
+      "theorem": "GeneralResidualBlocks.all_rows"
+    },
+    {
+      "row": 2318,
+      "support_expression": "GeneralResidualBlocks.support 2",
+      "demand_expression": "GeneralResidualBlocks.demand 2",
+      "theorem": "GeneralResidualBlocks.all_rows"
+    },
+    {
+      "row": 2319,
+      "support_expression": "GeneralResidualBlocks.support 3",
+      "demand_expression": "GeneralResidualBlocks.demand 3",
+      "theorem": "GeneralResidualBlocks.all_rows"
+    },
+    {
+      "row": 2320,
+      "support_expression": "GeneralResidualBlocks.support 4",
+      "demand_expression": "GeneralResidualBlocks.demand 4",
+      "theorem": "GeneralResidualBlocks.all_rows"
+    },
+    {
+      "row": 2321,
+      "support_expression": "GeneralResidualBlocks.support 5",
+      "demand_expression": "GeneralResidualBlocks.demand 5",
+      "theorem": "GeneralResidualBlocks.all_rows"
+    },
+    {
+      "row": 2322,
+      "support_expression": "GeneralResidualBlocks.support 6",
+      "demand_expression": "GeneralResidualBlocks.demand 6",
+      "theorem": "GeneralResidualBlocks.all_rows"
+    },
+    {
+      "row": 2323,
+      "support_expression": "GeneralResidualBlocks.support 7",
+      "demand_expression": "GeneralResidualBlocks.demand 7",
+      "theorem": "GeneralResidualBlocks.all_rows"
+    },
+    {
+      "row": 2324,
+      "support_expression": "GeneralResidualBlocks.support 8",
+      "demand_expression": "GeneralResidualBlocks.demand 8",
+      "theorem": "GeneralResidualBlocks.all_rows"
+    },
+    {
+      "row": 2325,
+      "support_expression": "GeneralResidualBlocks.support 9",
+      "demand_expression": "GeneralResidualBlocks.demand 9",
+      "theorem": "GeneralResidualBlocks.all_rows"
+    },
+    {
+      "row": 2326,
+      "support_expression": "GeneralResidualBlocks.support 10",
+      "demand_expression": "GeneralResidualBlocks.demand 10",
+      "theorem": "GeneralResidualBlocks.all_rows"
+    },
+    {
+      "row": 2327,
+      "support_expression": "GeneralResidualBlocks.support 11",
+      "demand_expression": "GeneralResidualBlocks.demand 11",
+      "theorem": "GeneralResidualBlocks.all_rows"
+    },
+    {
+      "row": 2328,
+      "support_expression": "GeneralResidualBlocks.support 12",
+      "demand_expression": "GeneralResidualBlocks.demand 12",
+      "theorem": "GeneralResidualBlocks.all_rows"
+    },
+    {
+      "row": 2329,
+      "support_expression": "GeneralResidualBlocks.support 13",
+      "demand_expression": "GeneralResidualBlocks.demand 13",
+      "theorem": "GeneralResidualBlocks.all_rows"
+    },
+    {
+      "row": 2330,
+      "support_expression": "GeneralResidualBlocks.support 14",
+      "demand_expression": "GeneralResidualBlocks.demand 14",
+      "theorem": "GeneralResidualBlocks.all_rows"
+    },
+    {
+      "row": 2331,
+      "support_expression": "GeneralResidualBlocks.support 15",
+      "demand_expression": "GeneralResidualBlocks.demand 15",
+      "theorem": "GeneralResidualBlocks.all_rows"
+    },
+    {
+      "row": 2332,
+      "support_expression": "GeneralResidualBlocks.support 16",
+      "demand_expression": "GeneralResidualBlocks.demand 16",
+      "theorem": "GeneralResidualBlocks.all_rows"
+    },
+    {
+      "row": 2333,
+      "support_expression": "GeneralResidualBlocks.support 17",
+      "demand_expression": "GeneralResidualBlocks.demand 17",
+      "theorem": "GeneralResidualBlocks.all_rows"
+    },
+    {
+      "row": 2334,
+      "support_expression": "GeneralResidualBlocks.support 18",
+      "demand_expression": "GeneralResidualBlocks.demand 18",
+      "theorem": "GeneralResidualBlocks.all_rows"
+    },
+    {
+      "row": 2335,
+      "support_expression": "GeneralResidualBlocks.support 19",
+      "demand_expression": "GeneralResidualBlocks.demand 19",
+      "theorem": "GeneralResidualBlocks.all_rows"
+    },
+    {
+      "row": 2336,
+      "support_expression": "GeneralResidualBlocks.support 20",
+      "demand_expression": "GeneralResidualBlocks.demand 20",
+      "theorem": "GeneralResidualBlocks.all_rows"
+    },
+    {
+      "row": 2337,
+      "support_expression": "GeneralResidualBlocks.support 21",
+      "demand_expression": "GeneralResidualBlocks.demand 21",
+      "theorem": "GeneralResidualBlocks.all_rows"
+    },
+    {
+      "row": 2338,
+      "support_expression": "GeneralResidualBlocks.support 22",
+      "demand_expression": "GeneralResidualBlocks.demand 22",
+      "theorem": "GeneralResidualBlocks.all_rows"
+    },
+    {
+      "row": 2339,
+      "support_expression": "GeneralResidualBlocks.support 23",
+      "demand_expression": "GeneralResidualBlocks.demand 23",
+      "theorem": "GeneralResidualBlocks.all_rows"
+    },
+    {
+      "row": 2340,
+      "support_expression": "CoupledVariants.support 24",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2341,
+      "support_expression": "CoupledVariants.support 0",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2342,
+      "support_expression": "CoupledVariants.support 1",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2343,
+      "support_expression": "CoupledVariants.support 2",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2344,
+      "support_expression": "CoupledVariants.support 3",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2345,
+      "support_expression": "CoupledVariants.support 4",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2346,
+      "support_expression": "CoupledVariants.support 5",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2347,
+      "support_expression": "CoupledVariants.support 6",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2348,
+      "support_expression": "CoupledVariants.support 7",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2349,
+      "support_expression": "CoupledVariants.support 8",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2350,
+      "support_expression": "CoupledVariants.support 9",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2351,
+      "support_expression": "CoupledVariants.support 10",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2352,
+      "support_expression": "CoupledVariants.support 11",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2353,
+      "support_expression": "CoupledVariants.support 12",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2354,
+      "support_expression": "CoupledVariants.support 13",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2355,
+      "support_expression": "CoupledVariants.support 14",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2356,
+      "support_expression": "CoupledVariants.support 15",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2357,
+      "support_expression": "CoupledVariants.support 16",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2358,
+      "support_expression": "CoupledVariants.support 17",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2359,
+      "support_expression": "CoupledVariants.support 18",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2360,
+      "support_expression": "CoupledVariants.support 19",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2361,
+      "support_expression": "CoupledVariants.support 20",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2362,
+      "support_expression": "CoupledVariants.support 21",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2363,
+      "support_expression": "CoupledVariants.support 22",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2364,
+      "support_expression": "CoupledVariants.support 23",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2365,
+      "support_expression": "CoupledVariants.support 25",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2366,
+      "support_expression": "CoupledVariants.support 26",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2367,
+      "support_expression": "CoupledVariants.support 27",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2368,
+      "support_expression": "CoupledVariants.support 28",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2369,
+      "support_expression": "CoupledVariants.support 29",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2370,
+      "support_expression": "CoupledVariants.support 30",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2371,
+      "support_expression": "CoupledVariants.support 31",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2372,
+      "support_expression": "CoupledVariants.support 32",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2373,
+      "support_expression": "CoupledVariants.support 33",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2374,
+      "support_expression": "CoupledVariants.support 34",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2375,
+      "support_expression": "CoupledVariants.support 35",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2376,
+      "support_expression": "CoupledVariants.support 36",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2377,
+      "support_expression": "CoupledVariants.support 37",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2378,
+      "support_expression": "CoupledVariants.support 38",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2379,
+      "support_expression": "CoupledVariants.support 39",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2380,
+      "support_expression": "CoupledVariants.support 40",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2381,
+      "support_expression": "CoupledVariants.support 41",
+      "demand_expression": "1",
+      "theorem": "CoupledVariants.all_rows"
+    },
+    {
+      "row": 2382,
+      "support_expression": "CoupledSecondVariants.support 23",
+      "demand_expression": "1",
+      "theorem": "CoupledSecondVariants.all_rows"
+    },
+    {
+      "row": 2383,
+      "support_expression": "CoupledSecondVariants.support 2",
+      "demand_expression": "1",
+      "theorem": "CoupledSecondVariants.all_rows"
+    },
+    {
+      "row": 2384,
+      "support_expression": "CoupledSecondVariants.support 4",
+      "demand_expression": "1",
+      "theorem": "CoupledSecondVariants.all_rows"
+    },
+    {
+      "row": 2385,
+      "support_expression": "CoupledSecondVariants.support 7",
+      "demand_expression": "1",
+      "theorem": "CoupledSecondVariants.all_rows"
+    },
+    {
+      "row": 2386,
+      "support_expression": "CoupledSecondVariants.support 8",
+      "demand_expression": "1",
+      "theorem": "CoupledSecondVariants.all_rows"
+    },
+    {
+      "row": 2387,
+      "support_expression": "CoupledSecondVariants.support 10",
+      "demand_expression": "1",
+      "theorem": "CoupledSecondVariants.all_rows"
+    },
+    {
+      "row": 2388,
+      "support_expression": "CoupledSecondVariants.support 11",
+      "demand_expression": "1",
+      "theorem": "CoupledSecondVariants.all_rows"
+    },
+    {
+      "row": 2389,
+      "support_expression": "CoupledSecondVariants.support 13",
+      "demand_expression": "1",
+      "theorem": "CoupledSecondVariants.all_rows"
+    },
+    {
+      "row": 2390,
+      "support_expression": "CoupledSecondVariants.support 17",
+      "demand_expression": "1",
+      "theorem": "CoupledSecondVariants.all_rows"
+    },
+    {
+      "row": 2391,
+      "support_expression": "CoupledSecondVariants.support 19",
+      "demand_expression": "1",
+      "theorem": "CoupledSecondVariants.all_rows"
+    },
+    {
+      "row": 2392,
+      "support_expression": "CoupledSecondVariants.support 22",
+      "demand_expression": "1",
+      "theorem": "CoupledSecondVariants.all_rows"
+    },
+    {
+      "row": 2393,
+      "support_expression": "CoupledSecondVariants.support 25",
+      "demand_expression": "1",
+      "theorem": "CoupledSecondVariants.all_rows"
+    },
+    {
+      "row": 2394,
+      "support_expression": "CoupledSecondVariants.support 26",
+      "demand_expression": "1",
+      "theorem": "CoupledSecondVariants.all_rows"
+    },
+    {
+      "row": 2395,
+      "support_expression": "CoupledSecondVariants.support 28",
+      "demand_expression": "1",
+      "theorem": "CoupledSecondVariants.all_rows"
+    },
+    {
+      "row": 2396,
+      "support_expression": "CoupledSecondVariants.support 33",
+      "demand_expression": "1",
+      "theorem": "CoupledSecondVariants.all_rows"
+    },
+    {
+      "row": 2397,
+      "support_expression": "CoupledCoreThird.support.toFinset",
+      "demand_expression": "1",
+      "theorem": "CoupledCoreThird.hole_bound"
+    },
+    {
+      "row": 2398,
+      "support_expression": "CoupledDemandTwo.support",
+      "demand_expression": "2",
+      "theorem": "CoupledDemandTwo.hole_bound"
+    },
+    {
+      "row": 2399,
+      "support_expression": "CoupledFourthVariants.support 12",
+      "demand_expression": "1",
+      "theorem": "CoupledFourthVariants.all_rows"
+    },
+    {
+      "row": 2400,
+      "support_expression": "CoupledFourthVariants.support 0",
+      "demand_expression": "1",
+      "theorem": "CoupledFourthVariants.all_rows"
+    },
+    {
+      "row": 2401,
+      "support_expression": "CoupledFourthVariants.support 1",
+      "demand_expression": "1",
+      "theorem": "CoupledFourthVariants.all_rows"
+    },
+    {
+      "row": 2402,
+      "support_expression": "CoupledFourthVariants.support 2",
+      "demand_expression": "1",
+      "theorem": "CoupledFourthVariants.all_rows"
+    },
+    {
+      "row": 2403,
+      "support_expression": "CoupledFourthVariants.support 3",
+      "demand_expression": "1",
+      "theorem": "CoupledFourthVariants.all_rows"
+    },
+    {
+      "row": 2404,
+      "support_expression": "CoupledFourthVariants.support 4",
+      "demand_expression": "1",
+      "theorem": "CoupledFourthVariants.all_rows"
+    },
+    {
+      "row": 2405,
+      "support_expression": "CoupledFourthVariants.support 5",
+      "demand_expression": "1",
+      "theorem": "CoupledFourthVariants.all_rows"
+    },
+    {
+      "row": 2406,
+      "support_expression": "CoupledFourthVariants.support 6",
+      "demand_expression": "1",
+      "theorem": "CoupledFourthVariants.all_rows"
+    },
+    {
+      "row": 2407,
+      "support_expression": "CoupledFourthVariants.support 7",
+      "demand_expression": "1",
+      "theorem": "CoupledFourthVariants.all_rows"
+    },
+    {
+      "row": 2408,
+      "support_expression": "CoupledFourthVariants.support 8",
+      "demand_expression": "1",
+      "theorem": "CoupledFourthVariants.all_rows"
+    },
+    {
+      "row": 2409,
+      "support_expression": "CoupledFourthVariants.support 9",
+      "demand_expression": "1",
+      "theorem": "CoupledFourthVariants.all_rows"
+    },
+    {
+      "row": 2410,
+      "support_expression": "CoupledFourthVariants.support 10",
+      "demand_expression": "1",
+      "theorem": "CoupledFourthVariants.all_rows"
+    },
+    {
+      "row": 2411,
+      "support_expression": "CoupledFourthVariants.support 11",
+      "demand_expression": "1",
+      "theorem": "CoupledFourthVariants.all_rows"
+    },
+    {
+      "row": 2412,
+      "support_expression": "CoupledFourthVariants.support 13",
+      "demand_expression": "1",
+      "theorem": "CoupledFourthVariants.all_rows"
+    },
+    {
+      "row": 2413,
+      "support_expression": "CoupledFourthVariants.support 14",
+      "demand_expression": "1",
+      "theorem": "CoupledFourthVariants.all_rows"
+    },
+    {
+      "row": 2414,
+      "support_expression": "CoupledFourthVariants.support 15",
+      "demand_expression": "1",
+      "theorem": "CoupledFourthVariants.all_rows"
+    },
+    {
+      "row": 2415,
+      "support_expression": "CoupledFourthVariants.support 16",
+      "demand_expression": "1",
+      "theorem": "CoupledFourthVariants.all_rows"
+    },
+    {
+      "row": 2416,
+      "support_expression": "CoupledFourthVariants.support 17",
+      "demand_expression": "1",
+      "theorem": "CoupledFourthVariants.all_rows"
+    },
+    {
+      "row": 2417,
+      "support_expression": "CoupledFourthVariants.support 18",
+      "demand_expression": "1",
+      "theorem": "CoupledFourthVariants.all_rows"
+    },
+    {
+      "row": 2418,
+      "support_expression": "CoupledFourthVariants.support 19",
+      "demand_expression": "1",
+      "theorem": "CoupledFourthVariants.all_rows"
+    },
+    {
+      "row": 2419,
+      "support_expression": "CoupledFourthVariants.support 20",
+      "demand_expression": "1",
+      "theorem": "CoupledFourthVariants.all_rows"
+    },
+    {
+      "row": 2420,
+      "support_expression": "CoupledFourthVariants.support 21",
+      "demand_expression": "1",
+      "theorem": "CoupledFourthVariants.all_rows"
+    },
+    {
+      "row": 2421,
+      "support_expression": "CoupledFourthVariants.support 22",
+      "demand_expression": "1",
+      "theorem": "CoupledFourthVariants.all_rows"
+    },
+    {
+      "row": 2422,
+      "support_expression": "CoupledFourthVariants.support 23",
+      "demand_expression": "1",
+      "theorem": "CoupledFourthVariants.all_rows"
+    },
+    {
+      "row": 2423,
+      "support_expression": "CoupledThirdVariants.support 0",
+      "demand_expression": "1",
+      "theorem": "CoupledThirdVariants.all_rows"
+    },
+    {
+      "row": 2424,
+      "support_expression": "CoupledThirdVariants.support 1",
+      "demand_expression": "1",
+      "theorem": "CoupledThirdVariants.all_rows"
+    },
+    {
+      "row": 2425,
+      "support_expression": "CoupledThirdVariants.support 2",
+      "demand_expression": "1",
+      "theorem": "CoupledThirdVariants.all_rows"
+    },
+    {
+      "row": 2426,
+      "support_expression": "CoupledCoreFifth.support.toFinset",
+      "demand_expression": "1",
+      "theorem": "CoupledCoreFifth.hole_bound"
+    },
+    {
+      "row": 2427,
+      "support_expression": "CoupledFifthVariants.support 0",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2428,
+      "support_expression": "CoupledFifthVariants.support 1",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2429,
+      "support_expression": "CoupledFifthVariants.support 2",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2430,
+      "support_expression": "CoupledFifthVariants.support 3",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2431,
+      "support_expression": "CoupledFifthVariants.support 4",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2432,
+      "support_expression": "CoupledFifthVariants.support 5",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2433,
+      "support_expression": "CoupledFifthVariants.support 6",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2434,
+      "support_expression": "CoupledFifthVariants.support 7",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2435,
+      "support_expression": "CoupledFifthVariants.support 8",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2436,
+      "support_expression": "CoupledFifthVariants.support 9",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2437,
+      "support_expression": "CoupledFifthVariants.support 10",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2438,
+      "support_expression": "CoupledFifthVariants.support 11",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2439,
+      "support_expression": "CoupledFifthVariants.support 12",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2440,
+      "support_expression": "CoupledFifthVariants.support 13",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2441,
+      "support_expression": "CoupledFifthVariants.support 14",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2442,
+      "support_expression": "CoupledFifthVariants.support 15",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2443,
+      "support_expression": "CoupledFifthVariants.support 16",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2444,
+      "support_expression": "CoupledFifthVariants.support 17",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2445,
+      "support_expression": "CoupledFifthVariants.support 18",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2446,
+      "support_expression": "CoupledFifthVariants.support 19",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2447,
+      "support_expression": "CoupledFifthVariants.support 20",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2448,
+      "support_expression": "CoupledFifthVariants.support 21",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2449,
+      "support_expression": "CoupledFifthVariants.support 22",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2450,
+      "support_expression": "CoupledFifthVariants.support 23",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2451,
+      "support_expression": "CoupledFifthVariants.support 24",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2452,
+      "support_expression": "CoupledFifthVariants.support 25",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2453,
+      "support_expression": "CoupledFifthVariants.support 26",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2454,
+      "support_expression": "CoupledFifthVariants.support 27",
+      "demand_expression": "1",
+      "theorem": "CoupledFifthVariants.all_rows"
+    },
+    {
+      "row": 2455,
+      "support_expression": "CoupledCoreEleven.support.toFinset",
+      "demand_expression": "1",
+      "theorem": "CoupledCoreEleven.hole_bound"
+    },
+    {
+      "row": 2456,
+      "support_expression": "CoupledCoreNine.support.toFinset",
+      "demand_expression": "1",
+      "theorem": "CoupledCoreNine.hole_bound"
+    }
+  ],
+  "original_range": [
+    0,
+    1186
+  ],
+  "oldcuts_range": [
+    1187,
+    2294
+  ],
+  "geometric_range": [
+    2295,
+    2456
+  ],
+  "newcuts_range": [
+    2457,
+    2468
+  ],
+  "files": {
+    "OriginalBinding.lean": "96c06b4e602d3da50739ec547e930c3387bfa6f24712956532262e7c7bd76741",
+    "NewCuts.lean": "dfa218062a8583ef980c28506a333c688e39cd29e4e809e9fd0496fe4a27e0fd",
+    "ContextGeometry.lean": "3b7e7fb8e8fbbf5bc841b08b4e587ae2513f990a53b06a3d24baf8d397de82dd",
+    "GeometricBinding.lean": "b1700f75afa4acd5413a8e1fec446a3ef88ee6b154d5406f9b3ded2f85e21c2f",
+    "Transfer.lean": "e19e3d99f0b409eed8f176d1400d6f77dfd6d3b2fec840453c2a12e4d5985e8d",
+    "OldcutsBinding.lean": "5f8bfe7a36322272fb28bb68598a240f9e99a52ae95f7fa67af70be2f4ea7aa3"
+  },
+  "lean_checked": false
+}

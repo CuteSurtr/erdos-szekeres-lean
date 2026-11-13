@@ -1,0 +1,21 @@
+memgate: start at mem 23633 MB after 0s wait
+{'layer_splits_compared': 942, 'sigma_splits_compared': 1747, 'mismatches': 0}
+        1.56 real         1.41 user         0.06 sys
+            72728576  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                5144  page reclaims
+                  41  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 754  voluntary context switches
+                 781  involuntary context switches
+         32291233347  instructions retired
+          5792577770  cycles elapsed
+            64455160  peak memory footprint
+memgate: exit 0

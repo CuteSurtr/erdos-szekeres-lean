@@ -1,0 +1,131 @@
+{
+ "name": "k6_c4_16",
+ "path": "SYMMAX/k6/c4_16points.txt",
+ "fmt": "Z2",
+ "K": 6,
+ "claimed_size": 16,
+ "parsed_points": 16,
+ "parse_anomalies": [],
+ "size_ok": true,
+ "distinct": true,
+ "distinct_affine": true,
+ "max_abs_native_coordinate": 737049,
+ "origin_in_set": false,
+ "centre_claim_ok": true,
+ "symmetry": {
+  "C4": {
+   "invariant": true,
+   "orbit_sizes": [
+    4,
+    4,
+    4,
+    4
+   ],
+   "num_orbits": 4,
+   "fixed_points": 0,
+   "numeric_isometry_max_error": "0.000e+00"
+  }
+ },
+ "other_symmetries_tested": {
+  "C2": true,
+  "C4": true,
+  "M_y-axis": false,
+  "M_x-axis": false,
+  "M_diag": false,
+  "M_antidiag": false
+ },
+ "collinear_triples": 0,
+ "orient_methodB_mismatches": 0,
+ "orient_numeric_mismatches": 0,
+ "min_abs_numeric_cross": "5.955373e+08",
+ "order_ties": [
+  0,
+  0
+ ],
+ "dp_max_convex_four_orders": [
+  5,
+  5,
+  5,
+  5
+ ],
+ "dp_witness": [
+  [
+   -737049,
+   -315992
+  ],
+  [
+   -275082,
+   -83243
+  ],
+  [
+   -211144,
+   -23017
+  ],
+  [
+   -83243,
+   275082
+  ],
+  [
+   -315992,
+   737049
+  ]
+ ],
+ "dp_witnesses_verified": [
+  true,
+  true,
+  true,
+  true
+ ],
+ "brute_output": [
+  "n=16 table: zero_entries_on_distinct_triples=0 alternation_violations=0",
+  "k=6 subsets=8008 convex_TRI=0 convex_WRAP=0 disagreements=0",
+  "k=5 subsets=4368 convex_TRI=280 convex_WRAP=280 disagreements=0"
+ ],
+ "random_subset_checks": {
+  "count": 60,
+  "mismatches": 0,
+  "dp_value_histogram": {
+   "5": 58,
+   "4": 2
+  }
+ },
+ "convex_layers": [
+  {
+   "size": 4,
+   "orbits": [
+    3
+   ],
+   "is_single_orbit": true
+  },
+  {
+   "size": 4,
+   "orbits": [
+    2
+   ],
+   "is_single_orbit": true
+  },
+  {
+   "size": 4,
+   "orbits": [
+    0
+   ],
+   "is_single_orbit": true
+  },
+  {
+   "size": 4,
+   "orbits": [
+    1
+   ],
+   "is_single_orbit": true
+  }
+ ],
+ "seconds": 0.1,
+ "brute_K_minus_1_convex": {
+  "k": "5",
+  "subsets": "4368",
+  "convex_TRI": "280",
+  "convex_WRAP": "280",
+  "disagreements": "0"
+ },
+ "VERDICT": "PASS"
+}

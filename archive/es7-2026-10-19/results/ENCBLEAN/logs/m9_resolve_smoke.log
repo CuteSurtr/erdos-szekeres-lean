@@ -1,0 +1,63 @@
+# m9_resolve_smoke.log: M9 / E2 provenance (risk R7). Smoke test of scripts/resolve.sh on exactly 2 cubes that solve in about 1 s.
+# Cube choice (from the records): n10000 (I=47) has the smallest CaDiCaL time in C6UPPER/noty12-2026-11-06/results.tsv (0.8 s; tie with 4 others, broken by the smallest cake_s, 3.4 s);
+#   c00100 (I=27) has the smallest encoder-B CaDiCaL time in C6UPPER/replay-2026-11-06/results.tsv (0.8 s; tie with c00101, c00111, c10111, first by name).
+# Script: scripts/resolve.sh sha256 f32d587c33264a392e09028b1a0f71c5daa2c589ec80a51a491c584549230a54; scripts/build_cake_lpr.sh sha256 3813e60e7dc5feed9b864c5cee3186450a52cce2229a89c7335093fbfe20bdf7 (written, not run).
+# cake_lpr sources of commit 033aad53 (read-only 'git show 033aad53d1733bd4b8ca41cf6f1b5fb5d84f8de2:<file> | sha256sum' in /path/to/tools/cake_lpr, HEAD 033aad53d1733bd4b8ca41cf6f1b5fb5d84f8de2):
+#   Makefile 5e001c7eafc88afc562f05aea80cbc86bad45a3335a0b57024dbe7c53beb5342
+#   basis_ffi.c bd498883fdc0577d734a771fe8197c5ff571f2abdd769b8dc95d46818db5cbbc
+#   cake_lpr.S d20ceae0d8fe973a03a1ba8db623b2594161721ab9091305ae60cd581dcc78f7
+#   binary c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54; .comment: GCC: (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+# Tctl before start: +74.1°C; free on /path/to/data: 1614G
+# command: cd ENCBLEAN; TMPDIR=<session scratchpad>/m9 nice -n 10 scripts/resolve.sh c00100,n10000 /path/to/data/encblean-m9/resolve-smoke
+#   (each emission and CaDiCaL run inside resolve.sh: systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10; cake_lpr: the same with MemoryMax=12G)
+# start: 2026-11-06T18:52:15+09:00
+== resolve.sh (M9 / E2 provenance)   2026-11-06T18:52:15+09:00
+host: jay-B850M-AORUS-ELITE-WIFI6E-ICE   load: 31.03 31.22 31.13   Tctl: 74.1   free on OUTDIR: 1614G
+cubes: c00100,n10000 -> 2 cube(s); OUTDIR /path/to/data/encblean-m9/resolve-smoke
+git HEAD: 752214b6e99f27fdf31961b418e7d79362e703d8   uncommitted under ENCBLEAN: 11 path(s)
+script: /path/to/repo/cloud/es7-2026-10-19/results/ENCBLEAN/scripts/resolve.sh sha256 f32d587c33264a392e09028b1a0f71c5daa2c589ec80a51a491c584549230a54
+caps: emit 'systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10'; cadical 'systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10'; cake_lpr 'systemd-run --user --scope -q -p MemoryMax=12G -p MemorySwapMax=0 nice -n 10'; Tctl max 84 C; min free 400 GB + 6 GB per cube
+record: /path/to/repo/cloud/es7-2026-10-19/results/C6UPPER/SHA256SUMS.txt sha256 80bef8c70320a7f79d607c3b99792a4aefd2ef58d8b16da926a42f841406d825
+record: /path/to/repo/cloud/es7-2026-10-19/results/C6UPPER/replay-2026-11-06/results.tsv sha256 b8d4f6e61db28b909f6c1756fa70eb91f0c504328ba947378b9ee3e492cd92fa
+record: /path/to/repo/cloud/es7-2026-10-19/results/C6UPPER/noty12-2026-11-06/cubes.sha256 sha256 51c9ba32d4020be0bb547049e3ca94263ba48a6a726333f47edeb11f8d8b8f1f
+record: /path/to/repo/cloud/es7-2026-10-19/results/C6UPPER/noty12-2026-11-06/results.tsv sha256 19c8065a55a0fef5fddd4e56a4da81fe6aee1bbcf97493d86950ad30100759db
+record: /path/to/repo/cloud/es7-2026-10-19/results/C6UPPER/encb/B_m6K8t11.meta.json sha256 68b434944aeb1fd8df7368347dfb4e18c2161b19098893b02a14e8c8126831d7
+record: /path/to/repo/cloud/es7-2026-10-19/results/C6UPPER/noty12-2026-11-06/TOOLS_AND_PROOFS.sha256 sha256 7e3633696d3aa271f05dcc5fe8b0b961e13262dd9bdfad6f554974c0bc2a2e25
+record: /path/to/repo/cloud/es7-2026-10-19/results/C6UPPER/replay-2026-11-06/TOOLS_AND_PROOFS.sha256 sha256 274b48162541f2fbab077917f5b500a2ae84d3ff20c1d0f597eeb3ade8b1247f
+tool: cadical /usr/bin/cadical sha256 4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70 version 2.1.3 (record: 4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70, version 2.1.3)
+tool: cake_lpr /path/to/tools/cake_lpr/cake_lpr sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54 (record: c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54)
+tool: encb_dimacs /path/to/repo/cloud/es7-2026-10-19/results/ENCBLEAN/.lake/build/bin/encb_dimacs sha256 a0dff6f2253f3331f069150c6443644110bcae7034cc1aefb0474124120a9689, mtime 2026-11-06T18:00:50+09:00
+sources: EncB/Emit.lean 2164723a3f3c11de12514f6533fabb79d570798242082608112c3ce86e8f8ac9; EncB/Cover.lean c59425acb5ba5e1da652fbb8d2f77d0c78d8cfc522216f64015231f7ed765f98; EncB/Coded.lean 2727e00bbd4ce9eab7f4af634c8ad3c056c1122cac1d9bd11f080e6265a69c5f
+records: SHA256SUMS c-cubes 32; replay encoder-B ACCEPTED 32; noty12 cubes.sha256 32; noty12 results.tsv ACCEPTED 32; meta.json Y12 Y13 Y14 Y23 Y24 Y34 = 1 2 3 10 11 18
+emit  c00100 (I=27) units [1 -2 -3 10 -11 -18] cnf 67bd71875b89875c5126410c3f5d91a5ef4275dc172fa9f05bd6f1eba72109b2 58618888 bytes [12.2 s] SHA256SUMS=ok replay-ACCEPTED=ok
+solve c00100 (I=27) cadical rc 20, 0.85 s, 242484 KB max RSS; proof 94913b2e3b91db12026fa7718a05dd2d21cb6d224d9c39868ed80aabac29a7cb 39771081 bytes (= recorded proof: yes)
+check c00100 (I=27) cake_lpr rc 0, 3.96 s, 6796604 KB max RSS; s-lines 1, first 's VERIFIED UNSAT' -> ACCEPTED
+ACCEPTED c00100 (I=27)
+emit  n10000 (I=47) units [-1 2 -3 -10 -11 -18] cnf b5cc9acd16839be4db5a9c52290d196233f5ec58e8f213350ec189aaaf3a307f 58618889 bytes [14.4 s] cubes.sha256=ok noty12-ACCEPTED=ok
+solve n10000 (I=47) cadical rc 20, 0.86 s, 242488 KB max RSS; proof dd7b24adc280f4dfebb6ffb26069afb68e2e0594187f8d2c81406b2c061b2788 39771102 bytes (= recorded proof: yes)
+check n10000 (I=47) cake_lpr rc 0, 4.05 s, 6796356 KB max RSS; s-lines 1, first 's VERIFIED UNSAT' -> ACCEPTED
+ACCEPTED n10000 (I=47)
+SUMMARY: 2/2 requested cubes ACCEPTED by cake_lpr ('s VERIFIED UNSAT') with the CNF equal to both records; refused 0; stopped 0; tool hashes unchanged at the end; wall 37.3 s; PASS
+# exit code: 0
+# end: 2026-11-06T18:52:52+09:00; wall 37.4 s
+
+## Additional checks of resolve.sh (no solver run), 2026-11-06 ~18:53-18:56 KST
+# (1) rerun on the smoke dir: TMPDIR=<scratch> nice -n 10 scripts/resolve.sh n10000,27 /path/to/data/encblean-m9/resolve-smoke   exit code 0
+    SKIP  n10000 (I=47): results.tsv already has its row (verdict ACCEPTED); not overwritten
+    SKIP  c00100 (I=27): results.tsv already has its row (verdict ACCEPTED); not overwritten
+    SUMMARY: 2/2 requested cubes ACCEPTED by cake_lpr ('s VERIFIED UNSAT') with the CNF equal to both records; refused 0; stopped 0; tool hashes unchanged at the end; wall 0.3 s; PASS
+    after the rerun: every file of the smoke dir except resolve.log has the same size, mtime and sha256 as before (find + sha256sum -c); resolve.log was appended.
+# (2) leftover refusal: an empty c00100.lrat placed in a fresh scratch dir, no results row; scripts/resolve.sh c00100 <scratch>/neg-leftover   exit code 1, nothing emitted, the file untouched (0 bytes)
+    REFUSED c00100 (I=27): <scratch>/neg-leftover/c00100.lrat exists but results.tsv has no row; move the cube's files away by hand
+    SUMMARY: 0/1 requested cubes ACCEPTED by cake_lpr ('s VERIFIED UNSAT') with the CNF equal to both records; refused 1; stopped 0; tool hashes unchanged at the end; wall 0.3 s; FAIL
+# (3) CNF mismatch: scratch copy of C6UPPER/noty12-2026-11-06/cubes.sha256 with n10000's hash b5cc9acd... changed to a5cc9acd... (one hex digit);
+#     RS_NOTYSHA=<copy> scripts/resolve.sh n10000 /path/to/data/encblean-m9/resolve-negtest   exit code 1; emitted, not solved (no .lrat, no CaDiCaL/cake files)
+    override: RS_NOTYSHA=<scratch>/cubes.sha256.altered
+    emit  n10000 (I=47) units [-1 2 -3 -10 -11 -18] cnf b5cc9acd16839be4db5a9c52290d196233f5ec58e8f213350ec189aaaf3a307f 58618889 bytes [14.1 s] cubes.sha256=MISMATCH(recorded a5cc9acd16839be4db5a9c52290d196233f5ec58e8f213350ec189aaaf3a307f) noty12-ACCEPTED=ok
+    FAIL  n10000 (I=47): CNF-MISMATCH, not solved
+    SUMMARY: 0/1 requested cubes ACCEPTED by cake_lpr ('s VERIFIED UNSAT') with the CNF equal to both records; refused 0; stopped 0; tool hashes unchanged at the end; wall 14.6 s; FAIL
+# (4) usage and setup errors, each exit code 2 with nothing emitted: no arguments; 'c0010'; '27,c00100' (the same cube twice); '64';
+#     RS_C6SUMS=/nonexistent ('SETUP FAILED: record file not readable'); RS_CAKE=/usr/bin/true ('SETUP FAILED: cake_lpr is not the pinned binary c14ff498...').
+# (5) shellcheck 0.11.0 (default severity) on resolve.sh and build_cake_lpr.sh: no findings; bash -n: OK. build_cake_lpr.sh was NOT run (no rebuild of cake_lpr).
+# (6) name_of/index_of of resolve.sh reproduce the cubes64 order of logs/m9_hash_binding.log for all 64 indices (diff empty).
+# (7) scripts/audit.sh after this step (scope 4G): exit code 0, last line: AUDIT PASS (no sorry/admit/native_decide/implemented_by/extern/unsafe/partial/axiom/opaque/set_option/ofReduceBool in code; Std-only; no decide/rfl/simp/omega/#eval/#reduce in a declaration that mentions the (6,8,11) instance) (output kept in scratch; logs/audit.log not rewritten).

@@ -1,0 +1,32 @@
+{
+ "sets": 86,
+ "positions_per_set": 33,
+ "answers": 2838,
+ "status_totals": {
+  "UNSAT": 2838
+ },
+ "sets_missing_answers": [],
+ "abstractly_saturated_sets": 86,
+ "by_source_tag": {
+  "NFd": {
+   "sets": 86,
+   "abstractly_saturated": 86,
+   "UNSAT": 2838
+  }
+ },
+ "sat_answers": [],
+ "conflicts_per_solve": {
+  "n": 2838,
+  "mean": 2.748,
+  "median": 2,
+  "p99": 9,
+  "max": 16
+ },
+ "wall_ms_per_solve": {
+  "n": 2838,
+  "mean": 39.978,
+  "median": 27.3,
+  "p99": 170.1,
+  "max": 291.9
+ }
+}

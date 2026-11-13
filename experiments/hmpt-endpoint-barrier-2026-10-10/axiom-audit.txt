@@ -1,0 +1,7 @@
+'ErdosSzekeres.HMPT.entropy_slack_negative_at_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.HMPT.roundedScale_sq_ge_of_log_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.HMPT.normalizedBudget_neg_at_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.HMPT.budget_eventually_negative_at_published' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.HMPT.budget_eventually_negative_at_or_below_published' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

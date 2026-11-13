@@ -1,0 +1,38 @@
+{
+  "source": "experiments/omission-cover-certificates-2026-10-10/balanced-v2-source.json",
+  "source_sha256": "acaf6323a2539be869304f42263f80a87db95be1b998e41638dba9bca4d63d72",
+  "source_rows": 3131,
+  "primary_variables": 252,
+  "variables": 69584,
+  "clauses": 258379,
+  "budget": 62,
+  "positive_variable_means": "state is missing",
+  "cnf_sha256": "55bca1e6846415defa1025715d6937b0f91debe47b57fec79b2235b79e446f03",
+  "small_encoding_checks": "passed; exhaustive primary assignments n<=6 and gate truth table",
+  "status": "inconclusive",
+  "solver": "CaDiCaL 3.0.1",
+  "solver_binary_sha256": "83c5bd0ebe482332cf7b678f1770c1aefed0a95107349652c619943cd34d0618",
+  "command": [
+    ".cache/cadical/build/cadical",
+    "-t",
+    "600",
+    ".cache/balanced62-sat-2026-10-10/balanced62.cnf",
+    ".cache/balanced62-sat-2026-10-10/trace.drat"
+  ],
+  "wall_seconds": 600.0,
+  "solver_exit_code": 0,
+  "solver_status": "UNKNOWN",
+  "witness_found": false,
+  "complete_unsat_proof": false,
+  "lean_formalization": false,
+  "partial_drat_saved_only_in_ignored_cache": true,
+  "partial_drat_bytes": 1416372426,
+  "scope": "Bounded search of a Boolean relaxation; no new geometric upper/lower bound.",
+  "files": {
+    "README.md": "b06eda3f1f624cd087bed91b0ad27c8b1ce515d1f3443519613ac862b3750c75",
+    "encode.py": "59c0ddc490b0b46a0d44d923a559a27b39255a54357b82f76416eda86fbe809a",
+    "encoding.json": "34fb4aee25121c2043fa5c2f2793e6f9a1243532d335bf5530edb7b76a426895",
+    "search.log": "4e0124b41a012aa5a70351c49f9faee37dedf4ce372b0e65c49d09c8591c2880",
+    "symmetry-probe.json": "76775bb4e10f8b1540536a2515a159e14cdaab7b3652de36b50b3bcebe6cde04"
+  }
+}

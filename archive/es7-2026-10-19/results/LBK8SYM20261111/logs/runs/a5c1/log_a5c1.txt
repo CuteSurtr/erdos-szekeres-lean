@@ -1,0 +1,23 @@
+21:42:47 start {'m': 5, 't': 12, 'centre': True, 'out': '/home/jay/research/data/lb-k8sym-20261111/runs/a5c1', 'seed': 202, 'init': None, 'ansatz': 'needle11,clusters,needle21,twoorbit', 'stop_at': 0, 'hours': 1.2, 'steps_per_T': 4000, 'T0': 0.5, 'Tmin': 0.02, 'alpha': 0.93, 'w7': 0.02, 'restart_evals': 600000, 'tag': 'a5c1', 'perturb': 0.0}
+21:42:47 restart 1 clusters init N8 58181095 N7 28925330
+21:43:48 r1 ev 76000 acc 0.839 ab 0.096 T 0.1259 cur N8 9385 N7 326025 | best N8 3245 N7 313725
+21:44:49 r1 ev 192000 acc 0.686 ab 0.270 T 0.1297 cur N8 1140 N7 202880 | best N8 980 N7 353820
+21:45:49 r1 ev 308000 acc 0.649 ab 0.318 T 0.0200 cur N8 1090 N7 648165 | best N8 975 N7 449715
+21:46:50 r1 ev 436000 acc 0.621 ab 0.353 T 0.1297 cur N8 360 N7 3519920 | best N8 350 N7 1391270
+21:47:52 r1 ev 564000 acc 0.605 ab 0.373 T 0.1207 cur N8 360 N7 1451040 | best N8 340 N7 1203780
+21:48:09 end restart 1 clusters evals 600000 best N8 330 N7 1403980 found 0
+21:48:09 restart 2 needle21 init N8 69278710 N7 25804400
+21:49:11 r2 ev 72000 acc 0.873 ab 0.060 T 0.1354 cur N8 4495 N7 1582310 | best N8 4355 N7 1782365
+21:50:13 r2 ev 208000 acc 0.630 ab 0.336 T 0.0903 cur N8 1035 N7 2396325 | best N8 650 N7 3277010
+21:51:14 r2 ev 332000 acc 0.598 ab 0.374 T 0.0839 cur N8 2110 N7 1089010 | best N8 650 N7 2864705
+21:52:15 r2 ev 464000 acc 0.566 ab 0.410 T 0.0726 cur N8 615 N7 1736105 | best N8 580 N7 1195090
+21:53:15 r2 ev 588000 acc 0.565 ab 0.414 T 0.1122 cur N8 850 N7 1896215 | best N8 400 N7 1652360
+21:53:21 end restart 2 needle21 evals 600000 best N8 400 N7 1652360 found 0
+21:53:21 restart 3 twoorbit init N8 58776285 N7 26215440
+21:54:22 r3 ev 68000 acc 0.895 ab 0.036 T 0.1456 cur N8 254180 N7 680375 | best N8 43845 N7 268370
+21:55:24 r3 ev 176000 acc 0.707 ab 0.240 T 0.0205 cur N8 485 N7 324910 | best N8 485 N7 229460
+21:56:26 r3 ev 312000 acc 0.625 ab 0.342 T 0.1044 cur N8 870 N7 198600 | best N8 485 N7 208205
+21:57:27 r3 ev 436000 acc 0.605 ab 0.369 T 0.0839 cur N8 975 N7 204630 | best N8 485 N7 197275
+21:58:29 r3 ev 544000 acc 0.595 ab 0.381 T 0.0903 cur N8 610 N7 230580 | best N8 485 N7 197260
+21:58:56 end restart 3 twoorbit evals 600000 best N8 485 N7 188575 found 0
+21:58:56 restart 4 needle11 init N8 359218850 N7 87035435

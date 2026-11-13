@@ -1,0 +1,24 @@
+map and conv numbering ready (1 s): 2856 triple vars, 835176 conv vars
+sym32+near(-134,-269843): |hull| = 4, convex 7-subsets (all) = 2 (3 s)
+  labelling p0=(-250, -1250000) onhull=True: classes consistent and zero pattern exact: True; expected violated clauses 1
+  labelling p0=(-162, -270172) onhull=True: classes consistent and zero pattern exact: True; expected violated clauses 1
+  labelling p0=(162, 270172) onhull=True: classes consistent and zero pattern exact: True; expected violated clauses 1
+  labelling p0=(250, 1250000) onhull=True: classes consistent and zero pattern exact: True; expected violated clauses 1
+  labelling p0=(-156, -269914) onhull=False: classes consistent and zero pattern exact: True; expected violated clauses 136
+sym32+near(94,270158): |hull| = 4, convex 7-subsets (all) = 12 (9 s)
+  labelling p0=(-250, -1250000) onhull=True: classes consistent and zero pattern exact: True; expected violated clauses 6
+  labelling p0=(-156, -269914) onhull=False: classes consistent and zero pattern exact: True; expected violated clauses 141
+random: |hull| = 10, convex 7-subsets (all) = 259168 (13 s)
+  labelling p0=(-49381, -69837) onhull=True: classes consistent and zero pattern exact: True; expected violated clauses 129584
+  labelling p0=(-48284, -36956) onhull=False: classes consistent and zero pattern exact: True; expected violated clauses 130292
+streamed 16653336 clauses (header 838032 vars, 16653336 clauses) (32 s)
+  sym32+near(-134,-269843) p0=(-250, -1250000) onhull=True: violated 1, expected 1 -> OK
+  sym32+near(-134,-269843) p0=(-162, -270172) onhull=True: violated 1, expected 1 -> OK
+  sym32+near(-134,-269843) p0=(162, 270172) onhull=True: violated 1, expected 1 -> OK
+  sym32+near(-134,-269843) p0=(250, 1250000) onhull=True: violated 1, expected 1 -> OK
+  sym32+near(-134,-269843) p0=(-156, -269914) onhull=False: violated 136, expected 136 -> OK
+  sym32+near(94,270158) p0=(-250, -1250000) onhull=True: violated 6, expected 6 -> OK
+  sym32+near(94,270158) p0=(-156, -269914) onhull=False: violated 141, expected 141 -> OK
+  random p0=(-49381, -69837) onhull=True: violated 129584, expected 129584 -> OK
+  random p0=(-48284, -36956) onhull=False: violated 130292, expected 130292 -> OK
+REFEREE FULL-BASE EVALUATION PASSED (32 s)

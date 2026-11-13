@@ -1,0 +1,6 @@
+CaDiCaL 3.0.1, https://github.com/arminbiere/cadical commit c60730422e758ef1cebe7aeddf2dda31c996bf04, ./configure && make (gcc 13.3.0); `cadical --version` = 3.0.1; binary sha256 8b4b73f08106c470fb4883fefa2a23f1e7c0c4e1989ddf2b7cd87806ff53312b
+cake_lpr, https://github.com/tanyongkiam/cake_lpr commit a36874a8b750b43fe4b385b8ddbf5b033e46a3fa, `make cake_lpr`; binary sha256 1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca; `cake_lpr example.cnf example.lpr` prints `s VERIFIED UNSAT`
+Solver call: cadical -q --lrat=true --no-binary LEAF.cnf LEAF.lrat ; checker call: cake_lpr LEAF.cnf LEAF.lrat
+Generator: tools/etv/gen_etv.py 33 7 7 7 --mirror --hull, then results/C/scripts/mirgen.py hm33k7.cnf 33 --hull (results/C/scripts/make_cnfs.sh lines 25,27; byte-identical to `lake exe mir_dimacs hull 33 7` per results/H3/README.md section 3)
+hm33k7.sub.cnf sha256 bfbc2d6096e4099ba751130d421eca9da18b72559991103cc2d4b4bc0d92757d (matches), header p cnf 47002 535454
+verify/hull_leaves.icnf sha256 cc11270a57ebe85ad1d5c83b15da0a3439521cc7ebd50432f16c223a1b2478b6 (matches), 1198 lines

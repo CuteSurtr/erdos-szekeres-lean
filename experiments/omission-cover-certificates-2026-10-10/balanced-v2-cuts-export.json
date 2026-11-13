@@ -1,0 +1,30 @@
+{
+  "scope": "Exact arithmetic consequences of the original omission rows; no new geometric hypotheses",
+  "module": "BalancedCoverCutsV2",
+  "namespace": "BalancedCoverCutsV2",
+  "catalog_module": "BalancedProof.Catalog",
+  "catalog_namespace": "OmissionBalanced",
+  "states": 252,
+  "original_rows": 2685,
+  "derived_rows": 446,
+  "source": "/workspace/erdos-szekeres-lean/.cache/schroeder-release/es7_es8_bounds_81_319_v1/certificates/balanced.json",
+  "source_sha256": "23363c9e341a7edf4de28b6bf21970983cc6d4cafa6f2bdef54ce3d25b1c5a94",
+  "certificate": "/workspace/erdos-szekeres-lean/.cache/omission-cover-transfer-balanced-v2/cover-certificate.json",
+  "certificate_sha256": "1fcf436257dd4ce6b648fbcd6718d4a1dedd47913621c1160b6d292fd40fab49",
+  "augmented_source": "source.json",
+  "augmented_source_sha256": "acaf6323a2539be869304f42263f80a87db95be1b998e41638dba9bca4d63d72",
+  "generator_sha256": "3feb2c7a66f0fd63a2a9379305a1142c7d41921c4562f4469736ae0a04928343",
+  "files": {
+    "BalancedCoverCutsV2.lean": "a79cf10030df67ae1cc2d5910a3bac5aedb69eb6e6284cb63b53873ac5bd64dc"
+  },
+  "python_replay": {
+    "states": 252,
+    "original_rows": 2685,
+    "derived_rows": 446,
+    "total_rows": 3131,
+    "minimum_margin": 1,
+    "maximum_derivation_depth": 2,
+    "all_integer_margins_positive": true
+  },
+  "lean_checked": false
+}

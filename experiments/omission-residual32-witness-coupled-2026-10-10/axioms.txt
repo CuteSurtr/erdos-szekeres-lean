@@ -1,0 +1,27 @@
+'ErdosSzekeres.Omission.CoupledCoreSixth.context_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+'ErdosSzekeres.Omission.CoupledCoreSixth.states_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Omission.CoupledCoreSixth.witness_violates_coupled' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.CoupledCoreSixth.strict_strengthening' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.CoupledCoreSixth.countermodel_not_realizable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.CoupledCoreSixth.exists_missing_state' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.CoupledCoreSixth.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+'ErdosSzekeres.Omission.CoupledFourthWitnessVariant.checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Omission.CoupledFourthWitnessVariant.hole_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.CoupledFourthWitnessVariant.witness_violates_row' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.CoupledFourthWitnessVariant.strict_strengthening' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

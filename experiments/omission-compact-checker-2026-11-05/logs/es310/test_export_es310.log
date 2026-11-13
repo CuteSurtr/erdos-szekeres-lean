@@ -1,0 +1,167 @@
+== 2026-11-06T06:30:13Z setup: pristine copies of the campaign's contexts.jsonl, run_context.py and ctx 2406/2407 files (read only)
+c16cc3da2171b3baf867bfdb968d81b920a48b90ff60fa0e41810d43f06aec6b  contexts.jsonl
+1937e9dc3e51ded192d4ee4b83de8917bd71ee9c5ab9d63e0aff490d0c6f36f6  run_context.py
+0c62b3a91f37c0941ff008a41dcf189115525a5d0b2e5f8dca01e18d1230aa32  runs/ctx-2406-b64.json.gz
+8703fbc257f436c84c326c5248d21a9bfbc87a879185f91db1cb1e225c1c1c80  runs/ctx-2406-b64.result.json
+3937305a179f0b4d451be1a0cc38aa65a5e377fe4c072a167c6670cad148c572  runs/ctx-2407-b64.json.gz
+c1281533faa9d5051a632c1b47a5d7cfe30c6c8b4a17f6ebda13f64ea844918b  runs/ctx-2407-b64.result.json
+exporter sha256: 29854a3799db7ebdb29311255c2a089a0f2c9957beaa2d839583d50033920b1f; merge sha256: 3cbf428b130f6dc2a01893a8dd387d24717b97625bc713a0b801b2fa8a797940
+== 2026-11-06T06:30:13Z 1. refusals (exit 1, nothing written)
+PASS  status capped (exit 1) {'refused_ctx': {'2406': "ctx 2406: result status 'capped', not 'closed'"}}
+PASS  status witness (exit 1) {'refused': "ctx 2406: result status 'witness'"}
+PASS  status error (exit 1) {'refused_ctx': {'2406': "ctx 2406: result status 'error', not 'closed'"}}
+PASS  replay.ok false (exit 1) {'refused_ctx': {'2406': "ctx 2406: result.json fails ['replay.ok']"}}
+PASS  replay missing (exit 1) {'refused_ctx': {'2406': "ctx 2406: result.json fails ['replay.ok', 'replay.pending == 12', 'replay.leaves_checked == leaves']"}}
+PASS  replay.pending 11 (exit 1) {'refused_ctx': {'2406': "ctx 2406: result.json fails ['replay.pending == 12']"}}
+PASS  replay.leaves_checked != leaves (exit 1) {'refused_ctx': {'2406': "ctx 2406: result.json fails ['replay.leaves_checked == leaves']"}}
+PASS  pending 1 (exit 1) {'refused_ctx': {'2406': "ctx 2406: result.json fails ['pending == 0']"}}
+PASS  result budget 63 (exit 1) {'refused_ctx': {'2406': "ctx 2406: result.json fails ['budget == 64']"}}
+PASS  rules.catalog_sha256 changed (exit 1) {'refused_ctx': {'2406': "ctx 2406: result.json fails ['rules.catalog_sha256']"}}
+PASS  source file with another sha256 (read_source) (exit 1) {'refused': 'source sha256 2496d10e0f683bbb942c7f2e03dbdad01a9fa47d519962871139fe928f6fb98b != acaf6323a2539be869304f42263f80a87db95be1b998e41638dba9bca4d63d72'}
+PASS  source refusal created no OUT
+PASS  WITNESS file of the context (exit 1) {'refused': "WITNESS files present: ['/path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp/runs/ctx-2406-b64.WITNESS.json']"}
+PASS  WITNESS file of another context (--all-closed) (exit 1) {'refused': "WITNESS files present: ['/path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp/runs/ctx-17-b64.WITNESS.json']"}
+PASS  campaign/WITNESS-ALERT.txt (exit 1) {'refused': "WITNESS files present: ['/path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp/campaign/WITNESS-ALERT.txt']"}
+PASS  --out inside the campaign (exit 1) {'refused': '--out /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp/out resolves to /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp/out, inside /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp; refusing'}
+PASS  --out inside the campaign: not created
+PASS  --out through a symlink into the campaign (exit 1) {'refused': '--out /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-export-link/out resolves to /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp/runs/out, inside /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp; refusing'}
+PASS  symlinked --out: not created
+refused: /path/to/data/es8-b64-pilot-20261105/x
+refused: /path/to/data/es8-b64-pilot-20261105/runs/y
+refused: /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es311/full/z
+refused: /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/CompactChecker/q
+refused: /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/ext/q
+refused: /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/chain311/q
+refused: /path/to/data
+refused: /path/to/repo/.lake/x
+accepted: /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-export-ok
+PASS  check_out refuses the real campaign, its parent and the 311 build dirs (function call only)
+PASS  tree of ctx 2407 under the name of ctx 2406 (exit 1) {'refused_ctx': {'2406': "ctx 2406: tree fails ['context', 'path == contexts.jsonl', 'missing == contexts.jsonl', 'occupied == contexts.jsonl']"}}
+PASS  contexts.jsonl: one decision of ctx 2406 flipped (exit 1) {'refused': 'contexts.jsonl ctx 2406: path bits are not k in binary'}
+PASS  result leaf count differs from the tree (exit 1) {'refused_ctx': {'2406': "ctx 2406: counts 921/1841/921/0 differ from the result's 920/1841/921/0"}}
+PASS  tree with a pending node (exit 1) {'refused_ctx': {'2406': "ctx 2406: node 23 has type 'pending'"}}
+PASS  tree with a leaf of margin < 1 (weights zeroed) (exit 1) {'refused_ctx': {'2406': 'ctx 2406: leaf 1839 has full-load margin -12032 < 1'}}
+PASS  tree with a node reached twice (exit 1) {'refused_ctx': {'2406': 'ctx 2406: node 787 is reached twice (not a tree)'}}
+PASS  tree with a negative row index (exit 1) {'refused_ctx': {'2406': 'ctx 2406: bad weight entry [-1, 69] in leaf 1839'}}
+PASS  tree budget 63 (exit 1) {'refused_ctx': {'2406': "ctx 2406: tree fails ['budget == 64']"}}
+PASS  --corrupt with the default prefix E310B (exit 1) {'refused': '--corrupt is a test switch; use a test prefix (E310BX), never E310B'}
+== 2026-11-06T06:30:21Z 2. not ready (exit 3 with --ctx, nothing written)
+PASS  result missing (exit 3) {'not_ready': {'2406': 'no result.json'}}
+PASS  truncated result.json (exit 3) {'not_ready': {'2406': 'result.json does not parse'}}
+PASS  result younger than 120 s (exit 3) {'not_ready': {'2406': 'result.json is 0 s old (< 120 s)'}}
+PASS  tree gz younger than 120 s (exit 3) {'not_ready': {'2406': 'tree gz is 0 s old (< 120 s)'}}
+PASS  truncated tree gz (EOFError), result.json 300 s old (exit 3) {'not_ready': {'2406': 'tree gz does not decompress (EOFError: Compressed file ended before the end-of-stream marker was reached)'}}
+PASS  tree gz with one byte changed (CRC / inflate / JSON error), result.json 300 s old (exit 3) {'not_ready': {'2406': 'tree gz does not decompress (BadGzipFile: CRC check failed)'}}
+PASS  tree gz missing, result.json 300 s old (exit 3) {'not_ready': {'2406': 'no tree .json.gz'}}
+== 2026-11-06T06:30:23Z 2b. the same tree-file faults behind a result.json older than 600 s: damage, refused (exit 1, nothing written)
+PASS  truncated tree gz, result.json old: refused (exit 1) {'refused_ctx': {'2406': 'ctx 2406: tree gz does not decompress (EOFError: Compressed file ended before the end-of-stream marker was reached), but result.json is 83857 s old (> 600 s): the tree file is damaged'}}
+PASS    ... the refusal says the tree file is damaged
+PASS  tree gz with one byte changed, result.json old: refused (exit 1) {'refused_ctx': {'2406': 'ctx 2406: tree gz does not decompress (BadGzipFile: CRC check failed), but result.json is 83857 s old (> 600 s): the tree file is damaged'}}
+PASS  tree gz missing, result.json old: refused (exit 1) {'refused_ctx': {'2406': 'ctx 2406: no tree .json.gz, but result.json is 83857 s old (> 600 s): the tree file is damaged'}}
+== 2026-11-06T06:30:23Z 2c. one refused context does not stop the others
+PASS  --ctx 2406,2407 with ctx 2406 refused (replay.ok false): exit 1 (exit 1) {'refused_ctx': {'2406': "ctx 2406: result.json fails ['replay.ok']"}}
+PASS    ... ctx 2407 exported, nothing of ctx 2406 written
+PASS    ... summary: refused_ctx {2406: ...}, refused null
+PASS  --all-closed with ctx 2407's tree damaged: exit 1 (exit 1) {'refused_ctx': {'2407': 'ctx 2407: tree gz does not decompress (BadGzipFile: CRC check failed), but result.json is 83077 s old (> 600 s): the tree file is damaged'}}
+PASS    ... ctx 2406 exported, ctx 2407 refused
+PASS  live run_context.py --budget 64 --ctx 2406 (cwd = fake campaign) (exit 3) {'not_ready': {'2406': 'live run_context.py --budget 64 --ctx 2406 (pid [1316003])'}}
+PASS  live run_context.py --budget=64 --ctx=2406 (cwd = build/es310, another path) (exit 3) {'not_ready': {'2406': 'live run_context.py --budget 64 --ctx 2406 (pid [1316016])'}}
+PASS  a live budget-63 run of ctx 2406 does not block (exported) (exit 0) {}
+PASS  --all-closed: ctx 2407 young, ctx 2406 exported (exit 0) {'not_ready': {'2407': 'result.json is 0 s old (< 120 s)'}}
+PASS  --all-closed young: only ctx 2406 has a manifest
+PASS  --all-closed: ctx 2407 capped is skipped as not closed (exit 0) {'not_closed': {'2407': "status 'capped'"}}
+PASS  --all-closed capped: only ctx 2406 has a manifest
+PASS  --all-closed: a result with status witness refuses the run (exit 1) {'refused': "ctx 2407: result status 'witness'"}
+== 2026-11-06T06:30:30Z 3. determinism (chunk limit 500: several subtree roots and an internal skeleton in both contexts)
+PASS  export 2406,2407 into detA (exit 0) {}
+PASS  export 2406,2407 into detB (exit 0) {}
+PASS  detA and detB byte-identical (8 modules, 2 manifests)
+PASS  re-export into detA: both skipped as same (exit 0) {'skipped_same': [2406, 2407]}
+PASS  skipped_same [2406, 2407]
+PASS  detA unchanged by the skip run
+PASS  re-export of ctx 2407 after its manifest was removed (exit 0) {'skipped_same': [2406]}
+PASS  re-export byte-identical (modules and manifest)
+PASS  per-word 4 into an OUT exported at 8 (exit 1) {'refused': "OUT already holds ctx 2406 exported with prefix 'E310BT', params {'budget': 64, 'per_word': 8, 'chunk_leaves': 500, 'block_leaves': 64, 'catalog_base': 4194304}, campaign '/path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp'; this run: 'E310BT', {'budget': 64, 'per_word': 4, 'chunk_leaves': 500, 'block_leaves': 64, 'catalog_base': 4194304}, '/path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp'"}
+PASS  another prefix into the same OUT (exit 1) {'refused': "OUT already holds ctx 2406 exported with prefix 'E310BT', params {'budget': 64, 'per_word': 8, 'chunk_leaves': 500, 'block_leaves': 64, 'catalog_base': 4194304}, campaign '/path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp'; this run: 'E310BK', {'budget': 64, 'per_word': 8, 'chunk_leaves': 500, 'block_leaves': 64, 'catalog_base': 4194304}, '/path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp'"}
+PASS  a context by another exporter sha256 is reported (exit 5) (exit 5) {'skipped_same': [2407], 'stale_exporter': [2406]}
+PASS  stale_exporter [2406]
+PASS  --refresh-exporter re-exports it (exit 0) {'skipped_same': [2407]}
+PASS  refreshed export byte-identical to the original
+PASS  exporter while the lock is held (exit 4) {'refused': 'locked'}
+PASS  merge while the lock is held (exit 4) {'refused': 'locked'}
+== 2026-11-06T06:30:43Z 4. merge
+PASS  merge --complete with 2 of 4096 contexts (exit 1) {'refused': '4094 of the 4096 contexts under 0:0 are not exported (first: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9])'}
+PASS  merge --partial (exit 0) {}
+PASS  partial manifest: 311 schema keys, complete false, root null, 8 modules, 2702 leaves
+PASS  merge --subtree 11:1203 (exit 0) {}
+PASS  merge --subtree 11:1203 (detB) (exit 0) {}
+PASS  sub-Root and manifest of detA and detB byte-identical
+PASS  shapes_es311.py on detA: PASS
+PASS  subtree manifest: complete, export_root 1000003251, base path of the depth-11 node
+{"theorems": 186, "errors": [], "n_errors": 0}
+PASS  split_pm literal-path simulation over detA's modules and sub-Root
+{"theorems": 186, "errors": ["E310BT.ex240800000: split_pm at [[144, 2], [87, 1], [71, 1], [19, 2], [70, 2], [84, 1], [166, 1], [181, 2], [232, 1], [41, 2], [38, 2], [214, 1]] (statement [[144, 2], [87, 1], [71, 1], [19, 2], [70, 2], [84, 1], [166, 1], [181, 2], [232, 1], [41, 2], [38, 2], [214, 1]]) v 223: E310BT.ex240800001 at [[223, 2], [144, 1], [87, 1], [71, 1], [19, 2], [70, 2], [84, 1], [166, 1], [181, 2], [232, 1], [41, 2], [38, 2], [214, 1]], E310BT.ex240802090 at [[223, 1], [144, 1], [87, 1], [71, 1], [19, 2], [70, 2], [84, 1], [166, 1], [181, 2], [232, 1], [41, 2], [38, 2], [214, 1]]", "E310BT.ex1000003251: split_pm at [[87, 1], [71, 1], [19, 2], [70, 2], [84, 1], [166, 1], [181, 2], [232, 1], [41, 2], [38, 2], [214, 1]] (statement [[87, 1], [71, 1], [19, 2], [70, 2], [84, 1], [166, 1], [181, 2], [232, 1], [41, 2], [38, 2], [214, 1]]) v 144: E310BT.ex240700000 at [[144, 2], [87, 1], [71, 1], [19, 2], [70, 2], [84, 1], [166, 1], [181, 2], [232, 1], [41, 2], [38, 2], [214, 1]], E310BT.ex240800000 at [[144, 2], [87, 1], [71, 1], [19, 2], [70, 2], [84, 1], [166, 1], [181, 2], [232, 1], [41, 2], [38, 2], [214, 1]]"], "n_errors": 2}
+PASS  negative control: one decision of ctx 2407's base path flipped in the sub-Root is caught
+PASS  merge --subtree 12:2406 (one context) (exit 0) {}
+{"theorems": 69, "errors": [], "n_errors": 0}
+PASS  split_pm simulation, single-context sub-Root
+PASS  merge --subtree 11:1203 with ctx 2407 missing (exit 1) {'refused': '1 of the 2 contexts under 11:1203 are not exported (first: [2407])'}
+PASS  merge --subtree 0:0 (use --complete) (exit 1) {'refused': "bad --subtree '0:0' (need 1 <= D <= 12, 0 <= P < 2^D; D = 0 is --complete)"}
+PASS  re-export ctx 2407 (exit 0) {}
+PASS  merge with a tampered module source (exit 1) {'refused': 'ctx 2407: src/E310BT/C240702.lean is missing or differs from its recorded sha256'}
+PASS  merge after restoring it (exit 0) {}
+PASS  merge after one byte of ctx 2407's gz changed: ALERT (exit 2) {'alert': ['ctx 2407: tree_gz /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp/runs/ctx-2407-b64.json.gz changed (recorded sha256 3937305a179f0b4d451be1a0cc38aa65a5e377fe4c072a167c6670cad148c572)']}
+PASS  merge wrote ALERT-changed-inputs.txt
+PASS  merge ALERT: nothing else changed
+== 2026-11-06T06:30:46Z 5. ALERT: inputs of an exported context changed
+PASS  export ctx 2406 (exit 0) {}
+PASS  one byte of the gz changed (mtime kept): ALERT (exit 2) {'alert': ['ctx 2406: tree_gz /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp/runs/ctx-2406-b64.json.gz changed: sha256 0c62b3a91f37c0941ff008a41dcf189115525a5d0b2e5f8dca01e18d1230aa32 -> b7890a8f9a3b210003a3e030e2a4e0dd184f7a1cff7e044ac437c2695f903400, size 547503 -> 547503']}
+PASS  ALERT-changed-inputs.txt written: ctx 2406: tree_gz /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es31
+PASS  old export byte-identical after the ALERT
+PASS  ALERT latch: exit 2 while the ALERT file exists, even with the inputs restored (exit 2) {'alert': '/path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-export-alert/ALERT-changed-inputs.txt exists; resolve it by hand first'}
+PASS  merge refuses while the ALERT file exists (exit 2) {'alert': '/path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-export-alert/ALERT-changed-inputs.txt exists; resolve it by hand first'}
+PASS  after the ALERT file is removed: skipped as same (exit 0) {'skipped_same': [2406]}
+PASS  skipped_same [2406], ctx 2407 exported
+PASS  result.json of an exported context changed: ALERT (exit 2) {'alert': ['ctx 2406: result /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-fake/camp/runs/ctx-2406-b64.result.json changed: sha256 8703fbc257f436c84c326c5248d21a9bfbc87a879185f91db1cb1e225c1c1c80 -> b8af9c783627c258015589aed0826148d905856bff2ba5a684d39d3ac02aa43a, size 1002 -> 979']}
+PASS  contexts.jsonl changed (one blank line added): ALERT (exit 2) {'alert': ['ctx 2406: contexts_jsonl changed: c16cc3da2171b3baf867bfdb968d81b920a48b90ff60fa0e41810d43f06aec6b -> d25b0a29d07a28186ad43d3b945d8137ae29d5b1795fb6f5f72ba2898a080ad8', 'ctx 2407: contexts_jsonl changed: c16cc3da2171b3baf867bfdb968d81b920a48b90ff60fa0e41810d43f06aec6b -> d25b0a29d07a28186ad43d3b945d8137ae29d5b1795fb6f5f72ba2898a080ad8']}
+== 2026-11-06T06:30:49Z 5b. campaign code changed after the export: a recorded warning, not an ALERT
+PASS  run_context.py changed: exit 0, no ALERT (exit 0) {'skipped_same': [2406, 2407], 'code_changed': ['run_context differs from the one recorded at export: 1937e9dc3e51ded192d4ee4b83de8917bd71ee9c5ab9d63e0aff490d0c6f36f6 -> 6e9c3c6cf4790e9f03b1577a3806fe47d3a89a893d0d187b72ace26db8e3c919']}
+PASS    ... code_changed warning recorded, no ALERT file
+PASS    ... the export is unchanged (both contexts skipped as same)
+PASS  merge --partial with the changed run_context.py: exit 0 (exit 0) {'code_changed': ["run_context: recorded ['1937e9dc3e51ded192d4ee4b83de8917bd71ee9c5ab9d63e0aff490d0c6f36f6'], current 6e9c3c6cf4790e9f03b1577a3806fe47d3a89a893d0d187b72ace26db8e3c919"]}
+PASS    ... merge records the code_changed warning
+PASS  re-export of ctx 2407 with the new run_context.py: exit 0 (exit 0) {'skipped_same': [2406], 'code_changed': ['run_context differs from the one recorded at export: 1937e9dc3e51ded192d4ee4b83de8917bd71ee9c5ab9d63e0aff490d0c6f36f6 -> 6e9c3c6cf4790e9f03b1577a3806fe47d3a89a893d0d187b72ace26db8e3c919']}
+PASS  merge --subtree 11:1203 over two run_context.py sha256s: exit 0 (exit 0) {'code_changed': ["run_context: recorded ['1937e9dc3e51ded192d4ee4b83de8917bd71ee9c5ab9d63e0aff490d0c6f36f6', '6e9c3c6cf4790e9f03b1577a3806fe47d3a89a893d0d187b72ace26db8e3c919'], current 6e9c3c6cf4790e9f03b1577a3806fe47d3a89a893d0d187b72ace26db8e3c919"]}
+PASS    ... merged manifest records both run_context.py sha256s and the warning
+== 2026-11-06T06:30:51Z 6. per-context K: one leaf of ctx 2406 with capacity and weights scaled by 16 (margin scales too)
+PASS  export of the scaled tree (exit 0) {}
+K 2097152 J 8589934592 max_weight 1184528
+PASS  per-context K = least power of 2 above the largest weight (>= 2^20), J = K << 12, no Lean-test failure
+PASS  scaled-K module passes the line-shape check
+== 2026-11-06T06:30:53Z 7. --corrupt (Python side of the rejection test E2)
+PASS  --corrupt 1 --ctx 2406 --prefix E310BX (exit 0) {}
+corruption {'module': 'E310BX.C240601', 'leaf_node': 48, 'entry_index': 0, 'row': 3, 'old_weight': 46, 'new_weight': 45, 'old_margin': 1, 'new_margin': 0}
+module 1: differing lines [16] (the def of the block holding the corrupted leaf)
+PASS  exactly one Lean-test failure, at the corrupted leaf of module 1; modules 2 and 3 equal detA's (prefix aside); module 1 differs in one block def
+PASS  --corrupt into an OUT that already holds the context (exit 1) {'refused': 'ctx 2406 is already exported in OUT; --corrupt needs a fresh OUT'}
+PASS  --corrupt 9 (no such module) (exit 1) {'refused_ctx': {'2406': 'ctx 2406: --corrupt 9: no such module or no weighted leaf'}}
+PASS  merge --subtree 12:2406 of the corrupted export (flagged) (exit 0) {}
+PASS  merged manifest flags the corrupted module
+== 2026-11-06T06:30:55Z 8. synthetic --complete merge: 4,096 fake one-leaf modules (never compiled; shape-valid), three contexts with an internal skeleton
+PASS  wrote 4,096 synthetic context manifests and modules (prefix E310BK)
+PASS  merge --complete of the synthetic export (exit 0) {}
+Root lines 12303 first top theorem: theorem ex1000002048 : ¬ ∃ holes : Fin 252 → ℕ, FFeas fcat62 ... last: theorem ex1000000001 : ¬ ∃ holes : Fin 2
+PASS  complete manifest: export_root 0, base_path [], 4,099 leaves, 4,095 + 3 skeleton theorems, root := ex1000000001 at []
+PASS  shapes_es311.py on the synthetic complete export: PASS (4,096 modules and the Root)
+{"theorems": 12297, "errors": [], "n_errors": 0}
+PASS  split_pm literal-path simulation over all 12 levels of the complete Root
+PASS  merge --complete with one context missing (exit 1) {'refused': '1 of the 4096 contexts under 0:0 are not exported (first: [1234])'}
+PASS  merge --complete with a corrupted module (exit 1) {'refused': "corrupted test modules in a complete merge: ['E310BK.C077701']"}
+PASS  merge --complete with two exporter sha256s (exit 1) {'refused': '2 different exporter sha256 pairs among the contexts in scope'}
+PASS  merge --complete with a context base path that differs from contexts.jsonl (exit 1) {'refused': 'ctx 777: base path differs from contexts.jsonl'}
+PASS  merge --complete with a skeleton child that is no subtree root (exit 1) {'refused': 'ctx 2406: subtree roots are not the non-skeleton children of the skeleton'}
+PASS  merge --complete again after every edit was undone (exit 0) {}
+== 2026-11-06T06:31:00Z 9. the real campaign was only read
+PASS  no file under the campaign directory mentions the test area, and no test path exists there
+
+== 2026-11-06T06:31:00Z summary: 128 passed, 0 failed

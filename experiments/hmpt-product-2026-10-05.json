@@ -1,0 +1,48 @@
+{
+  "formal_theorem": "ErdosSzekeres.HMPT.integer_product_bound",
+  "numeric_instances_kernel_checked": false,
+  "arithmetic": "exact Python integers; independently checked binomial density inequality",
+  "scope": "bounded parameter search; no claim of global parameter optimality or improvement over HMPT 2020",
+  "region_search": [
+    1,
+    128
+  ],
+  "results": [
+    {
+      "n": 64,
+      "best_regions_in_search": 7,
+      "exponent": 255,
+      "exact_density_check": true
+    },
+    {
+      "n": 128,
+      "best_regions_in_search": 10,
+      "exponent": 381,
+      "exact_density_check": true
+    },
+    {
+      "n": 256,
+      "best_regions_in_search": 15,
+      "exponent": 603,
+      "exact_density_check": true
+    },
+    {
+      "n": 512,
+      "best_regions_in_search": 22,
+      "exponent": 1000,
+      "exact_density_check": true
+    },
+    {
+      "n": 1024,
+      "best_regions_in_search": 34,
+      "exponent": 1719,
+      "exact_density_check": true
+    },
+    {
+      "n": 2048,
+      "best_regions_in_search": 50,
+      "exponent": 3047,
+      "exact_density_check": true
+    }
+  ]
+}

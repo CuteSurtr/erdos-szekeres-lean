@@ -1,0 +1,24 @@
+export_es310: ctx 2943: 8949 leaves, 1 module(s), K 131072, 7.4 s
+	Command being timed: "nice -n 19 python3 export_es310.py --campaign /path/to/data/es8-b64-pilot-20261105 --source /path/to/repo/experiments/omission-cover-certificates-2026-10-10/balanced-v2-source.json --out /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-export-big2943 --ctx 2943 --chunk-leaves 12000 --block-leaves 64 --per-word 8 --prefix E310BT"
+	User time (seconds): 5.86
+	System time (seconds): 0.18
+	Percent of CPU this job got: 79%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:07.62
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 459172
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 127482
+	Voluntary context switches: 1
+	Involuntary context switches: 556
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 27320
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

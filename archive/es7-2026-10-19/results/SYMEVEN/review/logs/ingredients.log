@@ -1,0 +1,27 @@
+== k=6 ingredients
+  G(2,6): size 1 = C(4,0); longest cup 1 (< 2), longest cap 1 (< 6)
+  G(3,5): size 4 = C(4,1); longest cup 2 (< 3), longest cap 4 (< 5)
+  G(4,4): size 6 = C(4,2); longest cup 3 (< 4), longest cap 3 (< 4)
+  G(5,3): size 4 = C(4,3); longest cup 4 (< 5), longest cap 2 (< 3)
+  G(6,2): size 1 = C(4,4); longest cup 1 (< 6), longest cap 1 (< 2)
+  M0 (m=3, t=1/32): {'symmetric': True, 'zero_not_in': True, 'size_ok': True, 'distinct_x': True, 'general_position': True, 'longest_cup_cap': (3, 3), 'no_m+1_cup_cap': True, 'slopes_in_(-1/2,1/2)': True, '|v|<|u|/2': True}
+== k=8 ingredients
+  G(2,8): size 1 = C(6,0); longest cup 1 (< 2), longest cap 1 (< 8)
+  G(3,7): size 6 = C(6,1); longest cup 2 (< 3), longest cap 6 (< 7)
+  G(4,6): size 15 = C(6,2); longest cup 3 (< 4), longest cap 5 (< 6)
+  G(5,5): size 20 = C(6,3); longest cup 4 (< 5), longest cap 4 (< 5)
+  G(6,4): size 15 = C(6,4); longest cup 5 (< 6), longest cap 3 (< 4)
+  G(7,3): size 6 = C(6,5); longest cup 6 (< 7), longest cap 2 (< 3)
+  G(8,2): size 1 = C(6,6); longest cup 1 (< 8), longest cap 1 (< 2)
+  M0 (m=4, t=1/256): {'symmetric': True, 'zero_not_in': True, 'size_ok': True, 'distinct_x': True, 'general_position': True, 'longest_cup_cap': (4, 4), 'no_m+1_cup_cap': True, 'slopes_in_(-1/2,1/2)': True, '|v|<|u|/2': True}
+== k=10 ingredients
+  G(2,10): size 1 = C(8,0); longest cup 1 (< 2), longest cap 1 (< 10)
+  G(3,9): size 8 = C(8,1); longest cup 2 (< 3), longest cap 8 (< 9)
+  G(4,8): size 28 = C(8,2); longest cup 3 (< 4), longest cap 7 (< 8)
+  G(5,7): size 56 = C(8,3); longest cup 4 (< 5), longest cap 6 (< 7)
+  G(6,6): size 70 = C(8,4); longest cup 5 (< 6), longest cap 5 (< 6)
+  G(7,5): size 56 = C(8,5); longest cup 6 (< 7), longest cap 4 (< 5)
+  G(8,4): size 28 = C(8,6); longest cup 7 (< 8), longest cap 3 (< 4)
+  G(9,3): size 8 = C(8,7); longest cup 8 (< 9), longest cap 2 (< 3)
+  G(10,2): size 1 = C(8,8); longest cup 1 (< 10), longest cap 1 (< 2)
+  M0 (m=5, t=1/131072): {'symmetric': True, 'zero_not_in': True, 'size_ok': True, 'distinct_x': True, 'general_position': True, 'longest_cup_cap': (5, 5), 'no_m+1_cup_cap': True, 'slopes_in_(-1/2,1/2)': True, '|v|<|u|/2': True}

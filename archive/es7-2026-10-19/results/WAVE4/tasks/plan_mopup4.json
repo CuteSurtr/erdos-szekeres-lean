@@ -1,0 +1,48 @@
+{
+ "U3_L": {
+  "open": 2550,
+  "claimed_by_wave4": 594,
+  "reserved_for_running": 320,
+  "to_mopup": 1636,
+  "machines": 8,
+  "running": [
+   "H24: queue 282 rate 5.4/min left 14 min reserve 59",
+   "H25: queue 870 rate 1.9/min left 28 min reserve 42",
+   "H29: queue 785 rate 5.1/min left 49 min reserve 200",
+   "H30: queue 2 rate 7.9/min left 49 min reserve 2",
+   "H40: queue 0 rate 6.7/min left 95 min reserve 0",
+   "H41: queue 17 rate 6.8/min left 98 min reserve 17",
+   "H43: queue 0 rate 6.9/min left 96 min reserve 0",
+   "H44: queue 0 rate 5.2/min left 97 min reserve 0",
+   "H45: queue 0 rate 5.6/min left 98 min reserve 0",
+   "H51: queue 0 rate 0.0/min left 116 min reserve 0",
+   "H52: queue 0 rate 0.0/min left 116 min reserve 0"
+  ]
+ },
+ "U_L7": {
+  "open": 758,
+  "claimed_by_wave4": 95,
+  "reserved_for_running": 288,
+  "to_mopup": 375,
+  "machines": 3,
+  "running": [
+   "H26: queue 298 rate 3.6/min left 33 min reserve 95",
+   "H38: queue 1 rate 4.3/min left 60 min reserve 1",
+   "H49: queue 192 rate 3.4/min left 94 min reserve 192",
+   "H59: queue 0 rate 0.0/min left 116 min reserve 0"
+  ]
+ },
+ "U_L2": {
+  "open": 100,
+  "claimed_by_wave4": 36,
+  "reserved_for_running": 58,
+  "to_mopup": 6,
+  "machines": 1,
+  "running": [
+   "H02: queue 0 rate 8.1/min left 10 min reserve 0",
+   "H07: queue 52 rate 5.4/min left 11 min reserve 46",
+   "H47: queue 12 rate 7.3/min left 98 min reserve 12",
+   "H57: queue 0 rate 0.0/min left 116 min reserve 0"
+  ]
+ }
+}

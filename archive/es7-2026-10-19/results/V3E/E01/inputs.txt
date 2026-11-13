@@ -1,0 +1,11 @@
+input commit Z = d0456ff (worktree /opt/in)
+results/V3E/worklist.jsonl sha256 5c10bc043fbacbd397ea5867207b2a3fedebeb0174f98d3590b18c6d564baac9 (matches), 3801 lines (matches)
+cross-check at 14447d0d5 (worktree /opt/zd):
+  v3_jsonl_leaves WAVE1->jtree1: dirs 119 leaf lines 30151 skipped records 71
+  v3_jsonl_leaves WAVE2->jtree2: dirs 107 leaf lines 12429 skipped records 0
+  v3_jsonl_leaves WAVE3->jtree3: dirs 29 leaf lines 8850 skipped records 0
+  v3_jsonl_leaves WAVE4->jtree4: dirs 75 leaf lines 28871 skipped records 0
+  v3_manifest: leaves 73880 cases with leaves 278 problems 0
+  Mzd.jsonl sha256 e01af167266dc044078798355f76f9f8d36c74d1b8843aeab90072b644ea83b5 (matches), 73880 lines (matches)
+  work-list records whose (case, lits) are missing from Mzd.jsonl: 0 of 3801 -> PASS
+shard 1 of 8 (idx mod 8 == 1): 475 leaves

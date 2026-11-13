@@ -1,0 +1,6 @@
+# compare_mir.sh with the package binary .lake/build/bin/mir_dimacs, Tue Oct 20 03:18:58 UTC 2026
+identical: 84  different: 0
+# real instances (package binary)
+hm33k7.sub.cnf: IDENTICAL to make_cnfs.sh output, sha256 bfbc2d6096e4099ba751130d421eca9da18b72559991103cc2d4b4bc0d92757d, p cnf 47002 535454
+m33k7int.sub.cnf: IDENTICAL to make_cnfs.sh output, sha256 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d, p cnf 47002 515121
+hm17k6.sub.cnf: IDENTICAL to make_cnfs.sh output, sha256 703b23644466a6f6887700c1b0b9bf059e7ce14b466f853cc32682b94b241c48, p cnf 4702 30413

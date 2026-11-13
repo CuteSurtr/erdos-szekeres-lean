@@ -1,0 +1,18 @@
+(A) b=1, a=16: sigma(P1 cube) == P16 cube: True
+(A) b=2, a=15: sigma(P2 cube) == P15 cube: True
+(A) b=3, a=14: sigma(P3 cube) == P14 cube: True
+(A) b=4, a=13: sigma(P4 cube) == P13 cube: True
+(A) b=5, a=12: sigma(P5 cube) == P12 cube: True
+(A) b=6, a=11: sigma(P6 cube) == P11 cube: True
+(A) b=7, a=10: sigma(P7 cube) == P10 cube: True
+(A) b=8, a=9: sigma(P8 cube) == P9 cube: True
+(B) a=1: sigma(P1 cube) == P1 cube: True; subcases with sigma(cube(V')) != cube(V): 0 of 560
+(B) a=2: sigma(P2 cube) == P2 cube: True; subcases with sigma(cube(V')) != cube(V): 0 of 560
+(B) a=3: sigma(P3 cube) == P3 cube: True; subcases with sigma(cube(V')) != cube(V): 0 of 560
+(B) a=4: sigma(P4 cube) == P4 cube: True; subcases with sigma(cube(V')) != cube(V): 0 of 560
+(B) a=5: sigma(P5 cube) == P5 cube: True; subcases with sigma(cube(V')) != cube(V): 0 of 560
+(B) a=6: sigma(P6 cube) == P6 cube: True; subcases with sigma(cube(V')) != cube(V): 0 of 560
+(B) a=7: sigma(P7 cube) == P7 cube: True; subcases with sigma(cube(V')) != cube(V): 0 of 560
+(B) a=8: sigma(P8 cube) == P8 cube: True; subcases with sigma(cube(V')) != cube(V): 0 of 560
+cube-level FAILURES []
+python3 symmaps.py $S/regen/base.json $S/es7w/cloud/es7-2026-10-19/results   17.69s user 0.21s system 99% cpu 18.023 total

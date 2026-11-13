@@ -1,0 +1,447 @@
+c8_120pts_15layers.pts all             t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+c8_120pts_15layers.pts all      mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+c8_120pts_15layers.pts drop0           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop0    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop1           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop1    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop2           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop2    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop3           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop3    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop4           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop4    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop5           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop5    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop6           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop6    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop7           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop7    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop8           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop8    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop9           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop9    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop10          t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop10   mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop11          t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop11   mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop12          t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop12   mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop13          t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop13   mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop14          t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_15layers.pts drop14   mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_15layers.pts prefix10        t=10 order=incr  Z=111111111       clauses   78140 violated 0 
+c8_120pts_15layers.pts prefix10 mirror t=10 order=decr  Z=000000000       clauses   78140 violated 0 
+c8_120pts_15layers.pts prefix12        t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+c8_120pts_15layers.pts prefix12 mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+c8_120pts_15layers.pts prefix14        t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_15layers.pts prefix14 mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_15layers.pts suffix10        t=10 order=incr  Z=111111111       clauses   78140 violated 0 
+c8_120pts_15layers.pts suffix10 mirror t=10 order=decr  Z=000000000       clauses   78140 violated 0 
+c8_120pts_15layers.pts suffix12        t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+c8_120pts_15layers.pts suffix12 mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+c8_120pts_15layers.pts suffix14        t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_15layers.pts suffix14 mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_15layers.pts rand0           t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+c8_120pts_15layers.pts rand0    mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+c8_120pts_15layers.pts rand1           t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+c8_120pts_15layers.pts rand1    mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+c8_120pts_15layers.pts rand2           t=10 order=incr  Z=111111111       clauses   78140 violated 0 
+c8_120pts_15layers.pts rand2    mirror t=10 order=decr  Z=000000000       clauses   78140 violated 0 
+c8_120pts_15layers.pts rand3           t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+c8_120pts_15layers.pts rand3    mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+c8_120pts_15layers.pts rand4           t=10 order=incr  Z=111111111       clauses   78140 violated 0 
+c8_120pts_15layers.pts rand4    mirror t=10 order=decr  Z=000000000       clauses   78140 violated 0 
+c8_120pts_15layers.pts rand5           t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+c8_120pts_15layers.pts rand5    mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+f_del0.pts all             t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+f_del0.pts all      mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+f_del0.pts drop0           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+f_del0.pts drop0    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+f_del0.pts drop1           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+f_del0.pts drop1    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+f_del0.pts drop2           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+f_del0.pts drop2    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+f_del0.pts drop3           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+f_del0.pts drop3    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+f_del0.pts drop4           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+f_del0.pts drop4    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+f_del0.pts drop5           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+f_del0.pts drop5    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+f_del0.pts drop6           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+f_del0.pts drop6    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+f_del0.pts drop7           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+f_del0.pts drop7    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+f_del0.pts drop8           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+f_del0.pts drop8    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+f_del0.pts drop9           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+f_del0.pts drop9    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+f_del0.pts drop10          t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+f_del0.pts drop10   mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+f_del0.pts drop11          t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+f_del0.pts drop11   mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+f_del0.pts drop12          t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+f_del0.pts drop12   mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+f_del0.pts drop13          t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+f_del0.pts drop13   mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+f_del0.pts drop14          t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+f_del0.pts drop14   mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+f_del0.pts prefix10        t=10 order=incr  Z=111111111       clauses   78140 violated 0 
+f_del0.pts prefix10 mirror t=10 order=decr  Z=000000000       clauses   78140 violated 0 
+f_del0.pts prefix12        t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+f_del0.pts prefix12 mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+f_del0.pts prefix14        t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+f_del0.pts prefix14 mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+f_del0.pts suffix10        t=10 order=incr  Z=111111111       clauses   78140 violated 0 
+f_del0.pts suffix10 mirror t=10 order=decr  Z=000000000       clauses   78140 violated 0 
+f_del0.pts suffix12        t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+f_del0.pts suffix12 mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+f_del0.pts suffix14        t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+f_del0.pts suffix14 mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+f_del0.pts rand0           t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+f_del0.pts rand0    mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+f_del0.pts rand1           t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+f_del0.pts rand1    mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+f_del0.pts rand2           t=10 order=incr  Z=111111111       clauses   78140 violated 0 
+f_del0.pts rand2    mirror t=10 order=decr  Z=000000000       clauses   78140 violated 0 
+f_del0.pts rand3           t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+f_del0.pts rand3    mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+f_del0.pts rand4           t=10 order=incr  Z=111111111       clauses   78140 violated 0 
+f_del0.pts rand4    mirror t=10 order=decr  Z=000000000       clauses   78140 violated 0 
+f_del0.pts rand5           t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+f_del0.pts rand5    mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+c8_120pts_blowup2orb.pts all             t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+c8_120pts_blowup2orb.pts all      mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+c8_120pts_blowup2orb.pts drop0           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop0    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop1           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop1    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop2           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop2    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop3           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop3    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop4           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop4    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop5           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop5    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop6           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop6    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop7           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop7    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop8           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop8    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop9           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop9    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop10          t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop10   mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop11          t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop11   mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop12          t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop12   mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop13          t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop13   mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop14          t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts drop14   mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts prefix10        t=10 order=incr  Z=111111111       clauses   78140 violated 0 
+c8_120pts_blowup2orb.pts prefix10 mirror t=10 order=decr  Z=000000000       clauses   78140 violated 0 
+c8_120pts_blowup2orb.pts prefix12        t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+c8_120pts_blowup2orb.pts prefix12 mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+c8_120pts_blowup2orb.pts prefix14        t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts prefix14 mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts suffix10        t=10 order=incr  Z=111111111       clauses   78140 violated 0 
+c8_120pts_blowup2orb.pts suffix10 mirror t=10 order=decr  Z=000000000       clauses   78140 violated 0 
+c8_120pts_blowup2orb.pts suffix12        t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+c8_120pts_blowup2orb.pts suffix12 mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+c8_120pts_blowup2orb.pts suffix14        t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts suffix14 mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_blowup2orb.pts rand0           t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+c8_120pts_blowup2orb.pts rand0    mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+c8_120pts_blowup2orb.pts rand1           t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+c8_120pts_blowup2orb.pts rand1    mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+c8_120pts_blowup2orb.pts rand2           t=10 order=incr  Z=111111111       clauses   78140 violated 0 
+c8_120pts_blowup2orb.pts rand2    mirror t=10 order=decr  Z=000000000       clauses   78140 violated 0 
+c8_120pts_blowup2orb.pts rand3           t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+c8_120pts_blowup2orb.pts rand3    mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+c8_120pts_blowup2orb.pts rand4           t=10 order=incr  Z=111111111       clauses   78140 violated 0 
+c8_120pts_blowup2orb.pts rand4    mirror t=10 order=decr  Z=000000000       clauses   78140 violated 0 
+c8_120pts_blowup2orb.pts rand5           t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+c8_120pts_blowup2orb.pts rand5    mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+c8_120pts_blowup3orb.pts all             t=15 order=incr  Z=11111111111110  clauses  289215 violated 0 
+c8_120pts_blowup3orb.pts all      mirror t=15 order=decr  Z=00000000000001  clauses  289215 violated 0 
+c8_120pts_blowup3orb.pts drop0           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop0    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop1           t=14 order=incr  Z=1111111111110   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop1    mirror t=14 order=decr  Z=0000000000001   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop2           t=14 order=incr  Z=1111111111110   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop2    mirror t=14 order=decr  Z=0000000000001   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop3           t=14 order=incr  Z=1111111111110   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop3    mirror t=14 order=decr  Z=0000000000001   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop4           t=14 order=incr  Z=1111111111110   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop4    mirror t=14 order=decr  Z=0000000000001   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop5           t=14 order=incr  Z=1111111111110   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop5    mirror t=14 order=decr  Z=0000000000001   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop6           t=14 order=incr  Z=1111111111110   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop6    mirror t=14 order=decr  Z=0000000000001   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop7           t=14 order=incr  Z=1111111111110   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop7    mirror t=14 order=decr  Z=0000000000001   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop8           t=14 order=incr  Z=1111111111110   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop8    mirror t=14 order=decr  Z=0000000000001   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop9           t=14 order=incr  Z=1111111111110   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop9    mirror t=14 order=decr  Z=0000000000001   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop10          t=14 order=incr  Z=1111111111110   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop10   mirror t=14 order=decr  Z=0000000000001   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop11          t=14 order=incr  Z=1111111111110   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop11   mirror t=14 order=decr  Z=0000000000001   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop12          t=14 order=incr  Z=1111111111110   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop12   mirror t=14 order=decr  Z=0000000000001   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop13          t=14 order=incr  Z=1111111111110   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop13   mirror t=14 order=decr  Z=0000000000001   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop14          t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts drop14   mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts prefix10        t=10 order=incr  Z=111111111       clauses   78140 violated 0 
+c8_120pts_blowup3orb.pts prefix10 mirror t=10 order=decr  Z=000000000       clauses   78140 violated 0 
+c8_120pts_blowup3orb.pts prefix12        t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+c8_120pts_blowup3orb.pts prefix12 mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+c8_120pts_blowup3orb.pts prefix14        t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts prefix14 mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts suffix10        t=10 order=incr  Z=111111111       clauses   78140 violated 0 
+c8_120pts_blowup3orb.pts suffix10 mirror t=10 order=decr  Z=000000000       clauses   78140 violated 0 
+c8_120pts_blowup3orb.pts suffix12        t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+c8_120pts_blowup3orb.pts suffix12 mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+c8_120pts_blowup3orb.pts suffix14        t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts suffix14 mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+c8_120pts_blowup3orb.pts rand0           t=12 order=incr  Z=11111111110     clauses  141356 violated 0 
+c8_120pts_blowup3orb.pts rand0    mirror t=12 order=decr  Z=00000000001     clauses  141356 violated 0 
+c8_120pts_blowup3orb.pts rand1           t=12 order=incr  Z=11111111110     clauses  141356 violated 0 
+c8_120pts_blowup3orb.pts rand1    mirror t=12 order=decr  Z=00000000001     clauses  141356 violated 0 
+c8_120pts_blowup3orb.pts rand2           t=10 order=incr  Z=111111111       clauses   78140 violated 0 
+c8_120pts_blowup3orb.pts rand2    mirror t=10 order=decr  Z=000000000       clauses   78140 violated 0 
+c8_120pts_blowup3orb.pts rand3           t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+c8_120pts_blowup3orb.pts rand3    mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+c8_120pts_blowup3orb.pts rand4           t=10 order=incr  Z=111111110       clauses   78140 violated 0 
+c8_120pts_blowup3orb.pts rand4    mirror t=10 order=decr  Z=000000001       clauses   78140 violated 0 
+c8_120pts_blowup3orb.pts rand5           t=12 order=incr  Z=11111111110     clauses  141356 violated 0 
+c8_120pts_blowup3orb.pts rand5    mirror t=12 order=decr  Z=00000000001     clauses  141356 violated 0 
+k9_128_final.pts all             t=16 order=incr  Z=111111111111111 clauses  355132 violated 0 
+k9_128_final.pts all      mirror t=16 order=decr  Z=000000000000000 clauses  355132 violated 0 
+k9_128_final.pts drop0           t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_final.pts drop0    mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_final.pts drop1           t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_final.pts drop1    mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_final.pts drop2           t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_final.pts drop2    mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_final.pts drop3           t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_final.pts drop3    mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_final.pts drop4           t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_final.pts drop4    mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_final.pts drop5           t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_final.pts drop5    mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_final.pts drop6           t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_final.pts drop6    mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_final.pts drop7           t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_final.pts drop7    mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_final.pts drop8           t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_final.pts drop8    mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_final.pts drop9           t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_final.pts drop9    mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_final.pts drop10          t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_final.pts drop10   mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_final.pts drop11          t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_final.pts drop11   mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_final.pts drop12          t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_final.pts drop12   mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_final.pts drop13          t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_final.pts drop13   mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_final.pts drop14          t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_final.pts drop14   mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_final.pts drop15          t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_final.pts drop15   mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_final.pts prefix10        t=10 order=incr  Z=111111111       clauses   78140 violated 0 
+k9_128_final.pts prefix10 mirror t=10 order=decr  Z=000000000       clauses   78140 violated 0 
+k9_128_final.pts prefix12        t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+k9_128_final.pts prefix12 mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+k9_128_final.pts prefix14        t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+k9_128_final.pts prefix14 mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+k9_128_final.pts prefix15        t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_final.pts prefix15 mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_final.pts suffix10        t=10 order=incr  Z=111111111       clauses   78140 violated 0 
+k9_128_final.pts suffix10 mirror t=10 order=decr  Z=000000000       clauses   78140 violated 0 
+k9_128_final.pts suffix12        t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+k9_128_final.pts suffix12 mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+k9_128_final.pts suffix14        t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+k9_128_final.pts suffix14 mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+k9_128_final.pts suffix15        t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_final.pts suffix15 mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_final.pts rand0           t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_final.pts rand0    mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_final.pts rand1           t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+k9_128_final.pts rand1    mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+k9_128_final.pts rand2           t=10 order=incr  Z=111111111       clauses   78140 violated 0 
+k9_128_final.pts rand2    mirror t=10 order=decr  Z=000000000       clauses   78140 violated 0 
+k9_128_final.pts rand3           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+k9_128_final.pts rand3    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+k9_128_final.pts rand4           t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+k9_128_final.pts rand4    mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+k9_128_final.pts rand5           t=10 order=incr  Z=111111111       clauses   78140 violated 0 
+k9_128_final.pts rand5    mirror t=10 order=decr  Z=000000000       clauses   78140 violated 0 
+k9_128_best.pts all             t=16 order=incr  Z=111111111111111 clauses  355132 violated 0 
+k9_128_best.pts all      mirror t=16 order=decr  Z=000000000000000 clauses  355132 violated 0 
+k9_128_best.pts drop0           t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_best.pts drop0    mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_best.pts drop1           t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_best.pts drop1    mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_best.pts drop2           t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_best.pts drop2    mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_best.pts drop3           t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_best.pts drop3    mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_best.pts drop4           t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_best.pts drop4    mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_best.pts drop5           t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_best.pts drop5    mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_best.pts drop6           t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_best.pts drop6    mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_best.pts drop7           t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_best.pts drop7    mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_best.pts drop8           t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_best.pts drop8    mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_best.pts drop9           t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_best.pts drop9    mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_best.pts drop10          t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_best.pts drop10   mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_best.pts drop11          t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_best.pts drop11   mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_best.pts drop12          t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_best.pts drop12   mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_best.pts drop13          t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_best.pts drop13   mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_best.pts drop14          t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_best.pts drop14   mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_best.pts drop15          t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_best.pts drop15   mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_best.pts prefix10        t=10 order=incr  Z=111111111       clauses   78140 violated 0 
+k9_128_best.pts prefix10 mirror t=10 order=decr  Z=000000000       clauses   78140 violated 0 
+k9_128_best.pts prefix12        t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+k9_128_best.pts prefix12 mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+k9_128_best.pts prefix14        t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+k9_128_best.pts prefix14 mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+k9_128_best.pts prefix15        t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_best.pts prefix15 mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_best.pts suffix10        t=10 order=incr  Z=111111111       clauses   78140 violated 0 
+k9_128_best.pts suffix10 mirror t=10 order=decr  Z=000000000       clauses   78140 violated 0 
+k9_128_best.pts suffix12        t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+k9_128_best.pts suffix12 mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+k9_128_best.pts suffix14        t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+k9_128_best.pts suffix14 mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+k9_128_best.pts suffix15        t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_best.pts suffix15 mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_best.pts rand0           t=15 order=incr  Z=11111111111111  clauses  289215 violated 0 
+k9_128_best.pts rand0    mirror t=15 order=decr  Z=00000000000000  clauses  289215 violated 0 
+k9_128_best.pts rand1           t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+k9_128_best.pts rand1    mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+k9_128_best.pts rand2           t=10 order=incr  Z=111111111       clauses   78140 violated 0 
+k9_128_best.pts rand2    mirror t=10 order=decr  Z=000000000       clauses   78140 violated 0 
+k9_128_best.pts rand3           t=14 order=incr  Z=1111111111111   clauses  232028 violated 0 
+k9_128_best.pts rand3    mirror t=14 order=decr  Z=0000000000000   clauses  232028 violated 0 
+k9_128_best.pts rand4           t=12 order=incr  Z=11111111111     clauses  141356 violated 0 
+k9_128_best.pts rand4    mirror t=12 order=decr  Z=00000000000     clauses  141356 violated 0 
+k9_128_best.pts rand5           t=10 order=incr  Z=111111111       clauses   78140 violated 0 
+k9_128_best.pts rand5    mirror t=10 order=decr  Z=000000000       clauses   78140 violated 0 
+c8_112pts_14layers.pts all             t=14 order=other Z=0000000000000   clauses  232028 violated 0 
+c8_112pts_14layers.pts all      mirror t=14 order=other Z=1111111111111   clauses  232028 violated 0 
+c8_112pts_14layers.pts drop0           t=13 order=other Z=000111100000    clauses  182949 violated 0 
+c8_112pts_14layers.pts drop0    mirror t=13 order=other Z=111000011111    clauses  182949 violated 0 
+c8_112pts_14layers.pts drop1           t=13 order=other Z=000000000000    clauses  182949 violated 0 
+c8_112pts_14layers.pts drop1    mirror t=13 order=other Z=111111111111    clauses  182949 violated 0 
+c8_112pts_14layers.pts drop2           t=13 order=other Z=000000000000    clauses  182949 violated 0 
+c8_112pts_14layers.pts drop2    mirror t=13 order=other Z=111111111111    clauses  182949 violated 0 
+c8_112pts_14layers.pts drop3           t=13 order=other Z=000000000000    clauses  182949 violated 0 
+c8_112pts_14layers.pts drop3    mirror t=13 order=other Z=111111111111    clauses  182949 violated 0 
+c8_112pts_14layers.pts drop4           t=13 order=other Z=000000000000    clauses  182949 violated 0 
+c8_112pts_14layers.pts drop4    mirror t=13 order=other Z=111111111111    clauses  182949 violated 0 
+c8_112pts_14layers.pts drop5           t=13 order=other Z=000000000000    clauses  182949 violated 0 
+c8_112pts_14layers.pts drop5    mirror t=13 order=other Z=111111111111    clauses  182949 violated 0 
+c8_112pts_14layers.pts drop6           t=13 order=other Z=000000000000    clauses  182949 violated 0 
+c8_112pts_14layers.pts drop6    mirror t=13 order=other Z=111111111111    clauses  182949 violated 0 
+c8_112pts_14layers.pts drop7           t=13 order=other Z=000000000000    clauses  182949 violated 0 
+c8_112pts_14layers.pts drop7    mirror t=13 order=other Z=111111111111    clauses  182949 violated 0 
+c8_112pts_14layers.pts drop8           t=13 order=other Z=000000000000    clauses  182949 violated 0 
+c8_112pts_14layers.pts drop8    mirror t=13 order=other Z=111111111111    clauses  182949 violated 0 
+c8_112pts_14layers.pts drop9           t=13 order=other Z=000000000000    clauses  182949 violated 0 
+c8_112pts_14layers.pts drop9    mirror t=13 order=other Z=111111111111    clauses  182949 violated 0 
+c8_112pts_14layers.pts drop10          t=13 order=other Z=000000000000    clauses  182949 violated 0 
+c8_112pts_14layers.pts drop10   mirror t=13 order=other Z=111111111111    clauses  182949 violated 0 
+c8_112pts_14layers.pts drop11          t=13 order=other Z=000000000000    clauses  182949 violated 0 
+c8_112pts_14layers.pts drop11   mirror t=13 order=other Z=111111111111    clauses  182949 violated 0 
+c8_112pts_14layers.pts drop12          t=13 order=other Z=000000000000    clauses  182949 violated 0 
+c8_112pts_14layers.pts drop12   mirror t=13 order=other Z=111111111111    clauses  182949 violated 0 
+c8_112pts_14layers.pts drop13          t=13 order=other Z=000000000000    clauses  182949 violated 0 
+c8_112pts_14layers.pts drop13   mirror t=13 order=other Z=111111111111    clauses  182949 violated 0 
+c8_112pts_14layers.pts prefix10        t=10 order=other Z=000000000       clauses   78140 violated 0 
+c8_112pts_14layers.pts prefix10 mirror t=10 order=other Z=111111111       clauses   78140 violated 0 
+c8_112pts_14layers.pts prefix12        t=12 order=other Z=00000000000     clauses  141356 violated 0 
+c8_112pts_14layers.pts prefix12 mirror t=12 order=other Z=11111111111     clauses  141356 violated 0 
+c8_112pts_14layers.pts suffix10        t=10 order=other Z=111110000       clauses   78140 violated 0 
+c8_112pts_14layers.pts suffix10 mirror t=10 order=other Z=000001111       clauses   78140 violated 0 
+c8_112pts_14layers.pts suffix12        t=12 order=other Z=00111110000     clauses  141356 violated 0 
+c8_112pts_14layers.pts suffix12 mirror t=12 order=other Z=11000001111     clauses  141356 violated 0 
+c8_112pts_14layers.pts rand0           t=12 order=other Z=00000000000     clauses  141356 violated 0 
+c8_112pts_14layers.pts rand0    mirror t=12 order=other Z=11111111111     clauses  141356 violated 0 
+c8_112pts_14layers.pts rand1           t=12 order=other Z=00000000000     clauses  141356 violated 0 
+c8_112pts_14layers.pts rand1    mirror t=12 order=other Z=11111111111     clauses  141356 violated 0 
+c8_112pts_14layers.pts rand2           t=12 order=other Z=00111100000     clauses  141356 violated 0 
+c8_112pts_14layers.pts rand2    mirror t=12 order=other Z=11000011111     clauses  141356 violated 0 
+c8_112pts_14layers.pts rand3           t=12 order=other Z=00011100000     clauses  141356 violated 0 
+c8_112pts_14layers.pts rand3    mirror t=12 order=other Z=11100011111     clauses  141356 violated 0 
+c8_112pts_14layers.pts rand4           t=10 order=other Z=000000000       clauses   78140 violated 0 
+c8_112pts_14layers.pts rand4    mirror t=10 order=other Z=111111111       clauses   78140 violated 0 
+c8_112pts_14layers.pts rand5           t=10 order=other Z=000000000       clauses   78140 violated 0 
+c8_112pts_14layers.pts rand5    mirror t=10 order=other Z=111111111       clauses   78140 violated 0 
+c8_104pts_13layers.pts all             t=13 order=other Z=000111110000    clauses  182949 violated 0 
+c8_104pts_13layers.pts all      mirror t=13 order=other Z=111000001111    clauses  182949 violated 0 
+c8_104pts_13layers.pts drop0           t=12 order=other Z=00111110000     clauses  141356 violated 0 
+c8_104pts_13layers.pts drop0    mirror t=12 order=other Z=11000001111     clauses  141356 violated 0 
+c8_104pts_13layers.pts drop1           t=12 order=other Z=00111110000     clauses  141356 violated 0 
+c8_104pts_13layers.pts drop1    mirror t=12 order=other Z=11000001111     clauses  141356 violated 0 
+c8_104pts_13layers.pts drop2           t=12 order=other Z=00111110000     clauses  141356 violated 0 
+c8_104pts_13layers.pts drop2    mirror t=12 order=other Z=11000001111     clauses  141356 violated 0 
+c8_104pts_13layers.pts drop3           t=12 order=other Z=00111110000     clauses  141356 violated 0 
+c8_104pts_13layers.pts drop3    mirror t=12 order=other Z=11000001111     clauses  141356 violated 0 
+c8_104pts_13layers.pts drop4           t=12 order=other Z=00011110000     clauses  141356 violated 0 
+c8_104pts_13layers.pts drop4    mirror t=12 order=other Z=11100001111     clauses  141356 violated 0 
+c8_104pts_13layers.pts drop5           t=12 order=other Z=00011110000     clauses  141356 violated 0 
+c8_104pts_13layers.pts drop5    mirror t=12 order=other Z=11100001111     clauses  141356 violated 0 
+c8_104pts_13layers.pts drop6           t=12 order=other Z=00011110000     clauses  141356 violated 0 
+c8_104pts_13layers.pts drop6    mirror t=12 order=other Z=11100001111     clauses  141356 violated 0 
+c8_104pts_13layers.pts drop7           t=12 order=other Z=00011110000     clauses  141356 violated 0 
+c8_104pts_13layers.pts drop7    mirror t=12 order=other Z=11100001111     clauses  141356 violated 0 
+c8_104pts_13layers.pts drop8           t=12 order=other Z=00011110000     clauses  141356 violated 0 
+c8_104pts_13layers.pts drop8    mirror t=12 order=other Z=11100001111     clauses  141356 violated 0 
+c8_104pts_13layers.pts drop9           t=12 order=other Z=00011111000     clauses  141356 violated 0 
+c8_104pts_13layers.pts drop9    mirror t=12 order=other Z=11100000111     clauses  141356 violated 0 
+c8_104pts_13layers.pts drop10          t=12 order=other Z=00011111000     clauses  141356 violated 0 
+c8_104pts_13layers.pts drop10   mirror t=12 order=other Z=11100000111     clauses  141356 violated 0 
+c8_104pts_13layers.pts drop11          t=12 order=other Z=00011111000     clauses  141356 violated 0 
+c8_104pts_13layers.pts drop11   mirror t=12 order=other Z=11100000111     clauses  141356 violated 0 
+c8_104pts_13layers.pts drop12          t=12 order=other Z=00011111000     clauses  141356 violated 0 
+c8_104pts_13layers.pts drop12   mirror t=12 order=other Z=11100000111     clauses  141356 violated 0 
+c8_104pts_13layers.pts prefix10        t=10 order=other Z=000111110       clauses   78140 violated 0 
+c8_104pts_13layers.pts prefix10 mirror t=10 order=other Z=111000001       clauses   78140 violated 0 
+c8_104pts_13layers.pts prefix12        t=12 order=other Z=00011111000     clauses  141356 violated 0 
+c8_104pts_13layers.pts prefix12 mirror t=12 order=other Z=11100000111     clauses  141356 violated 0 
+c8_104pts_13layers.pts suffix10        t=10 order=other Z=111111000       clauses   78140 violated 0 
+c8_104pts_13layers.pts suffix10 mirror t=10 order=other Z=000000111       clauses   78140 violated 0 
+c8_104pts_13layers.pts suffix12        t=12 order=other Z=00111110000     clauses  141356 violated 0 
+c8_104pts_13layers.pts suffix12 mirror t=12 order=other Z=11000001111     clauses  141356 violated 0 
+c8_104pts_13layers.pts rand0           t=12 order=other Z=00011111000     clauses  141356 violated 0 
+c8_104pts_13layers.pts rand0    mirror t=12 order=other Z=11100000111     clauses  141356 violated 0 
+c8_104pts_13layers.pts rand1           t=10 order=other Z=001110000       clauses   78140 violated 0 
+c8_104pts_13layers.pts rand1    mirror t=10 order=other Z=110001111       clauses   78140 violated 0 
+c8_104pts_13layers.pts rand2           t=10 order=other Z=001111000       clauses   78140 violated 0 
+c8_104pts_13layers.pts rand2    mirror t=10 order=other Z=110000111       clauses   78140 violated 0 
+c8_104pts_13layers.pts rand3           t=12 order=other Z=00011110000     clauses  141356 violated 0 
+c8_104pts_13layers.pts rand3    mirror t=12 order=other Z=11100001111     clauses  141356 violated 0 
+c8_104pts_13layers.pts rand4           t=12 order=other Z=00111110000     clauses  141356 violated 0 
+c8_104pts_13layers.pts rand4    mirror t=12 order=other Z=11000001111     clauses  141356 violated 0 
+c8_104pts_13layers.pts rand5           t=12 order=other Z=00011111000     clauses  141356 violated 0 
+c8_104pts_13layers.pts rand5    mirror t=12 order=other Z=11100000111     clauses  141356 violated 0 
+TOTAL configurations 446, clause evaluations 87122802, violations 0

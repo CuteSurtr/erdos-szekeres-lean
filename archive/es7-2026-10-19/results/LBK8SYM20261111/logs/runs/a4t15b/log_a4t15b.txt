@@ -1,0 +1,6 @@
+22:16:22 start {'m': 4, 't': 15, 'centre': False, 'out': '/home/jay/research/data/lb-k8sym-20261111/runs/a4t15b', 'seed': 502, 'init': None, 'ansatz': 'needle11,spiral11,needle1,twoorbit,spiral12', 'stop_at': 0, 'hours': 2.0, 'steps_per_T': 4000, 'T0': 0.5, 'Tmin': 0.02, 'alpha': 0.93, 'w7': 0.02, 'restart_evals': 600000, 'tag': 'a4t15b', 'perturb': 0.0, 'pfocus': 0.0}
+22:16:22 restart 1 spiral11 init N8 4590350 N7 3584152
+22:17:24 r1 ev 76000 acc 0.894 ab 0.036 T 0.1259 cur N8 104978 N7 419648 | best N8 6200 N7 165704
+22:18:26 r1 ev 180000 acc 0.746 ab 0.193 T 0.0200 cur N8 1306 N7 204544 | best N8 1306 N7 189376
+22:19:27 r1 ev 296000 acc 0.690 ab 0.265 T 0.0200 cur N8 1308 N7 215656 | best N8 1306 N7 189376
+22:20:27 r1 ev 416000 acc 0.659 ab 0.302 T 0.0244 cur N8 902 N7 220032 | best N8 786 N7 214040

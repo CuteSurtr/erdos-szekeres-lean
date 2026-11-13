@@ -1,0 +1,31 @@
+# m9_review_resolve.log: independent review of scripts/resolve.sh (sha256 f32d587c33264a392e09028b1a0f71c5daa2c589ec80a51a491c584549230a54) and scripts/build_cake_lpr.sh (sha256 3813e60e7dc5feed9b864c5cee3186450a52cce2229a89c7335093fbfe20bdf7), 2026-11-06T19:02:11+09:00
+# No solver or checker was run. Scripts not edited. Tctl 73.8-75.5 C during the review.
+## smoke log vs files (sha256sum on /path/to/data/encblean-m9/resolve-smoke, resolve-negtest)
+67bd71875b89875c5126410c3f5d91a5ef4275dc172fa9f05bd6f1eba72109b2  resolve-smoke/c00100.cnf
+b5cc9acd16839be4db5a9c52290d196233f5ec58e8f213350ec189aaaf3a307f  resolve-smoke/n10000.cnf
+94913b2e3b91db12026fa7718a05dd2d21cb6d224d9c39868ed80aabac29a7cb  resolve-smoke/c00100.lrat
+dd7b24adc280f4dfebb6ffb26069afb68e2e0594187f8d2c81406b2c061b2788  resolve-smoke/n10000.lrat
+b5cc9acd16839be4db5a9c52290d196233f5ec58e8f213350ec189aaaf3a307f  resolve-negtest/n10000.cnf
+resolve-smoke/c00100.cake.log: s VERIFIED UNSAT
+resolve-smoke/n10000.cake.log: s VERIFIED UNSAT
+records: SHA256SUMS.txt:92 B/c00100.cnf 67bd7187...; :123 c00100 proof 94913b2e... 39771081; replay B c00100 cnf 67bd7187... ACCEPTED; noty12 cubes.sha256:16 n10000 b5cc9acd...; noty12 results.tsv n10000 cnf b5cc9acd... proof dd7b24ad... 39771102 ACCEPTED -> all equal to the smoke log and files
+shellcheck 0.11.0 on both scripts: rc 0, no findings; bash -n resolve.sh: rc 0
+note: .lake/build/bin/encb_dimacs is now sha256 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368 (mtime 2026-11-06T18:58:34+09:00); the smoke ran a0dff6f2...
+## fake-tool test (stubs in /sandbox/m9/review: fake_cadical writes an empty proof and exits 20; fake_cake prints 's VERIFIED UNSAT')
+# run 1: cd ENCBLEAN; RS_CADICAL=/sandbox/m9/review/fake_cadical RS_CAKE=/sandbox/m9/review/fake_cake RS_UNPINNED_CADICAL=1 RS_UNPINNED_CAKE=1 nice -n 10 scripts/resolve.sh c00100 /path/to/data/encblean-m9/review-unpinned   exit code 0
+caps: emit 'systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10'; cadical 'systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10'; cake_lpr 'systemd-run --user --scope -q -p MemoryMax=12G -p MemorySwapMax=0 nice -n 10'; Tctl max 84 C; min free 400 GB + 6 GB per cube
+WARNING: CaDiCaL is NOT the pinned binary (RS_UNPINNED_CADICAL=1); its hash goes in every row
+WARNING: cake_lpr is NOT the pinned binary (RS_UNPINNED_CAKE=1); its hash goes in every row
+records: SHA256SUMS c-cubes 32; replay encoder-B ACCEPTED 32; noty12 cubes.sha256 32; noty12 results.tsv ACCEPTED 32; meta.json Y12 Y13 Y14 Y23 Y24 Y34 = 1 2 3 10 11 18
+emit  c00100 (I=27) units [1 -2 -3 10 -11 -18] cnf 67bd71875b89875c5126410c3f5d91a5ef4275dc172fa9f05bd6f1eba72109b2 58618888 bytes [13.2 s] SHA256SUMS=ok replay-ACCEPTED=ok
+solve c00100 (I=27) cadical rc 20, 0.00 s, 1748 KB max RSS; proof e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 bytes (= recorded proof: no)
+check c00100 (I=27) cake_lpr rc 0, 0.00 s, 1748 KB max RSS; s-lines 1, first 's VERIFIED UNSAT' -> ACCEPTED
+ACCEPTED c00100 (I=27)
+SUMMARY: 1/1 requested cubes ACCEPTED by cake_lpr ('s VERIFIED UNSAT') with the CNF equal to both records; refused 0; stopped 0; tool hashes unchanged at the end; wall 13.6 s; PASS
+# run 2: cd ENCBLEAN; nice -n 10 scripts/resolve.sh c00100 /path/to/data/encblean-m9/review-unpinned   (no overrides, pinned tools)   exit code 0
+tool: cake_lpr /path/to/tools/cake_lpr/cake_lpr sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54 (record: c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54)
+SKIP  c00100 (I=27): results.tsv already has its row (verdict ACCEPTED); not overwritten
+SUMMARY: 1/1 requested cubes ACCEPTED by cake_lpr ('s VERIFIED UNSAT') with the CNF equal to both records; refused 0; stopped 0; tool hashes unchanged at the end; wall 0.3 s; PASS
+# results.tsv row (cube proof_sha256 proof_bytes verdict cake_line cake_sha256):
+c00100	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	0	ACCEPTED	s VERIFIED UNSAT	25e4c58d9137ba94a264c46b792f004e9b0f198a1d625b06a989c9fe135103ca
+# /path/to/data/encblean-m9/review-unpinned (58.6 MB CNF + empty .lrat + fake row) left in place with FAKE-TOOLS-NOT-A-CHECK.txt; the operator may remove it.

@@ -1,0 +1,60 @@
+c --- [ banner ] -------------------------------------------------------------
+c CaDiCaL SAT Solver
+c Copyright (c) 2016-2024
+c A. Biere, M. Fleury, N. Froleyks, K. Fazekas, F. Pollitt, T. Faller
+c JKU Linz, University of Freiburg, TU Wien
+c Version 2.1.3
+c g++-15.2.0
+c Dec 15 2025 01:04:17
+c --- [ proof tracing ] ------------------------------------------------------
+c opening file to write '<lb-k9oct-work-dir>/sat/S2/proof.lrat'
+c writing non-binary proof trace to '<lb-k9oct-work-dir>/sat/S2/proof.lrat'
+c --- [ parsing input ] ------------------------------------------------------
+c reading DIMACS file from '<lb-k9oct-work-dir>/sat/S2/base16_mono.cnf'
+c opening file to read '<lb-k9oct-work-dir>/sat/S2/base16_mono.cnf'
+c found 'p cnf 497697 29484180' header
+c parsed 29484180 clauses in 4.56 seconds process time
+c --- [ options ] ------------------------------------------------------------
+c   --binary=false                 (different from default 'true')
+c   --lrat=true                    (different from default 'false')
+c --- [ solving ] ------------------------------------------------------------
+c time measured in process time since initialization
+c  seconds    reductions  redundant   irredundant
+c          MB     restarts       trail         variables
+c            level   conflicts       glue            remaining
+c *  4.56 2780  0 0   0    0    0  0% 0 27191294 302087 61%
+c 2 35.51 3244 246 3 150 5001 12822 16% 9 12474876 302083 61%
+c  seconds     reductions   redundant     irredundant
+c          MB      restarts         trail          variables
+c             level   conflicts         glue             remaining
+c  seconds     reductions   redundant    irredundant
+c           MB     restarts        trail         variables
+c             level    conflicts       glue            remaining
+c 2 102.11 3221 163 5 341 15003 10409 21% 10 9355124 214003 43%
+c  seconds     reductions    redundant   irredundant
+c           MB     restarts         trail        variables
+c             level    conflicts        glue           remaining
+c  seconds     reductions     redundant    irredundant
+c           MB     restarts           trail        variables
+c             level     conflicts         glue           remaining
+c  seconds     reductions     redundant    irredundant
+c           MB     restarts          trail         variables
+c             level     conflicts        glue            remaining
+c 2 238.56 3137 36 10 1224 50006 18084 21% 15 8519782 204403 41%
+c  seconds     reductions      redundant     irredundant
+c           MB      restarts           trail         variables
+c             level      conflicts         glue            remaining
+c  seconds     reductions      redundant   irredundant
+c           MB      restarts          trail        variables
+c             level      conflicts        glue           remaining
+c 2 326.42 3150 45 12 1949 75007 25228 19% 9 8062093 189314 38%
+c  seconds     reductions      redundant   irredundant
+c           MB      restarts          trail        variables
+c             level      conflicts        glue           remaining
+c  seconds     reductions      redundant    irredundant
+c           MB      restarts          trail         variables
+c             level      conflicts        glue            remaining
+c 2 417.30 3149 35 14 4022 105010 38525 19% 10 8057470 189274 38%
+c  seconds     reductions       redundant    irredundant
+c           MB      restarts           trail         variables
+c             level      conflicts         glue            remaining

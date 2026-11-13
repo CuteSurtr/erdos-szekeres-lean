@@ -1,0 +1,92 @@
+% preamble.tex -- shared preamble of the written proofs of the Lean-checked results.
+% Every section file is written for this preamble; do not define new packages or macros inside a section file.
+\usepackage[margin=0.9in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array,longtable}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+
+\setlist{itemsep=0pt,topsep=2pt,parsep=0pt}
+\emergencystretch=2em
+\def\UrlBreaks{\do\.\do\/\do\_}
+
+% Statement heads carry long Lean names. amsthm sets the head in a box and unboxes it into the first
+% paragraph; a high tolerance inside every statement lets TeX use the break points of the head.
+\makeatletter
+\def\es@sloppy{\tolerance 9999 \hfuzz .5\p@ \ifdim\emergencystretch<3em \emergencystretch 3em\fi}
+\g@addto@macro\th@plain{\es@sloppy}
+\g@addto@macro\th@definition{\es@sloppy}
+\g@addto@macro\th@remark{\es@sloppy}
+
+% A run-in heading (\subsection, \paragraph) followed directly by a statement, a list or a proof is set as a
+% one-line paragraph, after which the list adds \@beginparpenalty (negative), an invitation to break the page
+% below the heading. Forbid that break; and until the next paragraph starts, let a \label (or another command
+% that ends with \@esphack) in vertical mode add \nobreak after its \write, which would otherwise be a break point.
+\newif\ifes@keephead
+\let\es@trivlist@orig\@trivlist
+\def\@trivlist{\if@noskipsec
+    \@beginparpenalty\@M\es@trivlist@orig\global\es@keepheadtrue
+  \else\es@trivlist@orig\fi}
+\let\es@esphack@orig\@esphack
+\def\@esphack{\es@esphack@orig\ifvmode\ifes@keephead\nobreak\fi\fi}
+\AddToHook{para/begin}{\global\es@keepheadfalse}
+
+% Paragraph headings: bold and run in. A \paragraph that directly follows a run-in heading keeps that heading
+% on its page (no \@secpenalty between them).
+\def\paragraph{\if@noskipsec\leavevmode\par\nobreak\@nobreaktrue\fi
+  \@startsection{paragraph}{4}\z@\z@{-\fontdimen2\font}{\normalfont\bfseries}}
+\makeatother
+% Hyphenation exceptions (not macros): the default patterns would break ``namespace'' as ``names-pace''.
+\hyphenation{name-space name-spaces}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{fact}[theorem]{Fact}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% Lean declaration names, directory and file names: typewriter text that may break after . / _ and, less readily,
+% after : (never after the last character, so that a following punctuation mark stays on the line). The break points
+% are explicit penalties, so they also work in statement heads, which amsthm builds in a box (the math-mode break
+% points of \nolinkurl are lost there). \kern0pt after each character prevents ligatures and hyphenation. The
+% arguments are plain names (letters, digits and . / _ : - ' only).
+\makeatletter
+\def\es@ttpen{0}
+\def\es@ttcolpen{100}
+\def\es@tt#1{{\upshape\ttfamily\let\es@ttpending\relax\expandafter\es@ttloop\detokenize{#1}\es@ttstop}}
+\def\es@ttloop#1{\ifx\es@ttstop#1\else\es@ttpending\es@ttchar{#1}\expandafter\es@ttloop\fi}
+\def\es@ttchar#1{#1\kern\z@
+  \if.#1\def\es@ttpending{\penalty\es@ttpen\relax}\else
+  \if/#1\def\es@ttpending{\penalty\es@ttpen\relax}\else
+  \if_#1\def\es@ttpending{\penalty\es@ttpen\relax}\else
+  \if:#1\def\es@ttpending{\penalty\es@ttcolpen\relax}\else
+  \let\es@ttpending\relax\fi\fi\fi\fi}
+\let\es@ttstop\relax
+\DeclareRobustCommand{\lean}[1]{\ifmmode\text{\es@tt{#1}}\else\es@tt{#1}\fi}
+\DeclareRobustCommand{\dirn}[1]{\ifmmode\text{\es@tt{#1}}\else\es@tt{#1}\fi}
+% For the statement map (appendix): an underscore in roman text becomes a permitted line break, as in identifiers.
+\newcommand{\esmapbreaks}{\protected\def\_{\ifmmode\nfss@text{\textunderscore}\else\textunderscore\allowbreak\fi}}
+\makeatother
+% The source of a statement: Lean name and file:line, printed after the statement head.
+\newcommand{\leanref}[2]{Lean: \lean{#1}, \dirn{#2}}
+
+% Geometry and combinatorics.
+\newcommand{\orient}{\operatorname{orient}}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\hv}{\operatorname{hv}}
+\newcommand{\peel}{\operatorname{peel}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\N}{\mathbb N}
+\newcommand{\C}{\mathbb C}
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\card}[1]{\lvert#1\rvert}

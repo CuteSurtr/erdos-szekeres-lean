@@ -1,0 +1,11 @@
+AUDIT3/A1_reduction/verify_A1-F1/AssembledSizes.lean:24:41: warning: unused variable `hp`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'halfturn_pairs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'threefold_orbits' depends on axioms: [propext, Quot.sound]
+'fivefold_size' depends on axioms: [propext, Quot.sound]
+'mirror_b0' depends on axioms: [propext, Quot.sound]
+'mirror_b12' depends on axioms: [propext, Quot.sound]
+'fourfold_via_halfturn' depends on axioms: [propext, Quot.sound]
+'big_order_orbit' depends on axioms: [propext, Quot.sound]
+        1.22 real         0.32 user         0.28 sys

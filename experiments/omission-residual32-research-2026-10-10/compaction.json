@@ -1,0 +1,34 @@
+{
+  "scope": "Partial tree compaction; each replacement has exact integer margin. Pending leaves do not establish UNSAT.",
+  "source": ".cache/recovery-residual32/source-with-eleven.json",
+  "source_sha256": "ba88214307f0683120b6a359fb1c5eaad60fb645fdaef66f27b5fddf47d0a515",
+  "parent_tree": ".cache/recovery-residual32/seed-with-eleven.json.gz",
+  "parent_tree_sha256": "170ad9eeabeaaf1e2250f1b29c0eb35909fd4cbeac42beff1a37bf672f72e6b3",
+  "script_sha256": "fd6c8c6db173881d884ae1dfdf06a686fd768b368211bb4a96d49ff9ca65f488",
+  "hole_budget": 32,
+  "root": 0,
+  "before": {
+    "nodes": 167035,
+    "leaves": 83518,
+    "pending": 8,
+    "complete": false,
+    "minimum_margin": 1
+  },
+  "checked": {
+    "nodes": 167035,
+    "leaves": 83518,
+    "pending": 8,
+    "complete": false,
+    "minimum_margin": 1
+  },
+  "complete": false,
+  "status": "unknown",
+  "scan_complete": true,
+  "seconds": 185.7601126250811,
+  "processed_lp_nodes": 17848,
+  "collapsed_subtrees": 0,
+  "removed_leaves": 0,
+  "remaining_leaves": 83518,
+  "pending_scan_nodes": 0,
+  "numerical_failures": 0
+}

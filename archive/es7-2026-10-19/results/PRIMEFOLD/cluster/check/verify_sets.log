@@ -1,0 +1,15 @@
+c4_8_k5.txt: N=8  4-fold closed=True  collinear triples=0  largest convex subset=4 (need < 5): OK
+m36_cup.pts: N=16 m=5  distinct=yes  zeta-closed=True  collinear triples=0  largest convex subset=5  (need < 6): OK
+p7_compound_64.pts: N=64 m=7  distinct=yes  zeta-closed=True  collinear triples=0  largest convex subset=7  (need < 8): OK
+p7_two_orbit_64.pts: N=64 m=7  distinct=yes  zeta-closed=True  collinear triples=0  largest convex subset=7  (need < 8): OK
+# formula_zeta (exact Lemma 1 formula for centre + one orbit)
+cluster size |C| = 3 ; set = centre + one orbit of C: True ; |S| = 16
+polygons evaluated: 81
+formula (1): max over base polygons = 5 at [0, 1] ; mc(C) = 3 ; predicted mc(S_e) for small e = 5 (need <= 5)
+profile g = [1, 2, 2, 2]  h = [1, 1, 1, 3]  (i) holds: True
+cluster size |C| = 9 ; set = centre + one orbit of C: True ; |S| = 64
+polygons evaluated: 302
+formula (1): max over base polygons = 7 at [0, 1] ; mc(C) = 5 ; predicted mc(S_e) for small e = 7 (need <= 7)
+profile g = [1, 2, 3, 3, 3, 3]  h = [1, 1, 1, 1, 3, 4]  (i) holds: True
+# test_formula_zeta seed 1 x 60
+{'tested': 60, 'mismatch': 0, 'nongeneric_or_err': 0, 'scale_disagree': 0, 'mc_le_m': 24}

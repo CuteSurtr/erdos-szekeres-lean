@@ -1,0 +1,9 @@
+N=16 duplicates=0 centrally_symmetric=1 origin_in_set=0 collinear_triples=0
+convex subsets of size 1: 16
+convex subsets of size 2: 120
+convex subsets of size 3: 560
+convex subsets of size 4: 924
+convex subsets of size 5: 322
+convex subsets of size 6: 0
+convex subsets of size 7: 0
+./dfs_convex k6_points.txt 7  0.00s user 0.00s system 0% cpu 0.419 total

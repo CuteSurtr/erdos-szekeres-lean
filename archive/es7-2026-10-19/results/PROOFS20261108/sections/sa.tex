@@ -1,0 +1,633 @@
+\section{Size arithmetic of the symmetric \texorpdfstring{$k=7$}{k=7} reduction}\label{sa:sec}
+
+This section gives written proofs for three small Lean files of the research records that no other section covers.
+Two of them check the size arithmetic of the reduction of the symmetric $k=7$ statement to its case classes; the third
+instantiates Baek's theorem at $7$-gons.
+
+\paragraph{The three files and their role.}
+\begin{enumerate}[label=(\arabic*)]
+\item \dirn{AUDIT3/A1_reduction/SizeArith.lean} (namespace \lean{A1}, $20$ theorems). The directory \dirn{AUDIT3}
+  records an adversarial audit, run on 1~November 2026 against commit \dirn{9cf4949a5}, of the statement ``every set
+  of at least $33$ points in general position with a nontrivial symmetry, isometric or affine, contains a convex
+  $7$-gon''; it records an audit and claims no theorem (\dirn{AUDIT3/README.md}). Its component audit~A1 (report
+  \dirn{AUDIT3/reports/A1_reduction.md}) re-derived by hand the reduction of this statement to the case theorems of
+  the records for half-turns, threefold and fivefold rotations and reflections, to which the case classes of
+  Definition~\ref{sr:def:classes} correspond. The auditor wrote this file to check in Lean, for all sizes $n$, the
+  arithmetic of that reduction and the arithmetic behind the upper bounds of the table of the largest symmetric
+  $7$-gon-free sizes (trust-table rows 4, 8 and~9 of the report).
+\item \dirn{AUDIT3/A1_reduction/verify_A1-F1/AssembledSizes.lean} ($7$ theorems and one anonymous example). Finding
+  A1-F1 of that audit (rated minor) is that the assembled theorem was not written anywhere. The verifier of the
+  finding wrote this file to check, for all $n$, the bookkeeping of the assembled statement: the half-turn, threefold
+  and fivefold cases, the two mirror cases and the fourfold case through the half-turn, together with a control
+  showing that the half-turn bound fails at $32$ points (\dirn{AUDIT3/reports/A1_reduction.md}, lines 103--106). The
+  file also states, at its line~24, that an order of at least $7$ gives at least one orbit other than the centre
+  (\lean{big_order_orbit}); the report's description of the file, at its line~106, does not mention this lemma.
+\item \dirn{ES7SPLIT/review/equivalence/BaekSeven.lean} (one theorem). It instantiates the vendored formalization
+  \lean{main} of Baek's theorem, cited in this document as Theorem~\ref{mb:thm:baek}, at $7$-gons: $17$ elements of
+  an abstract configuration contain a $4$-cap or a $7$-gon. The records of \dirn{ES7SPLIT} use it as the Lean-checked
+  abstract form of the one published theorem that Theorems~5 and~6 and Corollary~7 of \dirn{ES7SPLIT/README.md}
+  (written proofs there) use as a black box. It plays no role in the reduction.
+\end{enumerate}
+
+\paragraph{What the files do not contain.}
+The statements of the first two files are facts about natural numbers. The geometric modelling that connects them
+with point sets is not part of them: the header comment of \dirn{SizeArith.lean} (lines 4--8) states it and calls it
+``audited by hand in the report, not formalised here''. In that modelling, a rotation of order $s$ about $c$ gives
+$n=s\cdot k+e$, where $k$ is the number of orbits other than $\{c\}$, $e=1$ if $c\in S$ and $e=0$ otherwise, so
+$e\le1$, and $e=0$ for even $s$; a reflection gives $n=2k+b$, where $k$ is the number of mirror pairs and $b\le2$ the
+number of points on the axis; and deleting whole orbits, the centre or axis points keeps the symmetry and general
+position. We prove these facts as a written step (Lemma~\ref{sa:lem:model}), which is not a declaration of these
+files. Related facts are Lean-checked elsewhere in this document, in other forms: Theorem~\ref{ec:thm:compat}(a),(b),
+an abstract form of the count $n=s\cdot k+e$ for a map $z\mapsto\zeta z$ of exact order $s$ in a commutative group
+with zero; the selection of whole orbits (Lemma~\ref{sr:lem:orbit}) and the counting of half-turn pairs, rotation
+orbits and mirror pairs in the Lean proof of Theorem~\ref{sr:thm:main}; the layer results
+(Theorems~\ref{ll:thm:layers} and~\ref{ll:thm:card-peel}), through verbatim copies of which, and of
+Theorem~\ref{ll:thm:reduction}, the Lean proofs of Theorems~\ref{ec:thm:fourfold} and~\ref{ec:thm:fivefold} pass
+from a symmetric set to a subset of exactly $32$, respectively $35$, points (the file of these proofs repeats
+lines 1--1147 of \dirn{LAYERLEAN/LayerLemma.lean} instead of importing it); and Lemmas~\ref{ll:lem:minperiod}
+and~\ref{lg:lem:centre}, which the proof of
+Lemma~\ref{sa:lem:model} uses. No Lean theorem connects these facts with the statements of the files of this
+section. Remark~\ref{sa:rem:use} explains how Lemma~\ref{sa:lem:model} combines with the arithmetic and with the case
+classes. The Lean-checked reduction of the symmetric statement to the case classes is Theorem~\ref{sr:thm:main} for
+Euclidean isometries, with Theorem~\ref{ar:thm:main} for affine symmetries. Both are conditional on the classes,
+and their Lean proofs do their own arithmetic: a text search of the repository's Lean files finds the names of the
+declarations of \dirn{SizeArith.lean} and \dirn{AssembledSizes.lean} only in these two files, so no other Lean file
+uses them.
+
+\paragraph{Sources and evidence.}
+Paths are relative to the research-records directory \dirn{cloud/es7-2026-10-19/results}, except those beginning
+with \dirn{ErdosSzekeres/}, which are relative to the repository root. The table lists the three Lean files and
+their logs by file name; their full paths are given in the list that follows it. The files are those of commit
+\dirn{7e32ee259}; their line counts and SHA-256 hashes (computed with \mbox{\texttt{shasum -a 256}}) are:
+\begin{center}\small
+\begin{tabular}{@{}lrl@{}}
+\toprule
+file & lines & SHA-256\\
+\midrule
+\dirn{SizeArith.lean} & $103$ & \texttt{170384d81db76bb5e8d019e886f50b2545dc7581599f077c6431e08edb532418}\\
+\dirn{SizeArith.lean.log} & $20$ & \texttt{b4bca1cd8542a5e39d2a8560570b573ece40533d9850e8b77f5fc33c41da5770}\\
+\dirn{AssembledSizes.lean} & $39$ & \texttt{c08bdf200fb59f8353c999460a1069ecd7e3414874c4a79a8030c58dc36f2feb}\\
+\dirn{AssembledSizes.lean.log} & $11$ & \texttt{1db4174c7c04edd5a20fad31800eaaf076a0af5cb480c08dcc1771018ae377c9}\\
+\dirn{BaekSeven.lean} & $12$ & \texttt{d6d6636c78dd1a2b271ef8cd1dd09a9c869d5db8f3319f702921319eaf36c2d0}\\
+\dirn{BaekSeven.out} & $3$ & \texttt{53dced1cd76f1ff0b2afb9ba3ba854ffe0ac1a1dbe895855cb6abfa108f8c747}\\
+\bottomrule
+\end{tabular}
+\end{center}
+\begin{itemize}
+\item \dirn{AUDIT3/A1_reduction/SizeArith.lean}: namespace \lean{A1}, no \texttt{import} (core Lean only). Lines 1--9
+  are the header comment; lines 16--80 hold the $20$ theorems; lines 84--103 are one \texttt{\#print axioms} command
+  for each of them, in the same order. Its log \dirn{AUDIT3/A1_reduction/SizeArith.lean.log} is the output of these
+  commands and contains no error and no warning. It reports the axioms \lean{propext}, \lean{Classical.choice},
+  \lean{Quot.sound} for \lean{A1.c5_reduce}, \lean{A1.c4_reduce}, \lean{A1.c6_reduce}, \lean{A1.c2_reduce},
+  \lean{A1.c5_gap} and \lean{A1.table_mirror}, and \lean{propext}, \lean{Quot.sound} for the other $14$ theorems.
+\item \dirn{AUDIT3/A1_reduction/verify_A1-F1/AssembledSizes.lean}: root namespace, no \texttt{import}. The seven
+  theorems are declared at lines 6, 9, 12, 15, 18, 21 and~24 (the last one with its proof on lines 25--27), the
+  anonymous \texttt{example} at line~30, and lines 33--39 are a \texttt{\#print axioms} command for each theorem.
+  Its log \dirn{AUDIT3/A1_reduction/verify_A1-F1/AssembledSizes.lean.log} contains the linter warning ``unused
+  variable \texttt{hp}'' at line~24, column~41, then \lean{propext}, \lean{Classical.choice},
+  \lean{Quot.sound} for \lean{halfturn_pairs} and \lean{propext}, \lean{Quot.sound} for the other six theorems, and a
+  timing line; it contains no error.
+\item \dirn{ES7SPLIT/review/equivalence/BaekSeven.lean}: imports \lean{ErdosSzekeres.Vendor.ETV.Main.Main} (hence
+  Mathlib). Line~6 is \lean{baek_seven}, line~11 the command \mbox{\texttt{\#check @main}}, line~12 the command
+  \mbox{\texttt{\#print axioms baek\_seven}}. Its output \dirn{ES7SPLIT/review/equivalence/BaekSeven.out} gives in
+  lines 1--2 the type of \lean{main} (Remark~\ref{sa:rem:baek-seven}) and in line~3 the axioms \lean{propext},
+  \lean{Classical.choice}, \lean{Quot.sound} of \lean{baek_seven}. Since \texttt{\#print axioms} reports every axiom
+  in the dependency closure of a declaration, this line also covers the vendored theorem \lean{main}
+  (\dirn{ErdosSzekeres/Vendor/ETV/Main/Main.lean}, SHA-256 prefix \texttt{83dd0a214204}) as it is used.
+\end{itemize}
+The first two files were checked with Lean~4.24.0 alone (\dirn{AUDIT3/README.md}, section ``Reproduction'';
+\dirn{AUDIT3/reports/A1_reduction.md}, lines 106 and 262), the third with \mbox{\texttt{lake env lean}} from the
+repository root (\dirn{ES7SPLIT/review/README.md}, section ``Reproduction''), that is, with the repository's
+Lean~4.24.0 and
+Mathlib \dirn{f897ebcf}. A text search of the three files finds no \texttt{sorry}, \texttt{admit},
+\texttt{native\_decide} or \texttt{axiom} declaration. The logs were produced by the project and were not re-run for
+this document.
+
+\paragraph{Rigor.}
+Every statement below whose head names a Lean declaration is \emph{Lean-checked}, with the axioms shown in the logs
+above (all within \lean{propext}, \lean{Classical.choice}, \lean{Quot.sound}). The proofs given here are
+\emph{written proofs (not refereed)}. No statement of this section is computer-assisted. None of them is a finite
+computation: the Lean-checked statements are universally quantified, over natural numbers or, in
+Theorem~\ref{sa:thm:baek-seven}, over linearly ordered types, configurations and finite sets, and the control of
+Remark~\ref{sa:rem:control} is the negation of such a statement. The Lean proofs use \texttt{decide} only to close
+side facts inside these proofs, never to evaluate a whole statement: the five
+closed instances $s=2,\dots,6$ of the conclusion of Lemma~\ref{sa:lem:split}, the value $\binom62+2=17$ in
+Theorem~\ref{sa:thm:baek-seven} and $32\le32$ in the control; the written proofs check these facts by hand as well.
+By the convention that accompanies the rigor labels at the beginning of this document, such a use of \texttt{decide}
+does not make a statement computer-assisted.
+Lemma~\ref{sa:lem:model} and Remark~\ref{sa:rem:use} are written steps and are not Lean-checked.
+Theorem~\ref{sa:thm:baek-seven} rests on Baek's theorem, Theorem~\ref{mb:thm:baek}, which is cited and
+not proved in this document.
+
+\paragraph{Conventions.}
+In Subsections~\ref{sa:ssec:lower}--\ref{sa:ssec:assembled} all variables range over $\N=\{0,1,2,\dots\}$ (Lean
+\texttt{Nat}), and each statement is universally quantified over its variables in the order in which Lean lists
+them. No statement subtracts natural numbers. Lean's product \mbox{\texttt{2 * t * k}} is $(2t)k$ (multiplication
+associates to the left). The Lean proofs use the tactic \texttt{omega}, a decision procedure for linear arithmetic
+over $\N$ and
+$\Z$ whose proof term is checked by the kernel; the written proofs are direct arguments.
+
+%----------------------------------------------------------------------------------------------------------------------
+\subsection{Lower bounds for the reduction}\label{sa:ssec:lower}
+
+The first eleven theorems of \dirn{SizeArith.lean} (its part ``Reduction'', lines 13--56) turn ``at least $33$
+points'' into the numbers of orbits or pairs that the case classes need (Remark~\ref{sa:rem:use}).
+
+\begin{proposition}[rotations of order $2$ to $6$;\\
+  \leanref{A1.c3_reduce}{AUDIT3/A1_reduction/SizeArith.lean:16},\\
+  \leanref{A1.c5_reduce}{AUDIT3/A1_reduction/SizeArith.lean:19},\\
+  \leanref{A1.c4_reduce}{AUDIT3/A1_reduction/SizeArith.lean:22},\\
+  \leanref{A1.c6_reduce}{AUDIT3/A1_reduction/SizeArith.lean:25},\\
+  \leanref{A1.c2_reduce}{AUDIT3/A1_reduction/SizeArith.lean:28}]\label{sa:prop:rot}
+All variables range over $\N$.
+\begin{enumerate}[label=(\alph*)]
+\item \textup{(}\lean{A1.c3_reduce}\textup{)} For all $k,e\in\N$: if $e\le1$ and $33\le3k+e$, then $11\le k$.
+\item \textup{(}\lean{A1.c5_reduce}\textup{)} For all $k,e\in\N$: if $e\le1$ and $33\le5k+e$, then $35\le5k+e$ and
+  $7\le k$.
+\item \textup{(}\lean{A1.c4_reduce}\textup{)} For every $k\in\N$: if $33\le4k$, then $36\le4k$, $8\le k$ and
+  $17\le2k$.
+\item \textup{(}\lean{A1.c6_reduce}\textup{)} For every $k\in\N$: if $33\le6k$, then $11\le2k$ and $17\le3k$.
+\item \textup{(}\lean{A1.c2_reduce}\textup{)} For every $k\in\N$: if $33\le2k$, then $34\le2k$ and $17\le k$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(a) From $33\le3k+e$ and $e\le1$ we get $3k\ge32$; since $3\cdot10=30<32$, $k\ge11$.
+(b) In the same way $5k\ge32$, and $5\cdot6=30<32$ gives $k\ge7$; then $5k+e\ge5k\ge35$.
+(c) Since $4\cdot8=32<33\le4k$, we have $k\ge9$; hence $4k\ge36$, $k\ge8$ and $2k\ge18\ge17$. (So the statement records
+the weaker bound $8\le k$.)
+(d) Since $6\cdot5=30<33\le6k$, we have $k\ge6$; hence $2k\ge12\ge11$ and $3k\ge18\ge17$.
+(e) Since $2\cdot16=32<33\le2k$, we have $k\ge17$, and then $2k\ge34$.
+Lean proves each part with \texttt{omega}.
+\end{proof}
+
+\begin{proposition}[reflections;\\
+  \leanref{A1.mirror_reduce_b0}{AUDIT3/A1_reduction/SizeArith.lean:31},\\
+  \leanref{A1.mirror_reduce_b12}{AUDIT3/A1_reduction/SizeArith.lean:34}]\label{sa:prop:mirror}
+All variables range over $\N$.
+\begin{enumerate}[label=(\alph*)]
+\item \textup{(}\lean{A1.mirror_reduce_b0}\textup{)} For every $k\in\N$: if $33\le2k$, then $17\le k$.
+\item \textup{(}\lean{A1.mirror_reduce_b12}\textup{)} For all $k,b\in\N$: if $1\le b$, $b\le2$ and $33\le2k+b$,
+  then $16\le k$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(a) As in Proposition~\ref{sa:prop:rot}(e), $2\cdot16=32<33\le2k$ gives $k\ge17$.
+(b) From $33\le2k+b$ and $b\le2$ we get $2k\ge31$; since $2\cdot15=30<31$, $k\ge16$. The hypothesis $1\le b$ is not
+used; it records that the statement is meant for one or two points on the axis. Lean proves both parts with
+\texttt{omega}.
+\end{proof}
+
+\begin{proposition}[orders divisible by $2$, $3$ or $5$;\\
+  \leanref{A1.even_order_reduce}{AUDIT3/A1_reduction/SizeArith.lean:37},\\
+  \leanref{A1.mult3_order_reduce}{AUDIT3/A1_reduction/SizeArith.lean:42},\\
+  \leanref{A1.mult5_order_reduce}{AUDIT3/A1_reduction/SizeArith.lean:47}]\label{sa:prop:order}
+All variables range over $\N$.
+\begin{enumerate}[label=(\alph*)]
+\item \textup{(}\lean{A1.even_order_reduce}\textup{)} For all $t,k\in\N$: if $33\le(2t)k$, then $17\le tk$.
+\item \textup{(}\lean{A1.mult3_order_reduce}\textup{)} For all $t,k,e\in\N$: if $e\le1$ and $33\le(3t)k+e$, then
+  $11\le tk$.
+\item \textup{(}\lean{A1.mult5_order_reduce}\textup{)} For all $t,k,e\in\N$: if $e\le1$ and $33\le(5t)k+e$, then
+  $35\le5(tk)+e$.
+\end{enumerate}
+The Lean terms are \mbox{\texttt{2 * t * k}}, \mbox{\texttt{3 * t * k + e}} and \mbox{\texttt{5 * t * k + e}} in the
+hypotheses, \mbox{\texttt{t * k}} in the conclusions of \textup{(a)} and \textup{(b)}, and
+\mbox{\texttt{5 * (t * k) + e}} in the conclusion of \textup{(c)}.
+\end{proposition}
+
+\begin{proof}
+By associativity, $(2t)k=2(tk)$, $(3t)k=3(tk)$ and $(5t)k=5(tk)$. Put $m=tk$. Then (a) is
+Proposition~\ref{sa:prop:rot}(e) for $m$ (its conclusion $17\le m$), (b) is Proposition~\ref{sa:prop:rot}(a) for $m$,
+and (c) is the first conclusion of Proposition~\ref{sa:prop:rot}(b) for $m$. The Lean proofs are the same: each first
+proves the associativity identity with \lean{Nat.mul_assoc} and then calls \texttt{omega}, which treats the product
+$tk$ as a single unknown.
+\end{proof}
+
+\begin{lemma}[the order split;\\
+  \leanref{A1.order_split}{AUDIT3/A1_reduction/SizeArith.lean:52}]\label{sa:lem:split}\raggedright
+For every $s\in\N$ with $2\le s$: ${s\bmod2=0}$, or ${s\bmod3=0}$, or ${s\bmod5=0}$, or ${7\le s}$.
+\end{lemma}
+
+Here $s\bmod q$ is the remainder of $s$ on division by $q$ (Lean \mbox{\texttt{s \% q}}); the Lean conclusion is the
+disjunction \mbox{\texttt{s \% 2 = 0}} $\lor$ \mbox{\texttt{s \% 3 = 0}} $\lor$ \mbox{\texttt{s \% 5 = 0}} $\lor$
+\mbox{\texttt{7} $\le$ \texttt{s}}.
+
+\begin{proof}
+Suppose that $s$ is divisible by none of $2$, $3$, $5$. Then $s\notin\{2,4,6\}$ (these are divisible by $2$),
+$s\ne3$ and $s\ne5$. Since $s\ge2$, this leaves $s\ge7$. Lean argues in the same way: it splits on $s<7$ or $s\ge7$
+(\lean{Nat.lt_or_ge}); in the first case \texttt{omega} gives $s\in\{2,3,4,5,6\}$, and each of the five resulting
+closed instances of the statement is closed by \texttt{decide}, that is, by kernel evaluation of the decision procedure
+for the whole closed disjunction (for $s=5$, for example, this evaluates the remainders of $5$ on division by $2$, $3$
+and~$5$); in the second case the last alternative holds. The five closed instances are side facts inside the proof
+of a statement about all $s\ge2$, which is not itself a finite computation, and the written proof establishes each of
+them by hand, through the disjuncts $2\mid2$, $3\mid3$, $2\mid4$, $5\mid5$ and $2\mid6$ used above; hence the lemma
+is Lean-checked and is not computer-assisted (see the paragraph ``Rigor'' at the beginning of this section).
+\end{proof}
+
+%----------------------------------------------------------------------------------------------------------------------
+\subsection{Upper bounds of the size table}\label{sa:ssec:table}
+
+The second part of \dirn{SizeArith.lean} (``Upper bounds of the table, given the case theorems'', lines 58--80) turns
+bounds on the number of orbits or pairs into bounds on the size. The case theorems that give such bounds for sets
+without $7$ points in convex position are not part of the statements: each part of Proposition~\ref{sa:prop:table}
+that rests on a case theorem assumes the bound that the theorem gives as a hypothesis, on $k$ in parts (a), (e)
+and~(h), on $2k$ in parts (f) and~(g), on $5k+e$ in part~(c), and on $k$, separately for $b=0$ and for $1\le b$, in
+part~(i) (Remark~\ref{sa:rem:use}, item~(5)). Parts (b) and~(d), \lean{A1.c3_no32} and \lean{A1.c5_gap}, rest on no
+case theorem: their only hypothesis is $e\le1$.
+
+\begin{proposition}[upper bounds;\\
+  \leanref{A1.table_c3}{AUDIT3/A1_reduction/SizeArith.lean:61},\\
+  \leanref{A1.c3_no32}{AUDIT3/A1_reduction/SizeArith.lean:62},\\
+  \leanref{A1.table_c5}{AUDIT3/A1_reduction/SizeArith.lean:65},\\
+  \leanref{A1.c5_gap}{AUDIT3/A1_reduction/SizeArith.lean:66},\\
+  \leanref{A1.table_c4}{AUDIT3/A1_reduction/SizeArith.lean:69},\\
+  \leanref{A1.table_c4_only_c2}{AUDIT3/A1_reduction/SizeArith.lean:70},\\
+  \leanref{A1.table_c6}{AUDIT3/A1_reduction/SizeArith.lean:73},\\
+  \leanref{A1.table_c2}{AUDIT3/A1_reduction/SizeArith.lean:76},\\
+  \leanref{A1.table_mirror}{AUDIT3/A1_reduction/SizeArith.lean:79}]\label{sa:prop:table}
+All variables range over $\N$.
+\begin{enumerate}[label=(\alph*)]
+\item \textup{(}\lean{A1.table_c3}\textup{)} For all $k,e\in\N$: if $e\le1$ and $k\le10$, then $3k+e\le31$.
+\item \textup{(}\lean{A1.c3_no32}\textup{)} For all $k,e\in\N$: if $e\le1$, then $3k+e\ne32$.
+\item \textup{(}\lean{A1.table_c5}\textup{)} For all $k,e\in\N$: if $e\le1$ and $5k+e<35$, then $5k+e\le31$.
+\item \textup{(}\lean{A1.c5_gap}\textup{)} For all $k,e\in\N$: if $e\le1$, then $5k+e\ne32$, $5k+e\ne33$ and
+  $5k+e\ne34$.
+\item \textup{(}\lean{A1.table_c4}\textup{)} For every $k\in\N$: if $k\le7$, then $4k\le28$.
+\item \textup{(}\lean{A1.table_c4_only_c2}\textup{)} For every $k\in\N$: if $2k\le16$, then $4k\le32$.
+\item \textup{(}\lean{A1.table_c6}\textup{)} For every $k\in\N$: if $2k\le10$, then $6k\le30$.
+\item \textup{(}\lean{A1.table_c2}\textup{)} For every $k\in\N$: if $k\le16$, then $2k\le32$.
+\item \textup{(}\lean{A1.table_mirror}\textup{)} For all $k,b\in\N$: if $b\le2$, $(b=0\Rightarrow k\le16)$ and
+  $(1\le b\Rightarrow k\le15)$, then $2k+b\le32$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(a) $3k+e\le3\cdot10+1=31$.
+(b) If $3k+e=32$, then $3k=32-e\in\{31,32\}$; but $31=3\cdot10+1$ and $32=3\cdot10+2$ are not multiples of $3$.
+(c) From $5k\le5k+e<35$ we get $k\le6$, so $5k+e\le30+1=31$.
+(d) If $5k+e=j$ with $j\in\{32,33,34\}$, then $5k=j-e$ lies between $31$ and $34$, strictly between the consecutive
+multiples $30$ and $35$ of $5$; this is impossible.
+(e) $4k\le4\cdot7=28$.
+(f) $4k=2\cdot(2k)\le2\cdot16=32$.
+(g) $6k=3\cdot(2k)\le3\cdot10=30$.
+(h) $2k\le2\cdot16=32$.
+(i) If $b=0$, then $k\le16$ and $2k+b=2k\le32$. Otherwise $1\le b$, so $k\le15$, and with $b\le2$ we get
+$2k+b\le30+2=32$.
+Lean proves each part with \texttt{omega}.
+\end{proof}
+
+%----------------------------------------------------------------------------------------------------------------------
+\subsection{Size bookkeeping for the assembled statement (audit finding A1-F1)}\label{sa:ssec:assembled}
+
+The file \dirn{AssembledSizes.lean} restates six of the statements above, or parts of them, with the size $n$ as an
+explicit variable, adds \lean{big_order_orbit} and a negative control. Its declarations are in the root namespace,
+and the file does not import \dirn{SizeArith.lean}.
+
+\begin{proposition}[assembled sizes;\\
+  \leanref{halfturn_pairs}{AUDIT3/A1_reduction/verify_A1-F1/AssembledSizes.lean:6},\\
+  \leanref{threefold_orbits}{AUDIT3/A1_reduction/verify_A1-F1/AssembledSizes.lean:9},\\
+  \leanref{fivefold_size}{AUDIT3/A1_reduction/verify_A1-F1/AssembledSizes.lean:12},\\
+  \leanref{mirror_b0}{AUDIT3/A1_reduction/verify_A1-F1/AssembledSizes.lean:15},\\
+  \leanref{mirror_b12}{AUDIT3/A1_reduction/verify_A1-F1/AssembledSizes.lean:18},\\
+  \leanref{fourfold_via_halfturn}{AUDIT3/A1_reduction/verify_A1-F1/AssembledSizes.lean:21}]\label{sa:prop:assembled}
+All variables range over $\N$.
+\begin{enumerate}[label=(\alph*)]
+\item \textup{(}\lean{halfturn_pairs}\textup{)} For all $n,k\in\N$: if $n=2k$ and $33\le n$, then $17\le k$ and
+  $34\le n$.
+\item \textup{(}\lean{threefold_orbits}\textup{)} For all $n,k,e\in\N$: if $e\le1$, $n=3k+e$ and $33\le n$, then
+  $11\le k$.
+\item \textup{(}\lean{fivefold_size}\textup{)} For all $n,k,e\in\N$: if $e\le1$, $n=5k+e$ and $33\le n$, then
+  $35\le n$.
+\item \textup{(}\lean{mirror_b0}\textup{)} For all $n,k\in\N$: if $n=2k$ and $33\le n$, then $17\le k$.
+\item \textup{(}\lean{mirror_b12}\textup{)} For all $n,k,b\in\N$: if $1\le b$, $b\le2$, $n=2k+b$ and $33\le n$, then
+  $16\le k$.
+\item \textup{(}\lean{fourfold_via_halfturn}\textup{)} For all $n,k\in\N$: if $n=4k$ and $33\le n$, then
+  $17\le2k$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Substitute the given value of $n$ into $33\le n$. (a) Proposition~\ref{sa:prop:rot}(e) gives $17\le k$ and
+$34\le2k=n$. (b) Proposition~\ref{sa:prop:rot}(a). (c) Proposition~\ref{sa:prop:rot}(b) gives $35\le5k+e=n$.
+(d) Proposition~\ref{sa:prop:mirror}(a). (e) Proposition~\ref{sa:prop:mirror}(b); as there, $1\le b$ is not used.
+(f) Proposition~\ref{sa:prop:rot}(c) gives $17\le2k$. Lean proves each part directly with \texttt{omega}.
+\end{proof}
+
+\begin{lemma}[an orbit for an order of at least $7$;\\
+  \leanref{big_order_orbit}{AUDIT3/A1_reduction/verify_A1-F1/AssembledSizes.lean:24}]\label{sa:lem:big-order}\raggedright
+For all $n,k,e,p\in\N$: if $7\le p$, $e\le1$, $n=pk+e$ and $33\le n$, then $1\le k$.
+\end{lemma}
+
+\begin{proof}
+If $k=0$, then $n=p\cdot0+e=e\le1<33$, which contradicts $33\le n$. Hence $k\ge1$. We follow the Lean proof, which
+splits on $k$ (the product $pk$ is not linear in the unknowns): for $k=0$, \texttt{simp} turns the hypothesis
+$n=p\cdot0+e$ into $n=e$, and \texttt{omega} derives a contradiction from $n=e$, $e\le1$ and $33\le n$; for $k=k'+1$
+the goal $1\le k'+1$ is closed by \texttt{omega}.
+\end{proof}
+
+\begin{remark}[the hypothesis $7\le p$]\label{sa:rem:big-order}
+The proof does not use the hypothesis $7\le p$ (Lean binder \texttt{hp}): the conclusion holds for every $p\in\N$,
+given $e\le1$, $n=pk+e$ and $33\le n$. The compile log records this as the warning ``unused variable \texttt{hp}''
+at line~24, column~41. The name of the lemma and the comment above it (``prime order $p\ge7$'') describe the intended
+use (Remark~\ref{sa:rem:use}, item~(1)); the statement does not require $p$ to be prime.
+\end{remark}
+
+\begin{remark}[the negative control, \dirn{AssembledSizes.lean:30}]\label{sa:rem:control}
+Line~30 of \dirn{AssembledSizes.lean} is an anonymous \texttt{example}, not a named declaration. It states
+\[
+\neg\bigl(\forall n,k\in\N:\ n=2k\ \Rightarrow\ (32\le n\ \Rightarrow\ 17\le k)\bigr),
+\]
+that is, Proposition~\ref{sa:prop:assembled}(a) fails when $33$ is replaced by $32$. \emph{Proof.} The numbers $n=32$
+and $k=16$ satisfy $32=2\cdot16$ and $32\le32$, but not $17\le16$. The Lean proof is the same:
+\texttt{intro h; have := h 32 16 rfl (by decide); omega}, where \texttt{rfl} proves $32=2\cdot16$ by evaluation,
+\texttt{decide} proves $32\le32$, and \texttt{omega} refutes $17\le16$. As the example has no name, no
+\texttt{\#print axioms} line refers to it; the compile log contains no error, so Lean accepted it. The comment above
+the example (line~29) reads ``control: the half-turn line is false below 33 (32 points = 16 pairs; the central
+32-point example exists)''. The A1 report describes that example, \dirn{SYM2/sym7_32points.txt}, as half-turn
+symmetric about $(0,0)$, not containing the centre, with no collinear triple, and with largest subset in convex
+position of $6$ points (\dirn{AUDIT3/reports/A1_reduction.md}, lines 93 and~107); the set is not examined in this
+section.
+\end{remark}
+
+%----------------------------------------------------------------------------------------------------------------------
+\subsection{Baek's theorem at \texorpdfstring{$7$}{7}-gons}\label{sa:ssec:baek}
+
+We recall the notions of Theorem~\ref{mb:thm:baek}. They are defined in Lean in
+\dirn{ErdosSzekeres/Vendor/ETV/Config/Defs.lean}, lines 20--67, with the list predicates \lean{List.In} (line~22) and
+\texttt{List.Chain3\textquotesingle} (line~46, through the inductive predicate \lean{List.Chain3} of line~42) of
+\dirn{ErdosSzekeres/Vendor/ETV/Lib/List/Defs.lean} and the predicate \lean{List.IsChain}, which Mathlib takes from
+its dependency Batteries. Let $(\gamma,<)$ be a linearly ordered set. A
+\emph{configuration} $C$ on $\gamma$ is a ternary relation $\mathrm{Cup3}_C$ on $\gamma$ (in Lean a structure
+\texttt{Config}~$\gamma$ with this relation as a field and a decidability witness, which plays no mathematical role);
+$\mathrm{Cap3}_C(a,b,c)$ means $\neg\,\mathrm{Cup3}_C(a,b,c)$. A list $l=(l_0,\dots,l_{r-1})$ of elements of $\gamma$
+is a \emph{$C$-cap} if $l_0<l_1<\dots<l_{r-1}$ and $\mathrm{Cap3}_C(l_i,l_{i+1},l_{i+2})$ for every $i$ with $i+2<r$,
+and a \emph{$C$-cup} if the same holds with $\mathrm{Cup3}_C$ in place of $\mathrm{Cap3}_C$. For a finite set
+$S\subseteq\gamma$, $\mathsf{HasNCap}_C(4,S)$ means that some $C$-cap of length $4$ has all its entries in $S$, and
+$\mathsf{HasNGon}_C(7,S)$ means that there are lists $l$ and $l'$ with all entries in $S$ such that $\card l\ge2$, $l$
+is a $C$-cap, $\card{l'}\ge2$, $l'$ is a $C$-cup, $l$ and $l'$ have the same first entry and the same last entry, and
+$\card l+\card{l'}=7+2$. The relation $\mathrm{Cup3}_C$ is arbitrary, so these notions carry no geometry.
+
+\begin{theorem}[Baek's theorem at $7$-gons;\\
+  \leanref{baek_seven}{ES7SPLIT/review/equivalence/BaekSeven.lean:6}]\label{sa:thm:baek-seven}
+Let $\gamma$ be a type \textup{(}Lean \mbox{\texttt{$\gamma$ : Type}}, the lowest universe\textup{)} with a linear
+order $<$, let $C$ be a configuration on $\gamma$ \textup{(}\mbox{\texttt{C : Config}~$\gamma$}\textup{)}, and let
+$S$ be
+a finite subset of $\gamma$ \textup{(}\mbox{\texttt{S : Finset}~$\gamma$}\textup{)} with $17\le\card S$. Then
+$\mathsf{HasNCap}_C(4,S)$ or $\mathsf{HasNGon}_C(7,S)$.
+\end{theorem}
+
+The theorem is Lean-checked (\dirn{BaekSeven.out}, line~3). Its written proof rests on the cited
+Theorem~\ref{mb:thm:baek}.
+
+\begin{proof}
+We have $\binom{4+2}{2}+2=\binom62+2=\frac{6\cdot5}{2}+2=15+2=17\le\card S$. Theorem~\ref{mb:thm:baek} with $n=4$
+and the same $\gamma$, $C$ and $S$ gives $\mathsf{HasNCap}_C(4,S)$ or $\mathsf{HasNGon}_C(4+3,S)$, and $4+3=7$. The
+Lean proof
+is the same. Its first line, \texttt{have e : Nat.choose (4 + 2) 2 + 2 = 17 := by decide}, evaluates the binomial
+coefficient in the kernel (the value $\binom62=15$ computed above by hand). Its second line,
+\texttt{exact main 4 C S (e} $\blacktriangleright$ \texttt{h)}, applies \lean{main} with $n=4$: the term
+\texttt{e} $\blacktriangleright$ \texttt{h} (Lean's rewriting operator) turns the hypothesis \texttt{h}, which says
+$17\le\card S$, into the hypothesis $\binom{4+2}{2}+2\le\card S$ of \lean{main} at $n=4$, and Lean accepts the
+conclusion \mbox{\texttt{C.HasNGon (4 + 3) S}} as \mbox{\texttt{C.HasNGon 7 S}} because $4+3$ evaluates to $7$.
+\end{proof}
+
+\begin{remark}[comparison with Theorem~\ref{mb:thm:baek}; scope]\label{sa:rem:baek-seven}
+(1) Lines 1--2 of \dirn{BaekSeven.out} are the output of \mbox{\texttt{\#check @main}}. They say that \lean{main}
+takes, in this order, an implicit type $\gamma$ in an arbitrary universe (\mbox{\texttt{Type u\_1}}), an instance
+\mbox{\texttt{LinearOrder}~$\gamma$}, $n\in\N$, \mbox{\texttt{C : Config}~$\gamma$} and
+\mbox{\texttt{S : Finset}~$\gamma$}, and that it derives from the hypothesis
+\mbox{\texttt{(n + 2).choose 2 + 2} $\le$ \texttt{S.card}}, that is $\binom{n+2}{2}+2\le\card S$, the conclusion
+\mbox{\texttt{C.HasNCap 4 S}} $\lor$ \mbox{\texttt{C.HasNGon (n + 3) S}}. This is the statement of
+Theorem~\ref{mb:thm:baek}, with the same notions; it is also the declaration at
+\dirn{ErdosSzekeres/Vendor/ETV/Main/Main.lean:87} together with the variables declared at line~26 of that file. The
+cap length $4$ is fixed; only the gon size $n+3$ and the threshold depend on $n$.
+
+(2) Theorem~\ref{sa:thm:baek-seven} is the case $n=4$. The only other difference is the universe: \lean{baek_seven}
+is stated for $\gamma$ in the lowest universe \texttt{Type}, \lean{main} for types in every universe. Read
+mathematically, both statements are about an arbitrary linearly ordered set.
+
+(3) The theorem concerns abstract configurations; it mentions no points of the plane, and
+\dirn{BaekSeven.lean} contains no bridge from point sets to configurations. The records of \dirn{ES7SPLIT} say:
+``The step from the abstract form to real point sets is not Lean-checked for $n = 7$; the repository's bridge covers
+the octagon case only. Here that step rests on the published paper.'' (\dirn{ES7SPLIT/README.md}, lines 78--79, in
+the rigor paragraph of its section~2; the status paragraph of \dirn{ES7SPLIT/proofs/split_theorem.md}, lines 13--15,
+says the same.) These records were committed in \dirn{9793c06e0} (2~November 2026, 01:03 +0900) and predate
+\lean{MirrorOdd.capacity16} (\dirn{MIRRORETV/lean/MirrorMain.lean:1529}, added in \dirn{83c80f38f} at 03:41 the same
+day), a geometric form of the same instance of Theorem~\ref{mb:thm:baek}: a configuration of $n$ points in the sense
+of Definition~\ref{mm:def:config} with no $4$-cap and no $7$ points in convex position has $n\le16$. That theorem is
+Lean-checked: the Lean proof of Theorem~\ref{mb:thm:seven} uses it, and the axioms printed for that theorem cover it.
+Whether it covers the use of Baek's theorem in the $z$-split arguments of \dirn{ES7SPLIT} is not examined here; the
+theorems of \dirn{ES7SPLIT} remain written proofs. The source of Baek's theorem is J.~Baek, \emph{On the
+Erd\H{o}s--Tuza--Valtr conjecture}, Eur.\ J.\ Combin.\ 124 (2025) 104085; arXiv:2206.04260.
+\end{remark}
+
+%----------------------------------------------------------------------------------------------------------------------
+\subsection{How the arithmetic is used}\label{sa:ssec:use}
+
+The following lemma is the modelling of the header comment of \dirn{SizeArith.lean}, proved here as a written step.
+For $c\in\R^2$ and $\theta\in\R$, $\rho_{c,\theta}$ is the rotation of Definition~\ref{fd:def:rot}; in complex
+notation it is $z\mapsto c+e^{i\theta}(z-c)$. For a map $f$ we write $f^{[i]}$ for its $i$-th iterate. The names
+\lean{HalfTurn34}, \lean{Threefold33}, \lean{Fivefold35}, \lean{MirrorOneAxis33}, \lean{MirrorNoAxis34} and
+\lean{Fourfold32} denote the case classes of Definition~\ref{sr:def:classes}, in the namespace
+\lean{ErdosSzekeres.SymReduction}.
+
+\begin{lemma}[orbit counts; written step]\label{sa:lem:model}
+Let $S\subseteq\R^2$ be a finite set and $n=\card S$.
+\begin{enumerate}[label=(\alph*)]
+\item \emph{Rotations.} Let $c\in\R^2$, let $s\in\N$ with $0<s$, let $\rho=\rho_{c,2\pi/s}$, and assume
+  $\mathrm{Invariant}\,\rho\,S$ \textup{(}Definition~\ref{fd:def:inv}\textup{)}. For $y\in\R^2$ put
+  $O(y)=\{\rho^{[i]}(y):0\le i<s\}$. For every $y\in S\setminus\{c\}$ the set $O(y)$ is contained in
+  $S\setminus\{c\}$, has exactly $s$ elements and is mapped into itself by $\rho$; any two of these sets are equal or
+  disjoint; and $n=s\cdot k+e$, where $k$ is the number of distinct sets $O(y)$ with $y\in S\setminus\{c\}$, and $e=1$
+  if $c\in S$, $e=0$ otherwise. If moreover $s$ is even, $S$ is in general position and $S\not\subseteq\{c\}$, then
+  $e=0$.
+\item \emph{Reflections.} Let $a,u\in\R^2$ with $u_0^2+u_1^2=1$, let $\sigma=\mathrm{reflLine}_{a,u}$, that is
+  \[
+  \sigma(p)=\bigl(a_0+2du_0-(p_0-a_0),\;a_1+2du_1-(p_1-a_1)\bigr),\qquad d=(p_0-a_0)u_0+(p_1-a_1)u_1,
+  \]
+  the map of the classes \lean{MirrorOneAxis33} and \lean{MirrorNoAxis34} of Definition~\ref{sr:def:classes}, and
+  let $L=\{a+tu:t\in\R\}$. Assume $\mathrm{Invariant}\,\sigma\,S$ and that $S$ is in general position. Then
+  $S\setminus L$ is the disjoint union of $k$ two-element sets of the form $\{p,\sigma(p)\}$, each mapped into itself
+  by $\sigma$, and $n=2k+b$ with $b=\card{S\cap L}\le2$.
+\item \emph{Deleting.} Let $T\subseteq S$. If $S$ is in general position, so is $T$; and
+  $\mathrm{HasConvexNGon}\,7\,T$ implies $\mathrm{HasConvexNGon}\,7\,S$. In \textup{(a)}, a union of sets $O(y)$,
+  together with $c$ or not when $c\in S$, is mapped into itself by $\rho$; in \textup{(b)}, a union of sets
+  $\{p,\sigma(p)\}$ and of points of $S\cap L$ is mapped into itself by $\sigma$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) Put $\omega=e^{2\pi i/s}$, so that $\rho(z)=c+\omega(z-c)$. Then $\rho(c)=c$, and $\rho$ is injective because
+$\omega\ne0$; so every iterate $\rho^{[i]}$ is injective. Hence $\rho$ maps $S\setminus\{c\}$ into itself: for
+$y\in S\setminus\{c\}$ we have $\rho(y)\in S$, and $\rho(y)=c=\rho(c)$ would give $y=c$. By induction on $i$,
+$\rho^{[i]}(y)\in S\setminus\{c\}$ for all $i$, so $O(y)\subseteq S\setminus\{c\}$. Let $y\in S\setminus\{c\}$. By
+Lemma~\ref{ll:lem:minperiod} (with $m=s$), the minimal period of $y$ under $\rho$ is $s$: $\rho^{[s]}(y)=y$ and
+$\rho^{[i]}(y)\ne y$ for $0<i<s$. The points $\rho^{[i]}(y)$, $0\le i<s$, are pairwise distinct: if
+$\rho^{[i]}(y)=\rho^{[j]}(y)$ with $0\le i<j<s$, then $\rho^{[i]}\bigl(\rho^{[j-i]}(y)\bigr)=\rho^{[i]}(y)$, and
+injectivity of $\rho^{[i]}$ gives $\rho^{[j-i]}(y)=y$ with $0<j-i<s$, a contradiction. So $\card{O(y)}=s$. Further,
+$\rho(\rho^{[i]}(y))=\rho^{[i+1]}(y)\in O(y)$ for $i+1<s$, and $\rho(\rho^{[s-1]}(y))=\rho^{[s]}(y)=y\in O(y)$; so
+$\rho$ maps $O(y)$ into itself. Consequently, for $x\in O(y)$ all points $\rho^{[i]}(x)$ lie in $O(y)$, so
+$O(x)\subseteq O(y)$, and $O(x)=O(y)$ because both sets have $s$ elements. If $z\in O(y)\cap O(y')$, then
+$O(y)=O(z)=O(y')$. Every $y\in S\setminus\{c\}$ lies in $O(y)$ (take $i=0$). Therefore the distinct sets $O(y)$ form a
+partition of $S\setminus\{c\}$ into $k$ blocks of size $s$, and $n=\card{S\setminus\{c\}}+e=s\cdot k+e$. If $s$ is
+even, $S$ is in general position and some $p\in S$ differs from $c$, then Lemma~\ref{lg:lem:centre} (with $m=s$)
+gives $c\notin S$, that is, $e=0$.
+
+(b) Write $\langle x,y\rangle=x_0y_0+x_1y_1$, so that $d=\langle p-a,u\rangle$ and $\sigma(p)-a=2du-(p-a)$.
+\emph{$\sigma$ is an involution:} for $p'=\sigma(p)$ we get $\langle p'-a,u\rangle=2d\langle u,u\rangle-d=d$, hence
+$\sigma(p')-a=2du-(p'-a)=2du-2du+(p-a)=p-a$, that is, $\sigma(\sigma(p))=p$; in particular $\sigma$ is injective.
+\emph{The fixed points of $\sigma$ are the points of $L$:} $\sigma(p)=p$ means $2du=2(p-a)$, so $p=a+du\in L$;
+conversely, for $p=a+tu$ we have $d=t\langle u,u\rangle=t$ and $\sigma(p)=a+2tu-tu=p$. (This is also shown at the
+end of Definition~\ref{sr:def:classes}.) Now let $p\in S\setminus L$. Then $\sigma(p)\in S$ and $\sigma(p)\ne p$; and
+$\sigma(p)\notin L$, since otherwise $\sigma(\sigma(p))=\sigma(p)$, that is, $p=\sigma(p)$. So $\{p,\sigma(p)\}$ is a
+two-element subset of $S\setminus L$, mapped into itself by $\sigma$ because $\sigma(\sigma(p))=p$. If two such sets
+$\{p,\sigma(p)\}$ and $\{q,\sigma(q)\}$ meet, then $q$ or $\sigma(q)$ lies in $\{p,\sigma(p)\}$, and applying
+$\sigma$ shows that both $q$ and $\sigma(q)$ do; so the two sets are equal. Hence the distinct sets $\{p,\sigma(p)\}$
+partition $S\setminus L$, $\card{S\setminus L}=2k$, and $n=2k+b$ with $b=\card{S\cap L}$. Finally $b\le2$: if
+$x,y,z\in S\cap L$ were pairwise distinct, all differences of two of them would be real multiples of $u$, so the
+linear span of these differences would have dimension at most $1$ and $\{x,y,z\}$ would be collinear, contrary to
+general position (Definition~\ref{fd:def:gp}). This is the fact that at most two points of a set in general position
+lie on a line.
+
+(c) The first two claims are Lemma~\ref{fd:lem:mono}(b) and~(c). A union of sets each of which is mapped into itself
+by a map is mapped into itself by that map; $\{c\}$ is mapped into itself by $\rho$ since $\rho(c)=c$, and each point
+of $S\cap L$ is fixed by $\sigma$ by (b).
+\end{proof}
+
+\begin{remark}[How the arithmetic is used]\label{sa:rem:use}
+This remark is a written step; it is not Lean-checked. It follows the reduction re-derived by the auditor in
+\dirn{AUDIT3/reports/A1_reduction.md} (Summary and trust-table rows 2--9) and shows where each statement of this
+section enters. Let $S$ be a finite set in general position with $n=\card S\ge33$.
+
+(1) \emph{Rotations.} Let $c\in\R^2$, $s\ge2$, $\rho=\rho_{c,2\pi/s}$, and let $S$ be mapped into itself by $\rho$.
+By Lemma~\ref{sa:lem:model}(a), $n=sk+e$ with $e\le1$, and $e=0$ for even $s$ (as $n\ge2$, $S\not\subseteq\{c\}$). By
+Lemma~\ref{sa:lem:model}(c), a union $T$ of some of the sets $O(y)$ is in general position, mapped into itself by
+$\rho$ and does not contain $c$.
+\begin{itemize}
+\item $s=2$: as $\cos\pi=-1$ and $\sin\pi=0$, $\rho=\rho_{c,\pi}$ is the half-turn $p\mapsto2c-p$ (Lean
+  \mbox{\texttt{halfTurn c}}), and $n=2k$. Proposition~\ref{sa:prop:rot}(e) (or~\ref{sa:prop:assembled}(a)) gives
+  $k\ge17$ and $n\ge34$. A union $T$ of $17$ pairs has $34$ points: these are the hypotheses of \lean{HalfTurn34}
+  (Definition~\ref{sr:def:classes}) for $T$ and $c$.
+\item $s=3$: Proposition~\ref{sa:prop:rot}(a) (or~\ref{sa:prop:assembled}(b)) gives $k\ge11$; $11$ orbits give
+  $33$ points without $c$, invariant under $\rho_{c,2\pi/3}$: the hypotheses of \lean{Threefold33}.
+\item $s=5$: Proposition~\ref{sa:prop:rot}(b) gives $n\ge35$ and $k\ge7$ (Proposition~\ref{sa:prop:assembled}(c)
+  gives $n\ge35$ only); $7$ orbits give $35$ points without $c$: the hypotheses of \lean{Fivefold35}. (The comment of
+  \lean{A1.c5_reduce}, ``$T_{C5}$ applies directly'', refers to the fivefold case theorem of the records, which admits
+  at least $35$ points and the centre; the Lean class asks for exactly $35$ points without the centre, which $k\ge7$
+  supplies.)
+\item $s=4$: Proposition~\ref{sa:prop:rot}(c) gives $n=4k\ge36$, $k\ge8$ and $2k\ge17$
+  (Proposition~\ref{sa:prop:assembled}(f) gives $2k\ge17$ only). Rotations about $c$ compose by adding angles (in
+  complex notation, $c+e^{i\alpha}\bigl(c+e^{i\beta}(z-c)-c\bigr)=c+e^{i(\alpha+\beta)}(z-c)$), so
+  $\rho^{[2]}=\rho_{c,\pi}$ is the
+  half-turn; Lemma~\ref{sa:lem:model}(a) for it gives $n=2k'$, and $k'=2k\ge17$, so the case $s=2$ applies. (Eight of
+  the $k$ orbits would give the $32$ points of the class \lean{Fourfold32}. Among the reduction theorems and case
+  lemmas stated in this document, only Theorem~\ref{sr:thm:variant} and the case lemma
+  \lean{SymReduction.case_fourfold} that its proof uses take this class as a hypothesis (so do some checks of that
+  theorem in the review file \dirn{SYMLEAN/review/VariantChecks.lean}, among them its group form
+  \lean{SymReduction.VariantChecks.group_form}); a same-text copy, \lean{LayerLemma.Fourfold32}, is the hypothesis of
+  Theorem~\ref{ec:thm:fourfold} and of its layer form \lean{LayerLemma.fourfold_heptagon_of_erase}, which its proof
+  uses;
+  item~(5) uses the class for the size table.)
+\item $s=6$: Proposition~\ref{sa:prop:rot}(d) gives $2k\ge11$ and $3k\ge17$. Here $\rho^{[2]}=\rho_{c,2\pi/3}$ has
+  $2k$ orbits of size $3$ and $\rho^{[3]}=\rho_{c,\pi}$ has $3k$ pairs (Lemma~\ref{sa:lem:model}(a) for these
+  rotations, with $n=6k$), so both the threefold and the half-turn case apply.
+\item General $s$: by Lemma~\ref{sa:lem:split}, $2\mid s$, $3\mid s$, $5\mid s$, or $s\ge7$. If $s=mt$ with
+  $m\in\{2,3,5\}$, then $\rho^{[t]}=\rho_{c,2\pi t/s}=\rho_{c,2\pi/m}$ maps $S$ into itself, and
+  Lemma~\ref{sa:lem:model}(a) for it gives $n=mk'+e$ with the same $e$; from $mk'=n-e=mtk$ we get $k'=tk$.
+  Proposition~\ref{sa:prop:order} is the arithmetic of this step: $tk\ge17$ pairs for even $s$ (where $e=0$),
+  $tk\ge11$ orbits of size $3$ if $3\mid s$, and $35\le5(tk)+e$ if $5\mid s$, hence $5tk\ge34$ and $tk\ge7$. The cases
+  $s=2,3,5$ then apply to $\rho^{[t]}$. If $s\ge7$, Lemma~\ref{sa:lem:big-order} (with $p=s$) gives $k\ge1$, so $S$
+  contains a set $O(y)$ with $s\ge7$ points. They all have the same distance from $c$ as $y$, because
+  $\abs{\omega(z-c)}=\abs{z-c}$, so $O(y)$ is in convex position by Lemma~\ref{sr:lem:concyclic}; any $7$ of its
+  points are in convex position (Lemma~\ref{fd:lem:mono}(a)), so $\mathrm{HasConvexNGon}\,7\,S$
+  (Definition~\ref{fd:def:ngon}). No case class is needed here.
+\end{itemize}
+
+(2) \emph{Reflections.} Let $S$ be mapped into itself by $\sigma=\mathrm{reflLine}_{a,u}$ with $u_0^2+u_1^2=1$. By
+Lemma~\ref{sa:lem:model}(b), $n=2k+b$ with $b\le2$. If $b=0$, Proposition~\ref{sa:prop:mirror}(a)
+(or~\ref{sa:prop:assembled}(d)) gives $k\ge17$, and $17$ pairs form a $34$-point set that is in general position and
+mapped into itself by $\sigma$ (Lemma~\ref{sa:lem:model}(c)) and has no fixed point: the hypotheses of
+\lean{MirrorNoAxis34}. If $b\in\{1,2\}$, Proposition~\ref{sa:prop:mirror}(b) (or~\ref{sa:prop:assembled}(e)) gives
+$k\ge16$, and $16$ pairs together with one point $x\in S\cap L$ form a $33$-point set that is in general position and
+mapped into itself by $\sigma$ (Lemma~\ref{sa:lem:model}(c)) and whose only fixed point is $x$: the hypotheses of
+\lean{MirrorOneAxis33}. (The fixed points of $\sigma$ are the points of $L$, as shown in the proof of
+Lemma~\ref{sa:lem:model}(b), and the pairs lie in $S\setminus L$.)
+
+(3) \emph{All symmetries.} By Theorem~\ref{sr:thm:structure}(b), a Euclidean isometry $g\ne\mathrm{id}$ that maps $S$
+into itself is either a rotation, in complex notation $z\mapsto c+a(z-c)$ with $a\ne1$ and $a^m=1$ for some $m>0$, or
+a map $\mathrm{reflLine}_{A,u}$ with $u_0^2+u_1^2=1$. In the first case let $s\ge2$ be the order of $a$. Then $a$ is a
+primitive $s$-th root of unity, so $e^{2\pi i/s}=a^j$ for some $j\in\N$, because a primitive $s$-th root of unity
+generates all $s$-th roots of unity. As $g^{[j]}(z)=c+a^j(z-c)$ (induction on $j$), $\rho_{c,2\pi/s}=g^{[j]}$, which
+maps $S$ into itself (here $c$ is read as a point); so item~(1) applies. In the second case item~(2) applies.
+Affine symmetries are reduced to Euclidean isometries by Theorem~\ref{ar:thm:transfer}, which gives
+Theorem~\ref{ar:thm:main}.
+
+(4) \emph{Status.} Items (1)--(3) derive $\mathrm{HasConvexNGon}\,7\,S$ from the five case classes \lean{HalfTurn34},
+\lean{Threefold33}, \lean{Fivefold35}, \lean{MirrorOneAxis33} and \lean{MirrorNoAxis34}, used as hypotheses. Except
+for the orders $s\ge7$ in item~(1), which need no class, items (1) and~(2) exhibit a subset $T$ that satisfies the
+hypotheses of one class, and the class then gives $\mathrm{HasConvexNGon}\,7\,T$, hence
+$\mathrm{HasConvexNGon}\,7\,S$ by Lemma~\ref{sa:lem:model}(c); item~(3) reduces every Euclidean isometry other than
+the identity to items (1) and~(2), and affine symmetries to Euclidean isometries. The Lean-checked form of this
+implication is Theorem~\ref{sr:thm:main} for Euclidean isometries, with Theorem~\ref{ar:thm:main} for affine
+symmetries. The Lean proof of Theorem~\ref{sr:thm:main} passes to a power of the rotation that is the half-turn or has
+odd prime order, instead of using Lemma~\ref{sa:lem:split}, and it does its own arithmetic. The two mirror classes
+are Lean-checked theorems (Theorem~\ref{mb:thm:classes}). The classes \lean{HalfTurn34}, \lean{Threefold33} and
+\lean{Fivefold35} are not proved in Lean or in this document (Theorem~\ref{mb:thm:main3} is conditional on them);
+the records that supply them are described in the remark that follows Definition~\ref{sr:def:classes}. Of the
+three ingredients, the modelling (Lemma~\ref{sa:lem:model}), the case classes and the arithmetic, the files of this
+section check only the arithmetic.
+
+(5) \emph{The size table.} Proposition~\ref{sa:prop:table} is the arithmetic of the upper bounds in the size table of
+\dirn{WRITEUP/SYMMETRIC.md}, \S2 (trust-table row~9 of the A1 report). For a set without $7$ points in convex position,
+the case classes bound $k$ through item~(1) or~(2), and the parts of Proposition~\ref{sa:prop:table} turn these
+bounds into bounds on $n$. Here $S$ need not have $33$ points: if the number of orbits or pairs to which a class is
+applied below ($k$, or $2k$ for $\rho^{[2]}$ when $s=4$ or $s=6$) reached the number that the class requires, the
+subset $T$ built in item~(1) or~(2) would satisfy the hypotheses of the class, which would then give $7$ points of
+$S$ in convex position; for even $s$, $e=0$ as soon as $k\ge1$ (Lemma~\ref{sa:lem:model}(a)), and $k=0$ gives
+$n=e\le1$. For threefold sets, \lean{Threefold33} gives $k\le10$, so $n\le31$ by part~(a), and
+$n\ne32$ in any case by part~(b). For fivefold sets, \lean{Fivefold35} gives $k\le6$, so $n=5k+e<35$ and $n\le31$ by
+part~(c); $32$, $33$ and $34$ are not fivefold sizes by part~(d). For fourfold sets, \lean{Fourfold32} gives $k\le7$,
+so $n\le28$ by part~(e), while \lean{HalfTurn34} alone gives only $2k\le16$ and $n\le32$ by part~(f). For sixfold
+sets, \lean{Threefold33} applied to the $2k$ orbits of size $3$ gives $2k\le10$, so $n\le30$ by part~(g). For
+half-turns, \lean{HalfTurn34} gives $k\le16$, so $n\le32$ by part~(h). For reflections, the two mirror classes give
+$k\le16$ if $b=0$ and $k\le15$ if $b\ge1$, so $n\le32$ by part~(i).
+Except for the mirror row, these bounds are conditional on the classes named, which are hypotheses here: the rows
+for half-turns, threefold and sixfold sets and the bound $32$ of part~(f) on \lean{HalfTurn34} or \lean{Threefold33},
+the fourfold bound $28$ on \lean{Fourfold32}, and the fivefold bound $31$ on \lean{Fivefold35}. For the last two,
+Lean-checked conditional forms exist that include the geometric modelling: Theorem~\ref{ec:thm:fourfold}, with the
+same-text copy \lean{LayerLemma.Fourfold32} as hypothesis, gives $\mathrm{HasConvexNGon}\,7\,S$ for every set $S$ in
+general position with at least $29$ points that is mapped into itself by $\rho_{c,2\pi/4}$, so such a set without $7$
+points in convex position has at most $28$ points; Theorem~\ref{ec:thm:fivefold}, with the same-text copy
+\lean{LayerLemma.Fivefold35}, does the same with $\rho_{c,2\pi/5}$, at least $32$ points and the bound $31$. For
+reflections the bound $n\le32$ is Lean-checked with no class hypothesis (Theorem~\ref{mb:thm:refl32}(b) for
+$\mathrm{reflLine}_{a,u}$, derived from Theorem~\ref{mb:thm:seven}(b)), and the two mirror classes are themselves
+Lean-checked theorems (Theorem~\ref{mb:thm:classes}). The matching lower bounds rest on example sets of the records.
+None of this is part of the files of this section.
+\end{remark}
+
+{\raggedright
+\paragraph{Coverage.}
+Covered, by label. In \dirn{AUDIT3/A1_reduction/SizeArith.lean}: \lean{A1.c3_reduce}, \lean{A1.c5_reduce},
+\lean{A1.c4_reduce}, \lean{A1.c6_reduce}, \lean{A1.c2_reduce} (Proposition~\ref{sa:prop:rot});
+\lean{A1.mirror_reduce_b0}, \lean{A1.mirror_reduce_b12} (Proposition~\ref{sa:prop:mirror});
+\lean{A1.even_order_reduce}, \lean{A1.mult3_order_reduce}, \lean{A1.mult5_order_reduce}
+(Proposition~\ref{sa:prop:order}); \lean{A1.order_split} (Lemma~\ref{sa:lem:split}); \lean{A1.table_c3},
+\lean{A1.c3_no32}, \lean{A1.table_c5}, \lean{A1.c5_gap}, \lean{A1.table_c4}, \lean{A1.table_c4_only_c2},
+\lean{A1.table_c6}, \lean{A1.table_c2}, \lean{A1.table_mirror} (Proposition~\ref{sa:prop:table}). In
+\dirn{AUDIT3/A1_reduction/verify_A1-F1/AssembledSizes.lean}: \lean{halfturn_pairs}, \lean{threefold_orbits},
+\lean{fivefold_size}, \lean{mirror_b0}, \lean{mirror_b12}, \lean{fourfold_via_halfturn}
+(Proposition~\ref{sa:prop:assembled}); \lean{big_order_orbit} (Lemma~\ref{sa:lem:big-order}, with
+Remark~\ref{sa:rem:big-order}); the anonymous example of line~30 (Remark~\ref{sa:rem:control}). In
+\dirn{ES7SPLIT/review/equivalence/BaekSeven.lean}: \lean{baek_seven} (Theorem~\ref{sa:thm:baek-seven}); the vendored
+theorem \lean{main} that it instantiates is the cited Theorem~\ref{mb:thm:baek}. That is all $28$ theorems of the
+three files and the one example.
+
+Not covered, deliberately: the \texttt{\#print axioms} commands (\dirn{SizeArith.lean}, lines 84--103;
+\dirn{AssembledSizes.lean}, lines 33--39; \dirn{BaekSeven.lean}, line~12) and the \texttt{\#check} command
+(\dirn{BaekSeven.lean}, line~11), which produce the logs named in the Sources paragraph and are not results; and the
+comments of the files, among them the modelling in the header of \dirn{SizeArith.lean}, which these files do not
+formalise and which is treated here as the written step Lemma~\ref{sa:lem:model}. Lemma~\ref{sa:lem:model} and
+Remark~\ref{sa:rem:use} are not declarations of the three files. Out of scope: the scripts and other logs of
+\dirn{AUDIT3/A1_reduction} and its subdirectories, and the other files of \dirn{ES7SPLIT/review/equivalence}; none of
+them contains a Lean declaration.\par}

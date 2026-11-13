@@ -1,0 +1,49 @@
+{
+  "scope": "upstream ordinary-polygon CNF; not yet a theorem in our Lean project",
+  "gon": 5,
+  "points": 8,
+  "seed": 0,
+  "time_limit_seconds": 30,
+  "upstream_commit": "3073981d2aa5aa1e399b382e605c0ed12a0b69af",
+  "status": "sat",
+  "artifacts": {
+    "cnf": {
+      "path": ".cache/sat/gon5-n8-seed0/instance.cnf",
+      "bytes": 4850,
+      "sha256": "0087fa943f57e8d3cae592444903a1a7724ec4debd949c1b2a5cce4de4383809"
+    },
+    "solver_log": {
+      "path": ".cache/sat/gon5-n8-seed0/solver.log",
+      "bytes": 5106,
+      "sha256": "f76df3aeee11f7d69aaf26709940eba48f903c62dda5cc922df884c2f61134e9"
+    },
+    "proof": {
+      "path": ".cache/sat/gon5-n8-seed0/proof.drat",
+      "bytes": 92,
+      "sha256": "23d733e8bcb082cb0cecfb2bf996ef974f57d542cdf5d7090e9968847afebd22"
+    },
+    "variables": {
+      "path": ".cache/sat/gon5-n8-seed0/variables.txt",
+      "bytes": 1250,
+      "sha256": "08d20932c1919ccc7e6f2c2791eaaed82aee0960a31d3186cbdb9cd2149f091e"
+    }
+  },
+  "encoding_seconds": 1.4726151659851894,
+  "variables": 151,
+  "clauses": 436,
+  "solver_version": "3.0.1",
+  "solver_commit": "c60730422e758ef1cebe7aeddf2dda31c996bf04",
+  "solver_command": [
+    "/workspace/erdos-szekeres-lean/.cache/cadical/build/cadical",
+    "--no-colors",
+    "--seed=0",
+    "-t",
+    "30",
+    "/workspace/erdos-szekeres-lean/.cache/sat/gon5-n8-seed0/instance.cnf",
+    "/workspace/erdos-szekeres-lean/.cache/sat/gon5-n8-seed0/proof.drat"
+  ],
+  "solver_seconds": 0.004971542046405375,
+  "solver_exit_code": 10,
+  "reduction_audit": "upstream CNF conversion uses mathlibSorry; not axiom-free",
+  "sat_clauses_independently_checked": 436
+}

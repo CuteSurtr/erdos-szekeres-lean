@@ -1,0 +1,6 @@
+input commit 71bcca7 (worktree /opt/in), ROOT=/opt/in/cloud/es7-2026-10-19
+worklist results/V3C/worklist.jsonl: sha256 aeb4a3f19a5979e6d8fb9c4bc68b303de1332ea2a2677e1d4f69833fb6025abc, 12380 lines (matches)
+cross-check at fdd0393: v3_jsonl_leaves WAVE1 dirs 119 leaf lines 30151 skipped 71; WAVE2 dirs 106 leaf lines 11810; WAVE3 dirs 29 leaf lines 6202
+v3_manifest: leaves 47533 cases with leaves 278 problems 0; Mfd.jsonl sha256 34676b0c112438285b15a2cdb63291b9e63b242a98ac84b38d1d0d9c642afbfb, 47533 lines (matches)
+all 12380 work-list (case, lits) records occur in Mfd.jsonl: yes (0 missing)
+shard 14 of 16

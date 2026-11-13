@@ -1,0 +1,31 @@
+⚠ [2017/2025] Replayed LeanLB.Geometry
+warning: LeanLB/Geometry.lean:138:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [2023/2025] Built LeanLB.Data.C5N56 (1.0s)
+✔ [2024/2025] Built LeanLB.G.Five (1.9s)
+✔ [2025/2025] Built LeanLB.Check.C5N56 (108s)
+Build completed successfully (2025 jobs).
+	Command being timed: "lake build LeanLB.Check.C5N56"
+	User time (seconds): 110.72
+	System time (seconds): 2.22
+	Percent of CPU this job got: 101%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:50.99
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 5747844
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 737533
+	Voluntary context switches: 28893
+	Involuntary context switches: 1990
+	Swaps: 0
+	File system inputs: 280
+	File system outputs: 6264
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

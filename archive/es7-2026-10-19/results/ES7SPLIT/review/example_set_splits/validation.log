@@ -1,0 +1,2 @@
+agreement brute force == backtracking == SAT on all sets: {'sets': 99, 'positive_sets': 80, 'partitions': 298, 'with_z': 267}
+counts (exact_z, splits.find_z, my_lp): {(True, 'exact', True): 247, (False, 'none', False): 31, (True, 'numeric', True): 20}

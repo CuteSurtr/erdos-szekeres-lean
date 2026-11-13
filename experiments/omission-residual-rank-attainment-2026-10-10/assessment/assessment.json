@@ -1,0 +1,27 @@
+{
+  "scope": "Exact finite arithmetic assessment only; the separate Lean theorem is proved in this bundle. No global search or numerical bound is established.",
+  "source": "experiments/omission-residual32-sixth-relaxed-2026-10-10/source-2646.json.gz",
+  "source_sha256": "151ea1bfb175f6507d910521eb96961c82b54add2fb7e49e13b864b87241123e",
+  "directed_pairs": 23562,
+  "changed_domains": 4555,
+  "old_labels": 74908,
+  "new_labels": 61076,
+  "labels_removed": 13832,
+  "newly_empty_directions": 0,
+  "newly_incompatible_unordered_pairs": 0,
+  "independent_column_formula_agrees": true,
+  "unordered_triples_checked": 596904,
+  "forced_sign_changes": 0,
+  "state0_forces_outgoing_cup": 1,
+  "interpretation": "May sharpen coupled shared-label SAT. No immediate new pair-order or bounding-box triple constraints.",
+  "files_sha256": {
+    "replay.py": "6f6d119d91e732c05d45218e9e59e8c5fafa3cd23fba80ea21e7dd5769b56d3d",
+    "domains.json.gz": "a07ca0d39e0e0bba0bf97f7d074f0e2ab76ab1df5800f44612ebdf45abe76bd3",
+    "triples.json": "10accec31d1143d5d260f828012b2092472fd46897c8940c49972ddfb727488e"
+  },
+  "original_assessment_script_sha256": "866f862c352a6c0a246ce8b8e72eb9b653dcadb93fa8184ea086456821388dbb",
+  "predicate_references": [
+    "ErdosSzekeres/Omission/ResidualBoxes.lean: ResidualDomains.boundingBox",
+    "ErdosSzekeres/Omission/CycleSigns.lean: CycleSigns.Safe and CycleSigns.CheckTriple"
+  ]
+}

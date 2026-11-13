@@ -1,0 +1,46 @@
+{
+  "status": "kernel-checked",
+  "rows": 24,
+  "support_size": 13,
+  "demand": 1,
+  "roots": [
+    "ErdosSzekeres.Omission.CoupledTemplateFourth.context_impossible",
+    "ErdosSzekeres.Omission.CoupledTemplateFourth.hole_bound",
+    "ErdosSzekeres.Omission.CoupledTemplateFourth.check_sound",
+    "ErdosSzekeres.Omission.CoupledFourthVariants.checked",
+    "ErdosSzekeres.Omission.CoupledFourthVariants.all_rows"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "prerequisites_per_row": {
+    "empty_direction": 35,
+    "domain": 32,
+    "fixed_sign": 106
+  },
+  "scope": "All24listed supports are necessary in actual residual configurations. One is the original fourth support. Exactly23additional rows pass a complement-of-support independence diagnostic against the frozen2400row source; that diagnostic is not a Lean independence theorem. No completeness or numerical bound claimed.",
+  "build": {
+    "command": "lake build ErdosSzekeres.Omission.CoupledFourthVariants --wfail",
+    "exit_code": 0,
+    "module_seconds": {
+      "CoupledTemplateFourth": "34s",
+      "CoupledTemplateFourthCheck": "2.9s",
+      "CoupledTemplateFourthGeometry": "3.3s",
+      "CoupledFourthVariants": "91s"
+    }
+  },
+  "no_sorry": true,
+  "no_custom_axioms": true,
+  "no_native_decide_or_ofReduceBool": true,
+  "sha256": {
+    "ErdosSzekeres/Omission/CoupledTemplateFourth.lean": "7f57fdffb2877a0f253a8d91359486b4e53e8fbadb8ef372b4bcb87c7cca06f9",
+    "ErdosSzekeres/Omission/CoupledTemplateFourthGeometry.lean": "bdd7f4b814cdbe42fb771d441b9666cb578a09eced0ea5f529e13d2a3d663539",
+    "ErdosSzekeres/Omission/CoupledTemplateFourthCheck.lean": "f3cc0f765bb4e136a75d1a50dac6aeffcd25b549d01fc64be46d6a157d098c2c",
+    "ErdosSzekeres/Omission/CoupledFourthVariants.lean": "a51df4e97c6a37dc451d0d25d46a60ec6b60638ba442c5ece77667853817cb47",
+    "experiments/omission-coupled-fourth-2026-10-10/template-variants.json": "82b2c076e54f6025c5e65b634232bedea2930a70d2281db67ac2aa1be8d5f1f0",
+    "experiments/omission-coupled-fourth-2026-10-10/template-selection-diagnostic.json": "20af0682d2c2151fb54421a9adc367e9a292323406a284e2df5ac87be88edb4b",
+    "experiments/omission-coupled-fourth-2026-10-10/template-axiom-audit.txt": "d79d72f2a765aa274539971af86fc68c0732965116be076c727aeaef44aed037"
+  }
+}

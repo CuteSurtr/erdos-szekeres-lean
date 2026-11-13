@@ -1,0 +1,22 @@
+{
+ "manifest": "<scratch>/covneg/c/manifest-E311R.json",
+ "checks": {
+  "part_sha256": true,
+  "tree_sha256": true,
+  "budget": true,
+  "tree_is_tree": true,
+  "expected_leaves": true,
+  "base_path": true,
+  "module_leaf_counts": true,
+  "every_leaf_exactly_once": true,
+  "sum_of_module_leaves": true,
+  "skeleton": true,
+  "module_files": false
+ },
+ "written_modules": 1,
+ "leaves": 437579,
+ "modules": 618,
+ "subtree_roots": 676,
+ "PASS": false,
+ "mutation": "first path decision (66, 2) changed to (66, 1) in C00001 (sha256 updated)"
+}

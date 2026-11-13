@@ -1,0 +1,10 @@
+generator: SYMZ/zcnf.py  sha256 13d6c162a617cff6f4c164d6c921efef18ee58df0e913f6fe98f63b5213a0989
+args: mirror 17 7
+{"kind": "mirror", "m": 2, "t": 17, "axis": 0, "N": 34, "K": 7, "Z": 34, "vars": 838032, "X_vars": 2856, "clauses": 16642456, "stats": {"triple_classes": 2856, "gp_5sets": 162384, "a4_4sets": 51816, "centre_units": 0, "conv": {"4": 23256, "5": 139128, "6": 672792, "K-sets": 2689808}, "sb_units": 136}}
+exit 0
+       28.09 real        27.73 user         0.28 sys
+           216858624  maximum resident set size
+c zcnf kind=mirror m=2 t=17 axis=0 N=34 K=7
+p cnf 838032 16642456
+sha256 1b61bf2f2144c90a0f9cecc33903d1ad400864f4b2885a7353cf5e38fde92825
+bytes 620842943

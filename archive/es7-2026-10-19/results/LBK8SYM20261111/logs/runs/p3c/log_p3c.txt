@@ -1,0 +1,11 @@
+22:55:32 start {'m': 3, 't': 21, 'centre': False, 'out': '/home/jay/research/data/lb-k8sym-20261111/runs/p3c', 'seed': 402, 'init': 'pool3/c3_63_cost3.json', 'ansatz': 'init', 'stop_at': 0, 'hours': 2.0, 'steps_per_T': 4000, 'T0': 0.08, 'Tmin': 0.005, 'alpha': 0.93, 'w7': 0.02, 'restart_evals': 250000, 'tag': 'p3c', 'perturb': 0.001, 'pfocus': 0.5}
+22:55:32 restart 1 init init N8 124317 N7 887979
+22:56:34 r1 ev 116000 acc 0.549 ab 0.430 T 0.0098 cur N8 99 N7 685839 | best N8 99 N7 572298
+22:57:36 r1 ev 236000 acc 0.548 ab 0.433 T 0.0081 cur N8 39 N7 788190 | best N8 39 N7 735183
+22:57:44 end restart 1 init evals 252000 best N8 39 N7 730056 found 0
+22:57:44 restart 2 init init N8 159972 N7 952251
+22:58:44 r2 ev 120000 acc 0.562 ab 0.429 T 0.0091 cur N8 252 N7 592425 | best N8 252 N7 559548
+22:59:45 r2 ev 236000 acc 0.568 ab 0.422 T 0.0070 cur N8 162 N7 531906 | best N8 156 N7 528432
+22:59:53 end restart 2 init evals 252000 best N8 153 N7 504612 found 0
+22:59:53 restart 3 init init N8 147540 N7 931146
+23:00:54 r3 ev 116000 acc 0.557 ab 0.427 T 0.0098 cur N8 9 N7 461763 | best N8 9 N7 454542

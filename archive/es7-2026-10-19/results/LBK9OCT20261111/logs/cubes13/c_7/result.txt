@@ -1,0 +1,12 @@
+cube c_7 units: 497699 0 497700 0 497701 0 497702 0 497703 0 497704 0 497705 0 -497706 0 
+c49eda4c816baf3843542e791c0f23b79f1a0f3c79f906c259db95d329777963  <lb-k9oct-work-dir>/sat/cubes13/c_7/c_7.cnf
+e173dd505efdc58d84977046f31b8bbb968fd9213b3078eff942fb0cede44d1c  <lb-k9oct-work-dir>/sat/cubes13/c_7/proof.lrat
+cadical exit 20 seconds 433
+c (percentage relative to total process time)
+c conflicts:                 46438       109.21    per second
+proof bytes 1030332285
+cake_lpr seconds 53 heap 11000
+cake_lpr stdout: s VERIFIED UNSAT 
+cake_lpr stderr: 
+VERIFIED_LINES 1
+01f611f81ce47798a9b17bc4dde228539dd705aec21f7b322ca57873cfce443e  <lb-k9oct-work-dir>/sat/cubes13/c_7/proof.lrat.zst

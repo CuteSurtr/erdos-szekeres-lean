@@ -1,0 +1,391 @@
+{
+  "description": "Forbidden conjunction for four free C3 orbits, certified by eight strict Grassmann-Pluecker comparisons and their three translates. No reflection symmetry of the target is assumed.",
+  "labels": "Point 3*i+t denotes orbit i, phase t; tau adds 1 to t modulo 3. Each listed sign is for its ordered ascending representative triple.",
+  "source_orbits": [
+    0,
+    2,
+    3,
+    4
+  ],
+  "source_labels_to_template": {
+    "0": 0,
+    "8": 2,
+    "16": 1,
+    "2": 3,
+    "10": 5,
+    "18": 4,
+    "3": 6,
+    "11": 8,
+    "19": 7,
+    "4": 9,
+    "12": 11,
+    "20": 10
+  },
+  "number_sign_literals": 28,
+  "forbidden_signs": [
+    {
+      "triple": [
+        0,
+        3,
+        6
+      ],
+      "sign": -1
+    },
+    {
+      "triple": [
+        0,
+        3,
+        9
+      ],
+      "sign": -1
+    },
+    {
+      "triple": [
+        0,
+        3,
+        11
+      ],
+      "sign": 1
+    },
+    {
+      "triple": [
+        0,
+        4,
+        5
+      ],
+      "sign": -1
+    },
+    {
+      "triple": [
+        0,
+        4,
+        7
+      ],
+      "sign": -1
+    },
+    {
+      "triple": [
+        0,
+        4,
+        9
+      ],
+      "sign": 1
+    },
+    {
+      "triple": [
+        0,
+        4,
+        11
+      ],
+      "sign": -1
+    },
+    {
+      "triple": [
+        0,
+        6,
+        8
+      ],
+      "sign": 1
+    },
+    {
+      "triple": [
+        0,
+        6,
+        9
+      ],
+      "sign": 1
+    },
+    {
+      "triple": [
+        0,
+        6,
+        11
+      ],
+      "sign": -1
+    },
+    {
+      "triple": [
+        0,
+        7,
+        9
+      ],
+      "sign": -1
+    },
+    {
+      "triple": [
+        0,
+        7,
+        11
+      ],
+      "sign": 1
+    },
+    {
+      "triple": [
+        0,
+        9,
+        11
+      ],
+      "sign": -1
+    },
+    {
+      "triple": [
+        3,
+        4,
+        6
+      ],
+      "sign": 1
+    },
+    {
+      "triple": [
+        3,
+        4,
+        7
+      ],
+      "sign": 1
+    },
+    {
+      "triple": [
+        3,
+        4,
+        10
+      ],
+      "sign": 1
+    },
+    {
+      "triple": [
+        3,
+        4,
+        11
+      ],
+      "sign": -1
+    },
+    {
+      "triple": [
+        3,
+        6,
+        7
+      ],
+      "sign": 1
+    },
+    {
+      "triple": [
+        3,
+        6,
+        8
+      ],
+      "sign": -1
+    },
+    {
+      "triple": [
+        3,
+        6,
+        9
+      ],
+      "sign": 1
+    },
+    {
+      "triple": [
+        3,
+        6,
+        10
+      ],
+      "sign": 1
+    },
+    {
+      "triple": [
+        3,
+        7,
+        9
+      ],
+      "sign": -1
+    },
+    {
+      "triple": [
+        3,
+        7,
+        10
+      ],
+      "sign": -1
+    },
+    {
+      "triple": [
+        3,
+        7,
+        11
+      ],
+      "sign": -1
+    },
+    {
+      "triple": [
+        3,
+        10,
+        11
+      ],
+      "sign": -1
+    },
+    {
+      "triple": [
+        6,
+        7,
+        9
+      ],
+      "sign": -1
+    },
+    {
+      "triple": [
+        6,
+        7,
+        10
+      ],
+      "sign": 1
+    },
+    {
+      "triple": [
+        6,
+        9,
+        11
+      ],
+      "sign": 1
+    }
+  ],
+  "certificate_terms": [
+    {
+      "coefficient": 1,
+      "anchor": 0,
+      "other": [
+        3,
+        6,
+        9,
+        11
+      ],
+      "large": 1,
+      "small": 2,
+      "term_signs": [
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "coefficient": 1,
+      "anchor": 3,
+      "other": [
+        6,
+        4,
+        7,
+        10
+      ],
+      "large": 1,
+      "small": 2,
+      "term_signs": [
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "coefficient": 1,
+      "anchor": 3,
+      "other": [
+        2,
+        11,
+        4,
+        10
+      ],
+      "large": 2,
+      "small": 0,
+      "term_signs": [
+        -1,
+        -1,
+        1
+      ]
+    },
+    {
+      "coefficient": 1,
+      "anchor": 9,
+      "other": [
+        0,
+        3,
+        6,
+        7
+      ],
+      "large": 2,
+      "small": 0,
+      "term_signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "coefficient": 1,
+      "anchor": 0,
+      "other": [
+        7,
+        4,
+        11,
+        9
+      ],
+      "large": 1,
+      "small": 2,
+      "term_signs": [
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "coefficient": 1,
+      "anchor": 7,
+      "other": [
+        4,
+        6,
+        3,
+        10
+      ],
+      "large": 1,
+      "small": 2,
+      "term_signs": [
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "coefficient": 1,
+      "anchor": 7,
+      "other": [
+        1,
+        9,
+        6,
+        10
+      ],
+      "large": 2,
+      "small": 0,
+      "term_signs": [
+        -1,
+        -1,
+        1
+      ]
+    },
+    {
+      "coefficient": 1,
+      "anchor": 11,
+      "other": [
+        0,
+        7,
+        4,
+        3
+      ],
+      "large": 2,
+      "small": 0,
+      "term_signs": [
+        1,
+        1,
+        -1
+      ]
+    }
+  ],
+  "original_model_sha256": "5e62bbac09a63509d14e8661b2708ef2b9d8f44faeab818ec4624f4baa35a1b7",
+  "global_sign_reversal_also_forbidden": true
+}

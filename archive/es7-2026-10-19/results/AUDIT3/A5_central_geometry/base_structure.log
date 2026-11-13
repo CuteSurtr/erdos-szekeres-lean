@@ -1,0 +1,10 @@
+total	16653336
+1	X	136
+2	aux	272
+3	X	10880
+4	X	478720
+5	aux	138720
+6	aux	139128
+6	X	12522880
+7	aux	3362600
+awk -f base_structure.awk $S/regen/base.cnf  31.32s user 0.21s system 99% cpu 31.583 total

@@ -1,0 +1,42 @@
+label	kind	lean_name	file_line	note
+ec:def:cases	definition	ErdosSzekeres.LayerLemma.Fivefold35, ErdosSzekeres.LayerLemma.Fourfold32	LEANEXT/es7corr/ES7Corollaries.lean:1157, LEANEXT/es7corr/ES7Corollaries.lean:1164	the case classes: Prop definitions used only as hypotheses; never proved in Lean (supported outside Lean by SYM5 and C4CUT: computer-assisted, with written arguments)
+ec:rem:cases	remark	-	-	status of the case classes Fivefold35/Fourfold32: SAT certificates (SYM5, C4CUT; only cake_lpr verdicts count, lrat-check is secondary) plus written arguments outside Lean (encoder soundness, normal forms, centre perturbation; the records' reviews and refereeing were internal to the project); layer lemma and even-order ray fact have Lean-checked forms (ll:thm:layers; oc:lem:same-ray, oc:thm:phase-orbit) not linked to the formulas; distinct from the SYMLEAN constants
+ec:thm:fivefold-erase	theorem	ErdosSzekeres.LayerLemma.fivefold_heptagon_of_erase	LEANEXT/es7corr/ES7Corollaries.lean:1170	takes hypotheses: Fivefold35; proof via ll:thm:reduction
+ec:thm:fivefold	theorem	ErdosSzekeres.LayerLemma.fivefold_heptagon	LEANEXT/es7corr/ES7Corollaries.lean:1183	takes hypotheses: Fivefold35; export label
+ec:thm:fivefold-nc	theorem	ErdosSzekeres.LayerLemma.fivefold_heptagon_of_centre_not_mem	LEANEXT/es7corr/ES7Corollaries.lean:1193	takes hypotheses: Fivefold35
+ec:thm:fourfold-erase	theorem	ErdosSzekeres.LayerLemma.fourfold_heptagon_of_erase	LEANEXT/es7corr/ES7Corollaries.lean:1203	takes hypotheses: Fourfold32; proof via ll:thm:reduction
+ec:thm:fourfold	theorem	ErdosSzekeres.LayerLemma.fourfold_heptagon	LEANEXT/es7corr/ES7Corollaries.lean:1216	takes hypotheses: Fourfold32; uses lg:lem:centre; export label
+ec:rem:es7-sharp	remark	-	-	conditional bounds 31 and 28; SYMMAX examples are exact computation outside Lean
+ec:rem:orbits	remark	-	-	alternative route by orbit counting (not the Lean route)
+ec:lem:sphere	lemma	RefuteC6.sphere_subset_extremePoints	ES8SYM/lean/C6check.lean:24	over C; any real r
+ec:lem:ci-circle	lemma	RefuteC6.convexIndependent_of_norm_eq	ES8SYM/lean/C6check.lean:43	any index type
+ec:def:zeta	definition	RefuteC6.zeta	ES8SYM/lean/C6check.lean:60	exp(2 pi i/m), m cast to C
+ec:lem:zeta	lemma	RefuteC6.zeta_prim	ES8SYM/lean/C6check.lean:62	Mathlib Complex.isPrimitiveRoot_exp
+ec:fact:prim	fact	-	-	written step: standard properties of primitive roots (Mathlib lemmas)
+ec:lem:orbit8	lemma	RefuteC6.orbit_injective, RefuteC6.orbit_convexIndependent	ES8SYM/lean/C6check.lean:66, ES8SYM/lean/C6check.lean:75	
+ec:thm:big-order	theorem	RefuteC6.part_a	ES8SYM/lean/C6check.lean:85	export label; over C for an arbitrary invariant Set; no finiteness, no general position
+ec:rem:big-order	remark	-	-	scope of part_a; planar link not in Lean; a rotation of order m is reduced to rotAbout(c,2pi/m) by a power
+ec:cor:planar	corollary	-	-	written step: planar form of part_a (not in Lean)
+ec:prop:thr	proposition	RefuteC6.thr_m4, RefuteC6.thr_m5, RefuteC6.thr_m6, RefuteC6.thr_m7, RefuteC6.m4_with_centre_counter	ES8SYM/lean/C6check.lean:108, ES8SYM/lean/C6check.lean:109, ES8SYM/lean/C6check.lean:110, ES8SYM/lean/C6check.lean:111, ES8SYM/lean/C6check.lean:115	arithmetic (omega in Lean); m4_with_centre_counter has no axiom line
+ec:rem:thr	remark	-	-	geometric part of ES8SYM Lemma 2(b) is not in this file
+ec:def:polar	definition	C7.cross, C7.pt, C7.coef, C7.phase, C7.ngonPt	ES8SYM/lean/PolarOrient.lean:45, ES8SYM/lean/PolarOrient.lean:48, ES8SYM/lean/PolarOrient.lean:63, ES8SYM/lean/PolarOrient.lean:94, ES8SYM/lean/PolarOrient.lean:97	
+ec:lem:det-mul	lemma	C7.det_mul_eq	ES8SYM/lean/PolarOrient.lean:24	
+ec:lem:polar-u	lemma	C7.orient_polar	ES8SYM/lean/PolarOrient.lean:37	export label; not the radius-form orient_polar of LAYERLEAN
+ec:lem:polar-cross	lemma	C7.orient_polar_cross	ES8SYM/lean/PolarOrient.lean:50	
+ec:prop:layered	proposition	C7.orient_layered	ES8SYM/lean/PolarOrient.lean:68	
+ec:cor:scale	corollary	C7.orient_layered_scale	ES8SYM/lean/PolarOrient.lean:80	
+ec:lem:ngon-pt	lemma	C7.ngonPt_eq_pt	ES8SYM/lean/PolarOrient.lean:100	
+ec:thm:nested	theorem	C7.nested_regular_orient	ES8SYM/lean/PolarOrient.lean:108	export label; assumes only r_o > 0 (no nesting, no general position)
+ec:lem:centre-u	lemma	C7.orient_centre	ES8SYM/lean/PolarOrient.lean:116	
+ec:rem:polar	remark	-	-	cross versus orient; distinct from lg:lem:polar
+ec:lem:pc-basic	lemma	PCompat.ne_zero_of_order, PCompat.pow_inj_of_order, PCompat.pow_mul_mem	PRIMEFOLD/compat/lean/PCompatCore.lean:36, PRIMEFOLD/compat/lean/PCompatCore.lean:43, PRIMEFOLD/compat/lean/PCompatCore.lean:58	commutative group with zero
+ec:lem:pc-exist	lemma	PCompat.exists_card0, PCompat.exists_card1	PRIMEFOLD/compat/lean/PCompatCore.lean:129, PRIMEFOLD/compat/lean/PCompatCore.lean:160	takes hypotheses hr0, hdisj on r (not discharged for C in Lean)
+ec:def:compat	definition	PCompat.Compat	PRIMEFOLD/compat/lean/PCompatCore.lean:205	
+ec:prop:parity	proposition	PCompat.compat_even, PCompat.compat_odd	PRIMEFOLD/compat/lean/PCompatCore.lean:208, PRIMEFOLD/compat/lean/PCompatCore.lean:235	
+ec:thm:compat	theorem	PCompat.dvd_card, PCompat.card_mod, PCompat.exists_iff, PCompat.classification	PRIMEFOLD/compat/lean/PCompatCore.lean:67, PRIMEFOLD/compat/lean/PCompatCore.lean:112, PRIMEFOLD/compat/lean/PCompatCore.lean:174, PRIMEFOLD/compat/lean/PCompatCore.lean:253	export label; exists_iff takes hypotheses hr0, hdisj on r
+ec:prop:ex341	proposition	PCompat.ex341	PRIMEFOLD/compat/lean/PCompatCore.lean:277	computer-assisted in Lean; written proof by hand (Lean: kernel decide; axioms propext only)
+ec:rem:compat	remark	-	-	Fermat little theorem and general-position existence not formalized
+ec:lem:arith	lemma	L0Check.arith	PRIMEFOLD/compat/lean/L0Check.lean:21	
+ec:lem:orbit-dvd	lemma	L0Check.orbit_dvd	PRIMEFOLD/compat/lean/L0Check.lean:60	written proof derives it from ec:thm:compat(a); Lean re-proves it independently
+ec:thm:l0	theorem	L0Check.L0, L0Check.L0_rot	PRIMEFOLD/compat/lean/L0Check.lean:122, PRIMEFOLD/compat/lean/L0Check.lean:144	export label; no general position assumed
+ec:rem:l0	remark	-	-	parity excludes the centre for even m; Fermat not used

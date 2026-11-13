@@ -1,0 +1,6 @@
+statements with proofs or labels: 470; proof dependencies: 523 (74 across sections)
+cycles: 3
+  cycle: ['fd:lem:mono', 'fd:lem:ngon-basic']
+  cycle: ['sr:lem:concyclic', 'sr:lem:supports']
+  cycle: ['mb:prop:cap113', 'mb:thm:nine']
+referenced labels that are not statements: 0

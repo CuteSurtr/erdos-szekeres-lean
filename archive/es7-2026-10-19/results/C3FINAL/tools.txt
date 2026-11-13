@@ -1,0 +1,7 @@
+machine: MacBook Pro (Apple M5 Pro, 15 cores, 48 GB), macOS 26.6, Python 3.14.7
+inputs: git archive of origin/es7-cloud at f788780c5623e39b8fe0a45eba98058a2774a9b4 (results tree), 280 record files (compose_files.txt), 128,803 records
+compose.py: results/C3U2/tools at cad4e050 (git worktree, unmodified; results/C3U2/tools has no change between cad4e050 and f788780c), sha256 3c4d544f1c8626cd...
+mycompose.py: results/C3AUDIT3/tools/mycompose.py, fixed version (last change 5336f631), unmodified, sha256 d9679f46308d44d5...
+runner: results/C3U2/tests/frontier_cmp.py (last change 5e097d9f), unmodified, via run_final.sh
+base CNF: gen_case.py 11 7 none -> p cnf 168399 4154921, sha256 bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da (compose.py checks it and exits otherwise)
+run: 2026-10-28T17:57:55Z to 17:58:26Z, exit 0

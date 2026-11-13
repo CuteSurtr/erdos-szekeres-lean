@@ -1,0 +1,6 @@
+{'set': 'c5_30points.txt', 'n': 30, 'distinct': True, 'invariant': True, 'centre_in_set': False, 'GP': True, 'layer_sizes': [5, 5, 5, 5, 5, 5], 'orbit': True, 'ccw': True, 'nesting_min_sign': 1, 'centre_min_sign': 1, 'units': 'all hold'}
+{'set': 'c5_31points.txt', 'n': 31, 'distinct': True, 'invariant': True, 'centre_in_set': True, 'GP': True, 'layer_sizes': [5, 5, 5, 5, 5, 5, 1], 'orbit': True, 'ccw': True, 'nesting_min_sign': 1, 'centre_min_sign': 1}
+{'set': 'c5_31minus_centre.txt', 'n': 30, 'distinct': True, 'invariant': True, 'centre_in_set': False, 'GP': True, 'layer_sizes': [5, 5, 5, 5, 5, 5], 'orbit': True, 'ccw': True, 'nesting_min_sign': 1, 'centre_min_sign': 1, 'units': 'all hold'}
+python3 -B check_layers_exact.py $R/SYMMAX/c5_30points.txt    0.05s user 0.01s system 94% cpu 0.059 total
+{'set': 'pentagon+edge-midpoints (not GP)', 'n': 10, 'distinct': True, 'invariant': True, 'centre_in_set': False, 'GP': False, 'layer_sizes': [5, 5], 'orbit': True, 'ccw': True, 'nesting_min_sign': 0, 'centre_min_sign': 1, 'units': '1 violated'}
+=> layers are single orbits: True ; strict nesting holds: False (min orientation sign of a later point w.r.t. an earlier edge = 0 )

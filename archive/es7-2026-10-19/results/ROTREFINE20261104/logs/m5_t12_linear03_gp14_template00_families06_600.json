@@ -1,0 +1,63 @@
+{
+  "all_children_stopped": true,
+  "archives": [
+    {
+      "bytes": 159726603,
+      "file": "t12_linear03_gp14_template00_families06.cnf",
+      "roundtrip_sha256": "fc38d2df30d95a0ce509075e8ce677f7a4eda4efc2e06dac85ede46fc3c9427f",
+      "sha256": "fc38d2df30d95a0ce509075e8ce677f7a4eda4efc2e06dac85ede46fc3c9427f",
+      "zst_sha256": "9eb409017409f791cb49ca7398e42087c207b44fa0dc1b464b115c9c0d1b67bd"
+    },
+    {
+      "bytes": 182166,
+      "file": "t12_linear03_gp14_template00_families06_600.model.json",
+      "roundtrip_sha256": "72e37e9d616294450084bafd58ae29cb58c6dc82faae761c6b5b4e3bb2b5979a",
+      "sha256": "72e37e9d616294450084bafd58ae29cb58c6dc82faae761c6b5b4e3bb2b5979a",
+      "zst_sha256": "9a02dba11c719972b11287a0bb3a50b9bafabdf5d8d382de23c0092b3e67cef6"
+    },
+    {
+      "bytes": 105177100,
+      "file": "t12_linear03_gp14_template00_families06_600.lrat",
+      "roundtrip_sha256": "f3a3a082a3fd7f6db245dfb7a1f0052d80e9d55c17172521aec70d62b3fdbc2a",
+      "sha256": "f3a3a082a3fd7f6db245dfb7a1f0052d80e9d55c17172521aec70d62b3fdbc2a",
+      "zst_sha256": "1b1b0b8ffe3c496b4739f25d03fe7f0b6caf7f5e1e134de704a7af331f7db249"
+    }
+  ],
+  "assignment_check_sha256": "9181a577af9dfed386301ee4a5fe588e7f701e874c8c86ffa03294c77abe7a85",
+  "child_stopped": true,
+  "cnf_sha256": "fc38d2df30d95a0ce509075e8ce677f7a4eda4efc2e06dac85ede46fc3c9427f",
+  "conflicts": 19958,
+  "cpu_seconds": 20.618,
+  "decisions": 94629,
+  "exit_code": 10,
+  "guard": null,
+  "job": "t12_linear03_gp14_template00_families06_600",
+  "log_sha256": "f216c317ec5ba3ce50bde5175a1eb525885b86925149de8f34a3ceb686aeaa23",
+  "peak_rss_bytes": 1694449664,
+  "positive_model": "t12_linear03_gp14_template00_families06_600.model.json",
+  "positive_model_sha256": "72e37e9d616294450084bafd58ae29cb58c6dc82faae761c6b5b4e3bb2b5979a",
+  "proof_archive": {
+    "bytes": 105177100,
+    "file": "t12_linear03_gp14_template00_families06_600.lrat",
+    "roundtrip_sha256": "f3a3a082a3fd7f6db245dfb7a1f0052d80e9d55c17172521aec70d62b3fdbc2a",
+    "sha256": "f3a3a082a3fd7f6db245dfb7a1f0052d80e9d55c17172521aec70d62b3fdbc2a",
+    "zst_sha256": "1b1b0b8ffe3c496b4739f25d03fe7f0b6caf7f5e1e134de704a7af331f7db249"
+  },
+  "proof_file": "t12_linear03_gp14_template00_families06_600.lrat",
+  "proof_status": "partial, not a certificate",
+  "propagations": 52365694,
+  "restarts": 1088,
+  "sampled_child_peak_bytes": 1694285824,
+  "seconds_limit": 600,
+  "solver_options": [
+    "-t",
+    "600",
+    "--lrat",
+    "--binary=false"
+  ],
+  "solver_sha256": "e12ecc8ce8a489394a2b7411e3fa264f037e4ceb2e615bab534158e19d04ac01",
+  "system_memory_peak_bytes": 27181973504,
+  "verdict": "SAT_ABSTRACT",
+  "wall_seconds": 22.132,
+  "wrapper_sha256": "bb50f58477008119adb2a3efa50432170be44d7bbabbd76882771f1640a8f830"
+}

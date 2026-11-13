@@ -1,0 +1,26 @@
+'ErdosSzekeres.Omission.Partition.asymmetric_of_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Omission.Partition.forces_of_population_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.Partition.avoiding_card_le_of_population_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.Partition.forces_318_of_population_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.Partition.forces_317_of_population_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OmissionResidual.excludes_hole_budget_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual.residual_bound_of_hole_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual.forces_of_hole_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual.forces_318_of_twenty_nine_holes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionResidual.forces_317_of_thirty_holes' depends on axioms: [propext, Classical.choice, Quot.sound]
+@ErdosSzekeres.Omission.Partition.forces_of_population_bounds : ∀ {B R : ℕ},
+  1 ≤ B + R →
+    ErdosSzekeres.Omission.Partition.BalancedBound B →
+      ErdosSzekeres.Omission.Partition.ResidualBound R → ErdosSzekeres.ForcesConvexNGon (B + R + 2) 8
+OmissionResidual.forces_318_of_twenty_nine_holes : ErdosSzekeres.Omission.Partition.BalancedBound 192 →
+  OmissionResidual.ExcludesHoleBudget 29 → ErdosSzekeres.ForcesConvexNGon 318 8
+OmissionResidual.forces_317_of_thirty_holes : ErdosSzekeres.Omission.Partition.BalancedBound 192 →
+  OmissionResidual.ExcludesHoleBudget 30 → ErdosSzekeres.ForcesConvexNGon 317 8

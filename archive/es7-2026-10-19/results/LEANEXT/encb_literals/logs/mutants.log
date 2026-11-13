@@ -1,0 +1,15 @@
+== M1_permsign_const.py
+TOTAL ordered triples=48348 mismatches=24174 min|orient|=2.199e-04 violated non-chain clauses=55 configs with canon/orbit-count failure=0 runs where encoder code raised=0
+== M2_olit_sign_flip.py
+TOTAL ordered triples=48348 mismatches=48348 min|orient|=2.199e-04 violated non-chain clauses=133 configs with canon/orbit-count failure=0 runs where encoder code raised=2
+== M3_olit_sort_unrotated.py
+TOTAL ordered triples=48348 mismatches=9900 min|orient|=2.199e-04 violated non-chain clauses=0 configs with canon/orbit-count failure=0 runs where encoder code raised=0
+== M4_canon_max.py
+TOTAL ordered triples=48348 mismatches=0 min|orient|=2.199e-04 violated non-chain clauses=0 configs with canon/orbit-count failure=0 runs where encoder code raised=0
+== M5_canon_wrong_dir.py
+TOTAL ordered triples=0 mismatches=0 min|orient|=inf violated non-chain clauses=0 configs with canon/orbit-count failure=0 runs where encoder code raised=8
+== M6_angular_PAPAPA_flip.py
+TOTAL ordered triples=48348 mismatches=0 min|orient|=2.199e-04 violated non-chain clauses=82 configs with canon/orbit-count failure=0 runs where encoder code raised=2
+== M7_PPP_layer_cond.py
+TOTAL ordered triples=48348 mismatches=0 min|orient|=2.199e-04 violated non-chain clauses=0 configs with canon/orbit-count failure=0 runs where encoder code raised=4
+cmd: for f in scratch/M*.py; do python3 -I check_literals_b.py $f 4 3 11 5 3 12 6 4 13 7 3 14; done

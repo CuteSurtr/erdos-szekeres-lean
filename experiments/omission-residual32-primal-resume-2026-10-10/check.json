@@ -1,0 +1,32 @@
+{
+  "complete": true,
+  "scope": "Exact local Boolean component and candidate replay only; no global32 exclusion or geometric realization.",
+  "catalog_rows": [
+    2598,
+    2646
+  ],
+  "component_vertices": 306,
+  "component_directed_edges": 3650,
+  "component_removable_holes": 0,
+  "component_near_models": 26,
+  "new_distinct_row_near_models": 3,
+  "near_model_failed_rows": [
+    205,
+    973,
+    1075,
+    995
+  ],
+  "partial34_search_exhausted": false,
+  "negative_controls_rejected": [
+    "disconnected closed union",
+    "omitted component vertex",
+    "occupied state0 changed",
+    "false32-hole witness",
+    "partial34 search called exhaustive",
+    "modified source bytes",
+    "incorrect complete edge count"
+  ],
+  "source2598_sha256": "01d4fde13ae0ca43427540a3d529e7e29b875936332af2cc4ef7d423edee469b",
+  "source2646_sha256": "151ea1bfb175f6507d910521eb96961c82b54add2fb7e49e13b864b87241123e",
+  "checker_sha256": "1d5831c77b2b96dfcc90b0daddaad1ce3108bd6a6af34894eef9596455d7fc81"
+}

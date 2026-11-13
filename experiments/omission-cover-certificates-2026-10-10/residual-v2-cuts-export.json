@@ -1,0 +1,30 @@
+{
+  "scope": "Exact arithmetic consequences of the original omission rows; no new geometric hypotheses",
+  "module": "ResidualCoverCutsV2",
+  "namespace": "ResidualCoverCutsV2",
+  "catalog_module": "Catalog",
+  "catalog_namespace": "OmissionResidual",
+  "states": 154,
+  "original_rows": 1187,
+  "derived_rows": 1108,
+  "source": "/workspace/erdos-szekeres-lean/.cache/schroeder-release/es7_es8_bounds_81_319_v1/certificates/residual.json",
+  "source_sha256": "bccd12477064d8a490bbe863ae49dbc8d9dfececf7a65426ba36f7537c66293a",
+  "certificate": "/workspace/erdos-szekeres-lean/.cache/omission-cover-transfer-residual-v2/cover-certificate.json",
+  "certificate_sha256": "86910488e37e55c92789318055d8647b2e1e6b2a7b61ec2a41126b32d9885c8b",
+  "augmented_source": "source.json",
+  "augmented_source_sha256": "c5bc49d588791a6a43e9deba3c4f01af59cf12b781037e69cffb5c2f7735ac61",
+  "generator_sha256": "3feb2c7a66f0fd63a2a9379305a1142c7d41921c4562f4469736ae0a04928343",
+  "files": {
+    "ResidualCoverCutsV2.lean": "46ba1570e1dbc22fb75a31129e4f17d3826afc2dbe7ca27c3742b26869ca3c5b"
+  },
+  "python_replay": {
+    "states": 154,
+    "original_rows": 1187,
+    "derived_rows": 1108,
+    "total_rows": 2295,
+    "minimum_margin": 1,
+    "maximum_derivation_depth": 3,
+    "all_integer_margins_positive": true
+  },
+  "lean_checked": false
+}

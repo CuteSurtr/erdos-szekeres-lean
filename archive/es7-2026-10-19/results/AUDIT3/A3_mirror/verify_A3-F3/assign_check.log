@@ -1,0 +1,13 @@
+[orig] mirror t=4 K=5 axis=0 clauses=3502: {'configs': 30, 'e1_bad': 0, 'e2_bad': 0, 'e3_unexplained': 0, 'e3_missing': 0, 'convex_K': 314}
+[orig] mirror t=4 K=5 axis=1 clauses=8380: {'configs': 30, 'e1_bad': 0, 'e2_bad': 0, 'e3_unexplained': 0, 'e3_missing': 0, 'convex_K': 726}
+[orig] mirror t=4 K=5 axis=2 clauses=16695: {'configs': 30, 'e1_bad': 0, 'e2_bad': 0, 'e3_unexplained': 0, 'e3_missing': 0, 'convex_K': 1430}
+[orig] mirror t=5 K=6 axis=0 clauses=15426: {'configs': 30, 'e1_bad': 0, 'e2_bad': 0, 'e3_unexplained': 0, 'e3_missing': 0, 'convex_K': 632}
+[orig] mirror t=5 K=6 axis=1 clauses=28822: {'configs': 30, 'e1_bad': 0, 'e2_bad': 0, 'e3_unexplained': 0, 'e3_missing': 0, 'convex_K': 748}
+[orig] mirror t=5 K=6 axis=2 clauses=49079: {'configs': 30, 'e1_bad': 0, 'e2_bad': 0, 'e3_unexplained': 0, 'e3_missing': 0, 'convex_K': 1440}
+[orig] mirror t=6 K=7 axis=0 clauses=47229: {'configs': 30, 'e1_bad': 0, 'e2_bad': 0, 'e3_unexplained': 0, 'e3_missing': 0, 'convex_K': 708}
+[orig] mirror t=6 K=7 axis=1 clauses=77332: {'configs': 30, 'e1_bad': 0, 'e2_bad': 0, 'e3_unexplained': 0, 'e3_missing': 0, 'convex_K': 1169}
+[orig] mirror t=6 K=6 axis=2 clauses=118045: {'configs': 30, 'e1_bad': 0, 'e2_bad': 0, 'e3_unexplained': 0, 'e3_missing': 0, 'convex_K': 6083}
+[orig] mirror t=7 K=7 axis=1 clauses=175218: {'configs': 30, 'e1_bad': 0, 'e2_bad': 0, 'e3_unexplained': 0, 'e3_missing': 0, 'convex_K': 3549}
+[fast-path mutant] mirror t=5 K=6 axis=1 clauses=28822: {'configs': 10, 'e1_bad': 0, 'e2_bad': 0, 'e3_unexplained': 3311, 'e3_missing': 0, 'convex_K': 499}
+[fast-path mutant] mirror t=6 K=7 axis=0 clauses=47229: {'configs': 10, 'e1_bad': 0, 'e2_bad': 0, 'e3_unexplained': 6656, 'e3_missing': 0, 'convex_K': 410}
+RESULT PASS

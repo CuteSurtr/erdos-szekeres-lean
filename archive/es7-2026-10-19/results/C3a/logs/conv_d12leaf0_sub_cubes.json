@@ -1,0 +1,14 @@
+{
+ "cnf": "/opt/s/w/vleaf12_0.cnf",
+ "cnf_sha256": "0f90b265648fc8d4320690d5ffd7d36785701b25e1dd9e2fa56d8777d91c02ef",
+ "cubes": "/opt/s/w/vsub12_0.icnf",
+ "cubes_sha256": "44a6b66b3fce49e4c7076c6ae9d07a17ab21717bf05ccf82d53e52889618d667",
+ "march_cubes": 64,
+ "added_refuted_siblings": 0,
+ "leaves": 64,
+ "weights_sum": "1",
+ "coverage_solver": "s UNSATISFIABLE",
+ "coverage_lrat_check": "c VERIFIED",
+ "coverage_cake_lpr": "s VERIFIED UNSAT",
+ "coverage_certified": true
+}

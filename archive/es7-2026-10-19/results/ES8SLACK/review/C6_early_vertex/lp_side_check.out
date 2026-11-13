@@ -1,0 +1,5 @@
+balanced LP plain          55.0000
+balanced LP + h0=h1=0, h2+h3<=1  55.0000
+residual LP plain          27.0000
+residual LP + h0=0         27.0000
+residual LP + h0=0, h1+h2+h4+h7<=3  27.0000

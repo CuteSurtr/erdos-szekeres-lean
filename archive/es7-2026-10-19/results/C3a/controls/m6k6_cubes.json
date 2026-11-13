@@ -1,0 +1,14 @@
+{
+ "cnf": "/opt/s/w/c_m6_k6.cnf",
+ "cnf_sha256": "084d3659ed0c74f85d64405e52509701ba32571d300228be2e6da2fa358ef802",
+ "cubes": "/opt/s/w/cub_m6k6.icnf",
+ "cubes_sha256": "181270f270b604571be447ae2cf9a8e148f5078a0471c4096ec3fac162d42309",
+ "march_cubes": 8,
+ "added_refuted_siblings": 0,
+ "leaves": 8,
+ "weights_sum": "1",
+ "coverage_solver": "s UNSATISFIABLE",
+ "coverage_lrat_check": "c VERIFIED",
+ "coverage_cake_lpr": "s VERIFIED UNSAT",
+ "coverage_certified": true
+}

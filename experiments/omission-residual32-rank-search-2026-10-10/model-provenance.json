@@ -1,0 +1,12 @@
+{
+  "scope": "Discovery model derivative; SAT is not geometric realization and UNSAT requires independent proof plus Lean transfer.",
+  "parent_model": "experiments/omission-residual32-witness-coupled-2026-10-10/model.py",
+  "parent_model_sha256": "76d99351d0ea4ba84c782ac540bd9c81fcdff53704270a8544587c9a99650b4a",
+  "model": "experiments/omission-residual32-rank-search-2026-10-10/model.py",
+  "model_sha256": "5a8cfd187d1cfe8bccd519af2366a06750351a969fbd1cd62ac4ed369b4f995d",
+  "changes": [
+    "Optional chronological source-cup bound: cup(label(u,v)) <= states[u][0]+1.",
+    "Independent exact replay checks this new bound when enabled."
+  ],
+  "third_party": "Existing model attribution to Schroeder data/CC BY4.0 retained; see docs/THIRD_PARTY.md."
+}

@@ -1,0 +1,11 @@
+Zf = 14447d0d56c891a89a07a8141b50eae0ebfd44a7 (git worktree /opt/in), ROOT=/opt/in/cloud/es7-2026-10-19
+v3_jsonl_leaves.py:
+ WAVE1 -> jtree1: dirs 119 leaf lines 30151 skipped records 71
+ WAVE2 -> jtree2: dirs 107 leaf lines 12429 skipped records 0
+ WAVE3 -> jtree3: dirs 29 leaf lines 8850 skipped records 0
+ WAVE4 -> jtree4: dirs 75 leaf lines 28871 skipped records 0
+v3_manifest.py ROOT M.jsonl C.jsonl results/WAVE1 jtree1 results/WAVE2 jtree2 results/WAVE3 jtree3 results/WAVE4 jtree4:
+ leaves 73880 cases with leaves 278 problems 0
+M.jsonl sha256 e01af167266dc044078798355f76f9f8d36c74d1b8843aeab90072b644ea83b5, lines 73880
+ READY.json: manifest_sha256 e01af167266dc044078798355f76f9f8d36c74d1b8843aeab90072b644ea83b5, manifest_lines 73880: both match
+C.jsonl sha256 3fff44866c741a72b223f7855086c0a3406834d444197e3ded898116d8f44411, lines 450 (committed as cases_final.jsonl)

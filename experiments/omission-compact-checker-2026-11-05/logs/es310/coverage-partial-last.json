@@ -1,0 +1,146 @@
+{
+ "out": "/path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/full",
+ "mode": "partial",
+ "prefix": "E310B",
+ "campaign": "/path/to/data/es8-b64-pilot-20261105",
+ "scope": null,
+ "campaign_code": {
+  "run_context_recorded": [
+   "1937e9dc3e51ded192d4ee4b83de8917bd71ee9c5ab9d63e0aff490d0c6f36f6"
+  ],
+  "run_context_current": "1937e9dc3e51ded192d4ee4b83de8917bd71ee9c5ab9d63e0aff490d0c6f36f6",
+  "pbb_strong_recorded": [
+   "2aa90df2812bba8154f2b27f145cade2d54c7edf4aeebe61e080197fc5ccfae4"
+  ],
+  "pbb_strong_current": "2aa90df2812bba8154f2b27f145cade2d54c7edf4aeebe61e080197fc5ccfae4"
+ },
+ "exporter_sha256": {
+  "export_es310": "29854a3799db7ebdb29311255c2a089a0f2c9957beaa2d839583d50033920b1f",
+  "export_es311": "334d2d75cff1effdb4a7420501c0e3247f0dbbe645ae86bf8f8dc03887edbbfb"
+ },
+ "params": {
+  "block_leaves": 64,
+  "budget": 64,
+  "catalog_base": 4194304,
+  "chunk_leaves": 12000,
+  "per_word": 16
+ },
+ "contexts_checked": 1744,
+ "contexts_deep_checked": 811,
+ "contexts_failed": [],
+ "leaves": 4726073,
+ "checker_sha256": "fff949b9d6a0cadc49184c7c7afa35d97775b769f90a3116360dfcdf23254be5",
+ "contexts_sha256": "c16cc3da2171b3baf867bfdb968d81b920a48b90ff60fa0e41810d43f06aec6b",
+ "merged_manifest_sha256": "1d2222c0018ef16d2721696c4b4d28f151959cc2168ec344d573ed72d0d9bf17",
+ "checks": {
+  "K_rule": {
+   "ok": true
+  },
+  "block_base": {
+   "ok": true
+  },
+  "block_params": {
+   "ok": true
+  },
+  "blocks_tile_subtree_roots": {
+   "ok": true
+  },
+  "budget_literal": {
+   "ok": true
+  },
+  "canonical_blocks": {
+   "ok": true
+  },
+  "canonical_cut": {
+   "ok": true
+  },
+  "contexts_jsonl": {
+   "ok": true
+  },
+  "ctx_manifest_fields": {
+   "ok": true
+  },
+  "ctx_manifest_uniform": {
+   "ok": true
+  },
+  "ctx_manifests_present": {
+   "ok": true
+  },
+  "defined_before_use": {
+   "ok": true
+  },
+  "exporter_pinned": {
+   "ok": true
+  },
+  "inputs_rehash": {
+   "ok": true
+  },
+  "leaf_weights_valid": {
+   "ok": true
+  },
+  "merged_manifest": {
+   "ok": true
+  },
+  "module_leaf_terms": {
+   "ok": true
+  },
+  "module_names": {
+   "ok": true
+  },
+  "module_not_corrupted": {
+   "ok": true
+  },
+  "module_sha256": {
+   "ok": true
+  },
+  "module_shapes": {
+   "ok": true
+  },
+  "no_state_fixed_twice": {
+   "ok": true
+  },
+  "over_budget_leaves": {
+   "ok": true
+  },
+  "print_axioms": {
+   "ok": true
+  },
+  "result_closed": {
+   "ok": true
+  },
+  "skeleton_matches": {
+   "ok": true
+  },
+  "source": {
+   "ok": true
+  },
+  "split_vertex_children": {
+   "ok": true
+  },
+  "statement_params": {
+   "ok": true
+  },
+  "statement_paths": {
+   "ok": true
+  },
+  "subtree_roots_cover": {
+   "ok": true
+  },
+  "tree_counts": {
+   "ok": true
+  },
+  "tree_fields": {
+   "ok": true
+  },
+  "tree_is_tree": {
+   "ok": true
+  },
+  "witness_absent": {
+   "ok": true
+  }
+ },
+ "warnings": [],
+ "n_warnings": 0,
+ "seconds": 118.1,
+ "PASS": true
+}

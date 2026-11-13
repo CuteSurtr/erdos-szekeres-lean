@@ -1,0 +1,28 @@
+c parsed a formula with 401464 variables and 7924027 clauses
+c topTable reallocation from 1024 to 1536
+c increasing the number of buckets from 1024 to 1536
+c topTable reallocation from 1536 to 2304
+c increasing the number of buckets from 1536 to 2304
+c VERIFIED
+c allocated 2304 80230771 4014640
+c Added clauses = 18748988.  Deleted clauses = 15150487.  Max live clauses = 7924027
+c verification time = 14.26 secs
+       14.27 real        13.76 user         0.47 sys
+           503513088  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               42880  page reclaims
+                   2  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   0  voluntary context switches
+                4028  involuntary context switches
+        338999832713  instructions retired
+         60534891466  cycles elapsed
+           503366352  peak memory footprint
+exit 0 wall 14 s

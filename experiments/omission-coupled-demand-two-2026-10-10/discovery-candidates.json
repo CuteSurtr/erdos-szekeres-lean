@@ -1,0 +1,7419 @@
+[
+ {
+  "core": 0,
+  "extra": 89,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   89,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "16": 984,
+   "30": 984,
+   "39": 984,
+   "43": 136,
+   "50": 984,
+   "53": 136,
+   "62": 984,
+   "65": 136,
+   "68": 984,
+   "77": 136,
+   "89": 1211,
+   "91": 136,
+   "101": 136
+  },
+  "known_count": 13,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 89,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   89,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "16": 984,
+   "30": 984,
+   "39": 984,
+   "43": 140,
+   "50": 984,
+   "53": 140,
+   "62": 984,
+   "65": 140,
+   "77": 140,
+   "79": 984,
+   "89": 1252,
+   "91": 140,
+   "110": 140
+  },
+  "known_count": 13,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 101,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   101,
+   110
+  ],
+  "known_deletions": {
+   "16": 984,
+   "25": 976,
+   "30": 984,
+   "39": 984,
+   "43": 976,
+   "50": 984,
+   "53": 976,
+   "62": 984,
+   "65": 976,
+   "77": 976,
+   "79": 976,
+   "91": 1215,
+   "101": 1252
+  },
+  "known_count": 13,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 0,
+  "extra": 110,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   110
+  ],
+  "known_deletions": {
+   "16": 984,
+   "25": 976,
+   "30": 984,
+   "39": 984,
+   "43": 976,
+   "50": 984,
+   "53": 976,
+   "62": 984,
+   "65": 976,
+   "68": 976,
+   "77": 976,
+   "101": 1212,
+   "110": 1211
+  },
+  "known_count": 13,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 68,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "43": 885,
+   "53": 885,
+   "65": 885,
+   "68": 1252,
+   "77": 885,
+   "79": 1212,
+   "91": 885,
+   "110": 885
+  },
+  "known_count": 8,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 0,
+  "extra": 56,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   56,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "43": 131,
+   "53": 131,
+   "56": 1211,
+   "65": 131,
+   "68": 131,
+   "91": 131,
+   "101": 131
+  },
+  "known_count": 7,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 0,
+  "extra": 67,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   67,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "43": 134,
+   "53": 134,
+   "65": 134,
+   "67": 1211,
+   "68": 134,
+   "91": 134,
+   "101": 134
+  },
+  "known_count": 7,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 67,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   67,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "43": 134,
+   "53": 134,
+   "65": 134,
+   "67": 1252,
+   "79": 134,
+   "91": 134,
+   "110": 134
+  },
+  "known_count": 7,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 0,
+  "extra": 79,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   79,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "43": 885,
+   "53": 885,
+   "65": 885,
+   "77": 885,
+   "79": 1211,
+   "91": 885,
+   "101": 885
+  },
+  "known_count": 7,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 56,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   56,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "43": 131,
+   "53": 131,
+   "56": 1252,
+   "65": 131,
+   "79": 131,
+   "91": 131,
+   "110": 131
+  },
+  "known_count": 7,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 10,
+  "support": [
+   10,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "10": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 10,
+  "support": [
+   10,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "10": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 0,
+  "extra": 11,
+  "support": [
+   11,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "11": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 11,
+  "support": [
+   11,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "11": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 0,
+  "extra": 17,
+  "support": [
+   16,
+   17,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "17": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 17,
+  "support": [
+   16,
+   17,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "17": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 0,
+  "extra": 20,
+  "support": [
+   16,
+   20,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "20": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 20,
+  "support": [
+   16,
+   20,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "20": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 0,
+  "extra": 23,
+  "support": [
+   16,
+   23,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "23": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 23,
+  "support": [
+   16,
+   23,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "23": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 0,
+  "extra": 24,
+  "support": [
+   16,
+   24,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "24": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 24,
+  "support": [
+   16,
+   24,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "24": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 0,
+  "extra": 27,
+  "support": [
+   16,
+   25,
+   27,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "27": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 27,
+  "support": [
+   16,
+   25,
+   27,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "27": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 0,
+  "extra": 31,
+  "support": [
+   16,
+   25,
+   30,
+   31,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "31": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 31,
+  "support": [
+   16,
+   25,
+   30,
+   31,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "31": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 0,
+  "extra": 33,
+  "support": [
+   16,
+   25,
+   30,
+   33,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "33": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 33,
+  "support": [
+   16,
+   25,
+   30,
+   33,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "33": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 0,
+  "extra": 34,
+  "support": [
+   16,
+   25,
+   30,
+   34,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "34": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 34,
+  "support": [
+   16,
+   25,
+   30,
+   34,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "34": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 0,
+  "extra": 37,
+  "support": [
+   16,
+   25,
+   30,
+   37,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "37": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 37,
+  "support": [
+   16,
+   25,
+   30,
+   37,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "37": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 0,
+  "extra": 41,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   41,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "41": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 41,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   41,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "41": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 0,
+  "extra": 44,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   44,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "44": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 44,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   44,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "44": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 0,
+  "extra": 49,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   49,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "49": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 49,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   49,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "49": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 0,
+  "extra": 52,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   52,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "52": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 52,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   52,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "52": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 0,
+  "extra": 55,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   55,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "55": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 55,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   55,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "55": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 0,
+  "extra": 60,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   60,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "60": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 60,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   60,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "60": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 0,
+  "extra": 64,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   64,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "64": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 64,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   64,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "64": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 0,
+  "extra": 72,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   72,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "72": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 72,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   72,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "72": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 0,
+  "extra": 75,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   75,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "75": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 75,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   75,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "75": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 0,
+  "extra": 87,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   87,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "87": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 87,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   87,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "87": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 90,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   90,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "90": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 0,
+  "extra": 111,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   111
+  ],
+  "known_deletions": {
+   "111": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 1,
+  "extra": 118,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   118
+  ],
+  "known_deletions": {
+   "118": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 1
+ },
+ {
+  "core": 0,
+  "extra": 5,
+  "support": [
+   5,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "5": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 5,
+  "support": [
+   5,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "5": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 6,
+  "support": [
+   6,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "6": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 6,
+  "support": [
+   6,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "6": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 12,
+  "support": [
+   12,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "12": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 12,
+  "support": [
+   12,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "12": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 14,
+  "support": [
+   14,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "14": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 14,
+  "support": [
+   14,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "14": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 15,
+  "support": [
+   15,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "15": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 15,
+  "support": [
+   15,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "15": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 18,
+  "support": [
+   16,
+   18,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "18": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 18,
+  "support": [
+   16,
+   18,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "18": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 21,
+  "support": [
+   16,
+   21,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "21": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 21,
+  "support": [
+   16,
+   21,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "21": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 29,
+  "support": [
+   16,
+   25,
+   29,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "29": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 29,
+  "support": [
+   16,
+   25,
+   29,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "29": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 32,
+  "support": [
+   16,
+   25,
+   30,
+   32,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "32": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 32,
+  "support": [
+   16,
+   25,
+   30,
+   32,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "32": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 36,
+  "support": [
+   16,
+   25,
+   30,
+   36,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "36": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 36,
+  "support": [
+   16,
+   25,
+   30,
+   36,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "36": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 40,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   40,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "40": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 40,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   40,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "40": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 42,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   42,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "42": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 42,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   42,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "42": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 45,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   45,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "45": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 45,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   45,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "45": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 47,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   47,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "47": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 47,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   47,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "47": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 51,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   51,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "51": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 51,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   51,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "51": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 54,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   54,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "54": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 54,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   54,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "54": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 59,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   59,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "59": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 59,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   59,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "59": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 63,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   63,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "63": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 63,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   63,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "63": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 66,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   66,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "66": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 66,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   66,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "66": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 70,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   70,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "70": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 70,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   70,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "70": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 71,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   71,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "71": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 71,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   71,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "71": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 74,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   74,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "74": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 74,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   74,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "74": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 78,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   78,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "78": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 78,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   78,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "78": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 82,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   82,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "82": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 82,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   82,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "82": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 83,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   83,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "83": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 83,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   83,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "83": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 85,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   85,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "85": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 85,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   85,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "85": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 86,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   86,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "86": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 86,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   86,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "86": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 90,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   90,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "90": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 96,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   96,
+   101
+  ],
+  "known_deletions": {
+   "96": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 96,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   96,
+   110
+  ],
+  "known_deletions": {
+   "96": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 97,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   97,
+   101
+  ],
+  "known_deletions": {
+   "97": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 97,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   97,
+   110
+  ],
+  "known_deletions": {
+   "97": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 99,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   99,
+   101
+  ],
+  "known_deletions": {
+   "99": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 99,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   99,
+   110
+  ],
+  "known_deletions": {
+   "99": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 100,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   100,
+   110
+  ],
+  "known_deletions": {
+   "100": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 111,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   111
+  ],
+  "known_deletions": {
+   "111": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 118,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   118
+  ],
+  "known_deletions": {
+   "118": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 119,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   119
+  ],
+  "known_deletions": {
+   "119": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 125,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   125
+  ],
+  "known_deletions": {
+   "125": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 1,
+  "extra": 126,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   126
+  ],
+  "known_deletions": {
+   "126": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 2
+ },
+ {
+  "core": 0,
+  "extra": 2,
+  "support": [
+   2,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "2": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 2,
+  "support": [
+   2,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "2": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 3,
+  "support": [
+   3,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "3": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 3,
+  "support": [
+   3,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "3": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 7,
+  "support": [
+   7,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "7": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 7,
+  "support": [
+   7,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "7": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 8,
+  "support": [
+   8,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "8": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 8,
+  "support": [
+   8,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "8": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 9,
+  "support": [
+   9,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "9": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 9,
+  "support": [
+   9,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "9": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 13,
+  "support": [
+   13,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "13": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 13,
+  "support": [
+   13,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "13": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 22,
+  "support": [
+   16,
+   22,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "22": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 22,
+  "support": [
+   16,
+   22,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "22": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 26,
+  "support": [
+   16,
+   25,
+   26,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "26": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 26,
+  "support": [
+   16,
+   25,
+   26,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "26": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 28,
+  "support": [
+   16,
+   25,
+   28,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "28": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 28,
+  "support": [
+   16,
+   25,
+   28,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "28": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 38,
+  "support": [
+   16,
+   25,
+   30,
+   38,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "38": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 38,
+  "support": [
+   16,
+   25,
+   30,
+   38,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "38": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 46,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   46,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "46": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 46,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   46,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "46": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 57,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   57,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "57": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 57,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   57,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "57": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 58,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   58,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "58": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 58,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   58,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "58": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 61,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   61,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "61": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 61,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   61,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "61": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 73,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   73,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "73": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 73,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   73,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "73": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 76,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   76,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "76": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 76,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   76,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "76": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 81,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   81,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "81": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 81,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   81,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "81": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 88,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   88,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "88": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 88,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   88,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "88": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 93,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   93,
+   101
+  ],
+  "known_deletions": {
+   "93": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 93,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   93,
+   110
+  ],
+  "known_deletions": {
+   "93": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 94,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   94,
+   101
+  ],
+  "known_deletions": {
+   "94": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 94,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   94,
+   110
+  ],
+  "known_deletions": {
+   "94": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 95,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   95,
+   101
+  ],
+  "known_deletions": {
+   "95": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 95,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   95,
+   110
+  ],
+  "known_deletions": {
+   "95": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 100,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   100,
+   101
+  ],
+  "known_deletions": {
+   "100": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 105,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   105
+  ],
+  "known_deletions": {
+   "105": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 105,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   105,
+   110
+  ],
+  "known_deletions": {
+   "105": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 106,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   106
+  ],
+  "known_deletions": {
+   "106": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 106,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   106,
+   110
+  ],
+  "known_deletions": {
+   "106": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 107,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   107
+  ],
+  "known_deletions": {
+   "107": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 107,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   107,
+   110
+  ],
+  "known_deletions": {
+   "107": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 108,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   108
+  ],
+  "known_deletions": {
+   "108": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 108,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   108,
+   110
+  ],
+  "known_deletions": {
+   "108": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 109,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   109,
+   110
+  ],
+  "known_deletions": {
+   "109": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 119,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   119
+  ],
+  "known_deletions": {
+   "119": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 125,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   125
+  ],
+  "known_deletions": {
+   "125": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 126,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   126
+  ],
+  "known_deletions": {
+   "126": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 127,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   127
+  ],
+  "known_deletions": {
+   "127": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 131,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   131
+  ],
+  "known_deletions": {
+   "131": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 1,
+  "extra": 132,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   132
+  ],
+  "known_deletions": {
+   "132": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 3
+ },
+ {
+  "core": 0,
+  "extra": 1,
+  "support": [
+   1,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "1": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 1,
+  "extra": 1,
+  "support": [
+   1,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "1": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 0,
+  "extra": 4,
+  "support": [
+   4,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "4": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 1,
+  "extra": 4,
+  "support": [
+   4,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "4": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 0,
+  "extra": 19,
+  "support": [
+   16,
+   19,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "19": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 1,
+  "extra": 19,
+  "support": [
+   16,
+   19,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "19": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 0,
+  "extra": 35,
+  "support": [
+   16,
+   25,
+   30,
+   35,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "35": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 1,
+  "extra": 35,
+  "support": [
+   16,
+   25,
+   30,
+   35,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "35": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 0,
+  "extra": 48,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   48,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "48": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 1,
+  "extra": 48,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   48,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "48": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 0,
+  "extra": 69,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   69,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "69": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 1,
+  "extra": 69,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   69,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "69": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 0,
+  "extra": 84,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   84,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "84": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 1,
+  "extra": 84,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   84,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "84": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 0,
+  "extra": 92,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   92,
+   101
+  ],
+  "known_deletions": {
+   "92": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 1,
+  "extra": 92,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   92,
+   110
+  ],
+  "known_deletions": {
+   "92": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 0,
+  "extra": 98,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   98,
+   101
+  ],
+  "known_deletions": {
+   "98": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 1,
+  "extra": 98,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   98,
+   110
+  ],
+  "known_deletions": {
+   "98": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 0,
+  "extra": 102,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   102
+  ],
+  "known_deletions": {
+   "102": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 1,
+  "extra": 102,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   102,
+   110
+  ],
+  "known_deletions": {
+   "102": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 0,
+  "extra": 103,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   103
+  ],
+  "known_deletions": {
+   "103": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 1,
+  "extra": 103,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   103,
+   110
+  ],
+  "known_deletions": {
+   "103": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 0,
+  "extra": 104,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   104
+  ],
+  "known_deletions": {
+   "104": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 1,
+  "extra": 104,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   104,
+   110
+  ],
+  "known_deletions": {
+   "104": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 0,
+  "extra": 109,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   109
+  ],
+  "known_deletions": {
+   "109": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 0,
+  "extra": 113,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   113
+  ],
+  "known_deletions": {
+   "113": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 1,
+  "extra": 113,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   113
+  ],
+  "known_deletions": {
+   "113": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 0,
+  "extra": 114,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   114
+  ],
+  "known_deletions": {
+   "114": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 1,
+  "extra": 114,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   114
+  ],
+  "known_deletions": {
+   "114": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 0,
+  "extra": 115,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   115
+  ],
+  "known_deletions": {
+   "115": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 1,
+  "extra": 115,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   115
+  ],
+  "known_deletions": {
+   "115": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 0,
+  "extra": 116,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   116
+  ],
+  "known_deletions": {
+   "116": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 1,
+  "extra": 116,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   116
+  ],
+  "known_deletions": {
+   "116": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 1,
+  "extra": 117,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   117
+  ],
+  "known_deletions": {
+   "117": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 1,
+  "extra": 127,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   127
+  ],
+  "known_deletions": {
+   "127": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 0,
+  "extra": 131,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   131
+  ],
+  "known_deletions": {
+   "131": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 0,
+  "extra": 132,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   132
+  ],
+  "known_deletions": {
+   "132": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 0,
+  "extra": 133,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   133
+  ],
+  "known_deletions": {
+   "133": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 1,
+  "extra": 136,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   136
+  ],
+  "known_deletions": {
+   "136": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 1,
+  "extra": 137,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   137
+  ],
+  "known_deletions": {
+   "137": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 1,
+  "extra": 138,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   138
+  ],
+  "known_deletions": {
+   "138": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 4
+ },
+ {
+  "core": 0,
+  "extra": 0,
+  "support": [
+   0,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "0": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 5
+ },
+ {
+  "core": 1,
+  "extra": 0,
+  "support": [
+   0,
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "0": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 5
+ },
+ {
+  "core": 0,
+  "extra": 80,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   80,
+   91,
+   101
+  ],
+  "known_deletions": {
+   "80": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 5
+ },
+ {
+  "core": 1,
+  "extra": 80,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   80,
+   91,
+   110
+  ],
+  "known_deletions": {
+   "80": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 5
+ },
+ {
+  "core": 0,
+  "extra": 112,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   112
+  ],
+  "known_deletions": {
+   "112": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 5
+ },
+ {
+  "core": 1,
+  "extra": 112,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   112
+  ],
+  "known_deletions": {
+   "112": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 5
+ },
+ {
+  "core": 0,
+  "extra": 117,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   117
+  ],
+  "known_deletions": {
+   "117": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 5
+ },
+ {
+  "core": 0,
+  "extra": 121,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   121
+  ],
+  "known_deletions": {
+   "121": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 5
+ },
+ {
+  "core": 1,
+  "extra": 121,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   121
+  ],
+  "known_deletions": {
+   "121": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 5
+ },
+ {
+  "core": 0,
+  "extra": 122,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   122
+  ],
+  "known_deletions": {
+   "122": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 5
+ },
+ {
+  "core": 1,
+  "extra": 122,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   122
+  ],
+  "known_deletions": {
+   "122": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 5
+ },
+ {
+  "core": 0,
+  "extra": 123,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   123
+  ],
+  "known_deletions": {
+   "123": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 5
+ },
+ {
+  "core": 1,
+  "extra": 123,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   123
+  ],
+  "known_deletions": {
+   "123": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 5
+ },
+ {
+  "core": 0,
+  "extra": 124,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   124
+  ],
+  "known_deletions": {
+   "124": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 5
+ },
+ {
+  "core": 1,
+  "extra": 124,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   124
+  ],
+  "known_deletions": {
+   "124": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 5
+ },
+ {
+  "core": 1,
+  "extra": 133,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   133
+  ],
+  "known_deletions": {
+   "133": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 5
+ },
+ {
+  "core": 0,
+  "extra": 136,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   136
+  ],
+  "known_deletions": {
+   "136": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 5
+ },
+ {
+  "core": 0,
+  "extra": 137,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   137
+  ],
+  "known_deletions": {
+   "137": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 5
+ },
+ {
+  "core": 0,
+  "extra": 138,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   138
+  ],
+  "known_deletions": {
+   "138": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 5
+ },
+ {
+  "core": 0,
+  "extra": 139,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   139
+  ],
+  "known_deletions": {
+   "139": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 5
+ },
+ {
+  "core": 1,
+  "extra": 141,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   141
+  ],
+  "known_deletions": {
+   "141": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 5
+ },
+ {
+  "core": 1,
+  "extra": 142,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   142
+  ],
+  "known_deletions": {
+   "142": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 5
+ },
+ {
+  "core": 1,
+  "extra": 143,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   143
+  ],
+  "known_deletions": {
+   "143": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 5
+ },
+ {
+  "core": 0,
+  "extra": 120,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   120
+  ],
+  "known_deletions": {
+   "120": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 6
+ },
+ {
+  "core": 1,
+  "extra": 120,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   120
+  ],
+  "known_deletions": {
+   "120": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 6
+ },
+ {
+  "core": 0,
+  "extra": 128,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   128
+  ],
+  "known_deletions": {
+   "128": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 6
+ },
+ {
+  "core": 1,
+  "extra": 128,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   128
+  ],
+  "known_deletions": {
+   "128": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 6
+ },
+ {
+  "core": 0,
+  "extra": 129,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   129
+  ],
+  "known_deletions": {
+   "129": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 6
+ },
+ {
+  "core": 1,
+  "extra": 129,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   129
+  ],
+  "known_deletions": {
+   "129": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 6
+ },
+ {
+  "core": 0,
+  "extra": 130,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   130
+  ],
+  "known_deletions": {
+   "130": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 6
+ },
+ {
+  "core": 1,
+  "extra": 130,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   130
+  ],
+  "known_deletions": {
+   "130": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 6
+ },
+ {
+  "core": 1,
+  "extra": 139,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   139
+  ],
+  "known_deletions": {
+   "139": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 6
+ },
+ {
+  "core": 0,
+  "extra": 141,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   141
+  ],
+  "known_deletions": {
+   "141": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 6
+ },
+ {
+  "core": 0,
+  "extra": 142,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   142
+  ],
+  "known_deletions": {
+   "142": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 6
+ },
+ {
+  "core": 0,
+  "extra": 143,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   143
+  ],
+  "known_deletions": {
+   "143": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 6
+ },
+ {
+  "core": 1,
+  "extra": 145,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   145
+  ],
+  "known_deletions": {
+   "145": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 6
+ },
+ {
+  "core": 1,
+  "extra": 146,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   146
+  ],
+  "known_deletions": {
+   "146": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 6
+ },
+ {
+  "core": 1,
+  "extra": 147,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   147
+  ],
+  "known_deletions": {
+   "147": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 6
+ },
+ {
+  "core": 0,
+  "extra": 134,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   134
+  ],
+  "known_deletions": {
+   "134": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 7
+ },
+ {
+  "core": 1,
+  "extra": 134,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   134
+  ],
+  "known_deletions": {
+   "134": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 7
+ },
+ {
+  "core": 0,
+  "extra": 135,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   135
+  ],
+  "known_deletions": {
+   "135": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 7
+ },
+ {
+  "core": 1,
+  "extra": 135,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   135
+  ],
+  "known_deletions": {
+   "135": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 7
+ },
+ {
+  "core": 0,
+  "extra": 145,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   145
+  ],
+  "known_deletions": {
+   "145": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 7
+ },
+ {
+  "core": 0,
+  "extra": 146,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   146
+  ],
+  "known_deletions": {
+   "146": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 7
+ },
+ {
+  "core": 0,
+  "extra": 147,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   147
+  ],
+  "known_deletions": {
+   "147": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 7
+ },
+ {
+  "core": 1,
+  "extra": 148,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   148
+  ],
+  "known_deletions": {
+   "148": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 7
+ },
+ {
+  "core": 1,
+  "extra": 149,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   149
+  ],
+  "known_deletions": {
+   "149": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 7
+ },
+ {
+  "core": 0,
+  "extra": 140,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   140
+  ],
+  "known_deletions": {
+   "140": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 8
+ },
+ {
+  "core": 1,
+  "extra": 140,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   140
+  ],
+  "known_deletions": {
+   "140": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 8
+ },
+ {
+  "core": 0,
+  "extra": 148,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   148
+  ],
+  "known_deletions": {
+   "148": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 8
+ },
+ {
+  "core": 0,
+  "extra": 149,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   149
+  ],
+  "known_deletions": {
+   "149": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 8
+ },
+ {
+  "core": 1,
+  "extra": 150,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   150
+  ],
+  "known_deletions": {
+   "150": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 8
+ },
+ {
+  "core": 1,
+  "extra": 151,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   151
+  ],
+  "known_deletions": {
+   "151": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 8
+ },
+ {
+  "core": 0,
+  "extra": 144,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   144
+  ],
+  "known_deletions": {
+   "144": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 9
+ },
+ {
+  "core": 1,
+  "extra": 144,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   144
+  ],
+  "known_deletions": {
+   "144": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 9
+ },
+ {
+  "core": 0,
+  "extra": 150,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   150
+  ],
+  "known_deletions": {
+   "150": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 9
+ },
+ {
+  "core": 0,
+  "extra": 151,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   151
+  ],
+  "known_deletions": {
+   "151": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 9
+ },
+ {
+  "core": 1,
+  "extra": 152,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   152
+  ],
+  "known_deletions": {
+   "152": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 9
+ },
+ {
+  "core": 0,
+  "extra": 152,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   152
+  ],
+  "known_deletions": {
+   "152": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 10
+ },
+ {
+  "core": 1,
+  "extra": 153,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   77,
+   79,
+   91,
+   110,
+   153
+  ],
+  "known_deletions": {
+   "153": 1252
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 10
+ },
+ {
+  "core": 0,
+  "extra": 153,
+  "support": [
+   16,
+   25,
+   30,
+   39,
+   43,
+   50,
+   53,
+   62,
+   65,
+   68,
+   77,
+   91,
+   101,
+   153
+  ],
+  "known_deletions": {
+   "153": 1211
+  },
+  "known_count": 1,
+  "old_demand2": false,
+  "distance": 11
+ }
+]

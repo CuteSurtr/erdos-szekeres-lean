@@ -1,0 +1,47 @@
+experiments/omission-compact-checker-2026-11-05/CompactChecker/Chunk733G4Corrupt.lean:12:97: error: Tactic `decide` proved that the proposition
+  checkF2 fcat62 3131 252 62 8388608 131072 536870912 4 b733 mask733 = true
+is false
+type checking took 296ms
+'CompactChecker.Chunk733G4Corrupt.excludes' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+elaboration took 520ms
+cumulative profiling times:
+	attribute application 0.0639ms
+	compilation (IR) 0.198ms
+	compilation (LCNF base) 0.359ms
+	compilation (LCNF mono) 0.179ms
+	elaboration 641ms
+	fix level params 0.151ms
+	instantiate metavars 0.323ms
+	interpretation 0.0481ms
+	let-to-have transformation 1.26ms
+	linting 87.9ms
+	parsing 14.6ms
+	process pre-definitions 9.88ms
+	share common exprs 2.17ms
+	tactic execution 1.82ms
+	type checking 300ms
+	typeclass inference 21.3ms
+Command exited with non-zero status 1
+	Command being timed: "lean -R experiments/omission-compact-checker-2026-11-05 experiments/omission-compact-checker-2026-11-05/CompactChecker/Chunk733G4Corrupt.lean"
+	User time (seconds): 1.82
+	System time (seconds): 0.34
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.17
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3103004
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 71625
+	Voluntary context switches: 3273
+	Involuntary context switches: 43
+	Swaps: 0
+	File system inputs: 232
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

@@ -1,0 +1,144 @@
+M9 task A2: cake_lpr's own reading of the twin's texts (evidence for trust item E3; not a proof, and not a verdict: no proof file is involved)
+cake_lpr /path/to/tools/cake_lpr/cake_lpr, sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54 (the replay's binary). With one argument it 'Parses the DIMACS file and prints the parsed formula' (its usage text); it prints 'p cnf <largest variable used> <number of clauses>' and one line per clause, the empty clause as '0'. It exits 0 also when parsing fails (message on stderr).
+HOL4/CakeML source of its parser: not found on this machine (submodules HOL/ and cakeml/ of the clone at commit 033aad53 are empty directories; C2P/vendor/tools-src.tar.xz holds only cake_lpr.S, cake_lpr.sha256, basis_ffi.c, Makefile, README.md, LICENSE and the examples; no *.sml file found under /path/to/home by 'find /path/to/home -xdev -name *.sml', a search that excluded /path/to/data/erdos810-20261106, which this task may not touch). parseDimacs in EncB/Render.lean is therefore the plain standard subset, not a model of cake_lpr's grammar.
+command: systemd-run --user --scope -q -p MemoryMax=12G -p MemorySwapMax=0 nice -n 10 cake_parse.sh EXE CAKE /path/to/data/encblean-m9/cake-parse-a2   (EXE = the A2 exe 3d43fa8b…; the script deletes its files; script text below)
+---- output (exit code 0)
+start 2026-11-06T19:02:07+09:00 Tctl +74.9°C
+exe 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368; cake_lpr c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+twin-base 3 4 1: p cnf 2 2, 21 B, sha f30d9795ce76; cake_lpr rc 0, stderr 0 B; printout identical
+twin-base 3 4 2: p cnf 22 32, 261 B, sha 0425285a8e94; cake_lpr rc 0, stderr 0 B; printout identical
+twin-base 6 4 1: p cnf 20 48, 471 B, sha dd42c2e8f697; cake_lpr rc 0, stderr 0 B; printout identical
+twin-base 4 5 1: p cnf 13 18, 191 B, sha 6b5cccdebed7; cake_lpr rc 0, stderr 0 B; printout identical
+twin-base 6 8 3: p cnf 1639 10663, 196188 B, sha 5d25b18681fb; cake_lpr rc 0, stderr 0 B; printout identical
+twin-base 7 8 3: p cnf 1974 13918, 265565 B, sha 2ef817b671a1; cake_lpr rc 0, stderr 0 B; printout identical
+twin-base 6 8 5: p cnf 7366 89530, 1844821 B, sha bf53874393ae; cake_lpr rc 0, stderr 0 B; printout identical
+twin-base 6 8 6: p cnf 12684 192063, 4150290 B, sha 4cc2781b8c71; cake_lpr rc 0, stderr 0 B; printout identical
+twin-base 7 8 5: p cnf 9640 140883, 2936874 B, sha 7d21daa59e25; cake_lpr rc 0, stderr 0 B; printout identical
+twin-cube64 3 4 11 0: p cnf 5422 99818, 2033974 B, sha 3bcc7f670a49; cake_lpr rc 0, stderr 0 B; printout identical
+twin-cube64 6 8 6 0: p cnf 12684 192069, 4150317 B, sha 988b68ca1f80; cake_lpr rc 0, stderr 0 B; printout identical
+twin-cube64 3 4 11 1: p cnf 5422 99818, 2033975 B, sha a6f9356b4b68; cake_lpr rc 0, stderr 0 B; printout identical
+twin-cube64 6 8 6 1: p cnf 12684 192069, 4150318 B, sha 5a86388268cb; cake_lpr rc 0, stderr 0 B; printout identical
+twin-cube64 3 4 11 31: p cnf 5422 99818, 2033979 B, sha 78ba55a63324; cake_lpr rc 0, stderr 0 B; printout identical
+twin-cube64 6 8 6 31: p cnf 12684 192069, 4150322 B, sha f9091f888059; cake_lpr rc 0, stderr 0 B; printout identical
+twin-cube64 3 4 11 32: p cnf 5422 99818, 2033975 B, sha 3a4f11925325; cake_lpr rc 0, stderr 0 B; printout identical
+twin-cube64 6 8 6 32: p cnf 12684 192069, 4150318 B, sha 71ad57e182e0; cake_lpr rc 0, stderr 0 B; printout identical
+twin-cube64 3 4 11 33: p cnf 5422 99818, 2033976 B, sha ed6e236724d8; cake_lpr rc 0, stderr 0 B; printout identical
+twin-cube64 6 8 6 33: p cnf 12684 192069, 4150319 B, sha c202263b7379; cake_lpr rc 0, stderr 0 B; printout identical
+twin-cube64 3 4 11 63: p cnf 5422 99818, 2033980 B, sha 1a7b9c553ae0; cake_lpr rc 0, stderr 0 B; printout identical
+twin-cube64 6 8 6 63: p cnf 12684 192069, 4150323 B, sha 1e07af8e8bf9; cake_lpr rc 0, stderr 0 B; printout identical
+(1) 21 texts: cake_lpr's printout byte-identical to the text
+(2) texts of Render.lean's examples (parseDimacs result in brackets):
+  [some (3, [[1,-2],[],[3]])] "p cnf 3 3\n1 -2 0\n 0\n3 0\n" (24 B): cake_lpr rc 0, stdout p cnf 3 3\n1 -2 0\n0\n3 0\n, stderr 
+  [none: count] "p cnf 3 2\n1 -2 0\n" (17 B): cake_lpr rc 0, stdout , stderr c DIMACS parse failed at line: 0. Reason: incorrect number of clauses|
+  [none: inner 0] "p cnf 3 1\n1 0 2 0\n" (18 B): cake_lpr rc 0, stdout , stderr c DIMACS parse failed at line: 0. Reason: failed to parse line|
+  [none: var > nv] "p cnf 3 1\n-4 0\n" (15 B): cake_lpr rc 0, stdout , stderr c DIMACS parse failed at line: 0. Reason: failed to parse line|
+  [none: leading zero] "p cnf 3 1\n01 0\n" (15 B): cake_lpr rc 0, stdout p cnf 1 1\n1 0\n, stderr 
+  [none: leading zero (header)] "p cnf 03 1\n1 0\n" (15 B): cake_lpr rc 0, stdout p cnf 1 1\n1 0\n, stderr 
+  [none: -0] "p cnf 3 1\n-0 0\n" (15 B): cake_lpr rc 0, stdout , stderr c DIMACS parse failed at line: 0. Reason: failed to parse line|
+  [none: two spaces] "p cnf 3 1\n1  0\n" (15 B): cake_lpr rc 0, stdout p cnf 1 1\n1 0\n, stderr 
+  [none: leading space] "p cnf 3 1\n 1 0\n" (15 B): cake_lpr rc 0, stdout p cnf 1 1\n1 0\n, stderr 
+  [none: no final newline] "p cnf 3 1\n1 0" (13 B): cake_lpr rc 0, stdout p cnf 1 1\n1 0\n, stderr 
+  [none: blank line] "p cnf 3 1\n1 0\n\n" (15 B): cake_lpr rc 0, stdout , stderr c DIMACS parse failed at line: 1. Reason: failed to parse line|
+  [none: bare 0] "p cnf 3 1\n0\n" (12 B): cake_lpr rc 0, stdout p cnf 0 1\n0\n, stderr 
+  [none: comment line] "c x\np cnf 3 1\n1 0\n" (18 B): cake_lpr rc 0, stdout p cnf 1 1\n1 0\n, stderr 
+  [none: +1] "p cnf 3 1\n+1 0\n" (15 B): cake_lpr rc 0, stdout p cnf 1 1\n1 0\n, stderr 
+CAKE PARSE PASS (part 1)
+rc=0 wall=21 s end 2026-11-06T19:02:28+09:00
+---- reading
+Part (1): on 21 texts printed by the A2 exe (twin-base on 9 instances up to (6,8,6), 192,063 clauses / 4.15 MB;
+twin-cube64 indices 0, 1, 31, 32, 33, 63 on (3,4,11) and (6,8,6)), cake_lpr's printout of what it parsed is
+byte-identical to the text. So on these texts cake_lpr read exactly the clause list in the file, and the header's
+nv is the largest variable used.
+Part (2): the 14 texts of Render.lean's kernel-checked examples. On the one text parseDimacs accepts, cake_lpr reads
+the same clauses (it prints the empty clause ' 0' as '0'). Of the 13 texts parseDimacs rejects, cake_lpr also rejects
+5 (wrong clause count, a 0 inside a clause, variable > nv, '-0', a trailing blank line) and accepts 8 (leading zeros in
+a literal or in the header, two spaces, a leading space, no final newline, a bare '0' line read as the empty clause,
+a comment line, '+1'), each read the standard way. So on these examples parseDimacs's language is a strict subset of
+what cake_lpr accepts, and the two agree on the one accepted text. This is consistent with the claim that cake_lpr's
+reading of any text in parseDimacs's language is parseDimacs's result, which stays a trusted fact (E3).
+---- script cake_parse.sh (sha256 9600ff0c52d8e9935c2966efd5e6caa531200fad6137a2404ecf6759d4c81a39)
+#!/usr/bin/env bash
+# cake_parse.sh EXE CAKE WORK: M9 task A2, evidence for E3 (not a proof). cake_lpr with one argument parses the
+# DIMACS file and prints the parsed formula. (1) For texts the twin prints (new exe), cake_lpr's printout must be
+# byte-identical to the text: cake_lpr then read exactly the clause list in the file. (2) The texts that
+# Render.lean's kernel-checked examples feed to parseDimacs, given to cake_lpr: what does it do with them?
+set -u -o pipefail
+EXE=$1; CAKE=$2; W=$3
+mkdir -p "$W"; fail=0; n=0
+echo "exe $(sha256sum "$EXE" | cut -c1-64); cake_lpr $(sha256sum "$CAKE" | cut -c1-64)"
+chk() {  # label args...: emit with the exe, parse-print with cake_lpr, compare
+  local label=$1; shift
+  "$EXE" "$@" > "$W/f.cnf" 2>/dev/null || { echo "FAIL $label: exe rc $?"; fail=1; return; }
+  "$CAKE" "$W/f.cnf" > "$W/p.out" 2> "$W/p.err"; local rc=$?
+  if cmp -s "$W/f.cnf" "$W/p.out"; then r=identical; n=$((n+1)); else r=DIFFERENT; fail=1; fi
+  echo "$label: $(head -1 "$W/f.cnf"), $(wc -c < "$W/f.cnf") B, sha $(sha256sum < "$W/f.cnf" | cut -c1-12); cake_lpr rc $rc, stderr $(wc -c < "$W/p.err") B; printout $r"
+}
+for mkt in "3 4 1" "3 4 2" "6 4 1" "4 5 1" "6 8 3" "7 8 3" "6 8 5" "6 8 6" "7 8 5"; do chk "twin-base $mkt" twin-base $mkt; done
+for I in 0 1 31 32 33 63; do chk "twin-cube64 3 4 11 $I" twin-cube64 3 4 11 $I; chk "twin-cube64 6 8 6 $I" twin-cube64 6 8 6 $I; done
+echo "(1) $n texts: cake_lpr's printout byte-identical to the text"
+echo "(2) texts of Render.lean's examples (parseDimacs result in brackets):"
+i=0
+while IFS='|' read -r ours txt; do
+  i=$((i+1)); printf '%b' "$txt" > "$W/r$i.cnf"
+  "$CAKE" "$W/r$i.cnf" > "$W/p.out" 2> "$W/p.err"; rc=$?
+  echo "  [$ours] \"$txt\" ($(wc -c < "$W/r$i.cnf") B): cake_lpr rc $rc, stdout $(sed 's/$/\\n/' "$W/p.out" | tr -d '\n' | head -c 80), stderr $(tr '\n' '|' < "$W/p.err" | head -c 100)"
+done <<'TXT'
+some (3, [[1,-2],[],[3]])|p cnf 3 3\n1 -2 0\n 0\n3 0\n
+none: count|p cnf 3 2\n1 -2 0\n
+none: inner 0|p cnf 3 1\n1 0 2 0\n
+none: var > nv|p cnf 3 1\n-4 0\n
+none: leading zero|p cnf 3 1\n01 0\n
+none: leading zero (header)|p cnf 03 1\n1 0\n
+none: -0|p cnf 3 1\n-0 0\n
+none: two spaces|p cnf 3 1\n1  0\n
+none: leading space|p cnf 3 1\n 1 0\n
+none: no final newline|p cnf 3 1\n1 0
+none: blank line|p cnf 3 1\n1 0\n\n
+none: bare 0|p cnf 3 1\n0\n
+none: comment line|c x\np cnf 3 1\n1 0\n
+none: +1|p cnf 3 1\n+1 0\n
+TXT
+rm -f "$W"/f.cnf "$W"/p.out "$W"/p.err "$W"/r*.cnf
+[ $fail -eq 0 ] && echo "CAKE PARSE PASS (part 1)" || echo "CAKE PARSE FAIL (part 1)"
+exit $fail
+
+================================================================
+Part (3): the real instance (6,8,11): base and cubes64 indices 0 (c11111) and 63 (n00000)
+command: systemd-run --user --scope -q -p MemoryMax=12G -p MemorySwapMax=0 nice -n 10 cake_parse_6811.sh EXE CAKE /path/to/data/encblean-m9/cake-parse-a2   (the text, 58.6 MB, is written there, parsed and deleted)
+---- output (exit code 0)
+start 2026-11-06T19:22:08+09:00 Tctl +70.5°C disk free  1.6T
+exe 3d43fa8be6e96ec3a3593551709db14240ef74b2d484d8f724701b109bcd3368; cake_lpr c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+twin-base 6 8 11: p cnf 78059 2387083, 58618857 B, sha256 479e31a9e8d58d752c86b9abf02fb799c10615a7e61a88f132c49734674f37fc (exe 12.67 s, 510016 KB); cake_lpr printout sha256 479e31a9e8d58d752c86b9abf02fb799c10615a7e61a88f132c49734674f37fc (cake_lpr 4.99 s, 4197128 KB, stderr 0 B): identical
+twin-cube64 6 8 11 0: p cnf 78059 2387089, 58618884 B, sha256 0fa206f7b75f8653e8da78dd3b750294d3ddafd8b86da53a489d8cc63fa02a8e (exe 14.18 s, 510200 KB); cake_lpr printout sha256 0fa206f7b75f8653e8da78dd3b750294d3ddafd8b86da53a489d8cc63fa02a8e (cake_lpr 6.08 s, 4197172 KB, stderr 0 B): identical
+twin-cube64 6 8 11 63: p cnf 78059 2387089, 58618890 B, sha256 33894742a77ef9fc56af7411d05c089d179bc2f5eb091a758d9bf94ee34d19d0 (exe 11.06 s, 509968 KB); cake_lpr printout sha256 33894742a77ef9fc56af7411d05c089d179bc2f5eb091a758d9bf94ee34d19d0 (cake_lpr 5.33 s, 4197140 KB, stderr 0 B): identical
+CAKE PARSE 6811 PASS
+rc=0 wall=55 s end 2026-11-06T19:23:03+09:00
+---- reading
+The three texts have the recorded hashes (base 479e31a9… = C6UPPER/SHA256SUMS.txt; c11111 0fa206f7… = the I=0 line of logs/m9_a2_hash_binding.log; n00000 33894742… = C6UPPER/noty12-2026-11-06/cubes.sha256:32), and cake_lpr's printout of what it parsed has the same SHA-256 as the text: on these three files cake_lpr read exactly the clause list in the file, and 78059 is the largest variable used. cake_lpr peaks at about 4.2 GB RSS while parsing.
+---- script cake_parse_6811.sh (sha256 59535176e97dfc43e6dd5d99bfef925022be87b1367d87e924e89143d90afa90)
+#!/usr/bin/env bash
+# cake_parse_6811.sh EXE CAKE WORK: M9 task A2, evidence for E3 on the real instance (not a proof). For the base and
+# two cubes of (6,8,11): write the exe's text to WORK, check its sha256 against the record given on the command
+# line of this script's caller (printed), then let cake_lpr parse it and print the parsed formula; the printout must be
+# byte-identical to the text (cake_lpr prints `p cnf <largest variable> <clauses>`, so this also says that variable
+# nv occurs). The text is deleted afterwards.
+set -u -o pipefail
+EXE=$1; CAKE=$2; W=$3
+mkdir -p "$W"; fail=0
+echo "exe $(sha256sum "$EXE" | cut -c1-64); cake_lpr $(sha256sum "$CAKE" | cut -c1-64)"
+one() {  # label args...
+  local label=$1; shift
+  /usr/bin/time -f '%e s, %M KB' -o "$W/t1" "$EXE" "$@" > "$W/f.cnf" 2>/dev/null || { echo "FAIL $label: exe rc"; fail=1; return; }
+  local fs; fs=$(sha256sum < "$W/f.cnf" | cut -c1-64)
+  /usr/bin/time -f '%e s, %M KB' -o "$W/t2" "$CAKE" "$W/f.cnf" 2> "$W/p.err" | sha256sum > "$W/p.sha"
+  local ps; ps=$(cut -c1-64 "$W/p.sha")
+  if [ "$fs" = "$ps" ]; then r=identical; else r=DIFFERENT; fail=1; fi
+  echo "$label: $(head -1 "$W/f.cnf"), $(wc -c < "$W/f.cnf") B, sha256 $fs (exe $(cat "$W/t1")); cake_lpr printout sha256 $ps (cake_lpr $(cat "$W/t2"), stderr $(wc -c < "$W/p.err") B): $r"
+  rm -f "$W/f.cnf"
+}
+one "twin-base 6 8 11" twin-base 6 8 11
+one "twin-cube64 6 8 11 0" twin-cube64 6 8 11 0
+one "twin-cube64 6 8 11 63" twin-cube64 6 8 11 63
+rm -f "$W/t1" "$W/t2" "$W/p.err" "$W/p.sha"
+[ $fail -eq 0 ] && echo "CAKE PARSE 6811 PASS" || echo "CAKE PARSE 6811 FAIL"
+exit $fail

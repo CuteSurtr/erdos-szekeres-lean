@@ -1,0 +1,18 @@
+== M6basic 2026-11-07T05:12:02+09:00 ==
+File: geo/ES8Geo/ModelBasic.lean (231 lines, sha256 e6fa90f839d09795df10bf9fa3bb8f41cead6e446d483216f0c8501b99ff4f62), import ES8Geo.Interface.
+Check: cd geo && lake env lean ES8Geo/ModelBasic.lean -> no errors, no warnings; 10.0 s wall, 2.5 GB max RSS.
+No sorry/admit/native_decide/axiom/opaque/implemented_by/extern/unsafe/maxHeartbeats. SOURCES/VENDOR sha256 OK.
+Proved in EncB.Geo (helpers in EncB.Geo.Basic: P_def, P_eq_iterate, P_mem_T, P_mem_peel, decide_pos_neg):
+  labelling_P_rot (hm) L a (ha : a.2 < m)          -- G1, rotAbout_polar + polar_add_int (wrap adds 2pi)
+  labelling_P_mem L a (PtOk a)                      -- mem_layer
+  labelling_P_injOn (hm) (hc) L a b ...             -- G2, not_mem_hullVerts_peel_of_ne; same layer via
+                                                       rotAbout_iterate + minimalPeriod_rotAbout + iterate_eq_iterate_iff_of_lt_minimalPeriod
+  labelling_orient_ne_zero (hm) (hgp) (hc) L ...    -- G3, generalPosition_iff_orient_ne_zero + G2
+  labelling_psiLt_{irrefl,trans,total,zero} L       -- psi_inj/psi_zero/psi_pos
+  labelling_chi_rot (hm) L                          -- orient_rotAbout_inv + G1
+  labelling_chi_cycle L                             -- orient_cycle
+  labelling_chi_swap (hm) (hgp) (hc) L              -- orient_swap + G3
+  labelling_nest (hm) (hK) (hgp) (hc) (hinv) (hno) L        -- strict_nesting, rho P(i,0) = P(i,1) by G1
+  labelling_noChain (hm) (hK4) (hK) (hgp) (hc) (hinv) (hno) L -- chain_clauses_sound, peel_antitone, G2
+Field statements copied from EncB/Model.lean with chi := L.chi, psiLt := L.psiLt. heven is not needed by any of them.
+#print axioms: all 13 -> [propext, Classical.choice, Quot.sound].

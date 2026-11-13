@@ -1,0 +1,21 @@
+'ErdosSzekeres.Omission.RankNormalization.clip_ordered' depends on axioms: [propext]
+'ErdosSzekeres.Omission.RankNormalization.clip_symm' depends on axioms: [propext, Quot.sound]
+'ErdosSzekeres.Omission.RankNormalization.allowed_clip' depends on axioms: [propext, Quot.sound]
+'ErdosSzekeres.Omission.RankNormalization.clipped_growth' depends on axioms: [propext, Quot.sound]
+'ErdosSzekeres.Omission.RankNormalization.clip_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Omission.RankNormalization.clip_sourceBound' depends on axioms: [propext]
+'ErdosSzekeres.Omission.RankNormalization.exists_iff_sourceBound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.RankNormalization.exists_frame_iff_sourceBound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+'ErdosSzekeres.Omission.RankNormalization.catalog_heightDominates' depends on axioms: [propext, Quot.sound]
+'ErdosSzekeres.Omission.RankNormalization.catalog_allowed_iff' does not depend on any axioms
+'ErdosSzekeres.Omission.RankNormalization.catalog_exists_iff_sourceBound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.Omission.RankNormalization.catalog_exists_frame_iff_sourceBound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

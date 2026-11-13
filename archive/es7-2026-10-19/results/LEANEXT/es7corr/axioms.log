@@ -1,0 +1,17 @@
+'ErdosSzekeres.LayerLemma.fivefold_heptagon_of_erase' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.LayerLemma.fivefold_heptagon' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.LayerLemma.fivefold_heptagon_of_centre_not_mem' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ErdosSzekeres.LayerLemma.fourfold_heptagon_of_erase' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.LayerLemma.fourfold_heptagon' depends on axioms: [propext, Classical.choice, Quot.sound]
+ErdosSzekeres.LayerLemma.fivefold_heptagon : ErdosSzekeres.LayerLemma.Fivefold35 →
+  ∀ (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point),
+    ErdosSzekeres.GeneralPosition S →
+      ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / 5)) S →
+        32 ≤ S.card → ErdosSzekeres.HasConvexNGon 7 S
+ErdosSzekeres.LayerLemma.fourfold_heptagon : ErdosSzekeres.LayerLemma.Fourfold32 →
+  ∀ (S : Finset ErdosSzekeres.Point) (c : ErdosSzekeres.Point),
+    ErdosSzekeres.GeneralPosition S →
+      ErdosSzekeres.LayerLemma.Invariant (ErdosSzekeres.LayerLemma.rotAbout c (2 * Real.pi / 4)) S →
+        29 ≤ S.card → ErdosSzekeres.HasConvexNGon 7 S

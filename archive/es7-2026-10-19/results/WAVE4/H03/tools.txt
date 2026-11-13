@@ -1,0 +1,8 @@
+cadical 3.0.1  https://github.com/arminbiere/cadical  commit c60730422e758ef1cebe7aeddf2dda31c996bf04  (./configure && make)
+march_cu       https://github.com/marijnheule/CnC     commit 705b60c6491ef2b61988b3ce6ac674be1b90571d  (make in march_cu/ with CFLAGS += -fcommon)
+cake_lpr       https://github.com/tanyongkiam/cake_lpr commit a36874a8b750b43fe4b385b8ddbf5b033e46a3fa  (make cake_lpr; example.cnf/example.lpr -> s VERIFIED UNSAT)
+BIN=/opt/work/bin  WORK=/opt/work/tmp
+F.cnf sha256 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d (verified)
+479d9504fe0c3a46c325572cf08674f4ed545a540c1c8fb27420822ce897e080  /opt/work/bin/cadical
+1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca  /opt/work/bin/cake_lpr
+afcbb47642a922676693b325ed19d88698c6b8f700943fa2753d98126579f222  /opt/work/bin/march_cu

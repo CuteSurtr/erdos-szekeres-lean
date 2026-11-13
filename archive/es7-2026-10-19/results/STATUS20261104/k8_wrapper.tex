@@ -1,0 +1,60 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,array}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+
+\setlist{itemsep=0pt,topsep=2pt,parsep=0pt}
+\emergencystretch=2em
+\def\UrlBreaks{\do\.\do\/\do\_}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Nm}{N_{\mathrm{mir}}}
+\newcommand{\orient}{\operatorname{orient}}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\mc}{\operatorname{mc}}
+\newcommand{\dirn}[1]{{\upshape\nolinkurl{#1}}}
+\newcommand{\lean}[1]{{\upshape\nolinkurl{#1}}}
+
+\title{Rotational symmetry for $k=8$: draft section\\[3pt]\large Standalone compile check, 4 November 2026}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\input{k8_section}
+
+\section{Literature and credit}\label{sec:lit}
+Placeholder for the note's section of the same name (sources inspected).
+
+\begin{thebibliography}{99}\footnotesize
+\setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}
+\bibitem{Bae25} J.~Baek, On the Erd\H{o}s--Tuza--Valtr conjecture, \emph{European J. Combin.} 124 (2025), 104085;
+arXiv:2206.04260. Theorem numbers refer to the arXiv version.
+\bibitem{BB25} J.~Baek and M.~Balko, The Erd\H{o}s--Szekeres conjecture revisited, in \emph{SoCG 2025}, LIPIcs 332,
+13:1--13:15. Journal version: \emph{J. Combin. Theory Ser.~A} 222 (2026), 106195 (not read).
+\bibitem{Dum25} B.~Dumitru, Notes on the 33-point Erd\H{o}s--Szekeres problem, arXiv:2512.24061 (2025).
+\bibitem{Mac25} E.~Mackey, thesis, Carnegie Mellon University, Technical Report CMU-CS-25-108 (2025).
+\bibitem{SMQH25} B.~Subercaseaux, E.~Mackey, L.~Qian and M.~J.~H.~Heule, Automated symmetric constructions in discrete
+geometry, arXiv:2506.00224v1 (2025); also CICM 2025 (chapter not accessed).
+\bibitem{Supp} Supplementary material: the directories \dirn{C7UPPER}, \dirn{C6UPPER}, \dirn{LAYERLEAN}, \dirn{ROT456},
+\dirn{ES8SYM}, \dirn{PRIMEFOLD}, \dirn{SYM5}, \dirn{SYMLEAN} under \dirn{cloud/es7-2026-10-19/results} of the project
+repository, and \dirn{C6C7REVIEW}, \dirn{ROTREFINE20261104} on the review branch (commit to be fixed).
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,27 @@
+import E311R.C00001
+import E311R.C00002
+import E311R.C00003
+import E311R.C00004
+import E311R.C00005
+import E311R.C00006
+open CompactChecker
+set_option maxRecDepth 100000
+set_option Elab.async false
+set_option linter.all false
+set_option profiler true
+namespace E311R
+-- ES(8) <= 311 compact recheck, residual side: 4600 leaves, 6 modules, 6 subtree roots, 5 skeleton nodes
+-- tree sha256 6b61f0ff91c7b1e4a66a2f360d414117f0ce2172193ea0076d9679a579061fdb; exporter sha256 334d2d75cff1effdb4a7420501c0e3247f0dbbe645ae86bf8f8dc03887edbbfb
+theorem ex493445 : ¬ ∃ holes : Fin 154 → ℕ, FFeas fcat2650 2650 154 32 (pmask (zerosF 154) [(58, 1), (45, 1), (47, 2), (20, 1), (27, 2), (36, 2), (88, 1), (25, 2), (44, 1), (0, 2)]) holes :=
+  split_pm fcat2650 2650 154 32 (zerosF 154) [(58, 1), (45, 1), (47, 2), (20, 1), (27, 2), (36, 2), (88, 1), (25, 2), (44, 1), (0, 2)] 57 E311R.C00005.ex493446 E311R.C00006.ex495085
+theorem ex491475 : ¬ ∃ holes : Fin 154 → ℕ, FFeas fcat2650 2650 154 32 (pmask (zerosF 154) [(45, 1), (47, 2), (20, 1), (27, 2), (36, 2), (88, 1), (25, 2), (44, 1), (0, 2)]) holes :=
+  split_pm fcat2650 2650 154 32 (zerosF 154) [(45, 1), (47, 2), (20, 1), (27, 2), (36, 2), (88, 1), (25, 2), (44, 1), (0, 2)] 58 E311R.C00004.ex491476 ex493445
+theorem ex487211 : ¬ ∃ holes : Fin 154 → ℕ, FFeas fcat2650 2650 154 32 (pmask (zerosF 154) [(63, 2), (45, 2), (47, 2), (20, 1), (27, 2), (36, 2), (88, 1), (25, 2), (44, 1), (0, 2)]) holes :=
+  split_pm fcat2650 2650 154 32 (zerosF 154) [(63, 2), (45, 2), (47, 2), (20, 1), (27, 2), (36, 2), (88, 1), (25, 2), (44, 1), (0, 2)] 72 E311R.C00001.ex487212 E311R.C00002.ex488379
+theorem ex487210 : ¬ ∃ holes : Fin 154 → ℕ, FFeas fcat2650 2650 154 32 (pmask (zerosF 154) [(45, 2), (47, 2), (20, 1), (27, 2), (36, 2), (88, 1), (25, 2), (44, 1), (0, 2)]) holes :=
+  split_pm fcat2650 2650 154 32 (zerosF 154) [(45, 2), (47, 2), (20, 1), (27, 2), (36, 2), (88, 1), (25, 2), (44, 1), (0, 2)] 63 ex487211 E311R.C00003.ex490248
+theorem ex487209 : ¬ ∃ holes : Fin 154 → ℕ, FFeas fcat2650 2650 154 32 (pmask (zerosF 154) [(47, 2), (20, 1), (27, 2), (36, 2), (88, 1), (25, 2), (44, 1), (0, 2)]) holes :=
+  split_pm fcat2650 2650 154 32 (zerosF 154) [(47, 2), (20, 1), (27, 2), (36, 2), (88, 1), (25, 2), (44, 1), (0, 2)] 45 ex487210 ex491475
+theorem root : ¬ ∃ holes : Fin 154 → ℕ, FFeas fcat2650 2650 154 32 (pmask (zerosF 154) [(47, 2), (20, 1), (27, 2), (36, 2), (88, 1), (25, 2), (44, 1), (0, 2)]) holes := ex487209
+#print axioms root
+end E311R

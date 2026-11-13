@@ -1,0 +1,85 @@
+{
+ "files": 280,
+ "compose_summary": {
+  "certified_nodes": 116597,
+  "class_covered": false,
+  "uncovered_frontier_nodes": 244,
+  "uncovered_sample": [
+   "0s0-3s1_1s1-8s1",
+   "0s0-3s1_4s1-5s0_6_1s0-2s1",
+   "0s0-3s1_4s1-5s0_6_1s1-2s0",
+   "0s0-3s1_4s1-5s0_6_1s1-2s1",
+   "0s0-3s1_4s1-5s0_6_1s0-7s0",
+   "0s0-3s1_4s1-5s0_6_1s0-7s1",
+   "0s0-3s1_4s1-5s0_6_1s1-7s0",
+   "0s0-3s1_4s1-5s0_6_1s1-7s1",
+   "0s0-3s1_4s1-5s0_6_1s0-8s0",
+   "0s0-3s1_4s1-5s0_6_1s0-8s1"
+  ],
+  "certified_records": 116732,
+  "certified_with_proof_sha256": {
+   "records": 26436,
+   "nodes": 26436
+  },
+  "sha_checked": false,
+  "mirror_h6": true,
+  "certified_cube_nodes": 26604,
+  "sigma_splits_used": 1731
+ },
+ "mycompose_summary": {
+  "m": 11,
+  "k": 7,
+  "certified_records": 116732,
+  "certified_nodes": 116597,
+  "certified_cube_nodes": 26604,
+  "sha_checked": 0,
+  "sigma_split_nodes": 1737,
+  "sigma_splits_used": 1736,
+  "cube_layer_split_nodes": 3053,
+  "class_covered": false,
+  "uncovered_frontier": 2504,
+  "uncovered_sample": [
+   "0s0-1s1_10_9_5s0-6s1",
+   "0s0-1s1_10_9_5s0-7s0",
+   "0s0-1s1_10_9_5s0-7s1",
+   "0s0-1s1_10_9_5s0-8s0",
+   "0s0-1s1_10_9_5s0-8s1"
+  ]
+ },
+ "roots": 910,
+ "open_roots_compose": [
+  "0s0-3s1_1s1-8s1",
+  "0s0-3s1_4s0-8s1",
+  "0s0-3s1_4s1-5s0",
+  "0s0-4s1_1s0-10s0",
+  "0s0-4s1_1s1-10s1",
+  "0s0-4s1_2s0-9s0",
+  "0s0-4s1_5s1-10s1",
+  "0s0-4s1_6s0-7s1",
+  "0s0-4s1_6s0-9s1",
+  "0s0-5s1_1s0-2s1",
+  "0s0-5s1_1s1-6s0",
+  "0s0-5s1_2s0-8s0",
+  "0s0-5s1_2s1-8s1",
+  "0s0-5s1_6s0-8s1",
+  "0s0-5s1_6s1-7s0"
+ ],
+ "open_roots_mycompose": [
+  "0s0-3s1_1s1-8s1",
+  "0s0-3s1_4s0-8s1",
+  "0s0-3s1_4s1-5s0",
+  "0s0-4s1_1s0-10s0",
+  "0s0-4s1_1s1-10s1",
+  "0s0-4s1_2s0-9s0",
+  "0s0-4s1_5s1-10s1",
+  "0s0-4s1_6s0-7s1",
+  "0s0-4s1_6s0-9s1",
+  "0s0-5s1_1s0-2s1",
+  "0s0-5s1_1s1-6s0",
+  "0s0-5s1_2s0-8s0",
+  "0s0-5s1_2s1-8s1",
+  "0s0-5s1_6s0-8s1",
+  "0s0-5s1_6s1-7s0"
+ ],
+ "root_status_differences": []
+}

@@ -1,0 +1,289 @@
+{
+ "roots": {
+  "1": {
+   "cube": [
+    -1651,
+    -345,
+    -1245,
+    2029,
+    -2380,
+    2705,
+    3005
+   ],
+   "closed": true,
+   "lrat_all_verified": true,
+   "unsat_leaves": 64,
+   "sat": 0,
+   "open_nodes": 0,
+   "open_fraction": "0"
+  },
+  "9": {
+   "cube": [
+    -1651,
+    -345,
+    -1245,
+    -2029,
+    2380,
+    -2705,
+    -3005
+   ],
+   "closed": true,
+   "lrat_all_verified": true,
+   "unsat_leaves": 64,
+   "sat": 0,
+   "open_nodes": 0,
+   "open_fraction": "0"
+  },
+  "17": {
+   "cube": [
+    -1651,
+    -345,
+    1245,
+    -2029,
+    2380,
+    -2705,
+    -3005
+   ],
+   "closed": true,
+   "lrat_all_verified": true,
+   "unsat_leaves": 64,
+   "sat": 0,
+   "open_nodes": 0,
+   "open_fraction": "0"
+  },
+  "25": {
+   "cube": [
+    -1651,
+    -345,
+    1245,
+    2029,
+    -2380,
+    -2705,
+    -3005
+   ],
+   "closed": true,
+   "lrat_all_verified": true,
+   "unsat_leaves": 126,
+   "sat": 0,
+   "open_nodes": 0,
+   "open_fraction": "0"
+  },
+  "33": {
+   "cube": [
+    -1651,
+    345,
+    -552,
+    1245,
+    2029,
+    -2380,
+    -2705
+   ],
+   "closed": false,
+   "lrat_all_verified": false,
+   "unsat_leaves": 126,
+   "sat": 0,
+   "open_nodes": 1,
+   "open_fraction": "1/4096"
+  },
+  "41": {
+   "cube": [
+    -1651,
+    345,
+    -552,
+    -1245,
+    2029,
+    2380,
+    2705
+   ],
+   "closed": true,
+   "lrat_all_verified": true,
+   "unsat_leaves": 252,
+   "sat": 0,
+   "open_nodes": 0,
+   "open_fraction": "0"
+  },
+  "49": {
+   "cube": [
+    -1651,
+    345,
+    552,
+    497,
+    -498,
+    -1028,
+    1054
+   ],
+   "closed": true,
+   "lrat_all_verified": true,
+   "unsat_leaves": 1,
+   "sat": 0,
+   "open_nodes": 0,
+   "open_fraction": "0"
+  },
+  "57": {
+   "cube": [
+    -1651,
+    345,
+    552,
+    -497,
+    -524,
+    2029,
+    -2380
+   ],
+   "closed": false,
+   "lrat_all_verified": false,
+   "unsat_leaves": 39,
+   "sat": 0,
+   "open_nodes": 25,
+   "open_fraction": "25/64"
+  },
+  "65": {
+   "cube": [
+    1651,
+    -87,
+    -987,
+    -2029,
+    -1635,
+    2364,
+    -2689
+   ],
+   "closed": true,
+   "lrat_all_verified": true,
+   "unsat_leaves": 64,
+   "sat": 0,
+   "open_nodes": 0,
+   "open_fraction": "0"
+  },
+  "73": {
+   "cube": [
+    1651,
+    -87,
+    -987,
+    2029,
+    -2380,
+    1040,
+    2705
+   ],
+   "closed": false,
+   "lrat_all_verified": false,
+   "unsat_leaves": 0,
+   "sat": 0,
+   "open_nodes": 1,
+   "open_fraction": "1"
+  },
+  "81": {
+   "cube": [
+    1651,
+    -87,
+    987,
+    -2029,
+    -2380,
+    2705,
+    3005
+   ],
+   "closed": false,
+   "lrat_all_verified": false,
+   "unsat_leaves": 0,
+   "sat": 0,
+   "open_nodes": 1,
+   "open_fraction": "1"
+  },
+  "89": {
+   "cube": [
+    1651,
+    -87,
+    987,
+    2029,
+    -2380,
+    -2705,
+    -3005
+   ],
+   "closed": false,
+   "lrat_all_verified": false,
+   "unsat_leaves": 0,
+   "sat": 0,
+   "open_nodes": 1,
+   "open_fraction": "1"
+  },
+  "97": {
+   "cube": [
+    1651,
+    87,
+    810,
+    509,
+    -566,
+    -593,
+    -619
+   ],
+   "closed": false,
+   "lrat_all_verified": false,
+   "unsat_leaves": 0,
+   "sat": 0,
+   "open_nodes": 1,
+   "open_fraction": "1"
+  },
+  "105": {
+   "cube": [
+    1651,
+    87,
+    810,
+    -509,
+    -2029,
+    2380,
+    2705
+   ],
+   "closed": false,
+   "lrat_all_verified": false,
+   "unsat_leaves": 0,
+   "sat": 0,
+   "open_nodes": 1,
+   "open_fraction": "1"
+  },
+  "113": {
+   "cube": [
+    1651,
+    87,
+    -810,
+    -1245,
+    -2029,
+    2380,
+    2705
+   ],
+   "closed": false,
+   "lrat_all_verified": false,
+   "unsat_leaves": 0,
+   "sat": 0,
+   "open_nodes": 1,
+   "open_fraction": "1"
+  },
+  "121": {
+   "cube": [
+    1651,
+    87,
+    -810,
+    1245,
+    -2029,
+    2380,
+    2705
+   ],
+   "closed": false,
+   "lrat_all_verified": false,
+   "unsat_leaves": 0,
+   "sat": 0,
+   "open_nodes": 1,
+   "open_fraction": "1"
+  }
+ },
+ "n_roots_seen": 16,
+ "total": {
+  "closed_roots": 7,
+  "closed_lrat_roots": 7,
+  "unsat_leaves": 800,
+  "sat_leaves": 0,
+  "open_nodes": 33,
+  "splits": 13,
+  "gaps": 13,
+  "lrat_failed": 0,
+  "cpu_solve_s": 42913.0,
+  "cpu_lrat_s": 842.5
+ }
+}

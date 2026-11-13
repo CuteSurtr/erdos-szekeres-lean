@@ -1,0 +1,102 @@
+ES set size 10 cup/cap (3, 4)
+Traceback (most recent call last):
+  File "/home/jay/research/data/symk8-20261113/tools/needle_test.py", line 76, in <module>
+    print('ES arm: cup, cap, n8, zero =', check(E))
+                                          ~~~~~^^^
+  File "/home/jay/research/data/symk8-20261113/tools/needle_test.py", line 66, in check
+    ml, cnt, nz = peval(arm_config(A), 8)
+                  ~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/jay/research/data/symk8-20261113/tools/double_exact.py", line 29, in peval
+    assert abs(x) < LIM and abs(y) < LIM, (x, y)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: (12105166562792256456943655266961547447528116980384384265703575085907480232228840325479629687308061243180651396683866610735714288573057769722424560351772780703410960088852803809885475341716572440241545326261950434003358011864318233027996469928853949382406436045885805113334880668026816765526994403252162322286319480779988808228184442472495968004154234048209406401322341902071906309037799520890636539039970344579390251572786538439867633315306903435997679652083791068221142009483758308477507736647096925024881529350534051425874146755183071980240994851658133113771, 0)
+es8sym_52.pts m=4 pos=0/3 npts=56 critical=338 evaluated=338 free=0 best=(13344, (316360750523606, 318946627957914), 8) hist={False: 338} time=1s
+es8sym_52.pts m=4 pos=1/3 npts=56 critical=290 evaluated=290 free=0 best=(13780, (187222033133731, 180496415376640), 8) hist={False: 290} time=1s
+es8sym_52.pts m=4 pos=2/3 npts=56 critical=26 evaluated=26 free=0 best=(11504, (280091650291193, 293042859055611), 8) hist={False: 26} time=0s
+es8sym_52.pts m=4 pos=3/3 npts=56 critical=26 evaluated=26 free=0 best=(11004, (88949692686596, 98677436074400), 8) hist={False: 26} time=0s
+s13_19_10_S40.pts m=4 pos=0/3 npts=56 critical=338 evaluated=338 free=0 best=(1688, (159308575, 2198632528144), 8) hist={False: 338} time=1s
+s13_19_10_S40.pts m=4 pos=1/3 npts=56 critical=38 evaluated=38 free=0 best=(29636, (16143267, 9528352), 9) hist={False: 38} time=0s
+s13_19_10_S40.pts m=4 pos=2/3 npts=56 critical=26 evaluated=26 free=0 best=(17732, (539826868, 166246988), 9) hist={False: 26} time=0s
+s13_19_10_S40.pts m=4 pos=3/3 npts=56 critical=26 evaluated=26 free=0 best=(16856, (5967970, 19622364), 8) hist={False: 26} time=0s
+s13_2_67_S40.pts m=4 pos=0/3 npts=56 critical=338 evaluated=338 free=0 best=(2552, (5688202934, 5170732), 8) hist={False: 338} time=1s
+s13_2_67_S40.pts m=4 pos=1/3 npts=56 critical=38 evaluated=38 free=0 best=(27156, (1406832949, 4233341705), 9) hist={False: 38} time=0s
+s13_2_67_S40.pts m=4 pos=2/3 npts=56 critical=26 evaluated=26 free=0 best=(17748, (1243777012, 2302625529), 8) hist={False: 26} time=0s
+s13_2_67_S40.pts m=4 pos=3/3 npts=56 critical=26 evaluated=26 free=0 best=(14488, (1842876641, 547214964), 8) hist={False: 26} time=0s
+s13_27_30_S40.pts m=4 pos=0/3 npts=56 critical=338 evaluated=338 free=0 best=(2432, (1113223962, 286222), 8) hist={False: 338} time=1s
+s13_27_30_S40.pts m=4 pos=1/3 npts=56 critical=38 evaluated=38 free=0 best=(25688, (176378913, 543950650), 9) hist={False: 38} time=0s
+s13_27_30_S40.pts m=4 pos=2/3 npts=56 critical=26 evaluated=26 free=0 best=(18752, (118365174, 176608520), 8) hist={False: 26} time=0s
+s13_27_30_S40.pts m=4 pos=3/3 npts=56 critical=26 evaluated=26 free=0 best=(21812, (294973694, 58243346), 8) hist={False: 26} time=0s
+s13_29_65_S50.pts m=4 pos=0/4 npts=56 critical=338 evaluated=338 free=0 best=(8384, (24057342742, 97285897943), 8) hist={False: 338} time=1s
+s13_29_65_S50.pts m=4 pos=1/4 npts=56 critical=290 evaluated=290 free=0 best=(7552, (24057342742, 97285897943), 8) hist={False: 290} time=1s
+s13_29_65_S50.pts m=4 pos=2/4 npts=56 critical=38 evaluated=38 free=0 best=(23996, (12032229458, 32098566194), 9) hist={False: 38} time=0s
+s13_29_65_S50.pts m=4 pos=3/4 npts=56 critical=26 evaluated=26 free=0 best=(16544, (3007429725, 3524296071), 8) hist={False: 26} time=0s
+s13_29_65_S50.pts m=4 pos=4/4 npts=56 critical=26 evaluated=26 free=0 best=(12492, (6531725796, 516866346), 8) hist={False: 26} time=0s
+s13_33_230_S40.pts m=4 pos=0/3 npts=56 critical=338 evaluated=338 free=0 best=(820, (59847353076, 29076228348), 8) hist={False: 338} time=1s
+s13_33_230_S40.pts m=4 pos=1/3 npts=56 critical=38 evaluated=38 free=0 best=(31940, (12726599236, 32923891272), 9) hist={False: 38} time=0s
+s13_33_230_S40.pts m=4 pos=2/3 npts=56 critical=26 evaluated=26 free=0 best=(18304, (115332259653, 332435361023), 8) hist={False: 26} time=0s
+s13_33_230_S40.pts m=4 pos=3/3 npts=56 critical=26 evaluated=26 free=0 best=(19780, (447767620676, 217103101370), 8) hist={False: 26} time=0s
+s13_43_32_S40.pts m=4 pos=0/4 npts=56 critical=338 evaluated=338 free=0 best=(8448, (243382798, 1506442800), 8) hist={False: 338} time=1s
+s13_43_32_S40.pts m=4 pos=1/4 npts=56 critical=290 evaluated=290 free=0 best=(7504, (243382798, 1506442800), 8) hist={False: 290} time=1s
+s13_43_32_S40.pts m=4 pos=2/4 npts=56 critical=38 evaluated=38 free=0 best=(24812, (20456182, 72942572), 9) hist={False: 38} time=0s
+s13_43_32_S40.pts m=4 pos=3/4 npts=56 critical=26 evaluated=26 free=0 best=(17848, (118841418, 237868689), 8) hist={False: 26} time=0s
+s13_43_32_S40.pts m=4 pos=4/4 npts=56 critical=26 evaluated=26 free=0 best=(13308, (348390368, 116577257), 8) hist={False: 26} time=0s
+s13_45_74_S40.pts m=4 pos=0/4 npts=56 critical=338 evaluated=338 free=0 best=(8368, (69963348, 429803077), 8) hist={False: 338} time=1s
+s13_45_74_S40.pts m=4 pos=1/4 npts=56 critical=290 evaluated=290 free=0 best=(7440, (69963348, 429803077), 8) hist={False: 290} time=1s
+s13_45_74_S40.pts m=4 pos=2/4 npts=56 critical=38 evaluated=38 free=0 best=(27420, (62812640, 148005779), 9) hist={False: 38} time=0s
+s13_45_74_S40.pts m=4 pos=3/4 npts=56 critical=26 evaluated=26 free=0 best=(18320, (24231928, 29912990), 8) hist={False: 26} time=0s
+s13_45_74_S40.pts m=4 pos=4/4 npts=56 critical=26 evaluated=26 free=0 best=(21908, (54144918, 5681062), 8) hist={False: 26} time=0s
+s13_46_30_S40.pts m=4 pos=0/3 npts=56 critical=338 evaluated=338 free=0 best=(2100, (450132351, 375159285027), 8) hist={False: 338} time=1s
+s13_46_30_S40.pts m=4 pos=1/3 npts=56 critical=38 evaluated=38 free=0 best=(24968, (17201945653, 1965928313), 8) hist={False: 38} time=0s
+s13_46_30_S40.pts m=4 pos=2/3 npts=56 critical=26 evaluated=26 free=0 best=(17736, (3927736422, 1984813462), 8) hist={False: 26} time=0s
+s13_46_30_S40.pts m=4 pos=3/3 npts=56 critical=26 evaluated=26 free=0 best=(20632, (1161257565, 3805485998), 8) hist={False: 26} time=0s
+s13_47_100_S40.pts m=4 pos=0/3 npts=56 critical=338 evaluated=338 free=0 best=(984, (411529598996, 128930336), 8) hist={False: 338} time=1s
+s13_47_100_S40.pts m=4 pos=1/3 npts=56 critical=38 evaluated=38 free=0 best=(24624, (408225352, 1513538276), 9) hist={False: 38} time=0s
+s13_47_100_S40.pts m=4 pos=2/3 npts=56 critical=26 evaluated=26 free=0 best=(17352, (378470475, 534519087), 8) hist={False: 26} time=0s
+s13_47_100_S40.pts m=4 pos=3/3 npts=56 critical=26 evaluated=26 free=0 best=(12932, (912989562, 156048612), 8) hist={False: 26} time=0s
+s13_54_145_S40.pts m=4 pos=0/3 npts=56 critical=338 evaluated=338 free=0 best=(264, (30655261051, 2073376355159), 8) hist={False: 338} time=1s
+s13_54_145_S40.pts m=4 pos=1/3 npts=56 critical=38 evaluated=38 free=0 best=(25148, (457874284, 137582426), 9) hist={False: 38} time=0s
+s13_54_145_S40.pts m=4 pos=2/3 npts=56 critical=26 evaluated=26 free=0 best=(14504, (56192139706, 15590764130), 8) hist={False: 26} time=0s
+s13_54_145_S40.pts m=4 pos=3/3 npts=56 critical=26 evaluated=26 free=0 best=(18108, (40601375576, 71782903836), 8) hist={False: 26} time=0s
+s13_60_156_S50.pts m=4 pos=0/4 npts=56 critical=338 evaluated=338 free=0 best=(12552, (59306189781, 744524189992), 8) hist={False: 338} time=1s
+s13_60_156_S50.pts m=4 pos=1/4 npts=56 critical=290 evaluated=290 free=0 best=(11648, (24776061278, 297548764877), 8) hist={False: 290} time=1s
+s13_60_156_S50.pts m=4 pos=2/4 npts=56 critical=38 evaluated=38 free=0 best=(29840, (774190090, 5444576457), 9) hist={False: 38} time=0s
+s13_60_156_S50.pts m=4 pos=3/4 npts=56 critical=26 evaluated=26 free=0 best=(18344, (25712062511, 77873794161), 9) hist={False: 26} time=0s
+s13_60_156_S50.pts m=4 pos=4/4 npts=56 critical=26 evaluated=26 free=0 best=(16120, (32810651398, 10165887383), 8) hist={False: 26} time=0s
+s13_74_127_l1point_S50.pts m=4 pos=0/4 npts=56 critical=338 evaluated=338 free=0 best=(12160, (123214060676, 3005400777059), 8) hist={False: 338} time=1s
+s13_74_127_l1point_S50.pts m=4 pos=1/4 npts=56 critical=290 evaluated=290 free=0 best=(12072, (123214060676, 3005400777059), 9) hist={False: 290} time=1s
+s13_74_127_l1point_S50.pts m=4 pos=2/4 npts=56 critical=38 evaluated=38 free=0 best=(29688, (8859797912, 18217028910), 9) hist={False: 38} time=0s
+s13_74_127_l1point_S50.pts m=4 pos=3/4 npts=56 critical=26 evaluated=26 free=0 best=(16768, (107490738437, 262196009703), 8) hist={False: 26} time=0s
+s13_74_127_l1point_S50.pts m=4 pos=4/4 npts=56 critical=26 evaluated=26 free=0 best=(20532, (369686748140, 154705271266), 8) hist={False: 26} time=0s
+s13_78_210_S50.pts m=4 pos=0/3 npts=56 critical=338 evaluated=338 free=0 best=(2440, (455, 3541225454), 8) hist={False: 338} time=1s
+s13_78_210_S50.pts m=4 pos=1/3 npts=56 critical=38 evaluated=38 free=0 best=(24792, (4454157, 2614098), 9) hist={False: 38} time=0s
+s13_78_210_S50.pts m=4 pos=2/3 npts=56 critical=26 evaluated=26 free=0 best=(15064, (339289185, 199098388), 8) hist={False: 26} time=0s
+s13_78_210_S50.pts m=4 pos=3/3 npts=56 critical=26 evaluated=26 free=0 best=(13932, (139730751, 536620472), 8) hist={False: 26} time=0s
+s13_79_39_l1point_S50.pts m=4 pos=0/4 npts=56 critical=338 evaluated=338 free=0 best=(13176, (900382836769, 14426517095109), 8) hist={False: 338} time=1s
+s13_79_39_l1point_S50.pts m=4 pos=1/4 npts=56 critical=290 evaluated=290 free=0 best=(13052, (900382836769, 14426517095109), 9) hist={False: 290} time=1s
+s13_79_39_l1point_S50.pts m=4 pos=2/4 npts=56 critical=38 evaluated=38 free=0 best=(26620, (494620651001, 7663934485832), 8) hist={False: 38} time=0s
+s13_79_39_l1point_S50.pts m=4 pos=3/4 npts=56 critical=26 evaluated=26 free=0 best=(16456, (221658219130, 690872230781), 8) hist={False: 26} time=0s
+s13_79_39_l1point_S50.pts m=4 pos=4/4 npts=56 critical=26 evaluated=26 free=0 best=(14396, (910794024687, 468397448670), 8) hist={False: 26} time=0s
+c4_56pts_2octagons_A.pts remove=10,12 m=4 orbits=12 centre=False base n8=0 maxlen=7
+  single moves=3432 free=0 best=(1, 'D', 11, 1) (7s)
+DONE c4_56pts_2octagons_A.pts remove=10,12
+c4_56pts_2octagons_A.pts remove=10,13 m=4 orbits=12 centre=False base n8=0 maxlen=7
+  single moves=3432 free=0 best=(1, 'D', 11, 1) (7s)
+DONE c4_56pts_2octagons_A.pts remove=10,13
+c4_56pts_2octagons_A.pts remove=11,12 m=4 orbits=12 centre=False base n8=0 maxlen=7
+  single moves=3432 free=0 best=(1, 'D', 10, 1) (7s)
+DONE c4_56pts_2octagons_A.pts remove=11,12
+c4_56pts_2octagons_A.pts remove=11,13 m=4 orbits=12 centre=False base n8=0 maxlen=7
+  single moves=3432 free=0 best=(1, 'D', 10, 1) (7s)
+DONE c4_56pts_2octagons_A.pts remove=11,13
+c4_56pts_2octagons_B.pts remove=7,12 m=4 orbits=12 centre=False base n8=0 maxlen=7
+  single moves=3432 free=0 best=(1, 'D', 10, 1) (7s)
+DONE c4_56pts_2octagons_B.pts remove=7,12
+c4_56pts_2octagons_B.pts remove=7,13 m=4 orbits=12 centre=False base n8=0 maxlen=7
+  single moves=3432 free=0 best=(1, 'D', 10, 1) (7s)
+DONE c4_56pts_2octagons_B.pts remove=7,13
+c4_56pts_2octagons_B.pts remove=8,12 m=4 orbits=12 centre=False base n8=0 maxlen=7
+  single moves=3432 free=0 best=(1, 'D', 7, 1) (7s)
+DONE c4_56pts_2octagons_B.pts remove=8,12
+c4_56pts_2octagons_B.pts remove=8,13 m=4 orbits=12 centre=False base n8=0 maxlen=7
+  single moves=3432 free=0 best=(1, 'D', 7, 1) (7s)
+DONE c4_56pts_2octagons_B.pts remove=8,13

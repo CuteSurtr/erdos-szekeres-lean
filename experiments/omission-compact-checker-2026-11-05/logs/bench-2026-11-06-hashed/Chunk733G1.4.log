@@ -1,0 +1,45 @@
+linting took 180ms
+type checking took 859ms
+'CompactChecker.Chunk733G1.excludes' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 936ms
+cumulative profiling times:
+	.olean serialization 14.4ms
+	attribute application 0.0673ms
+	compilation (IR) 0.164ms
+	compilation (LCNF base) 0.283ms
+	compilation (LCNF mono) 0.0958ms
+	elaboration 1.04s
+	fix level params 0.436ms
+	instantiate metavars 0.191ms
+	interpretation 0.018ms
+	let-to-have transformation 1.74ms
+	linting 257ms
+	parsing 47ms
+	process pre-definitions 24.8ms
+	share common exprs 5.42ms
+	tactic execution 1.34ms
+	type checking 875ms
+	typeclass inference 16.4ms
+	Command being timed: "lean -R experiments/omission-compact-checker-2026-11-05 -o experiments/omission-compact-checker-2026-11-05/build/bench/Chunk733G1.olean experiments/omission-compact-checker-2026-11-05/CompactChecker/Chunk733G1.lean"
+	User time (seconds): 2.10
+	System time (seconds): 0.34
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.45
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3323272
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 83984
+	Voluntary context switches: 3054
+	Involuntary context switches: 34
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 2496
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

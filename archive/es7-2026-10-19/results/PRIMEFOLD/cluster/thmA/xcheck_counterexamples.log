@@ -1,0 +1,16 @@
+== cvxenum m7_x2_G9s_centre (64 pts, x=2 integer, one orbit flat 9-pt clusters + centre)
+n=64 triples=41664 max_convex=7
+convex 3-subsets: 41664
+convex 4-subsets: 462581
+convex 5-subsets: 2962260
+convex 6-subsets: 10286640
+convex 7-subsets: 14719287
+== decimal 120-digit sign recomputation
+n=64 triples=41664 sign disagreements=0  min|det|=1.126E+22  det error bound=1.600E-39  -> CONFIRMED
+== m11 x=m/2 witness decimal check
+rows [59, 69, 79, 89, 99, 102, 101, 100, 110, 56, 57, 58] | 12 points | min|det| = 2.163E+13 | convex position: True
+== sha256
+ac524df7a5a62bedbc119821841d9e324d71cffbfc1d5df7b53269291fd4c5c4  m7_x2_G9s_centre.pts
+4edfd0f1f2fa6d12b2626d5dbfb548719e84e6f5093520ba6779b4f626268d4e  m7_x2_G1_centre.pts
+696d4170347fdb6ae0f7eb96d5a54696d304e1f92a922dff8025559960bc4f75  m11_beta0_ES54.pts
+f0bd10dca125b440694a30f7b8037d485c2f155a615544dba04a3422851f5ca8  G9s.txt

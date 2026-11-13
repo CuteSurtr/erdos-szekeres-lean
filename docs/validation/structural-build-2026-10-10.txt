@@ -1,0 +1,181 @@
+ℹ [3100/3301] Replayed ErdosSzekeres.Vendor.DilworthTheorem
+info: ErdosSzekeres/Vendor/DilworthTheorem.lean:392:0: 'DilworthTheorem.dilworth_theorem' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosSzekeres/Vendor/DilworthTheorem.lean:393:0: 'DilworthTheorem.dilworth_duality' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosSzekeres/Vendor/DilworthTheorem.lean:495:0: 'DilworthTheorem.mirsky_theorem' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosSzekeres/Vendor/DilworthTheorem.lean:496:0: 'DilworthTheorem.mirsky_duality' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3195/3301] Replayed ErdosSzekeres.Omission.ActualRanks
+info: ErdosSzekeres/Omission/ActualRanks.lean:199:0: 'ErdosSzekeres.Omission.ActualRanks.actual_incoming_admissible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3196/3301] Replayed ErdosSzekeres.Omission.BalancedStates
+info: ErdosSzekeres/Omission/BalancedStates.lean:92:0: 'ErdosSzekeres.Omission.ActualRanks.balancedState_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3197/3301] Replayed ErdosSzekeres.Omission.Ferrers
+info: ErdosSzekeres/Omission/Ferrers.lean:94:0: 'ErdosSzekeres.Omission.Ferrers.profile_count' does not depend on any axioms
+info: ErdosSzekeres/Omission/Ferrers.lean:95:0: 'ErdosSzekeres.Omission.Ferrers.actual_states_inject' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3199/3301] Replayed ErdosSzekeres.Omission.BalancedCatalog
+info: ErdosSzekeres/Omission/BalancedCatalog.lean:53:0: 'ErdosSzekeres.Omission.BalancedCatalog.ownerIndex_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3247/3301] Replayed ErdosSzekeres.Omission.CoverCuts
+info: ErdosSzekeres/Omission/CoverCuts.lean:70:0: 'ErdosSzekeres.OmissionCertificates.weighted_subset_capacity_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ErdosSzekeres/Omission/CoverCuts.lean:71:0: 'ErdosSzekeres.OmissionCertificates.rounded_cover_cut' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3254/3301] Replayed ErdosSzekeres.Omission.CoupledCore13
+info: ErdosSzekeres/Omission/CoupledCore13.lean:2462:0: 'ErdosSzekeres.Omission.CoupledCore13.context_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3255/3301] Replayed ErdosSzekeres.Omission.CoupledObstruction
+info: ErdosSzekeres/Omission/CoupledObstruction.lean:51:0: 'ErdosSzekeres.Omission.CoupledCore13.exists_missing_state' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosSzekeres/Omission/CoupledObstruction.lean:52:0: 'ErdosSzekeres.Omission.CoupledCore13.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3256/3301] Replayed ErdosSzekeres.Omission.CoupledCoreSecond
+info: ErdosSzekeres/Omission/CoupledCoreSecond.lean:3067:0: 'ErdosSzekeres.Omission.CoupledCoreSecond.context_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3257/3301] Replayed ErdosSzekeres.Omission.CoupledSecondObstruction
+info: ErdosSzekeres/Omission/CoupledSecondObstruction.lean:51:0: 'ErdosSzekeres.Omission.CoupledCoreSecond.exists_missing_state' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ErdosSzekeres/Omission/CoupledSecondObstruction.lean:52:0: 'ErdosSzekeres.Omission.CoupledCoreSecond.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3258/3301] Replayed ErdosSzekeres.Omission.CoupledTemplate
+info: ErdosSzekeres/Omission/CoupledTemplate.lean:2330:0: 'ErdosSzekeres.Omission.CoupledTemplate.context_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3259/3301] Replayed ErdosSzekeres.Omission.CoupledTemplateGeometry
+info: ErdosSzekeres/Omission/CoupledTemplateGeometry.lean:44:0: 'ErdosSzekeres.Omission.CoupledTemplate.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3261/3301] Replayed ErdosSzekeres.Omission.CoupledVariants
+info: ErdosSzekeres/Omission/CoupledVariants.lean:129:0: ErdosSzekeres.Omission.CoupledVariants.checked009 : Function.Injective state009 ∧ Compatible state009
+info: ErdosSzekeres/Omission/CoupledVariants.lean:161:0: ErdosSzekeres.Omission.CoupledVariants.checked019 : Function.Injective state019 ∧ Compatible state019
+info: ErdosSzekeres/Omission/CoupledVariants.lean:193:0: ErdosSzekeres.Omission.CoupledVariants.checked029 : Function.Injective state029 ∧ Compatible state029
+info: ErdosSzekeres/Omission/CoupledVariants.lean:225:0: ErdosSzekeres.Omission.CoupledVariants.checked039 : Function.Injective state039 ∧ Compatible state039
+info: ErdosSzekeres/Omission/CoupledVariants.lean:233:0: ErdosSzekeres.Omission.CoupledVariants.checked041 : Function.Injective state041 ∧ Compatible state041
+info: ErdosSzekeres/Omission/CoupledVariants.lean:291:0: 'ErdosSzekeres.Omission.CoupledVariants.checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosSzekeres/Omission/CoupledVariants.lean:292:0: 'ErdosSzekeres.Omission.CoupledVariants.all_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3262/3301] Replayed ErdosSzekeres.Omission.CoupledTemplateSecond
+info: ErdosSzekeres/Omission/CoupledTemplateSecond.lean:2976:0: 'ErdosSzekeres.Omission.CoupledTemplateSecond.context_impossible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3263/3301] Replayed ErdosSzekeres.Omission.CoupledTemplateSecondGeometry
+info: ErdosSzekeres/Omission/CoupledTemplateSecondGeometry.lean:44:0: 'ErdosSzekeres.Omission.CoupledTemplateSecond.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3265/3301] Replayed ErdosSzekeres.Omission.CoupledSecondVariants
+info: ErdosSzekeres/Omission/CoupledSecondVariants.lean:115:0: ErdosSzekeres.Omission.CoupledSecondVariants.checked009 : Function.Injective state009 ∧ Compatible state009
+info: ErdosSzekeres/Omission/CoupledSecondVariants.lean:147:0: ErdosSzekeres.Omission.CoupledSecondVariants.checked019 : Function.Injective state019 ∧ Compatible state019
+info: ErdosSzekeres/Omission/CoupledSecondVariants.lean:179:0: ErdosSzekeres.Omission.CoupledSecondVariants.checked029 : Function.Injective state029 ∧ Compatible state029
+info: ErdosSzekeres/Omission/CoupledSecondVariants.lean:196:0: ErdosSzekeres.Omission.CoupledSecondVariants.checked034 : Function.Injective state034 ∧ Compatible state034
+info: ErdosSzekeres/Omission/CoupledSecondVariants.lean:247:0: 'ErdosSzekeres.Omission.CoupledSecondVariants.checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosSzekeres/Omission/CoupledSecondVariants.lean:248:0: 'ErdosSzekeres.Omission.CoupledSecondVariants.all_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3267/3301] Replayed ErdosSzekeres.Omission.CoupledCoreThird
+info: ErdosSzekeres/Omission/CoupledCoreThird.lean:3443:0: 'ErdosSzekeres.Omission.CoupledCoreThird.context_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3268/3301] Replayed ErdosSzekeres.Omission.CoupledThirdObstruction
+info: ErdosSzekeres/Omission/CoupledThirdObstruction.lean:51:0: 'ErdosSzekeres.Omission.CoupledCoreThird.exists_missing_state' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ErdosSzekeres/Omission/CoupledThirdObstruction.lean:52:0: 'ErdosSzekeres.Omission.CoupledCoreThird.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3270/3301] Replayed ErdosSzekeres.Omission.CoupledCoreFourth
+info: ErdosSzekeres/Omission/CoupledCoreFourth.lean:3183:0: 'ErdosSzekeres.Omission.CoupledCoreFourth.context_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3271/3301] Replayed ErdosSzekeres.Omission.CoupledFourthObstruction
+info: ErdosSzekeres/Omission/CoupledFourthObstruction.lean:51:0: 'ErdosSzekeres.Omission.CoupledCoreFourth.exists_missing_state' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ErdosSzekeres/Omission/CoupledFourthObstruction.lean:52:0: 'ErdosSzekeres.Omission.CoupledCoreFourth.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3272/3301] Replayed ErdosSzekeres.Omission.CoupledTemplateThird
+info: ErdosSzekeres/Omission/CoupledTemplateThird.lean:3319:0: 'ErdosSzekeres.Omission.CoupledTemplateThird.context_impossible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3273/3301] Replayed ErdosSzekeres.Omission.CoupledTemplateThirdGeometry
+info: ErdosSzekeres/Omission/CoupledTemplateThirdGeometry.lean:44:0: 'ErdosSzekeres.Omission.CoupledTemplateThird.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3275/3301] Replayed ErdosSzekeres.Omission.CoupledThirdVariants
+info: ErdosSzekeres/Omission/CoupledThirdVariants.lean:30:0: ErdosSzekeres.Omission.CoupledThirdVariants.checked002 : Function.Injective state002 ∧ Compatible state002
+info: ErdosSzekeres/Omission/CoupledThirdVariants.lean:49:0: 'ErdosSzekeres.Omission.CoupledThirdVariants.checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosSzekeres/Omission/CoupledThirdVariants.lean:50:0: 'ErdosSzekeres.Omission.CoupledThirdVariants.all_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3276/3301] Replayed ErdosSzekeres.Omission.CoupledTemplateFourth
+info: ErdosSzekeres/Omission/CoupledTemplateFourth.lean:3137:0: 'ErdosSzekeres.Omission.CoupledTemplateFourth.context_impossible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3277/3301] Replayed ErdosSzekeres.Omission.CoupledTemplateFourthGeometry
+info: ErdosSzekeres/Omission/CoupledTemplateFourthGeometry.lean:44:0: 'ErdosSzekeres.Omission.CoupledTemplateFourth.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3279/3301] Replayed ErdosSzekeres.Omission.CoupledFourthVariants
+info: ErdosSzekeres/Omission/CoupledFourthVariants.lean:93:0: ErdosSzekeres.Omission.CoupledFourthVariants.checked009 : Function.Injective state009 ∧ Compatible state009
+info: ErdosSzekeres/Omission/CoupledFourthVariants.lean:125:0: ErdosSzekeres.Omission.CoupledFourthVariants.checked019 : Function.Injective state019 ∧ Compatible state019
+info: ErdosSzekeres/Omission/CoupledFourthVariants.lean:139:0: ErdosSzekeres.Omission.CoupledFourthVariants.checked023 : Function.Injective state023 ∧ Compatible state023
+info: ErdosSzekeres/Omission/CoupledFourthVariants.lean:179:0: 'ErdosSzekeres.Omission.CoupledFourthVariants.checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosSzekeres/Omission/CoupledFourthVariants.lean:180:0: 'ErdosSzekeres.Omission.CoupledFourthVariants.all_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3280/3301] Replayed ErdosSzekeres.Omission.CoupledCoreFifth
+info: ErdosSzekeres/Omission/CoupledCoreFifth.lean:2546:0: 'ErdosSzekeres.Omission.CoupledCoreFifth.context_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3281/3301] Replayed ErdosSzekeres.Omission.CoupledFifthObstruction
+info: ErdosSzekeres/Omission/CoupledFifthObstruction.lean:51:0: 'ErdosSzekeres.Omission.CoupledCoreFifth.exists_missing_state' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ErdosSzekeres/Omission/CoupledFifthObstruction.lean:52:0: 'ErdosSzekeres.Omission.CoupledCoreFifth.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3282/3301] Replayed ErdosSzekeres.Omission.CoupledTemplateFifth
+info: ErdosSzekeres/Omission/CoupledTemplateFifth.lean:2450:0: 'ErdosSzekeres.Omission.CoupledTemplateFifth.context_impossible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3283/3301] Replayed ErdosSzekeres.Omission.CoupledTemplateFifthGeometry
+info: ErdosSzekeres/Omission/CoupledTemplateFifthGeometry.lean:44:0: 'ErdosSzekeres.Omission.CoupledTemplateFifth.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3285/3301] Replayed ErdosSzekeres.Omission.CoupledFifthVariants
+info: ErdosSzekeres/Omission/CoupledFifthVariants.lean:101:0: ErdosSzekeres.Omission.CoupledFifthVariants.checked009 : Function.Injective state009 ∧ Compatible state009
+info: ErdosSzekeres/Omission/CoupledFifthVariants.lean:133:0: ErdosSzekeres.Omission.CoupledFifthVariants.checked019 : Function.Injective state019 ∧ Compatible state019
+info: ErdosSzekeres/Omission/CoupledFifthVariants.lean:159:0: ErdosSzekeres.Omission.CoupledFifthVariants.checked027 : Function.Injective state027 ∧ Compatible state027
+info: ErdosSzekeres/Omission/CoupledFifthVariants.lean:203:0: 'ErdosSzekeres.Omission.CoupledFifthVariants.checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosSzekeres/Omission/CoupledFifthVariants.lean:204:0: 'ErdosSzekeres.Omission.CoupledFifthVariants.all_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3286/3301] Replayed ErdosSzekeres.Omission.CoupledCoreEleven
+info: ErdosSzekeres/Omission/CoupledCoreEleven.lean:3565:0: 'ErdosSzekeres.Omission.CoupledCoreEleven.context_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3287/3301] Replayed ErdosSzekeres.Omission.CoupledElevenObstruction
+info: ErdosSzekeres/Omission/CoupledElevenObstruction.lean:51:0: 'ErdosSzekeres.Omission.CoupledCoreEleven.exists_missing_state' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ErdosSzekeres/Omission/CoupledElevenObstruction.lean:52:0: 'ErdosSzekeres.Omission.CoupledCoreEleven.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3289/3301] Replayed ErdosSzekeres.Omission.CoupledCoreNine
+info: ErdosSzekeres/Omission/CoupledCoreNine.lean:1681:0: 'ErdosSzekeres.Omission.CoupledCoreNine.context_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3290/3301] Replayed ErdosSzekeres.Omission.CoupledNineObstruction
+info: ErdosSzekeres/Omission/CoupledNineObstruction.lean:51:0: 'ErdosSzekeres.Omission.CoupledCoreNine.exists_missing_state' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosSzekeres/Omission/CoupledNineObstruction.lean:52:0: 'ErdosSzekeres.Omission.CoupledCoreNine.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3292/3301] Replayed ErdosSzekeres.Omission.CoupledTemplateNine
+info: ErdosSzekeres/Omission/CoupledTemplateNine.lean:1619:0: 'ErdosSzekeres.Omission.CoupledTemplateNine.context_impossible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3293/3301] Replayed ErdosSzekeres.Omission.CoupledTemplateNineGeometry
+info: ErdosSzekeres/Omission/CoupledTemplateNineGeometry.lean:44:0: 'ErdosSzekeres.Omission.CoupledTemplateNine.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3295/3301] Replayed ErdosSzekeres.Omission.CoupledNineVariant
+info: ErdosSzekeres/Omission/CoupledNineVariant.lean:34:0: 'ErdosSzekeres.Omission.CoupledNineVariant.checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosSzekeres/Omission/CoupledNineVariant.lean:35:0: 'ErdosSzekeres.Omission.CoupledNineVariant.exists_missing_state' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ErdosSzekeres/Omission/CoupledNineVariant.lean:36:0: 'ErdosSzekeres.Omission.CoupledNineVariant.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3296/3301] Replayed ErdosSzekeres.VisibleEdgeInsertion
+info: ErdosSzekeres/VisibleEdgeInsertion.lean:103:0: 'ErdosSzekeres.VisibleEdgeInsertion.convexPosition_insert_of_retained_pair_supports' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ErdosSzekeres/VisibleEdgeInsertion.lean:104:0: 'ErdosSzekeres.VisibleEdgeInsertion.convexPosition_insert_of_one_visible_edge' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3297/3301] Replayed ErdosSzekeres.Omission.CoupledNineStructural
+info: ErdosSzekeres/Omission/CoupledNineStructural.lean:309:0: 'ErdosSzekeres.Omission.StructuralNine.context_impossible_structural' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ErdosSzekeres/Omission/CoupledNineStructural.lean:310:0: 'ErdosSzekeres.Omission.StructuralNine.states_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosSzekeres/Omission/CoupledNineStructural.lean:311:0: 'ErdosSzekeres.Omission.StructuralNine.exists_missing_state' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosSzekeres/Omission/CoupledNineStructural.lean:312:0: 'ErdosSzekeres.Omission.StructuralNine.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3298/3301] Replayed ErdosSzekeres.Omission.CoupledNineStructuralVariants
+info: ErdosSzekeres/Omission/CoupledNineStructuralVariants.lean:309:0: 'ErdosSzekeres.Omission.StructuralNine111.context_impossible_structural' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ErdosSzekeres/Omission/CoupledNineStructuralVariants.lean:310:0: 'ErdosSzekeres.Omission.StructuralNine111.states_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosSzekeres/Omission/CoupledNineStructuralVariants.lean:311:0: 'ErdosSzekeres.Omission.StructuralNine111.exists_missing_state' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ErdosSzekeres/Omission/CoupledNineStructuralVariants.lean:312:0: 'ErdosSzekeres.Omission.StructuralNine111.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosSzekeres/Omission/CoupledNineStructuralVariants.lean:621:0: 'ErdosSzekeres.Omission.StructuralNineShifted111.context_impossible_structural' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ErdosSzekeres/Omission/CoupledNineStructuralVariants.lean:622:0: 'ErdosSzekeres.Omission.StructuralNineShifted111.states_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ErdosSzekeres/Omission/CoupledNineStructuralVariants.lean:623:0: 'ErdosSzekeres.Omission.StructuralNineShifted111.exists_missing_state' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ErdosSzekeres/Omission/CoupledNineStructuralVariants.lean:624:0: 'ErdosSzekeres.Omission.StructuralNineShifted111.hole_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3299/3301] Built ErdosSzekeres.HMPT.FactorialSaving (2.5s)
+info: ErdosSzekeres/HMPT/FactorialSaving.lean:95:0: 'ErdosSzekeres.HMPT.factorial_ge_two_pow_three_mul_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosSzekeres/HMPT/FactorialSaving.lean:96:0: 'ErdosSzekeres.HMPT.factorial_log_ge_scale_denominator' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosSzekeres/HMPT/FactorialSaving.lean:97:0: 'ErdosSzekeres.HMPT.twoScaleFactorialExponent_lt_of_counting_dominates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: ErdosSzekeres/HMPT/FactorialSaving.lean:98:0: 'ErdosSzekeres.HMPT.self_lt_twoScaleExponent' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosSzekeres/HMPT/FactorialSaving.lean:99:0: 'ErdosSzekeres.HMPT.twoScaleFactorialExponent_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ErdosSzekeres/HMPT/FactorialSaving.lean:100:0: 'ErdosSzekeres.HMPT.integer_two_scale_bound_one_bit_smaller' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [3300/3301] Built ErdosSzekeres (1.6s)
+Build completed successfully (3301 jobs).

@@ -1,0 +1,32 @@
+label	kind	lean_name	file_line	note
+lg:lem:layer	lemma	-	-	written step; collects the opening steps of the Lean proofs of strict_nesting, lin_pos_of_peel and dist2_le_of_later; uses ll:thm:core-rot, ll:lem:inv-peel, ll:lem:hv, ll:lem:antitone
+lg:lem:rotfacts	lemma	-	-	written step; elementary facts about rotAbout (composition, rotation by 0 and 2pi, distance to the centre); the Lean proofs obtain the corresponding steps through the complex form of rotAbout, by direct computation or through minimal periods
+lg:lem:rot-iter	lemma	ErdosSzekeres.LayerLemma.rotAbout_iterate	LAYERLEAN/LayerLemma.lean:465	Lean-checked; axioms in LEANEXT/review/axioms.log; proof here via the matrix composition rule; Lean uses the complex form
+lg:cor:period	corollary	-	-	written step; rho^m = id for 0 < m (Lean uses the minimal period instead)
+lg:lem:orient-rot	lemma	ErdosSzekeres.LayerLemma.orient_rotAbout	LAYERLEAN/LayerLemma.lean:472	Lean-checked; axioms in LEANEXT/review/axioms.log; export label
+lg:lem:trig	lemma	ErdosSzekeres.LayerLemma.trig_layer	LAYERLEAN/LayerLemma.lean:480	Lean-checked; axioms in LAYERLEAN/logs/axioms.log and LEANEXT/review/axioms.log
+lg:lem:regular	lemma	ErdosSzekeres.LayerLemma.orient_regular_nonneg	LAYERLEAN/LayerLemma.lean:488	Lean-checked; axioms in LAYERLEAN/logs/axioms.log and LEANEXT/review/axioms.log; export label; its proof uses trig_layer (lg:lem:trig, stated just before)
+lg:def:lin	definition	ErdosSzekeres.LayerLemma.lin	LAYERLEAN/LayerLemma.lean:625	Lean definition
+lg:lem:lin-rot	lemma	ErdosSzekeres.LayerLemma.lin_rotAbout	LAYERLEAN/LayerLemma.lean:794	Lean-checked; axioms in LEANEXT/review/axioms.log
+lg:lem:lin-orbit	lemma	ErdosSzekeres.LayerLemma.lin_orbit_pos	LAYERLEAN/LayerLemma.lean:801	Lean-checked; axioms in LEANEXT/review/axioms.log
+lg:lem:next-prev	lemma	ErdosSzekeres.LayerLemma.orient_next_prev_pos	LAYERLEAN/LayerLemma.lean:830	Lean-checked; axioms in LEANEXT/review/axioms.log
+lg:lem:halfplane-convex	lemma	ErdosSzekeres.LayerLemma.convex_orient_nonneg	LAYERLEAN/LayerLemma.lean:516	Lean-checked; axioms in LEANEXT/review/axioms.log
+lg:def:dist2	definition	ErdosSzekeres.LayerLemma.dist2	LAYERLEAN/LayerLemma.lean:999	Lean definition
+lg:lem:disk	lemma	ErdosSzekeres.LayerLemma.convex_disk	LAYERLEAN/LayerLemma.lean:1002	Lean-checked; axioms in LAYERLEAN/logs/axioms.log and LEANEXT/review/axioms.log
+lg:thm:nesting	theorem	ErdosSzekeres.LayerLemma.strict_nesting	LAYERLEAN/LayerLemma.lean:529	Lean-checked; axioms in LAYERLEAN/logs/axioms.log and LEANEXT/review/axioms.log; export label; x != rho x proved here via lin_orbit_pos; Lean uses the minimal period
+lg:lem:centre	lemma	ErdosSzekeres.LayerLemma.centre_not_mem_of_even	LAYERLEAN/LayerLemma.lean:582	Lean-checked; axioms in LAYERLEAN/logs/axioms.log and LEANEXT/review/axioms.log; export label
+lg:thm:radius	theorem	ErdosSzekeres.LayerLemma.dist2_le_of_later	LAYERLEAN/LayerLemma.lean:1012	Lean-checked; axioms in LAYERLEAN/logs/axioms.log and LEANEXT/review/axioms.log; export label; weak inequality only, n <= n'
+lg:lem:cramer	lemma	-	-	written step; the planar identity behind orient_trans_halfplane, fan_step and the key identity of lin_pos_of_peel; Lean checks only these three instances, each by ring
+lg:lem:trans	lemma	ErdosSzekeres.LayerLemma.orient_trans_halfplane	LAYERLEAN/LayerLemma.lean:629	Lean-checked; axioms in LAYERLEAN/logs/axioms.log and LEANEXT/review/axioms.log; key identity derived here from lg:lem:cramer; Lean uses ring
+lg:lem:fan-step	lemma	ErdosSzekeres.LayerLemma.fan_step	LAYERLEAN/LayerLemma.lean:641	Lean-checked; axioms in LAYERLEAN/logs/axioms.log and LEANEXT/review/axioms.log; key identity derived here from lg:lem:cramer; Lean uses ring
+lg:lem:orient-lin	lemma	ErdosSzekeres.LayerLemma.orient_eq_lin	LAYERLEAN/LayerLemma.lean:653	Lean-checked; axioms in LEANEXT/review/axioms.log
+lg:lem:fan-pos	lemma	ErdosSzekeres.LayerLemma.fan_positive	LAYERLEAN/LayerLemma.lean:658	Lean-checked; axioms in LAYERLEAN/logs/axioms.log and LEANEXT/review/axioms.log
+lg:def:fanpt	definition	ErdosSzekeres.LayerLemma.fanPt	LAYERLEAN/LayerLemma.lean:694	Lean definition
+lg:thm:fan	theorem	ErdosSzekeres.LayerLemma.hasConvexNGon_of_fan	LAYERLEAN/LayerLemma.lean:700	Lean-checked; axioms in LAYERLEAN/logs/axioms.log and LEANEXT/review/axioms.log; export label; uses ErdosSzekeres.Suk.convexPosition_of_positive_triples (fd:lem:pos-triples); no general position
+lg:lem:halfplane	lemma	ErdosSzekeres.LayerLemma.lin_pos_of_peel	LAYERLEAN/LayerLemma.lean:864	Lean-checked; axioms in LAYERLEAN/logs/axioms.log and LEANEXT/review/axioms.log; export label; rho(p') = p proved here via lg:cor:period (rotAbout_iterate and rotation by 2pi); Lean uses the minimal period; key identity derived here from lg:lem:cramer; Lean uses ring
+lg:thm:chain	theorem	ErdosSzekeres.LayerLemma.chain_clauses_sound	LAYERLEAN/LayerLemma.lean:914	Lean-checked; axioms in LAYERLEAN/logs/axioms.log and LEANEXT/review/axioms.log; export label; Lean conclusion False; geometric statement only (that the encoders emit these clauses is not in Lean)
+lg:def:polar	definition	ErdosSzekeres.LayerLemma.polar	LAYERLEAN/LayerLemma.lean:932	Lean definition; export label
+lg:lem:polar	lemma	ErdosSzekeres.LayerLemma.orient_polar	LAYERLEAN/LayerLemma.lean:935	Lean-checked; axioms in LAYERLEAN/logs/axioms.log and LEANEXT/review/axioms.log; export label
+lg:lem:ruleA	lemma	ErdosSzekeres.LayerLemma.orient_polar_centre_inside	LAYERLEAN/LayerLemma.lean:943	Lean-checked; axioms in LAYERLEAN/logs/axioms.log and LEANEXT/review/axioms.log; export label
+lg:lem:sinadd	lemma	ErdosSzekeres.LayerLemma.sin_add_lt	LAYERLEAN/LayerLemma.lean:956	Lean-checked; axioms in LAYERLEAN/logs/axioms.log and LEANEXT/review/axioms.log; export label
+lg:lem:ruleB	lemma	ErdosSzekeres.LayerLemma.orient_polar_halfplane	LAYERLEAN/LayerLemma.lean:974	Lean-checked; axioms in LAYERLEAN/logs/axioms.log and LEANEXT/review/axioms.log; export label

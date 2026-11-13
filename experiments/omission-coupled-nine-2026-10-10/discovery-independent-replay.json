@@ -1,0 +1,454 @@
+{
+  "scope": "Independent exact SAT replay and deletion projection; solver-UNSAT claims still require kernel verification.",
+  "witness": ".cache/recovery-residual32/witness33-after-eleven.json",
+  "witness_sha256": "791e67a647f683f9973d70208b3b22f43155bd520564847328f501b57a3f0d7e",
+  "minimal_support": [
+    33,
+    43,
+    64,
+    68,
+    75,
+    87,
+    91,
+    99,
+    118
+  ],
+  "assignment_count": 14,
+  "assignments": [
+    {
+      "file": ".cache/recovery-residual32/core-next/coupled-large-sat-0c508647d16b.json",
+      "sha256": "53d6fbb93151e7396eda8cddac5b9f536bd421a371b412503253a2f16af6b0ea",
+      "support": [
+        33,
+        43,
+        64,
+        68,
+        75,
+        87,
+        91,
+        99
+      ],
+      "eight_subsets_checked": 1,
+      "complete": true
+    },
+    {
+      "file": ".cache/recovery-residual32/core-next/coupled-large-sat-0fd0ff6a1e81.json",
+      "sha256": "ffcdcd111896b050804fea11177901cb93eac71bfaee58c2f70349ded43e51d3",
+      "support": [
+        52,
+        62,
+        63,
+        67,
+        72,
+        77,
+        82,
+        87,
+        89,
+        90,
+        93,
+        99,
+        103,
+        114,
+        123,
+        130
+      ],
+      "eight_subsets_checked": 12870,
+      "complete": true
+    },
+    {
+      "file": ".cache/recovery-residual32/core-next/coupled-large-sat-124392b3c510.json",
+      "sha256": "732f621f5b19a4bc4c219588c1f75073253550dd00faf369e3b9011abeb28efa",
+      "support": [
+        52,
+        62,
+        63,
+        67,
+        72,
+        82,
+        87,
+        90,
+        93,
+        99,
+        103,
+        114,
+        123,
+        130
+      ],
+      "eight_subsets_checked": 3003,
+      "complete": true
+    },
+    {
+      "file": ".cache/recovery-residual32/core-next/coupled-large-sat-1a8e7a138e85.json",
+      "sha256": "f05b985f12f7d078e84a61b5637950ab63ab4ce4cf9484f58185824ab289abaa",
+      "support": [
+        33,
+        43,
+        64,
+        68,
+        75,
+        87,
+        99,
+        110,
+        118
+      ],
+      "eight_subsets_checked": 9,
+      "complete": true
+    },
+    {
+      "file": ".cache/recovery-residual32/core-next/coupled-large-sat-2d6eb92a7b43.json",
+      "sha256": "97c63097090dd2c22a32499c90c084fc37ac95725a7f7e815a67bb49c1ee279c",
+      "support": [
+        33,
+        43,
+        64,
+        68,
+        75,
+        87,
+        91,
+        110,
+        118
+      ],
+      "eight_subsets_checked": 9,
+      "complete": true
+    },
+    {
+      "file": ".cache/recovery-residual32/core-next/coupled-large-sat-52d34e4d4371.json",
+      "sha256": "0be4c9fc79b60a6bf9ea604b7da31319f52dc2268cb6b855a3932b3d4db6ce68",
+      "support": [
+        52,
+        62,
+        67,
+        77,
+        82,
+        89,
+        93,
+        103,
+        105,
+        114,
+        123,
+        130,
+        133,
+        142
+      ],
+      "eight_subsets_checked": 3003,
+      "complete": true
+    },
+    {
+      "file": ".cache/recovery-residual32/core-next/coupled-large-sat-6dfb49193ba8.json",
+      "sha256": "93bcf2034b51ac4481fccf8e3ddbf7645cdc3c84b738148268d694e307e910a6",
+      "support": [
+        33,
+        43,
+        64,
+        68,
+        77,
+        87,
+        89,
+        90,
+        91,
+        99,
+        110,
+        118
+      ],
+      "eight_subsets_checked": 495,
+      "complete": true
+    },
+    {
+      "file": ".cache/recovery-residual32/core-next/coupled-large-sat-a1c9217a5054.json",
+      "sha256": "b77c894aa5ce365a341231288a0fd75f61a2ccd8196d1eec390a851bd8f67352",
+      "support": [
+        33,
+        43,
+        64,
+        68,
+        75,
+        89,
+        90,
+        91,
+        99,
+        110,
+        118
+      ],
+      "eight_subsets_checked": 165,
+      "complete": true
+    },
+    {
+      "file": ".cache/recovery-residual32/core-next/coupled-large-sat-b53550e7e051.json",
+      "sha256": "22f64c2b2e6a962a257ada7e85098eef4daba7294c370188e5b5e944a896e45b",
+      "support": [
+        33,
+        43,
+        65,
+        68,
+        75,
+        77,
+        87,
+        89,
+        90,
+        91,
+        99,
+        110,
+        118
+      ],
+      "eight_subsets_checked": 1287,
+      "complete": true
+    },
+    {
+      "file": ".cache/recovery-residual32/core-next/coupled-large-sat-e85f086a8134.json",
+      "sha256": "6af12ac9625aa082bbe2d002f867257cc0e3240f0bb60687c477869dec8df6b9",
+      "support": [
+        63,
+        72,
+        82,
+        87,
+        90,
+        93,
+        99,
+        102,
+        103,
+        112,
+        123,
+        129,
+        130,
+        135
+      ],
+      "eight_subsets_checked": 3003,
+      "complete": true
+    },
+    {
+      "file": ".cache/recovery-residual32/core-next/coupled-large-sat-eb34b4dc218f.json",
+      "sha256": "5ff158bc5442bd26286c6f37bb54d70e04c82524bef9884cdc09f1f79cb8880e",
+      "support": [
+        52,
+        62,
+        63,
+        67,
+        72,
+        82,
+        87,
+        90,
+        93,
+        99,
+        103,
+        114,
+        123,
+        130,
+        133,
+        142
+      ],
+      "eight_subsets_checked": 12870,
+      "complete": true
+    },
+    {
+      "file": ".cache/recovery-residual32/core-next/coupled-large-sat-eb8b76159882.json",
+      "sha256": "1870d566f4454e2981f97e90b120afbbf666f802ba3b9e7a1a0df6354d11ec31",
+      "support": [
+        33,
+        43,
+        64,
+        75,
+        77,
+        87,
+        89,
+        90,
+        91,
+        99,
+        110,
+        118
+      ],
+      "eight_subsets_checked": 495,
+      "complete": true
+    },
+    {
+      "file": ".cache/recovery-residual32/core-next/coupled-large-sat-ee618fb83625.json",
+      "sha256": "178eaf101789487009e4002530ea44cb169fdcc133eda450bbb333c96e8712d8",
+      "support": [
+        33,
+        53,
+        64,
+        65,
+        68,
+        75,
+        77,
+        87,
+        89,
+        90,
+        91,
+        99,
+        110,
+        118
+      ],
+      "eight_subsets_checked": 3003,
+      "complete": true
+    },
+    {
+      "file": ".cache/recovery-residual32/core-next/coupled-large-sat-fe6cde3e4ea4.json",
+      "sha256": "372b1b74fdb68132b8e1a1c48b4a6537ba1a3612172ef0820bef62105e4df97c",
+      "support": [
+        43,
+        53,
+        64,
+        65,
+        68,
+        75,
+        77,
+        87,
+        89,
+        90,
+        91,
+        99,
+        110,
+        118
+      ],
+      "eight_subsets_checked": 3003,
+      "complete": true
+    }
+  ],
+  "all_single_deletions_exactly_replayed": true,
+  "deletion_projections": [
+    {
+      "removed": 33,
+      "target": [
+        43,
+        64,
+        68,
+        75,
+        87,
+        91,
+        99,
+        118
+      ],
+      "source_assignment": ".cache/recovery-residual32/core-next/coupled-large-sat-fe6cde3e4ea4.json",
+      "eight_subsets_checked": 1,
+      "complete": true
+    },
+    {
+      "removed": 43,
+      "target": [
+        33,
+        64,
+        68,
+        75,
+        87,
+        91,
+        99,
+        118
+      ],
+      "source_assignment": ".cache/recovery-residual32/core-next/coupled-large-sat-ee618fb83625.json",
+      "eight_subsets_checked": 1,
+      "complete": true
+    },
+    {
+      "removed": 64,
+      "target": [
+        33,
+        43,
+        68,
+        75,
+        87,
+        91,
+        99,
+        118
+      ],
+      "source_assignment": ".cache/recovery-residual32/core-next/coupled-large-sat-b53550e7e051.json",
+      "eight_subsets_checked": 1,
+      "complete": true
+    },
+    {
+      "removed": 68,
+      "target": [
+        33,
+        43,
+        64,
+        75,
+        87,
+        91,
+        99,
+        118
+      ],
+      "source_assignment": ".cache/recovery-residual32/core-next/coupled-large-sat-eb8b76159882.json",
+      "eight_subsets_checked": 1,
+      "complete": true
+    },
+    {
+      "removed": 75,
+      "target": [
+        33,
+        43,
+        64,
+        68,
+        87,
+        91,
+        99,
+        118
+      ],
+      "source_assignment": ".cache/recovery-residual32/core-next/coupled-large-sat-6dfb49193ba8.json",
+      "eight_subsets_checked": 1,
+      "complete": true
+    },
+    {
+      "removed": 87,
+      "target": [
+        33,
+        43,
+        64,
+        68,
+        75,
+        91,
+        99,
+        118
+      ],
+      "source_assignment": ".cache/recovery-residual32/core-next/coupled-large-sat-a1c9217a5054.json",
+      "eight_subsets_checked": 1,
+      "complete": true
+    },
+    {
+      "removed": 91,
+      "target": [
+        33,
+        43,
+        64,
+        68,
+        75,
+        87,
+        99,
+        118
+      ],
+      "source_assignment": ".cache/recovery-residual32/core-next/coupled-large-sat-1a8e7a138e85.json",
+      "eight_subsets_checked": 1,
+      "complete": true
+    },
+    {
+      "removed": 99,
+      "target": [
+        33,
+        43,
+        64,
+        68,
+        75,
+        87,
+        91,
+        118
+      ],
+      "source_assignment": ".cache/recovery-residual32/core-next/coupled-large-sat-2d6eb92a7b43.json",
+      "eight_subsets_checked": 1,
+      "complete": true
+    },
+    {
+      "removed": 118,
+      "target": [
+        33,
+        43,
+        64,
+        68,
+        75,
+        87,
+        91,
+        99
+      ],
+      "source_assignment": ".cache/recovery-residual32/core-next/coupled-large-sat-0c508647d16b.json",
+      "eight_subsets_checked": 1,
+      "complete": true
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+c --- [ banner ] -------------------------------------------------------------
+c 
+c CaDiCaL SAT Solver
+c Copyright (c) 2016-2026
+c A. Biere, M. Fleury, N. Froleyks, K. Fazekas, F. Pollitt, T. Faller
+c JKU Linz, University of Freiburg, TU Wien
+c 
+c Version 3.0.1 c60730422e758ef1cebe7aeddf2dda31c996bf04
+c Apple clang version 21.0.0 (clang-2100.1.1.101) -Wall -Wextra -O3 -DNDEBUG -DNCLOSEFROM
+c [build date and host line removed]
+c 
+c --- [ limit ] --------------------------------------------------------------
+c 
+c setting time limit to 3600 seconds real time (due to '-t 3600')
+c 
+c --- [ proof tracing ] ------------------------------------------------------
+c 
+c opening file to write 'c4_32.lrat'
+c writing non-binary proof trace to 'c4_32.lrat'
+c 
+c --- [ parsing input ] ------------------------------------------------------
+c 
+c reading DIMACS file from 'r4_t8k7.cnf'
+c opening file to read 'r4_t8k7.cnf'
+c found 'p cnf 287240 6075339' header
+c parsed 6075339 clauses in 1.06 seconds process time
+c 
+c --- [ options ] ------------------------------------------------------------
+c 
+c   --binary=false                 (different from default 'true')
+c   --lrat=true                    (different from default 'false')
+c 
+c --- [ solving ] ------------------------------------------------------------
+c 
+c time measured in process time since initialization
+c 
+c  seconds  reduction conflicts       size tier2         variables
+c         MB    restarts   redundant    glue  trail            remaining
+c          level     rate       size/glu tier1   irredundant
+c 
+c *  1.06  0  0 0   0  0    0    0 0.0 0 0 2 6  0% 6074608 286832 100%
+c )  1.25  0  0 0   0  0    0    0 0.0 0 0 2 6  0% 6074608 286832 100%
+c {  1.36  0  0 0   0  0    0    0 0.0 0 0 2 6  0% 6074608 286832 100%
+c -  1.92  0 37700 1  46 1629  300  136 2.7 27 10 2 6 29% 2894647 286832 100%
+c }  2.17  0 11627 1 125 561 1001  768 2.7 30 11 2 6 10% 2894647 286832 100%
+c [  2.17  0  0 1 125  0 1001  768 0.0 0 0 2 6  0% 2894647 286832 100%
+c O  2.18  0 116 1 125 117 1002  769 3.8 34 9 2 6  3% 2894647 286832 100%
+c -  2.51  0 138 2 125  4 1365  494 3.5 77 22 2 6  4% 2894647 286832 100%
+c ]  2.78  0 103 2 126  3 2100 1217 3.9 96 24 2 6  4% 2894647 286832 100%
+c {  2.78  0 11627 2 126 561 2100 1217 2.7 30 11 2 6 10% 2894647 286832 100%
+c O  3.05  0 6142 2 193 302 3003 2037 3.3 37 11 2 6  6% 2894647 286832 100%
+c -  3.38  0 4659 3 235 231 3637 1111 3.3 38 11 2 6  5% 2894647 286832 100%
+c 2  3.71  0 3416 3 304 171 4606 2012 3.4 39 12 2 6  4% 2881207 286832 100%
+c p  3.76  0 3416 3 304 171 4606 2021 3.4 39 12 2 6  4% 2881207 286832 100%
+c c  4.37  0 3416 3 304 171 4606 2021 3.4 39 12 2 6  4% 2833421 286832 100%
+c d  4.47  0 3416 3 304 171 4606 2013 3.4 39 12 2 6  4% 2833413 286828 100%
+c 2  4.53  0 3416 3 304 171 4606 2013 3.4 39 12 2 6  4% 2833397 286828 100%
+c t  4.92  0 3416 3 304 171 4606 2013 3.4 39 12 2 6  4% 2832835 286828 100%
+c #  5.33  0 2485 3 369 125 6004 3293 3.5 40 12 8 15  4% 2832835 286828 100%
+c -  5.83  0 2021 4 429 101 7346 4081 3.6 42 12 8 15  3% 2832835 286828 100%
+c 
+c  seconds    reductions conflicts       size   tier2          variables
+c         MB      restarts    redundant     glue    trail            remaining
+c           level       rate       size/glue  tier1    irredundant
+c 
+c d  5.92  0 2021 4 429 101 7346 4038 3.6 42 12 8 15  3% 2828328 286821 100%
+c t  6.52  0 2021 4 429 101 7346 4038 3.6 42 12 8 15  3% 2828328 286821 100%
+c }  6.55  0 2006 4 438 101 7392 4083 3.6 42 12 8 15  3% 2828328 286821 100%
+c [  6.55  0 103 4 438  3 7392 4083 3.9 96 24 2 6  4% 2828328 286821 100%
+c s  7.03  0 57 4 439  3 8811 5383 4.5 73 16 2 6  3% 2681777 286821 100%
+c t  7.11  0 57 4 439  3 8811 5381 4.5 73 16 2 6  3% 2671197 286821 100%
+c e 16.78  0 57 4 439  3 8811 2338 4.5 73 16 2 6  3% 2467671 83295 29%
+c I 17.38  0 49 4 439  3 10005 3454 4.3 69 16 8 15  5% 2467671 83295 29%
+c - 18.05  0 88 5 441  4 12598 5089 4.7 64 14 8 15  6% 2467671 83295 29%
+c 2 18.06  0 88 5 441  4 12598 5088 4.7 64 14 8 15  6% 2467671 83295 29%
+c d 18.13  0 88 5 441  4 12598 5052 4.7 64 14 8 15  6% 2462070 83286 29%
+c 2 18.16  0 88 5 441  4 12598 5052 4.7 64 14 8 15  6% 2462026 83286 29%
+c ] 18.63  0 3303 5 442  8 14394 6641 4.1 56 14 8 14 20% 2462026 83286 29%
+c 1 18.67  0 3303 5 442  8 14394 6641 4.1 56 14 8 14 20% 2462026 83286 29%
+c 
+c --- [ closing proof ] ------------------------------------------------------
+c 
+c LRAT proof file 'c4_32.lrat' closed
+c LRAT 6289196 added clauses 38.86%
+c LRAT 9895460 deleted clauses 61.14%
+c LRAT 1030712086 bytes (982.96 MB)
+c 
+c --- [ result ] -------------------------------------------------------------
+c 
+s SATISFIABLE
+c 
+c --- [ run-time profiling ] -------------------------------------------------
+c 
+c process time taken by individual solving procedures
+c (percentage relative to process time for solving)
+c 
+c        12.07   68.52% simplify
+c         9.66   54.84% elim
+c         5.50   31.20% search
+c         2.68   15.24% unstable
+c         2.50   14.20% stable
+c         1.14    6.45% congruence
+c         1.06    5.99% parse
+c         0.68    3.88% sweep
+c         0.31    1.76% lucky
+c         0.07    0.40% subsume
+c         0.03    0.19% backbone
+c         0.01    0.08% probe
+c   =================================
+c        17.62   94.27% solve
+c 
+c last line shows process time for solving
+c (percentage relative to total process time)
+c 
+c --- [ statistics ] ---------------------------------------------------------
+c 
+c chronological:              7428        51.60 %  of conflicts
+c conflicts:                 14394       816.95    per second
+c backbone:                1977311       688.38 %  of vars
+c decisions:                727042     41264.11    per second
+c eliminated:               203526        70.86 %  of all variables
+c fixed:                       408         0.14 %  of all variables
+c learned:                   13513        93.88 %  per conflict
+c learned_lits:             974045       100.00 %  learned literals
+c minimized:                     0         0.00 %  learned literals
+c shrunken:                 109840        11.28 %  learned literals
+c minishrunken:             185476        19.04 %  learned literals
+c otfs:                        342         2.38 %  of conflict
+c propagations:           10249189         0.58 M  per second
+c reduced:                    3362        23.36 %  per conflict
+c rephased:                      4      3598.50    interval
+c restarts:                    442        32.57    interval
+c stabilizing:                   2        55.54 %  of conflicts
+c substituted:                  20         0.01 %  of all variables
+c subsumed:                 209634         1.83 %  of all clauses
+c strengthened:             603807         5.28 %  of all clauses
+c ticks:                 420456546        41.55    propagation
+c weakened:                4915624        15.74    average size
+c congruence:                    2      7197.00    interval
+c 
+c seconds are measured in process time for solving
+c 
+c --- [ glue usage ] ---------------------------------------------------------
+c 
+c focused glue 8 used 288 clauses 8.017% accumulated 53.89% tier1
+c focused glue 9 used 249 clauses 6.932% accumulated 60.82%
+c focused glue 10-13 used 632 clauses 17.59% accumulated 78.42%
+c focused glue 14 used 101 clauses 2.811% accumulated 81.23%
+c focused glue 15 used 92 clauses 2.561% accumulated 83.79% tier2
+c 
+c stable glue 8 used 1014 clauses 8.513% accumulated 53.47% tier1
+c stable glue 9 used 873 clauses 7.329% accumulated 60.80%
+c stable glue 10-12 used 1659 clauses 13.92% accumulated 74.73%
+c stable glue 13 used 431 clauses 3.618% accumulated 78.35%
+c stable glue 14 used 414 clauses 3.475% accumulated 81.83% tier2
+c 
+c 
+c --- [ resources ] ----------------------------------------------------------
+c 
+c total process time since initialization:        18.69    seconds
+c total real time since initialization:           18.72    seconds
+c maximum resident set size of process:         4347.22    MB
+c 
+c --- [ shutting down ] ------------------------------------------------------
+c 
+c exit 10

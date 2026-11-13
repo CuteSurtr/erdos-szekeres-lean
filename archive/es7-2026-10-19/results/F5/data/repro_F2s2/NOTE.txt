@@ -1,0 +1,6 @@
+Step 2 reproduction (02:40 UTC): F2/s2 pipeline.sh rerun with this session's rebuilt CaDiCaL
+(git master), sat.c, ext_solve, brute26 on F2/s2's two realized sets (F22_106, F22_162).
+post26.log, brute26.txt, brute32.txt: byte-identical to F2/s2/data/run1.
+build32.log, sat32.log: identical verdicts (6-cap deep below, lcs 6, 109,337 faces = Euler,
+0 bad candidates, ext_solve 33/33 UNSAT); only the compressed realizations (time-budgeted
+realizer) and hence sat.c cache counters differ.

@@ -1,0 +1,7 @@
+date: 2026-11-06T15:46:43+09:00 (M2 step, final exe); load: 30.00 30.45 31.45
+command: systemd-run --user --scope -q -p MemoryMax=8G -p MemorySwapMax=0 nice -n 10 /usr/bin/time .lake/build/bin/encb_dimacs twin-profile M K T
+exe sha256: e9454996f7f8a21f479cc4a2540d18f2f55f6445fbd36c642d44a7f81fe96a59
+(6,8,9) profile ms: diagCoded 117, genCoded 4745, allCodesOf 290, numberMap 1, renumber 242, bodyL 757
+  total 6.16 s wall, 6.07 s user, 211096 KB max RSS
+(7,8,10) profile ms: diagCoded 1300, genCoded 13435, allCodesOf 728, numberMap 2, renumber 712, bodyL 2119
+  total 18.30 s wall, 18.14 s user, 552216 KB max RSS

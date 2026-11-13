@@ -1,0 +1,9 @@
+# V3C: third acceptance pass of mirror sub-case (ii)
+
+The second pass (`results/V3B/`) checks the 25032 leaves of the manifest at commit 066eaa9 that had no VERIFIED record then. The waves kept closing cubes after that commit. This pass checks the leaves they found between 066eaa9 and fdd0393 (2026-10-20 12:49 UTC).
+
+`worklist.jsonl` (12380 records, sha256 aeb4a3f19a5979e6d8fb9c4bc68b303de1332ea2a2677e1d4f69833fb6025abc) was made by `scripts/build_worklist.py REPO fdd039399 066eaa9 OUT`:
+- At each of the two commits, the wave directories were exported with `git archive` and the manifest was built exactly as V3B step 2 does it, with `verify/v3/` at bdf319c: `v3_jsonl_leaves.py` on every `results/WAVEk` that has leaves into `jtreek`, then `v3_manifest.py` over the pairs in order. At 066eaa9 this reproduces the V3B manifest (35153 lines, sha256 22b6f6a782cd2b2e6319c61c7bc7029032d10aa5fd583dcfbba47ec627e1c549, the value every V3B machine recorded). At fdd0393 the manifest has 47533 lines (sha256 34676b0c112438285b15a2cdb63291b9e63b242a98ac84b38d1d0d9c642afbfb; WAVE4 had no leaves yet), with leaves in all 278 wave cases.
+- The work list is every record of the fdd0393 manifest whose key (case, `json.dumps(lits)`) is not in the 066eaa9 manifest and has no VERIFIED leaf record in `results/V3T/**/*.jsonl` or `results/V3[ABC]/*/out.jsonl` at fdd0393 (21220 VERIFIED keys there). All 12380 new leaves qualified. idx is renumbered 0..12379; the other fields are the manifest's.
+
+Leaves of the 066eaa9 manifest stay with V3B (all 16 shards are running). Leaves found after fdd0393 (WAVE4 helpers and the last wave-2/3 runs), and any leaf a V3B or V3C machine leaves unchecked, go to a later pass. The final acceptance table re-derives the manifest from the wave directories and needs a VERIFIED record for every leaf and a VERIFIED cover for every case, so this list decides only which leaves are checked here.

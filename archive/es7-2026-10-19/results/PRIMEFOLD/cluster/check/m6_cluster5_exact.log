@@ -1,0 +1,8 @@
+# python3 -I m6_cluster5.py m6.signs; ../../check64/cvxenum m6.signs   (cvxenum compiled from ../../check64/cvxenum.c)
+m=6 cluster of 5 points: F11=1 g=[1, 1, 2, 2, 3] h=[1, 2, 2, 3, 3] (i)=True formula max=6
+e = 1/1000000000: |S_e| = 30, exact mc(S_e) = 6
+e = 1/10000000000000: |S_e| = 30, exact mc(S_e) = 6
+e = 1/100000000000000000: |S_e| = 30, exact mc(S_e) = 6
+wrote the signs of S_e (e = 1/10^13) to m6.signs
+n=30 convex k-subsets: 3:4060 4:18093 5:38070 6:29957 7:0
+largest convex subset: 6

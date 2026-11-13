@@ -1,0 +1,122 @@
+== mr34_def: archived CNF m_t17k7.cnf + proof mr34_def.lrat
+  own fingerprint: CNF p cnf 838032 16642456, 16642456 clauses, max var 838032, 620842936 bytes; proof 4373364691 bytes, additions 25217810, ids 16642457..41860266, non-increasing 0, empty 1 (id 41860266, last line empty_addition), deleted ids 36974924 in 9220151 lines, max live 16642786, malformed 0
+    OK  CNF header clauses == clauses counted: 16642456 vs 16642456
+    OK  first addition id == C+1: 16642457 vs 16642457
+    OK  max addition id == C + additions: 41860266 vs 41860266
+  recorded hashes: CNF sha b175eac0e7c000f5.. sha256.txt=b175eac0e7c000f5.. in CERTIFICATES.md=True; proof sha 98e4d02a8f1e1e30.. sha256.txt=98e4d02a8f1e1e30.. in CERTIFICATES.md=True
+    OK  CNF sha == sha256.txt: b175eac0e7c000f533506ea6931774f4969a0e0415011ba0c4fb47e7f09a6c5b vs b175eac0e7c000f533506ea6931774f4969a0e0415011ba0c4fb47e7f09a6c5b
+    OK  proof sha == sha256.txt: 98e4d02a8f1e1e301603b9672dfe2c4e61e6659f14c2b5edc9e74bd31d4c6537 vs 98e4d02a8f1e1e301603b9672dfe2c4e61e6659f14c2b5edc9e74bd31d4c6537
+    OK  CNF sha in CERTIFICATES.md: True vs True
+    OK  proof sha in CERTIFICATES.md: True vs True
+  CaDiCaL log SYMZ/logs/cad_mr34_def.out: 'm_t17k7.cnf' -> 'mr34_def.lrat', UNSATISFIABLE
+    OK  cadical header V: 838032 vs 838032
+    OK  cadical header C: 16642456 vs 16642456
+    OK  cadical LRAT added == additions: 25217810 vs 25217810
+    OK  cadical LRAT deleted == deleted ids: 36974924 vs 36974924
+    OK  cadical LRAT bytes == proof bytes: 4373364691 vs 4373364691
+  lrat-check log SYMZ/logs/chk_mr34_def_lrat-check.out: verified=True exit=0
+    OK  V: 838032 vs 838032
+    OK  C: 16642456 vs 16642456
+    OK  Added == C + additions: 41860266 vs 41860266
+    OK  Deleted == deleted ids: 36974924 vs 36974924
+    OK  Max live == own max live: 16642786 vs 16642786
+  lrat-check log SYMZ/logs/chk_mr34_final_lrat-check.out: verified=True exit=0
+    OK  V: 838032 vs 838032
+    OK  C: 16642456 vs 16642456
+    OK  Added == C + additions: 41860266 vs 41860266
+    OK  Deleted == deleted ids: 36974924 vs 36974924
+    OK  Max live == own max live: 16642786 vs 16642786
+  cake_lpr log SYMZ/logs/chk_mr34_def_cake_lpr.out: non-resource lines ['s VERIFIED UNSAT']; file names present []; sha-like strings 0; max RSS 16338 MiB, peak footprint 30328 MiB
+  cake_lpr log SYMZ/logs/chk_mr34_final_cake_lpr.out: non-resource lines ['s VERIFIED UNSAT']; file names present []; sha-like strings 0; max RSS 19434 MiB, peak footprint 30328 MiB
+== m33_def: archived CNF m_t16k7a1.cnf + proof m33_def.lrat
+  own fingerprint: CNF p cnf 695928 14080656, 14080656 clauses, max var 695928, 518452724 bytes; proof 4120793950 bytes, additions 21430210, ids 14080657..35510866, non-increasing 0, empty 1 (id 35510866, last line empty_addition), deleted ids 32165860 in 8203453 lines, max live 14080967, malformed 0
+    OK  CNF header clauses == clauses counted: 14080656 vs 14080656
+    OK  first addition id == C+1: 14080657 vs 14080657
+    OK  max addition id == C + additions: 35510866 vs 35510866
+  recorded hashes: CNF sha e45464edd52e06a3.. sha256.txt=e45464edd52e06a3.. in CERTIFICATES.md=True; proof sha e1b2689d071a0b21.. sha256.txt=e1b2689d071a0b21.. in CERTIFICATES.md=True
+    OK  CNF sha == sha256.txt: e45464edd52e06a31de4bbb664f444789540bad19039989679d76f7173739d02 vs e45464edd52e06a31de4bbb664f444789540bad19039989679d76f7173739d02
+    OK  proof sha == sha256.txt: e1b2689d071a0b218f2c9be13a813f48bd3ea0fcd1e2fc1476a2549523ede1e4 vs e1b2689d071a0b218f2c9be13a813f48bd3ea0fcd1e2fc1476a2549523ede1e4
+    OK  CNF sha in CERTIFICATES.md: True vs True
+    OK  proof sha in CERTIFICATES.md: True vs True
+  CaDiCaL log SYMZ/logs/cad_m33_def.out: 'm_t16k7a1.cnf' -> 'm33_def.lrat', UNSATISFIABLE
+    OK  cadical header V: 695928 vs 695928
+    OK  cadical header C: 14080656 vs 14080656
+    OK  cadical LRAT added == additions: 21430210 vs 21430210
+    OK  cadical LRAT deleted == deleted ids: 32165860 vs 32165860
+    OK  cadical LRAT bytes == proof bytes: 4120793950 vs 4120793950
+  lrat-check log SYMZ/logs/chk_m33_def_lrat-check.out: verified=True exit=0
+    OK  V: 695928 vs 695928
+    OK  C: 14080656 vs 14080656
+    OK  Added == C + additions: 35510866 vs 35510866
+    OK  Deleted == deleted ids: 32165860 vs 32165860
+    OK  Max live == own max live: 14080967 vs 14080967
+  cake_lpr log SYMZ/logs/chk_m33_def_cake_lpr.out: non-resource lines ['s VERIFIED UNSAT']; file names present []; sha-like strings 0; max RSS 16853 MiB, peak footprint 30260 MiB
+== P1: archived CNF c5_n35.cnf + proof P1.lrat
+  own fingerprint: CNF p cnf 401464 7923909, 7923909 clauses, max var 401464, 283069260 bytes; proof 2793662637 bytes, additions 14119432, ids 7923910..22043341, non-increasing 0, empty 1 (id 22043341, last line empty_addition), deleted ids 18307782 in 5718044 lines, max live 7923909, malformed 0
+    OK  CNF header clauses == clauses counted: 7923909 vs 7923909
+    OK  first addition id == C+1: 7923910 vs 7923910
+    OK  max addition id == C + additions: 22043341 vs 22043341
+  recorded hashes: CNF sha ead55228944c920a.. sha256.txt=ead55228944c920a.. in CERTIFICATES.md=True; proof sha eff67c0f4e9b3f29.. sha256.txt=eff67c0f4e9b3f29.. in CERTIFICATES.md=True
+    OK  CNF sha == sha256.txt: ead55228944c920a9ab26eaab98ae0f9963ecf69f651323a664e813715450dbb vs ead55228944c920a9ab26eaab98ae0f9963ecf69f651323a664e813715450dbb
+    OK  proof sha == sha256.txt: eff67c0f4e9b3f29d676b2d7fc5c50700a09923dad71050950ae68b9e6ee9484 vs eff67c0f4e9b3f29d676b2d7fc5c50700a09923dad71050950ae68b9e6ee9484
+    OK  CNF sha in CERTIFICATES.md: True vs True
+    OK  proof sha in CERTIFICATES.md: True vs True
+  CaDiCaL log SYM5/cad_P1.out: 'c5_n35.cnf' -> 'P1.lrat', UNSATISFIABLE
+    OK  cadical header V: 401464 vs 401464
+    OK  cadical header C: 7923909 vs 7923909
+    OK  cadical LRAT added == additions: 14119432 vs 14119432
+    OK  cadical LRAT deleted == deleted ids: 18307782 vs 18307782
+    OK  cadical LRAT bytes == proof bytes: 2793662637 vs 2793662637
+  lrat-check log SYM5/chk_P1_lrat-check.out: verified=True exit=0
+    OK  V: 401464 vs 401464
+    OK  C: 7923909 vs 7923909
+    OK  Added == C + additions: 22043341 vs 22043341
+    OK  Deleted == deleted ids: 18307782 vs 18307782
+    OK  Max live == own max live: 7923909 vs 7923909
+  cake_lpr log SYM5/chk_P1_cake_lpr_heap12000.out: non-resource lines ['CakeML heap space exhausted.']; file names present []; sha-like strings 0; max RSS 4099 MiB, peak footprint 4100 MiB
+  cake_lpr log SYM5/chk_P1_cake_lpr_heap30000.out: non-resource lines ['s VERIFIED UNSAT']; file names present []; sha-like strings 0; max RSS 30003 MiB, peak footprint 30020 MiB
+== L1: archived CNF c5_n35L.cnf + proof L1.lrat
+  own fingerprint: CNF p cnf 401464 7924027, 7924027 clauses, max var 401464, 283069961 bytes; proof 1812130098 bytes, additions 10824961, ids 7924028..18748988, non-increasing 0, empty 1 (id 18748988, last line empty_addition), deleted ids 15150487 in 3080056 lines, max live 7924027, malformed 0
+    OK  CNF header clauses == clauses counted: 7924027 vs 7924027
+    OK  first addition id == C+1: 7924028 vs 7924028
+    OK  max addition id == C + additions: 18748988 vs 18748988
+  recorded hashes: CNF sha 90dea1cf87d3d850.. sha256.txt=90dea1cf87d3d850.. in CERTIFICATES.md=True; proof sha 8625b321d58ed231.. sha256.txt=8625b321d58ed231.. in CERTIFICATES.md=True
+    OK  CNF sha == sha256.txt: 90dea1cf87d3d8500dffff9d9741e84abc9babe4e1ac4e32035448ce7c0668a8 vs 90dea1cf87d3d8500dffff9d9741e84abc9babe4e1ac4e32035448ce7c0668a8
+    OK  proof sha == sha256.txt: 8625b321d58ed231924ffd22ffd730fde91314c898b835ea182848c9100d39f4 vs 8625b321d58ed231924ffd22ffd730fde91314c898b835ea182848c9100d39f4
+    OK  CNF sha in CERTIFICATES.md: True vs True
+    OK  proof sha in CERTIFICATES.md: True vs True
+  CaDiCaL log SYM5/cad_L1.out: 'c5_n35L.cnf' -> 'L1.lrat', UNSATISFIABLE
+    OK  cadical header V: 401464 vs 401464
+    OK  cadical header C: 7924027 vs 7924027
+    OK  cadical LRAT added == additions: 10824961 vs 10824961
+    OK  cadical LRAT deleted == deleted ids: 15150487 vs 15150487
+    OK  cadical LRAT bytes == proof bytes: 1812130098 vs 1812130098
+  lrat-check log SYM5/chk_L1_lrat-check.out: verified=True exit=0
+    OK  V: 401464 vs 401464
+    OK  C: 7924027 vs 7924027
+    OK  Added == C + additions: 18748988 vs 18748988
+    OK  Deleted == deleted ids: 15150487 vs 15150487
+    OK  Max live == own max live: 7924027 vs 7924027
+  cake_lpr log SYM5/chk_L1_cake_lpr.out: non-resource lines ['s VERIFIED UNSAT']; file names present []; sha-like strings 0; max RSS 4099 MiB, peak footprint 4101 MiB
+== hc34_cover: archived CNF cover.cnf + proof hc34_coverL.lrat
+  own fingerprint: CNF p cnf 838032 16653472, 16653472 clauses, max var 838032, 621058015 bytes; proof 3833946210 bytes, additions 21701334, ids 16653473..38354806, non-increasing 0, empty 1 (id 38354806, last line empty_addition), deleted ids 32114856 in 5810536 lines, max live 16654288, malformed 0
+    OK  CNF header clauses == clauses counted: 16653472 vs 16653472
+    OK  first addition id == C+1: 16653473 vs 16653473
+    OK  max addition id == C + additions: 38354806 vs 38354806
+  recorded hashes: CNF sha bb60facb223788fb.. sha256.txt=n/a.. in CERTIFICATES.md=True; proof sha 3255391a5fd28472.. sha256.txt=n/a.. in CERTIFICATES.md=True
+    OK  CNF sha in CERTIFICATES.md: True vs True
+    OK  proof sha in CERTIFICATES.md: True vs True
+  CaDiCaL log C2FINAL/evidence/central34-cover/cad_hc34_coverL.out: 'hc34/cover.cnf' -> 'hc34_coverL.lrat', UNSATISFIABLE
+    OK  cadical header V: 838032 vs 838032
+    OK  cadical header C: 16653472 vs 16653472
+    OK  cadical LRAT added == additions: 21701334 vs 21701334
+    OK  cadical LRAT deleted == deleted ids: 32114856 vs 32114856
+    OK  cadical LRAT bytes == proof bytes: 3833946210 vs 3833946210
+  lrat-check log C2FINAL/evidence/central34-cover/chk_hc34_cover_lrat-check.out: verified=True exit=0
+    OK  V: 838032 vs 838032
+    OK  C: 16653472 vs 16653472
+    OK  Added == C + additions: 38354806 vs 38354806
+    OK  Deleted == deleted ids: 32114856 vs 32114856
+    OK  Max live == own max live: 16654288 vs 16654288
+  cake_lpr log C2FINAL/evidence/central34-cover/chk_hc34_cover_cake_lpr.out: non-resource lines ['s VERIFIED UNSAT']; file names present []; sha-like strings 0; max RSS 14147 MiB, peak footprint 20030 MiB
+ALL NUMERIC CHECKS OK

@@ -1,0 +1,11 @@
+22:03:03 base built: t=15, 35105 triple vars
+22:03:22 phase s_0to14: th(deg)=[0.0, 4.1925, 4.3168, 4.4161, 4.4942, 4.6619, 4.9529, 5.4278, 5.4808, 5.5853, 6.0154, 6.4311, 6.4804, 7.1874, 7.3977]
+22:03:22   forced 22505, free 12600, kept rule clauses 525, threshold 1155, chain 12492145, conflicts 0, build 19.5 s
+22:03:22   guided: 12600 hint assumptions
+22:03:38   phase-SAT (first solve) 15.8 s
+22:03:38   relax 1: core 171, 12429 assumptions left
+22:03:39   relax 21: core 188, 9945 assumptions left
+22:03:43   relax 41: core 1414, 3914 assumptions left
+22:04:57   TIMEOUT after 43 iterations, 0 cuts, 94.7 s
+22:04:57 RESULT real/sub/s_0to14.json ('TIMEOUT', 43, 0)
+22:04:57 done

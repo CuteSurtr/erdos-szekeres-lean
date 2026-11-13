@@ -1,0 +1,47 @@
+{
+  "original_node": 4,
+  "missing": [
+    54
+  ],
+  "occupied": [
+    43,
+    67
+  ],
+  "scope": "Conditional exact integer weighted tree; no Lean verification claimed",
+  "source": ".cache/residual32-resume-2026-10-10-b/source.json",
+  "source_sha256": "f03eebb1d20eae3bd25dbb5024eaacdfdcc5bcd8ed964d190bdfa59c73aeb909",
+  "seed_tree": "experiments/omission-residual32-case4-2026-10-10/seed.json",
+  "seed_tree_sha256": "46e80e47297c433c5dc6ae26e36c36a91db75ce9e16ea30ecbf48a29aa506cff",
+  "script_sha256": "4cf72e6416f945aee64238aed702bc82223ac681e501b1ad5d1da9e998faf22c",
+  "solver": "HiGHS 1.15.1",
+  "strategy": "pseudocost",
+  "maximum_weight_scale": 1000000,
+  "strong_candidates": 8,
+  "strong_lookahead_depth": 8,
+  "hole_budget": 32,
+  "root": 0,
+  "initial_pending": 1,
+  "initial_nodes": 1,
+  "seconds": 138.5255560829537,
+  "processed_lp_nodes": 20240,
+  "new_exact_leaves": 10234,
+  "new_branches": 10243,
+  "forced_branches": 159,
+  "lp_resets": 0,
+  "lp_failures": {},
+  "leaf_scales": {
+    "100": 3760,
+    "32": 421,
+    "256": 3291,
+    "1000": 1952,
+    "100000": 76,
+    "10000": 568,
+    "1000000": 6,
+    "10": 1
+  },
+  "nodes_count": 20487,
+  "pending_count": 10,
+  "status": "unknown",
+  "complete": false,
+  "final": true
+}

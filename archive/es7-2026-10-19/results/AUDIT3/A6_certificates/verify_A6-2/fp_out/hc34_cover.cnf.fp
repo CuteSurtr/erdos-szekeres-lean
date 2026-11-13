@@ -1,0 +1,10 @@
+bytes=621058015
+sha256=bb60facb223788fb57291c73abfacd6deaa1eccd82ad2be9f50d36292959a60f
+lines=16653473
+header_vars=838032
+header_clauses=16653472
+clauses=16653472
+max_var=838032
+comment_lines=0
+malformed_lines=0
+first_comment=

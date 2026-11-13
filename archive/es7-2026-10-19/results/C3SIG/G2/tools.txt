@@ -1,0 +1,8 @@
+C3SIG G2, task commit 640a56c2 (results/C3SIG/TASK.md), j = 2, H = 2.0
+C3-S tools: git worktree /opt/c3s at 132398c (C3-S/tools used unmodified)
+sigma_cubes.py: copied unmodified from results/C3PLAN/scripts/sigma_cubes.py (es7-cloud @ 640a56c2) into /opt/c3s/.../C3-S/tools; sha256 716aa57d6f25b391ffaf659af6221f425e7533c6fed3cbf6c55cbcb547e1a915
+CaDiCaL 3.0.1, commit c60730422e758ef1cebe7aeddf2dda31c996bf04 -> /opt/bin/cadical
+cake_lpr a36874a8b750b43fe4b385b8ddbf5b033e46a3fa (make cake_lpr) -> /opt/bin/cake_lpr; example.cnf/example.lpr: s VERIFIED UNSAT
+drat-trim 2e3b2dc0ecf938addbd779d42877b6ed69d9a985 lrat-check.c + results/E2/tools/lrat-check-E2.patch (applied with patch(1)) -> /opt/bin/lrat-check
+sanity on CNF {1},{-1}: LRAT '3 0 0' -> lrat-check 'c NOT VERIFIED' (c FAILED: empty clause without a RUP conflict), cake_lpr does not print s VERIFIED UNSAT; '3 0 1 2 0' -> 'c VERIFIED' and 's VERIFIED UNSAT'
+base CNF: gen_case.py 11 7 none -o /opt/work/base.cnf: header 'p cnf 168399 4154921', sha256 bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da (matches)

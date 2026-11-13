@@ -1,0 +1,15 @@
+seed 2026
+stats: {'sets': 300, 'hullverts': 1794, 'E1': 0, 'E2': 0, 'E3': 0, 'E4': 0, 'E5': 0, 'E5sets': 300, 'E2checked': 645031}
+E6: pentagon-free sets 300 subset checks 1974 failures 0 | 5-point example (gp, gon, v hull vertex, #convex quads through v): (True, 4, True, 0)
+       28.79 real        28.60 user         0.07 sys
+            19578880  maximum resident set size
+seed 7
+stats: {'sets': 300, 'hullverts': 1807, 'E1': 0, 'E2': 0, 'E3': 0, 'E4': 0, 'E5': 0, 'E5sets': 300, 'E2checked': 647608}
+E6: pentagon-free sets 300 subset checks 2205 failures 0 | 5-point example (gp, gon, v hull vertex, #convex quads through v): (True, 4, True, 0)
+       29.13 real        29.01 user         0.05 sys
+            19660800  maximum resident set size
+seed 31337
+stats: {'sets': 300, 'hullverts': 1807, 'E1': 0, 'E2': 0, 'E3': 0, 'E4': 0, 'E5': 0, 'E5sets': 300, 'E2checked': 637291}
+E6: pentagon-free sets 300 subset checks 2009 failures 0 | 5-point example (gp, gon, v hull vertex, #convex quads through v): (True, 4, True, 0)
+       29.83 real        29.65 user         0.07 sys
+            18415616  maximum resident set size

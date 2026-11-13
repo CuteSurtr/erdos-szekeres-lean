@@ -1,0 +1,33 @@
+PASS C(10,5) == 252
+PASS C(10,4) - C(8,3) == 154
+PASS C(11,6) - C(8,5) + 2 == 408  (MV formula C(2n-5,n-2)-C(2n-8,n-3)+2 at n=8)
+PASS 252 + 154 + 2 == 408
+PASS 64 + 33 == 97
+PASS 408 - 97 == 311
+PASS (252-64) + (154-33) + 1 + 1 == 311
+PASS Lean: B = 251-63 = 188 = 252-64
+PASS Lean: R = 153-32 = 121 = 154-33
+PASS Lean: B + R + 2 == 311
+PASS 313 record: 190 + 121 + 2 == 313
+PASS 312 record: 189 + 121 + 2 == 312
+PASS 314 record: 190 + 122 + 2 == 314
+PASS general n in [6,60): balanced count + residual baseline + 2 == MV(n)
+PASS MV(7) == 113 (survey value)
+PASS down-sets of [5]x[5] by DFS == 252
+PASS nonincreasing height profiles 5>=f1>=..>=f5>=0 == 252 and match DFS
+PASS down-sets of [4]x[6] == 210
+PASS down-sets with (1,6) maximal == 56 == C(8,3)
+PASS residual catalog count == 154
+PASS balanced catalog: 252 distinct states
+PASS balanced catalog == enumerated profiles
+PASS balanced catalog: 3131 rows
+PASS residual catalog: 154 distinct states
+PASS residual catalog: fifth coordinate always 0
+PASS residual catalog == enumerated (2.1)-profiles
+PASS balanced index 0 is empty state
+PASS residual index 0 is empty state
+source-2650 keys: ['attribution', 'constraints', 'new_row_bindings', 'parent', 'parent_decompressed_sha256', 'schema', 'scope', 'states']
+PASS 2650 catalog: 154 states, same as residual-source
+PASS 2650 catalog: 2650 rows
+PASS 2650 catalog: supports within 0..153
+ALL CHECKS PASSED

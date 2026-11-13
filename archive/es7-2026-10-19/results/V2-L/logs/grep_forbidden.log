@@ -1,0 +1,14 @@
+# grep -rnw over V2L/, V2L.lean, lakefile.toml, scripts/ (Tue Oct 20 10:21:34 UTC 2026)
+== sorry
+(no matches)
+== admit
+(no matches)
+== native_decide
+V2L/Facts.lean:11:The facts below are checked by the kernel (`decide +kernel`, no `native_decide`). Only the
+== axiom
+V2L/Audit.lean:3:/-! Axiom audit: `lake build` fails if any of these theorems uses an axiom other than
+== implemented_by
+(no matches)
+== extern
+(no matches)
+# Only matches: two comments (Facts.lean docstring, Audit.lean header). No sorry/admit/native_decide/axiom declarations/implemented_by/extern in code.

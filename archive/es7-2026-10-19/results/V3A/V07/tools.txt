@@ -1,0 +1,8 @@
+CaDiCaL 3.0.1 commit c60730422e758ef1cebe7aeddf2dda31c996bf04 (./configure && make) -> /opt/bin/cadical
+  sha256 087b27b34bc5e10c3b1affefc026398ee043c82784012662a9428b0bb532280b
+cake_lpr commit a36874a8b750b43fe4b385b8ddbf5b033e46a3fa (make cake_lpr) -> /opt/bin/cake_lpr
+  sha256 1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca
+  bundled example: ./cake_lpr example.cnf example.lpr -> s VERIFIED UNSAT
+verify/v3 at commit 7c6d70c (worktree /opt/v3src); inputs at a033a13 (worktree /opt/in)
+F = /opt/work/F.cnf from gen_etv.py 33 7 7 7 --mirror + mirgen.py --interior --yflip-unit
+  sha256 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d (matches expected)

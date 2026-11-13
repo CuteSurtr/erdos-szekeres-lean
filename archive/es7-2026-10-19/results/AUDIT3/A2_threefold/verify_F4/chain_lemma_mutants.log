@@ -1,0 +1,4 @@
+mutant=none    trials=600 soundness_failures=0 completeness_failures=0
+mutant=noB     trials=600 soundness_failures=118 completeness_failures=0
+mutant=noturn  trials=600 soundness_failures=121 completeness_failures=0
+mutant=short   trials=600 soundness_failures=83 completeness_failures=0

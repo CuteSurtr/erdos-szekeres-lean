@@ -1,0 +1,10 @@
+enum convex  3-subsets: 280840
+enum convex  4-subsets: 5419058
+enum convex  5-subsets: 54588512
+enum convex  6-subsets: 298410024
+enum convex  7-subsets: 871843824
+enum convex  8-subsets: 1153006585
+enum convex  9-subsets: 0
+enum convex 10-subsets: 0
+nice -n 10 $OUT/cvxenum $OUT/c120.myotab 10  457.61s user 2.82s system 73% cpu 10:26.65 total
+exit=0

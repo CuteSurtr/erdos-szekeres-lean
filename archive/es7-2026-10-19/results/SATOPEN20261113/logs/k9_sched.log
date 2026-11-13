@@ -1,0 +1,246 @@
+2026-11-13 02:13:15 start MAXJOBS=4 MEMB=17.2 MEM_C=9.0 SOFT=05:30 HARD=05:37
+2026-11-13 02:13:15 solve ex8_r7 limit 1800
+2026-11-13 02:13:15 solve ex8_all limit 1800
+2026-11-13 02:13:15 solve p1_DZ limit 1800
+2026-11-13 02:13:15 solve p1_YZ limit 1800
+2026-11-13 02:13:35 solve p1_YZ finished rc=0 after 20s: cadical exit 20 seconds 18 limit 1800
+2026-11-13 02:17:15 solve p1_DZ finished rc=0 after 240s: cadical exit 20 seconds 234 limit 1800
+2026-11-13 02:17:15 check p1_DZ heap 8500
+2026-11-13 02:18:45 check p1_DZ finished rc=0 after 90s: 3ad7cea6d9823f2fd7181433ae9b254212a54d13151ddb5f7ce9df45970c656d  /home/jay/research/data/satopen-20261113/k9/cubes/p1_DZ/proof.lrat.zst
+2026-11-13 02:18:45 check p1_YZ heap 8500
+2026-11-13 02:19:55 solve ex8_r7 finished rc=2 after 400s: cadical exit 127 seconds 399 limit 1800 noproof
+2026-11-13 02:20:05 check p1_YZ finished rc=2 after 80s: 3b0d234ec5e4dcf2639af833c3dbf1e03b8d77ddc909f76b8a374750dc154b3c  /home/jay/research/data/satopen-20261113/k9/cubes/p1_YZ/proof.lrat.zst
+2026-11-13 02:20:15 solve p2_YZ limit 300
+2026-11-13 02:20:15 solve p3_YZ limit 300
+2026-11-13 02:20:15 solve p4_YZ limit 300
+2026-11-13 02:20:35 solve p4_YZ finished rc=0 after 20s: cadical exit 20 seconds 14 limit 300 noproof
+2026-11-13 02:20:45 solve p2_YZ finished rc=0 after 30s: cadical exit 20 seconds 23 limit 300 noproof
+2026-11-13 02:20:45 solve p3_YZ finished rc=0 after 30s: cadical exit 20 seconds 25 limit 300 noproof
+2026-11-13 02:20:45 check p2_YZ heap 8500
+2026-11-13 02:20:55 check p2_YZ finished rc=0 after 10s: noproof probe (statistics only): cadical exit 20 seconds 23 limit 300 noproof
+2026-11-13 02:20:55 check p3_YZ heap 8500
+2026-11-13 02:21:05 check p3_YZ finished rc=0 after 10s: noproof probe (statistics only): cadical exit 20 seconds 25 limit 300 noproof
+2026-11-13 02:21:05 check p4_YZ heap 8500
+2026-11-13 02:21:15 check p4_YZ finished rc=0 after 10s: noproof probe (statistics only): cadical exit 20 seconds 14 limit 300 noproof
+2026-11-13 02:21:15 solve p5_YZ limit 300
+2026-11-13 02:21:15 solve p6_YZ limit 300
+2026-11-13 02:21:15 solve p7_YZ limit 300
+2026-11-13 02:21:35 solve p5_YZ finished rc=0 after 20s: cadical exit 20 seconds 16 limit 300 noproof
+2026-11-13 02:21:35 solve p6_YZ finished rc=0 after 20s: cadical exit 20 seconds 17 limit 300 noproof
+2026-11-13 02:21:35 solve p7_YZ finished rc=0 after 20s: cadical exit 20 seconds 12 limit 300 noproof
+2026-11-13 02:21:35 check ex8_r7 heap 8500
+2026-11-13 02:21:45 solve p8_YZ limit 300
+2026-11-13 02:22:25 solve p8_YZ finished rc=0 after 40s: cadical exit 20 seconds 38 limit 300 noproof
+2026-11-13 02:22:25 solve p9_YZ limit 300
+2026-11-13 02:23:05 solve p9_YZ finished rc=0 after 40s: cadical exit 20 seconds 34 limit 300 noproof
+2026-11-13 02:23:05 solve ex8_r14 limit 3600
+2026-11-13 02:23:15 check ex8_r7 finished rc=0 after 100s: 6da48d3c278c32710c09ed85c42baf4071aad56766801b94c6895f752da04fff  /home/jay/research/data/satopen-20261113/k9/cubes/ex8_r7/proof.lrat.zst
+2026-11-13 02:23:15 check p5_YZ heap 8500
+2026-11-13 02:23:25 check p5_YZ finished rc=0 after 10s: noproof probe (statistics only): cadical exit 20 seconds 16 limit 300 noproof
+2026-11-13 02:23:25 check p6_YZ heap 8500
+2026-11-13 02:23:35 check p6_YZ finished rc=0 after 10s: noproof probe (statistics only): cadical exit 20 seconds 17 limit 300 noproof
+2026-11-13 02:23:35 check p7_YZ heap 8500
+2026-11-13 02:23:45 check p7_YZ finished rc=0 after 10s: noproof probe (statistics only): cadical exit 20 seconds 12 limit 300 noproof
+2026-11-13 02:23:45 check p8_YZ heap 8500
+2026-11-13 02:23:55 check p8_YZ finished rc=0 after 10s: noproof probe (statistics only): cadical exit 20 seconds 38 limit 300 noproof
+2026-11-13 02:23:55 check p9_YZ heap 8500
+2026-11-13 02:24:05 check p9_YZ finished rc=0 after 10s: noproof probe (statistics only): cadical exit 20 seconds 34 limit 300 noproof
+2026-11-13 02:24:05 solve ex8_r0 limit 3600
+2026-11-13 02:24:05 solve ex7_all limit 5400
+2026-11-13 02:27:15 solve ex8_r0 finished rc=0 after 190s: cadical exit 20 seconds 185 limit 3600
+2026-11-13 02:28:55 solve ex8_r14 finished rc=0 after 350s: cadical exit 20 seconds 345 limit 3600
+2026-11-13 02:28:55 check ex8_r0 heap 8500
+2026-11-13 02:30:25 check ex8_r0 finished rc=0 after 90s: a32797b597919653d633a915b82c0ad255cf3fb04843ebfc80b5e780f4e743f8  /home/jay/research/data/satopen-20261113/k9/cubes/ex8_r0/proof.lrat.zst
+2026-11-13 02:30:25 check ex8_r14 heap 8500
+2026-11-13 02:30:45 solve ex8_all finished rc=0 after 1050s: cadical exit 20 seconds 1042 limit 1800
+2026-11-13 02:30:45 solve ex9_all limit 5400
+2026-11-13 02:31:55 check ex8_r14 finished rc=0 after 90s: b0c7830a65827ee34eeb264cef29b62efc5073a4d56622f1f6fea550a68875a8  /home/jay/research/data/satopen-20261113/k9/cubes/ex8_r14/proof.lrat.zst
+2026-11-13 02:31:55 check ex8_all heap 8500
+2026-11-13 02:33:45 check ex8_all finished rc=0 after 110s: 417029df296a5bf14fb2d4552af02e4fac3825ada85d6fd7b1e0316705f1c784  /home/jay/research/data/satopen-20261113/k9/cubes/ex8_all/proof.lrat.zst
+2026-11-13 02:33:45 solve p1_D limit 1800
+2026-11-13 02:33:45 solve ex6_all limit 5400
+2026-11-13 02:44:45 solve ex7_all finished rc=0 after 1240s: cadical exit 20 seconds 1238 limit 5400
+2026-11-13 02:49:35 solve ex9_all finished rc=0 after 1130s: cadical exit 20 seconds 1130 limit 5400
+2026-11-13 02:49:35 check ex7_all heap 8500
+2026-11-13 02:51:35 check ex7_all finished rc=0 after 120s: 5f5fec6b5976a3cfef183c08580c080c78b1b5c01fa005458681f2adb8836b7d  /home/jay/research/data/satopen-20261113/k9/cubes/ex7_all/proof.lrat.zst
+2026-11-13 02:51:35 check ex9_all heap 8500
+2026-11-13 02:51:45 solve ex6_all finished rc=0 after 1080s: cadical exit 20 seconds 1069 limit 5400
+2026-11-13 02:51:45 solve ex10_all limit 5400
+2026-11-13 02:53:35 check ex9_all finished rc=0 after 120s: 143b5b6d64e9494e0bc3d1f0ceaf3e9e186f8e6179e1f8a0fe84da6aacec31e6  /home/jay/research/data/satopen-20261113/k9/cubes/ex9_all/proof.lrat.zst
+2026-11-13 02:53:35 check ex6_all heap 8500
+2026-11-13 02:55:35 check ex6_all finished rc=0 after 120s: 2a8561bf92d4574b9a246533035527884bed72d96f3a636ea4a14cb04538db87  /home/jay/research/data/satopen-20261113/k9/cubes/ex6_all/proof.lrat.zst
+2026-11-13 02:55:35 solve ex5_all limit 5400
+2026-11-13 02:55:35 solve ex11_all limit 5400
+2026-11-13 03:03:55 solve p1_D finished rc=0 after 1810s: cadical exit 0 seconds 1800 limit 1800 noproof
+2026-11-13 03:03:55 solve ex4_all limit 5400
+2026-11-13 03:11:25 solve ex10_all finished rc=0 after 1180s: cadical exit 20 seconds 1172 limit 5400
+2026-11-13 03:15:15 solve ex5_all finished rc=0 after 1180s: cadical exit 20 seconds 1170 limit 5400
+2026-11-13 03:15:15 check ex10_all heap 8500
+2026-11-13 03:17:15 check ex10_all finished rc=0 after 120s: 1cf21a3ea529bb4afb3fbd1b8496b410b9bfa26034334fe3cef606d4c20070dc  /home/jay/research/data/satopen-20261113/k9/cubes/ex10_all/proof.lrat.zst
+2026-11-13 03:17:15 check ex5_all heap 8500
+2026-11-13 03:18:15 solve ex11_all finished rc=0 after 1360s: cadical exit 20 seconds 1358 limit 5400
+2026-11-13 03:18:15 solve ex12_all limit 5400
+2026-11-13 03:19:15 check ex5_all finished rc=0 after 120s: fe5156d65eb81fb6dd80c3a4e625460ded504af49c093ba677968edad7167d76  /home/jay/research/data/satopen-20261113/k9/cubes/ex5_all/proof.lrat.zst
+2026-11-13 03:19:15 check ex11_all heap 8500
+2026-11-13 03:21:15 check ex11_all finished rc=0 after 120s: e664372365b9d0ed624ad0fe4cb912fb63e72dd9ead8bd9827e992aa455ec7ac  /home/jay/research/data/satopen-20261113/k9/cubes/ex11_all/proof.lrat.zst
+2026-11-13 03:21:15 solve cyc8 limit 3600
+2026-11-13 03:21:15 solve cyc7 limit 3600
+2026-11-13 03:22:35 solve ex4_all finished rc=0 after 1120s: cadical exit 20 seconds 1114 limit 5400
+2026-11-13 03:27:25 solve cyc8 finished rc=0 after 370s: cadical exit 20 seconds 365 limit 3600
+2026-11-13 03:27:25 check cyc8 heap 8500
+2026-11-13 03:27:35 solve cyc7 finished rc=0 after 380s: cadical exit 20 seconds 372 limit 3600
+2026-11-13 03:27:35 solve cyc9 limit 3600
+2026-11-13 03:29:05 check cyc8 finished rc=0 after 100s: 8ccaf4533e730abb882bbf779fe91ec6959e527cdba21e7d829d0e3adf01c602  /home/jay/research/data/satopen-20261113/k9/cubes/cyc8/proof.lrat.zst
+2026-11-13 03:29:05 check cyc7 heap 8500
+2026-11-13 03:30:35 check cyc7 finished rc=0 after 90s: 031f8095a38fdfdd8adfcb80953303636752a9d72e1b861d4ccb8c876dfeeec8  /home/jay/research/data/satopen-20261113/k9/cubes/cyc7/proof.lrat.zst
+2026-11-13 03:30:35 check ex4_all heap 8500
+2026-11-13 03:32:35 check ex4_all finished rc=0 after 120s: 271135f2e49b24f6be3fca4d1abb2a4ce5dbc7c917c463efb9a47697b28b7e3f  /home/jay/research/data/satopen-20261113/k9/cubes/ex4_all/proof.lrat.zst
+2026-11-13 03:32:35 solve cyc6 limit 3600
+2026-11-13 03:32:35 solve cyc10 limit 3600
+2026-11-13 03:34:35 solve cyc9 finished rc=0 after 420s: cadical exit 20 seconds 414 limit 3600
+2026-11-13 03:37:05 solve ex12_all finished rc=0 after 1130s: cadical exit 20 seconds 1123 limit 5400
+2026-11-13 03:37:05 check cyc9 heap 8500
+2026-11-13 03:38:35 check cyc9 finished rc=0 after 90s: 6be62474e431a8d227632f196083f9ee007dc97f9fabd1bb02e7a7ebc4d9e39f  /home/jay/research/data/satopen-20261113/k9/cubes/cyc9/proof.lrat.zst
+2026-11-13 03:38:35 check ex12_all heap 8500
+2026-11-13 03:39:05 solve cyc6 finished rc=0 after 390s: cadical exit 20 seconds 386 limit 3600
+2026-11-13 03:39:05 solve cyc5 limit 3600
+2026-11-13 03:40:45 check ex12_all finished rc=0 after 130s: cf250027555cda9af744758d7b3225a395cef40f1f984a095e419af43e8d7d69  /home/jay/research/data/satopen-20261113/k9/cubes/ex12_all/proof.lrat.zst
+2026-11-13 03:40:45 check cyc6 heap 8500
+2026-11-13 03:40:55 solve cyc10 finished rc=0 after 500s: cadical exit 20 seconds 490 limit 3600
+2026-11-13 03:40:55 solve cyc11 limit 3600
+2026-11-13 03:42:25 check cyc6 finished rc=0 after 100s: cfc48b83b0d65930ce8684d919c2fbd9065b3ba9bd28fcbfe6b747bc4bcab6d6  /home/jay/research/data/satopen-20261113/k9/cubes/cyc6/proof.lrat.zst
+2026-11-13 03:42:25 check cyc10 heap 8500
+2026-11-13 03:44:05 check cyc10 finished rc=0 after 100s: 8e70192b07fbb87a4dcdaac187925b34a99ee25419dc7e030d6b7dbaa7959ffa  /home/jay/research/data/satopen-20261113/k9/cubes/cyc10/proof.lrat.zst
+2026-11-13 03:44:05 solve cyc4 limit 3600
+2026-11-13 03:44:05 solve ex2_7_9 limit 3600
+2026-11-13 03:45:46 solve cyc5 finished rc=0 after 400s: cadical exit 20 seconds 390 limit 3600
+2026-11-13 03:48:26 solve cyc11 finished rc=0 after 450s: cadical exit 20 seconds 442 limit 3600
+2026-11-13 03:48:26 check cyc11 heap 8500
+2026-11-13 03:50:16 check cyc11 finished rc=0 after 110s: 3f783b0f7969eb3f9832575f45f794d2f258240088c7900d66ab47e0380006eb  /home/jay/research/data/satopen-20261113/k9/cubes/cyc11/proof.lrat.zst
+2026-11-13 03:50:16 check cyc5 heap 8500
+2026-11-13 03:51:36 solve cyc4 finished rc=0 after 450s: cadical exit 20 seconds 448 limit 3600
+2026-11-13 03:51:36 solve cycx_k8_p7 limit 3600
+2026-11-13 03:51:46 check cyc5 finished rc=0 after 90s: 2bac69ac26a0b0d8af50ba6c684a10bf404ceb0b4d0097f4cd0226a2cfbf9cbe  /home/jay/research/data/satopen-20261113/k9/cubes/cyc5/proof.lrat.zst
+2026-11-13 03:51:46 check cyc4 heap 8500
+2026-11-13 03:53:16 check cyc4 finished rc=0 after 90s: d3f3800faf2903c3b2b6ce3708b0bea38ef1c6a56df2f575dfa2dab69b1719dd  /home/jay/research/data/satopen-20261113/k9/cubes/cyc4/proof.lrat.zst
+2026-11-13 03:53:16 solve ex2_6_10 limit 3600
+2026-11-13 03:53:16 solve cycx_k4_p8 limit 3600
+2026-11-13 03:57:26 solve cycx_k8_p7 finished rc=0 after 350s: cadical exit 20 seconds 346 limit 3600
+2026-11-13 03:59:06 solve cycx_k4_p8 finished rc=0 after 350s: cadical exit 20 seconds 341 limit 3600
+2026-11-13 03:59:06 check cycx_k4_p8 heap 8500
+2026-11-13 04:00:36 check cycx_k4_p8 finished rc=0 after 90s: 30d8c99f05fa4307e303cc79802847e7e7280ee8cd8d822844f73c4439ad55db  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k4_p8/proof.lrat.zst
+2026-11-13 04:00:36 check cycx_k8_p7 heap 8500
+2026-11-13 04:02:06 check cycx_k8_p7 finished rc=0 after 90s: cca935dacf062c6284056b97885f0f7056b73025888e91c0f224a497eeac469d  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k8_p7/proof.lrat.zst
+2026-11-13 04:02:06 solve cycx_k15_p6 limit 2400
+2026-11-13 04:02:06 solve cycx_k1_p7 limit 2400
+2026-11-13 04:07:26 solve ex2_7_9 finished rc=0 after 1400s: cadical exit 20 seconds 1399 limit 3600
+2026-11-13 04:08:06 solve cycx_k15_p6 finished rc=0 after 360s: cadical exit 20 seconds 352 limit 2400
+2026-11-13 04:08:06 solve cycx_k1_p7 finished rc=0 after 360s: cadical exit 20 seconds 356 limit 2400
+2026-11-13 04:08:06 check cycx_k15_p6 heap 8500
+2026-11-13 04:08:16 solve cycx_k15_p3 limit 2400
+2026-11-13 04:09:46 check cycx_k15_p6 finished rc=0 after 100s: 7651ce8160494de5440d8001bddb9810ed73d60e56f2ccfa53ad32fb74c99a3f  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p6/proof.lrat.zst
+2026-11-13 04:09:46 check cycx_k1_p7 heap 8500
+2026-11-13 04:11:16 check cycx_k1_p7 finished rc=0 after 90s: cf3ed2d12453ac2e202a62817be33e58b848e99edb138171116d45cd3c53ef61  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p7/proof.lrat.zst
+2026-11-13 04:11:16 check ex2_7_9 heap 8500
+2026-11-13 04:13:16 check ex2_7_9 finished rc=0 after 120s: 064b9abbdc71751622567a3ecc4235cc98d8de36eb31eb12ff7ac012e8b57fb4  /home/jay/research/data/satopen-20261113/k9/cubes/ex2_7_9/proof.lrat.zst
+2026-11-13 04:13:16 solve cycx_k1_p3 limit 2400
+2026-11-13 04:13:16 solve cycx_k15_p4 limit 2400
+2026-11-13 04:15:16 solve cycx_k15_p3 finished rc=0 after 420s: cadical exit 20 seconds 416 limit 2400
+2026-11-13 04:15:56 solve ex2_6_10 finished rc=0 after 1360s: cadical exit 20 seconds 1355 limit 3600
+2026-11-13 04:15:56 check cycx_k15_p3 heap 8500
+2026-11-13 04:17:26 check cycx_k15_p3 finished rc=0 after 90s: bbb11537ded14b1740d6b43458128657700f7658c8c634c1dce2e861f1529396  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p3/proof.lrat.zst
+2026-11-13 04:17:26 check ex2_6_10 heap 8500
+2026-11-13 04:19:36 check ex2_6_10 finished rc=0 after 130s: 92f7af45dda14885600ea184ce7ce6b76d216e24b0791584bfb3874493aa646e  /home/jay/research/data/satopen-20261113/k9/cubes/ex2_6_10/proof.lrat.zst
+2026-11-13 04:19:36 solve cycx_k1_p4 limit 2400
+2026-11-13 04:19:36 solve cycx_k15_p5 limit 2400
+2026-11-13 04:19:46 solve cycx_k15_p4 finished rc=0 after 390s: cadical exit 20 seconds 388 limit 2400
+2026-11-13 04:20:26 solve cycx_k1_p3 finished rc=0 after 430s: cadical exit 20 seconds 419 limit 2400
+2026-11-13 04:20:26 check cycx_k15_p4 heap 8500
+2026-11-13 04:21:56 check cycx_k15_p4 finished rc=0 after 90s: ae380698efa75bdb805bc4b706189e7c126e747fcfb70c6394feb9b049bfde9a  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p4/proof.lrat.zst
+2026-11-13 04:21:56 check cycx_k1_p3 heap 8500
+2026-11-13 04:23:36 check cycx_k1_p3 finished rc=0 after 100s: 1a76b0d9a27b7d528f5a1f3d68e4bd31c90dad14f328819bcfb768233d07331d  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p3/proof.lrat.zst
+2026-11-13 04:23:36 solve cycx_k1_p5 limit 2400
+2026-11-13 04:23:36 solve cycx_k15_p7 limit 2400
+2026-11-13 04:26:16 solve cycx_k1_p4 finished rc=0 after 400s: cadical exit 20 seconds 391 limit 2400
+2026-11-13 04:26:26 solve cycx_k15_p5 finished rc=0 after 410s: cadical exit 20 seconds 404 limit 2400
+2026-11-13 04:26:26 check cycx_k15_p5 heap 8500
+2026-11-13 04:27:56 check cycx_k15_p5 finished rc=0 after 90s: 8133283fd1f313c6fd3da3c955fb2b30c1e717ca8416f0695fd7f20e77180bf9  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p5/proof.lrat.zst
+2026-11-13 04:27:56 check cycx_k1_p4 heap 8500
+2026-11-13 04:29:26 check cycx_k1_p4 finished rc=0 after 90s: 4f3ad0fda223f46a04e7cb5f3df7cc2761dda75aba135af53ab1ed92d058ce50  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p4/proof.lrat.zst
+2026-11-13 04:29:26 solve cycx_k1_p6 limit 2400
+2026-11-13 04:29:26 solve cycx_k15_p8 limit 2400
+2026-11-13 04:29:46 solve cycx_k15_p7 finished rc=0 after 370s: cadical exit 20 seconds 366 limit 2400
+2026-11-13 04:30:46 solve cycx_k1_p5 finished rc=0 after 430s: cadical exit 20 seconds 428 limit 2400
+2026-11-13 04:30:46 check cycx_k15_p7 heap 8500
+2026-11-13 04:32:16 check cycx_k15_p7 finished rc=0 after 90s: 180bf30bc8dbc62cc51d488d9548148b827385450f498a3e87f3db0f78de6d85  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p7/proof.lrat.zst
+2026-11-13 04:32:16 check cycx_k1_p5 heap 8500
+2026-11-13 04:33:46 check cycx_k1_p5 finished rc=0 after 90s: ff045ca24dfad02ec788a94b29346162bc47bc4de2b140f755712b2ff134f0e9  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p5/proof.lrat.zst
+2026-11-13 04:33:46 solve cycx_k1_p8 limit 2400
+2026-11-13 04:33:46 solve cycx_k15_p9 limit 2400
+2026-11-13 04:35:56 solve cycx_k15_p8 finished rc=0 after 390s: cadical exit 20 seconds 382 limit 2400
+2026-11-13 04:36:06 solve cycx_k1_p6 finished rc=0 after 400s: cadical exit 20 seconds 392 limit 2400
+2026-11-13 04:36:06 check cycx_k15_p8 heap 8500
+2026-11-13 04:37:46 check cycx_k15_p8 finished rc=0 after 100s: 2779e7e74d7e47a509da568102e20d15ea101bfa3a3618a74bbff36fc57612de  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p8/proof.lrat.zst
+2026-11-13 04:37:46 check cycx_k1_p6 heap 8500
+2026-11-13 04:39:26 check cycx_k1_p6 finished rc=0 after 100s: 36b6d3368e2cfaa880c30fdd265c778d06129760b95265c9243dc763790c2090  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p6/proof.lrat.zst
+2026-11-13 04:39:26 solve cycx_k1_p9 limit 2400
+2026-11-13 04:39:26 solve cycx_k15_p10 limit 2400
+2026-11-13 04:41:26 solve cycx_k1_p8 finished rc=0 after 460s: cadical exit 20 seconds 456 limit 2400
+2026-11-13 04:42:16 solve cycx_k15_p9 finished rc=0 after 510s: cadical exit 20 seconds 503 limit 2400
+2026-11-13 04:42:16 check cycx_k15_p9 heap 8500
+2026-11-13 04:43:56 check cycx_k15_p9 finished rc=0 after 100s: d484209b43b291e7c93856983d42b3a11d4faa736aaa8b9e709aec7ed2ea6fed  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p9/proof.lrat.zst
+2026-11-13 04:43:56 check cycx_k1_p8 heap 8500
+2026-11-13 04:45:36 check cycx_k1_p8 finished rc=0 after 100s: df138be4d35ae29e238616108517044c23be0c944c27fdb6b04d6a32ecc17889  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p8/proof.lrat.zst
+2026-11-13 04:45:36 solve cycx_k1_p10 limit 2400
+2026-11-13 04:45:36 solve cycx_k15_p11 limit 2400
+2026-11-13 04:46:46 solve cycx_k15_p10 finished rc=0 after 440s: cadical exit 20 seconds 431 limit 2400
+2026-11-13 04:47:26 solve cycx_k1_p9 finished rc=0 after 480s: cadical exit 20 seconds 476 limit 2400
+2026-11-13 04:47:26 check cycx_k15_p10 heap 8500
+2026-11-13 04:49:06 check cycx_k15_p10 finished rc=0 after 100s: 822922276868e5a937506207bbfb267410381bdcf7c7770b951c616e7b926726  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p10/proof.lrat.zst
+2026-11-13 04:49:06 check cycx_k1_p9 heap 8500
+2026-11-13 04:50:36 check cycx_k1_p9 finished rc=0 after 90s: 7e153207a39cc32d3d01a27828f132b07d783faeafa75a6f7f8e34c70e63a230  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p9/proof.lrat.zst
+2026-11-13 04:50:36 solve cycx_k1_p11 limit 2400
+2026-11-13 04:50:36 solve p2_DZ limit 900
+2026-11-13 04:52:56 solve p2_DZ finished rc=0 after 140s: cadical exit 20 seconds 132 limit 900 noproof
+2026-11-13 04:53:16 solve cycx_k15_p11 finished rc=0 after 460s: cadical exit 20 seconds 456 limit 2400
+2026-11-13 04:53:16 check cycx_k15_p11 heap 8500
+2026-11-13 04:53:56 solve cycx_k1_p10 finished rc=0 after 500s: cadical exit 20 seconds 494 limit 2400
+2026-11-13 04:53:56 solve p1_Y limit 900
+2026-11-13 04:54:56 check cycx_k15_p11 finished rc=0 after 100s: 7f7341bb26675b317daadf57d631b657859e05af34248b57825864224effe91b  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p11/proof.lrat.zst
+2026-11-13 04:54:56 solve p1_Y finished rc=0 after 60s: cadical exit 20 seconds 51 limit 900 noproof
+2026-11-13 04:54:56 check cycx_k1_p10 heap 8500
+2026-11-13 04:55:06 solve p1_B3Z limit 900
+2026-11-13 04:56:16 solve p1_B3Z finished rc=0 after 70s: cadical exit 20 seconds 66 limit 900 noproof
+2026-11-13 04:56:16 solve cycx_k12_p5 limit 1500
+2026-11-13 04:56:36 check cycx_k1_p10 finished rc=0 after 100s: 8cd4f1c0bbd9321978c48ee7567ff97ee5374583ba2aca5a4f49a30c2f7381e4  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p10/proof.lrat.zst
+2026-11-13 04:56:36 check p1_B3Z heap 8500
+2026-11-13 04:56:46 check p1_B3Z finished rc=0 after 10s: noproof probe (statistics only): cadical exit 20 seconds 66 limit 900 noproof
+2026-11-13 04:56:46 check p1_Y heap 8500
+2026-11-13 04:56:56 check p1_Y finished rc=0 after 10s: noproof probe (statistics only): cadical exit 20 seconds 51 limit 900 noproof
+2026-11-13 04:56:56 check p2_DZ heap 8500
+2026-11-13 04:57:06 check p2_DZ finished rc=0 after 10s: noproof probe (statistics only): cadical exit 20 seconds 132 limit 900 noproof
+2026-11-13 04:57:26 solve p1_Z limit 900
+2026-11-13 04:57:26 solve p1_B2Z limit 600
+2026-11-13 04:59:06 solve cycx_k1_p11 finished rc=0 after 510s: cadical exit 20 seconds 505 limit 2400
+2026-11-13 04:59:26 solve p1_B2Z finished rc=0 after 120s: cadical exit 20 seconds 113 limit 600 noproof
+2026-11-13 04:59:26 check cycx_k1_p11 heap 8500
+2026-11-13 05:01:06 check cycx_k1_p11 finished rc=0 after 100s: fa82b7148efd3708869399a4d6d8a4b9311ffdb41ec7209ab7a3d7219dc11b4b  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p11/proof.lrat.zst
+2026-11-13 05:01:06 check p1_B2Z heap 8500
+2026-11-13 05:01:16 check p1_B2Z finished rc=0 after 10s: noproof probe (statistics only): cadical exit 20 seconds 113 limit 600 noproof
+2026-11-13 05:01:16 solve cycx_k14_p5 limit 1200
+2026-11-13 05:01:16 solve cycx_k2_p7 limit 1200
+2026-11-13 05:02:06 solve cycx_k12_p5 finished rc=0 after 350s: cadical exit 20 seconds 344 limit 1500
+2026-11-13 05:07:26 solve cycx_k14_p5 finished rc=0 after 370s: cadical exit 20 seconds 361 limit 1200
+2026-11-13 05:07:26 check cycx_k12_p5 heap 8500
+2026-11-13 05:08:56 check cycx_k12_p5 finished rc=0 after 90s: 6633fa98fe3ee185b747a26c1b183a64d1ff6d2d9f2f5a325616c2e0745d38af  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k12_p5/proof.lrat.zst
+2026-11-13 05:08:56 check cycx_k14_p5 heap 8500
+2026-11-13 05:09:06 solve cycx_k2_p7 finished rc=0 after 470s: cadical exit 20 seconds 461 limit 1200
+2026-11-13 05:09:06 solve cycx_k13_p6 limit 1200
+2026-11-13 05:10:26 check cycx_k14_p5 finished rc=0 after 90s: f77de70030e2bf4f1a3f3029b845863206ee38c628ed6770628e4ecbcdaebd8d  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k14_p5/proof.lrat.zst
+2026-11-13 05:10:26 check cycx_k2_p7 heap 8500
+2026-11-13 05:12:06 check cycx_k2_p7 finished rc=0 after 100s: 1ab827c17559242391a1d8970e5c44f0d70bf5b94147931e1f089f4cb36d3cff  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k2_p7/proof.lrat.zst
+2026-11-13 05:12:36 solve p1_Z finished rc=0 after 910s: cadical exit 0 seconds 900 limit 900 noproof
+2026-11-13 05:15:16 solve cycx_k13_p6 finished rc=0 after 370s: cadical exit 20 seconds 359 limit 1200
+2026-11-13 05:15:16 check cycx_k13_p6 heap 8500
+2026-11-13 05:16:46 check cycx_k13_p6 finished rc=0 after 90s: c8d9a3f89962aa915c00e581c1283da7b44bf93490fdaac79f7dbdc4d941591c  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k13_p6/proof.lrat.zst
+2026-11-13 05:16:46 stopped (STOP file or soft deadline), nothing running: exit

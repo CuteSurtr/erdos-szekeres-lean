@@ -1,0 +1,10 @@
+== k=8 scan (written, middle scale eps^2)
+  E=4      N=64 (2^6=64) sym=True 0notin=True | fails=['H2', 'H4'] | H3 cnt=13944 H4 cnt=4800 (zero-sum skipped 440) | maxconvex cupcap=10 angular=10 witness_ok=True  [0.2s]
+  E=16     N=64 (2^6=64) sym=True 0notin=True | fails=['H4'] | H3 cnt=13944 H4 cnt=4800 (zero-sum skipped 440) | maxconvex cupcap=8 angular=8 witness_ok=True  [0.2s]
+  E=64     N=64 (2^6=64) sym=True 0notin=True | fails=['H4'] | H3 cnt=13944 H4 cnt=4800 (zero-sum skipped 440) | maxconvex cupcap=7 angular=7 witness_ok=True  [0.2s]
+  E=256    N=64 (2^6=64) sym=True 0notin=True | fails=none | H3 cnt=13944 H4 cnt=4800 (zero-sum skipped 440) | maxconvex cupcap=7 angular=7 witness_ok=True  [0.2s]
+  E=1024   N=64 (2^6=64) sym=True 0notin=True | fails=none | H3 cnt=13944 H4 cnt=4800 (zero-sum skipped 440) | maxconvex cupcap=7 angular=7 witness_ok=True  [0.2s]
+  E=4096   N=64 (2^6=64) sym=True 0notin=True | fails=none | H3 cnt=13944 H4 cnt=4800 (zero-sum skipped 440) | maxconvex cupcap=7 angular=7 witness_ok=True  [0.2s]
+  E=16384  N=64 (2^6=64) sym=True 0notin=True | fails=none | H3 cnt=13944 H4 cnt=4800 (zero-sum skipped 440) | maxconvex cupcap=7 angular=7 witness_ok=True  [0.2s]
+  E=65536  N=64 (2^6=64) sym=True 0notin=True | fails=none | H3 cnt=13944 H4 cnt=4800 (zero-sum skipped 440) | maxconvex cupcap=7 angular=7 witness_ok=True  [0.2s]
+  E=1048576 N=64 (2^6=64) sym=True 0notin=True | fails=none | H3 cnt=13944 H4 cnt=4800 (zero-sum skipped 440) | maxconvex cupcap=7 angular=7 witness_ok=True  [0.2s]

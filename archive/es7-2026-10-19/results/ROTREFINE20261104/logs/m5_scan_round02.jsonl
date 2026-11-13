@@ -1,0 +1,6 @@
+{"event": "selftest", "integer_gp_identities": 105, "passed": true, "peak_rss_bytes": 25001984, "seconds": 0.0}
+{"event": "input", "m": 5, "map_sha256": "448e87642f0b2932441ed23f002df03e145e01f82326833a730bb2bed00400c1", "model_sha256": "25600122ca05afaddffff428014c624f78a9daa5ade96a70fa30cd758afc104d", "peak_rss_bytes": 39895040, "positive_variables": 26830, "seconds": 0.209, "t": 12, "triple_orbits": 6844}
+{"cycle_length": 0, "edges": 504, "event": "restriction", "gp_identities": 252, "layers": [0, 1], "peak_rss_bytes": 40042496, "seconds": 0.21, "union_complete": true, "union_edges": 504}
+{"cycle_length": 3, "edges": 460, "event": "restriction", "gp_identities": 230, "layers": [0, 2], "peak_rss_bytes": 40124416, "seconds": 0.211, "union_complete": true, "union_edges": 962}
+{"comparisons": 3, "event": "certificate", "independent_verify": true, "peak_rss_bytes": 40124416, "seconds": 0.211, "witness_sha256": "83169994f3759f05ac18250404bd1f3a34a97e6e3ecf7d2fd46b81e0a6144abe"}
+{"event": "stop", "gp_violations_seen": 22, "peak_rss_bytes": 40124416, "seconds": 0.212}

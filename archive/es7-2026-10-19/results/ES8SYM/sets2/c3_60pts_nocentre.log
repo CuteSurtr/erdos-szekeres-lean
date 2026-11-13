@@ -1,0 +1,19 @@
+== certify c3_60pts_nocentre  (Mon Nov  2 16:12:51 KST 2026)  cfg=cert/L3n_t20.cfg m=3 rmin=1e12
+m=3 C=0 orbits=20 points=60 scale=1.312e+16 maxabs=104333044401043424
+2673c45cafdf78aee131e4c89533dded02708d1705ecba06cea5451108c8db14  c3_60pts_nocentre.txt
+-- check 1: symcheck.py (exact integer symmetry, distinctness, collinear triples)
+n=60 distinct=True invariant=True centre=False collinear_triples=0
+-- check 2: ES8SYM verify_set.py (big-integer orientation table, O(n^4) DP for largest convex subset)
+{'points': 60, 'distinct': True, 'max_abs_coord': 104333044401043424, 'symmetric': True, 'collinear_triples': 0, 'largest_convex_subset': 7}
+PASS
+-- check 3: ES8SYM enum_convex.c (independent __int128 orientations, DFS enumeration of all convex polygons, compares orientation table)
+n=60 duplicates=0 collinear_triples=0
+orientation signs differing from c3_60pts_nocentre.txt.orient: 0
+convex 3-gons: 34220
+convex 4-gons: 278649
+convex 5-gons: 926736
+convex 6-gons: 1156887
+convex 7-gons: 323109
+largest convex subset: 7
+-- results: symcheck=0 verify_set=0 enum_convex=0
+ALL PASS

@@ -1,0 +1,17 @@
+ex8_r0: 92 units, Z part -1 ; VERIFIED_LINES 1 cnf 3562c52cb7f615fd proof 3817932802d42fac
+ex8_r1: 93 units, Z part +1 -2 ; no result
+ex8_r2: 94 units, Z part +1 +2 -3 ; no result
+ex8_r3: 95 units, Z part +1 +2 +3 -4 ; no result
+ex8_r4: 96 units, Z part +1 +2 +3 +4 -5 ; no result
+ex8_r5: 97 units, Z part +1 +2 +3 +4 +5 -6 ; no result
+ex8_r6: 98 units, Z part +1 +2 +3 +4 +5 +6 -7 ; no result
+ex8_r7: 99 units, Z part +1 +2 +3 +4 +5 +6 +7 -9 ; VERIFIED_LINES 1 cnf 69d7aefd580f047b proof 33efba4b9cd65775
+ex8_r8: 100 units, Z part +1 +2 +3 +4 +5 +6 +7 +9 -10 ; no result
+ex8_r9: 101 units, Z part +1 +2 +3 +4 +5 +6 +7 +9 +10 -11 ; no result
+ex8_r10: 102 units, Z part +1 +2 +3 +4 +5 +6 +7 +9 +10 +11 -12 ; no result
+ex8_r11: 103 units, Z part +1 +2 +3 +4 +5 +6 +7 +9 +10 +11 +12 -13 ; no result
+ex8_r12: 104 units, Z part +1 +2 +3 +4 +5 +6 +7 +9 +10 +11 +12 +13 -14 ; no result
+ex8_r13: 105 units, Z part +1 +2 +3 +4 +5 +6 +7 +9 +10 +11 +12 +13 +14 -15 ; no result
+ex8_r14: 105 units, Z part +1 +2 +3 +4 +5 +6 +7 +9 +10 +11 +12 +13 +14 +15 ; VERIFIED_LINES 1 cnf cb78d637c6650178 proof ffc3e906bf85c188
+assignments of Z_s: 16384, covered exactly once: 16384, bad: 0
+COVER OK

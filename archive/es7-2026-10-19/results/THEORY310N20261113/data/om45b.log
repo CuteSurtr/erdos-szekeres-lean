@@ -1,0 +1,13 @@
+Started nov13-theory-om45b.service - [systemd-run] /home/jay/research/data/six10-linux-20261105/venv.disk/bin/python -u omission_gen2.py 1800 200.
+it 1 rows 64 incumbent 0 dual 0.00 best 0.00 HighsModelStatus.kOptimal added 64 maxlen 9 t=1s
+it 2 rows 147 incumbent 10 dual 10.00 best 10.00 HighsModelStatus.kOptimal added 83 maxlen 9 t=1s
+it 3 rows 221 incumbent 16 dual 16.00 best 16.00 HighsModelStatus.kOptimal added 74 maxlen 9 t=4s
+it 4 rows 257 incumbent 18 dual 18.00 best 18.00 HighsModelStatus.kOptimal added 36 maxlen 9 t=6s
+it 5 rows 277 incumbent 20 dual 20.00 best 20.00 HighsModelStatus.kOptimal added 20 maxlen 9 t=10s
+it 6 rows 286 incumbent 21 dual 21.00 best 21.00 HighsModelStatus.kOptimal added 9 maxlen 9 t=16s
+it 7 rows 302 incumbent 21 dual 21.00 best 21.00 HighsModelStatus.kOptimal added 16 maxlen 9 t=20s
+it 8 rows 307 incumbent 21 dual 21.00 best 21.00 HighsModelStatus.kOptimal added 5 maxlen 9 t=30s
+it 9 rows 310 incumbent 22 dual 22.00 best 22.00 HighsModelStatus.kOptimal added 3 maxlen 9 t=43s
+it 10 rows 310 incumbent 22 dual 22.00 best 22.00 HighsModelStatus.kOptimal added 0 maxlen 9 t=58s
+final best dual bound 22.0 capacity <= 104
+nov13-theory-om45b.service: Consumed 1min 3.099s CPU time over 1min 3.079s wall clock time, 158.5M memory peak.

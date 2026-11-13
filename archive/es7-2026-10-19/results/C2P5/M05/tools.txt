@@ -1,0 +1,16 @@
+Tools built by C2P/vendor/build_tools.sh from vendor/tools-src.tar.xz (no clone/download)
+CaDiCaL c60730422e758ef1cebe7aeddf2dda31c996bf04 (3.0.1), cake_lpr a36874a8b750b43fe4b385b8ddbf5b033e46a3fa, lrat-check drat-trim 2e3b2dc0ecf938addbd779d42877b6ed69d9a985 + E2 patch
+lrat-check.c:399:5: warning: ignoring return value of 'fgets' declared with attribute 'warn_unused_result' [-Wunused-result]
+  399 |     fgets (ignore, sizeof (ignore), cnf);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cadical --version: 3.0.1
+cake_lpr example: s VERIFIED UNSAT
+sanity bad (LRAT on {1},{-1}): lrat-check 'c FAILED: empty clause without a RUP conflict'; cake_lpr 'c Checking failed at line: 0. Reason: pivot must be non-zero'
+sanity good (LRAT on {1},{-1}): lrat-check 'c VERIFIED'; cake_lpr 's VERIFIED UNSAT'
+expected: bad rejected by both, good accepted by both (c VERIFIED, s VERIFIED UNSAT)
+
+base.cnf header: p cnf 838032 16653336
+b0061e908bff80e6a597f31a6fec1d91e8504aebc09b0bcf41c2ff21604d8ff1  /opt/work/base.cnf
+2476fafff493a763fd7f2883380d359629191912a15a69bcbdfbf49bbf472b48  /opt/work/base.json
+cubes P1..P8: all byte-identical to C2P/cubes/P{a}_cubes.txt
+TASK commit 81cb025f; V=M05 LIST=C2P5A.tsv j=5 N=37 H=4.5

@@ -1,0 +1,14 @@
+file: k6_points.txt  k = 6  N = 16  max|coord| = 27000000000
+symmetry: {'n': 16, 'distinct': True, 'centrally_symmetric': True, 'origin_absent': True}
+size == 2^(k-2): True
+distinct x-coordinates: True
+collinear triples: 0   (checked 560 triples, 0.0s)
+(A) angular DP: largest convex subset = 5  (0.0s)
+    witness of size 5 independently in convex position (hull test): True
+    witness: [(-3000000000, -27000000000), (1000024661, 1000000007), (1000008220, 999999997), (1652, 403), (-999975338, -999999993)]
+(B) cup+cap DP: largest convex subset = 5  (0.0s)
+counting DP: number of convex L-subsets, L=3..7: [560, 924, 322, 0, 0]  (0.0s)
+    count[3] == C(N,3): True
+(C) random subsets: 400 trials, mismatches A/B/brute = 0, brute maxima histogram {4: 3, 5: 397}  (2.3s)
+full brute force (all subsets, hull test): convex L-subsets {3: 560, 4: 924, 5: 322, 6: 0, 7: 0}  (0.1s)
+RESULT: PASS

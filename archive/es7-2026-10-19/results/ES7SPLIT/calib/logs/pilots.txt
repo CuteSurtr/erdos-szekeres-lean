@@ -1,0 +1,6 @@
+k6_h5: s UNSATISFIABLE user=24.76s real=24.96s
+k6_h4: s UNSATISFIABLE user=128.40s real=129.64s
+k6_h3: s UNSATISFIABLE user=105.10s real=106.32s
+k7_N32_h6: s SATISFIABLE user=2.64s real=2.76s
+  model check: {"axiom_violations": 0, "longest_cap": 6, "longest_cup": 6, "largest_convex": 6, "status": "s SATISFIABLE", "extreme_points": 6}
+k7_N33_h6_mirror: s UNKNOWN user=890.23s real=900.03s

@@ -1,0 +1,42 @@
+{
+ "base_sha256": "d7bbb74395b2799ecaa0bbaf9850842c205f059c7db20667e91d457e7e37928e",
+ "cube": "d001111",
+ "units": [
+  8803,
+  -8737,
+  -8738,
+  8739,
+  8748,
+  8749,
+  8758
+ ],
+ "families": [
+  {
+   "file": "m5_linear00_t13.clauses",
+   "sha256": "11e6b7c78fab539a45a69cb95a2d54acd66f40d32633655ff20e591314483fd8",
+   "clauses": 1560,
+   "kind": "rotation_linear_identity"
+  },
+  {
+   "file": "m5_linear01_t13.clauses",
+   "sha256": "fcf7ec6a68328e0acfe500b5ae1969d5c89601be1f01e6ee40ff773b85b56de0",
+   "clauses": 85800,
+   "kind": "rotation_linear_identity"
+  },
+  {
+   "file": "m5_linear02_t13.clauses",
+   "sha256": "d39da6843ffdc4dcad7d7b7ec4e3fba3e8037baccc7583a06be24b345d1fdbc7",
+   "clauses": 85800,
+   "kind": "rotation_linear_identity"
+  },
+  {
+   "file": "m5_linear03_t13.clauses",
+   "sha256": "f2607c58f8b573d35e44d368200057455ff9d39a1b1343a7b9a08c8bfeacde75",
+   "clauses": 178750,
+   "kind": "rotation_linear_identity"
+  }
+ ],
+ "variables": 91390,
+ "clauses": 3647534,
+ "cnf_sha256": "17b715fba5569bf8194c83f0c6b848637c9e6ff9ec907ffbad69f353faf99e7a"
+}

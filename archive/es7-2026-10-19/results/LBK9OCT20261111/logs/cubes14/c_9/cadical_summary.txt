@@ -1,0 +1,142 @@
+c --- [ banner ] -------------------------------------------------------------
+c CaDiCaL SAT Solver
+c Copyright (c) 2016-2024
+c A. Biere, M. Fleury, N. Froleyks, K. Fazekas, F. Pollitt, T. Faller
+c JKU Linz, University of Freiburg, TU Wien
+c Version 2.1.3
+c g++-15.2.0
+c Dec 15 2025 01:04:17
+c --- [ proof tracing ] ------------------------------------------------------
+c opening file to write '<lb-k9oct-work-dir>/sat/cubes14/c_9/proof.lrat'
+c writing non-binary proof trace to '<lb-k9oct-work-dir>/sat/cubes14/c_9/proof.lrat'
+c --- [ parsing input ] ------------------------------------------------------
+c reading DIMACS file from '<lb-k9oct-work-dir>/sat/cubes14/c_9/c_9.cnf'
+c opening file to read '<lb-k9oct-work-dir>/sat/cubes14/c_9/c_9.cnf'
+c found 'p cnf 497712 29778727' header
+c parsed 29778727 clauses in 5.93 seconds process time
+c --- [ options ] ------------------------------------------------------------
+c   --binary=false                 (different from default 'true')
+c   --lrat=true                    (different from default 'false')
+c --- [ solving ] ------------------------------------------------------------
+c time measured in process time since initialization
+c  seconds    reductions  redundant   irredundant
+c          MB     restarts       trail         variables
+c            level   conflicts       glue            remaining
+c *  5.93 2784  0 0   0    0    0  0% 0 27461404 326830 66%
+c  seconds    reductions  redundant    irredundant
+c          MB     restarts       trail          variables
+c            level   conflicts       glue             remaining
+c  seconds     reductions  redundant    irredundant
+c          MB      restarts       trail          variables
+c             level   conflicts       glue             remaining
+c 2 67.43 3393 110 2 116 5001 18998 37% 10 15283436 326032 66%
+c  seconds    reductions  redundant    irredundant
+c          MB     restarts       trail          variables
+c            level   conflicts       glue             remaining
+c  seconds     reductions   redundant    irredundant
+c           MB     restarts        trail          variables
+c             level    conflicts       glue             remaining
+c 2 228.12 3339 18 5 206 15001 24494 26% 9 12408607 240475 48%
+c  seconds     reductions    redundant     irredundant
+c           MB     restarts          trail          variables
+c             level    conflicts         glue             remaining
+c  seconds     reductions    redundant     irredundant
+c           MB     restarts          trail          variables
+c             level    conflicts         glue             remaining
+c  seconds     reductions    redundant    irredundant
+c           MB     restarts         trail          variables
+c             level    conflicts        glue             remaining
+c  seconds     reductions    redundant   irredundant
+c           MB     restarts         trail         variables
+c             level    conflicts        glue            remaining
+c 2 353.98 3251 34 7 730 30002 21478 26% 9 12326170 238450 48%
+c  seconds     reductions    redundant   irredundant
+c           MB     restarts         trail         variables
+c             level    conflicts        glue            remaining
+c  seconds     reductions    redundant   irredundant
+c           MB     restarts         trail         variables
+c             level    conflicts        glue            remaining
+c 2 590.15 3268 16 9 813 50009 35656 27% 9 11564513 229320 46%
+c  seconds     reductions     redundant   irredundant
+c           MB      restarts         trail         variables
+c             level     conflicts        glue            remaining
+c  seconds     reductions     redundant   irredundant
+c           MB      restarts         trail         variables
+c             level     conflicts        glue            remaining
+c  seconds     reductions      redundant   irredundant
+c           MB      restarts          trail         variables
+c             level      conflicts        glue            remaining
+c 3 859.99 3275 27 12 1086 75010 36865 24% 9 10776120 219337 44%
+c 2 861.97 3275 27 12 1086 75010 37537 24% 9 10744419 219332 44%
+c  seconds     reductions      redundant   irredundant
+c           MB      restarts          trail         variables
+c             level      conflicts        glue            remaining
+c   seconds     reductions       redundant   irredundant
+c            MB      restarts           trail         variables
+c              level      conflicts         glue            remaining
+c 3 1092.93 3274 21 14 2397 105012 39736 23% 8 10713951 219057 44%
+c 2 1094.84 3274 21 14 2397 105012 40618 23% 8 10713868 219008 44%
+c   seconds     reductions       redundant   irredundant
+c            MB      restarts           trail         variables
+c              level      conflicts         glue            remaining
+c   seconds     reductions       redundant   irredundant
+c            MB      restarts           trail         variables
+c              level      conflicts         glue            remaining
+c 0 1317.46 3313 15 16 3339 127805 33454 31% 8 10329887 199196 40%
+c --- [ closing proof ] ------------------------------------------------------
+c LRAT proof file '<lb-k9oct-work-dir>/sat/cubes14/c_9/proof.lrat' closed
+c LRAT 14039401 added clauses 29.68%
+c LRAT 33270377 deleted clauses 70.32%
+c LRAT 1544892839 bytes (1473.32 MB)
+c --- [ result ] -------------------------------------------------------------
+s UNSATISFIABLE
+c --- [ run-time profiling ] -------------------------------------------------
+c process time taken by individual solving procedures
+c (percentage relative to process time for solving)
+c      1116.02   85.09% search
+c       649.00   49.48% unstable
+c       446.12   34.02% stable
+c       195.50   14.91% simplify
+c        72.48    5.53% vivify
+c        34.14    2.60% elim
+c        27.80    2.12% subsume
+c        24.44    1.86% probe
+c        19.65    1.50% walk
+c        11.52    0.88% ternary
+c         5.93    0.45% parse
+c         1.24    0.09% lucky
+c   =================================
+c      1311.52   99.55% solve
+c last line shows process time for solving
+c (percentage relative to total process time)
+c --- [ statistics ] ---------------------------------------------------------
+c chronological:             39597        30.98 %  of conflicts
+c conflicts:                127805        97.45    per second
+c decisions:                266789       203.42    per second
+c eliminated:               113907        22.89 %  of all variables
+c fixed:                    184409        37.05 %  of all variables
+c learned:                  123504        96.63 %  per conflict
+c learned_lits:           10041618       100.00 %  learned literals
+c minimized:                     0         0.00 %  learned literals
+c shrunken:                2678488        26.67 %  learned literals
+c minishrunken:            1933314        19.25 %  learned literals
+c otfs:                        339         0.27 %  of conflict
+c propagations:         2678567943         2.04 M  per second
+c reduced:                   64001        50.08 %  per conflict
+c rephased:                     15      8520.33    interval
+c restarts:                   3339        38.28    interval
+c stabilizing:                   4        33.49 %  of conflicts
+c substituted:                 200         0.04 %  of all variables
+c subsumed:                2769974         8.18 %  of all clauses
+c strengthened:              89351         0.26 %  of all clauses
+c ternary:                   73760         0.06 %  of resolved
+c vivified:                  41041         0.12 %  of all clauses
+c walked:                        4     31951.25    interval
+c weakened:                4613200         3.30    average size
+c seconds are measured in process time for solving
+c --- [ resources ] ----------------------------------------------------------
+c total process time since initialization:      1317.46    seconds
+c total real time since initialization:         1322.49    seconds
+c maximum resident set size of process:         3989.43    MB
+c --- [ shutting down ] ------------------------------------------------------
+c exit 20

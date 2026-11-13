@@ -1,0 +1,32 @@
+SYMMAX/c5_31points.txt: 31 points, centre included: True, 6 orbits
+  mirror=False: with centre: 31 points, general position, largest convex subset 6
+  mirror=False: 30 points, largest convex subset 6, layers single orbits: True, layer orbit order [2, 1, 0, 3, 4, 5]
+    stream N=30 enc=L mirror=False subset=(0, 1, 2, 3, 4, 5) key=3: {'T': 0, 'D': 0, 'K': 0} (7 s)
+    stream N=30 enc=L mirror=False subset=(0, 1, 2, 3, 4, 5) key=4: {'T': 0, 'D': 0, 'K': 0} (7 s)
+    stream N=30 enc=A mirror=False subset=(0, 1, 2, 3, 4, 5) key=(1, 0): {'T': 0, 'D': 0, 'K': 0} (8 s)
+  after mirror=False: {'subsets': 57, 'evaluations': 1183, 'T': 0, 'D': 0, 'K': 0, 'stream_evaluations': 3}
+  mirror=True: with centre: 31 points, general position, largest convex subset 6
+  mirror=True: 30 points, largest convex subset 6, layers single orbits: True, layer orbit order [2, 1, 0, 3, 4, 5]
+    stream N=30 enc=L mirror=True subset=(0, 1, 2, 3, 4, 5) key=4: {'T': 0, 'D': 0, 'K': 0} (7 s)
+    stream N=30 enc=L mirror=True subset=(0, 1, 2, 3, 4, 5) key=1: {'T': 0, 'D': 0, 'K': 0} (7 s)
+    stream N=30 enc=A mirror=True subset=(0, 1, 2, 3, 4, 5) key=(1, 0): {'T': 0, 'D': 0, 'K': 0} (7 s)
+  after mirror=True: {'subsets': 114, 'evaluations': 2366, 'T': 0, 'D': 0, 'K': 0, 'stream_evaluations': 6}
+TOTAL {"subsets": 114, "evaluations": 2366, "T": 0, "D": 0, "K": 0, "stream_evaluations": 6}
+       99.06 real        97.63 user         0.88 sys
+          1092091904  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              158579  page reclaims
+                  47  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  32  voluntary context switches
+               28383  involuntary context switches
+       1829866821041  instructions retired
+        353085685130  cycles elapsed
+          1081640280  peak memory footprint

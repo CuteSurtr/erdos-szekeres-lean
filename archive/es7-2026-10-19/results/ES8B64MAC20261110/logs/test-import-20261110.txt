@@ -1,0 +1,32 @@
+== sha256 (first 12): frozen exporter, merge; run_context.py, pbb_strong.py, contexts.jsonl
+29854a3799db
+3cbf428b130f
+1937e9dc3e51
+2aa90df2812b
+c16cc3da2171
+== import, dry run
+exit 0
+{"dry_run": true, "imported": 3, "linux_has": 0}
+files written by the dry run: 0
+== import
+exit 0
+{"imported": 3, "linux_has": 0, "closed_in_campaign_runs": 3}
+== import again, path taken from the results already there
+exit 0
+{"imported": 0, "linux_has": 3}
+== differences between a Mac result and its imported copy (lines)
+2
+<   "pbb_strong": "<path>/pbb_strong.py",
+>   "pbb_strong": "<path>/pbb_strong.py",
+ctx 3850 tree identical
+ctx 768 tree identical
+ctx 4068 tree identical
+== frozen exporter on the imported contexts
+exit 0
+{"exported": [{"ctx": 768, "leaves": 118, "modules": 1, "K": 131072, "skeleton": 0, "min_margin": 1, "seconds": 0.13}, {"ctx": 3850, "leaves": 95, "modules": 1, "K": 131072, "skeleton": 0, "min_margin": 1, "seconds": 0.08}, {"ctx": 4068, "leaves": 1711, "modules": 1, "K": 131072, "skeleton": 0, "min_margin": 1, "seconds": 1.28}], "refused": null, "refused_ctx": {}, "not_ready": {}, "code_changed": []}
+== frozen merge, partial
+exit 0
+{"refused": null, "alert": null, "code_changed": [], "contexts": 3, "modules": 3, "total_leaves": 1924}
+== negative control: unrewritten result, Mac path absent
+exit 1 (1 expected)
+{"refused": "ctx 3850: pbb_strong.py (/absent/lean 4 /.cache/es7/wt-b64-5aa5b31f2/experiments/omission-final311-2026-10-14/search/pbb_strong.py) or run_context.py missing", "exported": []}

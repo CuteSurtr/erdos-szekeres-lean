@@ -1,0 +1,66 @@
+<repo>/experiments/omission-compact-checker-2026-11-05/build/es311/trial/BX-L1000-B64/src/E311BX/C00001.lean:14:225: error: Tactic `decide` proved that the proposition
+  checkF2 fcat62 3131 252 63 8388608 131072 536870912 4 b12
+      (pmask (zerosF 252)
+        [(174, 2), (194, 2), (107, 2), (167, 2), (52, 2), (181, 2), (224, 2), (19, 2), (41, 2), (210, 2), (37, 2),
+          (214, 2)]) =
+    true
+is false
+type checking took 728ms
+type checking took 842ms
+type checking took 1.55s
+type checking took 1.35s
+type checking took 969ms
+type checking took 1.21s
+type checking took 666ms
+type checking took 1.32s
+type checking took 1.12s
+type checking took 1.11s
+type checking took 1.56s
+type checking took 1.57s
+type checking took 980ms
+type checking took 1.06s
+type checking took 1.29s
+type checking took 1.11s
+'E311BX.C00001.ex8' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+elaboration took 175ms
+cumulative profiling times:
+	attribute application 1.26ms
+	compilation (IR) 3.81ms
+	compilation (LCNF base) 5.47ms
+	compilation (LCNF mono) 2.65ms
+	elaboration 989ms
+	fix level params 3.43ms
+	instantiate metavars 4.51ms
+	interpretation 0.759ms
+	let-to-have transformation 8.18ms
+	linting 97.2ms
+	parsing 216ms
+	process pre-definitions 97.4ms
+	share common exprs 44.7ms
+	tactic execution 31.2ms
+	type checking 18.5s
+	typeclass inference 159ms
+Command exited with non-zero status 1
+	Command being timed: "lean -j1 -R <repo>/experiments/omission-compact-checker-2026-11-05/build/es311/trial/BX-L1000-B64/src -o <repo>/experiments/omission-compact-checker-2026-11-05/build/es311/trial/BX-L1000-B64/olean/E311BX/C00001.tmp542547-1.olean <repo>/experiments/omission-compact-checker-2026-11-05/build/es311/trial/BX-L1000-B64/src/E311BX/C00001.lean"
+	User time (seconds): 22.50
+	System time (seconds): 0.64
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:23.46
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3256696
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 96000
+	Voluntary context switches: 3184
+	Involuntary context switches: 2495
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

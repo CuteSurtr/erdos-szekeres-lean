@@ -1,0 +1,9 @@
+C3-S tools: git worktree of commit 132398c (8dc27c3 before the author rewrite, FINAL/COMMIT_MAP.tsv) at /opt/c3s, unmodified; TOOLS=/opt/c3s/cloud/es7-2026-10-19/results/C3-S/tools; live files in /opt/work
+cadical: https://github.com/arminbiere/cadical c60730422e758ef1cebe7aeddf2dda31c996bf04 (cadical --version: 3.0.1), ./configure && make -> /opt/bin/cadical
+cake_lpr: https://github.com/tanyongkiam/cake_lpr a36874a8b750b43fe4b385b8ddbf5b033e46a3fa, make cake_lpr -> /opt/bin/cake_lpr; example.cnf/example.lpr -> s VERIFIED UNSAT
+lrat-check: https://github.com/marijnheule/drat-trim 2e3b2dc0ecf938addbd779d42877b6ed69d9a985 + results/E2/tools/lrat-check-E2.patch (applied with patch(1)), gcc -O2 -> /opt/bin/lrat-check
+  sanity: CNF {1},{-1}; LRAT "3 0 0" -> lrat-check "c FAILED: empty clause without a RUP conflict" / "c NOT VERIFIED", cake_lpr "c Checking failed at line: 0. Reason: pivot must be non-zero" (rejected); "3 0 1 2 0" -> lrat-check "c VERIFIED", cake_lpr "s VERIFIED UNSAT"
+base CNF: python3 $TOOLS/gen_case.py 11 7 none -o /opt/work/base.cnf -> p cnf 168399 4154921, sha256 bf0e502ee78599400d36e0fc402a8ce79b4c41443327b4e0186902fab0cdd6da (matches)
+roots: rows of C3W3/lists/C_s1two.tsv with row % 18 == 0, in file order: 33 roots (roots.tsv), 4 partial, 29 untouched
+seeded: 1301 certified/split records into /opt/work/out0.jsonl (0s0-1s1_2s0-5s1: 42, 0s0-2s1_3s1-4s0: 525, 0s0-1s1_5s1-8s0: 543, 0s0-3s1_2s1-6s0: 191), from 77 files (C3WAVE1/*/out|recheck, C3WAVE2/*/out|recheck, C3S0/*/out)
+runner: lane0.sh (1 lane, setsid nohup), --jobs 3 --caps 300,300,600 --cadopts=--sat --split-singles, slice S = min(2.0, hours left); START 04:42:24 UTC, END = START + 6 h - 15 min = 10:27:24 UTC; watchdog kills solvers/checkers at END

@@ -1,0 +1,14 @@
+base abscissae x_j: [-3, -1, 0, 1, 3]
+cluster sizes: {0: 1, 1: 4, 2: 6, 3: 4, 4: 1}  == C(k-2,j): True
+B_{n-j} = -B_j for all j (incl. middle B_{n/2} = -B_{n/2}): True
+(H0) distinct x-coordinates: True
+(H1) clusters x-separated in index order: True
+(H2) max intra-cluster slope 399/1556 (0.2564) < min inter-cluster slope 1000000410/1000026313 (1): True
+(H3) triples from distinct clusters with nonzero base sum: 136 checked, 0 with wrong sign
+(H4) triples (B_j, B_{n/2}, B_{n-j}) with x(p)+x(r) != 0: 72 checked, 0 with wrong sign
+(H5) B_0: longest cup 1 (<= 1), longest cap 1 (<= 5): True
+(H5) B_1: longest cup 2 (<= 2), longest cap 4 (<= 4): True
+(H5) B_2: longest cup 3 (<= 3), longest cap 3 (<= 3): True
+(H5) B_3: longest cup 4 (<= 4), longest cap 2 (<= 2): True
+(H5) B_4: longest cup 1 (<= 5), longest cap 1 (<= 1): True
+STRUCTURE: PASS

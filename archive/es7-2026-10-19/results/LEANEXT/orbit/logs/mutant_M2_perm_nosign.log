@@ -1,0 +1,22 @@
+scratch/M2_perm_nosign.lean:187:39: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Equiv.Perm.sign (?f * ?g)
+in the target expression
+  -orient3 t = orient3 t
+
+case refine_2
+σ f : Equiv.Perm (Fin 3)
+x y : Fin 3
+hxy : x ≠ y
+ih : ∀ (t : Fin 3 → Point), orient3 (t ∘ ⇑f) = orient3 t
+t : Fin 3 → Point
+hcomp : t ∘ ⇑(Equiv.swap x y * f) = (t ∘ ⇑(Equiv.swap x y)) ∘ ⇑f
+⊢ -orient3 t = orient3 t
+scratch/M2_perm_nosign.lean:196:62: error: unsolved goals
+c : Point
+m : ℕ
+g : Point → Point
+hg : RotComp c m g
+σ : Equiv.Perm (Fin 3)
+t : Fin 3 → Point
+hg' : orient3 (g ∘ t ∘ ⇑σ) = orient3 (t ∘ ⇑σ)
+⊢ orient3 t = ↑↑(Equiv.Perm.sign σ) * orient3 t

@@ -1,0 +1,23 @@
+points: 27 v = (0, 0) distinct: True
+W1 general position: True
+W2 gon(S) by DP: 6
+W2 exhaustive 7-subsets checked: 888030 in convex position: 0
+W2 a convex 6-subset exists: True (tri-test agrees: True )
+W3 hull size 5 v is hull vertex: True
+W4 6-subsets through v checked: 65780 convex (either test): 0
+W5 max convex subset containing v (exhaustive up to 6): 5
+W5 max v-cap in S\{v}: 4 | equivalence (Y u {v} convex <=> Y v-cap) mismatches: 0 of 83655
+W6 separating normal n = (110337, 16)
+W6 phi(T): distinct x: True general position: True
+W6 orientation sign mismatches: 0 | v-order vs x-order mismatches: 0
+W6 max cap of phi(T) (DP): 4 | exhaustive: #5-caps = 0  #4-caps = 2001
+W6 v-cap <-> cap mismatches (k=3,4,5): 0
+W6 gon(phi(T)) by DP: 6 | gon(T) by DP: 6
+W7 v' = (6859821270607467215134024190402195547275826153240186920927650070595467308094242386157377229495126884654290940031875964654601637998640, -1829336731884064355173458551607974598555361764164855104195092895045816002167752834864146497074499699106556455650185369700770600) below every line of A0: True general position: True
+W7 gon(A0 u {v'}) by DP: 6 | v' hull vertex: True
+W7 convex hexagons through v': 0 | |A0 u {v'}| = 27
+        6.68 real         6.64 user         0.01 sys
+            16924672  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size

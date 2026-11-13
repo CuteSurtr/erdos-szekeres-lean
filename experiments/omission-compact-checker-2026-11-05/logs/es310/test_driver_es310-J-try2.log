@@ -1,0 +1,14 @@
+== 2026-11-06T04:16:38Z test_driver_es310.sh: WORKDIR /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-driver, cases: J; drive_es310.py sha256 08bf8317a19a1390
+== 2026-11-06T04:16:38Z J: temperature and campaign gates
+PASS: J: parse_tctl and campaign_pause unit tests
+gate unit tests ok
+PASS: J: --max-tctl 1: the driver waits (2026-11-06T04:16:43Z waiting: Tctl 72.2 C >= 1 C)
+PASS: J: a second driver on the same export is refused (exit 1)
+PASS: J: no lean started for the export
+PASS: J: STOP ends the waiting driver (exit 0)
+PASS: J: no row was written
+PASS: J: a fresh PAUSE line: the driver waits
+PASS: J: the start JSON reports the PAUSE line
+PASS: J: STOP ends it (exit 0), no row, no lean
+PASS: J: --max-tctl 90 refused (exit 1)
+== 2026-11-06T04:16:49Z summary: 10 passed, 0 failed

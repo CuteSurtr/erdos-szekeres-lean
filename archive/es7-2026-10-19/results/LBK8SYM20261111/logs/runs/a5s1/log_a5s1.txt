@@ -1,0 +1,9 @@
+22:11:35 start {'m': 5, 't': 12, 'centre': True, 'out': '/home/jay/research/data/lb-k8sym-20261111/runs/a5s1', 'seed': 701, 'init': None, 'ansatz': 'spiral11,spiral1,spiral12,spiral21', 'stop_at': 0, 'hours': 2.0, 'steps_per_T': 4000, 'T0': 0.5, 'Tmin': 0.02, 'alpha': 0.93, 'w7': 0.02, 'restart_evals': 600000, 'tag': 'a5s1', 'perturb': 0.0, 'pfocus': 0.0}
+22:11:35 restart 1 spiral1 init N8 1127255 N7 1660630
+22:12:36 r1 ev 68000 acc 0.890 ab 0.047 T 0.1456 cur N8 4880 N7 180130 | best N8 4880 N7 180130
+22:13:37 r1 ev 168000 acc 0.688 ab 0.262 T 0.0237 cur N8 1520 N7 771440 | best N8 1440 N7 234380
+22:14:37 r1 ev 288000 acc 0.639 ab 0.324 T 0.0227 cur N8 1090 N7 546760 | best N8 975 N7 425465
+22:15:39 r1 ev 420000 acc 0.608 ab 0.363 T 0.0200 cur N8 435 N7 2255940 | best N8 410 N7 2164090
+22:16:39 r1 ev 544000 acc 0.596 ab 0.379 T 0.0211 cur N8 350 N7 1421155 | best N8 340 N7 1320885
+22:17:05 end restart 1 spiral1 evals 600000 best N8 340 N7 926890 found 0
+22:17:05 restart 2 spiral12 init N8 2716240 N7 3526675

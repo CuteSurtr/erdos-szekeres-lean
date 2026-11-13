@@ -1,0 +1,29 @@
+== 1. vendored modules
+VENDOR.sha256 OK
+vendored files equal the repository files: 11 checked
+== 2. data files
+OK   LeanLB/Data/C4N52.lean <- ES8SYM/sets/c4_52pts_13layers.pts (52 rows, sha256 dc4cf91396f8efe5e03b54ef8a4ff5d569385fcec7b9f5a016f72431c980c65b)
+OK   LeanLB/Data/C6N60.lean <- SIX60/sets/c6_60pts_D.pts (60 rows, sha256 e2eaceb9e6483b461a72fc330a5d05b0ad6d7e238bfc557f5eed412d95d133c2)
+OK   LeanLB/Data/C2N64.lean <- ES8SYM/sets/c2_64points_k8.txt (64 rows, sha256 25576cf253fb969b01777c2e8945dfbdecfef10fad8b8c15a3eb70b1c4a8811f)
+OK   LeanLB/Data/MirN46.lean <- ES8SYM/sets/mirror_46points_k8.txt (46 rows, sha256 bf3b8e95f20d61ffe605ac18d768be17d99677e4da9012160f933f7f7c6cd263)
+OK   LeanLB/Data/C3N61.lean <- ES8SYM/sets4/c3_61pts_centre.txt (61 rows, sha256 006a0cae53478c728d6bdfe5a31f2d06a882aa29adba613e0cab74f54f5a6e2f)
+OK   LeanLB/Data/C5N56.lean <- ES8SYM/sets3/c5_56pts_11layers_centre.pts (56 rows, sha256 4cdd24bbeaa56d437420b1d1f63ca5ecb0fba64482ceb78ba6f1f7a496cf3387)
+OK   LeanLB/Data/C7N64.lean <- ES8SYM/sets/c7_64pts_small.pts (64 rows, sha256 ebe028f65c3856a9a7c6fa595a3e735eb49a362f833b76089eea1b9f35a0ecc3)
+OK   c4_52pts_13layers.pts matches ES8SYM/sets/SHA256SUMS.txt
+OK   c2_64points_k8.txt matches ES8SYM/sets/SHA256SUMS.txt
+OK   mirror_46points_k8.txt matches ES8SYM/sets/SHA256SUMS.txt
+OK   c7_64pts_small.pts matches ES8SYM/sets/SHA256SUMS.txt
+OK   c6_60pts_D.pts matches SIX60/sets/SHA256SUMS.txt
+OK   c5_56pts_11layers_centre.pts matches ES8SYM/sets3/SHA256SUMS
+OK   c3_61pts_centre.txt matches ES8SYM/sets4/SHA256SUMS
+== 3. forbidden tokens
+scanned 41 files: OK
+== 4. axiom audit (from the last full build)
+OK   LeanLB.sixfold60
+OK   LeanLB.fourfold52
+OK   LeanLB.halfturn64
+OK   LeanLB.mirror46
+OK   LeanLB.threefold61
+OK   LeanLB.sevenfold64
+OK   LeanLB.fivefold56
+AUDIT PASS

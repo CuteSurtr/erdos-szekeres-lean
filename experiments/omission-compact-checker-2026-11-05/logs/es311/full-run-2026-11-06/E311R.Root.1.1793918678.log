@@ -1,0 +1,39 @@
+'E311R.root' depends on axioms: [propext, Classical.choice, Quot.sound]
+elaboration took 4.7s
+cumulative profiling times:
+	.olean serialization 7.54ms
+	attribute application 1.15ms
+	elaboration 5.53s
+	fix level params 2.08ms
+	instantiate metavars 3.59ms
+	let-to-have transformation 2.66ms
+	linting 156ms
+	parsing 108ms
+	process pre-definitions 20.5ms
+	share common exprs 9.24ms
+	type checking 29.4ms
+	typeclass inference 213ms
+	Command being timed: "lean -j1 -R /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es311/full/src -o /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es311/full/olean/E311R/Root.tmp594940-1-82afdb61ed70.olean /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es311/full/src/E311R/Root.lean"
+	User time (seconds): 7.35
+	System time (seconds): 0.73
+	Percent of CPU this job got: 88%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:09.14
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 4314444
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 10992
+	Minor (reclaiming a frame) page faults: 87657
+	Voluntary context switches: 13535
+	Involuntary context switches: 21
+	Swaps: 0
+	File system inputs: 2257704
+	File system outputs: 384
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+cgroup memory.peak: 1506594816

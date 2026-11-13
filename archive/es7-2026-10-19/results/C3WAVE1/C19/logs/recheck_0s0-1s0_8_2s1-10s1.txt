@@ -1,0 +1,9 @@
+# Re-check of 0s0-1s0_8_2s1-10s1 alone (2026-10-20T07:56:26Z), after PROOF NOT ACCEPTED (cake_lpr printed nothing)
+cnf_sha256 ac3eb2f605a4591f196b0838636599d3b53ca4d6ca701a40816d218cd1494843
+cadical ['s UNSATISFIABLE'] 27.7 95398273
+lrat-check ['c VERIFIED'] rc 0 822104 3.7
+cake_lpr (CML_HEAP_SIZE=12000 CML_STACK_SIZE=2000): s VERIFIED UNSAT, peak RSS 4,208,520 kB
+Cause: memory. dmesg shows memory-cgroup OOM kills of cake_lpr (anon-rss ~4.19 GB each) at the time, with 4 jobs:
+[ 1124.122121] Memory cgroup out of memory: Killed process 3475 (cake_lpr) total-vm:8391796kB, anon-rss:4194816kB, file-rss:1364kB, shmem-rss:0kB, UID:0 pgtables:8264kB oom_score_adj:0
+[ 1133.651658] Memory cgroup out of memory: Killed process 3483 (cake_lpr) total-vm:8391796kB, anon-rss:4194560kB, file-rss:1188kB, shmem-rss:0kB, UID:0 pgtables:8264kB oom_score_adj:0
+[ 1162.123587] Memory cgroup out of memory: Killed process 3690 (cake_lpr) total-vm:8391796kB, anon-rss:4194304kB, file-rss:1276kB, shmem-rss:0kB, UID:0 pgtables:8264kB oom_score_adj:0

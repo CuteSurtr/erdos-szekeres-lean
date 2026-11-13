@@ -1,0 +1,113 @@
+{
+ "top_cubes": 16,
+ "top_closed": 0,
+ "shard_closed_weight": 0.11999078467488289,
+ "records": 912,
+ "by_kind_status_lrat": {
+  "('cube', 'SPLIT', None)": 31,
+  "('cube', 'UNSAT', 'VERIFIED')": 870,
+  "('gap', 'UNSAT', 'VERIFIED')": 11
+ },
+ "unsat_leaves": 881,
+ "unsat_lrat_verified": 881,
+ "sat_leaves": [],
+ "open_leaves": [],
+ "per_top": [
+  {
+   "id": "c7",
+   "closed": false,
+   "status": "SPLIT",
+   "closed_weight": 0.0
+  },
+  {
+   "id": "c15",
+   "closed": false,
+   "status": "SPLIT",
+   "closed_weight": 0.9979775547981262
+  },
+  {
+   "id": "c23",
+   "closed": false,
+   "status": "SPLIT",
+   "closed_weight": 0.921875
+  },
+  {
+   "id": "c31",
+   "closed": false,
+   "status": "SPLIT",
+   "closed_weight": 0.0
+  },
+  {
+   "id": "c39",
+   "closed": false,
+   "status": "SPLIT",
+   "closed_weight": 0.0
+  },
+  {
+   "id": "c47",
+   "closed": false,
+   "status": "SPLIT",
+   "closed_weight": 0.0
+  },
+  {
+   "id": "c55",
+   "closed": false,
+   "status": "SPLIT",
+   "closed_weight": 0.0
+  },
+  {
+   "id": "c63",
+   "closed": false,
+   "status": "SPLIT",
+   "closed_weight": 0.0
+  },
+  {
+   "id": "c71",
+   "closed": false,
+   "status": "SPLIT",
+   "closed_weight": 0.0
+  },
+  {
+   "id": "c79",
+   "closed": false,
+   "status": "SPLIT",
+   "closed_weight": 0.0
+  },
+  {
+   "id": "c87",
+   "closed": false,
+   "status": "SPLIT",
+   "closed_weight": 0.0
+  },
+  {
+   "id": "c95",
+   "closed": false,
+   "status": "SPLIT",
+   "closed_weight": 0.0
+  },
+  {
+   "id": "c103",
+   "closed": false,
+   "status": "SPLIT",
+   "closed_weight": 0.0
+  },
+  {
+   "id": "c111",
+   "closed": false,
+   "status": "SPLIT",
+   "closed_weight": 0.0
+  },
+  {
+   "id": "c119",
+   "closed": false,
+   "status": "SPLIT",
+   "closed_weight": 0.0
+  },
+  {
+   "id": "c127",
+   "closed": false,
+   "status": "SPLIT",
+   "closed_weight": 0.0
+  }
+ ]
+}

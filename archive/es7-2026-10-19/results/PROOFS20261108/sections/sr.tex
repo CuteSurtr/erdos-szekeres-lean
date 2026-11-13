@@ -1,0 +1,1172 @@
+\section{Reduction of symmetric sets to case classes}\label{sr:sec}
+
+This section gives written proofs of the declarations of \dirn{SYMLEAN/SymmetricReduction.lean}. Its main result,
+Theorem~\ref{sr:thm:main} (\lean{heptagon_of_nontrivial_isometry}), is a conditional statement. Five propositions
+about point sets of an exact size with one prescribed symmetry, the \emph{case classes} \lean{HalfTurn34},
+\lean{Threefold33}, \lean{Fivefold35}, \lean{MirrorOneAxis33} and \lean{MirrorNoAxis34}
+(Definition~\ref{sr:def:classes}), imply the following: every finite set of at least $33$ points in general position
+that is mapped into itself by a Euclidean isometry of the plane other than the identity contains $7$ points in convex
+position. The classes are \emph{hypotheses} of the theorem. Nothing in this section proves them;
+Remark~\ref{sr:rem:records} says which project records supply them and with which rigor label. The section also proves
+the variant Theorem~\ref{sr:thm:variant} (\lean{halfTurn_of_symmetric_counterexample}), in which a fourfold class
+\lean{Fourfold32} replaces \lean{HalfTurn34}, and the bridge Lemma~\ref{sr:lem:mirror-line} to a mirror statement of
+the directory \dirn{H3}.
+
+The proof of Theorem~\ref{sr:thm:main} has three parts.
+\begin{enumerate}
+\item Classification (Theorem~\ref{sr:thm:structure}). A Euclidean isometry $g\ne\mathrm{id}$ of the plane that maps
+  a finite set with at least two points into itself is a rotation $z\mapsto c+a(z-c)$ with $a\ne1$ a root of unity, or a
+  reflection in a line. Translations and glide reflections are excluded because the set is finite.
+\item Rotations. A power of $g$ is the half-turn, or a rotation whose factor is a primitive $p$-th root of unity for an
+  odd prime $p$ (Lemma~\ref{sr:lem:root-cases}). Whole orbits are selected (Lemma~\ref{sr:lem:orbit}) to reach the
+  exact sizes of the classes: $17$ antipodal pairs; $11$ orbits of size $3$; $7$ orbits of size $5$. For $p\ge7$ one
+  orbit consists of $p$ concyclic points, which are in convex position (Lemma~\ref{sr:lem:concyclic}).
+\item Reflections. At most two points lie on the mirror and the others come in pairs; $17$ pairs, or $16$ pairs and one
+  point of the mirror, are kept.
+\end{enumerate}
+
+\paragraph{Sources.}
+Paths of research records are relative to \dirn{cloud/es7-2026-10-19/results}; paths of the main library are relative
+to the repository root. The first 12 hex digits of the SHA-256 of each Lean source used are:
+\begin{itemize}
+\item \dirn{SYMLEAN/SymmetricReduction.lean} (1059 lines; every declaration of this file is covered here):
+  \texttt{6d5ec90a4215};
+\item \dirn{SYMLEAN/SymmetricReductionAxioms.lean}: \texttt{7bf809cbdc77}. Its lines 1--1059 are byte-identical to
+  the previous file; two \texttt{\#print axioms} commands follow;
+\item the eight repository modules that the file imports, directly or through other imports:
+  \begin{itemize}
+  \item \dirn{ErdosSzekeres/Definitions.lean}: \texttt{2425500eefd1};
+  \item \dirn{ErdosSzekeres/Basic.lean}: \texttt{13667aa2d3dc};
+  \item \dirn{ErdosSzekeres/Orientation.lean}: \texttt{f67955ac7091};
+  \item \dirn{ErdosSzekeres/OrientationGeometry.lean}: \texttt{c7db9bbbb65e};
+  \item \dirn{ErdosSzekeres/Suk/SupportingLines.lean}: \texttt{6a8e12677685};
+  \item \dirn{ErdosSzekeres/Suk/BaseOrder.lean}: \texttt{d21becd29e84};
+  \item \dirn{ErdosSzekeres/Suk/BaseChart.lean}: \texttt{08d0e856f005};
+  \item \dirn{ErdosSzekeres/Suk/TriangleOrder.lean}: \texttt{6447cd4833d4}.
+  \end{itemize}
+  The last three are imported only through \dirn{ErdosSzekeres/Suk/SupportingLines.lean}, and this section cites
+  nothing from them.
+\end{itemize}
+The files were checked with Lean 4.24.0 and Mathlib \texttt{f897ebcf}.
+
+\paragraph{Axioms and rigor.}
+\begin{itemize}
+\item The compile log \dirn{SYMLEAN/logs/SymmetricReduction.out} is empty, and the exit code is 0
+  (\dirn{SYMLEAN/logs/runs.tsv}). So no declaration of the file uses \lean{sorry}.
+\item The log \dirn{SYMLEAN/logs/SymmetricReductionAxioms.out} shows that the two theorems
+  \lean{heptagon_of_nontrivial_isometry} and \lean{halfTurn_of_symmetric_counterexample} depend only on the axioms
+  \lean{propext}, \lean{Classical.choice} and \lean{Quot.sound}.
+\item The bridge lemma \lean{mirrorOneAxis33_of_exclusionLine} is used in the proof of the review theorem
+  \lean{Review.mirrorOneAxis33_iff_exclusionLine} at \dirn{SYMLEAN/review/ReviewSanity.lean:1629}. That file's lines 1--1059
+  are byte-identical to \dirn{SYMLEAN/SymmetricReduction.lean}, and its log \dirn{SYMLEAN/logs/ReviewSanity.out} shows
+  the same three axioms for this theorem.
+\item The file and the eight imported repository modules listed above contain no \lean{axiom} declaration, no
+  \lean{sorry}, no \lean{decide} and no \lean{native_decide} (the word ``axiom'' occurs there only in comments). A
+  declaration of the file that the printed theorems do not use (such as
+  \lean{IsEucIsometry.injective}) is covered by the empty compile log and by this scan: it uses no \lean{sorry}, and
+  neither the file nor these modules add an axiom. No statement of this section is a finite computation.
+\end{itemize}
+
+Every statement below whose head carries a Lean reference is \emph{Lean-checked} in this sense. The proofs written here
+are \emph{written proofs (not refereed)}. Unless a proof says otherwise, it follows the Lean proof step by step.
+Statements tagged ``written step'' are introduced only for the written proofs; most of them are standard facts that
+the Lean proofs take from Mathlib, and each is proved here.
+
+\paragraph{Dependencies.}
+The section uses the foundations: Definitions~\ref{fd:def:point}, \ref{fd:def:orient}, \ref{fd:def:gp},
+\ref{fd:def:cp}, \ref{fd:def:ngon}, \ref{fd:def:inv} and \ref{fd:def:rot}, and Lemmas~\ref{fd:lem:collinear},
+\ref{fd:lem:cp-hull} and~\ref{fd:lem:mono}. Lemma~\ref{sr:lem:supports} is the lemma titled ``Strict supporting
+lines'' in the foundations section (the same declaration of the main library), repeated here with its short proof.
+Remarks~\ref{sr:rem:records}
+and~\ref{sr:rem:main} refer to Theorems~\ref{cb:thm:c2} and~\ref{cb:thm:c3} (bookkeeping of two case splits; both
+theorems are computer-assisted, as their Lean proofs rest on kernel evaluation, and Theorem~\ref{cb:thm:c2} is
+Lean-checked according to the record, Theorem~\ref{cb:thm:c3} Lean-checked), to Theorem~\ref{mb:thm:classes}, which
+gives written proofs of the two mirror classes, to Theorem~\ref{mb:thm:main3} and to Theorem~\ref{ar:thm:main}; no
+proof of this section uses them.
+
+\subsection{Setting and definitions}\label{sr:ssec:defs}
+
+\paragraph{Conventions.}
+Points are elements of $\R^2$, written $p=(p_0,p_1)$ (Definition~\ref{fd:def:point}; Lean type \lean{Point}). Point
+sets are finite (Lean \texttt{Finset Point}), and $\card S$ is the number of elements of $S$. The function $\orient$ is
+that of Definition~\ref{fd:def:orient}: $\orient(a,b,c)=(b_0-a_0)(c_1-a_1)-(b_1-a_1)(c_0-a_0)$. General position,
+convex position and \texttt{HasConvexNGon n S} are as in Definitions~\ref{fd:def:gp}, \ref{fd:def:cp}
+and~\ref{fd:def:ngon}. We use them in the following forms.
+\begin{itemize}
+\item $S$ is in general position if and only if $\orient(a,b,c)\ne0$ for all pairwise distinct $a,b,c\in S$
+  (Lemma~\ref{fd:lem:collinear}).
+\item $S$ is in convex position if and only if $p\notin\conv(S\setminus\{p\})$ for every $p\in S$
+  (Lemma~\ref{fd:lem:cp-hull}).
+\item \texttt{HasConvexNGon n S} means: some $T\subseteq S$ with $\card T=n$ is in convex position.
+\item Monotonicity (Lemma~\ref{fd:lem:mono}): subsets of a set in general position are in general position; subsets of
+  a set in convex position are in convex position; \texttt{HasConvexNGon n T} and $T\subseteq S$ imply
+  \texttt{HasConvexNGon n S}.
+\item If $T$ is in convex position and $n\le\card T$, then \texttt{HasConvexNGon n T}: any $n$-element subset of $T$ is
+  in convex position by monotonicity (Lean \lean{ConvexPosition.hasConvexNGon}, \dirn{ErdosSzekeres/Basic.lean:31}).
+\end{itemize}
+For a map $f\colon X\to X$ the iterates are $f^{[0]}=\mathrm{id}$ and $f^{[k+1]}=f\circ f^{[k]}$; then also
+$f^{[k+1]}=f^{[k]}\circ f$ and $f^{[i+j]}=f^{[i]}\circ f^{[j]}$. Natural numbers include $0$, and every natural number
+divides $0$. For $z\in\C$, $\bar z$ is the complex conjugate (Mathlib \lean{starRingEnd}) and $\abs z$ the modulus;
+Mathlib's $\mathrm{normSq}(z)=(\operatorname{Re}z)^2+(\operatorname{Im}z)^2$ equals $\abs z^2$ and is multiplicative.
+We write $\langle z,w\rangle=\operatorname{Re}(z\bar w)=\operatorname{Re}z\operatorname{Re}w+\operatorname{Im}z
+\operatorname{Im}w$ for the Euclidean inner product of $\C=\R^2$, so that $\abs{z}^2=\langle z,z\rangle$.
+
+Lean names in the text are read relative to the namespace \lean{ErdosSzekeres.SymReduction}: a name $n$ stands for the
+first of \lean{ErdosSzekeres.SymReduction.}$n$, \lean{ErdosSzekeres.}$n$ and $n$ that exists. So \lean{orbit_select}
+is \lean{ErdosSzekeres.SymReduction.orbit_select}, \lean{Review.} and \lean{VariantChecks.} denote sub-namespaces of
+\lean{ErdosSzekeres.SymReduction}, \lean{Point} is \lean{ErdosSzekeres.Point}, \lean{Suk.} denotes
+\lean{ErdosSzekeres.Suk}, and the names of Mathlib and those with the prefixes \lean{Mir.} (the Lean package in
+\dirn{H3}) and \lean{V2L.} (the Lean package in \dirn{V2-L}) are full names. Statement heads give full names.
+
+\begin{definition}[Squared distance, Euclidean isometry; \leanref{ErdosSzekeres.SymReduction.eDist2}{SYMLEAN/SymmetricReduction.lean:265}, \leanref{ErdosSzekeres.SymReduction.IsEucIsometry}{SYMLEAN/SymmetricReduction.lean:268}]\label{sr:def:iso}
+For $p,q\in\R^2$ put $\operatorname{eDist2}(p,q)=(p_0-q_0)^2+(p_1-q_1)^2$. A map $g\colon\R^2\to\R^2$ is a
+\emph{Euclidean isometry} (Lean \texttt{IsEucIsometry g}) if
+\[
+  \operatorname{eDist2}(g(p),g(q))=\operatorname{eDist2}(p,q)\qquad\text{for all }p,q\in\R^2 .
+\]
+\end{definition}
+
+No further property of $g$ is assumed: $g$ is not assumed continuous, surjective or affine, but it is defined on the
+whole plane. That $g$, read in complex coordinates, has the form $z\mapsto az+b$ or $z\mapsto a\bar z+b$ with
+$\abs a=1$ follows from Lemma~\ref{sr:lem:toC-iso}(b) and Theorem~\ref{sr:thm:structure}(a).
+
+\begin{remark}[Why an explicit Euclidean distance]\label{sr:rem:sup}
+Mathlib equips the type \lean{Point} of functions $\{0,1\}\to\R$ with the product (sup) metric
+$\mathrm{dist}(p,q)=\max(\abs{p_0-q_0},\abs{p_1-q_1})$; for instance $\mathrm{dist}((0,0),(3,4))=4$. Mathlib's predicate
+\lean{Isometry} for maps of \lean{Point} therefore means preservation of the sup distance, which a rotation need not
+have. For example, the rotation $\rho$ by $2\pi/3$ about a point $c$ fixes $c$ and maps $c+(1,0)$, at sup distance $1$
+from $c$, to $c+(-\tfrac12,\tfrac{\sqrt3}{2})$, at sup distance $\tfrac{\sqrt3}{2}$ from $c$. So $\rho$ does not preserve
+the sup distance, and a theorem stated with Mathlib's \lean{Isometry} would not cover the rotations used in
+\lean{Threefold33}. This is why the file states isometries with the explicit squared Euclidean distance
+$\operatorname{eDist2}$. General position, convex position and \lean{HasConvexNGon} are affine notions (Mathlib
+\lean{Collinear} and \lean{ConvexIndependent}) and involve no metric. Lean checks of such sup-metric facts are in the
+review file \dirn{SYMLEAN/review/SupMetric.lean}, which is outside the scope of this section.
+\end{remark}
+
+\begin{definition}[Invariance; \leanref{ErdosSzekeres.SymReduction.Invariant}{SYMLEAN/SymmetricReduction.lean:271}]\label{sr:def:inv}
+For $f\colon\R^2\to\R^2$ and a finite set $S$, $\operatorname{Invariant}(f,S)$ means $f(p)\in S$ for every $p\in S$.
+\end{definition}
+
+This is the notion of Definition~\ref{fd:def:inv}: $f$ maps $S$ \emph{into} $S$; equality $f(S)=S$ is not required.
+(It follows when $f$ is injective, because $S$ is finite, but it is never used.)
+
+\begin{definition}[Complex coordinates; \leanref{ErdosSzekeres.SymReduction.toC}{SYMLEAN/SymmetricReduction.lean:274}, \leanref{ErdosSzekeres.SymReduction.ofC}{SYMLEAN/SymmetricReduction.lean:277}]\label{sr:def:complex}
+For $p\in\R^2$ let $\operatorname{toC}(p)=p_0+ip_1\in\C$, and for $z\in\C$ let $\operatorname{ofC}(z)=(\operatorname{Re}
+z,\operatorname{Im}z)\in\R^2$. In proofs we abbreviate $\hat p=\operatorname{toC}(p)$.
+\end{definition}
+
+\begin{lemma}[Coordinates; \leanref{ErdosSzekeres.SymReduction.toC_re}{SYMLEAN/SymmetricReduction.lean:279}, \leanref{ErdosSzekeres.SymReduction.toC_im}{SYMLEAN/SymmetricReduction.lean:280}, \leanref{ErdosSzekeres.SymReduction.ofC_zero}{SYMLEAN/SymmetricReduction.lean:281}, \leanref{ErdosSzekeres.SymReduction.ofC_one}{SYMLEAN/SymmetricReduction.lean:282}, \leanref{ErdosSzekeres.SymReduction.toC_ofC}{SYMLEAN/SymmetricReduction.lean:284}, \leanref{ErdosSzekeres.SymReduction.ofC_toC}{SYMLEAN/SymmetricReduction.lean:287}, \leanref{ErdosSzekeres.SymReduction.toC_injective}{SYMLEAN/SymmetricReduction.lean:291}, \leanref{ErdosSzekeres.SymReduction.eDist2_eq_normSq}{SYMLEAN/SymmetricReduction.lean:294}, \leanref{ErdosSzekeres.SymReduction.eDist2_pos_of_ne}{SYMLEAN/SymmetricReduction.lean:297}, \leanref{ErdosSzekeres.SymReduction.point_ext}{SYMLEAN/SymmetricReduction.lean:502}]\label{sr:lem:complex}
+Let $p,q\in\R^2$ and $z\in\C$.
+\begin{enumerate}[label=(\alph*)]
+\item (\lean{toC_re}, \lean{toC_im}, \lean{ofC_zero}, \lean{ofC_one}) $\operatorname{Re}\operatorname{toC}(p)=p_0$,
+  $\operatorname{Im}\operatorname{toC}(p)=p_1$,
+  $\operatorname{ofC}(z)_0=\operatorname{Re}z$ and $\operatorname{ofC}(z)_1=\operatorname{Im}z$.
+\item (\lean{point_ext}) If $p_0=q_0$ and $p_1=q_1$, then $p=q$.
+\item (\lean{toC_ofC}, \lean{ofC_toC}, \lean{toC_injective}) $\operatorname{toC}(\operatorname{ofC}(z))=z$ and
+  $\operatorname{ofC}(\operatorname{toC}(p))=p$; the map
+  $\operatorname{toC}$ is injective.
+\item (\lean{eDist2_eq_normSq}) $\operatorname{eDist2}(p,q)=\mathrm{normSq}(\operatorname{toC}(p)-\operatorname{toC}(q))$.
+\item (\lean{eDist2_pos_of_ne}) If $p\ne q$, then $0<\operatorname{eDist2}(p,q)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) holds by the definitions. (b) A point is a function on $\{0,1\}$, determined by its two values. (c) By (a),
+$\operatorname{toC}(\operatorname{ofC}(z))=\operatorname{Re}z+i\operatorname{Im}z=z$, and
+$\operatorname{ofC}(\operatorname{toC}(p))$ has coordinates $p_0,p_1$, so it equals $p$ by (b). If
+$\operatorname{toC}(p)=\operatorname{toC}(q)$, then $p=\operatorname{ofC}(\operatorname{toC}(p))=
+\operatorname{ofC}(\operatorname{toC}(q))=q$. (d) $\operatorname{toC}(p)-\operatorname{toC}(q)=(p_0-q_0)+i(p_1-q_1)$,
+whose $\mathrm{normSq}$ is $(p_0-q_0)^2+(p_1-q_1)^2$. (e) If $p\ne q$, then $\hat p-\hat q\ne0$ by (c), and a nonzero
+complex number has positive $\mathrm{normSq}$; conclude by (d).
+\end{proof}
+
+\begin{definition}[Rotations, half-turn, line reflection; \leanref{ErdosSzekeres.SymReduction.crot}{SYMLEAN/SymmetricReduction.lean:349}, \leanref{ErdosSzekeres.SymReduction.rotAbout}{SYMLEAN/SymmetricReduction.lean:400}, \leanref{ErdosSzekeres.SymReduction.halfTurn}{SYMLEAN/SymmetricReduction.lean:413}, \leanref{ErdosSzekeres.SymReduction.reflLine}{SYMLEAN/SymmetricReduction.lean:423}]\label{sr:def:maps}
+Let $p\in\R^2$.
+\begin{enumerate}[label=(\alph*)]
+\item For $c,w\in\C$ (Lean \texttt{crot c w}):
+  $\operatorname{crot}_{c,w}(p)=\operatorname{ofC}\bigl(c+w(\operatorname{toC}(p)-c)\bigr)$.
+\item For $c\in\R^2$ and $\theta\in\R$ (Lean \lean{rotAbout}; the formula of Definition~\ref{fd:def:rot}):
+  \[
+  \operatorname{rotAbout}_{c,\theta}(p)=\bigl(c_0+\cos\theta\,(p_0-c_0)-\sin\theta\,(p_1-c_1),\;
+  c_1+\sin\theta\,(p_0-c_0)+\cos\theta\,(p_1-c_1)\bigr).
+  \]
+\item For $c\in\R^2$ (Lean \texttt{halfTurn c}): $\operatorname{halfTurn}_c(p)=(2c_0-p_0,\,2c_1-p_1)$.
+\item For $a,u\in\R^2$ (Lean \texttt{reflLine a u}): with $d=(p_0-a_0)u_0+(p_1-a_1)u_1$,
+  \[
+  \operatorname{reflLine}_{a,u}(p)=\bigl(a_0+2du_0-(p_0-a_0),\;a_1+2du_1-(p_1-a_1)\bigr).
+  \]
+\end{enumerate}
+\end{definition}
+
+For $\abs w=1$, $\operatorname{crot}_{c,w}$ is the rotation about the point $\operatorname{ofC}(c)$ through the angle
+$\theta$ with $w=e^{i\theta}$ (Lemma~\ref{sr:lem:rot-half}(a)), and $\operatorname{rotAbout}_{c,\theta}$ is the
+counterclockwise rotation by $\theta$ about $c$. For $u_0^2+u_1^2=1$, $\operatorname{reflLine}_{a,u}$ is the reflection
+in the line $a+\R u$: by Lemma~\ref{sr:lem:refl}(a) it is $z\mapsto\hat a+\hat u^{\,2}\,\overline{(z-\hat a)}$ in
+complex coordinates, and as $\hat u\,\overline{\hat u}=1$, this map fixes $\hat a+t\hat u$ and sends $\hat a+it\hat u$
+to $\hat a-it\hat u$ for every $t\in\R$. For $u=0$ it is the half-turn about $a$. For every other $u$ it is not even a
+Euclidean isometry: with $s=u_0^2+u_1^2\notin\{0,1\}$, it fixes $a$ and sends $a+u$ to $a+(2s-1)u$, and
+$\operatorname{eDist2}(a+(2s-1)u,a)=(2s-1)^2s\ne s=\operatorname{eDist2}(a+u,a)$. So every statement below that uses
+it as a reflection assumes $u_0^2+u_1^2=1$. The definition has the same text as \lean{Mir.reflLine} in
+\dirn{H3/MirrorEncoding/Line.lean:18}.
+
+\begin{definition}[The case classes; \leanref{ErdosSzekeres.SymReduction.HalfTurn34}{SYMLEAN/SymmetricReduction.lean:467}, \leanref{ErdosSzekeres.SymReduction.Threefold33}{SYMLEAN/SymmetricReduction.lean:472}, \leanref{ErdosSzekeres.SymReduction.Fivefold35}{SYMLEAN/SymmetricReduction.lean:477}, \leanref{ErdosSzekeres.SymReduction.MirrorOneAxis33}{SYMLEAN/SymmetricReduction.lean:482}, \leanref{ErdosSzekeres.SymReduction.MirrorNoAxis34}{SYMLEAN/SymmetricReduction.lean:488}, \leanref{ErdosSzekeres.SymReduction.Fourfold32}{SYMLEAN/SymmetricReduction.lean:496}]\label{sr:def:classes}
+The following six propositions are defined (Lean: definitions of type \lean{Prop}). In each, $S$ ranges over all finite
+subsets of $\R^2$, and $c$, $a$, $u$ range over all points of $\R^2$.
+\begin{enumerate}[label=(\arabic*)]
+\item \lean{HalfTurn34}: for all $S$ and $c$, if $S$ is in general position, $\card S=34$, $c\notin S$ and
+  $\operatorname{Invariant}(\operatorname{halfTurn}_c,S)$, then \texttt{HasConvexNGon 7 S}.
+\item \lean{Threefold33}: for all $S$ and $c$, if $S$ is in general position, $\card S=33$, $c\notin S$ and
+  $\operatorname{Invariant}(\operatorname{rotAbout}_{c,2\pi/3},S)$, then \texttt{HasConvexNGon 7 S}.
+\item \lean{Fivefold35}: for all $S$ and $c$, if $S$ is in general position, $\card S=35$, $c\notin S$ and
+  $\operatorname{Invariant}(\operatorname{rotAbout}_{c,2\pi/5},S)$, then \texttt{HasConvexNGon 7 S}.
+\item \lean{MirrorOneAxis33}: for all $S$, $a$ and $u$, if $u_0^2+u_1^2=1$, $S$ is in general position, $\card S=33$,
+  $\operatorname{Invariant}(\operatorname{reflLine}_{a,u},S)$, and there is $x\in S$ with
+  $\operatorname{reflLine}_{a,u}(x)=x$ such that every $y\in S$ with $\operatorname{reflLine}_{a,u}(y)=y$ equals $x$, then
+  \texttt{HasConvexNGon 7 S}.
+\item \lean{MirrorNoAxis34}: for all $S$, $a$ and $u$, if $u_0^2+u_1^2=1$, $S$ is in general position, $\card S=34$,
+  $\operatorname{Invariant}(\operatorname{reflLine}_{a,u},S)$, and $\operatorname{reflLine}_{a,u}(p)\ne p$ for every
+  $p\in S$, then \texttt{HasConvexNGon 7 S}.
+\item \lean{Fourfold32}: for all $S$ and $c$, if $S$ is in general position, $\card S=32$, $c\notin S$ and
+  $\operatorname{Invariant}(\operatorname{rotAbout}_{c,2\pi/4},S)$, then \texttt{HasConvexNGon 7 S}.
+\end{enumerate}
+The angles are the real numbers $2\pi/3$, $2\pi/5$ and $2\pi/4$ (Lean \texttt{2 * Real.pi / 3} etc.); the rotations are
+counterclockwise. In \lean{MirrorOneAxis33} the last hypothesis says that exactly one point of $S$ is fixed by the
+reflection; in \lean{MirrorNoAxis34} no point of $S$ is fixed. For $u_0^2+u_1^2=1$ the fixed points of
+$\operatorname{reflLine}_{a,u}$ are exactly the points of the mirror $a+\R u$. Indeed, with $d$ as in
+Definition~\ref{sr:def:maps}(d), the equation $\operatorname{reflLine}_{a,u}(p)=p$ says $2du_0=2(p_0-a_0)$ and
+$2du_1=2(p_1-a_1)$, so a fixed point is $p=a+du$; and for $p=a+tu$ one has $d=t(u_0^2+u_1^2)=t$ and
+$\operatorname{reflLine}_{a,u}(p)=a+2tu-tu=p$.
+\end{definition}
+
+These are definitions, not assertions. No class is proved in this section. Theorem~\ref{sr:thm:main} takes the first
+five as hypotheses, and Theorem~\ref{sr:thm:variant} takes \lean{Threefold33}, \lean{Fourfold32}, \lean{Fivefold35} and
+the two mirror classes. Remark~\ref{sr:rem:redundant} records which hypotheses of the classes are implied by the others.
+
+\begin{remark}[Where the project supplies the classes]\label{sr:rem:records}
+None of the following is checked in this section; it follows \dirn{C2ENC/class_table.md}, \S5 and \S9 of
+\dirn{SYMLEAN/README.md}, \S3 of \dirn{WRITEUP/SYMMETRIC.md} and the records named below. For no class is the step from
+a SAT certificate to the Lean class Lean-checked. On the certificate routes of \lean{HalfTurn34}, \lean{Threefold33},
+\lean{Fivefold35} and \lean{Fourfold32}, and for the \dirn{SYMZ} certificates of the two mirror classes, that step rests
+on written proofs (the soundness of the encoders and the lemmas named below) and on the review of the class
+definitions in \dirn{SYMLEAN/README.md} \S6, which compared each class with its certificate by reading. On the route
+through \dirn{H3} and \dirn{V2-L} to \lean{MirrorOneAxis33}, the soundness of the encodings and the reduction of
+\lean{Mir.MirrorExclusionLine} to CNF facts are Lean-checked. The cube covers in that reduction are checked by kernel
+evaluation (computer-assisted), with one exception: the cover of the top two levels of the hull-pair case split of
+sub-case (ii), where the point of $S$ on the mirror lies in the convex hull of the other points
+(\dirn{WRITEUP/MIRROR.md} \S4). That cover is itself given by $1+121$ of those CNF facts. What remains outside Lean on
+this route is described in Remark~\ref{sr:rem:mirror-line}. The
+project trusts one proof checker, \texttt{cake\_lpr}: where a certificate below is said to be accepted by both
+checkers, \texttt{cake\_lpr} accepted it, and \texttt{lrat-check} is only a secondary check (\dirn{WRITEUP/SYMMETRIC.md}
+\S3, revised on 6 November 2026). The trust statement in \S9 of \dirn{SYMLEAN/README.md}, which this remark follows on
+other points, predates that revision and still lists both checkers as trusted.
+\begin{itemize}
+\item \lean{HalfTurn34}: claimed in \dirn{C2FINAL} as computer-assisted. It rests on SAT certificates (\dirn{C2C34}:
+  hull cover and $120$ hexagonal hulls, proofs retained; \dirn{C2P}--\dirn{C2P5}: parallelogram subcases, most of which
+  are verdicts of both checkers recorded at solve time for proofs that were then deleted; re-checks in
+  \dirn{C2RECHECK}); on the written soundness proof of the encoder, \dirn{C2ENC/proof.md}; on the reductions A and B,
+  which pair equivalent parallelogram cases and subcases (written proofs, reviewed in \dirn{C2P/review} and checked at
+  the CNF level in \dirn{AUDIT3}); and on the bookkeeping of the subcase orbits, Lean-checked according to the record
+  (\dirn{C2FINAL/README.md} \S6), by kernel evaluation, and so computer-assisted (Theorem~\ref{cb:thm:c2}; that the
+  listed subcases are refuted rests on the records). A table of the evidence is in \dirn{C2ENC/class_table.md} \S1.
+\item \lean{Threefold33}: claimed in the records as computer-assisted. It rests on \dirn{C3FINAL}, a composition of
+  $116{,}883$ pieces whose proofs were not retained, so that their verdicts are recorded ones (a random sample of
+  $2{,}120$ pieces was
+  re-solved in \dirn{C3SPOT}, and the $204$ indispensable $\sigma$-cube pieces were re-solved with retained proofs in
+  \dirn{C3PIECES}); on the cover of the $910$ roots, Lean-checked by kernel evaluation and so computer-assisted
+  (Theorem~\ref{cb:thm:c3}; that each leaf names a record with recorded checker verdicts is checked outside Lean); on
+  the written normal form \dirn{C3-S/soundness.md} and the written Lemma H6M (\dirn{C3H6M/soundness_h6m.md}, checked
+  adversarially in \dirn{C3AUDIT2}); on the written exhaustiveness of the layer splits and $\sigma$-splits (Lemmas 1--4
+  and the cover theorem of \dirn{C3-S/soundness.md}, its version for the reduced cut in
+  \dirn{C3H6M/soundness_h6m.md}, and rules 2 and 3 of \dirn{C3U2/sigma_split.md}); on the encoding \dirn{C3a}; and on
+  the written centre-perturbation lemma \dirn{C2ENC/perturbation.md}. The perturbation lemma is needed because the
+  class admits centres that lie on a line through two points of different orbits, which the encoder excludes.
+\item \lean{Fivefold35}: claimed in the records as computer-assisted (\dirn{SYM5/README.md}). It rests on \dirn{SYM5}:
+  two normal forms of one encoder (an angle form and a layer form; not independent encodings), each with a retained
+  proof that both checkers accepted; either proof would suffice for the class without the other, given the written
+  proofs listed next. It rests further on written proofs of the encoder's soundness and of the two normal forms, and on
+  the same perturbation lemma. An earlier computation reported by B.~Dumitru (arXiv:2512.24061, \S7), which has
+  priority, also implies the fivefold bound; no proof files of that run are public (\dirn{SYM5/README.md}).
+\item \lean{MirrorOneAxis33} and \lean{MirrorNoAxis34}: Lean-checked in \dirn{SYMLEAN/mirror}
+  (\lean{mirrorOneAxis33_proved}, \lean{mirrorNoAxis34_proved}), with no SAT input, from the repository's formalization
+  of Baek's theorem (J.~Baek, arXiv:2206.04260); written proofs are in Theorem~\ref{mb:thm:classes}. The file
+  \dirn{SYMLEAN/mirror/ReductionThreeClasses.lean} does not import \dirn{SYMLEAN/SymmetricReduction.lean}. Its lines
+  38--1084 are byte-identical to lines 12--1058 of \dirn{SYMLEAN/SymmetricReduction.lean}, so the classes defined in
+  \dirn{SYMLEAN/mirror/ReductionThreeClasses.lean} are copies of those of Definition~\ref{sr:def:classes}, with the same
+  full names and the same text. Both classes are also supplied by SAT certificates in \dirn{SYMZ} (Theorems 2a and 2b
+  of \dirn{WRITEUP/SYMMETRIC.md}, claimed in the records as computer-assisted), and \lean{MirrorOneAxis33} also,
+  conditionally, by the Lean chain of \dirn{H3} and \dirn{V2-L} (Remark~\ref{sr:rem:mirror-line}).
+\item \lean{Fourfold32} (among the statements of this section, a hypothesis only of Theorem~\ref{sr:thm:variant} and
+  of Lemma~\ref{sr:lem:fourfold}, which its proof uses): claimed in \dirn{C4CUT}, which states it without a
+  rigor label. It rests on a final certificate accepted by both checkers, on six cuts checked by exact computation and
+  on a written proof of the encoder's soundness. The statement is due to Subercaseaux, Mackey, Qian and Heule
+  (arXiv:2506.00224, \S6.2).
+\end{itemize}
+\end{remark}
+
+\subsection{Finite dynamics}\label{sr:ssec:dyn}
+
+\begin{lemma}[Iterates stay in an invariant set; \leanref{ErdosSzekeres.SymReduction.iterate_mem}{SYMLEAN/SymmetricReduction.lean:69}, \leanref{ErdosSzekeres.SymReduction.Invariant.iterate}{SYMLEAN/SymmetricReduction.lean:309}]\label{sr:lem:iterate}
+Iterates of a map stay in a set that the map sends into itself.
+\begin{enumerate}[label=(\alph*)]
+\item (\lean{iterate_mem}) Let $X$ be a set, $f\colon X\to X$, and $S\subseteq X$ finite with $f(y)\in S$ for every
+  $y\in S$. If $x\in S$, then $f^{[i]}(x)\in S$ for every $i\in\N$.
+\item (\lean{Invariant.iterate}) If $f\colon\R^2\to\R^2$, $S\subseteq\R^2$ is finite and $\operatorname{Invariant}(f,S)$,
+  then $\operatorname{Invariant}(f^{[k]},S)$ for every $k\in\N$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) Induction on $i$: $f^{[0]}(x)=x\in S$, and $f^{[i+1]}(x)=f(f^{[i]}(x))\in S$ because $f^{[i]}(x)\in S$. (b) is (a)
+applied to each $x\in S$.
+\end{proof}
+
+\begin{lemma}[Pigeonhole for iterates; written step]\label{sr:lem:pigeon}
+Let $S\subseteq\R^2$ be finite, $f\colon\R^2\to\R^2$ with $\operatorname{Invariant}(f,S)$, and $q\in S$. Then there are
+$i<j$ in $\N$ with $f^{[i]}(q)=f^{[j]}(q)$.
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{sr:lem:iterate}, the $\card S+1$ points $f^{[k]}(q)$, $0\le k\le\card S$, lie in $S$. By the pigeonhole
+principle two of them with different indices coincide; call the smaller index $i$ and the larger $j$. (In Lean this is
+the local statement \lean{pigeon} in the proof of \lean{isometry_structure}, obtained from Mathlib's
+\lean{Set.Finite.exists_lt_map_eq_of_forall_mem}.)
+\end{proof}
+
+\begin{definition}[Minimal period; written step]\label{sr:def:minper}
+Let $X$ be a set, $f\colon X\to X$ and $x\in X$. If $f^{[n]}(x)=x$ for some $n>0$, then $\operatorname{minimalPeriod}(f,x)$
+is the least such $n$; otherwise $\operatorname{minimalPeriod}(f,x)=0$. (This is Mathlib's
+\lean{Function.minimalPeriod}.)
+\end{definition}
+
+\begin{lemma}[Minimal periods; written step]\label{sr:lem:minper}
+Let $f\colon X\to X$, $x\in X$ and $d=\operatorname{minimalPeriod}(f,x)$.
+\begin{enumerate}[label=(MP\arabic*)]
+\item If $f^{[n]}(x)=x$ for some $n\in\N$, then $d\mid n$. (Mathlib \lean{Function.IsPeriodicPt.minimalPeriod_dvd}.)
+\item $d=1$ if and only if $f(x)=x$. (Mathlib \lean{Function.minimalPeriod_eq_one_iff_isFixedPt}.)
+\item $f^{[d]}(x)=x$. (Mathlib \lean{Function.iterate_minimalPeriod}.)
+\item If $i<j<d$, then $f^{[i]}(x)\ne f^{[j]}(x)$. (Mathlib \lean{Function.iterate_injOn_Iio_minimalPeriod}.)
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(MP3) If some $n>0$ has $f^{[n]}(x)=x$, this holds for the least one, $d$. Otherwise $d=0$ and $f^{[0]}(x)=x$.
+
+(MP1) If $n=0$ there is nothing to prove. Let $n>0$. Then $d>0$ is the least positive $m$ with $f^{[m]}(x)=x$. By
+induction on $t$, $f^{[td]}(x)=x$ for all $t\in\N$. Write $n=td+r$ with $0\le r<d$. Then
+$x=f^{[n]}(x)=f^{[r]}(f^{[td]}(x))=f^{[r]}(x)$. If $r>0$, this contradicts the minimality of $d$; so $r=0$ and $d\mid n$.
+
+(MP2) If $f(x)=x$, then $1$ is the least positive integer and $f^{[1]}(x)=x$, so $d=1$. Conversely, if $d=1\ne0$, then by
+definition $f^{[1]}(x)=x$.
+
+(MP4) Suppose $f^{[i]}(x)=f^{[j]}(x)$ with $i<j<d$. Then $d>0$, and applying $f^{[d-j]}$ to both sides gives
+$f^{[d-j+i]}(x)=f^{[d]}(x)=x$ by (MP3). Since $j<d$ and $i<j$, we have $0<d-j+i<d$, which contradicts the minimality
+of $d$.
+\end{proof}
+
+\begin{definition}[Forward orbit segment; \leanref{ErdosSzekeres.SymReduction.orbitFS}{SYMLEAN/SymmetricReduction.lean:65}]\label{sr:def:orbitFS}
+For $f\colon X\to X$, $p\in\N$ and $x\in X$, let $\operatorname{orbitFS}(f,p,x)=\{f^{[i]}(x):0\le i<p\}$, a finite set
+(Lean: the image of $\{0,\dots,p-1\}$ under $i\mapsto f^{[i]}(x)$; Lean needs decidable equality on $X$ to form it).
+\end{definition}
+
+\begin{lemma}[Orbit segments; \leanref{ErdosSzekeres.SymReduction.card_orbitFS_of_minimalPeriod}{SYMLEAN/SymmetricReduction.lean:111}, \leanref{ErdosSzekeres.SymReduction.mem_orbitFS_self}{SYMLEAN/SymmetricReduction.lean:90}, \leanref{ErdosSzekeres.SymReduction.orbitFS_subset}{SYMLEAN/SymmetricReduction.lean:93}, \leanref{ErdosSzekeres.SymReduction.orbitFS_invariant}{SYMLEAN/SymmetricReduction.lean:99}, \leanref{ErdosSzekeres.SymReduction.card_orbitFS}{SYMLEAN/SymmetricReduction.lean:76}]\label{sr:lem:orbitFS}
+Let $X$ be a set, $f\colon X\to X$, $p\in\N$ and $x\in X$, and write $O=\operatorname{orbitFS}(f,p,x)$.
+\begin{enumerate}[label=(\alph*)]
+\item (\lean{mem_orbitFS_self}) If $0<p$, then $x\in O$.
+\item (\lean{orbitFS_subset}) If $S\subseteq X$ is finite, $f(y)\in S$ for every $y\in S$, and $x\in S$, then
+  $O\subseteq S$.
+\item (\lean{orbitFS_invariant}) If $0<p$ and $f^{[p]}(x)=x$, then $f(y)\in O$ for every $y\in O$.
+\item (\lean{card_orbitFS}) If $p$ is prime, $f^{[p]}(x)=x$ and $f(x)\ne x$, then $\card O=p$.
+\item (\lean{card_orbitFS_of_minimalPeriod}) If $\operatorname{minimalPeriod}(f,x)=p$, then $\card O=p$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) $x=f^{[0]}(x)$ and $0<p$. (b) Each $f^{[i]}(x)$ lies in $S$ by Lemma~\ref{sr:lem:iterate}(a). (c) Let
+$y=f^{[i]}(x)$ with $i<p$. Then $f(y)=f^{[i+1]}(x)$. If $i+1<p$, this lies in $O$. Otherwise $i+1=p$ and
+$f(y)=f^{[p]}(x)=x\in O$ by (a). (e) By (MP4), $i\mapsto f^{[i]}(x)$ is injective on $\{0,\dots,p-1\}$, so $O$ has $p$
+elements. (This also holds for $p=0$, when $O=\varnothing$.) (d) By (MP1), $d=\operatorname{minimalPeriod}(f,x)$ divides
+the prime $p$, so $d=1$ or $d=p$. By (MP2), $d\ne1$ because $f(x)\ne x$. Hence $d=p$, and (e) applies.
+\end{proof}
+
+The next statement contains the induction shared by the two orbit selection lemmas. The Lean file carries out the same
+induction twice, once in each lemma; we do it once.
+
+\begin{lemma}[Orbit selection, common form; written step]\label{sr:lem:orbit-core}
+Let $X$ be a set, $f\colon X\to X$ and $p\in\N$ with $0<p$. Let $S\subseteq X$ be finite, and assume: $f(y)\in S$ for
+every $y\in S$; $f$ is injective on $S$; and every $y\in S$ satisfies $f^{[p]}(y)=y$ and
+$\card{\operatorname{orbitFS}(f,p,y)}=p$. Then $p\mid\card S$, and for every $k\in\N$ with $kp\le\card S$ there is
+$T\subseteq S$ with $f(y)\in T$ for every $y\in T$ and $\card T=kp$.
+\end{lemma}
+
+\begin{proof}
+Strong induction on $\card S$. The hypotheses on single points pass to subsets of $S$, and so does injectivity.
+
+If $S=\varnothing$, then $p\mid0$; and $kp\le0$ forces $kp=0$, so $T=\varnothing$ works.
+
+Let $S\ne\varnothing$ and pick $x\in S$. Put $O=\operatorname{orbitFS}(f,p,x)$. By Lemma~\ref{sr:lem:orbitFS} and the
+hypotheses, $O\subseteq S$, $\card O=p$, $x\in O$, and $f(y)\in O$ for every $y\in O$. Let $S'=S\setminus O$; then
+$\card{S'}=\card S-p<\card S$.
+
+\emph{$S'$ is mapped into itself.} Let $y\in S'$. Then $f(y)\in S$. Suppose $f(y)\in O$, say $f(y)=f^{[i]}(x)$ with
+$i<p$. If $i=0$, then $f(y)=x=f^{[p]}(x)=f(f^{[p-1]}(x))$ (here $p\ge1$). Both $y$ and $f^{[p-1]}(x)$ lie in $S$
+(Lemma~\ref{sr:lem:iterate}(a)), so injectivity on $S$ gives $y=f^{[p-1]}(x)\in O$. If $i\ge1$, then
+$f(y)=f(f^{[i-1]}(x))$ and injectivity gives $y=f^{[i-1]}(x)\in O$. Both contradict $y\notin O$. Hence $f(y)\in S'$.
+
+So $S'$ satisfies all the hypotheses, and by induction $p\mid\card{S'}$, and $S'$ has $f$-invariant subsets of every
+size $k'p\le\card{S'}$. Since $\card S=\card{S'}+p$, we get $p\mid\card S$. Let $kp\le\card S$. If $k=0$, take
+$T=\varnothing$. If $k=k'+1$, then $k'p\le\card S-p=\card{S'}$. Take an $f$-invariant $T'\subseteq S'$ with
+$\card{T'}=k'p$, and put $T=T'\cup O\subseteq S$. The union of two sets that $f$ maps into themselves is mapped into
+itself, and $T'\cap O=\varnothing$ because $T'\subseteq S\setminus O$. So $\card T=k'p+p=kp$.
+\end{proof}
+
+\begin{lemma}[Orbit selection; \leanref{ErdosSzekeres.SymReduction.orbit_select_minimalPeriod}{SYMLEAN/SymmetricReduction.lean:123}, \leanref{ErdosSzekeres.SymReduction.orbit_select}{SYMLEAN/SymmetricReduction.lean:194}]\label{sr:lem:orbit}
+Let $X$ be a set and $f\colon X\to X$.
+\begin{enumerate}[label=(\alph*)]
+\item (\lean{orbit_select_minimalPeriod}) Let $p\in\N$ with $0<p$. For every finite $S\subseteq X$: if $f(y)\in S$ for
+  every $y\in S$, $f$ is injective on $S$, and $\operatorname{minimalPeriod}(f,y)=p$ for every $y\in S$, then
+  $p\mid\card S$, and for every $k\in\N$ with $kp\le\card S$ there is $T\subseteq S$ with $f(y)\in T$ for every $y\in
+  T$ and $\card T=kp$.
+\item (\lean{orbit_select}) Let $p$ be a prime. For every finite $S\subseteq X$: if $f(y)\in S$ for every $y\in S$,
+  $f$ is injective on $S$, $f^{[p]}(y)=y$ for every $y\in S$, and $f(y)\ne y$ for every $y\in S$, then $p\mid\card S$,
+  and for every $k\in\N$ with $kp\le\card S$ there is $T\subseteq S$ with $f(y)\in T$ for every $y\in T$ and $\card
+  T=kp$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Both follow from Lemma~\ref{sr:lem:orbit-core}; we check its hypotheses. (a) For $y\in S$, $f^{[p]}(y)=y$ by (MP3) and
+$\card{\operatorname{orbitFS}(f,p,y)}=p$ by Lemma~\ref{sr:lem:orbitFS}(e). (b) $p>0$ because $p$ is prime, and
+$\card{\operatorname{orbitFS}(f,p,y)}=p$ for $y\in S$ by Lemma~\ref{sr:lem:orbitFS}(d).
+\end{proof}
+
+In (b) the injectivity hypothesis is redundant: if $f(y)=f(y')$ with $y,y'\in S$, then applying $f^{[p-1]}$ gives
+$y=f^{[p]}(y)=f^{[p]}(y')=y'$. It is part of the Lean statement, and it is available in all applications.
+
+\subsection{Rotations and reflections in coordinates}\label{sr:ssec:maps}
+
+\begin{lemma}[The maps $\operatorname{crot}$; \leanref{ErdosSzekeres.SymReduction.toC_crot}{SYMLEAN/SymmetricReduction.lean:351}, \leanref{ErdosSzekeres.SymReduction.crot_one}{SYMLEAN/SymmetricReduction.lean:354}, \leanref{ErdosSzekeres.SymReduction.crot_comp}{SYMLEAN/SymmetricReduction.lean:359}, \leanref{ErdosSzekeres.SymReduction.crot_iterate}{SYMLEAN/SymmetricReduction.lean:364}, \leanref{ErdosSzekeres.SymReduction.crot_eq_self_iff}{SYMLEAN/SymmetricReduction.lean:370}, \leanref{ErdosSzekeres.SymReduction.crot_injective}{SYMLEAN/SymmetricReduction.lean:384}, \leanref{ErdosSzekeres.SymReduction.eDist2_crot_center}{SYMLEAN/SymmetricReduction.lean:394}]\label{sr:lem:crot}
+Let $c,w,v\in\C$ and $p\in\R^2$.
+\begin{enumerate}[label=(\alph*)]
+\item (\lean{toC_crot}) $\operatorname{toC}(\operatorname{crot}_{c,w}(p))=c+w(\operatorname{toC}(p)-c)$.
+\item (\lean{crot_one}) $\operatorname{crot}_{c,1}=\mathrm{id}$.
+\item (\lean{crot_comp}) $\operatorname{crot}_{c,w}(\operatorname{crot}_{c,v}(p))=\operatorname{crot}_{c,wv}(p)$.
+\item (\lean{crot_iterate}) $(\operatorname{crot}_{c,w})^{[k]}=\operatorname{crot}_{c,w^k}$ for every $k\in\N$.
+\item (\lean{crot_eq_self_iff}) If $w\ne1$, then $\operatorname{crot}_{c,w}(p)=p$ if and only if
+  $\operatorname{toC}(p)=c$.
+\item (\lean{crot_injective}) If $w\ne0$, then $\operatorname{crot}_{c,w}$ is injective.
+\item (\lean{eDist2_crot_center}) If $\mathrm{normSq}(w)=1$, then
+  $\operatorname{eDist2}(\operatorname{crot}_{c,w}(p),\operatorname{ofC}(c))=
+  \operatorname{eDist2}(p,\operatorname{ofC}(c))$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Write $z=\hat p$. Equalities of points are proved by applying the injective map $\operatorname{toC}$
+(Lemma~\ref{sr:lem:complex}(c)). (a) is $\operatorname{toC}(\operatorname{ofC}(\zeta))=\zeta$. (b) $c+1\cdot(z-c)=z$.
+(c) By (a), $c+w\bigl((c+v(z-c))-c\bigr)=c+wv(z-c)$. (d) Induction on $k$. For $k=0$ both sides are the identity, by
+(b). If it holds for $k$, then $(\operatorname{crot}_{c,w})^{[k+1]}(p)=\operatorname{crot}_{c,w}(\operatorname{crot}_{c,w^k}(p))
+=\operatorname{crot}_{c,w\cdot w^k}(p)=\operatorname{crot}_{c,w^{k+1}}(p)$ by (c). (e) By (a),
+$\operatorname{toC}(\operatorname{crot}_{c,w}(p))-z=(w-1)(z-c)$. For $w\ne1$ this vanishes if and only if $z=c$. (f) If
+$\operatorname{crot}_{c,w}(p)=\operatorname{crot}_{c,w}(q)$, then by (a) $w(\hat p-\hat q)=0$, so $\hat p=\hat q$ and
+$p=q$. (g) By Lemma~\ref{sr:lem:complex}(c),(d) and (a), the left side is $\mathrm{normSq}(c+w(z-c)-c)=
+\mathrm{normSq}(w)\,\mathrm{normSq}(z-c)=\mathrm{normSq}(z-c)$, which is the right side.
+\end{proof}
+
+\begin{lemma}[Rotations and the half-turn as $\operatorname{crot}$; \leanref{ErdosSzekeres.SymReduction.rotAbout_eq_crot}{SYMLEAN/SymmetricReduction.lean:404}, \leanref{ErdosSzekeres.SymReduction.halfTurn_eq_crot}{SYMLEAN/SymmetricReduction.lean:415}]\label{sr:lem:rot-half}
+For $c\in\R^2$ and $\theta\in\R$:
+\begin{enumerate}[label=(\alph*)]
+\item (\lean{rotAbout_eq_crot}) $\operatorname{rotAbout}_{c,\theta}=\operatorname{crot}_{\operatorname{toC}(c),\,\exp(\theta i)}$ (equality of maps
+  of $\R^2$);
+\item (\lean{halfTurn_eq_crot}) $\operatorname{halfTurn}_c=\operatorname{crot}_{\operatorname{toC}(c),\,-1}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Let $p\in\R^2$, $x=p_0-c_0$ and $y=p_1-c_1$, so that $\hat p-\hat c=x+iy$. (a) By Euler's formula
+$\exp(\theta i)=\cos\theta+i\sin\theta$, hence $\exp(\theta i)(x+iy)=(x\cos\theta-y\sin\theta)+i(x\sin\theta+y\cos\theta)$.
+Adding $\hat c=c_0+ic_1$ gives $\operatorname{toC}(\operatorname{rotAbout}_{c,\theta}(p))$; conclude by
+Lemma~\ref{sr:lem:crot}(a) and the injectivity of $\operatorname{toC}$. (b) $\hat c+(-1)(\hat p-\hat c)=2\hat c-\hat p=
+\operatorname{toC}(\operatorname{halfTurn}_c(p))$.
+\end{proof}
+
+\begin{lemma}[Line reflections; \leanref{ErdosSzekeres.SymReduction.toC_reflLine}{SYMLEAN/SymmetricReduction.lean:427}, \leanref{ErdosSzekeres.SymReduction.reflLine_involutive}{SYMLEAN/SymmetricReduction.lean:435}, \leanref{ErdosSzekeres.SymReduction.cross_of_reflLine_fixed}{SYMLEAN/SymmetricReduction.lean:447}, \leanref{ErdosSzekeres.SymReduction.orient_eq_zero_of_cross}{SYMLEAN/SymmetricReduction.lean:455}]\label{sr:lem:refl}
+Let $a,u,p,q,r\in\R^2$.
+\begin{enumerate}[label=(\alph*)]
+\item (\lean{toC_reflLine}) If $u_0^2+u_1^2=1$, then $\operatorname{toC}(\operatorname{reflLine}_{a,u}(p))=\hat a+\hat u^{\,2}\,
+  \overline{(\hat p-\hat a)}$.
+\item (\lean{reflLine_involutive}) If $u_0^2+u_1^2=1$, then
+  $\operatorname{reflLine}_{a,u}(\operatorname{reflLine}_{a,u}(p))=p$.
+\item (\lean{cross_of_reflLine_fixed}) If $\operatorname{reflLine}_{a,u}(p)=p$, then $(p_0-a_0)u_1-(p_1-a_1)u_0=0$.
+  (No hypothesis on $u$.)
+\item (\lean{orient_eq_zero_of_cross}) If $u_0^2+u_1^2=1$ and $(z_0-a_0)u_1-(z_1-a_1)u_0=0$ for each
+  $z\in\{p,q,r\}$, then $\orient(p,q,r)=0$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Let $x=p_0-a_0$, $y=p_1-a_1$ and $d=xu_0+yu_1$, so that $\operatorname{reflLine}_{a,u}(p)-a=(2du_0-x,\,2du_1-y)$.
+
+(a) Expanding, $\hat u^{\,2}\,\overline{(x+iy)}=(u_0^2-u_1^2+2iu_0u_1)(x-iy)=\bigl((u_0^2-u_1^2)x+2u_0u_1y\bigr)+
+i\bigl(2u_0u_1x-(u_0^2-u_1^2)y\bigr)$. On the other hand $2du_0-x=(2u_0^2-1)x+2u_0u_1y$ and
+$2du_1-y=2u_0u_1x+(2u_1^2-1)y$. Since $u_0^2+u_1^2=1$, we have $2u_0^2-1=u_0^2-u_1^2$ and $2u_1^2-1=-(u_0^2-u_1^2)$, so the
+two expressions agree. (In other words, the real and imaginary parts of the difference are $x(u_0^2+u_1^2-1)$ and
+$y(u_0^2+u_1^2-1)$.)
+
+(b) Put $\zeta=\hat p-\hat a$; note $\hat u\,\overline{\hat u}=u_0^2+u_1^2=1$. By (a), applied twice,
+$\operatorname{toC}(\operatorname{reflLine}_{a,u}(\operatorname{reflLine}_{a,u}(p)))-\hat a=\hat u^{\,2}\,
+\overline{\hat u^{\,2}\,\bar\zeta}=(\hat u\,\overline{\hat u})^2\zeta=\zeta$. Hence the two points have the same
+$\operatorname{toC}$, and they are equal.
+
+(c) The fixed-point equations read $a_0+2du_0-x=p_0=a_0+x$ and $a_1+2du_1-y=a_1+y$, that is, $du_0=x$ and $du_1=y$. Hence
+$xu_1-yu_0=du_0u_1-du_1u_0=0$.
+
+(d) Write $v\times w=v_0w_1-v_1w_0$ and $v\cdot w=v_0w_0+v_1w_1$ for $v,w\in\R^2$, so that
+$\orient(p,q,r)=(q-p)\times(r-p)$. For all $v,w,u\in\R^2$ one has the identity
+\[
+  (v\times w)(u_0^2+u_1^2)=(w\cdot u)(v\times u)-(v\cdot u)(w\times u),
+\]
+checked by expanding both sides. Take $v=q-p$ and $w=r-p$. The hypotheses say $(z-a)\times u=0$ for $z=p,q,r$, so
+$v\times u=(q-a)\times u-(p-a)\times u=0$, and likewise $w\times u=0$. Hence $\orient(p,q,r)\cdot1=0$.
+\end{proof}
+
+\subsection{Isometries of the plane}\label{sr:ssec:iso}
+
+\begin{lemma}[Isometries in coordinates; \leanref{ErdosSzekeres.SymReduction.IsEucIsometry.injective}{SYMLEAN/SymmetricReduction.lean:301}, \leanref{ErdosSzekeres.SymReduction.isometry_toC_conj}{SYMLEAN/SymmetricReduction.lean:313}]\label{sr:lem:toC-iso}
+Let $g\colon\R^2\to\R^2$ be a Euclidean isometry.
+\begin{enumerate}[label=(\alph*)]
+\item (\lean{IsEucIsometry.injective}) $g$ is injective.
+\item (\lean{isometry_toC_conj}) The map $G\colon\C\to\C$, $G(z)=\operatorname{toC}(g(\operatorname{ofC}(z)))$, is
+  an isometry of $\C$:
+  $\abs{G(z)-G(w)}=\abs{z-w}$ for all $z,w\in\C$. (Lean: Mathlib's \texttt{Isometry G}; for the metric space $\C$, whose
+  distance is $\abs{z-w}$, this is equivalent to the displayed equation.)
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) If $g(p)=g(q)$, then $\operatorname{eDist2}(p,q)=\operatorname{eDist2}(g(p),g(q))=0$, so $p=q$ by
+Lemma~\ref{sr:lem:complex}(e). (b) By Lemma~\ref{sr:lem:complex}(c),(d),
+\[
+\abs{G(z)-G(w)}^2=\operatorname{eDist2}\bigl(g(\operatorname{ofC}z),g(\operatorname{ofC}w)\bigr)=
+\operatorname{eDist2}(\operatorname{ofC}z,\operatorname{ofC}w)=\abs{z-w}^2,
+\]
+and both moduli are nonnegative.
+\end{proof}
+
+\begin{theorem}[Isometries of the plane; \leanref{ErdosSzekeres.SymReduction.isometry_complex_cases}{SYMLEAN/SymmetricReduction.lean:321}, \leanref{ErdosSzekeres.SymReduction.isometry_structure}{SYMLEAN/SymmetricReduction.lean:869}]\label{sr:thm:structure}
+Part (a) describes the isometries of $\C$; part (b) the Euclidean isometries of the plane that map a finite set with at
+least two points into itself.
+\begin{enumerate}[label=(\alph*)]
+\item (\lean{isometry_complex_cases}) Let $G\colon\C\to\C$ be an isometry: $\abs{G(z)-G(w)}=\abs{z-w}$ for all
+  $z,w\in\C$. Then there are $a,b\in\C$ with $\abs a=1$ such that either $G(z)=az+b$ for all $z\in\C$, or
+  $G(z)=a\bar z+b$ for all $z\in\C$.
+\item (\lean{isometry_structure}) Let $S\subseteq\R^2$ be finite with $1<\card S$, and let $g\colon\R^2\to\R^2$ be a
+  Euclidean isometry with $g\ne\mathrm{id}$ (as maps of $\R^2$) and $\operatorname{Invariant}(g,S)$. Then one of the
+  following holds:
+  \begin{enumerate}[label=(\roman*)]
+  \item there are $c,a\in\C$ with $g=\operatorname{crot}_{c,a}$, $a\ne1$, and $a^m=1$ for some $m\in\N$ with $0<m$;
+  \item there are $A,u\in\R^2$ with $u_0^2+u_1^2=1$ and $g=\operatorname{reflLine}_{A,u}$.
+  \end{enumerate}
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\emph{(a).} This proof differs from the Lean proof. The Lean proof applies Mathlib's construction of an affine isometry
+from an isometry between real normed affine spaces with strictly convex codomain
+(\lean{Isometry.affineIsometryOfStrictConvexSpace}, a definition whose underlying map is the given isometry; it is a
+result of Mazur--Ulam type that does not need surjectivity), and then Mathlib's theorem describing the real-linear
+isometric equivalences of $\C$ (\lean{linear_isometry_complex}). We give a self-contained argument.
+
+Let $b=G(0)$ and $H(z)=G(z)-b$. Then $H(0)=0$, $\abs{H(z)-H(w)}=\abs{z-w}$, and so $\abs{H(z)}=\abs{H(z)-H(0)}=\abs z$.
+For all $z,w$ we have $\abs{z-w}^2=\abs z^2-2\langle z,w\rangle+\abs w^2$, and the same for $H(z),H(w)$. Hence
+\[
+2\langle H(z),H(w)\rangle=\abs{H(z)}^2+\abs{H(w)}^2-\abs{H(z)-H(w)}^2=\abs z^2+\abs w^2-\abs{z-w}^2=2\langle z,w\rangle,
+\]
+so $H$ preserves the inner product. Put $a=H(1)$ and $e=H(i)$. Then $\abs a=\abs1=1$, $\abs e=1$ and $\langle
+e,a\rangle=\langle i,1\rangle=0$. Let $v=e\bar a$. Then $\abs v=1$ and $\operatorname{Re}v=\langle e,a\rangle=0$, so
+$v=i$ or $v=-i$; and $e=e\bar a a=va$, so $e=ia$ or $e=-ia$.
+
+Next, every $\xi\in\C$ satisfies $\xi=\langle\xi,a\rangle a+\langle\xi,e\rangle e$. Indeed, write $\bar a\xi=\alpha+i\beta$
+with $\alpha,\beta\in\R$; then $\xi=a\bar a\xi=\alpha a+\beta(ia)$, $\langle\xi,a\rangle=\operatorname{Re}(\xi\bar a)=\alpha$
+and $\langle\xi,ia\rangle=\operatorname{Re}(-i\xi\bar a)=\beta$; and $\langle\xi,e\rangle e=\langle\xi,ia\rangle\,ia$ for
+both choices $e=\pm ia$.
+
+Now let $z=x+iy$ with $x,y\in\R$. Since $H$ preserves the inner product, $\langle H(z),a\rangle=\langle
+H(z),H(1)\rangle=\langle z,1\rangle=x$ and $\langle H(z),e\rangle=\langle z,i\rangle=y$. Hence $H(z)=xa+ye$. If $e=ia$,
+this is $a(x+iy)=az$; if $e=-ia$, it is $a(x-iy)=a\bar z$. The choice between the two cases does not depend on $z$. So
+$G(z)=az+b$ for all $z$, or $G(z)=a\bar z+b$ for all $z$, and $\abs a=1$.
+
+\emph{(b).} This part follows the Lean proof. Let $G(z)=\operatorname{toC}(g(\operatorname{ofC}z))$. By
+Lemma~\ref{sr:lem:toC-iso}(b) and part (a) there are $a,b\in\C$ with $\abs a=1$ such that either
+\textup{(R)} $G(z)=az+b$ for all $z$, or \textup{(C)} $G(z)=a\bar z+b$ for all $z$. Since $\operatorname{ofC}(\hat
+p)=p$, we have $\operatorname{toC}(g(p))=G(\hat p)$ for every $p\in\R^2$. The set $S$ is nonempty because $\card S>1$.
+
+\emph{Case (R), $a=1$.} Then $\operatorname{toC}(g(p))=\hat p+b$ for all $p$, and by induction
+$\operatorname{toC}(g^{[k]}(q))=\hat q+kb$ for all $k\in\N$ and $q\in\R^2$. Take $q\in S$. By Lemma~\ref{sr:lem:pigeon}
+there are $i<j$ with $g^{[i]}(q)=g^{[j]}(q)$, so $\hat q+ib=\hat q+jb$ and $(j-i)b=0$. Since $j-i$ is a nonzero
+integer, $b=0$. Then $\operatorname{toC}(g(p))=\hat p$ for all $p$, so $g=\mathrm{id}$ by the injectivity of
+$\operatorname{toC}$. This contradicts $g\ne\mathrm{id}$; so this case does not occur.
+
+\emph{Case (R), $a\ne1$.} Put $c=b/(1-a)$. For every $p$, $c+a(\hat p-c)=a\hat p+(1-a)c=a\hat p+b=
+\operatorname{toC}(g(p))$, so $g=\operatorname{crot}_{c,a}$ by Lemma~\ref{sr:lem:crot}(a). Also $a\ne0$ because
+$\abs a=1$. Since $\card S\ge2$, some $q\in S$ differs from $\operatorname{ofC}(c)$. By Lemma~\ref{sr:lem:pigeon},
+applied to $g=\operatorname{crot}_{c,a}$, there are $i<j$ with $(\operatorname{crot}_{c,a})^{[i]}(q)=
+(\operatorname{crot}_{c,a})^{[j]}(q)$. By Lemma~\ref{sr:lem:crot}(d),(a), $c+a^i(\hat q-c)=c+a^j(\hat q-c)$. Here
+$\hat q-c\ne0$, since otherwise $q=\operatorname{ofC}(\hat q)=\operatorname{ofC}(c)$. Hence $a^i=a^j=a^ia^{j-i}$, and as
+$a^i\ne0$, $a^{j-i}=1$. With $m=j-i>0$ we obtain alternative (i).
+
+\emph{Case (C).} We prove alternative (ii); the hypothesis $g\ne\mathrm{id}$ is not needed here. Since $\abs a=1$,
+$a\bar a=1$. For every $p$,
+\[
+\operatorname{toC}(g(g(p)))=a\,\overline{(a\bar{\hat p}+b)}+b=a\bar a\hat p+a\bar b+b=\hat p+t,\qquad t:=a\bar b+b .
+\]
+By induction, $\operatorname{toC}((g\circ g)^{[k]}(p))=\hat p+kt$ for all $k$ and $p$. The map $g\circ g$ maps $S$ into
+$S$. Take $q\in S$; Lemma~\ref{sr:lem:pigeon} applied to $g\circ g$ gives $i<j$ with $(j-i)t=0$, hence $t=0$, that is,
+$a\bar b=-b$. Choose $u\in\C$ with $u^2=a$ (every complex number has a square root; the Lean proof takes the principal
+value $a^{1/2}$). Then $\abs u^2=\abs a=1$, so the point $U=\operatorname{ofC}(u)$ satisfies $U_0^2+U_1^2=1$. Let
+$A=\operatorname{ofC}(b/2)$. By Lemma~\ref{sr:lem:refl}(a), for every $p$,
+\[
+\operatorname{toC}(\operatorname{reflLine}_{A,U}(p))=\tfrac b2+u^2\,\overline{\bigl(\hat p-\tfrac b2\bigr)}
+=a\bar{\hat p}+\tfrac b2-\tfrac{a\bar b}{2}=a\bar{\hat p}+\tfrac b2+\tfrac b2=a\bar{\hat p}+b=\operatorname{toC}(g(p)).
+\]
+Hence $g=\operatorname{reflLine}_{A,U}$, which is alternative (ii).
+\end{proof}
+
+In (b), the pigeonhole steps are where finiteness enters: they exclude translations ($a=1$) and glide reflections
+($t\ne0$), and they make $a$ a root of unity.
+
+\subsection{Elementary geometric lemmas}\label{sr:ssec:geom}
+
+\begin{lemma}[Strict supporting lines; \leanref{ErdosSzekeres.Suk.convexPosition_of_strict_supports}{ErdosSzekeres/Suk/SupportingLines.lean:28}]\label{sr:lem:supports}
+Let $s\subseteq\R^2$ be finite. If for every $p\in s$ there is $q\in\R^2$ with $\orient(p,q,r)>0$ for every $r\in s$
+with $r\ne p$, then $s$ is in convex position.
+\end{lemma}
+
+\begin{proof}
+This is the lemma titled ``Strict supporting lines'' in the foundations section, the same declaration of the main
+library; the short proof is repeated here because Lemma~\ref{sr:lem:concyclic} uses it. By Lemma~\ref{fd:lem:cp-hull} it
+suffices to show $p\notin\conv(s\setminus\{p\})$ for every $p\in s$. Fix $p$ and a point $q$ as in the hypothesis, and
+let $\varphi(x)=\orient(p,q,x)=(q_0-p_0)(x_1-p_1)-(q_1-p_1)(x_0-p_0)$. This is an affine function of $x$:
+$\varphi(\lambda x+\mu y)=\lambda\varphi(x)+\mu\varphi(y)$ whenever $\lambda+\mu=1$. So the open half-plane
+$H=\{x:\varphi(x)>0\}$ is convex: for $x,y\in H$ and $\lambda,\mu\ge0$ with $\lambda+\mu=1$, both terms
+$\lambda\varphi(x)$ and $\mu\varphi(y)$ are $\ge0$ and at least one is $>0$. By hypothesis $s\setminus\{p\}\subseteq
+H$, hence $\conv(s\setminus\{p\})\subseteq H$. But $\varphi(p)=\orient(p,q,p)=0$, so $p\notin H$, and therefore
+$p\notin\conv(s\setminus\{p\})$.
+\end{proof}
+
+\begin{lemma}[Concyclic points; \leanref{ErdosSzekeres.SymReduction.convexPosition_of_concyclic}{SYMLEAN/SymmetricReduction.lean:509}]\label{sr:lem:concyclic}
+Let $s\subseteq\R^2$ be finite, $c\in\R^2$ and $r\in\R$, and assume $\operatorname{eDist2}(p,c)=r$ for every $p\in s$.
+Then $s$ is in convex position.
+\end{lemma}
+
+No general position is assumed, and $r$ is arbitrary (for $r=0$ the set has at most one point).
+
+\begin{proof}
+We apply Lemma~\ref{sr:lem:supports} with the tangent direction. For $p\in s$ let
+$q=\bigl(p_0-(p_1-c_1),\;p_1+(p_0-c_0)\bigr)$, that is, $p$ plus the vector $p-c$ turned by $+90^\circ$. For every
+$x\in\R^2$, expanding gives
+\[
+\orient(p,q,x)=-\bigl[(p_0-c_0)(x_0-p_0)+(p_1-c_1)(x_1-p_1)\bigr]
+=\tfrac12\bigl(\operatorname{eDist2}(x,p)+\operatorname{eDist2}(p,c)-\operatorname{eDist2}(x,c)\bigr).
+\]
+(The second equality is $\abs{x-c}^2=\abs{x-p}^2+2\langle x-p,p-c\rangle+\abs{p-c}^2$.) For $x\in s$ we have
+$\operatorname{eDist2}(x,c)=r=\operatorname{eDist2}(p,c)$, so $\orient(p,q,x)=\frac12\operatorname{eDist2}(x,p)$, which is
+positive when $x\ne p$ (Lemma~\ref{sr:lem:complex}(e)). Lemma~\ref{sr:lem:supports} gives the claim.
+\end{proof}
+
+\begin{corollary}[A concyclic subset gives convex polygons; \leanref{ErdosSzekeres.SymReduction.hasConvexNGon_of_concyclic}{SYMLEAN/SymmetricReduction.lean:522}]\label{sr:cor:concyclic}
+Let $T\subseteq S$ be finite sets of points, $c\in\R^2$ and $r\in\R$ with $\operatorname{eDist2}(p,c)=r$ for every $p\in
+T$, and let $n\in\N$ with $n\le\card T$. Then \texttt{HasConvexNGon n S}.
+\end{corollary}
+
+\begin{proof}
+$T$ is in convex position by Lemma~\ref{sr:lem:concyclic}, hence \texttt{HasConvexNGon n T} since $n\le\card T$, hence
+\texttt{HasConvexNGon n S} by monotonicity (Lemma~\ref{fd:lem:mono}).
+\end{proof}
+
+\begin{lemma}[The centre of a half-turn; \leanref{ErdosSzekeres.SymReduction.center_not_mem_of_halfTurn}{SYMLEAN/SymmetricReduction.lean:528}]\label{sr:lem:center}
+Let $S$ be in general position with $2\le\card S$, let $c\in\R^2$, and assume
+$\operatorname{Invariant}(\operatorname{halfTurn}_c,S)$. Then $c\notin S$.
+\end{lemma}
+
+\begin{proof}
+Suppose $c\in S$. Since $\card S\ge2$, there is $q\in S$ with $q\ne c$, and $q'=\operatorname{halfTurn}_c(q)=2c-q$ lies
+in $S$. We have $q'\ne q$, since $2c-q=q$ would give $q=c$, and $q'\ne c$, since $2c-q=c$ would give $q=c$. So $q,c,q'$
+are pairwise distinct points of $S$. But
+\[
+\orient(q,c,2c-q)=(c_0-q_0)\cdot2(c_1-q_1)-(c_1-q_1)\cdot2(c_0-q_0)=0,
+\]
+contradicting general position (Lemma~\ref{fd:lem:collinear}).
+\end{proof}
+
+\subsection{Roots of unity}\label{sr:ssec:roots}
+
+\begin{definition}[Primitive roots of unity, order; written step]\label{sr:def:prim}
+For $\zeta\in\C$ and $k\in\N$, $\zeta$ is a \emph{primitive $k$-th root of unity} (Mathlib \lean{IsPrimitiveRoot}) if
+$\zeta^k=1$ and every $l\in\N$ with $\zeta^l=1$ is a multiple of $k$. If $\zeta^m=1$ for some $m>0$, the \emph{order}
+$\operatorname{ord}(\zeta)$ (Mathlib \lean{orderOf}) is the least such $m$; otherwise it is $0$.
+\end{definition}
+
+\begin{lemma}[Facts on roots of unity; written step]\label{sr:lem:prim}
+Let $\zeta,\xi\in\C$ and $n,k,d\in\N$.
+\begin{enumerate}[label=(P\arabic*)]
+\item If $\zeta^m=1$ for some $m>0$, then $\operatorname{ord}(\zeta)>0$, $\zeta$ is a primitive
+  $\operatorname{ord}(\zeta)$-th root of unity, and $\operatorname{ord}(\zeta)=1$ if and only if $\zeta=1$. (Mathlib
+  \lean{IsPrimitiveRoot.orderOf}, \lean{orderOf_eq_one_iff}.)
+\item If $\zeta$ is a primitive $n$-th root of unity, $n>0$ and $n=k\,d$, then $\zeta^k$ is a primitive $d$-th root of
+  unity. (\lean{IsPrimitiveRoot.pow}.)
+\item A primitive $2$nd root of unity equals $-1$. (\lean{IsPrimitiveRoot.eq_neg_one_of_two_right}.)
+\item If $\zeta$ is a primitive $k$-th root of unity and $k>1$, then $\zeta^k=1$, $\zeta\ne1$ and $\zeta\ne0$.
+  (\lean{IsPrimitiveRoot.pow_eq_one}, \lean{IsPrimitiveRoot.ne_one}, \lean{IsPrimitiveRoot.ne_zero}.)
+\item If $\zeta$ is a primitive $k$-th root of unity, $k>0$ and $\xi^k=1$, then $\xi=\zeta^e$ for some $e<k$.
+  (\lean{IsPrimitiveRoot.eq_pow_of_pow_eq_one}.)
+\item If $n>0$, then $\exp(2\pi i/n)$ is a primitive $n$-th root of unity. (\lean{Complex.isPrimitiveRoot_exp}.)
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(P1) Put $s=\operatorname{ord}(\zeta)$. Since $\zeta^m=1$ with $m>0$, Definition~\ref{sr:def:prim} makes $s$ the least
+positive integer with $\zeta^s=1$; in particular $s>0$. If $\zeta^l=1$, write $l=ts+r$ with $0\le r<s$; then
+$1=\zeta^l=(\zeta^s)^t\zeta^r=\zeta^r$, so $r=0$ by minimality, and $s\mid l$. So $\zeta$ is a primitive $s$-th root of
+unity. Finally $s=1$ if and only if $\zeta^1=1$, that is, $\zeta=1$.
+
+(P2) $(\zeta^k)^d=\zeta^n=1$. If $(\zeta^k)^l=1$, then $\zeta^{kl}=1$, so $kd=n\mid kl$; since $n>0$ we have $k>0$, and
+so $d\mid l$.
+
+(P3) Let $\zeta$ be a primitive $2$nd root. Then $\zeta^2=1$, and $\zeta\ne1$ because $\zeta^1=1$ would give $2\mid1$.
+From $(\zeta-1)(\zeta+1)=\zeta^2-1=0$ we get $\zeta=-1$.
+
+(P4) $\zeta^k=1$ by definition. If $\zeta=1$, then $\zeta^1=1$ gives $k\mid1$, so $k=1$. If $\zeta=0$, then
+$\zeta^k=0\ne1$ since $k\ge1$.
+
+(P5) The numbers $\zeta^0,\dots,\zeta^{k-1}$ are pairwise distinct: if $\zeta^i=\zeta^j$ with $i<j<k$, then
+$\zeta^i\ne0$ (as $\zeta^k=1$), so $\zeta^{j-i}=1$ and $k\mid j-i$ with $0<j-i<k$, which is impossible. They are $k$
+distinct roots of the polynomial $X^k-1$, which has degree $k$ and therefore at most $k$ roots in $\C$. Since $\xi$ is
+also a root, it is one of them.
+
+(P6) Let $\zeta=\exp(2\pi i/n)$. For $l\in\N$, $\zeta^l=\exp(2\pi il/n)$, and $\exp(w)=1$ holds exactly when $w\in2\pi
+i\Z$. So $\zeta^l=1$ if and only if $l/n\in\Z$, that is, $n\mid l$. In particular $\zeta^n=1$.
+\end{proof}
+
+\begin{lemma}[The angles $2\pi/3$, $2\pi/4$, $2\pi/5$; \leanref{ErdosSzekeres.SymReduction.isPrimitiveRoot_rot3}{SYMLEAN/SymmetricReduction.lean:584}, \leanref{ErdosSzekeres.SymReduction.isPrimitiveRoot_rot5}{SYMLEAN/SymmetricReduction.lean:591}, \leanref{ErdosSzekeres.SymReduction.isPrimitiveRoot_rot4}{SYMLEAN/SymmetricReduction.lean:598}]\label{sr:lem:rot345}
+For $n\in\{3,5,4\}$, $\exp\bigl((2\pi/n)\,i\bigr)$ is a primitive $n$-th root of unity. Here $2\pi/n$ is the real
+number $2\pi/n$ (Lean \texttt{2 * Real.pi / n}), viewed as a complex number.
+\end{lemma}
+
+\begin{proof}
+$(2\pi/n)i=2\pi i/n$; apply (P6).
+\end{proof}
+
+\begin{lemma}[Even order or an odd prime; \leanref{ErdosSzekeres.SymReduction.root_cases}{SYMLEAN/SymmetricReduction.lean:552}]\label{sr:lem:root-cases}
+Let $a\in\C$ and $m\in\N$ with $0<m$, $a^m=1$ and $a\ne1$. Then either $a^k=-1$ for some $k\in\N$, or there are
+$p,k\in\N$ such that $p$ is prime, $p\ne2$, and $a^k$ is a primitive $p$-th root of unity.
+\end{lemma}
+
+\begin{proof}
+Let $n=\operatorname{ord}(a)$. By (P1), $n>0$, $a$ is a primitive $n$-th root of unity, and $n\ne1$ because $a\ne1$.
+If $2\mid n$, write $n=2k=k\cdot2$; by (P2), $a^k$ is a primitive $2$nd root of unity, so $a^k=-1$ by (P3). Otherwise
+let $p$ be the least prime factor of $n$ (it exists since $n>1$). Then $p\ne2$ because $n$ is odd, and $n=(n/p)\,p$, so
+$a^{n/p}$ is a primitive $p$-th root of unity by (P2).
+\end{proof}
+
+In the proof the first alternative is taken for \emph{every} even order (so orders $6,10,12,\dots$ lead to the
+half-turn), and in the second $p$ is the least prime factor of the order; the statement itself does not record this.
+
+\begin{lemma}[Odd primes; \leanref{ErdosSzekeres.SymReduction.prime_cases}{SYMLEAN/SymmetricReduction.lean:572}]\label{sr:lem:prime-cases}
+If $p$ is prime and $p\ne2$, then $p=3$, $p=5$ or $7\le p$.
+\end{lemma}
+
+\begin{proof}
+$p\ge2$ and $p\ne2$, so $p\in\{3,4,5,6\}$ or $p\ge7$; and $4=2\cdot2$ and $6=2\cdot3$ are not prime.
+\end{proof}
+
+\begin{lemma}[Order $2$, a multiple of $4$, or an odd prime; \leanref{ErdosSzekeres.SymReduction.root_cases2}{SYMLEAN/SymmetricReduction.lean:607}]\label{sr:lem:root-cases2}
+Let $a\in\C$ and $m\in\N$ with $0<m$, $a^m=1$ and $a\ne1$. Then $a=-1$, or $a^k$ is a primitive $4$th root of unity for
+some $k\in\N$, or there are $p,k\in\N$ such that $p$ is prime, $p\ne2$, and $a^k$ is a primitive $p$-th root of unity.
+\end{lemma}
+
+\begin{proof}
+Let $n=\operatorname{ord}(a)$; as before, $n>1$ and $a$ is a primitive $n$-th root of unity. If some prime $p\ne2$
+divides $n$, then $a^{n/p}$ is a primitive $p$-th root of unity by (P2). Otherwise $2$ is the only prime factor of $n$.
+If $4\mid n$, then $a^{n/4}$ is a primitive $4$th root of unity by (P2). Otherwise $n$ is even (its least prime factor
+is $2$), say $n=2m'$ with $m'\ge1$. If $m'>1$, a prime factor of $m'$ divides $n$, so it equals $2$, and then $4\mid
+n$, which is excluded. So $m'=1$, $n=2$, and $a=-1$ by (P3).
+\end{proof}
+
+\subsection{The case lemmas}\label{sr:ssec:cases}
+
+\begin{lemma}[Half-turn invariant sets; \leanref{ErdosSzekeres.SymReduction.halfTurn_facts}{SYMLEAN/SymmetricReduction.lean:647}]\label{sr:lem:halfturn-facts}
+Let $S$ be in general position with $2\le\card S$, let $c\in\R^2$, and assume
+$\operatorname{Invariant}(\operatorname{halfTurn}_c,S)$. Then $c\notin S$, $2\mid\card S$, and for every $k\in\N$ with
+$2k\le\card S$ there is $T\subseteq S$ with $\operatorname{Invariant}(\operatorname{halfTurn}_c,T)$ and $\card T=2k$.
+\end{lemma}
+
+\begin{proof}
+$c\notin S$ by Lemma~\ref{sr:lem:center}. Let $f=\operatorname{halfTurn}_c=\operatorname{crot}_{\hat c,-1}$
+(Lemma~\ref{sr:lem:rot-half}(b)). By Lemma~\ref{sr:lem:crot}(d),(b), $f^{[2]}=\operatorname{crot}_{\hat c,1}=\mathrm{id}$.
+If $f(y)=y$ for some $y\in S$, then $\hat y=\hat c$ by Lemma~\ref{sr:lem:crot}(e) (as $-1\ne1$), so $y=c\in S$, a
+contradiction. $f$ is injective by Lemma~\ref{sr:lem:crot}(f). Lemma~\ref{sr:lem:orbit}(b) with the prime $p=2$ gives
+the claims.
+\end{proof}
+
+\begin{lemma}[Case of a half-turn; \leanref{ErdosSzekeres.SymReduction.case_halfTurn}{SYMLEAN/SymmetricReduction.lean:670}; conditional on \lean{HalfTurn34}]\label{sr:lem:case-halfturn}
+Assume \lean{HalfTurn34} (a hypothesis). Let $S$ be in general position with $33\le\card S$, let $c\in\R^2$, and assume
+$\operatorname{Invariant}(\operatorname{halfTurn}_c,S)$. Then \texttt{HasConvexNGon 7 S}.
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{sr:lem:halfturn-facts}, $c\notin S$ and $\card S$ is even; with $\card S\ge33$ this gives $\card S\ge34=17\cdot2$.
+So there is $T\subseteq S$, invariant under $\operatorname{halfTurn}_c$, with $\card T=34$. $T$ is in general position
+(monotonicity) and $c\notin T$. \lean{HalfTurn34} applied to $T$ and $c$ gives \texttt{HasConvexNGon 7 T}, hence
+\texttt{HasConvexNGon 7 S} by monotonicity.
+\end{proof}
+
+\begin{lemma}[Rotations of prime order off the centre; \leanref{ErdosSzekeres.SymReduction.rot_erase_facts}{SYMLEAN/SymmetricReduction.lean:676}]\label{sr:lem:rot-erase}
+Let $S$ be finite, $c,w\in\C$, and $p$ a prime with $w^p=1$ and $w\ne1$; assume
+$\operatorname{Invariant}(\operatorname{crot}_{c,w},S)$. Let $S'=S\setminus\{\operatorname{ofC}(c)\}$. Then
+$p\mid\card{S'}$, and for every $k\in\N$ with $kp\le\card{S'}$ there is $T\subseteq S$ with
+$\operatorname{ofC}(c)\notin T$, $\operatorname{Invariant}(\operatorname{crot}_{c,w},T)$ and $\card T=kp$.
+\end{lemma}
+
+\begin{proof}
+Let $f=\operatorname{crot}_{c,w}$. Since $p>0$ and $w^p=1$, $w\ne0$, so $f$ is injective (Lemma~\ref{sr:lem:crot}(f)).
+The centre is fixed: $\operatorname{toC}(f(\operatorname{ofC}c))=c+w(c-c)=c$, so $f(\operatorname{ofC}c)=\operatorname{ofC}c$.
+\emph{$S'$ is mapped into itself:} for $y\in S'$, $f(y)\in S$, and $f(y)=\operatorname{ofC}(c)=f(\operatorname{ofC}c)$
+would give $y=\operatorname{ofC}(c)$ by injectivity. Further $f^{[p]}=\operatorname{crot}_{c,w^p}=\operatorname{crot}_{c,1}=
+\mathrm{id}$ (Lemma~\ref{sr:lem:crot}(d),(b)). If $f(y)=y$ for some $y\in S'$, then $\hat y=c$ by
+Lemma~\ref{sr:lem:crot}(e), so $y=\operatorname{ofC}(c)\notin S'$, a contradiction. Lemma~\ref{sr:lem:orbit}(b) applied
+to $S'$ gives $p\mid\card{S'}$ and, for $kp\le\card{S'}$, an $f$-invariant $T\subseteq S'$ with $\card T=kp$; then
+$T\subseteq S$ and $\operatorname{ofC}(c)\notin T$.
+\end{proof}
+
+\begin{lemma}[Rotations of prime order at least $7$; \leanref{ErdosSzekeres.SymReduction.case_rot_big}{SYMLEAN/SymmetricReduction.lean:711}]\label{sr:lem:rot-big}
+Let $S$ be finite, $c,w\in\C$, and $p$ a prime with $7\le p$, $w^p=1$ and $w\ne1$. Assume
+$\operatorname{Invariant}(\operatorname{crot}_{c,w},S)$ and $2\le\card S$. Then \texttt{HasConvexNGon 7 S}.
+\end{lemma}
+
+No general position is assumed.
+
+\begin{proof}
+Let $f=\operatorname{crot}_{c,w}$. Since $\card S\ge2$, some $q\in S$ differs from $\operatorname{ofC}(c)$. We have
+$\mathrm{normSq}(w)^p=\mathrm{normSq}(w^p)=1$ and $\mathrm{normSq}(w)\ge0$; as $t\mapsto t^p$ is strictly increasing on
+$[0,\infty)$, $\mathrm{normSq}(w)=1$. Let $O=\operatorname{orbitFS}(f,p,q)$. Then $O\subseteq S$
+(Lemma~\ref{sr:lem:orbitFS}(b)); $f^{[p]}(q)=\operatorname{crot}_{c,w^p}(q)=q$; and $f(q)\ne q$, since otherwise $\hat
+q=c$ by Lemma~\ref{sr:lem:crot}(e) and $q=\operatorname{ofC}(c)$. By Lemma~\ref{sr:lem:orbitFS}(d), $\card O=p$. Every
+$x\in O$ has the form $x=f^{[i]}(q)=\operatorname{crot}_{c,w^i}(q)$ with $\mathrm{normSq}(w^i)=\mathrm{normSq}(w)^i=1$, so
+$\operatorname{eDist2}(x,\operatorname{ofC}c)=\operatorname{eDist2}(q,\operatorname{ofC}c)$ by
+Lemma~\ref{sr:lem:crot}(g). Corollary~\ref{sr:cor:concyclic} with $T=O$, centre $\operatorname{ofC}(c)$, radius
+$\operatorname{eDist2}(q,\operatorname{ofC}c)$ and $n=7\le p=\card O$ gives \texttt{HasConvexNGon 7 S}.
+\end{proof}
+
+\begin{lemma}[Case of an odd prime order; \leanref{ErdosSzekeres.SymReduction.case_odd_prime}{SYMLEAN/SymmetricReduction.lean:736}; conditional on \lean{Threefold33} and \lean{Fivefold35}]\label{sr:lem:odd-prime}
+Assume \lean{Threefold33} and \lean{Fivefold35} (hypotheses). Let $S$ be in general position with $33\le\card S$, let
+$c,w\in\C$, let $p$ be a prime with $p\ne2$, let $w$ be a primitive $p$-th root of unity, and assume
+$\operatorname{Invariant}(\operatorname{crot}_{c,w},S)$. Then \texttt{HasConvexNGon 7 S}.
+\end{lemma}
+
+\begin{proof}
+By (P4), $w^p=1$ and $w\ne1$. Let $S'=S\setminus\{\operatorname{ofC}(c)\}$; then $\card{S'}\ge\card S-1\ge32$. By
+Lemma~\ref{sr:lem:prime-cases}, $p=3$, $p=5$ or $p\ge7$.
+
+\emph{$p=3$.} By Lemma~\ref{sr:lem:rot-erase}, $3\mid\card{S'}$; with $\card{S'}\ge32$ this gives $\card{S'}\ge33=11\cdot3$.
+So there is $T\subseteq S$ with $\operatorname{ofC}(c)\notin T$, $\operatorname{Invariant}(\operatorname{crot}_{c,w},T)$
+and $\card T=33$. Let $\zeta=\exp((2\pi/3)i)$. By Lemma~\ref{sr:lem:rot345}, $\zeta^3=1$, so by (P5) $\zeta=w^e$ for
+some $e$. By Lemmas~\ref{sr:lem:rot-half}(a), \ref{sr:lem:complex}(c) and~\ref{sr:lem:crot}(d),
+\[
+\operatorname{rotAbout}_{\operatorname{ofC}(c),2\pi/3}=\operatorname{crot}_{\operatorname{toC}(\operatorname{ofC}c),\,\zeta}
+=\operatorname{crot}_{c,w^e}=(\operatorname{crot}_{c,w})^{[e]},
+\]
+so $\operatorname{Invariant}(\operatorname{rotAbout}_{\operatorname{ofC}(c),2\pi/3},T)$ by Lemma~\ref{sr:lem:iterate}(b).
+$T$ is in general position (monotonicity), $\card T=33$ and $\operatorname{ofC}(c)\notin T$. \lean{Threefold33}, applied
+to $T$ and the centre $\operatorname{ofC}(c)$, gives \texttt{HasConvexNGon 7 T}, hence \texttt{HasConvexNGon 7 S}.
+
+\emph{$p=5$.} In the same way, $5\mid\card{S'}$ and $\card{S'}\ge32$ give $\card{S'}\ge35=7\cdot5$; take $T\subseteq S$
+with $\operatorname{ofC}(c)\notin T$, invariant under $\operatorname{crot}_{c,w}$, with $\card T=35$; with
+$\zeta=\exp((2\pi/5)i)=w^e$, $T$ is invariant under $\operatorname{rotAbout}_{\operatorname{ofC}(c),2\pi/5}$; and
+\lean{Fivefold35} gives \texttt{HasConvexNGon 7 T}, hence \texttt{HasConvexNGon 7 S}.
+
+\emph{$p\ge7$.} Lemma~\ref{sr:lem:rot-big} applies, since $\card S\ge2$.
+\end{proof}
+
+\begin{lemma}[Case of a primitive fourth root; \leanref{ErdosSzekeres.SymReduction.case_fourfold}{SYMLEAN/SymmetricReduction.lean:763}; conditional on \lean{Fourfold32}]\label{sr:lem:fourfold}
+Assume \lean{Fourfold32} (a hypothesis). Let $S$ be in general position with $33\le\card S$, let $c,w\in\C$, let $w$ be
+a primitive $4$th root of unity, and assume $\operatorname{Invariant}(\operatorname{crot}_{c,w},S)$. Then
+\texttt{HasConvexNGon 7 S}.
+\end{lemma}
+
+\begin{proof}
+By (P4), $w^4=1$, $w\ne1$ and $w\ne0$; by (P2) with $4=2\cdot2$ and (P3), $w^2=-1$. Let $f=\operatorname{crot}_{c,w}$.
+By Lemmas~\ref{sr:lem:iterate}(b) and~\ref{sr:lem:crot}(d), $S$ is invariant under $f^{[2]}=\operatorname{crot}_{c,-1}$,
+which equals $\operatorname{halfTurn}_{\operatorname{ofC}(c)}$ by Lemma~\ref{sr:lem:rot-half}(b) and
+$\operatorname{toC}(\operatorname{ofC}c)=c$. By Lemma~\ref{sr:lem:center}, $\operatorname{ofC}(c)\notin S$. Hence $\hat
+y\ne c$ for every $y\in S$.
+
+\emph{Every $y\in S$ has minimal period $4$ under $f$.} First, $f^{[4]}(y)=\operatorname{crot}_{c,w^4}(y)=y$, so by (MP1)
+$d=\operatorname{minimalPeriod}(f,y)$ divides $4$, and $d\in\{1,2,4\}$. If $d=1$, then $f(y)=y$ by (MP2), and $\hat y=c$
+by Lemma~\ref{sr:lem:crot}(e), which is impossible. If $d=2$, then $f^{[2]}(y)=y$ by (MP3), that is,
+$\operatorname{crot}_{c,-1}(y)=y$, and again $\hat y=c$ (as $-1\ne1$). So $d=4$.
+
+$f$ is injective (Lemma~\ref{sr:lem:crot}(f)). Lemma~\ref{sr:lem:orbit}(a) with $p=4$ gives $4\mid\card S$ and invariant
+subsets of every size $4k\le\card S$. Since $8\cdot4=32\le\card S$, there is $T\subseteq S$ with
+$\operatorname{Invariant}(f,T)$ and $\card T=32$. (Also $\card S\ge36$, but this is not needed.) Let
+$\zeta=\exp((2\pi/4)i)$; by Lemma~\ref{sr:lem:rot345} and (P5), $\zeta=w^e$ for some $e$, and as in the proof of
+Lemma~\ref{sr:lem:odd-prime}, $\operatorname{rotAbout}_{\operatorname{ofC}(c),2\pi/4}=f^{[e]}$, so $T$ is invariant under
+it. $T$ is in general position, $\card T=32$, and $\operatorname{ofC}(c)\notin T$ because $T\subseteq S$.
+\lean{Fourfold32} gives \texttt{HasConvexNGon 7 T}, hence \texttt{HasConvexNGon 7 S}.
+\end{proof}
+
+\begin{lemma}[Case of a reflection; \leanref{ErdosSzekeres.SymReduction.case_mirror}{SYMLEAN/SymmetricReduction.lean:811}; conditional on the two mirror classes]\label{sr:lem:mirror}
+Assume \lean{MirrorOneAxis33} and \lean{MirrorNoAxis34} (hypotheses). Let $a,u\in\R^2$ with $u_0^2+u_1^2=1$, let $S$ be in
+general position with $33\le\card S$, and assume $\operatorname{Invariant}(\operatorname{reflLine}_{a,u},S)$. Then
+\texttt{HasConvexNGon 7 S}.
+\end{lemma}
+
+\begin{proof}
+Let $\sigma=\operatorname{reflLine}_{a,u}$, $F=\{p\in S:\sigma(p)=p\}$ and $M=\{p\in S:\sigma(p)\ne p\}$, so that
+$\card F+\card M=\card S$.
+
+\emph{$\card F\le2$.} Otherwise $F$ contains three pairwise distinct points $x,y,z$. By Lemma~\ref{sr:lem:refl}(c),
+each $t\in\{x,y,z\}$ satisfies $(t_0-a_0)u_1-(t_1-a_1)u_0=0$, so $\orient(x,y,z)=0$ by Lemma~\ref{sr:lem:refl}(d),
+contradicting general position.
+
+\emph{$M$ is mapped into itself.} By Lemma~\ref{sr:lem:refl}(b), $\sigma\circ\sigma=\mathrm{id}$; in particular $\sigma$
+is injective. Let $y\in M$. Then $\sigma(y)\in S$, and if $\sigma(\sigma(y))=\sigma(y)$ then $y=\sigma(y)$, which is
+false; so $\sigma(y)\in M$. Moreover $\sigma^{[2]}(y)=y$ and $\sigma(y)\ne y$ for $y\in M$. Lemma~\ref{sr:lem:orbit}(b)
+with the prime $2$ gives: $2\mid\card M$, and for every $k$ with $2k\le\card M$ there is $T\subseteq M$, mapped into
+itself by $\sigma$, with $\card T=2k$.
+
+\emph{Case $\card F=0$.} Then $\card M=\card S\ge33$ and $\card M$ is even, so $\card M\ge34$. Take $T\subseteq M$
+invariant with $\card T=34$. $T\subseteq S$ is in general position, and no point of $T$ is fixed by $\sigma$ (as
+$T\subseteq M$). \lean{MirrorNoAxis34} applied to $T$, $a$, $u$ gives \texttt{HasConvexNGon 7 T}, hence
+\texttt{HasConvexNGon 7 S}.
+
+\emph{Case $\card F\ge1$.} Pick $x\in F$. Since $\card F\le2$, $\card M\ge31$, and $\card M$ is even, so $\card M\ge32$.
+Take $T\subseteq M$ invariant with $\card T=32$, and put $T'=T\cup\{x\}\subseteq S$. Then $x\notin T$ (points of $T$ are
+not fixed), so $\card{T'}=33$. $T'$ is invariant: $\sigma(x)=x$, and $T$ is invariant. The point $x\in T'$ is fixed, and
+every fixed $y\in T'$ equals $x$, because no point of $T$ is fixed. $T'$ is in general position. \lean{MirrorOneAxis33}
+applied to $T'$, $a$, $u$ gives \texttt{HasConvexNGon 7 T'}, hence \texttt{HasConvexNGon 7 S}.
+\end{proof}
+
+\subsection{The reduction theorems}\label{sr:ssec:main}
+
+\begin{theorem}[Main reduction; \leanref{ErdosSzekeres.SymReduction.heptagon_of_nontrivial_isometry}{SYMLEAN/SymmetricReduction.lean:997}; conditional on five case classes]\label{sr:thm:main}
+Assume the propositions \lean{HalfTurn34}, \lean{Threefold33}, \lean{Fivefold35}, \lean{MirrorOneAxis33} and
+\lean{MirrorNoAxis34} of Definition~\ref{sr:def:classes} (hypotheses; none is proved in this section). Let $S$ be a
+finite set of points and $g\colon\R^2\to\R^2$ a map. If $S$ is in general position, $33\le\card S$, $g$ is a Euclidean
+isometry, $g\ne\mathrm{id}$ and $\operatorname{Invariant}(g,S)$, then \texttt{HasConvexNGon 7 S}.
+\end{theorem}
+
+\begin{proof}
+Since $\card S\ge33>1$, Theorem~\ref{sr:thm:structure}(b) applies.
+
+\emph{Rotation: $g=\operatorname{crot}_{c,a}$ with $a\ne1$ and $a^m=1$, $m>0$.} Then
+$\operatorname{Invariant}(\operatorname{crot}_{c,a},S)$, and for every $k$,
+$\operatorname{Invariant}(\operatorname{crot}_{c,a^k},S)$ by Lemmas~\ref{sr:lem:iterate}(b) and~\ref{sr:lem:crot}(d).
+By Lemma~\ref{sr:lem:root-cases} there are two cases.
+\begin{itemize}
+\item $a^k=-1$ for some $k$. Then $S$ is invariant under $\operatorname{crot}_{c,-1}=
+  \operatorname{halfTurn}_{\operatorname{ofC}(c)}$ (Lemma~\ref{sr:lem:rot-half}(b) and
+  $\operatorname{toC}(\operatorname{ofC}c)=c$), and Lemma~\ref{sr:lem:case-halfturn} gives the claim.
+\item $a^k$ is a primitive $p$-th root of unity for a prime $p\ne2$. Then Lemma~\ref{sr:lem:odd-prime}, applied with
+  $w=a^k$, gives the claim.
+\end{itemize}
+
+\emph{Reflection: $g=\operatorname{reflLine}_{A,u}$ with $u_0^2+u_1^2=1$.} Lemma~\ref{sr:lem:mirror} gives the claim.
+\end{proof}
+
+\begin{remark}[Status of Theorem~\ref{sr:thm:main}]\label{sr:rem:main}
+The theorem is Lean-checked as an implication: the five classes are explicit hypotheses (Lean binders
+\texttt{h2 h3 h5 hm1 hm0}), not axioms, and the axioms log is \dirn{SYMLEAN/logs/SymmetricReductionAxioms.out}. The
+unconditional statement, Theorem~\ref{sr:thm:main} without its five hypotheses, is claimed in the project as
+computer-assisted (Theorem~A of \dirn{WRITEUP/SYMMETRIC.md}, \S0, in its form for Euclidean isometries), on the
+evidence summarized in Remark~\ref{sr:rem:records}; it is not Lean-checked as a whole. In this document the theorem is
+established only as the stated implication. Theorem~\ref{mb:thm:main3} restates the theorem with the two mirror
+classes discharged, so that only \lean{HalfTurn34}, \lean{Threefold33} and \lean{Fivefold35} remain hypotheses; it is
+stated in \dirn{SYMLEAN/mirror/ReductionThreeClasses.lean}, for the byte-identical copies of the definitions described
+in Remark~\ref{sr:rem:records}. The
+symmetry $g$ must be a Euclidean isometry of the whole plane; a distance-preserving permutation of $S$ alone is not
+treated. Affine symmetries are treated in Theorem~\ref{ar:thm:main}.
+\end{remark}
+
+\begin{theorem}[Variant; \leanref{ErdosSzekeres.SymReduction.halfTurn_of_symmetric_counterexample}{SYMLEAN/SymmetricReduction.lean:1024}; conditional on five case classes]\label{sr:thm:variant}
+Assume the propositions \lean{Threefold33}, \lean{Fourfold32}, \lean{Fivefold35}, \lean{MirrorOneAxis33} and
+\lean{MirrorNoAxis34} of Definition~\ref{sr:def:classes} (hypotheses; none is proved in this section). Let $S$ be a
+finite set of points and $g\colon\R^2\to\R^2$ a map. Assume that $S$ is in general position, $33\le\card S$, $g$ is a
+Euclidean isometry, $g\ne\mathrm{id}$, $\operatorname{Invariant}(g,S)$, and $\neg$\,\texttt{HasConvexNGon 7 S}. Then
+there is $c\in\R^2$ such that $g=\operatorname{halfTurn}_c$ (as maps of $\R^2$), $c\notin S$, $2\mid\card S$ and
+$34\le\card S$.
+\end{theorem}
+
+\begin{proof}
+By Theorem~\ref{sr:thm:structure}(b), as $\card S>1$, $g$ is a rotation or a reflection.
+
+\emph{Rotation: $g=\operatorname{crot}_{c,a}$ with $a\ne1$ and $a^m=1$, $m>0$.} By Lemma~\ref{sr:lem:root-cases2} there
+are three cases.
+\begin{itemize}
+\item $a=-1$. Then $g=\operatorname{crot}_{c,-1}=\operatorname{halfTurn}_{\operatorname{ofC}(c)}$
+  (Lemma~\ref{sr:lem:rot-half}(b) and $\operatorname{toC}(\operatorname{ofC}c)=c$). By Lemma~\ref{sr:lem:halfturn-facts}, $\operatorname{ofC}(c)\notin S$ and
+  $2\mid\card S$; with $\card S\ge33$ this gives $\card S\ge34$. So the point $\operatorname{ofC}(c)$ has all the
+  required properties.
+\item $a^k$ is a primitive $4$th root of unity. $S$ is invariant under $\operatorname{crot}_{c,a^k}$
+  (Lemmas~\ref{sr:lem:iterate}(b) and~\ref{sr:lem:crot}(d)), and Lemma~\ref{sr:lem:fourfold} gives
+  \texttt{HasConvexNGon 7 S}, contradicting the hypothesis.
+\item $a^k$ is a primitive $p$-th root of unity for a prime $p\ne2$. Likewise Lemma~\ref{sr:lem:odd-prime} gives a
+  contradiction.
+\end{itemize}
+
+\emph{Reflection.} Lemma~\ref{sr:lem:mirror} gives \texttt{HasConvexNGon 7 S}, a contradiction.
+\end{proof}
+
+\begin{remark}[Scope of Theorem~\ref{sr:thm:variant}]\label{sr:rem:variant}
+The theorem concerns one symmetry at a time and Euclidean isometries only. Corollary~3 of
+\dirn{WRITEUP/SYMMETRIC.md} has the same per-symmetry form (every symmetry of such a set is a half-turn about a point
+outside the set), with the case theorems and the fourfold exclusion as assumptions, but there a symmetry may also be
+an affine bijection; the theorem is the isometry case of that corollary. A group form, stated as the corollary labelled
+\texttt{cor:only} in \dirn{WRITEUP/note/symmetric_es7.tex}, is Lean-checked for Euclidean isometries, with the same five
+classes as hypotheses, in the review file \dirn{SYMLEAN/review/VariantChecks.lean} (\lean{VariantChecks.group_form},
+line 1168): for $S$ as in the theorem, the Euclidean isometries that map $S$ into itself are the identity and at most
+one half-turn, whose centre is not in $S$. The evidence is the log \dirn{SYMLEAN/logs/VariantChecks.out}, which prints
+the axioms \lean{propext}, \lean{Classical.choice} and \lean{Quot.sound} for \lean{VariantChecks.group_form}, and the
+row \texttt{review/VariantChecks.lean} of \dirn{SYMLEAN/logs/runs.tsv}, which records exit code~$0$ for the file with
+SHA-256 prefix \texttt{4b823bb6}; the file at the commit used here has the prefix \texttt{4b823bb6cf85}. The group form
+follows from the theorem. Let $g$ and $g'$ be Euclidean isometries other than the identity that map $S$ into itself.
+The theorem gives $g=\operatorname{halfTurn}_c$ and $g'=\operatorname{halfTurn}_d$ with $c,d\notin S$. If $c\ne d$,
+then $g\circ g'$ is the translation $p\mapsto p+2(c-d)$. It is a Euclidean isometry other than the identity that maps
+$S$ into itself, so by the theorem it equals $\operatorname{halfTurn}_e$ for some $e\in\R^2$; evaluating at $p=e$ gives
+$e+2(c-d)=e$, so $c=d$, a contradiction. The group form is not restated in this document as a numbered statement, and
+no statement of this document uses it. The variant does not use \lean{HalfTurn34}; it uses \lean{Fourfold32}, which
+rests on \dirn{C4CUT} (Remark~\ref{sr:rem:records}).
+\end{remark}
+
+\begin{definition}[The \dirn{H3} mirror statement; \leanref{ErdosSzekeres.SymReduction.MirrorExclusionLineCopy}{SYMLEAN/SymmetricReduction.lean:1052}]\label{sr:def:exclusion-line}
+\lean{MirrorExclusionLineCopy} is the proposition: for every finite $S\subseteq\R^2$ and all $a,u\in\R^2$, if
+$u_0^2+u_1^2=1$, $S$ is in general position, $\card S=33$, and $\operatorname{reflLine}_{a,u}(q)\in S$ for every $q\in
+S$, then \texttt{HasConvexNGon 7 S}.
+\end{definition}
+
+\begin{lemma}[Bridge; \leanref{ErdosSzekeres.SymReduction.mirrorOneAxis33_of_exclusionLine}{SYMLEAN/SymmetricReduction.lean:1056}]\label{sr:lem:mirror-line}
+\lean{MirrorExclusionLineCopy} implies \lean{MirrorOneAxis33}.
+\end{lemma}
+
+\begin{proof}
+Let $S$, $a$, $u$ satisfy the hypotheses of \lean{MirrorOneAxis33}. The condition
+$\operatorname{Invariant}(\operatorname{reflLine}_{a,u},S)$ is, by definition, the condition
+$\operatorname{reflLine}_{a,u}(q)\in S$ for every $q\in S$. So all hypotheses of \lean{MirrorExclusionLineCopy} hold
+(the hypothesis about the fixed point is not used), and it gives \texttt{HasConvexNGon 7 S}.
+\end{proof}
+
+\begin{remark}[About the bridge]\label{sr:rem:mirror-line}
+\lean{MirrorExclusionLineCopy} has the same text as \lean{Mir.MirrorExclusionLine}
+(\dirn{H3/MirrorEncoding/Line.lean:94}), and \lean{reflLine} has the same text as \lean{Mir.reflLine}. They are
+different Lean constants of separately compiled developments, and no Lean theorem in \dirn{SYMLEAN} identifies them;
+\dirn{SYMLEAN/README.md} \S5 reports a separate check of both identities by \texttt{rfl}, whose file is not kept in
+\dirn{SYMLEAN}. In \dirn{H3}, \lean{Mir.mirrorExclusionLine_of_unsat} and
+\lean{Mir.mirrorExclusionLine_of_cubes} (\dirn{H3/MirrorEncoding/Line.lean:139} and \dirn{:147}) derive
+\lean{Mir.MirrorExclusionLine} from hypotheses saying that certain CNF formulas are unsatisfiable (the second also from
+two hypotheses that the Boolean cover check \texttt{coverCheck} of a cube list returns \texttt{true}). In \dirn{V2-L},
+\lean{V2L.mirrorExclusionLine_final} (\dirn{V2-L/V2L/FinalTree.lean:28}; \dirn{V2-L/README.md} \S9.1 and \S9.6)
+derives it from hypotheses that all carry recorded verdicts. It is Lean-checked with four hypotheses, \texttt{h1},
+\texttt{hroot}, \texttt{hup} and \texttt{hleaves}, which together assert $1{,}198+1+121+74{,}000$ facts of the form
+``this CNF formula is unsatisfiable''; the $1+121$ facts of \texttt{hroot} and \texttt{hup} are the cover obligations
+of the top two levels of the hull-pair case split of sub-case (ii) (Remark~\ref{sr:rem:records};
+\dirn{WRITEUP/MIRROR.md} \S4). Each fact has a recorded \texttt{cake\_lpr} verdict on a file whose proof was
+not retained, and the step from a verdict on a file to the Lean hypothesis is made outside Lean
+(\dirn{WRITEUP/MIRROR.md} \S6). So
+Lemma~\ref{sr:lem:mirror-line} supplies \lean{MirrorOneAxis33} only conditionally on those CNF facts and on the
+identification of the two texts; the Lean proof without SAT input is in \dirn{SYMLEAN/mirror}
+(Remark~\ref{sr:rem:records}). The converse implication also holds, and is Lean-checked in the review file
+\dirn{SYMLEAN/review/ReviewSanity.lean} (\lean{Review.exclusionLine_of_mirrorOneAxis33}, line 1593, and the
+equivalence \lean{Review.mirrorOneAxis33_iff_exclusionLine}, line 1629, whose axioms the log
+\dirn{SYMLEAN/logs/ReviewSanity.out} prints): for $33$ points the fixed-point hypothesis of \lean{MirrorOneAxis33} is
+automatic. Indeed, let $S$, $a$, $u$ satisfy the hypotheses of \lean{MirrorExclusionLineCopy}. In the notation of the
+proof of Lemma~\ref{sr:lem:mirror}, whose first two steps use only these hypotheses, $\card F\le2$, $\card M$ is even
+and $\card F+\card M=33$, so $\card F=1$. The point of $F$ is then the only point of $S$ fixed by
+$\operatorname{reflLine}_{a,u}$, and \lean{MirrorOneAxis33} gives \texttt{HasConvexNGon 7 S}. Neither review theorem
+is restated in this document as a numbered statement, and no statement of this document uses them.
+\end{remark}
+
+\begin{remark}[Hypotheses of the classes that follow from the others]\label{sr:rem:redundant}
+Some hypotheses of the classes are implied by the others; this is not used anywhere.
+\begin{itemize}
+\item In \lean{HalfTurn34}, $c\notin S$ follows from general position and invariance (Lemma~\ref{sr:lem:center}).
+\item In \lean{Fourfold32}, $c\notin S$ follows as well: by Lemma~\ref{sr:lem:rot-half}(a) the rotation is
+  $f=\operatorname{crot}_{\hat c,\zeta}$ with $\zeta=\exp((2\pi/4)i)$, a primitive $4$th root of unity
+  (Lemma~\ref{sr:lem:rot345}), so $\zeta^2=-1$ by (P2) and (P3). By Lemmas~\ref{sr:lem:crot}(d)
+  and~\ref{sr:lem:rot-half}(b), $f^{[2]}=\operatorname{crot}_{\hat c,-1}=\operatorname{halfTurn}_c$; $S$ is invariant under
+  it (Lemma~\ref{sr:lem:iterate}(b)), and Lemma~\ref{sr:lem:center} applies.
+\item In \lean{Threefold33} and \lean{Fivefold35}, $c\notin S$ follows from the size. Let $p\in\{3,5\}$ and
+  $w=\exp((2\pi/p)i)$, so that $w^p=1$ and $w\ne1$ (Lemma~\ref{sr:lem:rot345} and (P4)), and the rotation is
+  $\operatorname{crot}_{\hat c,w}$ (Lemma~\ref{sr:lem:rot-half}(a)). If $c\in S$, then by Lemma~\ref{sr:lem:rot-erase}
+  (with $\operatorname{ofC}(\hat c)=c$), $p$ divides $\card{(S\setminus\{c\})}$, which is $32$ for $p=3$ and $34$ for
+  $p=5$; but $3\nmid32$ and $5\nmid34$.
+\item In \lean{MirrorOneAxis33}, the fixed-point hypothesis follows from $\card S=33$ (Remark~\ref{sr:rem:mirror-line}).
+  In \lean{MirrorNoAxis34} the hypothesis that no point is fixed is not implied in this way: for $34$ points the same
+  argument gives only $\card F\in\{0,2\}$.
+\end{itemize}
+Dropping one of the implied hypotheses above gives an equivalent class. In general, adding a hypothesis to a class can
+only make it weaker (the class without the hypothesis implies the class with it), that is, easier to supply.
+\end{remark}
+
+\paragraph{Coverage.}
+All $72$ declarations of \dirn{SYMLEAN/SymmetricReduction.lean} are covered.
+\begin{itemize}
+\item Definitions: \lean{eDist2}, \lean{IsEucIsometry} (Definition~\ref{sr:def:iso}); \lean{Invariant}
+  (Definition~\ref{sr:def:inv}); \lean{toC}, \lean{ofC} (Definition~\ref{sr:def:complex}); \lean{crot}, \lean{rotAbout},
+  \lean{halfTurn}, \lean{reflLine} (Definition~\ref{sr:def:maps}); \lean{orbitFS} (Definition~\ref{sr:def:orbitFS}); the
+  six classes \lean{HalfTurn34}, \lean{Threefold33}, \lean{Fivefold35}, \lean{MirrorOneAxis33}, \lean{MirrorNoAxis34},
+  \lean{Fourfold32} (Definition~\ref{sr:def:classes}); \lean{MirrorExclusionLineCopy}
+  (Definition~\ref{sr:def:exclusion-line}).
+\item Finite dynamics: \lean{iterate_mem}, \lean{Invariant.iterate} (Lemma~\ref{sr:lem:iterate});
+  \lean{mem_orbitFS_self}, \lean{orbitFS_subset}, \lean{orbitFS_invariant}, \lean{card_orbitFS},
+  \lean{card_orbitFS_of_minimalPeriod} (Lemma~\ref{sr:lem:orbitFS}); \lean{orbit_select_minimalPeriod},
+  \lean{orbit_select} (Lemma~\ref{sr:lem:orbit}).
+\item Coordinates and maps: \lean{toC_re}, \lean{toC_im}, \lean{ofC_zero}, \lean{ofC_one}, \lean{toC_ofC},
+  \lean{ofC_toC}, \lean{toC_injective}, \lean{eDist2_eq_normSq}, \lean{eDist2_pos_of_ne}, \lean{point_ext}
+  (Lemma~\ref{sr:lem:complex}); \lean{toC_crot}, \lean{crot_one}, \lean{crot_comp}, \lean{crot_iterate},
+  \lean{crot_eq_self_iff}, \lean{crot_injective}, \lean{eDist2_crot_center} (Lemma~\ref{sr:lem:crot});
+  \lean{rotAbout_eq_crot}, \lean{halfTurn_eq_crot} (Lemma~\ref{sr:lem:rot-half}); \lean{toC_reflLine},
+  \lean{reflLine_involutive}, \lean{cross_of_reflLine_fixed}, \lean{orient_eq_zero_of_cross}
+  (Lemma~\ref{sr:lem:refl}).
+\item Isometries: \lean{IsEucIsometry.injective}, \lean{isometry_toC_conj} (Lemma~\ref{sr:lem:toC-iso});
+  \lean{isometry_complex_cases}, \lean{isometry_structure} (Theorem~\ref{sr:thm:structure}).
+\item Geometry: \lean{convexPosition_of_concyclic} (Lemma~\ref{sr:lem:concyclic}), \lean{hasConvexNGon_of_concyclic}
+  (Corollary~\ref{sr:cor:concyclic}), \lean{center_not_mem_of_halfTurn} (Lemma~\ref{sr:lem:center}); also the library
+  lemma \lean{Suk.convexPosition_of_strict_supports} (Lemma~\ref{sr:lem:supports}). This is the lemma titled ``Strict
+  supporting lines'' in the foundations section; the short proof is repeated here.
+\item Roots of unity: \lean{root_cases} (Lemma~\ref{sr:lem:root-cases}); \lean{prime_cases}
+  (Lemma~\ref{sr:lem:prime-cases}); \lean{root_cases2} (Lemma~\ref{sr:lem:root-cases2}); and
+  \lean{isPrimitiveRoot_rot3}, \lean{isPrimitiveRoot_rot5}, \lean{isPrimitiveRoot_rot4} (Lemma~\ref{sr:lem:rot345}).
+\item Cases: \lean{halfTurn_facts} (Lemma~\ref{sr:lem:halfturn-facts}); \lean{case_halfTurn}
+  (Lemma~\ref{sr:lem:case-halfturn}, conditional on \lean{HalfTurn34}); \lean{rot_erase_facts}
+  (Lemma~\ref{sr:lem:rot-erase}); \lean{case_rot_big} (Lemma~\ref{sr:lem:rot-big}); \lean{case_odd_prime}
+  (Lemma~\ref{sr:lem:odd-prime}, conditional on \lean{Threefold33} and \lean{Fivefold35}); \lean{case_fourfold}
+  (Lemma~\ref{sr:lem:fourfold}, conditional on \lean{Fourfold32}); \lean{case_mirror} (Lemma~\ref{sr:lem:mirror},
+  conditional on \lean{MirrorOneAxis33} and \lean{MirrorNoAxis34}).
+\item Main results: \lean{heptagon_of_nontrivial_isometry} (Theorem~\ref{sr:thm:main}, conditional on
+  \lean{HalfTurn34}, \lean{Threefold33}, \lean{Fivefold35}, \lean{MirrorOneAxis33} and \lean{MirrorNoAxis34});
+  \lean{halfTurn_of_symmetric_counterexample} (Theorem~\ref{sr:thm:variant}, conditional on the same classes with
+  \lean{Fourfold32} in place of \lean{HalfTurn34});
+  \lean{mirrorOneAxis33_of_exclusionLine} (Lemma~\ref{sr:lem:mirror-line}, an implication between two propositions,
+  so conditional on its hypothesis \lean{MirrorExclusionLineCopy}).
+\end{itemize}
+The local statement \lean{pigeon} in the proof of \lean{isometry_structure} is Lemma~\ref{sr:lem:pigeon}. The Mathlib
+facts on minimal periods and on roots of unity that the Lean proofs use are restated and proved in
+Lemmas~\ref{sr:lem:minper} and~\ref{sr:lem:prim}; the Mathlib results on isometries that the Lean proof uses (the
+construction \lean{Isometry.affineIsometryOfStrictConvexSpace} and the theorem \lean{linear_isometry_complex}) are
+replaced by the self-contained proof of Theorem~\ref{sr:thm:structure}(a); other standard facts (the pigeonhole
+principle, least prime factors, square roots of complex numbers, elementary facts on finite sets) are stated where they
+are used. Not covered,
+deliberately:
+\dirn{SYMLEAN/SymmetricReductionAxioms.lean} (a verbatim copy with two \texttt{\#print axioms} lines); lines 1--1058 of
+\dirn{SYMLEAN/AffineReduction.lean} (a verbatim copy; its affine part belongs to the section on affine symmetries);
+the review files \dirn{SYMLEAN/review/ReviewSanity.lean}, \dirn{SYMLEAN/review/VariantChecks.lean} and
+\dirn{SYMLEAN/review/SupMetric.lean} (review and audit files, cited only in the paragraph on axioms and rigor and in
+Remarks~\ref{sr:rem:sup}, \ref{sr:rem:variant} and~\ref{sr:rem:mirror-line}); and \dirn{SYMLEAN/mirror} (the section
+on mirror bounds). Two results of the review files go beyond audit checks and are not restated as numbered
+statements: the group form \lean{VariantChecks.group_form} (\dirn{SYMLEAN/review/VariantChecks.lean:1168}, conditional
+on the five classes of Theorem~\ref{sr:thm:variant}), and the converse bridge
+\lean{Review.exclusionLine_of_mirrorOneAxis33} (\dirn{SYMLEAN/review/ReviewSanity.lean:1593}, an implication between
+two propositions, so conditional on its hypothesis \lean{MirrorOneAxis33}) with the equivalence
+\lean{Review.mirrorOneAxis33_iff_exclusionLine} of the two propositions (line~1629 of the same file), which asserts
+neither of them. The reason is that they lie in review files and that no statement of this document uses them.
+Remarks~\ref{sr:rem:variant} and~\ref{sr:rem:mirror-line} state them, name
+their logs and give short written arguments.

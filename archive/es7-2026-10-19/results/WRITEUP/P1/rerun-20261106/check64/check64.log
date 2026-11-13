@@ -1,0 +1,151 @@
+######## c7_64pts_small
+file sets/k8/c7_64pts_small.pts
+sha256 ebe028f65c3856a9a7c6fa595a3e735eb49a362f833b76089eea1b9f35a0ecc3
+n = 64
+distinct: yes
+rotation by 2pi/7 maps set onto itself: yes; fixed points: [63] coords: [(0, 0, 0, 0, 0, 0, 0)]
+orbit sizes: [1, 7, 7, 7, 7, 7, 7, 7, 7, 7]
+exact orientation table computed in 0.1s
+collinear triples (exact): 0
+decimal(110 digits) sign disagreements: 0  min |det| = 1.4618e+00  max |coord| = 5.2027e+02
+rotation preserves orientation table: True
+exact (y,x) order computed; equal-y adjacent pairs: 1
+convex k-gon counts (k=3..10): [41664, 416052, 2077152, 5009081, 4688763, 0, 0, 0]
+largest convex subset (exact): 7
+wrote sign string (i<j<k lex) to c7_64pts_small.signs
+n=64 convex k-subsets: 3:41664 4:416052 5:2077152 6:5009081 7:4688763 8:0
+largest convex subset: 7
+line-modules with 2 <= size <= 20: 0; by size: {}
+######## c7_64pts_9layers_centre
+file sets/k8/c7_64pts_9layers_centre.pts
+sha256 23e1389d3d1258617a4fac848bbf90e055a8af8a089ce4777437150790bf5502
+n = 64
+distinct: yes
+rotation by 2pi/7 maps set onto itself: yes; fixed points: [63] coords: [(0, 0, 0, 0, 0, 0, 0)]
+orbit sizes: [1, 7, 7, 7, 7, 7, 7, 7, 7, 7]
+exact orientation table computed in 0.1s
+collinear triples (exact): 0
+decimal(110 digits) sign disagreements: 0  min |det| = 2.1600e+17  max |coord| = 4.0144e+11
+rotation preserves orientation table: True
+exact (y,x) order computed; equal-y adjacent pairs: 0
+convex k-gon counts (k=3..10): [41664, 416220, 2078804, 5011594, 4691381, 0, 0, 0]
+largest convex subset (exact): 7
+wrote sign string (i<j<k lex) to c7_64pts_9layers_centre.signs
+n=64 convex k-subsets: 3:41664 4:416220 5:2078804 6:5011594 7:4691381 8:0
+largest convex subset: 7
+line-modules with 2 <= size <= 20: 0; by size: {}
+######## c7_64_own_s1000
+file sets/k8/c7_64_own_s1000.pts
+sha256 c9942cc187fea8f59c3a7c5058333468f23ce2353ea08c809edc000e89053ea1
+n = 64
+distinct: yes
+rotation by 2pi/7 maps set onto itself: yes; fixed points: [63] coords: [(0, 0, 0, 0, 0, 0, 0)]
+orbit sizes: [1, 7, 7, 7, 7, 7, 7, 7, 7, 7]
+exact orientation table computed in 0.1s
+collinear triples (exact): 0
+decimal(110 digits) sign disagreements: 0  min |det| = 2.6352e+00  max |coord| = 1.2410e+04
+rotation preserves orientation table: True
+exact (y,x) order computed; equal-y adjacent pairs: 0
+convex k-gon counts (k=3..10): [41664, 392966, 1770020, 3836413, 3328145, 0, 0, 0]
+largest convex subset (exact): 7
+wrote sign string (i<j<k lex) to c7_64_own_s1000.signs
+n=64 convex k-subsets: 3:41664 4:392966 5:1770020 6:3836413 7:3328145 8:0
+largest convex subset: 7
+line-modules with 2 <= size <= 20: 0; by size: {}
+######## c7_64pts_9layers_centre_own
+file sets/k8/c7_64pts_9layers_centre_own.pts
+sha256 ec48146993b86fc27952cb690cea8aaeea5475ab296ba422b87b9712179951ef
+n = 64
+distinct: yes
+rotation by 2pi/7 maps set onto itself: yes; fixed points: [63] coords: [(0, 0, 0, 0, 0, 0, 0)]
+orbit sizes: [1, 7, 7, 7, 7, 7, 7, 7, 7, 7]
+exact orientation table computed in 0.1s
+collinear triples (exact): 0
+decimal(110 digits) sign disagreements: 0  min |det| = 3.0651e+04  max |coord| = 1.2410e+06
+rotation preserves orientation table: True
+exact (y,x) order computed; equal-y adjacent pairs: 0
+convex k-gon counts (k=3..10): [41664, 392553, 1760612, 3786951, 3252475, 0, 0, 0]
+largest convex subset (exact): 7
+wrote sign string (i<j<k lex) to c7_64pts_9layers_centre_own.signs
+n=64 convex k-subsets: 3:41664 4:392553 5:1760612 6:3786951 7:3252475 8:0
+largest convex subset: 7
+line-modules with 2 <= size <= 20: 0; by size: {}
+######## p7_compound_64
+file sets/k8/p7_compound_64.pts
+sha256 ef50ee00829d9781f3f3500bf2456d9d8bc9fcfb5da3296fdbbb1f7f41cbe4da
+n = 64
+distinct: yes
+rotation by 2pi/7 maps set onto itself: yes; fixed points: [63] coords: [(0, 0, 0, 0, 0, 0, 0)]
+orbit sizes: [1, 7, 7, 7, 7, 7, 7, 7, 7, 7]
+exact orientation table computed in 0.1s
+collinear triples (exact): 0
+decimal(110 digits) sign disagreements: 0  min |det| = 9.9977e+08  max |coord| = 1.0000e+13
+rotation preserves orientation table: True
+exact (y,x) order computed; equal-y adjacent pairs: 0
+convex k-gon counts (k=3..10): [41664, 470764, 3142335, 11670659, 18396499, 0, 0, 0]
+largest convex subset (exact): 7
+wrote sign string (i<j<k lex) to p7_compound_64.signs
+n=64 convex k-subsets: 3:41664 4:470764 5:3142335 6:11670659 7:18396499 8:0
+largest convex subset: 7
+line-modules with 2 <= size <= 20: 91; by size: {2: 42, 3: 21, 5: 14, 6: 7, 9: 7}
+######## p7_two_orbit_64
+file sets/k8/p7_two_orbit_64.pts
+sha256 9a55f2451b1427ba1fc00a3b86c9cc00968eb01a88f15c010be0bd4aa94ef8bd
+n = 64
+distinct: yes
+rotation by 2pi/7 maps set onto itself: yes; fixed points: [63] coords: [(0, 0, 0, 0, 0, 0, 0)]
+orbit sizes: [1, 7, 7, 7, 7, 7, 7, 7, 7, 7]
+exact orientation table computed in 0.1s
+collinear triples (exact): 0
+decimal(110 digits) sign disagreements: 0  min |det| = 9.9910e+09  max |coord| = 1.0000e+12
+rotation preserves orientation table: True
+exact (y,x) order computed; equal-y adjacent pairs: 0
+convex k-gon counts (k=3..10): [41664, 470764, 3142335, 11670659, 18396499, 0, 0, 0]
+largest convex subset (exact): 7
+wrote sign string (i<j<k lex) to p7_two_orbit_64.signs
+n=64 convex k-subsets: 3:41664 4:470764 5:3142335 6:11670659 7:18396499 8:0
+largest convex subset: 7
+line-modules with 2 <= size <= 20: 91; by size: {2: 42, 3: 21, 5: 14, 6: 7, 9: 7}
+######## rule_p7_64pts
+file sets/k8/rule_p7_64pts.pts
+sha256 bb38d29ae956172065280be5c48f6232b283e5992cc555691c65860355b5c8b2
+n = 64
+distinct: yes
+rotation by 2pi/7 maps set onto itself: yes; fixed points: [63] coords: [(0, 0, 0, 0, 0, 0, 0)]
+orbit sizes: [1, 7, 7, 7, 7, 7, 7, 7, 7, 7]
+exact orientation table computed in 0.1s
+collinear triples (exact): 0
+decimal(110 digits) sign disagreements: 0  min |det| = 2.3639e+13  max |coord| = 1.0085e+12
+rotation preserves orientation table: True
+exact (y,x) order computed; equal-y adjacent pairs: 0
+convex k-gon counts (k=3..10): [41664, 487711, 3585162, 15450148, 30031745, 0, 0, 0]
+largest convex subset (exact): 7
+wrote sign string (i<j<k lex) to rule_p7_64pts.signs
+n=64 convex k-subsets: 3:41664 4:487711 5:3585162 6:15450148 7:30031745 8:0
+largest convex subset: 7
+line-modules with 2 <= size <= 20: 91; by size: {2: 35, 3: 21, 5: 7, 6: 14, 8: 7, 9: 7}
+######## m7_x2_G9s_centre
+file sets/k8/m7_x2_G9s_centre.pts
+sha256 ac524df7a5a62bedbc119821841d9e324d71cffbfc1d5df7b53269291fd4c5c4
+n = 64
+distinct: yes
+rotation by 2pi/7 maps set onto itself: yes; fixed points: [63] coords: [(0, 0, 0, 0, 0, 0, 0)]
+orbit sizes: [1, 7, 7, 7, 7, 7, 7, 7, 7, 7]
+exact orientation table computed in 0.1s
+collinear triples (exact): 0
+decimal(110 digits) sign disagreements: 0  min |det| = 1.1258e+22  max |coord| = 1.0000e+30
+rotation preserves orientation table: True
+exact (y,x) order computed; equal-y adjacent pairs: 0
+convex k-gon counts (k=3..10): [41664, 462581, 2962260, 10286640, 14719287, 0, 0, 0]
+largest convex subset (exact): 7
+wrote sign string (i<j<k lex) to m7_x2_G9s_centre.signs
+n=64 convex k-subsets: 3:41664 4:462581 5:2962260 6:10286640 7:14719287 8:0
+largest convex subset: 7
+line-modules with 2 <= size <= 20: 77; by size: {2: 35, 3: 21, 4: 7, 5: 7, 9: 7}
+######## p7_compound_64 and p7_two_orbit_64: identical orientation tables under the row labelling?
+IDENTICAL
+######## DP vs brute force on 300 random 13-point subsets of p7_compound_64
+trials 300 size 13 mismatches 0
+example counts [0, 0, 0, 286, 473, 366, 106, 8, 0, 0, 0, 0, 0]
+######## line-module enumerator vs brute force
+selftest: 40 subsets, mismatches 0

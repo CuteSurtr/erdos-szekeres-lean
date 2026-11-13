@@ -1,0 +1,83 @@
+tested sets: 76  distinct order types: 75
+saturated: 76  NOT saturated / incomplete: []
+by category: {'witness': 1, 'witness-realization': 1, 'bracket': 13, 'skeleton': 13, 'wblocks-random': 12, 'random-dec': 13, 'random-tree': 12, 'skeleton-randblocks': 11}
+hull sizes: {3: 6, 4: 18, 5: 23, 6: 12, 7: 17}
+faces range: 1909148 1911468
+cpu s range: 30.0 34.6 total cpu 2509.1
+verify cross-checks: [('ot0016', True), ('ot0772', True)]
+ot0000    witness              hull=7 maxc=  42919936 F=1909613 hit=1909613 bad=0 cert=14085 cpu=31.6 wall=51s
+ot0000r   witness-realization  hull=7 maxc=  91829251 F=1909625 hit=1909625 bad=0 cert=12275 cpu=34.1 wall=43s
+ot0001m   bracket              hull=6 maxc=  37807206 F=1909621 hit=1909621 bad=0 cert=13455 cpu=32.7 wall=42s
+ot0004m   bracket              hull=5 maxc=  79183918 F=1909500 hit=1909500 bad=0 cert=12307 cpu=33.1 wall=40s
+ot0007m   bracket              hull=5 maxc=  43844060 F=1909489 hit=1909489 bad=0 cert=11319 cpu=33.2 wall=43s
+ot0008m   bracket              hull=5 maxc=  22467692 F=1909489 hit=1909489 bad=0 cert=13036 cpu=33.2 wall=43s
+ot0011m   bracket              hull=4 maxc=  28807948 F=1909480 hit=1909480 bad=0 cert=11649 cpu=34.2 wall=46s
+ot0016    bracket              hull=5 maxc=  13861051 F=1909486 hit=1909486 bad=0 cert=11937 cpu=34.5 wall=~(handoff)
+ot0019    bracket              hull=5 maxc=  25685606 F=1909502 hit=1909502 bad=0 cert=10767 cpu=32.7 wall=42s
+ot0044    bracket              hull=5 maxc=    652367 F=1909486 hit=1909486 bad=0 cert=11067 cpu=32.4 wall=41s
+ot0045    bracket              hull=4 maxc=  10246258 F=1909607 hit=1909607 bad=0 cert=10949 cpu=33.8 wall=43s
+ot0047    bracket              hull=7 maxc=    803966 F=1909615 hit=1909615 bad=0 cert=10477 cpu=33.4 wall=40s
+ot0049    bracket              hull=6 maxc=    652367 F=1909490 hit=1909490 bad=0 cert=11286 cpu=32.6 wall=40s
+ot0050    bracket              hull=5 maxc=  10246258 F=1909609 hit=1909609 bad=0 cert=11115 cpu=34.1 wall=45s
+ot0051    bracket              hull=5 maxc=   4131037 F=1909491 hit=1909491 bad=0 cert=11792 cpu=33.1 wall=41s
+ot0058    skeleton             hull=3 maxc=   6518120 F=1909530 hit=1909530 bad=0 cert=11888 cpu=33.8 wall=44s
+ot0060    skeleton             hull=3 maxc=   2160655 F=1909535 hit=1909535 bad=0 cert=11738 cpu=33.9 wall=42s
+ot0061    skeleton             hull=3 maxc=  72364803 F=1909616 hit=1909616 bad=0 cert=14657 cpu=33.5 wall=44s
+ot0086    skeleton             hull=3 maxc= 110977449 F=1909626 hit=1909626 bad=0 cert=13006 cpu=33.7 wall=45s
+ot0121    skeleton             hull=3 maxc=  30926883 F=1909541 hit=1909541 bad=0 cert=12324 cpu=33.7 wall=45s
+ot0157    skeleton             hull=4 maxc=  57755559 F=1909535 hit=1909535 bad=0 cert=11637 cpu=32.8 wall=41s
+ot0159    skeleton             hull=5 maxc=   3051938 F=1909504 hit=1909504 bad=0 cert=11967 cpu=33.4 wall=41s
+ot0160    skeleton             hull=5 maxc=  64768180 F=1909583 hit=1909583 bad=0 cert=13834 cpu=33.6 wall=44s
+ot0167    skeleton             hull=6 maxc=  55852029 F=1909528 hit=1909528 bad=0 cert=12447 cpu=33.9 wall=40s
+ot0229    skeleton             hull=4 maxc=  16857164 F=1909622 hit=1909622 bad=0 cert=14173 cpu=33.7 wall=50s
+ot0231    skeleton             hull=4 maxc=   4720130 F=1909148 hit=1909148 bad=0 cert=13413 cpu=32.7 wall=44s
+ot0232    skeleton             hull=4 maxc=  10463042 F=1909631 hit=1909631 bad=0 cert=15094 cpu=32.6 wall=44s
+ot0233    skeleton             hull=5 maxc=   1567673 F=1909251 hit=1909251 bad=0 cert=15191 cpu=33.7 wall=43s
+ot0242    wblocks-random       hull=7 maxc=  86525675 F=1911133 hit=1911133 bad=0 cert=11844 cpu=31.9 wall=40s
+ot0271    wblocks-random       hull=7 maxc=  45012004 F=1911236 hit=1911236 bad=0 cert=13264 cpu=32.9 wall=44s
+ot0297    wblocks-random       hull=7 maxc=  72829437 F=1911309 hit=1911309 bad=0 cert=11461 cpu=31.8 wall=38s
+ot0300    wblocks-random       hull=7 maxc=  64176248 F=1911411 hit=1911411 bad=0 cert=12570 cpu=31.6 wall=41s
+ot0304    wblocks-random       hull=7 maxc= 104642975 F=1911294 hit=1911294 bad=0 cert=11264 cpu=30.8 wall=42s
+ot0307    wblocks-random       hull=7 maxc= 106475940 F=1911450 hit=1911450 bad=0 cert=10340 cpu=32.2 wall=38s
+ot0322    wblocks-random       hull=7 maxc=  42674306 F=1911350 hit=1911350 bad=0 cert=12248 cpu=31.6 wall=42s
+ot0326    wblocks-random       hull=7 maxc= 133274906 F=1911338 hit=1911338 bad=0 cert=13511 cpu=32.0 wall=39s
+ot0397    wblocks-random       hull=7 maxc= 122169036 F=1911260 hit=1911260 bad=0 cert=11620 cpu=31.6 wall=38s
+ot0402    wblocks-random       hull=7 maxc= 110901012 F=1911325 hit=1911325 bad=0 cert=11700 cpu=30.0 wall=42s
+ot0454    wblocks-random       hull=7 maxc= 123195978 F=1911369 hit=1911369 bad=0 cert=10530 cpu=31.6 wall=41s
+ot0463    wblocks-random       hull=7 maxc= 121205233 F=1911255 hit=1911255 bad=0 cert=10370 cpu=32.3 wall=41s
+ot0545    random-dec           hull=4 maxc=   4146150 F=1911461 hit=1911461 bad=0 cert=11626 cpu=34.2 wall=44s
+ot0555    random-dec           hull=6 maxc=   4695109 F=1911293 hit=1911293 bad=0 cert=10961 cpu=34.1 wall=42s
+ot0608    random-dec           hull=3 maxc=  78588865 F=1911373 hit=1911373 bad=0 cert=12096 cpu=34.2 wall=44s
+ot0625    random-dec           hull=5 maxc=    214395 F=1911360 hit=1911360 bad=0 cert=12593 cpu=33.1 wall=44s
+ot0684    random-dec           hull=5 maxc=   4009070 F=1911345 hit=1911345 bad=0 cert=14234 cpu=34.3 wall=41s
+ot0688    random-dec           hull=4 maxc=   2823031 F=1911352 hit=1911352 bad=0 cert=13045 cpu=33.1 wall=41s
+ot0763    random-dec           hull=5 maxc=    542198 F=1911266 hit=1911266 bad=0 cert=11644 cpu=33.2 wall=46s
+ot0769    random-dec           hull=7 maxc=    496920 F=1911335 hit=1911335 bad=0 cert=10106 cpu=32.9 wall=41s
+ot0772    random-dec           hull=6 maxc=   2840500 F=1911298 hit=1911298 bad=0 cert=10169 cpu=34.1 wall=49s
+ot0847    random-dec           hull=4 maxc=  38245598 F=1911455 hit=1911455 bad=0 cert=11988 cpu=34.0 wall=43s
+ot0855    random-dec           hull=4 maxc=   3978766 F=1911385 hit=1911385 bad=0 cert=12084 cpu=33.0 wall=43s
+ot0870    random-dec           hull=6 maxc=    647602 F=1911068 hit=1911068 bad=0 cert=10249 cpu=31.5 wall=44s
+ot0874    random-dec           hull=5 maxc=    793134 F=1911308 hit=1911308 bad=0 cert=12023 cpu=34.3 wall=43s
+ot0902    random-tree          hull=6 maxc=    404506 F=1911212 hit=1911212 bad=0 cert=12532 cpu=33.2 wall=42s
+ot0907    random-tree          hull=4 maxc=  31682759 F=1911280 hit=1911280 bad=0 cert=10697 cpu=32.9 wall=37s
+ot0925    random-tree          hull=5 maxc=   1060633 F=1911339 hit=1911339 bad=0 cert=12359 cpu=33.0 wall=41s
+ot0967    random-tree          hull=5 maxc=   1384091 F=1911372 hit=1911372 bad=0 cert=10258 cpu=32.7 wall=42s
+ot1033    random-tree          hull=4 maxc=   7491835 F=1911331 hit=1911331 bad=0 cert=11344 cpu=30.9 wall=58s
+ot1046    random-tree          hull=4 maxc=  39826821 F=1911288 hit=1911288 bad=0 cert=10439 cpu=33.1 wall=46s
+ot1150    random-tree          hull=5 maxc=   2053423 F=1911429 hit=1911429 bad=0 cert=11615 cpu=33.2 wall=43s
+ot1163    random-tree          hull=6 maxc=    699796 F=1911441 hit=1911441 bad=0 cert=10444 cpu=33.5 wall=40s
+ot1222    random-tree          hull=4 maxc=  10394434 F=1911468 hit=1911468 bad=0 cert=12351 cpu=33.8 wall=42s
+ot1251    random-tree          hull=5 maxc=    495577 F=1911166 hit=1911166 bad=0 cert=13768 cpu=32.4 wall=45s
+ot1265    random-tree          hull=5 maxc=    459583 F=1911307 hit=1911307 bad=0 cert=9820 cpu=32.4 wall=46s
+ot1270    random-tree          hull=7 maxc=   3047175 F=1911291 hit=1911291 bad=0 cert=9715 cpu=32.7 wall=36s
+ot1292    skeleton-randblocks  hull=5 maxc=   2063921 F=1911390 hit=1911390 bad=0 cert=9928 cpu=34.6 wall=43s
+ot1312    skeleton-randblocks  hull=6 maxc=    133230 F=1911329 hit=1911329 bad=0 cert=13994 cpu=34.5 wall=43s
+ot1384    skeleton-randblocks  hull=6 maxc=    913262 F=1911360 hit=1911360 bad=0 cert=12009 cpu=33.1 wall=44s
+ot1434    skeleton-randblocks  hull=5 maxc=   2883379 F=1911237 hit=1911237 bad=0 cert=10682 cpu=33.4 wall=44s
+ot1440    skeleton-randblocks  hull=6 maxc=   2022660 F=1911251 hit=1911251 bad=0 cert=12335 cpu=32.9 wall=42s
+ot1448    skeleton-randblocks  hull=4 maxc=    403093 F=1911372 hit=1911372 bad=0 cert=12128 cpu=31.9 wall=47s
+ot1461    skeleton-randblocks  hull=6 maxc=  27779664 F=1911417 hit=1911417 bad=0 cert=11265 cpu=32.5 wall=42s
+ot1463    skeleton-randblocks  hull=4 maxc=    147828 F=1911389 hit=1911389 bad=0 cert=14009 cpu=32.5 wall=40s
+ot1537    skeleton-randblocks  hull=4 maxc=   9812251 F=1911387 hit=1911387 bad=0 cert=13006 cpu=33.4 wall=41s
+ot1542    skeleton-randblocks  hull=5 maxc=    408133 F=1911356 hit=1911356 bad=0 cert=11238 cpu=33.7 wall=42s
+ot1561    skeleton-randblocks  hull=4 maxc=   2311143 F=1911097 hit=1911097 bad=0 cert=11068 cpu=32.8 wall=40s

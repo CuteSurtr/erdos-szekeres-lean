@@ -1,0 +1,6 @@
+tvar identical to gen.py: True  Y: True  H: True
+(a) flipped orientation literal: 0 of 1313 still pass (expect 0)
+(b) dropped one condition literal: 0 of 960 still pass (0 means every implicant is prime)
+(c) negated one condition literal: 0 of 960 still pass
+(d) verifier with H polarity inverted: 1313 of 1313 pass
+(e) verifier with Y polarity inverted: 353 of 1313 pass

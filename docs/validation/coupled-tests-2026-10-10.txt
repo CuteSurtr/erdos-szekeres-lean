@@ -1,0 +1,105 @@
+test_all_21_separating_witnesses (test_additional_residual_rows.AdditionalResidualRowsTests.test_all_21_separating_witnesses) ... ok
+test_kernel_rejects_reversal_and_collapsed_thresholds (test_additional_residual_rows.AdditionalResidualRowsTests.test_kernel_rejects_reversal_and_collapsed_thresholds) ... skipped 'Needs lake env and Lean controls'
+test_literal_data_and_catalog_binding (test_additional_residual_rows.AdditionalResidualRowsTests.test_literal_data_and_catalog_binding) ... ok
+test_rejects_missing_wrong_malformed_and_duplicate_reports (test_axiom_audit.AxiomAuditTests.test_rejects_missing_wrong_malformed_and_duplicate_reports) ... ok
+test_rejects_nonstandard_axioms (test_axiom_audit.AxiomAuditTests.test_rejects_nonstandard_axioms) ... ok
+test_standard_and_axiom_free_reports (test_axiom_audit.AxiomAuditTests.test_standard_and_axiom_free_reports) ... ok
+test_assignment_validation (test_certificates.CertificateTests.test_assignment_validation) ... ok
+test_saved_integer_witness (test_certificates.CertificateTests.test_saved_integer_witness) ... ok
+test_wrapped_model (test_certificates.CertificateTests.test_wrapped_model) ... ok
+test_balancing_against_independent_dp (test_counting.CountingTests.test_balancing_against_independent_dp) ... ok
+test_profiles_respect_relaxed_constraints (test_counting.CountingTests.test_profiles_respect_relaxed_constraints) ... ok
+test_vandermonde_compression (test_counting.CountingTests.test_vandermonde_compression) ... ok
+test_one_allowance_is_not_counterexample (test_extension_solver.ExtensionSolverTests.test_one_allowance_is_not_counterexample) ... skipped 'optional Z3 dependency'
+test_zero_allowance (test_extension_solver.ExtensionSolverTests.test_zero_allowance) ... skipped 'optional Z3 dependency'
+test_dynamic_program_against_exhaustive (test_extensions.ExtensionTests.test_dynamic_program_against_exhaustive) ... ok
+test_line_representation (test_extensions.ExtensionTests.test_line_representation) ... ok
+test_near_miss_identification (test_extensions.ExtensionTests.test_near_miss_identification) ... ok
+test_visible_edge_criterion (test_extensions.ExtensionTests.test_visible_edge_criterion) ... ok
+test_against_direct_determinants (test_joint_repair.JointCoefficientTests.test_against_direct_determinants) ... ok
+test_five_points_unsat (test_joint_repair.JointSolverTests.test_five_points_unsat) ... skipped 'optional Z3 dependency'
+test_four_points_sat (test_joint_repair.JointSolverTests.test_four_points_sat) ... skipped 'optional Z3 dependency'
+test_corrupted_fixture_rejected (test_mixed_cap_certificate.MixedCapTests.test_corrupted_fixture_rejected) ... ok
+test_full_replay (test_mixed_cap_certificate.MixedCapTests.test_full_replay) ... ok
+test_interior_certificates_against_hull (test_mixed_cap_certificate.MixedCapTests.test_interior_certificates_against_hull) ... ok
+test_preserves_all_row_modules_and_drops_population (test_omission_balanced_rows.BalancedRowsOnlyTests.test_preserves_all_row_modules_and_drops_population) ... ok
+test_rejects_changed_parent_and_incomplete_rows (test_omission_balanced_rows.BalancedRowsOnlyTests.test_rejects_changed_parent_and_incomplete_rows) ... ok
+test_changed_formula_is_rejected (test_omission_coupled_core.CoupledCoreTests.test_changed_formula_is_rejected) ... ok
+test_complete_rup_and_deletion_models (test_omission_coupled_core.CoupledCoreTests.test_complete_rup_and_deletion_models) ... ok
+test_missing_final_derivation_is_rejected_even_with_updated_hash (test_omission_coupled_core.CoupledCoreTests.test_missing_final_derivation_is_rejected_even_with_updated_hash) ... ok
+test_changed_formula_is_rejected (test_omission_coupled_core.CoupledSecondCoreTests.test_changed_formula_is_rejected) ... ok
+test_complete_rup_and_deletion_models (test_omission_coupled_core.CoupledSecondCoreTests.test_complete_rup_and_deletion_models) ... ok
+test_missing_final_derivation_is_rejected_even_with_updated_hash (test_omission_coupled_core.CoupledSecondCoreTests.test_missing_final_derivation_is_rejected_even_with_updated_hash) ... ok
+test_reject_corrupted_certificates (test_omission_cover_cuts.CoverCutTests.test_reject_corrupted_certificates) ... ok
+test_valid_odd_cover_and_dependent_cut (test_omission_cover_cuts.CoverCutTests.test_valid_odd_cover_and_dependent_cut) ... ok
+test_export_refuses_overwrite_and_binds_inputs (test_omission_cover_cuts.CoverExportTests.test_export_refuses_overwrite_and_binds_inputs) ... ok
+test_preserve_original_row_order_and_metadata (test_omission_cover_cuts.CoverExportTests.test_preserve_original_row_order_and_metadata) ... ok
+test_preserves_catalog_data_branch_coverage_and_checker_contract (test_omission_fused_export.FusedExportTests.test_preserves_catalog_data_branch_coverage_and_checker_contract) ... ok
+test_rejects_changed_leaf_shape_and_invalid_numeric_certificate (test_omission_fused_export.FusedExportTests.test_rejects_changed_leaf_shape_and_invalid_numeric_certificate) ... ok
+test_subtree_and_over_budget_leaf_keep_their_scope (test_omission_fused_export.FusedExportTests.test_subtree_and_over_budget_leaf_keep_their_scope) ... ok
+test_full_root_and_corrupted_packed_coefficient (test_omission_fused_export.FusedKernelTests.test_full_root_and_corrupted_packed_coefficient) ... skipped 'optional Lean control'
+test_cycle_parser_does_not_read_box_data_or_accept_code (test_omission_geometry.OmissionGeometryTests.test_cycle_parser_does_not_read_box_data_or_accept_code) ... ok
+test_geometry_manifest_rejects_source_tampering_and_gaps (test_omission_geometry.OmissionGeometryTests.test_geometry_manifest_rejects_source_tampering_and_gaps) ... ok
+test_lean_accepts_cycle_and_rejects_corrupted_order (test_omission_geometry.OmissionGeometryTests.test_lean_accepts_cycle_and_rejects_corrupted_order) ... skipped 'Run under lake env with ERDOS_LEAN_EXPORT_TEST=1'
+test_literal_state_order_matches_arithmetic_source (test_omission_geometry.OmissionGeometryTests.test_literal_state_order_matches_arithmetic_source) ... ok
+test_prefixed_export_and_required_occupancy_source (test_omission_geometry.OmissionGeometryTests.test_prefixed_export_and_required_occupancy_source) ... ok
+test_prefixed_occupancy_links_with_unprefixed_tree (test_omission_geometry.OmissionGeometryTests.test_prefixed_occupancy_links_with_unprefixed_tree) ... skipped 'Run under lake env with ERDOS_LEAN_EXPORT_TEST=1'
+test_accepts_complete_binding_and_rejects_later_mutation (test_omission_global.GlobalAssemblyGateTests.test_accepts_complete_binding_and_rejects_later_mutation) ... ok
+test_rejects_changed_source_object_or_input (test_omission_global.GlobalAssemblyGateTests.test_rejects_changed_source_object_or_input) ... ok
+test_rejects_cover_budget_threshold_mismatch_before_building (test_omission_global.GlobalAssemblyGateTests.test_rejects_cover_budget_threshold_mismatch_before_building) ... ok
+test_rejects_fingerprint_and_version_mismatch (test_omission_global.GlobalAssemblyGateTests.test_rejects_fingerprint_and_version_mismatch) ... ok
+test_rejects_incomplete_family (test_omission_global.GlobalAssemblyGateTests.test_rejects_incomplete_family) ... ok
+test_rejects_missing_module_record (test_omission_global.GlobalAssemblyGateTests.test_rejects_missing_module_record) ... ok
+test_rejects_nonstandard_axiom_even_with_matching_record (test_omission_global.GlobalAssemblyGateTests.test_rejects_nonstandard_axiom_even_with_matching_record) ... ok
+test_rejects_unlisted_import_shadow (test_omission_global.GlobalAssemblyGateTests.test_rejects_unlisted_import_shadow) ... ok
+test_requires_the_selected_dependency (test_omission_global.GlobalAssemblyGateTests.test_requires_the_selected_dependency) ... ok
+test_accepts_b61_v2_r30_v1_dimensions (test_omission_global_profile.CoverProfileTests.test_accepts_b61_v2_r30_v1_dimensions) ... ok
+test_rejects_changed_manifest_and_wrong_extended_source (test_omission_global_profile.CoverProfileTests.test_rejects_changed_manifest_and_wrong_extended_source) ... ok
+test_rejects_module_path_injection (test_omission_global_profile.CoverProfileTests.test_rejects_module_path_injection) ... ok
+test_rejects_wrong_bound_or_original_geometry (test_omission_global_profile.CoverProfileTests.test_rejects_wrong_bound_or_original_geometry) ... ok
+test_rejects_wrong_row_count_or_unpinned_manifest (test_omission_global_profile.CoverProfileTests.test_rejects_wrong_row_count_or_unpinned_manifest) ... ok
+test_axiom_audit_rejects_missing_and_nonstandard (test_omission_lean_export.OmissionLeanExportTests.test_axiom_audit_rejects_missing_and_nonstandard) ... ok
+test_branches_partition_and_manifest (test_omission_lean_export.OmissionLeanExportTests.test_branches_partition_and_manifest) ... ok
+test_invalid_worker_and_memory_limits_fail_before_access (test_omission_lean_export.OmissionLeanExportTests.test_invalid_worker_and_memory_limits_fail_before_access) ... ok
+test_normalization_discards_satisfied_rows (test_omission_lean_export.OmissionLeanExportTests.test_normalization_discards_satisfied_rows) ... ok
+test_rejects_corrupt_certificate_before_writing (test_omission_lean_export.OmissionLeanExportTests.test_rejects_corrupt_certificate_before_writing) ... ok
+test_subtree_retains_context_and_has_no_global_claim (test_omission_lean_export.OmissionLeanExportTests.test_subtree_retains_context_and_has_no_global_claim) ... ok
+test_corrupted_column_is_rejected_by_lean (test_omission_lean_export.OmissionLeanIntegrationTests.test_corrupted_column_is_rejected_by_lean) ... skipped 'optional Lean exporter integration controls'
+test_parallel_selected_parts_resume_into_complete_root (test_omission_lean_export.OmissionLeanIntegrationTests.test_parallel_selected_parts_resume_into_complete_root) ... skipped 'optional Lean exporter integration controls'
+test_prefixed_trees_link_without_module_collisions (test_omission_lean_export.OmissionLeanIntegrationTests.test_prefixed_trees_link_without_module_collisions) ... skipped 'optional Lean exporter integration controls'
+test_weighted_and_overbudget_trees_compile (test_omission_lean_export.OmissionLeanIntegrationTests.test_weighted_and_overbudget_trees_compile) ... skipped 'optional Lean exporter integration controls'
+test_all_assignments_and_budgets (test_omission_opb.OmissionOpbTests.test_all_assignments_and_budgets) ... ok
+test_rejects_invalid_constraints (test_omission_opb.OmissionOpbTests.test_rejects_invalid_constraints) ... ok
+test_kernel_rejects_broken_compression (test_omission_residual_blocks.ResidualBlockTests.test_kernel_rejects_broken_compression) ... skipped 'Run under lake env with ERDOS_LEAN_EXPORT_TEST=1'
+test_literal_parser_rejects_code_and_missing_rows (test_omission_residual_blocks.ResidualBlockTests.test_literal_parser_rejects_code_and_missing_rows) ... ok
+test_manifest_requires_all_23_blocks_and_matching_sources (test_omission_residual_blocks.ResidualBlockTests.test_manifest_requires_all_23_blocks_and_matching_sources) ... ok
+test_cycle_parser_does_not_read_box_data_or_accept_code (test_omission_residual_geometry.OmissionResidualGeometryTests.test_cycle_parser_does_not_read_box_data_or_accept_code) ... ok
+test_geometry_manifest_rejects_source_tampering_and_gaps (test_omission_residual_geometry.OmissionResidualGeometryTests.test_geometry_manifest_rejects_source_tampering_and_gaps) ... ok
+test_lean_accepts_cycle_and_rejects_corrupted_order (test_omission_residual_geometry.OmissionResidualGeometryTests.test_lean_accepts_cycle_and_rejects_corrupted_order) ... skipped 'Run under lake env with ERDOS_LEAN_EXPORT_TEST=1'
+test_literal_state_order_matches_arithmetic_source (test_omission_residual_geometry.OmissionResidualGeometryTests.test_literal_state_order_matches_arithmetic_source) ... ok
+test_exact_counts_and_invalid_rows (test_omission_rows.OmissionRowTests.test_exact_counts_and_invalid_rows) ... ok
+test_cnf_against_all_original_assignments (test_omission_rows.OmissionSolverTests.test_cnf_against_all_original_assignments) ... skipped 'optional Z3 dependency'
+test_one_hole_sat (test_omission_rows.OmissionSolverTests.test_one_hole_sat) ... skipped 'optional Z3 dependency'
+test_zero_holes_unsat (test_omission_rows.OmissionSolverTests.test_zero_holes_unsat) ... skipped 'optional Z3 dependency'
+test_branching_and_resume (test_omission_tree.OmissionTreeSearchTests.test_branching_and_resume) ... skipped 'optional HiGHS dependency'
+test_compaction_preserves_a_strict_certificate (test_omission_tree.OmissionTreeTests.test_compaction_preserves_a_strict_certificate) ... ok
+test_every_small_leaf_against_assignments (test_omission_tree.OmissionTreeTests.test_every_small_leaf_against_assignments) ... ok
+test_tree_coverage_and_corruptions (test_omission_tree.OmissionTreeTests.test_tree_coverage_and_corruptions) ... ok
+test_polynomial_signs_against_direct_geometry (test_planar_repair.PlanarPolynomialTests.test_polynomial_signs_against_direct_geometry) ... ok
+test_algebraic_model_preserves_orientation (test_planar_repair.PlanarSolverTests.test_algebraic_model_preserves_orientation) ... skipped 'optional Z3 dependency'
+test_cut_transfer_between_searches (test_planar_repair.PlanarSolverTests.test_cut_transfer_between_searches) ... skipped 'optional Z3 dependency'
+test_five_points_unsat (test_planar_repair.PlanarSolverTests.test_five_points_unsat) ... skipped 'optional Z3 dependency'
+test_four_points_sat (test_planar_repair.PlanarSolverTests.test_four_points_sat) ... skipped 'optional Z3 dependency'
+test_invalid_resume_cycle_rejected (test_planar_repair.PlanarSolverTests.test_invalid_resume_cycle_rejected) ... skipped 'optional Z3 dependency'
+test_ranks_by_exhaustive_chains (test_prefix_states.PrefixStateTests.test_ranks_by_exhaustive_chains) ... ok
+test_cups_caps_against_exhaustive (test_region_blowup.RegionBlowupTests.test_cups_caps_against_exhaustive) ... ok
+test_product_and_convexity_obstruction (test_region_blowup.RegionBlowupTests.test_product_and_convexity_obstruction) ... ok
+test_against_triangle_criterion (test_search.GeometryTests.test_against_triangle_criterion) ... ok
+test_degeneracies (test_search.GeometryTests.test_degeneracies) ... ok
+test_grid_search (test_search.GeometryTests.test_grid_search) ... ok
+test_known_shapes (test_search.GeometryTests.test_known_shapes) ... ok
+
+----------------------------------------------------------------------
+Ran 100 tests in 1.644s
+
+OK (skipped=23)

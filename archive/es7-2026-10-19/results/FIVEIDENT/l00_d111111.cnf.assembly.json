@@ -1,0 +1,24 @@
+{
+ "base_sha256": "d7bbb74395b2799ecaa0bbaf9850842c205f059c7db20667e91d457e7e37928e",
+ "cube": "d111111",
+ "units": [
+  8803,
+  8737,
+  8738,
+  8739,
+  8748,
+  8749,
+  8758
+ ],
+ "families": [
+  {
+   "file": "m5_linear00_t13.clauses",
+   "sha256": "11e6b7c78fab539a45a69cb95a2d54acd66f40d32633655ff20e591314483fd8",
+   "clauses": 1560,
+   "kind": "rotation_linear_identity"
+  }
+ ],
+ "variables": 91390,
+ "clauses": 3297184,
+ "cnf_sha256": "ff0a5ff761129c2cdfd775c11c23fc12e2f2edbc831800ab2157662769ce86f6"
+}

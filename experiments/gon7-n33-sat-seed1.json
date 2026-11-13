@@ -1,0 +1,51 @@
+{
+  "scope": "upstream ordinary-polygon CNF; not yet a theorem in our Lean project",
+  "reduction_audit": "upstream CNF conversion uses mathlibSorry; not axiom-free",
+  "gon": 7,
+  "points": 33,
+  "seed": 1,
+  "time_limit_seconds": 1800,
+  "upstream_commit": "3073981d2aa5aa1e399b382e605c0ed12a0b69af",
+  "status": "unknown",
+  "artifacts": {
+    "cnf": {
+      "path": ".cache/sat/gon7-n33-sat-seed1/instance.cnf",
+      "bytes": 7860686,
+      "sha256": "bbfc00930d1abb35b795c716b4725fc36a9454712d6caa9312b95a1189e2ba20"
+    },
+    "variables": {
+      "path": ".cache/sat/gon7-n33-sat-seed1/variables.txt",
+      "bytes": 430659,
+      "sha256": "d082150fc088d27d9f3c789f4a130216b3f226687f51d246070a0825b5c558a7"
+    },
+    "solver_log": {
+      "path": ".cache/sat/gon7-n33-sat-seed1/solver.log",
+      "bytes": 74321,
+      "sha256": "4ccd8263a4f7e65acac7f0c908819c14573f5a235e300e2faa04358435792fa0"
+    },
+    "proof": {
+      "path": ".cache/sat/gon7-n33-sat-seed1/proof.drat",
+      "bytes": 2018123405,
+      "sha256": "1e39fb54016af92412b7ecb3570e0913008765111a8737b51e83f754ddf65afe"
+    }
+  },
+  "encoding_reused_from": "experiments/gon7-n33-seed0.json",
+  "encoding_seconds": 0.00471825001295656,
+  "variables": 38483,
+  "clauses": 424470,
+  "solver_version": "3.0.1",
+  "solver_commit": "c60730422e758ef1cebe7aeddf2dda31c996bf04",
+  "solver_configuration": "sat",
+  "solver_command": [
+    "/workspace/erdos-szekeres-lean/.cache/cadical/build/cadical",
+    "--no-colors",
+    "--sat",
+    "--seed=1",
+    "-t",
+    "1800",
+    "/workspace/erdos-szekeres-lean/.cache/sat/gon7-n33-sat-seed1/instance.cnf",
+    "/workspace/erdos-szekeres-lean/.cache/sat/gon7-n33-sat-seed1/proof.drat"
+  ],
+  "solver_seconds": 1800.0673650829121,
+  "solver_exit_code": 0
+}

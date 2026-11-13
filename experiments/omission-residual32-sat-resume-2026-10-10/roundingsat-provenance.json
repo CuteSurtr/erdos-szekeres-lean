@@ -1,0 +1,14 @@
+{
+  "solver": "RoundingSat 2",
+  "cached_source_commit": "d4edbf7908a9bb951fd181940919e0f3ac7ab1ee",
+  "build": "Built locally from the existing cached source, without SoPlex; cached Boost 1.89.0 headers; macOS SDK 15.4. No source download for this run.",
+  "LP_calls": 0,
+  "LP_total_seconds": 0,
+  "conflicts": 1092580,
+  "decisions": 3976771,
+  "log_sha256": "c444a81dbbaaa62aec6839bedc27c593c7f45d3cefc781012a935704777f3daa",
+  "historical_scope_note": "The original record intentionally retains its pending-geometry wording. Consult the Sixth relaxed bundle for subsequent kernel validation.",
+  "proof_status": "Incomplete pseudo-Boolean proof prefix; no UNSAT certificate. Binary and unfinished proof remain ignored in .cache.",
+  "record_sha256": "a4b1f2f843ae0f2bdf8c09a3127a263c8ac2001ac3f25c33334936ef0291a4f4",
+  "opb_regeneration_verified": true
+}

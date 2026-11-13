@@ -1,0 +1,29 @@
+== A (m,K,t)=(6,8,10) laws [(gp_fail, 0), (psiLt_irrefl_fail, 0), (psiLt_trans_fail, 0), (psiLt_total_fail, 0), (psiLt_zero_fail, 0), (chi_rot_fail, 0), (chi_cycle_fail, 0), (chi_swap_fail, 0), (ruleA_fail, 0), (ruleB_fail, 0), (nest_fail, 0), (noChain_fail, 0)]
+   info [(altccw_triples, 24360), (blockccw_outer_triples, 8970)], psi ranks [0, 2, 3, 4, 5, 6, 7, 8, 9, 1]
+   laws: 26633 ms
+   clauses [(trans, (168, 0)), (ang, (7271, 0)), (nest, (270, 0)), (chain, (1602076, 0))] genCoded_clauses 1609785 genCoded_UNSAT 0 split true
+   clauses: 433821 ms
+	Command being timed: "systemd-run --user --scope -q -p MemoryMax=4G -p MemorySwapMax=0 nice -n 10 lake env lean --run /sandbox/skeptic/EW10.lean A full 10 8"
+	User time (seconds): 460.96
+	System time (seconds): 0.22
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 7:41.10
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 921376
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 72082
+	Voluntary context switches: 1579
+	Involuntary context switches: 2247
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+rc=0

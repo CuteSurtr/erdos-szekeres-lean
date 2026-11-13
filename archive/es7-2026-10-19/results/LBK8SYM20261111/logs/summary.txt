@@ -1,0 +1,143 @@
+== annealing (completed restarts): (m, t, centre): restarts, evaluations, best N8 values
+  (3, 21, False): 2 restarts, 0.5 M evaluations, best [39, 153]
+  (3, 21, True): 4 restarts, 1.2 M evaluations, best [3, 3, 3, 3]
+  (4, 13, False): 7 restarts, 1.1 M evaluations, best [26, 57, 62, 68, 81, 82, 83]
+  (4, 14, False): 74 restarts, 35.5 M evaluations, best [2, 2, 2, 2, 2, 2, 2, 2]
+  (4, 15, False): 1 restarts, 0.6 M evaluations, best [382]
+  (5, 12, False): 3 restarts, 1.8 M evaluations, best [310, 330, 940]
+  (5, 12, True): 4 restarts, 2.4 M evaluations, best [330, 340, 400, 485]
+== phase-fixed CEGAR result counts per run directory
+  cegar/cal3/res_c5.tsv                    {'UNSAT': 25}
+  cegar/cal3t20/res_m20.tsv                {'UNSAT': 28, 'TIMEOUT': 6}
+  cegar/cal4t13/res_s13.tsv                {'UNSAT': 32, 'TIMEOUT': 40, 'CAND': 15}
+  cegar/cal52/res_c.tsv                    {'CAND': 9, 'TIMEOUT': 3}
+  cegar/cal56/res_c.tsv                    {'UNSAT': 10}
+  cegar/cal56/res_d.tsv                    {'CAND': 5, 'TIMEOUT': 3}
+  cegar/cal5t11/res_m11.tsv                {'UNSAT': 175, 'TIMEOUT': 4}
+  cegar/cal5t11/res_s11.tsv                {'UNSAT': 47, 'TIMEOUT': 53}
+  cegar/ext4a/res_e52.tsv                  {'UNSAT': 840}
+  cegar/ext4test/res_t.tsv                 {'UNSAT': 3}
+  cegar/ext5a/res_e56.tsv                  {'UNSAT': 432}
+  cegar/lp4b/res_lp4b.tsv                  {'TIMEOUT': 1}
+  cegar/pf3/res_p0.tsv                     {'TIMEOUT': 1}
+  cegar/pf3beam/res_pf3beam.tsv            {'TIMEOUT': 5}
+  cegar/pf3ins/res_pf3ins.tsv              {'UNSAT': 7}
+  cegar/pf3liveC/res_pf3liveC.tsv          {'UNSAT': 1}
+  cegar/pf3liveD/res_pf3liveD.tsv          {'UNSAT': 1}
+  cegar/pf3liveE/res_pf3liveE.tsv          {'UNSAT': 1}
+  cegar/pf3liveF/res_pf3liveF.tsv          {'UNSAT': 1}
+  cegar/pf3liveG/res_pf3liveG.tsv          {'UNSAT': 1}
+  cegar/pf3pair/res_pf3pair.tsv            {'UNSAT': 1}
+  cegar/pf3pairB/res_pf3pairB.tsv          {'UNSAT': 1}
+  cegar/pf3pairC1/res_pf3pairC1.tsv        {'UNSAT': 1}
+  cegar/pf3pairL4/res_pf3pairL4.tsv        {'UNSAT': 1}
+  cegar/pf3q2/res_pf3q2.tsv                {'UNSAT': 1}
+  cegar/pf3scan/res_pf3scan.tsv            {'UNSAT': 48, 'TIMEOUT': 3}
+  cegar/pf3scanC/res_pf3scanC.tsv          {'UNSAT': 46, 'TIMEOUT': 8}
+  cegar/pf3scanD/res_pf3scanD.tsv          {'TIMEOUT': 24, 'UNSAT': 12}
+  cegar/pf3tplA/res_pf3tplA.tsv            {'TIMEOUT': 1}
+  cegar/pf3tplD1/res_pf3tplD1.tsv          {'TIMEOUT': 1}
+  cegar/pf3tplE3/res_pf3tplE3.tsv          {'TIMEOUT': 1}
+  cegar/pf3tr/res_pf3tr.tsv                {'UNSAT': 2, 'TIMEOUT': 1}
+  cegar/pf4feed/res_pf4feed.tsv            {'UNSAT': 69}
+  cegar/pf4filter/res_f1.tsv               {'UNSAT': 8}
+  cegar/pf5filter/res_pf5filter.tsv        {'UNSAT': 33}
+  cegar/pftest/res_v52.tsv                 {'TIMEOUT': 1}
+  cegar/pftest/res_v52b.tsv                {'TIMEOUT': 1}
+  cegar/pftest/res_v52c.tsv                {'CAND': 1}
+  cegar/pftest/res_v52p.tsv                {'CAND': 1}
+  cegar/pftest/res_v56c.tsv                {'CAND': 1}
+  cegar/pftest/res_v60.tsv                 {'CAND': 1}
+  cegar/pftest/res_v61.tsv                 {'TIMEOUT': 1}
+  cegar/pftest/res_v61b.tsv                {'CAND': 1}
+  cegar/pftest/res_v61p.tsv                {'CAND': 1}
+  cegar/pftest/res_v64.tsv                 {'CAND': 1}
+  cegar/ps4a/res_ps4a.tsv                  {'UNSAT': 45}
+  cegar/sc4a12/res_sc4a12.tsv              {'UNSAT': 49}
+  cegar/sc4a13/res_sc4a13.tsv              {'UNSAT': 50}
+  cegar/sc4b/res_sc4b.tsv                  {'UNSAT': 99}
+  cegar/sc4c/res_sc4c.tsv                  {'UNSAT': 140}
+  cegar/sc5a/res_sc5a.tsv                  {'UNSAT': 48}
+  cegar/test/res_v52.tsv                   {'TIMEOUT': 2}
+  cegar/tpl4/res_t4.tsv                    {'UNSAT': 135}
+  cegar/tpl5/res_t5.tsv                    {'UNSAT': 79}
+  cegar/tpl6/res_t6.tsv                    {'TIMEOUT': 16, 'UNSAT': 52, 'CAND': 1}
+  cegar/tplB3/res_tplB3.tsv                {'UNSAT': 39, 'TIMEOUT': 5, 'BUDGET': 1}
+  cegar/tplB3c/res_tplB3c.tsv              {'UNSAT': 50, 'TIMEOUT': 3}
+  cegar/tplB4/res_tplB4.tsv                {'UNSAT': 426}
+  cegar/tplB5/res_m12.tsv                  {'UNSAT': 501}
+  cegar/tplB5n/res_m12n.tsv                {'UNSAT': 250}
+  cegar/tplS3/res_tplS3.tsv                {'TIMEOUT': 8, 'BUDGET': 2, 'UNSAT': 2}
+  cegar/tplS3b/res_tplS3b.tsv              {'UNSAT': 7, 'TIMEOUT': 4}
+  cegar/tplS3c/res_tplS3c.tsv              {'TIMEOUT': 1, 'UNSAT': 1}
+  cegar/tplS3d/res_tplS3d.tsv              {'TIMEOUT': 14, 'UNSAT': 11, 'BUDGET': 7}
+  cegar/tplS3e/res_tplS3e.tsv              {'TIMEOUT': 16, 'BUDGET': 8, 'UNSAT': 18}
+  cegar/tplS3f/res_tplS3f.tsv              {'UNSAT': 20, 'BUDGET': 4, 'TIMEOUT': 9}
+  cegar/tplS3g/res_tplS3g.tsv              {'UNSAT': 15, 'TIMEOUT': 10, 'BUDGET': 2}
+  cegar/tr4a/res_tr4a.tsv                  {'UNSAT': 44}
+  cegar/tr4b/res_tr4b.tsv                  {'UNSAT': 42}
+  total {'UNSAT': 3950, 'TIMEOUT': 246, 'CAND': 37, 'BUDGET': 24}
+== long runs (RESULT lines with more than one iteration)
+  cal52 c4_52_s0.05_3: TIMEOUT after 151 rounds, best margin -8.933e-02, 24.2 s
+  cal52 c4_52_s0.05_5: CAND after 9 rounds, best margin -5.007e-03, 4.0 s
+  cal52 c4_52_s0.05_6: TIMEOUT after 146 rounds, best margin -6.125e-01, 23.5 s
+  cal52 c4_52_s0.05_8: TIMEOUT after 137 rounds, best margin -4.152e-01, 25.2 s
+  cal56 c5_55nc_s0.002_2: TIMEOUT after 101 rounds, best margin -1.108e-03, 18.6 s
+  cal56 c5_55nc_s0.002_5: TIMEOUT after 100 rounds, best margin -8.152e-04, 19.1 s
+  cal56 c5_55nc_s0.002_7: TIMEOUT after 98 rounds, best margin -1.509e-03, 19.0 s
+  pf3 c3_64_3oct_p0: TIMEOUT after 117 rounds, best margin -7.958e-01, 63.7 s
+  pf3beam beam_ri3c_del0_0_p0: TIMEOUT after 435 rounds, best margin -8.803e-02, 182.4 s
+  pf3beam beam_ri3c_del0_1_p0: TIMEOUT after 425 rounds, best margin -5.565e-02, 183.5 s
+  pf3beam beam_ri3c_del0_2_p0: TIMEOUT after 445 rounds, best margin -7.834e-02, 184.3 s
+  pf3beam beam_ri3c_del17_0_p0: TIMEOUT after 450 rounds, best margin -8.758e-02, 176.2 s
+  pf3beam beam_ri3c_del17_1_p0: TIMEOUT after 388 rounds, best margin -5.291e-02, 184.5 s
+  pf3liveC live_c3_64_3oct_s0.499_44_KNone_p0: UNSAT after 1305 rounds, best margin -7.530e-01, 508.8 s
+  pf3liveD live_c3_63_cost3_s0.0258_6_p0: UNSAT after 3321 rounds, best margin -2.124e-02, 1234.2 s
+  pf3liveE live_c3_63_cost3_s0.05_1_p0: UNSAT after 5410 rounds, best margin -3.521e-02, 1923.4 s
+  pf3liveF live_c3_63_cost3_s0.05_2_p0: UNSAT after 6308 rounds, best margin -2.274e-02, 2264.1 s
+  pf3liveG live_c3_63_cost3_s0.05_7_p0: UNSAT after 6719 rounds, best margin -9.415e-03, 2405.9 s
+  pf3pairL4 c3_63_cost3_p0: UNSAT after 11562 rounds, best margin -4.220e-03, 4080.2 s
+  pf3q2 live_c3_63_cost3_s0.05_5_p0: UNSAT after 1361 rounds, best margin -9.331e-02, 507.5 s
+  pf3scan c3_64_3oct_s0.242_2: TIMEOUT after 123 rounds, best margin -1.216e+00, 48.4 s
+  pf3scan c3_64_3oct_s0.127_16: TIMEOUT after 76 rounds, best margin -1.061e+00, 49.4 s
+  pf3scan c3_64_3oct_s0.499_44: TIMEOUT after 95 rounds, best margin -1.090e+00, 49.9 s
+  pf3scanC c3_63_cost3_s0.0258_6: TIMEOUT after 369 rounds, best margin -1.029e-01, 143.8 s
+  pf3scanC c3_63_cost3_s0.0116_15: TIMEOUT after 335 rounds, best margin -4.019e-01, 147.3 s
+  pf3scanC c3_63_cost3_s0.0106_24: TIMEOUT after 345 rounds, best margin -8.557e-02, 137.5 s
+  pf3scanC c3_63_cost3_s0.0138_30: TIMEOUT after 368 rounds, best margin -8.659e-02, 144.5 s
+  pf3scanC c3_63_cost3_s0.0233_32: TIMEOUT after 361 rounds, best margin -1.381e-01, 142.2 s
+  pf3scanC c3_63_cost3_s0.0156_35: TIMEOUT after 352 rounds, best margin -1.019e-01, 145.0 s
+  pf3scanC c3_63_cost3_s0.0357_38: UNSAT after 50 rounds, best margin -2.488e-01, 56.2 s
+  pf3scanC c3_63_cost3_s0.0285_42: TIMEOUT after 352 rounds, best margin -8.734e-02, 152.1 s
+  pf3scanC c3_63_cost3_s0.0268_48: TIMEOUT after 348 rounds, best margin -1.038e-01, 154.9 s
+  pf3scanD c3_63_cost3_s0.05_1: TIMEOUT after 486 rounds, best margin -3.762e-02, 172.9 s
+  pf3scanD c3_63_cost3_s0.05_2: TIMEOUT after 480 rounds, best margin -3.278e-02, 176.5 s
+  pf3scanD c3_63_cost3_s0.05_3: TIMEOUT after 436 rounds, best margin -8.432e-02, 177.5 s
+  pf3scanD c3_63_cost3_s0.05_5: TIMEOUT after 479 rounds, best margin -1.034e-01, 179.8 s
+  pf3scanD c3_63_cost3_s0.05_6: TIMEOUT after 457 rounds, best margin -1.034e-01, 169.9 s
+  pf3scanD c3_63_cost3_s0.05_7: TIMEOUT after 451 rounds, best margin -2.421e-02, 183.3 s
+  pf3scanD c3_63_cost3_s0.05_9: TIMEOUT after 431 rounds, best margin -1.037e-01, 186.8 s
+  pf3scanD c3_63_cost3_s0.05_10: TIMEOUT after 440 rounds, best margin -1.108e-01, 185.5 s
+  pf3scanD c3_63_cost3_s0.05_11: TIMEOUT after 448 rounds, best margin -1.173e-01, 174.0 s
+  pf3scanD c3_63_cost3_s0.05_12: TIMEOUT after 422 rounds, best margin -5.690e-02, 181.6 s
+  pf3scanD c3_63_cost3_s0.05_14: TIMEOUT after 415 rounds, best margin -2.361e-02, 179.5 s
+  pf3scanD c3_63_cost3_s0.05_15: TIMEOUT after 427 rounds, best margin -1.053e-01, 180.9 s
+  pf3scanD c3_63_cost3_s0.05_19: TIMEOUT after 456 rounds, best margin -2.202e-02, 185.1 s
+  pf3scanD c3_63_cost3_s0.05_22: TIMEOUT after 435 rounds, best margin -8.405e-02, 177.9 s
+  pf3scanD c3_63_cost3_s0.05_23: TIMEOUT after 435 rounds, best margin -4.668e-02, 182.2 s
+  pf3scanD c3_63_cost3_s0.05_24: TIMEOUT after 411 rounds, best margin -1.630e-01, 185.2 s
+  pf3scanD c3_63_cost3_s0.05_25: TIMEOUT after 440 rounds, best margin -8.514e-02, 180.1 s
+  pf3scanD c3_63_cost3_s0.05_27: TIMEOUT after 434 rounds, best margin -1.290e-01, 180.1 s
+  pf3scanD c3_63_cost3_s0.05_28: TIMEOUT after 407 rounds, best margin -6.616e-02, 185.1 s
+  pf3scanD c3_63_cost3_s0.05_30: TIMEOUT after 417 rounds, best margin -8.573e-02, 187.6 s
+  pf3scanD c3_63_cost3_s0.05_31: TIMEOUT after 430 rounds, best margin -7.533e-02, 183.2 s
+  pf3scanD c3_63_cost3_s0.05_34: TIMEOUT after 419 rounds, best margin -1.379e-01, 185.9 s
+  pf3scanD c3_63_cost3_s0.05_35: TIMEOUT after 418 rounds, best margin -5.463e-02, 191.6 s
+  pf3scanD c3_63_cost3_s0.05_36: TIMEOUT after 387 rounds, best margin -7.055e-02, 192.8 s
+  pf3tplA live_tplB3_0_p0: TIMEOUT after 20947 rounds, best margin -1.337e-03, 9045.6 s
+  pf3tplD1 live_tplS3d_1_p0: TIMEOUT after 17237 rounds, best margin -1.517e-04, 8056.8 s
+  pf3tplE3 live_tplS3e_3_p0: TIMEOUT after 18222 rounds, best margin -2.781e-04, 8050.8 s
+  pf3tr c3_64_3oct_p0: TIMEOUT after 2173 rounds, best margin -7.185e-02, 602.9 s
+  pftest c4_52_p0: TIMEOUT after 373 rounds, best margin -8.552e-01, 31.1 s
+  pftest c4_52_p0: TIMEOUT after 347 rounds, best margin -9.216e-01, 31.0 s
+  pftest c3_61_p0: TIMEOUT after 483 rounds, best margin -6.660e-01, 33.4 s

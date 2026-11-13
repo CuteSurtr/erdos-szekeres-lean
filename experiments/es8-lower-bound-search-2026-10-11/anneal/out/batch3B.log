@@ -1,0 +1,5 @@
+== R64: N=64 K=8 random start (can SA find a 64-point octagon-free set from scratch?), log energy
+anneal K=8 N=64 raw=0 T0=0.5 T1=0.005 mu=0.000 seed=91 iters=300000 best=46 accepted=168836 gprej=10667 evals=289333 dwellE0/1/2/3+=0/0/0/289333 acc_at_best=17609 cpu=431.6s
+== M65 plateau walk: from init_w8p_4, raw energy, T 0.6->0.2, 300k iters
+anneal K=8 N=65 raw=1 T0=0.6 T1=0.2 mu=0.000 seed=81 iters=300000 best=1 accepted=17862 gprej=13398 evals=286602 dwellE0/1/2/3+=0/65/282995/3542 acc_at_best=3 cpu=437.5s
+== DONE

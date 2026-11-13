@@ -1,0 +1,62 @@
+{
+  "scope": "Independent packaging validation after the completed 314-point Lean gate; no new library build or test-suite run claimed",
+  "complete": true,
+  "final_gate": {
+    "path": "experiments/omission-global-assembly-2026-10-10/global-cover-314-check.json",
+    "sha256": "a16dea3164f6269ebb985595a513c886ff73993b6d381e626d704b80fee1d016",
+    "modules": 8,
+    "unchanged_inputs_verified_by_gate": 3929,
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "residual31_arithmetic": {
+    "path": "experiments/omission-cover-certificates-2026-10-10/residual-31-fused-kernel-check.json",
+    "sha256": "b224c44d30feeed318c0b98e4f2b40c2df063415e20e824c2cd6f2d38d2e7b3e",
+    "modules": 1218,
+    "complete": true
+  },
+  "artifact_manifests": {
+    "experiments/omission-global-assembly-2026-10-10/manifest.json": {
+      "sha256": "e6ac5cde9a7b1cd16763b0a814f306a8521ac1a09ba8a690228afde0ba24ed97",
+      "files_verified": 53
+    },
+    "experiments/omission-cover-certificates-2026-10-10/manifest.json": {
+      "sha256": "f156f18c3be229febfcc44730be13528c2bcf3ca6cd60056e373c8e1c2ffa76c",
+      "files_verified": 45
+    }
+  },
+  "source_archives": [
+    {
+      "path": "experiments/omission-cover-certificates-2026-10-10/balanced-61-fused-lean-sources.tar.gz",
+      "sha256": "28aee1f64fb21f9d179893b4dc4616b3b14acfab5c49c53dd7d8a6bd03f78f58",
+      "regular_lean_members": 504,
+      "all_members_match_exported_hashes": true,
+      "forbidden_proof_tokens": []
+    },
+    {
+      "path": "experiments/omission-cover-certificates-2026-10-10/residual-31-fused-lean-sources.tar.gz",
+      "sha256": "d86db287e6ed3dcfe2fb69ed7b77914a9d44148abfc5363bfd62018176d262b2",
+      "regular_lean_members": 1218,
+      "all_members_match_exported_hashes": true,
+      "forbidden_proof_tokens": []
+    }
+  ],
+  "unchanged_library_audit_snapshot": {
+    "path": "docs/validation/structural-checks-2026-10-10.json",
+    "sha256": "c09d693082b799b7deaf15a6f3912dcab370e2d3cfa8877489c2ba36c428bc48",
+    "source_files_rehashed": 264,
+    "all_match": true,
+    "audited_roots": 571
+  },
+  "semantic_review": {
+    "independently_reviewed": true,
+    "scope": "Every finite real planar general-position set of at least 314 points contains an eight-element convex-independent subset; no emptiness condition",
+    "balanced_population": 190,
+    "residual_population": 122,
+    "avoiding_original_cardinality": 313,
+    "hidden_row_or_coordinate_hypotheses": false
+  }
+}

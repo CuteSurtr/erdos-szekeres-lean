@@ -1,0 +1,37 @@
+{
+  "scope": "Exact arithmetic consequences of the original omission rows; no new geometric hypotheses",
+  "binding": {
+    "manifest": "80de5f199001fa0eafdab6533c1b3206c6d9610361b035525514c15a9c2b8e5b",
+    "lean": "Lean (version 4.24.0, arm64-apple-darwin23.6.0, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)",
+    "inputs": {
+      "/workspace/erdos-szekeres-lean/lean-toolchain": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434",
+      "/workspace/erdos-szekeres-lean/lake-manifest.json": "bc21802066bdf7c94b0eb1e7bd3d3389ae0d416c2ed69c6e5dae03e74945c8e7",
+      "/workspace/erdos-szekeres-lean/.cache/omission-lean-full/residual/export.json": "4de6ce291b08c362022e9843b16b12212444e6e7400b0d53532ebf0563daaf40",
+      "/workspace/erdos-szekeres-lean/.cache/omission-lean-full/residual/Catalog.lean": "f94c74ecade3b2714f961cd3ee7826ad0804342886f0e86ab2ca3908f86cb7da",
+      "/workspace/erdos-szekeres-lean/.cache/omission-lean-full/residual/Catalog.olean": "2e118ef392822f3543e9901180a3042c53489283d7ca28af39ac74a540b70a80",
+      "/workspace/erdos-szekeres-lean/ErdosSzekeres/Omission/CoverCuts.lean": "5a2c3f157cd843263cc36f8f2c6465deea9396a20610edab1fc2ae84b7b140d9",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/CoverCuts.olean": "2207249f69fbe836a1a691a15987a7d12ec48ceeb9d610c080749fb5436d676d",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/OmissionCertificates.olean": "54394f6a413b31a4a4174b3f1655e7af3568a7f94e849b13353c717399c6bdc9",
+      "/workspace/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/OmissionPacking.olean": "0068fcfb003180c1974bd054b50f9e4ac1a1c8d799bb46df16e93fcea66fe021"
+    }
+  },
+  "fingerprint": "0d8f7d0038f195c65cc2825424d3a5454915047639f524592561b0f35938e6e6",
+  "modules": {
+    "ResidualCoverCuts": {
+      "exit": 0,
+      "source_sha256": "fc491ba260937a279cf0429f10d1cdc4281d1b5918a4588c206028dbe8f45134",
+      "stdout": "'ResidualCoverCuts.cut0' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ResidualCoverCuts.cut25' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ResidualCoverCuts.cut50' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ResidualCoverCuts.cut75' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ResidualCoverCuts.cut100' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ResidualCoverCuts.cut125' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ResidualCoverCuts.cut150' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ResidualCoverCuts.cut175' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ResidualCoverCuts.cut200' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ResidualCoverCuts.cut225' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ResidualCoverCuts.cut250' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ResidualCoverCuts.cut275' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ResidualCoverCuts.cut300' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ResidualCoverCuts.cut325' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ResidualCoverCuts.cut350' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ResidualCoverCuts.cut375' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ResidualCoverCuts.cut400' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ResidualCoverCuts.all_rows' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "audited": true,
+      "axioms": {
+        "ResidualCoverCuts.all_rows": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "olean_sha256": "96ee728fe6755d7ed12604ab3ea68d8677b3d36c680e8aa1c26b8af14dfd9b9c"
+    }
+  },
+  "complete": true
+}

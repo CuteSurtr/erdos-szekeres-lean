@@ -1,0 +1,8 @@
+# python3 -I k8_soundness_checks.py, 6 November 2026, one core (systemd-run CPUQuota=100%), Python 3.14.4
+# sha256 c0bdf5ae2018f373499db05e03bd786e334b5dc04137d2e6258db54453b4e8fa
+m=6 t=11 {'triples': 45760, 'orbits': 7634, 'orbit_sizes': {6: 7623, 2: 11}, 'stabilised_orbits': 11, 'stabilisers_are_3_cycles_in_one_layer': True, 'antipodal_orbits': 352, 'patterns': {'alternating': 7901, 'block': 23681, 'coinciding keys': 622, 'other': 0}}
+  least distance of a non-pi gap from {0, pi}: 1/12 pi
+  encoder A directions: 54 cases (nl, q, h, k), all reductions no-ops, max |float - exact| < 8.677e-16
+m=7 t=10 {'triples': 54740, 'orbits': 7820, 'orbit_sizes': {7: 7820}, 'stabilised_orbits': 0, 'stabilisers_are_3_cycles_in_one_layer': True, 'antipodal_orbits': 0, 'patterns': {'alternating': 56630, 'block': 167997, 'coinciding keys': 0, 'other': 0}}
+  least distance of a non-pi gap from {0, pi}: 1/28 pi
+  encoder A directions: 105 cases (nl, q, h, k), all reductions no-ops, max |float - exact| < 5.293e-16

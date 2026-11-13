@@ -1,0 +1,31 @@
+== 2026-11-06T04:11:37Z test_driver_es310.sh: WORKDIR /path/to/repo/experiments/omission-compact-checker-2026-11-05/build/es310/test-driver, cases: L M I; drive_es310.py sha256 b94a703bd57276a2
+== 2026-11-06T04:11:37Z L: refusals
+PASS: L: unknown --only refused (exit 1)
+PASS: L: a corrupted module without --only refused (exit 1)
+PASS: L: a source sha256 mismatch refused (exit 1)
+PASS: L: a '#eval' line refused by the shape check (exit 1)
+PASS: L: --memory 12 (no unit) refused (exit 1)
+PASS: L: --root-memory infinity refused (exit 1)
+PASS: L: an export in build/es311 refused (exit 1)
+PASS: L:   ... before its .driver.lock was opened (size and mtime unchanged)
+PASS: L: an export in the campaign directory refused (exit 1)
+PASS: L: an overlapping --reuse refused (exit 1)
+== 2026-11-06T04:11:53Z M: prepare(), stamps, library pins, memory gate, one hash per .olean
+PASS: M: prepare passes LM_NO_BUILD=1 and the 5 names; stamps equal all 127 E311R rows and the E311.Final row; mem_gb
+M unit ok: {'Path': '60a01f9ca483', 'Fcat62': '1f7212d4fbb8', 'Fcat2650': 'ed47736434a9', 'Bridge311Bal': 'f12bf121afc4', 'Bridge311Res': '3a971dcba15a'}
+PASS: M: dry-run exit 0 (got 0)
+PASS: M: JSON deps has exactly the 5 STAMPED names
+PASS: M: library pins verified (4952 .olean files)
+PASS: M: memory needs: chunk 10+5, Root/Final 10+24
+PASS: M: each of the 3 .olean files hashed exactly once per start
+olean hashes per start: [1, 1, 1] 3
+== 2026-11-06T04:12:03Z I: unit names (a transient scope running sleep, no Lean)
+PASS: I: the bare name resolves to no cgroup (what drive_es311.py asked for)
+PASS: I: 'es310-unittest-d7e925d7.scope' resolves to the scope's cgroup (/user.slice/user-1000.slice/user@1000.service/app.slice/es310-unittest-d7e925d7.scope)
+drive_es311.kill_scope(bare): True
+PASS: I: drive_es311.kill_scope with the bare name leaves the sleep running
+drive_es310.kill_scope(bare): True
+PASS: I: drive_es310.kill_scope with the bare name returns True
+PASS: I: the sleep is gone and the scope is not active
+PASS: I: every systemctl call in drive_es310.py names the scope (kill_scope converts first)
+== 2026-11-06T04:12:03Z summary: 22 passed, 0 failed

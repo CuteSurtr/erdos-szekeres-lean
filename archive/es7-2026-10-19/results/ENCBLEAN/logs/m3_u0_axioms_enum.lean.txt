@@ -1,0 +1,29 @@
+import Lean
+import EncB
+open Lean Elab Command
+
+def stdAxioms : List Name := [``propext, ``Classical.choice, ``Quot.sound]
+def u0Mods : List Name := [`EncB.Model, `EncB.ModelLemmas, `EncB.SortLemmas, `EncB.SoundOlit]
+
+#eval show CommandElabM Unit from do
+  let env ← getEnv
+  let mods := env.header.moduleNames
+  let mut out := ""
+  let mut n := 0
+  let mut nThm := 0
+  let mut bad : Array Name := #[]
+  let mut rows : Array (String × Name × List Name) := #[]
+  for (c, ci) in env.constants.map₁.toList do
+    let some idx := env.getModuleIdxFor? c | continue
+    let mod := mods[idx.toNat]!
+    unless u0Mods.contains mod do continue
+    let axs := ((← liftCoreM (collectAxioms c)).qsort Name.lt).toList
+    n := n + 1
+    if ci matches .thmInfo _ then nThm := nThm + 1
+    unless axs.all stdAxioms.contains do bad := bad.push c
+    if !c.isInternalDetail && (ci matches .thmInfo _) then rows := rows.push (mod.toString, c, axs)
+  rows := rows.qsort fun a b => a.1 < b.1 || (a.1 == b.1 && a.2.1.toString < b.2.1.toString)
+  for (mod, c, axs) in rows do
+    out := out ++ s!"{mod}\t{c}\t{axs}\n"
+  out := out ++ s!"SUMMARY: {n} constants in U0 modules ({nThm} theorems); outside {stdAxioms}: {bad.size} {bad.toList}\n"
+  logInfo out

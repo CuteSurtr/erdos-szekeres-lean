@@ -1,0 +1,8 @@
+cadical   3.0.1  https://github.com/arminbiere/cadical  c60730422e758ef1cebe7aeddf2dda31c996bf04  (./configure && make)  sha256 54e358f559a59eee7e2b88ee522954b710cf9d42dc3a8591395977fc93ac0ca4
+march_cu         https://github.com/marijnheule/CnC     705b60c6491ef2b61988b3ce6ac674be1b90571d  (make CFLAGS="-O3 -fno-strict-aliasing -Wall -DNDEBUG -fcommon")  sha256 afcbb47642a922676693b325ed19d88698c6b8f700943fa2753d98126579f222
+cake_lpr         https://github.com/tanyongkiam/cake_lpr a36874a8b750b43fe4b385b8ddbf5b033e46a3fa  (make cake_lpr)  sha256 1822ca1e5d0f925e8f3b73047941a8261bee65eef6ccb0e33bb49f92821a09ca
+cake_lpr example.cnf example.lpr -> s VERIFIED UNSAT
+F.cnf sha256 69c1dc8f7818cbef615c1c6f65db66463294ea8054f0cec602846f27ffff932d (matches)
+U3_L case CNF (hullsplit.py case F.cnf 3 "") sha256 7ab00d97d5047e0003bd8d254560dc8464d880d7165c6d7f0e01fab79ee0f823 (matches cases.jsonl)
+top.icnf: 318 lines = 318 cubes in tasks/H24.json; sha256 14d2fb223fffa57f6f0dd1afa439aaf35b594c7468f7cb522ed10687dd06e35f
+driver started 2026-10-20T12:57:29Z with --hours 2.21
