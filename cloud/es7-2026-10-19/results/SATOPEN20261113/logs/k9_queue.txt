@@ -1,0 +1,67 @@
+# (02:13-03:57) earlier entries, all done or running
+ex8_r7 1800
+ex8_all 1800
+p1_DZ 1800
+p1_YZ 1800
+p2_YZ 300
+p3_YZ 300
+p4_YZ 300
+p5_YZ 300
+p6_YZ 300
+p7_YZ 300
+p8_YZ 300
+p9_YZ 300
+ex8_r14 3600
+ex8_r0 3600
+ex7_all 5400
+ex9_all 5400
+p1_D 1800
+ex6_all 5400
+ex10_all 5400
+ex5_all 5400
+ex11_all 5400
+ex4_all 5400
+ex12_all 5400
+cyc8 3600
+cyc7 3600
+cyc9 3600
+cyc6 3600
+cyc10 3600
+cyc5 3600
+cyc11 3600
+cyc4 3600
+ex2_7_9 3600
+cycx_k8_p7 3600
+ex2_6_10 3600
+cycx_k4_p8 3600
+# (03:58) Theorem 6' (layer 15 free) and 6'' (layer 1 free): cyclic spiral of the other 14 inner layers, P = 3..11
+cycx_k15_p6 2400
+cycx_k1_p7 2400
+cycx_k15_p3 2400
+cycx_k1_p3 2400
+cycx_k15_p4 2400
+cycx_k1_p4 2400
+cycx_k15_p5 2400
+cycx_k1_p5 2400
+cycx_k15_p7 2400
+cycx_k1_p6 2400
+cycx_k15_p8 2400
+cycx_k1_p8 2400
+cycx_k15_p9 2400
+cycx_k1_p9 2400
+cycx_k15_p10 2400
+cycx_k1_p10 2400
+cycx_k15_p11 2400
+cycx_k1_p11 2400
+# low priority probes (noproof)
+p2_DZ 900
+p1_Y 900
+p1_B3Z 900
+# more next-ring cases if time remains
+cycx_k12_p5 1500
+# (04:57) last additions: Z-only and band-2 probes (noproof), three more cyclic ring cases
+p1_Z 900
+p1_B2Z 600
+cycx_k14_p5 1200
+cycx_k2_p7 1200
+cycx_k13_p6 1200

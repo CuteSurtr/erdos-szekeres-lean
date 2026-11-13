@@ -1,0 +1,1062 @@
+=== cyc10
+cyc p=10: full order (by phase) [11, 12, 13, 14, 15, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+solved: cadical exit 20 seconds 490 limit 3600
+cube cyc10: cyc p=10: full order (by phase) [11, 12, 13, 14, 15, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+units: 42673 0 42674 0 42675 0 42676 0 42677 0 42678 0 42679 0 42680 0 42681 0 -42682 0 -42683 0 -42684 0 -42685 0 -42686 0 42687 0 42688 0 42689 0 42690 0 42691 0 42692 0 42693 0 42694 0 -42695 0 -42696 0 -42697 0 -42698 0 -42699 0 42700 0 42701 0 42702 0 42703 0 42704 0 42705 0 42706 0 -42707 0 -42708 0 -42709 0 -42710 0 -42711 0 42712 0 42713 0 42714 0 42715 0 42716 0 42717 0 -42718 0 -42719 0 -42720 0 -42721 0 -42722 0 42723 0 42724 0 42725 0 42726 0 42727 0 -42728 0 -42729 0 -42730 0 -42731 0 -42732 0 42733 0 42734 0 42735 0 42736 0 -42737 0 -42738 0 -42739 0 -42740 0 -42741 0 42742 0 42743 0 42744 0 -42745 0 -42746 0 -42747 0 -42748 0 -42749 0 42750 0 42751 0 -42752 0 -42753 0 -42754 0 -42755 0 -42756 0 42757 0 -42758 0 -42759 0 -42760 0 -42761 0 -42762 0 -42763 0 -42764 0 -42765 0 -42766 0 -42767 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+e8613478dde1476e2eed4d95d34d5000e08b4cafc99c9b857e89b696a3a2cf95  /home/jay/research/data/satopen-20261113/k9/cubes/cyc10/cube.cnf
+3ec6e10e12afcf03e57e4fd929eacce557dc732f547274eaad5d666081e83322  /home/jay/research/data/satopen-20261113/k9/cubes/cyc10/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cyc10/cube.cnf: OK
+cadical exit 20 seconds 490 limit 3600
+c (percentage relative to total process time)
+c conflicts:                 61201       126.62    per second
+c total process time since initialization:       489.11    seconds
+c maximum resident set size of process:         3750.19    MB
+proof bytes 1245038869
+cake_lpr seconds 91 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:31.29
+	Maximum resident set size (kbytes): 8794112
+VERIFIED_LINES 1
+8e70192b07fbb87a4dcdaac187925b34a99ee25419dc7e030d6b7dbaa7959ffa  /home/jay/research/data/satopen-20261113/k9/cubes/cyc10/proof.lrat.zst
+=== cyc11
+cyc p=11: full order (by phase) [12, 13, 14, 15, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+solved: cadical exit 20 seconds 442 limit 3600
+cube cyc11: cyc p=11: full order (by phase) [12, 13, 14, 15, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+units: 42673 0 42674 0 42675 0 42676 0 42677 0 42678 0 42679 0 42680 0 42681 0 42682 0 -42683 0 -42684 0 -42685 0 -42686 0 42687 0 42688 0 42689 0 42690 0 42691 0 42692 0 42693 0 42694 0 42695 0 -42696 0 -42697 0 -42698 0 -42699 0 42700 0 42701 0 42702 0 42703 0 42704 0 42705 0 42706 0 42707 0 -42708 0 -42709 0 -42710 0 -42711 0 42712 0 42713 0 42714 0 42715 0 42716 0 42717 0 42718 0 -42719 0 -42720 0 -42721 0 -42722 0 42723 0 42724 0 42725 0 42726 0 42727 0 42728 0 -42729 0 -42730 0 -42731 0 -42732 0 42733 0 42734 0 42735 0 42736 0 42737 0 -42738 0 -42739 0 -42740 0 -42741 0 42742 0 42743 0 42744 0 42745 0 -42746 0 -42747 0 -42748 0 -42749 0 42750 0 42751 0 42752 0 -42753 0 -42754 0 -42755 0 -42756 0 42757 0 42758 0 -42759 0 -42760 0 -42761 0 -42762 0 42763 0 -42764 0 -42765 0 -42766 0 -42767 0 -42768 0 -42769 0 -42770 0 -42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+4459a2c7159fb17579615be9fdc666f9854dff463f024f1d33445b257d29b32e  /home/jay/research/data/satopen-20261113/k9/cubes/cyc11/cube.cnf
+d80073ed12b6c9e093562fe87dcb55e9ac679466bca2682340689bc22c3ec9a2  /home/jay/research/data/satopen-20261113/k9/cubes/cyc11/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cyc11/cube.cnf: OK
+cadical exit 20 seconds 442 limit 3600
+c (percentage relative to total process time)
+c conflicts:                 55141       126.63    per second
+c total process time since initialization:       441.27    seconds
+c maximum resident set size of process:         3739.79    MB
+proof bytes 1210599692
+cake_lpr seconds 97 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:37.27
+	Maximum resident set size (kbytes): 8794048
+VERIFIED_LINES 1
+3f783b0f7969eb3f9832575f45f794d2f258240088c7900d66ab47e0380006eb  /home/jay/research/data/satopen-20261113/k9/cubes/cyc11/proof.lrat.zst
+=== cyc4
+cyc p=4: full order (by phase) [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 1, 2, 3, 4]
+solved: cadical exit 20 seconds 448 limit 3600
+cube cyc4: cyc p=4: full order (by phase) [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 1, 2, 3, 4]
+units: 42673 0 42674 0 42675 0 -42676 0 -42677 0 -42678 0 -42679 0 -42680 0 -42681 0 -42682 0 -42683 0 -42684 0 -42685 0 -42686 0 42687 0 42688 0 -42689 0 -42690 0 -42691 0 -42692 0 -42693 0 -42694 0 -42695 0 -42696 0 -42697 0 -42698 0 -42699 0 42700 0 -42701 0 -42702 0 -42703 0 -42704 0 -42705 0 -42706 0 -42707 0 -42708 0 -42709 0 -42710 0 -42711 0 -42712 0 -42713 0 -42714 0 -42715 0 -42716 0 -42717 0 -42718 0 -42719 0 -42720 0 -42721 0 -42722 0 42723 0 42724 0 42725 0 42726 0 42727 0 42728 0 42729 0 42730 0 42731 0 42732 0 42733 0 42734 0 42735 0 42736 0 42737 0 42738 0 42739 0 42740 0 42741 0 42742 0 42743 0 42744 0 42745 0 42746 0 42747 0 42748 0 42749 0 42750 0 42751 0 42752 0 42753 0 42754 0 42755 0 42756 0 42757 0 42758 0 42759 0 42760 0 42761 0 42762 0 42763 0 42764 0 42765 0 42766 0 42767 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+c6dcc2b55187ef2680a3a87bea682cc069e20050c9455ee7579707adbf90694a  /home/jay/research/data/satopen-20261113/k9/cubes/cyc4/cube.cnf
+dbc9b45de7547462b387a69f525f2e37b16e7eaa277674f6588251f4b58087fd  /home/jay/research/data/satopen-20261113/k9/cubes/cyc4/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cyc4/cube.cnf: OK
+cadical exit 20 seconds 448 limit 3600
+c (percentage relative to total process time)
+c conflicts:                 51965       117.50    per second
+c total process time since initialization:       447.55    seconds
+c maximum resident set size of process:         3814.38    MB
+proof bytes 1178293798
+cake_lpr seconds 83 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:23.50
+	Maximum resident set size (kbytes): 8792000
+VERIFIED_LINES 1
+d3f3800faf2903c3b2b6ce3708b0bea38ef1c6a56df2f575dfa2dab69b1719dd  /home/jay/research/data/satopen-20261113/k9/cubes/cyc4/proof.lrat.zst
+=== cyc5
+cyc p=5: full order (by phase) [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 1, 2, 3, 4, 5]
+solved: cadical exit 20 seconds 390 limit 3600
+cube cyc5: cyc p=5: full order (by phase) [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 1, 2, 3, 4, 5]
+units: 42673 0 42674 0 42675 0 42676 0 -42677 0 -42678 0 -42679 0 -42680 0 -42681 0 -42682 0 -42683 0 -42684 0 -42685 0 -42686 0 42687 0 42688 0 42689 0 -42690 0 -42691 0 -42692 0 -42693 0 -42694 0 -42695 0 -42696 0 -42697 0 -42698 0 -42699 0 42700 0 42701 0 -42702 0 -42703 0 -42704 0 -42705 0 -42706 0 -42707 0 -42708 0 -42709 0 -42710 0 -42711 0 42712 0 -42713 0 -42714 0 -42715 0 -42716 0 -42717 0 -42718 0 -42719 0 -42720 0 -42721 0 -42722 0 -42723 0 -42724 0 -42725 0 -42726 0 -42727 0 -42728 0 -42729 0 -42730 0 -42731 0 -42732 0 42733 0 42734 0 42735 0 42736 0 42737 0 42738 0 42739 0 42740 0 42741 0 42742 0 42743 0 42744 0 42745 0 42746 0 42747 0 42748 0 42749 0 42750 0 42751 0 42752 0 42753 0 42754 0 42755 0 42756 0 42757 0 42758 0 42759 0 42760 0 42761 0 42762 0 42763 0 42764 0 42765 0 42766 0 42767 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+7976983d87bb209f46dfa8ca08357fa70300b136df57bc1abc15e150ae7d4fb6  /home/jay/research/data/satopen-20261113/k9/cubes/cyc5/cube.cnf
+1fbc5462d85fae14a64e03a7ad9d8b71a4508a780388c50a62f96116d81db069  /home/jay/research/data/satopen-20261113/k9/cubes/cyc5/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cyc5/cube.cnf: OK
+cadical exit 20 seconds 390 limit 3600
+c (percentage relative to total process time)
+c conflicts:                 46623       121.92    per second
+c total process time since initialization:       389.54    seconds
+c maximum resident set size of process:         3758.76    MB
+proof bytes 1037196160
+cake_lpr seconds 83 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:22.74
+	Maximum resident set size (kbytes): 8792036
+VERIFIED_LINES 1
+2bac69ac26a0b0d8af50ba6c684a10bf404ceb0b4d0097f4cd0226a2cfbf9cbe  /home/jay/research/data/satopen-20261113/k9/cubes/cyc5/proof.lrat.zst
+=== cyc6
+cyc p=6: full order (by phase) [7, 8, 9, 10, 11, 12, 13, 14, 15, 1, 2, 3, 4, 5, 6]
+solved: cadical exit 20 seconds 386 limit 3600
+cube cyc6: cyc p=6: full order (by phase) [7, 8, 9, 10, 11, 12, 13, 14, 15, 1, 2, 3, 4, 5, 6]
+units: 42673 0 42674 0 42675 0 42676 0 42677 0 -42678 0 -42679 0 -42680 0 -42681 0 -42682 0 -42683 0 -42684 0 -42685 0 -42686 0 42687 0 42688 0 42689 0 42690 0 -42691 0 -42692 0 -42693 0 -42694 0 -42695 0 -42696 0 -42697 0 -42698 0 -42699 0 42700 0 42701 0 42702 0 -42703 0 -42704 0 -42705 0 -42706 0 -42707 0 -42708 0 -42709 0 -42710 0 -42711 0 42712 0 42713 0 -42714 0 -42715 0 -42716 0 -42717 0 -42718 0 -42719 0 -42720 0 -42721 0 -42722 0 42723 0 -42724 0 -42725 0 -42726 0 -42727 0 -42728 0 -42729 0 -42730 0 -42731 0 -42732 0 -42733 0 -42734 0 -42735 0 -42736 0 -42737 0 -42738 0 -42739 0 -42740 0 -42741 0 42742 0 42743 0 42744 0 42745 0 42746 0 42747 0 42748 0 42749 0 42750 0 42751 0 42752 0 42753 0 42754 0 42755 0 42756 0 42757 0 42758 0 42759 0 42760 0 42761 0 42762 0 42763 0 42764 0 42765 0 42766 0 42767 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+089e1907ddc0aa60b0b6745504be907c03560256d17c3e729a57b91b83d715b2  /home/jay/research/data/satopen-20261113/k9/cubes/cyc6/cube.cnf
+8d8ea4ca6dd378659b41cec1140c7084c5e8c7c1b332ffd4518a6a5885e1aa8b  /home/jay/research/data/satopen-20261113/k9/cubes/cyc6/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cyc6/cube.cnf: OK
+cadical exit 20 seconds 386 limit 3600
+c (percentage relative to total process time)
+c conflicts:                 44394       117.56    per second
+c total process time since initialization:       385.48    seconds
+c maximum resident set size of process:         3749.38    MB
+proof bytes 1097745227
+cake_lpr seconds 89 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:29.02
+	Maximum resident set size (kbytes): 8804292
+VERIFIED_LINES 1
+cfc48b83b0d65930ce8684d919c2fbd9065b3ba9bd28fcbfe6b747bc4bcab6d6  /home/jay/research/data/satopen-20261113/k9/cubes/cyc6/proof.lrat.zst
+=== cyc7
+cyc p=7: full order (by phase) [8, 9, 10, 11, 12, 13, 14, 15, 1, 2, 3, 4, 5, 6, 7]
+solved: cadical exit 20 seconds 372 limit 3600
+cube cyc7: cyc p=7: full order (by phase) [8, 9, 10, 11, 12, 13, 14, 15, 1, 2, 3, 4, 5, 6, 7]
+units: 42673 0 42674 0 42675 0 42676 0 42677 0 42678 0 -42679 0 -42680 0 -42681 0 -42682 0 -42683 0 -42684 0 -42685 0 -42686 0 42687 0 42688 0 42689 0 42690 0 42691 0 -42692 0 -42693 0 -42694 0 -42695 0 -42696 0 -42697 0 -42698 0 -42699 0 42700 0 42701 0 42702 0 42703 0 -42704 0 -42705 0 -42706 0 -42707 0 -42708 0 -42709 0 -42710 0 -42711 0 42712 0 42713 0 42714 0 -42715 0 -42716 0 -42717 0 -42718 0 -42719 0 -42720 0 -42721 0 -42722 0 42723 0 42724 0 -42725 0 -42726 0 -42727 0 -42728 0 -42729 0 -42730 0 -42731 0 -42732 0 42733 0 -42734 0 -42735 0 -42736 0 -42737 0 -42738 0 -42739 0 -42740 0 -42741 0 -42742 0 -42743 0 -42744 0 -42745 0 -42746 0 -42747 0 -42748 0 -42749 0 42750 0 42751 0 42752 0 42753 0 42754 0 42755 0 42756 0 42757 0 42758 0 42759 0 42760 0 42761 0 42762 0 42763 0 42764 0 42765 0 42766 0 42767 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+ecbb6ee8870850409be158f0bf9aee90c1b5b33f5bda8aa0a6f2938176145fde  /home/jay/research/data/satopen-20261113/k9/cubes/cyc7/cube.cnf
+625f0ed044966d23add516d72b3f43fb13d95079bf7770dd32f4b69c447e38c1  /home/jay/research/data/satopen-20261113/k9/cubes/cyc7/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cyc7/cube.cnf: OK
+cadical exit 20 seconds 372 limit 3600
+c (percentage relative to total process time)
+c conflicts:                 47860       130.72    per second
+c total process time since initialization:       371.49    seconds
+c maximum resident set size of process:         3745.69    MB
+proof bytes 1063772731
+cake_lpr seconds 80 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:20.77
+	Maximum resident set size (kbytes): 8792048
+VERIFIED_LINES 1
+031f8095a38fdfdd8adfcb80953303636752a9d72e1b861d4ccb8c876dfeeec8  /home/jay/research/data/satopen-20261113/k9/cubes/cyc7/proof.lrat.zst
+=== cyc8
+cyc p=8: full order (by phase) [9, 10, 11, 12, 13, 14, 15, 1, 2, 3, 4, 5, 6, 7, 8]
+solved: cadical exit 20 seconds 365 limit 3600
+cube cyc8: cyc p=8: full order (by phase) [9, 10, 11, 12, 13, 14, 15, 1, 2, 3, 4, 5, 6, 7, 8]
+units: 42673 0 42674 0 42675 0 42676 0 42677 0 42678 0 42679 0 -42680 0 -42681 0 -42682 0 -42683 0 -42684 0 -42685 0 -42686 0 42687 0 42688 0 42689 0 42690 0 42691 0 42692 0 -42693 0 -42694 0 -42695 0 -42696 0 -42697 0 -42698 0 -42699 0 42700 0 42701 0 42702 0 42703 0 42704 0 -42705 0 -42706 0 -42707 0 -42708 0 -42709 0 -42710 0 -42711 0 42712 0 42713 0 42714 0 42715 0 -42716 0 -42717 0 -42718 0 -42719 0 -42720 0 -42721 0 -42722 0 42723 0 42724 0 42725 0 -42726 0 -42727 0 -42728 0 -42729 0 -42730 0 -42731 0 -42732 0 42733 0 42734 0 -42735 0 -42736 0 -42737 0 -42738 0 -42739 0 -42740 0 -42741 0 42742 0 -42743 0 -42744 0 -42745 0 -42746 0 -42747 0 -42748 0 -42749 0 -42750 0 -42751 0 -42752 0 -42753 0 -42754 0 -42755 0 -42756 0 42757 0 42758 0 42759 0 42760 0 42761 0 42762 0 42763 0 42764 0 42765 0 42766 0 42767 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+0e76fa31477f0c99c026683bbfa32829131c4269bfa86f16fc9bfea73b6d4706  /home/jay/research/data/satopen-20261113/k9/cubes/cyc8/cube.cnf
+4c30d320e51af3845163cfe907a42eb8c9716cfa75b4548d5aed087767f72bf8  /home/jay/research/data/satopen-20261113/k9/cubes/cyc8/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cyc8/cube.cnf: OK
+cadical exit 20 seconds 365 limit 3600
+c (percentage relative to total process time)
+c conflicts:                 54086       150.61    per second
+c total process time since initialization:       364.38    seconds
+c maximum resident set size of process:         3749.89    MB
+proof bytes 1268355121
+cake_lpr seconds 86 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:25.74
+	Maximum resident set size (kbytes): 8810540
+VERIFIED_LINES 1
+8ccaf4533e730abb882bbf779fe91ec6959e527cdba21e7d829d0e3adf01c602  /home/jay/research/data/satopen-20261113/k9/cubes/cyc8/proof.lrat.zst
+=== cyc9
+cyc p=9: full order (by phase) [10, 11, 12, 13, 14, 15, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+solved: cadical exit 20 seconds 414 limit 3600
+cube cyc9: cyc p=9: full order (by phase) [10, 11, 12, 13, 14, 15, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+units: 42673 0 42674 0 42675 0 42676 0 42677 0 42678 0 42679 0 42680 0 -42681 0 -42682 0 -42683 0 -42684 0 -42685 0 -42686 0 42687 0 42688 0 42689 0 42690 0 42691 0 42692 0 42693 0 -42694 0 -42695 0 -42696 0 -42697 0 -42698 0 -42699 0 42700 0 42701 0 42702 0 42703 0 42704 0 42705 0 -42706 0 -42707 0 -42708 0 -42709 0 -42710 0 -42711 0 42712 0 42713 0 42714 0 42715 0 42716 0 -42717 0 -42718 0 -42719 0 -42720 0 -42721 0 -42722 0 42723 0 42724 0 42725 0 42726 0 -42727 0 -42728 0 -42729 0 -42730 0 -42731 0 -42732 0 42733 0 42734 0 42735 0 -42736 0 -42737 0 -42738 0 -42739 0 -42740 0 -42741 0 42742 0 42743 0 -42744 0 -42745 0 -42746 0 -42747 0 -42748 0 -42749 0 42750 0 -42751 0 -42752 0 -42753 0 -42754 0 -42755 0 -42756 0 -42757 0 -42758 0 -42759 0 -42760 0 -42761 0 -42762 0 42763 0 42764 0 42765 0 42766 0 42767 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+078fb5ddb06f135684515e7042ca65a42af59d40d8a3cd34171b4f5e077311bb  /home/jay/research/data/satopen-20261113/k9/cubes/cyc9/cube.cnf
+8fff6d2a1ef90094fd6137c00bc669b9f687dcc78d74eeb126861af67fe45ebe  /home/jay/research/data/satopen-20261113/k9/cubes/cyc9/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cyc9/cube.cnf: OK
+cadical exit 20 seconds 414 limit 3600
+c (percentage relative to total process time)
+c conflicts:                 46686       114.58    per second
+c total process time since initialization:       413.74    seconds
+c maximum resident set size of process:         3741.89    MB
+proof bytes 1136882444
+cake_lpr seconds 83 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:23.49
+	Maximum resident set size (kbytes): 8792124
+VERIFIED_LINES 1
+6be62474e431a8d227632f196083f9ee007dc97f9fabd1bb02e7a7ebc4d9e39f  /home/jay/research/data/satopen-20261113/k9/cubes/cyc9/proof.lrat.zst
+=== cycx_k12_p5
+cycx k=12 P=5: order (by phase) of the other 14 layers [6, 7, 8, 9, 10, 11, 13, 14, 15, 1, 2, 3, 4, 5], layer 12 free
+solved: cadical exit 20 seconds 344 limit 1500
+cube cycx_k12_p5: cycx k=12 P=5: order (by phase) of the other 14 layers [6, 7, 8, 9, 10, 11, 13, 14, 15, 1, 2, 3, 4, 5], layer 12 free
+units: 42673 0 42674 0 42675 0 42676 0 -42677 0 -42678 0 -42679 0 -42680 0 -42681 0 -42682 0 -42684 0 -42685 0 -42686 0 42687 0 42688 0 42689 0 -42690 0 -42691 0 -42692 0 -42693 0 -42694 0 -42695 0 -42697 0 -42698 0 -42699 0 42700 0 42701 0 -42702 0 -42703 0 -42704 0 -42705 0 -42706 0 -42707 0 -42709 0 -42710 0 -42711 0 42712 0 -42713 0 -42714 0 -42715 0 -42716 0 -42717 0 -42718 0 -42720 0 -42721 0 -42722 0 -42723 0 -42724 0 -42725 0 -42726 0 -42727 0 -42728 0 -42730 0 -42731 0 -42732 0 42733 0 42734 0 42735 0 42736 0 42737 0 42739 0 42740 0 42741 0 42742 0 42743 0 42744 0 42745 0 42747 0 42748 0 42749 0 42750 0 42751 0 42752 0 42754 0 42755 0 42756 0 42757 0 42758 0 42760 0 42761 0 42762 0 42763 0 42765 0 42766 0 42767 0 42769 0 42770 0 42771 0 42775 0 42776 0 42777 0 
+61f900df1b7905c8187973cfea2432eda0331a429616f5fbf8a8a1dae7bfd522  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k12_p5/cube.cnf
+c1429a7fbb2d98e1e1bd93ce8b272067c1ce0b40c137c628db058960c0f0b22b  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k12_p5/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cycx_k12_p5/cube.cnf: OK
+cadical exit 20 seconds 344 limit 1500
+c (percentage relative to total process time)
+c conflicts:                 49104       145.48    per second
+c total process time since initialization:       342.88    seconds
+c maximum resident set size of process:         3873.21    MB
+proof bytes 1069931197
+cake_lpr seconds 82 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:21.88
+	Maximum resident set size (kbytes): 8785604
+VERIFIED_LINES 1
+6633fa98fe3ee185b747a26c1b183a64d1ff6d2d9f2f5a325616c2e0745d38af  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k12_p5/proof.lrat.zst
+=== cycx_k13_p6
+cycx k=13 P=6: order (by phase) of the other 14 layers [7, 8, 9, 10, 11, 12, 14, 15, 1, 2, 3, 4, 5, 6], layer 13 free
+solved: cadical exit 20 seconds 359 limit 1200
+cube cycx_k13_p6: cycx k=13 P=6: order (by phase) of the other 14 layers [7, 8, 9, 10, 11, 12, 14, 15, 1, 2, 3, 4, 5, 6], layer 13 free
+units: 42673 0 42674 0 42675 0 42676 0 42677 0 -42678 0 -42679 0 -42680 0 -42681 0 -42682 0 -42683 0 -42685 0 -42686 0 42687 0 42688 0 42689 0 42690 0 -42691 0 -42692 0 -42693 0 -42694 0 -42695 0 -42696 0 -42698 0 -42699 0 42700 0 42701 0 42702 0 -42703 0 -42704 0 -42705 0 -42706 0 -42707 0 -42708 0 -42710 0 -42711 0 42712 0 42713 0 -42714 0 -42715 0 -42716 0 -42717 0 -42718 0 -42719 0 -42721 0 -42722 0 42723 0 -42724 0 -42725 0 -42726 0 -42727 0 -42728 0 -42729 0 -42731 0 -42732 0 -42733 0 -42734 0 -42735 0 -42736 0 -42737 0 -42738 0 -42740 0 -42741 0 42742 0 42743 0 42744 0 42745 0 42746 0 42748 0 42749 0 42750 0 42751 0 42752 0 42753 0 42755 0 42756 0 42757 0 42758 0 42759 0 42761 0 42762 0 42763 0 42764 0 42766 0 42767 0 42768 0 42770 0 42771 0 42773 0 42774 0 42777 0 
+754973daffa1151563ec7416e46270ff07138f68e7d643053580ba957bab2b94  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k13_p6/cube.cnf
+ffc84d42614b9c9cd866e68df3aee3a7379fd1857c224795059977ab8c27ba13  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k13_p6/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cycx_k13_p6/cube.cnf: OK
+cadical exit 20 seconds 359 limit 1200
+c (percentage relative to total process time)
+c conflicts:                 47447       133.93    per second
+c total process time since initialization:       359.09    seconds
+c maximum resident set size of process:         3872.91    MB
+proof bytes 1052379874
+cake_lpr seconds 78 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:18.24
+	Maximum resident set size (kbytes): 8785852
+VERIFIED_LINES 1
+c8d9a3f89962aa915c00e581c1283da7b44bf93490fdaac79f7dbdc4d941591c  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k13_p6/proof.lrat.zst
+=== cycx_k14_p5
+cycx k=14 P=5: order (by phase) of the other 14 layers [6, 7, 8, 9, 10, 11, 12, 13, 15, 1, 2, 3, 4, 5], layer 14 free
+solved: cadical exit 20 seconds 361 limit 1200
+cube cycx_k14_p5: cycx k=14 P=5: order (by phase) of the other 14 layers [6, 7, 8, 9, 10, 11, 12, 13, 15, 1, 2, 3, 4, 5], layer 14 free
+units: 42673 0 42674 0 42675 0 42676 0 -42677 0 -42678 0 -42679 0 -42680 0 -42681 0 -42682 0 -42683 0 -42684 0 -42686 0 42687 0 42688 0 42689 0 -42690 0 -42691 0 -42692 0 -42693 0 -42694 0 -42695 0 -42696 0 -42697 0 -42699 0 42700 0 42701 0 -42702 0 -42703 0 -42704 0 -42705 0 -42706 0 -42707 0 -42708 0 -42709 0 -42711 0 42712 0 -42713 0 -42714 0 -42715 0 -42716 0 -42717 0 -42718 0 -42719 0 -42720 0 -42722 0 -42723 0 -42724 0 -42725 0 -42726 0 -42727 0 -42728 0 -42729 0 -42730 0 -42732 0 42733 0 42734 0 42735 0 42736 0 42737 0 42738 0 42739 0 42741 0 42742 0 42743 0 42744 0 42745 0 42746 0 42747 0 42749 0 42750 0 42751 0 42752 0 42753 0 42754 0 42756 0 42757 0 42758 0 42759 0 42760 0 42762 0 42763 0 42764 0 42765 0 42767 0 42768 0 42769 0 42771 0 42772 0 42774 0 42776 0 
+ac1c728233c6cb7f6cddd78df71a07f3625ed4331c33c243a3f5a33cb4c27e81  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k14_p5/cube.cnf
+cd92864b03db707b75d67ddbbaad857a644048b4b3971516020f30d1a830809e  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k14_p5/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cycx_k14_p5/cube.cnf: OK
+cadical exit 20 seconds 361 limit 1200
+c (percentage relative to total process time)
+c conflicts:                 43246       121.91    per second
+c total process time since initialization:       360.31    seconds
+c maximum resident set size of process:         3854.32    MB
+proof bytes 1072670315
+cake_lpr seconds 81 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:21.67
+	Maximum resident set size (kbytes): 8785920
+VERIFIED_LINES 1
+f77de70030e2bf4f1a3f3029b845863206ee38c628ed6770628e4ecbcdaebd8d  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k14_p5/proof.lrat.zst
+=== cycx_k15_p10
+cycx k=15 P=10: order (by phase) of the other 14 layers [11, 12, 13, 14, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], layer 15 free
+solved: cadical exit 20 seconds 431 limit 2400
+cube cycx_k15_p10: cycx k=15 P=10: order (by phase) of the other 14 layers [11, 12, 13, 14, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], layer 15 free
+units: 42673 0 42674 0 42675 0 42676 0 42677 0 42678 0 42679 0 42680 0 42681 0 -42682 0 -42683 0 -42684 0 -42685 0 42687 0 42688 0 42689 0 42690 0 42691 0 42692 0 42693 0 42694 0 -42695 0 -42696 0 -42697 0 -42698 0 42700 0 42701 0 42702 0 42703 0 42704 0 42705 0 42706 0 -42707 0 -42708 0 -42709 0 -42710 0 42712 0 42713 0 42714 0 42715 0 42716 0 42717 0 -42718 0 -42719 0 -42720 0 -42721 0 42723 0 42724 0 42725 0 42726 0 42727 0 -42728 0 -42729 0 -42730 0 -42731 0 42733 0 42734 0 42735 0 42736 0 -42737 0 -42738 0 -42739 0 -42740 0 42742 0 42743 0 42744 0 -42745 0 -42746 0 -42747 0 -42748 0 42750 0 42751 0 -42752 0 -42753 0 -42754 0 -42755 0 42757 0 -42758 0 -42759 0 -42760 0 -42761 0 -42763 0 -42764 0 -42765 0 -42766 0 42768 0 42769 0 42770 0 42772 0 42773 0 42775 0 
+6862661617aa839735657570b1fbafc904a5616d20d10c9c7b3b2a40b902873c  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p10/cube.cnf
+3b1cbea6ce9b80afad487caca081f77cd7d419cd3cd876d0e1bfb28c51b946f0  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p10/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p10/cube.cnf: OK
+cadical exit 20 seconds 431 limit 2400
+c (percentage relative to total process time)
+c conflicts:                 55564       130.59    per second
+c total process time since initialization:       430.64    seconds
+c maximum resident set size of process:         3888.84    MB
+proof bytes 1267357211
+cake_lpr seconds 88 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:27.96
+	Maximum resident set size (kbytes): 8789952
+VERIFIED_LINES 1
+822922276868e5a937506207bbfb267410381bdcf7c7770b951c616e7b926726  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p10/proof.lrat.zst
+=== cycx_k15_p11
+cycx k=15 P=11: order (by phase) of the other 14 layers [12, 13, 14, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], layer 15 free
+solved: cadical exit 20 seconds 456 limit 2400
+cube cycx_k15_p11: cycx k=15 P=11: order (by phase) of the other 14 layers [12, 13, 14, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], layer 15 free
+units: 42673 0 42674 0 42675 0 42676 0 42677 0 42678 0 42679 0 42680 0 42681 0 42682 0 -42683 0 -42684 0 -42685 0 42687 0 42688 0 42689 0 42690 0 42691 0 42692 0 42693 0 42694 0 42695 0 -42696 0 -42697 0 -42698 0 42700 0 42701 0 42702 0 42703 0 42704 0 42705 0 42706 0 42707 0 -42708 0 -42709 0 -42710 0 42712 0 42713 0 42714 0 42715 0 42716 0 42717 0 42718 0 -42719 0 -42720 0 -42721 0 42723 0 42724 0 42725 0 42726 0 42727 0 42728 0 -42729 0 -42730 0 -42731 0 42733 0 42734 0 42735 0 42736 0 42737 0 -42738 0 -42739 0 -42740 0 42742 0 42743 0 42744 0 42745 0 -42746 0 -42747 0 -42748 0 42750 0 42751 0 42752 0 -42753 0 -42754 0 -42755 0 42757 0 42758 0 -42759 0 -42760 0 -42761 0 42763 0 -42764 0 -42765 0 -42766 0 -42768 0 -42769 0 -42770 0 42772 0 42773 0 42775 0 
+83f556f01814ad7df5678ed63b0504b2a887ffd9ebff5b0ea4f69da727897c58  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p11/cube.cnf
+7485f38f2a562bd1a8ec452a32b85d825c2c3720c33ddd8ee11e6a324051e996  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p11/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p11/cube.cnf: OK
+cadical exit 20 seconds 456 limit 2400
+c (percentage relative to total process time)
+c conflicts:                 59489       132.47    per second
+c total process time since initialization:       455.48    seconds
+c maximum resident set size of process:         3881.39    MB
+proof bytes 1230528934
+cake_lpr seconds 91 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:30.19
+	Maximum resident set size (kbytes): 8789940
+VERIFIED_LINES 1
+7f7341bb26675b317daadf57d631b657859e05af34248b57825864224effe91b  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p11/proof.lrat.zst
+=== cycx_k15_p3
+cycx k=15 P=3: order (by phase) of the other 14 layers [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 1, 2, 3], layer 15 free
+solved: cadical exit 20 seconds 416 limit 2400
+cube cycx_k15_p3: cycx k=15 P=3: order (by phase) of the other 14 layers [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 1, 2, 3], layer 15 free
+units: 42673 0 42674 0 -42675 0 -42676 0 -42677 0 -42678 0 -42679 0 -42680 0 -42681 0 -42682 0 -42683 0 -42684 0 -42685 0 42687 0 -42688 0 -42689 0 -42690 0 -42691 0 -42692 0 -42693 0 -42694 0 -42695 0 -42696 0 -42697 0 -42698 0 -42700 0 -42701 0 -42702 0 -42703 0 -42704 0 -42705 0 -42706 0 -42707 0 -42708 0 -42709 0 -42710 0 42712 0 42713 0 42714 0 42715 0 42716 0 42717 0 42718 0 42719 0 42720 0 42721 0 42723 0 42724 0 42725 0 42726 0 42727 0 42728 0 42729 0 42730 0 42731 0 42733 0 42734 0 42735 0 42736 0 42737 0 42738 0 42739 0 42740 0 42742 0 42743 0 42744 0 42745 0 42746 0 42747 0 42748 0 42750 0 42751 0 42752 0 42753 0 42754 0 42755 0 42757 0 42758 0 42759 0 42760 0 42761 0 42763 0 42764 0 42765 0 42766 0 42768 0 42769 0 42770 0 42772 0 42773 0 42775 0 
+ea0f55a6eb28834908d84e16cec89edfa055ec57495eb2e23fb052a72d96fffa  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p3/cube.cnf
+8b94542b407861ecdc7c58c09de85c06aa367667bca98fe6d834e5056c9399c4  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p3/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p3/cube.cnf: OK
+cadical exit 20 seconds 416 limit 2400
+c (percentage relative to total process time)
+c conflicts:                 47151       115.41    per second
+c total process time since initialization:       415.54    seconds
+c maximum resident set size of process:         3869.35    MB
+proof bytes 1090190987
+cake_lpr seconds 84 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:23.85
+	Maximum resident set size (kbytes): 8787904
+VERIFIED_LINES 1
+bbb11537ded14b1740d6b43458128657700f7658c8c634c1dce2e861f1529396  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p3/proof.lrat.zst
+=== cycx_k15_p4
+cycx k=15 P=4: order (by phase) of the other 14 layers [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 1, 2, 3, 4], layer 15 free
+solved: cadical exit 20 seconds 388 limit 2400
+cube cycx_k15_p4: cycx k=15 P=4: order (by phase) of the other 14 layers [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 1, 2, 3, 4], layer 15 free
+units: 42673 0 42674 0 42675 0 -42676 0 -42677 0 -42678 0 -42679 0 -42680 0 -42681 0 -42682 0 -42683 0 -42684 0 -42685 0 42687 0 42688 0 -42689 0 -42690 0 -42691 0 -42692 0 -42693 0 -42694 0 -42695 0 -42696 0 -42697 0 -42698 0 42700 0 -42701 0 -42702 0 -42703 0 -42704 0 -42705 0 -42706 0 -42707 0 -42708 0 -42709 0 -42710 0 -42712 0 -42713 0 -42714 0 -42715 0 -42716 0 -42717 0 -42718 0 -42719 0 -42720 0 -42721 0 42723 0 42724 0 42725 0 42726 0 42727 0 42728 0 42729 0 42730 0 42731 0 42733 0 42734 0 42735 0 42736 0 42737 0 42738 0 42739 0 42740 0 42742 0 42743 0 42744 0 42745 0 42746 0 42747 0 42748 0 42750 0 42751 0 42752 0 42753 0 42754 0 42755 0 42757 0 42758 0 42759 0 42760 0 42761 0 42763 0 42764 0 42765 0 42766 0 42768 0 42769 0 42770 0 42772 0 42773 0 42775 0 
+64c085f2dd97948e719358fe7ecf40641e3dc3c5d56fa9d05f982bd6474cf610  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p4/cube.cnf
+422c213757268e772d7f7ac022897dac475e05e2707ab521d9ba4c8a63f0a064  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p4/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p4/cube.cnf: OK
+cadical exit 20 seconds 388 limit 2400
+c (percentage relative to total process time)
+c conflicts:                 46550       121.89    per second
+c total process time since initialization:       387.10    seconds
+c maximum resident set size of process:         3855.85    MB
+proof bytes 1087035976
+cake_lpr seconds 82 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:22.26
+	Maximum resident set size (kbytes): 8795852
+VERIFIED_LINES 1
+ae380698efa75bdb805bc4b706189e7c126e747fcfb70c6394feb9b049bfde9a  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p4/proof.lrat.zst
+=== cycx_k15_p5
+cycx k=15 P=5: order (by phase) of the other 14 layers [6, 7, 8, 9, 10, 11, 12, 13, 14, 1, 2, 3, 4, 5], layer 15 free
+solved: cadical exit 20 seconds 404 limit 2400
+cube cycx_k15_p5: cycx k=15 P=5: order (by phase) of the other 14 layers [6, 7, 8, 9, 10, 11, 12, 13, 14, 1, 2, 3, 4, 5], layer 15 free
+units: 42673 0 42674 0 42675 0 42676 0 -42677 0 -42678 0 -42679 0 -42680 0 -42681 0 -42682 0 -42683 0 -42684 0 -42685 0 42687 0 42688 0 42689 0 -42690 0 -42691 0 -42692 0 -42693 0 -42694 0 -42695 0 -42696 0 -42697 0 -42698 0 42700 0 42701 0 -42702 0 -42703 0 -42704 0 -42705 0 -42706 0 -42707 0 -42708 0 -42709 0 -42710 0 42712 0 -42713 0 -42714 0 -42715 0 -42716 0 -42717 0 -42718 0 -42719 0 -42720 0 -42721 0 -42723 0 -42724 0 -42725 0 -42726 0 -42727 0 -42728 0 -42729 0 -42730 0 -42731 0 42733 0 42734 0 42735 0 42736 0 42737 0 42738 0 42739 0 42740 0 42742 0 42743 0 42744 0 42745 0 42746 0 42747 0 42748 0 42750 0 42751 0 42752 0 42753 0 42754 0 42755 0 42757 0 42758 0 42759 0 42760 0 42761 0 42763 0 42764 0 42765 0 42766 0 42768 0 42769 0 42770 0 42772 0 42773 0 42775 0 
+8e31abc65a3f9f6c05b8a04249fed1b69e3be80e834a8657e2b16056c48772ad  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p5/cube.cnf
+0201fc566fe612945295be8774d04bdf93ac705363d01fd3d2d2e3743505c461  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p5/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p5/cube.cnf: OK
+cadical exit 20 seconds 404 limit 2400
+c (percentage relative to total process time)
+c conflicts:                 45473       114.62    per second
+c total process time since initialization:       403.62    seconds
+c maximum resident set size of process:         3860.27    MB
+proof bytes 1055641293
+cake_lpr seconds 77 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:16.98
+	Maximum resident set size (kbytes): 8785684
+VERIFIED_LINES 1
+8133283fd1f313c6fd3da3c955fb2b30c1e717ca8416f0695fd7f20e77180bf9  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p5/proof.lrat.zst
+=== cycx_k15_p6
+cycx k=15 P=6: order (by phase) of the other 14 layers [7, 8, 9, 10, 11, 12, 13, 14, 1, 2, 3, 4, 5, 6], layer 15 free
+solved: cadical exit 20 seconds 352 limit 2400
+cube cycx_k15_p6: cycx k=15 P=6: order (by phase) of the other 14 layers [7, 8, 9, 10, 11, 12, 13, 14, 1, 2, 3, 4, 5, 6], layer 15 free
+units: 42673 0 42674 0 42675 0 42676 0 42677 0 -42678 0 -42679 0 -42680 0 -42681 0 -42682 0 -42683 0 -42684 0 -42685 0 42687 0 42688 0 42689 0 42690 0 -42691 0 -42692 0 -42693 0 -42694 0 -42695 0 -42696 0 -42697 0 -42698 0 42700 0 42701 0 42702 0 -42703 0 -42704 0 -42705 0 -42706 0 -42707 0 -42708 0 -42709 0 -42710 0 42712 0 42713 0 -42714 0 -42715 0 -42716 0 -42717 0 -42718 0 -42719 0 -42720 0 -42721 0 42723 0 -42724 0 -42725 0 -42726 0 -42727 0 -42728 0 -42729 0 -42730 0 -42731 0 -42733 0 -42734 0 -42735 0 -42736 0 -42737 0 -42738 0 -42739 0 -42740 0 42742 0 42743 0 42744 0 42745 0 42746 0 42747 0 42748 0 42750 0 42751 0 42752 0 42753 0 42754 0 42755 0 42757 0 42758 0 42759 0 42760 0 42761 0 42763 0 42764 0 42765 0 42766 0 42768 0 42769 0 42770 0 42772 0 42773 0 42775 0 
+06b25e50987d67e95d134da9abbc6611a69d95e153d1e54e1ebd9b733938915f  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p6/cube.cnf
+371dd4d50e458ca1e986f7aabf6e4ac25bd3287e8c02bd5a6fc797eaa372fa57  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p6/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p6/cube.cnf: OK
+cadical exit 20 seconds 352 limit 2400
+c (percentage relative to total process time)
+c conflicts:                 47818       138.19    per second
+c total process time since initialization:       351.02    seconds
+c maximum resident set size of process:         3848.99    MB
+proof bytes 1114420956
+cake_lpr seconds 95 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:35.25
+	Maximum resident set size (kbytes): 8785960
+VERIFIED_LINES 1
+7651ce8160494de5440d8001bddb9810ed73d60e56f2ccfa53ad32fb74c99a3f  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p6/proof.lrat.zst
+=== cycx_k15_p7
+cycx k=15 P=7: order (by phase) of the other 14 layers [8, 9, 10, 11, 12, 13, 14, 1, 2, 3, 4, 5, 6, 7], layer 15 free
+solved: cadical exit 20 seconds 366 limit 2400
+cube cycx_k15_p7: cycx k=15 P=7: order (by phase) of the other 14 layers [8, 9, 10, 11, 12, 13, 14, 1, 2, 3, 4, 5, 6, 7], layer 15 free
+units: 42673 0 42674 0 42675 0 42676 0 42677 0 42678 0 -42679 0 -42680 0 -42681 0 -42682 0 -42683 0 -42684 0 -42685 0 42687 0 42688 0 42689 0 42690 0 42691 0 -42692 0 -42693 0 -42694 0 -42695 0 -42696 0 -42697 0 -42698 0 42700 0 42701 0 42702 0 42703 0 -42704 0 -42705 0 -42706 0 -42707 0 -42708 0 -42709 0 -42710 0 42712 0 42713 0 42714 0 -42715 0 -42716 0 -42717 0 -42718 0 -42719 0 -42720 0 -42721 0 42723 0 42724 0 -42725 0 -42726 0 -42727 0 -42728 0 -42729 0 -42730 0 -42731 0 42733 0 -42734 0 -42735 0 -42736 0 -42737 0 -42738 0 -42739 0 -42740 0 -42742 0 -42743 0 -42744 0 -42745 0 -42746 0 -42747 0 -42748 0 42750 0 42751 0 42752 0 42753 0 42754 0 42755 0 42757 0 42758 0 42759 0 42760 0 42761 0 42763 0 42764 0 42765 0 42766 0 42768 0 42769 0 42770 0 42772 0 42773 0 42775 0 
+b847e1683e3142ed603d0e8b6c956996b7a1e77f94917ff0f4a49f8b49e94c6a  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p7/cube.cnf
+1238321afe66adf63035f8fdd6ea3c4c2cafc0b954bcf9bb7f138617564ecc73  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p7/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p7/cube.cnf: OK
+cadical exit 20 seconds 366 limit 2400
+c (percentage relative to total process time)
+c conflicts:                 45861       128.22    per second
+c total process time since initialization:       364.61    seconds
+c maximum resident set size of process:         3848.02    MB
+proof bytes 1104247722
+cake_lpr seconds 84 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:23.43
+	Maximum resident set size (kbytes): 8787900
+VERIFIED_LINES 1
+180bf30bc8dbc62cc51d488d9548148b827385450f498a3e87f3db0f78de6d85  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p7/proof.lrat.zst
+=== cycx_k15_p8
+cycx k=15 P=8: order (by phase) of the other 14 layers [9, 10, 11, 12, 13, 14, 1, 2, 3, 4, 5, 6, 7, 8], layer 15 free
+solved: cadical exit 20 seconds 382 limit 2400
+cube cycx_k15_p8: cycx k=15 P=8: order (by phase) of the other 14 layers [9, 10, 11, 12, 13, 14, 1, 2, 3, 4, 5, 6, 7, 8], layer 15 free
+units: 42673 0 42674 0 42675 0 42676 0 42677 0 42678 0 42679 0 -42680 0 -42681 0 -42682 0 -42683 0 -42684 0 -42685 0 42687 0 42688 0 42689 0 42690 0 42691 0 42692 0 -42693 0 -42694 0 -42695 0 -42696 0 -42697 0 -42698 0 42700 0 42701 0 42702 0 42703 0 42704 0 -42705 0 -42706 0 -42707 0 -42708 0 -42709 0 -42710 0 42712 0 42713 0 42714 0 42715 0 -42716 0 -42717 0 -42718 0 -42719 0 -42720 0 -42721 0 42723 0 42724 0 42725 0 -42726 0 -42727 0 -42728 0 -42729 0 -42730 0 -42731 0 42733 0 42734 0 -42735 0 -42736 0 -42737 0 -42738 0 -42739 0 -42740 0 42742 0 -42743 0 -42744 0 -42745 0 -42746 0 -42747 0 -42748 0 -42750 0 -42751 0 -42752 0 -42753 0 -42754 0 -42755 0 42757 0 42758 0 42759 0 42760 0 42761 0 42763 0 42764 0 42765 0 42766 0 42768 0 42769 0 42770 0 42772 0 42773 0 42775 0 
+a04eb0f03e7b39bed1d7f581c01d6f52b5bd0914fc7fce056bc26c490af14c0c  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p8/cube.cnf
+212bce44e31849ccc73643a55460d45c6aeb399353e11ef22c0ef1b2697e130b  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p8/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p8/cube.cnf: OK
+cadical exit 20 seconds 382 limit 2400
+c (percentage relative to total process time)
+c conflicts:                 44042       117.19    per second
+c total process time since initialization:       381.01    seconds
+c maximum resident set size of process:         3862.33    MB
+proof bytes 1051114792
+cake_lpr seconds 86 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:25.57
+	Maximum resident set size (kbytes): 8787900
+VERIFIED_LINES 1
+2779e7e74d7e47a509da568102e20d15ea101bfa3a3618a74bbff36fc57612de  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p8/proof.lrat.zst
+=== cycx_k15_p9
+cycx k=15 P=9: order (by phase) of the other 14 layers [10, 11, 12, 13, 14, 1, 2, 3, 4, 5, 6, 7, 8, 9], layer 15 free
+solved: cadical exit 20 seconds 503 limit 2400
+cube cycx_k15_p9: cycx k=15 P=9: order (by phase) of the other 14 layers [10, 11, 12, 13, 14, 1, 2, 3, 4, 5, 6, 7, 8, 9], layer 15 free
+units: 42673 0 42674 0 42675 0 42676 0 42677 0 42678 0 42679 0 42680 0 -42681 0 -42682 0 -42683 0 -42684 0 -42685 0 42687 0 42688 0 42689 0 42690 0 42691 0 42692 0 42693 0 -42694 0 -42695 0 -42696 0 -42697 0 -42698 0 42700 0 42701 0 42702 0 42703 0 42704 0 42705 0 -42706 0 -42707 0 -42708 0 -42709 0 -42710 0 42712 0 42713 0 42714 0 42715 0 42716 0 -42717 0 -42718 0 -42719 0 -42720 0 -42721 0 42723 0 42724 0 42725 0 42726 0 -42727 0 -42728 0 -42729 0 -42730 0 -42731 0 42733 0 42734 0 42735 0 -42736 0 -42737 0 -42738 0 -42739 0 -42740 0 42742 0 42743 0 -42744 0 -42745 0 -42746 0 -42747 0 -42748 0 42750 0 -42751 0 -42752 0 -42753 0 -42754 0 -42755 0 -42757 0 -42758 0 -42759 0 -42760 0 -42761 0 42763 0 42764 0 42765 0 42766 0 42768 0 42769 0 42770 0 42772 0 42773 0 42775 0 
+e5267df61341817fdfd591a01735c514097bcb43bb8721a8500c271ba20c3ac1  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p9/cube.cnf
+f9116a31a8df8b5f009e02fddfcf06fafe3d271e9b0b30df2b75dff0300deed2  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p9/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p9/cube.cnf: OK
+cadical exit 20 seconds 503 limit 2400
+c (percentage relative to total process time)
+c conflicts:                 62577       126.00    per second
+c total process time since initialization:       502.02    seconds
+c maximum resident set size of process:         3854.63    MB
+proof bytes 1251903052
+cake_lpr seconds 88 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:27.29
+	Maximum resident set size (kbytes): 8791648
+VERIFIED_LINES 1
+d484209b43b291e7c93856983d42b3a11d4faa736aaa8b9e709aec7ed2ea6fed  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k15_p9/proof.lrat.zst
+=== cycx_k1_p10
+cycx k=1 P=10: order (by phase) of the other 14 layers [12, 13, 14, 15, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], layer 1 free
+solved: cadical exit 20 seconds 494 limit 2400
+cube cycx_k1_p10: cycx k=1 P=10: order (by phase) of the other 14 layers [12, 13, 14, 15, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], layer 1 free
+units: 42687 0 42688 0 42689 0 42690 0 42691 0 42692 0 42693 0 42694 0 42695 0 -42696 0 -42697 0 -42698 0 -42699 0 42700 0 42701 0 42702 0 42703 0 42704 0 42705 0 42706 0 42707 0 -42708 0 -42709 0 -42710 0 -42711 0 42712 0 42713 0 42714 0 42715 0 42716 0 42717 0 42718 0 -42719 0 -42720 0 -42721 0 -42722 0 42723 0 42724 0 42725 0 42726 0 42727 0 42728 0 -42729 0 -42730 0 -42731 0 -42732 0 42733 0 42734 0 42735 0 42736 0 42737 0 -42738 0 -42739 0 -42740 0 -42741 0 42742 0 42743 0 42744 0 42745 0 -42746 0 -42747 0 -42748 0 -42749 0 42750 0 42751 0 42752 0 -42753 0 -42754 0 -42755 0 -42756 0 42757 0 42758 0 -42759 0 -42760 0 -42761 0 -42762 0 42763 0 -42764 0 -42765 0 -42766 0 -42767 0 -42768 0 -42769 0 -42770 0 -42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+6af56a00d0669cd4ddf365ed25d1f315dc13447feb1015c785d6ba4fe0a38c37  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p10/cube.cnf
+4b8af5dbc1bf3bebc823b7929272426e95cd1ca70cc68e8face327347f7a0ea1  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p10/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p10/cube.cnf: OK
+cadical exit 20 seconds 494 limit 2400
+c (percentage relative to total process time)
+c conflicts:                 59331       121.76    per second
+c total process time since initialization:       494.02    seconds
+c maximum resident set size of process:         3914.94    MB
+proof bytes 1159180666
+cake_lpr seconds 89 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:28.52
+	Maximum resident set size (kbytes): 8787908
+VERIFIED_LINES 1
+8cd4f1c0bbd9321978c48ee7567ff97ee5374583ba2aca5a4f49a30c2f7381e4  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p10/proof.lrat.zst
+=== cycx_k1_p11
+cycx k=1 P=11: order (by phase) of the other 14 layers [13, 14, 15, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], layer 1 free
+solved: cadical exit 20 seconds 505 limit 2400
+cube cycx_k1_p11: cycx k=1 P=11: order (by phase) of the other 14 layers [13, 14, 15, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], layer 1 free
+units: 42687 0 42688 0 42689 0 42690 0 42691 0 42692 0 42693 0 42694 0 42695 0 42696 0 -42697 0 -42698 0 -42699 0 42700 0 42701 0 42702 0 42703 0 42704 0 42705 0 42706 0 42707 0 42708 0 -42709 0 -42710 0 -42711 0 42712 0 42713 0 42714 0 42715 0 42716 0 42717 0 42718 0 42719 0 -42720 0 -42721 0 -42722 0 42723 0 42724 0 42725 0 42726 0 42727 0 42728 0 42729 0 -42730 0 -42731 0 -42732 0 42733 0 42734 0 42735 0 42736 0 42737 0 42738 0 -42739 0 -42740 0 -42741 0 42742 0 42743 0 42744 0 42745 0 42746 0 -42747 0 -42748 0 -42749 0 42750 0 42751 0 42752 0 42753 0 -42754 0 -42755 0 -42756 0 42757 0 42758 0 42759 0 -42760 0 -42761 0 -42762 0 42763 0 42764 0 -42765 0 -42766 0 -42767 0 42768 0 -42769 0 -42770 0 -42771 0 -42772 0 -42773 0 -42774 0 42775 0 42776 0 42777 0 
+2336ad6ef16dda147fc352c7173f6537318a94b85d4a3cd322b085026974332f  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p11/cube.cnf
+2cb27c1742518530d423e5fbca1c7b6165403a5086dcde01dd49a62efc36faec  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p11/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p11/cube.cnf: OK
+cadical exit 20 seconds 505 limit 2400
+c (percentage relative to total process time)
+c conflicts:                 59915       120.60    per second
+c total process time since initialization:       503.99    seconds
+c maximum resident set size of process:         3923.89    MB
+proof bytes 1136434378
+cake_lpr seconds 89 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:28.30
+	Maximum resident set size (kbytes): 8789952
+VERIFIED_LINES 1
+fa82b7148efd3708869399a4d6d8a4b9311ffdb41ec7209ab7a3d7219dc11b4b  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p11/proof.lrat.zst
+=== cycx_k1_p3
+cycx k=1 P=3: order (by phase) of the other 14 layers [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 2, 3, 4], layer 1 free
+solved: cadical exit 20 seconds 419 limit 2400
+cube cycx_k1_p3: cycx k=1 P=3: order (by phase) of the other 14 layers [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 2, 3, 4], layer 1 free
+units: 42687 0 42688 0 -42689 0 -42690 0 -42691 0 -42692 0 -42693 0 -42694 0 -42695 0 -42696 0 -42697 0 -42698 0 -42699 0 42700 0 -42701 0 -42702 0 -42703 0 -42704 0 -42705 0 -42706 0 -42707 0 -42708 0 -42709 0 -42710 0 -42711 0 -42712 0 -42713 0 -42714 0 -42715 0 -42716 0 -42717 0 -42718 0 -42719 0 -42720 0 -42721 0 -42722 0 42723 0 42724 0 42725 0 42726 0 42727 0 42728 0 42729 0 42730 0 42731 0 42732 0 42733 0 42734 0 42735 0 42736 0 42737 0 42738 0 42739 0 42740 0 42741 0 42742 0 42743 0 42744 0 42745 0 42746 0 42747 0 42748 0 42749 0 42750 0 42751 0 42752 0 42753 0 42754 0 42755 0 42756 0 42757 0 42758 0 42759 0 42760 0 42761 0 42762 0 42763 0 42764 0 42765 0 42766 0 42767 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+5ff9b67ed47165250d8a82a5b26fdfd7bfad0dbf0b740bdd92744acd749678b9  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p3/cube.cnf
+f2fcde7119cdcbc802646c3cd779a1e3b9367dcdd18205a36a39a59761add34d  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p3/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p3/cube.cnf: OK
+cadical exit 20 seconds 419 limit 2400
+c (percentage relative to total process time)
+c conflicts:                 49112       118.93    per second
+c total process time since initialization:       419.42    seconds
+c maximum resident set size of process:         3962.39    MB
+proof bytes 1041429519
+cake_lpr seconds 88 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:27.87
+	Maximum resident set size (kbytes): 8788100
+VERIFIED_LINES 1
+1a76b0d9a27b7d528f5a1f3d68e4bd31c90dad14f328819bcfb768233d07331d  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p3/proof.lrat.zst
+=== cycx_k1_p4
+cycx k=1 P=4: order (by phase) of the other 14 layers [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 2, 3, 4, 5], layer 1 free
+solved: cadical exit 20 seconds 391 limit 2400
+cube cycx_k1_p4: cycx k=1 P=4: order (by phase) of the other 14 layers [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 2, 3, 4, 5], layer 1 free
+units: 42687 0 42688 0 42689 0 -42690 0 -42691 0 -42692 0 -42693 0 -42694 0 -42695 0 -42696 0 -42697 0 -42698 0 -42699 0 42700 0 42701 0 -42702 0 -42703 0 -42704 0 -42705 0 -42706 0 -42707 0 -42708 0 -42709 0 -42710 0 -42711 0 42712 0 -42713 0 -42714 0 -42715 0 -42716 0 -42717 0 -42718 0 -42719 0 -42720 0 -42721 0 -42722 0 -42723 0 -42724 0 -42725 0 -42726 0 -42727 0 -42728 0 -42729 0 -42730 0 -42731 0 -42732 0 42733 0 42734 0 42735 0 42736 0 42737 0 42738 0 42739 0 42740 0 42741 0 42742 0 42743 0 42744 0 42745 0 42746 0 42747 0 42748 0 42749 0 42750 0 42751 0 42752 0 42753 0 42754 0 42755 0 42756 0 42757 0 42758 0 42759 0 42760 0 42761 0 42762 0 42763 0 42764 0 42765 0 42766 0 42767 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+8e74c9b6b61b789645f9b2c6ff2ad4782e78c10cf51ca595db8a359faaded9be  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p4/cube.cnf
+71cff2a3c41a47e9391615ffbd471149ffd588cd2e06b94e8a06fd2391de5224  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p4/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p4/cube.cnf: OK
+cadical exit 20 seconds 391 limit 2400
+c (percentage relative to total process time)
+c conflicts:                 50410       130.54    per second
+c total process time since initialization:       391.31    seconds
+c maximum resident set size of process:         3957.46    MB
+proof bytes 1098277671
+cake_lpr seconds 81 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:20.74
+	Maximum resident set size (kbytes): 8785984
+VERIFIED_LINES 1
+4f3ad0fda223f46a04e7cb5f3df7cc2761dda75aba135af53ab1ed92d058ce50  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p4/proof.lrat.zst
+=== cycx_k1_p5
+cycx k=1 P=5: order (by phase) of the other 14 layers [7, 8, 9, 10, 11, 12, 13, 14, 15, 2, 3, 4, 5, 6], layer 1 free
+solved: cadical exit 20 seconds 428 limit 2400
+cube cycx_k1_p5: cycx k=1 P=5: order (by phase) of the other 14 layers [7, 8, 9, 10, 11, 12, 13, 14, 15, 2, 3, 4, 5, 6], layer 1 free
+units: 42687 0 42688 0 42689 0 42690 0 -42691 0 -42692 0 -42693 0 -42694 0 -42695 0 -42696 0 -42697 0 -42698 0 -42699 0 42700 0 42701 0 42702 0 -42703 0 -42704 0 -42705 0 -42706 0 -42707 0 -42708 0 -42709 0 -42710 0 -42711 0 42712 0 42713 0 -42714 0 -42715 0 -42716 0 -42717 0 -42718 0 -42719 0 -42720 0 -42721 0 -42722 0 42723 0 -42724 0 -42725 0 -42726 0 -42727 0 -42728 0 -42729 0 -42730 0 -42731 0 -42732 0 -42733 0 -42734 0 -42735 0 -42736 0 -42737 0 -42738 0 -42739 0 -42740 0 -42741 0 42742 0 42743 0 42744 0 42745 0 42746 0 42747 0 42748 0 42749 0 42750 0 42751 0 42752 0 42753 0 42754 0 42755 0 42756 0 42757 0 42758 0 42759 0 42760 0 42761 0 42762 0 42763 0 42764 0 42765 0 42766 0 42767 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+af16af8edea45225e6fa3ba4035630dec53e1212ced88b1f16635dce858bff2e  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p5/cube.cnf
+838b511a81f9a1178010014976221de960a7119a76dadf60fb21d04198b5dc25  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p5/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p5/cube.cnf: OK
+cadical exit 20 seconds 428 limit 2400
+c (percentage relative to total process time)
+c conflicts:                 50955       121.25    per second
+c total process time since initialization:       426.84    seconds
+c maximum resident set size of process:         3913.44    MB
+proof bytes 1104815819
+cake_lpr seconds 84 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:23.80
+	Maximum resident set size (kbytes): 8785988
+VERIFIED_LINES 1
+ff045ca24dfad02ec788a94b29346162bc47bc4de2b140f755712b2ff134f0e9  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p5/proof.lrat.zst
+=== cycx_k1_p6
+cycx k=1 P=6: order (by phase) of the other 14 layers [8, 9, 10, 11, 12, 13, 14, 15, 2, 3, 4, 5, 6, 7], layer 1 free
+solved: cadical exit 20 seconds 392 limit 2400
+cube cycx_k1_p6: cycx k=1 P=6: order (by phase) of the other 14 layers [8, 9, 10, 11, 12, 13, 14, 15, 2, 3, 4, 5, 6, 7], layer 1 free
+units: 42687 0 42688 0 42689 0 42690 0 42691 0 -42692 0 -42693 0 -42694 0 -42695 0 -42696 0 -42697 0 -42698 0 -42699 0 42700 0 42701 0 42702 0 42703 0 -42704 0 -42705 0 -42706 0 -42707 0 -42708 0 -42709 0 -42710 0 -42711 0 42712 0 42713 0 42714 0 -42715 0 -42716 0 -42717 0 -42718 0 -42719 0 -42720 0 -42721 0 -42722 0 42723 0 42724 0 -42725 0 -42726 0 -42727 0 -42728 0 -42729 0 -42730 0 -42731 0 -42732 0 42733 0 -42734 0 -42735 0 -42736 0 -42737 0 -42738 0 -42739 0 -42740 0 -42741 0 -42742 0 -42743 0 -42744 0 -42745 0 -42746 0 -42747 0 -42748 0 -42749 0 42750 0 42751 0 42752 0 42753 0 42754 0 42755 0 42756 0 42757 0 42758 0 42759 0 42760 0 42761 0 42762 0 42763 0 42764 0 42765 0 42766 0 42767 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+90dbcb5e12285dd4852de568ff6409887f75bb70bf0664f4f230409a52403c87  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p6/cube.cnf
+b1f220eb3d6938cd7f76b536a1ddc8cb81e1af0ed46ff5cbbedcebac541a033e  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p6/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p6/cube.cnf: OK
+cadical exit 20 seconds 392 limit 2400
+c (percentage relative to total process time)
+c conflicts:                 50562       131.80    per second
+c total process time since initialization:       390.50    seconds
+c maximum resident set size of process:         3908.02    MB
+proof bytes 1095277743
+cake_lpr seconds 86 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:25.45
+	Maximum resident set size (kbytes): 8794240
+VERIFIED_LINES 1
+36b6d3368e2cfaa880c30fdd265c778d06129760b95265c9243dc763790c2090  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p6/proof.lrat.zst
+=== cycx_k1_p7
+cycx k=1 P=7: order (by phase) of the other 14 layers [9, 10, 11, 12, 13, 14, 15, 2, 3, 4, 5, 6, 7, 8], layer 1 free
+solved: cadical exit 20 seconds 356 limit 2400
+cube cycx_k1_p7: cycx k=1 P=7: order (by phase) of the other 14 layers [9, 10, 11, 12, 13, 14, 15, 2, 3, 4, 5, 6, 7, 8], layer 1 free
+units: 42687 0 42688 0 42689 0 42690 0 42691 0 42692 0 -42693 0 -42694 0 -42695 0 -42696 0 -42697 0 -42698 0 -42699 0 42700 0 42701 0 42702 0 42703 0 42704 0 -42705 0 -42706 0 -42707 0 -42708 0 -42709 0 -42710 0 -42711 0 42712 0 42713 0 42714 0 42715 0 -42716 0 -42717 0 -42718 0 -42719 0 -42720 0 -42721 0 -42722 0 42723 0 42724 0 42725 0 -42726 0 -42727 0 -42728 0 -42729 0 -42730 0 -42731 0 -42732 0 42733 0 42734 0 -42735 0 -42736 0 -42737 0 -42738 0 -42739 0 -42740 0 -42741 0 42742 0 -42743 0 -42744 0 -42745 0 -42746 0 -42747 0 -42748 0 -42749 0 -42750 0 -42751 0 -42752 0 -42753 0 -42754 0 -42755 0 -42756 0 42757 0 42758 0 42759 0 42760 0 42761 0 42762 0 42763 0 42764 0 42765 0 42766 0 42767 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+433d4d336e1ffd361015c510427d690de2f5a089d50160c2a895e98991e48bdf  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p7/cube.cnf
+6f289e70b28bf1b9e5b49fe9453fab4efc6cc393da59ea0ced0ee45209257ac5  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p7/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p7/cube.cnf: OK
+cadical exit 20 seconds 356 limit 2400
+c (percentage relative to total process time)
+c conflicts:                 45153       128.92    per second
+c total process time since initialization:       355.48    seconds
+c maximum resident set size of process:         3974.42    MB
+proof bytes 1022634764
+cake_lpr seconds 82 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:22.38
+	Maximum resident set size (kbytes): 8787972
+VERIFIED_LINES 1
+cf3ed2d12453ac2e202a62817be33e58b848e99edb138171116d45cd3c53ef61  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p7/proof.lrat.zst
+=== cycx_k1_p8
+cycx k=1 P=8: order (by phase) of the other 14 layers [10, 11, 12, 13, 14, 15, 2, 3, 4, 5, 6, 7, 8, 9], layer 1 free
+solved: cadical exit 20 seconds 456 limit 2400
+cube cycx_k1_p8: cycx k=1 P=8: order (by phase) of the other 14 layers [10, 11, 12, 13, 14, 15, 2, 3, 4, 5, 6, 7, 8, 9], layer 1 free
+units: 42687 0 42688 0 42689 0 42690 0 42691 0 42692 0 42693 0 -42694 0 -42695 0 -42696 0 -42697 0 -42698 0 -42699 0 42700 0 42701 0 42702 0 42703 0 42704 0 42705 0 -42706 0 -42707 0 -42708 0 -42709 0 -42710 0 -42711 0 42712 0 42713 0 42714 0 42715 0 42716 0 -42717 0 -42718 0 -42719 0 -42720 0 -42721 0 -42722 0 42723 0 42724 0 42725 0 42726 0 -42727 0 -42728 0 -42729 0 -42730 0 -42731 0 -42732 0 42733 0 42734 0 42735 0 -42736 0 -42737 0 -42738 0 -42739 0 -42740 0 -42741 0 42742 0 42743 0 -42744 0 -42745 0 -42746 0 -42747 0 -42748 0 -42749 0 42750 0 -42751 0 -42752 0 -42753 0 -42754 0 -42755 0 -42756 0 -42757 0 -42758 0 -42759 0 -42760 0 -42761 0 -42762 0 42763 0 42764 0 42765 0 42766 0 42767 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+72323b7e6fcae908d7451b424a645e96fef820aa127e8717a9ad295e34f0beff  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p8/cube.cnf
+0243f0208f7772c7ca98d3af13cd3ecf2ed9f3877e8aaa71944c4a43077546d9  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p8/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p8/cube.cnf: OK
+cadical exit 20 seconds 456 limit 2400
+c (percentage relative to total process time)
+c conflicts:                 55826       124.05    per second
+c total process time since initialization:       455.12    seconds
+c maximum resident set size of process:         3901.02    MB
+proof bytes 1244074491
+cake_lpr seconds 89 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:28.50
+	Maximum resident set size (kbytes): 8812476
+VERIFIED_LINES 1
+df138be4d35ae29e238616108517044c23be0c944c27fdb6b04d6a32ecc17889  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p8/proof.lrat.zst
+=== cycx_k1_p9
+cycx k=1 P=9: order (by phase) of the other 14 layers [11, 12, 13, 14, 15, 2, 3, 4, 5, 6, 7, 8, 9, 10], layer 1 free
+solved: cadical exit 20 seconds 476 limit 2400
+cube cycx_k1_p9: cycx k=1 P=9: order (by phase) of the other 14 layers [11, 12, 13, 14, 15, 2, 3, 4, 5, 6, 7, 8, 9, 10], layer 1 free
+units: 42687 0 42688 0 42689 0 42690 0 42691 0 42692 0 42693 0 42694 0 -42695 0 -42696 0 -42697 0 -42698 0 -42699 0 42700 0 42701 0 42702 0 42703 0 42704 0 42705 0 42706 0 -42707 0 -42708 0 -42709 0 -42710 0 -42711 0 42712 0 42713 0 42714 0 42715 0 42716 0 42717 0 -42718 0 -42719 0 -42720 0 -42721 0 -42722 0 42723 0 42724 0 42725 0 42726 0 42727 0 -42728 0 -42729 0 -42730 0 -42731 0 -42732 0 42733 0 42734 0 42735 0 42736 0 -42737 0 -42738 0 -42739 0 -42740 0 -42741 0 42742 0 42743 0 42744 0 -42745 0 -42746 0 -42747 0 -42748 0 -42749 0 42750 0 42751 0 -42752 0 -42753 0 -42754 0 -42755 0 -42756 0 42757 0 -42758 0 -42759 0 -42760 0 -42761 0 -42762 0 -42763 0 -42764 0 -42765 0 -42766 0 -42767 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+54721f7d7bb2fa0cd10a444f18330c11c48140c39c4a3c47bfe73512aefd2f88  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p9/cube.cnf
+5193db9cf9ad3a138b99fb6e8e02da40cca1a91655e9d66d0aef0e56a93aab3d  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p9/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p9/cube.cnf: OK
+cadical exit 20 seconds 476 limit 2400
+c (percentage relative to total process time)
+c conflicts:                 53906       115.18    per second
+c total process time since initialization:       475.78    seconds
+c maximum resident set size of process:         3896.70    MB
+proof bytes 1195668683
+cake_lpr seconds 84 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:23.97
+	Maximum resident set size (kbytes): 8787904
+VERIFIED_LINES 1
+7e153207a39cc32d3d01a27828f132b07d783faeafa75a6f7f8e34c70e63a230  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k1_p9/proof.lrat.zst
+=== cycx_k2_p7
+cycx k=2 P=7: order (by phase) of the other 14 layers [9, 10, 11, 12, 13, 14, 15, 1, 3, 4, 5, 6, 7, 8], layer 2 free
+solved: cadical exit 20 seconds 461 limit 1200
+cube cycx_k2_p7: cycx k=2 P=7: order (by phase) of the other 14 layers [9, 10, 11, 12, 13, 14, 15, 1, 3, 4, 5, 6, 7, 8], layer 2 free
+units: 42674 0 42675 0 42676 0 42677 0 42678 0 42679 0 -42680 0 -42681 0 -42682 0 -42683 0 -42684 0 -42685 0 -42686 0 42700 0 42701 0 42702 0 42703 0 42704 0 -42705 0 -42706 0 -42707 0 -42708 0 -42709 0 -42710 0 -42711 0 42712 0 42713 0 42714 0 42715 0 -42716 0 -42717 0 -42718 0 -42719 0 -42720 0 -42721 0 -42722 0 42723 0 42724 0 42725 0 -42726 0 -42727 0 -42728 0 -42729 0 -42730 0 -42731 0 -42732 0 42733 0 42734 0 -42735 0 -42736 0 -42737 0 -42738 0 -42739 0 -42740 0 -42741 0 42742 0 -42743 0 -42744 0 -42745 0 -42746 0 -42747 0 -42748 0 -42749 0 -42750 0 -42751 0 -42752 0 -42753 0 -42754 0 -42755 0 -42756 0 42757 0 42758 0 42759 0 42760 0 42761 0 42762 0 42763 0 42764 0 42765 0 42766 0 42767 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+4ea514395f2ebd85e48cc3a65659cdfb3c0221c0b149ee81c9a0d2f3d7b6d07b  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k2_p7/cube.cnf
+ca1847baf54329dc84ac895e4c77d5381329b9dd5ffd2dc900d9bd02445e1b14  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k2_p7/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cycx_k2_p7/cube.cnf: OK
+cadical exit 20 seconds 461 limit 1200
+c (percentage relative to total process time)
+c conflicts:                 54605       119.84    per second
+c total process time since initialization:       460.73    seconds
+c maximum resident set size of process:         3908.57    MB
+proof bytes 1191837112
+cake_lpr seconds 88 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:27.88
+	Maximum resident set size (kbytes): 8787988
+VERIFIED_LINES 1
+1ab827c17559242391a1d8970e5c44f0d70bf5b94147931e1f089f4cb36d3cff  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k2_p7/proof.lrat.zst
+=== cycx_k4_p8
+cycx k=4 P=8: order (by phase) of the other 14 layers [10, 11, 12, 13, 14, 15, 1, 2, 3, 5, 6, 7, 8, 9], layer 4 free
+solved: cadical exit 20 seconds 341 limit 3600
+cube cycx_k4_p8: cycx k=4 P=8: order (by phase) of the other 14 layers [10, 11, 12, 13, 14, 15, 1, 2, 3, 5, 6, 7, 8, 9], layer 4 free
+units: 42673 0 42674 0 42676 0 42677 0 42678 0 42679 0 42680 0 -42681 0 -42682 0 -42683 0 -42684 0 -42685 0 -42686 0 42687 0 42689 0 42690 0 42691 0 42692 0 42693 0 -42694 0 -42695 0 -42696 0 -42697 0 -42698 0 -42699 0 42701 0 42702 0 42703 0 42704 0 42705 0 -42706 0 -42707 0 -42708 0 -42709 0 -42710 0 -42711 0 42723 0 42724 0 42725 0 42726 0 -42727 0 -42728 0 -42729 0 -42730 0 -42731 0 -42732 0 42733 0 42734 0 42735 0 -42736 0 -42737 0 -42738 0 -42739 0 -42740 0 -42741 0 42742 0 42743 0 -42744 0 -42745 0 -42746 0 -42747 0 -42748 0 -42749 0 42750 0 -42751 0 -42752 0 -42753 0 -42754 0 -42755 0 -42756 0 -42757 0 -42758 0 -42759 0 -42760 0 -42761 0 -42762 0 42763 0 42764 0 42765 0 42766 0 42767 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+956b2c9171347dab8de1ff3accbb22215f97953e496b37196ab39d8ba41691e6  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k4_p8/cube.cnf
+5dfded1efaa4fb12f70fb255e6afa3b157ec5e49b14aed66663d3d36aff010a2  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k4_p8/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cycx_k4_p8/cube.cnf: OK
+cadical exit 20 seconds 341 limit 3600
+c (percentage relative to total process time)
+c conflicts:                 43149       128.63    per second
+c total process time since initialization:       340.67    seconds
+c maximum resident set size of process:         3912.48    MB
+proof bytes 1081447819
+cake_lpr seconds 84 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:24.03
+	Maximum resident set size (kbytes): 8787900
+VERIFIED_LINES 1
+30d8c99f05fa4307e303cc79802847e7e7280ee8cd8d822844f73c4439ad55db  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k4_p8/proof.lrat.zst
+=== cycx_k8_p7
+cycx k=8 P=7: order (by phase) of the other 14 layers [9, 10, 11, 12, 13, 14, 15, 1, 2, 3, 4, 5, 6, 7], layer 8 free
+solved: cadical exit 20 seconds 346 limit 3600
+cube cycx_k8_p7: cycx k=8 P=7: order (by phase) of the other 14 layers [9, 10, 11, 12, 13, 14, 15, 1, 2, 3, 4, 5, 6, 7], layer 8 free
+units: 42673 0 42674 0 42675 0 42676 0 42677 0 42678 0 -42680 0 -42681 0 -42682 0 -42683 0 -42684 0 -42685 0 -42686 0 42687 0 42688 0 42689 0 42690 0 42691 0 -42693 0 -42694 0 -42695 0 -42696 0 -42697 0 -42698 0 -42699 0 42700 0 42701 0 42702 0 42703 0 -42705 0 -42706 0 -42707 0 -42708 0 -42709 0 -42710 0 -42711 0 42712 0 42713 0 42714 0 -42716 0 -42717 0 -42718 0 -42719 0 -42720 0 -42721 0 -42722 0 42723 0 42724 0 -42726 0 -42727 0 -42728 0 -42729 0 -42730 0 -42731 0 -42732 0 42733 0 -42735 0 -42736 0 -42737 0 -42738 0 -42739 0 -42740 0 -42741 0 -42743 0 -42744 0 -42745 0 -42746 0 -42747 0 -42748 0 -42749 0 42757 0 42758 0 42759 0 42760 0 42761 0 42762 0 42763 0 42764 0 42765 0 42766 0 42767 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+d6190771aa8f001cc55816ab9c0a7cab0244c443cc92b11f2f7d877e64617d0e  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k8_p7/cube.cnf
+14c4b462ccb40edfdc80dc969a5a7d35900e98418fa9c199655f14b44f2f9340  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k8_p7/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/cycx_k8_p7/cube.cnf: OK
+cadical exit 20 seconds 346 limit 3600
+c (percentage relative to total process time)
+c conflicts:                 47654       140.49    per second
+c total process time since initialization:       345.27    seconds
+c maximum resident set size of process:         3938.00    MB
+proof bytes 1008399576
+cake_lpr seconds 81 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:20.80
+	Maximum resident set size (kbytes): 8787904
+VERIFIED_LINES 1
+cca935dacf062c6284056b97885f0f7056b73025888e91c0f224a497eeac469d  /home/jay/research/data/satopen-20261113/k9/cubes/cycx_k8_p7/proof.lrat.zst
+=== ex10_all
+ex j=10 r=-1: psi increasing on layers [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15]; Z decision-list cube r
+solved: cadical exit 20 seconds 1172 limit 5400
+cube ex10_all: ex j=10 r=-1: psi increasing on layers [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15]; Z decision-list cube r
+units: 42673 0 42674 0 42675 0 42676 0 42677 0 42678 0 42679 0 42680 0 42682 0 42683 0 42684 0 42685 0 42686 0 42687 0 42688 0 42689 0 42690 0 42691 0 42692 0 42693 0 42695 0 42696 0 42697 0 42698 0 42699 0 42700 0 42701 0 42702 0 42703 0 42704 0 42705 0 42707 0 42708 0 42709 0 42710 0 42711 0 42712 0 42713 0 42714 0 42715 0 42716 0 42718 0 42719 0 42720 0 42721 0 42722 0 42723 0 42724 0 42725 0 42726 0 42728 0 42729 0 42730 0 42731 0 42732 0 42733 0 42734 0 42735 0 42737 0 42738 0 42739 0 42740 0 42741 0 42742 0 42743 0 42745 0 42746 0 42747 0 42748 0 42749 0 42750 0 42752 0 42753 0 42754 0 42755 0 42756 0 42758 0 42759 0 42760 0 42761 0 42762 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+33ea87ab5dadb1517f93475bb34351ce440b6b7d62226c06adaf6cb71a3f7d84  /home/jay/research/data/satopen-20261113/k9/cubes/ex10_all/cube.cnf
+678a755b20590967a22d93e9ff44a17e3ece7b7430b8cb1ce28087027d4ef4e7  /home/jay/research/data/satopen-20261113/k9/cubes/ex10_all/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/ex10_all/cube.cnf: OK
+cadical exit 20 seconds 1172 limit 5400
+c (percentage relative to total process time)
+c conflicts:                155140       133.37    per second
+c total process time since initialization:      1170.38    seconds
+c maximum resident set size of process:         3893.37    MB
+proof bytes 1826849167
+cake_lpr seconds 106 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:46.15
+	Maximum resident set size (kbytes): 8796096
+VERIFIED_LINES 1
+1cf21a3ea529bb4afb3fbd1b8496b410b9bfa26034334fe3cef606d4c20070dc  /home/jay/research/data/satopen-20261113/k9/cubes/ex10_all/proof.lrat.zst
+=== ex11_all
+ex j=11 r=-1: psi increasing on layers [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15]; Z decision-list cube r
+solved: cadical exit 20 seconds 1358 limit 5400
+cube ex11_all: ex j=11 r=-1: psi increasing on layers [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15]; Z decision-list cube r
+units: 42673 0 42674 0 42675 0 42676 0 42677 0 42678 0 42679 0 42680 0 42681 0 42683 0 42684 0 42685 0 42686 0 42687 0 42688 0 42689 0 42690 0 42691 0 42692 0 42693 0 42694 0 42696 0 42697 0 42698 0 42699 0 42700 0 42701 0 42702 0 42703 0 42704 0 42705 0 42706 0 42708 0 42709 0 42710 0 42711 0 42712 0 42713 0 42714 0 42715 0 42716 0 42717 0 42719 0 42720 0 42721 0 42722 0 42723 0 42724 0 42725 0 42726 0 42727 0 42729 0 42730 0 42731 0 42732 0 42733 0 42734 0 42735 0 42736 0 42738 0 42739 0 42740 0 42741 0 42742 0 42743 0 42744 0 42746 0 42747 0 42748 0 42749 0 42750 0 42751 0 42753 0 42754 0 42755 0 42756 0 42757 0 42759 0 42760 0 42761 0 42762 0 42764 0 42765 0 42766 0 42767 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+2a6234e05dd6d8255bfd122060f1acef53d131be9695170945381c04e36d336f  /home/jay/research/data/satopen-20261113/k9/cubes/ex11_all/cube.cnf
+ebdc45c69639fdbc2772682e75d70895c93355130a2cd60566fbabab65b5bd34  /home/jay/research/data/satopen-20261113/k9/cubes/ex11_all/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/ex11_all/cube.cnf: OK
+cadical exit 20 seconds 1358 limit 5400
+c (percentage relative to total process time)
+c conflicts:                179881       133.19    per second
+c total process time since initialization:      1356.77    seconds
+c maximum resident set size of process:         3943.91    MB
+proof bytes 1940670497
+cake_lpr seconds 104 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:44.16
+	Maximum resident set size (kbytes): 8796140
+VERIFIED_LINES 1
+e664372365b9d0ed624ad0fe4cb912fb63e72dd9ead8bd9827e992aa455ec7ac  /home/jay/research/data/satopen-20261113/k9/cubes/ex11_all/proof.lrat.zst
+=== ex12_all
+ex j=12 r=-1: psi increasing on layers [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15]; Z decision-list cube r
+solved: cadical exit 20 seconds 1123 limit 5400
+cube ex12_all: ex j=12 r=-1: psi increasing on layers [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15]; Z decision-list cube r
+units: 42673 0 42674 0 42675 0 42676 0 42677 0 42678 0 42679 0 42680 0 42681 0 42682 0 42684 0 42685 0 42686 0 42687 0 42688 0 42689 0 42690 0 42691 0 42692 0 42693 0 42694 0 42695 0 42697 0 42698 0 42699 0 42700 0 42701 0 42702 0 42703 0 42704 0 42705 0 42706 0 42707 0 42709 0 42710 0 42711 0 42712 0 42713 0 42714 0 42715 0 42716 0 42717 0 42718 0 42720 0 42721 0 42722 0 42723 0 42724 0 42725 0 42726 0 42727 0 42728 0 42730 0 42731 0 42732 0 42733 0 42734 0 42735 0 42736 0 42737 0 42739 0 42740 0 42741 0 42742 0 42743 0 42744 0 42745 0 42747 0 42748 0 42749 0 42750 0 42751 0 42752 0 42754 0 42755 0 42756 0 42757 0 42758 0 42760 0 42761 0 42762 0 42763 0 42765 0 42766 0 42767 0 42769 0 42770 0 42771 0 42775 0 42776 0 42777 0 
+3d29ff961b4f46f19939530f26a31690e03245a2469709b50650aefb6697a5af  /home/jay/research/data/satopen-20261113/k9/cubes/ex12_all/cube.cnf
+2db87eb639e5dbd463886b3455d1439cf2593add0d8c24eb194d7ad6d266a15a  /home/jay/research/data/satopen-20261113/k9/cubes/ex12_all/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/ex12_all/cube.cnf: OK
+cadical exit 20 seconds 1123 limit 5400
+c (percentage relative to total process time)
+c conflicts:                158084       141.79    per second
+c total process time since initialization:      1122.49    seconds
+c maximum resident set size of process:         3893.62    MB
+proof bytes 1970552309
+cake_lpr seconds 114 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:53.47
+	Maximum resident set size (kbytes): 8804068
+VERIFIED_LINES 1
+cf250027555cda9af744758d7b3225a395cef40f1f984a095e419af43e8d7d69  /home/jay/research/data/satopen-20261113/k9/cubes/ex12_all/proof.lrat.zst
+=== ex2_6_10
+ex2 j=6 k=10: psi increasing on layers [1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 14, 15]
+solved: cadical exit 20 seconds 1355 limit 3600
+cube ex2_6_10: ex2 j=6 k=10: psi increasing on layers [1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 14, 15]
+units: 42673 0 42674 0 42675 0 42676 0 42678 0 42679 0 42680 0 42682 0 42683 0 42684 0 42685 0 42686 0 42687 0 42688 0 42689 0 42691 0 42692 0 42693 0 42695 0 42696 0 42697 0 42698 0 42699 0 42700 0 42701 0 42703 0 42704 0 42705 0 42707 0 42708 0 42709 0 42710 0 42711 0 42712 0 42714 0 42715 0 42716 0 42718 0 42719 0 42720 0 42721 0 42722 0 42724 0 42725 0 42726 0 42728 0 42729 0 42730 0 42731 0 42732 0 42742 0 42743 0 42745 0 42746 0 42747 0 42748 0 42749 0 42750 0 42752 0 42753 0 42754 0 42755 0 42756 0 42758 0 42759 0 42760 0 42761 0 42762 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+688c4d5c4a1b9e0e8e06062adb8e51c90c973218bc0ae765dc358ec5dc974138  /home/jay/research/data/satopen-20261113/k9/cubes/ex2_6_10/cube.cnf
+00d71cdb5770f98bf203cba82d5a1bd1069099462f8d04b34d68ead175301da5  /home/jay/research/data/satopen-20261113/k9/cubes/ex2_6_10/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/ex2_6_10/cube.cnf: OK
+cadical exit 20 seconds 1355 limit 3600
+c (percentage relative to total process time)
+c conflicts:                167863       124.56    per second
+c total process time since initialization:      1353.23    seconds
+c maximum resident set size of process:         4086.85    MB
+proof bytes 1996373391
+cake_lpr seconds 112 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:52.32
+	Maximum resident set size (kbytes): 8794048
+VERIFIED_LINES 1
+92f7af45dda14885600ea184ce7ce6b76d216e24b0791584bfb3874493aa646e  /home/jay/research/data/satopen-20261113/k9/cubes/ex2_6_10/proof.lrat.zst
+=== ex2_7_9
+ex2 j=7 k=9: psi increasing on layers [1, 2, 3, 4, 5, 6, 8, 10, 11, 12, 13, 14, 15]
+solved: cadical exit 20 seconds 1399 limit 3600
+cube ex2_7_9: ex2 j=7 k=9: psi increasing on layers [1, 2, 3, 4, 5, 6, 8, 10, 11, 12, 13, 14, 15]
+units: 42673 0 42674 0 42675 0 42676 0 42677 0 42679 0 42681 0 42682 0 42683 0 42684 0 42685 0 42686 0 42687 0 42688 0 42689 0 42690 0 42692 0 42694 0 42695 0 42696 0 42697 0 42698 0 42699 0 42700 0 42701 0 42702 0 42704 0 42706 0 42707 0 42708 0 42709 0 42710 0 42711 0 42712 0 42713 0 42715 0 42717 0 42718 0 42719 0 42720 0 42721 0 42722 0 42723 0 42725 0 42727 0 42728 0 42729 0 42730 0 42731 0 42732 0 42734 0 42736 0 42737 0 42738 0 42739 0 42740 0 42741 0 42751 0 42752 0 42753 0 42754 0 42755 0 42756 0 42763 0 42764 0 42765 0 42766 0 42767 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+ed1a9e504bfcafc02c412d1ef339acb531bda3590f8a03c0c4da705d1c5d9ead  /home/jay/research/data/satopen-20261113/k9/cubes/ex2_7_9/cube.cnf
+61ad834d0cb20adc5ec374a57810ff58377e3d21a688625253445981458f949f  /home/jay/research/data/satopen-20261113/k9/cubes/ex2_7_9/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/ex2_7_9/cube.cnf: OK
+cadical exit 20 seconds 1399 limit 3600
+c (percentage relative to total process time)
+c conflicts:                172164       123.69    per second
+c total process time since initialization:      1396.92    seconds
+c maximum resident set size of process:         4076.20    MB
+proof bytes 1971103068
+cake_lpr seconds 109 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:48.11
+	Maximum resident set size (kbytes): 8794112
+VERIFIED_LINES 1
+064b9abbdc71751622567a3ecc4235cc98d8de36eb31eb12ff7ac012e8b57fb4  /home/jay/research/data/satopen-20261113/k9/cubes/ex2_7_9/proof.lrat.zst
+=== ex4_all
+ex j=4 r=-1: psi increasing on layers [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]; Z decision-list cube r
+solved: cadical exit 20 seconds 1114 limit 5400
+cube ex4_all: ex j=4 r=-1: psi increasing on layers [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]; Z decision-list cube r
+units: 42673 0 42674 0 42676 0 42677 0 42678 0 42679 0 42680 0 42681 0 42682 0 42683 0 42684 0 42685 0 42686 0 42687 0 42689 0 42690 0 42691 0 42692 0 42693 0 42694 0 42695 0 42696 0 42697 0 42698 0 42699 0 42701 0 42702 0 42703 0 42704 0 42705 0 42706 0 42707 0 42708 0 42709 0 42710 0 42711 0 42723 0 42724 0 42725 0 42726 0 42727 0 42728 0 42729 0 42730 0 42731 0 42732 0 42733 0 42734 0 42735 0 42736 0 42737 0 42738 0 42739 0 42740 0 42741 0 42742 0 42743 0 42744 0 42745 0 42746 0 42747 0 42748 0 42749 0 42750 0 42751 0 42752 0 42753 0 42754 0 42755 0 42756 0 42757 0 42758 0 42759 0 42760 0 42761 0 42762 0 42763 0 42764 0 42765 0 42766 0 42767 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+710bf643af1769399085e03b45275fc9b9da90d1937deb7750b8a1abafe55af6  /home/jay/research/data/satopen-20261113/k9/cubes/ex4_all/cube.cnf
+8dc5d63c489b051964c035e9149f38f7df28f7aa667941b3e4cce0839906f0a0  /home/jay/research/data/satopen-20261113/k9/cubes/ex4_all/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/ex4_all/cube.cnf: OK
+cadical exit 20 seconds 1114 limit 5400
+c (percentage relative to total process time)
+c conflicts:                159935       144.53    per second
+c total process time since initialization:      1113.42    seconds
+c maximum resident set size of process:         3907.75    MB
+proof bytes 1818571852
+cake_lpr seconds 109 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:49.12
+	Maximum resident set size (kbytes): 8793792
+VERIFIED_LINES 1
+271135f2e49b24f6be3fca4d1abb2a4ce5dbc7c917c463efb9a47697b28b7e3f  /home/jay/research/data/satopen-20261113/k9/cubes/ex4_all/proof.lrat.zst
+=== ex5_all
+ex j=5 r=-1: psi increasing on layers [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]; Z decision-list cube r
+solved: cadical exit 20 seconds 1170 limit 5400
+cube ex5_all: ex j=5 r=-1: psi increasing on layers [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]; Z decision-list cube r
+units: 42673 0 42674 0 42675 0 42677 0 42678 0 42679 0 42680 0 42681 0 42682 0 42683 0 42684 0 42685 0 42686 0 42687 0 42688 0 42690 0 42691 0 42692 0 42693 0 42694 0 42695 0 42696 0 42697 0 42698 0 42699 0 42700 0 42702 0 42703 0 42704 0 42705 0 42706 0 42707 0 42708 0 42709 0 42710 0 42711 0 42713 0 42714 0 42715 0 42716 0 42717 0 42718 0 42719 0 42720 0 42721 0 42722 0 42733 0 42734 0 42735 0 42736 0 42737 0 42738 0 42739 0 42740 0 42741 0 42742 0 42743 0 42744 0 42745 0 42746 0 42747 0 42748 0 42749 0 42750 0 42751 0 42752 0 42753 0 42754 0 42755 0 42756 0 42757 0 42758 0 42759 0 42760 0 42761 0 42762 0 42763 0 42764 0 42765 0 42766 0 42767 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+c1ae4153289d90a2bd1a1aa2a9de22572a9cb2942394c1403a607b684743bc53  /home/jay/research/data/satopen-20261113/k9/cubes/ex5_all/cube.cnf
+5a06e064ed5c70db4053c0450fa5713c1a30d77ae41f3c8212b2b3520d7aa672  /home/jay/research/data/satopen-20261113/k9/cubes/ex5_all/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/ex5_all/cube.cnf: OK
+cadical exit 20 seconds 1170 limit 5400
+c (percentage relative to total process time)
+c conflicts:                156612       134.66    per second
+c total process time since initialization:      1168.67    seconds
+c maximum resident set size of process:         3907.32    MB
+proof bytes 1896095922
+cake_lpr seconds 106 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:46.38
+	Maximum resident set size (kbytes): 8794112
+VERIFIED_LINES 1
+fe5156d65eb81fb6dd80c3a4e625460ded504af49c093ba677968edad7167d76  /home/jay/research/data/satopen-20261113/k9/cubes/ex5_all/proof.lrat.zst
+=== ex6_all
+ex j=6 r=-1: psi increasing on layers [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15]; Z decision-list cube r
+solved: cadical exit 20 seconds 1069 limit 5400
+cube ex6_all: ex j=6 r=-1: psi increasing on layers [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15]; Z decision-list cube r
+units: 42673 0 42674 0 42675 0 42676 0 42678 0 42679 0 42680 0 42681 0 42682 0 42683 0 42684 0 42685 0 42686 0 42687 0 42688 0 42689 0 42691 0 42692 0 42693 0 42694 0 42695 0 42696 0 42697 0 42698 0 42699 0 42700 0 42701 0 42703 0 42704 0 42705 0 42706 0 42707 0 42708 0 42709 0 42710 0 42711 0 42712 0 42714 0 42715 0 42716 0 42717 0 42718 0 42719 0 42720 0 42721 0 42722 0 42724 0 42725 0 42726 0 42727 0 42728 0 42729 0 42730 0 42731 0 42732 0 42742 0 42743 0 42744 0 42745 0 42746 0 42747 0 42748 0 42749 0 42750 0 42751 0 42752 0 42753 0 42754 0 42755 0 42756 0 42757 0 42758 0 42759 0 42760 0 42761 0 42762 0 42763 0 42764 0 42765 0 42766 0 42767 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+fc19a4bd56f8024b105bdcf06f88da1262956574170dd538882a7b65fa666477  /home/jay/research/data/satopen-20261113/k9/cubes/ex6_all/cube.cnf
+c3c6ba77181b5139dbdd1429265be2256ee83bdfbfbd0fbbb97b3de5004d79cb  /home/jay/research/data/satopen-20261113/k9/cubes/ex6_all/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/ex6_all/cube.cnf: OK
+cadical exit 20 seconds 1069 limit 5400
+c (percentage relative to total process time)
+c conflicts:                162280       159.71    per second
+c total process time since initialization:      1022.49    seconds
+c maximum resident set size of process:         3956.36    MB
+proof bytes 1870803376
+cake_lpr seconds 108 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:48.21
+	Maximum resident set size (kbytes): 8794044
+VERIFIED_LINES 1
+2a8561bf92d4574b9a246533035527884bed72d96f3a636ea4a14cb04538db87  /home/jay/research/data/satopen-20261113/k9/cubes/ex6_all/proof.lrat.zst
+=== ex7_all
+ex j=7 r=-1: psi increasing on layers [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15]; Z decision-list cube r
+solved: cadical exit 20 seconds 1238 limit 5400
+cube ex7_all: ex j=7 r=-1: psi increasing on layers [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15]; Z decision-list cube r
+units: 42673 0 42674 0 42675 0 42676 0 42677 0 42679 0 42680 0 42681 0 42682 0 42683 0 42684 0 42685 0 42686 0 42687 0 42688 0 42689 0 42690 0 42692 0 42693 0 42694 0 42695 0 42696 0 42697 0 42698 0 42699 0 42700 0 42701 0 42702 0 42704 0 42705 0 42706 0 42707 0 42708 0 42709 0 42710 0 42711 0 42712 0 42713 0 42715 0 42716 0 42717 0 42718 0 42719 0 42720 0 42721 0 42722 0 42723 0 42725 0 42726 0 42727 0 42728 0 42729 0 42730 0 42731 0 42732 0 42734 0 42735 0 42736 0 42737 0 42738 0 42739 0 42740 0 42741 0 42750 0 42751 0 42752 0 42753 0 42754 0 42755 0 42756 0 42757 0 42758 0 42759 0 42760 0 42761 0 42762 0 42763 0 42764 0 42765 0 42766 0 42767 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+c3711c0c1ea18d4ce738e0df25dc4906d5be6d6dc49b0a8d7aa149fd9d3f19e9  /home/jay/research/data/satopen-20261113/k9/cubes/ex7_all/cube.cnf
+6b636ef91e096109dfb7a8629205cd42c73370213182c3df1c633ebec4f88f04  /home/jay/research/data/satopen-20261113/k9/cubes/ex7_all/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/ex7_all/cube.cnf: OK
+cadical exit 20 seconds 1238 limit 5400
+c (percentage relative to total process time)
+c conflicts:                167186       141.12    per second
+c total process time since initialization:      1190.50    seconds
+c maximum resident set size of process:         3954.46    MB
+proof bytes 1951615566
+cake_lpr seconds 105 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:45.22
+	Maximum resident set size (kbytes): 8794048
+VERIFIED_LINES 1
+5f5fec6b5976a3cfef183c08580c080c78b1b5c01fa005458681f2adb8836b7d  /home/jay/research/data/satopen-20261113/k9/cubes/ex7_all/proof.lrat.zst
+=== ex8_all
+ex j=8 r=-1: psi increasing on layers [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15]; Z decision-list cube r
+solved: cadical exit 20 seconds 1042 limit 1800
+cube ex8_all: ex j=8 r=-1: psi increasing on layers [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15]; Z decision-list cube r
+units: 42673 0 42674 0 42675 0 42676 0 42677 0 42678 0 42680 0 42681 0 42682 0 42683 0 42684 0 42685 0 42686 0 42687 0 42688 0 42689 0 42690 0 42691 0 42693 0 42694 0 42695 0 42696 0 42697 0 42698 0 42699 0 42700 0 42701 0 42702 0 42703 0 42705 0 42706 0 42707 0 42708 0 42709 0 42710 0 42711 0 42712 0 42713 0 42714 0 42716 0 42717 0 42718 0 42719 0 42720 0 42721 0 42722 0 42723 0 42724 0 42726 0 42727 0 42728 0 42729 0 42730 0 42731 0 42732 0 42733 0 42735 0 42736 0 42737 0 42738 0 42739 0 42740 0 42741 0 42743 0 42744 0 42745 0 42746 0 42747 0 42748 0 42749 0 42757 0 42758 0 42759 0 42760 0 42761 0 42762 0 42763 0 42764 0 42765 0 42766 0 42767 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+292d77f8edc3c15a500778e687e78b86ab986ca1cf8530efbde29026e1918af4  /home/jay/research/data/satopen-20261113/k9/cubes/ex8_all/cube.cnf
+2a18ce194b98c75ed3d3a7827aef58b36cefaa0f5f228cb96f99e1fdc324da62  /home/jay/research/data/satopen-20261113/k9/cubes/ex8_all/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/ex8_all/cube.cnf: OK
+cadical exit 20 seconds 1042 limit 1800
+c (percentage relative to total process time)
+c conflicts:                147598       142.46    per second
+c total process time since initialization:      1040.74    seconds
+c maximum resident set size of process:         3900.41    MB
+proof bytes 1793685035
+cake_lpr seconds 102 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:42.37
+	Maximum resident set size (kbytes): 8794048
+VERIFIED_LINES 1
+417029df296a5bf14fb2d4552af02e4fac3825ada85d6fd7b1e0316705f1c784  /home/jay/research/data/satopen-20261113/k9/cubes/ex8_all/proof.lrat.zst
+=== ex8_r0
+ex j=8 r=0: psi increasing on layers [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15]; Z decision-list cube r
+solved: cadical exit 20 seconds 185 limit 3600
+cube ex8_r0: ex j=8 r=0: psi increasing on layers [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15]; Z decision-list cube r
+units: 42673 0 42674 0 42675 0 42676 0 42677 0 42678 0 42680 0 42681 0 42682 0 42683 0 42684 0 42685 0 42686 0 42687 0 42688 0 42689 0 42690 0 42691 0 42693 0 42694 0 42695 0 42696 0 42697 0 42698 0 42699 0 42700 0 42701 0 42702 0 42703 0 42705 0 42706 0 42707 0 42708 0 42709 0 42710 0 42711 0 42712 0 42713 0 42714 0 42716 0 42717 0 42718 0 42719 0 42720 0 42721 0 42722 0 42723 0 42724 0 42726 0 42727 0 42728 0 42729 0 42730 0 42731 0 42732 0 42733 0 42735 0 42736 0 42737 0 42738 0 42739 0 42740 0 42741 0 42743 0 42744 0 42745 0 42746 0 42747 0 42748 0 42749 0 42757 0 42758 0 42759 0 42760 0 42761 0 42762 0 42763 0 42764 0 42765 0 42766 0 42767 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 -497698 0 
+3562c52cb7f615fdb75633601096a386fd08a403a4b222bfd3a33c65571905c2  /home/jay/research/data/satopen-20261113/k9/cubes/ex8_r0/cube.cnf
+3817932802d42fac06466a22a8b537f9adc633510225e17f894667b89ec0ed2a  /home/jay/research/data/satopen-20261113/k9/cubes/ex8_r0/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/ex8_r0/cube.cnf: OK
+cadical exit 20 seconds 185 limit 3600
+c (percentage relative to total process time)
+c conflicts:                 15196        84.87    per second
+c total process time since initialization:       184.63    seconds
+c maximum resident set size of process:         3759.04    MB
+proof bytes 908860343
+cake_lpr seconds 77 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:17.15
+	Maximum resident set size (kbytes): 8800192
+VERIFIED_LINES 1
+a32797b597919653d633a915b82c0ad255cf3fb04843ebfc80b5e780f4e743f8  /home/jay/research/data/satopen-20261113/k9/cubes/ex8_r0/proof.lrat.zst
+=== ex8_r14
+ex j=8 r=14: psi increasing on layers [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15]; Z decision-list cube r
+solved: cadical exit 20 seconds 345 limit 3600
+cube ex8_r14: ex j=8 r=14: psi increasing on layers [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15]; Z decision-list cube r
+units: 42673 0 42674 0 42675 0 42676 0 42677 0 42678 0 42680 0 42681 0 42682 0 42683 0 42684 0 42685 0 42686 0 42687 0 42688 0 42689 0 42690 0 42691 0 42693 0 42694 0 42695 0 42696 0 42697 0 42698 0 42699 0 42700 0 42701 0 42702 0 42703 0 42705 0 42706 0 42707 0 42708 0 42709 0 42710 0 42711 0 42712 0 42713 0 42714 0 42716 0 42717 0 42718 0 42719 0 42720 0 42721 0 42722 0 42723 0 42724 0 42726 0 42727 0 42728 0 42729 0 42730 0 42731 0 42732 0 42733 0 42735 0 42736 0 42737 0 42738 0 42739 0 42740 0 42741 0 42743 0 42744 0 42745 0 42746 0 42747 0 42748 0 42749 0 42757 0 42758 0 42759 0 42760 0 42761 0 42762 0 42763 0 42764 0 42765 0 42766 0 42767 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 497698 0 497699 0 497700 0 497701 0 497702 0 497703 0 497704 0 497706 0 497707 0 497708 0 497709 0 497710 0 497711 0 497712 0 
+cb78d637c66501780b663ca6097a518ae8dce4d2a3988db24e5e4453600d6ce2  /home/jay/research/data/satopen-20261113/k9/cubes/ex8_r14/cube.cnf
+ffc3e906bf85c18875ac7c17082d8e854f70c84a8501caf6384572ffd28c7f4c  /home/jay/research/data/satopen-20261113/k9/cubes/ex8_r14/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/ex8_r14/cube.cnf: OK
+cadical exit 20 seconds 345 limit 3600
+c (percentage relative to total process time)
+c conflicts:                 39552       116.83    per second
+c total process time since initialization:       344.47    seconds
+c maximum resident set size of process:         3762.40    MB
+proof bytes 1084376302
+cake_lpr seconds 78 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:17.79
+	Maximum resident set size (kbytes): 8802116
+VERIFIED_LINES 1
+b0c7830a65827ee34eeb264cef29b62efc5073a4d56622f1f6fea550a68875a8  /home/jay/research/data/satopen-20261113/k9/cubes/ex8_r14/proof.lrat.zst
+=== ex8_r7
+ex j=8 r=7: psi increasing on layers [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15]; Z decision-list cube r
+solved: cadical exit 20 seconds 399 limit 1800 (line rewritten at 02:21:27: the original was overwritten when solve.sh was edited in place during the run; verdict and time from cadical.out: s UNSATISFIABLE, exit 20, 397.81 s; cube.cnf rebuilt, hash = cnf.sha256)
+cube ex8_r7: ex j=8 r=7: psi increasing on layers [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15]; Z decision-list cube r
+units: 42673 0 42674 0 42675 0 42676 0 42677 0 42678 0 42680 0 42681 0 42682 0 42683 0 42684 0 42685 0 42686 0 42687 0 42688 0 42689 0 42690 0 42691 0 42693 0 42694 0 42695 0 42696 0 42697 0 42698 0 42699 0 42700 0 42701 0 42702 0 42703 0 42705 0 42706 0 42707 0 42708 0 42709 0 42710 0 42711 0 42712 0 42713 0 42714 0 42716 0 42717 0 42718 0 42719 0 42720 0 42721 0 42722 0 42723 0 42724 0 42726 0 42727 0 42728 0 42729 0 42730 0 42731 0 42732 0 42733 0 42735 0 42736 0 42737 0 42738 0 42739 0 42740 0 42741 0 42743 0 42744 0 42745 0 42746 0 42747 0 42748 0 42749 0 42757 0 42758 0 42759 0 42760 0 42761 0 42762 0 42763 0 42764 0 42765 0 42766 0 42767 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 497698 0 497699 0 497700 0 497701 0 497702 0 497703 0 497704 0 -497706 0 
+69d7aefd580f047b1556253827a708ba23d7784f5dcc309b1a43f68303c59489  /home/jay/research/data/satopen-20261113/k9/cubes/ex8_r7/cube.cnf
+33efba4b9cd657757be6ae4c56a0e04db7eefaa89e120736b01be520032600c3  /home/jay/research/data/satopen-20261113/k9/cubes/ex8_r7/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/ex8_r7/cube.cnf: OK
+cadical exit 20 seconds 399 limit 1800 (line rewritten at 02:21:27: the original was overwritten when solve.sh was edited in place during the run; verdict and time from cadical.out: s UNSATISFIABLE, exit 20, 397.81 s; cube.cnf rebuilt, hash = cnf.sha256)
+c (percentage relative to total process time)
+c conflicts:                 45969       116.93    per second
+c total process time since initialization:       397.81    seconds
+c maximum resident set size of process:         3896.50    MB
+proof bytes 1085416408
+cake_lpr seconds 91 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:31.58
+	Maximum resident set size (kbytes): 8796032
+VERIFIED_LINES 1
+6da48d3c278c32710c09ed85c42baf4071aad56766801b94c6895f752da04fff  /home/jay/research/data/satopen-20261113/k9/cubes/ex8_r7/proof.lrat.zst
+=== ex9_all
+ex j=9 r=-1: psi increasing on layers [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15]; Z decision-list cube r
+solved: cadical exit 20 seconds 1130 limit 5400
+cube ex9_all: ex j=9 r=-1: psi increasing on layers [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15]; Z decision-list cube r
+units: 42673 0 42674 0 42675 0 42676 0 42677 0 42678 0 42679 0 42681 0 42682 0 42683 0 42684 0 42685 0 42686 0 42687 0 42688 0 42689 0 42690 0 42691 0 42692 0 42694 0 42695 0 42696 0 42697 0 42698 0 42699 0 42700 0 42701 0 42702 0 42703 0 42704 0 42706 0 42707 0 42708 0 42709 0 42710 0 42711 0 42712 0 42713 0 42714 0 42715 0 42717 0 42718 0 42719 0 42720 0 42721 0 42722 0 42723 0 42724 0 42725 0 42727 0 42728 0 42729 0 42730 0 42731 0 42732 0 42733 0 42734 0 42736 0 42737 0 42738 0 42739 0 42740 0 42741 0 42742 0 42744 0 42745 0 42746 0 42747 0 42748 0 42749 0 42751 0 42752 0 42753 0 42754 0 42755 0 42756 0 42763 0 42764 0 42765 0 42766 0 42767 0 42768 0 42769 0 42770 0 42771 0 42772 0 42773 0 42774 0 42775 0 42776 0 42777 0 
+4019440ffb63e10e2396fb89b3a09cd9f0e95cb57543c6eb6de68598693620e8  /home/jay/research/data/satopen-20261113/k9/cubes/ex9_all/cube.cnf
+21c4e23d046b1c636e991c0ee335a24f39d49bd6e8caa318d41b6fb0c740a33e  /home/jay/research/data/satopen-20261113/k9/cubes/ex9_all/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/ex9_all/cube.cnf: OK
+cadical exit 20 seconds 1130 limit 5400
+c (percentage relative to total process time)
+c conflicts:                161517       150.01    per second
+c total process time since initialization:      1082.20    seconds
+c maximum resident set size of process:         3891.67    MB
+proof bytes 1840961527
+cake_lpr seconds 108 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:47.99
+	Maximum resident set size (kbytes): 8796100
+VERIFIED_LINES 1
+143b5b6d64e9494e0bc3d1f0ceaf3e9e186f8e6179e1f8a0fe84da6aacec31e6  /home/jay/research/data/satopen-20261113/k9/cubes/ex9_all/proof.lrat.zst
+=== p1_B2Z
+perm seed=1 mode=B2Z order(by phase)=[14, 10, 9, 1, 4, 12, 15, 6, 5, 7, 13, 3, 8, 11, 2] Z=100111001101011
+solved: cadical exit 20 seconds 113 limit 600 noproof
+noproof probe (statistics only): cadical exit 20 seconds 113 limit 600 noproof
+=== p1_B3Z
+perm seed=1 mode=B3Z order(by phase)=[14, 10, 9, 1, 4, 12, 15, 6, 5, 7, 13, 3, 8, 11, 2] Z=100111001101011
+solved: cadical exit 20 seconds 66 limit 900 noproof
+noproof probe (statistics only): cadical exit 20 seconds 66 limit 900 noproof
+=== p1_D
+perm seed=1 mode=D order(by phase)=[14, 10, 9, 1, 4, 12, 15, 6, 5, 7, 13, 3, 8, 11, 2] Z=100111001101011
+solved: cadical exit 0 seconds 1800 limit 1800 noproof
+=== p1_DZ
+perm seed=1 mode=DZ order(by phase)=[14, 10, 9, 1, 4, 12, 15, 6, 5, 7, 13, 3, 8, 11, 2] Z=100111001101011
+solved: cadical exit 20 seconds 234 limit 1800
+cube p1_DZ: perm seed=1 mode=DZ order(by phase)=[14, 10, 9, 1, 4, 12, 15, 6, 5, 7, 13, 3, 8, 11, 2] Z=100111001101011
+units: 42673 0 -42687 0 -42700 0 42712 0 -42723 0 42733 0 42742 0 -42750 0 -42757 0 42763 0 -42768 0 42772 0 -42775 0 42777 0 497698 0 -497699 0 -497700 0 497701 0 497702 0 497703 0 -497704 0 -497705 0 497706 0 497707 0 -497708 0 497709 0 -497710 0 497711 0 497712 0 
+c21e3b97ea3300c9b1dd5dd9cd11cff0ed92eb07752b82daeae422789b598bbe  /home/jay/research/data/satopen-20261113/k9/cubes/p1_DZ/cube.cnf
+b63203e29173758a58c68bd8dbdf36fbf21e7d63fce2d049373e93620e0f297a  /home/jay/research/data/satopen-20261113/k9/cubes/p1_DZ/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/p1_DZ/cube.cnf: OK
+cadical exit 20 seconds 234 limit 1800
+c (percentage relative to total process time)
+c conflicts:                 36367       158.94    per second
+c total process time since initialization:       233.32    seconds
+c maximum resident set size of process:         4202.39    MB
+proof bytes 1096275351
+cake_lpr seconds 82 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:22.35
+	Maximum resident set size (kbytes): 8798208
+VERIFIED_LINES 1
+3ad7cea6d9823f2fd7181433ae9b254212a54d13151ddb5f7ce9df45970c656d  /home/jay/research/data/satopen-20261113/k9/cubes/p1_DZ/proof.lrat.zst
+=== p1_Y
+perm seed=1 mode=Y order(by phase)=[14, 10, 9, 1, 4, 12, 15, 6, 5, 7, 13, 3, 8, 11, 2] Z=100111001101011
+solved: cadical exit 20 seconds 51 limit 900 noproof
+noproof probe (statistics only): cadical exit 20 seconds 51 limit 900 noproof
+=== p1_YZ
+perm seed=1 mode=YZ order(by phase)=[14, 10, 9, 1, 4, 12, 15, 6, 5, 7, 13, 3, 8, 11, 2] Z=100111001101011
+solved: cadical exit 20 seconds 18 limit 1800
+cube p1_YZ: perm seed=1 mode=YZ order(by phase)=[14, 10, 9, 1, 4, 12, 15, 6, 5, 7, 13, 3, 8, 11, 2] Z=100111001101011
+units: 42673 0 42674 0 42675 0 42676 0 42677 0 42678 0 42679 0 -42680 0 -42681 0 42682 0 42683 0 42684 0 -42685 0 42686 0 -42687 0 -42688 0 -42689 0 -42690 0 -42691 0 -42692 0 -42693 0 -42694 0 -42695 0 -42696 0 -42697 0 -42698 0 -42699 0 -42700 0 -42701 0 -42702 0 -42703 0 42704 0 -42705 0 -42706 0 42707 0 -42708 0 -42709 0 -42710 0 -42711 0 42712 0 42713 0 42714 0 42715 0 -42716 0 -42717 0 42718 0 42719 0 42720 0 -42721 0 42722 0 -42723 0 42724 0 42725 0 -42726 0 -42727 0 42728 0 -42729 0 42730 0 -42731 0 -42732 0 42733 0 42734 0 -42735 0 -42736 0 42737 0 -42738 0 42739 0 -42740 0 -42741 0 42742 0 -42743 0 -42744 0 42745 0 -42746 0 42747 0 -42748 0 -42749 0 -42750 0 -42751 0 42752 0 -42753 0 -42754 0 -42755 0 -42756 0 -42757 0 42758 0 42759 0 42760 0 -42761 0 42762 0 42763 0 42764 0 42765 0 -42766 0 42767 0 -42768 0 -42769 0 -42770 0 -42771 0 42772 0 -42773 0 42774 0 -42775 0 -42776 0 42777 0 497698 0 -497699 0 -497700 0 497701 0 497702 0 497703 0 -497704 0 -497705 0 497706 0 497707 0 -497708 0 497709 0 -497710 0 497711 0 497712 0 
+b60da151e636ddab44bee6339bf8300e98ed81f803ca22a7e23583e152aad3b4  /home/jay/research/data/satopen-20261113/k9/cubes/p1_YZ/cube.cnf
+9fc420a914edc28215fd2c03285ca5c08f63305206c60c4ef0f86903092d81c4  /home/jay/research/data/satopen-20261113/k9/cubes/p1_YZ/proof.lrat
+/home/jay/research/data/satopen-20261113/k9/cubes/p1_YZ/cube.cnf: OK
+cadical exit 20 seconds 18 limit 1800
+c (percentage relative to total process time)
+c conflicts:                  1869       148.78    per second
+c total process time since initialization:        17.32    seconds
+c maximum resident set size of process:         3037.26    MB
+proof bytes 634547850
+cake_lpr seconds 67 heap 8500
+cake_lpr binary sha256 c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54
+cake_lpr stdout: s VERIFIED UNSAT 
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:07.47
+	Maximum resident set size (kbytes): 8790004
+VERIFIED_LINES 1
+3b0d234ec5e4dcf2639af833c3dbf1e03b8d77ddc909f76b8a374750dc154b3c  /home/jay/research/data/satopen-20261113/k9/cubes/p1_YZ/proof.lrat.zst
+=== p1_Z
+perm seed=1 mode=Z order(by phase)=[14, 10, 9, 1, 4, 12, 15, 6, 5, 7, 13, 3, 8, 11, 2] Z=100111001101011
+solved: cadical exit 0 seconds 900 limit 900 noproof
+=== p2_DZ
+perm seed=2 mode=DZ order(by phase)=[3, 4, 12, 8, 14, 13, 11, 9, 10, 7, 15, 6, 5, 2, 1] Z=001100010001110
+solved: cadical exit 20 seconds 132 limit 900 noproof
+noproof probe (statistics only): cadical exit 20 seconds 132 limit 900 noproof
+=== p2_YZ
+perm seed=2 mode=YZ order(by phase)=[3, 4, 12, 8, 14, 13, 11, 9, 10, 7, 15, 6, 5, 2, 1] Z=001100010001110
+solved: cadical exit 20 seconds 23 limit 300 noproof
+noproof probe (statistics only): cadical exit 20 seconds 23 limit 300 noproof
+=== p3_YZ
+perm seed=3 mode=YZ order(by phase)=[7, 6, 10, 1, 9, 3, 12, 14, 2, 4, 5, 15, 13, 8, 11] Z=101001101101010
+solved: cadical exit 20 seconds 25 limit 300 noproof
+noproof probe (statistics only): cadical exit 20 seconds 25 limit 300 noproof
+=== p4_YZ
+perm seed=4 mode=YZ order(by phase)=[5, 2, 14, 4, 13, 15, 10, 1, 12, 3, 6, 11, 9, 8, 7] Z=111111000101111
+solved: cadical exit 20 seconds 14 limit 300 noproof
+noproof probe (statistics only): cadical exit 20 seconds 14 limit 300 noproof
+=== p5_YZ
+perm seed=5 mode=YZ order(by phase)=[7, 12, 14, 8, 13, 15, 1, 10, 5, 2, 3, 11, 6, 4, 9] Z=000000110001110
+solved: cadical exit 20 seconds 16 limit 300 noproof
+noproof probe (statistics only): cadical exit 20 seconds 16 limit 300 noproof
+=== p6_YZ
+perm seed=6 mode=YZ order(by phase)=[5, 4, 11, 9, 14, 7, 3, 15, 6, 13, 8, 10, 1, 12, 2] Z=001110101010010
+solved: cadical exit 20 seconds 17 limit 300 noproof
+noproof probe (statistics only): cadical exit 20 seconds 17 limit 300 noproof
+=== p7_YZ
+perm seed=7 mode=YZ order(by phase)=[9, 7, 11, 4, 12, 15, 2, 1, 6, 13, 10, 8, 5, 3, 14] Z=110101101111101
+solved: cadical exit 20 seconds 12 limit 300 noproof
+noproof probe (statistics only): cadical exit 20 seconds 12 limit 300 noproof
+=== p8_YZ
+perm seed=8 mode=YZ order(by phase)=[5, 15, 3, 13, 8, 1, 6, 11, 10, 12, 9, 4, 14, 2, 7] Z=101011010111101
+solved: cadical exit 20 seconds 38 limit 300 noproof
+noproof probe (statistics only): cadical exit 20 seconds 38 limit 300 noproof
+=== p9_YZ
+perm seed=9 mode=YZ order(by phase)=[5, 11, 8, 3, 2, 12, 14, 1, 6, 9, 10, 13, 15, 4, 7] Z=111010010011010
+solved: cadical exit 20 seconds 34 limit 300 noproof
+noproof probe (statistics only): cadical exit 20 seconds 34 limit 300 noproof
