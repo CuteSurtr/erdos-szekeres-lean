@@ -1,0 +1,71 @@
+{
+  "label": "COMPUTED",
+  "status": "PASS",
+  "mode": "algebra",
+  "script_sha256": "513c0cb75e6f38c15907425754df9411afb123dcfa3d1651cab5c68e2b4a7990",
+  "result": {
+    "one_change_packets": 8,
+    "cover_cases": 1744,
+    "wrong_cover_controls": [
+      {
+        "witness_size": 3,
+        "lost_by_wrong_deletions": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "witness_size": 4,
+        "lost_by_wrong_deletions": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "witness_size": 5,
+        "lost_by_wrong_deletions": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "witness_size": 6,
+        "lost_by_wrong_deletions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "witness_size": 7,
+        "lost_by_wrong_deletions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      }
+    ],
+    "missing_no5cap_countercontrol": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "unsafe_pair_growth_control": true
+  },
+  "elapsed_seconds": 0.000593532997299917,
+  "max_rss_KiB": 17808
+}

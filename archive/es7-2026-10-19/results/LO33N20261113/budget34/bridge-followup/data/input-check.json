@@ -1,0 +1,74 @@
+{
+  "finished_kst": "2026-11-14T10:37:41.930802+09:00",
+  "scope": "Source statement and inherited receipt check only; no certificate audit, tree replay, solver or Lean build.",
+  "verdict": "Padding hypotheses confirmed; written structural deduction PROVED from stated dependencies.",
+  "states": 154,
+  "F": 84,
+  "Lo": 70,
+  "state0_in_Lo": true,
+  "eligible_Lo_indices_excluding_state0": 69,
+  "rows": 3464,
+  "base_rows": 2650,
+  "coupled_rows": 812,
+  "all_rows": "positive-unit support sums bounded below by nonnegative integer demands",
+  "demand_histogram": {
+    "1": 2103,
+    "2": 690,
+    "3": 522,
+    "4": 105,
+    "5": 13,
+    "6": 24,
+    "7": 4,
+    "15": 1,
+    "19": 1,
+    "27": 1
+  },
+  "capacity_demands": [
+    19,
+    15
+  ],
+  "inherited_tree": {
+    "label": "EXACT TREE",
+    "budget": 34,
+    "contexts_total": 3643,
+    "contexts_replayed": 3643,
+    "nodes": 1658483,
+    "leaves": 829242,
+    "minimum_margin": 1,
+    "global_pending": 1,
+    "sole_pending_state0_missing": true
+  },
+  "inherited_pool": {
+    "status": "CERTIFIED",
+    "rows": 812,
+    "independently_reconstructed_cnfs": 812,
+    "accepted_retained_lrats": 812,
+    "all_exact_stdout_acceptances": true
+  },
+  "inputs_sha256": {
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/data/input-manifest.json": "6fe1477c2dada26ea399615c2bc632461b25377b1e8a3d711c1dd880d5a336e7",
+    "/home/jay/research/data/es308-20261114/inputs/source-2650.json.gz": "8c7fe9ef5264182524095d46ef50ed6bc691cab425efa965756d1870112241aa",
+    "/home/jay/research/data/es308-20261114/inputs/s19/extra.json": "770d276db7b51d369e9a6fa1b9f36abb15d2539d224a71b19bf5fa738cbd9983",
+    "/home/jay/research/data/es308-20261114/inputs/pool812.json": "91a4e36f31712231ed1386576d6dcbe846ddf6c1b0d4de41e225bbdb4a18bcf8",
+    "/home/jay/research/data/es308-20261114/inputs/s19/rows.txt": "5b2db8d9a1779e96e0511f33c6ed553ae64d3e779deb0d7a07e2d4285f692c2e",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/s19-summary.json": "424be2779c1a745fa0bb7834875eeba55ea17bd65a83ae180767a02b55624c3a",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/pool_summary.json": "018d0003548a110ec35ac1f82ed618fdeebe9592e68a2a017e13cc404ed0278e"
+  },
+  "preserved_bridge_sha256": {
+    "README.md": "8935573c73f85d096e2387ab7cd4465005b90cffea7c9e3aad82981dabe5b6ed",
+    "tools/check_sources.py": "9d4fe7d20adde00475eb6fe3e90901b0937d9d734bb339b18a46160245142c8e",
+    "data/source-audit.json": "b0c32ddebb59d70e1d8a417604f949ea6619fd02912cd8d2917804370dd7424e",
+    "data/s20-v1-witness.json": "fbb91635e1a9fb342ccabc41ca1244192284e16053e7390d75f9d26e22a61a52"
+  },
+  "resources": {
+    "AS_limit_bytes": 157286400,
+    "affinity": [
+      0
+    ],
+    "proc_status_kib": {
+      "VmPeak": 34792,
+      "VmHWM": 20904,
+      "VmRSS": 20904
+    }
+  }
+}

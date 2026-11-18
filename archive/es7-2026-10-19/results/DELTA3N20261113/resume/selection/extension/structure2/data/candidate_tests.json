@@ -1,0 +1,103 @@
+{
+  "status": "COMPUTED exact finite restricted enumeration",
+  "results": {
+    "terminal18": {
+      "L5": [
+        4,
+        8,
+        11,
+        14,
+        15,
+        16,
+        17
+      ],
+      "missed": [
+        [
+          0,
+          1,
+          5,
+          6,
+          9,
+          10
+        ],
+        [
+          0,
+          1,
+          5,
+          7,
+          9,
+          10
+        ]
+      ],
+      "eligible_p": [
+        10
+      ],
+      "tests": [
+        {
+          "p": 10,
+          "required_minimal": [
+            [
+              8
+            ],
+            [
+              11
+            ],
+            [
+              14
+            ],
+            [
+              15
+            ],
+            [
+              16
+            ],
+            [
+              17
+            ]
+          ],
+          "forbidden_minimal": [
+            [
+              14,
+              15
+            ],
+            [
+              11,
+              14,
+              16
+            ],
+            [
+              11,
+              15,
+              16
+            ]
+          ],
+          "enumerated": 128,
+          "ordinary_count": 0,
+          "uniform_count": 0,
+          "terminal_count": 0,
+          "smallest_uniform": null,
+          "all_uniform": [],
+          "rejected": {
+            "target": 126,
+            "cap4": 2,
+            "exposure": 0
+          }
+        }
+      ]
+    },
+    "three_block_n7": {
+      "L5": [
+        4,
+        5,
+        6,
+        10
+      ],
+      "missed": [],
+      "eligible_p": [],
+      "tests": []
+    }
+  },
+  "input_sha256": "8b297da5bb3fca34f37cd3f860d54262d68ee7c9daa3326893326e54151eb9d1",
+  "source_sha256": "68535c272dd9643fde9ef1022e8ac66b0cd8b37096fff3e634612bb818c14fb5",
+  "elapsed": 0.0008694099960848689
+}

@@ -1,0 +1,113 @@
+{
+  "status": "PASS",
+  "label": "CERTIFIED",
+  "statement": "T7 through left15 with explicit lower-size dependencies",
+  "frozen_UTC": "2026-11-13T22:43:27.752947+00:00",
+  "old_manifest_hashes": {
+    "low_split_audit": "8609cc06302c622b3f37014c27334ba142bb535b86e528aa654217e9959303c3",
+    "low_split_audit/replay": "159ac6c8386dbf78f2e63481bc3e4f659fe72e8c2c1456616db81729d79f298e",
+    "low_split_audit/n6": "6017645ab590b7e8faea0af5cbd51f53184a4c35d7c8f2dc173f8e63407dcf53"
+  },
+  "old_files_rechecked_unchanged": {
+    "low_split_audit": 128,
+    "low_split_audit/replay": 63,
+    "low_split_audit/n6": 36
+  },
+  "formula": {
+    "status": "PASS",
+    "label": "COMPUTED",
+    "left_m": 15,
+    "right_m": 3,
+    "n": 7,
+    "variant": "compact",
+    "variables": 63368,
+    "clauses": 447615,
+    "literals": 1200138,
+    "phase_rows": {
+      "signotope": 10920,
+      "no5cap": 3003,
+      "convex4_equivalence": 10920,
+      "convex_larger_equivalence": 48048,
+      "no_ngon": 6435,
+      "left_has_no_fourcap": 1365,
+      "ends_three_cap_equivalence": 470,
+      "bad_pair_or_cap_exact_containment": 153075,
+      "target_exact_containment": 182552,
+      "no_covered_cup_transversal": 30827
+    },
+    "phase_literals": {
+      "signotope": 32760,
+      "no5cap": 9009,
+      "convex4_equivalence": 32760,
+      "convex_larger_equivalence": 128128,
+      "no_ngon": 32175,
+      "left_has_no_fourcap": 5460,
+      "ends_three_cap_equivalence": 1380,
+      "bad_pair_or_cap_exact_containment": 397813,
+      "target_exact_containment": 502018,
+      "no_covered_cup_transversal": 58635
+    },
+    "phase_max_width": {
+      "signotope": 3,
+      "no5cap": 3,
+      "convex4_equivalence": 3,
+      "convex_larger_equivalence": 6,
+      "no_ngon": 5,
+      "left_has_no_fourcap": 4,
+      "ends_three_cap_equivalence": 92,
+      "bad_pair_or_cap_exact_containment": 5,
+      "target_exact_containment": 8,
+      "no_covered_cup_transversal": 2
+    },
+    "map_counts": {
+      "orientation": 455,
+      "convex": 9373,
+      "ends_three_cap": 15,
+      "bad_pair_or_cap_contains": 30706,
+      "target_contains": 22819
+    },
+    "cnf_map_byte_identical_rebuild": true,
+    "hashes": {
+      "/home/jay/research/data/delta3-codex-20261113/extension/low15-n7-compact.cnf": "793063f5c7c5208c16ce038c63659878adee4eb049546d775d65c5a18ed60418",
+      "/home/jay/research/data/delta3-codex-20261113/extension/low15-n7-compact.cnf.map": "851185520efcf6dd6b76c988c645b38272901527559eb8891bed614cf74755a6"
+    },
+    "empty_End3_count": 2,
+    "option2_rows": 0
+  },
+  "replay": {
+    "status": "PASS",
+    "label": "CERTIFIED",
+    "fresh_independent_replay": true,
+    "n": 7,
+    "left_m": 15,
+    "stable_inputs": true,
+    "cake": {
+      "returncode": 0,
+      "exact_acceptance_line": true,
+      "seconds": 73.80524626999977,
+      "peak_RSS_KiB": 1436788,
+      "user_seconds": 72.887738,
+      "system_seconds": 0.708229,
+      "cache_release_rounds": 73,
+      "progress64MiB_rounds": 0,
+      "max_sampled_cgroup_current": 1526751232,
+      "final_memory": {
+        "current": 9105408,
+        "peak": 1531453440,
+        "anon": 7835648,
+        "file": 798720,
+        "swap": 0
+      }
+    },
+    "hash_cache_release_calls": 122,
+    "AS_MiB": 1650,
+    "heap_MiB": 1400,
+    "stack_MiB": 32,
+    "CPU_count": 1,
+    "total_seconds": 79.89140142199903,
+    "finished_UTC": "2026-11-13T22:40:18.795809+00:00"
+  },
+  "unit_inactive": true,
+  "temporary_reservation_MiB_released": 1650,
+  "capacity_and_left16_not_claimed": true
+}

@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "label": "CERTIFIED",
+  "m": 11,
+  "n": 6,
+  "scope": "universal generic terminal counterexample formula",
+  "exact_verdict_line": true,
+  "returncode": 0,
+  "seconds": 0.7709297309993417,
+  "stable_inputs": true,
+  "before": {
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m11-a/input.cnf": "ca1637366185d883d5e78064f17e52680dd7d87516113576ff9861e4256e0c2e",
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m11-a/proof.blrat": "3c7d2c9e0056e2723c6b0bfa760ff2b365f76249b1ca2bdecead5d58ba0730a6",
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m11-a/proof.blrat.zst": "45ba870bddedc88919e237495fd19901ae5385f90e7e3659493a0219619873dd",
+    "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m11-a/result.json": "a575181d4429710f35433d7e86e41618e9ca29bf91a74bea986007de778f3b09",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/terminal12_audit/tools/replay.py": "a14a6487bd64bb88995d661dc67ec82be47b0c26c9f7d41323f1df847ad8d508"
+  },
+  "after": {
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m11-a/input.cnf": "ca1637366185d883d5e78064f17e52680dd7d87516113576ff9861e4256e0c2e",
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m11-a/proof.blrat": "3c7d2c9e0056e2723c6b0bfa760ff2b365f76249b1ca2bdecead5d58ba0730a6",
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m11-a/proof.blrat.zst": "45ba870bddedc88919e237495fd19901ae5385f90e7e3659493a0219619873dd",
+    "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m11-a/result.json": "a575181d4429710f35433d7e86e41618e9ca29bf91a74bea986007de778f3b09",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/terminal12_audit/tools/replay.py": "a14a6487bd64bb88995d661dc67ec82be47b0c26c9f7d41323f1df847ad8d508"
+  },
+  "proof_bytes": 31431277,
+  "compressed_bytes": 18526014,
+  "stdout_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "cache_release": "POSIX_FADV_DONTNEED every64MiB and remainder on every hash",
+  "limits": {
+    "AS_MiB": 300,
+    "heap_MiB": 64,
+    "stack_MiB": 32,
+    "CPUs": 1,
+    "outer_wall_seconds": 20,
+    "cake_wall_seconds": 17,
+    "cake_CPU_seconds": 16
+  },
+  "proofs_retained": true,
+  "new_reservation": false
+}

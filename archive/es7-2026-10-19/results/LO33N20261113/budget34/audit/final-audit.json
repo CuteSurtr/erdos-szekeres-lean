@@ -1,0 +1,62 @@
+{
+  "label": "INDEPENDENT AUDIT COMPLETE FOR THIS PASS",
+  "collected_local": "2026-11-14T10:49:48.128589+09:00",
+  "all_certified_coupled_rows": 971,
+  "original_rows": 812,
+  "additional_batches": [
+    {
+      "batch": "cuts-near9",
+      "rows": 128,
+      "summary_sha256": "dfe4cad20d9381ab1975f6663293bf8009647b4c18fa564cfdb8fcc48a94dd2a"
+    },
+    {
+      "batch": "cuts-v2",
+      "rows": 7,
+      "summary_sha256": "fb76721a5dc7320cd812e681de7b7e06a0b5b5ca06756350ecf1ebe362069df1"
+    },
+    {
+      "batch": "cuts-v3",
+      "rows": 9,
+      "summary_sha256": "8295a9debc842b3f626c79567b9bbdd5f554275c6ef64f28c42b3628779c8b63"
+    },
+    {
+      "batch": "cuts-v4",
+      "rows": 10,
+      "summary_sha256": "b88be6b4d2ce4608b7b1f4ce220e705af1437a7180a48b3cd5a747bb03389935"
+    },
+    {
+      "batch": "cuts-v5",
+      "rows": 5,
+      "summary_sha256": "10ce40a018116f791f257db46b4de99aac96c31877c8d624aeeefb5e45cb7b83"
+    }
+  ],
+  "slice19": {
+    "label": "EXACT TREE",
+    "contexts_total": 3643,
+    "contexts_replayed": 3643,
+    "nodes": 1658483,
+    "leaves": 829242,
+    "minimum_margin": 1,
+    "global_pending": 1
+  },
+  "slice20": {
+    "label": "PARTIAL EXACT REPLAY; NO EXCLUSION",
+    "input_version": "s20-v5",
+    "rows": 3623,
+    "contexts_total": 4064,
+    "contexts_replayed": 1222,
+    "nodes": 11366003,
+    "leaves": 5683002,
+    "minimum_margin": 1,
+    "global_pending": 2843,
+    "master_still_current": true
+  },
+  "both_required_slices_exact": false,
+  "remaining_frontier_contexts": 2842,
+  "slice19_summary_sha256": "424be2779c1a745fa0bb7834875eeba55ea17bd65a83ae180767a02b55624c3a",
+  "slice20_summary_sha256": "da05495f7b843124df01a0e3be1b22567c07ffb6a324cdf5e6c79833d8a620e8",
+  "worker_finished_packet": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/incremental/finished-by-control.json",
+  "worker_failure_packet": null,
+  "unit_state": "ActiveState=inactive\nResult=success\nExecMainStatus=0\n",
+  "trust_boundary": "Written geometry and prior N5/N66 audits inherited; fresh row certificates and exact integer tree checks here; no Lean theorem claimed."
+}

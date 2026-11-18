@@ -1,0 +1,115 @@
+[
+  {
+    "label": "COMPUTED",
+    "stem": "parent16-n7",
+    "m": 16,
+    "n": 7,
+    "full_geometry": true,
+    "fourcaps": 71,
+    "rank3_triples": 116,
+    "polygons": 279,
+    "clause_sets_match": true,
+    "models_checked": true,
+    "redundant_fourcap_lemma_checked": true,
+    "all_assignments": 65536,
+    "weak_count": 7835,
+    "terminal_count": 389,
+    "weak_min_size": 4,
+    "terminal_min_size": 4,
+    "minimum_weak_A": [
+      0,
+      1,
+      2,
+      8
+    ],
+    "cnf_sha256": "5569bc70581bdb935873c0f3198eebe148e87d51667c2edecc114e2932e4f45f"
+  },
+  {
+    "label": "COMPUTED",
+    "stem": "star12-n7",
+    "m": 12,
+    "n": 7,
+    "full_geometry": true,
+    "fourcaps": 25,
+    "rank3_triples": 39,
+    "polygons": 54,
+    "clause_sets_match": true,
+    "models_checked": true,
+    "redundant_fourcap_lemma_checked": true,
+    "all_assignments": 4096,
+    "weak_count": 1526,
+    "terminal_count": 921,
+    "weak_min_size": 1,
+    "terminal_min_size": 1,
+    "minimum_weak_A": [
+      8
+    ],
+    "cnf_sha256": "8481dc3962c853746218ef7e8977e55f50d448639170e00fb5e1daa4daf11b61"
+  },
+  {
+    "label": "COMPUTED",
+    "stem": "restr_ends_weak_a5_n7_m12_real-n7",
+    "m": 12,
+    "n": 7,
+    "full_geometry": true,
+    "fourcaps": 28,
+    "rank3_triples": 40,
+    "polygons": 80,
+    "clause_sets_match": true,
+    "models_checked": true,
+    "redundant_fourcap_lemma_checked": true,
+    "all_assignments": 4096,
+    "weak_count": 1829,
+    "terminal_count": 986,
+    "weak_min_size": 1,
+    "terminal_min_size": 1,
+    "minimum_weak_A": [
+      5
+    ],
+    "cnf_sha256": "72f67a1234e9b3691bf09db05a94ff48756a0f61fb48faf31e80c7b5f84009b9"
+  },
+  {
+    "label": "COMPUTED",
+    "stem": "target8-n8",
+    "m": 16,
+    "n": 8,
+    "full_geometry": true,
+    "fourcaps": 280,
+    "rank3_triples": 87,
+    "polygons": 168,
+    "clause_sets_match": true,
+    "models_checked": true,
+    "redundant_fourcap_lemma_checked": true,
+    "all_assignments": 65536,
+    "weak_count": 8439,
+    "terminal_count": 6720,
+    "weak_min_size": 1,
+    "terminal_min_size": 1,
+    "minimum_weak_A": [
+      14
+    ],
+    "cnf_sha256": "635d899c1a7ba121084020daec15f21e7cd305198e66741d8f5d2f019c989392"
+  },
+  {
+    "label": "COMPUTED",
+    "stem": "restr_ends_weak_a5_n8_m13_real-n8",
+    "m": 13,
+    "n": 8,
+    "full_geometry": true,
+    "fourcaps": 26,
+    "rank3_triples": 35,
+    "polygons": 133,
+    "clause_sets_match": true,
+    "models_checked": true,
+    "redundant_fourcap_lemma_checked": true,
+    "all_assignments": 8192,
+    "weak_count": 3916,
+    "terminal_count": 1831,
+    "weak_min_size": 1,
+    "terminal_min_size": 1,
+    "minimum_weak_A": [
+      6
+    ],
+    "cnf_sha256": "fa6b831e4df9785fde3a2bd0d1a2bff5b38c3772b5056846e3c1373b47f9174a"
+  }
+]

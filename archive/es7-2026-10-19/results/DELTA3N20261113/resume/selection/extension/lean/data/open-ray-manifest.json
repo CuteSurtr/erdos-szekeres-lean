@@ -1,0 +1,27 @@
+{
+  "status": "PROVED; Lean-checked open/closed-ray equivalence",
+  "base_manifest_sha256": "4c9c241850c79e5effb76417caa2371eb462c5389525c83eb8589fff37ef0ec1",
+  "source_sha256": "a4a5b43ff46de13964ca35ff7ec2531a08e1288ee451e307dfeb22b52d4993d2",
+  "log_sha256": "d307086b2853c656a56984e81ac7bd266e1246cb2e8e0d67fe8d6ef120cf4313",
+  "record_sha256": "e5e438944e03a1294889fd8a9d34754515004a3dcf003483fa8ac0284a430c09",
+  "runner_sha256": "eb585aae8956d57595abfb4b01c92f0dfaad6964ae07f62be01792e71e543b1c",
+  "exported_module_sha256": "ec0ece41f2580ba795dc4b3d413357fc76073866558f0198e7a13fe6988119da",
+  "axiom_audits": {
+    "Delta3.WeightedEnvelope.maxFrom_le": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Delta3.WeightedEnvelope.le_envelope_zero_of_pos": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Delta3.WeightedEnvelope.le_envelope_pos_iff_nonneg": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "independent_second_verification_claimed": false
+}

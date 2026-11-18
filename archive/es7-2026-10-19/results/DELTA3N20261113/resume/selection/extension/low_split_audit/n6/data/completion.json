@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "label": "CERTIFIED",
+  "statement": "T6 through left11 with separate lower coverage",
+  "cases": {
+    "10": {
+      "cnf_sha256": "2aac28f4cfbe8b9f99e2ee4959d2efe81f6b4f0ad26805b09f395cd17f24f026",
+      "proof_sha256": "f8ac66d7eba2c854d31a3cb8bc8a390b11de28aeb136faf27e341b8c368338bd",
+      "cake": {
+        "returncode": 0,
+        "seconds": 0.025422842998523265,
+        "peak_RSS_KiB": 58500,
+        "user_seconds": 0.012634999999999999,
+        "system_seconds": 0.003887,
+        "periodic_cache_release_rounds": 0,
+        "exact_acceptance_line": true
+      },
+      "AS_MiB": 300,
+      "total_seconds": 0.07048123200365808
+    },
+    "11": {
+      "cnf_sha256": "1dcd40d44ed07b7f94d99c450636e0e15fa6eea57f5902cad519177c2f251d37",
+      "proof_sha256": "a90cd99d30b32066f97b0312b8dcbc28c7ffd3c6bd99d1275e724daba0c682e0",
+      "cake": {
+        "returncode": 0,
+        "seconds": 0.05037108000396984,
+        "peak_RSS_KiB": 134268,
+        "user_seconds": 0.034348,
+        "system_seconds": 0.010794999999999999,
+        "periodic_cache_release_rounds": 0,
+        "exact_acceptance_line": true
+      },
+      "AS_MiB": 300,
+      "total_seconds": 0.132618518997333
+    }
+  },
+  "capacity_specialization_checked_here": false,
+  "all_left_conclusion_conditional_on_capacity": true,
+  "singleton_left_d4_exception_retained": true,
+  "old_manifest_hashes": {
+    "low_split_audit": "8609cc06302c622b3f37014c27334ba142bb535b86e528aa654217e9959303c3",
+    "low_split_audit/replay": "159ac6c8386dbf78f2e63481bc3e4f659fe72e8c2c1456616db81729d79f298e",
+    "terminal12_audit": "329176f456fb210accad89ea1721cee4dedf8aea6e867a16458d8991d6d48d23"
+  },
+  "old_files_rechecked_unchanged": {
+    "low_split_audit": 128,
+    "low_split_audit/replay": 63,
+    "terminal12_audit": 78
+  },
+  "dependency_hashes": {
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/terminal12_audit/VERIFY_TERMINAL12.md": "145f7e9771d4d7324a105ed833759ee7ff9f62e8e94f8928b1cac5a2c3468d11",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/boundary/audit/VERIFY_BOUNDARY.md": "591b2e437a938c435d45556c2f153611eb3a4111d63bbeaf674ab5f9634ad0ff",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split_audit/VERIFY_LOW_SPLIT.md": "b90064af47e18f24e32920211a572c0a5404553f26e2d8e19a78aefa84641943"
+  },
+  "no_job_remaining": true,
+  "extra_allocation_MiB": 0,
+  "frozen_UTC": "2026-11-13T22:34:59.248554+00:00"
+}

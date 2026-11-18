@@ -1,0 +1,31 @@
+{
+  "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split/Capacity16.lean",
+  "source_sha256": "8d5ced5ab84da9ba9347bc4fd1f99952dfa876302c35a712e9e8fec284a003d3",
+  "command": [
+    "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean",
+    "-j1",
+    "-s16384",
+    "-M1000",
+    "--root=/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split",
+    "-o",
+    "/home/jay/research/data/delta3-codex-20261113/extension/capacity-lean/primary-a/Capacity16.olean",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split/Capacity16.lean"
+  ],
+  "exit_code": -15,
+  "stop_reason": "RSS exceeds 3000MiB",
+  "peaks": {
+    "VmPeak": 4117868,
+    "VmSize": 4117868,
+    "VmHWM": 3079756,
+    "VmRSS": 3079756,
+    "RssAnon": 225916,
+    "RssFile": 2853840,
+    "VmSwap": 0,
+    "Threads": 5
+  },
+  "seconds": 2.598,
+  "axiom_reports": {},
+  "as_bytes": 6442450944,
+  "rss_guard_mib": 3000,
+  "lean_heap_mib": 1000
+}

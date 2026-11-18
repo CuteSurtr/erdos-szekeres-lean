@@ -1,0 +1,53 @@
+{
+  "status": "static source-header inventory only; no Lean replay or RSS measurement",
+  "root": "ErdosSzekeres.Omission.BaekGeometry",
+  "modules": 3983,
+  "main_olean_bytes": 1713844760,
+  "full_mathlib_import": false,
+  "mathlib_tactic_import": true,
+  "missing_source": [],
+  "missing_olean": [],
+  "largest_oleans": [
+    {
+      "module": "Mathlib.Tactic.Ring.Basic",
+      "bytes": 9598936
+    },
+    {
+      "module": "Mathlib.Tactic.FieldSimp",
+      "bytes": 9095696
+    },
+    {
+      "module": "Mathlib.Tactic.Module",
+      "bytes": 9087680
+    },
+    {
+      "module": "Mathlib.Tactic.CC.Addition",
+      "bytes": 7390600
+    },
+    {
+      "module": "Mathlib.Tactic.CategoryTheory.Monoidal.Basic",
+      "bytes": 6654224
+    },
+    {
+      "module": "Mathlib.Tactic.CategoryTheory.Bicategory.Basic",
+      "bytes": 6649328
+    },
+    {
+      "module": "Mathlib.CategoryTheory.Functor.Trifunctor",
+      "bytes": 6069112
+    },
+    {
+      "module": "Qq.Macro",
+      "bytes": 6012544
+    },
+    {
+      "module": "Mathlib.Analysis.NormedSpace.Multilinear.Basic",
+      "bytes": 5586928
+    },
+    {
+      "module": "Mathlib.Util.Notation3",
+      "bytes": 5036416
+    }
+  ],
+  "caveat": "Does not estimate anonymous heap, all private/server companion mappings, or live resident memory."
+}

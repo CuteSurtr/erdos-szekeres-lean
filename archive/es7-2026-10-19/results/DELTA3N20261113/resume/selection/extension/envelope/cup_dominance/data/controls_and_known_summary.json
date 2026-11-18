@@ -1,0 +1,461 @@
+{
+  "cases": [
+    {
+      "A": [
+        4,
+        5
+      ],
+      "bad_triples": 21,
+      "clauses": 75,
+      "cup_protected_nonterminal_pairs": 6,
+      "files": {
+        "certificates.json": {
+          "bytes": 3,
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "cup.cnf": {
+          "bytes": 1021,
+          "sha256": "abede27d1e8b2af013a5415a6a5a3d124fedd69ce4dc5b44eea238d2c6c58501"
+        },
+        "finder.log": {
+          "bytes": 43,
+          "sha256": "edeb0c795232310f7be8561252487aa845d77431731a8ba81d9b7ee1aefc4afe"
+        },
+        "geometry.json": {
+          "bytes": 1149,
+          "sha256": "f81a293661965672d89099fc5955cb6c116fc8c6816ea75cc5473106e479d3c7"
+        },
+        "geometry.stderr": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "input.json": {
+          "bytes": 649,
+          "sha256": "e31881013690fc22097f26eb4ff7998860ef5eacc04f53c4f64bb1a8aa02c711"
+        },
+        "model.json": {
+          "bytes": 120,
+          "sha256": "8f93295ffb899523aef0858b9e5b1c75a0f8cfb224cce5e35df60961c44de9a3"
+        },
+        "points.txt": {
+          "bytes": 121,
+          "sha256": "921208f4d44218ec1a3d02ebd21f4cea2f29750ccaf718c8229e88a6bd6f7cc4"
+        },
+        "positive_replay.json": {
+          "bytes": 272,
+          "sha256": "359b56adb721be20fa61edcaca952f2f6b3276f63de80bc1dbb63f708d058bd1"
+        },
+        "protection.json": {
+          "bytes": 2995,
+          "sha256": "37942793254de730af80b86efba9cdb448f2e5717fcc3d8d3f625a9c348e7a52"
+        }
+      },
+      "fourcaps": 30,
+      "label": "COMPUTED",
+      "literals": 303,
+      "m": 9,
+      "n": 6,
+      "name": "control-boundary-n6",
+      "outcome": "SAT_EXACT_MODEL_CHECKED",
+      "premises": {
+        "maxcap": 4,
+        "maxcup": 4,
+        "maxgon": 5
+      },
+      "protected_pairs": 9,
+      "replay": {
+        "cap_triples_checked": 0,
+        "complement": {
+          "maxcap": 4,
+          "maxcup": 4,
+          "maxgon": 4
+        },
+        "full": {
+          "maxcap": 4,
+          "maxcup": 4,
+          "maxgon": 5
+        },
+        "selected": {
+          "maxcap": 2,
+          "maxcup": 2,
+          "maxgon": 2
+        },
+        "two_line_certificates": 0
+      },
+      "seconds": 0.003353754000272602,
+      "solver_exit": 10,
+      "targets": 24
+    },
+    {
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        8,
+        9,
+        10
+      ],
+      "bad_triples": 17,
+      "clauses": 105,
+      "cup_protected_nonterminal_pairs": 4,
+      "files": {
+        "certificates.json": {
+          "bytes": 4684,
+          "sha256": "1bf20d164781621d0be166aa35219977745be2fad83ecb7cf69370661f1389d4"
+        },
+        "cup.cnf": {
+          "bytes": 1567,
+          "sha256": "655eb18d162a87ee6221c8da068d23666ca57b5e40dada14a024891bcaeccf48"
+        },
+        "finder.log": {
+          "bytes": 45,
+          "sha256": "87ced155687a639eb0e18b80a538bc7cc241d8e1ae3677173c04e6588176137d"
+        },
+        "geometry.json": {
+          "bytes": 1929,
+          "sha256": "ec8eac07c4cb9bf051906fa0b60afe5b5007813fe7dfb0445fe1fc7afabd050e"
+        },
+        "geometry.stderr": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "input.json": {
+          "bytes": 859,
+          "sha256": "30caca8ff9c5b808432601088474c75b97fc466a64942e76439ee0d99c71734e"
+        },
+        "model.json": {
+          "bytes": 175,
+          "sha256": "38b2346ff1f0be7400fd65912af7915d191f61c2e717382cd185ecceb322b5b0"
+        },
+        "points.txt": {
+          "bytes": 280,
+          "sha256": "63dd07c8ef6616839d8a6e5ec14fe9c8b5beeffdafcca2b1f7ffae847611d692"
+        },
+        "positive_replay.json": {
+          "bytes": 273,
+          "sha256": "2c0c21b9ad7be3d03da53e225e0454176adee02ea4eb34e5c4782305e36297e9"
+        },
+        "protection.json": {
+          "bytes": 5092,
+          "sha256": "8bcac5756ba0035bf90c1aa9c0bee90537d61128a164cb1594506487b7e2c220"
+        }
+      },
+      "fourcaps": 46,
+      "label": "COMPUTED",
+      "literals": 487,
+      "m": 11,
+      "n": 7,
+      "name": "control-boundary-n7",
+      "outcome": "SAT_EXACT_MODEL_CHECKED",
+      "premises": {
+        "maxcap": 4,
+        "maxcup": 5,
+        "maxgon": 6
+      },
+      "protected_pairs": 18,
+      "replay": {
+        "cap_triples_checked": 23,
+        "complement": {
+          "maxcap": 3,
+          "maxcup": 2,
+          "maxgon": 3
+        },
+        "full": {
+          "maxcap": 4,
+          "maxcup": 5,
+          "maxgon": 6
+        },
+        "selected": {
+          "maxcap": 3,
+          "maxcup": 5,
+          "maxgon": 5
+        },
+        "two_line_certificates": 0
+      },
+      "seconds": 0.004277478998119477,
+      "solver_exit": 10,
+      "targets": 42
+    },
+    {
+      "A": [
+        6,
+        7
+      ],
+      "bad_triples": 67,
+      "clauses": 200,
+      "cup_protected_nonterminal_pairs": 6,
+      "files": {
+        "certificates.json": {
+          "bytes": 3,
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        "cup.cnf": {
+          "bytes": 3035,
+          "sha256": "8ea432148db6688937592b78a6ad1de94156bbbb6a5c297a9848481a7733159a"
+        },
+        "finder.log": {
+          "bytes": 59,
+          "sha256": "51c9df8a51d5cb4fc7b5893e1d43bd3f1e8cb23f0053897fd9bf1dec4573fe99"
+        },
+        "geometry.json": {
+          "bytes": 3142,
+          "sha256": "5a671f820c35ebb1a6487a8cf034e21a4910846a91e379982446f5800dd8e7d8"
+        },
+        "geometry.stderr": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "input.json": {
+          "bytes": 821,
+          "sha256": "1f86434bbbb60bc237aec8a5ba4d5ef8d15e30991d731a2e330a8e105cb5c76d"
+        },
+        "model.json": {
+          "bytes": 156,
+          "sha256": "e3dda905321c6114b5731d7852b44d58a212b9b80e377746d7a75f9f9a35b5cc"
+        },
+        "points.txt": {
+          "bytes": 190,
+          "sha256": "db5cdb93ce61136497fb5ecd912dfde3f275b866f89e9b93155fcdbc3ed95411"
+        },
+        "positive_replay.json": {
+          "bytes": 272,
+          "sha256": "1965dd4c41cb512bcbaecd7fbefada110f759d02d004d668addd7d0d7d65447d"
+        },
+        "protection.json": {
+          "bytes": 4720,
+          "sha256": "eed9022221b57fbb2aa47a589bfed875dc2c4bcbc362e950ded1666d8b7f6649"
+        }
+      },
+      "fourcaps": 85,
+      "label": "COMPUTED",
+      "literals": 877,
+      "m": 13,
+      "n": 8,
+      "name": "control-boundary-n8",
+      "outcome": "SAT_EXACT_MODEL_CHECKED",
+      "premises": {
+        "maxcap": 4,
+        "maxcup": 6,
+        "maxgon": 7
+      },
+      "protected_pairs": 13,
+      "replay": {
+        "cap_triples_checked": 0,
+        "complement": {
+          "maxcap": 4,
+          "maxcup": 6,
+          "maxgon": 6
+        },
+        "full": {
+          "maxcap": 4,
+          "maxcup": 6,
+          "maxgon": 7
+        },
+        "selected": {
+          "maxcap": 2,
+          "maxcup": 2,
+          "maxgon": 2
+        },
+        "two_line_certificates": 0
+      },
+      "seconds": 0.004319578998547513,
+      "solver_exit": 10,
+      "targets": 48
+    },
+    {
+      "A": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "bad_triples": 4,
+      "clauses": 8,
+      "cup_protected_nonterminal_pairs": 1,
+      "files": {
+        "certificates.json": {
+          "bytes": 206,
+          "sha256": "a716b9424b54e67f792aad0a26527f2c890a8dba044a357ee029a36a3184b71d"
+        },
+        "cup.cnf": {
+          "bytes": 179,
+          "sha256": "738893218e9633f94547475c3c2dde63dc664055d11344806879d3375742d86b"
+        },
+        "finder.log": {
+          "bytes": 34,
+          "sha256": "87fe01a68d63b556c997dc6a8b5352a3d85159a3ff586616528f612015c2a722"
+        },
+        "geometry.json": {
+          "bytes": 234,
+          "sha256": "b195461803c818634c042617661eefff538ecbc79fe7bc1b254de4a74532e1b9"
+        },
+        "geometry.stderr": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "input.json": {
+          "bytes": 314,
+          "sha256": "4bb4c2752f0f8babe921934cc5aec17bc9c1b4377ef0eb8cd4a508151fe5a569"
+        },
+        "model.json": {
+          "bytes": 122,
+          "sha256": "0a7e26edd7463a52dc8be37d75ba3b45f3d273de2cd8df5b055001b409fd3942"
+        },
+        "points.txt": {
+          "bytes": 36,
+          "sha256": "74ae40db9fa8039343496009f6890cd8de3423525876457a2555dfa6d0918702"
+        },
+        "positive_replay.json": {
+          "bytes": 272,
+          "sha256": "886be7920af06f2c6e8ed8f2731babf655fd2f7e13e7870992da8fc320ad3f91"
+        },
+        "protection.json": {
+          "bytes": 1294,
+          "sha256": "c9b779e3359ec012a318c83700934aeed8f56dc37f29feee616d67b35d2f3974"
+        }
+      },
+      "fourcaps": 3,
+      "label": "COMPUTED",
+      "literals": 29,
+      "m": 7,
+      "n": 6,
+      "name": "control-proper-cup",
+      "outcome": "SAT_EXACT_MODEL_CHECKED",
+      "premises": {
+        "maxcap": 4,
+        "maxcup": 4,
+        "maxgon": 5
+      },
+      "protected_pairs": 4,
+      "replay": {
+        "cap_triples_checked": 1,
+        "complement": {
+          "maxcap": 2,
+          "maxcup": 2,
+          "maxgon": 2
+        },
+        "full": {
+          "maxcap": 4,
+          "maxcup": 4,
+          "maxgon": 5
+        },
+        "selected": {
+          "maxcap": 3,
+          "maxcup": 4,
+          "maxgon": 4
+        },
+        "two_line_certificates": 0
+      },
+      "seconds": 0.002919225000368897,
+      "solver_exit": 10,
+      "targets": 1
+    },
+    {
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        11,
+        14,
+        15,
+        17
+      ],
+      "bad_triples": 51,
+      "clauses": 568,
+      "cup_protected_nonterminal_pairs": 49,
+      "files": {
+        "certificates.json": {
+          "bytes": 15859,
+          "sha256": "f59d550763ae316fd6bd5514932dd7bd2e7f38962d749dfe9d4d5323860b37b6"
+        },
+        "cup.cnf": {
+          "bytes": 9444,
+          "sha256": "d90147590039675d3978958052375c4eef74187481b8d8015dd9ee213072e4e2"
+        },
+        "finder.log": {
+          "bytes": 70,
+          "sha256": "3a8748aa5cd4afc73a7caf038e94d4deba42251f3abf43860d9d21dc436028bc"
+        },
+        "geometry.json": {
+          "bytes": 11245,
+          "sha256": "6398aab1c388dd00562d5df58599be84793f2b6c1cac147b241d78bb7e9da8bd"
+        },
+        "geometry.stderr": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "input.json": {
+          "bytes": 973,
+          "sha256": "3c5b1f500f46e1c6319d40e30cd9a639cb28a605fe322c9ca101f0987a877dd2"
+        },
+        "model.json": {
+          "bytes": 259,
+          "sha256": "bd7158cae0d37471743c3f45315c558780bb2f62359d258b22c1c37b1a8fe3b6"
+        },
+        "points.txt": {
+          "bytes": 272,
+          "sha256": "8591856c2c1ba6d7f256c5884f6a4cc7b0013ec3a05b47ab20dbcea14d63adbc"
+        },
+        "positive_replay.json": {
+          "bytes": 273,
+          "sha256": "9e4130fbd8c9e367318550ef6a334da06a966de48dd942cb02504839268b6c16"
+        },
+        "protection.json": {
+          "bytes": 18633,
+          "sha256": "a1bb32a41f318afdde4e4bc25e728565e93569c096ab8604b30e628c310d08d1"
+        }
+      },
+      "fourcaps": 115,
+      "label": "COMPUTED",
+      "literals": 3025,
+      "m": 18,
+      "n": 7,
+      "name": "known18",
+      "outcome": "SAT_EXACT_MODEL_CHECKED",
+      "premises": {
+        "maxcap": 4,
+        "maxcup": 5,
+        "maxgon": 6
+      },
+      "protected_pairs": 65,
+      "replay": {
+        "cap_triples_checked": 77,
+        "complement": {
+          "maxcap": 4,
+          "maxcup": 4,
+          "maxgon": 5
+        },
+        "full": {
+          "maxcap": 4,
+          "maxcup": 5,
+          "maxgon": 6
+        },
+        "selected": {
+          "maxcap": 3,
+          "maxcup": 5,
+          "maxgon": 6
+        },
+        "two_line_certificates": 0
+      },
+      "seconds": 0.00865073999739252,
+      "solver_exit": 10,
+      "targets": 402
+    }
+  ],
+  "completed_cases": 5,
+  "label": "COMPUTED",
+  "outcomes": {
+    "SAT_EXACT_MODEL_CHECKED": 5
+  },
+  "planned_cases": 5,
+  "scope": "Cup-protected selector only; a negative is not a uniform-envelope or ordinary weak Delta failure.",
+  "seconds": 0.07141408899769885,
+  "stop": "COMPLETE"
+}

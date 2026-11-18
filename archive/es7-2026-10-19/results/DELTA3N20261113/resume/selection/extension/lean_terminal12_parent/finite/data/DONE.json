@@ -1,0 +1,212 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "source": "T12Boolean.lean",
+      "tag": "parent-t12-finite-a-t12boolean",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.T12Boolean.core_unsat": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.T12Boolean.terminal_unsat_prop": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.T12Boolean.terminal_unsat_bool": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "source": "T12FiniteModel.lean",
+      "tag": "parent-t12-finite-a-t12finitemodel",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Terminal12.indices_complete": [
+          "propext"
+        ],
+        "Delta3.Terminal12.det_probe": [
+          "propext"
+        ],
+        "Delta3.Terminal12.increasing_x": []
+      }
+    },
+    {
+      "source": "T12FiniteFacts.lean",
+      "tag": "parent-t12-finite-a-t12finitefacts",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Terminal12.no_five_cap": [
+          "propext"
+        ],
+        "Delta3.Terminal12.ordered_triples_nondegenerate": [],
+        "Delta3.Terminal12.determinant_margin": []
+      }
+    },
+    {
+      "source": "T12Determinants.lean",
+      "tag": "parent-t12-finite-a-t12determinants",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Terminal12.exact_determinant_table": [
+          "propext"
+        ],
+        "Delta3.Terminal12.triple_count": [
+          "propext"
+        ],
+        "Delta3.Terminal12.five_count": [
+          "propext"
+        ],
+        "Delta3.Terminal12.six_count": [
+          "propext"
+        ]
+      }
+    },
+    {
+      "source": "T12IndexHelpers.lean",
+      "tag": "parent-t12-finite-a-t12indexhelpers",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Terminal12.RealBridge.indices_nodup": [
+          "propext"
+        ],
+        "Delta3.Terminal12.RealBridge.indices_sorted": [
+          "propext"
+        ],
+        "Delta3.Terminal12.RealBridge.choose_sound": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.distinct_det_ne": []
+      }
+    },
+    {
+      "source": "T12SixBlock00.lean",
+      "tag": "parent-t12-finite-a-t12sixblock00",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Terminal12.no_six_block_00": [
+          "propext"
+        ]
+      }
+    },
+    {
+      "source": "T12SixBlock01.lean",
+      "tag": "parent-t12-finite-a-t12sixblock01",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Terminal12.no_six_block_01": [
+          "propext"
+        ]
+      }
+    },
+    {
+      "source": "T12SixCover00.lean",
+      "tag": "parent-t12-finite-a-t12sixcover00",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Terminal12.six_cover_00": [
+          "propext"
+        ]
+      }
+    },
+    {
+      "source": "T12SixCover01.lean",
+      "tag": "parent-t12-finite-a-t12sixcover01",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Terminal12.six_cover_01": [
+          "propext"
+        ]
+      }
+    },
+    {
+      "source": "T12SixAggregate.lean",
+      "tag": "parent-t12-finite-a-t12sixaggregate",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Terminal12.all_of_take_drop": [
+          "propext"
+        ],
+        "Delta3.Terminal12.no_six_sign_convex": [
+          "propext"
+        ]
+      }
+    },
+    {
+      "source": "T12SubsequenceFacts.lean",
+      "tag": "parent-t12-finite-a-t12subsequencefacts",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Terminal12.mem_choose_of_sublist": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.five_subsequence_not_cap": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.six_subsequence_not_signConvex": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "source": "T12PredicateSemantics.lean",
+      "tag": "parent-t12-finite-a-t12predicatesemantics",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Terminal12.terminalPair_iff": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "source": "T12TerminalBridge.lean",
+      "tag": "parent-t12-finite-a-t12terminalbridge",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Terminal12.not_three": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.terminal_selection_contradiction": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.no_terminal_selection": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.no_boolean_terminal_selection": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "source": "T12Finite.lean",
+      "tag": "parent-t12-finite-a-t12finite",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Terminal12.terminal12_finite_obstruction": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    }
+  ]
+}

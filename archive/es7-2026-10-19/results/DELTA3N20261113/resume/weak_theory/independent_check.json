@@ -1,0 +1,956 @@
+{
+  "label": "COMPUTED",
+  "status": "PASS",
+  "findings_sha256": "04ba18852958bebf6ccea30476ed840eab57a5b6dc3d6ef07ee47b604fec8699",
+  "obstructions": [
+    {
+      "n": 7,
+      "m": 9,
+      "cap4": 9,
+      "cap5": 0,
+      "targets": 9,
+      "ngons": 0,
+      "min_abs_det": 19308240,
+      "private_polygons": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          5,
+          7
+        ]
+      ],
+      "missed_polygon": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "blocker": [
+        4,
+        6,
+        7,
+        8
+      ],
+      "blocker_triple_determinants": [
+        -251602485,
+        -430058625,
+        -1097075698,
+        -918619558
+      ],
+      "full_delta": [
+        0
+      ],
+      "all_16_monotone_failures": [
+        {
+          "red": [],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "red": [
+            8
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "red": [
+            4
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6
+          ]
+        },
+        {
+          "red": [
+            4,
+            8
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6
+          ]
+        },
+        {
+          "red": [
+            6
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "red": [
+            6,
+            8
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "red": [
+            4,
+            6
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            7
+          ]
+        },
+        {
+          "red": [
+            4,
+            6,
+            8
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            7
+          ]
+        },
+        {
+          "red": [
+            7
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "red": [
+            7,
+            8
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "red": [
+            4,
+            7
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6
+          ]
+        },
+        {
+          "red": [
+            4,
+            7,
+            8
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6
+          ]
+        },
+        {
+          "red": [
+            6,
+            7
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "red": [
+            6,
+            7,
+            8
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "red": [
+            4,
+            6,
+            7
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            8
+          ]
+        },
+        {
+          "red": [
+            4,
+            6,
+            7,
+            8
+          ],
+          "violation_type": "four_cap",
+          "witness": [
+            4,
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "threshold_audit": {
+        "counts": {
+          "old_deltas": 230,
+          "terminal_pair_safe": 138,
+          "threshold_safe": 138,
+          "actual_red_extensions": 141,
+          "rank3_blockers": 196,
+          "noncup_terminal_safe": 33,
+          "weak_only_terminal_safe": 10,
+          "exact_deletion_tests": 5236
+        },
+        "weak_only_terminal_safe_example": {
+          "A": [
+            1
+          ],
+          "polygon": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "lower": [
+            0,
+            2,
+            3,
+            5
+          ]
+        }
+      },
+      "lift_control": {
+        "n": 8,
+        "m": 10,
+        "scale": 181950,
+        "P": [
+          [
+            3489236955,
+            -3967946482
+          ],
+          [
+            3489255150,
+            -3967965600
+          ],
+          [
+            4691216850,
+            1727979150
+          ],
+          [
+            6799835400,
+            -4135905450
+          ],
+          [
+            8079489750,
+            -3871532100
+          ],
+          [
+            9398081400,
+            1116445200
+          ],
+          [
+            9489056400,
+            -9279450
+          ],
+          [
+            9583670400,
+            5846235450
+          ],
+          [
+            11568199050,
+            11541088500
+          ],
+          [
+            12298182450,
+            -1688496000
+          ]
+        ],
+        "cap5": 0,
+        "ngons": 0,
+        "min_abs_det": 60236007648750,
+        "common_blue": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "four_cap": [
+          5,
+          7,
+          8,
+          9
+        ]
+      }
+    },
+    {
+      "n": 8,
+      "m": 10,
+      "cap4": 7,
+      "cap5": 0,
+      "targets": 11,
+      "ngons": 0,
+      "min_abs_det": 21135254,
+      "private_polygons": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          8
+        ]
+      ],
+      "missed_polygon": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        9
+      ],
+      "blocker": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "blocker_triple_determinants": [
+        -89877536,
+        -485760730,
+        -552668151,
+        -156784957
+      ],
+      "full_delta": [
+        0
+      ],
+      "all_16_monotone_failures": [
+        {
+          "red": [],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "red": [
+            9
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "red": [
+            6
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "red": [
+            6,
+            9
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "red": [
+            7
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "red": [
+            7,
+            9
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "red": [
+            6,
+            7
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            8
+          ]
+        },
+        {
+          "red": [
+            6,
+            7,
+            9
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            8
+          ]
+        },
+        {
+          "red": [
+            8
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "red": [
+            8,
+            9
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "red": [
+            6,
+            8
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "red": [
+            6,
+            8,
+            9
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "red": [
+            7,
+            8
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "red": [
+            7,
+            8,
+            9
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "red": [
+            6,
+            7,
+            8
+          ],
+          "violation_type": "missed_polygon",
+          "witness": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            9
+          ]
+        },
+        {
+          "red": [
+            6,
+            7,
+            8,
+            9
+          ],
+          "violation_type": "four_cap",
+          "witness": [
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "threshold_audit": {
+        "counts": {
+          "old_deltas": 470,
+          "terminal_pair_safe": 291,
+          "threshold_safe": 291,
+          "actual_red_extensions": 306,
+          "rank3_blockers": 300,
+          "noncup_terminal_safe": 69,
+          "weak_only_terminal_safe": 10,
+          "exact_deletion_tests": 15766
+        },
+        "weak_only_terminal_safe_example": {
+          "A": [
+            1
+          ],
+          "polygon": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "lower": [
+            0,
+            2,
+            3,
+            4,
+            6
+          ]
+        }
+      },
+      "lift_control": {
+        "n": 9,
+        "m": 11,
+        "scale": 136730,
+        "P": [
+          [
+            1097928227,
+            -2060503267
+          ],
+          [
+            1097941900,
+            -2060521100
+          ],
+          [
+            1518386650,
+            6194552650
+          ],
+          [
+            4836960480,
+            -3198114700
+          ],
+          [
+            17130491510,
+            -4727849940
+          ],
+          [
+            19601065880,
+            -3110060580
+          ],
+          [
+            20325734880,
+            3215342680
+          ],
+          [
+            20394099880,
+            -1772567720
+          ],
+          [
+            20542862120,
+            6614177020
+          ],
+          [
+            20768193160,
+            8022632750
+          ],
+          [
+            21501202690,
+            -403626960
+          ]
+        ],
+        "cap5": 0,
+        "ngons": 0,
+        "min_abs_det": 51123601044340,
+        "common_blue": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "four_cap": [
+          7,
+          8,
+          9,
+          10
+        ]
+      }
+    }
+  ],
+  "positive_controls": [
+    {
+      "n": 7,
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -4
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          4,
+          10
+        ],
+        [
+          5,
+          -4
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          8,
+          1
+        ]
+      ],
+      "threshold_audit": {
+        "counts": {
+          "old_deltas": 54,
+          "terminal_pair_safe": 42,
+          "threshold_safe": 45,
+          "actual_red_extensions": 51,
+          "rank3_blockers": 4,
+          "noncup_terminal_safe": 12,
+          "weak_only_terminal_safe": 3,
+          "exact_deletion_tests": 472
+        },
+        "weak_only_terminal_safe_example": {
+          "A": [
+            2
+          ],
+          "polygon": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "lower": [
+            0,
+            1,
+            4,
+            5
+          ]
+        }
+      }
+    },
+    {
+      "n": 8,
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -4
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          -5
+        ],
+        [
+          4,
+          10
+        ],
+        [
+          5,
+          -4
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          8,
+          1
+        ]
+      ],
+      "threshold_audit": {
+        "counts": {
+          "old_deltas": 109,
+          "terminal_pair_safe": 82,
+          "threshold_safe": 91,
+          "actual_red_extensions": 103,
+          "rank3_blockers": 8,
+          "noncup_terminal_safe": 27,
+          "weak_only_terminal_safe": 3,
+          "exact_deletion_tests": 1418
+        },
+        "weak_only_terminal_safe_example": {
+          "A": [
+            2
+          ],
+          "polygon": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "lower": [
+            0,
+            1,
+            3,
+            5,
+            6
+          ]
+        }
+      }
+    }
+  ],
+  "failed_construction_confirmed": true,
+  "elapsed_seconds": 0.033444779001001734,
+  "max_rss_kib": 18308
+}

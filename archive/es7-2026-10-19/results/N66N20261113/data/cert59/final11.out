@@ -1,0 +1,15 @@
+12906 [(13, 5605), (14, 2679), (18, 1278), (17, 1054), (16, 920), (15, 317), (19, 280), (20, 200)]
+{"rows": 12906, "budget": 10, "vars": 650, "clauses": 14116, "cnf_sha256": "a741687bd80fc2794d4bf362fb24577d99b7d91c1cf98077e89f4a151168c6e9", "rows_sha256": "17d10366ba99c549fc2ad785b970ec36a8b11012d4e6c945b9106da223e4ef8b"}
+{"cadical_exit": 20, "seconds": 12.4}
+{"cake_lpr": "s VERIFIED UNSAT", "seconds": 9.5}
+{"rows": 12906, "budget": 10, "vars": 650, "clauses": 14116, "cnf_sha256": "a741687bd80fc2794d4bf362fb24577d99b7d91c1cf98077e89f4a151168c6e9", "rows_sha256": "17d10366ba99c549fc2ad785b970ec36a8b11012d4e6c945b9106da223e4ef8b", "cadical_exit": 20, "cadical_seconds": 12.4, "lrat_bytes": 150383339, "lrat_sha256": "bf841dde5fa8284139b1dde6baa96858d665ee4d4588190e4dd0ea44fbd9147b", "cake_lpr": "s VERIFIED UNSAT", "cake_seconds": 9.5, "used_original_clauses": 3923, "used_rows": 3052}
+{"rows": 3052, "templates": 281, "direct": 68, "bad": 0, "secs": 3.0}
+{"templates_verified": 281, "templates": 281, "cores_verified": 68, "cores": 68, "unjustified": 0, "kinds": {"cycle": 51, "core": 67, "transported": 1447, "mirror": 1487}, "secs": 1118.1}
+{"rows": 3052, "budget": 10, "vars": 650, "clauses": 4262, "cnf_sha256": "920489253e49d2b8527ff32771b08afa05cc2956f149d3c20711657b5b4f4ab0", "rows_sha256": "7a175cbf8b1e4f7cbce720d9a266718d41ab3f0c9e4e6823cd1494821ce31b91"}
+{"cadical_exit": 20, "seconds": 12.6}
+{"cake_lpr": "s VERIFIED UNSAT", "seconds": 10.9}
+{"rows": 3052, "budget": 10, "vars": 650, "clauses": 4262, "cnf_sha256": "920489253e49d2b8527ff32771b08afa05cc2956f149d3c20711657b5b4f4ab0", "rows_sha256": "7a175cbf8b1e4f7cbce720d9a266718d41ab3f0c9e4e6823cd1494821ce31b91", "cadical_exit": 20, "cadical_seconds": 12.6, "lrat_bytes": 162152215, "lrat_sha256": "9272dfbc3364eff199dd1713e054d1879931e6dab2f0b301a0bb4e79b472a244", "cake_lpr": "s VERIFIED UNSAT", "cake_seconds": 10.9, "used_original_clauses": 3809, "used_rows": 2913}
+encoding selftest ok (200 random instances)
+920489253e49d2b8527ff32771b08afa05cc2956f149d3c20711657b5b4f4ab0
+{"rows": 3052, "kinds": {"transported": 1447, "mirror": 1487, "core": 67, "cycle": 51}, "bad": 0, "rows_match": true, "templates_verified": 281, "templates": 281, "cores_verified": 68, "cores": 68}
+FINAL66_DONE

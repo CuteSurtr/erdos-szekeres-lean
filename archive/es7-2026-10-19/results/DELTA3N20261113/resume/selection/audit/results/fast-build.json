@@ -1,0 +1,33 @@
+{
+  "binary_sha256": "c39c2f30fe0a5dcf9e376b9ff578b8e14528f5af07f1b6319960b11de8cf6ca1",
+  "checker_sha256": "4d9aac3bdfe009e6ff0b513a32804fe99a3881ecd45049bf08ce94d6883cd864",
+  "child_peak_rss_kib": 130388,
+  "command": [
+    "g++",
+    "-std=c++17",
+    "-O1",
+    "-Wall",
+    "-Wextra",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/rooted_fast.cpp",
+    "-o",
+    "/home/jay/research/data/delta3-codex-20261113/selection/audit/fast/rooted_fast"
+  ],
+  "elapsed_seconds": 0.8422379710027599,
+  "future_solver_outcome": "PENDING_NOT_AUDITED",
+  "included_sha256": "1964e17b777fd7b7a973f12b2911c003a050047f13a621f523a9f98c6e31d553",
+  "label": "COMPUTED",
+  "limits": {
+    "affinity": [
+      0
+    ],
+    "as_mib": 500,
+    "cpu_seconds": 18,
+    "external_seconds": 20
+  },
+  "mode": "build",
+  "oracle_sha256": "ba57f7b11ec37b8f39ac855cf546011614a0f461d485e3595430d68724e6b162",
+  "peak_rss_kib": 17740,
+  "source_sha256": "540c60ca6657b8234d601b1289518d743f59935ea3d8ca7c9149d3125af8b744",
+  "status": "PASS",
+  "threads": 1
+}

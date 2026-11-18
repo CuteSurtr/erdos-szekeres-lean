@@ -1,0 +1,4 @@
+Nov 14 08:08:26 jay-B850M-AORUS-ELITE-WIFI6E-ICE systemd[2544]: Started nov13c-vfy-delta6-low16-independent.service - [systemd-run] /usr/bin/prlimit --as=3250585600 --cpu=720 /usr/bin/taskset -c 5 /usr/bin/python3 -B /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split_audit/left16_replay/tools/replay.py.
+Nov 14 08:10:48 jay-B850M-AORUS-ELITE-WIFI6E-ICE systemd[2544]: nov13c-vfy-delta6-low16-independent.service: Main process exited, code=exited, status=1/FAILURE
+Nov 14 08:10:48 jay-B850M-AORUS-ELITE-WIFI6E-ICE systemd[2544]: nov13c-vfy-delta6-low16-independent.service: Failed with result 'exit-code'.
+Nov 14 08:10:48 jay-B850M-AORUS-ELITE-WIFI6E-ICE systemd[2544]: nov13c-vfy-delta6-low16-independent.service: Consumed 2min 19.270s CPU time over 2min 21.919s wall clock time, 2.8G memory peak.

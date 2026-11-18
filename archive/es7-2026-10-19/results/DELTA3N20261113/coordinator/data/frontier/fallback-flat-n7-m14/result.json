@@ -1,0 +1,123 @@
+{
+  "commands": [
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "18",
+      "/home/jay/research/data/delta3-codex-20261113/encoder/delta_cnf",
+      "--n",
+      "7",
+      "--m",
+      "14",
+      "--mode",
+      "cup",
+      "--pool",
+      "flat",
+      "--sym",
+      "none",
+      "--out",
+      "/home/jay/research/data/delta3-codex-20261113/encoder/fallback-flat-n7-m14/case.cnf"
+    ],
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "302",
+      "/usr/bin/cadical",
+      "-q",
+      "-t",
+      "300",
+      "--lrat=true",
+      "--binary=false",
+      "/home/jay/research/data/delta3-codex-20261113/encoder/fallback-flat-n7-m14/case.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/encoder/fallback-flat-n7-m14/case.lrat"
+    ]
+  ],
+  "encoding": {
+    "a": 5,
+    "base_only": false,
+    "clauses": 106312,
+    "cnf_bytes": 20162161,
+    "cube": "",
+    "label": "COMPUTED",
+    "literals": 4160567,
+    "m": 14,
+    "max_width": 5955,
+    "mode": "cup",
+    "n": 7,
+    "phases": {
+      "endpoint_support": {
+        "clauses": 144,
+        "literals": 1509
+      },
+      "forall_delta": {
+        "clauses": 16384,
+        "literals": 3796736
+      },
+      "fourcap": {
+        "clauses": 2002,
+        "literals": 4004
+      },
+      "no5cap": {
+        "clauses": 2002,
+        "literals": 6006
+      },
+      "no_ngon": {
+        "clauses": 54912,
+        "literals": 274560
+      },
+      "signotope": {
+        "clauses": 8008,
+        "literals": 32032
+      },
+      "target_seeds": {
+        "clauses": 22860,
+        "literals": 45720
+      }
+    },
+    "pool": "flat",
+    "sym": "none",
+    "triples": 364,
+    "variables": 7464
+  },
+  "hashes": {
+    "cadical.log": "8fba55cea0f98be36fab7b65349dda867a58aabfcf974a46098f5123830ac5cb",
+    "cadical.time": "8e5157a404c88414905809854f2a8c548bc6e687349550556b64ae86ab756239",
+    "case.cnf": "c0e7cf3e99f0ed5dd4fa372f0ee2592e075c8d5b70af0b80e4784019414869e3",
+    "case.lrat": "7b083c918b5cdb03dca55f4ed1f211a3602e6f0d6e64bd88ed1920526c2c762c",
+    "delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+    "encode.log": "9e1321340a7550dfb35483d2f44da6ecb87d73be8c062db8669a148d20830373",
+    "encode.time": "c91c96e7be6432fa11ce4490547d093b7794cda0fe987a15fa93008318dae5e9",
+    "encoder_binary": "b435f805e1475b90cffc6fdc831aeefc2eb573b1a48d800595c03de1bb9e99c6"
+  },
+  "label": "COMPUTED",
+  "parameters": {
+    "as_mib": 1300,
+    "binary": "/home/jay/research/data/delta3-codex-20261113/encoder/delta_cnf",
+    "cake_heap": 1100,
+    "cake_seconds": 300,
+    "cake_stack": 32,
+    "cube": "",
+    "defer_cake": false,
+    "fix_signs": null,
+    "generate_only": false,
+    "m": 14,
+    "mode": "cup",
+    "n": 7,
+    "out": "/home/jay/research/data/delta3-codex-20261113/encoder/fallback-flat-n7-m14",
+    "pool": "flat",
+    "seconds": 300,
+    "sym": "none"
+  },
+  "proof_bytes": 2059195062,
+  "runs": {
+    "cadical": {
+      "exit": 0,
+      "wall_seconds": 300.029
+    },
+    "encode": {
+      "exit": 0,
+      "wall_seconds": 0.164
+    }
+  },
+  "status": "UNKNOWN"
+}

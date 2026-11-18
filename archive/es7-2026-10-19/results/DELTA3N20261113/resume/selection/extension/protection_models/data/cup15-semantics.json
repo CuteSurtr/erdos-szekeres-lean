@@ -1,0 +1,67 @@
+{
+  "m": 15,
+  "n": 7,
+  "caps4": 47,
+  "caps5": 0,
+  "targets": 70,
+  "ngons": 0,
+  "ambient_terminal_pairs": 8,
+  "covered_pairs": {
+    "terminal": 8,
+    "cup": 32,
+    "forced": 67
+  },
+  "bad_triples": {
+    "terminal": 101,
+    "cup": 94,
+    "forced": 41
+  },
+  "all_memberships": 32768,
+  "families": {
+    "weak": {
+      "count": 7078,
+      "minimum": 4,
+      "size_counts": {
+        "4": 96,
+        "5": 672,
+        "6": 1787,
+        "7": 2264,
+        "8": 1532,
+        "9": 590,
+        "10": 125,
+        "11": 12
+      },
+      "one_minimum": 298
+    },
+    "terminal": {
+      "count": 0,
+      "minimum": null,
+      "size_counts": {},
+      "one_minimum": null
+    },
+    "cup": {
+      "count": 0,
+      "minimum": null,
+      "size_counts": {},
+      "one_minimum": null
+    },
+    "forced": {
+      "count": 742,
+      "minimum": 4,
+      "size_counts": {
+        "4": 44,
+        "5": 185,
+        "6": 268,
+        "7": 178,
+        "8": 59,
+        "9": 8
+      },
+      "one_minimum": 298
+    }
+  },
+  "label": "COMPUTED abstract orientation semantics",
+  "seconds": 0.10317958200175781,
+  "source_sha256": "74ba49b36b7b92da7a0b68759cfc169f4a518847e9108e51333276c95af2c8fc",
+  "signs_sha256": "1eda34b382bbed90d864945e2a9bb3c291dab5e9c857bc75530fda3a1cca1d11",
+  "scope": "No real geometry claim before exact realization; no uniform-envelope claim from these orientation-only predicates."
+}

@@ -1,0 +1,5 @@
+2026-11-13 18:33:36 KST: unit nov13c-e7-chain39.service was stopped by the session memory guard.
+Reason: track 'e7' used 4224 MB in total, above its budget of 4000 MB; this was its largest job (2143 MB)
+Read /home/jay/research/data/memguard-20261113/MEMORY_POLICY.txt (hard rule since 13 Nov 2026, 18:25 KST). Do not restart the same job unchanged:
+make it smaller (fewer parallel workers, smaller CNFs, cubes instead of one monolithic instance, lazy clauses,
+streaming instead of in-memory lists, a compiled tool) so that it stays well below its MemoryMax.

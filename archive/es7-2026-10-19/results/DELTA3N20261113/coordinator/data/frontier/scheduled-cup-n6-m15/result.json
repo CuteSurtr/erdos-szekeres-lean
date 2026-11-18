@@ -1,0 +1,199 @@
+{
+  "commands": [
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "18",
+      "/home/jay/research/data/delta3-codex-20261113/encoder/delta_cnf",
+      "--n",
+      "6",
+      "--m",
+      "15",
+      "--mode",
+      "cup",
+      "--pool",
+      "lattice",
+      "--sym",
+      "none",
+      "--out",
+      "/home/jay/research/data/delta3-codex-20261113/encoder/scheduled-cup-n6-m15/case.cnf"
+    ],
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "902",
+      "/usr/bin/cadical",
+      "-q",
+      "-t",
+      "900",
+      "--lrat=true",
+      "--binary=false",
+      "/home/jay/research/data/delta3-codex-20261113/encoder/scheduled-cup-n6-m15/case.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/encoder/scheduled-cup-n6-m15/case.lrat"
+    ],
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "18",
+      "/home/jay/research/data/six10-linux-20261105/venv.disk/bin/python",
+      "-B",
+      "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/encoder/check_model.py",
+      "--m",
+      "15",
+      "--n",
+      "6",
+      "--mode",
+      "cup",
+      "--model",
+      "/home/jay/research/data/delta3-codex-20261113/encoder/scheduled-cup-n6-m15/cadical.log"
+    ]
+  ],
+  "encoding": {
+    "a": 5,
+    "base_only": false,
+    "clauses": 181556,
+    "cnf_bytes": 4579719,
+    "cube": "",
+    "label": "COMPUTED",
+    "literals": 781297,
+    "m": 15,
+    "max_width": 79,
+    "mode": "cup",
+    "n": 6,
+    "phases": {
+      "cap_lattice": {
+        "clauses": 30827,
+        "literals": 184962
+      },
+      "endpoint_support": {
+        "clauses": 169,
+        "literals": 1989
+      },
+      "forall_delta": {
+        "clauses": 32768,
+        "literals": 64790
+      },
+      "fourcap": {
+        "clauses": 2730,
+        "literals": 5460
+      },
+      "no5cap": {
+        "clauses": 3003,
+        "literals": 9009
+      },
+      "no_ngon": {
+        "clauses": 55055,
+        "literals": 220220
+      },
+      "signotope": {
+        "clauses": 10920,
+        "literals": 43680
+      },
+      "target_lattice": {
+        "clauses": 32180,
+        "literals": 223379
+      },
+      "target_seeds": {
+        "clauses": 13904,
+        "literals": 27808
+      }
+    },
+    "pool": "lattice",
+    "sym": "none",
+    "triples": 455,
+    "variables": 69770
+  },
+  "hashes": {
+    "cadical.log": "aea1b48b17a721a2a0b9c50725ad26d8dd13ead60e8d467979dddca1676353e0",
+    "cadical.time": "7021ef890d72e22da78b5043f76ef88de30d7f9e363662abbc487275789628aa",
+    "case.cnf": "f0b94d902933799f9222b12619fd3bd5b17c05ea59fc11719e076ceaaa98d631",
+    "case.lrat": "b8cd105ee11fdfaa9874fba3dbbbc29768bc3ddc15da969945f7938c7dcb50c8",
+    "delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+    "encode.log": "77fd693c04cd0cba32d8adf02b852e5661bbf1fbfb29be1912eb9c0528e5bb90",
+    "encode.time": "197972ca16c0ccced9ed9c718f596a79ebc212db688fdf925f00377dee1abcce",
+    "encoder_binary": "b435f805e1475b90cffc6fdc831aeefc2eb573b1a48d800595c03de1bb9e99c6",
+    "model.log": "4aff8d67d8aef741a9e754d19d448c328dedf0ae26ac00e54daa2294b0a3f391",
+    "model.time": "5af1512f318fb00b6c936115dea564d0db38fd91e536c86d96a2eb4e93717501"
+  },
+  "label": "COMPUTED",
+  "model": {
+    "checked_counterexample": true,
+    "convex_ngons": 0,
+    "counterexample_mode": "cup",
+    "fivecaps": 0,
+    "fourcaps": 80,
+    "label": "COMPUTED",
+    "m": 15,
+    "modes": {
+      "cap": {
+        "first_delta": [
+          0,
+          3,
+          4,
+          5,
+          7,
+          9,
+          12,
+          13
+        ],
+        "targets": 77,
+        "working_deltas": 87
+      },
+      "cup": {
+        "first_delta": null,
+        "targets": 103,
+        "working_deltas": 0
+      },
+      "weak": {
+        "first_delta": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          8
+        ],
+        "targets": 216,
+        "working_deltas": 353
+      }
+    },
+    "n": 6,
+    "signs": "++++-++++--+++-+-+-++--++-+-------+++-+-++--++-------++++++--++-----++++--++---++--+++++++++-+-+------------------+-+----------------++++--++-------+---++-------+++++++------------+-+-++-+++---------++++-+++-------++-+++----+--+++++++++-+-++++++-------++++++++++-+-++++++++++--+++++++++++++---------++++++++-------++++++-------+++++++-++++++++++++++++++++++++++++++++++++----------------------+++++-++++++--+++++++++++++-------+++++++-+++++++++++++++-----",
+    "valid": true
+  },
+  "parameters": {
+    "as_mib": 1300,
+    "binary": "/home/jay/research/data/delta3-codex-20261113/encoder/delta_cnf",
+    "cake_heap": 1100,
+    "cake_seconds": 300,
+    "cake_stack": 32,
+    "cube": "",
+    "defer_cake": false,
+    "fix_signs": null,
+    "generate_only": false,
+    "m": 15,
+    "mode": "cup",
+    "n": 6,
+    "out": "/home/jay/research/data/delta3-codex-20261113/encoder/scheduled-cup-n6-m15",
+    "pool": "lattice",
+    "seconds": 900,
+    "sym": "none"
+  },
+  "proof_bytes": 2395813802,
+  "runs": {
+    "cadical": {
+      "exit": 10,
+      "wall_seconds": 668.641
+    },
+    "encode": {
+      "exit": 0,
+      "wall_seconds": 0.077
+    },
+    "model": {
+      "exit": 0,
+      "wall_seconds": 0.114
+    }
+  },
+  "status": "SAT_CHECKED"
+}

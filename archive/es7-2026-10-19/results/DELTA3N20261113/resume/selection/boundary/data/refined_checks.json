@@ -1,0 +1,51 @@
+{
+  "script_sha256": "1c644be44a0e38a571e582cd24261d26b0a7927ee32c5a3fb35205536fdcefff",
+  "oracle_sha256": "483b8b4282bc5dbc6ebdd6bf8d4dbf905176ab0f767c2160e352bd1454a35889",
+  "outcomes": [
+    {
+      "n": 6,
+      "long_cups": 6,
+      "safe_count": 54,
+      "safe_delta": [
+        0,
+        8
+      ],
+      "rooted": [
+        0,
+        8,
+        9
+      ],
+      "augmentable_cups": 6
+    },
+    {
+      "n": 7,
+      "long_cups": 5,
+      "safe_count": 403,
+      "safe_delta": [
+        3,
+        5
+      ],
+      "rooted": [
+        3,
+        5,
+        11
+      ],
+      "augmentable_cups": 5
+    },
+    {
+      "n": 8,
+      "long_cups": 6,
+      "safe_count": 593,
+      "safe_delta": [
+        5,
+        6
+      ],
+      "rooted": [
+        5,
+        6,
+        13
+      ],
+      "augmentable_cups": 6
+    }
+  ]
+}

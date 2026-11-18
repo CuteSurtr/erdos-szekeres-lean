@@ -1,0 +1,58 @@
+{
+  "completed_utc": "2026-11-13T20:33:39.904464+00:00",
+  "status": "COMPLETE",
+  "generic_model": "COMPUTED all variables, clauses, auxiliary semantics and subsets checked",
+  "realization": "COMPUTED independent exact integer/hull replay",
+  "membership": "CERTIFIED by fresh independent cake_lpr replay",
+  "m": 15,
+  "n": 7,
+  "five_caps": 0,
+  "convex_seven_subsets": 0,
+  "terminal_safe_deltas": 0,
+  "four_caps": 48,
+  "bad_triples": 78,
+  "convex_six_subsets": 187,
+  "subsets_checked": 32768,
+  "weak_deltas": 4805,
+  "weak_triples": [
+    [
+      2,
+      3,
+      7
+    ],
+    [
+      2,
+      3,
+      11
+    ],
+    [
+      4,
+      11,
+      12
+    ],
+    [
+      4,
+      11,
+      13
+    ]
+  ],
+  "every_root_weak_size_at_most": 4,
+  "membership_variables": 15,
+  "membership_clauses": 313,
+  "global_minimality": "NOT CLAIMED",
+  "uniform_envelope_scope": "NOT CHECKED HERE",
+  "frozen_neighbor_checks": {
+    "audit": {
+      "manifest_sha256": "e71ed0db65dab51e0375860d9d790109ef2f17de8881da97bec31b311c1ac527",
+      "files_checked": 65,
+      "unchanged": true
+    },
+    "cardinality": {
+      "manifest_sha256": "390520e949d700728fb718e7530893e5879e0a3d655ae7362526ae0764da5678",
+      "files_checked": 39,
+      "unchanged": true
+    }
+  },
+  "running_jobs": false,
+  "shared_manifests_changed": false
+}

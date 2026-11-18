@@ -1,0 +1,57 @@
+{
+  "label": "COMPUTED exact control",
+  "P": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      -1
+    ],
+    [
+      2,
+      -3
+    ],
+    [
+      3,
+      -6
+    ],
+    [
+      10,
+      500
+    ],
+    [
+      11,
+      600
+    ],
+    [
+      12,
+      699
+    ],
+    [
+      13,
+      797
+    ]
+  ],
+  "full_maxima": [
+    4,
+    4,
+    4
+  ],
+  "selected_fourcap": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "ambient_support_fourcap": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "all_selected_cap_triples_cup_protected": true,
+  "n7_complement_size": 4,
+  "scope": "Demonstrates necessity of explicitly forbidding selected four-caps, even when every selected cap triple is cup-protected."
+}

@@ -1,0 +1,19 @@
+{
+  "label": "COMPUTED conditional formula construction",
+  "left_m": 16,
+  "n": 7,
+  "old_variables": 128297,
+  "old_clauses": 903593,
+  "new_variables": 8008,
+  "added_clauses": 168169,
+  "added_literals": 496496,
+  "hashes": {
+    "base": "2e233545d18e3a9acf9a253b80a102935828bee27c079ba18946dfbd4efd53d8",
+    "base_map": "46dfc8217a63d6c4a34ed65316443aff990702e3505f0791c540e67ed52cc220",
+    "output": "f23af9d7113dac3f9e4414298b20fb08d8181c279804d36b79e98a66755622b4",
+    "output_map": "c4e2ec5444906df0e7dbe80e2cb2846d6e38a52ed4c7af6e3c746dcef93049bb",
+    "source": "168c016a00338dfa2ae0f40129c6af31ce81f13b21a4a82d40d61fd990ecb3f0"
+  },
+  "geometric_dependency": "structure2/low_split.md: maxcup(L)<=n-2 gives a terminal selector in the standard low join; exact T_n equivalence then implies T7(L). A real failure therefore has a six-cup.",
+  "scope": "No propositional equivalence is asserted. A real T7(L) failure canonically satisfies the new family. UNSAT still needs cake and independent audit."
+}

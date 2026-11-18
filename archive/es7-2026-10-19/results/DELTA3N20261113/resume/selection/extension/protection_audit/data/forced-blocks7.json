@@ -1,0 +1,89 @@
+{
+  "status": "PASS",
+  "label": "COMPUTED",
+  "variant": "forced",
+  "m": 8,
+  "n": 7,
+  "variables": 681,
+  "clauses": 3772,
+  "literals": 10099,
+  "geometry_variables": 210,
+  "geometry_clauses": 1688,
+  "new_clauses": 2084,
+  "geometry_prefix_sha256": "05f1f4c50536396a82a2a8ff0a1b514a70b3b49eb681c6488b59583123f128b6",
+  "geometry_reference": null,
+  "map_kind_counts": {
+    "orientation": 56,
+    "convex": 154,
+    "terminal_fourcap": 70,
+    "end_fourcap": 28,
+    "forced_support": 280,
+    "covered_pair": 28,
+    "uncovered_cap_triple": 56,
+    "target_contains": 9
+  },
+  "phase_counts": {
+    "signotope": 560,
+    "no5cap": 56,
+    "convex4_equivalence": 560,
+    "convex_larger_equivalence": 504,
+    "no_ngon": 8,
+    "fourcap_equivalence": 350,
+    "ambient_terminal_pair_equivalence": 98,
+    "forced_domination_equivalence": 1366,
+    "uncovered_cap_triple_equivalence": 168,
+    "target_containment": 9,
+    "forall_forced_protected_delta": 93
+  },
+  "empty_End4_ORs": 13,
+  "cup_support_cache_reuses": 0,
+  "canonical_geometry_checked": true,
+  "false_failure_rows": {
+    "forall_forced_protected_delta": 91
+  },
+  "input_hashes": {
+    "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/forced-blocks7.cnf": "91d88a8f26e1c6615923c7f36312f4d21c67f3ccd50d02e69dae7299c38eda6b",
+    "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/forced-blocks7.cnf.map": "07124c06e21975be6ae7d2b86c5f17255f2ab151528ef9b078dcd09370dc62d8"
+  },
+  "streamed_rows_and_map_byte_identical": true,
+  "fixture": {
+    "name": "blocks",
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        2,
+        -3
+      ],
+      [
+        3,
+        -6
+      ],
+      [
+        10,
+        500
+      ],
+      [
+        11,
+        600
+      ],
+      [
+        12,
+        699
+      ],
+      [
+        13,
+        797
+      ]
+    ],
+    "cap4": 2,
+    "bad_triples": 2,
+    "targets": 0
+  }
+}

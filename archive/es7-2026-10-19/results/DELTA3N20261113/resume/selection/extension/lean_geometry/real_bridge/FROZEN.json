@@ -1,0 +1,25 @@
+{
+  "status": "PROVED: real15 terminal-membership packet frozen; fresh parent real replay pending",
+  "time_kst": "2026-11-14T07:12:42.752968+09:00",
+  "manifest_sha256": "58a8efa09a6a35633fbc8c31bd51678e3b7186b130bc3148e07af2b9d5d7c44d",
+  "finished_sources": {
+    "IndexHelpers.lean": "2db4e52d35a1c90bb15c5683c10125dd39515e1530b43a4f2b53eb957b402ecc",
+    "BridgeBase.lean": "fd2ca262239e6ac32f29732afd7d872f4b3fa7450b66c7ae3e2d880267c4a6ea",
+    "ConvexBridge.lean": "9998452761a0d8a651fb846f9111946dbef3039f1007904bd40b4896f813218b",
+    "TerminalReal.lean": "68b0a89e72b8b6f37c95e2b881deb97f58db515b1627a8bd2400ebc58adca70f",
+    "PointSetBridge.lean": "acda2b96c228096ceefb9528cee7b5e2d77dc8196c127a8fcfa7e9ef276c6e32",
+    "RealBalanced15.lean": "4e8f648678aae017c8356d0ed33cccffe891c9ee5f0ee9230448d8fb4b95cbfc"
+  },
+  "documentation": {
+    "README.md": "b9f7b2f30aeb862ffbaf7b50ebcf337c48db3a9198a199d66e24b114f343d356",
+    "PLAN.md": "5001f3cbdf80a4ac4215c9730384e0a8d77344bf376a2b644c12a5575ef97a9f"
+  },
+  "scripts": {
+    "check.py": "cc9e53f87c557816b4caa7fd0b7995790dd60869ffa78846cb20bc7cdd8adbfd",
+    "replay.py": "28799aa9b3bb48d97b6c10be68b45e1ce20db2adb383d5a99415022e7a2fd1aa",
+    "package.py": "c26d95627c17fbf13bdf70d8df8c137562b023c8641d4a5adcbdd2ec3aa48f02"
+  },
+  "axiom_reports": 31,
+  "fresh_parent_replay_pending_at_freeze": true,
+  "envelope_Delta_claim": false
+}

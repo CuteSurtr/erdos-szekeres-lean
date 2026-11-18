@@ -1,0 +1,833 @@
+{
+  "label": "file integrity only; not an additional proof",
+  "frozen_at": "2026-11-14T10:51:09.000695",
+  "files": [
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/sat/README.md",
+      "bytes": 8074,
+      "sha256": "3c6b109cfc70be8bda42393bd4bc4d7f776e09c122b83967c029540e62d5075b"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/sat/VERIFY_FINITE_SAT.md",
+      "bytes": 7423,
+      "sha256": "7a0ea57b4a670cd1a08d293888450eeae351c2c9877711cc448d8fbe6d342816"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/sat/data/adversarial-v3.json",
+      "bytes": 1698,
+      "sha256": "163805489ff325e1b3d6b22df855c302ed45dab876a6719e0b0067dc6a813775"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/sat/data/all-witnesses-final-v5.json",
+      "bytes": 812,
+      "sha256": "0f21ce148fccdfe72c1191071e9d155ed77ba5b0004f307303ca3b5bc8d1eb87"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/sat/data/discovery-controls.json",
+      "bytes": 4551,
+      "sha256": "6abdc2fb0462d5521adb5b66090bd9059f535135d37e16fbd1cbbf2a7ed25aee"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/sat/data/encoding-audits.json",
+      "bytes": 21156,
+      "sha256": "7d4608a1592cd8b99d94d07e94345106b3fd1be22018476ef1fcd2e1374d57fb"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/sat/data/provisional-nine-manifest.json",
+      "bytes": 1043,
+      "sha256": "8a4374d1384cfa9ae18a254ea5a8b75c6cb2e0dd02aa868dc8eb442907caa170"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/sat/data/provisional-nine-sat-witness.json",
+      "bytes": 48595,
+      "sha256": "c17188bb9f50574bd7c97951d0f26bf2efb0733b29589f72c2b90611472705fc"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/sat/data/resource-receipt.json",
+      "bytes": 446,
+      "sha256": "f82cffca980593d464a1db2e8045fb1239b64524d05c3c8b3fe3d895ac417e63"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/sat/data/result-summary.json",
+      "bytes": 11820,
+      "sha256": "d73a5e7bed7f576dd7fbb36dc22015c8fe4126a3a0f4044a2a5cedd54fc3d879"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/sat/data/v3-witness-latest-check.json",
+      "bytes": 28529,
+      "sha256": "686f1ba47409db0dec5ca5a5c09b421005e9a5b0d767702ea1a979f1b7420e93"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/sat/data/v4-witness-final-v5-check.json",
+      "bytes": 27523,
+      "sha256": "94861763ac46c309695169bbfb483b5f00b775cad3ea8fe3566cb7add3f31ef2"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/sat/data/witness-v1.json",
+      "bytes": 49628,
+      "sha256": "74e091b27c35256aaa5051c9b2c75a927bc8a68d7d9d7e8a465590a2405a42de"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/sat/data/witness-v2.json",
+      "bytes": 49734,
+      "sha256": "43d875c86592c5bca30bb24cfe03e05e799cb51d1d93a74c45bab5db08c0367b"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/sat/data/witness-v3.json",
+      "bytes": 51651,
+      "sha256": "7f623b25c7edd672b0783bfc1ff5fb4315954236d942e8d15e36c47abc2b0de5"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/sat/data/witness-v4.json",
+      "bytes": 51788,
+      "sha256": "3aef83a71a7ad61004be52cf6e228449da4db3adba0cd8eed28675691289768c"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/sat/tools/adversarial_controls.py",
+      "bytes": 3533,
+      "sha256": "1c02613e1097e004bd848c5058f7d80b34d79636deef148b05fe48f482fd93e2"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/sat/tools/audit_pb.py",
+      "bytes": 5077,
+      "sha256": "d79bf3270d741d729aa70c7ecddf95bcdc578f87104a96637346b9189327f22b"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/sat/tools/audit_translation.py",
+      "bytes": 4572,
+      "sha256": "6ed7b6a3fb9ca631cfd9f705524518b35fa9ead6917b2a4d620c115907ee12ae"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/sat/tools/check_independent.py",
+      "bytes": 9248,
+      "sha256": "66d7eb6a1add5d3bcdd7c90abd0eb529ac729b1338be11c4b746d510ef959baf"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/sat/tools/check_latest.py",
+      "bytes": 2786,
+      "sha256": "a8299760a1305d4ea76f60f9ce9834713d4f15201bdd1885306399e982344157"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/sat/tools/cpsat_discover.py",
+      "bytes": 6089,
+      "sha256": "7a91a652147755bb9a187868561f985f432144510891db61f0a35309b1c4064e"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/sat/tools/encode.py",
+      "bytes": 7430,
+      "sha256": "397ad314a481a6db525c48448f2d71ccbceeba7e780a9b539bb25ce63d37b67f"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/sat/tools/extend_assignment.py",
+      "bytes": 2083,
+      "sha256": "3a7cdae65a2111e049cac105b1327a8d8162f5ee0cf78599a92f8535fe1837df"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/sat/tools/finalize.py",
+      "bytes": 3345,
+      "sha256": "e7f2f0e9f0ffcf46423eab10e4e7f16347730b549963ed3f912ddf5df04fce92"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/sat/tools/run.py",
+      "bytes": 5499,
+      "sha256": "3ccddfd58ede61192a9b2d6cbc591ecb4ac0dd4eef419329ce947a778009d95d"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/adversarial-v3/budget33_instead34/audit.log",
+      "bytes": 278,
+      "sha256": "f3e1e5a04778e1715024dbf2558baa8104025c019bf6df64e092b8a39bb86745"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/adversarial-v3/budget33_instead34/encoding.json",
+      "bytes": 2148,
+      "sha256": "9fdeb679d481fb5b41d9f3b146decd11d04f9c1882b0281eff6835d42c567abd"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/adversarial-v3/budget33_instead34/system.cnf",
+      "bytes": 4891169,
+      "sha256": "bd7a973dba93cea86ce82612df2e1839979fdca8d1661d818d46eb8b9dac0773"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/adversarial-v3/demand_off_by_one/audit.log",
+      "bytes": 276,
+      "sha256": "8ff1821047d7e3e23fea55aac28069e966f5d95954d853f17987c73722e0656f"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/adversarial-v3/demand_off_by_one/encoding.json",
+      "bytes": 2148,
+      "sha256": "9fdeb679d481fb5b41d9f3b146decd11d04f9c1882b0281eff6835d42c567abd"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/adversarial-v3/demand_off_by_one/system.cnf",
+      "bytes": 4891169,
+      "sha256": "985e7eb8ad301229445bc22461d9179bee0bb7b326f273b7987ca1f427b2adb9"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/adversarial-v3/gate_sign/audit.log",
+      "bytes": 622,
+      "sha256": "eb1b1aea74592f097d3d205b6b0f47010a2249990bffe86a9b54ce7aad56f520"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/adversarial-v3/gate_sign/encoding.json",
+      "bytes": 2148,
+      "sha256": "9fdeb679d481fb5b41d9f3b146decd11d04f9c1882b0281eff6835d42c567abd"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/adversarial-v3/gate_sign/system.cnf",
+      "bytes": 4891168,
+      "sha256": "de18ee28134655b818c477e3348b0fc233d9a4e8063248e1b24bada9392f49aa"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/adversarial-v3/h0_sign/audit.log",
+      "bytes": 274,
+      "sha256": "c3f62957cbcdee69848bb9712d78c9e7222f1bcf7fd0536646e6f19ff054fe7c"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/adversarial-v3/h0_sign/encoding.json",
+      "bytes": 2148,
+      "sha256": "9fdeb679d481fb5b41d9f3b146decd11d04f9c1882b0281eff6835d42c567abd"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/adversarial-v3/h0_sign/system.cnf",
+      "bytes": 4891168,
+      "sha256": "02801eac3d22e0b8aa8dcd58afc41090f7b707a9bccaaab9bb608c5ee3eb4efc"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/adversarial-v3/missing_pool_row/audit.log",
+      "bytes": 288,
+      "sha256": "c5978fb84328b317810e1997895e1d61700f54b9728369e6ce766597f025b086"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/adversarial-v3/missing_pool_row/encoding.json",
+      "bytes": 2148,
+      "sha256": "9fdeb679d481fb5b41d9f3b146decd11d04f9c1882b0281eff6835d42c567abd"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/adversarial-v3/missing_pool_row/system.cnf",
+      "bytes": 4891134,
+      "sha256": "6040fc66fce15dae9e9c8da7fa4732bfcd041842fab94607c1a5afe39f803c74"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/adversarial-v3/row_support_index/audit.log",
+      "bytes": 288,
+      "sha256": "c5978fb84328b317810e1997895e1d61700f54b9728369e6ce766597f025b086"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/adversarial-v3/row_support_index/encoding.json",
+      "bytes": 2148,
+      "sha256": "9fdeb679d481fb5b41d9f3b146decd11d04f9c1882b0281eff6835d42c567abd"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/adversarial-v3/row_support_index/system.cnf",
+      "bytes": 4891169,
+      "sha256": "bf48f0d9d43ec6e2746040abee99738cc948af38ef30f06ea5d63cd4f0d86a51"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/adversarial-v3/summary.json",
+      "bytes": 1698,
+      "sha256": "163805489ff325e1b3d6b22df855c302ed45dab876a6719e0b0067dc6a813775"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/binary-control/cadical.log",
+      "bytes": 3111,
+      "sha256": "7c430d59774c6274958bec2d976b5cdecf6313a57159c9829ad9a7774e366149"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/binary-control/cake-empty.out",
+      "bytes": 43,
+      "sha256": "104a9df6bb3c5c31167c984268adfdeba3d6d23dee0b448a3bbf3f2c0e007193"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/binary-control/cake-valid.out",
+      "bytes": 17,
+      "sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/binary-control/contradiction.cnf",
+      "bytes": 19,
+      "sha256": "ac42a371b5a124286c410ed5dfa2e3be7ee7d5b1feac6f08e7e1715f0c3669a8"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/binary-control/control.json",
+      "bytes": 623,
+      "sha256": "e739b1bc6396ace8be318eecf5daeb86a788e166b3943c24252dbf2000d59a38"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/binary-control/empty.lrat",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/binary-control/valid.lrat",
+      "bytes": 6,
+      "sha256": "8cd7608dabe9d3657bb3270cd5a679a5b006f753f4eaf378ab90e9f7dc279370"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/binary-control/valid.lrat.zst",
+      "bytes": 19,
+      "sha256": "6908b6708c1140e867bd630439c10dbef339f20f2f20995e90b99cd0274f40e6"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/combined/cadical-default/cadical.log",
+      "bytes": 38028,
+      "sha256": "09d660287020d09360db28d335f8dba8f468a42dfca7491c7b03da76958fa58e"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/combined/cadical-default/compress.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/combined/cadical-default/resource-adjustment.json",
+      "bytes": 212,
+      "sha256": "c7e4ed8d2c54a246dc7ab00e1c31bfe1ff2358e41d06d25f3ab3ccf6934d9fb6"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/combined/cadical-default/status.json",
+      "bytes": 1749,
+      "sha256": "c97ed417adec07c603cea525f3949808e3a1b643f6dec96780f9552d831e0be2"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/combined/cadical-default/system.lrat",
+      "bytes": 1301098496,
+      "sha256": "8da5df70602b6315876cec15566a914ad6aa08def1cc79babdfa740fad7a0245"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/combined/cadical-default/system.lrat.zst",
+      "bytes": 266872250,
+      "sha256": "25587afbcbd3bbb51fcc3a7633ad6a3c40bd59527e3b36bd00fd5e000f0a445c"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/combined/cpsat-1/model.pbtxt",
+      "bytes": 664748,
+      "sha256": "f5a821b56a5e6a504a76a9695181c3244ee58dc6d41883037f33d84207c393c6"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/combined/cpsat-1/solver.log",
+      "bytes": 11852,
+      "sha256": "c7baafc8f2e540047177bcbb87ad5e8149888727a0ffbc1c695c1498d4a7e686"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/combined/cpsat-1/status.json",
+      "bytes": 654,
+      "sha256": "e01d5024cc57e4c300b434916b51b29324af1fb1a6445eda3977158b020cf19a"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/combined/cpsat-1/stop-request.json",
+      "bytes": 260,
+      "sha256": "4087c1733ecbb1b522569f01ab8fffd94184de84a06955308682537d5c77ba9a"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/combined/encoding.json",
+      "bytes": 2146,
+      "sha256": "52b9b91e94ba5c125e50414cfaa53ecfa53c979e81411ff734e9302920e87810"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/combined/row-clauses.json",
+      "bytes": 351218,
+      "sha256": "2f636262e7de622f096c982f56fdd1ed8ed702404caaeb360863e307e0d10896"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/combined/system.body",
+      "bytes": 4881586,
+      "sha256": "3a0e1e72dc621b55b6fbc448aa55d65ef791f9e7f0695557aa73683e726602b3"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/combined/system.cnf",
+      "bytes": 4881605,
+      "sha256": "b99c1add9e6557e0426489d319cf9170d5e9666170799c4118a9ab0ad6f5901a"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/combined/translation-audit.json",
+      "bytes": 419,
+      "sha256": "02ef389bb4fa42988deef80a5aec661eb8dcfe79aae7d46ec4c6ef471e5bd4c3"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-1/extended-solution.txt",
+      "bytes": 490981,
+      "sha256": "74c34aa87af4b33cbdeedc07d363420671477f0f320e42d134474be8f368409a"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-1/final-v5-check.json",
+      "bytes": 27986,
+      "sha256": "d4848f8b7addd93584bad3933502bad7f86a8c24a28ce799bc94aa85e1d72b65"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-1/final-v5-check.log",
+      "bytes": 2602,
+      "sha256": "b4ce9f95e00be69dbedcf5d239ba688433228467456676b17e01dd518a710963"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-1/raw-holes.json",
+      "bytes": 463,
+      "sha256": "f1f94d08ee0217c6ab188c33651f7ceae0e7267a4bde6cbd8609886143fc5bf1"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-1/source.json",
+      "bytes": 248,
+      "sha256": "2d3d5888e568b11badeed1277b6eff478c49dba4791235613c39f461b1e7bec2"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-1/witness.json",
+      "bytes": 49628,
+      "sha256": "74e091b27c35256aaa5051c9b2c75a927bc8a68d7d9d7e8a465590a2405a42de"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-2/extended-solution.txt",
+      "bytes": 495281,
+      "sha256": "867099d4c0844b10c8f53734ec8f84e23502c9f1dbc2d69b07fe2f5649615507"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-2/final-v5-check.json",
+      "bytes": 28430,
+      "sha256": "500db541c560cb8dd961b86334277c935629e2fbb912d8b9d66f75d4a2bca41d"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-2/final-v5-check.log",
+      "bytes": 3037,
+      "sha256": "a459fa8b217d53fea7e9fd9ba3820d7525b300f1a04c13748f3f5eecb7c47be3"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-2/finder-witness.json",
+      "bytes": 173,
+      "sha256": "44d406ac6d10cc7982537baa66e985c351045a56e28dbbe36ccc0358738b52fd"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-2/latest-pool-check.json",
+      "bytes": 28395,
+      "sha256": "c1faafc2b1098342561f51cfb741bf43b25a7e3994b10024218a5353289ace59"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-2/raw-holes.json",
+      "bytes": 463,
+      "sha256": "f20e8ae0c0294943d453dd675f491eb553a92f66dbdd4972628ceac7068e4c0c"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-2/source.json",
+      "bytes": 212,
+      "sha256": "06833b99de6bfac2aeba41968167b0b71188581607c997b6d0968e04412d3f6f"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-2/witness.json",
+      "bytes": 49734,
+      "sha256": "43d875c86592c5bca30bb24cfe03e05e799cb51d1d93a74c45bab5db08c0367b"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-3/check.log",
+      "bytes": 4263,
+      "sha256": "8ff8adba52e3d1f422b2a47ab9f0b7ca8745ab29a47f2fe80ef60209b50406ad"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-3/checked-hole-vector.json",
+      "bytes": 463,
+      "sha256": "eef04e05de0ba62c6578202f4687b583000f9f9a69f99eb153e7fa11f3e0c4a4"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-3/extended-solution.txt",
+      "bytes": 494216,
+      "sha256": "341cc76f2bcf46d893803de4b3c8d69390bbf761c3383f9c7548a0c30e8e8cc0"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-3/final-v5-check.json",
+      "bytes": 28564,
+      "sha256": "0c9359ffe7d9293df3c8a71bd6bf0fe12af72d28935e196c82721c19c6404599"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-3/final-v5-check.log",
+      "bytes": 3175,
+      "sha256": "b31b6595b78d4c23209692c68e12ebe76ce82fd5704c15a0af0fd195d53b257c"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-3/finder-candidate.json",
+      "bytes": 5147,
+      "sha256": "206284ae28932ea83cc6b0159c0366e3c54b5e5e20f79a50ed1e9b8e31804b2d"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-3/latest-pool-check.json",
+      "bytes": 28529,
+      "sha256": "686f1ba47409db0dec5ca5a5c09b421005e9a5b0d767702ea1a979f1b7420e93"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-3/raw-holes.json",
+      "bytes": 463,
+      "sha256": "eef04e05de0ba62c6578202f4687b583000f9f9a69f99eb153e7fa11f3e0c4a4"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-3/source.json",
+      "bytes": 217,
+      "sha256": "2658a41b9ddb361dfdecaa674463a8cc2f15d35a1b51f722be185133ade692c0"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-3/witness.json",
+      "bytes": 51651,
+      "sha256": "7f623b25c7edd672b0783bfc1ff5fb4315954236d942e8d15e36c47abc2b0de5"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-4/check.log",
+      "bytes": 3225,
+      "sha256": "991419cb1f327bb0440adedb4d1410aa026c1a5436c368cc6331fa19eb0d7c55"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-4/checked-hole-vector.json",
+      "bytes": 463,
+      "sha256": "5732ad7c6be541fde9efba9b570b4b90ccbbc0c95a748388e79da8fb768527be"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-4/extended-solution.txt",
+      "bytes": 494302,
+      "sha256": "ee40170fda3d85c47d65aebea17905b7cbb8048c3c162a181558424564aa3062"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-4/final-v5-check.json",
+      "bytes": 27523,
+      "sha256": "b60aa62b0da79196ed04367e75f7d4436d448c4a845e74fa9de39be183e37162"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-4/final-v5-check.log",
+      "bytes": 2137,
+      "sha256": "c111d2ed016736e6edf1a1bf67b1f28b8114ec6e9323dbd6af8dbb648ebdf562"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-4/finder-candidate.json",
+      "bytes": 3164,
+      "sha256": "19cba9d2fc936b7d12d4f6d3dfc457edf8b48cfd58741b531e7e20c039be0e63"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-4/latest-pool-check.json",
+      "bytes": 27523,
+      "sha256": "94861763ac46c309695169bbfb483b5f00b775cad3ea8fe3566cb7add3f31ef2"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-4/provisional-nine-check.json",
+      "bytes": 48595,
+      "sha256": "c17188bb9f50574bd7c97951d0f26bf2efb0733b29589f72c2b90611472705fc"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-4/raw-holes.json",
+      "bytes": 463,
+      "sha256": "5732ad7c6be541fde9efba9b570b4b90ccbbc0c95a748388e79da8fb768527be"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-4/source.json",
+      "bytes": 217,
+      "sha256": "2e0a4aec3e1a9cf548e4af57cddcd3ca4604e5be2335a46d51c18429e8e260b1"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/parent-witness-4/witness.json",
+      "bytes": 51788,
+      "sha256": "3aef83a71a7ad61004be52cf6e228449da4db3adba0cd8eed28675691289768c"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/provisional-nine/controls-pool.json",
+      "bytes": 414276,
+      "sha256": "e1398421cc4e78199a29db5800677b09e8b75ee1e36a3210152cef8a980fa731"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/provisional-nine/manifest.json",
+      "bytes": 1043,
+      "sha256": "8a4374d1384cfa9ae18a254ea5a8b75c6cb2e0dd02aa868dc8eb442907caa170"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/provisional-nine/real-controls.json",
+      "bytes": 112645,
+      "sha256": "0fe5f8893c9068c47df49810f4f23dc31d783466f543d70ef254d2efe20fd5a5"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/provisional-nine/references.json",
+      "bytes": 644193,
+      "sha256": "0cb8ae35a7568fd10c0229741f0185e2b0abfcd5e63f27889a2f091e540fe1e0"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/provisional-nine/uncertified-rows.json",
+      "bytes": 354139,
+      "sha256": "23d1a897249fa73fd6382b1dea3cb2e8650421a6c348113de35925e6d38d5097"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/real-controls.json",
+      "bytes": 113679,
+      "sha256": "8cd6d800cbc2a91cd8e38e097f088761d9265edec377b3fe62ab3f61787c98ee"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/resource-receipt.json",
+      "bytes": 446,
+      "sha256": "f82cffca980593d464a1db2e8045fb1239b64524d05c3c8b3fe3d895ac417e63"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v2/cpsat-hint/model.pbtxt",
+      "bytes": 667204,
+      "sha256": "307a5d69f641bde94540ccd7e780e016d12302a2415dd97c4630b10b90fca721"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v2/cpsat-hint/pb-audit.json",
+      "bytes": 624,
+      "sha256": "ffec65c3bacbffa62df2218d0873b72023a9da21e01912e328343a3a03643d17"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v2/cpsat-hint/solver.log",
+      "bytes": 12007,
+      "sha256": "d7172a21f6717ad57e7fbd2a321bd687d37fbf1af7f9a714f4dd42470e986350"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v2/cpsat-hint/status.json",
+      "bytes": 740,
+      "sha256": "c8dd4f71f428729980caa7982a7c95a2e88a366f318a90c19feec990c99fcf64"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v2/cpsat-hint/stop-request.json",
+      "bytes": 160,
+      "sha256": "d10458e9915b5a3560602402516550e52e275e2f03350bc13ecfef006ce89fa3"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v2/encode.log",
+      "bytes": 2148,
+      "sha256": "0e76f1d0b64af661f01daad9e2650fbf1f34bf417d4bf3b6efc5e508901a0f55"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v2/encoding.json",
+      "bytes": 2148,
+      "sha256": "0e76f1d0b64af661f01daad9e2650fbf1f34bf417d4bf3b6efc5e508901a0f55"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v2/input-check.json",
+      "bytes": 411,
+      "sha256": "92963e01c7c7576af2c0c4abc1e9503bc17b656626b8e9bdb2e7de5151bc0e9b"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v2/pool819.json",
+      "bytes": 52394,
+      "sha256": "d3a819094d66a5075e23139b6844c57045fd57aba82b1f336bfde50d7063b9b8"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v2/real-controls.json",
+      "bytes": 112644,
+      "sha256": "7a082450407a848026f1ae0a6e0f77ef455547f7dd1472854dc4101109e3efc5"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v2/row-clauses.json",
+      "bytes": 351939,
+      "sha256": "1ca207762ca62d6916c081f572866a81d6f9feb7bd65ee9fb6a84099a6abb275"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v2/system.body",
+      "bytes": 4886720,
+      "sha256": "adac1f199aa1a714f8094b356143155426328190f5464241b6de65ae0d87f50d"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v2/system.cnf",
+      "bytes": 4886739,
+      "sha256": "7d23164f451081f4d8202d7e49270478843afb021b6cfc73472b04863b4dca80"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v2/translation-audit.json",
+      "bytes": 419,
+      "sha256": "b3fc8bd0e748669c7dfc5622a16eff56dcd60015c442cca219a2aa69910d9054"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v3/cpsat-hint/model.pbtxt",
+      "bytes": 688994,
+      "sha256": "45228424199c6b01dd1cbca5ff0c4a5337cb56eb1a46c0fdaf15ee59c5261260"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v3/cpsat-hint/pb-audit.json",
+      "bytes": 624,
+      "sha256": "4fb75f80b0fab80f884ec96621f7844d3b637a0915e4c9ab9d46b6df3481ce79"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v3/cpsat-hint/solver.log",
+      "bytes": 12097,
+      "sha256": "67c0aff2a17db5ac51129cd244fc2cdb7b77c2ccd496054b83166bc0965c7272"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v3/cpsat-hint/status.json",
+      "bytes": 769,
+      "sha256": "d06278967a700d54240b8160d91b962660c48794c4f1d85ae1e86fa311cf032e"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v3/cpsat-hint/stop-request.json",
+      "bytes": 156,
+      "sha256": "2df32b50e55978b591763c6617a59a5f64ee89cfcb61a4c8f09e66856b8bfe68"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v3/encode.log",
+      "bytes": 2148,
+      "sha256": "9fdeb679d481fb5b41d9f3b146decd11d04f9c1882b0281eff6835d42c567abd"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v3/encoding.json",
+      "bytes": 2148,
+      "sha256": "9fdeb679d481fb5b41d9f3b146decd11d04f9c1882b0281eff6835d42c567abd"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v3/input-check.json",
+      "bytes": 1352,
+      "sha256": "16449a740bfd56a9db9725fae56e16c1b2faa26b81a7c4d40aea9613a3078ad3"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v3/pool956.json",
+      "bytes": 59550,
+      "sha256": "ec317b82a1af85a876669cee1d9abe8091003bb929d1b60c776b556739026c12"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v3/real-controls.json",
+      "bytes": 112644,
+      "sha256": "32cd5fe95f66b3a0869e5c3893b0c11a7b0f08dffa9c123559642aebc50f3dea"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v3/row-clauses.json",
+      "bytes": 366050,
+      "sha256": "a99c2b2d07135e92b2d84d107e7299d8f260adbeb2de7422e125a3df01e595ff"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v3/system.body",
+      "bytes": 4891150,
+      "sha256": "84d5cfd841441f3d2065bccf15e35cfcd53182e040de5eab888a2cf4a47a5914"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v3/system.cnf",
+      "bytes": 4891169,
+      "sha256": "8210b9d0465d0f316f1e60b17e24c07b54913dbeb3fda7d502a6935757cba4cc"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v3/translation-audit.json",
+      "bytes": 419,
+      "sha256": "d58a8df2c411ad7231765d884f885d87057f1999f40435bd69083ab87a0cf0c9"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v4/cpsat-provisional9/model.pbtxt",
+      "bytes": 1768750,
+      "sha256": "97ed4ef55afa2abdd25c4b90669b7fe4b1cbca6c776d80b39a38f38f99491161"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v4/cpsat-provisional9/pb-audit.json",
+      "bytes": 763,
+      "sha256": "75c002338d12e84f1e5defe7927674c45470885b51d7186988c6e96ae4287c7d"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v4/cpsat-provisional9/solver.log",
+      "bytes": 11987,
+      "sha256": "485d25983261d111874cf2ed198f221e3ad00ec857d8acfe95560986902250f2"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v4/cpsat-provisional9/status.json",
+      "bytes": 1015,
+      "sha256": "7ede027875ef82e984671cb8301c0577c816446aecee9c46f184ba371c334571"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v4/cpsat-provisional9/stop-request.json",
+      "bytes": 163,
+      "sha256": "368a811ba473a89d33be1b6bb62f33bc1032353bc92f38be3a582687b3d3c57d"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v4/cpsat-provisional9-nolp/model.pbtxt",
+      "bytes": 1767590,
+      "sha256": "2cd9189e1a94532d94c4262318cb20a19471f41e86ca08403c15758f45ac4f56"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v4/cpsat-provisional9-nolp/pb-audit.json",
+      "bytes": 764,
+      "sha256": "d754015ec5b25addf7ab012c8af51db266af5139a960b6538b5640af5f205362"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v4/cpsat-provisional9-nolp/solver.log",
+      "bytes": 10967,
+      "sha256": "a97502db6e17aab0e1e2b48b5ec8e28f1ab38a7faf5400313bddaab5db1f101c"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v4/cpsat-provisional9-nolp/status.json",
+      "bytes": 938,
+      "sha256": "9dafc1a0c996bb8b5290ec0e27a57b7812e5104ab876410747220c3d5514b153"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v4/encode.log",
+      "bytes": 2148,
+      "sha256": "fda5a67a6b20cd534342b8091fff328cc5037120547eed60f45fb97f2397767a"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v4/encoding.json",
+      "bytes": 2148,
+      "sha256": "fda5a67a6b20cd534342b8091fff328cc5037120547eed60f45fb97f2397767a"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v4/input-check.json",
+      "bytes": 327,
+      "sha256": "a07945b0567488ee4e28dc53569765f05e48c6b9992a7933e7c7b03f8b37884d"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v4/pool966.json",
+      "bytes": 60139,
+      "sha256": "bd0e32826a8015f466014907e73a2b9098db467be4645027a970aa3e78fdfaa7"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v4/row-clauses.json",
+      "bytes": 367080,
+      "sha256": "2ee991288fda0dd0b303bd670c9b8cdf625b1f295793ba8aa23733d018a06f74"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v4/system.body",
+      "bytes": 4891539,
+      "sha256": "819733c1971a3cde84efab5898c544ce4abd8dc9b3a4c2df69ef3b2a302e15fb"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v4/system.cnf",
+      "bytes": 4891558,
+      "sha256": "ba5b205e48bf157565bac347f94fcf3c6b4d7aa4dbd1b9c4d41404ba50462ac5"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v4/translation-audit.json",
+      "bytes": 419,
+      "sha256": "f98879d028bfbb2a1a416d4099bc22d9e0e046a72193e238c51e8f1388ab1b2d"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v5/encode.log",
+      "bytes": 2147,
+      "sha256": "6506912724212de47450f35a482817bdde391350c4ad3a36cc29b78df5f761a4"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v5/encoding.json",
+      "bytes": 2147,
+      "sha256": "6506912724212de47450f35a482817bdde391350c4ad3a36cc29b78df5f761a4"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v5/input-check.json",
+      "bytes": 396,
+      "sha256": "a954af5e2e53db5f23db3762d04c00d005873b1bf5ace58fc2e071110226b41c"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v5/pool971.json",
+      "bytes": 60471,
+      "sha256": "83d5f6e90b6bc1e1b04b07861ec2b12306b862b38b27ea4fd5f733d2391dac60"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v5/real-controls-larger.json",
+      "bytes": 7651,
+      "sha256": "098c1a16282738229fe4c79c9d08c2c0abc9680aa277dd7c6f92e7c6a4706c83"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v5/real-controls.json",
+      "bytes": 112644,
+      "sha256": "8e93336b64cbcdcae49b1a2b3e7589b9175c60c2b9e86dc396acad71f96119c4"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v5/row-clauses.json",
+      "bytes": 367595,
+      "sha256": "fec7089cd4ea9fd1317652b9c86dbfa7de77103913648fa3a63ae7edf5dff58f"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v5/system.body",
+      "bytes": 4891771,
+      "sha256": "88dbba6ba7f553861a57380760286897a4be6bcc887b1c51b407cda43b24bc7d"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v5/system.cnf",
+      "bytes": 4891790,
+      "sha256": "ebbc3dcf79fe48eee83204dce1f6d60356a8a0264c836ddbd8a3def51b6c53b1"
+    },
+    {
+      "path": "/home/jay/research/data/es308-20261114/sat/s20-v5/translation-audit.json",
+      "bytes": 419,
+      "sha256": "81b808b4069c75a95286d15c56586cb62d802e49c874b13f251041928c032211"
+    }
+  ],
+  "file_count": 165,
+  "total_bytes": 1658801818
+}

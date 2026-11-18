@@ -1,0 +1,201 @@
+{
+  "label": "COMPUTED",
+  "m": 18,
+  "n": 7,
+  "xmax": 758070,
+  "weak": {
+    "count": 8149,
+    "minimum_size": 5,
+    "minimum_A": [
+      0,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  "terminal": {
+    "count": 0,
+    "minimum_size": null,
+    "minimum_A": null
+  },
+  "all_X_strictly_right": {
+    "count": 4057,
+    "minimum_size": 5,
+    "minimum_A": [
+      0,
+      5,
+      6,
+      7,
+      8
+    ],
+    "threecaps": [
+      {
+        "vertices": [
+          0,
+          5,
+          6
+        ],
+        "terminal_pair": [
+          5,
+          6
+        ],
+        "slope": "-54764/27715",
+        "intercept": "-92233742/115",
+        "ambient_rank": 3,
+        "margins_at_breaks": [
+          {
+            "X": "758070",
+            "F4_minus_line": "88782061472/27715"
+          }
+        ],
+        "final_slope_margin": "5162547569/1674540300"
+      },
+      {
+        "vertices": [
+          0,
+          5,
+          7
+        ],
+        "terminal_pair": [
+          5,
+          7
+        ],
+        "slope": "-22572/45557",
+        "intercept": "-17958974218/45557",
+        "ambient_rank": 3,
+        "margins_at_breaks": [
+          {
+            "X": "758070",
+            "F4_minus_line": "76228055224/45557"
+          }
+        ],
+        "final_slope_margin": "22054309811/13762769700"
+      }
+    ]
+  },
+  "forbidden_terminal_triples": 219,
+  "forbidden_all_X_triples": 11,
+  "F4_upper_envelope": [
+    {
+      "slope": "-808847/5344",
+      "intercept": "-181542325437/5344",
+      "pair": [
+        8,
+        9
+      ],
+      "cap": [
+        0,
+        2,
+        8,
+        9
+      ],
+      "starts": "-infinity"
+    },
+    {
+      "slope": "-7164/367",
+      "intercept": "-272785601/367",
+      "pair": [
+        11,
+        12
+      ],
+      "cap": [
+        0,
+        2,
+        11,
+        12
+      ],
+      "starts": "-65168267183635/258562433"
+    },
+    {
+      "slope": "-5201/137932",
+      "intercept": "19535716621/68966",
+      "pair": [
+        15,
+        16
+      ],
+      "cap": [
+        0,
+        8,
+        15,
+        16
+      ],
+      "starts": "-51965079516946/986236081"
+    },
+    {
+      "slope": "313523/287886",
+      "intercept": "3735795243/47981",
+      "pair": [
+        15,
+        17
+      ],
+      "cap": [
+        6,
+        7,
+        15,
+        17
+      ],
+      "starts": "182298"
+    },
+    {
+      "slope": "334423/302100",
+      "intercept": "647085873/10070",
+      "pair": [
+        14,
+        17
+      ],
+      "cap": [
+        6,
+        7,
+        14,
+        17
+      ],
+      "starts": "758070"
+    }
+  ],
+  "right_halfline_breaks": [],
+  "representative_X": [
+    {
+      "count": 4273,
+      "minimum_size": 5,
+      "minimum_A": [
+        0,
+        5,
+        6,
+        7,
+        8
+      ],
+      "X": "758071",
+      "F4": "272928954223/302100",
+      "forbidden_triples": 10
+    },
+    {
+      "count": 4057,
+      "minimum_size": 5,
+      "minimum_A": [
+        0,
+        5,
+        6,
+        7,
+        8
+      ],
+      "X": "2393164",
+      "F4": "409870830281/151050",
+      "forbidden_triples": 11
+    },
+    {
+      "count": 4057,
+      "minimum_size": 5,
+      "minimum_A": [
+        0,
+        5,
+        6,
+        7,
+        8
+      ],
+      "X": "164267470",
+      "F4": "549542326960/3021",
+      "forbidden_triples": 11
+    }
+  ]
+}

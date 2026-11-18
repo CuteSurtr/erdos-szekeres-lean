@@ -1,0 +1,12 @@
+# diff W/p2_batch.py W/p2_batch_cube.py (asserted minimal: header comment, --cube option, CUBE parse + assert, line 39 'cube': CUBE)
+0a1
+> # p2_batch_cube.py (15 Nov 2026): copy of p2_batch.py with --cube s:bit,... (bit 1 = occupied = +sel, 0 = hole); the only changes are this line, the --cube option, CUBE and line 39.
+17a19
+> ap.add_argument('--cube', default='')
+18a21,22
+> CUBE = [[int(s), int(b)] for s, b in (x.split(':') for x in a.cube.split(',') if x)]
+> assert all(0 <= s < ec.N and b in (0, 1) for s, b in CUBE) and len({s for s, _ in CUBE}) == len(CUBE), CUBE
+39c43
+<     d = {'W': W, 'L': L, 'status': status, 'rows_file': a.rows, 'cube': [], 'activated': sorted(act), 'seconds': round(time.time() - t0, 1),
+---
+>     d = {'W': W, 'L': L, 'status': status, 'rows_file': a.rows, 'cube': CUBE, 'activated': sorted(act), 'seconds': round(time.time() - t0, 1),

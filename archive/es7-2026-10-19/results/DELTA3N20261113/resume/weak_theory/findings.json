@@ -1,0 +1,466 @@
+{
+  "label": "COMPUTED",
+  "obstructions": [
+    {
+      "n": 7,
+      "P": [
+        [
+          19177,
+          -21808
+        ],
+        [
+          25783,
+          9497
+        ],
+        [
+          37372,
+          -22731
+        ],
+        [
+          44405,
+          -21278
+        ],
+        [
+          51652,
+          6136
+        ],
+        [
+          52152,
+          -51
+        ],
+        [
+          52672,
+          32131
+        ],
+        [
+          63579,
+          63430
+        ],
+        [
+          67591,
+          -9280
+        ]
+      ],
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA2N20261113/data/cex/restr_ends_weak_a5_n7_m12_real.json",
+      "source_sha256": "19550899b5a42ca67c48ab9a0ced9c6f4634a510f01940364edf4cef1f1398d4",
+      "source_indices": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "r": 8,
+      "A": [
+        4,
+        6,
+        7
+      ],
+      "blocker": [
+        4,
+        6,
+        7,
+        8
+      ],
+      "private_polygons": {
+        "4": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "6": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6
+        ],
+        "7": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          7
+        ]
+      },
+      "missed_polygon": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        8
+      ],
+      "full_delta": [
+        0
+      ]
+    },
+    {
+      "n": 8,
+      "P": [
+        [
+          8030,
+          -15070
+        ],
+        [
+          11105,
+          45305
+        ],
+        [
+          35376,
+          -23390
+        ],
+        [
+          125287,
+          -34578
+        ],
+        [
+          143356,
+          -22746
+        ],
+        [
+          148656,
+          23516
+        ],
+        [
+          149156,
+          -12964
+        ],
+        [
+          150244,
+          48374
+        ],
+        [
+          151892,
+          58675
+        ],
+        [
+          157253,
+          -2952
+        ]
+      ],
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA2N20261113/data/cex/restr_ends_weak_a5_n8_m13_real.json",
+      "source_sha256": "689161e934b9523666fe06bb94951f8e5419a11293084e4d317dcf69675bed53",
+      "source_indices": [
+        0,
+        1,
+        3,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "r": 9,
+      "A": [
+        6,
+        7,
+        8
+      ],
+      "blocker": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "private_polygons": {
+        "6": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "7": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          7
+        ],
+        "8": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          8
+        ]
+      },
+      "missed_polygon": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        9
+      ],
+      "full_delta": [
+        0
+      ]
+    }
+  ],
+  "threshold_checks": [
+    {
+      "tag": "reduced-n7",
+      "n": 7,
+      "m": 9,
+      "counts": {
+        "old_deltas": 230,
+        "terminal_pair_safe": 138,
+        "threshold_safe": 138,
+        "actual_red_extensions": 141,
+        "rank3_blockers": 196
+      },
+      "examples": {
+        "actual_height_only_safe": {
+          "A": [
+            0,
+            1,
+            2
+          ],
+          "F3": "-412442497/3863",
+          "F4": "-95546593/500",
+          "r_y": -9280,
+          "full_delta": [
+            0,
+            1,
+            2,
+            8
+          ]
+        },
+        "noncup_terminal_safe": {
+          "A": [
+            0,
+            4,
+            5
+          ],
+          "F3": "-95546593/500",
+          "F4": "-95546593/500",
+          "r_y": -9280,
+          "full_delta": [
+            0,
+            4,
+            5,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "tag": "reduced-n8",
+      "n": 8,
+      "m": 10,
+      "counts": {
+        "old_deltas": 470,
+        "terminal_pair_safe": 291,
+        "threshold_safe": 291,
+        "actual_red_extensions": 306,
+        "rank3_blockers": 300
+      },
+      "examples": {
+        "actual_height_only_safe": {
+          "A": [
+            0,
+            1,
+            2
+          ],
+          "F3": "-8940039205/24271",
+          "F4": "-15093028/25",
+          "r_y": -2952,
+          "full_delta": [
+            0,
+            1,
+            2,
+            9
+          ]
+        },
+        "noncup_terminal_safe": {
+          "A": [
+            0,
+            5,
+            6
+          ],
+          "F3": "-15093028/25",
+          "F4": "-15093028/25",
+          "r_y": -2952,
+          "full_delta": [
+            0,
+            5,
+            6,
+            9
+          ]
+        }
+      }
+    },
+    {
+      "tag": "nonvacuous-upper4-n7",
+      "n": 7,
+      "m": 7,
+      "counts": {
+        "old_deltas": 54,
+        "terminal_pair_safe": 42,
+        "threshold_safe": 45,
+        "actual_red_extensions": 51,
+        "rank3_blockers": 4
+      },
+      "examples": {
+        "envelope_only_safe": {
+          "A": [
+            0,
+            2,
+            4
+          ],
+          "F3": "-16",
+          "F4": "-10",
+          "r_y": 1,
+          "full_delta": [
+            0,
+            2,
+            4,
+            6
+          ]
+        },
+        "noncup_terminal_safe": {
+          "A": [
+            0,
+            3,
+            4
+          ],
+          "F3": "-46",
+          "F4": "-10",
+          "r_y": 1,
+          "full_delta": [
+            0,
+            3,
+            4,
+            6
+          ]
+        },
+        "actual_height_only_safe": {
+          "A": [
+            0,
+            2,
+            5
+          ],
+          "F3": "-4",
+          "F4": "-10",
+          "r_y": 1,
+          "full_delta": [
+            0,
+            2,
+            5,
+            6
+          ]
+        }
+      }
+    },
+    {
+      "tag": "nonvacuous-upper4-n8",
+      "n": 8,
+      "m": 8,
+      "counts": {
+        "old_deltas": 109,
+        "terminal_pair_safe": 82,
+        "threshold_safe": 91,
+        "actual_red_extensions": 103,
+        "rank3_blockers": 8
+      },
+      "examples": {
+        "envelope_only_safe": {
+          "A": [
+            0,
+            2,
+            3
+          ],
+          "F3": "-70",
+          "F4": "-10",
+          "r_y": 1,
+          "full_delta": [
+            0,
+            2,
+            3,
+            7
+          ]
+        },
+        "noncup_terminal_safe": {
+          "A": [
+            0,
+            4,
+            5
+          ],
+          "F3": "-46",
+          "F4": "-10",
+          "r_y": 1,
+          "full_delta": [
+            0,
+            4,
+            5,
+            7
+          ]
+        },
+        "actual_height_only_safe": {
+          "A": [
+            0,
+            2,
+            6
+          ],
+          "F3": "-4",
+          "F4": "-10",
+          "r_y": 1,
+          "full_delta": [
+            0,
+            2,
+            6,
+            7
+          ]
+        }
+      }
+    }
+  ],
+  "failed_construction": {
+    "status": "REFUTED BEFORE USE",
+    "description": "Earlier cup, last blue point (-1,-20), followed by cap T=(0,0),(1,10),(2,18),(3,24).",
+    "five_cap": [
+      [
+        -1,
+        -20
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        10
+      ],
+      [
+        2,
+        18
+      ],
+      [
+        3,
+        24
+      ]
+    ],
+    "reason": "Last blue point prepends to all four vertices of T, creating a forbidden five-cap."
+  },
+  "elapsed_seconds": 0.007962873998621944
+}

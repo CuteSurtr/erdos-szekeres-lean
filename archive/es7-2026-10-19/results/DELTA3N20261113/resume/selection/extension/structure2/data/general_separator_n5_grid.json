@@ -1,0 +1,82 @@
+{
+  "status": "PASS_COMPLETE_GRID",
+  "stats": {
+    "attempted": 19608,
+    "general_position": 3363,
+    "has_split": 210,
+    "valid_sets": 65,
+    "checked_valid_splits": 65
+  },
+  "case_counts": {
+    "1": 5,
+    "2": 60
+  },
+  "examples": {
+    "1": {
+      "n": 5,
+      "m": 2,
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "cut": 1,
+      "c": 1,
+      "level": 2,
+      "A": [
+        1
+      ],
+      "maxcup": 2,
+      "maxgon": 2,
+      "complement_maxgon": 1,
+      "beta": [
+        1,
+        2
+      ],
+      "target_count": 0,
+      "selected_cap_triples": []
+    },
+    "2": {
+      "n": 5,
+      "m": 3,
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "cut": 2,
+      "c": 2,
+      "level": 2,
+      "A": [
+        1
+      ],
+      "maxcup": 3,
+      "maxgon": 3,
+      "complement_maxgon": 2,
+      "beta": [
+        1,
+        2,
+        3
+      ],
+      "target_count": 0,
+      "selected_cap_triples": []
+    }
+  },
+  "scope": "x=0,...,m-1, y0=y1=0, remaining heights in [-3,3], m=2,...,7; not all real order types",
+  "elapsed_seconds": 0.11147216799872695,
+  "source_sha256": "24558cc9ccac7058e0e8c7ff5d76bfe3459df092ad53be4e2bb27641fd1fe705"
+}

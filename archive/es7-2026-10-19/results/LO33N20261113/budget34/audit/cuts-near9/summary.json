@@ -1,0 +1,29 @@
+{
+  "label": "CERTIFIED",
+  "version": "near9",
+  "rows": 128,
+  "own_encoder_matches": 128,
+  "fresh_cake_acceptances": 128,
+  "old_witness_exact_row_check": "PASS (3464 rows, 34 holes, F20,Lo14,state0 occupied)",
+  "rows_cutting_old_witness": 0,
+  "old_witness_intersection_counts": {
+    "1": 128
+  },
+  "accepted_sha256": "b72070784fa64d727749800093c9380e32b220df6d936d561f3ce08209732a3d",
+  "replay_sha256": "39a487e09b79ec63d0c631a96baa6ddfd7e7347c201ec5cd481c26571bbfb201",
+  "input_sha256": {
+    "/home/jay/research/data/es308-20261114/cuts-near9/accepted.json": "b72070784fa64d727749800093c9380e32b220df6d936d561f3ce08209732a3d",
+    "/home/jay/research/data/es308-20261114/candidates-near9.json": "53afdf0de43201a02348e204d738bbd8bf23e12a145b480edd2d3ec9b1964528",
+    "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-residual32-rank-global-2026-10-10/source-2650.json.gz": "8c7fe9ef5264182524095d46ef50ed6bc691cab425efa965756d1870112241aa",
+    "/home/jay/research/data/es308-20261114/runs/s20/bb/WITNESS.json.v1-snapshot": "fbb91635e1a9fb342ccabc41ca1244192284e16053e7390d75f9d26e22a61a52",
+    "/home/jay/research/data/es308-20261114/inputs/s20/extra.json": "c1e9833ae4a1703fc1b942be9ccf03435effb4d21f55005e97a337c64664492a",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/audit_batch_rows.py": "3706aaa10f133777ab2fc09839db2c5fc0039cfe2c141ed7b567a1ef4961e731",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/residual_encoder.py": "db7b2deba4ae55ff50f25d1e52843734591f5e7d1339a53e45e8811866e7365c",
+    "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54"
+  },
+  "seconds": 8.337,
+  "finished_local": "2026-11-14T10:25:34.853273+09:00",
+  "scope": "Additional rows only; no finite exclusion or ES bound follows from these rows alone",
+  "parent_maxrss_kib": 46868,
+  "child_maxrss_kib": 111988
+}

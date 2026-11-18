@@ -1,0 +1,20 @@
+{
+  "status": "FROZEN_COMPLETE",
+  "label": "PROVED: written algebraic argument plus independent exact integer replay",
+  "statement": "The fixed forced16 560-sign orientation model is not realizable by real planar coordinates.",
+  "scope": "This fixed model only; no general selector or minimality claim.",
+  "finished_utc": "2026-11-13T22:30:31.478655+00:00",
+  "certificate_rows": 387,
+  "exact_replay": "PASS",
+  "controls": "PASS",
+  "archived_data_hashes": "PASS",
+  "source_and_failures_retained": true,
+  "unit_observed": "inactive",
+  "active_sidecar_jobs": 0,
+  "released_resources": {
+    "research_cpus": 1,
+    "address_space_MiB": 600
+  },
+  "run_a_stop": "Intentional agent-issued systemctl stop for controlled method restart; not guard or memory failure.",
+  "algebraic_run_stop": "Intentional SIGINT to Z3 child; driver recorded unknown; not guard or memory failure."
+}

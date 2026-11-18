@@ -1,0 +1,287 @@
+{
+  "results": [
+    {
+      "case": "scheduled-cup-n6-m14",
+      "status": "UNKNOWN",
+      "label": "COMPUTED",
+      "n": 6,
+      "m": 14,
+      "mode": "cup",
+      "pool": "lattice",
+      "directory": "/home/jay/research/data/delta3-codex-20261113/encoder/scheduled-cup-n6-m14",
+      "hashes": {
+        "cadical.log": "8fba55cea0f98be36fab7b65349dda867a58aabfcf974a46098f5123830ac5cb",
+        "cadical.time": "ff0fa2ac744b45e14718f8be23db3cefca835c9376dfce31c605a7ef9e5c7398",
+        "case.cnf": "87cf372da95af5311fb52593d35308e64107852595b66b984163f4f78ffcd0e0",
+        "case.lrat": "16e22f171199fb2c5dac4c28ff0e15c651f41549e5716b0b830f207e0f9def5c",
+        "delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+        "encode.log": "09152d6a9cd1adb8ce76255a7f30869335619a9955e8bbfc0322290aaf5d4e8d",
+        "encode.time": "d6e42b903200c3e3f82b98c249240a58e0ddf7b60086e5420e99a7be3cade382",
+        "encoder_binary": "b435f805e1475b90cffc6fdc831aeefc2eb573b1a48d800595c03de1bb9e99c6"
+      },
+      "runs": {
+        "cadical": {
+          "exit": 0,
+          "wall_seconds": 900.06
+        },
+        "encode": {
+          "exit": 0,
+          "wall_seconds": 0.082
+        }
+      }
+    },
+    {
+      "case": "scheduled-cup-n6-m15",
+      "status": "SAT_CHECKED",
+      "label": "COMPUTED",
+      "n": 6,
+      "m": 15,
+      "mode": "cup",
+      "pool": "lattice",
+      "directory": "/home/jay/research/data/delta3-codex-20261113/encoder/scheduled-cup-n6-m15",
+      "hashes": {
+        "cadical.log": "aea1b48b17a721a2a0b9c50725ad26d8dd13ead60e8d467979dddca1676353e0",
+        "cadical.time": "7021ef890d72e22da78b5043f76ef88de30d7f9e363662abbc487275789628aa",
+        "case.cnf": "f0b94d902933799f9222b12619fd3bd5b17c05ea59fc11719e076ceaaa98d631",
+        "case.lrat": "b8cd105ee11fdfaa9874fba3dbbbc29768bc3ddc15da969945f7938c7dcb50c8",
+        "delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+        "encode.log": "77fd693c04cd0cba32d8adf02b852e5661bbf1fbfb29be1912eb9c0528e5bb90",
+        "encode.time": "197972ca16c0ccced9ed9c718f596a79ebc212db688fdf925f00377dee1abcce",
+        "encoder_binary": "b435f805e1475b90cffc6fdc831aeefc2eb573b1a48d800595c03de1bb9e99c6",
+        "model.log": "4aff8d67d8aef741a9e754d19d448c328dedf0ae26ac00e54daa2294b0a3f391",
+        "model.time": "5af1512f318fb00b6c936115dea564d0db38fd91e536c86d96a2eb4e93717501"
+      },
+      "runs": {
+        "cadical": {
+          "exit": 10,
+          "wall_seconds": 668.641
+        },
+        "encode": {
+          "exit": 0,
+          "wall_seconds": 0.077
+        },
+        "model": {
+          "exit": 0,
+          "wall_seconds": 0.114
+        }
+      }
+    },
+    {
+      "case": "scheduled-cup-n7-m14",
+      "status": "UNKNOWN",
+      "label": "COMPUTED",
+      "n": 7,
+      "m": 14,
+      "mode": "cup",
+      "pool": "lattice",
+      "directory": "/home/jay/research/data/delta3-codex-20261113/encoder/scheduled-cup-n7-m14",
+      "hashes": {
+        "cadical.log": "8fba55cea0f98be36fab7b65349dda867a58aabfcf974a46098f5123830ac5cb",
+        "cadical.time": "6a6afb45b371851ec32acfd87faf35c11be7aaeaf75d7e73b456bd8d354a6a52",
+        "case.cnf": "de510b3cd55a7adde215f3ec16d26687cec4eed8ae51716c2b44d9657b065d74",
+        "case.lrat": "add2ac66ae0f4ce96e65758438657006a0c78aa198b386165b3858ba4fbb24bb",
+        "delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+        "encode.log": "bcf4a9cc948b3809941d8385d5b62593735afb5a269304f7a0849a948d4eb4c4",
+        "encode.time": "d866e18e1dbcbf57114096d03202a32a8315f0a420e37a5cd9e5ed0de3e2a09a",
+        "encoder_binary": "b435f805e1475b90cffc6fdc831aeefc2eb573b1a48d800595c03de1bb9e99c6"
+      },
+      "runs": {
+        "cadical": {
+          "exit": 0,
+          "wall_seconds": 900.053
+        },
+        "encode": {
+          "exit": 0,
+          "wall_seconds": 0.078
+        }
+      }
+    },
+    {
+      "case": "fallback-flat-n6-m14",
+      "status": "UNKNOWN",
+      "label": "COMPUTED",
+      "n": 6,
+      "m": 14,
+      "mode": "cup",
+      "pool": "flat",
+      "directory": "/home/jay/research/data/delta3-codex-20261113/encoder/fallback-flat-n6-m14",
+      "hashes": {
+        "cadical.log": "8fba55cea0f98be36fab7b65349dda867a58aabfcf974a46098f5123830ac5cb",
+        "cadical.time": "8634fdbc0f860f817c8b26a32fbc20910caae57ac66d77640fdfdc5ed384f234",
+        "case.cnf": "6419a0479c7a5e22fec7d4d5fcee0325ff8e2e92dc2a9935031cc9c69c411757",
+        "case.lrat": "a03a9ea9784a43093971fc87ac2a4c547877991ff1d29a7617334bd03a4f8bbb",
+        "delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+        "encode.log": "995e7b4942e07a87657463c5eb30dd99883c9fe26623b073b0924fd99e9bcfe9",
+        "encode.time": "272996b45efdca9ad94fec22fe9dde09dcef9a8564e829ab7112757108857575",
+        "encoder_binary": "b435f805e1475b90cffc6fdc831aeefc2eb573b1a48d800595c03de1bb9e99c6"
+      },
+      "runs": {
+        "cadical": {
+          "exit": 0,
+          "wall_seconds": 300.034
+        },
+        "encode": {
+          "exit": 0,
+          "wall_seconds": 0.114
+        }
+      }
+    },
+    {
+      "case": "fallback-flat-n7-m14",
+      "status": "UNKNOWN",
+      "label": "COMPUTED",
+      "n": 7,
+      "m": 14,
+      "mode": "cup",
+      "pool": "flat",
+      "directory": "/home/jay/research/data/delta3-codex-20261113/encoder/fallback-flat-n7-m14",
+      "hashes": {
+        "cadical.log": "8fba55cea0f98be36fab7b65349dda867a58aabfcf974a46098f5123830ac5cb",
+        "cadical.time": "8e5157a404c88414905809854f2a8c548bc6e687349550556b64ae86ab756239",
+        "case.cnf": "c0e7cf3e99f0ed5dd4fa372f0ee2592e075c8d5b70af0b80e4784019414869e3",
+        "case.lrat": "7b083c918b5cdb03dca55f4ed1f211a3602e6f0d6e64bd88ed1920526c2c762c",
+        "delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+        "encode.log": "9e1321340a7550dfb35483d2f44da6ecb87d73be8c062db8669a148d20830373",
+        "encode.time": "c91c96e7be6432fa11ce4490547d093b7794cda0fe987a15fa93008318dae5e9",
+        "encoder_binary": "b435f805e1475b90cffc6fdc831aeefc2eb573b1a48d800595c03de1bb9e99c6"
+      },
+      "runs": {
+        "cadical": {
+          "exit": 0,
+          "wall_seconds": 300.029
+        },
+        "encode": {
+          "exit": 0,
+          "wall_seconds": 0.164
+        }
+      }
+    },
+    {
+      "case": "fallback-flat-n8-m14",
+      "status": "UNSAT_CERTIFIED",
+      "label": "CERTIFIED",
+      "n": 8,
+      "m": 14,
+      "mode": "cup",
+      "pool": "flat",
+      "directory": "/home/jay/research/data/delta3-codex-20261113/encoder/fallback-flat-n8-m14",
+      "hashes": {
+        "cadical.log": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162",
+        "cadical.time": "d0d433e408dda870f297802072d601123ff714232ba3009c1d6e52a27ca40499",
+        "cake.log": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+        "cake.time": "5af49de58f1ddde353b5644d5d65b85ccc000795de6ca3de9277d2a4cae4b6c5",
+        "case.cnf": "a0e37105f825fc655ea76faef691c92b3748d99e654fb86cd101545afc1a1dbc",
+        "case.lrat": "03e6d69917731b55a4fd2d70255668c4caf8a5c52b9343cf99662ac9c2d8344c",
+        "delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+        "encode.log": "d3a77567499766e75afb1df5d1949f28ee561fe1831d69145ef0febc221df555",
+        "encode.time": "86d702176f395c3336eca5a74f54d568e203caff6d47cc9e34bb9e8a141104fb",
+        "encoder_binary": "b435f805e1475b90cffc6fdc831aeefc2eb573b1a48d800595c03de1bb9e99c6"
+      },
+      "runs": {
+        "cadical": {
+          "exit": 20,
+          "wall_seconds": 53.564
+        },
+        "cake": {
+          "exit": 0,
+          "wall_seconds": 8.429
+        },
+        "encode": {
+          "exit": 0,
+          "wall_seconds": 0.164
+        }
+      }
+    },
+    {
+      "case": "fallback-flat-n8-m15",
+      "status": "UNKNOWN",
+      "label": "COMPUTED",
+      "n": 8,
+      "m": 15,
+      "mode": "cup",
+      "pool": "flat",
+      "directory": "/home/jay/research/data/delta3-codex-20261113/encoder/fallback-flat-n8-m15",
+      "hashes": {
+        "cadical.log": "8fba55cea0f98be36fab7b65349dda867a58aabfcf974a46098f5123830ac5cb",
+        "cadical.time": "7e894015d935bd94bda716392ff0dcc33ed483a42aa05125737a35495ce02a66",
+        "case.cnf": "e87db7aa5f845b492a359f2ca16d04765ac0a8467ab764f4d8aa8ec0d19d7b16",
+        "case.lrat": "5203b18b7c39a37af2adf00e798edbd4a6504057716ccf3f1818f33f80585d0b",
+        "delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+        "encode.log": "bc100bf72f0b664ecf1b6ca190d42c4a18d7f7db5b71a0cddfe76061d0f1e7c9",
+        "encode.time": "47564a83d1f3fc6e999138c19c69ed2b29b104d9a224fd01e80f8e60b56373b7",
+        "encoder_binary": "b435f805e1475b90cffc6fdc831aeefc2eb573b1a48d800595c03de1bb9e99c6"
+      },
+      "runs": {
+        "cadical": {
+          "exit": 0,
+          "wall_seconds": 300.023
+        },
+        "encode": {
+          "exit": 0,
+          "wall_seconds": 0.314
+        }
+      }
+    },
+    {
+      "case": "direct-weak-n7-m16",
+      "status": "UNKNOWN",
+      "label": "COMPUTED",
+      "n": 7,
+      "m": 16,
+      "mode": "weak",
+      "pool": "lattice",
+      "directory": "/home/jay/research/data/delta3-codex-20261113/encoder/direct-weak-n7-m16",
+      "hashes": {
+        "cadical.log": "8fba55cea0f98be36fab7b65349dda867a58aabfcf974a46098f5123830ac5cb",
+        "cadical.time": "237e7d4e662f0b17e92504c05d3b807641498d77fd44c93764ed1f3fa8fd092b",
+        "case.cnf": "6bc7690369f19b2a908f6adbc0b4b9a23f67de8e8c4cf41482670a835e6df425",
+        "case.lrat": "1402387d6ec8e24bdee19b6dbe007d22e03bb5234cbc20a1a3a1c4939e85ab3d",
+        "delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+        "encode.log": "c10d08e7c2d1d78b060a430359a7c20121f84d5437d1f679817df2ea7bda1468",
+        "encode.time": "b757d84acc82be1632cf5ee9bff0843f84c601f43b7103a4defd646e5e5edd67",
+        "encoder_binary": "b435f805e1475b90cffc6fdc831aeefc2eb573b1a48d800595c03de1bb9e99c6"
+      },
+      "runs": {
+        "cadical": {
+          "exit": 0,
+          "wall_seconds": 600.043
+        },
+        "encode": {
+          "exit": 0,
+          "wall_seconds": 0.114
+        }
+      }
+    },
+    {
+      "case": "direct-weak-n8-m16",
+      "status": "UNKNOWN",
+      "label": "COMPUTED",
+      "n": 8,
+      "m": 16,
+      "mode": "weak",
+      "pool": "lattice",
+      "directory": "/home/jay/research/data/delta3-codex-20261113/encoder/direct-weak-n8-m16",
+      "hashes": {
+        "cadical.log": "8fba55cea0f98be36fab7b65349dda867a58aabfcf974a46098f5123830ac5cb",
+        "cadical.time": "f7e87f784047b8d7019262295a2dddab759eef40cf425a65581d1d4ea195de2e",
+        "case.cnf": "56b09f02c0c3c116ebee2b3778372d5b9d2a7d9312ff2f53eaa1cca287c55eca",
+        "case.lrat": "99560c82f5c5dadb1bd3c4dbdfe5dfa78039d94890de1de6c4c0d13e1c50e469",
+        "delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+        "encode.log": "53ca2f59ad70a9fea9df704e520ee27887b85880964aee454cd308316fc56e41",
+        "encode.time": "e5703ddcc2b008d669e1aedae0a71d139d1dd0503637f8fef1c487b31cd8c3b0",
+        "encoder_binary": "b435f805e1475b90cffc6fdc831aeefc2eb573b1a48d800595c03de1bb9e99c6"
+      },
+      "runs": {
+        "cadical": {
+          "exit": 0,
+          "wall_seconds": 600.037
+        },
+        "encode": {
+          "exit": 0,
+          "wall_seconds": 0.164
+        }
+      }
+    }
+  ],
+  "pending": []
+}

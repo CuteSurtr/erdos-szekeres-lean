@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "label": "COMPUTED",
+  "m": 13,
+  "n": 7,
+  "variables": 15822,
+  "map_counts": {
+    "orientation": 286,
+    "convex": 3718,
+    "terminal_fourcap": 715,
+    "terminal_bad_triple": 286,
+    "bad_contains": 6721,
+    "target_contains": 4096
+  },
+  "map_counts_by_size": {
+    "bad_contains": {
+      "4": 715,
+      "5": 1287,
+      "6": 1716,
+      "7": 1716,
+      "8": 1287
+    },
+    "convex": {
+      "4": 715,
+      "5": 1287,
+      "6": 1716
+    },
+    "orientation": {
+      "3": 286
+    },
+    "target_contains": {
+      "7": 1716,
+      "8": 1287,
+      "9": 715,
+      "10": 286,
+      "11": 78,
+      "12": 13,
+      "13": 1
+    },
+    "terminal_bad_triple": {
+      "3": 286
+    },
+    "terminal_fourcap": {
+      "4": 715
+    }
+  },
+  "old_clauses": 59815,
+  "added_clauses": 55556,
+  "total_clauses": 115371,
+  "added_by_family": {
+    "bad_contains": 26884,
+    "target_contains": 28672
+  },
+  "old_body_bytes": 1167995,
+  "old_body_sha256": "7e3bab98d3cc4f3ad456498d48a1ed84598a874b774271841508f7f24b0e94a9",
+  "old_body_byte_identical": true,
+  "independent_rebuild_byte_identical": true,
+  "map_byte_identical": true,
+  "forward_interface_rows": 10817,
+  "failure_interface_rows": 7099,
+  "internal_flags_have_no_other_uses": true,
+  "fixed_sign_units": 0,
+  "witness_cover_checks": {
+    "bad_contains": 182182,
+    "target_contains": 217932
+  },
+  "duplicate_added_rows": 0,
+  "new_variables": 0,
+  "extra_geometric_clauses": 0,
+  "elapsed_limit_seconds": 20,
+  "as_mib": 300,
+  "source_review": "VERIFY_EXACT.md",
+  "certificate_replayed": false
+}

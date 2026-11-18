@@ -1,0 +1,231 @@
+{
+  "status": "PASS",
+  "label": "COMPUTED",
+  "P": [
+    [
+      -877024,
+      -728732
+    ],
+    [
+      -848175,
+      -806081
+    ],
+    [
+      -315477,
+      411721
+    ],
+    [
+      -313031,
+      607898
+    ],
+    [
+      -312174,
+      772879
+    ],
+    [
+      -275463,
+      -257726
+    ],
+    [
+      -247748,
+      -312490
+    ],
+    [
+      -229906,
+      -280298
+    ],
+    [
+      -224691,
+      37110
+    ],
+    [
+      -219347,
+      -771737
+    ],
+    [
+      -147229,
+      -623666
+    ],
+    [
+      -42059,
+      77725
+    ],
+    [
+      3816,
+      -817775
+    ],
+    [
+      3817,
+      61604281
+    ]
+  ],
+  "old18_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "fivecup_old18_indices": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "left": {
+    "m": 13,
+    "n": 7,
+    "gp": true,
+    "fourcaps": 58,
+    "bad_cap_triples": 97,
+    "targets": 40,
+    "ngons": 0,
+    "fivecaps": 0,
+    "maxcup": 5,
+    "max_abs_coordinate": 877024,
+    "max_abs_determinant": 1372974971790
+  },
+  "whole": {
+    "m": 14,
+    "n": 7,
+    "gp": true,
+    "fourcaps": 58,
+    "bad_cap_triples": 97,
+    "targets": 54,
+    "ngons": 0,
+    "fivecaps": 0,
+    "maxcup": 6,
+    "max_abs_coordinate": 61604281,
+    "max_abs_determinant": 54983843896083
+  },
+  "left_selection": {
+    "vertices": [
+      0,
+      2,
+      3
+    ],
+    "mask": 13,
+    "terminal_certificates": [],
+    "thinned_mask": 13,
+    "bound": 8
+  },
+  "lifted_selection": {
+    "vertices": [
+      0,
+      2,
+      3,
+      13
+    ],
+    "mask": 8205,
+    "terminal_certificates": [],
+    "thinned_mask": 8205,
+    "bound": 9
+  },
+  "canonical_nonfailure_rows_checked": {
+    "signotope": 8008,
+    "no5cap": 2002,
+    "convex4_equivalence": 8008,
+    "convex_larger_equivalence": 30030,
+    "no_ngon": 3432,
+    "terminal_fourcap_equivalence": 5005,
+    "terminal_bad_triple_equivalence": 8736,
+    "bad_triple_containment": 14443,
+    "target_containment": 9908,
+    "reverse_containment_implications": 127128
+  },
+  "canonical_nonfailure_total": 216700,
+  "false_counterexample_failure_rows": 580,
+  "first_false_failure_line": 89613,
+  "real_cut_rows": [
+    {
+      "cut": 1,
+      "highsplit": false,
+      "clause_satisfied": true
+    },
+    {
+      "cut": 2,
+      "highsplit": false,
+      "clause_satisfied": true
+    },
+    {
+      "cut": 3,
+      "highsplit": false,
+      "clause_satisfied": true
+    },
+    {
+      "cut": 4,
+      "highsplit": false,
+      "clause_satisfied": true
+    },
+    {
+      "cut": 5,
+      "highsplit": false,
+      "clause_satisfied": true
+    },
+    {
+      "cut": 6,
+      "highsplit": false,
+      "clause_satisfied": true
+    },
+    {
+      "cut": 7,
+      "highsplit": false,
+      "clause_satisfied": true
+    },
+    {
+      "cut": 8,
+      "highsplit": false,
+      "clause_satisfied": true
+    },
+    {
+      "cut": 9,
+      "highsplit": false,
+      "clause_satisfied": true
+    },
+    {
+      "cut": 10,
+      "highsplit": false,
+      "clause_satisfied": true
+    },
+    {
+      "cut": 11,
+      "highsplit": false,
+      "clause_satisfied": true
+    },
+    {
+      "cut": 12,
+      "highsplit": false,
+      "clause_satisfied": true
+    },
+    {
+      "cut": 13,
+      "highsplit": true,
+      "clause_satisfied": false
+    }
+  ],
+  "scope": "Positive m14 critical-case control, not a counterexample. Failure rows must fail on a positive instance.",
+  "input_sha256": {
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/highsplit_audit/tools/controls.py": "8568ab9a5e94e4a5c64e5f91db4d704aacaae6b22e32e96cbfa0123b99d6c6b0",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/structure2/data/highsplit_cases.json": "7524b869b1ed270102a6443f1be1a4db95b67281ddbbd2842a9c694bad7acad6",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/terminal/data/witness.points": "8591856c2c1ba6d7f256c5884f6a4cc7b0013ec3a05b47ab20dbcea14d63adbc",
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal7-a/m14/input.cnf.map": "b81223d78761ab200ef5931cc33ab10821a3e3a2054c5e550d0d8da7cf0fa55e",
+    "/home/jay/research/data/delta3-codex-20261113/extension/n7m14-exact.cnf": "5dc0c1719cce7bda188abad8489534413ecbbcbe5f43e1b714244ec045a129c4",
+    "/home/jay/research/data/delta3-codex-20261113/extension/n7m14-indecomp-v2.cnf": "ba43ca6ecbaeb6bc05854271a27f1204e3a690240a5c525bf1b2a9223dbd1819"
+  },
+  "resource_limits": {
+    "address_space_MiB": 300,
+    "cpu_seconds": 19,
+    "wall_seconds": 20,
+    "cpu_count": 1
+  },
+  "peak_rss_KiB": 25152
+}

@@ -1,0 +1,51 @@
+{
+  "label": "CERTIFIED",
+  "scope": "Fixed real fifteen-point terminal-safe membership CNF",
+  "m": 15,
+  "n": 7,
+  "variables": 15,
+  "clauses": 313,
+  "family_counts": {
+    "four_caps": 48,
+    "bad_triples": 78,
+    "six_targets": 187
+  },
+  "all_clause_families_match": true,
+  "assignments_checked": 32768,
+  "satisfying_assignments": 0,
+  "exact_cake_acceptance_line": true,
+  "returncode": 0,
+  "command": [
+    "/usr/bin/timeout",
+    "20s",
+    "/usr/bin/prlimit",
+    "--as=419430400",
+    "--cpu=18",
+    "/home/jay/.local/bin/cake_lpr",
+    "--CML_HEAP_SIZE=128",
+    "--CML_STACK_SIZE=32",
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/witness.terminal.cnf",
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/fresh.blrat"
+  ],
+  "before": {
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/witness.terminal.cnf": "7d18c713d190d893a4d3d7873e8caa7d45061326c403ee8133888382040cc22a",
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/fresh.blrat": "1f25c0cbe8988577fecbfaf9379ffde400bca45d047cee6ce15bf3391bf94cef",
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/fresh.blrat.zst": "9f76af38d735a6d35bddc7075e06338b2c73adb631aeec197e772bf610721a19",
+    "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54"
+  },
+  "after": {
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/witness.terminal.cnf": "7d18c713d190d893a4d3d7873e8caa7d45061326c403ee8133888382040cc22a",
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/fresh.blrat": "1f25c0cbe8988577fecbfaf9379ffde400bca45d047cee6ce15bf3391bf94cef",
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/fresh.blrat.zst": "9f76af38d735a6d35bddc7075e06338b2c73adb631aeec197e772bf610721a19",
+    "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54"
+  },
+  "stable_inputs": true,
+  "compressed_roundtrip_verified": true,
+  "proof_bytes": 2381,
+  "compressed_bytes": 1659,
+  "seconds": 0.37029490099666873,
+  "script_sha256": "3e7d32f8ffb9c6bce6ce8052abc7367f70605fa4c5ebed13c7dfc1aa163a5455",
+  "own_geometry_source_sha256": "a6550f7adb909dd55b02848cc0f1d72054036e5fb01c4207af6e6cac60b79095",
+  "coordinate_sha256": "52280ed5a905a188d3c230580615c212f6bb9939b3d0bcbae384e40edf158bdb",
+  "log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f"
+}

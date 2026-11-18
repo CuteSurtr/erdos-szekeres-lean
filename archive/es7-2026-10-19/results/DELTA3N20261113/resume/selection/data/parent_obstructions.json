@@ -1,0 +1,111 @@
+[
+  {
+    "label": "COMPUTED",
+    "status": "INDEPENDENTLY CONFIRMED",
+    "kind": "terminal",
+    "m": 18,
+    "n": 7,
+    "fourcaps": 115,
+    "target_polygons": 402,
+    "fivecaps": 0,
+    "ngons": 0,
+    "working_weak_deltas": 8149,
+    "minimum_absolute_determinant": 227322879,
+    "source": "terminal/data/witness.json",
+    "source_sha256": "696f201667533a3263e8a88d23a690a3ba6e8280f0993dd7dda5ab508f4eff24",
+    "cnf": "terminal/data/witness.terminal.cnf",
+    "cnf_sha256": "bdcd89c25dc74e94f576f6dfcc0548e6849a67d441fec5956698296a83bfc2eb",
+    "clauses": 736,
+    "rank3_triples": 219,
+    "terminal_deltas": 0,
+    "core_sha256": "5318a34178cd3aa6acb9f83de54f4e9510b0a968a98fc0c8eb40b20ce135d0dd",
+    "core_rows": 108,
+    "all_X_envelope_witness": [
+      0,
+      5,
+      6,
+      7,
+      8
+    ],
+    "cap_triples": 2
+  },
+  {
+    "label": "COMPUTED",
+    "status": "INDEPENDENTLY CONFIRMED",
+    "kind": "repair7",
+    "m": 14,
+    "n": 7,
+    "fourcaps": 59,
+    "target_polygons": 109,
+    "fivecaps": 0,
+    "ngons": 0,
+    "working_weak_deltas": 2669,
+    "minimum_absolute_determinant": 20280361534060565367311648,
+    "source": "repair/data/rotation-best.json",
+    "source_sha256": "07542659b5903f7af882ad3acb7018fec8308d360326a119098055f571ea2c9c",
+    "cnf": "repair/data/rightmost-n7-one.cnf",
+    "cnf_sha256": "ef26f775f629af551be837b84e9f106948b4163e674018e9980fd225b5df0edd",
+    "clauses": 213,
+    "root": 13,
+    "old_Delta": [
+      5,
+      11,
+      12
+    ],
+    "minimum_old_blue_cost": 2,
+    "repair_cost_histogram": {
+      "4": 917,
+      "5": 994,
+      "3": 316,
+      "6": 368,
+      "2": 38,
+      "7": 36
+    },
+    "positive_Delta": [
+      1,
+      5,
+      9
+    ],
+    "rooted_working_deltas": 1091
+  },
+  {
+    "label": "COMPUTED",
+    "status": "INDEPENDENTLY CONFIRMED",
+    "kind": "repair8",
+    "m": 16,
+    "n": 8,
+    "fourcaps": 90,
+    "target_polygons": 121,
+    "fivecaps": 0,
+    "ngons": 0,
+    "working_weak_deltas": 15356,
+    "minimum_absolute_determinant": 1353618000000,
+    "source": "repair/data/two-clones-n8-best.json",
+    "source_sha256": "3d829761b0014df6314058034b6d3b5458710db42fccfc20d9f1346bf1605dc6",
+    "cnf": "repair/data/rightmost-n8-one.cnf",
+    "cnf_sha256": "6517d49858bbaf2ae7cd743fb1d4597f62f8320ad05642a9952ea8ae65950f74",
+    "clauses": 277,
+    "root": 15,
+    "old_Delta": [
+      7,
+      13,
+      14
+    ],
+    "minimum_old_blue_cost": 2,
+    "repair_cost_histogram": {
+      "2": 124,
+      "3": 973,
+      "4": 3089,
+      "5": 4901,
+      "6": 4036,
+      "7": 1785,
+      "8": 410,
+      "9": 38
+    },
+    "positive_Delta": [
+      2,
+      3
+    ],
+    "rooted_working_deltas": 6164
+  }
+]

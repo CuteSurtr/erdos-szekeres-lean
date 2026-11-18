@@ -1,0 +1,684 @@
+{
+  "label": "COMPUTED exact integer exhaustive check",
+  "n": 7,
+  "P": [
+    [
+      0,
+      0
+    ],
+    [
+      3726,
+      -498023
+    ],
+    [
+      252849,
+      -1000000
+    ],
+    [
+      256575,
+      141766
+    ],
+    [
+      391457,
+      -526296
+    ],
+    [
+      395184,
+      5223
+    ],
+    [
+      431559,
+      -3726
+    ],
+    [
+      435286,
+      -411658
+    ],
+    [
+      458373,
+      -462301
+    ],
+    [
+      571496,
+      -549036
+    ],
+    [
+      723717,
+      -345301
+    ],
+    [
+      1000000,
+      0
+    ]
+  ],
+  "full": {
+    "m": 12,
+    "n": 7,
+    "no_fivecap": true,
+    "no_ngon": true,
+    "min_abs_det": 3726000000,
+    "fourcaps": 48,
+    "target_polygons": 48,
+    "long_cups": [
+      [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      [
+        0,
+        1,
+        2,
+        4,
+        6
+      ],
+      [
+        0,
+        1,
+        4,
+        10,
+        11
+      ],
+      [
+        0,
+        1,
+        7,
+        10,
+        11
+      ],
+      [
+        0,
+        1,
+        8,
+        10,
+        11
+      ],
+      [
+        3,
+        7,
+        8,
+        9,
+        10
+      ],
+      [
+        3,
+        7,
+        8,
+        9,
+        11
+      ],
+      [
+        3,
+        7,
+        8,
+        10,
+        11
+      ],
+      [
+        5,
+        7,
+        8,
+        9,
+        10
+      ],
+      [
+        5,
+        7,
+        8,
+        9,
+        11
+      ],
+      [
+        5,
+        7,
+        8,
+        10,
+        11
+      ],
+      [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      [
+        6,
+        7,
+        8,
+        9,
+        11
+      ],
+      [
+        6,
+        7,
+        8,
+        10,
+        11
+      ]
+    ],
+    "longer_cups": [],
+    "cup_complements": [
+      {
+        "cup": [
+          0,
+          1,
+          2,
+          4,
+          5
+        ],
+        "complement": [
+          3,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "convex": false
+      },
+      {
+        "cup": [
+          0,
+          1,
+          2,
+          4,
+          6
+        ],
+        "complement": [
+          3,
+          5,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "convex": false
+      },
+      {
+        "cup": [
+          0,
+          1,
+          4,
+          10,
+          11
+        ],
+        "complement": [
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "convex": false
+      },
+      {
+        "cup": [
+          0,
+          1,
+          7,
+          10,
+          11
+        ],
+        "complement": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9
+        ],
+        "convex": false
+      },
+      {
+        "cup": [
+          0,
+          1,
+          8,
+          10,
+          11
+        ],
+        "complement": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9
+        ],
+        "convex": false
+      },
+      {
+        "cup": [
+          3,
+          7,
+          8,
+          9,
+          10
+        ],
+        "complement": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          11
+        ],
+        "convex": false
+      },
+      {
+        "cup": [
+          3,
+          7,
+          8,
+          9,
+          11
+        ],
+        "complement": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          10
+        ],
+        "convex": false
+      },
+      {
+        "cup": [
+          3,
+          7,
+          8,
+          10,
+          11
+        ],
+        "complement": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          9
+        ],
+        "convex": false
+      },
+      {
+        "cup": [
+          5,
+          7,
+          8,
+          9,
+          10
+        ],
+        "complement": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          11
+        ],
+        "convex": false
+      },
+      {
+        "cup": [
+          5,
+          7,
+          8,
+          9,
+          11
+        ],
+        "complement": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          10
+        ],
+        "convex": false
+      },
+      {
+        "cup": [
+          5,
+          7,
+          8,
+          10,
+          11
+        ],
+        "complement": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          9
+        ],
+        "convex": false
+      },
+      {
+        "cup": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "complement": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          11
+        ],
+        "convex": false
+      },
+      {
+        "cup": [
+          6,
+          7,
+          8,
+          9,
+          11
+        ],
+        "complement": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          10
+        ],
+        "convex": false
+      },
+      {
+        "cup": [
+          6,
+          7,
+          8,
+          10,
+          11
+        ],
+        "complement": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          9
+        ],
+        "convex": false
+      }
+    ],
+    "delta_count": 1369,
+    "rooted_count": 654,
+    "terminal_safe_count": 551,
+    "minimum_delta": [
+      3,
+      5
+    ],
+    "minimum_rooted_delta": [
+      3,
+      5,
+      11
+    ],
+    "minimum_terminal_safe_delta": [
+      3,
+      5
+    ]
+  },
+  "old": {
+    "m": 11,
+    "n": 7,
+    "no_fivecap": true,
+    "no_ngon": true,
+    "min_abs_det": 3726339684,
+    "fourcaps": 45,
+    "target_polygons": 42,
+    "long_cups": [
+      [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      [
+        0,
+        1,
+        2,
+        4,
+        6
+      ],
+      [
+        3,
+        7,
+        8,
+        9,
+        10
+      ],
+      [
+        5,
+        7,
+        8,
+        9,
+        10
+      ],
+      [
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    ],
+    "longer_cups": [],
+    "cup_complements": [
+      {
+        "cup": [
+          0,
+          1,
+          2,
+          4,
+          5
+        ],
+        "complement": [
+          3,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "convex": true
+      },
+      {
+        "cup": [
+          0,
+          1,
+          2,
+          4,
+          6
+        ],
+        "complement": [
+          3,
+          5,
+          7,
+          8,
+          9,
+          10
+        ],
+        "convex": true
+      },
+      {
+        "cup": [
+          3,
+          7,
+          8,
+          9,
+          10
+        ],
+        "complement": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6
+        ],
+        "convex": true
+      },
+      {
+        "cup": [
+          5,
+          7,
+          8,
+          9,
+          10
+        ],
+        "complement": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "convex": true
+      },
+      {
+        "cup": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "complement": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "convex": true
+      }
+    ],
+    "delta_count": 742,
+    "rooted_count": 380,
+    "terminal_safe_count": 403,
+    "minimum_delta": [
+      3,
+      5
+    ],
+    "minimum_rooted_delta": [
+      0,
+      10
+    ],
+    "minimum_terminal_safe_delta": [
+      3,
+      5
+    ]
+  },
+  "one_point_cup_augmentations": [
+    {
+      "cup": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "good_added_points": [
+        3,
+        6,
+        9,
+        10
+      ]
+    },
+    {
+      "cup": [
+        0,
+        1,
+        2,
+        4,
+        6
+      ],
+      "good_added_points": [
+        3,
+        5,
+        9,
+        10
+      ]
+    },
+    {
+      "cup": [
+        3,
+        7,
+        8,
+        9,
+        10
+      ],
+      "good_added_points": [
+        0,
+        1,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "cup": [
+        5,
+        7,
+        8,
+        9,
+        10
+      ],
+      "good_added_points": [
+        0,
+        1,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "cup": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "good_added_points": [
+        0,
+        1,
+        3,
+        4,
+        5
+      ]
+    }
+  ],
+  "source": "/home/jay/research/data/delta3-codex-20261113/boundary/refined/n7-root/real/realized.json",
+  "source_sha256": "339cb4a13b93b6ea245e4b995027e642935e9685eea710f7bd8c143ac0d2375c"
+}

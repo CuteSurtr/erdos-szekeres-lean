@@ -1,0 +1,42 @@
+{
+  "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split/Capacity11.lean",
+  "source_sha256": "d34ad0ecbcba8a507e71c43b2d54e9a887e9362f1f9d265ae7fa8efcb9296156",
+  "command": [
+    "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean",
+    "-j1",
+    "-s16384",
+    "-M1000",
+    "--root=/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split",
+    "-o",
+    "/home/jay/research/data/delta3-codex-20261113/extension/capacity-lean/primary-b/Capacity11.olean",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split/Capacity11.lean"
+  ],
+  "exit_code": 0,
+  "stop_reason": null,
+  "peaks": {
+    "VmPeak": 4118016,
+    "VmSize": 4118016,
+    "VmHWM": 3109616,
+    "VmRSS": 3109616,
+    "RssAnon": 230036,
+    "RssFile": 2879580,
+    "VmSwap": 0,
+    "Threads": 5
+  },
+  "seconds": 1.342,
+  "axiom_reports": {
+    "Delta3.LowSplitCapacity.four_cap_or_six_gon": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Delta3.LowSplitCapacity.geometric_capacity11": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "as_bytes": 6442450944,
+  "rss_guard_mib": 4500,
+  "lean_heap_mib": 1000
+}

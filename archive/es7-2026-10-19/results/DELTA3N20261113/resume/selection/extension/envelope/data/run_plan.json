@@ -1,0 +1,30 @@
+{
+  "args": {
+    "binary": "/home/jay/research/data/delta3-codex-20261113/extension/envelope/geometry",
+    "first": 0,
+    "last": 315,
+    "out": "/home/jay/research/data/delta3-codex-20261113/extension/envelope/full-v1",
+    "pool_dir": "cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/data/real_pool",
+    "seconds": 2200,
+    "variations": 2
+  },
+  "as_limit": [
+    734003200,
+    734003200
+  ],
+  "pool_counts": {
+    "7": 121,
+    "8": 194
+  },
+  "solver": "/usr/bin/cadical",
+  "solver_sha256": "4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70",
+  "source_hashes": {
+    "controls.py": "e03456e5f4bc95d8e6509d2f6470c84a6fa317aa09e7577fa419d5309db5bf0c",
+    "exact.py": "eea066f98af42c961fa4dcf495ba7f3326666d9e551e9b67000cc33a4d4b11fe",
+    "geometry": "f9dfea89a5ffd610bb39fbf792ce046f6ec7d16e7cdab4d0e0f34f98eb7cd1fb",
+    "geometry.cpp": "fc1e6628f9fe3147f75e6132800066d7d64aecdf9aefebebc04e236994330a63",
+    "search.py": "e2f2a718cd12dc90f69132661b91697151649fc55e12a0d3f5240cc9f31e170a",
+    "verify.py": "ccc99aa3583583aec7df6a8a658157c9a2bfac97a07237f2f634b3b6f8f666fe"
+  },
+  "start_utc": "2026-11-13T19:55:09Z"
+}

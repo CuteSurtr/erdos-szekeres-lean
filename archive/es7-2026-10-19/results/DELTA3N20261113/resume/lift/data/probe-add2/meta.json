@@ -1,0 +1,143 @@
+{
+  "added": 2,
+  "all_gaps": true,
+  "clauses": 813993,
+  "cnf_bytes": 24059977,
+  "label": "COMPUTED",
+  "literals": 3887521,
+  "m": 17,
+  "mode": "cup",
+  "n": 7,
+  "old_m": 15,
+  "phases": {
+    "cap_lattice": {
+      "clauses": 127858,
+      "literals": 767148
+    },
+    "embedding_one_hot": {
+      "clauses": 60,
+      "literals": 135
+    },
+    "embedding_order": {
+      "clauses": 42,
+      "literals": 84
+    },
+    "endpoint_support": {
+      "clauses": 225,
+      "literals": 3285
+    },
+    "forall_delta": {
+      "clauses": 131072,
+      "literals": 260410
+    },
+    "fourcap": {
+      "clauses": 4760,
+      "literals": 9520
+    },
+    "no5cap": {
+      "clauses": 6188,
+      "literals": 18564
+    },
+    "no_ngon": {
+      "clauses": 311168,
+      "literals": 1555840
+    },
+    "old_orientation": {
+      "clauses": 4550,
+      "literals": 18200
+    },
+    "signotope": {
+      "clauses": 19040,
+      "literals": 76160
+    },
+    "target_lattice": {
+      "clauses": 127845,
+      "literals": 1015805
+    },
+    "target_seeds": {
+      "clauses": 81185,
+      "literals": 162370
+    }
+  },
+  "scope": "counterexample",
+  "selector_ids": [
+    [
+      279867,
+      279868,
+      279869
+    ],
+    [
+      279870,
+      279871,
+      279872
+    ],
+    [
+      279873,
+      279874,
+      279875
+    ],
+    [
+      279876,
+      279877,
+      279878
+    ],
+    [
+      279879,
+      279880,
+      279881
+    ],
+    [
+      279882,
+      279883,
+      279884
+    ],
+    [
+      279885,
+      279886,
+      279887
+    ],
+    [
+      279888,
+      279889,
+      279890
+    ],
+    [
+      279891,
+      279892,
+      279893
+    ],
+    [
+      279894,
+      279895,
+      279896
+    ],
+    [
+      279897,
+      279898,
+      279899
+    ],
+    [
+      279900,
+      279901,
+      279902
+    ],
+    [
+      279903,
+      279904,
+      279905
+    ],
+    [
+      279906,
+      279907,
+      279908
+    ],
+    [
+      279909,
+      279910,
+      279911
+    ]
+  ],
+  "triples": 680,
+  "universal_variables": 279866,
+  "variables": 279911
+}

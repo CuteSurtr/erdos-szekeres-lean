@@ -1,0 +1,128 @@
+{
+  "status": "PASS",
+  "formula": {
+    "m": 10,
+    "n": 6,
+    "variables": 1970,
+    "clauses": 9706,
+    "phases": {
+      "signotope": 1680,
+      "no5cap": 252,
+      "convex4_equivalence": 1680,
+      "convex_larger_equivalence": 1512,
+      "no_ngon": 210,
+      "terminal_fourcap_equivalence": 1050,
+      "terminal_bad_triple_equivalence": 1416,
+      "bad_triple_containment": 672,
+      "target_containment": 386,
+      "forall_terminal_delta": 848
+    },
+    "literals": 30148,
+    "hashes": {
+      "/home/jay/research/data/delta3-codex-20261113/extension/n6m10-terminal.cnf": "982fa0f5f138d3e01c656499c3adef258757919d901a0299735040a226ecab5d",
+      "/home/jay/research/data/delta3-codex-20261113/extension/n6m10-terminal.cnf.map": "de664101e9249a15d0d5d85d26819e7b971d7dc6f4d38fa417b08462fd75ef35"
+    },
+    "canonical_failed_clauses": {
+      "forall_terminal_delta": 34
+    },
+    "first_failures": {
+      "forall_terminal_delta": {
+        "clause": 8871,
+        "row": [
+          1958
+        ]
+      }
+    },
+    "map_and_all_rows_match": true,
+    "fixed_signs": false
+  },
+  "real_control": {
+    "m": 10,
+    "n": 6,
+    "P": [
+      [
+        0,
+        0
+      ],
+      [
+        37,
+        -35
+      ],
+      [
+        38,
+        -248
+      ],
+      [
+        84,
+        -270
+      ],
+      [
+        472,
+        -427
+      ],
+      [
+        653,
+        -757
+      ],
+      [
+        665,
+        -793
+      ],
+      [
+        666,
+        -717
+      ],
+      [
+        683,
+        -718
+      ],
+      [
+        736,
+        -567
+      ]
+    ],
+    "general_position": true,
+    "maxima_cap_cup_gon": [
+      4,
+      5,
+      5
+    ],
+    "minimum_absolute_determinant": 682,
+    "maximum_absolute_determinant": 206593,
+    "fourcaps": 6,
+    "bad_triples": 33,
+    "targets": 48,
+    "fivecaps": 0,
+    "ngons": 0,
+    "assignments": 1024,
+    "ordinary_weak_deltas": 543,
+    "terminal_deltas": 34,
+    "minimum_weak_size": 2,
+    "weak_by_size": {
+      "2": 1,
+      "3": 19,
+      "4": 95,
+      "5": 184,
+      "6": 157,
+      "7": 68,
+      "8": 17,
+      "9": 2
+    },
+    "terminal_by_size": {
+      "2": 1,
+      "3": 10,
+      "4": 15,
+      "5": 8
+    },
+    "first_minimum_weak": [
+      2,
+      3
+    ],
+    "first_terminal": [
+      2,
+      3
+    ]
+  },
+  "cnf_sha256": "982fa0f5f138d3e01c656499c3adef258757919d901a0299735040a226ecab5d",
+  "source_mapped_input_identical": true
+}

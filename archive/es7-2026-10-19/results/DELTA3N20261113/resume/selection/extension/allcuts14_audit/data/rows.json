@@ -1,0 +1,272 @@
+{
+  "status": "PASS",
+  "label": "COMPUTED",
+  "m": 14,
+  "n": 7,
+  "variables": 32086,
+  "map_entries_pinned": 32086,
+  "orientation_entries_rebuilt": 364,
+  "base_rows_unchanged": 231613,
+  "base_literals": 623240,
+  "base_body_bytes_unchanged": 4104153,
+  "added_rows": 37,
+  "added_literals": 8034,
+  "total_rows": 231650,
+  "provenance": [
+    {
+      "kind": "high",
+      "cut": 1,
+      "row_index": 0,
+      "literals": 78
+    },
+    {
+      "kind": "high",
+      "cut": 2,
+      "row_index": 1,
+      "literals": 144
+    },
+    {
+      "kind": "high",
+      "cut": 3,
+      "row_index": 2,
+      "literals": 198
+    },
+    {
+      "kind": "high",
+      "cut": 4,
+      "row_index": 3,
+      "literals": 240
+    },
+    {
+      "kind": "high",
+      "cut": 5,
+      "row_index": 4,
+      "literals": 270
+    },
+    {
+      "kind": "high",
+      "cut": 6,
+      "row_index": 5,
+      "literals": 288
+    },
+    {
+      "kind": "high",
+      "cut": 7,
+      "row_index": 6,
+      "literals": 294
+    },
+    {
+      "kind": "high",
+      "cut": 8,
+      "row_index": 7,
+      "literals": 288
+    },
+    {
+      "kind": "high",
+      "cut": 9,
+      "row_index": 8,
+      "literals": 270
+    },
+    {
+      "kind": "high",
+      "cut": 10,
+      "row_index": 9,
+      "literals": 240
+    },
+    {
+      "kind": "high",
+      "cut": 11,
+      "row_index": 10,
+      "literals": 198
+    },
+    {
+      "kind": "high",
+      "cut": 12,
+      "row_index": 11,
+      "literals": 144
+    },
+    {
+      "kind": "high",
+      "cut": 13,
+      "row_index": 12,
+      "literals": 78
+    },
+    {
+      "kind": "low",
+      "cut": 1,
+      "row_index": 13,
+      "literals": 78
+    },
+    {
+      "kind": "low",
+      "cut": 2,
+      "row_index": 14,
+      "literals": 144
+    },
+    {
+      "kind": "low",
+      "cut": 3,
+      "row_index": 15,
+      "literals": 198
+    },
+    {
+      "kind": "low",
+      "cut": 4,
+      "row_index": 16,
+      "literals": 240
+    },
+    {
+      "kind": "low",
+      "cut": 5,
+      "row_index": 17,
+      "literals": 270
+    },
+    {
+      "kind": "low",
+      "cut": 6,
+      "row_index": 18,
+      "literals": 288
+    },
+    {
+      "kind": "low",
+      "cut": 7,
+      "row_index": 19,
+      "literals": 294
+    },
+    {
+      "kind": "low",
+      "cut": 8,
+      "row_index": 20,
+      "literals": 288
+    },
+    {
+      "kind": "low",
+      "cut": 9,
+      "row_index": 21,
+      "literals": 270
+    },
+    {
+      "kind": "low",
+      "cut": 10,
+      "row_index": 22,
+      "literals": 240
+    },
+    {
+      "kind": "low",
+      "cut": 11,
+      "row_index": 23,
+      "literals": 198
+    },
+    {
+      "kind": "low",
+      "cut": 12,
+      "row_index": 24,
+      "literals": 144
+    },
+    {
+      "kind": "low",
+      "cut": 13,
+      "row_index": 25,
+      "literals": 78
+    },
+    {
+      "kind": "all_cup",
+      "cut": 1,
+      "row_index": 13,
+      "literals": 78
+    },
+    {
+      "kind": "all_cup",
+      "cut": 2,
+      "row_index": 26,
+      "literals": 144
+    },
+    {
+      "kind": "all_cup",
+      "cut": 3,
+      "row_index": 27,
+      "literals": 198
+    },
+    {
+      "kind": "all_cup",
+      "cut": 4,
+      "row_index": 28,
+      "literals": 240
+    },
+    {
+      "kind": "all_cup",
+      "cut": 5,
+      "row_index": 29,
+      "literals": 270
+    },
+    {
+      "kind": "all_cup",
+      "cut": 6,
+      "row_index": 30,
+      "literals": 288
+    },
+    {
+      "kind": "all_cup",
+      "cut": 7,
+      "row_index": 31,
+      "literals": 294
+    },
+    {
+      "kind": "all_cup",
+      "cut": 8,
+      "row_index": 32,
+      "literals": 288
+    },
+    {
+      "kind": "all_cup",
+      "cut": 9,
+      "row_index": 33,
+      "literals": 270
+    },
+    {
+      "kind": "all_cup",
+      "cut": 10,
+      "row_index": 34,
+      "literals": 240
+    },
+    {
+      "kind": "all_cup",
+      "cut": 11,
+      "row_index": 35,
+      "literals": 198
+    },
+    {
+      "kind": "all_cup",
+      "cut": 12,
+      "row_index": 36,
+      "literals": 144
+    },
+    {
+      "kind": "all_cup",
+      "cut": 13,
+      "row_index": 12,
+      "literals": 78
+    }
+  ],
+  "hashes": {
+    "base": "5dc0c1719cce7bda188abad8489534413ecbbcbe5f43e1b714244ec045a129c4",
+    "map": "b81223d78761ab200ef5931cc33ab10821a3e3a2054c5e550d0d8da7cf0fa55e",
+    "output": "01de4ba0c9831690f5e64a3592fd335ef701c100224060733e9734d55ac65554",
+    "source": "d8979afcc2b2793f810f314821b4bb2d369c471d0771962f195140b56bd02c24"
+  },
+  "rebuilt": "/home/jay/research/data/delta3-codex-20261113/extension/allcuts14-audit/rebuilt.cnf",
+  "truth_controls": {
+    "canonical": 39,
+    "mixed_single_flips": 8190,
+    "pure_single_flips": 6006,
+    "exhaustive_small": 12432,
+    "omission_mutants": 39,
+    "sign_mutants": 39
+  },
+  "seconds": 0.5170105020006304,
+  "peak_RSS_KiB": 20900,
+  "limits": "Limit                     Soft Limit           Hard Limit           Units     \nMax cpu time              19                   19                   seconds   \nMax file size             unlimited            unlimited            bytes     \nMax data size             unlimited            unlimited            bytes     \nMax stack size            8388608              unlimited            bytes     \nMax core file size        0                    unlimited            bytes     \nMax resident set          unlimited            unlimited            bytes     \nMax processes             243364               243364               processes \nMax open files            4096                 524288               files     \nMax locked memory         8388608              8388608              bytes     \nMax address space         314572800            314572800            bytes     \nMax file locks            unlimited            unlimited            locks     \nMax pending signals       243364               243364               signals   \nMax msgqueue size         819200               819200               bytes     \nMax nice priority         0                    0                    \nMax realtime priority     0                    0                    \nMax realtime timeout      unlimited            unlimited            us        \n",
+  "affinity": [
+    5
+  ]
+}

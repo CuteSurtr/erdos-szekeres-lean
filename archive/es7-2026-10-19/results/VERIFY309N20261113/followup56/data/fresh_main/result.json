@@ -1,0 +1,62 @@
+{
+  "cnf": "/home/jay/research/data/n66-20261113/p2/b13g/it1/trim.cnf",
+  "commands": [
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "603",
+      "/usr/bin/cadical",
+      "-t",
+      "600",
+      "--lrat=true",
+      "--binary=false",
+      "/home/jay/research/data/n66-20261113/p2/b13g/it1/trim.cnf",
+      "/home/jay/research/data/verify309-codex-20261113/followup56/fresh/proof.lrat"
+    ],
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "180",
+      "/usr/bin/zstd",
+      "-q",
+      "-T1",
+      "-3",
+      "-k",
+      "/home/jay/research/data/verify309-codex-20261113/followup56/fresh/proof.lrat"
+    ]
+  ],
+  "compressed_bytes": 874784619,
+  "compressed_roundtrip_verified": true,
+  "hashes": {
+    "cadical": "4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70",
+    "cadical.log": "80ad04c65507fe1957c950e188dffab52033b1a8e1a088779b789a36e4da3e87",
+    "cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+    "input.cnf": "8d4b9099cf045ca72ba5ac56e8ecea00a73a44652d5a9f3d100f63f1f10bc151",
+    "proof.lrat": "b41dd55cc95036c18d092dbb4e7b033d2db9ed5d92ba83c46bfc59763e2e0dfb",
+    "proof.lrat.zst": "b2433c73c55c5546b058a906fa37b8a7ce3aa9e5a8e2a05063ddad5b9f9e8586",
+    "run_cnf.py": "e3c8d9413f99b3092a4ea760f08265bc30bb93204074a3fa566bc2f0c3b3f4b8"
+  },
+  "label": "COMPUTED",
+  "limits": {
+    "as_mib": 3400,
+    "cake_seconds": 450,
+    "cnf": "/home/jay/research/data/n66-20261113/p2/b13g/it1/trim.cnf",
+    "heap": 3200,
+    "out": "/home/jay/research/data/verify309-codex-20261113/followup56/fresh",
+    "seconds": 600,
+    "sha256": "8d4b9099cf045ca72ba5ac56e8ecea00a73a44652d5a9f3d100f63f1f10bc151"
+  },
+  "proof_bytes": 4294290101,
+  "runs": {
+    "cadical": {
+      "exit": 0,
+      "seconds": 600.053
+    },
+    "compress": {
+      "exit": 0,
+      "seconds": 10.18
+    }
+  },
+  "seconds": 617.983,
+  "status": "UNKNOWN"
+}

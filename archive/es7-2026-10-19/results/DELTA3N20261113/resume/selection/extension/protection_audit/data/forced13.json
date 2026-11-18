@@ -1,0 +1,111 @@
+{
+  "status": "PASS",
+  "label": "COMPUTED",
+  "variant": "forced",
+  "m": 13,
+  "n": 7,
+  "variables": 18563,
+  "clauses": 68079,
+  "literals": 226344,
+  "geometry_variables": 4004,
+  "geometry_clauses": 32461,
+  "new_clauses": 35618,
+  "geometry_prefix_sha256": "92f2dcd91b6e070519e740ef1a8366690e79def1ae75996eea9157d947191ce9",
+  "geometry_reference": "/home/jay/research/data/delta3-codex-20261113/extension/terminal7-a/m13/input.cnf",
+  "map_kind_counts": {
+    "orientation": 286,
+    "convex": 3718,
+    "terminal_fourcap": 715,
+    "end_fourcap": 78,
+    "forced_support": 2585,
+    "covered_pair": 78,
+    "uncovered_cap_triple": 286,
+    "bad_contains": 6721,
+    "target_contains": 4096
+  },
+  "phase_counts": {
+    "signotope": 5720,
+    "no5cap": 1287,
+    "convex4_equivalence": 5720,
+    "convex_larger_equivalence": 18018,
+    "no_ngon": 1716,
+    "fourcap_equivalence": 3575,
+    "ambient_terminal_pair_equivalence": 793,
+    "forced_domination_equivalence": 12476,
+    "uncovered_cap_triple_equivalence": 858,
+    "bad_triple_or_fourcap_containment": 6721,
+    "target_containment": 4096,
+    "forall_forced_protected_delta": 7099
+  },
+  "empty_End4_ORs": 23,
+  "cup_support_cache_reuses": 0,
+  "canonical_geometry_checked": true,
+  "false_failure_rows": {
+    "forall_forced_protected_delta": 87
+  },
+  "input_hashes": {
+    "/home/jay/research/data/delta3-codex-20261113/extension/n7m13-forced.cnf": "aa7354802728e9eb465a27cb345b7ef75de8a5f1da5b5a586cb7e113b955acc0",
+    "/home/jay/research/data/delta3-codex-20261113/extension/n7m13-forced.cnf.map": "673378d6691af93c42c28ca2b22c55553543e06d7a8ae8a7880accfd2dd5bee7"
+  },
+  "streamed_rows_and_map_byte_identical": true,
+  "fixture": {
+    "name": "first13",
+    "points": [
+      [
+        -936085,
+        -686901
+      ],
+      [
+        -881740,
+        -721323
+      ],
+      [
+        -877024,
+        -728732
+      ],
+      [
+        -848175,
+        -806081
+      ],
+      [
+        -416460,
+        82709
+      ],
+      [
+        -348704,
+        -359252
+      ],
+      [
+        -315477,
+        411721
+      ],
+      [
+        -313031,
+        607898
+      ],
+      [
+        -312174,
+        772879
+      ],
+      [
+        -275463,
+        -257726
+      ],
+      [
+        -247748,
+        -312490
+      ],
+      [
+        -229906,
+        -280298
+      ],
+      [
+        -224691,
+        37110
+      ]
+    ],
+    "cap4": 1,
+    "bad_triples": 123,
+    "targets": 69
+  }
+}

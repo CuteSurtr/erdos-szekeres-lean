@@ -1,0 +1,123 @@
+{
+  "status": "PASS",
+  "label": "COMPUTED",
+  "variant": "forced",
+  "m": 8,
+  "n": 5,
+  "variables": 807,
+  "clauses": 3652,
+  "literals": 10489,
+  "geometry_variables": 126,
+  "geometry_clauses": 1232,
+  "new_clauses": 2420,
+  "geometry_prefix_sha256": "43502891c882925aea7e4fa4328883bb1d73c69fbb47965af138f92d863d05b3",
+  "geometry_reference": null,
+  "map_kind_counts": {
+    "orientation": 56,
+    "convex": 70,
+    "terminal_fourcap": 70,
+    "end_fourcap": 28,
+    "forced_support": 280,
+    "covered_pair": 28,
+    "uncovered_cap_triple": 56,
+    "bad_contains": 126,
+    "target_contains": 93
+  },
+  "phase_counts": {
+    "signotope": 560,
+    "no5cap": 56,
+    "convex4_equivalence": 560,
+    "no_ngon": 56,
+    "fourcap_equivalence": 350,
+    "ambient_terminal_pair_equivalence": 98,
+    "forced_domination_equivalence": 1366,
+    "uncovered_cap_triple_equivalence": 168,
+    "bad_triple_or_fourcap_containment": 126,
+    "target_containment": 93,
+    "forall_forced_protected_delta": 219
+  },
+  "empty_End4_ORs": 13,
+  "cup_support_cache_reuses": 0,
+  "canonical_geometry_checked": true,
+  "false_failure_rows": {
+    "forall_forced_protected_delta": 60
+  },
+  "input_hashes": {
+    "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/forced-blocks5.cnf": "467caac40c44a79ff28af4648a6854240cd6636ea161eee26fe014ec1148c4ff",
+    "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/forced-blocks5.cnf.map": "f7fb8476ed6fe9c265603fac73ccea50de30aa2ec0c3c149660c2dbd59f97823"
+  },
+  "streamed_rows_and_map_byte_identical": true,
+  "fixture": {
+    "name": "blocks",
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        2,
+        -3
+      ],
+      [
+        3,
+        -6
+      ],
+      [
+        10,
+        500
+      ],
+      [
+        11,
+        600
+      ],
+      [
+        12,
+        699
+      ],
+      [
+        13,
+        797
+      ]
+    ],
+    "cap4": 2,
+    "bad_triples": 2,
+    "targets": 38
+  },
+  "actual_row_mutations": {
+    "A4": [
+      -589,
+      554,
+      539,
+      534,
+      533,
+      127
+    ],
+    "without_cap": [
+      -589,
+      554,
+      539,
+      534,
+      533
+    ],
+    "A5": [
+      -594,
+      593,
+      592,
+      591,
+      590,
+      589
+    ],
+    "four_children": [
+      -594,
+      593,
+      592,
+      591,
+      590
+    ],
+    "both_mutations_rejected": true
+  }
+}

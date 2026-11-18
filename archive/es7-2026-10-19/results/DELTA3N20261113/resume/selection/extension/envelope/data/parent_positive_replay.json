@@ -1,0 +1,18 @@
+{
+  "label": "COMPUTED independent exact positive-witness checks",
+  "scope": "Only the explicitly listed fixed realizations, not a universal existence theorem or a full CNF audit.",
+  "cases_checked": 945,
+  "orientation_groups": 306,
+  "certificates": {
+    "two_support": 2,
+    "one_support": 85313
+  },
+  "seconds": 4.762,
+  "peak_rss_kib": 28140,
+  "hashes": {
+    "checker": "383d51c293189ed46c72c65223c7deaf99a7720a6094d99058359357e7d81be5",
+    "parent_geometry": "7e3284de00e2246699786623c2e285e46541cbf2d6b3241fca0a3c8aefb4a3d9",
+    "cases.jsonl": "7436326feef7398b12fb3c908a04f59841f0f5fc56f1588ff2d3545f035a581c"
+  },
+  "verdict": "PASS"
+}

@@ -1,0 +1,131 @@
+{
+  "commands": [
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "18",
+      "/home/jay/research/data/delta3-codex-20261113/encoder/delta_cnf",
+      "--n",
+      "7",
+      "--m",
+      "14",
+      "--mode",
+      "cup",
+      "--pool",
+      "lattice",
+      "--sym",
+      "none",
+      "--out",
+      "/home/jay/research/data/delta3-codex-20261113/encoder/scheduled-cup-n7-m14/case.cnf"
+    ],
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "902",
+      "/usr/bin/cadical",
+      "-q",
+      "-t",
+      "900",
+      "--lrat=true",
+      "--binary=false",
+      "/home/jay/research/data/delta3-codex-20261113/encoder/scheduled-cup-n7-m14/case.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/encoder/scheduled-cup-n7-m14/case.lrat"
+    ]
+  ],
+  "encoding": {
+    "a": 5,
+    "base_only": false,
+    "clauses": 136128,
+    "cnf_bytes": 3305916,
+    "cube": "",
+    "label": "COMPUTED",
+    "literals": 601868,
+    "m": 14,
+    "max_width": 67,
+    "mode": "cup",
+    "n": 7,
+    "phases": {
+      "cap_lattice": {
+        "clauses": 14913,
+        "literals": 89478
+      },
+      "endpoint_support": {
+        "clauses": 144,
+        "literals": 1509
+      },
+      "forall_delta": {
+        "clauses": 16384,
+        "literals": 31777
+      },
+      "fourcap": {
+        "clauses": 2002,
+        "literals": 4004
+      },
+      "no5cap": {
+        "clauses": 2002,
+        "literals": 6006
+      },
+      "no_ngon": {
+        "clauses": 54912,
+        "literals": 274560
+      },
+      "signotope": {
+        "clauses": 8008,
+        "literals": 32032
+      },
+      "target_lattice": {
+        "clauses": 14903,
+        "literals": 116782
+      },
+      "target_seeds": {
+        "clauses": 22860,
+        "literals": 45720
+      }
+    },
+    "pool": "lattice",
+    "sym": "none",
+    "triples": 364,
+    "variables": 37280
+  },
+  "hashes": {
+    "cadical.log": "8fba55cea0f98be36fab7b65349dda867a58aabfcf974a46098f5123830ac5cb",
+    "cadical.time": "6a6afb45b371851ec32acfd87faf35c11be7aaeaf75d7e73b456bd8d354a6a52",
+    "case.cnf": "de510b3cd55a7adde215f3ec16d26687cec4eed8ae51716c2b44d9657b065d74",
+    "case.lrat": "add2ac66ae0f4ce96e65758438657006a0c78aa198b386165b3858ba4fbb24bb",
+    "delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+    "encode.log": "bcf4a9cc948b3809941d8385d5b62593735afb5a269304f7a0849a948d4eb4c4",
+    "encode.time": "d866e18e1dbcbf57114096d03202a32a8315f0a420e37a5cd9e5ed0de3e2a09a",
+    "encoder_binary": "b435f805e1475b90cffc6fdc831aeefc2eb573b1a48d800595c03de1bb9e99c6"
+  },
+  "label": "COMPUTED",
+  "parameters": {
+    "as_mib": 1300,
+    "binary": "/home/jay/research/data/delta3-codex-20261113/encoder/delta_cnf",
+    "cake_heap": 1100,
+    "cake_seconds": 300,
+    "cake_stack": 32,
+    "cube": "",
+    "defer_cake": false,
+    "fix_signs": null,
+    "generate_only": false,
+    "m": 14,
+    "mode": "cup",
+    "n": 7,
+    "out": "/home/jay/research/data/delta3-codex-20261113/encoder/scheduled-cup-n7-m14",
+    "pool": "lattice",
+    "seconds": 900,
+    "sym": "none"
+  },
+  "proof_bytes": 4171400688,
+  "runs": {
+    "cadical": {
+      "exit": 0,
+      "wall_seconds": 900.053
+    },
+    "encode": {
+      "exit": 0,
+      "wall_seconds": 0.078
+    }
+  },
+  "status": "UNKNOWN"
+}

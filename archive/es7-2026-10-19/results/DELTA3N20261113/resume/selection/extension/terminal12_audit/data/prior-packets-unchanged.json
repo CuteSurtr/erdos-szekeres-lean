@@ -1,0 +1,30 @@
+{
+  "audit": {
+    "manifest_sha256": "e71ed0db65dab51e0375860d9d790109ef2f17de8881da97bec31b311c1ac527",
+    "files_unchanged": 65
+  },
+  "subset_audit": {
+    "manifest_sha256": "fd42310d81405dde1eea4ef009ddb5f7ee45b69060359a500fa17ed1b55f4b82",
+    "files_unchanged": 113
+  },
+  "exact_audit": {
+    "manifest_sha256": "02dae49667cb46a15f65e23ed45244327ea36adcd825e464f17bc89edd6aab6a",
+    "files_unchanged": 30
+  },
+  "exact_audit/replay13": {
+    "manifest_sha256": "b501ec428762c70347a44de66b6bfd201fad191b82d20411e831faaeef166314",
+    "files_unchanged": 23
+  },
+  "protection_audit": {
+    "manifest_sha256": "c5a3a097e977e130bb62b3683a134d896d95bcf6ad726ae31f1c6de99b050145",
+    "files_unchanged": 168
+  },
+  "highsplit_audit": {
+    "manifest_sha256": "dbf403074130a992c987858bb4112344099b43bcadf55e9078a394ebb9b34bef",
+    "files_unchanged": 49
+  },
+  "terminal5_audit": {
+    "manifest_sha256": "5056d68e70e117141a95dd70a3f3a3f5dd93d0cb7cf6b44018329675cc625046",
+    "files_unchanged": 62
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "status": "PASS",
+  "real_coordinate_controls": [
+    {
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          16
+        ],
+        [
+          5,
+          25
+        ],
+        [
+          6,
+          36
+        ],
+        [
+          7,
+          49
+        ],
+        [
+          8,
+          64
+        ],
+        [
+          9,
+          81
+        ],
+        [
+          10,
+          100
+        ],
+        [
+          11,
+          121
+        ],
+        [
+          12,
+          144
+        ],
+        [
+          13,
+          169
+        ],
+        [
+          14,
+          196
+        ],
+        [
+          15,
+          225
+        ]
+      ],
+      "minimum_absolute_determinant": 2,
+      "positive_orientation_count": 560,
+      "exact_GP_identities": 21840,
+      "strict_product_inequalities": 43680,
+      "PASS": true
+    },
+    {
+      "P": [
+        [
+          0,
+          -865627
+        ],
+        [
+          1,
+          -494781
+        ],
+        [
+          2,
+          160850
+        ],
+        [
+          3,
+          230927
+        ],
+        [
+          4,
+          949316
+        ],
+        [
+          5,
+          15755
+        ],
+        [
+          6,
+          59855
+        ],
+        [
+          7,
+          603216
+        ],
+        [
+          8,
+          -729546
+        ],
+        [
+          9,
+          42681
+        ],
+        [
+          10,
+          -948498
+        ],
+        [
+          11,
+          -82321
+        ],
+        [
+          12,
+          642620
+        ],
+        [
+          13,
+          771266
+        ],
+        [
+          14,
+          -504263
+        ],
+        [
+          15,
+          -98485
+        ]
+      ],
+      "minimum_absolute_determinant": 15984,
+      "positive_orientation_count": 239,
+      "exact_GP_identities": 21840,
+      "strict_product_inequalities": 43680,
+      "PASS": true
+    }
+  ],
+  "negative_controls": [
+    {
+      "mutation": "altered_weight",
+      "returncode": 1,
+      "correctly_rejected": true
+    },
+    {
+      "mutation": "reversed_inequality",
+      "returncode": 1,
+      "correctly_rejected": true
+    }
+  ],
+  "scope": "Controls supplement the written algebraic proof and independent exact certificate replay."
+}

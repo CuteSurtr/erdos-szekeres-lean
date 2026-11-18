@@ -1,0 +1,1455 @@
+{
+  "status": "PASS",
+  "label": "COMPUTED formula and exact geometry/membership audits",
+  "fixed": {
+    "0": {
+      "m": 12,
+      "n": 6,
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          37,
+          -35
+        ],
+        [
+          202,
+          -640
+        ],
+        [
+          472,
+          -427
+        ],
+        [
+          653,
+          -757
+        ],
+        [
+          666,
+          -717
+        ],
+        [
+          683,
+          -718
+        ],
+        [
+          736,
+          -567
+        ],
+        [
+          737,
+          -827
+        ],
+        [
+          926,
+          -895
+        ],
+        [
+          999,
+          -926
+        ],
+        [
+          1000,
+          0
+        ]
+      ],
+      "general_position": true,
+      "maxima_cap_cup_gon": [
+        4,
+        5,
+        5
+      ],
+      "minimum_absolute_determinant": 90,
+      "maximum_absolute_determinant": 926000,
+      "fourcaps": 18,
+      "bad_triples": 39,
+      "targets": 90,
+      "fivecaps": 0,
+      "ngons": 0,
+      "assignments": 4096,
+      "ordinary_weak_deltas": 877,
+      "terminal_deltas": 68,
+      "minimum_weak_size": 4,
+      "weak_by_size": {
+        "4": 19,
+        "5": 144,
+        "6": 343,
+        "7": 275,
+        "8": 87,
+        "9": 9
+      },
+      "terminal_by_size": {
+        "5": 19,
+        "6": 37,
+        "7": 12
+      },
+      "first_minimum_weak": [
+        0,
+        4,
+        5,
+        6
+      ],
+      "first_terminal": [
+        0,
+        5,
+        6,
+        8,
+        9
+      ],
+      "status": "PASS",
+      "label": "COMPUTED",
+      "local_to_original": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "clauses": 147,
+      "membership_byte_identical": true,
+      "membership_truth_checks": 4096,
+      "cnf_sha256": "66d1a8a865f53b403fdcae73f61602237ea3e19dc125fb94750732e13192ee7c",
+      "parent_result_sha256": "ca1e09cf7c19fa56f72cf59833e549374ad8a1d1377f7aa3eac79986d267abe7",
+      "fourcap_masks": [
+        291,
+        323,
+        297,
+        329,
+        298,
+        330,
+        300,
+        332,
+        396,
+        652,
+        1164,
+        1796,
+        368,
+        624,
+        1136,
+        432,
+        688,
+        1200
+      ],
+      "bad_triple_masks": [
+        7,
+        19,
+        35,
+        67,
+        259,
+        515,
+        25,
+        41,
+        73,
+        265,
+        521,
+        1033,
+        26,
+        42,
+        74,
+        266,
+        522,
+        1034,
+        28,
+        44,
+        76,
+        140,
+        268,
+        524,
+        1036,
+        276,
+        532,
+        1044,
+        548,
+        1060,
+        772,
+        1284,
+        112,
+        176,
+        560,
+        1072,
+        2096,
+        2192,
+        2240
+      ],
+      "target_masks": [
+        55,
+        87,
+        103,
+        295,
+        327,
+        2187,
+        307,
+        339,
+        787,
+        61,
+        93,
+        109,
+        301,
+        333,
+        213,
+        2133,
+        229,
+        2149,
+        2213,
+        313,
+        345,
+        793,
+        1305,
+        1561,
+        1577,
+        1609,
+        913,
+        1425,
+        1681,
+        2833,
+        3345,
+        3601,
+        1697,
+        3617,
+        1729,
+        3649,
+        62,
+        94,
+        110,
+        302,
+        334,
+        214,
+        2134,
+        230,
+        2150,
+        2214,
+        314,
+        346,
+        794,
+        1306,
+        1562,
+        1578,
+        1610,
+        914,
+        1426,
+        1682,
+        2834,
+        3346,
+        3602,
+        1698,
+        3618,
+        1730,
+        3650,
+        220,
+        236,
+        920,
+        1432,
+        1688,
+        2840,
+        3352,
+        3608,
+        1704,
+        3624,
+        1736,
+        3656,
+        880,
+        1392,
+        1648,
+        944,
+        1456,
+        1712,
+        2864,
+        3376,
+        3632,
+        2960,
+        3472,
+        3728,
+        3008,
+        3520,
+        3776
+      ]
+    },
+    "1": {
+      "m": 12,
+      "n": 6,
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          37,
+          -35
+        ],
+        [
+          202,
+          -640
+        ],
+        [
+          472,
+          -427
+        ],
+        [
+          653,
+          -757
+        ],
+        [
+          665,
+          -793
+        ],
+        [
+          666,
+          -717
+        ],
+        [
+          683,
+          -718
+        ],
+        [
+          736,
+          -567
+        ],
+        [
+          926,
+          -895
+        ],
+        [
+          999,
+          -926
+        ],
+        [
+          1000,
+          0
+        ]
+      ],
+      "general_position": true,
+      "maxima_cap_cup_gon": [
+        4,
+        5,
+        5
+      ],
+      "minimum_absolute_determinant": 90,
+      "maximum_absolute_determinant": 926000,
+      "fourcaps": 18,
+      "bad_triples": 43,
+      "targets": 70,
+      "fivecaps": 0,
+      "ngons": 0,
+      "assignments": 4096,
+      "ordinary_weak_deltas": 895,
+      "terminal_deltas": 28,
+      "minimum_weak_size": 4,
+      "weak_by_size": {
+        "4": 28,
+        "5": 170,
+        "6": 365,
+        "7": 253,
+        "8": 71,
+        "9": 8
+      },
+      "terminal_by_size": {
+        "4": 4,
+        "5": 11,
+        "6": 11,
+        "7": 2
+      },
+      "first_minimum_weak": [
+        0,
+        4,
+        6,
+        7
+      ],
+      "first_terminal": [
+        0,
+        2,
+        9,
+        10
+      ],
+      "status": "PASS",
+      "label": "COMPUTED",
+      "local_to_original": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14
+      ],
+      "clauses": 131,
+      "membership_byte_identical": true,
+      "membership_truth_checks": 4096,
+      "cnf_sha256": "05ca48fa112a2d0125ce4b38b6365c04c85261a520174b165ee614819c963200",
+      "parent_result_sha256": "f93ce95bbd083e6c7ea87c1552bf087f31bc6e4a6db0bf519cd05351633d2902",
+      "fourcap_masks": [
+        51,
+        57,
+        58,
+        60,
+        780,
+        1292,
+        1572,
+        720,
+        1232,
+        848,
+        1360,
+        736,
+        1248,
+        864,
+        1376,
+        928,
+        1440,
+        2464
+      ],
+      "bad_triple_masks": [
+        7,
+        19,
+        35,
+        67,
+        131,
+        515,
+        25,
+        41,
+        73,
+        137,
+        521,
+        1033,
+        26,
+        42,
+        74,
+        138,
+        522,
+        1034,
+        28,
+        44,
+        76,
+        140,
+        268,
+        524,
+        1036,
+        532,
+        1044,
+        548,
+        1060,
+        580,
+        1092,
+        208,
+        336,
+        592,
+        1104,
+        2128,
+        224,
+        352,
+        608,
+        1120,
+        2144,
+        416,
+        2208
+      ],
+      "target_masks": [
+        55,
+        87,
+        151,
+        103,
+        167,
+        199,
+        2315,
+        61,
+        93,
+        157,
+        109,
+        173,
+        205,
+        405,
+        2197,
+        453,
+        2245,
+        2373,
+        1561,
+        1609,
+        1673,
+        1809,
+        3601,
+        1857,
+        3649,
+        1921,
+        3713,
+        62,
+        94,
+        158,
+        110,
+        174,
+        206,
+        406,
+        2198,
+        454,
+        2246,
+        2374,
+        1562,
+        1610,
+        1674,
+        1810,
+        3602,
+        1858,
+        3650,
+        1922,
+        3714,
+        412,
+        460,
+        1816,
+        3608,
+        1864,
+        3656,
+        1928,
+        3720,
+        752,
+        1264,
+        880,
+        1392,
+        2672,
+        3184,
+        2864,
+        3376,
+        1744,
+        1872,
+        3664,
+        3856,
+        2976,
+        3488,
+        3968
+      ]
+    },
+    "2": {
+      "m": 12,
+      "n": 6,
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          37,
+          -35
+        ],
+        [
+          38,
+          -248
+        ],
+        [
+          84,
+          -270
+        ],
+        [
+          472,
+          -427
+        ],
+        [
+          653,
+          -757
+        ],
+        [
+          665,
+          -793
+        ],
+        [
+          666,
+          -717
+        ],
+        [
+          683,
+          -718
+        ],
+        [
+          736,
+          -567
+        ],
+        [
+          999,
+          -926
+        ],
+        [
+          1000,
+          0
+        ]
+      ],
+      "general_position": true,
+      "maxima_cap_cup_gon": [
+        4,
+        5,
+        5
+      ],
+      "minimum_absolute_determinant": 90,
+      "maximum_absolute_determinant": 926000,
+      "fourcaps": 14,
+      "bad_triples": 43,
+      "targets": 126,
+      "fivecaps": 0,
+      "ngons": 0,
+      "assignments": 4096,
+      "ordinary_weak_deltas": 949,
+      "terminal_deltas": 2,
+      "minimum_weak_size": 4,
+      "weak_by_size": {
+        "4": 21,
+        "5": 138,
+        "6": 345,
+        "7": 308,
+        "8": 116,
+        "9": 20,
+        "10": 1
+      },
+      "terminal_by_size": {
+        "4": 1,
+        "5": 1
+      },
+      "first_minimum_weak": [
+        0,
+        2,
+        3,
+        6
+      ],
+      "first_terminal": [
+        0,
+        1,
+        9,
+        10
+      ],
+      "status": "PASS",
+      "label": "COMPUTED",
+      "local_to_original": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        13,
+        14
+      ],
+      "clauses": 183,
+      "membership_byte_identical": true,
+      "membership_truth_checks": 4096,
+      "cnf_sha256": "9f440dbdb604275e7d903e381c50b73f60245f59cdde4487dc5a876d895e9063",
+      "parent_result_sha256": "e3892a9c38b3a9b6bc702fbd86b1f12c6a1931395354fd45735897e659b564a2",
+      "fourcap_masks": [
+        99,
+        113,
+        114,
+        108,
+        116,
+        1556,
+        120,
+        1560,
+        1440,
+        1696,
+        1472,
+        1728,
+        1856,
+        2880
+      ],
+      "bad_triple_masks": [
+        7,
+        11,
+        35,
+        67,
+        131,
+        259,
+        49,
+        81,
+        145,
+        273,
+        1041,
+        50,
+        82,
+        146,
+        274,
+        1042,
+        44,
+        76,
+        140,
+        268,
+        1036,
+        52,
+        84,
+        148,
+        276,
+        532,
+        1044,
+        56,
+        88,
+        152,
+        280,
+        536,
+        1048,
+        416,
+        672,
+        1184,
+        2208,
+        448,
+        704,
+        1216,
+        2240,
+        832,
+        2368
+      ],
+      "target_masks": [
+        103,
+        167,
+        295,
+        199,
+        327,
+        391,
+        107,
+        171,
+        299,
+        203,
+        331,
+        395,
+        2579,
+        2077,
+        2573,
+        117,
+        181,
+        309,
+        1077,
+        213,
+        341,
+        1109,
+        405,
+        1173,
+        1301,
+        805,
+        2341,
+        1573,
+        3109,
+        1605,
+        3141,
+        901,
+        2437,
+        1669,
+        2693,
+        3205,
+        1797,
+        3333,
+        121,
+        185,
+        313,
+        1081,
+        217,
+        345,
+        1113,
+        409,
+        1177,
+        1305,
+        809,
+        2345,
+        1577,
+        3113,
+        1609,
+        3145,
+        905,
+        2441,
+        1673,
+        2697,
+        3209,
+        1801,
+        3337,
+        2078,
+        2574,
+        118,
+        182,
+        310,
+        1078,
+        214,
+        342,
+        1110,
+        406,
+        1174,
+        1302,
+        806,
+        2342,
+        1574,
+        3110,
+        1606,
+        3142,
+        902,
+        2438,
+        1670,
+        2694,
+        3206,
+        1798,
+        3334,
+        122,
+        186,
+        314,
+        1082,
+        218,
+        346,
+        1114,
+        410,
+        1178,
+        1306,
+        810,
+        2346,
+        1578,
+        3114,
+        1610,
+        3146,
+        906,
+        2442,
+        1674,
+        2698,
+        3210,
+        1802,
+        3338,
+        820,
+        1588,
+        1620,
+        916,
+        1684,
+        1812,
+        824,
+        1592,
+        1624,
+        920,
+        1688,
+        1816,
+        1504,
+        1760,
+        3296,
+        3680,
+        3904
+      ]
+    },
+    "3": {
+      "m": 12,
+      "n": 6,
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          37,
+          -35
+        ],
+        [
+          38,
+          -248
+        ],
+        [
+          84,
+          -270
+        ],
+        [
+          472,
+          -427
+        ],
+        [
+          653,
+          -757
+        ],
+        [
+          665,
+          -793
+        ],
+        [
+          666,
+          -717
+        ],
+        [
+          683,
+          -718
+        ],
+        [
+          736,
+          -567
+        ],
+        [
+          926,
+          -895
+        ],
+        [
+          1000,
+          0
+        ]
+      ],
+      "general_position": true,
+      "maxima_cap_cup_gon": [
+        4,
+        5,
+        5
+      ],
+      "minimum_absolute_determinant": 45,
+      "maximum_absolute_determinant": 895000,
+      "fourcaps": 14,
+      "bad_triples": 44,
+      "targets": 134,
+      "fivecaps": 0,
+      "ngons": 0,
+      "assignments": 4096,
+      "ordinary_weak_deltas": 945,
+      "terminal_deltas": 0,
+      "minimum_weak_size": 4,
+      "weak_by_size": {
+        "4": 21,
+        "5": 138,
+        "6": 343,
+        "7": 306,
+        "8": 116,
+        "9": 20,
+        "10": 1
+      },
+      "terminal_by_size": {},
+      "first_minimum_weak": [
+        0,
+        2,
+        3,
+        6
+      ],
+      "first_terminal": null,
+      "status": "PASS",
+      "label": "COMPUTED",
+      "local_to_original": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        14
+      ],
+      "clauses": 192,
+      "membership_byte_identical": true,
+      "membership_truth_checks": 4096,
+      "cnf_sha256": "25ca75a9eee359ca03ae7f96657128ab03693c03421b1e7e83627f529841890a",
+      "parent_result_sha256": "3b910bb7fce55658e1a0bfdb83d5425292aa911ad815fe3076ed9ad1c212f415",
+      "fourcap_masks": [
+        99,
+        113,
+        114,
+        108,
+        116,
+        1556,
+        120,
+        1560,
+        1440,
+        1696,
+        1472,
+        1728,
+        1856,
+        2880
+      ],
+      "bad_triple_masks": [
+        7,
+        11,
+        35,
+        67,
+        131,
+        259,
+        1027,
+        49,
+        81,
+        145,
+        273,
+        1041,
+        50,
+        82,
+        146,
+        274,
+        1042,
+        44,
+        76,
+        140,
+        268,
+        1036,
+        52,
+        84,
+        148,
+        276,
+        532,
+        1044,
+        56,
+        88,
+        152,
+        280,
+        536,
+        1048,
+        416,
+        672,
+        1184,
+        2208,
+        448,
+        704,
+        1216,
+        2240,
+        832,
+        2368
+      ],
+      "target_masks": [
+        103,
+        167,
+        295,
+        1063,
+        199,
+        327,
+        1095,
+        391,
+        1159,
+        1287,
+        107,
+        171,
+        299,
+        1067,
+        203,
+        331,
+        1099,
+        395,
+        1163,
+        1291,
+        2579,
+        2077,
+        2573,
+        117,
+        181,
+        309,
+        1077,
+        213,
+        341,
+        1109,
+        405,
+        1173,
+        1301,
+        805,
+        2341,
+        1573,
+        3109,
+        1605,
+        3141,
+        901,
+        2437,
+        1669,
+        2693,
+        3205,
+        1797,
+        3333,
+        121,
+        185,
+        313,
+        1081,
+        217,
+        345,
+        1113,
+        409,
+        1177,
+        1305,
+        809,
+        2345,
+        1577,
+        3113,
+        1609,
+        3145,
+        905,
+        2441,
+        1673,
+        2697,
+        3209,
+        1801,
+        3337,
+        2078,
+        2574,
+        118,
+        182,
+        310,
+        1078,
+        214,
+        342,
+        1110,
+        406,
+        1174,
+        1302,
+        806,
+        2342,
+        1574,
+        3110,
+        1606,
+        3142,
+        902,
+        2438,
+        1670,
+        2694,
+        3206,
+        1798,
+        3334,
+        122,
+        186,
+        314,
+        1082,
+        218,
+        346,
+        1114,
+        410,
+        1178,
+        1306,
+        810,
+        2346,
+        1578,
+        3114,
+        1610,
+        3146,
+        906,
+        2442,
+        1674,
+        2698,
+        3210,
+        1802,
+        3338,
+        820,
+        1588,
+        1620,
+        916,
+        1684,
+        1812,
+        824,
+        1592,
+        1624,
+        920,
+        1688,
+        1816,
+        1504,
+        1760,
+        3296,
+        3680,
+        3904
+      ],
+      "old_cpp_clause_multiset_agrees": true
+    }
+  },
+  "generic": {
+    "10": {
+      "status": "PASS",
+      "formula": {
+        "m": 10,
+        "n": 6,
+        "variables": 1970,
+        "clauses": 9706,
+        "phases": {
+          "signotope": 1680,
+          "no5cap": 252,
+          "convex4_equivalence": 1680,
+          "convex_larger_equivalence": 1512,
+          "no_ngon": 210,
+          "terminal_fourcap_equivalence": 1050,
+          "terminal_bad_triple_equivalence": 1416,
+          "bad_triple_containment": 672,
+          "target_containment": 386,
+          "forall_terminal_delta": 848
+        },
+        "literals": 30148,
+        "hashes": {
+          "/home/jay/research/data/delta3-codex-20261113/extension/n6m10-terminal.cnf": "982fa0f5f138d3e01c656499c3adef258757919d901a0299735040a226ecab5d",
+          "/home/jay/research/data/delta3-codex-20261113/extension/n6m10-terminal.cnf.map": "de664101e9249a15d0d5d85d26819e7b971d7dc6f4d38fa417b08462fd75ef35"
+        },
+        "canonical_failed_clauses": {
+          "forall_terminal_delta": 34
+        },
+        "first_failures": {
+          "forall_terminal_delta": {
+            "clause": 8871,
+            "row": [
+              1958
+            ]
+          }
+        },
+        "map_and_all_rows_match": true,
+        "fixed_signs": false
+      },
+      "real_control": {
+        "m": 10,
+        "n": 6,
+        "P": [
+          [
+            0,
+            0
+          ],
+          [
+            37,
+            -35
+          ],
+          [
+            38,
+            -248
+          ],
+          [
+            84,
+            -270
+          ],
+          [
+            472,
+            -427
+          ],
+          [
+            653,
+            -757
+          ],
+          [
+            665,
+            -793
+          ],
+          [
+            666,
+            -717
+          ],
+          [
+            683,
+            -718
+          ],
+          [
+            736,
+            -567
+          ]
+        ],
+        "general_position": true,
+        "maxima_cap_cup_gon": [
+          4,
+          5,
+          5
+        ],
+        "minimum_absolute_determinant": 682,
+        "maximum_absolute_determinant": 206593,
+        "fourcaps": 6,
+        "bad_triples": 33,
+        "targets": 48,
+        "fivecaps": 0,
+        "ngons": 0,
+        "assignments": 1024,
+        "ordinary_weak_deltas": 543,
+        "terminal_deltas": 34,
+        "minimum_weak_size": 2,
+        "weak_by_size": {
+          "2": 1,
+          "3": 19,
+          "4": 95,
+          "5": 184,
+          "6": 157,
+          "7": 68,
+          "8": 17,
+          "9": 2
+        },
+        "terminal_by_size": {
+          "2": 1,
+          "3": 10,
+          "4": 15,
+          "5": 8
+        },
+        "first_minimum_weak": [
+          2,
+          3
+        ],
+        "first_terminal": [
+          2,
+          3
+        ]
+      },
+      "cnf_sha256": "982fa0f5f138d3e01c656499c3adef258757919d901a0299735040a226ecab5d",
+      "source_mapped_input_identical": true
+    },
+    "11": {
+      "status": "PASS",
+      "formula": {
+        "m": 11,
+        "n": 6,
+        "variables": 4060,
+        "clauses": 17426,
+        "phases": {
+          "signotope": 2640,
+          "no5cap": 462,
+          "convex4_equivalence": 2640,
+          "convex_larger_equivalence": 2772,
+          "no_ngon": 462,
+          "terminal_fourcap_equivalence": 1650,
+          "terminal_bad_triple_equivalence": 2376,
+          "bad_triple_containment": 1584,
+          "target_containment": 1024,
+          "forall_terminal_delta": 1816
+        },
+        "literals": 56339,
+        "hashes": {
+          "/home/jay/research/data/delta3-codex-20261113/extension/n6m11-terminal.cnf": "ca1637366185d883d5e78064f17e52680dd7d87516113576ff9861e4256e0c2e",
+          "/home/jay/research/data/delta3-codex-20261113/extension/n6m11-terminal.cnf.map": "63dc41155ab40082a967e187914c4a3908ee2ee606ca43d55ef6e00382eb3df1"
+        },
+        "canonical_failed_clauses": {
+          "forall_terminal_delta": 10
+        },
+        "first_failures": {
+          "forall_terminal_delta": {
+            "clause": 16920,
+            "row": [
+              2541,
+              3201
+            ]
+          }
+        },
+        "map_and_all_rows_match": true,
+        "fixed_signs": false
+      },
+      "real_control": {
+        "m": 11,
+        "n": 6,
+        "P": [
+          [
+            0,
+            0
+          ],
+          [
+            37,
+            -35
+          ],
+          [
+            38,
+            -248
+          ],
+          [
+            84,
+            -270
+          ],
+          [
+            472,
+            -427
+          ],
+          [
+            653,
+            -757
+          ],
+          [
+            665,
+            -793
+          ],
+          [
+            666,
+            -717
+          ],
+          [
+            683,
+            -718
+          ],
+          [
+            736,
+            -567
+          ],
+          [
+            926,
+            -895
+          ]
+        ],
+        "general_position": true,
+        "maxima_cap_cup_gon": [
+          4,
+          5,
+          5
+        ],
+        "minimum_absolute_determinant": 45,
+        "maximum_absolute_determinant": 206593,
+        "fourcaps": 13,
+        "bad_triples": 41,
+        "targets": 98,
+        "fivecaps": 0,
+        "ngons": 0,
+        "assignments": 2048,
+        "ordinary_weak_deltas": 595,
+        "terminal_deltas": 10,
+        "minimum_weak_size": 3,
+        "weak_by_size": {
+          "3": 4,
+          "4": 51,
+          "5": 178,
+          "6": 225,
+          "7": 111,
+          "8": 24,
+          "9": 2
+        },
+        "terminal_by_size": {
+          "4": 1,
+          "5": 5,
+          "6": 4
+        },
+        "first_minimum_weak": [
+          2,
+          3,
+          5
+        ],
+        "first_terminal": [
+          5,
+          6,
+          8,
+          10
+        ]
+      },
+      "cnf_sha256": "ca1637366185d883d5e78064f17e52680dd7d87516113576ff9861e4256e0c2e",
+      "source_mapped_input_identical": true
+    }
+  },
+  "through9": {
+    "audit": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/boundary/audit/VERIFY_BOUNDARY.md",
+    "scope": "Every n6 admissible real set of size at most9; written smaller-size dichotomy plus boundary certificate.",
+    "replay_receipt": {
+      "n": 6,
+      "label": "CERTIFIED",
+      "command": [
+        "/usr/bin/timeout",
+        "20s",
+        "/usr/bin/prlimit",
+        "--as=838860800",
+        "--cpu=18",
+        "/home/jay/.local/bin/cake_lpr",
+        "--CML_HEAP_SIZE=600",
+        "--CML_STACK_SIZE=32",
+        "/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n6/input.cnf",
+        "/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n6/solve/proof.lrat"
+      ],
+      "exit_code": 0,
+      "exact_verdict_line": true,
+      "input_hashes_before": {
+        "/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n6/input.cnf": "1e40345bfedd16d0130a0a00bc6a412d7a0caceb04bcd39879be99d71d9621c3",
+        "/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n6/solve/proof.lrat": "f34baddd285f8d0654223edf110c9e2986c43e707ff675a0aae5deedd420f9ce",
+        "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54"
+      },
+      "input_hashes_after": {
+        "/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n6/input.cnf": "1e40345bfedd16d0130a0a00bc6a412d7a0caceb04bcd39879be99d71d9621c3",
+        "/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n6/solve/proof.lrat": "f34baddd285f8d0654223edf110c9e2986c43e707ff675a0aae5deedd420f9ce",
+        "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54"
+      },
+      "stable": true,
+      "log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+      "replay_source_sha256": "e0fbe8fdbe6987b0ab715a9563ccb2d71a2cc25b3db45a3c0630496333fe2151",
+      "proof_bytes": 119694,
+      "seconds": 0.007
+    },
+    "fresh_replay_here": false
+  },
+  "limits": {
+    "AS_MiB": 300,
+    "CPUs": 1,
+    "wall_seconds": 20,
+    "CPU_seconds": 19
+  },
+  "peak_rss_KiB": 23000
+}

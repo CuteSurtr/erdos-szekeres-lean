@@ -1,0 +1,69 @@
+{
+  "status": "PASS; fresh parent sequential replay",
+  "checks": [
+    {
+      "source": "WeightedEnvelope.lean",
+      "source_sha256": "0f929fdccc5d3a3133862f943d3bb0fa1b983c35094a68a10b7907839efcfae5",
+      "tag": "parent-weighted-fresh-a",
+      "axiom_reports": 9,
+      "elapsed_seconds": 0.668,
+      "maxrss_kib": 1308308,
+      "log_sha256": "798a813eb66905a7b3826d99e2a4f932826f8421afbb6f9755dae3ca6af84120",
+      "record_sha256": "119553c42c854e963c5f687cc04ab47b44a8472378203922296dc05de68ff8f3"
+    },
+    {
+      "source": "FieldAdapter.lean",
+      "source_sha256": "d81884c3d58c2f67ed29f4d66a9ea2a5764949c3d30740692ac08c0f9ffaa9c7",
+      "tag": "parent-adapter-fresh-a",
+      "axiom_reports": 1,
+      "elapsed_seconds": 0.496,
+      "maxrss_kib": 1296524,
+      "log_sha256": "db23dbb12beab692e6548857acc42082066ad35565c7158dc473f43bcad20a15",
+      "record_sha256": "74bfb5be0b7bd9f22bc43103d953dfa7899d6f4fe3645eb276a16d38487c043d"
+    },
+    {
+      "source": "TwoSupport.lean",
+      "source_sha256": "b03a8819dbb5fd06cf51d034dce539e71f6fc30e7486dd8b4be40e7bc06018c6",
+      "tag": "parent-twosupport-fresh-a",
+      "axiom_reports": 14,
+      "elapsed_seconds": 2.031,
+      "maxrss_kib": 1325852,
+      "log_sha256": "08c2ed3ab522c6a40bcfa05ad4b4326c391abebb5415fde3c9816bb2e3517d0d",
+      "record_sha256": "407bdb6b33dc9bc58a0a8f77206fc066f8a07eef251fa193252377f9720293d3"
+    },
+    {
+      "source": "NumericalExample.lean",
+      "source_sha256": "02db865a3117d0cb64ee8aa2e6f1ad6697b39e4800a43462c932cad64474f8a9",
+      "tag": "parent-numerical-fresh-a",
+      "axiom_reports": 11,
+      "elapsed_seconds": 1.997,
+      "maxrss_kib": 1315624,
+      "log_sha256": "b4a56323f497a06cf9f8d53da9183e869574d80e9d6fea889b4aba47670cc788",
+      "record_sha256": "5f3eba514ed8466768ed12503c7f6f4ed3003f30c9031cc8f8f60054249450e8"
+    },
+    {
+      "source": "OpenHalfline.lean",
+      "source_sha256": "a4a5b43ff46de13964ca35ff7ec2531a08e1288ee451e307dfeb22b52d4993d2",
+      "tag": "parent-openray-fresh-a",
+      "axiom_reports": 3,
+      "elapsed_seconds": 0.658,
+      "maxrss_kib": 1289316,
+      "log_sha256": "d307086b2853c656a56984e81ac7bd266e1246cb2e8e0d67fe8d6ef120cf4313",
+      "record_sha256": "10c0225770bb7df74d74ee5d09df8c63ca2f4b14b3b8d7b403f0b252b8b3f4bb"
+    },
+    {
+      "source": "Terminal15Boolean.lean",
+      "source_sha256": "cd50fd74384bea5a17d93ba9f15ce52762df8bf8c872e30fbe8c4780687d9463",
+      "tag": "parent-boolean-fresh-a",
+      "axiom_reports": 3,
+      "elapsed_seconds": 11.818,
+      "maxrss_kib": 583912,
+      "log_sha256": "e7457c94b74ef95b3afff3d4a81d93510106dd7bc2e6d9031e8c448348a1accf",
+      "record_sha256": "6dc4fdf802f5a03252f35ab1629bb86111b23c3eeb915bbdc937bd0d67384dec"
+    }
+  ],
+  "axiom_reports": 41,
+  "original_algebra_manifest_sha256": "4c9c241850c79e5effb76417caa2371eb462c5389525c83eb8589fff37ef0ec1",
+  "open_ray_manifest_sha256": "d7c685ff59b563f12b68eb8a1310ca359ee8a99e0445c8e9977df463813b4d02",
+  "boolean_manifest_sha256": "dd1eae579f3a3e2191b6b31dbb221d5cfe6dce0d397aade454d78d7a3121f7d3"
+}

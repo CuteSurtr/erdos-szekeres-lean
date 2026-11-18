@@ -1,0 +1,134 @@
+{
+  "status": "PASS",
+  "formula": {
+    "m": 11,
+    "n": 6,
+    "variables": 4060,
+    "clauses": 17426,
+    "phases": {
+      "signotope": 2640,
+      "no5cap": 462,
+      "convex4_equivalence": 2640,
+      "convex_larger_equivalence": 2772,
+      "no_ngon": 462,
+      "terminal_fourcap_equivalence": 1650,
+      "terminal_bad_triple_equivalence": 2376,
+      "bad_triple_containment": 1584,
+      "target_containment": 1024,
+      "forall_terminal_delta": 1816
+    },
+    "literals": 56339,
+    "hashes": {
+      "/home/jay/research/data/delta3-codex-20261113/extension/n6m11-terminal.cnf": "ca1637366185d883d5e78064f17e52680dd7d87516113576ff9861e4256e0c2e",
+      "/home/jay/research/data/delta3-codex-20261113/extension/n6m11-terminal.cnf.map": "63dc41155ab40082a967e187914c4a3908ee2ee606ca43d55ef6e00382eb3df1"
+    },
+    "canonical_failed_clauses": {
+      "forall_terminal_delta": 10
+    },
+    "first_failures": {
+      "forall_terminal_delta": {
+        "clause": 16920,
+        "row": [
+          2541,
+          3201
+        ]
+      }
+    },
+    "map_and_all_rows_match": true,
+    "fixed_signs": false
+  },
+  "real_control": {
+    "m": 11,
+    "n": 6,
+    "P": [
+      [
+        0,
+        0
+      ],
+      [
+        37,
+        -35
+      ],
+      [
+        38,
+        -248
+      ],
+      [
+        84,
+        -270
+      ],
+      [
+        472,
+        -427
+      ],
+      [
+        653,
+        -757
+      ],
+      [
+        665,
+        -793
+      ],
+      [
+        666,
+        -717
+      ],
+      [
+        683,
+        -718
+      ],
+      [
+        736,
+        -567
+      ],
+      [
+        926,
+        -895
+      ]
+    ],
+    "general_position": true,
+    "maxima_cap_cup_gon": [
+      4,
+      5,
+      5
+    ],
+    "minimum_absolute_determinant": 45,
+    "maximum_absolute_determinant": 206593,
+    "fourcaps": 13,
+    "bad_triples": 41,
+    "targets": 98,
+    "fivecaps": 0,
+    "ngons": 0,
+    "assignments": 2048,
+    "ordinary_weak_deltas": 595,
+    "terminal_deltas": 10,
+    "minimum_weak_size": 3,
+    "weak_by_size": {
+      "3": 4,
+      "4": 51,
+      "5": 178,
+      "6": 225,
+      "7": 111,
+      "8": 24,
+      "9": 2
+    },
+    "terminal_by_size": {
+      "4": 1,
+      "5": 5,
+      "6": 4
+    },
+    "first_minimum_weak": [
+      2,
+      3,
+      5
+    ],
+    "first_terminal": [
+      5,
+      6,
+      8,
+      10
+    ]
+  },
+  "cnf_sha256": "ca1637366185d883d5e78064f17e52680dd7d87516113576ff9861e4256e0c2e",
+  "source_mapped_input_identical": true
+}

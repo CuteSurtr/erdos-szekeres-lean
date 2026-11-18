@@ -1,0 +1,29 @@
+{
+  "label": "CERTIFIED",
+  "version": "v119u",
+  "rows": 19,
+  "own_encoder_matches": 19,
+  "fresh_cake_acceptances": 19,
+  "old_witness_exact_row_check": "PASS (3812 rows, 35 holes, F20,Lo15,state0 occupied)",
+  "rows_cutting_old_witness": 19,
+  "old_witness_intersection_counts": {
+    "0": 19
+  },
+  "accepted_sha256": "7a2f5b9649581cc48069a6e0f24d74085a80414cda696e412e66a20d1fc84761",
+  "replay_sha256": "f3a8552888115644e5e653b6fcb6622f3d1b408cf14012c8af61692dea3b92d9",
+  "input_sha256": {
+    "/home/jay/research/data/es308-20261114/cuts-v119u/accepted.json": "7a2f5b9649581cc48069a6e0f24d74085a80414cda696e412e66a20d1fc84761",
+    "/home/jay/research/data/es308-20261114/candidates-v119u.json": "bbe8d99f424a5e2ad98433da6a2913357023105f6cf6ae044cb8e6098feeaa2a",
+    "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-residual32-rank-global-2026-10-10/source-2650.json.gz": "8c7fe9ef5264182524095d46ef50ed6bc691cab425efa965756d1870112241aa",
+    "/home/jay/research/data/es308-20261114/runs/b35s20/bb/WITNESS.json.v118-snapshot": "9fc26a6d8a3f3873a308c0f873b40f862513a2169ae995e9f5d47060e6918668",
+    "/home/jay/research/data/es308-20261114/inputs/b35s20-v118/extra.json": "c723eb877bf351d79ed50590301fc750c4799836c0aad20d5e0a274a8bbb408d",
+    "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/LO33N20261113/budget34/audit/audit_followup_rows_v4.py": "f0df1c0f5b38b735226a9b813b3f5f78d0b91ee27c300c15ffccf5c5fa1ffc12",
+    "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/LO33N20261113/budget34/audit/residual_encoder.py": "db7b2deba4ae55ff50f25d1e52843734591f5e7d1339a53e45e8811866e7365c",
+    "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54"
+  },
+  "seconds": 3.931,
+  "finished_local": "2026-11-15T02:10:04.315076+09:00",
+  "scope": "Additional rows only; no finite exclusion or ES bound follows from these rows alone",
+  "parent_maxrss_kib": 50612,
+  "child_maxrss_kib": 412808
+}

@@ -1,0 +1,154 @@
+{
+  "status": "PASS",
+  "P_left": [
+    [
+      8930,
+      40332
+    ],
+    [
+      53030,
+      24895
+    ],
+    [
+      71573,
+      -44546
+    ],
+    [
+      120094,
+      8990
+    ],
+    [
+      122148,
+      14671
+    ],
+    [
+      122648,
+      -29897
+    ],
+    [
+      123148,
+      -16011
+    ],
+    [
+      123648,
+      20977
+    ],
+    [
+      157127,
+      -27262
+    ],
+    [
+      157627,
+      -12108
+    ]
+  ],
+  "P_full": [
+    [
+      8930,
+      40332
+    ],
+    [
+      53030,
+      24895
+    ],
+    [
+      71573,
+      -44546
+    ],
+    [
+      120094,
+      8990
+    ],
+    [
+      122148,
+      14671
+    ],
+    [
+      122648,
+      -29897
+    ],
+    [
+      123148,
+      -16011
+    ],
+    [
+      123648,
+      20977
+    ],
+    [
+      157127,
+      -27262
+    ],
+    [
+      157627,
+      -12108
+    ],
+    [
+      157628,
+      -3147967
+    ],
+    [
+      157629,
+      -3147964
+    ]
+  ],
+  "left": {
+    "m": 10,
+    "n": 6,
+    "GP": true,
+    "fourcaps": 0,
+    "fivecaps": 0,
+    "ngons": 0,
+    "targets": 44,
+    "cap_triples": 52,
+    "bad_cap_triples": 52,
+    "End3": [
+      2,
+      5,
+      6,
+      8,
+      9
+    ],
+    "maximum_abs_coordinate": 157627
+  },
+  "full": {
+    "m": 12,
+    "n": 6,
+    "GP": true,
+    "fourcaps": 104,
+    "fivecaps": 0,
+    "ngons": 0,
+    "targets": 96,
+    "cap_triples": 142,
+    "bad_cap_triples": 82,
+    "End3": [
+      2,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11
+    ],
+    "maximum_abs_coordinate": 3147967
+  },
+  "all_memberships_checked": 4096,
+  "terminal_selectors": 60,
+  "option1_all": 20,
+  "option1_bounded": 20,
+  "option2": 0,
+  "thinnings": 0,
+  "canonical_rows_checked": 6522,
+  "canonical_false_failure_rows": {
+    "no_covered_cup_transversal": 20
+  },
+  "canonical_nonfailure_all_true": true,
+  "first_option1": [
+    0,
+    2,
+    5,
+    6
+  ],
+  "exact_target_bad3_End4_families_checked": true,
+  "parent_expected_geometry_ignored": true
+}

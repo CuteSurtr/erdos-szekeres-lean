@@ -1,0 +1,126 @@
+{
+  "status": "PASS",
+  "scope": "Exact conditional-extension and source-identity replay; terminal18 nonexistence uses the earlier audited certificate.",
+  "critical_cases": {
+    "n5_case_iii_nonvacuous_left": {
+      "status": "PASS",
+      "m": 5,
+      "right_point": [
+        4,
+        865
+      ],
+      "old_fourcap_count": 0,
+      "all_fourcaps_unchanged": true,
+      "every_new_triple_is_cup": true,
+      "left_maxgon": 4,
+      "full_maxgon": 4,
+      "conditional_selections_checked": 12
+    },
+    "n5_case_iii_empty_left_selection": {
+      "status": "PASS",
+      "m": 4,
+      "right_point": [
+        3,
+        8
+      ],
+      "old_fourcap_count": 0,
+      "all_fourcaps_unchanged": true,
+      "every_new_triple_is_cup": true,
+      "left_maxgon": 3,
+      "full_maxgon": 4,
+      "conditional_selections_checked": 1
+    },
+    "n6_case_iii_nonvacuous_left": {
+      "status": "PASS",
+      "m": 6,
+      "right_point": [
+        5,
+        1370
+      ],
+      "old_fourcap_count": 0,
+      "all_fourcaps_unchanged": true,
+      "every_new_triple_is_cup": true,
+      "left_maxgon": 5,
+      "full_maxgon": 5,
+      "conditional_selections_checked": 22
+    },
+    "n6_case_iii_empty_left_selection": {
+      "status": "PASS",
+      "m": 5,
+      "right_point": [
+        4,
+        15
+      ],
+      "old_fourcap_count": 0,
+      "all_fourcaps_unchanged": true,
+      "every_new_triple_is_cup": true,
+      "left_maxgon": 4,
+      "full_maxgon": 5,
+      "conditional_selections_checked": 1
+    },
+    "n8_case_iii_nonvacuous_left": {
+      "status": "PASS",
+      "m": 8,
+      "right_point": [
+        7,
+        3630
+      ],
+      "old_fourcap_count": 0,
+      "all_fourcaps_unchanged": true,
+      "every_new_triple_is_cup": true,
+      "left_maxgon": 7,
+      "full_maxgon": 7,
+      "conditional_selections_checked": 78
+    },
+    "n8_case_iii_empty_left_selection": {
+      "status": "PASS",
+      "m": 7,
+      "right_point": [
+        6,
+        35
+      ],
+      "old_fourcap_count": 0,
+      "all_fourcaps_unchanged": true,
+      "every_new_triple_is_cup": true,
+      "left_maxgon": 6,
+      "full_maxgon": 7,
+      "conditional_selections_checked": 1
+    },
+    "n7_case_iii_terminal_caps": {
+      "status": "PASS",
+      "m": 26,
+      "right_point": [
+        25,
+        2161105
+      ],
+      "old_fourcap_count": 1501,
+      "all_fourcaps_unchanged": true,
+      "every_new_triple_is_cup": true,
+      "left_maxgon": 6,
+      "full_maxgon": 6,
+      "conditional_selections_checked": 1
+    },
+    "terminal18_plus_high_singleton": {
+      "status": "PASS",
+      "m": 19,
+      "right_point": [
+        758071,
+        206805657
+      ],
+      "old_fourcap_count": 115,
+      "all_fourcaps_unchanged": true,
+      "every_new_triple_is_cup": true,
+      "left_maxgon": 6,
+      "full_maxgon": 6,
+      "conditional_selections_checked": 0
+    }
+  },
+  "inputs": {
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/structure2/data/highsplit_cases.json": "7524b869b1ed270102a6443f1be1a4db95b67281ddbbd2842a9c694bad7acad6",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/terminal/data/witness.json": "696f201667533a3263e8a88d23a690a3ba6e8280f0993dd7dda5ab508f4eff24",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/structure2/data/separator_c3.json": "946ed156887aa1251c6c542f6942af30a8e759bc374984643b32444074b79162"
+  },
+  "elapsed_seconds": 0.04964918499899795,
+  "source_sha256": "a5251175f2d671490e94b3d6ce7e40da59723388762b5e640cd5256c16f3b6c9",
+  "helper_sha256": "9f2debbd5ba79160130bd348699d12dc53db18af86dca7099302d16430475904"
+}

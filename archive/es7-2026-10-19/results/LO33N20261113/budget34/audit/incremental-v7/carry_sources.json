@@ -1,0 +1,80 @@
+[
+  {
+    "version": 3,
+    "ledger": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/s20-v3/contexts.jsonl",
+    "ledger_sha256": "cf132736282310b99de3f566f931bfb9d99f4bf489f9a4cd4af1240c9814aff1",
+    "binding_sha256": "60a6637fb373beb5450a3ad2590c6622147f660fa85c5edf4d148042df7d5221",
+    "resolved_input_paths": {
+      "/home/jay/research/data/es308-20261114/inputs/source-2650.json.gz": "/home/jay/research/data/es308-20261114/inputs/source-2650.json.gz",
+      "/home/jay/research/data/es308-20261114/inputs/s20/extra.json": "/home/jay/research/data/es308-20261114/inputs/s20/extra.json",
+      "/home/jay/research/data/es308-20261114/inputs/s20/rows.txt": "/home/jay/research/data/es308-20261114/inputs/s20/rows.txt",
+      "/home/jay/research/data/es308-20261114/inputs/input-manifest.json": "/home/jay/research/data/es308-20261114/inputs/input-manifest.json",
+      "/home/jay/research/data/es308-20261114/inputs/pool812.json": "/home/jay/research/data/es308-20261114/inputs/pool812.json",
+      "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/cuts-v2/summary.json": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/cuts-v2/summary.json",
+      "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/cuts-v2/replay.jsonl": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/cuts-v2/replay.jsonl",
+      "/home/jay/research/data/es308-20261114/cuts-v2/accepted.json": "/home/jay/research/data/es308-20261114/cuts-v2/accepted.json",
+      "/home/jay/research/data/es308-20261114/inputs/s20-v2/manifest.json": "/home/jay/research/data/es308-20261114/inputs/s20-v2/manifest.json",
+      "/home/jay/research/data/es308-20261114/inputs/s20-v2/extra.json": "/home/jay/research/data/es308-20261114/inputs/s20-v2/extra.json",
+      "/home/jay/research/data/es308-20261114/inputs/s20-v2/rows.txt": "/home/jay/research/data/es308-20261114/inputs/s20-v2/rows.txt",
+      "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/cuts-near9/summary.json": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/cuts-near9/summary.json",
+      "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/cuts-near9/replay.jsonl": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/cuts-near9/replay.jsonl",
+      "/home/jay/research/data/es308-20261114/cuts-near9/accepted.json": "/home/jay/research/data/es308-20261114/cuts-near9/accepted.json",
+      "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/cuts-v3/summary.json": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/cuts-v3/summary.json",
+      "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/cuts-v3/replay.jsonl": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/cuts-v3/replay.jsonl",
+      "/home/jay/research/data/es308-20261114/cuts-v3/accepted.json": "/home/jay/research/data/es308-20261114/cuts-v3/accepted.json",
+      "/home/jay/research/data/es308-20261114/inputs/s20-v3/manifest.json": "/home/jay/research/data/es308-20261114/inputs/s20-v3/manifest.json",
+      "/home/jay/research/data/es308-20261114/inputs/s20-v3/extra.json": "/home/jay/research/data/es308-20261114/inputs/s20-v3/extra.json",
+      "/home/jay/research/data/es308-20261114/inputs/s20-v3/rows.txt": "/home/jay/research/data/es308-20261114/inputs/s20-v3/rows.txt",
+      "/home/jay/research/data/es308-20261114/accepted-v3-combined.json": "/home/jay/research/data/es308-20261114/accepted-v3-combined.json",
+      "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/replay_batches.py": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/replay_batches.py",
+      "/home/jay/research/data/es308-20261114/runs/s20/bb/master.json": "/home/jay/research/data/es308-20261114/runs/s20/bb/master.json.v3-snapshot",
+      "/home/jay/research/data/es308-20261114/runs/s20/bb/contexts.json": "/home/jay/research/data/es308-20261114/runs/s20/bb/contexts.json.v3-snapshot",
+      "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/replay34.py": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/replay34.py",
+      "/home/jay/research/lean/erdos-szekeres-lean/scripts/omission_tree.py": "/home/jay/research/lean/erdos-szekeres-lean/scripts/omission_tree.py",
+      "/home/jay/research/lean/erdos-szekeres-lean/scripts/omission_row_probe.py": "/home/jay/research/lean/erdos-szekeres-lean/scripts/omission_row_probe.py"
+    }
+  },
+  {
+    "version": 2,
+    "ledger": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/s20-v2/contexts.jsonl",
+    "ledger_sha256": "b730781c947557b3e7946d07fc91f02b9bd5ab126206a3a41795d0e2acb04b72",
+    "binding_sha256": "6a8b6b2434da45b20f68a4f9faf143d1eb4cfeaa208188ffbb83b005460ac6d2",
+    "resolved_input_paths": {
+      "/home/jay/research/data/es308-20261114/inputs/source-2650.json.gz": "/home/jay/research/data/es308-20261114/inputs/source-2650.json.gz",
+      "/home/jay/research/data/es308-20261114/inputs/s20/extra.json": "/home/jay/research/data/es308-20261114/inputs/s20/extra.json",
+      "/home/jay/research/data/es308-20261114/inputs/s20/rows.txt": "/home/jay/research/data/es308-20261114/inputs/s20/rows.txt",
+      "/home/jay/research/data/es308-20261114/inputs/input-manifest.json": "/home/jay/research/data/es308-20261114/inputs/input-manifest.json",
+      "/home/jay/research/data/es308-20261114/inputs/pool812.json": "/home/jay/research/data/es308-20261114/inputs/pool812.json",
+      "/home/jay/research/data/es308-20261114/inputs/s20-v2/manifest.json": "/home/jay/research/data/es308-20261114/inputs/s20-v2/manifest.json",
+      "/home/jay/research/data/es308-20261114/inputs/s20-v2/extra.json": "/home/jay/research/data/es308-20261114/inputs/s20-v2/extra.json",
+      "/home/jay/research/data/es308-20261114/inputs/s20-v2/rows.txt": "/home/jay/research/data/es308-20261114/inputs/s20-v2/rows.txt",
+      "/home/jay/research/data/es308-20261114/cuts-v2/accepted.json": "/home/jay/research/data/es308-20261114/cuts-v2/accepted.json",
+      "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/cuts-v2/summary.json": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/cuts-v2/summary.json",
+      "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/cuts-v2/replay.jsonl": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/cuts-v2/replay.jsonl",
+      "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/replay_versions.py": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/replay_versions.py",
+      "/home/jay/research/data/es308-20261114/runs/s20/bb/master.json": "/home/jay/research/data/es308-20261114/runs/s20/bb/master.json.v2-snapshot",
+      "/home/jay/research/data/es308-20261114/runs/s20/bb/contexts.json": "/home/jay/research/data/es308-20261114/runs/s20/bb/contexts.json.v2-snapshot",
+      "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/replay34.py": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/replay34.py",
+      "/home/jay/research/lean/erdos-szekeres-lean/scripts/omission_tree.py": "/home/jay/research/lean/erdos-szekeres-lean/scripts/omission_tree.py",
+      "/home/jay/research/lean/erdos-szekeres-lean/scripts/omission_row_probe.py": "/home/jay/research/lean/erdos-szekeres-lean/scripts/omission_row_probe.py"
+    }
+  },
+  {
+    "version": 1,
+    "ledger": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/s20-contexts.jsonl",
+    "ledger_sha256": "748df1cf181f6ba8c3cdd42676d7f5e93645a22f93ec8bc0d66d322a332ab49e",
+    "binding_sha256": "c443a0fc8014c13df06db0dba13b0e38c21f1dbc133799984179f32adcc56aa6",
+    "resolved_input_paths": {
+      "/home/jay/research/data/es308-20261114/inputs/source-2650.json.gz": "/home/jay/research/data/es308-20261114/inputs/source-2650.json.gz",
+      "/home/jay/research/data/es308-20261114/inputs/s20/extra.json": "/home/jay/research/data/es308-20261114/inputs/s20/extra.json",
+      "/home/jay/research/data/es308-20261114/inputs/s20/rows.txt": "/home/jay/research/data/es308-20261114/inputs/s20/rows.txt",
+      "/home/jay/research/data/es308-20261114/inputs/input-manifest.json": "/home/jay/research/data/es308-20261114/inputs/input-manifest.json",
+      "/home/jay/research/data/es308-20261114/inputs/pool812.json": "/home/jay/research/data/es308-20261114/inputs/pool812.json",
+      "/home/jay/research/data/es308-20261114/runs/s20/bb/master.json": "/home/jay/research/data/es308-20261114/runs/s20/bb/master.json.v1-snapshot",
+      "/home/jay/research/data/es308-20261114/runs/s20/bb/contexts.json": "/home/jay/research/data/es308-20261114/runs/s20/bb/contexts.json.v1-snapshot",
+      "/home/jay/research/lean/erdos-szekeres-lean/scripts/omission_tree.py": "/home/jay/research/lean/erdos-szekeres-lean/scripts/omission_tree.py",
+      "/home/jay/research/lean/erdos-szekeres-lean/scripts/omission_row_probe.py": "/home/jay/research/lean/erdos-szekeres-lean/scripts/omission_row_probe.py",
+      "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/replay34.py": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/replay34.py"
+    }
+  }
+]

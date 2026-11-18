@@ -1,0 +1,49 @@
+{
+  "A": [
+    0,
+    5,
+    6,
+    7,
+    8
+  ],
+  "ambient_cap": [
+    6,
+    7,
+    14,
+    17
+  ],
+  "ambient_terminal_pair": [
+    14,
+    17
+  ],
+  "xmax": 758070,
+  "triples": [
+    {
+      "triple": [
+        0,
+        5,
+        6
+      ],
+      "terminal_pair": [
+        5,
+        6
+      ],
+      "slope_margin": "5162547569/1674540300",
+      "margin_at_xmax": "88782061472/27715"
+    },
+    {
+      "triple": [
+        0,
+        5,
+        7
+      ],
+      "terminal_pair": [
+        5,
+        7
+      ],
+      "slope_margin": "22054309811/13762769700",
+      "margin_at_xmax": "76228055224/45557"
+    }
+  ],
+  "claim": "For every X>xmax, every three-cap terminal line in A is strictly below this ambient four-cap terminal line, hence below F4(U;X)."
+}

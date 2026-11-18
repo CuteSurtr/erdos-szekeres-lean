@@ -1,0 +1,44 @@
+{
+  "completed_utc": "2026-11-13T20:02:42.763789+00:00",
+  "status": "COMPLETE",
+  "written_projection": "PROVED within stated signotope geometry",
+  "independent_certificates": [
+    {
+      "n": 7,
+      "m": 11,
+      "label": "CERTIFIED",
+      "receipt": "data/replay-n7m11.json",
+      "cnf_sha256": "dc28e1f234449b95ac1ce181fc922503a61e35239ae56a9cf6fe42b18b8a777e",
+      "proof_sha256": "6ed485d0dfa3cceeca144b3a3bccd9470ce8c772f38c44a4e51d55be04e49a37"
+    },
+    {
+      "n": 7,
+      "m": 12,
+      "label": "CERTIFIED",
+      "receipt": "data/replay-n7m12.json",
+      "cnf_sha256": "cebe762c17735b3f811355987acc8912b57b880f341f3ff286097dd98e97d850",
+      "proof_sha256": "4f770646917f895d5a29934c380b191ee1aceb5bddf0d0f56ee67b23571a15b3"
+    },
+    {
+      "n": 8,
+      "m": 13,
+      "label": "CERTIFIED",
+      "receipt": "data/replay-n8m13.json",
+      "cnf_sha256": "9dc7bd3c109e066b5ef00dc9ff1c47f1446224741af38dd7d1f7376c7b7ca1f7",
+      "proof_sha256": "c6da911a5bd6554afd03fdde74e6de941b1352c82924d10336cb81e8910a5d20"
+    }
+  ],
+  "consequence": "Together with previous coverage through 11, terminal-safe weak Delta exists through 12 old points at n=7.",
+  "eighteen_point_fixed_real_control": "COMPUTED exact canonical model; every clause and all subsets checked.",
+  "small_cardinality": "All six filters checked; n7m11k2 abstract model minimum terminal size 3; five UNKNOWNs retained.",
+  "scope_exclusions": [
+    "later parent sweep outcomes",
+    "real realizability of small abstract SAT model",
+    "other extension tracks",
+    "general all-size selection",
+    "new ES bound",
+    "Lean proof"
+  ],
+  "audit_jobs_running": false,
+  "shared_manifests_changed": false
+}

@@ -1,0 +1,274 @@
+{
+  "label": "PROVED generic algebra; conditional certificate theorem",
+  "main_theorems": [
+    "Delta3.Forced16Algebra.cancelling_certificate_contradiction",
+    "Delta3.Forced16Algebra.coordinate_gp_inequality",
+    "Delta3.Forced16Algebra.gp_certificate_contradiction"
+  ],
+  "checks": [
+    {
+      "source": "F16Products.lean",
+      "sha256": "089de946e5e6c80fbb22296bc5e106c99d0c2e674c5be1e0c82ca552ea5d1aa9",
+      "tag": "f16-products-v1",
+      "axiom_reports": {
+        "Delta3.Forced16Algebra.product_congr": [
+          "propext"
+        ],
+        "Delta3.Forced16Algebra.product_one": [
+          "propext"
+        ],
+        "Delta3.Forced16Algebra.product_mul": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.power_le": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.power_lt": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.product_le": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.product_lt": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.weighted_product_contradiction": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.power_pos": [],
+        "Delta3.Forced16Algebra.product_pos": []
+      },
+      "seconds": 0.257,
+      "kernel_maxrss_kib": 382488,
+      "sampled_peaks": {
+        "VmPeak": 722480,
+        "VmSize": 722480,
+        "VmHWM": 372364,
+        "VmRSS": 372364,
+        "RssAnon": 47064,
+        "RssFile": 325300,
+        "VmSwap": 0,
+        "Threads": 8
+      },
+      "log_sha256": "c193f38df77ac604c6d1f14f8959b3ee0f31f34ecb37b54a98a0bc5a7f311722",
+      "record_sha256": "d09d7acdee556fa02d9227a2025451e5ec093e60e2f76c5f5949ffca4c5bdace"
+    },
+    {
+      "source": "F16Cancellation.lean",
+      "sha256": "9462a6abc67a06eb07332c33240a3438c7641305e1ce11d9b0095761c6f91cdf",
+      "tag": "f16-cancellation-v1",
+      "axiom_reports": {
+        "Delta3.Forced16Algebra.monomial_congr": [
+          "propext"
+        ],
+        "Delta3.Forced16Algebra.monomial_zero": [
+          "propext"
+        ],
+        "Delta3.Forced16Algebra.monomial_add": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.monomial_scale": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.weighted_monomials": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.cancelling_certificate_contradiction": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.monomial_pos": []
+      },
+      "seconds": 0.226,
+      "kernel_maxrss_kib": 370872,
+      "sampled_peaks": {
+        "VmPeak": 624072,
+        "VmSize": 624072,
+        "VmHWM": 360612,
+        "VmRSS": 360612,
+        "RssAnon": 41852,
+        "RssFile": 318760,
+        "VmSwap": 0,
+        "Threads": 6
+      },
+      "log_sha256": "ae642056cba5fe0e913035302a7c1e4e9e24f5505b0b9fc8267b4a2c320bd74c",
+      "record_sha256": "289558efb5ddfd697a433bc54cbbb4252a78099161b25b599bb934d11a352a69"
+    },
+    {
+      "source": "F16GP.lean",
+      "sha256": "a39474e64722bd2d4ed794af53548ad9cdb4813a4c83cc630effbc1682eeda54",
+      "tag": "f16-gp-step-1",
+      "axiom_reports": {
+        "Delta3.Forced16Algebra.determinant_gp": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.orient_gp": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.magnitude_of_neg": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.magnitude_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.magnitude_of_pos": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.magnitude_pos": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.unique_sign_magnitude": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "seconds": 0.276,
+      "kernel_maxrss_kib": 382392,
+      "sampled_peaks": {
+        "VmPeak": 575212,
+        "VmSize": 575212,
+        "VmHWM": 372244,
+        "VmRSS": 372244,
+        "RssAnon": 48508,
+        "RssFile": 323736,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "log_sha256": "f85979b416f6521b55e53251dea5a7451dc7e92cdf1485d344a0bf9686d2fd18",
+      "record_sha256": "31e1e6d002c7bb7145063a150478c469bbd4d22da2e1cf8fb82301f2be0cf187"
+    },
+    {
+      "source": "F16GPMagnitude.lean",
+      "sha256": "3b9ac462b3340af14c8498cabb504c0e19436a84a1f643ff4f925bfac12f7c06",
+      "tag": "f16-gp-magnitude-v1",
+      "axiom_reports": {
+        "Delta3.Forced16Algebra.magnitude_neg": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.magnitude_mul": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.gp_product_inequality": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "seconds": 0.206,
+      "kernel_maxrss_kib": 367644,
+      "sampled_peaks": {
+        "VmPeak": 574932,
+        "VmSize": 574932,
+        "VmHWM": 357424,
+        "VmRSS": 357424,
+        "RssAnon": 41788,
+        "RssFile": 315636,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "log_sha256": "8ce814577b7591cc8934d06862cb4a47f9161b606cb45eb0d90d3ef594d05033",
+      "record_sha256": "a3037896d365a88a5372d00bd80a02365acc8e3c0f5a8b67ed91ef0a0620278b"
+    },
+    {
+      "source": "F16Certificate.lean",
+      "sha256": "19ceefb990b7c1421857c18d80ff3d16b290313e15663b7fa172fbf6bad9eb6c",
+      "tag": "f16-certificate-v1",
+      "axiom_reports": {
+        "Delta3.Forced16Algebra.coordinate_gp_inequality": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.gp_certificate_contradiction": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "seconds": 0.164,
+      "kernel_maxrss_kib": 364052,
+      "sampled_peaks": {
+        "VmPeak": 575140,
+        "VmSize": 575140,
+        "VmHWM": 353764,
+        "VmRSS": 353764,
+        "RssAnon": 40704,
+        "RssFile": 313060,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "log_sha256": "47491904ef5e340cd4b8669c50e912b1db41ec4e586a9730685bc08bb93ca4c9",
+      "record_sha256": "32e6b569ed4f60ebc1ad284edfa367ee8fa18933725a09e8e3fa212551923c09"
+    }
+  ],
+  "source_modules": 5,
+  "axiom_audits": 29,
+  "standard_axioms_only": true,
+  "total_check_seconds": 1.129,
+  "kernel_peak_rss_kib": 382488,
+  "runner_sha256": "3794ea4bb7505916af7d8ec3ad7072c2e3cf52058648b22b65d69d1a0b308b40",
+  "replay_sha256": "92743ab02b8cf67495a71b21f2e82f5d0f08c2c94a9584b2f16b7d5d65350181",
+  "input_context_hashes": {
+    "forced16_realization/VERIFY_FORCED16.md": "1115a221a5461b5a7ce1ce43d4e28fa7f5161e1a99cf403f769568c632eb362f",
+    "forced16_realization/data/certificate.json": "cfe42cec6041709b2ed7ac18ee16b13e57f091239ac19b8e5257aac46d2a326d",
+    "forced16_realization/data/orientation.signs": "b21664b06887c4019d75023025b1cd80582064a0b06f53698d2a70bc8fc49067",
+    "forced16_parent/result.json": "a4f0cad10838f3a8b92a9732e31fb9fcb583010c9908dfb5c49dcb0ebb677f4d"
+  },
+  "input_data_used_as_Lean_premises": false,
+  "fixed_forced16_model_Lean_checked": false,
+  "Mathlib_Real_instantiation_checked": false,
+  "statement_scope": "standard core ordered commutative rings; nonempty finite lists; positive natural weights and variables; per-variable equality of weighted natural exponent totals; explicit GP row sign and factor bindings",
+  "resources": {
+    "cpu": 1,
+    "cpu_affinity": [
+      4
+    ],
+    "Python_AS_MiB": 150,
+    "Lean_AS_GiB": 3,
+    "Lean_RSS_guard_MiB": 480,
+    "light_slot_MiB": 500,
+    "Lean_heap_MiB": 200,
+    "Lean_jobs": 1,
+    "inner_deadline_seconds": 18,
+    "outer_deadline_seconds": 20,
+    "observed_swap": 0
+  },
+  "parent_fresh_replay_pending": true,
+  "excluded_probe": "F16CoreProbe.lean"
+}

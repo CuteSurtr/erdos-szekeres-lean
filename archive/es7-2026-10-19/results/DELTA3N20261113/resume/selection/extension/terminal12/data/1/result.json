@@ -1,0 +1,94 @@
+{
+  "label": "COMPUTED exact fixed-instance enumeration",
+  "case": 1,
+  "removed_original_indices": [
+    2,
+    3,
+    11
+  ],
+  "local_to_original": [
+    0,
+    1,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    13,
+    14
+  ],
+  "P": [
+    [
+      0,
+      0
+    ],
+    [
+      37,
+      -35
+    ],
+    [
+      202,
+      -640
+    ],
+    [
+      472,
+      -427
+    ],
+    [
+      653,
+      -757
+    ],
+    [
+      665,
+      -793
+    ],
+    [
+      666,
+      -717
+    ],
+    [
+      683,
+      -718
+    ],
+    [
+      736,
+      -567
+    ],
+    [
+      926,
+      -895
+    ],
+    [
+      999,
+      -926
+    ],
+    [
+      1000,
+      0
+    ]
+  ],
+  "n": 6,
+  "maxima_cap_cup_gon": [
+    4,
+    5,
+    5
+  ],
+  "fourcaps": 18,
+  "bad_triples": 43,
+  "pentagons": 70,
+  "assignments_checked": 4096,
+  "weak_delta_count": 895,
+  "terminal_delta_count": 28,
+  "minimum_weak_size": 4,
+  "minimum_terminal_size": 4,
+  "terminal_witness": [
+    0,
+    2,
+    9,
+    10
+  ],
+  "cnf_sha256": "05ca48fa112a2d0125ce4b38b6365c04c85261a520174b165ee614819c963200"
+}

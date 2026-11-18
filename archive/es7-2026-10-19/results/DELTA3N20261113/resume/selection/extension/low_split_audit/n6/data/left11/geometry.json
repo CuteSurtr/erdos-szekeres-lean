@@ -1,0 +1,164 @@
+{
+  "status": "PASS",
+  "P_left": [
+    [
+      8930,
+      40332
+    ],
+    [
+      53030,
+      24895
+    ],
+    [
+      71573,
+      -44546
+    ],
+    [
+      120094,
+      8990
+    ],
+    [
+      122148,
+      14671
+    ],
+    [
+      122648,
+      -29897
+    ],
+    [
+      123148,
+      -16011
+    ],
+    [
+      123648,
+      20977
+    ],
+    [
+      157127,
+      -27262
+    ],
+    [
+      157627,
+      -12108
+    ],
+    [
+      197078,
+      23890
+    ]
+  ],
+  "P_full": [
+    [
+      8930,
+      40332
+    ],
+    [
+      53030,
+      24895
+    ],
+    [
+      71573,
+      -44546
+    ],
+    [
+      120094,
+      8990
+    ],
+    [
+      122148,
+      14671
+    ],
+    [
+      122648,
+      -29897
+    ],
+    [
+      123148,
+      -16011
+    ],
+    [
+      123648,
+      20977
+    ],
+    [
+      157127,
+      -27262
+    ],
+    [
+      157627,
+      -12108
+    ],
+    [
+      197078,
+      23890
+    ],
+    [
+      197079,
+      -6664471
+    ],
+    [
+      197080,
+      -6664468
+    ]
+  ],
+  "left": {
+    "m": 11,
+    "n": 6,
+    "GP": true,
+    "fourcaps": 0,
+    "fivecaps": 0,
+    "ngons": 0,
+    "targets": 62,
+    "cap_triples": 63,
+    "bad_cap_triples": 63,
+    "End3": [
+      2,
+      5,
+      6,
+      8,
+      9,
+      10
+    ],
+    "maximum_abs_coordinate": 197078
+  },
+  "full": {
+    "m": 13,
+    "n": 6,
+    "GP": true,
+    "fourcaps": 126,
+    "fivecaps": 0,
+    "ngons": 0,
+    "targets": 125,
+    "cap_triples": 173,
+    "bad_cap_triples": 93,
+    "End3": [
+      2,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maximum_abs_coordinate": 6664471
+  },
+  "all_memberships_checked": 8192,
+  "terminal_selectors": 60,
+  "option1_all": 20,
+  "option1_bounded": 20,
+  "option2": 0,
+  "thinnings": 0,
+  "canonical_rows_checked": 11298,
+  "canonical_false_failure_rows": {
+    "no_covered_cup_transversal": 20
+  },
+  "canonical_nonfailure_all_true": true,
+  "first_option1": [
+    0,
+    2,
+    5,
+    6
+  ],
+  "exact_target_bad3_End4_families_checked": true,
+  "parent_expected_geometry_ignored": true
+}

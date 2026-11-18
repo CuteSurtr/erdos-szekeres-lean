@@ -1,0 +1,41 @@
+{
+  "label": "CERTIFIED",
+  "scope": "Fixed15-point terminal-safe membership formula only; geometric/encoder audit separate.",
+  "runs": [
+    {
+      "command": [
+        "/usr/bin/cadical",
+        "-q",
+        "--lrat=true",
+        "--binary=true",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/witness.terminal.cnf",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/fresh.blrat"
+      ],
+      "returncode": 20,
+      "stdout": "s UNSATISFIABLE\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/jay/.local/bin/cake_lpr",
+        "--CML_HEAP_SIZE=128",
+        "--CML_STACK_SIZE=32",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/witness.terminal.cnf",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/fresh.blrat"
+      ],
+      "returncode": 0,
+      "stdout": "s VERIFIED UNSAT\n",
+      "stderr": ""
+    }
+  ],
+  "proof_format": "binary LRAT, accepted by cake_lpr",
+  "compressed_roundtrip_verified": true,
+  "hashes": {
+    "witness.terminal.cnf": "7d18c713d190d893a4d3d7873e8caa7d45061326c403ee8133888382040cc22a",
+    "fresh.blrat": "1f25c0cbe8988577fecbfaf9379ffde400bca45d047cee6ce15bf3391bf94cef",
+    "fresh.blrat.zst": "9f76af38d735a6d35bddc7075e06338b2c73adb631aeec197e772bf610721a19",
+    "cadical.log": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162",
+    "cake.log": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f"
+  },
+  "time": "2026-11-14T05:29:14.016576+09:00"
+}

@@ -1,0 +1,44 @@
+{
+  "time": "2026-11-13T22:40:49.856424",
+  "units": [
+    {
+      "unit": "nov13c-vfy-E2-n37.service",
+      "cpu_max": "100000 100000",
+      "anon": 1092784128,
+      "swap": 0
+    },
+    {
+      "unit": "nov13c-n66-drv18.service",
+      "cpu_max": "5000 100000",
+      "anon": 6766592,
+      "swap": 0
+    },
+    {
+      "unit": "nov13c-n66-s13c1.service",
+      "cpu_max": "100000 100000",
+      "anon": 2094301184,
+      "swap": 0
+    },
+    {
+      "unit": "nov13c-n66-s13g.service",
+      "cpu_max": "100000 100000",
+      "anon": 2155622400,
+      "swap": 0
+    },
+    {
+      "unit": "nov13c-n66-s13e1.service",
+      "cpu_max": "100000 100000",
+      "anon": 1990156288,
+      "swap": 0
+    },
+    {
+      "unit": "nov13c-g-chain7.service",
+      "cpu_max": "500000 100000",
+      "anon": 171159552,
+      "swap": 0
+    }
+  ],
+  "total_bytes": 7510790144,
+  "E2": "{\"step\":\"cnf_hash\",\"sha256_prefix\":\"8762b9f0f23456cca9f8\",\"ok\":true,\"t\":\"2026-11-13 21:38:09\"}\n",
+  "D1b_status_present": false
+}

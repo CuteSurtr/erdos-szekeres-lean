@@ -1,0 +1,39 @@
+{
+ "contexts": "100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139",
+ "slice": 21,
+ "rows": "runs/s21/rows.txt (pool_v1)",
+ "threads_per_run": 1,
+ "baseline_klow4": {
+  "nodes": 129118,
+  "seconds": 170.1,
+  "note": "per-context numbers of the production run (4 threads busy)"
+ },
+ "known1": {
+  "nodes": 164516,
+  "seconds": 173.9,
+  "node_lps": 106155,
+  "trial_lps": 265987,
+  "simplex_iters": 18150382
+ },
+ "klow8": {
+  "nodes": 85980,
+  "seconds": 202.5,
+  "node_lps": 57697,
+  "trial_lps": 316270,
+  "simplex_iters": 21931895
+ },
+ "klow2": {
+  "nodes": 235084,
+  "seconds": 180.2,
+  "node_lps": 164416,
+  "trial_lps": 286413,
+  "simplex_iters": 18360753
+ },
+ "klow3": {
+  "nodes": 160072,
+  "seconds": 167.4,
+  "node_lps": 110729,
+  "trial_lps": 266047,
+  "simplex_iters": 17587578
+ }
+}

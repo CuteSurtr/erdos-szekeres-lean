@@ -1,0 +1,29 @@
+{
+  "label": "CERTIFIED",
+  "version": "v114",
+  "rows": 1,
+  "own_encoder_matches": 1,
+  "fresh_cake_acceptances": 1,
+  "old_witness_exact_row_check": "PASS (3756 rows, 35 holes, F20,Lo15,state0 occupied)",
+  "rows_cutting_old_witness": 1,
+  "old_witness_intersection_counts": {
+    "0": 1
+  },
+  "accepted_sha256": "009584f8d9d70b2cd2aeb47ffef7b49691d8e290ede4d3d85526f03611f17f58",
+  "replay_sha256": "173ebba9d3ef55c2cb83279b73b1416c6a1ff0169be9f1485439ff695147cb95",
+  "input_sha256": {
+    "/home/jay/research/data/es308-20261114/cuts-v114/accepted.json": "009584f8d9d70b2cd2aeb47ffef7b49691d8e290ede4d3d85526f03611f17f58",
+    "/home/jay/research/data/es308-20261114/candidates-v114.json": "038e3b098fdf479248b23dab7466521a6d0d1b8834a1837196fc9152b3f356c5",
+    "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-residual32-rank-global-2026-10-10/source-2650.json.gz": "8c7fe9ef5264182524095d46ef50ed6bc691cab425efa965756d1870112241aa",
+    "/home/jay/research/data/es308-20261114/runs/b35s20/bb/WITNESS.json.v113-snapshot": "1c9701f48f5befb9e14261e5e8eac6aa4730258a7f68cf6f9e855264a6d855e0",
+    "/home/jay/research/data/es308-20261114/inputs/b35s20-v113/extra.json": "df4c30ff28f3ab83807de78b744906b92d6b2e4e2e97087b9d3ca5311ebe2743",
+    "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/LO33N20261113/budget34/audit/audit_followup_rows_v4.py": "f0df1c0f5b38b735226a9b813b3f5f78d0b91ee27c300c15ffccf5c5fa1ffc12",
+    "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/LO33N20261113/budget34/audit/residual_encoder.py": "db7b2deba4ae55ff50f25d1e52843734591f5e7d1339a53e45e8811866e7365c",
+    "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54"
+  },
+  "seconds": 0.249,
+  "finished_local": "2026-11-15T02:09:09.960341+09:00",
+  "scope": "Additional rows only; no finite exclusion or ES bound follows from these rows alone",
+  "parent_maxrss_kib": 214940,
+  "child_maxrss_kib": 413064
+}

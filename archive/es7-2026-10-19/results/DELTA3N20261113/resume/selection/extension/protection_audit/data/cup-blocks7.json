@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "label": "COMPUTED",
+  "variant": "cup",
+  "m": 8,
+  "n": 7,
+  "variables": 666,
+  "clauses": 3642,
+  "literals": 9739,
+  "geometry_variables": 210,
+  "geometry_clauses": 1688,
+  "new_clauses": 1954,
+  "geometry_prefix_sha256": "05f1f4c50536396a82a2a8ff0a1b514a70b3b49eb681c6488b59583123f128b6",
+  "geometry_reference": null,
+  "map_kind_counts": {
+    "orientation": 56,
+    "convex": 154,
+    "terminal_fourcap": 70,
+    "terminal_fourcup": 70,
+    "end_fourcap": 28,
+    "cup_support": 195,
+    "covered_pair": 28,
+    "uncovered_cap_triple": 56,
+    "target_contains": 9
+  },
+  "phase_counts": {
+    "signotope": 560,
+    "no5cap": 56,
+    "convex4_equivalence": 560,
+    "convex_larger_equivalence": 504,
+    "no_ngon": 8,
+    "fourcap_and_fourcup_equivalence": 700,
+    "ambient_terminal_pair_equivalence": 98,
+    "cup_domination_equivalence": 886,
+    "uncovered_cap_triple_equivalence": 168,
+    "target_containment": 9,
+    "forall_cup_protected_delta": 93
+  },
+  "empty_End4_ORs": 13,
+  "cup_support_cache_reuses": 50,
+  "canonical_geometry_checked": true,
+  "false_failure_rows": {
+    "forall_cup_protected_delta": 91
+  },
+  "input_hashes": {
+    "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/cup-blocks7.cnf": "24b59c62bb5228e87ea11e03edae59e6d850da4fe16240351e3962aa1476e9cd",
+    "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/cup-blocks7.cnf.map": "970e95f63762c1948adf350b76b1f4509de05fc88d22838d08575af8eaf9afda"
+  },
+  "streamed_rows_and_map_byte_identical": true,
+  "fixture": {
+    "name": "blocks",
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        2,
+        -3
+      ],
+      [
+        3,
+        -6
+      ],
+      [
+        10,
+        500
+      ],
+      [
+        11,
+        600
+      ],
+      [
+        12,
+        699
+      ],
+      [
+        13,
+        797
+      ]
+    ],
+    "cap4": 2,
+    "bad_triples": 2,
+    "targets": 0
+  }
+}

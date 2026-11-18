@@ -1,0 +1,372 @@
+{
+  "status": "PASS",
+  "label": "PROVED written projection/reduction; COMPUTED instance and integer controls",
+  "finished_UTC": "2026-11-13T21:40:04.926100+00:00",
+  "rows": {
+    "status": "PASS",
+    "label": "COMPUTED",
+    "m": 14,
+    "n": 7,
+    "variables": 32086,
+    "map_counts": {
+      "orientation": 364,
+      "convex": 6006,
+      "terminal_fourcap": 1001,
+      "terminal_bad_triple": 364,
+      "bad_contains": 14443,
+      "target_contains": 9908
+    },
+    "base_phase_counts": {
+      "signotope": 8008,
+      "no5cap": 2002,
+      "convex4_equivalence": 8008,
+      "convex_larger_equivalence": 30030,
+      "no_ngon": 3432,
+      "terminal_fourcap_equivalence": 5005,
+      "terminal_bad_triple_equivalence": 8736,
+      "bad_triple_containment": 14443,
+      "target_containment": 9908,
+      "forall_terminal_delta": 14913
+    },
+    "base_clauses": 104485,
+    "reverse_clauses": 127128,
+    "reverse_by_family": {
+      "bad_contains": 57772,
+      "target_contains": 69356
+    },
+    "exact_clauses": 231613,
+    "cut_clauses": 13,
+    "cut_literals": 2730,
+    "cut_lengths": [
+      78,
+      144,
+      198,
+      240,
+      270,
+      288,
+      294,
+      288,
+      270,
+      240,
+      198,
+      144,
+      78
+    ],
+    "conditional_clauses": 231626,
+    "old_body_bytes": 2241860,
+    "old_body_sha256": "20325110e482b4e093bf1d776d19623c54bf0b2e3f2648dccbd265617a296572",
+    "byte_identical_rebuilt_map": true,
+    "byte_identical_rebuilt_exact": true,
+    "byte_identical_rebuilt_conditional": true,
+    "v1_v2_formula_byte_identical": true,
+    "controls": {
+      "mixed_single_flip": 2730,
+      "pure_single_flip": 2002,
+      "small_exhaustive": 4144,
+      "canonical_split": 13,
+      "containment_leaf_covers": 6643
+    },
+    "source_version_note": "Current conditional producer matches v2 receipt; older receipt names another producer hash. Older producer bytes not independently recovered. Formula bytes independently rebuilt and equal in both versions.",
+    "dependencies": "Geometry base audit; exact canonical projection proof; high-split real-geometry proof; exact size13 terminal-safe existence for cut13; accepted conditional CNF proof required for m14 existence.",
+    "resource_limits": {
+      "address_space_MiB": 300,
+      "cpu_seconds": 19,
+      "wall_seconds": 20,
+      "cpu_count": 1
+    },
+    "peak_rss_KiB": 31660
+  },
+  "control_summaries": {
+    "small": {
+      "status": "PASS",
+      "label": "COMPUTED",
+      "case_counts": {
+        "i": 6,
+        "ii": 3,
+        "iii": 6
+      },
+      "selections": 222,
+      "mixed_subset_checks": 21599,
+      "skipped_large_parent_fixtures": [
+        "n7_case_iii_terminal_caps",
+        "n7_case_ii_terminal_caps",
+        "terminal18_plus_high_singleton"
+      ],
+      "scope": "15 small coordinate fixtures only; parent checker and expected selectors not used.",
+      "resource_limits": {
+        "address_space_MiB": 300,
+        "cpu_seconds": 19,
+        "wall_seconds": 20,
+        "cpu_count": 1
+      },
+      "peak_rss_KiB": 19268
+    },
+    "m14": {
+      "status": "PASS",
+      "label": "COMPUTED",
+      "old18_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "fivecup_old18_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "left": {
+        "m": 13,
+        "n": 7,
+        "gp": true,
+        "fourcaps": 58,
+        "bad_cap_triples": 97,
+        "targets": 40,
+        "ngons": 0,
+        "fivecaps": 0,
+        "maxcup": 5,
+        "max_abs_coordinate": 877024,
+        "max_abs_determinant": 1372974971790
+      },
+      "whole": {
+        "m": 14,
+        "n": 7,
+        "gp": true,
+        "fourcaps": 58,
+        "bad_cap_triples": 97,
+        "targets": 54,
+        "ngons": 0,
+        "fivecaps": 0,
+        "maxcup": 6,
+        "max_abs_coordinate": 61604281,
+        "max_abs_determinant": 54983843896083
+      },
+      "canonical_nonfailure_rows_checked": {
+        "signotope": 8008,
+        "no5cap": 2002,
+        "convex4_equivalence": 8008,
+        "convex_larger_equivalence": 30030,
+        "no_ngon": 3432,
+        "terminal_fourcap_equivalence": 5005,
+        "terminal_bad_triple_equivalence": 8736,
+        "bad_triple_containment": 14443,
+        "target_containment": 9908,
+        "reverse_containment_implications": 127128
+      },
+      "canonical_nonfailure_total": 216700,
+      "false_counterexample_failure_rows": 580,
+      "first_false_failure_line": 89613,
+      "real_cut_rows": [
+        {
+          "cut": 1,
+          "highsplit": false,
+          "clause_satisfied": true
+        },
+        {
+          "cut": 2,
+          "highsplit": false,
+          "clause_satisfied": true
+        },
+        {
+          "cut": 3,
+          "highsplit": false,
+          "clause_satisfied": true
+        },
+        {
+          "cut": 4,
+          "highsplit": false,
+          "clause_satisfied": true
+        },
+        {
+          "cut": 5,
+          "highsplit": false,
+          "clause_satisfied": true
+        },
+        {
+          "cut": 6,
+          "highsplit": false,
+          "clause_satisfied": true
+        },
+        {
+          "cut": 7,
+          "highsplit": false,
+          "clause_satisfied": true
+        },
+        {
+          "cut": 8,
+          "highsplit": false,
+          "clause_satisfied": true
+        },
+        {
+          "cut": 9,
+          "highsplit": false,
+          "clause_satisfied": true
+        },
+        {
+          "cut": 10,
+          "highsplit": false,
+          "clause_satisfied": true
+        },
+        {
+          "cut": 11,
+          "highsplit": false,
+          "clause_satisfied": true
+        },
+        {
+          "cut": 12,
+          "highsplit": false,
+          "clause_satisfied": true
+        },
+        {
+          "cut": 13,
+          "highsplit": true,
+          "clause_satisfied": false
+        }
+      ],
+      "scope": "Positive m14 critical-case control, not a counterexample. Failure rows must fail on a positive instance.",
+      "resource_limits": {
+        "address_space_MiB": 300,
+        "cpu_seconds": 19,
+        "wall_seconds": 20,
+        "cpu_count": 1
+      },
+      "peak_rss_KiB": 25152
+    },
+    "negative19": {
+      "status": "PASS",
+      "label": "COMPUTED geometry plus PROVED restriction using prior obstruction",
+      "left": {
+        "m": 18,
+        "n": 7,
+        "gp": true,
+        "fourcaps": 115,
+        "bad_cap_triples": 219,
+        "targets": 402,
+        "ngons": 0,
+        "fivecaps": 0,
+        "maxcup": 5,
+        "max_abs_coordinate": 921685,
+        "max_abs_determinant": 1870095781162
+      },
+      "whole": {
+        "m": 19,
+        "n": 7,
+        "gp": true,
+        "fourcaps": 115,
+        "bad_cap_triples": 219,
+        "targets": 632,
+        "ngons": 0,
+        "fivecaps": 0,
+        "maxcup": 6,
+        "max_abs_coordinate": 206805657,
+        "max_abs_determinant": 336669481241416
+      },
+      "cut": 18,
+      "highsplit": true,
+      "fourcaps_exactly_old": true,
+      "old_targets_retained": true,
+      "inherited_obstruction": "../terminal/README.md and ../subset_audit/VERIFY_SUBSETS.md (mapped18 exhaustive check); no new coloring enumeration or certificate replay here.",
+      "argument": "Restrict any alleged terminal-safe selector to the old18. Old targets remain hit, four-cap avoidance is inherited, and every needed ambient terminal four-cap remains old because the cap4 family is unchanged. This contradicts the previously checked old18 obstruction.",
+      "scope": "The last-cut exclusion needs its preceding-size premise; this control is not a claim of global minimum.",
+      "resource_limits": {
+        "address_space_MiB": 300,
+        "cpu_seconds": 19,
+        "wall_seconds": 20,
+        "cpu_count": 1
+      },
+      "peak_rss_KiB": 19192
+    }
+  },
+  "explicit_prior_dependencies": {
+    "subset_audit": {
+      "manifest_sha256": "fd42310d81405dde1eea4ef009ddb5f7ee45b69060359a500fa17ed1b55f4b82",
+      "files_checked_unchanged": 113
+    },
+    "exact_audit": {
+      "manifest_sha256": "02dae49667cb46a15f65e23ed45244327ea36adcd825e464f17bc89edd6aab6a",
+      "files_checked_unchanged": 30
+    },
+    "exact_audit/replay13": {
+      "manifest_sha256": "b501ec428762c70347a44de66b6bfd201fad191b82d20411e831faaeef166314",
+      "files_checked_unchanged": 23
+    },
+    "protection_audit": {
+      "manifest_sha256": "c5a3a097e977e130bb62b3683a134d896d95bcf6ad726ae31f1c6de99b050145",
+      "files_checked_unchanged": 168
+    }
+  },
+  "source_snapshots": {
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/augment_exact.py": {
+      "snapshot": "data/snapshots/repo/extension/augment_exact.py",
+      "sha256": "6ba217c01a3341b0f2d501c97688643b0a247ba40b22256324f7fa6762d08a24"
+    },
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/augment_indecomposable.py": {
+      "snapshot": "data/snapshots/repo/extension/augment_indecomposable.py",
+      "sha256": "13cb24b60f086c06fd25f44982b26d3a6729a40a766474ec29fb60c123eda66b"
+    },
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/structure2/highsplit_reduction.md": {
+      "snapshot": "data/snapshots/repo/extension/structure2/highsplit_reduction.md",
+      "sha256": "ff0492e63e507cb5a86a452192a3906ad81238a0d50a0b797213651972484dce"
+    },
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/structure2/separated_theorem.md": {
+      "snapshot": "data/snapshots/repo/extension/structure2/separated_theorem.md",
+      "sha256": "4ac6f42f89dbc0eef72e8544472d761ad5328e8245795aa5e2cfbc2a097632d3"
+    },
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/structure2/data/highsplit_cases.json": {
+      "snapshot": "data/snapshots/repo/extension/structure2/data/highsplit_cases.json",
+      "sha256": "7524b869b1ed270102a6443f1be1a4db95b67281ddbbd2842a9c694bad7acad6"
+    },
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/terminal/data/witness.points": {
+      "snapshot": "data/snapshots/repo/terminal/data/witness.points",
+      "sha256": "8591856c2c1ba6d7f256c5884f6a4cc7b0013ec3a05b47ab20dbcea14d63adbc"
+    },
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/exact_audit/replay13/data/result.json": {
+      "snapshot": "data/snapshots/repo/extension/exact_audit/replay13/data/result.json",
+      "sha256": "c96b89310980aea62f90bca71393c39f9b13c0ad007fb1b60ca9db3e5622dbc7"
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/n7m14-exact.cnf.json": {
+      "snapshot": "data/snapshots/scratch/n7m14-exact.cnf.json",
+      "sha256": "0b33fe22ccf24ea649e3938a44eac3c79583b59604d0fc607f5ceb23c36885b8"
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/n7m14-indecomp.cnf.json": {
+      "snapshot": "data/snapshots/scratch/n7m14-indecomp.cnf.json",
+      "sha256": "9bb2df9953ecd4beaa9e64a80b58c76cda3f46e14f8b6857e8ec3541f50942c7"
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/n7m14-indecomp-v2.cnf.json": {
+      "snapshot": "data/snapshots/scratch/n7m14-indecomp-v2.cnf.json",
+      "sha256": "b8ff83826498a27390c16a94f942524d6cd5d7bcc499e43c43c166058f643a75"
+    }
+  },
+  "cnf_sha256": {
+    "n7m14-exact.cnf": "5dc0c1719cce7bda188abad8489534413ecbbcbe5f43e1b714244ec045a129c4",
+    "n7m14-indecomp.cnf": "ba43ca6ecbaeb6bc05854271a27f1204e3a690240a5c525bf1b2a9223dbd1819",
+    "n7m14-indecomp-v2.cnf": "ba43ca6ecbaeb6bc05854271a27f1204e3a690240a5c525bf1b2a9223dbd1819"
+  },
+  "parent_conditional_status_at_handoff": "SOLVING",
+  "m14_certificate_replayed": false,
+  "new_heap_reserved": false,
+  "last_cut_premise": "terminal-safe existence at exactly size13",
+  "negative_control_dependency_links": [
+    "../../terminal/README.md",
+    "../subset_audit/VERIFY_SUBSETS.md"
+  ],
+  "retained_failure": "First row-check attempt rejected padded DIMACS header; corrected token parser passed with all body bytes still compared literally.",
+  "owned_jobs_active": false,
+  "resources": {
+    "AS_MiB": 300,
+    "CPUs": 1,
+    "wall_seconds_per_check": 20,
+    "CPU_seconds": 19
+  }
+}

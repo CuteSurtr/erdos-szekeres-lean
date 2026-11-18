@@ -1,0 +1,1961 @@
+{
+  "label": "COMPUTED",
+  "status": "UNSAT_UNCERTIFIED",
+  "clauses": [
+    {
+      "source_index": 40,
+      "kind": "rank3_triple",
+      "vertices": [
+        0,
+        5,
+        7
+      ],
+      "clause": [
+        -1,
+        -6,
+        -8
+      ]
+    },
+    {
+      "source_index": 44,
+      "kind": "rank3_triple",
+      "vertices": [
+        0,
+        5,
+        13
+      ],
+      "clause": [
+        -1,
+        -6,
+        -14
+      ]
+    },
+    {
+      "source_index": 55,
+      "kind": "rank3_triple",
+      "vertices": [
+        0,
+        9,
+        13
+      ],
+      "clause": [
+        -1,
+        -10,
+        -14
+      ]
+    },
+    {
+      "source_index": 57,
+      "kind": "rank3_triple",
+      "vertices": [
+        0,
+        10,
+        13
+      ],
+      "clause": [
+        -1,
+        -11,
+        -14
+      ]
+    },
+    {
+      "source_index": 60,
+      "kind": "rank3_triple",
+      "vertices": [
+        0,
+        11,
+        16
+      ],
+      "clause": [
+        -1,
+        -12,
+        -17
+      ]
+    },
+    {
+      "source_index": 101,
+      "kind": "rank3_triple",
+      "vertices": [
+        1,
+        5,
+        7
+      ],
+      "clause": [
+        -2,
+        -6,
+        -8
+      ]
+    },
+    {
+      "source_index": 105,
+      "kind": "rank3_triple",
+      "vertices": [
+        1,
+        5,
+        13
+      ],
+      "clause": [
+        -2,
+        -6,
+        -14
+      ]
+    },
+    {
+      "source_index": 118,
+      "kind": "rank3_triple",
+      "vertices": [
+        1,
+        9,
+        13
+      ],
+      "clause": [
+        -2,
+        -10,
+        -14
+      ]
+    },
+    {
+      "source_index": 120,
+      "kind": "rank3_triple",
+      "vertices": [
+        1,
+        10,
+        13
+      ],
+      "clause": [
+        -2,
+        -11,
+        -14
+      ]
+    },
+    {
+      "source_index": 124,
+      "kind": "rank3_triple",
+      "vertices": [
+        1,
+        11,
+        17
+      ],
+      "clause": [
+        -2,
+        -12,
+        -18
+      ]
+    },
+    {
+      "source_index": 133,
+      "kind": "rank3_triple",
+      "vertices": [
+        2,
+        3,
+        13
+      ],
+      "clause": [
+        -3,
+        -4,
+        -14
+      ]
+    },
+    {
+      "source_index": 135,
+      "kind": "rank3_triple",
+      "vertices": [
+        2,
+        3,
+        15
+      ],
+      "clause": [
+        -3,
+        -4,
+        -16
+      ]
+    },
+    {
+      "source_index": 136,
+      "kind": "rank3_triple",
+      "vertices": [
+        2,
+        3,
+        16
+      ],
+      "clause": [
+        -3,
+        -4,
+        -17
+      ]
+    },
+    {
+      "source_index": 146,
+      "kind": "rank3_triple",
+      "vertices": [
+        2,
+        4,
+        13
+      ],
+      "clause": [
+        -3,
+        -5,
+        -14
+      ]
+    },
+    {
+      "source_index": 148,
+      "kind": "rank3_triple",
+      "vertices": [
+        2,
+        4,
+        15
+      ],
+      "clause": [
+        -3,
+        -5,
+        -16
+      ]
+    },
+    {
+      "source_index": 149,
+      "kind": "rank3_triple",
+      "vertices": [
+        2,
+        4,
+        16
+      ],
+      "clause": [
+        -3,
+        -5,
+        -17
+      ]
+    },
+    {
+      "source_index": 159,
+      "kind": "rank3_triple",
+      "vertices": [
+        3,
+        4,
+        13
+      ],
+      "clause": [
+        -4,
+        -5,
+        -14
+      ]
+    },
+    {
+      "source_index": 161,
+      "kind": "rank3_triple",
+      "vertices": [
+        3,
+        4,
+        15
+      ],
+      "clause": [
+        -4,
+        -5,
+        -16
+      ]
+    },
+    {
+      "source_index": 162,
+      "kind": "rank3_triple",
+      "vertices": [
+        3,
+        4,
+        16
+      ],
+      "clause": [
+        -4,
+        -5,
+        -17
+      ]
+    },
+    {
+      "source_index": 174,
+      "kind": "rank3_triple",
+      "vertices": [
+        5,
+        11,
+        17
+      ],
+      "clause": [
+        -6,
+        -12,
+        -18
+      ]
+    },
+    {
+      "source_index": 179,
+      "kind": "rank3_triple",
+      "vertices": [
+        6,
+        8,
+        11
+      ],
+      "clause": [
+        -7,
+        -9,
+        -12
+      ]
+    },
+    {
+      "source_index": 184,
+      "kind": "rank3_triple",
+      "vertices": [
+        6,
+        8,
+        16
+      ],
+      "clause": [
+        -7,
+        -9,
+        -17
+      ]
+    },
+    {
+      "source_index": 190,
+      "kind": "rank3_triple",
+      "vertices": [
+        7,
+        8,
+        11
+      ],
+      "clause": [
+        -8,
+        -9,
+        -12
+      ]
+    },
+    {
+      "source_index": 195,
+      "kind": "rank3_triple",
+      "vertices": [
+        7,
+        8,
+        16
+      ],
+      "clause": [
+        -8,
+        -9,
+        -17
+      ]
+    },
+    {
+      "source_index": 201,
+      "kind": "rank3_triple",
+      "vertices": [
+        9,
+        10,
+        12
+      ],
+      "clause": [
+        -10,
+        -11,
+        -13
+      ]
+    },
+    {
+      "source_index": 207,
+      "kind": "rank3_triple",
+      "vertices": [
+        9,
+        11,
+        16
+      ],
+      "clause": [
+        -10,
+        -12,
+        -17
+      ]
+    },
+    {
+      "source_index": 208,
+      "kind": "rank3_triple",
+      "vertices": [
+        9,
+        11,
+        17
+      ],
+      "clause": [
+        -10,
+        -12,
+        -18
+      ]
+    },
+    {
+      "source_index": 209,
+      "kind": "rank3_triple",
+      "vertices": [
+        9,
+        14,
+        15
+      ],
+      "clause": [
+        -10,
+        -15,
+        -16
+      ]
+    },
+    {
+      "source_index": 210,
+      "kind": "rank3_triple",
+      "vertices": [
+        10,
+        11,
+        14
+      ],
+      "clause": [
+        -11,
+        -12,
+        -15
+      ]
+    },
+    {
+      "source_index": 211,
+      "kind": "rank3_triple",
+      "vertices": [
+        10,
+        11,
+        15
+      ],
+      "clause": [
+        -11,
+        -12,
+        -16
+      ]
+    },
+    {
+      "source_index": 212,
+      "kind": "rank3_triple",
+      "vertices": [
+        10,
+        11,
+        16
+      ],
+      "clause": [
+        -11,
+        -12,
+        -17
+      ]
+    },
+    {
+      "source_index": 214,
+      "kind": "rank3_triple",
+      "vertices": [
+        10,
+        14,
+        15
+      ],
+      "clause": [
+        -11,
+        -15,
+        -16
+      ]
+    },
+    {
+      "source_index": 216,
+      "kind": "rank3_triple",
+      "vertices": [
+        12,
+        16,
+        17
+      ],
+      "clause": [
+        -13,
+        -17,
+        -18
+      ]
+    },
+    {
+      "source_index": 217,
+      "kind": "rank3_triple",
+      "vertices": [
+        13,
+        14,
+        15
+      ],
+      "clause": [
+        -14,
+        -15,
+        -16
+      ]
+    },
+    {
+      "source_index": 218,
+      "kind": "rank3_triple",
+      "vertices": [
+        13,
+        16,
+        17
+      ],
+      "clause": [
+        -14,
+        -17,
+        -18
+      ]
+    },
+    {
+      "source_index": 226,
+      "kind": "polygon",
+      "vertices": [
+        0,
+        1,
+        5,
+        7,
+        9,
+        10
+      ],
+      "clause": [
+        1,
+        2,
+        6,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "source_index": 228,
+      "kind": "polygon",
+      "vertices": [
+        0,
+        1,
+        3,
+        8,
+        9,
+        10
+      ],
+      "clause": [
+        1,
+        2,
+        4,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "source_index": 229,
+      "kind": "polygon",
+      "vertices": [
+        0,
+        1,
+        4,
+        8,
+        9,
+        10
+      ],
+      "clause": [
+        1,
+        2,
+        5,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "source_index": 234,
+      "kind": "polygon",
+      "vertices": [
+        0,
+        1,
+        3,
+        6,
+        7,
+        11
+      ],
+      "clause": [
+        1,
+        2,
+        4,
+        7,
+        8,
+        12
+      ]
+    },
+    {
+      "source_index": 235,
+      "kind": "polygon",
+      "vertices": [
+        0,
+        1,
+        4,
+        6,
+        7,
+        11
+      ],
+      "clause": [
+        1,
+        2,
+        5,
+        7,
+        8,
+        12
+      ]
+    },
+    {
+      "source_index": 241,
+      "kind": "polygon",
+      "vertices": [
+        0,
+        1,
+        3,
+        9,
+        10,
+        11
+      ],
+      "clause": [
+        1,
+        2,
+        4,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "source_index": 242,
+      "kind": "polygon",
+      "vertices": [
+        0,
+        1,
+        4,
+        9,
+        10,
+        11
+      ],
+      "clause": [
+        1,
+        2,
+        5,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "source_index": 280,
+      "kind": "polygon",
+      "vertices": [
+        2,
+        3,
+        7,
+        11,
+        12,
+        13
+      ],
+      "clause": [
+        3,
+        4,
+        8,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "source_index": 281,
+      "kind": "polygon",
+      "vertices": [
+        2,
+        4,
+        7,
+        11,
+        12,
+        13
+      ],
+      "clause": [
+        3,
+        5,
+        8,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "source_index": 282,
+      "kind": "polygon",
+      "vertices": [
+        3,
+        4,
+        7,
+        11,
+        12,
+        13
+      ],
+      "clause": [
+        4,
+        5,
+        8,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "source_index": 283,
+      "kind": "polygon",
+      "vertices": [
+        2,
+        3,
+        8,
+        11,
+        12,
+        13
+      ],
+      "clause": [
+        3,
+        4,
+        9,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "source_index": 284,
+      "kind": "polygon",
+      "vertices": [
+        2,
+        4,
+        8,
+        11,
+        12,
+        13
+      ],
+      "clause": [
+        3,
+        5,
+        9,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "source_index": 285,
+      "kind": "polygon",
+      "vertices": [
+        3,
+        4,
+        8,
+        11,
+        12,
+        13
+      ],
+      "clause": [
+        4,
+        5,
+        9,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "source_index": 287,
+      "kind": "polygon",
+      "vertices": [
+        0,
+        1,
+        3,
+        9,
+        10,
+        14
+      ],
+      "clause": [
+        1,
+        2,
+        4,
+        10,
+        11,
+        15
+      ]
+    },
+    {
+      "source_index": 288,
+      "kind": "polygon",
+      "vertices": [
+        0,
+        1,
+        4,
+        9,
+        10,
+        14
+      ],
+      "clause": [
+        1,
+        2,
+        5,
+        10,
+        11,
+        15
+      ]
+    },
+    {
+      "source_index": 289,
+      "kind": "polygon",
+      "vertices": [
+        2,
+        3,
+        5,
+        9,
+        10,
+        14
+      ],
+      "clause": [
+        3,
+        4,
+        6,
+        10,
+        11,
+        15
+      ]
+    },
+    {
+      "source_index": 290,
+      "kind": "polygon",
+      "vertices": [
+        2,
+        4,
+        5,
+        9,
+        10,
+        14
+      ],
+      "clause": [
+        3,
+        5,
+        6,
+        10,
+        11,
+        15
+      ]
+    },
+    {
+      "source_index": 291,
+      "kind": "polygon",
+      "vertices": [
+        3,
+        4,
+        5,
+        9,
+        10,
+        14
+      ],
+      "clause": [
+        4,
+        5,
+        6,
+        10,
+        11,
+        15
+      ]
+    },
+    {
+      "source_index": 334,
+      "kind": "polygon",
+      "vertices": [
+        0,
+        1,
+        3,
+        9,
+        10,
+        15
+      ],
+      "clause": [
+        1,
+        2,
+        4,
+        10,
+        11,
+        16
+      ]
+    },
+    {
+      "source_index": 335,
+      "kind": "polygon",
+      "vertices": [
+        0,
+        1,
+        4,
+        9,
+        10,
+        15
+      ],
+      "clause": [
+        1,
+        2,
+        5,
+        10,
+        11,
+        16
+      ]
+    },
+    {
+      "source_index": 336,
+      "kind": "polygon",
+      "vertices": [
+        2,
+        3,
+        5,
+        9,
+        10,
+        15
+      ],
+      "clause": [
+        3,
+        4,
+        6,
+        10,
+        11,
+        16
+      ]
+    },
+    {
+      "source_index": 337,
+      "kind": "polygon",
+      "vertices": [
+        2,
+        4,
+        5,
+        9,
+        10,
+        15
+      ],
+      "clause": [
+        3,
+        5,
+        6,
+        10,
+        11,
+        16
+      ]
+    },
+    {
+      "source_index": 338,
+      "kind": "polygon",
+      "vertices": [
+        3,
+        4,
+        5,
+        9,
+        10,
+        15
+      ],
+      "clause": [
+        4,
+        5,
+        6,
+        10,
+        11,
+        16
+      ]
+    },
+    {
+      "source_index": 390,
+      "kind": "polygon",
+      "vertices": [
+        0,
+        1,
+        3,
+        7,
+        14,
+        15
+      ],
+      "clause": [
+        1,
+        2,
+        4,
+        8,
+        15,
+        16
+      ]
+    },
+    {
+      "source_index": 391,
+      "kind": "polygon",
+      "vertices": [
+        0,
+        1,
+        4,
+        7,
+        14,
+        15
+      ],
+      "clause": [
+        1,
+        2,
+        5,
+        8,
+        15,
+        16
+      ]
+    },
+    {
+      "source_index": 422,
+      "kind": "polygon",
+      "vertices": [
+        2,
+        3,
+        5,
+        10,
+        13,
+        16
+      ],
+      "clause": [
+        3,
+        4,
+        6,
+        11,
+        14,
+        17
+      ]
+    },
+    {
+      "source_index": 423,
+      "kind": "polygon",
+      "vertices": [
+        2,
+        4,
+        5,
+        10,
+        13,
+        16
+      ],
+      "clause": [
+        3,
+        5,
+        6,
+        11,
+        14,
+        17
+      ]
+    },
+    {
+      "source_index": 424,
+      "kind": "polygon",
+      "vertices": [
+        3,
+        4,
+        5,
+        10,
+        13,
+        16
+      ],
+      "clause": [
+        4,
+        5,
+        6,
+        11,
+        14,
+        17
+      ]
+    },
+    {
+      "source_index": 428,
+      "kind": "polygon",
+      "vertices": [
+        2,
+        3,
+        7,
+        10,
+        13,
+        16
+      ],
+      "clause": [
+        3,
+        4,
+        8,
+        11,
+        14,
+        17
+      ]
+    },
+    {
+      "source_index": 429,
+      "kind": "polygon",
+      "vertices": [
+        2,
+        4,
+        7,
+        10,
+        13,
+        16
+      ],
+      "clause": [
+        3,
+        5,
+        8,
+        11,
+        14,
+        17
+      ]
+    },
+    {
+      "source_index": 430,
+      "kind": "polygon",
+      "vertices": [
+        3,
+        4,
+        7,
+        10,
+        13,
+        16
+      ],
+      "clause": [
+        4,
+        5,
+        8,
+        11,
+        14,
+        17
+      ]
+    },
+    {
+      "source_index": 445,
+      "kind": "polygon",
+      "vertices": [
+        0,
+        1,
+        9,
+        11,
+        14,
+        16
+      ],
+      "clause": [
+        1,
+        2,
+        10,
+        12,
+        15,
+        17
+      ]
+    },
+    {
+      "source_index": 446,
+      "kind": "polygon",
+      "vertices": [
+        0,
+        1,
+        10,
+        11,
+        14,
+        16
+      ],
+      "clause": [
+        1,
+        2,
+        11,
+        12,
+        15,
+        17
+      ]
+    },
+    {
+      "source_index": 456,
+      "kind": "polygon",
+      "vertices": [
+        0,
+        1,
+        11,
+        12,
+        14,
+        16
+      ],
+      "clause": [
+        1,
+        2,
+        12,
+        13,
+        15,
+        17
+      ]
+    },
+    {
+      "source_index": 475,
+      "kind": "polygon",
+      "vertices": [
+        5,
+        9,
+        11,
+        13,
+        14,
+        16
+      ],
+      "clause": [
+        6,
+        10,
+        12,
+        14,
+        15,
+        17
+      ]
+    },
+    {
+      "source_index": 477,
+      "kind": "polygon",
+      "vertices": [
+        7,
+        9,
+        11,
+        13,
+        14,
+        16
+      ],
+      "clause": [
+        8,
+        10,
+        12,
+        14,
+        15,
+        17
+      ]
+    },
+    {
+      "source_index": 485,
+      "kind": "polygon",
+      "vertices": [
+        5,
+        11,
+        12,
+        13,
+        14,
+        16
+      ],
+      "clause": [
+        6,
+        12,
+        13,
+        14,
+        15,
+        17
+      ]
+    },
+    {
+      "source_index": 488,
+      "kind": "polygon",
+      "vertices": [
+        0,
+        1,
+        8,
+        9,
+        15,
+        16
+      ],
+      "clause": [
+        1,
+        2,
+        9,
+        10,
+        16,
+        17
+      ]
+    },
+    {
+      "source_index": 490,
+      "kind": "polygon",
+      "vertices": [
+        0,
+        1,
+        9,
+        11,
+        15,
+        16
+      ],
+      "clause": [
+        1,
+        2,
+        10,
+        12,
+        16,
+        17
+      ]
+    },
+    {
+      "source_index": 491,
+      "kind": "polygon",
+      "vertices": [
+        0,
+        1,
+        10,
+        11,
+        15,
+        16
+      ],
+      "clause": [
+        1,
+        2,
+        11,
+        12,
+        16,
+        17
+      ]
+    },
+    {
+      "source_index": 492,
+      "kind": "polygon",
+      "vertices": [
+        0,
+        1,
+        8,
+        12,
+        15,
+        16
+      ],
+      "clause": [
+        1,
+        2,
+        9,
+        13,
+        16,
+        17
+      ]
+    },
+    {
+      "source_index": 501,
+      "kind": "polygon",
+      "vertices": [
+        0,
+        1,
+        11,
+        12,
+        15,
+        16
+      ],
+      "clause": [
+        1,
+        2,
+        12,
+        13,
+        16,
+        17
+      ]
+    },
+    {
+      "source_index": 510,
+      "kind": "polygon",
+      "vertices": [
+        6,
+        7,
+        9,
+        13,
+        15,
+        16
+      ],
+      "clause": [
+        7,
+        8,
+        10,
+        14,
+        16,
+        17
+      ]
+    },
+    {
+      "source_index": 511,
+      "kind": "polygon",
+      "vertices": [
+        5,
+        8,
+        9,
+        13,
+        15,
+        16
+      ],
+      "clause": [
+        6,
+        9,
+        10,
+        14,
+        16,
+        17
+      ]
+    },
+    {
+      "source_index": 513,
+      "kind": "polygon",
+      "vertices": [
+        7,
+        8,
+        9,
+        13,
+        15,
+        16
+      ],
+      "clause": [
+        8,
+        9,
+        10,
+        14,
+        16,
+        17
+      ]
+    },
+    {
+      "source_index": 515,
+      "kind": "polygon",
+      "vertices": [
+        5,
+        8,
+        10,
+        13,
+        15,
+        16
+      ],
+      "clause": [
+        6,
+        9,
+        11,
+        14,
+        16,
+        17
+      ]
+    },
+    {
+      "source_index": 517,
+      "kind": "polygon",
+      "vertices": [
+        7,
+        8,
+        10,
+        13,
+        15,
+        16
+      ],
+      "clause": [
+        8,
+        9,
+        11,
+        14,
+        16,
+        17
+      ]
+    },
+    {
+      "source_index": 520,
+      "kind": "polygon",
+      "vertices": [
+        5,
+        9,
+        11,
+        13,
+        15,
+        16
+      ],
+      "clause": [
+        6,
+        10,
+        12,
+        14,
+        16,
+        17
+      ]
+    },
+    {
+      "source_index": 522,
+      "kind": "polygon",
+      "vertices": [
+        7,
+        9,
+        11,
+        13,
+        15,
+        16
+      ],
+      "clause": [
+        8,
+        10,
+        12,
+        14,
+        16,
+        17
+      ]
+    },
+    {
+      "source_index": 523,
+      "kind": "polygon",
+      "vertices": [
+        5,
+        10,
+        11,
+        13,
+        15,
+        16
+      ],
+      "clause": [
+        6,
+        11,
+        12,
+        14,
+        16,
+        17
+      ]
+    },
+    {
+      "source_index": 525,
+      "kind": "polygon",
+      "vertices": [
+        7,
+        10,
+        11,
+        13,
+        15,
+        16
+      ],
+      "clause": [
+        8,
+        11,
+        12,
+        14,
+        16,
+        17
+      ]
+    },
+    {
+      "source_index": 527,
+      "kind": "polygon",
+      "vertices": [
+        5,
+        8,
+        12,
+        13,
+        15,
+        16
+      ],
+      "clause": [
+        6,
+        9,
+        13,
+        14,
+        16,
+        17
+      ]
+    },
+    {
+      "source_index": 529,
+      "kind": "polygon",
+      "vertices": [
+        7,
+        8,
+        12,
+        13,
+        15,
+        16
+      ],
+      "clause": [
+        8,
+        9,
+        13,
+        14,
+        16,
+        17
+      ]
+    },
+    {
+      "source_index": 530,
+      "kind": "polygon",
+      "vertices": [
+        5,
+        11,
+        12,
+        13,
+        15,
+        16
+      ],
+      "clause": [
+        6,
+        12,
+        13,
+        14,
+        16,
+        17
+      ]
+    },
+    {
+      "source_index": 532,
+      "kind": "polygon",
+      "vertices": [
+        7,
+        11,
+        12,
+        13,
+        15,
+        16
+      ],
+      "clause": [
+        8,
+        12,
+        13,
+        14,
+        16,
+        17
+      ]
+    },
+    {
+      "source_index": 551,
+      "kind": "polygon",
+      "vertices": [
+        2,
+        3,
+        5,
+        10,
+        13,
+        17
+      ],
+      "clause": [
+        3,
+        4,
+        6,
+        11,
+        14,
+        18
+      ]
+    },
+    {
+      "source_index": 552,
+      "kind": "polygon",
+      "vertices": [
+        2,
+        4,
+        5,
+        10,
+        13,
+        17
+      ],
+      "clause": [
+        3,
+        5,
+        6,
+        11,
+        14,
+        18
+      ]
+    },
+    {
+      "source_index": 553,
+      "kind": "polygon",
+      "vertices": [
+        3,
+        4,
+        5,
+        10,
+        13,
+        17
+      ],
+      "clause": [
+        4,
+        5,
+        6,
+        11,
+        14,
+        18
+      ]
+    },
+    {
+      "source_index": 557,
+      "kind": "polygon",
+      "vertices": [
+        2,
+        3,
+        7,
+        10,
+        13,
+        17
+      ],
+      "clause": [
+        3,
+        4,
+        8,
+        11,
+        14,
+        18
+      ]
+    },
+    {
+      "source_index": 558,
+      "kind": "polygon",
+      "vertices": [
+        2,
+        4,
+        7,
+        10,
+        13,
+        17
+      ],
+      "clause": [
+        3,
+        5,
+        8,
+        11,
+        14,
+        18
+      ]
+    },
+    {
+      "source_index": 559,
+      "kind": "polygon",
+      "vertices": [
+        3,
+        4,
+        7,
+        10,
+        13,
+        17
+      ],
+      "clause": [
+        4,
+        5,
+        8,
+        11,
+        14,
+        18
+      ]
+    },
+    {
+      "source_index": 572,
+      "kind": "polygon",
+      "vertices": [
+        2,
+        3,
+        8,
+        11,
+        14,
+        17
+      ],
+      "clause": [
+        3,
+        4,
+        9,
+        12,
+        15,
+        18
+      ]
+    },
+    {
+      "source_index": 573,
+      "kind": "polygon",
+      "vertices": [
+        2,
+        4,
+        8,
+        11,
+        14,
+        17
+      ],
+      "clause": [
+        3,
+        5,
+        9,
+        12,
+        15,
+        18
+      ]
+    },
+    {
+      "source_index": 574,
+      "kind": "polygon",
+      "vertices": [
+        3,
+        4,
+        8,
+        11,
+        14,
+        17
+      ],
+      "clause": [
+        4,
+        5,
+        9,
+        12,
+        15,
+        18
+      ]
+    },
+    {
+      "source_index": 577,
+      "kind": "polygon",
+      "vertices": [
+        6,
+        7,
+        9,
+        13,
+        14,
+        17
+      ],
+      "clause": [
+        7,
+        8,
+        10,
+        14,
+        15,
+        18
+      ]
+    },
+    {
+      "source_index": 580,
+      "kind": "polygon",
+      "vertices": [
+        2,
+        3,
+        8,
+        11,
+        15,
+        17
+      ],
+      "clause": [
+        3,
+        4,
+        9,
+        12,
+        16,
+        18
+      ]
+    },
+    {
+      "source_index": 581,
+      "kind": "polygon",
+      "vertices": [
+        2,
+        4,
+        8,
+        11,
+        15,
+        17
+      ],
+      "clause": [
+        3,
+        5,
+        9,
+        12,
+        16,
+        18
+      ]
+    },
+    {
+      "source_index": 582,
+      "kind": "polygon",
+      "vertices": [
+        3,
+        4,
+        8,
+        11,
+        15,
+        17
+      ],
+      "clause": [
+        4,
+        5,
+        9,
+        12,
+        16,
+        18
+      ]
+    },
+    {
+      "source_index": 585,
+      "kind": "polygon",
+      "vertices": [
+        6,
+        7,
+        9,
+        13,
+        15,
+        17
+      ],
+      "clause": [
+        7,
+        8,
+        10,
+        14,
+        16,
+        18
+      ]
+    },
+    {
+      "source_index": 587,
+      "kind": "polygon",
+      "vertices": [
+        6,
+        7,
+        12,
+        13,
+        15,
+        17
+      ],
+      "clause": [
+        7,
+        8,
+        13,
+        14,
+        16,
+        18
+      ]
+    },
+    {
+      "source_index": 613,
+      "kind": "polygon",
+      "vertices": [
+        0,
+        1,
+        8,
+        10,
+        16,
+        17
+      ],
+      "clause": [
+        1,
+        2,
+        9,
+        11,
+        17,
+        18
+      ]
+    },
+    {
+      "source_index": 618,
+      "kind": "polygon",
+      "vertices": [
+        6,
+        7,
+        10,
+        14,
+        16,
+        17
+      ],
+      "clause": [
+        7,
+        8,
+        11,
+        15,
+        17,
+        18
+      ]
+    },
+    {
+      "source_index": 620,
+      "kind": "polygon",
+      "vertices": [
+        6,
+        7,
+        10,
+        15,
+        16,
+        17
+      ],
+      "clause": [
+        7,
+        8,
+        11,
+        16,
+        17,
+        18
+      ]
+    }
+  ],
+  "exhaustive_satisfying_assignments": 0,
+  "all_assignments": 262144,
+  "complete_single_clause_deletion_pass": true,
+  "source_trajectory": "/home/jay/research/data/delta3-codex-20261113/selection/terminal/minimum-s0-final.core.json",
+  "core_sha256": "5318a34178cd3aa6acb9f83de54f4e9510b0a968a98fc0c8eb40b20ce135d0dd"
+}

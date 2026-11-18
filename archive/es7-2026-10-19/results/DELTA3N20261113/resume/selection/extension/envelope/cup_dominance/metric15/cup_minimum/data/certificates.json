@@ -1,0 +1,269 @@
+{
+  "label": "COMPUTED exact rational certificates",
+  "index_base": 0,
+  "selected_A": [
+    2,
+    3,
+    6,
+    9
+  ],
+  "parameter": "X=max_x+t, t>0",
+  "difference": "ambient_terminal_line(X)-selected_terminal_line(X)=slope_difference*t+intercept_difference",
+  "rational_format": "reduced numerator/denominator strings; denominator one omitted",
+  "cases": [
+    {
+      "name": "original",
+      "input_sha256": "52280ed5a905a188d3c230580615c212f6bb9939b3d0bcbae384e40edf158bdb",
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          221680,
+          -74181958959
+        ],
+        [
+          221689,
+          -77378752209
+        ],
+        [
+          222680,
+          -77700323248
+        ],
+        [
+          299288,
+          -104431354612
+        ],
+        [
+          315222,
+          -105484313027
+        ],
+        [
+          776079,
+          -261282917363
+        ],
+        [
+          776086,
+          -261294303439
+        ],
+        [
+          776090,
+          -261265836302
+        ],
+        [
+          776096,
+          -261267808882
+        ],
+        [
+          779384,
+          -258345455552
+        ],
+        [
+          779390,
+          -262381295590
+        ],
+        [
+          1057594,
+          -353908317219
+        ],
+        [
+          1057656,
+          -353928715752
+        ],
+        [
+          1070054,
+          0
+        ]
+      ],
+      "max_x": 1070054,
+      "certificates": [
+        {
+          "selected_cap_triple": [
+            2,
+            3,
+            6
+          ],
+          "selected_tail_pair": [
+            3,
+            6
+          ],
+          "ambient_fourcap": [
+            4,
+            7,
+            12,
+            13
+          ],
+          "ambient_tail_pair": [
+            12,
+            13
+          ],
+          "cup_union": [
+            3,
+            6,
+            12,
+            13
+          ],
+          "slope_difference": "93593071463/34310738",
+          "intercept_difference": "1243549543981691/1559579"
+        },
+        {
+          "selected_cap_triple": [
+            2,
+            3,
+            9
+          ],
+          "selected_tail_pair": [
+            3,
+            9
+          ],
+          "ambient_fourcap": [
+            4,
+            7,
+            12,
+            13
+          ],
+          "ambient_tail_pair": [
+            12,
+            13
+          ],
+          "cup_union": [
+            3,
+            9,
+            12,
+            13
+          ],
+          "slope_difference": "7692464215/2859316",
+          "intercept_difference": "1094537034083345/1429658"
+        }
+      ]
+    },
+    {
+      "name": "balanced",
+      "input_sha256": "7da027c4f6c800245a9f715e684872358fea36cab0d0133aa15e0a0b199eed9b",
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          37,
+          -35
+        ],
+        [
+          38,
+          -248
+        ],
+        [
+          84,
+          -270
+        ],
+        [
+          202,
+          -640
+        ],
+        [
+          472,
+          -427
+        ],
+        [
+          653,
+          -757
+        ],
+        [
+          665,
+          -793
+        ],
+        [
+          666,
+          -717
+        ],
+        [
+          683,
+          -718
+        ],
+        [
+          736,
+          -567
+        ],
+        [
+          737,
+          -827
+        ],
+        [
+          926,
+          -895
+        ],
+        [
+          999,
+          -926
+        ],
+        [
+          1000,
+          0
+        ]
+      ],
+      "max_x": 1000,
+      "certificates": [
+        {
+          "selected_cap_triple": [
+            2,
+            3,
+            6
+          ],
+          "selected_tail_pair": [
+            3,
+            6
+          ],
+          "ambient_fourcap": [
+            4,
+            7,
+            12,
+            13
+          ],
+          "ambient_tail_pair": [
+            12,
+            13
+          ],
+          "cup_union": [
+            3,
+            6,
+            12,
+            13
+          ],
+          "slope_difference": "17912/41537",
+          "intercept_difference": "5298805/41537"
+        },
+        {
+          "selected_cap_triple": [
+            2,
+            3,
+            9
+          ],
+          "selected_tail_pair": [
+            3,
+            9
+          ],
+          "ambient_fourcap": [
+            4,
+            7,
+            12,
+            13
+          ],
+          "ambient_tail_pair": [
+            12,
+            13
+          ],
+          "cup_union": [
+            3,
+            9,
+            12,
+            13
+          ],
+          "slope_difference": "14135/43727",
+          "intercept_difference": "1253383/43727"
+        }
+      ]
+    }
+  ]
+}

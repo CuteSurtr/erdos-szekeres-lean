@@ -1,0 +1,5 @@
+dafcc24c9f20326a01b3e28abce521c13a1df57fc25c3df370f5e28d1c265c58  run/lad_nsc_N41.cnf
+a2aaa95d7b9496e97702815da1d75c0faa60414486231140776dc0b164f106c0  run/lad_nsc_N41.lrat
+lrat_bytes=796941967
+s VERIFIED UNSAT
+cake_wall=108 Fri Nov 13 05:52:24 PM KST 2026

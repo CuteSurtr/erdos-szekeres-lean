@@ -1,0 +1,29 @@
+{
+  "label": "CERTIFIED",
+  "version": "v160w1u",
+  "rows": 8,
+  "own_encoder_matches": 8,
+  "fresh_cake_acceptances": 8,
+  "old_witness_exact_row_check": "PASS (4466 rows, 35 holes, F20,Lo15,state0 occupied)",
+  "rows_cutting_old_witness": 8,
+  "old_witness_intersection_counts": {
+    "0": 8
+  },
+  "accepted_sha256": "3f12a1e80d3ad4638856671bc6f394bb6cf6097c28851eabb174993601e9892d",
+  "replay_sha256": "d3026c261f2c6a3d0b2f40a66bf75af8de86818043fc711b5673c7045f6ef742",
+  "input_sha256": {
+    "/home/jay/research/data/es308-20261114/cuts-v160w1u/accepted.json": "3f12a1e80d3ad4638856671bc6f394bb6cf6097c28851eabb174993601e9892d",
+    "/home/jay/research/data/es308-20261114/candidates-v160w1u.json": "0d9448375f780c6a6796e67c6f4f192ac4da04b506d7edb16f52a5b75a446780",
+    "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-residual32-rank-global-2026-10-10/source-2650.json.gz": "8c7fe9ef5264182524095d46ef50ed6bc691cab425efa965756d1870112241aa",
+    "/home/jay/research/data/es308-20261114/audit/cuts-v160w1u/witness-frozen.json": "8a607eda560bafd67c2605464cfc49d062289e9f7604cb4cb3433f5e2e87c987",
+    "/home/jay/research/data/es308-20261114/inputs/b35s20-v159/extra.json": "b14b65fd82a85ab8668b2d758ba4f25743d96ed99b3a44a49f489b3d67ff8ebf",
+    "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/LO33N20261113/budget34/audit/audit_followup_rows_v4.py": "f0df1c0f5b38b735226a9b813b3f5f78d0b91ee27c300c15ffccf5c5fa1ffc12",
+    "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/LO33N20261113/budget34/audit/residual_encoder.py": "db7b2deba4ae55ff50f25d1e52843734591f5e7d1339a53e45e8811866e7365c",
+    "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54"
+  },
+  "seconds": 6.574,
+  "finished_local": "2026-11-18T05:52:00.538841+09:00",
+  "scope": "Additional rows only; no finite exclusion or ES bound follows from these rows alone",
+  "parent_maxrss_kib": 65144,
+  "child_maxrss_kib": 412796
+}

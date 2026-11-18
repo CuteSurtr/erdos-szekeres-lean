@@ -1,0 +1,29 @@
+{
+  "label": "CERTIFIED",
+  "version": "v128u",
+  "rows": 13,
+  "own_encoder_matches": 13,
+  "fresh_cake_acceptances": 13,
+  "old_witness_exact_row_check": "PASS (3938 rows, 35 holes, F20,Lo15,state0 occupied)",
+  "rows_cutting_old_witness": 13,
+  "old_witness_intersection_counts": {
+    "0": 13
+  },
+  "accepted_sha256": "4064b87d597abb6addc8402b26be35f66a7b829ed66e6ee8b67e9efda61bdac2",
+  "replay_sha256": "f97bdebe7049c27bad3905902f350942422c0846531a8a930f565072325cdb5d",
+  "input_sha256": {
+    "/home/jay/research/data/es308-20261114/cuts-v128u/accepted.json": "4064b87d597abb6addc8402b26be35f66a7b829ed66e6ee8b67e9efda61bdac2",
+    "/home/jay/research/data/es308-20261114/candidates-v128u.json": "e72995ed876caa2d37ebb831e7f45299c1f4b2a7de4d24f23e9d101a89595121",
+    "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-residual32-rank-global-2026-10-10/source-2650.json.gz": "8c7fe9ef5264182524095d46ef50ed6bc691cab425efa965756d1870112241aa",
+    "/home/jay/research/data/es308-20261114/runs/b35s20/bb/WITNESS.json.v127-snapshot": "99933386dd704877f1b2cb1be443dc0a851256dcb684bc7e33e9033acade4ff3",
+    "/home/jay/research/data/es308-20261114/inputs/b35s20-v127/extra.json": "c838e01a25d21882c5ef0f9ad3448f8832e541e25df16347abb59ae832d47685",
+    "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/LO33N20261113/budget34/audit/audit_followup_rows_v4.py": "f0df1c0f5b38b735226a9b813b3f5f78d0b91ee27c300c15ffccf5c5fa1ffc12",
+    "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/LO33N20261113/budget34/audit/residual_encoder.py": "db7b2deba4ae55ff50f25d1e52843734591f5e7d1339a53e45e8811866e7365c",
+    "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54"
+  },
+  "seconds": 4.273,
+  "finished_local": "2026-11-15T02:45:22.626611+09:00",
+  "scope": "Additional rows only; no finite exclusion or ES bound follows from these rows alone",
+  "parent_maxrss_kib": 68068,
+  "child_maxrss_kib": 412796
+}

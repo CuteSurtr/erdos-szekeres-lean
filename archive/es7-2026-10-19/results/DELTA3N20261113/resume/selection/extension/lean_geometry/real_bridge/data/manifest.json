@@ -1,0 +1,492 @@
+{
+  "label": "PROVED",
+  "status": "PASS: actual real-coordinate terminal-membership obstruction",
+  "main_theorem": "Delta3.Balanced15.RealBridge.balanced15_real_obstruction",
+  "existence_theorem": "Delta3.Balanced15.RealBridge.exists_real_terminal_obstruction",
+  "toolchain": "leanprover/lean4:v4.24.0",
+  "coordinate_input_sha256": "7da027c4f6c800245a9f715e684872358fea36cab0d0133aa15e0a0b199eed9b",
+  "finite_manifest_sha256": "e6d39e997435758346d0233aa416bb7f66371d6c3494bba309c4cab57bd73313",
+  "finite_freeze_sha256": "35f159240d9ba23cb81d1f256da742b75e0a32bd43710d2de5a8be265543345b",
+  "finite_parent_replay_sha256": "7a17eb2d536de868275fa70de3b01b1a4e4cdaad546cd8fa46ae3c2b36f3f695",
+  "finite_parent_replay_status": "PASS: 35 jobs / 50 audits; source hashes rechecked here",
+  "checks": [
+    {
+      "source": "IndexHelpers.lean",
+      "sha256": "2db4e52d35a1c90bb15c5683c10125dd39515e1530b43a4f2b53eb957b402ecc",
+      "run": "real-index-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.RealBridge.indices_nodup": [
+          "propext"
+        ],
+        "Delta3.Balanced15.RealBridge.indices_sorted": [
+          "propext"
+        ],
+        "Delta3.Balanced15.RealBridge.choose_sound": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.distinct_det_ne": []
+      },
+      "seconds": 0.982,
+      "kernel_maxrss_kib": 659236,
+      "sampled_peaks": {
+        "VmPeak": 947308,
+        "VmSize": 947308,
+        "VmHWM": 651440,
+        "VmRSS": 651440,
+        "RssAnon": 336320,
+        "RssFile": 320920,
+        "VmSwap": 0,
+        "Threads": 8
+      },
+      "log_sha256": "801f8a325e836caeffdde25e6e0be7b8f031cc2b77a96135d688f3dd4ee1d9c2",
+      "record_sha256": "9c21b678a571faa78e95399aadf0a192d18d3f62d5618078ca0f8376a3313764"
+    },
+    {
+      "source": "BridgeBase.lean",
+      "sha256": "fd2ca262239e6ac32f29732afd7d872f4b3fa7450b66c7ae3e2d880267c4a6ea",
+      "run": "real-base-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.RealBridge.integer_orient": [
+          "propext"
+        ],
+        "Delta3.Balanced15.RealBridge.real_orient": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.real_x_strict": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.realPoint_injective": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.real_orient_ne": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.realSet_card": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.realSet_generalPosition": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "seconds": 1.231,
+      "kernel_maxrss_kib": 1951540,
+      "sampled_peaks": {
+        "VmPeak": 2722536,
+        "VmSize": 2722536,
+        "VmHWM": 1941232,
+        "VmRSS": 1941232,
+        "RssAnon": 143640,
+        "RssFile": 1797592,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "log_sha256": "151767367562d1e41a8f45ee2762d77939584fdb6308173a2c7a343079d404e7",
+      "record_sha256": "c9cd8002ee8508b2b3b06516da376d8514ef9a7bc98f4f2762de6f262f87a609"
+    },
+    {
+      "source": "ConvexBridge.lean",
+      "sha256": "9998452761a0d8a651fb846f9111946dbef3039f1007904bd40b4896f813218b",
+      "run": "real-convex-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.RealBridge.quad_real_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.signConvex_of_real": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.sorted_subset_sublist": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.real_of_signConvex": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.no_real_seven_subsequence": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.no_real_heptagon": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "seconds": 1.423,
+      "kernel_maxrss_kib": 1965740,
+      "sampled_peaks": {
+        "VmPeak": 2811208,
+        "VmSize": 2811208,
+        "VmHWM": 1955432,
+        "VmRSS": 1955432,
+        "RssAnon": 146756,
+        "RssFile": 1808676,
+        "VmSwap": 0,
+        "Threads": 6
+      },
+      "log_sha256": "25d4d1b93280357e4b4771d1061fb7b3b2a221c9190a393ee66b3f03fa31ae57",
+      "record_sha256": "22e1c8209301b328d135cd3ffd338ac7cb38f12eaeef274be748a99c5a7bf6d6"
+    },
+    {
+      "source": "TerminalReal.lean",
+      "sha256": "68b0a89e72b8b6f37c95e2b881deb97f58db515b1627a8bd2400ebc58adca70f",
+      "run": "real-terminal-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.RealBridge.cap_real_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.no_real_five_cap_subsequence": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.terminalSafe_of_real": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.hitsSix_of_real": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.no_real_terminal_selection": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "seconds": 1.383,
+      "kernel_maxrss_kib": 1973904,
+      "sampled_peaks": {
+        "VmPeak": 2819488,
+        "VmSize": 2819488,
+        "VmHWM": 1963660,
+        "VmRSS": 1963660,
+        "RssAnon": 149160,
+        "RssFile": 1814500,
+        "VmSwap": 0,
+        "Threads": 6
+      },
+      "log_sha256": "f0f8c88baffe8721c7778cdfb32f5016d37e80b04d9745188cdc8d01fa53ace9",
+      "record_sha256": "7e77f9c59f039220abbef3d98aeeec220437da9fea71e3f94d0e50a028016ab8"
+    },
+    {
+      "source": "PointSetBridge.lean",
+      "sha256": "acda2b96c228096ceefb9528cee7b5e2d77dc8196c127a8fcfa7e9ef276c6e32",
+      "run": "real-pointset-v2",
+      "axiom_reports": {
+        "Delta3.Balanced15.RealBridge.indices_strict": [
+          "propext"
+        ],
+        "Delta3.Balanced15.RealBridge.realCap_of_setCap": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.no_real_five_cap": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.realTerminalSafe_of_set": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.realHitsSix_of_set": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.no_real_subset_selection": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "seconds": 1.321,
+      "kernel_maxrss_kib": 1973016,
+      "sampled_peaks": {
+        "VmPeak": 2770380,
+        "VmSize": 2770380,
+        "VmHWM": 1962708,
+        "VmRSS": 1962708,
+        "RssAnon": 152496,
+        "RssFile": 1810212,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "log_sha256": "fb26f460fdaffe03fd2f3f474e4106bd04b7184d2114156816d2af2bf8543ae2",
+      "record_sha256": "59ac1bd032b5e1c35fd8966bc6408eb4bae1da7b47e50e445feb18cccaa8b919"
+    },
+    {
+      "source": "RealBalanced15.lean",
+      "sha256": "4e8f648678aae017c8356d0ed33cccffe891c9ee5f0ee9230448d8fb4b95cbfc",
+      "run": "real-balanced15-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.RealBridge.realSet_distinct_x": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.balanced15_real_obstruction": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.exists_real_terminal_obstruction": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "seconds": 1.18,
+      "kernel_maxrss_kib": 1959500,
+      "sampled_peaks": {
+        "VmPeak": 2770588,
+        "VmSize": 2770588,
+        "VmHWM": 1949308,
+        "VmRSS": 1949308,
+        "RssAnon": 142224,
+        "RssFile": 1807324,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "log_sha256": "f0efe43d96ba67634db97446cf483813e01c1fc026c928b645db76474182cfa4",
+      "record_sha256": "ba66d79e24005cdd76cc1899132ff848bf13da64ab3a4c31296eac5fc34a2064"
+    }
+  ],
+  "new_source_files": 6,
+  "new_axiom_audits": 31,
+  "standard_axioms_only": true,
+  "total_check_seconds": 7.52,
+  "kernel_peak_rss_kib": 1973904,
+  "prerequisite_sources": [
+    {
+      "source": "../FiniteModel.lean",
+      "sha256": "1d9d896fdc1513fceabbf2e54778f99d40bba4dea9f7a5f48271d151359fa5fb"
+    },
+    {
+      "source": "../FiniteFacts.lean",
+      "sha256": "abf08ab2d7c16bcca3ef4eb3b35ad9b7c0a2efac975fb69572b4e837c25a4bd9"
+    },
+    {
+      "source": "../Determinants.lean",
+      "sha256": "94cd9d9b8fb99d3b6857f2e9340fed3a590169d21f81fa3ae47101da28d01417"
+    },
+    {
+      "source": "../SevenBlock00.lean",
+      "sha256": "89514d07bccc0888e5e2b587ee5c8327b91c4c0dd386d9a7418878f2cf91be3f"
+    },
+    {
+      "source": "../SevenBlock01.lean",
+      "sha256": "af0d94a44ea231fe289e48a22f2915ba4563df2855ed857a21f0f2dabb350192"
+    },
+    {
+      "source": "../SevenBlock02.lean",
+      "sha256": "8d7d33f992958228af4d16ea19a5e251f15f3d89c0b54a16c4c68fa142cfee8c"
+    },
+    {
+      "source": "../SevenBlock03.lean",
+      "sha256": "6d786387865c35a67ac456b80fa696aba30e72c02d0725638bee19c9507d52a6"
+    },
+    {
+      "source": "../SevenBlock04.lean",
+      "sha256": "e9d92842c6e811aadb7ca494b815a9649fb70421d8af6c3c662bead285772b5c"
+    },
+    {
+      "source": "../SevenBlock05.lean",
+      "sha256": "d4063973cbdc0073117e3e810c3516cd5cd2a797ff371cf46c52ac4aad1afe4b"
+    },
+    {
+      "source": "../SevenBlock06.lean",
+      "sha256": "ce37d91c1c1ff993ef493c70c9023d4fee7a8f0d6bdfd18c6b7a5f7c2eee4bc3"
+    },
+    {
+      "source": "../SevenBlock07.lean",
+      "sha256": "25ab42e231acff2b29ba24758b993af02729fca2c4e9223d364845453aaafe10"
+    },
+    {
+      "source": "../SevenBlock08.lean",
+      "sha256": "edb0c3c915dd08a1582fe7853ea0d8cf49dbf4cae76c6f6c93f73197640bbf7f"
+    },
+    {
+      "source": "../SevenBlock09.lean",
+      "sha256": "f4042def22974c0f74dfe3481e6299d9662f34274a7b2a9a5790dda5ed519dc1"
+    },
+    {
+      "source": "../SevenBlock10.lean",
+      "sha256": "9d9ef39a066595836b72b5eecdb97a232f3a3e27b15def9654426ae0f0d4b562"
+    },
+    {
+      "source": "../SevenBlock11.lean",
+      "sha256": "225d8f6725e360b8cea67f2c510c799cec9849e0ceb34c8a5a6710c138b272f9"
+    },
+    {
+      "source": "../SevenBlock12.lean",
+      "sha256": "78f588563f24802c2fe00240ecd476c5d2463fe848d27449808a0c9bafe19e97"
+    },
+    {
+      "source": "../SevenCover00.lean",
+      "sha256": "5edc4828d13e1faf912af004a0ca1903e1c5096c06268f1b535c667db651538a"
+    },
+    {
+      "source": "../SevenCover01.lean",
+      "sha256": "07d8511757e89f1e74527d67656c28c86af6a7adf4fd5d7e830a7a24ce07e4ac"
+    },
+    {
+      "source": "../SevenCover02.lean",
+      "sha256": "53ef50b9a0873bc2b32687e77c8a7d3f26ff127f6c9340727e3c569ef2109267"
+    },
+    {
+      "source": "../SevenCover03.lean",
+      "sha256": "6d872b47eac04fca47039fcfe03488cf374bca65ba218807c6b45ac0126b65d1"
+    },
+    {
+      "source": "../SevenCover04.lean",
+      "sha256": "3f772b0a51f3034c2c65d412c50027d897896fa5917fa248043822449395310f"
+    },
+    {
+      "source": "../SevenCover05.lean",
+      "sha256": "fa4bd9d49033dad9373e5416aebde3c4be38037ad19f92e0a9554226268273b6"
+    },
+    {
+      "source": "../SevenCover06.lean",
+      "sha256": "5aed9e0a4ec44bacc125a591bccfa48fe2e8e771d34efa2d5ec02f8ffcd45b73"
+    },
+    {
+      "source": "../SevenCover07.lean",
+      "sha256": "71254fcb396d4b37a060b47c39c9eb02b63b950aa98735dcc77a77a8a3cceeae"
+    },
+    {
+      "source": "../SevenCover08.lean",
+      "sha256": "dba9e93914e1434971d40ab20f7b798b680e9a5b6fff86f134f7c4f16d3d31fc"
+    },
+    {
+      "source": "../SevenCover09.lean",
+      "sha256": "5ba7aa031d80396a3a554829cf77a4daa046fc55ef5fb860e18ee87f2750b92f"
+    },
+    {
+      "source": "../SevenCover10.lean",
+      "sha256": "49e729a89c72123c707acb0aceca50e158e45c4457bcc465b469dc95a59f9961"
+    },
+    {
+      "source": "../SevenCover11.lean",
+      "sha256": "53df7afbbee5dc6aba96dbccc2d215b097e9120c42ae6d03f51b7cd010220849"
+    },
+    {
+      "source": "../SevenCover12.lean",
+      "sha256": "7982f879dc0ca4066102ca12ca8819ea540f29d8bde65692faece3daeaf4c412"
+    },
+    {
+      "source": "../SevenAggregate.lean",
+      "sha256": "5785b0a7e78b105610f35f15edc2f81ed23d2fb2687fdf7fd26fffd5c6b6a2cb"
+    },
+    {
+      "source": "../SubsequenceFacts.lean",
+      "sha256": "9cd77f143b44dc0f532b52b8041c38981fd3c71cd373d4c6902094a380d0910d"
+    },
+    {
+      "source": "../../lean/Terminal15Boolean.lean",
+      "sha256": "cd50fd74384bea5a17d93ba9f15ce52762df8bf8c872e30fbe8c4780687d9463"
+    },
+    {
+      "source": "../TerminalBridge.lean",
+      "sha256": "c8b99bb4ecdd16d21d047db1ace03263e9963ea12756101f87e175f1d42ad54a"
+    },
+    {
+      "source": "../PredicateSemantics.lean",
+      "sha256": "bdb50db7f08961baad946c42beada19f5ff873a37c27543a227dd93c920ce8bf"
+    },
+    {
+      "source": "../Balanced15.lean",
+      "sha256": "6e94328f462c4c0f9ba7a98262a053dcebf12b94e5d6780f40bb6eb095548eee"
+    }
+  ],
+  "project_cache": [
+    {
+      "module": "ErdosSzekeres.IntegerCertificates",
+      "source_sha256": "a7bd9dd7343cb71d2601de76b9da8576806ed0020e6220117177c6a2119a7373",
+      "olean_sha256": "2b70d5a0c8cadcf1d922efdd70a82768e1de223fd3967c58cda6a02767d22864"
+    },
+    {
+      "module": "ErdosSzekeres.OrientationConvexity",
+      "source_sha256": "3ec9e93b8dc3c89b82dd444df9060596b8aaa6dcd428a7223d8c7bbc33f1e4e7",
+      "olean_sha256": "6ef762355302087f3a4b7806d03e6d47e03f65cd73be35d1befd41aa1f4da7c3"
+    },
+    {
+      "module": "ErdosSzekeres.Suk.FourPoint",
+      "source_sha256": "f3783fe9766f4d8fbe03143f5b5552e261d664dc371c1f1d467d6a9233ee9590",
+      "olean_sha256": "b9539d220abe18c60acfb845ad35f9cdfc3adac34c15115b657a2acaa10097d9"
+    },
+    {
+      "module": "ErdosSzekeres.OrientationGeometry",
+      "source_sha256": "c7db9bbbb65eb4cd9a60747d30875422c4ad8bc394a530fb23fc9583c9068413",
+      "olean_sha256": "c70441db6860bef283b5939a4a98fd7e227c7da4ce3844371a70886896ea2db3"
+    },
+    {
+      "module": "ErdosSzekeres.Basic",
+      "source_sha256": "13667aa2d3dc83efd803c807e3cc1b9f692361b7d4f7853919796c1e3d154dc4",
+      "olean_sha256": "48a2a3f9679b1fed6064449c44183e20a66321ff4c535336756af4cceb49c635"
+    }
+  ],
+  "runner_sha256": "cc9e53f87c557816b4caa7fd0b7995790dd60869ffa78846cb20bc7cdd8adbfd",
+  "replay_sha256": "28799aa9b3bb48d97b6c10be68b45e1ce20db2adb383d5a99415022e7a2fd1aa",
+  "resource_policy": {
+    "cpu": 1,
+    "affinity": [
+      4
+    ],
+    "lean_j": 1,
+    "lean_heap_mib": 1000,
+    "as_gib": 4,
+    "rss_guard_mib": 2000,
+    "long_unit_memorymax_mib": 2600,
+    "swap_mib": 0,
+    "short_wall_seconds": 27,
+    "long_unit_deadline_kst": "2026-11-14 08:20:00",
+    "owner_total_mib_unchanged": 6000
+  },
+  "failed_1300_probe": {
+    "run": "real-import-integer-1300",
+    "source": "ImportInteger.lean",
+    "source_sha256": "a72537c15bd2deab147d663771783247ae42f152fc86453299fa072ffac7f4eb",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "record_sha256": "2757d1749e219d424e961ea50fafee8626a307b98522bdadbe999e49d567a6b7",
+    "status": "controlled RSS stop, no OOM; excluded from proved files"
+  },
+  "successful_import_probe": "real-import-2000",
+  "excluded_probe_sources": [
+    "ImportInteger.lean",
+    "ImportReal.lean"
+  ],
+  "limits_of_claim": [
+    "terminal-pair membership, not envelope safety or the original Delta existence claim",
+    "cap is explicitly defined by real all-triple orientations, not imported HasCap",
+    "no minimality or 12-point theorem in this packet"
+  ],
+  "fresh_parent_real_replay_pending_at_freeze": true
+}

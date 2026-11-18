@@ -1,0 +1,160 @@
+{
+  "real-controls.json": {
+    "label": "COMPUTED exact integer positive controls",
+    "attempted": 240,
+    "accepted": 207,
+    "rejected_by_hypothesis": {
+      "six_cap": 26,
+      "convex_octagon": 7
+    },
+    "accepted_size_histogram": {
+      "1": 20,
+      "2": 20,
+      "3": 20,
+      "4": 20,
+      "5": 20,
+      "6": 20,
+      "7": 20,
+      "8": 16,
+      "9": 16,
+      "11": 16,
+      "10": 11,
+      "12": 8
+    },
+    "row_evaluations": 717048,
+    "rank_crosscheck": "exhaustive subsequences",
+    "base_sha256": "8c7fe9ef5264182524095d46ef50ed6bc691cab425efa965756d1870112241aa",
+    "pool_sha256": "91a4e36f31712231ed1386576d6dcbe846ddf6c1b0d4de41e225bbdb4a18bcf8",
+    "budget_note": "34-hole target omitted: small real sets have many more holes"
+  },
+  "s20-v2/real-controls.json": {
+    "label": "COMPUTED exact integer positive controls",
+    "attempted": 240,
+    "accepted": 207,
+    "rejected_by_hypothesis": {
+      "six_cap": 26,
+      "convex_octagon": 7
+    },
+    "accepted_size_histogram": {
+      "1": 20,
+      "2": 20,
+      "3": 20,
+      "4": 20,
+      "5": 20,
+      "6": 20,
+      "7": 20,
+      "8": 16,
+      "9": 16,
+      "11": 16,
+      "10": 11,
+      "12": 8
+    },
+    "row_evaluations": 718497,
+    "rank_crosscheck": "exhaustive subsequences",
+    "base_sha256": "8c7fe9ef5264182524095d46ef50ed6bc691cab425efa965756d1870112241aa",
+    "pool_sha256": "d3a819094d66a5075e23139b6844c57045fd57aba82b1f336bfde50d7063b9b8",
+    "budget_note": "34-hole target omitted: small real sets have many more holes"
+  },
+  "s20-v3/real-controls.json": {
+    "label": "COMPUTED exact integer positive controls",
+    "attempted": 240,
+    "accepted": 207,
+    "rejected_by_hypothesis": {
+      "six_cap": 26,
+      "convex_octagon": 7
+    },
+    "accepted_size_histogram": {
+      "1": 20,
+      "2": 20,
+      "3": 20,
+      "4": 20,
+      "5": 20,
+      "6": 20,
+      "7": 20,
+      "8": 16,
+      "9": 16,
+      "11": 16,
+      "10": 11,
+      "12": 8
+    },
+    "row_evaluations": 746856,
+    "rank_crosscheck": "exhaustive subsequences",
+    "base_sha256": "8c7fe9ef5264182524095d46ef50ed6bc691cab425efa965756d1870112241aa",
+    "pool_sha256": "ec317b82a1af85a876669cee1d9abe8091003bb929d1b60c776b556739026c12",
+    "budget_note": "34-hole target omitted: small real sets have many more holes"
+  },
+  "provisional-nine/real-controls.json": {
+    "label": "COMPUTED exact integer positive controls",
+    "attempted": 240,
+    "accepted": 207,
+    "rejected_by_hypothesis": {
+      "six_cap": 26,
+      "convex_octagon": 7
+    },
+    "accepted_size_histogram": {
+      "1": 20,
+      "2": 20,
+      "3": 20,
+      "4": 20,
+      "5": 20,
+      "6": 20,
+      "7": 20,
+      "8": 16,
+      "9": 16,
+      "11": 16,
+      "10": 11,
+      "12": 8
+    },
+    "row_evaluations": 2162529,
+    "rank_crosscheck": "exhaustive subsequences",
+    "base_sha256": "8c7fe9ef5264182524095d46ef50ed6bc691cab425efa965756d1870112241aa",
+    "pool_sha256": "e1398421cc4e78199a29db5800677b09e8b75ee1e36a3210152cef8a980fa731",
+    "budget_note": "34-hole target omitted: small real sets have many more holes"
+  },
+  "s20-v5/real-controls.json": {
+    "label": "COMPUTED exact integer positive controls",
+    "attempted": 240,
+    "accepted": 207,
+    "rejected_by_hypothesis": {
+      "six_cap": 26,
+      "convex_octagon": 7
+    },
+    "accepted_size_histogram": {
+      "1": 20,
+      "2": 20,
+      "3": 20,
+      "4": 20,
+      "5": 20,
+      "6": 20,
+      "7": 20,
+      "8": 16,
+      "9": 16,
+      "11": 16,
+      "10": 11,
+      "12": 8
+    },
+    "row_evaluations": 749961,
+    "rank_crosscheck": "exhaustive subsequences",
+    "base_sha256": "8c7fe9ef5264182524095d46ef50ed6bc691cab425efa965756d1870112241aa",
+    "pool_sha256": "83d5f6e90b6bc1e1b04b07861ec2b12306b862b38b27ea4fd5f733d2391dac60",
+    "budget_note": "34-hole target omitted: small real sets have many more holes"
+  },
+  "s20-v5/real-controls-larger.json": {
+    "label": "COMPUTED exact integer positive controls",
+    "attempted": 64,
+    "accepted": 7,
+    "rejected_by_hypothesis": {
+      "six_cap": 46,
+      "convex_octagon": 11
+    },
+    "accepted_size_histogram": {
+      "13": 5,
+      "14": 2
+    },
+    "row_evaluations": 25361,
+    "rank_crosscheck": "exhaustive subsequences",
+    "base_sha256": "8c7fe9ef5264182524095d46ef50ed6bc691cab425efa965756d1870112241aa",
+    "pool_sha256": "83d5f6e90b6bc1e1b04b07861ec2b12306b862b38b27ea4fd5f733d2391dac60",
+    "budget_note": "34-hole target omitted: small real sets have many more holes"
+  }
+}

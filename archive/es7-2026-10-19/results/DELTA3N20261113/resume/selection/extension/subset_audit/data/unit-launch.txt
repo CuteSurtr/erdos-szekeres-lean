@@ -1,0 +1,8 @@
+ActiveState=active
+SubState=running
+RuntimeMaxUSec=20min
+ExecStart={ path=/usr/bin/prlimit ; argv[]=/usr/bin/prlimit --as=314572800 --cpu=1180 /usr/bin/taskset -c 5 /usr/bin/python3 -B /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/subset_audit/tools/run_audit.py ; ignore_errors=no ; start_time=[Sat 2026-11-14 05:19:00 KST] ; stop_time=[n/a] ; pid=840348 ; code=(null) ; status=0/0 }
+CPUQuotaPerSecUSec=1s
+MemoryMax=524288000
+MemorySwapMax=0
+WorkingDirectory=/home/jay/research/data/delta3-codex-20261113/extension/subset-audit

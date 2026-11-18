@@ -1,0 +1,74 @@
+{
+  "P": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      -2
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      4,
+      0
+    ]
+  ],
+  "label": "COMPUTED",
+  "m": 5,
+  "n": 6,
+  "results": [
+    {
+      "cnf": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/compact/tiny_examples/missed_gon-new.cnf",
+      "delta_mask": 0,
+      "encoder": "new",
+      "name": "missed_gon",
+      "sat": true
+    },
+    {
+      "cnf": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/compact/tiny_examples/missed_gon-old.cnf",
+      "delta_mask": 0,
+      "encoder": "old",
+      "name": "missed_gon",
+      "sat": true
+    },
+    {
+      "cnf": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/compact/tiny_examples/working_delta-new.cnf",
+      "delta_mask": 1,
+      "encoder": "new",
+      "name": "working_delta",
+      "sat": false
+    },
+    {
+      "cnf": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/compact/tiny_examples/working_delta-old.cnf",
+      "delta_mask": 1,
+      "encoder": "old",
+      "name": "working_delta",
+      "sat": false
+    },
+    {
+      "cnf": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/compact/tiny_examples/fourcap_delta-new.cnf",
+      "delta_mask": 27,
+      "encoder": "new",
+      "name": "fourcap_delta",
+      "sat": true
+    },
+    {
+      "cnf": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/compact/tiny_examples/fourcap_delta-old.cnf",
+      "delta_mask": 27,
+      "encoder": "old",
+      "name": "fourcap_delta",
+      "sat": true
+    }
+  ],
+  "signs": "---++-++--",
+  "statement": "Individual Delta-failure queries, not full counterexample formulas",
+  "status": "PASS"
+}

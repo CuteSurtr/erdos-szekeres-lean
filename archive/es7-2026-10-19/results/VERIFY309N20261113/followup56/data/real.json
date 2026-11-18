@@ -1,0 +1,173 @@
+{
+  "label": "COMPUTED",
+  "result": "ZERO VIOLATIONS",
+  "sets_including_reflections": 32,
+  "row_evaluations": 216800,
+  "tight_rows": 2622,
+  "states_seen": 64,
+  "full_sb_clause_evaluations": 1264,
+  "details": [
+    {
+      "points": 50,
+      "cap": 5,
+      "cup": 5,
+      "polygon": 7,
+      "mirror_cap": 5,
+      "mirror_cup": 5,
+      "chosen_original": true,
+      "holes": 20
+    },
+    {
+      "points": 50,
+      "cap": 5,
+      "cup": 5,
+      "polygon": 7,
+      "mirror_cap": 5,
+      "mirror_cup": 5,
+      "chosen_original": true,
+      "holes": 20
+    },
+    {
+      "points": 50,
+      "cap": 5,
+      "cup": 5,
+      "polygon": 7,
+      "mirror_cap": 5,
+      "mirror_cup": 5,
+      "chosen_original": false,
+      "holes": 20
+    },
+    {
+      "points": 50,
+      "cap": 5,
+      "cup": 5,
+      "polygon": 7,
+      "mirror_cap": 5,
+      "mirror_cup": 5,
+      "chosen_original": true,
+      "holes": 20
+    },
+    {
+      "points": 8,
+      "cap": 4,
+      "cup": 4,
+      "polygon": 5,
+      "mirror_cap": 4,
+      "mirror_cup": 4,
+      "chosen_original": false,
+      "holes": 62
+    },
+    {
+      "points": 16,
+      "cap": 5,
+      "cup": 4,
+      "polygon": 7,
+      "mirror_cap": 4,
+      "mirror_cup": 5,
+      "chosen_original": false,
+      "holes": 54
+    },
+    {
+      "points": 24,
+      "cap": 5,
+      "cup": 5,
+      "polygon": 7,
+      "mirror_cap": 5,
+      "mirror_cup": 5,
+      "chosen_original": false,
+      "holes": 46
+    },
+    {
+      "points": 8,
+      "cap": 4,
+      "cup": 4,
+      "polygon": 5,
+      "mirror_cap": 4,
+      "mirror_cup": 4,
+      "chosen_original": true,
+      "holes": 62
+    },
+    {
+      "points": 16,
+      "cap": 5,
+      "cup": 5,
+      "polygon": 7,
+      "mirror_cap": 5,
+      "mirror_cup": 5,
+      "chosen_original": true,
+      "holes": 54
+    },
+    {
+      "points": 24,
+      "cap": 5,
+      "cup": 5,
+      "polygon": 7,
+      "mirror_cap": 5,
+      "mirror_cup": 5,
+      "chosen_original": false,
+      "holes": 46
+    },
+    {
+      "points": 8,
+      "cap": 4,
+      "cup": 4,
+      "polygon": 5,
+      "mirror_cap": 4,
+      "mirror_cup": 4,
+      "chosen_original": false,
+      "holes": 62
+    },
+    {
+      "points": 16,
+      "cap": 5,
+      "cup": 4,
+      "polygon": 7,
+      "mirror_cap": 4,
+      "mirror_cup": 5,
+      "chosen_original": false,
+      "holes": 54
+    },
+    {
+      "points": 24,
+      "cap": 5,
+      "cup": 5,
+      "polygon": 7,
+      "mirror_cap": 5,
+      "mirror_cup": 5,
+      "chosen_original": false,
+      "holes": 46
+    },
+    {
+      "points": 8,
+      "cap": 4,
+      "cup": 4,
+      "polygon": 5,
+      "mirror_cap": 4,
+      "mirror_cup": 4,
+      "chosen_original": false,
+      "holes": 62
+    },
+    {
+      "points": 16,
+      "cap": 5,
+      "cup": 5,
+      "polygon": 7,
+      "mirror_cap": 5,
+      "mirror_cup": 5,
+      "chosen_original": false,
+      "holes": 54
+    },
+    {
+      "points": 24,
+      "cap": 5,
+      "cup": 5,
+      "polygon": 7,
+      "mirror_cap": 5,
+      "mirror_cup": 5,
+      "chosen_original": true,
+      "holes": 46
+    }
+  ],
+  "fixture_sha256": "1ada93d2ac4998e4c8345633de424014e1c906237fe6d94ec1586d6282b047f7",
+  "limitation": "These real sets have at least 20 holes; the budget-13 counter is not a positive control."
+}

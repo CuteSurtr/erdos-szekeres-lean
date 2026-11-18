@@ -1,0 +1,701 @@
+{
+  "status": "PASS",
+  "label": "COMPUTED exact structural diagnostic",
+  "P": [
+    [
+      0,
+      0
+    ],
+    [
+      37,
+      -35
+    ],
+    [
+      38,
+      -248
+    ],
+    [
+      84,
+      -270
+    ],
+    [
+      472,
+      -427
+    ],
+    [
+      653,
+      -757
+    ],
+    [
+      665,
+      -793
+    ],
+    [
+      666,
+      -717
+    ],
+    [
+      683,
+      -718
+    ],
+    [
+      736,
+      -567
+    ],
+    [
+      926,
+      -895
+    ],
+    [
+      1000,
+      0
+    ]
+  ],
+  "n": 6,
+  "m": 12,
+  "maxima": {
+    "cap": 4,
+    "cup": 5,
+    "gon": 5
+  },
+  "counts": {
+    "fourcaps": 14,
+    "terminal_bad_triples": 44,
+    "pentagons": 134
+  },
+  "beta": [
+    1,
+    2,
+    2,
+    3,
+    4,
+    3,
+    3,
+    4,
+    4,
+    5,
+    4,
+    5
+  ],
+  "cuts": [
+    {
+      "cut": 1,
+      "left_maxcup": 1,
+      "right_maxcup": 5,
+      "failures": {
+        "high": {
+          "triple": [
+            0,
+            1,
+            4
+          ],
+          "determinant": 721,
+          "expected_sign": -1
+        },
+        "low": {
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "determinant": -7846,
+          "expected_sign": 1
+        },
+        "all_cup": {
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "determinant": -7846,
+          "expected_sign": 1
+        }
+      }
+    },
+    {
+      "cut": 2,
+      "left_maxcup": 2,
+      "right_maxcup": 4,
+      "failures": {
+        "high": {
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "determinant": -7846,
+          "expected_sign": 1
+        },
+        "low": {
+          "triple": [
+            0,
+            1,
+            4
+          ],
+          "determinant": 721,
+          "expected_sign": -1
+        },
+        "all_cup": {
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "determinant": -7846,
+          "expected_sign": 1
+        }
+      }
+    },
+    {
+      "cut": 3,
+      "left_maxcup": 2,
+      "right_maxcup": 4,
+      "failures": {
+        "high": {
+          "triple": [
+            0,
+            1,
+            3
+          ],
+          "determinant": -7050,
+          "expected_sign": 1
+        },
+        "low": {
+          "triple": [
+            0,
+            1,
+            4
+          ],
+          "determinant": 721,
+          "expected_sign": -1
+        },
+        "all_cup": {
+          "triple": [
+            0,
+            1,
+            3
+          ],
+          "determinant": -7050,
+          "expected_sign": 1
+        }
+      }
+    },
+    {
+      "cut": 4,
+      "left_maxcup": 3,
+      "right_maxcup": 4,
+      "failures": {
+        "high": {
+          "triple": [
+            0,
+            1,
+            5
+          ],
+          "determinant": -5154,
+          "expected_sign": 1
+        },
+        "low": {
+          "triple": [
+            0,
+            1,
+            4
+          ],
+          "determinant": 721,
+          "expected_sign": -1
+        },
+        "all_cup": {
+          "triple": [
+            0,
+            1,
+            5
+          ],
+          "determinant": -5154,
+          "expected_sign": 1
+        }
+      }
+    },
+    {
+      "cut": 5,
+      "left_maxcup": 4,
+      "right_maxcup": 4,
+      "failures": {
+        "high": {
+          "triple": [
+            0,
+            1,
+            5
+          ],
+          "determinant": -5154,
+          "expected_sign": 1
+        },
+        "low": {
+          "triple": [
+            0,
+            1,
+            9
+          ],
+          "determinant": 4781,
+          "expected_sign": -1
+        },
+        "all_cup": {
+          "triple": [
+            0,
+            1,
+            5
+          ],
+          "determinant": -5154,
+          "expected_sign": 1
+        }
+      }
+    },
+    {
+      "cut": 6,
+      "left_maxcup": 4,
+      "right_maxcup": 3,
+      "failures": {
+        "high": {
+          "triple": [
+            0,
+            1,
+            6
+          ],
+          "determinant": -6066,
+          "expected_sign": 1
+        },
+        "low": {
+          "triple": [
+            0,
+            1,
+            9
+          ],
+          "determinant": 4781,
+          "expected_sign": -1
+        },
+        "all_cup": {
+          "triple": [
+            0,
+            1,
+            6
+          ],
+          "determinant": -6066,
+          "expected_sign": 1
+        }
+      }
+    },
+    {
+      "cut": 7,
+      "left_maxcup": 4,
+      "right_maxcup": 3,
+      "failures": {
+        "high": {
+          "triple": [
+            0,
+            1,
+            7
+          ],
+          "determinant": -3219,
+          "expected_sign": 1
+        },
+        "low": {
+          "triple": [
+            0,
+            1,
+            9
+          ],
+          "determinant": 4781,
+          "expected_sign": -1
+        },
+        "all_cup": {
+          "triple": [
+            0,
+            1,
+            7
+          ],
+          "determinant": -3219,
+          "expected_sign": 1
+        }
+      }
+    },
+    {
+      "cut": 8,
+      "left_maxcup": 4,
+      "right_maxcup": 3,
+      "failures": {
+        "high": {
+          "triple": [
+            0,
+            1,
+            8
+          ],
+          "determinant": -2661,
+          "expected_sign": 1
+        },
+        "low": {
+          "triple": [
+            0,
+            1,
+            9
+          ],
+          "determinant": 4781,
+          "expected_sign": -1
+        },
+        "all_cup": {
+          "triple": [
+            0,
+            1,
+            8
+          ],
+          "determinant": -2661,
+          "expected_sign": 1
+        }
+      }
+    },
+    {
+      "cut": 9,
+      "left_maxcup": 4,
+      "right_maxcup": 3,
+      "failures": {
+        "high": {
+          "triple": [
+            0,
+            1,
+            10
+          ],
+          "determinant": -705,
+          "expected_sign": 1
+        },
+        "low": {
+          "triple": [
+            0,
+            1,
+            9
+          ],
+          "determinant": 4781,
+          "expected_sign": -1
+        },
+        "all_cup": {
+          "triple": [
+            0,
+            1,
+            10
+          ],
+          "determinant": -705,
+          "expected_sign": 1
+        }
+      }
+    },
+    {
+      "cut": 10,
+      "left_maxcup": 5,
+      "right_maxcup": 2,
+      "failures": {
+        "high": {
+          "triple": [
+            0,
+            1,
+            10
+          ],
+          "determinant": -705,
+          "expected_sign": 1
+        },
+        "low": {
+          "triple": [
+            0,
+            1,
+            11
+          ],
+          "determinant": 35000,
+          "expected_sign": -1
+        },
+        "all_cup": {
+          "triple": [
+            0,
+            1,
+            10
+          ],
+          "determinant": -705,
+          "expected_sign": 1
+        }
+      }
+    },
+    {
+      "cut": 11,
+      "left_maxcup": 5,
+      "right_maxcup": 1,
+      "failures": {
+        "high": {
+          "triple": [
+            5,
+            7,
+            11
+          ],
+          "determinant": -4039,
+          "expected_sign": 1
+        },
+        "low": {
+          "triple": [
+            0,
+            1,
+            11
+          ],
+          "determinant": 35000,
+          "expected_sign": -1
+        },
+        "all_cup": {
+          "triple": [
+            5,
+            7,
+            11
+          ],
+          "determinant": -4039,
+          "expected_sign": 1
+        }
+      }
+    }
+  ],
+  "admitted_cuts": {
+    "high": [],
+    "low": [],
+    "all_cup": []
+  },
+  "prescribed_rank_profiles": {
+    "level_3": {
+      "A": [
+        3,
+        5,
+        6
+      ],
+      "missed_target_count": 27,
+      "one_missed_target": [
+        0,
+        1,
+        2,
+        7,
+        8
+      ],
+      "selected_fourcaps": [],
+      "selected_unprotected_cap_triples": [],
+      "complement_maxgon": 5,
+      "terminal_safe_delta": false
+    },
+    "level_4": {
+      "A": [
+        4,
+        7,
+        8,
+        10
+      ],
+      "missed_target_count": 4,
+      "one_missed_target": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "selected_fourcaps": [],
+      "selected_unprotected_cap_triples": [],
+      "complement_maxgon": 5,
+      "terminal_safe_delta": false
+    },
+    "level_5": {
+      "A": [
+        9,
+        11
+      ],
+      "missed_target_count": 61,
+      "one_missed_target": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "selected_fourcaps": [],
+      "selected_unprotected_cap_triples": [],
+      "complement_maxgon": 5,
+      "terminal_safe_delta": false
+    },
+    "levels_4_5": {
+      "A": [
+        4,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "missed_target_count": 2,
+      "one_missed_target": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "selected_fourcaps": [],
+      "selected_unprotected_cap_triples": [],
+      "complement_maxgon": 5,
+      "terminal_safe_delta": false
+    },
+    "levels_3_4_5": {
+      "A": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "missed_target_count": 0,
+      "one_missed_target": null,
+      "selected_fourcaps": [
+        [
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          3,
+          4,
+          9,
+          10
+        ],
+        [
+          5,
+          7,
+          8,
+          10
+        ],
+        [
+          5,
+          7,
+          9,
+          10
+        ],
+        [
+          6,
+          7,
+          8,
+          10
+        ],
+        [
+          6,
+          7,
+          9,
+          10
+        ],
+        [
+          6,
+          8,
+          9,
+          10
+        ],
+        [
+          6,
+          8,
+          9,
+          11
+        ]
+      ],
+      "selected_unprotected_cap_triples": [
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          3,
+          4,
+          6
+        ],
+        [
+          3,
+          4,
+          7
+        ],
+        [
+          3,
+          4,
+          8
+        ],
+        [
+          3,
+          4,
+          9
+        ],
+        [
+          3,
+          4,
+          10
+        ],
+        [
+          5,
+          7,
+          8
+        ],
+        [
+          5,
+          7,
+          9
+        ],
+        [
+          5,
+          7,
+          10
+        ],
+        [
+          5,
+          7,
+          11
+        ],
+        [
+          6,
+          7,
+          8
+        ],
+        [
+          6,
+          7,
+          9
+        ],
+        [
+          6,
+          7,
+          10
+        ],
+        [
+          6,
+          7,
+          11
+        ],
+        [
+          6,
+          8,
+          9
+        ],
+        [
+          6,
+          8,
+          11
+        ]
+      ],
+      "complement_maxgon": 3,
+      "terminal_safe_delta": false
+    }
+  },
+  "source_path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/terminal12/data/3/points.txt",
+  "source_sha256": "02ad4ff66594c2e67a282e19d376b9f950bf4975638f504db3af547ac7e1d8aa",
+  "code_sha256": "428ec18cf188bedcb41b807800ea5697570ba48b47d989e3800f15149656102d",
+  "helpers": {
+    "verify_structure2.py": "9f2debbd5ba79160130bd348699d12dc53db18af86dca7099302d16430475904",
+    "highsplit_controls.py": "e62f0dc2a57fb1fedefba8285ff0ab00cc2b60b3f052774868d4f2206f1e380a"
+  },
+  "elapsed_seconds": 0.006167778003145941,
+  "peak_rss_kib": 18216,
+  "scope": "No membership-model enumeration, fresh certificate replay, global minimality claim, or uniform-selection test."
+}

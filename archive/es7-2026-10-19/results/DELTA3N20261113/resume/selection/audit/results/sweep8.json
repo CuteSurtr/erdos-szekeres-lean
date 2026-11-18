@@ -1,0 +1,137 @@
+{
+  "cake_replay_performed": false,
+  "cases": [
+    {
+      "checked_hashes": {
+        "cadical.log": "9dc4b157a0f41323cec0c77fddce1be465f3d2d0168464bac0faa0eef6e4c436",
+        "cake.log": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+        "input.cnf": "016cf084fa2b04da3be485b7dda114c20fa3277fb5ff335313aea66537a21690",
+        "proof.lrat": "b14103cf6ff01378f46b9f918b79be4dd11c398c6093add3dd30afa709d3a99f",
+        "proof.lrat.zst": "c5a31348be06cdaa86d1ac18f937858ab56f0da261c827c4759858697fcb019b"
+      },
+      "clauses": 7689,
+      "independently_reconstructed_child": true,
+      "independently_replayed_cake": false,
+      "m": 10,
+      "n": 8,
+      "parent_status": "UNSAT_CERTIFIED",
+      "proof_bytes": 8016,
+      "rooted_masks": 120,
+      "unknown_trace_hashes_checked": null
+    },
+    {
+      "checked_hashes": {
+        "cadical.log": "d26220045614ef3add0c1935a850f3e1e42c7c591db7c43dbb4eee910820e812",
+        "cake.log": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+        "input.cnf": "d075a91fdc2ee78e5f33e9366b233f00cbab2ff8ff713636f73b576f8c3451f9",
+        "proof.lrat": "e6cba251f679e1b4aff5d0a76d9c34e510c88cfd089c43ab6328975d48659f14",
+        "proof.lrat.zst": "7285a4bba82e1d79e99053f17826f8ea110454756ca55f0c47817c8a80835a06"
+      },
+      "clauses": 15093,
+      "independently_reconstructed_child": true,
+      "independently_replayed_cake": false,
+      "m": 11,
+      "n": 8,
+      "parent_status": "UNSAT_CERTIFIED",
+      "proof_bytes": 7507,
+      "rooted_masks": 375,
+      "unknown_trace_hashes_checked": null
+    },
+    {
+      "checked_hashes": {
+        "cadical.log": "40c219931529eca437c65d684f74b24bb9bc9d4c164e941a3c83095c65c7228e",
+        "cake.log": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+        "input.cnf": "bf47c22750a8628ca531cfad87f2927ab5cc5693ce47a40167347aca5d5e351e",
+        "proof.lrat": "6891fa97bf27958d57b985ef8bdc64c3d7aca1399a1cc8ef404247978fc7bac7",
+        "proof.lrat.zst": "1f353d8bea3511ba2e3de15e46dc6729387a62672397012c8019259847f70179"
+      },
+      "clauses": 28688,
+      "independently_reconstructed_child": true,
+      "independently_replayed_cake": false,
+      "m": 12,
+      "n": 8,
+      "parent_status": "UNSAT_CERTIFIED",
+      "proof_bytes": 155921,
+      "rooted_masks": 1012,
+      "unknown_trace_hashes_checked": null
+    },
+    {
+      "checked_hashes": {
+        "cadical.log": "515a80a800bf7fcc9f602315d42cff9f9adf4c933041d1168ae3393822f8557b",
+        "cake.log": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+        "input.cnf": "8f872321fd5c79605a7c3abcc79c00cc350a869264302dffecbb6f4702d9179a",
+        "proof.lrat": "c516791ffa2dac69e13b85077c809a67a550055f54f166f7d9022418e6e783e6",
+        "proof.lrat.zst": "b6a24857cf04bbb37b11dcaeffd624fd09ebf2f34f34fe851ea58302ca819eda"
+      },
+      "clauses": 53262,
+      "independently_reconstructed_child": true,
+      "independently_replayed_cake": false,
+      "m": 13,
+      "n": 8,
+      "parent_status": "UNSAT_CERTIFIED",
+      "proof_bytes": 18362173,
+      "rooted_masks": 2497,
+      "unknown_trace_hashes_checked": null
+    },
+    {
+      "checked_hashes": {
+        "cadical.log": "62c7c1b8c6b0e14c6e8d3b79d4b1037a715aa7a4304078544fec8e9c6bac4db7",
+        "cake.log": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+        "input.cnf": "9f7a01563020724231d722a8d22bfccdbbfcb63d41ca365b041d07c2fd804d6b",
+        "proof.lrat": "dad9ab032c04f78fa103b1c3a821d869d2e1dc49fc8e7bc49488d237fc3ab5ef",
+        "proof.lrat.zst": "7e0514be91723a1710a57854faec8fe04c5756126d46e58fb6324ea8de6774f5"
+      },
+      "clauses": 97253,
+      "independently_reconstructed_child": true,
+      "independently_replayed_cake": false,
+      "m": 14,
+      "n": 8,
+      "parent_status": "UNSAT_CERTIFIED",
+      "proof_bytes": 125405699,
+      "rooted_masks": 5798,
+      "unknown_trace_hashes_checked": null
+    },
+    {
+      "checked_hashes": {
+        "cadical.log": "5c6e65a9e0f44146466a6782ab0cb89acfa99f1d0839b1349e32087e88bb4f6b",
+        "input.cnf": "0431ee406c69ea716bf2aa2babcaa292599c3a4de3fe0a5c8ed127874ac7b324"
+      },
+      "clauses": 175708,
+      "independently_reconstructed_child": true,
+      "independently_replayed_cake": false,
+      "m": 15,
+      "n": 8,
+      "parent_status": "UNKNOWN",
+      "proof_bytes": 390378359,
+      "rooted_masks": 12896,
+      "unknown_trace_hashes_checked": false
+    },
+    {
+      "checked_hashes": {
+        "cadical.log": "e83f366ec33aef9fafeece49b9f8c04841983694136e1fad7add3eab25fc1f8d",
+        "input.cnf": "563c890154e0fc094fc2cff5854e5f689b997c8f82a2312ed8826927b980c24f"
+      },
+      "clauses": 315902,
+      "independently_reconstructed_child": true,
+      "independently_replayed_cake": false,
+      "m": 16,
+      "n": 8,
+      "parent_status": "UNKNOWN",
+      "proof_bytes": 356623184,
+      "rooted_masks": 27808,
+      "unknown_trace_hashes_checked": false
+    }
+  ],
+  "checker_sha256": "062a31fbb13be80407d4b50a4f46a2ab4855beef874953a3e450533c55e463c1",
+  "elapsed_seconds": 0.49686122500133933,
+  "frozen_compact_sha256": "1964e17b777fd7b7a973f12b2911c003a050047f13a621f523a9f98c6e31d553",
+  "frozen_filter_sha256": "4a7166006b769549f6d8b3150c2f1fec79a346673201d0e416f1d68fdd833a25",
+  "label": "COMPUTED",
+  "limits": {
+    "as_mib": 400,
+    "external_seconds": 20,
+    "one_cpu": true
+  },
+  "n": 8,
+  "status": "PARENT_LOGS_HASHES_FILTERS_CONFIRMED"
+}

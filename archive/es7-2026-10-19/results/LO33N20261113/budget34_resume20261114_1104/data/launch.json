@@ -1,0 +1,31 @@
+{
+  "command": [
+    "/home/jay/research/data/es308-20261114/bin/fastbb2",
+    "solve",
+    "/home/jay/research/data/es308-20261114/inputs/s20-v5/rows.txt",
+    "34",
+    "12",
+    "2048",
+    "/home/jay/research/data/es308-resume-20261114-1104/bb",
+    "--slice=1",
+    "--split-open=1",
+    "--on-witness=stop",
+    "--time-limit=300",
+    "--max-ctx-nodes=50000",
+    "--ktop=16",
+    "--dtop=8",
+    "--klow=4",
+    "--sbiter=1000"
+  ],
+  "input_hashes": {
+    "/home/jay/research/data/es308-20261114/inputs/s20-v5/rows.txt": "8d8c970f37b99309e94a7a8b06537024fe7264abfe8c2af501c6f0cf6b463fb0",
+    "/home/jay/research/data/es308-20261114/inputs/s20-v5/extra.json": "e6601e5edcddfcc653a0891eef63d8010a6dd303431d312515fa8e8e03618126",
+    "/home/jay/research/data/es308-20261114/inputs/source-2650.json.gz": "8c7fe9ef5264182524095d46ef50ed6bc691cab425efa965756d1870112241aa",
+    "/home/jay/research/data/es308-20261114/bin/fastbb2": "39b724a2b5f5b08b56f3e9aedb24886c08ae2716301008410aaba9a1452b33b5",
+    "/home/jay/research/data/es308-20261114/runs/s20/bb/master.json": "ab1b3b888c376011c0b8587f19fbf9989d76c56f444f8d46bdfacaef637339ad",
+    "/home/jay/research/data/es308-20261114/runs/s20/bb/master.txt": "fa27d72341ea09366f9a42f0e954c688dc3aad17f618e67d8f8a875135fc5ced",
+    "/home/jay/research/data/es308-20261114/runs/s20/bb/contexts.json": "a07119ef452042e00b3f7eaca628522aa3a2cbb411fef1ae99cdb58eea099b28"
+  },
+  "runner_sha256": "693e742c9472ca46551b05020d563c9e103dd5fba8c40b99171a0e177f3d2f84",
+  "absolute_stop": "2026-11-14T11:11:20+09:00"
+}

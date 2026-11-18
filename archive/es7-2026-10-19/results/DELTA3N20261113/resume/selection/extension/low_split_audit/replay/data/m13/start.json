@@ -1,0 +1,18 @@
+{
+  "started": "2026-11-13T22:17:00.178310+00:00",
+  "pid": 893630,
+  "affinity": [
+    5
+  ],
+  "limits": "Limit                     Soft Limit           Hard Limit           Units     \nMax cpu time              19                   19                   seconds   \nMax file size             unlimited            unlimited            bytes     \nMax data size             unlimited            unlimited            bytes     \nMax stack size            8388608              unlimited            bytes     \nMax core file size        0                    unlimited            bytes     \nMax resident set          unlimited            unlimited            bytes     \nMax processes             243364               243364               processes \nMax open files            4096                 524288               files     \nMax locked memory         8388608              8388608              bytes     \nMax address space         314572800            314572800            bytes     \nMax file locks            unlimited            unlimited            locks     \nMax pending signals       243364               243364               signals   \nMax msgqueue size         819200               819200               bytes     \nMax nice priority         0                    0                    \nMax realtime priority     0                    0                    \nMax realtime timeout      unlimited            unlimited            us        \n",
+  "cgroup": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/ptyxis-spawn-2629d4c4-9d0a-4cec-9e68-37e0607e2bca.scope",
+  "memory": null,
+  "AS_MiB": 300,
+  "heap_MiB": 128,
+  "stack_MiB": 32,
+  "CPU_count": 1,
+  "cake_wall_seconds": 17,
+  "hash_cache_release_bytes": 67108864,
+  "cache_release_period_seconds": 1,
+  "monitor_period_seconds": 0.1
+}

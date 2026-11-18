@@ -1,0 +1,156 @@
+{
+  "counts": {
+    "boundary_localization_instances": 1356,
+    "configurations_checked_including_reflections": 1358,
+    "extreme_point_theorem_instances": 456,
+    "extreme_theorem_instances_with_convex_k_plus_1_gon": 2,
+    "extreme_theorem_instances_with_k_cups_present": 384,
+    "missed_lower_chains_localized_with_multiplicity": 5572,
+    "old_real_inputs": 10,
+    "parabolic_extension_inputs": 5,
+    "real_configurations_including_reflections": 34,
+    "recorded_abstract_inputs": 662,
+    "target_polygons_examined": 16914,
+    "terminal_lemma_instances": 528
+  },
+  "elapsed_seconds": 0.157743,
+  "extreme_theorem_delta_sizes": {
+    "k=3,size=2": 1,
+    "k=4,size=1": 36,
+    "k=4,size=2": 153,
+    "k=4,size=3": 260,
+    "k=5,size=2": 3,
+    "k=5,size=3": 1,
+    "k=6,size=2": 1,
+    "k=7,size=2": 1
+  },
+  "input_sha256": {
+    "cex/must_cupRL_strong_a4_n6_m8.json": "66b892e4071a1818908ad99e49f365f8e73aa402e15e55d5457d6f27764d6213",
+    "cex/must_cupRL_strong_a4_n6_m9.json": "e6ced83ca29e726655851a23aad8f02173d33dd37ee4ccc78e6f29be86cbe5fd",
+    "cex/must_cupR_strong_a4_n6_m9.json": "5d36e928ade2a1289296ed823f558d7812b081b8f9dbea28c3f3ef76867c8f8d",
+    "cex/must_gonRQ_strong_a4_n6_m8.json": "d35b233fba530ea5c65fbda734b347bad80c883c050af46b30f61bba5727c5c3",
+    "cex/must_gonRQ_strong_a4_n6_m9.json": "5decb2eb88d7dcaf27c2b3b61c4625122993325a84c545200a8bfafa86937cbb",
+    "cex/restr_QQ_strong_a4_n6_m10.json": "26c202d951469a49bacbf61eeafb00ce191b537e6444d0c9ea59d2a9a9905295",
+    "cex/restr_QQ_weak_a4_n6_m11_real.json": "a6690423ab44c1d9994593d197361b8f39828c8be8d16e539f59bb9db676a5f7",
+    "cex/restr_Q_strong_a4_n5_m7.json": "4dd0e3b8c2b112b7c493645c61720082fc55eaff81a9826398b2621f1e712944",
+    "cex/threshold1_a4_n6_m9.json": "7c429af21bad334c6a8101d456e10f8327f61ce6e85b8b93e20d1aadc2e33454",
+    "cex/upperchain_strong_a4_n6_m10.json": "198f369801b6df2d72041fbc57ab0e0b86667d7b52233fe89a6442e5f6ce0080",
+    "enum_a4_n5_m5_strong.jsonl": "fc576801650fb7576292eb5e63ef4564a9d1a6ac46e06788d61205c6211e9386",
+    "enum_a4_n5_m6_strong.jsonl": "a12676ca2181f17083388590c0d59ca95dfd469ddcc893ecffd5d2b935a1edcb",
+    "enum_a4_n5_m7_strong.jsonl": "2c4646ee3e14d79e32cefd8e75e222ee135d55698ff6f047778cc7c9121a38b2"
+  },
+  "label": "COMPUTED; bounded controls, not a universal or UNSAT certificate",
+  "method": "direct subset enumeration; exact hulls for real inputs; no old code imported",
+  "status": "PASS",
+  "trimming_obstruction": {
+    "alternative_smaller_cup_side_transversal": [
+      0,
+      1,
+      3
+    ],
+    "convex_pentagons": 0,
+    "convex_quadrilaterals": 17,
+    "four_caps": 0,
+    "inclusion_minimal_cup_side_transversal": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "label": "COMPUTED (exact integer arithmetic and exhaustive subsets)",
+    "negative_triples": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        3,
+        5
+      ],
+      [
+        1,
+        4,
+        5
+      ],
+      [
+        2,
+        3,
+        5
+      ],
+      [
+        2,
+        4,
+        5
+      ],
+      [
+        3,
+        4,
+        5
+      ],
+      [
+        3,
+        4,
+        6
+      ]
+    ],
+    "points": [
+      [
+        -500,
+        -530
+      ],
+      [
+        10,
+        0
+      ],
+      [
+        20,
+        10
+      ],
+      [
+        30,
+        40
+      ],
+      [
+        40,
+        90
+      ],
+      [
+        100,
+        162
+      ],
+      [
+        110,
+        405
+      ]
+    ],
+    "private_four_cups": [
+      [
+        0,
+        1,
+        5,
+        6
+      ],
+      [
+        0,
+        2,
+        5,
+        6
+      ],
+      [
+        0,
+        3,
+        5,
+        6
+      ],
+      [
+        0,
+        4,
+        5,
+        6
+      ]
+    ],
+    "signs": "-+++++++++++++++++++-+-+++-+-++--++"
+  }
+}

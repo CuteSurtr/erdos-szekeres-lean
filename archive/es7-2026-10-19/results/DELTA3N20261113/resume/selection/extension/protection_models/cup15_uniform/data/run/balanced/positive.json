@@ -1,0 +1,212 @@
+{
+  "A": [
+    1,
+    3,
+    5,
+    8
+  ],
+  "P": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      -221460
+    ],
+    [
+      2,
+      -442918
+    ],
+    [
+      2968,
+      -348410
+    ],
+    [
+      2969,
+      -348377
+    ],
+    [
+      3996,
+      -336483786
+    ],
+    [
+      3997,
+      -336449790
+    ],
+    [
+      3998,
+      -885384713
+    ],
+    [
+      13872,
+      -1352412
+    ],
+    [
+      13873,
+      -3565377386
+    ],
+    [
+      13876,
+      -3072936024
+    ],
+    [
+      13877,
+      -3073212992
+    ],
+    [
+      13878,
+      -815223
+    ],
+    [
+      13894,
+      -256
+    ],
+    [
+      13902,
+      0
+    ]
+  ],
+  "certificates": [
+    {
+      "line_certificate": {
+        "cap_triples": [
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            1,
+            3,
+            5
+          ],
+          [
+            2,
+            3,
+            5
+          ]
+        ],
+        "cup_support_pairs": [],
+        "forced_support_pairs": [
+          [
+            12,
+            14
+          ],
+          [
+            13,
+            14
+          ]
+        ],
+        "height_difference": "436687609369/634533",
+        "pair": [
+          3,
+          5
+        ],
+        "protected": {
+          "cup": false,
+          "forced": true,
+          "terminal": false,
+          "uniform": true
+        },
+        "query_line": {
+          "height_at_max_x": "-918915591666/257",
+          "slope": "-84033844/257"
+        },
+        "safe": true,
+        "slope_difference": "20962793/634533",
+        "supports": [
+          {
+            "fourcap": [
+              0,
+              3,
+              6,
+              9
+            ],
+            "height_at_max_x": "-8826326491105/2469",
+            "slope": "-807231899/2469",
+            "tail_pair": [
+              6,
+              9
+            ],
+            "weight": "1"
+          }
+        ]
+      },
+      "triple": [
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "line_certificate": {
+        "cap_triples": [
+          [
+            1,
+            3,
+            8
+          ],
+          [
+            2,
+            3,
+            8
+          ]
+        ],
+        "cup_support_pairs": [],
+        "forced_support_pairs": [
+          [
+            12,
+            14
+          ],
+          [
+            13,
+            14
+          ]
+        ],
+        "height_difference": "3694205127/2726",
+        "pair": [
+          3,
+          8
+        ],
+        "protected": {
+          "cup": false,
+          "forced": true,
+          "terminal": false,
+          "uniform": true
+        },
+        "query_line": {
+          "height_at_max_x": "-3694205127/2726",
+          "slope": "-502001/5452"
+        },
+        "safe": true,
+        "slope_difference": "371386985/10904",
+        "supports": [
+          {
+            "fourcap": [
+              5,
+              6,
+              12,
+              14
+            ],
+            "height_at_max_x": "0",
+            "slope": "271741/8",
+            "tail_pair": [
+              12,
+              14
+            ],
+            "weight": "1"
+          }
+        ]
+      },
+      "triple": [
+        1,
+        3,
+        8
+      ]
+    }
+  ],
+  "mask": 298,
+  "n": 7,
+  "name": "balanced"
+}

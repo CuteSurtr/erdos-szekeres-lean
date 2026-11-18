@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "label": "COMPUTED",
+  "arbitrary_cap_End3_subset_comparisons": 1048576,
+  "arbitrary_target_subset_comparisons": 16384,
+  "End3_gate_truth_cases": 2200,
+  "all_relative_leaf_cover_checks": 22502,
+  "mutations": {
+    "three_children_lose_cap3": true,
+    "six_children_lose_six_target": true,
+    "positive_End3_pair_alias_is_wrong_when_End3_false": true,
+    "first_selected_End3_must_be_exempt": true,
+    "one_way_End3_allows_false_flag_despite_true_cap_child": true
+  },
+  "scope": "Boolean D/T equivalence does not assume realizability or no-four-cap.",
+  "peak_rss_KiB": 20692,
+  "limits": {
+    "AS_MiB": 300,
+    "CPU_count": 1,
+    "wall_seconds": 20,
+    "CPU_seconds": 19
+  }
+}

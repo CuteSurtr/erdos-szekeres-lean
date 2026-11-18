@@ -1,0 +1,9 @@
+d6fc98d836b0e4b103cdd49a19534fb44cfc0bfe95a37a6fb4890a2149cc200a  run/lad_sl_N40.cnf
+2f19525f18a36ba8b317ba7536fb10574b6326920286ff158f93839db98f3b5d  run/lad_sl_N40.lrat
+lrat_bytes=621019339
+recheck Fri Nov 13 06:33:35 PM KST 2026
+d6fc98d836b0e4b103cdd49a19534fb44cfc0bfe95a37a6fb4890a2149cc200a  run/lad_sl_N40.cnf
+2f19525f18a36ba8b317ba7536fb10574b6326920286ff158f93839db98f3b5d  run/lad_sl_N40.lrat
+recheck2 heap=2600 Fri Nov 13 06:38:34 PM KST 2026
+s VERIFIED UNSAT
+exit=0 cake_wall=20 Fri Nov 13 06:38:54 PM KST 2026

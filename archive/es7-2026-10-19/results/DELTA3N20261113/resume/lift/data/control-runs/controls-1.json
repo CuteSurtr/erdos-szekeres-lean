@@ -1,0 +1,63 @@
+{
+  "controls": {
+    "exhaustive_embedding": {
+      "accepted": 5120,
+      "checks": 10240,
+      "cnf_sha256": "fcfd45d030fab832198b36103634054efc6ce21a76af51d8f664e23e376cda86",
+      "invalid_selector_cases_rejected": 3,
+      "rejected": 5120
+    },
+    "integer_parabola_all_gaps": {
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          16
+        ],
+        [
+          5,
+          25
+        ],
+        [
+          6,
+          36
+        ]
+      ],
+      "cnf_sha256": "001632e93ae10a56840124a420c67847447c2bc5d6d755c5c9345ced6a49745c",
+      "embeddings": 35,
+      "minimum_abs_determinant": 2
+    },
+    "original_exact_geometry": {
+      "convex_ngons": 0,
+      "first_delta": null,
+      "fivecaps": 0,
+      "fourcaps": 80,
+      "minimum_abs_determinant": 70172849827134,
+      "source_sha256": "1e8b43136d096abb2deaea14743ed62a52ff622a991dd2fbbcb7140a15593b04",
+      "target_polygons": 216,
+      "targets": 103,
+      "valid": true,
+      "working_deltas": 0
+    }
+  },
+  "elapsed_seconds": 0.305,
+  "error": "ValueError('collinear triple')",
+  "label": "COMPUTED",
+  "max_rss_kib": 21812,
+  "status": "FAILED"
+}

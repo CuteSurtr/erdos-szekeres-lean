@@ -1,0 +1,106 @@
+{
+  "all_size_claim": false,
+  "certified_instances": [
+    {
+      "m": 9,
+      "n": 7
+    },
+    {
+      "m": 10,
+      "n": 7
+    },
+    {
+      "m": 11,
+      "n": 7
+    },
+    {
+      "m": 12,
+      "n": 7
+    },
+    {
+      "m": 13,
+      "n": 7
+    },
+    {
+      "m": 10,
+      "n": 8
+    },
+    {
+      "m": 11,
+      "n": 8
+    },
+    {
+      "m": 12,
+      "n": 8
+    },
+    {
+      "m": 13,
+      "n": 8
+    },
+    {
+      "m": 14,
+      "n": 8
+    }
+  ],
+  "control_status": "PASS",
+  "filtered_unknown_instances": [
+    {
+      "m": 14,
+      "n": 7
+    },
+    {
+      "m": 15,
+      "n": 7
+    },
+    {
+      "m": 16,
+      "n": 7
+    },
+    {
+      "m": 15,
+      "n": 8
+    },
+    {
+      "m": 16,
+      "n": 8
+    }
+  ],
+  "finder_invalid_premise_cases": 4,
+  "finder_valid_cases": 14,
+  "future_outcomes": "SEPARATE_RESULT_LEVEL_REVIEW_REQUIRED",
+  "independent_cake_replays": 10,
+  "metadata_correction_completed": true,
+  "out_of_scope": [
+    "terminal",
+    "repair"
+  ],
+  "parent_reported_fast_unknown_instances": [
+    {
+      "m": 14,
+      "n": 7,
+      "seconds": 300
+    },
+    {
+      "m": 15,
+      "n": 8,
+      "seconds": 300
+    }
+  ],
+  "proof_reruns_for_metadata_correction": 0,
+  "recorded_utc": "2026-11-13T16:23:42.865692+00:00",
+  "replay_allocation": "Parent reserved 800 MiB within owner's existing 6000 MiB track; owner-level caps unchanged.",
+  "requested_work_pending": [],
+  "required_real_cases": [
+    "n7m16",
+    "n8m16"
+  ],
+  "scope": "resume/selection/audit only",
+  "specialized_projection_queries": 2907,
+  "status": "COMPLETE_FROZEN",
+  "written_arguments": [
+    "rooted_filter_projection",
+    "root_preserving_range",
+    "rooted_lazy_finder_layer",
+    "specialized_rooted_projection"
+  ]
+}

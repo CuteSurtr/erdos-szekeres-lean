@@ -1,0 +1,24 @@
+{
+  "label": "CERTIFIED",
+  "version": "v2",
+  "rows": 7,
+  "own_encoder_matches": 7,
+  "fresh_cake_acceptances": 7,
+  "old_witness_exact_row_check": "PASS (3464 rows, 34 holes, F20,Lo14,state0 occupied)",
+  "all_rows_cut_old_witness": true,
+  "accepted_sha256": "ebc7d97738acca7d8b96502883f4781635128ca4d4fcb50efb2882ec3dcc5033",
+  "replay_sha256": "198002d8317c2b2276cba94addccfe0fec51e2dcc3736c5ef5050c7686bbf58b",
+  "input_sha256": {
+    "/home/jay/research/data/es308-20261114/cuts-v2/accepted.json": "ebc7d97738acca7d8b96502883f4781635128ca4d4fcb50efb2882ec3dcc5033",
+    "/home/jay/research/data/es308-20261114/candidates-v2.json": "ae10991d7d121ba52a885441b0b0199836c7bba91087d7a88ce2f435ebc6645e",
+    "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-residual32-rank-global-2026-10-10/source-2650.json.gz": "8c7fe9ef5264182524095d46ef50ed6bc691cab425efa965756d1870112241aa",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/audit_new_rows.py": "89b23f1de975d41a1941503f2a62974786782760a726764875d7c64afbd5c645",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/audit/residual_encoder.py": "db7b2deba4ae55ff50f25d1e52843734591f5e7d1339a53e45e8811866e7365c",
+    "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54"
+  },
+  "seconds": 2.513,
+  "finished_local": "2026-11-14T10:20:36.570589+09:00",
+  "scope": "Additional rows only; no finite exclusion or ES bound follows from these rows alone",
+  "parent_maxrss_kib": 71512,
+  "child_maxrss_kib": 412824
+}

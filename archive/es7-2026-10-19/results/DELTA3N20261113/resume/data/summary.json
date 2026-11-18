@@ -1,0 +1,181 @@
+{
+  "completed_utc": "2026-11-13T15:34:47.627997+00:00",
+  "weak_D57": "OPEN",
+  "weak_D58": "OPEN",
+  "all_new_units_finished": true,
+  "new_units_guard_stops": 0,
+  "outcomes": {
+    "compact_n7_m16": {
+      "cnf": "/home/jay/research/data/delta3-codex-20261113/resume/compact/n7m16-final.cnf",
+      "commands": [
+        [
+          "/usr/bin/timeout",
+          "--kill-after=2",
+          "903",
+          "/usr/bin/cadical",
+          "-t",
+          "900",
+          "--lrat=true",
+          "--binary=false",
+          "/home/jay/research/data/delta3-codex-20261113/resume/compact/n7m16-final.cnf",
+          "/home/jay/research/data/delta3-codex-20261113/resume/compact/scheduled-n7m16/proof.lrat"
+        ],
+        [
+          "/usr/bin/timeout",
+          "--kill-after=2",
+          "180",
+          "/usr/bin/zstd",
+          "-q",
+          "-T1",
+          "-3",
+          "-k",
+          "/home/jay/research/data/delta3-codex-20261113/resume/compact/scheduled-n7m16/proof.lrat"
+        ]
+      ],
+      "compressed_bytes": 900553314,
+      "compressed_roundtrip_verified": true,
+      "hashes": {
+        "cadical": "4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70",
+        "cadical.log": "c42f81fb5e1a6168fd8a6ebfae1e290ab1a9df4b06df8193ea3251ffb66ca236",
+        "cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+        "input.cnf": "642c2e5d94dc2c98a1bc72a49e0976207762cb0a2e952167ff8135846a64ca07",
+        "proof.lrat": "690442a74cae50128a09df5c9ea1470a1cdfdfed4e6911d07c7932551eaa6684",
+        "proof.lrat.zst": "5a03cb70449943fa35eecc62723f39cfaf6e92719610f28b6f0c97274e5b7e3f",
+        "run_cnf.py": "e3c8d9413f99b3092a4ea760f08265bc30bb93204074a3fa566bc2f0c3b3f4b8"
+      },
+      "label": "COMPUTED",
+      "limits": {
+        "as_mib": 1000,
+        "cake_seconds": 300,
+        "cnf": "/home/jay/research/data/delta3-codex-20261113/resume/compact/n7m16-final.cnf",
+        "heap": 800,
+        "out": "/home/jay/research/data/delta3-codex-20261113/resume/compact/scheduled-n7m16",
+        "seconds": 900,
+        "sha256": "642c2e5d94dc2c98a1bc72a49e0976207762cb0a2e952167ff8135846a64ca07"
+      },
+      "proof_bytes": 3650642732,
+      "runs": {
+        "cadical": {
+          "exit": 0,
+          "seconds": 900.061
+        },
+        "compress": {
+          "exit": 0,
+          "seconds": 10.576
+        }
+      },
+      "seconds": 920.48,
+      "status": "UNKNOWN"
+    },
+    "pool_n7_m16": {
+      "as_mib": 900,
+      "base_clauses": 446670,
+      "batch": 128,
+      "calls": 318,
+      "elapsed_seconds": 901.12,
+      "final_cnf_sha256": "98d69a5edd96d51fbda084028c63d218510e9ff6a458a81fcb30ca1ced76ec03",
+      "iterations": 3,
+      "label": "COMPUTED",
+      "m": 16,
+      "n": 7,
+      "pool_size": 767,
+      "seconds_limit": 900,
+      "seed": 701,
+      "solver": "PySAT CaDiCaL 1.9.5 (finder only)",
+      "source": "/home/jay/research/data/delta3-codex-20261113/encoder/direct-weak-n7-m16/result.json",
+      "source_cnf_sha256": "6bc7690369f19b2a908f6adbc0b4b9a23f67de8e8c4cf41482670a835e6df425",
+      "source_result_sha256": "74f7c56ca0555b37f76731755b027144f5e9617e182e74be9bfa8407c6832bcd",
+      "source_script_sha256": "0e1700be00d4fbf93f2965f3ff3caf1a5ccbd9b4c966f3ff04ec5322b1995c30",
+      "status": "UNKNOWN",
+      "variables": 125870
+    },
+    "compact_n8_m16": {
+      "cnf": "/home/jay/research/data/delta3-codex-20261113/resume/compact/n8m16-final.cnf",
+      "commands": [
+        [
+          "/usr/bin/timeout",
+          "--kill-after=2",
+          "903",
+          "/usr/bin/cadical",
+          "-t",
+          "900",
+          "--lrat=true",
+          "--binary=false",
+          "/home/jay/research/data/delta3-codex-20261113/resume/compact/n8m16-final.cnf",
+          "/home/jay/research/data/delta3-codex-20261113/resume/compact/scheduled-n8m16/proof.lrat"
+        ],
+        [
+          "/usr/bin/timeout",
+          "--kill-after=2",
+          "180",
+          "/usr/bin/zstd",
+          "-q",
+          "-T1",
+          "-3",
+          "-k",
+          "/home/jay/research/data/delta3-codex-20261113/resume/compact/scheduled-n8m16/proof.lrat"
+        ]
+      ],
+      "compressed_bytes": 892838286,
+      "compressed_roundtrip_verified": true,
+      "hashes": {
+        "cadical": "4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70",
+        "cadical.log": "8a0076d2b43b35f5b6718fbdaa78b000670f9ce1f3a091dc6076226860df9530",
+        "cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+        "input.cnf": "37e8a9ba5ddec0907580ec0f846ba7dd65846d1ef71c9573db824880d3b18a07",
+        "proof.lrat": "c78c1ac721bcd01de12e5f3cf3c412792ea12a6ccc47506c96876794735c825f",
+        "proof.lrat.zst": "5479b3ad6cda1153cdfa2a2a22e9592c86dec98143f04d6706947b3b947d3074",
+        "run_cnf.py": "e3c8d9413f99b3092a4ea760f08265bc30bb93204074a3fa566bc2f0c3b3f4b8"
+      },
+      "label": "COMPUTED",
+      "limits": {
+        "as_mib": 1000,
+        "cake_seconds": 300,
+        "cnf": "/home/jay/research/data/delta3-codex-20261113/resume/compact/n8m16-final.cnf",
+        "heap": 800,
+        "out": "/home/jay/research/data/delta3-codex-20261113/resume/compact/scheduled-n8m16",
+        "seconds": 900,
+        "sha256": "37e8a9ba5ddec0907580ec0f846ba7dd65846d1ef71c9573db824880d3b18a07"
+      },
+      "proof_bytes": 3451029679,
+      "runs": {
+        "cadical": {
+          "exit": 0,
+          "seconds": 900.079
+        },
+        "compress": {
+          "exit": 0,
+          "seconds": 10.176
+        }
+      },
+      "seconds": 919.671,
+      "status": "UNKNOWN"
+    },
+    "pool_n8_m16": {
+      "as_mib": 1200,
+      "base_clauses": 815610,
+      "batch": 128,
+      "calls": 254,
+      "elapsed_seconds": 901.198,
+      "final_cnf_sha256": "8d026714b22e7ac2d04792e19b5217d9665cfd2f5d74e52d7812bc87eca2db9c",
+      "iterations": 2,
+      "label": "COMPUTED",
+      "m": 16,
+      "n": 8,
+      "pool_size": 511,
+      "seconds_limit": 900,
+      "seed": 801,
+      "solver": "PySAT CaDiCaL 1.9.5 (finder only)",
+      "source": "/home/jay/research/data/delta3-codex-20261113/encoder/direct-weak-n8-m16/result.json",
+      "source_cnf_sha256": "56b09f02c0c3c116ebee2b3778372d5b9d2a7d9312ff2f53eaa1cca287c55eca",
+      "source_result_sha256": "2eafd251916d6029f81da11f5fc7efc6f5376575a7761077f946746e0672747d",
+      "source_script_sha256": "0e1700be00d4fbf93f2965f3ff3caf1a5ccbd9b4c966f3ff04ec5322b1995c30",
+      "status": "UNKNOWN",
+      "variables": 117862
+    }
+  },
+  "extra_n66_fresh_solve": "UNKNOWN",
+  "n66_retained_main_replay": "CERTIFIED",
+  "proof_deletions": 0,
+  "git_mutations": false
+}

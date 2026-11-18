@@ -1,0 +1,28 @@
+{
+  "status": "AUDIT_COMPLETE",
+  "labels": {
+    "projection": "PROVED",
+    "rows_and_controls": "COMPUTED"
+  },
+  "finished": "2026-11-13T21:19:59.791674+00:00",
+  "cup": {
+    "variables": 69673,
+    "clauses": 193880,
+    "new_rows": 114554
+  },
+  "forced": {
+    "variables": 18563,
+    "clauses": 68079,
+    "new_rows": 35618
+  },
+  "old_cap_family_required": true,
+  "five_children_required": true,
+  "two_support_h5_stays_bad": true,
+  "no_ambient_size_monotonicity": true,
+  "no_finite_theorem": true,
+  "parent_forced13_status": "UNKNOWN",
+  "parent_cup15_status_at_handoff": "SOLVING",
+  "protection_certificate_replayed": false,
+  "separate_exact13_replay": "CERTIFIED; allocation released",
+  "original_frozen_formula_files_unchanged": true
+}

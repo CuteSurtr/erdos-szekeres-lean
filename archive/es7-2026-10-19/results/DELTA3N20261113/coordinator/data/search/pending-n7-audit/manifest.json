@@ -1,0 +1,33 @@
+{
+  "label": "COMPUTED",
+  "command": [
+    "/home/jay/research/data/delta3-codex-20261113/search/delta_search_v1",
+    "check",
+    "--out",
+    "/home/jay/research/data/delta3-codex-20261113/search/pending-n7-audit",
+    "--input",
+    "/home/jay/research/data/delta3-codex-20261113/search/pending-n7-audit/input.points",
+    "--a",
+    "5",
+    "--n",
+    "7",
+    "--mode",
+    "lower",
+    "--time-ms",
+    "2000",
+    "--node-limit",
+    "2000000",
+    "--clause-limit",
+    "1000000",
+    "--round-limit",
+    "10000"
+  ],
+  "memory_mb": 512,
+  "threads": 1,
+  "engine_sha256": "7cdf13a7d1a99be7a48fadcea2931342489079edc0ace21637c30a664f4dea9d",
+  "source_sha256": "aa9445486c53db9a9217f35a14678fc3b64c7f7d212496932070c263932f1608",
+  "input_sha256": "9f6ef10464f6865119b726ca852be214c683ae092929408b730b6aafe753e6b6",
+  "started_unix": 1794579765.1941612,
+  "exit": 0,
+  "wall_seconds": 0.0017056789984053466
+}

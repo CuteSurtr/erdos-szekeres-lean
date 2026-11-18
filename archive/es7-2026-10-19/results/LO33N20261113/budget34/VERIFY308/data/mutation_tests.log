@@ -1,0 +1,25 @@
+OK  positive_control                       expected=pass got=EXACT TREE rc=0 
+OK  ctx_leaf_weights_emptied               expected=reject got=NOT CONFIRMED rc=1 ctx 577: node 5: margin -2200000 < 1 at M={12,19,27,49,57,70,72,75,76,93,111,123}
+OK  ctx_duplicate_row_in_weights           expected=reject got=NOT CONFIRMED rc=1 ctx 577: node 5: duplicate row 20
+OK  ctx_float_weight                       expected=reject got=NOT CONFIRMED rc=1 ctx 577: JSON: non-integer number at byte 470
+OK  ctx_header_missing_changed             expected=reject got=NOT CONFIRMED rc=1 ctx 577: missing set {12,19,27,49,70,75,93,153} != placeholder M {12,19,27,49,70,75,93}
+OK  ctx_header_id_changed                  expected=reject got=NOT CONFIRMED rc=1 ctx 577: context field 578 != placeholder id
+OK  ctx_truncated_gzip                     expected=reject got=NOT CONFIRMED rc=1 ctx 577: gzip error in /home/jay/research/data/verify308-20261114/tests/ctx_truncated_gzip/ctx-577.json.gz: /h
+OK  ctx_pending_leaf                       expected=reject got=NOT CONFIRMED rc=1 ctx 577: node 5: pending leaf at M={12,19,27,49,57,70,72,75,76,93,111,123}
+OK  ctx_file_removed                       expected=reject got=NOT CONFIRMED rc=1 missing ctx file for id 0
+OK  ctx_file_extra                         expected=reject got=NOT CONFIRMED rc=1 ctx file without placeholder: 999999
+OK  master_branch_on_fixed_vertex          expected=reject got=NOT CONFIRMED rc=1 master: contexts field 4296 != placeholders 0
+OK  master_child_shared                    expected=reject got=NOT CONFIRMED rc=1 master: contexts field 4296 != placeholders 2609
+OK  master_fake_over_budget                expected=reject got=NOT CONFIRMED rc=1 master tree: node 28: over_budget leaf with |M|=3
+OK  master_pending_leaf                    expected=reject got=NOT CONFIRMED rc=1 master tree: node 28: pending leaf at M={20,33,153}
+OK  master_contexts_field_off              expected=reject got=NOT CONFIRMED rc=1 master: contexts field 4297 != placeholders 4296
+OK  master_budget_35                       expected=reject got=NOT CONFIRMED rc=1 master: budget != 34
+OK  master_extra_path_mismatch             expected=reject got=NOT CONFIRMED rc=1 master: extra field differs from the extra.json used
+OK  master_negative_capacity               expected=reject got=NOT CONFIRMED rc=1 master tree: node 28: negative capacity
+OK  master_negative_weight                 expected=reject got=NOT CONFIRMED rc=1 master tree: node 28: negative weight
+OK  master_row_out_of_range                expected=reject got=NOT CONFIRMED rc=1 master tree: node 28: row index out of range 1000000
+OK  master_duplicate_key                   expected=reject got=NOT CONFIRMED rc=1 master: JSON: duplicate top-level key 'budget' at byte 180
+OK  rows_Lo_demand_minus_1                 expected=reject got=NOT CONFIRMED rc=1 ctx 0: node 12: margin -71338 < 1 at M={}
+OK  rows_F_demand_minus_1                  expected=pass got=EXACT TREE rc=0 
+OK  rows_F_demand_plus_1_still_valid       expected=pass got=EXACT TREE rc=0 
+ALL CONTROLS BEHAVED AS EXPECTED

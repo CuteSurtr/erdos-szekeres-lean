@@ -1,0 +1,41 @@
+{
+  "time": "2026-11-14T04:12:42.559221+09:00",
+  "track_manifests_verified": {
+    "theory": {
+      "sha256": "cb4d949d6b6ca85ff4394adfa4c035d37ac29f7b8731929695027ce6934cf9e2",
+      "files": 4,
+      "mismatches": []
+    },
+    "envelope": {
+      "sha256": "310fcf301a66cdbc4e7b77ad97fc3770b717d7deeb14abd9610b3314eb390011",
+      "files": 34,
+      "mismatches": []
+    },
+    "audit": {
+      "sha256": "1469aeb4a73b18d0afbc5366287562d2b06eea9be2d2df0a54227d0acc289dd8",
+      "files": 35,
+      "mismatches": []
+    }
+  },
+  "old_selection_expected_changes": {
+    "files": 480,
+    "mismatches": [
+      "README.md"
+    ]
+  },
+  "old_DELTA3_expected_changes": {
+    "files": 915,
+    "mismatches": [
+      "README.md",
+      "VERIFY_DELTA3.md",
+      "resume/selection/README.md"
+    ]
+  },
+  "relative_links_checked": 29,
+  "branch": "es7-night-2026-11-01",
+  "protected_root_diff": "empty",
+  "running_verifier_units": "",
+  "workers": "All three completed and closed.",
+  "memory": "               total        used        free      shared  buff/cache   available\nMem:           60887       13663        1129         312       46612       47224\nSwap:           8191           0        8191\n",
+  "guard": "Retained for unrelated active n66 jobs."
+}

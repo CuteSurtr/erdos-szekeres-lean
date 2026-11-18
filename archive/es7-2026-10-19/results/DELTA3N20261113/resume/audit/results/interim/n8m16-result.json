@@ -1,0 +1,20 @@
+{
+  "as_mib": 1200,
+  "base_clauses": 815610,
+  "batch": 128,
+  "calls": 87,
+  "elapsed_seconds": 265.47,
+  "iterations": 2,
+  "label": "COMPUTED",
+  "m": 16,
+  "n": 8,
+  "pool_size": 511,
+  "seconds_limit": 900,
+  "seed": 801,
+  "solver": "PySAT CaDiCaL 1.9.5 (finder only)",
+  "source": "/home/jay/research/data/delta3-codex-20261113/encoder/direct-weak-n8-m16/result.json",
+  "source_cnf_sha256": "56b09f02c0c3c116ebee2b3778372d5b9d2a7d9312ff2f53eaa1cca287c55eca",
+  "source_result_sha256": "2eafd251916d6029f81da11f5fc7efc6f5376575a7761077f946746e0672747d",
+  "status": "SEARCHING",
+  "variables": 117862
+}

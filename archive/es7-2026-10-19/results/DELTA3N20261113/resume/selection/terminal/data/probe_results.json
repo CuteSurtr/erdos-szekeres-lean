@@ -1,0 +1,8871 @@
+[
+  {
+    "stem": "E4-n7",
+    "encode_exit": 0,
+    "m": 15,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 5,
+    "cap4": 72,
+    "bad3": 70,
+    "polygons": 0,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "seconds": 0.0070706650003558025
+  },
+  {
+    "stem": "E4-n8",
+    "encode_exit": 0,
+    "m": 15,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 5,
+    "cap4": 72,
+    "bad3": 70,
+    "polygons": 0,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "seconds": 0.0061073840042809024
+  },
+  {
+    "stem": "compact7-n7",
+    "encode_exit": 0,
+    "m": 16,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 71,
+    "bad3": 116,
+    "polygons": 279,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        10,
+        11,
+        12,
+        13,
+        15
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "exit": 10
+    },
+    "seconds": 0.00867681499948958
+  },
+  {
+    "stem": "compact7-n8",
+    "encode_exit": 0,
+    "m": 16,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 71,
+    "bad3": 116,
+    "polygons": 0,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "seconds": 0.006339788000332192
+  },
+  {
+    "stem": "compact8-n7",
+    "encode_exit": 0,
+    "m": 16,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 174,
+    "bad3": 61,
+    "polygons": 348,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        7,
+        8,
+        12,
+        13,
+        14,
+        15
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "exit": 10
+    },
+    "seconds": 0.008585581002989784
+  },
+  {
+    "stem": "compact8-n8",
+    "encode_exit": 0,
+    "m": 16,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 174,
+    "bad3": 61,
+    "polygons": 0,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "seconds": 0.0072532339981989935
+  },
+  {
+    "stem": "cup15-n7",
+    "encode_exit": 0,
+    "m": 15,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 5,
+    "cap4": 80,
+    "bad3": 94,
+    "polygons": 0,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "seconds": 0.006856226005766075
+  },
+  {
+    "stem": "cup15-n8",
+    "encode_exit": 0,
+    "m": 15,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 5,
+    "cap4": 80,
+    "bad3": 94,
+    "polygons": 0,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "seconds": 0.006845314004749525
+  },
+  {
+    "stem": "diverse-0000-n7",
+    "encode_exit": 0,
+    "m": 16,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 71,
+    "bad3": 116,
+    "polygons": 279,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        10,
+        11,
+        12,
+        13,
+        15
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "exit": 10
+    },
+    "seconds": 0.010506571998121217
+  },
+  {
+    "stem": "diverse-0001-n7",
+    "encode_exit": 0,
+    "m": 26,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 2001,
+    "bad3": 392,
+    "polygons": 9632,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        5,
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "exit": 10
+    },
+    "seconds": 0.05239947699737968
+  },
+  {
+    "stem": "diverse-0002-n7",
+    "encode_exit": 0,
+    "m": 22,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 255,
+    "bad3": 283,
+    "polygons": 3551,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        5,
+        9,
+        13,
+        14,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14
+      ],
+      "exit": 10
+    },
+    "seconds": 0.02490174800186651
+  },
+  {
+    "stem": "diverse-0003-n7",
+    "encode_exit": 0,
+    "m": 23,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 341,
+    "bad3": 306,
+    "polygons": 3630,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        6,
+        8,
+        14,
+        15,
+        16,
+        17,
+        19,
+        20,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        12,
+        13,
+        18,
+        19
+      ],
+      "exit": 10
+    },
+    "seconds": 0.022025218997441698
+  },
+  {
+    "stem": "diverse-0004-n7",
+    "encode_exit": 0,
+    "m": 24,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 774,
+    "bad3": 475,
+    "polygons": 4728,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        7,
+        11,
+        12,
+        15,
+        17,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        7,
+        11,
+        12,
+        15,
+        17,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "seconds": 0.02852622499631252
+  },
+  {
+    "stem": "diverse-0005-n7",
+    "encode_exit": 0,
+    "m": 24,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 287,
+    "bad3": 329,
+    "polygons": 3329,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        8,
+        11,
+        15,
+        17,
+        18,
+        19,
+        20,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        8,
+        11,
+        15,
+        17,
+        18,
+        19,
+        20,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "seconds": 0.022079743997892365
+  },
+  {
+    "stem": "diverse-0006-n7",
+    "encode_exit": 0,
+    "m": 24,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 1067,
+    "bad3": 499,
+    "polygons": 3322,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        9,
+        12,
+        13,
+        15,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        7,
+        8,
+        10,
+        14,
+        15,
+        16,
+        18,
+        21
+      ],
+      "exit": 10
+    },
+    "seconds": 0.02339779299654765
+  },
+  {
+    "stem": "diverse-0007-n7",
+    "encode_exit": 0,
+    "m": 22,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 536,
+    "bad3": 302,
+    "polygons": 1813,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        6,
+        11,
+        12,
+        13,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        11,
+        12,
+        13,
+        16
+      ],
+      "exit": 10
+    },
+    "seconds": 0.015742570998554584
+  },
+  {
+    "stem": "diverse-0008-n7",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0022499499973491766
+  },
+  {
+    "stem": "diverse-0009-n7",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002224752002803143
+  },
+  {
+    "stem": "diverse-0010-n7",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0022359040012815967
+  },
+  {
+    "stem": "diverse-0011-n7",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0022215759963728487
+  },
+  {
+    "stem": "diverse-0012-n7",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0022137520063552074
+  },
+  {
+    "stem": "diverse-0013-n7",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002214082000136841
+  },
+  {
+    "stem": "ends9-n7",
+    "encode_exit": 0,
+    "m": 9,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 5,
+    "cap4": 10,
+    "bad3": 17,
+    "polygons": 0,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "seconds": 0.0060645310004474595
+  },
+  {
+    "stem": "ends9-n8",
+    "encode_exit": 0,
+    "m": 9,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 5,
+    "cap4": 10,
+    "bad3": 17,
+    "polygons": 0,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "seconds": 0.006043592002242804
+  },
+  {
+    "stem": "etv26-n7",
+    "encode_exit": 0,
+    "m": 26,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 2001,
+    "bad3": 392,
+    "polygons": 9632,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        5,
+        12,
+        13,
+        14,
+        15,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "exit": 10
+    },
+    "seconds": 0.04681898100534454
+  },
+  {
+    "stem": "etv26-n8",
+    "encode_exit": 0,
+    "m": 26,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 2001,
+    "bad3": 392,
+    "polygons": 0,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "seconds": 0.009604958999261726
+  },
+  {
+    "stem": "etv42-n7",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0020718800005852245
+  },
+  {
+    "stem": "etv42-n8",
+    "encode_exit": 0,
+    "m": 42,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 9721,
+    "bad3": 1277,
+    "polygons": 235288,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        6,
+        17,
+        18,
+        19,
+        20,
+        21,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "exit": 10
+    },
+    "seconds": 0.9815090739939478
+  },
+  {
+    "stem": "hept-0000-n7",
+    "encode_exit": 0,
+    "m": 22,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 255,
+    "bad3": 283,
+    "polygons": 3551,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        5,
+        9,
+        13,
+        14,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14
+      ],
+      "exit": 10
+    },
+    "seconds": 0.013950925997050945
+  },
+  {
+    "stem": "hept-0001-n7",
+    "encode_exit": 0,
+    "m": 23,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 251,
+    "bad3": 208,
+    "polygons": 2682,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        6,
+        8,
+        13,
+        14,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        12,
+        13,
+        16,
+        19
+      ],
+      "exit": 10
+    },
+    "seconds": 0.012233012996148318
+  },
+  {
+    "stem": "hept-0002-n7",
+    "encode_exit": 0,
+    "m": 26,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 1193,
+    "bad3": 746,
+    "polygons": 4722,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        23,
+        25
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        19,
+        24,
+        25
+      ],
+      "exit": 10
+    },
+    "seconds": 0.01786252300371416
+  },
+  {
+    "stem": "hept-0003-n7",
+    "encode_exit": 0,
+    "m": 23,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 374,
+    "bad3": 216,
+    "polygons": 3997,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        9,
+        11,
+        13,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        9,
+        11,
+        13,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "seconds": 0.014975493999372702
+  },
+  {
+    "stem": "hept-0004-n7",
+    "encode_exit": 0,
+    "m": 25,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 342,
+    "bad3": 236,
+    "polygons": 4755,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        9,
+        11,
+        12,
+        13,
+        18,
+        19,
+        20,
+        21,
+        23,
+        24
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        8,
+        9,
+        14,
+        17,
+        18,
+        22,
+        23,
+        24
+      ],
+      "exit": 10
+    },
+    "seconds": 0.02128335100132972
+  },
+  {
+    "stem": "hept-0005-n7",
+    "encode_exit": 0,
+    "m": 22,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 257,
+    "bad3": 336,
+    "polygons": 1684,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        8,
+        10,
+        11,
+        12,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        9,
+        11,
+        13,
+        14,
+        16,
+        17,
+        18,
+        20,
+        21
+      ],
+      "exit": 10
+    },
+    "seconds": 0.013723140000365674
+  },
+  {
+    "stem": "hept-0006-n7",
+    "encode_exit": 0,
+    "m": 23,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 592,
+    "bad3": 409,
+    "polygons": 3952,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        2,
+        6,
+        11,
+        13,
+        14,
+        20,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        10,
+        12,
+        17,
+        19,
+        22
+      ],
+      "exit": 10
+    },
+    "seconds": 0.02273624800000107
+  },
+  {
+    "stem": "hept-0007-n7",
+    "encode_exit": 0,
+    "m": 24,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 180,
+    "bad3": 202,
+    "polygons": 4303,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        4,
+        5,
+        10,
+        11,
+        12,
+        13,
+        18,
+        19,
+        20,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        12,
+        14,
+        17,
+        18
+      ],
+      "exit": 10
+    },
+    "seconds": 0.022756165999453515
+  },
+  {
+    "stem": "hept-0008-n7",
+    "encode_exit": 0,
+    "m": 25,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 634,
+    "bad3": 382,
+    "polygons": 6114,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        6,
+        9,
+        13,
+        14,
+        15,
+        18,
+        19,
+        20,
+        21,
+        23,
+        24
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        16,
+        17,
+        18,
+        22,
+        23,
+        24
+      ],
+      "exit": 10
+    },
+    "seconds": 0.030746218995773233
+  },
+  {
+    "stem": "hept-0009-n7",
+    "encode_exit": 0,
+    "m": 23,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 356,
+    "bad3": 259,
+    "polygons": 2268,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        1,
+        2,
+        3,
+        4,
+        12,
+        13,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        3,
+        4,
+        6,
+        7,
+        8,
+        10,
+        14
+      ],
+      "exit": 10
+    },
+    "seconds": 0.01585814100690186
+  },
+  {
+    "stem": "hept-0010-n7",
+    "encode_exit": 0,
+    "m": 25,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 346,
+    "bad3": 343,
+    "polygons": 7739,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        3,
+        6,
+        9,
+        10,
+        11,
+        15,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        12,
+        15,
+        19,
+        20,
+        22
+      ],
+      "exit": 10
+    },
+    "seconds": 0.03531739600293804
+  },
+  {
+    "stem": "hept-0011-n7",
+    "encode_exit": 0,
+    "m": 23,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 341,
+    "bad3": 306,
+    "polygons": 3630,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        6,
+        8,
+        14,
+        15,
+        16,
+        17,
+        19,
+        20,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        12,
+        13,
+        18,
+        19
+      ],
+      "exit": 10
+    },
+    "seconds": 0.020709024000097997
+  },
+  {
+    "stem": "hept-0012-n7",
+    "encode_exit": 0,
+    "m": 23,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 510,
+    "bad3": 419,
+    "polygons": 3129,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        7,
+        11,
+        12,
+        14,
+        15,
+        17,
+        18,
+        19,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        7,
+        11,
+        12,
+        14,
+        15,
+        17,
+        18,
+        19,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "seconds": 0.01985653400333831
+  },
+  {
+    "stem": "hept-0013-n7",
+    "encode_exit": 0,
+    "m": 24,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 224,
+    "bad3": 158,
+    "polygons": 4070,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        2,
+        4,
+        7,
+        10,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        2,
+        3,
+        4,
+        7,
+        10,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "seconds": 0.022346362995449454
+  },
+  {
+    "stem": "hept-0014-n7",
+    "encode_exit": 0,
+    "m": 23,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 407,
+    "bad3": 293,
+    "polygons": 3337,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        9,
+        12,
+        13,
+        15,
+        17,
+        18,
+        20,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        9,
+        12,
+        13,
+        15,
+        17,
+        18,
+        20,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "seconds": 0.020370045996969566
+  },
+  {
+    "stem": "hept-0015-n7",
+    "encode_exit": 0,
+    "m": 24,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 640,
+    "bad3": 315,
+    "polygons": 3939,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        8,
+        10,
+        14,
+        18,
+        19,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        5,
+        8,
+        10,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "seconds": 0.022459469000750687
+  },
+  {
+    "stem": "hept-0016-n7",
+    "encode_exit": 0,
+    "m": 23,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 208,
+    "bad3": 246,
+    "polygons": 3840,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        2,
+        3,
+        9,
+        11,
+        12,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        12,
+        16,
+        17,
+        19
+      ],
+      "exit": 10
+    },
+    "seconds": 0.020644490999984555
+  },
+  {
+    "stem": "hept-0017-n7",
+    "encode_exit": 0,
+    "m": 24,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 971,
+    "bad3": 590,
+    "polygons": 5414,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        2,
+        4,
+        5,
+        9,
+        15,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        11,
+        14,
+        16,
+        18,
+        23
+      ],
+      "exit": 10
+    },
+    "seconds": 0.02892114000133006
+  },
+  {
+    "stem": "hept-0018-n7",
+    "encode_exit": 0,
+    "m": 21,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 241,
+    "bad3": 176,
+    "polygons": 1027,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        5,
+        9,
+        12,
+        15,
+        17,
+        18,
+        19,
+        20
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        5,
+        9,
+        12,
+        15,
+        17,
+        18,
+        19,
+        20
+      ],
+      "exit": 10
+    },
+    "seconds": 0.01098076900234446
+  },
+  {
+    "stem": "hept-0019-n7",
+    "encode_exit": 0,
+    "m": 22,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 286,
+    "bad3": 203,
+    "polygons": 2586,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        5,
+        10,
+        13,
+        14,
+        16,
+        17,
+        18,
+        20,
+        21
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        10,
+        11,
+        12,
+        13
+      ],
+      "exit": 10
+    },
+    "seconds": 0.016699979998520575
+  },
+  {
+    "stem": "hept-0020-n7",
+    "encode_exit": 0,
+    "m": 22,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 628,
+    "bad3": 340,
+    "polygons": 1660,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        8,
+        13,
+        14,
+        16,
+        17,
+        19,
+        20,
+        21
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        11,
+        12,
+        15,
+        16,
+        17
+      ],
+      "exit": 10
+    },
+    "seconds": 0.01461696900514653
+  },
+  {
+    "stem": "hept-0021-n7",
+    "encode_exit": 0,
+    "m": 24,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 682,
+    "bad3": 283,
+    "polygons": 4218,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        3,
+        5,
+        11,
+        12,
+        15,
+        17,
+        19,
+        20,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        7,
+        9,
+        10,
+        11,
+        13,
+        16,
+        18,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "seconds": 0.022570581000763923
+  },
+  {
+    "stem": "hept-0022-n7",
+    "encode_exit": 0,
+    "m": 24,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 382,
+    "bad3": 395,
+    "polygons": 3702,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        7,
+        8,
+        10,
+        13,
+        14,
+        17
+      ],
+      "exit": 10
+    },
+    "seconds": 0.016960599001322407
+  },
+  {
+    "stem": "hept-0023-n7",
+    "encode_exit": 0,
+    "m": 24,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 774,
+    "bad3": 475,
+    "polygons": 4728,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        7,
+        11,
+        12,
+        15,
+        17,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        7,
+        11,
+        12,
+        15,
+        17,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "seconds": 0.027179279997653794
+  },
+  {
+    "stem": "hept-0024-n7",
+    "encode_exit": 0,
+    "m": 23,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 307,
+    "bad3": 301,
+    "polygons": 2591,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        8,
+        10,
+        11,
+        13,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        15,
+        16,
+        19,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "seconds": 0.017921263999596704
+  },
+  {
+    "stem": "hept-0025-n7",
+    "encode_exit": 0,
+    "m": 25,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 346,
+    "bad3": 326,
+    "polygons": 8514,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        9,
+        14,
+        15,
+        17,
+        18,
+        19,
+        21,
+        22,
+        23,
+        24
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        10,
+        11,
+        12,
+        15,
+        16,
+        19,
+        20,
+        22
+      ],
+      "exit": 10
+    },
+    "seconds": 0.04266897799971048
+  },
+  {
+    "stem": "hept-0026-n7",
+    "encode_exit": 0,
+    "m": 25,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 1051,
+    "bad3": 257,
+    "polygons": 4847,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        2,
+        5,
+        6,
+        8,
+        9,
+        12,
+        16,
+        18,
+        19,
+        21,
+        22,
+        23,
+        24
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11,
+        12,
+        16,
+        19
+      ],
+      "exit": 10
+    },
+    "seconds": 0.03185788400151068
+  },
+  {
+    "stem": "hept-0027-n7",
+    "encode_exit": 0,
+    "m": 22,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 635,
+    "bad3": 505,
+    "polygons": 2762,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        11,
+        12,
+        13,
+        15,
+        16,
+        18,
+        19,
+        20,
+        21
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        7,
+        10,
+        11,
+        12,
+        13,
+        17,
+        18,
+        19
+      ],
+      "exit": 10
+    },
+    "seconds": 0.020172056996671017
+  },
+  {
+    "stem": "hept-0028-n7",
+    "encode_exit": 0,
+    "m": 22,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 125,
+    "bad3": 124,
+    "polygons": 2202,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        7,
+        10,
+        11,
+        14,
+        16,
+        18,
+        19,
+        20,
+        21
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        5,
+        8,
+        9,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "exit": 10
+    },
+    "seconds": 0.016046932003519032
+  },
+  {
+    "stem": "hept-0029-n7",
+    "encode_exit": 0,
+    "m": 24,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 448,
+    "bad3": 479,
+    "polygons": 2249,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        7,
+        12,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        7,
+        12,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "seconds": 0.013543387001845986
+  },
+  {
+    "stem": "hept-0030-n7",
+    "encode_exit": 0,
+    "m": 22,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 471,
+    "bad3": 280,
+    "polygons": 1382,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        6,
+        9,
+        11,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        6,
+        9,
+        11,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "exit": 10
+    },
+    "seconds": 0.009643844001402613
+  },
+  {
+    "stem": "hept-0031-n7",
+    "encode_exit": 0,
+    "m": 25,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 219,
+    "bad3": 147,
+    "polygons": 6574,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        7,
+        10,
+        12,
+        13,
+        14,
+        18,
+        20,
+        21,
+        23,
+        24
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        7,
+        10,
+        12,
+        13,
+        14,
+        18,
+        20,
+        21,
+        23,
+        24
+      ],
+      "exit": 10
+    },
+    "seconds": 0.024351015003048815
+  },
+  {
+    "stem": "hept-0032-n7",
+    "encode_exit": 0,
+    "m": 24,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 713,
+    "bad3": 299,
+    "polygons": 4643,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        5,
+        12,
+        13,
+        14,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        11,
+        15,
+        16,
+        19
+      ],
+      "exit": 10
+    },
+    "seconds": 0.025489029998425394
+  },
+  {
+    "stem": "hept-0033-n7",
+    "encode_exit": 0,
+    "m": 23,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 351,
+    "bad3": 291,
+    "polygons": 2885,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        19,
+        20,
+        21
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        19,
+        20,
+        21
+      ],
+      "exit": 10
+    },
+    "seconds": 0.01826909899682505
+  },
+  {
+    "stem": "hept-0034-n7",
+    "encode_exit": 0,
+    "m": 24,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 445,
+    "bad3": 335,
+    "polygons": 4734,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        5,
+        10,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        16,
+        17,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "seconds": 0.02457668600254692
+  },
+  {
+    "stem": "hept-0035-n7",
+    "encode_exit": 0,
+    "m": 24,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 517,
+    "bad3": 358,
+    "polygons": 5293,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        5,
+        7,
+        9,
+        14,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        5,
+        7,
+        9,
+        14,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "seconds": 0.027785468999354634
+  },
+  {
+    "stem": "hept-0036-n7",
+    "encode_exit": 0,
+    "m": 22,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 424,
+    "bad3": 250,
+    "polygons": 2853,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        4,
+        5,
+        9,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        13,
+        16
+      ],
+      "exit": 10
+    },
+    "seconds": 0.017662629994447343
+  },
+  {
+    "stem": "hept-0037-n7",
+    "encode_exit": 0,
+    "m": 24,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 287,
+    "bad3": 329,
+    "polygons": 3329,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        8,
+        11,
+        15,
+        17,
+        18,
+        19,
+        20,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        8,
+        11,
+        15,
+        17,
+        18,
+        19,
+        20,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "seconds": 0.019926258006307762
+  },
+  {
+    "stem": "hept-0038-n7",
+    "encode_exit": 0,
+    "m": 22,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 502,
+    "bad3": 215,
+    "polygons": 2109,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        7,
+        8,
+        10,
+        11,
+        12,
+        14,
+        17,
+        18,
+        20,
+        21
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        9,
+        13
+      ],
+      "exit": 10
+    },
+    "seconds": 0.015366882995294873
+  },
+  {
+    "stem": "hept-0039-n7",
+    "encode_exit": 0,
+    "m": 24,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 569,
+    "bad3": 211,
+    "polygons": 4555,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        5,
+        12,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        6,
+        7,
+        14,
+        17,
+        18,
+        19,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "seconds": 0.02503105499636149
+  },
+  {
+    "stem": "hept-0040-n7",
+    "encode_exit": 0,
+    "m": 23,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 255,
+    "bad3": 237,
+    "polygons": 3034,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        8,
+        11,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        12,
+        13,
+        14
+      ],
+      "exit": 10
+    },
+    "seconds": 0.014407137998205144
+  },
+  {
+    "stem": "hept-0041-n7",
+    "encode_exit": 0,
+    "m": 24,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 613,
+    "bad3": 489,
+    "polygons": 3050,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        6,
+        7,
+        8,
+        11,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        10,
+        11,
+        16,
+        17,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "seconds": 0.022755885001970455
+  },
+  {
+    "stem": "hept-0042-n7",
+    "encode_exit": 0,
+    "m": 23,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 369,
+    "bad3": 348,
+    "polygons": 3650,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        6,
+        10,
+        13,
+        15,
+        17,
+        18,
+        20,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        11,
+        14,
+        15,
+        20,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "seconds": 0.024079255003016442
+  },
+  {
+    "stem": "hept-0043-n7",
+    "encode_exit": 0,
+    "m": 23,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 278,
+    "bad3": 253,
+    "polygons": 4260,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        3,
+        5,
+        8,
+        11,
+        12,
+        16,
+        17,
+        18,
+        19,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        7,
+        11,
+        12,
+        16,
+        20,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "seconds": 0.024627452999993693
+  },
+  {
+    "stem": "hept-0044-n7",
+    "encode_exit": 0,
+    "m": 24,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 735,
+    "bad3": 433,
+    "polygons": 3258,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        7,
+        9,
+        10,
+        15,
+        17,
+        18,
+        20,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        11,
+        12,
+        13,
+        18
+      ],
+      "exit": 10
+    },
+    "seconds": 0.020306954997067805
+  },
+  {
+    "stem": "hept-0045-n7",
+    "encode_exit": 0,
+    "m": 22,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 293,
+    "bad3": 175,
+    "polygons": 1790,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        5,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        19
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        9,
+        10,
+        11,
+        14,
+        18,
+        20,
+        21
+      ],
+      "exit": 10
+    },
+    "seconds": 0.013697742004296742
+  },
+  {
+    "stem": "hept-0046-n7",
+    "encode_exit": 0,
+    "m": 25,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 377,
+    "bad3": 279,
+    "polygons": 6213,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        2,
+        7,
+        10,
+        11,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        12,
+        13,
+        15,
+        17
+      ],
+      "exit": 10
+    },
+    "seconds": 0.02976538400253048
+  },
+  {
+    "stem": "hept-0047-n7",
+    "encode_exit": 0,
+    "m": 22,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 579,
+    "bad3": 352,
+    "polygons": 1077,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        7,
+        8,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        13,
+        16,
+        17
+      ],
+      "exit": 10
+    },
+    "seconds": 0.012579505004396196
+  },
+  {
+    "stem": "hept-0048-n7",
+    "encode_exit": 0,
+    "m": 23,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 431,
+    "bad3": 283,
+    "polygons": 3020,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        2,
+        5,
+        6,
+        8,
+        9,
+        11,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        8,
+        12,
+        13,
+        14,
+        16,
+        18
+      ],
+      "exit": 10
+    },
+    "seconds": 0.018630350001330953
+  },
+  {
+    "stem": "hept-0049-n7",
+    "encode_exit": 0,
+    "m": 25,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 493,
+    "bad3": 301,
+    "polygons": 6619,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        1,
+        2,
+        7,
+        15,
+        16,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        7,
+        8,
+        9,
+        17,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "exit": 10
+    },
+    "seconds": 0.03209292200335767
+  },
+  {
+    "stem": "hept-0050-n7",
+    "encode_exit": 0,
+    "m": 23,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 578,
+    "bad3": 285,
+    "polygons": 2530,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        7,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        7,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "seconds": 0.01789042600285029
+  },
+  {
+    "stem": "hept-0051-n7",
+    "encode_exit": 0,
+    "m": 22,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 319,
+    "bad3": 290,
+    "polygons": 2891,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        9,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        9,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "exit": 10
+    },
+    "seconds": 0.018253178997838404
+  },
+  {
+    "stem": "hept-0052-n7",
+    "encode_exit": 0,
+    "m": 24,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 274,
+    "bad3": 298,
+    "polygons": 4283,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        5,
+        6,
+        11,
+        12,
+        13,
+        18,
+        19,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        7,
+        8,
+        9,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "exit": 10
+    },
+    "seconds": 0.0227422989992192
+  },
+  {
+    "stem": "hept-0053-n7",
+    "encode_exit": 0,
+    "m": 24,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 1067,
+    "bad3": 499,
+    "polygons": 3322,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        9,
+        12,
+        13,
+        15,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        7,
+        8,
+        10,
+        14,
+        15,
+        16,
+        18,
+        21
+      ],
+      "exit": 10
+    },
+    "seconds": 0.022128206001070794
+  },
+  {
+    "stem": "hept-0054-n7",
+    "encode_exit": 0,
+    "m": 22,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 374,
+    "bad3": 290,
+    "polygons": 2240,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        7,
+        8,
+        12,
+        14,
+        16,
+        17,
+        18,
+        20,
+        21
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        9,
+        13,
+        19,
+        20,
+        21
+      ],
+      "exit": 10
+    },
+    "seconds": 0.01584095900034299
+  },
+  {
+    "stem": "hept-0055-n7",
+    "encode_exit": 0,
+    "m": 25,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 428,
+    "bad3": 269,
+    "polygons": 5084,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        6,
+        11,
+        13,
+        15,
+        17,
+        18,
+        19,
+        22,
+        23,
+        24
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        6,
+        11,
+        13,
+        15,
+        17,
+        18,
+        19,
+        22,
+        23,
+        24
+      ],
+      "exit": 10
+    },
+    "seconds": 0.02683554399845889
+  },
+  {
+    "stem": "hept-0056-n7",
+    "encode_exit": 0,
+    "m": 24,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 253,
+    "bad3": 303,
+    "polygons": 4176,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        9,
+        10,
+        14,
+        15,
+        17,
+        18,
+        19,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        16,
+        20,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "seconds": 0.022530534995894413
+  },
+  {
+    "stem": "hept-0057-n7",
+    "encode_exit": 0,
+    "m": 24,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 377,
+    "bad3": 340,
+    "polygons": 4416,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        7,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        18,
+        20,
+        23
+      ],
+      "exit": 10
+    },
+    "seconds": 0.024091629005852155
+  },
+  {
+    "stem": "hept-0058-n7",
+    "encode_exit": 0,
+    "m": 23,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 238,
+    "bad3": 165,
+    "polygons": 3482,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        5,
+        9,
+        12,
+        14,
+        16,
+        17,
+        18,
+        19,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        15,
+        16,
+        20,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "seconds": 0.0196334369975375
+  },
+  {
+    "stem": "hept-0059-n7",
+    "encode_exit": 0,
+    "m": 22,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 449,
+    "bad3": 209,
+    "polygons": 2098,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        10,
+        13,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        11,
+        14,
+        15,
+        18
+      ],
+      "exit": 10
+    },
+    "seconds": 0.01749055199616123
+  },
+  {
+    "stem": "hept-0060-n7",
+    "encode_exit": 0,
+    "m": 24,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 506,
+    "bad3": 277,
+    "polygons": 4145,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        18,
+        20
+      ],
+      "exit": 10
+    },
+    "seconds": 0.02303776500048116
+  },
+  {
+    "stem": "hept-0061-n7",
+    "encode_exit": 0,
+    "m": 24,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 312,
+    "bad3": 257,
+    "polygons": 3899,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        5,
+        6,
+        7,
+        9,
+        10,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        5,
+        6,
+        7,
+        9,
+        10,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "seconds": 0.02183182999579003
+  },
+  {
+    "stem": "hept-0062-n7",
+    "encode_exit": 0,
+    "m": 23,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 808,
+    "bad3": 316,
+    "polygons": 2683,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        7,
+        9,
+        14,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        15,
+        17
+      ],
+      "exit": 10
+    },
+    "seconds": 0.01850142400508048
+  },
+  {
+    "stem": "hept-0063-n7",
+    "encode_exit": 0,
+    "m": 21,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 480,
+    "bad3": 283,
+    "polygons": 1797,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        6,
+        11,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        10,
+        11,
+        14,
+        17,
+        20
+      ],
+      "exit": 10
+    },
+    "seconds": 0.014532046996464487
+  },
+  {
+    "stem": "hept-0064-n7",
+    "encode_exit": 0,
+    "m": 24,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 184,
+    "bad3": 166,
+    "polygons": 5066,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        9,
+        11,
+        14,
+        17,
+        18,
+        19,
+        20,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        9,
+        11,
+        14,
+        17,
+        18,
+        19,
+        20,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "seconds": 0.02586956699815346
+  },
+  {
+    "stem": "hept-0065-n7",
+    "encode_exit": 0,
+    "m": 25,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 782,
+    "bad3": 563,
+    "polygons": 6401,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        9,
+        11,
+        16,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        10,
+        14,
+        16,
+        18,
+        21
+      ],
+      "exit": 10
+    },
+    "seconds": 0.03219096999964677
+  },
+  {
+    "stem": "hept-0066-n7",
+    "encode_exit": 0,
+    "m": 23,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 479,
+    "bad3": 279,
+    "polygons": 3110,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        10,
+        11,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        16
+      ],
+      "exit": 10
+    },
+    "seconds": 0.0190542109994567
+  },
+  {
+    "stem": "hept-0067-n7",
+    "encode_exit": 0,
+    "m": 23,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 308,
+    "bad3": 216,
+    "polygons": 1736,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        2,
+        4,
+        6,
+        9,
+        10,
+        11,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        2,
+        4,
+        6,
+        9,
+        10,
+        11,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "seconds": 0.013856524994480424
+  },
+  {
+    "stem": "hept-0068-n7",
+    "encode_exit": 0,
+    "m": 23,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 678,
+    "bad3": 293,
+    "polygons": 3263,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        5,
+        11,
+        16,
+        17,
+        19,
+        20,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        12,
+        15,
+        17
+      ],
+      "exit": 10
+    },
+    "seconds": 0.020329497994680423
+  },
+  {
+    "stem": "hept-0069-n7",
+    "encode_exit": 0,
+    "m": 23,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 415,
+    "bad3": 383,
+    "polygons": 3617,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        6,
+        11,
+        12,
+        16,
+        17,
+        18,
+        19,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        10,
+        13,
+        14,
+        17,
+        20,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "seconds": 0.02066983799886657
+  },
+  {
+    "stem": "hept-0070-n7",
+    "encode_exit": 0,
+    "m": 23,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 186,
+    "bad3": 189,
+    "polygons": 4647,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        5,
+        12,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        11,
+        12,
+        15,
+        18
+      ],
+      "exit": 10
+    },
+    "seconds": 0.02321134600060759
+  },
+  {
+    "stem": "hept-0071-n7",
+    "encode_exit": 0,
+    "m": 22,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 536,
+    "bad3": 302,
+    "polygons": 1813,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        6,
+        11,
+        12,
+        13,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        11,
+        12,
+        13,
+        16
+      ],
+      "exit": 10
+    },
+    "seconds": 0.014783137004997116
+  },
+  {
+    "stem": "hept-0072-n7",
+    "encode_exit": 0,
+    "m": 21,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 367,
+    "bad3": 375,
+    "polygons": 978,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        11,
+        12,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        13,
+        14,
+        15,
+        16
+      ],
+      "exit": 10
+    },
+    "seconds": 0.011345216000336222
+  },
+  {
+    "stem": "hept-0073-n7",
+    "encode_exit": 0,
+    "m": 25,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 257,
+    "bad3": 201,
+    "polygons": 6487,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        3,
+        8,
+        9,
+        12,
+        14,
+        17,
+        18,
+        19,
+        20,
+        22,
+        23,
+        24
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        4,
+        6,
+        11,
+        12,
+        14,
+        17,
+        18,
+        19,
+        20,
+        22,
+        23,
+        24
+      ],
+      "exit": 10
+    },
+    "seconds": 0.031103630994039122
+  },
+  {
+    "stem": "hept-0074-n7",
+    "encode_exit": 0,
+    "m": 23,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 478,
+    "bad3": 145,
+    "polygons": 4411,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        8,
+        9,
+        10,
+        11,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        6,
+        11,
+        13,
+        15,
+        16,
+        17,
+        19,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "seconds": 0.024064467004791368
+  },
+  {
+    "stem": "hept-0075-n7",
+    "encode_exit": 0,
+    "m": 23,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 409,
+    "bad3": 533,
+    "polygons": 1930,
+    "terminal": {
+      "outcome": "UNSAT_UNCERTIFIED",
+      "exit": 20
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        15,
+        18,
+        19
+      ],
+      "exit": 10
+    },
+    "seconds": 0.01346048800041899
+  },
+  {
+    "stem": "main-0000-n8",
+    "encode_exit": 0,
+    "m": 31,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 2126,
+    "bad3": 844,
+    "polygons": 14630,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        8,
+        20,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        8,
+        20,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "exit": 10
+    },
+    "seconds": 0.05049716099892976
+  },
+  {
+    "stem": "main-0001-n8",
+    "encode_exit": 0,
+    "m": 33,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1486,
+    "bad3": 583,
+    "polygons": 15119,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        3,
+        4,
+        7,
+        12,
+        18,
+        22,
+        23,
+        24,
+        25,
+        26,
+        30,
+        31,
+        32
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        30,
+        31,
+        32
+      ],
+      "exit": 10
+    },
+    "seconds": 0.07252601700020023
+  },
+  {
+    "stem": "main-0002-n8",
+    "encode_exit": 0,
+    "m": 31,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 4987,
+    "bad3": 1123,
+    "polygons": 35616,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        14,
+        15,
+        17,
+        19,
+        21,
+        22,
+        23,
+        25,
+        27,
+        28,
+        29,
+        30
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        7,
+        9,
+        12,
+        13,
+        16,
+        18,
+        19,
+        20,
+        23
+      ],
+      "exit": 10
+    },
+    "seconds": 0.1691276720011956
+  },
+  {
+    "stem": "main-0003-n8",
+    "encode_exit": 0,
+    "m": 30,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1519,
+    "bad3": 913,
+    "polygons": 7939,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        17,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        28,
+        29
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        9,
+        12,
+        14,
+        16,
+        19,
+        22
+      ],
+      "exit": 10
+    },
+    "seconds": 0.04549967800267041
+  },
+  {
+    "stem": "main-0004-n8",
+    "encode_exit": 0,
+    "m": 33,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 2500,
+    "bad3": 684,
+    "polygons": 11855,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        4,
+        8,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        21,
+        24,
+        26,
+        29,
+        30,
+        31,
+        32
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        12,
+        13,
+        18,
+        20,
+        23,
+        25,
+        30
+      ],
+      "exit": 10
+    },
+    "seconds": 0.06360978400334716
+  },
+  {
+    "stem": "main-0005-n8",
+    "encode_exit": 0,
+    "m": 33,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1423,
+    "bad3": 730,
+    "polygons": 45619,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        8,
+        10,
+        11,
+        13,
+        20,
+        21,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        3,
+        4,
+        6,
+        8,
+        9,
+        12,
+        14,
+        15,
+        16,
+        17,
+        20,
+        24
+      ],
+      "exit": 10
+    },
+    "seconds": 0.20700571199995466
+  },
+  {
+    "stem": "main-0006-n8",
+    "encode_exit": 0,
+    "m": 30,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1686,
+    "bad3": 776,
+    "polygons": 33211,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        7,
+        17,
+        20,
+        22,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        11,
+        15,
+        23,
+        24
+      ],
+      "exit": 10
+    },
+    "seconds": 0.14899334700021427
+  },
+  {
+    "stem": "main-0007-n8",
+    "encode_exit": 0,
+    "m": 30,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1981,
+    "bad3": 934,
+    "polygons": 6751,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        4,
+        9,
+        11,
+        14,
+        15,
+        16,
+        21,
+        24,
+        26,
+        27,
+        28,
+        29
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        14,
+        15,
+        16,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "exit": 10
+    },
+    "seconds": 0.04338069799996447
+  },
+  {
+    "stem": "main-0008-n8",
+    "encode_exit": 0,
+    "m": 31,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1243,
+    "bad3": 406,
+    "polygons": 5491,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        9,
+        20,
+        21,
+        22,
+        23,
+        28,
+        29,
+        30
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        9,
+        20,
+        21,
+        22,
+        23,
+        28,
+        29,
+        30
+      ],
+      "exit": 10
+    },
+    "seconds": 0.03497441000217805
+  },
+  {
+    "stem": "main-0009-n8",
+    "encode_exit": 0,
+    "m": 30,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 768,
+    "bad3": 440,
+    "polygons": 8941,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        2,
+        4,
+        5,
+        6,
+        8,
+        10,
+        13,
+        18,
+        20,
+        22,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        9,
+        11,
+        14,
+        16,
+        19,
+        22,
+        23,
+        25
+      ],
+      "exit": 10
+    },
+    "seconds": 0.04554592699423665
+  },
+  {
+    "stem": "main-0010-n8",
+    "encode_exit": 0,
+    "m": 32,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 3194,
+    "bad3": 1142,
+    "polygons": 54139,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        13,
+        22,
+        23,
+        24,
+        26,
+        28,
+        29,
+        30,
+        31
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        7,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        21,
+        22,
+        25,
+        26
+      ],
+      "exit": 10
+    },
+    "seconds": 0.2501723919995129
+  },
+  {
+    "stem": "main-0011-n8",
+    "encode_exit": 0,
+    "m": 30,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1228,
+    "bad3": 721,
+    "polygons": 5260,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        12,
+        15,
+        20,
+        21,
+        22,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        10,
+        11,
+        12,
+        13,
+        16,
+        19,
+        23
+      ],
+      "exit": 10
+    },
+    "seconds": 0.03364438799326308
+  },
+  {
+    "stem": "main-0012-n8",
+    "encode_exit": 0,
+    "m": 30,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1121,
+    "bad3": 742,
+    "polygons": 7348,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        1,
+        4,
+        5,
+        6,
+        17,
+        18,
+        20,
+        22,
+        24,
+        25,
+        26,
+        28,
+        29
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        8,
+        9,
+        11,
+        12,
+        14,
+        17,
+        19,
+        21,
+        24
+      ],
+      "exit": 10
+    },
+    "seconds": 0.041150044002279174
+  },
+  {
+    "stem": "main-0013-n8",
+    "encode_exit": 0,
+    "m": 37,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1284,
+    "bad3": 1279,
+    "polygons": 136360,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        6,
+        13,
+        14,
+        20,
+        21,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        34,
+        35,
+        36
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        9,
+        11,
+        15,
+        16,
+        19,
+        22,
+        24,
+        27
+      ],
+      "exit": 10
+    },
+    "seconds": 0.5880990380028379
+  },
+  {
+    "stem": "main-0014-n8",
+    "encode_exit": 0,
+    "m": 31,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 846,
+    "bad3": 904,
+    "polygons": 28052,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        5,
+        12,
+        17,
+        18,
+        21,
+        22,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        17,
+        19,
+        20,
+        23,
+        24,
+        26,
+        29,
+        30
+      ],
+      "exit": 10
+    },
+    "seconds": 0.12826138999662362
+  },
+  {
+    "stem": "main-0015-n8",
+    "encode_exit": 0,
+    "m": 32,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 2437,
+    "bad3": 1160,
+    "polygons": 25109,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        12,
+        13,
+        20,
+        22,
+        24,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        9,
+        11,
+        17,
+        18,
+        20,
+        25,
+        26,
+        29
+      ],
+      "exit": 10
+    },
+    "seconds": 0.12125481799739646
+  },
+  {
+    "stem": "main-0016-n8",
+    "encode_exit": 0,
+    "m": 30,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1322,
+    "bad3": 641,
+    "polygons": 20174,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        10,
+        13,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        10,
+        14,
+        16,
+        21,
+        22,
+        23,
+        24,
+        26
+      ],
+      "exit": 10
+    },
+    "seconds": 0.09664007899846183
+  },
+  {
+    "stem": "main-0017-n8",
+    "encode_exit": 0,
+    "m": 29,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 598,
+    "bad3": 360,
+    "polygons": 13086,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        4,
+        5,
+        16,
+        17,
+        18,
+        21,
+        22,
+        25,
+        27
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        6,
+        7,
+        8,
+        9,
+        10,
+        18,
+        19,
+        21,
+        24,
+        26
+      ],
+      "exit": 10
+    },
+    "seconds": 0.06131838399596745
+  },
+  {
+    "stem": "main-0018-n8",
+    "encode_exit": 0,
+    "m": 32,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 3011,
+    "bad3": 1137,
+    "polygons": 12637,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        16,
+        18,
+        19,
+        21,
+        22,
+        23,
+        26,
+        29,
+        30,
+        31
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        12,
+        13,
+        17,
+        20,
+        21,
+        23
+      ],
+      "exit": 10
+    },
+    "seconds": 0.07151549500122201
+  },
+  {
+    "stem": "main-0019-n8",
+    "encode_exit": 0,
+    "m": 33,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1448,
+    "bad3": 834,
+    "polygons": 20734,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        6,
+        7,
+        8,
+        12,
+        13,
+        16,
+        17,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        9,
+        10,
+        12,
+        13,
+        18,
+        20,
+        22,
+        25
+      ],
+      "exit": 10
+    },
+    "seconds": 0.0962596620011027
+  },
+  {
+    "stem": "main-0020-n8",
+    "encode_exit": 0,
+    "m": 33,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 2192,
+    "bad3": 1340,
+    "polygons": 37909,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        13,
+        14,
+        15,
+        19,
+        20,
+        21,
+        23,
+        25,
+        26,
+        27,
+        28,
+        29,
+        31,
+        32
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        18,
+        19,
+        24
+      ],
+      "exit": 10
+    },
+    "seconds": 0.16945508799835807
+  },
+  {
+    "stem": "main-0021-n8",
+    "encode_exit": 0,
+    "m": 33,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 627,
+    "bad3": 464,
+    "polygons": 30571,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        7,
+        11,
+        15,
+        20,
+        21,
+        24,
+        25,
+        26,
+        29,
+        30,
+        31,
+        32
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        7,
+        11,
+        15,
+        20,
+        21,
+        24,
+        25,
+        26,
+        29,
+        30,
+        31,
+        32
+      ],
+      "exit": 10
+    },
+    "seconds": 0.14038572500430746
+  },
+  {
+    "stem": "main-0022-n8",
+    "encode_exit": 0,
+    "m": 34,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 2066,
+    "bad3": 932,
+    "polygons": 77491,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        13,
+        17,
+        18,
+        19,
+        22,
+        26,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        13,
+        17,
+        18,
+        19,
+        22,
+        26,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "exit": 10
+    },
+    "seconds": 0.36426176299573854
+  },
+  {
+    "stem": "main-0023-n8",
+    "encode_exit": 0,
+    "m": 31,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1536,
+    "bad3": 771,
+    "polygons": 8839,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        8,
+        11,
+        13,
+        14,
+        15,
+        17,
+        20,
+        22,
+        23,
+        24,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        8,
+        9,
+        13,
+        16,
+        19,
+        22
+      ],
+      "exit": 10
+    },
+    "seconds": 0.05045716500171693
+  },
+  {
+    "stem": "main-0024-n8",
+    "encode_exit": 0,
+    "m": 29,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1406,
+    "bad3": 463,
+    "polygons": 8213,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        4,
+        9,
+        13,
+        14,
+        16,
+        18,
+        19,
+        25,
+        26,
+        27,
+        28
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        10,
+        11,
+        20
+      ],
+      "exit": 10
+    },
+    "seconds": 0.04700788199988892
+  },
+  {
+    "stem": "main-0025-n8",
+    "encode_exit": 0,
+    "m": 31,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 880,
+    "bad3": 574,
+    "polygons": 12133,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        7,
+        15,
+        21,
+        22,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        18,
+        20
+      ],
+      "exit": 10
+    },
+    "seconds": 0.06146631800220348
+  },
+  {
+    "stem": "main-0026-n8",
+    "encode_exit": 0,
+    "m": 31,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 3036,
+    "bad3": 1209,
+    "polygons": 34783,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        16,
+        17,
+        18,
+        23,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        12,
+        14,
+        15,
+        20,
+        21,
+        22,
+        24
+      ],
+      "exit": 10
+    },
+    "seconds": 0.15891736599587603
+  },
+  {
+    "stem": "main-0027-n8",
+    "encode_exit": 0,
+    "m": 28,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1192,
+    "bad3": 732,
+    "polygons": 2745,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        4,
+        6,
+        7,
+        16,
+        21,
+        22,
+        23,
+        25,
+        26,
+        27
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        14,
+        17,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "seconds": 0.023614245998032857
+  },
+  {
+    "stem": "main-0028-n8",
+    "encode_exit": 0,
+    "m": 32,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1168,
+    "bad3": 1053,
+    "polygons": 21339,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        2,
+        11,
+        13,
+        17,
+        18,
+        21,
+        22,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        10,
+        11,
+        15,
+        16,
+        17,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "exit": 10
+    },
+    "seconds": 0.10430794500280172
+  },
+  {
+    "stem": "main-0029-n8",
+    "encode_exit": 0,
+    "m": 30,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 429,
+    "bad3": 487,
+    "polygons": 15247,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        6,
+        7,
+        10,
+        13,
+        14,
+        15,
+        17,
+        23,
+        24,
+        25,
+        27,
+        28,
+        29
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        6,
+        7,
+        10,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        23,
+        24,
+        25,
+        27,
+        28,
+        29
+      ],
+      "exit": 10
+    },
+    "seconds": 0.07355257900053402
+  },
+  {
+    "stem": "main-0030-n8",
+    "encode_exit": 0,
+    "m": 34,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 2882,
+    "bad3": 1048,
+    "polygons": 23765,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        9,
+        12,
+        18,
+        19,
+        25,
+        26,
+        27,
+        28,
+        30,
+        31,
+        33
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        20,
+        22,
+        24,
+        25,
+        28
+      ],
+      "exit": 10
+    },
+    "seconds": 0.11362454199843341
+  },
+  {
+    "stem": "main-0031-n8",
+    "encode_exit": 0,
+    "m": 31,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1748,
+    "bad3": 910,
+    "polygons": 5723,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        10,
+        17,
+        20,
+        23,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        10,
+        17,
+        20,
+        23,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30
+      ],
+      "exit": 10
+    },
+    "seconds": 0.03921068699855823
+  },
+  {
+    "stem": "main-0032-n8",
+    "encode_exit": 0,
+    "m": 30,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 2219,
+    "bad3": 783,
+    "polygons": 11033,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        8,
+        20,
+        21,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        9,
+        11,
+        12,
+        15,
+        17
+      ],
+      "exit": 10
+    },
+    "seconds": 0.060322520999761764
+  },
+  {
+    "stem": "main-0033-n8",
+    "encode_exit": 0,
+    "m": 32,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 933,
+    "bad3": 694,
+    "polygons": 10910,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        4,
+        5,
+        7,
+        17,
+        19,
+        20,
+        21,
+        22,
+        25,
+        26,
+        28,
+        29,
+        30,
+        31
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        10,
+        14,
+        17,
+        19,
+        25,
+        27,
+        30
+      ],
+      "exit": 10
+    },
+    "seconds": 0.05702688200108241
+  },
+  {
+    "stem": "main-0034-n8",
+    "encode_exit": 0,
+    "m": 30,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 900,
+    "bad3": 741,
+    "polygons": 21409,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        5,
+        8,
+        16,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        13,
+        14,
+        15,
+        16,
+        19,
+        21
+      ],
+      "exit": 10
+    },
+    "seconds": 0.09892783100076485
+  },
+  {
+    "stem": "main-0035-n8",
+    "encode_exit": 0,
+    "m": 30,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1469,
+    "bad3": 1002,
+    "polygons": 10258,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        4,
+        8,
+        10,
+        16,
+        17,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        18,
+        19,
+        21,
+        25
+      ],
+      "exit": 10
+    },
+    "seconds": 0.05546477600000799
+  },
+  {
+    "stem": "main-0036-n8",
+    "encode_exit": 0,
+    "m": 29,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1471,
+    "bad3": 852,
+    "polygons": 13017,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        10,
+        14,
+        18,
+        21,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        13,
+        17,
+        18,
+        22,
+        23,
+        24,
+        28
+      ],
+      "exit": 10
+    },
+    "seconds": 0.06911482700525085
+  },
+  {
+    "stem": "main-0037-n8",
+    "encode_exit": 0,
+    "m": 30,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 843,
+    "bad3": 518,
+    "polygons": 7788,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        10,
+        11,
+        12,
+        13,
+        19,
+        20,
+        22,
+        24,
+        25,
+        26,
+        28,
+        29
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        7,
+        9,
+        14,
+        15,
+        16,
+        17,
+        27,
+        28,
+        29
+      ],
+      "exit": 10
+    },
+    "seconds": 0.04278003999934299
+  },
+  {
+    "stem": "main-0038-n8",
+    "encode_exit": 0,
+    "m": 30,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 650,
+    "bad3": 478,
+    "polygons": 22329,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        7,
+        10,
+        11,
+        14,
+        17,
+        18,
+        19,
+        21,
+        22,
+        26,
+        28,
+        29
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        17,
+        20,
+        21,
+        23,
+        24,
+        26
+      ],
+      "exit": 10
+    },
+    "seconds": 0.10314179699344095
+  },
+  {
+    "stem": "main-0039-n8",
+    "encode_exit": 0,
+    "m": 29,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1041,
+    "bad3": 522,
+    "polygons": 6876,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        1,
+        10,
+        14,
+        15,
+        18,
+        22,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        11,
+        19,
+        21,
+        27,
+        28
+      ],
+      "exit": 10
+    },
+    "seconds": 0.039123269998526666
+  },
+  {
+    "stem": "main-0040-n8",
+    "encode_exit": 0,
+    "m": 29,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1712,
+    "bad3": 595,
+    "polygons": 11790,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        6,
+        14,
+        19,
+        21,
+        22,
+        24,
+        26,
+        27,
+        28
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        13,
+        14,
+        18,
+        19,
+        23,
+        24
+      ],
+      "exit": 10
+    },
+    "seconds": 0.05931165900256019
+  },
+  {
+    "stem": "main-0041-n8",
+    "encode_exit": 0,
+    "m": 32,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 946,
+    "bad3": 717,
+    "polygons": 23546,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        10,
+        16,
+        17,
+        18,
+        21,
+        23,
+        24,
+        26,
+        27,
+        28,
+        30,
+        31
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        15,
+        16,
+        22,
+        25,
+        26,
+        29,
+        30,
+        31
+      ],
+      "exit": 10
+    },
+    "seconds": 0.11159685700113187
+  },
+  {
+    "stem": "main-0042-n8",
+    "encode_exit": 0,
+    "m": 32,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 2014,
+    "bad3": 926,
+    "polygons": 40773,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        9,
+        10,
+        14,
+        18,
+        20,
+        24,
+        25,
+        28,
+        29,
+        30,
+        31
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        15,
+        16,
+        17,
+        20
+      ],
+      "exit": 10
+    },
+    "seconds": 0.18382184900110587
+  },
+  {
+    "stem": "main-0043-n8",
+    "encode_exit": 0,
+    "m": 30,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1039,
+    "bad3": 464,
+    "polygons": 9497,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        3,
+        6,
+        10,
+        17,
+        20,
+        21,
+        22,
+        24,
+        26,
+        29
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        11,
+        14,
+        17,
+        18,
+        28,
+        29
+      ],
+      "exit": 10
+    },
+    "seconds": 0.05400124799780315
+  },
+  {
+    "stem": "main-0044-n8",
+    "encode_exit": 0,
+    "m": 29,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 783,
+    "bad3": 929,
+    "polygons": 10006,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        13,
+        14,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        28
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        16,
+        19,
+        24
+      ],
+      "exit": 10
+    },
+    "seconds": 0.0518695540013141
+  },
+  {
+    "stem": "main-0045-n8",
+    "encode_exit": 0,
+    "m": 31,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 774,
+    "bad3": 559,
+    "polygons": 10544,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        3,
+        9,
+        10,
+        11,
+        12,
+        13,
+        22,
+        24,
+        25,
+        27,
+        28,
+        29,
+        30
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        14,
+        15,
+        16,
+        19,
+        23,
+        27
+      ],
+      "exit": 10
+    },
+    "seconds": 0.055151906999526545
+  },
+  {
+    "stem": "main-0046-n8",
+    "encode_exit": 0,
+    "m": 31,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1543,
+    "bad3": 964,
+    "polygons": 21077,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        12,
+        14,
+        15,
+        19,
+        20,
+        21,
+        23,
+        24,
+        25,
+        27,
+        29,
+        30
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "exit": 10
+    },
+    "seconds": 0.10045992000232218
+  },
+  {
+    "stem": "main-0047-n8",
+    "encode_exit": 0,
+    "m": 32,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1817,
+    "bad3": 918,
+    "polygons": 11022,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        9,
+        11,
+        16,
+        17,
+        21,
+        22,
+        24,
+        26,
+        27,
+        28,
+        29,
+        31
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        11,
+        18,
+        20,
+        21,
+        23,
+        24
+      ],
+      "exit": 10
+    },
+    "seconds": 0.06102889100293396
+  },
+  {
+    "stem": "main-0048-n8",
+    "encode_exit": 0,
+    "m": 32,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1394,
+    "bad3": 507,
+    "polygons": 30128,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        7,
+        8,
+        13,
+        15,
+        20,
+        21,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        7,
+        8,
+        13,
+        15,
+        20,
+        21,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "exit": 10
+    },
+    "seconds": 0.14353969299554592
+  },
+  {
+    "stem": "main-0049-n8",
+    "encode_exit": 0,
+    "m": 31,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 752,
+    "bad3": 460,
+    "polygons": 10666,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        6,
+        10,
+        11,
+        19,
+        20,
+        21,
+        22,
+        24,
+        26,
+        28,
+        29,
+        30
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        15,
+        17,
+        18,
+        19,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "exit": 10
+    },
+    "seconds": 0.056015367998043075
+  },
+  {
+    "stem": "main-0050-n8",
+    "encode_exit": 0,
+    "m": 32,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 2158,
+    "bad3": 940,
+    "polygons": 80131,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        9,
+        13,
+        19,
+        21,
+        22,
+        24,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        14,
+        17,
+        20,
+        21,
+        22
+      ],
+      "exit": 10
+    },
+    "seconds": 0.3810078809983679
+  },
+  {
+    "stem": "main-0051-n8",
+    "encode_exit": 0,
+    "m": 32,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 2114,
+    "bad3": 717,
+    "polygons": 7051,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        13,
+        14,
+        19,
+        20,
+        21,
+        23,
+        24,
+        26,
+        27,
+        28,
+        30,
+        31
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        9,
+        17,
+        29,
+        30,
+        31
+      ],
+      "exit": 10
+    },
+    "seconds": 0.04993727999681141
+  },
+  {
+    "stem": "main-0052-n8",
+    "encode_exit": 0,
+    "m": 31,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1710,
+    "bad3": 733,
+    "polygons": 11173,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        1,
+        2,
+        14,
+        20,
+        22,
+        23,
+        24,
+        26,
+        27,
+        29,
+        30
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        4,
+        5,
+        9,
+        10,
+        11,
+        12,
+        15,
+        19,
+        21,
+        22,
+        28,
+        29,
+        30
+      ],
+      "exit": 10
+    },
+    "seconds": 0.06662458599748788
+  },
+  {
+    "stem": "main-0053-n8",
+    "encode_exit": 0,
+    "m": 31,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 866,
+    "bad3": 520,
+    "polygons": 24507,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        6,
+        21,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        11,
+        14,
+        18,
+        20,
+        24,
+        26,
+        28,
+        29,
+        30
+      ],
+      "exit": 10
+    },
+    "seconds": 0.12273336400539847
+  },
+  {
+    "stem": "main-0054-n8",
+    "encode_exit": 0,
+    "m": 31,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 2844,
+    "bad3": 929,
+    "polygons": 37341,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        15,
+        16,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        10,
+        12,
+        14,
+        15,
+        17,
+        18,
+        22,
+        25
+      ],
+      "exit": 10
+    },
+    "seconds": 0.19520187099988107
+  },
+  {
+    "stem": "main-0055-n8",
+    "encode_exit": 0,
+    "m": 30,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1914,
+    "bad3": 823,
+    "polygons": 4021,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        16,
+        17,
+        18,
+        20,
+        21,
+        23,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        16,
+        17,
+        18,
+        20,
+        21,
+        23,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "exit": 10
+    },
+    "seconds": 0.034965562997967936
+  },
+  {
+    "stem": "main-0056-n8",
+    "encode_exit": 0,
+    "m": 26,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 575,
+    "bad3": 403,
+    "polygons": 5208,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        8,
+        9,
+        13,
+        15,
+        23,
+        24,
+        25
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        14
+      ],
+      "exit": 10
+    },
+    "seconds": 0.032744547999755014
+  },
+  {
+    "stem": "main-0057-n8",
+    "encode_exit": 0,
+    "m": 33,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1117,
+    "bad3": 746,
+    "polygons": 13459,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        3,
+        10,
+        11,
+        16,
+        17,
+        19,
+        20,
+        22,
+        26,
+        27,
+        28,
+        29,
+        31
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        10,
+        15,
+        16,
+        17,
+        26
+      ],
+      "exit": 10
+    },
+    "seconds": 0.07381751600041753
+  },
+  {
+    "stem": "main-0058-n8",
+    "encode_exit": 0,
+    "m": 33,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 2334,
+    "bad3": 1177,
+    "polygons": 31926,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        18,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        15,
+        16,
+        17,
+        18,
+        20,
+        22,
+        25,
+        32
+      ],
+      "exit": 10
+    },
+    "seconds": 0.14975163599592634
+  },
+  {
+    "stem": "main-0059-n8",
+    "encode_exit": 0,
+    "m": 29,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 756,
+    "bad3": 468,
+    "polygons": 9864,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        14,
+        16,
+        20,
+        23,
+        25,
+        26,
+        27,
+        28
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        14,
+        16,
+        20,
+        23,
+        25,
+        26,
+        27,
+        28
+      ],
+      "exit": 10
+    },
+    "seconds": 0.055226810996828135
+  },
+  {
+    "stem": "main-0060-n8",
+    "encode_exit": 0,
+    "m": 28,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 507,
+    "bad3": 434,
+    "polygons": 3390,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        6,
+        13,
+        16,
+        17,
+        20,
+        21,
+        22,
+        23,
+        25,
+        26,
+        27
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        10,
+        18,
+        20,
+        25,
+        26,
+        27
+      ],
+      "exit": 10
+    },
+    "seconds": 0.02441363500111038
+  },
+  {
+    "stem": "main-0061-n8",
+    "encode_exit": 0,
+    "m": 32,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1143,
+    "bad3": 593,
+    "polygons": 17982,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        2,
+        6,
+        9,
+        12,
+        15,
+        16,
+        17,
+        20,
+        22,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        2,
+        6,
+        9,
+        12,
+        15,
+        16,
+        17,
+        20,
+        22,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "exit": 10
+    },
+    "seconds": 0.09045445600349922
+  },
+  {
+    "stem": "main-0062-n8",
+    "encode_exit": 0,
+    "m": 29,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1144,
+    "bad3": 566,
+    "polygons": 11766,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        11,
+        12,
+        14,
+        19,
+        20,
+        21,
+        24,
+        26,
+        27,
+        28
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        13,
+        15,
+        18,
+        22,
+        23,
+        24
+      ],
+      "exit": 10
+    },
+    "seconds": 0.06082712499483023
+  },
+  {
+    "stem": "main-0063-n8",
+    "encode_exit": 0,
+    "m": 31,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1355,
+    "bad3": 510,
+    "polygons": 8521,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        10,
+        13,
+        18,
+        19,
+        22,
+        23,
+        24,
+        26,
+        27,
+        29,
+        30
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        10,
+        13,
+        18,
+        19,
+        22,
+        23,
+        24,
+        26,
+        27,
+        29,
+        30
+      ],
+      "exit": 10
+    },
+    "seconds": 0.047020755999255925
+  },
+  {
+    "stem": "main-0064-n8",
+    "encode_exit": 0,
+    "m": 30,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1074,
+    "bad3": 627,
+    "polygons": 13970,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        13,
+        17,
+        19,
+        20,
+        21,
+        23,
+        24,
+        25,
+        29
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        8,
+        9,
+        10,
+        12,
+        13,
+        16,
+        17,
+        18,
+        19
+      ],
+      "exit": 10
+    },
+    "seconds": 0.06919079200451961
+  },
+  {
+    "stem": "main-0065-n8",
+    "encode_exit": 0,
+    "m": 32,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 736,
+    "bad3": 495,
+    "polygons": 14637,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        13,
+        19,
+        20,
+        21,
+        22,
+        23,
+        25,
+        26,
+        29,
+        30,
+        31
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        9,
+        10,
+        12,
+        16,
+        18,
+        20,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "exit": 10
+    },
+    "seconds": 0.0701035860038246
+  },
+  {
+    "stem": "main-0066-n8",
+    "encode_exit": 0,
+    "m": 31,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 3293,
+    "bad3": 994,
+    "polygons": 30700,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        14,
+        15,
+        16,
+        18,
+        20,
+        21,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        14,
+        15,
+        16,
+        18,
+        20,
+        21,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "exit": 10
+    },
+    "seconds": 0.14828759800002445
+  },
+  {
+    "stem": "main-0067-n8",
+    "encode_exit": 0,
+    "m": 31,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1899,
+    "bad3": 481,
+    "polygons": 8745,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        12,
+        14,
+        19,
+        20,
+        21,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        11,
+        13,
+        15,
+        18,
+        20
+      ],
+      "exit": 10
+    },
+    "seconds": 0.05023869700380601
+  },
+  {
+    "stem": "main-0068-n8",
+    "encode_exit": 0,
+    "m": 30,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 2603,
+    "bad3": 950,
+    "polygons": 9743,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        21,
+        24,
+        27,
+        28,
+        29
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        6,
+        7,
+        20,
+        27,
+        28,
+        29
+      ],
+      "exit": 10
+    },
+    "seconds": 0.05609385800198652
+  },
+  {
+    "stem": "main-0069-n8",
+    "encode_exit": 0,
+    "m": 30,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 526,
+    "bad3": 383,
+    "polygons": 9441,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        2,
+        10,
+        11,
+        14,
+        15,
+        16,
+        17,
+        19,
+        21,
+        23,
+        25,
+        27,
+        28,
+        29
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        9,
+        12,
+        14,
+        17,
+        18,
+        20,
+        24,
+        25
+      ],
+      "exit": 10
+    },
+    "seconds": 0.0475511800032109
+  },
+  {
+    "stem": "main-0070-n8",
+    "encode_exit": 0,
+    "m": 32,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1759,
+    "bad3": 1235,
+    "polygons": 38003,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        8,
+        13,
+        14,
+        16,
+        17,
+        21,
+        25,
+        26,
+        28,
+        29,
+        30,
+        31
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        7,
+        10,
+        11,
+        14,
+        25
+      ],
+      "exit": 10
+    },
+    "seconds": 0.17982671299978392
+  },
+  {
+    "stem": "main-0071-n8",
+    "encode_exit": 0,
+    "m": 31,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1778,
+    "bad3": 755,
+    "polygons": 7483,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        6,
+        17,
+        18,
+        19,
+        23,
+        24,
+        27,
+        28,
+        29
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        10,
+        13,
+        17,
+        18,
+        19,
+        25,
+        30
+      ],
+      "exit": 10
+    },
+    "seconds": 0.04399583399936091
+  },
+  {
+    "stem": "main-0072-n8",
+    "encode_exit": 0,
+    "m": 29,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1292,
+    "bad3": 873,
+    "polygons": 6276,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        14,
+        18,
+        20,
+        21,
+        23,
+        25,
+        26,
+        27,
+        28
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        12,
+        13,
+        14,
+        16,
+        17,
+        19,
+        22,
+        23
+      ],
+      "exit": 10
+    },
+    "seconds": 0.036893668002448976
+  },
+  {
+    "stem": "main-0073-n8",
+    "encode_exit": 0,
+    "m": 33,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1114,
+    "bad3": 731,
+    "polygons": 28716,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        1,
+        2,
+        3,
+        12,
+        13,
+        17,
+        18,
+        19,
+        23,
+        24,
+        25,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        12,
+        17,
+        26
+      ],
+      "exit": 10
+    },
+    "seconds": 0.13130328500119504
+  },
+  {
+    "stem": "main-0074-n8",
+    "encode_exit": 0,
+    "m": 33,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 2645,
+    "bad3": 430,
+    "polygons": 57847,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        9,
+        12,
+        17,
+        19,
+        24,
+        25,
+        27,
+        28,
+        30,
+        31,
+        32
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        11,
+        12,
+        14,
+        18,
+        19
+      ],
+      "exit": 10
+    },
+    "seconds": 0.26040062199899694
+  },
+  {
+    "stem": "main-0075-n8",
+    "encode_exit": 0,
+    "m": 29,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 815,
+    "bad3": 825,
+    "polygons": 4001,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        10,
+        19,
+        20,
+        21,
+        23,
+        24,
+        26,
+        27,
+        28
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        10,
+        19,
+        20,
+        21,
+        23,
+        24,
+        26,
+        27,
+        28
+      ],
+      "exit": 10
+    },
+    "seconds": 0.029092247001244687
+  },
+  {
+    "stem": "main-0076-n8",
+    "encode_exit": 0,
+    "m": 30,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1012,
+    "bad3": 549,
+    "polygons": 19151,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        8,
+        15,
+        16,
+        18,
+        23,
+        24,
+        25,
+        27,
+        29
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        8,
+        15,
+        16,
+        18,
+        23,
+        24,
+        25,
+        27,
+        29
+      ],
+      "exit": 10
+    },
+    "seconds": 0.09689636799885193
+  },
+  {
+    "stem": "main-0077-n8",
+    "encode_exit": 0,
+    "m": 34,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 1637,
+    "bad3": 879,
+    "polygons": 43716,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        6,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        33
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        6,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        33
+      ],
+      "exit": 10
+    },
+    "seconds": 0.2086928779972368
+  },
+  {
+    "stem": "oct-0000-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0025046070004464127
+  },
+  {
+    "stem": "oct-0001-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002181059004215058
+  },
+  {
+    "stem": "oct-0002-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0021463219964061864
+  },
+  {
+    "stem": "oct-0003-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002138087002094835
+  },
+  {
+    "stem": "oct-0004-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0023252949977177195
+  },
+  {
+    "stem": "oct-0005-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002968965003674384
+  },
+  {
+    "stem": "oct-0006-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0020934009953634813
+  },
+  {
+    "stem": "oct-0007-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002077010001812596
+  },
+  {
+    "stem": "oct-0008-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0021108149958308786
+  },
+  {
+    "stem": "oct-0009-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002070687995001208
+  },
+  {
+    "stem": "oct-0010-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002155440000933595
+  },
+  {
+    "stem": "oct-0011-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0021431069981190376
+  },
+  {
+    "stem": "oct-0012-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.004074708995176479
+  },
+  {
+    "stem": "oct-0013-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0021610309995594434
+  },
+  {
+    "stem": "oct-0014-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002899882005294785
+  },
+  {
+    "stem": "oct-0015-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002154408000933472
+  },
+  {
+    "stem": "oct-0016-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002057523000985384
+  },
+  {
+    "stem": "oct-0017-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002078262004943099
+  },
+  {
+    "stem": "oct-0018-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0020743650020449422
+  },
+  {
+    "stem": "oct-0019-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.00420703199779382
+  },
+  {
+    "stem": "oct-0020-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0021286979972501285
+  },
+  {
+    "stem": "oct-0021-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002067250999971293
+  },
+  {
+    "stem": "oct-0022-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002139500000339467
+  },
+  {
+    "stem": "oct-0023-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002105113002471626
+  },
+  {
+    "stem": "oct-0024-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0021224469965090975
+  },
+  {
+    "stem": "oct-0025-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0021382980048656464
+  },
+  {
+    "stem": "oct-0026-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002102398000715766
+  },
+  {
+    "stem": "oct-0027-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002047082998615224
+  },
+  {
+    "stem": "oct-0028-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0020520619946182705
+  },
+  {
+    "stem": "oct-0029-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0020407310003065504
+  },
+  {
+    "stem": "oct-0030-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002092419999826234
+  },
+  {
+    "stem": "oct-0031-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0021026190006523393
+  },
+  {
+    "stem": "oct-0032-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0020811080030398443
+  },
+  {
+    "stem": "oct-0033-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002060157996311318
+  },
+  {
+    "stem": "oct-0034-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0020796140015590936
+  },
+  {
+    "stem": "oct-0035-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0014414959950954653
+  },
+  {
+    "stem": "oct-0036-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0020166649992461316
+  },
+  {
+    "stem": "oct-0037-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0020197600024403073
+  },
+  {
+    "stem": "oct-0038-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0020528339955490083
+  },
+  {
+    "stem": "oct-0039-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002051381001365371
+  },
+  {
+    "stem": "oct-0040-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002080405996821355
+  },
+  {
+    "stem": "oct-0041-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002064956999674905
+  },
+  {
+    "stem": "oct-0042-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.00419580999732716
+  },
+  {
+    "stem": "oct-0043-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002141873999789823
+  },
+  {
+    "stem": "oct-0044-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0025448449960094877
+  },
+  {
+    "stem": "oct-0045-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002352776995394379
+  },
+  {
+    "stem": "oct-0046-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0025830579979810864
+  },
+  {
+    "stem": "oct-0047-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002329422000912018
+  },
+  {
+    "stem": "oct-0048-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0023407740009133704
+  },
+  {
+    "stem": "oct-0049-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0023746590013615787
+  },
+  {
+    "stem": "oct-0050-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0024683880037628114
+  },
+  {
+    "stem": "oct-0051-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0023686470012762584
+  },
+  {
+    "stem": "oct-0052-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002370320995396469
+  },
+  {
+    "stem": "oct-0053-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002509405996534042
+  },
+  {
+    "stem": "oct-0054-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0023650200018892065
+  },
+  {
+    "stem": "oct-0055-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0024796999932732433
+  },
+  {
+    "stem": "oct-0056-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0024516460034647025
+  },
+  {
+    "stem": "oct-0057-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0024769640003796667
+  },
+  {
+    "stem": "oct-0058-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0025551739963702857
+  },
+  {
+    "stem": "oct-0059-n8",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.002455514004395809
+  },
+  {
+    "stem": "parent16-n7",
+    "encode_exit": 0,
+    "m": 16,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 71,
+    "bad3": 116,
+    "polygons": 279,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        10,
+        11,
+        12,
+        13,
+        15
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "exit": 10
+    },
+    "seconds": 0.009257635996618774
+  },
+  {
+    "stem": "parent16-n8",
+    "encode_exit": 0,
+    "m": 16,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 71,
+    "bad3": 116,
+    "polygons": 0,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "seconds": 0.006036528000549879
+  },
+  {
+    "stem": "restr_QQ_weak_a4_n6_m11_real-n7",
+    "encode_exit": 0,
+    "m": 11,
+    "n": 7,
+    "maxcap": 3,
+    "maxgon": 5,
+    "cap4": 0,
+    "bad3": 63,
+    "polygons": 0,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "seconds": 0.0063643959947512485
+  },
+  {
+    "stem": "restr_QQ_weak_a4_n6_m11_real-n8",
+    "encode_exit": 0,
+    "m": 11,
+    "n": 8,
+    "maxcap": 3,
+    "maxgon": 5,
+    "cap4": 0,
+    "bad3": 63,
+    "polygons": 0,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "seconds": 0.006365657005517278
+  },
+  {
+    "stem": "restr_ends_weak_a5_n6_m12_real-n7",
+    "encode_exit": 0,
+    "m": 12,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 5,
+    "cap4": 31,
+    "bad3": 44,
+    "polygons": 0,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "seconds": 0.006579756001883652
+  },
+  {
+    "stem": "restr_ends_weak_a5_n6_m12_real-n8",
+    "encode_exit": 0,
+    "m": 12,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 5,
+    "cap4": 31,
+    "bad3": 44,
+    "polygons": 0,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "seconds": 0.006517989000712987
+  },
+  {
+    "stem": "restr_ends_weak_a5_n7_m12_real-n7",
+    "encode_exit": 0,
+    "m": 12,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 28,
+    "bad3": 40,
+    "polygons": 80,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        1,
+        2,
+        4,
+        5,
+        10,
+        11
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        9,
+        10
+      ],
+      "exit": 10
+    },
+    "seconds": 0.006912100994668435
+  },
+  {
+    "stem": "restr_ends_weak_a5_n7_m12_real-n8",
+    "encode_exit": 0,
+    "m": 12,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 28,
+    "bad3": 40,
+    "polygons": 0,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "seconds": 0.0065436680015409365
+  },
+  {
+    "stem": "restr_ends_weak_a5_n8_m13_real-n7",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.0021642459978465922
+  },
+  {
+    "stem": "restr_ends_weak_a5_n8_m13_real-n8",
+    "encode_exit": 0,
+    "m": 13,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 26,
+    "bad3": 35,
+    "polygons": 133,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        10,
+        11,
+        12
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        8,
+        10,
+        11
+      ],
+      "exit": 10
+    },
+    "seconds": 0.007078529000864364
+  },
+  {
+    "stem": "star12-n7",
+    "encode_exit": 0,
+    "m": 12,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 25,
+    "bad3": 39,
+    "polygons": 54,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        10,
+        11
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        8
+      ],
+      "exit": 10
+    },
+    "seconds": 0.005675557993527036
+  },
+  {
+    "stem": "star12-n8",
+    "encode_exit": 0,
+    "m": 12,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 6,
+    "cap4": 25,
+    "bad3": 39,
+    "polygons": 0,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "seconds": 0.008650504001707304
+  },
+  {
+    "stem": "target8-n7",
+    "encode_exit": 4,
+    "outcome": "INVALID",
+    "seconds": 0.003082000999711454
+  },
+  {
+    "stem": "target8-n8",
+    "encode_exit": 0,
+    "m": 16,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 7,
+    "cap4": 280,
+    "bad3": 87,
+    "polygons": 168,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [
+        15
+      ],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "exit": 10
+    },
+    "seconds": 0.006663435997324996
+  },
+  {
+    "stem": "upper11-n7",
+    "encode_exit": 0,
+    "m": 11,
+    "n": 7,
+    "maxcap": 4,
+    "maxgon": 5,
+    "cap4": 5,
+    "bad3": 13,
+    "polygons": 0,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "seconds": 0.008312579004268628
+  },
+  {
+    "stem": "upper11-n8",
+    "encode_exit": 0,
+    "m": 11,
+    "n": 8,
+    "maxcap": 4,
+    "maxgon": 5,
+    "cap4": 5,
+    "bad3": 13,
+    "polygons": 0,
+    "terminal": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "weak": {
+      "outcome": "SAT",
+      "A": [],
+      "exit": 10
+    },
+    "seconds": 0.006153562004328705
+  }
+]

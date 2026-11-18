@@ -1,0 +1,90 @@
+{
+  "label": "COMPUTED exact strict endpoint-rule gain",
+  "source_case": "n7-i007",
+  "source_indices": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    6
+  ],
+  "P": [
+    [
+      -946376,
+      -933471
+    ],
+    [
+      -824488,
+      -931372
+    ],
+    [
+      -717985,
+      -931496
+    ],
+    [
+      -519046,
+      -863791
+    ],
+    [
+      -363169,
+      -974497
+    ],
+    [
+      -276891,
+      -945217
+    ]
+  ],
+  "cap_triple": [
+    0,
+    3,
+    4
+  ],
+  "query_pair": [
+    3,
+    4
+  ],
+  "support_pair": [
+    2,
+    5
+  ],
+  "ambient_fourcap": [
+    0,
+    1,
+    2,
+    5
+  ],
+  "all_fourcaps": [
+    [
+      0,
+      1,
+      2,
+      4
+    ],
+    [
+      0,
+      1,
+      2,
+      5
+    ]
+  ],
+  "all_cup_closure_pairs": [
+    [
+      2,
+      4
+    ],
+    [
+      2,
+      5
+    ]
+  ],
+  "endpoint_difference_signs": [
+    -1,
+    -1,
+    1,
+    1
+  ],
+  "no_fivecap": true,
+  "cup_closure_protected": false,
+  "endpoint_forced_protected": true
+}

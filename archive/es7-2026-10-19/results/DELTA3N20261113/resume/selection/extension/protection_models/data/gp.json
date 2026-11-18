@@ -1,0 +1,24 @@
+{
+  "reused_checker": "cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/model15_audit/gp.py",
+  "checker_sha256": "2547d7b878287a5a26bbc4aae4e06aac4556d8de9b8be0628408a95f17ec982b",
+  "cases": [
+    {
+      "model": "cup15",
+      "m": 15,
+      "identities": 15015,
+      "failures": [],
+      "necessary_GP_pass": true,
+      "signs_sha256": "1eda34b382bbed90d864945e2a9bb3c291dab5e9c857bc75530fda3a1cca1d11",
+      "scope": "Necessary condition only; no realizability conclusion when this check passes."
+    },
+    {
+      "model": "forced16",
+      "m": 16,
+      "identities": 21840,
+      "failures": [],
+      "necessary_GP_pass": true,
+      "signs_sha256": "b21664b06887c4019d75023025b1cd80582064a0b06f53698d2a70bc8fc49067",
+      "scope": "Necessary condition only; no realizability conclusion when this check passes."
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "started": "2026-11-13T20:19:00.699139+00:00",
+  "pid": 840348,
+  "limits": "Limit                     Soft Limit           Hard Limit           Units     \nMax cpu time              1180                 1180                 seconds   \nMax file size             unlimited            unlimited            bytes     \nMax data size             unlimited            unlimited            bytes     \nMax stack size            8388608              unlimited            bytes     \nMax core file size        0                    unlimited            bytes     \nMax resident set          unlimited            unlimited            bytes     \nMax processes             243364               243364               processes \nMax open files            1024                 524288               files     \nMax locked memory         8388608              8388608              bytes     \nMax address space         314572800            314572800            bytes     \nMax file locks            unlimited            unlimited            locks     \nMax pending signals       243364               243364               signals   \nMax msgqueue size         819200               819200               bytes     \nMax nice priority         0                    0                    \nMax realtime priority     0                    0                    \nMax realtime timeout      unlimited            unlimited            us        \n",
+  "affinity": [
+    5
+  ],
+  "AS_bytes": 314572800,
+  "label": "IN PROGRESS"
+}

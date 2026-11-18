@@ -1,0 +1,2236 @@
+{
+  "status": "PASS",
+  "label": "CERTIFIED components; PROVED minimum deduction",
+  "finished_UTC": "2026-11-13T22:01:21.359980+00:00",
+  "statement": "The global minimum cardinality of a terminal-safe n6 counterexample among real x-ordered GP sets with no five-cap and no convex hexagon is exactly12.",
+  "global_minimum": 12,
+  "property": "terminal-safe weak Delta",
+  "n": 6,
+  "ordinary_weak_deltas_in_witness": 945,
+  "ordinary_weak_minimum_size": 4,
+  "lower_bound_dependencies": {
+    "through9": {
+      "audit": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/boundary/audit/VERIFY_BOUNDARY.md",
+      "scope": "Every n6 admissible real set of size at most9; written smaller-size dichotomy plus boundary certificate.",
+      "replay_receipt": {
+        "n": 6,
+        "label": "CERTIFIED",
+        "command": [
+          "/usr/bin/timeout",
+          "20s",
+          "/usr/bin/prlimit",
+          "--as=838860800",
+          "--cpu=18",
+          "/home/jay/.local/bin/cake_lpr",
+          "--CML_HEAP_SIZE=600",
+          "--CML_STACK_SIZE=32",
+          "/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n6/input.cnf",
+          "/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n6/solve/proof.lrat"
+        ],
+        "exit_code": 0,
+        "exact_verdict_line": true,
+        "input_hashes_before": {
+          "/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n6/input.cnf": "1e40345bfedd16d0130a0a00bc6a412d7a0caceb04bcd39879be99d71d9621c3",
+          "/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n6/solve/proof.lrat": "f34baddd285f8d0654223edf110c9e2986c43e707ff675a0aae5deedd420f9ce",
+          "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54"
+        },
+        "input_hashes_after": {
+          "/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n6/input.cnf": "1e40345bfedd16d0130a0a00bc6a412d7a0caceb04bcd39879be99d71d9621c3",
+          "/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n6/solve/proof.lrat": "f34baddd285f8d0654223edf110c9e2986c43e707ff675a0aae5deedd420f9ce",
+          "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54"
+        },
+        "stable": true,
+        "log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+        "replay_source_sha256": "e0fbe8fdbe6987b0ab715a9563ccb2d71a2cc25b3db45a3c0630496333fe2151",
+        "proof_bytes": 119694,
+        "seconds": 0.007
+      },
+      "fresh_replay_here": false
+    },
+    "exact10": {
+      "status": "PASS",
+      "label": "CERTIFIED",
+      "m": 10,
+      "n": 6,
+      "scope": "universal generic terminal counterexample formula",
+      "exact_verdict_line": true,
+      "returncode": 0,
+      "seconds": 0.05631409300258383,
+      "stable_inputs": true,
+      "before": {
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m10-a/input.cnf": "982fa0f5f138d3e01c656499c3adef258757919d901a0299735040a226ecab5d",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m10-a/proof.blrat": "357fcd0680d2b245c954747b213591f67f5961bb504e68e9471eccebd9a2b208",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m10-a/proof.blrat.zst": "eeae1193ce387447ab1765d1001bffd972d16a825e93a44f20c976c393eb5e2b",
+        "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m10-a/result.json": "58fd2122d7ba33b5777a16cb70836ee83f87d676e192bf068cec28048072f5c9",
+        "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/terminal12_audit/tools/replay.py": "a14a6487bd64bb88995d661dc67ec82be47b0c26c9f7d41323f1df847ad8d508"
+      },
+      "after": {
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m10-a/input.cnf": "982fa0f5f138d3e01c656499c3adef258757919d901a0299735040a226ecab5d",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m10-a/proof.blrat": "357fcd0680d2b245c954747b213591f67f5961bb504e68e9471eccebd9a2b208",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m10-a/proof.blrat.zst": "eeae1193ce387447ab1765d1001bffd972d16a825e93a44f20c976c393eb5e2b",
+        "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m10-a/result.json": "58fd2122d7ba33b5777a16cb70836ee83f87d676e192bf068cec28048072f5c9",
+        "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/terminal12_audit/tools/replay.py": "a14a6487bd64bb88995d661dc67ec82be47b0c26c9f7d41323f1df847ad8d508"
+      },
+      "proof_bytes": 2269027,
+      "compressed_bytes": 1430151,
+      "stdout_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cache_release": "POSIX_FADV_DONTNEED every64MiB and remainder on every hash",
+      "limits": {
+        "AS_MiB": 300,
+        "heap_MiB": 64,
+        "stack_MiB": 32,
+        "CPUs": 1,
+        "outer_wall_seconds": 20,
+        "cake_wall_seconds": 17,
+        "cake_CPU_seconds": 16
+      },
+      "proofs_retained": true,
+      "new_reservation": false
+    },
+    "exact11": {
+      "status": "PASS",
+      "label": "CERTIFIED",
+      "m": 11,
+      "n": 6,
+      "scope": "universal generic terminal counterexample formula",
+      "exact_verdict_line": true,
+      "returncode": 0,
+      "seconds": 0.7709297309993417,
+      "stable_inputs": true,
+      "before": {
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m11-a/input.cnf": "ca1637366185d883d5e78064f17e52680dd7d87516113576ff9861e4256e0c2e",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m11-a/proof.blrat": "3c7d2c9e0056e2723c6b0bfa760ff2b365f76249b1ca2bdecead5d58ba0730a6",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m11-a/proof.blrat.zst": "45ba870bddedc88919e237495fd19901ae5385f90e7e3659493a0219619873dd",
+        "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m11-a/result.json": "a575181d4429710f35433d7e86e41618e9ca29bf91a74bea986007de778f3b09",
+        "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/terminal12_audit/tools/replay.py": "a14a6487bd64bb88995d661dc67ec82be47b0c26c9f7d41323f1df847ad8d508"
+      },
+      "after": {
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m11-a/input.cnf": "ca1637366185d883d5e78064f17e52680dd7d87516113576ff9861e4256e0c2e",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m11-a/proof.blrat": "3c7d2c9e0056e2723c6b0bfa760ff2b365f76249b1ca2bdecead5d58ba0730a6",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m11-a/proof.blrat.zst": "45ba870bddedc88919e237495fd19901ae5385f90e7e3659493a0219619873dd",
+        "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m11-a/result.json": "a575181d4429710f35433d7e86e41618e9ca29bf91a74bea986007de778f3b09",
+        "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/terminal12_audit/tools/replay.py": "a14a6487bd64bb88995d661dc67ec82be47b0c26c9f7d41323f1df847ad8d508"
+      },
+      "proof_bytes": 31431277,
+      "compressed_bytes": 18526014,
+      "stdout_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cache_release": "POSIX_FADV_DONTNEED every64MiB and remainder on every hash",
+      "limits": {
+        "AS_MiB": 300,
+        "heap_MiB": 64,
+        "stack_MiB": 32,
+        "CPUs": 1,
+        "outer_wall_seconds": 20,
+        "cake_wall_seconds": 17,
+        "cake_CPU_seconds": 16
+      },
+      "proofs_retained": true,
+      "new_reservation": false
+    }
+  },
+  "upper_bound": {
+    "fixed_geometry_membership": {
+      "m": 12,
+      "n": 6,
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          37,
+          -35
+        ],
+        [
+          38,
+          -248
+        ],
+        [
+          84,
+          -270
+        ],
+        [
+          472,
+          -427
+        ],
+        [
+          653,
+          -757
+        ],
+        [
+          665,
+          -793
+        ],
+        [
+          666,
+          -717
+        ],
+        [
+          683,
+          -718
+        ],
+        [
+          736,
+          -567
+        ],
+        [
+          926,
+          -895
+        ],
+        [
+          1000,
+          0
+        ]
+      ],
+      "general_position": true,
+      "maxima_cap_cup_gon": [
+        4,
+        5,
+        5
+      ],
+      "minimum_absolute_determinant": 45,
+      "maximum_absolute_determinant": 895000,
+      "fourcaps": 14,
+      "bad_triples": 44,
+      "targets": 134,
+      "fivecaps": 0,
+      "ngons": 0,
+      "assignments": 4096,
+      "ordinary_weak_deltas": 945,
+      "terminal_deltas": 0,
+      "minimum_weak_size": 4,
+      "weak_by_size": {
+        "4": 21,
+        "5": 138,
+        "6": 343,
+        "7": 306,
+        "8": 116,
+        "9": 20,
+        "10": 1
+      },
+      "terminal_by_size": {},
+      "first_minimum_weak": [
+        0,
+        2,
+        3,
+        6
+      ],
+      "first_terminal": null,
+      "status": "PASS",
+      "label": "COMPUTED",
+      "local_to_original": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        14
+      ],
+      "clauses": 192,
+      "membership_byte_identical": true,
+      "membership_truth_checks": 4096,
+      "cnf_sha256": "25ca75a9eee359ca03ae7f96657128ab03693c03421b1e7e83627f529841890a",
+      "parent_result_sha256": "3b910bb7fce55658e1a0bfdb83d5425292aa911ad815fe3076ed9ad1c212f415",
+      "fourcap_masks": [
+        99,
+        113,
+        114,
+        108,
+        116,
+        1556,
+        120,
+        1560,
+        1440,
+        1696,
+        1472,
+        1728,
+        1856,
+        2880
+      ],
+      "bad_triple_masks": [
+        7,
+        11,
+        35,
+        67,
+        131,
+        259,
+        1027,
+        49,
+        81,
+        145,
+        273,
+        1041,
+        50,
+        82,
+        146,
+        274,
+        1042,
+        44,
+        76,
+        140,
+        268,
+        1036,
+        52,
+        84,
+        148,
+        276,
+        532,
+        1044,
+        56,
+        88,
+        152,
+        280,
+        536,
+        1048,
+        416,
+        672,
+        1184,
+        2208,
+        448,
+        704,
+        1216,
+        2240,
+        832,
+        2368
+      ],
+      "target_masks": [
+        103,
+        167,
+        295,
+        1063,
+        199,
+        327,
+        1095,
+        391,
+        1159,
+        1287,
+        107,
+        171,
+        299,
+        1067,
+        203,
+        331,
+        1099,
+        395,
+        1163,
+        1291,
+        2579,
+        2077,
+        2573,
+        117,
+        181,
+        309,
+        1077,
+        213,
+        341,
+        1109,
+        405,
+        1173,
+        1301,
+        805,
+        2341,
+        1573,
+        3109,
+        1605,
+        3141,
+        901,
+        2437,
+        1669,
+        2693,
+        3205,
+        1797,
+        3333,
+        121,
+        185,
+        313,
+        1081,
+        217,
+        345,
+        1113,
+        409,
+        1177,
+        1305,
+        809,
+        2345,
+        1577,
+        3113,
+        1609,
+        3145,
+        905,
+        2441,
+        1673,
+        2697,
+        3209,
+        1801,
+        3337,
+        2078,
+        2574,
+        118,
+        182,
+        310,
+        1078,
+        214,
+        342,
+        1110,
+        406,
+        1174,
+        1302,
+        806,
+        2342,
+        1574,
+        3110,
+        1606,
+        3142,
+        902,
+        2438,
+        1670,
+        2694,
+        3206,
+        1798,
+        3334,
+        122,
+        186,
+        314,
+        1082,
+        218,
+        346,
+        1114,
+        410,
+        1178,
+        1306,
+        810,
+        2346,
+        1578,
+        3114,
+        1610,
+        3146,
+        906,
+        2442,
+        1674,
+        2698,
+        3210,
+        1802,
+        3338,
+        820,
+        1588,
+        1620,
+        916,
+        1684,
+        1812,
+        824,
+        1592,
+        1624,
+        920,
+        1688,
+        1816,
+        1504,
+        1760,
+        3296,
+        3680,
+        3904
+      ],
+      "old_cpp_clause_multiset_agrees": true
+    },
+    "certificate": {
+      "status": "PASS",
+      "label": "CERTIFIED",
+      "m": 12,
+      "n": 6,
+      "scope": "fixed membership obstruction",
+      "exact_verdict_line": true,
+      "returncode": 0,
+      "seconds": 0.004239355999743566,
+      "stable_inputs": true,
+      "before": {
+        "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/3/certificate/input.cnf": "25ca75a9eee359ca03ae7f96657128ab03693c03421b1e7e83627f529841890a",
+        "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/3/certificate/proof.blrat": "36cc74ed0a141888ed9a23ab90b2b31921025bc03183ccd2aebd18814d02d33c",
+        "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/3/certificate/proof.blrat.zst": "6dc5b7c6a4206a60f1a16edff42f6b42892c4fac6f03d0bf7b8e4317b2a36fe3",
+        "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+        "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/3/certificate/result.json": "20421068facb89fb9a0fc6f10dd382207c6fb2b51af30c643471d25d3da2b3ef",
+        "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/terminal12_audit/tools/replay.py": "a14a6487bd64bb88995d661dc67ec82be47b0c26c9f7d41323f1df847ad8d508"
+      },
+      "after": {
+        "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/3/certificate/input.cnf": "25ca75a9eee359ca03ae7f96657128ab03693c03421b1e7e83627f529841890a",
+        "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/3/certificate/proof.blrat": "36cc74ed0a141888ed9a23ab90b2b31921025bc03183ccd2aebd18814d02d33c",
+        "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/3/certificate/proof.blrat.zst": "6dc5b7c6a4206a60f1a16edff42f6b42892c4fac6f03d0bf7b8e4317b2a36fe3",
+        "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+        "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/3/certificate/result.json": "20421068facb89fb9a0fc6f10dd382207c6fb2b51af30c643471d25d3da2b3ef",
+        "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/terminal12_audit/tools/replay.py": "a14a6487bd64bb88995d661dc67ec82be47b0c26c9f7d41323f1df847ad8d508"
+      },
+      "proof_bytes": 753,
+      "compressed_bytes": 593,
+      "stdout_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cache_release": "POSIX_FADV_DONTNEED every64MiB and remainder on every hash",
+      "limits": {
+        "AS_MiB": 300,
+        "heap_MiB": 64,
+        "stack_MiB": 32,
+        "CPUs": 1,
+        "outer_wall_seconds": 20,
+        "cake_wall_seconds": 17,
+        "cake_CPU_seconds": 16
+      },
+      "proofs_retained": true,
+      "new_reservation": false
+    }
+  },
+  "checks": {
+    "status": "PASS",
+    "label": "COMPUTED formula and exact geometry/membership audits",
+    "fixed": {
+      "0": {
+        "m": 12,
+        "n": 6,
+        "P": [
+          [
+            0,
+            0
+          ],
+          [
+            37,
+            -35
+          ],
+          [
+            202,
+            -640
+          ],
+          [
+            472,
+            -427
+          ],
+          [
+            653,
+            -757
+          ],
+          [
+            666,
+            -717
+          ],
+          [
+            683,
+            -718
+          ],
+          [
+            736,
+            -567
+          ],
+          [
+            737,
+            -827
+          ],
+          [
+            926,
+            -895
+          ],
+          [
+            999,
+            -926
+          ],
+          [
+            1000,
+            0
+          ]
+        ],
+        "general_position": true,
+        "maxima_cap_cup_gon": [
+          4,
+          5,
+          5
+        ],
+        "minimum_absolute_determinant": 90,
+        "maximum_absolute_determinant": 926000,
+        "fourcaps": 18,
+        "bad_triples": 39,
+        "targets": 90,
+        "fivecaps": 0,
+        "ngons": 0,
+        "assignments": 4096,
+        "ordinary_weak_deltas": 877,
+        "terminal_deltas": 68,
+        "minimum_weak_size": 4,
+        "weak_by_size": {
+          "4": 19,
+          "5": 144,
+          "6": 343,
+          "7": 275,
+          "8": 87,
+          "9": 9
+        },
+        "terminal_by_size": {
+          "5": 19,
+          "6": 37,
+          "7": 12
+        },
+        "first_minimum_weak": [
+          0,
+          4,
+          5,
+          6
+        ],
+        "first_terminal": [
+          0,
+          5,
+          6,
+          8,
+          9
+        ],
+        "status": "PASS",
+        "label": "COMPUTED",
+        "local_to_original": [
+          0,
+          1,
+          4,
+          5,
+          6,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "clauses": 147,
+        "membership_byte_identical": true,
+        "membership_truth_checks": 4096,
+        "cnf_sha256": "66d1a8a865f53b403fdcae73f61602237ea3e19dc125fb94750732e13192ee7c",
+        "parent_result_sha256": "ca1e09cf7c19fa56f72cf59833e549374ad8a1d1377f7aa3eac79986d267abe7",
+        "fourcap_masks": [
+          291,
+          323,
+          297,
+          329,
+          298,
+          330,
+          300,
+          332,
+          396,
+          652,
+          1164,
+          1796,
+          368,
+          624,
+          1136,
+          432,
+          688,
+          1200
+        ],
+        "bad_triple_masks": [
+          7,
+          19,
+          35,
+          67,
+          259,
+          515,
+          25,
+          41,
+          73,
+          265,
+          521,
+          1033,
+          26,
+          42,
+          74,
+          266,
+          522,
+          1034,
+          28,
+          44,
+          76,
+          140,
+          268,
+          524,
+          1036,
+          276,
+          532,
+          1044,
+          548,
+          1060,
+          772,
+          1284,
+          112,
+          176,
+          560,
+          1072,
+          2096,
+          2192,
+          2240
+        ],
+        "target_masks": [
+          55,
+          87,
+          103,
+          295,
+          327,
+          2187,
+          307,
+          339,
+          787,
+          61,
+          93,
+          109,
+          301,
+          333,
+          213,
+          2133,
+          229,
+          2149,
+          2213,
+          313,
+          345,
+          793,
+          1305,
+          1561,
+          1577,
+          1609,
+          913,
+          1425,
+          1681,
+          2833,
+          3345,
+          3601,
+          1697,
+          3617,
+          1729,
+          3649,
+          62,
+          94,
+          110,
+          302,
+          334,
+          214,
+          2134,
+          230,
+          2150,
+          2214,
+          314,
+          346,
+          794,
+          1306,
+          1562,
+          1578,
+          1610,
+          914,
+          1426,
+          1682,
+          2834,
+          3346,
+          3602,
+          1698,
+          3618,
+          1730,
+          3650,
+          220,
+          236,
+          920,
+          1432,
+          1688,
+          2840,
+          3352,
+          3608,
+          1704,
+          3624,
+          1736,
+          3656,
+          880,
+          1392,
+          1648,
+          944,
+          1456,
+          1712,
+          2864,
+          3376,
+          3632,
+          2960,
+          3472,
+          3728,
+          3008,
+          3520,
+          3776
+        ]
+      },
+      "1": {
+        "m": 12,
+        "n": 6,
+        "P": [
+          [
+            0,
+            0
+          ],
+          [
+            37,
+            -35
+          ],
+          [
+            202,
+            -640
+          ],
+          [
+            472,
+            -427
+          ],
+          [
+            653,
+            -757
+          ],
+          [
+            665,
+            -793
+          ],
+          [
+            666,
+            -717
+          ],
+          [
+            683,
+            -718
+          ],
+          [
+            736,
+            -567
+          ],
+          [
+            926,
+            -895
+          ],
+          [
+            999,
+            -926
+          ],
+          [
+            1000,
+            0
+          ]
+        ],
+        "general_position": true,
+        "maxima_cap_cup_gon": [
+          4,
+          5,
+          5
+        ],
+        "minimum_absolute_determinant": 90,
+        "maximum_absolute_determinant": 926000,
+        "fourcaps": 18,
+        "bad_triples": 43,
+        "targets": 70,
+        "fivecaps": 0,
+        "ngons": 0,
+        "assignments": 4096,
+        "ordinary_weak_deltas": 895,
+        "terminal_deltas": 28,
+        "minimum_weak_size": 4,
+        "weak_by_size": {
+          "4": 28,
+          "5": 170,
+          "6": 365,
+          "7": 253,
+          "8": 71,
+          "9": 8
+        },
+        "terminal_by_size": {
+          "4": 4,
+          "5": 11,
+          "6": 11,
+          "7": 2
+        },
+        "first_minimum_weak": [
+          0,
+          4,
+          6,
+          7
+        ],
+        "first_terminal": [
+          0,
+          2,
+          9,
+          10
+        ],
+        "status": "PASS",
+        "label": "COMPUTED",
+        "local_to_original": [
+          0,
+          1,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          12,
+          13,
+          14
+        ],
+        "clauses": 131,
+        "membership_byte_identical": true,
+        "membership_truth_checks": 4096,
+        "cnf_sha256": "05ca48fa112a2d0125ce4b38b6365c04c85261a520174b165ee614819c963200",
+        "parent_result_sha256": "f93ce95bbd083e6c7ea87c1552bf087f31bc6e4a6db0bf519cd05351633d2902",
+        "fourcap_masks": [
+          51,
+          57,
+          58,
+          60,
+          780,
+          1292,
+          1572,
+          720,
+          1232,
+          848,
+          1360,
+          736,
+          1248,
+          864,
+          1376,
+          928,
+          1440,
+          2464
+        ],
+        "bad_triple_masks": [
+          7,
+          19,
+          35,
+          67,
+          131,
+          515,
+          25,
+          41,
+          73,
+          137,
+          521,
+          1033,
+          26,
+          42,
+          74,
+          138,
+          522,
+          1034,
+          28,
+          44,
+          76,
+          140,
+          268,
+          524,
+          1036,
+          532,
+          1044,
+          548,
+          1060,
+          580,
+          1092,
+          208,
+          336,
+          592,
+          1104,
+          2128,
+          224,
+          352,
+          608,
+          1120,
+          2144,
+          416,
+          2208
+        ],
+        "target_masks": [
+          55,
+          87,
+          151,
+          103,
+          167,
+          199,
+          2315,
+          61,
+          93,
+          157,
+          109,
+          173,
+          205,
+          405,
+          2197,
+          453,
+          2245,
+          2373,
+          1561,
+          1609,
+          1673,
+          1809,
+          3601,
+          1857,
+          3649,
+          1921,
+          3713,
+          62,
+          94,
+          158,
+          110,
+          174,
+          206,
+          406,
+          2198,
+          454,
+          2246,
+          2374,
+          1562,
+          1610,
+          1674,
+          1810,
+          3602,
+          1858,
+          3650,
+          1922,
+          3714,
+          412,
+          460,
+          1816,
+          3608,
+          1864,
+          3656,
+          1928,
+          3720,
+          752,
+          1264,
+          880,
+          1392,
+          2672,
+          3184,
+          2864,
+          3376,
+          1744,
+          1872,
+          3664,
+          3856,
+          2976,
+          3488,
+          3968
+        ]
+      },
+      "2": {
+        "m": 12,
+        "n": 6,
+        "P": [
+          [
+            0,
+            0
+          ],
+          [
+            37,
+            -35
+          ],
+          [
+            38,
+            -248
+          ],
+          [
+            84,
+            -270
+          ],
+          [
+            472,
+            -427
+          ],
+          [
+            653,
+            -757
+          ],
+          [
+            665,
+            -793
+          ],
+          [
+            666,
+            -717
+          ],
+          [
+            683,
+            -718
+          ],
+          [
+            736,
+            -567
+          ],
+          [
+            999,
+            -926
+          ],
+          [
+            1000,
+            0
+          ]
+        ],
+        "general_position": true,
+        "maxima_cap_cup_gon": [
+          4,
+          5,
+          5
+        ],
+        "minimum_absolute_determinant": 90,
+        "maximum_absolute_determinant": 926000,
+        "fourcaps": 14,
+        "bad_triples": 43,
+        "targets": 126,
+        "fivecaps": 0,
+        "ngons": 0,
+        "assignments": 4096,
+        "ordinary_weak_deltas": 949,
+        "terminal_deltas": 2,
+        "minimum_weak_size": 4,
+        "weak_by_size": {
+          "4": 21,
+          "5": 138,
+          "6": 345,
+          "7": 308,
+          "8": 116,
+          "9": 20,
+          "10": 1
+        },
+        "terminal_by_size": {
+          "4": 1,
+          "5": 1
+        },
+        "first_minimum_weak": [
+          0,
+          2,
+          3,
+          6
+        ],
+        "first_terminal": [
+          0,
+          1,
+          9,
+          10
+        ],
+        "status": "PASS",
+        "label": "COMPUTED",
+        "local_to_original": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          13,
+          14
+        ],
+        "clauses": 183,
+        "membership_byte_identical": true,
+        "membership_truth_checks": 4096,
+        "cnf_sha256": "9f440dbdb604275e7d903e381c50b73f60245f59cdde4487dc5a876d895e9063",
+        "parent_result_sha256": "e3892a9c38b3a9b6bc702fbd86b1f12c6a1931395354fd45735897e659b564a2",
+        "fourcap_masks": [
+          99,
+          113,
+          114,
+          108,
+          116,
+          1556,
+          120,
+          1560,
+          1440,
+          1696,
+          1472,
+          1728,
+          1856,
+          2880
+        ],
+        "bad_triple_masks": [
+          7,
+          11,
+          35,
+          67,
+          131,
+          259,
+          49,
+          81,
+          145,
+          273,
+          1041,
+          50,
+          82,
+          146,
+          274,
+          1042,
+          44,
+          76,
+          140,
+          268,
+          1036,
+          52,
+          84,
+          148,
+          276,
+          532,
+          1044,
+          56,
+          88,
+          152,
+          280,
+          536,
+          1048,
+          416,
+          672,
+          1184,
+          2208,
+          448,
+          704,
+          1216,
+          2240,
+          832,
+          2368
+        ],
+        "target_masks": [
+          103,
+          167,
+          295,
+          199,
+          327,
+          391,
+          107,
+          171,
+          299,
+          203,
+          331,
+          395,
+          2579,
+          2077,
+          2573,
+          117,
+          181,
+          309,
+          1077,
+          213,
+          341,
+          1109,
+          405,
+          1173,
+          1301,
+          805,
+          2341,
+          1573,
+          3109,
+          1605,
+          3141,
+          901,
+          2437,
+          1669,
+          2693,
+          3205,
+          1797,
+          3333,
+          121,
+          185,
+          313,
+          1081,
+          217,
+          345,
+          1113,
+          409,
+          1177,
+          1305,
+          809,
+          2345,
+          1577,
+          3113,
+          1609,
+          3145,
+          905,
+          2441,
+          1673,
+          2697,
+          3209,
+          1801,
+          3337,
+          2078,
+          2574,
+          118,
+          182,
+          310,
+          1078,
+          214,
+          342,
+          1110,
+          406,
+          1174,
+          1302,
+          806,
+          2342,
+          1574,
+          3110,
+          1606,
+          3142,
+          902,
+          2438,
+          1670,
+          2694,
+          3206,
+          1798,
+          3334,
+          122,
+          186,
+          314,
+          1082,
+          218,
+          346,
+          1114,
+          410,
+          1178,
+          1306,
+          810,
+          2346,
+          1578,
+          3114,
+          1610,
+          3146,
+          906,
+          2442,
+          1674,
+          2698,
+          3210,
+          1802,
+          3338,
+          820,
+          1588,
+          1620,
+          916,
+          1684,
+          1812,
+          824,
+          1592,
+          1624,
+          920,
+          1688,
+          1816,
+          1504,
+          1760,
+          3296,
+          3680,
+          3904
+        ]
+      },
+      "3": {
+        "m": 12,
+        "n": 6,
+        "P": [
+          [
+            0,
+            0
+          ],
+          [
+            37,
+            -35
+          ],
+          [
+            38,
+            -248
+          ],
+          [
+            84,
+            -270
+          ],
+          [
+            472,
+            -427
+          ],
+          [
+            653,
+            -757
+          ],
+          [
+            665,
+            -793
+          ],
+          [
+            666,
+            -717
+          ],
+          [
+            683,
+            -718
+          ],
+          [
+            736,
+            -567
+          ],
+          [
+            926,
+            -895
+          ],
+          [
+            1000,
+            0
+          ]
+        ],
+        "general_position": true,
+        "maxima_cap_cup_gon": [
+          4,
+          5,
+          5
+        ],
+        "minimum_absolute_determinant": 45,
+        "maximum_absolute_determinant": 895000,
+        "fourcaps": 14,
+        "bad_triples": 44,
+        "targets": 134,
+        "fivecaps": 0,
+        "ngons": 0,
+        "assignments": 4096,
+        "ordinary_weak_deltas": 945,
+        "terminal_deltas": 0,
+        "minimum_weak_size": 4,
+        "weak_by_size": {
+          "4": 21,
+          "5": 138,
+          "6": 343,
+          "7": 306,
+          "8": 116,
+          "9": 20,
+          "10": 1
+        },
+        "terminal_by_size": {},
+        "first_minimum_weak": [
+          0,
+          2,
+          3,
+          6
+        ],
+        "first_terminal": null,
+        "status": "PASS",
+        "label": "COMPUTED",
+        "local_to_original": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          12,
+          14
+        ],
+        "clauses": 192,
+        "membership_byte_identical": true,
+        "membership_truth_checks": 4096,
+        "cnf_sha256": "25ca75a9eee359ca03ae7f96657128ab03693c03421b1e7e83627f529841890a",
+        "parent_result_sha256": "3b910bb7fce55658e1a0bfdb83d5425292aa911ad815fe3076ed9ad1c212f415",
+        "fourcap_masks": [
+          99,
+          113,
+          114,
+          108,
+          116,
+          1556,
+          120,
+          1560,
+          1440,
+          1696,
+          1472,
+          1728,
+          1856,
+          2880
+        ],
+        "bad_triple_masks": [
+          7,
+          11,
+          35,
+          67,
+          131,
+          259,
+          1027,
+          49,
+          81,
+          145,
+          273,
+          1041,
+          50,
+          82,
+          146,
+          274,
+          1042,
+          44,
+          76,
+          140,
+          268,
+          1036,
+          52,
+          84,
+          148,
+          276,
+          532,
+          1044,
+          56,
+          88,
+          152,
+          280,
+          536,
+          1048,
+          416,
+          672,
+          1184,
+          2208,
+          448,
+          704,
+          1216,
+          2240,
+          832,
+          2368
+        ],
+        "target_masks": [
+          103,
+          167,
+          295,
+          1063,
+          199,
+          327,
+          1095,
+          391,
+          1159,
+          1287,
+          107,
+          171,
+          299,
+          1067,
+          203,
+          331,
+          1099,
+          395,
+          1163,
+          1291,
+          2579,
+          2077,
+          2573,
+          117,
+          181,
+          309,
+          1077,
+          213,
+          341,
+          1109,
+          405,
+          1173,
+          1301,
+          805,
+          2341,
+          1573,
+          3109,
+          1605,
+          3141,
+          901,
+          2437,
+          1669,
+          2693,
+          3205,
+          1797,
+          3333,
+          121,
+          185,
+          313,
+          1081,
+          217,
+          345,
+          1113,
+          409,
+          1177,
+          1305,
+          809,
+          2345,
+          1577,
+          3113,
+          1609,
+          3145,
+          905,
+          2441,
+          1673,
+          2697,
+          3209,
+          1801,
+          3337,
+          2078,
+          2574,
+          118,
+          182,
+          310,
+          1078,
+          214,
+          342,
+          1110,
+          406,
+          1174,
+          1302,
+          806,
+          2342,
+          1574,
+          3110,
+          1606,
+          3142,
+          902,
+          2438,
+          1670,
+          2694,
+          3206,
+          1798,
+          3334,
+          122,
+          186,
+          314,
+          1082,
+          218,
+          346,
+          1114,
+          410,
+          1178,
+          1306,
+          810,
+          2346,
+          1578,
+          3114,
+          1610,
+          3146,
+          906,
+          2442,
+          1674,
+          2698,
+          3210,
+          1802,
+          3338,
+          820,
+          1588,
+          1620,
+          916,
+          1684,
+          1812,
+          824,
+          1592,
+          1624,
+          920,
+          1688,
+          1816,
+          1504,
+          1760,
+          3296,
+          3680,
+          3904
+        ],
+        "old_cpp_clause_multiset_agrees": true
+      }
+    },
+    "generic": {
+      "10": {
+        "status": "PASS",
+        "formula": {
+          "m": 10,
+          "n": 6,
+          "variables": 1970,
+          "clauses": 9706,
+          "phases": {
+            "signotope": 1680,
+            "no5cap": 252,
+            "convex4_equivalence": 1680,
+            "convex_larger_equivalence": 1512,
+            "no_ngon": 210,
+            "terminal_fourcap_equivalence": 1050,
+            "terminal_bad_triple_equivalence": 1416,
+            "bad_triple_containment": 672,
+            "target_containment": 386,
+            "forall_terminal_delta": 848
+          },
+          "literals": 30148,
+          "hashes": {
+            "/home/jay/research/data/delta3-codex-20261113/extension/n6m10-terminal.cnf": "982fa0f5f138d3e01c656499c3adef258757919d901a0299735040a226ecab5d",
+            "/home/jay/research/data/delta3-codex-20261113/extension/n6m10-terminal.cnf.map": "de664101e9249a15d0d5d85d26819e7b971d7dc6f4d38fa417b08462fd75ef35"
+          },
+          "canonical_failed_clauses": {
+            "forall_terminal_delta": 34
+          },
+          "first_failures": {
+            "forall_terminal_delta": {
+              "clause": 8871,
+              "row": [
+                1958
+              ]
+            }
+          },
+          "map_and_all_rows_match": true,
+          "fixed_signs": false
+        },
+        "real_control": {
+          "m": 10,
+          "n": 6,
+          "P": [
+            [
+              0,
+              0
+            ],
+            [
+              37,
+              -35
+            ],
+            [
+              38,
+              -248
+            ],
+            [
+              84,
+              -270
+            ],
+            [
+              472,
+              -427
+            ],
+            [
+              653,
+              -757
+            ],
+            [
+              665,
+              -793
+            ],
+            [
+              666,
+              -717
+            ],
+            [
+              683,
+              -718
+            ],
+            [
+              736,
+              -567
+            ]
+          ],
+          "general_position": true,
+          "maxima_cap_cup_gon": [
+            4,
+            5,
+            5
+          ],
+          "minimum_absolute_determinant": 682,
+          "maximum_absolute_determinant": 206593,
+          "fourcaps": 6,
+          "bad_triples": 33,
+          "targets": 48,
+          "fivecaps": 0,
+          "ngons": 0,
+          "assignments": 1024,
+          "ordinary_weak_deltas": 543,
+          "terminal_deltas": 34,
+          "minimum_weak_size": 2,
+          "weak_by_size": {
+            "2": 1,
+            "3": 19,
+            "4": 95,
+            "5": 184,
+            "6": 157,
+            "7": 68,
+            "8": 17,
+            "9": 2
+          },
+          "terminal_by_size": {
+            "2": 1,
+            "3": 10,
+            "4": 15,
+            "5": 8
+          },
+          "first_minimum_weak": [
+            2,
+            3
+          ],
+          "first_terminal": [
+            2,
+            3
+          ]
+        },
+        "cnf_sha256": "982fa0f5f138d3e01c656499c3adef258757919d901a0299735040a226ecab5d",
+        "source_mapped_input_identical": true
+      },
+      "11": {
+        "status": "PASS",
+        "formula": {
+          "m": 11,
+          "n": 6,
+          "variables": 4060,
+          "clauses": 17426,
+          "phases": {
+            "signotope": 2640,
+            "no5cap": 462,
+            "convex4_equivalence": 2640,
+            "convex_larger_equivalence": 2772,
+            "no_ngon": 462,
+            "terminal_fourcap_equivalence": 1650,
+            "terminal_bad_triple_equivalence": 2376,
+            "bad_triple_containment": 1584,
+            "target_containment": 1024,
+            "forall_terminal_delta": 1816
+          },
+          "literals": 56339,
+          "hashes": {
+            "/home/jay/research/data/delta3-codex-20261113/extension/n6m11-terminal.cnf": "ca1637366185d883d5e78064f17e52680dd7d87516113576ff9861e4256e0c2e",
+            "/home/jay/research/data/delta3-codex-20261113/extension/n6m11-terminal.cnf.map": "63dc41155ab40082a967e187914c4a3908ee2ee606ca43d55ef6e00382eb3df1"
+          },
+          "canonical_failed_clauses": {
+            "forall_terminal_delta": 10
+          },
+          "first_failures": {
+            "forall_terminal_delta": {
+              "clause": 16920,
+              "row": [
+                2541,
+                3201
+              ]
+            }
+          },
+          "map_and_all_rows_match": true,
+          "fixed_signs": false
+        },
+        "real_control": {
+          "m": 11,
+          "n": 6,
+          "P": [
+            [
+              0,
+              0
+            ],
+            [
+              37,
+              -35
+            ],
+            [
+              38,
+              -248
+            ],
+            [
+              84,
+              -270
+            ],
+            [
+              472,
+              -427
+            ],
+            [
+              653,
+              -757
+            ],
+            [
+              665,
+              -793
+            ],
+            [
+              666,
+              -717
+            ],
+            [
+              683,
+              -718
+            ],
+            [
+              736,
+              -567
+            ],
+            [
+              926,
+              -895
+            ]
+          ],
+          "general_position": true,
+          "maxima_cap_cup_gon": [
+            4,
+            5,
+            5
+          ],
+          "minimum_absolute_determinant": 45,
+          "maximum_absolute_determinant": 206593,
+          "fourcaps": 13,
+          "bad_triples": 41,
+          "targets": 98,
+          "fivecaps": 0,
+          "ngons": 0,
+          "assignments": 2048,
+          "ordinary_weak_deltas": 595,
+          "terminal_deltas": 10,
+          "minimum_weak_size": 3,
+          "weak_by_size": {
+            "3": 4,
+            "4": 51,
+            "5": 178,
+            "6": 225,
+            "7": 111,
+            "8": 24,
+            "9": 2
+          },
+          "terminal_by_size": {
+            "4": 1,
+            "5": 5,
+            "6": 4
+          },
+          "first_minimum_weak": [
+            2,
+            3,
+            5
+          ],
+          "first_terminal": [
+            5,
+            6,
+            8,
+            10
+          ]
+        },
+        "cnf_sha256": "ca1637366185d883d5e78064f17e52680dd7d87516113576ff9861e4256e0c2e",
+        "source_mapped_input_identical": true
+      }
+    },
+    "through9": {
+      "audit": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/boundary/audit/VERIFY_BOUNDARY.md",
+      "scope": "Every n6 admissible real set of size at most9; written smaller-size dichotomy plus boundary certificate.",
+      "replay_receipt": {
+        "n": 6,
+        "label": "CERTIFIED",
+        "command": [
+          "/usr/bin/timeout",
+          "20s",
+          "/usr/bin/prlimit",
+          "--as=838860800",
+          "--cpu=18",
+          "/home/jay/.local/bin/cake_lpr",
+          "--CML_HEAP_SIZE=600",
+          "--CML_STACK_SIZE=32",
+          "/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n6/input.cnf",
+          "/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n6/solve/proof.lrat"
+        ],
+        "exit_code": 0,
+        "exact_verdict_line": true,
+        "input_hashes_before": {
+          "/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n6/input.cnf": "1e40345bfedd16d0130a0a00bc6a412d7a0caceb04bcd39879be99d71d9621c3",
+          "/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n6/solve/proof.lrat": "f34baddd285f8d0654223edf110c9e2986c43e707ff675a0aae5deedd420f9ce",
+          "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54"
+        },
+        "input_hashes_after": {
+          "/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n6/input.cnf": "1e40345bfedd16d0130a0a00bc6a412d7a0caceb04bcd39879be99d71d9621c3",
+          "/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n6/solve/proof.lrat": "f34baddd285f8d0654223edf110c9e2986c43e707ff675a0aae5deedd420f9ce",
+          "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54"
+        },
+        "stable": true,
+        "log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+        "replay_source_sha256": "e0fbe8fdbe6987b0ab715a9563ccb2d71a2cc25b3db45a3c0630496333fe2151",
+        "proof_bytes": 119694,
+        "seconds": 0.007
+      },
+      "fresh_replay_here": false
+    },
+    "limits": {
+      "AS_MiB": 300,
+      "CPUs": 1,
+      "wall_seconds": 20,
+      "CPU_seconds": 19
+    },
+    "peak_rss_KiB": 23000
+  },
+  "replays": {
+    "10": {
+      "status": "PASS",
+      "label": "CERTIFIED",
+      "m": 10,
+      "n": 6,
+      "scope": "universal generic terminal counterexample formula",
+      "exact_verdict_line": true,
+      "returncode": 0,
+      "seconds": 0.05631409300258383,
+      "stable_inputs": true,
+      "before": {
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m10-a/input.cnf": "982fa0f5f138d3e01c656499c3adef258757919d901a0299735040a226ecab5d",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m10-a/proof.blrat": "357fcd0680d2b245c954747b213591f67f5961bb504e68e9471eccebd9a2b208",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m10-a/proof.blrat.zst": "eeae1193ce387447ab1765d1001bffd972d16a825e93a44f20c976c393eb5e2b",
+        "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m10-a/result.json": "58fd2122d7ba33b5777a16cb70836ee83f87d676e192bf068cec28048072f5c9",
+        "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/terminal12_audit/tools/replay.py": "a14a6487bd64bb88995d661dc67ec82be47b0c26c9f7d41323f1df847ad8d508"
+      },
+      "after": {
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m10-a/input.cnf": "982fa0f5f138d3e01c656499c3adef258757919d901a0299735040a226ecab5d",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m10-a/proof.blrat": "357fcd0680d2b245c954747b213591f67f5961bb504e68e9471eccebd9a2b208",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m10-a/proof.blrat.zst": "eeae1193ce387447ab1765d1001bffd972d16a825e93a44f20c976c393eb5e2b",
+        "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m10-a/result.json": "58fd2122d7ba33b5777a16cb70836ee83f87d676e192bf068cec28048072f5c9",
+        "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/terminal12_audit/tools/replay.py": "a14a6487bd64bb88995d661dc67ec82be47b0c26c9f7d41323f1df847ad8d508"
+      },
+      "proof_bytes": 2269027,
+      "compressed_bytes": 1430151,
+      "stdout_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cache_release": "POSIX_FADV_DONTNEED every64MiB and remainder on every hash",
+      "limits": {
+        "AS_MiB": 300,
+        "heap_MiB": 64,
+        "stack_MiB": 32,
+        "CPUs": 1,
+        "outer_wall_seconds": 20,
+        "cake_wall_seconds": 17,
+        "cake_CPU_seconds": 16
+      },
+      "proofs_retained": true,
+      "new_reservation": false
+    },
+    "11": {
+      "status": "PASS",
+      "label": "CERTIFIED",
+      "m": 11,
+      "n": 6,
+      "scope": "universal generic terminal counterexample formula",
+      "exact_verdict_line": true,
+      "returncode": 0,
+      "seconds": 0.7709297309993417,
+      "stable_inputs": true,
+      "before": {
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m11-a/input.cnf": "ca1637366185d883d5e78064f17e52680dd7d87516113576ff9861e4256e0c2e",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m11-a/proof.blrat": "3c7d2c9e0056e2723c6b0bfa760ff2b365f76249b1ca2bdecead5d58ba0730a6",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m11-a/proof.blrat.zst": "45ba870bddedc88919e237495fd19901ae5385f90e7e3659493a0219619873dd",
+        "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m11-a/result.json": "a575181d4429710f35433d7e86e41618e9ca29bf91a74bea986007de778f3b09",
+        "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/terminal12_audit/tools/replay.py": "a14a6487bd64bb88995d661dc67ec82be47b0c26c9f7d41323f1df847ad8d508"
+      },
+      "after": {
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m11-a/input.cnf": "ca1637366185d883d5e78064f17e52680dd7d87516113576ff9861e4256e0c2e",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m11-a/proof.blrat": "3c7d2c9e0056e2723c6b0bfa760ff2b365f76249b1ca2bdecead5d58ba0730a6",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m11-a/proof.blrat.zst": "45ba870bddedc88919e237495fd19901ae5385f90e7e3659493a0219619873dd",
+        "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+        "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m11-a/result.json": "a575181d4429710f35433d7e86e41618e9ca29bf91a74bea986007de778f3b09",
+        "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/terminal12_audit/tools/replay.py": "a14a6487bd64bb88995d661dc67ec82be47b0c26c9f7d41323f1df847ad8d508"
+      },
+      "proof_bytes": 31431277,
+      "compressed_bytes": 18526014,
+      "stdout_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cache_release": "POSIX_FADV_DONTNEED every64MiB and remainder on every hash",
+      "limits": {
+        "AS_MiB": 300,
+        "heap_MiB": 64,
+        "stack_MiB": 32,
+        "CPUs": 1,
+        "outer_wall_seconds": 20,
+        "cake_wall_seconds": 17,
+        "cake_CPU_seconds": 16
+      },
+      "proofs_retained": true,
+      "new_reservation": false
+    },
+    "12": {
+      "status": "PASS",
+      "label": "CERTIFIED",
+      "m": 12,
+      "n": 6,
+      "scope": "fixed membership obstruction",
+      "exact_verdict_line": true,
+      "returncode": 0,
+      "seconds": 0.004239355999743566,
+      "stable_inputs": true,
+      "before": {
+        "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/3/certificate/input.cnf": "25ca75a9eee359ca03ae7f96657128ab03693c03421b1e7e83627f529841890a",
+        "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/3/certificate/proof.blrat": "36cc74ed0a141888ed9a23ab90b2b31921025bc03183ccd2aebd18814d02d33c",
+        "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/3/certificate/proof.blrat.zst": "6dc5b7c6a4206a60f1a16edff42f6b42892c4fac6f03d0bf7b8e4317b2a36fe3",
+        "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+        "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/3/certificate/result.json": "20421068facb89fb9a0fc6f10dd382207c6fb2b51af30c643471d25d3da2b3ef",
+        "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/terminal12_audit/tools/replay.py": "a14a6487bd64bb88995d661dc67ec82be47b0c26c9f7d41323f1df847ad8d508"
+      },
+      "after": {
+        "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/3/certificate/input.cnf": "25ca75a9eee359ca03ae7f96657128ab03693c03421b1e7e83627f529841890a",
+        "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/3/certificate/proof.blrat": "36cc74ed0a141888ed9a23ab90b2b31921025bc03183ccd2aebd18814d02d33c",
+        "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/3/certificate/proof.blrat.zst": "6dc5b7c6a4206a60f1a16edff42f6b42892c4fac6f03d0bf7b8e4317b2a36fe3",
+        "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+        "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/3/certificate/result.json": "20421068facb89fb9a0fc6f10dd382207c6fb2b51af30c643471d25d3da2b3ef",
+        "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/terminal12_audit/tools/replay.py": "a14a6487bd64bb88995d661dc67ec82be47b0c26c9f7d41323f1df847ad8d508"
+      },
+      "proof_bytes": 753,
+      "compressed_bytes": 593,
+      "stdout_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cache_release": "POSIX_FADV_DONTNEED every64MiB and remainder on every hash",
+      "limits": {
+        "AS_MiB": 300,
+        "heap_MiB": 64,
+        "stack_MiB": 32,
+        "CPUs": 1,
+        "outer_wall_seconds": 20,
+        "cake_wall_seconds": 17,
+        "cake_CPU_seconds": 16
+      },
+      "proofs_retained": true,
+      "new_reservation": false
+    }
+  },
+  "snapshots": {
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/terminal_general.cpp": {
+      "snapshot": "data/snapshots/repo/selection/extension/terminal_general.cpp",
+      "sha256": "7fd10250a1010d0ed18bd6e3bd85ec8c67557b650bc4db43ec06417dd542752d"
+    },
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/compact/compact_cnf.cpp": {
+      "snapshot": "data/snapshots/repo/compact/compact_cnf.cpp",
+      "sha256": "1964e17b777fd7b7a973f12b2911c003a050047f13a621f523a9f98c6e31d553"
+    },
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/audit/check.py": {
+      "snapshot": "data/snapshots/repo/selection/extension/audit/check.py",
+      "sha256": "513c0cb75e6f38c15907425754df9411afb123dcfa3d1651cab5c68e2b4a7990"
+    },
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/audit/VERIFY_EXTENSION.md": {
+      "snapshot": "data/snapshots/repo/selection/extension/audit/VERIFY_EXTENSION.md",
+      "sha256": "3a1104b066e59e6d08d966afe4168e9218059ec029c3dee54771517c7c9dd8f7"
+    },
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/terminal15/data/balanced.json": {
+      "snapshot": "data/snapshots/repo/selection/extension/terminal15/data/balanced.json",
+      "sha256": "7da027c4f6c800245a9f715e684872358fea36cab0d0133aa15e0a0b199eed9b"
+    },
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/boundary/audit/VERIFY_BOUNDARY.md": {
+      "snapshot": "data/snapshots/repo/selection/boundary/audit/VERIFY_BOUNDARY.md",
+      "sha256": "591b2e437a938c435d45556c2f153611eb3a4111d63bbeaf674ab5f9634ad0ff"
+    },
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/boundary/audit/data/replay-n6.json": {
+      "snapshot": "data/snapshots/repo/selection/boundary/audit/data/replay-n6.json",
+      "sha256": "6050d02023366a6f97604e619a113f14ddf704afc9aaa1055d80d1d05a7b68e7"
+    },
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/boundary/audit/data/replay-n6.log": {
+      "snapshot": "data/snapshots/repo/selection/boundary/audit/data/replay-n6.log",
+      "sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f"
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/0/points.txt": {
+      "snapshot": "data/snapshots/scratch/descend15-a/0/points.txt",
+      "sha256": "0f2b54a17daf5d48a965cd931be8d75a4367764f83c722082068d87393915f0b"
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/0/result.json": {
+      "snapshot": "data/snapshots/scratch/descend15-a/0/result.json",
+      "sha256": "ca1e09cf7c19fa56f72cf59833e549374ad8a1d1377f7aa3eac79986d267abe7"
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/0/terminal.cnf": {
+      "snapshot": "data/snapshots/scratch/descend15-a/0/terminal.cnf",
+      "sha256": "66d1a8a865f53b403fdcae73f61602237ea3e19dc125fb94750732e13192ee7c"
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/1/points.txt": {
+      "snapshot": "data/snapshots/scratch/descend15-a/1/points.txt",
+      "sha256": "df62e4d285a7ba1837dd43afa396827880a07dff77de164a645264d66043f8b2"
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/1/result.json": {
+      "snapshot": "data/snapshots/scratch/descend15-a/1/result.json",
+      "sha256": "f93ce95bbd083e6c7ea87c1552bf087f31bc6e4a6db0bf519cd05351633d2902"
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/1/terminal.cnf": {
+      "snapshot": "data/snapshots/scratch/descend15-a/1/terminal.cnf",
+      "sha256": "05ca48fa112a2d0125ce4b38b6365c04c85261a520174b165ee614819c963200"
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/2/points.txt": {
+      "snapshot": "data/snapshots/scratch/descend15-a/2/points.txt",
+      "sha256": "21c6da8e61792320ef9194d9d55f6c87266561c8f3e48a69241e66f213210e02"
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/2/result.json": {
+      "snapshot": "data/snapshots/scratch/descend15-a/2/result.json",
+      "sha256": "e3892a9c38b3a9b6bc702fbd86b1f12c6a1931395354fd45735897e659b564a2"
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/2/terminal.cnf": {
+      "snapshot": "data/snapshots/scratch/descend15-a/2/terminal.cnf",
+      "sha256": "9f440dbdb604275e7d903e381c50b73f60245f59cdde4487dc5a876d895e9063"
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/3/points.txt": {
+      "snapshot": "data/snapshots/scratch/descend15-a/3/points.txt",
+      "sha256": "02ad4ff66594c2e67a282e19d376b9f950bf4975638f504db3af547ac7e1d8aa"
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/3/result.json": {
+      "snapshot": "data/snapshots/scratch/descend15-a/3/result.json",
+      "sha256": "3b910bb7fce55658e1a0bfdb83d5425292aa911ad815fe3076ed9ad1c212f415"
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/3/terminal.cnf": {
+      "snapshot": "data/snapshots/scratch/descend15-a/3/terminal.cnf",
+      "sha256": "25ca75a9eee359ca03ae7f96657128ab03693c03421b1e7e83627f529841890a"
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/3/certificate/result.json": {
+      "snapshot": "data/snapshots/scratch/descend15-a/3/certificate/result.json",
+      "sha256": "20421068facb89fb9a0fc6f10dd382207c6fb2b51af30c643471d25d3da2b3ef"
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/3/certificate/proof.blrat": {
+      "snapshot": "data/snapshots/scratch/descend15-a/3/certificate/proof.blrat",
+      "sha256": "36cc74ed0a141888ed9a23ab90b2b31921025bc03183ccd2aebd18814d02d33c"
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/3/certificate/proof.blrat.zst": {
+      "snapshot": "data/snapshots/scratch/descend15-a/3/certificate/proof.blrat.zst",
+      "sha256": "6dc5b7c6a4206a60f1a16edff42f6b42892c4fac6f03d0bf7b8e4317b2a36fe3"
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/n6m10-terminal.cnf": {
+      "snapshot": "data/snapshots/scratch/n6m10-terminal.cnf",
+      "sha256": "982fa0f5f138d3e01c656499c3adef258757919d901a0299735040a226ecab5d"
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/n6m10-terminal.cnf.map": {
+      "snapshot": "data/snapshots/scratch/n6m10-terminal.cnf.map",
+      "sha256": "de664101e9249a15d0d5d85d26819e7b971d7dc6f4d38fa417b08462fd75ef35"
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m10-a/result.json": {
+      "snapshot": "data/snapshots/scratch/terminal6m10-a/result.json",
+      "sha256": "58fd2122d7ba33b5777a16cb70836ee83f87d676e192bf068cec28048072f5c9"
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/n6m11-terminal.cnf": {
+      "snapshot": "data/snapshots/scratch/n6m11-terminal.cnf",
+      "sha256": "ca1637366185d883d5e78064f17e52680dd7d87516113576ff9861e4256e0c2e"
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/n6m11-terminal.cnf.map": {
+      "snapshot": "data/snapshots/scratch/n6m11-terminal.cnf.map",
+      "sha256": "63dc41155ab40082a967e187914c4a3908ee2ee606ca43d55ef6e00382eb3df1"
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal6m11-a/result.json": {
+      "snapshot": "data/snapshots/scratch/terminal6m11-a/result.json",
+      "sha256": "a575181d4429710f35433d7e86e41618e9ca29bf91a74bea986007de778f3b09"
+    }
+  },
+  "prior_packets": {
+    "audit": {
+      "manifest_sha256": "e71ed0db65dab51e0375860d9d790109ef2f17de8881da97bec31b311c1ac527",
+      "files_unchanged": 65
+    },
+    "subset_audit": {
+      "manifest_sha256": "fd42310d81405dde1eea4ef009ddb5f7ee45b69060359a500fa17ed1b55f4b82",
+      "files_unchanged": 113
+    },
+    "exact_audit": {
+      "manifest_sha256": "02dae49667cb46a15f65e23ed45244327ea36adcd825e464f17bc89edd6aab6a",
+      "files_unchanged": 30
+    },
+    "exact_audit/replay13": {
+      "manifest_sha256": "b501ec428762c70347a44de66b6bfd201fad191b82d20411e831faaeef166314",
+      "files_unchanged": 23
+    },
+    "protection_audit": {
+      "manifest_sha256": "c5a3a097e977e130bb62b3683a134d896d95bcf6ad726ae31f1c6de99b050145",
+      "files_unchanged": 168
+    },
+    "highsplit_audit": {
+      "manifest_sha256": "dbf403074130a992c987858bb4112344099b43bcadf55e9078a394ebb9b34bef",
+      "files_unchanged": 49
+    },
+    "terminal5_audit": {
+      "manifest_sha256": "5056d68e70e117141a95dd70a3f3a3f5dd93d0cb7cf6b44018329675cc625046",
+      "files_unchanged": 62
+    }
+  },
+  "selection_monotonicity_used": false,
+  "weak_delta_or_ES_refutation_claimed": false,
+  "jobs_active": false,
+  "extra_heap_reserved": false,
+  "unresolved_obligations": [],
+  "limits": {
+    "AS_MiB": 300,
+    "CPUs": 1,
+    "wall_seconds_per_job": 20,
+    "heap_MiB": 64,
+    "stack_MiB": 32
+  }
+}

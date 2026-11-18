@@ -1,0 +1,327 @@
+{
+  "status": "PASS",
+  "regenerated_main_files": [
+    {
+      "variant": "cup",
+      "file": "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/cup-main-native.cnf",
+      "original": "/home/jay/research/data/delta3-codex-20261113/extension/n7m15-cup.cnf",
+      "sha256": "c5cb343fd310870af75c72214d6356bec98e2536299dbf3443dbb7883d654a0c",
+      "byte_identical": true
+    },
+    {
+      "variant": "cup",
+      "file": "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/cup-main-native.cnf.map",
+      "original": "/home/jay/research/data/delta3-codex-20261113/extension/n7m15-cup.cnf.map",
+      "sha256": "336574fbd917fc523f5f09131572b52ec908fd728dca76384422b80720908dbd",
+      "byte_identical": true
+    },
+    {
+      "variant": "forced",
+      "file": "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/forced-main-native.cnf",
+      "original": "/home/jay/research/data/delta3-codex-20261113/extension/n7m13-forced.cnf",
+      "sha256": "aa7354802728e9eb465a27cb345b7ef75de8a5f1da5b5a586cb7e113b955acc0",
+      "byte_identical": true
+    },
+    {
+      "variant": "forced",
+      "file": "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/forced-main-native.cnf.map",
+      "original": "/home/jay/research/data/delta3-codex-20261113/extension/n7m13-forced.cnf.map",
+      "sha256": "673378d6691af93c42c28ca2b22c55553543e06d7a8ae8a7880accfd2dd5bee7",
+      "byte_identical": true
+    }
+  ],
+  "checked_generated_cases": [
+    {
+      "tag": "cup-blocks5",
+      "variables": 792,
+      "clauses": 3522,
+      "fixture": "blocks"
+    },
+    {
+      "tag": "cup-blocks7",
+      "variables": 666,
+      "clauses": 3642,
+      "fixture": "blocks"
+    },
+    {
+      "tag": "cup-two7",
+      "variables": 666,
+      "clauses": 3642,
+      "fixture": "two"
+    },
+    {
+      "tag": "cup-edge45",
+      "variables": 26,
+      "clauses": 76,
+      "fixture": "none"
+    },
+    {
+      "tag": "cup-edge55",
+      "variables": 71,
+      "clauses": 281,
+      "fixture": "none"
+    },
+    {
+      "tag": "cup-edge78",
+      "variables": 346,
+      "clauses": 1746,
+      "fixture": "none"
+    },
+    {
+      "tag": "cup-edge88",
+      "variables": 666,
+      "clauses": 3619,
+      "fixture": "two"
+    },
+    {
+      "tag": "forced-blocks5",
+      "variables": 807,
+      "clauses": 3652,
+      "fixture": "blocks"
+    },
+    {
+      "tag": "forced-blocks7",
+      "variables": 681,
+      "clauses": 3772,
+      "fixture": "blocks"
+    },
+    {
+      "tag": "forced-two7",
+      "variables": 681,
+      "clauses": 3772,
+      "fixture": "two"
+    },
+    {
+      "tag": "forced-edge45",
+      "variables": 27,
+      "clauses": 80,
+      "fixture": "none"
+    },
+    {
+      "tag": "forced-edge55",
+      "variables": 74,
+      "clauses": 295,
+      "fixture": "none"
+    },
+    {
+      "tag": "forced-edge78",
+      "variables": 356,
+      "clauses": 1816,
+      "fixture": "none"
+    },
+    {
+      "tag": "forced-edge88",
+      "variables": 681,
+      "clauses": 3749,
+      "fixture": "two"
+    }
+  ],
+  "domain_controls": [
+    {
+      "tag": "cup-edge45",
+      "empty_clauses": 4
+    },
+    {
+      "tag": "cup-edge55",
+      "empty_clauses": 10
+    },
+    {
+      "tag": "cup-edge78",
+      "empty_clauses": 7
+    },
+    {
+      "tag": "cup-edge88",
+      "empty_clauses": 28
+    },
+    {
+      "tag": "cup-bad-n",
+      "command": [
+        "/usr/bin/time",
+        "-v",
+        "-o",
+        "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/protection_audit/data/cup-bad-n.time",
+        "/usr/bin/timeout",
+        "-k",
+        "1",
+        "20s",
+        "/usr/bin/prlimit",
+        "--as=314572800",
+        "--cpu=19",
+        "/usr/bin/taskset",
+        "-c",
+        "5",
+        "/usr/bin/nice",
+        "-n",
+        "10",
+        "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/cup",
+        "8",
+        "4",
+        "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/cup-bad-n.cnf"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "seconds": 0.0025776429974939674
+    },
+    {
+      "tag": "cup-bad-small",
+      "command": [
+        "/usr/bin/time",
+        "-v",
+        "-o",
+        "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/protection_audit/data/cup-bad-small.time",
+        "/usr/bin/timeout",
+        "-k",
+        "1",
+        "20s",
+        "/usr/bin/prlimit",
+        "--as=314572800",
+        "--cpu=19",
+        "/usr/bin/taskset",
+        "-c",
+        "5",
+        "/usr/bin/nice",
+        "-n",
+        "10",
+        "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/cup",
+        "3",
+        "5",
+        "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/cup-bad-small.cnf"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "seconds": 0.002498000998457428
+    },
+    {
+      "tag": "cup-bad-large",
+      "command": [
+        "/usr/bin/time",
+        "-v",
+        "-o",
+        "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/protection_audit/data/cup-bad-large.time",
+        "/usr/bin/timeout",
+        "-k",
+        "1",
+        "20s",
+        "/usr/bin/prlimit",
+        "--as=314572800",
+        "--cpu=19",
+        "/usr/bin/taskset",
+        "-c",
+        "5",
+        "/usr/bin/nice",
+        "-n",
+        "10",
+        "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/cup",
+        "21",
+        "7",
+        "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/cup-bad-large.cnf"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "seconds": 0.0025486869999440387
+    },
+    {
+      "tag": "forced-edge45",
+      "empty_clauses": 4
+    },
+    {
+      "tag": "forced-edge55",
+      "empty_clauses": 10
+    },
+    {
+      "tag": "forced-edge78",
+      "empty_clauses": 7
+    },
+    {
+      "tag": "forced-edge88",
+      "empty_clauses": 28
+    },
+    {
+      "tag": "forced-bad-n",
+      "command": [
+        "/usr/bin/time",
+        "-v",
+        "-o",
+        "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/protection_audit/data/forced-bad-n.time",
+        "/usr/bin/timeout",
+        "-k",
+        "1",
+        "20s",
+        "/usr/bin/prlimit",
+        "--as=314572800",
+        "--cpu=19",
+        "/usr/bin/taskset",
+        "-c",
+        "5",
+        "/usr/bin/nice",
+        "-n",
+        "10",
+        "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/forced",
+        "8",
+        "4",
+        "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/forced-bad-n.cnf"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "seconds": 0.002578203995653894
+    },
+    {
+      "tag": "forced-bad-small",
+      "command": [
+        "/usr/bin/time",
+        "-v",
+        "-o",
+        "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/protection_audit/data/forced-bad-small.time",
+        "/usr/bin/timeout",
+        "-k",
+        "1",
+        "20s",
+        "/usr/bin/prlimit",
+        "--as=314572800",
+        "--cpu=19",
+        "/usr/bin/taskset",
+        "-c",
+        "5",
+        "/usr/bin/nice",
+        "-n",
+        "10",
+        "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/forced",
+        "3",
+        "5",
+        "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/forced-bad-small.cnf"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "seconds": 0.0025196210044668987
+    },
+    {
+      "tag": "forced-bad-large",
+      "command": [
+        "/usr/bin/time",
+        "-v",
+        "-o",
+        "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/protection_audit/data/forced-bad-large.time",
+        "/usr/bin/timeout",
+        "-k",
+        "1",
+        "20s",
+        "/usr/bin/prlimit",
+        "--as=314572800",
+        "--cpu=19",
+        "/usr/bin/taskset",
+        "-c",
+        "5",
+        "/usr/bin/nice",
+        "-n",
+        "10",
+        "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/forced",
+        "21",
+        "7",
+        "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/forced-bad-large.cnf"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "seconds": 0.0025363240056321956
+    }
+  ]
+}

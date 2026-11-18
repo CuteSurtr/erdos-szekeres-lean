@@ -1,0 +1,27 @@
+{
+  "label": "COMPUTED",
+  "mode": "terminal18_facts",
+  "status": "PASS",
+  "script_sha256": "be40763fd4c1a0710f201414e498b68af473a09294030efff68d4b0bec0c388c",
+  "own_helper_sha256": "513c0cb75e6f38c15907425754df9411afb123dcfa3d1651cab5c68e2b4a7990",
+  "result": {
+    "m": 18,
+    "n": 7,
+    "maximum_cap": 4,
+    "maximum_cup": 5,
+    "maximum_convex_subset": 6,
+    "six_cups": 0,
+    "five_cups": 230,
+    "first_five_cup": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "terminal_deltas": 0,
+    "consequence": "Forbidding an (n-1)-cup does not restore all-size terminal-safe selection."
+  },
+  "seconds": 0.850424322001345,
+  "max_rss_KiB": 19740
+}

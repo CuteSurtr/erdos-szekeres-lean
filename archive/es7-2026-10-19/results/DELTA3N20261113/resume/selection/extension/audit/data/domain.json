@@ -1,0 +1,363 @@
+{
+  "label": "COMPUTED",
+  "mode": "domain",
+  "status": "PASS",
+  "script_sha256": "be40763fd4c1a0710f201414e498b68af473a09294030efff68d4b0bec0c388c",
+  "own_helper_sha256": "513c0cb75e6f38c15907425754df9411afb123dcfa3d1651cab5c68e2b4a7990",
+  "result": {
+    "supported_edge_cases": [
+      {
+        "m": 4,
+        "n": 5,
+        "variables": 10,
+        "clauses": 36,
+        "phases": {
+          "signotope": 8,
+          "convex4_equivalence": 8,
+          "terminal_fourcap_equivalence": 5,
+          "terminal_bad_triple_equivalence": 10,
+          "forall_terminal_delta": 5
+        },
+        "literals": 84,
+        "hashes": {
+          "/home/jay/research/data/delta3-codex-20261113/extension/audit/domain/m4n5.cnf": "cbce75f3d5a69e65a8e6d379f350c73dbe642f2a634db691bbe4a44c910819eb",
+          "/home/jay/research/data/delta3-codex-20261113/extension/audit/domain/m4n5.cnf.map": "9d79c0e130a139fe83bda2de097af4e1bfa579ab1c8871156c9b095fb9a812b3"
+        },
+        "canonical_failed_clauses": {},
+        "first_failures": {},
+        "map_and_all_rows_match": true,
+        "fixed_signs": false,
+        "empty_clauses": 4
+      },
+      {
+        "m": 5,
+        "n": 5,
+        "variables": 31,
+        "clauses": 157,
+        "phases": {
+          "signotope": 40,
+          "no5cap": 1,
+          "convex4_equivalence": 40,
+          "no_ngon": 1,
+          "terminal_fourcap_equivalence": 25,
+          "terminal_bad_triple_equivalence": 33,
+          "target_containment": 1,
+          "forall_terminal_delta": 16
+        },
+        "literals": 404,
+        "hashes": {
+          "/home/jay/research/data/delta3-codex-20261113/extension/audit/domain/m5n5.cnf": "619a700395ab1fa136b0fc1bb539944ac9cfb6935b57c53822fb9327d9989f0e",
+          "/home/jay/research/data/delta3-codex-20261113/extension/audit/domain/m5n5.cnf.map": "75c76b984ac3b6378db10f842149ee269af2a033b714c277b1180d1a58fadf45"
+        },
+        "canonical_failed_clauses": {},
+        "first_failures": {},
+        "map_and_all_rows_match": true,
+        "fixed_signs": false,
+        "empty_clauses": 10
+      },
+      {
+        "m": 6,
+        "n": 5,
+        "variables": 77,
+        "clauses": 464,
+        "phases": {
+          "signotope": 120,
+          "no5cap": 6,
+          "convex4_equivalence": 120,
+          "no_ngon": 6,
+          "terminal_fourcap_equivalence": 75,
+          "terminal_bad_triple_equivalence": 88,
+          "target_containment": 7,
+          "forall_terminal_delta": 42
+        },
+        "literals": 1271,
+        "hashes": {
+          "/home/jay/research/data/delta3-codex-20261113/extension/audit/domain/m6n5.cnf": "47849bc798d7e893d92aed481fe32a93081b063758a7f9cd2e7203a5427a4796",
+          "/home/jay/research/data/delta3-codex-20261113/extension/audit/domain/m6n5.cnf.map": "aa9b25bf1801a58d661fce6ecfe8fbbf758d030c9aca29b15393fcac3b69e055"
+        },
+        "canonical_failed_clauses": {},
+        "first_failures": {},
+        "map_and_all_rows_match": true,
+        "fixed_signs": false,
+        "empty_clauses": 0
+      },
+      {
+        "m": 5,
+        "n": 6,
+        "variables": 31,
+        "clauses": 151,
+        "phases": {
+          "signotope": 40,
+          "no5cap": 1,
+          "convex4_equivalence": 40,
+          "convex_larger_equivalence": 6,
+          "terminal_fourcap_equivalence": 25,
+          "terminal_bad_triple_equivalence": 33,
+          "forall_terminal_delta": 6
+        },
+        "literals": 404,
+        "hashes": {
+          "/home/jay/research/data/delta3-codex-20261113/extension/audit/domain/m5n6.cnf": "fe030a656d10180fb19d70c630c85859d0a2d11a4ac5319a466842cbb12e5550",
+          "/home/jay/research/data/delta3-codex-20261113/extension/audit/domain/m5n6.cnf.map": "40fa3ae782ff579f042c6e6d18343ac8cdf050dfae3184a93e594f50d96ed646"
+        },
+        "canonical_failed_clauses": {},
+        "first_failures": {},
+        "map_and_all_rows_match": true,
+        "fixed_signs": false,
+        "empty_clauses": 5
+      },
+      {
+        "m": 6,
+        "n": 6,
+        "variables": 77,
+        "clauses": 469,
+        "phases": {
+          "signotope": 120,
+          "no5cap": 6,
+          "convex4_equivalence": 120,
+          "convex_larger_equivalence": 36,
+          "no_ngon": 1,
+          "terminal_fourcap_equivalence": 75,
+          "terminal_bad_triple_equivalence": 88,
+          "target_containment": 1,
+          "forall_terminal_delta": 22
+        },
+        "literals": 1272,
+        "hashes": {
+          "/home/jay/research/data/delta3-codex-20261113/extension/audit/domain/m6n6.cnf": "ca4c7f19d4e036cc6ea2ec65048f58ce25c44bd6f01bb5ccb92ca42fce5b999f",
+          "/home/jay/research/data/delta3-codex-20261113/extension/audit/domain/m6n6.cnf.map": "4ee5d87f86babfb09b6993ed6eb26401f599231c36a4dc00681ab74acb93d8b4"
+        },
+        "canonical_failed_clauses": {},
+        "first_failures": {},
+        "map_and_all_rows_match": true,
+        "fixed_signs": false,
+        "empty_clauses": 15
+      },
+      {
+        "m": 7,
+        "n": 6,
+        "variables": 169,
+        "clauses": 1164,
+        "phases": {
+          "signotope": 280,
+          "no5cap": 21,
+          "convex4_equivalence": 280,
+          "convex_larger_equivalence": 126,
+          "no_ngon": 7,
+          "terminal_fourcap_equivalence": 175,
+          "terminal_bad_triple_equivalence": 203,
+          "target_containment": 8,
+          "forall_terminal_delta": 64
+        },
+        "literals": 3228,
+        "hashes": {
+          "/home/jay/research/data/delta3-codex-20261113/extension/audit/domain/m7n6.cnf": "e39c601192dd8ce57d2692b8d65d5ee433fb6586ad8dab2ff0bcc4a9243fcc0b",
+          "/home/jay/research/data/delta3-codex-20261113/extension/audit/domain/m7n6.cnf.map": "152fad2d106f7a035e7c0ed001534251bb1e547cd6ede523edc7159e2e378a11"
+        },
+        "canonical_failed_clauses": {},
+        "first_failures": {},
+        "map_and_all_rows_match": true,
+        "fixed_signs": false,
+        "empty_clauses": 0
+      },
+      {
+        "m": 6,
+        "n": 7,
+        "variables": 77,
+        "clauses": 458,
+        "phases": {
+          "signotope": 120,
+          "no5cap": 6,
+          "convex4_equivalence": 120,
+          "convex_larger_equivalence": 42,
+          "terminal_fourcap_equivalence": 75,
+          "terminal_bad_triple_equivalence": 88,
+          "forall_terminal_delta": 7
+        },
+        "literals": 1270,
+        "hashes": {
+          "/home/jay/research/data/delta3-codex-20261113/extension/audit/domain/m6n7.cnf": "74f50dc064ead60f15c7cb78467ccc157d40ebf732c581ce7a3a5519176bf6ef",
+          "/home/jay/research/data/delta3-codex-20261113/extension/audit/domain/m6n7.cnf.map": "1c3a6b80ddb813a2f6c377bccbe6b96784d6540c75d103c873473780cd1a2905"
+        },
+        "canonical_failed_clauses": {},
+        "first_failures": {},
+        "map_and_all_rows_match": true,
+        "fixed_signs": false,
+        "empty_clauses": 6
+      },
+      {
+        "m": 7,
+        "n": 7,
+        "variables": 169,
+        "clauses": 1158,
+        "phases": {
+          "signotope": 280,
+          "no5cap": 21,
+          "convex4_equivalence": 280,
+          "convex_larger_equivalence": 168,
+          "no_ngon": 1,
+          "terminal_fourcap_equivalence": 175,
+          "terminal_bad_triple_equivalence": 203,
+          "target_containment": 1,
+          "forall_terminal_delta": 29
+        },
+        "literals": 3206,
+        "hashes": {
+          "/home/jay/research/data/delta3-codex-20261113/extension/audit/domain/m7n7.cnf": "d5c8658cbeff375e5c1ff59ec982b16d9585afbb7bd766fdeac48ee0fb7b679c",
+          "/home/jay/research/data/delta3-codex-20261113/extension/audit/domain/m7n7.cnf.map": "afc04fbfb9febfe5e83ecc2d0884e3fdd394676240c2cb244ff080c6263fab65"
+        },
+        "canonical_failed_clauses": {},
+        "first_failures": {},
+        "map_and_all_rows_match": true,
+        "fixed_signs": false,
+        "empty_clauses": 21
+      },
+      {
+        "m": 8,
+        "n": 7,
+        "variables": 345,
+        "clauses": 2560,
+        "phases": {
+          "signotope": 560,
+          "no5cap": 56,
+          "convex4_equivalence": 560,
+          "convex_larger_equivalence": 504,
+          "no_ngon": 8,
+          "terminal_fourcap_equivalence": 350,
+          "terminal_bad_triple_equivalence": 420,
+          "target_containment": 9,
+          "forall_terminal_delta": 93
+        },
+        "literals": 7135,
+        "hashes": {
+          "/home/jay/research/data/delta3-codex-20261113/extension/audit/domain/m8n7.cnf": "5dc0a260ce720e95de010485ea9b0151d1bccccf0ed4954acf1bcb45f40eccb3",
+          "/home/jay/research/data/delta3-codex-20261113/extension/audit/domain/m8n7.cnf.map": "9344714c3f7511cdb3792bcdf760469f119b945aa1a63d09d609e7dd09ada457"
+        },
+        "canonical_failed_clauses": {},
+        "first_failures": {},
+        "map_and_all_rows_match": true,
+        "fixed_signs": false,
+        "empty_clauses": 0
+      },
+      {
+        "m": 7,
+        "n": 8,
+        "variables": 169,
+        "clauses": 1141,
+        "phases": {
+          "signotope": 280,
+          "no5cap": 21,
+          "convex4_equivalence": 280,
+          "convex_larger_equivalence": 174,
+          "terminal_fourcap_equivalence": 175,
+          "terminal_bad_triple_equivalence": 203,
+          "forall_terminal_delta": 8
+        },
+        "literals": 3202,
+        "hashes": {
+          "/home/jay/research/data/delta3-codex-20261113/extension/audit/domain/m7n8.cnf": "71b0abd5adceaa85d5e2ea7fc2b9b8d2c6d241dd1115851584e67f173eb4e29a",
+          "/home/jay/research/data/delta3-codex-20261113/extension/audit/domain/m7n8.cnf.map": "ed02ce4e2cc13a77e1bb2e38ce75079b89a9454cbccba8f65225a6dcf404b514"
+        },
+        "canonical_failed_clauses": {},
+        "first_failures": {},
+        "map_and_all_rows_match": true,
+        "fixed_signs": false,
+        "empty_clauses": 7
+      },
+      {
+        "m": 8,
+        "n": 8,
+        "variables": 345,
+        "clauses": 2537,
+        "phases": {
+          "signotope": 560,
+          "no5cap": 56,
+          "convex4_equivalence": 560,
+          "convex_larger_equivalence": 552,
+          "no_ngon": 1,
+          "terminal_fourcap_equivalence": 350,
+          "terminal_bad_triple_equivalence": 420,
+          "target_containment": 1,
+          "forall_terminal_delta": 37
+        },
+        "literals": 7081,
+        "hashes": {
+          "/home/jay/research/data/delta3-codex-20261113/extension/audit/domain/m8n8.cnf": "63bbc2e4b3a7b6dc28e543d6244cdef573b5924536fb54d72544aa58f7291864",
+          "/home/jay/research/data/delta3-codex-20261113/extension/audit/domain/m8n8.cnf.map": "6a7bde2782648ba24489d6e77d89d2f46d5ed1786ec76d25dbedeb9f7094d81d"
+        },
+        "canonical_failed_clauses": {},
+        "first_failures": {},
+        "map_and_all_rows_match": true,
+        "fixed_signs": false,
+        "empty_clauses": 28
+      },
+      {
+        "m": 9,
+        "n": 8,
+        "variables": 676,
+        "clauses": 5195,
+        "phases": {
+          "signotope": 1008,
+          "no5cap": 126,
+          "convex4_equivalence": 1008,
+          "convex_larger_equivalence": 1476,
+          "no_ngon": 9,
+          "terminal_fourcap_equivalence": 630,
+          "terminal_bad_triple_equivalence": 798,
+          "target_containment": 10,
+          "forall_terminal_delta": 130
+        },
+        "literals": 14491,
+        "hashes": {
+          "/home/jay/research/data/delta3-codex-20261113/extension/audit/domain/m9n8.cnf": "0c39f4e7adfba4c1242c790bc59466228289264859357dd1a4a77103feaae6aa",
+          "/home/jay/research/data/delta3-codex-20261113/extension/audit/domain/m9n8.cnf.map": "f183201218a71d5d912bec968e32d61c9360a92191824943191b9f36978e2d4e"
+        },
+        "canonical_failed_clauses": {},
+        "first_failures": {},
+        "map_and_all_rows_match": true,
+        "fixed_signs": false,
+        "empty_clauses": 0
+      }
+    ],
+    "rejected_out_of_domain": [
+      {
+        "m": 3,
+        "n": 5,
+        "returncode": 1,
+        "stderr": "bad_parameters"
+      },
+      {
+        "m": 4,
+        "n": 6,
+        "returncode": 1,
+        "stderr": "bad_parameters"
+      },
+      {
+        "m": 6,
+        "n": 8,
+        "returncode": 1,
+        "stderr": "bad_parameters"
+      },
+      {
+        "m": 21,
+        "n": 7,
+        "returncode": 1,
+        "stderr": "bad_parameters"
+      },
+      {
+        "m": 9,
+        "n": 4,
+        "returncode": 1,
+        "stderr": "bad_parameters"
+      },
+      {
+        "m": 9,
+        "n": 9,
+        "returncode": 1,
+        "stderr": "bad_parameters"
+      }
+    ]
+  },
+  "seconds": 0.03918098400026793,
+  "max_rss_KiB": 19712
+}

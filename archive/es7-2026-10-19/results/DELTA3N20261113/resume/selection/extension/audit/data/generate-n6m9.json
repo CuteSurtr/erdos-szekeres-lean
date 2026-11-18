@@ -1,0 +1,66 @@
+{
+  "label": "COMPUTED",
+  "status": "PASS",
+  "mode": "generate",
+  "script_sha256": "513c0cb75e6f38c15907425754df9411afb123dcfa3d1651cab5c68e2b4a7990",
+  "result": {
+    "path": "/home/jay/research/data/delta3-codex-20261113/extension/audit/m9n6/input.cnf",
+    "stats": {
+      "m": 9,
+      "n": 6,
+      "amax": 5,
+      "variables": 928,
+      "clauses": 5174,
+      "literals": 15488,
+      "bytes": 72633,
+      "fixed_signs": false,
+      "phases": {
+        "bad_triple_containment": {
+          "clauses": 252,
+          "literals": 1260
+        },
+        "convex4_equivalence": {
+          "clauses": 1008,
+          "literals": 3024
+        },
+        "convex_larger_equivalence": {
+          "clauses": 756,
+          "literals": 2016
+        },
+        "forall_terminal_delta": {
+          "clauses": 382,
+          "literals": 592
+        },
+        "no5cap": {
+          "clauses": 126,
+          "literals": 378
+        },
+        "no_ngon": {
+          "clauses": 84,
+          "literals": 420
+        },
+        "signotope": {
+          "clauses": 1008,
+          "literals": 3024
+        },
+        "target_containment": {
+          "clauses": 130,
+          "literals": 910
+        },
+        "terminal_bad_triple_equivalence": {
+          "clauses": 798,
+          "literals": 2226
+        },
+        "terminal_fourcap_equivalence": {
+          "clauses": 630,
+          "literals": 1638
+        }
+      }
+    },
+    "binary_sha256": "5ad0ceab245e2cc2165af54a3c2aefe52d5d0f2ecc2e14d9f28f588b7e93f490",
+    "source_sha256": "7fd10250a1010d0ed18bd6e3bd85ec8c67557b650bc4db43ec06417dd542752d",
+    "compact_sha256": "1964e17b777fd7b7a973f12b2911c003a050047f13a621f523a9f98c6e31d553"
+  },
+  "elapsed_seconds": 0.0019985160033684224,
+  "max_rss_KiB": 17804
+}

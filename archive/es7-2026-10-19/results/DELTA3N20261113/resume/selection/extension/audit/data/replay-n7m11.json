@@ -1,0 +1,32 @@
+{
+  "label": "CERTIFIED",
+  "command": [
+    "/usr/bin/timeout",
+    "20s",
+    "/usr/bin/prlimit",
+    "--as=1153433600",
+    "--cpu=18",
+    "/home/jay/.local/bin/cake_lpr",
+    "--CML_HEAP_SIZE=800",
+    "--CML_STACK_SIZE=32",
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal7-a/m11/input.cnf",
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal7-a/m11/solve/proof.lrat"
+  ],
+  "returncode": 0,
+  "exact_acceptance_line": true,
+  "stable_inputs": true,
+  "before": {
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal7-a/m11/input.cnf": "dc28e1f234449b95ac1ce181fc922503a61e35239ae56a9cf6fe42b18b8a777e",
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal7-a/m11/solve/proof.lrat": "6ed485d0dfa3cceeca144b3a3bccd9470ce8c772f38c44a4e51d55be04e49a37",
+    "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54"
+  },
+  "after": {
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal7-a/m11/input.cnf": "dc28e1f234449b95ac1ce181fc922503a61e35239ae56a9cf6fe42b18b8a777e",
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal7-a/m11/solve/proof.lrat": "6ed485d0dfa3cceeca144b3a3bccd9470ce8c772f38c44a4e51d55be04e49a37",
+    "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54"
+  },
+  "proof_bytes": 5711492,
+  "log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+  "seconds": 0.23168836400145665,
+  "script_sha256": "2a65ff2c060db27fd304422181db95a0ec5246ba698d906fa404b9655ff4562c"
+}

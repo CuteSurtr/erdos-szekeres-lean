@@ -1,0 +1,78 @@
+{
+  "status": "FROZEN",
+  "track": "repair",
+  "labels": [
+    "PROVED written lemmas",
+    "COMPUTED independently confirmed real predicates",
+    "CERTIFIED full one-blue CNFs by parent"
+  ],
+  "conclusion": "One-old-blue repair fails even at a rightmost point for n7/m14 and n8/m16; exact minimum is two.",
+  "frozen": [
+    {
+      "tag": "rightmost-n7",
+      "full_deltas": 2669,
+      "r_selected_deltas": 1091,
+      "ordinary": {
+        "B": [
+          1,
+          5,
+          9
+        ],
+        "new_old_blue": [
+          1,
+          9
+        ],
+        "cost": 2
+      },
+      "r_selected": {
+        "B": [
+          1,
+          5,
+          9,
+          13
+        ],
+        "new_old_blue": [
+          1,
+          9
+        ],
+        "cost": 2
+      },
+      "bfs_all_roots_all_old_deltas": "PASS",
+      "root_old_delta_pairs_checked": 32293
+    },
+    {
+      "tag": "rightmost-n8",
+      "full_deltas": 15356,
+      "r_selected_deltas": 6164,
+      "ordinary": {
+        "B": [
+          2,
+          3
+        ],
+        "new_old_blue": [
+          2,
+          3
+        ],
+        "cost": 2
+      },
+      "r_selected": {
+        "B": [
+          2,
+          3,
+          15
+        ],
+        "new_old_blue": [
+          2,
+          3
+        ],
+        "cost": 2
+      },
+      "bfs_all_roots_all_old_deltas": "PASS",
+      "root_old_delta_pairs_checked": 166896
+    }
+  ],
+  "positive_theorem": "For n>=5, five-cap-free S and |S|<=n+2, every old weak Delta has repair cost at most one; no extreme-root or convex-n-gon-free assumption.",
+  "scope": "No weak Delta existence refutation; no global minimality or universal two-blue sufficiency claim.",
+  "jobs_remaining": 0,
+  "parent_certificates": "data/PARENT_CERTIFICATES.json"
+}

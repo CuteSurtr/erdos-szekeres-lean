@@ -1,0 +1,40 @@
+{
+  "cache_releases": 58,
+  "commands": [
+    [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/home/jay/research/data/delta3-codex-20261113/extension/finite13-b/cadical.time",
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "5403",
+      "/usr/bin/cadical",
+      "-t",
+      "5400",
+      "--lrat=true",
+      "--binary=true",
+      "/home/jay/research/data/delta3-codex-20261113/extension/finite13-b/input.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/extension/finite13-b/proof.blrat"
+    ]
+  ],
+  "hashes": {
+    "cadical": "4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70",
+    "cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+    "input.cnf": "3ec4b75d9076b6f257fed83f3cbb17b8372a43f53f1c0fc8d30730e4c5d35b87",
+    "run_binary.py": "dcdfd0c97efa27e8b89daacbad3a950d3a9af77c88964e78e5522fd7904f87e5"
+  },
+  "label": "COMPUTED",
+  "limits": {
+    "as_mib": 900,
+    "cake_seconds": 600,
+    "heap_mib": 650,
+    "solver_seconds": 5400,
+    "stack_mib": 32
+  },
+  "proof_format": "binary LRAT",
+  "runs": {},
+  "seconds": 581.198,
+  "source_cnf": "/home/jay/research/data/delta3-codex-20261113/extension/n7m13-exact.cnf",
+  "status": "SOLVING"
+}

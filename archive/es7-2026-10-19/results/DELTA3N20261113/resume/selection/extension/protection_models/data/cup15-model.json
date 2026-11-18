@@ -1,0 +1,17 @@
+{
+  "label": "COMPUTED",
+  "status": "SAT_MODEL_FULL_CLAUSE_REPLAY_PASS",
+  "m": 15,
+  "variables": 69673,
+  "clauses": 193880,
+  "orientation_count": 455,
+  "seconds": 0.124,
+  "hashes": {
+    "/home/jay/research/data/delta3-codex-20261113/extension/cup15-a/input.cnf": "c5cb343fd310870af75c72214d6356bec98e2536299dbf3443dbb7883d654a0c",
+    "/home/jay/research/data/delta3-codex-20261113/extension/cup15-a/cadical.log": "dc27fe43bfe4a2eb58ac279501801765915fea70062bb715e9075ab6d006915f",
+    "/home/jay/research/data/delta3-codex-20261113/extension/n7m15-cup.cnf.map": "336574fbd917fc523f5f09131572b52ec908fd728dca76384422b80720908dbd",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/extract_protection_model.py": "951c8926fadc3aaf0f1ac7c6d57f5ae6896ef49518588a4cd94097b2dd7ba6b4",
+    "/home/jay/research/data/delta3-codex-20261113/extension/cup15-model/orientation.signs": "1eda34b382bbed90d864945e2a9bb3c291dab5e9c857bc75530fda3a1cca1d11"
+  },
+  "scope": "Full Boolean model replay only. Exact realization and geometric protection predicates still require separate checks."
+}

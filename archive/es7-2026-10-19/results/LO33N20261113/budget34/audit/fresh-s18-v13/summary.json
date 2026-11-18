@@ -1,0 +1,24 @@
+{
+ "label": "EXACT TREE (fresh full replay, no receipts reused)",
+ "packet": "/home/jay/research/data/es308-20261114/runs/s18/bb",
+ "input_folder": "/home/jay/research/data/es308-20261114/inputs/s18-v13",
+ "rows": 3672,
+ "capacity_demands": [
+  18,
+  16
+ ],
+ "contexts": 4296,
+ "contexts_checked": 4296,
+ "master_nodes": 19361,
+ "nodes": 45833,
+ "leaves": 20770,
+ "minimum_margin": 1,
+ "global_pending": 1,
+ "pending_meaning": "state 0 missing only (discharged in Lean by zero_mem_residualOccupied)",
+ "master_sha256": "72c5a954820f6880a7d24d8423f5c52fec638610e69c42e4bd51e9698fb6529f",
+ "extra_sha256": "1b72eb934e00c7f5968cca0192f27829bfe145fe0a32e0e4c1d715fc1a86c098",
+ "checker_sha256": "35cb30503c3b1eb8886069cac4cb260351712e80075142fb0a4510c06055a8bb",
+ "tool_sha256": "ef0fe84d5022b5d7dc25bb7628cb1512d3855a5fb180a3d8c8e8c213d49afce6",
+ "started": "2026-11-14T22:48:55.147091+09:00",
+ "finished": "2026-11-14T22:48:58.480998+09:00"
+}

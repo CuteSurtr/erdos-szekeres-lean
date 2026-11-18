@@ -1,0 +1,25 @@
+{
+  "label": "COMPUTED transfer controls",
+  "deliberate_corruptions_rejected": {
+    "reordered": true,
+    "demand_changed": true,
+    "support_changed": true,
+    "shortened": true,
+    "row_outside_original_prefix": true
+  },
+  "unchanged_exact_check_under_append": true,
+  "before": {
+    "nodes": 3,
+    "leaves": 2,
+    "pending": 1,
+    "complete": false,
+    "minimum_margin": 1
+  },
+  "after": {
+    "nodes": 3,
+    "leaves": 2,
+    "pending": 1,
+    "complete": false,
+    "minimum_margin": 1
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "label": "COMPUTED",
+  "original_geometry": {
+    "cap4": 80,
+    "pentagons": 216,
+    "lower": 103
+  },
+  "linear_certificate": "verified exact rational 0 = 1",
+  "positive_controls": [
+    {
+      "target": 7,
+      "original_points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          16
+        ]
+      ],
+      "duplicated_point": 2,
+      "cluster_points": 6,
+      "hull_capacities_checked": 16,
+      "false_clause_count": 0
+    },
+    {
+      "target": 8,
+      "original_points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          16
+        ]
+      ],
+      "duplicated_point": 2,
+      "cluster_points": 7,
+      "hull_capacities_checked": 16,
+      "false_clause_count": 0
+    }
+  ],
+  "coordinate_capacity_controls": [
+    {
+      "target": 7,
+      "all_single": {
+        "cluster_points": 15,
+        "hull_capacities_checked": 1308,
+        "false_clause_count": 103
+      },
+      "fixed_mixed": {
+        "cluster_points": 25,
+        "hull_capacities_checked": 1308,
+        "false_clause_count": 121
+      }
+    },
+    {
+      "target": 8,
+      "all_single": {
+        "cluster_points": 15,
+        "hull_capacities_checked": 1308,
+        "false_clause_count": 103
+      },
+      "fixed_mixed": {
+        "cluster_points": 35,
+        "hull_capacities_checked": 1308,
+        "false_clause_count": 163
+      }
+    }
+  ],
+  "cnfs_regenerated_byte_identically": true,
+  "cake_lines_exact": true,
+  "elapsed_seconds": 0.7145489159993303,
+  "max_rss_kib": 43904
+}

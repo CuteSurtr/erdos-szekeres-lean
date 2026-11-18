@@ -1,0 +1,21 @@
+{
+  "label": "COMPUTED wrapper controls",
+  "positive_budget34_margin": 1,
+  "deliberate_corruptions_rejected": {
+    "duplicate_context": true,
+    "repeated_state0": true,
+    "invalid_child": true,
+    "shared_child": true,
+    "unreachable_node": true,
+    "pending_master": true,
+    "wrong_context_count": true,
+    "bool_vertex": true,
+    "wrong_stored_path": true,
+    "duplicate_stored_state": true,
+    "pending_subtree": true,
+    "budget_off_by_one": true,
+    "invalid_over_budget": true
+  },
+  "passed": 13,
+  "failed": 0
+}

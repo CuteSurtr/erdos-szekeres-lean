@@ -1,0 +1,28 @@
+{
+  "pool_unit": "nov13c-vfy-308-audit-pool812",
+  "completed": "2026-11-14T01:12:14.575125+00:00",
+  "cpu_quota_percent": 100,
+  "affinity": [
+    10
+  ],
+  "memory_max_bytes": 1677721600,
+  "swap_max_bytes": 0,
+  "runtime_max_seconds": 2400,
+  "parent_AS_MiB": 300,
+  "sequential_child_AS_MiB": 800,
+  "control_AS_MiB": 100,
+  "maximum_observed_cgroup_bytes": 1284554752,
+  "python_maxrss_kib": 87572,
+  "children_maxrss_kib": 413000,
+  "cache_release": {
+    "action": "POSIX_FADV_DONTNEED on already audited read-only compressed source files",
+    "files": 1056,
+    "completed_rows": 528,
+    "content_writes": 0,
+    "reason": "bound cgroup file cache while keeping source proofs untouched"
+  },
+  "tree_unit": "nov13c-vfy-308-audit-tree34",
+  "tree_AS_MiB": 1000,
+  "tree_requested_seconds": 2300,
+  "no_parallel_audit_units": true
+}

@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "label": "COMPUTED",
+  "left_m": 11,
+  "right_m": 2,
+  "n": 6,
+  "variant": "direct",
+  "variables": 968,
+  "clauses": 11298,
+  "literals": 92730,
+  "phase_rows": {
+    "signotope": 2640,
+    "no5cap": 462,
+    "convex4_equivalence": 2640,
+    "convex_larger_equivalence": 2772,
+    "no_ngon": 462,
+    "left_has_no_fourcap": 330,
+    "ends_three_cap_equivalence": 176,
+    "no_covered_cup_transversal": 1816
+  },
+  "phase_literals": {
+    "signotope": 7920,
+    "no5cap": 1386,
+    "convex4_equivalence": 7920,
+    "convex_larger_equivalence": 7392,
+    "no_ngon": 2310,
+    "left_has_no_fourcap": 1320,
+    "ends_three_cap_equivalence": 506,
+    "no_covered_cup_transversal": 63976
+  },
+  "phase_max_width": {
+    "signotope": 3,
+    "no5cap": 3,
+    "convex4_equivalence": 3,
+    "convex_larger_equivalence": 6,
+    "no_ngon": 5,
+    "left_has_no_fourcap": 4,
+    "ends_three_cap_equivalence": 46,
+    "no_covered_cup_transversal": 462
+  },
+  "map_counts": {
+    "orientation": 165,
+    "convex": 792,
+    "ends_three_cap": 11
+  },
+  "cnf_map_byte_identical_rebuild": true,
+  "hashes": {
+    "/home/jay/research/data/delta3-codex-20261113/extension/low11-n6.cnf": "1dcd40d44ed07b7f94d99c450636e0e15fa6eea57f5902cad519177c2f251d37",
+    "/home/jay/research/data/delta3-codex-20261113/extension/low11-n6.cnf.map": "36dafa753130057f4d88314618f1a49c0883e39c1aad459406856620fee81924"
+  },
+  "empty_End3_count": 2,
+  "option2_rows": 0
+}

@@ -1,0 +1,197 @@
+{
+  "cup": {
+    "A": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      10,
+      14
+    ],
+    "bad_triples": 25,
+    "clauses": 260,
+    "cup_protected_nonterminal_pairs": 27,
+    "files": {
+      "certificates.json": {
+        "bytes": 4930,
+        "sha256": "b992dfeabaa9b2b7cbebb9bee09b4c5bdcbd32e503a989ada7fe0e5f61318df5"
+      },
+      "cup.cnf": {
+        "bytes": 4146,
+        "sha256": "cada96632114e040ceefed8a8fda6ee660fc6f69c4b7b4145e28b3a98404179d"
+      },
+      "finder.log": {
+        "bytes": 59,
+        "sha256": "461582bfb9803f8d65d18b7f65fc38dfb9185b6e401a51dac74caf62989be5a2"
+      },
+      "geometry.json": {
+        "bytes": 4896,
+        "sha256": "2e3f2cc05d3e8132652f1eb2bc8cc12ff67e34593de5d764b90c7cc7b88c5026"
+      },
+      "input.json": {
+        "bytes": 921,
+        "sha256": "2c011a6491aa99e3cdeeca6ed545b8a5c0220a51e94367386a0bb87b1df83993"
+      },
+      "model.json": {
+        "bytes": 224,
+        "sha256": "e54394debe1ad2a90044e50ea59c64e5cea6c7493bc9bb1e3597636833827751"
+      },
+      "points.txt": {
+        "bytes": 291,
+        "sha256": "bccd878a481b4def89ea45ca78f1ee8ebd284439b73cf26543b7fad0cf6384e7"
+      },
+      "positive_replay.json": {
+        "bytes": 273,
+        "sha256": "3b567676919b655ea033bcdc3368eac6ae7c2ab01980bc3b18fa94f6ed652ab1"
+      },
+      "protection.json": {
+        "bytes": 10357,
+        "sha256": "ee6483a0a041b71954caaeeab0e8401b62c6dd3386adfcfb9a5838e31dae0ffe"
+      }
+    },
+    "fourcaps": 48,
+    "geometry_source": "/home/jay/research/data/delta3-codex-20261113/extension/envelope/cup_dominance/real15-v1/uniform/geometry.json",
+    "geometry_source_sha256": "2e3f2cc05d3e8132652f1eb2bc8cc12ff67e34593de5d764b90c7cc7b88c5026",
+    "label": "COMPUTED",
+    "literals": 1389,
+    "m": 15,
+    "n": 7,
+    "name": "terminal15-realization",
+    "outcome": "SAT_EXACT_MODEL_CHECKED",
+    "premises": {
+      "maxcap": 4,
+      "maxcup": 6,
+      "maxgon": 6
+    },
+    "protected_pairs": 35,
+    "replay": {
+      "cap_triples_checked": 24,
+      "complement": {
+        "maxcap": 3,
+        "maxcup": 3,
+        "maxgon": 4
+      },
+      "full": {
+        "maxcap": 4,
+        "maxcup": 6,
+        "maxgon": 6
+      },
+      "selected": {
+        "maxcap": 3,
+        "maxcup": 6,
+        "maxgon": 6
+      },
+      "two_line_certificates": 0
+    },
+    "seconds": 0.004780469003890175,
+    "solver_exit": 10,
+    "targets": 187
+  },
+  "label": "COMPUTED",
+  "uniform": {
+    "A": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      14
+    ],
+    "ambient_pairs": 10,
+    "clauses": 237,
+    "exposed_pairs": 2,
+    "exposed_triples": 2,
+    "files": {
+      "certificates.json": {
+        "bytes": 6766,
+        "sha256": "3fbdd532b9ee41031a5855012e096be409485e205b35ab7b62a333fe6cde1d2e"
+      },
+      "envelope.cnf": {
+        "bytes": 3874,
+        "sha256": "fbf882c867f92f4192503c9985ad4deeaff4ec7a8ed51f56e7469eddd36f5a48"
+      },
+      "envelope.json": {
+        "bytes": 11261,
+        "sha256": "17e02ce675e167f4244d84c0f6b3eaa9abe7e65d212ae12eff42e87e8e1f868b"
+      },
+      "finder.log": {
+        "bytes": 58,
+        "sha256": "d1b32eaf7c1494dd1dd0ecf9554a7b6a1ac586042ed1bdbd0e244fe128f546d8"
+      },
+      "geometry.json": {
+        "bytes": 4896,
+        "sha256": "2e3f2cc05d3e8132652f1eb2bc8cc12ff67e34593de5d764b90c7cc7b88c5026"
+      },
+      "geometry.stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "input.json": {
+        "bytes": 921,
+        "sha256": "2c011a6491aa99e3cdeeca6ed545b8a5c0220a51e94367386a0bb87b1df83993"
+      },
+      "model.json": {
+        "bytes": 230,
+        "sha256": "6a8c17b6e1b59c7f7a32bf800946355e7d39b9ea0bf22da4f77dbc0ea29e5aaa"
+      },
+      "points.txt": {
+        "bytes": 291,
+        "sha256": "bccd878a481b4def89ea45ca78f1ee8ebd284439b73cf26543b7fad0cf6384e7"
+      },
+      "positive_replay.json": {
+        "bytes": 273,
+        "sha256": "52b77c3e1acc6d86c4ffcfce6de7c457218977afcb56dc9b2c3daac733445024"
+      },
+      "terminalsafe.cnf": {
+        "bytes": 4763,
+        "sha256": "fb2e5f089e6e1a2d2b1665fdd30e3f0162082e20f89d1380636aa8f7f1c684a6"
+      }
+    },
+    "fourcaps": 48,
+    "geometry": {
+      "chains": 1377,
+      "maxcap": 4,
+      "maxcup": 6,
+      "maxgon": 6
+    },
+    "label": "COMPUTED",
+    "literals": 1320,
+    "m": 15,
+    "n": 7,
+    "name": "terminal15-realization",
+    "outcome": "SAT_EXACT_MODEL_CHECKED",
+    "replay": {
+      "cap_triples_checked": 33,
+      "complement": {
+        "maxcap": 3,
+        "maxcup": 3,
+        "maxgon": 4
+      },
+      "full": {
+        "maxcap": 4,
+        "maxcup": 6,
+        "maxgon": 6
+      },
+      "selected": {
+        "maxcap": 3,
+        "maxcup": 6,
+        "maxgon": 6
+      },
+      "two_line_certificates": 0
+    },
+    "seconds": 0.005437653999251779,
+    "solver_exit": 10,
+    "targets": 187,
+    "terminal_rank3_triples": 78,
+    "variables": 15
+  }
+}

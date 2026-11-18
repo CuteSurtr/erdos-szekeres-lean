@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "labels": [
+    "COMPUTED complete base/append rebuild and controls",
+    "PROVED written real-failure projection"
+  ],
+  "frozen_UTC": "2026-11-13T22:54:24.051462+00:00",
+  "old_manifest_hashes": {
+    "low_split_audit": "8609cc06302c622b3f37014c27334ba142bb535b86e528aa654217e9959303c3",
+    "highsplit_audit": "dbf403074130a992c987858bb4112344099b43bcadf55e9078a394ebb9b34bef",
+    "low_split_audit/left15": "1ac9e0133d42a02c2b423d3dda39b5ce985d1f95486c6599449fa31c99cab0ca",
+    "cup_bound14_audit": "36a3f3debf6dcc0ba27a528007a6aa639a220d4526690ac2fc3177996b4c6c5a"
+  },
+  "old_files_unchanged": {
+    "low_split_audit": 128,
+    "highsplit_audit": 49,
+    "low_split_audit/left15": 42,
+    "cup_bound14_audit": 20
+  },
+  "CNF_sha256": "f23af9d7113dac3f9e4414298b20fb08d8181c279804d36b79e98a66755622b4",
+  "base_CNF_sha256": "2e233545d18e3a9acf9a253b80a102935828bee27c079ba18946dfbd4efd53d8",
+  "base_full_instance_audited": true,
+  "proof_replayed": false,
+  "finite_left16_theorem_claimed": false,
+  "all_left_sizes_claimed": false,
+  "audit_AS_MiB": 300,
+  "packaging_AS_MiB": 150,
+  "CPU_count": 1,
+  "no_job_remaining": true,
+  "lemma_uses_capacity_or_earlier_finite_terminal_result": false
+}

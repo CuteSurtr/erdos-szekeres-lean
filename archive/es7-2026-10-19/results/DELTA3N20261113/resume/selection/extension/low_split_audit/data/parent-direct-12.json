@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "label": "COMPUTED",
+  "left_m": 12,
+  "right_m": 3,
+  "n": 7,
+  "variant": "direct",
+  "variables": 2443,
+  "clauses": 23829,
+  "literals": 190191,
+  "phase_rows": {
+    "signotope": 3960,
+    "no5cap": 792,
+    "convex4_equivalence": 3960,
+    "convex_larger_equivalence": 10296,
+    "no_ngon": 792,
+    "left_has_no_fourcap": 495,
+    "ends_three_cap_equivalence": 232,
+    "no_covered_cup_transversal": 3302
+  },
+  "phase_literals": {
+    "signotope": 11880,
+    "no5cap": 2376,
+    "convex4_equivalence": 11880,
+    "convex_larger_equivalence": 27456,
+    "no_ngon": 3960,
+    "left_has_no_fourcap": 1980,
+    "ends_three_cap_equivalence": 672,
+    "no_covered_cup_transversal": 129987
+  },
+  "phase_max_width": {
+    "signotope": 3,
+    "no5cap": 3,
+    "convex4_equivalence": 3,
+    "convex_larger_equivalence": 6,
+    "no_ngon": 5,
+    "left_has_no_fourcap": 4,
+    "ends_three_cap_equivalence": 56,
+    "no_covered_cup_transversal": 924
+  },
+  "map_counts": {
+    "orientation": 220,
+    "convex": 2211,
+    "ends_three_cap": 12
+  },
+  "cnf_map_byte_identical_rebuild": true,
+  "hashes": {
+    "/home/jay/research/data/delta3-codex-20261113/extension/low12-n7.cnf": "2277a75b6f24d74d7b46876223cc2ad51c0c6270e1777e76198f0359bdebd567",
+    "/home/jay/research/data/delta3-codex-20261113/extension/low12-n7.cnf.map": "ef47cecdd4f2e7bac02a3e798fc413b1c54e346a7dbe87efeaaa23ad54822034"
+  },
+  "empty_End3_count": 2,
+  "option2_rows": 0,
+  "peak_rss_KiB": 23376,
+  "resource_limits": {
+    "AS_MiB": 300,
+    "CPU_count": 1,
+    "wall_seconds": 20,
+    "CPU_seconds": 19
+  }
+}

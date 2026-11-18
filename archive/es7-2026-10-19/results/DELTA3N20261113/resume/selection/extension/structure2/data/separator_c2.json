@@ -1,0 +1,176 @@
+{
+  "status": "PASS",
+  "label": "COMPUTED exact exhaustive target/premise control",
+  "case": "c2",
+  "P": [
+    [
+      0,
+      9
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      4,
+      102927
+    ],
+    [
+      5,
+      102926
+    ],
+    [
+      6,
+      102923
+    ],
+    [
+      7,
+      102953
+    ],
+    [
+      8,
+      102954
+    ],
+    [
+      9,
+      102957
+    ],
+    [
+      10,
+      103273
+    ],
+    [
+      11,
+      103274
+    ],
+    [
+      12,
+      103277
+    ],
+    [
+      13,
+      103282
+    ],
+    [
+      14,
+      108323
+    ],
+    [
+      15,
+      108324
+    ],
+    [
+      16,
+      108327
+    ],
+    [
+      17,
+      108332
+    ],
+    [
+      18,
+      108339
+    ]
+  ],
+  "cut": 4,
+  "m": 19,
+  "left_shape": [
+    2,
+    4
+  ],
+  "right_shape": [
+    5,
+    3
+  ],
+  "maxima": {
+    "cap": 4,
+    "cup": 5,
+    "gon": 6
+  },
+  "beta": [
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    5,
+    5
+  ],
+  "beta_left": [
+    1,
+    2,
+    2,
+    2
+  ],
+  "beta_right": [
+    1,
+    2,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    5,
+    5
+  ],
+  "maxcup_left": 2,
+  "maxcap_right": 3,
+  "selected_level": 5,
+  "A": [
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "hexagons": 410,
+  "hexagon_types": {
+    "left": 0,
+    "right": 410,
+    "mixed": 0
+  },
+  "one_hexagon": [
+    4,
+    5,
+    7,
+    10,
+    14,
+    15
+  ],
+  "min_target_hits": 2,
+  "targets_sha256": "32a8d91688859a9fa3422900e6fbecde139f265a13ab81e8996c657332c0e200",
+  "four_caps": 585,
+  "selected_cap_triples": [],
+  "terminal_witnesses": {},
+  "seven_gon": null,
+  "minimum_absolute_determinant": 2,
+  "elapsed_seconds": 0.15468901900021592,
+  "peak_rss_kib": 16468,
+  "source_sha256": "0ff7117e8a10863bfb866c666be968c392a0e8d8bfdf7fa4b5a7a9e59f5b212c"
+}

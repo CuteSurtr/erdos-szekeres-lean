@@ -1,0 +1,56 @@
+{
+  "label": "PROVED Lean real geometry, fresh parent replay",
+  "status": "PASS",
+  "modules": 6,
+  "axiom_reports": 31,
+  "seconds": 7.526,
+  "max_rss_kib": 1973880,
+  "source_and_prerequisite_hashes_stable": true,
+  "standard_axioms_only": true,
+  "manifest_sha256": "58a8efa09a6a35633fbc8c31bd51678e3b7186b130bc3148e07af2b9d5d7c44d",
+  "freeze_sha256": "7a92a014b8b4dd046118c298dac56bc552f221f782704cd93d1bbd47443910bd",
+  "checks": [
+    {
+      "source": "IndexHelpers.lean",
+      "source_sha256": "2db4e52d35a1c90bb15c5683c10125dd39515e1530b43a4f2b53eb957b402ecc",
+      "axiom_reports": 4,
+      "seconds": 1.006,
+      "peak_rss_kib": 659372
+    },
+    {
+      "source": "BridgeBase.lean",
+      "source_sha256": "fd2ca262239e6ac32f29732afd7d872f4b3fa7450b66c7ae3e2d880267c4a6ea",
+      "axiom_reports": 7,
+      "seconds": 1.178,
+      "peak_rss_kib": 1951784
+    },
+    {
+      "source": "ConvexBridge.lean",
+      "source_sha256": "9998452761a0d8a651fb846f9111946dbef3039f1007904bd40b4896f813218b",
+      "axiom_reports": 6,
+      "seconds": 1.43,
+      "peak_rss_kib": 1965856
+    },
+    {
+      "source": "TerminalReal.lean",
+      "source_sha256": "68b0a89e72b8b6f37c95e2b881deb97f58db515b1627a8bd2400ebc58adca70f",
+      "axiom_reports": 5,
+      "seconds": 1.413,
+      "peak_rss_kib": 1973880
+    },
+    {
+      "source": "PointSetBridge.lean",
+      "source_sha256": "acda2b96c228096ceefb9528cee7b5e2d77dc8196c127a8fcfa7e9ef276c6e32",
+      "axiom_reports": 6,
+      "seconds": 1.322,
+      "peak_rss_kib": 1972948
+    },
+    {
+      "source": "RealBalanced15.lean",
+      "source_sha256": "4e8f648678aae017c8356d0ed33cccffe891c9ee5f0ee9230448d8fb4b95cbfc",
+      "axiom_reports": 3,
+      "seconds": 1.177,
+      "peak_rss_kib": 1959536
+    }
+  ]
+}

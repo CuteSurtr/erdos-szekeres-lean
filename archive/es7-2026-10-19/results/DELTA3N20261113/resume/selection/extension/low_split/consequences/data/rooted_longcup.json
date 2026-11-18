@@ -1,0 +1,263 @@
+{
+  "status": "PASS",
+  "cases": {
+    "n5_longcup_End3_root": {
+      "n": 5,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          8,
+          16
+        ],
+        [
+          12,
+          36
+        ]
+      ],
+      "size": 5,
+      "branch": "root_End3",
+      "selected": [
+        3,
+        4
+      ],
+      "selected_first_lacks_End3": false,
+      "End3": [
+        3,
+        4
+      ],
+      "prefix_target_endpoints": [
+        3
+      ],
+      "prefix_beta": [
+        1,
+        2,
+        3,
+        3
+      ],
+      "maxima": {
+        "cup": 4,
+        "cap": 3,
+        "gon": 4
+      },
+      "prefix_cup": 3,
+      "targets": 3,
+      "old_targets": 1,
+      "targets_using_root": 2,
+      "admissible": true,
+      "complement_maxgon": 3
+    },
+    "n6_longcup_End3_root": {
+      "n": 6,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          6,
+          19
+        ],
+        [
+          8,
+          16
+        ],
+        [
+          12,
+          36
+        ],
+        [
+          16,
+          64
+        ]
+      ],
+      "size": 6,
+      "branch": "root_End3",
+      "selected": [
+        4,
+        5
+      ],
+      "selected_first_lacks_End3": false,
+      "End3": [
+        3,
+        4,
+        5
+      ],
+      "prefix_target_endpoints": [
+        4
+      ],
+      "prefix_beta": [
+        1,
+        2,
+        3,
+        3,
+        4
+      ],
+      "maxima": {
+        "cup": 5,
+        "cap": 3,
+        "gon": 5
+      },
+      "prefix_cup": 4,
+      "targets": 3,
+      "old_targets": 1,
+      "targets_using_root": 2,
+      "admissible": true,
+      "complement_maxgon": 4
+    },
+    "n7_longcup_End3_root": {
+      "n": 7,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          6,
+          23
+        ],
+        [
+          8,
+          16
+        ],
+        [
+          12,
+          36
+        ],
+        [
+          16,
+          64
+        ],
+        [
+          20,
+          100
+        ]
+      ],
+      "size": 7,
+      "branch": "root_End3",
+      "selected": [
+        6
+      ],
+      "selected_first_lacks_End3": false,
+      "End3": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "prefix_target_endpoints": [],
+      "prefix_beta": [
+        1,
+        2,
+        3,
+        3,
+        4,
+        5
+      ],
+      "maxima": {
+        "cup": 6,
+        "cap": 3,
+        "gon": 6
+      },
+      "prefix_cup": 5,
+      "targets": 2,
+      "old_targets": 0,
+      "targets_using_root": 2,
+      "admissible": true,
+      "complement_maxgon": 5
+    },
+    "n8_longcup_End3_root": {
+      "n": 8,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          6,
+          27
+        ],
+        [
+          8,
+          16
+        ],
+        [
+          12,
+          36
+        ],
+        [
+          16,
+          64
+        ],
+        [
+          20,
+          100
+        ],
+        [
+          24,
+          144
+        ]
+      ],
+      "size": 8,
+      "branch": "root_End3",
+      "selected": [
+        7
+      ],
+      "selected_first_lacks_End3": false,
+      "End3": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "prefix_target_endpoints": [],
+      "prefix_beta": [
+        1,
+        2,
+        3,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maxima": {
+        "cup": 7,
+        "cap": 3,
+        "gon": 7
+      },
+      "prefix_cup": 6,
+      "targets": 2,
+      "old_targets": 0,
+      "targets_using_root": 2,
+      "admissible": true,
+      "complement_maxgon": 6
+    }
+  },
+  "elapsed_seconds": 0.0009257970014004968,
+  "peak_rss_kib": 17200,
+  "source_sha256": "bf05993dc0dc2241a2b99c35361f363cd56a06d317dae479cabb936c6efaa612",
+  "helper_sha256": "e66850e63a3840f7a4d8837cac3d05a0f53695866086f1a31e89f4652ea9e85b"
+}

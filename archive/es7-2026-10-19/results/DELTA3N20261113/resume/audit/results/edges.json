@@ -1,0 +1,68 @@
+{
+  "cases": [
+    {
+      "exception": "AxisError",
+      "m": 4,
+      "message": "axis 1 is out of bounds for array of dimension 1",
+      "n": 5,
+      "reference_working": 15,
+      "status": "BUG_REPRODUCED"
+    },
+    {
+      "exception": "AxisError",
+      "m": 4,
+      "message": "axis 1 is out of bounds for array of dimension 1",
+      "n": 8,
+      "reference_working": 16,
+      "status": "BUG_REPRODUCED"
+    },
+    {
+      "exception": "AxisError",
+      "m": 5,
+      "message": "axis 1 is out of bounds for array of dimension 1",
+      "n": 6,
+      "reference_working": 31,
+      "status": "BUG_REPRODUCED"
+    },
+    {
+      "exception": "AxisError",
+      "m": 5,
+      "message": "axis 1 is out of bounds for array of dimension 1",
+      "n": 8,
+      "reference_working": 32,
+      "status": "BUG_REPRODUCED"
+    },
+    {
+      "exception": "AxisError",
+      "m": 6,
+      "message": "axis 1 is out of bounds for array of dimension 1",
+      "n": 7,
+      "reference_working": 63,
+      "status": "BUG_REPRODUCED"
+    },
+    {
+      "exception": "AxisError",
+      "m": 7,
+      "message": "axis 1 is out of bounds for array of dimension 1",
+      "n": 8,
+      "reference_working": 127,
+      "status": "BUG_REPRODUCED"
+    }
+  ],
+  "checker_sha256": "925d7204e6528a3ccc955261ef44448984b2dabc236afee04949f2700a322160",
+  "driver_sha256": "0e1700be00d4fbf93f2965f3ff3caf1a5ccbd9b4c966f3ff04ec5322b1995c30",
+  "elapsed_seconds": 0.04177887299738359,
+  "label": "COMPUTED",
+  "limits": {
+    "affinity": [
+      0
+    ],
+    "as_mib": 400,
+    "cpu_seconds": 18,
+    "external_seconds": 20
+  },
+  "mode": "edges",
+  "peak_rss_kib": 37692,
+  "status": "COMPLETED",
+  "thread_count": 1
+}

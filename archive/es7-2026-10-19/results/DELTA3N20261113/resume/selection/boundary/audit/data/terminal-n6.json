@@ -1,0 +1,149 @@
+{
+  "label": "COMPUTED",
+  "status": "PASS",
+  "mode": "terminal",
+  "result": {
+    "n": 6,
+    "kind": "terminal",
+    "cnf_sha256": "1e40345bfedd16d0130a0a00bc6a412d7a0caceb04bcd39879be99d71d9621c3",
+    "map_sha256": "536b937c4c7cb7a12f186291f3645e2376631cd273f4e7afbc17b7f56fd45e29",
+    "source_hashes": {},
+    "rebuilt": {
+      "cup_equivalence": 630,
+      "some_long_cup": 1,
+      "no_longer_cup": 126,
+      "convex_complements": 126,
+      "terminal_fourcap_equivalence": 630,
+      "terminal_bad_triple_equivalence": 798,
+      "forall_terminal_safe_delta": 382
+    },
+    "controls": [
+      {
+        "name": "root",
+        "false_clauses": {
+          "signotope": 0,
+          "no5cap": 0,
+          "convex4_equivalence": 0,
+          "convex_larger_equivalence": 0,
+          "no_ngon": 0,
+          "cup_equivalence": 0,
+          "some_long_cup": 0,
+          "no_longer_cup": 0,
+          "convex_complements": 0,
+          "terminal_fourcap_equivalence": 0,
+          "terminal_bad_triple_equivalence": 0,
+          "forall_terminal_safe_delta": 76
+        }
+      },
+      {
+        "name": "refined",
+        "false_clauses": {
+          "signotope": 0,
+          "no5cap": 0,
+          "convex4_equivalence": 0,
+          "convex_larger_equivalence": 0,
+          "no_ngon": 0,
+          "cup_equivalence": 0,
+          "some_long_cup": 0,
+          "no_longer_cup": 0,
+          "convex_complements": 0,
+          "terminal_fourcap_equivalence": 0,
+          "terminal_bad_triple_equivalence": 0,
+          "forall_terminal_safe_delta": 53
+        }
+      },
+      {
+        "name": "parabola_1",
+        "false_clauses": {
+          "signotope": 0,
+          "no5cap": 0,
+          "convex4_equivalence": 0,
+          "convex_larger_equivalence": 0,
+          "no_ngon": 84,
+          "cup_equivalence": 0,
+          "some_long_cup": 0,
+          "no_longer_cup": 126,
+          "convex_complements": 0,
+          "terminal_fourcap_equivalence": 0,
+          "terminal_bad_triple_equivalence": 0,
+          "forall_terminal_safe_delta": 126
+        }
+      },
+      {
+        "name": "parabola_-1",
+        "false_clauses": {
+          "signotope": 0,
+          "no5cap": 126,
+          "convex4_equivalence": 0,
+          "convex_larger_equivalence": 0,
+          "no_ngon": 84,
+          "cup_equivalence": 0,
+          "some_long_cup": 1,
+          "no_longer_cup": 0,
+          "convex_complements": 0,
+          "terminal_fourcap_equivalence": 0,
+          "terminal_bad_triple_equivalence": 0,
+          "forall_terminal_safe_delta": 91
+        }
+      },
+      {
+        "name": "raised_middle_parabola",
+        "points": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            18
+          ],
+          [
+            4,
+            35
+          ],
+          [
+            5,
+            50
+          ],
+          [
+            6,
+            72
+          ],
+          [
+            7,
+            98
+          ],
+          [
+            8,
+            128
+          ]
+        ],
+        "false_clauses": {
+          "signotope": 0,
+          "no5cap": 0,
+          "convex4_equivalence": 0,
+          "convex_larger_equivalence": 0,
+          "no_ngon": 64,
+          "cup_equivalence": 0,
+          "some_long_cup": 0,
+          "no_longer_cup": 111,
+          "convex_complements": 15,
+          "terminal_fourcap_equivalence": 0,
+          "terminal_bad_triple_equivalence": 0,
+          "forall_terminal_safe_delta": 126
+        }
+      }
+    ]
+  },
+  "checker_sha256": "a81d4250a2ba859ae88b9ff7ef5927792d1045c6031c5fa754fe01bbcd8bd8cd",
+  "seconds": 0.015,
+  "maxrss_KiB": 20468
+}

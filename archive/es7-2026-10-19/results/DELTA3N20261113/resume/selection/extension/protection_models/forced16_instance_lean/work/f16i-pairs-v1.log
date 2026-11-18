@@ -1,0 +1,43 @@
+/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/protection_models/forced16_instance_lean/F16IPairs.lean:53:13: error: Ambiguous term
+  of_decide_eq_true
+Possible interpretations:
+  _root_.of_decide_eq_true
+    (List.all_eq_true.mp factors_bounded r hr) : r.small1 < 560 ∧ r.small2 < 560 ∧ r.large1 < 560 ∧ r.large2 < 560
+  
+  Lean.Grind.of_decide_eq_true
+    (List.all_eq_true.mp factors_bounded r
+      hr) : (r.small1 < 560 ∧ r.small2 < 560 ∧ r.large1 < 560 ∧ r.large2 < 560) = True
+/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/protection_models/forced16_instance_lean/F16IPairs.lean:55:24: error: Invalid projection: Projections are not supported on this type because it has no fields
+  hb
+has type
+  (r.small1 < 560 ∧ r.small2 < 560 ∧ r.large1 < 560 ∧ r.large2 < 560) = True
+/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/protection_models/forced16_instance_lean/F16IPairs.lean:55:50: error: Invalid projection: Projections are not supported on this type because it has no fields
+  hb
+has type
+  (r.small1 < 560 ∧ r.small2 < 560 ∧ r.large1 < 560 ∧ r.large2 < 560) = True
+/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/protection_models/forced16_instance_lean/F16IPairs.lean:59:13: error: Ambiguous term
+  of_decide_eq_true
+Possible interpretations:
+  _root_.of_decide_eq_true
+    (List.all_eq_true.mp factors_bounded r hr) : r.small1 < 560 ∧ r.small2 < 560 ∧ r.large1 < 560 ∧ r.large2 < 560
+  
+  Lean.Grind.of_decide_eq_true
+    (List.all_eq_true.mp factors_bounded r
+      hr) : (r.small1 < 560 ∧ r.small2 < 560 ∧ r.large1 < 560 ∧ r.large2 < 560) = True
+/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/protection_models/forced16_instance_lean/F16IPairs.lean:61:24: error: Invalid projection: Projections are not supported on this type because it has no fields
+  hb
+has type
+  (r.small1 < 560 ∧ r.small2 < 560 ∧ r.large1 < 560 ∧ r.large2 < 560) = True
+/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/protection_models/forced16_instance_lean/F16IPairs.lean:61:54: error: Invalid projection: Projections are not supported on this type because it has no fields
+  hb
+has type
+  (r.small1 < 560 ∧ r.small2 < 560 ∧ r.large1 < 560 ∧ r.large2 < 560) = True
+'Delta3.Forced16Instance.monomial_indicator' depends on axioms: [propext]
+'Delta3.Forced16Instance.monomial_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Delta3.Forced16Instance.factors_bounded' does not depend on any axioms
+'Delta3.Forced16Instance.small_monomial' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Delta3.Forced16Instance.large_monomial' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'Delta3.Forced16Instance.no_positive_product_assignment' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

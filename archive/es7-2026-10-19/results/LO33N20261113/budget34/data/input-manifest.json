@@ -1,0 +1,31 @@
+{
+  "label": "COMPUTED input preparation; pool provenance independently audited separately",
+  "budget": 34,
+  "states": 154,
+  "base_rows": 2650,
+  "coupled_rows": 812,
+  "source_sha256": "8c7fe9ef5264182524095d46ef50ed6bc691cab425efa965756d1870112241aa",
+  "pool_sha256": "91a4e36f31712231ed1386576d6dcbe846ddf6c1b0d4de41e225bbdb4a18bcf8",
+  "binary_sha256": "39b724a2b5f5b08b56f3e9aedb24886c08ae2716301008410aaba9a1452b33b5",
+  "source_s23_extra_sha256": "2a6d3757b2dd2176a8c79a6b627aa2277e67c41413c85e87d6c8093a2469c9bc",
+  "slices": {
+    "19": {
+      "capacity_demands": [
+        19,
+        15
+      ],
+      "extra_sha256": "770d276db7b51d369e9a6fa1b9f36abb15d2539d224a71b19bf5fa738cbd9983",
+      "rows_sha256": "5b2db8d9a1779e96e0511f33c6ed553ae64d3e779deb0d7a07e2d4285f692c2e",
+      "rows": 3464
+    },
+    "20": {
+      "capacity_demands": [
+        20,
+        14
+      ],
+      "extra_sha256": "c1e9833ae4a1703fc1b942be9ccf03435effb4d21f55005e97a337c64664492a",
+      "rows_sha256": "2765f86eb0998aedb60d358773513edab8c5d858bdc811b16f55acc96b119bc6",
+      "rows": 3464
+    }
+  }
+}

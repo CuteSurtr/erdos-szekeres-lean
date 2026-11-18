@@ -1,0 +1,184 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "name": "inside_no_six_cup",
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -4
+        ],
+        [
+          6,
+          21
+        ],
+        [
+          7,
+          22
+        ],
+        [
+          8,
+          25
+        ],
+        [
+          12,
+          69
+        ],
+        [
+          13,
+          70
+        ],
+        [
+          14,
+          73
+        ],
+        [
+          15,
+          78
+        ],
+        [
+          19,
+          171
+        ],
+        [
+          20,
+          172
+        ],
+        [
+          21,
+          175
+        ],
+        [
+          22,
+          180
+        ]
+      ],
+      "geometry": {
+        "m": 14,
+        "n": 7,
+        "gp": true,
+        "fourcaps": 0,
+        "bad_cap_triples": 106,
+        "targets": 246,
+        "ngons": 0,
+        "fivecaps": 0,
+        "maxcup": 5,
+        "max_abs_coordinate": 180,
+        "max_abs_determinant": 1083
+      },
+      "sixcups": 0,
+      "false_appended_rows": 0,
+      "first_sixcup": null,
+      "terminal_selector_checked": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "new_hypothesis_satisfied": true,
+      "actual_rows_checked": 3003
+    },
+    {
+      "name": "excluded_six_cup_present",
+      "P": [
+        [
+          -877024,
+          -728732
+        ],
+        [
+          -848175,
+          -806081
+        ],
+        [
+          -315477,
+          411721
+        ],
+        [
+          -313031,
+          607898
+        ],
+        [
+          -312174,
+          772879
+        ],
+        [
+          -275463,
+          -257726
+        ],
+        [
+          -247748,
+          -312490
+        ],
+        [
+          -229906,
+          -280298
+        ],
+        [
+          -224691,
+          37110
+        ],
+        [
+          -219347,
+          -771737
+        ],
+        [
+          -147229,
+          -623666
+        ],
+        [
+          -42059,
+          77725
+        ],
+        [
+          3816,
+          -817775
+        ],
+        [
+          3817,
+          61604281
+        ]
+      ],
+      "geometry": {
+        "m": 14,
+        "n": 7,
+        "gp": true,
+        "fourcaps": 58,
+        "bad_cap_triples": 97,
+        "targets": 54,
+        "ngons": 0,
+        "fivecaps": 0,
+        "maxcup": 6,
+        "max_abs_coordinate": 61604281,
+        "max_abs_determinant": 54983843896083
+      },
+      "sixcups": 14,
+      "false_appended_rows": 14,
+      "first_sixcup": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        13
+      ],
+      "terminal_selector_checked": [
+        0,
+        2,
+        3,
+        13
+      ],
+      "new_hypothesis_satisfied": false,
+      "actual_rows_checked": 3003
+    }
+  ],
+  "geometry_helper_sha256": "8568ab9a5e94e4a5c64e5f91db4d704aacaae6b22e32e96cbfa0123b99d6c6b0",
+  "negative_fixture_sha256": "7e8ab55d0e83bac9a27614b90c917a3ee77dfccc16565c9cee9d96ebf85f8634"
+}

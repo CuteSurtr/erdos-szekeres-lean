@@ -1,0 +1,198 @@
+{
+  "P": [
+    [
+      0,
+      0
+    ],
+    [
+      221680,
+      -74181958959
+    ],
+    [
+      221689,
+      -77378752209
+    ],
+    [
+      222680,
+      -77700323248
+    ],
+    [
+      299288,
+      -104431354612
+    ],
+    [
+      315222,
+      -105484313027
+    ],
+    [
+      776079,
+      -261282917363
+    ],
+    [
+      776086,
+      -261294303439
+    ],
+    [
+      776090,
+      -261265836302
+    ],
+    [
+      776096,
+      -261267808882
+    ],
+    [
+      779384,
+      -258345455552
+    ],
+    [
+      779390,
+      -262381295590
+    ],
+    [
+      1057594,
+      -353908317219
+    ],
+    [
+      1057656,
+      -353928715752
+    ],
+    [
+      1070054,
+      0
+    ]
+  ],
+  "assignments_checked": 32768,
+  "certificates": [
+    {
+      "supports": [
+        {
+          "fourcap": [
+            4,
+            7,
+            12,
+            13
+          ],
+          "weight": "1"
+        }
+      ],
+      "triple": [
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "supports": [
+        {
+          "fourcap": [
+            4,
+            7,
+            12,
+            13
+          ],
+          "weight": "1"
+        }
+      ],
+      "triple": [
+        2,
+        3,
+        9
+      ]
+    }
+  ],
+  "consequence": "Every listed cup-protected Delta persists under every realization with the same ordered triple orientations, by the written cup-domination proof.",
+  "cup_protected_count": 1842,
+  "label": "COMPUTED exact finite enumeration",
+  "m": 15,
+  "minimum_A": [
+    2,
+    3,
+    6,
+    9
+  ],
+  "minimum_cardinality_count": 8,
+  "minimum_cup_protected_size": 4,
+  "n": 7,
+  "ordinary_count": 4805,
+  "positive_replay": {
+    "cap_triples_checked": 2,
+    "complement": {
+      "maxcap": 4,
+      "maxcup": 5,
+      "maxgon": 5
+    },
+    "full": {
+      "maxcap": 4,
+      "maxcup": 6,
+      "maxgon": 6
+    },
+    "selected": {
+      "maxcap": 3,
+      "maxcup": 3,
+      "maxgon": 4
+    },
+    "two_line_certificates": 0
+  },
+  "source_case": "/home/jay/research/data/delta3-codex-20261113/extension/envelope/cup_dominance/real15-v1/cup",
+  "source_input_sha256": "2c011a6491aa99e3cdeeca6ed545b8a5c0220a51e94367386a0bb87b1df83993",
+  "support_witnesses": [
+    {
+      "ambient_fourcap": [
+        4,
+        7,
+        12,
+        13
+      ],
+      "ambient_pair": [
+        12,
+        13
+      ],
+      "cup_union": [
+        3,
+        6,
+        12,
+        13
+      ],
+      "pair": [
+        3,
+        6
+      ],
+      "protected": true,
+      "same_pair": false,
+      "triple": [
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "ambient_fourcap": [
+        4,
+        7,
+        12,
+        13
+      ],
+      "ambient_pair": [
+        12,
+        13
+      ],
+      "cup_union": [
+        3,
+        9,
+        12,
+        13
+      ],
+      "pair": [
+        3,
+        9
+      ],
+      "protected": true,
+      "same_pair": false,
+      "triple": [
+        2,
+        3,
+        9
+      ]
+    }
+  ]
+}

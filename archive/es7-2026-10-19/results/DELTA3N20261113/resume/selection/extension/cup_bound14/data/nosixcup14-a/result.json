@@ -1,0 +1,72 @@
+{
+  "cache_releases": 149,
+  "commands": [
+    [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/home/jay/research/data/delta3-codex-20261113/extension/nosixcup14-a/cadical.time",
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "1503",
+      "/usr/bin/cadical",
+      "-t",
+      "1500",
+      "--lrat=true",
+      "--binary=true",
+      "/home/jay/research/data/delta3-codex-20261113/extension/nosixcup14-a/input.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/extension/nosixcup14-a/proof.blrat"
+    ],
+    [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/home/jay/research/data/delta3-codex-20261113/extension/nosixcup14-a/compress.time",
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "600",
+      "/usr/bin/zstd",
+      "-q",
+      "-T1",
+      "-3",
+      "-k",
+      "/home/jay/research/data/delta3-codex-20261113/extension/nosixcup14-a/proof.blrat"
+    ]
+  ],
+  "compressed_bytes": 1430678062,
+  "compressed_roundtrip_verified": true,
+  "finished": true,
+  "hashes": {
+    "cadical": "4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70",
+    "cadical.log": "0a2ee1344f81289d040063805288ac94df3be4c4721d684763ce1b45832e3bcc",
+    "cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+    "compress.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "input.cnf": "614a810468d31b194293128c0c56fcf79d92230d7712fbfcd5fb610eb4c81a34",
+    "proof.blrat": "59b842122490bf13b9a9c1d6dc15196c2d4f5ceaff222a64ff4e448a064179b7",
+    "proof.blrat.zst": "cdaf049a53bb44851a95c22ab52507b64fafa1233be7c139ffa141358a3ff41d",
+    "run_binary.py": "dcdfd0c97efa27e8b89daacbad3a950d3a9af77c88964e78e5522fd7904f87e5"
+  },
+  "label": "COMPUTED",
+  "limits": {
+    "as_mib": 700,
+    "cake_seconds": 360,
+    "heap_mib": 450,
+    "solver_seconds": 1500,
+    "stack_mib": 32
+  },
+  "proof_bytes": 2650688282,
+  "proof_format": "binary LRAT",
+  "runs": {
+    "cadical": {
+      "exit": 0,
+      "seconds": 1500.244
+    },
+    "compress": {
+      "exit": 0,
+      "seconds": 9.502
+    }
+  },
+  "seconds": 1517.438,
+  "source_cnf": "/home/jay/research/data/delta3-codex-20261113/extension/n7m14-nosixcup.cnf",
+  "status": "UNKNOWN"
+}

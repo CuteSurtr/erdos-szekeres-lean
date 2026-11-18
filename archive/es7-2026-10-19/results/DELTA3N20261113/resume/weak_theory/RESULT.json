@@ -1,0 +1,36 @@
+{
+  "status": "COMPLETE_BOUNDED_THEORY_TRACK",
+  "original_weak_D_5_7": "OPEN",
+  "original_weak_D_5_8": "OPEN",
+  "proved": [
+    "For rightmost r=(X,Y), a j-cap ending b,c extends iff Y<line_bc(X). Thus F3(A;X)<=F4(U;X) ensures a weak Delta A of U extends by r whenever U+r has no five-cap.",
+    "It suffices that every terminal pair of a three-cap in A also ends an ambient four-cap in U. Actual blockers necessarily have terminal rank exactly three.",
+    "Removing R from A and adding r works iff R hits every blocking triple and does not erase any old polygon's entire selected support.",
+    "For |S|<=n+1, every weak Delta of S-r either already works or safely adds r.",
+    "At |S|=n+2, deletion-only repair fails exactly when A has three points, T=A+r is a four-cap, and all B+t (B=S minus T, t in T) are convex (n-1)-gons.",
+    "A leftmost blue-point insertion lifts this repair obstruction from n to n+1 while preserving five-cap-freeness and absence of the forbidden polygon. The nine-point base therefore supplies sharp repair obstructions for every n>=7."
+  ],
+  "computed": {
+    "n7_obstruction": {"points": 9, "r": 8, "A": [4,6,7], "cap4": 9, "target_polygons": 9, "cap5": 0, "ngons": 0, "full_delta": [0]},
+    "n8_obstruction": {"points": 10, "r": 9, "A": [6,7,8], "cap4": 7, "target_polygons": 11, "cap5": 0, "ngons": 0, "full_delta": [0]},
+    "independent_audit": "PASS",
+    "old_deltas_checked": 863,
+    "deletion_choices_checked": 22892,
+    "terminal_pair_safe": 553,
+    "threshold_safe": 565,
+    "actual_red_extensions": 601,
+    "rank3_blocker_occurrences": 508,
+    "weak_only_terminal_safe": 26,
+    "rational_lift_controls": 2
+  },
+  "failures_retained": [
+    "Rejected proposed common-cup construction containing an explicit five-cap.",
+    "Rejected first synthetic positive controls for collinearity; original data and audit failure retained, corrected controls independently pass."
+  ],
+  "exact_remaining_gap": "Select a favorable old Delta satisfying a sufficient condition on every valid deletion, or prove a repair allowing old blue points to be selected. Arbitrary-old-Delta repair using deletions alone is false.",
+  "files": ["theory.md", "findings.json", "independent_check.json", "VERIFY_WEAK_THEORY.md", "SHA256SUMS"],
+  "resources": {"threads": 1, "address_space_limit_MiB": 384, "external_timeout_seconds": 20, "cpu_limit_seconds": 18, "long_jobs_launched": 0},
+  "certificates_created": 0,
+  "pending_jobs": [],
+  "write_scope": "DELTA3N20261113/resume/weak_theory and assigned scratch resume/weak_theory only"
+}

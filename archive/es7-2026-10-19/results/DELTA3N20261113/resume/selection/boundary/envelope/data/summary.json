@@ -1,0 +1,278 @@
+{
+  "label": "COMPUTED",
+  "fixed_instances": [
+    {
+      "name": "boundary-n6-old",
+      "m": 9,
+      "n": 6,
+      "targets": 24,
+      "fourcaps": 30,
+      "exposed_triples": 21,
+      "formula_clauses": 75,
+      "result": {
+        "outcome": "SAT_EXACT_MODEL_CHECKED",
+        "A": [
+          4,
+          5
+        ],
+        "exit_code": 10
+      },
+      "cnf_sha256": "e7171a837ba0504d174cd1ecd88109794ef306e858e323f989cebe681a15ee54"
+    },
+    {
+      "name": "boundary-n7-old",
+      "m": 11,
+      "n": 7,
+      "targets": 42,
+      "fourcaps": 46,
+      "exposed_triples": 14,
+      "formula_clauses": 102,
+      "result": {
+        "outcome": "SAT_EXACT_MODEL_CHECKED",
+        "A": [
+          5,
+          6
+        ],
+        "exit_code": 10
+      },
+      "cnf_sha256": "e2243dd264381e76c3d40edcabe86377a0ea5ddc9f635d1d7199ae8ca338f755"
+    },
+    {
+      "name": "boundary-n8-old",
+      "m": 13,
+      "n": 8,
+      "targets": 48,
+      "fourcaps": 85,
+      "exposed_triples": 22,
+      "formula_clauses": 155,
+      "result": {
+        "outcome": "SAT_EXACT_MODEL_CHECKED",
+        "A": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          8,
+          10,
+          11
+        ],
+        "exit_code": 10
+      },
+      "cnf_sha256": "f5d5d0976ced416f0096fe539b90d495f735cb7d2aab621c622f59941d8d571c"
+    },
+    {
+      "name": "terminal18",
+      "m": 18,
+      "n": 7,
+      "targets": 402,
+      "fourcaps": 115,
+      "exposed_triples": 11,
+      "formula_clauses": 528,
+      "result": {
+        "outcome": "SAT_EXACT_MODEL_CHECKED",
+        "A": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          11,
+          16
+        ],
+        "exit_code": 10
+      },
+      "cnf_sha256": "90af38ad3aacb707d6a9c23683135bba0f21d44fb678430a3c05c2322a0ba8c9"
+    },
+    {
+      "name": "pool-n7-index19",
+      "m": 21,
+      "n": 7,
+      "targets": 1027,
+      "fourcaps": 241,
+      "exposed_triples": 40,
+      "formula_clauses": 1308,
+      "result": {
+        "outcome": "SAT_EXACT_MODEL_CHECKED",
+        "A": [
+          5,
+          9,
+          12,
+          15,
+          17,
+          18,
+          19,
+          20
+        ],
+        "exit_code": 10
+      },
+      "cnf_sha256": "65239a20c09388fa81c934436c704b0eed74126289f423f4ac4be61926bcdc7d"
+    },
+    {
+      "name": "pool-n7-index64",
+      "m": 21,
+      "n": 7,
+      "targets": 1797,
+      "fourcaps": 480,
+      "exposed_triples": 9,
+      "formula_clauses": 2286,
+      "result": {
+        "outcome": "SAT_EXACT_MODEL_CHECKED",
+        "A": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          8,
+          10,
+          11,
+          14,
+          17,
+          20
+        ],
+        "exit_code": 10
+      },
+      "cnf_sha256": "855372c3ac486068c59dbe7e8e6cabbc68dfdf4597f15322ae94e6d3cad50d1c"
+    },
+    {
+      "name": "pool-n8-index130",
+      "m": 24,
+      "n": 8,
+      "targets": 995,
+      "fourcaps": 558,
+      "exposed_triples": 149,
+      "formula_clauses": 1702,
+      "result": {
+        "outcome": "SAT_EXACT_MODEL_CHECKED",
+        "A": [
+          0,
+          1,
+          2,
+          3,
+          8,
+          9,
+          11,
+          14,
+          17,
+          21,
+          23
+        ],
+        "exit_code": 10
+      },
+      "cnf_sha256": "12f071e3313ee92d06243d248fdc72bd56667718104d384ceda8703053dfa0b8"
+    },
+    {
+      "name": "pool-n8-index141",
+      "m": 24,
+      "n": 8,
+      "targets": 1115,
+      "fourcaps": 622,
+      "exposed_triples": 195,
+      "formula_clauses": 1932,
+      "result": {
+        "outcome": "SAT_EXACT_MODEL_CHECKED",
+        "A": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          10,
+          11,
+          14,
+          23
+        ],
+        "exit_code": 10
+      },
+      "cnf_sha256": "bb33a3d48798284140dc7f958d1e6738a5776f2b7a545e6480115b12497a7c6b"
+    }
+  ],
+  "solver_calls": 8,
+  "SAT_exact_models": 8,
+  "UNSAT": 0,
+  "UNKNOWN": 0,
+  "prior_witness_replay": "terminal18 known_A only; no repeated exhaustive coloring count",
+  "auxiliary_geometry_only_profiles": [
+    {
+      "path": "/home/jay/research/data/delta3-codex-20261113/boundary/envelope/profile77-80/line77.json",
+      "sha256": "bfdc44af980209bebe542470c3c519b2f5901ac43dc6b95aad5f6e129762908c",
+      "source": "/home/jay/research/data/etvthy-20261113/pool_hept.jsonl",
+      "source_sha256": "5ad62f7fe1de5178f6d8a642ccbd0221199d71591047fe157efa131fa8e8d6aa",
+      "line": 77,
+      "m": 24,
+      "bad_triples": 12,
+      "right_breaks": [],
+      "limitations": "Geometry only; no validity or Delta-existence claim."
+    },
+    {
+      "path": "/home/jay/research/data/delta3-codex-20261113/boundary/envelope/profile77-80/line78.json",
+      "sha256": "94811d8fa42039d57585a6dd04c241e8fb04c8b0d9f0da91b087437ba2666516",
+      "source": "/home/jay/research/data/etvthy-20261113/pool_hept.jsonl",
+      "source_sha256": "5ad62f7fe1de5178f6d8a642ccbd0221199d71591047fe157efa131fa8e8d6aa",
+      "line": 78,
+      "m": 24,
+      "bad_triples": 24,
+      "right_breaks": [],
+      "limitations": "Geometry only; no validity or Delta-existence claim."
+    },
+    {
+      "path": "/home/jay/research/data/delta3-codex-20261113/boundary/envelope/profile77-80/line79.json",
+      "sha256": "628173d13a854b60a67d833ed33f12e2dea448e8c3c825c49bc564ed0acd74cd",
+      "source": "/home/jay/research/data/etvthy-20261113/pool_hept.jsonl",
+      "source_sha256": "5ad62f7fe1de5178f6d8a642ccbd0221199d71591047fe157efa131fa8e8d6aa",
+      "line": 79,
+      "m": 24,
+      "bad_triples": 89,
+      "right_breaks": [],
+      "limitations": "Geometry only; no validity or Delta-existence claim."
+    },
+    {
+      "path": "/home/jay/research/data/delta3-codex-20261113/boundary/envelope/profile77-80/line80.json",
+      "sha256": "79a66383d78fae9e0152d949fe930abdf90a6534e28aa97133e1eb9638aae4b3",
+      "source": "/home/jay/research/data/etvthy-20261113/pool_hept.jsonl",
+      "source_sha256": "5ad62f7fe1de5178f6d8a642ccbd0221199d71591047fe157efa131fa8e8d6aa",
+      "line": 80,
+      "m": 25,
+      "bad_triples": 17,
+      "right_breaks": [],
+      "limitations": "Geometry only; no validity or Delta-existence claim."
+    }
+  ],
+  "resource_logs": {
+    "controls-pool.time": "6.05user 0.00system 0:06.06elapsed 99%CPU (0avgtext+0avgdata 19432maxresident)k\n0inputs+592outputs (0major+3370minor)pagefaults 0swaps",
+    "controls-small.time": "0.13user 0.00system 0:00.14elapsed 96%CPU (0avgtext+0avgdata 18444maxresident)k\n0inputs+240outputs (0major+2989minor)pagefaults 0swaps",
+    "profile77-80.time": "0.08user 0.00system 0:00.09elapsed 100%CPU (0avgtext+0avgdata 17060maxresident)k\n0inputs+32outputs (0major+2051minor)pagefaults 0swaps",
+    "verify-positive.time": "0.02user 0.00system 0:00.02elapsed 96%CPU (0avgtext+0avgdata 15656maxresident)k\n0inputs+8outputs (0major+1827minor)pagefaults 0swaps"
+  },
+  "caps": {
+    "cpu": 1,
+    "address_space_bytes": 419430400,
+    "external_timeout_seconds": 19,
+    "cpu_seconds": 18
+  },
+  "failures": [],
+  "limitations": [
+    "No complete pool sweep; two smallest records per retained n7/n8 pool only.",
+    "No new LRAT/cake result, universal selection theorem, or geometric uniform-selection counterexample.",
+    "Synthetic line controls are not claimed realizable as cap lines."
+  ],
+  "parent_independent_audit": {
+    "status": "CONFIRMED_POSITIVE_WITNESSES_AND_CERTIFICATES",
+    "scope": "Eight positive witnesses, 364 selected cap-triple domination certificates, old-four-cap and deletion-repair controls; not every CNF clause or exposure classification.",
+    "files": {
+      "cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/boundary/check_envelope.py": "7e3284de00e2246699786623c2e285e46541cbf2d6b3241fca0a3c8aefb4a3d9",
+      "cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/boundary/data/envelope_parent_checks.json": "bebc0de648d4cfc5beb705c83a179aadec12c529227e580ad08a302ed6cdb899"
+    }
+  }
+}

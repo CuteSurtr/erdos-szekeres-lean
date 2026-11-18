@@ -1,0 +1,23 @@
+	Command being timed: "/usr/bin/timeout --kill-after=2 302 /usr/bin/cadical -q -t 300 --lrat=true --binary=false /home/jay/research/data/delta3-codex-20261113/encoder/fallback-flat-n8-m15/case.cnf /home/jay/research/data/delta3-codex-20261113/encoder/fallback-flat-n8-m15/case.lrat"
+	User time (seconds): 297.71
+	System time (seconds): 2.04
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:00.01
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 249236
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 617017
+	Voluntary context switches: 19
+	Involuntary context switches: 7438
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 1289272
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

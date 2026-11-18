@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "label": "CERTIFIED",
+  "m": 7,
+  "n": 5,
+  "scope": "generic terminal selector counterexample formula",
+  "exact_acceptance_line": true,
+  "returncode": 0,
+  "stable_inputs": true,
+  "seconds": 0.00244788500276627,
+  "before": {
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal5m7-a/input.cnf": "1d0fb8ff80d4754a37ea2eb889737c3c460fffa113314ab8d9b1fe8ca2d452cb",
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal5m7-a/proof.blrat": "8b62ea27834e245a608ea399c6fd235eb8367f619ecd74dbaae8ede4bdee3ec1",
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal5m7-a/proof.blrat.zst": "7341e5d7eb62a7c3f1a0ddad9a77fcde20d59bb7f2853f493e57b5d34da102c0",
+    "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal5m7-a/result.json": "6bd562fe9256283d712e8a8061db805664bac219d4904485330da1818918423f",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/terminal5_audit/tools/replay.py": "f0305126b943af2d475d4229021887ec13250dbef67f0347193fe04f2797af0d"
+  },
+  "after": {
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal5m7-a/input.cnf": "1d0fb8ff80d4754a37ea2eb889737c3c460fffa113314ab8d9b1fe8ca2d452cb",
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal5m7-a/proof.blrat": "8b62ea27834e245a608ea399c6fd235eb8367f619ecd74dbaae8ede4bdee3ec1",
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal5m7-a/proof.blrat.zst": "7341e5d7eb62a7c3f1a0ddad9a77fcde20d59bb7f2853f493e57b5d34da102c0",
+    "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal5m7-a/result.json": "6bd562fe9256283d712e8a8061db805664bac219d4904485330da1818918423f",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/terminal5_audit/tools/replay.py": "f0305126b943af2d475d4229021887ec13250dbef67f0347193fe04f2797af0d"
+  },
+  "proof_bytes": 1536,
+  "compressed_bytes": 1227,
+  "stdout_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "proof_retained_at": "/home/jay/research/data/delta3-codex-20261113/extension/terminal5m7-a/proof.blrat",
+  "compressed_proof_retained_at": "/home/jay/research/data/delta3-codex-20261113/extension/terminal5m7-a/proof.blrat.zst",
+  "extra_heap_allocation": false,
+  "limits": {
+    "AS_MiB": 300,
+    "heap_MiB": 128,
+    "stack_MiB": 32,
+    "CPUs": 1,
+    "outer_wall_seconds": 20
+  }
+}

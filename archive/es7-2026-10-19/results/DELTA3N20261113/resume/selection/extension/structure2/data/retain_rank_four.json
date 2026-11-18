@@ -1,0 +1,2288 @@
+{
+  "fixtures": {
+    "terminal18": {
+      "P": [
+        [
+          -877024,
+          -728732
+        ],
+        [
+          -848175,
+          -806081
+        ],
+        [
+          -315477,
+          411721
+        ],
+        [
+          -313031,
+          607898
+        ],
+        [
+          -312174,
+          772879
+        ],
+        [
+          -275463,
+          -257726
+        ],
+        [
+          -247748,
+          -312490
+        ],
+        [
+          -229906,
+          -280298
+        ],
+        [
+          -224691,
+          37110
+        ],
+        [
+          -219347,
+          -771737
+        ],
+        [
+          -147229,
+          -623666
+        ],
+        [
+          -42059,
+          77725
+        ],
+        [
+          3816,
+          -817775
+        ],
+        [
+          75450,
+          -921685
+        ],
+        [
+          153870,
+          234592
+        ],
+        [
+          182298,
+          276392
+        ],
+        [
+          458162,
+          265990
+        ],
+        [
+          758070,
+          903438
+        ]
+      ],
+      "beta": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        3,
+        3,
+        4,
+        5,
+        3,
+        4,
+        5,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5
+      ],
+      "L4": [
+        3,
+        7,
+        10,
+        12,
+        13
+      ],
+      "L5": [
+        4,
+        8,
+        11,
+        14,
+        15,
+        16,
+        17
+      ],
+      "maxcap": 4,
+      "maxcup": 5,
+      "maxgon": 6,
+      "hexagon_count": 402,
+      "assignments": 128,
+      "counts": {
+        "ordinary": 6,
+        "terminal": 0,
+        "direct": 2,
+        "closure": 2,
+        "uniform": 2
+      },
+      "minimum": {
+        "ordinary": [
+          3,
+          4,
+          7,
+          10,
+          12,
+          13,
+          14,
+          16
+        ],
+        "terminal": null,
+        "direct": [
+          3,
+          4,
+          7,
+          10,
+          12,
+          13,
+          14,
+          16
+        ],
+        "closure": [
+          3,
+          4,
+          7,
+          10,
+          12,
+          13,
+          14,
+          16
+        ],
+        "uniform": [
+          3,
+          4,
+          7,
+          10,
+          12,
+          13,
+          14,
+          16
+        ]
+      },
+      "all_uniform": [
+        [
+          3,
+          4,
+          7,
+          10,
+          12,
+          13,
+          14,
+          16
+        ],
+        [
+          3,
+          4,
+          7,
+          10,
+          12,
+          13,
+          15,
+          16
+        ]
+      ],
+      "protection": {
+        "(4, 7)": {
+          "terminal": false,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              7,
+              10
+            ],
+            [
+              7,
+              12
+            ],
+            [
+              7,
+              13
+            ],
+            [
+              12,
+              13
+            ]
+          ],
+          "closure_pairs": [
+            [
+              6,
+              10
+            ],
+            [
+              6,
+              12
+            ],
+            [
+              7,
+              10
+            ],
+            [
+              7,
+              12
+            ],
+            [
+              7,
+              13
+            ],
+            [
+              14,
+              16
+            ],
+            [
+              15,
+              16
+            ],
+            [
+              12,
+              13
+            ],
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                8,
+                10
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(4, 8)": {
+          "terminal": false,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              12,
+              13
+            ],
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "closure_pairs": [
+            [
+              6,
+              12
+            ],
+            [
+              7,
+              12
+            ],
+            [
+              7,
+              13
+            ],
+            [
+              14,
+              16
+            ],
+            [
+              15,
+              16
+            ],
+            [
+              12,
+              13
+            ],
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                6,
+                10
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(4, 10)": {
+          "terminal": false,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              6,
+              10
+            ],
+            [
+              6,
+              12
+            ],
+            [
+              7,
+              10
+            ],
+            [
+              7,
+              12
+            ],
+            [
+              7,
+              13
+            ]
+          ],
+          "closure_pairs": [
+            [
+              6,
+              10
+            ],
+            [
+              6,
+              12
+            ],
+            [
+              7,
+              10
+            ],
+            [
+              7,
+              12
+            ],
+            [
+              7,
+              13
+            ],
+            [
+              14,
+              16
+            ],
+            [
+              15,
+              16
+            ],
+            [
+              12,
+              13
+            ],
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                6,
+                10
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(4, 11)": {
+          "terminal": false,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "closure_pairs": [
+            [
+              14,
+              16
+            ],
+            [
+              15,
+              16
+            ],
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                14,
+                16
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(4, 12)": {
+          "terminal": false,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              6,
+              12
+            ],
+            [
+              7,
+              12
+            ],
+            [
+              7,
+              13
+            ],
+            [
+              12,
+              13
+            ]
+          ],
+          "closure_pairs": [
+            [
+              6,
+              12
+            ],
+            [
+              7,
+              12
+            ],
+            [
+              7,
+              13
+            ],
+            [
+              14,
+              16
+            ],
+            [
+              15,
+              16
+            ],
+            [
+              12,
+              13
+            ],
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                6,
+                10
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(4, 13)": {
+          "terminal": false,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              7,
+              13
+            ],
+            [
+              12,
+              13
+            ]
+          ],
+          "closure_pairs": [
+            [
+              7,
+              13
+            ],
+            [
+              14,
+              16
+            ],
+            [
+              15,
+              16
+            ],
+            [
+              12,
+              13
+            ],
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                6,
+                10
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(4, 14)": {
+          "terminal": false,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              14,
+              16
+            ],
+            [
+              14,
+              17
+            ]
+          ],
+          "closure_pairs": [
+            [
+              14,
+              16
+            ],
+            [
+              15,
+              16
+            ],
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                14,
+                16
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(4, 15)": {
+          "terminal": false,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              15,
+              16
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "closure_pairs": [
+            [
+              14,
+              16
+            ],
+            [
+              15,
+              16
+            ],
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                14,
+                16
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(4, 16)": {
+          "terminal": false,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              14,
+              16
+            ],
+            [
+              15,
+              16
+            ],
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "closure_pairs": [
+            [
+              14,
+              16
+            ],
+            [
+              15,
+              16
+            ],
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                14,
+                16
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(4, 17)": {
+          "terminal": false,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "closure_pairs": [
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                14,
+                17
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(8, 10)": {
+          "terminal": true,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              8,
+              10
+            ]
+          ],
+          "closure_pairs": [
+            [
+              8,
+              10
+            ],
+            [
+              12,
+              13
+            ],
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                8,
+                10
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(8, 11)": {
+          "terminal": false,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "closure_pairs": [
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                14,
+                17
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(8, 12)": {
+          "terminal": false,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              12,
+              13
+            ]
+          ],
+          "closure_pairs": [
+            [
+              12,
+              13
+            ],
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                6,
+                10
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(8, 13)": {
+          "terminal": false,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              12,
+              13
+            ]
+          ],
+          "closure_pairs": [
+            [
+              12,
+              13
+            ],
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                6,
+                12
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(8, 14)": {
+          "terminal": false,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              14,
+              17
+            ]
+          ],
+          "closure_pairs": [
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                14,
+                17
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(8, 15)": {
+          "terminal": false,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              15,
+              17
+            ]
+          ],
+          "closure_pairs": [
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                14,
+                17
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(8, 16)": {
+          "terminal": false,
+          "direct": false,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [],
+          "closure_pairs": [
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                14,
+                17
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(8, 17)": {
+          "terminal": false,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "closure_pairs": [
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                14,
+                17
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(11, 12)": {
+          "terminal": true,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              11,
+              12
+            ],
+            [
+              11,
+              13
+            ],
+            [
+              12,
+              13
+            ]
+          ],
+          "closure_pairs": [
+            [
+              11,
+              12
+            ],
+            [
+              11,
+              13
+            ],
+            [
+              12,
+              13
+            ],
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                8,
+                10
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(11, 13)": {
+          "terminal": true,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              11,
+              13
+            ],
+            [
+              12,
+              13
+            ]
+          ],
+          "closure_pairs": [
+            [
+              11,
+              13
+            ],
+            [
+              12,
+              13
+            ],
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                11,
+                13
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(11, 14)": {
+          "terminal": false,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              14,
+              17
+            ]
+          ],
+          "closure_pairs": [
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                14,
+                17
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(11, 15)": {
+          "terminal": false,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              15,
+              17
+            ]
+          ],
+          "closure_pairs": [
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                14,
+                17
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(11, 16)": {
+          "terminal": false,
+          "direct": false,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [],
+          "closure_pairs": [
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                14,
+                17
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(11, 17)": {
+          "terminal": false,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "closure_pairs": [
+            [
+              14,
+              17
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                14,
+                17
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(12, 13)": {
+          "terminal": true,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              12,
+              13
+            ]
+          ],
+          "closure_pairs": [
+            [
+              12,
+              13
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                14,
+                16
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(14, 15)": {
+          "terminal": false,
+          "direct": false,
+          "closure": false,
+          "uniform": false,
+          "direct_pairs": [],
+          "closure_pairs": [],
+          "uniform_certificate": null,
+          "exposed_t": "1"
+        },
+        "(14, 16)": {
+          "terminal": true,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              14,
+              16
+            ],
+            [
+              14,
+              17
+            ]
+          ],
+          "closure_pairs": [
+            [
+              14,
+              16
+            ],
+            [
+              14,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                14,
+                16
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(14, 17)": {
+          "terminal": true,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              14,
+              17
+            ]
+          ],
+          "closure_pairs": [
+            [
+              14,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                14,
+                17
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(15, 16)": {
+          "terminal": true,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              15,
+              16
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "closure_pairs": [
+            [
+              15,
+              16
+            ],
+            [
+              15,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                14,
+                16
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(15, 17)": {
+          "terminal": true,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              15,
+              17
+            ]
+          ],
+          "closure_pairs": [
+            [
+              15,
+              17
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                14,
+                17
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(16, 17)": {
+          "terminal": false,
+          "direct": false,
+          "closure": false,
+          "uniform": false,
+          "direct_pairs": [],
+          "closure_pairs": [],
+          "uniform_certificate": null,
+          "exposed_t": "1"
+        }
+      },
+      "failed_row_cores": {},
+      "missed_by_L4": [
+        [
+          0,
+          1,
+          2,
+          5,
+          14,
+          15
+        ],
+        [
+          0,
+          1,
+          2,
+          6,
+          14,
+          15
+        ],
+        [
+          0,
+          1,
+          2,
+          9,
+          16,
+          17
+        ],
+        [
+          0,
+          1,
+          4,
+          5,
+          14,
+          15
+        ],
+        [
+          0,
+          1,
+          4,
+          6,
+          14,
+          15
+        ],
+        [
+          0,
+          1,
+          4,
+          9,
+          16,
+          17
+        ],
+        [
+          0,
+          1,
+          5,
+          8,
+          14,
+          15
+        ],
+        [
+          0,
+          1,
+          5,
+          11,
+          14,
+          15
+        ],
+        [
+          0,
+          1,
+          6,
+          8,
+          14,
+          15
+        ],
+        [
+          0,
+          1,
+          6,
+          11,
+          14,
+          15
+        ],
+        [
+          0,
+          1,
+          8,
+          9,
+          14,
+          16
+        ],
+        [
+          0,
+          1,
+          8,
+          9,
+          15,
+          16
+        ],
+        [
+          0,
+          1,
+          8,
+          9,
+          16,
+          17
+        ],
+        [
+          0,
+          1,
+          9,
+          11,
+          14,
+          16
+        ],
+        [
+          0,
+          1,
+          9,
+          11,
+          15,
+          16
+        ],
+        [
+          2,
+          4,
+          5,
+          6,
+          14,
+          15
+        ],
+        [
+          2,
+          4,
+          5,
+          6,
+          16,
+          17
+        ],
+        [
+          2,
+          4,
+          5,
+          9,
+          16,
+          17
+        ],
+        [
+          2,
+          4,
+          8,
+          11,
+          14,
+          15
+        ],
+        [
+          2,
+          4,
+          8,
+          11,
+          14,
+          17
+        ],
+        [
+          2,
+          4,
+          8,
+          11,
+          15,
+          17
+        ],
+        [
+          2,
+          4,
+          8,
+          11,
+          16,
+          17
+        ]
+      ]
+    },
+    "three_block_n7": {
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          2000,
+          504
+        ],
+        [
+          4000,
+          1016
+        ],
+        [
+          6000,
+          1536
+        ],
+        [
+          1000000,
+          1000000
+        ],
+        [
+          1002000,
+          1000004
+        ],
+        [
+          1004000,
+          1000016
+        ],
+        [
+          2000000,
+          0
+        ],
+        [
+          2002000,
+          -496
+        ],
+        [
+          2004000,
+          -984
+        ],
+        [
+          2006000,
+          -1464
+        ]
+      ],
+      "beta": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        5,
+        5,
+        2,
+        3,
+        4,
+        5
+      ],
+      "L4": [
+        3,
+        9
+      ],
+      "L5": [
+        4,
+        5,
+        6,
+        10
+      ],
+      "maxcap": 4,
+      "maxcup": 5,
+      "maxgon": 6,
+      "hexagon_count": 6,
+      "assignments": 16,
+      "counts": {
+        "ordinary": 8,
+        "terminal": 6,
+        "direct": 8,
+        "closure": 8,
+        "uniform": 8
+      },
+      "minimum": {
+        "ordinary": [
+          3,
+          9
+        ],
+        "terminal": [
+          3,
+          9
+        ],
+        "direct": [
+          3,
+          9
+        ],
+        "closure": [
+          3,
+          9
+        ],
+        "uniform": [
+          3,
+          9
+        ]
+      },
+      "all_uniform": [
+        [
+          3,
+          9
+        ],
+        [
+          3,
+          4,
+          9
+        ],
+        [
+          3,
+          5,
+          9
+        ],
+        [
+          3,
+          6,
+          9
+        ],
+        [
+          3,
+          9,
+          10
+        ],
+        [
+          3,
+          4,
+          9,
+          10
+        ],
+        [
+          3,
+          5,
+          9,
+          10
+        ],
+        [
+          3,
+          6,
+          9,
+          10
+        ]
+      ],
+      "protection": {
+        "(4, 5)": {
+          "terminal": false,
+          "direct": false,
+          "closure": false,
+          "uniform": false,
+          "direct_pairs": [],
+          "closure_pairs": [],
+          "uniform_certificate": null,
+          "exposed_t": "1"
+        },
+        "(4, 6)": {
+          "terminal": false,
+          "direct": false,
+          "closure": false,
+          "uniform": false,
+          "direct_pairs": [],
+          "closure_pairs": [],
+          "uniform_certificate": null,
+          "exposed_t": "1"
+        },
+        "(4, 9)": {
+          "terminal": false,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              7,
+              9
+            ],
+            [
+              7,
+              10
+            ],
+            [
+              8,
+              9
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              9,
+              10
+            ]
+          ],
+          "closure_pairs": [
+            [
+              7,
+              9
+            ],
+            [
+              7,
+              10
+            ],
+            [
+              8,
+              9
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              9,
+              10
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                7,
+                8
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(4, 10)": {
+          "terminal": false,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              7,
+              10
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              9,
+              10
+            ]
+          ],
+          "closure_pairs": [
+            [
+              7,
+              10
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              9,
+              10
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                7,
+                10
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(5, 6)": {
+          "terminal": false,
+          "direct": false,
+          "closure": false,
+          "uniform": false,
+          "direct_pairs": [],
+          "closure_pairs": [],
+          "uniform_certificate": null,
+          "exposed_t": "1"
+        },
+        "(5, 9)": {
+          "terminal": true,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              7,
+              9
+            ],
+            [
+              7,
+              10
+            ],
+            [
+              8,
+              9
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              9,
+              10
+            ],
+            [
+              5,
+              9
+            ],
+            [
+              5,
+              10
+            ]
+          ],
+          "closure_pairs": [
+            [
+              7,
+              9
+            ],
+            [
+              7,
+              10
+            ],
+            [
+              8,
+              9
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              9,
+              10
+            ],
+            [
+              5,
+              9
+            ],
+            [
+              5,
+              10
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                7,
+                8
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(5, 10)": {
+          "terminal": true,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              7,
+              10
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              9,
+              10
+            ],
+            [
+              5,
+              10
+            ]
+          ],
+          "closure_pairs": [
+            [
+              7,
+              10
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              9,
+              10
+            ],
+            [
+              5,
+              10
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                7,
+                10
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(6, 9)": {
+          "terminal": true,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              7,
+              9
+            ],
+            [
+              7,
+              10
+            ],
+            [
+              8,
+              9
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              9,
+              10
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              6,
+              10
+            ]
+          ],
+          "closure_pairs": [
+            [
+              7,
+              9
+            ],
+            [
+              7,
+              10
+            ],
+            [
+              8,
+              9
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              9,
+              10
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              6,
+              10
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                7,
+                8
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(6, 10)": {
+          "terminal": true,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              7,
+              10
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              9,
+              10
+            ],
+            [
+              6,
+              10
+            ]
+          ],
+          "closure_pairs": [
+            [
+              7,
+              10
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              9,
+              10
+            ],
+            [
+              6,
+              10
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                7,
+                10
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        },
+        "(9, 10)": {
+          "terminal": true,
+          "direct": true,
+          "closure": true,
+          "uniform": true,
+          "direct_pairs": [
+            [
+              9,
+              10
+            ]
+          ],
+          "closure_pairs": [
+            [
+              9,
+              10
+            ]
+          ],
+          "uniform_certificate": [
+            [
+              [
+                9,
+                10
+              ],
+              "1"
+            ]
+          ],
+          "exposed_t": null
+        }
+      },
+      "failed_row_cores": {},
+      "missed_by_L4": []
+    },
+    "closure9": {
+      "P": [
+        [
+          -1,
+          -3
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          12,
+          -20
+        ],
+        [
+          16,
+          -2
+        ],
+        [
+          20,
+          13
+        ],
+        [
+          30,
+          1
+        ],
+        [
+          40,
+          40
+        ],
+        [
+          50,
+          100
+        ]
+      ],
+      "beta": [
+        1,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        4,
+        5
+      ],
+      "L4": [
+        7
+      ],
+      "L5": [
+        8
+      ],
+      "maxcap": 4,
+      "maxcup": 5,
+      "maxgon": 6,
+      "hexagon_count": 4,
+      "assignments": 2,
+      "counts": {
+        "ordinary": 2,
+        "terminal": 2,
+        "direct": 2,
+        "closure": 2,
+        "uniform": 2
+      },
+      "minimum": {
+        "ordinary": [
+          7
+        ],
+        "terminal": [
+          7
+        ],
+        "direct": [
+          7
+        ],
+        "closure": [
+          7
+        ],
+        "uniform": [
+          7
+        ]
+      },
+      "all_uniform": [
+        [
+          7
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "protection": {},
+      "failed_row_cores": {},
+      "missed_by_L4": []
+    }
+  },
+  "status": "FAIL",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/structure2/tools/retain_rank_four.py\", line 110, in main\n    r=analyze(p);result['fixtures'][name]=r\n  File \"/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/structure2/tools/retain_rank_four.py\", line 35, in analyze\n    beta=ranks_by_subsets(s,vertices);caps=four_caps(s,vertices)\n  File \"/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/structure2/tools/verify_structure2.py\", line 64, in ranks_by_subsets\n    assert six==0\n           ^^^^^^\nAssertionError\n",
+  "inputs": {
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/structure2/data/initial_profiles.json": "8b297da5bb3fca34f37cd3f860d54262d68ee7c9daa3326893326e54151eb9d1",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/structure2/data/closure_examples_replay.json": "17a2be30b1b7d145a6da8dcd02e77c2e828071e24d4c30496b66bff985742a9e",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/model15_audit/data/real15.coordinates.json": "52280ed5a905a188d3c230580615c212f6bb9939b3d0bcbae384e40edf158bdb"
+  },
+  "elapsed_seconds": 0.2978829760031658,
+  "peak_rss_kib": 19156,
+  "source_sha256": "2b4febf48017ab04eb2f59f79c9bfc8d1f9e8f7f056837d5dc2edaff1b0ebf9d",
+  "helper_sha256": "9f2debbd5ba79160130bd348699d12dc53db18af86dca7099302d16430475904"
+}

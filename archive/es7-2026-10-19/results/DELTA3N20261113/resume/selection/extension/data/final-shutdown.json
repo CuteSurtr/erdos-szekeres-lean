@@ -1,0 +1,58 @@
+{
+  "timestamp": "2026-11-14T08:28:56.977664+09:00",
+  "unit_state": {
+    "command": [
+      "systemctl",
+      "--user",
+      "list-units",
+      "nov13c-*",
+      "p2-*",
+      "memguard*",
+      "--state=running",
+      "--no-pager"
+    ],
+    "exit": 0,
+    "stdout": "  UNIT LOAD ACTIVE SUB DESCRIPTION\n\n0 loaded units listed.\n",
+    "stderr": ""
+  },
+  "monitors": {
+    "command": [
+      "systemctl",
+      "--user",
+      "show",
+      "memguard5-20261113",
+      "p2-watch-d1b",
+      "nov13c-vfy-delta6-cachewatch",
+      "-p",
+      "Id",
+      "-p",
+      "ActiveState",
+      "-p",
+      "SubState",
+      "-p",
+      "Result"
+    ],
+    "exit": 0,
+    "stdout": "Id=memguard5-20261113.service\nActiveState=inactive\nSubState=dead\nResult=success\n\nId=p2-watch-d1b.service\nActiveState=inactive\nSubState=dead\nResult=success\n\nId=nov13c-vfy-delta6-cachewatch.service\nActiveState=inactive\nSubState=dead\nResult=success\n",
+    "stderr": ""
+  },
+  "memory": {
+    "command": [
+      "free",
+      "-b"
+    ],
+    "exit": 0,
+    "stdout": "               total        used        free      shared  buff/cache   available\nMem:     63845265408  6362238976  8912617472   283566080 49577074688 57483026432\nSwap:     8589930496      630784  8589299712\n",
+    "stderr": ""
+  },
+  "branch": {
+    "command": [
+      "git",
+      "branch",
+      "--show-current"
+    ],
+    "exit": 0,
+    "stdout": "es7-night-2026-11-01\n",
+    "stderr": ""
+  }
+}

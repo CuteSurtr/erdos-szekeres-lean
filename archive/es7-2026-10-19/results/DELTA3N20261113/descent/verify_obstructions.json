@@ -1,0 +1,107 @@
+[
+  {
+    "label": "COMPUTED",
+    "file": "fan_obstruction_n7.json",
+    "n": 7,
+    "m": 10,
+    "nonzero_determinants": 120,
+    "five_caps": 0,
+    "convex_n_gons": 0,
+    "four_caps": [
+      [
+        3,
+        7,
+        8,
+        9
+      ],
+      [
+        4,
+        7,
+        8,
+        9
+      ],
+      [
+        5,
+        7,
+        8,
+        9
+      ],
+      [
+        6,
+        7,
+        8,
+        9
+      ]
+    ],
+    "type2_cups": 9,
+    "H": [
+      7
+    ],
+    "lost_type2_cup": [
+      0,
+      1,
+      3,
+      4,
+      6,
+      7
+    ],
+    "fan_exchange_fails_coverage": true,
+    "E1_repair": {
+      "add": 0,
+      "remove": []
+    }
+  },
+  {
+    "label": "COMPUTED",
+    "file": "fan_obstruction_n8.json",
+    "n": 8,
+    "m": 11,
+    "nonzero_determinants": 165,
+    "five_caps": 0,
+    "convex_n_gons": 0,
+    "four_caps": [
+      [
+        4,
+        8,
+        9,
+        10
+      ],
+      [
+        5,
+        8,
+        9,
+        10
+      ],
+      [
+        6,
+        8,
+        9,
+        10
+      ],
+      [
+        7,
+        8,
+        9,
+        10
+      ]
+    ],
+    "type2_cups": 9,
+    "H": [
+      8
+    ],
+    "lost_type2_cup": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      7,
+      8
+    ],
+    "fan_exchange_fails_coverage": true,
+    "E1_repair": {
+      "add": 0,
+      "remove": []
+    }
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "status": "PROVED conditional product/GP algebra; fixed forced16 model not Lean checked",
+  "time_kst": "2026-11-14T07:53:02.285113+09:00",
+  "manifest_sha256": "c4e6e0dfc2d3ea417ad1a9c8969948a622d679a5e68899976f27896ba399c362",
+  "finished_sources": {
+    "F16Products.lean": "089de946e5e6c80fbb22296bc5e106c99d0c2e674c5be1e0c82ca552ea5d1aa9",
+    "F16Cancellation.lean": "9462a6abc67a06eb07332c33240a3438c7641305e1ce11d9b0095761c6f91cdf",
+    "F16GP.lean": "a39474e64722bd2d4ed794af53548ad9cdb4813a4c83cc630effbc1682eeda54",
+    "F16GPMagnitude.lean": "3b9ac462b3340af14c8498cabb504c0e19436a84a1f643ff4f925bfac12f7c06",
+    "F16Certificate.lean": "19ceefb990b7c1421857c18d80ff3d16b290313e15663b7fa172fbf6bad9eb6c"
+  },
+  "documentation": {
+    "README.md": "d0d904579365b47485914dc2ee5c4b715624180015e98813e9ba646f57307076"
+  },
+  "scripts": {
+    "F16check_light.py": "3794ea4bb7505916af7d8ec3ad7072c2e3cf52058648b22b65d69d1a0b308b40",
+    "F16replay.py": "92743ab02b8cf67495a71b21f2e82f5d0f08c2c94a9584b2f16b7d5d65350181"
+  },
+  "axiom_reports": 29,
+  "fixed_model_Lean_claim": false,
+  "parent_fresh_replay_pending_at_freeze": true
+}

@@ -1,0 +1,28 @@
+{
+ "trim_cnf_sha256": "80b55b0c2c2ef445f485901e69fda3fdbb994fc1d882b5828d9227a85a695ee7",
+ "trim_lrat_sha256": "3971e63f869224cca0e39d3b40e5070cfd737a2c13fdab8abb68bd6a105a5978",
+ "clauses": 206705,
+ "distinct_clauses": 206703,
+ "kinds": {
+  "units": 2,
+  "rows": 7913,
+  "card": 1141,
+  "geometric": 197647
+ },
+ "unclassified": 0,
+ "unclassified_sample": [],
+ "header_vars": 1647698,
+ "max_var": 1647698,
+ "vars_ok": true,
+ "mono66_stream_clauses": 39017853,
+ "budget": 12,
+ "cube": [],
+ "justification": {
+  "rows_file": "p2/b12/it1/used_rows.json",
+  "justified_rows": 7913
+ },
+ "sb_pairs": [],
+ "cake_lpr": "s VERIFIED UNSAT",
+ "seconds": 34.7,
+ "ALL_OK": true
+}

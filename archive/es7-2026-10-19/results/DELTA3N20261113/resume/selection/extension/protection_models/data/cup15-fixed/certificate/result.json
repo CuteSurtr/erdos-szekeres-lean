@@ -1,0 +1,91 @@
+{
+  "cache_releases": 0,
+  "commands": [
+    [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/home/jay/research/data/delta3-codex-20261113/extension/cup15-fixed-a/certificate/cadical.time",
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "23",
+      "/usr/bin/cadical",
+      "-t",
+      "20",
+      "--lrat=true",
+      "--binary=true",
+      "/home/jay/research/data/delta3-codex-20261113/extension/cup15-fixed-a/certificate/input.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/extension/cup15-fixed-a/certificate/proof.blrat"
+    ],
+    [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/home/jay/research/data/delta3-codex-20261113/extension/cup15-fixed-a/certificate/cake.time",
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "20",
+      "/home/jay/.local/bin/cake_lpr",
+      "--CML_HEAP_SIZE=64",
+      "--CML_STACK_SIZE=32",
+      "/home/jay/research/data/delta3-codex-20261113/extension/cup15-fixed-a/certificate/input.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/extension/cup15-fixed-a/certificate/proof.blrat"
+    ],
+    [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/home/jay/research/data/delta3-codex-20261113/extension/cup15-fixed-a/certificate/compress.time",
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "600",
+      "/usr/bin/zstd",
+      "-q",
+      "-T1",
+      "-3",
+      "-k",
+      "/home/jay/research/data/delta3-codex-20261113/extension/cup15-fixed-a/certificate/proof.blrat"
+    ]
+  ],
+  "compressed_bytes": 1559,
+  "compressed_roundtrip_verified": true,
+  "finished": true,
+  "hashes": {
+    "cadical": "4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70",
+    "cadical.log": "3d4914be7b90b28ff02e33a7dc4e0bdd48d69068af7be3da078141c2b452c708",
+    "cake.log": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+    "compress.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "input.cnf": "47c738ec38449827573872fa0223e4c607649f8a38acb2e76a8daf59b365cd1f",
+    "proof.blrat": "dc2861a3b6a40c42a8347ece05360f37c3027b83b9c410c0dc9b731370b587ba",
+    "proof.blrat.zst": "e36731ea9aeb33beebe68aa987eb65941178dfbfb58bec9cbaa64007240ea82a",
+    "run_binary.py": "dcdfd0c97efa27e8b89daacbad3a950d3a9af77c88964e78e5522fd7904f87e5"
+  },
+  "label": "CERTIFIED",
+  "limits": {
+    "as_mib": 150,
+    "cake_seconds": 20,
+    "heap_mib": 64,
+    "solver_seconds": 20,
+    "stack_mib": 32
+  },
+  "proof_bytes": 2349,
+  "proof_format": "binary LRAT",
+  "runs": {
+    "cadical": {
+      "exit": 20,
+      "seconds": 0.5
+    },
+    "cake": {
+      "exit": 0,
+      "seconds": 0.5
+    },
+    "compress": {
+      "exit": 0,
+      "seconds": 0.5
+    }
+  },
+  "seconds": 1.522,
+  "source_cnf": "/home/jay/research/data/delta3-codex-20261113/extension/cup15-fixed-a/membership.cnf",
+  "status": "UNSAT_CERTIFIED"
+}

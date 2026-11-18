@@ -1,0 +1,167 @@
+[
+  {
+    "time": "2026-11-14T10:27:41.953229+09:00",
+    "event": "waiting_for_existing_finder",
+    "unit": "nov13c-vfy-308-tree20-v3",
+    "deadline": "2026-11-14T10:45:00+09:00"
+  },
+  {
+    "time": "2026-11-14T10:27:42.457993+09:00",
+    "event": "stage",
+    "name": "select-v4",
+    "command": [
+      "/home/jay/research/data/six10-linux-20261105/venv.disk/bin/python",
+      "-B",
+      "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/tools/cut34.py",
+      "select",
+      "/home/jay/research/data/es308-20261114/runs/s20/bb/WITNESS.json",
+      "/home/jay/research/data/es308-20261114/candidates-v4.json",
+      "--input-folder=s20-v3",
+      "--limit=32"
+    ],
+    "exit": 0,
+    "log": "/home/jay/research/data/es308-20261114/continuation/select-v4.log"
+  },
+  {
+    "time": "2026-11-14T10:27:54.212262+09:00",
+    "event": "stage",
+    "name": "certify-v4",
+    "command": [
+      "/home/jay/research/data/six10-linux-20261105/venv.disk/bin/python",
+      "-B",
+      "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/tools/cut34.py",
+      "certify",
+      "/home/jay/research/data/es308-20261114/candidates-v4.json",
+      "/home/jay/research/data/es308-20261114/cuts-v4",
+      "--seconds=180",
+      "--solve-seconds=8",
+      "--accept=32"
+    ],
+    "exit": 0,
+    "log": "/home/jay/research/data/es308-20261114/continuation/certify-v4.log"
+  },
+  {
+    "time": "2026-11-14T10:27:54.463225+09:00",
+    "event": "stage",
+    "name": "append-v4",
+    "command": [
+      "/home/jay/research/data/six10-linux-20261105/venv.disk/bin/python",
+      "-B",
+      "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/tools/append_cuts.py",
+      "s20-v3",
+      "/home/jay/research/data/es308-20261114/cuts-v4/accepted.json",
+      "s20-v4"
+    ],
+    "exit": 0,
+    "log": "/home/jay/research/data/es308-20261114/continuation/append-v4.log"
+  },
+  {
+    "time": "2026-11-14T10:27:54.463667+09:00",
+    "event": "CERTIFIED_ROWS_APPENDED",
+    "version": 4,
+    "accepted": "/home/jay/research/data/es308-20261114/cuts-v4/accepted.json",
+    "count": 10,
+    "independent_audit": "pending separately"
+  },
+  {
+    "time": "2026-11-14T10:43:19.596666+09:00",
+    "event": "stage",
+    "name": "finder-v4",
+    "command": [
+      "/home/jay/research/data/six10-linux-20261105/venv.disk/bin/python",
+      "-B",
+      "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/tools/run_tree.py",
+      "20",
+      "--seconds=1005",
+      "--threads=12",
+      "--contexts=2048",
+      "--tag=v4",
+      "--input-folder=s20-v4"
+    ],
+    "exit": 0,
+    "log": "/home/jay/research/data/es308-20261114/continuation/finder-v4.log"
+  },
+  {
+    "time": "2026-11-14T10:43:20.097991+09:00",
+    "event": "stage",
+    "name": "select-v5",
+    "command": [
+      "/home/jay/research/data/six10-linux-20261105/venv.disk/bin/python",
+      "-B",
+      "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/tools/cut34.py",
+      "select",
+      "/home/jay/research/data/es308-20261114/runs/s20/bb/WITNESS.json",
+      "/home/jay/research/data/es308-20261114/candidates-v5.json",
+      "--input-folder=s20-v4",
+      "--limit=32"
+    ],
+    "exit": 0,
+    "log": "/home/jay/research/data/es308-20261114/continuation/select-v5.log"
+  },
+  {
+    "time": "2026-11-14T10:43:27.351036+09:00",
+    "event": "stage",
+    "name": "certify-v5",
+    "command": [
+      "/home/jay/research/data/six10-linux-20261105/venv.disk/bin/python",
+      "-B",
+      "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/tools/cut34.py",
+      "certify",
+      "/home/jay/research/data/es308-20261114/candidates-v5.json",
+      "/home/jay/research/data/es308-20261114/cuts-v5",
+      "--seconds=64",
+      "--solve-seconds=8",
+      "--accept=32"
+    ],
+    "exit": 0,
+    "log": "/home/jay/research/data/es308-20261114/continuation/certify-v5.log"
+  },
+  {
+    "time": "2026-11-14T10:43:27.601976+09:00",
+    "event": "stage",
+    "name": "append-v5",
+    "command": [
+      "/home/jay/research/data/six10-linux-20261105/venv.disk/bin/python",
+      "-B",
+      "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/tools/append_cuts.py",
+      "s20-v4",
+      "/home/jay/research/data/es308-20261114/cuts-v5/accepted.json",
+      "s20-v5"
+    ],
+    "exit": 0,
+    "log": "/home/jay/research/data/es308-20261114/continuation/append-v5.log"
+  },
+  {
+    "time": "2026-11-14T10:43:27.602401+09:00",
+    "event": "CERTIFIED_ROWS_APPENDED",
+    "version": 5,
+    "accepted": "/home/jay/research/data/es308-20261114/cuts-v5/accepted.json",
+    "count": 5,
+    "independent_audit": "pending separately"
+  },
+  {
+    "time": "2026-11-14T10:44:43.635342+09:00",
+    "event": "stage",
+    "name": "finder-v5",
+    "command": [
+      "/home/jay/research/data/six10-linux-20261105/venv.disk/bin/python",
+      "-B",
+      "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/LO33N20261113/budget34/tools/run_tree.py",
+      "20",
+      "--seconds=72",
+      "--threads=12",
+      "--contexts=2048",
+      "--tag=v5",
+      "--input-folder=s20-v5"
+    ],
+    "exit": 0,
+    "log": "/home/jay/research/data/es308-20261114/continuation/finder-v5.log"
+  },
+  {
+    "time": "2026-11-14T10:44:43.635632+09:00",
+    "event": "FINISHED",
+    "version": 5,
+    "stopped": false,
+    "scope": "COMPUTED search and individually CERTIFIED rows; no overall bound asserted"
+  }
+]

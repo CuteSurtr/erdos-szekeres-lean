@@ -1,0 +1,23 @@
+{
+  "label": "COMPUTED",
+  "finder_sha256": "ab962987404aacecea344bd7fcc695e4d0f86f647086e61c27d5c8dff04d9d6e",
+  "status": "EXHAUSTED",
+  "name": "terminal18",
+  "input_m": 18,
+  "subsets_examined": 31824,
+  "valid_subsets": 31824,
+  "pair_hitting_obstructions": 31824,
+  "no_terminal_triple": 0,
+  "source": {
+    "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/terminal/data/witness.json",
+    "sha256": "696f201667533a3263e8a88d23a690a3ba6e8280f0993dd7dda5ab508f4eff24",
+    "index": null
+  },
+  "seconds": 0.44731158899958245,
+  "trace": "/home/jay/research/data/delta3-codex-20261113/extension/cardinality/terminal18.tries.tsv",
+  "trace_sha256": "87e484f8c7a51badbd732c3dc6b9b70d18f87733b684a3975914ec4c36aa2cc1",
+  "targets_in_source": 402,
+  "fivecaps_in_source": 0,
+  "sevengons_in_source": 0,
+  "max_rss_KiB": 17220
+}

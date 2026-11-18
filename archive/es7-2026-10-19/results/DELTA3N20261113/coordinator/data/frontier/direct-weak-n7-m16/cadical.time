@@ -1,0 +1,23 @@
+	Command being timed: "/usr/bin/timeout --kill-after=2 602 /usr/bin/cadical -q -t 600 --lrat=true --binary=false /home/jay/research/data/delta3-codex-20261113/encoder/direct-weak-n7-m16/case.cnf /home/jay/research/data/delta3-codex-20261113/encoder/direct-weak-n7-m16/case.lrat"
+	User time (seconds): 593.09
+	System time (seconds): 4.50
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 10:00.03
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 308424
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 360697
+	Voluntary context switches: 592
+	Involuntary context switches: 46114
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 3062304
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

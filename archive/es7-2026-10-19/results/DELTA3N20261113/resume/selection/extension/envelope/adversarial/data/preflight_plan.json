@@ -1,0 +1,29 @@
+{
+  "args": {
+    "binary": "/home/jay/research/data/delta3-codex-20261113/extension/envelope/geometry",
+    "input": "cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/terminal/data/witness.json",
+    "max_evals": 1000,
+    "out": "/home/jay/research/data/delta3-codex-20261113/extension/envelope/adversarial/preflight-v1",
+    "restarts": 4,
+    "scale": 4096,
+    "seconds": 10,
+    "seed": 2026111405,
+    "steps": 32
+  },
+  "as_limit": [
+    419430400,
+    419430400
+  ],
+  "input_sha256": "696f201667533a3263e8a88d23a690a3ba6e8280f0993dd7dda5ab508f4eff24",
+  "label": "HEURISTIC search; exact finite scores",
+  "python": "3.13.18 (main, Oct 26 2026, 14:08:20) [Clang 23.1.3 ]",
+  "source_hashes": {
+    "adversarial.py": "8de9f22bf3787aa14bb7b8114c5a571aa4f174ff3a410e007dc72931b8c829aa",
+    "envelope_tools/exact.py": "eea066f98af42c961fa4dcf495ba7f3326666d9e551e9b67000cc33a4d4b11fe",
+    "envelope_tools/geometry.cpp": "fc1e6628f9fe3147f75e6132800066d7d64aecdf9aefebebc04e236994330a63",
+    "envelope_tools/search.py": "d97e4eecd9f2040ac4eeaaecb9ac584d88451cf36c6d07bb874e60d34854a973",
+    "envelope_tools/verify.py": "ccc99aa3583583aec7df6a8a658157c9a2bfac97a07237f2f634b3b6f8f666fe",
+    "geometry": "f9dfea89a5ffd610bb39fbf792ce046f6ec7d16e7cdab4d0e0f34f98eb7cd1fb"
+  },
+  "start_utc": "2026-11-13T20:08:32Z"
+}

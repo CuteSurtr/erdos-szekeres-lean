@@ -1,0 +1,5 @@
+Packaging-only command failed before Python executed:
+timeout -k1 20s prlimit --as=314572800 --cpu=19 taskset -c5 nice -n10 python3 -B tools/freeze.py
+taskset: invalid option -- '5'
+Try 'taskset --help' for more information.
+No replay or evidence input was affected. Use separate arguments -c 5.

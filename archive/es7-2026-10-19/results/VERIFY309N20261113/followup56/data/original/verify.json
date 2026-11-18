@@ -1,0 +1,138 @@
+{
+ "trim_cnf_sha256": "8d4b9099cf045ca72ba5ac56e8ecea00a73a44652d5a9f3d100f63f1f10bc151",
+ "trim_lrat_sha256": "ff79c2ef3805255b18917dc0769c5088cca0ee8106c5eefb78b8f212fa487296",
+ "clauses": 319611,
+ "distinct_clauses": 319610,
+ "kinds": {
+  "units": 2,
+  "rows": 6775,
+  "card": 1201,
+  "geometric": 311576,
+  "sb": 56
+ },
+ "unclassified": 0,
+ "unclassified_sample": [],
+ "header_vars": 1647767,
+ "max_var": 1647761,
+ "vars_ok": true,
+ "mono66_stream_clauses": 39017853,
+ "budget": 13,
+ "cube": [],
+ "justification": {
+  "rows_file": "p2/b13g/it1/used_rows.json",
+  "justified_rows": 6775
+ },
+ "sb_pairs": [
+  [
+   32,
+   37
+  ],
+  [
+   29,
+   25
+  ],
+  [
+   39,
+   45
+  ],
+  [
+   24,
+   30
+  ],
+  [
+   46,
+   52
+  ],
+  [
+   47,
+   50
+  ],
+  [
+   44,
+   40
+  ],
+  [
+   19,
+   22
+  ],
+  [
+   23,
+   17
+  ],
+  [
+   38,
+   31
+  ],
+  [
+   16,
+   12
+  ],
+  [
+   57,
+   53
+  ],
+  [
+   33,
+   36
+  ],
+  [
+   43,
+   42
+  ],
+  [
+   48,
+   51
+  ],
+  [
+   11,
+   7
+  ],
+  [
+   56,
+   54
+  ],
+  [
+   27,
+   26
+  ],
+  [
+   62,
+   58
+  ],
+  [
+   18,
+   21
+  ],
+  [
+   13,
+   15
+  ],
+  [
+   8,
+   10
+  ],
+  [
+   61,
+   59
+  ],
+  [
+   4,
+   6
+  ],
+  [
+   2,
+   3
+  ],
+  [
+   63,
+   65
+  ],
+  [
+   66,
+   67
+  ]
+ ],
+ "cake_lpr": "s VERIFIED UNSAT",
+ "seconds": 39.4,
+ "ALL_OK": true
+}

@@ -1,0 +1,3 @@
+conj8_certs.jsonl n=8: 194 sets, a 4-cap-free Delta meeting every lower chain exists in 194; 1005 lazy rounds in all; pure-Python re-check of capB_S + cupB_{S-Delta} <= n on 39 sets; 7s
+conj7_certs.jsonl n=7: 121 sets, a 4-cap-free Delta meeting every lower chain exists in 121; 550 lazy rounds in all; pure-Python re-check of capB_S + cupB_{S-Delta} <= n on 25 sets; 1s
+conj8_sub64_certs.jsonl n=8: 120 sets, a 4-cap-free Delta meeting every lower chain exists in 120; 791 lazy rounds in all; pure-Python re-check of capB_S + cupB_{S-Delta} <= n on 24 sets; 15s

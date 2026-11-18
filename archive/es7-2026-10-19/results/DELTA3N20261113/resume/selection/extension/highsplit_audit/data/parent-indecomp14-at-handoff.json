@@ -1,0 +1,40 @@
+{
+  "cache_releases": 134,
+  "commands": [
+    [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/home/jay/research/data/delta3-codex-20261113/extension/indecomp14-a/cadical.time",
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "5403",
+      "/usr/bin/cadical",
+      "-t",
+      "5400",
+      "--lrat=true",
+      "--binary=true",
+      "/home/jay/research/data/delta3-codex-20261113/extension/indecomp14-a/input.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/extension/indecomp14-a/proof.blrat"
+    ]
+  ],
+  "hashes": {
+    "cadical": "4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70",
+    "cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+    "input.cnf": "ba43ca6ecbaeb6bc05854271a27f1204e3a690240a5c525bf1b2a9223dbd1819",
+    "run_binary.py": "dcdfd0c97efa27e8b89daacbad3a950d3a9af77c88964e78e5522fd7904f87e5"
+  },
+  "label": "COMPUTED",
+  "limits": {
+    "as_mib": 800,
+    "cake_seconds": 600,
+    "heap_mib": 550,
+    "solver_seconds": 5400,
+    "stack_mib": 32
+  },
+  "proof_format": "binary LRAT",
+  "runs": {},
+  "seconds": 1449.295,
+  "source_cnf": "/home/jay/research/data/delta3-codex-20261113/extension/n7m14-indecomp-v2.cnf",
+  "status": "SOLVING"
+}

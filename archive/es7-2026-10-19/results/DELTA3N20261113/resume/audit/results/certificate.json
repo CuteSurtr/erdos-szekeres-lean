@@ -1,0 +1,13 @@
+{
+  "cnf_sha256": "1dda6ceb4fe33203428f317e8dd9aad1dddc598a8a0f8a442a1ce43f0def67c0",
+  "independently_replayed_here": false,
+  "initial_checker_output": "CakeML: cannot allocate the heap and stack: Cannot allocate memory.\n",
+  "initial_helper_verdict": "REJECTED or incomplete (see final.cake.out)",
+  "lrat_sha256": "bf843d82fc0ee09e2232c8494413d69c0ae2a04a2d257c74200a124093e73ee1",
+  "note": "The original allocation failure is retained separately; it is not an OOM kill or a mathematical proof rejection.",
+  "process_as_mib_reported_by_parent": 400,
+  "replay_heap_mib_reported_by_parent": 128,
+  "replay_stack_mib_reported_by_parent": 32,
+  "status": "PARENT_CERTIFICATE_LOGS_AND_HASHES_CONFIRMED",
+  "successful_replay_output": "s VERIFIED UNSAT\n"
+}

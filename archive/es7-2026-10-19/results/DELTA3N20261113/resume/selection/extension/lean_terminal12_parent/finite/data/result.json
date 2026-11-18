@@ -1,0 +1,110 @@
+{
+  "label": "PROVED finite Boolean/geometry, fresh parent Lean replay",
+  "status": "PASS",
+  "modules": 14,
+  "axiom_reports": 32,
+  "seconds": 10.085,
+  "max_rss_kib": 621268,
+  "source_and_prerequisite_hashes_stable": true,
+  "standard_axioms_only": true,
+  "checks": [
+    {
+      "source": "T12Boolean.lean",
+      "source_sha256": "56be28a060973f0d2283f9609013335c01b6520523d709daa01a724cea252123",
+      "axiom_reports": 3,
+      "seconds": 2.062,
+      "max_rss_kib": 473712
+    },
+    {
+      "source": "T12FiniteModel.lean",
+      "source_sha256": "14cd25c66de7646613aa540a8e9019f5e54303f1774f34c2abf6d9f10a507a7f",
+      "axiom_reports": 3,
+      "seconds": 0.257,
+      "max_rss_kib": 378764
+    },
+    {
+      "source": "T12FiniteFacts.lean",
+      "source_sha256": "fa97059dbf709d5191507adfb7fd151289a95cc8fb9d306f72e8e0b5ed247357",
+      "axiom_reports": 3,
+      "seconds": 1.008,
+      "max_rss_kib": 573220
+    },
+    {
+      "source": "T12Determinants.lean",
+      "source_sha256": "387415e3f3beccfa9ae150855f7d1d73bd1987fe4b178df36f2053a6b78a4075",
+      "axiom_reports": 4,
+      "seconds": 0.685,
+      "max_rss_kib": 499028
+    },
+    {
+      "source": "T12IndexHelpers.lean",
+      "source_sha256": "362c26bae5171887aadf6b480142f0b6555df950876db130985abc1e5986185d",
+      "axiom_reports": 4,
+      "seconds": 0.655,
+      "max_rss_kib": 518280
+    },
+    {
+      "source": "T12SixBlock00.lean",
+      "source_sha256": "53b1be6c90fbdd3c9a58ca274311f4316f0a8c2366ed86d854f557c7772cafa2",
+      "axiom_reports": 1,
+      "seconds": 1.472,
+      "max_rss_kib": 621268
+    },
+    {
+      "source": "T12SixBlock01.lean",
+      "source_sha256": "868fdf20c7b6ca38de6368d0e40f9825bdf74588e65ef2c1b96cc1551efa4d1f",
+      "axiom_reports": 1,
+      "seconds": 1.115,
+      "max_rss_kib": 566196
+    },
+    {
+      "source": "T12SixCover00.lean",
+      "source_sha256": "cd0969419e1dd36a3f84de1cff277d474ab91de0d220e6e66f2eefb2edefb0de",
+      "axiom_reports": 1,
+      "seconds": 0.389,
+      "max_rss_kib": 469824
+    },
+    {
+      "source": "T12SixCover01.lean",
+      "source_sha256": "09fefdc1a98a446966105d16983e2842af619012553356fe1fd6346c54b72ba0",
+      "axiom_reports": 1,
+      "seconds": 0.369,
+      "max_rss_kib": 460300
+    },
+    {
+      "source": "T12SixAggregate.lean",
+      "source_sha256": "610cec3de97869a4149654a2c0473c3d847d5df094877ef4072fc9598357796b",
+      "axiom_reports": 2,
+      "seconds": 0.146,
+      "max_rss_kib": 364164
+    },
+    {
+      "source": "T12SubsequenceFacts.lean",
+      "source_sha256": "7117500ee46a39fd2ac487c88c8cb7212eb7dd8b2a5cf2b3a848033546290034",
+      "axiom_reports": 3,
+      "seconds": 0.137,
+      "max_rss_kib": 366212
+    },
+    {
+      "source": "T12PredicateSemantics.lean",
+      "source_sha256": "24124c17c69431ab71c7d219326ab0f6b17329dd6aaff4861cc8a8a292df49f6",
+      "axiom_reports": 1,
+      "seconds": 0.136,
+      "max_rss_kib": 364892
+    },
+    {
+      "source": "T12TerminalBridge.lean",
+      "source_sha256": "6fb2023182fab3d3698d902dcac457670ded546d6e6573d2f4788afbe90448ab",
+      "axiom_reports": 4,
+      "seconds": 1.517,
+      "max_rss_kib": 410736
+    },
+    {
+      "source": "T12Finite.lean",
+      "source_sha256": "40466d09566c3670944c21c09a5dbbc478042b1af995ad693064e7dd4e49d574",
+      "axiom_reports": 1,
+      "seconds": 0.137,
+      "max_rss_kib": 360468
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "cnf": "/home/jay/research/data/delta3-codex-20261113/boundary/refined/n8-root/input.cnf",
+  "commands": [
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "63",
+      "/usr/bin/cadical",
+      "-t",
+      "60",
+      "--lrat=true",
+      "--binary=false",
+      "/home/jay/research/data/delta3-codex-20261113/boundary/refined/n8-root/input.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/boundary/refined/n8-root/solve/proof.lrat"
+    ],
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "180",
+      "/usr/bin/zstd",
+      "-q",
+      "-T1",
+      "-3",
+      "-k",
+      "/home/jay/research/data/delta3-codex-20261113/boundary/refined/n8-root/solve/proof.lrat"
+    ]
+  ],
+  "compressed_bytes": 18349,
+  "compressed_roundtrip_verified": true,
+  "hashes": {
+    "cadical": "4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70",
+    "cadical.log": "b686a921a3a3e4a6d705b4e2ffa7396060eb87bca93a945b317e2d2c58280ffc",
+    "cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+    "input.cnf": "78671defd0e694ca0555a0fe1285edcee80da288f564014f6e2a9e78f1054be4",
+    "proof.lrat": "316789bf449a1423f6655ce87191efd0d2e9b64c704e19136fcd7fcf79bac0d2",
+    "proof.lrat.zst": "a7aae3a51e74f8c44608def716eb7ef668c6c0ae2e31284b0bf90b245fe045c0",
+    "run_cnf.py": "e3c8d9413f99b3092a4ea760f08265bc30bb93204074a3fa566bc2f0c3b3f4b8"
+  },
+  "label": "COMPUTED",
+  "limits": {
+    "as_mib": 900,
+    "cake_seconds": 60,
+    "cnf": "/home/jay/research/data/delta3-codex-20261113/boundary/refined/n8-root/input.cnf",
+    "heap": 600,
+    "out": "/home/jay/research/data/delta3-codex-20261113/boundary/refined/n8-root/solve",
+    "seconds": 60,
+    "sha256": "78671defd0e694ca0555a0fe1285edcee80da288f564014f6e2a9e78f1054be4"
+  },
+  "proof_bytes": 78781,
+  "runs": {
+    "cadical": {
+      "exit": 10,
+      "seconds": 0.031
+    },
+    "compress": {
+      "exit": 0,
+      "seconds": 0.003
+    }
+  },
+  "seconds": 0.039,
+  "status": "SAT_AUDIT_PENDING"
+}

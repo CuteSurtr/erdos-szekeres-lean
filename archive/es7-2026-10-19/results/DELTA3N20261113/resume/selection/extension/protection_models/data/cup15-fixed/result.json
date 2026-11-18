@@ -1,0 +1,83 @@
+{
+  "label": "COMPUTED exact integer geometry and exhaustive membership",
+  "m": 15,
+  "n": 7,
+  "kind": "cup",
+  "P": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      -221460
+    ],
+    [
+      2,
+      -442918
+    ],
+    [
+      2968,
+      -348410
+    ],
+    [
+      2969,
+      -348377
+    ],
+    [
+      3996,
+      -336483786
+    ],
+    [
+      3997,
+      -336449790
+    ],
+    [
+      3998,
+      -885384713
+    ],
+    [
+      13872,
+      -1352412
+    ],
+    [
+      13873,
+      -3565377386
+    ],
+    [
+      13876,
+      -3072936024
+    ],
+    [
+      13877,
+      -3073212992
+    ],
+    [
+      13878,
+      -815223
+    ],
+    [
+      13894,
+      -256
+    ],
+    [
+      13902,
+      0
+    ]
+  ],
+  "minimum_abs_det": 2,
+  "caps4": 47,
+  "bad_triples": 94,
+  "targets": 70,
+  "terminal_pairs": 8,
+  "covered_pairs": 32,
+  "weak_deltas": 7078,
+  "protected_deltas": 0,
+  "minimum_weak_size": 4,
+  "minimum_protected_size": null,
+  "all_memberships_checked": 32768,
+  "cnf_sha256": "47c738ec38449827573872fa0223e4c607649f8a38acb2e76a8daf59b365cd1f",
+  "input_sha256": "9fb73128c39a08aff2f8dc6475ae5ccf16ed8033938bc9c649bdde6c18e92f1b",
+  "source_sha256": "8f0a0dffc328a716682b61f75fbda6765e3f0474e2d3a928db6f28fb845ba299",
+  "seconds": 0.2974000239992165
+}

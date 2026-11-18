@@ -1,0 +1,4 @@
+Lean.Grind.CommRing.{u} (α : Type u) : Type u
+Lean.Grind.OrderedRing.{u} (R : Type u) [Lean.Grind.Semiring R] [LE R] [LT R] [Std.IsPreorder R] : Prop
+Std.IsLinearOrder.{u} (α : Type u) [LE α] : Prop
+'Lean.Grind.OrderedRing.mul_pos' does not depend on any axioms

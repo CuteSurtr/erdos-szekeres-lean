@@ -1,0 +1,151 @@
+c --- [ banner ] -------------------------------------------------------------
+c 
+c CaDiCaL SAT Solver
+c Copyright (c) 2016-2024
+c A. Biere, M. Fleury, N. Froleyks, K. Fazekas, F. Pollitt, T. Faller
+c JKU Linz, University of Freiburg, TU Wien
+c 
+c Version 2.1.3
+c g++-15.2.0
+c Dec 15 2025 01:04:17
+c 
+c --- [ limit ] --------------------------------------------------------------
+c 
+c setting time limit to 90 seconds real time (due to '-t 90')
+c 
+c --- [ proof tracing ] ------------------------------------------------------
+c 
+c opening file to write '/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n7/solve/proof.lrat'
+c writing non-binary proof trace to '/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n7/solve/proof.lrat'
+c 
+c --- [ parsing input ] ------------------------------------------------------
+c 
+c reading DIMACS file from '/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n7/input.cnf'
+c opening file to read '/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n7/input.cnf'
+c found 'p cnf 2376 23135' header
+c parsed 23135 clauses in 0.00 seconds process time
+c 
+c --- [ options ] ------------------------------------------------------------
+c 
+c   --binary=false                 (different from default 'true')
+c   --lrat=true                    (different from default 'false')
+c 
+c --- [ solving ] ------------------------------------------------------------
+c 
+c time measured in process time since initialization
+c 
+c  seconds  reductions  redundant  irredundant
+c         MB    restarts       trail     variables
+c          level   conflicts       glue       remaining
+c 
+c *  0.00  8  0 0   0    0    0  0% 0 23135 2376 100%
+c {  0.00  9  0 0   0    0    0  0% 0 23135 2376 100%
+c -  0.01  9 16 1   5  303  253 50% 7 23135 2376 100%
+c -  0.03 10 17 2  37  903  727 47% 7 23135 2376 100%
+c }  0.03 10 17 2  39 1001  819 46% 7 23135 2376 100%
+c [  0.03 10  0 2  39 1001  819  0% 0 23135 2376 100%
+c O  0.03 10 84 2  39 1002  820 41% 19 23135 2376 100%
+c -  0.05 10 54 3  39 1803 1296 49% 24 23135 2376 100%
+c ]  0.08 10 32 3  40 3001 2276 45% 16 23135 2376 100%
+c {  0.08 10 17 3  40 3001 2276 46% 7 23135 2376 100%
+c F  0.08 10 17 3  40 3003 2278 46% 7 23135 2376 100%
+c -  0.08 10 17 4  40 3003 1590 46% 7 23135 2376 100%
+c -  0.12 10 16 5 103 4503 2287 46% 7 23135 2376 100%
+c p  0.15 10 16 5 153 5001 7664 46% 7 23117 2366 100%
+c #  0.17 10 16 5 246 6005 8527 45% 7 23117 2366 100%
+c -  0.18 10 15 6 247 6304 3722 45% 7 23106 2366 100%
+c s  0.20 11 15 6 261 6569 3830 45% 7 23106 2366 100%
+c v  0.20 11 15 6 261 6569 3830 45% 7 23070 2366 100%
+c w  0.20 11 15 6 261 6569 3821 45% 7 23070 2366 100%
+c e  0.21 11 15 6 261 6569 3763 45% 7 23035 2344 99%
+c 
+c  seconds  reductions  redundant  irredundant
+c         MB    restarts       trail     variables
+c          level   conflicts       glue       remaining
+c 
+c s  0.22 11 15 6 261 6569 3738 45% 7 23023 2344 99%
+c e  0.22 11 15 6 261 6569 3708 45% 7 23001 2324 98%
+c }  0.23 11 15 6 304 7001 4101 45% 7 23001 2324 98%
+c [  0.23 11 32 6 304 7001 4101 45% 16 23001 2324 98%
+c -  0.27 11 23 7 305 8404 3913 44% 12 23001 2324 98%
+c i  0.31 11 20 7 306 9420 4669 44% 11 23001 2287 96%
+c i  0.31 11 19 7 306 9641 4791 44% 10 23001 2283 96%
+c I  0.32 11 18 7 306 10006 5030 44% 10 23001 2283 96%
+c i  0.34 11 17 7 307 10600 5406 43% 9 23001 2174 91%
+c i  0.34 11 17 7 307 10701 5459 43% 9 23001 2118 89%
+c i  0.35 10 17 7 307 10741 2459 41% 9 19314 2058 87%
+c i  0.35 10 17 7 307 10752 2467 39% 9 19314 1756 74%
+c i  0.35 10 17 7 307 10753 2467 39% 9 19314 1730 73%
+c i  0.35 10 17 7 307 10754 2467 39% 9 19314 1579 66%
+c ]  0.35 10 17 7 307 10757 2468 39% 9 19314 1498 63%
+c 0  0.35 10 17 7 307 10757 2468 39% 9 19314 1498 63%
+c 
+c --- [ closing proof ] ------------------------------------------------------
+c 
+c LRAT proof file '/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n7/solve/proof.lrat' closed
+c LRAT 22500 added clauses 49.42%
+c LRAT 23025 deleted clauses 50.58%
+c LRAT 4135155 bytes (3.94 MB)
+c 
+c --- [ result ] -------------------------------------------------------------
+c 
+s UNSATISFIABLE
+c 
+c --- [ run-time profiling ] -------------------------------------------------
+c 
+c process time taken by individual solving procedures
+c (percentage relative to process time for solving)
+c 
+c         0.31   89.12% search
+c         0.17   48.72% stable
+c         0.14   40.21% unstable
+c         0.04   10.87% simplify
+c         0.01    3.10% subsume
+c         0.01    2.30% probe
+c         0.01    1.81% elim
+c         0.00    1.36% vivify
+c         0.00    0.96% ternary
+c         0.00    0.87% parse
+c         0.00    0.18% lucky
+c   =================================
+c         0.35   99.11% solve
+c 
+c last line shows process time for solving
+c (percentage relative to total process time)
+c 
+c --- [ statistics ] ---------------------------------------------------------
+c 
+c chronological:              2859        26.58 %  of conflicts
+c conflicts:                 10757     30993.93    per second
+c decisions:                 18300     52727.42    per second
+c eliminated:                   42         1.77 %  of all variables
+c fixed:                       827        34.81 %  of all variables
+c learned:                   10447        97.12 %  per conflict
+c learned_lits:             268003       100.00 %  learned literals
+c minimized:                     0         0.00 %  learned literals
+c shrunken:                  65711        24.52 %  learned literals
+c minishrunken:              31017        11.57 %  learned literals
+c otfs:                        172         1.60 %  of conflict
+c propagations:            3971795        11.44 M  per second
+c reduced:                    3600        33.47 %  per conflict
+c rephased:                      4      2689.25    interval
+c restarts:                    307        35.04    interval
+c stabilizing:                   2        53.50 %  of conflicts
+c substituted:                   9         0.38 %  of all variables
+c subsumed:                   1792         4.58 %  of all clauses
+c strengthened:               3774         9.64 %  of all clauses
+c ternary:                     171         0.07 %  of resolved
+c vivified:                     46         0.12 %  of all clauses
+c weakened:                    169         2.40    average size
+c 
+c seconds are measured in process time for solving
+c 
+c --- [ resources ] ----------------------------------------------------------
+c 
+c total process time since initialization:         0.35    seconds
+c total real time since initialization:            0.35    seconds
+c maximum resident set size of process:           11.74    MB
+c 
+c --- [ shutting down ] ------------------------------------------------------
+c 
+c exit 20

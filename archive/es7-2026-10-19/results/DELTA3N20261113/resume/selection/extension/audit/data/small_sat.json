@@ -1,0 +1,32 @@
+{
+  "label": "COMPUTED",
+  "mode": "small_sat",
+  "status": "PASS",
+  "script_sha256": "be40763fd4c1a0710f201414e498b68af473a09294030efff68d4b0bec0c388c",
+  "own_helper_sha256": "513c0cb75e6f38c15907425754df9411afb123dcfa3d1651cab5c68e2b4a7990",
+  "result": {
+    "status": "COMPUTED abstract SAT model checked",
+    "m": 11,
+    "n": 7,
+    "k": 2,
+    "clauses_checked": 17525,
+    "assigned_variables": 3730,
+    "terminal_deltas_by_size": {
+      "3": 46,
+      "4": 96,
+      "5": 62,
+      "6": 9
+    },
+    "minimum_terminal_size": 3,
+    "first_delta": [
+      0,
+      1,
+      3
+    ],
+    "real_realizability": "NOT CHECKED",
+    "cnf_sha256": "1b1079b637dac3ca02e3816c951cc3ab27782e1a681bb3cbc103b488f8becf4a",
+    "model_log_sha256": "c48cec75c56164c070627fc6e45e7e11faf4991452897d9eef9a98eef84c7f56"
+  },
+  "seconds": 0.018139671999961138,
+  "max_rss_KiB": 19272
+}

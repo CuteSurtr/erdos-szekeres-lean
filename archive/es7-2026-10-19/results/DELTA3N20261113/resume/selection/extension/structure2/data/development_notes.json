@@ -1,0 +1,27 @@
+{
+  "preserved_incidents": [
+    {
+      "kind": "diagnostic_print_bug",
+      "detail": "An exploratory print counted tuple chain-types against JSON list values and printed zeros. No stored profile or conclusion used those zero counts; targets and target_types remained correct."
+    },
+    {
+      "kind": "patch_context_failure",
+      "detail": "Two atomic documentation patches failed on wrapped-line context: one adding failed_steps.md/updating CANDIDATE.md, and one adding the common-representative check/updating cup_domination.md. No files from either failed patch were created; corrected patches succeeded."
+    },
+    {
+      "kind": "parent_withdrawn_fixture_claim",
+      "detail": "The parent initially called terminal18 quadruples (5,6,14,17) and (5,7,14,17) cups, then withdrew the claim after an independent check found signs ++--. The rule's written soundness is unaffected. This track uses them only as negative controls; another worker owns whether any terminal18 selection passes the cup rule."
+    },
+    {
+      "kind": "candidate_input_premise_failure",
+      "detail": "The first retain-rank-four test stopped at its no-six-cup assertion on the parent's real15 input. Its FAIL/traceback and three earlier positive fixture outputs remain in retain_rank_four.json. The revised premise check explicitly records real15 as OUTSIDE_HYPOTHESES (maximum cup six, 44 six-cups) in retain_rank_four_replay.json and makes no maxcup-five selection claim for it."
+    },
+    {
+      "kind": "final_documentation_patch_context_failure",
+      "detail": "One final multi-file documentation patch failed on VERIFY_STRUCTURE2.md context. A read-only search confirmed that none of its four file edits had applied; the corrected patch then succeeded. The earlier high-split frozen packet was not involved or changed."
+    }
+  ],
+  "compute_timeouts": [],
+  "solver_unknowns": [],
+  "scope": "Failed mathematical candidates are retained separately in CANDIDATE.md, failed_steps.md and exact data."
+}

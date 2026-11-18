@@ -1,0 +1,222 @@
+{
+  "label": "PROVED fresh parent Lean replay",
+  "status": "PASS",
+  "source_checks": 35,
+  "axiom_audits": 50,
+  "standard_axioms_only": true,
+  "checks": [
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/FiniteModel.lean",
+      "sha256": "1d9d896fdc1513fceabbf2e54778f99d40bba4dea9f7a5f48271d151359fa5fb",
+      "seconds": 0.278,
+      "peak_rss_kib": 382620
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/FiniteFacts.lean",
+      "sha256": "abf08ab2d7c16bcca3ef4eb3b35ad9b7c0a2efac975fb69572b4e837c25a4bd9",
+      "seconds": 2.379,
+      "peak_rss_kib": 1093836
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/Determinants.lean",
+      "sha256": "94cd9d9b8fb99d3b6857f2e9340fed3a590169d21f81fa3ae47101da28d01417",
+      "seconds": 2.163,
+      "peak_rss_kib": 857192
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenBlock00.lean",
+      "sha256": "89514d07bccc0888e5e2b587ee5c8327b91c4c0dd386d9a7418878f2cf91be3f",
+      "seconds": 1.655,
+      "peak_rss_kib": 707064
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenBlock01.lean",
+      "sha256": "af0d94a44ea231fe289e48a22f2915ba4563df2855ed857a21f0f2dabb350192",
+      "seconds": 1.544,
+      "peak_rss_kib": 675748
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenBlock02.lean",
+      "sha256": "8d7d33f992958228af4d16ea19a5e251f15f3d89c0b54a16c4c68fa142cfee8c",
+      "seconds": 1.349,
+      "peak_rss_kib": 608816
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenBlock03.lean",
+      "sha256": "6d786387865c35a67ac456b80fa696aba30e72c02d0725638bee19c9507d52a6",
+      "seconds": 1.998,
+      "peak_rss_kib": 829248
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenBlock04.lean",
+      "sha256": "e9d92842c6e811aadb7ca494b815a9649fb70421d8af6c3c662bead285772b5c",
+      "seconds": 2.231,
+      "peak_rss_kib": 906756
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenBlock05.lean",
+      "sha256": "d4063973cbdc0073117e3e810c3516cd5cd2a797ff371cf46c52ac4aad1afe4b",
+      "seconds": 1.402,
+      "peak_rss_kib": 632424
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenBlock06.lean",
+      "sha256": "ce37d91c1c1ff993ef493c70c9023d4fee7a8f0d6bdfd18c6b7a5f7c2eee4bc3",
+      "seconds": 1.817,
+      "peak_rss_kib": 770772
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenBlock07.lean",
+      "sha256": "25ab42e231acff2b29ba24758b993af02729fca2c4e9223d364845453aaafe10",
+      "seconds": 2.221,
+      "peak_rss_kib": 890460
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenBlock08.lean",
+      "sha256": "edb0c3c915dd08a1582fe7853ea0d8cf49dbf4cae76c6f6c93f73197640bbf7f",
+      "seconds": 1.643,
+      "peak_rss_kib": 726752
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenBlock09.lean",
+      "sha256": "f4042def22974c0f74dfe3481e6299d9662f34274a7b2a9a5790dda5ed519dc1",
+      "seconds": 1.412,
+      "peak_rss_kib": 630484
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenBlock10.lean",
+      "sha256": "9d9ef39a066595836b72b5eecdb97a232f3a3e27b15def9654426ae0f0d4b562",
+      "seconds": 1.533,
+      "peak_rss_kib": 689784
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenBlock11.lean",
+      "sha256": "225d8f6725e360b8cea67f2c510c799cec9849e0ceb34c8a5a6710c138b272f9",
+      "seconds": 1.516,
+      "peak_rss_kib": 685480
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenBlock12.lean",
+      "sha256": "78f588563f24802c2fe00240ecd476c5d2463fe848d27449808a0c9bafe19e97",
+      "seconds": 0.687,
+      "peak_rss_kib": 495768
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenCover00.lean",
+      "sha256": "5edc4828d13e1faf912af004a0ca1903e1c5096c06268f1b535c667db651538a",
+      "seconds": 0.427,
+      "peak_rss_kib": 518420
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenCover01.lean",
+      "sha256": "07d8511757e89f1e74527d67656c28c86af6a7adf4fd5d7e830a7a24ce07e4ac",
+      "seconds": 0.499,
+      "peak_rss_kib": 547052
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenCover02.lean",
+      "sha256": "53ef50b9a0873bc2b32687e77c8a7d3f26ff127f6c9340727e3c569ef2109267",
+      "seconds": 0.577,
+      "peak_rss_kib": 582400
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenCover03.lean",
+      "sha256": "6d872b47eac04fca47039fcfe03488cf374bca65ba218807c6b45ac0126b65d1",
+      "seconds": 0.638,
+      "peak_rss_kib": 595184
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenCover04.lean",
+      "sha256": "3f772b0a51f3034c2c65d412c50027d897896fa5917fa248043822449395310f",
+      "seconds": 0.699,
+      "peak_rss_kib": 625640
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenCover05.lean",
+      "sha256": "fa4bd9d49033dad9373e5416aebde3c4be38037ad19f92e0a9554226268273b6",
+      "seconds": 0.75,
+      "peak_rss_kib": 638804
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenCover06.lean",
+      "sha256": "5aed9e0a4ec44bacc125a591bccfa48fe2e8e771d34efa2d5ec02f8ffcd45b73",
+      "seconds": 0.81,
+      "peak_rss_kib": 670748
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenCover07.lean",
+      "sha256": "71254fcb396d4b37a060b47c39c9eb02b63b950aa98735dcc77a77a8a3cceeae",
+      "seconds": 0.841,
+      "peak_rss_kib": 677964
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenCover08.lean",
+      "sha256": "dba9e93914e1434971d40ab20f7b798b680e9a5b6fff86f134f7c4f16d3d31fc",
+      "seconds": 0.881,
+      "peak_rss_kib": 690520
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenCover09.lean",
+      "sha256": "5ba7aa031d80396a3a554829cf77a4daa046fc55ef5fb860e18ee87f2750b92f",
+      "seconds": 0.943,
+      "peak_rss_kib": 718704
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenCover10.lean",
+      "sha256": "49e729a89c72123c707acb0aceca50e158e45c4457bcc465b469dc95a59f9961",
+      "seconds": 0.963,
+      "peak_rss_kib": 722788
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenCover11.lean",
+      "sha256": "53df7afbbee5dc6aba96dbccc2d215b097e9120c42ae6d03f51b7cd010220849",
+      "seconds": 1.003,
+      "peak_rss_kib": 737716
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenCover12.lean",
+      "sha256": "7982f879dc0ca4066102ca12ca8819ea540f29d8bde65692faece3daeaf4c412",
+      "seconds": 0.911,
+      "peak_rss_kib": 702684
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenAggregate.lean",
+      "sha256": "5785b0a7e78b105610f35f15edc2f81ed23d2fb2687fdf7fd26fffd5c6b6a2cb",
+      "seconds": 0.145,
+      "peak_rss_kib": 377572
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SubsequenceFacts.lean",
+      "sha256": "9cd77f143b44dc0f532b52b8041c38981fd3c71cd373d4c6902094a380d0910d",
+      "seconds": 0.117,
+      "peak_rss_kib": 375960
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean/Terminal15Boolean.lean",
+      "sha256": "cd50fd74384bea5a17d93ba9f15ce52762df8bf8c872e30fbe8c4780687d9463",
+      "seconds": 12.29,
+      "peak_rss_kib": 567336
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/TerminalBridge.lean",
+      "sha256": "c8b99bb4ecdd16d21d047db1ace03263e9963ea12756101f87e175f1d42ad54a",
+      "seconds": 3.292,
+      "peak_rss_kib": 459520
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/PredicateSemantics.lean",
+      "sha256": "bdb50db7f08961baad946c42beada19f5ff873a37c27543a227dd93c920ce8bf",
+      "seconds": 0.115,
+      "peak_rss_kib": 364044
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/Balanced15.lean",
+      "sha256": "6e94328f462c4c0f9ba7a98262a053dcebf12b94e5d6780f40bb6eb095548eee",
+      "seconds": 0.115,
+      "peak_rss_kib": 373736
+    }
+  ],
+  "seconds_sum": 51.844,
+  "maximum_rss_kib": 1093836,
+  "packet_manifest_sha256": "e6d39e997435758346d0233aa416bb7f66371d6c3494bba309c4cab57bd73313"
+}

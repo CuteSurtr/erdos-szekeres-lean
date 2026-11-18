@@ -1,0 +1,227 @@
+{
+  "label": "COMPUTED",
+  "certificate_status": "PENDING_PARENT_FRESH_LRAT_AND_CAKE",
+  "n": 7,
+  "m": 18,
+  "P": [
+    [
+      -877024,
+      -728732
+    ],
+    [
+      -848175,
+      -806081
+    ],
+    [
+      -315477,
+      411721
+    ],
+    [
+      -313031,
+      607898
+    ],
+    [
+      -312174,
+      772879
+    ],
+    [
+      -275463,
+      -257726
+    ],
+    [
+      -247748,
+      -312490
+    ],
+    [
+      -229906,
+      -280298
+    ],
+    [
+      -224691,
+      37110
+    ],
+    [
+      -219347,
+      -771737
+    ],
+    [
+      -147229,
+      -623666
+    ],
+    [
+      -42059,
+      77725
+    ],
+    [
+      3816,
+      -817775
+    ],
+    [
+      75450,
+      -921685
+    ],
+    [
+      153870,
+      234592
+    ],
+    [
+      182298,
+      276392
+    ],
+    [
+      458162,
+      265990
+    ],
+    [
+      758070,
+      903438
+    ]
+  ],
+  "source": {
+    "P": [
+      [
+        -936085,
+        -686901
+      ],
+      [
+        -881740,
+        -721323
+      ],
+      [
+        -877024,
+        -728732
+      ],
+      [
+        -848175,
+        -806081
+      ],
+      [
+        -416460,
+        82709
+      ],
+      [
+        -348704,
+        -359252
+      ],
+      [
+        -315477,
+        411721
+      ],
+      [
+        -313031,
+        607898
+      ],
+      [
+        -312174,
+        772879
+      ],
+      [
+        -275463,
+        -257726
+      ],
+      [
+        -247748,
+        -312490
+      ],
+      [
+        -229906,
+        -280298
+      ],
+      [
+        -224691,
+        37110
+      ],
+      [
+        -219347,
+        -771737
+      ],
+      [
+        -147229,
+        -623666
+      ],
+      [
+        -42059,
+        77725
+      ],
+      [
+        3816,
+        -817775
+      ],
+      [
+        75450,
+        -921685
+      ],
+      [
+        153870,
+        234592
+      ],
+      [
+        182298,
+        276392
+      ],
+      [
+        341928,
+        253030
+      ],
+      [
+        458162,
+        265990
+      ],
+      [
+        758070,
+        903438
+      ]
+    ],
+    "source": "/home/jay/research/data/etvthy-20261113/pool_hept.jsonl",
+    "source_sha256": "5ad62f7fe1de5178f6d8a642ccbd0221199d71591047fe157efa131fa8e8d6aa",
+    "line": 76,
+    "n": 7,
+    "points_sha256": "f62bd72aa0fef049ddc772b9f649e674b53c36f530e088c28f4bb79ce173fbfe"
+  },
+  "source_indices": [
+    2,
+    3,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    21,
+    22
+  ],
+  "ordinary_weak_Delta": [
+    0,
+    5,
+    6,
+    7,
+    8
+  ],
+  "all_X_envelope_Delta": [
+    0,
+    5,
+    6,
+    7,
+    8
+  ],
+  "full_coloring_variables": 18,
+  "full_coloring_clauses": 736,
+  "core_variables": 18,
+  "core_clauses": 108,
+  "core_negative_rank3": 35,
+  "core_positive_polygons": 73,
+  "required_certificate": "Fresh CaDiCaL LRAT plus cake_lpr s VERIFIED UNSAT for witness.core.cnf (or the full witness.terminal.cnf); independent coordinate/clause audit.",
+  "limitations": [
+    "Single-point-deletion irreducible, not globally smallest.",
+    "Terminal rank restriction fails; the weaker envelope condition holds for all rightward X.",
+    "No weak-Delta counterexample and no rooted-extension counterexample."
+  ]
+}

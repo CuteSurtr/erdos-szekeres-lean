@@ -1,0 +1,111 @@
+c --- [ banner ] -------------------------------------------------------------
+c 
+c CaDiCaL SAT Solver
+c Copyright (c) 2016-2024
+c A. Biere, M. Fleury, N. Froleyks, K. Fazekas, F. Pollitt, T. Faller
+c JKU Linz, University of Freiburg, TU Wien
+c 
+c Version 2.1.3
+c g++-15.2.0
+c Dec 15 2025 01:04:17
+c 
+c --- [ limit ] --------------------------------------------------------------
+c 
+c setting time limit to 15 seconds real time (due to '-t 15')
+c 
+c --- [ proof tracing ] ------------------------------------------------------
+c 
+c opening file to write '/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep8/m12/solve/proof.lrat'
+c writing non-binary proof trace to '/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep8/m12/solve/proof.lrat'
+c 
+c --- [ parsing input ] ------------------------------------------------------
+c 
+c reading DIMACS file from '/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep8/m12/rooted.cnf'
+c opening file to read '/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep8/m12/rooted.cnf'
+c found 'p cnf 6149 28688' header
+c parsed 28688 clauses in 0.00 seconds process time
+c 
+c --- [ options ] ------------------------------------------------------------
+c 
+c   --binary=false                 (different from default 'true')
+c   --lrat=true                    (different from default 'false')
+c 
+c --- [ solving ] ------------------------------------------------------------
+c 
+c time measured in process time since initialization
+c 
+c  seconds  reductions  redundant  irredundant
+c         MB    restarts       trail     variables
+c          level   conflicts       glue       remaining
+c 
+c *  0.00  9  0 0   0    0    0  0% 0 28171 5632 92%
+c {  0.00  9  0 0   0    0    0  0% 0 28171 5632 92%
+c -  0.01  9 296 1  11  300  253 25% 4 28171 5632 92%
+c i  0.01  9 282 1  12  315  260 25% 4 28171 5631 92%
+c i  0.01  9 279 1  12  318  261 25% 4 28171 5630 92%
+c i  0.01 10 216 1  12  409  337 24% 4 28171 5625 91%
+c i  0.02 10 212 1  12  416  343 24% 4 28171 5624 91%
+c i  0.02 10 196 1  12  452  375 24% 4 28171 5623 91%
+c i  0.02 10 181 1  12  489  402 23% 4 28171 5417 88%
+c i  0.02 10 181 1  12  490  402 23% 4 28171 5380 87%
+c i  0.02 10 180 1  12  491  402 23% 4 28171 5354 87%
+c i  0.02 10 180 1  12  492  402 23% 4 28171 5188 84%
+c i  0.02 10 179 1  12  493  402 23% 4 28171 5154 84%
+c }  0.02 10 179 1  12  495  402 23% 4 28171 5132 83%
+c 0  0.02 10 179 1  12  495  402 23% 4 28171 5132 83%
+c 
+c --- [ closing proof ] ------------------------------------------------------
+c 
+c LRAT proof file '/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep8/m12/solve/proof.lrat' closed
+c LRAT 1484 added clauses 71.86%
+c LRAT 581 deleted clauses 28.14%
+c LRAT 155921 bytes (0.15 MB)
+c 
+c --- [ result ] -------------------------------------------------------------
+c 
+s UNSATISFIABLE
+c 
+c --- [ run-time profiling ] -------------------------------------------------
+c 
+c process time taken by individual solving procedures
+c (percentage relative to process time for solving)
+c 
+c         0.01   99.80% search
+c         0.01   96.83% unstable
+c         0.00   26.97% parse
+c         0.00    2.91% lucky
+c         0.00    0.00% simplify
+c   =================================
+c         0.01   78.44% solve
+c 
+c last line shows process time for solving
+c (percentage relative to total process time)
+c 
+c --- [ statistics ] ---------------------------------------------------------
+c 
+c chronological:               193        38.99 %  of conflicts
+c conflicts:                   495     37335.95    per second
+c decisions:                  2662    200784.43    per second
+c fixed:                      1017        16.54 %  of all variables
+c learned:                     464        93.74 %  per conflict
+c learned_lits:               5154       100.00 %  learned literals
+c minimized:                     0         0.00 %  learned literals
+c shrunken:                   1248        24.21 %  learned literals
+c minishrunken:                452         8.77 %  learned literals
+c otfs:                         13         2.63 %  of conflict
+c propagations:             166011        12.52 M  per second
+c restarts:                     12        41.25    interval
+c subsumed:                     51         0.18 %  of all clauses
+c strengthened:                 13         0.05 %  of all clauses
+c 
+c seconds are measured in process time for solving
+c 
+c --- [ resources ] ----------------------------------------------------------
+c 
+c total process time since initialization:         0.02    seconds
+c total real time since initialization:            0.02    seconds
+c maximum resident set size of process:            9.43    MB
+c 
+c --- [ shutting down ] ------------------------------------------------------
+c 
+c exit 20

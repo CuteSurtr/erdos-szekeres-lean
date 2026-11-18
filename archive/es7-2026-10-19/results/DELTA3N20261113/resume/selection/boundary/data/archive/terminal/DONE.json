@@ -1,0 +1,89 @@
+[
+  {
+    "n": 6,
+    "status": "UNSAT_CERTIFIED",
+    "encode": {
+      "mode": "old-terminal-failure",
+      "n": 6,
+      "m": 9,
+      "old_m": 9,
+      "variables": 672,
+      "clauses": 5675,
+      "literals": 19866,
+      "bytes": 90589,
+      "added_phases": {
+        "terminal_fourcap_equivalence": [
+          630,
+          1638
+        ],
+        "terminal_bad_triple_equivalence": [
+          798,
+          2226
+        ],
+        "forall_terminal_safe_delta": [
+          382,
+          3864
+        ]
+      },
+      "parent_cnf_sha256": "22c2156dff6ef362bc5a502d7f1b7ae49b26f4e524aef20c5dc67c60e192adc4"
+    }
+  },
+  {
+    "n": 7,
+    "status": "UNSAT_CERTIFIED",
+    "encode": {
+      "mode": "old-terminal-failure",
+      "n": 7,
+      "m": 11,
+      "old_m": 11,
+      "variables": 2376,
+      "clauses": 23135,
+      "literals": 99825,
+      "bytes": 514775,
+      "added_phases": {
+        "terminal_fourcap_equivalence": [
+          1650,
+          4290
+        ],
+        "terminal_bad_triple_equivalence": [
+          2376,
+          6798
+        ],
+        "forall_terminal_safe_delta": [
+          1486,
+          30129
+        ]
+      },
+      "parent_cnf_sha256": "6921c087279f4d4854f407073697f051f0f1a4a279463b035c902590b88e455a"
+    }
+  },
+  {
+    "n": 8,
+    "status": "UNSAT_CERTIFIED",
+    "encode": {
+      "mode": "old-terminal-failure",
+      "n": 8,
+      "m": 13,
+      "old_m": 13,
+      "variables": 8437,
+      "clauses": 97047,
+      "literals": 536536,
+      "bytes": 2846332,
+      "added_phases": {
+        "terminal_fourcap_equivalence": [
+          3575,
+          9295
+        ],
+        "terminal_bad_triple_equivalence": [
+          5863,
+          17017
+        ],
+        "forall_terminal_safe_delta": [
+          5812,
+          220220
+        ]
+      },
+      "parent_cnf_sha256": "f655ea5d71a92795ab60b8a91ec4eb5483ac322e6989e0c6302b74b335dc7236"
+    }
+  }
+]

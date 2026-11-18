@@ -1,0 +1,7 @@
+ActiveState=active
+SubState=running
+RuntimeMaxUSec=10min
+ExecStart={ path=/usr/bin/prlimit ; argv[]=/usr/bin/prlimit --as=943718400 --cpu=580 /usr/bin/taskset -c 5 /usr/bin/python3 -B /home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/exact_audit/replay13/tools/replay.py ; ignore_errors=no ; start_time=[Sat 2026-11-14 06:16:31 KST] ; stop_time=[n/a] ; pid=865303 ; code=(null) ; status=0/0 }
+CPUQuotaPerSecUSec=1s
+MemoryMax=1258291200
+MemorySwapMax=0

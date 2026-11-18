@@ -1,0 +1,42 @@
+{
+  "audited_geometry": "/home/jay/research/data/delta3-codex-20261113/extension/protection-metric-cup15/replay-v1",
+  "cake_lpr_sha256": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+  "checker_exit": 0,
+  "command": [
+    "/usr/bin/time",
+    "-v",
+    "-o",
+    "/home/jay/research/data/delta3-codex-20261113/extension/protection-metric-cup15/certificate-v1/cake.time",
+    "/usr/bin/timeout",
+    "--kill-after=1",
+    "15",
+    "/home/jay/.local/bin/cake_lpr",
+    "--CML_HEAP_SIZE=64",
+    "--CML_STACK_SIZE=32",
+    "/home/jay/research/data/delta3-codex-20261113/extension/protection-metric-cup15/certificate-v1/input.cnf",
+    "/home/jay/research/data/delta3-codex-20261113/extension/protection-metric-cup15/certificate-v1/proof.blrat"
+  ],
+  "compressed_roundtrip_verified": true,
+  "exact_acceptance_line": "s VERIFIED UNSAT",
+  "hashes": {
+    "cake.log": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake.time": "93125500d00b704c24da6c667e581c180fbf76b68be27da521bddee3be8af3a4",
+    "certify_replay.py": "49912daf9870abece88071a8347d2a1b53884a30be6c843100f15c13aa5d160c",
+    "cup_clause_match.json": "341fb3428d374a7fa9a4e40c4f7b2b31c14728431760733dc56820f2cf6b09cf",
+    "input.cnf": "47c738ec38449827573872fa0223e4c607649f8a38acb2e76a8daf59b365cd1f",
+    "proof.blrat": "dc2861a3b6a40c42a8347ece05360f37c3027b83b9c410c0dc9b731370b587ba",
+    "proof.blrat.zst": "e36731ea9aeb33beebe68aa987eb65941178dfbfb58bec9cbaa64007240ea82a"
+  },
+  "label": "CERTIFIED",
+  "limits": {
+    "address_space_mib": 400,
+    "cake_seconds": 15,
+    "cpu_count": 1,
+    "external_seconds": 20,
+    "heap_mib": 64,
+    "stack_mib": 32
+  },
+  "seconds": 0.007914417001302354,
+  "source_certificate": "/home/jay/research/data/delta3-codex-20261113/extension/cup15-fixed-a/certificate",
+  "status": "UNSAT_CERTIFIED"
+}

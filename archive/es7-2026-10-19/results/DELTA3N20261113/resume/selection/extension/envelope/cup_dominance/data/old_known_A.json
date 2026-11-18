@@ -1,0 +1,2118 @@
+{
+  "A": [
+    0,
+    5,
+    6,
+    7,
+    8
+  ],
+  "P": [
+    [
+      -877024,
+      -728732
+    ],
+    [
+      -848175,
+      -806081
+    ],
+    [
+      -315477,
+      411721
+    ],
+    [
+      -313031,
+      607898
+    ],
+    [
+      -312174,
+      772879
+    ],
+    [
+      -275463,
+      -257726
+    ],
+    [
+      -247748,
+      -312490
+    ],
+    [
+      -229906,
+      -280298
+    ],
+    [
+      -224691,
+      37110
+    ],
+    [
+      -219347,
+      -771737
+    ],
+    [
+      -147229,
+      -623666
+    ],
+    [
+      -42059,
+      77725
+    ],
+    [
+      3816,
+      -817775
+    ],
+    [
+      75450,
+      -921685
+    ],
+    [
+      153870,
+      234592
+    ],
+    [
+      182298,
+      276392
+    ],
+    [
+      458162,
+      265990
+    ],
+    [
+      758070,
+      903438
+    ]
+  ],
+  "rows": [
+    {
+      "all_pair_comparisons": [
+        {
+          "ambient_pair": [
+            6,
+            9
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": -1,
+          "dominates_after_M": false,
+          "height_difference_at_M": "-11237680883006138/787133715",
+          "orientation_only_category": "shared_endpoint",
+          "sign_pattern": "-",
+          "slope_difference": "-11172678241/787133715",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                6,
+                9
+              ],
+              "value": -11172678241
+            }
+          ],
+          "vertices": [
+            5,
+            6,
+            9
+          ]
+        },
+        {
+          "ambient_pair": [
+            6,
+            10
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": -1,
+          "dominates_after_M": false,
+          "height_difference_at_M": "-3137569111445032/2785884085",
+          "orientation_only_category": "shared_endpoint",
+          "sign_pattern": "-",
+          "slope_difference": "-3119420324/2785884085",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                6,
+                10
+              ],
+              "value": -3119420324
+            }
+          ],
+          "vertices": [
+            5,
+            6,
+            10
+          ]
+        },
+        {
+          "ambient_pair": [
+            6,
+            12
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": -1,
+          "dominates_after_M": false,
+          "height_difference_at_M": "-114322721755011/3486048130",
+          "orientation_only_category": "shared_endpoint",
+          "sign_pattern": "-",
+          "slope_difference": "-227322879/6972096260",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                6,
+                12
+              ],
+              "value": -227322879
+            }
+          ],
+          "vertices": [
+            5,
+            6,
+            12
+          ]
+        },
+        {
+          "ambient_pair": [
+            7,
+            9
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": -1,
+          "dominates_after_M": false,
+          "height_difference_at_M": "-12865424111103072/292642685",
+          "orientation_only_category": "fails_whole_ray_from_R",
+          "sign_pattern": "+---",
+          "slope_difference": "-13041978809/292642685",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                6,
+                7
+              ],
+              "value": 1869300568
+            },
+            {
+              "triple": [
+                5,
+                6,
+                9
+              ],
+              "value": -11172678241
+            },
+            {
+              "triple": [
+                5,
+                7,
+                9
+              ],
+              "value": -22150148775
+            },
+            {
+              "triple": [
+                6,
+                7,
+                9
+              ],
+              "value": -9108169966
+            }
+          ],
+          "vertices": [
+            5,
+            6,
+            7,
+            9
+          ]
+        },
+        {
+          "ambient_pair": [
+            7,
+            10
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": -1,
+          "dominates_after_M": false,
+          "height_difference_at_M": "-1591396116311352/763797685",
+          "orientation_only_category": "fails_whole_ray_from_R",
+          "sign_pattern": "+---",
+          "slope_difference": "-1662906964/763797685",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                6,
+                7
+              ],
+              "value": 1869300568
+            },
+            {
+              "triple": [
+                5,
+                6,
+                10
+              ],
+              "value": -3119420324
+            },
+            {
+              "triple": [
+                5,
+                7,
+                10
+              ],
+              "value": -13776630732
+            },
+            {
+              "triple": [
+                6,
+                7,
+                10
+              ],
+              "value": -8787909840
+            }
+          ],
+          "vertices": [
+            5,
+            6,
+            7,
+            10
+          ]
+        },
+        {
+          "ambient_pair": [
+            7,
+            12
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": -1,
+          "dominates_after_M": false,
+          "height_difference_at_M": "-817258489659588/3238802615",
+          "orientation_only_category": "fails_whole_ray_from_R",
+          "sign_pattern": "+---",
+          "slope_difference": "-2096623447/6477605230",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                6,
+                7
+              ],
+              "value": 1869300568
+            },
+            {
+              "triple": [
+                5,
+                6,
+                12
+              ],
+              "value": -227322879
+            },
+            {
+              "triple": [
+                5,
+                7,
+                12
+              ],
+              "value": -19210266705
+            },
+            {
+              "triple": [
+                6,
+                7,
+                12
+              ],
+              "value": -17113643258
+            }
+          ],
+          "vertices": [
+            5,
+            6,
+            7,
+            12
+          ]
+        },
+        {
+          "ambient_pair": [
+            7,
+            13
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": 1,
+          "dominates_after_M": false,
+          "height_difference_at_M": "-117513748878122/2115735385",
+          "orientation_only_category": "four_point_signs_undetermined",
+          "sign_pattern": "++--",
+          "slope_difference": "-1053524721/8462941540",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                6,
+                7
+              ],
+              "value": 1869300568
+            },
+            {
+              "triple": [
+                5,
+                6,
+                13
+              ],
+              "value": 815775847
+            },
+            {
+              "triple": [
+                5,
+                7,
+                13
+              ],
+              "value": -22327171927
+            },
+            {
+              "triple": [
+                6,
+                7,
+                13
+              ],
+              "value": -21273647206
+            }
+          ],
+          "vertices": [
+            5,
+            6,
+            7,
+            13
+          ]
+        },
+        {
+          "ambient_pair": [
+            8,
+            9
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": -1,
+          "dominates_after_M": false,
+          "height_difference_at_M": "-21684604189796917/148108960",
+          "orientation_only_category": "fails_whole_ray_from_R",
+          "sign_pattern": "+---",
+          "slope_difference": "-22124535789/148108960",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                6,
+                8
+              ],
+              "value": 10951857548
+            },
+            {
+              "triple": [
+                5,
+                6,
+                9
+              ],
+              "value": -11172678241
+            },
+            {
+              "triple": [
+                5,
+                8,
+                9
+              ],
+              "value": -42642383468
+            },
+            {
+              "triple": [
+                6,
+                8,
+                9
+              ],
+              "value": -20517847679
+            }
+          ],
+          "vertices": [
+            5,
+            6,
+            8,
+            9
+          ]
+        },
+        {
+          "ambient_pair": [
+            8,
+            10
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": -1,
+          "dominates_after_M": false,
+          "height_difference_at_M": "-6490175161690708/1073429665",
+          "orientation_only_category": "fails_whole_ray_from_R",
+          "sign_pattern": "+---",
+          "slope_difference": "-7035638936/1073429665",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                6,
+                8
+              ],
+              "value": 10951857548
+            },
+            {
+              "triple": [
+                5,
+                6,
+                10
+              ],
+              "value": -3119420324
+            },
+            {
+              "triple": [
+                5,
+                8,
+                10
+              ],
+              "value": -56387505304
+            },
+            {
+              "triple": [
+                6,
+                8,
+                10
+              ],
+              "value": -42316227432
+            }
+          ],
+          "vertices": [
+            5,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "ambient_pair": [
+            11,
+            12
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": -1,
+          "dominates_after_M": false,
+          "height_difference_at_M": "-134681465760081/10171405",
+          "orientation_only_category": "fails_whole_ray_from_R",
+          "sign_pattern": "+---",
+          "slope_difference": "-178451872/10171405",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                6,
+                11
+              ],
+              "value": 22079161121
+            },
+            {
+              "triple": [
+                5,
+                6,
+                12
+              ],
+              "value": -227322879
+            },
+            {
+              "triple": [
+                5,
+                11,
+                12
+              ],
+              "value": -224402096625
+            },
+            {
+              "triple": [
+                6,
+                11,
+                12
+              ],
+              "value": -202095612625
+            }
+          ],
+          "vertices": [
+            5,
+            6,
+            11,
+            12
+          ]
+        },
+        {
+          "ambient_pair": [
+            11,
+            13
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": 1,
+          "dominates_after_M": false,
+          "height_difference_at_M": "-14418951051732757/3256761935",
+          "orientation_only_category": "four_point_signs_undetermined",
+          "sign_pattern": "++--",
+          "slope_difference": "-21263385274/3256761935",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                6,
+                11
+              ],
+              "value": 22079161121
+            },
+            {
+              "triple": [
+                5,
+                6,
+                13
+              ],
+              "value": 815775847
+            },
+            {
+              "triple": [
+                5,
+                11,
+                13
+              ],
+              "value": -272684803199
+            },
+            {
+              "triple": [
+                6,
+                11,
+                13
+              ],
+              "value": -251421417925
+            }
+          ],
+          "vertices": [
+            5,
+            6,
+            11,
+            13
+          ]
+        },
+        {
+          "ambient_pair": [
+            12,
+            13
+          ],
+          "d_at_L_sign": -1,
+          "d_at_R_sign": 1,
+          "dominates_after_M": true,
+          "height_difference_at_M": "128412889894353/330889385",
+          "orientation_only_category": "forced_dominance_after_R",
+          "sign_pattern": "-+++",
+          "slope_difference": "521549363/992668155",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                6,
+                12
+              ],
+              "value": -227322879
+            },
+            {
+              "triple": [
+                5,
+                6,
+                13
+              ],
+              "value": 815775847
+            },
+            {
+              "triple": [
+                5,
+                12,
+                13
+              ],
+              "value": 11098669176
+            },
+            {
+              "triple": [
+                6,
+                12,
+                13
+              ],
+              "value": 10055570450
+            }
+          ],
+          "vertices": [
+            5,
+            6,
+            12,
+            13
+          ]
+        },
+        {
+          "ambient_pair": [
+            14,
+            16
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": 1,
+          "dominates_after_M": true,
+          "height_difference_at_M": "5475190513684986/2108363195",
+          "orientation_only_category": "four_point_signs_undetermined",
+          "sign_pattern": "++--",
+          "slope_difference": "8767221329/4216726390",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                6,
+                14
+              ],
+              "value": 37156585782
+            },
+            {
+              "triple": [
+                5,
+                6,
+                16
+              ],
+              "value": 54691028440
+            },
+            {
+              "triple": [
+                5,
+                14,
+                16
+              ],
+              "value": -136328231322
+            },
+            {
+              "triple": [
+                6,
+                14,
+                16
+              ],
+              "value": -153862673980
+            }
+          ],
+          "vertices": [
+            5,
+            6,
+            14,
+            16
+          ]
+        },
+        {
+          "ambient_pair": [
+            14,
+            17
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": 1,
+          "dominates_after_M": true,
+          "height_difference_at_M": "88782061472/27715",
+          "orientation_only_category": "four_point_signs_undetermined",
+          "sign_pattern": "++--",
+          "slope_difference": "5162547569/1674540300",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                6,
+                14
+              ],
+              "value": 37156585782
+            },
+            {
+              "triple": [
+                5,
+                6,
+                17
+              ],
+              "value": 88782061472
+            },
+            {
+              "triple": [
+                5,
+                14,
+                17
+              ],
+              "value": -10300875882
+            },
+            {
+              "triple": [
+                6,
+                14,
+                17
+              ],
+              "value": -61926351572
+            }
+          ],
+          "vertices": [
+            5,
+            6,
+            14,
+            17
+          ]
+        },
+        {
+          "ambient_pair": [
+            15,
+            16
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": 1,
+          "dominates_after_M": true,
+          "height_difference_at_M": "2441457488737861/955696345",
+          "orientation_only_category": "four_point_signs_undetermined",
+          "sign_pattern": "++--",
+          "slope_difference": "7409562333/3822785380",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                6,
+                15
+              ],
+              "value": 39871903774
+            },
+            {
+              "triple": [
+                5,
+                6,
+                16
+              ],
+              "value": 54691028440
+            },
+            {
+              "triple": [
+                5,
+                15,
+                16
+              ],
+              "value": -152105557874
+            },
+            {
+              "triple": [
+                6,
+                15,
+                16
+              ],
+              "value": -166924682540
+            }
+          ],
+          "vertices": [
+            5,
+            6,
+            15,
+            16
+          ]
+        },
+        {
+          "ambient_pair": [
+            15,
+            17
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": 1,
+          "dominates_after_M": true,
+          "height_difference_at_M": "88782061472/27715",
+          "orientation_only_category": "four_point_signs_undetermined",
+          "sign_pattern": "++--",
+          "slope_difference": "24455078849/7978760490",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                6,
+                15
+              ],
+              "value": 39871903774
+            },
+            {
+              "triple": [
+                5,
+                6,
+                17
+              ],
+              "value": 88782061472
+            },
+            {
+              "triple": [
+                5,
+                15,
+                17
+              ],
+              "value": -20492985090
+            },
+            {
+              "triple": [
+                6,
+                15,
+                17
+              ],
+              "value": -69403142788
+            }
+          ],
+          "vertices": [
+            5,
+            6,
+            15,
+            17
+          ]
+        }
+      ],
+      "cup_protected": false,
+      "dominating_pairs": [
+        {
+          "ambient_pair": [
+            12,
+            13
+          ],
+          "d_at_L_sign": -1,
+          "d_at_R_sign": 1,
+          "dominates_after_M": true,
+          "height_difference_at_M": "128412889894353/330889385",
+          "orientation_only_category": "forced_dominance_after_R",
+          "sign_pattern": "-+++",
+          "slope_difference": "521549363/992668155",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                6,
+                12
+              ],
+              "value": -227322879
+            },
+            {
+              "triple": [
+                5,
+                6,
+                13
+              ],
+              "value": 815775847
+            },
+            {
+              "triple": [
+                5,
+                12,
+                13
+              ],
+              "value": 11098669176
+            },
+            {
+              "triple": [
+                6,
+                12,
+                13
+              ],
+              "value": 10055570450
+            }
+          ],
+          "vertices": [
+            5,
+            6,
+            12,
+            13
+          ]
+        },
+        {
+          "ambient_pair": [
+            14,
+            16
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": 1,
+          "dominates_after_M": true,
+          "height_difference_at_M": "5475190513684986/2108363195",
+          "orientation_only_category": "four_point_signs_undetermined",
+          "sign_pattern": "++--",
+          "slope_difference": "8767221329/4216726390",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                6,
+                14
+              ],
+              "value": 37156585782
+            },
+            {
+              "triple": [
+                5,
+                6,
+                16
+              ],
+              "value": 54691028440
+            },
+            {
+              "triple": [
+                5,
+                14,
+                16
+              ],
+              "value": -136328231322
+            },
+            {
+              "triple": [
+                6,
+                14,
+                16
+              ],
+              "value": -153862673980
+            }
+          ],
+          "vertices": [
+            5,
+            6,
+            14,
+            16
+          ]
+        },
+        {
+          "ambient_pair": [
+            14,
+            17
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": 1,
+          "dominates_after_M": true,
+          "height_difference_at_M": "88782061472/27715",
+          "orientation_only_category": "four_point_signs_undetermined",
+          "sign_pattern": "++--",
+          "slope_difference": "5162547569/1674540300",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                6,
+                14
+              ],
+              "value": 37156585782
+            },
+            {
+              "triple": [
+                5,
+                6,
+                17
+              ],
+              "value": 88782061472
+            },
+            {
+              "triple": [
+                5,
+                14,
+                17
+              ],
+              "value": -10300875882
+            },
+            {
+              "triple": [
+                6,
+                14,
+                17
+              ],
+              "value": -61926351572
+            }
+          ],
+          "vertices": [
+            5,
+            6,
+            14,
+            17
+          ]
+        },
+        {
+          "ambient_pair": [
+            15,
+            16
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": 1,
+          "dominates_after_M": true,
+          "height_difference_at_M": "2441457488737861/955696345",
+          "orientation_only_category": "four_point_signs_undetermined",
+          "sign_pattern": "++--",
+          "slope_difference": "7409562333/3822785380",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                6,
+                15
+              ],
+              "value": 39871903774
+            },
+            {
+              "triple": [
+                5,
+                6,
+                16
+              ],
+              "value": 54691028440
+            },
+            {
+              "triple": [
+                5,
+                15,
+                16
+              ],
+              "value": -152105557874
+            },
+            {
+              "triple": [
+                6,
+                15,
+                16
+              ],
+              "value": -166924682540
+            }
+          ],
+          "vertices": [
+            5,
+            6,
+            15,
+            16
+          ]
+        },
+        {
+          "ambient_pair": [
+            15,
+            17
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": 1,
+          "dominates_after_M": true,
+          "height_difference_at_M": "88782061472/27715",
+          "orientation_only_category": "four_point_signs_undetermined",
+          "sign_pattern": "++--",
+          "slope_difference": "24455078849/7978760490",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                6,
+                15
+              ],
+              "value": 39871903774
+            },
+            {
+              "triple": [
+                5,
+                6,
+                17
+              ],
+              "value": 88782061472
+            },
+            {
+              "triple": [
+                5,
+                15,
+                17
+              ],
+              "value": -20492985090
+            },
+            {
+              "triple": [
+                6,
+                15,
+                17
+              ],
+              "value": -69403142788
+            }
+          ],
+          "vertices": [
+            5,
+            6,
+            15,
+            17
+          ]
+        }
+      ],
+      "query_pair": [
+        5,
+        6
+      ],
+      "shared_endpoint_dominating_pairs": [],
+      "triple": [
+        0,
+        5,
+        6
+      ]
+    },
+    {
+      "all_pair_comparisons": [
+        {
+          "ambient_pair": [
+            6,
+            9
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": -1,
+          "dominates_after_M": false,
+          "height_difference_at_M": "-20451932187300094/1293864357",
+          "orientation_only_category": "fails_whole_ray_from_R",
+          "sign_pattern": "+---",
+          "slope_difference": "-20280848207/1293864357",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                6,
+                7
+              ],
+              "value": 1869300568
+            },
+            {
+              "triple": [
+                5,
+                6,
+                9
+              ],
+              "value": -11172678241
+            },
+            {
+              "triple": [
+                5,
+                7,
+                9
+              ],
+              "value": -22150148775
+            },
+            {
+              "triple": [
+                6,
+                7,
+                9
+              ],
+              "value": -9108169966
+            }
+          ],
+          "vertices": [
+            5,
+            6,
+            7,
+            9
+          ]
+        },
+        {
+          "ambient_pair": [
+            6,
+            10
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": -1,
+          "dominates_after_M": false,
+          "height_difference_at_M": "-12164507234688944/4579344083",
+          "orientation_only_category": "fails_whole_ray_from_R",
+          "sign_pattern": "+---",
+          "slope_difference": "-11907330164/4579344083",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                6,
+                7
+              ],
+              "value": 1869300568
+            },
+            {
+              "triple": [
+                5,
+                6,
+                10
+              ],
+              "value": -3119420324
+            },
+            {
+              "triple": [
+                5,
+                7,
+                10
+              ],
+              "value": -13776630732
+            },
+            {
+              "triple": [
+                6,
+                7,
+                10
+              ],
+              "value": -8787909840
+            }
+          ],
+          "vertices": [
+            5,
+            6,
+            7,
+            10
+          ]
+        },
+        {
+          "ambient_pair": [
+            6,
+            12
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": -1,
+          "dominates_after_M": false,
+          "height_difference_at_M": "-8956052303036709/5730250574",
+          "orientation_only_category": "fails_whole_ray_from_R",
+          "sign_pattern": "+---",
+          "slope_difference": "-17340966137/11460501148",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                6,
+                7
+              ],
+              "value": 1869300568
+            },
+            {
+              "triple": [
+                5,
+                6,
+                12
+              ],
+              "value": -227322879
+            },
+            {
+              "triple": [
+                5,
+                7,
+                12
+              ],
+              "value": -19210266705
+            },
+            {
+              "triple": [
+                6,
+                7,
+                12
+              ],
+              "value": -17113643258
+            }
+          ],
+          "vertices": [
+            5,
+            6,
+            7,
+            12
+          ]
+        },
+        {
+          "ambient_pair": [
+            7,
+            9
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": -1,
+          "dominates_after_M": false,
+          "height_difference_at_M": "-21883815386129400/481036363",
+          "orientation_only_category": "shared_endpoint",
+          "sign_pattern": "-",
+          "slope_difference": "-22150148775/481036363",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                7,
+                9
+              ],
+              "value": -22150148775
+            }
+          ],
+          "vertices": [
+            5,
+            7,
+            9
+          ]
+        },
+        {
+          "ambient_pair": [
+            7,
+            10
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": -1,
+          "dominates_after_M": false,
+          "height_difference_at_M": "-4536993508026144/1255505363",
+          "orientation_only_category": "shared_endpoint",
+          "sign_pattern": "-",
+          "slope_difference": "-4592210244/1255505363",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                7,
+                10
+              ],
+              "value": -13776630732
+            }
+          ],
+          "vertices": [
+            5,
+            7,
+            10
+          ]
+        },
+        {
+          "ambient_pair": [
+            7,
+            12
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": -1,
+          "dominates_after_M": false,
+          "height_difference_at_M": "-9489641229069540/5323836577",
+          "orientation_only_category": "shared_endpoint",
+          "sign_pattern": "-",
+          "slope_difference": "-19210266705/10647673154",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                7,
+                12
+              ],
+              "value": -19210266705
+            }
+          ],
+          "vertices": [
+            5,
+            7,
+            12
+          ]
+        },
+        {
+          "ambient_pair": [
+            7,
+            13
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": -1,
+          "dominates_after_M": false,
+          "height_difference_at_M": "-5514677502937438/3477775823",
+          "orientation_only_category": "shared_endpoint",
+          "sign_pattern": "-",
+          "slope_difference": "-22327171927/13911103292",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                7,
+                13
+              ],
+              "value": -22327171927
+            }
+          ],
+          "vertices": [
+            5,
+            7,
+            13
+          ]
+        },
+        {
+          "ambient_pair": [
+            8,
+            9
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": -1,
+          "dominates_after_M": false,
+          "height_difference_at_M": "-36016959575311187/243456608",
+          "orientation_only_category": "fails_whole_ray_from_R",
+          "sign_pattern": "+---",
+          "slope_difference": "-36728018011/243456608",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                7,
+                8
+              ],
+              "value": 14577869236
+            },
+            {
+              "triple": [
+                5,
+                7,
+                9
+              ],
+              "value": -22150148775
+            },
+            {
+              "triple": [
+                5,
+                8,
+                9
+              ],
+              "value": -42642383468
+            },
+            {
+              "triple": [
+                7,
+                8,
+                9
+              ],
+              "value": -5914365457
+            }
+          ],
+          "vertices": [
+            5,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "ambient_pair": [
+            8,
+            10
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": -1,
+          "dominates_after_M": false,
+          "height_difference_at_M": "-13368232918146308/1764468167",
+          "orientation_only_category": "fails_whole_ray_from_R",
+          "sign_pattern": "+---",
+          "slope_difference": "-14177249984/1764468167",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                7,
+                8
+              ],
+              "value": 14577869236
+            },
+            {
+              "triple": [
+                5,
+                7,
+                10
+              ],
+              "value": -13776630732
+            },
+            {
+              "triple": [
+                5,
+                8,
+                10
+              ],
+              "value": -56387505304
+            },
+            {
+              "triple": [
+                7,
+                8,
+                10
+              ],
+              "value": -28033005336
+            }
+          ],
+          "vertices": [
+            5,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "ambient_pair": [
+            11,
+            12
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": -1,
+          "dominates_after_M": false,
+          "height_difference_at_M": "-246968125528431/16719419",
+          "orientation_only_category": "fails_whole_ray_from_R",
+          "sign_pattern": "+---",
+          "slope_difference": "-318086424/16719419",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                7,
+                11
+              ],
+              "value": 20550536295
+            },
+            {
+              "triple": [
+                5,
+                7,
+                12
+              ],
+              "value": -19210266705
+            },
+            {
+              "triple": [
+                5,
+                11,
+                12
+              ],
+              "value": -224402096625
+            },
+            {
+              "triple": [
+                7,
+                11,
+                12
+              ],
+              "value": -184641293625
+            }
+          ],
+          "vertices": [
+            5,
+            7,
+            11,
+            12
+          ]
+        },
+        {
+          "ambient_pair": [
+            11,
+            13
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": -1,
+          "dominates_after_M": false,
+          "height_difference_at_M": "-31892824832471483/5353357513",
+          "orientation_only_category": "fails_whole_ray_from_R",
+          "sign_pattern": "+---",
+          "slope_difference": "-42877708222/5353357513",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                7,
+                11
+              ],
+              "value": 20550536295
+            },
+            {
+              "triple": [
+                5,
+                7,
+                13
+              ],
+              "value": -22327171927
+            },
+            {
+              "triple": [
+                5,
+                11,
+                13
+              ],
+              "value": -272684803199
+            },
+            {
+              "triple": [
+                7,
+                11,
+                13
+              ],
+              "value": -229807094977
+            }
+          ],
+          "vertices": [
+            5,
+            7,
+            11,
+            13
+          ]
+        },
+        {
+          "ambient_pair": [
+            12,
+            13
+          ],
+          "d_at_L_sign": -1,
+          "d_at_R_sign": -1,
+          "dominates_after_M": false,
+          "height_difference_at_M": "-621174412743393/543905023",
+          "orientation_only_category": "fails_whole_ray_from_R",
+          "sign_pattern": "--++",
+          "slope_difference": "-1558452611/1631715069",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                7,
+                12
+              ],
+              "value": -19210266705
+            },
+            {
+              "triple": [
+                5,
+                7,
+                13
+              ],
+              "value": -22327171927
+            },
+            {
+              "triple": [
+                5,
+                12,
+                13
+              ],
+              "value": 11098669176
+            },
+            {
+              "triple": [
+                7,
+                12,
+                13
+              ],
+              "value": 14215574398
+            }
+          ],
+          "vertices": [
+            5,
+            7,
+            12,
+            13
+          ]
+        },
+        {
+          "ambient_pair": [
+            14,
+            16
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": 1,
+          "dominates_after_M": true,
+          "height_difference_at_M": "3696967302646446/3465657661",
+          "orientation_only_category": "four_point_signs_undetermined",
+          "sign_pattern": "++--",
+          "slope_difference": "4149438855/6931315322",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                7,
+                14
+              ],
+              "value": 32119435602
+            },
+            {
+              "triple": [
+                5,
+                7,
+                16
+              ],
+              "value": 40418313312
+            },
+            {
+              "triple": [
+                5,
+                14,
+                16
+              ],
+              "value": -136328231322
+            },
+            {
+              "triple": [
+                7,
+                14,
+                16
+              ],
+              "value": -144627109032
+            }
+          ],
+          "vertices": [
+            5,
+            7,
+            14,
+            16
+          ]
+        },
+        {
+          "ambient_pair": [
+            14,
+            17
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": 1,
+          "dominates_after_M": true,
+          "height_difference_at_M": "76228055224/45557",
+          "orientation_only_category": "four_point_signs_undetermined",
+          "sign_pattern": "++--",
+          "slope_difference": "22054309811/13762769700",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                7,
+                14
+              ],
+              "value": 32119435602
+            },
+            {
+              "triple": [
+                5,
+                7,
+                17
+              ],
+              "value": 76228055224
+            },
+            {
+              "triple": [
+                5,
+                14,
+                17
+              ],
+              "value": -10300875882
+            },
+            {
+              "triple": [
+                7,
+                14,
+                17
+              ],
+              "value": -54409495504
+            }
+          ],
+          "vertices": [
+            5,
+            7,
+            14,
+            17
+          ]
+        },
+        {
+          "ambient_pair": [
+            15,
+            16
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": 1,
+          "dominates_after_M": true,
+          "height_difference_at_M": "1609412975402315/1570942031",
+          "orientation_only_category": "four_point_signs_undetermined",
+          "sign_pattern": "++--",
+          "slope_difference": "2876459147/6283768124",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                7,
+                15
+              ],
+              "value": 34665395018
+            },
+            {
+              "triple": [
+                5,
+                7,
+                16
+              ],
+              "value": 40418313312
+            },
+            {
+              "triple": [
+                5,
+                15,
+                16
+              ],
+              "value": -152105557874
+            },
+            {
+              "triple": [
+                7,
+                15,
+                16
+              ],
+              "value": -157858476168
+            }
+          ],
+          "vertices": [
+            5,
+            7,
+            15,
+            16
+          ]
+        },
+        {
+          "ambient_pair": [
+            15,
+            17
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": 1,
+          "dominates_after_M": true,
+          "height_difference_at_M": "76228055224/45557",
+          "orientation_only_category": "four_point_signs_undetermined",
+          "sign_pattern": "++--",
+          "slope_difference": "20781330103/13115222502",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                7,
+                15
+              ],
+              "value": 34665395018
+            },
+            {
+              "triple": [
+                5,
+                7,
+                17
+              ],
+              "value": 76228055224
+            },
+            {
+              "triple": [
+                5,
+                15,
+                17
+              ],
+              "value": -20492985090
+            },
+            {
+              "triple": [
+                7,
+                15,
+                17
+              ],
+              "value": -62055645296
+            }
+          ],
+          "vertices": [
+            5,
+            7,
+            15,
+            17
+          ]
+        }
+      ],
+      "cup_protected": false,
+      "dominating_pairs": [
+        {
+          "ambient_pair": [
+            14,
+            16
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": 1,
+          "dominates_after_M": true,
+          "height_difference_at_M": "3696967302646446/3465657661",
+          "orientation_only_category": "four_point_signs_undetermined",
+          "sign_pattern": "++--",
+          "slope_difference": "4149438855/6931315322",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                7,
+                14
+              ],
+              "value": 32119435602
+            },
+            {
+              "triple": [
+                5,
+                7,
+                16
+              ],
+              "value": 40418313312
+            },
+            {
+              "triple": [
+                5,
+                14,
+                16
+              ],
+              "value": -136328231322
+            },
+            {
+              "triple": [
+                7,
+                14,
+                16
+              ],
+              "value": -144627109032
+            }
+          ],
+          "vertices": [
+            5,
+            7,
+            14,
+            16
+          ]
+        },
+        {
+          "ambient_pair": [
+            14,
+            17
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": 1,
+          "dominates_after_M": true,
+          "height_difference_at_M": "76228055224/45557",
+          "orientation_only_category": "four_point_signs_undetermined",
+          "sign_pattern": "++--",
+          "slope_difference": "22054309811/13762769700",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                7,
+                14
+              ],
+              "value": 32119435602
+            },
+            {
+              "triple": [
+                5,
+                7,
+                17
+              ],
+              "value": 76228055224
+            },
+            {
+              "triple": [
+                5,
+                14,
+                17
+              ],
+              "value": -10300875882
+            },
+            {
+              "triple": [
+                7,
+                14,
+                17
+              ],
+              "value": -54409495504
+            }
+          ],
+          "vertices": [
+            5,
+            7,
+            14,
+            17
+          ]
+        },
+        {
+          "ambient_pair": [
+            15,
+            16
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": 1,
+          "dominates_after_M": true,
+          "height_difference_at_M": "1609412975402315/1570942031",
+          "orientation_only_category": "four_point_signs_undetermined",
+          "sign_pattern": "++--",
+          "slope_difference": "2876459147/6283768124",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                7,
+                15
+              ],
+              "value": 34665395018
+            },
+            {
+              "triple": [
+                5,
+                7,
+                16
+              ],
+              "value": 40418313312
+            },
+            {
+              "triple": [
+                5,
+                15,
+                16
+              ],
+              "value": -152105557874
+            },
+            {
+              "triple": [
+                7,
+                15,
+                16
+              ],
+              "value": -157858476168
+            }
+          ],
+          "vertices": [
+            5,
+            7,
+            15,
+            16
+          ]
+        },
+        {
+          "ambient_pair": [
+            15,
+            17
+          ],
+          "d_at_L_sign": 1,
+          "d_at_R_sign": 1,
+          "dominates_after_M": true,
+          "height_difference_at_M": "76228055224/45557",
+          "orientation_only_category": "four_point_signs_undetermined",
+          "sign_pattern": "++--",
+          "slope_difference": "20781330103/13115222502",
+          "triple_determinants": [
+            {
+              "triple": [
+                5,
+                7,
+                15
+              ],
+              "value": 34665395018
+            },
+            {
+              "triple": [
+                5,
+                7,
+                17
+              ],
+              "value": 76228055224
+            },
+            {
+              "triple": [
+                5,
+                15,
+                17
+              ],
+              "value": -20492985090
+            },
+            {
+              "triple": [
+                7,
+                15,
+                17
+              ],
+              "value": -62055645296
+            }
+          ],
+          "vertices": [
+            5,
+            7,
+            15,
+            17
+          ]
+        }
+      ],
+      "query_pair": [
+        5,
+        7
+      ],
+      "shared_endpoint_dominating_pairs": [],
+      "triple": [
+        0,
+        5,
+        7
+      ]
+    }
+  ],
+  "scope": "The old known A, not the different cup-protected selector."
+}

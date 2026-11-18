@@ -1,0 +1,393 @@
+{
+  "P": [
+    [
+      -877024,
+      -728732
+    ],
+    [
+      -848175,
+      -806081
+    ],
+    [
+      -315477,
+      411721
+    ],
+    [
+      -313031,
+      607898
+    ],
+    [
+      -312174,
+      772879
+    ],
+    [
+      -275463,
+      -257726
+    ],
+    [
+      -247748,
+      -312490
+    ],
+    [
+      -229906,
+      -280298
+    ],
+    [
+      -224691,
+      37110
+    ],
+    [
+      -219347,
+      -771737
+    ],
+    [
+      -147229,
+      -623666
+    ],
+    [
+      -42059,
+      77725
+    ],
+    [
+      3816,
+      -817775
+    ],
+    [
+      75450,
+      -921685
+    ],
+    [
+      153870,
+      234592
+    ],
+    [
+      182298,
+      276392
+    ],
+    [
+      458162,
+      265990
+    ],
+    [
+      758070,
+      903438
+    ]
+  ],
+  "assignments_checked": 262144,
+  "certificates": [
+    {
+      "supports": [
+        {
+          "fourcap": [
+            0,
+            8,
+            14,
+            16
+          ],
+          "weight": "1"
+        }
+      ],
+      "triple": [
+        0,
+        2,
+        14
+      ]
+    },
+    {
+      "supports": [
+        {
+          "fourcap": [
+            0,
+            8,
+            15,
+            16
+          ],
+          "weight": "1"
+        }
+      ],
+      "triple": [
+        0,
+        2,
+        15
+      ]
+    },
+    {
+      "supports": [
+        {
+          "fourcap": [
+            0,
+            8,
+            14,
+            16
+          ],
+          "weight": "1"
+        }
+      ],
+      "triple": [
+        0,
+        3,
+        14
+      ]
+    },
+    {
+      "supports": [
+        {
+          "fourcap": [
+            0,
+            8,
+            15,
+            16
+          ],
+          "weight": "1"
+        }
+      ],
+      "triple": [
+        0,
+        3,
+        15
+      ]
+    },
+    {
+      "supports": [
+        {
+          "fourcap": [
+            0,
+            8,
+            14,
+            16
+          ],
+          "weight": "1"
+        }
+      ],
+      "triple": [
+        2,
+        3,
+        14
+      ]
+    },
+    {
+      "supports": [
+        {
+          "fourcap": [
+            0,
+            8,
+            15,
+            16
+          ],
+          "weight": "1"
+        }
+      ],
+      "triple": [
+        2,
+        3,
+        15
+      ]
+    }
+  ],
+  "consequence": "Every listed cup-protected Delta persists under every realization with the same ordered triple orientations, by the written cup-domination proof.",
+  "cup_protected_count": 1639,
+  "label": "COMPUTED exact finite enumeration",
+  "m": 18,
+  "minimum_A": [
+    0,
+    2,
+    3,
+    14,
+    15
+  ],
+  "minimum_cardinality_count": 18,
+  "minimum_cup_protected_size": 5,
+  "n": 7,
+  "ordinary_count": 8149,
+  "positive_replay": {
+    "cap_triples_checked": 6,
+    "complement": {
+      "maxcap": 4,
+      "maxcup": 5,
+      "maxgon": 5
+    },
+    "full": {
+      "maxcap": 4,
+      "maxcup": 5,
+      "maxgon": 6
+    },
+    "selected": {
+      "maxcap": 3,
+      "maxcup": 3,
+      "maxgon": 4
+    },
+    "two_line_certificates": 0
+  },
+  "source_case": "/home/jay/research/data/delta3-codex-20261113/extension/envelope/cup_dominance/known-v1/cases/known18",
+  "source_input_sha256": "3c5b1f500f46e1c6319d40e30cd9a639cb28a605fe322c9ca101f0987a877dd2",
+  "support_witnesses": [
+    {
+      "ambient_fourcap": [
+        0,
+        8,
+        14,
+        16
+      ],
+      "ambient_pair": [
+        14,
+        16
+      ],
+      "cup_union": [
+        2,
+        14,
+        16
+      ],
+      "pair": [
+        2,
+        14
+      ],
+      "protected": true,
+      "same_pair": false,
+      "triple": [
+        0,
+        2,
+        14
+      ]
+    },
+    {
+      "ambient_fourcap": [
+        0,
+        8,
+        15,
+        16
+      ],
+      "ambient_pair": [
+        15,
+        16
+      ],
+      "cup_union": [
+        2,
+        15,
+        16
+      ],
+      "pair": [
+        2,
+        15
+      ],
+      "protected": true,
+      "same_pair": false,
+      "triple": [
+        0,
+        2,
+        15
+      ]
+    },
+    {
+      "ambient_fourcap": [
+        0,
+        8,
+        14,
+        16
+      ],
+      "ambient_pair": [
+        14,
+        16
+      ],
+      "cup_union": [
+        3,
+        14,
+        16
+      ],
+      "pair": [
+        3,
+        14
+      ],
+      "protected": true,
+      "same_pair": false,
+      "triple": [
+        0,
+        3,
+        14
+      ]
+    },
+    {
+      "ambient_fourcap": [
+        0,
+        8,
+        15,
+        16
+      ],
+      "ambient_pair": [
+        15,
+        16
+      ],
+      "cup_union": [
+        3,
+        15,
+        16
+      ],
+      "pair": [
+        3,
+        15
+      ],
+      "protected": true,
+      "same_pair": false,
+      "triple": [
+        0,
+        3,
+        15
+      ]
+    },
+    {
+      "ambient_fourcap": [
+        0,
+        8,
+        14,
+        16
+      ],
+      "ambient_pair": [
+        14,
+        16
+      ],
+      "cup_union": [
+        3,
+        14,
+        16
+      ],
+      "pair": [
+        3,
+        14
+      ],
+      "protected": true,
+      "same_pair": false,
+      "triple": [
+        2,
+        3,
+        14
+      ]
+    },
+    {
+      "ambient_fourcap": [
+        0,
+        8,
+        15,
+        16
+      ],
+      "ambient_pair": [
+        15,
+        16
+      ],
+      "cup_union": [
+        3,
+        15,
+        16
+      ],
+      "pair": [
+        3,
+        15
+      ],
+      "protected": true,
+      "same_pair": false,
+      "triple": [
+        2,
+        3,
+        15
+      ]
+    }
+  ]
+}

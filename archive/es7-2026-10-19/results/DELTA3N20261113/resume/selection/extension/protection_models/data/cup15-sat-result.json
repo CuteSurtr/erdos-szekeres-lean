@@ -1,0 +1,72 @@
+{
+  "cache_releases": 503,
+  "commands": [
+    [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/home/jay/research/data/delta3-codex-20261113/extension/cup15-a/cadical.time",
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "5403",
+      "/usr/bin/cadical",
+      "-t",
+      "5400",
+      "--lrat=true",
+      "--binary=true",
+      "/home/jay/research/data/delta3-codex-20261113/extension/cup15-a/input.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/extension/cup15-a/proof.blrat"
+    ],
+    [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/home/jay/research/data/delta3-codex-20261113/extension/cup15-a/compress.time",
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "600",
+      "/usr/bin/zstd",
+      "-q",
+      "-T1",
+      "-3",
+      "-k",
+      "/home/jay/research/data/delta3-codex-20261113/extension/cup15-a/proof.blrat"
+    ]
+  ],
+  "compressed_bytes": 3491509142,
+  "compressed_roundtrip_verified": true,
+  "finished": true,
+  "hashes": {
+    "cadical": "4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70",
+    "cadical.log": "dc27fe43bfe4a2eb58ac279501801765915fea70062bb715e9075ab6d006915f",
+    "cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+    "compress.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "input.cnf": "c5cb343fd310870af75c72214d6356bec98e2536299dbf3443dbb7883d654a0c",
+    "proof.blrat": "2bae7beddde5dddc28b9ee16595c0de595f50d7e2749408729e3d5da592f527e",
+    "proof.blrat.zst": "6450dc2d88277a287010c1aa7db431e3467b6729df69a73a0f7be690b9ad0741",
+    "run_binary.py": "dcdfd0c97efa27e8b89daacbad3a950d3a9af77c88964e78e5522fd7904f87e5"
+  },
+  "label": "COMPUTED",
+  "limits": {
+    "as_mib": 900,
+    "cake_seconds": 600,
+    "heap_mib": 650,
+    "solver_seconds": 5400,
+    "stack_mib": 32
+  },
+  "proof_bytes": 7023950063,
+  "proof_format": "binary LRAT",
+  "runs": {
+    "cadical": {
+      "exit": 10,
+      "seconds": 5131.39
+    },
+    "compress": {
+      "exit": 0,
+      "seconds": 24.112
+    }
+  },
+  "seconds": 5175.205,
+  "source_cnf": "/home/jay/research/data/delta3-codex-20261113/extension/n7m15-cup.cnf",
+  "status": "SAT_AUDIT_PENDING"
+}

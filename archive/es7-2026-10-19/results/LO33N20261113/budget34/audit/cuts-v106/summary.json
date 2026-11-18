@@ -1,0 +1,29 @@
+{
+  "label": "CERTIFIED",
+  "version": "v106",
+  "rows": 1,
+  "own_encoder_matches": 1,
+  "fresh_cake_acceptances": 1,
+  "old_witness_exact_row_check": "PASS (3705 rows, 35 holes, F20,Lo15,state0 occupied)",
+  "rows_cutting_old_witness": 1,
+  "old_witness_intersection_counts": {
+    "0": 1
+  },
+  "accepted_sha256": "9241356ef594d7c335462a65801045763e2eaf7dd46f6d9647fac6d1bf50e2d5",
+  "replay_sha256": "e2e10043cce223e300ef503a19578700b7362646f01f5d760de10d1ad1d3d482",
+  "input_sha256": {
+    "/home/jay/research/data/es308-20261114/cuts-v106/accepted.json": "9241356ef594d7c335462a65801045763e2eaf7dd46f6d9647fac6d1bf50e2d5",
+    "/home/jay/research/data/es308-20261114/candidates-v106.json": "6dae547533e92fb7144c082fd06292a62f591dff37b244a5d9951d61d74f5975",
+    "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-residual32-rank-global-2026-10-10/source-2650.json.gz": "8c7fe9ef5264182524095d46ef50ed6bc691cab425efa965756d1870112241aa",
+    "/home/jay/research/data/es308-20261114/runs/b35s20/bb/WITNESS.json.v105-snapshot": "9dbe0bf0e7ad68e5dd4a20c8b790c5a311a97210cc2ad87ff9814fc5afa18889",
+    "/home/jay/research/data/es308-20261114/inputs/b35s20-v105/extra.json": "edf9d1d894b7c735b3834fb93fef8f3f9cf39543ad15c9704645f2a10b35c01a",
+    "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/LO33N20261113/budget34/audit/audit_followup_rows_v4.py": "f0df1c0f5b38b735226a9b813b3f5f78d0b91ee27c300c15ffccf5c5fa1ffc12",
+    "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/LO33N20261113/budget34/audit/residual_encoder.py": "db7b2deba4ae55ff50f25d1e52843734591f5e7d1339a53e45e8811866e7365c",
+    "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54"
+  },
+  "seconds": 0.143,
+  "finished_local": "2026-11-15T02:08:56.349879+09:00",
+  "scope": "Additional rows only; no finite exclusion or ES bound follows from these rows alone",
+  "parent_maxrss_kib": 89220,
+  "child_maxrss_kib": 412808
+}

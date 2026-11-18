@@ -1,0 +1,64 @@
+{
+  "status": "EXACT_CHECKED_NONREALIZABILITY_OBSTRUCTION",
+  "rows": 387,
+  "minimum_weight": 1433869918829,
+  "maximum_weight": 228087592790168,
+  "weight_gcd": 1,
+  "weight_sum": 19282471848322771,
+  "labels_used": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "first_row": {
+    "root": 0,
+    "other": [
+      1,
+      4,
+      11,
+      14
+    ],
+    "large": 2,
+    "small": 1,
+    "positive_brackets": [
+      12,
+      45
+    ],
+    "negative_brackets": [
+      9,
+      48
+    ],
+    "coefficients": [
+      [
+        9,
+        -1
+      ],
+      [
+        12,
+        1
+      ],
+      [
+        45,
+        1
+      ],
+      [
+        48,
+        -1
+      ]
+    ],
+    "weight": 68695051218518
+  }
+}

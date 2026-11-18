@@ -1,0 +1,20 @@
+{
+  "label": "COMPUTED exact cross-check",
+  "status": "PASS",
+  "seed": 20261114,
+  "cases_by_size": {
+    "2": 40,
+    "3": 40,
+    "4": 40,
+    "5": 40,
+    "6": 40,
+    "7": 40,
+    "8": 40
+  },
+  "cases": 280,
+  "sources": {
+    "check_envelope_dp.py": "aebf1ec88a5fed8c691352d20573a7636d69aea79e9728492afe6d96098ae943",
+    "check_envelope.py": "7e3284de00e2246699786623c2e285e46541cbf2d6b3241fca0a3c8aefb4a3d9",
+    "check_models.py": "483b8b4282bc5dbc6ebdd6bf8d4dbf905176ab0f767c2160e352bd1454a35889"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "label": "COMPUTED adversarial encoding controls PASS",
+  "source_cnf_sha256": "8210b9d0465d0f316f1e60b17e24c07b54913dbeb3fda7d502a6935757cba4cc",
+  "original_unchanged": true,
+  "note": "Audit never compares stored CNF hash; rejection comes from semantic/structural checks",
+  "cases": [
+    {
+      "corruption": "h0_sign",
+      "changed_DIMACS_line_index": 1,
+      "rejected": true,
+      "returncode": 1,
+      "mutated_cnf_sha256": "02801eac3d22e0b8aa8dcd58afc41090f7b707a9bccaaab9bb608c5ee3eb4efc"
+    },
+    {
+      "corruption": "row_support_index",
+      "changed_DIMACS_line_index": 2,
+      "rejected": true,
+      "returncode": 1,
+      "mutated_cnf_sha256": "bf48f0d9d43ec6e2746040abee99738cc948af38ef30f06ea5d63cd4f0d86a51"
+    },
+    {
+      "corruption": "gate_sign",
+      "changed_DIMACS_line_index": 846,
+      "rejected": true,
+      "returncode": 1,
+      "mutated_cnf_sha256": "de18ee28134655b818c477e3348b0fc233d9a4e8063248e1b24bada9392f49aa"
+    },
+    {
+      "corruption": "demand_off_by_one",
+      "changed_DIMACS_line_index": 903,
+      "rejected": true,
+      "returncode": 1,
+      "mutated_cnf_sha256": "985e7eb8ad301229445bc22461d9179bee0bb7b326f273b7987ca1f427b2adb9"
+    },
+    {
+      "corruption": "budget33_instead34",
+      "changed_DIMACS_line_index": 283518,
+      "rejected": true,
+      "returncode": 1,
+      "mutated_cnf_sha256": "bd7a973dba93cea86ce82612df2e1839979fdca8d1661d818d46eb8b9dac0773"
+    },
+    {
+      "corruption": "missing_pool_row",
+      "changed_DIMACS_line_index": 254241,
+      "rejected": true,
+      "returncode": 1,
+      "mutated_cnf_sha256": "6040fc66fce15dae9e9c8da7fa4732bfcd041842fab94607c1a5afe39f803c74"
+    }
+  ]
+}

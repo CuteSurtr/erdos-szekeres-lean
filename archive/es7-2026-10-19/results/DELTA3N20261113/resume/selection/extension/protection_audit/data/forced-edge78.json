@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "label": "COMPUTED",
+  "variant": "forced",
+  "m": 7,
+  "n": 8,
+  "variables": 356,
+  "clauses": 1816,
+  "literals": 4853,
+  "geometry_variables": 99,
+  "geometry_clauses": 755,
+  "new_clauses": 1061,
+  "geometry_prefix_sha256": "2bb2adddd13efbef60d2fa85177d54bcd0e85374497a8cf4444f066bed23be7a",
+  "geometry_reference": null,
+  "map_kind_counts": {
+    "orientation": 35,
+    "convex": 64,
+    "terminal_fourcap": 35,
+    "end_fourcap": 21,
+    "forced_support": 145,
+    "covered_pair": 21,
+    "uncovered_cap_triple": 35
+  },
+  "phase_counts": {
+    "signotope": 280,
+    "no5cap": 21,
+    "convex4_equivalence": 280,
+    "convex_larger_equivalence": 174,
+    "fourcap_equivalence": 175,
+    "ambient_terminal_pair_equivalence": 56,
+    "forced_domination_equivalence": 717,
+    "uncovered_cap_triple_equivalence": 105,
+    "forall_forced_protected_delta": 8
+  },
+  "empty_End4_ORs": 11,
+  "cup_support_cache_reuses": 0,
+  "canonical_geometry_checked": false,
+  "false_failure_rows": {},
+  "input_hashes": {
+    "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/forced-edge78.cnf": "c2027653e8220454330d93a12441341c6bb20ed1e53c4fbdd7eb5c0609422164",
+    "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/forced-edge78.cnf.map": "6b922167c63a749192659420d96badf16080d38963a4e2ae01a4d272b5df004f"
+  },
+  "streamed_rows_and_map_byte_identical": true
+}

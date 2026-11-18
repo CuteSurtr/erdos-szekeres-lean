@@ -1,0 +1,62 @@
+{
+  "cnf": "/home/jay/research/data/delta3-codex-20261113/boundary/sweep/n7-old/input.cnf",
+  "commands": [
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "63",
+      "/usr/bin/cadical",
+      "-t",
+      "60",
+      "--lrat=true",
+      "--binary=false",
+      "/home/jay/research/data/delta3-codex-20261113/boundary/sweep/n7-old/input.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/boundary/sweep/n7-old/solve/proof.lrat"
+    ],
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "180",
+      "/usr/bin/zstd",
+      "-q",
+      "-T1",
+      "-3",
+      "-k",
+      "/home/jay/research/data/delta3-codex-20261113/boundary/sweep/n7-old/solve/proof.lrat"
+    ]
+  ],
+  "compressed_bytes": 4085,
+  "compressed_roundtrip_verified": true,
+  "hashes": {
+    "cadical": "4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70",
+    "cadical.log": "57b6680aa939f95b620e7066c4c7082e367204a4436c914c10b56ef6c3f5c41a",
+    "cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+    "input.cnf": "6921c087279f4d4854f407073697f051f0f1a4a279463b035c902590b88e455a",
+    "proof.lrat": "b012973aa095848ee6e93be925958dd5f7f31cd13731001e6d9cf34fb811b4ab",
+    "proof.lrat.zst": "6b6d1a64fcf886f62e64f90b0c8a10970c15ae07be4232e723f466f959d4da43",
+    "run_cnf.py": "e3c8d9413f99b3092a4ea760f08265bc30bb93204074a3fa566bc2f0c3b3f4b8"
+  },
+  "label": "COMPUTED",
+  "limits": {
+    "as_mib": 900,
+    "cake_seconds": 60,
+    "cnf": "/home/jay/research/data/delta3-codex-20261113/boundary/sweep/n7-old/input.cnf",
+    "heap": 600,
+    "out": "/home/jay/research/data/delta3-codex-20261113/boundary/sweep/n7-old/solve",
+    "seconds": 60,
+    "sha256": "6921c087279f4d4854f407073697f051f0f1a4a279463b035c902590b88e455a"
+  },
+  "proof_bytes": 13403,
+  "runs": {
+    "cadical": {
+      "exit": 10,
+      "seconds": 0.007
+    },
+    "compress": {
+      "exit": 0,
+      "seconds": 0.003
+    }
+  },
+  "seconds": 0.013,
+  "status": "SAT_AUDIT_PENDING"
+}

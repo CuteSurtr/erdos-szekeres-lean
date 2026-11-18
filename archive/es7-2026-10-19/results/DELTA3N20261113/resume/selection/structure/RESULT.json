@@ -1,0 +1,31 @@
+{
+  "status": "FROZEN",
+  "labels": ["PROVED", "COMPUTED"],
+  "main_written_result": {
+    "n_minimum": 6,
+    "hypotheses": ["finite real set in general position", "distinct x-coordinates", "no five-cap", "prescribed rightmost or leftmost root", "cardinality at most 2*n-3"],
+    "conclusion": "A four-cap-free subset containing the root meets every convex (n-1)-gon; a terminal-safe deletion solution exists in the corresponding direction.",
+    "requires_no_ngon": false,
+    "n7_size": 11,
+    "n8_size": 13,
+    "formalized_in_lean": false,
+    "enlarges_parent_certified_frontier": false
+  },
+  "additional_written_results": [
+    "A terminal-rank-three cap a<b<c forces beta(a)<beta(b).",
+    "Every single beta-level is terminal-safe in a five-cap-free set.",
+    "If U has no (n-2)-cup, the right endpoints of its (n-1)-gons give a terminal-safe weak Delta, at any size.",
+    "For an arbitrary root, cardinality at most 2*n-4 suffices without no-n-gon.",
+    "At cardinality 2*n-2, failure of terminal-safe deletion selection forces maximum old cup length n-2 and a convex (n-1)-gon complement to every maximum cup."
+  ],
+  "parent_lemma_review": "Arbitrary-root n+3 under no-five-cap and no-n-gon is sound; attributed to parent.",
+  "projective_sign_correction": "For T(x,y)=(x/(1-x),y/(1-x)) and root (1,0), cap extension is POSITIVE transformed last slope. Old four-caps have negative last slope in a five-cap-free full set.",
+  "illustrative_refutation": "Seven real points with no five-cap or convex six-gon have no five-point four-cap-free subset containing their rightmost point. All 15 failures checked; not a Delta counterexample.",
+  "controls": "Independent exact integer/fraction checker PASS; no solver or certification claims.",
+  "open": ["General weak D(5,7)", "General weak D(5,8)", "General favorable terminal-safe or minimum-envelope selection", "Exchange using no-n-gon in complementary maximum-cup cases"],
+  "resources": {"threads": 1, "address_space_MiB": 384, "cpu_seconds": 18, "wall_seconds": 20, "long_jobs_started": 0},
+  "queued_work": false,
+  "git_commands_or_changes": false,
+  "installs_or_external_actions": false,
+  "other_tracks_or_old_manifests_edited": false
+}

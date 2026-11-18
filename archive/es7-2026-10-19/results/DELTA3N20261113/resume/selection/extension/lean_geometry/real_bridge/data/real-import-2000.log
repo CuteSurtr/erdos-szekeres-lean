@@ -1,0 +1,4 @@
+ErdosSzekeres.integerToReal (p : Fin 2 → ℤ) : ErdosSzekeres.Point
+'ErdosSzekeres.orient_integerToReal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.convexPosition_four_iff_signs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosSzekeres.Suk.convexPosition_of_four_subsets' depends on axioms: [propext, Classical.choice, Quot.sound]

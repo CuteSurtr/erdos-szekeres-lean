@@ -1,0 +1,5 @@
+df8ace7fb72d572191dd45b31a38018dc99898d0b7eac49acb52b07c63ab828c  run/om_s56_N26_nosig.cnf
+7d40c2098956e10c4652764ab89c13353f5c7db5c8c01d2774971d743d97b0f0  run/om_s56_N26_nosig.lrat
+lrat_bytes=343841949
+s VERIFIED UNSAT
+cake_wall=56 Fri Nov 13 06:11:58 PM KST 2026

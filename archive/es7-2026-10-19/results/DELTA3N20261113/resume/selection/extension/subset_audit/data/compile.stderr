@@ -1,0 +1,14 @@
+cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/subset_audit/tools/audit.cpp: In function ‘std::string decimal(I)’:
+cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/subset_audit/tools/audit.cpp:50:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   50 |   if(neg) s.push_back('-'); std::reverse(s.begin(),s.end()); return s;
+      |   ^~
+cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/subset_audit/tools/audit.cpp:50:29: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   50 |   if(neg) s.push_back('-'); std::reverse(s.begin(),s.end()); return s;
+      |                             ^~~
+cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/subset_audit/tools/audit.cpp: In function ‘Row parse_row(const std::string&)’:
+cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/subset_audit/tools/audit.cpp:190:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  190 |     if(entry) tok(','); tok('"'); size_t start=i;
+      |     ^~
+cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/subset_audit/tools/audit.cpp:190:25: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  190 |     if(entry) tok(','); tok('"'); size_t start=i;
+      |                         ^~~

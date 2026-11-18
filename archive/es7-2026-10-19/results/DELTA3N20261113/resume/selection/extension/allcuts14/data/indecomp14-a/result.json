@@ -1,0 +1,72 @@
+{
+  "cache_releases": 530,
+  "commands": [
+    [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/home/jay/research/data/delta3-codex-20261113/extension/indecomp14-a/cadical.time",
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "5403",
+      "/usr/bin/cadical",
+      "-t",
+      "5400",
+      "--lrat=true",
+      "--binary=true",
+      "/home/jay/research/data/delta3-codex-20261113/extension/indecomp14-a/input.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/extension/indecomp14-a/proof.blrat"
+    ],
+    [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/home/jay/research/data/delta3-codex-20261113/extension/indecomp14-a/compress.time",
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "600",
+      "/usr/bin/zstd",
+      "-q",
+      "-T1",
+      "-3",
+      "-k",
+      "/home/jay/research/data/delta3-codex-20261113/extension/indecomp14-a/proof.blrat"
+    ]
+  ],
+  "compressed_bytes": 3596364977,
+  "compressed_roundtrip_verified": true,
+  "finished": true,
+  "hashes": {
+    "cadical": "4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70",
+    "cadical.log": "9f47ccb5e2d197e433794478356e953cb32d994026e50bac601ab6350abd0f18",
+    "cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+    "compress.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "input.cnf": "ba43ca6ecbaeb6bc05854271a27f1204e3a690240a5c525bf1b2a9223dbd1819",
+    "proof.blrat": "995a011d187a2b2bfc24e9fdf49e21123914ff391cf7efe489c30e80e4f35705",
+    "proof.blrat.zst": "a29783b3a792f9ace735378dd21de27119f93d43924c56cfafecf56dce61d859",
+    "run_binary.py": "dcdfd0c97efa27e8b89daacbad3a950d3a9af77c88964e78e5522fd7904f87e5"
+  },
+  "label": "COMPUTED",
+  "limits": {
+    "as_mib": 800,
+    "cake_seconds": 600,
+    "heap_mib": 550,
+    "solver_seconds": 5400,
+    "stack_mib": 32
+  },
+  "proof_bytes": 6517963212,
+  "proof_format": "binary LRAT",
+  "runs": {
+    "cadical": {
+      "exit": 0,
+      "seconds": 5400.279
+    },
+    "compress": {
+      "exit": 0,
+      "seconds": 23.591
+    }
+  },
+  "seconds": 5442.852,
+  "source_cnf": "/home/jay/research/data/delta3-codex-20261113/extension/n7m14-indecomp-v2.cnf",
+  "status": "UNKNOWN"
+}

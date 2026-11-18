@@ -1,0 +1,151 @@
+{
+  "all_exact_success_lines": true,
+  "all_input_hashes_stable": true,
+  "all_receipt_and_output_hashes_checked": true,
+  "authorization": "Parent reserved 800 MiB within owner's existing 6000 MiB track; AS800 MiB for independent cake replay only, with owner-level caps unchanged.",
+  "cases": [
+    {
+      "checker_seconds": 0.0033480030033388175,
+      "child_peak_rss_kib": 17036,
+      "elapsed_seconds": 0.0058800349943339825,
+      "input_hashes": {
+        "cake": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+        "cnf": "8a4e56da667532f928ed7a33ef882605cb20051f385ab7e766b31d88f4107381",
+        "lrat": "c493bee8641f8b700da0bf9d69c25f38266eafc869353d9d7a76200778436aa2"
+      },
+      "m": 9,
+      "n": 7,
+      "status": "INDEPENDENTLY_VERIFIED_UNSAT"
+    },
+    {
+      "checker_seconds": 0.003304710000520572,
+      "child_peak_rss_kib": 19580,
+      "elapsed_seconds": 0.004956949996994808,
+      "input_hashes": {
+        "cake": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+        "cnf": "45d7a6c83282feaf8a08be3140e4cb0fb9e22af18b1cac3fbd6ab68905901d02",
+        "lrat": "2af38d1d225b0b77e3510fb1c0357d266620cc3ba5286c640867761d92c7366e"
+      },
+      "m": 10,
+      "n": 7,
+      "status": "INDEPENDENTLY_VERIFIED_UNSAT"
+    },
+    {
+      "checker_seconds": 0.0154730490030488,
+      "child_peak_rss_kib": 35908,
+      "elapsed_seconds": 0.017559911000716966,
+      "input_hashes": {
+        "cake": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+        "cnf": "b2ebaaf292f4b9a4d3f16b5b888e65d15aa63ee48a6f0023c2d7befc65879b11",
+        "lrat": "8607fddf3dbab31ba75c8e5df0a3b80fbede906d25202e8a99bf940590aba359"
+      },
+      "m": 11,
+      "n": 7,
+      "status": "INDEPENDENTLY_VERIFIED_UNSAT"
+    },
+    {
+      "checker_seconds": 0.16371601100399857,
+      "child_peak_rss_kib": 329184,
+      "elapsed_seconds": 0.17296056000486715,
+      "input_hashes": {
+        "cake": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+        "cnf": "69595557c82ef2a15a3cb5e536550d9274ce0b2553105c31f5081f380d1bd8ff",
+        "lrat": "4e357eeb9a51f61675ce303e131f1a77e15a3607efac52496417c26711b96c16"
+      },
+      "m": 12,
+      "n": 7,
+      "status": "INDEPENDENTLY_VERIFIED_UNSAT"
+    },
+    {
+      "checker_seconds": 1.8661198300032993,
+      "child_peak_rss_kib": 618188,
+      "elapsed_seconds": 1.9622838779978338,
+      "input_hashes": {
+        "cake": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+        "cnf": "00f6f4451fdbcf4703e70fc22eda96fe2c1663261e1daf9bbacd2889b0144f74",
+        "lrat": "2b920d84cc169e1483953f56f075a5082f7b8ac6bc7afeb54946d33f789d0a36"
+      },
+      "m": 13,
+      "n": 7,
+      "status": "INDEPENDENTLY_VERIFIED_UNSAT"
+    },
+    {
+      "checker_seconds": 0.0033107210037996992,
+      "child_peak_rss_kib": 17536,
+      "elapsed_seconds": 0.0043879510049009696,
+      "input_hashes": {
+        "cake": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+        "cnf": "016cf084fa2b04da3be485b7dda114c20fa3277fb5ff335313aea66537a21690",
+        "lrat": "b14103cf6ff01378f46b9f918b79be4dd11c398c6093add3dd30afa709d3a99f"
+      },
+      "m": 10,
+      "n": 8,
+      "status": "INDEPENDENTLY_VERIFIED_UNSAT"
+    },
+    {
+      "checker_seconds": 0.0073883590011973865,
+      "child_peak_rss_kib": 29816,
+      "elapsed_seconds": 0.00855218500510091,
+      "input_hashes": {
+        "cake": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+        "cnf": "d075a91fdc2ee78e5f33e9366b233f00cbab2ff8ff713636f73b576f8c3451f9",
+        "lrat": "e6cba251f679e1b4aff5d0a76d9c34e510c88cfd089c43ab6328975d48659f14"
+      },
+      "m": 11,
+      "n": 8,
+      "status": "INDEPENDENTLY_VERIFIED_UNSAT"
+    },
+    {
+      "checker_seconds": 0.01542578000226058,
+      "child_peak_rss_kib": 60540,
+      "elapsed_seconds": 0.016964050999376923,
+      "input_hashes": {
+        "cake": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+        "cnf": "bf47c22750a8628ca531cfad87f2927ab5cc5693ce47a40167347aca5d5e351e",
+        "lrat": "6891fa97bf27958d57b985ef8bdc64c3d7aca1399a1cc8ef404247978fc7bac7"
+      },
+      "m": 12,
+      "n": 8,
+      "status": "INDEPENDENTLY_VERIFIED_UNSAT"
+    },
+    {
+      "checker_seconds": 0.313944529996661,
+      "child_peak_rss_kib": 618452,
+      "elapsed_seconds": 0.3324099509991356,
+      "input_hashes": {
+        "cake": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+        "cnf": "8f872321fd5c79605a7c3abcc79c00cc350a869264302dffecbb6f4702d9179a",
+        "lrat": "c516791ffa2dac69e13b85077c809a67a550055f54f166f7d9022418e6e783e6"
+      },
+      "m": 13,
+      "n": 8,
+      "status": "INDEPENDENTLY_VERIFIED_UNSAT"
+    },
+    {
+      "checker_seconds": 2.0165758529983577,
+      "child_peak_rss_kib": 620660,
+      "elapsed_seconds": 2.1283266090031248,
+      "input_hashes": {
+        "cake": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+        "cnf": "9f7a01563020724231d722a8d22bfccdbbfcb63d41ca365b041d07c2fd804d6b",
+        "lrat": "dad9ab032c04f78fa103b1c3a821d869d2e1dc49fc8e7bc49488d237fc3ab5ef"
+      },
+      "m": 14,
+      "n": 8,
+      "status": "INDEPENDENTLY_VERIFIED_UNSAT"
+    }
+  ],
+  "executed_wrapper_sha256": "86253d57ff3b8d488e2b48ea03af0cd0bee7ba6dd1460818bbec6b034d68852b",
+  "failures": 0,
+  "final_wrapper_sha256": "586f4f78e2bb2e8571313bf98c7fd33713d5d482f79fea75052e32720ae7b8db",
+  "label": "CERTIFIED",
+  "max_checker_seconds": 2.0165758529983577,
+  "max_child_peak_rss_kib": 620660,
+  "no_replay_after_metadata_amendment": true,
+  "note": "Fixed-size filtered rooted formulas only; specialized fast family and larger UNKNOWN cases are not certified here.",
+  "recorded_utc": "2026-11-13T16:20:12.184711+00:00",
+  "status": "ALL_TEN_INDEPENDENTLY_VERIFIED_UNSAT",
+  "sum_checker_seconds": 4.4086068460164825,
+  "sum_elapsed_seconds": 4.654282081006386,
+  "timeouts": 0
+}

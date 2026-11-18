@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "label": "COMPUTED",
+  "variant": "cup",
+  "m": 15,
+  "n": 7,
+  "variables": 69673,
+  "clauses": 193880,
+  "literals": 735841,
+  "geometry_variables": 9828,
+  "geometry_clauses": 79326,
+  "new_clauses": 114554,
+  "geometry_prefix_sha256": "9e3c71746c3642af9e75b767b597bf1fb8046da71d90c1de9cbe2bcb8a68c256",
+  "geometry_reference": "/home/jay/research/data/delta3-codex-20261113/extension/terminal7-a/m15/input.cnf",
+  "map_kind_counts": {
+    "orientation": 455,
+    "convex": 9373,
+    "terminal_fourcap": 1365,
+    "terminal_fourcup": 1365,
+    "end_fourcap": 105,
+    "cup_support": 3380,
+    "covered_pair": 105,
+    "uncovered_cap_triple": 455,
+    "bad_contains": 30251,
+    "target_contains": 22819
+  },
+  "phase_counts": {
+    "signotope": 10920,
+    "no5cap": 3003,
+    "convex4_equivalence": 10920,
+    "convex_larger_equivalence": 48048,
+    "no_ngon": 6435,
+    "fourcap_and_fourcup_equivalence": 13650,
+    "ambient_terminal_pair_equivalence": 1470,
+    "cup_domination_equivalence": 14172,
+    "uncovered_cap_triple_equivalence": 1365,
+    "bad_triple_or_fourcap_containment": 30251,
+    "target_containment": 22819,
+    "forall_cup_protected_delta": 30827
+  },
+  "empty_End4_ORs": 27,
+  "cup_support_cache_reuses": 442,
+  "canonical_geometry_checked": false,
+  "false_failure_rows": {},
+  "input_hashes": {
+    "/home/jay/research/data/delta3-codex-20261113/extension/n7m15-cup.cnf": "c5cb343fd310870af75c72214d6356bec98e2536299dbf3443dbb7883d654a0c",
+    "/home/jay/research/data/delta3-codex-20261113/extension/n7m15-cup.cnf.map": "336574fbd917fc523f5f09131572b52ec908fd728dca76384422b80720908dbd"
+  },
+  "streamed_rows_and_map_byte_identical": true
+}

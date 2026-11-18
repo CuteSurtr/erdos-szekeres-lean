@@ -1,0 +1,231 @@
+{
+  "status": "PROVED; Lean-checked algebra only",
+  "toolchain": "leanprover/lean4:v4.24.0",
+  "mathlib": {
+    "url": "https://github.com/leanprover-community/mathlib4.git",
+    "type": "git",
+    "subDir": null,
+    "scope": "",
+    "rev": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+    "name": "mathlib",
+    "manifestFile": "lake-manifest.json",
+    "inputRev": "v4.24.0",
+    "inherited": false,
+    "configFile": "lakefile.lean"
+  },
+  "checks": [
+    {
+      "source": "WeightedEnvelope.lean",
+      "source_sha256": "0f929fdccc5d3a3133862f943d3bb0fa1b983c35094a68a10b7907839efcfae5",
+      "run": "weighted-certificate-v1",
+      "log_sha256": "798a813eb66905a7b3826d99e2a4f932826f8421afbb6f9755dae3ca6af84120",
+      "record_sha256": "71c72e62b17c51165d1b5e95be88d1ed8f4a387e7348bb52a14aaec6859d2b72",
+      "axiom_audits": {
+        "Delta3.WeightedEnvelope.total_add": [
+          "propext"
+        ],
+        "Delta3.WeightedEnvelope.total_mul_right": [
+          "propext"
+        ],
+        "Delta3.WeightedEnvelope.total_weighted_eval": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.total_le_total": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.le_upper_of_weighted_certificate": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.le_maxFrom_base": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.le_maxFrom_of_mem": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.eval_le_envelope": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.le_envelope_of_weighted_certificate": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "source": "FieldAdapter.lean",
+      "source_sha256": "d81884c3d58c2f67ed29f4d66a9ea2a5764949c3d30740692ac08c0f9ffaa9c7",
+      "run": "field-adapter-v1",
+      "log_sha256": "db23dbb12beab692e6548857acc42082066ad35565c7158dc473f43bcad20a15",
+      "record_sha256": "9c822f40a7d0b3dd09cc1c22ee82cc4e4c82a53716e2de68157492bb6e12f747",
+      "axiom_audits": {
+        "Delta3.WeightedEnvelope.grindField": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "source": "TwoSupport.lean",
+      "source_sha256": "b03a8819dbb5fd06cf51d034dce539e71f6fc30e7486dd8b4be40e7bc06018c6",
+      "run": "two-support-v2",
+      "log_sha256": "08c2ed3ab522c6a40bcfa05ad4b4326c391abebb5415fde3c9816bb2e3517d0d",
+      "record_sha256": "20cb187caa12caa0098335f823d4c794b6563a2918a6a4089c3121f9c04ef4ba",
+      "axiom_audits": {
+        "Delta3.WeightedEnvelope.exists_max_on": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.exists_min_on": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.eval_neg_iff_above_root": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.eval_neg_iff_below_root": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.midpoint_bounds": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.two_residual_of_no_single": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.residual_pair_certificate": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.weighted_sub": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.two_supports_of_no_single": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.exists_two_supports_of_pointwise": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.exists_mem_of_le_maxFrom": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.exists_two_supports_of_le_envelope": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.le_max_of_two_supports": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.le_envelope_iff_two_supports": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "source": "NumericalExample.lean",
+      "source_sha256": "02db865a3117d0cb64ee8aa2e6f1ad6697b39e4800a43462c932cad64474f8a9",
+      "run": "numerical-example-v3",
+      "log_sha256": "b4a56323f497a06cf9f8d53da9183e869574d80e9d6fea889b4aba47670cc788",
+      "record_sha256": "601f63f47b34a705fc1d7294da316d82bac37fc88dad71b47bfa1074d2881f56",
+      "axiom_audits": {
+        "Delta3.WeightedEnvelope.Example.half_sum": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.Example.mean_le_max": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.Example.safe_at_five": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.Example.no_single_support_at_five": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.Example.difference24": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.Example.below24_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.Example.difference57_at_three": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.Example.below57_at_three_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.Example.below56_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.Example.exposure_at_three_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.WeightedEnvelope.Example.exposure_at_six": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    }
+  ],
+  "independent_second_verification_claimed": false,
+  "runner_sha256": "eb585aae8956d57595abfb4b01c92f0dfaad6964ae07f62be01792e71e543b1c",
+  "scratch_dependencies": {
+    "WeightedEnvelope.olean": "865105bf041c5037f4361a356e5b6afa87e8b8c6fb077c3ff465f4e3791d71b3",
+    "FieldAdapter.olean": "07e9b822d9fcae896146612ea6f45857ee101070c9bbb3e56ad3e946836d015a"
+  },
+  "excluded_draft": "Envelope.lean"
+}

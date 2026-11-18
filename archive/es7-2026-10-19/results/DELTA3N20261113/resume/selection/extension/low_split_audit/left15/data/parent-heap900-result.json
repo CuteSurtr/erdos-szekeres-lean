@@ -1,0 +1,34 @@
+{
+  "label": "COMPUTED",
+  "status": "CHECK_NOT_ACCEPTED",
+  "source_run": "/home/jay/research/data/delta3-codex-20261113/extension/low15-n7-a",
+  "command": [
+    "/usr/bin/time",
+    "-v",
+    "-o",
+    "/home/jay/research/data/delta3-codex-20261113/extension/low15-replay-a/cake.time",
+    "/usr/bin/timeout",
+    "--kill-after=2",
+    "600",
+    "/home/jay/.local/bin/cake_lpr",
+    "--CML_HEAP_SIZE=900",
+    "--CML_STACK_SIZE=32",
+    "/home/jay/research/data/delta3-codex-20261113/extension/low15-n7-a/input.cnf",
+    "/home/jay/research/data/delta3-codex-20261113/extension/low15-n7-a/proof.blrat"
+  ],
+  "exit": 1,
+  "seconds": 158.196,
+  "as_mib": 1150,
+  "heap_mib": 900,
+  "hashes_before": {
+    "input.cnf": "793063f5c7c5208c16ce038c63659878adee4eb049546d775d65c5a18ed60418",
+    "proof.blrat": "f86789033376814b7a36ea4bbc26e5a6007e66168a1fef4e38d09a5f6cca2f7c",
+    "cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54"
+  },
+  "hashes_after": {
+    "input.cnf": "793063f5c7c5208c16ce038c63659878adee4eb049546d775d65c5a18ed60418",
+    "proof.blrat": "f86789033376814b7a36ea4bbc26e5a6007e66168a1fef4e38d09a5f6cca2f7c",
+    "cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54"
+  },
+  "source_sha256": "7bb15e2aa41c41cb29abff0fbb8e063ce67fbf279165e8a690f870a1e65e6de8"
+}

@@ -1,0 +1,90 @@
+{
+  "status": "EXACT_PRODUCT_CERTIFICATE",
+  "seconds": 0.25003534500137903,
+  "peak_rss_KiB": 56556,
+  "elimination": {
+    "rank": 386,
+    "nullity": 1,
+    "progress": [
+      {
+        "rank": 25,
+        "remaining_rows": 381,
+        "largest_integer_bits": 1
+      },
+      {
+        "rank": 50,
+        "remaining_rows": 355,
+        "largest_integer_bits": 1
+      },
+      {
+        "rank": 75,
+        "remaining_rows": 329,
+        "largest_integer_bits": 1
+      },
+      {
+        "rank": 100,
+        "remaining_rows": 304,
+        "largest_integer_bits": 1
+      },
+      {
+        "rank": 125,
+        "remaining_rows": 278,
+        "largest_integer_bits": 1
+      },
+      {
+        "rank": 150,
+        "remaining_rows": 253,
+        "largest_integer_bits": 2
+      },
+      {
+        "rank": 175,
+        "remaining_rows": 227,
+        "largest_integer_bits": 2
+      },
+      {
+        "rank": 200,
+        "remaining_rows": 202,
+        "largest_integer_bits": 2
+      },
+      {
+        "rank": 225,
+        "remaining_rows": 177,
+        "largest_integer_bits": 2
+      },
+      {
+        "rank": 250,
+        "remaining_rows": 152,
+        "largest_integer_bits": 2
+      },
+      {
+        "rank": 275,
+        "remaining_rows": 127,
+        "largest_integer_bits": 2
+      },
+      {
+        "rank": 300,
+        "remaining_rows": 102,
+        "largest_integer_bits": 3
+      },
+      {
+        "rank": 325,
+        "remaining_rows": 77,
+        "largest_integer_bits": 4
+      },
+      {
+        "rank": 350,
+        "remaining_rows": 52,
+        "largest_integer_bits": 6
+      },
+      {
+        "rank": 375,
+        "remaining_rows": 22,
+        "largest_integer_bits": 38
+      }
+    ],
+    "nonnegative": true,
+    "largest_weight_bits": 48
+  },
+  "error": null,
+  "scope": "Independent exact certificate replay is required."
+}

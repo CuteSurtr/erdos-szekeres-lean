@@ -1,0 +1,32 @@
+{
+  "status": "FAILED_DEVELOPMENT_ASSERTION",
+  "source_sha256": "e8420598807ac917df0b5d76b3e96769b53d2667dc7cf3b343cfbdb45c79c837",
+  "failure": "AssertionError at assert new_targets and all(set(t)&set(selected) for t in new_targets)",
+  "reason": "No new convex six-gons contain the inserted point; nonemptiness was an unjustified test assumption.",
+  "observed_new_targets": [],
+  "augmented_unchanged_A": {
+    "max_cap": 4,
+    "max_cup": 4,
+    "max_gon": 6,
+    "selected": [
+      0,
+      3,
+      6
+    ],
+    "selected_max_cap": 3,
+    "complement_max_gon": 4,
+    "targets6": [
+      [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "missed_targets6": [],
+    "selected_four_caps": [],
+    "weak_delta": true
+  }
+}

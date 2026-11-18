@@ -1,0 +1,60 @@
+{
+ "certdir": "/home/jay/research/data/n66-20261113/p2/c11",
+ "state": "/home/jay/research/data/n66-20261113/lm/full_L11.json",
+ "budget": 11,
+ "holes_at_least": 12,
+ "bound": 58,
+ "W_size": 70,
+ "cube": [],
+ "full_cnf_sha256": "82fa7697df9aaf04091af2c81cff38a80fdf70f615e0eed72821167614c014b2",
+ "full_cnf_clauses": 5380347,
+ "activated_quadruples": 322818,
+ "trim_cnf_sha256": "424f330442a1f140033fff23b8a16f5a879418ef2064e915648e993ce3faf73d",
+ "trim_lrat_sha256": "8c80abacf5332d563c71a3516786d1fa6e984110e723db2cc07627d4be45cc17",
+ "trim_cnf_clauses": 92446,
+ "trim_lrat_bytes": 976854118,
+ "trim": {
+  "lrat_lines": 23594446,
+  "additions": 13650465,
+  "marked_additions": 2947884,
+  "empty_id": 19030812,
+  "originals": 5380347,
+  "marked_originals": 92446,
+  "marked_total": 3040330
+ },
+ "used": {
+  "used_original_clauses": 92446,
+  "per_family": {
+   "eager": 51270,
+   "quad": 34458,
+   "units": 2,
+   "rows": 5738,
+   "card": 978
+  },
+  "used_rows": 5738
+ },
+ "kinds": {
+  "units": 2,
+  "rows": 5738,
+  "card": 978,
+  "geometric": 85728
+ },
+ "final_verify66": {
+  "rows": 5738,
+  "kinds": {
+   "transported": 2691,
+   "mirror": 2793,
+   "core": 203,
+   "cycle": 51
+  },
+  "bad": 0,
+  "rows_match": true,
+  "templates_verified": 415,
+  "templates": 415,
+  "cores_verified": 205,
+  "cores": 205
+ },
+ "cake_lpr": "s VERIFIED UNSAT",
+ "ALL_OK": true,
+ "time": "2026-11-13 20:56:42 KST"
+}

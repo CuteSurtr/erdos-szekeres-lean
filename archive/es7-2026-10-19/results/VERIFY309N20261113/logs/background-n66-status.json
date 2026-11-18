@@ -1,0 +1,47 @@
+{
+  "bound": 57,
+  "holes_at_least": 13,
+  "record": "R/N66N20261113",
+  "cnf_sha256": "80b55b0c2c2ef445f485901e69fda3fdbb994fc1d882b5828d9227a85a695ee7",
+  "lrat_sha256": "3971e63f869224cca0e39d3b40e5070cfd737a2c13fdab8abb68bd6a105a5978",
+  "time": "2026-11-13 21:43:47 KST",
+  "label": "CERTIFIED",
+  "what": "phase 2: trimmed monolithic sub-CNF \"<= 12 holes\" (206705 clauses: {'units': 2, 'rows': 7913, 'card': 1141, 'geometric': 197647}), used rows justified ({'transported': 3769, 'mirror': 3891, 'core': 203, 'cycle': 50}), cake_lpr s VERIFIED UNSAT, p2_verify ALL_OK; untrimmed CNF ab101c49c8ca3ae309072f3b7e151c7ec3fa8988e8f8e65fe115fa960bded9ee",
+  "certdir": "/home/jay/research/data/n66-20261113/p2/b12/it1",
+  "history": [
+    {
+      "bound": 59,
+      "holes_at_least": 11,
+      "label": "CERTIFIED",
+      "time": "2026-11-13 18:11 KST",
+      "cnf_sha256": "920489253e49d2b8527ff32771b08afa05cc2956f149d3c20711657b5b4f4ab0",
+      "lrat_sha256": "9272dfbc3364eff199dd1713e054d1879931e6dab2f0b301a0bb4e79b472a244",
+      "what": "phase 1: PB CNF \"<= 10 holes\" over 3,052 justified rows (README data/cert59)"
+    },
+    {
+      "bound": 58,
+      "holes_at_least": 12,
+      "label": "CERTIFIED",
+      "time": "2026-11-13 20:56:42 KST",
+      "cnf_sha256": "424f330442a1f140033fff23b8a16f5a879418ef2064e915648e993ce3faf73d",
+      "lrat_sha256": "8c80abacf5332d563c71a3516786d1fa6e984110e723db2cc07627d4be45cc17",
+      "certdir": "/home/jay/research/data/n66-20261113/p2/c11",
+      "what": "phase 2: trimmed monolithic sub-CNF \"<= 11 holes\" (92446 clauses: {'units': 2, 'rows': 5738, 'card': 978, 'geometric': 85728}), used rows justified ({'transported': 2691, 'mirror': 2793, 'core': 203, 'cycle': 51}), cake_lpr s VERIFIED UNSAT, p2_verify ALL_OK; untrimmed CNF 82fa7697df9aaf04091af2c81cff38a80fdf70f615e0eed72821167614c014b2",
+      "trim_lrat_bytes": 976854118,
+      "used_rows": 5738
+    },
+    {
+      "bound": 57,
+      "holes_at_least": 13,
+      "label": "CERTIFIED",
+      "time": "2026-11-13 21:43:47 KST",
+      "cnf_sha256": "80b55b0c2c2ef445f485901e69fda3fdbb994fc1d882b5828d9227a85a695ee7",
+      "lrat_sha256": "3971e63f869224cca0e39d3b40e5070cfd737a2c13fdab8abb68bd6a105a5978",
+      "certdir": "/home/jay/research/data/n66-20261113/p2/b12/it1",
+      "what": "phase 2: trimmed monolithic sub-CNF \"<= 12 holes\" (206705 clauses: {'units': 2, 'rows': 7913, 'card': 1141, 'geometric': 197647}), used rows justified ({'transported': 3769, 'mirror': 3891, 'core': 203, 'cycle': 50}), cake_lpr s VERIFIED UNSAT, p2_verify ALL_OK; untrimmed CNF ab101c49c8ca3ae309072f3b7e151c7ec3fa8988e8f8e65fe115fa960bded9ee",
+      "trim_lrat_bytes": 2992431389,
+      "used_rows": 7913
+    }
+  ],
+  "updated": "2026-11-13 21:43:55 KST (p2_driver.py)"
+}

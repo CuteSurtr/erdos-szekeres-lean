@@ -1,0 +1,77 @@
+{
+  "cnf": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/terminal/data/witness.core.cnf",
+  "commands": [
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "13",
+      "/usr/bin/cadical",
+      "-t",
+      "10",
+      "--lrat=true",
+      "--binary=false",
+      "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/terminal/data/witness.core.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/selection/certificates/terminal/proof.lrat"
+    ],
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "15",
+      "/home/jay/.local/bin/cake_lpr",
+      "--CML_HEAP_SIZE=128",
+      "--CML_STACK_SIZE=32",
+      "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/terminal/data/witness.core.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/selection/certificates/terminal/proof.lrat"
+    ],
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "180",
+      "/usr/bin/zstd",
+      "-q",
+      "-T1",
+      "-3",
+      "-k",
+      "/home/jay/research/data/delta3-codex-20261113/selection/certificates/terminal/proof.lrat"
+    ]
+  ],
+  "compressed_bytes": 1843,
+  "compressed_roundtrip_verified": true,
+  "hashes": {
+    "cadical": "4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70",
+    "cadical.log": "4b0018b0947c16e03889358b4f7aee80dae26a7ceb395364bf343a3794282f15",
+    "cake.log": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+    "input.cnf": "5318a34178cd3aa6acb9f83de54f4e9510b0a968a98fc0c8eb40b20ce135d0dd",
+    "proof.lrat": "0689a7c86c3173803b6fab75a557cb1eb1383d51c6b9ef50c8369003d3614881",
+    "proof.lrat.zst": "52ed3fafe5fab84444c812cc114e8bd5cc0db61c5315048e9be38933be1e61e9",
+    "run_cnf.py": "e3c8d9413f99b3092a4ea760f08265bc30bb93204074a3fa566bc2f0c3b3f4b8"
+  },
+  "label": "CERTIFIED",
+  "limits": {
+    "as_mib": 400,
+    "cake_seconds": 15,
+    "cnf": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/terminal/data/witness.core.cnf",
+    "heap": 128,
+    "out": "/home/jay/research/data/delta3-codex-20261113/selection/certificates/terminal",
+    "seconds": 10,
+    "sha256": "5318a34178cd3aa6acb9f83de54f4e9510b0a968a98fc0c8eb40b20ce135d0dd"
+  },
+  "proof_bytes": 5426,
+  "runs": {
+    "cadical": {
+      "exit": 20,
+      "seconds": 0.003
+    },
+    "cake": {
+      "exit": 0,
+      "seconds": 0.007
+    },
+    "compress": {
+      "exit": 0,
+      "seconds": 0.003
+    }
+  },
+  "seconds": 0.016,
+  "status": "UNSAT_CERTIFIED"
+}

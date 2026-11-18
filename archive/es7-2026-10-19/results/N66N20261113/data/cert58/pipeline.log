@@ -1,0 +1,13 @@
+2026-11-13 20:39:04 cadical UNSAT; lrat 2408231441 bytes
+2026-11-13 20:39:14 trimmed: {"lrat_lines": 23594446, "additions": 13650465, "marked_additions": 2947884, "empty_id": 19030812, "originals": 5380347, "marked_originals": 92446, "marked_total": 3040330}
+2026-11-13 20:39:14 trim.lrat 976854118 bytes, trim.cnf 5697605 bytes
+2026-11-13 20:39:14 cake_lpr start (p2_cake.py: heap tiers 2000/3200/4500/5500 MB inside the n66 budget)
+2026-11-13 20:39:36 cake_lpr: s VERIFIED UNSAT ([ { "heap": 2000, "verified": true, "seconds": 22.7, "max_rss_kb": "2054184", "tail": "" } ])
+2026-11-13 20:39:38 full lrat sha256 6c3889553a55b4ffbcb9cd3ec5569bf574bd06b0bc9c1d5f4a0a53d4419040a0; deleting cert.lrat
+2026-11-13 20:39:38 used: {"used_original_clauses": 92446, "per_family": {"eager": 51270, "quad": 34458, "units": 2, "rows": 5738, "card": 978}, "used_rows": 5738}
+2026-11-13 20:39:38 justify 5738 rows (p2_template_cert66.py)
+2026-11-13 20:56:07 final_verify66: {"rows": 5738, "kinds": {"transported": 2691, "mirror": 2793, "core": 203, "cycle": 51}, "bad": 0, "rows_match": true, "templates_verified": 415, "templates": 415, "cores_verified": 205, "cores": 205}
+2026-11-13 20:56:07 p2_verify start
+2026-11-13 20:56:42 verify: {"trim_cnf_sha256": "424f330442a1f140033fff23b8a16f5a879418ef2064e915648e993ce3faf73d", "trim_lrat_sha256": "8c80abacf5332d563c71a3516786d1fa6e984110e723db2cc07627d4be45cc17", "clauses": 92446, "distinct_clauses": 92446, "kinds": {"units": 2, "rows": 5738, "card": 978, "geometric": 85728}, "unclassified": 0, "unclassified_sample": [], "header_vars": 1647653, "max_var": 1647653, "vars_ok": true, "mono66_stream_clauses": 39017853, "budget": 11, "cube": [], "justification": {"rows_file": "p2/c11/used_rows.json", "justified_rows": 5738}, "cake_lpr": "s VERIFIED UNSAT", "seconds": 33.9, "ALL_OK": true}
+2026-11-13 20:56:42 cert.json written: CERTIFIED holes >= 12
+P2_CERT_DONE

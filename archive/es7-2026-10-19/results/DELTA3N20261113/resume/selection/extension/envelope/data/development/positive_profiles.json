@@ -1,0 +1,225 @@
+{
+  "cases": [
+    {
+      "A": [
+        8,
+        20,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "ambient_pairs": 74,
+      "clauses": 17020,
+      "exposed_pairs": 58,
+      "exposed_triples": 264,
+      "files": {
+        "certificates.json": {
+          "bytes": 12054,
+          "sha256": "3b40e7e9d1a0decce3ea7067a14df6d3ad98963ee3dec26cf7e472c86da71369"
+        },
+        "envelope.cnf": {
+          "bytes": 343402,
+          "sha256": "516086a2621db4369cfaeec392b203a16ad2490da86c88e523ad56f77341e938"
+        },
+        "envelope.json": {
+          "bytes": 69391,
+          "sha256": "70e922ce2db2bc33dd2d599aef131a13eee71841d1948617fe0ad74148ae769e"
+        },
+        "finder.log": {
+          "bytes": 124,
+          "sha256": "68483ea5544fc254c2ad0bc93c227106f725c07f627e1ef6c87b4c6542aad369"
+        },
+        "geometry.json": {
+          "bytes": 348754,
+          "sha256": "25eea48ad429e31f4b998647a8dc506b454bde439d938b8879b4da955607ff15"
+        },
+        "geometry.stderr": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "input.json": {
+          "bytes": 1691,
+          "sha256": "a1a2a8c3e6c0691761d7d0cf1a0882fbb60f33ddb14b3f7efb743b20f7b72687"
+        },
+        "model.json": {
+          "bytes": 382,
+          "sha256": "a8dc2a0554bf79bf8a160a1cdd59930659ce5f5bb1f1fd12f0d98fcfe63ea0cd"
+        },
+        "points.txt": {
+          "bytes": 468,
+          "sha256": "012ec1b57c91faa82e21961938a413d402816e889d437f09e993288ad76cef89"
+        },
+        "positive_replay.json": {
+          "bytes": 273,
+          "sha256": "82f0d2fdad16749333b536aca5d86b0f2c34f497c03d8b42b7500707174affd4"
+        },
+        "terminalsafe.cnf": {
+          "bytes": 350483,
+          "sha256": "53eb37406847625c3980c655929e014b78d102c60ea92049cfd85fd49c629f0f"
+        }
+      },
+      "fourcaps": 2126,
+      "geometry": {
+        "chains": 17347,
+        "maxcap": 4,
+        "maxcup": 7,
+        "maxgon": 7
+      },
+      "label": "COMPUTED",
+      "literals": 111706,
+      "m": 31,
+      "n": 8,
+      "name": "n8-i001",
+      "outcome": "SAT_EXACT_MODEL_CHECKED",
+      "replay": {
+        "cap_triples_checked": 58,
+        "complement": {
+          "maxcap": 4,
+          "maxcup": 6,
+          "maxgon": 6
+        },
+        "full": {
+          "maxcap": 4,
+          "maxcup": 7,
+          "maxgon": 7
+        },
+        "selected": {
+          "maxcap": 3,
+          "maxcup": 6,
+          "maxgon": 7
+        },
+        "two_line_certificates": 0
+      },
+      "seconds": 0.07047646900173277,
+      "solver_exit": 10,
+      "targets": 14630,
+      "terminal_rank3_triples": 844,
+      "variables": 31
+    },
+    {
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        30,
+        31,
+        32
+      ],
+      "ambient_pairs": 116,
+      "clauses": 16646,
+      "exposed_pairs": 14,
+      "exposed_triples": 41,
+      "files": {
+        "certificates.json": {
+          "bytes": 44400,
+          "sha256": "1c141a27b12483e25dbf297555e7c19ec404828e71b976e7feeed9c35c84fe6c"
+        },
+        "envelope.cnf": {
+          "bytes": 348676,
+          "sha256": "210b2f05fe5f694116c9846d3022a51aac69ecd5156d60fd52801ff85717f623"
+        },
+        "envelope.json": {
+          "bytes": 83375,
+          "sha256": "20341343e0dd55497a490d9c745f62dc3aee2df45529b1fc28cf72bff412c8f4"
+        },
+        "finder.log": {
+          "bytes": 124,
+          "sha256": "0deacb419dc1177408b2046180caa7c8affcf2cfc800117ac72ecfa75b676574"
+        },
+        "geometry.json": {
+          "bytes": 357130,
+          "sha256": "768b8158838c708db0edc28331de33c02469eb9eaa33c4b5c0c2df0c4c34ea67"
+        },
+        "geometry.stderr": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "input.json": {
+          "bytes": 1767,
+          "sha256": "e3798bed7c4e620e1b9a8b9e7b4ad64414d39c77e625a1351e80a37ed4e10bcc"
+        },
+        "model.json": {
+          "bytes": 447,
+          "sha256": "52f43108938995a9001ca6e27f8057f85cbf1ed5765c3ffdaacc1a42effa2d76"
+        },
+        "points.txt": {
+          "bytes": 492,
+          "sha256": "2bd81a2f5d55be7ca21762c02fb8f84661b62d2448aa9e687d716cca78c16364"
+        },
+        "positive_replay.json": {
+          "bytes": 274,
+          "sha256": "236b2e368e5a703cccf000bf39c87582963e96b7e7075ef588dc505d75553c7d"
+        },
+        "terminalsafe.cnf": {
+          "bytes": 355496,
+          "sha256": "1bab6db1b455d1e7ce507f0ddada1d9b34a5ce029f97dfeeda40fa0c4a63a88a"
+        }
+      },
+      "fourcaps": 1486,
+      "geometry": {
+        "chains": 58978,
+        "maxcap": 4,
+        "maxcup": 7,
+        "maxgon": 7
+      },
+      "label": "COMPUTED",
+      "literals": 111900,
+      "m": 33,
+      "n": 8,
+      "name": "n8-i002",
+      "outcome": "SAT_EXACT_MODEL_CHECKED",
+      "replay": {
+        "cap_triples_checked": 215,
+        "complement": {
+          "maxcap": 4,
+          "maxcup": 5,
+          "maxgon": 6
+        },
+        "full": {
+          "maxcap": 4,
+          "maxcup": 7,
+          "maxgon": 7
+        },
+        "selected": {
+          "maxcap": 3,
+          "maxcup": 7,
+          "maxgon": 7
+        },
+        "two_line_certificates": 0
+      },
+      "seconds": 0.07396146300015971,
+      "solver_exit": 10,
+      "targets": 15119,
+      "terminal_rank3_triples": 583,
+      "variables": 33
+    }
+  ],
+  "counts": {
+    "SAT_EXACT_MODEL_CHECKED": 2
+  },
+  "elapsed_seconds": 0.17605578299844638,
+  "label": "COMPUTED",
+  "peak_child_rss_kib": 24412,
+  "peak_self_rss_kib": 24412,
+  "scope": "Fixed coordinates and explicitly listed orientation-preserving variations; no universal theorem or certification.",
+  "stop": "COMPLETE"
+}

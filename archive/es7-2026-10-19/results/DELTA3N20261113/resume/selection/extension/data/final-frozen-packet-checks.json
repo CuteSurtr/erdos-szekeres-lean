@@ -1,0 +1,24 @@
+{
+  "label": "COMPUTED integrity check",
+  "checked_UTC": "2026-11-13T23:26:10Z",
+  "results": [
+    {
+      "packet": "fourcuts14_audit",
+      "checked_files": 22,
+      "manifest_sha256": "065bfd5829ab91700b099b166bd29e4b50fcc2ef71ed85ecdb48b071fbe7ebaa",
+      "failures": []
+    },
+    {
+      "packet": "low_split_audit/left16_replay",
+      "checked_files": 87,
+      "manifest_sha256": "8b98c67e0a3ee14a49d1d512a31f3508dd7a2cfa0c4bc4d7cc92d002cd6fd315",
+      "failures": []
+    },
+    {
+      "packet": "low_split/consequences",
+      "checked_files": 20,
+      "manifest_sha256": "0852efad4a8498a5196b9fb09032a27c3de2003b7c60f4513055bc8747efb91a",
+      "failures": []
+    }
+  ]
+}

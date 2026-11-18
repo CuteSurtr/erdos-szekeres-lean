@@ -1,0 +1,1314 @@
+{
+  "status": "PASS",
+  "cases": {
+    "n5_pure_long_cup": {
+      "n": 5,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          9
+        ]
+      ],
+      "size": 4,
+      "branch": "root_not_End3",
+      "selected": [
+        2
+      ],
+      "selected_first_lacks_End3": true,
+      "End3": [],
+      "prefix_target_endpoints": [],
+      "prefix_beta": [
+        1,
+        2,
+        3
+      ],
+      "maxima": {
+        "cup": 4,
+        "cap": 2,
+        "gon": 4
+      },
+      "prefix_cup": 3,
+      "targets": 1,
+      "old_targets": 0,
+      "targets_using_root": 1,
+      "admissible": true,
+      "complement_maxgon": 3
+    },
+    "n5_upper_three_target": {
+      "n": 5,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          216
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          9
+        ]
+      ],
+      "size": 4,
+      "branch": "root_End3",
+      "selected": [
+        3
+      ],
+      "selected_first_lacks_End3": false,
+      "End3": [
+        2,
+        3
+      ],
+      "prefix_target_endpoints": [],
+      "prefix_beta": [
+        1,
+        2,
+        2
+      ],
+      "maxima": {
+        "cup": 3,
+        "cap": 3,
+        "gon": 4
+      },
+      "prefix_cup": 2,
+      "targets": 1,
+      "old_targets": 0,
+      "targets_using_root": 1,
+      "admissible": true,
+      "complement_maxgon": 3
+    },
+    "n5_extremal": {
+      "n": 5,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -4
+        ],
+        [
+          3,
+          12
+        ],
+        [
+          4,
+          13
+        ],
+        [
+          5,
+          16
+        ]
+      ],
+      "size": 6,
+      "branch": "root_End3",
+      "selected": [
+        4,
+        5
+      ],
+      "selected_first_lacks_End3": false,
+      "End3": [
+        2,
+        4,
+        5
+      ],
+      "prefix_target_endpoints": [
+        4
+      ],
+      "prefix_beta": [
+        1,
+        2,
+        2,
+        3,
+        3
+      ],
+      "maxima": {
+        "cup": 3,
+        "cap": 3,
+        "gon": 4
+      },
+      "prefix_cup": 3,
+      "targets": 9,
+      "old_targets": 3,
+      "targets_using_root": 6,
+      "admissible": true,
+      "complement_maxgon": 3
+    },
+    "n5_extremal_plus_high_root": {
+      "n": 5,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -4
+        ],
+        [
+          3,
+          12
+        ],
+        [
+          4,
+          13
+        ],
+        [
+          5,
+          16
+        ],
+        [
+          6,
+          61
+        ]
+      ],
+      "size": 7,
+      "branch": "root_not_End3",
+      "selected": [
+        3,
+        4,
+        5
+      ],
+      "selected_first_lacks_End3": true,
+      "End3": [
+        2,
+        4,
+        5
+      ],
+      "prefix_target_endpoints": [
+        4,
+        5
+      ],
+      "prefix_beta": [
+        1,
+        2,
+        2,
+        3,
+        3,
+        3
+      ],
+      "maxima": {
+        "cup": 4,
+        "cap": 3,
+        "gon": 4
+      },
+      "prefix_cup": 3,
+      "targets": 19,
+      "old_targets": 9,
+      "targets_using_root": 10,
+      "admissible": true,
+      "complement_maxgon": 3
+    },
+    "n6_pure_long_cup": {
+      "n": 6,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          16
+        ]
+      ],
+      "size": 5,
+      "branch": "root_not_End3",
+      "selected": [
+        3
+      ],
+      "selected_first_lacks_End3": true,
+      "End3": [],
+      "prefix_target_endpoints": [],
+      "prefix_beta": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "maxima": {
+        "cup": 5,
+        "cap": 2,
+        "gon": 5
+      },
+      "prefix_cup": 4,
+      "targets": 1,
+      "old_targets": 0,
+      "targets_using_root": 1,
+      "admissible": true,
+      "complement_maxgon": 4
+    },
+    "n6_upper_three_target": {
+      "n": 6,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          343
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          16
+        ]
+      ],
+      "size": 5,
+      "branch": "root_End3",
+      "selected": [
+        4
+      ],
+      "selected_first_lacks_End3": false,
+      "End3": [
+        3,
+        4
+      ],
+      "prefix_target_endpoints": [],
+      "prefix_beta": [
+        1,
+        2,
+        3,
+        3
+      ],
+      "maxima": {
+        "cup": 4,
+        "cap": 3,
+        "gon": 5
+      },
+      "prefix_cup": 3,
+      "targets": 1,
+      "old_targets": 0,
+      "targets_using_root": 1,
+      "admissible": true,
+      "complement_maxgon": 4
+    },
+    "n6_extremal": {
+      "n": 6,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -4
+        ],
+        [
+          3,
+          12
+        ],
+        [
+          4,
+          13
+        ],
+        [
+          5,
+          16
+        ],
+        [
+          6,
+          100
+        ],
+        [
+          7,
+          101
+        ],
+        [
+          8,
+          104
+        ],
+        [
+          9,
+          109
+        ]
+      ],
+      "size": 10,
+      "branch": "root_End3",
+      "selected": [
+        7,
+        8,
+        9
+      ],
+      "selected_first_lacks_End3": false,
+      "End3": [
+        2,
+        4,
+        5,
+        7,
+        8,
+        9
+      ],
+      "prefix_target_endpoints": [
+        7,
+        8
+      ],
+      "prefix_beta": [
+        1,
+        2,
+        2,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4
+      ],
+      "maxima": {
+        "cup": 4,
+        "cap": 3,
+        "gon": 5
+      },
+      "prefix_cup": 4,
+      "targets": 60,
+      "old_targets": 30,
+      "targets_using_root": 30,
+      "admissible": true,
+      "complement_maxgon": 4
+    },
+    "n6_extremal_plus_high_root": {
+      "n": 6,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -4
+        ],
+        [
+          3,
+          12
+        ],
+        [
+          4,
+          13
+        ],
+        [
+          5,
+          16
+        ],
+        [
+          6,
+          100
+        ],
+        [
+          7,
+          101
+        ],
+        [
+          8,
+          104
+        ],
+        [
+          9,
+          109
+        ],
+        [
+          10,
+          437
+        ]
+      ],
+      "size": 11,
+      "branch": "root_not_End3",
+      "selected": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "selected_first_lacks_End3": true,
+      "End3": [
+        2,
+        4,
+        5,
+        7,
+        8,
+        9
+      ],
+      "prefix_target_endpoints": [
+        7,
+        8,
+        9
+      ],
+      "prefix_beta": [
+        1,
+        2,
+        2,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4
+      ],
+      "maxima": {
+        "cup": 5,
+        "cap": 3,
+        "gon": 5
+      },
+      "prefix_cup": 4,
+      "targets": 101,
+      "old_targets": 60,
+      "targets_using_root": 41,
+      "admissible": true,
+      "complement_maxgon": 4
+    },
+    "n7_pure_long_cup": {
+      "n": 7,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          16
+        ],
+        [
+          5,
+          25
+        ]
+      ],
+      "size": 6,
+      "branch": "root_not_End3",
+      "selected": [
+        4
+      ],
+      "selected_first_lacks_End3": true,
+      "End3": [],
+      "prefix_target_endpoints": [],
+      "prefix_beta": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "maxima": {
+        "cup": 6,
+        "cap": 2,
+        "gon": 6
+      },
+      "prefix_cup": 5,
+      "targets": 1,
+      "old_targets": 0,
+      "targets_using_root": 1,
+      "admissible": true,
+      "complement_maxgon": 5
+    },
+    "n7_upper_three_target": {
+      "n": 7,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          512
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          16
+        ],
+        [
+          5,
+          25
+        ]
+      ],
+      "size": 6,
+      "branch": "root_End3",
+      "selected": [
+        5
+      ],
+      "selected_first_lacks_End3": false,
+      "End3": [
+        3,
+        4,
+        5
+      ],
+      "prefix_target_endpoints": [],
+      "prefix_beta": [
+        1,
+        2,
+        3,
+        3,
+        4
+      ],
+      "maxima": {
+        "cup": 5,
+        "cap": 3,
+        "gon": 6
+      },
+      "prefix_cup": 4,
+      "targets": 1,
+      "old_targets": 0,
+      "targets_using_root": 1,
+      "admissible": true,
+      "complement_maxgon": 5
+    },
+    "n7_extremal": {
+      "n": 7,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -4
+        ],
+        [
+          3,
+          12
+        ],
+        [
+          4,
+          13
+        ],
+        [
+          5,
+          16
+        ],
+        [
+          6,
+          100
+        ],
+        [
+          7,
+          101
+        ],
+        [
+          8,
+          104
+        ],
+        [
+          9,
+          109
+        ],
+        [
+          10,
+          757
+        ],
+        [
+          11,
+          758
+        ],
+        [
+          12,
+          761
+        ],
+        [
+          13,
+          766
+        ],
+        [
+          14,
+          773
+        ]
+      ],
+      "size": 15,
+      "branch": "root_End3",
+      "selected": [
+        11,
+        12,
+        13,
+        14
+      ],
+      "selected_first_lacks_End3": false,
+      "End3": [
+        2,
+        4,
+        5,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14
+      ],
+      "prefix_target_endpoints": [
+        11,
+        12,
+        13
+      ],
+      "prefix_beta": [
+        1,
+        2,
+        2,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5
+      ],
+      "maxima": {
+        "cup": 5,
+        "cap": 3,
+        "gon": 6
+      },
+      "prefix_cup": 5,
+      "targets": 410,
+      "old_targets": 246,
+      "targets_using_root": 164,
+      "admissible": true,
+      "complement_maxgon": 5
+    },
+    "n7_extremal_plus_high_root": {
+      "n": 7,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -4
+        ],
+        [
+          3,
+          12
+        ],
+        [
+          4,
+          13
+        ],
+        [
+          5,
+          16
+        ],
+        [
+          6,
+          100
+        ],
+        [
+          7,
+          101
+        ],
+        [
+          8,
+          104
+        ],
+        [
+          9,
+          109
+        ],
+        [
+          10,
+          757
+        ],
+        [
+          11,
+          758
+        ],
+        [
+          12,
+          761
+        ],
+        [
+          13,
+          766
+        ],
+        [
+          14,
+          773
+        ],
+        [
+          15,
+          3998
+        ]
+      ],
+      "size": 16,
+      "branch": "root_not_End3",
+      "selected": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "selected_first_lacks_End3": true,
+      "End3": [
+        2,
+        4,
+        5,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14
+      ],
+      "prefix_target_endpoints": [
+        11,
+        12,
+        13,
+        14
+      ],
+      "prefix_beta": [
+        1,
+        2,
+        2,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "maxima": {
+        "cup": 6,
+        "cap": 3,
+        "gon": 6
+      },
+      "prefix_cup": 5,
+      "targets": 616,
+      "old_targets": 410,
+      "targets_using_root": 206,
+      "admissible": true,
+      "complement_maxgon": 5
+    },
+    "n8_pure_long_cup": {
+      "n": 8,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          16
+        ],
+        [
+          5,
+          25
+        ],
+        [
+          6,
+          36
+        ]
+      ],
+      "size": 7,
+      "branch": "root_not_End3",
+      "selected": [
+        5
+      ],
+      "selected_first_lacks_End3": true,
+      "End3": [],
+      "prefix_target_endpoints": [],
+      "prefix_beta": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maxima": {
+        "cup": 7,
+        "cap": 2,
+        "gon": 7
+      },
+      "prefix_cup": 6,
+      "targets": 1,
+      "old_targets": 0,
+      "targets_using_root": 1,
+      "admissible": true,
+      "complement_maxgon": 6
+    },
+    "n8_upper_three_target": {
+      "n": 8,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          729
+        ],
+        [
+          4,
+          16
+        ],
+        [
+          5,
+          25
+        ],
+        [
+          6,
+          36
+        ]
+      ],
+      "size": 7,
+      "branch": "root_End3",
+      "selected": [
+        6
+      ],
+      "selected_first_lacks_End3": false,
+      "End3": [
+        4,
+        5,
+        6
+      ],
+      "prefix_target_endpoints": [],
+      "prefix_beta": [
+        1,
+        2,
+        3,
+        4,
+        4,
+        5
+      ],
+      "maxima": {
+        "cup": 6,
+        "cap": 3,
+        "gon": 7
+      },
+      "prefix_cup": 5,
+      "targets": 1,
+      "old_targets": 0,
+      "targets_using_root": 1,
+      "admissible": true,
+      "complement_maxgon": 6
+    },
+    "n8_extremal": {
+      "n": 8,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -4
+        ],
+        [
+          3,
+          12
+        ],
+        [
+          4,
+          13
+        ],
+        [
+          5,
+          16
+        ],
+        [
+          6,
+          100
+        ],
+        [
+          7,
+          101
+        ],
+        [
+          8,
+          104
+        ],
+        [
+          9,
+          109
+        ],
+        [
+          10,
+          757
+        ],
+        [
+          11,
+          758
+        ],
+        [
+          12,
+          761
+        ],
+        [
+          13,
+          766
+        ],
+        [
+          14,
+          773
+        ],
+        [
+          15,
+          7213
+        ],
+        [
+          16,
+          7214
+        ],
+        [
+          17,
+          7217
+        ],
+        [
+          18,
+          7222
+        ],
+        [
+          19,
+          7229
+        ],
+        [
+          20,
+          7238
+        ]
+      ],
+      "size": 21,
+      "branch": "root_End3",
+      "selected": [
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "selected_first_lacks_End3": false,
+      "End3": [
+        2,
+        4,
+        5,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "prefix_target_endpoints": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "prefix_beta": [
+        1,
+        2,
+        2,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "maxima": {
+        "cup": 6,
+        "cap": 3,
+        "gon": 7
+      },
+      "prefix_cup": 6,
+      "targets": 3090,
+      "old_targets": 2060,
+      "targets_using_root": 1030,
+      "admissible": true,
+      "complement_maxgon": 6
+    },
+    "n8_extremal_plus_high_root": {
+      "n": 8,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -4
+        ],
+        [
+          3,
+          12
+        ],
+        [
+          4,
+          13
+        ],
+        [
+          5,
+          16
+        ],
+        [
+          6,
+          100
+        ],
+        [
+          7,
+          101
+        ],
+        [
+          8,
+          104
+        ],
+        [
+          9,
+          109
+        ],
+        [
+          10,
+          757
+        ],
+        [
+          11,
+          758
+        ],
+        [
+          12,
+          761
+        ],
+        [
+          13,
+          766
+        ],
+        [
+          14,
+          773
+        ],
+        [
+          15,
+          7213
+        ],
+        [
+          16,
+          7214
+        ],
+        [
+          17,
+          7217
+        ],
+        [
+          18,
+          7222
+        ],
+        [
+          19,
+          7229
+        ],
+        [
+          20,
+          7238
+        ],
+        [
+          21,
+          45854
+        ]
+      ],
+      "size": 22,
+      "branch": "root_not_End3",
+      "selected": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "selected_first_lacks_End3": true,
+      "End3": [
+        2,
+        4,
+        5,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "prefix_target_endpoints": [
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "prefix_beta": [
+        1,
+        2,
+        2,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "maxima": {
+        "cup": 7,
+        "cap": 3,
+        "gon": 7
+      },
+      "prefix_cup": 6,
+      "targets": 4327,
+      "old_targets": 3090,
+      "targets_using_root": 1237,
+      "admissible": true,
+      "complement_maxgon": 6
+    }
+  },
+  "elapsed_seconds": 0.6461577360023512,
+  "peak_rss_kib": 17768,
+  "source_sha256": "e66850e63a3840f7a4d8837cac3d05a0f53695866086f1a31e89f4652ea9e85b"
+}

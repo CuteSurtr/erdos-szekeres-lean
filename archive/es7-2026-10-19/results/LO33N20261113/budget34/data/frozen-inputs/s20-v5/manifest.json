@@ -1,0 +1,119 @@
+{
+  "previous": "/home/jay/research/data/es308-20261114/inputs/s20-v4",
+  "previous_extra_sha256": "87078c69295094ce00b1f02c516fb2cf2821e07e897e6e5ef7591c5eb6466e6f",
+  "previous_rows_sha256": "1017439755191973170ec32266dfd9ad8b141e99afc57aa14d77188723a07902",
+  "accepted_source": "/home/jay/research/data/es308-20261114/cuts-v5/accepted.json",
+  "accepted_source_sha256": "61e4770aaf5a872a8ef5e0c07a512fb363d14ff96cb2d2955b798e3d09f98ee9",
+  "appended_rows": 5,
+  "rows": 3623,
+  "extra_sha256": "e6601e5edcddfcc653a0891eef63d8010a6dd303431d312515fa8e8e03618126",
+  "rows_sha256": "8d8c970f37b99309e94a7a8b06537024fe7264abfe8c2af501c6f0cf6b463fb0",
+  "bindings": [
+    {
+      "support": [
+        17,
+        43,
+        65,
+        68,
+        77,
+        79,
+        89,
+        110,
+        115,
+        123,
+        130,
+        138,
+        142
+      ],
+      "cnf_sha256": "3d920f76c681716218f64f51da2b90babdaf7a1c3d67405374ca54fcbd0b494c",
+      "lrat_sha256": "2fc5fd789e28b5c14689da64525a52d439e6f7d1d47d5cd37b57c2b8b939f5b1",
+      "cake_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+      "acceptance_receipt": "/home/jay/research/data/es308-20261114/cuts-v5/0000/receipt.json"
+    },
+    {
+      "support": [
+        17,
+        43,
+        65,
+        68,
+        77,
+        79,
+        89,
+        110,
+        115,
+        123,
+        130,
+        143,
+        147
+      ],
+      "cnf_sha256": "53faf42aa5d91d7c3c03c2d279ce66bd58bb5be749fa4d1eb3410e0612f85de7",
+      "lrat_sha256": "3964aaeca2666bb469193de918ee8fe16c95c08a3bedce3e5d36c7fe01e3ad4e",
+      "cake_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+      "acceptance_receipt": "/home/jay/research/data/es308-20261114/cuts-v5/0001/receipt.json"
+    },
+    {
+      "support": [
+        24,
+        34,
+        39,
+        64,
+        68,
+        71,
+        83,
+        86,
+        91,
+        97,
+        100,
+        119,
+        126
+      ],
+      "cnf_sha256": "4c552bbe240b95ed6689f995c22c028a27b9e5cc712123582d7ed1371b735951",
+      "lrat_sha256": "694745f1c9f5c751e7d885e3f5e75565c2a7b20e352a6fff1c43ccf15362f798",
+      "cake_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+      "acceptance_receipt": "/home/jay/research/data/es308-20261114/cuts-v5/0002/receipt.json"
+    },
+    {
+      "support": [
+        25,
+        43,
+        65,
+        68,
+        77,
+        79,
+        89,
+        110,
+        115,
+        123,
+        130,
+        138,
+        142
+      ],
+      "cnf_sha256": "a4e25879a82b8d9b45fa94ac624443d86d6d4ab7cdec29fbadb92c6f2cbb8083",
+      "lrat_sha256": "d9d811f38fb32292a6dc67f893233b6c14af591525851b6c8e1c7565061d2a35",
+      "cake_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+      "acceptance_receipt": "/home/jay/research/data/es308-20261114/cuts-v5/0003/receipt.json"
+    },
+    {
+      "support": [
+        25,
+        43,
+        65,
+        68,
+        77,
+        79,
+        89,
+        110,
+        115,
+        123,
+        130,
+        143,
+        147
+      ],
+      "cnf_sha256": "346603f40f44ee9843b27531e01641d3dd41771259e74a2f99df28cb7c787658",
+      "lrat_sha256": "242cc8d4f72d0efcc018a365e11dbbd70e5749a499f78e896458e2a5a8970da6",
+      "cake_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+      "acceptance_receipt": "/home/jay/research/data/es308-20261114/cuts-v5/0004/receipt.json"
+    }
+  ],
+  "status": "CERTIFIED appended rows; independent replay recorded separately"
+}

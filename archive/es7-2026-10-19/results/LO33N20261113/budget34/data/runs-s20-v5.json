@@ -1,0 +1,37 @@
+{
+  "label": "COMPUTED finder result; not yet EXACT TREE",
+  "slice": 20,
+  "budget": 34,
+  "runner_sha256": "459b07c96ade5f446119051563587988df81254d08b813d1f4b6670a44512331",
+  "command": [
+    "/home/jay/research/data/es308-20261114/bin/fastbb2",
+    "solve",
+    "/home/jay/research/data/es308-20261114/inputs/s20-v5/rows.txt",
+    "34",
+    "12",
+    "2048",
+    "/home/jay/research/data/es308-20261114/runs/s20/bb",
+    "--slice=1",
+    "--on-witness=stop",
+    "--time-limit=72",
+    "--max-ctx-nodes=50000",
+    "--ktop=16",
+    "--dtop=8",
+    "--klow=4",
+    "--sbiter=1000"
+  ],
+  "exit": 4,
+  "seconds": 75.88249163600267,
+  "peak_sampled_rss_kib": 349564,
+  "stop_reason": null,
+  "input_hashes": {
+    "/home/jay/research/data/es308-20261114/inputs/s20-v5/rows.txt": "8d8c970f37b99309e94a7a8b06537024fe7264abfe8c2af501c6f0cf6b463fb0",
+    "/home/jay/research/data/es308-20261114/inputs/s20-v5/extra.json": "e6601e5edcddfcc653a0891eef63d8010a6dd303431d312515fa8e8e03618126",
+    "/home/jay/research/data/es308-20261114/inputs/source-2650.json.gz": "8c7fe9ef5264182524095d46ef50ed6bc691cab425efa965756d1870112241aa",
+    "/home/jay/research/data/es308-20261114/bin/fastbb2": "39b724a2b5f5b08b56f3e9aedb24886c08ae2716301008410aaba9a1452b33b5"
+  },
+  "stable_input_hashes": true,
+  "contexts_saved": 1107,
+  "cache_releases": 1107,
+  "finished": "2026-11-14T10:44:43.502572+09:00"
+}

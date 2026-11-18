@@ -1,0 +1,24 @@
+{
+  "label": "COMPUTED independent positive-witness replay",
+  "status": "PASS",
+  "results": [
+    {
+      "size": 13,
+      "cases": 105,
+      "input_sha256": "53564d0248617fc4aa8914dd644cb5150d62e05fe2c067c331f887fd215514a3",
+      "terminal_cap_triples_checked": 7
+    },
+    {
+      "size": 14,
+      "cases": 15,
+      "input_sha256": "027b2f30056f6a0a93ad2716de203cd02bf20d1e5b36695d80a9b1ef98c26774",
+      "terminal_cap_triples_checked": 13
+    }
+  ],
+  "all_13_and_14_restrictions_checked": true,
+  "script_sha256": "8f7af6eb0655720ac6ddf5f8e5a3683523d90b4f7e0c07a3ea712a16d3f8a13e",
+  "geometry_sha256": "7e3284de00e2246699786623c2e285e46541cbf2d6b3241fca0a3c8aefb4a3d9",
+  "coordinate_sha256": "7da027c4f6c800245a9f715e684872358fea36cab0d0133aa15e0a0b199eed9b",
+  "finder_sha256": "0096dfb34306f0e6507d42066dc368db4e17c62c5d5c414023ff4cb2bd37e175",
+  "scope": "These 120 subsets of this fixed realization only. Smaller sizes use the separate theorem; no global 14-point claim."
+}

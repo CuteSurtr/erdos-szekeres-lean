@@ -1,0 +1,84 @@
+{
+  "label": "COMPUTED",
+  "independent_full_hull_enumeration": true,
+  "m": 16,
+  "n": 7,
+  "cap4_count": 71,
+  "cap5_count": 0,
+  "gon_n_count": 0,
+  "gon_n_minus_1_count": 279,
+  "distinct_lower_parts": 176,
+  "tau": 4,
+  "cap_free_tau": 5,
+  "counts_by_size": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    32,
+    280,
+    1199,
+    3006,
+    4787,
+    5047,
+    3590,
+    1729,
+    560,
+    120,
+    16,
+    1
+  ],
+  "cap_free_counts_by_size": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    17,
+    151,
+    596,
+    1133,
+    1007,
+    404,
+    60,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "all_minimum_transversals": [
+    [
+      1,
+      5,
+      6,
+      7
+    ]
+  ],
+  "cap_free_witness": [
+    0,
+    1,
+    2,
+    5,
+    6
+  ],
+  "disjoint_cups": null,
+  "formula_audits": {
+    "unconstrained_lower.cnf": {
+      "clauses": 330,
+      "necessary_lower_clauses": 73,
+      "fourcap_clauses": 0,
+      "bound": 3,
+      "counter_and_bound_exact": true
+    },
+    "cap_free_same_size.cnf": {
+      "clauses": 430,
+      "necessary_lower_clauses": 102,
+      "fourcap_clauses": 71,
+      "bound": 4,
+      "counter_and_bound_exact": true
+    }
+  },
+  "seconds": 0.162523
+}

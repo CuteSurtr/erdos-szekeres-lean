@@ -1,0 +1,7 @@
+cloud/es7-2026-10-19/results/DELTA3N20261113/resume/compact/compact_cnf.cpp: In member function ‘void Encoder::run()’:
+cloud/es7-2026-10-19/results/DELTA3N20261113/resume/compact/compact_cnf.cpp:231:13: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  231 |             if(!first)std::cout<<',';first=false;
+      |             ^~
+cloud/es7-2026-10-19/results/DELTA3N20261113/resume/compact/compact_cnf.cpp:231:38: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  231 |             if(!first)std::cout<<',';first=false;
+      |                                      ^~~~~

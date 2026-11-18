@@ -1,0 +1,222 @@
+{
+  "cases": {
+    "n5_rank_counter": {
+      "status": "PASS",
+      "n": 5,
+      "m_left": 6,
+      "m_full": 7,
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          -3
+        ],
+        [
+          3,
+          -3
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          -16
+        ]
+      ],
+      "actual_fourcaps": 4,
+      "actual_unprotected_cap_triples": 9,
+      "actual_targets": 11,
+      "option1_count": 15,
+      "option2_count": 21,
+      "direct_terminal_count": 36,
+      "predicted_terminal_count": 36,
+      "assignments_compared": 128,
+      "no_fivecap": true,
+      "no_n_gon": true
+    },
+    "n6_old_real11": {
+      "status": "PASS",
+      "n": 6,
+      "m_left": 11,
+      "m_full": 13,
+      "P": [
+        [
+          8930,
+          40332
+        ],
+        [
+          53030,
+          24895
+        ],
+        [
+          71573,
+          -44546
+        ],
+        [
+          120094,
+          8990
+        ],
+        [
+          122148,
+          14671
+        ],
+        [
+          122648,
+          -29897
+        ],
+        [
+          123148,
+          -16011
+        ],
+        [
+          123648,
+          20977
+        ],
+        [
+          157127,
+          -27262
+        ],
+        [
+          157627,
+          -12108
+        ],
+        [
+          197078,
+          23890
+        ],
+        [
+          197079,
+          -6664469
+        ],
+        [
+          197080,
+          -6664468
+        ]
+      ],
+      "actual_fourcaps": 126,
+      "actual_unprotected_cap_triples": 93,
+      "actual_targets": 125,
+      "option1_count": 20,
+      "option2_count": 0,
+      "direct_terminal_count": 60,
+      "predicted_terminal_count": 60,
+      "assignments_compared": 8192,
+      "no_fivecap": true,
+      "no_n_gon": true
+    },
+    "n7_fixed_left16": {
+      "status": "PASS",
+      "n": 7,
+      "m_left": 16,
+      "m_full": 19,
+      "P": [
+        [
+          -844374,
+          882369
+        ],
+        [
+          -777797,
+          673920
+        ],
+        [
+          -666388,
+          534411
+        ],
+        [
+          -415596,
+          -650873
+        ],
+        [
+          -373275,
+          -686237
+        ],
+        [
+          -203631,
+          -829902
+        ],
+        [
+          85240,
+          116040
+        ],
+        [
+          167726,
+          409733
+        ],
+        [
+          194410,
+          513930
+        ],
+        [
+          237399,
+          -682215
+        ],
+        [
+          246159,
+          -688113
+        ],
+        [
+          291993,
+          -241018
+        ],
+        [
+          451073,
+          -473361
+        ],
+        [
+          694388,
+          -797697
+        ],
+        [
+          769820,
+          689715
+        ],
+        [
+          911973,
+          990041
+        ],
+        [
+          911974,
+          -19451949
+        ],
+        [
+          911975,
+          -19451948
+        ],
+        [
+          911976,
+          -19451945
+        ]
+      ],
+      "actual_fourcaps": 543,
+      "actual_unprotected_cap_triples": 253,
+      "actual_targets": 481,
+      "option1_count": 88,
+      "option2_count": 0,
+      "direct_terminal_count": 616,
+      "predicted_terminal_count": 616,
+      "assignments_compared": 524288,
+      "no_fivecap": true,
+      "no_n_gon": true
+    }
+  },
+  "inputs": {
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA2N20261113/data/cex/restr_QQ_weak_a4_n6_m11_real.json": "a6690423ab44c1d9994593d197361b8f39828c8be8d16e539f59bb9db676a5f7",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/structure2/data/low_n7_fixed_1.json": "8fa461d64145f7fb182c89e268a71ba0b4f2f59893f0e86c38227b24ad5812c4"
+  },
+  "status": "PASS",
+  "elapsed_seconds": 0.7166617260008934,
+  "peak_rss_kib": 17908,
+  "source_sha256": "f6b25b2abccec50b10850f8e37641c4c14e63a139de0aa18d2e7f416e54bd67a"
+}

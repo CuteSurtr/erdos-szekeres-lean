@@ -1,0 +1,47 @@
+{
+  "unsuccessful_coordinate_subsets": 36204,
+  "interpretation": "Every listed trial had a pair hitting its convex six-targets; not an all-set obstruction.",
+  "numeric_proposals_without_candidate": 7,
+  "numeric_statuses_are_not_evidence": true,
+  "failed_rounding_amplitudes": 109,
+  "expected_invalid_controls": [
+    {
+      "name": "eleven_cup_has_seven_gons",
+      "status": "EXPECTED_REJECTION",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "duplicate_point",
+      "status": "EXPECTED_REJECTION",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "family_lower_endpoint",
+      "status": "EXPECTED_REJECTION",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "family_upper_endpoint",
+      "status": "EXPECTED_REJECTION",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "selected_triple_misses_a_target",
+      "status": "EXPECTED_REJECTION",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "ordinary_delta_triple_is_not_terminal_safe",
+      "status": "EXPECTED_REJECTION",
+      "exception": "StopIteration"
+    },
+    {
+      "name": "valid_boundary_set_admits_a_pair",
+      "status": "EXPECTED_REJECTION",
+      "exception": "StopIteration"
+    }
+  ],
+  "resource_failures": [],
+  "mathematical_replay_failures": [],
+  "path_probe": "An exploratory read of extension/envelope/prepare.py and a root *.py glob found no files; actual tools/ paths were subsequently listed. No computation relied on the missing path."
+}

@@ -1,0 +1,129 @@
+{
+  "label": "COMPUTED",
+  "geometry_method": "four-subset point-in-triangle",
+  "four_state": [
+    {
+      "file": "four_state_obstruction.json",
+      "m": 16,
+      "cap4_count": 71,
+      "gon_count": 279,
+      "lower_count": 176,
+      "fan_count": 12,
+      "closed_component": [
+        {
+          "hole": 1,
+          "allowed_next_holes": [
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "hole": 5,
+          "allowed_next_holes": [
+            1,
+            6,
+            7
+          ]
+        },
+        {
+          "hole": 6,
+          "allowed_next_holes": [
+            1,
+            5,
+            7
+          ]
+        },
+        {
+          "hole": 7,
+          "allowed_next_holes": [
+            1,
+            5,
+            6
+          ]
+        }
+      ],
+      "compatible_four_point_red": null
+    },
+    {
+      "file": "four_state_obstruction_small.json",
+      "m": 13,
+      "cap4_count": 17,
+      "gon_count": 90,
+      "lower_count": 90,
+      "fan_count": 11,
+      "closed_component": [
+        {
+          "hole": 1,
+          "allowed_next_holes": [
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "hole": 5,
+          "allowed_next_holes": [
+            1,
+            6,
+            7
+          ]
+        },
+        {
+          "hole": 6,
+          "allowed_next_holes": [
+            1,
+            5,
+            7
+          ]
+        },
+        {
+          "hole": 7,
+          "allowed_next_holes": [
+            1,
+            5,
+            6
+          ]
+        }
+      ],
+      "compatible_four_point_red": [
+        0,
+        1,
+        2,
+        4
+      ]
+    }
+  ],
+  "one_recolor": [
+    {
+      "n": 7,
+      "m": 12,
+      "mode": "weak",
+      "minimum_old_recolorings": 2,
+      "hole": 0
+    },
+    {
+      "n": 7,
+      "m": 12,
+      "mode": "cup",
+      "minimum_old_recolorings": 2,
+      "hole": 0
+    },
+    {
+      "n": 8,
+      "m": 13,
+      "mode": "weak",
+      "minimum_old_recolorings": 2,
+      "hole": 3
+    },
+    {
+      "n": 8,
+      "m": 13,
+      "mode": "cup",
+      "minimum_old_recolorings": 2,
+      "hole": 3
+    }
+  ],
+  "elapsed_seconds": 0.029614238999783993,
+  "max_rss_kib": 14300
+}

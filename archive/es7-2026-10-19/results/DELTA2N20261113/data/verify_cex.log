@@ -1,0 +1,56 @@
+endpair_weak_a5_n6_m10.json abstract only (not realized) - skipped
+endpair_weak_a5_n6_m11.json (a=5, n=6, 11 points, end-pair): 39 caps, 77 gons, 376 working Deltas (weak); none of them meets the pair of ends of every gon: VERIFIED
+endpair_weak_a5_n6_m9.json (a=5, n=6, 9 points, end-pair): 10 caps, 34 gons, 251 working Deltas (weak); none of them meets the pair of ends of every gon: VERIFIED
+must_Qall_weak_a5_n6_m10.json (a=5, n=6, 10 points, must=Qall): 24 caps, 24 gons, 454 working Deltas (weak); no working Delta contains the must-set [6, 7, 8, 9]: VERIFIED
+must_Qall_weak_a5_n6_m11.json abstract only (not realized) - skipped
+must_Qall_weak_a5_n6_m12.json abstract only (not realized) - skipped
+must_Qall_weak_a5_n6_m8.json (a=5, n=6, 8 points, must=Qall): 10 caps, 10 gons, 161 working Deltas (weak); no working Delta contains the must-set [5, 6, 7]: VERIFIED
+must_Qall_weak_a5_n6_m9.json (a=5, n=6, 9 points, must=Qall): 34 caps, 28 gons, 155 working Deltas (weak); no working Delta contains the must-set [5, 6, 7, 8]: VERIFIED
+must_cupRL_strong_a4_n6_m10.json abstract only (not realized) - skipped
+must_cupRL_strong_a4_n6_m11.json abstract only (not realized) - skipped
+must_cupRL_strong_a4_n6_m8.json (a=4, n=6, 8 points, must=cupRL): 10 caps, 11 gons, 85 working Deltas (strong); no working Delta contains the must-set [0, 4, 5, 6, 7]: VERIFIED
+must_cupRL_strong_a4_n6_m9.json (a=4, n=6, 9 points, must=cupRL): 9 caps, 36 gons, 90 working Deltas (strong); no working Delta contains the must-set [0, 1, 5, 7, 8]: VERIFIED
+must_cupRL_weak_a5_n6_m10.json abstract only (not realized) - skipped
+must_cupRL_weak_a5_n6_m11.json abstract only (not realized) - skipped
+must_cupRL_weak_a5_n6_m12.json abstract only (not realized) - skipped
+must_cupRL_weak_a5_n6_m9.json (a=5, n=6, 9 points, must=cupRL): 5 caps, 13 gons, 349 working Deltas (weak); no working Delta contains the must-set [0, 1, 2, 6, 7, 8]: VERIFIED
+must_cupR_strong_a4_n6_m10.json abstract only (not realized) - skipped
+must_cupR_strong_a4_n6_m11.json abstract only (not realized) - skipped
+must_cupR_strong_a4_n6_m9.json (a=4, n=6, 9 points, must=cupR): 19 caps, 17 gons, 102 working Deltas (strong); no working Delta contains the must-set [5, 6, 7, 8]: VERIFIED
+must_cupR_weak_a5_n6_m10.json abstract only (not realized) - skipped
+must_cupR_weak_a5_n6_m11.json (a=5, n=6, 11 points, must=cupR): 27 caps, 43 gons, 582 working Deltas (weak); no working Delta contains the must-set [6, 7, 8, 10]: VERIFIED
+must_cupR_weak_a5_n6_m12.json abstract only (not realized) - skipped
+must_gonRQ_strong_a4_n6_m10.json abstract only (not realized) - skipped
+must_gonRQ_strong_a4_n6_m11.json abstract only (not realized) - skipped
+must_gonRQ_strong_a4_n6_m8.json (a=4, n=6, 8 points, must=gonRQ): 18 caps, 13 gons, 59 working Deltas (strong); no working Delta contains the must-set [5, 6, 7]: VERIFIED
+must_gonRQ_strong_a4_n6_m9.json (a=4, n=6, 9 points, must=gonRQ): 20 caps, 21 gons, 64 working Deltas (strong); no working Delta contains the must-set [4, 6, 7, 8]: VERIFIED
+must_gonRQ_weak_a5_n6_m10.json (a=5, n=6, 10 points, must=gonRQ): 10 caps, 28 gons, 511 working Deltas (weak); no working Delta contains the must-set [7, 8, 9]: VERIFIED
+must_gonRQ_weak_a5_n6_m11.json abstract only (not realized) - skipped
+must_gonRQ_weak_a5_n6_m12.json abstract only (not realized) - skipped
+must_gonRQ_weak_a5_n6_m8.json (a=5, n=6, 8 points, must=gonRQ): 7 caps, 11 gons, 177 working Deltas (weak); no working Delta contains the must-set [5, 6, 7]: VERIFIED
+must_gonRQ_weak_a5_n6_m9.json (a=5, n=6, 9 points, must=gonRQ): 32 caps, 18 gons, 200 working Deltas (weak); no working Delta contains the must-set [5, 6, 7, 8]: VERIFIED
+nosafe_a5_n6_m10.json (a=5, n=6, 10 points, nosafe): 20 caps, 24 gons, 423 working Deltas (weak); no point is safe: VERIFIED
+restr_QQ_strong_a4_n6_m10.json (a=4, n=6, 10 points, allow=QQ): 34 caps, 31 gons, 57 working Deltas (strong); allowed set [0, 1, 3, 4, 8, 9] contains no working Delta: VERIFIED
+restr_QQ_strong_a4_n6_m11.json abstract only (not realized) - skipped
+restr_QQ_strong_a4_n7_m12.json abstract only (not realized) - skipped
+restr_QQ_weak_a4_n6_m11.json abstract only (not realized) - skipped
+restr_QQ_weak_a4_n6_m11_real.json (a=4, n=6, 11 points, allow=QQ): 63 caps, 62 gons, 25 working Deltas (weak); allowed set [0, 1, 3, 4, 7, 9, 10] contains no working Delta: VERIFIED
+restr_Q_strong_a4_n5_m7.json (a=4, n=5, 7 points, allow=Q): 6 caps, 19 gons, 12 working Deltas (strong); allowed set [5, 6] contains no working Delta: VERIFIED
+restr_ends_weak_a5_n6_m12.json abstract only (not realized) - skipped
+restr_ends_weak_a5_n6_m12_real.json (a=5, n=6, 12 points, allow=ends): 31 caps, 178 gons, 541 working Deltas (weak); allowed set [0, 1, 2, 3, 4, 7, 9, 10, 11] contains no working Delta: VERIFIED
+restr_ends_weak_a5_n7_m12.json abstract only (not realized) - skipped
+restr_ends_weak_a5_n7_m12_real.json (a=5, n=7, 12 points, allow=ends): 28 caps, 80 gons, 1829 working Deltas (weak); allowed set [0, 1, 2, 3, 8, 9, 10, 11] contains no working Delta: VERIFIED
+restr_ends_weak_a5_n8_m13.json abstract only (not realized) - skipped
+restr_ends_weak_a5_n8_m13_real.json (a=5, n=8, 13 points, allow=ends): 26 caps, 133 gons, 3916 working Deltas (weak); allowed set [0, 1, 2, 3, 9, 10, 11, 12] contains no working Delta: VERIFIED
+threshold1_a4_n6_m10.json abstract only (not realized) - skipped
+threshold1_a4_n6_m11.json abstract only (not realized) - skipped
+threshold1_a4_n6_m9.json (a=4, n=6, 9 points, threshold-1): 29 caps, 18 gons, 73 working Deltas (weak); no threshold x gives a working Delta_x: VERIFIED
+threshold1_a5_n6_m10.json (a=5, n=6, 10 points, threshold-1): 18 caps, 41 gons, 334 working Deltas (weak); no threshold x gives a working Delta_x: VERIFIED
+threshold1_a5_n6_m11.json (a=5, n=6, 11 points, threshold-1): 27 caps, 41 gons, 554 working Deltas (weak); no threshold x gives a working Delta_x: VERIFIED
+threshold1_a5_n6_m12.json abstract only (not realized) - skipped
+upperchain_strong_a4_n6_m10.json (a=4, n=6, 10 points, upper-chain): 31 caps, 27 gons, 57 working Deltas (strong); none of them meets the cap part of every gon: VERIFIED
+upperchain_strong_a4_n6_m11.json abstract only (not realized) - skipped
+upperchain_weak_a5_n6_m11.json (a=5, n=6, 11 points, upper-chain): 5 caps, 102 gons, 861 working Deltas (weak); none of them meets the cap part of every gon: VERIFIED
+upperchain_weak_a5_n6_m12.json abstract only (not realized) - skipped
+upperchain_weak_a5_n7_m12.json abstract only (not realized) - skipped
+upperchain_weak_a5_n8_m13.json (a=5, n=8, 13 points, upper-chain): 5 caps, 73 gons, 5746 working Deltas (weak); none of them meets the cap part of every gon: VERIFIED

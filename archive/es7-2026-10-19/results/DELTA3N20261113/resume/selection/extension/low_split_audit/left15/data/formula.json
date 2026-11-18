@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "label": "COMPUTED",
+  "left_m": 15,
+  "right_m": 3,
+  "n": 7,
+  "variant": "compact",
+  "variables": 63368,
+  "clauses": 447615,
+  "literals": 1200138,
+  "phase_rows": {
+    "signotope": 10920,
+    "no5cap": 3003,
+    "convex4_equivalence": 10920,
+    "convex_larger_equivalence": 48048,
+    "no_ngon": 6435,
+    "left_has_no_fourcap": 1365,
+    "ends_three_cap_equivalence": 470,
+    "bad_pair_or_cap_exact_containment": 153075,
+    "target_exact_containment": 182552,
+    "no_covered_cup_transversal": 30827
+  },
+  "phase_literals": {
+    "signotope": 32760,
+    "no5cap": 9009,
+    "convex4_equivalence": 32760,
+    "convex_larger_equivalence": 128128,
+    "no_ngon": 32175,
+    "left_has_no_fourcap": 5460,
+    "ends_three_cap_equivalence": 1380,
+    "bad_pair_or_cap_exact_containment": 397813,
+    "target_exact_containment": 502018,
+    "no_covered_cup_transversal": 58635
+  },
+  "phase_max_width": {
+    "signotope": 3,
+    "no5cap": 3,
+    "convex4_equivalence": 3,
+    "convex_larger_equivalence": 6,
+    "no_ngon": 5,
+    "left_has_no_fourcap": 4,
+    "ends_three_cap_equivalence": 92,
+    "bad_pair_or_cap_exact_containment": 5,
+    "target_exact_containment": 8,
+    "no_covered_cup_transversal": 2
+  },
+  "map_counts": {
+    "orientation": 455,
+    "convex": 9373,
+    "ends_three_cap": 15,
+    "bad_pair_or_cap_contains": 30706,
+    "target_contains": 22819
+  },
+  "cnf_map_byte_identical_rebuild": true,
+  "hashes": {
+    "/home/jay/research/data/delta3-codex-20261113/extension/low15-n7-compact.cnf": "793063f5c7c5208c16ce038c63659878adee4eb049546d775d65c5a18ed60418",
+    "/home/jay/research/data/delta3-codex-20261113/extension/low15-n7-compact.cnf.map": "851185520efcf6dd6b76c988c645b38272901527559eb8891bed614cf74755a6"
+  },
+  "empty_End3_count": 2,
+  "option2_rows": 0
+}

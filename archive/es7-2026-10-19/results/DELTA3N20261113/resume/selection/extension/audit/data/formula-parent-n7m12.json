@@ -1,0 +1,35 @@
+{
+  "label": "COMPUTED",
+  "status": "PASS",
+  "mode": "formula",
+  "script_sha256": "513c0cb75e6f38c15907425754df9411afb123dcfa3d1651cab5c68e2b4a7990",
+  "result": {
+    "m": 12,
+    "n": 7,
+    "variables": 7735,
+    "clauses": 33972,
+    "phases": {
+      "signotope": 3960,
+      "no5cap": 792,
+      "convex4_equivalence": 3960,
+      "convex_larger_equivalence": 10296,
+      "no_ngon": 792,
+      "terminal_fourcap_equivalence": 2475,
+      "terminal_bad_triple_equivalence": 3806,
+      "bad_triple_containment": 3003,
+      "target_containment": 1586,
+      "forall_terminal_delta": 3302
+    },
+    "literals": 108401,
+    "hashes": {
+      "/home/jay/research/data/delta3-codex-20261113/extension/terminal7-a/m12/input.cnf": "cebe762c17735b3f811355987acc8912b57b880f341f3ff286097dd98e97d850",
+      "/home/jay/research/data/delta3-codex-20261113/extension/terminal7-a/m12/input.cnf.map": "e609af1580bd11fbb3b2bbc66140aeca40b53974265613c9804dc44fb21ce6b9"
+    },
+    "canonical_failed_clauses": {},
+    "first_failures": {},
+    "map_and_all_rows_match": true,
+    "fixed_signs": false
+  },
+  "elapsed_seconds": 0.041521213002852164,
+  "max_rss_KiB": 19324
+}

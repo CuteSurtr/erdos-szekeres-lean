@@ -1,0 +1,138 @@
+{
+  "formula": {
+    "m": 7,
+    "n": 5,
+    "variables": 204,
+    "clauses": 1143,
+    "phases": {
+      "signotope": 280,
+      "no5cap": 21,
+      "convex4_equivalence": 280,
+      "no_ngon": 21,
+      "terminal_fourcap_equivalence": 175,
+      "terminal_bad_triple_equivalence": 203,
+      "bad_triple_containment": 35,
+      "target_containment": 29,
+      "forall_terminal_delta": 99
+    },
+    "literals": 3325,
+    "hashes": {
+      "/home/jay/research/data/delta3-codex-20261113/extension/n5m7-terminal.cnf": "1d0fb8ff80d4754a37ea2eb889737c3c460fffa113314ab8d9b1fe8ca2d452cb",
+      "/home/jay/research/data/delta3-codex-20261113/extension/n5m7-terminal.cnf.map": "df36d396bc25f264d72183c5f3546ade464d763d2e493a69ef8a3b449d25da65"
+    },
+    "canonical_failed_clauses": {},
+    "first_failures": {},
+    "map_and_all_rows_match": true,
+    "fixed_signs": false
+  },
+  "real_control": {
+    "m": 7,
+    "n": 5,
+    "minimum_absolute_determinant": 1,
+    "four_caps": 1,
+    "bad_triples": 3,
+    "five_caps": 0,
+    "targets": 19,
+    "n_gons": 0,
+    "terminal_deltas": 44,
+    "terminal_deltas_by_size": {
+      "3": 14,
+      "4": 24,
+      "5": 6
+    },
+    "first_terminal_delta": [
+      0,
+      2,
+      3
+    ],
+    "every_subset_checked": 128
+  },
+  "canonical_rows": {
+    "m": 7,
+    "n": 5,
+    "variables": 204,
+    "clauses": 1143,
+    "phases": {
+      "signotope": 280,
+      "no5cap": 21,
+      "convex4_equivalence": 280,
+      "no_ngon": 21,
+      "terminal_fourcap_equivalence": 175,
+      "terminal_bad_triple_equivalence": 203,
+      "bad_triple_containment": 35,
+      "target_containment": 29,
+      "forall_terminal_delta": 99
+    },
+    "literals": 3325,
+    "hashes": {
+      "/home/jay/research/data/delta3-codex-20261113/extension/n5m7-terminal.cnf": "1d0fb8ff80d4754a37ea2eb889737c3c460fffa113314ab8d9b1fe8ca2d452cb",
+      "/home/jay/research/data/delta3-codex-20261113/extension/n5m7-terminal.cnf.map": "df36d396bc25f264d72183c5f3546ade464d763d2e493a69ef8a3b449d25da65"
+    },
+    "canonical_failed_clauses": {
+      "forall_terminal_delta": 38
+    },
+    "first_failures": {
+      "forall_terminal_delta": {
+        "clause": 1058,
+        "row": [
+          111,
+          65
+        ]
+      }
+    },
+    "map_and_all_rows_match": true,
+    "fixed_signs": false
+  },
+  "four_subset_triangle_checks": 35,
+  "withdrawn_m7_shortcut_counterexample": {
+    "P": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        2,
+        -3
+      ],
+      [
+        3,
+        -6
+      ],
+      [
+        10,
+        500
+      ],
+      [
+        11,
+        600
+      ],
+      [
+        12,
+        699
+      ]
+    ],
+    "A": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "no_fourcap": true,
+    "hits_all_targets": true,
+    "blue_size": 3,
+    "terminal_safe": false,
+    "unprotected_triple": [
+      0,
+      1,
+      2
+    ],
+    "reason": "No ambient four-cap can end at pair(1,2), which has fewer than two earlier vertices."
+  },
+  "original_cnf_sha256": "1d0fb8ff80d4754a37ea2eb889737c3c460fffa113314ab8d9b1fe8ca2d452cb",
+  "map_sha256": "df36d396bc25f264d72183c5f3546ade464d763d2e493a69ef8a3b449d25da65",
+  "solver_input_byte_identical": true
+}

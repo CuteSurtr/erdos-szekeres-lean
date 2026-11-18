@@ -365,3 +365,44 @@ python3 m9/tools/sigma.py 9 29 m9/m9_n29_s1.cnf                     # INVARIANT
 OUT=m9/cc1 TL=2 PL=600 CAKEHEAP=800 python m9/tools/m9cc.py          # resumes the tree
 python3 m9/tools/verify_tree.py m9/cc1; python3 m9/tools/treestats.py m9/cc1 1
 ```
+
+## Addendum, 15 November 2026 (00:27- KST): the next ring of C, continued (in progress)
+
+Lower-bound track of the 14-15 November night (the owner asked for lower-bound research until 03:00). Question C:
+does an 8-fold set of 128 points without a convex 9-gon exist? This run continues C.5/C.6 ("finish the ring two
+displaced layers") with the unchanged tools of this record in the same work directory
+(`/home/jay/research/data/satopen-20261113/k9`): `mkcube.py cycx K P`, `solve.sh`, `check.sh`, `sched.py`.
+- Queue: the cyclic cases `cycx_kK_pP` with K = 2..14 and P = 3..11 (both increasing segments have at least 3 layers,
+  so no theorem of C.2-C.4 covers them), ordered P = 7, 6, 8, 5, 9, 4, 10, 3, 11, minus the 6 already certified:
+  111 cases. The exact 175-case list of C.5 (which also has P = 1, 2, 12, 13 cases for some K) was not reconstructed
+  tonight; a "ring complete" statement needs it.
+- Scheduler: unit `esr-k9-sched` (CPUQuota 300 %, MemoryMax 16 G, no swap), `MAXJOBS=3 MEMB=13.2 SOFT=02:35
+  HARD=02:45`; memory guard `esr-memguard3` (track k9 14 G, total 24 G). The old `STOP` flag and `queue.txt` of
+  13 November were renamed to `STOP.20261113` and `queue.txt.20261113` (not deleted).
+- A case counts only with `VERIFIED_LINES 1` in its `result.txt` (cake_lpr's exact line `s VERIFIED UNSAT`); proofs
+  are kept as `proof.lrat.zst`. A SAT case would give a candidate model, which would need an exact realization check.
+- **Result of the first run (00:27-02:36):** 39 cyclic cases CERTIFIED (`VERIFIED_LINES 1`, proofs kept as
+  `proof.lrat.zst`); no case was SAT. Independent check of the encodings (`verify_cycx.py BASE0.cnf <30 cases>`,
+  output `k9/verify_cycx_20261115a.txt`): for each case the 91 units encode exactly the claimed cut cyclic spiral and
+  SHA-256(BASE0 + units) matches the solved cube. Three further cases (k6_p5, k7_p5, k8_p5) were solved UNSAT and
+  are checked first by the second run.
+- **Exact ring list:** `tools/k9/ring_cases.py` (new) enumerates the cases left after Theorems 3 and 4 (a case is
+  dropped iff layers 3..13, or 12 consecutive layers, avoid the free layers and lie in one increasing segment) and
+  asserts the counts of C.5: 95 linear, 175 cyclic. Status at 02:37: cyclic 61 + 3 pending of 175, linear 2 of 95.
+- **Second run (02:37-05:45):** unit `esr-k9-sched2` (`MAXJOBS=2 MEMB=13.2 SOFT=05:35 HARD=05:45`) on the exact
+  remaining list (`queue.txt`; previous queue kept as `queue.txt.20261115a`): 113 cyclic cases (P near 7 first),
+  then the 93 linear cases; 130 new case folders made with the unchanged `mkcube.py`.
+- **Third run (05:52-09:36):** unit `esr-k9-sched4` (`MAXJOBS=2 MEMB=9.2 SOFT=09:35 HARD=09:45`) on `queue.txt`. The
+  scheduler stopped at its soft deadline and left two solved cases unchecked, cycx_k11_p12 and cycx_k12_p12. The main
+  session ran their unchanged `check.sh` at 09:37-09:39 (unit `esr-k9-checkfinal`, heap 8500): both `VERIFIED_LINES 1`.
+- **Final count, 09:40: cyclic 155 of 175 CERTIFIED**, each with the exact line `s VERIFIED UNSAT` in its own `cake.out`.
+  **Linear: 2 of 95.** No case was SAT. The list of certified cases is in `k9/certified_cycx_final.txt`.
+- **Encodings checked for all 155 certified cyclic cases.** `verify_cycx.py BASE0.cnf <cases>` reports, for every case,
+  the expected cut cyclic spiral, layer K free, `VERIFIED_LINES 1` and a recomputed CNF hash that matches.
+  - `k9/verify_cycx_20261115b.txt`: 149/149, at 09:03.
+  - `k9/verify_cycx_20261115c.txt`: the 6 cases certified later, 6/6.
+  - The first 30 cases are also in `k9/verify_cycx_20261115a.txt`.
+- **Remaining:** 20 cyclic and 93 linear cases. The exact list is `k9/queue.txt` minus the certified folders. At the
+  measured rates, that is about 20 × 10 minutes + 93 × 23 minutes, roughly 40 CPU-hours of CaDiCaL plus cake_lpr
+  (HEURISTIC). The ring "two displaced layers" is therefore **not finished**, and no k = 9 statement beyond the
+  individual cases follows yet.

@@ -1,0 +1,74 @@
+{
+  "cache_releases": 374,
+  "commands": [
+    [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/home/jay/research/data/delta3-codex-20261113/extension/fourcuts14-a/cadical.time",
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "723",
+      "/usr/bin/cadical",
+      "--unsat",
+      "--seed=714",
+      "-t",
+      "720",
+      "--lrat=true",
+      "--binary=true",
+      "/home/jay/research/data/delta3-codex-20261113/extension/fourcuts14-a/input.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/extension/fourcuts14-a/proof.blrat"
+    ],
+    [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/home/jay/research/data/delta3-codex-20261113/extension/fourcuts14-a/compress.time",
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "600",
+      "/usr/bin/zstd",
+      "-q",
+      "-T1",
+      "-3",
+      "-k",
+      "/home/jay/research/data/delta3-codex-20261113/extension/fourcuts14-a/proof.blrat"
+    ]
+  ],
+  "compressed_bytes": 914343064,
+  "compressed_roundtrip_verified": true,
+  "finished": true,
+  "hashes": {
+    "cadical": "4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70",
+    "cadical.log": "469d6c38dd9c8fa368ab217bc26b364c6d1fea119edcfc4c44a41522f2c39c45",
+    "cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+    "compress.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "input.cnf": "3c6c1f83e2cf426ca13eb2e9ba7e363a1da42f1138cc3b9503c57601678e5788",
+    "proof.blrat": "d93303925621d1568cf54d403fb545e2eedb25d6e726bedb33d44cdc1122d10f",
+    "proof.blrat.zst": "72c9e65aecdacb53faac4ba1a0deca2927314130f061d1e327142c275d0d6cd0",
+    "run_binary.py": "51b68321e85d90005e651698fddb8bdb22c0b8c24ff169f977fe5dd71a9b79ce"
+  },
+  "label": "COMPUTED",
+  "limits": {
+    "as_mib": 700,
+    "cake_seconds": 360,
+    "heap_mib": 450,
+    "solver_seconds": 720,
+    "stack_mib": 32
+  },
+  "proof_bytes": 1490790481,
+  "proof_format": "binary LRAT",
+  "runs": {
+    "cadical": {
+      "exit": 0,
+      "seconds": 720.11
+    },
+    "compress": {
+      "exit": 0,
+      "seconds": 5.436
+    }
+  },
+  "seconds": 729.813,
+  "source_cnf": "/home/jay/research/data/delta3-codex-20261113/extension/n7m14-fourcuts.cnf",
+  "status": "UNKNOWN"
+}

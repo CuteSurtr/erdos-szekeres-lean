@@ -1,0 +1,15 @@
+9280 [(13, 5579), (14, 2483), (16, 246), (18, 242), (15, 199), (17, 146), (11, 98), (9, 87)]
+{"rows": 9280, "budget": 9, "vars": 601, "clauses": 10394, "cnf_sha256": "600f65110cf8e10dd05a7a1944fae26af1c1a217e7df6c336785da028965fae7", "rows_sha256": "975ea342890e3b379f658f54c1dedcf92b0743b50258eb1df03eabcb060873f1"}
+{"cadical_exit": 20, "seconds": 2.4}
+{"cake_lpr": "s VERIFIED UNSAT", "seconds": 0.9}
+{"rows": 9280, "budget": 9, "vars": 601, "clauses": 10394, "cnf_sha256": "600f65110cf8e10dd05a7a1944fae26af1c1a217e7df6c336785da028965fae7", "rows_sha256": "975ea342890e3b379f658f54c1dedcf92b0743b50258eb1df03eabcb060873f1", "cadical_exit": 20, "cadical_seconds": 2.4, "lrat_bytes": 37513136, "lrat_sha256": "1e6016420e69af33592c82edb3e197d3fc75598675d73561b141bbfbc97ea928", "cake_lpr": "s VERIFIED UNSAT", "cake_seconds": 0.9, "used_original_clauses": 2927, "used_rows": 2100}
+{"rows": 2100, "templates": 115, "direct": 8, "bad": 0, "secs": 1.8}
+{"templates_verified": 115, "templates": 115, "cores_verified": 8, "cores": 8, "unjustified": 0, "kinds": {"cycle": 51, "core": 8, "transported": 1058, "mirror": 983}, "secs": 251.3}
+{"rows": 2100, "budget": 9, "vars": 601, "clauses": 3214, "cnf_sha256": "dcd64c5a4b899526dc56c13d0501922633a75c8f020263670ef1ef9956b28c62", "rows_sha256": "bc0458019f0f326f8d5667bae74ab462ff48134788b5e34d0dd4fabb08e376ce"}
+{"cadical_exit": 20, "seconds": 2.3}
+{"cake_lpr": "s VERIFIED UNSAT", "seconds": 0.8}
+{"rows": 2100, "budget": 9, "vars": 601, "clauses": 3214, "cnf_sha256": "dcd64c5a4b899526dc56c13d0501922633a75c8f020263670ef1ef9956b28c62", "rows_sha256": "bc0458019f0f326f8d5667bae74ab462ff48134788b5e34d0dd4fabb08e376ce", "cadical_exit": 20, "cadical_seconds": 2.3, "lrat_bytes": 35132500, "lrat_sha256": "c7f8c381668e1d640bbc06832e1f2de6811c5fad33b025371abaa005f694df47", "cake_lpr": "s VERIFIED UNSAT", "cake_seconds": 0.8, "used_original_clauses": 2524, "used_rows": 1728}
+encoding selftest ok (200 random instances)
+dcd64c5a4b899526dc56c13d0501922633a75c8f020263670ef1ef9956b28c62
+{"rows": 2100, "kinds": {"mirror": 983, "transported": 1058, "cycle": 51, "core": 8}, "bad": 0, "rows_match": true, "templates_verified": 115, "templates": 115, "cores_verified": 8, "cores": 8}
+FINAL66_DONE

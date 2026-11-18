@@ -1,0 +1,10 @@
+{
+  "preserved_failures": [
+    {
+      "kind": "output_directory_missing",
+      "exit_code": 1,
+      "exception": "FileNotFoundError: No such file or directory: supplements/terminal12/data/profile.json",
+      "detail": "The initial profile completed its geometry assertions but failed when saving because the new data directory did not exist. No output was retained from that run. The script now creates its output parent; the complete check was rerun. This was not a geometric counterexample, solver failure, timeout or OOM."
+    }
+  ]
+}

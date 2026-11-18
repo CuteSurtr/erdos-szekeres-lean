@@ -1,0 +1,7 @@
+{"time": "2026-11-14T22:10:47.434079+09:00", "event": "CARRIED_PREVIOUS_CONTEXTS", "contexts": 151, "nodes": 2987123}
+{"time": "2026-11-14T22:10:47.634489+09:00", "event": "CARRIED_INCREMENTAL_RECEIPTS", "contexts": 4273}
+{"time": "2026-11-14T22:10:48.743598+09:00", "event": "PINNED_EPOCH", "version": "s20-v13", "rows": 3672, "contexts": 4289, "master_sha256": "cfe6dce8961b98d6cda81a19db2cd5859bd5510bf80b6a254a236c518d99133f"}
+{"time": "2026-11-14T22:11:02.822097+09:00", "event": "TREE_CHECKPOINT", "version": "s20-v13", "contexts": 4285, "total": 4289, "nodes": 30933299, "pending": 5, "minimum_margin": 1, "label": "PARTIAL EXACT REPLAY; NO EXCLUSION"}
+{"time": "2026-11-14T22:11:16.727837+09:00", "event": "TREE_CHECKPOINT", "version": "s20-v13", "contexts": 4289, "total": 4289, "nodes": 30959083, "pending": 1, "minimum_margin": 1, "label": "EXACT TREE"}
+{"time": "2026-11-14T22:11:22.887843+09:00", "event": "TREE_CHECKPOINT", "version": "s20-v13", "contexts": 4289, "total": 4289, "nodes": 30959083, "pending": 1, "minimum_margin": 1, "label": "EXACT TREE"}
+{"time": "2026-11-14T22:11:22.889238+09:00", "event": "FINISHED", "version": "s20-v13"}

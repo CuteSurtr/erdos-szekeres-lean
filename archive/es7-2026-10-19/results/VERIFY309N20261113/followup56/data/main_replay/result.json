@@ -1,0 +1,26 @@
+{
+  "as_mib": 3600,
+  "cake_binary_sha256": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+  "cake_output_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+  "cnf": "/home/jay/research/data/n66-20261113/p2/b13g/it1/trim.cnf",
+  "cnf_sha256": "8d4b9099cf045ca72ba5ac56e8ecea00a73a44652d5a9f3d100f63f1f10bc151",
+  "command": [
+    "/usr/bin/timeout",
+    "--kill-after=2",
+    "450",
+    "/home/jay/.local/bin/cake_lpr",
+    "--CML_HEAP_SIZE=3200",
+    "--CML_STACK_SIZE=32",
+    "/home/jay/research/data/n66-20261113/p2/b13g/it1/trim.cnf",
+    "/home/jay/research/data/n66-20261113/p2/b13g/it1/trim.lrat"
+  ],
+  "exit": 0,
+  "heap": 3200,
+  "label": "CERTIFIED",
+  "lrat_sha256": "ff79c2ef3805255b18917dc0769c5088cca0ee8106c5eefb78b8f212fa487296",
+  "proof": "/home/jay/research/data/n66-20261113/p2/b13g/it1/trim.lrat",
+  "stack": 32,
+  "status": "VERIFIED",
+  "verdict": "s VERIFIED UNSAT",
+  "wall_seconds": 210.841
+}

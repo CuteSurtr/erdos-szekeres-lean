@@ -1,0 +1,34 @@
+{
+  "command": [
+    "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean",
+    "-j1",
+    "-s16384",
+    "-M1000",
+    "--root=/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry",
+    "-o",
+    "/home/jay/research/data/delta3-codex-20261113/extension/lean/SevenCover06.olean",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/SevenCover06.lean"
+  ],
+  "exit_code": 0,
+  "stop_reason": null,
+  "source_sha256": "5aed9e0a4ec44bacc125a591bccfa48fe2e8e771d34efa2d5ec02f8ffcd45b73",
+  "elapsed_seconds": 0.841,
+  "proc_status_peaks_kib_except_threads": {
+    "VmPeak": 894332,
+    "VmSize": 894332,
+    "VmHWM": 665208,
+    "VmRSS": 665208,
+    "RssAnon": 349944,
+    "RssFile": 315264,
+    "VmSwap": 0,
+    "Threads": 5
+  },
+  "rusage_maxrss_kib": 670536,
+  "as_limit_bytes": 4294967296,
+  "rss_guard_mib": 1300,
+  "lean_heap_mib": 1000,
+  "cpu_affinity": [
+    4
+  ],
+  "wall_deadline_seconds": 27
+}

@@ -1,0 +1,21 @@
+{
+  "m": 9,
+  "n": 5,
+  "variables": 210,
+  "clauses": 2268,
+  "literals": 7056,
+  "phases": {
+    "signotope": 1008,
+    "no5cap": 126,
+    "convex4_equivalence": 1008,
+    "convex_larger_equivalence": 0,
+    "no_ngon": 126,
+    "fixed_signs": 0
+  },
+  "pure_geometry_only": true,
+  "map_and_body_byte_identical": true,
+  "rebuilt_sha256": "0a2b952daba8431cf17d331f63d1f1f634896ab6c65eea5700fcc83dcb614844",
+  "original_cnf_sha256": "0a2b952daba8431cf17d331f63d1f1f634896ab6c65eea5700fcc83dcb614844",
+  "map_sha256": "188f367de49e25a29e9bc486b7ee7f5c0cb586a5d0ea8bea0feedb4ae5002e93",
+  "solver_input_byte_identical": true
+}

@@ -1,0 +1,233 @@
+{
+  "cup": {
+    "blocks": {
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -3
+        ],
+        [
+          3,
+          -6
+        ],
+        [
+          10,
+          500
+        ],
+        [
+          11,
+          600
+        ],
+        [
+          12,
+          699
+        ],
+        [
+          13,
+          797
+        ]
+      ],
+      "mixed_cup_triples": 48,
+      "cap4_masks": [
+        15,
+        240
+      ],
+      "no_five_cap": true,
+      "no_five_gon": true,
+      "n7_A15_hits_targets": true,
+      "n7_A15_all_cap_triples_protected": true,
+      "n5_A31_hits_targets": true,
+      "n5_A31_all_cap_triples_protected": true,
+      "old_cap_still_forbidden": true,
+      "canonical_A4": true,
+      "canonical_A5": true,
+      "four_child_mutation_would_fail": true
+    },
+    "two_support": {
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          -3
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          6,
+          -2
+        ],
+        [
+          7,
+          5
+        ]
+      ],
+      "A": 73,
+      "ordinary_weak_Delta": true,
+      "uniform_margin": "11/4",
+      "single_line_dominator": false,
+      "covered_36": false,
+      "bad_036": true,
+      "target_line": [
+        "-2",
+        "-4"
+      ],
+      "ambient_lines": {
+        "(2, 4)": [
+          "-3/2",
+          "-15/2"
+        ],
+        "(5, 6)": [
+          "-12",
+          "-14"
+        ],
+        "(5, 7)": [
+          "-5/2",
+          "5"
+        ]
+      }
+    }
+  },
+  "forced": {
+    "blocks": {
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -3
+        ],
+        [
+          3,
+          -6
+        ],
+        [
+          10,
+          500
+        ],
+        [
+          11,
+          600
+        ],
+        [
+          12,
+          699
+        ],
+        [
+          13,
+          797
+        ]
+      ],
+      "mixed_cup_triples": 48,
+      "cap4_masks": [
+        15,
+        240
+      ],
+      "no_five_cap": true,
+      "no_five_gon": true,
+      "n7_A15_hits_targets": true,
+      "n7_A15_all_cap_triples_protected": true,
+      "n5_A31_hits_targets": true,
+      "n5_A31_all_cap_triples_protected": true,
+      "old_cap_still_forbidden": true,
+      "canonical_A4": true,
+      "canonical_A5": true,
+      "four_child_mutation_would_fail": true
+    },
+    "two_support": {
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          -3
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          6,
+          -2
+        ],
+        [
+          7,
+          5
+        ]
+      ],
+      "A": 73,
+      "ordinary_weak_Delta": true,
+      "uniform_margin": "11/4",
+      "single_line_dominator": false,
+      "covered_36": false,
+      "bad_036": true,
+      "target_line": [
+        "-2",
+        "-4"
+      ],
+      "ambient_lines": {
+        "(2, 4)": [
+          "-3/2",
+          "-15/2"
+        ],
+        "(5, 6)": [
+          "-12",
+          "-14"
+        ],
+        "(5, 7)": [
+          "-5/2",
+          "5"
+        ]
+      }
+    }
+  },
+  "status": "PASS",
+  "label": "COMPUTED",
+  "exact_gate_truth_assignments": 1020,
+  "mixed_witness_cover_checks": 786,
+  "global_size_monotonicity_claim": false
+}

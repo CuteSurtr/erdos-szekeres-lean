@@ -1,0 +1,1 @@
+At 08:08KST, two bounded probes unintentionally overlapped for under one second because an exec call yielded a running session before the next probe began. Both completed without error, swap or guard. Subsequent replay uses subprocess.run for strict sequential execution. Parent notified.

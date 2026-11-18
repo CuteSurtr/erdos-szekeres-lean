@@ -1,0 +1,105 @@
+{
+  "case_packet_bytes": 1114303545,
+  "case_packets": 945,
+  "changed_exposure_cases": [
+    "n7-i005-v01",
+    "n7-i012-v01",
+    "n7-i034-v01",
+    "n7-i088-v01",
+    "n7-i095-v01",
+    "n8-i085-v02",
+    "n8-i107-v02"
+  ],
+  "counts": {
+    "SAT_EXACT_MODEL_CHECKED": 945
+  },
+  "elapsed_seconds": 69.87844152500475,
+  "groups": [
+    {
+      "cases": 121,
+      "exposed_triple_range": [
+        2,
+        282
+      ],
+      "exposure_family_changed": 0,
+      "kind": "baseline",
+      "max_literals": 66492,
+      "n": 7,
+      "selected_cap_triples_checked": 8588,
+      "size_range": [
+        21,
+        26
+      ],
+      "two_line_certificates": 0
+    },
+    {
+      "cases": 242,
+      "exposed_triple_range": [
+        2,
+        282
+      ],
+      "exposure_family_changed": 5,
+      "kind": "variations",
+      "max_literals": 66492,
+      "n": 7,
+      "selected_cap_triples_checked": 17142,
+      "size_range": [
+        21,
+        26
+      ],
+      "two_line_certificates": 0
+    },
+    {
+      "cases": 194,
+      "exposed_triple_range": [
+        5,
+        715
+      ],
+      "exposure_family_changed": 0,
+      "kind": "baseline",
+      "max_literals": 1688045,
+      "n": 8,
+      "selected_cap_triples_checked": 19889,
+      "size_range": [
+        24,
+        42
+      ],
+      "two_line_certificates": 1
+    },
+    {
+      "cases": 388,
+      "exposed_triple_range": [
+        5,
+        715
+      ],
+      "exposure_family_changed": 2,
+      "kind": "variations",
+      "max_literals": 1688045,
+      "n": 8,
+      "selected_cap_triples_checked": 39696,
+      "size_range": [
+        24,
+        42
+      ],
+      "two_line_certificates": 1
+    }
+  ],
+  "label": "COMPUTED",
+  "limitations": [
+    "No uniform failure or universal existence theorem.",
+    "Two variations per baseline: not independent order types.",
+    "Seven variations change the actual exposure family.",
+    "Full-v1 had a file-cache resource-estimate deviation; see resource_receipt.json.",
+    "Initial 1M-literal preflight UNKNOWN is preserved separately.",
+    "Parent independent replay is separate from the within-track checker."
+  ],
+  "peak_child_rss_kib": 72600,
+  "peak_self_rss_kib": 72600,
+  "scope": "Fixed coordinates and explicitly listed orientation-preserving variations; no universal theorem or certification.",
+  "stop": "COMPLETE",
+  "two_line_cases": [
+    "n8-i107",
+    "n8-i107-v01"
+  ],
+  "verified_external_files": 11353
+}

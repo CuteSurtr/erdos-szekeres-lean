@@ -1,0 +1,46 @@
+{
+  "checker_sha256": "2e55dd9d8d09c7c8027bc587f0ce5d20101d760ab9a5c2deb2f276b59fba4eb6",
+  "clauses": 140621,
+  "clauses_by_phase": {
+    "cap_lattice": 30251,
+    "convex4_equivalence": 10920,
+    "convex_larger_equivalence": 18018,
+    "forall_delta": 32071,
+    "fourcap": 2730,
+    "no5cap": 3003,
+    "no_ngon": 5005,
+    "signotope": 10920,
+    "target_lattice": 27703
+  },
+  "cnf_sha256": "aa614319435bba62fe2dcf629e24cb8a1329a92186a0fb84cb1939dd7041b464",
+  "containment": "witness",
+  "convex": "recurrence",
+  "elapsed_seconds": 0.34082132399998954,
+  "existential_projection_queries": 0,
+  "failed_pool_clauses": 353,
+  "fourcaps": 80,
+  "hull_checker_sha256": "925d7204e6528a3ccc955261ef44448984b2dabc236afee04949f2700a322160",
+  "label": "COMPUTED",
+  "limits": {
+    "affinity": [
+      0
+    ],
+    "as_mib": 400,
+    "cpu_seconds": 18,
+    "external_seconds": 20
+  },
+  "m": 15,
+  "map_sha256": "1fd82304a7d81e710faf0927fef7bbdfba5023279685cdd1519b1f669c8eefde",
+  "mode": "real15",
+  "n": 6,
+  "name": "real15-n6",
+  "omitted_working_deltas_transformed": 0,
+  "peak_rss_kib": 33340,
+  "pool": "reduced",
+  "source_sha256": "1964e17b777fd7b7a973f12b2911c003a050047f13a621f523a9f98c6e31d553",
+  "status": "PASS",
+  "targets": 216,
+  "thread_count": 1,
+  "variables": 64142,
+  "working_delta_count": 353
+}

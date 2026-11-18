@@ -1,0 +1,30 @@
+{
+  "cases": [
+    {
+      "as_mib": 380,
+      "cake_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+      "cnf_sha256": "70f232c7eb9903df380173c85c4a4466e32e1ab080d7a844da374c5aaa9ef522",
+      "encoder": "new",
+      "heap_mib": 96,
+      "initial_default_stack_failure_retained": true,
+      "lrat_sha256": "cfbe3e4c0fe289fec3ab1c0ba940e4fc6caae8ebf3ff1ba96b3a2815a0425c4a",
+      "proof_zst_sha256": "93990a96b83f2914e73eaacde37864af3c4925e7a55243dfd3fea8c7109bc9b2",
+      "stack_mib": 16,
+      "verdict": "s VERIFIED UNSAT"
+    },
+    {
+      "as_mib": 380,
+      "cake_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+      "cnf_sha256": "86d33941df1431c36d6dbf11b54feda930f9ce73b5ca575baeb8175f24e3e12d",
+      "encoder": "old",
+      "heap_mib": 96,
+      "initial_default_stack_failure_retained": true,
+      "lrat_sha256": "e78538f48818b27d4686c0fa5dd10fc1cca3cabbd53f94b139564c22d364166a",
+      "proof_zst_sha256": "cb99adaacc8e1703dce44e63f2d6bdd3c29ebfeeec7185a49615b12b82a119ab",
+      "stack_mib": 16,
+      "verdict": "s VERIFIED UNSAT"
+    }
+  ],
+  "label": "CERTIFIED",
+  "scope": "Individual real five-point Delta-failure queries only"
+}

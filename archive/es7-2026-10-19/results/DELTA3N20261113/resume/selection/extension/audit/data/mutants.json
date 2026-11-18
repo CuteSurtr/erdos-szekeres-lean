@@ -1,0 +1,18 @@
+{
+  "label": "COMPUTED",
+  "mode": "mutants",
+  "status": "PASS",
+  "script_sha256": "be40763fd4c1a0710f201414e498b68af473a09294030efff68d4b0bec0c388c",
+  "own_helper_sha256": "513c0cb75e6f38c15907425754df9411afb123dcfa3d1651cab5c68e2b4a7990",
+  "result": {
+    "mutated_exact_flags_rejected": {
+      "convex": 252,
+      "terminal_fourcap": 126,
+      "terminal_bad_triple": 84
+    },
+    "genuine_internal_witnesses_allowed_false": 285,
+    "bad_lattice_exhaustive_leaf_projection_cases": 1024
+  },
+  "seconds": 0.015143759999773465,
+  "max_rss_KiB": 20864
+}

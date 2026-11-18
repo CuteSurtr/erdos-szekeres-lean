@@ -1,0 +1,9 @@
+{"a": 4, "b": 5, "what": "E", "K": 4, "res": {"4": "UNSAT", "5": "UNSAT", "6": "UNSAT", "7": "UNSAT"}, "verdict": "HOLDS (UNSAT for all n<=7)"}
+{"a": 4, "b": 5, "what": "A", "K": 5, "res": {"5": "UNSAT", "6": "UNSAT", "7": "SAT"}, "verdict": "FAILS/UNKNOWN"}
+{"a": 4, "b": 5, "what": "EuA", "K": 5, "res": {"5": "UNSAT", "6": "UNSAT", "7": "SAT"}, "verdict": "FAILS/UNKNOWN"}
+{"a": 4, "b": 6, "what": "E", "K": 5, "res": {"5": "UNSAT", "6": "UNSAT", "7": "UNSAT", "8": "UNSAT", "9": "UNSAT", "10": "UNSAT", "11": "UNSAT"}, "verdict": "HOLDS (UNSAT for all n<=11)"}
+{"a": 4, "b": 6, "what": "A", "K": 8, "res": {"8": "UNSAT", "9": "UNSAT", "10": "SAT"}, "verdict": "FAILS/UNKNOWN"}
+{"a": 4, "b": 6, "what": "EuA", "K": 8, "res": {"8": "UNSAT", "9": "UNSAT", "10": "SAT"}, "verdict": "FAILS/UNKNOWN"}
+{"a": 5, "b": 5, "what": "E", "K": 8, "res": {"8": "UNSAT", "9": "UNSAT", "10": "UNSAT", "11": "SAT"}, "verdict": "FAILS/UNKNOWN"}
+{"a": 5, "b": 5, "what": "A", "K": 8, "res": {"8": "UNSAT", "9": "UNSAT", "10": "UNSAT", "11": "SAT"}, "verdict": "FAILS/UNKNOWN"}
+{"a": 5, "b": 5, "what": "EuA", "K": 9, "res": {"9": "UNSAT", "10": "UNSAT", "11": "UNSAT", "12": "SAT"}, "verdict": "FAILS/UNKNOWN"}

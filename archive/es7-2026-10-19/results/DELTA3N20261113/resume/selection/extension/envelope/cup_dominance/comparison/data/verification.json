@@ -1,0 +1,2399 @@
+{
+  "label": "COMPUTED separate exact gain replay",
+  "verdict": "PASS",
+  "cases": 318,
+  "valid_geometries": 317,
+  "raw_relation_controls": 1,
+  "closure_added_pairs_checked": 12221,
+  "closure_added_cap_terminal_checked": 5987,
+  "forced_added_pairs_checked": 12253,
+  "forced_added_cap_terminal_checked": 6019,
+  "closure_not_endpoint_forced_pairs": 0,
+  "endpoint_forced_not_closure_pairs": 32,
+  "full_fixed_point_recomputations": [
+    "relation-control",
+    "known18",
+    "real15",
+    "n7-i000",
+    "n7-i019",
+    "n7-i064",
+    "n8-i000",
+    "n8-i001",
+    "n8-i130",
+    "n8-i141"
+  ],
+  "per_case": [
+    {
+      "name": "relation-control",
+      "closure_added_checked": 0,
+      "force_added_checked": 0,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "known18",
+      "closure_added_checked": 24,
+      "force_added_checked": 24,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "real15",
+      "closure_added_checked": 21,
+      "force_added_checked": 21,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i000",
+      "closure_added_checked": 18,
+      "force_added_checked": 18,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i001",
+      "closure_added_checked": 31,
+      "force_added_checked": 31,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i002",
+      "closure_added_checked": 58,
+      "force_added_checked": 58,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i003",
+      "closure_added_checked": 19,
+      "force_added_checked": 19,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i004",
+      "closure_added_checked": 33,
+      "force_added_checked": 33,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i005",
+      "closure_added_checked": 47,
+      "force_added_checked": 47,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i006",
+      "closure_added_checked": 52,
+      "force_added_checked": 52,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i007",
+      "closure_added_checked": 1,
+      "force_added_checked": 3,
+      "closure_not_force": [],
+      "force_not_closure": [
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ]
+      ]
+    },
+    {
+      "name": "n7-i008",
+      "closure_added_checked": 49,
+      "force_added_checked": 49,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i009",
+      "closure_added_checked": 24,
+      "force_added_checked": 24,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i010",
+      "closure_added_checked": 34,
+      "force_added_checked": 34,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i011",
+      "closure_added_checked": 74,
+      "force_added_checked": 74,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i012",
+      "closure_added_checked": 46,
+      "force_added_checked": 46,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i013",
+      "closure_added_checked": 20,
+      "force_added_checked": 20,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i014",
+      "closure_added_checked": 40,
+      "force_added_checked": 40,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i015",
+      "closure_added_checked": 8,
+      "force_added_checked": 8,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i016",
+      "closure_added_checked": 12,
+      "force_added_checked": 12,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i017",
+      "closure_added_checked": 62,
+      "force_added_checked": 62,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i018",
+      "closure_added_checked": 58,
+      "force_added_checked": 58,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i019",
+      "closure_added_checked": 25,
+      "force_added_checked": 25,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i020",
+      "closure_added_checked": 10,
+      "force_added_checked": 10,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i021",
+      "closure_added_checked": 14,
+      "force_added_checked": 14,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i022",
+      "closure_added_checked": 9,
+      "force_added_checked": 9,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i023",
+      "closure_added_checked": 101,
+      "force_added_checked": 101,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i024",
+      "closure_added_checked": 5,
+      "force_added_checked": 5,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i025",
+      "closure_added_checked": 56,
+      "force_added_checked": 56,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i026",
+      "closure_added_checked": 120,
+      "force_added_checked": 120,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i027",
+      "closure_added_checked": 8,
+      "force_added_checked": 8,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i028",
+      "closure_added_checked": 7,
+      "force_added_checked": 7,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i029",
+      "closure_added_checked": 31,
+      "force_added_checked": 31,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i030",
+      "closure_added_checked": 33,
+      "force_added_checked": 33,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i031",
+      "closure_added_checked": 26,
+      "force_added_checked": 26,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i032",
+      "closure_added_checked": 23,
+      "force_added_checked": 23,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i033",
+      "closure_added_checked": 48,
+      "force_added_checked": 48,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i034",
+      "closure_added_checked": 26,
+      "force_added_checked": 26,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i035",
+      "closure_added_checked": 24,
+      "force_added_checked": 24,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i036",
+      "closure_added_checked": 17,
+      "force_added_checked": 17,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i037",
+      "closure_added_checked": 37,
+      "force_added_checked": 37,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i038",
+      "closure_added_checked": 52,
+      "force_added_checked": 52,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i039",
+      "closure_added_checked": 20,
+      "force_added_checked": 20,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i040",
+      "closure_added_checked": 7,
+      "force_added_checked": 7,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i041",
+      "closure_added_checked": 42,
+      "force_added_checked": 42,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i042",
+      "closure_added_checked": 45,
+      "force_added_checked": 45,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i043",
+      "closure_added_checked": 9,
+      "force_added_checked": 9,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i044",
+      "closure_added_checked": 29,
+      "force_added_checked": 29,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i045",
+      "closure_added_checked": 8,
+      "force_added_checked": 11,
+      "closure_not_force": [],
+      "force_not_closure": [
+        [
+          8,
+          16
+        ],
+        [
+          9,
+          16
+        ],
+        [
+          10,
+          16
+        ]
+      ]
+    },
+    {
+      "name": "n7-i046",
+      "closure_added_checked": 38,
+      "force_added_checked": 38,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i047",
+      "closure_added_checked": 63,
+      "force_added_checked": 63,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i048",
+      "closure_added_checked": 2,
+      "force_added_checked": 2,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i049",
+      "closure_added_checked": 34,
+      "force_added_checked": 34,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i050",
+      "closure_added_checked": 58,
+      "force_added_checked": 58,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i051",
+      "closure_added_checked": 44,
+      "force_added_checked": 44,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i052",
+      "closure_added_checked": 46,
+      "force_added_checked": 46,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i053",
+      "closure_added_checked": 30,
+      "force_added_checked": 31,
+      "closure_not_force": [],
+      "force_not_closure": [
+        [
+          15,
+          19
+        ]
+      ]
+    },
+    {
+      "name": "n7-i054",
+      "closure_added_checked": 70,
+      "force_added_checked": 70,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i055",
+      "closure_added_checked": 17,
+      "force_added_checked": 17,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i056",
+      "closure_added_checked": 45,
+      "force_added_checked": 45,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i057",
+      "closure_added_checked": 34,
+      "force_added_checked": 34,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i058",
+      "closure_added_checked": 38,
+      "force_added_checked": 38,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i059",
+      "closure_added_checked": 32,
+      "force_added_checked": 32,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i060",
+      "closure_added_checked": 20,
+      "force_added_checked": 20,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i061",
+      "closure_added_checked": 13,
+      "force_added_checked": 13,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i062",
+      "closure_added_checked": 49,
+      "force_added_checked": 49,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i063",
+      "closure_added_checked": 5,
+      "force_added_checked": 5,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i064",
+      "closure_added_checked": 39,
+      "force_added_checked": 39,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i065",
+      "closure_added_checked": 39,
+      "force_added_checked": 39,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i066",
+      "closure_added_checked": 59,
+      "force_added_checked": 59,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i067",
+      "closure_added_checked": 22,
+      "force_added_checked": 22,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i068",
+      "closure_added_checked": 46,
+      "force_added_checked": 46,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i069",
+      "closure_added_checked": 33,
+      "force_added_checked": 33,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i070",
+      "closure_added_checked": 22,
+      "force_added_checked": 22,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i071",
+      "closure_added_checked": 41,
+      "force_added_checked": 41,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i072",
+      "closure_added_checked": 28,
+      "force_added_checked": 28,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i073",
+      "closure_added_checked": 57,
+      "force_added_checked": 57,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i074",
+      "closure_added_checked": 14,
+      "force_added_checked": 14,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i075",
+      "closure_added_checked": 14,
+      "force_added_checked": 14,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i076",
+      "closure_added_checked": 36,
+      "force_added_checked": 36,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i077",
+      "closure_added_checked": 98,
+      "force_added_checked": 98,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i078",
+      "closure_added_checked": 42,
+      "force_added_checked": 42,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i079",
+      "closure_added_checked": 40,
+      "force_added_checked": 40,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i080",
+      "closure_added_checked": 38,
+      "force_added_checked": 38,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i081",
+      "closure_added_checked": 42,
+      "force_added_checked": 42,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i082",
+      "closure_added_checked": 68,
+      "force_added_checked": 68,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i083",
+      "closure_added_checked": 13,
+      "force_added_checked": 13,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i084",
+      "closure_added_checked": 21,
+      "force_added_checked": 21,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i085",
+      "closure_added_checked": 66,
+      "force_added_checked": 66,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i086",
+      "closure_added_checked": 30,
+      "force_added_checked": 30,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i087",
+      "closure_added_checked": 29,
+      "force_added_checked": 29,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i088",
+      "closure_added_checked": 53,
+      "force_added_checked": 53,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i089",
+      "closure_added_checked": 42,
+      "force_added_checked": 42,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i090",
+      "closure_added_checked": 20,
+      "force_added_checked": 20,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i091",
+      "closure_added_checked": 69,
+      "force_added_checked": 69,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i092",
+      "closure_added_checked": 20,
+      "force_added_checked": 20,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i093",
+      "closure_added_checked": 70,
+      "force_added_checked": 70,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i094",
+      "closure_added_checked": 13,
+      "force_added_checked": 13,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i095",
+      "closure_added_checked": 49,
+      "force_added_checked": 49,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i096",
+      "closure_added_checked": 46,
+      "force_added_checked": 46,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i097",
+      "closure_added_checked": 36,
+      "force_added_checked": 37,
+      "closure_not_force": [],
+      "force_not_closure": [
+        [
+          13,
+          16
+        ]
+      ]
+    },
+    {
+      "name": "n7-i098",
+      "closure_added_checked": 88,
+      "force_added_checked": 88,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i099",
+      "closure_added_checked": 31,
+      "force_added_checked": 31,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i100",
+      "closure_added_checked": 58,
+      "force_added_checked": 58,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i101",
+      "closure_added_checked": 36,
+      "force_added_checked": 36,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i102",
+      "closure_added_checked": 10,
+      "force_added_checked": 10,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i103",
+      "closure_added_checked": 40,
+      "force_added_checked": 40,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i104",
+      "closure_added_checked": 12,
+      "force_added_checked": 12,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i105",
+      "closure_added_checked": 61,
+      "force_added_checked": 61,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i106",
+      "closure_added_checked": 23,
+      "force_added_checked": 23,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i107",
+      "closure_added_checked": 20,
+      "force_added_checked": 20,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i108",
+      "closure_added_checked": 22,
+      "force_added_checked": 22,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i109",
+      "closure_added_checked": 8,
+      "force_added_checked": 8,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i110",
+      "closure_added_checked": 39,
+      "force_added_checked": 39,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i111",
+      "closure_added_checked": 21,
+      "force_added_checked": 21,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i112",
+      "closure_added_checked": 27,
+      "force_added_checked": 27,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i113",
+      "closure_added_checked": 55,
+      "force_added_checked": 55,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i114",
+      "closure_added_checked": 32,
+      "force_added_checked": 32,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i115",
+      "closure_added_checked": 10,
+      "force_added_checked": 10,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i116",
+      "closure_added_checked": 18,
+      "force_added_checked": 18,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i117",
+      "closure_added_checked": 66,
+      "force_added_checked": 66,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i118",
+      "closure_added_checked": 27,
+      "force_added_checked": 28,
+      "closure_not_force": [],
+      "force_not_closure": [
+        [
+          17,
+          23
+        ]
+      ]
+    },
+    {
+      "name": "n7-i119",
+      "closure_added_checked": 62,
+      "force_added_checked": 62,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n7-i120",
+      "closure_added_checked": 22,
+      "force_added_checked": 22,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i000",
+      "closure_added_checked": 28,
+      "force_added_checked": 28,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i001",
+      "closure_added_checked": 17,
+      "force_added_checked": 17,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i002",
+      "closure_added_checked": 18,
+      "force_added_checked": 18,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i003",
+      "closure_added_checked": 32,
+      "force_added_checked": 32,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i004",
+      "closure_added_checked": 28,
+      "force_added_checked": 28,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i005",
+      "closure_added_checked": 13,
+      "force_added_checked": 13,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i006",
+      "closure_added_checked": 63,
+      "force_added_checked": 63,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i007",
+      "closure_added_checked": 24,
+      "force_added_checked": 24,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i008",
+      "closure_added_checked": 26,
+      "force_added_checked": 26,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i009",
+      "closure_added_checked": 22,
+      "force_added_checked": 22,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i010",
+      "closure_added_checked": 39,
+      "force_added_checked": 39,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i011",
+      "closure_added_checked": 47,
+      "force_added_checked": 47,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i012",
+      "closure_added_checked": 58,
+      "force_added_checked": 58,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i013",
+      "closure_added_checked": 30,
+      "force_added_checked": 30,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i014",
+      "closure_added_checked": 65,
+      "force_added_checked": 65,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i015",
+      "closure_added_checked": 33,
+      "force_added_checked": 33,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i016",
+      "closure_added_checked": 44,
+      "force_added_checked": 49,
+      "closure_not_force": [],
+      "force_not_closure": [
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          16
+        ],
+        [
+          5,
+          16
+        ],
+        [
+          6,
+          16
+        ]
+      ]
+    },
+    {
+      "name": "n8-i017",
+      "closure_added_checked": 20,
+      "force_added_checked": 20,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i018",
+      "closure_added_checked": 69,
+      "force_added_checked": 69,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i019",
+      "closure_added_checked": 28,
+      "force_added_checked": 28,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i020",
+      "closure_added_checked": 141,
+      "force_added_checked": 141,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i021",
+      "closure_added_checked": 36,
+      "force_added_checked": 36,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i022",
+      "closure_added_checked": 20,
+      "force_added_checked": 20,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i023",
+      "closure_added_checked": 112,
+      "force_added_checked": 112,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i024",
+      "closure_added_checked": 71,
+      "force_added_checked": 71,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i025",
+      "closure_added_checked": 42,
+      "force_added_checked": 42,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i026",
+      "closure_added_checked": 52,
+      "force_added_checked": 57,
+      "closure_not_force": [],
+      "force_not_closure": [
+        [
+          20,
+          30
+        ],
+        [
+          21,
+          30
+        ],
+        [
+          22,
+          24
+        ],
+        [
+          22,
+          30
+        ],
+        [
+          24,
+          30
+        ]
+      ]
+    },
+    {
+      "name": "n8-i027",
+      "closure_added_checked": 22,
+      "force_added_checked": 22,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i028",
+      "closure_added_checked": 17,
+      "force_added_checked": 17,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i029",
+      "closure_added_checked": 49,
+      "force_added_checked": 49,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i030",
+      "closure_added_checked": 28,
+      "force_added_checked": 28,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i031",
+      "closure_added_checked": 37,
+      "force_added_checked": 37,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i032",
+      "closure_added_checked": 37,
+      "force_added_checked": 37,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i033",
+      "closure_added_checked": 34,
+      "force_added_checked": 34,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i034",
+      "closure_added_checked": 109,
+      "force_added_checked": 109,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i035",
+      "closure_added_checked": 71,
+      "force_added_checked": 71,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i036",
+      "closure_added_checked": 30,
+      "force_added_checked": 30,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i037",
+      "closure_added_checked": 53,
+      "force_added_checked": 53,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i038",
+      "closure_added_checked": 8,
+      "force_added_checked": 8,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i039",
+      "closure_added_checked": 50,
+      "force_added_checked": 50,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i040",
+      "closure_added_checked": 25,
+      "force_added_checked": 25,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i041",
+      "closure_added_checked": 11,
+      "force_added_checked": 11,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i042",
+      "closure_added_checked": 85,
+      "force_added_checked": 85,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i043",
+      "closure_added_checked": 94,
+      "force_added_checked": 94,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i044",
+      "closure_added_checked": 22,
+      "force_added_checked": 22,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i045",
+      "closure_added_checked": 85,
+      "force_added_checked": 85,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i046",
+      "closure_added_checked": 42,
+      "force_added_checked": 42,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i047",
+      "closure_added_checked": 25,
+      "force_added_checked": 25,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i048",
+      "closure_added_checked": 83,
+      "force_added_checked": 83,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i049",
+      "closure_added_checked": 34,
+      "force_added_checked": 34,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i050",
+      "closure_added_checked": 27,
+      "force_added_checked": 27,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i051",
+      "closure_added_checked": 61,
+      "force_added_checked": 61,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i052",
+      "closure_added_checked": 30,
+      "force_added_checked": 30,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i053",
+      "closure_added_checked": 52,
+      "force_added_checked": 52,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i054",
+      "closure_added_checked": 119,
+      "force_added_checked": 119,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i055",
+      "closure_added_checked": 14,
+      "force_added_checked": 14,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i056",
+      "closure_added_checked": 52,
+      "force_added_checked": 52,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i057",
+      "closure_added_checked": 46,
+      "force_added_checked": 46,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i058",
+      "closure_added_checked": 113,
+      "force_added_checked": 113,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i059",
+      "closure_added_checked": 29,
+      "force_added_checked": 29,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i060",
+      "closure_added_checked": 49,
+      "force_added_checked": 49,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i061",
+      "closure_added_checked": 13,
+      "force_added_checked": 13,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i062",
+      "closure_added_checked": 95,
+      "force_added_checked": 95,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i063",
+      "closure_added_checked": 49,
+      "force_added_checked": 49,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i064",
+      "closure_added_checked": 43,
+      "force_added_checked": 43,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i065",
+      "closure_added_checked": 12,
+      "force_added_checked": 12,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i066",
+      "closure_added_checked": 31,
+      "force_added_checked": 31,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i067",
+      "closure_added_checked": 69,
+      "force_added_checked": 69,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i068",
+      "closure_added_checked": 10,
+      "force_added_checked": 13,
+      "closure_not_force": [],
+      "force_not_closure": [
+        [
+          26,
+          27
+        ],
+        [
+          26,
+          30
+        ],
+        [
+          27,
+          30
+        ]
+      ]
+    },
+    {
+      "name": "n8-i069",
+      "closure_added_checked": 43,
+      "force_added_checked": 43,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i070",
+      "closure_added_checked": 4,
+      "force_added_checked": 4,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i071",
+      "closure_added_checked": 97,
+      "force_added_checked": 97,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i072",
+      "closure_added_checked": 90,
+      "force_added_checked": 90,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i073",
+      "closure_added_checked": 25,
+      "force_added_checked": 25,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i074",
+      "closure_added_checked": 101,
+      "force_added_checked": 101,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i075",
+      "closure_added_checked": 15,
+      "force_added_checked": 15,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i076",
+      "closure_added_checked": 29,
+      "force_added_checked": 29,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i077",
+      "closure_added_checked": 18,
+      "force_added_checked": 18,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i078",
+      "closure_added_checked": 116,
+      "force_added_checked": 116,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i079",
+      "closure_added_checked": 32,
+      "force_added_checked": 33,
+      "closure_not_force": [],
+      "force_not_closure": [
+        [
+          19,
+          23
+        ]
+      ]
+    },
+    {
+      "name": "n8-i080",
+      "closure_added_checked": 23,
+      "force_added_checked": 23,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i081",
+      "closure_added_checked": 11,
+      "force_added_checked": 11,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i082",
+      "closure_added_checked": 117,
+      "force_added_checked": 117,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i083",
+      "closure_added_checked": 77,
+      "force_added_checked": 77,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i084",
+      "closure_added_checked": 11,
+      "force_added_checked": 11,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i085",
+      "closure_added_checked": 50,
+      "force_added_checked": 50,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i086",
+      "closure_added_checked": 41,
+      "force_added_checked": 41,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i087",
+      "closure_added_checked": 83,
+      "force_added_checked": 83,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i088",
+      "closure_added_checked": 20,
+      "force_added_checked": 20,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i089",
+      "closure_added_checked": 57,
+      "force_added_checked": 57,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i090",
+      "closure_added_checked": 50,
+      "force_added_checked": 50,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i091",
+      "closure_added_checked": 35,
+      "force_added_checked": 35,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i092",
+      "closure_added_checked": 83,
+      "force_added_checked": 83,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i093",
+      "closure_added_checked": 44,
+      "force_added_checked": 44,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i094",
+      "closure_added_checked": 28,
+      "force_added_checked": 28,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i095",
+      "closure_added_checked": 48,
+      "force_added_checked": 48,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i096",
+      "closure_added_checked": 41,
+      "force_added_checked": 41,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i097",
+      "closure_added_checked": 47,
+      "force_added_checked": 47,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i098",
+      "closure_added_checked": 25,
+      "force_added_checked": 25,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i099",
+      "closure_added_checked": 32,
+      "force_added_checked": 32,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i100",
+      "closure_added_checked": 64,
+      "force_added_checked": 64,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i101",
+      "closure_added_checked": 49,
+      "force_added_checked": 49,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i102",
+      "closure_added_checked": 58,
+      "force_added_checked": 58,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i103",
+      "closure_added_checked": 28,
+      "force_added_checked": 28,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i104",
+      "closure_added_checked": 38,
+      "force_added_checked": 38,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i105",
+      "closure_added_checked": 35,
+      "force_added_checked": 35,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i106",
+      "closure_added_checked": 19,
+      "force_added_checked": 19,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i107",
+      "closure_added_checked": 17,
+      "force_added_checked": 17,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i108",
+      "closure_added_checked": 66,
+      "force_added_checked": 66,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i109",
+      "closure_added_checked": 10,
+      "force_added_checked": 10,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i110",
+      "closure_added_checked": 88,
+      "force_added_checked": 88,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i111",
+      "closure_added_checked": 60,
+      "force_added_checked": 60,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i112",
+      "closure_added_checked": 16,
+      "force_added_checked": 16,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i113",
+      "closure_added_checked": 55,
+      "force_added_checked": 58,
+      "closure_not_force": [],
+      "force_not_closure": [
+        [
+          20,
+          21
+        ],
+        [
+          20,
+          27
+        ],
+        [
+          21,
+          27
+        ]
+      ]
+    },
+    {
+      "name": "n8-i114",
+      "closure_added_checked": 48,
+      "force_added_checked": 48,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i115",
+      "closure_added_checked": 66,
+      "force_added_checked": 66,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i116",
+      "closure_added_checked": 17,
+      "force_added_checked": 17,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i117",
+      "closure_added_checked": 35,
+      "force_added_checked": 35,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i118",
+      "closure_added_checked": 47,
+      "force_added_checked": 47,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i119",
+      "closure_added_checked": 43,
+      "force_added_checked": 43,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i120",
+      "closure_added_checked": 62,
+      "force_added_checked": 62,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i121",
+      "closure_added_checked": 34,
+      "force_added_checked": 34,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i122",
+      "closure_added_checked": 51,
+      "force_added_checked": 51,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i123",
+      "closure_added_checked": 17,
+      "force_added_checked": 17,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i124",
+      "closure_added_checked": 44,
+      "force_added_checked": 44,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i125",
+      "closure_added_checked": 18,
+      "force_added_checked": 18,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i126",
+      "closure_added_checked": 21,
+      "force_added_checked": 22,
+      "closure_not_force": [],
+      "force_not_closure": [
+        [
+          30,
+          32
+        ]
+      ]
+    },
+    {
+      "name": "n8-i127",
+      "closure_added_checked": 28,
+      "force_added_checked": 28,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i128",
+      "closure_added_checked": 44,
+      "force_added_checked": 44,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i129",
+      "closure_added_checked": 16,
+      "force_added_checked": 16,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i130",
+      "closure_added_checked": 17,
+      "force_added_checked": 17,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i131",
+      "closure_added_checked": 34,
+      "force_added_checked": 34,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i132",
+      "closure_added_checked": 28,
+      "force_added_checked": 28,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i133",
+      "closure_added_checked": 21,
+      "force_added_checked": 21,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i134",
+      "closure_added_checked": 81,
+      "force_added_checked": 82,
+      "closure_not_force": [],
+      "force_not_closure": [
+        [
+          6,
+          8
+        ]
+      ]
+    },
+    {
+      "name": "n8-i135",
+      "closure_added_checked": 21,
+      "force_added_checked": 21,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i136",
+      "closure_added_checked": 16,
+      "force_added_checked": 16,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i137",
+      "closure_added_checked": 17,
+      "force_added_checked": 18,
+      "closure_not_force": [],
+      "force_not_closure": [
+        [
+          26,
+          28
+        ]
+      ]
+    },
+    {
+      "name": "n8-i138",
+      "closure_added_checked": 28,
+      "force_added_checked": 28,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i139",
+      "closure_added_checked": 73,
+      "force_added_checked": 73,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i140",
+      "closure_added_checked": 38,
+      "force_added_checked": 38,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i141",
+      "closure_added_checked": 20,
+      "force_added_checked": 20,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i142",
+      "closure_added_checked": 15,
+      "force_added_checked": 15,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i143",
+      "closure_added_checked": 23,
+      "force_added_checked": 23,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i144",
+      "closure_added_checked": 28,
+      "force_added_checked": 28,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i145",
+      "closure_added_checked": 33,
+      "force_added_checked": 33,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i146",
+      "closure_added_checked": 31,
+      "force_added_checked": 31,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i147",
+      "closure_added_checked": 20,
+      "force_added_checked": 20,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i148",
+      "closure_added_checked": 29,
+      "force_added_checked": 29,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i149",
+      "closure_added_checked": 22,
+      "force_added_checked": 23,
+      "closure_not_force": [],
+      "force_not_closure": [
+        [
+          26,
+          28
+        ]
+      ]
+    },
+    {
+      "name": "n8-i150",
+      "closure_added_checked": 28,
+      "force_added_checked": 28,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i151",
+      "closure_added_checked": 32,
+      "force_added_checked": 34,
+      "closure_not_force": [],
+      "force_not_closure": [
+        [
+          21,
+          26
+        ],
+        [
+          22,
+          26
+        ]
+      ]
+    },
+    {
+      "name": "n8-i152",
+      "closure_added_checked": 10,
+      "force_added_checked": 10,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i153",
+      "closure_added_checked": 18,
+      "force_added_checked": 18,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i154",
+      "closure_added_checked": 35,
+      "force_added_checked": 35,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i155",
+      "closure_added_checked": 35,
+      "force_added_checked": 35,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i156",
+      "closure_added_checked": 28,
+      "force_added_checked": 28,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i157",
+      "closure_added_checked": 69,
+      "force_added_checked": 69,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i158",
+      "closure_added_checked": 47,
+      "force_added_checked": 47,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i159",
+      "closure_added_checked": 10,
+      "force_added_checked": 10,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i160",
+      "closure_added_checked": 20,
+      "force_added_checked": 20,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i161",
+      "closure_added_checked": 18,
+      "force_added_checked": 18,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i162",
+      "closure_added_checked": 28,
+      "force_added_checked": 28,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i163",
+      "closure_added_checked": 28,
+      "force_added_checked": 28,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i164",
+      "closure_added_checked": 37,
+      "force_added_checked": 37,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i165",
+      "closure_added_checked": 14,
+      "force_added_checked": 14,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i166",
+      "closure_added_checked": 34,
+      "force_added_checked": 34,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i167",
+      "closure_added_checked": 20,
+      "force_added_checked": 20,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i168",
+      "closure_added_checked": 28,
+      "force_added_checked": 28,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i169",
+      "closure_added_checked": 51,
+      "force_added_checked": 51,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i170",
+      "closure_added_checked": 42,
+      "force_added_checked": 42,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i171",
+      "closure_added_checked": 30,
+      "force_added_checked": 30,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i172",
+      "closure_added_checked": 18,
+      "force_added_checked": 18,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i173",
+      "closure_added_checked": 20,
+      "force_added_checked": 20,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i174",
+      "closure_added_checked": 62,
+      "force_added_checked": 62,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i175",
+      "closure_added_checked": 65,
+      "force_added_checked": 65,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i176",
+      "closure_added_checked": 43,
+      "force_added_checked": 43,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i177",
+      "closure_added_checked": 64,
+      "force_added_checked": 64,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i178",
+      "closure_added_checked": 19,
+      "force_added_checked": 19,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i179",
+      "closure_added_checked": 61,
+      "force_added_checked": 61,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i180",
+      "closure_added_checked": 29,
+      "force_added_checked": 29,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i181",
+      "closure_added_checked": 64,
+      "force_added_checked": 64,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i182",
+      "closure_added_checked": 43,
+      "force_added_checked": 44,
+      "closure_not_force": [],
+      "force_not_closure": [
+        [
+          22,
+          25
+        ]
+      ]
+    },
+    {
+      "name": "n8-i183",
+      "closure_added_checked": 28,
+      "force_added_checked": 28,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i184",
+      "closure_added_checked": 23,
+      "force_added_checked": 23,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i185",
+      "closure_added_checked": 30,
+      "force_added_checked": 30,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i186",
+      "closure_added_checked": 36,
+      "force_added_checked": 36,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i187",
+      "closure_added_checked": 24,
+      "force_added_checked": 24,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i188",
+      "closure_added_checked": 10,
+      "force_added_checked": 10,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i189",
+      "closure_added_checked": 16,
+      "force_added_checked": 16,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i190",
+      "closure_added_checked": 10,
+      "force_added_checked": 10,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i191",
+      "closure_added_checked": 40,
+      "force_added_checked": 40,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i192",
+      "closure_added_checked": 45,
+      "force_added_checked": 45,
+      "closure_not_force": [],
+      "force_not_closure": []
+    },
+    {
+      "name": "n8-i193",
+      "closure_added_checked": 40,
+      "force_added_checked": 40,
+      "closure_not_force": [],
+      "force_not_closure": []
+    }
+  ],
+  "seconds": 2.387853305997851,
+  "scope": "Every reported gain independently verifies its witness and absence of direct ambient cup protection; full closure recomputed on listed cases only."
+}

@@ -1,0 +1,112 @@
+{
+  "controls": {
+    "exhaustive_embedding": {
+      "accepted": 5120,
+      "checks": 10240,
+      "cnf_sha256": "fcfd45d030fab832198b36103634054efc6ce21a76af51d8f664e23e376cda86",
+      "invalid_selector_cases_rejected": 3,
+      "rejected": 5120
+    },
+    "integer_parabola_all_gaps": {
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          16
+        ],
+        [
+          5,
+          25
+        ],
+        [
+          6,
+          36
+        ]
+      ],
+      "cnf_sha256": "001632e93ae10a56840124a420c67847447c2bc5d6d755c5c9345ced6a49745c",
+      "embeddings": 35,
+      "minimum_abs_determinant": 2
+    },
+    "interacting_secant_exact_integers": {
+      "cnf_sha256": "b774b505c40158fc902b68dc268c3775a2ac9bc9cc7141b195419a7f74261c1d",
+      "distinct_fiber_triples_checked": 650,
+      "fixture_sha256": "64bba9a133a5624eb9bce84d362c78f501eecee220cf9ecf7f96714bc6c6f551",
+      "geometry": {
+        "convex_ngons": 13,
+        "first_delta": [
+          0,
+          2,
+          3,
+          5,
+          6,
+          8,
+          11,
+          14
+        ],
+        "fivecaps": 15,
+        "fourcaps": 144,
+        "target_polygons": 214,
+        "targets": 127,
+        "valid": false,
+        "working_deltas": 6861
+      },
+      "literal_clause_check": {
+        "clauses": 9289,
+        "literals": 36808
+      },
+      "minimum_abs_determinant": 39402006196394479212279040100143613805079739270465446667948293404245721771497210611414266254884915640806627990306816000000000000000000000000,
+      "old_positions": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "pair_third_signs": [
+        "-",
+        "+"
+      ]
+    },
+    "original_exact_geometry": {
+      "convex_ngons": 0,
+      "first_delta": null,
+      "fivecaps": 0,
+      "fourcaps": 80,
+      "minimum_abs_determinant": 70172849827134,
+      "source_sha256": "1e8b43136d096abb2deaea14743ed62a52ff622a991dd2fbbcb7140a15593b04",
+      "target_polygons": 216,
+      "targets": 103,
+      "valid": true,
+      "working_deltas": 0
+    }
+  },
+  "elapsed_seconds": 0.567,
+  "label": "COMPUTED",
+  "max_rss_kib": 22644,
+  "status": "PASSED"
+}

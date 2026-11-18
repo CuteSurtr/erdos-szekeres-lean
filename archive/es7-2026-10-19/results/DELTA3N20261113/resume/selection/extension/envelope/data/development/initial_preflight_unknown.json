@@ -1,0 +1,62 @@
+{
+  "cases": [
+    {
+      "ambient_pairs": 315,
+      "clauses": 245724,
+      "exposed_pairs": 136,
+      "exposed_triples": 715,
+      "files": {
+        "envelope.cnf": {
+          "bytes": 5211335,
+          "sha256": "ea62ad3f6784681fe9774ce3aee83b8f7b4934d04322c489a4cb5203d072b630"
+        },
+        "envelope.json": {
+          "bytes": 188319,
+          "sha256": "98561ed9ba1ecda9285d6a2422bbe363081e85449728ec21a66ea6cdfed60c1e"
+        },
+        "geometry.json": {
+          "bytes": 5196502,
+          "sha256": "3c1414fe29207f050038d018fadd4bdc6699bb8e6c11148000d23afdadcbc8be"
+        },
+        "geometry.stderr": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "input.json": {
+          "bytes": 2440,
+          "sha256": "773f36730f312648cbccb313663e60b309596c259dcbe7f769f73cbee81e4f41"
+        },
+        "points.txt": {
+          "bytes": 931,
+          "sha256": "b18d746030514195918dd50f6d2366c3adca329cfb4d5a5129d71db4e7a1ae51"
+        }
+      },
+      "fourcaps": 9721,
+      "geometry": {
+        "chains": 54189,
+        "maxcap": 4,
+        "maxcup": 7,
+        "maxgon": 7
+      },
+      "label": "COMPUTED",
+      "literals": 1688045,
+      "m": 42,
+      "n": 8,
+      "name": "n8-i000",
+      "outcome": "UNKNOWN_SOLVER_MEMORY_ESTIMATE",
+      "seconds": 0.40170681799645536,
+      "solver_memory_estimate_bytes": 422011250,
+      "targets": 235288,
+      "variables": 42
+    }
+  ],
+  "counts": {
+    "UNKNOWN_SOLVER_MEMORY_ESTIMATE": 1
+  },
+  "elapsed_seconds": 0.4397839740049676,
+  "label": "COMPUTED",
+  "peak_child_rss_kib": 21608,
+  "peak_self_rss_kib": 58060,
+  "scope": "Fixed coordinates and explicitly listed orientation-preserving variations; no universal theorem or certification.",
+  "stop": "COMPLETE"
+}

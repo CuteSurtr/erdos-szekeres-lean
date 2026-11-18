@@ -1,0 +1,99 @@
+c --- [ banner ] -------------------------------------------------------------
+c 
+c CaDiCaL SAT Solver
+c Copyright (c) 2016-2024
+c A. Biere, M. Fleury, N. Froleyks, K. Fazekas, F. Pollitt, T. Faller
+c JKU Linz, University of Freiburg, TU Wien
+c 
+c Version 2.1.3
+c g++-15.2.0
+c Dec 15 2025 01:04:17
+c 
+c --- [ limit ] --------------------------------------------------------------
+c 
+c setting time limit to 10 seconds real time (due to '-t 10')
+c 
+c --- [ proof tracing ] ------------------------------------------------------
+c 
+c opening file to write '/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/3/certificate/proof.blrat'
+c writing binary proof trace to '/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/3/certificate/proof.blrat'
+c 
+c --- [ parsing input ] ------------------------------------------------------
+c 
+c reading DIMACS file from '/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/3/certificate/input.cnf'
+c opening file to read '/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/3/certificate/input.cnf'
+c found 'p cnf 12 192' header
+c parsed 192 clauses in 0.00 seconds process time
+c 
+c --- [ options ] ------------------------------------------------------------
+c 
+c   --lrat=true                    (different from default 'false')
+c 
+c --- [ solving ] ------------------------------------------------------------
+c 
+c time measured in process time since initialization
+c 
+c  seconds  reductions  redundant irredundant
+c         MB    restarts       trail    variables
+c          level   conflicts       glue     remaining
+c 
+c *  0.00  5  0 0   0    0    0  0% 0  192  12 100%
+c {  0.00  5  0 0   0    0    0  0% 0  192  12 100%
+c i  0.00  5  3 0   0   29   18 92% 2  192  11 92%
+c }  0.00  5  3 0   0   35   20 88% 2  192   7 58%
+c 0  0.00  5  3 0   0   35   20 88% 2  192   7 58%
+c 
+c --- [ closing proof ] ------------------------------------------------------
+c 
+c LRAT proof file '/home/jay/research/data/delta3-codex-20261113/extension/descend15-a/3/certificate/proof.blrat' closed
+c LRAT 43 added clauses 71.67%
+c LRAT 17 deleted clauses 28.33%
+c LRAT 753 bytes (0.00 MB)
+c 
+c --- [ result ] -------------------------------------------------------------
+c 
+s UNSATISFIABLE
+c 
+c --- [ run-time profiling ] -------------------------------------------------
+c 
+c process time taken by individual solving procedures
+c (percentage relative to process time for solving)
+c 
+c         0.00   78.86% search
+c         0.00   64.23% unstable
+c         0.00   48.78% parse
+c         0.00    9.76% lucky
+c         0.00    0.00% simplify
+c   =================================
+c         0.00   46.24% solve
+c 
+c last line shows process time for solving
+c (percentage relative to total process time)
+c 
+c --- [ statistics ] ---------------------------------------------------------
+c 
+c chronological:                 1         2.86 %  of conflicts
+c conflicts:                    35    284552.85    per second
+c decisions:                    34    276422.76    per second
+c fixed:                         5        41.67 %  of all variables
+c learned:                      26        74.29 %  per conflict
+c learned_lits:                116       100.00 %  learned literals
+c minimized:                     0         0.00 %  learned literals
+c shrunken:                     21        18.10 %  learned literals
+c minishrunken:                  0         0.00 %  learned literals
+c otfs:                         13        37.14 %  of conflict
+c propagations:                155         1.26 M  per second
+c subsumed:                      4         1.85 %  of all clauses
+c strengthened:                 13         6.02 %  of all clauses
+c 
+c seconds are measured in process time for solving
+c 
+c --- [ resources ] ----------------------------------------------------------
+c 
+c total process time since initialization:         0.00    seconds
+c total real time since initialization:            0.00    seconds
+c maximum resident set size of process:            4.57    MB
+c 
+c --- [ shutting down ] ------------------------------------------------------
+c 
+c exit 20

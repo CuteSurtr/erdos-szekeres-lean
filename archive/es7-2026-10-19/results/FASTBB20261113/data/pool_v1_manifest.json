@@ -1,0 +1,29 @@
+{
+ "inputs": [
+  {
+   "file": "inputs/res33_certified.jsonl",
+   "sha256": "81d27cb78c589aa7068701ea99a2f055cac97782c1b2047ab8760a68ac7adbad",
+   "lines": 581
+  },
+  {
+   "file": "inputs/lo33_certified.jsonl",
+   "sha256": "2f065615bc44a3c5d86693f0d57b29a1b2501df68439f4e210fd1bf15661682f",
+   "lines": 589
+  },
+  {
+   "file": "inputs/killtools_certified.jsonl",
+   "sha256": "1a59c2752efb9648ccf13de57190e0a014518191a1ef57ed905d7cd139b548a0",
+   "lines": 617
+  }
+ ],
+ "distinct_supports": 614,
+ "kept": 614,
+ "rejected": [],
+ "pool_file": "pool_v1.json",
+ "pool_sha256": "13c49a74da3620bdfa57e68cd16273f9ff302885cec008f1c1df91e1666adf24",
+ "encoder": "/home/jay/research/data/fastbb-20261113/killtools/coupled.py",
+ "encoder_sha256": "959072b12004eec785bdc3ace47acdd23e41221848515e5c891b431a57ac17db",
+ "check": "verdict \"s VERIFIED UNSAT\" and sha256(coupled.CNF(support).dimacs()) == recorded cnf_sha256",
+ "seconds": 510.6,
+ "finished": "2026-11-13 20:34:36"
+}

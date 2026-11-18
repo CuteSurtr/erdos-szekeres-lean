@@ -1,0 +1,10 @@
+{
+  "status": "FAILED_CONTROL_RETAINED",
+  "program": "independent_check.py, first run",
+  "error": "AssertionError at assert all(determinants), geometric_data, positive_controls",
+  "cause": "Synthetic n=7/n=8 positive control contained the collinear triple (0,0),(6,0),(8,0). The original finder had not asserted general position for that synthetic family.",
+  "original_n7_points": [[0,0],[1,-4],[2,8],[4,10],[5,-4],[6,0],[8,0]],
+  "original_n8_points": [[0,0],[1,-4],[2,8],[3,-5],[4,10],[5,-4],[6,0],[8,0]],
+  "resolution": "Reject the original synthetic controls, retain their initial statistics in refined_initial_invalid_controls.json, move r to (8,1), add a general-position assertion to refine.py, regenerate all statistics and rerun the independent audit.",
+  "scope": "The two reduced obstruction fixtures passed the independent geometry and lift checks before this failure; their coordinates are unchanged. No theorem uses the rejected synthetic instances."
+}

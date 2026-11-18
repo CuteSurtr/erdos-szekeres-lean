@@ -1,0 +1,31 @@
+{
+  "base_clauses": 446670,
+  "checker_sha256": "925d7204e6528a3ccc955261ef44448984b2dabc236afee04949f2700a322160",
+  "driver_sha256": "0e1700be00d4fbf93f2965f3ff3caf1a5ccbd9b4c966f3ff04ec5322b1995c30",
+  "elapsed_seconds": 0.29698966999785625,
+  "final_cnf_checked": false,
+  "final_cnf_present": false,
+  "label": "COMPUTED",
+  "limits": {
+    "affinity": [
+      0
+    ],
+    "as_mib": 400,
+    "cpu_seconds": 18,
+    "external_seconds": 20
+  },
+  "m": 16,
+  "mode": "input7",
+  "n": 7,
+  "peak_rss_kib": 29028,
+  "selected_masks_at_read": 511,
+  "snapshot_hashes": {
+    "pool.json": "b13fd5eaaa1525e8f629c4c9a93bc2a3d506fd8f717e9d37c1d5b64e68e9a676",
+    "result.json": "a8a8372f7d94ba7ec480475a81c8b35fc91d6ac5b069ce1b95796feae3dd7bf5"
+  },
+  "source": "/home/jay/research/data/delta3-codex-20261113/encoder/direct-weak-n7-m16/result.json",
+  "source_cnf_sha256": "6bc7690369f19b2a908f6adbc0b4b9a23f67de8e8c4cf41482670a835e6df425",
+  "status": "PASS_INTERIM",
+  "subset_clauses_checked": 65536,
+  "thread_count": 1
+}

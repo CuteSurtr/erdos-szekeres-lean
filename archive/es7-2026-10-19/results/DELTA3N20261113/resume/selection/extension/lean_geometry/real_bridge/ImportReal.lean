@@ -1,0 +1,8 @@
+import ErdosSzekeres.IntegerCertificates
+import ErdosSzekeres.OrientationConvexity
+import ErdosSzekeres.Suk.FourPoint
+
+#check ErdosSzekeres.integerToReal
+#print axioms ErdosSzekeres.orient_integerToReal
+#print axioms ErdosSzekeres.convexPosition_four_iff_signs
+#print axioms ErdosSzekeres.Suk.convexPosition_of_four_subsets

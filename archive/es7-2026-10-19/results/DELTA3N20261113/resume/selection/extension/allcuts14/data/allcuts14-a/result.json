@@ -1,0 +1,72 @@
+{
+  "cache_releases": 270,
+  "commands": [
+    [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/home/jay/research/data/delta3-codex-20261113/extension/allcuts14-a/cadical.time",
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "2703",
+      "/usr/bin/cadical",
+      "-t",
+      "2700",
+      "--lrat=true",
+      "--binary=true",
+      "/home/jay/research/data/delta3-codex-20261113/extension/allcuts14-a/input.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/extension/allcuts14-a/proof.blrat"
+    ],
+    [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/home/jay/research/data/delta3-codex-20261113/extension/allcuts14-a/compress.time",
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "600",
+      "/usr/bin/zstd",
+      "-q",
+      "-T1",
+      "-3",
+      "-k",
+      "/home/jay/research/data/delta3-codex-20261113/extension/allcuts14-a/proof.blrat"
+    ]
+  ],
+  "compressed_bytes": 2131177674,
+  "compressed_roundtrip_verified": true,
+  "finished": true,
+  "hashes": {
+    "cadical": "4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70",
+    "cadical.log": "e0a5f358b5246e0e35fefb9cfdd45f541503fa9074c0cf46a8b83c32ea423be1",
+    "cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+    "compress.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "input.cnf": "01de4ba0c9831690f5e64a3592fd335ef701c100224060733e9734d55ac65554",
+    "proof.blrat": "0e75b8fee82f5857aaf5c46cdc417ac25532a871fc2ef8cff80df8bfc37a16a4",
+    "proof.blrat.zst": "559a234c617b3640166fe097144387aa12cc2ec551157e61e6c5ba406ef2d029",
+    "run_binary.py": "dcdfd0c97efa27e8b89daacbad3a950d3a9af77c88964e78e5522fd7904f87e5"
+  },
+  "label": "COMPUTED",
+  "limits": {
+    "as_mib": 700,
+    "cake_seconds": 360,
+    "heap_mib": 450,
+    "solver_seconds": 2700,
+    "stack_mib": 32
+  },
+  "proof_bytes": 3912087705,
+  "proof_format": "binary LRAT",
+  "runs": {
+    "cadical": {
+      "exit": 0,
+      "seconds": 2700.257
+    },
+    "compress": {
+      "exit": 0,
+      "seconds": 13.524
+    }
+  },
+  "seconds": 2725.59,
+  "source_cnf": "/home/jay/research/data/delta3-codex-20261113/extension/n7m14-allcuts.cnf",
+  "status": "UNKNOWN"
+}

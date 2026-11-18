@@ -1,0 +1,62 @@
+{
+  "label": "COMPUTED inventory",
+  "time": "2026-11-14T04:04:33.907535+09:00",
+  "raw_boundary_sat": 6,
+  "raw_root_realized": 3,
+  "refined_boundary_sat_realized": 3,
+  "terminal_boundary_certificates": [
+    {
+      "n": 6,
+      "old_size": 9,
+      "status": "UNSAT_CERTIFIED",
+      "hashes": {
+        "cadical": "4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70",
+        "cadical.log": "4f10be7f285bd8ee68cd2d11e42b0e4f1b1ef358ee9c3d4963daceaa86ef88ab",
+        "cake.log": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+        "cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+        "input.cnf": "1e40345bfedd16d0130a0a00bc6a412d7a0caceb04bcd39879be99d71d9621c3",
+        "proof.lrat": "f34baddd285f8d0654223edf110c9e2986c43e707ff675a0aae5deedd420f9ce",
+        "proof.lrat.zst": "957bc22309f756cdb2ece2672c46fd5d87b71b39e677cc072d37b82eefd23d00",
+        "run_cnf.py": "e3c8d9413f99b3092a4ea760f08265bc30bb93204074a3fa566bc2f0c3b3f4b8"
+      },
+      "seconds": 0.029
+    },
+    {
+      "n": 7,
+      "old_size": 11,
+      "status": "UNSAT_CERTIFIED",
+      "hashes": {
+        "cadical": "4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70",
+        "cadical.log": "71c86546eac2fe169038882c3331b487f50563cb294c8fa199bc0b8f41567b6f",
+        "cake.log": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+        "cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+        "input.cnf": "0e166f5b577214271ab3ee72be49eb6e1f6d9eb02f1b5814774102252081f385",
+        "proof.lrat": "93fcdae4cc55d956f3b2d70e3d6e405b3b941cfa012eedd76599fa73b50dc6bd",
+        "proof.lrat.zst": "54316406ee38a52c437464c3bf86b21164063f6f6576744e65296ab5bb30c52e",
+        "run_cnf.py": "e3c8d9413f99b3092a4ea760f08265bc30bb93204074a3fa566bc2f0c3b3f4b8"
+      },
+      "seconds": 0.62
+    },
+    {
+      "n": 8,
+      "old_size": 13,
+      "status": "UNSAT_CERTIFIED",
+      "hashes": {
+        "cadical": "4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70",
+        "cadical.log": "5f0e648166adf0d777da61980a0265cc0101391f0c2555a187becf642de30ca7",
+        "cake.log": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+        "cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+        "input.cnf": "aa3eb2c583c4db1f453085c2304a0ab8825a1365dab315fad3552c0eedff548c",
+        "proof.lrat": "f2626849d315ce741a7fce06c18ab03f7d8f6017b936b91f1f3d44849e4bc38b",
+        "proof.lrat.zst": "bbf5a88e2dddb8436196d0f05e0ea512895794001cf2fdf044750e078e0f1d47",
+        "run_cnf.py": "e3c8d9413f99b3092a4ea760f08265bc30bb93204074a3fa566bc2f0c3b3f4b8"
+      },
+      "seconds": 20.058
+    }
+  ],
+  "independent_audit": "see audit/VERIFY_BOUNDARY.md",
+  "all_parent_jobs_finished": true,
+  "guard_stops": 0,
+  "weak_D57": "OPEN",
+  "weak_D58": "OPEN"
+}

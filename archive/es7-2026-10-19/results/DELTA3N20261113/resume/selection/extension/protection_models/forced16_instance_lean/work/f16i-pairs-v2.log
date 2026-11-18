@@ -1,0 +1,6 @@
+'Delta3.Forced16Instance.monomial_indicator' depends on axioms: [propext]
+'Delta3.Forced16Instance.monomial_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Delta3.Forced16Instance.factors_bounded' does not depend on any axioms
+'Delta3.Forced16Instance.small_monomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Delta3.Forced16Instance.large_monomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Delta3.Forced16Instance.no_positive_product_assignment' depends on axioms: [propext, Classical.choice, Quot.sound]

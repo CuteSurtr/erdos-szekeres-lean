@@ -1,0 +1,190 @@
+[
+  {
+    "A": [
+      2,
+      3,
+      7
+    ],
+    "certificates": [
+      {
+        "supports": [
+          {
+            "fourcap": [
+              4,
+              7,
+              12,
+              13
+            ],
+            "weight": "1"
+          }
+        ],
+        "triple": [
+          2,
+          3,
+          7
+        ]
+      }
+    ],
+    "geometric_replay": {
+      "cap_triples_checked": 1,
+      "complement": {
+        "maxcap": 4,
+        "maxcup": 5,
+        "maxgon": 5
+      },
+      "full": {
+        "maxcap": 4,
+        "maxcup": 6,
+        "maxgon": 6
+      },
+      "selected": {
+        "maxcap": 3,
+        "maxcup": 2,
+        "maxgon": 3
+      },
+      "two_line_certificates": 0
+    },
+    "mask": 140
+  },
+  {
+    "A": [
+      2,
+      3,
+      11
+    ],
+    "certificates": [
+      {
+        "supports": [
+          {
+            "fourcap": [
+              4,
+              7,
+              12,
+              13
+            ],
+            "weight": "1"
+          }
+        ],
+        "triple": [
+          2,
+          3,
+          11
+        ]
+      }
+    ],
+    "geometric_replay": {
+      "cap_triples_checked": 1,
+      "complement": {
+        "maxcap": 4,
+        "maxcup": 5,
+        "maxgon": 5
+      },
+      "full": {
+        "maxcap": 4,
+        "maxcup": 6,
+        "maxgon": 6
+      },
+      "selected": {
+        "maxcap": 3,
+        "maxcup": 2,
+        "maxgon": 3
+      },
+      "two_line_certificates": 0
+    },
+    "mask": 2060
+  },
+  {
+    "A": [
+      4,
+      11,
+      12
+    ],
+    "certificates": [
+      {
+        "supports": [
+          {
+            "fourcap": [
+              7,
+              9,
+              10,
+              14
+            ],
+            "weight": "1"
+          }
+        ],
+        "triple": [
+          4,
+          11,
+          12
+        ]
+      }
+    ],
+    "geometric_replay": {
+      "cap_triples_checked": 1,
+      "complement": {
+        "maxcap": 4,
+        "maxcup": 5,
+        "maxgon": 5
+      },
+      "full": {
+        "maxcap": 4,
+        "maxcup": 6,
+        "maxgon": 6
+      },
+      "selected": {
+        "maxcap": 3,
+        "maxcup": 2,
+        "maxgon": 3
+      },
+      "two_line_certificates": 0
+    },
+    "mask": 6160
+  },
+  {
+    "A": [
+      4,
+      11,
+      13
+    ],
+    "certificates": [
+      {
+        "supports": [
+          {
+            "fourcap": [
+              7,
+              9,
+              10,
+              14
+            ],
+            "weight": "1"
+          }
+        ],
+        "triple": [
+          4,
+          11,
+          13
+        ]
+      }
+    ],
+    "geometric_replay": {
+      "cap_triples_checked": 1,
+      "complement": {
+        "maxcap": 4,
+        "maxcup": 5,
+        "maxgon": 5
+      },
+      "full": {
+        "maxcap": 4,
+        "maxcup": 6,
+        "maxgon": 6
+      },
+      "selected": {
+        "maxcap": 3,
+        "maxcup": 2,
+        "maxgon": 3
+      },
+      "two_line_certificates": 0
+    },
+    "mask": 10256
+  }
+]

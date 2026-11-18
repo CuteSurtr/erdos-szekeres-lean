@@ -1,0 +1,208 @@
+{
+  "previous": "/home/jay/research/data/es308-20261114/inputs/s20-v3",
+  "previous_extra_sha256": "a17f889c980d00a896312e4a17c83105108c1034b4d6bbbebc2593062016c331",
+  "previous_rows_sha256": "b586b2ffa56368b84e032a4f53ef67abdd3e21a9c0108fd8fc91b78504309263",
+  "accepted_source": "/home/jay/research/data/es308-20261114/cuts-v4/accepted.json",
+  "accepted_source_sha256": "f0ae5841791f6a6251d8eadee5fc8214ae2fe27f4545bf1da213d9b84756bd7d",
+  "appended_rows": 10,
+  "rows": 3618,
+  "extra_sha256": "87078c69295094ce00b1f02c516fb2cf2821e07e897e6e5ef7591c5eb6466e6f",
+  "rows_sha256": "1017439755191973170ec32266dfd9ad8b141e99afc57aa14d77188723a07902",
+  "bindings": [
+    {
+      "support": [
+        48,
+        58,
+        61,
+        69,
+        73,
+        80,
+        84,
+        92,
+        94
+      ],
+      "cnf_sha256": "032d12fc77ad4e663c41583d13959caba32e2cc00a7f90112d6568d8fda5a242",
+      "lrat_sha256": "cdf68fe3d3f4306fa95cc1ab418f1be7390dfab53ad6ca177f3926b8f8ebb297",
+      "cake_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+      "acceptance_receipt": "/home/jay/research/data/es308-20261114/cuts-v4/0000/receipt.json"
+    },
+    {
+      "support": [
+        48,
+        58,
+        61,
+        69,
+        73,
+        80,
+        84,
+        92,
+        103
+      ],
+      "cnf_sha256": "efc0424a13c7bdc6de51a9c9624105483ca5c2ab247bf46a1eb049ee0c40e14b",
+      "lrat_sha256": "e156a67c3efbc9382b96710375deff5100fe6c33b1e91c4360f047f524509e50",
+      "cake_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+      "acceptance_receipt": "/home/jay/research/data/es308-20261114/cuts-v4/0001/receipt.json"
+    },
+    {
+      "support": [
+        48,
+        58,
+        61,
+        69,
+        73,
+        80,
+        84,
+        94,
+        102
+      ],
+      "cnf_sha256": "280e47987a1bb0a864afe6b1a3546dca6c0b139254508320b200cd6f762d6a9f",
+      "lrat_sha256": "0c9c6872216a290029c2fdf7a66c55bf5f750eada46f169483a5e666351f1ff5",
+      "cake_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+      "acceptance_receipt": "/home/jay/research/data/es308-20261114/cuts-v4/0002/receipt.json"
+    },
+    {
+      "support": [
+        48,
+        58,
+        61,
+        69,
+        73,
+        80,
+        84,
+        102,
+        103
+      ],
+      "cnf_sha256": "b1c08f884d24fa9dde618023950d24caefc63f5bff48ada55600e5a32ece0c2a",
+      "lrat_sha256": "cffec61c9ddc7e228cfb3e851513e7918a603420339d7410959c346c452faf60",
+      "cake_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+      "acceptance_receipt": "/home/jay/research/data/es308-20261114/cuts-v4/0003/receipt.json"
+    },
+    {
+      "support": [
+        1,
+        2,
+        4,
+        13,
+        17,
+        19,
+        21,
+        25,
+        28,
+        31,
+        40,
+        44,
+        54
+      ],
+      "cnf_sha256": "f41623fbf2138baa1f734ec094f2158a5ebb98cc6a96497680533f31178f6cda",
+      "lrat_sha256": "cd8b5ba149aba246ebe9f8b272567785c658f9c0035e50a9a7b5b3292de33b89",
+      "cake_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+      "acceptance_receipt": "/home/jay/research/data/es308-20261114/cuts-v4/0004/receipt.json"
+    },
+    {
+      "support": [
+        17,
+        53,
+        65,
+        68,
+        77,
+        79,
+        89,
+        110,
+        115,
+        123,
+        130,
+        138,
+        142
+      ],
+      "cnf_sha256": "a1c424f1e8198b1d643d5b7e3bb44c56325d11f673adbc020e94f602fd7c8517",
+      "lrat_sha256": "6df1504e1b8875df2a0fdf7a5b162dafb76add396f1efd8c7966e25306d26447",
+      "cake_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+      "acceptance_receipt": "/home/jay/research/data/es308-20261114/cuts-v4/0005/receipt.json"
+    },
+    {
+      "support": [
+        17,
+        53,
+        65,
+        68,
+        77,
+        79,
+        89,
+        110,
+        115,
+        123,
+        130,
+        143,
+        147
+      ],
+      "cnf_sha256": "5d823c4bd3ed34dc124233f3829acd4f67c328329ee5fac40a9ad2518a74fc8b",
+      "lrat_sha256": "6add692960f7dfe5d85cf8355a4226860b19688518dfdb531cb132110a51122a",
+      "cake_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+      "acceptance_receipt": "/home/jay/research/data/es308-20261114/cuts-v4/0006/receipt.json"
+    },
+    {
+      "support": [
+        25,
+        53,
+        65,
+        68,
+        77,
+        79,
+        89,
+        110,
+        115,
+        123,
+        130,
+        138,
+        142
+      ],
+      "cnf_sha256": "64352a1e8fc442abab15a5abf4a32126f1934d72a253d4c6de92ad43b36a3dc6",
+      "lrat_sha256": "99558f38d00123819f2979c741ef410d159fa8d3b176d9ea2edfb7b61abe99df",
+      "cake_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+      "acceptance_receipt": "/home/jay/research/data/es308-20261114/cuts-v4/0007/receipt.json"
+    },
+    {
+      "support": [
+        25,
+        53,
+        65,
+        68,
+        77,
+        79,
+        89,
+        110,
+        115,
+        123,
+        130,
+        143,
+        147
+      ],
+      "cnf_sha256": "22aeebb38bad3b3ff9234d610e4db8650284aaa0f9cc0ef7fb2e64f0af2efae7",
+      "lrat_sha256": "361e9b1ff16d814de4846dc9dc4732b3330f83e8d7b28a2e283c830dad349ace",
+      "cake_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+      "acceptance_receipt": "/home/jay/research/data/es308-20261114/cuts-v4/0008/receipt.json"
+    },
+    {
+      "support": [
+        38,
+        47,
+        48,
+        51,
+        58,
+        61,
+        63,
+        69,
+        73,
+        80,
+        84,
+        102,
+        103
+      ],
+      "cnf_sha256": "0f2f2409b55d271d82f1d4fe99a0dfa1b7b6ef705b2d172db8e810866f500508",
+      "lrat_sha256": "8110d2801d72ad75c49b6b08bffc459d549df9faf9c48a4a99f741e86686b316",
+      "cake_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+      "acceptance_receipt": "/home/jay/research/data/es308-20261114/cuts-v4/0009/receipt.json"
+    }
+  ],
+  "status": "CERTIFIED appended rows; independent replay recorded separately"
+}

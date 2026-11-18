@@ -1,0 +1,20 @@
+{
+  "action": "Stopped replay watcher at parent request after slice20 finder witness",
+  "stopped_local": "2026-11-14T10:18:02+09:00",
+  "s19_summary_sha256": "424be2779c1a745fa0bb7834875eeba55ea17bd65a83ae180767a02b55624c3a",
+  "s19_contexts_sha256": "06d6a59e99846ae7468678d7e9355ff396b77a5f2a46bbf06eecba35e3be21b1",
+  "s20_summary_sha256": "5fef9c2100382feabd0b6904b4616ac6911f4bf9e628b704dbe2c42a89442121",
+  "s20_contexts_sha256": "748df1cf181f6ba8c3cdd42676d7f5e93645a22f93ec8bc0d66d322a332ab49e",
+  "counts": {
+    "19": {
+      "contexts": 3643,
+      "nodes_in_contexts": 1654385
+    },
+    "20": {
+      "contexts": 86,
+      "nodes_in_contexts": 1978872
+    }
+  },
+  "witness_sha256": "fbb91635e1a9fb342ccabc41ca1244192284e16053e7390d75f9d26e22a61a52",
+  "control_note": "Initial AS100MiB control tried loading all receipts and raised MemoryError; retried via streaming; no kernel OOM and no source write."
+}

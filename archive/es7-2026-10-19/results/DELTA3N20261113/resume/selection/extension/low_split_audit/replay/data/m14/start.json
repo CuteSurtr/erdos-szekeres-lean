@@ -1,0 +1,24 @@
+{
+  "started": "2026-11-13T22:20:24.495563+00:00",
+  "pid": 895284,
+  "affinity": [
+    5
+  ],
+  "limits": "Limit                     Soft Limit           Hard Limit           Units     \nMax cpu time              450                  450                  seconds   \nMax file size             unlimited            unlimited            bytes     \nMax data size             unlimited            unlimited            bytes     \nMax stack size            8388608              unlimited            bytes     \nMax core file size        0                    unlimited            bytes     \nMax resident set          unlimited            unlimited            bytes     \nMax processes             243364               243364               processes \nMax open files            1024                 524288               files     \nMax locked memory         8388608              8388608              bytes     \nMax address space         734003200            734003200            bytes     \nMax file locks            unlimited            unlimited            locks     \nMax pending signals       243364               243364               signals   \nMax msgqueue size         819200               819200               bytes     \nMax nice priority         0                    0                    \nMax realtime priority     0                    0                    \nMax realtime timeout      unlimited            unlimited            us        \n",
+  "cgroup": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/nov13c-vfy-delta6-low14-independent.service",
+  "memory": {
+    "current": 8232960,
+    "peak": 8232960,
+    "anon": 7237632,
+    "file": 4096,
+    "swap": 0
+  },
+  "AS_MiB": 700,
+  "heap_MiB": 450,
+  "stack_MiB": 32,
+  "CPU_count": 1,
+  "cake_wall_seconds": 360,
+  "hash_cache_release_bytes": 67108864,
+  "cache_release_period_seconds": 1,
+  "monitor_period_seconds": 0.1
+}

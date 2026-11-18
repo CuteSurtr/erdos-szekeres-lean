@@ -1,0 +1,135 @@
+{
+  "accepted_moves": 68,
+  "accepted_states_checked": 69,
+  "baseline_uniform_count": 4057,
+  "best_trajectory": [
+    {
+      "P": [
+        [
+          -3592290304,
+          -2984886272
+        ],
+        [
+          -3474124800,
+          -3301707776
+        ],
+        [
+          -1292193792,
+          1686409216
+        ],
+        [
+          -1282174976,
+          2489950208
+        ],
+        [
+          -1278664704,
+          3165712384
+        ],
+        [
+          -1128296448,
+          -1055645696
+        ],
+        [
+          -1014775808,
+          -1279959040
+        ],
+        [
+          -941694976,
+          -1148100608
+        ],
+        [
+          -920334336,
+          152002560
+        ],
+        [
+          -898445312,
+          -3161034752
+        ],
+        [
+          -603049984,
+          -2554535936
+        ],
+        [
+          -172273664,
+          318361600
+        ],
+        [
+          15630336,
+          -3349606400
+        ],
+        [
+          309043200,
+          -3775221760
+        ],
+        [
+          630251520,
+          960888832
+        ],
+        [
+          746692608,
+          1132101632
+        ],
+        [
+          1876631552,
+          1089495040
+        ],
+        [
+          3105054720,
+          3700482048
+        ]
+      ],
+      "case_directory": "/home/jay/research/data/delta3-codex-20261113/extension/envelope/adversarial/preflight-v1/best/best-000",
+      "elapsed_seconds": 0.14270130599470576,
+      "evaluations": 0,
+      "exposed_pairs": [
+        [
+          7,
+          14
+        ],
+        [
+          7,
+          15
+        ],
+        [
+          7,
+          17
+        ],
+        [
+          10,
+          16
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          16,
+          17
+        ]
+      ],
+      "name": "best-000",
+      "outcome": "SAT_EXACT_MODEL_CHECKED",
+      "reason": "baseline",
+      "survivors": 4057
+    }
+  ],
+  "best_uniform_count": 4057,
+  "elapsed_seconds": 0.3269557559979148,
+  "evaluations": 1005,
+  "label": "HEURISTIC search with exact finite counts",
+  "limitations": [
+    "This is one fixed18-point orientation cell and a bounded coordinate grid.",
+    "All scores are exact, but the search is not exhaustive.",
+    "Positive best count does not exclude a uniform failure elsewhere in the cell.",
+    "No ordinary weak Delta counterexample is possible within this fixed cell."
+  ],
+  "ordinary_count": 8149,
+  "peak_child_rss_kib": 20952,
+  "peak_self_rss_kib": 21208,
+  "restarts_completed": 2,
+  "stop": "EVALUATION_LIMIT"
+}

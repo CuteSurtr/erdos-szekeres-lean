@@ -1,0 +1,574 @@
+{
+  "label": "COMPUTED",
+  "rows": [
+    {
+      "a": 5,
+      "base_only": false,
+      "clauses": 512206,
+      "cnf_bytes": 0,
+      "cube": "",
+      "encoder": "old",
+      "label": "COMPUTED",
+      "literals": 2162652,
+      "m": 16,
+      "max_width": 8,
+      "mode": "weak",
+      "n": 7,
+      "phases": {
+        "cap_lattice": {
+          "clauses": 63019,
+          "literals": 378114
+        },
+        "forall_delta": {
+          "clauses": 65536,
+          "literals": 123490
+        },
+        "fourcap": {
+          "clauses": 3640,
+          "literals": 7280
+        },
+        "no5cap": {
+          "clauses": 4368,
+          "literals": 13104
+        },
+        "no_ngon": {
+          "clauses": 183040,
+          "literals": 915200
+        },
+        "signotope": {
+          "clauses": 14560,
+          "literals": 58240
+        },
+        "target_lattice": {
+          "clauses": 50643,
+          "literals": 405144
+        },
+        "target_seeds": {
+          "clauses": 127400,
+          "literals": 262080
+        }
+      },
+      "pool": "lattice",
+      "sym": "none",
+      "triples": 560,
+      "variables": 125870
+    },
+    {
+      "a": 5,
+      "base_only": false,
+      "clauses": 296714,
+      "cnf_bytes": 0,
+      "containment": "witness",
+      "convex": "recurrence",
+      "encoder": "compact",
+      "fixed_signs": false,
+      "label": "COMPUTED",
+      "literals": 1250856,
+      "m": 16,
+      "max_width": 8,
+      "mode": "weak",
+      "n": 7,
+      "phases": {
+        "cap_lattice": {
+          "clauses": 60502,
+          "literals": 363012
+        },
+        "convex4_equivalence": {
+          "clauses": 14560,
+          "literals": 43680
+        },
+        "convex_larger_equivalence": {
+          "clauses": 74256,
+          "literals": 198016
+        },
+        "forall_delta": {
+          "clauses": 62882,
+          "literals": 120836
+        },
+        "fourcap": {
+          "clauses": 3640,
+          "literals": 7280
+        },
+        "no5cap": {
+          "clauses": 4368,
+          "literals": 13104
+        },
+        "no_ngon": {
+          "clauses": 11440,
+          "literals": 57200
+        },
+        "signotope": {
+          "clauses": 14560,
+          "literals": 43680
+        },
+        "target_lattice": {
+          "clauses": 50506,
+          "literals": 404048
+        }
+      },
+      "pool": "reduced",
+      "sym": "none",
+      "triples": 560,
+      "variables": 127584
+    },
+    {
+      "a": 5,
+      "base_only": false,
+      "clauses": 302022,
+      "cnf_bytes": 0,
+      "containment": "witness",
+      "convex": "recurrence",
+      "encoder": "compact",
+      "fixed_signs": false,
+      "label": "COMPUTED",
+      "literals": 1269708,
+      "m": 16,
+      "max_width": 8,
+      "mode": "weak",
+      "n": 7,
+      "phases": {
+        "cap_lattice": {
+          "clauses": 63019,
+          "literals": 378114
+        },
+        "convex4_equivalence": {
+          "clauses": 14560,
+          "literals": 43680
+        },
+        "convex_larger_equivalence": {
+          "clauses": 74256,
+          "literals": 198016
+        },
+        "forall_delta": {
+          "clauses": 65536,
+          "literals": 123490
+        },
+        "fourcap": {
+          "clauses": 3640,
+          "literals": 7280
+        },
+        "no5cap": {
+          "clauses": 4368,
+          "literals": 13104
+        },
+        "no_ngon": {
+          "clauses": 11440,
+          "literals": 57200
+        },
+        "signotope": {
+          "clauses": 14560,
+          "literals": 43680
+        },
+        "target_lattice": {
+          "clauses": 50643,
+          "literals": 405144
+        }
+      },
+      "pool": "all",
+      "sym": "none",
+      "triples": 560,
+      "variables": 130238
+    },
+    {
+      "a": 5,
+      "base_only": false,
+      "clauses": 350586,
+      "cnf_bytes": 0,
+      "containment": "witness",
+      "convex": "direct",
+      "encoder": "compact",
+      "fixed_signs": false,
+      "label": "COMPUTED",
+      "literals": 1764408,
+      "m": 16,
+      "max_width": 35,
+      "mode": "weak",
+      "n": 7,
+      "phases": {
+        "cap_lattice": {
+          "clauses": 60502,
+          "literals": 363012
+        },
+        "convex4_equivalence": {
+          "clauses": 14560,
+          "literals": 43680
+        },
+        "convex_larger_equivalence": {
+          "clauses": 128128,
+          "literals": 368368
+        },
+        "forall_delta": {
+          "clauses": 62882,
+          "literals": 120836
+        },
+        "fourcap": {
+          "clauses": 3640,
+          "literals": 7280
+        },
+        "no5cap": {
+          "clauses": 4368,
+          "literals": 13104
+        },
+        "no_ngon": {
+          "clauses": 11440,
+          "literals": 400400
+        },
+        "signotope": {
+          "clauses": 14560,
+          "literals": 43680
+        },
+        "target_lattice": {
+          "clauses": 50506,
+          "literals": 404048
+        }
+      },
+      "pool": "reduced",
+      "sym": "none",
+      "triples": 560,
+      "variables": 123216
+    },
+    {
+      "a": 5,
+      "base_only": false,
+      "clauses": 954586,
+      "cnf_bytes": 0,
+      "containment": "exact",
+      "convex": "recurrence",
+      "encoder": "compact",
+      "fixed_signs": false,
+      "label": "COMPUTED",
+      "literals": 2568420,
+      "m": 16,
+      "max_width": 8,
+      "mode": "weak",
+      "n": 7,
+      "phases": {
+        "cap_lattice": {
+          "clauses": 363012,
+          "literals": 968032
+        },
+        "convex4_equivalence": {
+          "clauses": 14560,
+          "literals": 43680
+        },
+        "convex_larger_equivalence": {
+          "clauses": 74256,
+          "literals": 198016
+        },
+        "forall_delta": {
+          "clauses": 62882,
+          "literals": 120836
+        },
+        "fourcap": {
+          "clauses": 5460,
+          "literals": 12740
+        },
+        "no5cap": {
+          "clauses": 4368,
+          "literals": 13104
+        },
+        "no_ngon": {
+          "clauses": 11440,
+          "literals": 57200
+        },
+        "signotope": {
+          "clauses": 14560,
+          "literals": 43680
+        },
+        "target_lattice": {
+          "clauses": 404048,
+          "literals": 1111132
+        }
+      },
+      "pool": "reduced",
+      "sym": "none",
+      "triples": 560,
+      "variables": 127584
+    },
+    {
+      "a": 5,
+      "base_only": false,
+      "clauses": 881146,
+      "cnf_bytes": 0,
+      "cube": "",
+      "encoder": "old",
+      "label": "COMPUTED",
+      "literals": 3446527,
+      "m": 16,
+      "max_width": 9,
+      "mode": "weak",
+      "n": 8,
+      "phases": {
+        "cap_lattice": {
+          "clauses": 63019,
+          "literals": 378114
+        },
+        "forall_delta": {
+          "clauses": 65536,
+          "literals": 115482
+        },
+        "fourcap": {
+          "clauses": 3640,
+          "literals": 7280
+        },
+        "no5cap": {
+          "clauses": 4368,
+          "literals": 13104
+        },
+        "no_ngon": {
+          "clauses": 283140,
+          "literals": 1698840
+        },
+        "signotope": {
+          "clauses": 14560,
+          "literals": 58240
+        },
+        "target_lattice": {
+          "clauses": 39203,
+          "literals": 352827
+        },
+        "target_seeds": {
+          "clauses": 407680,
+          "literals": 822640
+        }
+      },
+      "pool": "lattice",
+      "sym": "none",
+      "triples": 560,
+      "variables": 117862
+    },
+    {
+      "a": 5,
+      "base_only": false,
+      "clauses": 346608,
+      "cnf_bytes": 0,
+      "containment": "witness",
+      "convex": "recurrence",
+      "encoder": "compact",
+      "fixed_signs": false,
+      "label": "COMPUTED",
+      "literals": 1350008,
+      "m": 16,
+      "max_width": 9,
+      "mode": "weak",
+      "n": 8,
+      "phases": {
+        "cap_lattice": {
+          "clauses": 56134,
+          "literals": 336804
+        },
+        "convex4_equivalence": {
+          "clauses": 14560,
+          "literals": 43680
+        },
+        "convex_larger_equivalence": {
+          "clauses": 142896,
+          "literals": 381056
+        },
+        "forall_delta": {
+          "clauses": 58514,
+          "literals": 108460
+        },
+        "fourcap": {
+          "clauses": 3640,
+          "literals": 7280
+        },
+        "no5cap": {
+          "clauses": 4368,
+          "literals": 13104
+        },
+        "no_ngon": {
+          "clauses": 12870,
+          "literals": 64350
+        },
+        "signotope": {
+          "clauses": 14560,
+          "literals": 43680
+        },
+        "target_lattice": {
+          "clauses": 39066,
+          "literals": 351594
+        }
+      },
+      "pool": "reduced",
+      "sym": "none",
+      "triples": 560,
+      "variables": 123216
+    },
+    {
+      "a": 5,
+      "base_only": false,
+      "clauses": 360652,
+      "cnf_bytes": 0,
+      "containment": "witness",
+      "convex": "recurrence",
+      "encoder": "compact",
+      "fixed_signs": false,
+      "label": "COMPUTED",
+      "literals": 1399573,
+      "m": 16,
+      "max_width": 9,
+      "mode": "weak",
+      "n": 8,
+      "phases": {
+        "cap_lattice": {
+          "clauses": 63019,
+          "literals": 378114
+        },
+        "convex4_equivalence": {
+          "clauses": 14560,
+          "literals": 43680
+        },
+        "convex_larger_equivalence": {
+          "clauses": 142896,
+          "literals": 381056
+        },
+        "forall_delta": {
+          "clauses": 65536,
+          "literals": 115482
+        },
+        "fourcap": {
+          "clauses": 3640,
+          "literals": 7280
+        },
+        "no5cap": {
+          "clauses": 4368,
+          "literals": 13104
+        },
+        "no_ngon": {
+          "clauses": 12870,
+          "literals": 64350
+        },
+        "signotope": {
+          "clauses": 14560,
+          "literals": 43680
+        },
+        "target_lattice": {
+          "clauses": 39203,
+          "literals": 352827
+        }
+      },
+      "pool": "all",
+      "sym": "none",
+      "triples": 560,
+      "variables": 130238
+    },
+    {
+      "a": 5,
+      "base_only": false,
+      "clauses": 615552,
+      "cnf_bytes": 0,
+      "containment": "witness",
+      "convex": "direct",
+      "encoder": "compact",
+      "fixed_signs": false,
+      "label": "COMPUTED",
+      "literals": 3018142,
+      "m": 16,
+      "max_width": 70,
+      "mode": "weak",
+      "n": 8,
+      "phases": {
+        "cap_lattice": {
+          "clauses": 56134,
+          "literals": 336804
+        },
+        "convex4_equivalence": {
+          "clauses": 14560,
+          "literals": 43680
+        },
+        "convex_larger_equivalence": {
+          "clauses": 411840,
+          "literals": 1212640
+        },
+        "forall_delta": {
+          "clauses": 58514,
+          "literals": 108460
+        },
+        "fourcap": {
+          "clauses": 3640,
+          "literals": 7280
+        },
+        "no5cap": {
+          "clauses": 4368,
+          "literals": 13104
+        },
+        "no_ngon": {
+          "clauses": 12870,
+          "literals": 900900
+        },
+        "signotope": {
+          "clauses": 14560,
+          "literals": 43680
+        },
+        "target_lattice": {
+          "clauses": 39066,
+          "literals": 351594
+        }
+      },
+      "pool": "reduced",
+      "sym": "none",
+      "triples": 560,
+      "variables": 110840
+    },
+    {
+      "a": 5,
+      "base_only": false,
+      "clauses": 941626,
+      "cnf_bytes": 0,
+      "containment": "exact",
+      "convex": "recurrence",
+      "encoder": "compact",
+      "fixed_signs": false,
+      "label": "COMPUTED",
+      "literals": 2541864,
+      "m": 16,
+      "max_width": 9,
+      "mode": "weak",
+      "n": 8,
+      "phases": {
+        "cap_lattice": {
+          "clauses": 336804,
+          "literals": 898144
+        },
+        "convex4_equivalence": {
+          "clauses": 14560,
+          "literals": 43680
+        },
+        "convex_larger_equivalence": {
+          "clauses": 142896,
+          "literals": 381056
+        },
+        "forall_delta": {
+          "clauses": 58514,
+          "literals": 108460
+        },
+        "fourcap": {
+          "clauses": 5460,
+          "literals": 12740
+        },
+        "no5cap": {
+          "clauses": 4368,
+          "literals": 13104
+        },
+        "no_ngon": {
+          "clauses": 12870,
+          "literals": 64350
+        },
+        "signotope": {
+          "clauses": 14560,
+          "literals": 43680
+        },
+        "target_lattice": {
+          "clauses": 351594,
+          "literals": 976650
+        }
+      },
+      "pool": "reduced",
+      "sym": "none",
+      "triples": 560,
+      "variables": 123216
+    }
+  ],
+  "source": "cloud/es7-2026-10-19/results/DELTA3N20261113/resume/compact/compact_cnf.cpp"
+}

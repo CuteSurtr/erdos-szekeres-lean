@@ -1,0 +1,29 @@
+{
+  "label": "CERTIFIED",
+  "version": "v131u",
+  "rows": 14,
+  "own_encoder_matches": 14,
+  "fresh_cake_acceptances": 14,
+  "old_witness_exact_row_check": "PASS (3973 rows, 35 holes, F20,Lo15,state0 occupied)",
+  "rows_cutting_old_witness": 14,
+  "old_witness_intersection_counts": {
+    "0": 14
+  },
+  "accepted_sha256": "cd1c234584784db0ea7c29be93bd77938e51ffbf87fb7c5d6280ff0a97916dde",
+  "replay_sha256": "c55637e2ee743eece1414de506be351a64a06a3c20dce5dc056895cb7f29ce94",
+  "input_sha256": {
+    "/home/jay/research/data/es308-20261114/cuts-v131u/accepted.json": "cd1c234584784db0ea7c29be93bd77938e51ffbf87fb7c5d6280ff0a97916dde",
+    "/home/jay/research/data/es308-20261114/candidates-v131u.json": "5d4d9bb1362b7459c454a922afae9db522f5d2cee51be319d0aecfaacfe7ce4b",
+    "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-residual32-rank-global-2026-10-10/source-2650.json.gz": "8c7fe9ef5264182524095d46ef50ed6bc691cab425efa965756d1870112241aa",
+    "/home/jay/research/data/es308-20261114/runs/b35s20/bb/WITNESS.json.v130-snapshot": "02e5d4617cd7755d6ce02de81d18061b6156dfb779ad6aab857e92ab3e865cf9",
+    "/home/jay/research/data/es308-20261114/inputs/b35s20-v130/extra.json": "2da6c38a3c0a2ff2e086621a957e351575faa9dcc78f05114a450dabb29eeeeb",
+    "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/LO33N20261113/budget34/audit/audit_followup_rows_v4.py": "f0df1c0f5b38b735226a9b813b3f5f78d0b91ee27c300c15ffccf5c5fa1ffc12",
+    "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/LO33N20261113/budget34/audit/residual_encoder.py": "db7b2deba4ae55ff50f25d1e52843734591f5e7d1339a53e45e8811866e7365c",
+    "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54"
+  },
+  "seconds": 4.981,
+  "finished_local": "2026-11-15T05:14:56.492691+09:00",
+  "scope": "Additional rows only; no finite exclusion or ES bound follows from these rows alone",
+  "parent_maxrss_kib": 57772,
+  "child_maxrss_kib": 412792
+}

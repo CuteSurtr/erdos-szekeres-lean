@@ -1,0 +1,157 @@
+{
+  "label": "COMPUTED",
+  "status": "PASS",
+  "mode": "refined",
+  "result": {
+    "n": 8,
+    "kind": "refined",
+    "cnf_sha256": "78671defd0e694ca0555a0fe1285edcee80da288f564014f6e2a9e78f1054be4",
+    "map_sha256": "2dea05d695411d0de0d9a1e9b5e35c076d197eaf21f5322c2d369778fc6fcc3c",
+    "source_hashes": {},
+    "rebuilt": {
+      "cup_equivalence": 36036,
+      "some_long_cup": 1,
+      "no_longer_cup": 1716,
+      "convex_complements": 1716,
+      "no_full_longer_cup": 1716
+    },
+    "controls": [
+      {
+        "name": "root",
+        "false_clauses": {
+          "signotope": 0,
+          "no5cap": 0,
+          "convex4_equivalence": 0,
+          "convex_larger_equivalence": 0,
+          "no_ngon": 0,
+          "cup_equivalence": 0,
+          "some_long_cup": 0,
+          "no_longer_cup": 0,
+          "convex_complements": 0,
+          "no_full_longer_cup": 6
+        }
+      },
+      {
+        "name": "refined",
+        "false_clauses": {
+          "signotope": 0,
+          "no5cap": 0,
+          "convex4_equivalence": 0,
+          "convex_larger_equivalence": 0,
+          "no_ngon": 0,
+          "cup_equivalence": 0,
+          "some_long_cup": 0,
+          "no_longer_cup": 0,
+          "convex_complements": 0,
+          "no_full_longer_cup": 0
+        }
+      },
+      {
+        "name": "parabola_1",
+        "false_clauses": {
+          "signotope": 0,
+          "no5cap": 0,
+          "convex4_equivalence": 0,
+          "convex_larger_equivalence": 0,
+          "no_ngon": 3003,
+          "cup_equivalence": 0,
+          "some_long_cup": 0,
+          "no_longer_cup": 1716,
+          "convex_complements": 0,
+          "no_full_longer_cup": 1716
+        }
+      },
+      {
+        "name": "parabola_-1",
+        "false_clauses": {
+          "signotope": 0,
+          "no5cap": 2002,
+          "convex4_equivalence": 0,
+          "convex_larger_equivalence": 0,
+          "no_ngon": 3003,
+          "cup_equivalence": 0,
+          "some_long_cup": 1,
+          "no_longer_cup": 0,
+          "convex_complements": 0,
+          "no_full_longer_cup": 0
+        }
+      },
+      {
+        "name": "raised_middle_parabola",
+        "points": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            18
+          ],
+          [
+            4,
+            32
+          ],
+          [
+            5,
+            50
+          ],
+          [
+            6,
+            72
+          ],
+          [
+            7,
+            101
+          ],
+          [
+            8,
+            128
+          ],
+          [
+            9,
+            162
+          ],
+          [
+            10,
+            200
+          ],
+          [
+            11,
+            242
+          ],
+          [
+            12,
+            288
+          ],
+          [
+            13,
+            338
+          ]
+        ],
+        "false_clauses": {
+          "signotope": 0,
+          "no5cap": 0,
+          "convex4_equivalence": 0,
+          "convex_larger_equivalence": 0,
+          "no_ngon": 2541,
+          "cup_equivalence": 0,
+          "some_long_cup": 0,
+          "no_longer_cup": 1506,
+          "convex_complements": 210,
+          "no_full_longer_cup": 1596
+        }
+      }
+    ]
+  },
+  "checker_sha256": "a81d4250a2ba859ae88b9ff7ef5927792d1045c6031c5fa754fe01bbcd8bd8cd",
+  "seconds": 0.391,
+  "maxrss_KiB": 76456
+}

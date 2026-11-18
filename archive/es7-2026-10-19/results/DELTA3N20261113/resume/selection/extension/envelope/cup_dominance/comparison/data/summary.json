@@ -1,0 +1,39 @@
+{
+  "label": "COMPUTED bounded comparison with separate witness replay",
+  "geometries": 317,
+  "raw_relation_control": 1,
+  "closure_added_pairs": 12221,
+  "closure_added_cap_terminal_pairs": 5987,
+  "closure_changed_cases": 317,
+  "endpoint_forced_added_pairs": 12253,
+  "endpoint_forced_added_cap_terminal_pairs": 6019,
+  "endpoint_forced_not_closure_pairs": 32,
+  "closure_not_endpoint_forced_pairs": 0,
+  "independent_gain_replay": "PASS",
+  "canonical_two_step_gains_checked": 12221,
+  "forty_eight_case_predicate": {
+    "classes": 48,
+    "forced": 18,
+    "direct_cup": 2,
+    "forced_extra": 16,
+    "forbidden_late_query_by_no5": 9
+  },
+  "extra_force_cases": [
+    "n7-i007",
+    "n7-i045",
+    "n7-i053",
+    "n7-i097",
+    "n7-i118",
+    "n8-i016",
+    "n8-i026",
+    "n8-i068",
+    "n8-i079",
+    "n8-i113",
+    "n8-i126",
+    "n8-i134",
+    "n8-i137",
+    "n8-i149",
+    "n8-i151",
+    "n8-i182"
+  ]
+}

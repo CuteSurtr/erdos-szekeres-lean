@@ -1,0 +1,281 @@
+{
+  "scope": "Filter only the 16 already known uniform subsets of T; no new full selection search",
+  "direct_count": 16,
+  "closure_count": 16,
+  "rows": [
+    {
+      "A": [
+        3,
+        4,
+        7,
+        10,
+        14,
+        16
+      ],
+      "direct_bad": [],
+      "closure_bad": []
+    },
+    {
+      "A": [
+        3,
+        4,
+        7,
+        10,
+        12,
+        14,
+        16
+      ],
+      "direct_bad": [],
+      "closure_bad": []
+    },
+    {
+      "A": [
+        3,
+        4,
+        7,
+        10,
+        13,
+        14,
+        16
+      ],
+      "direct_bad": [],
+      "closure_bad": []
+    },
+    {
+      "A": [
+        3,
+        4,
+        7,
+        10,
+        12,
+        13,
+        14,
+        16
+      ],
+      "direct_bad": [],
+      "closure_bad": []
+    },
+    {
+      "A": [
+        3,
+        4,
+        7,
+        10,
+        15,
+        16
+      ],
+      "direct_bad": [],
+      "closure_bad": []
+    },
+    {
+      "A": [
+        3,
+        4,
+        7,
+        10,
+        12,
+        15,
+        16
+      ],
+      "direct_bad": [],
+      "closure_bad": []
+    },
+    {
+      "A": [
+        3,
+        4,
+        7,
+        10,
+        13,
+        15,
+        16
+      ],
+      "direct_bad": [],
+      "closure_bad": []
+    },
+    {
+      "A": [
+        3,
+        4,
+        7,
+        10,
+        12,
+        13,
+        15,
+        16
+      ],
+      "direct_bad": [],
+      "closure_bad": []
+    },
+    {
+      "A": [
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        17
+      ],
+      "direct_bad": [],
+      "closure_bad": []
+    },
+    {
+      "A": [
+        3,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        17
+      ],
+      "direct_bad": [],
+      "closure_bad": []
+    },
+    {
+      "A": [
+        4,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        17
+      ],
+      "direct_bad": [],
+      "closure_bad": []
+    },
+    {
+      "A": [
+        8,
+        10,
+        11,
+        12,
+        13,
+        15,
+        17
+      ],
+      "direct_bad": [],
+      "closure_bad": []
+    },
+    {
+      "A": [
+        3,
+        8,
+        10,
+        11,
+        12,
+        13,
+        15,
+        17
+      ],
+      "direct_bad": [],
+      "closure_bad": []
+    },
+    {
+      "A": [
+        4,
+        8,
+        10,
+        11,
+        12,
+        13,
+        15,
+        17
+      ],
+      "direct_bad": [],
+      "closure_bad": []
+    },
+    {
+      "A": [
+        3,
+        4,
+        7,
+        10,
+        14,
+        16,
+        17
+      ],
+      "direct_bad": [],
+      "closure_bad": []
+    },
+    {
+      "A": [
+        3,
+        4,
+        7,
+        10,
+        15,
+        16,
+        17
+      ],
+      "direct_bad": [],
+      "closure_bad": []
+    }
+  ],
+  "new_top_triple_certificates": {
+    "(7, 8, 16)": {
+      "target": [
+        8,
+        16
+      ],
+      "middle": [
+        8,
+        17
+      ],
+      "ambient_pair": [
+        14,
+        17
+      ],
+      "ambient_cap": [
+        6,
+        7,
+        14,
+        17
+      ]
+    },
+    "(7, 11, 16)": {
+      "target": [
+        11,
+        16
+      ],
+      "middle": [
+        11,
+        17
+      ],
+      "ambient_pair": [
+        14,
+        17
+      ],
+      "ambient_cap": [
+        6,
+        7,
+        14,
+        17
+      ]
+    },
+    "(10, 11, 16)": {
+      "target": [
+        11,
+        16
+      ],
+      "middle": [
+        11,
+        17
+      ],
+      "ambient_pair": [
+        14,
+        17
+      ],
+      "ambient_cap": [
+        6,
+        7,
+        14,
+        17
+      ]
+    }
+  }
+}

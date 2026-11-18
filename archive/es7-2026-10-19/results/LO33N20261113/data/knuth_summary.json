@@ -1,0 +1,227 @@
+{
+ "k2_t18_lo.json": {
+  "slice": 18,
+  "mode": "lo",
+  "dives": 12,
+  "log10_mean_nodes": 3.309,
+  "median_depth": 8,
+  "max_depth": 12,
+  "witnesses": 0,
+  "lps": 3009,
+  "t": 38
+ },
+ "k2_t19_lo.json": {
+  "slice": 19,
+  "mode": "lo",
+  "dives": 30,
+  "log10_mean_nodes": 5.221,
+  "median_depth": 13,
+  "max_depth": 19,
+  "witnesses": 0,
+  "lps": 9498,
+  "t": 134
+ },
+ "k2_t19_s.json": {
+  "slice": 19,
+  "mode": "s",
+  "dives": 12,
+  "log10_mean_nodes": 6.473,
+  "median_depth": 15,
+  "max_depth": 24,
+  "witnesses": 0,
+  "lps": 4017,
+  "t": 42
+ },
+ "k2_t20_lo.json": {
+  "slice": 20,
+  "mode": "lo",
+  "dives": 25,
+  "log10_mean_nodes": 6.431,
+  "median_depth": 19,
+  "max_depth": 23,
+  "witnesses": 0,
+  "lps": 9136,
+  "t": 160
+ },
+ "k2_t21_lo.json": {
+  "slice": 21,
+  "mode": "lo",
+  "dives": 3,
+  "log10_mean_nodes": 7.049,
+  "median_depth": 22,
+  "max_depth": 23,
+  "witnesses": 0,
+  "lps": 1163,
+  "t": 18
+ },
+ "k3_b34_65_55.json": {
+  "extra": "xs34_65_55.json",
+  "pc": 0,
+  "K": [
+   "16",
+   "8",
+   "4"
+  ],
+  "dives": 77,
+  "log10_mean_nodes": 6.245,
+  "median_depth": 17,
+  "max_depth": 24,
+  "witnesses": 0,
+  "t": 204
+ },
+ "k3_t19_pc0.json": {
+  "extra": "extra_v1.json",
+  "pc": 0,
+  "K": [
+   "16",
+   "8",
+   "4"
+  ],
+  "dives": 60,
+  "log10_mean_nodes": 5.229,
+  "median_depth": 14,
+  "max_depth": 19,
+  "witnesses": 0,
+  "t": 156
+ },
+ "k3_t19_pc1.json": {
+  "extra": "extra_v1.json",
+  "pc": 1,
+  "K": [
+   "16",
+   "8",
+   "4"
+  ],
+  "dives": 60,
+  "log10_mean_nodes": 5.33,
+  "median_depth": 13,
+  "max_depth": 22,
+  "witnesses": 0,
+  "t": 158
+ },
+ "k3_t20_K2.json": {
+  "extra": "xs_t20.json",
+  "pc": 0,
+  "K": [
+   "16",
+   "8",
+   "2"
+  ],
+  "dives": 58,
+  "log10_mean_nodes": 6.757,
+  "median_depth": 19,
+  "max_depth": 25,
+  "witnesses": 0,
+  "t": 187
+ },
+ "k3_t20_K3.json": {
+  "extra": "xs_t20.json",
+  "pc": 0,
+  "K": [
+   "16",
+   "8",
+   "3"
+  ],
+  "dives": 54,
+  "log10_mean_nodes": 6.504,
+  "median_depth": 19,
+  "max_depth": 24,
+  "witnesses": 0,
+  "t": 187
+ },
+ "k3_t20_K4.json": {
+  "extra": "xs_t20.json",
+  "pc": 0,
+  "K": [
+   "16",
+   "8",
+   "4"
+  ],
+  "dives": 51,
+  "log10_mean_nodes": 6.69,
+  "median_depth": 19,
+  "max_depth": 26,
+  "witnesses": 0,
+  "t": 184
+ },
+ "k3_t20_K6.json": {
+  "extra": "xs_t20.json",
+  "pc": 0,
+  "K": [
+   "16",
+   "8",
+   "6"
+  ],
+  "dives": 47,
+  "log10_mean_nodes": 6.348,
+  "median_depth": 19,
+  "max_depth": 22,
+  "witnesses": 0,
+  "t": 187
+ },
+ "k3_t20_K8.json": {
+  "extra": "xs_t20.json",
+  "pc": 0,
+  "K": [
+   "16",
+   "8",
+   "8"
+  ],
+  "dives": 43,
+  "log10_mean_nodes": 6.299,
+  "median_depth": 19,
+  "max_depth": 22,
+  "witnesses": 0,
+  "t": 184
+ },
+ "knuth_t18.json": {
+  "budget": 33,
+  "rows": "x0_t18.json",
+  "dives": 40,
+  "log10_mean_nodes": 4.472,
+  "median_depth": 12,
+  "max_depth": 17,
+  "witnesses": 0,
+  "t": 85
+ },
+ "knuth_t19.json": {
+  "budget": 33,
+  "rows": "x0_t19.json",
+  "dives": 40,
+  "log10_mean_nodes": 6.576,
+  "median_depth": 19,
+  "max_depth": 25,
+  "witnesses": 0,
+  "t": 108
+ },
+ "knuth_t20.json": {
+  "budget": 33,
+  "rows": "x0_t20.json",
+  "dives": 40,
+  "log10_mean_nodes": 7.581,
+  "median_depth": 22,
+  "max_depth": 27,
+  "witnesses": 0,
+  "t": 122
+ },
+ "knuth_t21.json": {
+  "budget": 33,
+  "rows": "x0_t21.json",
+  "dives": 40,
+  "log10_mean_nodes": 7.84,
+  "median_depth": 22,
+  "max_depth": 29,
+  "witnesses": 0,
+  "t": 128
+ },
+ "knuth_t24.json": {
+  "budget": 33,
+  "rows": "x0_t24.json",
+  "dives": 40,
+  "log10_mean_nodes": 7.976,
+  "median_depth": 20,
+  "max_depth": 30,
+  "witnesses": 0,
+  "t": 131
+ }
+}

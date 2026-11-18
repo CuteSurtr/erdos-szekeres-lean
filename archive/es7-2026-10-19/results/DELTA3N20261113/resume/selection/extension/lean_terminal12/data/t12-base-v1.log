@@ -1,0 +1,7 @@
+'Delta3.Terminal12.RealBridge.integer_orient' depends on axioms: [propext]
+'Delta3.Terminal12.RealBridge.real_orient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Delta3.Terminal12.RealBridge.real_x_strict' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Delta3.Terminal12.RealBridge.realPoint_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Delta3.Terminal12.RealBridge.real_orient_ne' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Delta3.Terminal12.RealBridge.realSet_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Delta3.Terminal12.RealBridge.realSet_generalPosition' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,127 @@
+{
+  "commands": [
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "18",
+      "/home/jay/research/data/delta3-codex-20261113/encoder/delta_cnf",
+      "--n",
+      "8",
+      "--m",
+      "16",
+      "--mode",
+      "weak",
+      "--pool",
+      "lattice",
+      "--sym",
+      "none",
+      "--out",
+      "/home/jay/research/data/delta3-codex-20261113/encoder/direct-weak-n8-m16/case.cnf"
+    ],
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "602",
+      "/usr/bin/cadical",
+      "-q",
+      "-t",
+      "600",
+      "--lrat=true",
+      "--binary=false",
+      "/home/jay/research/data/delta3-codex-20261113/encoder/direct-weak-n8-m16/case.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/encoder/direct-weak-n8-m16/case.lrat"
+    ]
+  ],
+  "encoding": {
+    "a": 5,
+    "base_only": false,
+    "clauses": 881146,
+    "cnf_bytes": 20378288,
+    "cube": "",
+    "label": "COMPUTED",
+    "literals": 3446527,
+    "m": 16,
+    "max_width": 9,
+    "mode": "weak",
+    "n": 8,
+    "phases": {
+      "cap_lattice": {
+        "clauses": 63019,
+        "literals": 378114
+      },
+      "forall_delta": {
+        "clauses": 65536,
+        "literals": 115482
+      },
+      "fourcap": {
+        "clauses": 3640,
+        "literals": 7280
+      },
+      "no5cap": {
+        "clauses": 4368,
+        "literals": 13104
+      },
+      "no_ngon": {
+        "clauses": 283140,
+        "literals": 1698840
+      },
+      "signotope": {
+        "clauses": 14560,
+        "literals": 58240
+      },
+      "target_lattice": {
+        "clauses": 39203,
+        "literals": 352827
+      },
+      "target_seeds": {
+        "clauses": 407680,
+        "literals": 822640
+      }
+    },
+    "pool": "lattice",
+    "sym": "none",
+    "triples": 560,
+    "variables": 117862
+  },
+  "hashes": {
+    "cadical.log": "8fba55cea0f98be36fab7b65349dda867a58aabfcf974a46098f5123830ac5cb",
+    "cadical.time": "f7e87f784047b8d7019262295a2dddab759eef40cf425a65581d1d4ea195de2e",
+    "case.cnf": "56b09f02c0c3c116ebee2b3778372d5b9d2a7d9312ff2f53eaa1cca287c55eca",
+    "case.lrat": "99560c82f5c5dadb1bd3c4dbdfe5dfa78039d94890de1de6c4c0d13e1c50e469",
+    "delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+    "encode.log": "53ca2f59ad70a9fea9df704e520ee27887b85880964aee454cd308316fc56e41",
+    "encode.time": "e5703ddcc2b008d669e1aedae0a71d139d1dd0503637f8fef1c487b31cd8c3b0",
+    "encoder_binary": "b435f805e1475b90cffc6fdc831aeefc2eb573b1a48d800595c03de1bb9e99c6"
+  },
+  "label": "COMPUTED",
+  "parameters": {
+    "as_mib": 1300,
+    "binary": "/home/jay/research/data/delta3-codex-20261113/encoder/delta_cnf",
+    "cake_heap": 1100,
+    "cake_seconds": 300,
+    "cake_stack": 32,
+    "cube": "",
+    "defer_cake": false,
+    "fix_signs": null,
+    "generate_only": false,
+    "m": 16,
+    "mode": "weak",
+    "n": 8,
+    "out": "/home/jay/research/data/delta3-codex-20261113/encoder/direct-weak-n8-m16",
+    "pool": "lattice",
+    "seconds": 600,
+    "sym": "none"
+  },
+  "proof_bytes": 1040682242,
+  "runs": {
+    "cadical": {
+      "exit": 0,
+      "wall_seconds": 600.037
+    },
+    "encode": {
+      "exit": 0,
+      "wall_seconds": 0.164
+    }
+  },
+  "status": "UNKNOWN"
+}

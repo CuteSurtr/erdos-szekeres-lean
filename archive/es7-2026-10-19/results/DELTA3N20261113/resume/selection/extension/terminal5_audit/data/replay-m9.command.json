@@ -1,0 +1,36 @@
+{
+  "command": [
+    "/usr/bin/time",
+    "-v",
+    "-o",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/terminal5_audit/data/replay-m9.time",
+    "/usr/bin/timeout",
+    "--kill-after=1",
+    "17s",
+    "/usr/bin/prlimit",
+    "--as=314572800",
+    "--cpu=16",
+    "/home/jay/.local/bin/cake_lpr",
+    "--CML_HEAP_SIZE=128",
+    "--CML_STACK_SIZE=32",
+    "/home/jay/research/data/delta3-codex-20261113/extension/base5m9-a/input.cnf",
+    "/home/jay/research/data/delta3-codex-20261113/extension/base5m9-a/proof.blrat"
+  ],
+  "before": {
+    "/home/jay/research/data/delta3-codex-20261113/extension/base5m9-a/input.cnf": "0a2b952daba8431cf17d331f63d1f1f634896ab6c65eea5700fcc83dcb614844",
+    "/home/jay/research/data/delta3-codex-20261113/extension/base5m9-a/proof.blrat": "c3a92b0d16e5cfbb2c6e90180941f27c1ed7d686326cf3b2dd4e0faf7dda5ff8",
+    "/home/jay/research/data/delta3-codex-20261113/extension/base5m9-a/proof.blrat.zst": "9f4324cb5b2436fccc34ef146dc7272330e43a0bfc83d1ceba3b041a4fac05bd",
+    "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+    "/home/jay/research/data/delta3-codex-20261113/extension/base5m9-a/result.json": "335dbaa26a2384efe0f160eec08f3666cd1ab15b7a4cda041e2ae7ebf248e462",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/terminal5_audit/tools/replay.py": "f0305126b943af2d475d4229021887ec13250dbef67f0347193fe04f2797af0d"
+  },
+  "limits": {
+    "AS_MiB": 300,
+    "heap_MiB": 128,
+    "stack_MiB": 32,
+    "CPUs": 1,
+    "outer_wall_seconds": 20,
+    "cake_wall_seconds": 17,
+    "cake_CPU_seconds": 16
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "as_mib": 900,
+  "base_clauses": 446670,
+  "batch": 128,
+  "calls": 114,
+  "elapsed_seconds": 263.372,
+  "iterations": 2,
+  "label": "COMPUTED",
+  "m": 16,
+  "n": 7,
+  "pool_size": 511,
+  "seconds_limit": 900,
+  "seed": 701,
+  "solver": "PySAT CaDiCaL 1.9.5 (finder only)",
+  "source": "/home/jay/research/data/delta3-codex-20261113/encoder/direct-weak-n7-m16/result.json",
+  "source_cnf_sha256": "6bc7690369f19b2a908f6adbc0b4b9a23f67de8e8c4cf41482670a835e6df425",
+  "source_result_sha256": "74f7c56ca0555b37f76731755b027144f5e9617e182e74be9bfa8407c6832bcd",
+  "status": "SEARCHING",
+  "variables": 125870
+}

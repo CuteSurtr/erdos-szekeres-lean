@@ -1,0 +1,38 @@
+{
+ "state": "/home/jay/research/data/n66-20261113/lm/full_L11.json",
+ "W": "all 70 states (0..69)",
+ "L": 11,
+ "cube": [],
+ "rows_file": "mono/rows_1832.json",
+ "vars": 1647653,
+ "clauses": 5380347,
+ "eager": [
+  1,
+  1489581
+ ],
+ "quad": [
+  1489582,
+  5363397
+ ],
+ "units": [
+  5363398,
+  5363399
+ ],
+ "rows": [
+  5363400,
+  5379047
+ ],
+ "card": [
+  5379048,
+  5380347
+ ],
+ "sel": [
+  988541,
+  988610
+ ],
+ "mono_top": 1647026,
+ "activated_quadruples": 322818,
+ "cnf_sha256": "82fa7697df9aaf04091af2c81cff38a80fdf70f615e0eed72821167614c014b2",
+ "cnf_bytes": 364011645,
+ "write_seconds": 5.5
+}

@@ -1,0 +1,27 @@
+[
+  [
+    "/home/jay/research/data/delta3-codex-20261113/boundary/complement",
+    "8",
+    "old",
+    "/home/jay/research/data/delta3-codex-20261113/boundary/sweep/n8-old/input.cnf"
+  ],
+  [
+    "/home/jay/research/data/six10-linux-20261105/venv.disk/bin/python",
+    "-B",
+    "/home/jay/research/data/delta3-codex-20261113/boundary/sweep/source/run_cnf.py",
+    "--cnf",
+    "/home/jay/research/data/delta3-codex-20261113/boundary/sweep/n8-old/input.cnf",
+    "--sha256",
+    "f655ea5d71a92795ab60b8a91ec4eb5483ac322e6989e0c6302b74b335dc7236",
+    "--out",
+    "/home/jay/research/data/delta3-codex-20261113/boundary/sweep/n8-old/solve",
+    "--seconds",
+    "60",
+    "--cake-seconds",
+    "60",
+    "--heap",
+    "600",
+    "--as-mib",
+    "900"
+  ]
+]

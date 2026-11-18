@@ -1,0 +1,17 @@
+Working directory: /home/jay/research/lean/erdos-szekeres-lean
+Preflight: .claude/skills/es-research/scripts/cpu_free.sh nov13c
+Preflight output: 12
+
+timeout -k 1 20 prlimit --as=157286400 --cpu=18 taskset -c 3 /home/jay/research/data/six10-linux-20261105/venv.disk/bin/python -B cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split/consequences/tools/rooted_controls.py --mode named --out cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split/consequences/data/rooted_named.json
+
+timeout -k 1 20 prlimit --as=157286400 --cpu=18 taskset -c 3 /home/jay/research/data/six10-linux-20261105/venv.disk/bin/python -B cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split/consequences/tools/rooted_controls.py --mode grid --out cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split/consequences/data/rooted_grid.json
+
+timeout -k 1 20 prlimit --as=157286400 --cpu=18 taskset -c 3 /home/jay/research/data/six10-linux-20261105/venv.disk/bin/python -B cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split/consequences/tools/rooted_longcup_controls.py --out cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split/consequences/data/rooted_longcup.json
+
+Later all-cap preflight: .claude/skills/es-research/scripts/cpu_free.sh nov13c
+Later preflight output: 14
+
+timeout -k 1 20 prlimit --as=157286400 --cpu=18 taskset -c 3 /home/jay/research/data/six10-linux-20261105/venv.disk/bin/python -B cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split/consequences/tools/all_cap_controls.py --out cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split/consequences/data/all_cap_controls.json
+
+All commands exited0. Original outputs are retained and drivers refuse overwrite.
+For a replay, obtain the then-current resource allocation and use fresh output paths.

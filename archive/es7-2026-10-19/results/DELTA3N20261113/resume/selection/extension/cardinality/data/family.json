@@ -1,0 +1,1522 @@
+{
+  "label": "PROVED exact affine-in-parameter sign inequalities",
+  "statement": "Replace p5=(48,1) by (48,1+t), fixing all ten other points.",
+  "open_parameter_interval": [
+    "-1",
+    "8/61"
+  ],
+  "lower_active_triples": [
+    [
+      0,
+      5,
+      10
+    ]
+  ],
+  "upper_active_triples": [
+    [
+      3,
+      5,
+      7
+    ]
+  ],
+  "inequalities": [
+    {
+      "triple": [
+        0,
+        1,
+        2
+      ],
+      "positive_intercept": 13,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        1,
+        3
+      ],
+      "positive_intercept": 42,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        1,
+        4
+      ],
+      "positive_intercept": 1,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        1,
+        5
+      ],
+      "positive_intercept": 50,
+      "coefficient": 2
+    },
+    {
+      "triple": [
+        0,
+        1,
+        6
+      ],
+      "positive_intercept": 13,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        1,
+        7
+      ],
+      "positive_intercept": 63,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        1,
+        8
+      ],
+      "positive_intercept": 64,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        1,
+        9
+      ],
+      "positive_intercept": 258,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        1,
+        10
+      ],
+      "positive_intercept": 141,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        2,
+        3
+      ],
+      "positive_intercept": 33,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        2,
+        4
+      ],
+      "positive_intercept": 167,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        2,
+        5
+      ],
+      "positive_intercept": 87,
+      "coefficient": -9
+    },
+    {
+      "triple": [
+        0,
+        2,
+        6
+      ],
+      "positive_intercept": 403,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        2,
+        7
+      ],
+      "positive_intercept": 269,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        2,
+        8
+      ],
+      "positive_intercept": 271,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        2,
+        9
+      ],
+      "positive_intercept": 251,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        2,
+        10
+      ],
+      "positive_intercept": 282,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        3,
+        4
+      ],
+      "positive_intercept": 537,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        3,
+        5
+      ],
+      "positive_intercept": 408,
+      "coefficient": -24
+    },
+    {
+      "triple": [
+        0,
+        3,
+        6
+      ],
+      "positive_intercept": 1335,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        3,
+        7
+      ],
+      "positive_intercept": 1029,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        3,
+        8
+      ],
+      "positive_intercept": 1038,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        3,
+        9
+      ],
+      "positive_intercept": 156,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        3,
+        10
+      ],
+      "positive_intercept": 1269,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        4,
+        5
+      ],
+      "positive_intercept": 649,
+      "coefficient": 25
+    },
+    {
+      "triple": [
+        0,
+        4,
+        6
+      ],
+      "positive_intercept": 198,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        4,
+        7
+      ],
+      "positive_intercept": 830,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        4,
+        8
+      ],
+      "positive_intercept": 843,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        4,
+        9
+      ],
+      "positive_intercept": 3295,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        4,
+        10
+      ],
+      "positive_intercept": 1833,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        5,
+        6
+      ],
+      "positive_intercept": 1463,
+      "coefficient": 71
+    },
+    {
+      "triple": [
+        0,
+        5,
+        7
+      ],
+      "positive_intercept": 613,
+      "coefficient": 85
+    },
+    {
+      "triple": [
+        0,
+        5,
+        8
+      ],
+      "positive_intercept": 614,
+      "coefficient": 86
+    },
+    {
+      "triple": [
+        0,
+        5,
+        9
+      ],
+      "positive_intercept": 2692,
+      "coefficient": -140
+    },
+    {
+      "triple": [
+        0,
+        5,
+        10
+      ],
+      "positive_intercept": 141,
+      "coefficient": 141
+    },
+    {
+      "triple": [
+        0,
+        6,
+        7
+      ],
+      "positive_intercept": 1684,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        6,
+        8
+      ],
+      "positive_intercept": 1713,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        6,
+        9
+      ],
+      "positive_intercept": 8249,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        6,
+        10
+      ],
+      "positive_intercept": 4089,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        7,
+        8
+      ],
+      "positive_intercept": 11,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        7,
+        9
+      ],
+      "positive_intercept": 6555,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        7,
+        10
+      ],
+      "positive_intercept": 1551,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        8,
+        9
+      ],
+      "positive_intercept": 6614,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        8,
+        10
+      ],
+      "positive_intercept": 1551,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        0,
+        9,
+        10
+      ],
+      "positive_intercept": 8319,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        2,
+        3
+      ],
+      "positive_intercept": 4,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        2,
+        4
+      ],
+      "positive_intercept": 153,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        2,
+        5
+      ],
+      "positive_intercept": 124,
+      "coefficient": -7
+    },
+    {
+      "triple": [
+        1,
+        2,
+        6
+      ],
+      "positive_intercept": 403,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        2,
+        7
+      ],
+      "positive_intercept": 319,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        2,
+        8
+      ],
+      "positive_intercept": 322,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        2,
+        9
+      ],
+      "positive_intercept": 6,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        2,
+        10
+      ],
+      "positive_intercept": 410,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        3,
+        4
+      ],
+      "positive_intercept": 494,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        3,
+        5
+      ],
+      "positive_intercept": 416,
+      "coefficient": -22
+    },
+    {
+      "triple": [
+        1,
+        3,
+        6
+      ],
+      "positive_intercept": 1306,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        3,
+        7
+      ],
+      "positive_intercept": 1050,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        3,
+        8
+      ],
+      "positive_intercept": 1060,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        3,
+        9
+      ],
+      "positive_intercept": 60,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        3,
+        10
+      ],
+      "positive_intercept": 1368,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        4,
+        5
+      ],
+      "positive_intercept": 598,
+      "coefficient": 23
+    },
+    {
+      "triple": [
+        1,
+        4,
+        6
+      ],
+      "positive_intercept": 184,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        4,
+        7
+      ],
+      "positive_intercept": 766,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        4,
+        8
+      ],
+      "positive_intercept": 778,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        4,
+        9
+      ],
+      "positive_intercept": 3036,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        4,
+        10
+      ],
+      "positive_intercept": 1691,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        5,
+        6
+      ],
+      "positive_intercept": 1426,
+      "coefficient": 69
+    },
+    {
+      "triple": [
+        1,
+        5,
+        7
+      ],
+      "positive_intercept": 626,
+      "coefficient": 83
+    },
+    {
+      "triple": [
+        1,
+        5,
+        8
+      ],
+      "positive_intercept": 628,
+      "coefficient": 84
+    },
+    {
+      "triple": [
+        1,
+        5,
+        9
+      ],
+      "positive_intercept": 2484,
+      "coefficient": -138
+    },
+    {
+      "triple": [
+        1,
+        5,
+        10
+      ],
+      "positive_intercept": 232,
+      "coefficient": 139
+    },
+    {
+      "triple": [
+        1,
+        6,
+        7
+      ],
+      "positive_intercept": 1634,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        6,
+        8
+      ],
+      "positive_intercept": 1662,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        6,
+        9
+      ],
+      "positive_intercept": 8004,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        6,
+        10
+      ],
+      "positive_intercept": 3961,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        7,
+        8
+      ],
+      "positive_intercept": 10,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        7,
+        9
+      ],
+      "positive_intercept": 6360,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        7,
+        10
+      ],
+      "positive_intercept": 1473,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        8,
+        9
+      ],
+      "positive_intercept": 6420,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        8,
+        10
+      ],
+      "positive_intercept": 1474,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        1,
+        9,
+        10
+      ],
+      "positive_intercept": 8202,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        2,
+        3,
+        4
+      ],
+      "positive_intercept": 337,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        2,
+        3,
+        5
+      ],
+      "positive_intercept": 288,
+      "coefficient": -15
+    },
+    {
+      "triple": [
+        2,
+        3,
+        6
+      ],
+      "positive_intercept": 899,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        2,
+        3,
+        7
+      ],
+      "positive_intercept": 727,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        2,
+        3,
+        8
+      ],
+      "positive_intercept": 734,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        2,
+        3,
+        9
+      ],
+      "positive_intercept": 62,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        2,
+        3,
+        10
+      ],
+      "positive_intercept": 954,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        2,
+        4,
+        5
+      ],
+      "positive_intercept": 569,
+      "coefficient": 16
+    },
+    {
+      "triple": [
+        2,
+        4,
+        6
+      ],
+      "positive_intercept": 434,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        2,
+        4,
+        7
+      ],
+      "positive_intercept": 932,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        2,
+        4,
+        8
+      ],
+      "positive_intercept": 947,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        2,
+        4,
+        9
+      ],
+      "positive_intercept": 2877,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        2,
+        4,
+        10
+      ],
+      "positive_intercept": 1948,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        2,
+        5,
+        6
+      ],
+      "positive_intercept": 1147,
+      "coefficient": 62
+    },
+    {
+      "triple": [
+        2,
+        5,
+        7
+      ],
+      "positive_intercept": 431,
+      "coefficient": 76
+    },
+    {
+      "triple": [
+        2,
+        5,
+        8
+      ],
+      "positive_intercept": 430,
+      "coefficient": 77
+    },
+    {
+      "triple": [
+        2,
+        5,
+        9
+      ],
+      "positive_intercept": 2354,
+      "coefficient": -131
+    },
+    {
+      "triple": [
+        2,
+        5,
+        10
+      ],
+      "positive_intercept": 54,
+      "coefficient": -132
+    },
+    {
+      "triple": [
+        2,
+        6,
+        7
+      ],
+      "positive_intercept": 1550,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        2,
+        6,
+        8
+      ],
+      "positive_intercept": 1581,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        2,
+        6,
+        9
+      ],
+      "positive_intercept": 7595,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        2,
+        6,
+        10
+      ],
+      "positive_intercept": 3968,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        2,
+        7,
+        8
+      ],
+      "positive_intercept": 13,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        2,
+        7,
+        9
+      ],
+      "positive_intercept": 6035,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        2,
+        7,
+        10
+      ],
+      "positive_intercept": 1564,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        2,
+        8,
+        9
+      ],
+      "positive_intercept": 6092,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        2,
+        8,
+        10
+      ],
+      "positive_intercept": 1562,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        2,
+        9,
+        10
+      ],
+      "positive_intercept": 7786,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        3,
+        4,
+        5
+      ],
+      "positive_intercept": 520,
+      "coefficient": 1
+    },
+    {
+      "triple": [
+        3,
+        4,
+        6
+      ],
+      "positive_intercept": 996,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        3,
+        4,
+        7
+      ],
+      "positive_intercept": 1322,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        3,
+        4,
+        8
+      ],
+      "positive_intercept": 1344,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        3,
+        4,
+        9
+      ],
+      "positive_intercept": 2602,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        3,
+        4,
+        10
+      ],
+      "positive_intercept": 2565,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        3,
+        5,
+        6
+      ],
+      "positive_intercept": 536,
+      "coefficient": 47
+    },
+    {
+      "triple": [
+        3,
+        5,
+        7
+      ],
+      "positive_intercept": 8,
+      "coefficient": -61
+    },
+    {
+      "triple": [
+        3,
+        5,
+        8
+      ],
+      "positive_intercept": 16,
+      "coefficient": -62
+    },
+    {
+      "triple": [
+        3,
+        5,
+        9
+      ],
+      "positive_intercept": 2128,
+      "coefficient": -116
+    },
+    {
+      "triple": [
+        3,
+        5,
+        10
+      ],
+      "positive_intercept": 720,
+      "coefficient": -117
+    },
+    {
+      "triple": [
+        3,
+        6,
+        7
+      ],
+      "positive_intercept": 1378,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        3,
+        6,
+        8
+      ],
+      "positive_intercept": 1416,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        3,
+        6,
+        9
+      ],
+      "positive_intercept": 6758,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        3,
+        6,
+        10
+      ],
+      "positive_intercept": 4023,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        3,
+        7,
+        8
+      ],
+      "positive_intercept": 20,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        3,
+        7,
+        9
+      ],
+      "positive_intercept": 5370,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        3,
+        7,
+        10
+      ],
+      "positive_intercept": 1791,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        3,
+        8,
+        9
+      ],
+      "positive_intercept": 5420,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        3,
+        8,
+        10
+      ],
+      "positive_intercept": 1782,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        3,
+        9,
+        10
+      ],
+      "positive_intercept": 6894,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        4,
+        5,
+        6
+      ],
+      "positive_intercept": 1012,
+      "coefficient": 46
+    },
+    {
+      "triple": [
+        4,
+        5,
+        7
+      ],
+      "positive_intercept": 794,
+      "coefficient": 60
+    },
+    {
+      "triple": [
+        4,
+        5,
+        8
+      ],
+      "positive_intercept": 808,
+      "coefficient": 61
+    },
+    {
+      "triple": [
+        4,
+        5,
+        9
+      ],
+      "positive_intercept": 46,
+      "coefficient": -115
+    },
+    {
+      "triple": [
+        4,
+        5,
+        10
+      ],
+      "positive_intercept": 1325,
+      "coefficient": 116
+    },
+    {
+      "triple": [
+        4,
+        6,
+        7
+      ],
+      "positive_intercept": 1052,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        4,
+        6,
+        8
+      ],
+      "positive_intercept": 1068,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        4,
+        6,
+        9
+      ],
+      "positive_intercept": 5152,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        4,
+        6,
+        10
+      ],
+      "positive_intercept": 2454,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        4,
+        7,
+        8
+      ],
+      "positive_intercept": 2,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        4,
+        7,
+        9
+      ],
+      "positive_intercept": 4090,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        4,
+        7,
+        10
+      ],
+      "positive_intercept": 548,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        4,
+        8,
+        9
+      ],
+      "positive_intercept": 4162,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        4,
+        8,
+        10
+      ],
+      "positive_intercept": 561,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        4,
+        9,
+        10
+      ],
+      "positive_intercept": 6857,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        5,
+        6,
+        7
+      ],
+      "positive_intercept": 834,
+      "coefficient": 14
+    },
+    {
+      "triple": [
+        5,
+        6,
+        8
+      ],
+      "positive_intercept": 864,
+      "coefficient": 15
+    },
+    {
+      "triple": [
+        5,
+        6,
+        9
+      ],
+      "positive_intercept": 4094,
+      "coefficient": 69
+    },
+    {
+      "triple": [
+        5,
+        6,
+        10
+      ],
+      "positive_intercept": 2767,
+      "coefficient": 70
+    },
+    {
+      "triple": [
+        5,
+        7,
+        8
+      ],
+      "positive_intercept": 12,
+      "coefficient": 1
+    },
+    {
+      "triple": [
+        5,
+        7,
+        9
+      ],
+      "positive_intercept": 3250,
+      "coefficient": 55
+    },
+    {
+      "triple": [
+        5,
+        7,
+        10
+      ],
+      "positive_intercept": 1079,
+      "coefficient": 56
+    },
+    {
+      "triple": [
+        5,
+        8,
+        9
+      ],
+      "positive_intercept": 3308,
+      "coefficient": 54
+    },
+    {
+      "triple": [
+        5,
+        8,
+        10
+      ],
+      "positive_intercept": 1078,
+      "coefficient": 55
+    },
+    {
+      "triple": [
+        5,
+        9,
+        10
+      ],
+      "positive_intercept": 5486,
+      "coefficient": -1
+    },
+    {
+      "triple": [
+        6,
+        7,
+        8
+      ],
+      "positive_intercept": 18,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        6,
+        7,
+        9
+      ],
+      "positive_intercept": 10,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        6,
+        7,
+        10
+      ],
+      "positive_intercept": 854,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        6,
+        8,
+        9
+      ],
+      "positive_intercept": 78,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        6,
+        8,
+        10
+      ],
+      "positive_intercept": 825,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        6,
+        9,
+        10
+      ],
+      "positive_intercept": 4159,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        7,
+        8,
+        9
+      ],
+      "positive_intercept": 70,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        7,
+        8,
+        10
+      ],
+      "positive_intercept": 11,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        7,
+        9,
+        10
+      ],
+      "positive_intercept": 3315,
+      "coefficient": 0
+    },
+    {
+      "triple": [
+        8,
+        9,
+        10
+      ],
+      "positive_intercept": 3256,
+      "coefficient": 0
+    }
+  ],
+  "samples": [
+    {
+      "tag": "family-low",
+      "parameter": "-1/2"
+    },
+    {
+      "tag": "family-high",
+      "parameter": "4/61"
+    }
+  ],
+  "scope": "Same eleven labels and oriented order type, not a family with growing n or m.",
+  "source_sha256": "36c8e630c08c8e775a505d58e47eefaffb49e2ee4c80f8e17cc1e1dd06a54d45",
+  "script_sha256": "e5655c0bbe017fb7d2bda5948c7014d7c7ffb0a602e77ef00ce43398451e65a6"
+}

@@ -1,0 +1,1265 @@
+{
+  "class_counts": {
+    "fails_whole_ray_from_R": 24,
+    "forced_dominance_after_R": 18,
+    "four_point_signs_undetermined": 6
+  },
+  "controls_cover_all_48_rows": true,
+  "rows": [
+    {
+      "ambient_positions": [
+        2,
+        3
+      ],
+      "classification": "forced_dominance_after_R",
+      "d_endpoint_signs": [
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "orientations_012_013_023_123": "++++",
+      "query_positions": [
+        0,
+        1
+      ]
+    },
+    {
+      "ambient_positions": [
+        1,
+        3
+      ],
+      "classification": "forced_dominance_after_R",
+      "d_endpoint_signs": [
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "orientations_012_013_023_123": "++++",
+      "query_positions": [
+        0,
+        2
+      ]
+    },
+    {
+      "ambient_positions": [
+        1,
+        2
+      ],
+      "classification": "fails_whole_ray_from_R",
+      "d_endpoint_signs": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "orientations_012_013_023_123": "++++",
+      "query_positions": [
+        0,
+        3
+      ]
+    },
+    {
+      "ambient_positions": [
+        0,
+        3
+      ],
+      "classification": "four_point_signs_undetermined",
+      "d_endpoint_signs": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "opposite_realizations": [
+        {
+          "P": [
+            [
+              0,
+              10
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "dominates_after_R": false
+        },
+        {
+          "P": [
+            [
+              0,
+              10
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              10
+            ]
+          ],
+          "dominates_after_R": true
+        },
+        {
+          "P": [
+            [
+              0,
+              10
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              13
+            ]
+          ],
+          "dominates_after_R": true
+        }
+      ],
+      "orientations_012_013_023_123": "++++",
+      "query_positions": [
+        1,
+        2
+      ]
+    },
+    {
+      "ambient_positions": [
+        0,
+        2
+      ],
+      "classification": "fails_whole_ray_from_R",
+      "d_endpoint_signs": [
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "orientations_012_013_023_123": "++++",
+      "query_positions": [
+        1,
+        3
+      ]
+    },
+    {
+      "ambient_positions": [
+        0,
+        1
+      ],
+      "classification": "fails_whole_ray_from_R",
+      "d_endpoint_signs": [
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "orientations_012_013_023_123": "++++",
+      "query_positions": [
+        2,
+        3
+      ]
+    },
+    {
+      "ambient_positions": [
+        2,
+        3
+      ],
+      "classification": "forced_dominance_after_R",
+      "d_endpoint_signs": [
+        -1,
+        1,
+        1,
+        1
+      ],
+      "orientations_012_013_023_123": "+++-",
+      "query_positions": [
+        0,
+        1
+      ]
+    },
+    {
+      "ambient_positions": [
+        1,
+        3
+      ],
+      "classification": "forced_dominance_after_R",
+      "d_endpoint_signs": [
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "orientations_012_013_023_123": "+++-",
+      "query_positions": [
+        0,
+        2
+      ]
+    },
+    {
+      "ambient_positions": [
+        1,
+        2
+      ],
+      "classification": "forced_dominance_after_R",
+      "d_endpoint_signs": [
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "orientations_012_013_023_123": "+++-",
+      "query_positions": [
+        0,
+        3
+      ]
+    },
+    {
+      "ambient_positions": [
+        0,
+        3
+      ],
+      "classification": "fails_whole_ray_from_R",
+      "d_endpoint_signs": [
+        1,
+        1,
+        1,
+        -1
+      ],
+      "orientations_012_013_023_123": "+++-",
+      "query_positions": [
+        1,
+        2
+      ]
+    },
+    {
+      "ambient_positions": [
+        0,
+        2
+      ],
+      "classification": "fails_whole_ray_from_R",
+      "d_endpoint_signs": [
+        1,
+        1,
+        1,
+        -1
+      ],
+      "orientations_012_013_023_123": "+++-",
+      "query_positions": [
+        1,
+        3
+      ]
+    },
+    {
+      "ambient_positions": [
+        0,
+        1
+      ],
+      "classification": "fails_whole_ray_from_R",
+      "d_endpoint_signs": [
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "orientations_012_013_023_123": "+++-",
+      "query_positions": [
+        2,
+        3
+      ]
+    },
+    {
+      "ambient_positions": [
+        2,
+        3
+      ],
+      "classification": "four_point_signs_undetermined",
+      "d_endpoint_signs": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "opposite_realizations": [
+        {
+          "P": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              8
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "dominates_after_R": false
+        },
+        {
+          "P": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              10
+            ],
+            [
+              3,
+              10
+            ]
+          ],
+          "dominates_after_R": true
+        },
+        {
+          "P": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              12
+            ],
+            [
+              3,
+              13
+            ]
+          ],
+          "dominates_after_R": true
+        }
+      ],
+      "orientations_012_013_023_123": "++--",
+      "query_positions": [
+        0,
+        1
+      ]
+    },
+    {
+      "ambient_positions": [
+        1,
+        3
+      ],
+      "classification": "fails_whole_ray_from_R",
+      "d_endpoint_signs": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "orientations_012_013_023_123": "++--",
+      "query_positions": [
+        0,
+        2
+      ]
+    },
+    {
+      "ambient_positions": [
+        1,
+        2
+      ],
+      "classification": "forced_dominance_after_R",
+      "d_endpoint_signs": [
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "orientations_012_013_023_123": "++--",
+      "query_positions": [
+        0,
+        3
+      ]
+    },
+    {
+      "ambient_positions": [
+        0,
+        3
+      ],
+      "classification": "fails_whole_ray_from_R",
+      "d_endpoint_signs": [
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "orientations_012_013_023_123": "++--",
+      "query_positions": [
+        1,
+        2
+      ]
+    },
+    {
+      "ambient_positions": [
+        0,
+        2
+      ],
+      "classification": "four_point_signs_undetermined",
+      "d_endpoint_signs": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "opposite_realizations": [
+        {
+          "P": [
+            [
+              0,
+              10
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              8
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "dominates_after_R": false
+        },
+        {
+          "P": [
+            [
+              0,
+              10
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              10
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "dominates_after_R": true
+        },
+        {
+          "P": [
+            [
+              0,
+              10
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              12
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "dominates_after_R": true
+        }
+      ],
+      "orientations_012_013_023_123": "++--",
+      "query_positions": [
+        1,
+        3
+      ]
+    },
+    {
+      "ambient_positions": [
+        0,
+        1
+      ],
+      "classification": "fails_whole_ray_from_R",
+      "d_endpoint_signs": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "orientations_012_013_023_123": "++--",
+      "query_positions": [
+        2,
+        3
+      ]
+    },
+    {
+      "ambient_positions": [
+        2,
+        3
+      ],
+      "classification": "fails_whole_ray_from_R",
+      "d_endpoint_signs": [
+        1,
+        1,
+        1,
+        -1
+      ],
+      "orientations_012_013_023_123": "+---",
+      "query_positions": [
+        0,
+        1
+      ]
+    },
+    {
+      "ambient_positions": [
+        1,
+        3
+      ],
+      "classification": "fails_whole_ray_from_R",
+      "d_endpoint_signs": [
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "orientations_012_013_023_123": "+---",
+      "query_positions": [
+        0,
+        2
+      ]
+    },
+    {
+      "ambient_positions": [
+        1,
+        2
+      ],
+      "classification": "forced_dominance_after_R",
+      "d_endpoint_signs": [
+        -1,
+        1,
+        1,
+        1
+      ],
+      "orientations_012_013_023_123": "+---",
+      "query_positions": [
+        0,
+        3
+      ]
+    },
+    {
+      "ambient_positions": [
+        0,
+        3
+      ],
+      "classification": "fails_whole_ray_from_R",
+      "d_endpoint_signs": [
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "orientations_012_013_023_123": "+---",
+      "query_positions": [
+        1,
+        2
+      ]
+    },
+    {
+      "ambient_positions": [
+        0,
+        2
+      ],
+      "classification": "forced_dominance_after_R",
+      "d_endpoint_signs": [
+        -1,
+        1,
+        1,
+        1
+      ],
+      "orientations_012_013_023_123": "+---",
+      "query_positions": [
+        1,
+        3
+      ]
+    },
+    {
+      "ambient_positions": [
+        0,
+        1
+      ],
+      "classification": "forced_dominance_after_R",
+      "d_endpoint_signs": [
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "orientations_012_013_023_123": "+---",
+      "query_positions": [
+        2,
+        3
+      ]
+    },
+    {
+      "ambient_positions": [
+        2,
+        3
+      ],
+      "classification": "fails_whole_ray_from_R",
+      "d_endpoint_signs": [
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "orientations_012_013_023_123": "----",
+      "query_positions": [
+        0,
+        1
+      ]
+    },
+    {
+      "ambient_positions": [
+        1,
+        3
+      ],
+      "classification": "fails_whole_ray_from_R",
+      "d_endpoint_signs": [
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "orientations_012_013_023_123": "----",
+      "query_positions": [
+        0,
+        2
+      ]
+    },
+    {
+      "ambient_positions": [
+        1,
+        2
+      ],
+      "classification": "four_point_signs_undetermined",
+      "d_endpoint_signs": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "opposite_realizations": [
+        {
+          "P": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              8
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "dominates_after_R": false
+        },
+        {
+          "P": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              10
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "dominates_after_R": true
+        },
+        {
+          "P": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              11
+            ],
+            [
+              2,
+              12
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "dominates_after_R": true
+        }
+      ],
+      "orientations_012_013_023_123": "----",
+      "query_positions": [
+        0,
+        3
+      ]
+    },
+    {
+      "ambient_positions": [
+        0,
+        3
+      ],
+      "classification": "fails_whole_ray_from_R",
+      "d_endpoint_signs": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "orientations_012_013_023_123": "----",
+      "query_positions": [
+        1,
+        2
+      ]
+    },
+    {
+      "ambient_positions": [
+        0,
+        2
+      ],
+      "classification": "forced_dominance_after_R",
+      "d_endpoint_signs": [
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "orientations_012_013_023_123": "----",
+      "query_positions": [
+        1,
+        3
+      ]
+    },
+    {
+      "ambient_positions": [
+        0,
+        1
+      ],
+      "classification": "forced_dominance_after_R",
+      "d_endpoint_signs": [
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "orientations_012_013_023_123": "----",
+      "query_positions": [
+        2,
+        3
+      ]
+    },
+    {
+      "ambient_positions": [
+        2,
+        3
+      ],
+      "classification": "fails_whole_ray_from_R",
+      "d_endpoint_signs": [
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "orientations_012_013_023_123": "---+",
+      "query_positions": [
+        0,
+        1
+      ]
+    },
+    {
+      "ambient_positions": [
+        1,
+        3
+      ],
+      "classification": "fails_whole_ray_from_R",
+      "d_endpoint_signs": [
+        1,
+        1,
+        1,
+        -1
+      ],
+      "orientations_012_013_023_123": "---+",
+      "query_positions": [
+        0,
+        2
+      ]
+    },
+    {
+      "ambient_positions": [
+        1,
+        2
+      ],
+      "classification": "fails_whole_ray_from_R",
+      "d_endpoint_signs": [
+        1,
+        1,
+        1,
+        -1
+      ],
+      "orientations_012_013_023_123": "---+",
+      "query_positions": [
+        0,
+        3
+      ]
+    },
+    {
+      "ambient_positions": [
+        0,
+        3
+      ],
+      "classification": "forced_dominance_after_R",
+      "d_endpoint_signs": [
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "orientations_012_013_023_123": "---+",
+      "query_positions": [
+        1,
+        2
+      ]
+    },
+    {
+      "ambient_positions": [
+        0,
+        2
+      ],
+      "classification": "forced_dominance_after_R",
+      "d_endpoint_signs": [
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "orientations_012_013_023_123": "---+",
+      "query_positions": [
+        1,
+        3
+      ]
+    },
+    {
+      "ambient_positions": [
+        0,
+        1
+      ],
+      "classification": "forced_dominance_after_R",
+      "d_endpoint_signs": [
+        -1,
+        1,
+        1,
+        1
+      ],
+      "orientations_012_013_023_123": "---+",
+      "query_positions": [
+        2,
+        3
+      ]
+    },
+    {
+      "ambient_positions": [
+        2,
+        3
+      ],
+      "classification": "fails_whole_ray_from_R",
+      "d_endpoint_signs": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "orientations_012_013_023_123": "--++",
+      "query_positions": [
+        0,
+        1
+      ]
+    },
+    {
+      "ambient_positions": [
+        1,
+        3
+      ],
+      "classification": "four_point_signs_undetermined",
+      "d_endpoint_signs": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "opposite_realizations": [
+        {
+          "P": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "dominates_after_R": false
+        },
+        {
+          "P": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              10
+            ]
+          ],
+          "dominates_after_R": true
+        },
+        {
+          "P": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              11
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              13
+            ]
+          ],
+          "dominates_after_R": true
+        }
+      ],
+      "orientations_012_013_023_123": "--++",
+      "query_positions": [
+        0,
+        2
+      ]
+    },
+    {
+      "ambient_positions": [
+        1,
+        2
+      ],
+      "classification": "fails_whole_ray_from_R",
+      "d_endpoint_signs": [
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "orientations_012_013_023_123": "--++",
+      "query_positions": [
+        0,
+        3
+      ]
+    },
+    {
+      "ambient_positions": [
+        0,
+        3
+      ],
+      "classification": "forced_dominance_after_R",
+      "d_endpoint_signs": [
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "orientations_012_013_023_123": "--++",
+      "query_positions": [
+        1,
+        2
+      ]
+    },
+    {
+      "ambient_positions": [
+        0,
+        2
+      ],
+      "classification": "fails_whole_ray_from_R",
+      "d_endpoint_signs": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "orientations_012_013_023_123": "--++",
+      "query_positions": [
+        1,
+        3
+      ]
+    },
+    {
+      "ambient_positions": [
+        0,
+        1
+      ],
+      "classification": "four_point_signs_undetermined",
+      "d_endpoint_signs": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "opposite_realizations": [
+        {
+          "P": [
+            [
+              0,
+              10
+            ],
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "dominates_after_R": false
+        },
+        {
+          "P": [
+            [
+              0,
+              10
+            ],
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "dominates_after_R": true
+        },
+        {
+          "P": [
+            [
+              0,
+              10
+            ],
+            [
+              1,
+              11
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "dominates_after_R": true
+        }
+      ],
+      "orientations_012_013_023_123": "--++",
+      "query_positions": [
+        2,
+        3
+      ]
+    },
+    {
+      "ambient_positions": [
+        2,
+        3
+      ],
+      "classification": "forced_dominance_after_R",
+      "d_endpoint_signs": [
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "orientations_012_013_023_123": "-+++",
+      "query_positions": [
+        0,
+        1
+      ]
+    },
+    {
+      "ambient_positions": [
+        1,
+        3
+      ],
+      "classification": "forced_dominance_after_R",
+      "d_endpoint_signs": [
+        -1,
+        1,
+        1,
+        1
+      ],
+      "orientations_012_013_023_123": "-+++",
+      "query_positions": [
+        0,
+        2
+      ]
+    },
+    {
+      "ambient_positions": [
+        1,
+        2
+      ],
+      "classification": "fails_whole_ray_from_R",
+      "d_endpoint_signs": [
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "orientations_012_013_023_123": "-+++",
+      "query_positions": [
+        0,
+        3
+      ]
+    },
+    {
+      "ambient_positions": [
+        0,
+        3
+      ],
+      "classification": "forced_dominance_after_R",
+      "d_endpoint_signs": [
+        -1,
+        1,
+        1,
+        1
+      ],
+      "orientations_012_013_023_123": "-+++",
+      "query_positions": [
+        1,
+        2
+      ]
+    },
+    {
+      "ambient_positions": [
+        0,
+        2
+      ],
+      "classification": "fails_whole_ray_from_R",
+      "d_endpoint_signs": [
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "orientations_012_013_023_123": "-+++",
+      "query_positions": [
+        1,
+        3
+      ]
+    },
+    {
+      "ambient_positions": [
+        0,
+        1
+      ],
+      "classification": "fails_whole_ray_from_R",
+      "d_endpoint_signs": [
+        1,
+        1,
+        1,
+        -1
+      ],
+      "orientations_012_013_023_123": "-+++",
+      "query_positions": [
+        2,
+        3
+      ]
+    }
+  ],
+  "scope": "Whole ray from the rightmost of these four endpoints; later M can differ."
+}

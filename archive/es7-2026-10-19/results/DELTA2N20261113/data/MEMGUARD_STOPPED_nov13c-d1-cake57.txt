@@ -1,0 +1,5 @@
+2026-11-13 18:43:16 KST: unit nov13c-d1-cake57.service was stopped by the session memory guard.
+Reason: track 'd1' used 2007 MB in total, above its budget of 2000 MB; this was its largest job (2007 MB)
+Read /home/jay/research/data/memguard-20261113/MEMORY_POLICY.txt (hard rule since 13 Nov 2026, 18:25 KST). Do not restart the same job unchanged:
+make it smaller (fewer parallel workers, smaller CNFs, cubes instead of one monolithic instance, lazy clauses,
+streaming instead of in-memory lists, a compiled tool) so that it stays well below its MemoryMax.

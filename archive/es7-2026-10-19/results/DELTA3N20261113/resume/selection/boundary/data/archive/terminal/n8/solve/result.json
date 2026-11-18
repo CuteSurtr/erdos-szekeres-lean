@@ -1,0 +1,77 @@
+{
+  "cnf": "/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n8/input.cnf",
+  "commands": [
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "93",
+      "/usr/bin/cadical",
+      "-t",
+      "90",
+      "--lrat=true",
+      "--binary=false",
+      "/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n8/input.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n8/solve/proof.lrat"
+    ],
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "90",
+      "/home/jay/.local/bin/cake_lpr",
+      "--CML_HEAP_SIZE=600",
+      "--CML_STACK_SIZE=32",
+      "/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n8/input.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n8/solve/proof.lrat"
+    ],
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "180",
+      "/usr/bin/zstd",
+      "-q",
+      "-T1",
+      "-3",
+      "-k",
+      "/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n8/solve/proof.lrat"
+    ]
+  ],
+  "compressed_bytes": 37753179,
+  "compressed_roundtrip_verified": true,
+  "hashes": {
+    "cadical": "4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70",
+    "cadical.log": "5f0e648166adf0d777da61980a0265cc0101391f0c2555a187becf642de30ca7",
+    "cake.log": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+    "input.cnf": "aa3eb2c583c4db1f453085c2304a0ab8825a1365dab315fad3552c0eedff548c",
+    "proof.lrat": "f2626849d315ce741a7fce06c18ab03f7d8f6017b936b91f1f3d44849e4bc38b",
+    "proof.lrat.zst": "bbf5a88e2dddb8436196d0f05e0ea512895794001cf2fdf044750e078e0f1d47",
+    "run_cnf.py": "e3c8d9413f99b3092a4ea760f08265bc30bb93204074a3fa566bc2f0c3b3f4b8"
+  },
+  "label": "CERTIFIED",
+  "limits": {
+    "as_mib": 900,
+    "cake_seconds": 90,
+    "cnf": "/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n8/input.cnf",
+    "heap": 600,
+    "out": "/home/jay/research/data/delta3-codex-20261113/boundary/terminal/n8/solve",
+    "seconds": 90,
+    "sha256": "aa3eb2c583c4db1f453085c2304a0ab8825a1365dab315fad3552c0eedff548c"
+  },
+  "proof_bytes": 121542197,
+  "runs": {
+    "cadical": {
+      "exit": 20,
+      "seconds": 16.133
+    },
+    "cake": {
+      "exit": 0,
+      "seconds": 3.268
+    },
+    "compress": {
+      "exit": 0,
+      "seconds": 0.464
+    }
+  },
+  "seconds": 20.058,
+  "status": "UNSAT_CERTIFIED"
+}

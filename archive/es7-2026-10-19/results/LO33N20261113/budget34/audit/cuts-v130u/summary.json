@@ -1,0 +1,29 @@
+{
+  "label": "CERTIFIED",
+  "version": "v130u",
+  "rows": 12,
+  "own_encoder_matches": 12,
+  "fresh_cake_acceptances": 12,
+  "old_witness_exact_row_check": "PASS (3961 rows, 35 holes, F20,Lo15,state0 occupied)",
+  "rows_cutting_old_witness": 12,
+  "old_witness_intersection_counts": {
+    "0": 12
+  },
+  "accepted_sha256": "2bed1dabcff662fee12aa31abcd0051c8fc0ff23d2036afc148a360d1fe4002a",
+  "replay_sha256": "72c69a2a2c0e84d65e9b1ea69263e851ef4e2844e7a07383f46c91d0d4a7075b",
+  "input_sha256": {
+    "/home/jay/research/data/es308-20261114/cuts-v130u/accepted.json": "2bed1dabcff662fee12aa31abcd0051c8fc0ff23d2036afc148a360d1fe4002a",
+    "/home/jay/research/data/es308-20261114/candidates-v130u.json": "b1203a6a4c5c0748363bd16dccf430964550b122d78d3f2bb8b5c68954cadfbe",
+    "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-residual32-rank-global-2026-10-10/source-2650.json.gz": "8c7fe9ef5264182524095d46ef50ed6bc691cab425efa965756d1870112241aa",
+    "/home/jay/research/data/es308-20261114/runs/b35s20/bb/WITNESS.json.v129-snapshot": "e505fa7dda4e94a81c1638f6ac69f100847327dfeec891ddb49905035f2ce7ab",
+    "/home/jay/research/data/es308-20261114/inputs/b35s20-v129/extra.json": "ad59511e4f1da504a7a1cc58c243eeea78375752607caf1a7b8d76d4d93bc934",
+    "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/LO33N20261113/budget34/audit/audit_followup_rows_v4.py": "f0df1c0f5b38b735226a9b813b3f5f78d0b91ee27c300c15ffccf5c5fa1ffc12",
+    "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/LO33N20261113/budget34/audit/residual_encoder.py": "db7b2deba4ae55ff50f25d1e52843734591f5e7d1339a53e45e8811866e7365c",
+    "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54"
+  },
+  "seconds": 4.756,
+  "finished_local": "2026-11-15T05:14:51.421946+09:00",
+  "scope": "Additional rows only; no finite exclusion or ES bound follows from these rows alone",
+  "parent_maxrss_kib": 62336,
+  "child_maxrss_kib": 412948
+}

@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "label": "COMPUTED",
+  "left_m": 14,
+  "right_m": 3,
+  "n": 7,
+  "variant": "compact",
+  "variables": 31099,
+  "clauses": 220707,
+  "literals": 593588,
+  "phase_rows": {
+    "signotope": 8008,
+    "no5cap": 2002,
+    "convex4_equivalence": 8008,
+    "convex_larger_equivalence": 30030,
+    "no_ngon": 3432,
+    "left_has_no_fourcap": 1001,
+    "ends_three_cap_equivalence": 378,
+    "bad_pair_or_cap_exact_containment": 73671,
+    "target_exact_containment": 79264,
+    "no_covered_cup_transversal": 14913
+  },
+  "phase_literals": {
+    "signotope": 24024,
+    "no5cap": 6006,
+    "convex4_equivalence": 24024,
+    "convex_larger_equivalence": 80080,
+    "no_ngon": 17160,
+    "left_has_no_fourcap": 4004,
+    "ends_three_cap_equivalence": 1106,
+    "bad_pair_or_cap_exact_containment": 191399,
+    "target_exact_containment": 217976,
+    "no_covered_cup_transversal": 27809
+  },
+  "phase_max_width": {
+    "signotope": 3,
+    "no5cap": 3,
+    "convex4_equivalence": 3,
+    "convex_larger_equivalence": 6,
+    "no_ngon": 5,
+    "left_has_no_fourcap": 4,
+    "ends_three_cap_equivalence": 79,
+    "bad_pair_or_cap_exact_containment": 5,
+    "target_exact_containment": 8,
+    "no_covered_cup_transversal": 2
+  },
+  "map_counts": {
+    "orientation": 364,
+    "convex": 6006,
+    "ends_three_cap": 14,
+    "bad_pair_or_cap_contains": 14807,
+    "target_contains": 9908
+  },
+  "cnf_map_byte_identical_rebuild": true,
+  "hashes": {
+    "/home/jay/research/data/delta3-codex-20261113/extension/low14-n7-compact.cnf": "0d8a698c0253d249a6ebbb4d021295ffc06569a34b274ee885cd12fff2931183",
+    "/home/jay/research/data/delta3-codex-20261113/extension/low14-n7-compact.cnf.map": "2dd13e13fac86a9ffa83f598a5efd9a0e4aabf5e22e7d1510a3ea56fc851e3cb"
+  },
+  "empty_End3_count": 2,
+  "option2_rows": 0,
+  "peak_rss_KiB": 33908,
+  "resource_limits": {
+    "AS_MiB": 300,
+    "CPU_count": 1,
+    "wall_seconds": 20,
+    "CPU_seconds": 19
+  }
+}

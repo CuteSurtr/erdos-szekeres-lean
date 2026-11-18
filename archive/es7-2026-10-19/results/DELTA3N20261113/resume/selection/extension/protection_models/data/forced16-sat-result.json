@@ -1,0 +1,72 @@
+{
+  "cache_releases": 176,
+  "commands": [
+    [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/home/jay/research/data/delta3-codex-20261113/extension/forced16-a/cadical.time",
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "3603",
+      "/usr/bin/cadical",
+      "-t",
+      "3600",
+      "--lrat=true",
+      "--binary=true",
+      "/home/jay/research/data/delta3-codex-20261113/extension/forced16-a/input.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/extension/forced16-a/proof.blrat"
+    ],
+    [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/home/jay/research/data/delta3-codex-20261113/extension/forced16-a/compress.time",
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "600",
+      "/usr/bin/zstd",
+      "-q",
+      "-T1",
+      "-3",
+      "-k",
+      "/home/jay/research/data/delta3-codex-20261113/extension/forced16-a/proof.blrat"
+    ]
+  ],
+  "compressed_bytes": 1316460828,
+  "compressed_roundtrip_verified": true,
+  "finished": true,
+  "hashes": {
+    "cadical": "4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70",
+    "cadical.log": "40cfeaac45bf5be59c06cf18228b119e3369b66a7f6f97e5c7236142ecbe77cd",
+    "cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+    "compress.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "input.cnf": "250b12cf07eb72c11b620ee99e352be7b2af94a4afea2711f7c43ce1ac407bf8",
+    "proof.blrat": "df2d40f1a6f7e4ba437577a0e2dda303181b559409fd51053c1592d485e7f488",
+    "proof.blrat.zst": "be8b6fb45771390df6b07ba29582ac7a1ff57a5bb3f812fe065f7acfea615d24",
+    "run_binary.py": "dcdfd0c97efa27e8b89daacbad3a950d3a9af77c88964e78e5522fd7904f87e5"
+  },
+  "label": "COMPUTED",
+  "limits": {
+    "as_mib": 800,
+    "cake_seconds": 600,
+    "heap_mib": 550,
+    "solver_seconds": 3600,
+    "stack_mib": 32
+  },
+  "proof_bytes": 3021972921,
+  "proof_format": "binary LRAT",
+  "runs": {
+    "cadical": {
+      "exit": 10,
+      "seconds": 1879.885
+    },
+    "compress": {
+      "exit": 0,
+      "seconds": 9.502
+    }
+  },
+  "seconds": 1897.532,
+  "source_cnf": "/home/jay/research/data/delta3-codex-20261113/extension/n7m16-forced.cnf",
+  "status": "SAT_AUDIT_PENDING"
+}

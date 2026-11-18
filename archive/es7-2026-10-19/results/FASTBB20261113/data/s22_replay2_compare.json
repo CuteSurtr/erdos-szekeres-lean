@@ -1,0 +1,18 @@
+{
+ "verify_slice": {
+  "nodes": 32328319,
+  "leaves": 16164160,
+  "minimum_margin": 1,
+  "pending": 1,
+  "contexts_replayed": 4096
+ },
+ "replay_split": {
+  "nodes": 32328319,
+  "leaves": 16164160,
+  "minimum_margin": 1,
+  "pending": 1,
+  "contexts_closed": 4096,
+  "complete_except_state0_branch": true
+ },
+ "agree": true
+}

@@ -1,0 +1,25 @@
+OK  positive_control                       expected=pass got=EXACT TREE rc=0 py=pass 
+OK  ctx_leaf_weights_emptied               expected=reject got=NOT CONFIRMED rc=1 py=reject ctx 246: node 8: margin -582120 < 1 at M={12,19,27,29,49,70,75,76,93,96,98,101,135,147}
+OK  ctx_duplicate_row_in_weights           expected=reject got=NOT CONFIRMED rc=1 py=reject ctx 246: node 8: duplicate row 77
+OK  ctx_float_weight                       expected=reject got=NOT CONFIRMED rc=1 py=reject ctx 246: JSON: non-integer number at byte 634
+OK  ctx_header_missing_changed             expected=reject got=NOT CONFIRMED rc=1 py=reject ctx 246: missing set {12,19,27,49,70,75,153} != placeholder M {12,19,27,49,70,75}
+OK  ctx_header_id_changed                  expected=reject got=NOT CONFIRMED rc=1 py=reject ctx 246: context field 247 != placeholder id
+OK  ctx_truncated_gzip                     expected=reject got=NOT CONFIRMED rc=1 py=reject ctx 246: gzip error in /home/jay/research/data/roadmap-20261115/pm1115/p307v/mut/ctx_truncated_gzip/
+OK  ctx_pending_leaf                       expected=reject got=NOT CONFIRMED rc=1 py=reject ctx 246: node 8: pending leaf at M={12,19,27,29,49,70,75,76,93,96,98,101,135,147}
+OK  ctx_file_removed                       expected=reject got=NOT CONFIRMED rc=1 py=reject missing ctx file for id 0
+OK  ctx_file_extra                         expected=reject got=NOT CONFIRMED rc=1 py=reject ctx file without placeholder: 999999
+OK  master_branch_on_fixed_vertex          expected=reject got=NOT CONFIRMED rc=1 py=reject master: contexts field 4838 != placeholders 0
+OK  master_child_shared                    expected=reject got=NOT CONFIRMED rc=1 py=reject master: contexts field 4838 != placeholders 2784
+OK  master_fake_over_budget                expected=reject got=NOT CONFIRMED rc=1 py=reject master tree: node 28: over_budget leaf with |M|=3
+OK  master_pending_leaf                    expected=reject got=NOT CONFIRMED rc=1 py=reject master tree: node 28: pending leaf at M={20,33,153}
+OK  master_contexts_field_off              expected=reject got=NOT CONFIRMED rc=1 py=reject master: contexts field 4839 != placeholders 4838
+OK  master_budget_34                       expected=reject got=NOT CONFIRMED rc=1 py=reject master: budget != 35
+OK  master_extra_path_mismatch             expected=reject got=NOT CONFIRMED rc=1 py=reject master: extra field differs from the extra.json used
+OK  master_negative_capacity               expected=reject got=NOT CONFIRMED rc=1 py=reject master tree: node 28: negative capacity
+OK  master_negative_weight                 expected=reject got=NOT CONFIRMED rc=1 py=reject master tree: node 28: negative weight
+OK  master_row_out_of_range                expected=reject got=NOT CONFIRMED rc=1 py=reject master tree: node 28: row index out of range 1000000
+OK  master_duplicate_key                   expected=reject got=NOT CONFIRMED rc=1 py=reject master: JSON: duplicate top-level key 'budget' at byte 183
+OK  rows_Lo_demand_minus_1                 expected=reject got=NOT CONFIRMED rc=1 py=reject ctx 0: node 318: margin -74891 < 1 at M={}
+OK  rows_F_demand_minus_1                  expected=pass got=EXACT TREE rc=0 py=pass 
+OK  rows_F_demand_plus_1_still_valid       expected=pass got=EXACT TREE rc=0 py=pass 
+ALL CONTROLS BEHAVED AS EXPECTED

@@ -1,0 +1,46 @@
+{
+  "fixed_free_indices": [
+    1,
+    5,
+    6,
+    7
+  ],
+  "counts": {
+    "9": {
+      "grounds": 792,
+      "obstructed_grounds": 0
+    },
+    "10": {
+      "grounds": 924,
+      "obstructed_grounds": 0
+    },
+    "11": {
+      "grounds": 792,
+      "obstructed_grounds": 0
+    },
+    "12": {
+      "grounds": 495,
+      "obstructed_grounds": 0
+    },
+    "13": {
+      "grounds": 220,
+      "obstructed_grounds": 0
+    },
+    "14": {
+      "grounds": 66,
+      "obstructed_grounds": 8
+    },
+    "15": {
+      "grounds": 12,
+      "obstructed_grounds": 6
+    },
+    "16": {
+      "grounds": 1,
+      "obstructed_grounds": 1
+    }
+  },
+  "smallest_m": 14,
+  "input": "/home/jay/research/data/delta3-codex-20261113/selection/repair/induced-T.txt",
+  "output": "/home/jay/research/data/delta3-codex-20261113/selection/repair/induced-T-results.jsonl",
+  "minimum_scope": "induced subsets containing fixed T only"
+}

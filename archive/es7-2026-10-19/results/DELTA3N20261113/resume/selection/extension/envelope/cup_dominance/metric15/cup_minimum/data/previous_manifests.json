@@ -1,0 +1,38 @@
+[
+  {
+    "record": "envelope",
+    "sha256sum_file_sha256": "c1c27ff5672e8641ccd1a15de686a638e92bd00f59f7590a180160cf50ae77e1",
+    "files": 22,
+    "status": "PASS"
+  },
+  {
+    "record": "adversarial",
+    "sha256sum_file_sha256": "8038cc00ea71883cfd3d5e38a58e70890ac30824369a71bd2491b9a38eb67299",
+    "files": 15,
+    "status": "PASS"
+  },
+  {
+    "record": "cup_dominance",
+    "sha256sum_file_sha256": "f103f82caebc29c5b1cc1b0242a4d2bc824921b49200af762e4dff50a03a2a11",
+    "files": 18,
+    "status": "PASS"
+  },
+  {
+    "record": "cup_dominance/comparison",
+    "sha256sum_file_sha256": "c26592c212826a90809b60087cccdaa65341584f23fd5e4482d18c5c728433f6",
+    "files": 14,
+    "status": "PASS"
+  },
+  {
+    "record": "cup_dominance/comparison/prototype_check",
+    "sha256sum_file_sha256": "2bdf46aedddc9929297c43a94b0399da5a301324894acacf139c1083e48bfb9b",
+    "files": 7,
+    "status": "PASS"
+  },
+  {
+    "record": "cup_dominance/metric15",
+    "sha256sum_file_sha256": "3676d0bcb6893ab8a1d7092b71ecea034f28a9ac25ca90c73fffdda42257eac9",
+    "files": 34,
+    "status": "PASS"
+  }
+]

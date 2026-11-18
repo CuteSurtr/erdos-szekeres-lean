@@ -1,0 +1,62 @@
+{
+  "cnf": "/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep7/m15/rooted.cnf",
+  "commands": [
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "63",
+      "/usr/bin/cadical",
+      "-t",
+      "60",
+      "--lrat=true",
+      "--binary=false",
+      "/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep7/m15/rooted.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep7/m15/solve/proof.lrat"
+    ],
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "180",
+      "/usr/bin/zstd",
+      "-q",
+      "-T1",
+      "-3",
+      "-k",
+      "/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep7/m15/solve/proof.lrat"
+    ]
+  ],
+  "compressed_bytes": 117485233,
+  "compressed_roundtrip_verified": true,
+  "hashes": {
+    "cadical": "4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70",
+    "cadical.log": "d3a519e5cba6701cf4567c7d525cd97e52f41947c39209854317d15c5b249beb",
+    "cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+    "input.cnf": "a6b509c60c7e7903523c3d84a1886e0efb9a028df4d07d9c1ff2700eba224fb3",
+    "proof.lrat": "10da30dfa765932c9ac2ac1409fbb49f49997284f7f032f9ac041678b69d87b6",
+    "proof.lrat.zst": "a8d15d4de7f7d845924852836dc234eda2f308709c5ea97049e83d0422c34f4c",
+    "run_cnf.py": "e3c8d9413f99b3092a4ea760f08265bc30bb93204074a3fa566bc2f0c3b3f4b8"
+  },
+  "label": "COMPUTED",
+  "limits": {
+    "as_mib": 900,
+    "cake_seconds": 60,
+    "cnf": "/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep7/m15/rooted.cnf",
+    "heap": 600,
+    "out": "/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep7/m15/solve",
+    "seconds": 60,
+    "sha256": "a6b509c60c7e7903523c3d84a1886e0efb9a028df4d07d9c1ff2700eba224fb3"
+  },
+  "proof_bytes": 429088391,
+  "runs": {
+    "cadical": {
+      "exit": 0,
+      "seconds": 60.037
+    },
+    "compress": {
+      "exit": 0,
+      "seconds": 1.417
+    }
+  },
+  "seconds": 62.265,
+  "status": "UNKNOWN"
+}

@@ -1,0 +1,488 @@
+{
+  "label": "COMPUTED",
+  "geometry_cases": [
+    {
+      "name": "random0",
+      "valid": true,
+      "maxcap": 3,
+      "maxcup": 4,
+      "maxgon": 5
+    },
+    {
+      "name": "random1",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 4,
+      "maxgon": 4
+    },
+    {
+      "name": "random2",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 4,
+      "maxgon": 6
+    },
+    {
+      "name": "random3",
+      "valid": false,
+      "maxcap": 4,
+      "maxcup": 5,
+      "maxgon": 7
+    },
+    {
+      "name": "random4",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 3,
+      "maxgon": 4
+    },
+    {
+      "name": "random5",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 4,
+      "maxgon": 5
+    },
+    {
+      "name": "random6",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 3,
+      "maxgon": 5
+    },
+    {
+      "name": "random7",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 5,
+      "maxgon": 5
+    },
+    {
+      "name": "random8",
+      "valid": true,
+      "maxcap": 3,
+      "maxcup": 4,
+      "maxgon": 5
+    },
+    {
+      "name": "random9",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 4,
+      "maxgon": 5
+    },
+    {
+      "name": "random10",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 4,
+      "maxgon": 5
+    },
+    {
+      "name": "random11",
+      "valid": false,
+      "maxcap": 6,
+      "maxcup": 3,
+      "maxgon": 6
+    },
+    {
+      "name": "random12",
+      "valid": true,
+      "maxcap": 3,
+      "maxcup": 3,
+      "maxgon": 4
+    },
+    {
+      "name": "random13",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 3,
+      "maxgon": 4
+    },
+    {
+      "name": "random14",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 3,
+      "maxgon": 5
+    },
+    {
+      "name": "random15",
+      "valid": false,
+      "maxcap": 5,
+      "maxcup": 4,
+      "maxgon": 6
+    },
+    {
+      "name": "random16",
+      "valid": true,
+      "maxcap": 3,
+      "maxcup": 4,
+      "maxgon": 4
+    },
+    {
+      "name": "random17",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 4,
+      "maxgon": 4
+    },
+    {
+      "name": "random18",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 4,
+      "maxgon": 5
+    },
+    {
+      "name": "random19",
+      "valid": false,
+      "maxcap": 5,
+      "maxcup": 4,
+      "maxgon": 6
+    },
+    {
+      "name": "random20",
+      "valid": true,
+      "maxcap": 2,
+      "maxcup": 5,
+      "maxgon": 5
+    },
+    {
+      "name": "random21",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 4,
+      "maxgon": 5
+    },
+    {
+      "name": "random22",
+      "valid": false,
+      "maxcap": 5,
+      "maxcup": 4,
+      "maxgon": 6
+    },
+    {
+      "name": "random23",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 6,
+      "maxgon": 7
+    },
+    {
+      "name": "random24",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 3,
+      "maxgon": 5
+    },
+    {
+      "name": "random25",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 3,
+      "maxgon": 4
+    },
+    {
+      "name": "random26",
+      "valid": false,
+      "maxcap": 6,
+      "maxcup": 3,
+      "maxgon": 6
+    },
+    {
+      "name": "random27",
+      "valid": false,
+      "maxcap": 5,
+      "maxcup": 4,
+      "maxgon": 6
+    },
+    {
+      "name": "random28",
+      "valid": true,
+      "maxcap": 3,
+      "maxcup": 3,
+      "maxgon": 4
+    },
+    {
+      "name": "random29",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 4,
+      "maxgon": 5
+    },
+    {
+      "name": "random30",
+      "valid": false,
+      "maxcap": 4,
+      "maxcup": 5,
+      "maxgon": 7
+    },
+    {
+      "name": "random31",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 5,
+      "maxgon": 6
+    },
+    {
+      "name": "random32",
+      "valid": true,
+      "maxcap": 3,
+      "maxcup": 3,
+      "maxgon": 4
+    },
+    {
+      "name": "random33",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 3,
+      "maxgon": 5
+    },
+    {
+      "name": "random34",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 4,
+      "maxgon": 5
+    },
+    {
+      "name": "random35",
+      "valid": false,
+      "maxcap": 5,
+      "maxcup": 4,
+      "maxgon": 7
+    },
+    {
+      "name": "random36",
+      "valid": true,
+      "maxcap": 3,
+      "maxcup": 3,
+      "maxgon": 4
+    },
+    {
+      "name": "random37",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 3,
+      "maxgon": 4
+    },
+    {
+      "name": "random38",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 4,
+      "maxgon": 5
+    },
+    {
+      "name": "random39",
+      "valid": false,
+      "maxcap": 5,
+      "maxcup": 4,
+      "maxgon": 5
+    },
+    {
+      "name": "random40",
+      "valid": true,
+      "maxcap": 3,
+      "maxcup": 4,
+      "maxgon": 5
+    },
+    {
+      "name": "random41",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 4,
+      "maxgon": 6
+    },
+    {
+      "name": "random42",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 4,
+      "maxgon": 5
+    },
+    {
+      "name": "random43",
+      "valid": false,
+      "maxcap": 5,
+      "maxcup": 3,
+      "maxgon": 6
+    },
+    {
+      "name": "random44",
+      "valid": true,
+      "maxcap": 3,
+      "maxcup": 4,
+      "maxgon": 5
+    },
+    {
+      "name": "random45",
+      "valid": true,
+      "maxcap": 3,
+      "maxcup": 5,
+      "maxgon": 5
+    },
+    {
+      "name": "random46",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 4,
+      "maxgon": 5
+    },
+    {
+      "name": "random47",
+      "valid": false,
+      "maxcap": 5,
+      "maxcup": 4,
+      "maxgon": 7
+    },
+    {
+      "name": "boundary6",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 4,
+      "maxgon": 5
+    },
+    {
+      "name": "boundary7",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 5,
+      "maxgon": 6
+    },
+    {
+      "name": "boundary8",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 6,
+      "maxgon": 7
+    },
+    {
+      "name": "invalid-fivecap",
+      "valid": false,
+      "maxcap": 7,
+      "maxcup": 2,
+      "maxgon": 7
+    },
+    {
+      "name": "invalid-ngon",
+      "valid": false,
+      "maxcap": 2,
+      "maxcup": 7,
+      "maxgon": 7
+    },
+    {
+      "name": "empty-ambient",
+      "valid": true,
+      "maxcap": 2,
+      "maxcup": 6,
+      "maxgon": 6
+    },
+    {
+      "name": "old-fourcap",
+      "valid": true,
+      "maxcap": 4,
+      "maxcup": 3,
+      "maxgon": 5
+    }
+  ],
+  "valid": 41,
+  "invalid": 14,
+  "algebra": [
+    {
+      "q": [
+        1,
+        0,
+        1
+      ],
+      "safe": true,
+      "supports": [
+        [
+          [
+            0,
+            1
+          ],
+          "1/2"
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          "1/2"
+        ]
+      ]
+    },
+    {
+      "q": [
+        1,
+        1,
+        1
+      ],
+      "safe": false,
+      "interval": [
+        "1",
+        "3"
+      ],
+      "witness_t": "2"
+    },
+    {
+      "q": [
+        2,
+        -1,
+        1
+      ],
+      "safe": false,
+      "interval": [
+        "3/2",
+        null
+      ],
+      "witness_t": "5/2"
+    },
+    {
+      "q": [
+        3,
+        -100,
+        1
+      ],
+      "safe": false,
+      "interval": [
+        "98",
+        null
+      ],
+      "witness_t": "99"
+    },
+    {
+      "q": [
+        0,
+        3,
+        1
+      ],
+      "safe": false,
+      "interval": [
+        "0",
+        "5/2"
+      ],
+      "witness_t": "5/4"
+    },
+    {
+      "q": [
+        0,
+        2,
+        1
+      ],
+      "safe": true,
+      "supports": [
+        [
+          [
+            0,
+            1
+          ],
+          "1"
+        ]
+      ]
+    }
+  ],
+  "all_passed": true
+}

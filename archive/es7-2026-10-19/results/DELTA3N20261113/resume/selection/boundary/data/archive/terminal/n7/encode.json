@@ -1,0 +1,25 @@
+{
+  "mode": "old-terminal-failure",
+  "n": 7,
+  "m": 11,
+  "old_m": 11,
+  "variables": 2376,
+  "clauses": 23135,
+  "literals": 99825,
+  "bytes": 514775,
+  "added_phases": {
+    "terminal_fourcap_equivalence": [
+      1650,
+      4290
+    ],
+    "terminal_bad_triple_equivalence": [
+      2376,
+      6798
+    ],
+    "forall_terminal_safe_delta": [
+      1486,
+      30129
+    ]
+  },
+  "parent_cnf_sha256": "6921c087279f4d4854f407073697f051f0f1a4a279463b035c902590b88e455a"
+}

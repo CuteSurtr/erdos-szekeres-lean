@@ -1,0 +1,13 @@
+{
+  "cases": 400,
+  "valid": 400,
+  "max_cost": 0,
+  "max_rightmost_cost": 0,
+  "hist": {
+    "0": 400
+  },
+  "seed": 14072026,
+  "input": "/home/jay/research/data/delta3-codex-20261113/selection/repair/samples8.txt",
+  "output": "/home/jay/research/data/delta3-codex-20261113/selection/repair/samples8-results.jsonl",
+  "scope": "HEURISTIC coverage, exact finite enumeration on each sample"
+}

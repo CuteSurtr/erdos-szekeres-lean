@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "label": "COMPUTED",
+  "variant": "cup",
+  "m": 8,
+  "n": 8,
+  "variables": 666,
+  "clauses": 3619,
+  "literals": 9685,
+  "geometry_variables": 218,
+  "geometry_clauses": 1729,
+  "new_clauses": 1890,
+  "geometry_prefix_sha256": "1b1487121b68b144f900d1e8a4cdfe3477e4fc5d46a607bf406b90613b1a7cbf",
+  "geometry_reference": null,
+  "map_kind_counts": {
+    "orientation": 56,
+    "convex": 162,
+    "terminal_fourcap": 70,
+    "terminal_fourcup": 70,
+    "end_fourcap": 28,
+    "cup_support": 195,
+    "covered_pair": 28,
+    "uncovered_cap_triple": 56,
+    "target_contains": 1
+  },
+  "phase_counts": {
+    "signotope": 560,
+    "no5cap": 56,
+    "convex4_equivalence": 560,
+    "convex_larger_equivalence": 552,
+    "no_ngon": 1,
+    "fourcap_and_fourcup_equivalence": 700,
+    "ambient_terminal_pair_equivalence": 98,
+    "cup_domination_equivalence": 886,
+    "uncovered_cap_triple_equivalence": 168,
+    "target_containment": 1,
+    "forall_cup_protected_delta": 37
+  },
+  "empty_End4_ORs": 13,
+  "cup_support_cache_reuses": 50,
+  "canonical_geometry_checked": true,
+  "false_failure_rows": {
+    "forall_cup_protected_delta": 37
+  },
+  "input_hashes": {
+    "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/cup-edge88.cnf": "f12de5e3eeba5ac05c4c62b37e57fc09ed7f95f24575ea995b6319b868788c42",
+    "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/cup-edge88.cnf.map": "8977b3ebaa00daf0b25e9b7a4e0e1b0bc726cce52ddb47664a9c5a4e0405223c"
+  },
+  "streamed_rows_and_map_byte_identical": true,
+  "fixture": {
+    "name": "two",
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        -3
+      ],
+      [
+        5,
+        10
+      ],
+      [
+        6,
+        -2
+      ],
+      [
+        7,
+        5
+      ]
+    ],
+    "cap4": 3,
+    "bad_triples": 15,
+    "targets": 0
+  }
+}

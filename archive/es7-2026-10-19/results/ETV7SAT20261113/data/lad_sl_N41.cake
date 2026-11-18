@@ -1,0 +1,5 @@
+047fd3565378a9027a17c272eaff600a562c719bc7fa90dec118f1deda9399de  run/lad_sl_N41.cnf
+b772b5f18547b184a53dbe6866b3979af033e4f05f450a107e854a07c3f9bc76  run/lad_sl_N41.lrat
+lrat_bytes=505929663
+s VERIFIED UNSAT
+cake_wall=58 Fri Nov 13 06:12:28 PM KST 2026

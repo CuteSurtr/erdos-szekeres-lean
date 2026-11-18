@@ -1,0 +1,12 @@
+base (cycle rows only)           OPTIMAL holes 6 (bound 6.0) -> N66 <= 64
+|E|<=25                          OPTIMAL holes 10 (bound 10.0) -> N66 <= 60
+|E|<=25 and |A|<=25              OPTIMAL holes 11 (bound 11.0) -> N66 <= 59
+|E u A|<=30                      OPTIMAL holes 20 (bound 20.0) -> N66 <= 50
+|E u A|<=32                      OPTIMAL holes 18 (bound 18.0) -> N66 <= 52
+|E u A|<=35                      OPTIMAL holes 15 (bound 15.0) -> N66 <= 55
+|X|<=16                          OPTIMAL holes 8 (bound 8.0) -> N66 <= 62
+|X|<=14                          OPTIMAL holes 9 (bound 9.0) -> N66 <= 61
+|E|<=25,|A|<=25,|X|<=16          OPTIMAL holes 11 (bound 11.0) -> N66 <= 59
+|E|<=26 and |A|<=26              OPTIMAL holes 10 (bound 10.0) -> N66 <= 60
+|E|<=28 and |A|<=28              OPTIMAL holes 9 (bound 9.0) -> N66 <= 61
+|E|<=30 and |A|<=30              OPTIMAL holes 7 (bound 7.0) -> N66 <= 63

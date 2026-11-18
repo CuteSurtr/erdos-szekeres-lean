@@ -1,0 +1,23 @@
+{
+  "label": "COMPUTED",
+  "finder_sha256": "ab962987404aacecea344bd7fcc695e4d0f86f647086e61c27d5c8dff04d9d6e",
+  "status": "EXHAUSTED",
+  "name": "star12",
+  "input_m": 12,
+  "subsets_examined": 12,
+  "valid_subsets": 12,
+  "pair_hitting_obstructions": 12,
+  "no_terminal_triple": 0,
+  "source": {
+    "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/resume/pool/data/maximal/real-star.json",
+    "sha256": "39ebaa3669347a8e52a5ed46253f929c11f1b04a82e42fc4146b12f7ffc9ac05",
+    "index": null
+  },
+  "seconds": 0.00830523999320576,
+  "trace": "/home/jay/research/data/delta3-codex-20261113/extension/cardinality/star12.tries.tsv",
+  "trace_sha256": "d9ba5e5b578c6c9233fc20ff94375cbe2476cbf5fcd06ab6ccec067e2ebb6595",
+  "targets_in_source": 54,
+  "fivecaps_in_source": 0,
+  "sevengons_in_source": 0,
+  "max_rss_KiB": 16180
+}

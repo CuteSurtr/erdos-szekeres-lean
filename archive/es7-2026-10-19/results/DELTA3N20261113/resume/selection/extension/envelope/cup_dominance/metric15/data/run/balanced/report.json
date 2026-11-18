@@ -1,0 +1,272 @@
+{
+  "P": [
+    [
+      0,
+      0
+    ],
+    [
+      37,
+      -35
+    ],
+    [
+      38,
+      -248
+    ],
+    [
+      84,
+      -270
+    ],
+    [
+      202,
+      -640
+    ],
+    [
+      472,
+      -427
+    ],
+    [
+      653,
+      -757
+    ],
+    [
+      665,
+      -793
+    ],
+    [
+      666,
+      -717
+    ],
+    [
+      683,
+      -718
+    ],
+    [
+      736,
+      -567
+    ],
+    [
+      737,
+      -827
+    ],
+    [
+      926,
+      -895
+    ],
+    [
+      999,
+      -926
+    ],
+    [
+      1000,
+      0
+    ]
+  ],
+  "cnf_sha256": "47e0cdabc88a0afd407c129090c38977774b5e20beb776b5c9a7761c6be6b8cb",
+  "exposed_pairs": [
+    [
+      9,
+      10
+    ],
+    [
+      9,
+      14
+    ]
+  ],
+  "exposed_triple_count": 2,
+  "independent_pair_checks": {
+    "all_classifications_agree": true,
+    "common_exact_tests": 3,
+    "terminal_pairs_checked": 50
+  },
+  "label": "COMPUTED exact finite enumeration",
+  "minimum_absolute_determinant": 45,
+  "minimum_uniform_As": [
+    [
+      2,
+      3,
+      7
+    ],
+    [
+      2,
+      3,
+      11
+    ],
+    [
+      4,
+      11,
+      12
+    ],
+    [
+      4,
+      11,
+      13
+    ]
+  ],
+  "minimum_uniform_count": 4,
+  "minimum_uniform_size": 3,
+  "name": "balanced",
+  "ordinary_count": 4805,
+  "ordinary_size3": [
+    {
+      "A": [
+        2,
+        3,
+        7
+      ],
+      "certificates": [
+        {
+          "supports": [
+            {
+              "fourcap": [
+                4,
+                7,
+                12,
+                13
+              ],
+              "weight": "1"
+            }
+          ],
+          "triple": [
+            2,
+            3,
+            7
+          ]
+        }
+      ],
+      "is_cap": true,
+      "terminal_pair": [
+        3,
+        7
+      ],
+      "uniform": true
+    },
+    {
+      "A": [
+        2,
+        3,
+        11
+      ],
+      "certificates": [
+        {
+          "supports": [
+            {
+              "fourcap": [
+                4,
+                7,
+                12,
+                13
+              ],
+              "weight": "1"
+            }
+          ],
+          "triple": [
+            2,
+            3,
+            11
+          ]
+        }
+      ],
+      "is_cap": true,
+      "terminal_pair": [
+        3,
+        11
+      ],
+      "uniform": true
+    },
+    {
+      "A": [
+        4,
+        11,
+        12
+      ],
+      "certificates": [
+        {
+          "supports": [
+            {
+              "fourcap": [
+                7,
+                9,
+                10,
+                14
+              ],
+              "weight": "1"
+            }
+          ],
+          "triple": [
+            4,
+            11,
+            12
+          ]
+        }
+      ],
+      "is_cap": true,
+      "terminal_pair": [
+        11,
+        12
+      ],
+      "uniform": true
+    },
+    {
+      "A": [
+        4,
+        11,
+        13
+      ],
+      "certificates": [
+        {
+          "supports": [
+            {
+              "fourcap": [
+                7,
+                9,
+                10,
+                14
+              ],
+              "weight": "1"
+            }
+          ],
+          "triple": [
+            4,
+            11,
+            13
+          ]
+        }
+      ],
+      "is_cap": true,
+      "terminal_pair": [
+        11,
+        13
+      ],
+      "uniform": true
+    }
+  ],
+  "ordinary_size_distribution": {
+    "3": 4,
+    "4": 59,
+    "5": 351,
+    "6": 1047,
+    "7": 1578,
+    "8": 1216,
+    "9": 463,
+    "10": 81,
+    "11": 6
+  },
+  "premises": {
+    "maxcap": 4,
+    "maxcup": 6,
+    "maxgon": 6
+  },
+  "signs_sha256": "81a3e11b1530a3e8a404977719162cfecffb8380dc8dedaeec767fcfac271a34",
+  "uniform_count": 4499,
+  "uniform_size_distribution": {
+    "3": 4,
+    "4": 59,
+    "5": 346,
+    "6": 1009,
+    "7": 1474,
+    "8": 1105,
+    "9": 420,
+    "10": 76,
+    "11": 6
+  }
+}

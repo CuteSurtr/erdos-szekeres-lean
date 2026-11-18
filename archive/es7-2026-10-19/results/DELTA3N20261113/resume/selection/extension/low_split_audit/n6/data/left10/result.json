@@ -1,0 +1,237 @@
+{
+  "status": "PASS",
+  "label": "CERTIFIED",
+  "n": 6,
+  "left_m": 10,
+  "fresh_independent_replay": true,
+  "cnf_sha256": "2aac28f4cfbe8b9f99e2ee4959d2efe81f6b4f0ad26805b09f395cd17f24f026",
+  "proof_sha256": "f8ac66d7eba2c854d31a3cb8bc8a390b11de28aeb136faf27e341b8c368338bd",
+  "formula": {
+    "status": "PASS",
+    "label": "COMPUTED",
+    "left_m": 10,
+    "right_m": 2,
+    "n": 6,
+    "variant": "direct",
+    "variables": 592,
+    "clauses": 6522,
+    "literals": 35845,
+    "phase_rows": {
+      "signotope": 1680,
+      "no5cap": 252,
+      "convex4_equivalence": 1680,
+      "convex_larger_equivalence": 1512,
+      "no_ngon": 210,
+      "left_has_no_fourcap": 210,
+      "ends_three_cap_equivalence": 130,
+      "no_covered_cup_transversal": 848
+    },
+    "phase_literals": {
+      "signotope": 5040,
+      "no5cap": 756,
+      "convex4_equivalence": 5040,
+      "convex_larger_equivalence": 4032,
+      "no_ngon": 1050,
+      "left_has_no_fourcap": 840,
+      "ends_three_cap_equivalence": 370,
+      "no_covered_cup_transversal": 18717
+    },
+    "phase_max_width": {
+      "signotope": 3,
+      "no5cap": 3,
+      "convex4_equivalence": 3,
+      "convex_larger_equivalence": 6,
+      "no_ngon": 5,
+      "left_has_no_fourcap": 4,
+      "ends_three_cap_equivalence": 37,
+      "no_covered_cup_transversal": 252
+    },
+    "map_counts": {
+      "orientation": 120,
+      "convex": 462,
+      "ends_three_cap": 10
+    },
+    "cnf_map_byte_identical_rebuild": true,
+    "hashes": {
+      "/home/jay/research/data/delta3-codex-20261113/extension/low10-n6.cnf": "2aac28f4cfbe8b9f99e2ee4959d2efe81f6b4f0ad26805b09f395cd17f24f026",
+      "/home/jay/research/data/delta3-codex-20261113/extension/low10-n6.cnf.map": "fe8b6b2c25172ffe22660918bd2e1e99538f056b870de73b74868c6666d86da8"
+    },
+    "empty_End3_count": 2,
+    "option2_rows": 0
+  },
+  "geometry": {
+    "status": "PASS",
+    "P_left": [
+      [
+        8930,
+        40332
+      ],
+      [
+        53030,
+        24895
+      ],
+      [
+        71573,
+        -44546
+      ],
+      [
+        120094,
+        8990
+      ],
+      [
+        122148,
+        14671
+      ],
+      [
+        122648,
+        -29897
+      ],
+      [
+        123148,
+        -16011
+      ],
+      [
+        123648,
+        20977
+      ],
+      [
+        157127,
+        -27262
+      ],
+      [
+        157627,
+        -12108
+      ]
+    ],
+    "P_full": [
+      [
+        8930,
+        40332
+      ],
+      [
+        53030,
+        24895
+      ],
+      [
+        71573,
+        -44546
+      ],
+      [
+        120094,
+        8990
+      ],
+      [
+        122148,
+        14671
+      ],
+      [
+        122648,
+        -29897
+      ],
+      [
+        123148,
+        -16011
+      ],
+      [
+        123648,
+        20977
+      ],
+      [
+        157127,
+        -27262
+      ],
+      [
+        157627,
+        -12108
+      ],
+      [
+        157628,
+        -3147967
+      ],
+      [
+        157629,
+        -3147964
+      ]
+    ],
+    "left": {
+      "m": 10,
+      "n": 6,
+      "GP": true,
+      "fourcaps": 0,
+      "fivecaps": 0,
+      "ngons": 0,
+      "targets": 44,
+      "cap_triples": 52,
+      "bad_cap_triples": 52,
+      "End3": [
+        2,
+        5,
+        6,
+        8,
+        9
+      ],
+      "maximum_abs_coordinate": 157627
+    },
+    "full": {
+      "m": 12,
+      "n": 6,
+      "GP": true,
+      "fourcaps": 104,
+      "fivecaps": 0,
+      "ngons": 0,
+      "targets": 96,
+      "cap_triples": 142,
+      "bad_cap_triples": 82,
+      "End3": [
+        2,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11
+      ],
+      "maximum_abs_coordinate": 3147967
+    },
+    "all_memberships_checked": 4096,
+    "terminal_selectors": 60,
+    "option1_all": 20,
+    "option1_bounded": 20,
+    "option2": 0,
+    "thinnings": 0,
+    "canonical_rows_checked": 6522,
+    "canonical_false_failure_rows": {
+      "no_covered_cup_transversal": 20
+    },
+    "canonical_nonfailure_all_true": true,
+    "first_option1": [
+      0,
+      2,
+      5,
+      6
+    ],
+    "exact_target_bad3_End4_families_checked": true,
+    "parent_expected_geometry_ignored": true
+  },
+  "cake": {
+    "returncode": 0,
+    "seconds": 0.025422842998523265,
+    "peak_RSS_KiB": 58500,
+    "user_seconds": 0.012634999999999999,
+    "system_seconds": 0.003887,
+    "periodic_cache_release_rounds": 0,
+    "exact_acceptance_line": true
+  },
+  "stable_inputs": true,
+  "AS_MiB": 300,
+  "heap_MiB": 128,
+  "stack_MiB": 32,
+  "CPU_count": 1,
+  "total_seconds": 0.07048123200365808,
+  "own_peak_RSS_KiB": 22180,
+  "limits": "Limit                     Soft Limit           Hard Limit           Units     \nMax cpu time              19                   19                   seconds   \nMax file size             unlimited            unlimited            bytes     \nMax data size             unlimited            unlimited            bytes     \nMax stack size            8388608              unlimited            bytes     \nMax core file size        0                    unlimited            bytes     \nMax resident set          unlimited            unlimited            bytes     \nMax processes             243364               243364               processes \nMax open files            4096                 524288               files     \nMax locked memory         8388608              8388608              bytes     \nMax address space         314572800            314572800            bytes     \nMax file locks            unlimited            unlimited            locks     \nMax pending signals       243364               243364               signals   \nMax msgqueue size         819200               819200               bytes     \nMax nice priority         0                    0                    \nMax realtime priority     0                    0                    \nMax realtime timeout      unlimited            unlimited            us        \n",
+  "affinity": [
+    5
+  ],
+  "finished_UTC": "2026-11-13T22:32:42.750168+00:00"
+}

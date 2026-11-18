@@ -1,0 +1,35 @@
+{
+  "label": "COMPUTED exact endpoint certificate; written interpolation proof in VERIFY_CARDINALITY.md",
+  "status": "PASS",
+  "checks": [
+    {
+      "endpoint": "lower",
+      "parameter": "-1/1",
+      "weakly_correct_orientations": 165,
+      "zero_triples": [
+        [
+          0,
+          5,
+          10
+        ]
+      ]
+    },
+    {
+      "endpoint": "upper",
+      "parameter": "8/61",
+      "weakly_correct_orientations": 165,
+      "zero_triples": [
+        [
+          3,
+          5,
+          7
+        ]
+      ]
+    }
+  ],
+  "common_zero_triples": [],
+  "consequence": "Each oriented determinant is affine in t, nonnegative at both endpoints, and not zero at both; it is strictly positive throughout the open interval.",
+  "source_sha256": "36c8e630c08c8e775a505d58e47eefaffb49e2ee4c80f8e17cc1e1dd06a54d45",
+  "script_sha256": "c23444fb5d6192bc8c79d9dc4d6c0089297cdf8e2b075322121773efb4abaa83",
+  "checker_sha256": "f52d750e01beee92986416a0877473f30aa4376882bf1a71b349efb9844ce59c"
+}

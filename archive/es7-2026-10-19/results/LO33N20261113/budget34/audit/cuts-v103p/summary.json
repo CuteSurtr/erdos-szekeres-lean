@@ -1,0 +1,29 @@
+{
+  "label": "CERTIFIED",
+  "version": "v103p",
+  "rows": 12,
+  "own_encoder_matches": 12,
+  "fresh_cake_acceptances": 12,
+  "old_witness_exact_row_check": "PASS (3680 rows, 35 holes, F20,Lo15,state0 occupied)",
+  "rows_cutting_old_witness": 12,
+  "old_witness_intersection_counts": {
+    "0": 12
+  },
+  "accepted_sha256": "1b42191a966a7320634585722a8b953d455721fd2a1b6c6da097fb4c235040d7",
+  "replay_sha256": "e5cb6cd8f924d54860ed91f386c1387b59b3e04ecb0ff521d87a218ab63a9729",
+  "input_sha256": {
+    "/home/jay/research/data/es308-20261114/cuts-v103p/accepted.json": "1b42191a966a7320634585722a8b953d455721fd2a1b6c6da097fb4c235040d7",
+    "/home/jay/research/data/es308-20261114/candidates-v103p.json": "026bc2a25decf5f1f222adc9ddab6317225648cdc2cd1755bbaa6e924c681c13",
+    "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-residual32-rank-global-2026-10-10/source-2650.json.gz": "8c7fe9ef5264182524095d46ef50ed6bc691cab425efa965756d1870112241aa",
+    "/home/jay/research/data/es308-20261114/runs/b35s20/bb/WITNESS.json.v102-snapshot": "4cbb42deb7bf2a5e2fe11ca30ad5d22727ec629401d14b72d177bd1ac36ca49b",
+    "/home/jay/research/data/es308-20261114/inputs/b35s20-v102/extra.json": "e649d84e0e039d79869400efbdd8d5dcb4d9324eeaa761d819537e22e9fec909",
+    "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/LO33N20261113/budget34/audit/audit_followup_rows_v4.py": "f0df1c0f5b38b735226a9b813b3f5f78d0b91ee27c300c15ffccf5c5fa1ffc12",
+    "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/LO33N20261113/budget34/audit/residual_encoder.py": "db7b2deba4ae55ff50f25d1e52843734591f5e7d1339a53e45e8811866e7365c",
+    "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54"
+  },
+  "seconds": 3.165,
+  "finished_local": "2026-11-14T23:19:50.514053+09:00",
+  "scope": "Additional rows only; no finite exclusion or ES bound follows from these rows alone",
+  "parent_maxrss_kib": 114768,
+  "child_maxrss_kib": 413068
+}

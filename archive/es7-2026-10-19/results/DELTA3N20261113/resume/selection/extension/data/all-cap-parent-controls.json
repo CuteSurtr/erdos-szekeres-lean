@@ -1,0 +1,955 @@
+{
+  "label": "COMPUTED exact parent control replay",
+  "status": "PASS",
+  "cases": [
+    {
+      "case": "n5_L2_R2",
+      "m": 4,
+      "n": 5,
+      "cut": 2,
+      "caps4": 1,
+      "targets": 1,
+      "selections": [
+        {
+          "A": [
+            0,
+            2,
+            3
+          ],
+          "selected_cap_triples": 1
+        },
+        {
+          "A": [
+            1,
+            2,
+            3
+          ],
+          "selected_cap_triples": 1
+        }
+      ]
+    },
+    {
+      "case": "n5_L2_R4",
+      "m": 6,
+      "n": 5,
+      "cut": 2,
+      "caps4": 6,
+      "targets": 7,
+      "selections": [
+        {
+          "A": [
+            0,
+            2,
+            3,
+            4,
+            5
+          ],
+          "selected_cap_triples": 6
+        },
+        {
+          "A": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "selected_cap_triples": 6
+        }
+      ]
+    },
+    {
+      "case": "n5_L4_R2",
+      "m": 6,
+      "n": 5,
+      "cut": 4,
+      "caps4": 6,
+      "targets": 7,
+      "selections": [
+        {
+          "A": [
+            0,
+            4,
+            5
+          ],
+          "selected_cap_triples": 1
+        },
+        {
+          "A": [
+            1,
+            4,
+            5
+          ],
+          "selected_cap_triples": 1
+        },
+        {
+          "A": [
+            2,
+            4,
+            5
+          ],
+          "selected_cap_triples": 1
+        },
+        {
+          "A": [
+            3,
+            4,
+            5
+          ],
+          "selected_cap_triples": 1
+        }
+      ]
+    },
+    {
+      "case": "n5_L4_R4",
+      "m": 8,
+      "n": 5,
+      "cut": 4,
+      "caps4": 36,
+      "targets": 38,
+      "selections": [
+        {
+          "A": [
+            0,
+            4,
+            5,
+            6,
+            7
+          ],
+          "selected_cap_triples": 6
+        },
+        {
+          "A": [
+            1,
+            4,
+            5,
+            6,
+            7
+          ],
+          "selected_cap_triples": 6
+        },
+        {
+          "A": [
+            2,
+            4,
+            5,
+            6,
+            7
+          ],
+          "selected_cap_triples": 6
+        },
+        {
+          "A": [
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "selected_cap_triples": 6
+        }
+      ]
+    },
+    {
+      "case": "n5_singleton_left",
+      "m": 7,
+      "n": 5,
+      "cut": 1,
+      "caps4": 10,
+      "targets": 19,
+      "selections": [
+        {
+          "A": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "selected_cap_triples": 10
+        }
+      ]
+    },
+    {
+      "case": "n5_singleton_right",
+      "m": 8,
+      "n": 5,
+      "cut": 7,
+      "caps4": 10,
+      "targets": 29,
+      "selections": [
+        {
+          "A": [
+            3,
+            4,
+            5,
+            7
+          ],
+          "selected_cap_triples": 3
+        }
+      ]
+    },
+    {
+      "case": "n6_L2_R2",
+      "m": 4,
+      "n": 6,
+      "cut": 2,
+      "caps4": 1,
+      "targets": 0,
+      "selections": [
+        {
+          "A": [
+            0,
+            2,
+            3
+          ],
+          "selected_cap_triples": 1
+        },
+        {
+          "A": [
+            1,
+            2,
+            3
+          ],
+          "selected_cap_triples": 1
+        }
+      ]
+    },
+    {
+      "case": "n6_L2_R5",
+      "m": 7,
+      "n": 6,
+      "cut": 2,
+      "caps4": 10,
+      "targets": 1,
+      "selections": [
+        {
+          "A": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "selected_cap_triples": 10
+        },
+        {
+          "A": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "selected_cap_triples": 10
+        }
+      ]
+    },
+    {
+      "case": "n6_L5_R2",
+      "m": 7,
+      "n": 6,
+      "cut": 5,
+      "caps4": 10,
+      "targets": 1,
+      "selections": [
+        {
+          "A": [
+            0,
+            5,
+            6
+          ],
+          "selected_cap_triples": 1
+        },
+        {
+          "A": [
+            1,
+            5,
+            6
+          ],
+          "selected_cap_triples": 1
+        },
+        {
+          "A": [
+            2,
+            5,
+            6
+          ],
+          "selected_cap_triples": 1
+        },
+        {
+          "A": [
+            3,
+            5,
+            6
+          ],
+          "selected_cap_triples": 1
+        },
+        {
+          "A": [
+            4,
+            5,
+            6
+          ],
+          "selected_cap_triples": 1
+        }
+      ]
+    },
+    {
+      "case": "n6_L5_R5",
+      "m": 10,
+      "n": 6,
+      "cut": 5,
+      "caps4": 100,
+      "targets": 2,
+      "selections": [
+        {
+          "A": [
+            0,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "selected_cap_triples": 10
+        },
+        {
+          "A": [
+            1,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "selected_cap_triples": 10
+        },
+        {
+          "A": [
+            2,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "selected_cap_triples": 10
+        },
+        {
+          "A": [
+            3,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "selected_cap_triples": 10
+        },
+        {
+          "A": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "selected_cap_triples": 10
+        }
+      ]
+    },
+    {
+      "case": "n6_singleton_left",
+      "m": 11,
+      "n": 6,
+      "cut": 1,
+      "caps4": 46,
+      "targets": 60,
+      "selections": [
+        {
+          "A": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "selected_cap_triples": 46
+        }
+      ]
+    },
+    {
+      "case": "n6_singleton_right",
+      "m": 12,
+      "n": 6,
+      "cut": 11,
+      "caps4": 46,
+      "targets": 101,
+      "selections": [
+        {
+          "A": [
+            6,
+            7,
+            8,
+            9,
+            11
+          ],
+          "selected_cap_triples": 6
+        }
+      ]
+    },
+    {
+      "case": "n7_L2_R2",
+      "m": 4,
+      "n": 7,
+      "cut": 2,
+      "caps4": 1,
+      "targets": 0,
+      "selections": [
+        {
+          "A": [
+            0,
+            2,
+            3
+          ],
+          "selected_cap_triples": 1
+        },
+        {
+          "A": [
+            1,
+            2,
+            3
+          ],
+          "selected_cap_triples": 1
+        }
+      ]
+    },
+    {
+      "case": "n7_L2_R6",
+      "m": 8,
+      "n": 7,
+      "cut": 2,
+      "caps4": 15,
+      "targets": 1,
+      "selections": [
+        {
+          "A": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "selected_cap_triples": 15
+        },
+        {
+          "A": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "selected_cap_triples": 15
+        }
+      ]
+    },
+    {
+      "case": "n7_L6_R2",
+      "m": 8,
+      "n": 7,
+      "cut": 6,
+      "caps4": 15,
+      "targets": 1,
+      "selections": [
+        {
+          "A": [
+            0,
+            6,
+            7
+          ],
+          "selected_cap_triples": 1
+        },
+        {
+          "A": [
+            1,
+            6,
+            7
+          ],
+          "selected_cap_triples": 1
+        },
+        {
+          "A": [
+            2,
+            6,
+            7
+          ],
+          "selected_cap_triples": 1
+        },
+        {
+          "A": [
+            3,
+            6,
+            7
+          ],
+          "selected_cap_triples": 1
+        },
+        {
+          "A": [
+            4,
+            6,
+            7
+          ],
+          "selected_cap_triples": 1
+        },
+        {
+          "A": [
+            5,
+            6,
+            7
+          ],
+          "selected_cap_triples": 1
+        }
+      ]
+    },
+    {
+      "case": "n7_L6_R6",
+      "m": 12,
+      "n": 7,
+      "cut": 6,
+      "caps4": 225,
+      "targets": 2,
+      "selections": [
+        {
+          "A": [
+            0,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "selected_cap_triples": 15
+        },
+        {
+          "A": [
+            1,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "selected_cap_triples": 15
+        },
+        {
+          "A": [
+            2,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "selected_cap_triples": 15
+        },
+        {
+          "A": [
+            3,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "selected_cap_triples": 15
+        },
+        {
+          "A": [
+            4,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "selected_cap_triples": 15
+        },
+        {
+          "A": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "selected_cap_triples": 15
+        }
+      ]
+    },
+    {
+      "case": "n7_singleton_left",
+      "m": 16,
+      "n": 7,
+      "cut": 1,
+      "caps4": 146,
+      "targets": 410,
+      "selections": [
+        {
+          "A": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "selected_cap_triples": 146
+        }
+      ]
+    },
+    {
+      "case": "n7_singleton_right",
+      "m": 17,
+      "n": 7,
+      "cut": 16,
+      "caps4": 146,
+      "targets": 616,
+      "selections": [
+        {
+          "A": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            16
+          ],
+          "selected_cap_triples": 10
+        }
+      ]
+    },
+    {
+      "case": "n8_L2_R2",
+      "m": 4,
+      "n": 8,
+      "cut": 2,
+      "caps4": 1,
+      "targets": 0,
+      "selections": [
+        {
+          "A": [
+            0,
+            2,
+            3
+          ],
+          "selected_cap_triples": 1
+        },
+        {
+          "A": [
+            1,
+            2,
+            3
+          ],
+          "selected_cap_triples": 1
+        }
+      ]
+    },
+    {
+      "case": "n8_L2_R7",
+      "m": 9,
+      "n": 8,
+      "cut": 2,
+      "caps4": 21,
+      "targets": 1,
+      "selections": [
+        {
+          "A": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "selected_cap_triples": 21
+        },
+        {
+          "A": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "selected_cap_triples": 21
+        }
+      ]
+    },
+    {
+      "case": "n8_L7_R2",
+      "m": 9,
+      "n": 8,
+      "cut": 7,
+      "caps4": 21,
+      "targets": 1,
+      "selections": [
+        {
+          "A": [
+            0,
+            7,
+            8
+          ],
+          "selected_cap_triples": 1
+        },
+        {
+          "A": [
+            1,
+            7,
+            8
+          ],
+          "selected_cap_triples": 1
+        },
+        {
+          "A": [
+            2,
+            7,
+            8
+          ],
+          "selected_cap_triples": 1
+        },
+        {
+          "A": [
+            3,
+            7,
+            8
+          ],
+          "selected_cap_triples": 1
+        },
+        {
+          "A": [
+            4,
+            7,
+            8
+          ],
+          "selected_cap_triples": 1
+        },
+        {
+          "A": [
+            5,
+            7,
+            8
+          ],
+          "selected_cap_triples": 1
+        },
+        {
+          "A": [
+            6,
+            7,
+            8
+          ],
+          "selected_cap_triples": 1
+        }
+      ]
+    },
+    {
+      "case": "n8_L7_R7",
+      "m": 14,
+      "n": 8,
+      "cut": 7,
+      "caps4": 441,
+      "targets": 2,
+      "selections": [
+        {
+          "A": [
+            0,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "selected_cap_triples": 21
+        },
+        {
+          "A": [
+            1,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "selected_cap_triples": 21
+        },
+        {
+          "A": [
+            2,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "selected_cap_triples": 21
+        },
+        {
+          "A": [
+            3,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "selected_cap_triples": 21
+        },
+        {
+          "A": [
+            4,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "selected_cap_triples": 21
+        },
+        {
+          "A": [
+            5,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "selected_cap_triples": 21
+        },
+        {
+          "A": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "selected_cap_triples": 21
+        }
+      ]
+    },
+    {
+      "case": "n8_singleton_left",
+      "m": 22,
+      "n": 8,
+      "cut": 1,
+      "caps4": 371,
+      "targets": 3090,
+      "selections": [
+        {
+          "A": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ],
+          "selected_cap_triples": 371
+        }
+      ]
+    },
+    {
+      "case": "n8_singleton_right",
+      "m": 23,
+      "n": 8,
+      "cut": 22,
+      "caps4": 371,
+      "targets": 4327,
+      "selections": [
+        {
+          "A": [
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            22
+          ],
+          "selected_cap_triples": 15
+        }
+      ]
+    }
+  ],
+  "total_selections": 68,
+  "seconds": 3.0687351519954973,
+  "input_sha256": "073de11d301a4048a0f04e717a2f34433e331046b2ec35347e42cf2b7b0b983e",
+  "source_sha256": "5ae6b6d9aca75d7f4074d21f9bee305b4ef28bad33059a625d801879ddd7926b",
+  "scope": "These24 coordinate controls only; the general all-cap lemma has a separate written proof."
+}

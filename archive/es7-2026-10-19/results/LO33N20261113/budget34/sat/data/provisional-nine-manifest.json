@@ -1,0 +1,27 @@
+{
+  "label": "HEURISTIC provisional size9 rows; NOT certified geometric inputs",
+  "sources": [
+    {
+      "path": "/home/jay/research/data/fastbb-20261113/killtools/newrows.json",
+      "sha256": "6d97f3ae4c1e7d2cf59bea7a80ad37b29972e08a76cbfe9764817cb0572c2b52",
+      "total_rows": 50568,
+      "size9_occurrences": 2211
+    },
+    {
+      "path": "/home/jay/research/data/fastbb-20261113/killtools/fnewrows.json",
+      "sha256": "a51b219f09b8962537ffeb32a9711bd681a17a678bc20ab93aa5366457fdf134",
+      "total_rows": 59339,
+      "size9_occurrences": 3907
+    },
+    {
+      "path": "/home/jay/research/data/fastbb-20261113/killtools/newrows_g2.json",
+      "sha256": "5af21d3123e669590a113c0eca40387d251e3d310f2e2a97374b806f06abb5b8",
+      "total_rows": 15090,
+      "size9_occurrences": 3767
+    }
+  ],
+  "new_rows": 6829,
+  "provisional_sha256": "23d1a897249fa73fd6382b1dea3cb2e8650421a6c348113de35925e6d38d5097",
+  "excluded_known_rows_from": "s20-v4 and base2650",
+  "use": "SAT discovery only; no exclusion evidence from UNSAT"
+}

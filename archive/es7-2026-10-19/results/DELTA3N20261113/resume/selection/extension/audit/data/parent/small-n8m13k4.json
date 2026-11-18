@@ -1,0 +1,62 @@
+{
+  "cnf": "/home/jay/research/data/delta3-codex-20261113/extension/small-delta/n8m13k4/input.cnf",
+  "commands": [
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "18",
+      "/usr/bin/cadical",
+      "-t",
+      "15",
+      "--lrat=true",
+      "--binary=false",
+      "/home/jay/research/data/delta3-codex-20261113/extension/small-delta/n8m13k4/input.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/extension/small-delta/n8m13k4/solve/proof.lrat"
+    ],
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "180",
+      "/usr/bin/zstd",
+      "-q",
+      "-T1",
+      "-3",
+      "-k",
+      "/home/jay/research/data/delta3-codex-20261113/extension/small-delta/n8m13k4/solve/proof.lrat"
+    ]
+  ],
+  "compressed_bytes": 45494873,
+  "compressed_roundtrip_verified": true,
+  "hashes": {
+    "cadical": "4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70",
+    "cadical.log": "58046b171f4a61c5cd430d1975087b23a05c76b45f5bf1cbf6e9be4b7b54dcb6",
+    "cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+    "input.cnf": "40b87d278b1ed5993721302ab591711954761c667c10b9974c0df85b9b75814d",
+    "proof.lrat": "dda9921c2de76fd04115fbb8adc97b8de1e6b442beb6915120f3b52dea31e3e1",
+    "proof.lrat.zst": "c51b21f913c23e0f52489be549376d8f843f73d0e1575b8725d43da7c815c75f",
+    "run_cnf.py": "e3c8d9413f99b3092a4ea760f08265bc30bb93204074a3fa566bc2f0c3b3f4b8"
+  },
+  "label": "COMPUTED",
+  "limits": {
+    "as_mib": 400,
+    "cake_seconds": 20,
+    "cnf": "/home/jay/research/data/delta3-codex-20261113/extension/small-delta/n8m13k4/input.cnf",
+    "heap": 128,
+    "out": "/home/jay/research/data/delta3-codex-20261113/extension/small-delta/n8m13k4/solve",
+    "seconds": 15,
+    "sha256": "40b87d278b1ed5993721302ab591711954761c667c10b9974c0df85b9b75814d"
+  },
+  "proof_bytes": 153188310,
+  "runs": {
+    "cadical": {
+      "exit": 0,
+      "seconds": 15.037
+    },
+    "compress": {
+      "exit": 0,
+      "seconds": 0.514
+    }
+  },
+  "seconds": 15.803,
+  "status": "UNKNOWN"
+}

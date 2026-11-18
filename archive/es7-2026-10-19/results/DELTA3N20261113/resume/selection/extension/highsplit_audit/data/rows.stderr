@@ -1,0 +1,11 @@
+{"status": "FAIL", "type": "ValueError", "message": "base header"}
+Traceback (most recent call last):
+  File "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/highsplit_audit/tools/check_rows.py", line 300, in <module>
+    main()
+    ~~~~^^
+  File "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/highsplit_audit/tools/check_rows.py", line 196, in main
+    need(base.readline()==b'p cnf 32086 104485\n','base header')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/highsplit_audit/tools/check_rows.py", line 29, in need
+    raise ValueError(message)
+ValueError: base header

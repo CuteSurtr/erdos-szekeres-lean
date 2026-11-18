@@ -1,0 +1,21 @@
+{
+  "label": "PROVED written algebraic contradiction with parent exact replay",
+  "status": "PASS",
+  "rows": 387,
+  "positive_weight_sum": 19282471848322771,
+  "minimum_weight": 1433869918829,
+  "maximum_weight": 228087592790168,
+  "all_560_exponents_cancel": true,
+  "symbolic_GP_identity_zero": true,
+  "symbolic_monomial_slots": 54,
+  "rejected_mutants": [
+    "weight",
+    "reverse"
+  ],
+  "hashes": {
+    "signs": "b21664b06887c4019d75023025b1cd80582064a0b06f53698d2a70bc8fc49067",
+    "certificate": "cfe42cec6041709b2ed7ac18ee16b13e57f091239ac19b8e5257aac46d2a326d",
+    "checker": "defc8101eb12cfa9b32ba4465a9b8b1aa9b27ccf936cc0a88c312adb44568365"
+  },
+  "scope": "This fixed orientation model is nonrealizable over the real plane. Other models and general selection conjectures are not decided. No Lean or cake claim."
+}

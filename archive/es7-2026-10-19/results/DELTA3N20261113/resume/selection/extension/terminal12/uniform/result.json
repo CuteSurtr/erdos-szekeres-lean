@@ -1,0 +1,99 @@
+{
+  "label": "COMPUTED exact geometry, rational envelopes, complete fixed memberships",
+  "m": 12,
+  "n": 6,
+  "P": [
+    [
+      0,
+      0
+    ],
+    [
+      37,
+      -35
+    ],
+    [
+      38,
+      -248
+    ],
+    [
+      84,
+      -270
+    ],
+    [
+      472,
+      -427
+    ],
+    [
+      653,
+      -757
+    ],
+    [
+      665,
+      -793
+    ],
+    [
+      666,
+      -717
+    ],
+    [
+      683,
+      -718
+    ],
+    [
+      736,
+      -567
+    ],
+    [
+      926,
+      -895
+    ],
+    [
+      1000,
+      0
+    ]
+  ],
+  "weak_count": 945,
+  "uniform_count": 848,
+  "uniform_minimum": 4,
+  "minimum_count": 21,
+  "minimum_witness": [
+    0,
+    2,
+    3,
+    6
+  ],
+  "minimum_certificate": [
+    {
+      "triple": [
+        2,
+        3,
+        6
+      ],
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            7,
+            8,
+            10
+          ],
+          "weight": "1"
+        }
+      ]
+    }
+  ],
+  "exposed_triples": 2,
+  "ambient_lines": 4,
+  "safe_pair_count": 26,
+  "tested_terminal_pairs": 28,
+  "independent_intersection_tests": 1,
+  "all_pair_certificates_replayed": true,
+  "seconds": 0.009071022999705747,
+  "hashes": {
+    "input": "3b910bb7fce55658e1a0bfdb83d5425292aa911ad815fe3076ed9ad1c212f415",
+    "source": "cb36718255e5f2af4dda9a06f7cb50f4a0499267af3877c94245643a9ef35b28",
+    "envelope_source": "eea066f98af42c961fa4dcf495ba7f3326666d9e551e9b67000cc33a4d4b11fe",
+    "cnf": "b4e1930d06f66c30ca977bf7e1fec0da643f82b0820a6213bfeb23ef62e5666b"
+  },
+  "scope": "Exactly this coordinate set and n. No global selection or existence-invariance claim."
+}

@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "label": "COMPUTED",
+  "variant": "cup",
+  "m": 4,
+  "n": 5,
+  "variables": 26,
+  "clauses": 76,
+  "literals": 172,
+  "geometry_variables": 5,
+  "geometry_clauses": 16,
+  "new_clauses": 60,
+  "geometry_prefix_sha256": "d344fbba6e8f620db05b4f1b6fdab566485945a174b7db150895d5a634fda28f",
+  "geometry_reference": null,
+  "map_kind_counts": {
+    "orientation": 4,
+    "convex": 1,
+    "terminal_fourcap": 1,
+    "terminal_fourcup": 1,
+    "end_fourcap": 6,
+    "cup_support": 3,
+    "covered_pair": 6,
+    "uncovered_cap_triple": 4
+  },
+  "phase_counts": {
+    "signotope": 8,
+    "convex4_equivalence": 8,
+    "fourcap_and_fourcup_equivalence": 10,
+    "ambient_terminal_pair_equivalence": 7,
+    "cup_domination_equivalence": 26,
+    "uncovered_cap_triple_equivalence": 12,
+    "forall_cup_protected_delta": 5
+  },
+  "empty_End4_ORs": 5,
+  "cup_support_cache_reuses": 2,
+  "canonical_geometry_checked": false,
+  "false_failure_rows": {},
+  "input_hashes": {
+    "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/cup-edge45.cnf": "9f1cb5f89e4e4187a5eea6357b697e6e4744314a684837d1771f16181c962d80",
+    "/home/jay/research/data/delta3-codex-20261113/extension/protection-audit/cup-edge45.cnf.map": "e6ba0359e4b7cd488e6fb63b1d8070c37568854c72177f9e9f4f47bc9f6b1148"
+  },
+  "streamed_rows_and_map_byte_identical": true
+}

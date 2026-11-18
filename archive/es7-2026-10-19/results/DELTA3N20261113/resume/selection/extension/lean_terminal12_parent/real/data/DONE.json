@@ -1,0 +1,171 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "source": "T12BridgeBase.lean",
+      "tag": "parent-t12-real-a-t12bridgebase",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Terminal12.RealBridge.integer_orient": [
+          "propext"
+        ],
+        "Delta3.Terminal12.RealBridge.real_orient": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.real_x_strict": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.realPoint_injective": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.real_orient_ne": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.realSet_card": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.realSet_generalPosition": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "source": "T12ConvexBridge.lean",
+      "tag": "parent-t12-real-a-t12convexbridge",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Terminal12.RealBridge.quad_real_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.signConvex_of_real": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.sorted_subset_sublist": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.real_of_signConvex": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.no_real_six_subsequence": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.no_real_hexagon": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "source": "T12TerminalReal.lean",
+      "tag": "parent-t12-real-a-t12terminalreal",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Terminal12.RealBridge.cap_real_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.no_real_five_cap_subsequence": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.terminalSafe_of_real": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.hitsFive_of_real": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.no_real_terminal_selection": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "source": "T12PointSetBridge.lean",
+      "tag": "parent-t12-real-a-t12pointsetbridge",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Terminal12.RealBridge.indices_strict": [
+          "propext"
+        ],
+        "Delta3.Terminal12.RealBridge.realCap_of_setCap": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.no_real_five_cap": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.realTerminalSafe_of_set": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.realHitsFive_of_set": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.no_real_subset_selection": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "source": "T12Real.lean",
+      "tag": "parent-t12-real-a-t12real",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Terminal12.RealBridge.realSet_distinct_x": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.terminal12_real_obstruction": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.exists_real_terminal_obstruction": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    }
+  ]
+}

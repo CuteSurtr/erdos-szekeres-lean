@@ -1,0 +1,34 @@
+{
+  "command": [
+    "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean",
+    "-j1",
+    "-s16384",
+    "-M500",
+    "--root=/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/protection_models/forced16_instance_lean",
+    "-o",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/protection_models/forced16_instance_lean/work/F16IRows161.olean",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/protection_models/forced16_instance_lean/F16IRows161.lean"
+  ],
+  "exit_code": 0,
+  "stop_reason": null,
+  "source_sha256": "b323fbec9418724982e048241a49bfa66c226d850831aa367c4e4e9cb6c93f39",
+  "elapsed_seconds": 0.749,
+  "proc_status_peaks_kib_except_threads": {
+    "VmPeak": 830432,
+    "VmSize": 830432,
+    "VmHWM": 627292,
+    "VmRSS": 627292,
+    "RssAnon": 310844,
+    "RssFile": 317136,
+    "VmSwap": 0,
+    "Threads": 5
+  },
+  "rusage_maxrss_kib": 634092,
+  "as_limit_bytes": 3221225472,
+  "rss_guard_mib": 950,
+  "lean_heap_mib": 500,
+  "cpu_affinity": [
+    4
+  ],
+  "wall_deadline_seconds": 18
+}

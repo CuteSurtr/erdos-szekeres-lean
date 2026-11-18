@@ -1,0 +1,82 @@
+{
+  "external_files": [
+    {
+      "path": "/home/jay/.local/bin/cake_lpr",
+      "bytes": 657224,
+      "sha256": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54"
+    },
+    {
+      "path": "/home/jay/research/data/delta3-codex-20261113/extension/realize15-a/witness.json",
+      "bytes": 1593,
+      "sha256": "52280ed5a905a188d3c230580615c212f6bb9939b3d0bcbae384e40edf158bdb"
+    },
+    {
+      "path": "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/certificate.json",
+      "bytes": 1560,
+      "sha256": "cb1c5b13ebc81ec56ccb16311a2a3ef20abd4acf7189d7b9427b3987d3f03101"
+    },
+    {
+      "path": "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/fresh.blrat",
+      "bytes": 2381,
+      "sha256": "1f25c0cbe8988577fecbfaf9379ffde400bca45d047cee6ce15bf3391bf94cef"
+    },
+    {
+      "path": "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/fresh.blrat.zst",
+      "bytes": 1659,
+      "sha256": "9f76af38d735a6d35bddc7075e06338b2c73adb631aeec197e772bf610721a19"
+    },
+    {
+      "path": "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/witness.terminal.cnf",
+      "bytes": 4745,
+      "sha256": "7d18c713d190d893a4d3d7873e8caa7d45061326c403ee8133888382040cc22a"
+    },
+    {
+      "path": "/home/jay/research/data/delta3-codex-20261113/extension/terminal7-a/m15/encode.json",
+      "bytes": 690,
+      "sha256": "54f9f4e724208eed243df3f0ad3c055cf50624f3bbc8e2b338b03cd387027da7"
+    },
+    {
+      "path": "/home/jay/research/data/delta3-codex-20261113/extension/terminal7-a/m15/input.cnf",
+      "bytes": 4282246,
+      "sha256": "6107c9952b37c6735ebd8a76dd0fe85690ce5cc6bf51e83cde828be83ea959a0"
+    },
+    {
+      "path": "/home/jay/research/data/delta3-codex-20261113/extension/terminal7-a/m15/input.cnf.map",
+      "bytes": 1604469,
+      "sha256": "7848190708574aa451618d9cb2aec901b23e1e66341abd66966766ad673ec7a6"
+    },
+    {
+      "path": "/home/jay/research/data/delta3-codex-20261113/extension/terminal7-a/m15/solve/cadical.log",
+      "bytes": 439198,
+      "sha256": "4424bebbc2ad6eae546986e41d5f465783a0f42b4f819db2544b8c36d8caad8f"
+    },
+    {
+      "path": "/home/jay/research/data/delta3-codex-20261113/extension/terminal7-a/m15/solve/result.json",
+      "bytes": 2039,
+      "sha256": "6ed6d9abec91b6f04e7df6c3b66f8f5ce013706792718e830f17cc22a9e88259"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/compact/compact_cnf.cpp",
+      "bytes": 11201,
+      "sha256": "1964e17b777fd7b7a973f12b2911c003a050047f13a621f523a9f98c6e31d553"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/terminal_general.cpp",
+      "bytes": 2954,
+      "sha256": "7fd10250a1010d0ed18bd6e3bd85ec8c67557b650bc4db43ec06417dd542752d"
+    }
+  ],
+  "frozen_neighbor_checks": {
+    "audit": {
+      "manifest_sha256": "e71ed0db65dab51e0375860d9d790109ef2f17de8881da97bec31b311c1ac527",
+      "files_checked": 65,
+      "unchanged": true
+    },
+    "cardinality": {
+      "manifest_sha256": "390520e949d700728fb718e7530893e5879e0a3d655ae7362526ae0764da5678",
+      "files_checked": 39,
+      "unchanged": true
+    }
+  },
+  "generic_partial_LRAT": "Not read or used; a SAT solver trace is not an UNSAT certificate."
+}

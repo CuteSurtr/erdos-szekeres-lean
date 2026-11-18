@@ -1,0 +1,86 @@
+c --- [ banner ] -------------------------------------------------------------
+c 
+c CaDiCaL SAT Solver
+c Copyright (c) 2016-2024
+c A. Biere, M. Fleury, N. Froleyks, K. Fazekas, F. Pollitt, T. Faller
+c JKU Linz, University of Freiburg, TU Wien
+c 
+c Version 2.1.3
+c g++-15.2.0
+c Dec 15 2025 01:04:17
+c 
+c --- [ limit ] --------------------------------------------------------------
+c 
+c setting time limit to 15 seconds real time (due to '-t 15')
+c 
+c --- [ proof tracing ] ------------------------------------------------------
+c 
+c opening file to write '/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep7/m9/solve/proof.lrat'
+c writing non-binary proof trace to '/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep7/m9/solve/proof.lrat'
+c 
+c --- [ parsing input ] ------------------------------------------------------
+c 
+c reading DIMACS file from '/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep7/m9/rooted.cnf'
+c opening file to read '/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep7/m9/rooted.cnf'
+c found 'p cnf 546 3774' header
+c parsed 3774 clauses in 0.00 seconds process time
+c 
+c --- [ options ] ------------------------------------------------------------
+c 
+c   --binary=false                 (different from default 'true')
+c   --lrat=true                    (different from default 'false')
+c 
+c --- [ solving ] ------------------------------------------------------------
+c 
+c time measured in process time since initialization
+c 
+c  seconds  reductions  redundant irredundant
+c         MB    restarts       trail    variables
+c          level   conflicts       glue     remaining
+c 
+c 0  0.00  5  0 0   0    0    0  0% 0 3690 410 75%
+c 
+c --- [ closing proof ] ------------------------------------------------------
+c 
+c LRAT proof file '/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep7/m9/solve/proof.lrat' closed
+c LRAT 128 added clauses 63.05%
+c LRAT 75 deleted clauses 36.95%
+c LRAT 3121 bytes (0.00 MB)
+c 
+c --- [ result ] -------------------------------------------------------------
+c 
+s UNSATISFIABLE
+c 
+c --- [ run-time profiling ] -------------------------------------------------
+c 
+c process time taken by individual solving procedures
+c (percentage relative to process time for solving)
+c 
+c         0.00 2655.56% parse
+c         0.00    0.00% search
+c         0.00    0.00% simplify
+c   =================================
+c         0.00    3.19% solve
+c 
+c last line shows process time for solving
+c (percentage relative to total process time)
+c 
+c --- [ statistics ] ---------------------------------------------------------
+c 
+c fixed:                       136        24.91 %  of all variables
+c minimized:                     0         0.00 %  learned literals
+c shrunken:                      0         0.00 %  learned literals
+c minishrunken:                  0         0.00 %  learned literals
+c propagations:                136         7.56 M  per second
+c 
+c seconds are measured in process time for solving
+c 
+c --- [ resources ] ----------------------------------------------------------
+c 
+c total process time since initialization:         0.00    seconds
+c total real time since initialization:            0.00    seconds
+c maximum resident set size of process:            4.96    MB
+c 
+c --- [ shutting down ] ------------------------------------------------------
+c 
+c exit 20

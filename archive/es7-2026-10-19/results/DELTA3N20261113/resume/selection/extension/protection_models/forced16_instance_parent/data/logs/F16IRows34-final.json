@@ -1,0 +1,34 @@
+{
+  "command": [
+    "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean",
+    "-j1",
+    "-s16384",
+    "-M500",
+    "--root=/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/protection_models/forced16_instance_lean",
+    "-o",
+    "/home/jay/research/data/delta3-codex-20261113/extension/forced16-instance-parent-a/work/F16IRows34.olean",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/protection_models/forced16_instance_lean/F16IRows34.lean"
+  ],
+  "exit_code": 0,
+  "stop_reason": null,
+  "source_sha256": "96b4c503ffd6a6f9fd7341f8c7f9f5ddf78414bee20cb7c36847242c92625ba2",
+  "elapsed_seconds": 0.295,
+  "proc_status_peaks_kib_except_threads": {
+    "VmPeak": 652768,
+    "VmSize": 652768,
+    "VmHWM": 447548,
+    "VmRSS": 447548,
+    "RssAnon": 131088,
+    "RssFile": 316460,
+    "VmSwap": 0,
+    "Threads": 5
+  },
+  "rusage_maxrss_kib": 458136,
+  "as_limit_bytes": 3221225472,
+  "rss_guard_mib": 950,
+  "lean_heap_mib": 500,
+  "cpu_affinity": [
+    4
+  ],
+  "wall_deadline_seconds": 18
+}

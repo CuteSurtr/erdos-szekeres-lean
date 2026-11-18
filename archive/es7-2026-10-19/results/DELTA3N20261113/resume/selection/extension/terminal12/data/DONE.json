@@ -1,0 +1,379 @@
+{
+  "label": "COMPUTED four exact restrictions, not a universal theorem",
+  "source_sha256": "7da027c4f6c800245a9f715e684872358fea36cab0d0133aa15e0a0b199eed9b",
+  "checker_sha256": "cbd79ec91cf34ba2643e2047b5840b3e7f65cbfefeac9c3a857493a7100fd337",
+  "cases": [
+    {
+      "label": "COMPUTED exact fixed-instance enumeration",
+      "case": 0,
+      "removed_original_indices": [
+        2,
+        3,
+        7
+      ],
+      "local_to_original": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          37,
+          -35
+        ],
+        [
+          202,
+          -640
+        ],
+        [
+          472,
+          -427
+        ],
+        [
+          653,
+          -757
+        ],
+        [
+          666,
+          -717
+        ],
+        [
+          683,
+          -718
+        ],
+        [
+          736,
+          -567
+        ],
+        [
+          737,
+          -827
+        ],
+        [
+          926,
+          -895
+        ],
+        [
+          999,
+          -926
+        ],
+        [
+          1000,
+          0
+        ]
+      ],
+      "n": 6,
+      "maxima_cap_cup_gon": [
+        4,
+        5,
+        5
+      ],
+      "fourcaps": 18,
+      "bad_triples": 39,
+      "pentagons": 90,
+      "assignments_checked": 4096,
+      "weak_delta_count": 877,
+      "terminal_delta_count": 68,
+      "minimum_weak_size": 4,
+      "minimum_terminal_size": 5,
+      "terminal_witness": [
+        0,
+        5,
+        6,
+        8,
+        9
+      ],
+      "cnf_sha256": "66d1a8a865f53b403fdcae73f61602237ea3e19dc125fb94750732e13192ee7c"
+    },
+    {
+      "label": "COMPUTED exact fixed-instance enumeration",
+      "case": 1,
+      "removed_original_indices": [
+        2,
+        3,
+        11
+      ],
+      "local_to_original": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14
+      ],
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          37,
+          -35
+        ],
+        [
+          202,
+          -640
+        ],
+        [
+          472,
+          -427
+        ],
+        [
+          653,
+          -757
+        ],
+        [
+          665,
+          -793
+        ],
+        [
+          666,
+          -717
+        ],
+        [
+          683,
+          -718
+        ],
+        [
+          736,
+          -567
+        ],
+        [
+          926,
+          -895
+        ],
+        [
+          999,
+          -926
+        ],
+        [
+          1000,
+          0
+        ]
+      ],
+      "n": 6,
+      "maxima_cap_cup_gon": [
+        4,
+        5,
+        5
+      ],
+      "fourcaps": 18,
+      "bad_triples": 43,
+      "pentagons": 70,
+      "assignments_checked": 4096,
+      "weak_delta_count": 895,
+      "terminal_delta_count": 28,
+      "minimum_weak_size": 4,
+      "minimum_terminal_size": 4,
+      "terminal_witness": [
+        0,
+        2,
+        9,
+        10
+      ],
+      "cnf_sha256": "05ca48fa112a2d0125ce4b38b6365c04c85261a520174b165ee614819c963200"
+    },
+    {
+      "label": "COMPUTED exact fixed-instance enumeration",
+      "case": 2,
+      "removed_original_indices": [
+        4,
+        11,
+        12
+      ],
+      "local_to_original": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        13,
+        14
+      ],
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          37,
+          -35
+        ],
+        [
+          38,
+          -248
+        ],
+        [
+          84,
+          -270
+        ],
+        [
+          472,
+          -427
+        ],
+        [
+          653,
+          -757
+        ],
+        [
+          665,
+          -793
+        ],
+        [
+          666,
+          -717
+        ],
+        [
+          683,
+          -718
+        ],
+        [
+          736,
+          -567
+        ],
+        [
+          999,
+          -926
+        ],
+        [
+          1000,
+          0
+        ]
+      ],
+      "n": 6,
+      "maxima_cap_cup_gon": [
+        4,
+        5,
+        5
+      ],
+      "fourcaps": 14,
+      "bad_triples": 43,
+      "pentagons": 126,
+      "assignments_checked": 4096,
+      "weak_delta_count": 949,
+      "terminal_delta_count": 2,
+      "minimum_weak_size": 4,
+      "minimum_terminal_size": 4,
+      "terminal_witness": [
+        0,
+        1,
+        9,
+        10
+      ],
+      "cnf_sha256": "9f440dbdb604275e7d903e381c50b73f60245f59cdde4487dc5a876d895e9063"
+    },
+    {
+      "label": "COMPUTED exact fixed-instance enumeration",
+      "case": 3,
+      "removed_original_indices": [
+        4,
+        11,
+        13
+      ],
+      "local_to_original": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        14
+      ],
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          37,
+          -35
+        ],
+        [
+          38,
+          -248
+        ],
+        [
+          84,
+          -270
+        ],
+        [
+          472,
+          -427
+        ],
+        [
+          653,
+          -757
+        ],
+        [
+          665,
+          -793
+        ],
+        [
+          666,
+          -717
+        ],
+        [
+          683,
+          -718
+        ],
+        [
+          736,
+          -567
+        ],
+        [
+          926,
+          -895
+        ],
+        [
+          1000,
+          0
+        ]
+      ],
+      "n": 6,
+      "maxima_cap_cup_gon": [
+        4,
+        5,
+        5
+      ],
+      "fourcaps": 14,
+      "bad_triples": 44,
+      "pentagons": 134,
+      "assignments_checked": 4096,
+      "weak_delta_count": 945,
+      "terminal_delta_count": 0,
+      "minimum_weak_size": 4,
+      "minimum_terminal_size": null,
+      "terminal_witness": null,
+      "cnf_sha256": "25ca75a9eee359ca03ae7f96657128ab03693c03421b1e7e83627f529841890a"
+    }
+  ]
+}

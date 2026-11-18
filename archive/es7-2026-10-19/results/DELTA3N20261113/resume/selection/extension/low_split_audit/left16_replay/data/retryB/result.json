@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "label": "CERTIFIED",
+  "fresh_independent_replay": true,
+  "n": 7,
+  "left_m": 16,
+  "before": {
+    "/home/jay/research/data/delta3-codex-20261113/extension/low16-n7-a/input.cnf": {
+      "sha256": "2e233545d18e3a9acf9a253b80a102935828bee27c079ba18946dfbd4efd53d8",
+      "bytes": 17331503,
+      "mtime_ns": 1794608103870038951,
+      "inode": 37617931,
+      "device": 66306
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/low16-n7-a/proof.blrat": {
+      "sha256": "247f64c822609e878be490e059fb7e0c96e5e71fde0e265de74c7be36cd8dd42",
+      "bytes": 4724116807,
+      "mtime_ns": 1794610752231804295,
+      "inode": 37617936,
+      "device": 66306
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/low16-n7-a/proof.blrat.zst": {
+      "sha256": "9b34ae9a407ce304f0ed82b9dbc6947a0219419a46145a326cfa189dd772b206",
+      "bytes": 2129823002,
+      "mtime_ns": 1794610752231804295,
+      "inode": 37618195,
+      "device": 66306
+    },
+    "/home/jay/.local/bin/cake_lpr": {
+      "sha256": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+      "bytes": 657224,
+      "mtime_ns": 1793796152709544431,
+      "inode": 33441742,
+      "device": 66306
+    }
+  },
+  "after": {
+    "/home/jay/research/data/delta3-codex-20261113/extension/low16-n7-a/input.cnf": {
+      "sha256": "2e233545d18e3a9acf9a253b80a102935828bee27c079ba18946dfbd4efd53d8",
+      "bytes": 17331503,
+      "mtime_ns": 1794608103870038951,
+      "inode": 37617931,
+      "device": 66306
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/low16-n7-a/proof.blrat": {
+      "sha256": "247f64c822609e878be490e059fb7e0c96e5e71fde0e265de74c7be36cd8dd42",
+      "bytes": 4724116807,
+      "mtime_ns": 1794610752231804295,
+      "inode": 37617936,
+      "device": 66306
+    },
+    "/home/jay/research/data/delta3-codex-20261113/extension/low16-n7-a/proof.blrat.zst": {
+      "sha256": "9b34ae9a407ce304f0ed82b9dbc6947a0219419a46145a326cfa189dd772b206",
+      "bytes": 2129823002,
+      "mtime_ns": 1794610752231804295,
+      "inode": 37618195,
+      "device": 66306
+    },
+    "/home/jay/.local/bin/cake_lpr": {
+      "sha256": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+      "bytes": 657224,
+      "mtime_ns": 1793796152709544431,
+      "inode": 33441742,
+      "device": 66306
+    }
+  },
+  "stable_inputs": true,
+  "cake": {
+    "returncode": 0,
+    "exact_acceptance_line": true,
+    "seconds": 134.5368718069949,
+    "peak_RSS_KiB": 2870348,
+    "user_seconds": 132.949789,
+    "system_seconds": 1.149418,
+    "cache_release_rounds": 133,
+    "progress64MiB_rounds": 0,
+    "max_sampled_cgroup_current": 3007504384,
+    "final_memory": {
+      "current": 8798208,
+      "peak": 3010473984,
+      "anon": 7827456,
+      "file": 688128,
+      "swap": 0
+    }
+  },
+  "hash_cache_release_calls": 210,
+  "AS_MiB": 3100,
+  "heap_MiB": 2800,
+  "stack_MiB": 32,
+  "CPU_count": 1,
+  "total_seconds": 145.3478059879999,
+  "finished_UTC": "2026-11-13T23:17:29.251377+00:00"
+}

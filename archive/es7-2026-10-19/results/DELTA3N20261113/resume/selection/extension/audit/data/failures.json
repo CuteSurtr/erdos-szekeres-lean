@@ -1,0 +1,35 @@
+{
+  "mathematical_control_failures": [],
+  "resource_failures": [],
+  "rejected_replays": [],
+  "compiler_warning": "Unused archived_compact_main reaches end of non-void function; retained in compile.log.",
+  "initial_probe": "One ls invocation returned 2 before extension directories were created; no result used.",
+  "expected_rejections": "Six out-of-domain inputs, flipped exact flags, missing-premise and too-short cover controls.",
+  "parent_unknowns": [
+    {
+      "n": 7,
+      "m": 11,
+      "k": 3
+    },
+    {
+      "n": 7,
+      "m": 12,
+      "k": 3
+    },
+    {
+      "n": 7,
+      "m": 12,
+      "k": 4
+    },
+    {
+      "n": 8,
+      "m": 13,
+      "k": 3
+    },
+    {
+      "n": 8,
+      "m": 13,
+      "k": 4
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "all_failures_unknowns_retained": true,
+  "commands": "COMMANDS.md",
+  "completed_utc": "2026-11-13T15:29:20.252352+00:00",
+  "controls": {
+    "all_real_parabola_embeddings": 35,
+    "exhaustive_embedding_combinations": 10240,
+    "original_full_cup15_audit": "data/original-cup15-audit.json",
+    "real16_base_clauses_checked": 203832,
+    "report": "data/controls.json",
+    "status": "PASSED"
+  },
+  "frozen_source": "data/frozen",
+  "next_case": "n7 cup +2 all 136 insertion patterns, after parent resource reservation",
+  "next_case_state": "DEFERRED_TO_PARENT",
+  "no_further_local_probes": true,
+  "no_long_jobs_or_units_launched_by_this_task": true,
+  "one_insertion_n7": {
+    "all_gaps": 16,
+    "clauses": 453999,
+    "cnf": "/home/jay/research/data/delta3-codex-20261113/resume/lift/cup-n7-add1-all-gaps/case.cnf",
+    "cnf_sha256": "9138cb5807ca6d208e2cb3f1519b0060026d495e295e9388c1f45bc35284d233",
+    "first_replay": "data/add1-cake-replay.log",
+    "label": "CERTIFIED",
+    "literals": 2120077,
+    "lrat_bytes": 2338806,
+    "lrat_sha256": "41978f2d53df04787a34aba49a119675079d95b63bb5f5350cef7541289467f1",
+    "parent_cake": "data/parent-add1/cake.log",
+    "parent_independent_rerun": "PASSED",
+    "parent_result": "data/parent-add1/result.json",
+    "variables": 142767
+  },
+  "scope": "conditional extensions of the fixed old15 order type; all insertion gaps; not universal 16-point cup-side Delta",
+  "source_manifest": "data/source-manifest.json",
+  "source_manifest_sha256": "f5266d96ecbb1fe1d6dea196f8cb8b293282525865ed710a4d7a78ac32ae8103",
+  "status": "READY",
+  "two_insertion_n7": {
+    "clauses": 813993,
+    "cnf": "/home/jay/research/data/delta3-codex-20261113/resume/lift/cup-n7-add2-all-gaps/case.cnf",
+    "cnf_sha256": "008ca2fe296ac3b44a61957117373012cce814f4db5e5c17467db3626474c2d0",
+    "label": "COMPUTED",
+    "literals": 3887521,
+    "max_solver_rss_kib": 212388,
+    "no_long_run_launched": true,
+    "solver_limit_seconds": 4,
+    "status": "UNKNOWN",
+    "variables": 279911
+  },
+  "written_theorems": [
+    {
+      "file": "MODEL.md",
+      "label": "PROVED",
+      "statement": "If S is hexagon-free, Q=S union A is 5-cap-free, and |A|<=5, then Q has a weak n8 Delta; no octagon-free hypothesis needed."
+    },
+    {
+      "file": "MODEL.md",
+      "label": "PROVED",
+      "statement": "Isolated secant ties in the stated binary limit model reproduce generic slope-cell signs."
+    }
+  ]
+}

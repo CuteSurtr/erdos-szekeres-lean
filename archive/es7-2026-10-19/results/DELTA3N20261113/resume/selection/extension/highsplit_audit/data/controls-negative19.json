@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "label": "COMPUTED geometry plus PROVED restriction using prior obstruction",
+  "P": [
+    [
+      -877024,
+      -728732
+    ],
+    [
+      -848175,
+      -806081
+    ],
+    [
+      -315477,
+      411721
+    ],
+    [
+      -313031,
+      607898
+    ],
+    [
+      -312174,
+      772879
+    ],
+    [
+      -275463,
+      -257726
+    ],
+    [
+      -247748,
+      -312490
+    ],
+    [
+      -229906,
+      -280298
+    ],
+    [
+      -224691,
+      37110
+    ],
+    [
+      -219347,
+      -771737
+    ],
+    [
+      -147229,
+      -623666
+    ],
+    [
+      -42059,
+      77725
+    ],
+    [
+      3816,
+      -817775
+    ],
+    [
+      75450,
+      -921685
+    ],
+    [
+      153870,
+      234592
+    ],
+    [
+      182298,
+      276392
+    ],
+    [
+      458162,
+      265990
+    ],
+    [
+      758070,
+      903438
+    ],
+    [
+      758071,
+      206805657
+    ]
+  ],
+  "left": {
+    "m": 18,
+    "n": 7,
+    "gp": true,
+    "fourcaps": 115,
+    "bad_cap_triples": 219,
+    "targets": 402,
+    "ngons": 0,
+    "fivecaps": 0,
+    "maxcup": 5,
+    "max_abs_coordinate": 921685,
+    "max_abs_determinant": 1870095781162
+  },
+  "whole": {
+    "m": 19,
+    "n": 7,
+    "gp": true,
+    "fourcaps": 115,
+    "bad_cap_triples": 219,
+    "targets": 632,
+    "ngons": 0,
+    "fivecaps": 0,
+    "maxcup": 6,
+    "max_abs_coordinate": 206805657,
+    "max_abs_determinant": 336669481241416
+  },
+  "cut": 18,
+  "highsplit": true,
+  "fourcaps_exactly_old": true,
+  "old_targets_retained": true,
+  "inherited_obstruction": "../terminal/README.md and ../subset_audit/VERIFY_SUBSETS.md (mapped18 exhaustive check); no new coloring enumeration or certificate replay here.",
+  "argument": "Restrict any alleged terminal-safe selector to the old18. Old targets remain hit, four-cap avoidance is inherited, and every needed ambient terminal four-cap remains old because the cap4 family is unchanged. This contradicts the previously checked old18 obstruction.",
+  "scope": "The last-cut exclusion needs its preceding-size premise; this control is not a claim of global minimum.",
+  "input_sha256": {
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/highsplit_audit/tools/controls.py": "8568ab9a5e94e4a5c64e5f91db4d704aacaae6b22e32e96cbfa0123b99d6c6b0",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/structure2/data/highsplit_cases.json": "7524b869b1ed270102a6443f1be1a4db95b67281ddbbd2842a9c694bad7acad6",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/terminal/data/witness.points": "8591856c2c1ba6d7f256c5884f6a4cc7b0013ec3a05b47ab20dbcea14d63adbc"
+  },
+  "resource_limits": {
+    "address_space_MiB": 300,
+    "cpu_seconds": 19,
+    "wall_seconds": 20,
+    "cpu_count": 1
+  },
+  "peak_rss_KiB": 19192
+}

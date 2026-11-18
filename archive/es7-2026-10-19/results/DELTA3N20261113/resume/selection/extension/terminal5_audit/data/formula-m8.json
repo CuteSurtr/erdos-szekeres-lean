@@ -1,0 +1,92 @@
+{
+  "formula": {
+    "m": 8,
+    "n": 5,
+    "variables": 471,
+    "clauses": 2440,
+    "phases": {
+      "signotope": 560,
+      "no5cap": 56,
+      "convex4_equivalence": 560,
+      "no_ngon": 56,
+      "terminal_fourcap_equivalence": 350,
+      "terminal_bad_triple_equivalence": 420,
+      "bad_triple_containment": 126,
+      "target_containment": 93,
+      "forall_terminal_delta": 219
+    },
+    "literals": 7399,
+    "hashes": {
+      "/home/jay/research/data/delta3-codex-20261113/extension/n5m8-terminal.cnf": "8729b5082acd27284bf3c05de69fa079a0613f7fece2ef5d9451d699d3d4b881",
+      "/home/jay/research/data/delta3-codex-20261113/extension/n5m8-terminal.cnf.map": "1020e4054f07f593d4b02caf3795be35d66029d43e3c5fb2fd8d4e66006c6085"
+    },
+    "canonical_failed_clauses": {},
+    "first_failures": {},
+    "map_and_all_rows_match": true,
+    "fixed_signs": false
+  },
+  "real_control": {
+    "m": 8,
+    "n": 5,
+    "minimum_absolute_determinant": 1,
+    "four_caps": 2,
+    "bad_triples": 4,
+    "five_caps": 0,
+    "targets": 38,
+    "n_gons": 0,
+    "terminal_deltas": 44,
+    "terminal_deltas_by_size": {
+      "4": 16,
+      "5": 24,
+      "6": 4
+    },
+    "first_terminal_delta": [
+      0,
+      2,
+      3,
+      4
+    ],
+    "every_subset_checked": 256
+  },
+  "canonical_rows": {
+    "m": 8,
+    "n": 5,
+    "variables": 471,
+    "clauses": 2440,
+    "phases": {
+      "signotope": 560,
+      "no5cap": 56,
+      "convex4_equivalence": 560,
+      "no_ngon": 56,
+      "terminal_fourcap_equivalence": 350,
+      "terminal_bad_triple_equivalence": 420,
+      "bad_triple_containment": 126,
+      "target_containment": 93,
+      "forall_terminal_delta": 219
+    },
+    "literals": 7399,
+    "hashes": {
+      "/home/jay/research/data/delta3-codex-20261113/extension/n5m8-terminal.cnf": "8729b5082acd27284bf3c05de69fa079a0613f7fece2ef5d9451d699d3d4b881",
+      "/home/jay/research/data/delta3-codex-20261113/extension/n5m8-terminal.cnf.map": "1020e4054f07f593d4b02caf3795be35d66029d43e3c5fb2fd8d4e66006c6085"
+    },
+    "canonical_failed_clauses": {
+      "forall_terminal_delta": 40
+    },
+    "first_failures": {
+      "forall_terminal_delta": {
+        "clause": 2251,
+        "row": [
+          256,
+          111
+        ]
+      }
+    },
+    "map_and_all_rows_match": true,
+    "fixed_signs": false
+  },
+  "four_subset_triangle_checks": 70,
+  "withdrawn_m7_shortcut_counterexample": null,
+  "original_cnf_sha256": "8729b5082acd27284bf3c05de69fa079a0613f7fece2ef5d9451d699d3d4b881",
+  "map_sha256": "1020e4054f07f593d4b02caf3795be35d66029d43e3c5fb2fd8d4e66006c6085",
+  "solver_input_byte_identical": true
+}

@@ -1,0 +1,338 @@
+{
+  "audited_source_sha256": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+  "canonical_run": "candidate_canonical.json",
+  "computation_scope": "Only the bounded hand-sized, canonical candidate, and coordinate candidate runs documented in AUDIT.md; no solver/checker/optimizer runs",
+  "coordinate_run": "candidate_geometry.json",
+  "observed_utc": "2026-11-13T14:23:16.828558+00:00",
+  "parent_cases": [
+    {
+      "directory": "/home/jay/research/data/delta3-codex-20261113/encoder/scheduled-cup-n6-m14",
+      "encoding": {
+        "a": 5,
+        "base_only": false,
+        "clauses": 102025,
+        "cnf_bytes": 2421645,
+        "cube": "",
+        "label": "COMPUTED",
+        "literals": 426471,
+        "m": 14,
+        "max_width": 67,
+        "mode": "cup",
+        "n": 6,
+        "phases": {
+          "cap_lattice": {
+            "clauses": 14913,
+            "literals": 89478
+          },
+          "endpoint_support": {
+            "clauses": 144,
+            "literals": 1509
+          },
+          "forall_delta": {
+            "clauses": 16384,
+            "literals": 32147
+          },
+          "fourcap": {
+            "clauses": 2002,
+            "literals": 4004
+          },
+          "no5cap": {
+            "clauses": 2002,
+            "literals": 6006
+          },
+          "no_ngon": {
+            "clauses": 33033,
+            "literals": 132132
+          },
+          "signotope": {
+            "clauses": 8008,
+            "literals": 32032
+          },
+          "target_lattice": {
+            "clauses": 15903,
+            "literals": 109891
+          },
+          "target_seeds": {
+            "clauses": 9636,
+            "literals": 19272
+          }
+        },
+        "pool": "lattice",
+        "sym": "none",
+        "triples": 364,
+        "variables": 35647
+      },
+      "parent_recorded_hashes": {
+        "case.cnf": "87cf372da95af5311fb52593d35308e64107852595b66b984163f4f78ffcd0e0",
+        "case.lrat": "16e22f171199fb2c5dac4c28ff0e15c651f41549e5716b0b830f207e0f9def5c",
+        "delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+        "encoder_binary": "b435f805e1475b90cffc6fdc831aeefc2eb573b1a48d800595c03de1bb9e99c6"
+      },
+      "provenance": "Read parent metadata; large proofs not rehashed or rerun by audit"
+    },
+    {
+      "directory": "/home/jay/research/data/delta3-codex-20261113/encoder/scheduled-cup-n6-m15",
+      "encoding": {
+        "a": 5,
+        "base_only": false,
+        "clauses": 181556,
+        "cnf_bytes": 4579719,
+        "cube": "",
+        "label": "COMPUTED",
+        "literals": 781297,
+        "m": 15,
+        "max_width": 79,
+        "mode": "cup",
+        "n": 6,
+        "phases": {
+          "cap_lattice": {
+            "clauses": 30827,
+            "literals": 184962
+          },
+          "endpoint_support": {
+            "clauses": 169,
+            "literals": 1989
+          },
+          "forall_delta": {
+            "clauses": 32768,
+            "literals": 64790
+          },
+          "fourcap": {
+            "clauses": 2730,
+            "literals": 5460
+          },
+          "no5cap": {
+            "clauses": 3003,
+            "literals": 9009
+          },
+          "no_ngon": {
+            "clauses": 55055,
+            "literals": 220220
+          },
+          "signotope": {
+            "clauses": 10920,
+            "literals": 43680
+          },
+          "target_lattice": {
+            "clauses": 32180,
+            "literals": 223379
+          },
+          "target_seeds": {
+            "clauses": 13904,
+            "literals": 27808
+          }
+        },
+        "pool": "lattice",
+        "sym": "none",
+        "triples": 455,
+        "variables": 69770
+      },
+      "parent_recorded_hashes": {
+        "case.cnf": "f0b94d902933799f9222b12619fd3bd5b17c05ea59fc11719e076ceaaa98d631",
+        "case.lrat": "b8cd105ee11fdfaa9874fba3dbbbc29768bc3ddc15da969945f7938c7dcb50c8",
+        "delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+        "encoder_binary": "b435f805e1475b90cffc6fdc831aeefc2eb573b1a48d800595c03de1bb9e99c6"
+      },
+      "provenance": "Read parent metadata; large proofs not rehashed or rerun by audit"
+    },
+    {
+      "directory": "/home/jay/research/data/delta3-codex-20261113/encoder/scheduled-cup-n7-m14",
+      "encoding": {
+        "a": 5,
+        "base_only": false,
+        "clauses": 136128,
+        "cnf_bytes": 3305916,
+        "cube": "",
+        "label": "COMPUTED",
+        "literals": 601868,
+        "m": 14,
+        "max_width": 67,
+        "mode": "cup",
+        "n": 7,
+        "phases": {
+          "cap_lattice": {
+            "clauses": 14913,
+            "literals": 89478
+          },
+          "endpoint_support": {
+            "clauses": 144,
+            "literals": 1509
+          },
+          "forall_delta": {
+            "clauses": 16384,
+            "literals": 31777
+          },
+          "fourcap": {
+            "clauses": 2002,
+            "literals": 4004
+          },
+          "no5cap": {
+            "clauses": 2002,
+            "literals": 6006
+          },
+          "no_ngon": {
+            "clauses": 54912,
+            "literals": 274560
+          },
+          "signotope": {
+            "clauses": 8008,
+            "literals": 32032
+          },
+          "target_lattice": {
+            "clauses": 14903,
+            "literals": 116782
+          },
+          "target_seeds": {
+            "clauses": 22860,
+            "literals": 45720
+          }
+        },
+        "pool": "lattice",
+        "sym": "none",
+        "triples": 364,
+        "variables": 37280
+      },
+      "parent_recorded_hashes": {
+        "case.cnf": "de510b3cd55a7adde215f3ec16d26687cec4eed8ae51716c2b44d9657b065d74",
+        "case.lrat": "add2ac66ae0f4ce96e65758438657006a0c78aa198b386165b3858ba4fbb24bb",
+        "delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+        "encoder_binary": "b435f805e1475b90cffc6fdc831aeefc2eb573b1a48d800595c03de1bb9e99c6"
+      },
+      "provenance": "Read parent metadata; large proofs not rehashed or rerun by audit"
+    },
+    {
+      "directory": "/home/jay/research/data/delta3-codex-20261113/encoder/fallback-flat-n8-m14",
+      "encoding": {
+        "a": 5,
+        "base_only": false,
+        "clauses": 134560,
+        "cnf_bytes": 18115873,
+        "cube": "",
+        "label": "COMPUTED",
+        "literals": 3752111,
+        "m": 14,
+        "max_width": 8382,
+        "mode": "cup",
+        "n": 8,
+        "phases": {
+          "endpoint_support": {
+            "clauses": 144,
+            "literals": 1509
+          },
+          "forall_delta": {
+            "clauses": 16384,
+            "literals": 3232256
+          },
+          "fourcap": {
+            "clauses": 2002,
+            "literals": 4004
+          },
+          "no5cap": {
+            "clauses": 2002,
+            "literals": 6006
+          },
+          "no_ngon": {
+            "clauses": 66066,
+            "literals": 396396
+          },
+          "signotope": {
+            "clauses": 8008,
+            "literals": 32032
+          },
+          "target_seeds": {
+            "clauses": 39954,
+            "literals": 79908
+          }
+        },
+        "pool": "flat",
+        "sym": "none",
+        "triples": 364,
+        "variables": 9891
+      },
+      "parent_recorded_hashes": {
+        "case.cnf": "a0e37105f825fc655ea76faef691c92b3748d99e654fb86cd101545afc1a1dbc",
+        "case.lrat": "03e6d69917731b55a4fd2d70255668c4caf8a5c52b9343cf99662ac9c2d8344c",
+        "delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+        "encoder_binary": "b435f805e1475b90cffc6fdc831aeefc2eb573b1a48d800595c03de1bb9e99c6"
+      },
+      "provenance": "Read parent metadata; large proofs not rehashed or rerun by audit"
+    }
+  ],
+  "read_input_hashes": [
+    {
+      "bytes": 67966,
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA2N20261113/README.md",
+      "sha256": "b9a5fa07dcda8ee5b4b50d36850ffd5b7415b258e6081546b48072d7055954fd"
+    },
+    {
+      "bytes": 19229,
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA2N20261113/VERIFY_D1.md",
+      "sha256": "48d65bc64cdb75c102f9268824ab59acab7260d85e6bd88830e2b2bd0a5c545d"
+    },
+    {
+      "bytes": 13436,
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/encoder/delta_cnf.cpp",
+      "sha256": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c"
+    },
+    {
+      "bytes": 20150,
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/encoder/DESIGN.md",
+      "sha256": "239da4519c91bef60eb9c2e36057e4220e41fb95ed8b5fa8e86404af4d8e1e7e"
+    },
+    {
+      "bytes": 4743,
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/encoder/check_model.py",
+      "sha256": "5bd4c0d6b83e94c8bf45ea0ab401dc1730b6a95223c0cf6344e0ce4216f0ed95"
+    },
+    {
+      "bytes": 6120,
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/encoder/run_case.py",
+      "sha256": "6c83598bcdb9e3b35c3f50471a8b4fc2a536b0788a22e2a05a4fcdff3764f13c"
+    },
+    {
+      "bytes": 5543,
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/encoder/semantic_controls.py",
+      "sha256": "c77819502d67f34b8fba0014ea475eb579194dc2fd78f7ceee0f3e805de32755"
+    },
+    {
+      "bytes": 116504,
+      "path": "/home/jay/research/data/delta3-codex-20261113/encoder/delta_cnf",
+      "sha256": "b435f805e1475b90cffc6fdc831aeefc2eb573b1a48d800595c03de1bb9e99c6"
+    },
+    {
+      "bytes": 888,
+      "path": "/home/jay/research/data/delta3-codex-20261113/encoder/scheduled-cup-n6-m15/model.log",
+      "sha256": "4aff8d67d8aef741a9e754d19d448c328dedf0ae26ac00e54daa2294b0a3f391"
+    },
+    {
+      "bytes": 455346,
+      "path": "/home/jay/research/data/delta3-codex-20261113/encoder/scheduled-cup-n6-m15/cadical.log",
+      "sha256": "aea1b48b17a721a2a0b9c50725ad26d8dd13ead60e8d467979dddca1676353e0"
+    },
+    {
+      "bytes": 2049,
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/coordinator/data/cup15/realized.json",
+      "sha256": "1e8b43136d096abb2deaea14743ed62a52ff622a991dd2fbbcb7140a15593b04"
+    },
+    {
+      "bytes": 17,
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/coordinator/data/cup15/cup15_coloring.cake.out",
+      "sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f"
+    },
+    {
+      "bytes": 433,
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/coordinator/data/cup15/SHA256SUMS",
+      "sha256": "c1f65ec5c37f13069690d3d45c85efed2ef7bd47feb2695a6820dc55f1be6d6f"
+    },
+    {
+      "bytes": 554,
+      "path": "/home/jay/research/data/delta3-codex-20261113/encoder/fallback-flat-n8-m14/encode.log",
+      "sha256": "d3a77567499766e75afb1df5d1949f28ee561fe1831d69145ef0febc221df555"
+    },
+    {
+      "bytes": 17,
+      "path": "/home/jay/research/data/delta3-codex-20261113/encoder/fallback-flat-n8-m14/cake.log",
+      "sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f"
+    }
+  ]
+}

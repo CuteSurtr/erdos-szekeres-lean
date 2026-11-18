@@ -1,0 +1,18 @@
+{
+  "label": "COMPUTED",
+  "m": 10,
+  "n": 8,
+  "root": 9,
+  "input": "/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep8/m10/full.cnf",
+  "input_sha256": "2347b489b0eb02d988e3a5a06991bd9f9bc8917ad3144dd2d47a569e7796b4b7",
+  "output": "/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep8/m10/rooted.cnf",
+  "output_sha256": "016cf084fa2b04da3be485b7dda114c20fa3277fb5ff335313aea66537a21690",
+  "source_sha256": "4a7166006b769549f6d8b3150c2f1fec79a346673201d0e416f1d68fdd833a25",
+  "variables": 1122,
+  "input_clauses": 7899,
+  "clauses": 7689,
+  "old_pool_size": 330,
+  "rooted_pool_size": 120,
+  "mask_order": "increasing integer; root bit set; 3<=size<=m-n+2",
+  "extra_geometric_restrictions": false
+}

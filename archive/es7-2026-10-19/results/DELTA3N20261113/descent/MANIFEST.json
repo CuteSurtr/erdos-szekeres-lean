@@ -1,0 +1,156 @@
+{
+  "record": "DELTA3N20261113/descent",
+  "primary": "theory.md",
+  "status": "Written proofs and exact fan-exchange obstructions; E1_3/E1_4 open for n=7,8",
+  "python": "/home/jay/research/data/six10-linux-20261105/venv.disk/bin/python",
+  "checks": {
+    "exchange_pool_samples.json": {
+      "sets": 16,
+      "eligible_pairs": 12119,
+      "failures": 0
+    },
+    "exchange_pool33_samples.json": {
+      "sets": 16,
+      "eligible_pairs": 93800,
+      "failures": 0
+    }
+  },
+  "files": [
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/attack_exchange.py",
+      "bytes": 6484,
+      "sha256": "47d60b84aef852c3f911f339e62e27f04ddf7778bc32981187e5baeb8c043074"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/attack_pool33_c3.cnf",
+      "bytes": 316552,
+      "sha256": "67d29a892b137e396b2e3e5b44460b510dd29d89b46ed627fef5b1f24142fc42"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/attack_pool33_c3.json",
+      "bytes": 77958,
+      "sha256": "d5c5584f210a35774e4e12899f12a279f1e39d096f0f9ef6d84973f96c2501cc"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/attack_pool33_c3.solver.out",
+      "bytes": 16,
+      "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/attack_pool33_c4.cnf",
+      "bytes": 291552,
+      "sha256": "ee468536847d93eb779791ce1157dd49448e453bd5a4e18c9c6ecccf129ac09c"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/attack_pool33_c4.json",
+      "bytes": 77949,
+      "sha256": "0067ab1c1cef9044a43de792bf91a9292994d61e54abdca4ea76e1a532cde518"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/attack_pool33_c4.solver.out",
+      "bytes": 16,
+      "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/check_exchange.py",
+      "bytes": 5940,
+      "sha256": "e1d3d59238d6aff92ac5c403ed8bdcb0b9e02d8dd3e3f7e65655c9d82995ca9a"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/control_no_starter16.json",
+      "bytes": 36127,
+      "sha256": "a7da54a675f970474e41cb952b4173e0a3018dc9a127fa01beb53e283fbb860d"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/control_no_starter16_kernel.json",
+      "bytes": 2138,
+      "sha256": "7c99fe2125154fcf97b0970d87f91a5d26ab61ce727c2bcd96c23f546148a0f8"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/control_no_starter16_sat.cnf",
+      "bytes": 32949,
+      "sha256": "ff16a1027698b3b13dbd0328278a640d0fc6927e796346d662cbbf1ec40c711d"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/control_no_starter16_sat.json",
+      "bytes": 18231,
+      "sha256": "595f2d6c26f3949983f34c8c9bd03eb5bd05b935e5fcfdce6a86663d46eaa435"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/control_no_starter16_sat.solver.out",
+      "bytes": 2711,
+      "sha256": "edfb5f38bfdddd68b0af1248e932a96baed35e01b93206ce8c2f30b9f97b9b6b"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/exchange_etv_samples.json",
+      "bytes": 186378,
+      "sha256": "2da80784122a41db90ec537f85fd7ba4d9381ea34b448c15a7cb05bde0fb7057"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/exchange_minimum16.json",
+      "bytes": 34616,
+      "sha256": "fb00d12baa323dda0070a246bbb1399641b22dc4c77d648e6851402a2c3f5b6f"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/exchange_n7.json",
+      "bytes": 9315,
+      "sha256": "ec01eee48233da1a8c4890d000a1d2899699336003ddf6ce8242dd142e25cbfb"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/exchange_n8.json",
+      "bytes": 11041,
+      "sha256": "809511f84482f56c58ac6040399b452f85b4fda97aedb77427dbcdc1db0c9497"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/exchange_pool33_samples.json",
+      "bytes": 261656,
+      "sha256": "64829b101516757bc97a642caf7c5922237dc9a5283d69e31462593df2bbbaca"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/exchange_pool_samples.json",
+      "bytes": 335166,
+      "sha256": "b57c1b5c9eab6b2d13e1c7c8ce7cda91b369749ba68ff608f660c4066c836cf8"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/fan_coverage_obstruction.json",
+      "bytes": 1593,
+      "sha256": "18773321f8357fc865ba72658d22147dc77326c22396471e7011d6617c44714f"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/fan_obstruction_n7.json",
+      "bytes": 2054,
+      "sha256": "491d36cc616ddd2856095b2b3f0593a2d2313deac3506ba6e541676f012d7077"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/fan_obstruction_n8.json",
+      "bytes": 1728,
+      "sha256": "fb729f322cee31821ea9213af8566918ca59f43ae8152eb8b7352b2fe6417725"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/fan_priority_obstruction.json",
+      "bytes": 3610,
+      "sha256": "d0f065be5a439c8d01db7b266f0bf1d79477fb7e967c2d34ee38a6144ec3f46f"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/source_pool_n7.json",
+      "bytes": 1245,
+      "sha256": "b64b2edac5751a1a47b6a774656cc40ee027a51ab477aae714fc0bf1eacd0aae"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/theory.md",
+      "bytes": 21306,
+      "sha256": "770e149bb78cb771e2c0622781070aeec3b96d0a23e674a1a53c46877d7657fd"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/verify_obstructions.json",
+      "bytes": 1360,
+      "sha256": "51b3ab4c68bf820d7f29e75ea15c1daedf9b4b7cf431112d7100053e445de25d"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/verify_obstructions.py",
+      "bytes": 3228,
+      "sha256": "f2420366c09756d11b1195f449299c0cde086d668166ad8b13fa3284da07467f"
+    }
+  ],
+  "manifest_path": "cloud/es7-2026-10-19/results/DELTA3N20261113/descent/MANIFEST.json"
+}

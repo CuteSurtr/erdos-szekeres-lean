@@ -1,0 +1,91 @@
+{
+  "cache_releases": 267,
+  "commands": [
+    [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/home/jay/research/data/delta3-codex-20261113/extension/low16-n7-a/cadical.time",
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "2703",
+      "/usr/bin/cadical",
+      "-t",
+      "2700",
+      "--lrat=true",
+      "--binary=true",
+      "/home/jay/research/data/delta3-codex-20261113/extension/low16-n7-a/input.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/extension/low16-n7-a/proof.blrat"
+    ],
+    [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/home/jay/research/data/delta3-codex-20261113/extension/low16-n7-a/cake.time",
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "360",
+      "/home/jay/.local/bin/cake_lpr",
+      "--CML_HEAP_SIZE=550",
+      "--CML_STACK_SIZE=32",
+      "/home/jay/research/data/delta3-codex-20261113/extension/low16-n7-a/input.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/extension/low16-n7-a/proof.blrat"
+    ],
+    [
+      "/usr/bin/time",
+      "-v",
+      "-o",
+      "/home/jay/research/data/delta3-codex-20261113/extension/low16-n7-a/compress.time",
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "600",
+      "/usr/bin/zstd",
+      "-q",
+      "-T1",
+      "-3",
+      "-k",
+      "/home/jay/research/data/delta3-codex-20261113/extension/low16-n7-a/proof.blrat"
+    ]
+  ],
+  "compressed_bytes": 2129823002,
+  "compressed_roundtrip_verified": true,
+  "finished": true,
+  "hashes": {
+    "cadical": "4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70",
+    "cadical.log": "4eb7c5476c21ad0b1fed2bdb66ae5b5b3de1b2766db5dc8a3e92370dfb519e22",
+    "cake.log": "aa0ea685523b6c7f6ffa0fb0cb29815345af89fcd9b943d10cbd4abc63e050e3",
+    "cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+    "compress.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "input.cnf": "2e233545d18e3a9acf9a253b80a102935828bee27c079ba18946dfbd4efd53d8",
+    "proof.blrat": "247f64c822609e878be490e059fb7e0c96e5e71fde0e265de74c7be36cd8dd42",
+    "proof.blrat.zst": "9b34ae9a407ce304f0ed82b9dbc6947a0219419a46145a326cfa189dd772b206",
+    "run_binary.py": "dcdfd0c97efa27e8b89daacbad3a950d3a9af77c88964e78e5522fd7904f87e5"
+  },
+  "label": "COMPUTED",
+  "limits": {
+    "as_mib": 800,
+    "cake_seconds": 360,
+    "heap_mib": 550,
+    "solver_seconds": 2700,
+    "stack_mib": 32
+  },
+  "proof_bytes": 4724116807,
+  "proof_format": "binary LRAT",
+  "runs": {
+    "cadical": {
+      "exit": 20,
+      "seconds": 2648.668
+    },
+    "cake": {
+      "exit": 1,
+      "seconds": 29.009
+    },
+    "compress": {
+      "exit": 0,
+      "seconds": 15.046
+    }
+  },
+  "seconds": 2705.796,
+  "source_cnf": "/home/jay/research/data/delta3-codex-20261113/extension/low16-n7-compact.cnf",
+  "status": "UNSAT_UNCERTIFIED"
+}

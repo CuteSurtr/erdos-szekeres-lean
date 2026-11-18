@@ -1,0 +1,28 @@
+In file included from cloud/es7-2026-10-19/results/DELTA3N20261113/resume/lift/extension_cnf.cpp:4:
+cloud/es7-2026-10-19/results/DELTA3N20261113/resume/lift/../../encoder/delta_cnf.cpp: In function ‘int delta_encoder_original_main(int, char**)’:
+cloud/es7-2026-10-19/results/DELTA3N20261113/resume/lift/../../encoder/delta_cnf.cpp:321:1: warning: control reaches end of non-void function [-Wreturn-type]
+  321 | }
+      | ^
+	Command being timed: "g++ -std=c++17 -O2 -Wall -Wextra -pedantic cloud/es7-2026-10-19/results/DELTA3N20261113/resume/lift/extension_cnf.cpp -o /home/jay/research/data/delta3-codex-20261113/resume/lift/extension_cnf"
+	User time (seconds): 1.71
+	System time (seconds): 0.08
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.80
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 184808
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 50625
+	Voluntary context switches: 15
+	Involuntary context switches: 8
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 264
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

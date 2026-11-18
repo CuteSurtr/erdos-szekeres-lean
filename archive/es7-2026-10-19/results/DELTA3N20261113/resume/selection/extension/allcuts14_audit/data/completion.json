@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "labels": [
+    "COMPUTED rows and controls",
+    "PROVED written real-counterexample implication with explicit dependencies"
+  ],
+  "frozen_UTC": "2026-11-13T22:28:00.968037+00:00",
+  "cnf_sha256": "01de4ba0c9831690f5e64a3592fd335ef701c100224060733e9734d55ac65554",
+  "frozen_manifest_hashes": {
+    "highsplit_audit": "dbf403074130a992c987858bb4112344099b43bcadf55e9078a394ebb9b34bef",
+    "low_split_audit": "8609cc06302c622b3f37014c27334ba142bb535b86e528aa654217e9959303c3",
+    "low_split_audit/replay": "159ac6c8386dbf78f2e63481bc3e4f659fe72e8c2c1456616db81729d79f298e",
+    "exact_audit/replay13": "b501ec428762c70347a44de66b6bfd201fad191b82d20411e831faaeef166314"
+  },
+  "frozen_files_rechecked_unchanged": {
+    "highsplit_audit": 49,
+    "low_split_audit": 128,
+    "low_split_audit/replay": 63,
+    "exact_audit/replay13": 23
+  },
+  "dependency_hashes": {
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/audit/VERIFY_EXTENSION.md": "3a1104b066e59e6d08d966afe4168e9218059ec029c3dee54771517c7c9dd8f7",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/audit/data/replay-n7m12.json": "eef59b136e8776e2c6f833f3e96749c654d62edcae8684f73a885470b9e64824",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/boundary/audit/VERIFY_BOUNDARY.md": "591b2e437a938c435d45556c2f153611eb3a4111d63bbeaf674ab5f9634ad0ff",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/structure2/cup_join.md": "0ee02b6625233d4b831c4638a38a8856974d7657917125d7c8fa497a5ac7c466",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/structure2/low_split.md": "773f92f96b3071bac66c7cf6a695707477d1aaa9349b9c261db77d0d7ce7faf1"
+  },
+  "parent_search_status": "SOLVING",
+  "matching_combined_proof_replayed": false,
+  "AS_MiB": 300,
+  "CPU_count": 1,
+  "scope": "n7/m14 combined cut formula; T7 through left14 is supplied separately by low_split_audit/replay"
+}

@@ -1,0 +1,134 @@
+[
+  {
+    "A": [
+      2,
+      3,
+      7
+    ],
+    "certificates": [
+      {
+        "supports": [
+          {
+            "fourcap": [
+              4,
+              7,
+              12,
+              13
+            ],
+            "weight": "1"
+          }
+        ],
+        "triple": [
+          2,
+          3,
+          7
+        ]
+      }
+    ],
+    "is_cap": true,
+    "terminal_pair": [
+      3,
+      7
+    ],
+    "uniform": true
+  },
+  {
+    "A": [
+      2,
+      3,
+      11
+    ],
+    "certificates": [
+      {
+        "supports": [
+          {
+            "fourcap": [
+              4,
+              7,
+              12,
+              13
+            ],
+            "weight": "1"
+          }
+        ],
+        "triple": [
+          2,
+          3,
+          11
+        ]
+      }
+    ],
+    "is_cap": true,
+    "terminal_pair": [
+      3,
+      11
+    ],
+    "uniform": true
+  },
+  {
+    "A": [
+      4,
+      11,
+      12
+    ],
+    "certificates": [
+      {
+        "supports": [
+          {
+            "fourcap": [
+              7,
+              9,
+              10,
+              14
+            ],
+            "weight": "1"
+          }
+        ],
+        "triple": [
+          4,
+          11,
+          12
+        ]
+      }
+    ],
+    "is_cap": true,
+    "terminal_pair": [
+      11,
+      12
+    ],
+    "uniform": true
+  },
+  {
+    "A": [
+      4,
+      11,
+      13
+    ],
+    "certificates": [
+      {
+        "supports": [
+          {
+            "fourcap": [
+              7,
+              9,
+              10,
+              14
+            ],
+            "weight": "1"
+          }
+        ],
+        "triple": [
+          4,
+          11,
+          13
+        ]
+      }
+    ],
+    "is_cap": true,
+    "terminal_pair": [
+      11,
+      13
+    ],
+    "uniform": true
+  }
+]

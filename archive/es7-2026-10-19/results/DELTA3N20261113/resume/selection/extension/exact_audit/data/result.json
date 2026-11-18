@@ -1,0 +1,24 @@
+{
+  "status": "FORMULA_AUDIT_COMPLETE",
+  "labels": {
+    "projection": "PROVED",
+    "implementation": "COMPUTED"
+  },
+  "variables": 15822,
+  "original_clauses": 59815,
+  "added_clauses": 55556,
+  "total_clauses": 115371,
+  "old_body_unchanged": true,
+  "new_variables": 0,
+  "extra_geometric_premises": 0,
+  "canonical_projection_preserved": true,
+  "added_rows_and_map_rebuilt": true,
+  "certificate_replayed": false,
+  "certificate_status": "PENDING",
+  "parent_solver_status": "SOLVING",
+  "no_new_existence_bound": true,
+  "inherited_base_audit": "../audit/VERIFY_EXTENSION.md",
+  "frozen_subset_packet_unchanged": true,
+  "excluded_m15_coordinate_audit": true,
+  "completed_at": "2026-11-13T20:40:14.657090+00:00"
+}

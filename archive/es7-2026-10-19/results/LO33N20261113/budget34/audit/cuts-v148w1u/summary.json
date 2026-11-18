@@ -1,0 +1,29 @@
+{
+  "label": "CERTIFIED",
+  "version": "v148w1u",
+  "rows": 8,
+  "own_encoder_matches": 8,
+  "fresh_cake_acceptances": 8,
+  "old_witness_exact_row_check": "PASS (4218 rows, 35 holes, F20,Lo15,state0 occupied)",
+  "rows_cutting_old_witness": 8,
+  "old_witness_intersection_counts": {
+    "0": 8
+  },
+  "accepted_sha256": "0290a91e888bec6705f4d6a4f56c4623a673b5fb9070cf8affcb6591773b27b8",
+  "replay_sha256": "656858a0b4a0b7b32c5b40776276afbad989116bf1bcbc652c685e5a2b7b230b",
+  "input_sha256": {
+    "/home/jay/research/data/es308-20261114/cuts-v148w1u/accepted.json": "0290a91e888bec6705f4d6a4f56c4623a673b5fb9070cf8affcb6591773b27b8",
+    "/home/jay/research/data/es308-20261114/candidates-v148w1u.json": "2fcd1ede1af119f4c8919e36a8d6db7482e021441b0bd0d67980c272eb6950a9",
+    "/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-residual32-rank-global-2026-10-10/source-2650.json.gz": "8c7fe9ef5264182524095d46ef50ed6bc691cab425efa965756d1870112241aa",
+    "/home/jay/research/data/es308-20261114/audit/cuts-v148w1u/witness-frozen.json": "9f41f44fdeca215066a6efe5b1465140b5b2306646cae98b4a996e49758000b9",
+    "/home/jay/research/data/es308-20261114/inputs/b35s20-v147/extra.json": "97b09453577693dfe5c1edf9ee655d8a88e741eee03069cfbe2dedbb0dac3dae",
+    "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/LO33N20261113/budget34/audit/audit_followup_rows_v4.py": "f0df1c0f5b38b735226a9b813b3f5f78d0b91ee27c300c15ffccf5c5fa1ffc12",
+    "/home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/LO33N20261113/budget34/audit/residual_encoder.py": "db7b2deba4ae55ff50f25d1e52843734591f5e7d1339a53e45e8811866e7365c",
+    "/home/jay/.local/bin/cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54"
+  },
+  "seconds": 2.105,
+  "finished_local": "2026-11-15T22:40:05.615713+09:00",
+  "scope": "Additional rows only; no finite exclusion or ES bound follows from these rows alone",
+  "parent_maxrss_kib": 55584,
+  "child_maxrss_kib": 412844
+}

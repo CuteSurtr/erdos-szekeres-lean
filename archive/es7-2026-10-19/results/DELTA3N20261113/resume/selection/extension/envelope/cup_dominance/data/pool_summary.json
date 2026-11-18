@@ -1,0 +1,29 @@
+{
+  "completed_cases": 316,
+  "label": "COMPUTED",
+  "outcomes": {
+    "SAT_EXACT_MODEL_CHECKED": 316
+  },
+  "planned_cases": 316,
+  "scope": "Cup-protected selector only; a negative is not a uniform-envelope or ordinary weak Delta failure.",
+  "seconds": 20.17098540999723,
+  "stop": "COMPLETE",
+  "baseline_groups": [
+    {
+      "n": 7,
+      "cases": 121,
+      "selected_cap_triples_checked": 8424,
+      "max_literals": 66657,
+      "max_clauses": 11920
+    },
+    {
+      "n": 8,
+      "cases": 194,
+      "selected_cap_triples_checked": 20608,
+      "max_literals": 1688723,
+      "max_clauses": 245950
+    }
+  ],
+  "baseline_cases": 315,
+  "known18_repeated_in_batch": true
+}

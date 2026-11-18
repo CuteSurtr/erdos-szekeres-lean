@@ -1,0 +1,12 @@
+vfy heap=2600MB Fri Nov 13 07:25:58 PM KST 2026
+8762b9f0f23456cca9f8fddeb3731100170e999128b1a5790f7e0730523996d5  run/lad_ns37_N37.cnf
+d3205363dd75a3c6e101e3f61967d497b734e76be4061292641af56e2cb3f373  run/lad_ns37_N37.lrat
+lrat_bytes=5261034548
+CakeML heap space exhausted.
+vfy_exit=1 cake_wall=141 Fri Nov 13 07:28:33 PM KST 2026
+vfy heap=4200MB Fri Nov 13 07:28:52 PM KST 2026
+8762b9f0f23456cca9f8fddeb3731100170e999128b1a5790f7e0730523996d5  run/lad_ns37_N37.cnf
+d3205363dd75a3c6e101e3f61967d497b734e76be4061292641af56e2cb3f373  run/lad_ns37_N37.lrat
+lrat_bytes=5261034548
+s VERIFIED UNSAT
+vfy_exit=0 cake_wall=148 Fri Nov 13 07:31:33 PM KST 2026

@@ -1,0 +1,32 @@
+{
+  "command": [
+    "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean",
+    "-j1",
+    "-s16384",
+    "-M1000",
+    "--root=/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean/NumericalExample.lean"
+  ],
+  "exit_code": 0,
+  "stop_reason": null,
+  "source_sha256": "02db865a3117d0cb64ee8aa2e6f1ad6697b39e4800a43462c932cad64474f8a9",
+  "elapsed_seconds": 2.126,
+  "proc_status_peaks_kib_except_threads": {
+    "VmPeak": 2007996,
+    "VmSize": 2007996,
+    "VmHWM": 1315540,
+    "VmRSS": 1315512,
+    "RssAnon": 112484,
+    "RssFile": 1203068,
+    "VmSwap": 0,
+    "Threads": 5
+  },
+  "rusage_maxrss_kib": 1315540,
+  "as_limit_bytes": 4294967296,
+  "rss_guard_mib": 1300,
+  "lean_heap_mib": 1000,
+  "cpu_affinity": [
+    4
+  ],
+  "wall_deadline_seconds": 27
+}

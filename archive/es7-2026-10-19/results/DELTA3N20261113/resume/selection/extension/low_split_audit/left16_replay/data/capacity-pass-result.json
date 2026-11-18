@@ -1,0 +1,441 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split/Capacity16.lean",
+      "source_sha256": "8d5ced5ab84da9ba9347bc4fd1f99952dfa876302c35a712e9e8fec284a003d3",
+      "command": [
+        "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean",
+        "-j1",
+        "-s16384",
+        "-M1000",
+        "--root=/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split",
+        "-o",
+        "/home/jay/research/data/delta3-codex-20261113/extension/capacity-lean/primary-b/Capacity16.olean",
+        "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split/Capacity16.lean"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "peaks": {
+        "VmPeak": 4117868,
+        "VmSize": 4117868,
+        "VmHWM": 3111920,
+        "VmRSS": 3111920,
+        "RssAnon": 232200,
+        "RssFile": 2879720,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "seconds": 1.548,
+      "axiom_reports": {
+        "Delta3.LowSplitCapacity.four_cap_or_seven_gon": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.LowSplitCapacity.hasNGon_real": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.LowSplitCapacity.geometric_capacity16": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "as_bytes": 6442450944,
+      "rss_guard_mib": 4500,
+      "lean_heap_mib": 1000
+    },
+    {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split/Capacity11.lean",
+      "source_sha256": "d34ad0ecbcba8a507e71c43b2d54e9a887e9362f1f9d265ae7fa8efcb9296156",
+      "command": [
+        "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean",
+        "-j1",
+        "-s16384",
+        "-M1000",
+        "--root=/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split",
+        "-o",
+        "/home/jay/research/data/delta3-codex-20261113/extension/capacity-lean/primary-b/Capacity11.olean",
+        "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split/Capacity11.lean"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "peaks": {
+        "VmPeak": 4118016,
+        "VmSize": 4118016,
+        "VmHWM": 3109616,
+        "VmRSS": 3109616,
+        "RssAnon": 230036,
+        "RssFile": 2879580,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "seconds": 1.342,
+      "axiom_reports": {
+        "Delta3.LowSplitCapacity.four_cap_or_six_gon": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.LowSplitCapacity.geometric_capacity11": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "as_bytes": 6442450944,
+      "rss_guard_mib": 4500,
+      "lean_heap_mib": 1000
+    }
+  ],
+  "dependencies": {
+    "ErdosSzekeres.Omission.BaekGeometry": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Omission/BaekGeometry.lean",
+      "source_sha256": "db8ac3c30dc061ae487a11fb36c9173c0a2b87dd2e50c5d47205808a7d007bec",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/BaekGeometry.olean",
+      "olean_sha256": "831caf55873f6c83678d7713b142cec6571a3fa2a4309db94f8e5915caff4c7d"
+    },
+    "ErdosSzekeres.Omission.Baek": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Omission/Baek.lean",
+      "source_sha256": "3433c3c2124d13233007c88d945fac80fdf3efbcbb7aa3de3fa0b3b0a7049a35",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/Baek.olean",
+      "olean_sha256": "0cd1288bff379e3132285f7d3bb949c3914aff9b45f8c5d6b7ea124b95014632"
+    },
+    "ErdosSzekeres.Vendor.ETV.Main.Main": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ETV/Main/Main.lean",
+      "source_sha256": "83dd0a214204f1f12afe7d6ff5ca17ba4b79913607500a68853f174413c4581f",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Main/Main.olean",
+      "olean_sha256": "474b280f55f50ae74a7331c2fc33c47df2c44467fd9ef0079e933f700780b8a2"
+    },
+    "ErdosSzekeres.Vendor.ETV.Main.InductionStep": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ETV/Main/InductionStep.lean",
+      "source_sha256": "7a7ab63ad03756ee8b570aafd0769639532b8fa330aa7d91ffc613fc702d17aa",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Main/InductionStep.olean",
+      "olean_sha256": "4b6eb12579b087b52e0bd2d685d242f7895f57a4e53e0442b87cfda15fe26ba5"
+    },
+    "ErdosSzekeres.Vendor.ETV.Main.Lemmas.Default": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ETV/Main/Lemmas/Default.lean",
+      "source_sha256": "1cf4acb19e7623a609de10d92fd586575d2f4dc4dd7f3104d63b919ca53be054",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Main/Lemmas/Default.olean",
+      "olean_sha256": "c7e041bb442ba34fcebb1cdd6b585a2d31ab61b36932cfa7e7c25b9501bda23d"
+    },
+    "ErdosSzekeres.Vendor.ETV.Main.Lemmas.JoinN2N3JoinN3N2": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ETV/Main/Lemmas/JoinN2N3JoinN3N2.lean",
+      "source_sha256": "863cf1df85992bfb1d716888d025c89b49a73ae7d3fef4e47e67253c96130830",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Main/Lemmas/JoinN2N3JoinN3N2.olean",
+      "olean_sha256": "a8a676213837c399dc9581f782ab2db6a1dec9cf51e064a83929318b4efacfa3"
+    },
+    "ErdosSzekeres.Vendor.ETV.Main.Lemmas.JoinN2N3N2": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ETV/Main/Lemmas/JoinN2N3N2.lean",
+      "source_sha256": "9a3df9880e2e1f98fab45bfd762acc52cd77b0e3e8d25203ef8b4c47eb1ca6cc",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Main/Lemmas/JoinN2N3N2.olean",
+      "olean_sha256": "db3c11ee982422afda46568d841b2b805f13ae8931a127fd98b20e5b05040104"
+    },
+    "ErdosSzekeres.Vendor.ETV.Etv.Default": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ETV/Etv/Default.lean",
+      "source_sha256": "59f42b706f34022d48ae449a0aeca5cfecd726e3eab019d266fed243c14bf5b7",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Etv/Default.olean",
+      "olean_sha256": "39e3d8eb6cdb9ee637fafc79ffdad4fdc7c3c6e1478da87f7a41687ebdb8af16"
+    },
+    "ErdosSzekeres.Vendor.ETV.Etv.AlphaBeta": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ETV/Etv/AlphaBeta.lean",
+      "source_sha256": "7637fb8b444082f612adde30441331401ae58674eb0973b8839ed5f2303393a9",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Etv/AlphaBeta.olean",
+      "olean_sha256": "2edbe534f5c1f4f8b73f8b7035db0fe44347076fdfae73e4036f5a85a18e231a"
+    },
+    "ErdosSzekeres.Vendor.ETV.Etv.Label": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ETV/Etv/Label.lean",
+      "source_sha256": "161af072efebee641a6906ff4b70081f2df707ded36403e2e38a4f716e4dea19",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Etv/Label.olean",
+      "olean_sha256": "b47e4d86b9c67ccf0782b17bae9262f97e3d87db68a1d2963fa9fe6b1d9285e8"
+    },
+    "ErdosSzekeres.Vendor.ETV.Config.Default": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ETV/Config/Default.lean",
+      "source_sha256": "174c720214c60f5e02f13f85d256665a7a5ea635895f06123f592165dcb9e262",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Config/Default.olean",
+      "olean_sha256": "9cefdb5ee620a410f2ba9d87cc7113330dce6c3ba91c58c591f5477412fa2069"
+    },
+    "ErdosSzekeres.Vendor.ETV.Config.Mirror": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ETV/Config/Mirror.lean",
+      "source_sha256": "2a4ae9a6af4a811f4505f561bb99e4ce7bd073e3725e62209ace2195af91b4dc",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Config/Mirror.olean",
+      "olean_sha256": "f9b35c2ef1d22e19c819d26d5e8b2bef9c29048f5ceb4e31fda45171f12b2ec6"
+    },
+    "ErdosSzekeres.Vendor.ETV.Lib.List.Mirror": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ETV/Lib/List/Mirror.lean",
+      "source_sha256": "30c4ec52942bed09c717b5c42802f4c63bfb98ad8a010096861d19063f013598",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Lib/List/Mirror.olean",
+      "olean_sha256": "bb8ac878b05640a5c7390adda5f06ef00286130992e06ddbd86eb6e66dceceaa"
+    },
+    "ErdosSzekeres.Vendor.ETV.Lib.List.Lemmas": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ETV/Lib/List/Lemmas.lean",
+      "source_sha256": "5249704594b78c5198604a721d96c88d398ac7f7c74ea6afcd28c948c0c11d1e",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Lib/List/Lemmas.olean",
+      "olean_sha256": "24b1f524e18d8a3fe4db03501157d2cf4ca123c2d6f47e43237b1d6ede16bc44"
+    },
+    "ErdosSzekeres.Vendor.ETV.Lib.List.Defs": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ETV/Lib/List/Defs.lean",
+      "source_sha256": "46d7507635287ca53d10320037222e0e22fda82ef2fcd2e96c1116fe92847f67",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Lib/List/Defs.olean",
+      "olean_sha256": "116643988136bdafe8d4f6e809bfa64eba78b6b2b8727c30ab65d744396e6ba4"
+    },
+    "ErdosSzekeres.Vendor.ETV.Lib.Core.Rel3": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ETV/Lib/Core/Rel3.lean",
+      "source_sha256": "36c004290658190b44303c229ca2a19357de08395e003326c20165caf5abcb6a",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Lib/Core/Rel3.olean",
+      "olean_sha256": "6f7b1877254d7c0541dd116f3452d6ab8b3ff8ce183d0519cfdc135b885907f6"
+    },
+    "ErdosSzekeres.Vendor.ETV.Config.Defs": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ETV/Config/Defs.lean",
+      "source_sha256": "ce2ccf7c1d28c9778c086e139a99bf8b7839ceff03f4641010856384eec4e527",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Config/Defs.olean",
+      "olean_sha256": "6a7b352517518e080146bab601969b67111a5c9e348db4ad886577df8081c24d"
+    },
+    "ErdosSzekeres.Vendor.ETV.Lib.List.Default": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ETV/Lib/List/Default.lean",
+      "source_sha256": "0f348560139fcb7dcaab929c9d619f662293129a30678f8cb459782deb86f492",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Lib/List/Default.olean",
+      "olean_sha256": "ac5f8cd512308acf0820b16df6a84fd01f86809d8b4987e67ee0a666fed97b2d"
+    },
+    "ErdosSzekeres.Vendor.ETV.Lib.List.Chain3": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ETV/Lib/List/Chain3.lean",
+      "source_sha256": "76ed01b0c2f255cc581da2f3a1ceb6bcd7e9b2aa82bc30e2e99b7f327d3adfff",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Lib/List/Chain3.olean",
+      "olean_sha256": "376158e6ab1b5891d4f678e826a22391718cec6eefb344a1ccce8e80ae18c9d8"
+    },
+    "ErdosSzekeres.Vendor.ETV.Config.Lemmas": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ETV/Config/Lemmas.lean",
+      "source_sha256": "5395e27a82cc2cd13c2a2de7793cc4d25154f254a80e8c2c002144b235681d7c",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Config/Lemmas.olean",
+      "olean_sha256": "7df98887d4e612409282ec4d98eb1dd790b25fcfef57ae558d99d40d081a6fb6"
+    },
+    "ErdosSzekeres.Vendor.ETV.Etv.Defs": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ETV/Etv/Defs.lean",
+      "source_sha256": "c6edabf396c24b38dbcb0e7beb70f87e07c2c905746a206fe6ff8b70f08b7bab",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Etv/Defs.olean",
+      "olean_sha256": "1ac1280d760d62ce5f836a6c2a5078471ebc0d9059e7800bad888e34f9fb8d30"
+    },
+    "ErdosSzekeres.Vendor.ETV.Etv.Mirror": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ETV/Etv/Mirror.lean",
+      "source_sha256": "220e1dc80921fa16e0559456b15a424e1fefb970c5fbc03716c1ee9b0446f2c0",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Etv/Mirror.olean",
+      "olean_sha256": "d54e4a288f3bda96da292b0c305ba53d77ce93b0f6adab72010ffc5b89cabc2c"
+    },
+    "ErdosSzekeres.Vendor.ETV.Main.Lemmas.InterweavedLacedNgon": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ETV/Main/Lemmas/InterweavedLacedNgon.lean",
+      "source_sha256": "71d3d4dae9696804aac0621767140f427e81704954a13db6aa6e394250259627",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Main/Lemmas/InterweavedLacedNgon.olean",
+      "olean_sha256": "3fdcfbb7ad76c75fddd9f8ed14ac5b1bfe7d081b846e7c9f4789f8a10cf9feba"
+    },
+    "ErdosSzekeres.Vendor.ETV.Main.Lemmas.JoinN2N2": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ETV/Main/Lemmas/JoinN2N2.lean",
+      "source_sha256": "b6c6001fc2d9c84b6d71926882f31db63b7fdbc70c91385e624a39e3e9a4a776",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Main/Lemmas/JoinN2N2.olean",
+      "olean_sha256": "5e04674cfb3f1e0aabc32362635617c547dbc6e593513d47472605addd724fff"
+    },
+    "ErdosSzekeres.Vendor.ETV.Main.Defs": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ETV/Main/Defs.lean",
+      "source_sha256": "02821e41a6bcdfd0315e202b4cb23fac3d75fa72e0781543f0aa2a0bbd202ba2",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Main/Defs.olean",
+      "olean_sha256": "410e04bfcf07a9454822f3a0adb7c8e5a4d345944fdec5c803d473060ffe9b3e"
+    },
+    "ErdosSzekeres.Omission.ListGeometry": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Omission/ListGeometry.lean",
+      "source_sha256": "1a03c283176b71939459bb168e9a94cd7166e321f7b681170585ee690b3499bd",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/ListGeometry.olean",
+      "olean_sha256": "c608ced02bda4661830217a696359bde16f378a8ce99c7ab19f38c0d078f925b"
+    },
+    "ErdosSzekeres.ConvexCycleCuts": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/ConvexCycleCuts.lean",
+      "source_sha256": "b4ad0ba9e583d23e8009683b1e1e2129d65157611fe2490f34f44b5bcd061b44",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/ConvexCycleCuts.olean",
+      "olean_sha256": "af2db20a5873828beb38b0472822d24d03f6b2999b511caf168b3c8795322755"
+    },
+    "ErdosSzekeres.Suk.OrientationClique": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Suk/OrientationClique.lean",
+      "source_sha256": "cf63d5219b47009e94a214f205a20d0995eb3beb5572b2fb22dca8444bffee97",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/OrientationClique.olean",
+      "olean_sha256": "20a909aeb9f6ae00737a4f243215dbb8f51cffd483cdac6e97bb9337a6fadb28"
+    },
+    "ErdosSzekeres.Suk.SupportingLines": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Suk/SupportingLines.lean",
+      "source_sha256": "6a8e1267768587a5e47679e1df3cd4988e89b42a35acbd5c7a56b59ebc549d82",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/SupportingLines.olean",
+      "olean_sha256": "95bbffd86640925960a46a9a9925ff894d16aed2fa2d4457297e8442e35d42d0"
+    },
+    "ErdosSzekeres.Basic": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Basic.lean",
+      "source_sha256": "13667aa2d3dc83efd803c807e3cc1b9f692361b7d4f7853919796c1e3d154dc4",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Basic.olean",
+      "olean_sha256": "48a2a3f9679b1fed6064449c44183e20a66321ff4c535336756af4cceb49c635"
+    },
+    "ErdosSzekeres.Definitions": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Definitions.lean",
+      "source_sha256": "2425500eefd181ad4ebc30dc4cb1542a17bfb3605e5ee0d25bbbf4843406710e",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Definitions.olean",
+      "olean_sha256": "43c755c6f56482de49b57f7f134f8a6407855e00c09ee294d7cacf80aa1f2f3c"
+    },
+    "ErdosSzekeres.Suk.BaseOrder": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Suk/BaseOrder.lean",
+      "source_sha256": "d21becd29e84c3a6f819c1f899783aff0fa62c8a3dc43d2b9011894c5d61da38",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/BaseOrder.olean",
+      "olean_sha256": "e4f5f0461e8f0196146571b4d97991ffbb23a20cba486c2f1e819deb4e519b58"
+    },
+    "ErdosSzekeres.Suk.BaseChart": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Suk/BaseChart.lean",
+      "source_sha256": "08d0e856f0054a3a279333c09cbda40b418a95d22218cbd7529433ab7e95423a",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/BaseChart.olean",
+      "olean_sha256": "dd4342e1cf74ce00c6d16c987f39155ce95bfd78c315112f1e4edc1c36184c43"
+    },
+    "ErdosSzekeres.Suk.TriangleOrder": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Suk/TriangleOrder.lean",
+      "source_sha256": "6447cd4833d4724d7abee06f9685544c136ca82ebd9f44f338a2352231b7a74d",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/TriangleOrder.olean",
+      "olean_sha256": "54433a638d7011bc17e2e7a80cb9b73161d3500456b780292dae0dcbf1dcb712"
+    },
+    "ErdosSzekeres.OrientationGeometry": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/OrientationGeometry.lean",
+      "source_sha256": "c7db9bbbb65eb4cd9a60747d30875422c4ad8bc394a530fb23fc9583c9068413",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/OrientationGeometry.olean",
+      "olean_sha256": "c70441db6860bef283b5939a4a98fd7e227c7da4ce3844371a70886896ea2db3"
+    },
+    "ErdosSzekeres.Orientation": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Orientation.lean",
+      "source_sha256": "f67955ac709160312625e2764617da21d3a659af8a663dd153364f0a3a638623",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Orientation.olean",
+      "olean_sha256": "8ba26b04f4fc2b4bd72793b21e71f4caf7a7bc09a6705d1df8d039cc34f5ddc2"
+    },
+    "ErdosSzekeres.Suk.FourPoint": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Suk/FourPoint.lean",
+      "source_sha256": "f3783fe9766f4d8fbe03143f5b5552e261d664dc371c1f1d467d6a9233ee9590",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/FourPoint.olean",
+      "olean_sha256": "b9539d220abe18c60acfb845ad35f9cdfc3adac34c15115b657a2acaa10097d9"
+    },
+    "ErdosSzekeres.Omission.PlanarChains": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Omission/PlanarChains.lean",
+      "source_sha256": "21161d053dc05626d4050c03188f0c93d9485b07adfbafb5ce9e91f449176eb8",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/PlanarChains.olean",
+      "olean_sha256": "2833b9ee0d6ca5fef823ce0c7d0ef60d51b0edc711c7aec6917407785469850f"
+    },
+    "ErdosSzekeres.Omission.Realization": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Omission/Realization.lean",
+      "source_sha256": "ae4970e0808ed668b47121a2a727f13d04465647890c853b94b90a9368a53a5b",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/Realization.olean",
+      "olean_sha256": "700b0e6bb0c69c702c317f1e74cea8052dfac72c9a57bcdd02be0d4054aa5282"
+    },
+    "ErdosSzekeres.Suk.HorizontalCounting": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Suk/HorizontalCounting.lean",
+      "source_sha256": "15494d74e29fceb438f5cb0c5acf8129adc2a0dd306900a0e2c358638f23e021",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/HorizontalCounting.olean",
+      "olean_sha256": "824de151de00470f06389dd0a6f5830a788daf3cc64d0b60eb7eb232746e49fc"
+    },
+    "ErdosSzekeres.Suk.MonochromaticCounting": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Suk/MonochromaticCounting.lean",
+      "source_sha256": "ae3a3dc69f414b1fbc18b24ec7e4a889ae24e506d1239ba91ada4fe1fb902faf",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/MonochromaticCounting.olean",
+      "olean_sha256": "208bdfdff070732d508e6ba448d8a2b29735bb63afca951595d60b620f623772"
+    },
+    "ErdosSzekeres.Suk.TransitiveColoring": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Suk/TransitiveColoring.lean",
+      "source_sha256": "5e00c9a2a7cb602b4936a7caa3ad352d36b588a2b4336f0d82c37a7570191f86",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/TransitiveColoring.olean",
+      "olean_sha256": "5af68b638d60db8b4f491dd8d2c5eb9a3b202e5a297f4ccb16ec387f5611418e"
+    },
+    "ErdosSzekeres.Vendor.ETV.Main.CapCup": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ETV/Main/CapCup.lean",
+      "source_sha256": "fb8fbefac2601bde686bb6bcf0496bee8ec41189108d1f372e9abc571d16274e",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ETV/Main/CapCup.olean",
+      "olean_sha256": "2e50d1c792bf530d620df149e2d5c43c66b7d37f70ceb5050e7dd5fb68029881"
+    },
+    "ErdosSzekeres.Suk.ExtractionCounting": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Suk/ExtractionCounting.lean",
+      "source_sha256": "7062d757dbd68c4e9e1a2dc17e6debaae57a0d6b5a70dc2a11c41c4c274c932d",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/ExtractionCounting.olean",
+      "olean_sha256": "19fd3b4c2f93386b3729a8c4701799190d1cc8488dcba832c1cb303459bf29c7"
+    },
+    "ErdosSzekeres.Suk.CupsCaps": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Suk/CupsCaps.lean",
+      "source_sha256": "8b56854f95a32b4983c71f5681fd80d05b5b1e809927d0f53b30030e6c4d30e3",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Suk/CupsCaps.olean",
+      "olean_sha256": "ec1734e3fcdb900d83bd00688ae902d1557a115656704a0847b24fc6c82f4005"
+    },
+    "ErdosSzekeres.Vendor.ErdosSzekeresConvex.ConvexPolygon": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ErdosSzekeresConvex/ConvexPolygon.lean",
+      "source_sha256": "b86944ef6afadbecdd78115b93767da4d4472b8bb7fdf3ff86de21f95d47c489",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ErdosSzekeresConvex/ConvexPolygon.olean",
+      "olean_sha256": "f70ad102fd2428293068679de7b159057dd6b34d3e0f191e2201f4a65f72e3a8"
+    },
+    "ErdosSzekeres.Vendor.ErdosSzekeresConvex.CupCap": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ErdosSzekeresConvex/CupCap.lean",
+      "source_sha256": "4d0916fe4595997919236b6643d50fbee1af248f48726b2694b55421c614c24b",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ErdosSzekeresConvex/CupCap.olean",
+      "olean_sha256": "07782e5789b0ffb9219960c39455c62ee780e49ffbe8b2c324378b44044d8fa3"
+    },
+    "ErdosSzekeres.Vendor.ErdosSzekeresConvex.Sorting": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ErdosSzekeresConvex/Sorting.lean",
+      "source_sha256": "97aa793ce5bf0e23fd4668b1ce6b1d89e0e6c13e4422421bacee8d08f053f27f",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ErdosSzekeresConvex/Sorting.olean",
+      "olean_sha256": "b76e2f343e60367ec2f8b28ad6a44cd7ce65b293721add54e5a18e4e7b1dc501"
+    },
+    "ErdosSzekeres.Vendor.ErdosSzekeresConvex.Orientation": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Vendor/ErdosSzekeresConvex/Orientation.lean",
+      "source_sha256": "05749c7fe6aa0a7f1a6a72509702f7fba064fa596a8eb248cba8a9e608e8a878",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Vendor/ErdosSzekeresConvex/Orientation.olean",
+      "olean_sha256": "d8a721e5d9b8af40ad5ef1f8707092a3425d95c90dd1c090bba39636b9f4207b"
+    },
+    "ErdosSzekeres.Omission.Domains": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Omission/Domains.lean",
+      "source_sha256": "3029861c6d0820c2b2080d0560e8072db61e67caaf10f004181c9b351a464ee7",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/Domains.olean",
+      "olean_sha256": "e0fe42659feaedbe13b013a3c34819aa2552b7245d9a67cb4c846025d50537c0"
+    },
+    "ErdosSzekeres.Omission.BalancedCatalog": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Omission/BalancedCatalog.lean",
+      "source_sha256": "bde960bf4f3c53ba94f76b1f1b199b2de5472e99535083d52443d67377a1024d",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/BalancedCatalog.olean",
+      "olean_sha256": "ae0fd1d9edd687adaadc76f71caecad3dcd60533292b7c58ed2d3f5c5b5b5ce4"
+    },
+    "ErdosSzekeres.Omission.BalancedCatalogData": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Omission/BalancedCatalogData.lean",
+      "source_sha256": "f32737e1bacaef8261a53a9b69333d463dc1e1e770cddbd6041910924a6f42c5",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/BalancedCatalogData.olean",
+      "olean_sha256": "3fa369fd8dbb1f9a35f979339242b363b72371134079fc10393ff039562d334d"
+    },
+    "ErdosSzekeres.Omission.Ferrers": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Omission/Ferrers.lean",
+      "source_sha256": "f5fe8c9f51ecdf9d14847d1d59f0dd0f41688e58a72a7834d2b7b5eeb5b3b88c",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/Ferrers.olean",
+      "olean_sha256": "b172c95e7d0f7ad696ada5537692dd011547c0c7856d9395a274faba10a6d695"
+    },
+    "ErdosSzekeres.Omission.BalancedStates": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Omission/BalancedStates.lean",
+      "source_sha256": "ff096862d29a79e289e2e0653083a69ba4f546da90799ea1480ac762c0724627",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/BalancedStates.olean",
+      "olean_sha256": "c0aac961e8e475a3cc4b4b0638ef44cba280992f112d0a2ef6bb28d413409793"
+    },
+    "ErdosSzekeres.Omission.ActualRanks": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Omission/ActualRanks.lean",
+      "source_sha256": "3788f5149b3a08d549be7bbc78624f56d2820fc396c286b2131cfc37638ded28",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/ActualRanks.olean",
+      "olean_sha256": "7e51101c3b413867c6e1310ba6d7fd1034296f4219b5ae669458da285751a936"
+    },
+    "ErdosSzekeres.Omission.StateInterface": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Omission/StateInterface.lean",
+      "source_sha256": "47e003be2ce3740b26c7242563c7e0fb5f47f72f9cbbe34021cc7b1cb72616dc",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/StateInterface.olean",
+      "olean_sha256": "5cad16ff6deb5c3fc9aedb3a8266fe8a34d1abbbdea2e6eee89bc6bb4de63d57"
+    },
+    "ErdosSzekeres.Omission.BoundaryGeometry": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/ErdosSzekeres/Omission/BoundaryGeometry.lean",
+      "source_sha256": "f55a711e7aa937107971ca9ab28776b61396c788b5189c1002321e0a0366a43a",
+      "olean": "/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean/ErdosSzekeres/Omission/BoundaryGeometry.olean",
+      "olean_sha256": "e36606aa0e87aee760a174524842e6a1cc2960c7f274496021a9156af9c6f97c"
+    }
+  },
+  "lean_sha256": "8fadc3ed92cc9decb94c96ee9c0876e91e03a3a5e69138f32114f02789e2766c",
+  "driver_sha256": "e86072e765640bd1c8ae9dc1532314569a413ee183398dbdcda75d71100e2ae1",
+  "lean_toolchain": "leanprover/lean4:v4.24.0"
+}

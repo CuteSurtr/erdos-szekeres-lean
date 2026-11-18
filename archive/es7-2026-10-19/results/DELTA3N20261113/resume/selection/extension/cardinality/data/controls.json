@@ -1,0 +1,45 @@
+{
+  "label": "COMPUTED exact negative controls",
+  "status": "PASS",
+  "controls": [
+    {
+      "name": "eleven_cup_has_seven_gons",
+      "status": "EXPECTED_REJECTION",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "duplicate_point",
+      "status": "EXPECTED_REJECTION",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "family_lower_endpoint",
+      "status": "EXPECTED_REJECTION",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "family_upper_endpoint",
+      "status": "EXPECTED_REJECTION",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "selected_triple_misses_a_target",
+      "status": "EXPECTED_REJECTION",
+      "exception": "AssertionError"
+    },
+    {
+      "name": "ordinary_delta_triple_is_not_terminal_safe",
+      "status": "EXPECTED_REJECTION",
+      "exception": "StopIteration"
+    },
+    {
+      "name": "valid_boundary_set_admits_a_pair",
+      "status": "EXPECTED_REJECTION",
+      "exception": "StopIteration"
+    }
+  ],
+  "script_sha256": "9f78e4349b3181190edfcf8eb50f81ca13e94b44b05610f0a685396e1fdf490c",
+  "checker_sha256": "f52d750e01beee92986416a0877473f30aa4376882bf1a71b349efb9844ce59c",
+  "boundary_control_source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/boundary/audit/data/n7-root.json",
+  "boundary_control_sha256": "d4e30ffca8a1cd3dcc85e02d2184b0323343e2119a2891870eb3c6fd9a60fea5"
+}

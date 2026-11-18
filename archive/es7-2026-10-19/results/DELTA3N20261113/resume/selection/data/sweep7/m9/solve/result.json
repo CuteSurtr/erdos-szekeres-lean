@@ -1,0 +1,77 @@
+{
+  "cnf": "/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep7/m9/rooted.cnf",
+  "commands": [
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "18",
+      "/usr/bin/cadical",
+      "-t",
+      "15",
+      "--lrat=true",
+      "--binary=false",
+      "/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep7/m9/rooted.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep7/m9/solve/proof.lrat"
+    ],
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "60",
+      "/home/jay/.local/bin/cake_lpr",
+      "--CML_HEAP_SIZE=600",
+      "--CML_STACK_SIZE=32",
+      "/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep7/m9/rooted.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep7/m9/solve/proof.lrat"
+    ],
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "180",
+      "/usr/bin/zstd",
+      "-q",
+      "-T1",
+      "-3",
+      "-k",
+      "/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep7/m9/solve/proof.lrat"
+    ]
+  ],
+  "compressed_bytes": 1018,
+  "compressed_roundtrip_verified": true,
+  "hashes": {
+    "cadical": "4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70",
+    "cadical.log": "cafc374c4da538ff62305d6bc1604f2f7860ae8de72c966744efaadb80da9ddc",
+    "cake.log": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+    "input.cnf": "8a4e56da667532f928ed7a33ef882605cb20051f385ab7e766b31d88f4107381",
+    "proof.lrat": "c493bee8641f8b700da0bf9d69c25f38266eafc869353d9d7a76200778436aa2",
+    "proof.lrat.zst": "58531c1d6d667093e1bb27834d751ab9846a0cd820db80758c72b4efbcf9af67",
+    "run_cnf.py": "e3c8d9413f99b3092a4ea760f08265bc30bb93204074a3fa566bc2f0c3b3f4b8"
+  },
+  "label": "CERTIFIED",
+  "limits": {
+    "as_mib": 900,
+    "cake_seconds": 60,
+    "cnf": "/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep7/m9/rooted.cnf",
+    "heap": 600,
+    "out": "/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep7/m9/solve",
+    "seconds": 15,
+    "sha256": "8a4e56da667532f928ed7a33ef882605cb20051f385ab7e766b31d88f4107381"
+  },
+  "proof_bytes": 3121,
+  "runs": {
+    "cadical": {
+      "exit": 20,
+      "seconds": 0.003
+    },
+    "cake": {
+      "exit": 0,
+      "seconds": 0.007
+    },
+    "compress": {
+      "exit": 0,
+      "seconds": 0.003
+    }
+  },
+  "seconds": 0.016,
+  "status": "UNSAT_CERTIFIED"
+}

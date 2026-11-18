@@ -1,0 +1,5 @@
+9646633ed38cbcc8740ae4aff903b832b8ab478e50cc2bc4f04523bae988167f  run/om_s56_N26.cnf
+642b46600f29c87019f8d054623c94cc09afa52ce643b51265637f7a569bdef6  run/om_s56_N26.lrat
+lrat_bytes=321528931
+s VERIFIED UNSAT
+cake_wall=9

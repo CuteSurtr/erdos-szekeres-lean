@@ -1,0 +1,274 @@
+{
+  "status": "PASS",
+  "label": "COMPUTED",
+  "cases": {
+    "7": {
+      "formula": {
+        "m": 7,
+        "n": 5,
+        "variables": 204,
+        "clauses": 1143,
+        "phases": {
+          "signotope": 280,
+          "no5cap": 21,
+          "convex4_equivalence": 280,
+          "no_ngon": 21,
+          "terminal_fourcap_equivalence": 175,
+          "terminal_bad_triple_equivalence": 203,
+          "bad_triple_containment": 35,
+          "target_containment": 29,
+          "forall_terminal_delta": 99
+        },
+        "literals": 3325,
+        "hashes": {
+          "/home/jay/research/data/delta3-codex-20261113/extension/n5m7-terminal.cnf": "1d0fb8ff80d4754a37ea2eb889737c3c460fffa113314ab8d9b1fe8ca2d452cb",
+          "/home/jay/research/data/delta3-codex-20261113/extension/n5m7-terminal.cnf.map": "df36d396bc25f264d72183c5f3546ade464d763d2e493a69ef8a3b449d25da65"
+        },
+        "canonical_failed_clauses": {},
+        "first_failures": {},
+        "map_and_all_rows_match": true,
+        "fixed_signs": false
+      },
+      "real_control": {
+        "m": 7,
+        "n": 5,
+        "minimum_absolute_determinant": 1,
+        "four_caps": 1,
+        "bad_triples": 3,
+        "five_caps": 0,
+        "targets": 19,
+        "n_gons": 0,
+        "terminal_deltas": 44,
+        "terminal_deltas_by_size": {
+          "3": 14,
+          "4": 24,
+          "5": 6
+        },
+        "first_terminal_delta": [
+          0,
+          2,
+          3
+        ],
+        "every_subset_checked": 128
+      },
+      "canonical_rows": {
+        "m": 7,
+        "n": 5,
+        "variables": 204,
+        "clauses": 1143,
+        "phases": {
+          "signotope": 280,
+          "no5cap": 21,
+          "convex4_equivalence": 280,
+          "no_ngon": 21,
+          "terminal_fourcap_equivalence": 175,
+          "terminal_bad_triple_equivalence": 203,
+          "bad_triple_containment": 35,
+          "target_containment": 29,
+          "forall_terminal_delta": 99
+        },
+        "literals": 3325,
+        "hashes": {
+          "/home/jay/research/data/delta3-codex-20261113/extension/n5m7-terminal.cnf": "1d0fb8ff80d4754a37ea2eb889737c3c460fffa113314ab8d9b1fe8ca2d452cb",
+          "/home/jay/research/data/delta3-codex-20261113/extension/n5m7-terminal.cnf.map": "df36d396bc25f264d72183c5f3546ade464d763d2e493a69ef8a3b449d25da65"
+        },
+        "canonical_failed_clauses": {
+          "forall_terminal_delta": 38
+        },
+        "first_failures": {
+          "forall_terminal_delta": {
+            "clause": 1058,
+            "row": [
+              111,
+              65
+            ]
+          }
+        },
+        "map_and_all_rows_match": true,
+        "fixed_signs": false
+      },
+      "four_subset_triangle_checks": 35,
+      "withdrawn_m7_shortcut_counterexample": {
+        "P": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            -3
+          ],
+          [
+            3,
+            -6
+          ],
+          [
+            10,
+            500
+          ],
+          [
+            11,
+            600
+          ],
+          [
+            12,
+            699
+          ]
+        ],
+        "A": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "no_fourcap": true,
+        "hits_all_targets": true,
+        "blue_size": 3,
+        "terminal_safe": false,
+        "unprotected_triple": [
+          0,
+          1,
+          2
+        ],
+        "reason": "No ambient four-cap can end at pair(1,2), which has fewer than two earlier vertices."
+      },
+      "original_cnf_sha256": "1d0fb8ff80d4754a37ea2eb889737c3c460fffa113314ab8d9b1fe8ca2d452cb",
+      "map_sha256": "df36d396bc25f264d72183c5f3546ade464d763d2e493a69ef8a3b449d25da65",
+      "solver_input_byte_identical": true
+    },
+    "8": {
+      "formula": {
+        "m": 8,
+        "n": 5,
+        "variables": 471,
+        "clauses": 2440,
+        "phases": {
+          "signotope": 560,
+          "no5cap": 56,
+          "convex4_equivalence": 560,
+          "no_ngon": 56,
+          "terminal_fourcap_equivalence": 350,
+          "terminal_bad_triple_equivalence": 420,
+          "bad_triple_containment": 126,
+          "target_containment": 93,
+          "forall_terminal_delta": 219
+        },
+        "literals": 7399,
+        "hashes": {
+          "/home/jay/research/data/delta3-codex-20261113/extension/n5m8-terminal.cnf": "8729b5082acd27284bf3c05de69fa079a0613f7fece2ef5d9451d699d3d4b881",
+          "/home/jay/research/data/delta3-codex-20261113/extension/n5m8-terminal.cnf.map": "1020e4054f07f593d4b02caf3795be35d66029d43e3c5fb2fd8d4e66006c6085"
+        },
+        "canonical_failed_clauses": {},
+        "first_failures": {},
+        "map_and_all_rows_match": true,
+        "fixed_signs": false
+      },
+      "real_control": {
+        "m": 8,
+        "n": 5,
+        "minimum_absolute_determinant": 1,
+        "four_caps": 2,
+        "bad_triples": 4,
+        "five_caps": 0,
+        "targets": 38,
+        "n_gons": 0,
+        "terminal_deltas": 44,
+        "terminal_deltas_by_size": {
+          "4": 16,
+          "5": 24,
+          "6": 4
+        },
+        "first_terminal_delta": [
+          0,
+          2,
+          3,
+          4
+        ],
+        "every_subset_checked": 256
+      },
+      "canonical_rows": {
+        "m": 8,
+        "n": 5,
+        "variables": 471,
+        "clauses": 2440,
+        "phases": {
+          "signotope": 560,
+          "no5cap": 56,
+          "convex4_equivalence": 560,
+          "no_ngon": 56,
+          "terminal_fourcap_equivalence": 350,
+          "terminal_bad_triple_equivalence": 420,
+          "bad_triple_containment": 126,
+          "target_containment": 93,
+          "forall_terminal_delta": 219
+        },
+        "literals": 7399,
+        "hashes": {
+          "/home/jay/research/data/delta3-codex-20261113/extension/n5m8-terminal.cnf": "8729b5082acd27284bf3c05de69fa079a0613f7fece2ef5d9451d699d3d4b881",
+          "/home/jay/research/data/delta3-codex-20261113/extension/n5m8-terminal.cnf.map": "1020e4054f07f593d4b02caf3795be35d66029d43e3c5fb2fd8d4e66006c6085"
+        },
+        "canonical_failed_clauses": {
+          "forall_terminal_delta": 40
+        },
+        "first_failures": {
+          "forall_terminal_delta": {
+            "clause": 2251,
+            "row": [
+              256,
+              111
+            ]
+          }
+        },
+        "map_and_all_rows_match": true,
+        "fixed_signs": false
+      },
+      "four_subset_triangle_checks": 70,
+      "withdrawn_m7_shortcut_counterexample": null,
+      "original_cnf_sha256": "8729b5082acd27284bf3c05de69fa079a0613f7fece2ef5d9451d699d3d4b881",
+      "map_sha256": "1020e4054f07f593d4b02caf3795be35d66029d43e3c5fb2fd8d4e66006c6085",
+      "solver_input_byte_identical": true
+    },
+    "9": {
+      "m": 9,
+      "n": 5,
+      "variables": 210,
+      "clauses": 2268,
+      "literals": 7056,
+      "phases": {
+        "signotope": 1008,
+        "no5cap": 126,
+        "convex4_equivalence": 1008,
+        "convex_larger_equivalence": 0,
+        "no_ngon": 126,
+        "fixed_signs": 0
+      },
+      "pure_geometry_only": true,
+      "map_and_body_byte_identical": true,
+      "rebuilt_sha256": "0a2b952daba8431cf17d331f63d1f1f634896ab6c65eea5700fcc83dcb614844",
+      "original_cnf_sha256": "0a2b952daba8431cf17d331f63d1f1f634896ab6c65eea5700fcc83dcb614844",
+      "map_sha256": "188f367de49e25a29e9bc486b7ee7f5c0cb586a5d0ea8bea0feedb4ae5002e93",
+      "solver_input_byte_identical": true
+    }
+  },
+  "read_only_reused_checker": {
+    "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/audit/check.py",
+    "sha256": "513c0cb75e6f38c15907425754df9411afb123dcfa3d1651cab5c68e2b4a7990"
+  },
+  "source_hashes": {
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/terminal_general.cpp": "7fd10250a1010d0ed18bd6e3bd85ec8c67557b650bc4db43ec06417dd542752d",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/compact/compact_cnf.cpp": "1964e17b777fd7b7a973f12b2911c003a050047f13a621f523a9f98c6e31d553"
+  },
+  "all_inputs_stable": true,
+  "prior_records_written": false,
+  "resource_limits": {
+    "AS_MiB": 300,
+    "CPUs": 1,
+    "wall_seconds": 20,
+    "CPU_seconds": 19
+  },
+  "peak_rss_KiB": 22284
+}

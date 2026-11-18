@@ -1,0 +1,24 @@
+{
+  "started_UTC": "2026-11-13T23:08:26.658083+00:00",
+  "limits": "Limit                     Soft Limit           Hard Limit           Units     \nMax cpu time              720                  720                  seconds   \nMax file size             unlimited            unlimited            bytes     \nMax data size             unlimited            unlimited            bytes     \nMax stack size            8388608              unlimited            bytes     \nMax core file size        0                    unlimited            bytes     \nMax resident set          unlimited            unlimited            bytes     \nMax processes             243364               243364               processes \nMax open files            1024                 524288               files     \nMax locked memory         8388608              8388608              bytes     \nMax address space         3250585600           3250585600           bytes     \nMax file locks            unlimited            unlimited            locks     \nMax pending signals       243364               243364               signals   \nMax msgqueue size         819200               819200               bytes     \nMax nice priority         0                    0                    \nMax realtime priority     0                    0                    \nMax realtime timeout      unlimited            unlimited            us        \n",
+  "AS_MiB": 3100,
+  "heap_MiB": 2800,
+  "stack_MiB": 32,
+  "CPU_count": 1,
+  "affinity": [
+    5
+  ],
+  "cgroup": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/nov13c-vfy-delta6-low16-independent.service",
+  "initial_memory": {
+    "current": 7860224,
+    "peak": 7860224,
+    "anon": 7143424,
+    "file": 0,
+    "swap": 0
+  },
+  "absolute_deadline_KST": "2026-11-14T08:22:30+09:00",
+  "monitor_seconds": 0.1,
+  "cache_release_seconds": 1,
+  "cache_release_progress_bytes": 67108864,
+  "cake_deadline_seconds": 660
+}

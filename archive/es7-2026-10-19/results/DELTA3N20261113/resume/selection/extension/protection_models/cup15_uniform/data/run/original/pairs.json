@@ -1,0 +1,5391 @@
+{
+  "ambient_fourcaps": [
+    [
+      0,
+      3,
+      5,
+      7
+    ],
+    [
+      0,
+      3,
+      6,
+      7
+    ],
+    [
+      0,
+      3,
+      6,
+      9
+    ],
+    [
+      1,
+      3,
+      8,
+      9
+    ],
+    [
+      1,
+      3,
+      8,
+      10
+    ],
+    [
+      1,
+      3,
+      8,
+      11
+    ],
+    [
+      5,
+      6,
+      12,
+      14
+    ],
+    [
+      5,
+      6,
+      13,
+      14
+    ]
+  ],
+  "max_x": 1141865,
+  "pairs": [
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "1975855934904886840/207",
+      "pair": [
+        0,
+        1
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-1975855934904886840/207",
+        "slope": "-1730376125816/207"
+      },
+      "safe": true,
+      "slope_difference": "126808766686402/13455",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "1021336158998497640/107",
+      "pair": [
+        0,
+        2
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-1021336158998497640/107",
+        "slope": "-894445629736/107"
+      },
+      "safe": true,
+      "slope_difference": "196645478673806/20865",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "452793696001743517/12773",
+      "pair": [
+        0,
+        3
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-452793696001743517/12773",
+        "slope": "-1982693645929/63865"
+      },
+      "safe": true,
+      "slope_difference": "546167185242037/498147",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "55596544740098016/1825",
+      "pair": [
+        0,
+        4
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-55596544740098016/1825",
+        "slope": "-243446224992/9125"
+      },
+      "safe": true,
+      "slope_difference": "388626740133538/355875",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "1240553713252519637645/130551",
+      "pair": [
+        0,
+        5
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-1240553713252519637645/130551",
+        "slope": "-1086427654103173/130551"
+      },
+      "safe": true,
+      "slope_difference": "79658182133059711/8485815",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "1239805364891813472920/131161",
+      "pair": [
+        0,
+        6
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-1239805364891813472920/131161",
+        "slope": "-1085772280341208/131161"
+      },
+      "safe": true,
+      "slope_difference": "238973472200959738/25576395",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "1252034000636348407735/131169",
+      "pair": [
+        0,
+        7
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-1252034000636348407735/131169",
+        "slope": "-1096481633675039/131169"
+      },
+      "safe": true,
+      "slope_difference": "80354486017009589/8525985",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "6574365258222706185/565573",
+      "pair": [
+        0,
+        8
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-6574365258222706185/565573",
+        "slope": "-5757567889569/565573"
+      },
+      "safe": true,
+      "slope_difference": "118616979676579309/110286735",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "19736994867890586620500/1131231",
+      "pair": [
+        0,
+        9
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-19736994867890586620500/1131231",
+        "slope": "-17284875942331700/1131231"
+      },
+      "safe": true,
+      "slope_difference": "1201852324949786846/73530015",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "1355255765488949194950/141983",
+      "pair": [
+        0,
+        10
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-1355255765488949194950/141983",
+        "slope": "-1186879154268630/141983"
+      },
+      "safe": true,
+      "slope_difference": "260937515441408384/27686685",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "10842705125610754950030/1135933",
+      "pair": [
+        0,
+        11
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-10842705125610754950030/1135933",
+        "slope": "-9495610361654622/1135933"
+      },
+      "safe": true,
+      "slope_difference": "2087626997713363924/221506935",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [
+        [
+          12,
+          14
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "1423291878569632620/227203",
+      "pair": [
+        0,
+        12
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-1423291878569632620/227203",
+        "slope": "-1246462478988/227203"
+      },
+      "safe": true,
+      "slope_difference": "47443062618987754/44304585",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [
+        [
+          13,
+          14
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "307389341959295800/1141511",
+      "pair": [
+        0,
+        13
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-307389341959295800/1141511",
+        "slope": "-269199372920/1141511"
+      },
+      "safe": true,
+      "slope_difference": "237194265686397878/222594645",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "0",
+      "pair": [
+        0,
+        14
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "0",
+        "slope": "0"
+      },
+      "safe": true,
+      "slope_difference": "207743746498/195",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "9545197584617480",
+      "pair": [
+        1,
+        2
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-9545197584617480",
+        "slope": "-8359304808"
+      },
+      "safe": true,
+      "slope_difference": "1837808184058/195",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [
+        [
+          13,
+          14
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "28443757056740163/4547",
+      "pair": [
+        1,
+        3
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-28443757056740163/4547",
+        "slope": "-252317520113/63658"
+      },
+      "safe": true,
+      "slope_difference": "13273753330991719/12413310",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [
+        [
+          13,
+          14
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "20049538113756828/15917",
+      "pair": [
+        1,
+        4
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-20049538113756828/15917",
+        "slope": "6563137718/15917"
+      },
+      "safe": true,
+      "slope_difference": "3305377401153656/3103815",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "619289434563408399305/65172",
+      "pair": [
+        1,
+        5
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-619289434563408399305/65172",
+        "slope": "-1084697277977357/130344"
+      },
+      "safe": true,
+      "slope_difference": "26510457788791103/2824120",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "618915855978958054200/65477",
+      "pair": [
+        1,
+        6
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-618915855978958054200/65477",
+        "slope": "-542020952107696/65477"
+      },
+      "safe": true,
+      "slope_difference": "119296522950450266/12768015",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "208343024118219991121/21827",
+      "pair": [
+        1,
+        7
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-208343024118219991121/21827",
+        "slope": "-364917085849741/43654"
+      },
+      "safe": true,
+      "slope_difference": "474719983729723/50370",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "13127798981646509100/1130939",
+      "pair": [
+        1,
+        8
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-13127798981646509100/1130939",
+        "slope": "-9784759653322/1130939"
+      },
+      "safe": true,
+      "slope_difference": "236853533053099412/220533105",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          1,
+          9
+        ]
+      ],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "822224937406283417969/47126",
+      "pair": [
+        1,
+        9
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-822224937406283417969/47126",
+        "slope": "-1440262130517157/94252"
+      },
+      "safe": true,
+      "slope_difference": "300431379045775111/18379140",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "10840070268044993686504/1135657",
+      "pair": [
+        1,
+        10
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-10840070268044993686504/1135657",
+        "slope": "-9493302858023224/1135657"
+      },
+      "safe": true,
+      "slope_difference": "2087119697231207866/221453115",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          1,
+          11
+        ]
+      ],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "5420364634837357051382/567863",
+      "pair": [
+        1,
+        11
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-5420364634837357051382/567863",
+        "slope": "-4746939992764403/567863"
+      },
+      "safe": true,
+      "slope_difference": "1043623285706652359/110733285",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [
+        [
+          12,
+          14
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "888130825480798365/141976",
+      "pair": [
+        1,
+        12
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-888130825480798365/141976",
+        "slope": "-1125484067281/283952"
+      },
+      "safe": true,
+      "slope_difference": "59208721698719891/55370640",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [
+        [
+          13,
+          14
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "38340133067570312/142663",
+      "pair": [
+        1,
+        13
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-38340133067570312/142663",
+        "slope": "182647094112/142663"
+      },
+      "safe": true,
+      "slope_difference": "29601729923292334/27819285",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "0",
+      "pair": [
+        1,
+        14
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "0",
+        "slope": "865188062908/570829"
+      },
+      "safe": true,
+      "slope_difference": "118417443397439782/111311655",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [
+        [
+          13,
+          14
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "6839171548115771/1299",
+      "pair": [
+        2,
+        3
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-6839171548115771/1299",
+        "slope": "-193802386457/63651"
+      },
+      "safe": true,
+      "slope_difference": "4420296224567771/4137315",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [
+        [
+          13,
+          14
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "17107494660171264/63661",
+      "pair": [
+        2,
+        4
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-17107494660171264/63661",
+        "slope": "84767684528/63661"
+      },
+      "safe": true,
+      "slope_difference": "1016049611332786/954915",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "1238512086959359892415/130337",
+      "pair": [
+        2,
+        5
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-1238512086959359892415/130337",
+        "slope": "-1084638762843701/130337"
+      },
+      "safe": true,
+      "slope_difference": "238581255441831521/25415715",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "1237764970072307066120/130947",
+      "pair": [
+        2,
+        6
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-1237764970072307066120/130947",
+        "slope": "-1083983389081736/130947"
+      },
+      "safe": true,
+      "slope_difference": "26508909027068014/2837185",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "1249991328326358636877/130955",
+      "pair": [
+        2,
+        7
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-1249991328326358636877/130955",
+        "slope": "-1094692742415567/130955"
+      },
+      "safe": true,
+      "slope_difference": "48134033418736231/5107245",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "6563545575989198235/565466",
+      "pair": [
+        2,
+        8
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-6563545575989198235/565466",
+        "slope": "-4863122259833/565466"
+      },
+      "safe": true,
+      "slope_difference": "118420334197905503/110265870",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          2,
+          9
+        ],
+        [
+          1,
+          2,
+          9
+        ]
+      ],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "19733276881369274411452/1131017",
+      "pair": [
+        2,
+        9
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-19733276881369274411452/1131017",
+        "slope": "-17283087051072228/1131017"
+      },
+      "safe": true,
+      "slope_difference": "3605163683892012926/220548315",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "5420001725831518786784/567825",
+      "pair": [
+        2,
+        10
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-5420001725831518786784/567825",
+        "slope": "-4746622171444784/567825"
+      },
+      "safe": true,
+      "slope_difference": "23190075917487994/2460575",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          2,
+          11
+        ],
+        [
+          1,
+          2,
+          11
+        ]
+      ],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "10840662453290409673018/1135719",
+      "pair": [
+        2,
+        11
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-10840662453290409673018/1135719",
+        "slope": "-9493821470395150/1135719"
+      },
+      "safe": true,
+      "slope_difference": "53518812993744008/5678595",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [
+        [
+          12,
+          14
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "7104660664127734740/1135801",
+      "pair": [
+        2,
+        12
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-7104660664127734740/1135801",
+        "slope": "-4443421135468/1135801"
+      },
+      "safe": true,
+      "slope_difference": "236822022137591158/221481195",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [
+        [
+          13,
+          14
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "306698465787637832/1141297",
+      "pair": [
+        2,
+        13
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-306698465787637832/1141297",
+        "slope": "1519691886552/1141297"
+      },
+      "safe": true,
+      "slope_difference": "236800974729050266/222552915",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "0",
+      "pair": [
+        2,
+        14
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "0",
+        "slope": "1788891259472/1141651"
+      },
+      "safe": true,
+      "slope_difference": "236822022137591158/222621945",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "0",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        3,
+        4
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "30027870958537071",
+        "slope": "55714014197/2"
+      },
+      "safe": false,
+      "witness_t": "1"
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          2,
+          3,
+          5
+        ]
+      ],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "1254597143948670844596493/16672667005",
+      "pair": [
+        3,
+        5
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-584581942640690726647/33343",
+        "slope": "-542222480228622/33343"
+      },
+      "safe": true,
+      "slope_difference": "1066861200244514392/16672667005",
+      "supports": [
+        {
+          "fourcap": [
+            0,
+            3,
+            6,
+            9
+          ],
+          "height_at_max_x": "-8729173575994635055464/500035",
+          "slope": "-8099551830995246/500035",
+          "tail_pair": [
+            6,
+            9
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          3,
+          6
+        ],
+        [
+          1,
+          3,
+          6
+        ],
+        [
+          2,
+          3,
+          6
+        ]
+      ],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "24342887537689733333/1402",
+      "pair": [
+        3,
+        6
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-24342887537689733333/1402",
+        "slope": "-361263195565093/22432"
+      },
+      "safe": true,
+      "slope_difference": "75106430856636271/4374240",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          3,
+          7
+        ],
+        [
+          1,
+          3,
+          7
+        ],
+        [
+          2,
+          3,
+          7
+        ]
+      ],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "316831504879991668942563/4206794455",
+      "pair": [
+        3,
+        7
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-147500412570565773177/8413",
+        "slope": "-547249470014555/33652"
+      },
+      "safe": true,
+      "slope_difference": "1077770522075991033/16827177820",
+      "supports": [
+        {
+          "fourcap": [
+            0,
+            3,
+            6,
+            9
+          ],
+          "height_at_max_x": "-8729173575994635055464/500035",
+          "slope": "-8099551830995246/500035",
+          "tail_pair": [
+            6,
+            9
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          1,
+          3,
+          8
+        ],
+        [
+          2,
+          3,
+          8
+        ]
+      ],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "12392063876720051049/1067281",
+      "pair": [
+        3,
+        8
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-12392063876720051049/1067281",
+        "slope": "-9532442133209/1067281"
+      },
+      "safe": true,
+      "slope_difference": "223579779722107693/208119795",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          3,
+          9
+        ],
+        [
+          1,
+          3,
+          9
+        ],
+        [
+          2,
+          3,
+          9
+        ]
+      ],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "9316537590934670895507/533683",
+      "pair": [
+        3,
+        9
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-9316537590934670895507/533683",
+        "slope": "-17282893248685771/1067366"
+      },
+      "safe": true,
+      "slope_difference": "3591902795218309613/208136370",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          3,
+          10
+        ],
+        [
+          1,
+          3,
+          10
+        ],
+        [
+          2,
+          3,
+          10
+        ]
+      ],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "10235633928268095900071/1071999",
+      "pair": [
+        3,
+        10
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-10235633928268095900071/1071999",
+        "slope": "-9493050540503111/1071999"
+      },
+      "safe": true,
+      "slope_difference": "691281981300072049/69679935",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          3,
+          11
+        ],
+        [
+          1,
+          3,
+          11
+        ],
+        [
+          2,
+          3,
+          11
+        ]
+      ],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "2559064052131243716293/268017",
+      "pair": [
+        3,
+        11
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-2559064052131243716293/268017",
+        "slope": "-9493627668008693/1072068"
+      },
+      "safe": true,
+      "slope_difference": "230441424231368111/23228140",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          1,
+          3,
+          12
+        ],
+        [
+          2,
+          3,
+          12
+        ]
+      ],
+      "cup_support_pairs": [
+        [
+          12,
+          14
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "134136680078332707/21443",
+      "pair": [
+        3,
+        12
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-134136680078332707/21443",
+        "slope": "-4249618749011/1072150"
+      },
+      "safe": true,
+      "slope_difference": "44712226692777569/41813850",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [
+        [
+          13,
+          14
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "144747525228550567/538823",
+      "pair": [
+        3,
+        13
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-144747525228550567/538823",
+        "slope": "1713494273009/1077646"
+      },
+      "safe": true,
+      "slope_difference": "223540086055346953/210140970",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "0",
+      "pair": [
+        3,
+        14
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "0",
+        "slope": "1982693645929/1078000"
+      },
+      "safe": true,
+      "slope_difference": "44712226692777569/42042000",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          4,
+          5
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2,
+          4,
+          5
+        ],
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "1365962135892301133993613/16670166830",
+      "pair": [
+        4,
+        5
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-584717371408804272927/33338",
+        "slope": "-1084723530528229/66676"
+      },
+      "safe": true,
+      "slope_difference": "2354012704243965719/33340333660",
+      "supports": [
+        {
+          "fourcap": [
+            0,
+            3,
+            6,
+            9
+          ],
+          "height_at_max_x": "-8729173575994635055464/500035",
+          "slope": "-8099551830995246/500035",
+          "tail_pair": [
+            6,
+            9
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          4,
+          6
+        ],
+        [
+          1,
+          4,
+          6
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          3,
+          4,
+          6
+        ]
+      ],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "584364647985664305672/33643",
+      "pair": [
+        4,
+        6
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-584364647985664305672/33643",
+        "slope": "-542034078383132/33643"
+      },
+      "safe": true,
+      "slope_difference": "112685768148142954/6560385",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          4,
+          7
+        ],
+        [
+          1,
+          4,
+          7
+        ],
+        [
+          2,
+          4,
+          7
+        ],
+        [
+          3,
+          4,
+          7
+        ]
+      ],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "1378622832666518374888047/16824677645",
+      "pair": [
+        4,
+        7
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-590136942702326845293/33647",
+        "slope": "-1094777510100095/67294"
+      },
+      "safe": true,
+      "slope_difference": "2375831347906919001/33649355290",
+      "supports": [
+        {
+          "fourcap": [
+            0,
+            3,
+            6,
+            9
+          ],
+          "height_at_max_x": "-8729173575994635055464/500035",
+          "slope": "-8099551830995246/500035",
+          "tail_pair": [
+            6,
+            9
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          1,
+          4,
+          8
+        ],
+        [
+          2,
+          4,
+          8
+        ],
+        [
+          3,
+          4,
+          8
+        ]
+      ],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "4131644905984382628/355757",
+      "pair": [
+        4,
+        8
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-4131644905984382628/355757",
+        "slope": "-3270337401398/355757"
+      },
+      "safe": true,
+      "slope_difference": "74544007816161596/69372615",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          4,
+          9
+        ],
+        [
+          1,
+          4,
+          9
+        ],
+        [
+          2,
+          4,
+          9
+        ],
+        [
+          3,
+          4,
+          9
+        ]
+      ],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "4658226323856013332126/266839",
+      "pair": [
+        4,
+        9
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-4658226323856013332126/266839",
+        "slope": "-4320792954689189/266839"
+      },
+      "safe": true,
+      "slope_difference": "897988759736171677/52033605",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          4,
+          10
+        ],
+        [
+          1,
+          4,
+          10
+        ],
+        [
+          2,
+          4,
+          10
+        ],
+        [
+          3,
+          4,
+          10
+        ]
+      ],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "10235540649634750390656/1071989",
+      "pair": [
+        4,
+        10
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-10235540649634750390656/1071989",
+        "slope": "-9493329110574096/1071989"
+      },
+      "safe": true,
+      "slope_difference": "2073898187626593242/209037855",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          4,
+          11
+        ],
+        [
+          1,
+          4,
+          11
+        ],
+        [
+          2,
+          4,
+          11
+        ],
+        [
+          3,
+          4,
+          11
+        ]
+      ],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "5118081452449509700986/536029",
+      "pair": [
+        4,
+        11
+      ],
+      "protected": {
+        "cup": false,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-5118081452449509700986/536029",
+        "slope": "-4746953119039839/536029"
+      },
+      "safe": true,
+      "slope_difference": "79770194684949619/8040435",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          1,
+          4,
+          12
+        ],
+        [
+          2,
+          4,
+          12
+        ],
+        [
+          3,
+          4,
+          12
+        ]
+      ],
+      "cup_support_pairs": [
+        [
+          12,
+          14
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "111806688595132470/17869",
+      "pair": [
+        4,
+        12
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-111806688595132470/17869",
+        "slope": "-377349068333/89345"
+      },
+      "safe": true,
+      "slope_difference": "3726889619837749/3484455",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          3,
+          4,
+          13
+        ]
+      ],
+      "cup_support_pairs": [
+        [
+          13,
+          14
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "24132581022375052/89803",
+      "pair": [
+        4,
+        13
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-24132581022375052/89803",
+        "slope": "358731050506/269409"
+      },
+      "safe": true,
+      "slope_difference": "18632694148477004/17511585",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          3,
+          4,
+          14
+        ]
+      ],
+      "cup_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "0",
+      "pair": [
+        4,
+        14
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "0",
+        "slope": "284020595824/179665"
+      },
+      "safe": true,
+      "slope_difference": "7453779239675498/7006935",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "0",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        5,
+        6
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "6779170493648/61",
+        "slope": "131074752393/122"
+      },
+      "safe": false,
+      "witness_t": "1"
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          5,
+          7
+        ],
+        [
+          1,
+          5,
+          7
+        ],
+        [
+          2,
+          5,
+          7
+        ],
+        [
+          3,
+          5,
+          7
+        ],
+        [
+          4,
+          5,
+          7
+        ]
+      ],
+      "cup_support_pairs": [
+        [
+          5,
+          7
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          5,
+          7
+        ]
+      ],
+      "height_difference": "0",
+      "pair": [
+        5,
+        7
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": true,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-5419571293488926419/309",
+        "slope": "-5026989785933/309"
+      },
+      "safe": true,
+      "slope_difference": "0",
+      "supports": [
+        {
+          "fourcap": [
+            0,
+            3,
+            5,
+            7
+          ],
+          "height_at_max_x": "-5419571293488926419/309",
+          "slope": "-5026989785933/309",
+          "tail_pair": [
+            5,
+            7
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "5634140265/49731058457729",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        5,
+        8
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "-202251189/200119",
+        "slope": "214982503664807/200119"
+      },
+      "safe": false,
+      "witness_t": "49736692597994/49731058457729"
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          5,
+          9
+        ],
+        [
+          1,
+          5,
+          9
+        ],
+        [
+          2,
+          5,
+          9
+        ]
+      ],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [],
+      "height_difference": "8734441978534753856059/500340",
+      "pair": [
+        5,
+        9
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-8734441978534753856059/500340",
+        "slope": "-16198448288228527/1000680"
+      },
+      "safe": true,
+      "slope_difference": "224438828563345427/13008840",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          5,
+          10
+        ],
+        [
+          1,
+          5,
+          10
+        ],
+        [
+          2,
+          5,
+          10
+        ]
+      ],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [],
+      "height_difference": "9595940387807929097387/1005313",
+      "pair": [
+        5,
+        10
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-9595940387807929097387/1005313",
+        "slope": "-8408605580045867/1005313"
+      },
+      "safe": true,
+      "slope_difference": "1848525577132087939/196036035",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          5,
+          11
+        ],
+        [
+          1,
+          5,
+          11
+        ],
+        [
+          2,
+          5,
+          11
+        ]
+      ],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [],
+      "height_difference": "4798299504221121185536/502691",
+      "pair": [
+        5,
+        11
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-4798299504221121185536/502691",
+        "slope": "-8409182707551449/1005382"
+      },
+      "safe": true,
+      "slope_difference": "1848652451314184791/196049490",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "0",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        5,
+        12
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "26388499563605445/502732",
+        "slope": "1080195341708233/1005464"
+      },
+      "safe": false,
+      "witness_t": "1"
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "0",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        5,
+        13
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "56175147463653181/505480",
+        "slope": "1086158454730253/1010960"
+      },
+      "safe": false,
+      "witness_t": "1"
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "0",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        5,
+        14
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "0",
+        "slope": "1086427654103173/1011314"
+      },
+      "safe": false,
+      "witness_t": "1"
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          6,
+          7
+        ],
+        [
+          1,
+          6,
+          7
+        ],
+        [
+          2,
+          6,
+          7
+        ],
+        [
+          3,
+          6,
+          7
+        ],
+        [
+          4,
+          6,
+          7
+        ],
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "cup_support_pairs": [
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      "height_difference": "412992401321404638155/309",
+      "pair": [
+        6,
+        7
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": true,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-1354084053769882086",
+        "slope": "-10709353333831/8"
+      },
+      "safe": true,
+      "slope_difference": "3268974261866315/2472",
+      "supports": [
+        {
+          "fourcap": [
+            0,
+            3,
+            5,
+            7
+          ],
+          "height_at_max_x": "-5419571293488926419/309",
+          "slope": "-5026989785933/309",
+          "tail_pair": [
+            5,
+            7
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          5,
+          6,
+          8
+        ]
+      ],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "501108551775/6212545885004",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        6,
+        8
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "-20558299560/28571",
+        "slope": "30693061273202/28571"
+      },
+      "safe": false,
+      "witness_t": "6713654436779/6212545885004"
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          6,
+          9
+        ],
+        [
+          1,
+          6,
+          9
+        ],
+        [
+          2,
+          6,
+          9
+        ],
+        [
+          3,
+          6,
+          9
+        ],
+        [
+          4,
+          6,
+          9
+        ],
+        [
+          5,
+          6,
+          9
+        ]
+      ],
+      "cup_support_pairs": [
+        [
+          6,
+          9
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          6,
+          9
+        ]
+      ],
+      "height_difference": "0",
+      "pair": [
+        6,
+        9
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": true,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-8729173575994635055464/500035",
+        "slope": "-8099551830995246/500035"
+      },
+      "safe": true,
+      "slope_difference": "0",
+      "supports": [
+        {
+          "fourcap": [
+            0,
+            3,
+            6,
+            9
+          ],
+          "height_at_max_x": "-8729173575994635055464/500035",
+          "slope": "-8099551830995246/500035",
+          "tail_pair": [
+            6,
+            9
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          6,
+          10
+        ],
+        [
+          1,
+          6,
+          10
+        ],
+        [
+          2,
+          6,
+          10
+        ],
+        [
+          5,
+          6,
+          10
+        ]
+      ],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [],
+      "height_difference": "9590152350433043734952/1004703",
+      "pair": [
+        6,
+        10
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-9590152350433043734952/1004703",
+        "slope": "-8409260953807832/1004703"
+      },
+      "safe": true,
+      "slope_difference": "205391850147811926/21768565",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          6,
+          11
+        ],
+        [
+          1,
+          6,
+          11
+        ],
+        [
+          2,
+          6,
+          11
+        ],
+        [
+          5,
+          6,
+          11
+        ]
+      ],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [],
+      "height_difference": "2397702643449697257008/251193",
+      "pair": [
+        6,
+        11
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-2397702643449697257008/251193",
+        "slope": "-4204919040656707/502386"
+      },
+      "safe": true,
+      "slope_difference": "308108920918734031/32655090",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          5,
+          6,
+          12
+        ]
+      ],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "0",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        6,
+        12
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "26372386590314520/502427",
+        "slope": "539769983973134/502427"
+      },
+      "safe": false,
+      "witness_t": "1"
+    },
+    {
+      "cap_triples": [
+        [
+          5,
+          6,
+          13
+        ]
+      ],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "0",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        6,
+        13
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "56141252116525976/505175",
+        "slope": "542751540484144/505175"
+      },
+      "safe": false,
+      "witness_t": "1"
+    },
+    {
+      "cap_triples": [
+        [
+          5,
+          6,
+          14
+        ]
+      ],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "0",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        6,
+        14
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "0",
+        "slope": "135721535042651/126338"
+      },
+      "safe": false,
+      "witness_t": "1"
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "0",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        7,
+        8
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "114884959931082993/999977",
+        "slope": "1084966497895901/999977"
+      },
+      "safe": false,
+      "witness_t": "1"
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          7,
+          9
+        ],
+        [
+          1,
+          7,
+          9
+        ],
+        [
+          2,
+          7,
+          9
+        ]
+      ],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [],
+      "height_difference": "138556309442209361099/7937",
+      "pair": [
+        7,
+        9
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-138556309442209361099/7937",
+        "slope": "-256958639819947/15874"
+      },
+      "safe": true,
+      "slope_difference": "53404658996798917/3095430",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [],
+      "height_difference": "9590012123337814222801/1004695",
+      "pair": [
+        7,
+        10
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-9590012123337814222801/1004695",
+        "slope": "-8398551600474001/1004695"
+      },
+      "safe": true,
+      "slope_difference": "369287333096047661/39183105",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          7,
+          11
+        ],
+        [
+          1,
+          7,
+          11
+        ],
+        [
+          2,
+          7,
+          11
+        ]
+      ],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [],
+      "height_difference": "2397667770257979876391/251191",
+      "pair": [
+        7,
+        11
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-2397667770257979876391/251191",
+        "slope": "-8399128727979583/1004764"
+      },
+      "safe": true,
+      "slope_difference": "1846563539662335157/195928980",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "0",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        7,
+        12
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "57722174341349955/502423",
+        "slope": "1090249321280099/1004846"
+      },
+      "safe": false,
+      "witness_t": "1"
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "0",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        7,
+        13
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "58037884454105743/505171",
+        "slope": "1096212434302119/1010342"
+      },
+      "safe": false,
+      "witness_t": "1"
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "0",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        7,
+        14
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "0",
+        "slope": "1096481633675039/1010696"
+      },
+      "safe": false,
+      "witness_t": "1"
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          8,
+          9
+        ],
+        [
+          1,
+          8,
+          9
+        ],
+        [
+          2,
+          8,
+          9
+        ],
+        [
+          3,
+          8,
+          9
+        ],
+        [
+          4,
+          8,
+          9
+        ],
+        [
+          5,
+          8,
+          9
+        ],
+        [
+          6,
+          8,
+          9
+        ],
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      "cup_support_pairs": [
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          8,
+          11
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          6,
+          9
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          8,
+          11
+        ]
+      ],
+      "height_difference": "56751963621094686146057/26265",
+      "pair": [
+        8,
+        9
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": true,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-185154133271978138808/85",
+        "slope": "-17273360806552562/85"
+      },
+      "safe": true,
+      "slope_difference": "5337041195092937353/26265",
+      "supports": [
+        {
+          "fourcap": [
+            0,
+            3,
+            5,
+            7
+          ],
+          "height_at_max_x": "-5419571293488926419/309",
+          "slope": "-5026989785933/309",
+          "tail_pair": [
+            5,
+            7
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          8,
+          10
+        ],
+        [
+          1,
+          8,
+          10
+        ],
+        [
+          2,
+          8,
+          10
+        ],
+        [
+          3,
+          8,
+          10
+        ],
+        [
+          4,
+          8,
+          10
+        ],
+        [
+          5,
+          8,
+          10
+        ],
+        [
+          6,
+          8,
+          10
+        ],
+        [
+          7,
+          8,
+          10
+        ]
+      ],
+      "cup_support_pairs": [
+        [
+          8,
+          10
+        ],
+        [
+          8,
+          11
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          8,
+          10
+        ],
+        [
+          8,
+          11
+        ]
+      ],
+      "height_difference": "2929141869796213757678/728931",
+      "pair": [
+        8,
+        10
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": true,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-50854079453516476311/2359",
+        "slope": "-4741759049184951/2359"
+      },
+      "safe": true,
+      "slope_difference": "1453344877293133912/728931",
+      "supports": [
+        {
+          "fourcap": [
+            0,
+            3,
+            5,
+            7
+          ],
+          "height_at_max_x": "-5419571293488926419/309",
+          "slope": "-5026989785933/309",
+          "tail_pair": [
+            5,
+            7
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          8,
+          11
+        ],
+        [
+          1,
+          8,
+          11
+        ],
+        [
+          2,
+          8,
+          11
+        ],
+        [
+          3,
+          8,
+          11
+        ],
+        [
+          4,
+          8,
+          11
+        ],
+        [
+          5,
+          8,
+          11
+        ],
+        [
+          6,
+          8,
+          11
+        ],
+        [
+          7,
+          8,
+          11
+        ]
+      ],
+      "cup_support_pairs": [
+        [
+          8,
+          11
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          8,
+          11
+        ]
+      ],
+      "height_difference": "5486490379538929632265/1479183",
+      "pair": [
+        8,
+        11
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": true,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-101715139681134046602/4787",
+        "slope": "-9484095225875484/4787"
+      },
+      "safe": true,
+      "slope_difference": "2906521224690263285/1479183",
+      "supports": [
+        {
+          "fourcap": [
+            0,
+            3,
+            5,
+            7
+          ],
+          "height_at_max_x": "-5419571293488926419/309",
+          "slope": "-5026989785933/309",
+          "tail_pair": [
+            5,
+            7
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "0",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        8,
+        12
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "62154194066160/541",
+        "slope": "586980376022/541"
+      },
+      "safe": false,
+      "witness_t": "1"
+    },
+    {
+      "cap_triples": [
+        [
+          7,
+          8,
+          13
+        ]
+      ],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "0",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        8,
+        13
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "396936662495124/3455",
+        "slope": "11245936406218/10365"
+      },
+      "safe": false,
+      "witness_t": "1"
+    },
+    {
+      "cap_triples": [
+        [
+          7,
+          8,
+          14
+        ]
+      ],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "0",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        8,
+        14
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "0",
+        "slope": "3838378593046/3573"
+      },
+      "safe": false,
+      "witness_t": "1"
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "0",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        9,
+        10
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "2756357117991640340/4633",
+        "slope": "7789842708182660/4633"
+      },
+      "safe": false,
+      "witness_t": "1"
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "0",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        9,
+        11
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "778781752038197026/2351",
+        "slope": "3894632790338539/2351"
+      },
+      "safe": false,
+      "witness_t": "1"
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "0",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        9,
+        12
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "485818508906887755/23",
+        "slope": "2159830453742095/598"
+      },
+      "safe": false,
+      "witness_t": "1"
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "0",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        9,
+        13
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "152899585436344763/257",
+        "slope": "864230337147939/514"
+      },
+      "safe": false,
+      "witness_t": "1"
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "0",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        9,
+        14
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "0",
+        "slope": "8642437971165850/5317"
+      },
+      "safe": false,
+      "witness_t": "1"
+    },
+    {
+      "cap_triples": [
+        [
+          0,
+          10,
+          11
+        ],
+        [
+          1,
+          10,
+          11
+        ],
+        [
+          2,
+          10,
+          11
+        ],
+        [
+          7,
+          10,
+          11
+        ],
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "cup_support_pairs": [],
+      "forced_support_pairs": [],
+      "height_difference": "219540211772427114/23",
+      "pair": [
+        10,
+        11
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "-219540211772427114/23",
+        "slope": "-192375835194/23"
+      },
+      "safe": true,
+      "slope_difference": "42291394032284/4485",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "0",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        10,
+        12
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "55508544313089849060/151",
+        "slope": "9488800921754100/151"
+      },
+      "safe": false,
+      "witness_t": "1"
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "0",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        10,
+        13
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "3359626299451867240/5647",
+        "slope": "9494764034776120/5647"
+      },
+      "safe": false,
+      "witness_t": "1"
+    },
+    {
+      "cap_triples": [
+        [
+          9,
+          10,
+          14
+        ]
+      ],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "0",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        10,
+        14
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "0",
+        "slope": "9495033234149040/6001"
+      },
+      "safe": false,
+      "witness_t": "1"
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "0",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        11,
+        12
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "27756175269276377310/41",
+        "slope": "4744689024629841/41"
+      },
+      "safe": false,
+      "witness_t": "1"
+    },
+    {
+      "cap_triples": [],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "0",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        11,
+        13
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "1679924588672787374/2789",
+        "slope": "4747670581140851/2789"
+      },
+      "safe": false,
+      "witness_t": "1"
+    },
+    {
+      "cap_triples": [
+        [
+          9,
+          11,
+          14
+        ]
+      ],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "0",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        11,
+        14
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "0",
+        "slope": "4747805180827311/2966"
+      },
+      "safe": false,
+      "witness_t": "1"
+    },
+    {
+      "cap_triples": [
+        [
+          7,
+          12,
+          13
+        ],
+        [
+          8,
+          12,
+          13
+        ],
+        [
+          9,
+          12,
+          13
+        ],
+        [
+          10,
+          12,
+          13
+        ],
+        [
+          11,
+          12,
+          13
+        ]
+      ],
+      "cup_support_pairs": [],
+      "exposure_interval": [
+        "0",
+        null
+      ],
+      "forced_support_pairs": [],
+      "pair": [
+        12,
+        13
+      ],
+      "protected": {
+        "cup": false,
+        "forced": false,
+        "terminal": false,
+        "uniform": false
+      },
+      "query_line": {
+        "height_at_max_x": "26309260676115/229",
+        "slope": "1490778255505/1374"
+      },
+      "safe": false,
+      "witness_t": "1"
+    },
+    {
+      "cap_triples": [
+        [
+          5,
+          12,
+          14
+        ],
+        [
+          6,
+          12,
+          14
+        ],
+        [
+          7,
+          12,
+          14
+        ],
+        [
+          8,
+          12,
+          14
+        ],
+        [
+          9,
+          12,
+          14
+        ],
+        [
+          10,
+          12,
+          14
+        ],
+        [
+          11,
+          12,
+          14
+        ]
+      ],
+      "cup_support_pairs": [
+        [
+          12,
+          14
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ]
+      ],
+      "height_difference": "0",
+      "pair": [
+        12,
+        14
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": true,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "0",
+        "slope": "207743746498/195"
+      },
+      "safe": true,
+      "slope_difference": "0",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    },
+    {
+      "cap_triples": [
+        [
+          5,
+          13,
+          14
+        ],
+        [
+          6,
+          13,
+          14
+        ],
+        [
+          7,
+          13,
+          14
+        ],
+        [
+          8,
+          13,
+          14
+        ],
+        [
+          9,
+          13,
+          14
+        ],
+        [
+          10,
+          13,
+          14
+        ],
+        [
+          11,
+          13,
+          14
+        ],
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      "cup_support_pairs": [
+        [
+          13,
+          14
+        ]
+      ],
+      "forced_support_pairs": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "height_difference": "0",
+      "pair": [
+        13,
+        14
+      ],
+      "protected": {
+        "cup": true,
+        "forced": true,
+        "terminal": true,
+        "uniform": true
+      },
+      "query_line": {
+        "height_at_max_x": "0",
+        "slope": "134599686460/177"
+      },
+      "safe": true,
+      "slope_difference": "1169300474494/3835",
+      "supports": [
+        {
+          "fourcap": [
+            5,
+            6,
+            12,
+            14
+          ],
+          "height_at_max_x": "0",
+          "slope": "207743746498/195",
+          "tail_pair": [
+            12,
+            14
+          ],
+          "weight": "1"
+        }
+      ]
+    }
+  ]
+}

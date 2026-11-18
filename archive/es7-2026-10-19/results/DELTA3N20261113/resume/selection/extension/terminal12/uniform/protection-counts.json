@@ -1,0 +1,69 @@
+{
+  "m": 12,
+  "n": 6,
+  "caps4": 14,
+  "caps5": 0,
+  "targets": 134,
+  "ngons": 0,
+  "ambient_terminal_pairs": 4,
+  "covered_pairs": {
+    "terminal": 4,
+    "cup": 39,
+    "forced": 53
+  },
+  "bad_triples": {
+    "terminal": 44,
+    "cup": 18,
+    "forced": 2
+  },
+  "all_memberships": 4096,
+  "families": {
+    "weak": {
+      "count": 945,
+      "minimum": 4,
+      "size_counts": {
+        "4": 21,
+        "5": 138,
+        "6": 343,
+        "7": 306,
+        "8": 116,
+        "9": 20,
+        "10": 1
+      },
+      "one_minimum": 77
+    },
+    "terminal": {
+      "count": 0,
+      "minimum": null,
+      "size_counts": {},
+      "one_minimum": null
+    },
+    "cup": {
+      "count": 298,
+      "minimum": 4,
+      "size_counts": {
+        "4": 11,
+        "5": 61,
+        "6": 116,
+        "7": 82,
+        "8": 25,
+        "9": 3
+      },
+      "one_minimum": 643
+    },
+    "forced": {
+      "count": 848,
+      "minimum": 4,
+      "size_counts": {
+        "4": 21,
+        "5": 133,
+        "6": 313,
+        "7": 264,
+        "8": 99,
+        "9": 17,
+        "10": 1
+      },
+      "one_minimum": 77
+    }
+  }
+}

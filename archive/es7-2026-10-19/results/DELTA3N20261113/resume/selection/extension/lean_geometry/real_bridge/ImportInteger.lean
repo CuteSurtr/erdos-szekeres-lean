@@ -1,0 +1,6 @@
+import ErdosSzekeres.IntegerCertificates
+
+#check ErdosSzekeres.integerToReal
+#check ErdosSzekeres.integerToReal_injective
+#check ErdosSzekeres.IntegerInterior.not_convexPosition
+#print axioms ErdosSzekeres.orient_integerToReal

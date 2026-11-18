@@ -1,0 +1,14 @@
+{
+  "unexpected_control_failures": [
+    {
+      "stage": "source provenance hash after n6-old byte-for-byte regeneration",
+      "exception": "FileNotFoundError",
+      "cause": "The new audit source-hash lookup used HERE.parents[3], resolving DELTA3N20261113/compact instead of resume/compact.",
+      "fix": "Use HERE.parents[2].",
+      "effect": "The run stopped before its updated n6-old control receipt was written; no mathematical or SAT conclusion was drawn from this failed run. All affected clause controls were rerun after the fix."
+    }
+  ],
+  "compile_warning": "Renaming the included legacy main to archived_compact_main produces control-reaches-end-of-non-void warning. The renamed function is never invoked by complement.cpp.",
+  "resource_failures": [],
+  "expected_rejections": "Canonical cap/cup and raised-middle-parabola controls intentionally violate named formula phases. Their false-clause counts are evidence of the expected rejection, not failed audit runs."
+}

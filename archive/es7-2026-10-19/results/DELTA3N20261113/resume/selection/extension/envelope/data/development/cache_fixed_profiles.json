@@ -1,0 +1,229 @@
+{
+  "cases": [
+    {
+      "A": [
+        6,
+        17,
+        18,
+        19,
+        20,
+        21,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "ambient_pairs": 315,
+      "clauses": 245724,
+      "exposed_pairs": 136,
+      "exposed_triples": 715,
+      "files": {
+        "certificates.json": {
+          "bytes": 40663,
+          "sha256": "b31c945bfdee838e92f15a424310109d57e4d672122365355c907e2d0fef73fb"
+        },
+        "envelope.cnf": {
+          "bytes": 5211335,
+          "sha256": "ea62ad3f6784681fe9774ce3aee83b8f7b4934d04322c489a4cb5203d072b630"
+        },
+        "envelope.json": {
+          "bytes": 188319,
+          "sha256": "98561ed9ba1ecda9285d6a2422bbe363081e85449728ec21a66ea6cdfed60c1e"
+        },
+        "finder.log": {
+          "bytes": 163,
+          "sha256": "4479779481804297621dd3e3ecc0faad8700d6b7603d12b949c0f701cf630f10"
+        },
+        "geometry.json": {
+          "bytes": 5196502,
+          "sha256": "3c1414fe29207f050038d018fadd4bdc6699bb8e6c11148000d23afdadcbc8be"
+        },
+        "geometry.stderr": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "input.json": {
+          "bytes": 2449,
+          "sha256": "9bf49a94da7287330075b6b137daa30d92dc5bf3468465998a074101ea03dba8"
+        },
+        "model.json": {
+          "bytes": 516,
+          "sha256": "e7fc6889a16574ace5980cf588489984a9211bd6748e09e26df2cf63068734d2"
+        },
+        "points.txt": {
+          "bytes": 931,
+          "sha256": "b18d746030514195918dd50f6d2366c3adca329cfb4d5a5129d71db4e7a1ae51"
+        },
+        "positive_replay.json": {
+          "bytes": 274,
+          "sha256": "9e407d971b5b839f1999d00c2f81e91bd19483fca475099b48c589c3357435af"
+        },
+        "terminalsafe.cnf": {
+          "bytes": 5218363,
+          "sha256": "c27f5144d0a7bf5ac651f02aab034f83b9fc4325a0d388e99b113b5731eb1912"
+        }
+      },
+      "fourcaps": 9721,
+      "geometry": {
+        "chains": 54189,
+        "maxcap": 4,
+        "maxcup": 7,
+        "maxgon": 7
+      },
+      "label": "COMPUTED",
+      "literals": 1688045,
+      "m": 42,
+      "n": 8,
+      "name": "n8-i000",
+      "outcome": "SAT_EXACT_MODEL_CHECKED",
+      "replay": {
+        "cap_triples_checked": 196,
+        "complement": {
+          "maxcap": 4,
+          "maxcup": 6,
+          "maxgon": 6
+        },
+        "full": {
+          "maxcap": 4,
+          "maxcup": 7,
+          "maxgon": 7
+        },
+        "selected": {
+          "maxcap": 3,
+          "maxcup": 6,
+          "maxgon": 6
+        },
+        "two_line_certificates": 0
+      },
+      "seconds": 0.7669177100033266,
+      "solver_exit": 10,
+      "targets": 235288,
+      "terminal_rank3_triples": 1277,
+      "variables": 42
+    },
+    {
+      "A": [
+        6,
+        17,
+        18,
+        19,
+        20,
+        21,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "ambient_pairs": 315,
+      "baseline_exposed_triples": 715,
+      "clauses": 245724,
+      "exposed_pairs": 136,
+      "exposed_triples": 715,
+      "exposure_family_changed": false,
+      "files": {
+        "certificates.json": {
+          "bytes": 40663,
+          "sha256": "b31c945bfdee838e92f15a424310109d57e4d672122365355c907e2d0fef73fb"
+        },
+        "envelope.cnf": {
+          "bytes": 5211335,
+          "sha256": "ea62ad3f6784681fe9774ce3aee83b8f7b4934d04322c489a4cb5203d072b630"
+        },
+        "envelope.json": {
+          "bytes": 188890,
+          "sha256": "12aba89d721a2d51c8275b49ed61b620c8bbc6a51b8783ad0ebcc2ba50fd9ace"
+        },
+        "finder.log": {
+          "bytes": 163,
+          "sha256": "4479779481804297621dd3e3ecc0faad8700d6b7603d12b949c0f701cf630f10"
+        },
+        "geometry.json": {
+          "bytes": 5196502,
+          "sha256": "3c1414fe29207f050038d018fadd4bdc6699bb8e6c11148000d23afdadcbc8be"
+        },
+        "geometry.stderr": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "input.json": {
+          "bytes": 2893,
+          "sha256": "10e58c1103727a8efee5b53d1892ebc2dae83b967ce0e9533575dcec6188674b"
+        },
+        "model.json": {
+          "bytes": 516,
+          "sha256": "e7fc6889a16574ace5980cf588489984a9211bd6748e09e26df2cf63068734d2"
+        },
+        "points.txt": {
+          "bytes": 1177,
+          "sha256": "9b046a78c1e5e2a70b5ec951c83bc8f9472aae9bf9b75cbcb4f39aadd5fa24d8"
+        },
+        "positive_replay.json": {
+          "bytes": 274,
+          "sha256": "9e407d971b5b839f1999d00c2f81e91bd19483fca475099b48c589c3357435af"
+        },
+        "terminalsafe.cnf": {
+          "bytes": 5218363,
+          "sha256": "c27f5144d0a7bf5ac651f02aab034f83b9fc4325a0d388e99b113b5731eb1912"
+        }
+      },
+      "fourcaps": 9721,
+      "geometry": {
+        "chains": 54189,
+        "maxcap": 4,
+        "maxcup": 7,
+        "maxgon": 7
+      },
+      "label": "COMPUTED",
+      "literals": 1688045,
+      "m": 42,
+      "n": 8,
+      "name": "n8-i000-v01",
+      "outcome": "SAT_EXACT_MODEL_CHECKED",
+      "replay": {
+        "cap_triples_checked": 196,
+        "complement": {
+          "maxcap": 4,
+          "maxcup": 6,
+          "maxgon": 6
+        },
+        "full": {
+          "maxcap": 4,
+          "maxcup": 7,
+          "maxgon": 7
+        },
+        "selected": {
+          "maxcap": 3,
+          "maxcup": 6,
+          "maxgon": 6
+        },
+        "two_line_certificates": 0
+      },
+      "seconds": 0.7703883479989599,
+      "solver_exit": 10,
+      "targets": 235288,
+      "terminal_rank3_triples": 1277,
+      "variables": 42
+    }
+  ],
+  "counts": {
+    "SAT_EXACT_MODEL_CHECKED": 2
+  },
+  "elapsed_seconds": 1.6313379900020664,
+  "label": "COMPUTED",
+  "peak_child_rss_kib": 64044,
+  "peak_self_rss_kib": 64044,
+  "scope": "Fixed coordinates and explicitly listed orientation-preserving variations; no universal theorem or certification.",
+  "stop": "COMPLETE"
+}

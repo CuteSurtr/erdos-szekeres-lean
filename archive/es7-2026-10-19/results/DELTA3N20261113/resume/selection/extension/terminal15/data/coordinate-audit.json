@@ -1,0 +1,279 @@
+{
+  "label": "COMPUTED independent exact coordinate equivalence",
+  "status": "PASS",
+  "script_sha256": "5ae94ef9d593e720ad1d0e6e52e6875a138269b4c122ab76afdcf6a085e5b2bd",
+  "independent_geometry_source_sha256": "a6550f7adb909dd55b02848cc0f1d72054036e5fb01c4207af6e6cac60b79095",
+  "result": {
+    "m": 15,
+    "n": 7,
+    "P": [
+      [
+        0,
+        0
+      ],
+      [
+        37,
+        -35
+      ],
+      [
+        38,
+        -248
+      ],
+      [
+        84,
+        -270
+      ],
+      [
+        202,
+        -640
+      ],
+      [
+        472,
+        -427
+      ],
+      [
+        653,
+        -757
+      ],
+      [
+        665,
+        -793
+      ],
+      [
+        666,
+        -717
+      ],
+      [
+        683,
+        -718
+      ],
+      [
+        736,
+        -567
+      ],
+      [
+        737,
+        -827
+      ],
+      [
+        926,
+        -895
+      ],
+      [
+        999,
+        -926
+      ],
+      [
+        1000,
+        0
+      ]
+    ],
+    "minimum_absolute_determinant": 45,
+    "four_caps": 48,
+    "five_caps": 0,
+    "bad_triples": 78,
+    "convex_six_subsets": 187,
+    "convex_seven_subsets": 0,
+    "maximum_cap_cup_convex": [
+      4,
+      6,
+      6
+    ],
+    "all_subsets_checked": 32768,
+    "terminal_safe_deltas": 0,
+    "failure_reasons": {
+      "missed_target": 3379,
+      "both": 8387,
+      "bad_triple": 21002
+    },
+    "weak_deltas": 4805,
+    "weak_delta_size_counts": {
+      "3": 4,
+      "4": 59,
+      "5": 351,
+      "6": 1047,
+      "7": 1578,
+      "8": 1216,
+      "9": 463,
+      "10": 81,
+      "11": 6
+    },
+    "rooted_weak_deltas": [
+      {
+        "root": 0,
+        "weak_delta": [
+          0,
+          2,
+          3,
+          7
+        ],
+        "minimum_size": 4
+      },
+      {
+        "root": 1,
+        "weak_delta": [
+          1,
+          2,
+          3,
+          7
+        ],
+        "minimum_size": 4
+      },
+      {
+        "root": 2,
+        "weak_delta": [
+          2,
+          3,
+          7
+        ],
+        "minimum_size": 3
+      },
+      {
+        "root": 3,
+        "weak_delta": [
+          2,
+          3,
+          7
+        ],
+        "minimum_size": 3
+      },
+      {
+        "root": 4,
+        "weak_delta": [
+          4,
+          11,
+          12
+        ],
+        "minimum_size": 3
+      },
+      {
+        "root": 5,
+        "weak_delta": [
+          0,
+          1,
+          5,
+          7
+        ],
+        "minimum_size": 4
+      },
+      {
+        "root": 6,
+        "weak_delta": [
+          2,
+          3,
+          6,
+          9
+        ],
+        "minimum_size": 4
+      },
+      {
+        "root": 7,
+        "weak_delta": [
+          2,
+          3,
+          7
+        ],
+        "minimum_size": 3
+      },
+      {
+        "root": 8,
+        "weak_delta": [
+          2,
+          3,
+          7,
+          8
+        ],
+        "minimum_size": 4
+      },
+      {
+        "root": 9,
+        "weak_delta": [
+          2,
+          3,
+          6,
+          9
+        ],
+        "minimum_size": 4
+      },
+      {
+        "root": 10,
+        "weak_delta": [
+          0,
+          1,
+          6,
+          10
+        ],
+        "minimum_size": 4
+      },
+      {
+        "root": 11,
+        "weak_delta": [
+          2,
+          3,
+          11
+        ],
+        "minimum_size": 3
+      },
+      {
+        "root": 12,
+        "weak_delta": [
+          4,
+          11,
+          12
+        ],
+        "minimum_size": 3
+      },
+      {
+        "root": 13,
+        "weak_delta": [
+          4,
+          11,
+          13
+        ],
+        "minimum_size": 3
+      },
+      {
+        "root": 14,
+        "weak_delta": [
+          2,
+          3,
+          6,
+          14
+        ],
+        "minimum_size": 4
+      }
+    ],
+    "signs": "---+----+--+++++++++++++++++++++++++++++++++++----+---+-++++++++++++++++-++++-+++---++++++++++++++++++++++++++++++++++++++++----+---+-++++++++++++++++-++++-+++---+++++++-+----+---+++++++++++--------+-+++-++++++++++++-++++-+++---+++++++++++++++++--------+-++++++++++++++++-++++-+++---+++++++--------+-+++---++++---+++---++---+---+--+-++-++++++++++++++++-++++-+++---++++++++++++++------+---+----++++++---------------+++-+++---+---+++++++----++++++++++++-+++"
+  },
+  "all_455_signs_match": true,
+  "all_semantic_families_identical": true,
+  "all_32768_selection_semantics_identical": true,
+  "membership_clauses_reconstructed": 313,
+  "membership_cnf_byte_identical": true,
+  "certificate_applicability": "Existing independently accepted binary LRAT applies to the identical balanced membership CNF; no additional replay needed.",
+  "before": {
+    "/home/jay/research/data/delta3-codex-20261113/extension/balance15-a/witness.json": "7da027c4f6c800245a9f715e684872358fea36cab0d0133aa15e0a0b199eed9b",
+    "/home/jay/research/data/delta3-codex-20261113/extension/balance15-a/witness.points": "0504efcba62c2b0168fde3c0dc17f960b3f8ffcc8394dc66a58b5dfe7d74cc53",
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/balanced.terminal.cnf": "7d18c713d190d893a4d3d7873e8caa7d45061326c403ee8133888382040cc22a",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/model15_audit/data/real15.coordinates.json": "52280ed5a905a188d3c230580615c212f6bb9939b3d0bcbae384e40edf158bdb",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/model15_audit/data/certificate/witness.terminal.cnf": "7d18c713d190d893a4d3d7873e8caa7d45061326c403ee8133888382040cc22a",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/model15_audit/data/certificate/fresh.blrat": "1f25c0cbe8988577fecbfaf9379ffde400bca45d047cee6ce15bf3391bf94cef"
+  },
+  "after": {
+    "/home/jay/research/data/delta3-codex-20261113/extension/balance15-a/witness.json": "7da027c4f6c800245a9f715e684872358fea36cab0d0133aa15e0a0b199eed9b",
+    "/home/jay/research/data/delta3-codex-20261113/extension/balance15-a/witness.points": "0504efcba62c2b0168fde3c0dc17f960b3f8ffcc8394dc66a58b5dfe7d74cc53",
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/balanced.terminal.cnf": "7d18c713d190d893a4d3d7873e8caa7d45061326c403ee8133888382040cc22a",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/model15_audit/data/real15.coordinates.json": "52280ed5a905a188d3c230580615c212f6bb9939b3d0bcbae384e40edf158bdb",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/model15_audit/data/certificate/witness.terminal.cnf": "7d18c713d190d893a4d3d7873e8caa7d45061326c403ee8133888382040cc22a",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/model15_audit/data/certificate/fresh.blrat": "1f25c0cbe8988577fecbfaf9379ffde400bca45d047cee6ce15bf3391bf94cef"
+  },
+  "stable_inputs": true,
+  "original_audit_manifest": {
+    "sha256": "d485342e0cbd4f0d4baea8f000141cc5446215a8004488b39ddc134c825a0eb7",
+    "files_checked": 28,
+    "unchanged": true
+  },
+  "seconds": 0.2545466369992937,
+  "max_rss_KiB": 16704,
+  "checked_utc": "2026-11-13T20:51:53.827377+00:00"
+}

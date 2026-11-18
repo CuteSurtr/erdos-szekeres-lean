@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "label": "CERTIFIED original16; PROVED written all-left T7 closure with dependencies",
+  "frozen_UTC": "2026-11-13T23:24:42.633371+00:00",
+  "clean_retry": "data/retryB/result.json",
+  "original16_formula_audit": "../left16_longcup",
+  "old_manifests": {
+    "low_split_audit": "8609cc06302c622b3f37014c27334ba142bb535b86e528aa654217e9959303c3",
+    "low_split_audit/replay": "159ac6c8386dbf78f2e63481bc3e4f659fe72e8c2c1456616db81729d79f298e",
+    "low_split_audit/left15": "1ac9e0133d42a02c2b423d3dda39b5ce985d1f95486c6599449fa31c99cab0ca",
+    "low_split_audit/left16_longcup": "d68a01f9195b965372eefae14d4f5e358067ce017e9d51745ecb889b3282c892",
+    "exact_audit/replay13": "b501ec428762c70347a44de66b6bfd201fad191b82d20411e831faaeef166314"
+  },
+  "old_files_rechecked_unchanged": {
+    "low_split_audit": 128,
+    "low_split_audit/replay": 63,
+    "low_split_audit/left15": 42,
+    "low_split_audit/left16_longcup": 19,
+    "exact_audit/replay13": 23
+  },
+  "capacity_parent_evidence": {
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split/Capacity16.lean": "8d5ced5ab84da9ba9347bc4fd1f99952dfa876302c35a712e9e8fec284a003d3",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split/capacity_checks/pass/Capacity16.json": "15e50614a1c0dbae3b21a17fb200db4d2f62f34da139df7af9a6fca545c1242f",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split/capacity_checks/pass/Capacity16.log": "c12802766e2050fa42b733f0b32e44c001d08984c7fdd03aaf4edb4e24cc0b3c",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split/capacity_checks/pass/result.json": "bac50eb753b6cda69956a1cd116031ebdf2e026148234d8b3ff11a4c08f8829f"
+  },
+  "capacity_fresh_own_Lean_replay": false,
+  "explicit_sizes": "<=10 via full<=13; individual11,12,13,14,15,16; capacity excludes>=17",
+  "attemptA": "accepted checker line with failed telemetry wrapper, preserved",
+  "unit_inactive": true,
+  "released_MiB": 3100,
+  "limits": {
+    "packaging_AS_MiB": 150,
+    "CPU_count": 1,
+    "wall_seconds": 20,
+    "cpu_seconds": 19
+  }
+}

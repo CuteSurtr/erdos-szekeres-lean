@@ -1,0 +1,39 @@
+{
+  "n": 8,
+  "fixed_free_set": [
+    7,
+    13,
+    14,
+    15
+  ],
+  "counts": {
+    "11": {
+      "grounds": 792,
+      "rightmost_obstructed": 0
+    },
+    "12": {
+      "grounds": 495,
+      "rightmost_obstructed": 0
+    },
+    "13": {
+      "grounds": 220,
+      "rightmost_obstructed": 0
+    },
+    "14": {
+      "grounds": 66,
+      "rightmost_obstructed": 0
+    },
+    "15": {
+      "grounds": 12,
+      "rightmost_obstructed": 0
+    },
+    "16": {
+      "grounds": 1,
+      "rightmost_obstructed": 1
+    }
+  },
+  "smallest_rightmost_m": 16,
+  "scope": "all induced grounds containing the fixed four points, all old Deltas at rightmost root; not universal minimality",
+  "input": "/home/jay/research/data/delta3-codex-20261113/selection/repair/rightmost-n8-induced.txt",
+  "output": "/home/jay/research/data/delta3-codex-20261113/selection/repair/rightmost-n8-induced-results.jsonl"
+}

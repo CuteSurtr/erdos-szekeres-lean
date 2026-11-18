@@ -1,0 +1,262 @@
+{
+  "label": "COMPUTED conditional formula construction",
+  "m": 14,
+  "n": 7,
+  "variables": 32086,
+  "base_clauses": 231613,
+  "added_clauses": 37,
+  "added_literals": 8034,
+  "cuts": [
+    {
+      "kind": "high",
+      "cut": 1,
+      "row_index": 0,
+      "literals": 78
+    },
+    {
+      "kind": "high",
+      "cut": 2,
+      "row_index": 1,
+      "literals": 144
+    },
+    {
+      "kind": "high",
+      "cut": 3,
+      "row_index": 2,
+      "literals": 198
+    },
+    {
+      "kind": "high",
+      "cut": 4,
+      "row_index": 3,
+      "literals": 240
+    },
+    {
+      "kind": "high",
+      "cut": 5,
+      "row_index": 4,
+      "literals": 270
+    },
+    {
+      "kind": "high",
+      "cut": 6,
+      "row_index": 5,
+      "literals": 288
+    },
+    {
+      "kind": "high",
+      "cut": 7,
+      "row_index": 6,
+      "literals": 294
+    },
+    {
+      "kind": "high",
+      "cut": 8,
+      "row_index": 7,
+      "literals": 288
+    },
+    {
+      "kind": "high",
+      "cut": 9,
+      "row_index": 8,
+      "literals": 270
+    },
+    {
+      "kind": "high",
+      "cut": 10,
+      "row_index": 9,
+      "literals": 240
+    },
+    {
+      "kind": "high",
+      "cut": 11,
+      "row_index": 10,
+      "literals": 198
+    },
+    {
+      "kind": "high",
+      "cut": 12,
+      "row_index": 11,
+      "literals": 144
+    },
+    {
+      "kind": "high",
+      "cut": 13,
+      "row_index": 12,
+      "literals": 78
+    },
+    {
+      "kind": "low",
+      "cut": 1,
+      "row_index": 13,
+      "literals": 78
+    },
+    {
+      "kind": "low",
+      "cut": 2,
+      "row_index": 14,
+      "literals": 144
+    },
+    {
+      "kind": "low",
+      "cut": 3,
+      "row_index": 15,
+      "literals": 198
+    },
+    {
+      "kind": "low",
+      "cut": 4,
+      "row_index": 16,
+      "literals": 240
+    },
+    {
+      "kind": "low",
+      "cut": 5,
+      "row_index": 17,
+      "literals": 270
+    },
+    {
+      "kind": "low",
+      "cut": 6,
+      "row_index": 18,
+      "literals": 288
+    },
+    {
+      "kind": "low",
+      "cut": 7,
+      "row_index": 19,
+      "literals": 294
+    },
+    {
+      "kind": "low",
+      "cut": 8,
+      "row_index": 20,
+      "literals": 288
+    },
+    {
+      "kind": "low",
+      "cut": 9,
+      "row_index": 21,
+      "literals": 270
+    },
+    {
+      "kind": "low",
+      "cut": 10,
+      "row_index": 22,
+      "literals": 240
+    },
+    {
+      "kind": "low",
+      "cut": 11,
+      "row_index": 23,
+      "literals": 198
+    },
+    {
+      "kind": "low",
+      "cut": 12,
+      "row_index": 24,
+      "literals": 144
+    },
+    {
+      "kind": "low",
+      "cut": 13,
+      "row_index": 25,
+      "literals": 78
+    },
+    {
+      "kind": "all_cup",
+      "cut": 1,
+      "row_index": 13,
+      "literals": 78
+    },
+    {
+      "kind": "all_cup",
+      "cut": 2,
+      "row_index": 26,
+      "literals": 144
+    },
+    {
+      "kind": "all_cup",
+      "cut": 3,
+      "row_index": 27,
+      "literals": 198
+    },
+    {
+      "kind": "all_cup",
+      "cut": 4,
+      "row_index": 28,
+      "literals": 240
+    },
+    {
+      "kind": "all_cup",
+      "cut": 5,
+      "row_index": 29,
+      "literals": 270
+    },
+    {
+      "kind": "all_cup",
+      "cut": 6,
+      "row_index": 30,
+      "literals": 288
+    },
+    {
+      "kind": "all_cup",
+      "cut": 7,
+      "row_index": 31,
+      "literals": 294
+    },
+    {
+      "kind": "all_cup",
+      "cut": 8,
+      "row_index": 32,
+      "literals": 288
+    },
+    {
+      "kind": "all_cup",
+      "cut": 9,
+      "row_index": 33,
+      "literals": 270
+    },
+    {
+      "kind": "all_cup",
+      "cut": 10,
+      "row_index": 34,
+      "literals": 240
+    },
+    {
+      "kind": "all_cup",
+      "cut": 11,
+      "row_index": 35,
+      "literals": 198
+    },
+    {
+      "kind": "all_cup",
+      "cut": 12,
+      "row_index": 36,
+      "literals": 144
+    },
+    {
+      "kind": "all_cup",
+      "cut": 13,
+      "row_index": 12,
+      "literals": 78
+    }
+  ],
+  "dependencies": [
+    "accepted n7 terminal existence at every size <=13 (separate explicit coverage)",
+    "written high-split reduction",
+    "written all-mixed-cup reduction",
+    "written exact low-split T7(L) equivalence and easy branches",
+    "T7(L) through left size10 via standard low join to a three-cup, of total size <=13",
+    "accepted direct T7(L) certificates at left sizes11,12,13 with independent soundness/instance audits",
+    "independent audit of these37 cut rows and their base",
+    "an accepted cake_lpr proof before any UNSAT conclusion"
+  ],
+  "hashes": {
+    "base": "5dc0c1719cce7bda188abad8489534413ecbbcbe5f43e1b714244ec045a129c4",
+    "map": "b81223d78761ab200ef5931cc33ab10821a3e3a2054c5e550d0d8da7cf0fa55e",
+    "output": "01de4ba0c9831690f5e64a3592fd335ef701c100224060733e9734d55ac65554",
+    "source": "d8979afcc2b2793f810f314821b4bb2d369c471d0771962f195140b56bd02c24"
+  },
+  "scope": "Only n7/m14. No unconditional propositional equivalence and no all-size low-split theorem."
+}

@@ -1,0 +1,39 @@
+{
+  "label": "COMPUTED",
+  "status": "EXACT ABSTRACT WITNESS CONFIRMED",
+  "m": 16,
+  "n": 8,
+  "fourcaps": 67,
+  "fivecaps": 0,
+  "octagons": 0,
+  "hexagons": 671,
+  "heptagons": 121,
+  "minimum_hexagon_transversal_size": 6,
+  "first_minimum_transversal": [
+    0,
+    2,
+    3,
+    4,
+    5,
+    9
+  ],
+  "five_point_deletions_checked": 4368,
+  "working_weak_deltas": 16794,
+  "first_weak_delta": [
+    0,
+    3,
+    4
+  ],
+  "canonical_and_solver_model_clauses_checked": 241748,
+  "variables": 74322,
+  "literals": 935246,
+  "hashes": {
+    "mapped.cnf": "043d8b6f7b5446d8fdb48a6f4a786c79d2660ffa33f856ea6a4eb628ac667d7f",
+    "mapped.cnf.map": "b6df28c1327b97b4d73cc8c44005f416318affb7934cbc425e4f5e27330aa954",
+    "n8m16.cnf": "043d8b6f7b5446d8fdb48a6f4a786c79d2660ffa33f856ea6a4eb628ac667d7f",
+    "geometry.json": "067f98afe5cd3b126184ec2dc48814623edd71374870944daff5601df537def9",
+    "probe.out": "a12dd661a8cdba172ad288e23ce0483b4df1a169564d4e06dfabe87125102c00"
+  },
+  "realizability": "UNRESOLVED; optimizer failure is not evidence",
+  "weak_delta_refuted": false
+}

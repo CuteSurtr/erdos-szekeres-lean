@@ -1,0 +1,217 @@
+{
+  "encoding": {
+    "added": 2,
+    "all_gaps": true,
+    "clauses": 813993,
+    "cnf_bytes": 24059977,
+    "label": "COMPUTED",
+    "literals": 3887521,
+    "m": 17,
+    "mode": "cup",
+    "n": 7,
+    "old_m": 15,
+    "phases": {
+      "cap_lattice": {
+        "clauses": 127858,
+        "literals": 767148
+      },
+      "embedding_one_hot": {
+        "clauses": 60,
+        "literals": 135
+      },
+      "embedding_order": {
+        "clauses": 42,
+        "literals": 84
+      },
+      "endpoint_support": {
+        "clauses": 225,
+        "literals": 3285
+      },
+      "forall_delta": {
+        "clauses": 131072,
+        "literals": 260410
+      },
+      "fourcap": {
+        "clauses": 4760,
+        "literals": 9520
+      },
+      "no5cap": {
+        "clauses": 6188,
+        "literals": 18564
+      },
+      "no_ngon": {
+        "clauses": 311168,
+        "literals": 1555840
+      },
+      "old_orientation": {
+        "clauses": 4550,
+        "literals": 18200
+      },
+      "signotope": {
+        "clauses": 19040,
+        "literals": 76160
+      },
+      "target_lattice": {
+        "clauses": 127845,
+        "literals": 1015805
+      },
+      "target_seeds": {
+        "clauses": 81185,
+        "literals": 162370
+      }
+    },
+    "scope": "counterexample",
+    "selector_ids": [
+      [
+        279867,
+        279868,
+        279869
+      ],
+      [
+        279870,
+        279871,
+        279872
+      ],
+      [
+        279873,
+        279874,
+        279875
+      ],
+      [
+        279876,
+        279877,
+        279878
+      ],
+      [
+        279879,
+        279880,
+        279881
+      ],
+      [
+        279882,
+        279883,
+        279884
+      ],
+      [
+        279885,
+        279886,
+        279887
+      ],
+      [
+        279888,
+        279889,
+        279890
+      ],
+      [
+        279891,
+        279892,
+        279893
+      ],
+      [
+        279894,
+        279895,
+        279896
+      ],
+      [
+        279897,
+        279898,
+        279899
+      ],
+      [
+        279900,
+        279901,
+        279902
+      ],
+      [
+        279903,
+        279904,
+        279905
+      ],
+      [
+        279906,
+        279907,
+        279908
+      ],
+      [
+        279909,
+        279910,
+        279911
+      ]
+    ],
+    "triples": 680,
+    "universal_variables": 279866,
+    "variables": 279911
+  },
+  "hashes": {
+    "audit_extension.py": "a8be916cab9245655462f07b415f20390203b5597cf7c183dfb46b3717e07059",
+    "binary": "f6cf129886427af6e2bf45fac67457375e1b2c479946b4ceae0e8a31f432e66a",
+    "case.cnf": "008ca2fe296ac3b44a61957117373012cce814f4db5e5c17467db3626474c2d0",
+    "case.lrat": "a4b505b4188a2d5718809af1b9136c8542770acaf5958905465b900c04be1a03",
+    "encode.log": "b0fb1ff2125a12969e3b41a16dbc121b14a1c921625b27c35a5e87e2292427cc",
+    "encode.time": "b44c519f52eb4f113334dbcb9252e831db95bb49d6c26577ddb6628baea09f48",
+    "extension_cnf.cpp": "eac5c72391a0090468e28022f424f4aa43c6efa8aea1767207d3e0985d5dec5a",
+    "meta.json": "0cfbeba0c9ebedd1f1181f600c77a002f85ba4358e3f79ddc83c83e71a6d568c",
+    "old.signs": "8b6dbe52fe8b364c843cc98ba7c30b5c14846e65ab4e4776519e81460fc22022",
+    "solver.log": "8fba55cea0f98be36fab7b65349dda867a58aabfcf974a46098f5123830ac5cb",
+    "solver.time": "a00ba0380218287fee3173625f80aa307378df02188fcf955849f93dde723ed7",
+    "source": "1e8b43136d096abb2deaea14743ed62a52ff622a991dd2fbbcb7140a15593b04",
+    "universal_delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c"
+  },
+  "label": "COMPUTED",
+  "parameters": {
+    "add": 2,
+    "as_mib": 360,
+    "base_only": false,
+    "binary": "/home/jay/research/data/delta3-codex-20261113/resume/lift/extension_cnf",
+    "embedding_only": false,
+    "fixed_positions": null,
+    "generate_only": false,
+    "mode": "cup",
+    "n": 7,
+    "out": "/home/jay/research/data/delta3-codex-20261113/resume/lift/probe-cup-n7-add2-all-gaps",
+    "pin_source": false,
+    "simplifier": "/home/jay/research/data/delta3-codex-20261113/resume/lift/unit_simplify",
+    "simplify": false,
+    "solve_seconds": 4,
+    "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/lift/../../coordinator/data/cup15/realized.json",
+    "wall_seconds": 24
+  },
+  "proof_cnf": "/home/jay/research/data/delta3-codex-20261113/resume/lift/probe-cup-n7-add2-all-gaps/case.cnf",
+  "runs": {
+    "encode": {
+      "command": [
+        "/home/jay/research/data/delta3-codex-20261113/resume/lift/extension_cnf",
+        "--n",
+        "7",
+        "--add",
+        "2",
+        "--old-size",
+        "15",
+        "--mode",
+        "cup",
+        "--old-signs",
+        "/home/jay/research/data/delta3-codex-20261113/resume/lift/probe-cup-n7-add2-all-gaps/old.signs",
+        "--out",
+        "/home/jay/research/data/delta3-codex-20261113/resume/lift/probe-cup-n7-add2-all-gaps/case.cnf"
+      ],
+      "exit": 0,
+      "wall_seconds": 0.167
+    },
+    "solver": {
+      "command": [
+        "/usr/bin/cadical",
+        "-q",
+        "-t",
+        "4",
+        "--lrat=true",
+        "--binary=false",
+        "/home/jay/research/data/delta3-codex-20261113/resume/lift/probe-cup-n7-add2-all-gaps/case.cnf",
+        "/home/jay/research/data/delta3-codex-20261113/resume/lift/probe-cup-n7-add2-all-gaps/case.lrat"
+      ],
+      "exit": 0,
+      "wall_seconds": 4.122
+    }
+  },
+  "source_minimum_abs_determinant": 70172849827134,
+  "status": "UNKNOWN"
+}

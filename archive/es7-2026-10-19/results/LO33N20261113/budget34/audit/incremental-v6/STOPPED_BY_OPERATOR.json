@@ -1,0 +1,18 @@
+{
+ "time": "2026-11-14T21:19:50.629452+09:00",
+ "action": "unit esr-vfy-s20v6 stopped by the operator (SIGTERM) after it caught up",
+ "reason": "finder v6 stopped on a witness; the next cut round needs a replay unit with more memory headroom (row audits re-run cake_lpr)",
+ "last_checkpoint": {
+  "time": "2026-11-14T21:19:44.762752+09:00",
+  "event": "TREE_CHECKPOINT",
+  "version": "s20-v5",
+  "contexts": 1507,
+  "total": 4064,
+  "nodes": 14521733,
+  "pending": 2558,
+  "minimum_margin": 1,
+  "label": "PARTIAL EXACT REPLAY; NO EXCLUSION"
+ },
+ "new_contexts_sha256": "7c946859350768b9d6d2c467f084d0c865b96f50bc36d7c60ffa1ce8783e69bd",
+ "latest_summary_sha256": "2a890e530e2cbf13b52595fc0668b211a9f5d8ead3a0c188043ad46ca7140bb3"
+}

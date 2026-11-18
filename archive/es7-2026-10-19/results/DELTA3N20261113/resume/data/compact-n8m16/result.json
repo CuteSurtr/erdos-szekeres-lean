@@ -1,0 +1,62 @@
+{
+  "cnf": "/home/jay/research/data/delta3-codex-20261113/resume/compact/n8m16-final.cnf",
+  "commands": [
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "903",
+      "/usr/bin/cadical",
+      "-t",
+      "900",
+      "--lrat=true",
+      "--binary=false",
+      "/home/jay/research/data/delta3-codex-20261113/resume/compact/n8m16-final.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/resume/compact/scheduled-n8m16/proof.lrat"
+    ],
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "180",
+      "/usr/bin/zstd",
+      "-q",
+      "-T1",
+      "-3",
+      "-k",
+      "/home/jay/research/data/delta3-codex-20261113/resume/compact/scheduled-n8m16/proof.lrat"
+    ]
+  ],
+  "compressed_bytes": 892838286,
+  "compressed_roundtrip_verified": true,
+  "hashes": {
+    "cadical": "4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70",
+    "cadical.log": "8a0076d2b43b35f5b6718fbdaa78b000670f9ce1f3a091dc6076226860df9530",
+    "cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+    "input.cnf": "37e8a9ba5ddec0907580ec0f846ba7dd65846d1ef71c9573db824880d3b18a07",
+    "proof.lrat": "c78c1ac721bcd01de12e5f3cf3c412792ea12a6ccc47506c96876794735c825f",
+    "proof.lrat.zst": "5479b3ad6cda1153cdfa2a2a22e9592c86dec98143f04d6706947b3b947d3074",
+    "run_cnf.py": "e3c8d9413f99b3092a4ea760f08265bc30bb93204074a3fa566bc2f0c3b3f4b8"
+  },
+  "label": "COMPUTED",
+  "limits": {
+    "as_mib": 1000,
+    "cake_seconds": 300,
+    "cnf": "/home/jay/research/data/delta3-codex-20261113/resume/compact/n8m16-final.cnf",
+    "heap": 800,
+    "out": "/home/jay/research/data/delta3-codex-20261113/resume/compact/scheduled-n8m16",
+    "seconds": 900,
+    "sha256": "37e8a9ba5ddec0907580ec0f846ba7dd65846d1ef71c9573db824880d3b18a07"
+  },
+  "proof_bytes": 3451029679,
+  "runs": {
+    "cadical": {
+      "exit": 0,
+      "seconds": 900.079
+    },
+    "compress": {
+      "exit": 0,
+      "seconds": 10.176
+    }
+  },
+  "seconds": 919.671,
+  "status": "UNKNOWN"
+}

@@ -1,0 +1,22 @@
+{
+  "as_mib": 500,
+  "base_clauses": 1754,
+  "batch": 16,
+  "calls": 2,
+  "elapsed_seconds": 0.004,
+  "final_cnf_sha256": "1dda6ceb4fe33203428f317e8dd9aad1dddc598a8a0f8a442a1ce43f0def67c0",
+  "iterations": 1,
+  "label": "COMPUTED",
+  "m": 8,
+  "n": 6,
+  "pool_size": 31,
+  "seconds_limit": 12,
+  "seed": 1,
+  "solver": "PySAT CaDiCaL 1.9.5 (finder only)",
+  "source": "/home/jay/research/data/delta3-codex-20261113/encoder/resume-pool-control-n6m8/result.json",
+  "source_cnf_sha256": "4dbb6ce963cd784b2837a14b2a192e1483aaa47d39c70684562c5c02ab3e65be",
+  "source_result_sha256": "1acce58d823ec8dffe6bfe7d15ce8be4cde80759c24aaa21c88ddd1bdf975e7b",
+  "source_script_sha256": "0e1700be00d4fbf93f2965f3ff3caf1a5ccbd9b4c966f3ff04ec5322b1995c30",
+  "status": "UNSAT_UNCERTIFIED",
+  "variables": 382
+}

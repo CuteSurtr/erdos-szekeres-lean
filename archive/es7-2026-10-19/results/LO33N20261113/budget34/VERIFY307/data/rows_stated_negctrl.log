@@ -1,0 +1,8 @@
+OK  positive                 rc=0 []
+OK  drop_last_row            rc=1 ["v147: appended rows != accepted rows of ['cuts-v147w1u'] (or rhs != 1)"]
+OK  swap_two_appended_rows   rc=1 ["v147: appended rows != accepted rows of ['cuts-v147w1u'] (or rhs != 1)"]
+OK  rhs_2                    rc=1 ["v147: appended rows != accepted rows of ['cuts-v147w1u'] (or rhs != 1)"]
+OK  capacity_F_19            rc=1 ['v147: capacity rows are not exactly (F, 20), (Lo, 15)']
+OK  change_base_row          rc=1 ['v147: v146 is not a prefix']
+OK  duplicate_batch_folder   rc=1 ["v147: appended rows != accepted rows of ['cuts-v147w1u', 'cuts-v147zz'] (or rhs != 1)"]
+ALL CONTROLS BEHAVED AS EXPECTED

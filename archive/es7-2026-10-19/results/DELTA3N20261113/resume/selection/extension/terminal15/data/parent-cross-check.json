@@ -1,0 +1,182 @@
+{
+  "label": "COMPUTED parent cross-file replay; separate CERTIFIED and Lean proofs linked",
+  "status": "PASS",
+  "orientation_tests": 455,
+  "minimum_absolute_determinant": 45,
+  "maxima_cap_cup_gon": [
+    4,
+    6,
+    6
+  ],
+  "protected_selection": [
+    2,
+    3,
+    6,
+    9
+  ],
+  "line_certificates": [
+    {
+      "case": "original",
+      "triple": [
+        2,
+        3,
+        6
+      ],
+      "slope_difference": "93593071463/34310738",
+      "height_difference": "1243549543981691/1559579"
+    },
+    {
+      "case": "original",
+      "triple": [
+        2,
+        3,
+        9
+      ],
+      "slope_difference": "7692464215/2859316",
+      "height_difference": "1094537034083345/1429658"
+    },
+    {
+      "case": "balanced",
+      "triple": [
+        2,
+        3,
+        6
+      ],
+      "slope_difference": "17912/41537",
+      "height_difference": "5298805/41537"
+    },
+    {
+      "case": "balanced",
+      "triple": [
+        2,
+        3,
+        9
+      ],
+      "slope_difference": "14135/43727",
+      "height_difference": "1253383/43727"
+    }
+  ],
+  "full_cnf_clauses": 313,
+  "core_clauses": 98,
+  "core_subset_verified": true,
+  "irredundancy_models_verified": 98,
+  "minimum_core_size_claimed": false,
+  "figure_coordinates_match": true,
+  "source_sha256": "3d12130c54d97cf19641717a00568f481f834e9bc94b753aa56551c7ac0a5743",
+  "geometry_sha256": "7e3284de00e2246699786623c2e285e46541cbf2d6b3241fca0a3c8aefb4a3d9",
+  "copied_inputs": {
+    "original.json": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/realize15-a/witness.json",
+      "sha256": "52280ed5a905a188d3c230580615c212f6bb9939b3d0bcbae384e40edf158bdb"
+    },
+    "balanced.json": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/balance15-a/witness.json",
+      "sha256": "7da027c4f6c800245a9f715e684872358fea36cab0d0133aa15e0a0b199eed9b"
+    },
+    "balanced.points": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/balance15-a/witness.points",
+      "sha256": "0504efcba62c2b0168fde3c0dc17f960b3f8ffcc8394dc66a58b5dfe7d74cc53"
+    },
+    "membership.cnf": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/witness.terminal.cnf",
+      "sha256": "7d18c713d190d893a4d3d7873e8caa7d45061326c403ee8133888382040cc22a"
+    },
+    "membership.blrat": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/fresh.blrat",
+      "sha256": "1f25c0cbe8988577fecbfaf9379ffde400bca45d047cee6ce15bf3391bf94cef"
+    },
+    "membership.cake.log": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/cake.log",
+      "sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f"
+    },
+    "membership-certificate.json": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/certificate.json",
+      "sha256": "cb1c5b13ebc81ec56ccb16311a2a3ef20abd4acf7189d7b9427b3987d3f03101"
+    },
+    "coordinate-audit.json": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/model15_audit/balanced/data/equivalence.json",
+      "sha256": "07dcd62d50d8e790cf8a8477c4a93ad100d8d5709fe877ef3f2f6a0fe08feff9"
+    },
+    "cup-certificates.json": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/envelope/cup_dominance/metric15/cup_minimum/data/certificates.json",
+      "sha256": "41f5ee8c066c84ff93bc8972e36b53f6aed1ed585a8bf84de432984ec576a161"
+    },
+    "core/DONE.json": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/small-proof-a/DONE.json",
+      "sha256": "c844ffe7d97822446019e2cecd895836079f2b65d9350e112d4859265d41d649"
+    },
+    "core/core.cnf": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/small-proof-a/core.cnf",
+      "sha256": "d04ad6b75aeec577d766842207040ad174ad2562fba3b96a0748da1dbc4f12f0"
+    },
+    "core/deletion_trials.json": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/small-proof-a/deletion_trials.json",
+      "sha256": "9b75723f9a4572972214042a1addf59f1ed7a244f4cb2b986e6c3fa6c1b05997"
+    },
+    "core/irredundancy_models.json": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/small-proof-a/irredundancy_models.json",
+      "sha256": "749564b881f61988c3250b9060727ca64ecc0812a8e6c21353cbc67fe900386f"
+    },
+    "core/tree.json": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/small-proof-a/tree.json",
+      "sha256": "5d91e4eb69b074ba20a9915b1c4d707347a749ca0d352671106e99c0a6675e77"
+    },
+    "core-certificate/cadical.log": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/core-cert-a/cadical.log",
+      "sha256": "e053e51ee3c8afa48e4f786ae4cfadc87079e3b32cb5fbfc670a4ef855bd1327"
+    },
+    "core-certificate/cadical.time": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/core-cert-a/cadical.time",
+      "sha256": "0d4e8c2758deeac0f40a5f151452fa2c437f27813f80331fd1b48721878af456"
+    },
+    "core-certificate/cake.log": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/core-cert-a/cake.log",
+      "sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f"
+    },
+    "core-certificate/cake.time": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/core-cert-a/cake.time",
+      "sha256": "e815629288c9764c3008a799cf3d21c32fa177954e64d0b1a264e4cf732b6dd2"
+    },
+    "core-certificate/compress.log": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/core-cert-a/compress.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "core-certificate/compress.time": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/core-cert-a/compress.time",
+      "sha256": "0e48509b9975123f4397f25da073f7c9f900d867f51e5cc65620fe0261001356"
+    },
+    "core-certificate/input.cnf": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/core-cert-a/input.cnf",
+      "sha256": "d04ad6b75aeec577d766842207040ad174ad2562fba3b96a0748da1dbc4f12f0"
+    },
+    "core-certificate/proof.blrat": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/core-cert-a/proof.blrat",
+      "sha256": "e9572a48f8a8baf09577884901cba860456425f8c98284143f79597ab48a33a1"
+    },
+    "core-certificate/proof.blrat.zst": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/core-cert-a/proof.blrat.zst",
+      "sha256": "ca7669c01911228b8d3922c9eba556befedfbf28d7388be85fa97581611452b3"
+    },
+    "core-certificate/result.json": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/core-cert-a/result.json",
+      "sha256": "d6d2b4cf9b0d12a32da8cd753094b760d4e95f0c7b242ba5d8012812a3028639"
+    },
+    "core-certificate/run_binary.py": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/core-cert-a/run_binary.py",
+      "sha256": "dcdfd0c97efa27e8b89daacbad3a950d3a9af77c88964e78e5522fd7904f87e5"
+    },
+    "figure/plotted_points.csv": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/figure-b/plotted_points.csv",
+      "sha256": "b6e89a87f9231d68c2a7fcdbf689fe8e87f05f04a411bbc65b961d3234ad0628"
+    },
+    "figure/terminal15.png": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/figure-b/terminal15.png",
+      "sha256": "b801bff8ef3f8032deb93f651e85a330e907ce9d95bb2a5ce7cc1453226bc006"
+    },
+    "figure/terminal15.svg": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/terminal15/figure-b/terminal15.svg",
+      "sha256": "77751bfdad115615e26c2dfccafe5e1e6e253f883c3e1728da038973b210c01c"
+    }
+  },
+  "scope": "Fixed geometry only. No global minimality or weak-Delta failure. Float plot carries no proof weight."
+}

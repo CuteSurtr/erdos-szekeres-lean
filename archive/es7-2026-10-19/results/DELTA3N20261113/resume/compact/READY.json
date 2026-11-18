@@ -1,0 +1,110 @@
+{
+  "binary": "/home/jay/research/data/delta3-codex-20261113/resume/compact/compact_cnf",
+  "binary_sha256": "5bd884acb41434dcc41556f9bab874926397d449efd3b971cb3bb2141379bbe1",
+  "cnfs": {
+    "7": {
+      "path": "/home/jay/research/data/delta3-codex-20261113/resume/compact/n7m16-final.cnf",
+      "sha256": "642c2e5d94dc2c98a1bc72a49e0976207762cb0a2e952167ff8135846a64ca07"
+    },
+    "8": {
+      "path": "/home/jay/research/data/delta3-codex-20261113/resume/compact/n8m16-final.cnf",
+      "sha256": "37e8a9ba5ddec0907580ec0f846ba7dd65846d1ef71c9573db824880d3b18a07"
+    }
+  },
+  "control_summary": {
+    "base_queries": 11036,
+    "batches": 8,
+    "configurations_across_batches": 5518,
+    "frontier_status": "NOT RUN HERE",
+    "label": "COMPUTED",
+    "mismatches": 0,
+    "pool_queries": 512384,
+    "status": "PASS",
+    "wrong_flag_queries": 100260
+  },
+  "positive_controls": {
+    "7": {
+      "canonical": {
+        "clauses": 296714,
+        "false_clauses": {
+          "forall_delta": 7835
+        },
+        "first_false_clauses": {
+          "forall_delta": [
+            16590,
+            127510
+          ]
+        },
+        "literals": 1250856,
+        "phases": {
+          "cap_lattice": 60502,
+          "convex4_equivalence": 14560,
+          "convex_larger_equivalence": 74256,
+          "forall_delta": 62882,
+          "fourcap": 3640,
+          "no5cap": 4368,
+          "no_ngon": 11440,
+          "signotope": 14560,
+          "target_lattice": 50506
+        },
+        "variable_kinds": {
+          "cap_contains": 62322,
+          "convex": 14196,
+          "orientation": 560,
+          "target_contains": 50506
+        },
+        "variables": 127584
+      },
+      "file": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/compact/real_n7m16_check.json",
+      "fourcaps": 71,
+      "sha256": "6beb91e5b307c052aa52b98be6ad76b77b4a1cbf98104f2810ccc8e10092c20c",
+      "targets": 279,
+      "valid": true,
+      "working_deltas": 7835
+    },
+    "8": {
+      "canonical": {
+        "clauses": 346608,
+        "false_clauses": {
+          "forall_delta": 8404
+        },
+        "first_false_clauses": {
+          "forall_delta": [
+            28101,
+            123006
+          ]
+        },
+        "literals": 1350008,
+        "phases": {
+          "cap_lattice": 56134,
+          "convex4_equivalence": 14560,
+          "convex_larger_equivalence": 142896,
+          "forall_delta": 58514,
+          "fourcap": 3640,
+          "no5cap": 4368,
+          "no_ngon": 12870,
+          "signotope": 14560,
+          "target_lattice": 39066
+        },
+        "variable_kinds": {
+          "cap_contains": 57954,
+          "convex": 25636,
+          "orientation": 560,
+          "target_contains": 39066
+        },
+        "variables": 123216
+      },
+      "file": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/compact/real_n8m16_targeted_check.json",
+      "fourcaps": 280,
+      "sha256": "1f747666e3dbb72b54d997d556e157f0a315bd6073cd55b88fd81019b23e4098",
+      "targets": 168,
+      "valid": true,
+      "working_deltas": 8439
+    }
+  },
+  "soundness": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/compact/SOUNDNESS.md",
+  "soundness_sha256": "c21cf31740f1058c3a3404d7557b23373c5f16073941d413d0347d1c02068c41",
+  "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/compact/compact_cnf.cpp",
+  "source_sha256": "1964e17b777fd7b7a973f12b2911c003a050047f13a621f523a9f98c6e31d553",
+  "status": "READY_SOURCE_FROZEN"
+}

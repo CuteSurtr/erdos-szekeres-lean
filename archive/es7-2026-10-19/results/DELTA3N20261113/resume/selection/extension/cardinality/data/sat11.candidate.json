@@ -1,0 +1,62 @@
+{
+  "P": [
+    [
+      0,
+      0
+    ],
+    [
+      29,
+      -149387760
+    ],
+    [
+      48,
+      12629400
+    ],
+    [
+      60,
+      224595000
+    ],
+    [
+      70,
+      -402918600
+    ],
+    [
+      95,
+      4357143
+    ],
+    [
+      112,
+      -561587320
+    ],
+    [
+      122,
+      -155612250
+    ],
+    [
+      137,
+      -94404765
+    ],
+    [
+      149,
+      896687400
+    ],
+    [
+      153,
+      0
+    ]
+  ],
+  "n": 7,
+  "m": 11,
+  "terminal_delta": [
+    0,
+    1,
+    3
+  ],
+  "source": "/home/jay/research/data/delta3-codex-20261113/extension/small-delta/n7m11k2/solve/cadical.log",
+  "source_sha256": "c48cec75c56164c070627fc6e45e7e11faf4991452897d9eef9a98eef84c7f56",
+  "signs": "++-+++++++-----+------+-++++++---+-+++++++++-+-----+--------++++++---+-+++++++++--------++++++---+++++++++++-++++++-+++++++++++++----+-++++-++++-+++++++++----+--++--",
+  "finder": "fixed-x LP proposal followed by exact integer determinant acceptance",
+  "trial": 7,
+  "rational_denominator_bound": 100,
+  "minimum_absolute_determinant": 275005185
+}

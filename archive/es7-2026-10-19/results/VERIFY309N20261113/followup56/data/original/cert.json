@@ -1,0 +1,173 @@
+{
+ "certdir": "/home/jay/research/data/n66-20261113/p2/b13g/it1",
+ "state": "/home/jay/research/data/n66-20261113/p2/s13/g.json",
+ "budget": 13,
+ "holes_at_least": 14,
+ "bound": 56,
+ "W_size": 70,
+ "cube": [],
+ "full_cnf_sha256": "1e44f104135e01b8532313b36079800109a8acb6d3c032f58e0fd5c1c36b78ea",
+ "full_cnf_clauses": 9201530,
+ "activated_quadruples": 641229,
+ "trim_cnf_sha256": "8d4b9099cf045ca72ba5ac56e8ecea00a73a44652d5a9f3d100f63f1f10bc151",
+ "trim_lrat_sha256": "ff79c2ef3805255b18917dc0769c5088cca0ee8106c5eefb78b8f212fa487296",
+ "trim_cnf_clauses": 319611,
+ "trim_lrat_bytes": 8025950354,
+ "trim": {
+  "lrat_lines": 64547870,
+  "additions": 42778178,
+  "marked_additions": 20532192,
+  "empty_id": 51979708,
+  "originals": 9201530,
+  "marked_originals": 319611,
+  "marked_total": 20851803
+ },
+ "used": {
+  "used_original_clauses": 319611,
+  "per_family": {
+   "eager": 113725,
+   "quad": 197852,
+   "units": 2,
+   "rows": 6775,
+   "card": 1201,
+   "sb": 56
+  },
+  "used_rows": 6775
+ },
+ "kinds": {
+  "units": 2,
+  "rows": 6775,
+  "card": 1201,
+  "geometric": 311576,
+  "sb": 56
+ },
+ "final_verify66": {
+  "rows": 6775,
+  "kinds": {
+   "transported": 3229,
+   "mirror": 3303,
+   "core": 192,
+   "cycle": 51
+  },
+  "bad": 0,
+  "rows_match": true,
+  "templates_verified": 417,
+  "templates": 417,
+  "cores_verified": 207,
+  "cores": 207
+ },
+ "sb_pairs": [
+  [
+   32,
+   37
+  ],
+  [
+   29,
+   25
+  ],
+  [
+   39,
+   45
+  ],
+  [
+   24,
+   30
+  ],
+  [
+   46,
+   52
+  ],
+  [
+   47,
+   50
+  ],
+  [
+   44,
+   40
+  ],
+  [
+   19,
+   22
+  ],
+  [
+   23,
+   17
+  ],
+  [
+   38,
+   31
+  ],
+  [
+   16,
+   12
+  ],
+  [
+   57,
+   53
+  ],
+  [
+   33,
+   36
+  ],
+  [
+   43,
+   42
+  ],
+  [
+   48,
+   51
+  ],
+  [
+   11,
+   7
+  ],
+  [
+   56,
+   54
+  ],
+  [
+   27,
+   26
+  ],
+  [
+   62,
+   58
+  ],
+  [
+   18,
+   21
+  ],
+  [
+   13,
+   15
+  ],
+  [
+   8,
+   10
+  ],
+  [
+   61,
+   59
+  ],
+  [
+   4,
+   6
+  ],
+  [
+   2,
+   3
+  ],
+  [
+   63,
+   65
+  ],
+  [
+   66,
+   67
+  ]
+ ],
+ "link_recheck_ALL_OK": true,
+ "cake_lpr": "s VERIFIED UNSAT",
+ "ALL_OK": true,
+ "time": "2026-11-13 23:43:32 KST"
+}

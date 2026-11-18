@@ -1,0 +1,34 @@
+{
+  "tested": 241,
+  "by_n": {
+    "6": 90,
+    "7": 125,
+    "8": 26
+  },
+  "passed": 240,
+  "first_failure": {
+    "tag": "pool_hept.jsonl:33",
+    "n": 7,
+    "m": 23,
+    "maxcap": 4,
+    "maxgon": 6,
+    "minimum": 8,
+    "bare": [
+      1,
+      5,
+      6,
+      7,
+      13,
+      15,
+      16,
+      19
+    ],
+    "cap_free": null,
+    "auxiliary_lemma_holds": false,
+    "calls": [
+      18,
+      21
+    ],
+    "seconds": 0.017
+  }
+}

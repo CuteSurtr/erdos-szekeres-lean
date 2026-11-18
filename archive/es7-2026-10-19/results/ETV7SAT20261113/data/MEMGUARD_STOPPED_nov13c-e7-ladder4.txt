@@ -1,0 +1,5 @@
+2026-11-13 18:24:03 KST: unit nov13c-e7-ladder4.service was stopped by the session memory guard.
+Reason: its memory (3789 MB) reached 90% of its own MemoryMax (4096 MB); the kernel OOM killer would have killed it next
+Read /home/jay/research/data/memguard-20261113/MEMORY_POLICY.txt (new hard rule of 13 Nov 2026, 18:25 KST). Do not simply restart the same job:
+make it smaller (fewer parallel workers, smaller CNFs, cubes instead of one monolithic instance, lazy clauses,
+streaming instead of in-memory lists, a compiled tool) so that it stays well below its MemoryMax.

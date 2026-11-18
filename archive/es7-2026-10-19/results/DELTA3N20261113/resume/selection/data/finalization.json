@@ -1,0 +1,25 @@
+{
+  "time": "2026-11-14T01:25:49.438117+09:00",
+  "audit_manifest_verified": {
+    "files": 103,
+    "mismatch": []
+  },
+  "prior_parent_expected_modified_files": {
+    "files": 434,
+    "mismatch": [
+      "README.md",
+      "VERIFY_DELTA3.md",
+      "resume/README.md"
+    ]
+  },
+  "relative_links": {
+    "checked": 56,
+    "broken": [],
+    "excluded": "Frozen source snapshots retain original relative links; one archived ROOTED.md link resolves only in its original source tree."
+  },
+  "branch": "es7-night-2026-11-01",
+  "root_readme_math_tracked_diff": "empty",
+  "running_verifier_units": "",
+  "other_running_units": "  memguard5-20261113.service loaded active running [systemd-run] /home/jay/research/data/memguard-20261113/memguard5.sh\n  nov13c-g-chain9.service    loaded active running [systemd-run] /bin/bash /home/jay/research/data/fastbb-20261113/p2/run_chain6.sh 5\n  nov13c-n66-drv18.service   loaded active running [systemd-run] /home/jay/research/data/six10-linux-20261105/venv.disk/bin/python -u p2_driver.py\n  nov13c-n66-s14c1.service   loaded active running [systemd-run] /bin/bash -c \"/home/jay/research/data/six10-linux-20261105/venv.disk/bin/python -u p2_batch.py --out p2/s14/c1.json --dir p2/b14c1 --L 14 --rows mono/rows_1832.json --warm p2/s14/c.json --seed 3 --secs 18573 > p2/s14/c1.out 2>&1\"\n  nov13c-n66-s14e.service    loaded active running [systemd-run] /bin/bash -c \"/home/jay/research/data/six10-linux-20261105/venv.disk/bin/python -u p2_batch.py --out p2/s14/e.json --dir p2/b14e --L 14 --rows mono/rows_1832.json --warm p2/s13/g_L13.json --seed 5 --tauclose --sb --secs 20264 > p2/s14/e.out 2>&1\"\n  nov13c-n66-s14g.service    loaded active running [systemd-run] /bin/bash -c \"/home/jay/research/data/six10-linux-20261105/venv.disk/bin/python -u p2_batch.py --out p2/s14/g.json --dir p2/b14g --L 14 --rows mono/rows_1832.json --warm p2/s13/g_L13.json --seed 7 --tauclose --sb --cadopts=\\\"--unsat\\\" --secs 18392 > p2/s14/g.out 2>&1\"\n",
+  "agents": "All four selection workers completed and closed."
+}

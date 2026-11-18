@@ -1,0 +1,21 @@
+{
+  "label": "COMPUTED",
+  "status": "PASS",
+  "native_invocations": 60,
+  "small_hull_subset_cases": 36,
+  "small_valid_cases": 17,
+  "fixture_packets": {
+    "E4_strong": "/home/jay/research/data/delta3-codex-20261113/search/controls-v1-final/case-001/check.json",
+    "E4_weak": "/home/jay/research/data/delta3-codex-20261113/search/controls-v1-final/case-002/check.json",
+    "E4_lower": "/home/jay/research/data/delta3-codex-20261113/search/controls-v1-final/case-003/check.json",
+    "upper11_upper": "/home/jay/research/data/delta3-codex-20261113/search/controls-v1-final/case-004/check.json",
+    "upper11_lower": "/home/jay/research/data/delta3-codex-20261113/search/controls-v1-final/case-005/check.json",
+    "ends9_ends": "/home/jay/research/data/delta3-codex-20261113/search/controls-v1-final/case-006/check.json",
+    "ends9_lower": "/home/jay/research/data/delta3-codex-20261113/search/controls-v1-final/case-007/check.json",
+    "etv26_lower": "/home/jay/research/data/delta3-codex-20261113/search/controls-v1-final/case-008/check.json",
+    "etv42_lower": "/home/jay/research/data/delta3-codex-20261113/search/controls-v1-final/case-009/check.json",
+    "parent16_lower": "/home/jay/research/data/delta3-codex-20261113/search/controls-v1-final/case-010/check.json"
+  },
+  "seconds": 0.24940557200170588,
+  "max_child_rss_kb": 21424
+}

@@ -1,0 +1,10 @@
+{
+  "label": "COMPUTED",
+  "status": "setup failure before geometry ran",
+  "program": "probe_selection.py",
+  "error": "FileNotFoundError: DELTA3N20261113/weak_theory/findings.json",
+  "cause": "The initial relative source root used HERE.parents[2] rather than HERE.parents[1].",
+  "correction": "Set R to resume/; no source inputs or other tracks were changed.",
+  "mathematical_conclusion": null,
+  "later_edit_tool_failure": "apply_patch rejected a combined delete/add of README.md as multiple operations on one target; no files changed. Retried as a single update."
+}

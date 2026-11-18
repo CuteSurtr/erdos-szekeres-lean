@@ -1,0 +1,189 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "source": "IndexHelpers.lean",
+      "tag": "parent-real15-fresh-a-indexhelpers",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Balanced15.RealBridge.indices_nodup": [
+          "propext"
+        ],
+        "Delta3.Balanced15.RealBridge.indices_sorted": [
+          "propext"
+        ],
+        "Delta3.Balanced15.RealBridge.choose_sound": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.distinct_det_ne": []
+      }
+    },
+    {
+      "source": "BridgeBase.lean",
+      "tag": "parent-real15-fresh-a-bridgebase",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Balanced15.RealBridge.integer_orient": [
+          "propext"
+        ],
+        "Delta3.Balanced15.RealBridge.real_orient": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.real_x_strict": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.realPoint_injective": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.real_orient_ne": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.realSet_card": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.realSet_generalPosition": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "source": "ConvexBridge.lean",
+      "tag": "parent-real15-fresh-a-convexbridge",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Balanced15.RealBridge.quad_real_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.signConvex_of_real": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.sorted_subset_sublist": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.real_of_signConvex": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.no_real_seven_subsequence": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.no_real_heptagon": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "source": "TerminalReal.lean",
+      "tag": "parent-real15-fresh-a-terminalreal",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Balanced15.RealBridge.cap_real_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.no_real_five_cap_subsequence": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.terminalSafe_of_real": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.hitsSix_of_real": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.no_real_terminal_selection": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "source": "PointSetBridge.lean",
+      "tag": "parent-real15-fresh-a-pointsetbridge",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Balanced15.RealBridge.indices_strict": [
+          "propext"
+        ],
+        "Delta3.Balanced15.RealBridge.realCap_of_setCap": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.no_real_five_cap": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.realTerminalSafe_of_set": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.realHitsSix_of_set": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.no_real_subset_selection": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "source": "RealBalanced15.lean",
+      "tag": "parent-real15-fresh-a-realbalanced15",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Balanced15.RealBridge.realSet_distinct_x": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.balanced15_real_obstruction": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.RealBridge.exists_real_terminal_obstruction": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    }
+  ]
+}

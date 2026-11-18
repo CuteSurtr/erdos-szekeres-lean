@@ -1,0 +1,166 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "source": "F16Products.lean",
+      "tag": "parent-f16-algebra-a-f16products",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Forced16Algebra.product_congr": [
+          "propext"
+        ],
+        "Delta3.Forced16Algebra.product_one": [
+          "propext"
+        ],
+        "Delta3.Forced16Algebra.product_mul": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.power_le": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.power_lt": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.product_le": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.product_lt": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.weighted_product_contradiction": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.power_pos": [],
+        "Delta3.Forced16Algebra.product_pos": []
+      }
+    },
+    {
+      "source": "F16Cancellation.lean",
+      "tag": "parent-f16-algebra-a-f16cancellation",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Forced16Algebra.monomial_congr": [
+          "propext"
+        ],
+        "Delta3.Forced16Algebra.monomial_zero": [
+          "propext"
+        ],
+        "Delta3.Forced16Algebra.monomial_add": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.monomial_scale": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.weighted_monomials": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.cancelling_certificate_contradiction": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.monomial_pos": []
+      }
+    },
+    {
+      "source": "F16GP.lean",
+      "tag": "parent-f16-algebra-a-f16gp",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Forced16Algebra.determinant_gp": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.orient_gp": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.magnitude_of_neg": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.magnitude_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.magnitude_of_pos": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.magnitude_pos": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.unique_sign_magnitude": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "source": "F16GPMagnitude.lean",
+      "tag": "parent-f16-algebra-a-f16gpmagnitude",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Forced16Algebra.magnitude_neg": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.magnitude_mul": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.gp_product_inequality": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    },
+    {
+      "source": "F16Certificate.lean",
+      "tag": "parent-f16-algebra-a-f16certificate",
+      "exit_code": 0,
+      "axiom_reports": {
+        "Delta3.Forced16Algebra.coordinate_gp_inequality": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Forced16Algebra.gp_certificate_contradiction": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    }
+  ],
+  "fixed_model_Lean_claim": false
+}

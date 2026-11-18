@@ -1,0 +1,348 @@
+{
+  "status": "PASS",
+  "label": "COMPUTED",
+  "name": "left13",
+  "left": {
+    "m": 13,
+    "n": 7,
+    "GP": true,
+    "fourcaps": 0,
+    "fivecaps": 0,
+    "ngons": 0,
+    "targets": 165,
+    "cap_triples": 106,
+    "bad_cap_triples": 106,
+    "End3": [
+      3,
+      4,
+      5,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maximum_abs_coordinate": 882369
+  },
+  "full": {
+    "m": 16,
+    "n": 7,
+    "GP": true,
+    "fourcaps": 318,
+    "fivecaps": 0,
+    "ngons": 0,
+    "targets": 271,
+    "cap_triples": 340,
+    "bad_cap_triples": 178,
+    "End3": [
+      3,
+      4,
+      5,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "maximum_abs_coordinate": 6627667
+  },
+  "P_left": [
+    [
+      -844374,
+      882369
+    ],
+    [
+      -777797,
+      673920
+    ],
+    [
+      -666388,
+      534411
+    ],
+    [
+      -415596,
+      -650873
+    ],
+    [
+      -373275,
+      -686237
+    ],
+    [
+      -203631,
+      -829902
+    ],
+    [
+      85240,
+      116040
+    ],
+    [
+      167726,
+      409733
+    ],
+    [
+      194410,
+      513930
+    ],
+    [
+      237399,
+      -682215
+    ],
+    [
+      246159,
+      -688113
+    ],
+    [
+      291993,
+      -241018
+    ],
+    [
+      451073,
+      -473361
+    ]
+  ],
+  "P_full": [
+    [
+      -844374,
+      882369
+    ],
+    [
+      -777797,
+      673920
+    ],
+    [
+      -666388,
+      534411
+    ],
+    [
+      -415596,
+      -650873
+    ],
+    [
+      -373275,
+      -686237
+    ],
+    [
+      -203631,
+      -829902
+    ],
+    [
+      85240,
+      116040
+    ],
+    [
+      167726,
+      409733
+    ],
+    [
+      194410,
+      513930
+    ],
+    [
+      237399,
+      -682215
+    ],
+    [
+      246159,
+      -688113
+    ],
+    [
+      291993,
+      -241018
+    ],
+    [
+      451073,
+      -473361
+    ],
+    [
+      451074,
+      -6627667
+    ],
+    [
+      451075,
+      -6627664
+    ],
+    [
+      451076,
+      -6627659
+    ]
+  ],
+  "parent_fixture_values_ignored": true,
+  "option1_all_B": 69,
+  "option1_bounded_B": 69,
+  "option2_B": 0,
+  "thinning_controls": 0,
+  "all_selector_assignments_compared": 65536,
+  "terminal_safe_full_count": 483,
+  "End4_exactly_End3_times_R": true,
+  "target_and_bad_triple_classification_exact": true,
+  "canonical": {
+    "direct": {
+      "rows_checked": 40574,
+      "false_by_phase": {
+        "no_covered_cup_transversal": 69
+      },
+      "nonfailure_all_true": true,
+      "map_values_assigned": 4017
+    },
+    "compact": {
+      "rows_checked": 108091,
+      "false_by_phase": {
+        "no_covered_cup_transversal": 69
+      },
+      "nonfailure_all_true": true,
+      "map_values_assigned": 15120
+    }
+  },
+  "native_formulas": {
+    "direct": {
+      "status": "PASS",
+      "label": "COMPUTED",
+      "left_m": 13,
+      "right_m": 3,
+      "n": 7,
+      "variant": "direct",
+      "variables": 4017,
+      "clauses": 40574,
+      "literals": 536484,
+      "phase_rows": {
+        "signotope": 5720,
+        "no5cap": 1287,
+        "convex4_equivalence": 5720,
+        "convex_larger_equivalence": 18018,
+        "no_ngon": 1716,
+        "left_has_no_fourcap": 715,
+        "ends_three_cap_equivalence": 299,
+        "no_covered_cup_transversal": 7099
+      },
+      "phase_literals": {
+        "signotope": 17160,
+        "no5cap": 3861,
+        "convex4_equivalence": 17160,
+        "convex_larger_equivalence": 48048,
+        "no_ngon": 8580,
+        "left_has_no_fourcap": 2860,
+        "ends_three_cap_equivalence": 871,
+        "no_covered_cup_transversal": 437944
+      },
+      "phase_max_width": {
+        "signotope": 3,
+        "no5cap": 3,
+        "convex4_equivalence": 3,
+        "convex_larger_equivalence": 6,
+        "no_ngon": 5,
+        "left_has_no_fourcap": 4,
+        "ends_three_cap_equivalence": 67,
+        "no_covered_cup_transversal": 1716
+      },
+      "map_counts": {
+        "orientation": 286,
+        "convex": 3718,
+        "ends_three_cap": 13
+      },
+      "cnf_map_byte_identical_rebuild": true,
+      "hashes": {
+        "/home/jay/research/data/delta3-codex-20261113/extension/low13-n7.cnf": "dde85ef3db6b5aa6cae087b70f45f3a0955ee58512e453fc9753ea254126877f",
+        "/home/jay/research/data/delta3-codex-20261113/extension/low13-n7.cnf.map": "b821a6f271d5d94bd18b00bbe14842a4f372bb5bbe2a5c9594fb0a13a07f2fbd"
+      },
+      "empty_End3_count": 2,
+      "option2_rows": 0
+    },
+    "compact": {
+      "status": "PASS",
+      "label": "COMPUTED",
+      "left_m": 13,
+      "right_m": 3,
+      "n": 7,
+      "variant": "compact",
+      "variables": 15120,
+      "clauses": 108091,
+      "literals": 291782,
+      "phase_rows": {
+        "signotope": 5720,
+        "no5cap": 1287,
+        "convex4_equivalence": 5720,
+        "convex_larger_equivalence": 18018,
+        "no_ngon": 1716,
+        "left_has_no_fourcap": 715,
+        "ends_three_cap_equivalence": 299,
+        "bad_pair_or_cap_exact_containment": 34749,
+        "target_exact_containment": 32768,
+        "no_covered_cup_transversal": 7099
+      },
+      "phase_literals": {
+        "signotope": 17160,
+        "no5cap": 3861,
+        "convex4_equivalence": 17160,
+        "convex_larger_equivalence": 48048,
+        "no_ngon": 8580,
+        "left_has_no_fourcap": 2860,
+        "ends_three_cap_equivalence": 871,
+        "bad_pair_or_cap_exact_containment": 90233,
+        "target_exact_containment": 90112,
+        "no_covered_cup_transversal": 12897
+      },
+      "phase_max_width": {
+        "signotope": 3,
+        "no5cap": 3,
+        "convex4_equivalence": 3,
+        "convex_larger_equivalence": 6,
+        "no_ngon": 5,
+        "left_has_no_fourcap": 4,
+        "ends_three_cap_equivalence": 67,
+        "bad_pair_or_cap_exact_containment": 5,
+        "target_exact_containment": 8,
+        "no_covered_cup_transversal": 2
+      },
+      "map_counts": {
+        "orientation": 286,
+        "convex": 3718,
+        "ends_three_cap": 13,
+        "bad_pair_or_cap_contains": 7007,
+        "target_contains": 4096
+      },
+      "cnf_map_byte_identical_rebuild": true,
+      "hashes": {
+        "/home/jay/research/data/delta3-codex-20261113/extension/low-split-audit/left13-compact.cnf": "2c3d3bf3c38b23f94e6c8d185a30ea070eb87fb353ebb24e3fe4f0cfd63dcba9",
+        "/home/jay/research/data/delta3-codex-20261113/extension/low-split-audit/left13-compact.cnf.map": "ea5baa44ab229f3aa11aa2b590f32ca6972ebc0e8125c3e9546476628fcb2ee6"
+      },
+      "empty_End3_count": 2,
+      "option2_rows": 0
+    }
+  },
+  "generation_commands": [
+    [
+      "/home/jay/research/data/delta3-codex-20261113/extension/low-split-audit/low-compact",
+      "13",
+      "7",
+      "/home/jay/research/data/delta3-codex-20261113/extension/low-split-audit/left13-compact.cnf"
+    ]
+  ],
+  "inputs_before": {
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split_audit/tools/controls.py": "392ce4c8dd08370a114aeb40176eaf50efb355b41e27cc15fa9134abb3569a62",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split_audit/tools/rows.py": "543771f9c0068b1fa881d379e0d3e7b7020140d351ec1902d112ab58235f0387",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/structure2/data/low_classification_replay.json": "c96f080ba21ddbaa9050f3f66a3985b6836fb931f302cd76455b7fb7ec7e2793",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split_cnf.cpp": "c7793f8d8a92c5230c38091bf23366e49ec037624085f8752405609c88a335c8",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split_compact.cpp": "1fb043a5d29fa86047ba05cae86fdfb248e6069bc6731c4ee39c181737319303",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/compact/compact_cnf.cpp": "1964e17b777fd7b7a973f12b2911c003a050047f13a621f523a9f98c6e31d553",
+    "/home/jay/research/data/delta3-codex-20261113/extension/low-split-audit/low-direct": "49181e766420c8c0fc0ed100a2252a06b18eb2f2c92f852aacfbbad8ebe5b746",
+    "/home/jay/research/data/delta3-codex-20261113/extension/low-split-audit/low-compact": "2d83a86ab46aa50a8c6d11ec6bc95ca3be3f6458e98cdc13794d6a7a0ac03ab9"
+  },
+  "inputs_after": {
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split_audit/tools/controls.py": "392ce4c8dd08370a114aeb40176eaf50efb355b41e27cc15fa9134abb3569a62",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split_audit/tools/rows.py": "543771f9c0068b1fa881d379e0d3e7b7020140d351ec1902d112ab58235f0387",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/structure2/data/low_classification_replay.json": "c96f080ba21ddbaa9050f3f66a3985b6836fb931f302cd76455b7fb7ec7e2793",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split_cnf.cpp": "c7793f8d8a92c5230c38091bf23366e49ec037624085f8752405609c88a335c8",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split_compact.cpp": "1fb043a5d29fa86047ba05cae86fdfb248e6069bc6731c4ee39c181737319303",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/compact/compact_cnf.cpp": "1964e17b777fd7b7a973f12b2911c003a050047f13a621f523a9f98c6e31d553",
+    "/home/jay/research/data/delta3-codex-20261113/extension/low-split-audit/low-direct": "49181e766420c8c0fc0ed100a2252a06b18eb2f2c92f852aacfbbad8ebe5b746",
+    "/home/jay/research/data/delta3-codex-20261113/extension/low-split-audit/low-compact": "2d83a86ab46aa50a8c6d11ec6bc95ca3be3f6458e98cdc13794d6a7a0ac03ab9"
+  },
+  "peak_rss_KiB": 28072,
+  "limits": {
+    "AS_MiB": 300,
+    "CPU_count": 1,
+    "wall_seconds": 20,
+    "CPU_seconds": 19
+  }
+}

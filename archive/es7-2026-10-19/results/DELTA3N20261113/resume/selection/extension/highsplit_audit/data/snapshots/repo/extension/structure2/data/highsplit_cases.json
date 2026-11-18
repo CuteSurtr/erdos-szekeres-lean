@@ -1,0 +1,6572 @@
+{
+  "status": "PASS",
+  "cases": {
+    "n5_case_i_cap_R": {
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          217
+        ],
+        [
+          2,
+          433
+        ],
+        [
+          3,
+          221
+        ],
+        [
+          4,
+          226
+        ]
+      ],
+      "n": 5,
+      "m": 5,
+      "cut": 1,
+      "c": 1,
+      "maxima": {
+        "cup": 3,
+        "cap": 4,
+        "gon": 4
+      },
+      "beta_left": [
+        1
+      ],
+      "selected": [
+        {
+          "A": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "selected_cap_triples": [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              4
+            ]
+          ],
+          "terminal_certificates": {
+            "(1, 2, 3)": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "(1, 2, 4)": [
+              0,
+              1,
+              2,
+              4
+            ]
+          },
+          "complement_maxgon": 1
+        }
+      ],
+      "case": "i"
+    },
+    "n5_case_i_longcup_R": {
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          12
+        ],
+        [
+          2,
+          13
+        ],
+        [
+          3,
+          16
+        ],
+        [
+          4,
+          21
+        ]
+      ],
+      "n": 5,
+      "m": 5,
+      "cut": 1,
+      "c": 1,
+      "maxima": {
+        "cup": 4,
+        "cap": 3,
+        "gon": 4
+      },
+      "beta_left": [
+        1
+      ],
+      "selected": [
+        {
+          "A": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 1
+        }
+      ],
+      "case": "i"
+    },
+    "n5_case_ii_both_internal_targets": {
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          125
+        ],
+        [
+          2,
+          125
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          867
+        ],
+        [
+          5,
+          868
+        ],
+        [
+          6,
+          871
+        ],
+        [
+          7,
+          876
+        ]
+      ],
+      "n": 5,
+      "m": 8,
+      "cut": 4,
+      "c": 2,
+      "maxima": {
+        "cup": 4,
+        "cap": 4,
+        "gon": 4
+      },
+      "beta_left": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "selected": [
+        {
+          "A": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "selected_cap_triples": [
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "terminal_certificates": {
+            "(1, 2, 3)": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            1,
+            2,
+            3,
+            5
+          ],
+          "selected_cap_triples": [
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "terminal_certificates": {
+            "(1, 2, 3)": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            1,
+            2,
+            3,
+            6
+          ],
+          "selected_cap_triples": [
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "terminal_certificates": {
+            "(1, 2, 3)": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            1,
+            2,
+            3,
+            7
+          ],
+          "selected_cap_triples": [
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "terminal_certificates": {
+            "(1, 2, 3)": [
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "complement_maxgon": 3
+        }
+      ],
+      "case": "ii"
+    },
+    "n5_case_iii_nonvacuous_left": {
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          216
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          865
+        ]
+      ],
+      "n": 5,
+      "m": 5,
+      "cut": 4,
+      "c": 3,
+      "maxima": {
+        "cup": 4,
+        "cap": 3,
+        "gon": 4
+      },
+      "beta_left": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "selected": [
+        {
+          "A": [
+            0,
+            4
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            1,
+            4
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            0,
+            1,
+            4
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 2
+        },
+        {
+          "A": [
+            2,
+            4
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            0,
+            2,
+            4
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 2
+        },
+        {
+          "A": [
+            1,
+            2,
+            4
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 2
+        },
+        {
+          "A": [
+            3,
+            4
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            0,
+            3,
+            4
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 2
+        },
+        {
+          "A": [
+            1,
+            3,
+            4
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 2
+        },
+        {
+          "A": [
+            2,
+            3,
+            4
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 2
+        },
+        {
+          "A": [
+            0,
+            2,
+            3,
+            4
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 1
+        },
+        {
+          "A": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 1
+        }
+      ],
+      "case": "iii",
+      "old_four_caps_unchanged": true,
+      "conditional_choices_checked": 12
+    },
+    "n5_case_iii_empty_left_selection": {
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          8
+        ]
+      ],
+      "n": 5,
+      "m": 4,
+      "cut": 3,
+      "c": 3,
+      "maxima": {
+        "cup": 4,
+        "cap": 2,
+        "gon": 4
+      },
+      "beta_left": [
+        1,
+        2,
+        3
+      ],
+      "selected": [
+        {
+          "A": [
+            3
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        }
+      ],
+      "case": "iii",
+      "old_four_caps_unchanged": true,
+      "conditional_choices_checked": 1
+    },
+    "n6_case_i_cap_R": {
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1026
+        ],
+        [
+          3,
+          1027
+        ],
+        [
+          4,
+          1369
+        ],
+        [
+          5,
+          1035
+        ],
+        [
+          6,
+          1042
+        ]
+      ],
+      "n": 6,
+      "m": 7,
+      "cut": 2,
+      "c": 2,
+      "maxima": {
+        "cup": 4,
+        "cap": 4,
+        "gon": 5
+      },
+      "beta_left": [
+        1,
+        2
+      ],
+      "selected": [
+        {
+          "A": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "selected_cap_triples": [
+            [
+              2,
+              4,
+              5
+            ],
+            [
+              2,
+              4,
+              6
+            ],
+            [
+              3,
+              4,
+              5
+            ],
+            [
+              3,
+              4,
+              6
+            ]
+          ],
+          "terminal_certificates": {
+            "(2, 4, 5)": [
+              0,
+              2,
+              4,
+              5
+            ],
+            "(2, 4, 6)": [
+              0,
+              2,
+              4,
+              6
+            ],
+            "(3, 4, 5)": [
+              0,
+              2,
+              4,
+              5
+            ],
+            "(3, 4, 6)": [
+              0,
+              2,
+              4,
+              6
+            ]
+          },
+          "complement_maxgon": 2
+        }
+      ],
+      "case": "i"
+    },
+    "n6_case_i_longcup_R": {
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          27
+        ],
+        [
+          3,
+          28
+        ],
+        [
+          4,
+          31
+        ],
+        [
+          5,
+          36
+        ],
+        [
+          6,
+          43
+        ]
+      ],
+      "n": 6,
+      "m": 7,
+      "cut": 2,
+      "c": 2,
+      "maxima": {
+        "cup": 5,
+        "cap": 3,
+        "gon": 5
+      },
+      "beta_left": [
+        1,
+        2
+      ],
+      "selected": [
+        {
+          "A": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 2
+        }
+      ],
+      "case": "i"
+    },
+    "n6_case_ii_both_internal_targets": {
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          216
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          216
+        ],
+        [
+          4,
+          16
+        ],
+        [
+          5,
+          1929
+        ],
+        [
+          6,
+          1930
+        ],
+        [
+          7,
+          1933
+        ],
+        [
+          8,
+          1938
+        ],
+        [
+          9,
+          1945
+        ]
+      ],
+      "n": 6,
+      "m": 10,
+      "cut": 5,
+      "c": 3,
+      "maxima": {
+        "cup": 5,
+        "cap": 4,
+        "gon": 5
+      },
+      "beta_left": [
+        1,
+        2,
+        2,
+        3,
+        3
+      ],
+      "selected": [
+        {
+          "A": [
+            3,
+            4,
+            5
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            3,
+            4,
+            6
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            3,
+            4,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            3,
+            4,
+            8
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            3,
+            4,
+            9
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        }
+      ],
+      "case": "ii"
+    },
+    "n6_case_iii_nonvacuous_left": {
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          343
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          16
+        ],
+        [
+          5,
+          1370
+        ]
+      ],
+      "n": 6,
+      "m": 6,
+      "cut": 5,
+      "c": 4,
+      "maxima": {
+        "cup": 5,
+        "cap": 3,
+        "gon": 5
+      },
+      "beta_left": [
+        1,
+        2,
+        3,
+        3,
+        4
+      ],
+      "selected": [
+        {
+          "A": [
+            0,
+            5
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            1,
+            5
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            0,
+            1,
+            5
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            2,
+            5
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            0,
+            2,
+            5
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            1,
+            2,
+            5
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            0,
+            1,
+            2,
+            5
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 2
+        },
+        {
+          "A": [
+            3,
+            5
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            0,
+            3,
+            5
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            1,
+            3,
+            5
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            0,
+            1,
+            3,
+            5
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 2
+        },
+        {
+          "A": [
+            2,
+            3,
+            5
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            4,
+            5
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            0,
+            4,
+            5
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            1,
+            4,
+            5
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            0,
+            1,
+            4,
+            5
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 2
+        },
+        {
+          "A": [
+            2,
+            4,
+            5
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            3,
+            4,
+            5
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            0,
+            3,
+            4,
+            5
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 2
+        },
+        {
+          "A": [
+            1,
+            3,
+            4,
+            5
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 2
+        },
+        {
+          "A": [
+            0,
+            1,
+            3,
+            4,
+            5
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 1
+        },
+        {
+          "A": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 2
+        }
+      ],
+      "case": "iii",
+      "old_four_caps_unchanged": true,
+      "conditional_choices_checked": 22
+    },
+    "n6_case_iii_empty_left_selection": {
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          15
+        ]
+      ],
+      "n": 6,
+      "m": 5,
+      "cut": 4,
+      "c": 4,
+      "maxima": {
+        "cup": 5,
+        "cap": 2,
+        "gon": 5
+      },
+      "beta_left": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "selected": [
+        {
+          "A": [
+            4
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        }
+      ],
+      "case": "iii",
+      "old_four_caps_unchanged": true,
+      "conditional_choices_checked": 1
+    },
+    "n8_case_i_cap_R": {
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          4347
+        ],
+        [
+          5,
+          4348
+        ],
+        [
+          6,
+          4351
+        ],
+        [
+          7,
+          5076
+        ],
+        [
+          8,
+          4363
+        ],
+        [
+          9,
+          4372
+        ],
+        [
+          10,
+          4383
+        ]
+      ],
+      "n": 8,
+      "m": 11,
+      "cut": 4,
+      "c": 4,
+      "maxima": {
+        "cup": 6,
+        "cap": 4,
+        "gon": 7
+      },
+      "beta_left": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "selected": [
+        {
+          "A": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "selected_cap_triples": [
+            [
+              4,
+              7,
+              8
+            ],
+            [
+              4,
+              7,
+              9
+            ],
+            [
+              4,
+              7,
+              10
+            ],
+            [
+              5,
+              7,
+              8
+            ],
+            [
+              5,
+              7,
+              9
+            ],
+            [
+              5,
+              7,
+              10
+            ],
+            [
+              6,
+              7,
+              8
+            ],
+            [
+              6,
+              7,
+              9
+            ],
+            [
+              6,
+              7,
+              10
+            ]
+          ],
+          "terminal_certificates": {
+            "(4, 7, 8)": [
+              0,
+              4,
+              7,
+              8
+            ],
+            "(4, 7, 9)": [
+              0,
+              4,
+              7,
+              9
+            ],
+            "(4, 7, 10)": [
+              0,
+              4,
+              7,
+              10
+            ],
+            "(5, 7, 8)": [
+              0,
+              4,
+              7,
+              8
+            ],
+            "(5, 7, 9)": [
+              0,
+              4,
+              7,
+              9
+            ],
+            "(5, 7, 10)": [
+              0,
+              4,
+              7,
+              10
+            ],
+            "(6, 7, 8)": [
+              0,
+              4,
+              7,
+              8
+            ],
+            "(6, 7, 9)": [
+              0,
+              4,
+              7,
+              9
+            ],
+            "(6, 7, 10)": [
+              0,
+              4,
+              7,
+              10
+            ]
+          },
+          "complement_maxgon": 4
+        }
+      ],
+      "case": "i"
+    },
+    "n8_case_i_longcup_R": {
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          75
+        ],
+        [
+          5,
+          76
+        ],
+        [
+          6,
+          79
+        ],
+        [
+          7,
+          84
+        ],
+        [
+          8,
+          91
+        ],
+        [
+          9,
+          100
+        ],
+        [
+          10,
+          111
+        ]
+      ],
+      "n": 8,
+      "m": 11,
+      "cut": 4,
+      "c": 4,
+      "maxima": {
+        "cup": 7,
+        "cap": 3,
+        "gon": 7
+      },
+      "beta_left": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "selected": [
+        {
+          "A": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        }
+      ],
+      "case": "i"
+    },
+    "n8_case_ii_both_internal_targets": {
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          512
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          16
+        ],
+        [
+          5,
+          512
+        ],
+        [
+          6,
+          36
+        ],
+        [
+          7,
+          6621
+        ],
+        [
+          8,
+          6622
+        ],
+        [
+          9,
+          6625
+        ],
+        [
+          10,
+          6630
+        ],
+        [
+          11,
+          6637
+        ],
+        [
+          12,
+          6646
+        ],
+        [
+          13,
+          6657
+        ]
+      ],
+      "n": 8,
+      "m": 14,
+      "cut": 7,
+      "c": 5,
+      "maxima": {
+        "cup": 7,
+        "cap": 4,
+        "gon": 7
+      },
+      "beta_left": [
+        1,
+        2,
+        2,
+        3,
+        4,
+        5,
+        5
+      ],
+      "selected": [
+        {
+          "A": [
+            5,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 6
+        },
+        {
+          "A": [
+            5,
+            6,
+            8
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 6
+        },
+        {
+          "A": [
+            5,
+            6,
+            9
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 6
+        },
+        {
+          "A": [
+            5,
+            6,
+            10
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 6
+        },
+        {
+          "A": [
+            5,
+            6,
+            11
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 6
+        },
+        {
+          "A": [
+            5,
+            6,
+            12
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 6
+        },
+        {
+          "A": [
+            5,
+            6,
+            13
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 6
+        }
+      ],
+      "case": "ii"
+    },
+    "n8_case_iii_nonvacuous_left": {
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          729
+        ],
+        [
+          4,
+          16
+        ],
+        [
+          5,
+          25
+        ],
+        [
+          6,
+          36
+        ],
+        [
+          7,
+          3630
+        ]
+      ],
+      "n": 8,
+      "m": 8,
+      "cut": 7,
+      "c": 6,
+      "maxima": {
+        "cup": 7,
+        "cap": 3,
+        "gon": 7
+      },
+      "beta_left": [
+        1,
+        2,
+        3,
+        4,
+        4,
+        5,
+        6
+      ],
+      "selected": [
+        {
+          "A": [
+            0,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 6
+        },
+        {
+          "A": [
+            1,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 6
+        },
+        {
+          "A": [
+            0,
+            1,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 5
+        },
+        {
+          "A": [
+            2,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 6
+        },
+        {
+          "A": [
+            0,
+            2,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 5
+        },
+        {
+          "A": [
+            1,
+            2,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 5
+        },
+        {
+          "A": [
+            0,
+            1,
+            2,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            3,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 6
+        },
+        {
+          "A": [
+            0,
+            3,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 5
+        },
+        {
+          "A": [
+            1,
+            3,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 5
+        },
+        {
+          "A": [
+            0,
+            1,
+            3,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            2,
+            3,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 5
+        },
+        {
+          "A": [
+            0,
+            2,
+            3,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            1,
+            2,
+            3,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            0,
+            1,
+            2,
+            3,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            4,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 6
+        },
+        {
+          "A": [
+            0,
+            4,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 5
+        },
+        {
+          "A": [
+            1,
+            4,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 5
+        },
+        {
+          "A": [
+            0,
+            1,
+            4,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            2,
+            4,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 5
+        },
+        {
+          "A": [
+            0,
+            2,
+            4,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            1,
+            2,
+            4,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            0,
+            1,
+            2,
+            4,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            3,
+            4,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 5
+        },
+        {
+          "A": [
+            5,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 6
+        },
+        {
+          "A": [
+            0,
+            5,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 5
+        },
+        {
+          "A": [
+            1,
+            5,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 5
+        },
+        {
+          "A": [
+            0,
+            1,
+            5,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            2,
+            5,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 5
+        },
+        {
+          "A": [
+            0,
+            2,
+            5,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            1,
+            2,
+            5,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            0,
+            1,
+            2,
+            5,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            3,
+            5,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 5
+        },
+        {
+          "A": [
+            4,
+            5,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 5
+        },
+        {
+          "A": [
+            0,
+            4,
+            5,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            1,
+            4,
+            5,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            0,
+            1,
+            4,
+            5,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            2,
+            4,
+            5,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            0,
+            2,
+            4,
+            5,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            1,
+            2,
+            4,
+            5,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 2
+        },
+        {
+          "A": [
+            3,
+            4,
+            5,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 6
+        },
+        {
+          "A": [
+            0,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 5
+        },
+        {
+          "A": [
+            1,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 5
+        },
+        {
+          "A": [
+            0,
+            1,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            2,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 5
+        },
+        {
+          "A": [
+            0,
+            2,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            1,
+            2,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            0,
+            1,
+            2,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            3,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 5
+        },
+        {
+          "A": [
+            4,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 5
+        },
+        {
+          "A": [
+            0,
+            4,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            1,
+            4,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            0,
+            1,
+            4,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            2,
+            4,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            0,
+            2,
+            4,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            1,
+            2,
+            4,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            0,
+            1,
+            2,
+            4,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 2
+        },
+        {
+          "A": [
+            3,
+            4,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            5,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 5
+        },
+        {
+          "A": [
+            0,
+            5,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            1,
+            5,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            0,
+            1,
+            5,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            2,
+            5,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            0,
+            2,
+            5,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            1,
+            2,
+            5,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            0,
+            1,
+            2,
+            5,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 2
+        },
+        {
+          "A": [
+            3,
+            5,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 4
+        },
+        {
+          "A": [
+            0,
+            4,
+            5,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            1,
+            4,
+            5,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            0,
+            1,
+            4,
+            5,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 2
+        },
+        {
+          "A": [
+            2,
+            4,
+            5,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        },
+        {
+          "A": [
+            0,
+            2,
+            4,
+            5,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 2
+        },
+        {
+          "A": [
+            1,
+            2,
+            4,
+            5,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 2
+        },
+        {
+          "A": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 1
+        },
+        {
+          "A": [
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 3
+        }
+      ],
+      "case": "iii",
+      "old_four_caps_unchanged": true,
+      "conditional_choices_checked": 78
+    },
+    "n8_case_iii_empty_left_selection": {
+      "P": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          16
+        ],
+        [
+          5,
+          25
+        ],
+        [
+          6,
+          35
+        ]
+      ],
+      "n": 8,
+      "m": 7,
+      "cut": 6,
+      "c": 6,
+      "maxima": {
+        "cup": 7,
+        "cap": 2,
+        "gon": 7
+      },
+      "beta_left": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "selected": [
+        {
+          "A": [
+            6
+          ],
+          "selected_cap_triples": [],
+          "terminal_certificates": {},
+          "complement_maxgon": 6
+        }
+      ],
+      "case": "iii",
+      "old_four_caps_unchanged": true,
+      "conditional_choices_checked": 1
+    },
+    "n7_case_iii_terminal_caps": {
+      "P": [
+        [
+          0,
+          9
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          354
+        ],
+        [
+          5,
+          353
+        ],
+        [
+          6,
+          350
+        ],
+        [
+          7,
+          380
+        ],
+        [
+          8,
+          381
+        ],
+        [
+          9,
+          384
+        ],
+        [
+          10,
+          135429
+        ],
+        [
+          11,
+          135428
+        ],
+        [
+          12,
+          135425
+        ],
+        [
+          13,
+          135455
+        ],
+        [
+          14,
+          135456
+        ],
+        [
+          15,
+          135459
+        ],
+        [
+          16,
+          135775
+        ],
+        [
+          17,
+          135776
+        ],
+        [
+          18,
+          135779
+        ],
+        [
+          19,
+          135784
+        ],
+        [
+          20,
+          140825
+        ],
+        [
+          21,
+          140826
+        ],
+        [
+          22,
+          140829
+        ],
+        [
+          23,
+          140834
+        ],
+        [
+          24,
+          140841
+        ],
+        [
+          25,
+          2161105
+        ]
+      ],
+      "n": 7,
+      "m": 26,
+      "cut": 25,
+      "c": 5,
+      "maxima": {
+        "cup": 6,
+        "cap": 4,
+        "gon": 6
+      },
+      "beta_left": [
+        1,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "selected": [
+        {
+          "A": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            25
+          ],
+          "selected_cap_triples": [
+            [
+              10,
+              11,
+              12
+            ],
+            [
+              10,
+              13,
+              14
+            ],
+            [
+              10,
+              13,
+              15
+            ],
+            [
+              10,
+              14,
+              15
+            ],
+            [
+              10,
+              16,
+              17
+            ],
+            [
+              10,
+              16,
+              18
+            ],
+            [
+              10,
+              16,
+              19
+            ],
+            [
+              10,
+              17,
+              18
+            ],
+            [
+              10,
+              17,
+              19
+            ],
+            [
+              10,
+              18,
+              19
+            ],
+            [
+              11,
+              13,
+              14
+            ],
+            [
+              11,
+              13,
+              15
+            ],
+            [
+              11,
+              14,
+              15
+            ],
+            [
+              11,
+              16,
+              17
+            ],
+            [
+              11,
+              16,
+              18
+            ],
+            [
+              11,
+              16,
+              19
+            ],
+            [
+              11,
+              17,
+              18
+            ],
+            [
+              11,
+              17,
+              19
+            ],
+            [
+              11,
+              18,
+              19
+            ],
+            [
+              12,
+              13,
+              14
+            ],
+            [
+              12,
+              13,
+              15
+            ],
+            [
+              12,
+              14,
+              15
+            ],
+            [
+              12,
+              16,
+              17
+            ],
+            [
+              12,
+              16,
+              18
+            ],
+            [
+              12,
+              16,
+              19
+            ],
+            [
+              12,
+              17,
+              18
+            ],
+            [
+              12,
+              17,
+              19
+            ],
+            [
+              12,
+              18,
+              19
+            ],
+            [
+              13,
+              16,
+              17
+            ],
+            [
+              13,
+              16,
+              18
+            ],
+            [
+              13,
+              16,
+              19
+            ],
+            [
+              13,
+              17,
+              18
+            ],
+            [
+              13,
+              17,
+              19
+            ],
+            [
+              13,
+              18,
+              19
+            ],
+            [
+              14,
+              16,
+              17
+            ],
+            [
+              14,
+              16,
+              18
+            ],
+            [
+              14,
+              16,
+              19
+            ],
+            [
+              14,
+              17,
+              18
+            ],
+            [
+              14,
+              17,
+              19
+            ],
+            [
+              14,
+              18,
+              19
+            ],
+            [
+              15,
+              16,
+              17
+            ],
+            [
+              15,
+              16,
+              18
+            ],
+            [
+              15,
+              16,
+              19
+            ],
+            [
+              15,
+              17,
+              18
+            ],
+            [
+              15,
+              17,
+              19
+            ],
+            [
+              15,
+              18,
+              19
+            ]
+          ],
+          "terminal_certificates": {
+            "(10, 11, 12)": [
+              0,
+              10,
+              11,
+              12
+            ],
+            "(10, 13, 14)": [
+              0,
+              10,
+              13,
+              14
+            ],
+            "(10, 13, 15)": [
+              0,
+              10,
+              13,
+              15
+            ],
+            "(10, 14, 15)": [
+              0,
+              10,
+              14,
+              15
+            ],
+            "(10, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(10, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(10, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(10, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(10, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(10, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(11, 13, 14)": [
+              0,
+              10,
+              13,
+              14
+            ],
+            "(11, 13, 15)": [
+              0,
+              10,
+              13,
+              15
+            ],
+            "(11, 14, 15)": [
+              0,
+              10,
+              14,
+              15
+            ],
+            "(11, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(11, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(11, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(11, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(11, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(11, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(12, 13, 14)": [
+              0,
+              10,
+              13,
+              14
+            ],
+            "(12, 13, 15)": [
+              0,
+              10,
+              13,
+              15
+            ],
+            "(12, 14, 15)": [
+              0,
+              10,
+              14,
+              15
+            ],
+            "(12, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(12, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(12, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(12, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(12, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(12, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(13, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(13, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(13, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(13, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(13, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(13, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(14, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(14, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(14, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(14, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(14, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(14, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(15, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(15, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(15, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(15, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(15, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(15, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ]
+          },
+          "complement_maxgon": 5
+        }
+      ],
+      "case": "iii",
+      "old_four_caps_unchanged": true,
+      "conditional_choices_checked": 1
+    },
+    "n7_case_ii_terminal_caps": {
+      "P": [
+        [
+          0,
+          9
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          354
+        ],
+        [
+          5,
+          353
+        ],
+        [
+          6,
+          350
+        ],
+        [
+          7,
+          380
+        ],
+        [
+          8,
+          381
+        ],
+        [
+          9,
+          384
+        ],
+        [
+          10,
+          7704
+        ],
+        [
+          11,
+          7703
+        ],
+        [
+          12,
+          7700
+        ],
+        [
+          13,
+          7730
+        ],
+        [
+          14,
+          7731
+        ],
+        [
+          15,
+          7734
+        ],
+        [
+          16,
+          8050
+        ],
+        [
+          17,
+          8051
+        ],
+        [
+          18,
+          8054
+        ],
+        [
+          19,
+          8059
+        ],
+        [
+          20,
+          117480
+        ],
+        [
+          21,
+          117481
+        ],
+        [
+          22,
+          117484
+        ],
+        [
+          23,
+          117489
+        ],
+        [
+          24,
+          117496
+        ],
+        [
+          25,
+          117505
+        ]
+      ],
+      "n": 7,
+      "m": 26,
+      "cut": 20,
+      "c": 4,
+      "maxima": {
+        "cup": 6,
+        "cap": 4,
+        "gon": 6
+      },
+      "beta_left": [
+        1,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "selected": [
+        {
+          "A": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "selected_cap_triples": [
+            [
+              10,
+              11,
+              12
+            ],
+            [
+              10,
+              13,
+              14
+            ],
+            [
+              10,
+              13,
+              15
+            ],
+            [
+              10,
+              14,
+              15
+            ],
+            [
+              10,
+              16,
+              17
+            ],
+            [
+              10,
+              16,
+              18
+            ],
+            [
+              10,
+              16,
+              19
+            ],
+            [
+              10,
+              17,
+              18
+            ],
+            [
+              10,
+              17,
+              19
+            ],
+            [
+              10,
+              18,
+              19
+            ],
+            [
+              11,
+              13,
+              14
+            ],
+            [
+              11,
+              13,
+              15
+            ],
+            [
+              11,
+              14,
+              15
+            ],
+            [
+              11,
+              16,
+              17
+            ],
+            [
+              11,
+              16,
+              18
+            ],
+            [
+              11,
+              16,
+              19
+            ],
+            [
+              11,
+              17,
+              18
+            ],
+            [
+              11,
+              17,
+              19
+            ],
+            [
+              11,
+              18,
+              19
+            ],
+            [
+              12,
+              13,
+              14
+            ],
+            [
+              12,
+              13,
+              15
+            ],
+            [
+              12,
+              14,
+              15
+            ],
+            [
+              12,
+              16,
+              17
+            ],
+            [
+              12,
+              16,
+              18
+            ],
+            [
+              12,
+              16,
+              19
+            ],
+            [
+              12,
+              17,
+              18
+            ],
+            [
+              12,
+              17,
+              19
+            ],
+            [
+              12,
+              18,
+              19
+            ],
+            [
+              13,
+              16,
+              17
+            ],
+            [
+              13,
+              16,
+              18
+            ],
+            [
+              13,
+              16,
+              19
+            ],
+            [
+              13,
+              17,
+              18
+            ],
+            [
+              13,
+              17,
+              19
+            ],
+            [
+              13,
+              18,
+              19
+            ],
+            [
+              14,
+              16,
+              17
+            ],
+            [
+              14,
+              16,
+              18
+            ],
+            [
+              14,
+              16,
+              19
+            ],
+            [
+              14,
+              17,
+              18
+            ],
+            [
+              14,
+              17,
+              19
+            ],
+            [
+              14,
+              18,
+              19
+            ],
+            [
+              15,
+              16,
+              17
+            ],
+            [
+              15,
+              16,
+              18
+            ],
+            [
+              15,
+              16,
+              19
+            ],
+            [
+              15,
+              17,
+              18
+            ],
+            [
+              15,
+              17,
+              19
+            ],
+            [
+              15,
+              18,
+              19
+            ]
+          ],
+          "terminal_certificates": {
+            "(10, 11, 12)": [
+              0,
+              10,
+              11,
+              12
+            ],
+            "(10, 13, 14)": [
+              0,
+              10,
+              13,
+              14
+            ],
+            "(10, 13, 15)": [
+              0,
+              10,
+              13,
+              15
+            ],
+            "(10, 14, 15)": [
+              0,
+              10,
+              14,
+              15
+            ],
+            "(10, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(10, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(10, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(10, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(10, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(10, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(11, 13, 14)": [
+              0,
+              10,
+              13,
+              14
+            ],
+            "(11, 13, 15)": [
+              0,
+              10,
+              13,
+              15
+            ],
+            "(11, 14, 15)": [
+              0,
+              10,
+              14,
+              15
+            ],
+            "(11, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(11, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(11, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(11, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(11, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(11, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(12, 13, 14)": [
+              0,
+              10,
+              13,
+              14
+            ],
+            "(12, 13, 15)": [
+              0,
+              10,
+              13,
+              15
+            ],
+            "(12, 14, 15)": [
+              0,
+              10,
+              14,
+              15
+            ],
+            "(12, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(12, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(12, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(12, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(12, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(12, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(13, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(13, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(13, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(13, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(13, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(13, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(14, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(14, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(14, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(14, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(14, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(14, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(15, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(15, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(15, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(15, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(15, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(15, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ]
+          },
+          "complement_maxgon": 5
+        },
+        {
+          "A": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            21
+          ],
+          "selected_cap_triples": [
+            [
+              10,
+              11,
+              12
+            ],
+            [
+              10,
+              13,
+              14
+            ],
+            [
+              10,
+              13,
+              15
+            ],
+            [
+              10,
+              14,
+              15
+            ],
+            [
+              10,
+              16,
+              17
+            ],
+            [
+              10,
+              16,
+              18
+            ],
+            [
+              10,
+              16,
+              19
+            ],
+            [
+              10,
+              17,
+              18
+            ],
+            [
+              10,
+              17,
+              19
+            ],
+            [
+              10,
+              18,
+              19
+            ],
+            [
+              11,
+              13,
+              14
+            ],
+            [
+              11,
+              13,
+              15
+            ],
+            [
+              11,
+              14,
+              15
+            ],
+            [
+              11,
+              16,
+              17
+            ],
+            [
+              11,
+              16,
+              18
+            ],
+            [
+              11,
+              16,
+              19
+            ],
+            [
+              11,
+              17,
+              18
+            ],
+            [
+              11,
+              17,
+              19
+            ],
+            [
+              11,
+              18,
+              19
+            ],
+            [
+              12,
+              13,
+              14
+            ],
+            [
+              12,
+              13,
+              15
+            ],
+            [
+              12,
+              14,
+              15
+            ],
+            [
+              12,
+              16,
+              17
+            ],
+            [
+              12,
+              16,
+              18
+            ],
+            [
+              12,
+              16,
+              19
+            ],
+            [
+              12,
+              17,
+              18
+            ],
+            [
+              12,
+              17,
+              19
+            ],
+            [
+              12,
+              18,
+              19
+            ],
+            [
+              13,
+              16,
+              17
+            ],
+            [
+              13,
+              16,
+              18
+            ],
+            [
+              13,
+              16,
+              19
+            ],
+            [
+              13,
+              17,
+              18
+            ],
+            [
+              13,
+              17,
+              19
+            ],
+            [
+              13,
+              18,
+              19
+            ],
+            [
+              14,
+              16,
+              17
+            ],
+            [
+              14,
+              16,
+              18
+            ],
+            [
+              14,
+              16,
+              19
+            ],
+            [
+              14,
+              17,
+              18
+            ],
+            [
+              14,
+              17,
+              19
+            ],
+            [
+              14,
+              18,
+              19
+            ],
+            [
+              15,
+              16,
+              17
+            ],
+            [
+              15,
+              16,
+              18
+            ],
+            [
+              15,
+              16,
+              19
+            ],
+            [
+              15,
+              17,
+              18
+            ],
+            [
+              15,
+              17,
+              19
+            ],
+            [
+              15,
+              18,
+              19
+            ]
+          ],
+          "terminal_certificates": {
+            "(10, 11, 12)": [
+              0,
+              10,
+              11,
+              12
+            ],
+            "(10, 13, 14)": [
+              0,
+              10,
+              13,
+              14
+            ],
+            "(10, 13, 15)": [
+              0,
+              10,
+              13,
+              15
+            ],
+            "(10, 14, 15)": [
+              0,
+              10,
+              14,
+              15
+            ],
+            "(10, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(10, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(10, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(10, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(10, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(10, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(11, 13, 14)": [
+              0,
+              10,
+              13,
+              14
+            ],
+            "(11, 13, 15)": [
+              0,
+              10,
+              13,
+              15
+            ],
+            "(11, 14, 15)": [
+              0,
+              10,
+              14,
+              15
+            ],
+            "(11, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(11, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(11, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(11, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(11, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(11, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(12, 13, 14)": [
+              0,
+              10,
+              13,
+              14
+            ],
+            "(12, 13, 15)": [
+              0,
+              10,
+              13,
+              15
+            ],
+            "(12, 14, 15)": [
+              0,
+              10,
+              14,
+              15
+            ],
+            "(12, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(12, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(12, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(12, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(12, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(12, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(13, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(13, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(13, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(13, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(13, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(13, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(14, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(14, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(14, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(14, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(14, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(14, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(15, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(15, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(15, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(15, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(15, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(15, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ]
+          },
+          "complement_maxgon": 5
+        },
+        {
+          "A": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            22
+          ],
+          "selected_cap_triples": [
+            [
+              10,
+              11,
+              12
+            ],
+            [
+              10,
+              13,
+              14
+            ],
+            [
+              10,
+              13,
+              15
+            ],
+            [
+              10,
+              14,
+              15
+            ],
+            [
+              10,
+              16,
+              17
+            ],
+            [
+              10,
+              16,
+              18
+            ],
+            [
+              10,
+              16,
+              19
+            ],
+            [
+              10,
+              17,
+              18
+            ],
+            [
+              10,
+              17,
+              19
+            ],
+            [
+              10,
+              18,
+              19
+            ],
+            [
+              11,
+              13,
+              14
+            ],
+            [
+              11,
+              13,
+              15
+            ],
+            [
+              11,
+              14,
+              15
+            ],
+            [
+              11,
+              16,
+              17
+            ],
+            [
+              11,
+              16,
+              18
+            ],
+            [
+              11,
+              16,
+              19
+            ],
+            [
+              11,
+              17,
+              18
+            ],
+            [
+              11,
+              17,
+              19
+            ],
+            [
+              11,
+              18,
+              19
+            ],
+            [
+              12,
+              13,
+              14
+            ],
+            [
+              12,
+              13,
+              15
+            ],
+            [
+              12,
+              14,
+              15
+            ],
+            [
+              12,
+              16,
+              17
+            ],
+            [
+              12,
+              16,
+              18
+            ],
+            [
+              12,
+              16,
+              19
+            ],
+            [
+              12,
+              17,
+              18
+            ],
+            [
+              12,
+              17,
+              19
+            ],
+            [
+              12,
+              18,
+              19
+            ],
+            [
+              13,
+              16,
+              17
+            ],
+            [
+              13,
+              16,
+              18
+            ],
+            [
+              13,
+              16,
+              19
+            ],
+            [
+              13,
+              17,
+              18
+            ],
+            [
+              13,
+              17,
+              19
+            ],
+            [
+              13,
+              18,
+              19
+            ],
+            [
+              14,
+              16,
+              17
+            ],
+            [
+              14,
+              16,
+              18
+            ],
+            [
+              14,
+              16,
+              19
+            ],
+            [
+              14,
+              17,
+              18
+            ],
+            [
+              14,
+              17,
+              19
+            ],
+            [
+              14,
+              18,
+              19
+            ],
+            [
+              15,
+              16,
+              17
+            ],
+            [
+              15,
+              16,
+              18
+            ],
+            [
+              15,
+              16,
+              19
+            ],
+            [
+              15,
+              17,
+              18
+            ],
+            [
+              15,
+              17,
+              19
+            ],
+            [
+              15,
+              18,
+              19
+            ]
+          ],
+          "terminal_certificates": {
+            "(10, 11, 12)": [
+              0,
+              10,
+              11,
+              12
+            ],
+            "(10, 13, 14)": [
+              0,
+              10,
+              13,
+              14
+            ],
+            "(10, 13, 15)": [
+              0,
+              10,
+              13,
+              15
+            ],
+            "(10, 14, 15)": [
+              0,
+              10,
+              14,
+              15
+            ],
+            "(10, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(10, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(10, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(10, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(10, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(10, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(11, 13, 14)": [
+              0,
+              10,
+              13,
+              14
+            ],
+            "(11, 13, 15)": [
+              0,
+              10,
+              13,
+              15
+            ],
+            "(11, 14, 15)": [
+              0,
+              10,
+              14,
+              15
+            ],
+            "(11, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(11, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(11, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(11, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(11, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(11, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(12, 13, 14)": [
+              0,
+              10,
+              13,
+              14
+            ],
+            "(12, 13, 15)": [
+              0,
+              10,
+              13,
+              15
+            ],
+            "(12, 14, 15)": [
+              0,
+              10,
+              14,
+              15
+            ],
+            "(12, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(12, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(12, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(12, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(12, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(12, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(13, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(13, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(13, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(13, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(13, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(13, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(14, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(14, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(14, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(14, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(14, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(14, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(15, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(15, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(15, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(15, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(15, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(15, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ]
+          },
+          "complement_maxgon": 5
+        },
+        {
+          "A": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            23
+          ],
+          "selected_cap_triples": [
+            [
+              10,
+              11,
+              12
+            ],
+            [
+              10,
+              13,
+              14
+            ],
+            [
+              10,
+              13,
+              15
+            ],
+            [
+              10,
+              14,
+              15
+            ],
+            [
+              10,
+              16,
+              17
+            ],
+            [
+              10,
+              16,
+              18
+            ],
+            [
+              10,
+              16,
+              19
+            ],
+            [
+              10,
+              17,
+              18
+            ],
+            [
+              10,
+              17,
+              19
+            ],
+            [
+              10,
+              18,
+              19
+            ],
+            [
+              11,
+              13,
+              14
+            ],
+            [
+              11,
+              13,
+              15
+            ],
+            [
+              11,
+              14,
+              15
+            ],
+            [
+              11,
+              16,
+              17
+            ],
+            [
+              11,
+              16,
+              18
+            ],
+            [
+              11,
+              16,
+              19
+            ],
+            [
+              11,
+              17,
+              18
+            ],
+            [
+              11,
+              17,
+              19
+            ],
+            [
+              11,
+              18,
+              19
+            ],
+            [
+              12,
+              13,
+              14
+            ],
+            [
+              12,
+              13,
+              15
+            ],
+            [
+              12,
+              14,
+              15
+            ],
+            [
+              12,
+              16,
+              17
+            ],
+            [
+              12,
+              16,
+              18
+            ],
+            [
+              12,
+              16,
+              19
+            ],
+            [
+              12,
+              17,
+              18
+            ],
+            [
+              12,
+              17,
+              19
+            ],
+            [
+              12,
+              18,
+              19
+            ],
+            [
+              13,
+              16,
+              17
+            ],
+            [
+              13,
+              16,
+              18
+            ],
+            [
+              13,
+              16,
+              19
+            ],
+            [
+              13,
+              17,
+              18
+            ],
+            [
+              13,
+              17,
+              19
+            ],
+            [
+              13,
+              18,
+              19
+            ],
+            [
+              14,
+              16,
+              17
+            ],
+            [
+              14,
+              16,
+              18
+            ],
+            [
+              14,
+              16,
+              19
+            ],
+            [
+              14,
+              17,
+              18
+            ],
+            [
+              14,
+              17,
+              19
+            ],
+            [
+              14,
+              18,
+              19
+            ],
+            [
+              15,
+              16,
+              17
+            ],
+            [
+              15,
+              16,
+              18
+            ],
+            [
+              15,
+              16,
+              19
+            ],
+            [
+              15,
+              17,
+              18
+            ],
+            [
+              15,
+              17,
+              19
+            ],
+            [
+              15,
+              18,
+              19
+            ]
+          ],
+          "terminal_certificates": {
+            "(10, 11, 12)": [
+              0,
+              10,
+              11,
+              12
+            ],
+            "(10, 13, 14)": [
+              0,
+              10,
+              13,
+              14
+            ],
+            "(10, 13, 15)": [
+              0,
+              10,
+              13,
+              15
+            ],
+            "(10, 14, 15)": [
+              0,
+              10,
+              14,
+              15
+            ],
+            "(10, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(10, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(10, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(10, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(10, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(10, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(11, 13, 14)": [
+              0,
+              10,
+              13,
+              14
+            ],
+            "(11, 13, 15)": [
+              0,
+              10,
+              13,
+              15
+            ],
+            "(11, 14, 15)": [
+              0,
+              10,
+              14,
+              15
+            ],
+            "(11, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(11, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(11, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(11, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(11, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(11, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(12, 13, 14)": [
+              0,
+              10,
+              13,
+              14
+            ],
+            "(12, 13, 15)": [
+              0,
+              10,
+              13,
+              15
+            ],
+            "(12, 14, 15)": [
+              0,
+              10,
+              14,
+              15
+            ],
+            "(12, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(12, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(12, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(12, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(12, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(12, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(13, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(13, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(13, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(13, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(13, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(13, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(14, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(14, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(14, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(14, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(14, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(14, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(15, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(15, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(15, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(15, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(15, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(15, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ]
+          },
+          "complement_maxgon": 5
+        },
+        {
+          "A": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            24
+          ],
+          "selected_cap_triples": [
+            [
+              10,
+              11,
+              12
+            ],
+            [
+              10,
+              13,
+              14
+            ],
+            [
+              10,
+              13,
+              15
+            ],
+            [
+              10,
+              14,
+              15
+            ],
+            [
+              10,
+              16,
+              17
+            ],
+            [
+              10,
+              16,
+              18
+            ],
+            [
+              10,
+              16,
+              19
+            ],
+            [
+              10,
+              17,
+              18
+            ],
+            [
+              10,
+              17,
+              19
+            ],
+            [
+              10,
+              18,
+              19
+            ],
+            [
+              11,
+              13,
+              14
+            ],
+            [
+              11,
+              13,
+              15
+            ],
+            [
+              11,
+              14,
+              15
+            ],
+            [
+              11,
+              16,
+              17
+            ],
+            [
+              11,
+              16,
+              18
+            ],
+            [
+              11,
+              16,
+              19
+            ],
+            [
+              11,
+              17,
+              18
+            ],
+            [
+              11,
+              17,
+              19
+            ],
+            [
+              11,
+              18,
+              19
+            ],
+            [
+              12,
+              13,
+              14
+            ],
+            [
+              12,
+              13,
+              15
+            ],
+            [
+              12,
+              14,
+              15
+            ],
+            [
+              12,
+              16,
+              17
+            ],
+            [
+              12,
+              16,
+              18
+            ],
+            [
+              12,
+              16,
+              19
+            ],
+            [
+              12,
+              17,
+              18
+            ],
+            [
+              12,
+              17,
+              19
+            ],
+            [
+              12,
+              18,
+              19
+            ],
+            [
+              13,
+              16,
+              17
+            ],
+            [
+              13,
+              16,
+              18
+            ],
+            [
+              13,
+              16,
+              19
+            ],
+            [
+              13,
+              17,
+              18
+            ],
+            [
+              13,
+              17,
+              19
+            ],
+            [
+              13,
+              18,
+              19
+            ],
+            [
+              14,
+              16,
+              17
+            ],
+            [
+              14,
+              16,
+              18
+            ],
+            [
+              14,
+              16,
+              19
+            ],
+            [
+              14,
+              17,
+              18
+            ],
+            [
+              14,
+              17,
+              19
+            ],
+            [
+              14,
+              18,
+              19
+            ],
+            [
+              15,
+              16,
+              17
+            ],
+            [
+              15,
+              16,
+              18
+            ],
+            [
+              15,
+              16,
+              19
+            ],
+            [
+              15,
+              17,
+              18
+            ],
+            [
+              15,
+              17,
+              19
+            ],
+            [
+              15,
+              18,
+              19
+            ]
+          ],
+          "terminal_certificates": {
+            "(10, 11, 12)": [
+              0,
+              10,
+              11,
+              12
+            ],
+            "(10, 13, 14)": [
+              0,
+              10,
+              13,
+              14
+            ],
+            "(10, 13, 15)": [
+              0,
+              10,
+              13,
+              15
+            ],
+            "(10, 14, 15)": [
+              0,
+              10,
+              14,
+              15
+            ],
+            "(10, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(10, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(10, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(10, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(10, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(10, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(11, 13, 14)": [
+              0,
+              10,
+              13,
+              14
+            ],
+            "(11, 13, 15)": [
+              0,
+              10,
+              13,
+              15
+            ],
+            "(11, 14, 15)": [
+              0,
+              10,
+              14,
+              15
+            ],
+            "(11, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(11, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(11, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(11, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(11, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(11, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(12, 13, 14)": [
+              0,
+              10,
+              13,
+              14
+            ],
+            "(12, 13, 15)": [
+              0,
+              10,
+              13,
+              15
+            ],
+            "(12, 14, 15)": [
+              0,
+              10,
+              14,
+              15
+            ],
+            "(12, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(12, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(12, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(12, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(12, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(12, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(13, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(13, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(13, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(13, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(13, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(13, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(14, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(14, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(14, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(14, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(14, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(14, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(15, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(15, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(15, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(15, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(15, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(15, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ]
+          },
+          "complement_maxgon": 5
+        },
+        {
+          "A": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            25
+          ],
+          "selected_cap_triples": [
+            [
+              10,
+              11,
+              12
+            ],
+            [
+              10,
+              13,
+              14
+            ],
+            [
+              10,
+              13,
+              15
+            ],
+            [
+              10,
+              14,
+              15
+            ],
+            [
+              10,
+              16,
+              17
+            ],
+            [
+              10,
+              16,
+              18
+            ],
+            [
+              10,
+              16,
+              19
+            ],
+            [
+              10,
+              17,
+              18
+            ],
+            [
+              10,
+              17,
+              19
+            ],
+            [
+              10,
+              18,
+              19
+            ],
+            [
+              11,
+              13,
+              14
+            ],
+            [
+              11,
+              13,
+              15
+            ],
+            [
+              11,
+              14,
+              15
+            ],
+            [
+              11,
+              16,
+              17
+            ],
+            [
+              11,
+              16,
+              18
+            ],
+            [
+              11,
+              16,
+              19
+            ],
+            [
+              11,
+              17,
+              18
+            ],
+            [
+              11,
+              17,
+              19
+            ],
+            [
+              11,
+              18,
+              19
+            ],
+            [
+              12,
+              13,
+              14
+            ],
+            [
+              12,
+              13,
+              15
+            ],
+            [
+              12,
+              14,
+              15
+            ],
+            [
+              12,
+              16,
+              17
+            ],
+            [
+              12,
+              16,
+              18
+            ],
+            [
+              12,
+              16,
+              19
+            ],
+            [
+              12,
+              17,
+              18
+            ],
+            [
+              12,
+              17,
+              19
+            ],
+            [
+              12,
+              18,
+              19
+            ],
+            [
+              13,
+              16,
+              17
+            ],
+            [
+              13,
+              16,
+              18
+            ],
+            [
+              13,
+              16,
+              19
+            ],
+            [
+              13,
+              17,
+              18
+            ],
+            [
+              13,
+              17,
+              19
+            ],
+            [
+              13,
+              18,
+              19
+            ],
+            [
+              14,
+              16,
+              17
+            ],
+            [
+              14,
+              16,
+              18
+            ],
+            [
+              14,
+              16,
+              19
+            ],
+            [
+              14,
+              17,
+              18
+            ],
+            [
+              14,
+              17,
+              19
+            ],
+            [
+              14,
+              18,
+              19
+            ],
+            [
+              15,
+              16,
+              17
+            ],
+            [
+              15,
+              16,
+              18
+            ],
+            [
+              15,
+              16,
+              19
+            ],
+            [
+              15,
+              17,
+              18
+            ],
+            [
+              15,
+              17,
+              19
+            ],
+            [
+              15,
+              18,
+              19
+            ]
+          ],
+          "terminal_certificates": {
+            "(10, 11, 12)": [
+              0,
+              10,
+              11,
+              12
+            ],
+            "(10, 13, 14)": [
+              0,
+              10,
+              13,
+              14
+            ],
+            "(10, 13, 15)": [
+              0,
+              10,
+              13,
+              15
+            ],
+            "(10, 14, 15)": [
+              0,
+              10,
+              14,
+              15
+            ],
+            "(10, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(10, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(10, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(10, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(10, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(10, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(11, 13, 14)": [
+              0,
+              10,
+              13,
+              14
+            ],
+            "(11, 13, 15)": [
+              0,
+              10,
+              13,
+              15
+            ],
+            "(11, 14, 15)": [
+              0,
+              10,
+              14,
+              15
+            ],
+            "(11, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(11, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(11, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(11, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(11, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(11, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(12, 13, 14)": [
+              0,
+              10,
+              13,
+              14
+            ],
+            "(12, 13, 15)": [
+              0,
+              10,
+              13,
+              15
+            ],
+            "(12, 14, 15)": [
+              0,
+              10,
+              14,
+              15
+            ],
+            "(12, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(12, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(12, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(12, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(12, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(12, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(13, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(13, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(13, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(13, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(13, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(13, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(14, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(14, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(14, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(14, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(14, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(14, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ],
+            "(15, 16, 17)": [
+              0,
+              10,
+              16,
+              17
+            ],
+            "(15, 16, 18)": [
+              0,
+              10,
+              16,
+              18
+            ],
+            "(15, 16, 19)": [
+              0,
+              10,
+              16,
+              19
+            ],
+            "(15, 17, 18)": [
+              0,
+              10,
+              17,
+              18
+            ],
+            "(15, 17, 19)": [
+              0,
+              10,
+              17,
+              19
+            ],
+            "(15, 18, 19)": [
+              0,
+              10,
+              18,
+              19
+            ]
+          },
+          "complement_maxgon": 5
+        }
+      ],
+      "case": "ii"
+    },
+    "terminal18_plus_high_singleton": {
+      "P": [
+        [
+          -877024,
+          -728732
+        ],
+        [
+          -848175,
+          -806081
+        ],
+        [
+          -315477,
+          411721
+        ],
+        [
+          -313031,
+          607898
+        ],
+        [
+          -312174,
+          772879
+        ],
+        [
+          -275463,
+          -257726
+        ],
+        [
+          -247748,
+          -312490
+        ],
+        [
+          -229906,
+          -280298
+        ],
+        [
+          -224691,
+          37110
+        ],
+        [
+          -219347,
+          -771737
+        ],
+        [
+          -147229,
+          -623666
+        ],
+        [
+          -42059,
+          77725
+        ],
+        [
+          3816,
+          -817775
+        ],
+        [
+          75450,
+          -921685
+        ],
+        [
+          153870,
+          234592
+        ],
+        [
+          182298,
+          276392
+        ],
+        [
+          458162,
+          265990
+        ],
+        [
+          758070,
+          903438
+        ],
+        [
+          758071,
+          206805657
+        ]
+      ],
+      "n": 7,
+      "m": 19,
+      "cut": 18,
+      "c": 5,
+      "maxima": {
+        "cup": 6,
+        "cap": 4,
+        "gon": 6
+      },
+      "beta_left": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        3,
+        3,
+        4,
+        5,
+        3,
+        4,
+        5,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5
+      ],
+      "selected": [],
+      "case": "iii",
+      "old_four_caps_unchanged": true,
+      "conditional_choices_checked": 0,
+      "scope": "Critical case is only a conditional reduction; no left selector asserted.",
+      "inherited_obstruction": "Terminal nonexistence inherited logically from the independently audited terminal18 record; no new SAT run here.",
+      "left_source_sha256": "8b297da5bb3fca34f37cd3f860d54262d68ee7c9daa3326893326e54151eb9d1"
+    }
+  },
+  "elapsed_seconds": 0.107549286003632,
+  "peak_rss_kib": 19172,
+  "source_sha256": "e62f0dc2a57fb1fedefba8285ff0ab00cc2b60b3f052774868d4f2206f1e380a",
+  "helper_sha256": "9f2debbd5ba79160130bd348699d12dc53db18af86dca7099302d16430475904"
+}

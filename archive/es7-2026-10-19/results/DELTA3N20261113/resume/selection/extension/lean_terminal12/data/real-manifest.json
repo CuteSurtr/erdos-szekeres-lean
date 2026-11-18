@@ -1,0 +1,384 @@
+{
+  "label": "PROVED",
+  "status": "actual real twelve-point n6 terminal-membership obstruction",
+  "main_theorem": "Delta3.Terminal12.RealBridge.terminal12_real_obstruction",
+  "existence_theorem": "Delta3.Terminal12.RealBridge.exists_real_terminal_obstruction",
+  "points": 12,
+  "n": 6,
+  "cap_exclusion": 5,
+  "polygon_exclusion": 6,
+  "hit_polygon_size": 5,
+  "checks": [
+    {
+      "source": "T12BridgeBase.lean",
+      "sha256": "5f96a73fb944760dd55a30f1e395a211a5d2890ab1ec3e5653eceb01d2466009",
+      "run": "t12-base-v1",
+      "axiom_reports": {
+        "Delta3.Terminal12.RealBridge.integer_orient": [
+          "propext"
+        ],
+        "Delta3.Terminal12.RealBridge.real_orient": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.real_x_strict": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.realPoint_injective": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.real_orient_ne": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.realSet_card": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.realSet_generalPosition": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "seconds": 1.24,
+      "kernel_maxrss_kib": 1951348,
+      "sampled_peaks": {
+        "VmPeak": 2722500,
+        "VmSize": 2722500,
+        "VmHWM": 1941168,
+        "VmRSS": 1941168,
+        "RssAnon": 143388,
+        "RssFile": 1797780,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "log_sha256": "7d1639d80c498a68e017982ffa722701651f29ea6b3994192bc8d6466a15de8e",
+      "record_sha256": "b5f8e697a13c16e25a30c0290422d3a357750c27f0d3083ff94389e7fd5f3e7c"
+    },
+    {
+      "source": "T12ConvexBridge.lean",
+      "sha256": "eb05b97759c611e6a6bdfc2ed68a2ca0d73f4ac79c2cee0bf05031f8d5fb8847",
+      "run": "t12-convex-v1",
+      "axiom_reports": {
+        "Delta3.Terminal12.RealBridge.quad_real_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.signConvex_of_real": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.sorted_subset_sublist": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.real_of_signConvex": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.no_real_six_subsequence": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.no_real_hexagon": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "seconds": 1.514,
+      "kernel_maxrss_kib": 1958360,
+      "sampled_peaks": {
+        "VmPeak": 2777148,
+        "VmSize": 2777148,
+        "VmHWM": 1948052,
+        "VmRSS": 1948052,
+        "RssAnon": 146764,
+        "RssFile": 1801288,
+        "VmSwap": 0,
+        "Threads": 6
+      },
+      "log_sha256": "7cca09aa6a91f400a445ac033baa7a6e7d118bf0dc2df27016dd4a3345287276",
+      "record_sha256": "9edfff49fe381ebf29049df6ad666e9f163e863cd19017e63b407e2002836551"
+    },
+    {
+      "source": "T12TerminalReal.lean",
+      "sha256": "17aa31d7313aaf9a541f922500fdda95424f9a944539543f61531c69161f4d6e",
+      "run": "t12-terminalreal-v1",
+      "axiom_reports": {
+        "Delta3.Terminal12.RealBridge.cap_real_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.no_real_five_cap_subsequence": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.terminalSafe_of_real": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.hitsFive_of_real": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.no_real_terminal_selection": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "seconds": 1.493,
+      "kernel_maxrss_kib": 1959532,
+      "sampled_peaks": {
+        "VmPeak": 2780516,
+        "VmSize": 2780516,
+        "VmHWM": 1949352,
+        "VmRSS": 1949352,
+        "RssAnon": 146576,
+        "RssFile": 1803452,
+        "VmSwap": 0,
+        "Threads": 6
+      },
+      "log_sha256": "c5afd3e5ba9e95a7bd1a8d259348d185cf5f18e5474367cbcf95fe442b80f816",
+      "record_sha256": "f0bfe62e86d17e3ee5ddd1ad7bfd59cf2ea36e6e0438057fd000e63502f09525"
+    },
+    {
+      "source": "T12PointSetBridge.lean",
+      "sha256": "fa9710506a686f7370798e1463b85a3a8d0c79dd46c10df3152c31e0c3b0532b",
+      "run": "t12-pointset-v1",
+      "axiom_reports": {
+        "Delta3.Terminal12.RealBridge.indices_strict": [
+          "propext"
+        ],
+        "Delta3.Terminal12.RealBridge.realCap_of_setCap": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.no_real_five_cap": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.realTerminalSafe_of_set": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.realHitsFive_of_set": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.no_real_subset_selection": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "seconds": 1.505,
+      "kernel_maxrss_kib": 1958104,
+      "sampled_peaks": {
+        "VmPeak": 2731388,
+        "VmSize": 2731388,
+        "VmHWM": 1947796,
+        "VmRSS": 1947796,
+        "RssAnon": 148852,
+        "RssFile": 1799256,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "log_sha256": "dd55e88199c75285f71b69efc86c41917d39e80d43c4e1191d821cebd1ac9bb4",
+      "record_sha256": "1d0047715c35d054ff31897bc27b75be178399f4e706d633a00efa1d47990d1b"
+    },
+    {
+      "source": "T12Real.lean",
+      "sha256": "71021255ae73bc9057d6909aba812f0385e989cbcc5fd47be781e9d101fb02cf",
+      "run": "t12-real-v1",
+      "axiom_reports": {
+        "Delta3.Terminal12.RealBridge.realSet_distinct_x": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.terminal12_real_obstruction": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Terminal12.RealBridge.exists_real_terminal_obstruction": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "seconds": 1.309,
+      "kernel_maxrss_kib": 1948920,
+      "sampled_peaks": {
+        "VmPeak": 2731584,
+        "VmSize": 2731584,
+        "VmHWM": 1938472,
+        "VmRSS": 1938472,
+        "RssAnon": 142204,
+        "RssFile": 1796268,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "log_sha256": "19345f069b243670eabf0fb7eeffc133a9187aaeb99529843e9f7faa31ce362c",
+      "record_sha256": "e5010b66e51f81677a4ec7f9fac6b5058e17a0cd8b0afc7066b77a9861638070"
+    }
+  ],
+  "new_source_files": 5,
+  "new_axiom_audits": 27,
+  "total_check_seconds": 7.061,
+  "kernel_peak_rss_kib": 1959532,
+  "total_packet_modules": 19,
+  "total_packet_audits": 59,
+  "standard_axioms_only": true,
+  "prerequisite_sources": [
+    {
+      "source": "T12Boolean.lean",
+      "sha256": "56be28a060973f0d2283f9609013335c01b6520523d709daa01a724cea252123"
+    },
+    {
+      "source": "T12FiniteModel.lean",
+      "sha256": "14cd25c66de7646613aa540a8e9019f5e54303f1774f34c2abf6d9f10a507a7f"
+    },
+    {
+      "source": "T12FiniteFacts.lean",
+      "sha256": "fa97059dbf709d5191507adfb7fd151289a95cc8fb9d306f72e8e0b5ed247357"
+    },
+    {
+      "source": "T12Determinants.lean",
+      "sha256": "387415e3f3beccfa9ae150855f7d1d73bd1987fe4b178df36f2053a6b78a4075"
+    },
+    {
+      "source": "T12IndexHelpers.lean",
+      "sha256": "362c26bae5171887aadf6b480142f0b6555df950876db130985abc1e5986185d"
+    },
+    {
+      "source": "T12SixBlock00.lean",
+      "sha256": "53b1be6c90fbdd3c9a58ca274311f4316f0a8c2366ed86d854f557c7772cafa2"
+    },
+    {
+      "source": "T12SixBlock01.lean",
+      "sha256": "868fdf20c7b6ca38de6368d0e40f9825bdf74588e65ef2c1b96cc1551efa4d1f"
+    },
+    {
+      "source": "T12SixCover00.lean",
+      "sha256": "cd0969419e1dd36a3f84de1cff277d474ab91de0d220e6e66f2eefb2edefb0de"
+    },
+    {
+      "source": "T12SixCover01.lean",
+      "sha256": "09fefdc1a98a446966105d16983e2842af619012553356fe1fd6346c54b72ba0"
+    },
+    {
+      "source": "T12SixAggregate.lean",
+      "sha256": "610cec3de97869a4149654a2c0473c3d847d5df094877ef4072fc9598357796b"
+    },
+    {
+      "source": "T12SubsequenceFacts.lean",
+      "sha256": "7117500ee46a39fd2ac487c88c8cb7212eb7dd8b2a5cf2b3a848033546290034"
+    },
+    {
+      "source": "T12PredicateSemantics.lean",
+      "sha256": "24124c17c69431ab71c7d219326ab0f6b17329dd6aaff4861cc8a8a292df49f6"
+    },
+    {
+      "source": "T12TerminalBridge.lean",
+      "sha256": "6fb2023182fab3d3698d902dcac457670ded546d6e6573d2f4788afbe90448ab"
+    },
+    {
+      "source": "T12Finite.lean",
+      "sha256": "40466d09566c3670944c21c09a5dbbc478042b1af995ad693064e7dd4e49d574"
+    }
+  ],
+  "project_cache": [
+    {
+      "module": "ErdosSzekeres.IntegerCertificates",
+      "source_sha256": "a7bd9dd7343cb71d2601de76b9da8576806ed0020e6220117177c6a2119a7373",
+      "olean_sha256": "2b70d5a0c8cadcf1d922efdd70a82768e1de223fd3967c58cda6a02767d22864"
+    },
+    {
+      "module": "ErdosSzekeres.OrientationConvexity",
+      "source_sha256": "3ec9e93b8dc3c89b82dd444df9060596b8aaa6dcd428a7223d8c7bbc33f1e4e7",
+      "olean_sha256": "6ef762355302087f3a4b7806d03e6d47e03f65cd73be35d1befd41aa1f4da7c3"
+    },
+    {
+      "module": "ErdosSzekeres.Suk.FourPoint",
+      "source_sha256": "f3783fe9766f4d8fbe03143f5b5552e261d664dc371c1f1d467d6a9233ee9590",
+      "olean_sha256": "b9539d220abe18c60acfb845ad35f9cdfc3adac34c15115b657a2acaa10097d9"
+    },
+    {
+      "module": "ErdosSzekeres.OrientationGeometry",
+      "source_sha256": "c7db9bbbb65eb4cd9a60747d30875422c4ad8bc394a530fb23fc9583c9068413",
+      "olean_sha256": "c70441db6860bef283b5939a4a98fd7e227c7da4ce3844371a70886896ea2db3"
+    },
+    {
+      "module": "ErdosSzekeres.Basic",
+      "source_sha256": "13667aa2d3dc83efd803c807e3cc1b9f692361b7d4f7853919796c1e3d154dc4",
+      "olean_sha256": "48a2a3f9679b1fed6064449c44183e20a66321ff4c535336756af4cceb49c635"
+    }
+  ],
+  "finite_manifest_sha256": "ec0daf83ca7dde34952305a9ed79b762393f190211e8878625342236629b4b1c",
+  "finite_freeze_sha256": "a59cf372327e8d2f3a615e6365debb09177a31558270cd9469984a41c968bfd8",
+  "input_hashes": {
+    "T12-original.cnf": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/terminal12/data/3/terminal.cnf",
+      "sha256": "25ca75a9eee359ca03ae7f96657128ab03693c03421b1e7e83627f529841890a"
+    },
+    "T12-coordinates.json": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/terminal12/data/3/result.json",
+      "sha256": "3b910bb7fce55658e1a0bfdb83d5425292aa911ad815fe3076ed9ad1c212f415"
+    },
+    "T12-core.cnf": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/terminal12-smallproof-a/core.cnf",
+      "sha256": "450bb17403af22a2253a03b4610b14caefab73253d883ddcbd65f780bac95d3a"
+    },
+    "T12-tree.json": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/terminal12-smallproof-a/tree.json",
+      "sha256": "f14ab9466f3110b3daf3e0ba5c1d6857b575475e6f267d6fb38f4ae57e318add"
+    },
+    "T12-core-DONE.json": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/terminal12-smallproof-a/DONE.json",
+      "sha256": "96a2d04ad2ccc56a1295da1a4d389a317482b23c1b86c0f738eab7533e128656"
+    }
+  },
+  "toolchain": "leanprover/lean4:v4.24.0",
+  "runner_sha256": "e2424f65b21d3a3ee3b560ed359757effab3862e01b69fa8306b87a977288f11",
+  "replay_sha256": "d683a753ca8f6fa10ec3d012875b167047bd31e3db281b4c43f1a2d4712b5c41",
+  "resources": {
+    "cpu": 1,
+    "as_gib": 4,
+    "rss_guard_mib": 2000,
+    "lean_heap_mib": 1000,
+    "long_unit_memorymax_mib": 2600,
+    "swap_mib": 0,
+    "per_module_wall_seconds": 27,
+    "long_unit_deadline_kst": "2026-11-14 08:20:00",
+    "owner_total_mib_unchanged": 6000
+  },
+  "minimum_or_lower_bound_claim": false,
+  "weak_or_uniform_delta_refutation": false,
+  "cap_definition": "explicit all-triples real orientation with proved distinct horizontal coordinates",
+  "geometry_connection_external": false,
+  "parent_fresh_real_replay_pending": true
+}

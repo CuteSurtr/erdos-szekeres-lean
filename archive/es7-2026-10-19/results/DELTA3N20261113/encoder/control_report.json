@@ -1,0 +1,1980 @@
+{
+  "checker_negative_control": {
+    "label": "COMPUTED",
+    "log": "/home/jay/research/data/delta3-codex-20261113/encoder/truncated-control.cake.log",
+    "output": "c empty clause not derived at end of proof\n",
+    "proof_sha256": "2842d8ec54a676df270b7cf70d4509ee83007f1c8a50dc97b806aeb312415258"
+  },
+  "controls": [
+    {
+      "directory": "/home/jay/research/data/delta3-codex-20261113/encoder/control-cap-fixture-n7",
+      "encoding": {
+        "a": 5,
+        "base_only": false,
+        "clauses": 38877,
+        "cnf_bytes": 787188,
+        "cube": "",
+        "label": "COMPUTED",
+        "literals": 153845,
+        "m": 12,
+        "max_width": 211,
+        "mode": "cap",
+        "n": 7,
+        "phases": {
+          "cap_lattice": {
+            "clauses": 3302,
+            "literals": 19812
+          },
+          "endpoint_support": {
+            "clauses": 7171,
+            "literals": 16444
+          },
+          "fixed_signs": {
+            "clauses": 220,
+            "literals": 220
+          },
+          "forall_delta": {
+            "clauses": 4096,
+            "literals": 7749
+          },
+          "fourcap": {
+            "clauses": 990,
+            "literals": 1980
+          },
+          "no5cap": {
+            "clauses": 792,
+            "literals": 2376
+          },
+          "no_ngon": {
+            "clauses": 12672,
+            "literals": 63360
+          },
+          "signotope": {
+            "clauses": 3960,
+            "literals": 15840
+          },
+          "target_lattice": {
+            "clauses": 3924,
+            "literals": 22564
+          },
+          "target_seeds": {
+            "clauses": 1750,
+            "literals": 3500
+          }
+        },
+        "pool": "lattice",
+        "sym": "none",
+        "triples": 220,
+        "variables": 10919
+      },
+      "hashes": {
+        "cadical.log": "56cd712077412741e31c3bec24dd940b8abc165a75a9f298a1d29ac83997f5d3",
+        "cadical.time": "f85fe1f42a659d5f133fad37da874cb57e5a51d32df205b72de6ef733ecb055d",
+        "case.cnf": "280f823f65b9795b06dcda89a98595e6abffe5047f70a73e7530cea7dcc7f61d",
+        "case.lrat": "75bbd92b565bbdb12ee2eeb4ee119c9022d9bce4991a99d99d41633ed1b3ebb8",
+        "delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+        "encode.log": "0ab98e2d096bfbf0ea3b311741ddad94ec5de2cf3b345e0e867597a1befc4a7d",
+        "encode.time": "e2143e6179de7ec601f6d66a9bf29efea8dace914f760278bb7e86dead578ad9",
+        "encoder_binary": "b435f805e1475b90cffc6fdc831aeefc2eb573b1a48d800595c03de1bb9e99c6",
+        "model.log": "ebe5023f4c08092120684a1609c54e8d4979911f0c4fcaaac57d305226ed29d9",
+        "model.time": "81b007757b645d3629237592b32595ff7b6928b039c7c25b4b18e9f05f0f450b"
+      },
+      "label": "COMPUTED",
+      "model": {
+        "checked_counterexample": true,
+        "convex_ngons": 0,
+        "counterexample_mode": "cap",
+        "fivecaps": 0,
+        "fourcaps": 9,
+        "label": "COMPUTED",
+        "m": 12,
+        "modes": {
+          "cap": {
+            "first_delta": null,
+            "targets": 20,
+            "working_deltas": 0
+          },
+          "cup": {
+            "first_delta": [
+              2,
+              3,
+              6
+            ],
+            "targets": 21,
+            "working_deltas": 2433
+          },
+          "weak": {
+            "first_delta": [
+              2,
+              3,
+              6
+            ],
+            "targets": 24,
+            "working_deltas": 2541
+          }
+        },
+        "n": 7,
+        "signs": "----++++++---++++++++++++++-++++++++++++--+++++++++++++---++++++++++++++-++++++++++++--++++++++++++++++++++++++++++++++++--+++++++++++++-------++++++--++-++++++++--++++++--+++++++++++++--++-++++++++--+++++++---+++-------",
+        "valid": true
+      },
+      "parameters": {
+        "as_mib": 340,
+        "binary": "/home/jay/research/data/delta3-codex-20261113/encoder/delta_cnf",
+        "cake_heap": 96,
+        "cake_seconds": 3,
+        "cake_stack": 16,
+        "cube": "",
+        "defer_cake": false,
+        "fix_signs": "/home/jay/research/data/delta3-codex-20261113/encoder/negative-n7.signs",
+        "generate_only": false,
+        "m": 12,
+        "mode": "cap",
+        "n": 7,
+        "out": "/home/jay/research/data/delta3-codex-20261113/encoder/control-cap-fixture-n7",
+        "pool": "lattice",
+        "seconds": 3,
+        "sym": "none"
+      },
+      "proof_bytes": 313775,
+      "runs": {
+        "cadical": {
+          "exit": 10,
+          "wall_seconds": 0.032
+        },
+        "encode": {
+          "exit": 0,
+          "wall_seconds": 0.016
+        },
+        "model": {
+          "exit": 0,
+          "wall_seconds": 0.064
+        }
+      },
+      "status": "SAT_CHECKED"
+    },
+    {
+      "directory": "/home/jay/research/data/delta3-codex-20261113/encoder/control-cap-fixture-n8",
+      "encoding": {
+        "a": 5,
+        "base_only": false,
+        "clauses": 81928,
+        "cnf_bytes": 1868232,
+        "cube": "",
+        "label": "COMPUTED",
+        "literals": 351633,
+        "m": 13,
+        "max_width": 463,
+        "mode": "cap",
+        "n": 8,
+        "phases": {
+          "cap_lattice": {
+            "clauses": 7099,
+            "literals": 42594
+          },
+          "endpoint_support": {
+            "clauses": 19414,
+            "literals": 43438
+          },
+          "fixed_signs": {
+            "clauses": 286,
+            "literals": 286
+          },
+          "forall_delta": {
+            "clauses": 8192,
+            "literals": 15718
+          },
+          "fourcap": {
+            "clauses": 1430,
+            "literals": 2860
+          },
+          "no5cap": {
+            "clauses": 1287,
+            "literals": 3861
+          },
+          "no_ngon": {
+            "clauses": 28314,
+            "literals": 169884
+          },
+          "signotope": {
+            "clauses": 5720,
+            "literals": 22880
+          },
+          "target_lattice": {
+            "clauses": 7876,
+            "literals": 45492
+          },
+          "target_seeds": {
+            "clauses": 2310,
+            "literals": 4620
+          }
+        },
+        "pool": "lattice",
+        "sym": "none",
+        "triples": 286,
+        "variables": 21658
+      },
+      "hashes": {
+        "cadical.log": "16180db399ca13c943106a334b23844ab1209b85d63a8685309b5e29a2f1e611",
+        "cadical.time": "9629477c3748cdbbed669bcff1a761f4b81e9a51023ed5853350d4d0a577fb15",
+        "case.cnf": "719fb6aadbee040af0a2c37d2ca18728ae15d2d23f7a1d6a3a9f726f8b5e752f",
+        "case.lrat": "897b4132b9137442d2e1f05061e74d26be525ab661c41a3aa0c46ebf5a4e3310",
+        "delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+        "encode.log": "9fd5a66a4a1b1067df7731c9903e450fd80691568a7612fcc65fe9b1d8617490",
+        "encode.time": "b578a096ef9ea0b8009cf941b5aeb406eeaf204c1c9150baa880a0ae76e6bf97",
+        "encoder_binary": "b435f805e1475b90cffc6fdc831aeefc2eb573b1a48d800595c03de1bb9e99c6",
+        "model.log": "79d371d18b1382a6170f584a8d7eec088ad824c2296686ba3f9bf832c754b6d0",
+        "model.time": "e4f980acbe3d6e24c144cf9af36f06163a8e11f4f581108fc45adfd417e458ae"
+      },
+      "label": "COMPUTED",
+      "model": {
+        "checked_counterexample": true,
+        "convex_ngons": 0,
+        "counterexample_mode": "cap",
+        "fivecaps": 0,
+        "fourcaps": 5,
+        "label": "COMPUTED",
+        "m": 13,
+        "modes": {
+          "cap": {
+            "first_delta": null,
+            "targets": 19,
+            "working_deltas": 0
+          },
+          "cup": {
+            "first_delta": [
+              1,
+              2,
+              3
+            ],
+            "targets": 70,
+            "working_deltas": 5746
+          },
+          "weak": {
+            "first_delta": [
+              1,
+              2,
+              3
+            ],
+            "targets": 73,
+            "working_deltas": 5746
+          }
+        },
+        "n": 8,
+        "signs": "------+-+++-----+-++++++++++++---+-+++++++++++++++++++++-+++++++++--+++++++++++++++++++++++++++++++++++++++++++-++++++++++++++++++++++++++++++++++++++++++++-+++++++++--------++++++++++++++++++-+++++++++++++++++++++++++++-++++++++++++++++++++-++++++++++++++-+++++++++-++++++++++++-------",
+        "valid": true
+      },
+      "parameters": {
+        "as_mib": 340,
+        "binary": "/home/jay/research/data/delta3-codex-20261113/encoder/delta_cnf",
+        "cake_heap": 96,
+        "cake_seconds": 3,
+        "cake_stack": 16,
+        "cube": "",
+        "defer_cake": false,
+        "fix_signs": "/home/jay/research/data/delta3-codex-20261113/encoder/negative-n8.signs",
+        "generate_only": false,
+        "m": 13,
+        "mode": "cap",
+        "n": 8,
+        "out": "/home/jay/research/data/delta3-codex-20261113/encoder/control-cap-fixture-n8",
+        "pool": "lattice",
+        "seconds": 3,
+        "sym": "none"
+      },
+      "proof_bytes": 693982,
+      "runs": {
+        "cadical": {
+          "exit": 10,
+          "wall_seconds": 0.032
+        },
+        "encode": {
+          "exit": 0,
+          "wall_seconds": 0.032
+        },
+        "model": {
+          "exit": 0,
+          "wall_seconds": 0.064
+        }
+      },
+      "status": "SAT_CHECKED"
+    },
+    {
+      "directory": "/home/jay/research/data/delta3-codex-20261113/encoder/control-cap-negative",
+      "encoding": {
+        "a": 5,
+        "base_only": false,
+        "clauses": 18085,
+        "cnf_bytes": 328320,
+        "cube": "",
+        "label": "COMPUTED",
+        "literals": 65659,
+        "m": 11,
+        "max_width": 85,
+        "mode": "cap",
+        "n": 6,
+        "phases": {
+          "cap_lattice": {
+            "clauses": 1486,
+            "literals": 8916
+          },
+          "endpoint_support": {
+            "clauses": 2320,
+            "literals": 5488
+          },
+          "fixed_signs": {
+            "clauses": 165,
+            "literals": 165
+          },
+          "forall_delta": {
+            "clauses": 2048,
+            "literals": 3792
+          },
+          "fourcap": {
+            "clauses": 660,
+            "literals": 1320
+          },
+          "no5cap": {
+            "clauses": 462,
+            "literals": 1386
+          },
+          "no_ngon": {
+            "clauses": 5082,
+            "literals": 20328
+          },
+          "signotope": {
+            "clauses": 2640,
+            "literals": 10560
+          },
+          "target_lattice": {
+            "clauses": 1948,
+            "literals": 11156
+          },
+          "target_seeds": {
+            "clauses": 1274,
+            "literals": 2548
+          }
+        },
+        "pool": "lattice",
+        "sym": "none",
+        "triples": 165,
+        "variables": 5485
+      },
+      "hashes": {
+        "cadical.log": "d1a23290258d5245f07faaf8a32320fff9d0f66182e0e05817015643245155eb",
+        "cadical.time": "cd759baf9ef73a4b087d448be7f8e98891be1bea23cd8bd17d97f142d24f3614",
+        "case.cnf": "7481fbd20d5943a0aa79b7ad8f010b28122fdee176524d0807adb07b01054359",
+        "case.lrat": "60d20547e05fccc13e44da20f98c04268af5e79dc96f73041208a4b4835c1841",
+        "delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+        "encode.log": "2fd2eed14f6c121306040937870f880cea87ecabec9465b04b97f46af9b10ab5",
+        "encode.time": "a04f08a27240226e1785d3a278dde2fc950c8f8c42f2c9b8ce33e3f55baff786",
+        "encoder_binary": "b435f805e1475b90cffc6fdc831aeefc2eb573b1a48d800595c03de1bb9e99c6",
+        "model.log": "e448564cd350a330380fdc083b762c5b4d84b4162c6e3b30db48d1ef21f3715f",
+        "model.time": "7299b4dbeed3a5f1f9659ac6492e4402f4ead42f47299885b98163108ff89dd2"
+      },
+      "label": "COMPUTED",
+      "model": {
+        "checked_counterexample": true,
+        "convex_ngons": 0,
+        "counterexample_mode": "cap",
+        "fivecaps": 0,
+        "fourcaps": 5,
+        "label": "COMPUTED",
+        "m": 11,
+        "modes": {
+          "cap": {
+            "first_delta": null,
+            "targets": 18,
+            "working_deltas": 0
+          },
+          "cup": {
+            "first_delta": [
+              0,
+              1,
+              3,
+              4,
+              6
+            ],
+            "targets": 102,
+            "working_deltas": 684
+          },
+          "weak": {
+            "first_delta": [
+              0,
+              1,
+              3,
+              4,
+              6
+            ],
+            "targets": 102,
+            "working_deltas": 861
+          }
+        },
+        "n": 6,
+        "signs": "---++++++--++++++++++++++++++++++++-+++++++++--++++++++++++++++++++++++-+++++++++++++++++++++++++++-+++++++++------+++++-++++++++++++++-+++++++++-++++++++++++-------",
+        "valid": true
+      },
+      "parameters": {
+        "as_mib": 340,
+        "binary": "/home/jay/research/data/delta3-codex-20261113/encoder/delta_cnf",
+        "cake_heap": 96,
+        "cake_seconds": 3,
+        "cake_stack": 16,
+        "cube": "",
+        "defer_cake": false,
+        "fix_signs": "/home/jay/research/data/delta3-codex-20261113/encoder/negative.signs",
+        "generate_only": false,
+        "m": 11,
+        "mode": "cap",
+        "n": 6,
+        "out": "/home/jay/research/data/delta3-codex-20261113/encoder/control-cap-negative",
+        "pool": "lattice",
+        "seconds": 3,
+        "sym": "none"
+      },
+      "proof_bytes": 152201,
+      "runs": {
+        "cadical": {
+          "exit": 10,
+          "wall_seconds": 0.015
+        },
+        "encode": {
+          "exit": 0,
+          "wall_seconds": 0.016
+        },
+        "model": {
+          "exit": 0,
+          "wall_seconds": 0.032
+        }
+      },
+      "status": "SAT_CHECKED"
+    },
+    {
+      "cake_lines": [
+        "s VERIFIED UNSAT"
+      ],
+      "directory": "/home/jay/research/data/delta3-codex-20261113/encoder/control-cup-fixture-n7",
+      "encoding": {
+        "a": 5,
+        "base_only": false,
+        "clauses": 37644,
+        "cnf_bytes": 777252,
+        "cube": "",
+        "label": "COMPUTED",
+        "literals": 153680,
+        "m": 12,
+        "max_width": 46,
+        "mode": "cup",
+        "n": 7,
+        "phases": {
+          "cap_lattice": {
+            "clauses": 3302,
+            "literals": 19812
+          },
+          "endpoint_support": {
+            "clauses": 100,
+            "literals": 815
+          },
+          "fixed_signs": {
+            "clauses": 220,
+            "literals": 220
+          },
+          "forall_delta": {
+            "clauses": 4096,
+            "literals": 7553
+          },
+          "fourcap": {
+            "clauses": 990,
+            "literals": 1980
+          },
+          "no5cap": {
+            "clauses": 792,
+            "literals": 2376
+          },
+          "no_ngon": {
+            "clauses": 12672,
+            "literals": 63360
+          },
+          "signotope": {
+            "clauses": 3960,
+            "literals": 15840
+          },
+          "target_lattice": {
+            "clauses": 3294,
+            "literals": 25288
+          },
+          "target_seeds": {
+            "clauses": 8218,
+            "literals": 16436
+          }
+        },
+        "pool": "lattice",
+        "sym": "none",
+        "triples": 220,
+        "variables": 9581
+      },
+      "hashes": {
+        "cadical.log": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162",
+        "cadical.time": "f726cfaf58f124474b9f6ec750100f23759b4a517bd56e4f9dbeed3e0c7a3f6c",
+        "cake.log": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+        "cake.time": "b9db80fac33ed9afc07b4ede7f7843075c8af0dc77cac7ef9ceba7011ca03268",
+        "case.cnf": "43e9cec3edec863a27dbaf9d11fee80556fe042f8274b68d6b91b2415971ac47",
+        "case.lrat": "3eabc3134bce18b9b1399db3f3c68f06a42566cb7073cda55acee565b76ed937",
+        "delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+        "encode.log": "8466dc0ec3da4844ef0e85545f4d5d08367241a53fefb4b6e561a0a7c6160357",
+        "encode.time": "f9587b57c95eac71d921a5433b9939cd935c3cbb29993a46e08bf788b2bb71ba",
+        "encoder_binary": "b435f805e1475b90cffc6fdc831aeefc2eb573b1a48d800595c03de1bb9e99c6"
+      },
+      "label": "CERTIFIED",
+      "parameters": {
+        "as_mib": 340,
+        "binary": "/home/jay/research/data/delta3-codex-20261113/encoder/delta_cnf",
+        "cake_heap": 96,
+        "cake_seconds": 3,
+        "cake_stack": 16,
+        "cube": "",
+        "defer_cake": false,
+        "fix_signs": "/home/jay/research/data/delta3-codex-20261113/encoder/negative-n7.signs",
+        "generate_only": false,
+        "m": 12,
+        "mode": "cup",
+        "n": 7,
+        "out": "/home/jay/research/data/delta3-codex-20261113/encoder/control-cup-fixture-n7",
+        "pool": "lattice",
+        "seconds": 3,
+        "sym": "none"
+      },
+      "proof_bytes": 120005,
+      "runs": {
+        "cadical": {
+          "exit": 20,
+          "wall_seconds": 0.016
+        },
+        "cake": {
+          "exit": 0,
+          "wall_seconds": 0.064
+        },
+        "encode": {
+          "exit": 0,
+          "wall_seconds": 0.016
+        }
+      },
+      "status": "UNSAT_CERTIFIED"
+    },
+    {
+      "cake_lines": [
+        "s VERIFIED UNSAT"
+      ],
+      "directory": "/home/jay/research/data/delta3-codex-20261113/encoder/control-cup-fixture-n8",
+      "encoding": {
+        "a": 5,
+        "base_only": false,
+        "clauses": 80357,
+        "cnf_bytes": 1856935,
+        "cube": "",
+        "label": "COMPUTED",
+        "literals": 352751,
+        "m": 13,
+        "max_width": 56,
+        "mode": "cup",
+        "n": 8,
+        "phases": {
+          "cap_lattice": {
+            "clauses": 7099,
+            "literals": 42594
+          },
+          "endpoint_support": {
+            "clauses": 121,
+            "literals": 1122
+          },
+          "fixed_signs": {
+            "clauses": 286,
+            "literals": 286
+          },
+          "forall_delta": {
+            "clauses": 8192,
+            "literals": 14864
+          },
+          "fourcap": {
+            "clauses": 1430,
+            "literals": 2860
+          },
+          "no5cap": {
+            "clauses": 1287,
+            "literals": 3861
+          },
+          "no_ngon": {
+            "clauses": 28314,
+            "literals": 169884
+          },
+          "signotope": {
+            "clauses": 5720,
+            "literals": 22880
+          },
+          "target_lattice": {
+            "clauses": 5804,
+            "literals": 50192
+          },
+          "target_seeds": {
+            "clauses": 22104,
+            "literals": 44208
+          }
+        },
+        "pool": "lattice",
+        "sym": "none",
+        "triples": 286,
+        "variables": 18695
+      },
+      "hashes": {
+        "cadical.log": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162",
+        "cadical.time": "d5328fcdf9864691a64138040c562144e239b7a55b59cc34c757f3d8e8efb8d9",
+        "cake.log": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+        "cake.time": "54db48d65ea1fd74a542a4b3effe5b40734c2d84062e50a1627620c9f4130b8c",
+        "case.cnf": "1c3d1693d94116711468ed7ee2114beb891b7d1ea9a1c2979c1c5f34045b0942",
+        "case.lrat": "a399d2befec2166e9631e7fb8fbf8ed4662ffe2ea025d7e0d931b0dea948f4f7",
+        "delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+        "encode.log": "63ca8fb9d91498671ee6c6d39468c5423c5ffa380575b120af99955bf54bcb2d",
+        "encode.time": "b29ee283100e82852e52f468fa1726e2d63d1dbff273589baa0a9bae533a2c71",
+        "encoder_binary": "b435f805e1475b90cffc6fdc831aeefc2eb573b1a48d800595c03de1bb9e99c6"
+      },
+      "label": "CERTIFIED",
+      "parameters": {
+        "as_mib": 340,
+        "binary": "/home/jay/research/data/delta3-codex-20261113/encoder/delta_cnf",
+        "cake_heap": 96,
+        "cake_seconds": 3,
+        "cake_stack": 16,
+        "cube": "",
+        "defer_cake": false,
+        "fix_signs": "/home/jay/research/data/delta3-codex-20261113/encoder/negative-n8.signs",
+        "generate_only": false,
+        "m": 13,
+        "mode": "cup",
+        "n": 8,
+        "out": "/home/jay/research/data/delta3-codex-20261113/encoder/control-cup-fixture-n8",
+        "pool": "lattice",
+        "seconds": 3,
+        "sym": "none"
+      },
+      "proof_bytes": 232643,
+      "runs": {
+        "cadical": {
+          "exit": 20,
+          "wall_seconds": 0.032
+        },
+        "cake": {
+          "exit": 0,
+          "wall_seconds": 0.114
+        },
+        "encode": {
+          "exit": 0,
+          "wall_seconds": 0.032
+        }
+      },
+      "status": "UNSAT_CERTIFIED"
+    },
+    {
+      "cake_lines": [
+        "s VERIFIED UNSAT"
+      ],
+      "directory": "/home/jay/research/data/delta3-codex-20261113/encoder/control-cup-n6-m10",
+      "encoding": {
+        "a": 5,
+        "base_only": false,
+        "clauses": 8790,
+        "cnf_bytes": 151983,
+        "cube": "",
+        "label": "COMPUTED",
+        "literals": 32203,
+        "m": 10,
+        "max_width": 29,
+        "mode": "cup",
+        "n": 6,
+        "phases": {
+          "cap_lattice": {
+            "clauses": 638,
+            "literals": 3828
+          },
+          "endpoint_support": {
+            "clauses": 64,
+            "literals": 394
+          },
+          "forall_delta": {
+            "clauses": 1024,
+            "literals": 1787
+          },
+          "fourcap": {
+            "clauses": 420,
+            "literals": 840
+          },
+          "no5cap": {
+            "clauses": 252,
+            "literals": 756
+          },
+          "no_ngon": {
+            "clauses": 2310,
+            "literals": 9240
+          },
+          "signotope": {
+            "clauses": 1680,
+            "literals": 6720
+          },
+          "target_lattice": {
+            "clauses": 841,
+            "literals": 5516
+          },
+          "target_seeds": {
+            "clauses": 1561,
+            "literals": 3122
+          }
+        },
+        "pool": "lattice",
+        "sym": "none",
+        "triples": 120,
+        "variables": 2426
+      },
+      "hashes": {
+        "cadical.log": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162",
+        "cadical.time": "20dadb145bc47a2a039d0638e84b98f8ffd68932e136c9220c3c32b4e96d74f7",
+        "cake.log": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+        "cake.time": "09a0796e6ec7a73bed77fccc6968542700c214b3514472920aed6702a2aa23be",
+        "case.cnf": "b17fd1e2aaf5a05d51428fc0e2f23b961ef0a655bf4eefca8c3aba13a4b4fb7a",
+        "case.lrat": "ed010906e3f95f0b3581969d6b00a6697063821a84b6b238f56913a0c3fb91ce",
+        "delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+        "encode.log": "247d37f850449e2633d21488c85fede67766e302afd6255d68b8db4f2f9b687e",
+        "encode.time": "7a53c9d0a0a16dfbecb68e8414cf4dd7b9f1ef184ed1662d7c946a7f6788b9c4",
+        "encoder_binary": "b435f805e1475b90cffc6fdc831aeefc2eb573b1a48d800595c03de1bb9e99c6"
+      },
+      "label": "CERTIFIED",
+      "parameters": {
+        "as_mib": 340,
+        "binary": "/home/jay/research/data/delta3-codex-20261113/encoder/delta_cnf",
+        "cake_heap": 96,
+        "cake_seconds": 3,
+        "cake_stack": 16,
+        "cube": "",
+        "defer_cake": false,
+        "fix_signs": null,
+        "generate_only": false,
+        "m": 10,
+        "mode": "cup",
+        "n": 6,
+        "out": "/home/jay/research/data/delta3-codex-20261113/encoder/control-cup-n6-m10",
+        "pool": "lattice",
+        "seconds": 3,
+        "sym": "none"
+      },
+      "proof_bytes": 514370,
+      "runs": {
+        "cadical": {
+          "exit": 20,
+          "wall_seconds": 0.064
+        },
+        "cake": {
+          "exit": 0,
+          "wall_seconds": 0.032
+        },
+        "encode": {
+          "exit": 0,
+          "wall_seconds": 0.008
+        }
+      },
+      "status": "UNSAT_CERTIFIED"
+    },
+    {
+      "cake_lines": [
+        "s VERIFIED UNSAT"
+      ],
+      "directory": "/home/jay/research/data/delta3-codex-20261113/encoder/control-cup-n7-m9",
+      "encoding": {
+        "a": 5,
+        "base_only": false,
+        "clauses": 4165,
+        "cnf_bytes": 62839,
+        "cube": "",
+        "label": "COMPUTED",
+        "literals": 14384,
+        "m": 9,
+        "max_width": 22,
+        "mode": "cup",
+        "n": 7,
+        "phases": {
+          "cap_lattice": {
+            "clauses": 256,
+            "literals": 1536
+          },
+          "endpoint_support": {
+            "clauses": 49,
+            "literals": 259
+          },
+          "forall_delta": {
+            "clauses": 512,
+            "literals": 738
+          },
+          "fourcap": {
+            "clauses": 252,
+            "literals": 504
+          },
+          "no5cap": {
+            "clauses": 126,
+            "literals": 378
+          },
+          "no_ngon": {
+            "clauses": 576,
+            "literals": 2880
+          },
+          "signotope": {
+            "clauses": 1008,
+            "literals": 4032
+          },
+          "target_lattice": {
+            "clauses": 251,
+            "literals": 1787
+          },
+          "target_seeds": {
+            "clauses": 1135,
+            "literals": 2270
+          }
+        },
+        "pool": "lattice",
+        "sym": "none",
+        "triples": 84,
+        "variables": 1076
+      },
+      "hashes": {
+        "cadical.log": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162",
+        "cadical.time": "7a1cc7790cf660da1bebaff23ee398257ec8c25b177538737ffa8b45a4801a99",
+        "cake.log": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+        "cake.time": "9849c2665e99c5508a64c65670617d16b3c6dcff40f3f3b19a31f20cb0d58de6",
+        "case.cnf": "35d481fdf56326d49e08a1608b0319d05cb03f2673dbeb704b73347beba8284e",
+        "case.lrat": "c70f3bb48c98487d4506a8862617818a4ebf0f9c4e1f700a9d0053c2860af42a",
+        "delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+        "encode.log": "861a1e4750a187da837da8f9b6a78384b924133133e189a964d9fac2c56d0448",
+        "encode.time": "2c5b6d1e33a18a2bdbab55894eb601837c8f7161b52c5080fbdc922c3a58c64c",
+        "encoder_binary": "b435f805e1475b90cffc6fdc831aeefc2eb573b1a48d800595c03de1bb9e99c6"
+      },
+      "label": "CERTIFIED",
+      "parameters": {
+        "as_mib": 340,
+        "binary": "/home/jay/research/data/delta3-codex-20261113/encoder/delta_cnf",
+        "cake_heap": 96,
+        "cake_seconds": 3,
+        "cake_stack": 16,
+        "cube": "",
+        "defer_cake": false,
+        "fix_signs": null,
+        "generate_only": false,
+        "m": 9,
+        "mode": "cup",
+        "n": 7,
+        "out": "/home/jay/research/data/delta3-codex-20261113/encoder/control-cup-n7-m9",
+        "pool": "lattice",
+        "seconds": 3,
+        "sym": "none"
+      },
+      "proof_bytes": 6099,
+      "runs": {
+        "cadical": {
+          "exit": 20,
+          "wall_seconds": 0.007
+        },
+        "cake": {
+          "exit": 0,
+          "wall_seconds": 0.007
+        },
+        "encode": {
+          "exit": 0,
+          "wall_seconds": 0.007
+        }
+      },
+      "status": "UNSAT_CERTIFIED"
+    },
+    {
+      "cake_lines": [
+        "s VERIFIED UNSAT"
+      ],
+      "directory": "/home/jay/research/data/delta3-codex-20261113/encoder/control-cup-n8-m10",
+      "encoding": {
+        "a": 5,
+        "base_only": false,
+        "clauses": 7978,
+        "cnf_bytes": 133770,
+        "cube": "",
+        "label": "COMPUTED",
+        "literals": 28095,
+        "m": 10,
+        "max_width": 29,
+        "mode": "cup",
+        "n": 8,
+        "phases": {
+          "cap_lattice": {
+            "clauses": 638,
+            "literals": 3828
+          },
+          "endpoint_support": {
+            "clauses": 64,
+            "literals": 394
+          },
+          "forall_delta": {
+            "clauses": 1024,
+            "literals": 1455
+          },
+          "fourcap": {
+            "clauses": 420,
+            "literals": 840
+          },
+          "no5cap": {
+            "clauses": 252,
+            "literals": 756
+          },
+          "no_ngon": {
+            "clauses": 990,
+            "literals": 5940
+          },
+          "signotope": {
+            "clauses": 1680,
+            "literals": 6720
+          },
+          "target_lattice": {
+            "clauses": 381,
+            "literals": 3104
+          },
+          "target_seeds": {
+            "clauses": 2529,
+            "literals": 5058
+          }
+        },
+        "pool": "lattice",
+        "sym": "none",
+        "triples": 120,
+        "variables": 1964
+      },
+      "hashes": {
+        "cadical.log": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162",
+        "cadical.time": "8b132f23bd6f73b70ad17515d92fa70ac2c596e3799a17907924009a2be01ad1",
+        "cake.log": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+        "cake.time": "06ef412319b7ead6479413abbf2453e06f761bc6ea76724a05a26cec740ffe16",
+        "case.cnf": "4900e5bded827825f60fe5d6938fcf037f139a63d4c2e85237cb02d5c6925d59",
+        "case.lrat": "56b14a383909e94e3f9d7c3eed8b672e48ae2b409f6d80c7ad98837868a11243",
+        "delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+        "encode.log": "6998e806f34bbd743a0dd13469557e8f9f2269e53c0893e23d82fcc8acc8b891",
+        "encode.time": "22ccb62e4753c9e4510c857fdbe07f1695c1f1fad91595bed66e2d0b80e4021c",
+        "encoder_binary": "b435f805e1475b90cffc6fdc831aeefc2eb573b1a48d800595c03de1bb9e99c6"
+      },
+      "label": "CERTIFIED",
+      "parameters": {
+        "as_mib": 340,
+        "binary": "/home/jay/research/data/delta3-codex-20261113/encoder/delta_cnf",
+        "cake_heap": 96,
+        "cake_seconds": 3,
+        "cake_stack": 16,
+        "cube": "",
+        "defer_cake": false,
+        "fix_signs": null,
+        "generate_only": false,
+        "m": 10,
+        "mode": "cup",
+        "n": 8,
+        "out": "/home/jay/research/data/delta3-codex-20261113/encoder/control-cup-n8-m10",
+        "pool": "lattice",
+        "seconds": 3,
+        "sym": "none"
+      },
+      "proof_bytes": 12963,
+      "runs": {
+        "cadical": {
+          "exit": 20,
+          "wall_seconds": 0.007
+        },
+        "cake": {
+          "exit": 0,
+          "wall_seconds": 0.015
+        },
+        "encode": {
+          "exit": 0,
+          "wall_seconds": 0.007
+        }
+      },
+      "status": "UNSAT_CERTIFIED"
+    },
+    {
+      "cake_lines": [
+        "s VERIFIED UNSAT"
+      ],
+      "directory": "/home/jay/research/data/delta3-codex-20261113/encoder/control-cup-same-fixture",
+      "encoding": {
+        "a": 5,
+        "base_only": false,
+        "clauses": 17064,
+        "cnf_bytes": 319096,
+        "cube": "",
+        "label": "COMPUTED",
+        "literals": 64389,
+        "m": 11,
+        "max_width": 37,
+        "mode": "cup",
+        "n": 6,
+        "phases": {
+          "cap_lattice": {
+            "clauses": 1486,
+            "literals": 8916
+          },
+          "endpoint_support": {
+            "clauses": 81,
+            "literals": 576
+          },
+          "fixed_signs": {
+            "clauses": 165,
+            "literals": 165
+          },
+          "forall_delta": {
+            "clauses": 2048,
+            "literals": 3764
+          },
+          "fourcap": {
+            "clauses": 660,
+            "literals": 1320
+          },
+          "no5cap": {
+            "clauses": 462,
+            "literals": 1386
+          },
+          "no_ngon": {
+            "clauses": 5082,
+            "literals": 20328
+          },
+          "signotope": {
+            "clauses": 2640,
+            "literals": 10560
+          },
+          "target_lattice": {
+            "clauses": 1808,
+            "literals": 12110
+          },
+          "target_seeds": {
+            "clauses": 2632,
+            "literals": 5264
+          }
+        },
+        "pool": "lattice",
+        "sym": "none",
+        "triples": 165,
+        "variables": 4794
+      },
+      "hashes": {
+        "cadical.log": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162",
+        "cadical.time": "7df4bf59c5af569d2ea810fd449d34036854b45d6f5bc763d05125b539e39e77",
+        "cake.log": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+        "cake.time": "07e542a2360613d1683f3a51f7ea4197b5f484abe87743c44b8ab16febc32b2d",
+        "case.cnf": "8b568c0c5faf90b133d72e512638f0895a06b4382ef17c02784e5189138b5f07",
+        "case.lrat": "d5642fe25f8b156bae325f0f25384fed6a47e3b18f70dbc80d8048fb9ab3beec",
+        "delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+        "encode.log": "20bcfaf65ba781339c8e00b07acf138c21f131ad7da9a32d249e411c65c7a5d0",
+        "encode.time": "b890d017809e1896f3167579a5788e6fc5cbd1360d67784caed23339950c084b",
+        "encoder_binary": "b435f805e1475b90cffc6fdc831aeefc2eb573b1a48d800595c03de1bb9e99c6"
+      },
+      "label": "CERTIFIED",
+      "parameters": {
+        "as_mib": 340,
+        "binary": "/home/jay/research/data/delta3-codex-20261113/encoder/delta_cnf",
+        "cake_heap": 96,
+        "cake_seconds": 3,
+        "cake_stack": 16,
+        "cube": "",
+        "defer_cake": false,
+        "fix_signs": "/home/jay/research/data/delta3-codex-20261113/encoder/negative.signs",
+        "generate_only": false,
+        "m": 11,
+        "mode": "cup",
+        "n": 6,
+        "out": "/home/jay/research/data/delta3-codex-20261113/encoder/control-cup-same-fixture",
+        "pool": "lattice",
+        "seconds": 3,
+        "sym": "none"
+      },
+      "proof_bytes": 78117,
+      "runs": {
+        "cadical": {
+          "exit": 20,
+          "wall_seconds": 0.007
+        },
+        "cake": {
+          "exit": 0,
+          "wall_seconds": 0.032
+        },
+        "encode": {
+          "exit": 0,
+          "wall_seconds": 0.007
+        }
+      },
+      "status": "UNSAT_CERTIFIED"
+    }
+  ],
+  "estimates_sym_none": [
+    {
+      "a": 5,
+      "base_only": false,
+      "clauses": 102025,
+      "cnf_bytes": 0,
+      "cube": "",
+      "label": "COMPUTED",
+      "literals": 426471,
+      "m": 14,
+      "max_width": 67,
+      "mode": "cup",
+      "n": 6,
+      "phases": {
+        "cap_lattice": {
+          "clauses": 14913,
+          "literals": 89478
+        },
+        "endpoint_support": {
+          "clauses": 144,
+          "literals": 1509
+        },
+        "forall_delta": {
+          "clauses": 16384,
+          "literals": 32147
+        },
+        "fourcap": {
+          "clauses": 2002,
+          "literals": 4004
+        },
+        "no5cap": {
+          "clauses": 2002,
+          "literals": 6006
+        },
+        "no_ngon": {
+          "clauses": 33033,
+          "literals": 132132
+        },
+        "signotope": {
+          "clauses": 8008,
+          "literals": 32032
+        },
+        "target_lattice": {
+          "clauses": 15903,
+          "literals": 109891
+        },
+        "target_seeds": {
+          "clauses": 9636,
+          "literals": 19272
+        }
+      },
+      "pool": "lattice",
+      "sym": "none",
+      "triples": 364,
+      "variables": 35647
+    },
+    {
+      "a": 5,
+      "base_only": false,
+      "clauses": 181556,
+      "cnf_bytes": 0,
+      "cube": "",
+      "label": "COMPUTED",
+      "literals": 781297,
+      "m": 15,
+      "max_width": 79,
+      "mode": "cup",
+      "n": 6,
+      "phases": {
+        "cap_lattice": {
+          "clauses": 30827,
+          "literals": 184962
+        },
+        "endpoint_support": {
+          "clauses": 169,
+          "literals": 1989
+        },
+        "forall_delta": {
+          "clauses": 32768,
+          "literals": 64790
+        },
+        "fourcap": {
+          "clauses": 2730,
+          "literals": 5460
+        },
+        "no5cap": {
+          "clauses": 3003,
+          "literals": 9009
+        },
+        "no_ngon": {
+          "clauses": 55055,
+          "literals": 220220
+        },
+        "signotope": {
+          "clauses": 10920,
+          "literals": 43680
+        },
+        "target_lattice": {
+          "clauses": 32180,
+          "literals": 223379
+        },
+        "target_seeds": {
+          "clauses": 13904,
+          "literals": 27808
+        }
+      },
+      "pool": "lattice",
+      "sym": "none",
+      "triples": 455,
+      "variables": 69770
+    },
+    {
+      "a": 5,
+      "base_only": false,
+      "clauses": 136128,
+      "cnf_bytes": 0,
+      "cube": "",
+      "label": "COMPUTED",
+      "literals": 601868,
+      "m": 14,
+      "max_width": 67,
+      "mode": "cup",
+      "n": 7,
+      "phases": {
+        "cap_lattice": {
+          "clauses": 14913,
+          "literals": 89478
+        },
+        "endpoint_support": {
+          "clauses": 144,
+          "literals": 1509
+        },
+        "forall_delta": {
+          "clauses": 16384,
+          "literals": 31777
+        },
+        "fourcap": {
+          "clauses": 2002,
+          "literals": 4004
+        },
+        "no5cap": {
+          "clauses": 2002,
+          "literals": 6006
+        },
+        "no_ngon": {
+          "clauses": 54912,
+          "literals": 274560
+        },
+        "signotope": {
+          "clauses": 8008,
+          "literals": 32032
+        },
+        "target_lattice": {
+          "clauses": 14903,
+          "literals": 116782
+        },
+        "target_seeds": {
+          "clauses": 22860,
+          "literals": 45720
+        }
+      },
+      "pool": "lattice",
+      "sym": "none",
+      "triples": 364,
+      "variables": 37280
+    },
+    {
+      "a": 5,
+      "base_only": false,
+      "clauses": 162375,
+      "cnf_bytes": 0,
+      "cube": "",
+      "label": "COMPUTED",
+      "literals": 752797,
+      "m": 14,
+      "max_width": 67,
+      "mode": "cup",
+      "n": 8,
+      "phases": {
+        "cap_lattice": {
+          "clauses": 14913,
+          "literals": 89478
+        },
+        "endpoint_support": {
+          "clauses": 144,
+          "literals": 1509
+        },
+        "forall_delta": {
+          "clauses": 16384,
+          "literals": 30772
+        },
+        "fourcap": {
+          "clauses": 2002,
+          "literals": 4004
+        },
+        "no5cap": {
+          "clauses": 2002,
+          "literals": 6006
+        },
+        "no_ngon": {
+          "clauses": 66066,
+          "literals": 396396
+        },
+        "signotope": {
+          "clauses": 8008,
+          "literals": 32032
+        },
+        "target_lattice": {
+          "clauses": 12902,
+          "literals": 112692
+        },
+        "target_seeds": {
+          "clauses": 39954,
+          "literals": 79908
+        }
+      },
+      "pool": "lattice",
+      "sym": "none",
+      "triples": 364,
+      "variables": 37706
+    },
+    {
+      "a": 5,
+      "base_only": false,
+      "clauses": 512206,
+      "cnf_bytes": 0,
+      "cube": "",
+      "label": "COMPUTED",
+      "literals": 2162652,
+      "m": 16,
+      "max_width": 8,
+      "mode": "weak",
+      "n": 7,
+      "phases": {
+        "cap_lattice": {
+          "clauses": 63019,
+          "literals": 378114
+        },
+        "forall_delta": {
+          "clauses": 65536,
+          "literals": 123490
+        },
+        "fourcap": {
+          "clauses": 3640,
+          "literals": 7280
+        },
+        "no5cap": {
+          "clauses": 4368,
+          "literals": 13104
+        },
+        "no_ngon": {
+          "clauses": 183040,
+          "literals": 915200
+        },
+        "signotope": {
+          "clauses": 14560,
+          "literals": 58240
+        },
+        "target_lattice": {
+          "clauses": 50643,
+          "literals": 405144
+        },
+        "target_seeds": {
+          "clauses": 127400,
+          "literals": 262080
+        }
+      },
+      "pool": "lattice",
+      "sym": "none",
+      "triples": 560,
+      "variables": 125870
+    },
+    {
+      "a": 5,
+      "base_only": false,
+      "clauses": 881146,
+      "cnf_bytes": 0,
+      "cube": "",
+      "label": "COMPUTED",
+      "literals": 3446527,
+      "m": 16,
+      "max_width": 9,
+      "mode": "weak",
+      "n": 8,
+      "phases": {
+        "cap_lattice": {
+          "clauses": 63019,
+          "literals": 378114
+        },
+        "forall_delta": {
+          "clauses": 65536,
+          "literals": 115482
+        },
+        "fourcap": {
+          "clauses": 3640,
+          "literals": 7280
+        },
+        "no5cap": {
+          "clauses": 4368,
+          "literals": 13104
+        },
+        "no_ngon": {
+          "clauses": 283140,
+          "literals": 1698840
+        },
+        "signotope": {
+          "clauses": 14560,
+          "literals": 58240
+        },
+        "target_lattice": {
+          "clauses": 39203,
+          "literals": 352827
+        },
+        "target_seeds": {
+          "clauses": 407680,
+          "literals": 822640
+        }
+      },
+      "pool": "lattice",
+      "sym": "none",
+      "triples": 560,
+      "variables": 117862
+    }
+  ],
+  "generation_measurements_sym_mirror": [
+    {
+      "a": 5,
+      "base_only": false,
+      "clauses": 102570,
+      "cnf_bytes": 2433293,
+      "cube": "",
+      "label": "COMPUTED",
+      "literals": 428466,
+      "m": 14,
+      "max_width": 67,
+      "mode": "cup",
+      "n": 6,
+      "phases": {
+        "cap_lattice": {
+          "clauses": 14913,
+          "literals": 89478
+        },
+        "endpoint_support": {
+          "clauses": 144,
+          "literals": 1509
+        },
+        "forall_delta": {
+          "clauses": 16384,
+          "literals": 32147
+        },
+        "fourcap": {
+          "clauses": 2002,
+          "literals": 4004
+        },
+        "mirror": {
+          "clauses": 545,
+          "literals": 1995
+        },
+        "no5cap": {
+          "clauses": 2002,
+          "literals": 6006
+        },
+        "no_ngon": {
+          "clauses": 33033,
+          "literals": 132132
+        },
+        "signotope": {
+          "clauses": 8008,
+          "literals": 32032
+        },
+        "target_lattice": {
+          "clauses": 15903,
+          "literals": 109891
+        },
+        "target_seeds": {
+          "clauses": 9636,
+          "literals": 19272
+        }
+      },
+      "pool": "lattice",
+      "sym": "mirror",
+      "triples": 364,
+      "variables": 35829
+    },
+    {
+      "a": 5,
+      "base_only": false,
+      "clauses": 182227,
+      "cnf_bytes": 4594142,
+      "cube": "",
+      "label": "COMPUTED",
+      "literals": 783754,
+      "m": 15,
+      "max_width": 79,
+      "mode": "cup",
+      "n": 6,
+      "phases": {
+        "cap_lattice": {
+          "clauses": 30827,
+          "literals": 184962
+        },
+        "endpoint_support": {
+          "clauses": 169,
+          "literals": 1989
+        },
+        "forall_delta": {
+          "clauses": 32768,
+          "literals": 64790
+        },
+        "fourcap": {
+          "clauses": 2730,
+          "literals": 5460
+        },
+        "mirror": {
+          "clauses": 671,
+          "literals": 2457
+        },
+        "no5cap": {
+          "clauses": 3003,
+          "literals": 9009
+        },
+        "no_ngon": {
+          "clauses": 55055,
+          "literals": 220220
+        },
+        "signotope": {
+          "clauses": 10920,
+          "literals": 43680
+        },
+        "target_lattice": {
+          "clauses": 32180,
+          "literals": 223379
+        },
+        "target_seeds": {
+          "clauses": 13904,
+          "literals": 27808
+        }
+      },
+      "pool": "lattice",
+      "sym": "mirror",
+      "triples": 455,
+      "variables": 69994
+    },
+    {
+      "a": 5,
+      "base_only": false,
+      "clauses": 136673,
+      "cnf_bytes": 3317564,
+      "cube": "",
+      "label": "COMPUTED",
+      "literals": 603863,
+      "m": 14,
+      "max_width": 67,
+      "mode": "cup",
+      "n": 7,
+      "phases": {
+        "cap_lattice": {
+          "clauses": 14913,
+          "literals": 89478
+        },
+        "endpoint_support": {
+          "clauses": 144,
+          "literals": 1509
+        },
+        "forall_delta": {
+          "clauses": 16384,
+          "literals": 31777
+        },
+        "fourcap": {
+          "clauses": 2002,
+          "literals": 4004
+        },
+        "mirror": {
+          "clauses": 545,
+          "literals": 1995
+        },
+        "no5cap": {
+          "clauses": 2002,
+          "literals": 6006
+        },
+        "no_ngon": {
+          "clauses": 54912,
+          "literals": 274560
+        },
+        "signotope": {
+          "clauses": 8008,
+          "literals": 32032
+        },
+        "target_lattice": {
+          "clauses": 14903,
+          "literals": 116782
+        },
+        "target_seeds": {
+          "clauses": 22860,
+          "literals": 45720
+        }
+      },
+      "pool": "lattice",
+      "sym": "mirror",
+      "triples": 364,
+      "variables": 37462
+    },
+    {
+      "a": 5,
+      "base_only": false,
+      "clauses": 162920,
+      "cnf_bytes": 4076195,
+      "cube": "",
+      "label": "COMPUTED",
+      "literals": 754792,
+      "m": 14,
+      "max_width": 67,
+      "mode": "cup",
+      "n": 8,
+      "phases": {
+        "cap_lattice": {
+          "clauses": 14913,
+          "literals": 89478
+        },
+        "endpoint_support": {
+          "clauses": 144,
+          "literals": 1509
+        },
+        "forall_delta": {
+          "clauses": 16384,
+          "literals": 30772
+        },
+        "fourcap": {
+          "clauses": 2002,
+          "literals": 4004
+        },
+        "mirror": {
+          "clauses": 545,
+          "literals": 1995
+        },
+        "no5cap": {
+          "clauses": 2002,
+          "literals": 6006
+        },
+        "no_ngon": {
+          "clauses": 66066,
+          "literals": 396396
+        },
+        "signotope": {
+          "clauses": 8008,
+          "literals": 32032
+        },
+        "target_lattice": {
+          "clauses": 12902,
+          "literals": 112692
+        },
+        "target_seeds": {
+          "clauses": 39954,
+          "literals": 79908
+        }
+      },
+      "pool": "lattice",
+      "sym": "mirror",
+      "triples": 364,
+      "variables": 37888
+    },
+    {
+      "a": 5,
+      "base_only": false,
+      "clauses": 513045,
+      "cnf_bytes": 12859792,
+      "cube": "",
+      "label": "COMPUTED",
+      "literals": 2165725,
+      "m": 16,
+      "max_width": 8,
+      "mode": "weak",
+      "n": 7,
+      "phases": {
+        "cap_lattice": {
+          "clauses": 63019,
+          "literals": 378114
+        },
+        "forall_delta": {
+          "clauses": 65536,
+          "literals": 123490
+        },
+        "fourcap": {
+          "clauses": 3640,
+          "literals": 7280
+        },
+        "mirror": {
+          "clauses": 839,
+          "literals": 3073
+        },
+        "no5cap": {
+          "clauses": 4368,
+          "literals": 13104
+        },
+        "no_ngon": {
+          "clauses": 183040,
+          "literals": 915200
+        },
+        "signotope": {
+          "clauses": 14560,
+          "literals": 58240
+        },
+        "target_lattice": {
+          "clauses": 50643,
+          "literals": 405144
+        },
+        "target_seeds": {
+          "clauses": 127400,
+          "literals": 262080
+        }
+      },
+      "pool": "lattice",
+      "sym": "mirror",
+      "triples": 560,
+      "variables": 126150
+    },
+    {
+      "a": 5,
+      "base_only": false,
+      "clauses": 881985,
+      "cnf_bytes": 20397801,
+      "cube": "",
+      "label": "COMPUTED",
+      "literals": 3449600,
+      "m": 16,
+      "max_width": 9,
+      "mode": "weak",
+      "n": 8,
+      "phases": {
+        "cap_lattice": {
+          "clauses": 63019,
+          "literals": 378114
+        },
+        "forall_delta": {
+          "clauses": 65536,
+          "literals": 115482
+        },
+        "fourcap": {
+          "clauses": 3640,
+          "literals": 7280
+        },
+        "mirror": {
+          "clauses": 839,
+          "literals": 3073
+        },
+        "no5cap": {
+          "clauses": 4368,
+          "literals": 13104
+        },
+        "no_ngon": {
+          "clauses": 283140,
+          "literals": 1698840
+        },
+        "signotope": {
+          "clauses": 14560,
+          "literals": 58240
+        },
+        "target_lattice": {
+          "clauses": 39203,
+          "literals": 352827
+        },
+        "target_seeds": {
+          "clauses": 407680,
+          "literals": 822640
+        }
+      },
+      "pool": "lattice",
+      "sym": "mirror",
+      "triples": 560,
+      "variables": 118142
+    }
+  ],
+  "negative_fixtures": {
+    "6": {
+      "convex_ngons": 0,
+      "fivecaps": 0,
+      "fourcaps": 5,
+      "label": "COMPUTED",
+      "m": 11,
+      "modes": {
+        "cap": {
+          "first_delta": null,
+          "targets": 18,
+          "working_deltas": 0
+        },
+        "cup": {
+          "first_delta": [
+            0,
+            1,
+            3,
+            4,
+            6
+          ],
+          "targets": 102,
+          "working_deltas": 684
+        },
+        "weak": {
+          "first_delta": [
+            0,
+            1,
+            3,
+            4,
+            6
+          ],
+          "targets": 102,
+          "working_deltas": 861
+        }
+      },
+      "n": 6,
+      "signs": "---++++++--++++++++++++++++++++++++-+++++++++--++++++++++++++++++++++++-+++++++++++++++++++++++++++-+++++++++------+++++-++++++++++++++-+++++++++-++++++++++++-------",
+      "valid": true
+    },
+    "7": {
+      "convex_ngons": 0,
+      "fivecaps": 0,
+      "fourcaps": 9,
+      "label": "COMPUTED",
+      "m": 12,
+      "modes": {
+        "cap": {
+          "first_delta": null,
+          "targets": 20,
+          "working_deltas": 0
+        },
+        "cup": {
+          "first_delta": [
+            2,
+            3,
+            6
+          ],
+          "targets": 21,
+          "working_deltas": 2433
+        },
+        "weak": {
+          "first_delta": [
+            2,
+            3,
+            6
+          ],
+          "targets": 24,
+          "working_deltas": 2541
+        }
+      },
+      "n": 7,
+      "signs": "----++++++---++++++++++++++-++++++++++++--+++++++++++++---++++++++++++++-++++++++++++--++++++++++++++++++++++++++++++++++--+++++++++++++-------++++++--++-++++++++--++++++--+++++++++++++--++-++++++++--+++++++---+++-------",
+      "valid": true
+    },
+    "8": {
+      "convex_ngons": 0,
+      "fivecaps": 0,
+      "fourcaps": 5,
+      "label": "COMPUTED",
+      "m": 13,
+      "modes": {
+        "cap": {
+          "first_delta": null,
+          "targets": 19,
+          "working_deltas": 0
+        },
+        "cup": {
+          "first_delta": [
+            1,
+            2,
+            3
+          ],
+          "targets": 70,
+          "working_deltas": 5746
+        },
+        "weak": {
+          "first_delta": [
+            1,
+            2,
+            3
+          ],
+          "targets": 73,
+          "working_deltas": 5746
+        }
+      },
+      "n": 8,
+      "signs": "------+-+++-----+-++++++++++++---+-+++++++++++++++++++++-+++++++++--+++++++++++++++++++++++++++++++++++++++++++-++++++++++++++++++++++++++++++++++++++++++++-+++++++++--------++++++++++++++++++-+++++++++++++++++++++++++++-++++++++++++++++++++-++++++++++++++-+++++++++-++++++++++++-------",
+      "valid": true
+    }
+  },
+  "semantic_controls": {
+    "cases": [
+      {
+        "comparisons": 384,
+        "m": 4,
+        "mismatches": 0,
+        "mode": "cup",
+        "n": 5,
+        "signotopes": 8,
+        "valid": 8
+      },
+      {
+        "comparisons": 5184,
+        "m": 5,
+        "mismatches": 0,
+        "mode": "weak",
+        "n": 5,
+        "signotopes": 62,
+        "valid": 54
+      },
+      {
+        "comparisons": 5184,
+        "m": 5,
+        "mismatches": 0,
+        "mode": "cup",
+        "n": 5,
+        "signotopes": 62,
+        "valid": 54
+      },
+      {
+        "comparisons": 5184,
+        "m": 5,
+        "mismatches": 0,
+        "mode": "cap",
+        "n": 5,
+        "signotopes": 62,
+        "valid": 54
+      },
+      {
+        "comparisons": 5856,
+        "m": 5,
+        "mismatches": 0,
+        "mode": "cup",
+        "n": 8,
+        "signotopes": 62,
+        "valid": 61
+      },
+      {
+        "comparisons": 159744,
+        "m": 6,
+        "mismatches": 0,
+        "mode": "cup",
+        "n": 6,
+        "signotopes": 908,
+        "valid": 832
+      },
+      {
+        "comparisons": 159744,
+        "m": 6,
+        "mismatches": 0,
+        "mode": "cap",
+        "n": 6,
+        "signotopes": 908,
+        "valid": 832
+      },
+      {
+        "comparisons": 159744,
+        "m": 6,
+        "mismatches": 0,
+        "mode": "weak",
+        "n": 6,
+        "signotopes": 908,
+        "valid": 832
+      }
+    ],
+    "comparisons": 501024,
+    "label": "COMPUTED",
+    "wall_seconds": 1.085
+  },
+  "source_hashes": {
+    "check_model.py": "5bd4c0d6b83e94c8bf45ea0ab401dc1730b6a95223c0cf6344e0ce4216f0ed95",
+    "delta_cnf.cpp": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+    "run_case.py": "6c83598bcdb9e3b35c3f50471a8b4fc2a536b0788a22e2a05a4fcdff3764f13c",
+    "semantic_controls.py": "c77819502d67f34b8fba0014ea475eb579194dc2fd78f7ceee0f3e805de32755"
+  }
+}

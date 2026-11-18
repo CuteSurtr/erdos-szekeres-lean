@@ -1,0 +1,18 @@
+{
+ "time": "2026-11-14T22:10:36.540321+09:00",
+ "action": "unit esr-vfy-s20s1b stopped by the operator (SIGTERM) after it caught up",
+ "reason": "all closable contexts of bb-s1 replayed; the last open context 4240 continues in successor packet bb-s2 (split-open=4)",
+ "last_checkpoint": {
+  "time": "2026-11-14T22:10:32.687480+09:00",
+  "event": "TREE_CHECKPOINT",
+  "version": "s20-v13",
+  "contexts": 4273,
+  "total": 4274,
+  "nodes": 30905771,
+  "pending": 2,
+  "minimum_margin": 1,
+  "label": "PARTIAL EXACT REPLAY; NO EXCLUSION"
+ },
+ "new_contexts_sha256": "f115bdf404c46d5a640460098fb78e3a069ffa4f61855d823b1e71a1a8f146a1",
+ "latest_summary_sha256": "3685c527a9d288b5eaf6c0679dee96c3a4ba273dc0e9dee22160d3d07bba1c56"
+}

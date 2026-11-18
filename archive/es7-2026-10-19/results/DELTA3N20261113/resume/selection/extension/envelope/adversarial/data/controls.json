@@ -1,0 +1,100 @@
+{
+  "label": "COMPUTED exact controls",
+  "all_passed": true,
+  "truth_table_assignments": 262144,
+  "ordinary_delta_count": 8149,
+  "uniform_baseline": 4057,
+  "strict_boundary_checks": [
+    {
+      "vertex": 0,
+      "low": -3211009538,
+      "high": -2814627474
+    },
+    {
+      "vertex": 1,
+      "low": -3464590587,
+      "high": -3295349395
+    },
+    {
+      "vertex": 2,
+      "low": 1543194389,
+      "high": 2463478089
+    },
+    {
+      "vertex": 3,
+      "low": 1709313252,
+      "high": 2781890762
+    },
+    {
+      "vertex": 4,
+      "low": 2987150704,
+      "high": 3208676893
+    },
+    {
+      "vertex": 5,
+      "low": -1065984305,
+      "high": -1051944394
+    },
+    {
+      "vertex": 6,
+      "low": -1283293034,
+      "high": -1270436971
+    },
+    {
+      "vertex": 7,
+      "low": -1179886055,
+      "high": -1141316542
+    },
+    {
+      "vertex": 8,
+      "low": 131825430,
+      "high": 254496478
+    },
+    {
+      "vertex": 9,
+      "low": -3239750337,
+      "high": -3052823670
+    },
+    {
+      "vertex": 10,
+      "low": -2654762742,
+      "high": -2516492924
+    },
+    {
+      "vertex": 11,
+      "low": 260152353,
+      "high": 402738994
+    },
+    {
+      "vertex": 12,
+      "low": -3382537185,
+      "high": -3316010351
+    },
+    {
+      "vertex": 13,
+      "low": -3895785276,
+      "high": -3726673352
+    },
+    {
+      "vertex": 14,
+      "low": 920065378,
+      "high": 972653431
+    },
+    {
+      "vertex": 15,
+      "low": 1119504291,
+      "high": 1190488342
+    },
+    {
+      "vertex": 16,
+      "low": 897211630,
+      "high": 1096970462
+    },
+    {
+      "vertex": 17,
+      "low": 3609472035,
+      "high": 3798756319
+    }
+  ],
+  "random_rational_line_families": 1000
+}

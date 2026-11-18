@@ -1,0 +1,24 @@
+{
+  "actual_solver_used": false,
+  "binary_sha256": "3101f39e84775828b5ac2439379b088f6a7c95904b3e18c1af3836f8cc10f5c8",
+  "checker_sha256": "6beda077b9de16b1c9f314291057b227bfca7c5d7b2b660acb38e3877a3c978b",
+  "clauses_checked": 48226,
+  "cnf_sha256": "1c404431d3494ff55c1258ba1daae7da3ee90ccbd9ded06eeaa03b038c9e0444",
+  "compile_command": [
+    "g++",
+    "-std=c++17",
+    "-O1",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/pool/maximal_cnf.cpp",
+    "-o",
+    "/home/jay/research/data/delta3-codex-20261113/resume/audit/maximal_cnf_audit"
+  ],
+  "elapsed_seconds": 0.7940130850001879,
+  "included_source_sha256": "b953e14fc7d0840712bbf63f502e00c7342cbd1cdb9ef3ed548759e8ae8aa12c",
+  "label": "COMPUTED",
+  "m": 12,
+  "n": 7,
+  "orientation_fixed_by_canonical_assignment": true,
+  "source_sha256": "7ee7d13e21416e30a70efe671a7270e8b1b73d73346abf7a13ef74609f0583db",
+  "status": "CANONICAL_REAL_POSITIVE_CONTROL_PASS",
+  "variables": 4126
+}

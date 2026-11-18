@@ -1,0 +1,370 @@
+{
+  "status": "PASS",
+  "label": "COMPUTED formula and controls; written projection separate",
+  "base": {
+    "variables": 32086,
+    "clauses": 231613,
+    "literals": 623240,
+    "unchanged_body_bytes": 4104153
+  },
+  "added": {
+    "unique_rows": 48,
+    "provenance_entries": 52,
+    "literals": 10608,
+    "new_distinct_from_prior": 11,
+    "new_literals": 2574
+  },
+  "total": {
+    "variables": 32086,
+    "clauses": 231661,
+    "literals": 633848
+  },
+  "provenance": [
+    {
+      "kind": "high",
+      "cut": 1,
+      "row_index": 0,
+      "literals": 78
+    },
+    {
+      "kind": "high",
+      "cut": 2,
+      "row_index": 1,
+      "literals": 144
+    },
+    {
+      "kind": "high",
+      "cut": 3,
+      "row_index": 2,
+      "literals": 198
+    },
+    {
+      "kind": "high",
+      "cut": 4,
+      "row_index": 3,
+      "literals": 240
+    },
+    {
+      "kind": "high",
+      "cut": 5,
+      "row_index": 4,
+      "literals": 270
+    },
+    {
+      "kind": "high",
+      "cut": 6,
+      "row_index": 5,
+      "literals": 288
+    },
+    {
+      "kind": "high",
+      "cut": 7,
+      "row_index": 6,
+      "literals": 294
+    },
+    {
+      "kind": "high",
+      "cut": 8,
+      "row_index": 7,
+      "literals": 288
+    },
+    {
+      "kind": "high",
+      "cut": 9,
+      "row_index": 8,
+      "literals": 270
+    },
+    {
+      "kind": "high",
+      "cut": 10,
+      "row_index": 9,
+      "literals": 240
+    },
+    {
+      "kind": "high",
+      "cut": 11,
+      "row_index": 10,
+      "literals": 198
+    },
+    {
+      "kind": "high",
+      "cut": 12,
+      "row_index": 11,
+      "literals": 144
+    },
+    {
+      "kind": "high",
+      "cut": 13,
+      "row_index": 12,
+      "literals": 78
+    },
+    {
+      "kind": "low",
+      "cut": 1,
+      "row_index": 13,
+      "literals": 78
+    },
+    {
+      "kind": "low",
+      "cut": 2,
+      "row_index": 14,
+      "literals": 144
+    },
+    {
+      "kind": "low",
+      "cut": 3,
+      "row_index": 15,
+      "literals": 198
+    },
+    {
+      "kind": "low",
+      "cut": 4,
+      "row_index": 16,
+      "literals": 240
+    },
+    {
+      "kind": "low",
+      "cut": 5,
+      "row_index": 17,
+      "literals": 270
+    },
+    {
+      "kind": "low",
+      "cut": 6,
+      "row_index": 18,
+      "literals": 288
+    },
+    {
+      "kind": "low",
+      "cut": 7,
+      "row_index": 19,
+      "literals": 294
+    },
+    {
+      "kind": "low",
+      "cut": 8,
+      "row_index": 20,
+      "literals": 288
+    },
+    {
+      "kind": "low",
+      "cut": 9,
+      "row_index": 21,
+      "literals": 270
+    },
+    {
+      "kind": "low",
+      "cut": 10,
+      "row_index": 22,
+      "literals": 240
+    },
+    {
+      "kind": "low",
+      "cut": 11,
+      "row_index": 23,
+      "literals": 198
+    },
+    {
+      "kind": "low",
+      "cut": 12,
+      "row_index": 24,
+      "literals": 144
+    },
+    {
+      "kind": "low",
+      "cut": 13,
+      "row_index": 25,
+      "literals": 78
+    },
+    {
+      "kind": "all_cup",
+      "cut": 1,
+      "row_index": 13,
+      "literals": 78
+    },
+    {
+      "kind": "all_cup",
+      "cut": 2,
+      "row_index": 26,
+      "literals": 144
+    },
+    {
+      "kind": "all_cup",
+      "cut": 3,
+      "row_index": 27,
+      "literals": 198
+    },
+    {
+      "kind": "all_cup",
+      "cut": 4,
+      "row_index": 28,
+      "literals": 240
+    },
+    {
+      "kind": "all_cup",
+      "cut": 5,
+      "row_index": 29,
+      "literals": 270
+    },
+    {
+      "kind": "all_cup",
+      "cut": 6,
+      "row_index": 30,
+      "literals": 288
+    },
+    {
+      "kind": "all_cup",
+      "cut": 7,
+      "row_index": 31,
+      "literals": 294
+    },
+    {
+      "kind": "all_cup",
+      "cut": 8,
+      "row_index": 32,
+      "literals": 288
+    },
+    {
+      "kind": "all_cup",
+      "cut": 9,
+      "row_index": 33,
+      "literals": 270
+    },
+    {
+      "kind": "all_cup",
+      "cut": 10,
+      "row_index": 34,
+      "literals": 240
+    },
+    {
+      "kind": "all_cup",
+      "cut": 11,
+      "row_index": 35,
+      "literals": 198
+    },
+    {
+      "kind": "all_cup",
+      "cut": 12,
+      "row_index": 36,
+      "literals": 144
+    },
+    {
+      "kind": "all_cup",
+      "cut": 13,
+      "row_index": 12,
+      "literals": 78
+    },
+    {
+      "kind": "all_cap",
+      "cut": 1,
+      "row_index": 0,
+      "literals": 78
+    },
+    {
+      "kind": "all_cap",
+      "cut": 2,
+      "row_index": 37,
+      "literals": 144
+    },
+    {
+      "kind": "all_cap",
+      "cut": 3,
+      "row_index": 38,
+      "literals": 198
+    },
+    {
+      "kind": "all_cap",
+      "cut": 4,
+      "row_index": 39,
+      "literals": 240
+    },
+    {
+      "kind": "all_cap",
+      "cut": 5,
+      "row_index": 40,
+      "literals": 270
+    },
+    {
+      "kind": "all_cap",
+      "cut": 6,
+      "row_index": 41,
+      "literals": 288
+    },
+    {
+      "kind": "all_cap",
+      "cut": 7,
+      "row_index": 42,
+      "literals": 294
+    },
+    {
+      "kind": "all_cap",
+      "cut": 8,
+      "row_index": 43,
+      "literals": 288
+    },
+    {
+      "kind": "all_cap",
+      "cut": 9,
+      "row_index": 44,
+      "literals": 270
+    },
+    {
+      "kind": "all_cap",
+      "cut": 10,
+      "row_index": 45,
+      "literals": 240
+    },
+    {
+      "kind": "all_cap",
+      "cut": 11,
+      "row_index": 46,
+      "literals": 198
+    },
+    {
+      "kind": "all_cap",
+      "cut": 12,
+      "row_index": 47,
+      "literals": 144
+    },
+    {
+      "kind": "all_cap",
+      "cut": 13,
+      "row_index": 25,
+      "literals": 78
+    }
+  ],
+  "boolean_controls": {
+    "canonical": 52,
+    "mixed_flips": 10920,
+    "pure_flips": 8008,
+    "exhaustive_small": 16576,
+    "omission_mutants": 52,
+    "polarity_mutants": 52
+  },
+  "real_cases": 52,
+  "real_selections": 185,
+  "stable_inputs": true,
+  "input_sha256": {
+    "/home/jay/research/data/delta3-codex-20261113/extension/n7m14-exact.cnf": "5dc0c1719cce7bda188abad8489534413ecbbcbe5f43e1b714244ec045a129c4",
+    "/home/jay/research/data/delta3-codex-20261113/extension/terminal7-a/m14/input.cnf.map": "b81223d78761ab200ef5931cc33ab10821a3e3a2054c5e550d0d8da7cf0fa55e",
+    "/home/jay/research/data/delta3-codex-20261113/extension/n7m14-fourcuts.cnf": "3c6c1f83e2cf426ca13eb2e9ba7e363a1da42f1138cc3b9503c57601678e5788",
+    "/home/jay/research/data/delta3-codex-20261113/extension/n7m14-fourcuts.cnf.json": "185cb9b1c16fdecd716877366d5cb2c164d7264dc3ccc4540bde1e1085a033cf",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/augment_fourcuts14.py": "964b349651920e44bafd66ea478a44e77d53bd1a8e2d616375c7c1061570114b",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/highsplit_audit/tools/controls.py": "8568ab9a5e94e4a5c64e5f91db4d704aacaae6b22e32e96cbfa0123b99d6c6b0",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split_audit/data/control-left13.json": "a1d8214c0986a6f751241bdf0866e9a48de438903d381ab3ac7b9b190064f501",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split/consequences/all_cap.md": "d8ad73b92a99427fb7589a1669e18354fc3dd32631e090f1df034c6a3bf95ad3",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split/consequences/ROOTED_LEMMA.md": "e4ae65ee422f54e426abc8411af020ad88273873f8cf28144638644e2e2a8853",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/allcuts14_audit/SHA256SUMS": "e77056a4121e68e6ff383e6545f8fe268ee6249de3edf0f12d82ee77d1eb07db",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/highsplit_audit/SHA256SUMS": "dbf403074130a992c987858bb4112344099b43bcadf55e9078a394ebb9b34bef"
+  },
+  "rebuilt_sha256": "3c6c1f83e2cf426ca13eb2e9ba7e363a1da42f1138cc3b9503c57601678e5788",
+  "seconds": 0.503320582996821,
+  "peak_rss_KiB": 24212,
+  "limits": {
+    "AS_MiB": 300,
+    "CPU_count": 1,
+    "wall_seconds": 20,
+    "cpu_seconds": 19
+  },
+  "proof_replay": false
+}

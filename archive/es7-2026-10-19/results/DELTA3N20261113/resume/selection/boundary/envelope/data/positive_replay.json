@@ -1,0 +1,142 @@
+{
+  "label": "COMPUTED",
+  "scope": "Positive witnesses only; no UNSAT certification or fresh full-premise audit.",
+  "second_implementation_same_track": true,
+  "results": [
+    {
+      "A": [
+        4,
+        5
+      ],
+      "threecaps_checked": 0,
+      "blue_subsets_checked": 21,
+      "name": "boundary-n6-old"
+    },
+    {
+      "A": [
+        5,
+        6
+      ],
+      "threecaps_checked": 0,
+      "blue_subsets_checked": 84,
+      "name": "boundary-n7-old"
+    },
+    {
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        10,
+        11
+      ],
+      "threecaps_checked": 40,
+      "blue_subsets_checked": 0,
+      "name": "boundary-n8-old"
+    },
+    {
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        11,
+        16
+      ],
+      "threecaps_checked": 78,
+      "blue_subsets_checked": 7,
+      "name": "terminal18",
+      "prior_known_A": {
+        "A": [
+          0,
+          5,
+          6,
+          7,
+          8
+        ],
+        "threecaps_checked": 2,
+        "blue_subsets_checked": 1716
+      }
+    },
+    {
+      "A": [
+        5,
+        9,
+        12,
+        15,
+        17,
+        18,
+        19,
+        20
+      ],
+      "threecaps_checked": 25,
+      "blue_subsets_checked": 1716,
+      "name": "pool-n7-index19"
+    },
+    {
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        10,
+        11,
+        14,
+        17,
+        20
+      ],
+      "threecaps_checked": 92,
+      "blue_subsets_checked": 84,
+      "name": "pool-n7-index64"
+    },
+    {
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        8,
+        9,
+        11,
+        14,
+        17,
+        21,
+        23
+      ],
+      "threecaps_checked": 51,
+      "blue_subsets_checked": 1716,
+      "name": "pool-n8-index130"
+    },
+    {
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        14,
+        23
+      ],
+      "threecaps_checked": 78,
+      "blue_subsets_checked": 330,
+      "name": "pool-n8-index141"
+    }
+  ]
+}

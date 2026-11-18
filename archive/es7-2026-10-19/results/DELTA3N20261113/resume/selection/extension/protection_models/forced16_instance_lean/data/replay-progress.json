@@ -1,0 +1,146 @@
+{
+  "elapsed_seconds": 1.5508408520036028,
+  "passed_so_far": true,
+  "results": [
+    {
+      "module": "F16IAggregate",
+      "receipt": {
+        "command": [
+          "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean",
+          "-j1",
+          "-s16384",
+          "-M500",
+          "--root=/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/protection_models/forced16_instance_lean",
+          "-o",
+          "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/protection_models/forced16_instance_lean/work/F16IAggregate.olean",
+          "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/protection_models/forced16_instance_lean/F16IAggregate.lean"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "source_sha256": "fa49851531eeed7fff188fab7108c6afbac221c8980a67873d903a0f35e1bae9",
+        "elapsed_seconds": 0.738,
+        "proc_status_peaks_kib_except_threads": {
+          "VmPeak": 1015576,
+          "VmSize": 1015576,
+          "VmHWM": 443240,
+          "VmRSS": 443240,
+          "RssAnon": 116960,
+          "RssFile": 326280,
+          "VmSwap": 0,
+          "Threads": 13
+        },
+        "rusage_maxrss_kib": 453296,
+        "as_limit_bytes": 3221225472,
+        "rss_guard_mib": 950,
+        "lean_heap_mib": 500,
+        "cpu_affinity": [
+          4
+        ],
+        "wall_deadline_seconds": 18
+      },
+      "audit_names": [
+        "Delta3.Forced16Instance.all_of_take_drop",
+        "Delta3.Forced16Instance.all_rows",
+        "Delta3.Forced16Instance.all_columns",
+        "Delta3.Forced16Instance.every_weight_positive",
+        "Delta3.Forced16Instance.every_exponent_balanced",
+        "Delta3.Forced16Instance.every_row_valid",
+        "Delta3.Forced16Instance.no_positive_monomial_assignment",
+        "Delta3.Forced16Instance.rows_count",
+        "Delta3.Forced16Instance.variables_count",
+        "Delta3.Forced16Instance.triples_count",
+        "Delta3.Forced16Instance.signs_count",
+        "Delta3.Forced16Instance.positive_weights"
+      ],
+      "source_sha256": "fa49851531eeed7fff188fab7108c6afbac221c8980a67873d903a0f35e1bae9"
+    },
+    {
+      "module": "F16IPairs",
+      "receipt": {
+        "command": [
+          "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean",
+          "-j1",
+          "-s16384",
+          "-M500",
+          "--root=/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/protection_models/forced16_instance_lean",
+          "-o",
+          "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/protection_models/forced16_instance_lean/work/F16IPairs.olean",
+          "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/protection_models/forced16_instance_lean/F16IPairs.lean"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "source_sha256": "13029186be11b155ed7591a40b537a894556bd8940a2c4975d14519c98c15dad",
+        "elapsed_seconds": 0.295,
+        "proc_status_peaks_kib_except_threads": {
+          "VmPeak": 639968,
+          "VmSize": 639968,
+          "VmHWM": 399840,
+          "VmRSS": 399840,
+          "RssAnon": 70032,
+          "RssFile": 329808,
+          "VmSwap": 0,
+          "Threads": 6
+        },
+        "rusage_maxrss_kib": 410032,
+        "as_limit_bytes": 3221225472,
+        "rss_guard_mib": 950,
+        "lean_heap_mib": 500,
+        "cpu_affinity": [
+          4
+        ],
+        "wall_deadline_seconds": 18
+      },
+      "audit_names": [
+        "Delta3.Forced16Instance.monomial_indicator",
+        "Delta3.Forced16Instance.monomial_pair",
+        "Delta3.Forced16Instance.small_monomial",
+        "Delta3.Forced16Instance.large_monomial",
+        "Delta3.Forced16Instance.no_positive_product_assignment",
+        "Delta3.Forced16Instance.factors_bounded"
+      ],
+      "source_sha256": "13029186be11b155ed7591a40b537a894556bd8940a2c4975d14519c98c15dad"
+    },
+    {
+      "module": "F16ITable",
+      "receipt": {
+        "command": [
+          "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean",
+          "-j1",
+          "-s16384",
+          "-M500",
+          "--root=/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/protection_models/forced16_instance_lean",
+          "-o",
+          "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/protection_models/forced16_instance_lean/work/F16ITable.olean",
+          "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/protection_models/forced16_instance_lean/F16ITable.lean"
+        ],
+        "exit_code": 0,
+        "stop_reason": null,
+        "source_sha256": "c904d165aa9b5b65dc872e478a8578e4074254fd6aeac0b383cb43187e32da76",
+        "elapsed_seconds": 0.467,
+        "proc_status_peaks_kib_except_threads": {
+          "VmPeak": 861528,
+          "VmSize": 861528,
+          "VmHWM": 527416,
+          "VmRSS": 527416,
+          "RssAnon": 200248,
+          "RssFile": 327168,
+          "VmSwap": 0,
+          "Threads": 7
+        },
+        "rusage_maxrss_kib": 539452,
+        "as_limit_bytes": 3221225472,
+        "rss_guard_mib": 950,
+        "lean_heap_mib": 500,
+        "cpu_affinity": [
+          4
+        ],
+        "wall_deadline_seconds": 18
+      },
+      "audit_names": [
+        "Delta3.Forced16Instance.triples_exact",
+        "Delta3.Forced16Instance.weight_sum"
+      ],
+      "source_sha256": "c904d165aa9b5b65dc872e478a8578e4074254fd6aeac0b383cb43187e32da76"
+    }
+  ]
+}

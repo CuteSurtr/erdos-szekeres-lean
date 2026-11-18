@@ -1,0 +1,12 @@
+'Delta3.Forced16Instance.all_of_take_drop' depends on axioms: [propext]
+'Delta3.Forced16Instance.rows_count' does not depend on any axioms
+'Delta3.Forced16Instance.variables_count' does not depend on any axioms
+'Delta3.Forced16Instance.triples_count' does not depend on any axioms
+'Delta3.Forced16Instance.signs_count' does not depend on any axioms
+'Delta3.Forced16Instance.positive_weights' does not depend on any axioms
+'Delta3.Forced16Instance.all_rows' depends on axioms: [propext]
+'Delta3.Forced16Instance.all_columns' depends on axioms: [propext]
+'Delta3.Forced16Instance.every_weight_positive' depends on axioms: [propext, Quot.sound]
+'Delta3.Forced16Instance.every_exponent_balanced' depends on axioms: [propext, Quot.sound]
+'Delta3.Forced16Instance.every_row_valid' depends on axioms: [propext, Quot.sound]
+'Delta3.Forced16Instance.no_positive_monomial_assignment' depends on axioms: [propext, Classical.choice, Quot.sound]

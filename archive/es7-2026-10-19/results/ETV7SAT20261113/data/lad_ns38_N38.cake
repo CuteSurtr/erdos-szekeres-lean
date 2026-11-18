@@ -1,0 +1,6 @@
+vfy heap=2600MB Fri Nov 13 06:39:31 PM KST 2026
+d35b0c4f8ad8fe6c06c1c66ece6b9fc8b3d53e006b05c10af3ba0a80a24ca339  run/lad_ns38_N38.cnf
+a9327691747f587392d13fa95808fc6f67552fd49448b63f30c35ce05f2d2e70  run/lad_ns38_N38.lrat
+lrat_bytes=2228107748
+s VERIFIED UNSAT
+vfy_exit=0 cake_wall=79 Fri Nov 13 06:40:56 PM KST 2026

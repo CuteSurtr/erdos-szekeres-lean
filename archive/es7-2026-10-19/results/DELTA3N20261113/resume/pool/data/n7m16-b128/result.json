@@ -1,0 +1,22 @@
+{
+  "as_mib": 900,
+  "base_clauses": 446670,
+  "batch": 128,
+  "calls": 318,
+  "elapsed_seconds": 901.12,
+  "final_cnf_sha256": "98d69a5edd96d51fbda084028c63d218510e9ff6a458a81fcb30ca1ced76ec03",
+  "iterations": 3,
+  "label": "COMPUTED",
+  "m": 16,
+  "n": 7,
+  "pool_size": 767,
+  "seconds_limit": 900,
+  "seed": 701,
+  "solver": "PySAT CaDiCaL 1.9.5 (finder only)",
+  "source": "/home/jay/research/data/delta3-codex-20261113/encoder/direct-weak-n7-m16/result.json",
+  "source_cnf_sha256": "6bc7690369f19b2a908f6adbc0b4b9a23f67de8e8c4cf41482670a835e6df425",
+  "source_result_sha256": "74f7c56ca0555b37f76731755b027144f5e9617e182e74be9bfa8407c6832bcd",
+  "source_script_sha256": "0e1700be00d4fbf93f2965f3ff3caf1a5ccbd9b4c966f3ff04ec5322b1995c30",
+  "status": "UNKNOWN",
+  "variables": 125870
+}

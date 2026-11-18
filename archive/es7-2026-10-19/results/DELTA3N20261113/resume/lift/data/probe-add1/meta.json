@@ -1,0 +1,128 @@
+{
+  "added": 1,
+  "all_gaps": true,
+  "clauses": 453999,
+  "cnf_bytes": 12488638,
+  "label": "COMPUTED",
+  "literals": 2120077,
+  "m": 16,
+  "mode": "cup",
+  "n": 7,
+  "old_m": 15,
+  "phases": {
+    "cap_lattice": {
+      "clauses": 63019,
+      "literals": 378114
+    },
+    "embedding_one_hot": {
+      "clauses": 30,
+      "literals": 60
+    },
+    "embedding_order": {
+      "clauses": 14,
+      "literals": 28
+    },
+    "endpoint_support": {
+      "clauses": 196,
+      "literals": 2576
+    },
+    "forall_delta": {
+      "clauses": 65536,
+      "literals": 129617
+    },
+    "fourcap": {
+      "clauses": 3640,
+      "literals": 7280
+    },
+    "no5cap": {
+      "clauses": 4368,
+      "literals": 13104
+    },
+    "no_ngon": {
+      "clauses": 183040,
+      "literals": 915200
+    },
+    "old_orientation": {
+      "clauses": 1820,
+      "literals": 7280
+    },
+    "signotope": {
+      "clauses": 14560,
+      "literals": 58240
+    },
+    "target_lattice": {
+      "clauses": 63007,
+      "literals": 499040
+    },
+    "target_seeds": {
+      "clauses": 54769,
+      "literals": 109538
+    }
+  },
+  "scope": "counterexample",
+  "selector_ids": [
+    [
+      142738,
+      142739
+    ],
+    [
+      142740,
+      142741
+    ],
+    [
+      142742,
+      142743
+    ],
+    [
+      142744,
+      142745
+    ],
+    [
+      142746,
+      142747
+    ],
+    [
+      142748,
+      142749
+    ],
+    [
+      142750,
+      142751
+    ],
+    [
+      142752,
+      142753
+    ],
+    [
+      142754,
+      142755
+    ],
+    [
+      142756,
+      142757
+    ],
+    [
+      142758,
+      142759
+    ],
+    [
+      142760,
+      142761
+    ],
+    [
+      142762,
+      142763
+    ],
+    [
+      142764,
+      142765
+    ],
+    [
+      142766,
+      142767
+    ]
+  ],
+  "triples": 560,
+  "universal_variables": 142737,
+  "variables": 142767
+}

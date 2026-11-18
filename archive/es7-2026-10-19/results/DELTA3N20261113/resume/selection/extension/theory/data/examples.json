@@ -1,0 +1,20 @@
+{
+  "indexing": "zero-based, increasing x",
+  "safe_two_supports": [[0,0],[1,1],[2,0],[3,4],[4,-3],[5,10],[6,-2],[7,5]],
+  "same_orientations_exposed": [[0,0],[1,1],[2,0],[3,4],[4,-3],[5,10],[6,-2],[7,3]],
+  "target_cap_triple": [0,3,6],
+  "ambient_four_caps": [[0,1,2,4],[2,3,5,6],[2,3,5,7]],
+  "safe_support_pairs": [[5,7],[2,4]],
+  "safe_support_weights": ["1/2","1/2"],
+  "exposed_t_interval": ["14/3","7"],
+  "exposed_t_witness": "6",
+  "exposed_insertion": ["13","-65/4"],
+  "family": {
+    "variable": "height h of point 7; all other coordinates fixed",
+    "closed_parameter_interval": ["3","5"],
+    "transition_h": "34/9",
+    "low_support_weight": "1/(7-h)",
+    "convex_combination_surplus": "(9*h-34)/(2*(7-h))",
+    "exposure_when_h_below_transition": ["2*(h+4)/(6-h)","7"]
+  }
+}

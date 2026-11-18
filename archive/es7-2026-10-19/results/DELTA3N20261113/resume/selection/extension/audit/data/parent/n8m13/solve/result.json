@@ -1,0 +1,77 @@
+{
+  "cnf": "/home/jay/research/data/delta3-codex-20261113/extension/terminal8-a/m13/input.cnf",
+  "commands": [
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "63",
+      "/usr/bin/cadical",
+      "-t",
+      "60",
+      "--lrat=true",
+      "--binary=false",
+      "/home/jay/research/data/delta3-codex-20261113/extension/terminal8-a/m13/input.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/extension/terminal8-a/m13/solve/proof.lrat"
+    ],
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "300",
+      "/home/jay/.local/bin/cake_lpr",
+      "--CML_HEAP_SIZE=800",
+      "--CML_STACK_SIZE=32",
+      "/home/jay/research/data/delta3-codex-20261113/extension/terminal8-a/m13/input.cnf",
+      "/home/jay/research/data/delta3-codex-20261113/extension/terminal8-a/m13/solve/proof.lrat"
+    ],
+    [
+      "/usr/bin/timeout",
+      "--kill-after=2",
+      "180",
+      "/usr/bin/zstd",
+      "-q",
+      "-T1",
+      "-3",
+      "-k",
+      "/home/jay/research/data/delta3-codex-20261113/extension/terminal8-a/m13/solve/proof.lrat"
+    ]
+  ],
+  "compressed_bytes": 31669173,
+  "compressed_roundtrip_verified": true,
+  "hashes": {
+    "cadical": "4acf586001aa286dff6e1a390a273023c3160f0175aba2693e3e6a0065089e70",
+    "cadical.log": "7db3f0118c46887ae564c5d1648f3f3dc108796beda93d4c4ca9cb6ba194a824",
+    "cake.log": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+    "input.cnf": "9dc7bd3c109e066b5ef00dc9ff1c47f1446224741af38dd7d1f7376c7b7ca1f7",
+    "proof.lrat": "c6da911a5bd6554afd03fdde74e6de941b1352c82924d10336cb81e8910a5d20",
+    "proof.lrat.zst": "4fb1f98845122302e1fa8bb1298ab2f1d048379c7eeb11000dfc6102639d9e88",
+    "run_cnf.py": "e3c8d9413f99b3092a4ea760f08265bc30bb93204074a3fa566bc2f0c3b3f4b8"
+  },
+  "label": "CERTIFIED",
+  "limits": {
+    "as_mib": 1200,
+    "cake_seconds": 300,
+    "cnf": "/home/jay/research/data/delta3-codex-20261113/extension/terminal8-a/m13/input.cnf",
+    "heap": 800,
+    "out": "/home/jay/research/data/delta3-codex-20261113/extension/terminal8-a/m13/solve",
+    "seconds": 60,
+    "sha256": "9dc7bd3c109e066b5ef00dc9ff1c47f1446224741af38dd7d1f7376c7b7ca1f7"
+  },
+  "proof_bytes": 105055597,
+  "runs": {
+    "cadical": {
+      "exit": 20,
+      "seconds": 13.984
+    },
+    "cake": {
+      "exit": 0,
+      "seconds": 2.567
+    },
+    "compress": {
+      "exit": 0,
+      "seconds": 0.364
+    }
+  },
+  "seconds": 17.076,
+  "status": "UNSAT_CERTIFIED"
+}

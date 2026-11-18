@@ -1,0 +1,23 @@
+{
+  "label": "COMPUTED",
+  "finder_sha256": "ab962987404aacecea344bd7fcc695e4d0f86f647086e61c27d5c8dff04d9d6e",
+  "status": "EXHAUSTED",
+  "name": "compact16",
+  "input_m": 16,
+  "subsets_examined": 4368,
+  "valid_subsets": 4368,
+  "pair_hitting_obstructions": 4368,
+  "no_terminal_triple": 0,
+  "source": {
+    "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/resume/compact/real_n7m16.json",
+    "sha256": "8c7f7015147e0f250ef8253f09bc9cb02f1ea8c82c34cd2adb95735802b16791",
+    "index": null
+  },
+  "seconds": 0.1350631999957841,
+  "trace": "/home/jay/research/data/delta3-codex-20261113/extension/cardinality/compact16.tries.tsv",
+  "trace_sha256": "b76d431fb140968609266c799d635622baa1c83d79adb0299b12b8c2008d7834",
+  "targets_in_source": 279,
+  "fivecaps_in_source": 0,
+  "sevengons_in_source": 0,
+  "max_rss_KiB": 16248
+}

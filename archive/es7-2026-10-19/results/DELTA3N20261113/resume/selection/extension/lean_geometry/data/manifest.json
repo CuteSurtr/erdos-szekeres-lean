@@ -1,0 +1,1068 @@
+{
+  "status": "PROVED: exact finite integer-orientation statement; real bridge not compiled",
+  "main_theorem": "Delta3.Balanced15.balanced15_finite_obstruction",
+  "coordinate_input_sha256": "7da027c4f6c800245a9f715e684872358fea36cab0d0133aa15e0a0b199eed9b",
+  "coordinate_syntax_matches_input": true,
+  "new_source_files": 34,
+  "new_axiom_audits": 47,
+  "checks": [
+    {
+      "source": "FiniteModel.lean",
+      "sha256": "1d9d896fdc1513fceabbf2e54778f99d40bba4dea9f7a5f48271d151359fa5fb",
+      "run": "geom-model-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.indices_complete": [
+          "propext"
+        ],
+        "Delta3.Balanced15.increasing_x": [],
+        "Delta3.Balanced15.det_probe": [
+          "propext"
+        ]
+      },
+      "seconds": 0.268,
+      "kernel_maxrss_kib": 382580,
+      "sampled_peaks": {
+        "VmPeak": 575492,
+        "VmSize": 575492,
+        "VmHWM": 371248,
+        "VmRSS": 371248,
+        "RssAnon": 52616,
+        "RssFile": 318632,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "log_sha256": "15f1b53217d24b6157fea1c16b2fd3847c31f55ca4107414571956d977cdca70",
+      "record_sha256": "5491759f1f65204b745f0b48f8f782228c9865d561a2ccc07d2f279526850312"
+    },
+    {
+      "source": "FiniteFacts.lean",
+      "sha256": "abf08ab2d7c16bcca3ef4eb3b35ad9b7c0a2efac975fb69572b4e837c25a4bd9",
+      "run": "geom-facts-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.ordered_triples_nondegenerate": [],
+        "Delta3.Balanced15.determinant_margin": [],
+        "Delta3.Balanced15.no_five_cap": [
+          "propext"
+        ]
+      },
+      "seconds": 2.583,
+      "kernel_maxrss_kib": 1026556,
+      "sampled_peaks": {
+        "VmPeak": 1336976,
+        "VmSize": 1336976,
+        "VmHWM": 1026608,
+        "VmRSS": 1026608,
+        "RssAnon": 711220,
+        "RssFile": 315388,
+        "VmSwap": 0,
+        "Threads": 7
+      },
+      "log_sha256": "8c2af8530a85867fb68aaa853a1c3cfcf643af6d8b319c28a636382222d31a84",
+      "record_sha256": "e90e2479dbb0e28044049b97cb64d3fdb17da781ddee8d405dadef840ae922ef"
+    },
+    {
+      "source": "Determinants.lean",
+      "sha256": "94cd9d9b8fb99d3b6857f2e9340fed3a590169d21f81fa3ae47101da28d01417",
+      "run": "geom-determinants-export",
+      "axiom_reports": {
+        "Delta3.Balanced15.exact_determinant_table": [
+          "propext"
+        ],
+        "Delta3.Balanced15.triple_count": [
+          "propext"
+        ],
+        "Delta3.Balanced15.five_count": [
+          "propext"
+        ],
+        "Delta3.Balanced15.seven_count": [
+          "propext"
+        ]
+      },
+      "seconds": 2.206,
+      "kernel_maxrss_kib": 857564,
+      "sampled_peaks": {
+        "VmPeak": 1221392,
+        "VmSize": 1221392,
+        "VmHWM": 857820,
+        "VmRSS": 857820,
+        "RssAnon": 540524,
+        "RssFile": 317392,
+        "VmSwap": 0,
+        "Threads": 9
+      },
+      "log_sha256": "c22d28628b61b9e344eb5fa1a0c1f38498e7eb3dc443bf574f1abd1563c5f282",
+      "record_sha256": "9f31f5185a26fdb92235a7514eec44bd87d6611f950702b1c5255ce40729fd7b"
+    },
+    {
+      "source": "SevenBlock00.lean",
+      "sha256": "89514d07bccc0888e5e2b587ee5c8327b91c4c0dd386d9a7418878f2cf91be3f",
+      "run": "geom-seven-explicit00-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.no_seven_block_00": [
+          "propext"
+        ]
+      },
+      "seconds": 1.662,
+      "kernel_maxrss_kib": 707156,
+      "sampled_peaks": {
+        "VmPeak": 969804,
+        "VmSize": 969804,
+        "VmHWM": 707424,
+        "VmRSS": 707424,
+        "RssAnon": 391656,
+        "RssFile": 315928,
+        "VmSwap": 0,
+        "Threads": 6
+      },
+      "log_sha256": "b6dafb18fc694819e9f1470d1e751ca64a0f325f3f3f9f720f0a03ab2f817aa7",
+      "record_sha256": "d35c4dcab4732ddb2b67d83d7bfaf733538fe431f79faad5a56f2ec627f2cb98"
+    },
+    {
+      "source": "SevenBlock01.lean",
+      "sha256": "af0d94a44ea231fe289e48a22f2915ba4563df2855ed857a21f0f2dabb350192",
+      "run": "geom-seven-explicit01-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.no_seven_block_01": [
+          "propext"
+        ]
+      },
+      "seconds": 1.555,
+      "kernel_maxrss_kib": 675800,
+      "sampled_peaks": {
+        "VmPeak": 968468,
+        "VmSize": 968468,
+        "VmHWM": 675972,
+        "VmRSS": 675972,
+        "RssAnon": 360204,
+        "RssFile": 315928,
+        "VmSwap": 0,
+        "Threads": 6
+      },
+      "log_sha256": "8e14d27dda017c117e0b52dcb8189e2e776c24158adbd628ad671ecc887b8bfb",
+      "record_sha256": "099de1196d10608a0d90859a6b1eb5f7f0f554a6a0426ab02f5416ce4528277c"
+    },
+    {
+      "source": "SevenBlock02.lean",
+      "sha256": "8d7d33f992958228af4d16ea19a5e251f15f3d89c0b54a16c4c68fa142cfee8c",
+      "run": "geom-seven-explicit02-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.no_seven_block_02": [
+          "propext"
+        ]
+      },
+      "seconds": 1.349,
+      "kernel_maxrss_kib": 608840,
+      "sampled_peaks": {
+        "VmPeak": 901104,
+        "VmSize": 901104,
+        "VmHWM": 609044,
+        "VmRSS": 609044,
+        "RssAnon": 293276,
+        "RssFile": 315928,
+        "VmSwap": 0,
+        "Threads": 6
+      },
+      "log_sha256": "d8913eb1e10c41f7f78ace5bd1df99b0006c814fd4d1e815c954f75df07a78e0",
+      "record_sha256": "baebaff26413983701a2c0f2a07f755c5c11c163843b942856d58fd370e97973"
+    },
+    {
+      "source": "SevenBlock03.lean",
+      "sha256": "6d786387865c35a67ac456b80fa696aba30e72c02d0725638bee19c9507d52a6",
+      "run": "geom-seven-explicit03-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.no_seven_block_03": [
+          "propext"
+        ]
+      },
+      "seconds": 1.989,
+      "kernel_maxrss_kib": 829328,
+      "sampled_peaks": {
+        "VmPeak": 1109372,
+        "VmSize": 1109372,
+        "VmHWM": 829616,
+        "VmRSS": 829616,
+        "RssAnon": 513880,
+        "RssFile": 315896,
+        "VmSwap": 0,
+        "Threads": 6
+      },
+      "log_sha256": "d40ef69fd1d6e48597d86dc31fd4101be178adcca5de361f5e2c79bb8f9ac780",
+      "record_sha256": "aeb3e0f26adf2380bcd993b5a5a3d0f08ef3664b24ad45ee3d2e55aa58af2bba"
+    },
+    {
+      "source": "SevenBlock04.lean",
+      "sha256": "e9d92842c6e811aadb7ca494b815a9649fb70421d8af6c3c662bead285772b5c",
+      "run": "geom-seven-explicit04-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.no_seven_block_04": [
+          "propext"
+        ]
+      },
+      "seconds": 2.219,
+      "kernel_maxrss_kib": 906728,
+      "sampled_peaks": {
+        "VmPeak": 1182860,
+        "VmSize": 1182860,
+        "VmHWM": 906968,
+        "VmRSS": 906968,
+        "RssAnon": 591200,
+        "RssFile": 315928,
+        "VmSwap": 0,
+        "Threads": 6
+      },
+      "log_sha256": "d59dfecf5ace0ff6d4e4b42485bb7f64cc3c0cc11deb9f84af17e93d753f6627",
+      "record_sha256": "f50a389837c0dd2ce64e044398ee38d74868927ce3f4453700f0e0f13e9966f6"
+    },
+    {
+      "source": "SevenBlock05.lean",
+      "sha256": "d4063973cbdc0073117e3e810c3516cd5cd2a797ff371cf46c52ac4aad1afe4b",
+      "run": "geom-seven-explicit05-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.no_seven_block_05": [
+          "propext"
+        ]
+      },
+      "seconds": 1.385,
+      "kernel_maxrss_kib": 632360,
+      "sampled_peaks": {
+        "VmPeak": 899116,
+        "VmSize": 899116,
+        "VmHWM": 632588,
+        "VmRSS": 632588,
+        "RssAnon": 316884,
+        "RssFile": 315864,
+        "VmSwap": 0,
+        "Threads": 6
+      },
+      "log_sha256": "96db60ef3d6ed364d14f852ba8220045cb1f315e116fa2d05e0bfd6d45ae5bd4",
+      "record_sha256": "f25833e2190c6ab843c597ad516da004843ad558efa83bc7bd2574fcfe9e117f"
+    },
+    {
+      "source": "SevenBlock06.lean",
+      "sha256": "ce37d91c1c1ff993ef493c70c9023d4fee7a8f0d6bdfd18c6b7a5f7c2eee4bc3",
+      "run": "geom-seven-explicit06-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.no_seven_block_06": [
+          "propext"
+        ]
+      },
+      "seconds": 1.815,
+      "kernel_maxrss_kib": 769768,
+      "sampled_peaks": {
+        "VmPeak": 1039972,
+        "VmSize": 1039972,
+        "VmHWM": 769984,
+        "VmRSS": 769984,
+        "RssAnon": 454216,
+        "RssFile": 315928,
+        "VmSwap": 0,
+        "Threads": 6
+      },
+      "log_sha256": "e62dd03f4f850a2668ee00157b2fb77f13194b62e21466f78194d93e9d1e73ab",
+      "record_sha256": "39e6cd6d1f3df0fa88dfd9736a33293af8067dd55a6d6c2b35a968bbb50e8e70"
+    },
+    {
+      "source": "SevenBlock07.lean",
+      "sha256": "25ab42e231acff2b29ba24758b993af02729fca2c4e9223d364845453aaafe10",
+      "run": "geom-seven-explicit07-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.no_seven_block_07": [
+          "propext"
+        ]
+      },
+      "seconds": 2.182,
+      "kernel_maxrss_kib": 890312,
+      "sampled_peaks": {
+        "VmPeak": 1182032,
+        "VmSize": 1182032,
+        "VmHWM": 890560,
+        "VmRSS": 890560,
+        "RssAnon": 574860,
+        "RssFile": 315860,
+        "VmSwap": 0,
+        "Threads": 6
+      },
+      "log_sha256": "453ab695481b26cac5bd6cac31f125187cf5afcc91e960b2ae24fb8189eff4c8",
+      "record_sha256": "d1484099c57870ffc97909b0c4520556386ffcc9781385c05ef4ee3e6b8a2253"
+    },
+    {
+      "source": "SevenBlock08.lean",
+      "sha256": "edb0c3c915dd08a1582fe7853ea0d8cf49dbf4cae76c6f6c93f73197640bbf7f",
+      "run": "geom-seven-explicit08-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.no_seven_block_08": [
+          "propext"
+        ]
+      },
+      "seconds": 1.646,
+      "kernel_maxrss_kib": 727728,
+      "sampled_peaks": {
+        "VmPeak": 972732,
+        "VmSize": 972732,
+        "VmHWM": 727904,
+        "VmRSS": 727904,
+        "RssAnon": 412136,
+        "RssFile": 315928,
+        "VmSwap": 0,
+        "Threads": 6
+      },
+      "log_sha256": "ad0e446ba616c420ad00e454b5c91cd0df2beec066205223093a8a75ea6ea9ec",
+      "record_sha256": "5fd1df143f2550856bb65a1e97471e60e5febf35d524c293de6e5eec32e0926e"
+    },
+    {
+      "source": "SevenBlock09.lean",
+      "sha256": "f4042def22974c0f74dfe3481e6299d9662f34274a7b2a9a5790dda5ed519dc1",
+      "run": "geom-seven-explicit09-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.no_seven_block_09": [
+          "propext"
+        ]
+      },
+      "seconds": 1.421,
+      "kernel_maxrss_kib": 628656,
+      "sampled_peaks": {
+        "VmPeak": 898840,
+        "VmSize": 898840,
+        "VmHWM": 628928,
+        "VmRSS": 628928,
+        "RssAnon": 313160,
+        "RssFile": 315928,
+        "VmSwap": 0,
+        "Threads": 6
+      },
+      "log_sha256": "683c9e2f271e8b65af107ebbec0079e28e4ed6df872ee4d8827ee043264f17e3",
+      "record_sha256": "0b16071240d5d1c9f812da010cb0142c4a6897c841d2c69748205fa0aabdb944"
+    },
+    {
+      "source": "SevenBlock10.lean",
+      "sha256": "9d9ef39a066595836b72b5eecdb97a232f3a3e27b15def9654426ae0f0d4b562",
+      "run": "geom-seven-explicit10-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.no_seven_block_10": [
+          "propext"
+        ]
+      },
+      "seconds": 1.547,
+      "kernel_maxrss_kib": 689868,
+      "sampled_peaks": {
+        "VmPeak": 969724,
+        "VmSize": 969724,
+        "VmHWM": 690072,
+        "VmRSS": 690072,
+        "RssAnon": 374340,
+        "RssFile": 315892,
+        "VmSwap": 0,
+        "Threads": 6
+      },
+      "log_sha256": "72a0a30a268720e767125676c698de64eaed1bed5aa206afa5e56d92a56993d3",
+      "record_sha256": "0587a0d751056024a50746dce7594a1977471734cf1b45d8309d11c2aad88410"
+    },
+    {
+      "source": "SevenBlock11.lean",
+      "sha256": "225d8f6725e360b8cea67f2c510c799cec9849e0ceb34c8a5a6710c138b272f9",
+      "run": "geom-seven-explicit11-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.no_seven_block_11": [
+          "propext"
+        ]
+      },
+      "seconds": 1.594,
+      "kernel_maxrss_kib": 687584,
+      "sampled_peaks": {
+        "VmPeak": 969716,
+        "VmSize": 969716,
+        "VmHWM": 687864,
+        "VmRSS": 687864,
+        "RssAnon": 372096,
+        "RssFile": 315928,
+        "VmSwap": 0,
+        "Threads": 6
+      },
+      "log_sha256": "abbb8a66fccd2f5ba0320b21b92523b9acb4d10c830819d14b20ea5f395dd43b",
+      "record_sha256": "4ee0133b880eb693989406e1b89b003f9b8b9ce491ae65323383a06b47222466"
+    },
+    {
+      "source": "SevenBlock12.lean",
+      "sha256": "78f588563f24802c2fe00240ecd476c5d2463fe848d27449808a0c9bafe19e97",
+      "run": "geom-seven-explicit12-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.no_seven_block_12": [
+          "propext"
+        ]
+      },
+      "seconds": 0.708,
+      "kernel_maxrss_kib": 497704,
+      "sampled_peaks": {
+        "VmPeak": 728668,
+        "VmSize": 728668,
+        "VmHWM": 497768,
+        "VmRSS": 497768,
+        "RssAnon": 181840,
+        "RssFile": 315928,
+        "VmSwap": 0,
+        "Threads": 6
+      },
+      "log_sha256": "cca38fe85b7d0ae524ce8f553291ea1c2aa88012f391fa37d0f765c3581b0f70",
+      "record_sha256": "47987da3e9082e6f80c74b08628cfaaf423627c8153623584ec14cd9c50ef9bf"
+    },
+    {
+      "source": "SevenCover00.lean",
+      "sha256": "5edc4828d13e1faf912af004a0ca1903e1c5096c06268f1b535c667db651538a",
+      "run": "geom-seven-cover00-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.seven_cover_00": [
+          "propext"
+        ]
+      },
+      "seconds": 0.458,
+      "kernel_maxrss_kib": 518404,
+      "sampled_peaks": {
+        "VmPeak": 719060,
+        "VmSize": 719060,
+        "VmHWM": 508096,
+        "VmRSS": 508096,
+        "RssAnon": 192736,
+        "RssFile": 315360,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "log_sha256": "c9463259c749527bebca30a8166c935178b0690e710c855c47b264ee22ddb319",
+      "record_sha256": "d7ff611aee034ccbd3cdb20c2804281cb9f8acccf8c80fbf2a83a71e1a0caa81"
+    },
+    {
+      "source": "SevenCover01.lean",
+      "sha256": "07d8511757e89f1e74527d67656c28c86af6a7adf4fd5d7e830a7a24ce07e4ac",
+      "run": "geom-seven-cover01-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.seven_cover_01": [
+          "propext"
+        ]
+      },
+      "seconds": 0.538,
+      "kernel_maxrss_kib": 540644,
+      "sampled_peaks": {
+        "VmPeak": 753428,
+        "VmSize": 753428,
+        "VmHWM": 536648,
+        "VmRSS": 536648,
+        "RssAnon": 221232,
+        "RssFile": 315672,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "log_sha256": "231981c6dab4a6c5667149da68743310c3a092bf63a2e21f892c7c01a0c23fa0",
+      "record_sha256": "944d2d58e771745ddb768e837632331dd44d988037714188e1e52ac9dddb3b6b"
+    },
+    {
+      "source": "SevenCover02.lean",
+      "sha256": "53ef50b9a0873bc2b32687e77c8a7d3f26ff127f6c9340727e3c569ef2109267",
+      "run": "geom-seven-cover02-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.seven_cover_02": [
+          "propext"
+        ]
+      },
+      "seconds": 0.59,
+      "kernel_maxrss_kib": 580456,
+      "sampled_peaks": {
+        "VmPeak": 821092,
+        "VmSize": 821092,
+        "VmHWM": 571388,
+        "VmRSS": 571388,
+        "RssAnon": 256108,
+        "RssFile": 315280,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "log_sha256": "52e58abea749f8443cd029f4b4ad8b77eb8b9eb5fcf65d05d4ff08815a02936f",
+      "record_sha256": "b9061799ea5af7855a1fe56ca967ba1e030ca5966424d627b89d02121f7424c1"
+    },
+    {
+      "source": "SevenCover03.lean",
+      "sha256": "6d872b47eac04fca47039fcfe03488cf374bca65ba218807c6b45ac0126b65d1",
+      "run": "geom-seven-cover03-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.seven_cover_03": [
+          "propext"
+        ]
+      },
+      "seconds": 0.648,
+      "kernel_maxrss_kib": 595232,
+      "sampled_peaks": {
+        "VmPeak": 824244,
+        "VmSize": 824244,
+        "VmHWM": 593056,
+        "VmRSS": 593056,
+        "RssAnon": 277792,
+        "RssFile": 315264,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "log_sha256": "e86593e6df3f1657ea14e87d4fa85113d0b7ac0d6e4b2a0b35c57c7af8b1423d",
+      "record_sha256": "edaa6de80f87fa55785cfaab75e10293ac03d90dc9520ce313c97fcd9e65a057"
+    },
+    {
+      "source": "SevenCover04.lean",
+      "sha256": "3f772b0a51f3034c2c65d412c50027d897896fa5917fa248043822449395310f",
+      "run": "geom-seven-cover04-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.seven_cover_04": [
+          "propext"
+        ]
+      },
+      "seconds": 0.713,
+      "kernel_maxrss_kib": 618964,
+      "sampled_peaks": {
+        "VmPeak": 825868,
+        "VmSize": 825868,
+        "VmHWM": 619320,
+        "VmRSS": 619320,
+        "RssAnon": 304116,
+        "RssFile": 315204,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "log_sha256": "0d20696e2fef0bb09f824499e1acbfa0002c040c517d1246b5b8fa720e19fa55",
+      "record_sha256": "8fecbec18bf716d10c06616e62bb11cc78141af9a9722098b430acc2525cd7dd"
+    },
+    {
+      "source": "SevenCover05.lean",
+      "sha256": "fa4bd9d49033dad9373e5416aebde3c4be38037ad19f92e0a9554226268273b6",
+      "run": "geom-seven-cover05-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.seven_cover_05": [
+          "propext"
+        ]
+      },
+      "seconds": 0.761,
+      "kernel_maxrss_kib": 646460,
+      "sampled_peaks": {
+        "VmPeak": 892584,
+        "VmSize": 892584,
+        "VmHWM": 639200,
+        "VmRSS": 639200,
+        "RssAnon": 323972,
+        "RssFile": 315228,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "log_sha256": "5a73ee5466fbb1993409938ad91c237de51988eed5fb1888e17faadcf1020d2d",
+      "record_sha256": "4d7682f237c70ed33849b45f33d92bbd117e74351cfd1d9c96df95fbd5f2cd0e"
+    },
+    {
+      "source": "SevenCover06.lean",
+      "sha256": "5aed9e0a4ec44bacc125a591bccfa48fe2e8e771d34efa2d5ec02f8ffcd45b73",
+      "run": "geom-seven-cover06-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.seven_cover_06": [
+          "propext"
+        ]
+      },
+      "seconds": 0.841,
+      "kernel_maxrss_kib": 670536,
+      "sampled_peaks": {
+        "VmPeak": 894332,
+        "VmSize": 894332,
+        "VmHWM": 665208,
+        "VmRSS": 665208,
+        "RssAnon": 349944,
+        "RssFile": 315264,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "log_sha256": "a7fdcbce7afc033402cf23d124e80ece5fd63978517dd53614899fa17d6aa3f3",
+      "record_sha256": "a8c87f8897bf8c5d2462262d347255245b7352404c04d74296b136777bb4fbac"
+    },
+    {
+      "source": "SevenCover07.lean",
+      "sha256": "71254fcb396d4b37a060b47c39c9eb02b63b950aa98735dcc77a77a8a3cceeae",
+      "run": "geom-seven-cover07-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.seven_cover_07": [
+          "propext"
+        ]
+      },
+      "seconds": 0.923,
+      "kernel_maxrss_kib": 683672,
+      "sampled_peaks": {
+        "VmPeak": 895132,
+        "VmSize": 895132,
+        "VmHWM": 678320,
+        "VmRSS": 678320,
+        "RssAnon": 363148,
+        "RssFile": 315172,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "log_sha256": "0be9dc94c3bdfb45f26b0a079a72007c6d7f34f745bfae3609376ae62bde865e",
+      "record_sha256": "95a8f383bd6c06030d8bf4f66c10f87fe5f3ce3df5ac133b908a0a6bb52fdae7"
+    },
+    {
+      "source": "SevenCover08.lean",
+      "sha256": "dba9e93914e1434971d40ab20f7b798b680e9a5b6fff86f134f7c4f16d3d31fc",
+      "run": "geom-seven-cover08-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.seven_cover_08": [
+          "propext"
+        ]
+      },
+      "seconds": 0.932,
+      "kernel_maxrss_kib": 690388,
+      "sampled_peaks": {
+        "VmPeak": 895248,
+        "VmSize": 895248,
+        "VmHWM": 682940,
+        "VmRSS": 682940,
+        "RssAnon": 367668,
+        "RssFile": 315272,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "log_sha256": "8266942bde3290ffc0a477b1baa5adba841ccb93e094ffae103436628bff37fc",
+      "record_sha256": "2be1ba76b619ac38ae7c3a0fc33d9ca0324067ef2f50a59ef5f57819342925d0"
+    },
+    {
+      "source": "SevenCover09.lean",
+      "sha256": "5ba7aa031d80396a3a554829cf77a4daa046fc55ef5fb860e18ee87f2750b92f",
+      "run": "geom-seven-cover09-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.seven_cover_09": [
+          "propext"
+        ]
+      },
+      "seconds": 1.013,
+      "kernel_maxrss_kib": 718488,
+      "sampled_peaks": {
+        "VmPeak": 962640,
+        "VmSize": 962640,
+        "VmHWM": 711036,
+        "VmRSS": 711036,
+        "RssAnon": 395884,
+        "RssFile": 315152,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "log_sha256": "22c1328429e93d916f3a328fcd9d45c423b62c857db04fe7257847a6f541430c",
+      "record_sha256": "2a119a70b7ab20f60ac187e093bc6152bd7b571fdb076b2c524a8a0c25b7784c"
+    },
+    {
+      "source": "SevenCover10.lean",
+      "sha256": "49e729a89c72123c707acb0aceca50e158e45c4457bcc465b469dc95a59f9961",
+      "run": "geom-seven-cover10-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.seven_cover_10": [
+          "propext"
+        ]
+      },
+      "seconds": 1.035,
+      "kernel_maxrss_kib": 715360,
+      "sampled_peaks": {
+        "VmPeak": 962764,
+        "VmSize": 962764,
+        "VmHWM": 715748,
+        "VmRSS": 715748,
+        "RssAnon": 400444,
+        "RssFile": 315304,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "log_sha256": "b7cc24f9fcaab7696b8bed405a1551332a296839e8254691133ba984d4986fe8",
+      "record_sha256": "0392f5c725eab2e085ab62efa67e70c7dda83efc6e9da5e2ee741da9c0fad64a"
+    },
+    {
+      "source": "SevenCover11.lean",
+      "sha256": "53df7afbbee5dc6aba96dbccc2d215b097e9120c42ae6d03f51b7cd010220849",
+      "run": "geom-seven-cover11-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.seven_cover_11": [
+          "propext"
+        ]
+      },
+      "seconds": 1.086,
+      "kernel_maxrss_kib": 737864,
+      "sampled_peaks": {
+        "VmPeak": 963756,
+        "VmSize": 963756,
+        "VmHWM": 730996,
+        "VmRSS": 730996,
+        "RssAnon": 415788,
+        "RssFile": 315208,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "log_sha256": "5ea7e130b58cb1baaac0d4e2d81a8b3dad54ec29224279651d9cf9e684809bc3",
+      "record_sha256": "5960a09f52daa87cffea97ed113f79927fd3f71077450866a7a07fba04d295cc"
+    },
+    {
+      "source": "SevenCover12.lean",
+      "sha256": "7982f879dc0ca4066102ca12ca8819ea540f29d8bde65692faece3daeaf4c412",
+      "run": "geom-seven-cover12-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.seven_cover_12": [
+          "propext"
+        ]
+      },
+      "seconds": 0.922,
+      "kernel_maxrss_kib": 709768,
+      "sampled_peaks": {
+        "VmPeak": 895848,
+        "VmSize": 895848,
+        "VmHWM": 702852,
+        "VmRSS": 702852,
+        "RssAnon": 387840,
+        "RssFile": 315012,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "log_sha256": "33c77f37ba45bcb88610f901e063ba4bb8b4bc3d3852bb93bcb41c244f7ea8b7",
+      "record_sha256": "9c7b08d79f305e716cb93c6e78f8b2b27f4baea4bf79d93aa6e59d3702fb14fc"
+    },
+    {
+      "source": "SevenAggregate.lean",
+      "sha256": "5785b0a7e78b105610f35f15edc2f81ed23d2fb2687fdf7fd26fffd5c6b6a2cb",
+      "run": "geom-seven-aggregate-v2",
+      "axiom_reports": {
+        "Delta3.Balanced15.all_of_take_drop": [
+          "propext"
+        ],
+        "Delta3.Balanced15.no_seven_sign_convex": [
+          "propext"
+        ]
+      },
+      "seconds": 0.146,
+      "kernel_maxrss_kib": 377692,
+      "sampled_peaks": {
+        "VmPeak": 613548,
+        "VmSize": 613548,
+        "VmHWM": 366344,
+        "VmRSS": 366344,
+        "RssAnon": 45464,
+        "RssFile": 320880,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "log_sha256": "c50f4d8bb7d5e795d80aa6c295790c1e5912e24cb433dbc5b2c21dfddbf43936",
+      "record_sha256": "1a25916282ffd0298a70d7404366cfdde6bdd2c09935b315a22fce6406520231"
+    },
+    {
+      "source": "SubsequenceFacts.lean",
+      "sha256": "9cd77f143b44dc0f532b52b8041c38981fd3c71cd373d4c6902094a380d0910d",
+      "run": "geom-subseq-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.mem_choose_of_sublist": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.five_subsequence_not_cap": [
+          "propext",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.seven_subsequence_not_signConvex": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      "seconds": 0.126,
+      "kernel_maxrss_kib": 375924,
+      "sampled_peaks": {
+        "VmPeak": 613644,
+        "VmSize": 613644,
+        "VmHWM": 365396,
+        "VmRSS": 365396,
+        "RssAnon": 42144,
+        "RssFile": 323252,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "log_sha256": "05df5ba4eac587b7855f4b48d277613535798711a40857cb2aa4607be3535d34",
+      "record_sha256": "5062c8d95622bdf4aeb8a2921033549d23625b5de3ac7b52e277425242f7192b"
+    },
+    {
+      "source": "TerminalBridge.lean",
+      "sha256": "c8b99bb4ecdd16d21d047db1ace03263e9963ea12756101f87e175f1d42ad54a",
+      "run": "geom-terminal-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.not_three": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.terminal_selection_contradiction": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.no_terminal_selection": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "Delta3.Balanced15.no_boolean_terminal_selection": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "seconds": 3.394,
+      "kernel_maxrss_kib": 459592,
+      "sampled_peaks": {
+        "VmPeak": 732836,
+        "VmSize": 732836,
+        "VmHWM": 451528,
+        "VmRSS": 451528,
+        "RssAnon": 128192,
+        "RssFile": 323464,
+        "VmSwap": 0,
+        "Threads": 6
+      },
+      "log_sha256": "0fcd289544613839c6b622fc5d19c423ff3fc8edd2c44996ad3474b25e29a2a7",
+      "record_sha256": "b8c42f8a2aab7194784eaa9cd04f7cbc50b0806f08bd6a69287317f2112d8ed5"
+    },
+    {
+      "source": "PredicateSemantics.lean",
+      "sha256": "bdb50db7f08961baad946c42beada19f5ff873a37c27543a227dd93c920ce8bf",
+      "run": "geom-semantics-step-1",
+      "axiom_reports": {
+        "Delta3.Balanced15.terminalPair_iff": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      "seconds": 0.114,
+      "kernel_maxrss_kib": 353564,
+      "sampled_peaks": {
+        "VmPeak": 574916,
+        "VmSize": 574916,
+        "VmHWM": 352040,
+        "VmRSS": 352040,
+        "RssAnon": 38384,
+        "RssFile": 313656,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "log_sha256": "b5cf9a09e17f1a1e92a33330c6a2eaf5d3741ab7677e25e8a236ab5caddc23d4",
+      "record_sha256": "06f362fc6b6603800303d8b76cd9c95a9bf159ca566972d837234367cc1a0fa2"
+    },
+    {
+      "source": "Balanced15.lean",
+      "sha256": "6e94328f462c4c0f9ba7a98262a053dcebf12b94e5d6780f40bb6eb095548eee",
+      "run": "geom-balanced-v1",
+      "axiom_reports": {
+        "Delta3.Balanced15.balanced15_finite_obstruction": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "seconds": 0.115,
+      "kernel_maxrss_kib": 373744,
+      "sampled_peaks": {
+        "VmPeak": 621668,
+        "VmSize": 621668,
+        "VmHWM": 361852,
+        "VmRSS": 361852,
+        "RssAnon": 41404,
+        "RssFile": 320448,
+        "VmSwap": 0,
+        "Threads": 5
+      },
+      "log_sha256": "acbab46e0ccd818950670d51aa0aabd414d19938d47f1f68a45ac71e445a4dd9",
+      "record_sha256": "a80e18bf8389c6e2fa630ec40728a758bca317eea4dc88cf372c75b96a8d3930"
+    }
+  ],
+  "replay_order": [
+    {
+      "source": "FiniteModel.lean",
+      "sha256": "1d9d896fdc1513fceabbf2e54778f99d40bba4dea9f7a5f48271d151359fa5fb"
+    },
+    {
+      "source": "FiniteFacts.lean",
+      "sha256": "abf08ab2d7c16bcca3ef4eb3b35ad9b7c0a2efac975fb69572b4e837c25a4bd9"
+    },
+    {
+      "source": "Determinants.lean",
+      "sha256": "94cd9d9b8fb99d3b6857f2e9340fed3a590169d21f81fa3ae47101da28d01417"
+    },
+    {
+      "source": "SevenBlock00.lean",
+      "sha256": "89514d07bccc0888e5e2b587ee5c8327b91c4c0dd386d9a7418878f2cf91be3f"
+    },
+    {
+      "source": "SevenBlock01.lean",
+      "sha256": "af0d94a44ea231fe289e48a22f2915ba4563df2855ed857a21f0f2dabb350192"
+    },
+    {
+      "source": "SevenBlock02.lean",
+      "sha256": "8d7d33f992958228af4d16ea19a5e251f15f3d89c0b54a16c4c68fa142cfee8c"
+    },
+    {
+      "source": "SevenBlock03.lean",
+      "sha256": "6d786387865c35a67ac456b80fa696aba30e72c02d0725638bee19c9507d52a6"
+    },
+    {
+      "source": "SevenBlock04.lean",
+      "sha256": "e9d92842c6e811aadb7ca494b815a9649fb70421d8af6c3c662bead285772b5c"
+    },
+    {
+      "source": "SevenBlock05.lean",
+      "sha256": "d4063973cbdc0073117e3e810c3516cd5cd2a797ff371cf46c52ac4aad1afe4b"
+    },
+    {
+      "source": "SevenBlock06.lean",
+      "sha256": "ce37d91c1c1ff993ef493c70c9023d4fee7a8f0d6bdfd18c6b7a5f7c2eee4bc3"
+    },
+    {
+      "source": "SevenBlock07.lean",
+      "sha256": "25ab42e231acff2b29ba24758b993af02729fca2c4e9223d364845453aaafe10"
+    },
+    {
+      "source": "SevenBlock08.lean",
+      "sha256": "edb0c3c915dd08a1582fe7853ea0d8cf49dbf4cae76c6f6c93f73197640bbf7f"
+    },
+    {
+      "source": "SevenBlock09.lean",
+      "sha256": "f4042def22974c0f74dfe3481e6299d9662f34274a7b2a9a5790dda5ed519dc1"
+    },
+    {
+      "source": "SevenBlock10.lean",
+      "sha256": "9d9ef39a066595836b72b5eecdb97a232f3a3e27b15def9654426ae0f0d4b562"
+    },
+    {
+      "source": "SevenBlock11.lean",
+      "sha256": "225d8f6725e360b8cea67f2c510c799cec9849e0ceb34c8a5a6710c138b272f9"
+    },
+    {
+      "source": "SevenBlock12.lean",
+      "sha256": "78f588563f24802c2fe00240ecd476c5d2463fe848d27449808a0c9bafe19e97"
+    },
+    {
+      "source": "SevenCover00.lean",
+      "sha256": "5edc4828d13e1faf912af004a0ca1903e1c5096c06268f1b535c667db651538a"
+    },
+    {
+      "source": "SevenCover01.lean",
+      "sha256": "07d8511757e89f1e74527d67656c28c86af6a7adf4fd5d7e830a7a24ce07e4ac"
+    },
+    {
+      "source": "SevenCover02.lean",
+      "sha256": "53ef50b9a0873bc2b32687e77c8a7d3f26ff127f6c9340727e3c569ef2109267"
+    },
+    {
+      "source": "SevenCover03.lean",
+      "sha256": "6d872b47eac04fca47039fcfe03488cf374bca65ba218807c6b45ac0126b65d1"
+    },
+    {
+      "source": "SevenCover04.lean",
+      "sha256": "3f772b0a51f3034c2c65d412c50027d897896fa5917fa248043822449395310f"
+    },
+    {
+      "source": "SevenCover05.lean",
+      "sha256": "fa4bd9d49033dad9373e5416aebde3c4be38037ad19f92e0a9554226268273b6"
+    },
+    {
+      "source": "SevenCover06.lean",
+      "sha256": "5aed9e0a4ec44bacc125a591bccfa48fe2e8e771d34efa2d5ec02f8ffcd45b73"
+    },
+    {
+      "source": "SevenCover07.lean",
+      "sha256": "71254fcb396d4b37a060b47c39c9eb02b63b950aa98735dcc77a77a8a3cceeae"
+    },
+    {
+      "source": "SevenCover08.lean",
+      "sha256": "dba9e93914e1434971d40ab20f7b798b680e9a5b6fff86f134f7c4f16d3d31fc"
+    },
+    {
+      "source": "SevenCover09.lean",
+      "sha256": "5ba7aa031d80396a3a554829cf77a4daa046fc55ef5fb860e18ee87f2750b92f"
+    },
+    {
+      "source": "SevenCover10.lean",
+      "sha256": "49e729a89c72123c707acb0aceca50e158e45c4457bcc465b469dc95a59f9961"
+    },
+    {
+      "source": "SevenCover11.lean",
+      "sha256": "53df7afbbee5dc6aba96dbccc2d215b097e9120c42ae6d03f51b7cd010220849"
+    },
+    {
+      "source": "SevenCover12.lean",
+      "sha256": "7982f879dc0ca4066102ca12ca8819ea540f29d8bde65692faece3daeaf4c412"
+    },
+    {
+      "source": "SevenAggregate.lean",
+      "sha256": "5785b0a7e78b105610f35f15edc2f81ed23d2fb2687fdf7fd26fffd5c6b6a2cb"
+    },
+    {
+      "source": "SubsequenceFacts.lean",
+      "sha256": "9cd77f143b44dc0f532b52b8041c38981fd3c71cd373d4c6902094a380d0910d"
+    },
+    {
+      "source": "../lean/Terminal15Boolean.lean",
+      "sha256": "cd50fd74384bea5a17d93ba9f15ce52762df8bf8c872e30fbe8c4780687d9463"
+    },
+    {
+      "source": "TerminalBridge.lean",
+      "sha256": "c8b99bb4ecdd16d21d047db1ace03263e9963ea12756101f87e175f1d42ad54a"
+    },
+    {
+      "source": "PredicateSemantics.lean",
+      "sha256": "bdb50db7f08961baad946c42beada19f5ff873a37c27543a227dd93c920ce8bf"
+    },
+    {
+      "source": "Balanced15.lean",
+      "sha256": "6e94328f462c4c0f9ba7a98262a053dcebf12b94e5d6780f40bb6eb095548eee"
+    }
+  ],
+  "scripts": {
+    "generate_fixture.py": "40faf301193f9ab6bba76cc7c562406ccf5480994c7c18598d80e030765d2873",
+    "generate_terminal_bridge.py": "60e5c1cbd760ca913b93b5e523a216d33d611ee7db434dad8ada7f69b724699c",
+    "replay.py": "456604bd5ff6f4f2dfe9375c91492d2176082157b9051d639387b6a714712979"
+  },
+  "runner_path": "../lean/check.py",
+  "runner_sha256": "eb585aae8956d57595abfb4b01c92f0dfaad6964ae07f62be01792e71e543b1c",
+  "excluded_drafts": [
+    "NoSeven0.lean",
+    "NoSeven1.lean",
+    "NoSeven2.lean",
+    "NoSeven3.lean"
+  ],
+  "controlled_failures": [
+    {
+      "file": "FiniteFacts.depth-failure.lean",
+      "sha256": "f3dd0641c72a18efa4a85e7923f6fbad3b42661a132c44dfaaa95b20e1d97f13"
+    },
+    {
+      "file": "NoSeven1.rss-failure.lean",
+      "sha256": "794f06f06cc10df21fdea6dd57c6d6d795c8d7be88c803ef9cdcb0928fa436b2"
+    },
+    {
+      "file": "SevenAggregate.rss-failure.lean",
+      "sha256": "057db1b8fff3d67179390115e96f86cd355912d86c0b70102f1bb0d697fbc4c3"
+    },
+    {
+      "file": "geom-facts-step-1.json",
+      "sha256": "39c6e52324df08f0898e24670732243292f77113a5247cad42ec0b5e96310e29"
+    },
+    {
+      "file": "geom-facts-step-1.log",
+      "sha256": "ff181fd0cad02f55ab7baa36825b2fe3e53ec266018f27899351c0ce2cbdffe5"
+    },
+    {
+      "file": "geom-seven-aggregate-v1.json",
+      "sha256": "72b007303904621a31f45bb99b1bfd863cf37bc152c91bf59c2820bf19e95da6"
+    },
+    {
+      "file": "geom-seven-aggregate-v1.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "geom-seven-group1-v1.json",
+      "sha256": "ce9b927f2ff379a275dfeb82f56bcd91e0ee9ffb71743b644897e3a984a2f974"
+    },
+    {
+      "file": "geom-seven-group1-v1.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "fresh_parent_replay_pending_at_freeze": true,
+  "real_convex_hull_bridge_compiled": false
+}

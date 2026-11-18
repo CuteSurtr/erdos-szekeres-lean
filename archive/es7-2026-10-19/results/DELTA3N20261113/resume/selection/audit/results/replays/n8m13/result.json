@@ -1,0 +1,52 @@
+{
+  "authorization": "Parent reserved 800 MiB within owner's existing 6000 MiB track; AS800 MiB for independent cake replay only, with owner-level caps unchanged.",
+  "checker_seconds": 0.313944529996661,
+  "child_peak_rss_kib": 618452,
+  "cnf": "/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep8/m13/rooted.cnf",
+  "command": [
+    "/home/jay/.local/bin/cake_lpr",
+    "--CML_HEAP_SIZE=600",
+    "--CML_STACK_SIZE=32",
+    "/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep8/m13/rooted.cnf",
+    "/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep8/m13/solve/proof.lrat"
+  ],
+  "elapsed_seconds": 0.3324099509991356,
+  "exact_success_line_present": true,
+  "executed_wrapper_sha256": "86253d57ff3b8d488e2b48ea03af0cd0bee7ba6dd1460818bbec6b034d68852b",
+  "exit_code": 0,
+  "final_wrapper_sha256": "586f4f78e2bb2e8571313bf98c7fd33713d5d482f79fea75052e32720ae7b8db",
+  "hashes_stable_after_replay": true,
+  "input_hashes": {
+    "cake": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+    "cnf": "8f872321fd5c79605a7c3abcc79c00cc350a869264302dffecbb6f4702d9179a",
+    "lrat": "c516791ffa2dac69e13b85077c809a67a550055f54f166f7d9022418e6e783e6"
+  },
+  "label": "CERTIFIED",
+  "limits": {
+    "affinity": [
+      0
+    ],
+    "as_mib": 800,
+    "checker_timeout_seconds": 18,
+    "cpu_seconds": 18,
+    "external_seconds": 20,
+    "heap_mib": 600,
+    "stack_mib": 32
+  },
+  "m": 13,
+  "metadata_amendment": {
+    "amended_field": "authorization",
+    "executed_wrapper_snapshot": "source/replay_rooted_executed.py",
+    "prior_receipt_sha256": "e4eefde7c6dda41f3b552069b8723303f64f58103ff7cf38f18ec77039cfda0c",
+    "reason": "Correct allocation attribution to parent within existing owner track; no proof replay or execution data changed.",
+    "replayed_after_amendment": false,
+    "wrapper_sha256_meaning": "Unchanged hash of executed wrapper; final_wrapper_sha256 identifies wording-only revision."
+  },
+  "n": 8,
+  "proof": "/home/jay/research/data/delta3-codex-20261113/selection/rooted/sweep8/m13/solve/proof.lrat",
+  "status": "INDEPENDENTLY_VERIFIED_UNSAT",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+  "wrapper_peak_rss_kib": 17688,
+  "wrapper_sha256": "86253d57ff3b8d488e2b48ea03af0cd0bee7ba6dd1460818bbec6b034d68852b"
+}

@@ -1,0 +1,12 @@
+/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/protection_models/forced16_lean/F16Products.lean:41:0: warning: automatically included section variable(s) unused in theorem `Delta3.Forced16Algebra.power_pos`:
+  [LawfulOrderLT K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [LawfulOrderLT K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'Delta3.Forced16Algebra.product_congr' depends on axioms: [propext]
+'Delta3.Forced16Algebra.product_one' depends on axioms: [propext]
+'Delta3.Forced16Algebra.product_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Delta3.Forced16Algebra.power_pos' does not depend on any axioms
+'Delta3.Forced16Algebra.power_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Delta3.Forced16Algebra.power_lt' depends on axioms: [propext, Classical.choice, Quot.sound]

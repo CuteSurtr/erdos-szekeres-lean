@@ -1,0 +1,230 @@
+{
+  "label": "COMPUTED independent positive-witness verification",
+  "script_sha256": "7e3284de00e2246699786623c2e285e46541cbf2d6b3241fca0a3c8aefb4a3d9",
+  "inputs_sha256": "8b23e44222f7df8632d360a354b5ff1c88f737a8bb383069a9d0a54eaf94c296",
+  "cases": [
+    {
+      "name": "boundary-n6-old",
+      "m": 9,
+      "n": 6,
+      "A": [
+        4,
+        5
+      ],
+      "full_maxima": [
+        4,
+        4,
+        5
+      ],
+      "complement_maxima": [
+        4,
+        4,
+        4
+      ],
+      "all_X_cap_triples_checked": 0,
+      "report_sha256": "4437725939bf5495ca132be1ccbb41e23099be04348e05753f62751b1f746315"
+    },
+    {
+      "name": "boundary-n7-old",
+      "m": 11,
+      "n": 7,
+      "A": [
+        5,
+        6
+      ],
+      "full_maxima": [
+        4,
+        5,
+        6
+      ],
+      "complement_maxima": [
+        4,
+        5,
+        5
+      ],
+      "all_X_cap_triples_checked": 0,
+      "report_sha256": "e3b587f82539ad4ea17bc79ab526c02ec56e9403c1523f2d9b28bbfac6f4701f"
+    },
+    {
+      "name": "boundary-n8-old",
+      "m": 13,
+      "n": 8,
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        10,
+        11
+      ],
+      "full_maxima": [
+        4,
+        6,
+        7
+      ],
+      "complement_maxima": [
+        3,
+        3,
+        4
+      ],
+      "all_X_cap_triples_checked": 40,
+      "report_sha256": "83fd75668dfed1cab3d96d75eadfb2face7ea2ac509abe5e34851862fea83216"
+    },
+    {
+      "name": "terminal18",
+      "m": 18,
+      "n": 7,
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        11,
+        16
+      ],
+      "full_maxima": [
+        4,
+        5,
+        6
+      ],
+      "complement_maxima": [
+        4,
+        3,
+        5
+      ],
+      "all_X_cap_triples_checked": 78,
+      "report_sha256": "4a013e89c1902d66b9112a8534f868c9b8223898e1e900c2376338591c978f09"
+    },
+    {
+      "name": "pool-n7-index19",
+      "m": 21,
+      "n": 7,
+      "A": [
+        5,
+        9,
+        12,
+        15,
+        17,
+        18,
+        19,
+        20
+      ],
+      "full_maxima": [
+        4,
+        6,
+        6
+      ],
+      "complement_maxima": [
+        4,
+        5,
+        5
+      ],
+      "all_X_cap_triples_checked": 25,
+      "report_sha256": "96c4f30e41fdbe4cc06c536151c2b8305076e6abd40a9b5db5d95ed4db096e81"
+    },
+    {
+      "name": "pool-n7-index64",
+      "m": 21,
+      "n": 7,
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        10,
+        11,
+        14,
+        17,
+        20
+      ],
+      "full_maxima": [
+        4,
+        6,
+        6
+      ],
+      "complement_maxima": [
+        4,
+        4,
+        5
+      ],
+      "all_X_cap_triples_checked": 92,
+      "report_sha256": "6aea762c2450a625aa2785583ae9e360d3092ce310e74e0df10fdf4ed581f3a9"
+    },
+    {
+      "name": "pool-n8-index130",
+      "m": 24,
+      "n": 8,
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        8,
+        9,
+        11,
+        14,
+        17,
+        21,
+        23
+      ],
+      "full_maxima": [
+        4,
+        7,
+        7
+      ],
+      "complement_maxima": [
+        4,
+        6,
+        6
+      ],
+      "all_X_cap_triples_checked": 51,
+      "report_sha256": "c358fe8e3212ffc8b53b3dd07a11c2c844fe55a4d942b8c877b7ba9af9576025"
+    },
+    {
+      "name": "pool-n8-index141",
+      "m": 24,
+      "n": 8,
+      "A": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        14,
+        23
+      ],
+      "full_maxima": [
+        4,
+        7,
+        7
+      ],
+      "complement_maxima": [
+        3,
+        5,
+        6
+      ],
+      "all_X_cap_triples_checked": 78,
+      "report_sha256": "2fa01675c439f4c73c6d3115b71d10b58571bd9c0e59d654e13a1ded79a1135e"
+    }
+  ],
+  "old_fourcap_is_independent_requirement": true,
+  "repair_control": true,
+  "scope": "Positive Delta models and rational domination certificates; not all exposure classifications or CNF clauses."
+}

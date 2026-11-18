@@ -1,0 +1,149 @@
+{
+  "label": "COMPUTED",
+  "results": [
+    {
+      "source": "cloud/es7-2026-10-19/results/DELTA2N20261113/data/cex/restr_ends_weak_a5_n7_m12_real.json",
+      "P": [
+        [
+          19177,
+          -21808
+        ],
+        [
+          22213,
+          26345
+        ],
+        [
+          25783,
+          9497
+        ],
+        [
+          26452,
+          -13271
+        ],
+        [
+          26994,
+          -586
+        ],
+        [
+          37372,
+          -22731
+        ],
+        [
+          44405,
+          -21278
+        ],
+        [
+          51652,
+          6136
+        ],
+        [
+          52152,
+          -51
+        ],
+        [
+          52672,
+          32131
+        ],
+        [
+          63579,
+          63430
+        ],
+        [
+          67591,
+          -9280
+        ]
+      ],
+      "n": 7,
+      "modes": {
+        "weak": {
+          "proper_states": 13603,
+          "components": 10,
+          "trapped_components": 0,
+          "largest_component": 4114,
+          "first_trapped": null
+        },
+        "cup": {
+          "proper_states": 13158,
+          "components": 10,
+          "trapped_components": 0,
+          "largest_component": 3903,
+          "first_trapped": null
+        }
+      }
+    },
+    {
+      "source": "cloud/es7-2026-10-19/results/DELTA2N20261113/data/cex/restr_ends_weak_a5_n8_m13_real.json",
+      "P": [
+        [
+          8030,
+          -15070
+        ],
+        [
+          11105,
+          45305
+        ],
+        [
+          34876,
+          40493
+        ],
+        [
+          35376,
+          -23390
+        ],
+        [
+          35876,
+          7241
+        ],
+        [
+          85206,
+          -50441
+        ],
+        [
+          125287,
+          -34578
+        ],
+        [
+          143356,
+          -22746
+        ],
+        [
+          148656,
+          23516
+        ],
+        [
+          149156,
+          -12964
+        ],
+        [
+          150244,
+          48374
+        ],
+        [
+          151892,
+          58675
+        ],
+        [
+          157253,
+          -2952
+        ]
+      ],
+      "n": 8,
+      "modes": {
+        "weak": {
+          "proper_states": 31142,
+          "components": 11,
+          "trapped_components": 0,
+          "largest_component": 8456,
+          "first_trapped": null
+        },
+        "cup": {
+          "proper_states": 30051,
+          "components": 11,
+          "trapped_components": 0,
+          "largest_component": 8122,
+          "first_trapped": null
+        }
+      }
+    }
+  ]
+}

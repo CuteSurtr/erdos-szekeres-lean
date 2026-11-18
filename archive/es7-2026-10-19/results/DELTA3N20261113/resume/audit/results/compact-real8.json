@@ -1,0 +1,51 @@
+{
+  "checker_sha256": "2e55dd9d8d09c7c8027bc587f0ce5d20101d760ab9a5c2deb2f276b59fba4eb6",
+  "clauses": 346608,
+  "clauses_by_phase": {
+    "cap_lattice": 56134,
+    "convex4_equivalence": 14560,
+    "convex_larger_equivalence": 142896,
+    "forall_delta": 58514,
+    "fourcap": 3640,
+    "no5cap": 4368,
+    "no_ngon": 12870,
+    "signotope": 14560,
+    "target_lattice": 39066
+  },
+  "cnf_sha256": "37e8a9ba5ddec0907580ec0f846ba7dd65846d1ef71c9573db824880d3b18a07",
+  "containment": "witness",
+  "convex": "recurrence",
+  "coordinate_sha256": "502735a68db3e1d0397426abca96392c5f829e25184ec47ae17d852839db84c4",
+  "coordinate_source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/compact/real_n8m16_targeted.json",
+  "delivered_bytes_confirmed": true,
+  "delivered_cnf": "/home/jay/research/data/delta3-codex-20261113/resume/compact/n8m16-final.cnf",
+  "elapsed_seconds": 1.5255603110017546,
+  "existential_projection_queries": 0,
+  "failed_pool_clauses": 8404,
+  "fourcaps": 280,
+  "hull_checker_sha256": "925d7204e6528a3ccc955261ef44448984b2dabc236afee04949f2700a322160",
+  "label": "COMPUTED",
+  "limits": {
+    "affinity": [
+      0
+    ],
+    "as_mib": 400,
+    "cpu_seconds": 18,
+    "external_seconds": 20
+  },
+  "m": 16,
+  "map_sha256": "288db7b2c0dfacd6c98a102f99c28dbb743cc3e4967f21f0d1d026ebb7d4cf6c",
+  "minimum_absolute_determinant": 280000,
+  "mode": "real8",
+  "n": 8,
+  "name": "real-n8m16",
+  "omitted_working_deltas_transformed": 35,
+  "peak_rss_kib": 39956,
+  "pool": "reduced",
+  "source_sha256": "1964e17b777fd7b7a973f12b2911c003a050047f13a621f523a9f98c6e31d553",
+  "status": "PASS",
+  "targets": 168,
+  "thread_count": 1,
+  "variables": 123216,
+  "working_delta_count": 8439
+}

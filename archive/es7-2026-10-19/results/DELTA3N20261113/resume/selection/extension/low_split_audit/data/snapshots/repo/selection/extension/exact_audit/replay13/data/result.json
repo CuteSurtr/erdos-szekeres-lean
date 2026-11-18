@@ -1,0 +1,44 @@
+{
+  "label": "CERTIFIED",
+  "status": "VERIFIED_UNSAT",
+  "independent_replay": true,
+  "exact_acceptance_line": "s VERIFIED UNSAT",
+  "stable_inputs": true,
+  "proof_bytes": 1356527316,
+  "cnf_sha256": "3ec4b75d9076b6f257fed83f3cbb17b8372a43f53f1c0fc8d30730e4c5d35b87",
+  "proof_sha256": "d54f53ee64be1b7ddbc4c0eab2aa53ec41899112e319ff0272b3b24ddf8bca64",
+  "compressed_proof_sha256": "61aff8b5a0f8e7deb851fd286a6063303f59461d08f7ca02becbec82ac5e7514",
+  "cake_sha256": "c14ff49853e890436d6a2fbf66a85b9492dad1dcd2d76254f16a89f2236c8a54",
+  "compressed_proof_retained": true,
+  "hash_cache_release_calls": 70,
+  "cake": {
+    "returncode": 0,
+    "exact_acceptance_line": true,
+    "seconds": 40.165972556998895,
+    "peak_rss_kib": 668728,
+    "user_seconds": 39.668614,
+    "system_seconds": 0.36163999999999996,
+    "periodic_cache_releases": 39,
+    "progress_64MiB_releases": 0,
+    "max_sampled_cgroup_current": 739287040,
+    "memory": {
+      "current": 10002432,
+      "peak": 743759872,
+      "anon": 8925184,
+      "file": 671744,
+      "swap": 0
+    },
+    "finished": "2026-11-13T21:17:13.530575+00:00"
+  },
+  "final_memory": {
+    "current": 9560064,
+    "peak": 743759872,
+    "anon": 8937472,
+    "file": 40960,
+    "swap": 0
+  },
+  "total_seconds": 43.506174298003316,
+  "finished": "2026-11-13T21:17:15.218082+00:00",
+  "semantic_dependency": "../VERIFY_EXACT.md",
+  "no_resolve": true
+}

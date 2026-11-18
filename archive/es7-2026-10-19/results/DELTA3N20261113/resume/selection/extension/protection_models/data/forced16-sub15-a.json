@@ -1,0 +1,1439 @@
+{
+  "label": "COMPUTED abstract restrictions; realizability unknown",
+  "m": 16,
+  "size": 15,
+  "cases": [
+    {
+      "case": 0,
+      "local_to_original": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "m": 15,
+      "n": 7,
+      "caps4": 107,
+      "caps5": 0,
+      "targets": 182,
+      "ngons": 0,
+      "ambient_terminal_pairs": 11,
+      "covered_pairs": {
+        "terminal": 11,
+        "cup": 11,
+        "forced": 11
+      },
+      "bad_triples": {
+        "terminal": 126,
+        "cup": 126,
+        "forced": 126
+      },
+      "all_memberships": 32768,
+      "families": {
+        "weak": {
+          "count": 3901,
+          "minimum": 4,
+          "size_counts": {
+            "4": 11,
+            "5": 234,
+            "6": 867,
+            "7": 1300,
+            "8": 988,
+            "9": 406,
+            "10": 87,
+            "11": 8
+          },
+          "one_minimum": 2124
+        },
+        "terminal": {
+          "count": 61,
+          "minimum": 5,
+          "size_counts": {
+            "5": 16,
+            "6": 28,
+            "7": 16,
+            "8": 1
+          },
+          "one_minimum": 7185
+        },
+        "cup": {
+          "count": 61,
+          "minimum": 5,
+          "size_counts": {
+            "5": 16,
+            "6": 28,
+            "7": 16,
+            "8": 1
+          },
+          "one_minimum": 7185
+        },
+        "forced": {
+          "count": 61,
+          "minimum": 5,
+          "size_counts": {
+            "5": 16,
+            "6": 28,
+            "7": 16,
+            "8": 1
+          },
+          "one_minimum": 7185
+        }
+      }
+    },
+    {
+      "case": 1,
+      "local_to_original": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15
+      ],
+      "m": 15,
+      "n": 7,
+      "caps4": 107,
+      "caps5": 0,
+      "targets": 178,
+      "ngons": 0,
+      "ambient_terminal_pairs": 11,
+      "covered_pairs": {
+        "terminal": 11,
+        "cup": 11,
+        "forced": 11
+      },
+      "bad_triples": {
+        "terminal": 120,
+        "cup": 120,
+        "forced": 120
+      },
+      "all_memberships": 32768,
+      "families": {
+        "weak": {
+          "count": 4009,
+          "minimum": 4,
+          "size_counts": {
+            "4": 13,
+            "5": 240,
+            "6": 896,
+            "7": 1346,
+            "8": 1010,
+            "9": 409,
+            "10": 87,
+            "11": 8
+          },
+          "one_minimum": 2124
+        },
+        "terminal": {
+          "count": 101,
+          "minimum": 4,
+          "size_counts": {
+            "4": 2,
+            "5": 18,
+            "6": 48,
+            "7": 31,
+            "8": 2
+          },
+          "one_minimum": 9504
+        },
+        "cup": {
+          "count": 101,
+          "minimum": 4,
+          "size_counts": {
+            "4": 2,
+            "5": 18,
+            "6": 48,
+            "7": 31,
+            "8": 2
+          },
+          "one_minimum": 9504
+        },
+        "forced": {
+          "count": 101,
+          "minimum": 4,
+          "size_counts": {
+            "4": 2,
+            "5": 18,
+            "6": 48,
+            "7": 31,
+            "8": 2
+          },
+          "one_minimum": 9504
+        }
+      }
+    },
+    {
+      "case": 2,
+      "local_to_original": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15
+      ],
+      "m": 15,
+      "n": 7,
+      "caps4": 85,
+      "caps5": 0,
+      "targets": 203,
+      "ngons": 0,
+      "ambient_terminal_pairs": 9,
+      "covered_pairs": {
+        "terminal": 9,
+        "cup": 9,
+        "forced": 9
+      },
+      "bad_triples": {
+        "terminal": 111,
+        "cup": 111,
+        "forced": 111
+      },
+      "all_memberships": 32768,
+      "families": {
+        "weak": {
+          "count": 4455,
+          "minimum": 4,
+          "size_counts": {
+            "4": 21,
+            "5": 267,
+            "6": 954,
+            "7": 1465,
+            "8": 1144,
+            "9": 486,
+            "10": 108,
+            "11": 10
+          },
+          "one_minimum": 15
+        },
+        "terminal": {
+          "count": 73,
+          "minimum": 4,
+          "size_counts": {
+            "4": 7,
+            "5": 28,
+            "6": 31,
+            "7": 6,
+            "8": 1
+          },
+          "one_minimum": 75
+        },
+        "cup": {
+          "count": 73,
+          "minimum": 4,
+          "size_counts": {
+            "4": 7,
+            "5": 28,
+            "6": 31,
+            "7": 6,
+            "8": 1
+          },
+          "one_minimum": 75
+        },
+        "forced": {
+          "count": 73,
+          "minimum": 4,
+          "size_counts": {
+            "4": 7,
+            "5": 28,
+            "6": 31,
+            "7": 6,
+            "8": 1
+          },
+          "one_minimum": 75
+        }
+      }
+    },
+    {
+      "case": 3,
+      "local_to_original": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15
+      ],
+      "m": 15,
+      "n": 7,
+      "caps4": 70,
+      "caps5": 0,
+      "targets": 173,
+      "ngons": 0,
+      "ambient_terminal_pairs": 8,
+      "covered_pairs": {
+        "terminal": 8,
+        "cup": 8,
+        "forced": 8
+      },
+      "bad_triples": {
+        "terminal": 115,
+        "cup": 115,
+        "forced": 115
+      },
+      "all_memberships": 32768,
+      "families": {
+        "weak": {
+          "count": 5919,
+          "minimum": 4,
+          "size_counts": {
+            "4": 22,
+            "5": 288,
+            "6": 1099,
+            "7": 1831,
+            "8": 1597,
+            "9": 801,
+            "10": 238,
+            "11": 40,
+            "12": 3
+          },
+          "one_minimum": 15
+        },
+        "terminal": {
+          "count": 10,
+          "minimum": 4,
+          "size_counts": {
+            "4": 3,
+            "5": 4,
+            "6": 3
+          },
+          "one_minimum": 75
+        },
+        "cup": {
+          "count": 10,
+          "minimum": 4,
+          "size_counts": {
+            "4": 3,
+            "5": 4,
+            "6": 3
+          },
+          "one_minimum": 75
+        },
+        "forced": {
+          "count": 10,
+          "minimum": 4,
+          "size_counts": {
+            "4": 3,
+            "5": 4,
+            "6": 3
+          },
+          "one_minimum": 75
+        }
+      }
+    },
+    {
+      "case": 4,
+      "local_to_original": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15
+      ],
+      "m": 15,
+      "n": 7,
+      "caps4": 70,
+      "caps5": 0,
+      "targets": 181,
+      "ngons": 0,
+      "ambient_terminal_pairs": 8,
+      "covered_pairs": {
+        "terminal": 8,
+        "cup": 8,
+        "forced": 8
+      },
+      "bad_triples": {
+        "terminal": 113,
+        "cup": 113,
+        "forced": 113
+      },
+      "all_memberships": 32768,
+      "families": {
+        "weak": {
+          "count": 5773,
+          "minimum": 4,
+          "size_counts": {
+            "4": 19,
+            "5": 260,
+            "6": 1044,
+            "7": 1788,
+            "8": 1581,
+            "9": 800,
+            "10": 238,
+            "11": 40,
+            "12": 3
+          },
+          "one_minimum": 15
+        },
+        "terminal": {
+          "count": 39,
+          "minimum": 4,
+          "size_counts": {
+            "4": 3,
+            "5": 20,
+            "6": 16
+          },
+          "one_minimum": 75
+        },
+        "cup": {
+          "count": 39,
+          "minimum": 4,
+          "size_counts": {
+            "4": 3,
+            "5": 20,
+            "6": 16
+          },
+          "one_minimum": 75
+        },
+        "forced": {
+          "count": 39,
+          "minimum": 4,
+          "size_counts": {
+            "4": 3,
+            "5": 20,
+            "6": 16
+          },
+          "one_minimum": 75
+        }
+      }
+    },
+    {
+      "case": 5,
+      "local_to_original": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "m": 15,
+      "n": 7,
+      "caps4": 85,
+      "caps5": 0,
+      "targets": 139,
+      "ngons": 0,
+      "ambient_terminal_pairs": 9,
+      "covered_pairs": {
+        "terminal": 9,
+        "cup": 9,
+        "forced": 9
+      },
+      "bad_triples": {
+        "terminal": 113,
+        "cup": 113,
+        "forced": 113
+      },
+      "all_memberships": 32768,
+      "families": {
+        "weak": {
+          "count": 5066,
+          "minimum": 4,
+          "size_counts": {
+            "4": 21,
+            "5": 339,
+            "6": 1167,
+            "7": 1683,
+            "8": 1238,
+            "9": 500,
+            "10": 108,
+            "11": 10
+          },
+          "one_minimum": 354
+        },
+        "terminal": {
+          "count": 43,
+          "minimum": 4,
+          "size_counts": {
+            "4": 8,
+            "5": 22,
+            "6": 13
+          },
+          "one_minimum": 12305
+        },
+        "cup": {
+          "count": 43,
+          "minimum": 4,
+          "size_counts": {
+            "4": 8,
+            "5": 22,
+            "6": 13
+          },
+          "one_minimum": 12305
+        },
+        "forced": {
+          "count": 43,
+          "minimum": 4,
+          "size_counts": {
+            "4": 8,
+            "5": 22,
+            "6": 13
+          },
+          "one_minimum": 12305
+        }
+      }
+    },
+    {
+      "case": 6,
+      "local_to_original": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "m": 15,
+      "n": 7,
+      "caps4": 63,
+      "caps5": 0,
+      "targets": 177,
+      "ngons": 0,
+      "ambient_terminal_pairs": 7,
+      "covered_pairs": {
+        "terminal": 7,
+        "cup": 7,
+        "forced": 7
+      },
+      "bad_triples": {
+        "terminal": 122,
+        "cup": 122,
+        "forced": 122
+      },
+      "all_memberships": 32768,
+      "families": {
+        "weak": {
+          "count": 5947,
+          "minimum": 4,
+          "size_counts": {
+            "4": 13,
+            "5": 215,
+            "6": 951,
+            "7": 1774,
+            "8": 1709,
+            "9": 933,
+            "10": 296,
+            "11": 52,
+            "12": 4
+          },
+          "one_minimum": 15
+        },
+        "terminal": {
+          "count": 85,
+          "minimum": 4,
+          "size_counts": {
+            "4": 6,
+            "5": 29,
+            "6": 38,
+            "7": 12
+          },
+          "one_minimum": 75
+        },
+        "cup": {
+          "count": 85,
+          "minimum": 4,
+          "size_counts": {
+            "4": 6,
+            "5": 29,
+            "6": 38,
+            "7": 12
+          },
+          "one_minimum": 75
+        },
+        "forced": {
+          "count": 85,
+          "minimum": 4,
+          "size_counts": {
+            "4": 6,
+            "5": 29,
+            "6": 38,
+            "7": 12
+          },
+          "one_minimum": 75
+        }
+      }
+    },
+    {
+      "case": 7,
+      "local_to_original": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "m": 15,
+      "n": 7,
+      "caps4": 63,
+      "caps5": 0,
+      "targets": 177,
+      "ngons": 0,
+      "ambient_terminal_pairs": 7,
+      "covered_pairs": {
+        "terminal": 7,
+        "cup": 7,
+        "forced": 7
+      },
+      "bad_triples": {
+        "terminal": 122,
+        "cup": 122,
+        "forced": 122
+      },
+      "all_memberships": 32768,
+      "families": {
+        "weak": {
+          "count": 5947,
+          "minimum": 4,
+          "size_counts": {
+            "4": 13,
+            "5": 215,
+            "6": 951,
+            "7": 1774,
+            "8": 1709,
+            "9": 933,
+            "10": 296,
+            "11": 52,
+            "12": 4
+          },
+          "one_minimum": 15
+        },
+        "terminal": {
+          "count": 85,
+          "minimum": 4,
+          "size_counts": {
+            "4": 6,
+            "5": 29,
+            "6": 38,
+            "7": 12
+          },
+          "one_minimum": 75
+        },
+        "cup": {
+          "count": 85,
+          "minimum": 4,
+          "size_counts": {
+            "4": 6,
+            "5": 29,
+            "6": 38,
+            "7": 12
+          },
+          "one_minimum": 75
+        },
+        "forced": {
+          "count": 85,
+          "minimum": 4,
+          "size_counts": {
+            "4": 6,
+            "5": 29,
+            "6": 38,
+            "7": 12
+          },
+          "one_minimum": 75
+        }
+      }
+    },
+    {
+      "case": 8,
+      "local_to_original": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "m": 15,
+      "n": 7,
+      "caps4": 78,
+      "caps5": 0,
+      "targets": 198,
+      "ngons": 0,
+      "ambient_terminal_pairs": 11,
+      "covered_pairs": {
+        "terminal": 11,
+        "cup": 11,
+        "forced": 11
+      },
+      "bad_triples": {
+        "terminal": 101,
+        "cup": 101,
+        "forced": 101
+      },
+      "all_memberships": 32768,
+      "families": {
+        "weak": {
+          "count": 5342,
+          "minimum": 4,
+          "size_counts": {
+            "4": 23,
+            "5": 221,
+            "6": 854,
+            "7": 1560,
+            "8": 1515,
+            "9": 843,
+            "10": 273,
+            "11": 49,
+            "12": 4
+          },
+          "one_minimum": 195
+        },
+        "terminal": {
+          "count": 38,
+          "minimum": 5,
+          "size_counts": {
+            "5": 8,
+            "6": 19,
+            "7": 10,
+            "8": 1
+          },
+          "one_minimum": 185
+        },
+        "cup": {
+          "count": 38,
+          "minimum": 5,
+          "size_counts": {
+            "5": 8,
+            "6": 19,
+            "7": 10,
+            "8": 1
+          },
+          "one_minimum": 185
+        },
+        "forced": {
+          "count": 38,
+          "minimum": 5,
+          "size_counts": {
+            "5": 8,
+            "6": 19,
+            "7": 10,
+            "8": 1
+          },
+          "one_minimum": 185
+        }
+      }
+    },
+    {
+      "case": 9,
+      "local_to_original": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "m": 15,
+      "n": 7,
+      "caps4": 53,
+      "caps5": 0,
+      "targets": 89,
+      "ngons": 0,
+      "ambient_terminal_pairs": 11,
+      "covered_pairs": {
+        "terminal": 11,
+        "cup": 11,
+        "forced": 11
+      },
+      "bad_triples": {
+        "terminal": 83,
+        "cup": 83,
+        "forced": 83
+      },
+      "all_memberships": 32768,
+      "families": {
+        "weak": {
+          "count": 7814,
+          "minimum": 4,
+          "size_counts": {
+            "4": 56,
+            "5": 539,
+            "6": 1654,
+            "7": 2392,
+            "8": 1919,
+            "9": 925,
+            "10": 276,
+            "11": 49,
+            "12": 4
+          },
+          "one_minimum": 139
+        },
+        "terminal": {
+          "count": 371,
+          "minimum": 4,
+          "size_counts": {
+            "4": 20,
+            "5": 134,
+            "6": 170,
+            "7": 45,
+            "8": 2
+          },
+          "one_minimum": 139
+        },
+        "cup": {
+          "count": 371,
+          "minimum": 4,
+          "size_counts": {
+            "4": 20,
+            "5": 134,
+            "6": 170,
+            "7": 45,
+            "8": 2
+          },
+          "one_minimum": 139
+        },
+        "forced": {
+          "count": 371,
+          "minimum": 4,
+          "size_counts": {
+            "4": 20,
+            "5": 134,
+            "6": 170,
+            "7": 45,
+            "8": 2
+          },
+          "one_minimum": 139
+        }
+      }
+    },
+    {
+      "case": 10,
+      "local_to_original": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "m": 15,
+      "n": 7,
+      "caps4": 87,
+      "caps5": 0,
+      "targets": 173,
+      "ngons": 0,
+      "ambient_terminal_pairs": 10,
+      "covered_pairs": {
+        "terminal": 10,
+        "cup": 10,
+        "forced": 10
+      },
+      "bad_triples": {
+        "terminal": 107,
+        "cup": 107,
+        "forced": 107
+      },
+      "all_memberships": 32768,
+      "families": {
+        "weak": {
+          "count": 4492,
+          "minimum": 4,
+          "size_counts": {
+            "4": 19,
+            "5": 275,
+            "6": 963,
+            "7": 1476,
+            "8": 1156,
+            "9": 486,
+            "10": 107,
+            "11": 10
+          },
+          "one_minimum": 150
+        },
+        "terminal": {
+          "count": 72,
+          "minimum": 4,
+          "size_counts": {
+            "4": 6,
+            "5": 24,
+            "6": 29,
+            "7": 12,
+            "8": 1
+          },
+          "one_minimum": 12801
+        },
+        "cup": {
+          "count": 72,
+          "minimum": 4,
+          "size_counts": {
+            "4": 6,
+            "5": 24,
+            "6": 29,
+            "7": 12,
+            "8": 1
+          },
+          "one_minimum": 12801
+        },
+        "forced": {
+          "count": 72,
+          "minimum": 4,
+          "size_counts": {
+            "4": 6,
+            "5": 24,
+            "6": 29,
+            "7": 12,
+            "8": 1
+          },
+          "one_minimum": 12801
+        }
+      }
+    },
+    {
+      "case": 11,
+      "local_to_original": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "m": 15,
+      "n": 7,
+      "caps4": 87,
+      "caps5": 0,
+      "targets": 157,
+      "ngons": 0,
+      "ambient_terminal_pairs": 10,
+      "covered_pairs": {
+        "terminal": 10,
+        "cup": 10,
+        "forced": 10
+      },
+      "bad_triples": {
+        "terminal": 112,
+        "cup": 112,
+        "forced": 112
+      },
+      "all_memberships": 32768,
+      "families": {
+        "weak": {
+          "count": 4690,
+          "minimum": 4,
+          "size_counts": {
+            "4": 33,
+            "5": 354,
+            "6": 1051,
+            "7": 1497,
+            "8": 1152,
+            "9": 486,
+            "10": 107,
+            "11": 10
+          },
+          "one_minimum": 142
+        },
+        "terminal": {
+          "count": 46,
+          "minimum": 4,
+          "size_counts": {
+            "4": 4,
+            "5": 12,
+            "6": 17,
+            "7": 12,
+            "8": 1
+          },
+          "one_minimum": 12801
+        },
+        "cup": {
+          "count": 46,
+          "minimum": 4,
+          "size_counts": {
+            "4": 4,
+            "5": 12,
+            "6": 17,
+            "7": 12,
+            "8": 1
+          },
+          "one_minimum": 12801
+        },
+        "forced": {
+          "count": 46,
+          "minimum": 4,
+          "size_counts": {
+            "4": 4,
+            "5": 12,
+            "6": 17,
+            "7": 12,
+            "8": 1
+          },
+          "one_minimum": 12801
+        }
+      }
+    },
+    {
+      "case": 12,
+      "local_to_original": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "m": 15,
+      "n": 7,
+      "caps4": 83,
+      "caps5": 0,
+      "targets": 170,
+      "ngons": 0,
+      "ambient_terminal_pairs": 9,
+      "covered_pairs": {
+        "terminal": 9,
+        "cup": 9,
+        "forced": 9
+      },
+      "bad_triples": {
+        "terminal": 111,
+        "cup": 111,
+        "forced": 111
+      },
+      "all_memberships": 32768,
+      "families": {
+        "weak": {
+          "count": 5177,
+          "minimum": 4,
+          "size_counts": {
+            "4": 33,
+            "5": 288,
+            "6": 955,
+            "7": 1562,
+            "8": 1383,
+            "9": 704,
+            "10": 212,
+            "11": 37,
+            "12": 3
+          },
+          "one_minimum": 135
+        },
+        "terminal": {
+          "count": 8,
+          "minimum": 6,
+          "size_counts": {
+            "6": 2,
+            "7": 6
+          },
+          "one_minimum": 23744
+        },
+        "cup": {
+          "count": 8,
+          "minimum": 6,
+          "size_counts": {
+            "6": 2,
+            "7": 6
+          },
+          "one_minimum": 23744
+        },
+        "forced": {
+          "count": 8,
+          "minimum": 6,
+          "size_counts": {
+            "6": 2,
+            "7": 6
+          },
+          "one_minimum": 23744
+        }
+      }
+    },
+    {
+      "case": 13,
+      "local_to_original": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "m": 15,
+      "n": 7,
+      "caps4": 76,
+      "caps5": 0,
+      "targets": 125,
+      "ngons": 0,
+      "ambient_terminal_pairs": 9,
+      "covered_pairs": {
+        "terminal": 9,
+        "cup": 9,
+        "forced": 9
+      },
+      "bad_triples": {
+        "terminal": 108,
+        "cup": 108,
+        "forced": 108
+      },
+      "all_memberships": 32768,
+      "families": {
+        "weak": {
+          "count": 7188,
+          "minimum": 4,
+          "size_counts": {
+            "4": 38,
+            "5": 413,
+            "6": 1376,
+            "7": 2155,
+            "8": 1869,
+            "9": 967,
+            "10": 307,
+            "11": 58,
+            "12": 5
+          },
+          "one_minimum": 135
+        },
+        "terminal": {
+          "count": 123,
+          "minimum": 4,
+          "size_counts": {
+            "4": 10,
+            "5": 51,
+            "6": 55,
+            "7": 7
+          },
+          "one_minimum": 135
+        },
+        "cup": {
+          "count": 123,
+          "minimum": 4,
+          "size_counts": {
+            "4": 10,
+            "5": 51,
+            "6": 55,
+            "7": 7
+          },
+          "one_minimum": 135
+        },
+        "forced": {
+          "count": 123,
+          "minimum": 4,
+          "size_counts": {
+            "4": 10,
+            "5": 51,
+            "6": 55,
+            "7": 7
+          },
+          "one_minimum": 135
+        }
+      }
+    },
+    {
+      "case": 14,
+      "local_to_original": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "m": 15,
+      "n": 7,
+      "caps4": 85,
+      "caps5": 0,
+      "targets": 158,
+      "ngons": 0,
+      "ambient_terminal_pairs": 11,
+      "covered_pairs": {
+        "terminal": 11,
+        "cup": 11,
+        "forced": 11
+      },
+      "bad_triples": {
+        "terminal": 103,
+        "cup": 103,
+        "forced": 103
+      },
+      "all_memberships": 32768,
+      "families": {
+        "weak": {
+          "count": 5620,
+          "minimum": 4,
+          "size_counts": {
+            "4": 57,
+            "5": 427,
+            "6": 1223,
+            "7": 1748,
+            "8": 1372,
+            "9": 614,
+            "10": 157,
+            "11": 21,
+            "12": 1
+          },
+          "one_minimum": 135
+        },
+        "terminal": {
+          "count": 261,
+          "minimum": 4,
+          "size_counts": {
+            "4": 13,
+            "5": 79,
+            "6": 118,
+            "7": 49,
+            "8": 2
+          },
+          "one_minimum": 142
+        },
+        "cup": {
+          "count": 261,
+          "minimum": 4,
+          "size_counts": {
+            "4": 13,
+            "5": 79,
+            "6": 118,
+            "7": 49,
+            "8": 2
+          },
+          "one_minimum": 142
+        },
+        "forced": {
+          "count": 261,
+          "minimum": 4,
+          "size_counts": {
+            "4": 13,
+            "5": 79,
+            "6": 118,
+            "7": 49,
+            "8": 2
+          },
+          "one_minimum": 142
+        }
+      }
+    },
+    {
+      "case": 15,
+      "local_to_original": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "m": 15,
+      "n": 7,
+      "caps4": 85,
+      "caps5": 0,
+      "targets": 190,
+      "ngons": 0,
+      "ambient_terminal_pairs": 11,
+      "covered_pairs": {
+        "terminal": 11,
+        "cup": 11,
+        "forced": 11
+      },
+      "bad_triples": {
+        "terminal": 105,
+        "cup": 105,
+        "forced": 105
+      },
+      "all_memberships": 32768,
+      "families": {
+        "weak": {
+          "count": 5157,
+          "minimum": 4,
+          "size_counts": {
+            "4": 23,
+            "5": 311,
+            "6": 1063,
+            "7": 1637,
+            "8": 1335,
+            "9": 609,
+            "10": 157,
+            "11": 21,
+            "12": 1
+          },
+          "one_minimum": 135
+        },
+        "terminal": {
+          "count": 134,
+          "minimum": 4,
+          "size_counts": {
+            "4": 2,
+            "5": 32,
+            "6": 68,
+            "7": 31,
+            "8": 1
+          },
+          "one_minimum": 12816
+        },
+        "cup": {
+          "count": 134,
+          "minimum": 4,
+          "size_counts": {
+            "4": 2,
+            "5": 32,
+            "6": 68,
+            "7": 31,
+            "8": 1
+          },
+          "one_minimum": 12816
+        },
+        "forced": {
+          "count": 134,
+          "minimum": 4,
+          "size_counts": {
+            "4": 2,
+            "5": 32,
+            "6": 68,
+            "7": 31,
+            "8": 1
+          },
+          "one_minimum": 12816
+        }
+      }
+    }
+  ],
+  "failures": {
+    "terminal": [],
+    "cup": [],
+    "forced": []
+  },
+  "seconds": 1.6842659579997417,
+  "source_sha256": "8a566be7a04753878af9bc9fc390151f41d5ddd2041c8412f1e0ae007aea2690",
+  "signs_sha256": "b21664b06887c4019d75023025b1cd80582064a0b06f53698d2a70bc8fc49067"
+}

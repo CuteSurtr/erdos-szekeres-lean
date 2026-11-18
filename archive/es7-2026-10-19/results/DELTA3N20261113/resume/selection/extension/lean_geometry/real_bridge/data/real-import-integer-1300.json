@@ -1,0 +1,32 @@
+{
+  "command": [
+    "/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean",
+    "-j1",
+    "-s16384",
+    "-M1000",
+    "--root=/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/real_bridge",
+    "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/lean_geometry/real_bridge/ImportInteger.lean"
+  ],
+  "exit_code": -15,
+  "stop_reason": "RSS guard at 1300 MiB",
+  "source_sha256": "a72537c15bd2deab147d663771783247ae42f152fc86453299fa072ffac7f4eb",
+  "elapsed_seconds": 0.691,
+  "proc_status_peaks_kib_except_threads": {
+    "VmPeak": 2604392,
+    "VmSize": 2604392,
+    "VmHWM": 1337620,
+    "VmRSS": 1337620,
+    "RssAnon": 61180,
+    "RssFile": 1276440,
+    "VmSwap": 0,
+    "Threads": 4
+  },
+  "rusage_maxrss_kib": 1337496,
+  "as_limit_bytes": 4294967296,
+  "rss_guard_mib": 1300,
+  "lean_heap_mib": 1000,
+  "cpu_affinity": [
+    4
+  ],
+  "wall_deadline_seconds": 27
+}

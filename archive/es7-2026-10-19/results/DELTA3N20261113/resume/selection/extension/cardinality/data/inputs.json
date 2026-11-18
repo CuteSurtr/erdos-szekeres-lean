@@ -1,0 +1,49 @@
+{
+  "external_files": [
+    {
+      "path": "/home/jay/research/data/delta3-codex-20261113/extension/cardinality/compact16.tries.tsv",
+      "bytes": 81799,
+      "sha256": "b76d431fb140968609266c799d635622baa1c83d79adb0299b12b8c2008d7834"
+    },
+    {
+      "path": "/home/jay/research/data/delta3-codex-20261113/extension/cardinality/star12.tries.tsv",
+      "bytes": 262,
+      "sha256": "d9ba5e5b578c6c9233fc20ff94375cbe2476cbf5fcd06ab6ccec067e2ebb6595"
+    },
+    {
+      "path": "/home/jay/research/data/delta3-codex-20261113/extension/cardinality/terminal18.tries.tsv",
+      "bytes": 632271,
+      "sha256": "87e484f8c7a51badbd732c3dc6b9b70d18f87733b684a3975914ec4c36aa2cc1"
+    },
+    {
+      "path": "/home/jay/research/data/delta3-codex-20261113/extension/small-delta/n7m11k2/solve/cadical.log",
+      "bytes": 27159,
+      "sha256": "c48cec75c56164c070627fc6e45e7e11faf4991452897d9eef9a98eef84c7f56"
+    },
+    {
+      "path": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/boundary/audit/data/n7-root.json",
+      "bytes": 1344,
+      "sha256": "d4e30ffca8a1cd3dcc85e02d2184b0323343e2119a2891870eb3c6fd9a60fea5"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/resume/compact/real_n7m16.json",
+      "bytes": 730,
+      "sha256": "8c7f7015147e0f250ef8253f09bc9cb02f1ea8c82c34cd2adb95735802b16791"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/resume/pool/data/maximal/real-star.json",
+      "bytes": 1225,
+      "sha256": "39ebaa3669347a8e52a5ed46253f929c11f1b04a82e42fc4146b12f7ffc9ac05"
+    },
+    {
+      "path": "cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/terminal/data/witness.json",
+      "bytes": 3200,
+      "sha256": "696f201667533a3263e8a88d23a690a3ba6e8280f0993dd7dda5ab508f4eff24"
+    }
+  ],
+  "previous_audit": {
+    "manifest_sha256": "e71ed0db65dab51e0375860d9d790109ef2f17de8881da97bec31b311c1ac527",
+    "files_checked": 65,
+    "unchanged": true
+  }
+}

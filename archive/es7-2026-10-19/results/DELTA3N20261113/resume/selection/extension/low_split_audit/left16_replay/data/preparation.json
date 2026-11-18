@@ -1,0 +1,113 @@
+{
+  "status": "PASS",
+  "basis": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split_audit/left15/tools/replay.py",
+  "basis_sha256": "c004c43063017da4615b4abaaea7cc466ec4762e145b34ff53429daa5935dab3",
+  "driver_sha256": "f7a38556968ee3d32b49c88055d1379b5b682b485346b47a4e09707fdea20dcf",
+  "replacements": [
+    [
+      "Own fresh low15",
+      "Own fresh original low16",
+      1
+    ],
+    [
+      "'low15-n7-a'",
+      "'low16-n7-a'",
+      1
+    ],
+    [
+      "LIMIT=1650<<20",
+      "LIMIT=3100<<20",
+      1
+    ],
+    [
+      "2026-11-14T07:43:40+09:00",
+      "2026-11-14T08:22:30+09:00",
+      2
+    ],
+    [
+      "absolute07:43:40 deadline",
+      "absolute08:22:30 deadline",
+      1
+    ],
+    [
+      "own1650MiB/no-swap guard",
+      "own3100MiB/no-swap guard",
+      1
+    ],
+    [
+      "nov13c-vfy-delta6-low15-independent",
+      "nov13c-vfy-delta6-low16-independent",
+      1
+    ],
+    [
+      "assert json.loads((R/'data/instance-result.json').read_text())['status']=='PASS'",
+      "base=json.loads((R.parent/'left16_longcup/data/base-instance.json').read_text());assert base['status']=='PASS' and base['variables']==128297 and base['clauses']==903593\n assert '2e233545d18e3a9acf9a253b80a102935828bee27c079ba18946dfbd4efd53d8' in base['hashes'].values()",
+      1
+    ],
+    [
+      "'AS_MiB':1650",
+      "'AS_MiB':3100",
+      2
+    ],
+    [
+      "'heap_MiB':1400",
+      "'heap_MiB':2800",
+      2
+    ],
+    [
+      "--CML_HEAP_SIZE=1400",
+      "--CML_HEAP_SIZE=2800",
+      1
+    ],
+    [
+      "793063f5c7c5208c16ce038c63659878adee4eb049546d775d65c5a18ed60418",
+      "2e233545d18e3a9acf9a253b80a102935828bee27c079ba18946dfbd4efd53d8",
+      1
+    ],
+    [
+      "f86789033376814b7a36ea4bbc26e5a6007e66168a1fef4e38d09a5f6cca2f7c",
+      "247f64c822609e878be490e059fb7e0c96e5e71fde0e265de74c7be36cd8dd42",
+      1
+    ],
+    [
+      "86a3a187245ba67f0f44f00e6f24901008adddcd7edc67cab348d02e26c8366c",
+      "9b34ae9a407ce304f0ed82b9dbc6947a0219419a46145a326cfa189dd772b206",
+      1
+    ],
+    [
+      "'left_m':15",
+      "'left_m':16",
+      1
+    ]
+  ],
+  "snapshots": {
+    "original-heap550-result.json": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/low16-n7-a/result.json",
+      "sha256": "e2a398c317c8a1cfac2f37bb556812ad8af99a2a54f6178e13184985553a8615"
+    },
+    "original-heap550-cake.log": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/low16-n7-a/cake.log",
+      "sha256": "aa0ea685523b6c7f6ffa0fb0cb29815345af89fcd9b943d10cbd4abc63e050e3"
+    },
+    "parent-heap2800-result.json": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/low16-replay-a/result.json",
+      "sha256": "3a68d2294ddf0774e2154f6e4cb6488a7159af472a2d2addf46ee9ba8539f055"
+    },
+    "parent-heap2800-cake.log": {
+      "source": "/home/jay/research/data/delta3-codex-20261113/extension/low16-replay-a/cake.log",
+      "sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f"
+    },
+    "Capacity16.lean.txt": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split/Capacity16.lean",
+      "sha256": "8d5ced5ab84da9ba9347bc4fd1f99952dfa876302c35a712e9e8fec284a003d3"
+    },
+    "capacity-pass-result.json": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split/capacity_checks/pass/result.json",
+      "sha256": "bac50eb753b6cda69956a1cd116031ebdf2e026148234d8b3ff11a4c08f8829f"
+    },
+    "base-instance.json": {
+      "source": "/home/jay/research/lean/erdos-szekeres-lean/cloud/es7-2026-10-19/results/DELTA3N20261113/resume/selection/extension/low_split_audit/left16_longcup/data/base-instance.json",
+      "sha256": "825ae73d024d787231f385ae405d415c81c2cba1f22f51df78c6600109f4de6a"
+    }
+  }
+}

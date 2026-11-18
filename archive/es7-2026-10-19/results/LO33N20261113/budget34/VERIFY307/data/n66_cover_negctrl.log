@@ -1,0 +1,11 @@
+OK  positive_all_real        rc=1 uncovered=30/512 rejected=[]
+OK  drop_victim              rc=1 uncovered=38/512 rejected=[]
+OK  cake_line_missing        rc=1 uncovered=38/512 rejected=[['cake.out lacks the exact line']]
+OK  cert_cube_bit_flipped    rc=1 uncovered=38/512 rejected=[['verify.cube', 'layout.cube', 'id literals != cert cube']]
+OK  cert_sb_pair_changed     rc=1 uncovered=38/512 rejected=[['cert.sb_pairs=[[32, 36], [29, 25], [39, 45], [24, 30],']]
+OK  cert_budget_15           rc=1 uncovered=38/512 rejected=[['cert.budget=15']]
+OK  verify_unclassified_1    rc=1 uncovered=38/512 rejected=[['verify.unclassified']]
+OK  verify_all_ok_false      rc=1 uncovered=38/512 rejected=[['verify.ALL_OK']]
+OK  layout_W_69              rc=1 uncovered=38/512 rejected=[['layout.W']]
+OK  trim_extra_unit          rc=1 uncovered=38/512 rejected=[['trim.cnf sha256 != cert.json', 'trim.cnf units outside cube+fixed: [-988590]']]
+ALL CONTROLS BEHAVED AS EXPECTED

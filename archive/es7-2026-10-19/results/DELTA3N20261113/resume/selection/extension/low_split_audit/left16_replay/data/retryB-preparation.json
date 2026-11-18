@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "attemptA_source_sha256": "f7a38556968ee3d32b49c88055d1379b5b682b485346b47a4e09707fdea20dcf",
+  "attemptA_manifest_sha256": "1327c2d09ca2ab73307a71c7f001582e81e9ce4a2fd247b2202080868be831c1",
+  "retryB_source_sha256": "7f13ce940db999e61d70b5010b98c4dae18665c0934e6fb419ad394e59b93b7f",
+  "changes": [
+    [
+      "D=R/'data/replay'",
+      "D=R/'data/retryB'"
+    ],
+    [
+      "nov13c-vfy-delta6-low16-independent",
+      "nov13c-vfy-delta6-low16-retryb"
+    ],
+    [
+      "except (FileNotFoundError,ProcessLookupError):rchar=lastchar",
+      "except (FileNotFoundError,ProcessLookupError,PermissionError):rchar=lastchar"
+    ]
+  ],
+  "proof_access_or_checker_logic_changed": false,
+  "fresh_replay_required": true,
+  "attemptA_status": "checker printed accepted line; wrapper failed on optional telemetry; original records preserved",
+  "prior_posthash_recovery": "supplemental only, not the requested final clean retryB receipt"
+}
