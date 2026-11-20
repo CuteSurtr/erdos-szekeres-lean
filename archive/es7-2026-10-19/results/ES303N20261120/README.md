@@ -1,0 +1,277 @@
+# ES303N20261120: the Z*-row and the budget-68 tree (target ES(8) ≤ 303)
+
+**Status (20 Nov 2026, 23:52 KST): STOPPED at the owner's request, resumable; 24,938 of 32,755 contexts closed (76 %). No ES(8) ≤ 303 claim yet.** Resume: [STATUS20261120 §6](../STATUS20261120/README.md) (the b68 command, CPUQuota 1600 %).
+
+The budget-68 tree is still being built (unit `esr-bal-zbs68`, started 01:33:35). The claim needs two things:
+- both tree checks pass (check_tree and balcheck2, §5);
+- the Lean chain `composition_303_zzsf` (§4), which compiles already.
+
+What stands now, independent of the tree:
+- **the Z*-row:** PROVED (written), with exact controls and a Lean proof (standard axioms only);
+- **the budget-66 control tree with the Z*-row:** EXACT TREE by both checkers.
+
+## 1. Statement (target)
+
+ES(8) ≤ 303: every 303-point set in general position contains 8 points in convex position. The current bound is
+304 (ES304N20261119).
+
+## 2. The Z*-row (PROVED; Lean)
+
+- **Notation.** Balanced states as in ES305N20261119 §2: f = (f(0) ≥ … ≥ f(4)) with values in [0..5], 252 states.
+  The map from points to states is injective.
+- **Definition.** Z* = {f(0) = 5, f(4) ≥ 1}, 70 states, closed under transpose and disjoint from Z.
+- **Owners.** Its owners are the points of a balanced set H where both a 6-cup of H and a 6-cap of H end.
+- **Lemma.** The owners of Z* contain no 6-cap and no 6-cup (THEORY310N20261113 Lemma B, both halves).
+  - **6-cap.** Let y1 … y6 be a 6-cap among the owners and c1 … c5 y1 a 6-cup. Then (c5, y1, y2) is either a cup
+    turn, which gives the 7-cup c1 … c5 y1 y2, or a cap turn, which gives the 7-cap c5 y1 … y6. H has neither.
+  - **6-cup.** Mirror argument, using the 6-cap that ends at the first point of the cup.
+- **Consequence.** The owners form an N66-class set (no 6-cap, no 6-cup, no convex octagon), so at most N66 ≤ 55 of
+  the 70 states are occupied. This gives the row **h(Z\*) ≥ 15**, on the same hypothesis as the Z-row.
+- **Lean** (`LemmaZStar.lean`, here):
+  - `Zs_eq` pins the support to `data/zstar.json` (`decide +kernel`).
+  - `zsOwners_no_cap` and `zsOwners_no_cup` prove the lemma. They use `rank_attained`, `rank_lt_of_avoids` and one
+    `EndingPath` extension.
+  - `zs_row : N66Bound 55 → … → 15 ≤ (Zs \ c.occupied).card` is the row.
+  - Compile time 6.7 s. `#print axioms` shows propext, Classical.choice and Quot.sound only.
+- **Budget form** (`BalancedBudgetsZZs.lean`, here):
+  - `ExcludesHoleBudgetZZsF b` is the tree statement: catalog rows, cover cuts, the Z-row and the Z*-row, with
+    states 0 and 1 occupied.
+  - `balanced_bound_of_hole_budget_zzsf : b ≤ 249 → N66Bound 55 → ExcludesHoleBudgetZZsF b →
+    BalancedBound (251 − b)`.
+  - `composition_303_zzsf … composition_300_zzsf` cover budgets 68–71. Compile time 2.5 s, standard axioms.
+  - States 0 and 1 are always occupied (ES305N20261119 `FixedStatesZ.lean`), so only the zero side needs a tree.
+- **Parametric form** (`BalancedBudgetsZZsN.lean`, here; 20 Nov 06:31; `tools/build_zsn.sh`, rc 0, log
+  `data/build_zsn.log`; standard axioms only):
+  - `z_row_of`, `zs_row_of : N66Bound B → 70 − B ≤ (Z \ occupied).card`, and the same for Z*. These hold for any
+    N66 bound.
+  - `ExcludesHoleBudgetZZsN r b` puts both rows at demand r.
+  - `balanced_bound_of_hole_budget_zzsn : b ≤ 249 → N66Bound B → ExcludesHoleBudgetZZsN (70 − B) b →
+    BalancedBound (251 − b)`.
+  - `zzsn_55_iff`: at B = 55 the statement is definitionally the recorded `ExcludesHoleBudgetZZsF`.
+  - **Prepared, not usable yet:**
+    - `composition_302_n54 : ExcludesHoleBudgetZZsN 16 69 → N66Bound 54 → ResidualBound 118 → ForcesConvexNGon 302 8`;
+    - `composition_301_n53`, the same with 17, 70 and 53.
+    - No N66 bound below 55 is known.
+  - Each Lean step needs up to 3.8 GB RSS. Run builds with MemoryMax ≥ 5G.
+
+## 3. Controls
+
+All files are in `data/`.
+- **Exact control** (`tools/zstar_control.py`, own code, exact integers): the cup–cap construction X(7,7) and 150 of
+  its random subsets.
+  - X(7,7) has 252 points with all 252 states occupied and 70 Z*-owners.
+  - Injectivity, Lemma Z and the Z*-lemma hold on all 151 sets.
+  - Negative controls: the owners of {f(0) = 5} alone contain a 6-cup in 151 of 151 sets, and the owners of
+    {f(4) ≥ 1} alone a 6-cap in 137. So both halves of the class condition are needed.
+- **Budget-66 tree with the Z*-row** (`tools/zs66_test.sh`):
+  - The finder closes it in its master phase: 5,151 nodes, against 771,030 without the Z*-row.
+  - Assembled by `balz_assemble_v4.py` and replayed by check_tree: EXACT TREE, 2,576 files, 3,133 rows, minimum
+    margin 1.
+  - balcheck2: EXACT TREE, cover complete with lemma path 0:1.
+- **Root LP** (`tools/lp_zstar.py`, HEURISTIC): 60.23 → 66.00 with the Z*-row. With both rows at rhs r it is
+  42 + 1.6 r, so one unit of N66 is now worth 1.6 holes at the root.
+- **Production-option dives** (`tools/dives_zs3.sh`, HEURISTIC, 200 dives, seed 1; mean nodes):
+
+  | budget | without Z* | with Z* |
+  |---|---|---|
+  | 68 | 9.0e8 | 1.05e8 |
+  | 69 | 8.4e9 | 8.9e9 |
+  | 70 | – | 1.4e11 |
+
+## 4. Method (budget 68)
+
+- **Driver.** `tools/zbs_run0.sh 68 14 16384` runs, in order:
+  - the fastbb256 finder, zero side only (state 0 occupied), with `--ktop=16 --klow=4 --dtop=0 --dmid=0`, on
+    `balzs.rows` (the 3,131 catalog rows, the Z-row and the Z*-row);
+  - `balz_assemble_v4.py` plus `scripts/omission_tree.check_tree` on every file;
+  - balcheck2 (own C++) with `BALCHECK_EXTRA_ROWS = data/zzs_rows.json` and lemma path 0:1.
+- **Trust.** The finder is untrusted. Both replays recompute every leaf margin in exact integers.
+- **Lean.** The Lean rows are the JSON rows (ES305N20261119 `tools/rows_match.py`). The Z*-support is
+  `OmissionZStarRow.zsIndices` (`Zs_eq`).
+- **Limits.** Unit `esr-bal-zbs68`: CPUQuota 1400 %, MemoryMax 8G, MemoryHigh 7G, MemorySwapMax 0, RuntimeMaxSec
+  280,000, nice 10. Work dir `/home/jay/research/data/bal186-20261119/zrow/b68zs`.
+- **Owner approval.** The owner approved 14 threads for budget 68. This run replaced the Z-row-only run at 01:33,
+  which is resumable from `zrow/b68z` (ES305N20261119 §8, "Switch").
+- **Restart at 10 threads (20 Nov 11:01, owner OK ~11:00).** The owner approved running the N66 level-15 cube
+  campaign (`N66N20261113/cubes20261120/`) alongside budget 68, so budget 68 went from 14 to 10 threads.
+  - Same unit name, `./zbs_run0.sh 68 10 16384`, CPUQuota 1000 %, RuntimeMaxSec 300,000 (ends 23 Nov 22:21), other
+    limits unchanged.
+  - fastbb256 reloads `occ/master.txt` (`"master_resumed": true`), so the 32,755 contexts are the same; 7,257 closed
+    contexts were kept and 25,498 remain. The thread count does not enter the master.
+- **Restart at 11 threads (20 Nov 14:37).** The Δ unit `esr-dlt-n8m17` ended at 14:28 and freed its thread; it went
+  to budget 68 (the campaign's fifth slot stays off: the n66 memory track binds).
+  - Before the restart, every input of `zbs_run0.sh 68` was hashed against §6 and ES305N20261119 (script, `balzs.rows`,
+    `zzs_rows.json`, `balz_assemble_v4.py`, fastbb256, balcheck2, catalog): all equal, all modified before 11:01.
+  - `./zbs_run0.sh 68 11 16384`, CPUQuota 1100 %, other limits unchanged; RuntimeMaxSec 300,000 s now ends 24 Nov
+    01:57.
+  - Resumed with `"master_resumed": true`: 9,875 closed contexts kept (equal to the closed events in `occ.out` at the
+    stop), 22,880 remain, sum 32,755.
+- **Restart at 22 threads (20 Nov 17:41; owner raised the thread cap to 80–90 % of the 32 logical CPUs at ~17:30).**
+  The CPU has 16 cores with 2 threads each, so threads beyond 11 on budget 68's cores are SMT siblings.
+  - `taskset -c 5-15,21-31 ./zbs_run0.sh 68 22 16384`, CPUQuota 2200 %: budget 68 owns cores 5–15 (both threads),
+    and the time-limited N66 cubes keep cores 0–4. RuntimeMaxSec 300,000 s now ends 24 Nov 05:01.
+  - Inputs unchanged since the 14:37 hash check (no file in `zrow/` newer than 14:37).
+  - Resumed with `"master_resumed": true`: 16,695 closed contexts kept (equal to the closed events at the stop),
+    16,060 remain, sum 32,755.
+  - Baseline at 11 threads (17:40): 496,116 simplex iterations/s, 2,289 nodes/s over the last 30 min
+    (`data/smt-20261120/rates.jsonl`). The finish window is re-quoted only from the measured rate.
+
+## 5. Results (to be filled in)
+
+- **Master.** 657 s, 65,529 master nodes, 32,755 contexts.
+- **Progress at 05:23.** 4,128 of 32,755 contexts closed, 36.5 M nodes, 181,068 CPU-s.
+- **Projection (HEURISTIC).**
+  - Contexts run in index order, and the cost falls steeply with the number of holes fixed in a context: mean 661 s
+    with none, 51 s with 5, 3.7 s with 9.
+  - Weighting each class by its share of the contexts gives about 190 CPU-h and 1.45e8 nodes in total. That is 1.4×
+    the dive estimate.
+  - Remaining: about 10 h at 14 threads. Finder done about 15:30 KST, checks about 1–2 h after that.
+  - **Correction at 10:35: that projection was wrong.**
+    - Progress: 6,908 of 32,755 contexts closed, 88.6 M nodes, 442,486 CPU-s, 13.93 threads in use.
+    - The cost per context rises along the index order, within each class. Mean seconds per context in
+      successive blocks of 1,500 closed contexts:
+
+      | holes fixed | blocks 1–5 |
+      |---|---|
+      | 5 | 55, 51, 85, 170, 157 |
+      | 7 | 15, 18, 19, 58, 58 |
+      | 8 | 6, 9, 8, 31, 37 |
+
+    - Holdout test: class means from the first 50 % (70 %) of closed contexts predicted 99 k (66 k) CPU-s for the
+      rest; the actual cost was 273 k (169 k). The method underestimates by about 2.6–2.8×.
+    - New estimate, using the latest block's means per class: about 1.5 M CPU-s remain, about 30 h at 14 threads.
+      Finder done about 21 Nov 17:00 KST, range about 21 Nov 06:00 to 22 Nov 12:00. Checks take 1–2 h after
+      that. The unit's RuntimeMaxSec (280,000 s) ends 23 Nov 07:19; the finder is resumable.
+  - **At 10 threads from 11:01:** the same 1.5 M CPU-s (range 1.0–2.5 M) take about 42 h (28–70 h). Finder done
+    about 22 Nov 05:00 KST, range 21 Nov 15:00 to 23 Nov 09:00.
+  - **At 11 threads from 14:37:** the 11:01 window scaled by 10/11 on what remained (about 10 % faster). Finder done
+    about 22 Nov 01:30 KST, range about 21 Nov 13:00 to 23 Nov 03:00. Not a new projection: closed/todo × rate is
+    not used (it failed the holdout test above).
+- Check A (check_tree): PENDING.
+- Check B (balcheck2): PENDING.
+
+## 6. Files and hashes (SHA-256)
+
+| file | SHA-256 |
+|---|---|
+| `LemmaZStar.lean` | `47bd1f5618ee515b4f9f5c398bd6239b1c650a16dc6aa1ae687b7dafd49fd61c` |
+| `BalancedBudgetsZZs.lean` | `7684a1deb0297c7444b1719d0403d1e814ddbab3623ec5c13320294f03278a8e` |
+| `Composition303.lean` (docstring updated 05:30) | `bbecd6cf67b12cfa377f7f252923a0b910e27f20ea10e4174d131d358cfe426e` |
+| `BalancedBudgetsZZsN.lean` (parametric) | `4cfface86e87798e34e60c98228a757505f13ea491c763a2caa67b73b41203f7` |
+| `tools/build_zsn.sh` | `c645ec6a8306524c1858d0af4174c508f582e78dcab8845a2a33f379b084dd9f` |
+| `data/zstar.json` (70 indices, rhs 15) | `26d8886058cc53972dfe274e04150c4aee0ff4fffafb974a8c7c89cd57cef328` |
+| `data/zzs_rows.json` (Z-row and Z*-row for balcheck2) | `dc6a410f9fa164ee5565fd9827f4697af052b311afda6d806a136c0cd3d896d3` |
+| `zrow/balzs.rows` (work dir; 3,133 rows) | `9135465aac32b575d3f859192891b5088b6a23c6d521687aef1b032e64e2f2b8` |
+| `tools/zbs_run0.sh` | `78bb3051a544ceec059cdcc9439f018326d7c2044747d154aa6b28929cc3b9ac` |
+| `tools/balz_assemble_v4.py` | `813d5f2a06d38e6ca6a519249aad5151617670fdb0cd3adfd40739e5aa7d6a7d` |
+| `fastbb256` (finder, work dir) | `df17fa7471f27ab80afe34363d4945b324ac1e007e27e1f8dbadd2d342c4cc90` |
+| `zrow/zs66/occ/master.json` (budget-66 control) | `d90d8a7b49c69630f12f958f3051a94198189cf357ceb0b3dce0d9b986160586` |
+| `zrow/b68zs/occ/contexts.json` (32,755 contexts) | `31ac2b894f58e050e2920c1962982e5a7d232e4428ae1c313c09d2ae1e1b74da` |
+
+The shared inputs (catalog rows, Z-row, LemmaZ, FixedStatesZ, balcheck2, check_tree) are those of ES305N20261119
+§7 and ES304N20261119.
+
+## 7. What remains
+
+- The budget-68 finder, then both checks. After that the headline can say ES(8) ≤ 303 (computer-assisted,
+  unrefereed).
+- An independent re-check by another reader or agent: the Z*-lemma, both tree checks and the Lean chain.
+- The next steps (HEURISTIC prices in ES305N20261119 §8):
+  - budget 69 with the present rows costs about 5.5e9 nodes;
+  - N66 ≤ 54 moves both capacity rows to 16 (root LP 67.6);
+  - N67 ≤ 96 is the largest lever, but it needs its own campaign.
+- **The N66 lever after the Z*-row (20 Nov 05:30–05:45, HEURISTIC).**
+  - Both capacity rows rest on N66, so each unit of N66 now lifts both rows. Root LP: 42 + 1.6 r with both rows
+    at rhs r.
+  - Production-option dives (`tools/hyp_n66_dives.sh`, rows file = `balzs.rows` with both rhs raised; 200 dives,
+    seed 1; mean nodes; data `data/hyp_*.last.json`). **The rows used are hypothetical: N66 ≤ 54 and N66 ≤ 53 are not
+    proved.**
+
+    | budget (ES bound) | present rows (N66 ≤ 55) | N66 ≤ 54 (rhs 16) | N66 ≤ 53 (rhs 17) |
+    |---|---|---|---|
+    | 68 (303) | 1.05e8 | – | – |
+    | 69 (302) | 8.9e9 | **8.0e7** | – |
+    | 70 (301) | 1.4e11 | 1.7e10 | not run |
+    | 71 (300) | – | 2.3e11 | 4.1e9 |
+    | 72 (299) | – | – | 1.6e11 |
+
+  - So N66 ≤ 54 would make 302 cheaper than 303 is now, and each further unit of N66 is worth about one point of
+    ES(8).
+  - Cost of N66 ≤ 54 (level 15 of N66N20261113): ROADMAP20261115/ROUTE307_1116 extrapolated roughly 200–450
+    slot-hours (×2.5–5 over level 14). The relaxation may also be SAT at level 15 even if N66 ≤ 54 is true.
+  - **Level-15 pilot** started 05:45 (unit `esr-n66-p15`, 0.6 thread, 4.5 h limit; `W/p2/s15/`, see
+    `data/n66_level15_pilot_README.txt`).
+    - Setup: unchanged `p2_batch.py`, warm start from the 660,810 quadruples of the certified level-14 base, with
+      `--tauclose --sb`.
+    - It measures the cost of a level-15 iteration and whether the CEGAR loop finds a model with no violated
+      quadruple. Such a model would end this route.
+    - **Iteration 1 (COMPUTED):** SAT in 622 s at 0.6 thread. The 15-hole model violates 4,366 quadruples, so the
+      loop progresses as it did at level 14 (4,974 and 6,403 on 13 Nov).
+    - At 05:56 the memory guard stopped the unit cleanly, with no OOM kill. Its track `n66` had the 3,000 MB default.
+    - The guard was restarted as `esr-memguard-1120` with `n66=6000` (total 24,000 MB unchanged). The pilot resumed
+      from its saved state as `esr-n66-p15b` (`W/p2/s15/q.out`).
+    - **Result (COMPUTED, 10:28, unit reached its 4.5 h limit).** Global CEGAR at L=15, 0.6 thread, wall-clock
+      solve times:
+
+      | iteration | warm quads | solve s | violated | status |
+      |---|---|---|---|---|
+      | p15 it1 | 660,810 (+τ) | 622 | 4,366 | SAT |
+      | p15b it1 | 669,416 | 2,406 | 4,563 | SAT |
+      | p15b it2 | 673,979 | 7,216 | 2,928 | SAT |
+      | p15b it3 | 676,907 | > 6,500 | – | killed by RuntimeMax mid-solve |
+
+      - No model without violated quadruples appeared, so the route is not refuted at L=15.
+      - Each solve costs about 3× the one before, while the violated count falls only about a third per step. At
+        L=12 and L=13 the global solve went UNSAT outright (641,229 quads, 1,998 s and 5,023 s); at L=14 the global
+        iterations took 195–702 s and the campaign switched to cubes.
+      - The state is saved in `W/p2/s15/q.json` (676,907 quads).
+      - The killed iteration left `W/p2/b15q/it3/cert.lrat` (13.7 GB, partial, certifies nothing) and `cert.cnf`
+        (0.68 GB). The partial LRAT was deleted with the owner's OK (20 Nov ~12:25); the CNF is kept.
+  - **Level-15 cube calibration** (HEURISTIC timing; unit `esr-n66-cal15`, 0.6 thread, started 10:33, ends by
+    18:10; `W/cal15.sh`, `W/p2/cal15/`).
+    - It runs level-14 depth-0 cubes at L=15, easiest first: `hhhhhh`, `hohhhh`, `hhhhho` (L=14 solves 124, 244
+      and 393 s at 1 thread). Same options as the level-14 driver; warm start from `q.json` (683,670 quads after
+      τ-closure).
+    - The ratio of L=15 to L=14 cube time prices the campaign: level 14 cost 43.7 process-h, 60.3 slot-h and 82 GB of
+      trimmed LRATs over 200 cubes (68 split, 132 certified leaves).
+    - Any UNSAT leaf is certified by `p2_cert.sh` (cake_lpr) exactly as in the level-14 campaign.
+    - **Cube `hhhhhh` (CERTIFIED for this cube only, 10:44):** UNSAT at the first solve with the warm set, no CEGAR
+      iteration. cake_lpr `s VERIFIED UNSAT`, p2_verify ALL_OK, `cert.json`: "CERTIFIED holes >= 16" inside the cube.
+      trim.cnf `51c01ff2…`, trim.lrat `eb3070ab…` (zstd copy checked against that hash).
+
+      | | L=14 | L=15 | ratio |
+      |---|---|---|---|
+      | CaDiCaL process s | 124.1 | 289.6 | 2.3 |
+      | conflicts | 109,509 | 487,146 | 4.4 |
+      | trimmed LRAT bytes | 40.7 M | 188.0 M | 4.6 |
+      | CaDiCaL RSS | – | 2,474 MB | |
+
+    - Next: `hohhhh`, `hhhhho` (cal15.sh), then `hhhhoo`, `ohhhho`, `hhooho` (`cal15b.sh`, unit `esr-n66-cal15b`,
+      started automatically when cal15 ends).
+  - **Campaign started 11:06 with the owner's OK** (record `N66N20261113/cubes20261120/`, unit `esr-n66-drv15`,
+    deadline 23 Nov 12:00). By 11:11: 10 leaves certified (the 2 calibration leaves, adopted through `accept()`,
+    and the 8 cubes refuted by unit propagation on the SB clauses), 4 cubes running, 24 pre-split.
+  - **302 follow-up prepared (zero CPU; refuses to run until N66 ≤ 54 is verified):**
+    - `zrow/balzs_n54.rows` (`9e2dc29a…`): `balzs.rows` with the Z-row and the Z*-row at rhs 16; nothing else
+      differs. `zrow/zzs_rows_n54.json` (`8419984c…`) for balcheck2.
+    - `zrow/balz_assemble_n54.py` (`d16733e5…`): v4 with RHS = 16, and the summary records "requires N66 <= 54".
+    - `zrow/zbs54_run0.sh` (`4a2015bb…`): zbs_run0.sh on those files, output `b<B>zs54`. It exits with code 9
+      unless the marker `zrow/N66_LE_54_VERIFIED` exists (tested).
+    - Lean: `composition_302_n54` (BalancedBudgetsZZsN.lean, compiled) takes exactly this tree statement
+      (`ExcludesHoleBudgetZZsN 16 69`), N66Bound 54 and ResidualBound 118.
+    - The residual side does not gain from N66 ≤ 54 alone: at budget 36 it removes (21,15), but (19,17) and
+      (20,16) remain (Knuth 2e10 and 3e11 nodes, ES306N20261119 §4).
+  - **Campaign driver (prepared before the owner's OK; started 11:06 after it, see above):** `W/p2c15_driver.py` = `p2c14_driver_r7.py`
+    with L 15, warm `p2/s15/q.json`, output `p2/c15`, units `esr-n66-c15-<id>`, time limits ×3 (3,600 / 7,200 s),
+    MemoryMax 6500M, and `DELETE_PARTIALS` (off unless the owner agrees). Calibration leaves are adopted only
+    through the level-14 `accept()` rules with L = 15. `--selftest` passes; a dry adoption accepted `hhhhhh`, and
+    the 64-cube leaf cover check holds.
+
+## 8. Resume
+
+```bash
+cd /home/jay/research/data/bal186-20261119/zrow
+taskset -c 5-15,21-31 ./zbs_run0.sh 68 22 16384   # as unit esr-bal-zbs68, CPUQuota 2200 % (STATUS20261120 §6); resumes the finder
+                               # (closed contexts are kept), then both checks
+bash leanzs/build_zs.sh        # Lean: FixedStatesZ, LemmaZStar, BalancedBudgetsZZs
+```

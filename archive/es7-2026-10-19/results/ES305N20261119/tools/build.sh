@@ -1,0 +1,7 @@
+#!/bin/bash
+# Build LemmaZ.olean, then check BalancedBudgetsZ.lean against the chain311 oleans (ES305N20261119).
+set -e
+export LEAN_PATH="/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Cli/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/batteries/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/Qq/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/aesop/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/plausible/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/.lake/build/lib/lean:/home/jay/.elan/toolchains/leanprover--lean4---v4.24.0/lib/lean:/home/jay/research/lean/erdos-szekeres-lean/experiments/omission-compact-checker-2026-11-05/build/chain311/olean:/home/jay/research/data/bal186-20261119/zrow/leanz/olean"
+cd /home/jay/research/lean/erdos-szekeres-lean/archive/es7-2026-10-19/results/ES305N20261119
+/usr/bin/time -f 'LemmaZ wall=%e s rss=%M KB' lean -j1 -R . -o /home/jay/research/data/bal186-20261119/zrow/leanz/olean/LemmaZ.olean LemmaZ.lean
+/usr/bin/time -f 'BalancedBudgetsZ wall=%e s rss=%M KB' lean -j1 -R . BalancedBudgetsZ.lean

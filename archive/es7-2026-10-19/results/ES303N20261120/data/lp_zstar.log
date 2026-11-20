@@ -1,0 +1,9 @@
+|Z| 70 |Z*| 70 disjoint True; Z* transpose-closed True; Z transpose-closed True
+catalog + Z: root LP 60.2263; h(Z*) at x* = 7.651
+LP min h(Z*) on catalog + Z: 5.000
+catalog + Z(15) + Z*(15): root LP 66.0000 (gain +5.774)
+catalog + Z(15) + Z*(16): root LP 66.8000 (gain +6.574)
+catalog + Z(15) + Z*(17): root LP 67.6000 (gain +7.374)
+catalog + Z(15) + Z*(18): root LP 68.4000 (gain +8.174)
+catalog + Z(15) + Z*(20): root LP 70.0000 (gain +9.774)
+both rows at 16 (N66 <= 54): 67.6000
