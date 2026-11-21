@@ -1,0 +1,87 @@
+12:46:06 start B_h34h31h16h28h22 lanes 1
+12:46:06 start B_o34h31h16h28h22 lanes 2
+12:46:06 start B_h34o31h16h28h22 lanes 3
+12:46:06 start B_o34o31h16h28h22 lanes 4
+12:46:06 start B_h34h31o16h28h22 lanes 5
+12:56:52 done B_h34h31h16h28h22 unsat 646.4 s 699365
+12:56:52 start B_o34h31o16h28h22 lanes 5
+12:57:44 cake B_h34h31h16h28h22 VERIFIED 47.3 s heap 6000
+12:57:50 archived B_h34h31h16h28h22 zst ok
+12:59:43 done B_h34o31h16h28h22 unsat 817.6 s 824796
+12:59:44 start B_h34o31o16h28h22 lanes 5
+13:00:37 cake B_h34o31h16h28h22 VERIFIED 50.8 s heap 6000
+13:00:43 archived B_h34o31h16h28h22 zst ok
+13:03:59 start B_o34o31o16h28h22 lanes 6
+13:03:59 start B_h34h31h16o28h22 lanes 7
+13:03:59 start B_o34h31h16o28h22 lanes 8
+13:03:59 start B_h34o31h16o28h22 lanes 9
+13:03:59 start B_o34o31h16o28h22 lanes 10
+13:03:59 start B_h34h31o16o28h22 lanes 11
+13:03:59 start B_o34h31o16o28h22 lanes 12
+13:08:30 done B_h34h31o16h28h22 unsat 1343.8 s 1637832
+13:08:30 start B_h34o31o16o28h22 lanes 12
+13:09:49 cake B_h34h31o16h28h22 VERIFIED 74.1 s heap 6000
+13:09:58 archived B_h34h31o16h28h22 zst ok
+13:11:06 done B_o34h31h16h28h22 split 1500.5 s 1792355
+13:11:06 done B_o34o31h16h28h22 split 1500.3 s 1557446
+13:11:06 start B_o34h31h16h28h22o36 lanes 11
+13:11:06 start B_o34h31h16h28h22h36 lanes 12
+13:21:11 done B_h34h31h16o28h22 unsat 1031.8 s 1498516
+13:21:11 start B_o34o31h16h28h22o36 lanes 12
+13:21:53 done B_o34h31o16h28h22 split 1500.9 s 1939683
+13:21:53 start B_o34o31h16h28h22h36 lanes 12
+13:22:08 cake B_h34h31h16o28h22 VERIFIED 53.1 s heap 6000
+13:22:15 archived B_h34h31h16o28h22 zst ok
+13:24:45 done B_h34o31o16h28h22 split 1501.0 s 1898936
+13:24:45 start B_o34h31o16h28h22o36 lanes 12
+13:25:54 done B_o34h31h16o28h22 unsat 1314.7 s 1840820
+13:25:54 start B_o34h31o16h28h22h36 lanes 12
+13:26:00 done B_h34o31h16o28h22 unsat 1320.8 s 1787151
+13:26:00 start B_h34o31o16h28h22o36 lanes 12
+13:26:18 done B_o34h31h16h28h22h36 unsat 911.6 s 1349501
+13:26:18 start B_h34o31o16h28h22h36 lanes 12
+13:26:56 cake B_o34h31h16o28h22 VERIFIED 59.7 s heap 6000
+13:27:05 archived B_o34h31h16o28h22 zst ok
+13:27:52 cake B_o34h31h16h28h22h36 VERIFIED 46.3 s heap 6000
+13:27:58 archived B_o34h31h16h28h22h36 zst ok
+13:28:58 cake B_h34o31h16o28h22 VERIFIED 59.0 s heap 6000
+13:29:01 done B_o34o31o16h28h22 split 1501.7 s 1789277
+13:29:01 done B_o34o31h16o28h22 unsat 1501.5 s 1876226
+13:29:01 done B_h34h31o16o28h22 split 1501.4 s 2014054
+13:29:01 done B_o34h31o16o28h22 split 1501.4 s 1911107
+13:29:01 start B_o34o31o16h28h22o36 lanes 9
+13:29:01 start B_o34o31o16h28h22h36 lanes 10
+13:29:01 start B_h34h31o16o28h22o36 lanes 11
+13:29:01 start B_h34h31o16o28h22h36 lanes 12
+13:29:06 archived B_h34o31h16o28h22 zst ok
+13:29:34 done B_o34h31h16h28h22o36 unsat 1107.8 s 1544728
+13:29:34 start B_o34h31o16o28h22o36 lanes 12
+13:30:16 cake B_o34o31h16o28h22 VERIFIED 69.2 s heap 6000
+13:30:26 archived B_o34o31h16o28h22 zst ok
+13:31:27 cake B_o34h31h16h28h22o36 VERIFIED 60.0 s heap 6000
+13:31:34 archived B_o34h31h16h28h22o36 zst ok
+13:33:32 done B_h34o31o16o28h22 split 1502.0 s 1781336
+13:33:32 start B_o34h31o16o28h22h36 lanes 12
+13:41:45 done B_o34o31h16h28h22o36 unsat 1233.8 s 1373313
+13:42:51 done B_h34o31o16h28h22o36 unsat 1010.8 s 1074786
+13:43:05 cake B_o34o31h16h28h22o36 VERIFIED 78.9 s heap 6000
+13:43:15 archived B_o34o31h16h28h22o36 zst ok
+13:44:23 cake B_h34o31o16h28h22o36 VERIFIED 66.9 s heap 6000
+13:44:32 archived B_h34o31o16h28h22o36 zst ok
+13:46:39 done B_h34o31o16h28h22h36 unsat 1221.2 s 1353855
+13:46:54 done B_o34o31h16h28h22h36 split 1501.2 s 1761208
+13:47:33 cake B_h34o31o16h28h22h36 VERIFIED 50.7 s heap 6000
+13:47:41 archived B_h34o31o16h28h22h36 zst ok
+13:49:46 done B_o34h31o16h28h22o36 split 1501.2 s 1685612
+13:50:55 done B_o34h31o16h28h22h36 split 1501.1 s 1900073
+13:51:31 done B_h34h31o16o28h22h36 unsat 1350.1 s 1667350
+13:52:28 cake B_h34h31o16o28h22h36 VERIFIED 50.9 s heap 6000
+13:52:35 archived B_h34h31o16o28h22h36 zst ok
+13:54:02 done B_o34o31o16h28h22o36 split 1500.8 s 1509471
+13:54:02 done B_o34o31o16h28h22h36 split 1500.8 s 1645986
+13:54:02 done B_h34h31o16o28h22o36 split 1500.7 s 1803862
+13:54:35 done B_o34h31o16o28h22o36 split 1500.3 s 1689621
+13:55:56 done B_o34h31o16o28h22h36 unsat 1343.9 s 1689672
+13:56:55 cake B_o34h31o16o28h22h36 VERIFIED 53.6 s heap 6000
+13:57:03 archived B_o34h31o16o28h22h36 zst ok
+14:42:19 STOP file: terminated 0

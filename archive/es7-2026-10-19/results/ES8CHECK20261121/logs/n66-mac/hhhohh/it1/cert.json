@@ -1,0 +1,184 @@
+{
+ "certdir": "<scratch>/agents/n66-mac/w/p2/c15mac/hhhohh/it1",
+ "state": "<scratch>/agents/n66-mac/w/p2/c15mac/hhhohh_state.json",
+ "budget": 15,
+ "holes_at_least": 16,
+ "bound": 54,
+ "W_size": 70,
+ "cube": [
+  [
+   25,
+   0
+  ],
+  [
+   12,
+   0
+  ],
+  [
+   16,
+   0
+  ],
+  [
+   29,
+   1
+  ],
+  [
+   17,
+   0
+  ],
+  [
+   37,
+   0
+  ]
+ ],
+ "full_cnf_sha256": "96eb906b9482f8d4b7e8c82a616b0367d14d78a122137d8099d0ea7f017b1036",
+ "full_cnf_clauses": 1491296,
+ "activated_quadruples": 0,
+ "trim_cnf_sha256": "93548e48070ecd84d62a45419e5b1d6fff7dd55d8fd5913197da7ddf0954f25d",
+ "trim_lrat_sha256": "4abc909157f4739095282820c516d755a3dcb0c20c8c7f61880ee934a2894e54",
+ "trim_cnf_clauses": 6,
+ "trim_lrat_bytes": 68,
+ "trim": {
+  "lrat_lines": 651,
+  "additions": 368,
+  "marked_additions": 3,
+  "empty_id": 1491664,
+  "originals": 1491296,
+  "marked_originals": 6,
+  "marked_total": 9
+ },
+ "used": {
+  "used_original_clauses": 6,
+  "per_family": {
+   "eager": 0,
+   "quad": 0,
+   "units": 3,
+   "rows": 0,
+   "card": 0,
+   "sb": 3
+  },
+  "used_rows": 0
+ },
+ "kinds": {
+  "units": 3,
+  "rows": 0,
+  "card": 0,
+  "geometric": 0,
+  "sb": 3
+ },
+ "final_verify66": null,
+ "sb_pairs": [
+  [
+   32,
+   37
+  ],
+  [
+   29,
+   25
+  ],
+  [
+   39,
+   45
+  ],
+  [
+   24,
+   30
+  ],
+  [
+   2,
+   3
+  ],
+  [
+   4,
+   6
+  ],
+  [
+   7,
+   11
+  ],
+  [
+   8,
+   10
+  ],
+  [
+   12,
+   16
+  ],
+  [
+   13,
+   15
+  ],
+  [
+   17,
+   23
+  ],
+  [
+   18,
+   21
+  ],
+  [
+   19,
+   22
+  ],
+  [
+   26,
+   27
+  ],
+  [
+   31,
+   38
+  ],
+  [
+   33,
+   36
+  ],
+  [
+   40,
+   44
+  ],
+  [
+   42,
+   43
+  ],
+  [
+   46,
+   52
+  ],
+  [
+   47,
+   50
+  ],
+  [
+   48,
+   51
+  ],
+  [
+   53,
+   57
+  ],
+  [
+   54,
+   56
+  ],
+  [
+   58,
+   62
+  ],
+  [
+   59,
+   61
+  ],
+  [
+   63,
+   65
+  ],
+  [
+   66,
+   67
+  ]
+ ],
+ "link_recheck_ALL_OK": null,
+ "cake_lpr": "s VERIFIED UNSAT",
+ "ALL_OK": true,
+ "time": "2026-11-21 12:26:09 KST"
+}

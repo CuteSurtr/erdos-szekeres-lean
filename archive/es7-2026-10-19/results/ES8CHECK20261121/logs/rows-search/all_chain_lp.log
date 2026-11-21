@@ -1,0 +1,7 @@
+(3,3): max 2 cap 2; (3,4): max 3 cap 3; (3,5): max 4 cap 4; (3,6): max 5 cap 5; (3,7): max 6 cap 6
+(4,3): max 3 cap 3; (4,4): max 6 cap 6; (4,5): max 10 cap 10; (4,6): max 15 cap 15; (4,7): max 21 cap 21
+(5,3): max 4 cap 4; (5,4): max 10 cap 10; (5,5): max 20 cap 20; (5,6): max 35 cap 35; (5,7): max 56 cap 56
+(6,3): max 5 cap 5; (6,4): max 15 cap 15; (6,5): max 35 cap 35; (6,6): max 70 cap 55; (6,7): max 126 cap 126
+(7,3): max 6 cap 6; (7,4): max 21 cap 21; (7,5): max 56 cap 56; (7,6): max 126 cap 126
+distinct (6,6) chain-free intersections with >= 56 states: 58950 (rows added)
+root LP catalog+Z+Z*: 66.000000 ; + all chain rows: 66.000000

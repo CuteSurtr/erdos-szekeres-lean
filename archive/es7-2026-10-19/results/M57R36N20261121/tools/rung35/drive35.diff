@@ -1,0 +1,49 @@
+--- drive36_orig.py	2026-11-21 12:30:15
++++ drive35.py	2026-11-21 12:30:52
+@@ -1,8 +1,14 @@
+ #!/usr/bin/env python3
+-"""drive.py -- cube-and-conquer driver for rung N = 36 of the owner model (3,5,7,36), --nosig.
++"""drive.py -- cube-and-conquer driver for rung N = 35 of the owner model (3,5,7,35), --nosig.
+ 
+-Case A = run/c36_rle13.cnf (B2 <= 13), case B = run/c36_tle22.cnf (S1 <= 22); both regenerated from
+-owner.py/addrows.py and equal to the recorded SHA-256 (aba65111..., 08b8ea9c...).
++Four cases (rows of F = S1<=25 S2<=25 B1<=16 B2<=16 ALL<=35; each case lowers two of them;
++coverage: cover35.py, "COVER OK"):
++  A = run/c35_rle12_qle12.cnf (B2<=12, B1<=12)   97a256f8...
++  B = run/c35_rle12_ule22.cnf (B2<=12, S2<=22)   daa27510...
++  C = run/c35_tle22_qle12.cnf (S1<=22, B1<=12)   908bbd94...
++  D = run/c35_tle22_ule22.cnf (S1<=22, S2<=22)   e89efe20...
++Run it in its own directory (bin/, run/, a fresh cubes/), never in the r36 directory: main() resumes
++from an existing cubes/state.json.
+ A cube = base CNF + unit clauses on occupancy variables occ[s] (var 32759 + s).  The leaves of each
+ case always cover every sign pattern of the case's top split: a timed-out cube is replaced by its two
+ children (cube + occ[s], cube + -occ[s]) for the next state s of the case's split order.
+@@ -15,10 +21,15 @@
+ CU = D + '/cubes'
+ STATE, RES = CU + '/state.json', CU + '/results.tsv'
+ OCC0 = 32759
+-BASE = {'A': D + '/run/c36_rle13.cnf', 'B': D + '/run/c36_tle22.cnf'}
+-ORDER = {'A': [44, 39, 26, 21, 15, 33, 27, 37, 32, 48, 38, 43, 46, 42, 47, 51, 50, 52, 53, 54, 55],
+-         'B': [34, 31, 16, 28, 22, 36, 29, 25, 23, 40, 49, 45, 41, 35, 30, 24, 20, 19, 18, 17]}
+-TOP = {'A': 6, 'B': 5}
++BASE = {'A': D + '/run/c35_rle12_qle12.cnf', 'B': D + '/run/c35_rle12_ule22.cnf',
++        'C': D + '/run/c35_tle22_qle12.cnf', 'D': D + '/run/c35_tle22_ule22.cnf'}
++ORDER = {'A': [44, 31, 39, 26, 21, 33, 27, 15, 25, 37, 32, 48, 18, 38, 43, 20, 46, 42, 47, 51, 50, 52, 53, 54, 55],
++         'B': [44, 34, 39, 26, 21, 33, 27, 15, 28, 22, 16, 36, 29, 37, 23, 32, 49, 40, 19, 45, 41, 48, 35, 30, 38,
++               24, 43, 46, 42, 17, 47, 51, 50, 52, 53, 54, 55],
++         'C': [44, 34, 31, 39, 21, 33, 27, 15, 28, 22, 16, 36, 29, 25, 23, 49, 40, 19, 45, 41, 18, 35, 30, 24, 20, 17],
++         'D': [34, 31, 26, 28, 22, 16, 36, 29, 25, 37, 23, 32, 49, 40, 19, 45, 41, 48, 18, 35, 30, 38, 24, 43, 20,
++               46, 42, 17, 51, 47, 50, 52, 53, 54, 55]}
++TOP = {'A': 6, 'B': 6, 'C': 5, 'D': 5}
+ LANES = int(os.environ.get('LANES', '11'))
+ TL = int(os.environ.get('TL', '1500'))
+ STOP_START = float(os.environ.get('STOP_START', '0'))   # epoch after which no new solve starts
+@@ -52,7 +63,7 @@
+ 
+ def new_state():
+     jobs = []
+-    for case in ('A', 'B'):
++    for case in sorted(BASE):
+         k = TOP[case]
+         for m in range(1 << k):
+             units = [(OCC0 + s) if (m >> i) & 1 else -(OCC0 + s) for i, s in enumerate(ORDER[case][:k])]

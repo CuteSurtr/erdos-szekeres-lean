@@ -1,0 +1,53 @@
+{
+ "status": "partial",
+ "summary_md": "## lean-rebuild: Mac rebuild of the ES(8) ≤ 305/304/303 Lean composition files (12:19–13:13 KST)\n\n**Result: 5 of the 9 target files compiled on this Mac, all with standard axioms only. The other 4 could not be compiled.** Those 4 import the chain311 module `BalancedCoverCutsV2`. Its Linux build record shows a peak of about 19 GB, more than the 8 GB budget, so I did not run it.\n\n**Mathlib check.** The snapshot's `lake-manifest.json` and the Mac copy's are identical in all 9 packages (mathlib `f897ebcf72cd16f89ab4577d0c826cd14afaafc7` = v4.24.0, toolchain v4.24.0). So I worked from an APFS clone of the Mac copy's `.lake/packages`, inside an APFS clone of the snapshot.\n\n**How I built.** Lake 5.0.0 has no option to limit jobs, so I did not use `lake build`. Every module was compiled with a direct `lean -j1` call, using the v4.24.0 binary by its full path, under `nice -n 10`, with at most 2 compiles in parallel (the chain one at a time). I used the same flags as the record build scripts. All 9 target files have the SHA-256 recorded in the READMEs. There were no errors or warnings in any log.\n\n| file | compiled | wall | peak RSS | `#print axioms` |\n|---|---|---|---|---|\n| LemmaZ.lean | yes, rc 0 | 8.6 s | 3.41 GB | `Z_eq`, `z_row`: [propext, Classical.choice, Quot.sound] |\n| LemmaZStar.lean | yes, rc 0 | 8.8 s | 3.41 GB | `Zs_eq`, `zs_row`: same three |\n| Composition305.lean | yes, rc 0 | 4.2 s | 2.67 GB | `composition_305`, `avoiding_304`: same three |\n| Composition304.lean | yes, rc 0 | 4.2 s | 2.68 GB | `composition_304`, `avoiding_303`: same three |\n| Composition303.lean | yes, rc 0 | 3.6 s | 2.67 GB | `composition_303`, `avoiding_302`: same three |\n| BalancedBudgetsZ.lean | no | – | – | `composition_304_z`: not checked |\n| FixedStatesZ.lean | no | – | – | `composition_303_zf`, `zero_mem_occupied`, `one_mem_occupied`: not checked |\n| BalancedBudgetsZZs.lean | no | – | – | `composition_303_zzsf`: not checked |\n| BalancedBudgetsZZsN.lean | no | – | – | not checked |\n\nThe compiled theorems take their population bounds (`BalancedBound`, `ResidualBound`, and the budget statements) as hypotheses. I did not check those inputs.\n\n**Why the last 4 were blocked.** There are no chain311 `.olean` files anywhere on this Mac. I looked in the Mac copy and in two other local checkouts. Building them from source means 87 chain modules plus 3 library modules. All 87 sources match the SHA-256 pins in `chain311-closure.json`.\n\n**How far the chain build got by the 13:12 cutoff:**\n- The 3 library modules (`OmissionCertificates`, `CoverCuts`, `OmissionPacking`) built.\n- `BalancedProof.Catalog` built in 94 s, peak 4.6 GB.\n- 70 of the 84 `Geometry*` modules built, 19–51 s and 6.0–8.1 GB each. Each prints one axioms line, and all of them are the standard three.\n- Not done: Geometry02240 through Geometry02656 (14 modules), `BalancedRows` (needs all 84), and `BalancedCoverCutsV2` (deliberately not attempted).\n\n**This Mac reproduces the Linux build byte for byte wherever I could compare (EXACT, SHA-256):**\n- `chain311-library.json.gz` pins the `.olean` hashes of 4,952 modules imported by the Linux chain311 build. Every one present here matches, with 0 mismatches:\n  - Mathlib 2,825, Lean core 1,732, aesop 130, batteries 84, Qq 13, proofwidgets 12, plausible 9, LeanSearchClient 4, importGraph 2.\n  - 72 ErdosSzekeres modules rebuilt here from the snapshot. The other 69 pinned modules were not built.\n- My `LemmaZ.olean` is identical to the recorded `leanz/olean/LemmaZ.olean` (`ef249ba1…`, ES305 README).\n- `BalancedProof.Catalog.olean` matches its record (`d650caa8…`).\n- All 70 Geometry `.olean` files match the hashes in `chain311-build.tsv`. They differ from the older October records, as the chain311 README already explains (those were built without `--root`).\n\n**Extra check, not a record file:** `aux/FixedStatesZExcerpt.lean` is lines 12–62 of `FixedStatesZ.lean` copied verbatim, with the imports `BalancedRows` and `BalancedCoverCutsV2` dropped. It compiled (rc 0, 6.4 s, 3.18 GB). `zero_mem_occupied` and `one_mem_occupied` depend only on the standard three axioms. This is not a compile of `FixedStatesZ.lean` itself.\n\n**Side effect outside my folder.** I ran `lean --help` from `<home>`, and elan auto-installed leanprover/lean4 v4.36.0 into `~/.elan/toolchains` (the default toolchain is 'stable'). I left it there. Remove it with `elan toolchain uninstall leanprover/lean4:v4.36.0` if it isn't wanted. Apart from that I wrote only to the agents folder and to clones; the Mac copy was only read and cloned.\n\n**Remaining commands** (`remaining.sh` skips any module already built):\n- `STOP_AFTER_ROWS=1 bash .../remaining.sh` builds the 14 remaining Geometry modules and `BalancedRows` within about 8 GB, in roughly 10–15 minutes.\n- Then `bash .../remaining.sh` builds `BalancedCoverCutsV2`, which needs about 19 GB of RAM (about 1,107 s on Linux). After that it compiles the 4 target files, runs `axioms/ExtraAxioms.lean` (the axioms not printed by the files themselves, such as `zero_mem_occupied`, `one_mem_occupied` and `composition_303_zzsf`), and compares the hashes against chain311 (`BalancedRows` `4284a526…`, `BalancedCoverCutsV2` `6f7f0ba1…`).",
+ "artifacts": [
+  "<scratch>/agents/lean-rebuild/remaining.sh",
+  "<scratch>/agents/lean-rebuild/logs/build.tsv",
+  "<scratch>/agents/lean-rebuild/logs/T_LemmaZ.log",
+  "<scratch>/agents/lean-rebuild/logs/T_LemmaZStar.log",
+  "<scratch>/agents/lean-rebuild/logs/T_Composition305.log",
+  "<scratch>/agents/lean-rebuild/logs/T_Composition304.log",
+  "<scratch>/agents/lean-rebuild/logs/T_Composition303.log",
+  "<scratch>/agents/lean-rebuild/logs/chain/build.tsv",
+  "<scratch>/agents/lean-rebuild/aux/FixedStatesZExcerpt.lean",
+  "<scratch>/agents/lean-rebuild/logs/aux_FixedStatesZExcerpt.log",
+  "<scratch>/agents/lean-rebuild/axioms/ExtraAxioms.lean",
+  "<scratch>/agents/lean-rebuild/sched.py",
+  "<scratch>/agents/lean-rebuild/sched_chain.py",
+  "<scratch>/agents/lean-rebuild/cmp_lib.py",
+  "<scratch>/agents/lean-rebuild/cmp_chain.py",
+  "<scratch>/agents/lean-rebuild/olean"
+ ],
+ "commands": "A=<scratch>/agents/lean-rebuild\n# Step 1, within about 8 GB: the 14 remaining Geometry modules and BalancedRows; finishes with the hash comparison\nSTOP_AFTER_ROWS=1 bash $A/remaining.sh\n# Step 2, needs about 19 GB of RAM: BalancedCoverCutsV2, then BalancedBudgetsZ, FixedStatesZ (-o), BalancedBudgetsZZs (-o), BalancedBudgetsZZsN, ExtraAxioms.lean, cmp_chain.py\nbash $A/remaining.sh\n# Single compile, as done inside remaining.sh (LEAN_PATH = 9 package roots under $A/esb/.lake/packages/*/.lake/build/lib/lean, then $TC/lib/lean, then $A/olean):\n#   cd $A/chain/src && nice -n 10 /usr/bin/time -l $TC/bin/lean -j1 -s 32768 -R . -o $A/olean/BalancedCoverCutsV2.olean -i $A/olean/BalancedCoverCutsV2.ilean BalancedCoverCutsV2.lean\n#   cd $A/esb/archive/es7-2026-10-19/results/ES305N20261119 && $TC/bin/lean -j1 -R . BalancedBudgetsZ.lean\n# where TC=<home>/.elan/toolchains/leanprover--lean4---v4.24.0",
+ "findings": [
+  {
+   "severity": "info",
+   "detail": "LemmaZ, LemmaZStar, Composition305, Composition304 and Composition303 compiled on this Mac (rc 0). Every printed theorem depends only on propext, Classical.choice and Quot.sound."
+  },
+  {
+   "severity": "blocker",
+   "detail": "BalancedBudgetsZ, FixedStatesZ, BalancedBudgetsZZs and BalancedBudgetsZZsN were not compiled. They import BalancedCoverCutsV2, which has no olean on this Mac and peaked at 19,434,208 KB on Linux (over the 8 GB budget). The axioms of composition_304_z, composition_303_zf and composition_303_zzsf were not checked."
+  },
+  {
+   "severity": "info",
+   "detail": "The chain build reached 3 library modules, BalancedProof.Catalog and 70 of 84 Geometry modules before the 13:12 cutoff. Still to build: 14 Geometry modules, BalancedRows and BalancedCoverCutsV2."
+  },
+  {
+   "severity": "info",
+   "detail": "EXACT (SHA-256): all 4,952 olean hashes pinned by the Linux chain311 build that are present here match, 0 mismatches. That covers Mathlib (2,825), Lean core and the other packages, and 72 ErdosSzekeres modules rebuilt here. LemmaZ.olean equals its recorded hash ef249ba1..., BalancedProof.Catalog its recorded d650caa8..., and all 70 Geometry oleans their chain311 hashes."
+  },
+  {
+   "severity": "info",
+   "detail": "Extra check, not a record file: lines 12-62 of FixedStatesZ.lean copied verbatim, without the two chain imports. It compiled, and zero_mem_occupied and one_mem_occupied depend only on the three standard axioms."
+  },
+  {
+   "severity": "info",
+   "detail": "The snapshot and the Mac copy pin the same Mathlib (f897ebcf..., v4.24.0). All 9 target files match the SHA-256 values recorded in the READMEs."
+  },
+  {
+   "severity": "warning",
+   "detail": "Side effect: running lean --help from <home> made elan auto-install leanprover/lean4 v4.36.0 into ~/.elan/toolchains. Nothing else was written outside the agents folder."
+  }
+ ]
+}

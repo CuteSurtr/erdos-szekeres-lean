@@ -1,0 +1,50 @@
+{
+ "total": {
+  "sets": 736,
+  "points": 12366
+ },
+ "fails": {
+  "injective_fail": 0,
+  "catalog_fail": 0,
+  "label_fail": 0,
+  "pair_fail": 0,
+  "a_fail": 0,
+  "k2_class_fail": 0,
+  "lemmaAi_fail": 0,
+  "A2F_fail": 0
+ },
+ "b_fail": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0
+ ],
+ "b_seen": [
+  0,
+  736,
+  736,
+  732,
+  686,
+  522,
+  314
+ ],
+ "b_attained": [
+  0,
+  164,
+  186,
+  217,
+  258,
+  300,
+  314
+ ],
+ "max_f4_plus_cupStart": 7,
+ "max_Eplus_plus_cupStart_on_F2_pairs": 8,
+ "negative_controls": {
+  "A1": 164,
+  "f3": 529,
+  "sharp": 352
+ }
+}

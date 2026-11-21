@@ -1,0 +1,55 @@
+{
+ "verdict": "no_issue_found",
+ "findings": [
+  {
+   "severity": "info",
+   "item": "(1) Z and Z* index sets",
+   "detail": "EXACT. I recomputed both sets from the 252 JSON states. Z = {f(0)<=4, f(4)=0} has 70 states, Z* = {f(0)=5, f(4)>=1} has 70, and they share none. Z equals LemmaZ.zIndices. Z* equals LemmaZStar.zsIndices and zstar.json (rhs 15). The JSON state list is the Lean catalog (BalancedCatalogData.lean) in the same order, and it is exactly the set of all 252 antitone maps {0..4}->{0..5}. Both Z and Z* are closed under transpose, and the map f(i) -> 5 - f(4-i) sends Z onto Z*. Neither set is the support of any of the 3,131 JSON rows. Z contains states 0 and (1,0,0,0,0) (indices 0 and 1). I compared the Lean index lists as text only; I did not check that the Lean files compile.",
+   "source": "step1.out; LemmaZ.lean; LemmaZStar.lean; zstar.json; balanced-v2-source.json"
+  },
+  {
+   "severity": "info",
+   "item": "Definitions match the Lean files",
+   "detail": "Checked before coding. ActualRanks.labels = (rank cap - 1, rank cup - 1). BalancedStates.column v i = sup over u<v of (cupLabel if i+1 <= capLabel else 0). Realization.Configuration.cup = (orient > 0). orient = (b-a)x(c-a). My code is written from these definitions and imports no project code. Read afterwards for comparison only, the project's tools/zstar_control.py uses the same definitions, and its X(7,7) numbers agree with mine (252 distinct states, 70 Z* owners).",
+   "source": "ErdosSzekeres/Omission/ActualRanks.lean, BalancedStates.lean, Realization.lean, Orientation.lean"
+  },
+  {
+   "severity": "info",
+   "item": "(2a)-(2d) on all test sets",
+   "detail": "EXACT on each set; as support for the general statements, EVIDENCE only. There were 10,466 sets with no 7-cap and no 7-cup (main runs plus controls), up to 252 points. Zero failures of: (a) all states distinct; (b) Z owners contain no 6-cap and no 6-cup; (c) the same for Z* owners; (d) the first two states are 0 and (1,0,0,0,0). The full 252-point X(7,7) construction maps onto the 252 catalog states one-to-one. Its 70 Z owners and its 70 Z* owners each have longest cap 5 and longest cup 5.",
+   "source": "main_random.json, main_greedy.json, main_struct.json, octcontrol.json"
+  },
+  {
+   "severity": "info",
+   "item": "(2e) rows on octagon-free sets",
+   "detail": "EXACT on each set; EVIDENCE for the rows. 8,419 sets were checked exactly to have no convex octagon (and no 7-cap or 7-cup), with 10 to 62 points. Zero violations of the 3,131 rows, the Z-row (rhs 15) or the Z*-row (rhs 15). The tests did stress the rows: 4,128 of the structured sets had at least one row with zero slack. The most stressed set has 62 points and 107 rows at zero slack (75 catalog rows, 32 cover cuts); it was recomputed with a second, loop-only implementation and is saved in top62_tight107.json. No VIOLATION file was written.",
+   "source": "main_struct.json; top62_tight107.json; largest_octfree_sets.json"
+  },
+  {
+   "severity": "low",
+   "item": "Coverage limits (not defects)",
+   "detail": "The Z-row and Z*-row were never close to violated. At most 50 Z owners appeared in an octagon-free set, so the Z-row slack was at least 5. Z* owners were at most 12 in the structured octagon-free sets and at most 13 in any random set, so the Z*-row slack was at least 42. The largest octagon-free test set had 62 points: pruning 7-caps and 7-cups from the 64-point sets always removed at least 2 points. Not checked: the budget trees, N66 <= 55, ResidualBound 118, Lean compilation.",
+   "source": "main_*.json"
+  },
+  {
+   "severity": "info",
+   "item": "Negative controls (the checks can fail)",
+   "detail": "Rows: 280 of 414 subsets of X(7,7) that contain an octagon violate at least one row, and so do 8 of 1,278 random sets with an octagon; full X(7,7) violates all 3,133 rows. Widened Z class {f(4)=0}: its owners contain a 6-chain in 1,296 of 1,394 random sets, 1,052 of 1,088 greedy sets and 6,125 of 6,663 structured sets. Widened Z* class {f(0)>=4, f(4)>=1}: its owners contain a 6-cap in X(7,7) (105 owners) and a 6-chain in 122 of 417 subsets. The project's zstar_control.py only tested 6-cups for that class and found 0; it never tested 6-caps, so the two results do not contradict each other.",
+   "source": "octcontrol.json; ES303N tools/zstar_control.py"
+  }
+ ],
+ "checks_done": [
+  "Read the Lean definitions (labels, rank, column, Configuration.cup, orient, catalog) and matched them to the task's definitions before coding",
+  "Step 1: recomputed Z and Z* from the JSON states; compared with LemmaZ.zIndices, LemmaZStar.zsIndices, zstar.json and the Lean catalog order; checked sizes, disjointness, transpose closure, the complement map, and whether either set is already a row support",
+  "Self-tests: vectorised vs loop rank DP on 46,385 sets (0 mismatches); octagon test (cap(a->b)+cup(a->b)-2) vs brute force over subsets on 10,833 sets with 8-12 points and max convex size 4-12 (0 mismatches); incremental vs full sign tensor on 300 sets (0 mismatches)",
+  "Random greedy sets with no 7-cap or 7-cup, octagons allowed: 1,394 sets, 10-53 points, 116 of them octagon-free",
+  "Random greedy sets that also avoid octagons: 1,088 sets, 13-35 points",
+  "Structured sets: integer linear images of the octagon-free sets in ES8SYM/sets (c2_64points_k8, c2_64points_k8_bb, c4_52pts as Gaussian integers, c3_55, deep42, mirror46 x2), then pruning of 7-caps/7-cups: 6,663 octagon-free sets, 10-62 points, 1,053 with at least 60 points; every image re-checked exactly",
+  "Controls: X(7,7) cup-cap construction (252 points, exact integers up to 900 bits) and 417 random subsets of it (20-120 points); control_wide_middle_k8 (64 points, contains an octagon) under 903 linear images",
+  "Checks (a)-(e) on every set with no 7-cap and no 7-cup; (e) only on sets with no convex octagon; violation-saving hook armed (no file written)",
+  "Re-ran the most stressed 62-point set through the loop-only implementation",
+  "Probe runs (1,985 more sets, 1,580 octagon-free) gave the same zero-failure results; they are not counted in the totals",
+  "All runs single-threaded under nice -n 10, each under 10 minutes; total about 15 CPU-minutes (upper bound); nothing outside the agents folder was written; the r36 campaign was not touched"
+ ],
+ "summary_md": "## review304-controls: no violation found in the balanced-side checks for ES(8) ≤ 304/303\n\nEverything below was computed exactly with my own code. As support for the lemmas and rows it is **EVIDENCE**, not proof. Finished at 12:48 KST, before the 13:20 time box. All steps of the task were done.\n\n**(1) Z and Z\\* (EXACT)**\n- From the 252 JSON states: |Z| = 70 and |Z\\*| = 70, and they share no state.\n- Z equals `LemmaZ.zIndices`. Z\\* equals `LemmaZStar.zsIndices` and `zstar.json` (rhs 15).\n- The JSON state list is the Lean `catalog` in the same order: all 252 antitone maps {0..4}→{0..5}.\n- Both sets are closed under transpose, and the map f(i) ↦ 5 − f(4−i) sends Z onto Z\\*.\n- Neither set is the support of any of the 3,131 rows.\n- I compared the Lean lists as text only; I did not compile the Lean files.\n\n**(2) Point-set tests**\n- 10,466 sets in general position with no 7-cap and no 7-cup:\n  - 1,394 random sets;\n  - 1,088 random sets that also avoid octagons;\n  - 6,663 linear images (pruned of 7-caps/7-cups) of the octagon-free sets in `ES8SYM/sets`;\n  - controls: the 252-point cup–cap construction X(7,7), 417 subsets of it, and 903 images of `control_wide_middle_k8`.\n- Checks (a)–(d) failed **0 times**:\n  - X(7,7) maps onto all 252 states one-to-one;\n  - its 70 Z owners and its 70 Z\\* owners each have longest cap 5 and longest cup 5.\n- Check (e) ran on **8,419 sets checked exactly to have no convex octagon** (10–62 points): **0 violations** of the 3,131 rows, the Z-row or the Z\\*-row.\n  - The rows were under real pressure: 4,128 sets had a row with zero slack.\n  - One 62-point set has 107 rows at zero slack (75 catalog rows, 32 cover cuts). A second, loop-only implementation gave the same result.\n\n**(3) Largest sets and occupied states**\n- Largest octagon-free set: **62 points, so 62 occupied states**. Pruning the 64-point sets always cost at least 2 points.\n- Most occupied states overall: **252**, in X(7,7). That set has convex octagons, so check (e) does not apply to it.\n- The Z-row never came close to failing: at most 50 Z owners, so slack at least 5. The Z\\*-row slack stayed at least 42.\n\n**Controls**\n- The octagon test agrees with brute force on 10,833 small sets.\n- The row check does catch failures: 280 of the 414 octagon-containing X(7,7) subsets violate a row.\n- Widening Z to {f(4) = 0}, or Z\\* to {f(0) ≥ 4, f(4) ≥ 1}, produces owner sets that contain 6-chains.\n\n**Not checked:** the budget trees, N66 ≤ 55, the residual half (ResidualBound 118), Lean compilation.\n\nFiles are in <scratch>/agents/review304-controls/:\n- code: esz.py, run.py, octcontrol.py, step1_z.py, summarize.py\n- results: step1.out, selftest.json, main_random.json, main_greedy.json, main_struct.json, octcontrol.json\n- point sets: top62_tight107.json (the most stressed 62-point set), largest_octfree_sets.json\n- no VIOLATION file was written"
+}

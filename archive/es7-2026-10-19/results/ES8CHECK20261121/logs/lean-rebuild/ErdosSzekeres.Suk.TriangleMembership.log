@@ -1,0 +1,20 @@
+# cmd: nice -n 10 /usr/bin/time -l <home>/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean -j1 -R <scratch>/agents/lean-rebuild/esb -o <scratch>/agents/lean-rebuild/olean/ErdosSzekeres/Suk/TriangleMembership.olean -i <scratch>/agents/lean-rebuild/olean/ErdosSzekeres/Suk/TriangleMembership.ilean <scratch>/agents/lean-rebuild/esb/ErdosSzekeres/Suk/TriangleMembership.lean
+# LEAN_PATH=<scratch>/agents/lean-rebuild/esb/.lake/packages/Cli/.lake/build/lib/lean:<scratch>/agents/lean-rebuild/esb/.lake/packages/batteries/.lake/build/lib/lean:<scratch>/agents/lean-rebuild/esb/.lake/packages/Qq/.lake/build/lib/lean:<scratch>/agents/lean-rebuild/esb/.lake/packages/aesop/.lake/build/lib/lean:<scratch>/agents/lean-rebuild/esb/.lake/packages/proofwidgets/.lake/build/lib/lean:<scratch>/agents/lean-rebuild/esb/.lake/packages/importGraph/.lake/build/lib/lean:<scratch>/agents/lean-rebuild/esb/.lake/packages/LeanSearchClient/.lake/build/lib/lean:<scratch>/agents/lean-rebuild/esb/.lake/packages/plausible/.lake/build/lib/lean:<scratch>/agents/lean-rebuild/esb/.lake/packages/mathlib/.lake/build/lib/lean:<home>/.elan/toolchains/leanprover--lean4---v4.24.0/lib/lean:<scratch>/agents/lean-rebuild/olean
+        4.94 real         3.27 user         0.85 sys
+          1724809216  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              140987  page reclaims
+                   4  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   0  voluntary context switches
+                2219  involuntary context switches
+         32489261357  instructions retired
+         14438625296  cycles elapsed
+           324103520  peak memory footprint

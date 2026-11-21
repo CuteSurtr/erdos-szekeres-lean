@@ -1,0 +1,20 @@
+# cmd: nice -n 10 /usr/bin/time -l <home>/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean -j1 -s 32768 -R <scratch>/agents/lean-rebuild/chain/src -o <scratch>/agents/lean-rebuild/olean/BalancedProof/Catalog.olean -i <scratch>/agents/lean-rebuild/olean/BalancedProof/Catalog.ilean <scratch>/agents/lean-rebuild/chain/src/BalancedProof/Catalog.lean
+'OmissionBalanced.code_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+       93.85 real        85.10 user         1.69 sys
+          4609572864  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              326402  page reclaims
+                  44  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   1  voluntary context switches
+               47742  involuntary context switches
+        698333129225  instructions retired
+        308664148977  cycles elapsed
+          2343442096  peak memory footprint

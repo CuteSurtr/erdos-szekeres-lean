@@ -1,0 +1,45 @@
+--- <scratch>/agents/n66-mac/orig/p2_cert.sh	2026-11-21 12:24:11
++++ p2_cert.sh	2026-11-21 12:24:56
+@@ -8,10 +8,11 @@
+ # -> p2_verify.py (every clause of trim.cnf is a mono66 clause, a fixed/cube unit, a justified row or a clause of the
+ # cardinality encoding) -> cert.json.  Each step writes its output into <certdir>; the step log is <certdir>/pipeline.log.
+ set -u
++CADICAL=${CADICAL:-cadical}
+ D=$1; ST=${2:-}
+-W=<linux-data>/n66-20261113
+-PY=<linux-data>/six10-linux-20261105/venv.disk/bin/python
+-CAKE=<linux-home>/.local/bin/cake_lpr
++W=${P2_W:?set P2_W to the Mac work dir}
++PY=${P2_PY:?set P2_PY}
++CAKE=${CAKE:?set CAKE}
+ export ETV_A=4 ETV_B=4
+ cd $W
+ mkdir -p $D
+@@ -20,15 +21,15 @@
+   log "write $ST"
+   $PY -u p2_write.py $ST $D keep > $D/write.out 2>&1 || { log "write failed"; exit 1; }
+   log "cadical start"
+-  cadical --lrat=true --binary=false $D/cert.cnf $D/cert.lrat > $D/cadical.log 2>&1; echo "exit $?" >> $D/cadical.log
++  $CADICAL --lrat=true --binary=false $D/cert.cnf $D/cert.lrat > $D/cadical.log 2>&1; echo "exit $?" >> $D/cadical.log
+ fi
+ grep -q '^exit 20' $D/cadical.log || { log "cadical did not report UNSAT: $(tail -1 $D/cadical.log)"; exit 2; }
+-log "cadical UNSAT; lrat $(stat -c %s $D/cert.lrat) bytes"
++log "cadical UNSAT; lrat $(stat -f %z $D/cert.lrat) bytes"
+ if [ ! -s $D/trim.json ]; then
+   ./p2_lrat_trim $D/cert.cnf $D/cert.lrat $D/trim.cnf $D/trim.lrat $D/used_ids.txt > $D/trim.json 2> $D/trim.err || { log "trim failed: $(cat $D/trim.err)"; rm -f $D/trim.json; exit 3; }
+ fi
+ log "trimmed: $(cat $D/trim.json)"
+-log "trim.lrat $(stat -c %s $D/trim.lrat) bytes, trim.cnf $(stat -c %s $D/trim.cnf) bytes"
++log "trim.lrat $(stat -f %z $D/trim.lrat) bytes, trim.cnf $(stat -f %z $D/trim.cnf) bytes"
+ if ! grep -qx 's VERIFIED UNSAT' $D/cake.out 2>/dev/null; then
+   log "cake_lpr start (p2_cake.py: heap tiers 2000/3200/4500/5500 MB inside the n66 budget)"
+   $PY -u p2_cake.py $D ${P2_UNIT:-none} > $D/cake_run.out 2>&1
+@@ -37,7 +38,7 @@
+ log "cake_lpr: s VERIFIED UNSAT ($(cat $D/cake_attempts.json | tr -s ' \n' ' '))"
+ # the untrimmed proof is not part of the certificate (trim.cnf + trim.lrat are); keep its hash, then delete it
+ if [ -f $D/cert.lrat ]; then
+-  sha256sum $D/cert.lrat > $D/cert.lrat.sha256; log "full lrat sha256 $(cut -c1-64 $D/cert.lrat.sha256); deleting cert.lrat"; rm -f $D/cert.lrat
++  shasum -a 256 $D/cert.lrat > $D/cert.lrat.sha256; log "full lrat sha256 $(cut -c1-64 $D/cert.lrat.sha256); deleting cert.lrat"; rm -f $D/cert.lrat
+ fi
+ $PY -u p2_used_rows.py $D > $D/used.out 2>&1 || { log "used rows failed"; exit 5; }
+ log "used: $(cat $D/used.out)"

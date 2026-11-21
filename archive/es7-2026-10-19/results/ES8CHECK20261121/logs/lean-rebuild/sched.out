@@ -1,0 +1,149 @@
+12:23:55 start ErdosSzekeres.Omission.StateInterface
+12:23:55 start ErdosSzekeres.Vendor.ETV.Lib.Core.Rel3
+12:23:58 done ErdosSzekeres.Omission.StateInterface ok rc 0 wall 3.0 rss_bytes 500203520
+12:23:58 start ErdosSzekeres.Definitions
+12:23:59 done ErdosSzekeres.Vendor.ETV.Lib.Core.Rel3 ok rc 0 wall 4.0 rss_bytes 999456768
+12:23:59 start ErdosSzekeres.Vendor.ETV.Lib.List.Defs
+12:24:02 done ErdosSzekeres.Definitions ok rc 0 wall 4.0 rss_bytes 1652523008
+12:24:02 start ErdosSzekeres.Orientation
+12:24:04 done ErdosSzekeres.Orientation ok rc 0 wall 2.0 rss_bytes 1287356416
+12:24:04 start ErdosSzekeres.OrientationGeometry
+12:24:05 done ErdosSzekeres.Vendor.ETV.Lib.List.Defs ok rc 0 wall 6.0 rss_bytes 2545467392
+12:24:05 start ErdosSzekeres.Vendor.ETV.Lib.List.Chain3
+12:24:07 done ErdosSzekeres.OrientationGeometry ok rc 0 wall 3.0 rss_bytes 1683947520
+12:24:07 start ErdosSzekeres.Vendor.ETV.Lib.List.Lemmas
+12:24:09 done ErdosSzekeres.Vendor.ETV.Lib.List.Chain3 ok rc 0 wall 4.0 rss_bytes 2548236288
+12:24:09 start ErdosSzekeres.Basic
+12:24:11 done ErdosSzekeres.Vendor.ETV.Lib.List.Lemmas ok rc 0 wall 4.0 rss_bytes 2562523136
+12:24:11 start ErdosSzekeres.Vendor.ETV.Lib.List.Default
+12:24:12 done ErdosSzekeres.Basic ok rc 0 wall 3.0 rss_bytes 1665024000
+12:24:12 start ErdosSzekeres.Vendor.ErdosSzekeresConvex.Orientation
+12:24:14 done ErdosSzekeres.Vendor.ETV.Lib.List.Default ok rc 0 wall 3.0 rss_bytes 2519990272
+12:24:14 start ErdosSzekeres.Vendor.ETV.Config.Defs
+12:24:17 done ErdosSzekeres.Vendor.ErdosSzekeresConvex.Orientation ok rc 0 wall 5.0 rss_bytes 2574647296
+12:24:17 start ErdosSzekeres.Vendor.ErdosSzekeresConvex.Sorting
+12:24:18 done ErdosSzekeres.Vendor.ETV.Config.Defs ok rc 0 wall 4.0 rss_bytes 2540945408
+12:24:18 start ErdosSzekeres.Vendor.ETV.Config.Lemmas
+12:24:22 done ErdosSzekeres.Vendor.ErdosSzekeresConvex.Sorting ok rc 0 wall 5.0 rss_bytes 2578366464
+12:24:22 start ErdosSzekeres.Vendor.ErdosSzekeresConvex.CupCap
+12:24:25 done ErdosSzekeres.Vendor.ETV.Config.Lemmas ok rc 0 wall 7.0 rss_bytes 2595389440
+12:24:25 start ErdosSzekeres.Omission.ActualRanks
+12:24:29 done ErdosSzekeres.Omission.ActualRanks ok rc 0 wall 4.0 rss_bytes 2666020864
+12:24:29 start ErdosSzekeres.Omission.BalancedStates
+12:24:33 done ErdosSzekeres.Omission.BalancedStates ok rc 0 wall 4.0 rss_bytes 2651635712
+12:24:33 start ErdosSzekeres.Omission.Ferrers
+12:24:35 done ErdosSzekeres.Vendor.ErdosSzekeresConvex.CupCap ok rc 0 wall 13.1 rss_bytes 2678423552
+12:24:35 start ErdosSzekeres.Vendor.ErdosSzekeresConvex.ConvexPolygon
+12:24:37 done ErdosSzekeres.Omission.Ferrers ok rc 0 wall 4.0 rss_bytes 2676850688
+12:24:37 start ErdosSzekeres.Omission.BalancedCatalogData
+12:24:41 done ErdosSzekeres.Omission.BalancedCatalogData ok rc 0 wall 4.0 rss_bytes 2659123200
+12:24:41 start ErdosSzekeres.Omission.BalancedCatalog
+12:24:44 done ErdosSzekeres.Vendor.ErdosSzekeresConvex.ConvexPolygon ok rc 0 wall 9.1 rss_bytes 2631843840
+12:24:44 start ErdosSzekeres.Suk.CupsCaps
+12:24:48 done ErdosSzekeres.Suk.CupsCaps ok rc 0 wall 4.0 rss_bytes 2555117568
+12:24:48 start ErdosSzekeres.Suk.ExtractionCounting
+12:24:52 done ErdosSzekeres.Suk.ExtractionCounting ok rc 0 wall 4.0 rss_bytes 2552872960
+12:24:52 start ErdosSzekeres.Vendor.ETV.Main.CapCup
+12:24:56 done ErdosSzekeres.Omission.BalancedCatalog ok rc 0 wall 14.1 rss_bytes 4944265216
+12:24:56 start ErdosSzekeres.Omission.Domains
+12:24:58 done ErdosSzekeres.Vendor.ETV.Main.CapCup ok rc 0 wall 5.0 rss_bytes 2579447808
+12:24:58 start ErdosSzekeres.Suk.TransitiveColoring
+12:25:00 done ErdosSzekeres.Omission.Domains ok rc 0 wall 4.0 rss_bytes 2660319232
+12:25:00 start ErdosSzekeres.Omission.BoundingBoxes
+12:25:03 done ErdosSzekeres.Suk.TransitiveColoring ok rc 0 wall 5.0 rss_bytes 2574712832
+12:25:03 done ErdosSzekeres.Omission.BoundingBoxes ok rc 0 wall 3.0 rss_bytes 2641477632
+12:25:03 start ErdosSzekeres.Omission.CycleSigns
+12:25:03 start ErdosSzekeres.Suk.MonochromaticCounting
+12:25:07 done ErdosSzekeres.Omission.CycleSigns ok rc 0 wall 4.0 rss_bytes 2672017408
+12:25:07 done ErdosSzekeres.Suk.MonochromaticCounting ok rc 0 wall 4.0 rss_bytes 2554511360
+12:25:07 start ErdosSzekeres.Suk.HorizontalCounting
+12:25:07 start ErdosSzekeres.Suk.FourPoint
+12:25:10 done ErdosSzekeres.Suk.FourPoint ok rc 0 wall 3.0 rss_bytes 1661665280
+12:25:10 start ErdosSzekeres.Suk.TriangleOrder
+12:25:11 done ErdosSzekeres.Suk.HorizontalCounting ok rc 0 wall 4.0 rss_bytes 2569420800
+12:25:11 start ErdosSzekeres.Omission.Realization
+12:25:15 done ErdosSzekeres.Suk.TriangleOrder ok rc 0 wall 5.0 rss_bytes 1720811520
+12:25:15 done ErdosSzekeres.Omission.Realization ok rc 0 wall 4.0 rss_bytes 2667315200
+12:25:15 start ErdosSzekeres.Suk.BaseChart
+12:25:15 start ErdosSzekeres.Omission.PlanarChains
+12:25:19 done ErdosSzekeres.Suk.BaseChart ok rc 0 wall 4.0 rss_bytes 1712865280
+12:25:19 done ErdosSzekeres.Omission.PlanarChains ok rc 0 wall 4.0 rss_bytes 2682191872
+12:25:19 start ErdosSzekeres.Suk.BaseOrder
+12:25:19 start ErdosSzekeres.Omission.MinimumSlope
+12:25:23 done ErdosSzekeres.Suk.BaseOrder ok rc 0 wall 4.0 rss_bytes 1706016768
+12:25:23 start ErdosSzekeres.Suk.SupportingLines
+12:25:24 done ErdosSzekeres.Omission.MinimumSlope ok rc 0 wall 5.0 rss_bytes 2690580480
+12:25:24 start ErdosSzekeres.Suk.CapGrowth
+12:25:28 done ErdosSzekeres.Suk.SupportingLines ok rc 0 wall 5.0 rss_bytes 1704509440
+12:25:28 done ErdosSzekeres.Suk.CapGrowth ok rc 0 wall 4.0 rss_bytes 2563391488
+12:25:28 start ErdosSzekeres.Suk.OrientationClique
+12:25:28 start ErdosSzekeres.Suk.TriangleMembership
+12:25:31 done ErdosSzekeres.Suk.OrientationClique ok rc 0 wall 3.0 rss_bytes 1678835712
+12:25:31 start ErdosSzekeres.ConvexCycleCuts
+12:25:33 done ErdosSzekeres.Suk.TriangleMembership ok rc 0 wall 5.0 rss_bytes 1724809216
+12:25:33 done ErdosSzekeres.ConvexCycleCuts ok rc 0 wall 2.0 rss_bytes 1661829120
+12:25:33 start ErdosSzekeres.Omission.CycleGeometry
+12:25:33 start ErdosSzekeres.Omission.ListGeometry
+12:25:37 done ErdosSzekeres.Omission.CycleGeometry ok rc 0 wall 4.0 rss_bytes 2663923712
+12:25:37 done ErdosSzekeres.Omission.ListGeometry ok rc 0 wall 4.0 rss_bytes 2679898112
+12:25:37 start ErdosSzekeres.Omission.Subsets
+12:25:37 start ErdosSzekeres.Omission.CupExtension
+12:25:41 done ErdosSzekeres.Omission.Subsets ok rc 0 wall 4.0 rss_bytes 2663350272
+12:25:41 start ErdosSzekeres.Omission.SlopePartition
+12:25:42 done ErdosSzekeres.Omission.CupExtension ok rc 0 wall 5.0 rss_bytes 2674294784
+12:25:42 start ErdosSzekeres.Suk.Quadrilateral
+12:25:45 done ErdosSzekeres.Omission.SlopePartition ok rc 0 wall 4.0 rss_bytes 2681192448
+12:25:45 start T:LemmaZ
+12:25:48 done ErdosSzekeres.Suk.Quadrilateral ok rc 0 wall 6.0 rss_bytes 1718484992
+12:25:48 start ErdosSzekeres.Omission.ThreeChain
+12:25:53 done ErdosSzekeres.Omission.ThreeChain ok rc 0 wall 5.0 rss_bytes 2699870208
+12:25:53 start ErdosSzekeres.HMPT.Projective
+12:25:54 done T:LemmaZ ok rc 0 wall 9.1 rss_bytes 3408838656
+12:25:54 start ErdosSzekeres.Suk.SpikeGeometry
+12:25:57 done ErdosSzekeres.Suk.SpikeGeometry ok rc 0 wall 3.0 rss_bytes 1721663488
+12:25:57 start ErdosSzekeres.Suk.AdjacentSpikes
+12:26:02 done ErdosSzekeres.Suk.AdjacentSpikes ok rc 0 wall 5.0 rss_bytes 1750761472
+12:26:02 start ErdosSzekeres.Suk.ChainColoring
+12:26:06 done ErdosSzekeres.Suk.ChainColoring ok rc 0 wall 4.0 rss_bytes 2554642432
+12:26:06 start ErdosSzekeres.Suk.BaseOrientation
+12:26:10 done ErdosSzekeres.Suk.BaseOrientation ok rc 0 wall 4.0 rss_bytes 2558361600
+12:26:10 start ErdosSzekeres.Suk.ChainCaps
+12:26:14 done ErdosSzekeres.Suk.ChainCaps ok rc 0 wall 4.0 rss_bytes 2568716288
+12:26:14 start ErdosSzekeres.Suk.GlueOrientation
+12:26:17 done ErdosSzekeres.Suk.GlueOrientation ok rc 0 wall 3.0 rss_bytes 1673068544
+12:26:17 start ErdosSzekeres.Suk.AdjacentCaps
+12:26:21 done ErdosSzekeres.Suk.AdjacentCaps ok rc 0 wall 4.0 rss_bytes 2567766016
+12:26:21 start ErdosSzekeres.Vendor.DilworthTheorem
+12:26:22 done ErdosSzekeres.HMPT.Projective ok rc 0 wall 29.2 rss_bytes 1802059776
+12:26:22 start ErdosSzekeres.Suk.Reflection
+12:26:26 done ErdosSzekeres.Vendor.DilworthTheorem ok rc 0 wall 5.0 rss_bytes 2588917760
+12:26:26 done ErdosSzekeres.Suk.Reflection ok rc 0 wall 4.0 rss_bytes 2561884160
+12:26:26 start ErdosSzekeres.Suk.ChainAntichain
+12:26:26 start ErdosSzekeres.Suk.CoordinateNormalization
+12:26:30 done ErdosSzekeres.Suk.ChainAntichain ok rc 0 wall 4.0 rss_bytes 2541912064
+12:26:30 done ErdosSzekeres.Suk.CoordinateNormalization ok rc 0 wall 4.0 rss_bytes 2547826688
+12:26:30 start ErdosSzekeres.Suk.ChainEnumeration
+12:26:30 start T:LemmaZStar
+12:26:34 done ErdosSzekeres.Suk.ChainEnumeration ok rc 0 wall 4.0 rss_bytes 2538881024
+12:26:34 start ErdosSzekeres.Suk.SpikeChain
+12:26:38 done ErdosSzekeres.Suk.SpikeChain ok rc 0 wall 4.0 rss_bytes 2578350080
+12:26:38 start ErdosSzekeres.Suk.ChainCase
+12:26:39 done T:LemmaZStar ok rc 0 wall 9.1 rss_bytes 3412557824
+12:26:41 done ErdosSzekeres.Suk.ChainCase ok rc 0 wall 3.0 rss_bytes 2542567424
+12:26:41 start ErdosSzekeres.Suk.SupportSequence
+12:26:44 done ErdosSzekeres.Suk.SupportSequence ok rc 0 wall 3.0 rss_bytes 2561392640
+12:26:44 start ErdosSzekeres.HMPT.ProjectedCaps
+12:26:48 done ErdosSzekeres.HMPT.ProjectedCaps ok rc 0 wall 4.0 rss_bytes 2563358720
+12:26:48 start ErdosSzekeres.Omission.ProjectiveTransfer
+12:26:52 done ErdosSzekeres.Omission.ProjectiveTransfer ok rc 0 wall 4.0 rss_bytes 2668806144
+12:26:52 start ErdosSzekeres.Omission.Partition
+12:26:56 done ErdosSzekeres.Omission.Partition ok rc 0 wall 4.0 rss_bytes 2713747456
+12:26:56 start ErdosSzekeres.Omission.PopulationBounds
+12:26:59 done ErdosSzekeres.Omission.PopulationBounds ok rc 0 wall 3.0 rss_bytes 2652094464
+12:26:59 start T:Composition305
+12:26:59 start T:Composition304
+12:27:04 done T:Composition305 ok rc 0 wall 5.0 rss_bytes 2674638848
+12:27:04 done T:Composition304 ok rc 0 wall 5.0 rss_bytes 2675605504
+12:27:04 start T:Composition303
+12:27:08 done T:Composition303 ok rc 0 wall 4.0 rss_bytes 2674917376
+summary {"ok": 74}

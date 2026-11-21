@@ -1,0 +1,20 @@
+# cmd: nice -n 10 /usr/bin/time -l <home>/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean -j1 -s 32768 -R <scratch>/agents/lean-rebuild/chain/src -o <scratch>/agents/lean-rebuild/olean/Geometry01696.olean -i <scratch>/agents/lean-rebuild/olean/Geometry01696.ilean <scratch>/agents/lean-rebuild/chain/src/Geometry01696.lean
+'OmissionBalanced.Geometry01696.row_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+       19.12 real        17.88 user         1.16 sys
+          6524633088  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              442984  page reclaims
+                   0  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   1  voluntary context switches
+                6541  involuntary context switches
+        147689497986  instructions retired
+         75050555568  cycles elapsed
+          4188272872  peak memory footprint

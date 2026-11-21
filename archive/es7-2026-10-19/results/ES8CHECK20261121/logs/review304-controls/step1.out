@@ -1,0 +1,17 @@
+states 252 distinct 252
+antitone maps {0..4}->{0..5}: 252 equal as sets to JSON states: True
+Lean catalog len 252 same order as JSON states: True
+|Z| = 70  |Z*| = 70  disjoint: True
+zstar.json: len 70 rhs 15 equal to own Z*: True sorted/no dup: True
+LemmaZ.zIndices: len 70 equal to own Z: True
+LemmaZStar.zsIndices: len 70 equal to own Z*: True
+zProfile text: def zProfile (xs : List ℕ) : Bool := decide (xs.getD 0 0 ≤ 4) && decide (xs.getD 4 0 = 0)
+zsProfile text: def zsProfile (xs : List ℕ) : Bool := decide (xs.getD 0 0 = 5) && decide (1 ≤ xs.getD 4 0)
+0 in Z: True  state(1,0,0,0,0) index 1 in Z: True
+Z counts by f0: {0: 1, 1: 4, 2: 10, 3: 20, 4: 35, 5: 0}
+Z* counts by f4: {0: 0, 1: 35, 2: 20, 3: 10, 4: 4, 5: 1}
+complement map f(i) -> 5 - f(4-i) sends Z onto Z*: True
+rows 3131 max support 252 rhs values [1, 2, 3, 4, 5, 7, 55]
+a JSON row with support Z: False  with support Z*: False
+transpose is an involution on the 252 states: True True
+Z transpose-closed: True  Z* transpose-closed: True

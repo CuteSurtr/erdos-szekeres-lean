@@ -1,0 +1,4 @@
+root LP 66.000000; fractional 215; max x 1.000
+rows 3133, tight 265, slack<0.5: 926
+best single/pair {0,1/2} total slack 1.0000 (violated iff < 1) rows (np.int64(996), np.int64(3004))
+best triple among tight rows: total slack 0.9220 rows (np.int64(490), np.int64(495), np.int64(578))

@@ -1,0 +1,24 @@
+# cmd: nice -n 10 /usr/bin/time -l <home>/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean -j1 -R <scratch>/agents/lean-rebuild/esb -o <scratch>/agents/lean-rebuild/olean/ErdosSzekeres/Vendor/DilworthTheorem.olean -i <scratch>/agents/lean-rebuild/olean/ErdosSzekeres/Vendor/DilworthTheorem.ilean <scratch>/agents/lean-rebuild/esb/ErdosSzekeres/Vendor/DilworthTheorem.lean
+# LEAN_PATH=<scratch>/agents/lean-rebuild/esb/.lake/packages/Cli/.lake/build/lib/lean:<scratch>/agents/lean-rebuild/esb/.lake/packages/batteries/.lake/build/lib/lean:<scratch>/agents/lean-rebuild/esb/.lake/packages/Qq/.lake/build/lib/lean:<scratch>/agents/lean-rebuild/esb/.lake/packages/aesop/.lake/build/lib/lean:<scratch>/agents/lean-rebuild/esb/.lake/packages/proofwidgets/.lake/build/lib/lean:<scratch>/agents/lean-rebuild/esb/.lake/packages/importGraph/.lake/build/lib/lean:<scratch>/agents/lean-rebuild/esb/.lake/packages/LeanSearchClient/.lake/build/lib/lean:<scratch>/agents/lean-rebuild/esb/.lake/packages/plausible/.lake/build/lib/lean:<scratch>/agents/lean-rebuild/esb/.lake/packages/mathlib/.lake/build/lib/lean:<home>/.elan/toolchains/leanprover--lean4---v4.24.0/lib/lean:<scratch>/agents/lean-rebuild/olean
+'DilworthTheorem.dilworth_theorem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DilworthTheorem.dilworth_duality' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DilworthTheorem.mirsky_theorem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DilworthTheorem.mirsky_duality' depends on axioms: [propext, Classical.choice, Quot.sound]
+        4.88 real         3.49 user         0.87 sys
+          2588917760  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              203373  page reclaims
+                  80  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   0  voluntary context switches
+                3809  involuntary context switches
+         31413780369  instructions retired
+         14855458103  cycles elapsed
+           410242504  peak memory footprint

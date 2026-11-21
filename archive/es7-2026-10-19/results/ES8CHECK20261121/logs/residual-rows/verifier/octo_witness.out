@@ -1,0 +1,6 @@
+full set n = 42 | no 6-cap, no 8-cup, no junction, largest convex polygon in R: (True, True, True, 10)
+A_2 owners: 13 | longest cap 5 longest cup 5 largest convex polygon 8
+cap chain [0, 1, 2, 5, 10] cup chain [0, 3, 8, 9, 10]
+8 points in convex position among A_2 owners (independent point-in-triangle test): True
+[[3780, -795104], [33808, -717942], [75757, -702705], [281477, -967949], [503849, -562934], [865851, -941341], [870144, -830896], [870953, -687243]]
+their states: [(2, 2, 2, 2), (3, 2, 2, 2), (3, 3, 2, 2), (3, 3, 3, 3), (4, 4, 4, 2), (4, 4, 4, 4), (5, 5, 5, 5), (6, 6, 5, 5)]

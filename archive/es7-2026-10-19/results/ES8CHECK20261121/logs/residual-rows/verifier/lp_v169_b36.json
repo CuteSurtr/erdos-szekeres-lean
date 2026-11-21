@@ -1,0 +1,146 @@
+{
+ "19": {
+  "slice": [
+   19,
+   17
+  ],
+  "lp_without": [
+   "Optimal",
+   36.00000000000001
+  ],
+  "lp_with": [
+   "Optimal",
+   36.0
+  ],
+  "exact_point_with": {
+   "sum_h": "11961364376053869518627099824533683332112828472055047277339213480173461890808727576292554051550499813412559411/332233658974001695378160535344488859827545890436306942391531120332358205411152423158365987220061096979192400",
+   "violated_rows": 45,
+   "endpoint_rows_ok": [
+    true,
+    true
+   ],
+   "max_den": 720,
+   "flat_sum": "386993/308560",
+   "second_sum": "537262/339451",
+   "integral": false
+  },
+  "without_point_flat_second": [
+   "200155/93571",
+   "416/311"
+  ],
+  "range_over_rows_sumh_le_B": {
+   "FLAT_min": [
+    "Optimal",
+    0.0
+   ],
+   "FLAT_max": [
+    "Optimal",
+    6.0
+   ],
+   "SECOND_min": [
+    "Optimal",
+    0.0
+   ],
+   "SECOND_max": [
+    "Optimal",
+    4.0
+   ]
+  }
+ },
+ "20": {
+  "slice": [
+   20,
+   16
+  ],
+  "lp_without": [
+   "Optimal",
+   36.0
+  ],
+  "lp_with": [
+   "Optimal",
+   36.000000000000014
+  ],
+  "exact_point_with": {
+   "sum_h": "29002714501902268635102476819745103348513134483488900708638901896661362489014772849337840979042123935605357/805630316133641737191380263754157385600204747215988685576547204618002123837252595424764811120193992305600",
+   "violated_rows": 48,
+   "endpoint_rows_ok": [
+    true,
+    true
+   ],
+   "max_den": 717,
+   "flat_sum": "19257629/17929842",
+   "second_sum": "137509/73563",
+   "integral": false
+  },
+  "without_point_flat_second": [
+   "805268/439309",
+   "1"
+  ],
+  "range_over_rows_sumh_le_B": {
+   "FLAT_min": [
+    "Optimal",
+    0.0
+   ],
+   "FLAT_max": [
+    "Optimal",
+    6.0
+   ],
+   "SECOND_min": [
+    "Optimal",
+    0.0
+   ],
+   "SECOND_max": [
+    "Optimal",
+    4.0
+   ]
+  }
+ },
+ "21": {
+  "slice": [
+   21,
+   15
+  ],
+  "lp_without": [
+   "Optimal",
+   36.00000000000001
+  ],
+  "lp_with": [
+   "Optimal",
+   36.00000000000001
+  ],
+  "exact_point_with": {
+   "sum_h": "78245459896075950674365305795394903828573570062221727120044590024076520214792557787726638269233638043/2173481832657933091400337176908403567420698917005779359248517631612480275527577571856508313474736520",
+   "violated_rows": 34,
+   "endpoint_rows_ok": [
+    true,
+    true
+   ],
+   "max_den": 720,
+   "flat_sum": "2107909/1705440",
+   "second_sum": "160013/88184",
+   "integral": false
+  },
+  "without_point_flat_second": [
+   "755/433",
+   "569909/461648"
+  ],
+  "range_over_rows_sumh_le_B": {
+   "FLAT_min": [
+    "Optimal",
+    0.0
+   ],
+   "FLAT_max": [
+    "Optimal",
+    6.0
+   ],
+   "SECOND_min": [
+    "Optimal",
+    0.0
+   ],
+   "SECOND_max": [
+    "Optimal",
+    4.0
+   ]
+  }
+ }
+}

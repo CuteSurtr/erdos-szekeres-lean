@@ -1,0 +1,2 @@
+{"subsets_tested": 400, "fails": 0, "first_fails": [], "lower_hull_size_hist": {"2": 19, "3": 74, "4": 306, "5": 1}, "last_k_hist": {"1": 7, "2": 27, "3": 48, "4": 96, "5": 158, "6": 64}}
+nice -n 10 python3 -B subsets57.py "$A" "$R" 400  2.52s user 0.02s system 62% cpu 4.029 total

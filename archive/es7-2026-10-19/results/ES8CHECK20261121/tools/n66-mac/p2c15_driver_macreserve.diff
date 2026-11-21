@@ -1,0 +1,22 @@
+--- orig/p2c15_driver.py	2026-11-21 12:35:02
++++ p2c15_driver_macreserve.py	2026-11-21 12:35:02
+@@ -98,6 +98,10 @@
+     st['cubes'][i] = {'id': i, 'lits': lits, 'holes': sum(1 for _, b in lits if b == 0), 'up_refuted': up_refuted(lits), 'parent': parent,
+                       'depth': len(lits) - 6, 'seq': st['seq'], 'status': 'queued', 'unit': PREFIX + i, 'out': f'{OUT}/{i}.out'}
+ 
++def mac_reserved():
++    """mac: cube ids reserved for the Mac (one per line in p2/c15/mac_reserved.txt); never launched here, imported by c15_import.py"""
++    try: return {l.strip() for l in open(os.path.join(W, OUT, 'mac_reserved.txt')) if l.strip() and not l.startswith('#')}
++    except OSError: return set()
+ def prio(c): return (0 if c['id'] == 'hhhhhh' else 1 if c['up_refuted'] else 2, -c['holes'], c['depth'], c['seq'])
+ 
+ def active(unit): return subprocess.run(['systemctl', '--user', 'is-active', '--quiet', unit]).returncode == 0
+@@ -387,7 +391,7 @@
+         if not stop and t < DEADLINE - 60 - CERT_ALLOW - MIN_T:
+             n = len(active_cubes())
+             while n < max_slots(st, t):
+-                q = [c for c in st['cubes'].values() if c['status'] == 'queued']
++                q = [c for c in st['cubes'].values() if c['status'] == 'queued' and c['id'] not in mac_reserved()]   # mac: ids the Mac runs
+                 if not q: break
+                 ok, why = room(); st['gate'] = why
+                 if not ok: break

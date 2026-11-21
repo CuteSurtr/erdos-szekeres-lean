@@ -1,0 +1,22 @@
+# cmd: nice -n 10 /usr/bin/time -l <home>/.elan/toolchains/leanprover--lean4---v4.24.0/bin/lean -j1 -R <scratch>/agents/lean-rebuild/esb/archive/es7-2026-10-19/results/ES303N20261120 -o <scratch>/agents/lean-rebuild/olean/LemmaZStar.olean -i <scratch>/agents/lean-rebuild/olean/LemmaZStar.ilean <scratch>/agents/lean-rebuild/esb/archive/es7-2026-10-19/results/ES303N20261120/LemmaZStar.lean
+# LEAN_PATH=<scratch>/agents/lean-rebuild/esb/.lake/packages/Cli/.lake/build/lib/lean:<scratch>/agents/lean-rebuild/esb/.lake/packages/batteries/.lake/build/lib/lean:<scratch>/agents/lean-rebuild/esb/.lake/packages/Qq/.lake/build/lib/lean:<scratch>/agents/lean-rebuild/esb/.lake/packages/aesop/.lake/build/lib/lean:<scratch>/agents/lean-rebuild/esb/.lake/packages/proofwidgets/.lake/build/lib/lean:<scratch>/agents/lean-rebuild/esb/.lake/packages/importGraph/.lake/build/lib/lean:<scratch>/agents/lean-rebuild/esb/.lake/packages/LeanSearchClient/.lake/build/lib/lean:<scratch>/agents/lean-rebuild/esb/.lake/packages/plausible/.lake/build/lib/lean:<scratch>/agents/lean-rebuild/esb/.lake/packages/mathlib/.lake/build/lib/lean:<home>/.elan/toolchains/leanprover--lean4---v4.24.0/lib/lean:<scratch>/agents/lean-rebuild/olean
+'OmissionZStarRow.Zs_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OmissionZStarRow.zs_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+        8.79 real         6.16 user         1.22 sys
+          3412557824  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              253530  page reclaims
+                   2  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   1  voluntary context switches
+                4934  involuntary context switches
+         54654965668  instructions retired
+         25613996285  cycles elapsed
+          1116532400  peak memory footprint

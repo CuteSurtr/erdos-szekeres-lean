@@ -1,0 +1,1757 @@
+{
+"jobs": [
+{
+"id": "B_h34o31o16o28h22o36",
+"case": "B",
+"units": [
+-32793,
+32790,
+32775,
+32787,
+-32781,
+32795
+],
+"status": "verified",
+"depth": 6,
+"from": "cubes_b",
+"t0": 1795236349.531426,
+"conflicts": "1988770",
+"wall": 1493.4,
+"rc": 20,
+"lrat_bytes": 1612765957,
+"lrat_sha": "54d27a629b1032993346a554fa7d212f9b200be9a24126c478365c01935841f6",
+"cnf_sha": "39559f74ba263aed065c025b3d06dcff9c39d7f32f965d1652d9c50e4cd40627",
+"heap": 6000,
+"cake_wall": 61.4,
+"cake": "VERIFIED"
+},
+{
+"id": "B_h34o31o16o28h22h36",
+"case": "B",
+"units": [
+-32793,
+32790,
+32775,
+32787,
+-32781,
+-32795
+],
+"status": "verified",
+"depth": 6,
+"from": "cubes_b",
+"t0": 1795236398.517251,
+"conflicts": "2016915",
+"wall": 1402.2,
+"rc": 20,
+"lrat_bytes": 1602554298,
+"lrat_sha": "fb9edd4404c929f4c4d5c8f6c048f55af4bea3a1f58e362041d7b0b3f1cf1fc1",
+"cnf_sha": "ab36395c43539f319983e9516774d5cdb54bb1939cee3ddf97bc0b6a94851f8f",
+"heap": 6000,
+"cake_wall": 61.2,
+"cake": "VERIFIED"
+},
+{
+"id": "B_o34o31o16o28h22",
+"case": "B",
+"units": [
+32793,
+32790,
+32775,
+32787,
+-32781
+],
+"status": "split",
+"depth": 5,
+"from": "cubes_b",
+"t0": 1795236398.689269,
+"conflicts": "1890113",
+"wall": 1501.6,
+"rc": 0
+},
+{
+"id": "B_o34o31o16o28h22o36",
+"case": "B",
+"units": [
+32793,
+32790,
+32775,
+32787,
+-32781,
+32795
+],
+"status": "split",
+"depth": 6,
+"parent": "B_o34o31o16o28h22",
+"t0": 1795237900.513525,
+"conflicts": "1859166",
+"wall": 1502.7,
+"rc": 0
+},
+{
+"id": "B_o34o31o16o28h22o36o29",
+"case": "B",
+"units": [
+32793,
+32790,
+32775,
+32787,
+-32781,
+32795,
+32788
+],
+"status": "queued",
+"depth": 7,
+"parent": "B_o34o31o16o28h22o36"
+},
+{
+"id": "B_o34o31o16o28h22o36h29",
+"case": "B",
+"units": [
+32793,
+32790,
+32775,
+32787,
+-32781,
+32795,
+-32788
+],
+"status": "queued",
+"depth": 7,
+"parent": "B_o34o31o16o28h22o36"
+},
+{
+"id": "B_o34o31o16o28h22h36",
+"case": "B",
+"units": [
+32793,
+32790,
+32775,
+32787,
+-32781,
+-32795
+],
+"status": "split",
+"depth": 6,
+"parent": "B_o34o31o16o28h22",
+"t0": 1795237984.857461,
+"conflicts": "2183076",
+"wall": 1502.6,
+"rc": 0
+},
+{
+"id": "B_o34o31o16o28h22h36o29",
+"case": "B",
+"units": [
+32793,
+32790,
+32775,
+32787,
+-32781,
+-32795,
+32788
+],
+"status": "queued",
+"depth": 7,
+"parent": "B_o34o31o16o28h22h36"
+},
+{
+"id": "B_o34o31o16o28h22h36h29",
+"case": "B",
+"units": [
+32793,
+32790,
+32775,
+32787,
+-32781,
+-32795,
+-32788
+],
+"status": "queued",
+"depth": 7,
+"parent": "B_o34o31o16o28h22h36"
+},
+{
+"id": "B_h34h31h16h28o22",
+"case": "B",
+"units": [
+-32793,
+-32790,
+-32775,
+-32787,
+32781
+],
+"status": "verified",
+"depth": 5,
+"from": "cubes_b",
+"t0": 1795236414.199049,
+"conflicts": "1221263",
+"wall": 766.2,
+"rc": 20,
+"lrat_bytes": 1085118164,
+"lrat_sha": "990bc02e0e983d114d829f6f5a3a67689ea9c5dc208ffedafb37389e3fc9f583",
+"cnf_sha": "28dd0a88c0cc62b8e6e73d0ee1230bed4fb4c9969fb7dc51c5161f9b38e67db6",
+"heap": 6000,
+"cake_wall": 42.1,
+"cake": "VERIFIED"
+},
+{
+"id": "B_o34h31h16h28o22",
+"case": "B",
+"units": [
+32793,
+-32790,
+-32775,
+-32787,
+32781
+],
+"status": "verified",
+"depth": 5,
+"from": "cubes_b",
+"t0": 1795236451.018215,
+"conflicts": "1848116",
+"wall": 1211.1,
+"rc": 20,
+"lrat_bytes": 1490693959,
+"lrat_sha": "e1bd8183ec422785b05af5d8a43f580abd5ba053294c226da33e74dbfeb1cdfb",
+"cnf_sha": "3f4a4cf04552a3292b4fd596e0ce9c73558fa0d40f28fa189d5cec63b10110a8",
+"heap": 6000,
+"cake_wall": 57.1,
+"cake": "VERIFIED"
+},
+{
+"id": "B_h34o31h16h28o22",
+"case": "B",
+"units": [
+-32793,
+32790,
+-32775,
+-32787,
+32781
+],
+"status": "verified",
+"depth": 5,
+"from": "cubes_b",
+"t0": 1795236585.607075,
+"conflicts": "1357575",
+"wall": 923.0,
+"rc": 20,
+"lrat_bytes": 1207838863,
+"lrat_sha": "c607ffcb79b88e8509196aee9340f24bfe8b555799ad52a8460007645499ca6e",
+"cnf_sha": "13f29eb923593ff510b3da91c6086c005de9b6ad2443c50ee44f5868acfc8722",
+"heap": 6000,
+"cake_wall": 47.2,
+"cake": "VERIFIED"
+},
+{
+"id": "B_o34o31h16h28o22",
+"case": "B",
+"units": [
+32793,
+32790,
+-32775,
+-32787,
+32781
+],
+"status": "verified",
+"depth": 5,
+"from": "cubes_b",
+"t0": 1795236656.026152,
+"conflicts": "2101145",
+"wall": 1500.4,
+"rc": 20,
+"lrat_bytes": 1647447285,
+"lrat_sha": "4a39bc0aeed26c6fc4d5e7e22ab2065c7d11bedd57d0b59be9456d20573229dd",
+"cnf_sha": "50e9b3a5c38771dee38b7e49ce5024743a89b08cef80ff1c3411ec06dd47fb23",
+"heap": 6000,
+"cake_wall": 62.9,
+"cake": "VERIFIED"
+},
+{
+"id": "B_h34h31o16h28o22",
+"case": "B",
+"units": [
+-32793,
+-32790,
+32775,
+-32787,
+32781
+],
+"status": "verified",
+"depth": 5,
+"from": "cubes_b",
+"t0": 1795236692.811378,
+"conflicts": "2136768",
+"wall": 1406.4,
+"rc": 20,
+"lrat_bytes": 1631175155,
+"lrat_sha": "70eb252c9a20fd14c8266fa048b1b2c1c7024ae4b5de89e687920f5c4f563e9c",
+"cnf_sha": "fb15eb2bc4e13caf5083b1d70719ebc81a4975c22bc905272cf8ae97ecd50515",
+"heap": 6000,
+"cake_wall": 62.3,
+"cake": "VERIFIED"
+},
+{
+"id": "B_o34h31o16h28o22",
+"case": "B",
+"units": [
+32793,
+-32790,
+32775,
+-32787,
+32781
+],
+"status": "split",
+"depth": 5,
+"from": "cubes_b",
+"t0": 1795236843.3452108,
+"conflicts": "2088015",
+"wall": 1502.8,
+"rc": 0
+},
+{
+"id": "B_o34h31o16h28o22o36",
+"case": "B",
+"units": [
+32793,
+-32790,
+32775,
+-32787,
+32781,
+32795
+],
+"status": "error",
+"depth": 6,
+"parent": "B_o34h31o16h28o22",
+"t0": 1795238346.341103,
+"conflicts": "1931372",
+"wall": 1270.6,
+"rc": -15
+},
+{
+"id": "B_o34h31o16h28o22h36",
+"case": "B",
+"units": [
+32793,
+-32790,
+32775,
+-32787,
+32781,
+-32795
+],
+"status": "verified",
+"depth": 6,
+"parent": "B_o34h31o16h28o22",
+"t0": 1795238346.438015,
+"conflicts": "1742627",
+"wall": 1104.9,
+"rc": 20,
+"lrat_bytes": 1386531887,
+"lrat_sha": "67772b35e421842b0e911c720e9e5327ff2cb60bdc68bddeef9a614e702dbab5",
+"cnf_sha": "284731b1689219374bf9dbc72bf705423f5b434a6c4be7b57bf9378c39fcafef",
+"heap": 6000,
+"cake_wall": 43.2,
+"cake": "VERIFIED"
+},
+{
+"id": "B_h34o31o16h28o22",
+"case": "B",
+"units": [
+-32793,
+32790,
+32775,
+-32787,
+32781
+],
+"status": "split",
+"depth": 5,
+"from": "cubes_b",
+"t0": 1795236843.4500868,
+"conflicts": "1956814",
+"wall": 1502.7,
+"rc": 0
+},
+{
+"id": "B_h34o31o16h28o22o36",
+"case": "B",
+"units": [
+-32793,
+32790,
+32775,
+-32787,
+32781,
+32795
+],
+"status": "verified",
+"depth": 6,
+"parent": "B_h34o31o16h28o22",
+"t0": 1795238346.550097,
+"conflicts": "1549980",
+"wall": 1143.9,
+"rc": 20,
+"lrat_bytes": 1438996418,
+"lrat_sha": "a11ed25a48c50fdc62b5cbd3db74911afdfa3d0ac324201872a630e7f9cb3990",
+"cnf_sha": "69806ce2d752d9aec71cb34cc6c8aca35ff5053e647ed2a4c985dfcd95488a47",
+"heap": 6000,
+"cake_wall": 42.0,
+"cake": "VERIFIED"
+},
+{
+"id": "B_h34o31o16h28o22h36",
+"case": "B",
+"units": [
+-32793,
+32790,
+32775,
+-32787,
+32781,
+-32795
+],
+"status": "error",
+"depth": 6,
+"parent": "B_h34o31o16h28o22",
+"t0": 1795238445.980963,
+"conflicts": "1862951",
+"wall": 1170.9,
+"rc": -15
+},
+{
+"id": "B_o34o31o16h28o22",
+"case": "B",
+"units": [
+32793,
+32790,
+32775,
+-32787,
+32781
+],
+"status": "split",
+"depth": 5,
+"from": "cubes_b",
+"t0": 1795236843.5532842,
+"conflicts": "1852196",
+"wall": 1502.7,
+"rc": 0
+},
+{
+"id": "B_o34o31o16h28o22o36",
+"case": "B",
+"units": [
+32793,
+32790,
+32775,
+-32787,
+32781,
+32795
+],
+"status": "error",
+"depth": 6,
+"parent": "B_o34o31o16h28o22",
+"t0": 1795239008.803626,
+"conflicts": "780062",
+"wall": 608.1,
+"rc": -15
+},
+{
+"id": "B_o34o31o16h28o22h36",
+"case": "B",
+"units": [
+32793,
+32790,
+32775,
+-32787,
+32781,
+-32795
+],
+"status": "error",
+"depth": 6,
+"parent": "B_o34o31o16h28o22",
+"t0": 1795239150.3123982,
+"conflicts": "684293",
+"wall": 466.6,
+"rc": -15
+},
+{
+"id": "B_h34h31h16o28o22",
+"case": "B",
+"units": [
+-32793,
+-32790,
+-32775,
+32787,
+32781
+],
+"status": "verified",
+"depth": 5,
+"from": "cubes_b",
+"t0": 1795236877.515311,
+"conflicts": "1365031",
+"wall": 878.0,
+"rc": 20,
+"lrat_bytes": 1198960535,
+"lrat_sha": "4b71f58de0672ad691fb68d8bf869fc1f3cabfb5a3dd1b902ae33796a7e4e924",
+"cnf_sha": "123685e4739963e823370f7d3350adb3c4c1d522d99b23aaac1251e8d5f3a029",
+"heap": 6000,
+"cake_wall": 45.6,
+"cake": "VERIFIED"
+},
+{
+"id": "B_o34h31h16o28o22",
+"case": "B",
+"units": [
+32793,
+-32790,
+-32775,
+32787,
+32781
+],
+"status": "verified",
+"depth": 5,
+"from": "cubes_b",
+"t0": 1795236957.6657128,
+"conflicts": "1485705",
+"wall": 1027.1,
+"rc": 20,
+"lrat_bytes": 1300867018,
+"lrat_sha": "414808152e20d83317f221a65fdcac3ddc67e6e5f1814037166165ba6cc42416",
+"cnf_sha": "500c673a2ac705a90b97d9412bd2152669a5ed7fee6a2622d14244f73e97d122",
+"heap": 6000,
+"cake_wall": 49.2,
+"cake": "VERIFIED"
+},
+{
+"id": "B_h34o31h16o28o22",
+"case": "B",
+"units": [
+-32793,
+32790,
+-32775,
+32787,
+32781
+],
+"status": "verified",
+"depth": 5,
+"from": "cubes_b",
+"t0": 1795237180.665162,
+"conflicts": "1847950",
+"wall": 1265.2,
+"rc": 20,
+"lrat_bytes": 1452026066,
+"lrat_sha": "3439e7d8a895a20715e040773af91a8000c8666a8fa7e71053fd3a82e7486baf",
+"cnf_sha": "27c9c29ca3e1b5bf9c2b9e2eea05a471241c1d7144a0353499174bb4b824ad85",
+"heap": 6000,
+"cake_wall": 55.5,
+"cake": "VERIFIED"
+},
+{
+"id": "B_o34o31h16o28o22",
+"case": "B",
+"units": [
+32793,
+32790,
+-32775,
+32787,
+32781
+],
+"status": "verified",
+"depth": 5,
+"from": "cubes_b",
+"t0": 1795237508.7024472,
+"conflicts": "2034182",
+"wall": 1500.0,
+"rc": 20,
+"lrat_bytes": 1601703807,
+"lrat_sha": "0861a17055081bed02e15888723fb21459bb6376013974a533e72b743a5d88c2",
+"cnf_sha": "133b142388f686a690d4a17d2015f4d06fe75f5f2c9735b1b88981bd6d3191bd",
+"heap": 6000,
+"cake_wall": 61.2,
+"cake": "VERIFIED"
+},
+{
+"id": "B_h34h31o16o28o22",
+"case": "B",
+"units": [
+-32793,
+-32790,
+32775,
+32787,
+32781
+],
+"status": "verified",
+"depth": 5,
+"from": "cubes_b",
+"t0": 1795237662.250413,
+"conflicts": "2141509",
+"wall": 1487.9,
+"rc": 20,
+"lrat_bytes": 1652607678,
+"lrat_sha": "4f3d1e12f5bded84db9615943a07eef8c4a6f16405739533b1c09dbe8c23680b",
+"cnf_sha": "238c12d68a2c15664a85e8c998fd7262a2e0d8c6ab138812667b0cea26dcda0c",
+"heap": 6000,
+"cake_wall": 62.2,
+"cake": "VERIFIED"
+},
+{
+"id": "B_o34h31o16o28o22",
+"case": "B",
+"units": [
+32793,
+-32790,
+32775,
+32787,
+32781
+],
+"status": "split",
+"depth": 5,
+"from": "cubes_b",
+"t0": 1795237755.616268,
+"conflicts": "2035446",
+"wall": 1503.0,
+"rc": 0
+},
+{
+"id": "B_o34h31o16o28o22o36",
+"case": "B",
+"units": [
+32793,
+-32790,
+32775,
+32787,
+32781,
+32795
+],
+"status": "error",
+"depth": 6,
+"parent": "B_o34h31o16o28o22",
+"t0": 1795239258.720255,
+"conflicts": "534857",
+"wall": 358.2,
+"rc": -15
+},
+{
+"id": "B_o34h31o16o28o22h36",
+"case": "B",
+"units": [
+32793,
+-32790,
+32775,
+32787,
+32781,
+-32795
+],
+"status": "queued",
+"depth": 6,
+"parent": "B_o34h31o16o28o22"
+},
+{
+"id": "B_h34o31o16o28o22",
+"case": "B",
+"units": [
+-32793,
+32790,
+32775,
+32787,
+32781
+],
+"status": "split",
+"depth": 5,
+"from": "cubes_b",
+"t0": 1795237800.8469372,
+"conflicts": "1919052",
+"wall": 1503.0,
+"rc": 0
+},
+{
+"id": "B_h34o31o16o28o22o36",
+"case": "B",
+"units": [
+-32793,
+32790,
+32775,
+32787,
+32781,
+32795
+],
+"status": "queued",
+"depth": 6,
+"parent": "B_h34o31o16o28o22"
+},
+{
+"id": "B_h34o31o16o28o22h36",
+"case": "B",
+"units": [
+-32793,
+32790,
+32775,
+32787,
+32781,
+-32795
+],
+"status": "queued",
+"depth": 6,
+"parent": "B_h34o31o16o28o22"
+},
+{
+"id": "B_o34o31o16o28o22",
+"case": "B",
+"units": [
+32793,
+32790,
+32775,
+32787,
+32781
+],
+"status": "split",
+"depth": 5,
+"from": "cubes_b",
+"t0": 1795237843.1292539,
+"conflicts": "1765573",
+"wall": 1502.9,
+"rc": 0
+},
+{
+"id": "B_o34o31o16o28o22o36",
+"case": "B",
+"units": [
+32793,
+32790,
+32775,
+32787,
+32781,
+32795
+],
+"status": "queued",
+"depth": 6,
+"parent": "B_o34o31o16o28o22"
+},
+{
+"id": "B_o34o31o16o28o22h36",
+"case": "B",
+"units": [
+32793,
+32790,
+32775,
+32787,
+32781,
+-32795
+],
+"status": "queued",
+"depth": 6,
+"parent": "B_o34o31o16o28o22"
+},
+{
+"id": "A_h44h39h26h21o15h33h27",
+"case": "A",
+"units": [
+-32803,
+-32798,
+-32785,
+-32780,
+32774,
+-32792,
+-32786
+],
+"status": "split",
+"depth": 7,
+"from": "cubes",
+"t0": 1795238099.311212,
+"conflicts": "2828800",
+"wall": 1502.5,
+"rc": 0
+},
+{
+"id": "A_h44h39h26h21o15h33h27o37",
+"case": "A",
+"units": [
+-32803,
+-32798,
+-32785,
+-32780,
+32774,
+-32792,
+-32786,
+32796
+],
+"status": "running",
+"depth": 8,
+"parent": "A_h44h39h26h21o15h33h27",
+"t0": 1795239689.23595
+},
+{
+"id": "A_h44h39h26h21o15h33h27h37",
+"case": "A",
+"units": [
+-32803,
+-32798,
+-32785,
+-32780,
+32774,
+-32792,
+-32786,
+-32796
+],
+"status": "running",
+"depth": 8,
+"parent": "A_h44h39h26h21o15h33h27",
+"t0": 1795239689.293935
+},
+{
+"id": "A_o44h39h26h21o15h33o27",
+"case": "A",
+"units": [
+32803,
+-32798,
+-32785,
+-32780,
+32774,
+-32792,
+32786
+],
+"status": "verified",
+"depth": 7,
+"from": "cubes",
+"t0": 1795238156.6613219,
+"conflicts": "1731851",
+"wall": 1168.3,
+"rc": 20,
+"lrat_bytes": 1252060401,
+"lrat_sha": "8ce1f771ebbd500fe513c0eaeab6f5f5aa336344493af2e0df72a6a0a890aaea",
+"cnf_sha": "732e623034c231ed5863212927d59f2f73fa9ba10b32d6ee8743a66d69ca82c5",
+"heap": 6000,
+"cake_wall": 42.6,
+"cake": "VERIFIED"
+},
+{
+"id": "A_o44h39h26h21o15h33h27",
+"case": "A",
+"units": [
+32803,
+-32798,
+-32785,
+-32780,
+32774,
+-32792,
+-32786
+],
+"status": "running",
+"depth": 7,
+"from": "cubes",
+"t0": 1795239689.3555279
+},
+{
+"id": "A_h44o39h26h21o15h33o27",
+"case": "A",
+"units": [
+-32803,
+32798,
+-32785,
+-32780,
+32774,
+-32792,
+32786
+],
+"status": "running",
+"depth": 7,
+"from": "cubes",
+"t0": 1795239689.418228
+},
+{
+"id": "A_h44o39h26h21o15h33h27",
+"case": "A",
+"units": [
+-32803,
+32798,
+-32785,
+-32780,
+32774,
+-32792,
+-32786
+],
+"status": "running",
+"depth": 7,
+"from": "cubes",
+"t0": 1795239689.486669
+},
+{
+"id": "A_o44o39h26h21o15h33o27",
+"case": "A",
+"units": [
+32803,
+32798,
+-32785,
+-32780,
+32774,
+-32792,
+32786
+],
+"status": "running",
+"depth": 7,
+"from": "cubes",
+"t0": 1795239689.564775
+},
+{
+"id": "A_o44o39h26h21o15h33h27",
+"case": "A",
+"units": [
+32803,
+32798,
+-32785,
+-32780,
+32774,
+-32792,
+-32786
+],
+"status": "queued",
+"depth": 7,
+"from": "cubes"
+},
+{
+"id": "A_o44h39h26o21o15h33",
+"case": "A",
+"units": [
+32803,
+-32798,
+-32785,
+32780,
+32774,
+-32792
+],
+"status": "queued",
+"depth": 6,
+"from": "cubes"
+},
+{
+"id": "A_h44o39h26o21o15h33",
+"case": "A",
+"units": [
+-32803,
+32798,
+-32785,
+32780,
+32774,
+-32792
+],
+"status": "queued",
+"depth": 6,
+"from": "cubes"
+},
+{
+"id": "A_o44o39h26o21o15h33",
+"case": "A",
+"units": [
+32803,
+32798,
+-32785,
+32780,
+32774,
+-32792
+],
+"status": "queued",
+"depth": 6,
+"from": "cubes"
+},
+{
+"id": "A_h44h39h26h21h15o33",
+"case": "A",
+"units": [
+-32803,
+-32798,
+-32785,
+-32780,
+-32774,
+32792
+],
+"status": "queued",
+"depth": 6,
+"from": "cubes"
+},
+{
+"id": "A_o44h39h26h21h15o33",
+"case": "A",
+"units": [
+32803,
+-32798,
+-32785,
+-32780,
+-32774,
+32792
+],
+"status": "queued",
+"depth": 6,
+"from": "cubes"
+},
+{
+"id": "A_h44o39h26h21h15o33",
+"case": "A",
+"units": [
+-32803,
+32798,
+-32785,
+-32780,
+-32774,
+32792
+],
+"status": "queued",
+"depth": 6,
+"from": "cubes"
+},
+{
+"id": "A_o44o39h26h21h15o33",
+"case": "A",
+"units": [
+32803,
+32798,
+-32785,
+-32780,
+-32774,
+32792
+],
+"status": "queued",
+"depth": 6,
+"from": "cubes"
+},
+{
+"id": "A_h44h39h26o21h15o33",
+"case": "A",
+"units": [
+-32803,
+-32798,
+-32785,
+32780,
+-32774,
+32792
+],
+"status": "queued",
+"depth": 6,
+"from": "cubes"
+},
+{
+"id": "A_o44h39h26o21h15o33",
+"case": "A",
+"units": [
+32803,
+-32798,
+-32785,
+32780,
+-32774,
+32792
+],
+"status": "queued",
+"depth": 6,
+"from": "cubes"
+},
+{
+"id": "A_h44o39h26o21h15o33",
+"case": "A",
+"units": [
+-32803,
+32798,
+-32785,
+32780,
+-32774,
+32792
+],
+"status": "queued",
+"depth": 6,
+"from": "cubes"
+},
+{
+"id": "A_o44o39h26o21h15o33",
+"case": "A",
+"units": [
+32803,
+32798,
+-32785,
+32780,
+-32774,
+32792
+],
+"status": "queued",
+"depth": 6,
+"from": "cubes"
+},
+{
+"id": "A_h44h39h26h21o15o33",
+"case": "A",
+"units": [
+-32803,
+-32798,
+-32785,
+-32780,
+32774,
+32792
+],
+"status": "queued",
+"depth": 6,
+"from": "cubes"
+},
+{
+"id": "A_o44h39h26h21o15o33",
+"case": "A",
+"units": [
+32803,
+-32798,
+-32785,
+-32780,
+32774,
+32792
+],
+"status": "queued",
+"depth": 6,
+"from": "cubes"
+},
+{
+"id": "A_h44o39h26h21o15o33",
+"case": "A",
+"units": [
+-32803,
+32798,
+-32785,
+-32780,
+32774,
+32792
+],
+"status": "queued",
+"depth": 6,
+"from": "cubes"
+},
+{
+"id": "A_o44o39h26h21o15o33",
+"case": "A",
+"units": [
+32803,
+32798,
+-32785,
+-32780,
+32774,
+32792
+],
+"status": "queued",
+"depth": 6,
+"from": "cubes"
+},
+{
+"id": "A_h44h39h26o21o15o33",
+"case": "A",
+"units": [
+-32803,
+-32798,
+-32785,
+32780,
+32774,
+32792
+],
+"status": "queued",
+"depth": 6,
+"from": "cubes"
+},
+{
+"id": "A_o44h39h26o21o15o33",
+"case": "A",
+"units": [
+32803,
+-32798,
+-32785,
+32780,
+32774,
+32792
+],
+"status": "queued",
+"depth": 6,
+"from": "cubes"
+},
+{
+"id": "A_h44o39h26o21o15o33",
+"case": "A",
+"units": [
+-32803,
+32798,
+-32785,
+32780,
+32774,
+32792
+],
+"status": "queued",
+"depth": 6,
+"from": "cubes"
+},
+{
+"id": "A_o44o39h26o21o15o33",
+"case": "A",
+"units": [
+32803,
+32798,
+-32785,
+32780,
+32774,
+32792
+],
+"status": "queued",
+"depth": 6,
+"from": "cubes"
+},
+{
+"id": "A_h44h39h26h21h15h33o27o37",
+"case": "A",
+"units": [
+-32803,
+-32798,
+-32785,
+-32780,
+-32774,
+-32792,
+32786,
+32796
+],
+"status": "queued",
+"depth": 8,
+"from": "cubes"
+},
+{
+"id": "A_h44h39h26h21h15h33o27h37",
+"case": "A",
+"units": [
+-32803,
+-32798,
+-32785,
+-32780,
+-32774,
+-32792,
+32786,
+-32796
+],
+"status": "queued",
+"depth": 8,
+"from": "cubes"
+},
+{
+"id": "A_h44h39h26h21h15h33h27o37",
+"case": "A",
+"units": [
+-32803,
+-32798,
+-32785,
+-32780,
+-32774,
+-32792,
+-32786,
+32796
+],
+"status": "queued",
+"depth": 8,
+"from": "cubes"
+},
+{
+"id": "A_h44h39h26h21h15h33h27h37",
+"case": "A",
+"units": [
+-32803,
+-32798,
+-32785,
+-32780,
+-32774,
+-32792,
+-32786,
+-32796
+],
+"status": "queued",
+"depth": 8,
+"from": "cubes"
+},
+{
+"id": "A_o44h39h26h21h15h33o27o37",
+"case": "A",
+"units": [
+32803,
+-32798,
+-32785,
+-32780,
+-32774,
+-32792,
+32786,
+32796
+],
+"status": "queued",
+"depth": 8,
+"from": "cubes"
+},
+{
+"id": "A_o44h39h26h21h15h33o27h37",
+"case": "A",
+"units": [
+32803,
+-32798,
+-32785,
+-32780,
+-32774,
+-32792,
+32786,
+-32796
+],
+"status": "queued",
+"depth": 8,
+"from": "cubes"
+},
+{
+"id": "A_o44h39h26h21h15h33h27o37",
+"case": "A",
+"units": [
+32803,
+-32798,
+-32785,
+-32780,
+-32774,
+-32792,
+-32786,
+32796
+],
+"status": "queued",
+"depth": 8,
+"from": "cubes"
+},
+{
+"id": "A_o44h39h26h21h15h33h27h37",
+"case": "A",
+"units": [
+32803,
+-32798,
+-32785,
+-32780,
+-32774,
+-32792,
+-32786,
+-32796
+],
+"status": "queued",
+"depth": 8,
+"from": "cubes"
+},
+{
+"id": "A_h44o39h26h21h15h33o27o37",
+"case": "A",
+"units": [
+-32803,
+32798,
+-32785,
+-32780,
+-32774,
+-32792,
+32786,
+32796
+],
+"status": "queued",
+"depth": 8,
+"from": "cubes"
+},
+{
+"id": "A_h44o39h26h21h15h33o27h37",
+"case": "A",
+"units": [
+-32803,
+32798,
+-32785,
+-32780,
+-32774,
+-32792,
+32786,
+-32796
+],
+"status": "queued",
+"depth": 8,
+"from": "cubes"
+},
+{
+"id": "A_h44o39h26h21h15h33h27o37",
+"case": "A",
+"units": [
+-32803,
+32798,
+-32785,
+-32780,
+-32774,
+-32792,
+-32786,
+32796
+],
+"status": "queued",
+"depth": 8,
+"from": "cubes"
+},
+{
+"id": "A_h44o39h26h21h15h33h27h37",
+"case": "A",
+"units": [
+-32803,
+32798,
+-32785,
+-32780,
+-32774,
+-32792,
+-32786,
+-32796
+],
+"status": "queued",
+"depth": 8,
+"from": "cubes"
+},
+{
+"id": "A_o44o39h26h21h15h33o27o37",
+"case": "A",
+"units": [
+32803,
+32798,
+-32785,
+-32780,
+-32774,
+-32792,
+32786,
+32796
+],
+"status": "queued",
+"depth": 8,
+"from": "cubes"
+},
+{
+"id": "A_o44o39h26h21h15h33o27h37",
+"case": "A",
+"units": [
+32803,
+32798,
+-32785,
+-32780,
+-32774,
+-32792,
+32786,
+-32796
+],
+"status": "queued",
+"depth": 8,
+"from": "cubes"
+},
+{
+"id": "A_o44o39h26h21h15h33h27o37",
+"case": "A",
+"units": [
+32803,
+32798,
+-32785,
+-32780,
+-32774,
+-32792,
+-32786,
+32796
+],
+"status": "queued",
+"depth": 8,
+"from": "cubes"
+},
+{
+"id": "A_o44o39h26h21h15h33h27h37",
+"case": "A",
+"units": [
+32803,
+32798,
+-32785,
+-32780,
+-32774,
+-32792,
+-32786,
+-32796
+],
+"status": "queued",
+"depth": 8,
+"from": "cubes"
+},
+{
+"id": "A_o44h39h26o21h15h33h27o37",
+"case": "A",
+"units": [
+32803,
+-32798,
+-32785,
+32780,
+-32774,
+-32792,
+-32786,
+32796
+],
+"status": "queued",
+"depth": 8,
+"from": "cubes"
+},
+{
+"id": "A_o44h39h26o21h15h33h27h37",
+"case": "A",
+"units": [
+32803,
+-32798,
+-32785,
+32780,
+-32774,
+-32792,
+-32786,
+-32796
+],
+"status": "queued",
+"depth": 8,
+"from": "cubes"
+},
+{
+"id": "B_o34o31h16h28h22h36o29",
+"case": "B",
+"units": [
+32793,
+32790,
+-32775,
+-32787,
+-32781,
+-32795,
+32788
+],
+"status": "queued",
+"depth": 7,
+"from": "cubes_b"
+},
+{
+"id": "B_o34o31h16h28h22h36h29",
+"case": "B",
+"units": [
+32793,
+32790,
+-32775,
+-32787,
+-32781,
+-32795,
+-32788
+],
+"status": "queued",
+"depth": 7,
+"from": "cubes_b"
+},
+{
+"id": "A_h44h39h26h21o15h33o27o37",
+"case": "A",
+"units": [
+-32803,
+-32798,
+-32785,
+-32780,
+32774,
+-32792,
+32786,
+32796
+],
+"status": "queued",
+"depth": 8,
+"from": "cubes"
+},
+{
+"id": "A_h44h39h26h21o15h33o27h37",
+"case": "A",
+"units": [
+-32803,
+-32798,
+-32785,
+-32780,
+32774,
+-32792,
+32786,
+-32796
+],
+"status": "queued",
+"depth": 8,
+"from": "cubes"
+},
+{
+"id": "B_o34h31o16h28h22o36o29",
+"case": "B",
+"units": [
+32793,
+-32790,
+32775,
+-32787,
+-32781,
+32795,
+32788
+],
+"status": "queued",
+"depth": 7,
+"from": "cubes_b"
+},
+{
+"id": "B_o34h31o16h28h22o36h29",
+"case": "B",
+"units": [
+32793,
+-32790,
+32775,
+-32787,
+-32781,
+32795,
+-32788
+],
+"status": "queued",
+"depth": 7,
+"from": "cubes_b"
+},
+{
+"id": "B_o34h31o16h28h22h36o29",
+"case": "B",
+"units": [
+32793,
+-32790,
+32775,
+-32787,
+-32781,
+-32795,
+32788
+],
+"status": "queued",
+"depth": 7,
+"from": "cubes_b"
+},
+{
+"id": "B_o34h31o16h28h22h36h29",
+"case": "B",
+"units": [
+32793,
+-32790,
+32775,
+-32787,
+-32781,
+-32795,
+-32788
+],
+"status": "queued",
+"depth": 7,
+"from": "cubes_b"
+},
+{
+"id": "B_o34o31o16h28h22o36o29",
+"case": "B",
+"units": [
+32793,
+32790,
+32775,
+-32787,
+-32781,
+32795,
+32788
+],
+"status": "queued",
+"depth": 7,
+"from": "cubes_b"
+},
+{
+"id": "B_o34o31o16h28h22o36h29",
+"case": "B",
+"units": [
+32793,
+32790,
+32775,
+-32787,
+-32781,
+32795,
+-32788
+],
+"status": "queued",
+"depth": 7,
+"from": "cubes_b"
+},
+{
+"id": "B_o34o31o16h28h22h36o29",
+"case": "B",
+"units": [
+32793,
+32790,
+32775,
+-32787,
+-32781,
+-32795,
+32788
+],
+"status": "queued",
+"depth": 7,
+"from": "cubes_b"
+},
+{
+"id": "B_o34o31o16h28h22h36h29",
+"case": "B",
+"units": [
+32793,
+32790,
+32775,
+-32787,
+-32781,
+-32795,
+-32788
+],
+"status": "queued",
+"depth": 7,
+"from": "cubes_b"
+},
+{
+"id": "B_h34h31o16o28h22o36o29",
+"case": "B",
+"units": [
+-32793,
+-32790,
+32775,
+32787,
+-32781,
+32795,
+32788
+],
+"status": "queued",
+"depth": 7,
+"from": "cubes_b"
+},
+{
+"id": "B_h34h31o16o28h22o36h29",
+"case": "B",
+"units": [
+-32793,
+-32790,
+32775,
+32787,
+-32781,
+32795,
+-32788
+],
+"status": "queued",
+"depth": 7,
+"from": "cubes_b"
+},
+{
+"id": "B_o34h31o16o28h22o36o29",
+"case": "B",
+"units": [
+32793,
+-32790,
+32775,
+32787,
+-32781,
+32795,
+32788
+],
+"status": "queued",
+"depth": 7,
+"from": "cubes_b"
+},
+{
+"id": "B_o34h31o16o28h22o36h29",
+"case": "B",
+"units": [
+32793,
+-32790,
+32775,
+32787,
+-32781,
+32795,
+-32788
+],
+"status": "queued",
+"depth": 7,
+"from": "cubes_b"
+}
+]
+}

@@ -1,0 +1,129 @@
+{
+ "summary_md": "## lit-check: web literature check, 21 Nov 2026, 12:17–12:40 KST (finished before the 13:20 time box)\n\n**Every statement below is EVIDENCE** from a bounded, read-only web check. The strongest positive wording used is \"no matching prior result found in the sources inspected\".\n\n### Baseline: the records I read first\nI read NOVELTY20261115 (README and WATCH_1118.md in full; WATCH_1116 only by grep), and the source and URL lists of NOVELTY20261113B, NOVELTY20261106, LIT and PRIORITY20261104. I also read STATUS20261120 to get the current claims: ES(8) ≤ 304 (with ≤ 303 in progress), N66 ≤ 55, and the M(5;7) attempt. The last watch in the records ended on 18 Nov at 03:20 KST, so this check concentrated on 18–21 Nov, plus earlier items the records do not list.\n\n### Verdicts\n| question | verdict |\n|---|---|\n| (a) A public ES(8) bound at or below 304 by anyone else | **None found.** The best public external bound is still **319** (Schroeder). His Zenodo record 22842891 has only v1 (19 Sep 2026; the versions API reports total = 1). The v2 and v3 PDF URLs return 404, his sitemap is unchanged, and OpenAlex counts 0 citing works. The best refereed bound is 408 (Mojarrad–Vlachos; arXiv 1510.06255 is still v2). No 2026 improvement of Suk's or Holmsen–Mojarrad–Pach–Tardos's asymptotic bounds was found. The only public page with a figure below 319 is the project's own repository, CuteSurtr/erdos-szekeres-lean, which is a self-hit and not prior art. Its README headline is ES(8) ≤ 310, web-search snippets still show an older 314, and the archive records pushed on 20 Nov contain 304. **The ES(8) ≤ 304 claim is unaffected:** no matching prior result found in the sources inspected. |\n| (b) ES(7) = 33, convex heptagons, counterexamples at k = 7 | **No proof and no counterexample found.** Dumitru arXiv:2512.24061 is still v1 (UNSAT results for some subfamilies only). Baek–Balko (JCTA 2026, and Balko's slides, read today) show C_weak(7) > 33 and state \"Even with computer assistance, we have no counterexample\". erdosproblems.com/107 was last edited 11 Apr 2026, has 0 proof claims, and comments are suspended. formal-conjectures 107.lean has no numeric variant. |\n| (c) M(5;7) = N(7;5,7) (my reading: a 7-cup is itself a convex heptagon, so the two names denote the same quantity) | **Nothing new.** No public upper bound below the derivable 41 was found. The lower bound stays 26 (ETV value; the 26-point example in KPH arXiv:2607.02958 is still v1). Javůrek's Figshare note (34875984) is still v1 with the same file MD5, and he has no other item on the topic. gotrevor/es7-ladder (last push 7 Oct) and GLitchfield/erdos-szekeres-convex-poly (last push 20 Oct) are unchanged. **The M(5;7) ≤ 35 attempt is unaffected:** no matching prior result found in the sources inspected. For N66 = N(8;6,6), no public bound below the cup–cap bound 70 was found. |\n| (d) SAT and signotope work (Heule, Subercaseaux, Scheucher, Krapivin, Przybocki, Baek, Balko, Dumitru, Schroeder, Javůrek, AlphaEvolve) | **Since 1 Nov there are only method papers and tools; none states an Erdős–Szekeres-type result.** These are DRATL (Bryant–Battleman–Heule, arXiv:2611.23574, 17 Nov), CNF encoding complexity (Krapivin–Przybocki–Subercaseaux, arXiv:2611.05614, 3 Nov), Subercaseaux's research statement (16 Nov; it re-describes SMQH), and Scheucher's PoCoView and ArrView viewers. Known items have no new versions: 2604.20120 v1, 2512.24061 v1, 2607.02958 v1, 2506.00224 v1, 2511.02864 v3, 2206.04260 v2, 2403.00737 v1, 2312.01223 v3. One earlier item the records do not cite is the PNAS journal version of the AlphaEvolve paper (30 Sep 2026). I could not read it (HTTP 403). |\n\n### What I checked\n- **arXiv listings, past week (Mon 16 – Fri 20 Nov 2026):**\n  - Titles of math.CO (326 entries), cs.CG (20), cs.DM (44), math.MG (36), cs.LO (72), cs.AI (1333), cs.SC (7), cs.DS (100), math.LO (40), cs.LG (1263) and cs.NE (40).\n  - Abstracts of all 223 entries of 18–20 Nov in math.CO, cs.CG, cs.DM and math.MG, scanned by keyword.\n- **arXiv API:** keyword searches (Szekeres, happy ending, convex position, signotope, Tuza AND Valtr, convex heptagon or octagon, cups and caps, order type AND SAT, k-gon, general position), version checks of the known IDs, and the newest papers of 16 authors.\n- **Repositories and sites:**\n  - Zenodo: versions API and searches.\n  - Schroeder's companion page and sitemap.\n  - erdosproblems.com/107 page and forum thread; the teorth YAML entry; formal-conjectures 107.lean and HappyEndingProblem.lean.\n  - GitHub: repository searches, nine known repositories, and the repositories of seven users.\n  - Figshare: item, versions, and searches.\n  - Homepages of Scheucher, Balko, Heule, Subercaseaux and Baek.\n  - Erdős Problem a Day report on problem 107 (unchanged, dated 28 Jul 2026).\n- **Indexes and other sources:**\n  - zbMATH Open, OpenAlex (new works, and citing works of 14 key papers), Crossref.\n  - Stack Exchange (MathOverflow and Math.SE), Hacker News.\n  - Wikipedia revision history in all 16 languages. English has only a bot edit on 15 Nov and Hungarian only a bot edit on 1 Nov; 7 languages were rate-limited.\n  - Web search in English, Russian and Chinese.\n\n### Unrelated items that came up (none bears on the claims)\n- k-rollercoasters (arXiv:2611.26297): Erdős–Szekeres for sequences.\n- Happy Edge conjecture (arXiv:2611.05300): about plane spanning trees.\n- arXiv:2611.25148: distinct distances.\n- arXiv:2611.25143: hypergraph Ramsey lower bounds.\n- yoshiyoyoyo44/erdos700: the binomial-gcd Erdős–Szekeres problem.\n- OpenAI's 20 May 2026 disproof: it concerns the **unit distance** conjecture, not Erdős–Szekeres.\n- Popular articles (Scientific American/Yahoo about Aug 2026, securitylab.ru 11 Aug 2026): retellings with no new results.\n\n### Not finished or not checked\n- Full texts I could not read:\n  - PNAS AlphaEvolve article.\n  - Baek–Balko (JCTA), the journal version of ETV 1996, and Balko–Valtr (EJC 2017): ScienceDirect returns 403.\n  - Grechuk's chapter: only its Crossref references were read.\n- Partly read: the Bolzano HTML (29k characters, possibly incomplete) has no Erdős–Szekeres mention.\n- APIs that failed:\n  - Semantic Scholar (429).\n  - DBLP (non-JSON responses).\n  - Two late arXiv API queries (429).\n  - Seven Wikipedia languages (429).\n- Not attempted: Google Scholar, ResearchGate full texts, Lean Zulip, Reddit, MathSciNet.\n- The arXiv scan covers titles and abstracts only. A paper that mentions ES(8) only in its body text would be missed.\n\n### Files\nAll raw downloads, unmodified, are under `<scratch>/agents/lit-check/fetch/`. My parsers are under `<scratch>/agents/lit-check/tools/` (`parse_list.py`, `idscan.py`, `arxiv_api.py`, `arxiv_ids.py`, `arxiv_authors.py`, `arxiv_q.py`). No project file was modified, and no computation beyond text parsing was run.",
+ "items": [
+  {
+   "citation": "M. Schroeder, \"Erdős–Szekeres: Upper Bounds for Convex Heptagons and Octagons\", preprint, Zenodo 10.5281/zenodo.22842891 (concept DOI 10.5281/zenodo.22842890), version 1",
+   "url": "https://zenodo.org/records/22842891",
+   "date": "2026-09-19 (v1). Re-checked 2026-11-21 12:20 KST: still the only version",
+   "claim": "ES(7) ≤ 81 and ES(8) ≤ 319 (unrefereed; the companion page reads \"Preprint · Version 1 · 19 September 2026\"). The Zenodo versions API reports total = 1. erdos_szekeres_upper_bounds_v2.pdf and _v3.pdf return HTTP 404. The ErdosSzekeres sitemap entries are unchanged (2026-09-19 and 2026-09-21; site-wide newest lastmod 2026-11-09). OpenAlex counts 0 citing works.",
+   "relevance": "EVIDENCE. Still the best external public ES(8) bound, and it does not change the project's ES(8) ≤ 304 (319 > 304). Nothing in it bears on the M(5;7) ≤ 35 attempt."
+  },
+  {
+   "citation": "T. Javůrek, \"Uncovered hull vertices and upper bounds for convex polygons\", Figshare 10.6084/m9.figshare.34875984, version 1 (file happy_ending_proof.pdf, md5 e2fadb2174e0c76f45fd4017c03a653d)",
+   "url": "https://doi.org/10.6084/m9.figshare.34875984",
+   "date": "2026-11-01 (v1; versions API lists only v1 on 2026-11-21)",
+   "claim": "From the description: \"We give a self contained derivation of ES(n+1) ≤ 3Bn−3 for n ≥ 4\"; a certified exclusion of 28 points with an uncovered hull vertex at size six would imply ES(7) ≤ 78. Figshare has no other item by this author on the topic.",
+   "relevance": "EVIDENCE. Unchanged since the records read it (same MD5). Its Lemma 3 is the source of the derivable public bound 41 for M(5;7). Nothing at or below 35 for M(5;7), nothing on ES(8). Does not change either project claim."
+  },
+  {
+   "citation": "J. Baek and M. Balko, \"The Erdős–Szekeres conjecture revisited\", J. Combin. Theory Ser. A 222 (2026) 106195 (SoCG 2025, LIPIcs 332:13), together with Balko's slide deck of the same title",
+   "url": "https://kam.mff.cuni.cz/~balko/prezentace/The_Erdos-Szekeres_conjecture_revisited.pdf",
+   "date": "JCTA 2026 (zbMATH review 8240121 dated 2026-08-14); slides read 2026-11-21",
+   "claim": "ES_split(k) = 2^(k−2)+1. ES_split(a,u,k) and C_split(a,u,k) equal the ETV-type sum for (a,u,k) in T. \"Theorem 4: We have Cweak(7) > 33\". New tight constructions of 2^(k−2) points. \"Even with computer assistance, we have no counterexample. Thus, the Erdős–Szekeres Conjecture remains open.\"",
+   "relevance": "EVIDENCE. Consistent with what the records say about the SoCG version. The slides contain no (5,7,7)-specific statement and no octagon upper bound. The JCTA full text is still unread (ScienceDirect 403). Does not change ES(8) ≤ 304 or the M(5;7) ≤ 35 attempt."
+  },
+  {
+   "citation": "R. E. Bryant, Z. Battleman, M. J. H. Heule, \"Apply All, Prove Once: Embedding Parameterized Lemmas in DRAT\", arXiv:2611.23574v1",
+   "url": "https://arxiv.org/abs/2611.23574",
+   "date": "2026-11-17 (submitted)",
+   "claim": "DRATL extends DRAT with parameterized lemmas; an elaborator expands DRATL into standard, compact DRAT proofs; several case studies. The abstract and the arXiv HTML full text do not mention Erdős–Szekeres, convex position or signotopes.",
+   "relevance": "EVIDENCE. A method paper on SAT proof compression; its output is DRAT, not LRAT checked by cake_lpr. Not a competing result; does not change any project claim."
+  },
+  {
+   "citation": "A. Krapivin, B. Przybocki, B. Subercaseaux, \"The CNF Encoding Complexity of Boolean Functions\", arXiv:2611.05614v1",
+   "url": "https://arxiv.org/abs/2611.05614",
+   "date": "2026-11-03",
+   "claim": "Bounds on the number of clauses needed to encode boolean functions with auxiliary variables (a nonuniform Cook–Levin variant). No point-set content.",
+   "relevance": "EVIDENCE. These are the two KPH/SMQH authors' only new paper since 1 Nov, besides Krapivin's unrelated hashing papers. Not related to the Erdős–Szekeres problem; does not change any project claim."
+  },
+  {
+   "citation": "B. Subercaseaux, research statement (faculty applications), published on bsubercaseaux.github.io (commit \"Publish updated research statement\")",
+   "url": "https://bsubercaseaux.github.io/assets/pdf/faculty-applications/research_statement_final.pdf",
+   "date": "2026-11-16 (commit date)",
+   "claim": "Describes SMQH (\"Automated Symmetric Constructions in Discrete Geometry\", CICM 2025 best paper): 4-fold and 5-fold symmetric 16-point hexagon-free sets, no 3-fold construction possible; SAT minimization of convex pentagons. No statement on g(7), ES(8) or ETV numbers.",
+   "relevance": "EVIDENCE. Already known content (SMQH). Does not change any project claim."
+  },
+  {
+   "citation": "M. Scheucher, GitHub repositories PoCoView and ArrView (point-configuration and arrangement viewers)",
+   "url": "https://github.com/manfredscheucher/PoCoView",
+   "date": "PoCoView created 2026-10-19, pushed 2026-11-20; ArrView created 2026-11-17",
+   "claim": "Viewers with example files. The largest convex-gon-free examples are two 16-point sets with no convex hexagon (Brass–Moser–Pach and Kalbfleisch–Stanton) and a 29-point set with no 6-hole. There are no 7-gon or 8-gon examples and no claims.",
+   "relevance": "EVIDENCE. Tools only. Does not change any project claim."
+  },
+  {
+   "citation": "B. Georgiev, J. Gómez-Serrano, T. Tao, A. Z. Wagner, \"Mathematical discovery and exploration can be done at scale\", PNAS (2026), doi 10.1073/pnas.2536158123 (journal counterpart of arXiv:2511.02864)",
+   "url": "https://doi.org/10.1073/pnas.2536158123",
+   "date": "2026-09-30 (OpenAlex publication date)",
+   "claim": "Journal version of the AlphaEvolve mathematics paper. For k ≤ 8 the arXiv v3 reports constructions of 2^(k−2) points with no convex k-gon, and of 2^(k−2)+1 points with exactly one convex k-gon. The PNAS text itself was not read (HTTP 403).",
+   "relevance": "EVIDENCE. An earlier item the records do not cite (they cite arXiv v3 only). Constructions can only give lower bounds, so it cannot contradict ES(8) ≤ 304 or an upper bound on M(5;7). Whether the PNAS version adds anything on Erdős–Szekeres: not checked."
+  },
+  {
+   "citation": "W. Chen, C. Pohoata, \"Above and below\", arXiv:2605.27061v1",
+   "url": "https://arxiv.org/abs/2605.27061",
+   "date": "2026-05-26",
+   "claim": "Sharp estimate AB(k) = 2^(2^Θ(k)) for the above–below Ramsey function from the Erdős–Szekeres problem in R^3. Relates it to the higher-order cup–cap function of Eliáš–Matoušek and to Balko's monotone Ramsey numbers.",
+   "relevance": "EVIDENCE. Earlier item not in the records. Asymptotic and higher-dimensional; does not bear on ES(8), ES(7) or the planar ETV numbers."
+  },
+  {
+   "citation": "A. Suk, S. Zhou, \"On the maximum number of k-holes in point sets with no (k+1)-hole\", arXiv:2606.05721; and M. Andričík et al., \"Many holes but no large one: maximizing k-holes while forbidding (k+1)-holes\", arXiv:2606.08762v2",
+   "url": "https://arxiv.org/abs/2606.05721",
+   "date": "2026-06-04 and 2026-06-07 (v2 2026-08-03)",
+   "claim": "Bounds on the maximum number of k-holes in point sets with no (k+1)-hole.",
+   "relevance": "EVIDENCE. Earlier items not in the records. They concern holes, not convex position; no change to any project claim."
+  },
+  {
+   "citation": "C. M. Nicolás, \"Visibility Sets, Empty Pentagons, and Sufficient Conditions for Hexagons\", arXiv:2610.23553v1",
+   "url": "https://arxiv.org/abs/2610.23553",
+   "date": "2026-10-16",
+   "claim": "C-sets of oriented edges; bounds on empty pentagons and hexagons in terms of the numbers of interior and boundary points.",
+   "relevance": "EVIDENCE. Earlier item not in the records. About empty polygons; does not bear on the claims."
+  },
+  {
+   "citation": "A. Zámečník, M. Kripner, M. Koutecký, M. Balko, et al., \"Bolzano: From Expert-Guided Proof Search to Automated Open-Problem Solving\", arXiv:2610.09769v2",
+   "url": "https://arxiv.org/abs/2610.09769",
+   "date": "2026-10-07 (v2 2026-10-09)",
+   "claim": "A multi-agent LLM proving system; about 200 of about 3,800 extracted open problems solved. The arXiv HTML I fetched (29k characters, possibly partial) does not mention Erdős–Szekeres, caps or cups, or ETV.",
+   "relevance": "EVIDENCE. Earlier item not in the records, with Balko as co-author. No Erdős–Szekeres content found. Not fully checked, because the problem list may be in supplementary material."
+  },
+  {
+   "citation": "J. Yao, R. Wang, T. Zhang, \"OpenFrontiers: A Collection of Open Research Problems and a Benchmark for Scientific Rediscovery\", arXiv:2610.37739v1",
+   "url": "https://arxiv.org/abs/2610.37739",
+   "date": "2026-10-27",
+   "claim": "Lists \"Erdős–Szekeres 'Happy Ending' conjecture: f(n) = 2^(n−2) + 1\" as open problem O33 (category \"stretch\").",
+   "relevance": "EVIDENCE. States the conjecture as open; no bounds. No change."
+  },
+  {
+   "citation": "B. Grechuk, \"Geometry and Topology\", chapter in Landscape of 21st Century Mathematics (Springer, 2026), doi 10.1007/978-3-032-26888-4_5",
+   "url": "https://doi.org/10.1007/978-3-032-26888-4_5",
+   "date": "2026-10-06 (OpenAlex)",
+   "claim": "Expository chapter. Per Crossref its references include Erdős–Szekeres 1935 and 1960, Suk (JAMS 2017), Holmsen–Mojarrad–Pach–Tardos and Szekeres–Peters. Text not read.",
+   "relevance": "EVIDENCE. Earlier item not in the records. Expository; no ES(7) or ES(8) bound expected (not checked). No change."
+  },
+  {
+   "citation": "Project's own public repository CuteSurtr/erdos-szekeres-lean (self-hit)",
+   "url": "https://github.com/CuteSurtr/erdos-szekeres-lean",
+   "date": "pushed 2026-11-20 14:53 UTC",
+   "claim": "README headline ES(8) ≤ 310 (Lean-checked); it also lists 319 and 408. Web-search snippets still show an older 314 (forces_convex_octagon_314). The pushed archive records (commit 2d1cb6baa) contain ES(8) ≤ 304.",
+   "relevance": "EVIDENCE. Self-hit, not prior art. It is the only public page found with an ES(8) figure below 319."
+  },
+  {
+   "citation": "Status pages for Erdős problem #107: erdosproblems.com/107 and forum thread; teorth/erdosproblems problems.yaml; google-deepmind/formal-conjectures ErdosProblems/107.lean and Wikipedia/HappyEndingProblem.lean",
+   "url": "https://www.erdosproblems.com/107",
+   "date": "page last edited 2026-04-11; checked 2026-11-21",
+   "claim": "The problem is open: Comments (2), Proof claims (0), \"The ability to post new comments has been suspended\". YAML status \"falsifiable\" (last_update 2025-08-31). 107.lean states only erdos_107, the general bounds and Suk/HMPT (sorry); its last commits are 2026-10-22 and 2026-10-29. HappyEndingProblem.lean is an import-only mirror.",
+   "relevance": "EVIDENCE. No numeric ES(7) or ES(8) statement anywhere. No change."
+  }
+ ],
+ "inaccessible": [
+  "PNAS article 10.1073/pnas.2536158123 (AlphaEvolve journal version): HTTP 403, full text not read",
+  "ScienceDirect (HTTP 403): Baek–Balko JCTA 222 (2026) 106195 full text; Erdős–Tuza–Valtr EJC 17 (1996) journal version; Balko–Valtr EJC 66 (2017) full text",
+  "Semantic Scholar API: HTTP 429 (rate limit)",
+  "DBLP search API: non-JSON responses, no results",
+  "arXiv API: two late queries rate-limited (429): 'abs:\"points in convex position\" AND abs:SAT' and the ETV/Ramsey-remainder abstract query (the earlier 'all:tuza AND all:valtr' query succeeded)",
+  "Wikipedia 'Happy ending problem' in ko, pt, ru, th, uk, zh, lzh: HTTP 429, revision history not checked",
+  "Grechuk chapter (Springer 10.1007/978-3-032-26888-4_5): only Crossref metadata and references read",
+  "Bolzano (arXiv:2610.09769) problem list or supplementary material: not checked (HTML possibly partial)",
+  "Not attempted: Google Scholar, ResearchGate full texts, Lean Zulip, Reddit, MathSciNet",
+  "arXiv full-text search is unavailable: only titles and abstracts were scanned"
+ ]
+}

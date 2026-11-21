@@ -1,0 +1,6 @@
+flat state indices [7, 35, 80, 120, 144, 153] second-point state indices [1, 2, 4, 7]
+real57 {'n': 57, 'residual_conditions': 'ok', 'largest_convex': 7, 'lower_hull': [(0, (0, 0, 0, 0, 0)), (10, (1, 1, 1, 1, 0)), (14, (2, 2, 2, 2, 0)), (56, (6, 6, 6, 6, 0))], 'second_state': (1, 0, 0, 0, 0), 'last_state': (6, 6, 6, 6, 0), 'check': 'OK', 'distinct_states': 57}
+random {"tested": 300, "rejected_nonresidual": 403, "rejected_octagon": 32, "fail": 0, "nonflat_nonhull_points": 853, "second_state_counts": {"(1, 0, 0, 0, 0)": 36, "(1, 1, 1, 0, 0)": 79, "(1, 1, 1, 1, 0)": 133, "(1, 1, 0, 0, 0)": 52}, "last_state_counts": {"(4, 4, 4, 4, 0)": 59, "(1, 1, 1, 1, 0)": 62, "(2, 2, 2, 2, 0)": 89, "(3, 3, 3, 3, 0)": 76, "(5, 5, 5, 5, 0)": 13, "(6, 6, 6, 6, 0)": 1}, "attempts": 735, "fails": []}
+by_n {2: 27, 3: 36, 4: 34, 5: 36, 6: 31, 7: 33, 8: 27, 9: 22, 10: 22, 11: 15, 12: 8, 13: 6, 14: 2, 15: 1}
+abstract colourings (tested, passing): {2: (1, 1), 3: (2, 2), 4: (16, 16), 5: (1024, 1024), 6: (28157, 28157)}
+negative control (non-hull points with non-flat states exist): True [(1, (1, 1, 0, 0, 0)), (2, (2, 2, 0, 0, 0)), (3, (2, 2, 1, 0, 0))]
