@@ -4,7 +4,7 @@
 The Linux machine was not reachable from the Mac and was not touched. Its jobs are still stopped as at
 STATUS20261120 §6 (budget 68 at 76 %, L15 campaign 51 leaves, FV304 379 modules).
 
-The subsequent evening session has its own running totals for case A and an exact fourth-point condition for the octagon search. [Evening case-A certificates](../M57R36E20261121/README.md) · [Fourth-point proof and 20-point witnesses](../PREFIX20261121/README.md)
+The evening session records the additional case-A proofs and the sharp fourth-point condition. A separate exact calculation shows that adding all 58,950 balanced-chain rows preserves the fractional optimum throughout the tested class-demand square $15\le r,s\le35$. All six budget-68 integer count pairs still pass the fractional tests. [Fractional certificate and C++ verifier](https://github.com/CuteSurtr/erdos-810-research/blob/821f970e0429de52c37db6c1883139bfd961d32a/research/es-connection/omission-layers.md#adding-every-balanced-chain-row). [Evening case-A certificates](../M57R36E20261121/README.md) · [Fourth-point proof and 20-point witnesses](../PREFIX20261121/README.md)
 
 ## 1. Results of this session
 

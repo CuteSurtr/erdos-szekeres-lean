@@ -39,3 +39,9 @@ python3 check_witnesses.py
 c++ -std=c++17 -O3 prefix_states.cpp -o /tmp/es-prefix-states
 /tmp/es-prefix-states > /tmp/es-prefix-patterns.txt
 ```
+
+## Effect on the budget-68 search
+
+At the top of the Mac budget-68 search, this prefix test eliminated **0 of 16,384 contexts**, even when all eight initial points were used. The missing-state lists across those contexts contain 99 distinct states. The first eight points of examples 11 and 14 occupy respectively $\{0,1,2,3,4,7,21,29\}$ and $\{0,1,3,6,10,17,23,26\}$. Both avoid all 99 states. Their intersection is exactly the three fixed states, so compatibility with missing-state lists alone forces no additional individual state at this depth. This calculation concerns the initial prefixes. Extending them to a complete solution must still satisfy the other conditions. [Coordinate witnesses](twenty-point-witnesses.txt)
+
+The Mac tree used 3,133 rows and budget 68 with `fastbb256`, 16,384 target contexts and options `--ktop=16 --klow=4 --dtop=0 --dmid=0`. Run `python3 check_witnesses.py --contexts /path/to/contexts.json` to verify the two prefixes against that tree. The Linux checkpoint uses a separate 32,755-context partition. Its 7,817 open contexts still require certificates. [Linux checkpoint and row hashes](../ES303N20261120/README.md)

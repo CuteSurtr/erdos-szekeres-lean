@@ -1,6 +1,7 @@
 """Check the integer examples and enumerate all extra sets of at most four states."""
 from hashlib import sha256
 from itertools import combinations
+import argparse
 import json
 from pathlib import Path
 
@@ -37,7 +38,7 @@ def example(heights, indices):
         return len(chain)
     for sub in combinations(range(n), 8):
         assert hull_length(sub, 1) + hull_length(sub, -1) - 2 < 8
-    return set(owners) - FIXED
+    return owners
 
 def hitting_sets(examples):
     found = set()
@@ -52,13 +53,29 @@ def hitting_sets(examples):
     return found
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--contexts", type=Path, help="Mac budget-68 contexts.json")
+    args = parser.parse_args()
     raw = CATALOG.read_bytes()
     assert sha256(raw).hexdigest() == "acaf6323a2539be869304f42263f80a87db95be1b998e41638dba9bca4d63d72"
     indices = {tuple(s):i for i,s in enumerate(json.loads(raw)["states"])}
     lines = (HERE / "twenty-point-witnesses.txt").read_text().splitlines()
-    examples = [example(list(map(int,line.split())), indices) for line in lines]
+    owners = [example(list(map(int,line.split())), indices) for line in lines]
+    examples = [set(sequence) - FIXED for sequence in owners]
     assert hitting_sets(examples) == {QUARTET}
     print(f"{len(examples)} balanced octagon-free 20-point sets. Sole hitting set of size at most four: {QUARTET}")
+
+    if args.contexts:
+        data = args.contexts.read_bytes()
+        assert sha256(data).hexdigest() == "85c522e297f64051bc3c5461bffdc9d6ad2120bfb273ade1d22c426f550d7127"
+        contexts = json.loads(data)
+        assert [ctx["context"] for ctx in contexts] == list(range(16384))
+        missing = {state for ctx in contexts for state in ctx["missing"]}
+        assert len(missing) == 99
+        first, second = (set(owners[i][:8]) for i in (10, 13))
+        assert first == {0,1,2,3,4,7,21,29} and second == {0,1,3,6,10,17,23,26}
+        assert (first | second).isdisjoint(missing) and first & second == FIXED
+        print("Both eight-point prefixes avoid every missing-state list in all 16,384 contexts.")
 
 if __name__ == "__main__":
     if not __debug__:
