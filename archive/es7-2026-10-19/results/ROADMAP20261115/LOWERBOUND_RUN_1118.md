@@ -1,6 +1,9 @@
 # LOWERBOUND_RUN_1118: third block of the lower-bound plan (track L, 18 Nov 2026, 02:30-08:30 KST)
 
-**Status: IN PROGRESS (skeleton written 02:50 KST; updated after each milestone; last update 04:00).**
+**Status: FINISHED.** Track L's run ended on 18 Nov at 04:58 (`L18/e72/summary.log`) with all 269 E7-2 targets UNSAT.
+The 203 AE33 targets were re-checked on 21–22 Nov and filed as claim `lb-l18-e72-ae33`
+([LOWERBOUND_RUN_1118_AE33R1.md](LOWERBOUND_RUN_1118_AE33R1.md)). The skeleton was written at 02:50 KST and last
+updated by track L at 04:00; the main session added notes on 22 Nov, 00:45 KST.
 
 **Headline (all CERTIFIED + PROVED soundness, computer-assisted, unrefereed; each with a filed claim; all nine claims filed by 03:48 were CONFIRMED by independent verifiers VS and VB with their own code by 03:49).**
 Saturation numbers of the Erdős–Szekeres problem (DDSZ, arXiv:2312.01223: sat_g(n) = the smallest n-gon-free set in
@@ -29,7 +32,7 @@ ABSAT8_INDEPENDENT §8; both self-tests pass).
 | (1) k = 8 | is geometric octagon saturation an order-type invariant? | **no** (02:43): an explicit DDSZ-type 56-point set S is geometrically octagon-saturated (certified), and another realization S′ of its labelled order type plus a point p has no convex octagon (claim `lb-l18-oct56-real`) | CERTIFIED + PROVED soundness; EXACT |
 | (1b) k = 7, 8 | does order-type saturation (`l1enc S k` UNSAT: every realization saturated) imply maximum size? | **no** (02:57): six symmetric non-maximum sets are order-type saturated, among them a 51-point octagon-free set, so **sat_g(8) ≤ 51** (DDSZ Thm 4 gives 56), and a 28-point heptagon-free set (claim `lb-l18-otsat-nonmax`) | CERTIFIED + PROVED soundness |
 | (1c) k = 6, 7, 8 | how small can a saturated set be? | **sat_g(8) ≤ 31** (03:48; claim `lb-l18-satg8-31`), after ≤ 36 (03:16; claim `lb-l18-satg8-36`: a 36-point 5-fold octagon-free set is geometrically saturated; DDSZ: 56), **sat_g(6) ≤ 14 < 16** (03:11; claim `lb-l18-satg6-14`) and **sat_g(7) ≤ 20** (03:12; claim `lb-l18-satg7-20`, four 4-fold 20-point sets) after ≤ 21 (03:03): a 21-point heptagon-free set (5-fold, 4 orbits + centre) is geometrically 7-gon-saturated; also three 24-point sets and two 26-point sets saturated in every realization (claim `lb-l18-satg7-21`). DDSZ Thm 4: 28 | CERTIFIED + PROVED soundness |
-| (2) E7-2 | joint two-point (radius-1) extension model at k = 7: soundness note, controls, cheapest targets | soundness note written; 66 symmetric-maximum bases all UNSAT (claim `lb-l18-e72-sym`, 03:20); 203 AE33 pairs running | CERTIFIED + PROVED soundness |
+| (2) E7-2 | joint two-point (radius-1) extension model at k = 7: soundness note, controls, cheapest targets | soundness note written; 66 symmetric-maximum bases all UNSAT (claim `lb-l18-e72-sym`, 03:20); **all 203 AE33 pairs UNSAT**: the radius-1 neighbourhood of AE33 is empty at the order-type level (claim `lb-l18-e72-ae33`, 22 Nov) | CERTIFIED + PROVED soundness |
 | (3) E7-3 | more seeds | not started | - |
 
 ## (1) k = 8: geometric octagon saturation depends on the realization (CERTIFIED + EXACT)
@@ -305,13 +308,27 @@ not from l2enc's code; 7-gons through p or q are found by an own brute force (co
 CNFs 844k-1.18M clauses; about 50 s wall per target at 15 % CPU). The 66 symmetric-maximum bases are complete:
 **claim `lb-l18-e72-sym`** filed 03:20 KST (mirror32 − u and sym7_32 − u for all 32 u, c3_31, c5_31). AE33 pairs:
 8 of 203 done; each real pair violates exactly one OCTY clause (the heptagon through its on-heptagon point) and nothing
-else. **Controls: all passed (unit finished 03:58:43).** C1: 8 forced-UNSAT k = 6 CNFs certified (one verdict line each), 8 real
+else. *[Correction, 22 Nov: over all 203 pairs the split is 21 JK (both points on H), 57 OCTX (only u on H) and
+125 OCTY (only v on H), exactly one clause each; see the note at the end of this section.]* **Controls: all passed (unit finished 03:58:43).** C1: 8 forced-UNSAT k = 6 CNFs certified (one verdict line each), 8 real
 pairs satisfy every clause. C2: 30 of 30 real pairs on 10 heptagon-free sets satisfy every clause, CaDiCaL SAT;
 400 random or perturbed real pairs on those bases: 128 without a 7-gon through p or q violate nothing, 272 with one
 violate a k-gon clause, 0 consistency violations. C4: 10 of 10 AE33 pairs off the heptagon satisfy every clause.
 C3: 60 random pairs on the certified c3_31 and m32_d0 CNFs, each with a 7-gon through p or q and a violated k-gon clause
 (the third target, ae_d14_15, was not finished when C3 ran). Target-run evaluations: every AE33 real pair done so far
 violates exactly one OCTY clause and nothing else (74 of 74 at 04:00).
+
+**Final (main session, 22 Nov 00:45 KST).** All 269 targets are UNSAT, each with exactly one verdict line in L18's
+`cert/*.cake.out`. The 66 symmetric bases were verified by VB (`lb-l18-e72-sym`).
+
+The 203 AE33 targets were re-checked on 21 Nov with fresh tools ([LOWERBOUND_RUN_1118_AE33R1.md](LOWERBOUND_RUN_1118_AE33R1.md)):
+- regeneration bit for bit;
+- a fresh cake_lpr, one verdict line each, 203/203;
+- an own clause-family check of all 223,165,944 clauses.
+
+Two workflow verifiers with their own code CONFIRMED every item. **Correction:** the sentence "each real pair violates
+exactly one OCTY clause and nothing else" holds only for the pairs with only v on H. Over all 203 pairs, each real
+pair violates exactly one clause and nothing else, split as 21 JK (both on H), 57 OCTX (only u on H) and 125 OCTY
+(only v on H). This is the split in track L's own `summary.jsonl`, and two own evaluators reproduce it.
 
 ## Claims filed (pm1115/claims/)
 
@@ -325,11 +342,12 @@ violates exactly one OCTY clause and nothing else (74 of 74 at 04:00).
 | `lb-l18-satg8-36` | 36-point 5-fold set octagon-saturated | CERTIFIED | **VS CONFIRMED 03:26** (own octagon encoding + Motzkin explain all 52,797 base and 20,543 added clauses; fresh cake_lpr) |
 | `lb-l18-sat14-realdep` | the 14-point set's order type has exactly 56 abstract extensions, all realized | CERTIFIED + EXACT | **VS CONFIRMED 03:44** (own hexagon encoding; own enumeration finds the same 56 models; fresh cake_lpr; 56/56 files checked) |
 | `lb-l18-satg8-31` | 31-point set octagon-saturated (local search) | CERTIFIED | **VS CONFIRMED 03:49** (own octagon encoding + Motzkin explain all clauses; fresh cake_lpr) |
+| `lb-l18-e72-ae33` | radius 1 around AE33: the 203 CNFs l2enc(AE33 − {u,v}, 7) with {u,v} meeting H are UNSAT, so no heptagon-free 33-point set contains a 31-point subset with the (mirror) order type of a 31-subset of AE33 (filed 22 Nov by the main session) | CERTIFIED + PROVED soundness | **CONFIRMED** 22 Nov by the workflow rebuild verifier (own driver: fresh cake_lpr 203/203; own C++ family check `fam.cpp`) and soundness verifier ([VERIFY_AE33R1_REBUILD.md](VERIFY_AE33R1_REBUILD.md), [VERIFY_AE33R1_SOUNDNESS.md](VERIFY_AE33R1_SOUNDNESS.md)) |
 | `lb-l18-e72-sym` | radius 1 (two new points) around mirror32, sym7_32, c3_31, c5_31: 66 CNFs UNSAT | CERTIFIED + PROVED soundness | **VB CONFIRMED 03:45** (fresh cake_lpr at heap 1000 MB, 66/66; all 70,967,624 clauses justified by VB's own generated families and the RAD/GP identities; soundness note reviewed). VS had released it at 03:27 (heap above 300 MB needed) |
 
 ## What remains
 
-- **Verification** of all six claims (own code; the cheapest independent route for the saturation claims is an own
+- *(Stale, 22 Nov: the claims table shows all nine claims CONFIRMED, plus `lb-l18-e72-ae33`.)* **Verification** of all six claims (own code; the cheapest independent route for the saturation claims is an own
   encoder of R2 + AC + OCT, an own emptiness test of the added patterns, and cake_lpr on the kept LRATs; for the
   14- and 15-point sets an exhaustive cell check is already done here with ln's and L1's code).
 - **Smaller saturated sets**: k = 8 below 36 (search running), k = 7 below 20 (0 of 224 symmetric sets of 16-19
@@ -337,7 +355,8 @@ violates exactly one OCTY clause and nothing else (74 of 74 at 04:00).
 - **Literature**: a fuller check than the bounded arXiv search (citers of DDSZ in Semantic Scholar were empty; the
   journal version Eur. J. Combin. 131 (2026) 104236 was not read).
 - **The 194 abstract extensions of d56** (item (1)(e)): realizability not tested.
-- **E7-2** (item (2)): see its section.
+- **E7-2** (item (2)): done (269/269 UNSAT; AE33 re-checked and filed 22 Nov). The 273 near-full one-heptagon sets
+  (LOWERBOUND_PLAN E7-1, item 3) have no radius-1 run.
 
 ## Resume
 

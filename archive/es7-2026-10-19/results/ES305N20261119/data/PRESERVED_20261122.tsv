@@ -1,0 +1,15 @@
+# copied 22 Nov 2026 from /home/jay/research/data/bal186-20261119 (LEAN_STATUS finding 10: hash-pinned inputs of the tree checks were only on disk)
+# source	dest (record-relative)	sha256 of the copy	vs record pin
+zrow/zb_run.sh	ES305N20261119/tools/zrow/zb_run.sh	aa7350f11d220eadd7b0de465c6a63d9ac398757ca8311768e03acb7b7bbd781	pin-match
+zrow/zb_run0.sh	ES305N20261119/tools/zrow/zb_run0.sh	fe9f5e18082e708061b5753152b7e79d1c256ff362e873a1e636db21a9d87b0b	pin-match
+zrow/zb_check.sh	ES305N20261119/tools/zrow/zb_check.sh	3c5f32d65ff05a3703be2d03f6e376fe8655a6daf78b2b6c42090549269acb46	pin-match
+zrow/balz_assemble.py	ES305N20261119/tools/zrow/balz_assemble.py	ae0411c1c7503792a4ee9dd39919611609dbe72b0939375328f252af858d63a2	pin-match
+zrow/balz_assemble_v3.py	ES305N20261119/tools/zrow/balz_assemble_v3.py	eddc2b9837d60cc2a46731646a2d7a9c77c734979d001ae32686b0be3df174f5	pin-match
+zrow/lemmaz_control.py	ES305N20261119/tools/zrow/lemmaz_control.py	ae317cefd6c707d8977dd0b647a25cf1bd7b3c286153774bc7680609e25ae578	pin-match
+balcheck/balcheck.cpp	ES305N20261119/tools/balcheck/balcheck.cpp	554814faf9336b2d7a4e7ec2c236fcb6ceaead3dd640f2cacdeef10c64e4cde3	pin-match
+balcheck/balcheck	ES305N20261119/tools/balcheck/balcheck	bd55b6a63908fc215df72fd6b614ea6848cc4bbd25ef2b4deb7b6b5757278f48	pin-match
+balcheck/balcheck2.cpp	ES305N20261119/tools/balcheck/balcheck2.cpp	83d14a9f89aedcbbefaee48cdf4ec02210140450e0c6e506e722ecc127408af2	pin-match
+balcheck/balcheck2	ES305N20261119/tools/balcheck/balcheck2	951b90dc19c8b54c3f65871481f300dc6678338dbd2c76a80147e5feed984661	pin-match
+zrow/balz.rows	ES305N20261119/data/zrow/balz.rows	7076dd8212c382caf19b7fe39fca9b81de9ae8fba9150727efa1997d54f6288f	pin-match
+zrow/balz_m0.rows	ES305N20261119/data/zrow/balz_m0.rows	6fb2337976f23ffd328f3704d6905af57441009ff5d469316e264b816250f055	pin-match
+zrow/zrow.json	ES305N20261119/data/zrow/zrow.json	b43ba5f80582f7754fe6acf04cbbf81fc7822a5f784fb8c5ddedf643cce51258	pin-match

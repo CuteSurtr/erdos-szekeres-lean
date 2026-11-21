@@ -1,5 +1,9 @@
 # SATG20261118: small n-gon-saturated point sets (saturation numbers sat_g(n), DDSZ definition)
 
+**Current best (22 Nov 2026): sat_g(6) ≤ 11, sat_g(7) ≤ 16, sat_g(8) ≤ 26, sat_g(9) ≤ 39, sat_g(10) ≤ 52, all EXACT for
+the stated coordinates. The 11, 26 and 39 are in the SAT4 addendum at the end; the sections in between keep the
+values of their own runs.**
+
 Track SAT2, 18 Nov 2026, 04:45-07:40 KST (all SAT2 units stopped by 07:40; track L's units untouched). Builds on track L's item (1c) of
 [LOWERBOUND_RUN_1118.md](../ROADMAP20261115/LOWERBOUND_RUN_1118.md) and on the verifier note
 [VERIFY_LOWERBOUND_L18_SATG8_CELLS.md](../ROADMAP20261115/VERIFY_LOWERBOUND_L18_SATG8_CELLS.md). No existing record was
@@ -561,3 +565,136 @@ So sat_g(9) ≤ 40 and sat_g(10) ≤ 52 each rest on two independent exact imple
 - Logs: `/home/jay/research/data/roadmap-20261115/pm1115/main1118/vx1118sat3/`.
 - The first unit (2.5 GB) was stopped cleanly by the memory guard on the 68-point set; it was rerun alone with 7 GB.
 - Verdict files: `pm1115/claims/sat3-*.verdict.json` (verifier `MAIN-vx1118`).
+
+## SAT4 addendum (Linux, 21 Nov 2026 20:16–23:25 KST; checks completed 22 Nov 00:40 KST)
+
+Workflow `research-wave1-1121`, worker D (one thread at a time; units `esr-ag-satg-*`, CPUQuota 100 %, MemoryMax 600M,
+nice 10). Work folder `/home/jay/research/data/lower-20261121/satg/` (worker README SHA-256 `01e1a3a5…9532`). The text
+above this section is unchanged.
+
+**Status: final for this run. Three new upper bounds, each EXACT for the stated integer coordinates.**
+
+### T1. Headline
+
+| n | best set now | before | label | DDSZ Thm 4 |
+|---|---|---|---|---|
+| 6 | **11** (three 11-point sets, at least two order types) | 12 (SAT2) | **EXACT** | none (n ≥ 7) |
+| 8 | **26** | 27 (SAT2) | **EXACT** | 56 |
+| 9 | **39** | 40 (SAT3) | **EXACT** | 112 |
+
+Current best bounds from this record: **sat_g(6) ≤ 11, sat_g(7) ≤ 16, sat_g(8) ≤ 26, sat_g(9) ≤ 39, sat_g(10) ≤ 52.**
+These are upper bounds given by explicit sets. Nothing about ES(n) follows. Lower bounds are still only the trivial
+sat_g(n) ≥ n − 1.
+
+### T2. Statement and checks
+
+The sets `data/SAT4_k6_n11.txt`, `data/SAT4_k8_n26.txt` and `data/SAT4_k9_n39.txt` are in general position. They have no
+convex 6-, 8- or 9-gon respectively, and they are 6-, 8- or 9-gon-saturated in the sense of section 2 (DDSZ).
+Each verdict was reached by five exact implementations (model of section 3 (II): one decision per open cell of the
+arrangement of the C(N,2) lines):
+
+| implementation | author | 11 points | 26 points | 39 points |
+|---|---|---|---|---|
+| vx1118 `satcells` (K = 9: SAT2's `satcells_nb`) + trusted replay `check_cells.py`, unchanged | record | SATURATED, 1,145 cells | SATURATED, 45,800 | SATURATED, 248,938 |
+| VX2 `vx2sat2`, unchanged (`<n> -1 1000 1`) | VX2 | SATURATED_SET; brute force 0 convex 6-subsets | SATURATED_SET; 0 convex 8-subsets | SATURATED_SET; brute force over all C(39,8) and C(39,9): 1,140 convex 8-subsets, 0 convex 9-subsets |
+| `tools/sat4_satcheck.cpp` (new, exact `__int128`, cells from edge sign vectors) | worker D | SATURATED | SATURATED | SATURATED |
+| `tools/sat4_satcheck_big.py` (pure Python integers, no coordinate bound) | worker D | SATURATED | – | – |
+| `tools/sat4_vsat_verifier.cpp` (SHA-256 `5453cb48…8c0c`; own code, independent of all of the above: cells by Euler count, every cell decided from the definition, plus a replay of the finder's rational samples; plain brute force over all K- and (K−1)-subsets) | rebuild verifier | SATURATED, 1,145 cells; 0 convex 6-subsets, 22 convex 5-subsets | SATURATED, 45,800; 0 / 497 | SATURATED, 248,938; 0 / 1,140 |
+
+- Verify files: `VERIFY_sat4_REBUILD.md` (own code, verdict **confirmed** for all three) and `VERIFY_sat4_SOUNDNESS.md`
+  (convention and evidence review, **confirmed** for all three).
+- Main-session check (22 Nov 00:40):
+  - the five SHA-256 hashes below were recomputed;
+  - the verifier's verdict lines were read;
+  - every checker's cell count equals 1 + C(N,2) + N(N−2) + 3·C(N,4), the face count of the arrangement when no two
+    lines are parallel and the only multiple points are the N points of S. That is 1,145, 45,800 and 248,938 for N = 11, 26, 39, so no cell
+    was missed.
+- The negative controls behaved as required. Each set minus point 0 is NOT saturated, with 166, 712 and 2,037
+  failing cells in two implementations. The controls of the fresh checker reproduce the record's exact failure
+  counts on nine vx1118 control sets.
+
+Witness coordinates (one `x y` per line in the files):
+- 11 points: (213881, 71368), (318, −1092), (−89750, 461390), (5440, 22606), (−2755, 54), (877, 1710),
+  (56539, −45020), (−104159, 35280), (10577, 3446), (−53231, −35237), (−5619, 22356).
+- 26 points: see `data/SAT4_k8_n26.txt`, |coordinates| ≤ 3,850,224.
+- 39 points: see `data/SAT4_k9_n39.txt`, |coordinates| ≤ 621,645, no symmetry.
+- Two further 11-point sets: `data/SAT4_k6_n11_b.txt` (same convex-subset counts as the first) and
+  `data/SAT4_k6_n11_c.txt` (165 / 148 / 22 / 0 convex 3..6-subsets, so a different order type). Both are SATURATED in
+  the record checker, VX2, satcheck, satcheck_big and the verifier's code.
+
+### T3. Method (HEURISTIC; not part of any proof)
+
+All four hits came from SAT3's local search at default settings: the unchanged `sat3ls8`, or its copy
+`tools/satls9.cpp` with the new options off, whose trajectory then equals sat3ls8's.
+- The 26-point set: SAT2's 27-point set minus point 1, then local search (73 s).
+- The 11-point sets: SAT2's best 11-point state (6 failing cells), and SAT2's 12-point set minus point 0.
+- The 39-point set: the first asymmetric descent from SAT3's 40-point set (second start, point 8 deleted; 534 s).
+
+### T4. Negative results (HEURISTIC; none is evidence of non-existence)
+
+- **K = 6 at 10 points:** eight full 150-s descents all ended at exactly 13 failing cells of 756. In each case these
+  are 5 unbounded cells plus 4 antipodal pairs of point-adjacent sectors.
+- **K = 8 at 25 points:** the best states have 2 failing cells, always one antipodal pair of thin sectors at the same
+  point.
+- **K = 9 at 38 points:** 27 failing cells after the 60-s tail of the hit run.
+- **K = 7 below 16 and K = 10 below 52** were not tried in this run.
+
+### T5. Lemma (PROVED, written argument, unrefereed)
+
+A failing cell whose closure contains a point p of S is covered iff some convex (K−1)-gon through p lies, apart
+from p, strictly on one side of a line through p in that sector. So such cells depend only on the order type. The
+proof is in the worker README. The verifier checked it step by step and ran its own sector-by-sector machine check:
+16 states, 0 mismatches.
+
+### T6. Finder overflow (not a claim)
+
+The finders `sat3ls8` and `satls` compute orientations in 64 bits and put no coordinate bound on kick points. In two
+runs (k6g, k6h), kick points with |coordinate| up to 6·10¹² overflowed and produced false "FOUND" reports. Every exact
+checker rejected them. `satls9` now skips kick candidates with |coordinate| ≥ 2^24. Past claims are unaffected,
+because each was checked by exact code.
+
+### T7. Literature (22 Nov 2026)
+
+These searches found nothing on sat_g newer than DDSZ:
+- two arXiv queries (saturated / convex / point set / Erdős–Szekeres / general position, from June 2023);
+- a web search (DDSZ v3 of 6 Oct 2025, published in EJC 2025);
+- the Semantic Scholar citation graph of DDSZ, from a cache of about 16 Nov, which lists 0 citing works.
+
+The new bounds are "not found in this search", with that scope only.
+
+### T8. Files and hashes
+
+| file | SHA-256 |
+|---|---|
+| `data/SAT4_k6_n11.txt` | `0583fc7d58a7588ffb6bb0a7a0c269095b3c9ed2e836f3c9258615c4d2c0f35d` |
+| `data/SAT4_k6_n11_b.txt` | `d11855a4c917d7ea6c8616ca87af389be76645e9432e4b84a7cfd3d581dbefb5` |
+| `data/SAT4_k6_n11_c.txt` | `46e742ad3cb49bcde5677f76d632b8de67f47ee4860c81bf3dcf243eb3e075ea` |
+| `data/SAT4_k8_n26.txt` | `123fcd3985fafc4c794fff982a008a1448e5dc14318289fe14d97ec62a3c057d` |
+| `data/SAT4_k9_n39.txt` | `204a0744b0740d60c4a5278a03112cb0e598e8db9864b8541d3d6717dc28d50b` |
+| `tools/satls9.cpp` (finder, fixed build) | `2171c0de0ed1d340848316f7952da17befb2db15fe16e999408dcbdb6df6b9a8` |
+| `tools/satls9_v1.cpp` (finder that produced the 11-point hits) | `afb55e547f12da7e3da91342e6344ffe1f8ae98aa70201d61d6107a6e152e7d8` |
+| `tools/sat4_satcheck.cpp` | `06cfa5fc02f0917174094a4e9d70b37ff65e27d14227832ec5eb174e38b5d120` |
+| `tools/sat4_satcheck_big.py` | `521d11cf50cf4e8714e0816b49eeaaeed91dd72d0f30bb5c13d89d0d42572547` |
+| `tools/sat4_vsat_verifier.cpp` | `5453cb48e5775c78edd619f72078192dc246cb087ca384e801544f3a348f8c0c` |
+| `VERIFY_sat4_REBUILD.md` | `1ffd4b38c2d07b03abc78729f6d538bf4f453f03ee505eefb9a77368983f752c` |
+| `VERIFY_sat4_SOUNDNESS.md` | `a21305edbde77c00e8037e465ada4bf138b4ae94784f863adb1641f31ea67edf` |
+
+The logs (`vx/`, `logs/`, `verify/logs/`) are in the work folder, together with `SHA256SUMS`.
+
+### T9. What remains
+
+- K = 8 at 25 points: 2 failing cells, at one point.
+- K = 7 below 16, K = 10 below 52 and K = 6 at 10 points, where the floor is 13 cells.
+- Lower bounds beyond n − 1. Saturation depends on the coordinates; only point-adjacent cells are order-type data
+  (T5).
+
+### T10. Resume
+
+```bash
+W=/home/jay/research/data/lower-20261121/satg; cd $W
+g++ -O2 -march=native -std=c++17 -w -o bin/satls9 src/satls9.cpp
+# one descent as a capped unit (example: K = 8 from the 26-point set, delete point 25)
+systemd-run --user --unit=esr-ag-satg-<job> -p CPUQuota=100% -p MemoryMax=600M -p MemorySwapMax=0 -p RuntimeMaxSec=3600 \
+  --nice=10 --working-directory=$W ./driver4.sh <plan file>
+bin/satcheck <points> <K>          # fresh exact check; verify/vsat check <points> <K> for the verifier's code
+```

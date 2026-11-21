@@ -1,8 +1,8 @@
 # ES303N20261120: the Z*-row and the budget-68 tree (target ES(8) ≤ 303)
 
-**Status (20 Nov 2026, 23:52 KST): STOPPED at the owner's request, resumable; 24,938 of 32,755 contexts closed (76 %). No ES(8) ≤ 303 claim yet.** Resume: [STATUS20261120 §6](../STATUS20261120/README.md) (the b68 command, CPUQuota 1600 %).
+**Status (22 Nov 2026, 03:05 KST): FINDER COMPLETE; CHECKS STOPPED UNFINISHED. No ES(8) ≤ 303 claim.** All 32,755 contexts are closed (finder rc = 0 at 01:08:17). The memory-lean re-run of assembly + check_tree (`balz_assemble_v5.py`, §5) was stopped at 03:00 by the owner's stop after writing 12,168 of 32,765 files; it has no resume and must be re-run from the start (§8). balcheck2 never started.
 
-The budget-68 tree is still being built (unit `esr-bal-zbs68`, started 01:33:35). The claim needs two things:
+The budget-68 finder ran in unit `esr-bal-zbs68` (started 20 Nov 01:33:35, finished 22 Nov 01:08:17). The claim needs two things:
 - both tree checks pass (check_tree and balcheck2, §5);
 - the Lean chain `composition_303_zzsf` (§4), which compiles already.
 
@@ -147,8 +147,60 @@ All files are in `data/`.
   - **At 11 threads from 14:37:** the 11:01 window scaled by 10/11 on what remained (about 10 % faster). Finder done
     about 22 Nov 01:30 KST, range about 21 Nov 13:00 to 23 Nov 03:00. Not a new projection: closed/todo × rate is
     not used (it failed the holdout test above).
-- Check A (check_tree): PENDING.
-- Check B (balcheck2): PENDING.
+- **Finder complete (22 Nov 01:08:17, rc = 0).** Resumed 21 Nov 19:23:11 with 7,817 contexts to do (22 threads,
+  CPUQuota 1600 %). All 32,755 contexts are closed (`occ.out`: 32,755 closed events; their node counts sum to
+  246,300,823; the largest context, ctx-5377, has 765,389 nodes in a 296 MB `.json.gz`, 773 MB of JSON).
+- **Assembly stopped by the memory guard (clean stops, no kernel OOM kill).**
+  - 01:09:41: `zbs_run0.sh` went on to `balz_assemble_v4.py` with 22 worker processes, and the unit reached 7,813 MB of
+    its 8,192 MB.
+  - 01:12:07: a probe that ran v4's `one()` on ctx-5377 alone also reached its 8 GB limit. Python's objects for that
+    context alone exceed 8 GB, so fewer workers cannot fix it.
+  - The stopped runs left partial files in `b68zs/files/`. Every file is rewritten by the re-run, and the acceptance
+    check below requires every file to be newer than the re-run's start.
+- **Memory-lean assembler `balz_assemble_v5.py`** (22 Nov; work dir `zrow/`; v4 unchanged):
+  - Contexts with `.json.gz` ≤ 10 MB go through v4's `one()` unchanged.
+  - Larger contexts (2,007 of 32,755) go through `one_big`, which streams the context once. It writes the same output
+    file (byte-identical) and validates the node graph globally: indices in range, each node reached exactly once
+    from the root, no unreachable node, branch fields are integers.
+  - `one_big` then cuts the tree into subtrees of at most 30,000 nodes. It calls the **unchanged** `check_tree` on each
+    subtree, preceded by the branch/pending prefix of the master path plus the in-context path to the subtree root,
+    and requires pending = prefix length.
+  - So every leaf margin is still computed by the unchanged `check_tree`, with exactly the fixings the leaf has in the
+    full assembled tree. Every leaf lies in exactly one piece, and the global pass covers the structural checks that
+    `contexts()` makes on the whole tree.
+  - Controls (`b68zs/v5ctl/ctl.py`):
+    - 9 contexts (2 to 9 MB) at cut sizes 30,000, 1,500 and 97: 27/27 gave the same `(ok, leaves, minimum margin,
+      nodes)` as v4's `one()` and byte-identical output files.
+    - Negative controls on modified copies of ctx-2, each caught: capacity × 1000 in one leaf ("Nonpositive leaf
+      margin"), a reused child ("Repeated or invalid tree node"), an unreachable node, a leaf replaced by pending
+      (ok = False), a branch on the fixed vertex 0, and booleans as a child index or vertex.
+- **Acceptance rules (written before the results):**
+  - v5's summary must show `bad: []` and 3,133 rows.
+  - balcheck2 must show `failed 0` and cover complete.
+  - v5's `nodes`, `leaves` and `minimum_margin` must equal balcheck2's.
+  - Pre-registered at 01:50 from `occ.out` and `occ/master.json`:
+    - files = 32,765 (32,755 contexts plus 10 master-closed weighted leaves);
+    - nodes = 246,300,833 (the occ.out sum 246,300,823 plus the 10);
+    - leaves = 123,166,799. Each context is a full binary tree, so it has (n_c + 1)/2 leaves; plus the 10.
+  - The convention was checked on ctx-2: occ.out has 43,753 nodes, and v4's `one()` returned 43,753 nodes and 21,877
+    leaves.
+  - Every file in `files/` must be newer than the re-run's start, and their number must equal the summary's `files`.
+- **Probes on the largest context (ctx-5377 = file 27387):**
+  - `one_big`: ok, 382,695 leaves, minimum margin 1, 765,389 nodes; 101 s, max RSS 2,083 MB.
+  - balcheck2 in subset mode on the same output file: FILES OK, 765,389 nodes, 382,695 leaves, minimum margin 1,
+    3,133 rows; 7.4 s, 2,332 MB.
+  - v4 `one()` on the largest context routed to it (ctx-30329, 10.0 MB): 3.1 s, 425 MB.
+  - Files: `data/v5ctl/`.
+- **Re-run (started 22 Nov 01:26:33).**
+  - Assembly: unit `esr-bal-zbs68asm`, `balz_assemble_v5.py` (SHA-256 `964b00007e5b…f6ad`), NW 10, NW_BIG 3,
+    BIG_BYTES 10,000,000, SUB_NODES 30,000; CPUQuota 1000 %, `taskset -c 5-14`, MemoryMax 8G.
+  - The start marker is `b68zs/asm_v5_start.txt`.
+  - `tools/chain303.sh` (unit `esr-bal-chain303`) then requires the EXACT TREE line, file count = summary
+    `files` and no file older than the marker. Only then does it start balcheck2 (unit `esr-bal-zbs68bc`, 4 threads).
+- Check A (check_tree, via v5): **STOPPED UNFINISHED** at 03:00:0x (owner stop, STATUS20261121_1930 §6) after 12,168 of
+  32,765 files in 93.5 minutes: all 2,007 big contexts (they run first) and part of the small ones. v5 writes its summary
+  only at the end, so there is no result. Re-run from the start (§8).
+- Check B (balcheck2): not started.
 
 ## 6. Files and hashes (SHA-256)
 
@@ -275,3 +327,7 @@ taskset -c 5-15,21-31 ./zbs_run0.sh 68 22 16384   # as unit esr-bal-zbs68, CPUQu
                                # (closed contexts are kept), then both checks
 bash leanzs/build_zs.sh        # Lean: FixedStatesZ, LemmaZStar, BalancedBudgetsZZs
 ```
+
+The finder is complete. Only the two checks remain: the re-run commands (fresh marker, v5 assembly, then
+`chain303.sh`, which starts balcheck2) are in [STATUS20261121_1930](../STATUS20261121_1930/README.md) §6. Copies of
+`balz_assemble_v5.py` and `chain303.sh` are in `tools/`.

@@ -35,6 +35,8 @@ ETV conjecture: 26. Before this record: M(5; 7) ≤ 41.
    two cases (§6.2). Case B (at most 22 points end no 6-cup) is UNSAT by CaDiCaL (COMPUTED only): its LRAT
    proof (5.23 GB) is still in W, but cake_lpr ran out of its 2,600 MB heap at 19:53 and the check was not
    repeated. Case A (at most 13 points end a 6-cup) reached its 4,150 s time limit with no verdict.
+   *Update 21 Nov 2026:* case B is now **CERTIFIED**. cake_lpr accepted the same 13 Nov proof at a 6,000 MB heap
+   (§6.2). Case A is still open, so the bound stays at 36.
 3. **Schroeder's M₇(5, 6) ≤ 25 re-proved by one CNF** (CERTIFIED, 59 s + 9 s check), and
    **strengthened to the colouring model** (CERTIFIED, 76 s + 56 s): every 2-colouring of the triples
    of 26 ordered vertices contains a 5-vertex cap path, a 6-vertex cup path or a weak heptagon
@@ -405,6 +407,20 @@ unit `nov13c-e7-c36a`, case B in `nov13c-e7-c36b`. Logs: `W/run/c36_*.{log,out,c
   N = 37 proof (5.26 GB) failed at 2,600 MB and passed at 4,200 MB, with about 4.4 GB resident. The phase-2
   share of this track is 2 GB, and the phase-2 verifier class has 4 GB, so the check was not attempted. It
   needs a verifier slot of about 4.5 GB. Delete the 5.2 GB file after the verdict.
+- **Update 21 Nov 2026 (Linux): case B is now CERTIFIED.** cake_lpr accepted the 13 Nov CaDiCaL 2.1.3 proof:
+  - run as unit `esr-r36-cakeB` at 19:51–19:55 KST with `--CML_HEAP_SIZE=6000 --CML_STACK_SIZE=200`;
+  - output is the exact line `s VERIFIED UNSAT`, after 176 s;
+  - before the check, the CNF was re-hashed and the proof decompressed from `W/run/c36_tle22.lrat.zst` and re-hashed;
+    both match the hashes in the table above (`08b8ea9c…` and `a0d2cb92…`, 5,233,911,342 bytes);
+  - the decompressed copy was deleted after the verdict; `W/run/c36_tle22.lrat.zst` is kept;
+  - log and output are in `data/linux-20261121/` (`cakeB.log`, `c36_tle22.cake6000.out`), the script in
+    `tools/cakeB_20261121.sh`.
+
+  So in every 36-point set (or `--nosig` 2-colouring) with no 5-cap and no convex heptagon, at most 13 points end a
+  6-cup. This rests on the written arguments of §2, as for every rung. The Mac record M57R36N20261121 (branch
+  `es-mac-2026-11-21`) certified case B independently with a CaDiCaL 3.0.1 proof (cake_lpr, heap 9,000 MB); this
+  Linux check uses the 2.1.3 proof named in SKILL.md §2. Rung N = 36 stays open in case A, so **M(5; 7) ≤ 35 is not
+  established**.
 - Coverage: `cube_cover.py` was run again in phase 2 (`COVER OK`). The two CNFs carry exactly the stated
   rows, and every assignment with exactly 36 occupied states satisfies the rows of case A or of case B.
 - Case A stopped at 7.8 M conflicts with no verdict; case B needed 8.2 M to finish. Nothing in the log
