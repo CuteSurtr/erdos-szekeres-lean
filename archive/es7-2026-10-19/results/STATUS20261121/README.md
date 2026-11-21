@@ -17,6 +17,8 @@ STATUS20261120 §6 (budget 68 at 76 %, L15 campaign 51 leaves, FV304 379 modules
 | N66 level-15 on the Mac | pipeline reproduced (UP cube trim.cnf byte-identical); blocked on Linux-only inputs | ES8CHECK20261121 §4c |
 | Web literature check (18–21 Nov) | EVIDENCE: no competing ES(8) bound ≤ 319; no M(5;7) bound below 41 | ES8CHECK20261121 §5 |
 
+An exact calculation in the #810 research repository gives a fractional minimum of **66** for the original 3,131-row balanced catalog with both class demands at 15 and states 0 and 1 occupied. At integer budget 68, the two missing-state counts can only be (15,15), (15,16), (16,15), (15,17), (16,16), or (17,15). The verifier reproduced the catalog certificate on 21 November. The budget-68 search still has 7,817 of 32,755 contexts to close. [Counting argument and verifier](https://github.com/CuteSurtr/erdos-810-research/blob/43ce9085a088b8e521466544fabcd629d4a1643f/research/es-connection/omission-layers.md#what-an-integer-solution-at-budget-68-would-require) · [Search checkpoint](../ES303N20261120/README.md)
+
 ## 2. Owner decisions pending
 
 - Merge of branch `es-mac-2026-11-21` into main. The three records (M57R36N20261121, ES8CHECK20261121, this page) are
@@ -33,6 +35,8 @@ STATUS20261120 §6 (budget 68 at 76 %, L15 campaign 51 leaves, FV304 379 modules
 ## 3. Resume of the rung-36 campaign
 
 M57R36N20261121 §8. Only case A remains: 46 open cubes in `cubes2/state.json`, all with state 26 empty. Proofs of the 67 certified leaves (66 cubes + the uncubed case B) are in `proof-archives/es7-r36-20261121/` on the Mac (16 GB, `SHA256SUMS`, `lrat_sha256.tsv`).
+The compressed proofs and their uncompressed LRAT records can be identified from the two manifests. [Compressed proof checksums](proof-archive/SHA256SUMS) · [Raw proof hashes and cube assumptions](proof-archive/lrat_sha256.tsv)
+
 Everything else needed to resume is in git: the scripts in `M57R36N20261121/tools/`, the driver state in its
 `logs/state_2.json` and the 66 per-leaf cake_lpr outputs in `logs/cake/`. The session's scratch area is not needed.
 On Linux, `drive2.py` needs one change first (its memory check is macOS-only; M57R36N20261121 §8).
